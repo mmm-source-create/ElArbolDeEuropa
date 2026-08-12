@@ -2594,3 +2594,520 @@ html, body {
     margin-left: 0 !important;
   }
 }
+
+/* ==========================================
+   15. CAPA EDITORIAL: PORTADA, INFORMACIÃ“N Y FOOTER
+   ========================================== */
+.header {
+  align-items: center;
+  padding-bottom: 10px;
+  margin-bottom: 12px;
+}
+
+.header h1 {
+  line-height: 1.1;
+}
+
+.project-footer {
+  margin-top: 16px;
+  padding: 14px 16px 6px;
+  border-top: 1px solid #C9BFA8;
+  font-family: -apple-system, 'Segoe UI', sans-serif;
+  color: #746A58;
+  text-align: center;
+}
+
+.project-footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 6px 14px;
+  margin-bottom: 8px;
+}
+
+.project-footer-links button {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  border: 0;
+  background: none;
+  color: #5E5546;
+  font: inherit;
+  font-size: 11px;
+  cursor: pointer;
+  padding: 2px 0;
+}
+
+.project-footer-links button:hover {
+  color: #7A2E2E;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.project-footer-credit {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 4px 7px;
+  font-size: 10.5px;
+  color: #8A7F65;
+}
+
+.project-footer a,
+.welcome-cover a,
+.project-modal a {
+  color: #7A2E2E;
+  text-decoration-color: rgba(122, 46, 46, 0.35);
+  text-underline-offset: 2px;
+}
+
+.project-footer a:hover,
+.welcome-cover a:hover,
+.project-modal a:hover {
+  text-decoration-color: currentColor;
+}
+
+/* Portada: se muestra solo en la primera visita normal. Los enlaces directos
+   a una persona la omiten para no interrumpir el contenido compartido. */
+.welcome-cover {
+  position: fixed;
+  inset: 0;
+  z-index: 1200;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+  box-sizing: border-box;
+  overflow: auto;
+  background:
+    radial-gradient(circle at 50% 20%, rgba(255, 255, 255, 0.55), transparent 36%),
+    #F1EAD9;
+}
+
+.welcome-card {
+  width: min(720px, 100%);
+  box-sizing: border-box;
+  padding: 56px 64px 42px;
+  text-align: center;
+  background: rgba(251, 247, 236, 0.96);
+  border: 1px solid #C9BFA8;
+  border-radius: 10px;
+  box-shadow: 0 24px 70px rgba(67, 55, 36, 0.15);
+  position: relative;
+}
+
+.welcome-card::before,
+.welcome-card::after {
+  content: "";
+  position: absolute;
+  left: 32px;
+  right: 32px;
+  height: 1px;
+  background: #D9CFB6;
+}
+
+.welcome-card::before { top: 26px; }
+.welcome-card::after { bottom: 24px; }
+
+.welcome-crown {
+  color: #7A2E2E;
+  margin-bottom: 10px;
+}
+
+.welcome-eyebrow {
+  font-family: -apple-system, 'Segoe UI', sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.3px;
+  text-transform: uppercase;
+  color: #8A7F65;
+}
+
+.welcome-card h2 {
+  margin: 9px 0 12px;
+  font-family: 'Iowan Old Style', 'Palatino Linotype', Georgia, serif;
+  font-size: clamp(34px, 6vw, 58px);
+  line-height: 1;
+  font-weight: 500;
+  color: #2C2620;
+}
+
+.welcome-card > p {
+  max-width: 570px;
+  margin: 0 auto;
+  font-family: -apple-system, 'Segoe UI', sans-serif;
+  font-size: 14px;
+  line-height: 1.65;
+  color: #6B6350;
+}
+
+.welcome-stats {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 8px 24px;
+  margin: 24px 0 22px;
+  font-family: -apple-system, 'Segoe UI', sans-serif;
+  font-size: 11px;
+  color: #8A7F65;
+}
+
+.welcome-stats span {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 5px;
+}
+
+.welcome-stats strong {
+  color: #4A4436;
+  font-size: 13px;
+}
+
+.welcome-enter {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-width: 190px;
+  border: 1px solid #7A2E2E;
+  border-radius: 4px;
+  background: #7A2E2E;
+  color: #F8F3E6;
+  padding: 10px 18px;
+  font-family: -apple-system, 'Segoe UI', sans-serif;
+  font-size: 12px;
+  font-weight: 650;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(122, 46, 46, 0.13);
+}
+
+.welcome-enter:hover {
+  background: #682626;
+}
+
+.welcome-links {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 7px 18px;
+  margin-top: 22px;
+}
+
+.welcome-links button {
+  border: 0;
+  background: none;
+  padding: 0;
+  cursor: pointer;
+  font-family: -apple-system, 'Segoe UI', sans-serif;
+  font-size: 10.5px;
+  color: #6B6350;
+}
+
+.welcome-links button:hover {
+  color: #7A2E2E;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.welcome-map-credit {
+  margin-top: 18px;
+  font-family: -apple-system, 'Segoe UI', sans-serif;
+  font-size: 9.5px;
+  color: #9A907A;
+}
+
+/* Modales editoriales */
+.project-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 1300;
+  display: grid;
+  place-items: center;
+  padding: 22px;
+  box-sizing: border-box;
+  background: rgba(44, 38, 32, 0.38);
+  backdrop-filter: blur(2px);
+}
+
+.project-modal {
+  width: min(760px, 100%);
+  max-height: min(780px, calc(100vh - 44px));
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  background: #FBF7EC;
+  border: 1px solid #C9BFA8;
+  border-radius: 8px;
+  box-shadow: 0 22px 70px rgba(44, 38, 32, 0.27);
+}
+
+.project-modal-head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 22px 24px 18px;
+  border-bottom: 1px solid #E2D8C3;
+}
+
+.project-modal-kicker {
+  margin-bottom: 3px;
+  font-family: -apple-system, 'Segoe UI', sans-serif;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.9px;
+  text-transform: uppercase;
+  color: #9A907A;
+}
+
+.project-modal h2 {
+  margin: 0;
+  font-family: 'Iowan Old Style', 'Palatino Linotype', Georgia, serif;
+  font-size: 25px;
+  font-weight: 600;
+  color: #2C2620;
+}
+
+.project-modal h3 {
+  margin: 22px 0 8px;
+  font-family: -apple-system, 'Segoe UI', sans-serif;
+  font-size: 11px;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+  color: #6B6350;
+}
+
+.project-modal-close {
+  width: 30px;
+  height: 30px;
+  flex: 0 0 auto;
+  display: grid;
+  place-items: center;
+  border: 1px solid #D9CFB6;
+  border-radius: 4px;
+  background: #fff;
+  color: #6B6350;
+  cursor: pointer;
+}
+
+.project-modal-close:hover {
+  background: #F5EFDE;
+  color: #2C2620;
+}
+
+.project-modal-body {
+  overflow: auto;
+  padding: 20px 24px 26px;
+  font-family: -apple-system, 'Segoe UI', sans-serif;
+  font-size: 13px;
+  line-height: 1.58;
+  color: #4A4436;
+}
+
+.project-modal-body p {
+  margin: 0 0 11px;
+}
+
+.project-modal-body code {
+  font-size: 11px;
+  padding: 2px 5px;
+  border-radius: 3px;
+  background: #EEE5D2;
+  color: #554B3D;
+}
+
+.project-lead {
+  font-size: 14px;
+  color: #3F382E;
+}
+
+.project-muted {
+  color: #8A7F65;
+  font-style: italic;
+}
+
+.project-section-icon {
+  width: 34px;
+  height: 34px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: #F0E5CE;
+  color: #7A2E2E;
+  margin-bottom: 8px;
+}
+
+.project-stat-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+  margin: 18px 0 6px;
+}
+
+.project-stat-grid > div {
+  min-width: 0;
+  padding: 12px;
+  background: #F7F0E0;
+  border: 1px solid #E0D5BD;
+  border-radius: 5px;
+}
+
+.project-stat-grid strong,
+.project-stat-grid span {
+  display: block;
+}
+
+.project-stat-grid strong {
+  color: #7A2E2E;
+  font-size: 14px;
+}
+
+.project-stat-grid span {
+  margin-top: 3px;
+  font-size: 10.5px;
+  line-height: 1.35;
+  color: #8A7F65;
+}
+
+.project-name-list,
+.project-method-list,
+.project-source-list {
+  margin: 8px 0 0;
+  padding-left: 19px;
+}
+
+.project-name-list li,
+.project-method-list li {
+  margin: 5px 0;
+}
+
+.project-source-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.project-source-list li {
+  margin: 0 0 12px;
+  padding: 10px 12px;
+  border: 1px solid #E2D8C3;
+  border-radius: 5px;
+  background: rgba(255, 255, 255, 0.45);
+}
+
+.project-source-list li > a {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-weight: 650;
+}
+
+.project-source-list li > span {
+  display: block;
+  margin-top: 3px;
+  color: #7A705E;
+  font-size: 11px;
+  line-height: 1.45;
+}
+
+.project-license-note {
+  margin-top: 16px;
+  padding: 11px 13px;
+  border-left: 3px solid #A68C5D;
+  background: #F4ECD9;
+  color: #6B6350;
+  font-size: 11.5px;
+}
+
+.project-report-context {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 7px 10px;
+  align-items: center;
+  margin: 16px 0;
+  padding: 10px 12px;
+  border: 1px solid #D9CFB6;
+  border-radius: 5px;
+  background: #fff;
+}
+
+.project-report-context span {
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #9A907A;
+}
+
+.project-report-template {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin: 14px 0;
+  padding: 12px 14px;
+  background: #F7F0E0;
+  border-radius: 5px;
+  font-size: 11.5px;
+}
+
+.project-report-template strong {
+  margin-bottom: 3px;
+  color: #4A4436;
+}
+
+.project-primary-action {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  margin-top: 4px;
+  padding: 8px 11px;
+  border-radius: 4px;
+  background: #7A2E2E;
+  color: #F8F3E6 !important;
+  text-decoration: none !important;
+  font-size: 11.5px;
+  font-weight: 650;
+}
+
+.project-contact-placeholder {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  margin-top: 10px;
+  padding: 10px 12px;
+  border: 1px dashed #C9BFA8;
+  border-radius: 5px;
+  color: #8A7F65;
+  font-size: 11.5px;
+}
+
+@media (max-width: 720px) {
+  .welcome-cover,
+  .project-modal-backdrop {
+    padding: 12px;
+  }
+
+  .welcome-card {
+    padding: 46px 24px 36px;
+  }
+
+  .welcome-card::before,
+  .welcome-card::after {
+    left: 18px;
+    right: 18px;
+  }
+
+  .project-stat-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .project-modal-head {
+    padding: 18px 18px 14px;
+  }
+
+  .project-modal-body {
+    padding: 16px 18px 20px;
+  }
+
+  .project-report-context {
+    grid-template-columns: 1fr;
+  }
+}
