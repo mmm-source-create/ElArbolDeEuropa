@@ -1,0 +1,23 @@
+/* Estilos globales mínimos. La aplicación usa deliberadamente un tema claro
+   de atlas histórico; se evita el dark mode automático del boilerplate. */
+:root {
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  color-scheme: light;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html, body, #root {
+  min-width: 320px;
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+}
+
+button, input {
+  font: inherit;
+}
