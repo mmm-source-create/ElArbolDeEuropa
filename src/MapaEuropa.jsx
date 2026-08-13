@@ -8,7 +8,7 @@ import {
   ZoomIn,
   ZoomOut,
 } from "lucide-react";
-import mapSvgContent from "./MapChart_Map.svg?raw";
+import mapSvgContent from "./assets/MapChart_Map.svg?raw";
 import {
   REINO_COLOR,
   REINO_COLOR_DEFAULT,
@@ -21,7 +21,7 @@ import {
 } from "./Territorios";
 
 const MAP_ZOOM_FACTOR = 0.82;
-const MAP_MIN_VISIBLE_RATIO = 0.18;
+const MAP_MIN_VISIBLE_RATIO = 0.06;
 const MAP_PAN_STEP = 0.12;
 const MAP_DRAG_THRESHOLD = 4;
 
@@ -58,6 +58,8 @@ function clampViewBox(box, original) {
   if (!original) return box;
   const aspect = original.width / original.height;
   const minWidth = original.width * MAP_MIN_VISIBLE_RATIO;
+  const requestedCenterX = box.x + box.width / 2;
+  const requestedCenterY = box.y + box.height / 2;
   let width = Math.max(minWidth, Math.min(original.width, box.width));
   let height = width / aspect;
 
@@ -70,10 +72,12 @@ function clampViewBox(box, original) {
   const maxX = original.x + original.width - width;
   const minY = original.y;
   const maxY = original.y + original.height - height;
+  const centeredX = requestedCenterX - width / 2;
+  const centeredY = requestedCenterY - height / 2;
 
   return {
-    x: Math.max(minX, Math.min(maxX, box.x)),
-    y: Math.max(minY, Math.min(maxY, box.y)),
+    x: Math.max(minX, Math.min(maxX, centeredX)),
+    y: Math.max(minY, Math.min(maxY, centeredY)),
     width,
     height,
   };
@@ -200,19 +204,24 @@ export function MapaEuropa({ seleccion, anioGlobal = null, onSelectTerritorio })
   }, []);
 
   const zoomBy = useCallback((factor) => {
-    updateViewBox((current) => {
-      const nextWidth = current.width * factor;
-      const nextHeight = current.height * factor;
+    setViewBox((current) => {
+      const original = originalViewBoxRef.current;
+      if (!current || !original) return current;
+      const minWidth = original.width * MAP_MIN_VISIBLE_RATIO;
+      const targetWidth = Math.max(minWidth, Math.min(original.width, current.width * factor));
+      if (Math.abs(targetWidth - current.width) < 0.0001) return current;
+      const aspect = original.width / original.height;
+      const targetHeight = targetWidth / aspect;
       const centerX = current.x + current.width / 2;
       const centerY = current.y + current.height / 2;
-      return {
-        x: centerX - nextWidth / 2,
-        y: centerY - nextHeight / 2,
-        width: nextWidth,
-        height: nextHeight,
-      };
+      return clampViewBox({
+        x: centerX - targetWidth / 2,
+        y: centerY - targetHeight / 2,
+        width: targetWidth,
+        height: targetHeight,
+      }, original);
     });
-  }, [updateViewBox]);
+  }, []);
 
   const panBy = useCallback((xRatio, yRatio) => {
     updateViewBox((current) => ({
