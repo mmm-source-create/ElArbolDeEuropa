@@ -1968,6 +1968,9 @@ function ModalProyecto({ seccion, onClose, persona, personasVista = PERSONAS, on
           {seccion === "licencias" && (
             <>
               <div className="project-section-icon"><Scale size={17} /></div>
+              <h3>Contenido original de El Árbol de Europa</h3>
+              <p>Salvo indicación expresa en sentido contrario, el código, el diseño, los textos y la estructura original de la base de datos de El Árbol de Europa quedan con todos los derechos reservados.</p>
+              <div className="project-license-note">Los materiales de terceros mantienen sus propias licencias. La licencia de la cartografía derivada de MapChart se aplica a ese material cartográfico y no convierte automáticamente el resto del proyecto en CC BY-SA.</div>
               <h3>Cartografía de MapChart</h3>
               <p>La base cartográfica utilizada en el mapa procede de <a href="https://www.mapchart.net/" target="_blank" rel="noreferrer">MapChart <ExternalLink size={12} /></a> y ha sido modificada y adaptada para este proyecto.</p>
               <p>El material cartográfico de MapChart se publica bajo <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noreferrer">Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0) <ExternalLink size={12} /></a>. La atribución y la indicación de las modificaciones se mantienen aquí y en el pie de la aplicación.</p>
@@ -3747,7 +3750,7 @@ export default function ArbolGenealogico() {
                 </div>
                 <div className="timeline-zoom-controls" aria-label="Escala temporal">
                   <button type="button" disabled={timelineScaleIndex === 0} onClick={() => setTimelineScaleIndex((valor) => Math.max(0, valor - 1))} title="Reducir escala temporal"><ZoomOut size={12} /></button>
-                  <span>{timelinePxPerYear.toFixed(1)} px/año</span>
+                  <span aria-hidden="true" className="timeline-zoom-divider" />
                   <button type="button" disabled={timelineScaleIndex === TIMELINE_SCALES.length - 1} onClick={() => setTimelineScaleIndex((valor) => Math.min(TIMELINE_SCALES.length - 1, valor + 1))} title="Ampliar escala temporal"><ZoomIn size={12} /></button>
                 </div>
               </div>
@@ -3912,6 +3915,7 @@ export default function ArbolGenealogico() {
           <span aria-hidden="true">·</span>
           adaptada y modificada para El Árbol de Europa
         </div>
+        <div className="project-footer-rights">© 2026 El Árbol de Europa · Código, diseño, textos y estructura original de la base de datos: todos los derechos reservados · Materiales de terceros: ver Licencias</div>
       </footer>
 
       {portadaVisible && (
