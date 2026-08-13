@@ -1348,7 +1348,11 @@ function routeFamilyConnectors({ groupsByRow, positions, pairContacts, gen, rows
 
     if (group.childRow > group.parentRow + 1) {
       const candidates = computeColumnCandidates(rows, positions, canvasWidth, group.parentRow + 1, group.childRow - 1);
-      const target = (anchorX + group.childCenter) / 2;
+      // En saltos de varias generaciones, el canal vertical pertenece a los
+      // padres, no al centro geométrico de los hermanos. Priorizar el anclaje
+      // parental evita que la curva parezca "buscar" el centro de los hijos
+      // cuando los progenitores están desplazados respecto de ellos.
+      const target = anchorX;
       group.trunkX = claimColumn(
         candidates,
         target,
@@ -1438,11 +1442,11 @@ function routeFamilyConnectors({ groupsByRow, positions, pairContacts, gen, rows
       let startX = childX;
 
       if (isOnlyChild && Math.abs(busOriginX - childX) > 1) {
-        startX = childX + Math.sign(busOriginX - childX) * Math.min(14, Math.abs(busOriginX - childX));
+        startX = childX + Math.sign(busOriginX - childX) * Math.min(20, Math.abs(busOriginX - childX));
       } else if (!isOnlyChild && isLeftEnd && childMax - childX > 1) {
-        startX = Math.min(childX + 14, childMax);
+        startX = Math.min(childX + 20, childMax);
       } else if (!isOnlyChild && isRightEnd && childX - childMin > 1) {
-        startX = Math.max(childX - 14, childMin);
+        startX = Math.max(childX - 20, childMin);
       }
       return { childId, childPos, childX, startX };
     });
@@ -1458,7 +1462,7 @@ function routeFamilyConnectors({ groupsByRow, positions, pairContacts, gen, rows
     // antes del canal y cada brazo de la barra completa la entrada mediante
     // una curva. Esto redondea también el primer giro de la distribución,
     // incluso cuando el tronco cae exactamente sobre el origen de la barra.
-    const BUS_ENTRY_RADIUS = 7;
+    const BUS_ENTRY_RADIUS = 11;
     const hasLeftArm = busMin < busOriginX - 0.5;
     const hasRightArm = busMax > busOriginX + 0.5;
     const hasBusArm = hasLeftArm || hasRightArm;
@@ -1488,7 +1492,7 @@ function routeFamilyConnectors({ groupsByRow, positions, pairContacts, gen, rows
       key: group.familyKey,
       parentIds: group.parentIds,
       childIds: group.childIds,
-      trunkD: roundedPath(trunkPoints, 7),
+      trunkD: roundedPath(trunkPoints, 11),
       busDs,
       branches: branchSpecs.map(({ childId, childPos, childX, startX }) => {
         const points = Math.abs(startX - childX) > 0.5
@@ -1496,7 +1500,7 @@ function routeFamilyConnectors({ groupsByRow, positions, pairContacts, gen, rows
           : [[childX, busY], [childX, childPos.y]];
         return {
           childId,
-          d: roundedPath(points, 7),
+          d: roundedPath(points, 10),
         };
       }),
     };
@@ -4008,5 +4012,3 @@ export default function ArbolGenealogico() {
     </div>
   );
 }
-
-
