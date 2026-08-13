@@ -14,6 +14,7 @@ import {
   territoriosGobernadosEnAño,
 } from "./Territorios";
 import { PERSONAS } from "./personas.jsx";
+import { EVENTOS_HISTORICOS, HISTORIAS } from "./historiaData.jsx";
 import "./App.css";
 
 // ---------------------------------------------------------------------------
@@ -215,6 +216,10 @@ const CORREOS_CORRECCIONES = [
 ];
 
 const PORTADA_STORAGE_KEY = "arbol-europa-portada-v1";
+const FAVORITOS_STORAGE_KEY = "arbol-europa-favoritos-v1";
+const TIMELINE_SCALES = [3.2, 4.8, 6.4];
+const TIMELINE_FIXED_COLUMN = 212;
+
 
 
 // Normaliza las relaciones sin alterar el formato de la base de datos.
@@ -1745,9 +1750,12 @@ const ANIOS_DATOS = PERSONAS.flatMap((persona) => [
 ]).filter(Number.isFinite);
 const TL_MIN = Math.floor((Math.min(...ANIOS_DATOS) - 1) / 25) * 25;
 const TL_MAX = Math.ceil((Math.max(...ANIOS_DATOS) + 1) / 25) * 25;
-const TL_TICK_STEP = TL_MAX - TL_MIN >= 500 ? 50 : 25;
-const TL_TICKS = Array.from({ length: Math.floor((TL_MAX - TL_MIN) / TL_TICK_STEP) + 1 }, (_, i) => TL_MIN + i * TL_TICK_STEP);
 const pct = (y) => Number.isFinite(y) ? Math.max(0, Math.min(100, ((y - TL_MIN) / (TL_MAX - TL_MIN)) * 100)) : null;
+const inicioEvento = (evento) => Number.isFinite(evento?.desde) ? evento.desde : evento?.anio;
+const finEvento = (evento) => Number.isFinite(evento?.hasta) ? evento.hasta : inicioEvento(evento);
+const etiquetaFechaEvento = (evento) => Number.isFinite(evento?.desde) && Number.isFinite(evento?.hasta)
+  ? `${evento.desde}–${evento.hasta}`
+  : String(evento?.anio ?? "");
 
 function Chip({ label, active, onClick, color, small }) {
   return (
@@ -1815,7 +1823,50 @@ function ListaRelaciones({ etiqueta, ids, tipo = "familia", onSelect }) {
   );
 }
 
-function ModalProyecto({ seccion, onClose, persona }) {
+function calcularEstadisticas(personas) {
+  const lista = (personas || []).filter(Boolean);
+  const ids = new Set(lista.map((persona) => persona.id));
+  const paresUnicos = (getRelaciones) => {
+    const pares = new Set();
+    lista.forEach((persona) => {
+      getRelaciones(persona).forEach((otroId) => {
+        if (!ids.has(otroId)) return;
+        pares.add([persona.id, otroId].sort().join("|"));
+      });
+    });
+    return pares.size;
+  };
+  const contar = (valores) => Object.entries(valores.reduce((acc, valor) => {
+    if (valor) acc[valor] = (acc[valor] || 0) + 1;
+    return acc;
+  }, {})).sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0], "es"));
+  const dinastias = contar(lista.map((persona) => persona.dinastia));
+  const territorios = contar(lista.flatMap((persona) => persona.reinos || []));
+  const gobernantes = lista.filter((persona) => listaReinados(persona).some(reinadoEsEfectivo)).length;
+  const reinados = lista.flatMap((persona) => listaReinados(persona)
+    .filter((reinado) => reinadoEsEfectivo(reinado) && Number.isFinite(reinado.desde) && Number.isFinite(reinado.hasta))
+    .map((reinado) => ({ persona, reinado, duracion: reinado.hasta - reinado.desde })));
+  const reinadoMasLargo = reinados.sort((a, b) => b.duracion - a.duracion)[0] || null;
+  const descendencia = lista.map((persona) => ({
+    persona,
+    total: (HIJOS_POR_ID[persona.id] || []).filter((id) => ids.has(id)).length,
+  })).sort((a, b) => b.total - a.total)[0] || null;
+  return {
+    personas: lista.length,
+    dinastias: dinastias.length,
+    territorios: territorios.length,
+    matrimonios: paresUnicos(listaConyuges),
+    amantes: paresUnicos(listaAmantes),
+    gobernantes,
+    topDinastias: dinastias.slice(0, 8),
+    topTerritorios: territorios.slice(0, 8),
+    reinadoMasLargo,
+    descendencia,
+  };
+}
+
+function ModalProyecto({ seccion, onClose, persona, personasVista = PERSONAS, onStartHistoria }) {
+  const [alcanceEstadisticas, setAlcanceEstadisticas] = useState("base");
   if (!seccion) return null;
   const correos = CORREOS_CORRECCIONES.filter(Boolean);
   const correoPrincipal = correos[0] || "";
@@ -1842,7 +1893,10 @@ function ModalProyecto({ seccion, onClose, persona }) {
     fuentes: "Fuentes y metodología",
     licencias: "Licencias",
     reportar: "Reportar un error",
+    estadisticas: "Estadísticas",
+    historias: "Historias",
   }[seccion] || "Información del proyecto";
+  const estadisticas = calcularEstadisticas(alcanceEstadisticas === "vista" ? personasVista : PERSONAS);
 
   return (
     <div className="project-modal-backdrop" role="presentation" onMouseDown={(event) => { if (event.target === event.currentTarget) onClose(); }}>
@@ -1918,6 +1972,65 @@ function ModalProyecto({ seccion, onClose, persona }) {
               <p>La base cartográfica utilizada en el mapa procede de <a href="https://www.mapchart.net/" target="_blank" rel="noreferrer">MapChart <ExternalLink size={12} /></a> y ha sido modificada y adaptada para este proyecto.</p>
               <p>El material cartográfico de MapChart se publica bajo <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noreferrer">Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0) <ExternalLink size={12} /></a>. La atribución y la indicación de las modificaciones se mantienen aquí y en el pie de la aplicación.</p>
               <div className="project-license-note">Esta licencia se refiere a la cartografía derivada de MapChart. No supone por sí sola que el código, los textos o la base genealógica completa del proyecto se publiquen bajo la misma licencia.</div>
+            </>
+          )}
+
+          {seccion === "estadisticas" && (
+            <>
+              <p className="project-lead">Una lectura cuantitativa de la base genealógica. Puedes comparar el conjunto completo con las personas que permanecen visibles tras aplicar filtros.</p>
+              <div className="stats-scope-toggle" role="group" aria-label="Ámbito de las estadísticas">
+                <button type="button" className={alcanceEstadisticas === "base" ? "active" : ""} onClick={() => setAlcanceEstadisticas("base")}>Base completa</button>
+                <button type="button" className={alcanceEstadisticas === "vista" ? "active" : ""} onClick={() => setAlcanceEstadisticas("vista")}>Vista actual · {personasVista.length}</button>
+              </div>
+              <div className="stats-summary-grid">
+                <div><strong>{estadisticas.personas}</strong><span>personas</span></div>
+                <div><strong>{estadisticas.dinastias}</strong><span>dinastías</span></div>
+                <div><strong>{estadisticas.territorios}</strong><span>territorios</span></div>
+                <div><strong>{estadisticas.matrimonios}</strong><span>matrimonios registrados</span></div>
+                <div><strong>{estadisticas.amantes}</strong><span>relaciones de amantes</span></div>
+                <div><strong>{estadisticas.gobernantes}</strong><span>personas con reinado efectivo</span></div>
+              </div>
+              <div className="stats-columns">
+                <div>
+                  <h3>Dinastías más representadas</h3>
+                  <ol className="stats-ranking">{estadisticas.topDinastias.map(([nombre, total]) => <li key={nombre}><span>{nombre}</span><strong>{total}</strong></li>)}</ol>
+                </div>
+                <div>
+                  <h3>Territorios más representados</h3>
+                  <ol className="stats-ranking">{estadisticas.topTerritorios.map(([nombre, total]) => <li key={nombre}><span>{nombre}</span><strong>{total}</strong></li>)}</ol>
+                </div>
+              </div>
+              <div className="stats-curiosities">
+                {estadisticas.reinadoMasLargo && (
+                  <div><span>Reinado efectivo más largo registrado</span><strong>{estadisticas.reinadoMasLargo.persona.nombre}</strong><small>{estadisticas.reinadoMasLargo.reinado.territorio} · {estadisticas.reinadoMasLargo.reinado.desde}–{estadisticas.reinadoMasLargo.reinado.hasta} · {estadisticas.reinadoMasLargo.duracion} años</small></div>
+                )}
+                {estadisticas.descendencia?.total > 0 && (
+                  <div><span>Más hijos registrados en este conjunto</span><strong>{estadisticas.descendencia.persona.nombre}</strong><small>{estadisticas.descendencia.total} hijos/as presentes en el ámbito seleccionado</small></div>
+                )}
+              </div>
+            </>
+          )}
+
+          {seccion === "historias" && (
+            <>
+              <p className="project-lead">Recorridos guiados que utilizan el árbol, el mapa, las biografías y la cronología de la propia aplicación. Puedes abandonar el recorrido en cualquier momento y volver a explorar libremente.</p>
+              <div className="stories-grid">
+                {HISTORIAS.map((historia) => (
+                  <article key={historia.id} className={`story-catalog-card${historia.disponible ? " is-available" : " is-coming"}`}>
+                    <div className="story-catalog-topline">
+                      <span>{historia.disponible ? "Recorrido disponible" : "Próximamente"}</span>
+                      {historia.disponible && historia.pasos && <b>{historia.pasos.length} pasos</b>}
+                    </div>
+                    <h3>{historia.titulo}</h3>
+                    <p>{historia.subtitulo}</p>
+                    {historia.disponible ? (
+                      <button type="button" className="story-start-btn" onClick={() => onStartHistoria?.(historia.id)}>Comenzar recorrido <ArrowRight size={13} /></button>
+                    ) : (
+                      <button type="button" className="story-start-btn" disabled>Próximamente</button>
+                    )}
+                  </article>
+                ))}
+              </div>
             </>
           )}
 
@@ -2003,7 +2116,25 @@ export default function ArbolGenealogico() {
   const [vistasActivas, setVistasActivas] = useState({ arbol: true, mapa: true });
   const [portadaVisible, setPortadaVisible] = useState(false);
   const [infoProyecto, setInfoProyecto] = useState(null);
+  const [timelineScaleIndex, setTimelineScaleIndex] = useState(1);
+  const [timelineMode, setTimelineMode] = useState("personas");
+  const [eventoSeleccionadoId, setEventoSeleccionadoId] = useState(null);
+  const [favoritos, setFavoritos] = useState(() => {
+    if (typeof window === "undefined") return [];
+    try {
+      const guardados = JSON.parse(window.localStorage.getItem(FAVORITOS_STORAGE_KEY) || "[]");
+      return Array.isArray(guardados) ? guardados.filter((id) => BY_ID[id]) : [];
+    } catch {
+      return [];
+    }
+  });
+  const [favoritosOpen, setFavoritosOpen] = useState(false);
+  const [soloFavoritos, setSoloFavoritos] = useState(false);
+  const [historiaActivaId, setHistoriaActivaId] = useState(null);
+  const [historiaPasoIndex, setHistoriaPasoIndex] = useState(0);
   const compareMenuRef = useRef(null);
+  const favoritosMenuRef = useRef(null);
+  const historiaSnapshotRef = useRef(null);
   const shareStatusTimerRef = useRef(null);
   const urlStateLoadedRef = useRef(false);
   const dragState = useRef(null);
@@ -2011,6 +2142,22 @@ export default function ArbolGenealogico() {
   const gen = useMemo(() => computeGenerations(PERSONAS), []);
   const rows = useMemo(() => buildRows(PERSONAS, gen), [gen]);
   const graph = useMemo(() => buildGraph(PERSONAS), []);
+  const favoritosSet = useMemo(() => new Set(favoritos), [favoritos]);
+  const timelinePxPerYear = TIMELINE_SCALES[timelineScaleIndex];
+  const timelineTrackWidth = Math.max(1180, Math.round((TL_MAX - TL_MIN) * timelinePxPerYear));
+  const timelineContentWidth = TIMELINE_FIXED_COLUMN + timelineTrackWidth;
+  const timelineTickStep = timelinePxPerYear >= 6 ? 10 : timelinePxPerYear >= 4 ? 20 : 25;
+  const timelineTicks = useMemo(() => {
+    const primero = Math.ceil(TL_MIN / timelineTickStep) * timelineTickStep;
+    const valores = [];
+    for (let valor = primero; valor <= TL_MAX; valor += timelineTickStep) valores.push(valor);
+    return valores;
+  }, [timelineTickStep]);
+  const eventosOrdenados = useMemo(() => EVENTOS_HISTORICOS.slice().sort((a, b) => inicioEvento(a) - inicioEvento(b) || a.titulo.localeCompare(b.titulo, "es")), []);
+  const eventoSeleccionado = eventosOrdenados.find((evento) => evento.id === eventoSeleccionadoId) || null;
+  const historiaActiva = HISTORIAS.find((historia) => historia.id === historiaActivaId) || null;
+  const historiaPasoActual = historiaActiva?.pasos?.[historiaPasoIndex] || null;
+  const historiaPersonasSet = useMemo(() => new Set(historiaPasoActual?.personas || (historiaPasoActual?.persona ? [historiaPasoActual.persona] : [])), [historiaPasoActual]);
 
   useEffect(() => {
     if (!compareMenuOpen) return undefined;
@@ -2020,6 +2167,25 @@ export default function ArbolGenealogico() {
     document.addEventListener("pointerdown", cerrarFuera);
     return () => document.removeEventListener("pointerdown", cerrarFuera);
   }, [compareMenuOpen]);
+
+  useEffect(() => {
+    if (!favoritosOpen) return undefined;
+    const cerrarFuera = (event) => {
+      if (!favoritosMenuRef.current?.contains(event.target)) setFavoritosOpen(false);
+    };
+    document.addEventListener("pointerdown", cerrarFuera);
+    return () => document.removeEventListener("pointerdown", cerrarFuera);
+  }, [favoritosOpen]);
+
+  useEffect(() => {
+    if (typeof window === "undefined") return;
+    try {
+      window.localStorage.setItem(FAVORITOS_STORAGE_KEY, JSON.stringify(favoritos));
+    } catch {
+      // El almacenamiento local puede estar bloqueado por el navegador.
+    }
+    if (!favoritos.length && soloFavoritos) setSoloFavoritos(false);
+  }, [favoritos, soloFavoritos]);
 
   useEffect(() => () => {
     if (shareStatusTimerRef.current) window.clearTimeout(shareStatusTimerRef.current);
@@ -2281,6 +2447,7 @@ export default function ArbolGenealogico() {
     if (!persona) return false;
     if (hiddenByCollapse.has(persona.id)) return false;
     if (aisladoSet && !aisladoSet.has(persona.id)) return false;
+    if (soloFavoritos && !favoritosSet.has(persona.id)) return false;
 
     if (territorios.length) {
       const coincideTerritorio = (persona.reinos || []).some((territorio) =>
@@ -2383,8 +2550,8 @@ export default function ArbolGenealogico() {
     });
   };
 
-  const hayFiltros = Boolean(query || territorios.length || dinastias.length || titulos.length || siglos.length || relaciones.length);
-  const limpiar = () => { setQuery(""); setTerritorios([]); setDinastias([]); setTitulos([]); setSiglos([]); setRelaciones([]); };
+  const hayFiltros = Boolean(query || territorios.length || dinastias.length || titulos.length || siglos.length || relaciones.length || soloFavoritos);
+  const limpiar = () => { setQuery(""); setTerritorios([]); setDinastias([]); setTitulos([]); setSiglos([]); setRelaciones([]); setSoloFavoritos(false); };
 
   const lineage = hovered ? ancestorsOf(hovered) : new Set();
 
@@ -2525,6 +2692,125 @@ export default function ArbolGenealogico() {
       centerOn(id);
       centerOnTimeline(id);
     });
+  };
+
+  const centerTimelineOnYear = (anio) => {
+    const scrollEl = tlScrollRef.current;
+    if (!scrollEl || !Number.isFinite(anio)) return;
+    const axis = scrollEl.querySelector(".tl-axis");
+    if (!axis) return;
+    const ratio = Math.max(0, Math.min(1, (anio - TL_MIN) / (TL_MAX - TL_MIN)));
+    const destinoX = axis.offsetLeft + ratio * axis.clientWidth - scrollEl.clientWidth / 2;
+    scrollEl.scrollTo({ left: Math.max(0, destinoX), behavior: "smooth" });
+  };
+
+  const alternarFavorito = (id) => {
+    if (!BY_ID[id]) return;
+    setFavoritos((actuales) => actuales.includes(id) ? actuales.filter((valor) => valor !== id) : [...actuales, id]);
+  };
+
+  const seleccionarEvento = (evento) => {
+    if (!evento) return;
+    const anio = inicioEvento(evento);
+    setEventoSeleccionadoId(evento.id);
+    setReproduciendoHistoria(false);
+    if (Number.isFinite(anio)) {
+      setAnioGlobal(anio);
+      setAnioInput(String(anio));
+    }
+    const personaPrincipal = (evento.personas || []).find((id) => BY_ID[id]);
+    if (personaPrincipal) {
+      setSeleccion(BY_ID[personaPrincipal]);
+      setHovered(null);
+    } else {
+      setSeleccion(null);
+      setHovered(null);
+    }
+    requestAnimationFrame(() => {
+      if (personaPrincipal) centerOn(personaPrincipal);
+      centerTimelineOnYear(anio);
+    });
+  };
+
+  const aplicarPasoHistoria = (historia, index) => {
+    const paso = historia?.pasos?.[index];
+    if (!paso) return;
+    setHistoriaPasoIndex(index);
+    setReproduciendoHistoria(false);
+    setTimelineMode("ambos");
+    setAnioGlobal(paso.anio);
+    setAnioInput(String(paso.anio));
+    setEventoSeleccionadoId(paso.eventoId || null);
+    const personaId = paso.persona || (paso.personas || []).find((id) => BY_ID[id]);
+    if (personaId && BY_ID[personaId]) {
+      setSeleccion(BY_ID[personaId]);
+      setHovered(null);
+    }
+    requestAnimationFrame(() => {
+      if (personaId && BY_ID[personaId]) centerOn(personaId);
+      centerTimelineOnYear(paso.anio);
+    });
+  };
+
+  const iniciarHistoria = (historiaId) => {
+    const historia = HISTORIAS.find((item) => item.id === historiaId && item.disponible);
+    if (!historia?.pasos?.length) return;
+    if (!historiaSnapshotRef.current) {
+      historiaSnapshotRef.current = {
+        query, territorios, dinastias, titulos, siglos, relaciones, soloFavoritos, anioGlobal,
+        vistasActivas, seleccionId: seleccion?.id || null, timelineMode, eventoSeleccionadoId,
+        mode, origen, destino, aisladoId, collapsedIds, compareRouteIndex,
+      };
+    }
+    setQuery("");
+    setTerritorios([]);
+    setDinastias([]);
+    setTitulos([]);
+    setSiglos([]);
+    setRelaciones([]);
+    setSoloFavoritos(false);
+    setMode("view");
+    setAisladoId(null);
+    setCollapsedIds([]);
+    setVistasActivas({ arbol: true, mapa: true });
+    setHistoriaActivaId(historia.id);
+    setInfoProyecto(null);
+    setPortadaVisible(false);
+    aplicarPasoHistoria(historia, 0);
+  };
+
+  const cambiarPasoHistoria = (delta) => {
+    if (!historiaActiva?.pasos?.length) return;
+    const siguiente = Math.max(0, Math.min(historiaActiva.pasos.length - 1, historiaPasoIndex + delta));
+    aplicarPasoHistoria(historiaActiva, siguiente);
+  };
+
+  const salirHistoria = () => {
+    const anterior = historiaSnapshotRef.current;
+    setHistoriaActivaId(null);
+    setHistoriaPasoIndex(0);
+    setEventoSeleccionadoId(null);
+    if (!anterior) return;
+    setQuery(anterior.query);
+    setTerritorios(anterior.territorios);
+    setDinastias(anterior.dinastias);
+    setTitulos(anterior.titulos);
+    setSiglos(anterior.siglos);
+    setRelaciones(anterior.relaciones);
+    setSoloFavoritos(anterior.soloFavoritos);
+    setAnioGlobal(anterior.anioGlobal);
+    setAnioInput(Number.isFinite(anterior.anioGlobal) ? String(anterior.anioGlobal) : "");
+    setVistasActivas(anterior.vistasActivas);
+    setTimelineMode(anterior.timelineMode);
+    setEventoSeleccionadoId(anterior.eventoSeleccionadoId || null);
+    setMode(anterior.mode || "view");
+    setOrigen(anterior.origen || null);
+    setDestino(anterior.destino || null);
+    setAisladoId(anterior.aisladoId || null);
+    setCollapsedIds(anterior.collapsedIds || []);
+    setCompareRouteIndex(anterior.compareRouteIndex || 0);
+    setSeleccion(anterior.seleccionId ? BY_ID[anterior.seleccionId] || null : null);
+    historiaSnapshotRef.current = null;
   };
 
   const mostrarEstadoCompartir = useCallback((mensaje) => {
@@ -2681,6 +2967,7 @@ export default function ArbolGenealogico() {
     if (mode === "compare" && (id === origen || id === destino)) cls += " pick";
     if (searchMatchSet.has(id)) cls += id === searchCurrentId ? " search-current" : " search-match";
     if (amantesFoco.has(id)) cls += " lover-related";
+    if (historiaPersonasSet.has(id)) cls += " story-related";
     if (Number.isFinite(anioGlobal)) {
       if (!estaVivaEn(p, anioGlobal)) cls += " year-inactive";
       if (reinadosActivos(p, anioGlobal, { soloEfectivos: true }).length) cls += " year-ruling";
@@ -2739,8 +3026,9 @@ export default function ArbolGenealogico() {
       const filtro = FILTROS_RELACION.find((item) => item.id === id);
       lista.push({ key: `rel-${id}`, label: filtro ? `Relación: ${filtro.label}` : `Relación: ${id}` });
     });
+    if (soloFavoritos) lista.push({ key: "solo-favoritos", label: "Solo favoritos" });
     return lista;
-  }, [queryTrim, query, territorios, dinastias, titulos, siglos, relaciones, opciones.titulos]);
+  }, [queryTrim, query, territorios, dinastias, titulos, siglos, relaciones, soloFavoritos, opciones.titulos]);
 
   const entrarEnProyecto = useCallback(() => {
     if (typeof window !== "undefined") window.localStorage.setItem(PORTADA_STORAGE_KEY, "1");
@@ -2982,6 +3270,31 @@ export default function ArbolGenealogico() {
               >
                 <Focus size={12} /> Aislar persona
               </button>
+              <button type="button" className={`nav-btn nav-btn-wide${historiaActiva ? " active" : ""}`} onClick={() => setInfoProyecto("historias")}>
+                <BookOpen size={12} /> Historias
+              </button>
+              <div className="favorites-control" ref={favoritosMenuRef}>
+                <button type="button" className={`nav-btn nav-btn-wide${favoritosOpen || soloFavoritos ? " active" : ""}`} onClick={() => setFavoritosOpen((actual) => !actual)} aria-haspopup="menu" aria-expanded={favoritosOpen}>
+                  <span className="favorite-star-symbol" aria-hidden="true">★</span> Favoritos {favoritos.length ? `(${favoritos.length})` : ""}
+                </button>
+                {favoritosOpen && (
+                  <div className="favorites-menu" role="menu">
+                    <div className="favorites-menu-head"><strong>Mis favoritos</strong><span>{favoritos.length}</span></div>
+                    <div className="favorites-menu-list">
+                      {favoritos.length ? favoritos.map((id) => (
+                        <div key={id} className="favorite-menu-row">
+                          <button type="button" onClick={() => { seleccionarPersonaPorId(id); setFavoritosOpen(false); }}>{BY_ID[id]?.nombre || id}</button>
+                          <button type="button" className="favorite-remove" onClick={() => alternarFavorito(id)} title="Quitar de favoritos" aria-label={`Quitar ${BY_ID[id]?.nombre || id} de favoritos`}>×</button>
+                        </div>
+                      )) : <div className="favorites-empty">Marca una ficha con ★ para guardarla aquí.</div>}
+                    </div>
+                    <label className={`favorites-filter-toggle${favoritos.length ? "" : " is-disabled"}`}>
+                      <input type="checkbox" checked={soloFavoritos} disabled={!favoritos.length} onChange={(event) => setSoloFavoritos(event.target.checked)} />
+                      <span>Mostrar solo favoritos</span>
+                    </label>
+                  </div>
+                )}
+              </div>
               <div className="share-control-wrap">
                 <button
                   type="button"
@@ -3327,9 +3640,18 @@ export default function ArbolGenealogico() {
                         {personaBio.dinastia}
                       </span>
                     </div>
-                    {!hovered && seleccion && (
-                      <button type="button" className="close" aria-label="Cerrar biografía" onClick={() => setSeleccion(null)}><X size={14} /></button>
-                    )}
+                    <div className="bio-head-actions">
+                      <button
+                        type="button"
+                        className={`bio-favorite-btn${favoritosSet.has(personaBio.id) ? " active" : ""}`}
+                        onClick={() => alternarFavorito(personaBio.id)}
+                        title={favoritosSet.has(personaBio.id) ? "Quitar de favoritos" : "Añadir a favoritos"}
+                        aria-label={favoritosSet.has(personaBio.id) ? `Quitar ${personaBio.nombre} de favoritos` : `Añadir ${personaBio.nombre} a favoritos`}
+                      >★</button>
+                      {!hovered && seleccion && (
+                        <button type="button" className="close" aria-label="Cerrar biografía" onClick={() => setSeleccion(null)}><X size={14} /></button>
+                      )}
+                    </div>
                   </div>
 
                   {personaBio.biografia && <p className="bio-texto">{personaBio.biografia}</p>}
@@ -3379,119 +3701,162 @@ export default function ArbolGenealogico() {
 
         <section className="workspace-bottom">
           <section className="panel timeline-panel">
-            <div className="panel-head panel-head-static">
-              <span className="panel-title">Línea temporal</span>
-              <span className="panel-count">{visiblePeople.length} personas</span>
+            <div className="panel-head panel-head-static timeline-panel-head">
+              <div className="timeline-title-group">
+                <span className="panel-title">Línea temporal</span>
+                <span className="panel-count">
+                  {timelineMode === "eventos" ? `${eventosOrdenados.length} eventos` : `${visiblePeople.length} personas${timelineMode === "ambos" ? ` · ${eventosOrdenados.length} eventos` : ""}`}
+                </span>
+              </div>
+              <div className="timeline-head-tools">
+                <div className="timeline-mode-toggle" role="group" aria-label="Contenido de la línea temporal">
+                  <button type="button" className={timelineMode === "personas" ? "active" : ""} onClick={() => setTimelineMode("personas")}>Personas</button>
+                  <button type="button" className={timelineMode === "eventos" ? "active" : ""} onClick={() => setTimelineMode("eventos")}>Eventos</button>
+                  <button type="button" className={timelineMode === "ambos" ? "active" : ""} onClick={() => setTimelineMode("ambos")}>Ambos</button>
+                </div>
+                <div className="timeline-zoom-controls" aria-label="Escala temporal">
+                  <button type="button" disabled={timelineScaleIndex === 0} onClick={() => setTimelineScaleIndex((valor) => Math.max(0, valor - 1))} title="Reducir escala temporal"><ZoomOut size={12} /></button>
+                  <span>{timelinePxPerYear.toFixed(1)} px/año</span>
+                  <button type="button" disabled={timelineScaleIndex === TIMELINE_SCALES.length - 1} onClick={() => setTimelineScaleIndex((valor) => Math.min(TIMELINE_SCALES.length - 1, valor + 1))} title="Ampliar escala temporal"><ZoomIn size={12} /></button>
+                </div>
+              </div>
             </div>
             <div className="panel-body timeline-panel-body">
-              <div className="timeline-resizable">
-              <div className="tl-scroll-container" ref={tlScrollRef}>
-                <div className="tl-content">
-                  <div className="tl-header">
-                    <div className="tl-corner">Personaje</div>
-                    <div className="tl-axis">
-                      {TL_TICKS.map((valor) => (
-                        <span key={valor} className="tl-tick" style={{ left: `${pct(valor)}%` }}>
-                          {valor}
-                        </span>
-                      ))}
-                      {Number.isFinite(anioGlobal) && (
-                        <span className="tl-year-cursor tl-year-cursor-axis" style={{ left: `${pct(anioGlobal)}%` }}>
-                          <span>{anioGlobal}</span>
-                        </span>
-                      )}
-                    </div>
+              {eventoSeleccionado && (
+                <div className="timeline-event-detail">
+                  <div>
+                    <span>{etiquetaFechaEvento(eventoSeleccionado)} · {eventoSeleccionado.categoria}</span>
+                    <strong>{eventoSeleccionado.titulo}</strong>
+                    <p>{eventoSeleccionado.descripcion}</p>
+                    {!!eventoSeleccionado.personas?.length && (
+                      <div className="timeline-event-people">
+                        {eventoSeleccionado.personas.filter((id) => BY_ID[id]).map((id) => (
+                          <button type="button" key={id} onClick={() => seleccionarPersonaPorId(id)}>{BY_ID[id].nombre}</button>
+                        ))}
+                      </div>
+                    )}
                   </div>
+                  <button type="button" className="timeline-event-close" onClick={() => setEventoSeleccionadoId(null)} aria-label="Cerrar detalle del evento"><X size={13} /></button>
+                </div>
+              )}
+              <div className="timeline-resizable">
+                <div className="tl-scroll-container" ref={tlScrollRef}>
+                  <div className="tl-content" style={{ minWidth: timelineContentWidth, width: timelineContentWidth }}>
+                    <div className="tl-header">
+                      <div className="tl-corner">{timelineMode === "eventos" ? "Acontecimiento" : "Personaje"}</div>
+                      <div className="tl-axis">
+                        {timelineTicks.map((valor) => (
+                          <span key={valor} className="tl-tick" style={{ left: `${pct(valor)}%` }}>{valor}</span>
+                        ))}
+                        {Number.isFinite(anioGlobal) && (
+                          <span className="tl-year-cursor tl-year-cursor-axis" style={{ left: `${pct(anioGlobal)}%` }}><span>{anioGlobal}</span></span>
+                        )}
+                      </div>
+                    </div>
 
-                  <div className="tl-list">
-                    {visiblePeople
-                      .slice()
-                      .sort((a, b) => (anioInicioPersona(a) ?? Infinity) - (anioInicioPersona(b) ?? Infinity) || a.nombre.localeCompare(b.nombre, "es"))
-                      .map((persona) => {
-                        const inicio = anioInicioPersona(persona);
-                        const fin = anioFinPersona(persona);
-                        const tieneFecha = Number.isFinite(inicio) && Number.isFinite(fin);
-                        const reinadosPersona = listaReinados(persona);
-                        const trackHeight = Math.max(12, 12 + Math.max(0, reinadosPersona.length - 1) * 4);
-                        const estadoAnio = Number.isFinite(anioGlobal)
-                          ? (estaVivaEn(persona, anioGlobal) ? " year-active" : " year-inactive")
-                          : "";
-                        return (
-                          <div
-                            key={persona.id}
-                            className={`tl-row ${hovered === persona.id ? "hovered" : ""}${estadoAnio}`}
-                            onMouseEnter={() => setHovered(persona.id)}
-                            onMouseLeave={() => setHovered(null)}
-                            onClick={() => setSeleccion(persona)}
-                            role="button"
-                            tabIndex={0}
-                            onKeyDown={(event) => {
-                              if (event.key === "Enter" || event.key === " ") {
-                                event.preventDefault();
-                                setSeleccion(persona);
-                              }
-                            }}
-                          >
-                            <div className="tl-sticky-col">
-                              <div className="name">{persona.nombre}</div>
-                              <div className="meta">{persona.titulo} · {(persona.reinos || []).join(" · ")} · {persona.dinastia}</div>
-                            </div>
+                    {timelineMode === "ambos" && (
+                      <div className="tl-events-band">
+                        <div className="tl-events-band-label">Eventos</div>
+                        <div className="tl-events-band-track">
+                          {eventosOrdenados.map((evento, index) => {
+                            const inicio = inicioEvento(evento);
+                            const fin = finEvento(evento);
+                            const esPeriodo = Number.isFinite(evento.desde) && Number.isFinite(evento.hasta) && evento.hasta > evento.desde;
+                            return (
+                              <button
+                                type="button"
+                                key={evento.id}
+                                className={`tl-event-marker cat-${evento.categoria}${eventoSeleccionadoId === evento.id ? " active" : ""}${esPeriodo ? " is-range" : " is-point"}`}
+                                style={{
+                                  left: `${pct(inicio)}%`,
+                                  width: esPeriodo ? `${Math.max((pct(fin) ?? 0) - (pct(inicio) ?? 0), 0.6)}%` : undefined,
+                                  top: 5 + (index % 3) * 20,
+                                }}
+                                onClick={() => seleccionarEvento(evento)}
+                                title={`${etiquetaFechaEvento(evento)} · ${evento.titulo}`}
+                              >
+                                <span>{evento.titulo}</span>
+                              </button>
+                            );
+                          })}
+                          {Number.isFinite(anioGlobal) && <span className="tl-year-cursor" style={{ left: `${pct(anioGlobal)}%` }} aria-hidden="true" />}
+                        </div>
+                      </div>
+                    )}
 
-                            <div
-                              className="tl-track"
-                              style={{ height: trackHeight }}
-                              ref={(element) => {
-                                if (element) tlBarRefs.current[persona.id] = element;
-                                else delete tlBarRefs.current[persona.id];
-                              }}
-                            >
-                              {tieneFecha ? (
-                                <div
-                                  className="tl-bar"
-                                  style={{
-                                    left: `${pct(inicio)}%`,
-                                    width: `${Math.max((pct(fin) ?? 0) - (pct(inicio) ?? 0), 0.8)}%`,
-                                    backgroundColor: ACCENTS[persona.dinastia] || ACCENTS[getCategoriaDinastía(persona.dinastia)] || "#71717A",
-                                  }}
-                                  title={`${formatoFechas(persona)} (vida)`}
+                    {timelineMode === "eventos" ? (
+                      <div className="tl-list tl-event-list">
+                        {eventosOrdenados.map((evento) => {
+                          const inicio = inicioEvento(evento);
+                          const fin = finEvento(evento);
+                          const esPeriodo = Number.isFinite(evento.desde) && Number.isFinite(evento.hasta) && evento.hasta > evento.desde;
+                          const activoEnAnio = Number.isFinite(anioGlobal) && anioGlobal >= inicio && anioGlobal <= fin;
+                          return (
+                            <div key={evento.id} className={`tl-row tl-event-row${eventoSeleccionadoId === evento.id ? " selected" : ""}${activoEnAnio ? " year-active" : ""}`} onClick={() => seleccionarEvento(evento)} role="button" tabIndex={0} onKeyDown={(event) => { if (event.key === "Enter" || event.key === " ") { event.preventDefault(); seleccionarEvento(evento); } }}>
+                              <div className="tl-sticky-col">
+                                <div className="name">{evento.titulo}</div>
+                                <div className="meta">{etiquetaFechaEvento(evento)} · {evento.categoria}</div>
+                              </div>
+                              <div className="tl-track tl-event-track">
+                                <span
+                                  className={`tl-event-bar cat-${evento.categoria}${esPeriodo ? " is-range" : " is-point"}`}
+                                  style={{ left: `${pct(inicio)}%`, width: esPeriodo ? `${Math.max((pct(fin) ?? 0) - (pct(inicio) ?? 0), 0.6)}%` : undefined }}
                                 />
-                              ) : (
-                                <span className="tl-unknown">Fechas no precisadas</span>
-                              )}
-
-                              {Number.isFinite(anioGlobal) && (
-                                <span className="tl-year-cursor" style={{ left: `${pct(anioGlobal)}%` }} aria-hidden="true" />
-                              )}
-
-                              {reinadosPersona.map((reinado, index) => {
-                                const tipo = etiquetaTipoReinado(reinado.tipo);
-                                const efectivo = reinadoEsEfectivo(reinado);
-                                return (
-                                  <div
-                                    key={`${reinado.territorio}-${reinado.desde}-${reinado.hasta}-${index}`}
-                                    className={`tl-bar-reinado${efectivo ? "" : " is-non-effective"}`}
-                                    style={{
-                                      left: `${pct(reinado.desde)}%`,
-                                      width: `${Math.max((pct(reinado.hasta) ?? 0) - (pct(reinado.desde) ?? 0), 0.8)}%`,
-                                      top: 2 + index * 4,
-                                      backgroundColor: REINO_COLOR[reinado.territorio]
-                                        || ACCENTS[persona.dinastia]
-                                        || ACCENTS[getCategoriaDinastía(persona.dinastia)]
-                                        || "#71717A",
-                                    }}
-                                    title={`${reinado.territorio}: ${reinado.desde}–${reinado.hasta}${tipo ? ` (${tipo})` : ""}`}
-                                  />
-                                );
-                              })}
+                                {Number.isFinite(anioGlobal) && <span className="tl-year-cursor" style={{ left: `${pct(anioGlobal)}%` }} aria-hidden="true" />}
+                              </div>
                             </div>
-                          </div>
-                        );
-                      })}
+                          );
+                        })}
+                      </div>
+                    ) : (
+                      <div className="tl-list">
+                        {visiblePeople
+                          .slice()
+                          .sort((a, b) => (anioInicioPersona(a) ?? Infinity) - (anioInicioPersona(b) ?? Infinity) || a.nombre.localeCompare(b.nombre, "es"))
+                          .map((persona) => {
+                            const inicio = anioInicioPersona(persona);
+                            const fin = anioFinPersona(persona);
+                            const tieneFecha = Number.isFinite(inicio) && Number.isFinite(fin);
+                            const reinadosPersona = listaReinados(persona);
+                            const trackHeight = Math.max(12, 12 + Math.max(0, reinadosPersona.length - 1) * 4);
+                            const estadoAnio = Number.isFinite(anioGlobal) ? (estaVivaEn(persona, anioGlobal) ? " year-active" : " year-inactive") : "";
+                            return (
+                              <div
+                                key={persona.id}
+                                className={`tl-row ${hovered === persona.id ? "hovered" : ""}${estadoAnio}${historiaPersonasSet.has(persona.id) ? " story-related" : ""}`}
+                                onMouseEnter={() => setHovered(persona.id)}
+                                onMouseLeave={() => setHovered(null)}
+                                onClick={() => setSeleccion(persona)}
+                                role="button"
+                                tabIndex={0}
+                                onKeyDown={(event) => { if (event.key === "Enter" || event.key === " ") { event.preventDefault(); setSeleccion(persona); } }}
+                              >
+                                <div className="tl-sticky-col">
+                                  <div className="name">{persona.nombre}</div>
+                                  <div className="meta">{persona.titulo} · {(persona.reinos || []).join(" · ")} · {persona.dinastia}</div>
+                                </div>
+                                <div className="tl-track" style={{ height: trackHeight }} ref={(element) => { if (element) tlBarRefs.current[persona.id] = element; else delete tlBarRefs.current[persona.id]; }}>
+                                  {tieneFecha ? (
+                                    <div className="tl-bar" style={{ left: `${pct(inicio)}%`, width: `${Math.max((pct(fin) ?? 0) - (pct(inicio) ?? 0), 0.35)}%`, backgroundColor: ACCENTS[persona.dinastia] || ACCENTS[getCategoriaDinastía(persona.dinastia)] || "#71717A" }} title={`${formatoFechas(persona)} (vida)`} />
+                                  ) : <span className="tl-unknown">Fechas no precisadas</span>}
+                                  {Number.isFinite(anioGlobal) && <span className="tl-year-cursor" style={{ left: `${pct(anioGlobal)}%` }} aria-hidden="true" />}
+                                  {reinadosPersona.map((reinado, index) => {
+                                    const tipo = etiquetaTipoReinado(reinado.tipo);
+                                    const efectivo = reinadoEsEfectivo(reinado);
+                                    return (
+                                      <div key={`${reinado.territorio}-${reinado.desde}-${reinado.hasta}-${index}`} className={`tl-bar-reinado${efectivo ? "" : " is-non-effective"}`} style={{ left: `${pct(reinado.desde)}%`, width: `${Math.max((pct(reinado.hasta) ?? 0) - (pct(reinado.desde) ?? 0), 0.35)}%`, top: 2 + index * 4, backgroundColor: REINO_COLOR[reinado.territorio] || ACCENTS[persona.dinastia] || ACCENTS[getCategoriaDinastía(persona.dinastia)] || "#71717A" }} title={`${reinado.territorio}: ${reinado.desde}–${reinado.hasta}${tipo ? ` (${tipo})` : ""}`} />
+                                    );
+                                  })}
+                                </div>
+                              </div>
+                            );
+                          })}
+                      </div>
+                    )}
                   </div>
                 </div>
               </div>
             </div>
-          </div>
           </section>
         </section>
       </div>
@@ -3499,6 +3864,8 @@ export default function ArbolGenealogico() {
       <footer className="project-footer">
         <div className="project-footer-links" aria-label="Información del proyecto">
           <button type="button" onClick={() => setInfoProyecto("acerca")}><Info size={12} /> Acerca del proyecto</button>
+          <button type="button" onClick={() => setInfoProyecto("historias")}><BookOpen size={12} /> Historias</button>
+          <button type="button" onClick={() => setInfoProyecto("estadisticas")}>Estadísticas</button>
           <button type="button" onClick={() => setInfoProyecto("fuentes")}><BookOpen size={12} /> Fuentes y metodología</button>
           <button type="button" onClick={() => setInfoProyecto("agradecimientos")}><Heart size={12} /> Agradecimientos</button>
           <button type="button" onClick={() => setInfoProyecto("licencias")}><Scale size={12} /> Licencias</button>
@@ -3525,9 +3892,13 @@ export default function ArbolGenealogico() {
               <span><strong>{PERSONAS.length}</strong> personas</span>
               <span><strong>1200–1650</strong> periodo principal</span>
             </div>
-            <button type="button" className="welcome-enter" onClick={entrarEnProyecto}>Explorar el árbol <ArrowRight size={15} /></button>
+            <div className="welcome-actions">
+              <button type="button" className="welcome-enter" onClick={entrarEnProyecto}>Explorar el árbol <ArrowRight size={15} /></button>
+              <button type="button" className="welcome-history" onClick={() => setInfoProyecto("historias")}><BookOpen size={14} /> Historias guiadas</button>
+            </div>
             <div className="welcome-links">
               <button type="button" onClick={() => setInfoProyecto("acerca")}>Acerca del proyecto</button>
+              <button type="button" onClick={() => setInfoProyecto("estadisticas")}>Estadísticas</button>
               <button type="button" onClick={() => setInfoProyecto("fuentes")}>Fuentes y metodología</button>
               <button type="button" onClick={() => setInfoProyecto("agradecimientos")}>Agradecimientos</button>
             </div>
@@ -3536,7 +3907,36 @@ export default function ArbolGenealogico() {
         </div>
       )}
 
-      <ModalProyecto seccion={infoProyecto} onClose={() => setInfoProyecto(null)} persona={seleccion} />
+      {historiaActiva && historiaPasoActual && (
+        <aside className="story-guide" aria-live="polite">
+          <div className="story-guide-head">
+            <div>
+              <span>Historia · paso {historiaPasoIndex + 1} de {historiaActiva.pasos.length}</span>
+              <strong>{historiaActiva.titulo}</strong>
+            </div>
+            <button type="button" onClick={salirHistoria} aria-label="Salir del recorrido"><X size={14} /></button>
+          </div>
+          <div className="story-guide-year">{historiaPasoActual.anio}</div>
+          <h3>{historiaPasoActual.titulo}</h3>
+          <p>{historiaPasoActual.texto}</p>
+          {!!historiaPasoActual.personas?.length && (
+            <div className="story-guide-people">
+              {historiaPasoActual.personas.filter((id) => BY_ID[id]).map((id) => <button type="button" key={id} onClick={() => seleccionarPersonaPorId(id)}>{BY_ID[id].nombre}</button>)}
+            </div>
+          )}
+          <div className="story-guide-actions">
+            <button type="button" disabled={historiaPasoIndex === 0} onClick={() => cambiarPasoHistoria(-1)}><ArrowLeft size={13} /> Anterior</button>
+            <button type="button" className="story-return-btn" onClick={() => aplicarPasoHistoria(historiaActiva, historiaPasoIndex)}>Volver al paso</button>
+            {historiaPasoIndex < historiaActiva.pasos.length - 1 ? (
+              <button type="button" className="story-next-btn" onClick={() => cambiarPasoHistoria(1)}>Continuar <ArrowRight size={13} /></button>
+            ) : (
+              <button type="button" className="story-next-btn" onClick={salirHistoria}>Terminar</button>
+            )}
+          </div>
+        </aside>
+      )}
+
+      <ModalProyecto seccion={infoProyecto} onClose={() => setInfoProyecto(null)} persona={seleccion} personasVista={visiblePeople} onStartHistoria={iniciarHistoria} />
     </div>
   );
 }
