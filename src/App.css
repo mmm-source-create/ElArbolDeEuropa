@@ -504,7 +504,7 @@ html, body {
 .tl-header {
   position: sticky;
   top: 0;
-  z-index: 3;
+  z-index: 40;
   display: grid;
   grid-template-columns: 200px 1fr;
   gap: 12px;
@@ -515,7 +515,7 @@ html, body {
 .tl-corner {
   position: sticky;
   left: 0;
-  z-index: 4;
+  z-index: 41;
   background: #FBF7EC;
   padding: 6px 12px;
   font-family: -apple-system, 'Segoe UI', sans-serif;
@@ -3434,3 +3434,7 @@ html, body {
   .story-guide-actions { flex-wrap: wrap; }
   .story-guide-actions .story-return-btn { margin-left: 0; }
 }
+
+
+.timeline-zoom-divider { width: 1px; height: 15px; background: #D9CFB6; display: inline-block; }
+.project-footer-rights { margin-top: 5px; font-family: -apple-system, 'Segoe UI', sans-serif; font-size: 9.5px; line-height: 1.45; color: #8A7F65; text-align: center; }
