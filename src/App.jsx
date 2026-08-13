@@ -1743,6 +1743,28 @@ function formatoFechas(persona) {
   return `${inicio} – ${fin}`;
 }
 
+function sobrenombreDePersona(persona) {
+  if (!persona) return "";
+  if (typeof persona.sobrenombre === "string" && persona.sobrenombre.trim()) return persona.sobrenombre.trim();
+  const nombre = String(persona.nombre || "").trim();
+  const cita = nombre.match(/[“\"]([^”\"]+)[”\"]/);
+  if (cita) return cita[1].trim();
+  const parentesis = nombre.match(/\(([^()]+)\)\s*$/);
+  if (parentesis && /^(el|la|los|las)\s/i.test(parentesis[1].trim())) return parentesis[1].trim();
+  return "";
+}
+
+function nombrePrincipal(persona) {
+  if (!persona) return "";
+  let nombre = String(persona.nombre || "").trim();
+  nombre = nombre.replace(/\s*[“\"][^”\"]+[”\"]\s*/g, " ").replace(/\s{2,}/g, " ").trim();
+  const parentesis = nombre.match(/\(([^()]+)\)\s*$/);
+  if (parentesis && /^(el|la|los|las)\s/i.test(parentesis[1].trim())) {
+    nombre = nombre.slice(0, parentesis.index).trim();
+  }
+  return nombre || String(persona.nombre || "").trim();
+}
+
 const ANIOS_DATOS = PERSONAS.flatMap((persona) => [
   persona.nac,
   persona.muer,
@@ -1968,9 +1990,9 @@ function ModalProyecto({ seccion, onClose, persona, personasVista = PERSONAS, on
           {seccion === "licencias" && (
             <>
               <div className="project-section-icon"><Scale size={17} /></div>
-              <h3>Contenido original de El Árbol de Europa</h3>
-              <p>Salvo indicación expresa en sentido contrario, el código, el diseño, los textos y la estructura original de la base de datos de El Árbol de Europa quedan con todos los derechos reservados.</p>
-              <div className="project-license-note">Los materiales de terceros mantienen sus propias licencias. La licencia de la cartografía derivada de MapChart se aplica a ese material cartográfico y no convierte automáticamente el resto del proyecto en CC BY-SA.</div>
+              <h3>Contenido original del proyecto</h3>
+              <p>Salvo indicación expresa en sentido contrario, el código, el diseño, los textos y la estructura original de la base de datos de El Árbol de Europa se mantienen con todos los derechos reservados.</p>
+              <div className="project-license-note">Los materiales de terceros conservan sus propias licencias. La cartografía derivada de MapChart se rige por su atribución específica y no extiende automáticamente esa licencia al resto del proyecto.</div>
               <h3>Cartografía de MapChart</h3>
               <p>La base cartográfica utilizada en el mapa procede de <a href="https://www.mapchart.net/" target="_blank" rel="noreferrer">MapChart <ExternalLink size={12} /></a> y ha sido modificada y adaptada para este proyecto.</p>
               <p>El material cartográfico de MapChart se publica bajo <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noreferrer">Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0) <ExternalLink size={12} /></a>. La atribución y la indicación de las modificaciones se mantienen aquí y en el pie de la aplicación.</p>
@@ -2547,6 +2569,8 @@ export default function ArbolGenealogico() {
     return visiblePeople.filter((persona) => {
       const textoBuscable = normalizaTexto([
         persona.nombre,
+        nombrePrincipal(persona),
+        sobrenombreDePersona(persona),
         persona.titulo,
         persona.dinastia,
         ...(persona.reinos || []),
@@ -2628,8 +2652,8 @@ export default function ArbolGenealogico() {
     const relevantChildren = childId ? [childId] : childIds;
     const isPath = relevantChildren.some((cid) => parentIds.some((pid) => pathEdges.has(`${pid}|${cid}`)));
     const isImmediate = Boolean(
-      hovered
-      && (parentIds.includes(hovered) || relevantChildren.includes(hovered))
+      relacionFocoId
+      && (parentIds.includes(relacionFocoId) || childIds.includes(relacionFocoId) || relevantChildren.includes(relacionFocoId))
     );
     const isLineage = relevantChildren.some((cid) =>
       lineage.has(cid) && parentIds.some((pid) => lineage.has(pid))
@@ -2640,6 +2664,8 @@ export default function ArbolGenealogico() {
     if (isLineage) return { stroke: "#A9724F", strokeWidth: 1.65 };
     return { stroke: "#B9AF98", strokeWidth: 1.05 };
   };
+
+  const connectorLayerKey = [visibleSignature, hovered || "", seleccion?.id || "", comparePath?.join("|") || "", collapsedIds.join("|")].join("__");
 
   const connectors = routing.families.map((family) => {
     const sharedStyle = styleForFamilyLine(family);
@@ -3601,6 +3627,7 @@ export default function ArbolGenealogico() {
                       }}
                     >
                       <svg
+                        key={connectorLayerKey}
                         className="svg-overlay"
                         width={canvasSize.w}
                         height={canvasSize.h}
@@ -3666,7 +3693,8 @@ export default function ArbolGenealogico() {
                 <div className="bio-panel">
                   <div className="bio-head">
                     <div>
-                      <h3 className="bio-nombre">{personaBio.nombre}</h3>
+                      <h3 className="bio-nombre">{nombrePrincipal(personaBio)}</h3>
+                      {sobrenombreDePersona(personaBio) && <div className="bio-sobrenombre">«{sobrenombreDePersona(personaBio)}»</div>}
                       <span
                         className="badge"
                         style={{ background: ACCENTS[personaBio.dinastia] || ACCENTS[getCategoriaDinastía(personaBio.dinastia)] || "#71717A" }}
@@ -3693,6 +3721,7 @@ export default function ArbolGenealogico() {
                   <dl>
                     <dt>ID</dt><dd><code className="bio-id">{personaBio.id}</code></dd>
                     <dt>Territorio(s)</dt><dd>{(personaBio.reinos || []).join(", ") || "No indicado"}</dd>
+                    {sobrenombreDePersona(personaBio) && <><dt>Sobrenombre</dt><dd>{sobrenombreDePersona(personaBio)}</dd></>}
                     <dt>Título</dt><dd>{personaBio.titulo}</dd>
                     <dt>Fechas</dt>
                     <dd>
@@ -3915,7 +3944,9 @@ export default function ArbolGenealogico() {
           <span aria-hidden="true">·</span>
           adaptada y modificada para El Árbol de Europa
         </div>
-        <div className="project-footer-rights">© 2026 El Árbol de Europa · Código, diseño, textos y estructura original de la base de datos: todos los derechos reservados · Materiales de terceros: ver Licencias</div>
+        <div className="project-footer-rights">
+          © 2026 El Árbol de Europa · Código, diseño, textos y estructura original de la base de datos: todos los derechos reservados · Materiales de terceros y cartografía derivada: ver Licencias
+        </div>
       </footer>
 
       {portadaVisible && (
@@ -3977,4 +4008,5 @@ export default function ArbolGenealogico() {
     </div>
   );
 }
+
 
