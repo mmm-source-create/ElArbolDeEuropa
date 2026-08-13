@@ -566,7 +566,7 @@ html, body {
 .tl-sticky-col {
   position: sticky;
   left: 0;
-  z-index: 2;
+  z-index: 10;
   background: #FBF7EC;
   padding: 4px 12px;
   border-right: 1px solid #E2D8C3;
@@ -598,6 +598,8 @@ html, body {
 
 .tl-track {
   position: relative;
+  z-index: 0;
+  isolation: isolate;
   height: 12px;
 }
 
@@ -3229,17 +3231,16 @@ html, body {
   display: grid;
   grid-template-columns: 200px 1fr;
   gap: 12px;
-  min-height: 69px;
   border-bottom: 2px solid #D9CFB6;
   background: #F8F1E2;
 }
 .tl-events-band-label {
   position: sticky;
   left: 0;
-  z-index: 3;
+  z-index: 12;
   display: flex;
-  align-items: center;
-  padding: 0 12px;
+  align-items: flex-start;
+  padding: 10px 12px;
   background: #F8F1E2;
   border-right: 1px solid #E2D8C3;
   box-shadow: 2px 0 5px -2px rgba(0,0,0,.08);
@@ -3249,38 +3250,82 @@ html, body {
   letter-spacing: .55px;
   text-transform: uppercase;
   color: #8A7F65;
+  box-sizing: border-box;
 }
-.tl-events-band-track { position: relative; min-height: 69px; overflow: hidden; }
+.tl-events-band-track {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+}
 .tl-event-marker {
+  --event-color: #8F6C53;
   position: absolute;
-  height: 16px;
-  min-width: 8px;
+  height: 18px;
+  min-width: 44px;
   display: block;
-  border: 0;
-  border-radius: 3px;
-  padding: 0;
-  background: #8F6C53;
-  color: #fff;
+  border: 1px solid color-mix(in srgb, var(--event-color) 72%, #D9CFB6);
+  border-left: 4px solid var(--event-color);
+  border-radius: 4px;
+  padding: 0 5px;
+  box-sizing: border-box;
+  background: rgba(255, 253, 246, .96);
+  color: #4A4436;
   cursor: pointer;
-  opacity: .86;
+  opacity: .96;
   overflow: hidden;
   text-align: left;
+  box-shadow: 0 1px 2px rgba(44, 38, 32, .08);
+  z-index: 1;
 }
-.tl-event-marker.is-point { width: 8px; border-radius: 50%; overflow: visible; }
-.tl-event-marker.is-point > span { position: absolute; left: 11px; top: 1px; width: 120px; color: #6B6350; }
-.tl-event-marker.is-range > span { display: block; padding: 1px 5px; color: #fff; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-.tl-event-marker > span { font-family: -apple-system, 'Segoe UI', sans-serif; font-size: 8.5px; line-height: 14px; }
-.tl-event-marker:hover, .tl-event-marker.active { opacity: 1; box-shadow: 0 0 0 2px rgba(122,46,46,.28); z-index: 2; }
+.tl-event-marker-title {
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-family: -apple-system, 'Segoe UI', sans-serif;
+  font-size: 9.5px;
+  font-weight: 600;
+  line-height: 16px;
+}
+.tl-event-marker.is-point::before {
+  content: "";
+  display: inline-block;
+  width: 5px;
+  height: 5px;
+  margin: 0 4px 1px 0;
+  border-radius: 50%;
+  background: var(--event-color);
+  vertical-align: middle;
+}
+.tl-event-marker.is-point .tl-event-marker-title {
+  display: inline;
+}
+.tl-event-marker-duration {
+  position: absolute;
+  left: -1px;
+  bottom: -1px;
+  height: 3px;
+  border-radius: 0 999px 999px 0;
+  background: var(--event-color);
+  pointer-events: none;
+}
+.tl-event-marker:hover,
+.tl-event-marker.active {
+  opacity: 1;
+  border-color: var(--event-color);
+  box-shadow: 0 0 0 2px color-mix(in srgb, var(--event-color) 24%, transparent), 0 2px 5px rgba(44,38,32,.12);
+  z-index: 3;
+}
 
 .tl-event-row.selected .tl-sticky-col { background: #F4E8D4; }
 .tl-event-track { min-height: 16px; }
-.tl-event-bar { position: absolute; top: 4px; height: 8px; min-width: 8px; border-radius: 4px; background: #8F6C53; }
+.tl-event-bar { position: absolute; top: 4px; height: 8px; min-width: 8px; border-radius: 4px; background: var(--event-color, #8F6C53); }
 .tl-event-bar.is-point { width: 8px !important; }
-.cat-guerra { background: #7A2E2E; }
-.cat-politica { background: #596D83; }
-.cat-religion { background: #7C638A; }
-.cat-dinastia { background: #9A713B; }
-.cat-sociedad { background: #65765A; }
+.cat-guerra { --event-color: #7A2E2E; }
+.cat-politica { --event-color: #596D83; }
+.cat-religion { --event-color: #7C638A; }
+.cat-dinastia { --event-color: #9A713B; }
+.cat-sociedad { --event-color: #65765A; }
 
 .box.story-related,
 .tl-row.story-related .tl-sticky-col {
