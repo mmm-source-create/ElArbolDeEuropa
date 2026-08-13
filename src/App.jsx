@@ -2154,6 +2154,37 @@ export default function ArbolGenealogico() {
     return valores;
   }, [timelineTickStep]);
   const eventosOrdenados = useMemo(() => EVENTOS_HISTORICOS.slice().sort((a, b) => inicioEvento(a) - inicioEvento(b) || a.titulo.localeCompare(b.titulo, "es")), []);
+  // En el modo "Ambos" los eventos se distribuyen en carriles dinámicos.
+  // El algoritmo reserva el ancho visual real de cada etiqueta (y, para los
+  // periodos, al menos la duración cronológica), de modo que nunca se monten
+  // unos textos sobre otros aunque haya muchos hitos concentrados en pocos años.
+  const timelineCombinedEvents = useMemo(() => {
+    const laneGap = 7;
+    const laneHeight = 21;
+    const laneEnds = [];
+    const items = eventosOrdenados.map((evento) => {
+      const inicio = inicioEvento(evento);
+      const fin = finEvento(evento);
+      const esPeriodo = Number.isFinite(evento.desde) && Number.isFinite(evento.hasta) && evento.hasta > evento.desde;
+      const leftPx = Math.max(0, ((inicio - TL_MIN) / (TL_MAX - TL_MIN)) * timelineTrackWidth);
+      const durationPx = esPeriodo
+        ? Math.max(5, ((fin - inicio) / (TL_MAX - TL_MIN)) * timelineTrackWidth)
+        : 0;
+      const labelWidth = Math.min(150, Math.max(76, 18 + evento.titulo.length * 4.3));
+      const available = Math.max(44, timelineTrackWidth - leftPx);
+      const visualWidth = Math.min(available, Math.max(labelWidth, durationPx));
+      let lane = laneEnds.findIndex((endPx) => endPx + laneGap <= leftPx);
+      if (lane < 0) lane = laneEnds.length;
+      laneEnds[lane] = leftPx + visualWidth;
+      return { evento, inicio, fin, esPeriodo, leftPx, durationPx, visualWidth, lane };
+    });
+    return {
+      items,
+      laneHeight,
+      laneCount: Math.max(1, laneEnds.length),
+      height: Math.max(58, laneEnds.length * laneHeight + 10),
+    };
+  }, [eventosOrdenados, timelineTrackWidth]);
   const eventoSeleccionado = eventosOrdenados.find((evento) => evento.id === eventoSeleccionadoId) || null;
   const historiaActiva = HISTORIAS.find((historia) => historia.id === historiaActivaId) || null;
   const historiaPasoActual = historiaActiva?.pasos?.[historiaPasoIndex] || null;
@@ -3755,30 +3786,32 @@ export default function ArbolGenealogico() {
                     </div>
 
                     {timelineMode === "ambos" && (
-                      <div className="tl-events-band">
-                        <div className="tl-events-band-label">Eventos</div>
-                        <div className="tl-events-band-track">
-                          {eventosOrdenados.map((evento, index) => {
-                            const inicio = inicioEvento(evento);
-                            const fin = finEvento(evento);
-                            const esPeriodo = Number.isFinite(evento.desde) && Number.isFinite(evento.hasta) && evento.hasta > evento.desde;
-                            return (
-                              <button
-                                type="button"
-                                key={evento.id}
-                                className={`tl-event-marker cat-${evento.categoria}${eventoSeleccionadoId === evento.id ? " active" : ""}${esPeriodo ? " is-range" : " is-point"}`}
-                                style={{
-                                  left: `${pct(inicio)}%`,
-                                  width: esPeriodo ? `${Math.max((pct(fin) ?? 0) - (pct(inicio) ?? 0), 0.6)}%` : undefined,
-                                  top: 5 + (index % 3) * 20,
-                                }}
-                                onClick={() => seleccionarEvento(evento)}
-                                title={`${etiquetaFechaEvento(evento)} · ${evento.titulo}`}
-                              >
-                                <span>{evento.titulo}</span>
-                              </button>
-                            );
-                          })}
+                      <div className="tl-events-band" style={{ minHeight: timelineCombinedEvents.height }}>
+                        <div className="tl-events-band-label" style={{ minHeight: timelineCombinedEvents.height }}>Eventos</div>
+                        <div className="tl-events-band-track" style={{ minHeight: timelineCombinedEvents.height }}>
+                          {timelineCombinedEvents.items.map(({ evento, esPeriodo, leftPx, durationPx, visualWidth, lane }) => (
+                            <button
+                              type="button"
+                              key={evento.id}
+                              className={`tl-event-marker cat-${evento.categoria}${eventoSeleccionadoId === evento.id ? " active" : ""}${esPeriodo ? " is-range" : " is-point"}`}
+                              style={{
+                                left: leftPx,
+                                width: visualWidth,
+                                top: 5 + lane * timelineCombinedEvents.laneHeight,
+                              }}
+                              onClick={() => seleccionarEvento(evento)}
+                              title={`${etiquetaFechaEvento(evento)} · ${evento.titulo}`}
+                            >
+                              <span className="tl-event-marker-title">{evento.titulo}</span>
+                              {esPeriodo && (
+                                <span
+                                  className="tl-event-marker-duration"
+                                  style={{ width: Math.min(durationPx, visualWidth) }}
+                                  aria-hidden="true"
+                                />
+                              )}
+                            </button>
+                          ))}
                           {Number.isFinite(anioGlobal) && <span className="tl-year-cursor" style={{ left: `${pct(anioGlobal)}%` }} aria-hidden="true" />}
                         </div>
                       </div>
@@ -3940,3 +3973,4 @@ export default function ArbolGenealogico() {
     </div>
   );
 }
+
