@@ -504,7 +504,7 @@ html, body {
 .tl-header {
   position: sticky;
   top: 0;
-  z-index: 40;
+  z-index: 30;
   display: grid;
   grid-template-columns: 200px 1fr;
   gap: 12px;
@@ -515,7 +515,7 @@ html, body {
 .tl-corner {
   position: sticky;
   left: 0;
-  z-index: 41;
+  z-index: 31;
   background: #FBF7EC;
   padding: 6px 12px;
   font-family: -apple-system, 'Segoe UI', sans-serif;
@@ -691,6 +691,14 @@ html, body {
   margin: 0 0 4px;
   font-size: 20px;
   color: #2C2620;
+}
+
+.bio-sobrenombre {
+  margin: 0 0 6px;
+  color: #7A2E2E;
+  font-size: 11.5px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
 }
 
 .badge {
@@ -3195,7 +3203,7 @@ html, body {
 
 .timeline-zoom-controls button:hover:not(:disabled) { background: #F5EFDE; color: #2C2620; }
 .timeline-zoom-controls button:disabled { opacity: 0.35; cursor: default; }
-.timeline-zoom-controls span {
+.timeline-zoom-value {
   min-width: 62px;
   padding: 0 6px;
   text-align: center;
@@ -3436,5 +3444,23 @@ html, body {
 }
 
 
-.timeline-zoom-divider { width: 1px; height: 15px; background: #D9CFB6; display: inline-block; }
-.project-footer-rights { margin-top: 5px; font-family: -apple-system, 'Segoe UI', sans-serif; font-size: 9.5px; line-height: 1.45; color: #8A7F65; text-align: center; }
+/* V15: el encabezado de la cronologÃ­a debe permanecer por encima de las filas
+   tambiÃ©n al desplazar verticalmente el contenido. */
+.tl-header { isolation: isolate; }
+.tl-header, .tl-corner, .tl-axis { background: #FBF7EC; }
+
+.timeline-zoom-divider {
+  width: 1px;
+  height: 16px;
+  display: inline-block;
+  background: #D9CFB6;
+}
+
+.project-footer-rights {
+  margin-top: 5px;
+  font-family: -apple-system, 'Segoe UI', sans-serif;
+  font-size: 9.5px;
+  line-height: 1.45;
+  color: #8A7F65;
+  text-align: center;
+}
