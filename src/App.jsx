@@ -17,6 +17,7 @@ import { PERSONAS } from "./personas.jsx";
 import { EVENTOS_HISTORICOS, HISTORIAS } from "./historiaData.jsx";
 import { DEFAULT_LOCALE, SITE, t } from "./i18n.jsx";
 import "./App.css";
+import EADELogo from "./EADE.png";
 
 // ---------------------------------------------------------------------------
 // Taxonomías de filtros
@@ -3333,12 +3334,11 @@ export default function ArbolGenealogico() {
       <div className="header">
         <div className="header-brand">
           <img
-            src="/EADE.png"
+            src={EADELogo}
             alt=""
             className="header-logo"
             aria-hidden="true"
           />
-      
           <div className="header-copy">
             <h1>{t("brand.name")}</h1>
             <div className="sub">{t("brand.scope")}</div>
