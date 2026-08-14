@@ -8,11 +8,10 @@ import {
   ZoomIn,
   ZoomOut,
 } from "lucide-react";
-import mapSvgContent from "./MapChart_Map.svg?raw";
+import mapSvgContent from "./assets/MapChart_Map.svg?raw";
 import {
   REINO_COLOR,
   REINO_COLOR_DEFAULT,
-  esGobernante,
   idsDeReinoEnAño,
   añoReferenciaTerritorial,
   listaReinados,
@@ -157,17 +156,19 @@ export function MapaEuropa({ seleccion, anioGlobal = null, onSelectTerritorio })
       });
       pintadosRef.current = new Set();
 
-      if (seleccion && esGobernante(seleccion)) {
+      if (seleccion) {
         const reinadosDetallados = listaReinados(seleccion).filter(reinadoEsEfectivo);
         const entradas = reinadosDetallados.length
           ? (Number.isFinite(anioGlobal)
               ? reinadosActivos(seleccion, anioGlobal, { soloEfectivos: true })
               : reinadosDetallados)
-          : (seleccion.reinos || []).map((territorio) => ({
-              territorio,
-              desde: añoReferenciaTerritorial(seleccion, territorio),
-              hasta: añoReferenciaTerritorial(seleccion, territorio),
-            }));
+          : (seleccion.gobernante === true
+              ? (seleccion.reinos || []).map((territorio) => ({
+                  territorio,
+                  desde: añoReferenciaTerritorial(seleccion, territorio),
+                  hasta: añoReferenciaTerritorial(seleccion, territorio),
+                }))
+              : []);
 
         const porTerritorio = new Map();
         entradas.forEach((entrada) => {
@@ -316,3 +317,4 @@ export function MapaEuropa({ seleccion, anioGlobal = null, onSelectTerritorio })
     </div>
   );
 }
+
