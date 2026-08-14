@@ -151,17 +151,75 @@ const PERSONA_ID_POR_SLUG = Object.fromEntries(
   Object.entries(PERSONA_SLUG_POR_ID).map(([id, slug]) => [slug, id])
 );
 
+// La versión inglesa solo crea páginas individuales cuando una ficha tiene un
+// nombre inglés explícito. Así evitamos publicar miles de URLs /en/ cuyo
+// contenido principal seguiría estando en español.
+const PERSONA_ENGLISH = PERSONAS.filter((persona) => typeof persona.nombreEn === "string" && persona.nombreEn.trim());
+const PERSONA_SLUG_EN_BASE_COUNT = PERSONA_ENGLISH.reduce((acc, persona) => {
+  const base = slugPublico(persona.nombreEn);
+  acc[base] = (acc[base] || 0) + 1;
+  return acc;
+}, {});
+const PERSONA_SLUG_EN_POR_ID = Object.fromEntries(PERSONA_ENGLISH.map((persona) => {
+  const base = slugPublico(persona.nombreEn);
+  const slug = PERSONA_SLUG_EN_BASE_COUNT[base] > 1 ? `${base}-${slugPublico(persona.id)}` : base;
+  return [persona.id, slug];
+}));
+const PERSONA_ID_POR_SLUG_EN = Object.fromEntries(
+  Object.entries(PERSONA_SLUG_EN_POR_ID).map(([id, slug]) => [slug, id])
+);
+
+const ROUTE_SEGMENTS = Object.freeze({
+  es: Object.freeze({ persona: "persona", dinastia: "dinastia", territorio: "territorio", historia: "historia" }),
+  en: Object.freeze({ persona: "person", dinastia: "dynasty", territorio: "territory", historia: "story" }),
+});
+const ROUTE_TYPE_BY_SEGMENT = Object.freeze({
+  es: Object.fromEntries(Object.entries(ROUTE_SEGMENTS.es).map(([tipo, segmento]) => [segmento, tipo])),
+  en: Object.fromEntries(Object.entries(ROUTE_SEGMENTS.en).map(([tipo, segmento]) => [segmento, tipo])),
+});
+
+function localeDesdePath(pathname) {
+  const match = String(pathname || "").match(/^\/(es|en)(?:\/|$)/);
+  return match?.[1] || DEFAULT_LOCALE;
+}
+
+function rutaEntidadLocalizada(locale, tipo, slug) {
+  const idioma = locale === "en" ? "en" : "es";
+  const segmento = ROUTE_SEGMENTS[idioma]?.[tipo];
+  if (!segmento || !slug) return `/${idioma}/`;
+  return `/${idioma}/${segmento}/${encodeURIComponent(slug)}`;
+}
+
+function slugPersonaPorLocale(persona, locale) {
+  if (!persona) return null;
+  if (locale === "en") return PERSONA_SLUG_EN_POR_ID[persona.id] || null;
+  return PERSONA_SLUG_POR_ID[persona.id] || slugPublico(persona.nombre);
+}
+
 function rutaPublicaDesdePath(pathname) {
-  const match = String(pathname || "").match(/^\/(persona|dinastia|territorio|historia)\/([^/]+)\/?$/);
-  if (!match) return null;
+  let path = String(pathname || "/");
+  const prefix = path.match(/^\/(es|en)(?=\/|$)/);
+  const locale = prefix?.[1] || DEFAULT_LOCALE;
+  const localizada = Boolean(prefix);
+  if (prefix) path = path.slice(prefix[0].length) || "/";
+
+  const match = path.match(/^\/([^/]+)\/([^/]+)\/?$/);
+  if (!match) return { locale, localizada, tipo: null, slug: null };
+  const tipo = localizada
+    ? ROUTE_TYPE_BY_SEGMENT[locale]?.[match[1]] || null
+    : ROUTE_TYPE_BY_SEGMENT.es?.[match[1]] || null;
+  if (!tipo) return { locale, localizada, tipo: null, slug: null };
   let slug = match[2];
   try { slug = decodeURIComponent(slug); } catch { /* conserva el slug original */ }
-  return { tipo: match[1], slug };
+  return { locale, localizada, tipo, slug };
 }
 
 function personaIdDesdeRuta(pathname) {
   const ruta = rutaPublicaDesdePath(pathname);
-  return ruta?.tipo === "persona" ? PERSONA_ID_POR_SLUG[ruta.slug] || null : null;
+  if (ruta?.tipo !== "persona") return null;
+  return ruta.locale === "en"
+    ? PERSONA_ID_POR_SLUG_EN[ruta.slug] || null
+    : PERSONA_ID_POR_SLUG[ruta.slug] || null;
 }
 
 function valorPorSlug(slug, valores) {
@@ -193,6 +251,19 @@ function ensureCanonical(href) {
     document.head.appendChild(link);
   }
   link.setAttribute("href", href);
+}
+
+function setHreflangAlternates(items) {
+  if (typeof document === "undefined") return;
+  document.head.querySelectorAll('link[data-eade-hreflang="1"]').forEach((node) => node.remove());
+  items.filter((item) => item?.hreflang && item?.href).forEach((item) => {
+    const link = document.createElement("link");
+    link.setAttribute("rel", "alternate");
+    link.setAttribute("hreflang", item.hreflang);
+    link.setAttribute("href", item.href);
+    link.setAttribute("data-eade-hreflang", "1");
+    document.head.appendChild(link);
+  });
 }
 
 const CATEGORIAS_TITULO = [
@@ -2248,6 +2319,10 @@ export default function ArbolGenealogico() {
   const nodeRefs = useRef({});
   const tlScrollRef = useRef(null);
   const tlBarRefs = useRef({});
+  const [locale, setLocale] = useState(() => {
+    if (typeof window === "undefined") return DEFAULT_LOCALE;
+    return localeDesdePath(window.location.pathname);
+  });
   const [query, setQuery] = useState("");
   const [territorios, setTerritorios] = useState([]);
   const [dinastias, setDinastias] = useState([]);
@@ -2353,51 +2428,106 @@ export default function ArbolGenealogico() {
   useEffect(() => {
     if (typeof window === "undefined" || typeof document === "undefined") return;
 
-    document.documentElement.lang = SITE.language || DEFAULT_LOCALE;
+    const isEnglish = locale === "en";
+    document.documentElement.lang = isEnglish ? "en" : "es";
 
     const personaNombre = seleccion ? (nombrePrincipal(seleccion) || seleccion.nombre) : "";
     const dinastiaUnica = !personaNombre && !historiaActiva && dinastias.length === 1 ? dinastias[0] : "";
     const territorioUnico = !personaNombre && !historiaActiva && !dinastiaUnica && territorios.length === 1 ? territorios[0] : "";
-    const pageTitle = personaNombre
-      ? t("share.personTitle", { name: personaNombre })
-      : historiaActiva?.titulo
-        ? `${historiaActiva.titulo} — ${SITE.name}`
-        : dinastiaUnica
-          ? `${dinastiaUnica} — ${SITE.name}`
-          : territorioUnico
-            ? `${territorioUnico} — ${SITE.name}`
-            : t("meta.defaultTitle");
-    const description = personaNombre
-      ? `Explora a ${personaNombre}: parentescos, cronología, reinados y territorios en ${SITE.name}.`
-      : historiaActiva?.descripcion
-        || (dinastiaUnica ? `Explora la dinastía ${dinastiaUnica} en ${SITE.name}.` : "")
-        || (territorioUnico ? `Explora las personas, reinados y conexiones históricas de ${territorioUnico} en ${SITE.name}.` : "")
-        || t("meta.defaultDescription");
+
+    const pageTitle = isEnglish
+      ? "The Tree of Europe | Interactive historical and genealogical atlas"
+      : personaNombre
+        ? t("share.personTitle", { name: personaNombre })
+        : historiaActiva?.titulo
+          ? `${historiaActiva.titulo} — ${SITE.name}`
+          : dinastiaUnica
+            ? `${dinastiaUnica} — ${SITE.name}`
+            : territorioUnico
+              ? `${territorioUnico} — ${SITE.name}`
+              : t("meta.defaultTitle");
+
+    const description = isEnglish
+      ? "Explore the families, dynasties, reigns and political connections that shaped Europe between 1200 and 1800."
+      : personaNombre
+        ? `Explora a ${personaNombre}: parentescos, cronología, reinados y territorios en ${SITE.name}.`
+        : historiaActiva?.descripcion
+          || (dinastiaUnica ? `Explora la dinastía ${dinastiaUnica} en ${SITE.name}.` : "")
+          || (territorioUnico ? `Explora las personas, reinados y conexiones históricas de ${territorioUnico} en ${SITE.name}.` : "")
+          || t("meta.defaultDescription");
+
+    const canonicalBase = SITE.publicUrl || window.location.origin;
+    let canonicalPath = isEnglish ? "/en/" : "/es/";
+    if (!isEnglish) {
+      canonicalPath = seleccion
+        ? rutaEntidadLocalizada("es", "persona", slugPersonaPorLocale(seleccion, "es"))
+        : historiaActiva
+          ? rutaEntidadLocalizada("es", "historia", slugPublico(historiaActiva.titulo))
+          : dinastiaUnica
+            ? rutaEntidadLocalizada("es", "dinastia", slugPublico(dinastiaUnica))
+            : territorioUnico
+              ? rutaEntidadLocalizada("es", "territorio", slugPublico(territorioUnico))
+              : "/es/";
+    }
+    const canonicalUrl = new URL(canonicalPath, canonicalBase).toString();
 
     document.title = pageTitle;
     setMetaContent('meta[name="description"]', { name: "description" }, description);
-    setMetaContent('meta[property="og:site_name"]', { property: "og:site_name" }, SITE.name);
+    setMetaContent('meta[property="og:site_name"]', { property: "og:site_name" }, isEnglish ? "The Tree of Europe" : SITE.name);
     setMetaContent('meta[property="og:title"]', { property: "og:title" }, pageTitle);
     setMetaContent('meta[property="og:description"]', { property: "og:description" }, description);
     setMetaContent('meta[property="og:type"]', { property: "og:type" }, "website");
-    setMetaContent('meta[property="og:locale"]', { property: "og:locale" }, SITE.locale);
-    setMetaContent('meta[property="og:url"]', { property: "og:url" }, window.location.href);
+    setMetaContent('meta[property="og:locale"]', { property: "og:locale" }, isEnglish ? "en_GB" : "es_ES");
+    setMetaContent('meta[property="og:url"]', { property: "og:url" }, canonicalUrl);
     setMetaContent('meta[name="twitter:card"]', { name: "twitter:card" }, "summary");
     setMetaContent('meta[name="twitter:title"]', { name: "twitter:title" }, pageTitle);
     setMetaContent('meta[name="twitter:description"]', { name: "twitter:description" }, description);
+    ensureCanonical(canonicalUrl);
 
-    const canonicalBase = SITE.publicUrl || window.location.origin;
-    const canonicalPath = seleccion
-      ? `/persona/${PERSONA_SLUG_POR_ID[seleccion.id] || slugPublico(seleccion.nombre)}`
-      : historiaActiva
-        ? `/historia/${slugPublico(historiaActiva.titulo)}`
-        : dinastiaUnica
-          ? `/dinastia/${slugPublico(dinastiaUnica)}`
-          : territorioUnico
-            ? `/territorio/${slugPublico(territorioUnico)}`
-            : "/";
-    ensureCanonical(new URL(canonicalPath, canonicalBase).toString());
-  }, [seleccion, historiaActiva, dinastias, territorios]);
+    const esPath = seleccion
+      ? rutaEntidadLocalizada("es", "persona", slugPersonaPorLocale(seleccion, "es"))
+      : "/es/";
+    const enPersonSlug = seleccion ? slugPersonaPorLocale(seleccion, "en") : null;
+    const alternates = [
+      { hreflang: "es", href: new URL(esPath, canonicalBase).toString() },
+      { hreflang: "x-default", href: new URL(esPath, canonicalBase).toString() },
+    ];
+    if (isEnglish || (!seleccion && !historiaActiva && !dinastiaUnica && !territorioUnico)) {
+      alternates.push({ hreflang: "en", href: new URL("/en/", canonicalBase).toString() });
+    } else if (enPersonSlug) {
+      alternates.push({ hreflang: "en", href: new URL(rutaEntidadLocalizada("en", "persona", enPersonSlug), canonicalBase).toString() });
+    }
+    setHreflangAlternates(alternates);
+  }, [locale, seleccion, historiaActiva, dinastias, territorios]);
+
+  useEffect(() => {
+    if (typeof window === "undefined") return undefined;
+
+    const normalizarRuta = () => {
+      const { pathname, search, hash } = window.location;
+      const prefijo = pathname.match(/^\/(es|en)(?=\/|$)/);
+      if (prefijo) {
+        setLocale(prefijo[1]);
+        return;
+      }
+
+      // Compatibilidad con los enlaces antiguos: /persona/..., /historia/...
+      // pasan a su equivalente /es/... sin recargar la SPA.
+      const legacy = rutaPublicaDesdePath(pathname);
+      let nuevaRuta = "/es/";
+      if (legacy?.tipo && legacy?.slug) {
+        nuevaRuta = rutaEntidadLocalizada("es", legacy.tipo, legacy.slug);
+      } else if (pathname && pathname !== "/") {
+        nuevaRuta = `/es${pathname.startsWith("/") ? pathname : `/${pathname}`}`;
+      }
+      window.history.replaceState(window.history.state, "", `${nuevaRuta}${search}${hash}`);
+      setLocale("es");
+    };
+
+    normalizarRuta();
+    window.addEventListener("popstate", normalizarRuta);
+    return () => window.removeEventListener("popstate", normalizarRuta);
+  }, []);
 
   useEffect(() => {
     if (!compareMenuOpen) return undefined;
@@ -2434,7 +2564,9 @@ export default function ArbolGenealogico() {
   useEffect(() => {
     if (typeof window === "undefined") return;
     const params = new URLSearchParams(window.location.search);
-    const esEnlaceDirecto = Boolean(params.get("persona") || rutaPublicaDesdePath(window.location.pathname));
+    const rutaActual = rutaPublicaDesdePath(window.location.pathname);
+    const esEnlaceDirecto = Boolean(params.get("persona") || rutaActual?.tipo);
+    if (rutaActual?.locale === "en") { setPortadaVisible(false); return; }
     const yaVisitada = window.localStorage.getItem(PORTADA_STORAGE_KEY) === "1";
     setPortadaVisible(!esEnlaceDirecto && !yaVisitada);
   }, []);
@@ -3100,7 +3232,7 @@ export default function ArbolGenealogico() {
   const construirEnlaceCompartido = useCallback(() => {
     if (!seleccion || typeof window === "undefined") return "";
     const url = new URL(window.location.href);
-    url.pathname = `/persona/${PERSONA_SLUG_POR_ID[seleccion.id] || slugPublico(seleccion.nombre)}`;
+    url.pathname = rutaEntidadLocalizada("es", "persona", slugPersonaPorLocale(seleccion, "es"));
     url.search = "";
     url.hash = "";
     if (Number.isFinite(anioGlobal)) url.searchParams.set("anio", String(anioGlobal));
@@ -3151,6 +3283,8 @@ export default function ArbolGenealogico() {
     if (urlStateLoadedRef.current || typeof window === "undefined") return;
     urlStateLoadedRef.current = true;
     const params = new URLSearchParams(window.location.search);
+    const rutaInicial = rutaPublicaDesdePath(window.location.pathname);
+    if (rutaInicial?.locale === "en") return;
 
     const todosTerritorios = new Set([
       ...opciones.territorios,
@@ -3324,39 +3458,82 @@ export default function ArbolGenealogico() {
     return lista;
   }, [queryTrim, query, territorios, dinastias, titulos, siglos, relaciones, soloFavoritos, opciones.titulos]);
 
+  const cambiarIdioma = useCallback((siguiente) => {
+    if (typeof window === "undefined" || !["es", "en"].includes(siguiente) || siguiente === locale) return;
+    const rutaActual = rutaPublicaDesdePath(window.location.pathname);
+    let destino = siguiente === "en" ? "/en/" : "/es/";
+
+    // Solo conservamos una ficha individual al pasar a EN cuando exista una
+    // traducción explícita (nombreEn). Si no, vamos a la portada inglesa.
+    if (rutaActual?.tipo === "persona") {
+      const personaId = personaIdDesdeRuta(window.location.pathname);
+      const persona = personaId ? BY_ID[personaId] : null;
+      const slugDestino = slugPersonaPorLocale(persona, siguiente);
+      if (persona && slugDestino) destino = rutaEntidadLocalizada(siguiente, "persona", slugDestino);
+    }
+
+    window.location.assign(destino);
+  }, [locale]);
+
+  const selectorIdioma = (
+    <div
+      aria-label="Idioma / Language"
+      style={{
+        position: "absolute", right: 0, top: "50%", transform: "translateY(-50%)",
+        display: "flex", alignItems: "center", gap: 5, fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif",
+        fontSize: 10, color: "#9A8E75",
+      }}
+    >
+      <button type="button" onClick={() => cambiarIdioma("es")} aria-current={locale === "es" ? "page" : undefined}
+        style={{ border: 0, background: "transparent", padding: "2px 3px", cursor: "pointer", font: "inherit", fontWeight: locale === "es" ? 800 : 600, color: locale === "es" ? "#7A2E2E" : "#8A7F65" }}>ES</button>
+      <span aria-hidden="true">|</span>
+      <button type="button" onClick={() => cambiarIdioma("en")} aria-current={locale === "en" ? "page" : undefined}
+        style={{ border: 0, background: "transparent", padding: "2px 3px", cursor: "pointer", font: "inherit", fontWeight: locale === "en" ? 800 : 600, color: locale === "en" ? "#7A2E2E" : "#8A7F65" }}>EN</button>
+    </div>
+  );
+
   const entrarEnProyecto = useCallback(() => {
     if (typeof window !== "undefined") window.localStorage.setItem(PORTADA_STORAGE_KEY, "1");
     setPortadaVisible(false);
   }, []);
 
+  if (locale === "en") {
+    return (
+      <div className="wrap">
+        <div className="header" style={{ position: "relative" }}>
+          <div style={{ textAlign: "center" }}>
+            <h1>The Tree of Europe</h1>
+            <div className="sub">Genealogy · Dynasties · Reigns · Territories · 1200–1800</div>
+          </div>
+          {selectorIdioma}
+        </div>
+
+        <main style={{ maxWidth: 760, margin: "70px auto", textAlign: "center", padding: "0 24px" }}>
+          <div style={{ fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif", fontSize: 10, fontWeight: 700, letterSpacing: 1.3, textTransform: "uppercase", color: "#8A7F65" }}>English edition</div>
+          <h2 style={{ margin: "12px 0", fontFamily: "'Iowan Old Style', 'Palatino Linotype', Georgia, serif", fontSize: "clamp(34px, 5vw, 54px)", fontWeight: 500, lineHeight: 1.05, color: "#2C2620" }}>The Tree of Europe</h2>
+          <p style={{ margin: "0 auto", maxWidth: 620, fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif", fontSize: 15, lineHeight: 1.7, color: "#6B6350" }}>
+            An interactive historical and genealogical atlas for exploring the families, dynasties, reigns and political connections that shaped Europe.
+          </p>
+          <p style={{ margin: "18px auto 28px", maxWidth: 620, fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif", fontSize: 13, lineHeight: 1.6, color: "#8A7F65" }}>
+            The English edition is being prepared progressively. The complete interactive application is currently available in Spanish.
+          </p>
+          <button type="button" onClick={() => cambiarIdioma("es")}
+            style={{ border: "1px solid #7A2E2E", borderRadius: 4, background: "#7A2E2E", color: "#F8F3E6", padding: "10px 16px", cursor: "pointer", fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif", fontSize: 12, fontWeight: 700 }}>
+            Explore the Spanish version
+          </button>
+        </main>
+      </div>
+    );
+  }
+
   return (
     <div className="wrap">
-      <div className="header">
-        <div className="header-brand">
-          <div className="header-copy">
-            <h1>{t("brand.name")}</h1>
-            <div className="sub">{t("brand.scope")}</div>
-          </div>
+      <div className="header" style={{ position: "relative" }}>
+        <div style={{ textAlign: "center" }}>
+          <h1>{t("brand.name")}</h1>
+          <div className="sub">{t("brand.scope")}</div>
         </div>
-        <div className="language-switch" aria-label="Idioma / Language">
-          <button
-            type="button"
-            className={locale === "es" ? "active" : ""}
-            onClick={() => cambiarIdioma("es")}
-          >
-            ES
-          </button>
-        
-          <span aria-hidden="true">|</span>
-        
-          <button
-            type="button"
-            className={locale === "en" ? "active" : ""}
-            onClick={() => cambiarIdioma("en")}
-          >
-            EN
-          </button>
-        </div>
+        {selectorIdioma}
       </div>
       <div className="workspace-topbar">
         <section className="workspace-topbar-section workspace-toolbar-search">
@@ -4263,4 +4440,5 @@ export default function ArbolGenealogico() {
     </div>
   );
 }
+
 
