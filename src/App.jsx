@@ -15,6 +15,7 @@ import {
 } from "./Territorios";
 import { PERSONAS } from "./personas.jsx";
 import { EVENTOS_HISTORICOS, HISTORIAS } from "./historiaData.jsx";
+import { DEFAULT_LOCALE, SITE, t } from "./i18n.jsx";
 import "./App.css";
 
 // ---------------------------------------------------------------------------
@@ -123,6 +124,76 @@ function normalizaTexto(valor) {
     .trim();
 }
 
+function slugPublico(valor) {
+  return String(valor ?? "")
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-+|-+$/g, "")
+    .replace(/-{2,}/g, "-") || "persona";
+}
+
+const PERSONA_SLUG_BASE_COUNT = PERSONAS.reduce((acc, persona) => {
+  const base = slugPublico(persona.nombre);
+  acc[base] = (acc[base] || 0) + 1;
+  return acc;
+}, {});
+
+const PERSONA_SLUG_POR_ID = Object.fromEntries(PERSONAS.map((persona) => {
+  const base = slugPublico(persona.nombre);
+  const slug = PERSONA_SLUG_BASE_COUNT[base] > 1 ? `${base}-${slugPublico(persona.id)}` : base;
+  return [persona.id, slug];
+}));
+
+const PERSONA_ID_POR_SLUG = Object.fromEntries(
+  Object.entries(PERSONA_SLUG_POR_ID).map(([id, slug]) => [slug, id])
+);
+
+function rutaPublicaDesdePath(pathname) {
+  const match = String(pathname || "").match(/^\/(persona|dinastia|territorio|historia)\/([^/]+)\/?$/);
+  if (!match) return null;
+  let slug = match[2];
+  try { slug = decodeURIComponent(slug); } catch { /* conserva el slug original */ }
+  return { tipo: match[1], slug };
+}
+
+function personaIdDesdeRuta(pathname) {
+  const ruta = rutaPublicaDesdePath(pathname);
+  return ruta?.tipo === "persona" ? PERSONA_ID_POR_SLUG[ruta.slug] || null : null;
+}
+
+function valorPorSlug(slug, valores) {
+  return (valores || []).find((valor) => slugPublico(valor) === slug) || null;
+}
+
+function ensureMetaTag(selector, attributes) {
+  if (typeof document === "undefined") return null;
+  let element = document.head.querySelector(selector);
+  if (!element) {
+    element = document.createElement("meta");
+    Object.entries(attributes).forEach(([key, value]) => element.setAttribute(key, value));
+    document.head.appendChild(element);
+  }
+  return element;
+}
+
+function setMetaContent(selector, attributes, content) {
+  const element = ensureMetaTag(selector, attributes);
+  if (element) element.setAttribute("content", content);
+}
+
+function ensureCanonical(href) {
+  if (typeof document === "undefined") return;
+  let link = document.head.querySelector('link[rel="canonical"]');
+  if (!link) {
+    link = document.createElement("link");
+    link.setAttribute("rel", "canonical");
+    document.head.appendChild(link);
+  }
+  link.setAttribute("href", href);
+}
+
 const CATEGORIAS_TITULO = [
   {
     id: "monarquia",
@@ -221,9 +292,7 @@ const CORRECTORES = [
 
 // Puedes añadir uno o varios correos. El primero se usa para preparar el
 // enlace mailto del formulario de errores.
-const CORREOS_CORRECCIONES = [
-  // "tu-correo@dominio.com",
-];
+const CORREOS_CORRECCIONES = SITE.contactEmail ? [SITE.contactEmail] : [];
 
 const PORTADA_STORAGE_KEY = "arbol-europa-portada-v1";
 const FAVORITOS_STORAGE_KEY = "arbol-europa-favoritos-v1";
@@ -2002,7 +2071,7 @@ function ModalProyecto({ seccion, onClose, persona, personasVista = PERSONAS, on
               <p className="project-lead">El Árbol de Europa es un proyecto interactivo de genealogía histórica que busca visualizar parentescos, dinastías, reinados y conexiones políticas de la Europa medieval y moderna en una misma red navegable.</p>
               <div className="project-stat-grid">
                 <div><strong>{PERSONAS.length}</strong><span>personas en la base</span></div>
-                <div><strong>1200–1650</strong><span>periodo principal de trabajo</span></div>
+                <div><strong>1200–1800</strong><span>periodo principal de trabajo</span></div>
                 <div><strong>En desarrollo</strong><span>la base sigue ampliándose y corrigiéndose</span></div>
               </div>
               <h3>Qué intenta hacer</h3>
@@ -2025,7 +2094,7 @@ function ModalProyecto({ seccion, onClose, persona, personasVista = PERSONAS, on
               {correos.length ? (
                 <p>Si encuentras un fallo, puedes escribir a {correos.map((correo, index) => <React.Fragment key={correo}>{index ? ", " : ""}<a href={`mailto:${correo}`}>{correo}</a></React.Fragment>)}.</p>
               ) : (
-                <p className="project-muted">Añade uno o varios correos en <code>CORREOS_CORRECCIONES</code> al principio de App.jsx para mostrarlos aquí.</p>
+                <p className="project-muted">Configura <code>VITE_CONTACT_EMAIL</code> en las variables de entorno de Vercel para mostrar aquí el correo público del proyecto.</p>
               )}
             </>
           )}
@@ -2145,7 +2214,7 @@ function ModalProyecto({ seccion, onClose, persona, personasVista = PERSONAS, on
               {correoPrincipal ? (
                 <a className="project-primary-action" href={mailto}><Mail size={14} /> Preparar correo de corrección</a>
               ) : (
-                <div className="project-contact-placeholder"><Mail size={15} /><span>Configura tu correo en <code>CORREOS_CORRECCIONES</code> al principio de App.jsx. El botón de correo se activará automáticamente.</span></div>
+                <div className="project-contact-placeholder"><Mail size={15} /><span>Configura <code>VITE_CONTACT_EMAIL</code> en Vercel. El botón de correo se activará automáticamente.</span></div>
               )}
             </>
           )}
@@ -2281,6 +2350,55 @@ export default function ArbolGenealogico() {
   const historiaPersonasSet = useMemo(() => new Set(historiaPasoActual?.personas || (historiaPasoActual?.persona ? [historiaPasoActual.persona] : [])), [historiaPasoActual]);
 
   useEffect(() => {
+    if (typeof window === "undefined" || typeof document === "undefined") return;
+
+    document.documentElement.lang = SITE.language || DEFAULT_LOCALE;
+
+    const personaNombre = seleccion ? (nombrePrincipal(seleccion) || seleccion.nombre) : "";
+    const dinastiaUnica = !personaNombre && !historiaActiva && dinastias.length === 1 ? dinastias[0] : "";
+    const territorioUnico = !personaNombre && !historiaActiva && !dinastiaUnica && territorios.length === 1 ? territorios[0] : "";
+    const pageTitle = personaNombre
+      ? t("share.personTitle", { name: personaNombre })
+      : historiaActiva?.titulo
+        ? `${historiaActiva.titulo} — ${SITE.name}`
+        : dinastiaUnica
+          ? `${dinastiaUnica} — ${SITE.name}`
+          : territorioUnico
+            ? `${territorioUnico} — ${SITE.name}`
+            : t("meta.defaultTitle");
+    const description = personaNombre
+      ? `Explora a ${personaNombre}: parentescos, cronología, reinados y territorios en ${SITE.name}.`
+      : historiaActiva?.descripcion
+        || (dinastiaUnica ? `Explora la dinastía ${dinastiaUnica} en ${SITE.name}.` : "")
+        || (territorioUnico ? `Explora las personas, reinados y conexiones históricas de ${territorioUnico} en ${SITE.name}.` : "")
+        || t("meta.defaultDescription");
+
+    document.title = pageTitle;
+    setMetaContent('meta[name="description"]', { name: "description" }, description);
+    setMetaContent('meta[property="og:site_name"]', { property: "og:site_name" }, SITE.name);
+    setMetaContent('meta[property="og:title"]', { property: "og:title" }, pageTitle);
+    setMetaContent('meta[property="og:description"]', { property: "og:description" }, description);
+    setMetaContent('meta[property="og:type"]', { property: "og:type" }, "website");
+    setMetaContent('meta[property="og:locale"]', { property: "og:locale" }, SITE.locale);
+    setMetaContent('meta[property="og:url"]', { property: "og:url" }, window.location.href);
+    setMetaContent('meta[name="twitter:card"]', { name: "twitter:card" }, "summary");
+    setMetaContent('meta[name="twitter:title"]', { name: "twitter:title" }, pageTitle);
+    setMetaContent('meta[name="twitter:description"]', { name: "twitter:description" }, description);
+
+    const canonicalBase = SITE.publicUrl || window.location.origin;
+    const canonicalPath = seleccion
+      ? `/persona/${PERSONA_SLUG_POR_ID[seleccion.id] || slugPublico(seleccion.nombre)}`
+      : historiaActiva
+        ? `/historia/${slugPublico(historiaActiva.titulo)}`
+        : dinastiaUnica
+          ? `/dinastia/${slugPublico(dinastiaUnica)}`
+          : territorioUnico
+            ? `/territorio/${slugPublico(territorioUnico)}`
+            : "/";
+    ensureCanonical(new URL(canonicalPath, canonicalBase).toString());
+  }, [seleccion, historiaActiva, dinastias, territorios]);
+
+  useEffect(() => {
     if (!compareMenuOpen) return undefined;
     const cerrarFuera = (event) => {
       if (!compareMenuRef.current?.contains(event.target)) setCompareMenuOpen(false);
@@ -2315,7 +2433,7 @@ export default function ArbolGenealogico() {
   useEffect(() => {
     if (typeof window === "undefined") return;
     const params = new URLSearchParams(window.location.search);
-    const esEnlaceDirecto = Boolean(params.get("persona"));
+    const esEnlaceDirecto = Boolean(params.get("persona") || rutaPublicaDesdePath(window.location.pathname));
     const yaVisitada = window.localStorage.getItem(PORTADA_STORAGE_KEY) === "1";
     setPortadaVisible(!esEnlaceDirecto && !yaVisitada);
   }, []);
@@ -2981,9 +3099,9 @@ export default function ArbolGenealogico() {
   const construirEnlaceCompartido = useCallback(() => {
     if (!seleccion || typeof window === "undefined") return "";
     const url = new URL(window.location.href);
+    url.pathname = `/persona/${PERSONA_SLUG_POR_ID[seleccion.id] || slugPublico(seleccion.nombre)}`;
     url.search = "";
     url.hash = "";
-    url.searchParams.set("persona", seleccion.id);
     if (Number.isFinite(anioGlobal)) url.searchParams.set("anio", String(anioGlobal));
     url.searchParams.set("vista", vistaPrincipal);
     if (query.trim()) url.searchParams.set("q", query.trim());
@@ -2999,8 +3117,8 @@ export default function ArbolGenealogico() {
     const enlace = construirEnlaceCompartido();
     if (!enlace || !seleccion) return;
     const payload = {
-      title: `${seleccion.nombre} · Árbol Interactivo Linajes Europeos`,
-      text: `Consulta la ficha de ${seleccion.nombre}`,
+      title: t("share.personTitle", { name: nombrePrincipal(seleccion) || seleccion.nombre }),
+      text: t("share.personText", { name: nombrePrincipal(seleccion) || seleccion.nombre }),
       url: enlace,
     };
     try {
@@ -3054,6 +3172,22 @@ export default function ArbolGenealogico() {
     ));
     setRelaciones(params.getAll("relacion").filter((valor) => relacionesValidas.has(valor)));
 
+    const rutaPublica = rutaPublicaDesdePath(window.location.pathname);
+    if (rutaPublica?.tipo === "territorio") {
+      const valor = valorPorSlug(rutaPublica.slug, [...todosTerritorios]);
+      if (valor) setTerritorios([valor]);
+    } else if (rutaPublica?.tipo === "dinastia") {
+      const valor = valorPorSlug(rutaPublica.slug, [...todasDinastias]);
+      if (valor) setDinastias([valor]);
+    } else if (rutaPublica?.tipo === "historia") {
+      const historia = HISTORIAS.find((item) => slugPublico(item.titulo) === rutaPublica.slug || slugPublico(item.id) === rutaPublica.slug);
+      if (historia?.disponible && historia?.pasos?.length) {
+        window.setTimeout(() => iniciarHistoria(historia.id), 80);
+      } else if (historia) {
+        setInfoProyecto("historias");
+      }
+    }
+
     const vista = params.get("vista");
     if (vista === "arbol") setVistasActivas({ arbol: true, mapa: false });
     else if (vista === "mapa") setVistasActivas({ arbol: false, mapa: true });
@@ -3066,7 +3200,7 @@ export default function ArbolGenealogico() {
       setAnioInput(String(año));
     }
 
-    const personaId = params.get("persona");
+    const personaId = params.get("persona") || personaIdDesdeRuta(window.location.pathname);
     if (personaId && BY_ID[personaId]) {
       setSeleccion(BY_ID[personaId]);
       window.setTimeout(() => {
@@ -3199,8 +3333,8 @@ export default function ArbolGenealogico() {
       <div className="header">
         <Crown size={20} color="#7A2E2E" />
         <div>
-          <h1>·El Árbol de Europa·</h1>
-          <h2>Genealogía · Dinastías · Reinados · Territorios · 1200–1650</h2>
+          <h1>{t("brand.name")}</h1>
+          <div className="sub">{t("brand.scope")}</div>
         </div>
       </div>
       <div className="workspace-topbar">
@@ -4058,7 +4192,7 @@ export default function ArbolGenealogico() {
             <p>Explora dinastías, parentescos, reinados y territorios de la Europa medieval y moderna en una única red navegable.</p>
             <div className="welcome-stats">
               <span><strong>{PERSONAS.length}</strong> personas</span>
-              <span><strong>1200–1650</strong> periodo principal</span>
+              <span><strong>1200–1800</strong> periodo principal</span>
             </div>
             <div className="welcome-actions">
               <button type="button" className="welcome-enter" onClick={entrarEnProyecto}>Explorar el árbol <ArrowRight size={15} /></button>
@@ -4108,3 +4242,4 @@ export default function ArbolGenealogico() {
     </div>
   );
 }
+
