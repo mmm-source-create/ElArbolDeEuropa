@@ -3,8 +3,37 @@
 // preparado un punto único para una futura versión es/en.
 
 export const DEFAULT_LOCALE = "es";
-export const SUPPORTED_LOCALES = ["es"];
+export const SUPPORTED_LOCALES = ["es", "en"];
 
+export const LOCALES = {
+  es: {
+    language: "es",
+    ogLocale: "es_ES",
+    label: "ES",
+  },
+
+  en: {
+    language: "en",
+    ogLocale: "en_GB",
+    label: "EN",
+  },
+};
+
+export const ROUTE_SEGMENTS = {
+  es: {
+    persona: "persona",
+    dinastia: "dinastia",
+    territorio: "territorio",
+    historia: "historia",
+  },
+
+  en: {
+    persona: "person",
+    dinastia: "dynasty",
+    territorio: "territory",
+    historia: "story",
+  },
+};
 export const SITE = Object.freeze({
   name: "El Árbol de Europa",
   descriptor: "Atlas genealógico e histórico interactivo",
