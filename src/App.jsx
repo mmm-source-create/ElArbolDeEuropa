@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect, useCallback, useMemo } from "react";
+import React, { useState, useRef, useEffect, useLayoutEffect, useCallback, useMemo } from "react";
 import { Crown, Search, ChevronDown, ChevronRight, ArrowLeft, ArrowRight, ArrowUp, ArrowDown, ZoomIn, ZoomOut, RotateCcw, GitCompare, Focus, Share2, Play, Pause, SkipBack, SkipForward, X, Info, Heart, BookOpen, Scale, Flag, Mail, ExternalLink } from "lucide-react";
 import { MapaEuropa } from "./MapaEuropa";
 import {
@@ -1277,12 +1277,23 @@ function claimColumn(candidates, targetX, claims, yStart, yEnd, familyKey) {
   const lo = Math.min(yStart, yEnd);
   const hi = Math.max(yStart, yEnd);
   const sorted = candidates.slice().sort((a, b) => Math.abs(a - targetX) - Math.abs(b - targetX));
-  const conflictsFor = (x) => claims.filter((claim) =>
-    claim.familyKey !== familyKey
-    && lo < claim.yEnd + 8
-    && hi > claim.yStart - 8
-    && Math.abs(x - claim.x) < TREE_COLUMN_STEP * 0.82
-  ).length;
+
+  // Una columna visual pertenece a UNA sola familia. La única excepción son
+  // los grupos del mismo familyKey: hermanos completos que han quedado en
+  // generaciones distintas y, por tanto, deben prolongar el mismo tronco.
+  // Aunque dos familias no se solapen verticalmente, reutilizar exactamente la
+  // misma X hace que parezcan una línea continua y visualmente las "emparenta".
+  const conflictsFor = (x) => {
+    let conflicts = 0;
+    claims.forEach((claim) => {
+      if (claim.familyKey === familyKey) return;
+      const sameVisualColumn = Math.abs(x - claim.x) < TREE_COLUMN_STEP * 0.82;
+      if (!sameVisualColumn) return;
+      const overlapsVertically = lo < claim.yEnd + 8 && hi > claim.yStart - 8;
+      conflicts += overlapsVertically ? 1000 : 100;
+    });
+    return conflicts;
+  };
 
   let selected = sorted.find((x) => conflictsFor(x) === 0);
   if (!Number.isFinite(selected)) {
@@ -2784,57 +2795,39 @@ export default function ArbolGenealogico() {
     });
   };
 
-  // El zoom conserva el punto de atención. Si hay una persona seleccionada,
-  // permanece exactamente en el mismo punto de la pantalla; si no, se conserva
-  // el centro lógico del viewport. Esto evita "perder" la rama al ampliar.
+  // El zoom se ancla SIEMPRE al centro visual actual del viewport. No importa
+  // qué persona esté seleccionada, buscada o bajo el cursor: el punto que está
+  // justo en el centro de la pantalla antes del zoom debe seguir allí después.
+  const pendingZoomCenterRef = useRef(null);
+
   const cambiarZoomArbol = (objetivo) => {
     const scrollEl = scrollRef.current;
-    const zoomAnterior = zoom;
     const zoomNuevo = Math.max(0.4, Math.min(1.4, Number(objetivo.toFixed?.(2) ?? objetivo)));
-    if (!scrollEl || !Number.isFinite(zoomNuevo) || zoomNuevo === zoomAnterior) {
-      if (Number.isFinite(zoomNuevo)) setZoom(zoomNuevo);
-      return;
+    if (!Number.isFinite(zoomNuevo) || zoomNuevo === zoom) return;
+
+    if (scrollEl) {
+      pendingZoomCenterRef.current = {
+        x: (scrollEl.scrollLeft + scrollEl.clientWidth / 2) / Math.max(zoom, 0.001),
+        y: (scrollEl.scrollTop + scrollEl.clientHeight / 2) / Math.max(zoom, 0.001),
+      };
     }
-
-    const focoId = seleccion?.id || searchCurrentId || hovered || null;
-    const focoEl = focoId ? nodeRefs.current[focoId] : null;
-    const scrollRect = scrollEl.getBoundingClientRect();
-    const anclaPantalla = focoEl
-      ? (() => {
-          const rect = focoEl.getBoundingClientRect();
-          return {
-            x: rect.left + rect.width / 2,
-            y: rect.top + rect.height / 2,
-            id: focoId,
-          };
-        })()
-      : null;
-
-    const centroLogico = {
-      x: (scrollEl.scrollLeft + scrollEl.clientWidth / 2) / Math.max(zoomAnterior, 0.001),
-      y: (scrollEl.scrollTop + scrollEl.clientHeight / 2) / Math.max(zoomAnterior, 0.001),
-    };
-
     setZoom(zoomNuevo);
-    requestAnimationFrame(() => requestAnimationFrame(() => {
-      const currentScroll = scrollRef.current;
-      if (!currentScroll) return;
-
-      if (anclaPantalla?.id && nodeRefs.current[anclaPantalla.id]) {
-        const rect = nodeRefs.current[anclaPantalla.id].getBoundingClientRect();
-        const nuevaX = rect.left + rect.width / 2;
-        const nuevaY = rect.top + rect.height / 2;
-        currentScroll.scrollBy({
-          left: nuevaX - anclaPantalla.x,
-          top: nuevaY - anclaPantalla.y,
-          behavior: "auto",
-        });
-      } else {
-        currentScroll.scrollLeft = Math.max(0, centroLogico.x * zoomNuevo - currentScroll.clientWidth / 2);
-        currentScroll.scrollTop = Math.max(0, centroLogico.y * zoomNuevo - currentScroll.clientHeight / 2);
-      }
-    }));
   };
+
+  useLayoutEffect(() => {
+    const center = pendingZoomCenterRef.current;
+    const scrollEl = scrollRef.current;
+    if (!center || !scrollEl) return;
+
+    const targetLeft = center.x * zoom - scrollEl.clientWidth / 2;
+    const targetTop = center.y * zoom - scrollEl.clientHeight / 2;
+    const maxLeft = Math.max(0, scrollEl.scrollWidth - scrollEl.clientWidth);
+    const maxTop = Math.max(0, scrollEl.scrollHeight - scrollEl.clientHeight);
+
+    scrollEl.scrollLeft = Math.max(0, Math.min(maxLeft, targetLeft));
+    scrollEl.scrollTop = Math.max(0, Math.min(maxTop, targetTop));
+    pendingZoomCenterRef.current = null;
+  }, [zoom]);
 
   // Centra la barra correspondiente de la línea temporal (si está montada,
   // es decir, si el panel "Línea temporal" está abierto).
