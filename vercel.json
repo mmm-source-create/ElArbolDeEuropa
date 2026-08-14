@@ -11,28 +11,7 @@
 
   "rewrites": [
     {
-      "source": "/es/:path*",
-      "destination": "/index.html"
-    },
-    {
-      "source": "/en/:path*",
-      "destination": "/index.html"
-    },
-
-    {
-      "source": "/persona/:slug",
-      "destination": "/index.html"
-    },
-    {
-      "source": "/dinastia/:slug",
-      "destination": "/index.html"
-    },
-    {
-      "source": "/territorio/:slug",
-      "destination": "/index.html"
-    },
-    {
-      "source": "/historia/:slug",
+      "source": "/(.*)",
       "destination": "/index.html"
     }
   ]
