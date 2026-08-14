@@ -3331,10 +3331,18 @@ export default function ArbolGenealogico() {
   return (
     <div className="wrap">
       <div className="header">
-        <Crown size={20} color="#7A2E2E" />
-        <div>
-          <h1>{t("brand.name")}</h1>
-          <div className="sub">{t("brand.scope")}</div>
+        <div className="header-brand">
+          <img
+            src="/src/EADE.png"
+            alt=""
+            className="header-logo"
+            aria-hidden="true"
+          />
+      
+          <div className="header-copy">
+            <h1>{t("brand.name")}</h1>
+            <div className="sub">{t("brand.scope")}</div>
+          </div>
         </div>
       </div>
       <div className="workspace-topbar">
