@@ -102,7 +102,7 @@ export const REINO_COLOR = {
   Alemania: '#8E7729',
   "Sacro Imperio": '#2F8E29',
   Borgoña: '#8E295C',
-  "Castilla y León": '#C5A62B',
+  "Corona de Castilla": '#C5A62B',
   "Corona de Aragón": '#ba3737',
   "Países Bajos y Flandes": '#3E6F91',
   "Estados Italianos": '#6F7652',
@@ -270,6 +270,18 @@ export const REINO_VERSIONES = {
 // REINO_A_IDS. Si falta un tramo temporal, usa la última versión ya vigente;
 // para años anteriores a la primera versión prefiere el mapa base.
 export function idsDeReinoEnAño(reino, año) {
+  // «España» funciona como paraguas cartográfico de las dos coronas
+  // peninsulares de la Monarquía Hispánica. Navarra mantiene un reinado
+  // separado en los datos y por eso no se añade aquí automáticamente.
+  if (reino === "España") {
+    return [...new Set([
+      ...idsDeReinoEnAño("Castilla", año),
+      ...idsDeReinoEnAño("Aragón", año),
+    ])];
+  }
+  if (reino === "Corona de Castilla") return idsDeReinoEnAño("Castilla", año);
+  if (reino === "Corona de Aragón") return idsDeReinoEnAño("Aragón", año);
+
   const base = REINO_A_IDS[reino] ?? [];
   const versiones = REINO_VERSIONES[reino];
   if (!versiones || !versiones.length) return base;
@@ -304,8 +316,6 @@ export const TERRITORIOS_DESTACADOS = [
   "Francia",
   "Inglaterra",
   "Escocia",
-  "Castilla y León",
-  "Corona de Aragón",
   "España",
   "Portugal",
   "Navarra",
@@ -322,7 +332,7 @@ export const TERRITORIOS_DESTACADOS = [
 ];
 
 // Jerarquía semántica usada por los filtros. Los grupos que no son nombres
-// literales del campo `reinos` (por ejemplo «Castilla y León») funcionan como
+// literales del campo `reinos` (por ejemplo «Corona de Castilla») funcionan como
 // categorías de exploración; sus chips hijos siguen permitiendo elegir cada
 // territorio concreto. Un territorio puede aparecer en varios grupos cuando
 // su historia política o geográfica lo justifica (Borgoña, Silesia, Saboya…).
@@ -337,9 +347,9 @@ export const TERRITORIOS_SUB = {
   Inglaterra: ["Gales", "Irlanda", "Richmond", "Suffolk", "York"],
   Escocia: [],
 
-  "Castilla y León": ["Castilla", "León"],
+  España: ["Corona de Castilla", "Corona de Aragón"],
+  "Corona de Castilla": ["Castilla", "León"],
   "Corona de Aragón": ["Aragón", "Gandía", "Mallorca", "Urgel", "Valencia"],
-  España: [],
   Portugal: ["Brasil"],
   Navarra: [],
 
@@ -451,7 +461,9 @@ export function listaReinados(persona) {
 }
 
 export function reinadoEsEfectivo(reinado) {
-  return Boolean(reinado) && !TIPOS_REINADO_NO_EFECTIVOS.has(String(reinado.tipo || "").toLowerCase());
+  if (!reinado) return false;
+  if (typeof reinado.efectivo === "boolean") return reinado.efectivo;
+  return !TIPOS_REINADO_NO_EFECTIVOS.has(String(reinado.tipo || "").toLowerCase());
 }
 
 // Los años del dataset son inclusivos. Esto permite representar también
@@ -472,7 +484,11 @@ export function territoriosGobernadosEnAño(persona, año) {
       : detallados.filter(reinadoEsEfectivo);
     return [...new Set(vigentes.map((r) => r.territorio).filter(Boolean))];
   }
-  return esGobernante(persona) ? [...new Set(persona?.reinos || [])] : [];
+  // Sin un intervalo de gobierno no inferimos dominio territorial a partir
+  // de `reinos`: ese campo también expresa procedencia, matrimonio o vínculo
+  // dinástico. Solo se permite el fallback cuando la ficha ha sido certificada
+  // manualmente con `gobernante: true`.
+  return persona?.gobernante === true ? [...new Set(persona?.reinos || [])] : [];
 }
 
 export function esGobernante(persona) {
