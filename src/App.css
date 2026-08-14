@@ -3464,3 +3464,67 @@ html, body {
   color: #8A7F65;
   text-align: center;
 }
+
+
+/* ==========================================
+   CABECERA DE MARCA
+   ========================================== */
+
+.header {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 2px solid #C9BFA8;
+  padding: 0 0 12px;
+  margin-bottom: 12px;
+  text-align: center;
+}
+
+.header-brand {
+  position: relative;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.header-copy {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.header-logo {
+  position: absolute;
+  right: calc(100% + 12px);
+  top: 50%;
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+  transform: translateY(-50%);
+}
+
+.header h1 {
+  margin: 0;
+  font-family: 'Iowan Old Style', 'Palatino Linotype', Georgia, serif;
+  font-size: 26px;
+  line-height: 1;
+  font-weight: 600;
+  color: #2C2620;
+  text-align: center;
+}
+
+.header .sub {
+  margin-top: 3px;
+  font-family: -apple-system, 'Segoe UI', sans-serif;
+  font-size: 9.5px;
+  line-height: 1.2;
+  font-weight: 500;
+  color: #746A58;
+  text-transform: uppercase;
+  letter-spacing: 0.65px;
+  text-align: center;
+  white-space: nowrap;
+}
