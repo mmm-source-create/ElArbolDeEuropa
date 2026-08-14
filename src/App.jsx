@@ -1322,124 +1322,114 @@ function roundedPath(rawPoints, radius = 8) {
 function routeFamilyConnectors({ groupsByRow, positions, pairContacts, gen, rows, rowBands, canvasWidth }) {
   if (!Object.keys(positions).length) return { families: [], diagnostics: {} };
 
-  // Una familia se enruta una sola vez desde el anclaje de sus progenitores.
-  // Los hermanos pueden caer en filas distintas por sus matrimonios u otras
-  // conexiones, pero siguen compartiendo el mismo tronco familiar hasta el
-  // punto en el que cada fila necesita su propia distribución horizontal.
+  // Mantener la geometría V17: cada fila de hijos conserva su barra y sus
+  // curvas propias. Lo único que se comparte entre hermanos completos que
+  // han caído en generaciones visuales distintas es la salida desde los
+  // mismos progenitores (carril superior + canal vertical).
   const visibleGroups = Object.values(groupsByRow).flatMap((groups) => groups).map((group) => {
     const parentIds = group.parentIds.filter((id) => positions[id]);
     const childIds = group.childIds.filter((id) => positions[id]);
     if (!parentIds.length || !childIds.length) return null;
-
     const parentRow = Math.max(...parentIds.map((id) => gen[id]));
-    const childrenByRow = new Map();
-    childIds.forEach((childId) => {
-      const childRow = gen[childId];
-      if (!Number.isFinite(childRow) || childRow <= parentRow) return;
-      if (!childrenByRow.has(childRow)) childrenByRow.set(childRow, []);
-      childrenByRow.get(childRow).push(childId);
-    });
-    if (!childrenByRow.size) return null;
+    const childRow = gen[childIds[0]];
+    if (!Number.isFinite(childRow) || childRow <= parentRow) return null;
+    const childXs = childIds.map((id) => positions[id].x + positions[id].w / 2).sort((a, b) => a - b);
+    const familyBaseKey = group.familyBaseKey || group.parentIds.slice().sort().join("|");
+    return {
+      ...group,
+      parentIds,
+      childIds,
+      parentRow,
+      childRow,
+      childXs,
+      childCenter: (childXs[0] + childXs[childXs.length - 1]) / 2,
+      familyBaseKey,
+      familyKey: `${familyBaseKey}@${childRow}`,
+    };
+  }).filter(Boolean);
 
-    const rowGroups = [...childrenByRow.entries()]
-      .sort((a, b) => a[0] - b[0])
-      .map(([childRow, ids]) => {
-        const sortedIds = ids.slice().sort((a, b) => {
-          const ax = positions[a].x + positions[a].w / 2;
-          const bx = positions[b].x + positions[b].w / 2;
-          return ax - bx;
-        });
-        const childXs = sortedIds.map((id) => positions[id].x + positions[id].w / 2);
-        return {
-          childRow,
-          childIds: sortedIds,
-          childXs,
-          childMin: Math.min(...childXs),
-          childMax: Math.max(...childXs),
-        };
-      });
+  const groupsByFamily = {};
+  visibleGroups.forEach((group) => {
+    (groupsByFamily[group.familyBaseKey] ||= []).push(group);
+  });
 
-    const parentCenters = parentIds.map((id) => positions[id].x + positions[id].w / 2);
-    const pair = parentIds.length === 2 ? clavePareja(parentIds[0], parentIds[1]) : null;
+  const verticalClaims = [];
+  Object.values(groupsByFamily).forEach((familyGroups) => {
+    const first = familyGroups[0];
+    const parentCenters = first.parentIds.map((id) => positions[id].x + positions[id].w / 2);
+    const pair = first.parentIds.length === 2 ? clavePareja(first.parentIds[0], first.parentIds[1]) : null;
     const contact = pair ? pairContacts?.[pair] : null;
     const fallbackAnchor = {
       x: parentCenters.reduce((sum, value) => sum + value, 0) / parentCenters.length,
-      y: Math.max(...parentIds.map((id) => positions[id].y + positions[id].h)),
+      y: Math.max(...first.parentIds.map((id) => positions[id].y + positions[id].h)),
     };
     const anchorPoints = contact?.points?.length
       ? contact.points.map(([x, y]) => [x, y])
       : [[fallbackAnchor.x, fallbackAnchor.y]];
     const [anchorX, anchorY] = anchorPoints[anchorPoints.length - 1];
 
-    return {
-      ...group,
-      parentIds,
-      childIds: rowGroups.flatMap((item) => item.childIds),
-      parentRow,
-      rowGroups,
-      deepestChildRow: rowGroups[rowGroups.length - 1].childRow,
-      anchorPoints,
-      anchor: { x: anchorX, y: anchorY },
-      familyKey: group.familyKey || group.parentIds.slice().sort().join('|'),
-    };
-  }).filter(Boolean);
-
-  const verticalClaims = [];
-  visibleGroups.forEach((group) => {
-    group.trunkX = group.anchor.x;
-    if (group.deepestChildRow <= group.parentRow + 1) return;
-
-    const candidates = computeColumnCandidates(
-      rows,
-      positions,
-      canvasWidth,
-      group.parentRow + 1,
-      group.deepestChildRow - 1
-    );
-    group.trunkX = claimColumn(
-      candidates,
-      group.anchor.x,
-      verticalClaims,
-      rowBands[group.parentRow]?.[1] ?? group.anchor.y,
-      rowBands[group.deepestChildRow]?.[0] ?? positions[group.childIds[group.childIds.length - 1]].y,
-      group.familyKey
-    );
-  });
-
-  // Reservamos carriles horizontales por hueco entre generaciones. Cada fila
-  // de hermanos utiliza una sola barra. Si hay hermanos en varias filas, las
-  // barras nacen del mismo tronco vertical, sin repetir la salida parental.
-  const horizontalRequestsByGap = {};
-  visibleGroups.forEach((group) => {
-    const immediate = group.rowGroups.find((item) => item.childRow === group.parentRow + 1);
-
-    group.rowGroups.forEach((rowGroup) => {
-      const id = `${group.familyKey}:children:${rowGroup.childRow}`;
-      const branchStarts = rowGroup.childIds.map((childId) => {
-        const childX = positions[childId].x + positions[childId].w / 2;
-        if (Math.abs(group.trunkX - childX) < 1) return childX;
-        return childX + Math.sign(group.trunkX - childX) * Math.min(18, Math.abs(group.trunkX - childX));
-      });
-      rowGroup.branchStarts = branchStarts;
-      rowGroup.requestId = id;
-      (horizontalRequestsByGap[rowGroup.childRow - 1] ||= []).push({
-        id,
-        x1: Math.min(group.trunkX, ...branchStarts),
-        x2: Math.max(group.trunkX, ...branchStarts),
-        preference: 0.72,
-      });
+    familyGroups.forEach((group) => {
+      group.anchorPoints = anchorPoints;
+      group.anchor = { x: anchorX, y: anchorY };
     });
 
-    if (!immediate && Math.abs(group.trunkX - group.anchor.x) > 0.5) {
-      const id = `${group.familyKey}:parent-exit`;
-      group.parentExitRequestId = id;
-      (horizontalRequestsByGap[group.parentRow] ||= []).push({
-        id,
-        x1: Math.min(group.anchor.x, group.trunkX),
-        x2: Math.max(group.anchor.x, group.trunkX),
-        preference: 0.08,
+    const nonDirect = familyGroups.filter((group) => group.childRow > group.parentRow + 1);
+    if (!nonDirect.length) return;
+
+    // Un solo canal para todos los hermanos completos, calculado hasta el hijo
+    // visualmente más profundo. No se usa el centro de los hijos para elegirlo:
+    // su referencia es exclusivamente el anclaje real de los progenitores.
+    const deepestChildRow = Math.max(...nonDirect.map((group) => group.childRow));
+    const deepestGroup = nonDirect.find((group) => group.childRow === deepestChildRow) || nonDirect[nonDirect.length - 1];
+    const candidates = computeColumnCandidates(rows, positions, canvasWidth, first.parentRow + 1, deepestChildRow - 1);
+    const sharedTrunkX = claimColumn(
+      candidates,
+      anchorX,
+      verticalClaims,
+      rowBands[first.parentRow]?.[1] ?? anchorY,
+      rowBands[deepestChildRow]?.[0] ?? positions[nonDirect[nonDirect.length - 1].childIds[0]].y,
+      first.familyBaseKey
+    );
+    nonDirect.forEach((group) => {
+      group.trunkX = sharedTrunkX;
+      group.sharedTrunkOwner = group === deepestGroup;
+    });
+  });
+
+  const horizontalRequestsByGap = {};
+  Object.values(groupsByFamily).forEach((familyGroups) => {
+    const first = familyGroups[0];
+    const parentRequestId = `${first.familyBaseKey}:parent-shared`;
+    const directGroups = familyGroups.filter((group) => group.childRow === group.parentRow + 1);
+    const nonDirectGroups = familyGroups.filter((group) => group.childRow > group.parentRow + 1);
+
+    // Reservar UN solo carril inmediatamente bajo los progenitores para todos
+    // los hermanos completos, aunque terminen dibujados varias filas más abajo.
+    const parentXs = [first.anchor.x];
+    directGroups.forEach((group) => parentXs.push(group.childXs[0], group.childXs[group.childXs.length - 1]));
+    nonDirectGroups.forEach((group) => parentXs.push(group.trunkX));
+    (horizontalRequestsByGap[first.parentRow] ||= []).push({
+      id: parentRequestId,
+      x1: Math.min(...parentXs),
+      x2: Math.max(...parentXs),
+      preference: directGroups.length ? 0.5 : 0,
+    });
+
+    familyGroups.forEach((group) => {
+      group.startRequestId = parentRequestId;
+      if (group.childRow === group.parentRow + 1) {
+        group.endRequestId = parentRequestId;
+        return;
+      }
+      const endId = `${group.familyKey}:end`;
+      (horizontalRequestsByGap[group.childRow - 1] ||= []).push({
+        id: endId,
+        x1: Math.min(group.trunkX, group.childXs[0]),
+        x2: Math.max(group.trunkX, group.childXs[group.childXs.length - 1]),
+        preference: 1,
       });
-    }
+      group.endRequestId = endId;
+    });
   });
 
   const laneAssignmentsByGap = {};
@@ -1465,65 +1455,86 @@ function routeFamilyConnectors({ groupsByRow, positions, pairContacts, gen, rows
     return top + ((lane + 1) * (bottom - top)) / (count + 1);
   };
 
-  const families = visibleGroups.map((group) => {
-    const rowRoutes = group.rowGroups.map((rowGroup) => ({
-      ...rowGroup,
-      busY: laneY(rowGroup.childRow - 1, rowGroup.requestId),
-    }));
-    const immediateRoute = rowRoutes.find((item) => item.childRow === group.parentRow + 1);
-    const deepestBusY = Math.max(...rowRoutes.map((item) => item.busY));
-    const startY = immediateRoute
-      ? immediateRoute.busY
-      : group.parentExitRequestId
-        ? laneY(group.parentRow, group.parentExitRequestId)
-        : group.anchor.y;
+  const allChildrenByFamily = {};
+  Object.entries(groupsByFamily).forEach(([familyKey, groups]) => {
+    allChildrenByFamily[familyKey] = [...new Set(groups.flatMap((group) => group.childIds))];
+  });
 
+  const families = visibleGroups.map((group) => {
+    const startY = laneY(group.parentRow, group.startRequestId);
+    const endY = laneY(group.childRow - 1, group.endRequestId);
+    const childMin = group.childXs[0];
+    const childMax = group.childXs[group.childXs.length - 1];
+    const direct = group.childRow === group.parentRow + 1;
+    const busOriginX = direct ? group.anchor.x : group.trunkX;
+    const busY = direct ? startY : endY;
+
+    // Geometría V17, con una única corrección direccional: los extremos se
+    // curvan HACIA el origen real de su barra. Así nunca hacen primero un giro
+    // en sentido contrario para después corregirlo.
+    const branchSpecs = group.childIds.map((childId) => {
+      const childPos = positions[childId];
+      const childX = childPos.x + childPos.w / 2;
+      const isOnlyChild = group.childIds.length === 1;
+      const isLeftEnd = Math.abs(childX - childMin) < 0.75;
+      const isRightEnd = Math.abs(childX - childMax) < 0.75;
+      let startX = childX;
+
+      if ((isOnlyChild || isLeftEnd || isRightEnd) && Math.abs(busOriginX - childX) > 1) {
+        startX = childX + Math.sign(busOriginX - childX) * Math.min(20, Math.abs(busOriginX - childX));
+      }
+      return { childId, childPos, childX, startX };
+    });
+
+    const branchStartMin = Math.min(...branchSpecs.map((branch) => branch.startX));
+    const branchStartMax = Math.max(...branchSpecs.map((branch) => branch.startX));
+    const busMin = Math.min(busOriginX, branchStartMin);
+    const busMax = Math.max(busOriginX, branchStartMax);
     const [anchorTailX] = group.anchorPoints[group.anchorPoints.length - 1];
-    let trunkPoints;
-    if (Math.abs(group.trunkX - group.anchor.x) <= 0.5) {
-      trunkPoints = [...group.anchorPoints, [group.trunkX, deepestBusY]];
-    } else {
-      trunkPoints = [
-        ...group.anchorPoints,
-        [anchorTailX, startY],
-        [group.trunkX, startY],
-        [group.trunkX, deepestBusY],
-      ];
-    }
+
+    const BUS_ENTRY_RADIUS = 11;
+    const hasLeftArm = busMin < busOriginX - 0.5;
+    const hasRightArm = busMax > busOriginX + 0.5;
+    const hasBusArm = hasLeftArm || hasRightArm;
+    const trunkEndY = hasBusArm ? busY - BUS_ENTRY_RADIUS : busY;
+
+    const trunkPoints = direct
+      ? [...group.anchorPoints, [anchorTailX, trunkEndY], [busOriginX, trunkEndY]]
+      : [...group.anchorPoints, [anchorTailX, startY], [group.trunkX, startY], [group.trunkX, trunkEndY]];
 
     const busDs = [];
-    const branches = [];
-    rowRoutes.forEach((rowRoute) => {
-      const minStart = Math.min(...rowRoute.branchStarts);
-      const maxStart = Math.max(...rowRoute.branchStarts);
-      if (minStart < group.trunkX - 0.5) {
-        busDs.push(`M ${group.trunkX} ${rowRoute.busY} L ${minStart} ${rowRoute.busY}`);
-      }
-      if (maxStart > group.trunkX + 0.5) {
-        busDs.push(`M ${group.trunkX} ${rowRoute.busY} L ${maxStart} ${rowRoute.busY}`);
-      }
-
-      rowRoute.childIds.forEach((childId, index) => {
-        const childPos = positions[childId];
-        const childX = childPos.x + childPos.w / 2;
-        const startX = rowRoute.branchStarts[index];
-        const points = Math.abs(startX - childX) > 0.5
-          ? [[startX, rowRoute.busY], [childX, rowRoute.busY], [childX, childPos.y]]
-          : [[childX, rowRoute.busY], [childX, childPos.y]];
-        branches.push({
-          childId,
-          d: roundedPath(points, 11),
-        });
-      });
-    });
+    if (hasLeftArm) {
+      busDs.push(roundedPath([
+        [busOriginX, trunkEndY],
+        [busOriginX, busY],
+        [busMin, busY],
+      ], BUS_ENTRY_RADIUS));
+    }
+    if (hasRightArm) {
+      busDs.push(roundedPath([
+        [busOriginX, trunkEndY],
+        [busOriginX, busY],
+        [busMax, busY],
+      ], BUS_ENTRY_RADIUS));
+    }
 
     return {
       key: group.familyKey,
+      familyBaseKey: group.familyBaseKey,
       parentIds: group.parentIds,
       childIds: group.childIds,
-      trunkD: roundedPath(trunkPoints, 12),
+      allChildIds: allChildrenByFamily[group.familyBaseKey] || group.childIds,
+      trunkD: direct || group.sharedTrunkOwner ? roundedPath(trunkPoints, 11) : "",
       busDs,
-      branches,
+      branches: branchSpecs.map(({ childId, childPos, childX, startX }) => {
+        const points = Math.abs(startX - childX) > 0.5
+          ? [[startX, busY], [childX, busY], [childX, childPos.y]]
+          : [[childX, busY], [childX, childPos.y]];
+        return {
+          childId,
+          d: roundedPath(points, 10),
+        };
+      }),
     };
   });
 
@@ -1532,6 +1543,7 @@ function routeFamilyConnectors({ groupsByRow, positions, pairContacts, gen, rows
     diagnostics: {
       familyGroups: families.length,
       sharedSiblingBuses: families.filter((family) => family.childIds.length > 1).length,
+      sharedMultiRowFamilies: Object.values(groupsByFamily).filter((groups) => groups.length > 1).length,
       verticalColumns: verticalClaims.length,
       maxHorizontalLanes: Math.max(0, ...Object.values(laneCountsByGap)),
     },
@@ -1721,21 +1733,21 @@ function computeParentGroups(people, gen) {
     const parentIds = [p.padre, p.madre].filter((id) => id && gen[id] !== undefined);
     if (!parentIds.length) return;
 
-    // Todos los hijos de los mismos progenitores pertenecen a una sola familia
-    // de enrutado aunque sus matrimonios hayan empujado sus fichas a filas
-    // visuales distintas. El router conserva el tronco superior compartido.
-    const familyKey = parentIds.slice().sort().join('|');
-    if (!parentGroups[familyKey]) {
-      parentGroups[familyKey] = { familyKey, parentIds, childIds: [] };
-    }
-    parentGroups[familyKey].childIds.push(p.id);
+    // La clave base usa el conjunto EXACTO de progenitores documentados.
+    // Medio hermanos no comparten nunca el carril familiar. Los hermanos
+    // completos sí pueden compartirlo aunque su ficha caiga en otra generación.
+    const familyBaseKey = parentIds.length === 2
+      ? parentIds.slice().sort().join("|")
+      : `${parentIds[0]}|progenitor-unico|${p.id}`;
+    const key = `${familyBaseKey}@${gen[p.id]}`;
+    if (!parentGroups[key]) parentGroups[key] = { familyBaseKey, parentIds, childIds: [] };
+    parentGroups[key].childIds.push(p.id);
   });
-
   const groupsByRow = {};
-  Object.values(parentGroups).forEach((group) => {
-    const row = Math.max(...group.parentIds.map((id) => gen[id]));
-    if (!groupsByRow[row]) groupsByRow[row] = [];
-    groupsByRow[row].push(group);
+  Object.values(parentGroups).forEach((g) => {
+    const r = Math.max(...g.parentIds.map((id) => gen[id]));
+    if (!groupsByRow[r]) groupsByRow[r] = [];
+    groupsByRow[r].push(g);
   });
   return groupsByRow;
 }
@@ -2672,12 +2684,12 @@ export default function ArbolGenealogico() {
   const relacionFocoId = hovered || seleccion?.id || null;
   const amantesFoco = new Set(relacionFocoId ? listaAmantes(BY_ID[relacionFocoId]) : []);
 
-  const styleForFamilyLine = ({ parentIds, childIds, childId = null }) => {
+  const styleForFamilyLine = ({ parentIds, childIds, allChildIds = childIds, childId = null }) => {
     const relevantChildren = childId ? [childId] : childIds;
     const isPath = relevantChildren.some((cid) => parentIds.some((pid) => pathEdges.has(`${pid}|${cid}`)));
     const isImmediate = Boolean(
       relacionFocoId
-      && (parentIds.includes(relacionFocoId) || childIds.includes(relacionFocoId) || relevantChildren.includes(relacionFocoId))
+      && (parentIds.includes(relacionFocoId) || allChildIds.includes(relacionFocoId) || relevantChildren.includes(relacionFocoId))
     );
     const isLineage = relevantChildren.some((cid) =>
       lineage.has(cid) && parentIds.some((pid) => lineage.has(pid))
