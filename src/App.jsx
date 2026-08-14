@@ -3333,7 +3333,7 @@ export default function ArbolGenealogico() {
       <div className="header">
         <div className="header-brand">
           <img
-            src="/src/EADE.png"
+            src="EADE.png"
             alt=""
             className="header-logo"
             aria-hidden="true"
