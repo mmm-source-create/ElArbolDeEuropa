@@ -1788,8 +1788,12 @@ function anioFinPersona(persona) {
 }
 
 function formatoFechas(persona) {
-  const inicio = Number.isFinite(persona?.nac) ? persona.nac : "?";
-  const fin = Number.isFinite(persona?.muer) ? persona.muer : "?";
+  const inicio = Number.isFinite(persona?.nac)
+    ? `${persona.nacAprox ? "c. " : ""}${persona.nac}`
+    : "?";
+  const fin = Number.isFinite(persona?.muer)
+    ? `${persona.muerAprox ? "c. " : ""}${persona.muer}`
+    : "?";
   return `${inicio} – ${fin}`;
 }
 
@@ -2174,7 +2178,7 @@ export default function ArbolGenealogico() {
   const [hovered, setHovered] = useState(null);
   const [seleccion, setSeleccion] = useState(null);
   const [currentSearchIndex, setCurrentSearchIndex] = useState(-1);
-  const [zoom, setZoom] = useState(1);
+  const [zoom, setZoom] = useState(0.8);
   const [mode, setMode] = useState("view");
   const [origen, setOrigen] = useState(null);
   const [destino, setDestino] = useState(null);
@@ -2778,6 +2782,58 @@ export default function ArbolGenealogico() {
       top: (er.top + er.height / 2) - (sr.top + sr.height / 2),
       behavior: "smooth",
     });
+  };
+
+  // El zoom conserva el punto de atención. Si hay una persona seleccionada,
+  // permanece exactamente en el mismo punto de la pantalla; si no, se conserva
+  // el centro lógico del viewport. Esto evita "perder" la rama al ampliar.
+  const cambiarZoomArbol = (objetivo) => {
+    const scrollEl = scrollRef.current;
+    const zoomAnterior = zoom;
+    const zoomNuevo = Math.max(0.4, Math.min(1.4, Number(objetivo.toFixed?.(2) ?? objetivo)));
+    if (!scrollEl || !Number.isFinite(zoomNuevo) || zoomNuevo === zoomAnterior) {
+      if (Number.isFinite(zoomNuevo)) setZoom(zoomNuevo);
+      return;
+    }
+
+    const focoId = seleccion?.id || searchCurrentId || hovered || null;
+    const focoEl = focoId ? nodeRefs.current[focoId] : null;
+    const scrollRect = scrollEl.getBoundingClientRect();
+    const anclaPantalla = focoEl
+      ? (() => {
+          const rect = focoEl.getBoundingClientRect();
+          return {
+            x: rect.left + rect.width / 2,
+            y: rect.top + rect.height / 2,
+            id: focoId,
+          };
+        })()
+      : null;
+
+    const centroLogico = {
+      x: (scrollEl.scrollLeft + scrollEl.clientWidth / 2) / Math.max(zoomAnterior, 0.001),
+      y: (scrollEl.scrollTop + scrollEl.clientHeight / 2) / Math.max(zoomAnterior, 0.001),
+    };
+
+    setZoom(zoomNuevo);
+    requestAnimationFrame(() => requestAnimationFrame(() => {
+      const currentScroll = scrollRef.current;
+      if (!currentScroll) return;
+
+      if (anclaPantalla?.id && nodeRefs.current[anclaPantalla.id]) {
+        const rect = nodeRefs.current[anclaPantalla.id].getBoundingClientRect();
+        const nuevaX = rect.left + rect.width / 2;
+        const nuevaY = rect.top + rect.height / 2;
+        currentScroll.scrollBy({
+          left: nuevaX - anclaPantalla.x,
+          top: nuevaY - anclaPantalla.y,
+          behavior: "auto",
+        });
+      } else {
+        currentScroll.scrollLeft = Math.max(0, centroLogico.x * zoomNuevo - currentScroll.clientWidth / 2);
+        currentScroll.scrollTop = Math.max(0, centroLogico.y * zoomNuevo - currentScroll.clientHeight / 2);
+      }
+    }));
   };
 
   // Centra la barra correspondiente de la línea temporal (si está montada,
@@ -3621,9 +3677,9 @@ export default function ArbolGenealogico() {
           {mostrarArbol && (
             <section className="workspace-stage workspace-tree-stage" aria-label="Árbol genealógico">
               <div className="tree-toolbar" aria-label="Controles del árbol">
-                <button type="button" className="nav-btn" onClick={() => setZoom((valor) => Math.max(0.5, +(valor - 0.1).toFixed(2)))} title="Alejar árbol" aria-label="Alejar árbol"><ZoomOut size={13} /></button>
-                <button type="button" className="nav-btn" onClick={() => setZoom(1)} title="Restablecer árbol" aria-label="Restablecer árbol"><RotateCcw size={12} /></button>
-                <button type="button" className="nav-btn" onClick={() => setZoom((valor) => Math.min(1.4, +(valor + 0.1).toFixed(2)))} title="Acercar árbol" aria-label="Acercar árbol"><ZoomIn size={13} /></button>
+                <button type="button" className="nav-btn" onClick={() => cambiarZoomArbol(zoom - 0.1)} title="Alejar árbol" aria-label="Alejar árbol"><ZoomOut size={13} /></button>
+                <button type="button" className="nav-btn" onClick={() => cambiarZoomArbol(0.8)} title="Restablecer árbol" aria-label="Restablecer árbol"><RotateCcw size={12} /></button>
+                <button type="button" className="nav-btn" onClick={() => cambiarZoomArbol(zoom + 0.1)} title="Acercar árbol" aria-label="Acercar árbol"><ZoomIn size={13} /></button>
                 <span className="tree-toolbar-separator" aria-hidden="true" />
                 <button type="button" className="nav-btn" onClick={() => scrollBy(-200, 0)} title="Mover árbol a la izquierda" aria-label="Mover árbol a la izquierda"><ArrowLeft size={13} /></button>
                 <button type="button" className="nav-btn" onClick={() => scrollBy(0, -150)} title="Mover árbol hacia arriba" aria-label="Mover árbol hacia arriba"><ArrowUp size={13} /></button>
@@ -4058,4 +4114,3 @@ export default function ArbolGenealogico() {
     </div>
   );
 }
-
