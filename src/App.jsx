@@ -3199,7 +3199,8 @@ export default function ArbolGenealogico() {
       <div className="header">
         <Crown size={20} color="#7A2E2E" />
         <div>
-          <h1>· Árbol Interactivo Linajes Europeos ·</h1>
+          <h1>·El Árbol de Europa·</h1>
+          <h2>Genealogía · Dinastías · Reinados · Territorios · 1200–1650</h2>
         </div>
       </div>
       <div className="workspace-topbar">
