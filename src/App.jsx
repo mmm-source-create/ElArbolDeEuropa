@@ -3338,6 +3338,25 @@ export default function ArbolGenealogico() {
             <div className="sub">{t("brand.scope")}</div>
           </div>
         </div>
+        <div className="language-switch" aria-label="Idioma / Language">
+          <button
+            type="button"
+            className={locale === "es" ? "active" : ""}
+            onClick={() => cambiarIdioma("es")}
+          >
+            ES
+          </button>
+        
+          <span aria-hidden="true">|</span>
+        
+          <button
+            type="button"
+            className={locale === "en" ? "active" : ""}
+            onClick={() => cambiarIdioma("en")}
+          >
+            EN
+          </button>
+        </div>
       </div>
       <div className="workspace-topbar">
         <section className="workspace-topbar-section workspace-toolbar-search">
