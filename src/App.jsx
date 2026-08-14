@@ -51,29 +51,30 @@ const GRUPOS_DINASTICOS_REGIONALES = {
   "Casas italianas": [
     "Aquino", "Borri", "Cattanei", "Della Scala", "Doria",
     "Falangola", "Gazela", "Lancia", "Morosini", "Pirovano", "Sanseverino",
+    "Da Vinci", "Del Giocondo", "Gherardini", "Melzi", "Orsini", "Soderini",
   ],
   "Casas ibéricas": [
-    "Castro", "Enríquez", "Entenza",
+    "Castro", "D’Avalos", "Enríquez", "Entenza",
     "Fernández de Córdoba", "Figueroa", "Fortiá", "Gurrea", "Guzmán",
     "Ivorra", "Lara", "Luna", "Manrique de Lara", "Manuel",
     "Medina Sidonia", "Meneses", "Noroña", "Padilla", "Pereira",
     "Pimentel", "Ponce de León", "Quiñones", "Sandoval", "Velasco", "Zúñiga",
   ],
   "Casas francesas": [
-    "Albret", "Armagnac", "Armañac", "Auvernia", "Bar", "Beauvau",
+    "Albret", "Amboise", "Armagnac", "Armañac", "Auvernia", "Bar", "Beauvau", "Chambly",
     "Boulogne", "Brienne", "Châtillon", "Dammartín", "Estrées",
     "Guilhem", "Laval", "Montfort", "Montoire", "Poitiers",
     "Rohan", "Sabran", "Taillefer", "Talleyrand-Périgord",
   ],
   "Casas germánicas": [
-    "Andechs", "Gorizia", "Hohenberg", "Isenburg", "Katzenelnbogen",
+    "Andechs", "Celje", "Gorizia", "Hohenberg", "Isenburg", "Katzenelnbogen",
     "Kyburg", "La Marck", "Ludovingios", "Schwarzburgo",
+    "Avesnes", "Casa de Flandes", "Gerulfinga",
   ],
   "Casas británicas": [
     "Bohun", "Bolena", "Brandon", "Douglas", "Grey", "Holland", "Mortimer",
     "Neville", "Seymour", "Woodville",
   ],
-  "Casas de los Países Bajos": ["Avesnes", "Casa de Flandes", "Gerulfinga"],
   "Casas escandinavas": ["Estridsen", "Folkung"],
   "Casas orientales": [
     "Ángelo", "Báthory", "Cumanos", "Halshany", "Hunyadi", "Láscaris",
@@ -96,7 +97,7 @@ const DINASTIAS_DESTACADAS = [
   "Visconti", "Sforza", "Este", "Gonzaga", "Médici", "Farnesio", "Borja",
   "Álvarez de Toledo", "Jimena",
   "Casas italianas", "Casas ibéricas", "Casas francesas", "Casas germánicas",
-  "Casas británicas", "Casas de los Países Bajos", "Casas escandinavas",
+  "Casas británicas", "Casas escandinavas",
   "Casas orientales", "Sin casa identificada",
 ];
 
@@ -161,7 +162,7 @@ const CATEGORIAS_TITULO = [
   {
     id: "clero-cultura",
     label: "Clero y cultura",
-    test: (titulo) => /(papa|arzobispo|santo|teologo|poeta)/.test(titulo),
+    test: (titulo) => /(papa|arzobispo|santo|teologo|poeta|artista|pintor|arquitecto|ingeniero|humanista|mecenas)/.test(titulo),
   },
 ];
 
@@ -174,6 +175,15 @@ const FILTROS_RELACION = [
 ];
 
 const BY_ID = Object.fromEntries(PERSONAS.map((p) => [p.id, p]));
+
+const CONYUGES_INVERSOS = PERSONAS.reduce((acc, persona) => {
+  const declarados = [persona?.conyuge, persona?.conyuge2, ...(persona?.conyuges || [])].filter(Boolean);
+  declarados.forEach((id) => {
+    if (!BY_ID[id]) return;
+    (acc[id] ||= new Set()).add(persona.id);
+  });
+  return acc;
+}, {});
 
 const HIJOS_POR_ID = PERSONAS.reduce((acc, persona) => {
   [persona.padre, persona.madre].filter(Boolean).forEach((progenitorId) => {
@@ -196,7 +206,7 @@ const ACCENTS = {
   "Dampierre":"#6F7A45", "Baux":"#8A6A62", "Este":"#8A5D70", "Médici":"#A67032",
   "Farnesio":"#725D8A", "Álvarez de Toledo":"#5F6874",
   "Casas italianas":"#7A6658", "Casas ibéricas":"#7B5D4A", "Casas francesas":"#687A91",
-  "Casas germánicas":"#606B57", "Casas británicas":"#756777", "Casas de los Países Bajos":"#4F7180",
+  "Casas germánicas":"#606B57", "Casas británicas":"#756777",
   "Casas escandinavas":"#557987", "Casas orientales":"#765B83", "Sin casa identificada":"#71717A",
 };
 const PATH_COLOR = "#C97B2E";
@@ -225,7 +235,11 @@ const TIMELINE_FIXED_COLUMN = 212;
 // Normaliza las relaciones sin alterar el formato de la base de datos.
 // `conyuge` se conserva para una sola unión y `conyuges` para varias.
 function listaConyuges(persona) {
-  return [...new Set([persona?.conyuge, persona?.conyuge2, ...(persona?.conyuges || [])].filter(Boolean))];
+  if (!persona) return [];
+  return [...new Set([
+    persona?.conyuge, persona?.conyuge2, ...(persona?.conyuges || []),
+    ...[...(CONYUGES_INVERSOS[persona.id] || [])],
+  ].filter(Boolean))];
 }
 
 function listaAmantes(persona) {
