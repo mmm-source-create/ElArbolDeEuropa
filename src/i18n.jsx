@@ -55,6 +55,15 @@ const MESSAGES = {
     "share.personTitle": "{name} — El Árbol de Europa",
     "share.personText": "Explora la ficha de {name} en El Árbol de Europa.",
   },
+  en: {
+    "brand.name": "The Tree of Europe",
+    "brand.descriptor": "Interactive historical and genealogical atlas",
+    "brand.scope": "Genealogy · Dynasties · Reigns · Territories · 1200–1800",
+    "meta.defaultTitle": "The Tree of Europe | Interactive historical and genealogical atlas",
+    "meta.defaultDescription": "Explore who was connected to whom, when they lived, what they ruled and what was happening across Europe at the same time.",
+    "share.personTitle": "{name} — The Tree of Europe",
+    "share.personText": "Explore {name} on The Tree of Europe.",
+  },
 };
 
 function getNestedMessage(locale, key) {
