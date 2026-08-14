@@ -8,7 +8,7 @@ import {
   ZoomIn,
   ZoomOut,
 } from "lucide-react";
-import mapSvgContent from "./assets/MapChart_Map.svg?raw";
+import mapSvgContent from "./MapChart_Map.svg?raw";
 import {
   REINO_COLOR,
   REINO_COLOR_DEFAULT,
