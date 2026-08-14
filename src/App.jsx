@@ -3333,12 +3333,6 @@ export default function ArbolGenealogico() {
     <div className="wrap">
       <div className="header">
         <div className="header-brand">
-          <img
-            src={EADELogo}
-            alt=""
-            className="header-logo"
-            aria-hidden="true"
-          />
           <div className="header-copy">
             <h1>{t("brand.name")}</h1>
             <div className="sub">{t("brand.scope")}</div>
