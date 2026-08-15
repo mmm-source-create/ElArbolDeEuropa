@@ -10,6 +10,18 @@ function localeDesdePath(pathname) {
   return /^\/en(?:\/|$)/.test(String(pathname || "")) ? "en" : "es";
 }
 
+function slugPersonaDesdePath(pathname) {
+  const path = String(pathname || "/");
+  const match = path.match(/^\/(?:es\/)?persona\/([^/]+)\/?$/);
+  if (!match) return null;
+  try { return decodeURIComponent(match[1]); } catch { return match[1]; }
+}
+
+function personaIdLegacyDesdeSearch(search) {
+  const params = new URLSearchParams(search || "");
+  return params.get("persona") || null;
+}
+
 function esRutaDirecta(pathname, search) {
   const path = String(pathname || "/");
   const params = new URLSearchParams(search || "");
@@ -30,6 +42,24 @@ function normalizaRutaLigera() {
   if (/^\/(persona|dinastia|territorio|historia)(?:\/|$)/.test(pathname)) {
     window.history.replaceState(window.history.state, "", `/es${pathname}${search}${hash}`);
   }
+}
+
+function formatoFecha(valor, aproximada) {
+  return Number.isFinite(valor) ? `${aproximada ? "c. " : ""}${valor}` : "?";
+}
+
+function textoFechas(persona) {
+  if (!persona) return "Fechas no documentadas";
+  return `${formatoFecha(persona.nac, persona.nacAprox)} – ${formatoFecha(persona.muer, persona.muerAprox)}`;
+}
+
+function resumenPersona(persona) {
+  if (!persona) return "";
+  if (persona.biografia) return persona.biografia;
+  const partes = [persona.titulo, ...(persona.reinos || [])].filter(Boolean);
+  return partes.length
+    ? `${persona.nombre} · ${partes.join(" · ")}.`
+    : `Ficha histórica de ${persona.nombre} en El Árbol de Europa.`;
 }
 
 function Welcome({ onEnter, onOpen }) {
@@ -55,6 +85,116 @@ function Welcome({ onEnter, onOpen }) {
           <button type="button" onClick={() => onOpen("agradecimientos")}>Agradecimientos</button>
         </div>
         <div className="welcome-map-credit">Cartografía base: <a href="https://www.mapchart.net/" target="_blank" rel="noreferrer">MapChart</a> · <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noreferrer">CC BY-SA 4.0</a></div>
+      </div>
+    </div>
+  );
+}
+
+function PersonWelcome({ slug, legacyId, onExplore }) {
+  const [persona, setPersona] = useState(null);
+  const [error, setError] = useState(false);
+
+  useEffect(() => {
+    let cancelled = false;
+    setPersona(null);
+    setError(false);
+
+    async function cargar() {
+      try {
+        let resolvedSlug = slug;
+        if (!resolvedSlug && legacyId) {
+          const indexResponse = await fetch("/personas-meta/index.json", { credentials: "same-origin" });
+          if (!indexResponse.ok) throw new Error(`HTTP ${indexResponse.status}`);
+          const index = await indexResponse.json();
+          resolvedSlug = index[legacyId] || null;
+        }
+        if (!resolvedSlug) throw new Error("Persona no localizada");
+        const response = await fetch(`/personas-meta/${encodeURIComponent(resolvedSlug)}.json`, { credentials: "same-origin" });
+        if (!response.ok) throw new Error(`HTTP ${response.status}`);
+        const data = await response.json();
+        if (!cancelled) setPersona(data);
+      } catch {
+        if (!cancelled) setError(true);
+      }
+    }
+
+    cargar();
+    return () => { cancelled = true; };
+  }, [slug, legacyId]);
+
+  useEffect(() => {
+    if (typeof document === "undefined" || !persona) return;
+    document.documentElement.lang = "es";
+    document.title = `${persona.nombre} — El Árbol de Europa`;
+    const description = resumenPersona(persona).slice(0, 155);
+    let meta = document.head.querySelector('meta[name="description"]');
+    if (!meta) {
+      meta = document.createElement("meta");
+      meta.setAttribute("name", "description");
+      document.head.appendChild(meta);
+    }
+    meta.setAttribute("content", description);
+  }, [persona]);
+
+  const padres = persona?.padres || [];
+  const conyuges = persona?.conyuges || [];
+  const hijos = persona?.hijos || [];
+
+  return (
+    <div className="welcome-cover" role="dialog" aria-modal="true" aria-label={persona ? `Ficha de ${persona.nombre}` : "Ficha de persona"}>
+      <div className="welcome-card">
+        <Crown size={28} className="welcome-crown" />
+        <div className="welcome-eyebrow">El Árbol de Europa · Persona</div>
+
+        {!persona && !error && (
+          <>
+            <h2>Cargando ficha…</h2>
+            <p>Preparando la información biográfica.</p>
+          </>
+        )}
+
+        {error && (
+          <>
+            <h2>Ficha histórica</h2>
+            <p>No se ha podido cargar la portada ligera de esta persona. El atlas completo sigue disponible.</p>
+            <div className="welcome-actions">
+              <button type="button" className="welcome-enter" onClick={onExplore}>Abrir en el atlas <ArrowRight size={15} /></button>
+            </div>
+          </>
+        )}
+
+        {persona && (
+          <>
+            <h2>{persona.nombre}</h2>
+            {persona.sobrenombre && (
+              <div style={{ marginTop: -4, marginBottom: 10, color: "#7A2E2E", fontSize: 12, fontWeight: 600 }}>«{persona.sobrenombre}»</div>
+            )}
+            <p>{resumenPersona(persona)}</p>
+
+            <div className="welcome-stats">
+              <span><strong>{textoFechas(persona)}</strong> fechas</span>
+              {persona.dinastia && <span><strong>{persona.dinastia}</strong> dinastía</span>}
+            </div>
+
+            <div style={{ margin: "16px auto 0", maxWidth: 610, fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif", fontSize: 11.5, lineHeight: 1.65, color: "#6B6350" }}>
+              {persona.titulo && <div><strong style={{ color: "#2C2620" }}>Título:</strong> {persona.titulo}</div>}
+              {(persona.reinos || []).length > 0 && <div><strong style={{ color: "#2C2620" }}>Territorios:</strong> {persona.reinos.join(" · ")}</div>}
+              {padres.length > 0 && <div><strong style={{ color: "#2C2620" }}>Padres:</strong> {padres.map((p) => p.nombre).join(" · ")}</div>}
+              {conyuges.length > 0 && <div><strong style={{ color: "#2C2620" }}>Cónyuge{conyuges.length > 1 ? "s" : ""}:</strong> {conyuges.map((p) => p.nombre).join(" · ")}</div>}
+              {hijos.length > 0 && <div><strong style={{ color: "#2C2620" }}>Descendencia registrada:</strong> {hijos.slice(0, 6).map((p) => p.nombre).join(" · ")}{hijos.length > 6 ? ` · +${hijos.length - 6}` : ""}</div>}
+            </div>
+
+            <div className="welcome-actions">
+              <button type="button" className="welcome-enter" onClick={onExplore}>Explorar a {persona.nombre} en el atlas <ArrowRight size={15} /></button>
+            </div>
+
+            <div className="welcome-links">
+              <button type="button" onClick={() => window.location.assign("/es/")}>Portada del proyecto</button>
+            </div>
+
+            <div className="welcome-map-credit">La ficha completa, el árbol, el mapa, la cronología y las relaciones se cargan solo al abrir el atlas.</div>
+          </>
+        )}
       </div>
     </div>
   );
@@ -97,16 +237,20 @@ function EnglishLanding() {
 
 export default function App() {
   const initial = useMemo(() => {
-    if (typeof window === "undefined") return { locale: "es", entered: false };
+    if (typeof window === "undefined") return { locale: "es", entered: false, personSlug: null, legacyPersonId: null };
     const locale = localeDesdePath(window.location.pathname);
-    if (locale === "en") return { locale, entered: false };
+    if (locale === "en") return { locale, entered: false, personSlug: null, legacyPersonId: null };
+    const personSlug = slugPersonaDesdePath(window.location.pathname);
+    const legacyPersonId = personaIdLegacyDesdeSearch(window.location.search);
     const direct = esRutaDirecta(window.location.pathname, window.location.search);
     let visited = false;
     try { visited = window.localStorage.getItem(PORTADA_STORAGE_KEY) === "1"; } catch { /* noop */ }
-    return { locale, entered: direct || visited };
+    const personLanding = Boolean(personSlug || legacyPersonId);
+    return { locale, entered: personLanding ? false : (direct || visited), personSlug, legacyPersonId };
   }, []);
 
   const [entered, setEntered] = useState(initial.entered);
+  const [personExplorerRequested, setPersonExplorerRequested] = useState(false);
   const [initialPanel, setInitialPanel] = useState(null);
 
   useEffect(() => {
@@ -120,7 +264,14 @@ export default function App() {
     setEntered(true);
   }, []);
 
+  const explorarPersona = useCallback(() => {
+    try { window.localStorage.setItem(PORTADA_STORAGE_KEY, "1"); } catch { /* noop */ }
+    setPersonExplorerRequested(true);
+    setEntered(true);
+  }, []);
+
   if (initial.locale === "en") return <EnglishLanding />;
+  if ((initial.personSlug || initial.legacyPersonId) && !personExplorerRequested) return <PersonWelcome slug={initial.personSlug} legacyId={initial.legacyPersonId} onExplore={explorarPersona} />;
   if (!entered) return <Welcome onEnter={() => entrar(null)} onOpen={entrar} />;
 
   return (
@@ -129,3 +280,4 @@ export default function App() {
     </Suspense>
   );
 }
+
