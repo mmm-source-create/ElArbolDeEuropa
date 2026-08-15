@@ -899,12 +899,83 @@ function computeTreeLayout(rows, byId, childrenById) {
   };
 }
 
+function slugPublico(valor) {
+  return String(valor ?? "")
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-+|-+$/g, "")
+    .replace(/-{2,}/g, "-") || "persona";
+}
+
+function reinadosLigero(persona) {
+  if (Array.isArray(persona?.reinados)) return persona.reinados.map((r) => ({ ...r }));
+  if (Array.isArray(persona?.reinado) && persona.reinado.length >= 2) {
+    return [{ territorio: (persona.reinos || [])[0] || null, desde: persona.reinado[0], hasta: persona.reinado[1] }];
+  }
+  return [];
+}
+
+const PERSONA_SLUG_BASE_COUNT = PERSONAS.reduce((acc, persona) => {
+  const base = slugPublico(persona.nombre);
+  acc[base] = (acc[base] || 0) + 1;
+  return acc;
+}, {});
+
+const PERSONA_SLUG_POR_ID = Object.fromEntries(PERSONAS.map((persona) => {
+  const base = slugPublico(persona.nombre);
+  const slug = PERSONA_SLUG_BASE_COUNT[base] > 1 ? `${base}-${slugPublico(persona.id)}` : base;
+  return [persona.id, slug];
+}));
+
+function referenciaPersona(id) {
+  const persona = BY_ID[id];
+  if (!persona) return null;
+  return { id: persona.id, nombre: persona.nombre, slug: PERSONA_SLUG_POR_ID[persona.id] };
+}
+
+async function generarPortadasPersona() {
+  const personaDir = path.join(ROOT, "public", "personas-meta");
+  await fs.rm(personaDir, { recursive: true, force: true });
+  await fs.mkdir(personaDir, { recursive: true });
+
+  await fs.writeFile(path.join(personaDir, "index.json"), JSON.stringify(PERSONA_SLUG_POR_ID), "utf8");
+
+  await Promise.all(PERSONAS.map(async (persona) => {
+    const padres = [persona.padre, persona.madre].filter(Boolean).map(referenciaPersona).filter(Boolean);
+    const conyuges = listaConyuges(persona).map(referenciaPersona).filter(Boolean);
+    const hijos = (HIJOS_POR_ID[persona.id] || []).map(referenciaPersona).filter(Boolean);
+    const meta = {
+      id: persona.id,
+      slug: PERSONA_SLUG_POR_ID[persona.id],
+      nombre: persona.nombre,
+      sobrenombre: persona.sobrenombre || "",
+      dinastia: persona.dinastia || "",
+      titulo: persona.titulo || "",
+      nac: Number.isFinite(persona.nac) ? persona.nac : null,
+      muer: Number.isFinite(persona.muer) ? persona.muer : null,
+      nacAprox: Boolean(persona.nacAprox),
+      muerAprox: Boolean(persona.muerAprox),
+      reinos: Array.isArray(persona.reinos) ? persona.reinos : [],
+      reinados: reinadosLigero(persona),
+      biografia: persona.biografia || "",
+      padres,
+      conyuges,
+      hijos,
+    };
+    await fs.writeFile(path.join(personaDir, `${meta.slug}.json`), JSON.stringify(meta), "utf8");
+  }));
+}
+
 const gen = computeGenerations(PERSONAS);
 const rows = buildRows(PERSONAS, gen);
 const layout = computeTreeLayout(rows, BY_ID, HIJOS_POR_ID);
 
 await fs.mkdir(OUTPUT_DIR, { recursive: true });
 await fs.writeFile(OUTPUT_FILE, JSON.stringify({ gen, rows, layout }), "utf8");
-await fs.writeFile(META_FILE, JSON.stringify({ personCount: PERSONAS.length }), "utf8");
+await fs.writeFile(META_FILE, JSON.stringify({ personCount: PERSONAS.length, buildVersion: Date.now() }), "utf8");
+await generarPortadasPersona();
 
 console.log(`treeBase.json generado: ${PERSONAS.length} personas, ${rows.length} generaciones, canvas ${Math.round(layout.width)}x${Math.round(layout.height)}`);
+console.log(`Portadas ligeras generadas: ${PERSONAS.length} fichas + índice en public/personas-meta/`);
