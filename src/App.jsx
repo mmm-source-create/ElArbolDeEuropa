@@ -103,16 +103,31 @@ function PersonWelcome({ slug, legacyId, onExplore }) {
       try {
         let resolvedSlug = slug;
         if (!resolvedSlug && legacyId) {
-          const indexResponse = await fetch("/personas-meta/index.json", { credentials: "same-origin" });
+          const indexResponse = await fetch(`/personas-meta/index.json?v=${encodeURIComponent(SITE_META.buildVersion || SITE_META.personCount)}`, { credentials: "same-origin", cache: "no-store" });
           if (!indexResponse.ok) throw new Error(`HTTP ${indexResponse.status}`);
+          const indexType = indexResponse.headers.get("content-type") || "";
+          if (!indexType.includes("application/json")) throw new Error("Índice no JSON");
           const index = await indexResponse.json();
           resolvedSlug = index[legacyId] || null;
         }
         if (!resolvedSlug) throw new Error("Persona no localizada");
-        const response = await fetch(`/personas-meta/${encodeURIComponent(resolvedSlug)}.json`, { credentials: "same-origin" });
-        if (!response.ok) throw new Error(`HTTP ${response.status}`);
-        const data = await response.json();
-        if (!cancelled) setPersona(data);
+        const metaUrl = `/personas-meta/${encodeURIComponent(resolvedSlug)}.json?v=${encodeURIComponent(SITE_META.buildVersion || SITE_META.personCount)}`;
+        let lastError = null;
+        for (let intento = 0; intento < 3; intento += 1) {
+          try {
+            const response = await fetch(metaUrl, { credentials: "same-origin", cache: "no-store" });
+            if (!response.ok) throw new Error(`HTTP ${response.status}`);
+            const contentType = response.headers.get("content-type") || "";
+            if (!contentType.includes("application/json")) throw new Error("Respuesta no JSON");
+            const data = await response.json();
+            if (!cancelled) setPersona(data);
+            return;
+          } catch (err) {
+            lastError = err;
+            if (intento < 2) await new Promise((resolve) => setTimeout(resolve, intento === 0 ? 180 : 520));
+          }
+        }
+        throw lastError || new Error("Persona no localizada");
       } catch {
         if (!cancelled) setError(true);
       }
@@ -280,4 +295,3 @@ export default function App() {
     </Suspense>
   );
 }
-
