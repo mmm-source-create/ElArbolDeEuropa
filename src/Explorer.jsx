@@ -2122,6 +2122,7 @@ function ModalProyecto({ seccion, onClose, persona, personasVista = PERSONAS, on
     reportar: "Reportar un error",
     estadisticas: "Estadísticas",
     historias: "Historias",
+    desafio: "Desafío",
   }[seccion] || "Información del proyecto";
   const estadisticas = calcularEstadisticas(alcanceEstadisticas === "vista" ? personasVista : PERSONAS);
 
@@ -2261,6 +2262,13 @@ function ModalProyecto({ seccion, onClose, persona, personasVista = PERSONAS, on
                   </article>
                 ))}
               </div>
+            </>
+          )}
+
+          {seccion === "desafio" && (
+            <>
+              <p className="project-lead">Pon a prueba lo que sabes de dinastías, parentescos, cronología y territorios de El Árbol de Europa.</p>
+              <div className="project-license-note"><strong>PRÓXIMAMENTE</strong><br />Aquí aparecerá el futuro modo de juego: preguntas históricas, relaciones familiares, orden cronológico, territorios y desafíos construidos a partir de la propia base de datos.</div>
             </>
           )}
 
@@ -3765,6 +3773,9 @@ export default function Explorer({ initialPanel = null }) {
               </button>
               <button type="button" className={`nav-btn nav-btn-wide${historiaActiva ? " active" : ""}`} onClick={() => setInfoProyecto("historias")}>
                 <BookOpen size={12} /> Historias
+              </button>
+              <button type="button" className="nav-btn nav-btn-wide" onClick={() => setInfoProyecto("desafio")}>
+                Desafío
               </button>
               <div className="favorites-control" ref={favoritosMenuRef}>
                 <button type="button" className={`nav-btn nav-btn-wide${favoritosOpen || soloFavoritos ? " active" : ""}`} onClick={() => setFavoritosOpen((actual) => !actual)} aria-haspopup="menu" aria-expanded={favoritosOpen}>
