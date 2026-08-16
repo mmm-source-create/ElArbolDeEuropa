@@ -199,7 +199,7 @@ function PersonWelcome({ slug, legacyId, onExplore }) {
               {hijos.length > 0 && <div><strong style={{ color: "#2C2620" }}>Descendencia registrada:</strong> {hijos.slice(0, 6).map((p) => p.nombre).join(" · ")}{hijos.length > 6 ? ` · +${hijos.length - 6}` : ""}</div>}
             </div>
 
-            <div className="welcome-actions">
+            <div className="welcome-actions" style={{ marginTop: 26 }}>
               <button type="button" className="welcome-enter" onClick={onExplore}>Explorar a {persona.nombre} en el atlas <ArrowRight size={15} /></button>
             </div>
 
