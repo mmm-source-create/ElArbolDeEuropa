@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect, useLayoutEffect, useCallback, useMemo } from "react";
+import React, { lazy, Suspense, useState, useRef, useEffect, useLayoutEffect, useCallback, useMemo } from "react";
 import { Crown, Search, ChevronDown, ChevronRight, ArrowLeft, ArrowRight, ArrowUp, ArrowDown, ZoomIn, ZoomOut, RotateCcw, GitCompare, Focus, Share2, Play, Pause, SkipBack, SkipForward, X, Info, Heart, BookOpen, Scale, Flag, Mail, ExternalLink } from "lucide-react";
 import { MapaEuropa } from "./MapaEuropa";
 import {
@@ -17,6 +17,8 @@ import { PERSONAS } from "./personas.jsx";
 import { EVENTOS_HISTORICOS, HISTORIAS } from "./historiaData.jsx";
 import { DEFAULT_LOCALE, SITE, t } from "./i18n.jsx";
 import TREE_BASE from "./generated/treeBase.json";
+
+const Desafio = lazy(() => import("./desafio/Desafio.jsx"));
 
 // ---------------------------------------------------------------------------
 // Taxonomías de filtros
@@ -93,7 +95,7 @@ const DINASTIAS_DESTACADAS = [
   "Capeto", "Habsburgo", "Ivrea", "Barcelona", "Plantagenet", "Tudor", "Estuardo",
   "Avís", "Braganza", "Alfonsina", "Árpád", "Piast", "Jagellón", "Vasa",
   "Rurikida", "Přemysl", "Hohenstaufen", "Wittelsbach", "Luxemburgo",
-  "Hohenzollern", "Nassau", "Welf", "Oldemburgo", "Paleólogo", "Saboya",
+  "Hohenzollern", "Nassau", "Welf", "Wettin", "Oldemburgo", "Paleólogo", "Saboya",
   "Lorena", "Brabante", "Champaña", "Foix", "Dampierre", "Baux",
   "Visconti", "Sforza", "Este", "Gonzaga", "Médici", "Farnesio", "Borja",
   "Álvarez de Toledo", "Jimena",
@@ -2128,7 +2130,7 @@ function ModalProyecto({ seccion, onClose, persona, personasVista = PERSONAS, on
 
   return (
     <div className="project-modal-backdrop" role="presentation" onMouseDown={(event) => { if (event.target === event.currentTarget) onClose(); }}>
-      <section className="project-modal" role="dialog" aria-modal="true" aria-label={titulo}>
+      <section className={`project-modal${seccion === "desafio" ? " project-modal-desafio" : ""}`} role="dialog" aria-modal="true" aria-label={titulo}>
         <div className="project-modal-head">
           <div>
             <div className="project-modal-kicker">El Árbol de Europa</div>
@@ -2266,10 +2268,9 @@ function ModalProyecto({ seccion, onClose, persona, personasVista = PERSONAS, on
           )}
 
           {seccion === "desafio" && (
-            <>
-              <p className="project-lead">Pon a prueba lo que sabes de dinastías, parentescos, cronología y territorios de El Árbol de Europa.</p>
-              <div className="project-license-note"><strong>PRÓXIMAMENTE</strong><br />Aquí aparecerá el futuro modo de juego: preguntas históricas, relaciones familiares, orden cronológico, territorios y desafíos construidos a partir de la propia base de datos.</div>
-            </>
+            <Suspense fallback={<div className="project-license-note">Preparando el desafío…</div>}>
+              <Desafio personas={PERSONAS} />
+            </Suspense>
           )}
 
           {seccion === "reportar" && (
