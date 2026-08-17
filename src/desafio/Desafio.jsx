@@ -1,4 +1,4 @@
-import React, { useMemo, useState } from "react";
+import React, { useEffect, useMemo, useRef, useState } from "react";
 import { ArrowLeft, ArrowRight, Check, ExternalLink, Flame, ListChecks, RotateCcw, X } from "lucide-react";
 import { crearPartida, crearPreguntaRacha } from "./desafioEngine.jsx";
 import "./desafio.css";
@@ -100,6 +100,22 @@ export default function Desafio({ personas = [] }) {
   const [seleccionRacha, setSeleccionRacha] = useState(null);
   const [rachaTerminada, setRachaTerminada] = useState(false);
   const [firmasRacha, setFirmasRacha] = useState([]);
+  const [transicionRacha, setTransicionRacha] = useState(null);
+  const [entradaRacha, setEntradaRacha] = useState(0);
+  const timersRachaRef = useRef([]);
+
+  const limpiarTimersRacha = () => {
+    timersRachaRef.current.forEach((timer) => window.clearTimeout(timer));
+    timersRachaRef.current = [];
+  };
+
+  const programarRacha = (callback, ms) => {
+    const timer = window.setTimeout(callback, ms);
+    timersRachaRef.current.push(timer);
+    return timer;
+  };
+
+  useEffect(() => () => limpiarTimersRacha(), []);
 
   const pregunta = preguntas[indice] || null;
   const respondida = seleccion !== null;
@@ -120,6 +136,7 @@ export default function Desafio({ personas = [] }) {
   };
 
   const volverAModos = () => {
+    limpiarTimersRacha();
     setModo(null);
     setError("");
     setPreguntas([]);
@@ -127,6 +144,7 @@ export default function Desafio({ personas = [] }) {
     setPreguntaRacha(null);
     setRachaTerminada(false);
     setSeleccionRacha(null);
+    setTransicionRacha(null);
   };
 
   const iniciarClasico = () => {
@@ -180,6 +198,7 @@ export default function Desafio({ personas = [] }) {
   };
 
   const iniciarRacha = () => {
+    limpiarTimersRacha();
     try {
       const nueva = crearPreguntaRacha(personas);
       setModo("racha");
@@ -189,6 +208,8 @@ export default function Desafio({ personas = [] }) {
       setSeleccionRacha(null);
       setRachaTerminada(false);
       setFirmasRacha([nueva.firma]);
+      setTransicionRacha(null);
+      setEntradaRacha(0);
       setError("");
     } catch (err) {
       console.error("[Desafío · Racha] No se pudo iniciar:", err);
@@ -197,8 +218,16 @@ export default function Desafio({ personas = [] }) {
   };
 
   const responderRacha = (opcionId) => {
-    if (!preguntaRacha || seleccionRacha !== null || rachaTerminada) return;
+    if (!preguntaRacha || seleccionRacha !== null || rachaTerminada || transicionRacha) return;
+    const opcionesOrdenadas = campeonRacha
+      ? [
+          preguntaRacha.opciones.find((opcion) => opcion.id === campeonRacha),
+          ...preguntaRacha.opciones.filter((opcion) => opcion.id !== campeonRacha),
+        ].filter(Boolean)
+      : preguntaRacha.opciones;
+    const indiceElegido = opcionesOrdenadas.findIndex((opcion) => opcion.id === opcionId);
     const esCorrecta = opcionId === preguntaRacha.correctaId;
+
     if (!esCorrecta) {
       setSeleccionRacha(opcionId);
       setRachaTerminada(true);
@@ -211,26 +240,46 @@ export default function Desafio({ personas = [] }) {
 
     const siguienteRacha = rachaDuelo + 1;
     const nuevoCampeon = preguntaRacha.siguienteCampeonId;
-    const nuevasEstadisticas = actualizarEstadisticas({
-      aciertos: estadisticas.aciertos + 1,
-      mejorRachaDuelo: Math.max(estadisticas.mejorRachaDuelo, siguienteRacha),
-    });
-
+    let nueva;
     try {
-      const nueva = crearPreguntaRacha(personas, nuevoCampeon, { evitarFirmas: firmasRacha.slice(-120) });
-      setCampeonRacha(nuevoCampeon);
-      setRachaDuelo(siguienteRacha);
-      setPreguntaRacha(nueva);
-      setFirmasRacha((actuales) => [...actuales, nueva.firma].slice(-160));
-      setSeleccionRacha(null);
+      nueva = crearPreguntaRacha(personas, nuevoCampeon, { evitarFirmas: firmasRacha.slice(-120) });
     } catch (err) {
       console.error("[Desafío · Racha] No se pudo generar el siguiente duelo:", err);
       setRachaDuelo(siguienteRacha);
       setRachaTerminada(true);
       setSeleccionRacha(preguntaRacha.correctaId);
-      setEstadisticas(nuevasEstadisticas);
+      actualizarEstadisticas({
+        aciertos: estadisticas.aciertos + 1,
+        rachasJugadas: estadisticas.rachasJugadas + 1,
+        mejorRachaDuelo: Math.max(estadisticas.mejorRachaDuelo, siguienteRacha),
+      });
       setError("La racha terminó porque no se pudo generar otro duelo sin repetir los anteriores.");
+      return;
     }
+
+    actualizarEstadisticas({
+      aciertos: estadisticas.aciertos + 1,
+      mejorRachaDuelo: Math.max(estadisticas.mejorRachaDuelo, siguienteRacha),
+    });
+
+    const tipo = indiceElegido === 1 ? "gana-derecha" : "gana-izquierda";
+    setSeleccionRacha(opcionId);
+    setTransicionRacha({ tipo, fase: "confirmar", ganadorId: opcionId });
+
+    // Primero confirma visualmente el acierto; después el ganador ocupa el
+    // puesto de la izquierda y entra un nuevo rival por la derecha.
+    programarRacha(() => {
+      setTransicionRacha({ tipo, fase: "mover", ganadorId: opcionId });
+      programarRacha(() => {
+        setCampeonRacha(nuevoCampeon);
+        setRachaDuelo(siguienteRacha);
+        setPreguntaRacha(nueva);
+        setFirmasRacha((actuales) => [...actuales, nueva.firma].slice(-160));
+        setSeleccionRacha(null);
+        setTransicionRacha(null);
+        setEntradaRacha((valor) => valor + 1);
+      }, 420);
+    }, 130);
   };
 
   if (!modo) {
@@ -272,6 +321,12 @@ export default function Desafio({ personas = [] }) {
     if (!preguntaRacha) return null;
     const opcionCorrecta = preguntaRacha.opciones.find((opcion) => opcion.id === preguntaRacha.correctaId);
     const opcionElegida = preguntaRacha.opciones.find((opcion) => opcion.id === seleccionRacha);
+    const opcionesRachaOrdenadas = campeonRacha
+      ? [
+          preguntaRacha.opciones.find((opcion) => opcion.id === campeonRacha),
+          ...preguntaRacha.opciones.filter((opcion) => opcion.id !== campeonRacha),
+        ].filter(Boolean)
+      : preguntaRacha.opciones;
 
     if (rachaTerminada) {
       return (
@@ -310,18 +365,24 @@ export default function Desafio({ personas = [] }) {
 
         <div className="desafio-question-card desafio-racha-card">
           <h3>{preguntaRacha.pregunta}</h3>
-          <div className="desafio-options desafio-options-two">
-            {preguntaRacha.opciones.map((opcion) => (
-              <button
-                type="button"
-                key={opcion.id}
-                className={`desafio-option desafio-option-duel${campeonRacha === opcion.id ? " is-champion" : ""}`}
-                onClick={() => responderRacha(opcion.id)}
-              >
-                <span>{opcion.label}</span>
-                {campeonRacha === opcion.id && <small>continúa</small>}
-              </button>
-            ))}
+          <div className={`desafio-options desafio-options-two${transicionRacha ? ` racha-${transicionRacha.tipo} fase-${transicionRacha.fase}` : ""}`}>
+            {opcionesRachaOrdenadas.map((opcion, opcionIndex) => {
+              const seleccionCorrecta = seleccionRacha === opcion.id && opcion.id === preguntaRacha.correctaId;
+              const esCampeon = campeonRacha === opcion.id;
+              const entrando = !transicionRacha && entradaRacha > 0 && opcionIndex === 1;
+              return (
+                <button
+                  type="button"
+                  key={opcion.id}
+                  className={`desafio-option desafio-option-duel${esCampeon ? " is-champion" : ""}${seleccionCorrecta ? " is-selected-correct" : ""}${entrando ? " is-entering-rival" : ""}`}
+                  disabled={seleccionRacha !== null || Boolean(transicionRacha)}
+                  onClick={() => responderRacha(opcion.id)}
+                >
+                  <span>{opcion.label}</span>
+                  {esCampeon && <small>continúa</small>}
+                </button>
+              );
+            })}
           </div>
         </div>
         <div className="desafio-racha-rule">Si aciertas, la respuesta correcta permanece como una de las dos opciones de la siguiente pregunta. Si fallas, pierdes la racha.</div>
