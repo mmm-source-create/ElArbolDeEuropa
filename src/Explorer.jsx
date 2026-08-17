@@ -369,6 +369,7 @@ const CORREOS_CORRECCIONES = SITE.contactEmail ? [SITE.contactEmail] : [];
 
 const PORTADA_STORAGE_KEY = "arbol-europa-portada-v1";
 const FAVORITOS_STORAGE_KEY = "arbol-europa-favoritos-v1";
+const PANELES_STORAGE_KEY = "arbol-europa-paneles-v1";
 const TIMELINE_SCALES = [3.2, 4.8, 6.4];
 const TIMELINE_FIXED_COLUMN = 212;
 
@@ -2357,6 +2358,20 @@ export default function Explorer({ initialPanel = null }) {
   const [shareStatus, setShareStatus] = useState("");
   const [collapsedIds, setCollapsedIds] = useState([]);
   const [vistasActivas, setVistasActivas] = useState({ arbol: true, mapa: true });
+  const [panelesVisibles, setPanelesVisibles] = useState(() => {
+    const base = { filtros: true, biografia: true, cronologia: true };
+    if (typeof window === "undefined") return base;
+    try {
+      const guardado = JSON.parse(window.localStorage.getItem(PANELES_STORAGE_KEY) || "null");
+      return {
+        filtros: typeof guardado?.filtros === "boolean" ? guardado.filtros : true,
+        biografia: typeof guardado?.biografia === "boolean" ? guardado.biografia : true,
+        cronologia: typeof guardado?.cronologia === "boolean" ? guardado.cronologia : true,
+      };
+    } catch {
+      return base;
+    }
+  });
   const [portadaVisible, setPortadaVisible] = useState(false);
   const [infoProyecto, setInfoProyecto] = useState(initialPanel);
   const [timelineScaleIndex, setTimelineScaleIndex] = useState(1);
@@ -2566,6 +2581,15 @@ export default function Explorer({ initialPanel = null }) {
     }
     if (!favoritos.length && soloFavoritos) setSoloFavoritos(false);
   }, [favoritos, soloFavoritos]);
+
+  useEffect(() => {
+    if (typeof window === "undefined") return;
+    try {
+      window.localStorage.setItem(PANELES_STORAGE_KEY, JSON.stringify(panelesVisibles));
+    } catch {
+      // La disposición puede seguir funcionando aunque localStorage esté bloqueado.
+    }
+  }, [panelesVisibles]);
 
   useEffect(() => () => {
     if (shareStatusTimerRef.current) window.clearTimeout(shareStatusTimerRef.current);
@@ -2801,7 +2825,17 @@ export default function Explorer({ initialPanel = null }) {
 
   const mostrarArbol = vistasActivas.arbol;
   const mostrarMapa = vistasActivas.mapa;
+  const mostrarFiltros = panelesVisibles.filtros;
+  const mostrarBiografia = panelesVisibles.biografia;
+  const mostrarCronologia = panelesVisibles.cronologia;
   const vistaPrincipal = mostrarArbol && mostrarMapa ? "ambos" : (mostrarArbol ? "arbol" : "mapa");
+  const layoutLaterales = mostrarFiltros && mostrarBiografia
+    ? "workspace-layout-both"
+    : mostrarFiltros
+      ? "workspace-layout-left"
+      : mostrarBiografia
+        ? "workspace-layout-right"
+        : "workspace-layout-center";
 
   const alternarVista = useCallback((vista) => {
     setVistasActivas((actuales) => {
@@ -2811,6 +2845,10 @@ export default function Explorer({ initialPanel = null }) {
       if (actuales[vista] && !actuales[otraVista]) return actuales;
       return { ...actuales, [vista]: !actuales[vista] };
     });
+  }, []);
+
+  const alternarPanelAuxiliar = useCallback((panel) => {
+    setPanelesVisibles((actuales) => ({ ...actuales, [panel]: !actuales[panel] }));
   }, []);
 
   const personasVivasEnAnio = useMemo(() =>
@@ -3693,25 +3731,14 @@ export default function Explorer({ initialPanel = null }) {
         </section>
 
         <div className="workspace-topbar-secondary">
-          <section className="workspace-topbar-section workspace-toolbar-view">
-            <div className="toolbar-label">Zona principal</div>
-            <div className="segmented-control view-toggle-control" aria-label="Vistas visibles">
-              <button
-                type="button"
-                className={`segment-btn${mostrarArbol ? " active" : ""}`}
-                aria-pressed={mostrarArbol}
-                onClick={() => alternarVista("arbol")}
-              >
-                Árbol
-              </button>
-              <button
-                type="button"
-                className={`segment-btn${mostrarMapa ? " active" : ""}`}
-                aria-pressed={mostrarMapa}
-                onClick={() => alternarVista("mapa")}
-              >
-                Mapa
-              </button>
+          <section className="workspace-topbar-section workspace-toolbar-view workspace-toolbar-panels">
+            <div className="toolbar-label">Paneles visibles</div>
+            <div className="segmented-control view-toggle-control panel-toggle-control" aria-label="Paneles visibles">
+              <button type="button" className={`segment-btn${mostrarFiltros ? " active" : ""}`} aria-pressed={mostrarFiltros} onClick={() => alternarPanelAuxiliar("filtros")}>Filtros</button>
+              <button type="button" className={`segment-btn${mostrarArbol ? " active" : ""}`} aria-pressed={mostrarArbol} onClick={() => alternarVista("arbol")}>Árbol</button>
+              <button type="button" className={`segment-btn${mostrarMapa ? " active" : ""}`} aria-pressed={mostrarMapa} onClick={() => alternarVista("mapa")}>Mapa</button>
+              <button type="button" className={`segment-btn${mostrarBiografia ? " active" : ""}`} aria-pressed={mostrarBiografia} onClick={() => alternarPanelAuxiliar("biografia")}>Biografía</button>
+              <button type="button" className={`segment-btn${mostrarCronologia ? " active" : ""}`} aria-pressed={mostrarCronologia} onClick={() => alternarPanelAuxiliar("cronologia")}>Cronología</button>
             </div>
           </section>
 
@@ -3873,7 +3900,8 @@ export default function Explorer({ initialPanel = null }) {
         </div>
       )}
 
-      <div className="workspace-grid">
+      <div className={`workspace-grid ${layoutLaterales}${mostrarCronologia ? "" : " workspace-no-timeline"}`}>
+        {mostrarFiltros && (
         <aside className="workspace-sidebar">
           <section className="panel workspace-fixed-panel workspace-filter-panel">
             <div className="panel-head panel-head-static">
@@ -4011,6 +4039,7 @@ export default function Explorer({ initialPanel = null }) {
             </div>
           </section>
         </aside>
+        )}
 
         <main className={`workspace-main workspace-main-${vistaPrincipal}`}>
           {mostrarArbol && (
@@ -4127,6 +4156,7 @@ export default function Explorer({ initialPanel = null }) {
           )}
         </main>
 
+        {mostrarBiografia && (
         <aside className="workspace-inspector">
           <section className="panel workspace-fixed-panel workspace-bio-panel">
             <div className="panel-head panel-head-static">
@@ -4206,7 +4236,9 @@ export default function Explorer({ initialPanel = null }) {
             </div>
           </section>
         </aside>
+        )}
 
+        {mostrarCronologia && (
         <section className="workspace-bottom">
           <section className="panel timeline-panel">
             <div className="panel-head panel-head-static timeline-panel-head">
@@ -4369,6 +4401,7 @@ export default function Explorer({ initialPanel = null }) {
             </div>
           </section>
         </section>
+        )}
       </div>
 
       <footer className="project-footer">
