@@ -505,3 +505,92 @@
   .desafio-racha-card h3 { font-size: 19px; }
   .desafio-option-duel { min-height: 68px; }
 }
+
+/* ==========================================
+   RACHA Â· TRANSICIÃ“N "EL GANADOR SE QUEDA"
+   ========================================== */
+.desafio-options-two {
+  overflow: hidden;
+  padding: 2px;
+  margin-left: -2px;
+  margin-right: -2px;
+}
+
+.desafio-option-duel {
+  transition:
+    transform 420ms cubic-bezier(.2, .72, .2, 1),
+    opacity 300ms ease,
+    border-color 150ms ease,
+    background 150ms ease,
+    box-shadow 150ms ease;
+  will-change: transform, opacity;
+}
+
+.desafio-option-duel.is-selected-correct {
+  border-color: #78966f;
+  background: #eef6ea;
+  color: #355131;
+  box-shadow: inset 0 0 0 1px rgba(76, 113, 67, .18);
+}
+
+/* Si gana la derecha, el campeÃ³n anterior sale y la opciÃ³n elegida ocupa
+   visualmente su hueco antes de que se pinte la siguiente pregunta. */
+.desafio-options-two.racha-gana-derecha.fase-mover .desafio-option-duel:first-child {
+  transform: translateX(calc(-100% - 14px));
+  opacity: 0;
+}
+
+.desafio-options-two.racha-gana-derecha.fase-mover .desafio-option-duel:nth-child(2) {
+  transform: translateX(calc(-100% - 14px));
+  opacity: 1;
+}
+
+/* Si ya estaba a la izquierda, permanece; solo se retira al rival derrotado. */
+.desafio-options-two.racha-gana-izquierda.fase-mover .desafio-option-duel:first-child {
+  transform: translateX(0);
+}
+
+.desafio-options-two.racha-gana-izquierda.fase-mover .desafio-option-duel:nth-child(2) {
+  transform: translateX(46px);
+  opacity: 0;
+}
+
+.desafio-option-duel.is-entering-rival {
+  animation: desafio-rival-entra 330ms cubic-bezier(.2, .72, .2, 1) both;
+}
+
+@keyframes desafio-rival-entra {
+  from { transform: translateX(38px); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+/* En mÃ³vil las dos tarjetas estÃ¡n apiladas: la segunda sube al puesto de la
+   primera, manteniendo la misma metÃ¡fora espacial sin forzar un gran salto horizontal. */
+@media (max-width: 760px) {
+  .desafio-options-two.racha-gana-derecha.fase-mover .desafio-option-duel:first-child {
+    transform: translateY(calc(-100% - 14px));
+  }
+
+  .desafio-options-two.racha-gana-derecha.fase-mover .desafio-option-duel:nth-child(2) {
+    transform: translateY(calc(-100% - 14px));
+  }
+
+  .desafio-options-two.racha-gana-izquierda.fase-mover .desafio-option-duel:nth-child(2) {
+    transform: translateY(36px);
+  }
+
+  @keyframes desafio-rival-entra {
+    from { transform: translateY(28px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .desafio-option-duel {
+    transition-duration: 1ms !important;
+  }
+
+  .desafio-option-duel.is-entering-rival {
+    animation: none !important;
+  }
+}
