@@ -1,10 +1,18 @@
 import React, { useMemo, useState } from "react";
-import { ArrowRight, Check, ExternalLink, RotateCcw, X } from "lucide-react";
-import { crearPartida } from "./desafioEngine.jsx";
+import { ArrowLeft, ArrowRight, Check, ExternalLink, Flame, ListChecks, RotateCcw, X } from "lucide-react";
+import { crearPartida, crearPreguntaRacha } from "./desafioEngine.jsx";
 import "./desafio.css";
 
 const STORAGE_KEY = "arbol-europa-desafio-v1";
-const ESTADISTICAS_INICIALES = Object.freeze({ partidas: 0, aciertos: 0, mejorPuntuacion: 0, racha: 0 });
+const RECENT_KEY = "arbol-europa-desafio-recientes-v1";
+const ESTADISTICAS_INICIALES = Object.freeze({
+  partidas: 0,
+  aciertos: 0,
+  mejorPuntuacion: 0,
+  racha: 0,
+  rachasJugadas: 0,
+  mejorRachaDuelo: 0,
+});
 
 function leerEstadisticas() {
   if (typeof window === "undefined") return { ...ESTADISTICAS_INICIALES };
@@ -15,6 +23,8 @@ function leerEstadisticas() {
       aciertos: Number.isFinite(guardado?.aciertos) ? guardado.aciertos : 0,
       mejorPuntuacion: Number.isFinite(guardado?.mejorPuntuacion) ? guardado.mejorPuntuacion : 0,
       racha: Number.isFinite(guardado?.racha) ? guardado.racha : 0,
+      rachasJugadas: Number.isFinite(guardado?.rachasJugadas) ? guardado.rachasJugadas : 0,
+      mejorRachaDuelo: Number.isFinite(guardado?.mejorRachaDuelo) ? guardado.mejorRachaDuelo : 0,
     };
   } catch {
     return { ...ESTADISTICAS_INICIALES };
@@ -24,6 +34,21 @@ function leerEstadisticas() {
 function guardarEstadisticas(valor) {
   if (typeof window === "undefined") return;
   try { window.localStorage.setItem(STORAGE_KEY, JSON.stringify(valor)); } catch { /* localStorage puede estar bloqueado */ }
+}
+
+function leerRecientes() {
+  if (typeof window === "undefined") return [];
+  try {
+    const guardado = JSON.parse(window.localStorage.getItem(RECENT_KEY) || "[]");
+    return Array.isArray(guardado) ? guardado.filter((firma) => typeof firma === "string").slice(-100) : [];
+  } catch {
+    return [];
+  }
+}
+
+function guardarRecientes(firmas) {
+  if (typeof window === "undefined") return;
+  try { window.localStorage.setItem(RECENT_KEY, JSON.stringify(firmas.slice(-100))); } catch { /* localStorage puede estar bloqueado */ }
 }
 
 function slugPublico(valor) {
@@ -56,27 +81,67 @@ export default function Desafio({ personas = [] }) {
   const byId = useMemo(() => Object.fromEntries(personas.map((p) => [p.id, p])), [personas]);
   const slugs = useMemo(() => construirSlugs(personas), [personas]);
   const [estadisticas, setEstadisticas] = useState(leerEstadisticas);
+  const [modo, setModo] = useState(null);
+  const [error, setError] = useState("");
+
+  // Partida clásica.
   const [preguntas, setPreguntas] = useState([]);
   const [indice, setIndice] = useState(0);
   const [seleccion, setSeleccion] = useState(null);
   const [puntuacion, setPuntuacion] = useState(0);
   const [rachaActual, setRachaActual] = useState(0);
   const [terminada, setTerminada] = useState(false);
-  const [error, setError] = useState("");
+  const [recordClasico, setRecordClasico] = useState(false);
+
+  // Modo Racha.
+  const [preguntaRacha, setPreguntaRacha] = useState(null);
+  const [campeonRacha, setCampeonRacha] = useState(null);
+  const [rachaDuelo, setRachaDuelo] = useState(0);
+  const [seleccionRacha, setSeleccionRacha] = useState(null);
+  const [rachaTerminada, setRachaTerminada] = useState(false);
+  const [firmasRacha, setFirmasRacha] = useState([]);
 
   const pregunta = preguntas[indice] || null;
   const respondida = seleccion !== null;
   const acierto = respondida && seleccion === pregunta?.correctaId;
 
-  const iniciar = () => {
+  const actualizarEstadisticas = (cambios) => {
+    const siguientes = { ...estadisticas, ...cambios };
+    setEstadisticas(siguientes);
+    guardarEstadisticas(siguientes);
+    return siguientes;
+  };
+
+  const abrirAtlas = (personaId) => {
+    const slug = slugs[personaId];
+    if (!personaId || !slug || typeof window === "undefined") return;
+    const url = new URL(`/es/persona/${encodeURIComponent(slug)}`, window.location.origin);
+    window.open(url.toString(), "_blank", "noopener,noreferrer");
+  };
+
+  const volverAModos = () => {
+    setModo(null);
+    setError("");
+    setPreguntas([]);
+    setTerminada(false);
+    setPreguntaRacha(null);
+    setRachaTerminada(false);
+    setSeleccionRacha(null);
+  };
+
+  const iniciarClasico = () => {
     try {
-      const nuevas = crearPartida(personas, 10);
+      const recientes = leerRecientes();
+      const nuevas = crearPartida(personas, 10, { evitarFirmas: recientes });
+      guardarRecientes([...recientes, ...nuevas.map((item) => item.firma).filter(Boolean)]);
+      setModo("clasico");
       setPreguntas(nuevas);
       setIndice(0);
       setSeleccion(null);
       setPuntuacion(0);
       setRachaActual(0);
       setTerminada(false);
+      setRecordClasico(false);
       setError("");
     } catch (err) {
       console.error("[Desafío] No se pudo crear la partida:", err);
@@ -92,13 +157,10 @@ export default function Desafio({ personas = [] }) {
     setRachaActual(siguienteRacha);
     if (esCorrecta) setPuntuacion((actual) => actual + 1);
 
-    const siguientes = {
-      ...estadisticas,
+    actualizarEstadisticas({
       aciertos: estadisticas.aciertos + (esCorrecta ? 1 : 0),
       racha: Math.max(estadisticas.racha, siguienteRacha),
-    };
-    setEstadisticas(siguientes);
-    guardarEstadisticas(siguientes);
+    });
   };
 
   const siguiente = () => {
@@ -108,59 +170,184 @@ export default function Desafio({ personas = [] }) {
       setSeleccion(null);
       return;
     }
-    const finalScore = puntuacion + (acierto ? 0 : 0);
-    const siguientes = {
-      ...estadisticas,
+    const nuevoRecord = puntuacion > estadisticas.mejorPuntuacion;
+    actualizarEstadisticas({
       partidas: estadisticas.partidas + 1,
-      mejorPuntuacion: Math.max(estadisticas.mejorPuntuacion, finalScore),
-    };
-    setEstadisticas(siguientes);
-    guardarEstadisticas(siguientes);
+      mejorPuntuacion: Math.max(estadisticas.mejorPuntuacion, puntuacion),
+    });
+    setRecordClasico(nuevoRecord);
     setTerminada(true);
   };
 
-  const abrirAtlas = () => {
-    const personaId = pregunta?.atlasPersonId;
-    const slug = slugs[personaId];
-    if (!personaId || !slug || typeof window === "undefined") return;
-    const url = new URL(`/es/persona/${encodeURIComponent(slug)}`, window.location.origin);
-    window.open(url.toString(), "_blank", "noopener,noreferrer");
+  const iniciarRacha = () => {
+    try {
+      const nueva = crearPreguntaRacha(personas);
+      setModo("racha");
+      setPreguntaRacha(nueva);
+      setCampeonRacha(null);
+      setRachaDuelo(0);
+      setSeleccionRacha(null);
+      setRachaTerminada(false);
+      setFirmasRacha([nueva.firma]);
+      setError("");
+    } catch (err) {
+      console.error("[Desafío · Racha] No se pudo iniciar:", err);
+      setError("No se ha podido iniciar el modo Racha con los datos actuales.");
+    }
   };
 
-  if (!preguntas.length && !terminada) {
+  const responderRacha = (opcionId) => {
+    if (!preguntaRacha || seleccionRacha !== null || rachaTerminada) return;
+    const esCorrecta = opcionId === preguntaRacha.correctaId;
+    if (!esCorrecta) {
+      setSeleccionRacha(opcionId);
+      setRachaTerminada(true);
+      actualizarEstadisticas({
+        rachasJugadas: estadisticas.rachasJugadas + 1,
+        mejorRachaDuelo: Math.max(estadisticas.mejorRachaDuelo, rachaDuelo),
+      });
+      return;
+    }
+
+    const siguienteRacha = rachaDuelo + 1;
+    const nuevoCampeon = preguntaRacha.siguienteCampeonId;
+    const nuevasEstadisticas = actualizarEstadisticas({
+      aciertos: estadisticas.aciertos + 1,
+      mejorRachaDuelo: Math.max(estadisticas.mejorRachaDuelo, siguienteRacha),
+    });
+
+    try {
+      const nueva = crearPreguntaRacha(personas, nuevoCampeon, { evitarFirmas: firmasRacha.slice(-120) });
+      setCampeonRacha(nuevoCampeon);
+      setRachaDuelo(siguienteRacha);
+      setPreguntaRacha(nueva);
+      setFirmasRacha((actuales) => [...actuales, nueva.firma].slice(-160));
+      setSeleccionRacha(null);
+    } catch (err) {
+      console.error("[Desafío · Racha] No se pudo generar el siguiente duelo:", err);
+      setRachaDuelo(siguienteRacha);
+      setRachaTerminada(true);
+      setSeleccionRacha(preguntaRacha.correctaId);
+      setEstadisticas(nuevasEstadisticas);
+      setError("La racha terminó porque no se pudo generar otro duelo sin repetir los anteriores.");
+    }
+  };
+
+  if (!modo) {
     return (
       <div className="desafio-shell desafio-intro">
-        <div className="desafio-kicker">V1.1 · juego local</div>
-        <h3>Diez preguntas para recorrer la red de otra manera</h3>
-        <p>Dinastías, parentescos, gobiernos efectivos, sucesiones, sobrenombres y pistas generadas a partir de la propia base de datos. Cuatro opciones por pregunta, sin límite de tiempo y sin cuentas.</p>
-        <div className="desafio-stats-grid" aria-label="Estadísticas del desafío">
-          <TarjetaEstadistica valor={estadisticas.partidas} etiqueta="partidas" />
-          <TarjetaEstadistica valor={estadisticas.aciertos} etiqueta="aciertos" />
-          <TarjetaEstadistica valor={`${estadisticas.mejorPuntuacion}/10`} etiqueta="mejor puntuación" />
-          <TarjetaEstadistica valor={estadisticas.racha} etiqueta="mejor racha" />
+        <div className="desafio-kicker">V1.2 · juego local</div>
+        <h3>Elige cómo quieres poner a prueba el atlas</h3>
+        <p>Dos modos construidos a partir de la propia base genealógica. Sin cuentas, sin límite de tiempo y con estadísticas guardadas únicamente en este navegador.</p>
+
+        <div className="desafio-mode-grid">
+          <button type="button" className="desafio-mode-card" onClick={iniciarClasico}>
+            <span className="desafio-mode-icon"><ListChecks size={20} /></span>
+            <strong>Partida clásica</strong>
+            <span>10 preguntas · 4 opciones</span>
+            <small>Dinastías, parentescos, gobiernos, matrimonios, descendencia, sucesiones, sobrenombres y pistas.</small>
+          </button>
+          <button type="button" className="desafio-mode-card is-streak" onClick={iniciarRacha}>
+            <span className="desafio-mode-icon"><Flame size={20} /></span>
+            <strong>Racha</strong>
+            <span>1 pregunta · 2 opciones · sin final</span>
+            <small>La respuesta correcta continúa en el siguiente duelo. Cada acierto suma uno; un fallo termina la partida.</small>
+          </button>
+        </div>
+
+        <div className="desafio-stats-grid desafio-stats-grid-wide" aria-label="Estadísticas del desafío">
+          <TarjetaEstadistica valor={estadisticas.partidas} etiqueta="partidas clásicas" />
+          <TarjetaEstadistica valor={estadisticas.aciertos} etiqueta="aciertos totales" />
+          <TarjetaEstadistica valor={`${estadisticas.mejorPuntuacion}/10`} etiqueta="mejor clásica" />
+          <TarjetaEstadistica valor={estadisticas.racha} etiqueta="racha clásica" />
+          <TarjetaEstadistica valor={estadisticas.mejorRachaDuelo} etiqueta="récord Racha" />
         </div>
         {error && <div className="desafio-error" role="alert">{error}</div>}
-        <button type="button" className="desafio-primary" onClick={iniciar}>Comenzar desafío <ArrowRight size={15} /></button>
-        <p className="desafio-fineprint">Las estadísticas se guardan únicamente en este navegador.</p>
+        <p className="desafio-fineprint">La partida clásica evita, siempre que la base lo permite, las preguntas vistas recientemente.</p>
+      </div>
+    );
+  }
+
+  if (modo === "racha") {
+    if (!preguntaRacha) return null;
+    const opcionCorrecta = preguntaRacha.opciones.find((opcion) => opcion.id === preguntaRacha.correctaId);
+    const opcionElegida = preguntaRacha.opciones.find((opcion) => opcion.id === seleccionRacha);
+
+    if (rachaTerminada) {
+      return (
+        <div className="desafio-shell desafio-final desafio-racha-final">
+          <button type="button" className="desafio-back" onClick={volverAModos}><ArrowLeft size={13} /> Modos</button>
+          <div className="desafio-kicker">Racha terminada</div>
+          <div className="desafio-score desafio-score-streak"><Flame size={28} /><strong>{rachaDuelo}</strong></div>
+          <h3>{rachaDuelo >= 10 ? "Una cadena formidable" : rachaDuelo >= 5 ? "Buena racha" : "La siguiente llegará más lejos"}</h3>
+          {seleccionRacha !== preguntaRacha.correctaId && (
+            <div className="desafio-racha-answer">
+              <span><b>Elegiste:</b> {opcionElegida?.label || "—"}</span>
+              <span><b>Era:</b> {opcionCorrecta?.label || "—"}</span>
+              <p>{preguntaRacha.explicacion}</p>
+            </div>
+          )}
+          {preguntaRacha.atlasPersonId && byId[preguntaRacha.atlasPersonId] && (
+            <button type="button" className="desafio-secondary" onClick={() => abrirAtlas(preguntaRacha.atlasPersonId)}>Ver respuesta en el atlas <ExternalLink size={13} /></button>
+          )}
+          <div className="desafio-final-actions">
+            <button type="button" className="desafio-primary" onClick={iniciarRacha}><RotateCcw size={14} /> Nueva racha</button>
+            <button type="button" className="desafio-secondary" onClick={volverAModos}>Cambiar de modo</button>
+          </div>
+        </div>
+      );
+    }
+
+    return (
+      <div className="desafio-shell desafio-racha-shell">
+        <div className="desafio-progress-row desafio-racha-head">
+          <div>
+            <span className="desafio-kicker">Racha · el ganador continúa</span>
+            <strong>Elige una de las dos opciones</strong>
+          </div>
+          <div className="desafio-streak-live"><Flame size={15} /> {rachaDuelo}</div>
+        </div>
+
+        <div className="desafio-question-card desafio-racha-card">
+          <h3>{preguntaRacha.pregunta}</h3>
+          <div className="desafio-options desafio-options-two">
+            {preguntaRacha.opciones.map((opcion) => (
+              <button
+                type="button"
+                key={opcion.id}
+                className={`desafio-option desafio-option-duel${campeonRacha === opcion.id ? " is-champion" : ""}`}
+                onClick={() => responderRacha(opcion.id)}
+              >
+                <span>{opcion.label}</span>
+                {campeonRacha === opcion.id && <small>continúa</small>}
+              </button>
+            ))}
+          </div>
+        </div>
+        <div className="desafio-racha-rule">Si aciertas, la respuesta correcta permanece como una de las dos opciones de la siguiente pregunta. Si fallas, pierdes la racha.</div>
+        <button type="button" className="desafio-back desafio-back-bottom" onClick={volverAModos}><ArrowLeft size={13} /> Salir de Racha</button>
       </div>
     );
   }
 
   if (terminada) {
-    const esRecord = puntuacion >= estadisticas.mejorPuntuacion && puntuacion > 0;
     return (
       <div className="desafio-shell desafio-final">
+        <button type="button" className="desafio-back" onClick={volverAModos}><ArrowLeft size={13} /> Modos</button>
         <div className="desafio-kicker">Partida terminada</div>
         <div className="desafio-score"><strong>{puntuacion}</strong><span>/ 10</span></div>
         <h3>{puntuacion >= 8 ? "Gran recorrido" : puntuacion >= 5 ? "Buen recorrido" : "Todavía queda atlas por explorar"}</h3>
-        {esRecord && <div className="desafio-record"><Check size={14} /> Mejor puntuación</div>}
+        {recordClasico && <div className="desafio-record"><Check size={14} /> Nueva mejor puntuación</div>}
         <div className="desafio-stats-grid">
           <TarjetaEstadistica valor={estadisticas.partidas} etiqueta="partidas" />
-          <TarjetaEstadistica valor={estadisticas.aciertos} etiqueta="aciertos" />
+          <TarjetaEstadistica valor={estadisticas.aciertos} etiqueta="aciertos totales" />
           <TarjetaEstadistica valor={`${estadisticas.mejorPuntuacion}/10`} etiqueta="mejor puntuación" />
           <TarjetaEstadistica valor={estadisticas.racha} etiqueta="mejor racha" />
         </div>
-        <button type="button" className="desafio-primary" onClick={iniciar}><RotateCcw size={14} /> Jugar otra vez</button>
+        <div className="desafio-final-actions">
+          <button type="button" className="desafio-primary" onClick={iniciarClasico}><RotateCcw size={14} /> Jugar otra vez</button>
+          <button type="button" className="desafio-secondary" onClick={volverAModos}>Cambiar de modo</button>
+        </div>
       </div>
     );
   }
@@ -214,7 +401,7 @@ export default function Desafio({ personas = [] }) {
           <p>{pregunta.explicacion}</p>
           <div className="desafio-feedback-actions">
             {pregunta.atlasPersonId && byId[pregunta.atlasPersonId] && (
-              <button type="button" className="desafio-secondary" onClick={abrirAtlas}>Ver en el atlas <ExternalLink size={13} /></button>
+              <button type="button" className="desafio-secondary" onClick={() => abrirAtlas(pregunta.atlasPersonId)}>Ver en el atlas <ExternalLink size={13} /></button>
             )}
             <button type="button" className="desafio-primary" onClick={siguiente}>
               {indice < preguntas.length - 1 ? <>Siguiente <ArrowRight size={14} /></> : <>Ver resultado <ArrowRight size={14} /></>}
