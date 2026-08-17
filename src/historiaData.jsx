@@ -242,6 +242,7 @@ export const EVENTOS_HISTORICOS = [
     anio: 1469,
     titulo: "Matrimonio de Isabel de Castilla y Fernando de Aragón",
     categoria: "dinastia",
+    personas: ["ISAB1CAST", "FERN2ARAG"],
     descripcion: "La unión matrimonial enlaza las dos principales coronas de la península ibérica sin fusionarlas jurídicamente en un único reino."
   },
   {
@@ -430,7 +431,7 @@ export const EVENTOS_HISTORICOS = [
     anio: 1502,
     titulo: "La trampa de Senigallia",
     categoria: "politica",
-    personas: ["CESARBORJA", "VITELLOZZO"],
+    personas: ["CESARBORJA", "VITELLOZZO", "NICCOLOMACHIAVELLI"],
     descripcion: "César Borja elimina en Senigallia a varios capitanes que se habían rebelado contra él. El episodio, observado por Maquiavelo, resume el conflicto entre el príncipe territorial y los condotieros autónomos."
   },
   {
@@ -826,6 +827,22 @@ export const EVENTOS_HISTORICOS = [
     categoria: "religion",
     personas: ["PAPA_INOCENCIO12"],
     descripcion: "Inocencio XII promulga la constitución Romanum decet Pontificem, que restringe formalmente el nepotismo papal y cierra una larga etapa de gobierno familiar de la corte romana."
+  },
+  {
+    id: "MACHIAVELLI_FORLI_1499",
+    anio: 1499,
+    titulo: "Maquiavelo ante Caterina Sforza",
+    categoria: "politica",
+    personas: ["NICCOLOMACHIAVELLI", "CATASFOR"],
+    descripcion: "La joven cancillería florentina envía a Nicolás Maquiavelo a negociar con Caterina Sforza en Forlì. La misión lo sitúa ante una gobernante cuya resistencia y caída reaparecerán después en sus reflexiones sobre fortalezas, apoyo popular y poder."
+  },
+  {
+    id: "PRINCIPE_DEDICACION_1516",
+    anio: 1516,
+    titulo: "El príncipe llega a Lorenzo de’ Medici",
+    categoria: "cultura",
+    personas: ["NICCOLOMACHIAVELLI", "GIULIANOMEDICI", "LORENZO2MEDICI"],
+    descripcion: "El tratado redactado por Maquiavelo tras la caída de la república florentina queda dedicado finalmente a Lorenzo de’ Medici el Joven, duque de Urbino y señor de Florencia."
   }
 ];
 
@@ -1734,6 +1751,90 @@ export const HISTORIAS = [
     ]
   },
   {
+    id: "favoritos-maquiavelo",
+    titulo: "Los favoritos de Maquiavelo",
+    subtitulo: "Modelos, contraejemplos y lecciones de poder en El príncipe",
+    disponible: true,
+    descripcion: "Un viaje por los gobernantes y contemporáneos que Maquiavelo convirtió en lecciones políticas: cómo conquistar, conservar, perder, aparentar, arriesgar y construir reputación en la Italia de su tiempo.",
+    pasos: [
+      {
+        anio: 1450,
+        persona: "FRAN1SFOR",
+        personas: ["NICCOLOMACHIAVELLI", "FRAN1SFOR", "BLANMARVISC"],
+        eventoId: "SFORZA_DUQUE_1450",
+        titulo: "Francesco Sforza: hacerse príncipe con armas propias",
+        texto: "Maquiavelo necesita ejemplos de hombres que hayan llegado al poder sin heredarlo. Francesco Sforza le ofrece uno excepcional: un condotiero que convierte capacidad militar, alianzas y matrimonio en un ducado. En El príncipe aparece como contraste con quienes deben su ascenso sobre todo a la fortuna ajena."
+      },
+      {
+        anio: 1492,
+        persona: "RODRIGOBORJA",
+        personas: ["NICCOLOMACHIAVELLI", "RODRIGOBORJA", "CESARBORJA"],
+        eventoId: "ALEJANDRO6_1492",
+        titulo: "Alejandro VI: promesas, apariencia y oportunidad",
+        texto: "Rodrigo Borja llega al papado como Alejandro VI y convierte la política familiar en política territorial. Maquiavelo lo usa como un contemporáneo capaz de prometer, negociar y cambiar de posición sin quedar atrapado por sus palabras: no como modelo moral, sino como observación de cómo funciona el poder cuando reputación y engaño se mezclan."
+      },
+      {
+        anio: 1498,
+        persona: "NICCOLOMACHIAVELLI",
+        personas: ["NICCOLOMACHIAVELLI", "PIEROSODERINI"],
+        titulo: "Maquiavelo entra en el laboratorio del poder",
+        texto: "En 1498 Nicolás Maquiavelo entra al servicio de la república de Florencia. Durante los años siguientes viaja, negocia y observa de cerca a reyes, papas, capitanes y señores italianos. El príncipe nacerá después de esa experiencia: sus personajes no son figuras abstractas, sino gobernantes a los que Maquiavelo vio actuar o estudió como problemas políticos concretos."
+      },
+      {
+        anio: 1499,
+        persona: "CATASFOR",
+        personas: ["NICCOLOMACHIAVELLI", "CATASFOR", "CESARBORJA"],
+        eventoId: "MACHIAVELLI_FORLI_1499",
+        titulo: "Caterina Sforza: una fortaleza no basta",
+        texto: "Maquiavelo negocia personalmente con Caterina Sforza en Forlì. Poco después César Borja conquista sus dominios. Años más tarde, al discutir si un príncipe debe confiar en fortalezas, Maquiavelo recuerda la experiencia de Forlì: una roca formidable puede ser útil, pero no sustituye la relación política con quienes viven fuera de sus muros."
+      },
+      {
+        anio: 1500,
+        persona: "LUIS12FRA",
+        personas: ["NICCOLOMACHIAVELLI", "LUIS12FRA", "LUDOVSFOR"],
+        titulo: "Luis XII: un manual de cómo perder Italia",
+        texto: "El rey de Francia conquista Milán, interviene en Nápoles y parece dominar el tablero italiano. Para Maquiavelo, precisamente por eso resulta tan útil como contraejemplo: sus alianzas y decisiones muestran cómo un conquistador puede debilitar a sus apoyos, fortalecer a rivales y crear las condiciones de su propia expulsión."
+      },
+      {
+        anio: 1502,
+        persona: "CESARBORJA",
+        personas: ["NICCOLOMACHIAVELLI", "CESARBORJA", "RODRIGOBORJA", "VITELLOZZO"],
+        eventoId: "SENIGALLIA_1502",
+        titulo: "César Borja: el príncipe que casi lo consiguió",
+        texto: "César Borja es el gran caso práctico de la obra. Maquiavelo lo observa durante su expansión por Romaña y presencia el desenlace de Senigallia, donde el duque atrae y elimina a capitanes rebeldes. Borja parece construir orden, armas propias y obediencia; su derrumbe tras la muerte de Alejandro VI sirve, al mismo tiempo, para estudiar cuánto puede hacer la virtù frente a una fortuna adversa."
+      },
+      {
+        anio: 1506,
+        persona: "PAPA_JULIO2",
+        personas: ["NICCOLOMACHIAVELLI", "PAPA_JULIO2", "CESARBORJA"],
+        eventoId: "JULIO2_1503",
+        titulo: "Julio II: cuando la audacia coincide con los tiempos",
+        texto: "Julio II actúa con una impetuosidad que a menudo desconcierta a aliados y enemigos. Maquiavelo lo utiliza para explicar una de sus ideas más famosas: un temperamento político funciona mientras encaja con las circunstancias. La audacia de Julio triunfa porque su tiempo la favorece; en otro contexto, la misma conducta podría haberlo destruido."
+      },
+      {
+        anio: 1512,
+        persona: "FERN2ARAG",
+        personas: ["NICCOLOMACHIAVELLI", "FERN2ARAG", "ISAB1CAST"],
+        titulo: "Fernando el Católico: fabricar una reputación",
+        texto: "Granada, el Mediterráneo, Italia y Navarra permiten a Fernando encadenar empresas que mantienen a sus súbditos y rivales pendientes de la siguiente iniciativa. En El príncipe es el ejemplo contemporáneo de cómo las grandes acciones, la continuidad de los proyectos y una imagen cuidadosamente construida pueden convertir la reputación en un instrumento de gobierno."
+      },
+      {
+        anio: 1516,
+        persona: "LORENZO2MEDICI",
+        personas: ["NICCOLOMACHIAVELLI", "GIULIANOMEDICI", "LORENZO2MEDICI", "CATAMEDICI", "PIEROLORENZOMEDICI"],
+        eventoId: "PRINCIPE_DEDICACION_1516",
+        titulo: "Lorenzo de’ Medici: el destinatario, no el héroe",
+        texto: "El recorrido termina con una ironía. El tratado había sido pensado inicialmente para Giuliano de’ Medici, pero tras su muerte la dedicatoria pasó a Lorenzo II, el Joven. Lorenzo no es uno de los grandes ejemplos del libro: es su destinatario final. Maquiavelo le ofrece una colección de lecciones extraídas de Sforza, los Borgia, Francia, el papado y Fernando. El libro sobrevivirá mucho más que la oportunidad política para la que fue escrito."
+      }
+    ]
+  },
+  {
+    id: "republica-nobles",
+    titulo: "La República de los nobles",
+    subtitulo: "Cómo Polonia convirtió una monarquía hereditaria en una corona elegida.",
+    disponible: false
+  },
+  {
     id: "ultimo-austria",
     titulo: "El último Austria",
     subtitulo: "Carlos II, la herencia imposible y la crisis que cambió Europa",
@@ -1758,3 +1859,4 @@ export const HISTORIAS = [
     disponible: false
   }
 ];
+
