@@ -130,9 +130,9 @@ export default function Desafio({ personas = [] }) {
   if (!preguntas.length && !terminada) {
     return (
       <div className="desafio-shell desafio-intro">
-        <div className="desafio-kicker">V1 · juego local</div>
+        <div className="desafio-kicker">V1.1 · juego local</div>
         <h3>Diez preguntas para recorrer la red de otra manera</h3>
-        <p>Dinastías, parentescos, gobiernos efectivos, cronología y pistas generadas a partir de la propia base de datos. Cuatro opciones por pregunta, sin límite de tiempo y sin cuentas.</p>
+        <p>Dinastías, parentescos, gobiernos efectivos, sucesiones, sobrenombres y pistas generadas a partir de la propia base de datos. Cuatro opciones por pregunta, sin límite de tiempo y sin cuentas.</p>
         <div className="desafio-stats-grid" aria-label="Estadísticas del desafío">
           <TarjetaEstadistica valor={estadisticas.partidas} etiqueta="partidas" />
           <TarjetaEstadistica valor={estadisticas.aciertos} etiqueta="aciertos" />
@@ -205,6 +205,12 @@ export default function Desafio({ personas = [] }) {
       {respondida && (
         <div className={`desafio-feedback ${acierto ? "is-correct" : "is-wrong"}`} aria-live="polite">
           <div className="desafio-feedback-title">{acierto ? <Check size={16} /> : <X size={16} />} <strong>{acierto ? "Correcto" : "No esta vez"}</strong></div>
+          {!acierto && (
+            <div className="desafio-feedback-answer">
+              <span><b>Tu respuesta:</b> {pregunta.opciones.find((opcion) => opcion.id === seleccion)?.label || "—"}</span>
+              <span><b>Respuesta correcta:</b> {pregunta.opciones.find((opcion) => opcion.id === pregunta.correctaId)?.label || "—"}</span>
+            </div>
+          )}
           <p>{pregunta.explicacion}</p>
           <div className="desafio-feedback-actions">
             {pregunta.atlasPersonId && byId[pregunta.atlasPersonId] && (
