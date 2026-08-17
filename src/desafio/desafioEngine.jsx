@@ -136,6 +136,7 @@ function cuatroOpcionesPersonas(correcta, sujeto, personas, indice, opciones = {
 function construirIndice(personas) {
   const byId = Object.fromEntries(personas.filter((p) => p?.id).map((p) => [p.id, p]));
   const conyugesInversos = {};
+  const hijosPorId = {};
   const sexo = {};
 
   const marcarSexo = (id, valor) => {
@@ -148,8 +149,14 @@ function construirIndice(personas) {
 
   personas.forEach((persona) => {
     if (!persona?.id) return;
-    if (persona.padre) marcarSexo(persona.padre, "M");
-    if (persona.madre) marcarSexo(persona.madre, "F");
+    if (persona.padre) {
+      marcarSexo(persona.padre, "M");
+      if (byId[persona.padre]) (hijosPorId[persona.padre] ||= new Set()).add(persona.id);
+    }
+    if (persona.madre) {
+      marcarSexo(persona.madre, "F");
+      if (byId[persona.madre]) (hijosPorId[persona.madre] ||= new Set()).add(persona.id);
+    }
     marcarSexo(persona.id, sexoPorTitulo(persona));
 
     const conyuges = [persona?.conyuge, persona?.conyuge2, ...(persona?.conyuges || [])].filter(Boolean);
@@ -184,7 +191,7 @@ function construirIndice(personas) {
     if (!cambio) break;
   }
 
-  return { byId, conyugesInversos, sexo };
+  return { byId, conyugesInversos, hijosPorId, sexo };
 }
 
 function conyugesDe(persona, indice) {
@@ -195,6 +202,83 @@ function conyugesDe(persona, indice) {
     ...(persona.conyuges || []),
     ...[...(indice.conyugesInversos[persona.id] || [])],
   ]).filter((id) => indice.byId[id]);
+}
+
+function sonConyuges(aId, bId, indice) {
+  if (!aId || !bId || aId === bId) return false;
+  return conyugesDe(indice.byId[aId], indice).includes(bId)
+    || conyugesDe(indice.byId[bId], indice).includes(aId);
+}
+
+function parejasRegistradas(personas, indice) {
+  const vistas = new Set();
+  const parejas = [];
+  personas.forEach((persona) => {
+    if (!persona?.id) return;
+    conyugesDe(persona, indice).forEach((conyugeId) => {
+      const conyuge = indice.byId[conyugeId];
+      if (!conyuge) return;
+      const ids = [persona.id, conyuge.id].sort();
+      const firma = ids.join("|");
+      if (vistas.has(firma)) return;
+      vistas.add(firma);
+      parejas.push([indice.byId[ids[0]], indice.byId[ids[1]]]);
+    });
+  });
+  return parejas;
+}
+
+function hijosDePareja(padreId, madreId, personas) {
+  return personas.filter((persona) => persona?.id
+    && ((persona.padre === padreId && persona.madre === madreId)
+      || (persona.padre === madreId && persona.madre === padreId)));
+}
+
+function reinadoIndividualMasLargo(persona) {
+  const reinados = reinadosEfectivos(persona);
+  if (!reinados.length) return null;
+  return reinados
+    .map((reinado) => ({ ...reinado, duracion: reinado.hasta - reinado.desde + 1 }))
+    .sort((a, b) => b.duracion - a.duracion || a.desde - b.desde)[0];
+}
+
+function primerGobierno(persona) {
+  const reinados = reinadosEfectivos(persona).slice().sort((a, b) => a.desde - b.desde || a.hasta - b.hasta);
+  return reinados[0] || null;
+}
+
+function territoriosEfectivos(persona) {
+  return unico(reinadosEfectivos(persona).map((reinado) => reinado.territorio));
+}
+
+function sucesionesDirectas(personas) {
+  const porTerritorio = new Map();
+  personas.forEach((persona) => {
+    if (!persona?.id || categoriaTitulo(persona) === "otros") return;
+    reinadosEfectivos(persona).forEach((reinado) => {
+      if (!porTerritorio.has(reinado.territorio)) porTerritorio.set(reinado.territorio, []);
+      porTerritorio.get(reinado.territorio).push({ persona, reinado });
+    });
+  });
+
+  const pares = [];
+  porTerritorio.forEach((entradas, territorio) => {
+    const ordenadas = entradas.slice().sort((a, b) => a.reinado.desde - b.reinado.desde || a.reinado.hasta - b.reinado.hasta);
+    ordenadas.forEach((anterior) => {
+      const candidatas = ordenadas.filter((siguiente) => siguiente.persona.id !== anterior.persona.id
+        && siguiente.reinado.desde > anterior.reinado.desde
+        && siguiente.reinado.desde >= anterior.reinado.hasta - 1
+        && siguiente.reinado.desde <= anterior.reinado.hasta + 3);
+      if (!candidatas.length) return;
+      const inicioMinimo = Math.min(...candidatas.map((item) => item.reinado.desde));
+      const inmediatas = candidatas.filter((item) => item.reinado.desde === inicioMinimo);
+      if (inmediatas.length !== 1) return;
+      const siguiente = inmediatas[0];
+      if (categoriaTitulo(anterior.persona) !== categoriaTitulo(siguiente.persona)) return;
+      pares.push({ territorio, anterior, siguiente });
+    });
+  });
+  return pares;
 }
 
 function explicacionPersona(persona) {
@@ -312,8 +396,119 @@ function preguntaTerritorio(personas, indice) {
       pregunta: `¿Cuál de estos territorios consta como gobernado efectivamente por ${sujeto.nombre}?`,
       opciones,
       correctaId: `territorio:${correcta}`,
-      explicacion: `${sujeto.nombre} tiene un reinado efectivo registrado en ${correcta}. Los vínculos de procedencia o matrimonio no cuentan aquí como gobierno.`,
+      explicacion: `${sujeto.nombre} tiene gobierno efectivo registrado en ${correcta}: ${reinadosEfectivos(sujeto).filter((r) => r.territorio === correcta).map((r) => `${r.desde}–${r.hasta}`).join(", ")}. Los vínculos de procedencia o matrimonio no cuentan aquí como gobierno.`,
       atlasPersonId: sujeto.id,
+    };
+  }
+  return null;
+}
+
+function preguntaSucesorPredecesor(personas, indice) {
+  const pares = barajar(sucesionesDirectas(personas));
+  for (const par of pares) {
+    const preguntarSucesor = Math.random() < 0.5;
+    const sujeto = preguntarSucesor ? par.anterior.persona : par.siguiente.persona;
+    const correcta = preguntarSucesor ? par.siguiente.persona : par.anterior.persona;
+    const gobernantesTerritorio = unico(
+      personas
+        .filter((persona) => reinadosEfectivos(persona).some((reinado) => reinado.territorio === par.territorio))
+        .map((persona) => persona.id)
+    ).map((id) => indice.byId[id]).filter(Boolean);
+
+    let opciones = cuatroOpcionesPersonas(correcta, sujeto, gobernantesTerritorio, indice, { maxDistanciaPreferida: 160 });
+    if (!opciones) opciones = cuatroOpcionesPersonas(correcta, sujeto, personas, indice, { maxDistanciaPreferida: 100 });
+    if (!opciones) continue;
+
+    const anterior = par.anterior;
+    const siguiente = par.siguiente;
+    return {
+      tipo: "sucesor",
+      etiqueta: "Sucesiones",
+      pregunta: preguntarSucesor
+        ? `¿Quién sucedió a ${sujeto.nombre} en el gobierno de ${par.territorio}?`
+        : `¿Quién precedió a ${sujeto.nombre} en el gobierno de ${par.territorio}?`,
+      opciones,
+      correctaId: correcta.id,
+      explicacion: `${anterior.persona.nombre} gobernó ${par.territorio} hasta ${anterior.reinado.hasta}; ${siguiente.persona.nombre} comenzó su gobierno en ${siguiente.reinado.desde}.`,
+      atlasPersonId: sujeto.id,
+    };
+  }
+  return null;
+}
+
+function preguntaDescendientePareja(personas, indice) {
+  const familias = new Map();
+  personas.forEach((persona) => {
+    if (!persona?.id || !persona.padre || !persona.madre || !indice.byId[persona.padre] || !indice.byId[persona.madre]) return;
+    const clave = `${persona.padre}|${persona.madre}`;
+    if (!familias.has(clave)) familias.set(clave, { padre: indice.byId[persona.padre], madre: indice.byId[persona.madre], hijos: [] });
+    familias.get(clave).hijos.push(persona);
+  });
+
+  const candidatas = barajar([...familias.values()].filter((familia) => familia.hijos.length));
+  for (const familia of candidatas) {
+    const correcta = elegir(familia.hijos);
+    if (!correcta) continue;
+    const excluidos = new Set([familia.padre.id, familia.madre.id, ...familia.hijos.map((hijo) => hijo.id)]);
+    excluidos.delete(correcta.id);
+    const sexo = indice.sexo[correcta.id] || null;
+    const opciones = cuatroOpcionesPersonas(correcta, null, personas, indice, {
+      excluidos,
+      sexo,
+      maxDistanciaPreferida: 85,
+    });
+    if (!opciones) continue;
+    return {
+      tipo: "descendiente",
+      etiqueta: "Genealogía",
+      pregunta: `¿Cuál de estos personajes figura como descendiente de ${familia.padre.nombre} y ${familia.madre.nombre}?`,
+      opciones,
+      correctaId: correcta.id,
+      explicacion: `${correcta.nombre} figura en la base como hijo/a de ${familia.padre.nombre} y ${familia.madre.nombre}.`,
+      atlasPersonId: correcta.id,
+      meta: { sexoOpciones: sexo },
+    };
+  }
+  return null;
+}
+
+function preguntaParejaCorrecta(personas, indice) {
+  const parejas = barajar(parejasRegistradas(personas, indice).filter(([a, b]) => {
+    const sexoA = indice.sexo[a.id];
+    const sexoB = indice.sexo[b.id];
+    return sexoA && sexoB && sexoA !== sexoB && a?.nombre && b?.nombre;
+  }));
+
+  for (const pareja of parejas) {
+    let [a, b] = pareja;
+    if (indice.sexo[a.id] === "F") [a, b] = [b, a];
+    const poolA = candidatosPlausibles(a, personas, new Set([a.id, b.id]), { sexo: indice.sexo[a.id], indice }).slice(0, 80);
+    const poolB = candidatosPlausibles(b, personas, new Set([a.id, b.id]), { sexo: indice.sexo[b.id], indice }).slice(0, 80);
+    const falsas = [];
+    let guard = 0;
+    while (falsas.length < 3 && guard < 160) {
+      guard += 1;
+      const fa = elegir(poolA);
+      const fb = elegir(poolB);
+      if (!fa || !fb || fa.id === fb.id || sonConyuges(fa.id, fb.id, indice)) continue;
+      if (distanciaHistorica(fa, fb) > 75) continue;
+      const id = `pareja:${[fa.id, fb.id].sort().join("|")}`;
+      const label = `${fa.nombre} — ${fb.nombre}`;
+      if (falsas.some((item) => item.id === id || normalizarTexto(item.label) === normalizarTexto(label))) continue;
+      falsas.push({ id, label });
+    }
+    if (falsas.length < 3) continue;
+
+    const correctaId = `pareja:${[a.id, b.id].sort().join("|")}`;
+    const correcta = { id: correctaId, label: `${a.nombre} — ${b.nombre}` };
+    return {
+      tipo: "pareja",
+      etiqueta: "Matrimonios",
+      pregunta: "¿Cuál de estas parejas figura como matrimonio en el árbol?",
+      opciones: barajar([correcta, ...falsas]),
+      correctaId,
+      explicacion: `${a.nombre} y ${b.nombre} figuran como cónyuges en la base genealógica.`,
+      atlasPersonId: a.id,
     };
   }
   return null;
@@ -508,6 +703,9 @@ const GENERADORES = {
   dinastia: (personas, indice) => preguntaDinastia(personas, indice),
   parentesco: (personas, indice) => preguntaParentesco(personas, indice),
   territorio: (personas, indice) => preguntaTerritorio(personas, indice),
+  sucesor: (personas, indice) => preguntaSucesorPredecesor(personas, indice),
+  descendiente: (personas, indice) => preguntaDescendientePareja(personas, indice),
+  pareja: (personas, indice) => preguntaParejaCorrecta(personas, indice),
   sobra: (personas, indice) => preguntaSobra(personas, indice),
   sucesion: (personas) => preguntaSucesion(personas),
   pistas: (personas, indice) => preguntaPistas(personas, indice),
@@ -522,10 +720,8 @@ function validarPregunta(pregunta, indice) {
   const correcta = pregunta.opciones.find((opcion) => opcion.id === pregunta.correctaId);
   if (!correcta) return false;
 
-  // Regla anti-spoiler: la opción correcta no puede estar escrita en el enunciado.
-  // Para respuestas breves (dinastías, territorios, sobrenombres) también se
-  // comparan sus palabras significativas; en secuencias no, porque los nombres
-  // pueden contener legítimamente el territorio citado en la pregunta.
+  // La respuesta no debe venir escrita literalmente en el enunciado. Para
+  // respuestas breves también se comprueban tokens significativos.
   const preguntaNorm = ` ${normalizarTexto(pregunta.pregunta)} `;
   const correctaNorm = normalizarTexto(correcta.label);
   if (correctaNorm.length >= 3 && preguntaNorm.includes(` ${correctaNorm} `)) return false;
@@ -536,7 +732,7 @@ function validarPregunta(pregunta, indice) {
     if (pregunta.opciones.some((opcion) => textoContieneRespuesta(opcion.label, pregunta.meta.dinastiaObjetivo))) return false;
   }
 
-  if (pregunta.tipo === "parentesco" && pregunta.meta?.sexoOpciones) {
+  if (["parentesco", "descendiente"].includes(pregunta.tipo) && pregunta.meta?.sexoOpciones) {
     const sexoEsperado = pregunta.meta.sexoOpciones;
     if (pregunta.opciones.some((opcion) => indice.sexo[opcion.id] !== sexoEsperado)) return false;
   }
@@ -548,29 +744,34 @@ function firmaPregunta(pregunta) {
   return `${pregunta.tipo}|${pregunta.pregunta}|${pregunta.correctaId}`;
 }
 
-export function crearPartida(personas, cantidad = 10) {
+export function crearPartida(personas, cantidad = 10, { evitarFirmas = [] } = {}) {
   const base = Array.isArray(personas) ? personas.filter((p) => p?.id && p?.nombre) : [];
   const indice = construirIndice(base);
 
-  // V1.1: equilibrio fijo para que cada partida tenga variedad y ninguna categoría
-  // dependa del azar para aparecer.
+  // V1.2: diez familias de pregunta distintas. Si una categoría concreta no
+  // puede producir una pregunta de calidad, el motor busca una alternativa.
   const planBase = [
-    "pistas", "parentesco", "territorio", "dinastia", "sobrenombre",
-    "pistas", "parentesco", "territorio", "sobra", "sucesion",
+    "pistas", "parentesco", "territorio", "sucesor", "descendiente",
+    "pareja", "dinastia", "sobrenombre", "sobra", "sucesion",
   ];
   const plan = cantidad === 10 ? planBase : Array.from({ length: cantidad }, (_, i) => planBase[i % planBase.length]);
   const preguntas = [];
   const usadas = new Set();
+  const recientes = new Set(Array.isArray(evitarFirmas) ? evitarFirmas : []);
 
   const intentar = (tipo) => {
     const generador = GENERADORES[tipo];
-    for (let intento = 0; intento < 80; intento += 1) {
+    for (let intento = 0; intento < 100; intento += 1) {
       const pregunta = generador?.(base, indice);
       if (!pregunta || !validarPregunta(pregunta, indice)) continue;
       const firma = firmaPregunta(pregunta);
-      if (usadas.has(firma)) continue;
+      if (usadas.has(firma) || recientes.has(firma)) continue;
       usadas.add(firma);
-      preguntas.push({ ...pregunta, id: `q-${preguntas.length + 1}-${Math.random().toString(36).slice(2, 8)}` });
+      preguntas.push({
+        ...pregunta,
+        firma,
+        id: `q-${preguntas.length + 1}-${Math.random().toString(36).slice(2, 8)}`,
+      });
       return true;
     }
     return false;
@@ -586,4 +787,117 @@ export function crearPartida(personas, cantidad = 10) {
     throw new Error(`No se han podido generar ${cantidad} preguntas válidas con la base actual.`);
   }
   return preguntas.slice(0, cantidad);
+}
+
+function comparacionesRacha(a, b) {
+  const comparaciones = [];
+  if (Number.isFinite(a?.nac) && Number.isFinite(b?.nac) && !a.nacAprox && !b.nacAprox && Math.abs(a.nac - b.nac) >= 7) {
+    const correcta = a.nac < b.nac ? a : b;
+    comparaciones.push({
+      id: "nacimiento",
+      pregunta: "¿Quién nació antes?",
+      correcta,
+      explicacion: `${a.nombre} nació en ${a.nac}; ${b.nombre}, en ${b.nac}.`,
+    });
+  }
+  if (Number.isFinite(a?.muer) && Number.isFinite(b?.muer) && !a.muerAprox && !b.muerAprox && Math.abs(a.muer - b.muer) >= 7) {
+    const correcta = a.muer > b.muer ? a : b;
+    comparaciones.push({
+      id: "muerte",
+      pregunta: "¿Quién murió más tarde?",
+      correcta,
+      explicacion: `${a.nombre} murió en ${a.muer}; ${b.nombre}, en ${b.muer}.`,
+    });
+  }
+  if (Number.isFinite(a?.nac) && Number.isFinite(a?.muer) && Number.isFinite(b?.nac) && Number.isFinite(b?.muer)
+      && !a.nacAprox && !a.muerAprox && !b.nacAprox && !b.muerAprox) {
+    const vidaA = a.muer - a.nac;
+    const vidaB = b.muer - b.nac;
+    if (Math.abs(vidaA - vidaB) >= 6) {
+      const correcta = vidaA > vidaB ? a : b;
+      comparaciones.push({
+        id: "longevidad",
+        pregunta: "¿Quién vivió más años?",
+        correcta,
+        explicacion: `${a.nombre}: ${vidaA} años según las fechas registradas; ${b.nombre}: ${vidaB}.`,
+      });
+    }
+  }
+
+  const reinadoA = reinadoIndividualMasLargo(a);
+  const reinadoB = reinadoIndividualMasLargo(b);
+  if (reinadoA && reinadoB && Math.abs(reinadoA.duracion - reinadoB.duracion) >= 5) {
+    const correcta = reinadoA.duracion > reinadoB.duracion ? a : b;
+    comparaciones.push({
+      id: "reinado-largo",
+      pregunta: "¿Quién tuvo el reinado efectivo más largo en un solo territorio?",
+      correcta,
+      explicacion: `${a.nombre}: ${reinadoA.territorio}, ${reinadoA.desde}–${reinadoA.hasta} (${reinadoA.duracion} años); ${b.nombre}: ${reinadoB.territorio}, ${reinadoB.desde}–${reinadoB.hasta} (${reinadoB.duracion}).`,
+    });
+  }
+
+  const territoriosA = territoriosEfectivos(a);
+  const territoriosB = territoriosEfectivos(b);
+  if (territoriosA.length && territoriosB.length && territoriosA.length !== territoriosB.length) {
+    const correcta = territoriosA.length > territoriosB.length ? a : b;
+    comparaciones.push({
+      id: "territorios",
+      pregunta: "¿Quién gobernó efectivamente más territorios distintos registrados?",
+      correcta,
+      explicacion: `${a.nombre}: ${territoriosA.length} (${territoriosA.join(", ")}); ${b.nombre}: ${territoriosB.length} (${territoriosB.join(", ")}).`,
+    });
+  }
+
+  const primeroA = primerGobierno(a);
+  const primeroB = primerGobierno(b);
+  if (primeroA && primeroB && Math.abs(primeroA.desde - primeroB.desde) >= 7) {
+    const correcta = primeroA.desde < primeroB.desde ? a : b;
+    comparaciones.push({
+      id: "primer-gobierno",
+      pregunta: "¿Quién comenzó antes su primer gobierno efectivo registrado?",
+      correcta,
+      explicacion: `${a.nombre} comenzó en ${primeroA.desde} (${primeroA.territorio}); ${b.nombre}, en ${primeroB.desde} (${primeroB.territorio}).`,
+    });
+  }
+  return comparaciones;
+}
+
+export function crearPreguntaRacha(personas, campeonId = null, { evitarFirmas = [] } = {}) {
+  const base = Array.isArray(personas) ? personas.filter((p) => p?.id && p?.nombre) : [];
+  const indice = construirIndice(base);
+  const recientes = new Set(Array.isArray(evitarFirmas) ? evitarFirmas : []);
+  const elegibles = base.filter((persona) => {
+    const categoria = categoriaTitulo(persona);
+    const relevante = reinadosEfectivos(persona).length > 0
+      || ["corona", "ducal", "papado", "gobierno"].includes(categoria);
+    return relevante && (Number.isFinite(persona.nac) || Number.isFinite(persona.muer) || reinadosEfectivos(persona).length);
+  });
+  if (elegibles.length < 2) throw new Error("No hay suficientes personajes para el modo Racha.");
+
+  const campeon = indice.byId[campeonId] || elegir(elegibles);
+  if (!campeon) throw new Error("No se ha podido elegir un personaje inicial.");
+  const candidatos = candidatosPlausibles(campeon, elegibles, new Set([campeon.id]), { indice }).slice(0, 140);
+
+  for (let intento = 0; intento < 180; intento += 1) {
+    const rival = elegir(intento < 120 ? candidatos : elegibles.filter((persona) => persona.id !== campeon.id));
+    if (!rival || normalizarTexto(rival.nombre) === normalizarTexto(campeon.nombre)) continue;
+    const comparaciones = barajar(comparacionesRacha(campeon, rival));
+    for (const comparacion of comparaciones) {
+      const firma = `racha|${comparacion.id}|${[campeon.id, rival.id].sort().join("|")}`;
+      if (recientes.has(firma)) continue;
+      return {
+        id: `racha-${Math.random().toString(36).slice(2, 9)}`,
+        firma,
+        tipo: "racha",
+        etiqueta: "Racha",
+        pregunta: comparacion.pregunta,
+        opciones: barajar([campeon, rival]).map((persona) => ({ id: persona.id, label: persona.nombre })),
+        correctaId: comparacion.correcta.id,
+        explicacion: comparacion.explicacion,
+        atlasPersonId: comparacion.correcta.id,
+        siguienteCampeonId: comparacion.correcta.id,
+      };
+    }
+  }
+  throw new Error("No se ha podido generar el siguiente duelo sin repetir preguntas.");
 }
