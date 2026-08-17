@@ -1,6 +1,6 @@
 import React, { useMemo, useState } from "react";
 import { ArrowRight, Check, ExternalLink, RotateCcw, X } from "lucide-react";
-import { crearPartida } from "./desafioEngine.js";
+import { crearPartida } from "./desafioEngine.jsx";
 import "./desafio.css";
 
 const STORAGE_KEY = "arbol-europa-desafio-v1";
