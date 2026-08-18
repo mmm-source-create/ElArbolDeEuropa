@@ -346,6 +346,7 @@ const ACCENTS = {
   "Gonzaga":"#7D6840", "Paleólogo":"#9B3E6E", "Otras dinastías":"#71717A",
   "Tudor":"#8A5C45", "Estuardo":"#6C567F", "Vasa":"#B48A2F", "Rurikida":"#526F8D",
   "Hohenzollern":"#303C59", "Nassau":"#C08A38", "Welf":"#A65C43", "Oldemburgo":"#486D75",
+  "Romanov":"#6F527A", "Holstein-Gottorp":"#47727A", "Hannover":"#6B5C91",
   "Saboya":"#B65C78", "Lorena":"#9A7A46", "Champaña":"#A57C52", "Foix":"#8F5E3E",
   "Dampierre":"#6F7A45", "Baux":"#8A6A62", "Este":"#8A5D70", "Médici":"#A67032",
   "Farnesio":"#725D8A", "Álvarez de Toledo":"#5F6874",
