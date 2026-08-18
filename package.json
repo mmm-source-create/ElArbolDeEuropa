@@ -5,9 +5,10 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "prebuild": "node generate-sitemap.mjs && node generate-tree-base.mjs",
+    "prebuild": "node audit-personas.mjs --fail-on-errors && node generate-sitemap.mjs && node generate-tree-base.mjs",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "audit": "node audit-personas.mjs"
   },
   "dependencies": {
     "@vitejs/plugin-react": "latest",
