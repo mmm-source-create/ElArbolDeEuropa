@@ -843,7 +843,95 @@ export const EVENTOS_HISTORICOS = [
     categoria: "cultura",
     personas: ["NICCOLOMACHIAVELLI", "GIULIANOMEDICI", "LORENZO2MEDICI"],
     descripcion: "El tratado redactado por Maquiavelo tras la caída de la república florentina queda dedicado finalmente a Lorenzo de’ Medici el Joven, duque de Urbino y señor de Florencia."
-  }
+  },
+  {
+    id: "LUBLIN_1569",
+    anio: 1569,
+    titulo: "La Unión de Lublin crea la Mancomunidad",
+    categoria: "politica",
+    personas: ["SEGIS2JAG", "ANAJAG"],
+    descripcion: "Polonia y Lituania pasan de una unión dinástica a una comunidad política más estrecha. La nueva estructura sobrevivirá a la extinción masculina de los Jagellón y hará posible una monarquía electiva común."
+  },
+  {
+    id: "ELECCION_1573",
+    anio: 1573,
+    titulo: "La primera elección libre",
+    categoria: "politica",
+    personas: ["ENRIQ3FRA", "ANAJAG"],
+    descripcion: "Tras la muerte sin herederos de Segismundo II Augusto, la nobleza elige a Enrique de Valois y fija límites permanentes al poder real mediante los Artículos Henricianos."
+  },
+  {
+    id: "BATHORY_1576",
+    anio: 1576,
+    titulo: "Ana Jagellón y Esteban Báthory comparten la corona",
+    categoria: "dinastia",
+    personas: ["ANAJAG", "ESTEBANBATHORY"],
+    descripcion: "La elección de Esteban Báthory junto a Ana Jagellón muestra que la legitimidad dinástica sigue importando, pero ya no basta por sí sola: la corona depende de la elección de la nobleza."
+  },
+  {
+    id: "VASA_POLONIA_1587",
+    anio: 1587,
+    titulo: "Un Vasa es elegido rey de Polonia",
+    categoria: "dinastia",
+    personas: ["SEGIS3VASA", "CATALINAJAG", "JUAN3SUECIA"],
+    descripcion: "Segismundo III Vasa llega a la corona polaco-lituana como nieto de Segismundo I y príncipe sueco. La elección abre una etapa en la que la Mancomunidad se cruza directamente con las luchas dinásticas del Báltico."
+  },
+  {
+    id: "ABDICACION_1668",
+    anio: 1668,
+    titulo: "Juan II Casimiro abdica",
+    categoria: "politica",
+    personas: ["JUAN2CASIVASA", "MIGUELKORYBUT"],
+    descripcion: "Tras décadas de guerras y crisis, Juan II Casimiro abandona el trono. La nobleza puede volver a elegir desde cero y se inclina por un candidato nacido dentro de la propia Mancomunidad."
+  },
+  {
+    id: "VIENA_1683",
+    anio: 1683,
+    titulo: "Sobieski en Viena",
+    categoria: "guerra",
+    personas: ["JUAN3SOBIESKI", "MARIAKAZIMIERA"],
+    descripcion: "El rey electo Juan III Sobieski alcanza fama europea al encabezar las fuerzas que socorren Viena frente al Imperio otomano. La corona electiva todavía puede producir un monarca de enorme prestigio militar."
+  },
+  {
+    id: "WETTIN_POLONIA_1697",
+    anio: 1697,
+    titulo: "Augusto el Fuerte consigue la corona",
+    categoria: "dinastia",
+    personas: ["AUGUST2SAXPOL"],
+    descripcion: "El elector de Sajonia se convierte al catolicismo y logra ser elegido rey. Polonia-Lituania queda unida personalmente a Sajonia y su elección vuelve a convertir la corona en una cuestión europea."
+  },
+  {
+    id: "DOBLE_ELECCION_1733",
+    anio: 1733,
+    titulo: "Dos elecciones para una sola corona",
+    categoria: "politica",
+    personas: ["STAN1LESZ", "AUGUST3SAXPOL"],
+    descripcion: "Estanislao Leszczyński y Augusto III son proclamados por facciones rivales. La disputa desemboca en una guerra europea y muestra hasta qué punto las potencias vecinas pueden condicionar la libertad electoral."
+  },
+  {
+    id: "PONIATOWSKI_1764",
+    anio: 1764,
+    titulo: "El último rey de la República",
+    categoria: "politica",
+    personas: ["STAN2PONIAT"],
+    descripcion: "Estanislao Augusto Poniatowski es elegido rey con un programa reformista, pero bajo la sombra decisiva de Rusia. La tensión entre libertad nobiliaria, reforma e intervención exterior entra en su fase final."
+  },
+  {
+    id: "CONSTITUCION_1791",
+    anio: 1791,
+    titulo: "La Constitución del 3 de Mayo intenta cambiar el sistema",
+    categoria: "politica",
+    personas: ["STAN2PONIAT", "FREDAUGUST3SAX"],
+    descripcion: "La nueva constitución elimina el liberum veto y sustituye la monarquía electiva por una sucesión hereditaria prevista en la casa de Sajonia. Es el intento más ambicioso de reformar la República desde dentro."
+  },
+  {
+    id: "FIN_POLONIA_1795",
+    anio: 1795,
+    titulo: "La tercera partición termina con la Mancomunidad",
+    categoria: "politica",
+    personas: ["STAN2PONIAT", "FREDWIL2PRU", "CATHERINE2RUS"],
+    descripcion: "La tercera partición borra del mapa político a la Mancomunidad polaco-lituana y obliga a Estanislao Augusto a abdicar. El experimento de la corona elegida concluye bajo la presión de las monarquías vecinas."
+  },
 ];
 
 export const HISTORIAS = [
@@ -1832,6 +1920,123 @@ export const HISTORIAS = [
     id: "republica-nobles",
     titulo: "La República de los nobles",
     subtitulo: "Cómo Polonia convirtió una monarquía hereditaria en una corona elegida.",
+    disponible: true,
+    descripcion: "Un recorrido por la transformación de Polonia-Lituania en una monarquía donde el rey debía ser elegido, negociar y gobernar con una nobleza extraordinariamente poderosa: de los últimos Jagellón a las elecciones internacionales, los Vasa, Sobieski, los Wettin y el intento final de reforma de 1791.",
+    pasos: [
+      {
+        anio: 1506,
+        persona: "SEGIS1JAG",
+        personas: ["SEGIS1JAG", "ALEJANDRO1POL", "CASI4"],
+        titulo: "Una monarquía hereditaria... que ya necesita negociar",
+        texto: "Cuando Segismundo el Viejo sucede a su hermano Alejandro, la corona permanece dentro de los Jagellón, pero no funciona como una herencia automática. Reyes y nobleza llevan generaciones intercambiando reconocimiento dinástico por privilegios. La futura república nobiliaria no aparecerá de la nada: crece dentro de la propia monarquía."
+      },
+      {
+        anio: 1569,
+        persona: "SEGIS2JAG",
+        personas: ["SEGIS2JAG", "ANAJAG", "CATALINAJAG"],
+        eventoId: "LUBLIN_1569",
+        titulo: "Lublin: la unión deja de depender de una familia",
+        texto: "Segismundo II Augusto no tiene hijos. La Unión de Lublin convierte la relación entre Polonia y Lituania en una comunidad política más estrecha justo cuando la dinastía Jagellón se acerca a su final. La gran pregunta ya no es qué hijo heredará: es cómo elegirán juntos al siguiente rey."
+      },
+      {
+        anio: 1573,
+        persona: "ENRIQ3FRA",
+        personas: ["ENRIQ3FRA", "ANAJAG"],
+        eventoId: "ELECCION_1573",
+        titulo: "Cualquiera puede aspirar a la corona",
+        texto: "La primera elección libre lleva al trono a Enrique de Valois, hermano del rey de Francia. Para aceptar la corona debe jurar reglas que limitan permanentemente al monarca. La paradoja es inmediata: un príncipe extranjero consigue una de las grandes coronas de Europa, pero esa corona pertenece políticamente a quienes lo han elegido."
+      },
+      {
+        anio: 1576,
+        persona: "ESTEBANBATHORY",
+        personas: ["ANAJAG", "ESTEBANBATHORY", "ENRIQ3FRA"],
+        eventoId: "BATHORY_1576",
+        titulo: "Una reina Jagellón y un príncipe de Transilvania",
+        texto: "Enrique abandona Polonia para convertirse en rey de Francia. La respuesta no es restaurar una sucesión hereditaria: Ana Jagellón es elegida y Esteban Báthory, príncipe de Transilvania, gobierna junto a ella. Sangre dinástica y elección popular nobiliaria se combinan de una manera que casi ninguna otra gran monarquía europea puede imitar."
+      },
+      {
+        anio: 1587,
+        persona: "SEGIS3VASA",
+        personas: ["SEGIS3VASA", "CATALINAJAG", "JUAN3SUECIA"],
+        eventoId: "VASA_POLONIA_1587",
+        titulo: "La elección vuelve a fabricar una dinastía",
+        texto: "Segismundo III Vasa es nieto de Segismundo el Viejo por su madre Catalina Jagellón y heredero del trono sueco por su padre. Su elección parece reconciliar continuidad y libertad. Durante tres generaciones los Vasa serán elegidos uno tras otro, demostrando que una monarquía electiva puede comportarse durante décadas como si fuera dinástica sin dejar de ser electiva."
+      },
+      {
+        anio: 1632,
+        persona: "WLAD4VASA",
+        personas: ["SEGIS3VASA", "WLAD4VASA", "JUAN2CASIVASA"],
+        titulo: "Ladislao IV: una sucesión que parece hereditaria",
+        texto: "A la muerte de Segismundo III, la nobleza elige a su hijo Ladislao IV. Nadie ha abolido la elección, pero la continuidad familiar funciona. Ésta es una de las claves del sistema: la República puede escoger al heredero natural cuando le conviene y recordarle, al mismo tiempo, que no reina simplemente por haber nacido."
+      },
+      {
+        anio: 1668,
+        persona: "JUAN2CASIVASA",
+        personas: ["JUAN2CASIVASA", "MIGUELKORYBUT", "LUISAMARIAGONZAGA"],
+        eventoId: "ABDICACION_1668",
+        titulo: "La dinastía Vasa se rompe por una abdicación",
+        texto: "Juan II Casimiro, hermano de Ladislao, soporta rebeliones, invasiones suecas y una larga crisis política antes de abdicar. Sin un heredero dinástico inevitable, la elección de 1669 escoge a Miguel Korybut Wiśniowiecki, un candidato de la propia nobleza. La corona demuestra que puede abandonar de golpe a una gran casa europea."
+      },
+      {
+        anio: 1683,
+        persona: "JUAN3SOBIESKI",
+        personas: ["JUAN3SOBIESKI", "MARIAKAZIMIERA", "MIGUELKORYBUT"],
+        eventoId: "VIENA_1683",
+        titulo: "Sobieski: un rey elegido que salva Viena",
+        texto: "Juan Sobieski llega al trono por elección y no por pertenecer a una dinastía reinante. En 1683 conduce al ejército de socorro de Viena y se convierte en uno de los monarcas más célebres de Europa. La República de los nobles puede producir un rey de enorme prestigio; lo que no puede garantizar es que sus hijos hereden la corona."
+      },
+      {
+        anio: 1697,
+        persona: "AUGUST2SAXPOL",
+        personas: ["AUGUST2SAXPOL", "CHRISTIANEEBERHARDINE", "JUAN3SOBIESKI"],
+        eventoId: "WETTIN_POLONIA_1697",
+        titulo: "Un elector sajón compra, negocia y conquista una elección",
+        texto: "Federico Augusto de Sajonia se convierte al catolicismo y es elegido como Augusto II. El resultado une personalmente Sajonia y la Mancomunidad. La corona polaca vuelve a ser un premio de primer orden para las casas europeas, pero también una puerta por la que las potencias vecinas pueden intervenir en la política interna."
+      },
+      {
+        anio: 1733,
+        persona: "STAN1LESZ",
+        personas: ["STAN1LESZ", "AUGUST3SAXPOL", "AUGUST2SAXPOL", "MARIALESZCZ"],
+        eventoId: "DOBLE_ELECCION_1733",
+        titulo: "Dos reyes elegidos, una guerra europea",
+        texto: "A la muerte de Augusto II, Estanislao Leszczyński y Augusto III reciben apoyos rivales. Francia favorece al primero; Rusia y Austria sostienen al segundo. La elección que debía expresar la libertad política de la nobleza se convierte en una competición internacional respaldada por ejércitos."
+      },
+      {
+        anio: 1764,
+        persona: "STAN2PONIAT",
+        personas: ["STAN2PONIAT", "CATHERINE2RUS", "FREDWIL2PRU"],
+        eventoId: "PONIATOWSKI_1764",
+        titulo: "El último rey intenta reformar la República",
+        texto: "Estanislao Augusto Poniatowski es elegido en un sistema cuya libertad formal convive ya con una enorme presión rusa. Lejos de limitarse a aceptar el declive, el rey y una parte de las élites intentarán reconstruir el Estado. La gran pregunta del siglo XVIII es si la libertad nobiliaria puede transformarse antes de convertirse en parálisis."
+      },
+      {
+        anio: 1791,
+        persona: "STAN2PONIAT",
+        personas: ["STAN2PONIAT", "FREDAUGUST3SAX"],
+        eventoId: "CONSTITUCION_1791",
+        titulo: "La República intenta abolir la corona electiva",
+        texto: "La Constitución del 3 de Mayo elimina el liberum veto y sustituye la elección de cada nuevo rey por una sucesión hereditaria prevista en la casa de Sajonia. Después de más de dos siglos, los propios reformadores de la República concluyen que el mecanismo que había protegido la libertad política también podía impedir la supervivencia del Estado."
+      },
+      {
+        anio: 1795,
+        persona: "STAN2PONIAT",
+        personas: ["STAN2PONIAT", "CATHERINE2RUS", "FREDWIL2PRU"],
+        eventoId: "FIN_POLONIA_1795",
+        titulo: "El final: ya no queda una corona que elegir",
+        texto: "La tercera partición extingue la Mancomunidad y Estanislao Augusto abdica. El recorrido que comenzó con una dinastía negociando privilegios termina con Rusia, Prusia y Austria repartiéndose el territorio. La República de los nobles fue una anomalía extraordinariamente duradera: una monarquía que convirtió la elección del rey en parte central de su idea de libertad."
+      }
+    ]
+  },
+  {
+    id: "corona-demasiado-grande",
+    titulo: "Una corona demasiado grande",
+    subtitulo: "Los Vasa entre Suecia, Polonia y la guerra de religión",
+    disponible: false
+  },
+  {
+    id: "brandeburgo-prusia",
+    titulo: "De Brandemburgo a Prusia",
+    subtitulo: "Cómo un electorado del Imperio se convirtió en una gran potencia europea",
     disponible: false
   },
   {
@@ -1859,4 +2064,3 @@ export const HISTORIAS = [
     disponible: false
   }
 ];
-
