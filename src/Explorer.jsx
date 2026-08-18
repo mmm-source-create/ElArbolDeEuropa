@@ -1,5 +1,5 @@
 import React, { lazy, Suspense, useState, useRef, useEffect, useLayoutEffect, useCallback, useMemo } from "react";
-import { Crown, Search, ChevronDown, ChevronRight, ArrowLeft, ArrowRight, ArrowUp, ArrowDown, ZoomIn, ZoomOut, RotateCcw, GitCompare, Focus, Share2, Play, Pause, SkipBack, SkipForward, X, Info, Heart, BookOpen, Scale, Flag, Mail, ExternalLink } from "lucide-react";
+import { Crown, Search, ChevronDown, ChevronRight, ArrowLeft, ArrowRight, ArrowUp, ArrowDown, ZoomIn, ZoomOut, RotateCcw, GitCompare, Focus, Share2, Play, Pause, SkipBack, SkipForward, X, Info, Heart, BookOpen, BarChart3, Scale, Flag, Mail, ExternalLink } from "lucide-react";
 import { MapaEuropa } from "./MapaEuropa";
 import {
   TERRITORIOS_SUB,
@@ -2178,21 +2178,51 @@ function ModalProyecto({ seccion, onClose, persona, personasVista = PERSONAS, on
           {seccion === "fuentes" && (
             <>
               <div className="project-section-icon"><BookOpen size={17} /></div>
-              <p className="project-lead">La bibliografía del proyecto se organiza por repertorios generales y, cuando una relación o fecha es discutida, por comprobaciones específicas.</p>
-              <h3>Fuentes de consulta principales</h3>
+              <p className="project-lead">El Árbol de Europa se construye como una base de síntesis: combina repertorios genealógicos, biografías académicas, archivos, instituciones culturales y páginas oficiales de casas reinantes. Cuando una filiación, una fecha o un reinado es discutido, se contrasta el dato con varias referencias antes de incorporarlo.</p>
+
+              <h3>Repertorios principales</h3>
               <ul className="project-source-list">
-                <li><a href="https://fmg.ac/Projects/MedLands/index.htm" target="_blank" rel="noreferrer">Foundation for Medieval Genealogy · MedLands <ExternalLink size={12} /></a><span>Reconstrucciones genealógicas y referencias documentales, especialmente útiles para la Edad Media.</span></li>
-                <li><a href="https://en.wikipedia.org/" target="_blank" rel="noreferrer">Wikipedia <ExternalLink size={12} /></a><span>Consulta rápida de cronologías, títulos, enlaces dinásticos y bibliografía secundaria, contrastada cuando el dato es relevante o dudoso.</span></li>
+                <li><a href="https://fmg.ac/Projects/MedLands/index.htm" target="_blank" rel="noreferrer">Foundation for Medieval Genealogy · MedLands <ExternalLink size={12} /></a><span>Reconstrucciones genealógicas y referencias documentales, especialmente útiles para la Edad Media y las ramas dinásticas complejas.</span></li>
+                <li><a href="https://www.deutsche-biographie.de/" target="_blank" rel="noreferrer">Deutsche Biographie <ExternalLink size={12} /></a><span>Biografías y datos de referencia para personajes y casas del ámbito germánico, centroeuropeo y báltico.</span></li>
+                <li><a href="https://www.treccani.it/" target="_blank" rel="noreferrer">Treccani <ExternalLink size={12} /></a><span>Apoyo biográfico y contextual para casas italianas, especialmente Médici, Saboya y figuras políticas o culturales del Renacimiento.</span></li>
+                <li><a href="https://www.britannica.com/" target="_blank" rel="noreferrer">Encyclopaedia Britannica <ExternalLink size={12} /></a><span>Consulta biográfica e histórica de contraste, útil sobre todo para grandes figuras europeas y marcos dinásticos generales.</span></li>
+                <li><a href="https://en.wikipedia.org/" target="_blank" rel="noreferrer">Wikipedia <ExternalLink size={12} /></a><span>Herramienta auxiliar de localización, cronología y orientación bibliográfica. Los datos sensibles o dudosos se contrastan siempre que es posible con fuentes más especializadas.</span></li>
+              </ul>
+
+              <h3>Archivos e instituciones</h3>
+              <ul className="project-source-list">
                 <li><a href="https://historia-hispanica.rah.es/" target="_blank" rel="noreferrer">Historia Hispánica · Real Academia de la Historia <ExternalLink size={12} /></a><span>Apoyo biográfico para personajes y linajes del ámbito hispánico.</span></li>
+                <li><a href="https://pares.mcu.es/" target="_blank" rel="noreferrer">PARES · Portal de Archivos Españoles <ExternalLink size={12} /></a><span>Documentación archivística y descripciones de fondos, muy útil para confirmar filiaciones, cargos y cronologías.</span></li>
+                <li><a href="https://bibliotecadigital.rah.es/" target="_blank" rel="noreferrer">Biblioteca Digital · Real Academia de la Historia <ExternalLink size={12} /></a><span>Genealogías, nobiliarios y repertorios históricos digitalizados empleados en comprobaciones concretas.</span></li>
+                <li><a href="https://www.kungahuset.se/english/the-monarchy-of-sweden" target="_blank" rel="noreferrer">Kungahuset · Casa Real de Suecia <ExternalLink size={12} /></a><span>Secuencias dinásticas y contexto institucional de la monarquía sueca.</span></li>
+                <li><a href="https://www.kongehuset.dk/en" target="_blank" rel="noreferrer">Kongehuset · Casa Real de Dinamarca <ExternalLink size={12} /></a><span>Sucesión y marco histórico de la línea danesa, especialmente para Oldemburgo y ramas conectadas.</span></li>
+                <li><a href="https://www.royal-house.nl/" target="_blank" rel="noreferrer">Royal House of the Netherlands <ExternalLink size={12} /></a><span>Información institucional sobre Orange-Nassau y la continuidad dinástica neerlandesa.</span></li>
+                <li><a href="https://burg-hohenzollern.com/en/" target="_blank" rel="noreferrer">Burg Hohenzollern <ExternalLink size={12} /></a><span>Historia de la casa de Hohenzollern y apoyo para la evolución de Brandeburgo y Prusia.</span></li>
+                <li><a href="https://www.museotorino.it/" target="_blank" rel="noreferrer">MuseoTorino <ExternalLink size={12} /></a><span>Material útil para comprobar sucesiones y genealogías ligadas a la casa de Saboya.</span></li>
+              </ul>
+
+              <h3>Fuentes para historias y comprobaciones específicas</h3>
+              <ul className="project-source-list">
+                <li><a href="https://plato.stanford.edu/" target="_blank" rel="noreferrer">Stanford Encyclopedia of Philosophy <ExternalLink size={12} /></a><span>Especialmente útil para contextualizar autores y obras políticas o filosóficas, como Maquiavelo.</span></li>
+                <li><a href="https://www.louvre.fr/en" target="_blank" rel="noreferrer">Musée du Louvre <ExternalLink size={12} /></a><span>Apoyo institucional para episodios concretos de historia cultural y artística, como la trayectoria de la Gioconda.</span></li>
+                <li><a href="https://polishhistory.pl/" target="_blank" rel="noreferrer">Polish History <ExternalLink size={12} /></a><span>Contexto histórico para la monarquía electiva, la Unión de Lublin y la República de las Dos Naciones.</span></li>
+              </ul>
+
+              <h3>Cartografía</h3>
+              <ul className="project-source-list">
                 <li><a href="https://www.mapchart.net/" target="_blank" rel="noreferrer">MapChart <ExternalLink size={12} /></a><span>Base cartográfica sobre la que se ha construido la representación territorial interactiva.</span></li>
               </ul>
+
               <h3>Criterios de trabajo</h3>
               <ul className="project-method-list">
                 <li>Las fechas se almacenan normalmente a nivel de año; cuando una fuente ofrece una fecha aproximada, la interfaz todavía no distingue visualmente entre fecha exacta y aproximada.</li>
                 <li>Se priorizan personajes que conectan ramas, ejercen un gobierno, fundan una línea relevante o tienen descendencia históricamente útil para la red.</li>
+                <li>Wikipedia se utiliza como apoyo auxiliar, no como referencia única para datos genealógicos controvertidos.</li>
+                <li>Cuando una filiación es discutida, se evita presentarla como segura si no existe base suficiente para hacerlo.</li>
                 <li>Los territorios del mapa son una representación histórica simplificada y dependen de los límites disponibles en la base cartográfica.</li>
                 <li>La ausencia de un progenitor, matrimonio o descendiente significa “no registrado en esta base”, no “inexistente”.</li>
                 <li>Las correcciones documentadas tienen prioridad sobre la mera coherencia visual del árbol.</li>
+                <li>La presencia de una fuente en esta lista no implica que cada ficha dependa de una sola obra: la base es de síntesis y cruza referencias de distinta naturaleza.</li>
               </ul>
             </>
           )}
@@ -4408,8 +4438,7 @@ export default function Explorer({ initialPanel = null }) {
       <footer className="project-footer">
         <div className="project-footer-links" aria-label="Información del proyecto">
           <button type="button" onClick={() => setInfoProyecto("acerca")}><Info size={12} /> Acerca del proyecto</button>
-          <button type="button" onClick={() => setInfoProyecto("historias")}><BookOpen size={12} /> Historias</button>
-          <button type="button" onClick={() => setInfoProyecto("estadisticas")}>Estadísticas</button>
+          <button type="button" onClick={() => setInfoProyecto("estadisticas")}><BarChart3 size={12} /> Estadísticas</button>
           <button type="button" onClick={() => setInfoProyecto("fuentes")}><BookOpen size={12} /> Fuentes y metodología</button>
           <button type="button" onClick={() => setInfoProyecto("agradecimientos")}><Heart size={12} /> Agradecimientos</button>
           <button type="button" onClick={() => setInfoProyecto("licencias")}><Scale size={12} /> Licencias</button>
@@ -4445,7 +4474,7 @@ export default function Explorer({ initialPanel = null }) {
             </div>
             <div className="welcome-links">
               <button type="button" onClick={() => setInfoProyecto("acerca")}>Acerca del proyecto</button>
-              <button type="button" onClick={() => setInfoProyecto("estadisticas")}>Estadísticas</button>
+              <button type="button" onClick={() => setInfoProyecto("estadisticas")}><BarChart3 size={12} /> Estadísticas</button>
               <button type="button" onClick={() => setInfoProyecto("fuentes")}>Fuentes y metodología</button>
               <button type="button" onClick={() => setInfoProyecto("agradecimientos")}>Agradecimientos</button>
             </div>
