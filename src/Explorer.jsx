@@ -1755,6 +1755,50 @@ const MODOS_COMPARACION = [
   { id: "rutas", label: "Rutas relevantes", descripcion: "Hasta seis caminos mínimos alternativos" },
 ];
 
+const ALCANCES_FOCO = [
+  { id: "cercana", label: "Familia cercana", descripcion: "Padres, hermanos, cónyuges e hijos" },
+  { id: "ascendencia", label: "Ascendencia", descripcion: "Todos los antepasados registrados" },
+  { id: "descendencia", label: "Descendencia", descripcion: "Todos los descendientes registrados" },
+  { id: "red", label: "Red familiar", descripcion: "Hasta tres saltos por sangre o matrimonio" },
+];
+
+function conjuntoFoco(id, alcance = "cercana") {
+  const persona = BY_ID[id];
+  if (!persona) return new Set();
+  if (alcance === "ascendencia") return ancestorsOf(id);
+  if (alcance === "descendencia") return descendantsOf(id);
+
+  if (alcance === "red") {
+    const vistos = new Set([id]);
+    const cola = [{ id, profundidad: 0 }];
+    while (cola.length) {
+      const actual = cola.shift();
+      if (actual.profundidad >= 3) continue;
+      const ficha = BY_ID[actual.id];
+      const vecinos = uniq([
+        ficha?.padre, ficha?.madre,
+        ...(HIJOS_POR_ID[actual.id] || []),
+        ...listaConyuges(ficha),
+      ]).filter((vecinoId) => BY_ID[vecinoId]);
+      vecinos.forEach((vecinoId) => {
+        if (vistos.has(vecinoId)) return;
+        vistos.add(vecinoId);
+        cola.push({ id: vecinoId, profundidad: actual.profundidad + 1 });
+      });
+    }
+    return vistos;
+  }
+
+  const cercanos = new Set([id]);
+  [persona.padre, persona.madre].filter((parentId) => BY_ID[parentId]).forEach((parentId) => {
+    cercanos.add(parentId);
+    (HIJOS_POR_ID[parentId] || []).forEach((siblingId) => { if (BY_ID[siblingId]) cercanos.add(siblingId); });
+  });
+  listaConyuges(persona).forEach((partnerId) => { if (BY_ID[partnerId]) cercanos.add(partnerId); });
+  (HIJOS_POR_ID[id] || []).forEach((childId) => { if (BY_ID[childId]) cercanos.add(childId); });
+  return cercanos;
+}
+
 const TIPOS_GRAFO_POR_MODO = {
   corto: new Set(["sangre", "matrimonio", "amante"]),
   sangre: new Set(["sangre"]),
@@ -2381,7 +2425,8 @@ export default function Explorer({ initialPanel = null }) {
   const [modoComparacion, setModoComparacion] = useState("corto");
   const [compareMenuOpen, setCompareMenuOpen] = useState(false);
   const [compareRouteIndex, setCompareRouteIndex] = useState(0);
-  const [aisladoId, setAisladoId] = useState(null);
+  const [focoId, setFocoId] = useState(null);
+  const [focoAlcance, setFocoAlcance] = useState("cercana");
   const [anioGlobal, setAnioGlobal] = useState(null);
   const [anioInput, setAnioInput] = useState("");
   const [reproduciendoHistoria, setReproduciendoHistoria] = useState(false);
@@ -2748,10 +2793,10 @@ export default function Explorer({ initialPanel = null }) {
 
   const toggle = (setter, arr, v) => setter(arr.includes(v) ? arr.filter((x) => x !== v) : [...arr, v]);
 
-  const aisladoSet = useMemo(() => {
-    if (mode !== "aislar" || !aisladoId) return null;
-    return new Set([...ancestorsOf(aisladoId), ...descendantsOf(aisladoId)]);
-  }, [mode, aisladoId]);
+  const focoSet = useMemo(() => {
+    if (mode !== "foco" || !focoId) return null;
+    return conjuntoFoco(focoId, focoAlcance);
+  }, [mode, focoId, focoAlcance]);
 
   const collapsedSet = useMemo(() => new Set(collapsedIds), [collapsedIds]);
   const hiddenByCollapse = useMemo(() => {
@@ -2897,7 +2942,7 @@ export default function Explorer({ initialPanel = null }) {
   const matches = (persona) => {
     if (!persona) return false;
     if (hiddenByCollapse.has(persona.id)) return false;
-    if (aisladoSet && !aisladoSet.has(persona.id)) return false;
+    if (focoSet && !focoSet.has(persona.id)) return false;
     if (soloFavoritos && !favoritosSet.has(persona.id)) return false;
 
     if (territorios.length) {
@@ -3248,7 +3293,7 @@ export default function Explorer({ initialPanel = null }) {
       historiaSnapshotRef.current = {
         query, territorios, dinastias, titulos, siglos, relaciones, soloFavoritos, anioGlobal,
         vistasActivas, seleccionId: seleccion?.id || null, timelineMode, eventoSeleccionadoId,
-        mode, origen, destino, aisladoId, collapsedIds, compareRouteIndex,
+        mode, origen, destino, focoId, focoAlcance, collapsedIds, compareRouteIndex,
       };
     }
     setQuery("");
@@ -3259,7 +3304,7 @@ export default function Explorer({ initialPanel = null }) {
     setRelaciones([]);
     setSoloFavoritos(false);
     setMode("view");
-    setAisladoId(null);
+    setFocoId(null);
     setCollapsedIds([]);
     setVistasActivas({ arbol: true, mapa: true });
     setHistoriaActivaId(historia.id);
@@ -3295,7 +3340,8 @@ export default function Explorer({ initialPanel = null }) {
     setMode(anterior.mode || "view");
     setOrigen(anterior.origen || null);
     setDestino(anterior.destino || null);
-    setAisladoId(anterior.aisladoId || null);
+    setFocoId(anterior.focoId || null);
+    setFocoAlcance(anterior.focoAlcance || "cercana");
     setCollapsedIds(anterior.collapsedIds || []);
     setCompareRouteIndex(anterior.compareRouteIndex || 0);
     setSeleccion(anterior.seleccionId ? BY_ID[anterior.seleccionId] || null : null);
@@ -3429,8 +3475,9 @@ export default function Explorer({ initialPanel = null }) {
       if (!origen) { setOrigen(p.id); setDestino(null); }
       else if (!destino && p.id !== origen) { setDestino(p.id); }
       else { setOrigen(p.id); setDestino(null); }
-    } else if (mode === "aislar") {
-      setAisladoId(p.id);
+    } else if (mode === "foco") {
+      setFocoId(p.id);
+      setSeleccion(p);
     } else {
       setSeleccion(p);
       centerOn(p.id);
@@ -3825,10 +3872,14 @@ export default function Explorer({ initialPanel = null }) {
               </div>
               <button
                 type="button"
-                className={`nav-btn nav-btn-wide ${mode === "aislar" ? "active" : ""}`}
-                onClick={() => { setMode(mode === "aislar" ? "view" : "aislar"); setAisladoId(null); }}
+                className={`nav-btn nav-btn-wide ${mode === "foco" ? "active" : ""}`}
+                onClick={() => {
+                  const entrar = mode !== "foco";
+                  setMode(entrar ? "foco" : "view");
+                  setFocoId(entrar ? (seleccion?.id || null) : null);
+                }}
               >
-                <Focus size={12} /> Aislar persona
+                <Focus size={12} /> Modo foco
               </button>
               <button type="button" className={`nav-btn nav-btn-wide${historiaActiva ? " active" : ""}`} onClick={() => setInfoProyecto("historias")}>
                 <BookOpen size={12} /> Historias
@@ -3919,15 +3970,29 @@ export default function Explorer({ initialPanel = null }) {
         </div>
       )}
 
-      {mode === "aislar" && (
-        <div className="compare-bar workspace-mode-bar">
-          <span>Aislando a: <b>{aisladoId ? BY_ID[aisladoId]?.nombre : "haz clic en una persona"}</b></span>
-          {aisladoSet && (
-            <span style={{ marginLeft: "auto" }}>
-              Mostrando {aisladoSet.size} persona{aisladoSet.size === 1 ? "" : "s"} (ascendencia y descendencia de {BY_ID[aisladoId]?.nombre})
+      {mode === "foco" && (
+        <div className="compare-bar workspace-mode-bar focus-mode-bar">
+          <span>Foco: <b>{focoId ? BY_ID[focoId]?.nombre : "haz clic en una persona"}</b></span>
+          <div className="focus-scope-switcher" role="group" aria-label="Alcance del modo foco">
+            {ALCANCES_FOCO.map((opcion) => (
+              <button
+                type="button"
+                key={opcion.id}
+                className={focoAlcance === opcion.id ? "active" : ""}
+                onClick={() => setFocoAlcance(opcion.id)}
+                title={opcion.descripcion}
+                aria-pressed={focoAlcance === opcion.id}
+              >
+                {opcion.label}
+              </button>
+            ))}
+          </div>
+          {focoSet && (
+            <span className="focus-count">
+              {focoSet.size} persona{focoSet.size === 1 ? "" : "s"}
             </span>
           )}
-          <button className="clear-btn" style={{ marginTop: 0 }} onClick={() => setAisladoId(null)}>reiniciar</button>
+          <button className="clear-btn" style={{ marginTop: 0 }} onClick={() => setFocoId(null)}>reiniciar</button>
         </div>
       )}
 
@@ -4474,7 +4539,7 @@ export default function Explorer({ initialPanel = null }) {
             </div>
             <div className="welcome-links">
               <button type="button" onClick={() => setInfoProyecto("acerca")}>Acerca del proyecto</button>
-              <button type="button" onClick={() => setInfoProyecto("estadisticas")}><BarChart3 size={12} /> Estadísticas</button>
+              <button type="button" onClick={() => setInfoProyecto("estadisticas")}>Estadísticas</button>
               <button type="button" onClick={() => setInfoProyecto("fuentes")}>Fuentes y metodología</button>
               <button type="button" onClick={() => setInfoProyecto("agradecimientos")}>Agradecimientos</button>
             </div>
