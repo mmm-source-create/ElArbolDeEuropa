@@ -1759,7 +1759,6 @@ const ALCANCES_FOCO = [
   { id: "cercana", label: "Familia cercana", descripcion: "Padres, hermanos, cónyuges e hijos" },
   { id: "ascendencia", label: "Ascendencia", descripcion: "Todos los antepasados registrados" },
   { id: "descendencia", label: "Descendencia", descripcion: "Todos los descendientes registrados" },
-  { id: "red", label: "Red familiar", descripcion: "Hasta tres saltos por sangre o matrimonio" },
 ];
 
 function conjuntoFoco(id, alcance = "cercana") {
@@ -1767,27 +1766,6 @@ function conjuntoFoco(id, alcance = "cercana") {
   if (!persona) return new Set();
   if (alcance === "ascendencia") return ancestorsOf(id);
   if (alcance === "descendencia") return descendantsOf(id);
-
-  if (alcance === "red") {
-    const vistos = new Set([id]);
-    const cola = [{ id, profundidad: 0 }];
-    while (cola.length) {
-      const actual = cola.shift();
-      if (actual.profundidad >= 3) continue;
-      const ficha = BY_ID[actual.id];
-      const vecinos = uniq([
-        ficha?.padre, ficha?.madre,
-        ...(HIJOS_POR_ID[actual.id] || []),
-        ...listaConyuges(ficha),
-      ]).filter((vecinoId) => BY_ID[vecinoId]);
-      vecinos.forEach((vecinoId) => {
-        if (vistos.has(vecinoId)) return;
-        vistos.add(vecinoId);
-        cola.push({ id: vecinoId, profundidad: actual.profundidad + 1 });
-      });
-    }
-    return vistos;
-  }
 
   const cercanos = new Set([id]);
   [persona.padre, persona.madre].filter((parentId) => BY_ID[parentId]).forEach((parentId) => {
@@ -2425,6 +2403,7 @@ export default function Explorer({ initialPanel = null }) {
   const [modoComparacion, setModoComparacion] = useState("corto");
   const [compareMenuOpen, setCompareMenuOpen] = useState(false);
   const [compareRouteIndex, setCompareRouteIndex] = useState(0);
+  const [focoMenuOpen, setFocoMenuOpen] = useState(false);
   const [focoId, setFocoId] = useState(null);
   const [focoAlcance, setFocoAlcance] = useState("cercana");
   const [anioGlobal, setAnioGlobal] = useState(null);
@@ -2467,6 +2446,7 @@ export default function Explorer({ initialPanel = null }) {
   const [historiaActivaId, setHistoriaActivaId] = useState(null);
   const [historiaPasoIndex, setHistoriaPasoIndex] = useState(0);
   const compareMenuRef = useRef(null);
+  const focoMenuRef = useRef(null);
   const favoritosMenuRef = useRef(null);
   const historiaSnapshotRef = useRef(null);
   const shareStatusTimerRef = useRef(null);
@@ -2638,6 +2618,15 @@ export default function Explorer({ initialPanel = null }) {
     document.addEventListener("pointerdown", cerrarFuera);
     return () => document.removeEventListener("pointerdown", cerrarFuera);
   }, [compareMenuOpen]);
+
+  useEffect(() => {
+    if (!focoMenuOpen) return undefined;
+    const cerrarFuera = (event) => {
+      if (!focoMenuRef.current?.contains(event.target)) setFocoMenuOpen(false);
+    };
+    document.addEventListener("pointerdown", cerrarFuera);
+    return () => document.removeEventListener("pointerdown", cerrarFuera);
+  }, [focoMenuOpen]);
 
   useEffect(() => {
     if (!favoritosOpen) return undefined;
@@ -3739,6 +3728,11 @@ export default function Explorer({ initialPanel = null }) {
               >
                 Todos los años
               </button>
+              {Number.isFinite(anioGlobal) && (
+                <span className="global-year-inline-summary">
+                  {personasVivasEnAnio.length} vivas · {gobernantesActivosEnAnio.length} gobernando
+                </span>
+              )}
             </div>
             <div className="history-playback-controls" aria-label="Reproducción automática de la historia">
               <button
@@ -3758,7 +3752,6 @@ export default function Explorer({ initialPanel = null }) {
                 aria-label={reproduciendoHistoria ? "Pausar reproducción" : "Reproducir historia"}
               >
                 {reproduciendoHistoria ? <Pause size={12} /> : <Play size={12} />}
-                <span>{reproduciendoHistoria ? "Pausar" : "Reproducir"}</span>
               </button>
               <button
                 type="button"
@@ -3781,11 +3774,6 @@ export default function Explorer({ initialPanel = null }) {
                   <option value={10}>10 años/paso</option>
                 </select>
               </label>
-            </div>
-            <div className="global-year-summary">
-              {Number.isFinite(anioGlobal)
-                ? `${personasVivasEnAnio.length} personas vivas · ${gobernantesActivosEnAnio.length} gobernando`
-                : "Todos los años · mueve el control o escribe una fecha"}
             </div>
           </div>
         </section>
@@ -3832,6 +3820,7 @@ export default function Explorer({ initialPanel = null }) {
                     setMode(entrar ? "compare" : "view");
                     if (entrar) { setOrigen(null); setDestino(null); setCompareRouteIndex(0); }
                     setCompareMenuOpen(false);
+                    setFocoMenuOpen(false);
                   }}
                 >
                   <GitCompare size={12} /> Comparar parentesco
@@ -3839,7 +3828,10 @@ export default function Explorer({ initialPanel = null }) {
                 <button
                   type="button"
                   className={`nav-btn compare-menu-btn ${mode === "compare" ? "active" : ""}`}
-                  onClick={() => setCompareMenuOpen((actual) => !actual)}
+                  onClick={() => {
+                    setCompareMenuOpen((actual) => !actual);
+                    setFocoMenuOpen(false);
+                  }}
                   aria-haspopup="menu"
                   aria-expanded={compareMenuOpen}
                   title="Elegir tipo de comparación"
@@ -3870,17 +3862,56 @@ export default function Explorer({ initialPanel = null }) {
                   </div>
                 )}
               </div>
-              <button
-                type="button"
-                className={`nav-btn nav-btn-wide ${mode === "foco" ? "active" : ""}`}
-                onClick={() => {
-                  const entrar = mode !== "foco";
-                  setMode(entrar ? "foco" : "view");
-                  setFocoId(entrar ? (seleccion?.id || null) : null);
-                }}
-              >
-                <Focus size={12} /> Modo foco
-              </button>
+              <div className="compare-split-control" ref={focoMenuRef}>
+                <button
+                  type="button"
+                  className={`nav-btn nav-btn-wide compare-main-btn ${mode === "foco" ? "active" : ""}`}
+                  onClick={() => {
+                    const entrar = mode !== "foco";
+                    setMode(entrar ? "foco" : "view");
+                    setFocoId(entrar ? (seleccion?.id || null) : null);
+                    setFocoMenuOpen(false);
+                    setCompareMenuOpen(false);
+                  }}
+                >
+                  <Focus size={12} /> Modo foco
+                </button>
+                <button
+                  type="button"
+                  className={`nav-btn compare-menu-btn ${mode === "foco" ? "active" : ""}`}
+                  onClick={() => {
+                    setFocoMenuOpen((actual) => !actual);
+                    setCompareMenuOpen(false);
+                  }}
+                  aria-haspopup="menu"
+                  aria-expanded={focoMenuOpen}
+                  title="Elegir alcance del modo foco"
+                >
+                  <ChevronDown size={11} />
+                </button>
+                {focoMenuOpen && (
+                  <div className="compare-mode-menu" role="menu">
+                    {ALCANCES_FOCO.map((opcion) => (
+                      <button
+                        type="button"
+                        key={opcion.id}
+                        role="menuitemradio"
+                        aria-checked={focoAlcance === opcion.id}
+                        className={`compare-mode-option${focoAlcance === opcion.id ? " active" : ""}`}
+                        onClick={() => {
+                          setFocoAlcance(opcion.id);
+                          if (mode !== "foco") setFocoId(seleccion?.id || null);
+                          setMode("foco");
+                          setFocoMenuOpen(false);
+                        }}
+                      >
+                        <strong>{opcion.label}</strong>
+                        <span>{opcion.descripcion}</span>
+                      </button>
+                    ))}
+                  </div>
+                )}
+              </div>
               <button type="button" className={`nav-btn nav-btn-wide${historiaActiva ? " active" : ""}`} onClick={() => setInfoProyecto("historias")}>
                 <BookOpen size={12} /> Historias
               </button>
@@ -3973,20 +4004,7 @@ export default function Explorer({ initialPanel = null }) {
       {mode === "foco" && (
         <div className="compare-bar workspace-mode-bar focus-mode-bar">
           <span>Foco: <b>{focoId ? BY_ID[focoId]?.nombre : "haz clic en una persona"}</b></span>
-          <div className="focus-scope-switcher" role="group" aria-label="Alcance del modo foco">
-            {ALCANCES_FOCO.map((opcion) => (
-              <button
-                type="button"
-                key={opcion.id}
-                className={focoAlcance === opcion.id ? "active" : ""}
-                onClick={() => setFocoAlcance(opcion.id)}
-                title={opcion.descripcion}
-                aria-pressed={focoAlcance === opcion.id}
-              >
-                {opcion.label}
-              </button>
-            ))}
-          </div>
+          <span className="compare-mode-label">{ALCANCES_FOCO.find((opcion) => opcion.id === focoAlcance)?.label || "Familia cercana"}</span>
           {focoSet && (
             <span className="focus-count">
               {focoSet.size} persona{focoSet.size === 1 ? "" : "s"}
