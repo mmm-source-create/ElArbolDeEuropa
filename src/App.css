@@ -3676,36 +3676,6 @@ html, body {
   flex-wrap: wrap;
 }
 
-.focus-scope-switcher {
-  display: inline-flex;
-  align-items: center;
-  gap: 4px;
-  flex-wrap: wrap;
-}
-
-.focus-scope-switcher button {
-  min-height: 24px;
-  padding: 0 8px;
-  border: 1px solid #D9CFB6;
-  border-radius: 999px;
-  background: #fff;
-  color: #6B6350;
-  font-family: -apple-system, 'Segoe UI', sans-serif;
-  font-size: 10px;
-  font-weight: 600;
-  cursor: pointer;
-}
-
-.focus-scope-switcher button:hover {
-  background: #F5EFDE;
-}
-
-.focus-scope-switcher button.active {
-  background: #7A2E2E;
-  color: #F6F1E4;
-  border-color: #7A2E2E;
-}
-
 .focus-count {
   margin-left: auto;
   color: #8A7F65;
@@ -3717,12 +3687,75 @@ html, body {
     align-items: flex-start;
   }
 
-  .focus-scope-switcher {
-    width: 100%;
-    order: 3;
-  }
-
   .focus-count {
     margin-left: 0;
+  }
+}
+
+/* ==========================================
+   18. FOCO DESPLEGABLE + AÃ‘O GLOBAL COMPACTO V12
+   ========================================== */
+.workspace-toolbar-year .global-year-control-inline {
+  grid-template-columns: minmax(190px, auto) minmax(230px, 1fr);
+  gap: 7px 10px;
+  align-items: center;
+}
+
+.workspace-toolbar-year .global-year-control-inline .global-year-range {
+  grid-column: 1 / -1;
+  grid-row: 1;
+}
+
+.workspace-toolbar-year .global-year-entry-row {
+  grid-column: 1;
+  grid-row: 2;
+  flex-wrap: nowrap;
+}
+
+.workspace-toolbar-year .history-playback-controls {
+  grid-column: 2;
+  grid-row: 2;
+  justify-self: start;
+  flex-wrap: nowrap;
+}
+
+.workspace-toolbar-year .history-playback-main {
+  min-width: 26px;
+  width: 26px;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.global-year-inline-summary {
+  min-width: 0;
+  color: #8A7F65;
+  font-family: -apple-system, 'Segoe UI', sans-serif;
+  font-size: 9.5px;
+  line-height: 1.2;
+  white-space: nowrap;
+}
+
+@container linajes-app (max-width: 1180px) {
+  .workspace-toolbar-year .global-year-control-inline {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .workspace-toolbar-year .global-year-control-inline .global-year-range,
+  .workspace-toolbar-year .global-year-entry-row,
+  .workspace-toolbar-year .history-playback-controls {
+    grid-column: 1;
+    grid-row: auto;
+  }
+}
+
+@container linajes-app (max-width: 700px) {
+  .workspace-toolbar-year .global-year-entry-row,
+  .workspace-toolbar-year .history-playback-controls {
+    flex-wrap: wrap;
+  }
+
+  .global-year-inline-summary {
+    width: 100%;
+    white-space: normal;
   }
 }
