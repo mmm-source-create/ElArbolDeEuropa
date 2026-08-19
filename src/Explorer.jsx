@@ -341,18 +341,33 @@ const ACCENTS = {
   "Anjou":"#474a8e","Paleólogo":"#9B3E6E","Wittelsbach":"#517b9d","Hohenstaufen":"#946B3D",
   "Luxemburgo":"#175180","Jagellón":"#2c6748","Familias menores":"#71717A","Capeto":"#1f1a99",
   "Borgoña":"#8C5A2B","Barcelona":"#A13D3D","Brabante":"#3D7A5C","Visconti":"#6B7280","Alfonsina":"#B08628",
-  "Borbón":"#3B4E9E","Courtenay":"#7A4E9E","Valois":"#5A7EA8","Ivrea":"#acb055","Trastámara":"#e1de3e", "Avís":"#4ad0ac",
-  "Plantagenet":"#7B4F32", "Sforza":"#486B8A", "Borja":"#7A375B", "Braganza":"#3E7563",
-  "Gonzaga":"#7D6840", "Paleólogo":"#9B3E6E", "Otras dinastías":"#71717A",
-  "Tudor":"#8A5C45", "Estuardo":"#6C567F", "Vasa":"#B48A2F", "Rurikida":"#526F8D",
-  "Hohenzollern":"#303C59", "Nassau":"#C08A38", "Welf":"#A65C43", "Oldemburgo":"#486D75",
-  "Romanov":"#6F527A", "Holstein-Gottorp":"#47727A", "Hannover":"#6B5C91",
-  "Saboya":"#B65C78", "Lorena":"#9A7A46", "Champaña":"#A57C52", "Foix":"#8F5E3E",
-  "Dampierre":"#6F7A45", "Baux":"#8A6A62", "Este":"#8A5D70", "Médici":"#A67032",
-  "Farnesio":"#725D8A", "Álvarez de Toledo":"#5F6874",
-  "Casas italianas":"#7A6658", "Casas ibéricas":"#7B5D4A", "Casas francesas":"#687A91",
-  "Casas germánicas":"#606B57", "Casas británicas":"#756777",
-  "Casas escandinavas":"#557987", "Casas orientales":"#765B83", "Sin casa identificada":"#71717A",
+  "Borbón":"#3B4E9E","Courtenay":"#7A4E9E","Valois":"#5A7EA8","Ivrea":"#acb055","Trastámara":"#e1de3e","Avís":"#4ad0ac",
+  "Plantagenet":"#7B4F32","Sforza":"#486B8A","Borja":"#7A375B","Braganza":"#3E7563",
+  "Gonzaga":"#7D6840","Otras dinastías":"#71717A",
+
+  // Grandes ramas que antes caían en el color genérico.
+  "Wettin":"#4F7B58","Ivrea-Borgoña":"#9BA55A","Valois-Angulema":"#688FB2","Valois-Borgoña":"#776F9B",
+  "Valois-Orleans":"#6C8CA5","Casa de Aragón":"#AA4D43","Barcelona-Sicilia":"#A54C50","Habsburgo-Lorena":"#B05B61",
+  "Plantagenet-Lancaster":"#8B5D3F","Plantagenet-York":"#6B7F4B","Saboya-Carignano":"#C1728D","Évreux":"#6E82A8",
+  "Artois":"#8B6F9D","Colonna":"#7D6B88","Orsini":"#9B7548","Della Rovere":"#718665","Albret":"#6C7D52",
+  "Borbón-Orleans":"#5B72A9","Anjou-Durazzo":"#565991","Anjou-Tarento":"#63619C","Ludovingios":"#6F7954",
+
+  // Casas británicas, germánicas, orientales y escandinavas.
+  "Tudor":"#8A5C45","Estuardo":"#6C567F","Rurikida":"#526F8D",
+  "Hohenzollern":"#303C59","Nassau":"#C08A38","Welf":"#A65C43","Oldemburgo":"#486D75",
+  "Romanov":"#6F527A","Holstein-Gottorp":"#47727A","Hannover":"#6B5C91",
+  "Mecklemburgo":"#4F8075","Hesse":"#6E7B45","Ascania":"#8D7A45","Estridsen":"#8FB9C9",
+
+  // Suecia: una familia visual de azules claros, manteniendo cada casa distinguible.
+  "Vasa":"#8EC5E8","Bjälbo":"#A8D8EE","Folkunga":"#9FCFE6","Erik":"#B4DDF0","Sverker":"#91BED6",
+  "Bonde":"#7FB5D2","Sture":"#6FA8C8","Bernadotte":"#5E9BC2",
+
+  "Saboya":"#B65C78","Lorena":"#9A7A46","Champaña":"#A57C52","Foix":"#8F5E3E",
+  "Dampierre":"#6F7A45","Baux":"#8A6A62","Este":"#8A5D70","Médici":"#A67032","Medici de Milán":"#8B784C",
+  "Farnesio":"#725D8A","Álvarez de Toledo":"#5F6874",
+  "Casas italianas":"#7A6658","Casas ibéricas":"#7B5D4A","Casas francesas":"#687A91",
+  "Casas germánicas":"#606B57","Casas británicas":"#756777",
+  "Casas escandinavas":"#557987","Casas orientales":"#765B83","Sin casa identificada":"#71717A",
 };
 const PATH_COLOR = "#C97B2E";
 
@@ -3680,7 +3695,14 @@ export default function Explorer({ initialPanel = null }) {
         </section>
 
         <section className="workspace-topbar-section workspace-toolbar-year">
-          <div className="toolbar-label">Año global</div>
+          <div className="global-year-heading-row">
+            <div className="toolbar-label">Año global</div>
+            {Number.isFinite(anioGlobal) && (
+              <span className="global-year-header-summary">
+                {personasVivasEnAnio.length} vivas · {gobernantesActivosEnAnio.length} gobernando
+              </span>
+            )}
+          </div>
           <div className="global-year-control global-year-control-inline" aria-label="Selector global de año">
             <input
               className={`global-year-range${Number.isFinite(anioGlobal) ? "" : " is-idle"}`}
@@ -3728,11 +3750,6 @@ export default function Explorer({ initialPanel = null }) {
               >
                 Todos los años
               </button>
-              {Number.isFinite(anioGlobal) && (
-                <span className="global-year-inline-summary">
-                  {personasVivasEnAnio.length} vivas · {gobernantesActivosEnAnio.length} gobernando
-                </span>
-              )}
             </div>
             <div className="history-playback-controls" aria-label="Reproducción automática de la historia">
               <button
