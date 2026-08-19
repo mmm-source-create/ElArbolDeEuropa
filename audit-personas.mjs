@@ -129,6 +129,13 @@ for (const p of PERSONAS) {
     }
   }
 
+  const childIds = HIJOS_POR_ID[id] || [];
+  if (childIds.length > 0 && spouses(p).length === 0 && lovers(p).length === 0) {
+    const sample = childIds.slice(0, 4).map((childId) => BY_ID[childId]?.nombre || childId).join(", ");
+    const rest = childIds.length > 4 ? ` (+${childIds.length - 4} más)` : "";
+    add("INFO", "PARENT_WITHOUT_PARTNER", id, `${p.nombre}: ${childIds.length} hijo(s) registrado(s), sin cónyuge ni amante registrado · ${sample}${rest}`);
+  }
+
   if (!Number.isFinite(p.nac) && !Number.isFinite(p.muer)) add("INFO", "DATES_UNKNOWN", id, `${p.nombre}: sin fechas de nacimiento ni muerte`);
   if (!p.padre && !p.madre) add("INFO", "ANCESTRY_EMPTY", id, `${p.nombre}: sin ascendencia registrada`);
 }
