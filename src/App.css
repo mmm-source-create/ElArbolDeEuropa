@@ -3726,13 +3726,23 @@ html, body {
   padding-right: 0;
 }
 
-.global-year-inline-summary {
+.global-year-heading-row {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 10px;
+  min-width: 0;
+}
+
+.global-year-header-summary {
   min-width: 0;
   color: #8A7F65;
   font-family: -apple-system, 'Segoe UI', sans-serif;
   font-size: 9.5px;
+  font-weight: 500;
   line-height: 1.2;
   white-space: nowrap;
+  text-align: right;
 }
 
 @container linajes-app (max-width: 1180px) {
@@ -3754,8 +3764,13 @@ html, body {
     flex-wrap: wrap;
   }
 
-  .global-year-inline-summary {
-    width: 100%;
+  .global-year-heading-row {
+    flex-wrap: wrap;
+    row-gap: 2px;
+  }
+
+  .global-year-header-summary {
     white-space: normal;
+    text-align: left;
   }
 }
