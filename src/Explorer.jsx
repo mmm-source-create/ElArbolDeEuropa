@@ -4325,15 +4325,19 @@ export default function Explorer({ initialPanel = null }) {
 
                   {IMAGENES_PERSONAS[personaBio.id] && (() => {
                     const imagen = IMAGENES_PERSONAS[personaBio.id];
+                    const objectPosition = imagen.encuadre || imagen.posicion || "50% 20%";
                     return (
                       <figure className="bio-portrait-card">
-                        <img
-                          className="bio-portrait-image"
-                          src={imagen.archivo}
-                          alt={imagen.alt || `Retrato de ${personaBio.nombre}`}
-                          loading="lazy"
-                          decoding="async"
-                        />
+                        <div className="bio-portrait-frame">
+                          <img
+                            className="bio-portrait-image"
+                            src={imagen.archivo}
+                            alt={imagen.alt || `Retrato de ${personaBio.nombre}`}
+                            loading="lazy"
+                            decoding="async"
+                            style={{ objectPosition }}
+                          />
+                        </div>
                         <figcaption className="bio-portrait-caption">
                           <strong>{imagen.tipo}</strong>
                           <span>{imagen.obra}</span>
