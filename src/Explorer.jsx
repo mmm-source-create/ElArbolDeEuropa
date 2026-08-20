@@ -14,6 +14,7 @@ import {
   territoriosGobernadosEnAño,
 } from "./Territorios";
 import { PERSONAS } from "./personas.jsx";
+import { IMAGENES_PERSONAS } from "./imagenesPersonas.js";
 import { EVENTOS_HISTORICOS, HISTORIAS } from "./historiaData.jsx";
 import { DEFAULT_LOCALE, SITE, t } from "./i18n.jsx";
 import TREE_BASE from "./generated/treeBase.json";
@@ -4321,6 +4322,42 @@ export default function Explorer({ initialPanel = null }) {
                       )}
                     </div>
                   </div>
+
+                  {IMAGENES_PERSONAS[personaBio.id] && (() => {
+                    const imagen = IMAGENES_PERSONAS[personaBio.id];
+                    return (
+                      <figure className="bio-portrait-card">
+                        <img
+                          className="bio-portrait-image"
+                          src={imagen.archivo}
+                          alt={imagen.alt || `Retrato de ${personaBio.nombre}`}
+                          loading="lazy"
+                          decoding="async"
+                        />
+                        <figcaption className="bio-portrait-caption">
+                          <strong>{imagen.tipo}</strong>
+                          <span>{imagen.obra}</span>
+                          <span>{imagen.autor}{imagen.fecha ? ` · ${imagen.fecha}` : ""}</span>
+                          {imagen.institucion && <span>{imagen.institucion}</span>}
+                          <span className="bio-portrait-rights">
+                            {imagen.derechos}
+                            {imagen.fuenteUrl && (
+                              <>
+                                {" · "}
+                                <a href={imagen.fuenteUrl} target="_blank" rel="noreferrer">Fuente</a>
+                              </>
+                            )}
+                            {imagen.derechosUrl && (
+                              <>
+                                {" · "}
+                                <a href={imagen.derechosUrl} target="_blank" rel="noreferrer">Derechos</a>
+                              </>
+                            )}
+                          </span>
+                        </figcaption>
+                      </figure>
+                    );
+                  })()}
 
                   {personaBio.biografia && <p className="bio-texto">{personaBio.biografia}</p>}
 
