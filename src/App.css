@@ -711,6 +711,66 @@ html, body {
   display: inline-block;
 }
 
+.bio-portrait-card {
+  display: grid;
+  grid-template-columns: 116px minmax(0, 1fr);
+  gap: 10px;
+  align-items: start;
+  margin: 2px 0 12px;
+  padding: 8px;
+  border: 1px solid #E2D8C3;
+  border-radius: 6px;
+  background: #F4ECD9;
+}
+
+.bio-portrait-image {
+  display: block;
+  width: 116px;
+  height: auto;
+  border-radius: 4px;
+  border: 1px solid #D7CCB5;
+}
+
+.bio-portrait-caption {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding-top: 1px;
+  color: #746A58;
+  font-size: 9.5px;
+  line-height: 1.35;
+}
+
+.bio-portrait-caption strong {
+  color: #4A4436;
+  font-size: 10px;
+}
+
+.bio-portrait-rights {
+  margin-top: 3px;
+  color: #8A7F65;
+}
+
+.bio-portrait-caption a {
+  color: #7A2E2E;
+  text-decoration: none;
+}
+
+.bio-portrait-caption a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 420px) {
+  .bio-portrait-card {
+    grid-template-columns: 98px minmax(0, 1fr);
+  }
+
+  .bio-portrait-image {
+    width: 98px;
+  }
+}
+
 .bio-texto {
   margin: 10px 0;
   line-height: 150%;
