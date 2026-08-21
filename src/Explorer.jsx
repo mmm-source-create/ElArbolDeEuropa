@@ -4326,6 +4326,7 @@ export default function Explorer({ initialPanel = null }) {
                   {IMAGENES_PERSONAS[personaBio.id] && (() => {
                     const imagen = IMAGENES_PERSONAS[personaBio.id];
                     const objectPosition = imagen.encuadre || imagen.posicion || "50% 20%";
+                    const zoom = Number.isFinite(imagen.zoom) && imagen.zoom > 0 ? imagen.zoom : 1;
                     return (
                       <figure className="bio-portrait-card">
                         <div className="bio-portrait-frame">
@@ -4335,7 +4336,11 @@ export default function Explorer({ initialPanel = null }) {
                             alt={imagen.alt || `Retrato de ${personaBio.nombre}`}
                             loading="lazy"
                             decoding="async"
-                            style={{ objectPosition }}
+                            style={{
+                              objectPosition,
+                              transform: `scale(${zoom})`,
+                              transformOrigin: objectPosition,
+                            }}
                           />
                         </div>
                         <figcaption className="bio-portrait-caption">
