@@ -39,7 +39,7 @@ export const IMAGENES_PERSONAS = {
   FEL2ESP: {
     archivo: "/personas-img/FEL2ESP.webp",
     encuadre: "52% 18%",
-    zoom: 2,
+    zoom: 1.9,
     alt: "Retrato de Felipe II de España",
     tipo: "Retrato contemporáneo",
     obra: "Retrato de Felipe II",
