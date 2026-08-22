@@ -345,7 +345,8 @@ export const EVENTOS_HISTORICOS = [
     anio: 1571,
     titulo: "Batalla de Lepanto",
     categoria: "guerra",
-    descripcion: "La Liga Santa derrota a la flota otomana en una de las grandes batallas navales del Mediterráneo."
+    personas: ["DONJUANAUST", "MARCANTONIO2COL", "SEBASTIANOVENIER", "GIANANDREADORIA", "AGOSTINOBARBARIGO", "ALVAROBAZAN", "ALIPASHALEPANTO", "SELIM2OSM"],
+    descripcion: "La flota de la Liga Santa, dirigida por don Juan de Austria y compuesta principalmente por fuerzas de la Monarquía Hispánica, Venecia y los Estados Pontificios, derrota a la armada otomana de Alí Bajá. La victoria no expulsa al Imperio otomano del Mediterráneo, pero destruye gran parte de su flota de combate y se convierte en un enorme triunfo político y simbólico de la coalición."
   },
   {
     id: "ARMADA_1588",
@@ -887,10 +888,10 @@ export const EVENTOS_HISTORICOS = [
   {
     id: "VIENA_1683",
     anio: 1683,
-    titulo: "Sobieski en Viena",
+    titulo: "Socorro y batalla de Viena",
     categoria: "guerra",
-    personas: ["JUAN3SOBIESKI", "MARIAKAZIMIERA"],
-    descripcion: "El rey electo Juan III Sobieski alcanza fama europea al encabezar las fuerzas que socorren Viena frente al Imperio otomano. La corona electiva todavía puede producir un monarca de enorme prestigio militar."
+    personas: ["JUAN3SOBIESKI", "LEOP1HRE", "CHARLES5LOR", "STARHEMBERG", "MAX2EMANBAV", "JOHANNGEORG3SAX", "KARAMUSTAFA", "MEHMED4OSM"],
+    descripcion: "El ejército de socorro dirigido por Juan III Sobieski, con fuerzas polacas, habsbúrgicas y del Sacro Imperio, rompe el sitio otomano de Viena el 12 de septiembre de 1683. La victoria abre una nueva fase de la guerra en Hungría y refuerza el ascenso de la monarquía de los Habsburgo en Europa central."
   },
   {
     id: "WETTIN_POLONIA_1697",
@@ -931,6 +932,282 @@ export const EVENTOS_HISTORICOS = [
     categoria: "politica",
     personas: ["STAN2PONIAT", "FREDWIL2PRU", "CATHERINE2RUS"],
     descripcion: "La tercera partición borra del mapa político a la Mancomunidad polaco-lituana y obliga a Estanislao Augusto a abdicar. El experimento de la corona elegida concluye bajo la presión de las monarquías vecinas."
+  },
+
+  {
+    id: "MUERTE_ENRIQUE2_1559",
+    anio: 1559,
+    titulo: "Muere Enrique II de Francia",
+    categoria: "dinastia",
+    personas: ["ENRIQ2FRA", "FRANC2FRA", "CATAMEDICI", "FRAN1GUISA"],
+    descripcion: "La muerte accidental de Enrique II deja la corona a Francisco II. La juventud del nuevo rey eleva la influencia de los Guisa y sitúa a Catalina de Médici ante una crisis dinástica y confesional creciente."
+  },
+  {
+    id: "REGENCIA_CATALINA_1560",
+    anio: 1560,
+    titulo: "Catalina de Médici dirige la monarquía",
+    categoria: "politica",
+    personas: ["CATAMEDICI", "CARLOS9FRA", "LUIS1CONDE", "FRAN1GUISA"],
+    descripcion: "Tras la muerte de Francisco II, Carlos IX sube al trono siendo menor de edad. Catalina intenta sostener la autoridad real entre el partido católico de los Guisa y una nobleza protestante cada vez más organizada."
+  },
+  {
+    id: "WASSY_1562",
+    anio: 1562,
+    titulo: "Wassy: comienza la guerra abierta",
+    categoria: "guerra",
+    personas: ["FRAN1GUISA", "LUIS1CONDE", "CATAMEDICI"],
+    descripcion: "La matanza de protestantes en Wassy por hombres del duque de Guisa acelera el levantamiento encabezado por Luis de Condé y abre la primera de las Guerras de Religión francesas."
+  },
+  {
+    id: "JARNAC_1569",
+    anio: 1569,
+    titulo: "Jarnac: muere Condé",
+    categoria: "guerra",
+    personas: ["LUIS1CONDE", "GASPARD2COLIGNY", "ENRIQ3FRA"],
+    descripcion: "Luis de Condé muere tras la batalla de Jarnac. Gaspar de Coligny queda como el principal jefe militar hugonote mientras el duque de Anjou, futuro Enrique III, gana prestigio en el campo católico."
+  },
+  {
+    id: "SAN_BARTOLOME_1572",
+    anio: 1572,
+    titulo: "La noche de San Bartolomé",
+    categoria: "religion",
+    personas: ["CATAMEDICI", "CARLOS9FRA", "GASPARD2COLIGNY", "ENRIQ4FRA", "MARGVALOIS"],
+    descripcion: "Pocos días después de la boda de Margarita de Valois y Enrique de Navarra, el intento de asesinato de Coligny desemboca en la matanza de dirigentes hugonotes en París y en una nueva oleada de violencia por el reino."
+  },
+  {
+    id: "LIGA_CATOLICA_1585",
+    anio: 1585,
+    titulo: "La Liga Católica desafía la sucesión",
+    categoria: "politica",
+    personas: ["ENRIQ3FRA", "HENRI1GUISE", "ENRIQ4FRA", "FEL2ESP", "CHARLESMAYENNE"],
+    descripcion: "La muerte de Francisco de Anjou convierte a Enrique de Navarra en heredero presunto. Enrique de Guisa reorganiza la Liga Católica, respaldada desde España, para impedir que un protestante herede la corona francesa."
+  },
+  {
+    id: "BARRICADAS_1588",
+    anio: 1588,
+    titulo: "París se levanta por la Liga",
+    categoria: "politica",
+    personas: ["ENRIQ3FRA", "HENRI1GUISE"],
+    descripcion: "La Jornada de las Barricadas obliga a Enrique III a abandonar París y demuestra que la Liga y Enrique de Guisa pueden desafiar directamente al rey en su propia capital."
+  },
+  {
+    id: "ASESINATO_GUISA_1588",
+    anio: 1588,
+    titulo: "Enrique III hace matar al duque de Guisa",
+    categoria: "politica",
+    personas: ["ENRIQ3FRA", "HENRI1GUISE", "CHARLESMAYENNE"],
+    descripcion: "Temiendo perder el control de la monarquía, Enrique III ordena la muerte de Enrique de Guisa en Blois. Carlos de Mayenne recoge la jefatura militar de la Liga y la guerra entra en su fase final."
+  },
+  {
+    id: "ASESINATO_ENRIQUE3_1589",
+    anio: 1589,
+    titulo: "Muere el último Valois",
+    categoria: "dinastia",
+    personas: ["ENRIQ3FRA", "ENRIQ4FRA", "CHARLESMAYENNE"],
+    descripcion: "Enrique III es asesinado después de haberse aliado con Enrique de Navarra contra la Liga. Con su muerte se extingue la línea Valois-Angulema en el trono y Enrique de Navarra reclama la corona como Enrique IV."
+  },
+  {
+    id: "CONVERSION_ENRIQUE4_1593",
+    anio: 1593,
+    titulo: "Enrique IV abraza el catolicismo",
+    categoria: "religion",
+    personas: ["ENRIQ4FRA", "CHARLESMAYENNE", "MARGVALOIS"],
+    descripcion: "La conversión de Enrique IV elimina uno de los mayores obstáculos a su aceptación como rey. La Liga pierde progresivamente apoyos y la guerra deja de ser una simple alternativa entre un rey católico y uno protestante."
+  },
+  {
+    id: "EDICTO_NANTES_1598",
+    anio: 1598,
+    titulo: "Edicto de Nantes",
+    categoria: "religion",
+    personas: ["ENRIQ4FRA"],
+    descripcion: "Enrique IV promulga el Edicto de Nantes y concede a los protestantes derechos civiles y un marco limitado de culto y seguridad. La monarquía borbónica cierra la gran fase de las Guerras de Religión sin imponer una uniformidad confesional completa."
+  },
+
+  {
+    id: "MUERTE_FED2_SICILIA_1250",
+    anio: 1250,
+    titulo: "Muere Federico II",
+    categoria: "dinastia",
+    personas: ["FED2HOH", "CONRADO4HOH", "MANFSIC"],
+    descripcion: "La muerte de Federico II deja su reino de Sicilia en manos de una dinastía Hohenstaufen enfrentada al papado. Conrado IV hereda la corona, mientras Manfredo mantiene la posición familiar en Italia."
+  },
+  {
+    id: "BENEVENTO_1266",
+    anio: 1266,
+    titulo: "Benevento: los Anjou toman el reino",
+    categoria: "guerra",
+    personas: ["MANFSIC", "CARLOS1ANJ", "PAPA_CLEMENTE4"],
+    descripcion: "Carlos de Anjou, respaldado por el papado, derrota y mata a Manfredo en Benevento. La monarquía Hohenstaufen pierde el control efectivo de Sicilia y Nápoles."
+  },
+  {
+    id: "TAGLIACOZZO_1268",
+    anio: 1268,
+    titulo: "Conradino: el último intento Hohenstaufen",
+    categoria: "guerra",
+    personas: ["CONRADINOHOH", "CARLOS1ANJ"],
+    descripcion: "Conradino invade Italia para recuperar la herencia de su familia, pero es derrotado en Tagliacozzo y ejecutado en Nápoles. Carlos de Anjou queda como dueño del antiguo reino Hohenstaufen."
+  },
+  {
+    id: "FEDERICO_SICILIA_1296",
+    anio: 1296,
+    titulo: "Sicilia elige a Federico",
+    categoria: "dinastia",
+    personas: ["FEDERICO2SIC", "PEDRO3AR", "BEATCONST", "CARLOS2NAP"],
+    descripcion: "Tras años de guerra, los sicilianos sostienen a Federico, hijo de Pedro III y Constanza de Hohenstaufen. La isla desarrolla una línea política propia frente al Nápoles angevino."
+  },
+  {
+    id: "CALTABELLOTTA_1302",
+    anio: 1302,
+    titulo: "Caltabellotta reconoce dos Sicilias",
+    categoria: "politica",
+    personas: ["FEDERICO2SIC", "CARLOS2NAP"],
+    descripcion: "La paz de Caltabellotta reconoce a Federico en la isla y a los Anjou en el territorio continental. La vieja monarquía siciliana queda políticamente partida entre Trinacria y el reino que la historiografía llamará Nápoles."
+  },
+  {
+    id: "ALFONSO_NAPOLES_1442",
+    anio: 1442,
+    titulo: "Alfonso V conquista Nápoles",
+    categoria: "guerra",
+    personas: ["ALF5ARAG", "RENATOANJOU"],
+    descripcion: "Alfonso V de Aragón derrota la resistencia angevina y entra en Nápoles. Por primera vez desde las Vísperas, un mismo monarca controla Aragón, Trinacria y el reino continental, aunque las coronas conservan identidades separadas."
+  },
+  {
+    id: "SUCESION_NAPOLES_1458",
+    anio: 1458,
+    titulo: "La herencia de Alfonso vuelve a separarse",
+    categoria: "dinastia",
+    personas: ["ALF5ARAG", "FERN1NAP", "JUAN2ARAG"],
+    descripcion: "A la muerte de Alfonso V, Aragón y Trinacria pasan a su hermano Juan II, mientras Nápoles queda para su hijo Fernando. La unión personal no se convierte en una fusión estable de las coronas."
+  },
+  {
+    id: "TRATADO_GRANADA_1500",
+    anio: 1500,
+    titulo: "Francia y Aragón se reparten Nápoles",
+    categoria: "politica",
+    personas: ["LUIS12FRA", "FERN2ARAG", "FED1NAP"],
+    descripcion: "Luis XII y Fernando el Católico acuerdan repartirse el reino de Federico I. La cooperación dura poco: las disputas sobre los límites de la partición convierten a los antiguos aliados en enemigos."
+  },
+  {
+    id: "CERIGNOLA_1503",
+    anio: 1503,
+    titulo: "Cerignola: el Gran Capitán cambia la guerra",
+    categoria: "guerra",
+    personas: ["GRANCAPITAN", "FERN2ARAG", "LUIS12FRA"],
+    descripcion: "Las fuerzas de Gonzalo Fernández de Córdoba derrotan a los franceses en Cerignola. El empleo combinado de infantería, fortificación de campaña y armas de fuego consolida la posición aragonesa en el sur de Italia."
+  },
+  {
+    id: "GARIGLIANO_1503",
+    anio: 1503,
+    titulo: "El Garigliano decide Nápoles",
+    categoria: "guerra",
+    personas: ["GRANCAPITAN", "FERN2ARAG", "LUIS12FRA"],
+    descripcion: "Una segunda gran victoria del Gran Capitán obliga a las fuerzas francesas a retirarse. El equilibrio nacido del reparto de 1500 se rompe definitivamente a favor de Fernando."
+  },
+  {
+    id: "NAPOLES_FERNANDO_1504",
+    anio: 1504,
+    titulo: "Fernando reúne Nápoles y Trinacria bajo su corona",
+    categoria: "dinastia",
+    personas: ["FERN2ARAG", "GRANCAPITAN", "LUIS12FRA"],
+    descripcion: "La derrota francesa deja a Fernando el Católico como rey de Nápoles además de Trinacria. Las dos partes de la antigua monarquía siciliana vuelven a compartir soberano, aunque seguirán administrándose como reinos distintos."
+  },
+
+  {
+    id: "SOLIMAN_1520",
+    anio: 1520,
+    titulo: "Solimán y el gran avance otomano",
+    categoria: "guerra",
+    personas: ["SULEIMAN1OSM"],
+    descripcion: "El largo reinado de Solimán I lleva el poder otomano a una de sus mayores expansiones. El Mediterráneo oriental y Europa central quedan convertidos en frentes permanentes de competencia con las potencias cristianas."
+  },
+  {
+    id: "SELIM2_1566",
+    anio: 1566,
+    titulo: "Selim II hereda el Imperio otomano",
+    categoria: "dinastia",
+    personas: ["SULEIMAN1OSM", "SELIM2OSM"],
+    descripcion: "La muerte de Solimán lleva al trono a Selim II. El nuevo reinado mantiene la presión sobre los dominios venecianos y españoles del Mediterráneo."
+  },
+  {
+    id: "CHIPRE_1570",
+    anio: 1570,
+    titulo: "La invasión de Chipre fuerza a Venecia a buscar aliados",
+    categoria: "guerra",
+    personas: ["SELIM2OSM", "SEBASTIANOVENIER", "ALIPASHALEPANTO"],
+    descripcion: "La ofensiva otomana contra Chipre amenaza una de las grandes posesiones venecianas del Levante. Venecia necesita convertir su guerra particular en una coalición más amplia."
+  },
+  {
+    id: "LIGA_SANTA_1571",
+    anio: 1571,
+    titulo: "Pío V consigue la Liga Santa",
+    categoria: "politica",
+    personas: ["PAPA_PIO5", "FEL2ESP", "DONJUANAUST", "MARCANTONIO2COL", "SEBASTIANOVENIER"],
+    descripcion: "Pío V logra un acuerdo entre la Monarquía Hispánica, Venecia y los Estados Pontificios. Felipe II aporta una parte esencial de los recursos y su hermanastro don Juan de Austria recibe el mando supremo de la flota aliada."
+  },
+  {
+    id: "MESINA_1571",
+    anio: 1571,
+    titulo: "Una flota hecha de rivales",
+    categoria: "guerra",
+    personas: ["DONJUANAUST", "SEBASTIANOVENIER", "MARCANTONIO2COL", "GIANANDREADORIA", "AGOSTINOBARBARIGO", "ALVAROBAZAN"],
+    descripcion: "En Mesina se concentra una armada heterogénea de españoles, venecianos, pontificios, genoveses y otros contingentes italianos. Coordinar intereses distintos es casi tan importante como reunir los barcos."
+  },
+  {
+    id: "PAZ_VENECIA_1573",
+    anio: 1573,
+    titulo: "La victoria no devuelve Chipre",
+    categoria: "politica",
+    personas: ["SELIM2OSM", "SEBASTIANOVENIER"],
+    descripcion: "Venecia firma la paz con el Imperio otomano y renuncia a Chipre. Lepanto ha sido una victoria naval extraordinaria, pero no una expulsión otomana del Mediterráneo: el equilibrio estratégico continúa."
+  },
+
+  {
+    id: "THOKOLY_1682",
+    anio: 1682,
+    titulo: "La rebelión húngara abre una puerta al sultán",
+    categoria: "politica",
+    personas: ["IMRETHOKOLY", "LEOP1HRE", "MEHMED4OSM", "KARAMUSTAFA"],
+    descripcion: "Imre Thököly encabeza una oposición húngara a los Habsburgo y busca apoyo otomano. El conflicto interno de la monarquía de Leopoldo I se mezcla con la rivalidad imperial en Europa central."
+  },
+  {
+    id: "ALIANZA_VIENA_1683",
+    anio: 1683,
+    titulo: "Leopoldo y Sobieski pactan el socorro mutuo",
+    categoria: "politica",
+    personas: ["LEOP1HRE", "JUAN3SOBIESKI", "PAPA_INOCENCIO11"],
+    descripcion: "Con mediación papal, Leopoldo I y Juan III Sobieski acuerdan una alianza defensiva. Si Viena o Cracovia son atacadas, el otro soberano deberá acudir en ayuda del aliado."
+  },
+  {
+    id: "SITIO_VIENA_1683",
+    anio: 1683,
+    titulo: "Kara Mustafa cerca Viena",
+    categoria: "guerra",
+    personas: ["KARAMUSTAFA", "MEHMED4OSM", "LEOP1HRE", "STARHEMBERG"],
+    descripcion: "El gran visir Kara Mustafa conduce el ejército otomano hasta Viena. Leopoldo abandona la capital y Ernst Rüdiger von Starhemberg organiza la defensa mientras las fortificaciones sufren semanas de asedio y trabajos de mina."
+  },
+  {
+    id: "EJERCITO_SOCORRO_1683",
+    anio: 1683,
+    titulo: "Polacos, imperiales y príncipes alemanes se reúnen",
+    categoria: "guerra",
+    personas: ["JUAN3SOBIESKI", "CHARLES5LOR", "MAX2EMANBAV", "JOHANNGEORG3SAX", "LEOP1HRE"],
+    descripcion: "Carlos V de Lorena coordina las fuerzas imperiales y se unen contingentes de Baviera, Sajonia y otros territorios del Imperio. Sobieski llega con el ejército polaco y asume el mando de la operación de socorro."
+  },
+  {
+    id: "LIGA_SANTA_1684",
+    anio: 1684,
+    titulo: "De salvar Viena a pasar a la ofensiva",
+    categoria: "politica",
+    personas: ["LEOP1HRE", "JUAN3SOBIESKI", "PAPA_INOCENCIO11", "CHARLES5LOR"],
+    descripcion: "Tras la victoria se forma una nueva Liga Santa. Los Habsburgo, Polonia y Venecia transforman una defensa de emergencia en una guerra prolongada contra el Imperio otomano."
+  },
+  {
+    id: "BUDA_1686",
+    anio: 1686,
+    titulo: "Buda cae ante la coalición",
+    categoria: "guerra",
+    personas: ["LEOP1HRE", "CHARLES5LOR", "MAX2EMANBAV", "MEHMED4OSM"],
+    descripcion: "La conquista de Buda muestra que Viena no fue un episodio aislado. La guerra iniciada en 1683 se convierte en una expansión habsbúrgica por Hungría y altera de forma duradera el equilibrio de Europa central."
   },
 ];
 
@@ -2026,6 +2303,364 @@ export const HISTORIAS = [
         texto: "La tercera partición extingue la Mancomunidad y Estanislao Augusto abdica. El recorrido que comenzó con una dinastía negociando privilegios termina con Rusia, Prusia y Austria repartiéndose el territorio. La República de los nobles fue una anomalía extraordinariamente duradera: una monarquía que convirtió la elección del rey en parte central de su idea de libertad."
       }
     ]
+  },
+
+  {
+    id: "corona-dos-credos",
+    titulo: "Una corona entre dos credos",
+    subtitulo: "Catalina de Médici, los hugonotes y la Liga Católica",
+    disponible: true,
+    descripcion: "Francia pasa de una sucesión aparentemente segura a cuatro décadas de guerras civiles religiosas. Catalina de Médici intenta conservar la monarquía entre Borbones hugonotes y Guisa católicos hasta que la extinción de los Valois entrega la corona al protestante Enrique de Navarra.",
+    pasos: [
+      {
+        anio: 1559,
+        persona: "CATAMEDICI",
+        personas: ["ENRIQ2FRA", "FRANC2FRA", "CATAMEDICI", "FRAN1GUISA"],
+        eventoId: "MUERTE_ENRIQUE2_1559",
+        titulo: "Una muerte cambia el equilibrio de Francia",
+        texto: "Enrique II muere después de un accidente en un torneo. Su hijo Francisco II es joven, está casado con María Estuardo y depende políticamente de los Guisa, tíos de la reina. Catalina de Médici pasa de esposa del rey a madre de una dinastía vulnerable."
+      },
+      {
+        anio: 1560,
+        persona: "CATAMEDICI",
+        personas: ["CATAMEDICI", "CARLOS9FRA", "LUIS1CONDE", "FRAN1GUISA"],
+        eventoId: "REGENCIA_CATALINA_1560",
+        titulo: "Catalina intenta gobernar entre dos partidos",
+        texto: "Francisco II muere sin hijos y su hermano Carlos IX sube al trono siendo un niño. Catalina controla el gobierno, pero no puede ignorar ni a los Guisa, jefes de la reacción católica, ni a los príncipes de sangre Borbón que dan protección política a los reformados."
+      },
+      {
+        anio: 1562,
+        persona: "LUIS1CONDE",
+        personas: ["FRAN1GUISA", "LUIS1CONDE", "CATAMEDICI"],
+        eventoId: "WASSY_1562",
+        titulo: "Wassy convierte la tensión en guerra civil",
+        texto: "La violencia en Wassy, protagonizada por hombres de Francisco de Guisa contra una congregación protestante, destruye el frágil equilibrio. Luis de Condé organiza un ejército hugonote. Francia ya no discute únicamente sobre tolerancia religiosa: dos redes aristocráticas levantan tropas contra sus compatriotas."
+      },
+      {
+        anio: 1569,
+        persona: "GASPARD2COLIGNY",
+        personas: ["LUIS1CONDE", "GASPARD2COLIGNY", "ENRIQ3FRA"],
+        eventoId: "JARNAC_1569",
+        titulo: "Muere Condé; Coligny hereda la causa hugonota",
+        texto: "Condé muere en Jarnac y Gaspar de Coligny queda como el gran jefe militar de los protestantes. En el bando real, el joven duque de Anjou, futuro Enrique III, gana prestigio. Las guerras empiezan a producir la generación que decidirá la sucesión francesa veinte años después."
+      },
+      {
+        anio: 1572,
+        persona: "GASPARD2COLIGNY",
+        personas: ["CATAMEDICI", "CARLOS9FRA", "GASPARD2COLIGNY", "ENRIQ4FRA", "MARGVALOIS"],
+        eventoId: "SAN_BARTOLOME_1572",
+        titulo: "Una boda dinástica termina en matanza",
+        texto: "Catalina casa a su hija Margarita con Enrique de Navarra, uno de los grandes príncipes hugonotes, para reforzar la paz. Días después, el atentado contra Coligny y la matanza de San Bartolomé destruyen esa estrategia. Coligny muere y Enrique de Navarra sobrevive en la corte bajo enorme presión."
+      },
+      {
+        anio: 1574,
+        persona: "ENRIQ3FRA",
+        personas: ["ENRIQ3FRA", "CATAMEDICI", "ENRIQ4FRA", "FRANCISCOANJOU"],
+        titulo: "Enrique III vuelve de Polonia a una Francia rota",
+        texto: "Carlos IX muere y su hermano Enrique abandona la corona polaca para convertirse en Enrique III de Francia. La dinastía Valois conserva el trono, pero el nuevo rey no tiene hijos y su hermano Francisco de Anjou es el último heredero masculino de la familia."
+      },
+      {
+        anio: 1585,
+        persona: "HENRI1GUISE",
+        personas: ["ENRIQ3FRA", "HENRI1GUISE", "ENRIQ4FRA", "FEL2ESP", "CHARLESMAYENNE"],
+        eventoId: "LIGA_CATOLICA_1585",
+        titulo: "La muerte de un príncipe convierte la religión en sucesión",
+        texto: "Francisco de Anjou muere en 1584. Según la sucesión dinástica, el siguiente heredero es Enrique de Navarra: un Borbón y protestante. Enrique de Guisa reorganiza la Liga Católica para impedirlo y obtiene apoyo de Felipe II. Empieza la Guerra de los Tres Enriques."
+      },
+      {
+        anio: 1588,
+        persona: "HENRI1GUISE",
+        personas: ["ENRIQ3FRA", "HENRI1GUISE", "CHARLESMAYENNE"],
+        eventoId: "ASESINATO_GUISA_1588",
+        titulo: "El rey mata al hombre que dominaba París",
+        texto: "Después de que la Jornada de las Barricadas obligue al rey a huir de París, Enrique III concluye que Guisa se ha convertido en un poder rival. Lo hace asesinar en Blois. El golpe elimina al jefe de la Liga, pero no a la Liga: su hermano Carlos de Mayenne toma el mando."
+      },
+      {
+        anio: 1589,
+        persona: "ENRIQ4FRA",
+        personas: ["ENRIQ3FRA", "ENRIQ4FRA", "CHARLESMAYENNE"],
+        eventoId: "ASESINATO_ENRIQUE3_1589",
+        titulo: "El último Valois entrega la sucesión a un Borbón",
+        texto: "Enrique III se alía finalmente con Enrique de Navarra contra los ligueurs, pero es asesinado por el fraile Jacques Clément. En su lecho de muerte reconoce a Navarra como sucesor. Enrique IV es rey por derecho dinástico, aunque todavía debe conquistar políticamente su propio reino."
+      },
+      {
+        anio: 1593,
+        persona: "ENRIQ4FRA",
+        personas: ["ENRIQ4FRA", "CHARLESMAYENNE", "MARGVALOIS"],
+        eventoId: "CONVERSION_ENRIQUE4_1593",
+        titulo: "Para ganar Francia, Enrique cambia de confesión",
+        texto: "Tras años de guerra, Enrique IV abraza el catolicismo. El gesto permite que amplios sectores católicos acepten a un Borbón que hasta entonces consideraban inadmisible. La Liga pierde la principal razón con la que justificaba una sucesión alternativa."
+      },
+      {
+        anio: 1598,
+        persona: "ENRIQ4FRA",
+        personas: ["ENRIQ4FRA", "CATAMEDICI", "HENRI1GUISE", "GASPARD2COLIGNY"],
+        eventoId: "EDICTO_NANTES_1598",
+        titulo: "La monarquía sobrevive a la guerra religiosa",
+        texto: "El Edicto de Nantes establece una convivencia limitada con los protestantes y cierra la fase principal de las guerras. Catalina, Condé, Coligny y Guisa ya han muerto; el superviviente es Enrique IV. La solución no consiste en que un partido conquiste Francia, sino en reconstruir una corona capaz de gobernar sobre ambos."
+      }
+    ]
+  },
+  {
+    id: "reino-partido-dos",
+    titulo: "El reino partido en dos",
+    subtitulo: "Hohenstaufen, Anjou y Aragón por Sicilia y Nápoles",
+    disponible: true,
+    descripcion: "La herencia de Federico II pasa de los Hohenstaufen a los Anjou, provoca la rebelión de las Vísperas y termina creando dos coronas rivales: Nápoles en el continente y Trinacria en la isla. Dos siglos después, Aragón vuelve a reunirlas bajo un mismo monarca.",
+    pasos: [
+      {
+        anio: 1250,
+        persona: "FED2HOH",
+        personas: ["FED2HOH", "CONRADO4HOH", "MANFSIC"],
+        eventoId: "MUERTE_FED2_SICILIA_1250",
+        titulo: "Federico II deja una herencia que el papado no quiere tolerar",
+        texto: "Federico II había unido la dignidad imperial con el reino de Sicilia, rodeando geográficamente a los Estados Pontificios. A su muerte, Conrado IV hereda la corona siciliana y Manfredo mantiene el poder familiar en el sur. El problema no es sólo quién hereda: es si los Hohenstaufen seguirán dominando Italia."
+      },
+      {
+        anio: 1266,
+        persona: "CARLOS1ANJ",
+        personas: ["MANFSIC", "CARLOS1ANJ", "PAPA_CLEMENTE4"],
+        eventoId: "BENEVENTO_1266",
+        titulo: "El papa encuentra un rey contra los Hohenstaufen",
+        texto: "El papado ofrece la corona a Carlos de Anjou, hermano de Luis IX de Francia. Carlos derrota a Manfredo en Benevento y ocupa el reino. Una guerra entre papa y emperador acaba instalando una nueva dinastía francesa en el Mediterráneo central."
+      },
+      {
+        anio: 1268,
+        persona: "CONRADINOHOH",
+        personas: ["CONRADINOHOH", "CARLOS1ANJ"],
+        eventoId: "TAGLIACOZZO_1268",
+        titulo: "Conradino pierde la corona y la vida",
+        texto: "El joven Conradino intenta recuperar la herencia de su padre Conrado IV, pero Carlos lo derrota en Tagliacozzo. Su ejecución en Nápoles elimina al último pretendiente masculino directo de la línea Hohenstaufen y deja a los Anjou aparentemente sin rival."
+      },
+      {
+        anio: 1282,
+        persona: "BEATCONST",
+        personas: ["CARLOS1ANJ", "PEDRO3AR", "BEATCONST"],
+        eventoId: "VISPERAS_SICILIANAS",
+        titulo: "Las Vísperas convierten una rebelión en cuestión dinástica",
+        texto: "La rebelión de Palermo expulsa el poder angevino de buena parte de la isla. Los sicilianos recurren a Pedro III de Aragón, casado con Constanza, hija de Manfredo. Los derechos Hohenstaufen que parecían extinguidos regresan a la política a través de una mujer y de la Casa de Barcelona."
+      },
+      {
+        anio: 1296,
+        persona: "FEDERICO2SIC",
+        personas: ["FEDERICO2SIC", "PEDRO3AR", "BEATCONST", "CARLOS2NAP"],
+        eventoId: "FEDERICO_SICILIA_1296",
+        titulo: "La isla elige su propia rama aragonesa",
+        texto: "Federico, hijo de Pedro III y Constanza, es reconocido como rey en Sicilia. Mientras Carlos II de Anjou mantiene el continente, la familia de Aragón crea en la isla una línea propia. La división deja de ser una ocupación provisional y empieza a convertirse en sistema."
+      },
+      {
+        anio: 1302,
+        persona: "FEDERICO2SIC",
+        personas: ["FEDERICO2SIC", "CARLOS2NAP"],
+        eventoId: "CALTABELLOTTA_1302",
+        titulo: "Una paz reconoce el reino partido",
+        texto: "Caltabellotta acepta de hecho dos monarquías: los Anjou conservan la parte continental y Federico gobierna la isla, llamada cada vez más Trinacria para distinguirla del reino angevino. El nombre de Sicilia sobrevive en ambos lados del estrecho."
+      },
+      {
+        anio: 1442,
+        persona: "ALF5ARAG",
+        personas: ["ALF5ARAG", "RENATOANJOU"],
+        eventoId: "ALFONSO_NAPOLES_1442",
+        titulo: "Alfonso V cruza el estrecho en sentido contrario",
+        texto: "Más de siglo y medio después, Alfonso V de Aragón conquista Nápoles frente a Renato de Anjou. El rey ya gobierna Aragón y Trinacria: la victoria reúne bajo su persona las dos mitades de la antigua monarquía de Federico II."
+      },
+      {
+        anio: 1458,
+        persona: "FERN1NAP",
+        personas: ["ALF5ARAG", "FERN1NAP", "JUAN2ARAG"],
+        eventoId: "SUCESION_NAPOLES_1458",
+        titulo: "Alfonso muere y las coronas vuelven a tomar caminos distintos",
+        texto: "Alfonso no transmite todos sus dominios al mismo heredero. Su hermano Juan II recibe Aragón y Trinacria; Nápoles pasa a su hijo Fernando. La política dinástica demuestra otra vez que compartir soberano no significa fusionar reinos."
+      },
+      {
+        anio: 1494,
+        persona: "CARLOS8FRA",
+        personas: ["CARLOS8FRA", "FERN1NAP", "ALF5ARAG"],
+        eventoId: "GUERRAS_ITALIA",
+        titulo: "Carlos VIII convierte la sucesión napolitana en una guerra europea",
+        texto: "Carlos VIII de Francia reivindica la herencia angevina de Nápoles y entra en Italia con un gran ejército. La facilidad inicial de su avance rompe el equilibrio de la península y abre las Guerras Italianas, donde Francia y Aragón volverán a disputar el mismo reino."
+      },
+      {
+        anio: 1500,
+        persona: "FED1NAP",
+        personas: ["FED1NAP", "LUIS12FRA", "FERN2ARAG"],
+        eventoId: "TRATADO_GRANADA_1500",
+        titulo: "Dos reyes deciden repartirse la corona de un tercero",
+        texto: "Luis XII y Fernando el Católico pactan la partición del reino de Federico I de Nápoles. Francia y Aragón cooperan para expulsar al rey existente, pero el acuerdo deja zonas y derechos mal definidos. La alianza contiene desde el principio la siguiente guerra."
+      },
+      {
+        anio: 1503,
+        persona: "GRANCAPITAN",
+        personas: ["GRANCAPITAN", "FERN2ARAG", "LUIS12FRA"],
+        eventoId: "CERIGNOLA_1503",
+        titulo: "El Gran Capitán decide la disputa en el campo de batalla",
+        texto: "Gonzalo Fernández de Córdoba derrota a los franceses en Cerignola y, meses después, vuelve a vencer en el Garigliano. La disputa jurídica y dinástica de Nápoles se resuelve con una transformación militar: la infantería española demuestra una nueva capacidad para dominar el campo de batalla."
+      },
+      {
+        anio: 1504,
+        persona: "FERN2ARAG",
+        personas: ["FERN2ARAG", "GRANCAPITAN", "LUIS12FRA"],
+        eventoId: "NAPOLES_FERNANDO_1504",
+        titulo: "Fernando vuelve a reunir las dos mitades",
+        texto: "Fernando el Católico queda como rey de Nápoles y ya era rey de Trinacria. Después de Hohenstaufen, Anjou y dos siglos de guerras, las dos partes de la antigua Sicilia comparten otra vez soberano. Pero no desaparecen como coronas separadas: Nápoles y Trinacria seguirán teniendo historias administrativas propias."
+      }
+    ]
+  },
+  {
+    id: "lepanto-alianza",
+    titulo: "Lepanto: la alianza imposible",
+    subtitulo: "Cómo Roma, España y Venecia reunieron una flota contra el Imperio otomano",
+    disponible: true,
+    descripcion: "La conquista otomana de Chipre obliga a potencias católicas con intereses rivales a coordinarse. Pío V construye la Liga Santa, Felipe II aporta el principal poder monárquico y don Juan de Austria recibe una flota en la que venecianos, pontificios, genoveses y españoles deben aprender a combatir juntos.",
+    pasos: [
+      {
+        anio: 1520,
+        persona: "SULEIMAN1OSM",
+        personas: ["SULEIMAN1OSM"],
+        eventoId: "SOLIMAN_1520",
+        titulo: "El Mediterráneo ya tiene una superpotencia",
+        texto: "Solimán el Magnífico hereda un Imperio otomano en expansión y lo lleva a su apogeo. Durante décadas, los Habsburgo, Venecia y otros estados cristianos combaten al mismo rival, pero sus propios intereses impiden que formen una alianza permanente."
+      },
+      {
+        anio: 1566,
+        persona: "SELIM2OSM",
+        personas: ["SULEIMAN1OSM", "SELIM2OSM"],
+        eventoId: "SELIM2_1566",
+        titulo: "Selim II hereda la presión sobre el Mediterráneo",
+        texto: "La muerte de Solimán no termina la expansión otomana. Selim II mantiene una política ofensiva y pronto concentra su atención en Chipre, una posesión veneciana estratégicamente situada en el Mediterráneo oriental."
+      },
+      {
+        anio: 1570,
+        persona: "SEBASTIANOVENIER",
+        personas: ["SELIM2OSM", "SEBASTIANOVENIER", "ALIPASHALEPANTO"],
+        eventoId: "CHIPRE_1570",
+        titulo: "Chipre convierte el problema veneciano en una crisis europea",
+        texto: "La invasión otomana de Chipre obliga a Venecia a pedir ayuda. La república marítima necesita a la Monarquía Hispánica, pero Felipe II también debe proteger España, Italia y el norte de África. Crear la alianza exige decidir quién paga, quién manda y dónde se combatirá."
+      },
+      {
+        anio: 1571,
+        persona: "PAPA_PIO5",
+        personas: ["PAPA_PIO5", "FEL2ESP", "DONJUANAUST", "MARCANTONIO2COL", "SEBASTIANOVENIER"],
+        eventoId: "LIGA_SANTA_1571",
+        titulo: "Pío V consigue lo que parecía imposible",
+        texto: "El papa Pío V actúa como mediador y consigue que España, Venecia y los Estados Pontificios acepten una Liga Santa. Felipe II respalda el proyecto y don Juan de Austria, hijo de Carlos V y hermanastro del rey, recibe el mando supremo."
+      },
+      {
+        anio: 1571,
+        persona: "DONJUANAUST",
+        personas: ["DONJUANAUST", "SEBASTIANOVENIER", "MARCANTONIO2COL", "GIANANDREADORIA", "AGOSTINOBARBARIGO", "ALVAROBAZAN"],
+        eventoId: "MESINA_1571",
+        titulo: "La Liga reúne una flota, no un ejército nacional",
+        texto: "En Mesina se juntan barcos y hombres de jurisdicciones distintas. Venier representa el enorme peso veneciano; Colonna manda el contingente pontificio; Doria dirige las galeras genovesas vinculadas a España; Barbarigo y Bazán reciben mandos tácticos decisivos. Don Juan debe convertir esa suma de fuerzas en una sola armada."
+      },
+      {
+        anio: 1571,
+        persona: "DONJUANAUST",
+        personas: ["DONJUANAUST", "ALIPASHALEPANTO", "MARCANTONIO2COL", "SEBASTIANOVENIER", "AGOSTINOBARBARIGO", "GIANANDREADORIA", "ALVAROBAZAN", "SELIM2OSM"],
+        eventoId: "LEPANTO",
+        titulo: "7 de octubre: la coalición funciona",
+        texto: "En Lepanto las dos grandes flotas chocan frente a frente. Don Juan y Alí Bajá combaten en el centro; Barbarigo manda el ala izquierda, Doria la derecha y Álvaro de Bazán conserva una reserva capaz de acudir a los puntos críticos. La muerte de Alí Bajá y la destrucción de gran parte de la flota otomana convierten la jornada en una victoria extraordinaria de la Liga."
+      },
+      {
+        anio: 1573,
+        persona: "SEBASTIANOVENIER",
+        personas: ["SELIM2OSM", "SEBASTIANOVENIER", "FEL2ESP"],
+        eventoId: "PAZ_VENECIA_1573",
+        titulo: "Lepanto vence una batalla, no conquista el Mediterráneo",
+        texto: "Venecia termina negociando la paz y cede Chipre. El Imperio otomano reconstruye su flota y conserva una enorme capacidad militar. La importancia de Lepanto no está en haber expulsado al turco, sino en demostrar que su poder naval podía ser derrotado cuando sus rivales conseguían coordinarse."
+      }
+    ]
+  },
+  {
+    id: "puertas-viena",
+    titulo: "A las puertas de Viena",
+    subtitulo: "La alianza que convirtió un sitio otomano en una contraofensiva europea",
+    disponible: true,
+    descripcion: "En 1683 una rebelión húngara, la ofensiva de Kara Mustafa y la vulnerabilidad de Viena obligan a Leopoldo I a buscar ayuda. La alianza con Juan III Sobieski y los príncipes del Imperio salva la capital y cambia el sentido de la guerra en Europa central.",
+    pasos: [
+      {
+        anio: 1648,
+        persona: "MEHMED4OSM",
+        personas: ["IBRAHIM1OSM", "MEHMED4OSM"],
+        titulo: "Un sultán niño hereda un imperio que vuelve a avanzar",
+        texto: "Mehmed IV llega al trono con sólo seis años. Durante su largo reinado, la familia de grandes visires Köprülü reconstruye la capacidad militar y administrativa otomana. Cuando la crisis de Hungría se agrave, Constantinopla volverá a mirar hacia Viena."
+      },
+      {
+        anio: 1658,
+        persona: "LEOP1HRE",
+        personas: ["LEOP1HRE", "MEHMED4OSM"],
+        titulo: "Leopoldo I gobierna la frontera más peligrosa del Imperio",
+        texto: "Leopoldo I es elegido emperador mientras los Habsburgo intentan consolidar Austria, Bohemia y Hungría. Su monarquía limita directamente con el mundo otomano y además debe enfrentarse a conflictos religiosos y políticos dentro de la propia Hungría."
+      },
+      {
+        anio: 1682,
+        persona: "IMRETHOKOLY",
+        personas: ["IMRETHOKOLY", "LEOP1HRE", "MEHMED4OSM", "KARAMUSTAFA"],
+        eventoId: "THOKOLY_1682",
+        titulo: "La guerra exterior nace también de una rebelión interior",
+        texto: "Imre Thököly encabeza a los kuruc contrarios a los Habsburgo y acepta apoyo otomano. Kara Mustafa puede presentar la intervención como protección de un aliado húngaro, mientras Leopoldo ve cómo una revuelta interna se transforma en una amenaza estratégica sobre Viena."
+      },
+      {
+        anio: 1683,
+        persona: "JUAN3SOBIESKI",
+        personas: ["LEOP1HRE", "JUAN3SOBIESKI", "PAPA_INOCENCIO11"],
+        eventoId: "ALIANZA_VIENA_1683",
+        titulo: "Leopoldo y Sobieski prometen acudir el uno al otro",
+        texto: "Con mediación de Inocencio XI, el emperador y el rey electo de Polonia pactan una alianza defensiva. Ninguno de los dos puede garantizar por sí solo la seguridad de la frontera: Viena necesitará al ejército polaco y Polonia necesita que Austria siga conteniendo la presión otomana."
+      },
+      {
+        anio: 1683,
+        persona: "STARHEMBERG",
+        personas: ["KARAMUSTAFA", "MEHMED4OSM", "LEOP1HRE", "STARHEMBERG"],
+        eventoId: "SITIO_VIENA_1683",
+        titulo: "Kara Mustafa llega antes que los aliados",
+        texto: "El ejército otomano alcanza Viena en julio. Leopoldo evacua la ciudad y Starhemberg queda al frente de la guarnición. El tiempo pasa a ser el elemento decisivo: los defensores sólo tienen que resistir hasta que una coalición que todavía está reuniéndose consiga llegar."
+      },
+      {
+        anio: 1683,
+        persona: "CHARLES5LOR",
+        personas: ["JUAN3SOBIESKI", "CHARLES5LOR", "MAX2EMANBAV", "JOHANNGEORG3SAX", "LEOP1HRE"],
+        eventoId: "EJERCITO_SOCORRO_1683",
+        titulo: "Un ejército del Imperio se encuentra con el ejército polaco",
+        texto: "Carlos V de Lorena coordina las tropas imperiales mientras Baviera, Sajonia y otros príncipes aportan contingentes. Sobieski atraviesa los Cárpatos con los polacos. La operación de socorro reúne monarquía Habsburgo, Mancomunidad y Sacro Imperio en una fuerza común."
+      },
+      {
+        anio: 1683,
+        persona: "JUAN3SOBIESKI",
+        personas: ["JUAN3SOBIESKI", "LEOP1HRE", "CHARLES5LOR", "STARHEMBERG", "KARAMUSTAFA", "MEHMED4OSM"],
+        eventoId: "VIENA_1683",
+        titulo: "12 de septiembre: el sitio se rompe desde fuera y desde dentro",
+        texto: "El ejército aliado ataca desde las alturas al oeste de Viena mientras Starhemberg mantiene la defensa de la ciudad. Sobieski dirige el conjunto y la carga final de la caballería polaca acelera el colapso de las posiciones de Kara Mustafa. Viena queda liberada y el ejército otomano se retira."
+      },
+      {
+        anio: 1684,
+        persona: "LEOP1HRE",
+        personas: ["LEOP1HRE", "JUAN3SOBIESKI", "PAPA_INOCENCIO11", "CHARLES5LOR"],
+        eventoId: "LIGA_SANTA_1684",
+        titulo: "La alianza deja de ser un socorro de emergencia",
+        texto: "La victoria permite crear una nueva Liga Santa. Austria, Polonia y Venecia pasan a la ofensiva con apoyo papal. La cuestión ya no es impedir que Viena caiga, sino recuperar territorios de Hungría que llevaban generaciones bajo dominio otomano."
+      },
+      {
+        anio: 1686,
+        persona: "CHARLES5LOR",
+        personas: ["LEOP1HRE", "CHARLES5LOR", "MAX2EMANBAV", "MEHMED4OSM"],
+        eventoId: "BUDA_1686",
+        titulo: "Buda demuestra que Viena fue un punto de inflexión",
+        texto: "Tres años después, las fuerzas de la coalición conquistan Buda. El avance no terminará allí: la Gran Guerra Turca desplazará la frontera hacia el sudeste y reforzará decisivamente a los Habsburgo. La alianza que se reunió para salvar una capital acaba transformando el mapa de Europa central."
+      }
+    ]
+  },
+  {
+    id: "ochenta-anos",
+    titulo: "De Flandes a la República",
+    subtitulo: "La revuelta que quebró el dominio de los Habsburgo en los Países Bajos",
+    disponible: false
+  },
+  {
+    id: "guerras-italianas",
+    titulo: "El tablero de Italia",
+    subtitulo: "Valois, Aragón, Habsburgo y papas por el dominio de la península",
+    disponible: false
   },
   {
     id: "corona-demasiado-grande",
