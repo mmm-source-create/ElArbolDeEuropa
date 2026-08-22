@@ -740,8 +740,8 @@ export const IMAGENES_PERSONAS = {
     derechosUrl: "https://creativecommons.org/publicdomain/mark/1.0/",
   },
 
-  ISABARAG: {
-    archivo: "/personas-img/ISABARAG.webp",
+  ISABARAGINF: {
+    archivo: "/personas-img/ISABARAGINF.webp",
     encuadre: "50% 18%",
     zoom: 1,
     alt: "Retrato de Isabel de Aragón",
