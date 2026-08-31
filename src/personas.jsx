@@ -1683,4 +1683,7 @@ export const PERSONAS = [
 
   {"id":"GRANCAPITAN","nombre":"Gonzalo Fernández de Córdoba","sobrenombre":"el Gran Capitán","dinastia":"Fernández de Córdoba","reinos":["Castilla","Nápoles","España"],"titulo":"General / Virrey","nac":1453,"muer":1515},
 
+  {"id":"CERVANTES","nombre":"Miguel de Cervantes Saavedra","dinastia":"Sin casa identificada","reinos":["España"],"titulo":"Soldado / Escritor","nac":1547,"muer":1616},
+  {"id":"ULUCALI","nombre":"Kılıç Ali Paşa (Uluç Alí)","sobrenombre":"Uluç Alí","dinastia":"Sin casa identificada","reinos":["Imperio otomano"],"titulo":"Almirante / Gobernador de Argel","nac":1519,"nacAprox":true,"muer":1587},
+
 ];
