@@ -1,6 +1,11 @@
 export const EVENTOS_HISTORICOS = [
+  // `timeline` controla la visibilidad en la cronología general:
+  // - principal: título visible siempre en modo "Ambos".
+  // - secundario (valor por defecto): hito visible de forma compacta; el título aparece al ampliar.
+  // - historia: hito narrativo oculto salvo cuando es el paso activo de una Historia.
   {
     id: "MAGNA_CARTA",
+    timeline: "principal",
     anio: 1215,
     titulo: "Magna Carta",
     categoria: "politica",
@@ -8,6 +13,7 @@ export const EVENTOS_HISTORICOS = [
   },
   {
     id: "CONSTANTINOPLA_1261",
+    timeline: "principal",
     anio: 1261,
     titulo: "Restauración bizantina de Constantinopla",
     categoria: "politica",
@@ -15,6 +21,7 @@ export const EVENTOS_HISTORICOS = [
   },
   {
     id: "VISPERAS_SICILIANAS",
+    timeline: "principal",
     anio: 1282,
     titulo: "Vísperas Sicilianas",
     categoria: "guerra",
@@ -22,6 +29,7 @@ export const EVENTOS_HISTORICOS = [
   },
   {
     id: "AVINON",
+    timeline: "principal",
     desde: 1309,
     hasta: 1377,
     titulo: "Papado de Aviñón",
@@ -71,6 +79,7 @@ export const EVENTOS_HISTORICOS = [
   },
   {
     id: "CIEN_ANOS",
+    timeline: "principal",
     desde: 1337,
     hasta: 1453,
     titulo: "Guerra de los Cien Años",
@@ -79,6 +88,7 @@ export const EVENTOS_HISTORICOS = [
   },
   {
     id: "PESTE_NEGRA",
+    timeline: "principal",
     desde: 1347,
     hasta: 1351,
     titulo: "Peste Negra en Europa",
@@ -87,6 +97,7 @@ export const EVENTOS_HISTORICOS = [
   },
   {
     id: "BULA_ORO",
+    timeline: "principal",
     anio: 1356,
     titulo: "Bula de Oro",
     categoria: "politica",
@@ -110,6 +121,7 @@ export const EVENTOS_HISTORICOS = [
   },
   {
     id: "CISMA_OCCIDENTE",
+    timeline: "principal",
     desde: 1378,
     hasta: 1417,
     titulo: "Cisma de Occidente",
@@ -118,6 +130,7 @@ export const EVENTOS_HISTORICOS = [
   },
   {
     id: "ALJUBARROTA",
+    timeline: "principal",
     anio: 1385,
     titulo: "Batalla de Aljubarrota",
     categoria: "guerra",
@@ -125,6 +138,7 @@ export const EVENTOS_HISTORICOS = [
   },
   {
     id: "NICOPOLIS",
+    timeline: "principal",
     anio: 1396,
     titulo: "Batalla de Nicópolis",
     categoria: "guerra",
@@ -132,6 +146,7 @@ export const EVENTOS_HISTORICOS = [
   },
   {
     id: "AGINCOURT",
+    timeline: "principal",
     anio: 1415,
     titulo: "Batalla de Agincourt",
     categoria: "guerra",
@@ -216,6 +231,7 @@ export const EVENTOS_HISTORICOS = [
   },
   {
     id: "CONSTANTINOPLA_1453",
+    timeline: "principal",
     anio: 1453,
     titulo: "Caída de Constantinopla",
     categoria: "guerra",
@@ -223,6 +239,7 @@ export const EVENTOS_HISTORICOS = [
   },
   {
     id: "ROSAS",
+    timeline: "principal",
     desde: 1455,
     hasta: 1487,
     titulo: "Guerra de las Dos Rosas",
@@ -239,6 +256,7 @@ export const EVENTOS_HISTORICOS = [
   },
   {
     id: "REYES_CATOLICOS",
+    timeline: "principal",
     anio: 1469,
     titulo: "Matrimonio de Isabel de Castilla y Fernando de Aragón",
     categoria: "dinastia",
@@ -263,6 +281,7 @@ export const EVENTOS_HISTORICOS = [
   },
   {
     id: "BOSWORTH",
+    timeline: "principal",
     anio: 1485,
     titulo: "Batalla de Bosworth",
     categoria: "guerra",
@@ -270,6 +289,7 @@ export const EVENTOS_HISTORICOS = [
   },
   {
     id: "GRANADA_1492",
+    timeline: "principal",
     anio: 1492,
     titulo: "Conquista de Granada",
     categoria: "guerra",
@@ -285,6 +305,7 @@ export const EVENTOS_HISTORICOS = [
   },
   {
     id: "GUERRAS_ITALIA",
+    timeline: "principal",
     desde: 1494,
     hasta: 1559,
     titulo: "Guerras Italianas",
@@ -293,6 +314,7 @@ export const EVENTOS_HISTORICOS = [
   },
   {
     id: "LUTERO_1517",
+    timeline: "principal",
     anio: 1517,
     titulo: "Inicio simbólico de la Reforma luterana",
     categoria: "religion",
@@ -301,6 +323,7 @@ export const EVENTOS_HISTORICOS = [
   },
   {
     id: "WORMS_1521",
+    timeline: "principal",
     anio: 1521,
     titulo: "Dieta de Worms",
     categoria: "religion",
@@ -309,6 +332,7 @@ export const EVENTOS_HISTORICOS = [
   },
   {
     id: "PAVIA_1525",
+    timeline: "principal",
     anio: 1525,
     titulo: "Batalla de Pavía",
     categoria: "guerra",
@@ -317,6 +341,7 @@ export const EVENTOS_HISTORICOS = [
   },
   {
     id: "SACO_ROMA_1527",
+    timeline: "principal",
     anio: 1527,
     titulo: "Saco de Roma",
     categoria: "guerra",
@@ -325,6 +350,7 @@ export const EVENTOS_HISTORICOS = [
   },
   {
     id: "AUGSBURGO_1555",
+    timeline: "principal",
     anio: 1555,
     titulo: "Paz de Augsburgo",
     categoria: "religion",
@@ -342,14 +368,16 @@ export const EVENTOS_HISTORICOS = [
   },
   {
     id: "LEPANTO",
+    timeline: "principal",
     anio: 1571,
     titulo: "Batalla de Lepanto",
     categoria: "guerra",
-    personas: ["DONJUANAUST", "MARCANTONIO2COL", "SEBASTIANOVENIER", "GIANANDREADORIA", "AGOSTINOBARBARIGO", "ALVAROBAZAN", "ALIPASHALEPANTO", "SELIM2OSM"],
-    descripcion: "La flota de la Liga Santa, dirigida por don Juan de Austria y compuesta principalmente por fuerzas de la Monarquía Hispánica, Venecia y los Estados Pontificios, derrota a la armada otomana de Alí Bajá. La victoria no expulsa al Imperio otomano del Mediterráneo, pero destruye gran parte de su flota de combate y se convierte en un enorme triunfo político y simbólico de la coalición."
+    personas: ["DONJUANAUST", "MARCANTONIO2COL", "SEBASTIANOVENIER", "GIANANDREADORIA", "AGOSTINOBARBARIGO", "ALVAROBAZAN", "ALIPASHALEPANTO", "ULUCALI", "SELIM2OSM", "CERVANTES"],
+    descripcion: "La flota de la Liga Santa, dirigida por don Juan de Austria y compuesta principalmente por fuerzas de la Monarquía Hispánica, Venecia y los Estados Pontificios, derrota a la armada otomana de Alí Bajá tras horas de combate de galera contra galera. El centro otomano se derrumba, Uluç Alí consigue salvar parte de su ala y miles de combatientes quedan muertos, heridos o cautivos. La victoria no expulsa al Imperio otomano del Mediterráneo, pero destruye gran parte de su flota de combate y se convierte en un enorme triunfo político y simbólico de la coalición."
   },
   {
     id: "ARMADA_1588",
+    timeline: "principal",
     anio: 1588,
     titulo: "Armada de 1588",
     categoria: "guerra",
@@ -358,6 +386,7 @@ export const EVENTOS_HISTORICOS = [
   },
   {
     id: "TREINTA_ANOS",
+    timeline: "principal",
     desde: 1618,
     hasta: 1648,
     titulo: "Guerra de los Treinta Años",
@@ -366,6 +395,7 @@ export const EVENTOS_HISTORICOS = [
   },
   {
     id: "WESTFALIA",
+    timeline: "principal",
     anio: 1648,
     titulo: "Paz de Westfalia",
     categoria: "politica",
@@ -453,6 +483,7 @@ export const EVENTOS_HISTORICOS = [
   },
   {
     id: "LEONARDO_MILAN_1482",
+    timeline: "historia",
     anio: 1482,
     titulo: "Leonardo entra al servicio de los Sforza",
     categoria: "cultura",
@@ -461,6 +492,7 @@ export const EVENTOS_HISTORICOS = [
   },
   {
     id: "DAMA_ARMINO_1490",
+    timeline: "historia",
     anio: 1490,
     titulo: "La Dama del armiño",
     categoria: "cultura",
@@ -469,6 +501,7 @@ export const EVENTOS_HISTORICOS = [
   },
   {
     id: "BIANCA_SFORZA_1496",
+    timeline: "historia",
     anio: 1496,
     titulo: "Bianca Giovanna Sforza",
     categoria: "dinastia",
@@ -477,6 +510,7 @@ export const EVENTOS_HISTORICOS = [
   },
   {
     id: "LEONARDO_BORJA_1502",
+    timeline: "historia",
     anio: 1502,
     titulo: "Leonardo al servicio de César Borja",
     categoria: "politica",
@@ -485,6 +519,7 @@ export const EVENTOS_HISTORICOS = [
   },
   {
     id: "GIOCONDA_1503",
+    timeline: "historia",
     anio: 1503,
     titulo: "Comienza la historia de la Gioconda",
     categoria: "cultura",
@@ -493,6 +528,7 @@ export const EVENTOS_HISTORICOS = [
   },
   {
     id: "LEONARDO_MILAN_1506",
+    timeline: "historia",
     anio: 1506,
     titulo: "Leonardo regresa a Milán",
     categoria: "cultura",
@@ -501,6 +537,7 @@ export const EVENTOS_HISTORICOS = [
   },
   {
     id: "LEONARDO_ROMA_1513",
+    timeline: "historia",
     anio: 1513,
     titulo: "Leonardo en la Roma de los Médici",
     categoria: "cultura",
@@ -509,6 +546,7 @@ export const EVENTOS_HISTORICOS = [
   },
   {
     id: "LEONARDO_FRANCIA_1516",
+    timeline: "historia",
     anio: 1516,
     titulo: "Francisco I llama a Leonardo a Francia",
     categoria: "cultura",
@@ -517,6 +555,7 @@ export const EVENTOS_HISTORICOS = [
   },
   {
     id: "LEONARDO_MUERTE_1519",
+    timeline: "historia",
     anio: 1519,
     titulo: "Muere Leonardo",
     categoria: "cultura",
@@ -606,6 +645,7 @@ export const EVENTOS_HISTORICOS = [
   },
   {
     id: "REVOLUCION_FRANCESA_1789",
+    timeline: "principal",
     anio: 1789,
     titulo: "Revolución francesa",
     categoria: "politica",
@@ -654,6 +694,7 @@ export const EVENTOS_HISTORICOS = [
   },
   {
     id: "CONFESION_AUGSBURGO_1530",
+    timeline: "principal",
     anio: 1530,
     titulo: "Confesión de Augsburgo",
     categoria: "religion",
@@ -662,6 +703,7 @@ export const EVENTOS_HISTORICOS = [
   },
   {
     id: "SUPREMACIA_1534",
+    timeline: "principal",
     anio: 1534,
     titulo: "Enrique VIII rompe jurídicamente con Roma",
     categoria: "religion",
@@ -686,6 +728,7 @@ export const EVENTOS_HISTORICOS = [
   },
   {
     id: "TRENTO_1545",
+    timeline: "principal",
     desde: 1545,
     hasta: 1563,
     titulo: "Concilio de Trento",
@@ -703,6 +746,7 @@ export const EVENTOS_HISTORICOS = [
   },
   {
     id: "ELIZABETH_SETTLEMENT_1559",
+    timeline: "principal",
     anio: 1559,
     titulo: "Acuerdo religioso isabelino",
     categoria: "religion",
@@ -831,6 +875,7 @@ export const EVENTOS_HISTORICOS = [
   },
   {
     id: "MACHIAVELLI_FORLI_1499",
+    timeline: "historia",
     anio: 1499,
     titulo: "Maquiavelo ante Caterina Sforza",
     categoria: "politica",
@@ -839,6 +884,7 @@ export const EVENTOS_HISTORICOS = [
   },
   {
     id: "PRINCIPE_DEDICACION_1516",
+    timeline: "historia",
     anio: 1516,
     titulo: "El príncipe llega a Lorenzo de’ Medici",
     categoria: "cultura",
@@ -847,6 +893,7 @@ export const EVENTOS_HISTORICOS = [
   },
   {
     id: "LUBLIN_1569",
+    timeline: "principal",
     anio: 1569,
     titulo: "La Unión de Lublin crea la Mancomunidad",
     categoria: "politica",
@@ -887,6 +934,7 @@ export const EVENTOS_HISTORICOS = [
   },
   {
     id: "VIENA_1683",
+    timeline: "principal",
     anio: 1683,
     titulo: "Socorro y batalla de Viena",
     categoria: "guerra",
@@ -919,6 +967,7 @@ export const EVENTOS_HISTORICOS = [
   },
   {
     id: "CONSTITUCION_1791",
+    timeline: "principal",
     anio: 1791,
     titulo: "La Constitución del 3 de Mayo intenta cambiar el sistema",
     categoria: "politica",
@@ -927,6 +976,7 @@ export const EVENTOS_HISTORICOS = [
   },
   {
     id: "FIN_POLONIA_1795",
+    timeline: "principal",
     anio: 1795,
     titulo: "La tercera partición termina con la Mancomunidad",
     categoria: "politica",
@@ -968,6 +1018,7 @@ export const EVENTOS_HISTORICOS = [
   },
   {
     id: "SAN_BARTOLOME_1572",
+    timeline: "principal",
     anio: 1572,
     titulo: "La noche de San Bartolomé",
     categoria: "religion",
@@ -1016,6 +1067,7 @@ export const EVENTOS_HISTORICOS = [
   },
   {
     id: "EDICTO_NANTES_1598",
+    timeline: "principal",
     anio: 1598,
     titulo: "Edicto de Nantes",
     categoria: "religion",
@@ -1025,6 +1077,7 @@ export const EVENTOS_HISTORICOS = [
 
   {
     id: "MUERTE_FED2_SICILIA_1250",
+    timeline: "historia",
     anio: 1250,
     titulo: "Muere Federico II",
     categoria: "dinastia",
@@ -1041,6 +1094,7 @@ export const EVENTOS_HISTORICOS = [
   },
   {
     id: "TAGLIACOZZO_1268",
+    timeline: "historia",
     anio: 1268,
     titulo: "Conradino: el último intento Hohenstaufen",
     categoria: "guerra",
@@ -1049,6 +1103,7 @@ export const EVENTOS_HISTORICOS = [
   },
   {
     id: "FEDERICO_SICILIA_1296",
+    timeline: "historia",
     anio: 1296,
     titulo: "Sicilia elige a Federico",
     categoria: "dinastia",
@@ -1073,6 +1128,7 @@ export const EVENTOS_HISTORICOS = [
   },
   {
     id: "SUCESION_NAPOLES_1458",
+    timeline: "historia",
     anio: 1458,
     titulo: "La herencia de Alfonso vuelve a separarse",
     categoria: "dinastia",
@@ -1105,6 +1161,7 @@ export const EVENTOS_HISTORICOS = [
   },
   {
     id: "NAPOLES_FERNANDO_1504",
+    timeline: "historia",
     anio: 1504,
     titulo: "Fernando reúne Nápoles y Trinacria bajo su corona",
     categoria: "dinastia",
@@ -1122,6 +1179,7 @@ export const EVENTOS_HISTORICOS = [
   },
   {
     id: "SELIM2_1566",
+    timeline: "historia",
     anio: 1566,
     titulo: "Selim II hereda el Imperio otomano",
     categoria: "dinastia",
@@ -1146,12 +1204,67 @@ export const EVENTOS_HISTORICOS = [
   },
   {
     id: "MESINA_1571",
+    timeline: "historia",
     anio: 1571,
     titulo: "Una flota hecha de rivales",
     categoria: "guerra",
     personas: ["DONJUANAUST", "SEBASTIANOVENIER", "MARCANTONIO2COL", "GIANANDREADORIA", "AGOSTINOBARBARIGO", "ALVAROBAZAN"],
     descripcion: "En Mesina se concentra una armada heterogénea de españoles, venecianos, pontificios, genoveses y otros contingentes italianos. Coordinar intereses distintos es casi tan importante como reunir los barcos."
   },
+  {
+    id: "PIOV_ROGATIVAS_1571",
+    timeline: "historia",
+    anio: 1571,
+    titulo: "Roma reza por la expedición",
+    categoria: "religion",
+    personas: ["PAPA_PIO5", "DONJUANAUST"],
+    descripcion: "Pío V acompaña la coalición con rogativas públicas, bendice la empresa y envía a don Juan un estandarte pontificio. La memoria católica asociará después la victoria a las oraciones y al Rosario; la tradición de que el papa conoció el triunfo antes de recibir la noticia pertenece a la tradición devocional, no a un hecho demostrable por sí solo."
+  },
+  {
+    id: "FORMACION_LEPANTO_1571",
+    timeline: "historia",
+    anio: 1571,
+    titulo: "Dos flotas forman sus líneas",
+    categoria: "guerra",
+    personas: ["DONJUANAUST", "MARCANTONIO2COL", "AGOSTINOBARBARIGO", "GIANANDREADORIA", "ALVAROBAZAN", "ALIPASHALEPANTO", "ULUCALI"],
+    descripcion: "La Liga dispone a Barbarigo en el ala izquierda, a don Juan y Colonna en el centro, a Gianandrea Doria en la derecha y a Álvaro de Bazán al frente de la reserva. Frente a ellos, Alí Bajá dirige el centro otomano y Uluç Alí manda el ala que se enfrenta a Doria."
+  },
+  {
+    id: "CENTRO_LEPANTO_1571",
+    timeline: "historia",
+    anio: 1571,
+    titulo: "La Real contra la Sultana",
+    categoria: "guerra",
+    personas: ["DONJUANAUST", "ALIPASHALEPANTO", "MARCANTONIO2COL", "SEBASTIANOVENIER"],
+    descripcion: "En el centro, la galera Real de don Juan y la Sultana de Alí Bajá quedan trabadas en una lucha de abordajes, arcabuces y refuerzos sucesivos. La caída de Alí Bajá y la toma de su nave desorganizan el centro otomano y convierten el combate central en el núcleo simbólico de la victoria."
+  },
+  {
+    id: "ALAS_LEPANTO_1571",
+    timeline: "historia",
+    anio: 1571,
+    titulo: "Las alas casi cambian el resultado",
+    categoria: "guerra",
+    personas: ["AGOSTINOBARBARIGO", "GIANANDREADORIA", "ALVAROBAZAN", "ULUCALI"],
+    descripcion: "Barbarigo resulta mortalmente herido en el ala izquierda cristiana. En el extremo opuesto, Uluç Alí aprovecha el espacio abierto durante la maniobra de Doria y golpea varias galeras de la Liga. La reserva de Álvaro de Bazán acude a cerrar la brecha, mientras Uluç Alí consigue retirarse con parte de sus barcos."
+  },
+  {
+    id: "CERVANTES_LEPANTO_1571",
+    timeline: "historia",
+    anio: 1571,
+    titulo: "Cervantes combate en Lepanto",
+    categoria: "guerra",
+    personas: ["CERVANTES", "DONJUANAUST"],
+    descripcion: "Miguel de Cervantes combate como soldado en la galera Marquesa. Resulta herido durante la jornada y pierde el uso de la mano izquierda, experiencia que recordará durante toda su vida como una de las grandes ocasiones de su tiempo."
+  },
+  {
+    id: "RECONSTRUCCION_OTOMANA_1572",
+    anio: 1572,
+    titulo: "Uluç Alí reconstruye la armada otomana",
+    categoria: "guerra",
+    personas: ["ULUCALI", "SELIM2OSM"],
+    descripcion: "Uluç Alí, uno de los pocos grandes comandantes otomanos que logra salvar su escuadra en Lepanto, es elevado al mando naval. Los arsenales imperiales reconstruyen con enorme rapidez una flota capaz de volver al Mediterráneo al año siguiente."
+  },
+
   {
     id: "PAZ_VENECIA_1573",
     anio: 1573,
@@ -1187,6 +1300,7 @@ export const EVENTOS_HISTORICOS = [
   },
   {
     id: "EJERCITO_SOCORRO_1683",
+    timeline: "historia",
     anio: 1683,
     titulo: "Polacos, imperiales y príncipes alemanes se reúnen",
     categoria: "guerra",
@@ -2511,7 +2625,7 @@ export const HISTORIAS = [
     titulo: "Lepanto: la alianza imposible",
     subtitulo: "Cómo Roma, España y Venecia reunieron una flota contra el Imperio otomano",
     disponible: true,
-    descripcion: "La conquista otomana de Chipre obliga a potencias católicas con intereses rivales a coordinarse. Pío V construye la Liga Santa, Felipe II aporta el principal poder monárquico y don Juan de Austria recibe una flota en la que venecianos, pontificios, genoveses y españoles deben aprender a combatir juntos.",
+    descripcion: "La conquista otomana de Chipre obliga a potencias católicas con intereses rivales a coordinarse. Pío V construye la Liga Santa, Felipe II aporta el principal poder monárquico y don Juan de Austria recibe una flota en la que venecianos, pontificios, genoveses y españoles deben aprender a combatir juntos. La historia entra después en la propia batalla: las líneas, el choque de las capitanas, la lucha en las alas, Cervantes y la rápida recuperación naval otomana.",
     pasos: [
       {
         anio: 1520,
@@ -2543,31 +2657,79 @@ export const HISTORIAS = [
         personas: ["PAPA_PIO5", "FEL2ESP", "DONJUANAUST", "MARCANTONIO2COL", "SEBASTIANOVENIER"],
         eventoId: "LIGA_SANTA_1571",
         titulo: "Pío V consigue lo que parecía imposible",
-        texto: "El papa Pío V actúa como mediador y consigue que España, Venecia y los Estados Pontificios acepten una Liga Santa. Felipe II respalda el proyecto y don Juan de Austria, hijo de Carlos V y hermanastro del rey, recibe el mando supremo."
+        texto: "El papa Pío V actúa como mediador y consigue que la Monarquía Hispánica, Venecia y los Estados Pontificios acepten una Liga Santa. Felipe II respalda el proyecto y don Juan de Austria, hijo de Carlos V y hermanastro del rey, recibe el mando supremo."
+      },
+      {
+        anio: 1571,
+        persona: "PAPA_PIO5",
+        personas: ["PAPA_PIO5", "DONJUANAUST"],
+        eventoId: "PIOV_ROGATIVAS_1571",
+        titulo: "Mientras la flota navega, Roma reza",
+        texto: "Pío V no se limita a negociar la coalición: ordena rogativas públicas, bendice la expedición y envía un estandarte pontificio a don Juan. La memoria católica vinculará después la victoria a las oraciones y al Rosario. La célebre escena en la que el papa habría conocido milagrosamente el resultado antes de recibir la noticia pertenece a la tradición devocional y aquí se presenta como tal, no como un hecho verificable."
       },
       {
         anio: 1571,
         persona: "DONJUANAUST",
         personas: ["DONJUANAUST", "SEBASTIANOVENIER", "MARCANTONIO2COL", "GIANANDREADORIA", "AGOSTINOBARBARIGO", "ALVAROBAZAN"],
         eventoId: "MESINA_1571",
-        titulo: "La Liga reúne una flota, no un ejército nacional",
-        texto: "En Mesina se juntan barcos y hombres de jurisdicciones distintas. Venier representa el enorme peso veneciano; Colonna manda el contingente pontificio; Doria dirige las galeras genovesas vinculadas a España; Barbarigo y Bazán reciben mandos tácticos decisivos. Don Juan debe convertir esa suma de fuerzas en una sola armada."
+        titulo: "Mesina: conocer a los hombres de la Liga",
+        texto: "La coalición no es un ejército nacional. Venier representa el enorme peso veneciano; Marcantonio Colonna manda el contingente pontificio; Gianandrea Doria dirige las galeras genovesas al servicio de España; Agostino Barbarigo y Álvaro de Bazán ocupan mandos tácticos decisivos. Don Juan debe convertir esa suma de jurisdicciones, rivalidades y tradiciones navales en una sola armada."
       },
       {
         anio: 1571,
         persona: "DONJUANAUST",
-        personas: ["DONJUANAUST", "ALIPASHALEPANTO", "MARCANTONIO2COL", "SEBASTIANOVENIER", "AGOSTINOBARBARIGO", "GIANANDREADORIA", "ALVAROBAZAN", "SELIM2OSM"],
+        personas: ["DONJUANAUST", "MARCANTONIO2COL", "AGOSTINOBARBARIGO", "GIANANDREADORIA", "ALVAROBAZAN", "ALIPASHALEPANTO", "ULUCALI"],
+        eventoId: "FORMACION_LEPANTO_1571",
+        titulo: "7 de octubre: dos líneas de galeras se buscan",
+        texto: "La Liga forma tres grandes cuerpos y una reserva: Barbarigo queda a la izquierda, don Juan y Colonna en el centro, Doria a la derecha y Bazán detrás para intervenir donde haga falta. Alí Bajá manda el centro otomano; Uluç Alí se enfrenta a Doria en el ala opuesta. La batalla dependerá tanto del choque frontal como de quién consiga envolver o reforzar los extremos."
+      },
+      {
+        anio: 1571,
+        persona: "DONJUANAUST",
+        personas: ["DONJUANAUST", "ALIPASHALEPANTO", "MARCANTONIO2COL", "SEBASTIANOVENIER"],
+        eventoId: "CENTRO_LEPANTO_1571",
+        titulo: "La Real y la Sultana quedan trabadas",
+        texto: "En el centro, las capitanas de don Juan y Alí Bajá se convierten en el corazón del combate. Arcabuceros, jenízaros y tropas de abordaje luchan sobre cubiertas unidas por espolones y pasarelas improvisadas. Nuevos hombres entran una y otra vez en la pelea hasta que Alí Bajá muere y la Sultana es tomada. El centro otomano empieza a deshacerse."
+      },
+      {
+        anio: 1571,
+        persona: "ULUCALI",
+        personas: ["ULUCALI", "GIANANDREADORIA", "ALVAROBAZAN", "AGOSTINOBARBARIGO"],
+        eventoId: "ALAS_LEPANTO_1571",
+        titulo: "En las alas, la victoria todavía no está decidida",
+        texto: "Barbarigo resulta mortalmente herido mientras su ala contiene el extremo otomano. Al otro lado, Uluç Alí aprovecha el espacio que se abre durante la maniobra de Doria y golpea varias galeras cristianas. Álvaro de Bazán emplea la reserva para cerrar la brecha. Uluç Alí comprende que el centro está perdido y consigue retirarse con una parte de sus barcos: será el gran superviviente otomano de la jornada."
+      },
+      {
+        anio: 1571,
+        persona: "CERVANTES",
+        personas: ["CERVANTES", "DONJUANAUST"],
+        eventoId: "CERVANTES_LEPANTO_1571",
+        titulo: "Entre los soldados está Miguel de Cervantes",
+        texto: "Miguel de Cervantes combate a bordo de la Marquesa. Sale de Lepanto herido y pierde el uso de la mano izquierda, pero conservará toda su vida el orgullo de haber participado en aquella jornada. Para el futuro autor del Quijote, Lepanto no será una nota biográfica menor sino una experiencia que él mismo convirtió en memoria personal y literaria."
+      },
+      {
+        anio: 1571,
+        persona: "DONJUANAUST",
+        personas: ["DONJUANAUST", "ALIPASHALEPANTO", "ULUCALI", "PAPA_PIO5", "FEL2ESP", "CERVANTES"],
         eventoId: "LEPANTO",
-        titulo: "7 de octubre: la coalición funciona",
-        texto: "En Lepanto las dos grandes flotas chocan frente a frente. Don Juan y Alí Bajá combaten en el centro; Barbarigo manda el ala izquierda, Doria la derecha y Álvaro de Bazán conserva una reserva capaz de acudir a los puntos críticos. La muerte de Alí Bajá y la destrucción de gran parte de la flota otomana convierten la jornada en una victoria extraordinaria de la Liga."
+        titulo: "La Liga gana la batalla",
+        texto: "Tras horas de combate, gran parte de la flota otomana ha sido capturada, hundida o abandonada y Alí Bajá ha muerto. Don Juan obtiene una victoria que causa una impresión enorme en Europa. Lepanto demuestra que una coalición de potencias rivales puede derrotar a la principal armada otomana cuando consigue actuar de forma coordinada."
+      },
+      {
+        anio: 1572,
+        persona: "ULUCALI",
+        personas: ["ULUCALI", "SELIM2OSM"],
+        eventoId: "RECONSTRUCCION_OTOMANA_1572",
+        titulo: "El superviviente de Lepanto reconstruye la flota",
+        texto: "Uluç Alí es elevado al principal mando naval otomano. Durante el invierno, los arsenales reconstruyen con extraordinaria rapidez una gran armada. La derrota ha sido enorme, pero no ha destruido la capacidad marítima del Imperio otomano ni ha convertido el Mediterráneo en un mar controlado por la Liga."
       },
       {
         anio: 1573,
         persona: "SEBASTIANOVENIER",
-        personas: ["SELIM2OSM", "SEBASTIANOVENIER", "FEL2ESP"],
+        personas: ["SELIM2OSM", "ULUCALI", "SEBASTIANOVENIER", "FEL2ESP"],
         eventoId: "PAZ_VENECIA_1573",
         titulo: "Lepanto vence una batalla, no conquista el Mediterráneo",
-        texto: "Venecia termina negociando la paz y cede Chipre. El Imperio otomano reconstruye su flota y conserva una enorme capacidad militar. La importancia de Lepanto no está en haber expulsado al turco, sino en demostrar que su poder naval podía ser derrotado cuando sus rivales conseguían coordinarse."
+        texto: "Venecia termina negociando la paz y acepta la pérdida de Chipre. La Liga se disuelve y la armada otomana vuelve al mar. Lepanto conserva una enorme importancia militar, política y simbólica, pero su historia es más interesante precisamente cuando se evita el mito de que una sola batalla expulsó a los otomanos del Mediterráneo."
       }
     ]
   },
