@@ -3395,6 +3395,59 @@ html, body {
   z-index: 3;
 }
 
+/* Densidad progresiva de eventos en modo "Ambos".
+   Los secundarios se reducen a puntos/barras en el zoom normal; el tÃ­tulo
+   reaparece en el zoom mÃ¡ximo. Los eventos de Historia sÃ³lo llegan aquÃ­
+   cuando son el paso activo y por eso conservan una caja legible. */
+.tl-event-marker.level-secundario:not(.is-compact) {
+  opacity: .82;
+  border-left-width: 2px;
+}
+
+.tl-event-marker.is-compact {
+  min-width: 12px;
+  height: 12px;
+  border: 0;
+  border-left: 0;
+  border-radius: 999px;
+  padding: 0;
+  background: transparent;
+  box-shadow: none;
+  overflow: visible;
+  opacity: .78;
+}
+
+.tl-event-marker.is-compact.is-point::before {
+  position: absolute;
+  left: 3px;
+  top: 3px;
+  width: 6px;
+  height: 6px;
+  margin: 0;
+  box-shadow: 0 0 0 1px color-mix(in srgb, var(--event-color) 35%, #FBF7EC);
+}
+
+.tl-event-marker.is-compact.is-range .tl-event-marker-duration {
+  left: 0;
+  top: 4px;
+  bottom: auto;
+  height: 4px;
+  border-radius: 999px;
+}
+
+.tl-event-marker.is-compact:hover,
+.tl-event-marker.is-compact.active {
+  opacity: 1;
+  border: 0;
+  background: color-mix(in srgb, var(--event-color) 12%, transparent);
+  box-shadow: 0 0 0 2px color-mix(in srgb, var(--event-color) 28%, transparent);
+}
+
+.tl-event-marker.level-historia {
+  border-style: dashed;
+  background: #FFF9EC;
+}
+
 .tl-event-row.selected .tl-sticky-col { background: #F4E8D4; }
 .tl-event-track { min-height: 16px; }
 .tl-event-bar { position: absolute; top: 4px; height: 8px; min-width: 8px; border-radius: 4px; background: var(--event-color, #8F6C53); }
