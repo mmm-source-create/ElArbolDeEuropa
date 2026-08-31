@@ -2025,6 +2025,9 @@ const finEvento = (evento) => Number.isFinite(evento?.hasta) ? evento.hasta : in
 const etiquetaFechaEvento = (evento) => Number.isFinite(evento?.desde) && Number.isFinite(evento?.hasta)
   ? `${evento.desde}–${evento.hasta}`
   : String(evento?.anio ?? "");
+const nivelTimelineEvento = (evento) => ["principal", "secundario", "historia"].includes(evento?.timeline)
+  ? evento.timeline
+  : "secundario";
 
 function Chip({ label, active, onClick, color, small }) {
   return (
@@ -2485,39 +2488,56 @@ export default function Explorer({ initialPanel = null }) {
     for (let valor = primero; valor <= TL_MAX; valor += timelineTickStep) valores.push(valor);
     return valores;
   }, [timelineTickStep]);
-  const eventosOrdenados = useMemo(() => EVENTOS_HISTORICOS.slice().sort((a, b) => inicioEvento(a) - inicioEvento(b) || a.titulo.localeCompare(b.titulo, "es")), []);
-  // En el modo "Ambos" los eventos se distribuyen en carriles dinámicos.
-  // El algoritmo reserva el ancho visual real de cada etiqueta (y, para los
-  // periodos, al menos la duración cronológica), de modo que nunca se monten
-  // unos textos sobre otros aunque haya muchos hitos concentrados en pocos años.
+  const eventosOrdenadosTodos = useMemo(() => EVENTOS_HISTORICOS.slice().sort((a, b) => inicioEvento(a) - inicioEvento(b) || a.titulo.localeCompare(b.titulo, "es")), []);
+  // Los hitos puramente narrativos de una Historia no forman parte de la cronología
+  // general. Reaparecen automáticamente cuando ese paso de Historia está activo.
+  const totalEventosTimeline = useMemo(() => eventosOrdenadosTodos.filter((evento) => nivelTimelineEvento(evento) !== "historia").length, [eventosOrdenadosTodos]);
+  const eventosOrdenados = useMemo(() => eventosOrdenadosTodos.filter((evento) => {
+    const nivel = nivelTimelineEvento(evento);
+    return nivel !== "historia" || evento.id === eventoSeleccionadoId;
+  }), [eventosOrdenadosTodos, eventoSeleccionadoId]);
+
+  // En "Ambos" los eventos tienen densidad progresiva:
+  // - principal: conserva siempre su etiqueta;
+  // - secundario: punto/barra compacta en zoom normal y etiqueta en el zoom máximo;
+  // - historia: oculto salvo si es el evento seleccionado por el paso de Historia activo.
+  // Esto evita que cada hito narrativo abra un carril nuevo y convierta la cronología
+  // en una pared de cajas cuando personas y eventos se muestran simultáneamente.
   const timelineCombinedEvents = useMemo(() => {
-    const laneGap = 7;
-    const laneHeight = 21;
+    const laneGap = 5;
+    const laneHeight = 18;
     const laneEnds = [];
+    const mostrarSecundariosConTitulo = timelineScaleIndex === TIMELINE_SCALES.length - 1;
     const items = eventosOrdenados.map((evento) => {
       const inicio = inicioEvento(evento);
       const fin = finEvento(evento);
+      const nivel = nivelTimelineEvento(evento);
       const esPeriodo = Number.isFinite(evento.desde) && Number.isFinite(evento.hasta) && evento.hasta > evento.desde;
       const leftPx = Math.max(0, ((inicio - TL_MIN) / (TL_MAX - TL_MIN)) * timelineTrackWidth);
       const durationPx = esPeriodo
         ? Math.max(5, ((fin - inicio) / (TL_MAX - TL_MIN)) * timelineTrackWidth)
         : 0;
-      const labelWidth = Math.min(150, Math.max(76, 18 + evento.titulo.length * 4.3));
-      const available = Math.max(44, timelineTrackWidth - leftPx);
-      const visualWidth = Math.min(available, Math.max(labelWidth, durationPx));
+      const mostrarTitulo = nivel === "principal"
+        || evento.id === eventoSeleccionadoId
+        || (nivel === "secundario" && mostrarSecundariosConTitulo);
+      const compacto = !mostrarTitulo;
+      const labelWidth = mostrarTitulo ? Math.min(160, Math.max(76, 18 + evento.titulo.length * 4.3)) : 12;
+      const minimumWidth = esPeriodo ? Math.max(12, durationPx) : 12;
+      const available = Math.max(12, timelineTrackWidth - leftPx);
+      const visualWidth = Math.min(available, Math.max(labelWidth, minimumWidth));
       let lane = laneEnds.findIndex((endPx) => endPx + laneGap <= leftPx);
       if (lane < 0) lane = laneEnds.length;
       laneEnds[lane] = leftPx + visualWidth;
-      return { evento, inicio, fin, esPeriodo, leftPx, durationPx, visualWidth, lane };
+      return { evento, inicio, fin, nivel, esPeriodo, leftPx, durationPx, visualWidth, lane, mostrarTitulo, compacto };
     });
     return {
       items,
       laneHeight,
       laneCount: Math.max(1, laneEnds.length),
-      height: Math.max(58, laneEnds.length * laneHeight + 10),
+      height: Math.max(44, laneEnds.length * laneHeight + 8),
     };
-  }, [eventosOrdenados, timelineTrackWidth]);
-  const eventoSeleccionado = eventosOrdenados.find((evento) => evento.id === eventoSeleccionadoId) || null;
+  }, [eventosOrdenados, timelineTrackWidth, timelineScaleIndex, eventoSeleccionadoId]);
+  const eventoSeleccionado = eventosOrdenadosTodos.find((evento) => evento.id === eventoSeleccionadoId) || null;
   const historiaActiva = HISTORIAS.find((historia) => historia.id === historiaActivaId) || null;
   const historiaPasoActual = historiaActiva?.pasos?.[historiaPasoIndex] || null;
   const historiaPersonasSet = useMemo(() => new Set(historiaPasoActual?.personas || (historiaPasoActual?.persona ? [historiaPasoActual.persona] : [])), [historiaPasoActual]);
@@ -4422,7 +4442,7 @@ export default function Explorer({ initialPanel = null }) {
               <div className="timeline-title-group">
                 <span className="panel-title">Línea temporal</span>
                 <span className="panel-count">
-                  {timelineMode === "eventos" ? `${eventosOrdenados.length} eventos` : `${visiblePeople.length} personas${timelineMode === "ambos" ? ` · ${eventosOrdenados.length} eventos` : ""}`}
+                  {timelineMode === "eventos" ? `${totalEventosTimeline} eventos` : `${visiblePeople.length} personas${timelineMode === "ambos" ? ` · ${totalEventosTimeline} eventos` : ""}`}
                 </span>
               </div>
               <div className="timeline-head-tools">
@@ -4475,20 +4495,21 @@ export default function Explorer({ initialPanel = null }) {
                       <div className="tl-events-band" style={{ minHeight: timelineCombinedEvents.height }}>
                         <div className="tl-events-band-label" style={{ minHeight: timelineCombinedEvents.height }}>Eventos</div>
                         <div className="tl-events-band-track" style={{ minHeight: timelineCombinedEvents.height }}>
-                          {timelineCombinedEvents.items.map(({ evento, esPeriodo, leftPx, durationPx, visualWidth, lane }) => (
+                          {timelineCombinedEvents.items.map(({ evento, nivel, esPeriodo, leftPx, durationPx, visualWidth, lane, mostrarTitulo, compacto }) => (
                             <button
                               type="button"
                               key={evento.id}
-                              className={`tl-event-marker cat-${evento.categoria}${eventoSeleccionadoId === evento.id ? " active" : ""}${esPeriodo ? " is-range" : " is-point"}`}
+                              className={`tl-event-marker level-${nivel}${compacto ? " is-compact" : ""} cat-${evento.categoria}${eventoSeleccionadoId === evento.id ? " active" : ""}${esPeriodo ? " is-range" : " is-point"}`}
                               style={{
                                 left: leftPx,
                                 width: visualWidth,
-                                top: 5 + lane * timelineCombinedEvents.laneHeight,
+                                top: 4 + lane * timelineCombinedEvents.laneHeight,
                               }}
                               onClick={() => seleccionarEvento(evento)}
                               title={`${etiquetaFechaEvento(evento)} · ${evento.titulo}`}
+                              aria-label={`${etiquetaFechaEvento(evento)} · ${evento.titulo}`}
                             >
-                              <span className="tl-event-marker-title">{evento.titulo}</span>
+                              {mostrarTitulo && <span className="tl-event-marker-title">{evento.titulo}</span>}
                               {esPeriodo && (
                                 <span
                                   className="tl-event-marker-duration"
