@@ -20,6 +20,8 @@ import { DEFAULT_LOCALE, SITE, t } from "./i18n.jsx";
 import TREE_BASE from "./generated/treeBase.json";
 import BioRelations from "./components/BioRelations.jsx";
 import BioDiscovery from "./components/BioDiscovery.jsx";
+import SiteHeader from "./components/SiteHeader.jsx";
+import SiteFooter from "./components/SiteFooter.jsx";
 
 const Desafio = lazy(() => import("./desafio/Desafio.jsx"));
 
@@ -3650,33 +3652,20 @@ export default function Explorer({ initialPanel = null }) {
     window.location.assign(destino);
   }, [locale]);
 
-  const selectorIdioma = (
-    <div
-      aria-label="Idioma / Language"
-      style={{
-        position: "absolute", right: 0, top: "50%", transform: "translateY(-50%)",
-        display: "flex", alignItems: "center", gap: 5, fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif",
-        fontSize: 10, color: "#9A8E75",
-      }}
-    >
-      <button type="button" onClick={() => cambiarIdioma("es")} aria-current={locale === "es" ? "page" : undefined}
-        style={{ border: 0, background: "transparent", padding: "2px 3px", cursor: "pointer", font: "inherit", fontWeight: locale === "es" ? 800 : 600, color: locale === "es" ? "#7A2E2E" : "#8A7F65" }}>ES</button>
-      <span aria-hidden="true">|</span>
-      <button type="button" onClick={() => cambiarIdioma("en")} aria-current={locale === "en" ? "page" : undefined}
-        style={{ border: 0, background: "transparent", padding: "2px 3px", cursor: "pointer", font: "inherit", fontWeight: locale === "en" ? 800 : 600, color: locale === "en" ? "#7A2E2E" : "#8A7F65" }}>EN</button>
-    </div>
-  );
+  const atlasContextLabel = historiaActiva?.titulo
+    ? `Historias / ${historiaActiva.titulo}`
+    : seleccion?.nombre
+      ? seleccion.nombre
+      : dinastias.length === 1
+        ? `Dinastía / ${dinastias[0]}`
+        : territorios.length === 1
+          ? `Territorio / ${territorios[0]}`
+          : "Atlas interactivo";
 
   if (locale === "en") {
     return (
       <div className="wrap">
-        <div className="header" style={{ position: "relative" }}>
-          <div style={{ textAlign: "center" }}>
-            <h1>The Tree of Europe</h1>
-            <div className="sub">Genealogy · Dynasties · Reigns · Territories · 1200–1800</div>
-          </div>
-          {selectorIdioma}
-        </div>
+        <SiteHeader variant="atlas" locale="en" onLanguageChange={cambiarIdioma} contextLabel="English edition" />
 
         <main style={{ maxWidth: 760, margin: "70px auto", textAlign: "center", padding: "0 24px" }}>
           <div style={{ fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif", fontSize: 10, fontWeight: 700, letterSpacing: 1.3, textTransform: "uppercase", color: "#8A7F65" }}>English edition</div>
@@ -3692,19 +3681,14 @@ export default function Explorer({ initialPanel = null }) {
             Explore the Spanish version
           </button>
         </main>
+        <SiteFooter compact />
       </div>
     );
   }
 
   return (
     <div className="wrap">
-      <div className="header" style={{ position: "relative" }}>
-        <div style={{ textAlign: "center" }}>
-          <h1>{t("brand.name")}</h1>
-          <div className="sub">{t("brand.scope")}</div>
-        </div>
-        {selectorIdioma}
-      </div>
+      <SiteHeader variant="atlas" locale={locale} onLanguageChange={cambiarIdioma} contextLabel={atlasContextLabel} />
       <div className="workspace-topbar">
         <section className="workspace-topbar-section workspace-toolbar-search">
           <div className="toolbar-label">Búsqueda</div>
@@ -4636,27 +4620,11 @@ export default function Explorer({ initialPanel = null }) {
         )}
       </div>
 
-      <footer className="project-footer">
-        <div className="project-footer-links" aria-label="Información del proyecto">
-          <button type="button" onClick={() => setInfoProyecto("acerca")}><Info size={12} /> Acerca del proyecto</button>
-          <button type="button" onClick={() => setInfoProyecto("estadisticas")}><BarChart3 size={12} /> Estadísticas</button>
-          <button type="button" onClick={() => setInfoProyecto("fuentes")}><BookOpen size={12} /> Fuentes y metodología</button>
-          <button type="button" onClick={() => setInfoProyecto("agradecimientos")}><Heart size={12} /> Agradecimientos</button>
-          <button type="button" onClick={() => setInfoProyecto("licencias")}><Scale size={12} /> Licencias</button>
-          <button type="button" onClick={() => setInfoProyecto("reportar")}><Flag size={12} /> Reportar un error</button>
-          <a href="/es/">Portada</a>
-        </div>
-        <div className="project-footer-credit">
-          Cartografía base: <a href="https://www.mapchart.net/" target="_blank" rel="noreferrer">MapChart</a>
-          <span aria-hidden="true">·</span>
-          <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noreferrer">CC BY-SA 4.0</a>
-          <span aria-hidden="true">·</span>
-          adaptada y modificada para El Árbol de Europa
-        </div>
-        <div className="project-footer-rights">
-          © 2026 El Árbol de Europa · Código, diseño, textos y estructura original de la base de datos: todos los derechos reservados · Materiales de terceros y cartografía derivada: ver Licencias
-        </div>
-      </footer>
+      <SiteFooter
+        compact
+        onOpenStats={() => setInfoProyecto("estadisticas")}
+        onReport={() => setInfoProyecto("reportar")}
+      />
 
       {historiaActiva && historiaPasoActual && (
         <aside className="story-guide" aria-live="polite">
