@@ -6,7 +6,10 @@ import {
   Crown,
   ExternalLink,
   GitBranch,
+  Heart,
+  Info,
   Landmark,
+  Scale,
   Search,
   Shield,
   Sparkles,
@@ -15,6 +18,8 @@ import {
 } from "lucide-react";
 import { IMAGENES_PERSONAS } from "../imagenesPersonas.js";
 import SITE_META from "../generated/siteMeta.json";
+import SiteHeader from "../components/SiteHeader.jsx";
+import SiteFooter from "../components/SiteFooter.jsx";
 import "./public.css";
 
 const PUBLIC_SITE_URL = String(import.meta.env.VITE_SITE_URL || "https://www.treeofeurope.eu").replace(/\/+$/, "");
@@ -134,42 +139,8 @@ function useJson(path) {
   return state;
 }
 
-function PublicHeader() {
-  return (
-    <header className="public-header">
-      <a className="public-brand" href="/es/" aria-label="El Árbol de Europa — inicio">
-        <Crown size={22} aria-hidden="true" />
-        <span><strong>El Árbol de Europa</strong><small>Atlas genealógico e histórico</small></span>
-      </a>
-      <nav className="public-nav" aria-label="Navegación principal">
-        <a href="/es/personas">Personas</a>
-        <a href="/es/dinastias">Dinastías</a>
-        <a href="/es/territorios">Territorios</a>
-        <a href="/es/historias">Historias</a>
-      </nav>
-      <a className="public-language" href="/en/">EN</a>
-    </header>
-  );
-}
-
-function PublicFooter() {
-  return (
-    <footer className="public-footer">
-      <div>
-        <a href="/es/">Inicio</a>
-        <a href="/es/personas">Personas</a>
-        <a href="/es/dinastias">Dinastías</a>
-        <a href="/es/territorios">Territorios</a>
-        <a href="/es/historias">Historias</a>
-      </div>
-      <p>© 2026 El Árbol de Europa · Código, diseño, textos y estructura original de la base de datos: todos los derechos reservados.</p>
-      <p>Cartografía base: <a href="https://www.mapchart.net/" target="_blank" rel="noreferrer">MapChart</a> · <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noreferrer">CC BY-SA 4.0</a></p>
-    </footer>
-  );
-}
-
 function PublicLayout({ children }) {
-  return <div className="public-site"><PublicHeader />{children}<PublicFooter /></div>;
+  return <div className="public-site"><SiteHeader />{children}<SiteFooter /></div>;
 }
 
 function Breadcrumbs({ items }) {
@@ -273,12 +244,124 @@ export function HomePage({ onEnterAtlas, onOpenPanel }) {
         <section className="public-section public-about-strip">
           <div><span>Un proyecto en crecimiento</span><h2>Una base histórica para explorar, no una lista cerrada</h2><p>El proyecto combina genealogía, cronología y cartografía. La ausencia de una relación o personaje puede significar que todavía no se ha incorporado; las correcciones documentadas tienen prioridad sobre la mera coherencia visual.</p></div>
           <div className="public-about-actions">
-            <button type="button" onClick={() => onOpenPanel?.("acerca")}>Acerca del proyecto</button>
-            <button type="button" onClick={() => onOpenPanel?.("fuentes")}>Fuentes y metodología</button>
+            <a href="/es/proyecto">Acerca del proyecto</a>
+            <a href="/es/fuentes">Fuentes y metodología</a>
           </div>
         </section>
 
         {error && <div className="public-inline-warning">Algunos contadores no se han podido cargar, pero el atlas sigue disponible.</div>}
+      </main>
+    </PublicLayout>
+  );
+}
+
+const INFO_PAGES = {
+  proyecto: {
+    icon: Info,
+    eyebrow: "El proyecto",
+    title: "Acerca de El Árbol de Europa",
+    description: "Qué intenta hacer el atlas, qué representa y cómo debe leerse una base histórica que sigue creciendo.",
+    sections: [
+      { title: "Qué intenta hacer", paragraphs: [
+        "El Árbol de Europa es un proyecto interactivo de genealogía histórica que busca visualizar parentescos, dinastías, reinados y conexiones políticas de la Europa medieval y moderna en una misma red navegable.",
+        "La aplicación combina genealogía, cronología y cartografía para que una misma persona pueda estudiarse dentro de su familia, su época y los territorios con los que estuvo vinculada."
+      ]},
+      { title: "Cómo leer la base", paragraphs: [
+        "La ausencia de una relación o de un personaje no implica que históricamente no existiera: puede significar simplemente que todavía no se ha incorporado a la base.",
+        "Se priorizan figuras que conectan ramas, ejercen gobierno, fundan una línea relevante o aportan una conexión históricamente útil para la red. Las correcciones documentadas tienen prioridad sobre la mera coherencia visual."
+      ]},
+      { title: "Ámbito principal", paragraphs: [
+        "El periodo principal de trabajo es 1200–1800. El proyecto está en desarrollo y la base continúa ampliándose, corrigiéndose y documentándose."
+      ]},
+    ],
+  },
+  fuentes: {
+    icon: Landmark,
+    eyebrow: "Fuentes y metodología",
+    title: "Cómo se construye la base",
+    description: "Repertorios genealógicos, biografías académicas, archivos e instituciones utilizados para contrastar la información.",
+    sections: [
+      { title: "Repertorios principales", links: [
+        ["Foundation for Medieval Genealogy · MedLands", "https://fmg.ac/Projects/MedLands/index.htm"],
+        ["Deutsche Biographie", "https://www.deutsche-biographie.de/"],
+        ["Treccani", "https://www.treccani.it/"],
+        ["Encyclopaedia Britannica", "https://www.britannica.com/"],
+        ["Wikipedia", "https://en.wikipedia.org/"]
+      ], paragraphs: ["Wikipedia se utiliza como herramienta auxiliar de localización, cronología y orientación bibliográfica; los datos sensibles o dudosos se contrastan siempre que es posible con fuentes más especializadas."]},
+      { title: "Archivos e instituciones", links: [
+        ["Historia Hispánica · Real Academia de la Historia", "https://historia-hispanica.rah.es/"],
+        ["PARES · Portal de Archivos Españoles", "https://pares.mcu.es/"],
+        ["Biblioteca Digital · Real Academia de la Historia", "https://bibliotecadigital.rah.es/"],
+        ["Casa Real de Suecia", "https://www.kungahuset.se/english/the-monarchy-of-sweden"],
+        ["Casa Real de Dinamarca", "https://www.kongehuset.dk/en"],
+        ["Royal House of the Netherlands", "https://www.royal-house.nl/"],
+        ["Burg Hohenzollern", "https://burg-hohenzollern.com/en/"],
+        ["MuseoTorino", "https://www.museotorino.it/"]
+      ]},
+      { title: "Criterios de trabajo", paragraphs: [
+        "Cuando una filiación, una fecha o un reinado es discutido, se contrasta el dato con varias referencias antes de incorporarlo.",
+        "Las fechas se almacenan normalmente a nivel de año. Los territorios del mapa son una representación histórica simplificada y dependen de los límites disponibles en la base cartográfica."
+      ]},
+    ],
+  },
+  licencias: {
+    icon: Scale,
+    eyebrow: "Licencias",
+    title: "Derechos y materiales de terceros",
+    description: "Qué partes del proyecto son originales y qué materiales conservan licencias propias.",
+    sections: [
+      { title: "Contenido original", paragraphs: [
+        "Salvo indicación expresa en sentido contrario, el código, el diseño, los textos, los recorridos históricos y la estructura original de la base de datos de El Árbol de Europa se mantienen con todos los derechos reservados.",
+        "Esta reserva de derechos no se aplica a materiales de terceros, que permanecen sujetos a sus respectivas licencias."
+      ]},
+      { title: "Cartografía de MapChart", paragraphs: [
+        "La base cartográfica utilizada en el mapa procede de MapChart y ha sido modificada y adaptada para este proyecto.",
+        "El material cartográfico correspondiente se publica bajo Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0). Esa licencia no se extiende automáticamente al resto del proyecto."
+      ], links: [
+        ["MapChart", "https://www.mapchart.net/"],
+        ["CC BY-SA 4.0", "https://creativecommons.org/licenses/by-sa/4.0/"]
+      ]},
+    ],
+  },
+  agradecimientos: {
+    icon: Heart,
+    eyebrow: "Agradecimientos",
+    title: "Personas e instituciones que ayudan a mejorar el proyecto",
+    description: "Reconocimiento a quienes aportan documentación, detectan errores o hacen posible parte de la infraestructura visual del atlas.",
+    sections: [
+      { title: "Correcciones y aportaciones", paragraphs: [
+        "El Árbol de Europa está preparado para acreditar a quienes detecten errores, aporten documentación o ayuden a mejorar la base. Las correcciones documentadas forman parte esencial del crecimiento del proyecto."
+      ]},
+      { title: "Cartografía", paragraphs: [
+        "La representación territorial utiliza como base cartográfica material de MapChart, adaptado para el proyecto bajo sus condiciones de atribución."
+      ], links: [["MapChart", "https://www.mapchart.net/"]]},
+    ],
+  },
+};
+
+export function InfoPage({ tipo }) {
+  const page = INFO_PAGES[tipo] || INFO_PAGES.proyecto;
+  const Icon = page.icon;
+  usePublicMeta({ title: `${page.title} — El Árbol de Europa`, description: page.description, path: `/es/${tipo}` });
+  return (
+    <PublicLayout>
+      <main className="public-main public-info-page">
+        <Breadcrumbs items={[{ label: "Inicio", href: "/es/" }, { label: page.title }]} />
+        <section className="public-page-title">
+          <div className="public-page-icon"><Icon size={22} /></div>
+          <span>{page.eyebrow}</span>
+          <h1>{page.title}</h1>
+          <p>{page.description}</p>
+        </section>
+        <div className="public-info-grid">
+          {page.sections.map((section) => (
+            <section className="public-info-card" key={section.title}>
+              <h2>{section.title}</h2>
+              {(section.paragraphs || []).map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
+              {!!section.links?.length && <div className="public-info-links">{section.links.map(([label, href]) => <a key={href} href={href} target="_blank" rel="noreferrer">{label} <ExternalLink size={11} /></a>)}</div>}
+            </section>
+          ))}
+        </div>
       </main>
     </PublicLayout>
   );
