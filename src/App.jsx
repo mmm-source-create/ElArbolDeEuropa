@@ -5,6 +5,7 @@ import "./App.css";
 
 const Explorer = lazy(() => import("./Explorer.jsx"));
 const PORTADA_STORAGE_KEY = "arbol-europa-portada-v1";
+const PUBLIC_SITE_URL = String(import.meta.env.VITE_SITE_URL || "https://www.treeofeurope.eu").replace(/\/+$/, "");
 
 function localeDesdePath(pathname) {
   return /^\/en(?:\/|$)/.test(String(pathname || "")) ? "en" : "es";
@@ -60,6 +61,92 @@ function resumenPersona(persona) {
   return partes.length
     ? `${persona.nombre} · ${partes.join(" · ")}.`
     : `Ficha histórica de ${persona.nombre} en El Árbol de Europa.`;
+}
+
+function slugPublico(valor) {
+  return String(valor ?? "")
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-+|-+$/g, "")
+    .replace(/-{2,}/g, "-") || "entidad";
+}
+
+function rutaEntidadEs(tipo, slug) {
+  const segmentos = { persona: "persona", dinastia: "dinastia", territorio: "territorio", historia: "historia" };
+  const segmento = segmentos[tipo];
+  return segmento && slug ? `/es/${segmento}/${encodeURIComponent(slug)}` : "/es/";
+}
+
+function ensureMetaTag(selector, attributes) {
+  if (typeof document === "undefined") return null;
+  let element = document.head.querySelector(selector);
+  if (!element) {
+    element = document.createElement("meta");
+    Object.entries(attributes).forEach(([key, value]) => element.setAttribute(key, value));
+    document.head.appendChild(element);
+  }
+  return element;
+}
+
+function setMetaContent(selector, attributes, content) {
+  const element = ensureMetaTag(selector, attributes);
+  if (element) element.setAttribute("content", content);
+}
+
+function ensureCanonical(href) {
+  if (typeof document === "undefined") return;
+  let link = document.head.querySelector('link[rel="canonical"]');
+  if (!link) {
+    link = document.createElement("link");
+    link.setAttribute("rel", "canonical");
+    document.head.appendChild(link);
+  }
+  link.setAttribute("href", href);
+}
+
+function setHreflangAlternates(items) {
+  if (typeof document === "undefined") return;
+  document.head.querySelectorAll('link[data-eade-hreflang="1"]').forEach((node) => node.remove());
+  items.filter((item) => item?.hreflang && item?.href).forEach((item) => {
+    const link = document.createElement("link");
+    link.setAttribute("rel", "alternate");
+    link.setAttribute("hreflang", item.hreflang);
+    link.setAttribute("href", item.href);
+    link.setAttribute("data-eade-hreflang", "1");
+    document.head.appendChild(link);
+  });
+}
+
+function EnlacesPersonas({ personas, limite = null }) {
+  const lista = Array.isArray(personas) ? personas : [];
+  const visibles = Number.isFinite(limite) ? lista.slice(0, limite) : lista;
+  return (
+    <>
+      {visibles.map((persona, index) => (
+        <React.Fragment key={persona.id || `${persona.nombre}-${index}`}>
+          {index > 0 && " · "}
+          {persona.slug ? <a href={rutaEntidadEs("persona", persona.slug)}>{persona.nombre}</a> : <span>{persona.nombre}</span>}
+        </React.Fragment>
+      ))}
+      {Number.isFinite(limite) && lista.length > limite ? ` · +${lista.length - limite}` : ""}
+    </>
+  );
+}
+
+function EnlacesValores({ valores, tipo }) {
+  const lista = Array.isArray(valores) ? valores.filter(Boolean) : [];
+  return (
+    <>
+      {lista.map((valor, index) => (
+        <React.Fragment key={`${tipo}-${valor}`}>
+          {index > 0 && " · "}
+          <a href={rutaEntidadEs(tipo, slugPublico(valor))}>{valor}</a>
+        </React.Fragment>
+      ))}
+    </>
+  );
 }
 
 function Welcome({ onEnter, onOpen }) {
@@ -138,39 +225,52 @@ function PersonWelcome({ slug, legacyId, onExplore }) {
   }, [slug, legacyId]);
 
   useEffect(() => {
-    if (typeof document === "undefined" || !persona) return;
+    if (typeof window === "undefined" || typeof document === "undefined" || !persona) return;
+
+    const pageTitle = `${persona.nombre} — El Árbol de Europa`;
+    const description = resumenPersona(persona).replace(/\s+/g, " ").trim().slice(0, 155);
+    const canonicalPath = rutaEntidadEs("persona", persona.slug || slug || slugPublico(persona.nombre));
+    const canonicalUrl = new URL(canonicalPath, PUBLIC_SITE_URL || window.location.origin).toString();
+
     document.documentElement.lang = "es";
-    document.title = `${persona.nombre} — El Árbol de Europa`;
-    const description = resumenPersona(persona).slice(0, 155);
-    let meta = document.head.querySelector('meta[name="description"]');
-    if (!meta) {
-      meta = document.createElement("meta");
-      meta.setAttribute("name", "description");
-      document.head.appendChild(meta);
-    }
-    meta.setAttribute("content", description);
-  }, [persona]);
+    document.title = pageTitle;
+    setMetaContent('meta[name="description"]', { name: "description" }, description);
+    setMetaContent('meta[property="og:site_name"]', { property: "og:site_name" }, "El Árbol de Europa");
+    setMetaContent('meta[property="og:title"]', { property: "og:title" }, pageTitle);
+    setMetaContent('meta[property="og:description"]', { property: "og:description" }, description);
+    setMetaContent('meta[property="og:type"]', { property: "og:type" }, "website");
+    setMetaContent('meta[property="og:locale"]', { property: "og:locale" }, "es_ES");
+    setMetaContent('meta[property="og:url"]', { property: "og:url" }, canonicalUrl);
+    setMetaContent('meta[name="twitter:card"]', { name: "twitter:card" }, "summary");
+    setMetaContent('meta[name="twitter:title"]', { name: "twitter:title" }, pageTitle);
+    setMetaContent('meta[name="twitter:description"]', { name: "twitter:description" }, description);
+    ensureCanonical(canonicalUrl);
+    setHreflangAlternates([
+      { hreflang: "es", href: canonicalUrl },
+      { hreflang: "x-default", href: canonicalUrl },
+    ]);
+  }, [persona, slug]);
 
   const padres = persona?.padres || [];
   const conyuges = persona?.conyuges || [];
   const hijos = persona?.hijos || [];
 
   return (
-    <div className="welcome-cover" role="dialog" aria-modal="true" aria-label={persona ? `Ficha de ${persona.nombre}` : "Ficha de persona"}>
-      <div className="welcome-card">
+    <main className="welcome-cover person-welcome-page" aria-label={persona ? `Ficha de ${persona.nombre}` : "Ficha de persona"}>
+      <article className="welcome-card person-welcome-card">
         <Crown size={28} className="welcome-crown" />
         <div className="welcome-eyebrow">El Árbol de Europa · Persona</div>
 
         {!persona && !error && (
           <>
-            <h2>Cargando ficha…</h2>
+            <h1>Cargando ficha…</h1>
             <p>Preparando la información biográfica.</p>
           </>
         )}
 
         {error && (
           <>
-            <h2>Ficha histórica</h2>
+            <h1>Ficha histórica</h1>
             <p>No se ha podido cargar la portada ligera de esta persona. El atlas completo sigue disponible.</p>
             <div className="welcome-actions">
               <button type="button" className="welcome-enter" onClick={onExplore}>Abrir en el atlas <ArrowRight size={15} /></button>
@@ -180,38 +280,40 @@ function PersonWelcome({ slug, legacyId, onExplore }) {
 
         {persona && (
           <>
-            <h2>{persona.nombre}</h2>
+            <h1>{persona.nombre}</h1>
             {persona.sobrenombre && (
               <div style={{ marginTop: -4, marginBottom: 10, color: "#7A2E2E", fontSize: 12, fontWeight: 600 }}>«{persona.sobrenombre}»</div>
             )}
             <p>{resumenPersona(persona)}</p>
 
-            <div className="welcome-stats">
+            <div className="welcome-stats person-welcome-stats">
               <span><strong>{textoFechas(persona)}</strong> fechas</span>
-              {persona.dinastia && <span><strong>{persona.dinastia}</strong> dinastía</span>}
+              {persona.dinastia && (
+                <span><strong><a href={rutaEntidadEs("dinastia", slugPublico(persona.dinastia))}>{persona.dinastia}</a></strong> dinastía</span>
+              )}
             </div>
 
-            <div style={{ margin: "16px auto 0", maxWidth: 610, fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif", fontSize: 11.5, lineHeight: 1.65, color: "#6B6350" }}>
-              {persona.titulo && <div><strong style={{ color: "#2C2620" }}>Título:</strong> {persona.titulo}</div>}
-              {(persona.reinos || []).length > 0 && <div><strong style={{ color: "#2C2620" }}>Territorios:</strong> {persona.reinos.join(" · ")}</div>}
-              {padres.length > 0 && <div><strong style={{ color: "#2C2620" }}>Padres:</strong> {padres.map((p) => p.nombre).join(" · ")}</div>}
-              {conyuges.length > 0 && <div><strong style={{ color: "#2C2620" }}>Cónyuge{conyuges.length > 1 ? "s" : ""}:</strong> {conyuges.map((p) => p.nombre).join(" · ")}</div>}
-              {hijos.length > 0 && <div><strong style={{ color: "#2C2620" }}>Descendencia registrada:</strong> {hijos.slice(0, 6).map((p) => p.nombre).join(" · ")}{hijos.length > 6 ? ` · +${hijos.length - 6}` : ""}</div>}
-            </div>
+            <section className="person-welcome-details" aria-label={`Datos y relaciones de ${persona.nombre}`}>
+              {persona.titulo && <div><strong>Título:</strong> {persona.titulo}</div>}
+              {(persona.reinos || []).length > 0 && <div><strong>Territorios:</strong> <EnlacesValores valores={persona.reinos} tipo="territorio" /></div>}
+              {padres.length > 0 && <div><strong>Padres:</strong> <EnlacesPersonas personas={padres} /></div>}
+              {conyuges.length > 0 && <div><strong>Cónyuge{conyuges.length > 1 ? "s" : ""}:</strong> <EnlacesPersonas personas={conyuges} /></div>}
+              {hijos.length > 0 && <div><strong>Descendencia registrada:</strong> <EnlacesPersonas personas={hijos} limite={6} /></div>}
+            </section>
 
             <div className="welcome-actions" style={{ marginTop: 26 }}>
               <button type="button" className="welcome-enter" onClick={onExplore}>Explorar a {persona.nombre} en el atlas <ArrowRight size={15} /></button>
             </div>
 
-            <div className="welcome-links">
-              <button type="button" onClick={() => window.location.assign("/es/")}>Portada del proyecto</button>
-            </div>
+            <nav className="welcome-links" aria-label="Navegación del proyecto">
+              <a href="/es/">Portada del proyecto</a>
+            </nav>
 
             <div className="welcome-map-credit">La ficha completa, el árbol, el mapa, la cronología y las relaciones se cargan solo al abrir el atlas.</div>
           </>
         )}
-      </div>
-    </div>
+      </article>
+    </main>
   );
 }
 
