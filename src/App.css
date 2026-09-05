@@ -4054,3 +4054,38 @@ html, body {
   color: #7A2E2E;
   background: #F7F0E0;
 }
+
+/* ==========================================
+   V2.2 Â· UNIFICACIÃ“N VISUAL CON LA WEB PÃšBLICA
+   ========================================== */
+html, body { background: #F7F1E3; color: var(--eade-ink, #2C2620); }
+.wrap { background: #F7F1E3; color: var(--eade-ink, #2C2620); }
+.panel,
+.workspace-topbar-section {
+  border-color: var(--eade-border, #D8CEB7);
+  border-radius: var(--eade-radius-md, 7px);
+  background: var(--eade-paper-soft, #FBF7EC);
+}
+.workspace-topbar {
+  background: rgba(247, 241, 227, .96);
+  box-shadow: 0 8px 18px -17px rgba(44, 38, 32, .7);
+}
+.panel-head { font-family: var(--eade-sans, -apple-system, 'Segoe UI', sans-serif); }
+.panel-title { color: #4A4436; letter-spacing: .65px; }
+.nav-btn,
+.search-box,
+.global-year-control,
+.timeline-mode-toggle,
+.timeline-zoom-controls {
+  border-color: var(--eade-border, #D8CEB7);
+}
+.bio-discover {
+  margin-top: 14px;
+  padding-top: 12px;
+  border-top-color: var(--eade-border, #D8CEB7);
+}
+.bio-discover h4 { font-family: var(--eade-serif, 'Iowan Old Style', Georgia, serif); }
+.bio-discover-links a {
+  border-color: var(--eade-border, #D8CEB7);
+  background: var(--eade-paper-bright, #FFFDF7);
+}
