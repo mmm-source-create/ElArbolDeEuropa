@@ -5,7 +5,10 @@ import { pathToFileURL } from "node:url";
 const ROOT = process.cwd();
 const PERSONAS_FILE = path.join(ROOT, "src", "personas.jsx");
 const HISTORIAS_FILE = path.join(ROOT, "src", "historiaData.jsx");
-const OUTPUT_FILE = path.join(ROOT, "public", "sitemap.xml");
+const OUTPUT_FILES = [
+  path.join(ROOT, "public", "sitemap-full.xml"),
+  path.join(ROOT, "public", "sitemap.xml"),
+];
 const SITE_URL = String(process.env.VITE_SITE_URL || "https://www.treeofeurope.eu").replace(/\/+$/, "");
 
 async function importJsxData(filePath) {
@@ -113,10 +116,10 @@ const xml = [
   '',
 ].join("\n");
 
-await fs.mkdir(path.dirname(OUTPUT_FILE), { recursive: true });
-await fs.writeFile(OUTPUT_FILE, xml, "utf8");
+await fs.mkdir(path.dirname(OUTPUT_FILES[0]), { recursive: true });
+await Promise.all(OUTPUT_FILES.map((outputFile) => fs.writeFile(outputFile, xml, "utf8")));
 
-console.log(`sitemap.xml generado: ${urls.length} URLs`);
+console.log(`sitemap-full.xml + sitemap.xml generados: ${urls.length} URLs`);
 console.log(`  Personas ES: ${personaUrls.length}`);
 console.log(`  Dinastías ES: ${dinastiaUrls.length}`);
 console.log(`  Territorios ES: ${territorioUrls.length}`);
