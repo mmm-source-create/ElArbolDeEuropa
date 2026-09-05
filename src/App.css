@@ -58,7 +58,7 @@ html, body {
 }
 
 /* ==========================================
-   2. FILTROS Y BÃƒÅ¡SQUEDA
+   2. FILTROS Y BÃƒÆ’Ã…Â¡SQUEDA
    ========================================== */
 .filters-panel {
   background: #FBF7EC;
@@ -217,7 +217,7 @@ html, body {
 }
 
 /* ==========================================
-   3. PANELES DESPLEGABLES Y NAVEGACIÃƒâ€œN
+   3. PANELES DESPLEGABLES Y NAVEGACIÃƒÆ’Ã¢â‚¬Å“N
    ========================================== */
 .panel {
   background: #FBF7EC;
@@ -322,7 +322,7 @@ html, body {
 }
 
 /* ==========================================
-   4. VISUALIZADOR DEL ÃƒÂRBOL
+   4. VISUALIZADOR DEL ÃƒÆ’Ã‚ÂRBOL
    ========================================== */
 .tree-outer {
   position: relative;
@@ -346,10 +346,10 @@ html, body {
   left: 0;
 }
 
-/* Cada unidad agrupa a las personas unidas por matrimonio o relaciÃƒÂ³n.
+/* Cada unidad agrupa a las personas unidas por matrimonio o relaciÃƒÆ’Ã‚Â³n.
    Las cajas se posicionan dentro de la unidad desde JS para permitir tanto
-   cadenas de matrimonios sucesivos como parejas pequeÃƒÂ±as apiladas alrededor
-   de una persona central, siempre en contacto y sin lÃƒÂ­neas intermedias. */
+   cadenas de matrimonios sucesivos como parejas pequeÃƒÆ’Ã‚Â±as apiladas alrededor
+   de una persona central, siempre en contacto y sin lÃƒÆ’Ã‚Â­neas intermedias. */
 .unit {
   position: absolute;
   z-index: 2;
@@ -474,7 +474,7 @@ html, body {
 }
 
 /* ==========================================
-   5. LÃƒÂNEA TEMPORAL
+   5. LÃƒÆ’Ã‚ÂNEA TEMPORAL
    ========================================== */
 .tl-scroll-container {
   overflow: auto;
@@ -620,7 +620,7 @@ html, body {
 }
 
 /* Capa superpuesta: tramo de reinado efectivo (campo `reinado` en los
-   datos). SÃƒÂ³lida y sin rayas, para que destaque sobre la barra de vida. */
+   datos). SÃƒÆ’Ã‚Â³lida y sin rayas, para que destaque sobre la barra de vida. */
 .tl-bar-reinado {
   position: absolute;
   height: 8px;
@@ -648,7 +648,7 @@ html, body {
   height: 100%;
   display: block;
   transform-origin: 47% 8%;   /* el punto del mapa que quieres centrar */
-  transform: scale(1.9);        /* cuÃƒÂ¡nto haces zoom */
+  transform: scale(1.9);        /* cuÃƒÆ’Ã‚Â¡nto haces zoom */
   transition: transform 0.3s ease;
 }
 
@@ -667,7 +667,7 @@ html, body {
 }
 
 /* ==========================================
-   7. PANEL DE BIOGRAFÃƒÂA
+   7. PANEL DE BIOGRAFÃƒÆ’Ã‚ÂA
    ========================================== */
 .bio-panel {
   font-family: -apple-system, 'Segoe UI', sans-serif;
@@ -974,7 +974,7 @@ html, body {
 }
 
 /* ==========================================
-   9. AÃƒâ€˜O GLOBAL, RAMAS PLEGABLES Y REINADOS
+   9. AÃƒÆ’Ã¢â‚¬ËœO GLOBAL, RAMAS PLEGABLES Y REINADOS
    ========================================== */
 .global-year-control {
   display: grid;
@@ -1199,7 +1199,7 @@ html, body {
 }
 
 /* ==========================================
-   12. DISTRIBUCIÃƒâ€œN GENERAL V7
+   12. DISTRIBUCIÃƒÆ’Ã¢â‚¬Å“N GENERAL V7
    ========================================== */
 .workspace-topbar {
   display: grid;
@@ -1558,7 +1558,7 @@ html, body {
 }
 
 /* ==========================================
-   13. AJUSTES FINALES DE LA DISTRIBUCIÃƒâ€œN
+   13. AJUSTES FINALES DE LA DISTRIBUCIÃƒÆ’Ã¢â‚¬Å“N
    ========================================== */
 .workspace-topbar {
   position: sticky;
@@ -1585,9 +1585,9 @@ html, body {
   margin-bottom: 14px;
 }
 
-/* Los laterales ya estÃƒÂ¡n limitados y tienen su propio scroll; se mantienen
-   en el flujo de la pÃƒÂ¡gina para no quedar ocultos debajo de la barra superior
-   cuando esta ocupa mÃƒÂ¡s de una fila. */
+/* Los laterales ya estÃƒÆ’Ã‚Â¡n limitados y tienen su propio scroll; se mantienen
+   en el flujo de la pÃƒÆ’Ã‚Â¡gina para no quedar ocultos debajo de la barra superior
+   cuando esta ocupa mÃƒÆ’Ã‚Â¡s de una fila. */
 .workspace-sidebar,
 .workspace-inspector {
   position: static;
@@ -1653,7 +1653,7 @@ html, body {
 }
 
 /* Una fila en pantallas anchas. El contenedor secundario desaparece
-   visualmente y sus dos tarjetas participan en la cuadrÃƒÂ­cula principal. */
+   visualmente y sus dos tarjetas participan en la cuadrÃƒÆ’Ã‚Â­cula principal. */
 .workspace-topbar {
   grid-template-columns:
     minmax(250px, 330px)
@@ -1879,7 +1879,7 @@ html, body {
 }
 
 /* Nivel intermedio: tres controles principales arriba y una sola barra
-   compacta para Zona principal + InteracciÃƒÂ³n debajo. */
+   compacta para Zona principal + InteracciÃƒÆ’Ã‚Â³n debajo. */
 @container linajes-app (max-width: 1480px) {
   .workspace-topbar {
     grid-template-columns: minmax(230px, 0.9fr) minmax(300px, 1.1fr) minmax(240px, 1fr);
@@ -1934,7 +1934,7 @@ html, body {
   }
 }
 
-/* Nivel pequeÃƒÂ±o: una columna y controles muy compactos. */
+/* Nivel pequeÃƒÆ’Ã‚Â±o: una columna y controles muy compactos. */
 @container linajes-app (max-width: 820px) {
   .wrap {
     padding: 14px;
@@ -2013,7 +2013,7 @@ html, body {
 }
 
 /* Pantallas de poca altura: se compacta la cabecera antes de reducir el
-   espacio ÃƒÂºtil del ÃƒÂ¡rbol y el mapa. */
+   espacio ÃƒÆ’Ã‚Âºtil del ÃƒÆ’Ã‚Â¡rbol y el mapa. */
 @media (max-height: 800px) {
   .wrap {
     padding-top: 14px;
@@ -2053,7 +2053,7 @@ html, body {
    ========================================== */
 /* Los tres paneles principales comparten exactamente la misma altura. El
    contenido de los laterales se desplaza dentro de ellos y la zona central
-   reparte esa misma altura entre ÃƒÂ¡rbol y mapa cuando ambos estÃƒÂ¡n activos. */
+   reparte esa misma altura entre ÃƒÆ’Ã‚Â¡rbol y mapa cuando ambos estÃƒÆ’Ã‚Â¡n activos. */
 .workspace-grid {
   --workspace-stage-height: clamp(560px, 68vh, 860px);
   align-items: stretch;
@@ -2128,7 +2128,7 @@ html, body {
 }
 
 /* En un panel con scroll los subfiltros funcionan mejor dentro del flujo:
-   no quedan cortados por los lÃƒÂ­mites del lateral. */
+   no quedan cortados por los lÃƒÆ’Ã‚Â­mites del lateral. */
 .workspace-filter-scroll .dinastia-ramas {
   position: relative;
   top: auto;
@@ -2221,7 +2221,7 @@ html, body {
   text-overflow: ellipsis;
 }
 
-/* Controles del ÃƒÂ¡rbol dentro del propio lienzo, con el mismo lenguaje visual
+/* Controles del ÃƒÆ’Ã‚Â¡rbol dentro del propio lienzo, con el mismo lenguaje visual
    que los controles del mapa. */
 .tree-toolbar {
   position: absolute;
@@ -2261,7 +2261,7 @@ html, body {
   box-shadow: 0 3px 9px rgba(44, 38, 32, 0.09);
 }
 
-/* Los dos botones actÃƒÂºan como interruptores independientes. */
+/* Los dos botones actÃƒÆ’Ã‚Âºan como interruptores independientes. */
 .view-toggle-control .segment-btn {
   min-width: 62px;
 }
@@ -2278,7 +2278,7 @@ html, body {
   border-color: #7A2E2E;
 }
 
-/* El aÃƒÂ±o escrito es un borrador: se confirma con Enter o al salir del campo. */
+/* El aÃƒÆ’Ã‚Â±o escrito es un borrador: se confirma con Enter o al salir del campo. */
 .global-year-number {
   font-variant-numeric: tabular-nums;
 }
@@ -2289,8 +2289,8 @@ html, body {
   border-color: #A97272;
 }
 
-/* Conservamos el bloque de tres columnas en tamaÃƒÂ±os intermedios en los que
-   aÃƒÂºn cabe con claridad; por debajo se mantiene el apilado responsive. */
+/* Conservamos el bloque de tres columnas en tamaÃƒÆ’Ã‚Â±os intermedios en los que
+   aÃƒÆ’Ã‚Âºn cabe con claridad; por debajo se mantiene el apilado responsive. */
 @media (max-width: 1240px) and (min-width: 1081px) {
   .workspace-grid {
     grid-template-columns: minmax(215px, 255px) minmax(0, 1fr) minmax(235px, 285px);
@@ -2362,17 +2362,17 @@ html, body {
   }
 }
 
-/* Anula los lÃƒÂ­mites de altura heredados de la distribuciÃƒÂ³n anterior: el
-   alto lo gobierna ÃƒÂºnicamente el bloque compartido de la V9. */
+/* Anula los lÃƒÆ’Ã‚Â­mites de altura heredados de la distribuciÃƒÆ’Ã‚Â³n anterior: el
+   alto lo gobierna ÃƒÆ’Ã‚Âºnicamente el bloque compartido de la V9. */
 .workspace-sidebar > .workspace-fixed-panel,
 .workspace-inspector > .workspace-fixed-panel {
   max-height: none !important;
 }
 
 /* ==========================================
-   16. AJUSTES FINALES DE PRESENTACIÃƒâ€œN V10
+   16. AJUSTES FINALES DE PRESENTACIÃƒÆ’Ã¢â‚¬Å“N V10
    ========================================== */
-/* El centro vuelve a comportarse como un ÃƒÂºnico panel visual. ÃƒÂrbol y mapa
+/* El centro vuelve a comportarse como un ÃƒÆ’Ã‚Âºnico panel visual. ÃƒÆ’Ã‚Ârbol y mapa
    comparten este mismo recuadro tanto cuando aparece uno como cuando aparecen
    los dos; no se crean dos paneles exteriores independientes. */
 .workspace-main {
@@ -2385,8 +2385,8 @@ html, body {
 }
 
 /* El selector mantiene el deslizador arriba y agrupa el campo exacto y el
-   restablecimiento en una ÃƒÂºnica fila compacta. El botÃƒÂ³n nunca queda bloqueado:
-   tambiÃƒÂ©n puede borrar un valor escrito que todavÃƒÂ­a no se haya confirmado. */
+   restablecimiento en una ÃƒÆ’Ã‚Âºnica fila compacta. El botÃƒÆ’Ã‚Â³n nunca queda bloqueado:
+   tambiÃƒÆ’Ã‚Â©n puede borrar un valor escrito que todavÃƒÆ’Ã‚Â­a no se haya confirmado. */
 .global-year-control-inline {
   grid-template-columns: minmax(0, 1fr);
   gap: 7px;
@@ -2417,7 +2417,7 @@ html, body {
   padding: 4px 9px;
 }
 
-/* La cronologÃƒÂ­a permanece siempre visible. Conserva su tÃƒÂ­tulo, recuento,
+/* La cronologÃƒÆ’Ã‚Â­a permanece siempre visible. Conserva su tÃƒÆ’Ã‚Â­tulo, recuento,
    desplazamiento y redimensionado vertical, pero ya no tiene control de
    apertura/cierre. */
 .timeline-panel {
@@ -2444,7 +2444,7 @@ html, body {
 }
 
 /* ==========================================
-   17. ENLACES, REPRODUCCIÃƒâ€œN Y COMPARADOR V11
+   17. ENLACES, REPRODUCCIÃƒÆ’Ã¢â‚¬Å“N Y COMPARADOR V11
    ========================================== */
 .history-playback-controls {
   display: flex;
@@ -2676,7 +2676,7 @@ html, body {
 }
 
 /* ==========================================
-   15. CAPA EDITORIAL: PORTADA, INFORMACIÃƒâ€œN Y FOOTER
+   15. CAPA EDITORIAL: PORTADA, INFORMACIÃƒÆ’Ã¢â‚¬Å“N Y FOOTER
    ========================================== */
 .header {
   align-items: center;
@@ -2803,6 +2803,7 @@ html, body {
   color: #8A7F65;
 }
 
+.welcome-card h1,
 .welcome-card h2 {
   margin: 9px 0 12px;
   font-family: 'Iowan Old Style', 'Palatino Linotype', Georgia, serif;
@@ -2873,7 +2874,8 @@ html, body {
   margin-top: 22px;
 }
 
-.welcome-links button {
+.welcome-links button,
+.welcome-links a {
   border: 0;
   background: none;
   padding: 0;
@@ -2883,7 +2885,8 @@ html, body {
   color: #6B6350;
 }
 
-.welcome-links button:hover {
+.welcome-links button:hover,
+.welcome-links a:hover {
   color: #7A2E2E;
   text-decoration: underline;
   text-underline-offset: 3px;
@@ -2894,6 +2897,40 @@ html, body {
   font-family: -apple-system, 'Segoe UI', sans-serif;
   font-size: 9.5px;
   color: #9A907A;
+}
+
+/* Ficha ligera de persona: contenido semÃ¡ntico y enlaces internos rastreables
+   sin alterar la apariencia de la portada original. */
+.person-welcome-details {
+  max-width: 610px;
+  margin: 16px auto 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-size: 11.5px;
+  line-height: 1.65;
+  color: #6B6350;
+  text-align: center;
+}
+
+.person-welcome-details strong {
+  color: #2C2620;
+}
+
+.person-welcome-details a,
+.person-welcome-stats a {
+  color: inherit;
+  text-decoration: underline;
+  text-decoration-color: rgba(122, 46, 46, 0.28);
+  text-underline-offset: 2px;
+}
+
+.person-welcome-details a:hover,
+.person-welcome-stats a:hover {
+  color: #7A2E2E;
+  text-decoration-color: currentColor;
+}
+
+.welcome-links a {
+  text-decoration: none;
 }
 
 /* Modales editoriales */
@@ -3194,9 +3231,9 @@ html, body {
 
 
 /* ==========================================
-   19. EXPLORACIÃƒâ€œN AVANZADA V13
-   CronologÃƒÂ­a ampliable, eventos, favoritos,
-   estadÃƒÂ­sticas y recorridos guiados.
+   19. EXPLORACIÃƒÆ’Ã¢â‚¬Å“N AVANZADA V13
+   CronologÃƒÆ’Ã‚Â­a ampliable, eventos, favoritos,
+   estadÃƒÆ’Ã‚Â­sticas y recorridos guiados.
    ========================================== */
 
 .timeline-panel-head {
@@ -3396,8 +3433,8 @@ html, body {
 }
 
 /* Densidad progresiva de eventos en modo "Ambos".
-   Los secundarios se reducen a puntos/barras en el zoom normal; el tÃ­tulo
-   reaparece en el zoom mÃ¡ximo. Los eventos de Historia sÃ³lo llegan aquÃ­
+   Los secundarios se reducen a puntos/barras en el zoom normal; el tÃƒÂ­tulo
+   reaparece en el zoom mÃƒÂ¡ximo. Los eventos de Historia sÃƒÂ³lo llegan aquÃƒÂ­
    cuando son el paso activo y por eso conservan una caja legible. */
 .tl-event-marker.level-secundario:not(.is-compact) {
   opacity: .82;
@@ -3567,8 +3604,8 @@ html, body {
 }
 
 
-/* V15: el encabezado de la cronologÃƒÂ­a debe permanecer por encima de las filas
-   tambiÃƒÂ©n al desplazar verticalmente el contenido. */
+/* V15: el encabezado de la cronologÃƒÆ’Ã‚Â­a debe permanecer por encima de las filas
+   tambiÃƒÆ’Ã‚Â©n al desplazar verticalmente el contenido. */
 .tl-header { isolation: isolate; }
 .tl-header, .tl-corner, .tl-axis { background: #FBF7EC; }
 
@@ -3691,8 +3728,8 @@ html, body {
    20. PANELES ACTIVABLES Y CENTRO EXPANDIBLE V12
    ========================================== */
 /* Los cinco interruptores de la barra superior comparten el mismo lenguaje
-   visual. Ãrbol y mapa conservan la regla de que al menos uno debe quedar
-   activo; filtros, biografÃ­a y cronologÃ­a sÃ­ pueden apagarse simultÃ¡neamente. */
+   visual. ÃƒÂrbol y mapa conservan la regla de que al menos uno debe quedar
+   activo; filtros, biografÃƒÂ­a y cronologÃƒÂ­a sÃƒÂ­ pueden apagarse simultÃƒÂ¡neamente. */
 .workspace-toolbar-panels {
   min-width: 0;
 }
@@ -3709,7 +3746,7 @@ html, body {
   padding-right: 8px;
 }
 
-/* La cuadrÃ­cula deja de reservar huecos para paneles ocultos. El DOM ya no
+/* La cuadrÃƒÂ­cula deja de reservar huecos para paneles ocultos. El DOM ya no
    renderiza esos paneles y estas cuatro variantes entregan todo el espacio
    liberado a la zona central. */
 .workspace-grid.workspace-layout-both,
@@ -3749,7 +3786,7 @@ html, body {
   grid-row: 2;
 }
 
-/* Si se retira la lÃ­nea temporal, Ã¡rbol/mapa aprovechan tambiÃ©n parte del alto
+/* Si se retira la lÃƒÂ­nea temporal, ÃƒÂ¡rbol/mapa aprovechan tambiÃƒÂ©n parte del alto
    que antes quedaba reservado a la franja inferior. */
 .workspace-grid.workspace-no-timeline {
   --workspace-stage-height: clamp(640px, 78vh, 980px);
@@ -3767,9 +3804,9 @@ html, body {
   }
 }
 
-/* En tamaÃ±os estrechos los paneles que el usuario mantenga activos se apilan
+/* En tamaÃƒÂ±os estrechos los paneles que el usuario mantenga activos se apilan
    en el orden natural. Los interruptores siguen permitiendo reducir la pantalla
-   a una sola vista sin obligar a recorrer una pÃ¡gina interminable. */
+   a una sola vista sin obligar a recorrer una pÃƒÂ¡gina interminable. */
 @container linajes-app (max-width: 1080px) {
   .workspace-grid.workspace-layout-both,
   .workspace-grid.workspace-layout-left,
@@ -3816,7 +3853,7 @@ html, body {
 }
 
 /* ==========================================
-   18. FOCO DESPLEGABLE + AÃ‘O GLOBAL COMPACTO V12
+   18. FOCO DESPLEGABLE + AÃƒâ€˜O GLOBAL COMPACTO V12
    ========================================== */
 .workspace-toolbar-year .global-year-control-inline {
   grid-template-columns: minmax(190px, auto) minmax(230px, 1fr);
