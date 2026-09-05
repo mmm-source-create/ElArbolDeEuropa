@@ -15,7 +15,7 @@ export default function BioDiscovery({
   onStartHistoria,
 }) {
   const sugerencias = useMemo(() => {
-    if (!persona) return { dinastia: [], epoca: [], historias: [] };
+    if (!persona) return { epoca: [], historias: [] };
     const familia = new Set([
       persona.id,
       persona.padre,
@@ -40,12 +40,6 @@ export default function BioDiscovery({
       return score;
     };
 
-    const dinastia = persona.dinastia
-      ? personas.filter((p) => p.id !== persona.id && p.dinastia === persona.dinastia && !familia.has(p.id))
-        .sort((a, b) => distancia(a) - distancia(b) || relevancia(b) - relevancia(a) || a.nombre.localeCompare(b.nombre, "es"))
-        .slice(0, 5)
-      : [];
-
     const inicio = Number.isFinite(persona.nac) ? persona.nac : Number.isFinite(persona.muer) ? persona.muer - 60 : null;
     const fin = Number.isFinite(persona.muer) ? persona.muer : Number.isFinite(persona.nac) ? persona.nac + 65 : null;
     const territoriosPersona = new Set(persona.reinos || []);
@@ -59,37 +53,27 @@ export default function BioDiscovery({
           const comunesA = (a.reinos || []).filter((r) => territoriosPersona.has(r)).length;
           const comunesB = (b.reinos || []).filter((r) => territoriosPersona.has(r)).length;
           return comunesB - comunesA || relevancia(b) - relevancia(a) || distancia(a) - distancia(b) || a.nombre.localeCompare(b.nombre, "es");
-        }).slice(0, 5)
+        }).slice(0, 3)
       : [];
 
     const relacionadas = historias
       .filter((historia) => historia?.disponible && historia?.pasos?.some((paso) => paso?.persona === persona.id || (paso?.personas || []).includes(persona.id)))
-      .slice(0, 4);
+      .slice(0, 3);
 
-    return { dinastia, epoca, historias: relacionadas };
+    return { epoca, historias: relacionadas };
   }, [persona, personas, hijosPorId, historias, getSpouses, getLovers, getReigns, normalizeText]);
 
-  if (!persona || (!sugerencias.dinastia.length && !sugerencias.epoca.length && !sugerencias.historias.length)) return null;
+  if (!persona || (!sugerencias.epoca.length && !sugerencias.historias.length)) return null;
 
   return (
     <div className="bio-discover">
-      <h4>Seguir explorando</h4>
+      <h4>También puede interesarte</h4>
       {sugerencias.historias.length > 0 && (
         <div className="bio-discover-group">
           <span>Historias relacionadas</span>
           <div className="bio-discover-links">
             {sugerencias.historias.map((historia) => (
               <a key={historia.id} href={hrefHistoria?.(historia) || "#"} onClick={(event) => { if (onStartHistoria) { event.preventDefault(); onStartHistoria(historia.id); } }}>{historia.titulo}</a>
-            ))}
-          </div>
-        </div>
-      )}
-      {sugerencias.dinastia.length > 0 && (
-        <div className="bio-discover-group">
-          <span>Misma dinastía</span>
-          <div className="bio-discover-links">
-            {sugerencias.dinastia.map((p) => (
-              <a key={p.id} href={hrefPersona?.(p) || "#"} onClick={(event) => { if (onSelect) { event.preventDefault(); onSelect(p.id); } }}>{p.nombre}</a>
             ))}
           </div>
         </div>
