@@ -3934,3 +3934,123 @@ html, body {
     text-align: left;
   }
 }
+
+/* ==========================================
+   V2 Â· NavegaciÃ³n enlazable y descubrimiento
+   ========================================== */
+.project-footer-links button,
+.project-footer-links > a {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  border: 0;
+  background: none;
+  color: #5E5546;
+  font: inherit;
+  font-size: 11px;
+  cursor: pointer;
+  padding: 2px 0;
+  text-decoration: none;
+}
+
+.project-footer-links button:hover,
+.project-footer-links > a:hover {
+  color: #7A2E2E;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.bio-relation-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+
+.bio-relation-link:hover {
+  background: #F1EAD9;
+  border-color: #8A7F65;
+}
+
+.bio-relation-link.is-disabled {
+  cursor: not-allowed;
+  opacity: .65;
+  border-style: dashed;
+}
+
+.timeline-event-people a,
+.story-guide-people a {
+  border: 1px solid #D9CFB6;
+  border-radius: 999px;
+  background: #F7F0E0;
+  color: #5E5546;
+  padding: 3px 7px;
+  font-family: -apple-system, 'Segoe UI', sans-serif;
+  font-size: 9.5px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.timeline-event-people a:hover,
+.story-guide-people a:hover {
+  border-color: #A9724F;
+  color: #7A2E2E;
+}
+
+.story-start-btn {
+  justify-content: center;
+  text-decoration: none;
+}
+
+.bio-discover {
+  margin-top: 16px;
+  padding-top: 13px;
+  border-top: 1px solid #DDD2BD;
+}
+
+.bio-discover h4 {
+  margin: 0 0 10px;
+  color: #4F4639;
+  font-family: 'Iowan Old Style', 'Palatino Linotype', Georgia, serif;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.bio-discover-group + .bio-discover-group {
+  margin-top: 10px;
+}
+
+.bio-discover-group > span {
+  display: block;
+  margin-bottom: 5px;
+  color: #8A7F65;
+  font-family: -apple-system, 'Segoe UI', sans-serif;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: .45px;
+  text-transform: uppercase;
+}
+
+.bio-discover-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.bio-discover-links a {
+  padding: 4px 7px;
+  border: 1px solid #D9CFB6;
+  border-radius: 999px;
+  background: #FFFDF6;
+  color: #5E5546;
+  font-family: -apple-system, 'Segoe UI', sans-serif;
+  font-size: 9.5px;
+  line-height: 1.2;
+  text-decoration: none;
+}
+
+.bio-discover-links a:hover {
+  border-color: #A9724F;
+  color: #7A2E2E;
+  background: #F7F0E0;
+}
