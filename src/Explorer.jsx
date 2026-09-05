@@ -1,5 +1,5 @@
 import React, { lazy, Suspense, useState, useRef, useEffect, useLayoutEffect, useCallback, useMemo } from "react";
-import { Crown, Search, ChevronDown, ChevronRight, ArrowLeft, ArrowRight, ArrowUp, ArrowDown, ZoomIn, ZoomOut, RotateCcw, GitCompare, Focus, Share2, Play, Pause, SkipBack, SkipForward, X, Info, Heart, BookOpen, BarChart3, Scale, Flag, Mail, ExternalLink } from "lucide-react";
+import { Search, ChevronDown, ChevronRight, ArrowLeft, ArrowRight, ArrowUp, ArrowDown, ZoomIn, ZoomOut, RotateCcw, GitCompare, Focus, Share2, Play, Pause, SkipBack, SkipForward, X, Info, Heart, BookOpen, BarChart3, Scale, Flag, Mail, ExternalLink } from "lucide-react";
 import { MapaEuropa } from "./MapaEuropa";
 import {
   TERRITORIOS_SUB,
@@ -18,6 +18,8 @@ import { IMAGENES_PERSONAS } from "./imagenesPersonas.js";
 import { EVENTOS_HISTORICOS, HISTORIAS } from "./historiaData.jsx";
 import { DEFAULT_LOCALE, SITE, t } from "./i18n.jsx";
 import TREE_BASE from "./generated/treeBase.json";
+import BioRelations from "./components/BioRelations.jsx";
+import BioDiscovery from "./components/BioDiscovery.jsx";
 
 const Desafio = lazy(() => import("./desafio/Desafio.jsx"));
 
@@ -384,7 +386,6 @@ const CORRECTORES = [
 // enlace mailto del formulario de errores.
 const CORREOS_CORRECCIONES = SITE.contactEmail ? [SITE.contactEmail] : [];
 
-const PORTADA_STORAGE_KEY = "arbol-europa-portada-v1";
 const FAVORITOS_STORAGE_KEY = "arbol-europa-favoritos-v1";
 const PANELES_STORAGE_KEY = "arbol-europa-paneles-v1";
 const TIMELINE_SCALES = [3.2, 4.8, 6.4];
@@ -2068,32 +2069,6 @@ const PersonBox = React.memo(function PersonBox({
 });
 
 
-function ListaRelaciones({ etiqueta, ids, tipo = "familia", onSelect }) {
-  const unicos = [...new Set((ids || []).filter(Boolean))];
-  if (!unicos.length) return null;
-  return (
-    <div className="bio-relation-row">
-      <div className="bio-relation-label">{etiqueta}</div>
-      <div className="bio-relation-list">
-        {unicos.map((id) => {
-          const persona = BY_ID[id];
-          return (
-            <button
-              type="button"
-              key={id}
-              className={`bio-relation-link ${tipo === "amantes" ? "is-lover" : ""}`}
-              disabled={!persona}
-              onClick={() => persona && onSelect(id)}
-              title={persona ? `Ir a ${persona.nombre}` : `La ficha ${id} todavía no está cargada`}
-            >
-              {persona?.nombre || `[${id}] sin ficha`}
-            </button>
-          );
-        })}
-      </div>
-    </div>
-  );
-}
 
 function calcularEstadisticas(personas) {
   const lista = (personas || []).filter(Boolean);
@@ -2330,7 +2305,7 @@ function ModalProyecto({ seccion, onClose, persona, personasVista = PERSONAS, on
                     <h3>{historia.titulo}</h3>
                     <p>{historia.subtitulo}</p>
                     {historia.disponible ? (
-                      <button type="button" className="story-start-btn" onClick={() => onStartHistoria?.(historia.id)}>Comenzar recorrido <ArrowRight size={13} /></button>
+                      <a className="story-start-btn" href={rutaEntidadLocalizada("es", "historia", slugPublico(historia.titulo))} onClick={(event) => { event.preventDefault(); onStartHistoria?.(historia.id); }}>Comenzar recorrido <ArrowRight size={13} /></a>
                     ) : (
                       <button type="button" className="story-start-btn" disabled>Próximamente</button>
                     )}
@@ -2446,7 +2421,6 @@ export default function Explorer({ initialPanel = null }) {
       return base;
     }
   });
-  const [portadaVisible, setPortadaVisible] = useState(false);
   const [infoProyecto, setInfoProyecto] = useState(initialPanel);
   const [timelineScaleIndex, setTimelineScaleIndex] = useState(1);
   const [timelineMode, setTimelineMode] = useState("personas");
@@ -2470,6 +2444,7 @@ export default function Explorer({ initialPanel = null }) {
   const historiaSnapshotRef = useRef(null);
   const shareStatusTimerRef = useRef(null);
   const urlStateLoadedRef = useRef(false);
+  const historyPopRef = useRef(false);
   const dragState = useRef(null);
 
   // La geometría base se calcula durante el prebuild/deployment.
@@ -2697,34 +2672,18 @@ export default function Explorer({ initialPanel = null }) {
   }, []);
 
   useEffect(() => {
-    if (typeof window === "undefined") return;
-    const params = new URLSearchParams(window.location.search);
-    const rutaActual = rutaPublicaDesdePath(window.location.pathname);
-    const esEnlaceDirecto = Boolean(params.get("persona") || rutaActual?.tipo);
-    if (rutaActual?.locale === "en") { setPortadaVisible(false); return; }
-    const yaVisitada = window.localStorage.getItem(PORTADA_STORAGE_KEY) === "1";
-    setPortadaVisible(!esEnlaceDirecto && !yaVisitada);
-  }, []);
-
-  useEffect(() => {
-    const bloquear = portadaVisible || Boolean(infoProyecto);
-    if (!bloquear || typeof document === "undefined") return undefined;
+    if (!infoProyecto || typeof document === "undefined") return undefined;
     const anterior = document.body.style.overflow;
     document.body.style.overflow = "hidden";
     const cerrarConEscape = (event) => {
-      if (event.key !== "Escape") return;
-      if (infoProyecto) setInfoProyecto(null);
-      else if (portadaVisible) {
-        window.localStorage.setItem(PORTADA_STORAGE_KEY, "1");
-        setPortadaVisible(false);
-      }
+      if (event.key === "Escape") setInfoProyecto(null);
     };
     document.addEventListener("keydown", cerrarConEscape);
     return () => {
       document.body.style.overflow = anterior;
       document.removeEventListener("keydown", cerrarConEscape);
     };
-  }, [portadaVisible, infoProyecto]);
+  }, [infoProyecto]);
 
   const opciones = useMemo(() => {
     const alfabetico = (a, b) => String(a).localeCompare(String(b), "es", { sensitivity: "base" });
@@ -3247,11 +3206,78 @@ export default function Explorer({ initialPanel = null }) {
     if (!persona) return;
     setHovered(null);
     setSeleccion(persona);
+    if (typeof window !== "undefined" && !historyPopRef.current) {
+      const slug = slugPersonaPorLocale(persona, "es");
+      if (slug) {
+        const url = new URL(window.location.href);
+        url.pathname = rutaEntidadLocalizada("es", "persona", slug);
+        url.searchParams.delete("atlas");
+        if (`${url.pathname}${url.search}${url.hash}` !== `${window.location.pathname}${window.location.search}${window.location.hash}`) {
+          window.history.pushState({ eade: "persona", id }, "", `${url.pathname}${url.search}${url.hash}`);
+        }
+      }
+    }
     requestAnimationFrame(() => {
       centerOn(id);
       centerOnTimeline(id);
     });
   };
+
+  const cerrarSeleccion = () => {
+    setHovered(null);
+    setSeleccion(null);
+    if (typeof window === "undefined") return;
+    const url = new URL(window.location.href);
+    url.pathname = "/es/";
+    url.searchParams.delete("atlas");
+    window.history.pushState({ eade: "atlas" }, "", `${url.pathname}${url.search}${url.hash}`);
+  };
+
+  useEffect(() => {
+    if (typeof window === "undefined") return undefined;
+    const onPopState = () => {
+      historyPopRef.current = true;
+      const ruta = rutaPublicaDesdePath(window.location.pathname);
+      const personaId = personaIdDesdeRuta(window.location.pathname);
+      if (personaId && BY_ID[personaId]) {
+        setHovered(null);
+        setSeleccion(BY_ID[personaId]);
+        requestAnimationFrame(() => {
+          centerOn(personaId);
+          centerOnTimeline(personaId);
+        });
+      } else if (ruta?.tipo === "dinastia") {
+        const valores = [...opciones.dinastias, ...Object.values(opciones.ramasPorPrincipal).flat()];
+        const valor = valorPorSlug(ruta.slug, valores);
+        if (valor) {
+          setSeleccion(null);
+          setTerritorios([]);
+          setDinastias([valor]);
+          setHistoriaActivaId(null);
+          historiaSnapshotRef.current = null;
+        }
+      } else if (ruta?.tipo === "territorio") {
+        const valores = [...opciones.territorios, ...Object.values(opciones.subsPorTerritorio).flat()];
+        const valor = valorPorSlug(ruta.slug, valores);
+        if (valor) {
+          setSeleccion(null);
+          setDinastias([]);
+          setTerritorios([valor]);
+          setHistoriaActivaId(null);
+          historiaSnapshotRef.current = null;
+        }
+      } else if (ruta?.tipo === "historia") {
+        const historia = HISTORIAS.find((item) => slugPublico(item.titulo) === ruta.slug || slugPublico(item.id) === ruta.slug);
+        if (historia?.disponible) window.setTimeout(() => iniciarHistoria(historia.id), 0);
+      } else if (["/", "/es", "/es/"].includes(window.location.pathname)) {
+        setHovered(null);
+        setSeleccion(null);
+      }
+      window.setTimeout(() => { historyPopRef.current = false; }, 0);
+    };
+    window.addEventListener("popstate", onPopState);
+    return () => window.removeEventListener("popstate", onPopState);
+  }, []);
 
   const centerTimelineOnYear = (anio) => {
     const scrollEl = tlScrollRef.current;
@@ -3334,7 +3360,6 @@ export default function Explorer({ initialPanel = null }) {
     setVistasActivas({ arbol: true, mapa: true });
     setHistoriaActivaId(historia.id);
     setInfoProyecto(null);
-    setPortadaVisible(false);
     aplicarPasoHistoria(historia, 0);
   };
 
@@ -3502,10 +3527,9 @@ export default function Explorer({ initialPanel = null }) {
       else { setOrigen(p.id); setDestino(null); }
     } else if (mode === "foco") {
       setFocoId(p.id);
-      setSeleccion(p);
+      seleccionarPersonaPorId(p.id);
     } else {
-      setSeleccion(p);
-      centerOn(p.id);
+      seleccionarPersonaPorId(p.id);
     }
   }, [mode, origen, destino]);
   
@@ -3642,11 +3666,6 @@ export default function Explorer({ initialPanel = null }) {
         style={{ border: 0, background: "transparent", padding: "2px 3px", cursor: "pointer", font: "inherit", fontWeight: locale === "en" ? 800 : 600, color: locale === "en" ? "#7A2E2E" : "#8A7F65" }}>EN</button>
     </div>
   );
-
-  const entrarEnProyecto = useCallback(() => {
-    if (typeof window !== "undefined") window.localStorage.setItem(PORTADA_STORAGE_KEY, "1");
-    setPortadaVisible(false);
-  }, []);
 
   if (locale === "en") {
     return (
@@ -4338,7 +4357,7 @@ export default function Explorer({ initialPanel = null }) {
                         aria-label={favoritosSet.has(personaBio.id) ? `Quitar ${personaBio.nombre} de favoritos` : `Añadir ${personaBio.nombre} a favoritos`}
                       >★</button>
                       {!hovered && seleccion && (
-                        <button type="button" className="close" aria-label="Cerrar biografía" onClick={() => setSeleccion(null)}><X size={14} /></button>
+                        <button type="button" className="close" aria-label="Cerrar biografía" onClick={cerrarSeleccion}><X size={14} /></button>
                       )}
                     </div>
                   </div>
@@ -4413,15 +4432,30 @@ export default function Explorer({ initialPanel = null }) {
 
                   <div className="bio-relations">
                     <h4>Relaciones documentadas</h4>
-                    <ListaRelaciones etiqueta="Padre" ids={personaBio.padre ? [personaBio.padre] : []} onSelect={seleccionarPersonaPorId} />
-                    <ListaRelaciones etiqueta="Madre" ids={personaBio.madre ? [personaBio.madre] : []} onSelect={seleccionarPersonaPorId} />
-                    <ListaRelaciones etiqueta={listaConyuges(personaBio).length > 1 ? "Cónyuges" : "Cónyuge"} ids={listaConyuges(personaBio)} onSelect={seleccionarPersonaPorId} />
-                    <ListaRelaciones etiqueta={listaAmantes(personaBio).length > 1 ? "Amantes" : "Amante"} ids={listaAmantes(personaBio)} tipo="amantes" onSelect={seleccionarPersonaPorId} />
-                    <ListaRelaciones etiqueta="Hijos/as" ids={HIJOS_POR_ID[personaBio.id] || []} onSelect={seleccionarPersonaPorId} />
+                    <BioRelations etiqueta="Padre" ids={personaBio.padre ? [personaBio.padre] : []} byId={BY_ID} hrefForId={(id) => rutaEntidadLocalizada("es", "persona", slugPersonaPorLocale(BY_ID[id], "es"))} onSelect={seleccionarPersonaPorId} />
+                    <BioRelations etiqueta="Madre" ids={personaBio.madre ? [personaBio.madre] : []} byId={BY_ID} hrefForId={(id) => rutaEntidadLocalizada("es", "persona", slugPersonaPorLocale(BY_ID[id], "es"))} onSelect={seleccionarPersonaPorId} />
+                    <BioRelations etiqueta={listaConyuges(personaBio).length > 1 ? "Cónyuges" : "Cónyuge"} ids={listaConyuges(personaBio)} byId={BY_ID} hrefForId={(id) => rutaEntidadLocalizada("es", "persona", slugPersonaPorLocale(BY_ID[id], "es"))} onSelect={seleccionarPersonaPorId} />
+                    <BioRelations etiqueta={listaAmantes(personaBio).length > 1 ? "Amantes" : "Amante"} ids={listaAmantes(personaBio)} tipo="amantes" byId={BY_ID} hrefForId={(id) => rutaEntidadLocalizada("es", "persona", slugPersonaPorLocale(BY_ID[id], "es"))} onSelect={seleccionarPersonaPorId} />
+                    <BioRelations etiqueta="Hijos/as" ids={HIJOS_POR_ID[personaBio.id] || []} byId={BY_ID} hrefForId={(id) => rutaEntidadLocalizada("es", "persona", slugPersonaPorLocale(BY_ID[id], "es"))} onSelect={seleccionarPersonaPorId} />
                     {!personaBio.padre && !personaBio.madre && !listaConyuges(personaBio).length && !listaAmantes(personaBio).length && !(HIJOS_POR_ID[personaBio.id] || []).length && (
                       <div className="bio-relations-empty">No hay relaciones cargadas para esta persona.</div>
                     )}
                   </div>
+
+                  <BioDiscovery
+                    persona={personaBio}
+                    personas={PERSONAS}
+                    hijosPorId={HIJOS_POR_ID}
+                    historias={HISTORIAS}
+                    getSpouses={listaConyuges}
+                    getLovers={listaAmantes}
+                    getReigns={listaReinados}
+                    normalizeText={normalizaTexto}
+                    hrefPersona={(persona) => rutaEntidadLocalizada("es", "persona", slugPersonaPorLocale(persona, "es"))}
+                    hrefHistoria={(historia) => rutaEntidadLocalizada("es", "historia", slugPublico(historia.titulo))}
+                    onSelect={seleccionarPersonaPorId}
+                    onStartHistoria={iniciarHistoria}
+                  />
 
                   {hovered && seleccion && hovered !== seleccion.id && (
                     <div className="bio-hint">Vista previa de {personaBio.nombre} — al quitar el ratón volverás a ver a {seleccion.nombre}.</div>
@@ -4468,7 +4502,7 @@ export default function Explorer({ initialPanel = null }) {
                     {!!eventoSeleccionado.personas?.length && (
                       <div className="timeline-event-people">
                         {eventoSeleccionado.personas.filter((id) => BY_ID[id]).map((id) => (
-                          <button type="button" key={id} onClick={() => seleccionarPersonaPorId(id)}>{BY_ID[id].nombre}</button>
+                          <a key={id} href={rutaEntidadLocalizada("es", "persona", slugPersonaPorLocale(BY_ID[id], "es"))} onClick={(event) => { event.preventDefault(); seleccionarPersonaPorId(id); }}>{BY_ID[id].nombre}</a>
                         ))}
                       </div>
                     )}
@@ -4610,7 +4644,7 @@ export default function Explorer({ initialPanel = null }) {
           <button type="button" onClick={() => setInfoProyecto("agradecimientos")}><Heart size={12} /> Agradecimientos</button>
           <button type="button" onClick={() => setInfoProyecto("licencias")}><Scale size={12} /> Licencias</button>
           <button type="button" onClick={() => setInfoProyecto("reportar")}><Flag size={12} /> Reportar un error</button>
-          <button type="button" onClick={() => setPortadaVisible(true)}>Portada</button>
+          <a href="/es/">Portada</a>
         </div>
         <div className="project-footer-credit">
           Cartografía base: <a href="https://www.mapchart.net/" target="_blank" rel="noreferrer">MapChart</a>
@@ -4623,32 +4657,6 @@ export default function Explorer({ initialPanel = null }) {
           © 2026 El Árbol de Europa · Código, diseño, textos y estructura original de la base de datos: todos los derechos reservados · Materiales de terceros y cartografía derivada: ver Licencias
         </div>
       </footer>
-
-      {portadaVisible && (
-        <div className="welcome-cover" role="dialog" aria-modal="true" aria-label="Bienvenida a El Árbol de Europa">
-          <div className="welcome-card">
-            <Crown size={28} className="welcome-crown" />
-            <div className="welcome-eyebrow">Genealogía histórica interactiva</div>
-            <h2>El Árbol de Europa</h2>
-            <p>Explora dinastías, parentescos, reinados y territorios de la Europa medieval y moderna en una única red navegable.</p>
-            <div className="welcome-stats">
-              <span><strong>{PERSONAS.length}</strong> personas</span>
-              <span><strong>1200–1800</strong> periodo principal</span>
-            </div>
-            <div className="welcome-actions">
-              <button type="button" className="welcome-enter" onClick={entrarEnProyecto}>Explorar el árbol <ArrowRight size={15} /></button>
-              <button type="button" className="welcome-history" onClick={() => setInfoProyecto("historias")}><BookOpen size={14} /> Historias guiadas</button>
-            </div>
-            <div className="welcome-links">
-              <button type="button" onClick={() => setInfoProyecto("acerca")}>Acerca del proyecto</button>
-              <button type="button" onClick={() => setInfoProyecto("estadisticas")}>Estadísticas</button>
-              <button type="button" onClick={() => setInfoProyecto("fuentes")}>Fuentes y metodología</button>
-              <button type="button" onClick={() => setInfoProyecto("agradecimientos")}>Agradecimientos</button>
-            </div>
-            <div className="welcome-map-credit">Cartografía base: <a href="https://www.mapchart.net/" target="_blank" rel="noreferrer">MapChart</a> · <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noreferrer">CC BY-SA 4.0</a></div>
-          </div>
-        </div>
-      )}
 
       {historiaActiva && historiaPasoActual && (
         <aside className="story-guide" aria-live="polite">
@@ -4664,7 +4672,7 @@ export default function Explorer({ initialPanel = null }) {
           <p>{historiaPasoActual.texto}</p>
           {!!historiaPasoActual.personas?.length && (
             <div className="story-guide-people">
-              {historiaPasoActual.personas.filter((id) => BY_ID[id]).map((id) => <button type="button" key={id} onClick={() => seleccionarPersonaPorId(id)}>{BY_ID[id].nombre}</button>)}
+              {historiaPasoActual.personas.filter((id) => BY_ID[id]).map((id) => <a key={id} href={rutaEntidadLocalizada("es", "persona", slugPersonaPorLocale(BY_ID[id], "es"))} onClick={(event) => { event.preventDefault(); seleccionarPersonaPorId(id); }}>{BY_ID[id].nombre}</a>)}
             </div>
           )}
           <div className="story-guide-actions">
