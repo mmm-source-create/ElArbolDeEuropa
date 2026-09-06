@@ -1,4 +1,4 @@
-import React, { lazy, Suspense, useState, useRef, useEffect, useLayoutEffect, useCallback, useMemo } from "react";
+import React, { useState, useRef, useEffect, useLayoutEffect, useCallback, useMemo } from "react";
 import { Search, ChevronDown, ChevronRight, ArrowLeft, ArrowRight, ArrowUp, ArrowDown, ZoomIn, ZoomOut, RotateCcw, GitCompare, Focus, Share2, Play, Pause, SkipBack, SkipForward, X, Info, Heart, BookOpen, BarChart3, Scale, Flag, Mail, ExternalLink } from "lucide-react";
 import { MapaEuropa } from "./MapaEuropa";
 import {
@@ -23,7 +23,6 @@ import BioDiscovery from "./components/BioDiscovery.jsx";
 import SiteHeader from "./components/SiteHeader.jsx";
 import SiteFooter from "./components/SiteFooter.jsx";
 
-const Desafio = lazy(() => import("./desafio/Desafio.jsx"));
 
 // ---------------------------------------------------------------------------
 // Taxonomías de filtros
@@ -2144,13 +2143,12 @@ function ModalProyecto({ seccion, onClose, persona, personasVista = PERSONAS, on
     reportar: "Reportar un error",
     estadisticas: "Estadísticas",
     historias: "Historias",
-    desafio: "Desafío",
   }[seccion] || "Información del proyecto";
   const estadisticas = calcularEstadisticas(alcanceEstadisticas === "vista" ? personasVista : PERSONAS);
 
   return (
     <div className="project-modal-backdrop" role="presentation" onMouseDown={(event) => { if (event.target === event.currentTarget) onClose(); }}>
-      <section className={`project-modal${seccion === "desafio" ? " project-modal-desafio" : ""}`} role="dialog" aria-modal="true" aria-label={titulo}>
+      <section className="project-modal" role="dialog" aria-modal="true" aria-label={titulo}>
         <div className="project-modal-head">
           <div>
             <div className="project-modal-kicker">El Árbol de Europa</div>
@@ -2315,12 +2313,6 @@ function ModalProyecto({ seccion, onClose, persona, personasVista = PERSONAS, on
                 ))}
               </div>
             </>
-          )}
-
-          {seccion === "desafio" && (
-            <Suspense fallback={<div className="project-license-note">Preparando el desafío…</div>}>
-              <Desafio personas={PERSONAS} />
-            </Suspense>
           )}
 
           {seccion === "reportar" && (
@@ -3956,9 +3948,7 @@ export default function Explorer({ initialPanel = null }) {
               <button type="button" className={`nav-btn nav-btn-wide${historiaActiva ? " active" : ""}`} onClick={() => setInfoProyecto("historias")}>
                 <BookOpen size={12} /> Historias
               </button>
-              <button type="button" className="nav-btn nav-btn-wide" onClick={() => setInfoProyecto("desafio")}>
-                Desafío
-              </button>
+              <a className="nav-btn nav-btn-wide" href="/es/desafio">Desafío</a>
               <div className="favorites-control" ref={favoritosMenuRef}>
                 <button type="button" className={`nav-btn nav-btn-wide${favoritosOpen || soloFavoritos ? " active" : ""}`} onClick={() => setFavoritosOpen((actual) => !actual)} aria-haspopup="menu" aria-expanded={favoritosOpen}>
                   <span className="favorite-star-symbol" aria-hidden="true">★</span> Favoritos {favoritos.length ? `(${favoritos.length})` : ""}
