@@ -12,6 +12,7 @@ export default function SiteFooter({ compact = false, onOpenStats, onReport }) {
             <a href="/es/dinastias">Dinastías</a>
             <a href="/es/territorios">Territorios</a>
             <a href="/es/historias">Historias</a>
+            <a href="/es/desafio">Desafío</a>
             {onOpenStats ? <button type="button" onClick={onOpenStats}>Estadísticas</button> : <a href="/es/?atlas=1&panel=estadisticas">Estadísticas</a>}
           </div>
         </div>

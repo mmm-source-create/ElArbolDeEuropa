@@ -42,6 +42,7 @@ export default function SiteHeader({
           <a href="/es/dinastias">Dinastías</a>
           <a href="/es/territorios">Territorios</a>
           <a href="/es/historias">Historias</a>
+          <a href="/es/desafio">Desafío</a>
         </nav>
       )}
 
