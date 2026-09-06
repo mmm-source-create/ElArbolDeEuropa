@@ -92,11 +92,15 @@ const englishPersonaUrls = (() => {
 })();
 
 const catalogoUrls = ["/es/personas", "/es/dinastias", "/es/territorios", "/es/historias"];
+const proyectoUrls = ["/es/proyecto", "/es/fuentes", "/es/licencias", "/es/agradecimientos"];
+const experienciaUrls = ["/es/desafio"];
 
 const paths = [
   "/es/",
   "/en/",
   ...catalogoUrls,
+  ...proyectoUrls,
+  ...experienciaUrls,
   ...personaUrls,
   ...dinastiaUrls,
   ...territorioUrls,
@@ -124,6 +128,8 @@ await Promise.all(OUTPUT_FILES.map((outputFile) => fs.writeFile(outputFile, xml,
 
 console.log(`sitemap-full.xml + sitemap.xml generados: ${urls.length} URLs`);
 console.log(`  Catálogos ES: ${catalogoUrls.length}`);
+console.log(`  Proyecto ES: ${proyectoUrls.length}`);
+console.log(`  Experiencias ES: ${experienciaUrls.length}`);
 console.log(`  Personas ES: ${personaUrls.length}`);
 console.log(`  Dinastías ES: ${dinastiaUrls.length}`);
 console.log(`  Territorios ES: ${territorioUrls.length}`);
