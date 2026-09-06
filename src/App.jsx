@@ -7,6 +7,7 @@ import "./styles/theme.css";
 import "./App.css";
 
 const Explorer = lazy(() => import("./Explorer.jsx"));
+const DesafioPage = lazy(() => import("./desafio/DesafioPage.jsx"));
 
 function localeDesdePath(pathname) {
   return /^\/en(?:\/|$)/.test(String(pathname || "")) ? "en" : "es";
@@ -21,6 +22,10 @@ function slugPersonaDesdePath(pathname) {
 function catalogoDesdePath(pathname) {
   const match = String(pathname || "/").match(/^\/es\/(personas|dinastias|territorios|historias)\/?$/);
   return match?.[1] || null;
+}
+
+function esRutaDesafio(pathname) {
+  return /^\/es\/desafio\/?$/.test(String(pathname || "/"));
 }
 
 
@@ -90,6 +95,9 @@ export default function App() {
     const atlasRequested = params.get("atlas") === "1";
     const panel = params.get("panel") || null;
 
+    if (esRutaDesafio(pathname) || (["/", "/es", "/es/"].includes(pathname) && panel === "desafio")) {
+      return { locale, view: "desafio", personSlug: null, legacyPersonId: null, catalog: null, info: null, panel: null };
+    }
     if ((personSlug || legacyPersonId) && !atlasRequested) return { locale, view: "person", personSlug, legacyPersonId, catalog: null, info: null, panel: null };
     if (catalog && !atlasRequested) return { locale, view: "catalog", personSlug: null, legacyPersonId: null, catalog, info: null, panel: null };
     if (info && !atlasRequested) return { locale, view: "info", personSlug: null, legacyPersonId: null, catalog: null, info, panel: null };
@@ -111,6 +119,13 @@ export default function App() {
   }, []);
 
   if (initial.view === "english") return <EnglishLanding />;
+  if (initial.view === "desafio") {
+    return (
+      <Suspense fallback={null}>
+        <DesafioPage />
+      </Suspense>
+    );
+  }
   if (!explorerRequested && initial.view === "person") return <PersonPage slug={initial.personSlug} legacyId={initial.legacyPersonId} onExplore={() => entrarAtlas(null)} />;
   if (!explorerRequested && initial.view === "catalog") return <CatalogPage tipo={initial.catalog} />;
   if (!explorerRequested && initial.view === "info") return <InfoPage tipo={initial.info} />;
