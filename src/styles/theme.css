@@ -36,9 +36,9 @@
 
 .site-header.is-atlas {
   position: relative;
-  min-height: 58px;
+  min-height: 66px;
   margin: -24px -24px 12px;
-  padding: 8px 24px;
+  padding: 10px 24px;
   grid-template-columns: minmax(220px, .9fr) minmax(240px, 1.2fr) minmax(130px, .9fr);
   background: rgba(251, 247, 236, .94);
 }
