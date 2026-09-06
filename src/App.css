@@ -279,6 +279,7 @@ html, body {
   justify-content: center;
   cursor: pointer;
   color: #6B6350;
+  text-decoration: none;
 }
 
 .nav-btn-wide {
