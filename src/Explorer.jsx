@@ -32,6 +32,32 @@ import {
 import { PersonBox } from "./explorer/ExplorerPrimitives.jsx";
 import ExplorerView from "./explorer/ExplorerView.jsx";
 
+const ATLAS_LAYOUT_STORAGE_KEY = "eade.atlasLayout.v24";
+const DEFAULT_PANEL_WIDTHS = Object.freeze({ filtros: 280, biografia: 330 });
+const DEFAULT_FILTER_SECTIONS = Object.freeze({
+  territorios: true,
+  dinastias: true,
+  titulos: true,
+  siglos: true,
+  relaciones: true,
+});
+
+function limitarNumero(valor, min, max, fallback) {
+  const numero = Number(valor);
+  if (!Number.isFinite(numero)) return fallback;
+  return Math.max(min, Math.min(max, numero));
+}
+
+function leerLayoutAtlas() {
+  if (typeof window === "undefined") return null;
+  try {
+    const parsed = JSON.parse(window.localStorage.getItem(ATLAS_LAYOUT_STORAGE_KEY) || "null");
+    return parsed && typeof parsed === "object" ? parsed : null;
+  } catch {
+    return null;
+  }
+}
+
 export default function Explorer({ initialPanel = null }) {
   const scrollRef = useRef(null);
   const nodeRefs = useRef({});
@@ -83,6 +109,23 @@ export default function Explorer({ initialPanel = null }) {
       return base;
     }
   });
+  const [panelWidths, setPanelWidths] = useState(() => {
+    const guardado = leerLayoutAtlas()?.panelWidths || {};
+    return {
+      filtros: limitarNumero(guardado.filtros, 210, 420, DEFAULT_PANEL_WIDTHS.filtros),
+      biografia: limitarNumero(guardado.biografia, 260, 520, DEFAULT_PANEL_WIDTHS.biografia),
+    };
+  });
+  const [treeMapSplit, setTreeMapSplit] = useState(() =>
+    limitarNumero(leerLayoutAtlas()?.treeMapSplit, 25, 75, 50)
+  );
+  const [filterSectionsOpen, setFilterSectionsOpen] = useState(() => {
+    const guardado = leerLayoutAtlas()?.filterSectionsOpen || {};
+    return Object.fromEntries(Object.entries(DEFAULT_FILTER_SECTIONS).map(([key, value]) => [
+      key,
+      typeof guardado[key] === "boolean" ? guardado[key] : value,
+    ]));
+  });
   const [infoProyecto, setInfoProyecto] = useState(initialPanel);
   const [timelineScaleIndex, setTimelineScaleIndex] = useState(1);
   const [timelineMode, setTimelineMode] = useState("personas");
@@ -108,6 +151,21 @@ export default function Explorer({ initialPanel = null }) {
   const urlStateLoadedRef = useRef(false);
   const historyPopRef = useRef(false);
   const dragState = useRef(null);
+  const workspaceGridRef = useRef(null);
+  const workspaceMainRef = useRef(null);
+
+  useEffect(() => {
+    if (typeof window === "undefined") return;
+    try {
+      window.localStorage.setItem(ATLAS_LAYOUT_STORAGE_KEY, JSON.stringify({
+        panelWidths,
+        treeMapSplit,
+        filterSectionsOpen,
+      }));
+    } catch {
+      // El Atlas sigue funcionando aunque el navegador bloquee localStorage.
+    }
+  }, [panelWidths, treeMapSplit, filterSectionsOpen]);
 
   // La geometría base se calcula durante el prebuild/deployment.
   // Solo las vistas filtradas necesitan recalcular layout en el navegador.
@@ -571,6 +629,89 @@ export default function Explorer({ initialPanel = null }) {
 
   const alternarPanelAuxiliar = useCallback((panel) => {
     setPanelesVisibles((actuales) => ({ ...actuales, [panel]: !actuales[panel] }));
+  }, []);
+
+  const alternarSeccionFiltro = useCallback((seccion) => {
+    setFilterSectionsOpen((actuales) => ({ ...actuales, [seccion]: !actuales[seccion] }));
+  }, []);
+
+  const ajustarAnchoPanel = useCallback((lado, delta) => {
+    const min = lado === "filtros" ? 210 : 260;
+    const max = lado === "filtros" ? 420 : 520;
+    setPanelWidths((actuales) => ({
+      ...actuales,
+      [lado]: limitarNumero(actuales[lado] + delta, min, max, actuales[lado]),
+    }));
+  }, []);
+
+  const restablecerAnchoPanel = useCallback((lado) => {
+    setPanelWidths((actuales) => ({ ...actuales, [lado]: DEFAULT_PANEL_WIDTHS[lado] }));
+  }, []);
+
+  const comenzarResizeLateral = useCallback((lado, event) => {
+    if (event?.button !== undefined && event.button !== 0) return;
+    const grid = workspaceGridRef.current;
+    if (!grid || typeof window === "undefined") return;
+    event.preventDefault();
+    const startX = event.clientX;
+    const rect = grid.getBoundingClientRect();
+    const otroVisible = lado === "filtros" ? mostrarBiografia : mostrarFiltros;
+    const min = lado === "filtros" ? 210 : 260;
+    const responsiveMax = window.innerWidth <= 1240
+      ? (lado === "filtros" ? 255 : 285)
+      : (lado === "filtros" ? 420 : 520);
+    const startWidth = Math.min(panelWidths[lado], responsiveMax);
+    const otroWidthBase = lado === "filtros" ? panelWidths.biografia : panelWidths.filtros;
+    const otroWidth = window.innerWidth <= 1240
+      ? Math.min(otroWidthBase, lado === "filtros" ? 285 : 255)
+      : otroWidthBase;
+    const hardMax = responsiveMax;
+    const espacioHandles = otroVisible ? 32 : 16;
+    const maxPorEspacio = rect.width - (otroVisible ? otroWidth : 0) - 420 - espacioHandles;
+    const max = Math.max(min, Math.min(hardMax, maxPorEspacio));
+
+    const onMove = (moveEvent) => {
+      const delta = lado === "filtros" ? moveEvent.clientX - startX : startX - moveEvent.clientX;
+      setPanelWidths((actuales) => ({
+        ...actuales,
+        [lado]: limitarNumero(startWidth + delta, min, max, startWidth),
+      }));
+    };
+    const onEnd = () => {
+      window.removeEventListener("pointermove", onMove);
+      window.removeEventListener("pointerup", onEnd);
+      window.removeEventListener("pointercancel", onEnd);
+      document.body.classList.remove("atlas-is-resizing");
+    };
+
+    document.body.classList.add("atlas-is-resizing");
+    window.addEventListener("pointermove", onMove);
+    window.addEventListener("pointerup", onEnd);
+    window.addEventListener("pointercancel", onEnd);
+  }, [panelWidths, mostrarBiografia, mostrarFiltros]);
+
+  const comenzarResizeArbolMapa = useCallback((event) => {
+    if (event?.button !== undefined && event.button !== 0) return;
+    const main = workspaceMainRef.current;
+    if (!main || typeof window === "undefined") return;
+    event.preventDefault();
+    const rect = main.getBoundingClientRect();
+    const actualizar = (clientY) => {
+      const porcentaje = ((clientY - rect.top) / Math.max(1, rect.height)) * 100;
+      setTreeMapSplit(limitarNumero(porcentaje, 25, 75, 50));
+    };
+    const onMove = (moveEvent) => actualizar(moveEvent.clientY);
+    const onEnd = () => {
+      window.removeEventListener("pointermove", onMove);
+      window.removeEventListener("pointerup", onEnd);
+      window.removeEventListener("pointercancel", onEnd);
+      document.body.classList.remove("atlas-is-resizing");
+    };
+    actualizar(event.clientY);
+    document.body.classList.add("atlas-is-resizing");
+    window.addEventListener("pointermove", onMove);
+    window.addEventListener("pointerup", onEnd);
+    window.addEventListener("pointercancel", onEnd);
   }, []);
 
   const personasVivasEnAnio = useMemo(() =>
@@ -1353,6 +1494,24 @@ export default function Explorer({ initialPanel = null }) {
     return lista;
   }, [queryTrim, query, territorios, dinastias, titulos, siglos, relaciones, soloFavoritos, opciones.titulos]);
 
+  const filtrosActivosCompactos = useMemo(() => {
+    const lista = [];
+    if (queryTrim) lista.push(`“${query.trim()}”`);
+    territorios.forEach((valor) => lista.push(valor));
+    dinastias.forEach((valor) => lista.push(valor));
+    titulos.forEach((id) => {
+      const categoria = opciones.titulos.find((item) => item.id === id);
+      lista.push(categoria?.label || id);
+    });
+    siglos.forEach((valor) => lista.push(valor === SIN_FECHA ? "Fechas incompletas" : `s. ${nRomano[valor] || valor}`));
+    relaciones.forEach((id) => {
+      const filtro = FILTROS_RELACION.find((item) => item.id === id);
+      lista.push(filtro?.label || id);
+    });
+    if (soloFavoritos) lista.push("Favoritos");
+    return lista;
+  }, [queryTrim, query, territorios, dinastias, titulos, siglos, relaciones, soloFavoritos, opciones.titulos]);
+
   const cambiarIdioma = useCallback((siguiente) => {
     if (typeof window === "undefined" || !["es", "en"].includes(siguiente) || siguiente === locale) return;
     const rutaActual = rutaPublicaDesdePath(window.location.pathname);
@@ -1416,7 +1575,9 @@ export default function Explorer({ initialPanel = null }) {
     infoProyecto, setInfoProyecto, timelineScaleIndex, setTimelineScaleIndex, timelineMode, setTimelineMode, eventoSeleccionadoId, setEventoSeleccionadoId,
     favoritos, setFavoritos, favoritosOpen, setFavoritosOpen, soloFavoritos, setSoloFavoritos, historiaActivaId, setHistoriaActivaId,
     historiaPasoIndex, setHistoriaPasoIndex, compareMenuRef, focoMenuRef, favoritosMenuRef, historiaSnapshotRef, shareStatusTimerRef, urlStateLoadedRef,
-    historyPopRef, dragState, gen, rows, graph, favoritosSet, timelinePxPerYear, timelineTrackWidth,
+    historyPopRef, dragState, workspaceGridRef, workspaceMainRef, panelWidths, setPanelWidths, treeMapSplit, setTreeMapSplit, filterSectionsOpen, setFilterSectionsOpen,
+    alternarSeccionFiltro, ajustarAnchoPanel, restablecerAnchoPanel, comenzarResizeLateral, comenzarResizeArbolMapa,
+    gen, rows, graph, favoritosSet, timelinePxPerYear, timelineTrackWidth,
     timelineContentWidth, timelineTickStep, timelineTicks, eventosOrdenadosTodos, totalEventosTimeline, eventosOrdenados, timelineCombinedEvents, eventoSeleccionado,
     historiaActiva, historiaPasoActual, historiaPersonasSet, opciones, personaBio, toggle, focoSet, collapsedSet,
     hiddenByCollapse, toggleDescendants, ajustarAnio, actualizarAnioDesdeRango, confirmarAnioEscrito, restablecerAnio, moverAnioHistoria, alternarReproduccionHistoria,
@@ -1428,7 +1589,7 @@ export default function Explorer({ initialPanel = null }) {
     onPointerMove, endDrag, centerOn, pendingZoomCenterRef, cambiarZoomArbol, centerOnTimeline, seleccionarPersonaPorId, cerrarSeleccion,
     centerTimelineOnYear, alternarFavorito, seleccionarEvento, aplicarPasoHistoria, iniciarHistoria, cambiarPasoHistoria, salirHistoria, mostrarEstadoCompartir,
     construirEnlaceCompartido, compartirPersona, handleBoxClick, getBoxHandlers, renderPersonBox, miniW, miniScaleX, miniScaleY,
-    onMinimapClick, filtrosActivosResumen, cambiarIdioma, atlasContextLabel,
+    onMinimapClick, filtrosActivosResumen, filtrosActivosCompactos, cambiarIdioma, atlasContextLabel,
   };
   return <ExplorerView vm={viewModel} />;
 }
