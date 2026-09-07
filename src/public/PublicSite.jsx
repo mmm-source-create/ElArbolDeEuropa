@@ -216,7 +216,7 @@ export function HomePage({ onEnterAtlas, onOpenPanel }) {
             <a href="/es/dinastias" className="public-door-card"><Shield size={22} /><strong>Dinastías</strong><span>Capetos, Habsburgo, Trastámara, Borbones y muchas más.</span></a>
             <a href="/es/territorios" className="public-door-card"><Landmark size={22} /><strong>Territorios</strong><span>Explora quién gobernó dónde y cómo se conectan las coronas.</span></a>
             <a href="/es/historias" className="public-door-card"><BookOpen size={22} /><strong>Historias</strong><span>Recorridos guiados por guerras, artistas, favoritos y dinastías.</span></a>
-            <a href="/es/desafio" className="public-door-card"><Swords size={22} /><strong>Desafío</strong><span>El Camino, Racha y un desafío diario con la propia base histórica.</span></a>
+            <a href="/es/desafio" className="public-door-card"><Swords size={22} /><strong>Desafío</strong><span>El Camino, Racha, Retratos y un desafío diario con la propia base histórica.</span></a>
             <button type="button" className="public-door-card" onClick={() => onOpenPanel?.("estadisticas")}><Sparkles size={22} /><strong>Estadísticas</strong><span>Descubre qué casas, territorios y figuras dominan la base.</span></button>
           </div>
         </section>
