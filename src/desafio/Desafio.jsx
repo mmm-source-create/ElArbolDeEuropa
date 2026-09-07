@@ -20,6 +20,7 @@ import {
   Zap,
 } from "lucide-react";
 import { IMAGENES_PERSONAS } from "../imagenesPersonas.js";
+import { normalizarBusquedaPublica, slugPublico } from "../utils/personPresentation.js";
 import {
   crearDesafioDiario,
   crearPreguntaCamino,
@@ -119,36 +120,21 @@ function guardarRecientes(value) {
   guardarJson(RECENT_KEY, (value || []).slice(-180));
 }
 
-function slugPublico(valor) {
-  return String(valor ?? "")
-    .normalize("NFD")
-    .replace(/[\u0300-\u036f]/g, "")
-    .toLowerCase()
-    .replace(/[^a-z0-9]+/g, "-")
-    .replace(/^-+|-+$/g, "")
-    .replace(/-{2,}/g, "-") || "persona";
-}
 
 function construirSlugs(personas) {
   const counts = personas.reduce((acc, persona) => {
-    const base = slugPublico(persona.nombre);
+    const base = slugPublico(persona.slug || persona.nombre);
     acc[base] = (acc[base] || 0) + 1;
     return acc;
   }, {});
   return Object.fromEntries(personas.map((persona) => {
-    const base = slugPublico(persona.nombre);
+    const base = slugPublico(persona.slug || persona.nombre);
     return [persona.id, counts[base] > 1 ? `${base}-${slugPublico(persona.id)}` : base];
   }));
 }
 
 function normalizarBusqueda(valor) {
-  return String(valor ?? "")
-    .normalize("NFD")
-    .replace(/[\u0300-\u036f]/g, "")
-    .toLowerCase()
-    .replace(/[^a-z0-9]+/g, " ")
-    .trim()
-    .replace(/\s+/g, " ");
+  return normalizarBusquedaPublica(valor);
 }
 
 function relevanciaRetrato(persona) {
@@ -183,9 +169,9 @@ function sugerenciasPorNombre(personas, consulta, limite = 7) {
     .map((persona) => {
       const nombreOriginal = String(persona.nombre || "");
       const nombre = normalizarBusqueda(nombreOriginal);
-      const parentesis = [...nombreOriginal.matchAll(/\(([^)]+)\)/g)].map((match) => normalizarBusqueda(match[1]));
-      const variantes = [nombre, ...parentesis].filter(Boolean);
-      const alias = normalizarBusqueda([persona.nombre, persona.sobrenombre].filter(Boolean).join(" "));
+      const aliases = (Array.isArray(persona.aliases) ? persona.aliases : []).map(normalizarBusqueda).filter(Boolean);
+      const variantes = [nombre, ...aliases].filter(Boolean);
+      const alias = normalizarBusqueda([persona.nombre, ...(persona.aliases || []), persona.sobrenombre].filter(Boolean).join(" "));
       let score = Number.POSITIVE_INFINITY;
       if (variantes.some((variante) => variante === q)) score = 0;
       else if (variantes.some((variante) => variante.startsWith(`${q} `))) score = 1;
