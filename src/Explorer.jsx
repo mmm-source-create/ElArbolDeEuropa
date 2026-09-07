@@ -3233,7 +3233,39 @@ export default function Explorer({ initialPanel = null }) {
       historyPopRef.current = true;
       const ruta = rutaPublicaDesdePath(window.location.pathname);
       const personaId = personaIdDesdeRuta(window.location.pathname);
+
+      // Al volver atrás desde una Historia, recupera también el estado del Atlas
+      // que existía antes de iniciar el recorrido, no solo la URL.
+      const anteriorHistoria = historiaSnapshotRef.current;
+      if (anteriorHistoria && ruta?.tipo !== "historia") {
+        setQuery(anteriorHistoria.query);
+        setTerritorios(anteriorHistoria.territorios);
+        setDinastias(anteriorHistoria.dinastias);
+        setTitulos(anteriorHistoria.titulos);
+        setSiglos(anteriorHistoria.siglos);
+        setRelaciones(anteriorHistoria.relaciones);
+        setSoloFavoritos(anteriorHistoria.soloFavoritos);
+        setAnioGlobal(anteriorHistoria.anioGlobal);
+        setAnioInput(Number.isFinite(anteriorHistoria.anioGlobal) ? String(anteriorHistoria.anioGlobal) : "");
+        setVistasActivas(anteriorHistoria.vistasActivas);
+        setTimelineMode(anteriorHistoria.timelineMode);
+        setEventoSeleccionadoId(anteriorHistoria.eventoSeleccionadoId || null);
+        setMode(anteriorHistoria.mode || "view");
+        setOrigen(anteriorHistoria.origen || null);
+        setDestino(anteriorHistoria.destino || null);
+        setFocoId(anteriorHistoria.focoId || null);
+        setFocoAlcance(anteriorHistoria.focoAlcance || "cercana");
+        setCollapsedIds(anteriorHistoria.collapsedIds || []);
+        setCompareRouteIndex(anteriorHistoria.compareRouteIndex || 0);
+        setHistoriaActivaId(null);
+        setHistoriaPasoIndex(0);
+        historiaSnapshotRef.current = null;
+      }
+
       if (personaId && BY_ID[personaId]) {
+        setHistoriaActivaId(null);
+        setHistoriaPasoIndex(0);
+        historiaSnapshotRef.current = null;
         setHovered(null);
         setSeleccion(BY_ID[personaId]);
         requestAnimationFrame(() => {
@@ -3264,6 +3296,9 @@ export default function Explorer({ initialPanel = null }) {
         const historia = HISTORIAS.find((item) => slugPublico(item.titulo) === ruta.slug || slugPublico(item.id) === ruta.slug);
         if (historia?.disponible) window.setTimeout(() => iniciarHistoria(historia.id), 0);
       } else if (["/", "/es", "/es/"].includes(window.location.pathname)) {
+        setHistoriaActivaId(null);
+        setHistoriaPasoIndex(0);
+        historiaSnapshotRef.current = null;
         setHovered(null);
         setSeleccion(null);
       }
@@ -3335,10 +3370,16 @@ export default function Explorer({ initialPanel = null }) {
     const historia = HISTORIAS.find((item) => item.id === historiaId && item.disponible);
     if (!historia?.pasos?.length) return;
     if (!historiaSnapshotRef.current) {
+      const rutaActual = typeof window !== "undefined" ? rutaPublicaDesdePath(window.location.pathname) : null;
+      const historiaAbiertaDesdeEnlace = rutaActual?.tipo === "historia";
       historiaSnapshotRef.current = {
         query, territorios, dinastias, titulos, siglos, relaciones, soloFavoritos, anioGlobal,
         vistasActivas, seleccionId: seleccion?.id || null, timelineMode, eventoSeleccionadoId,
         mode, origen, destino, focoId, focoAlcance, collapsedIds, compareRouteIndex,
+        rutaAnterior: typeof window !== "undefined"
+          ? (historiaAbiertaDesdeEnlace ? "/es/historias" : `${window.location.pathname}${window.location.search}${window.location.hash}`)
+          : "/es/",
+        historiaAbiertaDesdeEnlace,
       };
     }
     setQuery("");
@@ -3355,6 +3396,16 @@ export default function Explorer({ initialPanel = null }) {
     setHistoriaActivaId(historia.id);
     setInfoProyecto(null);
     aplicarPasoHistoria(historia, 0);
+
+    // Una Historia debe tener la misma URL tanto si se abre desde una página
+    // pública como si se inicia desde el panel del Atlas.
+    if (typeof window !== "undefined" && !historyPopRef.current) {
+      const destinoHistoria = rutaEntidadLocalizada("es", "historia", slugPublico(historia.titulo));
+      const actual = `${window.location.pathname}${window.location.search}${window.location.hash}`;
+      if (actual !== destinoHistoria) {
+        window.history.pushState({ eade: "historia", id: historia.id }, "", destinoHistoria);
+      }
+    }
   };
 
   const cambiarPasoHistoria = (delta) => {
@@ -3390,6 +3441,17 @@ export default function Explorer({ initialPanel = null }) {
     setCompareRouteIndex(anterior.compareRouteIndex || 0);
     setSeleccion(anterior.seleccionId ? BY_ID[anterior.seleccionId] || null : null);
     historiaSnapshotRef.current = null;
+
+    if (typeof window !== "undefined" && !historyPopRef.current) {
+      if (anterior.historiaAbiertaDesdeEnlace) {
+        window.location.assign(anterior.rutaAnterior || "/es/historias");
+      } else if (anterior.rutaAnterior) {
+        const actual = `${window.location.pathname}${window.location.search}${window.location.hash}`;
+        if (actual !== anterior.rutaAnterior) {
+          window.history.pushState({ eade: "atlas" }, "", anterior.rutaAnterior);
+        }
+      }
+    }
   };
 
   const mostrarEstadoCompartir = useCallback((mensaje) => {
