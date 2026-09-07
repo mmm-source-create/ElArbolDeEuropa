@@ -36,6 +36,8 @@ const DAILY_KEY = "arbol-europa-desafio-diario-v2";
 const ESTADISTICAS_INICIALES = Object.freeze({
   totalPreguntas: 0,
   totalAciertos: 0,
+  precisionPreguntas: 0,
+  precisionAciertos: 0,
   caminoPartidas: 0,
   mejorCamino: 0,
   mejorCombo: 0,
@@ -67,10 +69,32 @@ function guardarJson(key, value) {
 function leerEstadisticas() {
   const v2 = leerJson(STORAGE_KEY, null);
   if (v2 && typeof v2 === "object") {
-    return Object.fromEntries(Object.keys(ESTADISTICAS_INICIALES).map((key) => [
+    const siguientes = Object.fromEntries(Object.keys(ESTADISTICAS_INICIALES).map((key) => [
       key,
       Number.isFinite(v2[key]) ? v2[key] : ESTADISTICAS_INICIALES[key],
     ]));
+
+    // V2.3: las primeras versiones migraron los aciertos históricos de V1,
+    // pero no podían reconstruir el número de preguntas antiguas. Eso hacía
+    // posible ver una precisión superior al 100 %. Si aún no existen los
+    // contadores de precisión independientes, reconstruimos solo la parte V2
+    // restando los aciertos heredados cuando el almacenamiento V1 sigue vivo.
+    const precisionYaMigrada = Number.isFinite(v2.precisionPreguntas) && Number.isFinite(v2.precisionAciertos);
+    if (!precisionYaMigrada) {
+      const legacy = leerJson(LEGACY_STORAGE_KEY, null);
+      const legacyAciertos = Number.isFinite(legacy?.aciertos) ? legacy.aciertos : null;
+      const preguntasV2 = Number.isFinite(v2.totalPreguntas) ? Math.max(0, v2.totalPreguntas) : 0;
+      const aciertosTotales = Number.isFinite(v2.totalAciertos) ? Math.max(0, v2.totalAciertos) : 0;
+      let aciertosV2 = 0;
+      if (legacyAciertos !== null && aciertosTotales >= legacyAciertos) {
+        aciertosV2 = aciertosTotales - legacyAciertos;
+      } else if (aciertosTotales <= preguntasV2) {
+        aciertosV2 = aciertosTotales;
+      }
+      siguientes.precisionPreguntas = preguntasV2;
+      siguientes.precisionAciertos = Math.min(preguntasV2, Math.max(0, aciertosV2));
+    }
+    return siguientes;
   }
 
   const legacy = leerJson(LEGACY_STORAGE_KEY, null);
@@ -373,6 +397,8 @@ export default function Desafio({ personas = [] }) {
       ...actual,
       totalPreguntas: actual.totalPreguntas + 1,
       totalAciertos: actual.totalAciertos + (acierto ? 1 : 0),
+      precisionPreguntas: actual.precisionPreguntas + 1,
+      precisionAciertos: actual.precisionAciertos + (acierto ? 1 : 0),
     }));
   };
 
@@ -892,8 +918,8 @@ export default function Desafio({ personas = [] }) {
   // MENU
   // ---------------------------------------------------------------------------
   if (!modo) {
-    const precision = estadisticas.totalPreguntas
-      ? Math.round((estadisticas.totalAciertos / estadisticas.totalPreguntas) * 100)
+    const precision = estadisticas.precisionPreguntas
+      ? Math.round((estadisticas.precisionAciertos / estadisticas.precisionPreguntas) * 100)
       : 0;
     return (
       <section className="desafio-shell desafio-hub">
