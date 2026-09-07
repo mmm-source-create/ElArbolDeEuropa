@@ -20,7 +20,7 @@ import {
   Zap,
 } from "lucide-react";
 import { IMAGENES_PERSONAS } from "../imagenesPersonas.js";
-import { normalizarBusquedaPublica, slugPublico } from "../utils/personPresentation.js";
+import { normalizarBusquedaPublica, slugPublico, tieneContenidoEditorial } from "../utils/personPresentation.js";
 import {
   crearDesafioDiario,
   crearPreguntaCamino,
@@ -143,7 +143,7 @@ function relevanciaRetrato(persona) {
   if (/emperador|emperatriz|rey|reina|papa|sultan|zar|principe|duque/.test(titulo)) puntos += 8;
   puntos += Math.min(12, (persona?.reinados?.length || 0) * 3);
   puntos += Math.min(5, persona?.reinos?.length || 0);
-  if (persona?.biografia) puntos += 3;
+  if (tieneContenidoEditorial(persona)) puntos += 3;
   if (persona?.sobrenombre) puntos += 2;
   if (persona?.padre || persona?.madre) puntos += 1;
   return puntos;
