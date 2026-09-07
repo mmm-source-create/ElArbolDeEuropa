@@ -16,6 +16,21 @@ import { nRomano, formatoFechas, sobrenombreDePersona, nombrePrincipal, pct, eti
 import { ALCANCES_FOCO, MODOS_COMPARACION, tipoRelacionEntre } from "./relationshipGraph.js";
 import { Chip, ModalProyecto } from "./ExplorerPrimitives.jsx";
 
+function FilterSection({ title, open, onToggle, activeCount = 0, children }) {
+  return (
+    <section className={`filter-static-section${open ? " is-open" : " is-collapsed"}`}>
+      <button type="button" className="filter-section-toggle" onClick={onToggle} aria-expanded={open}>
+        <span className="filter-section-title">{title}</span>
+        <span className="filter-section-meta">
+          {activeCount > 0 && <span className="filter-section-count">{activeCount}</span>}
+          {open ? <ChevronDown size={12} /> : <ChevronRight size={12} />}
+        </span>
+      </button>
+      {open && <div className="filter-static-content">{children}</div>}
+    </section>
+  );
+}
+
 export default function ExplorerView({ vm }) {
   const {
     scrollRef, nodeRefs, tlScrollRef, tlBarRefs, locale, setLocale, query, setQuery,
@@ -29,7 +44,9 @@ export default function ExplorerView({ vm }) {
     infoProyecto, setInfoProyecto, timelineScaleIndex, setTimelineScaleIndex, timelineMode, setTimelineMode, eventoSeleccionadoId, setEventoSeleccionadoId,
     favoritos, setFavoritos, favoritosOpen, setFavoritosOpen, soloFavoritos, setSoloFavoritos, historiaActivaId, setHistoriaActivaId,
     historiaPasoIndex, setHistoriaPasoIndex, compareMenuRef, focoMenuRef, favoritosMenuRef, historiaSnapshotRef, shareStatusTimerRef, urlStateLoadedRef,
-    historyPopRef, dragState, gen, rows, graph, favoritosSet, timelinePxPerYear, timelineTrackWidth,
+    historyPopRef, dragState, workspaceGridRef, workspaceMainRef, panelWidths, setPanelWidths, treeMapSplit, setTreeMapSplit, filterSectionsOpen, setFilterSectionsOpen,
+    alternarSeccionFiltro, ajustarAnchoPanel, restablecerAnchoPanel, comenzarResizeLateral, comenzarResizeArbolMapa,
+    gen, rows, graph, favoritosSet, timelinePxPerYear, timelineTrackWidth,
     timelineContentWidth, timelineTickStep, timelineTicks, eventosOrdenadosTodos, totalEventosTimeline, eventosOrdenados, timelineCombinedEvents, eventoSeleccionado,
     historiaActiva, historiaPasoActual, historiaPersonasSet, opciones, personaBio, toggle, focoSet, collapsedSet,
     hiddenByCollapse, toggleDescendants, ajustarAnio, actualizarAnioDesdeRango, confirmarAnioEscrito, restablecerAnio, moverAnioHistoria, alternarReproduccionHistoria,
@@ -41,8 +58,10 @@ export default function ExplorerView({ vm }) {
     onPointerMove, endDrag, centerOn, pendingZoomCenterRef, cambiarZoomArbol, centerOnTimeline, seleccionarPersonaPorId, cerrarSeleccion,
     centerTimelineOnYear, alternarFavorito, seleccionarEvento, aplicarPasoHistoria, iniciarHistoria, cambiarPasoHistoria, salirHistoria, mostrarEstadoCompartir,
     construirEnlaceCompartido, compartirPersona, handleBoxClick, getBoxHandlers, renderPersonBox, miniW, miniScaleX, miniScaleY,
-    onMinimapClick, filtrosActivosResumen, cambiarIdioma, atlasContextLabel,
+    onMinimapClick, filtrosActivosResumen, filtrosActivosCompactos, cambiarIdioma, atlasContextLabel,
   } = vm;
+  const filtrosCompactosVisibles = filtrosActivosCompactos.slice(0, 6);
+  const filtrosCompactosRestantes = Math.max(0, filtrosActivosCompactos.length - filtrosCompactosVisibles.length);
   return (
     <div className="wrap">
       <SiteHeader variant="atlas" locale={locale} onLanguageChange={cambiarIdioma} contextLabel={atlasContextLabel} />
@@ -410,7 +429,14 @@ export default function ExplorerView({ vm }) {
         </div>
       )}
 
-      <div className={`workspace-grid ${layoutLaterales}${mostrarCronologia ? "" : " workspace-no-timeline"}`}>
+      <div
+        ref={workspaceGridRef}
+        className={`workspace-grid ${layoutLaterales}${mostrarCronologia ? "" : " workspace-no-timeline"}`}
+        style={{
+          "--workspace-left-width": `${panelWidths.filtros}px`,
+          "--workspace-right-width": `${panelWidths.biografia}px`,
+        }}
+      >
         {mostrarFiltros && (
         <aside className="workspace-sidebar">
           <section className="panel workspace-fixed-panel workspace-filter-panel">
@@ -420,10 +446,21 @@ export default function ExplorerView({ vm }) {
                 {hayFiltros ? `${visiblePeople.length} / ${PERSONAS.length} visibles` : `${PERSONAS.length} personas`}
               </span>
             </div>
+            <div className={`filter-active-overview${filtrosActivosCompactos.length ? " has-active" : ""}`}>
+              <span className="filter-active-overview-label">Filtros activos</span>
+              <span className="filter-active-overview-values">
+                {filtrosCompactosVisibles.length ? filtrosCompactosVisibles.join(" · ") : "Ninguno"}
+                {filtrosCompactosRestantes > 0 ? ` · +${filtrosCompactosRestantes}` : ""}
+              </span>
+            </div>
             <div className="panel-body workspace-panel-scroll workspace-filter-scroll">
               <div className="filters-row filters-row-vertical filters-always-open">
-                <section className="filter-static-section">
-                  <div className="filter-title">Territorios</div>
+                <FilterSection
+                  title="Territorios"
+                  open={filterSectionsOpen.territorios}
+                  onToggle={() => alternarSeccionFiltro("territorios")}
+                  activeCount={territorios.length}
+                >
                   <div className="filter-group filter-group-dinastias">
                     {opciones.territorios.map((territorio) => {
                       const hijos = opciones.subsPorTerritorio[territorio] || [];
@@ -457,10 +494,14 @@ export default function ExplorerView({ vm }) {
                       );
                     })}
                   </div>
-                </section>
+                </FilterSection>
 
-                <section className="filter-static-section">
-                  <div className="filter-title">Dinastías</div>
+                <FilterSection
+                  title="Dinastías"
+                  open={filterSectionsOpen.dinastias}
+                  onToggle={() => alternarSeccionFiltro("dinastias")}
+                  activeCount={dinastias.length}
+                >
                   <div className="filter-group filter-group-dinastias">
                     {opciones.dinastias.map((dinastia) => {
                       const ramas = opciones.ramasPorPrincipal[dinastia] || [];
@@ -493,10 +534,14 @@ export default function ExplorerView({ vm }) {
                       );
                     })}
                   </div>
-                </section>
+                </FilterSection>
 
-                <section className="filter-static-section">
-                  <div className="filter-title">Función histórica</div>
+                <FilterSection
+                  title="Función histórica"
+                  open={filterSectionsOpen.titulos}
+                  onToggle={() => alternarSeccionFiltro("titulos")}
+                  activeCount={titulos.length}
+                >
                   <div className="filter-group">
                     {opciones.titulos.map((categoria) => (
                       <Chip
@@ -508,10 +553,14 @@ export default function ExplorerView({ vm }) {
                       />
                     ))}
                   </div>
-                </section>
+                </FilterSection>
 
-                <section className="filter-static-section">
-                  <div className="filter-title">Periodo vital</div>
+                <FilterSection
+                  title="Periodo vital"
+                  open={filterSectionsOpen.siglos}
+                  onToggle={() => alternarSeccionFiltro("siglos")}
+                  activeCount={siglos.length}
+                >
                   <div className="filter-group">
                     {opciones.siglos.map((valor) => (
                       <Chip key={valor} label={`s. ${nRomano[valor] || valor}`} active={siglos.includes(valor)} color="#3D4F63" onClick={() => toggle(setSiglos, siglos, valor)} />
@@ -520,10 +569,14 @@ export default function ExplorerView({ vm }) {
                       <Chip label="Fechas incompletas" active={siglos.includes(SIN_FECHA)} color="#6B6350" onClick={() => toggle(setSiglos, siglos, SIN_FECHA)} />
                     )}
                   </div>
-                </section>
+                </FilterSection>
 
-                <section className="filter-static-section">
-                  <div className="filter-title">Relaciones y familia</div>
+                <FilterSection
+                  title="Relaciones y familia"
+                  open={filterSectionsOpen.relaciones}
+                  onToggle={() => alternarSeccionFiltro("relaciones")}
+                  activeCount={relaciones.length}
+                >
                   <div className="filter-group filter-group-relaciones">
                     {opciones.relaciones.map((filtro) => (
                       <Chip
@@ -535,7 +588,7 @@ export default function ExplorerView({ vm }) {
                       />
                     ))}
                   </div>
-                </section>
+                </FilterSection>
               </div>
 
               <button
@@ -551,7 +604,31 @@ export default function ExplorerView({ vm }) {
         </aside>
         )}
 
-        <main className={`workspace-main workspace-main-${vistaPrincipal}`}>
+        {mostrarFiltros && (
+          <div
+            className="workspace-resize-handle workspace-resize-handle-left"
+            role="separator"
+            aria-orientation="vertical"
+            aria-label="Redimensionar panel de filtros"
+            tabIndex={0}
+            onPointerDown={(event) => comenzarResizeLateral("filtros", event)}
+            onDoubleClick={() => restablecerAnchoPanel("filtros")}
+            onKeyDown={(event) => {
+              if (event.key === "ArrowLeft") { event.preventDefault(); ajustarAnchoPanel("filtros", -12); }
+              if (event.key === "ArrowRight") { event.preventDefault(); ajustarAnchoPanel("filtros", 12); }
+            }}
+            title="Arrastra para cambiar el ancho · doble clic para restablecer"
+          ><span /></div>
+        )}
+
+        <main
+          ref={workspaceMainRef}
+          className={`workspace-main workspace-main-${vistaPrincipal}`}
+          style={mostrarArbol && mostrarMapa ? {
+            "--tree-pane-fr": `${treeMapSplit}fr`,
+            "--map-pane-fr": `${100 - treeMapSplit}fr`,
+          } : undefined}
+        >
           {mostrarArbol && (
             <section className="workspace-stage workspace-tree-stage" aria-label="Árbol genealógico">
               <div className="tree-toolbar" aria-label="Controles del árbol">
@@ -642,6 +719,23 @@ export default function ExplorerView({ vm }) {
             </section>
           )}
 
+          {mostrarArbol && mostrarMapa && (
+            <div
+              className="workspace-stage-splitter"
+              role="separator"
+              aria-orientation="horizontal"
+              aria-label="Redimensionar árbol y mapa"
+              tabIndex={0}
+              onPointerDown={comenzarResizeArbolMapa}
+              onDoubleClick={() => setTreeMapSplit(50)}
+              onKeyDown={(event) => {
+                if (event.key === "ArrowUp") { event.preventDefault(); setTreeMapSplit((valor) => Math.max(25, valor - 5)); }
+                if (event.key === "ArrowDown") { event.preventDefault(); setTreeMapSplit((valor) => Math.min(75, valor + 5)); }
+              }}
+              title={`Árbol ${Math.round(treeMapSplit)}% · Mapa ${Math.round(100 - treeMapSplit)}% · doble clic para 50/50`}
+            ><span /></div>
+          )}
+
           {mostrarMapa && (
             <section className="workspace-stage workspace-map-stage" aria-label="Mapa de territorios">
               <MapaEuropa
@@ -665,6 +759,23 @@ export default function ExplorerView({ vm }) {
             </section>
           )}
         </main>
+
+        {mostrarBiografia && (
+          <div
+            className="workspace-resize-handle workspace-resize-handle-right"
+            role="separator"
+            aria-orientation="vertical"
+            aria-label="Redimensionar panel de biografía"
+            tabIndex={0}
+            onPointerDown={(event) => comenzarResizeLateral("biografia", event)}
+            onDoubleClick={() => restablecerAnchoPanel("biografia")}
+            onKeyDown={(event) => {
+              if (event.key === "ArrowLeft") { event.preventDefault(); ajustarAnchoPanel("biografia", 12); }
+              if (event.key === "ArrowRight") { event.preventDefault(); ajustarAnchoPanel("biografia", -12); }
+            }}
+            title="Arrastra para cambiar el ancho · doble clic para restablecer"
+          ><span /></div>
+        )}
 
         {mostrarBiografia && (
         <aside className="workspace-inspector">
@@ -747,6 +858,13 @@ export default function ExplorerView({ vm }) {
                   })()}
 
                   {resumenCortoPersona(personaBio) && <p className="bio-texto">{resumenCortoPersona(personaBio)}</p>}
+                  <a
+                    className="bio-full-profile-link"
+                    href={rutaEntidadLocalizada("es", "persona", slugPersonaPorLocale(personaBio, "es"))}
+                    title={`Abrir la ficha pública completa de ${personaBio.nombre}`}
+                  >
+                    Leer ficha completa <ExternalLink size={11} />
+                  </a>
 
                   <dl>
                     <dt>ID</dt><dd><code className="bio-id">{personaBio.id}</code></dd>
