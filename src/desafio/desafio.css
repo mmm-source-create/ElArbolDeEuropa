@@ -115,7 +115,7 @@
   margin: 22px auto;
 }
 .desafio-mode-grid-v2 {
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   max-width: 960px;
 }
 
@@ -194,7 +194,7 @@
   margin: 22px auto;
 }
 .desafio-stats-grid-wide {
-  grid-template-columns: repeat(5, minmax(0,1fr));
+  grid-template-columns: repeat(3, minmax(0,1fr));
   max-width: 920px;
 }
 .desafio-stat {
@@ -807,4 +807,172 @@
   .desafio-fast-feedback.is-flash { align-items: flex-start; flex-wrap: wrap; }
   .desafio-fast-feedback.is-flash span { width: 100%; margin-left: 0; }
   .desafio-daily-blocks span { width: 28px; height: 28px; }
+}
+
+/* ==========================================
+   DESAFIO V2.1 · RACHA DE RETRATOS
+   ========================================== */
+.desafio-mode-card.is-portrait {
+  border-color: rgba(85, 107, 91, .38);
+  background: linear-gradient(145deg, #FFFDF7, #EEF3E9);
+}
+
+.desafio-portrait-card {
+  max-width: 760px;
+  margin-inline: auto;
+}
+
+.desafio-portrait-stage {
+  width: min(310px, 72vw);
+  aspect-ratio: 4 / 5;
+  margin: 2px auto 18px;
+  overflow: hidden;
+  display: grid;
+  place-items: center;
+  border: 1px solid #CFC1A6;
+  border-radius: 10px;
+  background: #EDE4D3;
+  box-shadow: 0 12px 30px rgba(62, 49, 34, .12);
+}
+
+.desafio-portrait-stage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform-origin: center;
+  user-select: none;
+}
+
+.desafio-portrait-stage > span {
+  color: #8A7F65;
+  font: 650 72px/1 var(--eade-serif, Georgia, serif);
+}
+
+.desafio-name-entry {
+  width: min(620px, 100%);
+  margin: 0 auto;
+  text-align: left;
+}
+
+.desafio-name-entry > label {
+  display: block;
+  margin-bottom: 6px;
+  color: #5E5547;
+  font-size: 9px;
+  font-weight: 850;
+  letter-spacing: .65px;
+  text-transform: uppercase;
+}
+
+.desafio-name-input {
+  min-height: 44px;
+  padding: 0 12px;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  border: 1px solid #CFC4AA;
+  border-radius: 7px;
+  background: #FFFDF7;
+  color: #7A2E2E;
+  box-sizing: border-box;
+}
+
+.desafio-name-input:focus-within {
+  border-color: #9D7D67;
+  box-shadow: 0 0 0 3px rgba(122, 46, 46, .08);
+}
+
+.desafio-name-input input {
+  min-width: 0;
+  flex: 1;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  color: #2C2620;
+  font: 600 14px/1.2 var(--eade-sans, sans-serif);
+}
+
+.desafio-name-input input::placeholder { color: #A29782; font-weight: 500; }
+.desafio-name-entry > small {
+  display: block;
+  margin-top: 6px;
+  color: #8A7F65;
+  font-size: 9px;
+  line-height: 1.4;
+}
+
+.desafio-name-suggestions {
+  margin-top: 8px;
+  overflow: hidden;
+  border: 1px solid #D8CEB7;
+  border-radius: 7px;
+  background: #FFFDF7;
+  box-shadow: 0 10px 24px rgba(65, 51, 34, .09);
+}
+
+.desafio-name-suggestions button {
+  width: 100%;
+  padding: 9px 11px;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 14px;
+  border: 0;
+  border-bottom: 1px solid #EEE6D6;
+  background: transparent;
+  color: #3C342B;
+  cursor: pointer;
+  text-align: left;
+}
+.desafio-name-suggestions button:last-child { border-bottom: 0; }
+.desafio-name-suggestions button:hover,
+.desafio-name-suggestions button:focus-visible { background: #F6EFDF; outline: 0; }
+.desafio-name-suggestions strong { font: 650 13px/1.2 var(--eade-serif, Georgia, serif); }
+.desafio-name-suggestions span { color: #8A7F65; font-size: 8.5px; text-align: right; }
+.desafio-name-empty { padding: 11px; color: #8A7F65; font-size: 9.5px; }
+
+.desafio-portrait-correct {
+  margin-top: 10px;
+  padding: 9px 11px;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  border: 1px solid #BCD0B6;
+  border-radius: 7px;
+  background: #F0F7ED;
+  color: #45633F;
+  font-size: 10px;
+}
+.desafio-portrait-correct span { margin-left: auto; color: #5F725A; }
+
+.desafio-portrait-result {
+  width: min(620px, 100%);
+  margin: 18px auto 4px;
+  padding: 12px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  border: 1px solid #D8CEB7;
+  border-radius: 9px;
+  background: #FFFDF7;
+  text-align: left;
+  box-sizing: border-box;
+}
+.desafio-portrait-result-image {
+  width: 74px;
+  height: 92px;
+  overflow: hidden;
+  flex: 0 0 auto;
+  border-radius: 6px;
+  background: #EDE4D3;
+}
+.desafio-portrait-result-image img { width: 100%; height: 100%; object-fit: cover; }
+.desafio-portrait-result > div { min-width: 0; display: grid; gap: 4px; }
+.desafio-portrait-result span { color: #5F5749; font-size: 11px; }
+.desafio-portrait-result small { color: #8A7F65; font-size: 9px; }
+
+@media (max-width: 700px) {
+  .desafio-portrait-stage { width: min(280px, 82vw); }
+  .desafio-name-suggestions button { align-items: flex-start; flex-direction: column; gap: 3px; }
+  .desafio-name-suggestions span { text-align: left; }
 }

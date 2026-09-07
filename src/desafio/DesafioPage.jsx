@@ -28,7 +28,7 @@ export default function DesafioPage() {
       meta.setAttribute("name", "description");
       document.head.appendChild(meta);
     }
-    meta.setAttribute("content", "Pon a prueba lo que sabes de las familias, reinados, dinastías y cronología de Europa con El Camino, Racha y el Desafío diario.");
+    meta.setAttribute("content", "Pon a prueba lo que sabes de las familias, reinados, dinastías y cronología de Europa con El Camino, Racha, Retratos y el Desafío diario.");
     ensureCanonical(`${SITE_URL}/es/desafio`);
   }, []);
 

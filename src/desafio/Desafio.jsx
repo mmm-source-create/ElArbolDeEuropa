@@ -10,6 +10,7 @@ import {
   Lightbulb,
   RefreshCw,
   RotateCcw,
+  Search,
   Share2,
   Shuffle,
   Sparkles,
@@ -41,6 +42,8 @@ const ESTADISTICAS_INICIALES = Object.freeze({
   mejorPuntos: 0,
   rachasJugadas: 0,
   mejorRachaDuelo: 0,
+  retratosJugados: 0,
+  mejorRachaRetratos: 0,
   diariosJugados: 0,
   diariosPerfectos: 0,
   mejorDiario: 0,
@@ -112,6 +115,66 @@ function construirSlugs(personas) {
     const base = slugPublico(persona.nombre);
     return [persona.id, counts[base] > 1 ? `${base}-${slugPublico(persona.id)}` : base];
   }));
+}
+
+function normalizarBusqueda(valor) {
+  return String(valor ?? "")
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, " ")
+    .trim()
+    .replace(/\s+/g, " ");
+}
+
+function relevanciaRetrato(persona) {
+  const titulo = normalizarBusqueda(persona?.titulo);
+  let puntos = 0;
+  if (/emperador|emperatriz|rey|reina|papa|sultan|zar|principe|duque/.test(titulo)) puntos += 8;
+  puntos += Math.min(12, (persona?.reinados?.length || 0) * 3);
+  puntos += Math.min(5, persona?.reinos?.length || 0);
+  if (persona?.biografia) puntos += 3;
+  if (persona?.sobrenombre) puntos += 2;
+  if (persona?.padre || persona?.madre) puntos += 1;
+  return puntos;
+}
+
+function elegirPersonaRetrato(pool, usados = [], racha = 0) {
+  if (!pool?.length) return null;
+  const usadosSet = new Set(usados);
+  let disponibles = pool.filter((persona) => !usadosSet.has(persona.id));
+  if (!disponibles.length) disponibles = pool.slice();
+  disponibles.sort((a, b) => relevanciaRetrato(b) - relevanciaRetrato(a) || String(a.nombre).localeCompare(String(b.nombre), "es"));
+  const fraccion = racha < 4 ? .35 : racha < 9 ? .6 : racha < 15 ? .8 : 1;
+  const limite = Math.min(disponibles.length, Math.max(8, Math.ceil(disponibles.length * fraccion)));
+  const candidatas = disponibles.slice(0, limite);
+  return candidatas[Math.floor(Math.random() * candidatas.length)] || disponibles[0] || null;
+}
+
+function sugerenciasPorNombre(personas, consulta, limite = 7) {
+  const q = normalizarBusqueda(consulta);
+  if (!q) return [];
+  const tokens = q.split(" ").filter(Boolean);
+  return personas
+    .map((persona) => {
+      const nombreOriginal = String(persona.nombre || "");
+      const nombre = normalizarBusqueda(nombreOriginal);
+      const parentesis = [...nombreOriginal.matchAll(/\(([^)]+)\)/g)].map((match) => normalizarBusqueda(match[1]));
+      const variantes = [nombre, ...parentesis].filter(Boolean);
+      const alias = normalizarBusqueda([persona.nombre, persona.sobrenombre].filter(Boolean).join(" "));
+      let score = Number.POSITIVE_INFINITY;
+      if (variantes.some((variante) => variante === q)) score = 0;
+      else if (variantes.some((variante) => variante.startsWith(`${q} `))) score = 1;
+      else if (tokens.length > 1 && tokens.every((token) => alias.includes(token))) score = 2;
+      else if (variantes.some((variante) => variante.includes(q))) score = 3;
+      else if (alias.includes(q)) score = 4;
+      else if (tokens.every((token) => alias.split(" ").some((parte) => parte.startsWith(token)))) score = 5;
+      return { persona, score };
+    })
+    .filter((item) => Number.isFinite(item.score))
+    .sort((a, b) => a.score - b.score || String(a.persona.nombre).localeCompare(String(b.persona.nombre), "es"))
+    .slice(0, limite)
+    .map((item) => item.persona);
 }
 
 function multiplicador(combo) {
@@ -263,11 +326,13 @@ function ExplicacionCompacta({ correcta, explicacion, expandida, onExpand, onCon
 export default function Desafio({ personas = [] }) {
   const byId = useMemo(() => Object.fromEntries(personas.map((p) => [p.id, p])), [personas]);
   const slugs = useMemo(() => construirSlugs(personas), [personas]);
+  const personasConRetrato = useMemo(() => personas.filter((persona) => Boolean(IMAGENES_PERSONAS[persona.id]?.archivo)), [personas]);
   const [estadisticas, setEstadisticas] = useState(leerEstadisticas);
   const [modo, setModo] = useState(null);
   const [error, setError] = useState("");
   const feedbackTimerRef = useRef(null);
   const rachaTimersRef = useRef([]);
+  const retratoInputRef = useRef(null);
 
   const progreso = nivelCronista(estadisticas.totalAciertos);
   const fechaHoy = fechaDiaria();
@@ -617,6 +682,95 @@ export default function Desafio({ personas = [] }) {
   };
 
   // ---------------------------------------------------------------------------
+  // RETRATOS · RACHA DE IDENTIFICACION
+  // ---------------------------------------------------------------------------
+  const [personaRetrato, setPersonaRetrato] = useState(null);
+  const [consultaRetrato, setConsultaRetrato] = useState("");
+  const [seleccionRetratoId, setSeleccionRetratoId] = useState(null);
+  const [rachaRetratos, setRachaRetratos] = useState(0);
+  const [retratosTerminada, setRetratosTerminada] = useState(false);
+  const [usadosRetratos, setUsadosRetratos] = useState([]);
+
+  const sugerenciasRetrato = useMemo(
+    () => modo === "retratos" && !retratosTerminada ? sugerenciasPorNombre(personas, consultaRetrato, 7) : [],
+    [modo, retratosTerminada, personas, consultaRetrato]
+  );
+
+  const enfocarRetrato = () => {
+    if (typeof window === "undefined") return;
+    window.requestAnimationFrame(() => retratoInputRef.current?.focus());
+  };
+
+  const iniciarRetratos = () => {
+    limpiarFeedback();
+    if (personasConRetrato.length < 4) {
+      setError("No hay suficientes retratos configurados para abrir este modo.");
+      return;
+    }
+    try {
+      setRachaRetratos(0);
+      setUsadosRetratos([]);
+      setModo("retratos");
+      setError("");
+      const persona = elegirPersonaRetrato(personasConRetrato, [], 0);
+      if (!persona) throw new Error("No se pudo elegir un retrato.");
+      setPersonaRetrato(persona);
+      setConsultaRetrato("");
+      setSeleccionRetratoId(null);
+      setRetratosTerminada(false);
+      setUsadosRetratos([persona.id]);
+      enfocarRetrato();
+    } catch (err) {
+      console.error("[Desafío V2 · Retratos] No se pudo iniciar:", err);
+      setError("No se ha podido iniciar la racha de Retratos.");
+    }
+  };
+
+  const responderRetrato = (personaId) => {
+    if (!personaRetrato || seleccionRetratoId || retratosTerminada) return;
+    const acierto = personaId === personaRetrato.id;
+    setSeleccionRetratoId(personaId);
+    registrarPregunta(acierto);
+
+    if (!acierto) {
+      setRetratosTerminada(true);
+      actualizarEstadisticas((actual) => ({
+        ...actual,
+        retratosJugados: actual.retratosJugados + 1,
+        mejorRachaRetratos: Math.max(actual.mejorRachaRetratos, rachaRetratos),
+      }));
+      return;
+    }
+
+    const nuevaRacha = rachaRetratos + 1;
+    setRachaRetratos(nuevaRacha);
+    actualizarEstadisticas((actual) => ({
+      ...actual,
+      mejorRachaRetratos: Math.max(actual.mejorRachaRetratos, nuevaRacha),
+    }));
+    limpiarFeedback();
+    feedbackTimerRef.current = window.setTimeout(() => {
+      try {
+        const siguiente = elegirPersonaRetrato(personasConRetrato, usadosRetratos, nuevaRacha);
+        if (!siguiente) throw new Error("No hay siguiente retrato.");
+        setPersonaRetrato(siguiente);
+        setConsultaRetrato("");
+        setSeleccionRetratoId(null);
+        setUsadosRetratos((actuales) => [...new Set([...actuales, siguiente.id])].slice(-Math.max(40, personasConRetrato.length)));
+        enfocarRetrato();
+      } catch (err) {
+        console.error("[Desafío V2 · Retratos] No se pudo continuar:", err);
+        setRetratosTerminada(true);
+        actualizarEstadisticas((actual) => ({
+          ...actual,
+          retratosJugados: actual.retratosJugados + 1,
+          mejorRachaRetratos: Math.max(actual.mejorRachaRetratos, nuevaRacha),
+        }));
+      }
+    }, 720);
+  };
+
+  // ---------------------------------------------------------------------------
   // DESAFIO DIARIO
   // ---------------------------------------------------------------------------
   const [daily, setDaily] = useState(null);
@@ -725,6 +879,12 @@ export default function Desafio({ personas = [] }) {
     setCaminoTerminado(false);
     setPreguntaRacha(null);
     setRachaTerminada(false);
+    setPersonaRetrato(null);
+    setConsultaRetrato("");
+    setSeleccionRetratoId(null);
+    setRachaRetratos(0);
+    setRetratosTerminada(false);
+    setUsadosRetratos([]);
     setDaily(null);
   };
 
@@ -764,6 +924,14 @@ export default function Desafio({ personas = [] }) {
             <small>Un duelo tras otro. Cada respuesta correcta se queda en pantalla; el primer fallo termina la cadena.</small>
           </button>
 
+          <button type="button" className="desafio-mode-card is-portrait" onClick={iniciarRetratos}>
+            <span className="desafio-mode-icon"><Search size={21} /></span>
+            <em>Reconocimiento visual</em>
+            <strong>Retratos</strong>
+            <span>Escribe · elige sugerencia · encadena aciertos</span>
+            <small>Observa un retrato y empieza a escribir el nombre. Las coincidencias aparecen debajo: no hace falta introducirlo exactamente.</small>
+          </button>
+
           <button type="button" className="desafio-mode-card is-daily" onClick={iniciarDiario}>
             <span className="desafio-mode-icon"><CalendarDays size={21} /></span>
             <em>{resultadoHoy ? "Completado hoy" : "Una vez al día"}</em>
@@ -776,6 +944,7 @@ export default function Desafio({ personas = [] }) {
         <div className="desafio-stats-grid desafio-stats-grid-wide" aria-label="Estadísticas del desafío">
           <TarjetaEstadistica valor={estadisticas.mejorCamino} etiqueta="mejor Camino" />
           <TarjetaEstadistica valor={estadisticas.mejorRachaDuelo} etiqueta="récord Racha" />
+          <TarjetaEstadistica valor={estadisticas.mejorRachaRetratos} etiqueta="récord Retratos" />
           <TarjetaEstadistica valor={`${estadisticas.mejorDiario}/5`} etiqueta="mejor diario" />
           <TarjetaEstadistica valor={`${precision}%`} etiqueta="precisión total" />
           <TarjetaEstadistica valor={estadisticas.totalAciertos} etiqueta="aciertos" />
@@ -952,6 +1121,111 @@ export default function Desafio({ personas = [] }) {
         </div>
         <div className="desafio-racha-rule">La respuesta correcta se queda para el siguiente duelo. Si fallas, la racha termina.</div>
         <button type="button" className="desafio-back desafio-back-bottom" onClick={volverAModos}><ArrowLeft size={13} /> Salir de Racha</button>
+      </section>
+    );
+  }
+
+  // ---------------------------------------------------------------------------
+  // RETRATOS
+  // ---------------------------------------------------------------------------
+  if (modo === "retratos" && personaRetrato) {
+    const imagen = IMAGENES_PERSONAS[personaRetrato.id];
+    const elegida = seleccionRetratoId ? byId[seleccionRetratoId] : null;
+
+    if (retratosTerminada) {
+      return (
+        <section className="desafio-shell desafio-final desafio-portrait-final">
+          <button type="button" className="desafio-back" onClick={volverAModos}><ArrowLeft size={13} /> Modos</button>
+          <div className="desafio-kicker">Retratos · racha terminada</div>
+          <div className="desafio-score desafio-score-streak"><Search size={30} /><strong>{rachaRetratos}</strong></div>
+          <h2>{rachaRetratos >= 12 ? "Ojo de retratista" : rachaRetratos >= 5 ? "Buena memoria visual" : "La siguiente mirada llegará más lejos"}</h2>
+          <div className="desafio-portrait-result">
+            {imagen?.archivo && (
+              <span className="desafio-portrait-result-image">
+                <img src={imagen.archivo} alt={`Retrato de ${personaRetrato.nombre}`} style={{ objectPosition: imagen.encuadre || imagen.posicion || "50% 20%" }} />
+              </span>
+            )}
+            <div>
+              <span><b>Elegiste:</b> {elegida?.nombre || "—"}</span>
+              <span><b>Era:</b> {personaRetrato.nombre}</span>
+              <small>{[personaRetrato.titulo, personaRetrato.dinastia].filter(Boolean).join(" · ")}</small>
+            </div>
+          </div>
+          <div className="desafio-final-actions">
+            <button type="button" className="desafio-primary" onClick={iniciarRetratos}><RotateCcw size={14} /> Nueva racha de retratos</button>
+            <button type="button" className="desafio-secondary" onClick={() => abrirAtlas(personaRetrato.id)}>Ver en el atlas <ExternalLink size={13} /></button>
+            <button type="button" className="desafio-secondary" onClick={volverAModos}>Cambiar de modo</button>
+          </div>
+        </section>
+      );
+    }
+
+    return (
+      <section className="desafio-shell desafio-play desafio-portrait-shell">
+        <div className="desafio-progress-row">
+          <div><span className="desafio-kicker">Retratos · identifica al personaje</span><strong>Empieza a escribir su nombre</strong></div>
+          <div className="desafio-streak-live"><Flame size={16} /> {rachaRetratos}</div>
+        </div>
+
+        <div className="desafio-question-card desafio-portrait-card">
+          <div className="desafio-question-topline"><span>Racha visual</span><small>1 fallo = fin</small></div>
+          <h2>¿Quién aparece en este retrato?</h2>
+          <div className="desafio-portrait-stage">
+            {imagen?.archivo ? (
+              <img
+                src={imagen.archivo}
+                alt="Retrato histórico por identificar"
+                draggable="false"
+                style={{
+                  objectPosition: imagen.encuadre || imagen.posicion || "50% 20%",
+                  transform: Number.isFinite(imagen.zoom) && imagen.zoom > 1 ? `scale(${imagen.zoom})` : undefined,
+                }}
+              />
+            ) : <span>?</span>}
+          </div>
+
+          <div className="desafio-name-entry">
+            <label htmlFor="desafio-retrato-nombre">Nombre del personaje</label>
+            <div className="desafio-name-input">
+              <Search size={16} />
+              <input
+                ref={retratoInputRef}
+                id="desafio-retrato-nombre"
+                type="text"
+                value={consultaRetrato}
+                disabled={Boolean(seleccionRetratoId)}
+                autoComplete="off"
+                spellCheck="false"
+                placeholder="Ej. Carlos V, Catalina de Médici…"
+                onChange={(event) => setConsultaRetrato(event.target.value)}
+                onKeyDown={(event) => {
+                  if (event.key === "Enter" && sugerenciasRetrato[0]) {
+                    event.preventDefault();
+                    responderRetrato(sugerenciasRetrato[0].id);
+                  }
+                }}
+              />
+            </div>
+            <small>Escribe solo una parte. Elige una de las coincidencias; no necesitas poner el nombre exacto.</small>
+
+            {!!consultaRetrato.trim() && !seleccionRetratoId && (
+              <div className="desafio-name-suggestions" role="listbox" aria-label="Sugerencias de nombres">
+                {sugerenciasRetrato.length ? sugerenciasRetrato.map((persona) => (
+                  <button type="button" key={persona.id} role="option" onClick={() => responderRetrato(persona.id)}>
+                    <strong>{persona.nombre}</strong>
+                    <span>{[persona.titulo, persona.dinastia].filter(Boolean).join(" · ") || "Personaje histórico"}</span>
+                  </button>
+                )) : <div className="desafio-name-empty">No encuentro coincidencias. Prueba con otra parte del nombre.</div>}
+              </div>
+            )}
+
+            {seleccionRetratoId === personaRetrato.id && (
+              <div className="desafio-portrait-correct"><Check size={15} /><strong>Correcto</strong><span>{personaRetrato.nombre}</span></div>
+            )}
+          </div>
+        </div>
+        <div className="desafio-racha-rule">Cada acierto trae un nuevo retrato. La dificultad visual aumenta poco a poco y el primer fallo cierra la racha.</div>
+        <button type="button" className="desafio-back desafio-back-bottom" onClick={volverAModos}><ArrowLeft size={13} /> Salir de Retratos</button>
       </section>
     );
   }
