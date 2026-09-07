@@ -1,3 +1,5 @@
+import { contenidoPersona, tieneContenidoEditorial } from "../content/personas/index.js";
+
 const LATIN_EXTENDED_FOLD = Object.freeze({
   "ß": "ss", "ẞ": "SS",
   "ł": "l", "Ł": "L",
@@ -49,11 +51,15 @@ export function slugBasePersona(persona, locale = "es") {
   return slugPublico(nombre);
 }
 
-function primeraFrase(texto) {
+function resumenBiografiaAtlas(texto) {
   const limpio = String(texto || "").replace(/\s+/g, " ").trim();
   if (!limpio) return "";
-  const match = limpio.match(/^(.+?[.!?])(?:\s|$)/);
-  return (match?.[1] || limpio).trim();
+  if (limpio.length <= 300) return limpio;
+  const frases = limpio.match(/[^.!?]+[.!?]+|[^.!?]+$/g) || [limpio];
+  const dos = frases.slice(0, 2).join(" ").replace(/\s+/g, " ").trim();
+  if (dos.length <= 320) return dos;
+  const una = frases[0]?.trim() || limpio;
+  return una.length <= 320 ? una : `${una.slice(0, 317).trimEnd()}…`;
 }
 
 function primerReinadoUtil(persona) {
@@ -65,8 +71,9 @@ function primerReinadoUtil(persona) {
 
 export function resumenCortoPersona(persona) {
   if (!persona) return "";
-  if (typeof persona.resumen === "string" && persona.resumen.trim()) return persona.resumen.trim();
-  if (typeof persona.biografia === "string" && persona.biografia.trim()) return primeraFrase(persona.biografia);
+  const contenido = contenidoPersona(persona);
+  if (typeof contenido?.resumen === "string" && contenido.resumen.trim()) return contenido.resumen.trim();
+  if (typeof contenido?.biografia === "string" && contenido.biografia.trim()) return resumenBiografiaAtlas(contenido.biografia);
 
   const titulo = String(persona.titulo || "Figura histórica").split("/")[0].trim();
   const dinastia = String(persona.dinastia || "").trim();
@@ -88,9 +95,17 @@ export function resumenCortoPersona(persona) {
 
 export function biografiaPublicaPersona(persona) {
   if (!persona) return "";
-  if (typeof persona.biografia === "string" && persona.biografia.trim()) return persona.biografia.trim();
+  const contenido = contenidoPersona(persona);
+  if (typeof contenido?.biografia === "string" && contenido.biografia.trim()) return contenido.biografia.trim();
+  if (typeof contenido?.resumen === "string" && contenido.resumen.trim()) return contenido.resumen.trim();
   return resumenCortoPersona(persona);
 }
+
+export function contenidoEditorialPersona(persona) {
+  return contenidoPersona(persona) || {};
+}
+
+export { tieneContenidoEditorial };
 
 export function textoBusquedaPersona(persona) {
   if (!persona) return "";
