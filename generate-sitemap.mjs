@@ -1,6 +1,7 @@
 import fs from "node:fs/promises";
 import path from "node:path";
 import { pathToFileURL } from "node:url";
+import { slugBasePersona, slugPublico } from "./src/utils/personPresentation.js";
 
 const ROOT = process.cwd();
 const PERSONAS_FILE = path.join(ROOT, "src", "personas.jsx");
@@ -17,16 +18,6 @@ async function importJsxData(filePath) {
   // data: URL evita depender de que Node reconozca la extensión .jsx.
   const moduleUrl = `data:text/javascript;base64,${Buffer.from(source, "utf8").toString("base64")}`;
   return import(moduleUrl);
-}
-
-function slugPublico(valor) {
-  return String(valor ?? "")
-    .normalize("NFD")
-    .replace(/[\u0300-\u036f]/g, "")
-    .toLowerCase()
-    .replace(/[^a-z0-9]+/g, "-")
-    .replace(/^-+|-+$/g, "")
-    .replace(/-{2,}/g, "-") || "persona";
 }
 
 function xmlEscape(value) {
@@ -50,13 +41,13 @@ if (!Array.isArray(PERSONAS) || !Array.isArray(HISTORIAS)) {
 // Debe ser idéntico al sistema de slugs de App.jsx: cuando dos personas tienen
 // el mismo nombre, añadimos el ID para que las URLs sigan siendo únicas.
 const personaSlugBaseCount = PERSONAS.reduce((acc, persona) => {
-  const base = slugPublico(persona.nombre);
+  const base = slugBasePersona(persona, "es");
   acc[base] = (acc[base] || 0) + 1;
   return acc;
 }, {});
 
 const personaUrls = PERSONAS.map((persona) => {
-  const base = slugPublico(persona.nombre);
+  const base = slugBasePersona(persona, "es");
   const slug = personaSlugBaseCount[base] > 1
     ? `${base}-${slugPublico(persona.id)}`
     : base;
@@ -80,12 +71,12 @@ const historiaUrls = HISTORIAS
 const englishPersonaUrls = (() => {
   const traducidas = PERSONAS.filter((p) => typeof p.nombreEn === "string" && p.nombreEn.trim());
   const counts = traducidas.reduce((acc, p) => {
-    const base = slugPublico(p.nombreEn);
+    const base = slugBasePersona(p, "en");
     acc[base] = (acc[base] || 0) + 1;
     return acc;
   }, {});
   return traducidas.map((p) => {
-    const base = slugPublico(p.nombreEn);
+    const base = slugBasePersona(p, "en");
     const slug = counts[base] > 1 ? `${base}-${slugPublico(p.id)}` : base;
     return `/en/person/${slug}`;
   });

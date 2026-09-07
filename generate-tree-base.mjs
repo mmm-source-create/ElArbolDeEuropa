@@ -1,5 +1,6 @@
 import fs from "node:fs/promises";
 import path from "node:path";
+import { aliasesDePersona, resumenCortoPersona, slugBasePersona, slugPublico } from "./src/utils/personPresentation.js";
 
 const ROOT = process.cwd();
 const PERSONAS_FILE = path.join(ROOT, "src", "personas.jsx");
@@ -904,16 +905,6 @@ function computeTreeLayout(rows, byId, childrenById) {
   };
 }
 
-function slugPublico(valor) {
-  return String(valor ?? "")
-    .normalize("NFD")
-    .replace(/[\u0300-\u036f]/g, "")
-    .toLowerCase()
-    .replace(/[^a-z0-9]+/g, "-")
-    .replace(/^-+|-+$/g, "")
-    .replace(/-{2,}/g, "-") || "persona";
-}
-
 function reinadosLigero(persona) {
   if (Array.isArray(persona?.reinados)) return persona.reinados.map((r) => ({ ...r }));
   if (Array.isArray(persona?.reinado) && persona.reinado.length >= 2) {
@@ -923,13 +914,13 @@ function reinadosLigero(persona) {
 }
 
 const PERSONA_SLUG_BASE_COUNT = PERSONAS.reduce((acc, persona) => {
-  const base = slugPublico(persona.nombre);
+  const base = slugBasePersona(persona, "es");
   acc[base] = (acc[base] || 0) + 1;
   return acc;
 }, {});
 
 const PERSONA_SLUG_POR_ID = Object.fromEntries(PERSONAS.map((persona) => {
-  const base = slugPublico(persona.nombre);
+  const base = slugBasePersona(persona, "es");
   const slug = PERSONA_SLUG_BASE_COUNT[base] > 1 ? `${base}-${slugPublico(persona.id)}` : base;
   return [persona.id, slug];
 }));
@@ -942,6 +933,8 @@ function referenciaPersona(id) {
     nombre: persona.nombre,
     slug: PERSONA_SLUG_POR_ID[persona.id],
     sobrenombre: persona.sobrenombre || "",
+    aliases: aliasesDePersona(persona),
+    resumen: resumenCortoPersona(persona),
     dinastia: persona.dinastia || "",
     titulo: persona.titulo || "",
     nac: Number.isFinite(persona.nac) ? persona.nac : null,
@@ -1085,6 +1078,8 @@ async function generarPortadasPersona() {
       slug: PERSONA_SLUG_POR_ID[persona.id],
       nombre: persona.nombre,
       sobrenombre: persona.sobrenombre || "",
+      aliases: aliasesDePersona(persona),
+      resumen: resumenCortoPersona(persona),
       dinastia: persona.dinastia || "",
       titulo: persona.titulo || "",
       nac: Number.isFinite(persona.nac) ? persona.nac : null,
