@@ -1323,6 +1323,100 @@ export const EVENTOS_HISTORICOS = [
     personas: ["LEOP1HRE", "CHARLES5LOR", "MAX2EMANBAV", "MEHMED4OSM"],
     descripcion: "La conquista de Buda muestra que Viena no fue un episodio aislado. La guerra iniciada en 1683 se convierte en una expansión habsbúrgica por Hungría y altera de forma duradera el equilibrio de Europa central."
   },
+
+  // V34 · Escocia medieval y Reino de Jerusalén. Los hitos de detalle se
+  // reservan para futuras Historias; aquí solo entran en la cronología general
+  // los puntos de giro que ayudan a leer el periodo sin saturarla.
+  {
+    id: "MUERTE_ALEJANDRO3_1286",
+    timeline: "secundario",
+    anio: 1286,
+    titulo: "Muere Alejandro III de Escocia",
+    categoria: "dinastia",
+    personas: ["ALEXANDER3SCOT", "MAIDNORWAY"],
+    descripcion: "La muerte accidental de Alejandro III deja a su nieta Margarita de Noruega como heredera y abre una crisis sucesoria decisiva para Escocia."
+  },
+  {
+    id: "STIRLING_BRIDGE_1297",
+    timeline: "principal",
+    anio: 1297,
+    titulo: "Batalla de Stirling Bridge",
+    categoria: "guerra",
+    personas: ["WILLIAMWALLACE", "ANDREWMORAY", "EDUARDO1ING"],
+    descripcion: "Las fuerzas de William Wallace y Andrew Moray derrotan a un ejército inglés en Stirling Bridge, uno de los grandes hitos de la primera guerra de independencia escocesa."
+  },
+  {
+    id: "BRUCE_CORONA_1306",
+    timeline: "secundario",
+    anio: 1306,
+    titulo: "Robert Bruce es coronado rey de Escocia",
+    categoria: "dinastia",
+    personas: ["ROBERT1BRUCE", "JOHNCOMYN3", "EDUARDO1ING"],
+    descripcion: "Tras la muerte de John Comyn, Robert Bruce reclama la corona y es coronado en Scone como Roberto I."
+  },
+  {
+    id: "BANNOCKBURN_1314",
+    timeline: "principal",
+    anio: 1314,
+    titulo: "Batalla de Bannockburn",
+    categoria: "guerra",
+    personas: ["ROBERT1BRUCE", "EDUARDO2ING"],
+    descripcion: "La gran victoria de Roberto I frente al ejército de Eduardo II consolida la recuperación política y militar de la monarquía escocesa."
+  },
+  {
+    id: "STEWART_1371",
+    timeline: "secundario",
+    anio: 1371,
+    titulo: "Comienza la dinastía Stewart en Escocia",
+    categoria: "dinastia",
+    personas: ["ROBERT2SCOT", "DAVID2SCOT", "MARJORIEBRUCE"],
+    descripcion: "Roberto II sucede a David II y convierte a la casa Stewart en dinastía reinante."
+  },
+  {
+    id: "MONTGISARD_1177",
+    timeline: "historia",
+    anio: 1177,
+    titulo: "Balduino IV vence en Montgisard",
+    categoria: "guerra",
+    personas: ["BALDWIN4JER", "SALADIN", "REYNALDCHATILLON"],
+    descripcion: "El joven Balduino IV obtiene una victoria inesperada sobre Saladino cerca de Montgisard."
+  },
+  {
+    id: "HATTIN_1187",
+    timeline: "historia",
+    anio: 1187,
+    titulo: "Batalla de Hattin",
+    categoria: "guerra",
+    personas: ["GUYLUSIGNANJER", "SALADIN", "REYNALDCHATILLON", "RAYMOND3TRIPOLI"],
+    descripcion: "Saladino destruye el principal ejército del Reino de Jerusalén en Hattin, dejando a la capital prácticamente indefensa."
+  },
+  {
+    id: "JERUSALEM_1187",
+    timeline: "historia",
+    anio: 1187,
+    titulo: "Jerusalén se rinde ante Saladino",
+    categoria: "guerra",
+    personas: ["BALIANIBELIN", "SALADIN", "MARIAKOMNENEJER"],
+    descripcion: "Balian de Ibelin negocia la rendición de Jerusalén ante Saladino después de organizar la defensa de la ciudad."
+  },
+  {
+    id: "SEXTA_CRUZADA_1229",
+    timeline: "secundario",
+    anio: 1229,
+    titulo: "Federico II recupera Jerusalén por tratado",
+    categoria: "politica",
+    personas: ["FED2HOH", "ISABELLA2JER", "CONRADO4HOH"],
+    descripcion: "La Sexta Cruzada devuelve Jerusalén temporalmente al control franco mediante negociación, reforzando el vínculo de la corona jerosolimitana con los Hohenstaufen."
+  },
+  {
+    id: "ACRE_1291",
+    timeline: "principal",
+    anio: 1291,
+    titulo: "Caída de Acre",
+    categoria: "guerra",
+    personas: ["HENRY2CYPRUS"],
+    descripcion: "La caída de Acre elimina el último gran centro territorial del Reino de Jerusalén en Tierra Santa; la corona sobrevive desde entonces como título dinástico ligado a Chipre."
+  },
 ];
 
 export const HISTORIAS = [
@@ -2859,5 +2953,22 @@ export const HISTORIAS = [
     titulo: "Los Visconti y los Sforza",
     subtitulo: "Milán entre herencia ducal, condotieros y matrimonios",
     disponible: false
-  }
+  },
+
+  {
+    id: "braveheart-detras-del-mito",
+    titulo: "Braveheart: detrás del mito",
+    subtitulo: "Wallace, Bruce y las guerras por Escocia",
+    descripcion: "La crisis sucesoria, William Wallace, Robert Bruce y la independencia escocesa contadas a partir de las figuras históricas reales que hay detrás del imaginario popular.",
+    categoria: "Historia y cultura pop",
+    disponible: false
+  },
+  {
+    id: "reino-de-los-cielos",
+    titulo: "El Reino de los Cielos",
+    subtitulo: "Balduino IV, Saladino y la corona de Jerusalén",
+    descripcion: "La historia real del reino cruzado, sus sucesiones dinásticas y las personas históricas que protagonizaron la crisis de 1187 y la larga supervivencia de la corona.",
+    categoria: "Historia y cultura pop",
+    disponible: false
+  },
 ];
