@@ -783,9 +783,10 @@ html, body {
 }
 
 .bio-texto {
-  margin: 10px 0;
-  line-height: 150%;
-  color: #2C2620;
+  margin: 9px 0 11px;
+  font-size: 12.2px;
+  line-height: 1.48;
+  color: #5d5448;
 }
 
 .bio-panel dl {
