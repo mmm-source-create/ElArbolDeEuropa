@@ -1,5 +1,4 @@
 import React from "react";
-import Sucesion from "./Sucesion.jsx";
 import { Search, ChevronDown, ChevronRight, ArrowLeft, ArrowRight, ArrowUp, ArrowDown, ZoomIn, ZoomOut, RotateCcw, GitCompare, Focus, Share2, Play, Pause, SkipBack, SkipForward, X, Info, Heart, BookOpen, BarChart3, Scale, Flag, Mail, ExternalLink, Crosshair, Maximize2 } from "lucide-react";
 import { MapaEuropa } from "../MapaEuropa";
 import { TERRITORIOS_SUB, TERRITORIOS_DESTACADOS, REINO_COLOR, REINO_COLOR_DEFAULT, listaReinados, territoriosGobernadosEnAño, reinadoEsEfectivo, esGobernante } from "../Territorios";
@@ -64,7 +63,7 @@ export default function ExplorerView({ vm }) {
     timelineContentWidth, timelineTickStep, timelineTicks, eventosOrdenadosTodos, totalEventosTimeline, eventosOrdenados, timelineCombinedEvents, eventoSeleccionado,
     historiaActiva, historiaPasoActual, historiaPersonasSet, opciones, personaBio, toggle, focoSet, collapsedSet,
     hiddenByCollapse, toggleDescendants, ajustarAnio, actualizarAnioDesdeRango, confirmarAnioEscrito, restablecerAnio, moverAnioHistoria, alternarReproduccionHistoria,
-    mostrarSucesion, mostrarArbol, mostrarMapa, mostrarFiltros, mostrarBiografia, mostrarCronologia, vistaPrincipal, layoutLaterales, alternarVista,
+    mostrarArbol, mostrarMapa, mostrarFiltros, mostrarBiografia, mostrarCronologia, vistaPrincipal, layoutLaterales, alternarVista,
     alternarPanelAuxiliar, personasVivasEnAnio, gobernantesActivosEnAnio, matches, visiblePeople, visibleIds, visibleSignature, visibleRows,
     treeLayout, positions, canvasSize, queryTrim, searchMatchIds, searchMatchSet, searchSignature, searchCurrentId,
     irACoincidencia, hayFiltros, limpiar, lineage, comparePaths, comparePath, pathEdges, groupsByRow,
@@ -222,7 +221,6 @@ export default function ExplorerView({ vm }) {
               <button type="button" className={`segment-btn${mostrarFiltros ? " active" : ""}`} aria-pressed={mostrarFiltros} onClick={() => alternarPanelAuxiliar("filtros")}>Filtros</button>
               <button type="button" className={`segment-btn${mostrarArbol ? " active" : ""}`} aria-pressed={mostrarArbol} onClick={() => alternarVista("arbol")}>Árbol</button>
               <button type="button" className={`segment-btn${mostrarMapa ? " active" : ""}`} aria-pressed={mostrarMapa} onClick={() => alternarVista("mapa")}>Mapa</button>
-              <button type="button" className={`segment-btn${mostrarSucesion ? " active" : ""}`} aria-pressed={mostrarSucesion} onClick={() => alternarVista("sucesion")}>Sucesión</button>
               <button type="button" className={`segment-btn${mostrarBiografia ? " active" : ""}`} aria-pressed={mostrarBiografia} onClick={() => alternarPanelAuxiliar("biografia")}>Biografía</button>
               <button type="button" className={`segment-btn${mostrarCronologia ? " active" : ""}`} aria-pressed={mostrarCronologia} onClick={() => alternarPanelAuxiliar("cronologia")}>Cronología</button>
             </div>
@@ -662,7 +660,6 @@ export default function ExplorerView({ vm }) {
             "--map-pane-fr": `${100 - treeMapSplit}fr`,
           } : undefined}
         >
-          {mostrarSucesion && <Sucesion personas={PERSONAS} territorios={territorios} setTerritorios={setTerritorios} anio={anioGlobal} seleccion={seleccion?.id} onSelect={seleccionarPersonaPorId} />}
           {mostrarArbol && (
             <section className="workspace-stage workspace-tree-stage" aria-label="Árbol genealógico">
               <div className="tree-toolbar" aria-label="Controles del árbol">
