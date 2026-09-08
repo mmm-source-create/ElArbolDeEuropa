@@ -243,7 +243,7 @@ export function ModalProyecto({ seccion, onClose, persona, personasVista = PERSO
                 <div><strong>{estadisticas.territorios}</strong><span>territorios</span></div>
                 <div><strong>{estadisticas.matrimonios}</strong><span>matrimonios registrados</span></div>
                 <div><strong>{estadisticas.amantes}</strong><span>relaciones de amantes</span></div>
-                <div><strong>{estadisticas.gobernantes}</strong><span>personas con reinado efectivo</span></div>
+                <div><strong>{estadisticas.gobernantes}</strong><span>personas con gobierno efectivo</span></div>
               </div>
               <div className="stats-columns">
                 <div>
@@ -257,7 +257,7 @@ export function ModalProyecto({ seccion, onClose, persona, personasVista = PERSO
               </div>
               <div className="stats-curiosities">
                 {estadisticas.reinadoMasLargo && (
-                  <div><span>Reinado efectivo más largo registrado</span><strong>{estadisticas.reinadoMasLargo.persona.nombre}</strong><small>{estadisticas.reinadoMasLargo.reinado.territorio} · {estadisticas.reinadoMasLargo.reinado.desde}–{estadisticas.reinadoMasLargo.reinado.hasta} · {estadisticas.reinadoMasLargo.duracion} años</small></div>
+                  <div><span>Gobierno efectivo más largo registrado</span><strong>{estadisticas.reinadoMasLargo.persona.nombre}</strong><small>{estadisticas.reinadoMasLargo.reinado.territorio} · {estadisticas.reinadoMasLargo.reinado.desde}–{estadisticas.reinadoMasLargo.reinado.hasta} · {estadisticas.reinadoMasLargo.duracion} años</small></div>
                 )}
                 {estadisticas.descendencia?.total > 0 && (
                   <div><span>Más hijos registrados en este conjunto</span><strong>{estadisticas.descendencia.persona.nombre}</strong><small>{estadisticas.descendencia.total} hijos/as presentes en el ámbito seleccionado</small></div>

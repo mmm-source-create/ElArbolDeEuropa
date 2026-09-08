@@ -10,7 +10,7 @@ import BioRelations from "../components/BioRelations.jsx";
 import BioDiscovery from "../components/BioDiscovery.jsx";
 import SiteHeader from "../components/SiteHeader.jsx";
 import SiteFooter from "../components/SiteFooter.jsx";
-import { resumenCortoPersona } from "../utils/personPresentation.js";
+import { etiquetaClaseGobierno, resumenCortoPersona } from "../utils/personPresentation.js";
 import { ACCENTS, getCategoriaDinastía, DINASTIAS_DESTACADAS, GRUPOS_DINASTICOS, CATEGORIAS_TITULO, FILTROS_RELACION, BY_ID, HIJOS_POR_ID, SIN_FECHA, TIMELINE_SCALES, rutaEntidadLocalizada, slugPersonaPorLocale, slugPublico, listaConyuges, listaAmantes, siglosDePersona, etiquetaTipoReinado, normalizaTexto, estaVivaEn } from "./model.js";
 import { nRomano, formatoFechas, sobrenombreDePersona, nombrePrincipal, pct, etiquetaFechaEvento, inicioEvento, finEvento, TL_MIN, TL_MAX, anioInicioPersona, anioFinPersona } from "./timelineUtils.js";
 import { ALCANCES_FOCO, MODOS_COMPARACION, tipoRelacionEntre } from "./relationshipGraph.js";
@@ -942,7 +942,7 @@ export default function ExplorerView({ vm }) {
                         const tipo = etiquetaTipoReinado(reinado.tipo);
                         return (
                           <React.Fragment key={`${reinado.territorio}-${reinado.desde}-${reinado.hasta}-${index}`}>
-                            <dt>Reinado · {reinado.territorio}</dt>
+                            <dt>{etiquetaClaseGobierno(personaBio, reinado)} · {reinado.territorio}</dt>
                             <dd>{reinado.desde} – {reinado.hasta}{tipo ? ` (${tipo})` : ""}</dd>
                           </React.Fragment>
                         );

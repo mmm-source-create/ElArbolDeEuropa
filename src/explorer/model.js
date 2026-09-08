@@ -78,7 +78,7 @@ export const DINASTIAS_DESTACADAS = [
   "Hohenzollern", "Nassau", "Welf", "Wettin", "Oldemburgo", "Paleólogo", "Saboya",
   "Lorena", "Brabante", "Champaña", "Foix", "Dampierre", "Baux",
   "Visconti", "Sforza", "Este", "Gonzaga", "Médici", "Farnesio", "Borja",
-  "Álvarez de Toledo", "Jimena",
+  "Álvarez de Toledo", "Jimena", "Nemanjić", "Asen", "Shishman", "Basarab", "Bogdan-Mușat", "Kotromanić", "Nazarí", "Württemberg", "Grifo", "Zähringen-Baden",
   "Casas italianas", "Casas ibéricas", "Casas francesas", "Casas germánicas",
   "Casas británicas", "Casas escandinavas",
   "Casas orientales", "Sin casa identificada",
@@ -326,6 +326,10 @@ export const ACCENTS = {
   "Hohenzollern":"#303C59","Nassau":"#C08A38","Welf":"#A65C43","Oldemburgo":"#486D75",
   "Romanov":"#6F527A","Holstein-Gottorp":"#47727A","Hannover":"#6B5C91",
   "Mecklemburgo":"#4F8075","Hesse":"#6E7B45","Ascania":"#8D7A45","Estridsen":"#8FB9C9",
+  "Nemanjić":"#76504A","Branković":"#8A6656","Lazarević":"#6E5E79",
+  "Asen":"#7E6542","Terter":"#8B704A","Shishman":"#6E5B4D",
+  "Basarab":"#6C5E85","Bogdan-Mușat":"#7B6D45","Kotromanić":"#57705F","Nazarí":"#4F7C68",
+  "Württemberg":"#8A684C","Grifo":"#557486","Zähringen-Baden":"#7B5968","Jülich":"#756489",
 
   // Suecia: una familia visual de azules claros, manteniendo cada casa distinguible.
   "Vasa":"#8EC5E8","Bjälbo":"#A8D8EE","Folkunga":"#9FCFE6","Erik":"#B4DDF0","Sverker":"#91BED6",
