@@ -41,6 +41,11 @@ const DEFAULT_FILTER_SECTIONS = Object.freeze({
   siglos: true,
   relaciones: true,
 });
+const DEFAULT_BIO_SECTIONS = Object.freeze({
+  datos: true,
+  relaciones: true,
+  contexto: false,
+});
 
 function limitarNumero(valor, min, max, fallback) {
   const numero = Number(valor);
@@ -126,6 +131,15 @@ export default function Explorer({ initialPanel = null }) {
       typeof guardado[key] === "boolean" ? guardado[key] : value,
     ]));
   });
+  const [bioSectionsOpen, setBioSectionsOpen] = useState(() => {
+    const guardado = leerLayoutAtlas()?.bioSectionsOpen || {};
+    return Object.fromEntries(Object.entries(DEFAULT_BIO_SECTIONS).map(([key, value]) => [
+      key,
+      typeof guardado[key] === "boolean" ? guardado[key] : value,
+    ]));
+  });
+  const [personHistory, setPersonHistory] = useState({ ids: [], index: -1 });
+  const [modoTrabajo, setModoTrabajo] = useState(false);
   const [infoProyecto, setInfoProyecto] = useState(initialPanel);
   const [timelineScaleIndex, setTimelineScaleIndex] = useState(1);
   const [timelineMode, setTimelineMode] = useState("personas");
@@ -161,11 +175,25 @@ export default function Explorer({ initialPanel = null }) {
         panelWidths,
         treeMapSplit,
         filterSectionsOpen,
+        bioSectionsOpen,
       }));
     } catch {
       // El Atlas sigue funcionando aunque el navegador bloquee localStorage.
     }
-  }, [panelWidths, treeMapSplit, filterSectionsOpen]);
+  }, [panelWidths, treeMapSplit, filterSectionsOpen, bioSectionsOpen]);
+
+  useEffect(() => {
+    if (!modoTrabajo || typeof document === "undefined") return undefined;
+    document.body.classList.add("atlas-work-mode-active");
+    const salirConEscape = (event) => {
+      if (event.key === "Escape" && !infoProyecto) setModoTrabajo(false);
+    };
+    document.addEventListener("keydown", salirConEscape);
+    return () => {
+      document.body.classList.remove("atlas-work-mode-active");
+      document.removeEventListener("keydown", salirConEscape);
+    };
+  }, [modoTrabajo, infoProyecto]);
 
   // La geometría base se calcula durante el prebuild/deployment.
   // Solo las vistas filtradas necesitan recalcular layout en el navegador.
@@ -635,6 +663,10 @@ export default function Explorer({ initialPanel = null }) {
     setFilterSectionsOpen((actuales) => ({ ...actuales, [seccion]: !actuales[seccion] }));
   }, []);
 
+  const alternarSeccionBio = useCallback((seccion) => {
+    setBioSectionsOpen((actuales) => ({ ...actuales, [seccion]: !actuales[seccion] }));
+  }, []);
+
   const ajustarAnchoPanel = useCallback((lado, delta) => {
     const min = lado === "filtros" ? 210 : 260;
     const max = lado === "filtros" ? 420 : 520;
@@ -834,7 +866,9 @@ export default function Explorer({ initialPanel = null }) {
   const hayFiltros = Boolean(query || territorios.length || dinastias.length || titulos.length || siglos.length || relaciones.length || soloFavoritos);
   const limpiar = () => { setQuery(""); setTerritorios([]); setDinastias([]); setTitulos([]); setSiglos([]); setRelaciones([]); setSoloFavoritos(false); };
 
-  const lineage = hovered ? ancestorsOf(hovered) : new Set();
+  const lineage = hovered
+    ? ancestorsOf(hovered)
+    : (seleccion?.id ? ancestorsOf(seleccion.id) : new Set());
 
   const comparePaths = useMemo(
     () => (origen && destino ? rutasDeComparacion(graph, origen, destino, modoComparacion) : []),
@@ -1000,25 +1034,61 @@ export default function Explorer({ initialPanel = null }) {
     });
   };
 
-  const seleccionarPersonaPorId = (id) => {
+  const registrarHistorialPersona = (id) => {
+    if (!BY_ID[id]) return;
+    setPersonHistory((actual) => {
+      if (actual.ids[actual.index] === id) return actual;
+      const base = actual.ids.slice(0, actual.index + 1);
+      base.push(id);
+      const ids = base.slice(-60);
+      return { ids, index: ids.length - 1 };
+    });
+  };
+
+  const actualizarUrlPersonaSeleccionada = (persona, { reemplazar = false } = {}) => {
+    if (!persona || typeof window === "undefined" || historyPopRef.current) return;
+    const slug = slugPersonaPorLocale(persona, "es");
+    if (!slug) return;
+    const url = new URL(window.location.href);
+    url.pathname = rutaEntidadLocalizada("es", "persona", slug);
+    url.searchParams.delete("atlas");
+    const destino = `${url.pathname}${url.search}${url.hash}`;
+    const actual = `${window.location.pathname}${window.location.search}${window.location.hash}`;
+    if (destino === actual) return;
+    const metodo = reemplazar ? "replaceState" : "pushState";
+    window.history[metodo]({ eade: "persona", id: persona.id }, "", destino);
+  };
+
+  const seleccionarPersonaPorId = (id, { registrar = true, reemplazarUrl = false, centrar = true } = {}) => {
     const persona = BY_ID[id];
     if (!persona) return;
     setHovered(null);
     setSeleccion(persona);
-    if (typeof window !== "undefined" && !historyPopRef.current) {
-      const slug = slugPersonaPorLocale(persona, "es");
-      if (slug) {
-        const url = new URL(window.location.href);
-        url.pathname = rutaEntidadLocalizada("es", "persona", slug);
-        url.searchParams.delete("atlas");
-        if (`${url.pathname}${url.search}${url.hash}` !== `${window.location.pathname}${window.location.search}${window.location.hash}`) {
-          window.history.pushState({ eade: "persona", id }, "", `${url.pathname}${url.search}${url.hash}`);
-        }
-      }
+    if (registrar) registrarHistorialPersona(id);
+    actualizarUrlPersonaSeleccionada(persona, { reemplazar: reemplazarUrl });
+    if (centrar) {
+      requestAnimationFrame(() => {
+        centerOn(id);
+        centerOnTimeline(id);
+      });
     }
+  };
+
+  const navegarHistorialPersona = (delta) => {
+    const siguiente = Math.max(0, Math.min(personHistory.ids.length - 1, personHistory.index + delta));
+    if (siguiente === personHistory.index || siguiente < 0) return;
+    const id = personHistory.ids[siguiente];
+    if (!BY_ID[id]) return;
+    setPersonHistory((actual) => ({ ...actual, index: siguiente }));
+    seleccionarPersonaPorId(id, { registrar: false, reemplazarUrl: true, centrar: true });
+  };
+
+  const centrarSeleccion = () => {
+    if (!seleccion?.id) return;
+    setHovered(null);
     requestAnimationFrame(() => {
-      centerOn(id);
-      centerOnTimeline(id);
+      centerOn(seleccion.id);
+      centerOnTimeline(seleccion.id);
     });
   };
 
@@ -1073,6 +1143,14 @@ export default function Explorer({ initialPanel = null }) {
         historiaSnapshotRef.current = null;
         setHovered(null);
         setSeleccion(BY_ID[personaId]);
+        setPersonHistory((actual) => {
+          const existente = actual.ids.lastIndexOf(personaId);
+          if (existente >= 0) return { ...actual, index: existente };
+          const base = actual.ids.slice(0, actual.index + 1);
+          base.push(personaId);
+          const ids = base.slice(-60);
+          return { ids, index: ids.length - 1 };
+        });
         requestAnimationFrame(() => {
           centerOn(personaId);
           centerOnTimeline(personaId);
@@ -1139,8 +1217,7 @@ export default function Explorer({ initialPanel = null }) {
     }
     const personaPrincipal = (evento.personas || []).find((id) => BY_ID[id]);
     if (personaPrincipal) {
-      setSeleccion(BY_ID[personaPrincipal]);
-      setHovered(null);
+      seleccionarPersonaPorId(personaPrincipal, { centrar: false });
     } else {
       setSeleccion(null);
       setHovered(null);
@@ -1374,6 +1451,7 @@ export default function Explorer({ initialPanel = null }) {
     const personaId = params.get("persona") || personaIdDesdeRuta(window.location.pathname);
     if (personaId && BY_ID[personaId]) {
       setSeleccion(BY_ID[personaId]);
+      setPersonHistory({ ids: [personaId], index: 0 });
       window.setTimeout(() => {
         centerOn(personaId);
         centerOnTimeline(personaId);
@@ -1414,7 +1492,7 @@ export default function Explorer({ initialPanel = null }) {
         if (typeof handleBoxClick === 'function') {
           handleBoxClick(p);
         } else {
-          setSeleccion(p);
+          seleccionarPersonaPorId(p.id);
         }
       }
     };
@@ -1425,6 +1503,7 @@ export default function Explorer({ initialPanel = null }) {
     const p = BY_ID[id];
     let cls = "box";
     if (boxLayout?.mini) cls += " box-mini";
+    if (seleccion?.id === id) cls += " selected";
     if (hovered === id) cls += " hovered";
     else if (lineage.has(id)) cls += " lineage";
     if (comparePath && comparePath.includes(id)) cls += " path-hl";
@@ -1472,27 +1551,6 @@ export default function Explorer({ initialPanel = null }) {
     if (!scrollEl) return;
     scrollEl.scrollTo({ left: relX * zoom - scrollEl.clientWidth / 2, top: relY * zoom - scrollEl.clientHeight / 2, behavior: "smooth" });
   };
-
-  const filtrosActivosResumen = useMemo(() => {
-    const lista = [];
-    if (queryTrim) lista.push({ key: "query", label: `Búsqueda: “${query}”` });
-    territorios.forEach((t) => lista.push({ key: `territorio-${t}`, label: `Territorio: ${t}` }));
-    dinastias.forEach((d) => lista.push({ key: `dinastia-${d}`, label: `Dinastía: ${d}` }));
-    titulos.forEach((id) => {
-      const categoria = opciones.titulos.find((item) => item.id === id);
-      lista.push({ key: `titulo-${id}`, label: categoria ? `Función: ${categoria.label}` : `Función: ${id}` });
-    });
-    siglos.forEach((valor) => {
-      const label = valor === SIN_FECHA ? "Fechas incompletas" : `Periodo: s. ${nRomano[valor] || valor}`;
-      lista.push({ key: `siglo-${valor}`, label });
-    });
-    relaciones.forEach((id) => {
-      const filtro = FILTROS_RELACION.find((item) => item.id === id);
-      lista.push({ key: `rel-${id}`, label: filtro ? `Relación: ${filtro.label}` : `Relación: ${id}` });
-    });
-    if (soloFavoritos) lista.push({ key: "solo-favoritos", label: "Solo favoritos" });
-    return lista;
-  }, [queryTrim, query, territorios, dinastias, titulos, siglos, relaciones, soloFavoritos, opciones.titulos]);
 
   const filtrosActivosCompactos = useMemo(() => {
     const lista = [];
@@ -1576,7 +1634,8 @@ export default function Explorer({ initialPanel = null }) {
     favoritos, setFavoritos, favoritosOpen, setFavoritosOpen, soloFavoritos, setSoloFavoritos, historiaActivaId, setHistoriaActivaId,
     historiaPasoIndex, setHistoriaPasoIndex, compareMenuRef, focoMenuRef, favoritosMenuRef, historiaSnapshotRef, shareStatusTimerRef, urlStateLoadedRef,
     historyPopRef, dragState, workspaceGridRef, workspaceMainRef, panelWidths, setPanelWidths, treeMapSplit, setTreeMapSplit, filterSectionsOpen, setFilterSectionsOpen,
-    alternarSeccionFiltro, ajustarAnchoPanel, restablecerAnchoPanel, comenzarResizeLateral, comenzarResizeArbolMapa,
+    bioSectionsOpen, setBioSectionsOpen, personHistory, modoTrabajo, setModoTrabajo,
+    alternarSeccionFiltro, alternarSeccionBio, ajustarAnchoPanel, restablecerAnchoPanel, comenzarResizeLateral, comenzarResizeArbolMapa,
     gen, rows, graph, favoritosSet, timelinePxPerYear, timelineTrackWidth,
     timelineContentWidth, timelineTickStep, timelineTicks, eventosOrdenadosTodos, totalEventosTimeline, eventosOrdenados, timelineCombinedEvents, eventoSeleccionado,
     historiaActiva, historiaPasoActual, historiaPersonasSet, opciones, personaBio, toggle, focoSet, collapsedSet,
@@ -1586,10 +1645,10 @@ export default function Explorer({ initialPanel = null }) {
     treeLayout, positions, canvasSize, queryTrim, searchMatchIds, searchMatchSet, searchSignature, searchCurrentId,
     irACoincidencia, hayFiltros, limpiar, lineage, comparePaths, comparePath, pathEdges, groupsByRow,
     routing, relacionFocoId, amantesFoco, styleForFamilyLine, connectorLayerKey, connectors, scrollBy, onPointerDown,
-    onPointerMove, endDrag, centerOn, pendingZoomCenterRef, cambiarZoomArbol, centerOnTimeline, seleccionarPersonaPorId, cerrarSeleccion,
+    onPointerMove, endDrag, centerOn, pendingZoomCenterRef, cambiarZoomArbol, centerOnTimeline, seleccionarPersonaPorId, navegarHistorialPersona, centrarSeleccion, cerrarSeleccion,
     centerTimelineOnYear, alternarFavorito, seleccionarEvento, aplicarPasoHistoria, iniciarHistoria, cambiarPasoHistoria, salirHistoria, mostrarEstadoCompartir,
     construirEnlaceCompartido, compartirPersona, handleBoxClick, getBoxHandlers, renderPersonBox, miniW, miniScaleX, miniScaleY,
-    onMinimapClick, filtrosActivosResumen, filtrosActivosCompactos, cambiarIdioma, atlasContextLabel,
+    onMinimapClick, filtrosActivosCompactos, cambiarIdioma, atlasContextLabel,
   };
   return <ExplorerView vm={viewModel} />;
 }

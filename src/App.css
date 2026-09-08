@@ -4428,3 +4428,429 @@ body.atlas-is-resizing * {
     gap: 12px;
   }
 }
+
+/* ==========================================
+   V2.5 · ATLAS COMPACTO Y MODO DE TRABAJO
+   Año global horizontal, biografía plegable, navegación de personas
+   y selección persistente entre árbol y cronología.
+   ========================================== */
+
+/* La barra sticky queda en dos niveles compactos: búsqueda + año ocupan la
+   primera fila; paneles e interacción comparten una sola banda fina debajo. */
+.workspace-topbar {
+  grid-template-columns: minmax(250px, 320px) minmax(0, 1fr) !important;
+  gap: 7px 10px !important;
+  align-items: stretch;
+  padding: 5px 0 7px;
+  margin-bottom: 10px;
+}
+
+.workspace-toolbar-search {
+  grid-column: 1;
+  padding: 8px 10px;
+  justify-content: center;
+}
+
+.workspace-toolbar-year {
+  grid-column: 2;
+  padding: 8px 10px;
+  gap: 5px;
+}
+
+.workspace-topbar-secondary {
+  grid-column: 1 / -1 !important;
+  display: flex !important;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  min-height: 34px;
+  box-sizing: border-box;
+  padding: 4px 8px;
+  background: #FBF7EC;
+  border: 1px solid #D9CFB6;
+  border-radius: 6px;
+}
+
+.workspace-topbar-secondary > .workspace-topbar-section {
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+}
+
+.workspace-topbar-secondary .toolbar-label {
+  margin: 0;
+  white-space: nowrap;
+  font-size: 9px;
+}
+
+.workspace-toolbar-view {
+  flex: 0 0 auto;
+}
+
+.workspace-toolbar-actions {
+  flex: 1 1 auto;
+  justify-content: flex-end;
+  min-width: 0;
+}
+
+.workspace-toolbar-actions .topbar-mode-controls {
+  justify-content: flex-end;
+  flex-wrap: nowrap;
+  gap: 5px;
+}
+
+/* El slider y TODOS sus controles quedan en la misma línea: el campo exacto,
+   "todos", reproducción y velocidad viven a la derecha del deslizador. */
+.workspace-toolbar-year .global-year-control-inline {
+  display: grid;
+  grid-template-columns: minmax(220px, 1fr) auto auto;
+  grid-template-rows: 28px;
+  gap: 6px;
+  align-items: center;
+}
+
+.workspace-toolbar-year .global-year-control-inline .global-year-range {
+  grid-column: 1;
+  grid-row: 1;
+  min-width: 160px;
+}
+
+.workspace-toolbar-year .global-year-entry-row {
+  grid-column: 2;
+  grid-row: 1;
+  flex-wrap: nowrap;
+  gap: 4px;
+}
+
+.workspace-toolbar-year .global-year-entry-row .global-year-number {
+  flex-basis: 66px;
+  width: 66px;
+  height: 28px;
+  box-sizing: border-box;
+}
+
+.workspace-toolbar-year .global-year-entry-row .global-year-reset {
+  width: 28px;
+  height: 28px;
+  padding: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.workspace-toolbar-year .history-playback-controls {
+  grid-column: 3;
+  grid-row: 1;
+  justify-self: end;
+  flex-wrap: nowrap;
+  gap: 4px;
+}
+
+.workspace-toolbar-year .history-playback-btn {
+  height: 28px;
+  min-width: 28px;
+}
+
+.workspace-toolbar-year .history-playback-main {
+  width: 28px;
+  min-width: 28px;
+}
+
+.workspace-toolbar-year .history-speed-control {
+  margin-left: 1px;
+}
+
+.workspace-toolbar-year .history-speed-control > span {
+  display: none;
+}
+
+.workspace-toolbar-year .history-speed-control select {
+  height: 28px;
+  max-width: 105px;
+}
+
+/* Historial interno de personas dentro de la biografía. No es sticky: forma
+   parte del panel y desaparece al hacer scroll como el resto de la cabecera. */
+.bio-history-nav {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 5px;
+  margin: -2px 0 8px;
+  padding-bottom: 7px;
+  border-bottom: 1px solid #EAE2CC;
+}
+
+.bio-history-nav button {
+  width: 26px;
+  height: 24px;
+  padding: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #D9CFB6;
+  border-radius: 4px;
+  background: #FFFDF7;
+  color: #6B6350;
+  cursor: pointer;
+}
+
+.bio-history-nav button:hover:not(:disabled) {
+  color: #F8F3E6;
+  background: #7A2E2E;
+  border-color: #7A2E2E;
+}
+
+.bio-history-nav button:disabled {
+  opacity: 0.35;
+  cursor: default;
+}
+
+.bio-history-position {
+  min-width: 38px;
+  text-align: center;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 9.5px;
+  color: #8A7F65;
+  font-variant-numeric: tabular-nums;
+}
+
+/* Bloques plegables de la biografía. El retrato, resumen y enlace a la ficha
+   completa quedan siempre visibles; solo se pliegan los bloques largos. */
+.bio-collapsible {
+  border-top: 1px solid #EAE2CC;
+}
+
+.bio-collapsible:last-of-type {
+  border-bottom: 1px solid #EAE2CC;
+}
+
+.bio-collapsible-toggle {
+  width: 100%;
+  min-height: 31px;
+  padding: 6px 1px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  border: 0;
+  background: transparent;
+  color: #6B6350;
+  cursor: pointer;
+  text-align: left;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 9.5px;
+  line-height: 1.2;
+  font-weight: 750;
+  letter-spacing: 0.52px;
+  text-transform: uppercase;
+}
+
+.bio-collapsible-toggle:hover,
+.bio-collapsible-toggle:focus-visible {
+  color: #7A2E2E;
+}
+
+.bio-collapsible-toggle:focus-visible {
+  outline: 2px solid rgba(122, 46, 46, 0.16);
+  outline-offset: 2px;
+  border-radius: 3px;
+}
+
+.bio-collapsible-content {
+  padding: 2px 0 9px;
+}
+
+.bio-collapsible-content > dl {
+  margin-top: 2px;
+  margin-bottom: 0;
+}
+
+.bio-relations-collapsible {
+  margin-top: 0;
+  padding-top: 0;
+  border-top: 0;
+}
+
+.bio-collapsible-content .bio-discover {
+  margin-top: 0;
+  padding-top: 0;
+  border-top: 0;
+}
+
+/* Selección persistente. El hover sigue siendo una vista previa temporal, pero
+   la persona seleccionada se reconoce sin depender del cursor. */
+.box.selected {
+  z-index: 7;
+  opacity: 1 !important;
+  filter: none !important;
+  outline: 3px solid #7A2E2E !important;
+  outline-offset: -2px;
+  box-shadow: 0 0 0 3px rgba(122, 46, 46, 0.18);
+  background: #FFF9F2;
+}
+
+.box.selected.hovered {
+  box-shadow: 0 0 0 4px rgba(122, 46, 46, 0.24);
+}
+
+.tl-row.selected {
+  opacity: 1 !important;
+  background: #F4E7DE;
+  box-shadow: inset 3px 0 0 #7A2E2E;
+}
+
+.tl-row.selected .tl-sticky-col {
+  background: #F4E7DE;
+}
+
+.tl-row.selected .tl-sticky-col .name {
+  color: #7A2E2E;
+  font-weight: 750;
+}
+
+.tl-row.selected .tl-bar {
+  opacity: 0.82;
+  box-shadow: 0 0 0 1px rgba(122, 46, 46, 0.35);
+}
+
+.tl-row.selected.hovered,
+.tl-row.selected.hovered .tl-sticky-col {
+  background: #EEDBD0;
+}
+
+/* Modo de trabajo: se eliminan cabecera pública, banda secundaria y footer
+   desde React. La cruz queda siempre disponible y Esc sale del modo. */
+body.atlas-work-mode-active {
+  background: #F7F1E3;
+}
+
+.wrap.atlas-work-mode {
+  min-height: 100vh;
+  padding: 8px 10px 12px;
+}
+
+.atlas-work-mode .workspace-topbar {
+  grid-template-columns: minmax(240px, 300px) minmax(0, 1fr) !important;
+  padding: 4px 42px 6px 0;
+  margin-bottom: 8px;
+}
+
+.atlas-work-mode .workspace-grid {
+  --workspace-stage-height: clamp(620px, 76vh, 980px);
+  row-gap: 10px;
+}
+
+.work-mode-exit {
+  position: fixed;
+  top: 9px;
+  right: 9px;
+  z-index: 80;
+  width: 30px;
+  height: 30px;
+  padding: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #C9BFA8;
+  border-radius: 5px;
+  background: rgba(251, 247, 236, 0.97);
+  color: #6B6350;
+  box-shadow: 0 3px 10px rgba(44, 38, 32, 0.12);
+  cursor: pointer;
+}
+
+.work-mode-exit:hover,
+.work-mode-exit:focus-visible {
+  background: #7A2E2E;
+  border-color: #7A2E2E;
+  color: #F8F3E6;
+}
+
+@container linajes-app (max-width: 1480px) {
+  .workspace-topbar-secondary {
+    flex-wrap: wrap;
+  }
+
+  .workspace-toolbar-actions .topbar-mode-controls {
+    flex-wrap: wrap;
+  }
+}
+
+@container linajes-app (max-width: 1180px) {
+  .workspace-topbar {
+    grid-template-columns: minmax(220px, 280px) minmax(0, 1fr) !important;
+  }
+
+  .workspace-toolbar-year .global-year-control-inline {
+    grid-template-columns: minmax(0, 1fr) auto;
+    grid-template-rows: 28px 28px;
+  }
+
+  .workspace-toolbar-year .global-year-control-inline .global-year-range {
+    grid-column: 1 / -1;
+    grid-row: 1;
+  }
+
+  .workspace-toolbar-year .global-year-entry-row {
+    grid-column: 1;
+    grid-row: 2;
+  }
+
+  .workspace-toolbar-year .history-playback-controls {
+    grid-column: 2;
+    grid-row: 2;
+  }
+}
+
+@container linajes-app (max-width: 820px) {
+  .workspace-topbar {
+    grid-template-columns: 1fr !important;
+  }
+
+  .workspace-toolbar-search,
+  .workspace-toolbar-year {
+    grid-column: 1;
+  }
+
+  .workspace-topbar-secondary {
+    grid-column: 1 !important;
+    align-items: stretch;
+  }
+
+  .workspace-topbar-secondary > .workspace-topbar-section {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .workspace-toolbar-year .global-year-control-inline {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+
+  .workspace-toolbar-year .global-year-control-inline .global-year-range,
+  .workspace-toolbar-year .global-year-entry-row,
+  .workspace-toolbar-year .history-playback-controls {
+    grid-column: 1;
+    grid-row: auto;
+  }
+
+  .workspace-toolbar-year .history-playback-controls {
+    justify-self: start;
+  }
+
+  .atlas-work-mode .workspace-topbar {
+    padding-right: 38px;
+  }
+}
+
+.workspace-toolbar-actions .nav-btn:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+  background: #F7F2E6;
+  color: #8A7F65;
+}
