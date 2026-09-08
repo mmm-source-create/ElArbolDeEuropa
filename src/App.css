@@ -4854,3 +4854,19 @@ body.atlas-work-mode-active {
   background: #F7F2E6;
   color: #8A7F65;
 }
+/* V2.7 — Sucesión: misma tinta y superficies que el Atlas. */
+.workspace-main-sucesion { display:block; min-width:0; }
+.succession-stage { padding:1.25rem; overflow:auto; max-height:80vh; min-height:25rem; font-size:1rem; }
+.succession-controls { display:flex; flex-wrap:wrap; align-items:center; gap:1rem; }
+.succession-controls h2 { margin:0; font-family:var(--eade-serif); }
+.succession-controls label { display:flex; gap:.5rem; align-items:center; font-size:.875rem; }
+.succession-controls select { max-width:100%; padding:.5rem; font:inherit; }
+.succession-columns { display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr)); gap:1.5rem; }
+.succession-list { list-style:none; margin:0; padding:0 0 0 1rem; border-left:2px solid var(--eade-muted-soft,#aaa); }
+.succession-list li { margin:0 0 .75rem; padding:.7rem; border:1px solid #b8b1a6; border-radius:6px; }
+.succession-list button { display:grid; gap:.35rem; width:100%; text-align:left; color:inherit; background:transparent; border:0; cursor:pointer; font:inherit; }
+.succession-list button span,.succession-list small { display:block; font-size:.875rem; line-height:1.5; }
+.succession-list .is-selected { outline:2px solid #822e41; }
+.succession-list .is-current { background:#efe3c3; }
+.succession-stage a { color:#822e41; }
+.succession-stage button:focus-visible,.succession-stage select:focus-visible { outline:3px solid #822e41; outline-offset:3px; }

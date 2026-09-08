@@ -1,6 +1,7 @@
 import React, { lazy, Suspense, useCallback, useEffect, useMemo, useState } from "react";
 import { ArrowRight } from "lucide-react";
 import { CatalogPage, HomePage, InfoPage, PersonPage } from "./public/PublicSite.jsx";
+import { TerritoryPage } from "./public/TerritoryPage.jsx";
 import SiteHeader from "./components/SiteHeader.jsx";
 import SiteFooter from "./components/SiteFooter.jsx";
 import "./styles/theme.css";
@@ -93,6 +94,8 @@ export default function App() {
     const catalog = catalogoDesdePath(pathname);
     const info = infoDesdePath(pathname);
     const atlasRequested = params.get("atlas") === "1";
+    const territoryMatch = pathname.match(/^\/es\/territorio\/([^/]+)\/?$/);
+    if (territoryMatch && !atlasRequested) return { locale, view: "territory", territorySlug: decodeURIComponent(territoryMatch[1]) };
     const panel = params.get("panel") || null;
 
     if (esRutaDesafio(pathname) || (["/", "/es", "/es/"].includes(pathname) && panel === "desafio")) {
@@ -118,6 +121,7 @@ export default function App() {
     setExplorerRequested(true);
   }, []);
 
+  if (!explorerRequested && initial.view === "territory") return <TerritoryPage slug={initial.territorySlug} />;
   if (initial.view === "english") return <EnglishLanding />;
   if (initial.view === "desafio") {
     return (

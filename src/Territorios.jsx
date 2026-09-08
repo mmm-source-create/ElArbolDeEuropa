@@ -1,3 +1,5 @@
+import { gobiernoEfectivo } from "./data/territorios.js";
+
 // Tabla de correspondencias: nombre de "reino" tal y como aparece en
 // PERSONAS (App.jsx) -> lista de IDs reales de las <path> del SVG
 // (MapChart_Map.svg) que forman ese territorio.
@@ -376,7 +378,7 @@ export const TERRITORIOS_SUB = {
   Inglaterra: ["Gales", "Irlanda", "Richmond", "Suffolk", "York"],
   Escocia: ["Annandale"],
 
-  España: ["Corona de Castilla", "Corona de Aragón", "Granada"],
+  España: ["Corona de Castilla", "Corona de Aragón", "Navarra", "Granada"],
   "Corona de Castilla": ["Castilla", "León"],
   "Corona de Aragón": ["Aragón", "Gandía", "Mallorca", "Urgel", "Valencia"],
   Portugal: ["Brasil"],
@@ -384,7 +386,7 @@ export const TERRITORIOS_SUB = {
 
   "Sacro Imperio": [
     "Alemania", "Austria", "Austria Interior", "Baviera", "Bohemia",
-    "Borgoña", "Brabante", "Carintia", "Cléveris", "Flandes", "Habsburgo",
+    "Borgoña", "Condado de Borgoña", "Brabante", "Carintia", "Cléveris", "Flandes", "Habsburgo",
     "Henao", "Holanda", "Limburgo", "Lorena", "Luxemburgo", "Milán",
     "Monferrato", "Moravia", "Nassau", "Países Bajos", "Palatinado",
     "Piamonte", "Saboya", "Sajonia", "Silesia", "Suabia", "Tirol",
@@ -402,7 +404,7 @@ export const TERRITORIOS_SUB = {
   ],
 
   "Estados Italianos": [
-    "Estados Pontificios", "Ferrara", "Florencia", "Forlì", "Gravina",
+    "Estados Pontificios", "Venecia", "Génova", "Ferrara", "Florencia", "Forlì", "Gravina",
     "Mantua", "Módena", "Milán", "Monferrato", "Nápoles", "Parma", "Pesaro", "Urbino",
     "Piamonte", "Romaña", "Saboya", "Sicilia", "Tarento", "Toscana",
     "Trinacria",
@@ -477,8 +479,8 @@ const TIPOS_REINADO_NO_EFECTIVOS = new Set(["titular", "pretensión"]);
 // `reinado:[desde,hasta]` para que un dato todavía no migrado no rompa nada.
 export function listaReinados(persona) {
   if (!persona) return [];
-  if (Array.isArray(persona.reinados)) {
-    return persona.reinados.filter((r) =>
+  if (Array.isArray(persona.gobiernos || persona.reinados)) {
+    return (persona.gobiernos || persona.reinados).filter((r) =>
       r && typeof r.territorio === "string"
       && Number.isFinite(r.desde) && Number.isFinite(r.hasta)
     );
@@ -494,6 +496,7 @@ export function listaReinados(persona) {
 
 export function reinadoEsEfectivo(reinado) {
   if (!reinado) return false;
+  if (reinado.condicion) return gobiernoEfectivo(reinado);
   if (typeof reinado.efectivo === "boolean") return reinado.efectivo;
   return !TIPOS_REINADO_NO_EFECTIVOS.has(String(reinado.tipo || "").toLowerCase());
 }
@@ -520,7 +523,7 @@ export function territoriosGobernadosEnAño(persona, año) {
   // de `reinos`: ese campo también expresa procedencia, matrimonio o vínculo
   // dinástico. Solo se permite el fallback cuando la ficha ha sido certificada
   // manualmente con `gobernante: true`.
-  return persona?.gobernante === true ? [...new Set(persona?.reinos || [])] : [];
+  return [];
 }
 
 export function esGobernante(persona) {
@@ -528,13 +531,7 @@ export function esGobernante(persona) {
   if (typeof persona.gobernante === "boolean") return persona.gobernante;
   const reinadosDetallados = listaReinados(persona);
   if (reinadosDetallados.length) return reinadosDetallados.some(reinadoEsEfectivo);
-  const titulo = String(persona.titulo || "").trim();
-  // Los títulos que empiezan por Consorte o Noble no se interpretan como
-  // gobierno aunque después incluyan una dignidad póstuma o discutida.
-  if (/^(Consorte|Noble)\b/i.test(titulo)) return false;
-  return TITULOS_GOBERNANTES.some((tituloGobernante) =>
-    new RegExp(`(^|\\s|/)${tituloGobernante}(\\s|$|/)`, "i").test(titulo)
-  );
+  return false;
 }
 
 // Año usado para escoger la versión cartográfica de UN territorio concreto.
