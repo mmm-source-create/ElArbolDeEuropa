@@ -1,5 +1,5 @@
 import React from "react";
-import { Search, ChevronDown, ChevronRight, ArrowLeft, ArrowRight, ArrowUp, ArrowDown, ZoomIn, ZoomOut, RotateCcw, GitCompare, Focus, Share2, Play, Pause, SkipBack, SkipForward, X, Info, Heart, BookOpen, BarChart3, Scale, Flag, Mail, ExternalLink } from "lucide-react";
+import { Search, ChevronDown, ChevronRight, ArrowLeft, ArrowRight, ArrowUp, ArrowDown, ZoomIn, ZoomOut, RotateCcw, GitCompare, Focus, Share2, Play, Pause, SkipBack, SkipForward, X, Info, Heart, BookOpen, BarChart3, Scale, Flag, Mail, ExternalLink, Crosshair, Maximize2 } from "lucide-react";
 import { MapaEuropa } from "../MapaEuropa";
 import { TERRITORIOS_SUB, TERRITORIOS_DESTACADOS, REINO_COLOR, REINO_COLOR_DEFAULT, listaReinados, territoriosGobernadosEnAño, reinadoEsEfectivo, esGobernante } from "../Territorios";
 import { PERSONAS } from "../personas.jsx";
@@ -31,6 +31,18 @@ function FilterSection({ title, open, onToggle, activeCount = 0, children }) {
   );
 }
 
+function BioSection({ title, open, onToggle, children }) {
+  return (
+    <section className={`bio-collapsible${open ? " is-open" : " is-collapsed"}`}>
+      <button type="button" className="bio-collapsible-toggle" onClick={onToggle} aria-expanded={open}>
+        <span>{title}</span>
+        {open ? <ChevronDown size={12} /> : <ChevronRight size={12} />}
+      </button>
+      {open && <div className="bio-collapsible-content">{children}</div>}
+    </section>
+  );
+}
+
 export default function ExplorerView({ vm }) {
   const {
     scrollRef, nodeRefs, tlScrollRef, tlBarRefs, locale, setLocale, query, setQuery,
@@ -45,7 +57,8 @@ export default function ExplorerView({ vm }) {
     favoritos, setFavoritos, favoritosOpen, setFavoritosOpen, soloFavoritos, setSoloFavoritos, historiaActivaId, setHistoriaActivaId,
     historiaPasoIndex, setHistoriaPasoIndex, compareMenuRef, focoMenuRef, favoritosMenuRef, historiaSnapshotRef, shareStatusTimerRef, urlStateLoadedRef,
     historyPopRef, dragState, workspaceGridRef, workspaceMainRef, panelWidths, setPanelWidths, treeMapSplit, setTreeMapSplit, filterSectionsOpen, setFilterSectionsOpen,
-    alternarSeccionFiltro, ajustarAnchoPanel, restablecerAnchoPanel, comenzarResizeLateral, comenzarResizeArbolMapa,
+    bioSectionsOpen, setBioSectionsOpen, personHistory, modoTrabajo, setModoTrabajo,
+    alternarSeccionFiltro, alternarSeccionBio, ajustarAnchoPanel, restablecerAnchoPanel, comenzarResizeLateral, comenzarResizeArbolMapa,
     gen, rows, graph, favoritosSet, timelinePxPerYear, timelineTrackWidth,
     timelineContentWidth, timelineTickStep, timelineTicks, eventosOrdenadosTodos, totalEventosTimeline, eventosOrdenados, timelineCombinedEvents, eventoSeleccionado,
     historiaActiva, historiaPasoActual, historiaPersonasSet, opciones, personaBio, toggle, focoSet, collapsedSet,
@@ -55,17 +68,21 @@ export default function ExplorerView({ vm }) {
     treeLayout, positions, canvasSize, queryTrim, searchMatchIds, searchMatchSet, searchSignature, searchCurrentId,
     irACoincidencia, hayFiltros, limpiar, lineage, comparePaths, comparePath, pathEdges, groupsByRow,
     routing, relacionFocoId, amantesFoco, styleForFamilyLine, connectorLayerKey, connectors, scrollBy, onPointerDown,
-    onPointerMove, endDrag, centerOn, pendingZoomCenterRef, cambiarZoomArbol, centerOnTimeline, seleccionarPersonaPorId, cerrarSeleccion,
+    onPointerMove, endDrag, centerOn, pendingZoomCenterRef, cambiarZoomArbol, centerOnTimeline, seleccionarPersonaPorId, navegarHistorialPersona, centrarSeleccion, cerrarSeleccion,
     centerTimelineOnYear, alternarFavorito, seleccionarEvento, aplicarPasoHistoria, iniciarHistoria, cambiarPasoHistoria, salirHistoria, mostrarEstadoCompartir,
     construirEnlaceCompartido, compartirPersona, handleBoxClick, getBoxHandlers, renderPersonBox, miniW, miniScaleX, miniScaleY,
-    onMinimapClick, filtrosActivosResumen, filtrosActivosCompactos, cambiarIdioma, atlasContextLabel,
+    onMinimapClick, filtrosActivosCompactos, cambiarIdioma, atlasContextLabel,
   } = vm;
   const filtrosCompactosVisibles = filtrosActivosCompactos.slice(0, 6);
   const filtrosCompactosRestantes = Math.max(0, filtrosActivosCompactos.length - filtrosCompactosVisibles.length);
+  const personaAnteriorId = personHistory.index > 0 ? personHistory.ids[personHistory.index - 1] : null;
+  const personaSiguienteId = personHistory.index >= 0 && personHistory.index < personHistory.ids.length - 1
+    ? personHistory.ids[personHistory.index + 1]
+    : null;
   return (
-    <div className="wrap">
-      <SiteHeader variant="atlas" locale={locale} onLanguageChange={cambiarIdioma} contextLabel={atlasContextLabel} />
-      <div className="workspace-topbar">
+    <div className={`wrap${modoTrabajo ? " atlas-work-mode" : ""}`}>
+      {!modoTrabajo && <SiteHeader variant="atlas" locale={locale} onLanguageChange={cambiarIdioma} contextLabel={atlasContextLabel} />}
+      <div className={`workspace-topbar${modoTrabajo ? " is-work-mode" : ""}`}>
         <section className="workspace-topbar-section workspace-toolbar-search">
           <div className="toolbar-label">Búsqueda</div>
           <div className="search-box toolbar-search-box">
@@ -147,8 +164,9 @@ export default function ExplorerView({ vm }) {
                 className="global-year-reset"
                 onClick={restablecerAnio}
                 title="Mostrar todos los años"
+                aria-label="Mostrar todos los años"
               >
-                Todos los años
+                <RotateCcw size={12} />
               </button>
             </div>
             <div className="history-playback-controls" aria-label="Reproducción automática de la historia">
@@ -195,24 +213,7 @@ export default function ExplorerView({ vm }) {
           </div>
         </section>
 
-        <section className="workspace-topbar-section workspace-toolbar-filters">
-          <div className="toolbar-label">Filtros activos</div>
-          <div className="toolbar-tag-list">
-            {filtrosActivosResumen.length ? (
-              filtrosActivosResumen.map((item) => (
-                <span key={item.key} className="toolbar-tag">{item.label}</span>
-              ))
-            ) : (
-              <span className="toolbar-empty">Sin filtros activos</span>
-            )}
-          </div>
-          {hayFiltros && (
-            <button type="button" className="clear-btn toolbar-clear-btn" onClick={limpiar}>
-              Limpiar todo
-            </button>
-          )}
-        </section>
-
+        {!modoTrabajo && (
         <div className="workspace-topbar-secondary">
           <section className="workspace-topbar-section workspace-toolbar-view workspace-toolbar-panels">
             <div className="toolbar-label">Paneles visibles</div>
@@ -355,6 +356,23 @@ export default function ExplorerView({ vm }) {
                   </div>
                 )}
               </div>
+              <button
+                type="button"
+                className="nav-btn nav-btn-wide"
+                disabled={!seleccion}
+                onClick={centrarSeleccion}
+                title={seleccion ? `Centrar ${seleccion.nombre} en el árbol y la cronología` : "Selecciona una persona para centrarla"}
+              >
+                <Crosshair size={12} /> Centrar
+              </button>
+              <button
+                type="button"
+                className="nav-btn nav-btn-wide"
+                onClick={() => setModoTrabajo(true)}
+                title="Abrir el Atlas en modo de trabajo"
+              >
+                <Maximize2 size={12} /> Pantalla de trabajo
+              </button>
               <div className="share-control-wrap">
                 <button
                   type="button"
@@ -371,7 +389,20 @@ export default function ExplorerView({ vm }) {
             </div>
           </section>
         </div>
+        )}
       </div>
+
+      {modoTrabajo && (
+        <button
+          type="button"
+          className="work-mode-exit"
+          onClick={() => setModoTrabajo(false)}
+          title="Salir del modo de trabajo (Esc)"
+          aria-label="Salir del modo de trabajo"
+        >
+          <X size={16} />
+        </button>
+      )}
 
       {mode === "compare" && (
         <div className="compare-bar workspace-mode-bar">
@@ -787,6 +818,31 @@ export default function ExplorerView({ vm }) {
             <div className="panel-body workspace-panel-scroll workspace-bio-scroll">
               {personaBio ? (
                 <div className="bio-panel">
+                  {seleccion && personHistory.ids.length > 0 && (
+                    <div className="bio-history-nav" aria-label="Historial de personas consultadas">
+                      <button
+                        type="button"
+                        disabled={!personaAnteriorId}
+                        onClick={() => navegarHistorialPersona(-1)}
+                        title={personaAnteriorId ? `Volver a ${BY_ID[personaAnteriorId]?.nombre || "la persona anterior"}` : "No hay una persona anterior"}
+                        aria-label="Persona anterior"
+                      >
+                        <ArrowLeft size={12} />
+                      </button>
+                      <span className="bio-history-position">
+                        {personHistory.index >= 0 ? `${personHistory.index + 1} / ${personHistory.ids.length}` : "—"}
+                      </span>
+                      <button
+                        type="button"
+                        disabled={!personaSiguienteId}
+                        onClick={() => navegarHistorialPersona(1)}
+                        title={personaSiguienteId ? `Avanzar a ${BY_ID[personaSiguienteId]?.nombre || "la persona siguiente"}` : "No hay una persona siguiente"}
+                        aria-label="Persona siguiente"
+                      >
+                        <ArrowRight size={12} />
+                      </button>
+                    </div>
+                  )}
                   <div className="bio-head">
                     <div>
                       <h3 className="bio-nombre">{nombrePrincipal(personaBio)}</h3>
@@ -866,54 +922,71 @@ export default function ExplorerView({ vm }) {
                     Leer ficha completa <ExternalLink size={11} />
                   </a>
 
-                  <dl>
-                    <dt>ID</dt><dd><code className="bio-id">{personaBio.id}</code></dd>
-                    <dt>Territorio(s)</dt><dd>{(personaBio.reinos || []).join(", ") || "No indicado"}</dd>
-                    {sobrenombreDePersona(personaBio) && <><dt>Sobrenombre</dt><dd>{sobrenombreDePersona(personaBio)}</dd></>}
-                    {!!personaBio.aliases?.length && <><dt>Otros nombres</dt><dd>{personaBio.aliases.join(", ")}</dd></>}
-                    <dt>Título</dt><dd>{personaBio.titulo}</dd>
-                    <dt>Fechas</dt>
-                    <dd>
-                      {formatoFechas(personaBio)}
-                      {siglosDePersona(personaBio).length > 0 && ` (s. ${siglosDePersona(personaBio).map((valor) => nRomano[valor] || valor).join("–")})`}
-                    </dd>
-                    {listaReinados(personaBio).map((reinado, index) => {
-                      const tipo = etiquetaTipoReinado(reinado.tipo);
-                      return (
-                        <React.Fragment key={`${reinado.territorio}-${reinado.desde}-${reinado.hasta}-${index}`}>
-                          <dt>Reinado · {reinado.territorio}</dt>
-                          <dd>{reinado.desde} – {reinado.hasta}{tipo ? ` (${tipo})` : ""}</dd>
-                        </React.Fragment>
-                      );
-                    })}
-                  </dl>
+                  <BioSection
+                    title="Datos y reinados"
+                    open={bioSectionsOpen.datos}
+                    onToggle={() => alternarSeccionBio("datos")}
+                  >
+                    <dl>
+                      <dt>ID</dt><dd><code className="bio-id">{personaBio.id}</code></dd>
+                      <dt>Territorio(s)</dt><dd>{(personaBio.reinos || []).join(", ") || "No indicado"}</dd>
+                      {sobrenombreDePersona(personaBio) && <><dt>Sobrenombre</dt><dd>{sobrenombreDePersona(personaBio)}</dd></>}
+                      {!!personaBio.aliases?.length && <><dt>Otros nombres</dt><dd>{personaBio.aliases.join(", ")}</dd></>}
+                      <dt>Título</dt><dd>{personaBio.titulo}</dd>
+                      <dt>Fechas</dt>
+                      <dd>
+                        {formatoFechas(personaBio)}
+                        {siglosDePersona(personaBio).length > 0 && ` (s. ${siglosDePersona(personaBio).map((valor) => nRomano[valor] || valor).join("–")})`}
+                      </dd>
+                      {listaReinados(personaBio).map((reinado, index) => {
+                        const tipo = etiquetaTipoReinado(reinado.tipo);
+                        return (
+                          <React.Fragment key={`${reinado.territorio}-${reinado.desde}-${reinado.hasta}-${index}`}>
+                            <dt>Reinado · {reinado.territorio}</dt>
+                            <dd>{reinado.desde} – {reinado.hasta}{tipo ? ` (${tipo})` : ""}</dd>
+                          </React.Fragment>
+                        );
+                      })}
+                    </dl>
+                  </BioSection>
 
-                  <div className="bio-relations">
-                    <h4>Relaciones documentadas</h4>
-                    <BioRelations etiqueta="Padre" ids={personaBio.padre ? [personaBio.padre] : []} byId={BY_ID} hrefForId={(id) => rutaEntidadLocalizada("es", "persona", slugPersonaPorLocale(BY_ID[id], "es"))} onSelect={seleccionarPersonaPorId} />
-                    <BioRelations etiqueta="Madre" ids={personaBio.madre ? [personaBio.madre] : []} byId={BY_ID} hrefForId={(id) => rutaEntidadLocalizada("es", "persona", slugPersonaPorLocale(BY_ID[id], "es"))} onSelect={seleccionarPersonaPorId} />
-                    <BioRelations etiqueta={listaConyuges(personaBio).length > 1 ? "Cónyuges" : "Cónyuge"} ids={listaConyuges(personaBio)} byId={BY_ID} hrefForId={(id) => rutaEntidadLocalizada("es", "persona", slugPersonaPorLocale(BY_ID[id], "es"))} onSelect={seleccionarPersonaPorId} />
-                    <BioRelations etiqueta={listaAmantes(personaBio).length > 1 ? "Amantes" : "Amante"} ids={listaAmantes(personaBio)} tipo="amantes" byId={BY_ID} hrefForId={(id) => rutaEntidadLocalizada("es", "persona", slugPersonaPorLocale(BY_ID[id], "es"))} onSelect={seleccionarPersonaPorId} />
-                    <BioRelations etiqueta="Hijos/as" ids={HIJOS_POR_ID[personaBio.id] || []} byId={BY_ID} hrefForId={(id) => rutaEntidadLocalizada("es", "persona", slugPersonaPorLocale(BY_ID[id], "es"))} onSelect={seleccionarPersonaPorId} />
-                    {!personaBio.padre && !personaBio.madre && !listaConyuges(personaBio).length && !listaAmantes(personaBio).length && !(HIJOS_POR_ID[personaBio.id] || []).length && (
-                      <div className="bio-relations-empty">No hay relaciones cargadas para esta persona.</div>
-                    )}
-                  </div>
+                  <BioSection
+                    title="Relaciones documentadas"
+                    open={bioSectionsOpen.relaciones}
+                    onToggle={() => alternarSeccionBio("relaciones")}
+                  >
+                    <div className="bio-relations bio-relations-collapsible">
+                      <BioRelations etiqueta="Padre" ids={personaBio.padre ? [personaBio.padre] : []} byId={BY_ID} hrefForId={(id) => rutaEntidadLocalizada("es", "persona", slugPersonaPorLocale(BY_ID[id], "es"))} onSelect={seleccionarPersonaPorId} />
+                      <BioRelations etiqueta="Madre" ids={personaBio.madre ? [personaBio.madre] : []} byId={BY_ID} hrefForId={(id) => rutaEntidadLocalizada("es", "persona", slugPersonaPorLocale(BY_ID[id], "es"))} onSelect={seleccionarPersonaPorId} />
+                      <BioRelations etiqueta={listaConyuges(personaBio).length > 1 ? "Cónyuges" : "Cónyuge"} ids={listaConyuges(personaBio)} byId={BY_ID} hrefForId={(id) => rutaEntidadLocalizada("es", "persona", slugPersonaPorLocale(BY_ID[id], "es"))} onSelect={seleccionarPersonaPorId} />
+                      <BioRelations etiqueta={listaAmantes(personaBio).length > 1 ? "Amantes" : "Amante"} ids={listaAmantes(personaBio)} tipo="amantes" byId={BY_ID} hrefForId={(id) => rutaEntidadLocalizada("es", "persona", slugPersonaPorLocale(BY_ID[id], "es"))} onSelect={seleccionarPersonaPorId} />
+                      <BioRelations etiqueta="Hijos/as" ids={HIJOS_POR_ID[personaBio.id] || []} byId={BY_ID} hrefForId={(id) => rutaEntidadLocalizada("es", "persona", slugPersonaPorLocale(BY_ID[id], "es"))} onSelect={seleccionarPersonaPorId} />
+                      {!personaBio.padre && !personaBio.madre && !listaConyuges(personaBio).length && !listaAmantes(personaBio).length && !(HIJOS_POR_ID[personaBio.id] || []).length && (
+                        <div className="bio-relations-empty">No hay relaciones cargadas para esta persona.</div>
+                      )}
+                    </div>
+                  </BioSection>
 
-                  <BioDiscovery
-                    persona={personaBio}
-                    personas={PERSONAS}
-                    hijosPorId={HIJOS_POR_ID}
-                    historias={HISTORIAS}
-                    getSpouses={listaConyuges}
-                    getLovers={listaAmantes}
-                    getReigns={listaReinados}
-                    normalizeText={normalizaTexto}
-                    hrefPersona={(persona) => rutaEntidadLocalizada("es", "persona", slugPersonaPorLocale(persona, "es"))}
-                    hrefHistoria={(historia) => rutaEntidadLocalizada("es", "historia", slugPublico(historia.titulo))}
-                    onSelect={seleccionarPersonaPorId}
-                    onStartHistoria={iniciarHistoria}
-                  />
+                  <BioSection
+                    title="Historias y contexto"
+                    open={bioSectionsOpen.contexto}
+                    onToggle={() => alternarSeccionBio("contexto")}
+                  >
+                    <BioDiscovery
+                      persona={personaBio}
+                      personas={PERSONAS}
+                      hijosPorId={HIJOS_POR_ID}
+                      historias={HISTORIAS}
+                      getSpouses={listaConyuges}
+                      getLovers={listaAmantes}
+                      getReigns={listaReinados}
+                      normalizeText={normalizaTexto}
+                      hrefPersona={(persona) => rutaEntidadLocalizada("es", "persona", slugPersonaPorLocale(persona, "es"))}
+                      hrefHistoria={(historia) => rutaEntidadLocalizada("es", "historia", slugPublico(historia.titulo))}
+                      onSelect={seleccionarPersonaPorId}
+                      onStartHistoria={iniciarHistoria}
+                    />
+                  </BioSection>
 
                   {hovered && seleccion && hovered !== seleccion.id && (
                     <div className="bio-hint">Vista previa de {personaBio.nombre} — al quitar el ratón volverás a ver a {seleccion.nombre}.</div>
@@ -1055,13 +1128,13 @@ export default function ExplorerView({ vm }) {
                             return (
                               <div
                                 key={persona.id}
-                                className={`tl-row ${hovered === persona.id ? "hovered" : ""}${estadoAnio}${historiaPersonasSet.has(persona.id) ? " story-related" : ""}`}
+                                className={`tl-row ${seleccion?.id === persona.id ? "selected " : ""}${hovered === persona.id ? "hovered" : ""}${estadoAnio}${historiaPersonasSet.has(persona.id) ? " story-related" : ""}`}
                                 onMouseEnter={() => setHovered(persona.id)}
                                 onMouseLeave={() => setHovered(null)}
-                                onClick={() => setSeleccion(persona)}
+                                onClick={() => seleccionarPersonaPorId(persona.id)}
                                 role="button"
                                 tabIndex={0}
-                                onKeyDown={(event) => { if (event.key === "Enter" || event.key === " ") { event.preventDefault(); setSeleccion(persona); } }}
+                                onKeyDown={(event) => { if (event.key === "Enter" || event.key === " ") { event.preventDefault(); seleccionarPersonaPorId(persona.id); } }}
                               >
                                 <div className="tl-sticky-col">
                                   <div className="name">{persona.nombre}</div>
@@ -1094,11 +1167,13 @@ export default function ExplorerView({ vm }) {
         )}
       </div>
 
-      <SiteFooter
-        compact
-        onOpenStats={() => setInfoProyecto("estadisticas")}
-        onReport={() => setInfoProyecto("reportar")}
-      />
+      {!modoTrabajo && (
+        <SiteFooter
+          compact
+          onOpenStats={() => setInfoProyecto("estadisticas")}
+          onReport={() => setInfoProyecto("reportar")}
+        />
+      )}
 
       {historiaActiva && historiaPasoActual && (
         <aside className="story-guide" aria-live="polite">
