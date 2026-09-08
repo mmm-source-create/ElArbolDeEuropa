@@ -1,3 +1,4 @@
+import { SUCESIONES_V27 } from "./sucesiones-v27.js";
 import { MONARCAS_MEDIEVALES } from "./monarcas-medievales.js";
 import { MONARCAS_MODERNOS } from "./monarcas-modernos.js";
 import { PAPAS_RELIGION } from "./papas-religion.js";
@@ -14,6 +15,7 @@ export const PERSONA_CONTENT = Object.freeze({
   ...CULTURA_PENSAMIENTO,
   ...FRONTERAS_ORIENTALES,
   ...PRINCIPADOS_DUCADOS,
+  ...SUCESIONES_V27,
 });
 
 export function contenidoPersona(personaOId) {
