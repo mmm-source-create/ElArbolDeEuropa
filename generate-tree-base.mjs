@@ -1,6 +1,6 @@
 import fs from "node:fs/promises";
 import path from "node:path";
-import { aliasesDePersona, resumenCortoPersona, slugBasePersona, slugPublico } from "./src/utils/personPresentation.js";
+import { aliasesDePersona, biografiaPublicaPersona, contenidoEditorialPersona, resumenCortoPersona, slugBasePersona, slugPublico, tieneContenidoEditorial } from "./src/utils/personPresentation.js";
 
 const ROOT = process.cwd();
 const PERSONAS_FILE = path.join(ROOT, "src", "personas.jsx");
@@ -955,7 +955,11 @@ function relevanciaPublica(persona) {
   else if (/conde|condesa|marqu|príncipe|principe|princesa/.test(titulo)) score += 5;
   score += Math.min(10, reinadosLigero(persona).length * 2);
   score += Math.min(8, (HIJOS_POR_ID[persona.id] || []).length);
-  if (persona.biografia) score += Math.min(5, Math.ceil(String(persona.biografia).length / 220));
+  if (tieneContenidoEditorial(persona)) {
+    const editorial = contenidoEditorialPersona(persona);
+    const longitud = String(editorial.biografia || editorial.resumen || "").length;
+    score += Math.min(5, Math.max(1, Math.ceil(longitud / 220)));
+  }
   if (persona.sobrenombre) score += 1;
   return score;
 }
@@ -1088,7 +1092,7 @@ async function generarPortadasPersona() {
       muerAprox: Boolean(persona.muerAprox),
       reinos: Array.isArray(persona.reinos) ? persona.reinos : [],
       reinados: reinadosLigero(persona),
-      biografia: persona.biografia || "",
+      biografia: biografiaPublicaPersona(persona),
       padres,
       conyuges,
       hijos,
@@ -1119,7 +1123,7 @@ async function generarCatalogosPublicos() {
     pasos: Array.isArray(historia.pasos) ? historia.pasos.length : 0,
   }));
 
-  const destacadosIds = ["CARLOS5", "ISAB1CAST", "FERN2ARAG", "FEL2ESP", "ISABEL1ING", "LUIS14FRA"];
+  const destacadosIds = ["FED2HOH", "EDUARDO3ING", "ISAB1CAST", "CARLOS5", "LUIS14FRA", "CATHERINE2RUS"];
   const personasDestacadas = destacadosIds.map(referenciaPersona).filter(Boolean);
   if (personasDestacadas.length < 6) {
     const existentes = new Set(personasDestacadas.map((p) => p.id));
