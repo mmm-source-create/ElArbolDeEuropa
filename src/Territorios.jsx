@@ -372,11 +372,11 @@ export const TERRITORIOS_SUB = {
     "Alençon", "Angulema", "Anjou", "Aquitania", "Artois", "Auvernia",
     "Berry", "Borgoña", "Borbón", "Boulogne", "Bretaña", "Champaña",
     "Clermont", "Évreux", "Foix", "Armagnac", "Guisa", "La Marche", "Montpellier",
-    "Orleans", "Ponthieu", "Provenza", "Saint-Pol", "Valois", "Vendôme",
+    "Orleans", "Ponthieu", "Provenza", "Saint-Pol", "Valois", "Vendôme", "Bearne",
   ],
 
-  Inglaterra: ["Gales", "Irlanda", "Richmond", "Suffolk", "York"],
-  Escocia: ["Annandale"],
+  Inglaterra: ["Gales", "Irlanda", "Richmond", "Suffolk", "York", "Huntingdon", "Northumbria"],
+  Escocia: ["Annandale", "Carrick", "Galloway"],
 
   España: ["Corona de Castilla", "Corona de Aragón", "Navarra", "Granada"],
   "Corona de Castilla": ["Castilla", "León"],
@@ -392,7 +392,9 @@ export const TERRITORIOS_SUB = {
     "Piamonte", "Saboya", "Sajonia", "Silesia", "Suabia", "Tirol",
     "Turingia", "Württemberg", "Pomerania", "Jülich", "Berg",
     "Hesse-Kassel", "Hesse-Darmstadt", "Baden", "Brunswick", "Mecklemburgo", "Oldemburgo", "Mark",
-    "Ansbach", "Kulmbach",
+    "Ansbach", "Kulmbach", "Anhalt", "Brandeburgo", "Ginebra", "Güeldres",
+    "Hannover", "Hesse", "Hohenberg", "Holstein", "Kyburg", "Meißen",
+    "Montbéliard", "Namur", "Núremberg", "Pfirt", "Sajonia-Lauenburgo",
   ],
   Austria: ["Austria Interior", "Carintia", "Habsburgo", "Tirol"],
   Bohemia: ["Moravia", "Silesia"],
@@ -400,21 +402,28 @@ export const TERRITORIOS_SUB = {
 
   "Países Bajos y Flandes": [
     "Artois", "Borgoña", "Brabante", "Cléveris", "Flandes", "Henao",
-    "Holanda", "Limburgo", "Luxemburgo", "Países Bajos",
+    "Holanda", "Limburgo", "Luxemburgo", "Países Bajos", "Güeldres", "Namur",
   ],
 
   "Estados Italianos": [
     "Estados Pontificios", "Venecia", "Génova", "Ferrara", "Florencia", "Forlì", "Gravina",
     "Mantua", "Módena", "Milán", "Monferrato", "Nápoles", "Parma", "Pesaro", "Urbino",
     "Piamonte", "Romaña", "Saboya", "Sicilia", "Tarento", "Toscana",
-    "Trinacria",
+    "Trinacria", "Anagni", "Bisceglie", "Brescia", "Camerino", "Cerdeña",
+    "Cervia", "Cesena", "Como", "Fano", "Imola", "Ischia", "Lacio",
+    "Liguria", "Perugia", "Roma", "Rímini", "Siena", "Squillace",
   ],
 
-  Hungría: ["Transilvania", "Croacia"],
-  "Polonia-Lituania": ["Lituania", "Polonia", "Silesia"],
-  "Bizancio y Oriente latino": ["Bizancio", "Durazzo", "Imperio Latino"],
-  Balcanes: ["Bulgaria", "Serbia", "Bosnia", "Valaquia", "Moldavia", "Croacia"],
-  Escandinavia: ["Dinamarca", "Noruega", "Suecia"],
+  Hungría: ["Transilvania", "Croacia", "Sirmia"],
+  "Polonia-Lituania": ["Lituania", "Polonia", "Silesia", "Curlandia", "Mazovia"],
+  "Bizancio y Oriente latino": [
+    "Bizancio", "Durazzo", "Imperio Latino", "Antioquía", "Armenia", "Chipre",
+    "Edesa", "Epiro", "Ibelin", "Jerusalén", "Morea", "Nablus", "Torón",
+    "Transjordania", "Trípoli",
+  ],
+  Balcanes: ["Bulgaria", "Serbia", "Bosnia", "Valaquia", "Moldavia", "Croacia", "Sirmia", "Epiro"],
+  Escandinavia: ["Dinamarca", "Noruega", "Suecia", "Holstein", "Schleswig"],
+  Rusia: ["Beloózero", "Moscú", "Pólotsk", "Rus de Kiev", "Vladímir"],
 };
 
 // Un mismo territorio puede pertenecer a más de una agrupación de filtro

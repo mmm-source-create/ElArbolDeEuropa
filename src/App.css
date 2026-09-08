@@ -4016,59 +4016,6 @@ html, body {
   text-decoration: none;
 }
 
-.bio-discover {
-  margin-top: 16px;
-  padding-top: 13px;
-  border-top: 1px solid #DDD2BD;
-}
-
-.bio-discover h4 {
-  margin: 0 0 10px;
-  color: #4F4639;
-  font-family: 'Iowan Old Style', 'Palatino Linotype', Georgia, serif;
-  font-size: 15px;
-  font-weight: 600;
-}
-
-.bio-discover-group + .bio-discover-group {
-  margin-top: 10px;
-}
-
-.bio-discover-group > span {
-  display: block;
-  margin-bottom: 5px;
-  color: #8A7F65;
-  font-family: -apple-system, 'Segoe UI', sans-serif;
-  font-size: 9px;
-  font-weight: 700;
-  letter-spacing: .45px;
-  text-transform: uppercase;
-}
-
-.bio-discover-links {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 5px;
-}
-
-.bio-discover-links a {
-  padding: 4px 7px;
-  border: 1px solid #D9CFB6;
-  border-radius: 999px;
-  background: #FFFDF6;
-  color: #5E5546;
-  font-family: -apple-system, 'Segoe UI', sans-serif;
-  font-size: 9.5px;
-  line-height: 1.2;
-  text-decoration: none;
-}
-
-.bio-discover-links a:hover {
-  border-color: #A9724F;
-  color: #7A2E2E;
-  background: #F7F0E0;
-}
-
 /* ==========================================
    V2.2 · UNIFICACIÓN VISUAL CON LA WEB PÚBLICA
    ========================================== */
@@ -4093,17 +4040,6 @@ html, body { background: #F7F1E3; color: var(--eade-ink, #2C2620); }
 .timeline-zoom-controls {
   border-color: var(--eade-border, #D8CEB7);
 }
-.bio-discover {
-  margin-top: 14px;
-  padding-top: 12px;
-  border-top-color: var(--eade-border, #D8CEB7);
-}
-.bio-discover h4 { font-family: var(--eade-serif, 'Iowan Old Style', Georgia, serif); }
-.bio-discover-links a {
-  border-color: var(--eade-border, #D8CEB7);
-  background: var(--eade-paper-bright, #FFFDF7);
-}
-
 /* ==========================================
    V2.4 · ERGONOMÍA DEL ATLAS
    Paneles redimensionables, divisor Árbol/Mapa y filtros plegables.
@@ -4676,11 +4612,6 @@ body.atlas-is-resizing * {
   border-top: 0;
 }
 
-.bio-collapsible-content .bio-discover {
-  margin-top: 0;
-  padding-top: 0;
-  border-top: 0;
-}
 
 /* Selección persistente. El hover sigue siendo una vista previa temporal, pero
    la persona seleccionada se reconoce sin depender del cursor. */
@@ -4854,19 +4785,3 @@ body.atlas-work-mode-active {
   background: #F7F2E6;
   color: #8A7F65;
 }
-/* V2.7 — Sucesión: misma tinta y superficies que el Atlas. */
-.workspace-main-sucesion { display:block; min-width:0; }
-.succession-stage { padding:1.25rem; overflow:auto; max-height:80vh; min-height:25rem; font-size:1rem; }
-.succession-controls { display:flex; flex-wrap:wrap; align-items:center; gap:1rem; }
-.succession-controls h2 { margin:0; font-family:var(--eade-serif); }
-.succession-controls label { display:flex; gap:.5rem; align-items:center; font-size:.875rem; }
-.succession-controls select { max-width:100%; padding:.5rem; font:inherit; }
-.succession-columns { display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr)); gap:1.5rem; }
-.succession-list { list-style:none; margin:0; padding:0 0 0 1rem; border-left:2px solid var(--eade-muted-soft,#aaa); }
-.succession-list li { margin:0 0 .75rem; padding:.7rem; border:1px solid #b8b1a6; border-radius:6px; }
-.succession-list button { display:grid; gap:.35rem; width:100%; text-align:left; color:inherit; background:transparent; border:0; cursor:pointer; font:inherit; }
-.succession-list button span,.succession-list small { display:block; font-size:.875rem; line-height:1.5; }
-.succession-list .is-selected { outline:2px solid #822e41; }
-.succession-list .is-current { background:#efe3c3; }
-.succession-stage a { color:#822e41; }
-.succession-stage button:focus-visible,.succession-stage select:focus-visible { outline:3px solid #822e41; outline-offset:3px; }

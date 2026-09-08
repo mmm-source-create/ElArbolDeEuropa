@@ -99,7 +99,6 @@ export default function Explorer({ initialPanel = null }) {
   const [velocidadHistoria, setVelocidadHistoria] = useState(5);
   const [shareStatus, setShareStatus] = useState("");
   const [collapsedIds, setCollapsedIds] = useState([]);
-  const [mostrarSucesion, setMostrarSucesion] = useState(() => new URLSearchParams(window.location.search).get("vista") === "sucesion");
   const [vistasActivas, setVistasActivas] = useState({ arbol: true, mapa: true });
   const [panelesVisibles, setPanelesVisibles] = useState(() => {
     const base = { filtros: true, biografia: true, cronologia: true };
@@ -632,12 +631,12 @@ export default function Explorer({ initialPanel = null }) {
     return () => window.clearInterval(timer);
   }, [reproduciendoHistoria, velocidadHistoria]);
 
-  const mostrarArbol = !mostrarSucesion && vistasActivas.arbol;
-  const mostrarMapa = !mostrarSucesion && vistasActivas.mapa;
+  const mostrarArbol = vistasActivas.arbol;
+  const mostrarMapa = vistasActivas.mapa;
   const mostrarFiltros = panelesVisibles.filtros;
   const mostrarBiografia = panelesVisibles.biografia;
   const mostrarCronologia = panelesVisibles.cronologia;
-  const vistaPrincipal = mostrarSucesion ? "sucesion" : mostrarArbol && mostrarMapa ? "ambos" : (mostrarArbol ? "arbol" : "mapa");
+  const vistaPrincipal = mostrarArbol && mostrarMapa ? "ambos" : (mostrarArbol ? "arbol" : "mapa");
   const layoutLaterales = mostrarFiltros && mostrarBiografia
     ? "workspace-layout-both"
     : mostrarFiltros
@@ -647,9 +646,6 @@ export default function Explorer({ initialPanel = null }) {
         : "workspace-layout-center";
 
   const alternarVista = useCallback((vista) => {
-    if (vista === "sucesion") { setMostrarSucesion(true); return; }
-    setMostrarSucesion(false);
-    if (mostrarSucesion) { setVistasActivas({ arbol: vista === "arbol", mapa: vista === "mapa" }); return; }
     setVistasActivas((actuales) => {
       const otraVista = vista === "arbol" ? "mapa" : "arbol";
       // La zona central nunca queda vacía: si solo hay una vista activa,
@@ -657,7 +653,7 @@ export default function Explorer({ initialPanel = null }) {
       if (actuales[vista] && !actuales[otraVista]) return actuales;
       return { ...actuales, [vista]: !actuales[vista] };
     });
-  }, [mostrarSucesion]);
+  }, []);
 
   const alternarPanelAuxiliar = useCallback((panel) => {
     setPanelesVisibles((actuales) => ({ ...actuales, [panel]: !actuales[panel] }));
@@ -1645,7 +1641,7 @@ export default function Explorer({ initialPanel = null }) {
     timelineContentWidth, timelineTickStep, timelineTicks, eventosOrdenadosTodos, totalEventosTimeline, eventosOrdenados, timelineCombinedEvents, eventoSeleccionado,
     historiaActiva, historiaPasoActual, historiaPersonasSet, opciones, personaBio, toggle, focoSet, collapsedSet,
     hiddenByCollapse, toggleDescendants, ajustarAnio, actualizarAnioDesdeRango, confirmarAnioEscrito, restablecerAnio, moverAnioHistoria, alternarReproduccionHistoria,
-    mostrarSucesion, mostrarArbol, mostrarMapa, mostrarFiltros, mostrarBiografia, mostrarCronologia, vistaPrincipal, layoutLaterales, alternarVista,
+    mostrarArbol, mostrarMapa, mostrarFiltros, mostrarBiografia, mostrarCronologia, vistaPrincipal, layoutLaterales, alternarVista,
     alternarPanelAuxiliar, personasVivasEnAnio, gobernantesActivosEnAnio, matches, visiblePeople, visibleIds, visibleSignature, visibleRows,
     treeLayout, positions, canvasSize, queryTrim, searchMatchIds, searchMatchSet, searchSignature, searchCurrentId,
     irACoincidencia, hayFiltros, limpiar, lineage, comparePaths, comparePath, pathEdges, groupsByRow,
