@@ -1,3 +1,4 @@
+import { TERRITORIOS } from "./src/data/territorios.js";
 import fs from "node:fs/promises";
 import path from "node:path";
 import { pathToFileURL } from "node:url";
@@ -57,7 +58,7 @@ const personaUrls = PERSONAS.map((persona) => {
 const dinastiaUrls = [...new Set(PERSONAS.map((p) => p.dinastia).filter(Boolean))]
   .map((valor) => `/es/dinastia/${slugPublico(valor)}`);
 
-const territorioUrls = [...new Set(PERSONAS.flatMap((p) => p.reinos || []).filter(Boolean))]
+const territorioUrls = Object.keys(TERRITORIOS)
   .map((valor) => `/es/territorio/${slugPublico(valor)}`);
 
 // No indexamos todavía historias marcadas como "Próximamente": evitamos crear

@@ -1,3 +1,4 @@
+import { TERRITORIOS, componentesDe } from "./src/data/territorios.js";
 import fs from "node:fs/promises";
 import path from "node:path";
 import { aliasesDePersona, biografiaPublicaPersona, contenidoEditorialPersona, resumenCortoPersona, slugBasePersona, slugPublico, tieneContenidoEditorial } from "./src/utils/personPresentation.js";
@@ -1111,8 +1112,8 @@ async function generarCatalogosPublicos() {
 
   const personas = catalogoPersonas();
   const dinastias = catalogoAgrupado(PERSONAS.map((p) => p.dinastia), (p, nombre) => p.dinastia === nombre);
-  const territoriosValores = PERSONAS.flatMap((p) => p.reinos || []);
-  const territorios = catalogoAgrupado(territoriosValores, (p, nombre) => (p.reinos || []).includes(nombre));
+  const territoriosValores = Object.keys(TERRITORIOS);
+  const territorios = catalogoAgrupado(territoriosValores, (p, nombre) => (p.reinos || []).some(t => [nombre, ...componentesDe(nombre)].includes(t)));
   const historias = HISTORIAS.map((historia) => ({
     id: historia.id,
     titulo: historia.titulo,

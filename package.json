@@ -1,15 +1,16 @@
 {
   "name": "arbol-v2-cgpt",
   "private": true,
-  "version": "0.0.0",
+  "version": "2.7.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "prebuild": "node audit-personas.mjs --fail-on-errors && node audit-territorios.mjs --fail-on-errors && node generate-sitemap.mjs && node generate-tree-base.mjs",
+    "prebuild": "node audit-personas.mjs --fail-on-errors && node audit-territorios.mjs --fail-on-errors && node generate-sitemap.mjs && node generate-tree-base.mjs && node generate-territorios.mjs",
     "build": "vite build",
     "preview": "vite preview",
     "audit": "node audit-personas.mjs",
-    "audit:territorios": "node audit-territorios.mjs"
+    "audit:territorios": "node audit-territorios.mjs",
+    "test": "node --test tests/*.test.mjs"
   },
   "dependencies": {
     "@vitejs/plugin-react": "latest",

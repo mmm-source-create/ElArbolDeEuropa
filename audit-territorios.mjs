@@ -1,3 +1,7 @@
+import { PERSONA_CONTENT } from "./src/content/personas/index.js";
+import { HISTORIA_TERRITORIOS } from "./src/content/territorios/index.js";
+import { TERRITORIOS } from "./src/data/territorios.js";
+import { auditarTerritorios } from "./src/data/auditTerritorios.js";
 import fs from "node:fs/promises";
 import path from "node:path";
 
@@ -13,14 +17,15 @@ async function importData(filePath) {
 
 const { PERSONAS = [] } = await importData(PERSONAS_FILE);
 const BY_ID = Object.fromEntries(PERSONAS.filter((p) => p?.id).map((p) => [p.id, p]));
-const issues = [];
+const issues = auditarTerritorios(PERSONAS);
+for (const id of Object.keys(PERSONA_CONTENT)) if (!BY_ID[id]) issues.push({severity:"ERROR",code:"BIO_UNKNOWN_PERSON",subject:id,message:"Biografía sin persona correspondiente"});
 const suggestions = [];
 const add = (severity, code, subject, message, extra = {}) => issues.push({ severity, code, subject, message, ...extra });
 const suggest = (code, subject, message, extra = {}) => suggestions.push({ code, subject, message, ...extra });
 const uniq = (arr) => [...new Set((arr || []).filter(Boolean))];
-const nonEffective = new Set(["titular", "pretensión", "pretension", "rival"]);
+const nonEffective = new Set(["titular", "pretensión", "pretension", "rival", "disputado"]);
 const reigns = (p) => Array.isArray(p?.reinados) ? p.reinados.filter(Boolean) : [];
-const isEffective = (r) => r && r.efectivo !== false && !nonEffective.has(String(r.tipo || "").toLowerCase());
+const isEffective = (r) => r && r.efectivo !== false && !nonEffective.has(String(r.condicion || "").toLowerCase());
 const title = (p) => String(p?.titulo || "").trim();
 const likelyRulerTitle = (p) => /\b(papa|emperador|emperatriz|rey|reina|zar|zarina|sult[aá]n|emir|duque|duquesa|gran duque|elector|landgrave|margrave|conde|condesa|voivoda|d[eé]spota|ban|estat[uú]der|señor|señora|regente|soberano|soberana)\b/i.test(title(p))
   && !/^(consorte|noble)\b/i.test(title(p));
@@ -38,7 +43,7 @@ for (const p of PERSONAS) {
     if (r?.territorio && !realmSet.has(r.territorio)) {
       add("WARNING", "GOV_REALM_NOT_LISTED", key, `${p.nombre}: gobierna ${r.territorio}, pero el territorio no figura en reinos[]`);
     }
-    if (isEffective(r) && p.gobernante !== true && /^(consorte|noble)\b/i.test(title(p)) && !["regencia", "jure uxoris"].includes(String(r.tipo || "").toLowerCase())) {
+    if (isEffective(r) && p.gobernante !== true && /^(consorte|noble)\b/i.test(title(p)) && r.clase !== "regencia" && !["jure uxoris"].includes(String(r.condicion || "").toLowerCase())) {
       add("INFO", "CONSORT_EFFECTIVE_GOVERNMENT", key, `${p.nombre}: ficha de ${title(p)} con gobierno efectivo en ${r.territorio}; revisar si es intencional`);
     }
   }
@@ -78,6 +83,7 @@ for (const p of PERSONAS) {
 
 const orphanTerritories = [];
 for (const [territory, people] of territoryPeople) {
+  if (TERRITORIOS[territory]?.naturaleza === "agrupacion") continue;
   const govs = territoryGovs.get(territory) || [];
   const rulerCandidates = people.filter(likelyRulerTitle);
   if (!govs.length && rulerCandidates.length >= 2) {
@@ -123,6 +129,10 @@ const report = {
   generatedAt: new Date().toISOString(),
   totals: {
     personas: PERSONAS.length,
+    gobiernos: PERSONAS.reduce((n,p)=>n+(p.gobiernos?.length||0),0),
+    catalogoTerritorial: Object.keys(TERRITORIOS).length,
+    biografias: Object.keys(PERSONA_CONTENT).length,
+    historiasTerritoriales: Object.keys(HISTORIA_TERRITORIOS).length,
     territoriosRelacionados: territoryPeople.size,
     territoriosConGobierno: territoryGovs.size,
   },
@@ -134,6 +144,7 @@ const report = {
     longChronologyGaps: longGaps,
   },
   issues,
+  ambiguousPersonalTitles: PERSONAS.filter(p => p.titulo?.includes("/")).map(p => ({id:p.id,tituloResumen:p.titulo,gobiernos:(p.gobiernos||[]).map(g=>({territorio:g.territorio,titulo:g.titulo,clase:g.clase,condicion:g.condicion}))})),
 };
 await fs.writeFile(REPORT_FILE, `${JSON.stringify(report, null, 2)}\n`, "utf8");
 
