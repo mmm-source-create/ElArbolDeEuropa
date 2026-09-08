@@ -109,6 +109,34 @@ export const REINO_COLOR = {
   "Polonia-Lituania": '#8B5AA5',
   "Bizancio y Oriente latino": '#6A8E29',
   Escandinavia: '#4F7393',
+  Balcanes: '#6F5B7D',
+  Bulgaria: '#7E6542',
+  Serbia: '#76504A',
+  Bosnia: '#57705F',
+  Valaquia: '#6C5E85',
+  Moldavia: '#7B6D45',
+  Croacia: '#8B5D4C',
+  Granada: '#4F7C68',
+  Württemberg: '#8A684C',
+  Pomerania: '#557486',
+  Jülich: '#756489',
+  Berg: '#567863',
+  "Hesse-Kassel": '#6C7854',
+  "Hesse-Darmstadt": '#80634D',
+  Baden: '#7B5968',
+  Brunswick: '#536F7E',
+  Mecklemburgo: '#6D7151',
+  Módena: '#7E5E42',
+  Alençon: '#5D7090',
+  Foix: '#6F7650',
+  Armagnac: '#7C5960',
+  Annandale: '#6B7581',
+  York: '#6B7F4B',
+  Suabia: '#756B4E',
+  Urbino: '#718665',
+  Pesaro: '#667A73',
+  Ansbach: '#7C6752',
+  Kulmbach: '#596E7C',
 };
 
 // Color de respaldo por si algún día añades un reino a PERSONAS y te
@@ -328,6 +356,7 @@ export const TERRITORIOS_DESTACADOS = [
   "Hungría",
   "Polonia-Lituania",
   "Bizancio y Oriente latino",
+  "Balcanes",
   "Escandinavia",
 ];
 
@@ -340,14 +369,14 @@ export const TERRITORIOS_SUB = {
   Francia: [
     "Alençon", "Angulema", "Anjou", "Aquitania", "Artois", "Auvernia",
     "Berry", "Borgoña", "Borbón", "Boulogne", "Bretaña", "Champaña",
-    "Clermont", "Évreux", "Foix", "Guisa", "La Marche", "Montpellier",
+    "Clermont", "Évreux", "Foix", "Armagnac", "Guisa", "La Marche", "Montpellier",
     "Orleans", "Ponthieu", "Provenza", "Saint-Pol", "Valois", "Vendôme",
   ],
 
   Inglaterra: ["Gales", "Irlanda", "Richmond", "Suffolk", "York"],
-  Escocia: [],
+  Escocia: ["Annandale"],
 
-  España: ["Corona de Castilla", "Corona de Aragón"],
+  España: ["Corona de Castilla", "Corona de Aragón", "Granada"],
   "Corona de Castilla": ["Castilla", "León"],
   "Corona de Aragón": ["Aragón", "Gandía", "Mallorca", "Urgel", "Valencia"],
   Portugal: ["Brasil"],
@@ -359,7 +388,9 @@ export const TERRITORIOS_SUB = {
     "Henao", "Holanda", "Limburgo", "Lorena", "Luxemburgo", "Milán",
     "Monferrato", "Moravia", "Nassau", "Países Bajos", "Palatinado",
     "Piamonte", "Saboya", "Sajonia", "Silesia", "Suabia", "Tirol",
-    "Turingia",
+    "Turingia", "Württemberg", "Pomerania", "Jülich", "Berg",
+    "Hesse-Kassel", "Hesse-Darmstadt", "Baden", "Brunswick", "Mecklemburgo", "Oldemburgo", "Mark",
+    "Ansbach", "Kulmbach",
   ],
   Austria: ["Austria Interior", "Carintia", "Habsburgo", "Tirol"],
   Bohemia: ["Moravia", "Silesia"],
@@ -372,14 +403,15 @@ export const TERRITORIOS_SUB = {
 
   "Estados Italianos": [
     "Estados Pontificios", "Ferrara", "Florencia", "Forlì", "Gravina",
-    "Mantua", "Milán", "Monferrato", "Nápoles", "Parma", "Pesaro",
+    "Mantua", "Módena", "Milán", "Monferrato", "Nápoles", "Parma", "Pesaro", "Urbino",
     "Piamonte", "Romaña", "Saboya", "Sicilia", "Tarento", "Toscana",
     "Trinacria",
   ],
 
-  Hungría: ["Transilvania"],
+  Hungría: ["Transilvania", "Croacia"],
   "Polonia-Lituania": ["Lituania", "Polonia", "Silesia"],
   "Bizancio y Oriente latino": ["Bizancio", "Durazzo", "Imperio Latino"],
+  Balcanes: ["Bulgaria", "Serbia", "Bosnia", "Valaquia", "Moldavia", "Croacia"],
   Escandinavia: ["Dinamarca", "Noruega", "Suecia"],
 };
 

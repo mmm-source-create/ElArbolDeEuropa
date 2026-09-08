@@ -227,6 +227,7 @@ export const EVENTOS_HISTORICOS = [
     anio: 1444,
     titulo: "Batalla de Varna",
     categoria: "guerra",
+    personas: ["MURAD2OSM"],
     descripcion: "La cruzada de Varna termina con una victoria otomana y la muerte del rey Vladislao III."
   },
   {
@@ -235,7 +236,8 @@ export const EVENTOS_HISTORICOS = [
     anio: 1453,
     titulo: "Caída de Constantinopla",
     categoria: "guerra",
-    descripcion: "Mehmed II conquista Constantinopla y pone fin al Imperio bizantino."
+    personas: ["MEHMED2OSM", "CONSTANTINE11PALA"],
+    descripcion: "Mehmed II conquista Constantinopla; Constantino XI muere durante la defensa y el Imperio bizantino llega a su fin."
   },
   {
     id: "ROSAS",
@@ -293,7 +295,8 @@ export const EVENTOS_HISTORICOS = [
     anio: 1492,
     titulo: "Conquista de Granada",
     categoria: "guerra",
-    descripcion: "La toma de Granada pone fin al último reino islámico peninsular de la Edad Media."
+    personas: ["ISAB1CAST", "FERN2ARAG", "MUHAMMAD12BOABDIL"],
+    descripcion: "La capitulación de Granada ante Isabel I y Fernando II pone fin al emirato nazarí; Muhammad XII, Boabdil, entrega la ciudad."
   },
   {
     id: "SENLIS_1493",
@@ -1407,6 +1410,51 @@ export const EVENTOS_HISTORICOS = [
     categoria: "politica",
     personas: ["FED2HOH", "ISABELLA2JER", "CONRADO4HOH"],
     descripcion: "La Sexta Cruzada devuelve Jerusalén temporalmente al control franco mediante negociación, reforzando el vínculo de la corona jerosolimitana con los Hohenstaufen."
+  },
+  {
+    id: "KLOKOTNITSA_1230",
+    timeline: "secundario",
+    anio: 1230,
+    titulo: "Victoria búlgara de Klokotnitsa",
+    categoria: "guerra",
+    personas: ["IVANASEN2BUL"],
+    descripcion: "Iván Asen II derrota al Despotado de Epiro y lleva al Segundo Imperio búlgaro a uno de sus momentos de máxima influencia balcánica."
+  },
+  {
+    id: "DUSAN_EMPERADOR_1346",
+    timeline: "secundario",
+    anio: 1346,
+    titulo: "Stefan Dušan es coronado emperador",
+    categoria: "dinastia",
+    personas: ["STEFANDUSAN", "HELENABULSER"],
+    descripcion: "El rey serbio Stefan Dušan adopta el título imperial en Skopie, expresión del extraordinario crecimiento territorial de Serbia en el siglo XIV."
+  },
+  {
+    id: "KOSOVO_1389",
+    timeline: "principal",
+    anio: 1389,
+    titulo: "Batalla de Kosovo",
+    categoria: "guerra",
+    personas: ["LAZARHREB", "MILICASER"],
+    descripcion: "La batalla de Kosovo causa la muerte del príncipe Lazar y se convierte en un hito decisivo de la penetración otomana y de la memoria histórica serbia."
+  },
+  {
+    id: "VLAD_MEHMED_1462",
+    timeline: "historia",
+    anio: 1462,
+    titulo: "Vlad III desafía a Mehmed II",
+    categoria: "guerra",
+    personas: ["VLAD3DRACULA", "MEHMED2OSM", "RADU3FRUMOS"],
+    descripcion: "La campaña de 1462 enfrenta a Vlad III con Mehmed II y abre una nueva lucha por el trono valaco, en la que Radu el Hermoso recibe apoyo otomano."
+  },
+  {
+    id: "BOSNIA_1463",
+    timeline: "secundario",
+    anio: 1463,
+    titulo: "Conquista otomana de Bosnia",
+    categoria: "guerra",
+    personas: ["STEPHENTOMASEVICBOS", "MEHMED2OSM"],
+    descripcion: "Las fuerzas de Mehmed II conquistan el reino de Bosnia; el último rey, Esteban Tomašević, es capturado y ejecutado."
   },
   {
     id: "ACRE_1291",
@@ -2968,6 +3016,14 @@ export const HISTORIAS = [
     titulo: "El Reino de los Cielos",
     subtitulo: "Balduino IV, Saladino y la corona de Jerusalén",
     descripcion: "La historia real del reino cruzado, sus sucesiones dinásticas y las personas históricas que protagonizaron la crisis de 1187 y la larga supervivencia de la corona.",
+    categoria: "Historia y cultura pop",
+    disponible: false
+  },
+  {
+    id: "dracula-detras-de-la-leyenda",
+    titulo: "Drácula: detrás de la leyenda",
+    subtitulo: "Vlad III, los Basarab y la frontera con los otomanos",
+    descripcion: "La historia real de Vlad III de Valaquia, su familia, sus rivales y el mundo político que terminó convertido siglos después en una de las leyendas más famosas de Europa.",
     categoria: "Historia y cultura pop",
     disponible: false
   },
