@@ -20,7 +20,7 @@ import { IMAGENES_PERSONAS } from "../imagenesPersonas.js";
 import SITE_META from "../generated/siteMeta.json";
 import SiteHeader from "../components/SiteHeader.jsx";
 import SiteFooter from "../components/SiteFooter.jsx";
-import { biografiaPublicaPersona, slugPublico, textoBusquedaPersona } from "../utils/personPresentation.js";
+import { biografiaPublicaPersona, etiquetaClaseGobierno, slugPublico, textoBusquedaPersona } from "../utils/personPresentation.js";
 import "./public.css";
 
 const PUBLIC_SITE_URL = String(import.meta.env.VITE_SITE_URL || "https://www.treeofeurope.eu").replace(/\/+$/, "");
@@ -503,7 +503,7 @@ export function PersonPage({ slug, legacyId, onExplore }) {
           </header>
 
           <div className="public-person-columns">
-            <section className="public-content-card"><span>Perfil histórico</span><h2>Datos principales</h2>{persona.titulo && <p><strong>Título:</strong> {persona.titulo}</p>}{!!persona.aliases?.length && <p><strong>Otros nombres:</strong> {persona.aliases.join(" · ")}</p>}{persona.dinastia && <p><strong>Dinastía:</strong> <a href={rutaEntidad("dinastia", slugPublico(persona.dinastia))}>{persona.dinastia}</a></p>}{!!persona.reinos?.length && <p><strong>Territorios:</strong> {persona.reinos.map((r, i) => <React.Fragment key={r}>{i > 0 && " · "}<a href={rutaEntidad("territorio", slugPublico(r))}>{r}</a></React.Fragment>)}</p>}{!!persona.reinados?.length && <div className="public-reigns"><strong>Reinados registrados</strong>{persona.reinados.map((r, index) => <div key={`${r.territorio}-${r.desde}-${index}`}><span>{r.territorio || "Territorio"}</span><b>{r.desde ?? "?"}–{r.hasta ?? "?"}</b>{r.tipo && <small>{r.tipo}</small>}</div>)}</div>}</section>
+            <section className="public-content-card"><span>Perfil histórico</span><h2>Datos principales</h2>{persona.titulo && <p><strong>Título:</strong> {persona.titulo}</p>}{!!persona.aliases?.length && <p><strong>Otros nombres:</strong> {persona.aliases.join(" · ")}</p>}{persona.dinastia && <p><strong>Dinastía:</strong> <a href={rutaEntidad("dinastia", slugPublico(persona.dinastia))}>{persona.dinastia}</a></p>}{!!persona.reinos?.length && <p><strong>Territorios:</strong> {persona.reinos.map((r, i) => <React.Fragment key={r}>{i > 0 && " · "}<a href={rutaEntidad("territorio", slugPublico(r))}>{r}</a></React.Fragment>)}</p>}{!!persona.reinados?.length && <div className="public-reigns"><strong>Gobiernos y reinados registrados</strong>{persona.reinados.map((r, index) => <div key={`${r.territorio}-${r.desde}-${index}`}><span>{etiquetaClaseGobierno(persona, r)} · {r.territorio || "Territorio"}</span><b>{r.desde ?? "?"}–{r.hasta ?? "?"}</b>{r.tipo && <small>{r.tipo}</small>}</div>)}</div>}</section>
 
             <section className="public-content-card"><span>Red familiar</span><h2>Relaciones documentadas</h2><RelationList label="Padres" items={persona.padres} /><RelationList label={persona.conyuges?.length > 1 ? "Cónyuges" : "Cónyuge"} items={persona.conyuges} /><RelationList label="Hijos/as" items={persona.hijos} />{!persona.padres?.length && !persona.conyuges?.length && !persona.hijos?.length && <p className="public-muted">No hay relaciones directas cargadas para esta persona.</p>}</section>
           </div>
