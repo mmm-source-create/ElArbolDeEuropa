@@ -3,6 +3,8 @@ import { MONARCAS_MODERNOS } from "./monarcas-modernos.js";
 import { PAPAS_RELIGION } from "./papas-religion.js";
 import { MILITARES_POLITICOS } from "./militares-politicos.js";
 import { CULTURA_PENSAMIENTO } from "./cultura-pensamiento.js";
+import { FRONTERAS_ORIENTALES } from "./fronteras-orientales.js";
+import { PRINCIPADOS_DUCADOS } from "./principados-ducados.js";
 
 export const PERSONA_CONTENT = Object.freeze({
   ...MONARCAS_MEDIEVALES,
@@ -10,6 +12,8 @@ export const PERSONA_CONTENT = Object.freeze({
   ...PAPAS_RELIGION,
   ...MILITARES_POLITICOS,
   ...CULTURA_PENSAMIENTO,
+  ...FRONTERAS_ORIENTALES,
+  ...PRINCIPADOS_DUCADOS,
 });
 
 export function contenidoPersona(personaOId) {
