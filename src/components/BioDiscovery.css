@@ -1,0 +1,41 @@
+/* Estilos propios de las sugerencias del Atlas, aislados de la ficha pública. */
+.bio-panel .bio-discover {
+  min-width: 0;
+  margin-top: 14px;
+  padding-top: 12px;
+  border-top: 1px solid var(--eade-border, #D8CEB7);
+  text-align: left;
+}
+.bio-panel .bio-collapsible-content .bio-discover { margin: 0; padding-top: 0; border-top: 0; }
+.bio-panel .bio-discover h4 {
+  margin: 0 0 10px;
+  color: var(--eade-ink, #4F4639);
+  font: 600 15px/1.35 var(--eade-serif, Georgia, serif);
+}
+.bio-panel .bio-discover-group + .bio-discover-group { margin-top: 12px; }
+.bio-panel .bio-discover-group > span {
+  display: block;
+  margin-bottom: 6px;
+  color: var(--eade-muted, #6B6350);
+  font: 600 12px/1.4 var(--eade-sans, system-ui, sans-serif);
+}
+.bio-panel .bio-discover-links { display: flex; flex-wrap: wrap; gap: 6px; min-width: 0; }
+.bio-panel .bio-discover-links a,
+.bio-panel .bio-discover-links a:visited {
+  display: inline-flex;
+  align-items: center;
+  box-sizing: border-box;
+  max-width: 100%;
+  min-width: 0;
+  padding: 6px 9px;
+  border: 1px solid var(--eade-border, #D8CEB7);
+  border-radius: 8px;
+  background: var(--eade-paper-bright, #FFFDF7);
+  color: #5E5546;
+  font: 500 13px/1.4 var(--eade-sans, system-ui, sans-serif);
+  white-space: normal;
+  overflow-wrap: anywhere;
+  text-decoration: none;
+}
+.bio-panel .bio-discover-links a:hover { border-color: #A9724F; color: #7A2E2E; background: #F7F0E0; }
+.bio-panel .bio-discover-links a:focus-visible { outline: 2px solid #7A2E2E; outline-offset: 2px; }
