@@ -183,3 +183,18 @@ button.public-door-card { width: 100%; font: inherit; }
 .public-info-links { margin-top: 14px; display: flex; flex-wrap: wrap; gap: 7px; }
 .public-info-links a { display: inline-flex; align-items: center; gap: 4px; padding: 6px 8px; border-radius: 999px; background: #f1eadc; color: var(--eade-wine, #7a2e2e); font-size: 9.5px; font-weight: 700; text-decoration: none; }
 @media (max-width: 760px) { .public-info-grid { grid-template-columns: 1fr; } }
+.territory-page { max-width:1120px; margin:2rem auto; padding:0 1.5rem 3rem; font-size:1rem; line-height:1.65; }
+.territory-page h1 { font-family:var(--eade-serif); font-size:clamp(2.5rem,6vw,4.5rem); margin:.4em 0; }
+.territory-page h2 { font-family:var(--eade-serif); font-size:1.8rem; }
+.territory-page section { margin-top:2.5rem; padding-top:1rem; border-top:1px solid #c7bfb3; }
+.territory-page a { color:#822e41; }
+.territory-actions,.territory-links { display:flex; flex-wrap:wrap; gap:.8rem 1.2rem; }
+.territory-actions .public-primary { color:white; }
+.territory-evolution { list-style:none; padding:0 0 0 1rem; border-left:3px solid #822e41; }
+.territory-evolution li { display:flex; gap:1.5rem; margin:1rem 0; }
+.territory-table { overflow:auto; }
+.territory-table table { width:100%; border-collapse:collapse; text-align:left; font-size:.95rem; }
+.territory-table th,.territory-table td { padding:.7rem; border-bottom:1px solid #ccc; vertical-align:top; }
+.territory-table small { display:block; font-size:.875rem; }
+.territory-people { display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr)); gap:1.3rem; }
+.territory-people h3 { font-size:1.1rem; }

@@ -84,7 +84,7 @@ function setHreflangAlternates(items) {
   });
 }
 
-function usePublicMeta({ title, description, path }) {
+export function usePublicMeta({ title, description, path }) {
   useEffect(() => {
     if (typeof document === "undefined" || typeof window === "undefined") return;
     const canonicalUrl = new URL(path || "/es/", PUBLIC_SITE_URL || window.location.origin).toString();
@@ -108,7 +108,7 @@ function usePublicMeta({ title, description, path }) {
   }, [title, description, path]);
 }
 
-function useJson(path) {
+export function useJson(path) {
   const [state, setState] = useState({ loading: true, data: null, error: false });
   useEffect(() => {
     let cancelled = false;
@@ -409,7 +409,7 @@ export function CatalogPage({ tipo }) {
               <article key={item.slug} className="public-entity-card">
                 <div className="public-entity-card-head"><div><span>{tipo === "dinastias" ? "Dinastía" : "Territorio"}</span><h2>{item.nombre}</h2></div><strong>{item.total}</strong></div>
                 {!!item.miembros?.length && <div className="public-entity-members">{item.miembros.map((p) => <a key={p.id} href={rutaEntidad("persona", p.slug)}>{p.nombre}</a>)}</div>}
-                <a className="public-entity-action" href={rutaEntidad(tipo === "dinastias" ? "dinastia" : "territorio", item.slug)}>Abrir en el atlas <ArrowRight size={13} /></a>
+                <a className="public-entity-action" href={rutaEntidad(tipo === "dinastias" ? "dinastia" : "territorio", item.slug)}>Ver ficha <ArrowRight size={13} /></a>
               </article>
             ))}
           </div>
@@ -503,7 +503,7 @@ export function PersonPage({ slug, legacyId, onExplore }) {
           </header>
 
           <div className="public-person-columns">
-            <section className="public-content-card"><span>Perfil histórico</span><h2>Datos principales</h2>{persona.titulo && <p><strong>Título:</strong> {persona.titulo}</p>}{!!persona.aliases?.length && <p><strong>Otros nombres:</strong> {persona.aliases.join(" · ")}</p>}{persona.dinastia && <p><strong>Dinastía:</strong> <a href={rutaEntidad("dinastia", slugPublico(persona.dinastia))}>{persona.dinastia}</a></p>}{!!persona.reinos?.length && <p><strong>Territorios:</strong> {persona.reinos.map((r, i) => <React.Fragment key={r}>{i > 0 && " · "}<a href={rutaEntidad("territorio", slugPublico(r))}>{r}</a></React.Fragment>)}</p>}{!!persona.reinados?.length && <div className="public-reigns"><strong>Gobiernos y reinados registrados</strong>{persona.reinados.map((r, index) => <div key={`${r.territorio}-${r.desde}-${index}`}><span>{etiquetaClaseGobierno(persona, r)} · {r.territorio || "Territorio"}</span><b>{r.desde ?? "?"}–{r.hasta ?? "?"}</b>{r.tipo && <small>{r.tipo}</small>}</div>)}</div>}</section>
+            <section className="public-content-card"><span>Perfil histórico</span><h2>Datos principales</h2>{persona.titulo && <p><strong>Título:</strong> {persona.titulo}</p>}{!!persona.aliases?.length && <p><strong>Otros nombres:</strong> {persona.aliases.join(" · ")}</p>}{persona.dinastia && <p><strong>Dinastía:</strong> <a href={rutaEntidad("dinastia", slugPublico(persona.dinastia))}>{persona.dinastia}</a></p>}{!!persona.reinos?.length && <p><strong>Territorios:</strong> {persona.reinos.map((r, i) => <React.Fragment key={r}>{i > 0 && " · "}<a href={rutaEntidad("territorio", slugPublico(r))}>{r}</a></React.Fragment>)}</p>}{!!persona.reinados?.length && <div className="public-reigns"><strong>Gobiernos y reinados registrados</strong>{persona.reinados.map((r, index) => <div key={`${r.territorio}-${r.desde}-${index}`}><span>{r.titulo} · {r.territorio || "Territorio"} · {etiquetaClaseGobierno(persona, r)}</span><b>{r.desde ?? "?"}–{r.hasta ?? "?"}</b>{r.condicion && <small>{r.condicion}</small>}</div>)}</div>}</section>
 
             <section className="public-content-card"><span>Red familiar</span><h2>Relaciones documentadas</h2><RelationList label="Padres" items={persona.padres} /><RelationList label={persona.conyuges?.length > 1 ? "Cónyuges" : "Cónyuge"} items={persona.conyuges} /><RelationList label="Hijos/as" items={persona.hijos} />{!persona.padres?.length && !persona.conyuges?.length && !persona.hijos?.length && <p className="public-muted">No hay relaciones directas cargadas para esta persona.</p>}</section>
           </div>
