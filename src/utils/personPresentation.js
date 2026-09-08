@@ -119,3 +119,49 @@ export function textoBusquedaPersona(persona) {
     ...(Array.isArray(persona.reinos) ? persona.reinos : []),
   ].filter(Boolean).join(" ");
 }
+
+const ETIQUETAS_GOBIERNO_POR_TIPO = Object.freeze({
+  regencia: "Regencia",
+  electorado: "Electorado",
+  estaduderato: "Estatuderato",
+  ducado: "Ducado",
+  condado: "Condado",
+  principado: "Principado",
+  margraviato: "Margraviato",
+  landgraviato: "Landgraviato",
+  banato: "Banato",
+  voivodato: "Voivodato",
+  emirato: "Emirato",
+  sultanato: "Sultanato",
+  despotado: "Despotado",
+  imperio: "Imperio",
+  marquesado: "Marquesado",
+  pontificado: "Pontificado",
+  gobierno: "Gobierno",
+  "señorío": "Señorío",
+  senorio: "Señorío",
+});
+
+export function etiquetaClaseGobierno(persona, reinado) {
+  const tipo = String(reinado?.tipo || "").trim().toLowerCase();
+  if (ETIQUETAS_GOBIERNO_POR_TIPO[tipo]) return ETIQUETAS_GOBIERNO_POR_TIPO[tipo];
+
+  const titulo = String(persona?.titulo || "").toLowerCase();
+  if (/\bpapa\b/.test(titulo)) return "Pontificado";
+  if (/\bestat[uú]der\b/.test(titulo)) return "Estatuderato";
+  if (/\belector/.test(titulo)) return "Electorado";
+  if (/\bgran duque|\bduque|\bduquesa/.test(titulo)) return "Ducado";
+  if (/\blandgrave|\blandgravina/.test(titulo)) return "Landgraviato";
+  if (/\bmargrave|\bmargravina/.test(titulo)) return "Margraviato";
+  if (/\bconde|\bcondesa/.test(titulo)) return "Condado";
+  if (/\bvoivoda|\bvoivod/.test(titulo)) return "Voivodato";
+  if (/\bban\b/.test(titulo)) return "Banato";
+  if (/\bd[eé]spota/.test(titulo)) return "Despotado";
+  if (/\bemir\b/.test(titulo)) return "Emirato";
+  if (/\bsult[aá]n/.test(titulo)) return "Sultanato";
+  if (/\bpr[ií]ncipe|\bprincesa/.test(titulo)) return "Principado";
+  if (/\bregente|\bregencia/.test(titulo)) return "Regencia";
+  if (/\bgobernador|\bgobernadora|\bseñor|\bseñora/.test(titulo)) return "Gobierno";
+  if (/\bemperador|\bemperatriz|\brey\b|\breina\b|\bzar\b|\bzarina\b/.test(titulo)) return "Reinado";
+  return "Gobierno";
+}
