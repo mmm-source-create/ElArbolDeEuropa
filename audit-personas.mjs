@@ -107,7 +107,7 @@ for (const p of PERSONAS) {
     }
   }
 
-  const reigns = Array.isArray(p.reinados) ? p.reinados : [];
+  const reigns = Array.isArray(p.gobiernos) ? p.gobiernos : [];
   reigns.forEach((r, index) => {
     const key = `${id}#${index + 1}`;
     if (!r?.territorio) add("ERROR", "REIGN_TERRITORY_MISSING", key, "Reinado sin territorio");
@@ -115,7 +115,7 @@ for (const p of PERSONAS) {
     else {
       if (r.desde > r.hasta) add("ERROR", "REIGN_REVERSED", key, `${r.territorio}: ${r.desde}–${r.hasta}`);
       if (Number.isFinite(p.nac) && r.desde < p.nac) add("ERROR", "REIGN_BEFORE_BIRTH", key, `${r.territorio} comienza en ${r.desde}, antes del nacimiento (${p.nac})`);
-      if (Number.isFinite(p.muer) && r.hasta > p.muer && !["titular", "pretensión", "pretension"].includes(String(r.tipo || "").toLowerCase())) {
+      if (Number.isFinite(p.muer) && r.hasta > p.muer && !["titular", "pretensión", "pretension"].includes(String(r.condicion || "").toLowerCase())) {
         add("WARNING", "REIGN_AFTER_DEATH", key, `${r.territorio} termina en ${r.hasta}, después de la muerte (${p.muer})`);
       }
     }

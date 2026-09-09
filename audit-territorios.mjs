@@ -1,6 +1,6 @@
 import { PERSONA_CONTENT } from "./src/content/personas/index.js";
 import { HISTORIA_TERRITORIOS } from "./src/content/territorios/index.js";
-import { TERRITORIOS } from "./src/data/territorios.js";
+import { TERRITORIOS, gobiernoEfectivo } from "./src/data/territorios.js";
 import { auditarTerritorios } from "./src/data/auditTerritorios.js";
 import fs from "node:fs/promises";
 import path from "node:path";
@@ -23,9 +23,8 @@ const suggestions = [];
 const add = (severity, code, subject, message, extra = {}) => issues.push({ severity, code, subject, message, ...extra });
 const suggest = (code, subject, message, extra = {}) => suggestions.push({ code, subject, message, ...extra });
 const uniq = (arr) => [...new Set((arr || []).filter(Boolean))];
-const nonEffective = new Set(["titular", "pretensión", "pretension", "rival", "disputado"]);
-const reigns = (p) => Array.isArray(p?.reinados) ? p.reinados.filter(Boolean) : [];
-const isEffective = (r) => r && r.efectivo !== false && !nonEffective.has(String(r.condicion || "").toLowerCase());
+const reigns = (p) => Array.isArray(p?.gobiernos) ? p.gobiernos.filter(Boolean) : [];
+const isEffective = gobiernoEfectivo;
 const title = (p) => String(p?.titulo || "").trim();
 const likelyRulerTitle = (p) => /\b(papa|emperador|emperatriz|rey|reina|zar|zarina|sult[aá]n|emir|duque|duquesa|gran duque|elector|landgrave|margrave|conde|condesa|voivoda|d[eé]spota|ban|estat[uú]der|señor|señora|regente|soberano|soberana)\b/i.test(title(p))
   && !/^(consorte|noble)\b/i.test(title(p));
@@ -37,9 +36,6 @@ for (const p of PERSONAS) {
   for (let i = 0; i < rList.length; i += 1) {
     const r = rList[i];
     const key = `${p.id}#${i + 1}`;
-    if (!r?.territorio) add("ERROR", "GOV_TERRITORY_MISSING", key, `${p.nombre}: gobierno sin territorio`);
-    if (!Number.isFinite(r?.desde) || !Number.isFinite(r?.hasta)) add("ERROR", "GOV_DATE_MISSING", key, `${p.nombre}: gobierno sin fechas completas`);
-    else if (r.desde > r.hasta) add("ERROR", "GOV_REVERSED", key, `${p.nombre}: ${r.territorio} ${r.desde}–${r.hasta}`);
     if (r?.territorio && !realmSet.has(r.territorio)) {
       add("WARNING", "GOV_REALM_NOT_LISTED", key, `${p.nombre}: gobierna ${r.territorio}, pero el territorio no figura en reinos[]`);
     }
