@@ -4785,3 +4785,13 @@ body.atlas-work-mode-active {
   background: #F7F2E6;
   color: #8A7F65;
 }
+
+/* Recomendaciones: mismos botones y tipografía del diseño general. */
+.bio-discover { margin-top: 14px; padding-top: 12px; border-top: 1px solid var(--eade-border, #D8CEB7); }
+.bio-discover h4 { margin: 0 0 10px; color: #4F4639; font-family: var(--eade-serif, 'Iowan Old Style', Georgia, serif); font-size: 12px; font-weight: 600; }
+.bio-discover-group + .bio-discover-group { margin-top: 10px; }
+.bio-discover-group > span { display: block; margin-bottom: 5px; color: #8A7F65; font-family: -apple-system, 'Segoe UI', sans-serif; font-size: 9px; font-weight: 700; letter-spacing: .45px; text-transform: uppercase; }
+.bio-discover-links { display: flex; flex-wrap: wrap; gap: 5px; }
+.bio-discover-links a { padding: 4px 7px; border: 1px solid var(--eade-border, #D8CEB7); border-radius: 999px; background: var(--eade-paper-bright, #FFFDF7); color: #5E5546; font-family: -apple-system, 'Segoe UI', sans-serif; font-size: 9.5px; line-height: 1.2; text-decoration: none; }
+.bio-discover-links a:hover { border-color: #A9724F; color: #7A2E2E; background: #F7F0E0; }
+.bio-collapsible-content .bio-discover { margin-top: 0; padding-top: 0; border-top: 0; }

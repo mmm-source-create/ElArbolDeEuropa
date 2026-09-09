@@ -1465,6 +1465,452 @@ export const EVENTOS_HISTORICOS = [
     personas: ["HENRY2CYPRUS"],
     descripcion: "La caída de Acre elimina el último gran centro territorial del Reino de Jerusalén en Tierra Santa; la corona sobrevive desde entonces como título dinástico ligado a Chipre."
   },
+{
+  "id": "TAMAR_GEO_1184",
+  "anio": 1184,
+  "titulo": "Una reina gobierna por derecho propio",
+  "categoria": "dinastia",
+  "personas": [
+    "TAMARGEO",
+    "GIORGI3GEO"
+  ],
+  "descripcion": "Tamar había sido asociada al trono por su padre. Al heredar el reino, tuvo que negociar con la aristocracia y afirmar una autoridad propia. Su reinado llevó a Georgia a una gran expansión y a una intensa actividad cultural.",
+  "timeline": "historia"
+},
+{
+  "id": "MONGOLES_GEO_1223",
+  "anio": 1223,
+  "titulo": "La expansión encuentra un límite",
+  "categoria": "politica",
+  "personas": [
+    "RUSUDANGEO",
+    "GIORGI4GEO"
+  ],
+  "descripcion": "Jorge IV había combatido a los primeros ejércitos mongoles. Su muerte dejó un hijo menor y la corona pasó a Rusudán. Las invasiones jorezmitas y la posterior conquista mongola alteraron los recursos y las alianzas de la monarquía.",
+  "timeline": "historia"
+},
+{
+  "id": "DOS_DAVID_GEO_1247",
+  "anio": 1247,
+  "titulo": "Los mongoles confirman a dos reyes",
+  "categoria": "dinastia",
+  "personas": [
+    "DAVID7GEO",
+    "DAVID6GEO"
+  ],
+  "descripcion": "La sucesión enfrentó a los descendientes de Jorge IV y Rusudán. La decisión mongola de confirmar a ambos David creó un gobierno compartido que terminó fracturándose: desde 1259, David Narin consolidó una monarquía occidental.",
+  "timeline": "historia"
+},
+{
+  "id": "JAKELI_TREB_1300",
+  "anio": 1300,
+  "titulo": "Un matrimonio contradice a Constantinopla",
+  "categoria": "dinastia",
+  "personas": [
+    "ALEXIOS2TREB",
+    "DJIADJAKJAKELI",
+    "BEKA1JAKELI",
+    "ANDRO2"
+  ],
+  "descripcion": "Alejo II eligió a Djiadjak Jakeli como esposa frente a los planes de su tío Andrónico II. La alianza con Samtsje enlazó a los Grandes Comnenos con la misma familia que había acogido a Jorge V de Georgia.",
+  "timeline": "historia"
+},
+{
+  "id": "GIORGI5_1334",
+  "anio": 1334,
+  "titulo": "Reconstruir el reino exigía pactos",
+  "categoria": "politica",
+  "personas": [
+    "GIORGI5GEO",
+    "BEKA1JAKELI"
+  ],
+  "descripcion": "Jorge V extendió su autoridad hacia el oeste y reafirmó sus vínculos con Samtsje. La recuperación georgiana fue gradual y dependió de acuerdos locales; la continuidad de moneda iljánida obliga a matizar una imagen de independencia completa e inmediata.",
+  "timeline": "historia"
+},
+{
+  "id": "VAKHTANG_1724",
+  "anio": 1724,
+  "titulo": "Persia y los otomanos condicionan las coronas",
+  "categoria": "politica",
+  "personas": [
+    "VAKHTANG6KARTLI",
+    "TAMARKARTLI"
+  ],
+  "descripcion": "Vajtang VI había impulsado leyes, imprenta y cultura, pero no pudo conservar Kartli ante el cambio de equilibrio regional. Su partida a Rusia muestra los límites del reconocimiento formal y de las promesas de ayuda exterior.",
+  "timeline": "historia"
+},
+{
+  "id": "EREKLE_UNION_1762",
+  "anio": 1762,
+  "titulo": "Dos reinos orientales comparten soberano",
+  "categoria": "dinastia",
+  "personas": [
+    "EREKLE2GEO",
+    "TEIMURAZ2GEO",
+    "TAMARKARTLI"
+  ],
+  "descripcion": "Heraclio II ya gobernaba Kajetia cuando heredó Kartli de su padre. La unión formó Kartli-Kajetia, pero no incorporó Imericia. La genealogía reúne coronas concretas, no todos los territorios que hoy se llaman Georgia.",
+  "timeline": "historia"
+},
+{
+  "id": "TIFLIS_1795",
+  "anio": 1795,
+  "titulo": "La protección rusa no evita la invasión persa",
+  "categoria": "guerra",
+  "personas": [
+    "EREKLE2GEO"
+  ],
+  "descripcion": "El tratado de Gueórguievsk de 1783 había comprometido a Rusia con el reino. Sin embargo, el ataque de Aga Mohamed Kan devastó Tiflis en 1795. La búsqueda de protección dejó abierta una nueva disputa sobre la soberanía.",
+  "timeline": "historia"
+},
+{
+  "id": "IRLANDA_EXILIO_1166",
+  "anio": 1166,
+  "titulo": "Una lucha irlandesa cruza el mar",
+  "categoria": "politica",
+  "personas": [
+    "DIARMAITLEIN",
+    "RUAIDRICONN"
+  ],
+  "descripcion": "La expulsión de Diarmait de Leinster y la supremacía de Ruaidrí nacieron de conflictos entre poderes irlandeses. Diarmait buscó aliados fuera de la isla para recuperar su posición; la intervención anglonormanda transformó el alcance de aquella guerra.",
+  "timeline": "historia"
+},
+{
+  "id": "AOIFE_1170",
+  "anio": 1170,
+  "titulo": "El matrimonio forma parte de la conquista",
+  "categoria": "dinastia",
+  "personas": [
+    "AOIFELEIN",
+    "STRONGBOWLEIN",
+    "DIARMAITLEIN"
+  ],
+  "descripcion": "Aoife y Strongbow se casaron después de la toma de Waterford. Las promesas dinásticas de Diarmait respaldaban a sus aliados, pero la realeza gaélica y el señorío resultante no seguían reglas sucesorias idénticas.",
+  "timeline": "historia"
+},
+{
+  "id": "WINDSOR_1175",
+  "anio": 1175,
+  "titulo": "Un acuerdo intenta ordenar poderes superpuestos",
+  "categoria": "politica",
+  "personas": [
+    "RUAIDRICONN",
+    "HENRY2ING"
+  ],
+  "descripcion": "Ruaidrí negoció con Enrique II en Windsor. El pacto trataba de combinar su autoridad sobre poderes irlandeses con la superioridad reconocida al monarca inglés. Las conquistas y los conflictos posteriores desbordaron ese equilibrio.",
+  "timeline": "historia"
+},
+{
+  "id": "LEINSTER_MARSHAL_1189",
+  "anio": 1189,
+  "titulo": "La herencia irlandesa entra en otra red familiar",
+  "categoria": "dinastia",
+  "personas": [
+    "ISABELCLAREMAR",
+    "WILLIAMMARSHAL",
+    "AOIFELEIN"
+  ],
+  "descripcion": "Isabel de Clare, hija de Aoife y Strongbow, se casó con Guillermo Marshal. Sus descendientes conectan Leinster con las casas Clare y Bruce. Mientras tanto, otros reinos gaélicos, como Connacht, continuaban su propia política.",
+  "timeline": "historia"
+},
+{
+  "id": "TYRONE_1542",
+  "anio": 1542,
+  "titulo": "Un condado no sustituye de golpe a un linaje",
+  "categoria": "dinastia",
+  "personas": [
+    "CONNBACACH",
+    "ENRIQ8ING",
+    "MATTHEWONEILL"
+  ],
+  "descripcion": "Conn O’Neill aceptó el condado de Tyrone. La sucesión reconocida por la Corona favorecía a Matthew y sus descendientes, pero otros miembros de la familia defendían el liderazgo gaélico. Dos legitimidades podían ocupar el mismo espacio.",
+  "timeline": "historia"
+},
+{
+  "id": "GAELICOS_1595",
+  "anio": 1595,
+  "titulo": "Los poderes gaélicos construyen una coalición",
+  "categoria": "politica",
+  "personas": [
+    "HUGHONEILL",
+    "REDHUGHODONNELL",
+    "INIONDUBH"
+  ],
+  "descripcion": "Hugh O’Neill recibió la investidura tradicional de su linaje y se alió con Red Hugh O’Donnell. La guerra movilizó redes irlandesas y escocesas y abrió negociaciones con España. El protagonismo de Iníon Dubh ayuda a entender esos apoyos.",
+  "timeline": "historia"
+},
+{
+  "id": "KINSALE_1601",
+  "anio": 1601,
+  "titulo": "La ayuda española concentra la guerra en Kinsale",
+  "categoria": "guerra",
+  "personas": [
+    "REDHUGHODONNELL",
+    "HUGHONEILL"
+  ],
+  "descripcion": "La llegada de tropas españolas llevó a los dirigentes del norte a marchar al sur. Su derrota frustró la posibilidad de cambiar el equilibrio militar. Red Hugh viajó a España en busca de más ayuda y murió allí al año siguiente.",
+  "timeline": "historia"
+},
+{
+  "id": "FUGA_CONDES_1607",
+  "anio": 1607,
+  "titulo": "El exilio abre otra etapa",
+  "categoria": "politica",
+  "personas": [
+    "RORYODONNELL",
+    "HUGHONEILL"
+  ],
+  "descripcion": "Rory O’Donnell y Hugh O’Neill abandonaron Irlanda. La Fuga de los Condes facilitó confiscaciones y la plantación del Ulster. Para sus familias, el exilio abrió también una historia de servicio militar y diplomacia en Europa.",
+  "timeline": "historia"
+},
+{
+  "id": "ANTIOQUIA_1153",
+  "anio": 1153,
+  "titulo": "La heredera lleva la legitimidad",
+  "categoria": "dinastia",
+  "personas": [
+    "CONSTANCEANT",
+    "REYNALDCHATILLON",
+    "BOHEMOND3ANT"
+  ],
+  "descripcion": "Constanza conservaba los derechos sobre Antioquía. Su matrimonio con Reinaldo de Châtillon le dio a este una posición principesca por derecho de su esposa. La descendencia de sus dos matrimonios enlaza el principado con los futuros reyes de Chipre y con Hungría.",
+  "timeline": "historia"
+},
+{
+  "id": "ANT_TRIP_1201",
+  "anio": 1201,
+  "titulo": "Príncipe en un sitio, conde en otro",
+  "categoria": "dinastia",
+  "personas": [
+    "BOHEMOND4ANT",
+    "BOHEMOND3ANT"
+  ],
+  "descripcion": "Bohemundo IV ya gobernaba Trípoli cuando murió su padre. Su acceso a Antioquía reunió ambos estados bajo una persona, pero la disputa con Raimundo Rubén interrumpió esa unión entre 1216 y 1219. Los títulos permanecieron separados.",
+  "timeline": "historia"
+},
+{
+  "id": "CHIPRE_REGENCIA_1253",
+  "anio": 1253,
+  "titulo": "Una hija de Antioquía gobierna Chipre",
+  "categoria": "politica",
+  "personas": [
+    "PLAISANCEANT",
+    "HUGH2CYPRUS",
+    "BOHEMOND5ANT"
+  ],
+  "descripcion": "Viuda de Enrique I, Plasencia ejerció la regencia por Hugo II. Su familia muestra cómo los pequeños estados latinos estaban conectados por matrimonios que trasladaban derechos y capacidad de intervención de una corte a otra.",
+  "timeline": "historia"
+},
+{
+  "id": "ANTIOQUIA_CAIDA_1268",
+  "anio": 1268,
+  "titulo": "La alianza armenia y mongola no salva Antioquía",
+  "categoria": "guerra",
+  "personas": [
+    "BOHEMOND6ANT",
+    "SIBYLLAARM",
+    "HETHUM1ARM"
+  ],
+  "descripcion": "El matrimonio de Bohemundo VI con Sibila había estrechado su relación con Armenia y su política hacia los mongoles. Baybars conquistó Antioquía en 1268: desde entonces, conservar el título de príncipe ya no significaba gobernar la ciudad.",
+  "timeline": "historia"
+},
+{
+  "id": "CHIPRE_RAMA_1267",
+  "anio": 1267,
+  "titulo": "Chipre hereda por línea femenina",
+  "categoria": "dinastia",
+  "personas": [
+    "HUGH3CYPRUS",
+    "HENRYANTIOCH",
+    "ISABELLACYPRUS"
+  ],
+  "descripcion": "Al morir Hugo II sin hijos, la corona pasó a Hugo III. Sus derechos procedían de Isabel de Chipre, mientras su padre Enrique pertenecía a la casa de Antioquía. La nueva rama conservó el nombre Lusignan.",
+  "timeline": "historia"
+},
+{
+  "id": "TRIPOLI_1289",
+  "anio": 1289,
+  "titulo": "La última condesa negocia antes del asedio",
+  "categoria": "guerra",
+  "personas": [
+    "LUCYTRIP",
+    "BOHEMOND7TRIP"
+  ],
+  "descripcion": "Lucía tuvo que defender su herencia frente a la comuna y negociar con Génova. La conquista de Qalawun acabó con el condado en 1289. Chipre sobrevivió como reino insular y como uno de los centros del mundo latino oriental.",
+  "timeline": "historia"
+},
+{
+  "id": "TRANS_ESPIRA_1570",
+  "anio": 1570,
+  "titulo": "Del título de rey al de príncipe",
+  "categoria": "politica",
+  "personas": [
+    "JUAN2SIGZAPOLYA",
+    "JUAN1ZAPOLYA"
+  ],
+  "descripcion": "Juan Segismundo renunció a su pretensión de rey de Hungría y obtuvo reconocimiento como príncipe de Transilvania y de las partes de Hungría. El cambio formalizó una solución nacida de décadas de guerra entre Zápolya y Habsburgo.",
+  "timeline": "historia"
+},
+{
+  "id": "BATHORY_DOBLE_1576",
+  "anio": 1576,
+  "titulo": "Gobernar Polonia y conservar Transilvania",
+  "categoria": "dinastia",
+  "personas": [
+    "ESTEBANBATHORY",
+    "CHRISTOPHERBATH",
+    "ANAJAG"
+  ],
+  "descripcion": "La elección polaca llevó a Esteban Báthory a otra corte. Conservó el título de príncipe transilvano mientras su hermano Cristóbal administraba el territorio como voivoda: dos cargos distintos explican esta convivencia.",
+  "timeline": "historia"
+},
+{
+  "id": "MIHAI_TRANS_1599",
+  "anio": 1599,
+  "titulo": "Valaquia entra en la política transilvana",
+  "categoria": "guerra",
+  "personas": [
+    "MIHAIBRAVE",
+    "SIGISBATH",
+    "RODOLFO2HRE"
+  ],
+  "descripcion": "Miguel el Valiente derrotó a Andrés Báthory y gobernó Transilvania en nombre del emperador. En 1600 extendió brevemente su poder a Moldavia. La coincidencia de gobernante no eliminó la identidad ni las instituciones de los tres territorios.",
+  "timeline": "historia"
+},
+{
+  "id": "BOCSKAI_VIENA_1606",
+  "anio": 1606,
+  "titulo": "La rebelión termina en garantías políticas",
+  "categoria": "politica",
+  "personas": [
+    "BOCSKAI"
+  ],
+  "descripcion": "Bocskai consiguió en la paz de Viena el reconocimiento de su poder y garantías para los protestantes húngaros. La negociación convirtió una insurrección en un nuevo equilibrio entre el principado y la monarquía habsbúrgica.",
+  "timeline": "historia"
+},
+{
+  "id": "BETHLEN_1621",
+  "anio": 1621,
+  "titulo": "Bethlen renuncia a una corona para asegurar el principado",
+  "categoria": "politica",
+  "personas": [
+    "GABRIELBETHLEN"
+  ],
+  "descripcion": "Elegido rey de Hungría durante la guerra de los Treinta Años, Bethlen pactó con los Habsburgo. La paz de Nikolsburg puso fin a su pretensión regia a cambio de ventajas concretas. Sus objetivos transilvanos condicionaron la alianza protestante.",
+  "timeline": "historia"
+},
+{
+  "id": "CATALINA_TRANS_1629",
+  "anio": 1629,
+  "titulo": "La viuda había sido elegida sucesora",
+  "categoria": "dinastia",
+  "personas": [
+    "CATHERINEBRANDTRANS",
+    "GABRIELBETHLEN",
+    "JOHNSIGBRAND"
+  ],
+  "descripcion": "Catalina de Brandeburgo asumió el principado por una elección acordada en vida de Bethlen. Su breve gobierno y posterior renuncia muestran el peso de los estamentos y las facciones. En la sucesión aparece como princesa gobernante.",
+  "timeline": "historia"
+},
+{
+  "id": "RAKOCZI_POLONIA_1657",
+  "anio": 1657,
+  "titulo": "La ambición polaca rompe el equilibrio",
+  "categoria": "guerra",
+  "personas": [
+    "GEORGE2RAKOCZI",
+    "GEORGE1RAKOCZI"
+  ],
+  "descripcion": "Jorge II emprendió una campaña en Polonia sin autorización otomana. El fracaso militar y la reacción de la Puerta abrieron una crisis de invasiones y príncipes rivales. La soberanía otomana seguía teniendo consecuencias prácticas.",
+  "timeline": "historia"
+},
+{
+  "id": "APAFI_1687",
+  "anio": 1687,
+  "titulo": "El avance habsbúrgico cambia el marco político",
+  "categoria": "politica",
+  "personas": [
+    "MICHAELAPAFI"
+  ],
+  "descripcion": "Las victorias contra los otomanos redujeron el margen de Apafi. La presión imperial preparó un orden distinto, formalizado después de su muerte por el Diploma Leopoldino de 1691. El título principesco sobrevivía dentro de un equilibrio que se estaba deshaciendo.",
+  "timeline": "historia"
+},
+{
+  "id": "ANAGNI_1295",
+  "anio": 1295,
+  "titulo": "La renuncia del rey no obliga a la isla",
+  "categoria": "dinastia",
+  "personas": [
+    "JAIME2AR",
+    "FEDERICO2SIC"
+  ],
+  "descripcion": "Jaime II pactó abandonar su pretensión siciliana en Anagni, pero los sicilianos no aceptaron volver al dominio angevino. Eligieron a su hermano Federico y obligaron a la Casa de Barcelona a dividirse sobre el futuro de la isla.",
+  "timeline": "historia"
+},
+{
+  "id": "PEDRO_SIC_1321",
+  "anio": 1321,
+  "titulo": "La sucesión contradice la paz",
+  "categoria": "dinastia",
+  "personas": [
+    "PEDRO2SIC",
+    "FEDERICO2SIC",
+    "LEONORANJOU"
+  ],
+  "descripcion": "Caltabellotta había previsto el gobierno vitalicio de Federico y una solución posterior favorable a los Anjou. Al asociar a Pedro al trono, la casa insular defendió una transmisión hereditaria propia. La paz de 1302 no había cerrado la disputa.",
+  "timeline": "historia"
+},
+{
+  "id": "JUANA_NAP_1343",
+  "anio": 1343,
+  "titulo": "La muerte del heredero deja la corona a una nieta",
+  "categoria": "dinastia",
+  "personas": [
+    "JUANA1NAP",
+    "ROB1NAP",
+    "CARLOSCAL"
+  ],
+  "descripcion": "Carlos de Calabria murió antes que Roberto. Juana heredó la corona y tuvo que afirmar su autoridad frente a ramas de su propia familia. El asesinato de Andrés de Anjou desencadenó después las invasiones de Luis de Hungría.",
+  "timeline": "historia"
+},
+{
+  "id": "AVINON_SIC_1372",
+  "anio": 1372,
+  "titulo": "Otra paz vuelve a definir las dos Sicilias",
+  "categoria": "politica",
+  "personas": [
+    "FEDERICO3SIC",
+    "JUANA1NAP"
+  ],
+  "descripcion": "La mediación papal dio un nuevo marco al reconocimiento de Federico como rey de Trinacria, con obligaciones hacia Juana. Los nombres de Sicilia y Trinacria expresaban derechos discutidos además de una separación geográfica.",
+  "timeline": "historia"
+},
+{
+  "id": "DURAZZO_NAP_1382",
+  "anio": 1382,
+  "titulo": "Dos ramas disputan una herencia",
+  "categoria": "dinastia",
+  "personas": [
+    "CARLOS3NAP",
+    "JUANA1NAP",
+    "LUIS1ANJOU"
+  ],
+  "descripcion": "Juana había elegido como heredero a Luis de Anjou, pero Carlos de Durazzo conquistó el reino. Su muerte y la de Juana dejaron a la siguiente generación una guerra entre Anjou y Durazzo, no una sucesión pacífica.",
+  "timeline": "historia"
+},
+{
+  "id": "MARIA_MARTIN_1392",
+  "anio": 1392,
+  "titulo": "Un matrimonio necesita una expedición",
+  "categoria": "dinastia",
+  "personas": [
+    "MARIA1SIC",
+    "MARTINJOVENSIC",
+    "MARTIN1ARAG"
+  ],
+  "descripcion": "María y Martín llegaron a Sicilia con apoyo aragonés para imponerse a los barones. La legitimidad hereditaria de la reina no bastaba sin capacidad militar. El gobierno de la isla volvió a vincularse estrechamente con la Corona de Aragón.",
+  "timeline": "historia"
+}
 ];
 
 export const HISTORIAS = [
@@ -2697,6 +3143,17 @@ export const HISTORIAS = [
         texto: "La rebelión de Palermo expulsa el poder angevino de buena parte de la isla. Los sicilianos recurren a Pedro III de Aragón, casado con Constanza, hija de Manfredo. Los derechos Hohenstaufen que parecían extinguidos regresan a la política a través de una mujer y de la Casa de Barcelona."
       },
       {
+        "anio": 1295,
+        "persona": "JAIME2AR",
+        "personas": [
+          "JAIME2AR",
+          "FEDERICO2SIC"
+        ],
+        "eventoId": "ANAGNI_1295",
+        "titulo": "La renuncia del rey no obliga a la isla",
+        "texto": "Jaime II pactó abandonar su pretensión siciliana en Anagni, pero los sicilianos no aceptaron volver al dominio angevino. Eligieron a su hermano Federico y obligaron a la Casa de Barcelona a dividirse sobre el futuro de la isla."
+      },
+      {
         anio: 1296,
         persona: "FEDERICO2SIC",
         personas: ["FEDERICO2SIC", "PEDRO3AR", "BEATCONST", "CARLOS2NAP"],
@@ -2711,6 +3168,65 @@ export const HISTORIAS = [
         eventoId: "CALTABELLOTTA_1302",
         titulo: "Una paz reconoce el reino partido",
         texto: "Caltabellotta acepta de hecho dos monarquías: los Anjou conservan la parte continental y Federico gobierna la isla, llamada cada vez más Trinacria para distinguirla del reino angevino. El nombre de Sicilia sobrevive en ambos lados del estrecho."
+      },
+      {
+        "anio": 1321,
+        "persona": "PEDRO2SIC",
+        "personas": [
+          "PEDRO2SIC",
+          "FEDERICO2SIC",
+          "LEONORANJOU"
+        ],
+        "eventoId": "PEDRO_SIC_1321",
+        "titulo": "La sucesión contradice la paz",
+        "texto": "Caltabellotta había previsto el gobierno vitalicio de Federico y una solución posterior favorable a los Anjou. Al asociar a Pedro al trono, la casa insular defendió una transmisión hereditaria propia. La paz de 1302 no había cerrado la disputa."
+      },
+      {
+        "anio": 1343,
+        "persona": "JUANA1NAP",
+        "personas": [
+          "JUANA1NAP",
+          "ROB1NAP",
+          "CARLOSCAL"
+        ],
+        "eventoId": "JUANA_NAP_1343",
+        "titulo": "La muerte del heredero deja la corona a una nieta",
+        "texto": "Carlos de Calabria murió antes que Roberto. Juana heredó la corona y tuvo que afirmar su autoridad frente a ramas de su propia familia. El asesinato de Andrés de Anjou desencadenó después las invasiones de Luis de Hungría."
+      },
+      {
+        "anio": 1372,
+        "persona": "FEDERICO3SIC",
+        "personas": [
+          "FEDERICO3SIC",
+          "JUANA1NAP"
+        ],
+        "eventoId": "AVINON_SIC_1372",
+        "titulo": "Otra paz vuelve a definir las dos Sicilias",
+        "texto": "La mediación papal dio un nuevo marco al reconocimiento de Federico como rey de Trinacria, con obligaciones hacia Juana. Los nombres de Sicilia y Trinacria expresaban derechos discutidos además de una separación geográfica."
+      },
+      {
+        "anio": 1382,
+        "persona": "CARLOS3NAP",
+        "personas": [
+          "CARLOS3NAP",
+          "JUANA1NAP",
+          "LUIS1ANJOU"
+        ],
+        "eventoId": "DURAZZO_NAP_1382",
+        "titulo": "Dos ramas disputan una herencia",
+        "texto": "Juana había elegido como heredero a Luis de Anjou, pero Carlos de Durazzo conquistó el reino. Su muerte y la de Juana dejaron a la siguiente generación una guerra entre Anjou y Durazzo, no una sucesión pacífica."
+      },
+      {
+        "anio": 1392,
+        "persona": "MARIA1SIC",
+        "personas": [
+          "MARIA1SIC",
+          "MARTINJOVENSIC",
+          "MARTIN1ARAG"
+        ],
+        "eventoId": "MARIA_MARTIN_1392",
+        "titulo": "Un matrimonio necesita una expedición",
+        "texto": "María y Martín llegaron a Sicilia con apoyo aragonés para imponerse a los barones. La legitimidad hereditaria de la reina no bastaba sin capacidad militar. El gobierno de la isla volvió a vincularse estrechamente con la Corona de Aragón."
       },
       {
         anio: 1442,
@@ -3027,4 +3543,380 @@ export const HISTORIAS = [
     categoria: "Historia y cultura pop",
     disponible: false
   },
+{
+  "id": "georgia-entre-imperios",
+  "titulo": "Georgia entre imperios",
+  "subtitulo": "De Tamar a Heraclio II: coronas, familias y potencias vecinas",
+  "descripcion": "Los Bagrationi enlazan el mundo bizantino, el dominio mongol y la competencia entre Persia, el Imperio otomano y Rusia. La historia distingue el reino medieval de las coronas que lo sucedieron.",
+  "disponible": true,
+  "pasos": [
+    {
+      "anio": 1184,
+      "persona": "TAMARGEO",
+      "personas": [
+        "TAMARGEO",
+        "GIORGI3GEO"
+      ],
+      "eventoId": "TAMAR_GEO_1184",
+      "titulo": "Una reina gobierna por derecho propio",
+      "texto": "Tamar había sido asociada al trono por su padre. Al heredar el reino, tuvo que negociar con la aristocracia y afirmar una autoridad propia. Su reinado llevó a Georgia a una gran expansión y a una intensa actividad cultural."
+    },
+    {
+      "anio": 1223,
+      "persona": "RUSUDANGEO",
+      "personas": [
+        "RUSUDANGEO",
+        "GIORGI4GEO"
+      ],
+      "eventoId": "MONGOLES_GEO_1223",
+      "titulo": "La expansión encuentra un límite",
+      "texto": "Jorge IV había combatido a los primeros ejércitos mongoles. Su muerte dejó un hijo menor y la corona pasó a Rusudán. Las invasiones jorezmitas y la posterior conquista mongola alteraron los recursos y las alianzas de la monarquía."
+    },
+    {
+      "anio": 1247,
+      "persona": "DAVID7GEO",
+      "personas": [
+        "DAVID7GEO",
+        "DAVID6GEO"
+      ],
+      "eventoId": "DOS_DAVID_GEO_1247",
+      "titulo": "Los mongoles confirman a dos reyes",
+      "texto": "La sucesión enfrentó a los descendientes de Jorge IV y Rusudán. La decisión mongola de confirmar a ambos David creó un gobierno compartido que terminó fracturándose: desde 1259, David Narin consolidó una monarquía occidental."
+    },
+    {
+      "anio": 1300,
+      "persona": "ALEXIOS2TREB",
+      "personas": [
+        "ALEXIOS2TREB",
+        "DJIADJAKJAKELI",
+        "BEKA1JAKELI",
+        "ANDRO2"
+      ],
+      "eventoId": "JAKELI_TREB_1300",
+      "titulo": "Un matrimonio contradice a Constantinopla",
+      "texto": "Alejo II eligió a Djiadjak Jakeli como esposa frente a los planes de su tío Andrónico II. La alianza con Samtsje enlazó a los Grandes Comnenos con la misma familia que había acogido a Jorge V de Georgia."
+    },
+    {
+      "anio": 1334,
+      "persona": "GIORGI5GEO",
+      "personas": [
+        "GIORGI5GEO",
+        "BEKA1JAKELI"
+      ],
+      "eventoId": "GIORGI5_1334",
+      "titulo": "Reconstruir el reino exigía pactos",
+      "texto": "Jorge V extendió su autoridad hacia el oeste y reafirmó sus vínculos con Samtsje. La recuperación georgiana fue gradual y dependió de acuerdos locales; la continuidad de moneda iljánida obliga a matizar una imagen de independencia completa e inmediata."
+    },
+    {
+      "anio": 1724,
+      "persona": "VAKHTANG6KARTLI",
+      "personas": [
+        "VAKHTANG6KARTLI",
+        "TAMARKARTLI"
+      ],
+      "eventoId": "VAKHTANG_1724",
+      "titulo": "Persia y los otomanos condicionan las coronas",
+      "texto": "Vajtang VI había impulsado leyes, imprenta y cultura, pero no pudo conservar Kartli ante el cambio de equilibrio regional. Su partida a Rusia muestra los límites del reconocimiento formal y de las promesas de ayuda exterior."
+    },
+    {
+      "anio": 1762,
+      "persona": "EREKLE2GEO",
+      "personas": [
+        "EREKLE2GEO",
+        "TEIMURAZ2GEO",
+        "TAMARKARTLI"
+      ],
+      "eventoId": "EREKLE_UNION_1762",
+      "titulo": "Dos reinos orientales comparten soberano",
+      "texto": "Heraclio II ya gobernaba Kajetia cuando heredó Kartli de su padre. La unión formó Kartli-Kajetia, pero no incorporó Imericia. La genealogía reúne coronas concretas, no todos los territorios que hoy se llaman Georgia."
+    },
+    {
+      "anio": 1795,
+      "persona": "EREKLE2GEO",
+      "personas": [
+        "EREKLE2GEO"
+      ],
+      "eventoId": "TIFLIS_1795",
+      "titulo": "La protección rusa no evita la invasión persa",
+      "texto": "El tratado de Gueórguievsk de 1783 había comprometido a Rusia con el reino. Sin embargo, el ataque de Aga Mohamed Kan devastó Tiflis en 1795. La búsqueda de protección dejó abierta una nueva disputa sobre la soberanía."
+    }
+  ]
+},
+{
+  "id": "irlanda-coronas-linajes",
+  "titulo": "Irlanda: reinos, linajes y conquista",
+  "subtitulo": "De los Ua Conchobair a la Fuga de los Condes",
+  "descripcion": "Las iniciativas de las casas irlandesas, sus alianzas matrimoniales y sus conexiones con Escocia y España recorren una historia que no se reduce a la sucesión de los reyes ingleses.",
+  "disponible": true,
+  "pasos": [
+    {
+      "anio": 1166,
+      "persona": "DIARMAITLEIN",
+      "personas": [
+        "DIARMAITLEIN",
+        "RUAIDRICONN"
+      ],
+      "eventoId": "IRLANDA_EXILIO_1166",
+      "titulo": "Una lucha irlandesa cruza el mar",
+      "texto": "La expulsión de Diarmait de Leinster y la supremacía de Ruaidrí nacieron de conflictos entre poderes irlandeses. Diarmait buscó aliados fuera de la isla para recuperar su posición; la intervención anglonormanda transformó el alcance de aquella guerra."
+    },
+    {
+      "anio": 1170,
+      "persona": "AOIFELEIN",
+      "personas": [
+        "AOIFELEIN",
+        "STRONGBOWLEIN",
+        "DIARMAITLEIN"
+      ],
+      "eventoId": "AOIFE_1170",
+      "titulo": "El matrimonio forma parte de la conquista",
+      "texto": "Aoife y Strongbow se casaron después de la toma de Waterford. Las promesas dinásticas de Diarmait respaldaban a sus aliados, pero la realeza gaélica y el señorío resultante no seguían reglas sucesorias idénticas."
+    },
+    {
+      "anio": 1175,
+      "persona": "RUAIDRICONN",
+      "personas": [
+        "RUAIDRICONN",
+        "HENRY2ING"
+      ],
+      "eventoId": "WINDSOR_1175",
+      "titulo": "Un acuerdo intenta ordenar poderes superpuestos",
+      "texto": "Ruaidrí negoció con Enrique II en Windsor. El pacto trataba de combinar su autoridad sobre poderes irlandeses con la superioridad reconocida al monarca inglés. Las conquistas y los conflictos posteriores desbordaron ese equilibrio."
+    },
+    {
+      "anio": 1189,
+      "persona": "ISABELCLAREMAR",
+      "personas": [
+        "ISABELCLAREMAR",
+        "WILLIAMMARSHAL",
+        "AOIFELEIN"
+      ],
+      "eventoId": "LEINSTER_MARSHAL_1189",
+      "titulo": "La herencia irlandesa entra en otra red familiar",
+      "texto": "Isabel de Clare, hija de Aoife y Strongbow, se casó con Guillermo Marshal. Sus descendientes conectan Leinster con las casas Clare y Bruce. Mientras tanto, otros reinos gaélicos, como Connacht, continuaban su propia política."
+    },
+    {
+      "anio": 1542,
+      "persona": "CONNBACACH",
+      "personas": [
+        "CONNBACACH",
+        "ENRIQ8ING",
+        "MATTHEWONEILL"
+      ],
+      "eventoId": "TYRONE_1542",
+      "titulo": "Un condado no sustituye de golpe a un linaje",
+      "texto": "Conn O’Neill aceptó el condado de Tyrone. La sucesión reconocida por la Corona favorecía a Matthew y sus descendientes, pero otros miembros de la familia defendían el liderazgo gaélico. Dos legitimidades podían ocupar el mismo espacio."
+    },
+    {
+      "anio": 1595,
+      "persona": "HUGHONEILL",
+      "personas": [
+        "HUGHONEILL",
+        "REDHUGHODONNELL",
+        "INIONDUBH"
+      ],
+      "eventoId": "GAELICOS_1595",
+      "titulo": "Los poderes gaélicos construyen una coalición",
+      "texto": "Hugh O’Neill recibió la investidura tradicional de su linaje y se alió con Red Hugh O’Donnell. La guerra movilizó redes irlandesas y escocesas y abrió negociaciones con España. El protagonismo de Iníon Dubh ayuda a entender esos apoyos."
+    },
+    {
+      "anio": 1601,
+      "persona": "REDHUGHODONNELL",
+      "personas": [
+        "REDHUGHODONNELL",
+        "HUGHONEILL"
+      ],
+      "eventoId": "KINSALE_1601",
+      "titulo": "La ayuda española concentra la guerra en Kinsale",
+      "texto": "La llegada de tropas españolas llevó a los dirigentes del norte a marchar al sur. Su derrota frustró la posibilidad de cambiar el equilibrio militar. Red Hugh viajó a España en busca de más ayuda y murió allí al año siguiente."
+    },
+    {
+      "anio": 1607,
+      "persona": "RORYODONNELL",
+      "personas": [
+        "RORYODONNELL",
+        "HUGHONEILL"
+      ],
+      "eventoId": "FUGA_CONDES_1607",
+      "titulo": "El exilio abre otra etapa",
+      "texto": "Rory O’Donnell y Hugh O’Neill abandonaron Irlanda. La Fuga de los Condes facilitó confiscaciones y la plantación del Ulster. Para sus familias, el exilio abrió también una historia de servicio militar y diplomacia en Europa."
+    }
+  ]
+},
+{
+  "id": "antioquia-tripoli-chipre",
+  "titulo": "Tres estados, una red de familias",
+  "subtitulo": "Antioquía, Trípoli y Chipre entre alianza y pérdida territorial",
+  "descripcion": "Una cadena de matrimonios y herencias enlaza los estados cruzados secundarios con Armenia, Jerusalén, Hungría y las monarquías europeas.",
+  "disponible": true,
+  "pasos": [
+    {
+      "anio": 1153,
+      "persona": "CONSTANCEANT",
+      "personas": [
+        "CONSTANCEANT",
+        "REYNALDCHATILLON",
+        "BOHEMOND3ANT"
+      ],
+      "eventoId": "ANTIOQUIA_1153",
+      "titulo": "La heredera lleva la legitimidad",
+      "texto": "Constanza conservaba los derechos sobre Antioquía. Su matrimonio con Reinaldo de Châtillon le dio a este una posición principesca por derecho de su esposa. La descendencia de sus dos matrimonios enlaza el principado con los futuros reyes de Chipre y con Hungría."
+    },
+    {
+      "anio": 1201,
+      "persona": "BOHEMOND4ANT",
+      "personas": [
+        "BOHEMOND4ANT",
+        "BOHEMOND3ANT"
+      ],
+      "eventoId": "ANT_TRIP_1201",
+      "titulo": "Príncipe en un sitio, conde en otro",
+      "texto": "Bohemundo IV ya gobernaba Trípoli cuando murió su padre. Su acceso a Antioquía reunió ambos estados bajo una persona, pero la disputa con Raimundo Rubén interrumpió esa unión entre 1216 y 1219. Los títulos permanecieron separados."
+    },
+    {
+      "anio": 1253,
+      "persona": "PLAISANCEANT",
+      "personas": [
+        "PLAISANCEANT",
+        "HUGH2CYPRUS",
+        "BOHEMOND5ANT"
+      ],
+      "eventoId": "CHIPRE_REGENCIA_1253",
+      "titulo": "Una hija de Antioquía gobierna Chipre",
+      "texto": "Viuda de Enrique I, Plasencia ejerció la regencia por Hugo II. Su familia muestra cómo los pequeños estados latinos estaban conectados por matrimonios que trasladaban derechos y capacidad de intervención de una corte a otra."
+    },
+    {
+      "anio": 1267,
+      "persona": "HUGH3CYPRUS",
+      "personas": [
+        "HUGH3CYPRUS",
+        "HENRYANTIOCH",
+        "ISABELLACYPRUS"
+      ],
+      "eventoId": "CHIPRE_RAMA_1267",
+      "titulo": "Chipre hereda por línea femenina",
+      "texto": "Al morir Hugo II sin hijos, la corona pasó a Hugo III. Sus derechos procedían de Isabel de Chipre, mientras su padre Enrique pertenecía a la casa de Antioquía. La nueva rama conservó el nombre Lusignan."
+    },
+    {
+      "anio": 1268,
+      "persona": "BOHEMOND6ANT",
+      "personas": [
+        "BOHEMOND6ANT",
+        "SIBYLLAARM",
+        "HETHUM1ARM"
+      ],
+      "eventoId": "ANTIOQUIA_CAIDA_1268",
+      "titulo": "La alianza armenia y mongola no salva Antioquía",
+      "texto": "El matrimonio de Bohemundo VI con Sibila había estrechado su relación con Armenia y su política hacia los mongoles. Baybars conquistó Antioquía en 1268: desde entonces, conservar el título de príncipe ya no significaba gobernar la ciudad."
+    },
+    {
+      "anio": 1289,
+      "persona": "LUCYTRIP",
+      "personas": [
+        "LUCYTRIP",
+        "BOHEMOND7TRIP"
+      ],
+      "eventoId": "TRIPOLI_1289",
+      "titulo": "La última condesa negocia antes del asedio",
+      "texto": "Lucía tuvo que defender su herencia frente a la comuna y negociar con Génova. La conquista de Qalawun acabó con el condado en 1289. Chipre sobrevivió como reino insular y como uno de los centros del mundo latino oriental."
+    }
+  ]
+},
+{
+  "id": "transilvania-entre-coronas",
+  "titulo": "Transilvania entre tres poderes",
+  "subtitulo": "Zápolya, Báthory, Bethlen y Rákóczi",
+  "descripcion": "El principado se formó entre la monarquía húngara, los Habsburgo y la soberanía otomana. Sus vínculos con Valaquia, Polonia y Brandeburgo permiten seguir decisiones propias y no solo invasiones.",
+  "disponible": true,
+  "pasos": [
+    {
+      "anio": 1570,
+      "persona": "JUAN2SIGZAPOLYA",
+      "personas": [
+        "JUAN2SIGZAPOLYA",
+        "JUAN1ZAPOLYA"
+      ],
+      "eventoId": "TRANS_ESPIRA_1570",
+      "titulo": "Del título de rey al de príncipe",
+      "texto": "Juan Segismundo renunció a su pretensión de rey de Hungría y obtuvo reconocimiento como príncipe de Transilvania y de las partes de Hungría. El cambio formalizó una solución nacida de décadas de guerra entre Zápolya y Habsburgo."
+    },
+    {
+      "anio": 1576,
+      "persona": "ESTEBANBATHORY",
+      "personas": [
+        "ESTEBANBATHORY",
+        "CHRISTOPHERBATH",
+        "ANAJAG"
+      ],
+      "eventoId": "BATHORY_DOBLE_1576",
+      "titulo": "Gobernar Polonia y conservar Transilvania",
+      "texto": "La elección polaca llevó a Esteban Báthory a otra corte. Conservó el título de príncipe transilvano mientras su hermano Cristóbal administraba el territorio como voivoda: dos cargos distintos explican esta convivencia."
+    },
+    {
+      "anio": 1599,
+      "persona": "MIHAIBRAVE",
+      "personas": [
+        "MIHAIBRAVE",
+        "SIGISBATH",
+        "RODOLFO2HRE"
+      ],
+      "eventoId": "MIHAI_TRANS_1599",
+      "titulo": "Valaquia entra en la política transilvana",
+      "texto": "Miguel el Valiente derrotó a Andrés Báthory y gobernó Transilvania en nombre del emperador. En 1600 extendió brevemente su poder a Moldavia. La coincidencia de gobernante no eliminó la identidad ni las instituciones de los tres territorios."
+    },
+    {
+      "anio": 1606,
+      "persona": "BOCSKAI",
+      "personas": [
+        "BOCSKAI"
+      ],
+      "eventoId": "BOCSKAI_VIENA_1606",
+      "titulo": "La rebelión termina en garantías políticas",
+      "texto": "Bocskai consiguió en la paz de Viena el reconocimiento de su poder y garantías para los protestantes húngaros. La negociación convirtió una insurrección en un nuevo equilibrio entre el principado y la monarquía habsbúrgica."
+    },
+    {
+      "anio": 1621,
+      "persona": "GABRIELBETHLEN",
+      "personas": [
+        "GABRIELBETHLEN"
+      ],
+      "eventoId": "BETHLEN_1621",
+      "titulo": "Bethlen renuncia a una corona para asegurar el principado",
+      "texto": "Elegido rey de Hungría durante la guerra de los Treinta Años, Bethlen pactó con los Habsburgo. La paz de Nikolsburg puso fin a su pretensión regia a cambio de ventajas concretas. Sus objetivos transilvanos condicionaron la alianza protestante."
+    },
+    {
+      "anio": 1629,
+      "persona": "CATHERINEBRANDTRANS",
+      "personas": [
+        "CATHERINEBRANDTRANS",
+        "GABRIELBETHLEN",
+        "JOHNSIGBRAND"
+      ],
+      "eventoId": "CATALINA_TRANS_1629",
+      "titulo": "La viuda había sido elegida sucesora",
+      "texto": "Catalina de Brandeburgo asumió el principado por una elección acordada en vida de Bethlen. Su breve gobierno y posterior renuncia muestran el peso de los estamentos y las facciones. En la sucesión aparece como princesa gobernante."
+    },
+    {
+      "anio": 1657,
+      "persona": "GEORGE2RAKOCZI",
+      "personas": [
+        "GEORGE2RAKOCZI",
+        "GEORGE1RAKOCZI"
+      ],
+      "eventoId": "RAKOCZI_POLONIA_1657",
+      "titulo": "La ambición polaca rompe el equilibrio",
+      "texto": "Jorge II emprendió una campaña en Polonia sin autorización otomana. El fracaso militar y la reacción de la Puerta abrieron una crisis de invasiones y príncipes rivales. La soberanía otomana seguía teniendo consecuencias prácticas."
+    },
+    {
+      "anio": 1687,
+      "persona": "MICHAELAPAFI",
+      "personas": [
+        "MICHAELAPAFI"
+      ],
+      "eventoId": "APAFI_1687",
+      "titulo": "El avance habsbúrgico cambia el marco político",
+      "texto": "Las victorias contra los otomanos redujeron el margen de Apafi. La presión imperial preparó un orden distinto, formalizado después de su muerte por el Diploma Leopoldino de 1691. El título principesco sobrevivía dentro de un equilibrio que se estaba deshaciendo."
+    }
+  ]
+}
 ];

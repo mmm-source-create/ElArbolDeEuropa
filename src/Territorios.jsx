@@ -346,6 +346,8 @@ export const TERRITORIOS_DESTACADOS = [
   "Francia",
   "Inglaterra",
   "Escocia",
+  "Irlanda",
+  "Georgia y Cáucaso",
   "España",
   "Portugal",
   "Navarra",
@@ -375,8 +377,10 @@ export const TERRITORIOS_SUB = {
     "Orleans", "Ponthieu", "Provenza", "Saint-Pol", "Valois", "Vendôme", "Bearne",
   ],
 
-  Inglaterra: ["Gales", "Irlanda", "Richmond", "Suffolk", "York", "Huntingdon", "Northumbria"],
+  Inglaterra: ["Gales", "Richmond", "Suffolk", "York", "Huntingdon", "Northumbria"],
   Escocia: ["Annandale", "Carrick", "Galloway"],
+  Irlanda: ["Connacht", "Leinster", "Tír Eoghain", "Tír Chonaill", "Condado de Tyrone"],
+  "Georgia y Cáucaso": ["Georgia", "Imericia", "Samtsje", "Kartli", "Kajetia", "Kartli-Kajetia"],
 
   España: ["Corona de Castilla", "Corona de Aragón", "Navarra", "Granada"],
   "Corona de Castilla": ["Castilla", "León"],
@@ -419,30 +423,12 @@ export const TERRITORIOS_SUB = {
   "Bizancio y Oriente latino": [
     "Bizancio", "Durazzo", "Imperio Latino", "Antioquía", "Armenia", "Chipre",
     "Edesa", "Epiro", "Ibelin", "Jerusalén", "Morea", "Nablus", "Torón",
-    "Transjordania", "Trípoli",
+    "Transjordania", "Trípoli", "Trebisonda",
   ],
   Balcanes: ["Bulgaria", "Serbia", "Bosnia", "Valaquia", "Moldavia", "Croacia", "Sirmia", "Epiro"],
   Escandinavia: ["Dinamarca", "Noruega", "Suecia", "Holstein", "Schleswig"],
   Rusia: ["Beloózero", "Moscú", "Pólotsk", "Rus de Kiev", "Vladímir"],
 };
-
-// Un mismo territorio puede pertenecer a más de una agrupación de filtro
-// (por ejemplo, Milán aparece tanto bajo el Sacro Imperio como bajo Estados
-// Italianos). Por eso el mapa inverso conserva TODOS sus padres.
-export const TERRITORIO_A_PRINCIPALES = Object.fromEntries(
-  [...new Set(Object.values(TERRITORIOS_SUB).flat())].map((hijo) => [
-    hijo,
-    Object.entries(TERRITORIOS_SUB)
-      .filter(([, hijos]) => hijos.includes(hijo))
-      .map(([principal]) => principal),
-  ])
-);
-
-// Compatibilidad con código anterior: devuelve el primer padre, pero la
-// interfaz nueva usa `territorioCoincideConFiltro` y no pierde pertenencias.
-export const TERRITORIO_A_PRINCIPAL = Object.fromEntries(
-  Object.entries(TERRITORIO_A_PRINCIPALES).map(([hijo, padres]) => [hijo, padres[0]])
-);
 
 const SUBTERRITORIOS_CACHE = new Map();
 
