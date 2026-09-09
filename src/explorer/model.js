@@ -32,7 +32,7 @@ export const GRUPOS_DINASTICOS_GENEALOGICOS = {
 // inmanejable de más de cien apellidos menores.
 export const GRUPOS_DINASTICOS_REGIONALES = {
   "Casas italianas": [
-    "Aquino", "Borri", "Cattanei", "Della Scala", "Doria",
+    "Aquino", "Borri", "Cattanei", "Cornaro", "Della Scala", "Doria",
     "Falangola", "Gazela", "Lancia", "Morosini", "Pirovano", "Sanseverino",
     "Da Vinci", "Del Giocondo", "Gherardini", "Melzi", "Orsini", "Soderini",
   ],
@@ -58,12 +58,12 @@ export const GRUPOS_DINASTICOS_REGIONALES = {
     "Bohun", "Bolena", "Brandon", "Douglas", "Grey", "Holland", "Mortimer",
     "Neville", "Seymour", "Woodville", "Clare", "Marshal", "MacDonald",
   ],
-  "Casas irlandesas": ["Ua Conchobair", "Mac Murchada", "O’Neill", "O’Donnell"],
+  "Casas irlandesas": ["Ua Conchobair", "Mac Murchada", "O’Neill", "O’Donnell", "O’Brien", "MacCarthy", "Burgh", "Bourke", "FitzGerald", "Butler", "O’Malley", "Preston", "Talbot", "Sarsfield"],
   "Casas escandinavas": ["Estridsen", "Folkung"],
   "Casas orientales": [
     "Ángelo", "Báthory", "Cumanos", "Halshany", "Hunyadi", "Láscaris",
     "Poitiers-Antioquía", "Zápolya", "Jakeli", "Alania", "Gran Comneno",
-    "Hetúmida", "Lusignan", "Bethlen", "Bocskai", "Apafi", "Rákóczi", "Drăculești",
+    "Hetúmida", "Rubénida", "Lusignan", "Bethlen", "Bocskai", "Apafi", "Rákóczi", "Drăculești",
   ],
   "Sin casa identificada": ["Desconocida", "Familias menores"],
 };
@@ -455,4 +455,3 @@ export function mediana(valores) {
     ? ordenados[mitad]
     : (ordenados[mitad - 1] + ordenados[mitad]) / 2;
 }
-
