@@ -56,12 +56,14 @@ export const GRUPOS_DINASTICOS_REGIONALES = {
   ],
   "Casas británicas": [
     "Bohun", "Bolena", "Brandon", "Douglas", "Grey", "Holland", "Mortimer",
-    "Neville", "Seymour", "Woodville",
+    "Neville", "Seymour", "Woodville", "Clare", "Marshal", "MacDonald",
   ],
+  "Casas irlandesas": ["Ua Conchobair", "Mac Murchada", "O’Neill", "O’Donnell"],
   "Casas escandinavas": ["Estridsen", "Folkung"],
   "Casas orientales": [
     "Ángelo", "Báthory", "Cumanos", "Halshany", "Hunyadi", "Láscaris",
-    "Poitiers-Antioquía", "Zápolya",
+    "Poitiers-Antioquía", "Zápolya", "Jakeli", "Alania", "Gran Comneno",
+    "Hetúmida", "Lusignan", "Bethlen", "Bocskai", "Apafi", "Rákóczi", "Drăculești",
   ],
   "Sin casa identificada": ["Desconocida", "Familias menores"],
 };
@@ -74,13 +76,13 @@ export const GRUPOS_DINASTICOS = {
 export const DINASTIAS_DESTACADAS = [
   "Capeto", "Habsburgo", "Ivrea", "Barcelona", "Plantagenet", "Tudor", "Estuardo",
   "Avís", "Braganza", "Alfonsina", "Árpád", "Piast", "Jagellón", "Vasa",
-  "Rurikida", "Přemysl", "Hohenstaufen", "Wittelsbach", "Luxemburgo",
+  "Bagrationi", "Rurikida", "Přemysl", "Hohenstaufen", "Wittelsbach", "Luxemburgo",
   "Hohenzollern", "Nassau", "Welf", "Wettin", "Oldemburgo", "Paleólogo", "Saboya",
   "Lorena", "Brabante", "Champaña", "Foix", "Dampierre", "Baux",
   "Visconti", "Sforza", "Este", "Gonzaga", "Médici", "Farnesio", "Borja",
   "Álvarez de Toledo", "Jimena", "Nemanjić", "Asen", "Shishman", "Basarab", "Bogdan-Mușat", "Kotromanić", "Nazarí", "Württemberg", "Grifo", "Zähringen-Baden",
   "Casas italianas", "Casas ibéricas", "Casas francesas", "Casas germánicas",
-  "Casas británicas", "Casas escandinavas",
+  "Casas británicas", "Casas irlandesas", "Casas escandinavas",
   "Casas orientales", "Sin casa identificada",
 ];
 
@@ -340,6 +342,7 @@ export const ACCENTS = {
   "Farnesio":"#725D8A","Álvarez de Toledo":"#5F6874",
   "Casas italianas":"#7A6658","Casas ibéricas":"#7B5D4A","Casas francesas":"#687A91",
   "Casas germánicas":"#606B57","Casas británicas":"#756777",
+  "Casas irlandesas": ["Ua Conchobair", "Mac Murchada", "O’Neill", "O’Donnell"],
   "Casas escandinavas":"#557987","Casas orientales":"#765B83","Sin casa identificada":"#71717A",
 };
 export const PATH_COLOR = "#C97B2E";
