@@ -78,9 +78,6 @@ export const MONARCAS_MODERNOS = Object.freeze({
   "SEGIS2JAG": {
     "resumen": "Último rey Jagellón de Polonia y gran duque de Lituania. Bajo su reinado la Unión de Lublin de 1569 creó la Mancomunidad Polaco-Lituana."
   },
-  "ESTEBANBATHORY": {
-    "resumen": "Príncipe de Transilvania elegido rey de Polonia. Destacó por sus campañas contra Moscovia y por fortalecer el ejército y la autoridad de la Corona dentro de la Mancomunidad."
-  },
   "SEGIS3VASA": {
     "resumen": "Rey de Polonia y durante un tiempo también de Suecia. Su doble herencia Vasa y Jagellón alimentó largas guerras por el Báltico y conflictos dinásticos entre las dos coronas."
   },

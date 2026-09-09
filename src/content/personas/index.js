@@ -1,3 +1,4 @@
+import { FRONTERAS_V272 } from "./fronteras-v272.js";
 import { SUCESIONES_V27 } from "./sucesiones-v27.js";
 import { MONARCAS_MEDIEVALES } from "./monarcas-medievales.js";
 import { MONARCAS_MODERNOS } from "./monarcas-modernos.js";
@@ -16,6 +17,7 @@ export const PERSONA_CONTENT = Object.freeze({
   ...FRONTERAS_ORIENTALES,
   ...PRINCIPADOS_DUCADOS,
   ...SUCESIONES_V27,
+  ...FRONTERAS_V272,
 });
 
 export function contenidoPersona(personaOId) {

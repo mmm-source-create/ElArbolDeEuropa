@@ -120,9 +120,6 @@ export const MONARCAS_MEDIEVALES = Object.freeze({
   "OTAK2": {
     "resumen": "Rey de Bohemia que construyó un poderoso dominio centroeuropeo y llegó a controlar Austria. Su derrota y muerte frente a Rodolfo de Habsburgo en Marchfeld cambió el equilibrio dinástico del Imperio."
   },
-  "CARLOS1ANJ": {
-    "resumen": "Hermano de Luis IX de Francia y fundador del poder angevino en el sur de Italia. Conquistó el reino de Sicilia, pero las Vísperas Sicilianas de 1282 quebraron su proyecto mediterráneo."
-  },
   "MANFSIC": {
     "resumen": "Hijo de Federico II y rey de Sicilia, defendió el poder Hohenstaufen en Italia frente al papado. Murió en Benevento luchando contra Carlos de Anjou."
   },
