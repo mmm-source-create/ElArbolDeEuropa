@@ -7,7 +7,7 @@ import SiteFooter from "./components/SiteFooter.jsx";
 import "./styles/theme.css";
 import "./App.css";
 
-const Explorer = lazy(() => import("./Explorer.jsx"));
+const Explorer = lazy(() => import("./explorer/AtlasLoader.jsx"));
 const DesafioPage = lazy(() => import("./desafio/DesafioPage.jsx"));
 
 function localeDesdePath(pathname) {
@@ -136,7 +136,7 @@ export default function App() {
   if (!explorerRequested && initial.view === "home") return <HomePage onEnterAtlas={entrarAtlas} onOpenPanel={entrarAtlas} />;
 
   return (
-    <Suspense fallback={null}>
+    <Suspense fallback={<p role="status" style={{ padding: 24 }}>Cargando Atlas…</p>}>
       <Explorer initialPanel={initialPanel} />
     </Suspense>
   );

@@ -8,7 +8,6 @@ import {
 import { PERSONAS } from "./personas.jsx";
 import { EVENTOS_HISTORICOS, HISTORIAS } from "./historiaData.jsx";
 import { DEFAULT_LOCALE, SITE, t } from "./i18n.jsx";
-import TREE_BASE from "./generated/treeBase.json";
 import SiteHeader from "./components/SiteHeader.jsx";
 import SiteFooter from "./components/SiteFooter.jsx";
 import { textoBusquedaPersona } from "./utils/personPresentation.js";
@@ -31,6 +30,10 @@ import {
 } from "./explorer/timelineUtils.js";
 import { PersonBox } from "./explorer/ExplorerPrimitives.jsx";
 import ExplorerView from "./explorer/ExplorerView.jsx";
+import { useTreeViewport } from "./explorer/useTreeViewport.js";
+import { intersectsViewport } from "./explorer/treeViewport.js";
+
+const SEARCH_TEXT_BY_ID = Object.fromEntries(PERSONAS.map(persona => [persona.id, normalizaTexto([textoBusquedaPersona(persona), nombrePrincipal(persona)].join(" "))]));
 
 const ATLAS_LAYOUT_STORAGE_KEY = "eade.atlasLayout.v24";
 const DEFAULT_PANEL_WIDTHS = Object.freeze({ filtros: 280, biografia: 330 });
@@ -63,7 +66,7 @@ function leerLayoutAtlas() {
   }
 }
 
-export default function Explorer({ initialPanel = null }) {
+export default function Explorer({ initialPanel = null, treeBase: TREE_BASE }) {
   const scrollRef = useRef(null);
   const nodeRefs = useRef({});
   const tlScrollRef = useRef(null);
@@ -797,7 +800,7 @@ export default function Explorer({ initialPanel = null }) {
     return true;
   };
 
-  const visiblePeople = PERSONAS.filter(matches);
+  const visiblePeople = useMemo(() => PERSONAS.filter(matches), [hiddenByCollapse, focoSet, soloFavoritos, favoritosSet, territorios, dinastias, titulos, siglos, relaciones, opciones.otrasDinastias]);
   const visibleIds = visiblePeople.map((persona) => persona.id);
   const visibleSignature = visibleIds.join("|");
   const visibleRows = useMemo(() => {
@@ -817,6 +820,8 @@ export default function Explorer({ initialPanel = null }) {
     return computeTreeLayout(visibleRows, BY_ID, HIJOS_POR_ID);
   }, [visibleRows, visiblePeople.length]);
   const positions = treeLayout.positions;
+  const treeViewport = useTreeViewport(scrollRef, zoom, mostrarArbol);
+  const renderedTreeUnits = useMemo(() => treeLayout.units.filter(unit => intersectsViewport(unit, treeViewport)), [treeLayout.units, treeViewport]);
   const canvasSize = { w: treeLayout.width, h: treeLayout.height };
 
   // Coincidencias del buscador: solo entre las personas que ya son visibles
@@ -826,11 +831,7 @@ export default function Explorer({ initialPanel = null }) {
   const searchMatchIds = useMemo(() => {
     if (!queryTrim) return [];
     return visiblePeople.filter((persona) => {
-      const textoBuscable = normalizaTexto([
-        textoBusquedaPersona(persona),
-        nombrePrincipal(persona),
-      ].join(" "));
-      return textoBuscable.includes(queryTrim);
+      return SEARCH_TEXT_BY_ID[persona.id].includes(queryTrim);
     }).map((persona) => persona.id);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [queryTrim, visibleSignature]);
@@ -922,7 +923,8 @@ export default function Explorer({ initialPanel = null }) {
     return { stroke: "#B9AF98", strokeWidth: 1.05 };
   };
 
-  const connectorLayerKey = [visibleSignature, hovered || "", seleccion?.id || "", comparePath?.join("|") || "", collapsedIds.join("|")].join("__");
+  // Mantener el SVG montado permite actualizar colores sin recrear todas las líneas.
+  const connectorLayerKey = visibleSignature;
 
   const connectors = routing.families.map((family) => {
     const sharedStyle = styleForFamilyLine(family);
@@ -977,12 +979,11 @@ export default function Explorer({ initialPanel = null }) {
   const endDrag = () => (dragState.current = null);
 
   const centerOn = (id) => {
-    const el = nodeRefs.current[id], scrollEl = scrollRef.current;
-    if (!el || !scrollEl) return;
-    const er = el.getBoundingClientRect(), sr = scrollEl.getBoundingClientRect();
-    scrollEl.scrollBy({
-      left: (er.left + er.width / 2) - (sr.left + sr.width / 2),
-      top: (er.top + er.height / 2) - (sr.top + sr.height / 2),
+    const position = positions[id], scrollEl = scrollRef.current;
+    if (!position || !scrollEl) return;
+    scrollEl.scrollTo({
+      left: (position.x + position.w / 2) * zoom - scrollEl.clientWidth / 2,
+      top: (position.y + position.h / 2) * zoom - scrollEl.clientHeight / 2,
       behavior: "smooth",
     });
   };
@@ -1643,7 +1644,7 @@ export default function Explorer({ initialPanel = null }) {
     hiddenByCollapse, toggleDescendants, ajustarAnio, actualizarAnioDesdeRango, confirmarAnioEscrito, restablecerAnio, moverAnioHistoria, alternarReproduccionHistoria,
     mostrarArbol, mostrarMapa, mostrarFiltros, mostrarBiografia, mostrarCronologia, vistaPrincipal, layoutLaterales, alternarVista,
     alternarPanelAuxiliar, personasVivasEnAnio, gobernantesActivosEnAnio, matches, visiblePeople, visibleIds, visibleSignature, visibleRows,
-    treeLayout, positions, canvasSize, queryTrim, searchMatchIds, searchMatchSet, searchSignature, searchCurrentId,
+    treeLayout, renderedTreeUnits, positions, canvasSize, queryTrim, searchMatchIds, searchMatchSet, searchSignature, searchCurrentId,
     irACoincidencia, hayFiltros, limpiar, lineage, comparePaths, comparePath, pathEdges, groupsByRow,
     routing, relacionFocoId, amantesFoco, styleForFamilyLine, connectorLayerKey, connectors, scrollBy, onPointerDown,
     onPointerMove, endDrag, centerOn, pendingZoomCenterRef, cambiarZoomArbol, centerOnTimeline, seleccionarPersonaPorId, navegarHistorialPersona, centrarSeleccion, cerrarSeleccion,

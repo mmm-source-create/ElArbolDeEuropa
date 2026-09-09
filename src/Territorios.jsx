@@ -379,7 +379,8 @@ export const TERRITORIOS_SUB = {
 
   Inglaterra: ["Gales", "Richmond", "Suffolk", "York", "Huntingdon", "Northumbria"],
   Escocia: ["Annandale", "Carrick", "Galloway"],
-  Irlanda: ["Connacht", "Leinster", "Tír Eoghain", "Tír Chonaill", "Condado de Tyrone"],
+  Irlanda: ["Connacht","Leinster","Thomond","Desmond","Tír Eoghain","Tír Chonaill","Condado de Tyrone","Condado de Tyrconnell","Condado de Thomond","Condado de Desmond","Condado de Clancare","Condado de Ulster","Kildare","Ormond","Clanricarde","Vizcondado de Mayo","Lucan"],
+  Armenia: ["Armenia cilicia"],
   "Georgia y Cáucaso": ["Georgia", "Imericia", "Samtsje", "Kartli", "Kajetia", "Kartli-Kajetia"],
 
   España: ["Corona de Castilla", "Corona de Aragón", "Navarra", "Granada"],

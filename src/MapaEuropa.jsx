@@ -8,7 +8,8 @@ import {
   ZoomIn,
   ZoomOut,
 } from "lucide-react";
-import mapSvgContent from "./MapChart_Map.svg?raw";
+import mapSvgUrl from "./MapChart_Map.svg?url";
+import { loadTextAsset, forgetTextAsset } from "./utils/loadAsset.js";
 import {
   REINO_COLOR,
   REINO_COLOR_DEFAULT,
@@ -98,15 +99,26 @@ export function MapaEuropa({ seleccion, anioGlobal = null, onSelectTerritorio })
   const dragRef = useRef(null);
   const suppressClickRef = useRef(false);
   const [viewBox, setViewBox] = useState(null);
+  const [mapReady, setMapReady] = useState(false);
+  const [mapError, setMapError] = useState(false);
+  const [mapAttempt, setMapAttempt] = useState(0);
 
   useEffect(() => {
     if (!containerRef.current || svgInyectadoRef.current) return;
 
+    let cancelled = false;
+    setMapError(false);
+    loadTextAsset(mapSvgUrl).then(mapSvgContent => {
+    if (cancelled || !containerRef.current) return;
     containerRef.current.innerHTML = mapSvgContent;
     svgInyectadoRef.current = true;
 
     const svg = containerRef.current.querySelector("svg");
-    if (!svg) return;
+    if (!svg) {
+      svgInyectadoRef.current = false;
+      forgetTextAsset(mapSvgUrl);
+      throw new Error("Mapa no válido");
+    }
 
     const original = parseViewBox(svg);
     const initial = clampViewBox(initialViewBox(original), original);
@@ -122,7 +134,10 @@ export function MapaEuropa({ seleccion, anioGlobal = null, onSelectTerritorio })
     svg.style.transform = "none";
     svg.setAttribute("viewBox", viewBoxString(initial));
     setViewBox(initial);
-  }, []);
+    setMapReady(true);
+    }).catch(() => { if (!cancelled) setMapError(true); });
+    return () => { cancelled = true; };
+  }, [mapAttempt]);
 
   useEffect(() => {
     const svg = containerRef.current?.querySelector("svg");
@@ -195,7 +210,7 @@ export function MapaEuropa({ seleccion, anioGlobal = null, onSelectTerritorio })
     } catch (error) {
       console.error("[MapaEuropa] Error al renderizar:", error);
     }
-  }, [seleccion, anioGlobal]);
+  }, [seleccion, anioGlobal, mapReady]);
 
   const updateViewBox = useCallback((producer) => {
     setViewBox((current) => {
@@ -291,6 +306,9 @@ export function MapaEuropa({ seleccion, anioGlobal = null, onSelectTerritorio })
 
   return (
     <div className="mapa-stage">
+      {!mapReady && <div role={mapError ? "alert" : "status"} style={{ position: "absolute", inset: "50% 0 auto", textAlign: "center", zIndex: 2 }}>
+        {mapError ? <>No se ha podido cargar el mapa. <button className="nav-btn" onClick={() => setMapAttempt(n => n + 1)}>Reintentar</button></> : "Cargando mapa…"}
+      </div>}
       <div className="mapa-toolbar" aria-label="Controles del mapa">
         <button type="button" className="nav-btn" onClick={() => zoomBy(1 / MAP_ZOOM_FACTOR)} title="Alejar mapa" aria-label="Alejar mapa"><ZoomOut size={13} /></button>
         <button type="button" className="nav-btn" onClick={resetView} title="Restablecer mapa" aria-label="Restablecer mapa"><RotateCcw size={12} /></button>
@@ -317,4 +335,3 @@ export function MapaEuropa({ seleccion, anioGlobal = null, onSelectTerritorio })
     </div>
   );
 }
-
