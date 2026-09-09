@@ -1,3 +1,4 @@
+import { gobiernoEfectivo } from "../data/territorios.js";
 import { contenidoPersona, tieneContenidoEditorial } from "../content/personas/index.js";
 
 const LATIN_EXTENDED_FOLD = Object.freeze({
@@ -63,8 +64,8 @@ function resumenBiografiaAtlas(texto) {
 }
 
 function primerReinadoUtil(persona) {
-  const reinados = Array.isArray(persona?.reinados) ? persona.reinados : [];
-  return reinados.find((r) => r && Number.isFinite(r.desde) && Number.isFinite(r.hasta) && !["pretensión", "titular", "rival", "disputado"].includes(r.condicion))
+  const reinados = persona?.gobiernos || persona?.reinados || [];
+  return reinados.find((r) => r && Number.isFinite(r.desde) && Number.isFinite(r.hasta) && gobiernoEfectivo(r))
     || reinados.find((r) => r && Number.isFinite(r.desde) && Number.isFinite(r.hasta))
     || null;
 }
@@ -123,7 +124,12 @@ export function textoBusquedaPersona(persona) {
 const ETIQUETAS_GOBIERNO_POR_TIPO = Object.freeze({
   regencia: "Regencia",
   electorado: "Electorado",
-  estaduderato: "Estatuderato",
+  estatuderato: "Estatuderato",
+  reinado: "Reinado",
+  archiducado: "Archiducado",
+  gran_ducado: "Gran ducado",
+  gran_principado: "Gran principado",
+  zarato: "Zarato",
   ducado: "Ducado",
   condado: "Condado",
   principado: "Principado",
@@ -139,11 +145,10 @@ const ETIQUETAS_GOBIERNO_POR_TIPO = Object.freeze({
   pontificado: "Pontificado",
   gobierno: "Gobierno",
   "señorío": "Señorío",
-  senorio: "Señorío",
 });
 
 export function etiquetaClaseGobierno(persona, gobierno) {
   const clase = gobierno?.clase;
   if (!clase) return "Gobierno sin clasificar";
-  return ETIQUETAS_GOBIERNO_POR_TIPO[clase] || ({reinado:"Reinado", archiducado:"Archiducado", gran_ducado:"Gran ducado", gran_principado:"Gran principado", zarato:"Zarato", estatuderato:"Estatuderato"})[clase] || clase;
+  return ETIQUETAS_GOBIERNO_POR_TIPO[clase] || clase;
 }
