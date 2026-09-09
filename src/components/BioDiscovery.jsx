@@ -1,5 +1,4 @@
 import React, { useMemo } from "react";
-import "./BioDiscovery.css";
 
 export default function BioDiscovery({
   persona,
