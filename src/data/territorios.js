@@ -80,7 +80,22 @@ export const TERRITORIOS = Object.freeze({
   "Irlanda": {
     "clase": "reino",
     "naturaleza": "entidad",
-    "componentes": []
+    "componentes": [],
+    "nota": "La ficha distingue la supremacía del alto rey medieval del reino establecido en 1542. Ninguno de esos títulos implica por sí solo control efectivo de toda la isla. Los reinos y señoríos gaélicos tienen fichas y filtros propios.",
+    "etapas": [
+      {
+        "desde": null,
+        "clase": "reino"
+      },
+      {
+        "desde": 1177,
+        "clase": "señorío"
+      },
+      {
+        "desde": 1542,
+        "clase": "reino"
+      }
+    ]
   },
   "Dinamarca": {
     "clase": "reino",
@@ -100,17 +115,20 @@ export const TERRITORIOS = Object.freeze({
   "Sicilia": {
     "clase": "reino",
     "naturaleza": "entidad",
-    "componentes": []
+    "componentes": [],
+    "nota": "Hasta 1282, reino que comprendía la isla y el sur continental. Después de las Vísperas, consultar Nápoles para el continente y Trinacria para la corona insular."
   },
   "Trinacria": {
     "clase": "reino",
     "naturaleza": "entidad",
-    "componentes": []
+    "componentes": [],
+    "nota": "Denominación usada aquí para seguir la corona insular desde 1282. El título de Trinacria se formalizó con Caltabellotta y la ratificación papal de 1303; no fue el nombre único de la isla desde el comienzo."
   },
   "Nápoles": {
     "clase": "reino",
     "naturaleza": "entidad",
-    "componentes": []
+    "componentes": [],
+    "nota": "Nombre historiográfico para el reino continental separado de la isla en 1282. Sus monarcas siguieron utilizando el título de reyes de Sicilia."
   },
   "Mallorca": {
     "clase": "reino",
@@ -141,7 +159,17 @@ export const TERRITORIOS = Object.freeze({
   "Chipre": {
     "clase": "reino",
     "naturaleza": "entidad",
-    "componentes": []
+    "componentes": [],
+    "etapas": [
+      {
+        "desde": 1192,
+        "clase": "señorío"
+      },
+      {
+        "desde": 1197,
+        "clase": "reino"
+      }
+    ]
   },
   "Armenia": {
     "clase": "reino",
@@ -667,7 +695,18 @@ export const TERRITORIOS = Object.freeze({
   "Transilvania": {
     "clase": "principado",
     "naturaleza": "entidad",
-    "componentes": []
+    "componentes": [],
+    "etapas": [
+      {
+        "desde": null,
+        "clase": "voivodato"
+      },
+      {
+        "desde": 1570,
+        "clase": "principado"
+      }
+    ],
+    "nota": "El voivodato dependía de la monarquía húngara. El principado se desarrolló bajo soberanía otomana y después habsbúrgica; en la etapa Báthory coexistieron príncipe y voivoda delegado."
   },
   "Vladímir": {
     "clase": "principado",
@@ -1272,10 +1311,110 @@ export const TERRITORIOS = Object.freeze({
       "Jerusalén",
       "Chipre"
     ]
+  },
+  "Georgia": {
+    "clase": "reino",
+    "naturaleza": "entidad",
+    "componentes": [],
+    "nota": "Reino medieval de los Bagrationi. Sus sucesores de la Edad Moderna tienen fichas propias; no se prolonga artificialmente una única sucesión sobre toda Georgia."
+  },
+  "Imericia": {
+    "clase": "reino",
+    "naturaleza": "entidad",
+    "componentes": [],
+    "nota": "Reino occidental surgido de la separación de David VI en 1259; reunificado y vuelto a separar en etapas posteriores."
+  },
+  "Samtsje": {
+    "clase": "principado",
+    "naturaleza": "entidad",
+    "componentes": [],
+    "nota": "Señorío de los Jakeli, conocido también como Samtskhe. El rango de príncipe aquí normaliza el señorío hereditario; no atribuye retroactivamente el título de atabeg a cada gobernante."
+  },
+  "Trebisonda": {
+    "clase": "imperio",
+    "naturaleza": "entidad",
+    "componentes": [],
+    "nota": "Imperio de los Grandes Comnenos del mar Negro, distinto del Imperio bizantino de Constantinopla."
+  },
+  "Kartli": {
+    "clase": "reino",
+    "naturaleza": "entidad",
+    "componentes": [],
+    "nota": "Reino de Georgia oriental, con soberanía condicionada por Persia y por las intervenciones otomanas."
+  },
+  "Kajetia": {
+    "clase": "reino",
+    "naturaleza": "entidad",
+    "componentes": [],
+    "nota": "También Kakheti. Reino oriental de los Bagrationi, unido a Kartli en 1762."
+  },
+  "Kartli-Kajetia": {
+    "clase": "reino",
+    "naturaleza": "compuesta",
+    "componentes": [
+      "Kartli",
+      "Kajetia"
+    ],
+    "desde": 1762,
+    "nota": "Unión de los dos reinos orientales desde 1762; no incluye Imericia ni equivale a toda Georgia."
+  },
+  "Georgia y Cáucaso": {
+    "clase": "grupo_geografico",
+    "naturaleza": "agrupacion",
+    "componentes": [
+      "Georgia",
+      "Imericia",
+      "Samtsje",
+      "Kartli",
+      "Kajetia",
+      "Kartli-Kajetia"
+    ],
+    "nota": "Agrupación de navegación: los reinos conservan sus cronologías y no comparten una soberanía permanente."
+  },
+  "Connacht": {
+    "clase": "reino",
+    "naturaleza": "entidad",
+    "componentes": [],
+    "nota": "Reino gaélico del oeste de Irlanda. Su continuidad política no termina con la llegada anglonormanda de 1169."
+  },
+  "Leinster": {
+    "clase": "reino",
+    "naturaleza": "entidad",
+    "componentes": [],
+    "etapas": [
+      {
+        "desde": null,
+        "clase": "reino"
+      },
+      {
+        "desde": 1171,
+        "clase": "señorío"
+      }
+    ],
+    "nota": "La realeza gaélica y el señorío anglonormando representaron legitimidades distintas; la conquista no supone una transferencia automática del título de rey."
+  },
+  "Tír Eoghain": {
+    "clase": "señorío",
+    "naturaleza": "entidad",
+    "componentes": [],
+    "nota": "Señorío gaélico de los O’Neill. El liderazgo del linaje y el condado de Tyrone creado por la Corona se registran por separado."
+  },
+  "Tír Chonaill": {
+    "clase": "señorío",
+    "naturaleza": "entidad",
+    "componentes": [],
+    "nota": "Señorío gaélico de los O’Donnell, conocido también como Tyrconnell. No es equivalente al condado actual de Donegal."
+  },
+  "Condado de Tyrone": {
+    "clase": "condado",
+    "naturaleza": "entidad",
+    "componentes": [],
+    "desde": 1542,
+    "nota": "Título de la nobleza irlandesa creado por Enrique VIII. Se distingue del territorio gaélico de Tír Eoghain y de sus reglas sucesorias."
   }
 });
 
-export const TITULOS_POR_CLASE = {"reinado": ["Rey", "Rey de Romanos", "Reina"], "imperio": ["Emperatriz", "Emperador"], "ducado": ["Duquesa", "Duque"], "archiducado": ["Archiduque", "Archiduquesa"], "condado": ["Conde", "Conde palatino", "Condesa"], "electorado": ["Elector"], "principado": ["Princesa", "Gran župan", "Príncipe"], "gran_ducado": ["Gran duque", "Gran duquesa"], "gran_principado": ["Gran príncipe"], "zarato": ["Zarina", "Zar"], "margraviato": ["Margrave"], "marquesado": ["Marqués"], "landgraviato": ["Landgrave"], "señorío": ["Señor", "Señora"], "regencia": ["Regente"], "estatuderato": ["Estatúder"], "emirato": ["Emir"], "sultanato": ["Sultán"], "despotado": ["Déspota"], "banato": ["Ban"], "voivodato": ["Voivoda"], "pontificado": ["Papa"], "gobierno": ["Gobernante", "Soberano", "Soberana", "Gobernador", "Gobernadora"], "vizcondado": ["Vizconde"]};
+export const TITULOS_POR_CLASE = {"reinado": ["Rey", "Rey de Romanos", "Alto rey", "Reina"], "imperio": ["Emperatriz", "Emperador"], "ducado": ["Duquesa", "Duque"], "archiducado": ["Archiduque", "Archiduquesa"], "condado": ["Conde", "Conde palatino", "Condesa"], "electorado": ["Elector"], "principado": ["Princesa", "Gran župan", "Príncipe"], "gran_ducado": ["Gran duque", "Gran duquesa"], "gran_principado": ["Gran príncipe"], "zarato": ["Zarina", "Zar"], "margraviato": ["Margrave"], "marquesado": ["Marqués"], "landgraviato": ["Landgrave"], "señorío": ["Señor", "Señora"], "regencia": ["Regente"], "estatuderato": ["Estatúder"], "emirato": ["Emir"], "sultanato": ["Sultán"], "despotado": ["Déspota"], "banato": ["Ban"], "voivodato": ["Voivoda"], "pontificado": ["Papa"], "gobierno": ["Gobernante", "Soberano", "Soberana", "Gobernador", "Gobernadora"], "vizcondado": ["Vizconde"]};
 export const CONDICIONES = ["efectivo","jure uxoris","corregente","regencia","pretensión","titular","rival","disputado","rama"];
 export function componentesDe(nombre, vistos = new Set()) {
  if(vistos.has(nombre)) return []; vistos.add(nombre);

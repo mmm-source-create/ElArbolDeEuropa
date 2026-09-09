@@ -17,6 +17,7 @@ export function auditarTerritorios(personas, catalogo=TERRITORIOS) {
    for(const field of ['territorio','titulo','clase','condicion'])if(!g[field])add('ERROR',`GOV_${field.toUpperCase()}_MISSING`,key,`Falta ${field}`);
    const t=catalogo[g.territorio];
    if(!t)add('ERROR','GOV_TERRITORY_UNKNOWN',key,g.territorio);
+   if(t?.naturaleza==='compuesta'&&Number.isFinite(t.desde)&&g.desde<t.desde)add('ERROR','GOV_BEFORE_ENTITY',key,`Gobierno anterior a la formación de ${g.territorio} en ${t.desde}`);
    if(t?.naturaleza==='agrupacion')add('ERROR','GROUP_GOVERNMENT',key,`${g.territorio} es una agrupación, no admite gobiernos`);
    if(!TITULOS_POR_CLASE[g.clase]?.includes(g.titulo))add('ERROR','TITLE_CLASS_MISMATCH',key,`${g.titulo} no corresponde a ${g.clase}`);
    if(!CONDICIONES.includes(g.condicion))add('ERROR','CONDITION_UNKNOWN',key,g.condicion);
@@ -28,7 +29,7 @@ export function auditarTerritorios(personas, catalogo=TERRITORIOS) {
    if(seen.has(sig))add('ERROR','DUPLICATE_GOVERNMENT',key,sig);seen.add(sig);
    const territorial=(t?.etapas||[]).map(e=>e.clase).concat(t?.clase||[]);
    const normalize=c=>({reino:'reinado',estado_pontificio:'pontificado',territorio_compuesto:'gobierno',republica:'gobierno'})[c]||c;
-   const permitidas={Valaquia:['voivodato'],Moldavia:['voivodato'],Bulgaria:['zarato'],Serbia:['despotado'],Rusia:['principado'],Sajonia:['ducado'],Baviera:['electorado'],Brandeburgo:['margraviato'],Palatinado:['condado','principado'],Florencia:['ducado'],Nassau:['principado'],Urbino:['condado'],Anjou:['condado'],Hannover:['electorado'], 'Países Bajos':['reinado']};
+   const permitidas={Transilvania:['gobierno'],Valaquia:['voivodato'],Moldavia:['voivodato'],Bulgaria:['zarato'],Serbia:['despotado'],Rusia:['principado'],Sajonia:['ducado'],Baviera:['electorado'],Brandeburgo:['margraviato'],Palatinado:['condado','principado'],Florencia:['ducado'],Nassau:['principado'],Urbino:['condado'],Anjou:['condado'],Hannover:['electorado'], 'Países Bajos':['reinado']};
    if(t&& !['regencia','estatuderato'].includes(g.clase)&& !territorial.map(normalize).concat(permitidas[g.territorio]||[]).includes(g.clase))add('ERROR','TERRITORY_CLASS_MISMATCH',key,`${g.territorio}: ${g.clase} no concuerda con su rango documentado`);
   }
  }
