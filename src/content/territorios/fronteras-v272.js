@@ -1,51 +1,51 @@
 export default {
   "Georgia": {
-    "resumen": "El reino de los Bagrationi alcanzó una gran proyección con Tamar. Las invasiones del siglo XIII y la intervención mongola en la sucesión fragmentaron su autoridad. Los enlaces con Samtsje y Trebisonda conectaron las casas del Cáucaso con el mundo bizantino; en la Edad Moderna, Kartli, Kajetia e Imericia siguieron trayectorias distintas.",
+    "resumen": "La monarquía Bagrationi pasó de la reunificación de Jorge V a las invasiones de Tamerlán y las disputas del siglo XV. Kartli, Kajetia e Imericia desarrollaron coronas propias, aunque compartieran parentescos y aspiraciones de reunificación. La ficha medieval termina antes de convertir esas ramas en una única sucesión ficticia.",
     "evolucion": [
       {
-        "anio": 1184,
-        "texto": "Tamar comienza a gobernar por derecho propio."
+        "anio": 1346,
+        "texto": "David IX sucede a Jorge V."
       },
       {
-        "anio": 1223,
-        "texto": "Rusudán sucede a Jorge IV en un escenario de presión exterior."
+        "anio": 1386,
+        "texto": "Tamerlán toma Tiflis y captura a Bagrat V."
       },
       {
-        "anio": 1247,
-        "texto": "La confirmación mongola de los dos David abre una monarquía compartida."
+        "anio": 1412,
+        "texto": "Alejandro I inicia una política de reconstrucción."
       },
       {
-        "anio": 1259,
-        "texto": "David VI establece su poder en el oeste."
-      },
-      {
-        "anio": 1330,
-        "texto": "La recuperación de la autoridad de Jorge V se desarrolla gradualmente durante la década."
+        "anio": 1463,
+        "texto": "Bagrat se proclama rey en Imericia."
       },
       {
         "anio": 1490,
-        "texto": "Se reconoce la división en reinos rivales."
+        "texto": "La división en varios reinos recibe reconocimiento político."
       }
     ]
   },
   "Imericia": {
-    "resumen": "El reino occidental se vinculó a la rama de David VI Narin. Su separación no fue irreversible: la reunificación y la fragmentación posteriores muestran que Georgia no tuvo una única estructura territorial permanente.",
+    "resumen": "El oeste georgiano tuvo una trayectoria propia, marcada por la influencia otomana y la competencia con grandes principados vecinos. La corona cambió repetidamente de manos, incluso entre parientes cercanos. Salomón I trató de reforzarla; Salomón II, nieto de Heraclio II por su madre, fue el último rey antes de la anexión rusa.",
     "evolucion": [
       {
-        "anio": 1259,
-        "texto": "David VI se establece en el oeste después de rebelarse contra los mongoles."
+        "anio": 1463,
+        "texto": "Bagrat VI funda la nueva línea real occidental."
       },
       {
-        "anio": 1330,
-        "texto": "La política de Jorge V vuelve a incorporar el oeste al conjunto georgiano durante esta década."
+        "anio": 1510,
+        "texto": "Comienza el largo reinado de Bagrat III."
       },
       {
-        "anio": 1490,
-        "texto": "La fragmentación política consolida de nuevo la independencia del reino occidental."
+        "anio": 1660,
+        "texto": "La muerte de Alejandro III abre una etapa de repetidas deposiciones."
       },
       {
-        "anio": 1555,
-        "texto": "La paz de Amasya sitúa la Georgia occidental en la esfera otomana."
+        "anio": 1757,
+        "texto": "La victoria de Jresili refuerza a Salomón I."
+      },
+      {
+        "anio": 1810,
+        "texto": "Rusia depone a Salomón II y anexiona Imericia."
       }
     ]
   },
@@ -92,94 +92,118 @@ export default {
     ]
   },
   "Kartli": {
-    "resumen": "Kartli fue uno de los reinos de Georgia oriental. Sus monarcas negociaron la investidura con Persia y afrontaron intervenciones otomanas; el reconocimiento exterior podía coexistir con grandes dificultades para gobernar efectivamente.",
+    "resumen": "El reino oriental conservó una rama real Bagrationi tras la división de Georgia. Persia y los otomanos intervinieron en sus nombramientos, guerras y deposiciones. Los reinados de Simón, Rostom y los Vajtang muestran distintas estrategias de resistencia y colaboración. Desde 1762 su sucesión conjunta con Kajetia se consulta en Kartli-Kajetia.",
     "evolucion": [
       {
-        "anio": 1716,
-        "texto": "Vajtang VI recibe el reconocimiento real en Persia."
+        "anio": 1490,
+        "texto": "Constantino II concentra su monarquía en Kartli."
       },
       {
-        "anio": 1724,
-        "texto": "Vajtang abandona Georgia y se dirige a Rusia."
+        "anio": 1556,
+        "texto": "Simón I continúa la resistencia de Luarsab."
       },
       {
-        "anio": 1744,
-        "texto": "Teimuraz II obtiene la corona de Kartli."
+        "anio": 1633,
+        "texto": "Rostom establece un gobierno vinculado a la corte safávida."
+      },
+      {
+        "anio": 1658,
+        "texto": "Vajtang V lleva la rama de Mukhrani al trono."
+      },
+      {
+        "anio": 1723,
+        "texto": "La intervención otomana cambia el control de Tiflis."
       },
       {
         "anio": 1762,
-        "texto": "Heraclio II hereda Kartli y lo une a Kajetia."
+        "texto": "Heraclio II reúne Kartli y Kajetia."
       }
     ]
   },
   "Kajetia": {
-    "resumen": "Kajetia, también llamada Kakheti, conservó una rama propia de los Bagrationi. La colaboración y el conflicto con Persia determinaron buena parte de su política. En el siglo XVIII, el gobierno de Teimuraz II y Heraclio II preparó su unión con Kartli.",
+    "resumen": "La rama fundada por Jorge VIII mantuvo una monarquía propia, con interrupciones por anexiones, invasiones y gobiernos impuestos desde Persia. La familia de Teimuraz I sufrió cautiverio y exilio, pero sus descendientes volvieron a ocupar posiciones regias. La unión de 1762 cerró la sucesión separada del reino.",
     "evolucion": [
       {
-        "anio": 1733,
-        "texto": "Comienza el gobierno de Teimuraz II registrado en esta serie."
+        "anio": 1466,
+        "texto": "Jorge VIII establece su poder en Kajetia."
       },
       {
-        "anio": 1744,
-        "texto": "Heraclio II accede a la corona, mientras su padre gobierna Kartli."
+        "anio": 1520,
+        "texto": "Levan consolida la restauración del reino tras la ocupación de Kartli."
+      },
+      {
+        "anio": 1606,
+        "texto": "Teimuraz I accede a la corona."
+      },
+      {
+        "anio": 1624,
+        "texto": "Ketevan muere ejecutada en Persia."
+      },
+      {
+        "anio": 1648,
+        "texto": "Rostom derrota a Teimuraz y ocupa Kajetia."
       },
       {
         "anio": 1762,
-        "texto": "La sucesión de Kartli reúne los dos reinos orientales."
+        "texto": "La corona se une a Kartli bajo Heraclio II."
       }
     ]
   },
   "Kartli-Kajetia": {
-    "resumen": "La unión de 1762 reunió dos coronas de Georgia oriental bajo Heraclio II. No incorporó todos los territorios georgianos. La búsqueda de protección rusa convivió con la presión persa y terminó abriendo otra disputa por la soberanía del reino.",
+    "resumen": "Heraclio II reunió las dos monarquías orientales en 1762. La unión no incorporó Imericia ni eliminó las presiones persas y rusas. El tratado de Gueórguievsk no evitó la invasión de 1795; el breve reinado de Jorge XII precedió a la anexión por Rusia.",
     "evolucion": [
       {
         "anio": 1762,
-        "texto": "Heraclio II reúne Kartli y Kajetia."
+        "texto": "Unión de Kartli y Kajetia bajo Heraclio II."
       },
       {
         "anio": 1783,
-        "texto": "Tratado de Gueórguievsk: protección rusa y limitación de la autonomía diplomática."
+        "texto": "Tratado de Gueórguievsk con Rusia."
       },
       {
         "anio": 1795,
-        "texto": "Aga Mohamed Kan conquista y saquea Tiflis."
+        "texto": "La invasión persa devasta Tiflis."
+      },
+      {
+        "anio": 1798,
+        "texto": "Jorge XII sucede a Heraclio II."
       },
       {
         "anio": 1801,
-        "texto": "Rusia anexiona el reino después de la muerte de Jorge XII."
+        "texto": "Anexión rusa de la monarquía oriental."
       }
     ]
   },
   "Irlanda": {
-    "resumen": "La historia irlandesa incluye reinos gaélicos, ciudades, señoríos anglonormandos y una Corona cuyo control territorial fue desigual. Las casas Ua Conchobair, Mac Murchada, O’Neill y O’Donnell permiten seguir iniciativas y conflictos propios. La supremacía del alto rey, los señoríos de los linajes y los condados concedidos por la monarquía no fueron cargos equivalentes.",
+    "resumen": "La isla reúne historias políticas distintas: reinos y señoríos gaélicos, familias anglonormandas, nobleza titulada de la Corona y poderes surgidos durante las guerras del siglo XVII. Los O’Brien, MacCarthy, O’Neill y O’Donnell convivieron y compitieron con Burgh, Fitzgerald y Butler. Los títulos ingleses no equivalen por sí solos a control efectivo sobre la población y el territorio.",
     "evolucion": [
       {
-        "anio": 1166,
-        "texto": "Ruaidrí alcanza la supremacía y Diarmait de Leinster parte al exilio."
-      },
-      {
         "anio": 1169,
-        "texto": "La intervención anglonormanda transforma las guerras entre dinastías irlandesas."
+        "texto": "Comienza la intervención anglonormanda."
       },
       {
-        "anio": 1175,
-        "texto": "El tratado de Windsor intenta ordenar las relaciones entre Enrique II y Ruaidrí."
+        "anio": 1270,
+        "texto": "Áed de Connacht vence en Áth an Chip."
       },
       {
-        "anio": 1542,
-        "texto": "Se establece el título de rey de Irlanda; Conn O’Neill acepta el condado de Tyrone."
+        "anio": 1394,
+        "texto": "La expedición de Ricardo II se enfrenta al poder de Art Mac Murchada."
       },
       {
-        "anio": 1594,
-        "texto": "La guerra de los Nueve Años articula una coalición de poderes gaélicos."
-      },
-      {
-        "anio": 1601,
-        "texto": "La campaña de Kinsale vincula la guerra irlandesa con la intervención española."
+        "anio": 1543,
+        "texto": "Murrough O’Brien intercambia la realeza de Thomond por títulos de la Corona."
       },
       {
         "anio": 1607,
-        "texto": "La Fuga de los Condes precede a las grandes confiscaciones y plantaciones del Ulster."
+        "texto": "La Fuga de los Condes altera el equilibrio del norte."
+      },
+      {
+        "anio": 1642,
+        "texto": "La Confederación organiza un poder católico en el contexto de la rebelión."
+      },
+      {
+        "anio": 1691,
+        "texto": "El tratado de Limerick precede a otra etapa de exilio militar."
       }
     ]
   },
@@ -347,31 +371,35 @@ export default {
     ]
   },
   "Chipre": {
-    "resumen": "El señorío adquirido por Guido de Lusignan se convirtió en reino con la coronación de Amalarico en 1197. La isla fue base de los poderes latinos después de las pérdidas continentales. Regencias, conflictos con Federico II y herencias por línea femenina conectan su sucesión con Jerusalén y Antioquía.",
+    "resumen": "Los Lusignan mantuvieron una monarquía insular conectada con Armenia, Bizancio, Aragón, Borbón y Saboya. La pérdida de Famagusta frente a Génova y el tributo impuesto por los mamelucos limitaron sus recursos. La disputa entre Carlota y Jacobo II y la tutela sobre Catalina Cornaro prepararon la incorporación a Venecia. Los títulos de Jerusalén y Armenia se distinguen del gobierno efectivo de la isla.",
     "evolucion": [
       {
-        "anio": 1192,
-        "texto": "Guido establece su señorío en la isla."
-      },
-      {
         "anio": 1197,
-        "texto": "Amalarico recibe la corona chipriota."
+        "texto": "Amalarico recibe la corona: el anterior señorío se convierte en reino."
       },
       {
-        "anio": 1218,
-        "texto": "La minoría de Enrique I abre una nueva regencia."
+        "anio": 1306,
+        "texto": "Amalarico de Tiro aparta del gobierno a Enrique II."
       },
       {
-        "anio": 1253,
-        "texto": "Plasencia gobierna en nombre de Hugo II."
+        "anio": 1324,
+        "texto": "Hugo IV abre una nueva rama sucesoria."
       },
       {
-        "anio": 1267,
-        "texto": "Hugo III inaugura la rama de Antioquía-Lusignan."
+        "anio": 1373,
+        "texto": "La intervención genovesa culmina en la pérdida de Famagusta."
       },
       {
-        "anio": 1291,
-        "texto": "La pérdida de Acre deja el título de Jerusalén sin capital continental."
+        "anio": 1426,
+        "texto": "La derrota ante los mamelucos impone tributo al reino."
+      },
+      {
+        "anio": 1458,
+        "texto": "Carlota hereda la corona y pronto se enfrenta a Jacobo."
+      },
+      {
+        "anio": 1489,
+        "texto": "Catalina Cornaro abdica y Venecia toma el control."
       }
     ]
   },
