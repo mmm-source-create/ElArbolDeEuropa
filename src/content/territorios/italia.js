@@ -148,23 +148,39 @@ export default {
     ]
   },
   "Nápoles": {
-    "resumen": "La sucesión napolitana estuvo marcada por la rivalidad entre ramas angevinas, la conquista aragonesa y las guerras de Italia. Las pretensiones que conservaron distintas casas no equivalen a un gobierno efectivo.",
+    "resumen": "La separación de 1282 dejó a los Anjou el continente, aunque siguieron llamándose reyes de Sicilia. El cautiverio de Carlos II, las alianzas matrimoniales y las pretensiones sobre la isla marcaron el siglo XIII. Con Juana I, las invasiones húngaras y la pugna entre Anjou y Durazzo convirtieron la sucesión en un conflicto europeo.",
     "evolucion": [
       {
         "anio": 1282,
-        "texto": "Separación política tras las Vísperas Sicilianas"
+        "texto": "Las Vísperas separan el poder continental del insular."
+      },
+      {
+        "anio": 1284,
+        "texto": "La captura de Carlos de Salerno condiciona la sucesión angevina."
+      },
+      {
+        "anio": 1302,
+        "texto": "Caltabellotta reconoce el gobierno vitalicio de Federico en la isla."
+      },
+      {
+        "anio": 1343,
+        "texto": "Juana I hereda de Roberto; su padre había muerto antes."
+      },
+      {
+        "anio": 1348,
+        "texto": "Luis de Hungría invade el reino tras el asesinato de su hermano Andrés."
+      },
+      {
+        "anio": 1382,
+        "texto": "La muerte de Juana deja enfrentadas las ramas de Anjou y Durazzo."
+      },
+      {
+        "anio": 1399,
+        "texto": "Ladislao recupera Nápoles frente a Luis II de Anjou."
       },
       {
         "anio": 1442,
-        "texto": "Alfonso el Magnánimo conquista Nápoles"
-      },
-      {
-        "anio": 1504,
-        "texto": "Consolidación del dominio de Fernando el Católico"
-      },
-      {
-        "anio": 1734,
-        "texto": "Conquista borbónica"
+        "texto": "Alfonso V conquista el reino y reúne las dos coronas bajo un soberano."
       }
     ]
   }
