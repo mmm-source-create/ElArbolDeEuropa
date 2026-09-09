@@ -31,6 +31,7 @@ export function normalizarBusquedaPublica(valor) {
     .normalize("NFD")
     .replace(/[\u0300-\u036f]/g, "")
     .toLowerCase()
+    .replace(/['’‘ʼ]/g, "")
     .replace(/[^a-z0-9]+/g, " ")
     .trim()
     .replace(/\s+/g, " ");
