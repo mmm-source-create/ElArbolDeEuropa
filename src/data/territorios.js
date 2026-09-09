@@ -172,9 +172,12 @@ export const TERRITORIOS = Object.freeze({
     ]
   },
   "Armenia": {
-    "clase": "reino",
-    "naturaleza": "entidad",
-    "componentes": []
+    "clase": "grupo_historico",
+    "naturaleza": "agrupacion",
+    "componentes": [
+      "Armenia cilicia"
+    ],
+    "nota": "Agrupación de navegación. La monarquía medieval del Mediterráneo se consulta en Armenia cilicia; no se confunde con los antiguos reinos del altiplano armenio."
   },
   "Sirmia": {
     "clase": "reino",
@@ -1411,6 +1414,126 @@ export const TERRITORIOS = Object.freeze({
     "componentes": [],
     "desde": 1542,
     "nota": "Título de la nobleza irlandesa creado por Enrique VIII. Se distingue del territorio gaélico de Tír Eoghain y de sus reglas sucesorias."
+  },
+  "Armenia cilicia": {
+    "clase": "reino",
+    "naturaleza": "entidad",
+    "componentes": [],
+    "nota": "Estado armenio del Mediterráneo nororiental. Principado antes de la coronación de 1198 y reino hasta 1375; las dignidades posteriores se registran como títulos nominales.",
+    "desde": 1080,
+    "etapas": [
+      {
+        "desde": 1080,
+        "clase": "principado"
+      },
+      {
+        "desde": 1198,
+        "clase": "reino"
+      }
+    ]
+  },
+  "Thomond": {
+    "clase": "reino",
+    "naturaleza": "entidad",
+    "componentes": [],
+    "nota": "Reino gaélico de los O’Brien. El condado creado en 1543 se registra como entidad distinta para no equiparar sucesión gaélica y nobleza de la Corona."
+  },
+  "Condado de Thomond": {
+    "clase": "condado",
+    "naturaleza": "entidad",
+    "componentes": [],
+    "nota": "Título creado en 1543. La sustitución de la realeza gaélica por el condado no eliminó las disputas por la jefatura de los O’Brien.",
+    "desde": 1543
+  },
+  "Desmond": {
+    "clase": "reino",
+    "naturaleza": "entidad",
+    "componentes": [],
+    "nota": "Reino y posterior señorío gaélico de los MacCarthy. Distinto del condado de los Fitzgerald, aunque ambos poderes actuaran en el sur de Irlanda.",
+    "etapas": [
+      {
+        "desde": 1118,
+        "clase": "reino"
+      },
+      {
+        "desde": 1500,
+        "clase": "señorío"
+      }
+    ]
+  },
+  "Condado de Desmond": {
+    "clase": "condado",
+    "naturaleza": "entidad",
+    "componentes": [],
+    "nota": "Dignidad de los Fitzgerald creada en 1329. No equivale al reino gaélico de Desmond ni a un condado administrativo moderno.",
+    "desde": 1329
+  },
+  "Condado de Clancare": {
+    "clase": "condado",
+    "naturaleza": "entidad",
+    "componentes": [],
+    "nota": "Dignidad concedida a Donal MacCarthy Mór en 1565 dentro de la política de rendición y restitución.",
+    "desde": 1565
+  },
+  "Condado de Ulster": {
+    "clase": "condado",
+    "naturaleza": "entidad",
+    "componentes": [],
+    "nota": "Señorío condal anglonormando vinculado a los Burgh. No representa el dominio efectivo de toda la provincia de Ulster ni sustituye a las entidades gaélicas."
+  },
+  "Kildare": {
+    "clase": "condado",
+    "naturaleza": "entidad",
+    "componentes": [],
+    "nota": "Condado de los Fitzgerald, magnates y representantes de la Corona en Irlanda. El título condal se distingue de sus cargos de gobierno delegado.",
+    "desde": 1316
+  },
+  "Ormond": {
+    "clase": "condado",
+    "naturaleza": "entidad",
+    "componentes": [],
+    "nota": "Patrimonio y títulos de los Butler. La promoción del título en 1642 y 1661 no convirtió sus dominios en un Estado soberano.",
+    "etapas": [
+      {
+        "desde": 1328,
+        "clase": "condado"
+      },
+      {
+        "desde": 1642,
+        "clase": "marquesado"
+      },
+      {
+        "desde": 1661,
+        "clase": "ducado"
+      }
+    ]
+  },
+  "Vizcondado de Mayo": {
+    "clase": "vizcondado",
+    "naturaleza": "entidad",
+    "componentes": [],
+    "nota": "Dignidad concedida a Tibbot na Long Bourke en 1627, distinta del condado administrativo de Mayo y de la antigua jefatura Mac William.",
+    "desde": 1627
+  },
+  "Condado de Tyrconnell": {
+    "clase": "condado",
+    "naturaleza": "entidad",
+    "componentes": [],
+    "nota": "Dignidades concedidas primero a Rory O’Donnell en 1603 y, en una nueva creación, a Richard Talbot en 1685. Se distinguen del señorío gaélico de Tír Chonaill."
+  },
+  "Lucan": {
+    "clase": "condado",
+    "naturaleza": "entidad",
+    "componentes": [],
+    "nota": "Título jacobita creado para Patrick Sarsfield en 1691; no constituye una soberanía territorial efectiva.",
+    "desde": 1691
+  },
+  "Clanricarde": {
+    "clase": "condado",
+    "naturaleza": "entidad",
+    "componentes": [],
+    "nota": "Condado creado para la rama de los Burkes de Connacht en 1543. Sus titulares no son monarcas de Connacht.",
+    "desde": 1543
   }
 });
 
