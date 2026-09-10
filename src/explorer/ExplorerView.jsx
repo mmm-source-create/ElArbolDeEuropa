@@ -1,3 +1,4 @@
+import { responsiveImage } from "../utils/responsiveImage.js";
 import React from "react";
 import { Search, ChevronDown, ChevronRight, ArrowLeft, ArrowRight, ArrowUp, ArrowDown, ZoomIn, ZoomOut, RotateCcw, GitCompare, Focus, Share2, Play, Pause, SkipBack, SkipForward, X, Info, Heart, BookOpen, BarChart3, Scale, Flag, Mail, ExternalLink, Crosshair, Maximize2 } from "lucide-react";
 import { MapaEuropa } from "../MapaEuropa";
@@ -45,7 +46,7 @@ function BioSection({ title, open, onToggle, children }) {
 
 export default function ExplorerView({ vm }) {
   const {
-    scrollRef, nodeRefs, tlScrollRef, tlBarRefs, locale, setLocale, query, setQuery,
+    initialMapViewport, recordMapViewport, timelineVirtual, timelineListRef, scrollRef, tlScrollRef, locale, setLocale, query, setQuery,
     territorios, setTerritorios, dinastias, setDinastias, dinastiasExpandidas, setDinastiasExpandidas, territoriosExpandidos, setTerritoriosExpandidos,
     titulos, setTitulos, siglos, setSiglos, relaciones, setRelaciones, hovered, setHovered,
     seleccion, setSeleccion, currentSearchIndex, setCurrentSearchIndex, zoom, setZoom, mode, setMode,
@@ -71,7 +72,7 @@ export default function ExplorerView({ vm }) {
     onPointerMove, endDrag, centerOn, pendingZoomCenterRef, cambiarZoomArbol, centerOnTimeline, seleccionarPersonaPorId, navegarHistorialPersona, centrarSeleccion, cerrarSeleccion,
     centerTimelineOnYear, alternarFavorito, seleccionarEvento, aplicarPasoHistoria, iniciarHistoria, cambiarPasoHistoria, salirHistoria, mostrarEstadoCompartir,
     construirEnlaceCompartido, compartirPersona, handleBoxClick, getBoxHandlers, renderPersonBox, miniW, miniScaleX, miniScaleY,
-    onMinimapClick, filtrosActivosCompactos, cambiarIdioma, atlasContextLabel,
+    onMinimapClick, filtrosActivosCompactos, cambiarIdioma,
   } = vm;
   const filtrosCompactosVisibles = filtrosActivosCompactos.slice(0, 6);
   const filtrosCompactosRestantes = Math.max(0, filtrosActivosCompactos.length - filtrosCompactosVisibles.length);
@@ -80,8 +81,9 @@ export default function ExplorerView({ vm }) {
     ? personHistory.ids[personHistory.index + 1]
     : null;
   return (
+    <>
+      {!modoTrabajo && <SiteHeader variant="atlas" locale={locale} onLanguageChange={cambiarIdioma} />}
     <div className={`wrap${modoTrabajo ? " atlas-work-mode" : ""}`}>
-      {!modoTrabajo && <SiteHeader variant="atlas" locale={locale} onLanguageChange={cambiarIdioma} contextLabel={atlasContextLabel} />}
       <div className={`workspace-topbar${modoTrabajo ? " is-work-mode" : ""}`}>
         <section className="workspace-topbar-section workspace-toolbar-search">
           <div className="toolbar-label">Búsqueda</div>
@@ -330,10 +332,6 @@ export default function ExplorerView({ vm }) {
                   </div>
                 )}
               </div>
-              <button type="button" className={`nav-btn nav-btn-wide${historiaActiva ? " active" : ""}`} onClick={() => setInfoProyecto("historias")}>
-                <BookOpen size={12} /> Historias
-              </button>
-              <a className="nav-btn nav-btn-wide" href="/es/desafio">Desafío</a>
               <div className="favorites-control" ref={favoritosMenuRef}>
                 <button type="button" className={`nav-btn nav-btn-wide${favoritosOpen || soloFavoritos ? " active" : ""}`} onClick={() => setFavoritosOpen((actual) => !actual)} aria-haspopup="menu" aria-expanded={favoritosOpen}>
                   <span className="favorite-star-symbol" aria-hidden="true">★</span> Favoritos {favoritos.length ? `(${favoritos.length})` : ""}
@@ -770,6 +768,8 @@ export default function ExplorerView({ vm }) {
           {mostrarMapa && (
             <section className="workspace-stage workspace-map-stage" aria-label="Mapa de territorios">
               <MapaEuropa
+                initialViewport={initialMapViewport}
+                onViewportChange={recordMapViewport}
                 seleccion={seleccion}
                 anioGlobal={anioGlobal}
                 onSelectTerritorio={(idRegion) => console.log("ID pulsado:", idRegion)}
@@ -877,7 +877,7 @@ export default function ExplorerView({ vm }) {
                         <div className="bio-portrait-frame">
                           <img
                             className="bio-portrait-image"
-                            src={imagen.archivo}
+                            {...responsiveImage(imagen.archivo, "300px")}
                             alt={imagen.alt || `Retrato de ${personaBio.nombre}`}
                             loading="lazy"
                             decoding="async"
@@ -1090,14 +1090,15 @@ export default function ExplorerView({ vm }) {
                     )}
 
                     {timelineMode === "eventos" ? (
-                      <div className="tl-list tl-event-list">
-                        {eventosOrdenados.map((evento) => {
+                      <div className="tl-list tl-event-list" ref={timelineListRef} style={{ position: "relative", height: timelineVirtual.total }}>
+                        {timelineVirtual.visible.map((row) => {
+                          const evento = row.item;
                           const inicio = inicioEvento(evento);
                           const fin = finEvento(evento);
                           const esPeriodo = Number.isFinite(evento.desde) && Number.isFinite(evento.hasta) && evento.hasta > evento.desde;
                           const activoEnAnio = Number.isFinite(anioGlobal) && anioGlobal >= inicio && anioGlobal <= fin;
                           return (
-                            <div key={evento.id} className={`tl-row tl-event-row${eventoSeleccionadoId === evento.id ? " selected" : ""}${activoEnAnio ? " year-active" : ""}`} onClick={() => seleccionarEvento(evento)} role="button" tabIndex={0} onKeyDown={(event) => { if (event.key === "Enter" || event.key === " ") { event.preventDefault(); seleccionarEvento(evento); } }}>
+                            <div key={evento.id} ref={timelineVirtual.rowRef(row.key)} data-timeline-key={row.key} style={{ position: "absolute", top: row.start, left: 0, width: "100%" }} className={`tl-row tl-event-row${eventoSeleccionadoId === evento.id ? " selected" : ""}${activoEnAnio ? " year-active" : ""}`} onClick={() => seleccionarEvento(evento)} role="button" tabIndex={0} onKeyDown={(event) => { if (event.key === "Enter" || event.key === " ") { event.preventDefault(); seleccionarEvento(evento); } }}>
                               <div className="tl-sticky-col">
                                 <div className="name">{evento.titulo}</div>
                                 <div className="meta">{etiquetaFechaEvento(evento)} · {evento.categoria}</div>
@@ -1114,11 +1115,9 @@ export default function ExplorerView({ vm }) {
                         })}
                       </div>
                     ) : (
-                      <div className="tl-list">
-                        {visiblePeople
-                          .slice()
-                          .sort((a, b) => (anioInicioPersona(a) ?? Infinity) - (anioInicioPersona(b) ?? Infinity) || a.nombre.localeCompare(b.nombre, "es"))
-                          .map((persona) => {
+                      <div className="tl-list" ref={timelineListRef} style={{ position: "relative", height: timelineVirtual.total }}>
+                        {timelineVirtual.visible.map((row) => {
+                            const persona = row.item;
                             const inicio = anioInicioPersona(persona);
                             const fin = anioFinPersona(persona);
                             const tieneFecha = Number.isFinite(inicio) && Number.isFinite(fin);
@@ -1128,6 +1127,9 @@ export default function ExplorerView({ vm }) {
                             return (
                               <div
                                 key={persona.id}
+                                ref={timelineVirtual.rowRef(row.key)}
+                                data-timeline-key={row.key}
+                                style={{ position: "absolute", top: row.start, left: 0, width: "100%" }}
                                 className={`tl-row ${seleccion?.id === persona.id ? "selected " : ""}${hovered === persona.id ? "hovered" : ""}${estadoAnio}${historiaPersonasSet.has(persona.id) ? " story-related" : ""}`}
                                 onMouseEnter={() => setHovered(persona.id)}
                                 onMouseLeave={() => setHovered(null)}
@@ -1140,7 +1142,7 @@ export default function ExplorerView({ vm }) {
                                   <div className="name">{persona.nombre}</div>
                                   <div className="meta">{persona.titulo} · {(persona.reinos || []).join(" · ")} · {persona.dinastia}</div>
                                 </div>
-                                <div className="tl-track" style={{ height: trackHeight }} ref={(element) => { if (element) tlBarRefs.current[persona.id] = element; else delete tlBarRefs.current[persona.id]; }}>
+                                <div className="tl-track" style={{ height: trackHeight }}>
                                   {tieneFecha ? (
                                     <div className="tl-bar" style={{ left: `${pct(inicio)}%`, width: `${Math.max((pct(fin) ?? 0) - (pct(inicio) ?? 0), 0.35)}%`, backgroundColor: ACCENTS[persona.dinastia] || ACCENTS[getCategoriaDinastía(persona.dinastia)] || "#71717A" }} title={`${formatoFechas(persona)} (vida)`} />
                                   ) : <span className="tl-unknown">Fechas no precisadas</span>}
@@ -1206,5 +1208,6 @@ export default function ExplorerView({ vm }) {
 
       <ModalProyecto seccion={infoProyecto} onClose={() => setInfoProyecto(null)} persona={seleccion} personasVista={visiblePeople} onStartHistoria={iniciarHistoria} />
     </div>
+    </>
   );
 }
