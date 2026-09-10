@@ -1,3 +1,4 @@
+import "../App.css";
 import React, { useEffect } from "react";
 import { PERSONAS } from "../personas.jsx";
 import SiteHeader from "../components/SiteHeader.jsx";
