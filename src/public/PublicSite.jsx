@@ -1,3 +1,4 @@
+import { SOURCE_SECTIONS } from "../content/sources.js";
 import React, { useEffect, useMemo, useState } from "react";
 import {
   ArrowLeft,
@@ -20,8 +21,11 @@ import { IMAGENES_PERSONAS } from "../imagenesPersonas.js";
 import SITE_META from "../generated/siteMeta.json";
 import SiteHeader from "../components/SiteHeader.jsx";
 import SiteFooter from "../components/SiteFooter.jsx";
-import { biografiaPublicaPersona, etiquetaClaseGobierno, slugPublico, textoBusquedaPersona } from "../utils/personPresentation.js";
+import { etiquetaClaseGobierno, slugPublico, textoBusquedaPersona, normalizarBusquedaPublica } from "../utils/personLabels.js";
+import HOME_DATA from "../generated/home.json";
+import { loadJsonAsset } from "../utils/loadAsset.js";
 import "./public.css";
+import { responsiveImage } from "../utils/responsiveImage.js";
 
 const PUBLIC_SITE_URL = String(import.meta.env.VITE_SITE_URL || "https://www.treeofeurope.eu").replace(/\/+$/, "");
 const BUILD_VERSION = String(SITE_META.buildVersion || SITE_META.personCount || "v2");
@@ -113,11 +117,7 @@ export function useJson(path) {
   useEffect(() => {
     let cancelled = false;
     setState({ loading: true, data: null, error: false });
-    fetch(`${path}?v=${encodeURIComponent(BUILD_VERSION)}`, { credentials: "same-origin", cache: "no-store" })
-      .then((response) => {
-        if (!response.ok) throw new Error(`HTTP ${response.status}`);
-        return response.json();
-      })
+    loadJsonAsset(`${path}?v=${encodeURIComponent(BUILD_VERSION)}`)
       .then((data) => { if (!cancelled) setState({ loading: false, data, error: false }); })
       .catch(() => { if (!cancelled) setState({ loading: false, data: null, error: true }); });
     return () => { cancelled = true; };
@@ -148,7 +148,7 @@ function PersonaMiniCard({ persona, compact = false }) {
   return (
     <a className={`public-person-card${compact ? " is-compact" : ""}`} href={rutaEntidad("persona", persona.slug)}>
       {image ? (
-        <span className="public-person-thumb"><img src={image.archivo} alt="" loading="lazy" decoding="async" style={{ objectPosition: image.encuadre || image.posicion || "50% 20%" }} /></span>
+        <span className="public-person-thumb"><img {...responsiveImage(image.archivo, compact ? "44px" : "58px")} alt="" loading="lazy" decoding="async" style={{ objectPosition: image.encuadre || image.posicion || "50% 20%" }} /></span>
       ) : (
         <span className="public-person-thumb is-placeholder"><Crown size={18} /></span>
       )}
@@ -162,19 +162,14 @@ function PersonaMiniCard({ persona, compact = false }) {
   );
 }
 
-function HomeLoading() {
-  return <main className="public-main"><div className="public-loading">Preparando el atlas…</div></main>;
-}
-
 export function HomePage({ onEnterAtlas, onOpenPanel }) {
-  const { data, loading, error } = useJson("/catalogos/home.json");
+  const data = HOME_DATA;
   usePublicMeta({
     title: "El Árbol de Europa | Atlas genealógico e histórico interactivo",
     description: "Explora personas, dinastías, parentescos, reinados, territorios e historias de la Europa medieval y moderna.",
     path: "/es/",
   });
 
-  if (loading) return <PublicLayout><HomeLoading /></PublicLayout>;
   const stats = data?.stats || {};
   return (
     <PublicLayout>
@@ -235,7 +230,6 @@ export function HomePage({ onEnterAtlas, onOpenPanel }) {
           </div>
         </section>
 
-        {error && <div className="public-inline-warning">Algunos contadores no se han podido cargar, pero el atlas sigue disponible.</div>}
       </main>
     </PublicLayout>
   );
@@ -266,29 +260,7 @@ const INFO_PAGES = {
     eyebrow: "Fuentes y metodología",
     title: "Cómo se construye la base",
     description: "Repertorios genealógicos, biografías académicas, archivos e instituciones utilizados para contrastar la información.",
-    sections: [
-      { title: "Repertorios principales", links: [
-        ["Foundation for Medieval Genealogy · MedLands", "https://fmg.ac/Projects/MedLands/index.htm"],
-        ["Deutsche Biographie", "https://www.deutsche-biographie.de/"],
-        ["Treccani", "https://www.treccani.it/"],
-        ["Encyclopaedia Britannica", "https://www.britannica.com/"],
-        ["Wikipedia", "https://en.wikipedia.org/"]
-      ], paragraphs: ["Wikipedia se utiliza como herramienta auxiliar de localización, cronología y orientación bibliográfica; los datos sensibles o dudosos se contrastan siempre que es posible con fuentes más especializadas."]},
-      { title: "Archivos e instituciones", links: [
-        ["Historia Hispánica · Real Academia de la Historia", "https://historia-hispanica.rah.es/"],
-        ["PARES · Portal de Archivos Españoles", "https://pares.mcu.es/"],
-        ["Biblioteca Digital · Real Academia de la Historia", "https://bibliotecadigital.rah.es/"],
-        ["Casa Real de Suecia", "https://www.kungahuset.se/english/the-monarchy-of-sweden"],
-        ["Casa Real de Dinamarca", "https://www.kongehuset.dk/en"],
-        ["Royal House of the Netherlands", "https://www.royal-house.nl/"],
-        ["Burg Hohenzollern", "https://burg-hohenzollern.com/en/"],
-        ["MuseoTorino", "https://www.museotorino.it/"]
-      ]},
-      { title: "Criterios de trabajo", paragraphs: [
-        "Cuando una filiación, una fecha o un reinado es discutido, se contrasta el dato con varias referencias antes de incorporarlo.",
-        "Las fechas se almacenan normalmente a nivel de año. Los territorios del mapa son una representación histórica simplificada y dependen de los límites disponibles en la base cartográfica."
-      ]},
-    ],
+    sections: SOURCE_SECTIONS,
   },
   licencias: {
     icon: Scale,
@@ -373,9 +345,9 @@ export function CatalogPage({ tipo }) {
   const [query, setQuery] = useState("");
   const items = Array.isArray(data?.items) ? data.items : [];
   const filtrados = useMemo(() => {
-    const q = query.trim().toLocaleLowerCase("es");
+    const q = normalizarBusquedaPublica(query);
     if (!q) return items;
-    return items.filter((item) => textoCatalogoItem(item, tipo).toLocaleLowerCase("es").includes(q));
+    return items.filter((item) => normalizarBusquedaPublica(textoCatalogoItem(item, tipo)).includes(q));
   }, [items, query, tipo]);
   const visibles = tipo === "personas" ? filtrados.slice(0, query.trim() ? 200 : 120) : filtrados;
   usePublicMeta({
@@ -438,7 +410,7 @@ function Portrait({ persona }) {
   const zoom = Number.isFinite(image.zoom) && image.zoom > 0 ? image.zoom : 1;
   return (
     <figure className="public-portrait">
-      <div className="public-portrait-frame"><img src={image.archivo} alt={image.alt || `Retrato de ${persona.nombre}`} decoding="async" style={{ objectPosition, transform: `scale(${zoom})`, transformOrigin: objectPosition }} /></div>
+      <div className="public-portrait-frame"><img {...responsiveImage(image.archivo, "(max-width: 680px) 280px, 320px")} alt={image.alt || `Retrato de ${persona.nombre}`} decoding="async" style={{ objectPosition, transform: `scale(${zoom})`, transformOrigin: objectPosition }} /></div>
       <figcaption><strong>{image.tipo}</strong><span>{image.obra}</span><span>{image.autor}{image.fecha ? ` · ${image.fecha}` : ""}</span>{image.institucion && <span>{image.institucion}</span>}<small>{image.derechos}{image.fuenteUrl && <> · <a href={image.fuenteUrl} target="_blank" rel="noreferrer">Fuente <ExternalLink size={10} /></a></>}</small></figcaption>
     </figure>
   );
@@ -479,7 +451,7 @@ export function PersonPage({ slug, legacyId, onExplore }) {
   }, [slug, legacyId]);
 
   const persona = state.persona;
-  const description = persona ? biografiaPublicaPersona(persona).replace(/\s+/g, " ").trim().slice(0, 155) : "Ficha histórica en El Árbol de Europa.";
+  const description = persona ? (persona.biografia || persona.resumen || "").replace(/\s+/g, " ").trim().slice(0, 155) : "Ficha histórica en El Árbol de Europa.";
   usePublicMeta({ title: persona ? `${persona.nombre} — El Árbol de Europa` : "Persona — El Árbol de Europa", description, path: `/es/persona/${encodeURIComponent(resolvedSlug || slug || "persona")}` });
 
   if (state.loading) return <PublicLayout><main className="public-main"><div className="public-loading">Preparando ficha histórica…</div></main></PublicLayout>;
@@ -495,7 +467,7 @@ export function PersonPage({ slug, legacyId, onExplore }) {
               <span>El Árbol de Europa · Persona</span>
               <h1>{persona.nombre}</h1>
               {persona.sobrenombre && <div className="public-person-nickname">«{persona.sobrenombre}»</div>}
-              <p>{biografiaPublicaPersona(persona)}</p>
+              <p>{(persona.biografia || persona.resumen || "")}</p>
               <div className="public-person-badges"><span>{textoFechas(persona)}</span>{persona.titulo && <span>{persona.titulo}</span>}{persona.dinastia && <a href={rutaEntidad("dinastia", slugPublico(persona.dinastia))}>{persona.dinastia}</a>}</div>
               <div className="public-person-actions"><button className="public-primary" type="button" onClick={onExplore}>Abrir en el atlas interactivo <ArrowRight size={15} /></button><a className="public-secondary" href="/es/personas"><ArrowLeft size={14} /> Volver a personas</a></div>
             </div>
@@ -507,6 +479,8 @@ export function PersonPage({ slug, legacyId, onExplore }) {
 
             <section className="public-content-card"><span>Red familiar</span><h2>Relaciones documentadas</h2><RelationList label="Padres" items={persona.padres} /><RelationList label={persona.conyuges?.length > 1 ? "Cónyuges" : "Cónyuge"} items={persona.conyuges} /><RelationList label="Hijos/as" items={persona.hijos} />{!persona.padres?.length && !persona.conyuges?.length && !persona.hijos?.length && <p className="public-muted">No hay relaciones directas cargadas para esta persona.</p>}</section>
           </div>
+
+          {!!persona.fuentes?.length && <section className="public-content-card"><span>Documentación</span><h2>Fuentes de esta ficha</h2><ul>{persona.fuentes.map(fuente => <li key={fuente.url}><a href={fuente.url} target="_blank" rel="noreferrer">{fuente.titulo}</a></li>)}</ul><p className="public-muted">Referencias biográficas y de contexto. <a href="/es/fuentes">Consultar metodología y bibliografía completa</a>.</p></section>}
 
           {!!persona.historias?.length && <section className="public-section public-person-section"><div className="public-section-heading"><div><span>Historias relacionadas</span><h2>Aparece en estos recorridos</h2></div></div><div className="public-story-grid">{persona.historias.map((h) => <a key={h.id} className="public-story-card" href={rutaEntidad("historia", h.slug)}><span>Historia</span><h3>{h.titulo}</h3><p>{h.subtitulo}</p><b>Comenzar <ArrowRight size={13} /></b></a>)}</div></section>}
 

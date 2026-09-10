@@ -3,7 +3,7 @@ import Sucesion from '../explorer/Sucesion.jsx';
 import {useJson,usePublicMeta} from './PublicSite.jsx';
 import SiteHeader from '../components/SiteHeader.jsx';
 import SiteFooter from '../components/SiteFooter.jsx';
-import {slugPublico} from '../utils/personPresentation.js';
+import {slugPublico} from '../utils/personLabels.js';
 import './public.css';
 const claseTexto=c=>String(c||'Territorio').replaceAll('_',' ');
 export function TerritoryPage({slug}) {
