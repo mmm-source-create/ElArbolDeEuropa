@@ -1,0 +1,21 @@
+# El Árbol de Europa
+
+> Atlas de genealogía histórica en español: personas, dinastías, gobiernos y relaciones políticas de la Europa medieval y moderna, con especial atención a 1200–1800.
+
+La base sigue ampliándose. Las fichas muestran fechas, parentescos y gobiernos registrados; la ausencia de un dato no implica su inexistencia histórica. Los títulos nominales y las pretensiones se distinguen del gobierno efectivo. La cartografía es una representación simplificada.
+
+## Explorar
+
+- [Portada](https://treeofeurope.eu/es/): presentación y selección de personajes.
+- [Atlas interactivo](https://treeofeurope.eu/es/?atlas=1): árbol genealógico, mapa y cronología.
+- [Personas](https://treeofeurope.eu/es/personas): catálogo de fichas biográficas y relaciones familiares.
+- [Dinastías](https://treeofeurope.eu/es/dinastias): familias y ramas dinásticas.
+- [Territorios](https://treeofeurope.eu/es/territorios): contexto histórico, gobiernos y sucesiones; distingue entidades históricas y agrupaciones.
+- [Historias](https://treeofeurope.eu/es/historias): recorridos temáticos disponibles.
+
+## Documentación
+
+- [Fuentes y metodología](https://treeofeurope.eu/es/fuentes): bibliografía general, referencias de las ampliaciones y criterios de interpretación.
+- [El proyecto](https://treeofeurope.eu/es/proyecto): ámbito y objetivos.
+- [Licencias](https://treeofeurope.eu/es/licencias): derechos del proyecto, imágenes y cartografía de terceros.
+- [Mapa del sitio](https://treeofeurope.eu/sitemap.xml): páginas públicas para localizar fichas concretas.
