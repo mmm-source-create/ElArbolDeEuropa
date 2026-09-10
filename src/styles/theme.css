@@ -34,14 +34,6 @@
   box-sizing: border-box;
 }
 
-.site-header.is-atlas {
-  position: relative;
-  min-height: 66px;
-  margin: -12px -24px 12px;
-  padding: 10px 24px;
-  grid-template-columns: minmax(220px, .9fr) minmax(240px, 1.2fr) minmax(130px, .9fr);
-  background: rgba(251, 247, 236, .94);
-}
 
 .site-brand {
   display: inline-flex;
@@ -75,8 +67,7 @@
 }
 .site-nav a,
 .site-language a,
-.site-language button,
-.site-atlas-context a {
+.site-language button {
   border: 0;
   background: transparent;
   color: #665D4F;
@@ -88,34 +79,9 @@
 .site-nav a { padding: 7px 9px; border-radius: var(--eade-radius-sm); }
 .site-nav a:hover,
 .site-language a:hover,
-.site-language button:hover,
-.site-atlas-context a:hover { color: var(--eade-wine); }
+.site-language button:hover { color: var(--eade-wine); }
 .site-nav a:hover { background: #EEE5D3; }
 
-.site-atlas-context {
-  min-width: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 7px;
-  color: var(--eade-muted-soft);
-  font-family: var(--eade-sans);
-  font-size: 9.5px;
-  white-space: nowrap;
-}
-.site-atlas-context strong {
-  max-width: min(420px, 44vw);
-  overflow: hidden;
-  text-overflow: ellipsis;
-  color: var(--eade-ink);
-  font-weight: 750;
-}
-.site-atlas-context > span:first-of-type {
-  color: var(--eade-gold);
-  font-weight: 800;
-  letter-spacing: .6px;
-  text-transform: uppercase;
-}
 
 .site-language {
   justify-self: end;
@@ -197,16 +163,20 @@
 @media (max-width: 860px) {
   .site-header { grid-template-columns: 1fr auto; gap: 10px; }
   .site-nav { grid-column: 1 / -1; order: 3; justify-content: flex-start; overflow-x: auto; padding-top: 4px; }
-  .site-header.is-atlas { grid-template-columns: 1fr auto; }
-  .site-header.is-atlas .site-atlas-context { grid-column: 1 / -1; order: 3; justify-content: flex-start; }
-  .site-brand-copy small { display: none; }
+    .site-brand-copy small { display: none; }
 }
 
 @media (max-width: 620px) {
   .site-header { padding-inline: 14px; }
   .site-brand-copy strong { font-size: 17px; }
-  .site-header.is-atlas { margin-inline: -14px; padding-inline: 14px; }
-  .site-footer-inner,
+    .site-footer-inner,
   .site-footer.is-compact .site-footer-inner { grid-template-columns: 1fr; }
   .site-footer-meta { align-items: flex-start; flex-direction: column; }
+}
+
+.site-nav { flex-wrap: wrap; }
+.site-nav a[aria-current="page"] { text-decoration: underline; text-underline-offset: 4px; }
+
+@media (max-width: 760px) {
+  .site-footer.is-compact { margin: 16px -12px -12px; padding-inline: 12px; }
 }
