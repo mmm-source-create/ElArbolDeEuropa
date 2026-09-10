@@ -90,7 +90,7 @@ function viewBoxString(box) {
 // El mapa solo reacciona al CLIC (a `seleccion`), no al hover. El movimiento
 // y el zoom alteran únicamente el viewBox del SVG: no interfieren con el
 // coloreado imperativo de los territorios.
-export function MapaEuropa({ seleccion, anioGlobal = null, onSelectTerritorio }) {
+export function MapaEuropa({ seleccion, anioGlobal = null, onSelectTerritorio, initialViewport = null, onViewportChange }) {
   const containerRef = useRef(null);
   const svgInyectadoRef = useRef(false);
   const pintadosRef = useRef(new Set());
@@ -122,6 +122,7 @@ export function MapaEuropa({ seleccion, anioGlobal = null, onSelectTerritorio })
 
     const original = parseViewBox(svg);
     const initial = clampViewBox(initialViewBox(original), original);
+    const restored = initialViewport ? clampViewBox(initialViewport, original) : initial;
     originalViewBoxRef.current = original;
     initialViewBoxRef.current = initial;
 
@@ -132,12 +133,16 @@ export function MapaEuropa({ seleccion, anioGlobal = null, onSelectTerritorio })
     svg.style.height = "100%";
     svg.style.display = "block";
     svg.style.transform = "none";
-    svg.setAttribute("viewBox", viewBoxString(initial));
-    setViewBox(initial);
+    svg.setAttribute("viewBox", viewBoxString(restored));
+    setViewBox(restored);
     setMapReady(true);
     }).catch(() => { if (!cancelled) setMapError(true); });
     return () => { cancelled = true; };
   }, [mapAttempt]);
+
+  useEffect(() => {
+    if (viewBox) onViewportChange?.(viewBox);
+  }, [viewBox, onViewportChange]);
 
   useEffect(() => {
     const svg = containerRef.current?.querySelector("svg");

@@ -1,9 +1,10 @@
+import "./App.css";
 import React, { useState, useRef, useEffect, useLayoutEffect, useCallback, useMemo } from "react";
 import {
   TERRITORIOS_SUB,
   TERRITORIOS_DESTACADOS,
   territorioCoincideConFiltro,
-  reinadosActivos,
+  reinadosActivos, listaReinados,
 } from "./Territorios";
 import { PERSONAS } from "./personas.jsx";
 import { EVENTOS_HISTORICOS, HISTORIAS } from "./historiaData.jsx";
@@ -26,12 +27,17 @@ import {
   rutasDeComparacion, computeParentGroups,
 } from "./explorer/relationshipGraph.js";
 import {
-  siglo, nRomano, nombrePrincipal, TL_MIN, TL_MAX, inicioEvento, finEvento, nivelTimelineEvento,
+  siglo, nRomano, nombrePrincipal, TL_MIN, TL_MAX, inicioEvento, finEvento, nivelTimelineEvento, anioInicioPersona, anioFinPersona,
 } from "./explorer/timelineUtils.js";
 import { PersonBox } from "./explorer/ExplorerPrimitives.jsx";
 import ExplorerView from "./explorer/ExplorerView.jsx";
 import { useTreeViewport } from "./explorer/useTreeViewport.js";
 import { intersectsViewport } from "./explorer/treeViewport.js";
+import { useVirtualRows } from "./explorer/useVirtualRows.js";
+import { useViewportTask } from "./explorer/useViewportTask.js";
+import { centeredScroll } from "./explorer/virtualRows.js";
+import { readAtlasSession, shouldResumeAtlas } from "./explorer/atlasSession.js";
+import { useAtlasSession } from "./explorer/useAtlasSession.js";
 
 const SEARCH_TEXT_BY_ID = Object.fromEntries(PERSONAS.map(persona => [persona.id, normalizaTexto([textoBusquedaPersona(persona), nombrePrincipal(persona)].join(" "))]));
 
@@ -67,43 +73,51 @@ function leerLayoutAtlas() {
 }
 
 export default function Explorer({ initialPanel = null, treeBase: TREE_BASE }) {
+  const [savedSession] = useState(() => {
+    try { return shouldResumeAtlas(window.location.href) ? readAtlasSession(window.sessionStorage) : null; }
+    catch { return null; }
+  });
+  const restoringSession = useRef(Boolean(savedSession));
+  const initialSearchSignature = useRef(undefined);
+  const mapViewportRef = useRef(savedSession?.mapViewport || null);
+  const recordMapViewport = useCallback(viewport => { mapViewportRef.current = viewport; }, []);
   const scrollRef = useRef(null);
-  const nodeRefs = useRef({});
   const tlScrollRef = useRef(null);
-  const tlBarRefs = useRef({});
+  const timelineListRef = useRef(null);
   const [locale, setLocale] = useState(() => {
     if (typeof window === "undefined") return DEFAULT_LOCALE;
     return localeDesdePath(window.location.pathname);
   });
-  const [query, setQuery] = useState("");
-  const [territorios, setTerritorios] = useState([]);
-  const [dinastias, setDinastias] = useState([]);
-  const [dinastiasExpandidas, setDinastiasExpandidas] = useState([]);
-  const [territoriosExpandidos, setTerritoriosExpandidos] = useState([]);
-  const [titulos, setTitulos] = useState([]);
-  const [siglos, setSiglos] = useState([]);
-  const [relaciones, setRelaciones] = useState([]);
+  const [query, setQuery] = useState(savedSession?.query ?? "");
+  const [territorios, setTerritorios] = useState(savedSession?.territorios ?? []);
+  const [dinastias, setDinastias] = useState(savedSession?.dinastias ?? []);
+  const [dinastiasExpandidas, setDinastiasExpandidas] = useState(savedSession?.dinastiasExpandidas ?? []);
+  const [territoriosExpandidos, setTerritoriosExpandidos] = useState(savedSession?.territoriosExpandidos ?? []);
+  const [titulos, setTitulos] = useState(savedSession?.titulos ?? []);
+  const [siglos, setSiglos] = useState(savedSession?.siglos ?? []);
+  const [relaciones, setRelaciones] = useState(savedSession?.relaciones ?? []);
   const [hovered, setHovered] = useState(null);
-  const [seleccion, setSeleccion] = useState(null);
-  const [currentSearchIndex, setCurrentSearchIndex] = useState(-1);
-  const [zoom, setZoom] = useState(0.8);
-  const [mode, setMode] = useState("view");
-  const [origen, setOrigen] = useState(null);
-  const [destino, setDestino] = useState(null);
-  const [modoComparacion, setModoComparacion] = useState("corto");
+  const [seleccion, setSeleccion] = useState(() => BY_ID[savedSession?.selectedId] || null);
+  const [currentSearchIndex, setCurrentSearchIndex] = useState(savedSession?.currentSearchIndex ?? -1);
+  const [zoom, setZoom] = useState(savedSession?.zoom ?? 0.8);
+  const [mode, setMode] = useState(savedSession?.mode ?? "view");
+  const [origen, setOrigen] = useState(savedSession?.origen ?? null);
+  const [destino, setDestino] = useState(savedSession?.destino ?? null);
+  const [modoComparacion, setModoComparacion] = useState(savedSession?.modoComparacion ?? "corto");
   const [compareMenuOpen, setCompareMenuOpen] = useState(false);
   const [compareRouteIndex, setCompareRouteIndex] = useState(0);
   const [focoMenuOpen, setFocoMenuOpen] = useState(false);
-  const [focoId, setFocoId] = useState(null);
-  const [focoAlcance, setFocoAlcance] = useState("cercana");
-  const [anioGlobal, setAnioGlobal] = useState(null);
-  const [anioInput, setAnioInput] = useState("");
+  const [focoId, setFocoId] = useState(savedSession?.focoId ?? null);
+  const [focoAlcance, setFocoAlcance] = useState(savedSession?.focoAlcance ?? "cercana");
+  const [anioGlobal, setAnioGlobal] = useState(savedSession?.anioGlobal ?? null);
+  const [anioInput, setAnioInput] = useState(savedSession?.anioGlobal != null ? String(savedSession.anioGlobal) : "");
   const [reproduciendoHistoria, setReproduciendoHistoria] = useState(false);
   const [velocidadHistoria, setVelocidadHistoria] = useState(5);
   const [shareStatus, setShareStatus] = useState("");
-  const [collapsedIds, setCollapsedIds] = useState([]);
-  const [vistasActivas, setVistasActivas] = useState({ arbol: true, mapa: true });
+  const [collapsedIds, setCollapsedIds] = useState(savedSession?.collapsedIds ?? []);
+  const [vistasActivas, setVistasActivas] = useState(savedSession?.vistasActivas ?? { arbol: true, mapa: true });
   const [panelesVisibles, setPanelesVisibles] = useState(() => {
+    if (savedSession) return savedSession.panelesVisibles;
     const base = { filtros: true, biografia: true, cronologia: true };
     if (typeof window === "undefined") return base;
     try {
@@ -141,12 +155,12 @@ export default function Explorer({ initialPanel = null, treeBase: TREE_BASE }) {
       typeof guardado[key] === "boolean" ? guardado[key] : value,
     ]));
   });
-  const [personHistory, setPersonHistory] = useState({ ids: [], index: -1 });
+  const [personHistory, setPersonHistory] = useState(savedSession?.personHistory ?? { ids: [], index: -1 });
   const [modoTrabajo, setModoTrabajo] = useState(false);
   const [infoProyecto, setInfoProyecto] = useState(initialPanel);
-  const [timelineScaleIndex, setTimelineScaleIndex] = useState(1);
-  const [timelineMode, setTimelineMode] = useState("personas");
-  const [eventoSeleccionadoId, setEventoSeleccionadoId] = useState(null);
+  const [timelineScaleIndex, setTimelineScaleIndex] = useState(Math.min(TIMELINE_SCALES.length - 1, savedSession?.timelineScaleIndex ?? 1));
+  const [timelineMode, setTimelineMode] = useState(savedSession?.timelineMode ?? "personas");
+  const [eventoSeleccionadoId, setEventoSeleccionadoId] = useState(savedSession?.eventoSeleccionadoId ?? null);
   const [favoritos, setFavoritos] = useState(() => {
     if (typeof window === "undefined") return [];
     try {
@@ -157,15 +171,15 @@ export default function Explorer({ initialPanel = null, treeBase: TREE_BASE }) {
     }
   });
   const [favoritosOpen, setFavoritosOpen] = useState(false);
-  const [soloFavoritos, setSoloFavoritos] = useState(false);
-  const [historiaActivaId, setHistoriaActivaId] = useState(null);
-  const [historiaPasoIndex, setHistoriaPasoIndex] = useState(0);
+  const [soloFavoritos, setSoloFavoritos] = useState(savedSession?.soloFavoritos ?? false);
+  const [historiaActivaId, setHistoriaActivaId] = useState(savedSession?.historiaActivaId ?? null);
+  const [historiaPasoIndex, setHistoriaPasoIndex] = useState(savedSession?.historiaPasoIndex ?? 0);
   const compareMenuRef = useRef(null);
   const focoMenuRef = useRef(null);
   const favoritosMenuRef = useRef(null);
-  const historiaSnapshotRef = useRef(null);
+  const historiaSnapshotRef = useRef(savedSession?.historiaSnapshot || null);
   const shareStatusTimerRef = useRef(null);
-  const urlStateLoadedRef = useRef(false);
+  const urlStateLoadedRef = useRef(Boolean(savedSession));
   const historyPopRef = useRef(false);
   const dragState = useRef(null);
   const workspaceGridRef = useRef(null);
@@ -801,6 +815,12 @@ export default function Explorer({ initialPanel = null, treeBase: TREE_BASE }) {
   };
 
   const visiblePeople = useMemo(() => PERSONAS.filter(matches), [hiddenByCollapse, focoSet, soloFavoritos, favoritosSet, territorios, dinastias, titulos, siglos, relaciones, opciones.otrasDinastias]);
+  const timelineRows = useMemo(() => timelineMode === "eventos"
+    ? eventosOrdenados.map(item => ({ key: `event:${item.id}`, item, estimatedSize: 54 }))
+    : visiblePeople.slice().sort((a, b) => (anioInicioPersona(a) ?? Infinity) - (anioInicioPersona(b) ?? Infinity) || a.nombre.localeCompare(b.nombre, "es"))
+      .map(item => ({ key: `person:${item.id}`, item, estimatedSize: Math.max(48, 19 + listaReinados(item).length * 4) })),
+  [visiblePeople, eventosOrdenados, timelineMode]);
+  const timelineVirtual = useVirtualRows(timelineRows, tlScrollRef, timelineListRef, mostrarCronologia);
   const visibleIds = visiblePeople.map((persona) => persona.id);
   const visibleSignature = visibleIds.join("|");
   const visibleRows = useMemo(() => {
@@ -824,6 +844,55 @@ export default function Explorer({ initialPanel = null, treeBase: TREE_BASE }) {
   const renderedTreeUnits = useMemo(() => treeLayout.units.filter(unit => intersectsViewport(unit, treeViewport)), [treeLayout.units, treeViewport]);
   const canvasSize = { w: treeLayout.width, h: treeLayout.height };
 
+  const queueViewport = useViewportTask((task, secondPass) => {
+    const tree = scrollRef.current, timeline = tlScrollRef.current, list = timelineListRef.current;
+    const previousTimeline = timeline && { left: timeline.scrollLeft, top: timeline.scrollTop };
+    if (task.treeId && tree && positions[task.treeId] && !secondPass) {
+      tree.scrollTo({ ...centeredScroll(positions[task.treeId], zoom, tree), behavior: "smooth" });
+    }
+    if (task.treeCenter && tree && !secondPass) {
+      tree.scrollTo({ left: task.treeCenter.x * zoom - tree.clientWidth / 2, top: task.treeCenter.y * zoom - tree.clientHeight / 2, behavior: "instant" });
+    }
+    if (task.timelineScroll && timeline) {
+      const anchor = timelineVirtual.byKey.get(task.timelineAnchor?.key);
+      timeline.scrollTo({ ...task.timelineScroll, ...(anchor && list ? { top: list.offsetTop + anchor.start + task.timelineAnchor.offset } : {}), behavior: "instant" });
+    }
+    const row = task.timelineId && timelineVirtual.byKey.get(`person:${task.timelineId}`);
+    const person = task.timelineId && BY_ID[task.timelineId];
+    const start = anioInicioPersona(person), end = anioFinPersona(person);
+    const year = Number.isFinite(task.timelineYear) ? task.timelineYear : Number.isFinite(start) ? (start + (end ?? start)) / 2 : null;
+    if (timeline && (row || Number.isFinite(year))) {
+      const left = Number.isFinite(year)
+        ? TIMELINE_FIXED_COLUMN + (year - TL_MIN) * timelinePxPerYear - (timeline.clientWidth + TIMELINE_FIXED_COLUMN) / 2
+        : timeline.scrollLeft;
+      timeline.scrollTo({ left: Math.max(0, left), top: row && list ? list.offsetTop + row.start + row.size / 2 - timeline.clientHeight / 2 : timeline.scrollTop, behavior: "instant" });
+    }
+    return timeline && (Math.abs(timeline.scrollTop - previousTimeline.top) > 0.5 || Math.abs(timeline.scrollLeft - previousTimeline.left) > 0.5);
+  }, task => JSON.stringify([
+    zoom, positions[task.treeId], timelineVirtual.byKey.get(`person:${task.timelineId}`)?.start,
+    timelineVirtual.byKey.get(`person:${task.timelineId}`)?.size, timelineVirtual.total,
+    timelinePxPerYear, timelineListRef.current?.offsetTop,
+    ...[scrollRef, tlScrollRef].flatMap(ref => [ref.current?.clientWidth, ref.current?.clientHeight, ref.current?.scrollHeight]),
+  ]), [scrollRef, tlScrollRef]);
+
+
+  useAtlasSession({
+    ...savedSession, query, territorios, dinastias, titulos, siglos, relaciones, collapsedIds,
+    dinastiasExpandidas, territoriosExpandidos, selectedId: seleccion?.id || null,
+    currentSearchIndex, zoom, mode, origen, destino, modoComparacion, focoId, focoAlcance,
+    anioGlobal, vistasActivas, panelesVisibles, personHistory, timelineScaleIndex, timelineMode,
+    eventoSeleccionadoId, soloFavoritos, historiaActivaId, historiaPasoIndex, historiaSnapshot: historiaSnapshotRef.current,
+  }, scrollRef, tlScrollRef, () => {
+    const top = tlScrollRef.current && timelineListRef.current ? tlScrollRef.current.scrollTop - timelineListRef.current.offsetTop : null;
+    const anchor = top !== null && timelineVirtual.items.find(row => row.start + row.size >= top);
+    return { mapViewport: mapViewportRef.current, ...(anchor ? { timelineAnchor: { key: anchor.key, offset: top - anchor.start } } : {}) };
+  });
+  useLayoutEffect(() => {
+    if (!restoringSession.current || !savedSession) return;
+    restoringSession.current = false;
+    queueViewport({ treeCenter: savedSession.treeCenter, timelineScroll: savedSession.timelineScroll, timelineAnchor: savedSession.timelineAnchor });
+  }, [savedSession, queueViewport]);
+
   // Coincidencias del buscador: solo entre las personas que ya son visibles
   // según los filtros de chips (si una persona está oculta por un filtro,
   // no tiene sentido "encontrarla" con el buscador).
@@ -842,13 +911,14 @@ export default function Explorer({ initialPanel = null, treeBase: TREE_BASE }) {
   // Al cambiar la búsqueda o sus resultados, saltamos a la primera coincidencia y centramos
   // el árbol y la línea temporal sobre ella.
   useEffect(() => {
+    const signature = `${queryTrim}|${searchSignature}`;
+    if (savedSession && initialSearchSignature.current === undefined) initialSearchSignature.current = signature;
+    if (initialSearchSignature.current === signature) return;
+    initialSearchSignature.current = null;
     setCurrentSearchIndex(0);
     if (searchMatchIds.length) {
-      const t = setTimeout(() => {
-        centerOn(searchMatchIds[0]);
-        centerOnTimeline(searchMatchIds[0]);
-      }, 30);
-      return () => clearTimeout(t);
+      centerOn(searchMatchIds[0]);
+      centerOnTimeline(searchMatchIds[0]);
     }
     // `searchSignature` también cambia cuando un filtro altera las coincidencias.
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -856,12 +926,10 @@ export default function Explorer({ initialPanel = null, treeBase: TREE_BASE }) {
 
   const irACoincidencia = (dir) => {
     if (!searchMatchIds.length) return;
-    setCurrentSearchIndex((i) => {
-      const next = ((i + dir) % searchMatchIds.length + searchMatchIds.length) % searchMatchIds.length;
-      centerOn(searchMatchIds[next]);
-      centerOnTimeline(searchMatchIds[next]);
-      return next;
-    });
+    const next = ((currentSearchIndex + dir) % searchMatchIds.length + searchMatchIds.length) % searchMatchIds.length;
+    setCurrentSearchIndex(next);
+    centerOn(searchMatchIds[next]);
+    centerOnTimeline(searchMatchIds[next]);
   };
 
   const hayFiltros = Boolean(query || territorios.length || dinastias.length || titulos.length || siglos.length || relaciones.length || soloFavoritos);
@@ -978,15 +1046,7 @@ export default function Explorer({ initialPanel = null, treeBase: TREE_BASE }) {
   };
   const endDrag = () => (dragState.current = null);
 
-  const centerOn = (id) => {
-    const position = positions[id], scrollEl = scrollRef.current;
-    if (!position || !scrollEl) return;
-    scrollEl.scrollTo({
-      left: (position.x + position.w / 2) * zoom - scrollEl.clientWidth / 2,
-      top: (position.y + position.h / 2) * zoom - scrollEl.clientHeight / 2,
-      behavior: "smooth",
-    });
-  };
+  const centerOn = id => queueViewport({ treeId: id, treeCenter: null });
 
   // El zoom se ancla SIEMPRE al centro visual actual del viewport. No importa
   // qué persona esté seleccionada, buscada o bajo el cursor: el punto que está
@@ -1024,16 +1084,7 @@ export default function Explorer({ initialPanel = null, treeBase: TREE_BASE }) {
 
   // Centra la barra correspondiente de la línea temporal (si está montada,
   // es decir, si el panel "Línea temporal" está abierto).
-  const centerOnTimeline = (id) => {
-    const el = tlBarRefs.current[id], scrollEl = tlScrollRef.current;
-    if (!el || !scrollEl) return;
-    const er = el.getBoundingClientRect(), sr = scrollEl.getBoundingClientRect();
-    scrollEl.scrollBy({
-      left: (er.left + er.width / 2) - (sr.left + sr.width / 2),
-      top: (er.top + er.height / 2) - (sr.top + sr.height / 2),
-      behavior: "smooth",
-    });
-  };
+  const centerOnTimeline = id => queueViewport({ timelineId: id, timelineYear: null, timelineScroll: null });
 
   const registrarHistorialPersona = (id) => {
     if (!BY_ID[id]) return;
@@ -1068,10 +1119,8 @@ export default function Explorer({ initialPanel = null, treeBase: TREE_BASE }) {
     if (registrar) registrarHistorialPersona(id);
     actualizarUrlPersonaSeleccionada(persona, { reemplazar: reemplazarUrl });
     if (centrar) {
-      requestAnimationFrame(() => {
-        centerOn(id);
-        centerOnTimeline(id);
-      });
+      centerOn(id);
+      centerOnTimeline(id);
     }
   };
 
@@ -1087,10 +1136,8 @@ export default function Explorer({ initialPanel = null, treeBase: TREE_BASE }) {
   const centrarSeleccion = () => {
     if (!seleccion?.id) return;
     setHovered(null);
-    requestAnimationFrame(() => {
-      centerOn(seleccion.id);
-      centerOnTimeline(seleccion.id);
-    });
+    centerOn(seleccion.id);
+    centerOnTimeline(seleccion.id);
   };
 
   const cerrarSeleccion = () => {
@@ -1152,10 +1199,8 @@ export default function Explorer({ initialPanel = null, treeBase: TREE_BASE }) {
           const ids = base.slice(-60);
           return { ids, index: ids.length - 1 };
         });
-        requestAnimationFrame(() => {
-          centerOn(personaId);
-          centerOnTimeline(personaId);
-        });
+        centerOn(personaId);
+        centerOnTimeline(personaId);
       } else if (ruta?.tipo === "dinastia") {
         const valores = [...opciones.dinastias, ...Object.values(opciones.ramasPorPrincipal).flat()];
         const valor = valorPorSlug(ruta.slug, valores);
@@ -1192,15 +1237,7 @@ export default function Explorer({ initialPanel = null, treeBase: TREE_BASE }) {
     return () => window.removeEventListener("popstate", onPopState);
   }, []);
 
-  const centerTimelineOnYear = (anio) => {
-    const scrollEl = tlScrollRef.current;
-    if (!scrollEl || !Number.isFinite(anio)) return;
-    const axis = scrollEl.querySelector(".tl-axis");
-    if (!axis) return;
-    const ratio = Math.max(0, Math.min(1, (anio - TL_MIN) / (TL_MAX - TL_MIN)));
-    const destinoX = axis.offsetLeft + ratio * axis.clientWidth - scrollEl.clientWidth / 2;
-    scrollEl.scrollTo({ left: Math.max(0, destinoX), behavior: "smooth" });
-  };
+  const centerTimelineOnYear = anio => queueViewport({ timelineYear: anio, timelineId: null, timelineScroll: null });
 
   const alternarFavorito = (id) => {
     if (!BY_ID[id]) return;
@@ -1223,10 +1260,8 @@ export default function Explorer({ initialPanel = null, treeBase: TREE_BASE }) {
       setSeleccion(null);
       setHovered(null);
     }
-    requestAnimationFrame(() => {
-      if (personaPrincipal) centerOn(personaPrincipal);
-      centerTimelineOnYear(anio);
-    });
+    if (personaPrincipal) centerOn(personaPrincipal);
+    centerTimelineOnYear(anio);
   };
 
   const aplicarPasoHistoria = (historia, index) => {
@@ -1243,10 +1278,8 @@ export default function Explorer({ initialPanel = null, treeBase: TREE_BASE }) {
       setSeleccion(BY_ID[personaId]);
       setHovered(null);
     }
-    requestAnimationFrame(() => {
-      if (personaId && BY_ID[personaId]) centerOn(personaId);
-      centerTimelineOnYear(paso.anio);
-    });
+    if (personaId && BY_ID[personaId]) centerOn(personaId);
+    centerTimelineOnYear(paso.anio);
   };
 
   const iniciarHistoria = (historiaId) => {
@@ -1454,14 +1487,12 @@ export default function Explorer({ initialPanel = null, treeBase: TREE_BASE }) {
     if (personaId && BY_ID[personaId]) {
       setSeleccion(BY_ID[personaId]);
       setPersonHistory({ ids: [personaId], index: 0 });
-      window.setTimeout(() => {
-        centerOn(personaId);
-        centerOnTimeline(personaId);
-      }, 160);
+      centerOn(personaId);
+      centerOnTimeline(personaId);
     }
   }, [opciones, ajustarAnio]);
 
-  const handleBoxClick = useCallback((p) => {
+  const handleBoxClick = (p) => {
     if (mode === "compare") {
       if (!origen) { setOrigen(p.id); setDestino(null); }
       else if (!destino && p.id !== origen) { setDestino(p.id); }
@@ -1472,18 +1503,11 @@ export default function Explorer({ initialPanel = null, treeBase: TREE_BASE }) {
     } else {
       seleccionarPersonaPorId(p.id);
     }
-  }, [mode, origen, destino]);
+  };
   
   const getBoxHandlers = (id) => {
     const p = BY_ID[id];
     return {
-      setRef: (el) => {
-        if (el) {
-          nodeRefs.current[id] = el;
-        } else {
-          delete nodeRefs.current[id];
-        }
-      },
       onEnter: () => {
         setHovered(id);
       },
@@ -1531,7 +1555,6 @@ export default function Explorer({ initialPanel = null, treeBase: TREE_BASE }) {
           width: boxLayout.w,
           height: boxLayout.h,
         } : undefined}
-        setRef={h.setRef}
         onEnter={h.onEnter}
         onLeave={h.onLeave}
         onClick={h.onClick}
@@ -1589,20 +1612,10 @@ export default function Explorer({ initialPanel = null, treeBase: TREE_BASE }) {
     window.location.assign(destino);
   }, [locale]);
 
-  const atlasContextLabel = historiaActiva?.titulo
-    ? `Historias / ${historiaActiva.titulo}`
-    : seleccion?.nombre
-      ? seleccion.nombre
-      : dinastias.length === 1
-        ? `Dinastía / ${dinastias[0]}`
-        : territorios.length === 1
-          ? `Territorio / ${territorios[0]}`
-          : "Atlas interactivo";
-
   if (locale === "en") {
     return (
       <div className="wrap">
-        <SiteHeader variant="atlas" locale="en" onLanguageChange={cambiarIdioma} contextLabel="English edition" />
+        <SiteHeader variant="atlas" locale="en" onLanguageChange={cambiarIdioma} />
 
         <main style={{ maxWidth: 760, margin: "70px auto", textAlign: "center", padding: "0 24px" }}>
           <div style={{ fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif", fontSize: 10, fontWeight: 700, letterSpacing: 1.3, textTransform: "uppercase", color: "#8A7F65" }}>English edition</div>
@@ -1624,7 +1637,7 @@ export default function Explorer({ initialPanel = null, treeBase: TREE_BASE }) {
   }
 
   const viewModel = {
-    scrollRef, nodeRefs, tlScrollRef, tlBarRefs, locale, setLocale, query, setQuery,
+    initialMapViewport: mapViewportRef.current, recordMapViewport, timelineVirtual, timelineListRef, scrollRef, tlScrollRef, locale, setLocale, query, setQuery,
     territorios, setTerritorios, dinastias, setDinastias, dinastiasExpandidas, setDinastiasExpandidas, territoriosExpandidos, setTerritoriosExpandidos,
     titulos, setTitulos, siglos, setSiglos, relaciones, setRelaciones, hovered, setHovered,
     seleccion, setSeleccion, currentSearchIndex, setCurrentSearchIndex, zoom, setZoom, mode, setMode,
@@ -1650,7 +1663,7 @@ export default function Explorer({ initialPanel = null, treeBase: TREE_BASE }) {
     onPointerMove, endDrag, centerOn, pendingZoomCenterRef, cambiarZoomArbol, centerOnTimeline, seleccionarPersonaPorId, navegarHistorialPersona, centrarSeleccion, cerrarSeleccion,
     centerTimelineOnYear, alternarFavorito, seleccionarEvento, aplicarPasoHistoria, iniciarHistoria, cambiarPasoHistoria, salirHistoria, mostrarEstadoCompartir,
     construirEnlaceCompartido, compartirPersona, handleBoxClick, getBoxHandlers, renderPersonBox, miniW, miniScaleX, miniScaleY,
-    onMinimapClick, filtrosActivosCompactos, cambiarIdioma, atlasContextLabel,
+    onMinimapClick, filtrosActivosCompactos, cambiarIdioma,
   };
   return <ExplorerView vm={viewModel} />;
 }

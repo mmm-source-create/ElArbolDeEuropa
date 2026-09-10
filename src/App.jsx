@@ -1,12 +1,12 @@
 import React, { lazy, Suspense, useCallback, useEffect, useMemo, useState } from "react";
 import { ArrowRight } from "lucide-react";
 import { CatalogPage, HomePage, InfoPage, PersonPage } from "./public/PublicSite.jsx";
-import { TerritoryPage } from "./public/TerritoryPage.jsx";
+
 import SiteHeader from "./components/SiteHeader.jsx";
 import SiteFooter from "./components/SiteFooter.jsx";
 import "./styles/theme.css";
-import "./App.css";
 
+const TerritoryPage = lazy(() => import("./public/TerritoryPage.jsx").then(m => ({ default: m.TerritoryPage })));
 const Explorer = lazy(() => import("./explorer/AtlasLoader.jsx"));
 const DesafioPage = lazy(() => import("./desafio/DesafioPage.jsx"));
 
@@ -117,11 +117,15 @@ export default function App() {
   }, [initial.locale]);
 
   const entrarAtlas = useCallback((panel = null) => {
+    const url = new URL(window.location.href);
+    url.searchParams.set("atlas", "1");
+    if (initial.view === "home") url.searchParams.set("continuar", "1");
+    window.history.replaceState({}, "", url.pathname + url.search + url.hash);
     setInitialPanel(panel);
     setExplorerRequested(true);
-  }, []);
+  }, [initial.view]);
 
-  if (!explorerRequested && initial.view === "territory") return <TerritoryPage slug={initial.territorySlug} />;
+  if (!explorerRequested && initial.view === "territory") return <Suspense fallback={<p role="status">Cargando territorio…</p>}><TerritoryPage slug={initial.territorySlug} /></Suspense>;
   if (initial.view === "english") return <EnglishLanding />;
   if (initial.view === "desafio") {
     return (
