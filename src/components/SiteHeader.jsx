@@ -4,9 +4,11 @@ export default function SiteHeader({
   variant = "public",
   locale = "es",
   onLanguageChange,
-  contextLabel = "Atlas interactivo",
 }) {
   const isAtlas = variant === "atlas";
+  const path = typeof window === "undefined" ? "/es/" : window.location.pathname;
+  const active = isAtlas ? "atlas" : /\/persona(?:s|\/|$)/.test(path) ? "personas" : /\/dinastia(?:s|\/|$)/.test(path) ? "dinastias" : /\/territorio(?:s|\/|$)/.test(path) ? "territorios" : /\/historia(?:s|\/|$)/.test(path) ? "historias" : /\/desafio/.test(path) ? "desafio" : null;
+  const links = [["atlas", "Atlas", "/es/?atlas=1&continuar=1"], ["personas", "Personas", "/es/personas"], ["dinastias", "Dinastías", "/es/dinastias"], ["territorios", "Territorios", "/es/territorios"], ["historias", "Historias", "/es/historias"], ["desafio", "Desafío", "/es/desafio"]];
   const languageControl = onLanguageChange ? (
     <div className="site-language" aria-label="Idioma / Language">
       <button type="button" className={locale === "es" ? "active" : ""} aria-current={locale === "es" ? "page" : undefined} onClick={() => onLanguageChange("es")}>ES</button>
@@ -20,31 +22,18 @@ export default function SiteHeader({
   );
 
   return (
-    <header className={`site-header${isAtlas ? " is-atlas" : ""}`}>
+    <header className="site-header">
       <a className="site-brand" href="/es/" aria-label="El Árbol de Europa — inicio">
-        <img className="site-brand-logo" src="/EADE.png" alt="" aria-hidden="true" />
+        <img className="site-brand-logo" src="/brand/logo-28.webp" srcSet="/brand/logo-28.webp 1x, /brand/logo-56.webp 2x, /brand/logo-84.webp 3x" width="28" height="28" alt="" aria-hidden="true" />
         <span className="site-brand-copy">
           <strong>{locale === "en" ? "The Tree of Europe" : "El Árbol de Europa"}</strong>
           <small>{locale === "en" ? "Historical and genealogical atlas" : "Atlas genealógico e histórico"}</small>
         </span>
       </a>
 
-      {isAtlas ? (
-        <div className="site-atlas-context" aria-label="Contexto del atlas">
-          <a href="/es/">Inicio</a>
-          <span aria-hidden="true">›</span>
-          <span>Atlas</span>
-          {contextLabel && contextLabel !== "Atlas interactivo" && <><span aria-hidden="true">›</span><strong title={contextLabel}>{contextLabel}</strong></>}
-        </div>
-      ) : (
-        <nav className="site-nav" aria-label="Navegación principal">
-          <a href="/es/personas">Personas</a>
-          <a href="/es/dinastias">Dinastías</a>
-          <a href="/es/territorios">Territorios</a>
-          <a href="/es/historias">Historias</a>
-          <a href="/es/desafio">Desafío</a>
-        </nav>
-      )}
+      <nav className="site-nav" aria-label="Navegación principal">
+        {links.map(([id, label, href]) => <a key={id} href={href} aria-current={active === id ? "page" : undefined} onClick={isAtlas && id === "atlas" ? event => event.preventDefault() : undefined}>{label}</a>)}
+      </nav>
 
       {languageControl}
     </header>
