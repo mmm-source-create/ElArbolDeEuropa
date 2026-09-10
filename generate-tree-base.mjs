@@ -1,3 +1,4 @@
+import { sourcesForPerson } from "./src/content/sources.js";
 import { TERRITORIOS, componentesDe } from "./src/data/territorios.js";
 import fs from "node:fs/promises";
 import path from "node:path";
@@ -1094,6 +1095,7 @@ async function generarPortadasPersona() {
       reinos: Array.isArray(persona.reinos) ? persona.reinos : [],
       reinados: reinadosLigero(persona),
       biografia: biografiaPublicaPersona(persona),
+      fuentes: sourcesForPerson(persona.id),
       padres,
       conyuges,
       hijos,
@@ -1154,6 +1156,7 @@ async function generarCatalogosPublicos() {
     fs.writeFile(path.join(catalogoDir, "territorios.json"), JSON.stringify({ items: territorios }), "utf8"),
     fs.writeFile(path.join(catalogoDir, "historias.json"), JSON.stringify({ items: historias }), "utf8"),
     fs.writeFile(path.join(catalogoDir, "home.json"), JSON.stringify(home), "utf8"),
+    fs.writeFile(path.join(ROOT, "src", "generated", "home.json"), JSON.stringify(home), "utf8"),
   ]);
 
   return { dinastias: dinastias.length, territorios: territorios.length, historias: historias.filter((h) => h.disponible).length };
