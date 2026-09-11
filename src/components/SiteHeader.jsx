@@ -1,10 +1,22 @@
-import React from "react";
+import React, { useState } from "react";
+
+const SCREEN_NOTICE_KEY = "eade:screen-notice-dismissed";
+
+function noticeWasDismissed() {
+  try { return typeof window !== "undefined" && window.sessionStorage.getItem(SCREEN_NOTICE_KEY) === "1"; }
+  catch { return false; }
+}
 
 export default function SiteHeader({
   variant = "public",
   locale = "es",
   onLanguageChange,
 }) {
+  const [noticeDismissed, setNoticeDismissed] = useState(noticeWasDismissed);
+  const dismissNotice = () => {
+    setNoticeDismissed(true);
+    try { window.sessionStorage.setItem(SCREEN_NOTICE_KEY, "1"); } catch { /* Navigation works without storage. */ }
+  };
   const isAtlas = variant === "atlas";
   const path = typeof window === "undefined" ? "/es/" : window.location.pathname;
   const active = isAtlas ? "atlas" : /\/persona(?:s|\/|$)/.test(path) ? "personas" : /\/dinastia(?:s|\/|$)/.test(path) ? "dinastias" : /\/territorio(?:s|\/|$)/.test(path) ? "territorios" : /\/historia(?:s|\/|$)/.test(path) ? "historias" : /\/desafio/.test(path) ? "desafio" : null;
@@ -36,6 +48,10 @@ export default function SiteHeader({
       </nav>
 
       {languageControl}
+      {!noticeDismissed && <aside className="site-screen-notice" aria-label={locale === "en" ? "Viewing recommendation" : "Recomendación de visualización"}>
+        <p>{locale === "en" ? "For a more comfortable view of the tree, map and timeline, we recommend using a larger screen." : "Para explorar el árbol, el mapa y la cronología con más comodidad, recomendamos usar una pantalla grande."}</p>
+        <button type="button" onClick={dismissNotice} aria-label={locale === "en" ? "Dismiss recommendation" : "Cerrar aviso"}><span aria-hidden="true">×</span></button>
+      </aside>}
     </header>
   );
 }
