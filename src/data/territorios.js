@@ -1,4 +1,8 @@
 export const TERRITORIOS = Object.freeze({
+  "Albret": {"clase":"señorío","naturaleza":"entidad","componentes":[],"etapas":[{"desde":1550,"clase":"ducado"}],"nota":"Señorío de la casa de Albret, elevado a ducado en el siglo XVI; distinto del reino de Navarra."},
+  "Dreux": {"clase":"condado","naturaleza":"entidad","componentes":[]},
+  "Penthièvre": {"clase":"condado","naturaleza":"entidad","componentes":[],"nota":"Condado bretón; los derechos al ducado se registran por separado."},
+  "Castellbó": {"clase":"vizcondado","naturaleza":"entidad","componentes":[],"nota":"Vizcondado pirenaico vinculado a los Foix; también Castelbó o Castelbon."},
   "Bohemia": {
     "clase": "reino",
     "naturaleza": "entidad",
@@ -1537,7 +1541,7 @@ export const TERRITORIOS = Object.freeze({
   }
 });
 
-export const TITULOS_POR_CLASE = {"reinado": ["Rey", "Rey de Romanos", "Alto rey", "Reina"], "imperio": ["Emperatriz", "Emperador"], "ducado": ["Duquesa", "Duque"], "archiducado": ["Archiduque", "Archiduquesa"], "condado": ["Conde", "Conde palatino", "Condesa"], "electorado": ["Elector"], "principado": ["Princesa", "Gran župan", "Príncipe"], "gran_ducado": ["Gran duque", "Gran duquesa"], "gran_principado": ["Gran príncipe"], "zarato": ["Zarina", "Zar"], "margraviato": ["Margrave"], "marquesado": ["Marqués"], "landgraviato": ["Landgrave"], "señorío": ["Señor", "Señora"], "regencia": ["Regente"], "estatuderato": ["Estatúder"], "emirato": ["Emir"], "sultanato": ["Sultán"], "despotado": ["Déspota"], "banato": ["Ban"], "voivodato": ["Voivoda"], "pontificado": ["Papa"], "gobierno": ["Gobernante", "Soberano", "Soberana", "Gobernador", "Gobernadora"], "vizcondado": ["Vizconde"]};
+export const TITULOS_POR_CLASE = {"reinado": ["Rey", "Rey de Romanos", "Alto rey", "Reina"], "imperio": ["Emperatriz", "Emperador"], "ducado": ["Duquesa", "Duque"], "archiducado": ["Archiduque", "Archiduquesa"], "condado": ["Conde", "Conde palatino", "Condesa"], "electorado": ["Elector"], "principado": ["Princesa", "Gran župan", "Príncipe"], "gran_ducado": ["Gran duque", "Gran duquesa"], "gran_principado": ["Gran príncipe"], "zarato": ["Zarina", "Zar"], "margraviato": ["Margrave"], "marquesado": ["Marqués"], "landgraviato": ["Landgrave"], "señorío": ["Señor", "Señora"], "regencia": ["Regente"], "estatuderato": ["Estatúder"], "emirato": ["Emir"], "sultanato": ["Sultán"], "despotado": ["Déspota"], "banato": ["Ban"], "voivodato": ["Voivoda"], "pontificado": ["Papa"], "gobierno": ["Gobernante", "Soberano", "Soberana", "Gobernador", "Gobernadora"], "vizcondado": ["Vizconde", "Vizcondesa"]};
 export const CONDICIONES = ["efectivo","jure uxoris","corregente","regencia","pretensión","titular","rival","disputado","rama"];
 export function componentesDe(nombre, vistos = new Set()) {
  if(vistos.has(nombre)) return []; vistos.add(nombre);
