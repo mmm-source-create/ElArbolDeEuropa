@@ -371,12 +371,14 @@ export const TERRITORIOS_DESTACADOS = [
 // su historia política o geográfica lo justifica (Borgoña, Silesia, Saboya…).
 export const TERRITORIOS_SUB = {
   Francia: [
-    "Alençon", "Angulema", "Anjou", "Aquitania", "Artois", "Auvernia",
+    "Albret", "Dreux", "Alençon", "Angulema", "Anjou", "Aquitania", "Artois", "Auvernia",
     "Berry", "Borgoña", "Borbón", "Boulogne", "Bretaña", "Champaña",
     "Clermont", "Évreux", "Foix", "Armagnac", "Guisa", "La Marche", "Montpellier",
     "Orleans", "Ponthieu", "Provenza", "Saint-Pol", "Valois", "Vendôme", "Bearne",
   ],
 
+  Bretaña: ["Penthièvre"],
+  Foix: ["Castellbó"],
   Inglaterra: ["Gales", "Richmond", "Suffolk", "York", "Huntingdon", "Northumbria"],
   Escocia: ["Annandale", "Carrick", "Galloway"],
   Irlanda: ["Connacht","Leinster","Thomond","Desmond","Tír Eoghain","Tír Chonaill","Condado de Tyrone","Condado de Tyrconnell","Condado de Thomond","Condado de Desmond","Condado de Clancare","Condado de Ulster","Kildare","Ormond","Clanricarde","Vizcondado de Mayo","Lucan"],

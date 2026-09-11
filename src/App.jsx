@@ -6,6 +6,7 @@ import SiteHeader from "./components/SiteHeader.jsx";
 import SiteFooter from "./components/SiteFooter.jsx";
 import "./styles/theme.css";
 
+const DynastyPage = lazy(() => import("./public/DynastyPage.jsx"));
 const TerritoryPage = lazy(() => import("./public/TerritoryPage.jsx").then(m => ({ default: m.TerritoryPage })));
 const Explorer = lazy(() => import("./explorer/AtlasLoader.jsx"));
 const DesafioPage = lazy(() => import("./desafio/DesafioPage.jsx"));
@@ -94,6 +95,8 @@ export default function App() {
     const catalog = catalogoDesdePath(pathname);
     const info = infoDesdePath(pathname);
     const atlasRequested = params.get("atlas") === "1";
+    const dynastyMatch = pathname.match(/^\/es\/dinastia\/([^/]+)\/?$/);
+    if (dynastyMatch && !atlasRequested) return { locale, view: "dynasty", dynastySlug: decodeURIComponent(dynastyMatch[1]) };
     const territoryMatch = pathname.match(/^\/es\/territorio\/([^/]+)\/?$/);
     if (territoryMatch && !atlasRequested) return { locale, view: "territory", territorySlug: decodeURIComponent(territoryMatch[1]) };
     const panel = params.get("panel") || null;
@@ -125,6 +128,7 @@ export default function App() {
     setExplorerRequested(true);
   }, [initial.view]);
 
+  if (!explorerRequested && initial.view === "dynasty") return <Suspense fallback={<p role="status">Cargando dinastía…</p>}><DynastyPage slug={initial.dynastySlug} /></Suspense>;
   if (!explorerRequested && initial.view === "territory") return <Suspense fallback={<p role="status">Cargando territorio…</p>}><TerritoryPage slug={initial.territorySlug} /></Suspense>;
   if (initial.view === "english") return <EnglishLanding />;
   if (initial.view === "desafio") {
