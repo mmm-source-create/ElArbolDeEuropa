@@ -1,3 +1,4 @@
+import { CASAS_V210 } from "./casas-v210.js";
 import { FRONTERAS_V28 } from "./fronteras-v28.js";
 import { FRONTERAS_V272 } from "./fronteras-v272.js";
 import { SUCESIONES_V27 } from "./sucesiones-v27.js";
@@ -20,6 +21,7 @@ export const PERSONA_CONTENT = Object.freeze({
   ...SUCESIONES_V27,
   ...FRONTERAS_V272,
   ...FRONTERAS_V28,
+  ...CASAS_V210,
 });
 
 export function contenidoPersona(personaOId) {
