@@ -122,23 +122,39 @@ export default {
     ]
   },
   "Navarra": {
-    "resumen": "La posición pirenaica de Navarra vinculó su historia a Francia y a los reinos peninsulares. Tras la conquista de 1512, la división entre Alta y Baja Navarra produjo líneas rivales y derechos dinásticos que no equivalen a un dominio de todo el antiguo reino.",
+    "resumen": "La posición pirenaica de Navarra vinculó su historia a las casas francesas y a los reinos peninsulares. En 1234, Teobaldo de Champaña sucedió a su tío Sancho VII por los derechos transmitidos por Blanca de Navarra. El matrimonio de Juana I con Felipe IV reunió después Navarra y Francia en su descendencia, pero en 1328 ambas coronas siguieron soluciones sucesorias diferentes. Juana II y Felipe de Évreux abrieron una nueva etapa navarra. Tras Blanca I, las disputas entre Juan de Aragón y sus hijos llevaron finalmente la herencia por Leonor hasta los Foix. Catalina y Juan de Albret afrontaron la conquista de 1512. La división territorial posterior obliga a distinguir la corona reivindicada, el gobierno efectivo y la continuidad de la monarquía al norte de los Pirineos.",
     "evolucion": [
       {
         "anio": 1234,
-        "texto": "Inicio de la dinastía de Champaña"
+        "texto": "Teobaldo I sucede a Sancho VII: comienza la etapa de Champaña."
+      },
+      {
+        "anio": 1284,
+        "texto": "Juana I se casa con el futuro Felipe IV de Francia."
       },
       {
         "anio": 1328,
-        "texto": "Juana II y Felipe de Évreux"
+        "texto": "Juana II y Felipe de Évreux acceden a Navarra; Francia sigue otra sucesión."
+      },
+      {
+        "anio": 1441,
+        "texto": "La muerte de Blanca I abre una crisis entre Juan de Aragón y sus hijos."
+      },
+      {
+        "anio": 1479,
+        "texto": "Leonor y después Francisco Febo acceden a la corona."
+      },
+      {
+        "anio": 1484,
+        "texto": "Matrimonio de Catalina de Foix con Juan de Albret."
       },
       {
         "anio": 1512,
-        "texto": "Conquista de la Navarra peninsular"
+        "texto": "Conquista de la Navarra peninsular, seguida de intentos de recuperación y una consolidación gradual de la división."
       },
       {
         "anio": 1589,
-        "texto": "Enrique de Navarra accede al trono francés"
+        "texto": "Enrique de Navarra accede al trono francés como Enrique IV."
       }
     ]
   },

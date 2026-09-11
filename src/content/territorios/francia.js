@@ -59,32 +59,72 @@ export default {
     ]
   },
   "Bretaña": {
-    "resumen": "Bretaña mantuvo una tradición ducal propia y un amplio margen de autonomía. Los matrimonios de Ana de Bretaña y de su hija Claudia prepararon la unión institucional con Francia.",
+    "resumen": "Bretaña conservó una tradición ducal propia y un amplio margen de autonomía entre las coronas francesa e inglesa. El matrimonio de Alix de Thouars y Pedro de Dreux estableció una rama capeta en el ducado. La muerte sin descendencia de Juan III abrió en 1341 una disputa entre su sobrina Juana de Penthièvre y su medio hermano Juan de Montfort. Los derechos de cada candidato procedían de caminos familiares distintos. Tras la victoria de los Montfort, la sucesión continuó entre hermanos, tíos y primos hasta Francisco II y su hija Ana. Los matrimonios de Ana y de su hija Claudia vincularon el ducado con la monarquía francesa; la unión institucional de 1532 fue un paso posterior, con conservación de privilegios propios.",
     "evolucion": [
       {
+        "anio": 1213,
+        "texto": "Alix de Thouars se casa con Pedro de Dreux; el derecho hereditario al ducado procede de ella."
+      },
+      {
         "anio": 1341,
-        "texto": "Inicio de la guerra sucesoria bretona"
+        "texto": "Muere Juan III: Penthièvre y Montfort disputan la sucesión."
+      },
+      {
+        "anio": 1364,
+        "texto": "Victoria de Juan de Montfort en Auray y muerte de Carlos de Blois."
+      },
+      {
+        "anio": 1365,
+        "texto": "El primer tratado de Guérande reconoce la posición ducal de Juan IV."
+      },
+      {
+        "anio": 1458,
+        "texto": "Francisco II sucede a Arturo III por una rama colateral de los Montfort."
       },
       {
         "anio": 1491,
-        "texto": "Matrimonio de Ana con Carlos VIII"
+        "texto": "Ana de Bretaña se casa con Carlos VIII de Francia."
+      },
+      {
+        "anio": 1499,
+        "texto": "Ana se casa con Luis XII; su hija Claudia continúa la transmisión ducal."
       },
       {
         "anio": 1532,
-        "texto": "Unión del ducado con Francia"
+        "texto": "Unión del ducado con Francia, conservando privilegios e instituciones particulares."
       }
     ]
   },
   "Foix": {
-    "resumen": "El condado de Foix conectó las redes nobiliarias del sur de Francia con Bearne y Navarra. La acumulación de estas herencias no hizo equivalentes las dignidades condales y reales.",
+    "resumen": "El condado de Foix conectó las redes nobiliarias del sur de Francia con los territorios al otro lado de los Pirineos. El matrimonio de Roger Bernardo III con Margarita de Bearne reunió patrimonios con títulos e instituciones distintos. La muerte del hijo de Gastón Fébus desvió la sucesión hacia la rama de Castellbó. Mateo y después Isabel heredaron el conjunto; los descendientes del matrimonio de Isabel con Archambaud de Grailly continuaron usando el nombre de Foix. El enlace de Gastón IV y Leonor de Navarra abrió el camino hacia una corona que heredaron sus nietos Francisco Febo y Catalina. La descendencia de Catalina y Juan de Albret prolongó esa continuidad familiar bajo otra casa.",
     "evolucion": [
       {
+        "anio": 1290,
+        "texto": "La herencia de Margarita de Bearne vincula ambos patrimonios."
+      },
+      {
         "anio": 1343,
-        "texto": "Acceso de Gastón Fébus"
+        "texto": "Gastón Fébus accede a Foix y Bearne."
+      },
+      {
+        "anio": 1380,
+        "texto": "Muere el hijo legítimo de Fébus; la continuidad pasa a depender de una rama colateral."
+      },
+      {
+        "anio": 1391,
+        "texto": "Mateo de Foix-Castellbó sucede a Fébus."
+      },
+      {
+        "anio": 1398,
+        "texto": "Isabel sucede a Mateo; su matrimonio da origen a la continuidad Foix-Grailly."
       },
       {
         "anio": 1479,
-        "texto": "Francisco Febo hereda la corona navarra"
+        "texto": "Leonor reina brevemente en Navarra y le sucede su nieto Francisco Febo."
+      },
+      {
+        "anio": 1484,
+        "texto": "Catalina de Navarra se casa con Juan de Albret."
       }
     ]
   },
