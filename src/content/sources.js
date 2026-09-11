@@ -7,7 +7,8 @@ export const SOURCES = [
     "grupo": "Repertorios principales",
     "territorios": [],
     "personas": [],
-    "nota": "Reconstrucciones genealógicas y referencias documentales, especialmente útiles para la Edad Media y las ramas dinásticas complejas."
+    "nota": "Reconstrucciones genealógicas y referencias documentales, especialmente útiles para la Edad Media y las ramas dinásticas complejas.",
+    "general": true
   },
   {
     "titulo": "Deutsche Biographie",
@@ -15,7 +16,8 @@ export const SOURCES = [
     "grupo": "Repertorios principales",
     "territorios": [],
     "personas": [],
-    "nota": "Biografías y datos de referencia para personajes y casas del ámbito germánico, centroeuropeo y báltico."
+    "nota": "Biografías y datos de referencia para personajes y casas del ámbito germánico, centroeuropeo y báltico.",
+    "general": true
   },
   {
     "titulo": "Treccani",
@@ -23,7 +25,8 @@ export const SOURCES = [
     "grupo": "Repertorios principales",
     "territorios": [],
     "personas": [],
-    "nota": "Apoyo biográfico y contextual para casas italianas, especialmente Médici, Saboya y figuras políticas o culturales del Renacimiento."
+    "nota": "Apoyo biográfico y contextual para casas italianas, especialmente Médici, Saboya y figuras políticas o culturales del Renacimiento.",
+    "general": true
   },
   {
     "titulo": "Encyclopaedia Britannica",
@@ -31,7 +34,8 @@ export const SOURCES = [
     "grupo": "Repertorios principales",
     "territorios": [],
     "personas": [],
-    "nota": "Consulta biográfica e histórica de contraste, útil sobre todo para grandes figuras europeas y marcos dinásticos generales."
+    "nota": "Consulta biográfica e histórica de contraste, útil sobre todo para grandes figuras europeas y marcos dinásticos generales.",
+    "general": true
   },
   {
     "titulo": "Wikipedia",
@@ -39,7 +43,8 @@ export const SOURCES = [
     "grupo": "Repertorios principales",
     "territorios": [],
     "personas": [],
-    "nota": "Herramienta auxiliar de localización, cronología y orientación bibliográfica. Los datos sensibles o dudosos se contrastan siempre que es posible con fuentes más especializadas."
+    "nota": "Herramienta auxiliar de localización, cronología y orientación bibliográfica. Los datos sensibles o dudosos se contrastan siempre que es posible con fuentes más especializadas.",
+    "general": true
   },
   {
     "titulo": "Historia Hispánica · Real Academia de la Historia",
@@ -47,7 +52,8 @@ export const SOURCES = [
     "grupo": "Archivos e instituciones",
     "territorios": [],
     "personas": [],
-    "nota": "Apoyo biográfico para personajes y linajes del ámbito hispánico."
+    "nota": "Apoyo biográfico para personajes y linajes del ámbito hispánico.",
+    "general": true
   },
   {
     "titulo": "PARES · Portal de Archivos Españoles",
@@ -55,7 +61,8 @@ export const SOURCES = [
     "grupo": "Archivos e instituciones",
     "territorios": [],
     "personas": [],
-    "nota": "Documentación archivística y descripciones de fondos, muy útil para confirmar filiaciones, cargos y cronologías."
+    "nota": "Documentación archivística y descripciones de fondos, muy útil para confirmar filiaciones, cargos y cronologías.",
+    "general": true
   },
   {
     "titulo": "Biblioteca Digital · Real Academia de la Historia",
@@ -63,7 +70,8 @@ export const SOURCES = [
     "grupo": "Archivos e instituciones",
     "territorios": [],
     "personas": [],
-    "nota": "Genealogías, nobiliarios y repertorios históricos digitalizados empleados en comprobaciones concretas."
+    "nota": "Genealogías, nobiliarios y repertorios históricos digitalizados empleados en comprobaciones concretas.",
+    "general": true
   },
   {
     "titulo": "Kungahuset · Casa Real de Suecia",
@@ -71,7 +79,8 @@ export const SOURCES = [
     "grupo": "Archivos e instituciones",
     "territorios": [],
     "personas": [],
-    "nota": "Secuencias dinásticas y contexto institucional de la monarquía sueca."
+    "nota": "Secuencias dinásticas y contexto institucional de la monarquía sueca.",
+    "general": true
   },
   {
     "titulo": "Kongehuset · Casa Real de Dinamarca",
@@ -79,7 +88,8 @@ export const SOURCES = [
     "grupo": "Archivos e instituciones",
     "territorios": [],
     "personas": [],
-    "nota": "Sucesión y marco histórico de la línea danesa, especialmente para Oldemburgo y ramas conectadas."
+    "nota": "Sucesión y marco histórico de la línea danesa, especialmente para Oldemburgo y ramas conectadas.",
+    "general": true
   },
   {
     "titulo": "Royal House of the Netherlands",
@@ -87,7 +97,8 @@ export const SOURCES = [
     "grupo": "Archivos e instituciones",
     "territorios": [],
     "personas": [],
-    "nota": "Información institucional sobre Orange-Nassau y la continuidad dinástica neerlandesa."
+    "nota": "Información institucional sobre Orange-Nassau y la continuidad dinástica neerlandesa.",
+    "general": true
   },
   {
     "titulo": "Burg Hohenzollern",
@@ -95,7 +106,8 @@ export const SOURCES = [
     "grupo": "Archivos e instituciones",
     "territorios": [],
     "personas": [],
-    "nota": "Historia de la casa de Hohenzollern y apoyo para la evolución de Brandeburgo y Prusia."
+    "nota": "Historia de la casa de Hohenzollern y apoyo para la evolución de Brandeburgo y Prusia.",
+    "general": true
   },
   {
     "titulo": "MuseoTorino",
@@ -103,7 +115,8 @@ export const SOURCES = [
     "grupo": "Archivos e instituciones",
     "territorios": [],
     "personas": [],
-    "nota": "Material útil para comprobar sucesiones y genealogías ligadas a la casa de Saboya."
+    "nota": "Material útil para comprobar sucesiones y genealogías ligadas a la casa de Saboya.",
+    "general": true
   },
   {
     "titulo": "Stanford Encyclopedia of Philosophy",
@@ -111,7 +124,8 @@ export const SOURCES = [
     "grupo": "Historia cultural y política",
     "territorios": [],
     "personas": [],
-    "nota": "Especialmente útil para contextualizar autores y obras políticas o filosóficas, como Maquiavelo."
+    "nota": "Especialmente útil para contextualizar autores y obras políticas o filosóficas, como Maquiavelo.",
+    "general": true
   },
   {
     "titulo": "Musée du Louvre",
@@ -119,7 +133,8 @@ export const SOURCES = [
     "grupo": "Historia cultural y política",
     "territorios": [],
     "personas": [],
-    "nota": "Apoyo institucional para episodios concretos de historia cultural y artística, como la trayectoria de la Gioconda."
+    "nota": "Apoyo institucional para episodios concretos de historia cultural y artística, como la trayectoria de la Gioconda.",
+    "general": true
   },
   {
     "titulo": "Polish History",
@@ -127,7 +142,8 @@ export const SOURCES = [
     "grupo": "Historia cultural y política",
     "territorios": [],
     "personas": [],
-    "nota": "Contexto histórico para la monarquía electiva, la Unión de Lublin y la República de las Dos Naciones."
+    "nota": "Contexto histórico para la monarquía electiva, la Unión de Lublin y la República de las Dos Naciones.",
+    "general": true
   },
   {
     "titulo": "MapChart",
@@ -135,7 +151,107 @@ export const SOURCES = [
     "grupo": "Cartografía",
     "territorios": [],
     "personas": [],
-    "nota": "Base cartográfica sobre la que se ha construido la representación territorial interactiva."
+    "nota": "Base cartográfica sobre la que se ha construido la representación territorial interactiva.",
+    "general": true
+  },
+  {
+    "titulo": "Dictionary of Irish Biography",
+    "url": "https://www.dib.ie/",
+    "grupo": "Repertorios principales",
+    "territorios": [],
+    "personas": [],
+    "nota": "Repertorio biográfico de referencia para personajes y familias de la historia de Irlanda.",
+    "general": true
+  },
+  {
+    "titulo": "Encyclopaedia Iranica",
+    "url": "https://www.iranicaonline.org/",
+    "grupo": "Repertorios principales",
+    "territorios": [],
+    "personas": [],
+    "nota": "Enciclopedia de referencia para el ámbito iranio y sus relaciones históricas con Georgia y el Cáucaso.",
+    "general": true
+  },
+  {
+    "titulo": "Enciclopedia Georgiana",
+    "url": "https://georgianencyclopedia.ge/",
+    "grupo": "Repertorios principales",
+    "territorios": [],
+    "personas": [],
+    "nota": "Entradas biográficas e históricas para las casas y territorios georgianos.",
+    "general": true
+  },
+  {
+    "titulo": "Biographisches Lexikon zur Geschichte Südosteuropas · Leibniz-Institut",
+    "url": "https://www.biolex.ios-regensburg.de/",
+    "grupo": "Repertorios principales",
+    "territorios": [],
+    "personas": [],
+    "nota": "Repertorio biográfico para la historia del sureste de Europa.",
+    "general": true
+  },
+  {
+    "titulo": "Encyclopédie Larousse",
+    "url": "https://www.larousse.fr/encyclopedie",
+    "grupo": "Repertorios principales",
+    "territorios": [],
+    "personas": [],
+    "nota": "Consulta enciclopédica de apoyo para personajes y acontecimientos históricos.",
+    "general": true
+  },
+  {
+    "titulo": "World History Encyclopedia",
+    "url": "https://www.worldhistory.org/",
+    "grupo": "Repertorios principales",
+    "territorios": [],
+    "personas": [],
+    "nota": "Artículos de divulgación histórica con bibliografía para orientar y contextualizar las consultas.",
+    "general": true
+  },
+  {
+    "titulo": "National Library of Ireland · Sources",
+    "url": "https://sources.nli.ie/",
+    "grupo": "Archivos e instituciones",
+    "territorios": [],
+    "personas": [],
+    "nota": "Catálogo de fuentes y documentos para la historia de Irlanda.",
+    "general": true
+  },
+  {
+    "titulo": "Archivos Nacionales de Georgia",
+    "url": "https://archive.gov.ge/en",
+    "grupo": "Archivos e instituciones",
+    "territorios": [],
+    "personas": [],
+    "nota": "Documentación y recursos institucionales sobre la historia de Georgia.",
+    "general": true
+  },
+  {
+    "titulo": "Ministerio de Cultura · Tesauros del Patrimonio Cultural de España",
+    "url": "https://tesauros.cultura.gob.es/tesauros/",
+    "grupo": "Archivos e instituciones",
+    "territorios": [],
+    "personas": [],
+    "nota": "Terminología y contexto histórico para entidades, territorios y periodos.",
+    "general": true
+  },
+  {
+    "titulo": "British Museum",
+    "url": "https://www.britishmuseum.org/",
+    "grupo": "Archivos e instituciones",
+    "territorios": [],
+    "personas": [],
+    "nota": "Colecciones y registros de personas como apoyo documental y contextual.",
+    "general": true
+  },
+  {
+    "titulo": "Cambridge Core · Cambridge University Press",
+    "url": "https://www.cambridge.org/core/",
+    "grupo": "Historia cultural y política",
+    "territorios": [],
+    "personas": [],
+    "nota": "Libros y estudios académicos, entre ellos A History of Cyprus para la historia de Chipre.",
+    "general": true
   },
   {
     "titulo": "Monarquía cilicia: cronología y bibliografía",
@@ -895,10 +1011,13 @@ export const SOURCES = [
     "nota": "Referencia auxiliar: cronología y orientación bibliográfica."
   }
 ];
-export const SOURCE_GROUPS = [...new Set(SOURCES.map(source => source.grupo))].map(title => ({
-  title, sources: SOURCES.filter(source => source.grupo === title),
+// General bibliography lists each publication once; entity pages retain the individual references.
+export const SOURCE_PUBLICATIONS = SOURCES.filter(source => source.general);
+export const SOURCE_GROUPS = [...new Set(SOURCE_PUBLICATIONS.map(source => source.grupo))].map(title => ({
+  title, sources: SOURCE_PUBLICATIONS.filter(source => source.grupo === title),
 }));
 export const SOURCE_METHOD = [
+  'La bibliografía general reúne las obras, bases de datos e instituciones consultadas. Las referencias a artículos y biografías concretos se recogen en las fichas correspondientes.',
   'La base es una síntesis en desarrollo: una referencia contextual no verifica por sí sola todos los datos de una ficha.',
   'Las fechas se expresan normalmente por año; «c.» identifica las fechas aproximadas registradas como tales.',
   'Wikipedia se utiliza como orientación bibliográfica auxiliar. Las filiaciones y cronologías discutidas requieren contraste con referencias especializadas.',
