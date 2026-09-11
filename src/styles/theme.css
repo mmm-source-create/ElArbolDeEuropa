@@ -207,3 +207,10 @@
   .site-screen-notice button:focus-visible { outline: 2px solid var(--eade-wine); outline-offset: 2px; }
   .site-footer.is-compact { margin: 16px -12px -12px; padding-inline: 12px; }
 }
+
+/* Documentary notes share the site typography and palette. */
+.documentary-notes { margin: 18px 0; padding: 14px 0; border-block: 1px solid var(--eade-border); color: var(--eade-muted); font: 400 12px/1.6 var(--eade-sans); }
+.documentary-notes summary { cursor: pointer; color: var(--eade-ink); font-weight: 650; }
+.documentary-notes dt { margin-top: 12px; color: var(--eade-ink); font-weight: 600; }
+.documentary-notes dd { margin: 4px 0 0; }
+.dynasty-editorial-filter { display: flex; align-items: center; gap: 8px; margin: 12px 0 24px; color: var(--eade-muted); font-size: 12px; }
