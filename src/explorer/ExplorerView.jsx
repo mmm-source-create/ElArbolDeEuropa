@@ -1,3 +1,4 @@
+import DocumentationNotes from "../components/DocumentationNotes.jsx";
 import { responsiveImage } from "../utils/responsiveImage.js";
 import React from "react";
 import { Search, ChevronDown, ChevronRight, ArrowLeft, ArrowRight, ArrowUp, ArrowDown, ZoomIn, ZoomOut, RotateCcw, GitCompare, Focus, Share2, Play, Pause, SkipBack, SkipForward, X, Info, Heart, BookOpen, BarChart3, Scale, Flag, Mail, ExternalLink, Crosshair, Maximize2 } from "lucide-react";
@@ -922,6 +923,8 @@ export default function ExplorerView({ vm }) {
                     Leer ficha completa <ExternalLink size={11} />
                   </a>
 
+                  <a className="bio-full-profile-link" href={`/es/dinastia/${slugPublico(personaBio.dinastia)}`}>Explorar la casa de {personaBio.dinastia} <ExternalLink size={11}/></a>
+                  <DocumentationNotes persona={personaBio}/>
                   <BioSection
                     title="Datos y reinados"
                     open={bioSectionsOpen.datos}

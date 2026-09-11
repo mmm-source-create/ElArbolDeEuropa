@@ -1,5 +1,6 @@
 import { PERSONAS } from "../personas.jsx";
 import { listaReinados } from "../Territorios.jsx";
+import { documentaryLife } from "../utils/documentaryDates.js";
 
 export const siglo = (y) => Number.isFinite(y) ? Math.ceil(y / 100) : null;
 export const nRomano = { 12:"XII",13:"XIII",14:"XIV",15:"XV",16:"XVI",17:"XVII",18:"XVIII",19:"XIX",20:"XX" };
@@ -23,13 +24,7 @@ export function anioFinPersona(persona) {
 }
 
 export function formatoFechas(persona) {
-  const inicio = Number.isFinite(persona?.nac)
-    ? `${persona.nacAprox ? "c. " : ""}${persona.nac}`
-    : "?";
-  const fin = Number.isFinite(persona?.muer)
-    ? `${persona.muerAprox ? "c. " : ""}${persona.muer}`
-    : "?";
-  return `${inicio} – ${fin}`;
+  return documentaryLife(persona);
 }
 
 export function sobrenombreDePersona(persona) {
@@ -70,4 +65,3 @@ export const etiquetaFechaEvento = (evento) => Number.isFinite(evento?.desde) &&
 export const nivelTimelineEvento = (evento) => ["principal", "secundario", "historia"].includes(evento?.timeline)
   ? evento.timeline
   : "secundario";
-

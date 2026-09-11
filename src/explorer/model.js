@@ -2,6 +2,8 @@ import { PERSONAS } from "../personas.jsx";
 import { listaReinados } from "../Territorios.jsx";
 import { DEFAULT_LOCALE, SITE } from "../i18n.jsx";
 import { normalizarBusquedaPublica, slugBasePersona, slugPublico } from "../utils/personPresentation.js";
+import { canonicalDynastySlug } from "../data/dynastyAliases.js";
+import { documentaryLifeBounds } from "../utils/documentaryDates.js";
 
 export const OTRAS_DINASTIAS = "Otras dinastías";
 export const SIN_FECHA = "sin-fecha";
@@ -40,14 +42,14 @@ export const GRUPOS_DINASTICOS_REGIONALES = {
     "Castro", "D’Avalos", "Enríquez", "Entenza",
     "Fernández de Córdoba", "Figueroa", "Fortiá", "Gurrea", "Guzmán",
     "Ivorra", "Lara", "Luna", "Manrique de Lara", "Manuel",
-    "Medina Sidonia", "Meneses", "Noroña", "Padilla", "Pereira",
+    "Medina Sidonia", "Meneses", "Moncada", "Noroña", "Padilla", "Pereira",
     "Pimentel", "Ponce de León", "Quiñones", "Sandoval", "Velasco", "Zúñiga",
   ],
   "Casas francesas": [
     "Albret", "Amboise", "Armagnac", "Armañac", "Auvernia", "Bar", "Beauvau", "Chambly",
-    "Boulogne", "Brienne", "Châtillon", "Dammartín", "Estrées",
-    "Guilhem", "Laval", "Montfort", "Montoire", "Poitiers",
-    "Rohan", "Sabran", "Taillefer", "Talleyrand-Périgord",
+    "Avaugour", "Boulogne", "Brienne", "Châtillon", "Comminges", "Dammartín", "Estrées",
+    "Grailly", "Guilhem", "Laval", "Montfort", "Montoire", "Poitiers",
+    "Rohan", "Sabran", "Taillefer", "Talleyrand-Périgord", "Thouars",
   ],
   "Casas germánicas": [
     "Andechs", "Celje", "Gorizia", "Hohenberg", "Isenburg", "Katzenelnbogen",
@@ -195,7 +197,7 @@ export function personaIdDesdeRuta(pathname) {
 }
 
 export function valorPorSlug(slug, valores) {
-  return (valores || []).find((valor) => slugPublico(valor) === slug) || null;
+  return (valores || []).find((valor) => slugPublico(valor) === canonicalDynastySlug(slug)) || null;
 }
 
 export function ensureMetaTag(selector, attributes) {
@@ -403,12 +405,9 @@ export function fechasIncompletas(persona) {
 
 export function estaVivaEn(persona, año) {
   if (!Number.isFinite(año) || !persona) return true;
-  const reinados = listaReinados(persona);
-  const inicios = [persona.nac, ...reinados.map((r) => r.desde)].filter(Number.isFinite);
-  const finales = [persona.muer, ...reinados.map((r) => r.hasta)].filter(Number.isFinite);
-  if (!inicios.length && !finales.length) return false;
-  const inicio = inicios.length ? Math.min(...inicios) : -Infinity;
-  const fin = finales.length ? Math.max(...finales) : Infinity;
+  const bounds = documentaryLifeBounds(persona, listaReinados(persona));
+  if (!bounds) return false;
+  const [inicio, fin] = bounds;
   return año >= inicio && año <= fin;
 }
 
