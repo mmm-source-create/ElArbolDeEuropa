@@ -1,3 +1,4 @@
+import {HISTORIA_DINASTIAS} from "./src/content/dinastias/index.js";
 import { sourcesForPerson } from "./src/content/sources.js";
 import { TERRITORIOS, componentesDe } from "./src/data/territorios.js";
 import fs from "node:fs/promises";
@@ -936,6 +937,7 @@ function referenciaPersona(id) {
     slug: PERSONA_SLUG_POR_ID[persona.id],
     sobrenombre: persona.sobrenombre || "",
     aliases: aliasesDePersona(persona),
+    documentacion: persona.documentacion || null,
     resumen: resumenCortoPersona(persona),
     dinastia: persona.dinastia || "",
     titulo: persona.titulo || "",
@@ -1090,6 +1092,7 @@ async function generarPortadasPersona() {
       titulo: persona.titulo || "",
       nac: Number.isFinite(persona.nac) ? persona.nac : null,
       muer: Number.isFinite(persona.muer) ? persona.muer : null,
+      documentacion: persona.documentacion || null,
       nacAprox: Boolean(persona.nacAprox),
       muerAprox: Boolean(persona.muerAprox),
       reinos: Array.isArray(persona.reinos) ? persona.reinos : [],
@@ -1113,7 +1116,7 @@ async function generarCatalogosPublicos() {
   await fs.mkdir(catalogoDir, { recursive: true });
 
   const personas = catalogoPersonas();
-  const dinastias = catalogoAgrupado(PERSONAS.map((p) => p.dinastia), (p, nombre) => p.dinastia === nombre);
+  const dinastias = catalogoAgrupado(PERSONAS.map((p) => p.dinastia), (p, nombre) => p.dinastia === nombre).map(d=>({...d,editorial:Boolean(HISTORIA_DINASTIAS[d.nombre]),resumen:HISTORIA_DINASTIAS[d.nombre]?.resumen||""}));
   const territoriosValores = Object.keys(TERRITORIOS);
   const territorios = catalogoAgrupado(territoriosValores, (p, nombre) => (p.reinos || []).some(t => [nombre, ...componentesDe(nombre)].includes(t)));
   const historias = HISTORIAS.map((historia) => ({
