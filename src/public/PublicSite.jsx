@@ -1,3 +1,5 @@
+import DocumentationNotes from "../components/DocumentationNotes.jsx";
+import { documentaryLife } from "../utils/documentaryDates.js";
 import { SOURCE_SECTIONS } from "../content/sources.js";
 import React, { useEffect, useMemo, useState } from "react";
 import {
@@ -38,14 +40,7 @@ function rutaEntidad(tipo, slug, { atlas = false } = {}) {
   return `/es/${segmento}/${encodeURIComponent(slug)}${atlas ? "?atlas=1" : ""}`;
 }
 
-function formatoFecha(valor, aproximada) {
-  return Number.isFinite(valor) ? `${aproximada ? "c. " : ""}${valor}` : "?";
-}
-
-function textoFechas(persona) {
-  if (!persona) return "Fechas no documentadas";
-  return `${formatoFecha(persona.nac, persona.nacAprox)} – ${formatoFecha(persona.muer, persona.muerAprox)}`;
-}
+function textoFechas(persona) { return persona ? documentaryLife(persona) : "Fechas no documentadas"; }
 
 
 function ensureMetaTag(selector, attributes) {
@@ -142,7 +137,7 @@ function Breadcrumbs({ items }) {
   );
 }
 
-function PersonaMiniCard({ persona, compact = false }) {
+export function PersonaMiniCard({ persona, compact = false }) {
   if (!persona) return null;
   const image = IMAGENES_PERSONAS[persona.id];
   return (
@@ -327,7 +322,7 @@ export function InfoPage({ tipo }) {
 
 const CATALOG_CONFIG = {
   personas: { title: "Personas", eyebrow: "Índice del atlas", description: "Busca por nombre, título, dinastía o territorio.", icon: Users },
-  dinastias: { title: "Dinastías", eyebrow: "Casas y linajes", description: "Recorre las casas representadas en la base y abre cada una directamente en el atlas.", icon: Shield },
+  dinastias: { title: "Dinastías", eyebrow: "Casas y linajes", description: "Explora el origen de las casas, sus ramas, herencias y conexiones con las personas del Atlas.", icon: Shield },
   territorios: { title: "Territorios", eyebrow: "Coronas y espacios políticos", description: "Explora los territorios presentes en la base y las figuras que los conectan.", icon: Landmark },
   historias: { title: "Historias", eyebrow: "Recorridos guiados", description: "Historias construidas con las personas, mapas, biografías y cronología de la propia aplicación.", icon: BookOpen },
 };
@@ -343,12 +338,12 @@ export function CatalogPage({ tipo }) {
   const Icon = config.icon;
   const { data, loading, error } = useJson(`/catalogos/${tipo}.json`);
   const [query, setQuery] = useState("");
+  const [soloHistoria, setSoloHistoria] = useState(false);
   const items = Array.isArray(data?.items) ? data.items : [];
   const filtrados = useMemo(() => {
     const q = normalizarBusquedaPublica(query);
-    if (!q) return items;
-    return items.filter((item) => normalizarBusquedaPublica(textoCatalogoItem(item, tipo)).includes(q));
-  }, [items, query, tipo]);
+    return items.filter(item => (!soloHistoria || tipo !== "dinastias" || item.editorial) && (!q || normalizarBusquedaPublica(textoCatalogoItem(item, tipo)).includes(q)));
+  }, [items, query, tipo, soloHistoria]);
   const visibles = tipo === "personas" ? filtrados.slice(0, query.trim() ? 200 : 120) : filtrados;
   usePublicMeta({
     title: `${config.title} — El Árbol de Europa`,
@@ -365,6 +360,7 @@ export function CatalogPage({ tipo }) {
         </section>
         <label className="public-search"><Search size={16} /><input value={query} onChange={(e) => setQuery(e.target.value)} placeholder={`Buscar en ${config.title.toLowerCase()}…`} /><span>{filtrados.length}</span></label>
 
+        {tipo === "dinastias" && <label className="dynasty-editorial-filter"><input type="checkbox" checked={soloHistoria} onChange={e=>setSoloHistoria(e.target.checked)}/> Mostrar solo casas con historia desarrollada</label>}
         {loading && <div className="public-loading">Cargando catálogo…</div>}
         {error && <div className="public-error">No se ha podido cargar este catálogo. Puedes seguir explorando el atlas.</div>}
 
@@ -379,7 +375,8 @@ export function CatalogPage({ tipo }) {
           <div className="public-entity-grid">
             {filtrados.map((item) => (
               <article key={item.slug} className="public-entity-card">
-                <div className="public-entity-card-head"><div><span>{tipo === "dinastias" ? "Dinastía" : "Territorio"}</span><h2>{item.nombre}</h2></div><strong>{item.total}</strong></div>
+                <div className="public-entity-card-head"><div><span>{tipo === "dinastias" ? (item.editorial ? "Historia de la dinastía" : "Dinastía") : "Territorio"}</span><h2>{item.nombre}</h2></div><strong>{item.total}</strong></div>
+                {tipo === "dinastias" && item.resumen && <p className="public-muted">{item.resumen}</p>}
                 {!!item.miembros?.length && <div className="public-entity-members">{item.miembros.map((p) => <a key={p.id} href={rutaEntidad("persona", p.slug)}>{p.nombre}</a>)}</div>}
                 <a className="public-entity-action" href={rutaEntidad(tipo === "dinastias" ? "dinastia" : "territorio", item.slug)}>Ver ficha <ArrowRight size={13} /></a>
               </article>
@@ -480,6 +477,7 @@ export function PersonPage({ slug, legacyId, onExplore }) {
             <section className="public-content-card"><span>Red familiar</span><h2>Relaciones documentadas</h2><RelationList label="Padres" items={persona.padres} /><RelationList label={persona.conyuges?.length > 1 ? "Cónyuges" : "Cónyuge"} items={persona.conyuges} /><RelationList label="Hijos/as" items={persona.hijos} />{!persona.padres?.length && !persona.conyuges?.length && !persona.hijos?.length && <p className="public-muted">No hay relaciones directas cargadas para esta persona.</p>}</section>
           </div>
 
+          <DocumentationNotes persona={persona}/>
           {!!persona.fuentes?.length && <section className="public-content-card"><span>Documentación</span><h2>Fuentes de esta ficha</h2><ul>{persona.fuentes.map(fuente => <li key={fuente.url}><a href={fuente.url} target="_blank" rel="noreferrer">{fuente.titulo}</a></li>)}</ul><p className="public-muted">Referencias biográficas y de contexto. <a href="/es/fuentes">Consultar metodología y bibliografía completa</a>.</p></section>}
 
           {!!persona.historias?.length && <section className="public-section public-person-section"><div className="public-section-heading"><div><span>Historias relacionadas</span><h2>Aparece en estos recorridos</h2></div></div><div className="public-story-grid">{persona.historias.map((h) => <a key={h.id} className="public-story-card" href={rutaEntidad("historia", h.slug)}><span>Historia</span><h3>{h.titulo}</h3><p>{h.subtitulo}</p><b>Comenzar <ArrowRight size={13} /></b></a>)}</div></section>}
