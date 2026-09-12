@@ -1,0 +1,39 @@
+/* Extiende la ficha territorial con las tipografías, colores y bordes del proyecto. */
+.territory-succession .succession-crises { margin:1.5rem 0 2rem; }
+.territory-succession .succession-crises > h3 { font:600 1.2rem/1.3 var(--eade-serif); margin:0 0 .8rem; }
+.territory-succession .succession-crisis { border-block-end:1px solid var(--eade-border); scroll-margin-top:7rem; }
+.territory-succession .succession-crisis > summary { display:list-item; cursor:pointer; padding:1rem .2rem; color:var(--eade-wine); font:600 1.1rem/1.4 var(--eade-serif); }
+.territory-succession .succession-crisis-period { display:inline-block; margin-right:.8rem; font:500 .8rem/1.5 var(--eade-sans); color:var(--eade-muted); }
+.territory-succession .succession-crisis-body { padding:0 .2rem 1.2rem; font-size:.875rem; line-height:1.65; }
+.territory-succession .succession-candidates { display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr)); gap:1rem; margin:1rem 0; }
+.territory-succession .succession-candidates article { min-width:0; padding:1rem; border:1px solid var(--eade-border); border-radius:var(--eade-radius-md); background:var(--eade-paper-bright); }
+.territory-succession .succession-candidates h4 { margin:0 0 .6rem; font:600 1.15rem/1.3 var(--eade-serif); }
+.territory-succession .succession-candidates p { margin:.5rem 0; }
+.territory-succession .succession-lineage { margin:.85rem 0; padding-left:.8rem; border-left:2px solid var(--eade-border); }
+.territory-succession .succession-lineage > p { font-size:.75rem; color:var(--eade-muted); }
+.territory-succession .succession-lineage ol { list-style:none; padding:0; margin:.4rem 0; }
+.territory-succession .succession-lineage li { margin:.3rem 0; font-size:.8rem; overflow-wrap:anywhere; }
+.territory-succession .succession-lineage li + li::before { content:'↓'; display:block; color:var(--eade-muted-soft); }
+.territory-succession .succession-atlas-link { font-size:.8rem; }
+.territory-succession .succession-explanation { margin-top:.8rem; padding-top:.7rem; border-top:1px solid var(--eade-border); font-size:.875rem; }
+.territory-succession .succession-explanation > summary { cursor:pointer; color:var(--eade-wine); line-height:1.5; }
+.territory-succession .succession-explanation > summary span { display:block; margin-top:.15rem; font-size:.75rem; color:var(--eade-muted); }
+.territory-succession .succession-explanation > div { padding-top:.35rem; }
+.territory-succession .succession-kinship { font-style:italic; color:var(--eade-muted); }
+.territory-succession .succession-kinship-details { margin-top:.6rem; }
+.territory-succession .succession-kinship-details summary { cursor:pointer; color:var(--eade-wine); }
+.territory-succession .succession-dates { margin:1rem 0; }
+.territory-succession .succession-dates > div { margin:.65rem 0; }
+.territory-succession .succession-dates dt { font-weight:600; }
+.territory-succession .succession-dates dd { margin:.2rem 0 0; color:var(--eade-muted); }
+.territory-succession .succession-references { margin-top:.9rem; font-size:.75rem; color:var(--eade-muted); overflow-wrap:anywhere; }
+.territory-succession summary:focus-visible { outline:2px solid var(--eade-wine); outline-offset:3px; }
+@media(max-width:540px) {
+  .territory-page .territory-succession, .territory-succession .succession-crisis { scroll-margin-top:12rem; }
+  .territory-succession .succession-crisis > summary { padding-block:.9rem; }
+  .territory-succession .succession-crisis-period { display:inline-block; margin:0 .5rem .2rem 0; }
+  .territory-succession .succession-crisis > summary span:last-child { display:block; margin-left:.9rem; }
+}
+
+.territory-succession .succession-lineage[data-relation="path"] li + li::before { content:"↕"; }
+
