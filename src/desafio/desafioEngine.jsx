@@ -1,4 +1,4 @@
-const TIPOS_REINADO_NO_EFECTIVOS = new Set(["titular", "pretensión", "pretension"]);
+import {reinadosEfectivos, sucesionesDirectas} from "./desafioGovernments.js";
 const DINASTIAS_GENERICAS = new Set(["", "Sin casa identificada", "Desconocida", "Familias menores"]);
 const PALABRAS_VACIAS = new Set(["de", "del", "la", "las", "el", "los", "y", "e", "casa", "dinastia", "dinastía"]);
 
@@ -64,16 +64,6 @@ function barajar(lista, rng = Math.random) {
 function elegir(lista, rng = Math.random) {
   if (!lista?.length) return null;
   return lista[Math.floor(rng() * lista.length)] ?? null;
-}
-
-function reinadosEfectivos(persona) {
-  if (!Array.isArray(persona?.reinados)) return [];
-  return persona.reinados.filter((reinado) => {
-    if (!reinado || typeof reinado.territorio !== "string") return false;
-    if (!Number.isFinite(reinado.desde) || !Number.isFinite(reinado.hasta)) return false;
-    if (reinado.efectivo === false) return false;
-    return !TIPOS_REINADO_NO_EFECTIVOS.has(String(reinado.tipo || "").toLowerCase());
-  });
 }
 
 function categoriaTitulo(persona) {
@@ -513,29 +503,6 @@ function generarPistas(personas, indice, dificultad, rng) {
     }, dificultad, rng);
   }
   return null;
-}
-
-function sucesionesDirectas(personas) {
-  const porTerritorio = new Map();
-  personas.forEach((persona) => {
-    reinadosEfectivos(persona).forEach((reinado) => {
-      if (!porTerritorio.has(reinado.territorio)) porTerritorio.set(reinado.territorio, []);
-      porTerritorio.get(reinado.territorio).push({ persona, reinado });
-    });
-  });
-  const pares = [];
-  porTerritorio.forEach((entradas, territorio) => {
-    const ordenadas = entradas.slice().sort((a, b) => a.reinado.desde - b.reinado.desde || a.reinado.hasta - b.reinado.hasta);
-    for (let i = 0; i < ordenadas.length - 1; i += 1) {
-      const a = ordenadas[i];
-      const b = ordenadas[i + 1];
-      if (a.persona.id === b.persona.id) continue;
-      const hueco = b.reinado.desde - a.reinado.hasta;
-      if (hueco < -2 || hueco > 12) continue;
-      pares.push({ territorio, anterior: a, siguiente: b });
-    }
-  });
-  return pares;
 }
 
 function generarSucesor(personas, indice, dificultad, rng) {
