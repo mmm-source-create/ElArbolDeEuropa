@@ -394,7 +394,7 @@ export const TERRITORIOS_SUB = {
   "Sacro Imperio": [
     "Alemania", "Austria", "Austria Interior", "Baviera", "Bohemia",
     "Borgoña", "Condado de Borgoña", "Brabante", "Carintia", "Cléveris", "Flandes", "Habsburgo",
-    "Henao", "Holanda", "Limburgo", "Lorena", "Luxemburgo", "Milán",
+    "Henao", "Holanda", "Zelanda", "Limburgo", "Lorena", "Luxemburgo", "Milán",
     "Monferrato", "Moravia", "Nassau", "Países Bajos", "Palatinado",
     "Piamonte", "Saboya", "Sajonia", "Silesia", "Suabia", "Tirol",
     "Turingia", "Württemberg", "Pomerania", "Jülich", "Berg",
@@ -409,7 +409,7 @@ export const TERRITORIOS_SUB = {
 
   "Países Bajos y Flandes": [
     "Artois", "Borgoña", "Brabante", "Cléveris", "Flandes", "Henao",
-    "Holanda", "Limburgo", "Luxemburgo", "Países Bajos", "Güeldres", "Namur",
+    "Holanda", "Zelanda", "Limburgo", "Luxemburgo", "Países Bajos", "Güeldres", "Namur",
   ],
 
   "Estados Italianos": [
