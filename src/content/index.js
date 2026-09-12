@@ -1,0 +1,79 @@
+// Relevos seleccionados editorialmente. No se deducen de la proximidad de dos fechas.
+const FMG = 'https://fmg.ac/Projects/MedLands/index.htm';
+const BRIT = 'https://www.britannica.com/';
+const fuentes = [FMG, BRIT];
+const relevo = (territorio, anterior, desdeAnterior, siguiente, desde, motivos, explicacion, extra = {}) => ({
+  id: `${territorio}-${siguiente}-${desde}`, territorio,
+  predecesor: {persona: anterior, desde: desdeAnterior}, sucesor: {persona: siguiente, desde},
+  motivos, explicacion, fuentes, ...extra,
+});
+export const RELEVOS = [
+  relevo('Brabante','ENRIQ3BR',1248,'ENRIQ4BRAB',1261,['herencia'],'Enrique IV heredó el ducado al morir su padre. La minoría del nuevo duque dejó la dirección política en manos de su madre, Adelaida de Borgoña.'),
+  relevo('Brabante','ENRIQ4BRAB',1261,'JUAN1BR',1267,['abdicación','herencia'],'La renuncia de Enrique IV abrió la sucesión a su hermano Juan. No fue una transmisión directa de Enrique III a Juan I: entre ambos hubo otro titular.'),
+  relevo('Brabante','JUAN1BR',1267,'JUAN2BRAB',1294,['herencia'],'Juan II heredó los ducados de su padre, muerto tras un torneo. Brabante y Limburgo compartieron titular sin perder sus identidades.'),
+  relevo('Brabante','JUAN2BRAB',1294,'JUAN3BRAB',1312,['herencia'],'Juan III sucedió a su padre siendo menor de edad. La herencia dinástica convivió con la intervención política de nobles y ciudades.'),
+  relevo('Brabante','JUAN3BRAB',1312,'JUANABR',1355,['herencia'],'Juana, la hija mayor superviviente de Juan III, heredó el ducado. Su derecho no impidió la oposición de Luis de Male, marido de su hermana Margarita.',{crisis:'brabante-1356',fechas:[{tipo:'acceso',anio:1355,nota:'Muerte de Juan III y apertura de la herencia.'},{tipo:'inauguración',anio:1356,nota:'La Joyeuse Entrée fijó compromisos del poder ducal con el territorio; no fue una coronación regia.'}]}),
+  relevo('Brabante','JUANABR',1355,'ANTONBRAB',1406,['herencia','acuerdo'],'Antonio accedió por los acuerdos que destinaron la herencia a la línea de Margarita, hermana de Juana. Era hijo de Margarita III de Flandes y nieto de Margarita de Brabante; no era hijo de la duquesa.'),
+  relevo('Brabante','ANTONBRAB',1406,'JOHN4BRAB',1415,['herencia'],'La muerte de Antonio en Azincourt dejó los ducados a su hijo Juan IV, todavía menor. El gobierno de la nueva generación se entrelazó después con la reclamación de Jacoba de Baviera.'),
+  relevo('Brabante','JOHN4BRAB',1415,'PHILSTPOL',1427,['herencia'],'Juan IV murió sin descendencia. La sucesión pasó a su hermano Felipe de Saint-Pol, que ya había intervenido en el gobierno del ducado.'),
+  relevo('Brabante','PHILSTPOL',1427,'FEL3BORG',1430,['herencia'],'La muerte sin descendencia de Felipe de Saint-Pol extinguió esta línea ducal. Su primo Felipe el Bueno heredó Brabante y Limburgo, ampliando un patrimonio borgoñón formado por títulos diferentes.'),
+  relevo('Flandes','MARG2FLANDES',1244,'GUIDOFLA',1278,['abdicación','herencia'],'Margarita dejó el gobierno de Flandes a Guido, de su matrimonio Dampierre. Retuvo Henao hasta su muerte: la cesión no reunió ni sincronizó ambas sucesiones.',{crisis:'avesnes-dampierre'}),
+  relevo('Henao','MARG2FLANDES',1244,'JOHN2AVES',1280,['herencia','acuerdo'],'Henao pasó al nieto Avesnes de Margarita, conforme a la separación de derechos entre sus dos descendencias. Juan I de Avesnes, padre del nuevo conde, había muerto antes que Margarita.',{crisis:'avesnes-dampierre'}),
+  relevo('Flandes','GUIDOFLA',1278,'ROB3FLAND',1305,['herencia'],'Roberto III sucedió a su padre Guido. Las consecuencias del conflicto con la corona francesa condicionaron el ejercicio de la autoridad condal.'),
+  relevo('Flandes','ROB3FLAND',1305,'LUIS1FLA',1322,['herencia'],'Luis heredó de su abuelo Roberto III: su padre, Luis de Nevers, había muerto poco antes. Una generación genealógica no equivale aquí a un gobierno intermedio.'),
+  relevo('Flandes','LUIS1FLA',1322,'LUIS2FLA',1346,['herencia'],'Luis II sucedió a su padre, muerto en Crécy. La herencia condal continuó en la misma línea Dampierre.'),
+  relevo('Flandes','LUIS2FLA',1346,'MARGFLAN',1384,['herencia'],'Margarita heredó los derechos de su padre Luis de Male. Su marido Felipe el Atrevido ejerció el poder por matrimonio; ambos figuran con condiciones distintas.'),
+  relevo('Flandes','LUIS2FLA',1346,'FEL2BORG',1384,['matrimonio'],'Felipe el Atrevido ejerció la autoridad condal por los derechos de su esposa, Margarita III, heredera de Luis de Male. El matrimonio no sustituyó la titularidad propia de Margarita; se registra como gobierno jure uxoris.'),
+  relevo('Flandes','MARGFLAN',1384,'JUAN1BORG',1405,['herencia'],'Juan sin Miedo recibió Flandes al morir su madre. La muerte de su padre en 1404 le había dado antes el ducado de Borgoña: las dos fechas no deben confundirse.'),
+  relevo('Flandes','JUAN1BORG',1405,'FEL3BORG',1419,['herencia'],'Felipe el Bueno heredó al morir asesinado su padre Juan sin Miedo. La sucesión dinástica formó parte de una crisis política de la monarquía francesa.'),
+  relevo('Holanda','FLORIS5HOL',1256,'JOHN1HOL',1296,['herencia'],'Juan I sucedió a su padre Floris V después de su asesinato. La continuidad hereditaria no evitó las luchas por controlar el gobierno del joven conde.'),
+  ...['Holanda','Zelanda'].map(t=>relevo(t,'JOHN1HOL',1296,'JOHN2AVES',1299,['herencia'],'Juan I murió sin descendencia. Juan II de Avesnes tenía derechos por su madre Adelaida, hermana de Guillermo de Holanda. El nuevo titular ya gobernaba Henao.')),
+  ...['Holanda','Henao','Zelanda'].map(t=>relevo(t,'JOHN2AVES',t==='Henao'?1280:1299,'GUILLERMO3HENAO',1304,['herencia'],'Guillermo heredó de Juan II los tres condados. Su ordinal cambia según el título: Guillermo I en Henao y Guillermo III en Holanda.')),
+  ...['Holanda','Henao','Zelanda'].map(t=>relevo(t,'GUIL4HOL',1337,'MARG2HEN',1345,['herencia'],'La muerte de Guillermo en Frisia, sin descendencia legítima, abrió la herencia a su hermana Margarita. Su matrimonio con Luis de Baviera llevó los derechos a la casa de Wittelsbach.')),
+  relevo('Holanda','MARG2HEN',1345,'GUILLERMO1BAV',1354,['acuerdo'],'Tras el conflicto entre Margarita y su hijo, el acuerdo de 1354 dejó Holanda y Zelanda a Guillermo. Henao permaneció con Margarita hasta 1356.'),
+  relevo('Henao','MARG2HEN',1345,'GUILLERMO1BAV',1356,['herencia'],'Guillermo heredó Henao al morir su madre. Ya gobernaba Holanda y Zelanda desde el acuerdo de 1354: esta sucesión no ocurrió a la vez en los tres condados.'),
+  relevo('Henao','GUILLERMO1BAV',1356,'ALB1BAV',1358,['regencia'],'La incapacidad de Guillermo llevó a su hermano Alberto a ejercer la regencia. Guillermo conservó el título hasta 1389; asumir el gobierno efectivo no equivalió a heredar todavía el condado.',{fechas:[{tipo:'gobierno',anio:1358,nota:'Comienzo de la regencia de Alberto.'},{tipo:'acceso',anio:1389,nota:'Alberto pasó a ser conde tras la muerte de Guillermo.'}]}),
+  relevo('Henao','GUILLERMO2BAV',1404,'JACOBA',1417,['herencia'],'Jacoba heredó los derechos de su padre. Su tío Juan de Baviera disputó la herencia en Holanda y Zelanda; la situación de los tres condados no fue idéntica.',{crisis:'jacoba-1417'}),
+  ...['Holanda','Henao','Zelanda'].map(t=>relevo(t,'JACOBA',1428,'FEL3BORG',1433,['acuerdo','abdicación'],'El acuerdo de Delft de 1428 dejó a Jacoba el título y a Felipe una posición decisiva en el gobierno. La cesión de 1433 transmitió los condados a Felipe; gobierno efectivo y titularidad tuvieron cronologías diferentes.',{crisis:'jacoba-1417',fechas:[{tipo:'gobierno',anio:1428,nota:'Felipe asumió el gobierno como regente y heredero; Jacoba conservó el título.'},{tipo:'acceso',anio:1433,nota:'Cesión de los títulos de Jacoba a Felipe.'}]})),
+  relevo('Güeldres','REIN2GUELD',1339,'REIN3GUELD',1343,['herencia'],'Reinaldo III heredó el ducado de su padre. Reinaldo II había gobernado primero como conde: la elevación ducal de 1339 no fue una sucesión de personas.'),
+  relevo('Güeldres','REIN3GUELD',1343,'EDUARDGUELD',1361,['deposición'],'Eduardo derrotó y encarceló a su hermano Reinaldo III. El relevo se produjo por el conflicto entre ambos, no por la muerte del duque depuesto.'),
+  relevo('Güeldres','EDUARDGUELD',1361,'REIN3GUELD',1371,['restauración'],'La muerte de Eduardo permitió la restauración de Reinaldo III. Reinaldo murió también en 1371; los dos mandatos de su vida se mantienen separados.'),
+  relevo('Güeldres','REIN3GUELD',1371,'GUIL1GUELD',1371,['herencia','disputa'],'Guillermo reclamó Güeldres a través de su madre María, hermana de Reinaldo III. Su posición fue disputada por Matilde, otra hermana de Reinaldo, hasta la resolución del conflicto.',{crisis:'gueldres-1371'}),
+  relevo('Güeldres','GUIL1GUELD',1379,'REIN4GUELD',1402,['herencia'],'Al morir Guillermo sin descendencia legítima, le sucedió su hermano Reinaldo. Los derechos de ambos procedían de María de Güeldres.'),
+  relevo('Güeldres','REIN4GUELD',1402,'ARNOLDEGMOND',1423,['herencia','elección'],'La elección y reconocimiento de Arnoldo se apoyaron en su descendencia de Juana de Jülich, hermana de Reinaldo. Sus derechos atravesaban dos generaciones de mujeres.'),
+  relevo('Güeldres','ARNOLDEGMOND',1423,'ADOLFEGMOND',1465,['deposición'],'Adolfo depuso y encarceló a su padre Arnoldo. El parentesco directo no convierte este cambio violento en una herencia ordinaria.'),
+  relevo('Güeldres','ADOLFEGMOND',1465,'ARNOLDEGMOND',1471,['restauración'],'La intervención de Carlos el Temerario apartó a Adolfo y devolvió el ducado a Arnoldo. El conflicto familiar facilitó la entrada de Borgoña en la política de Güeldres.'),
+  relevo('Güeldres','ARNOLDEGMOND',1471,'CAR1BORG',1473,['acuerdo','conquista'],'Carlos el Temerario invocó la cesión de derechos de Arnoldo y ocupó militarmente el ducado. El acuerdo no garantizó por sí solo el control del territorio ni extinguió la reclamación de los Egmond.'),
+  ...['Flandes','Brabante','Holanda','Henao','Zelanda'].map(t=>relevo(t,'FEL3BORG',t==='Flandes'?1419:t==='Brabante'?1430:1433,'CAR1BORG',1467,['herencia'],'Carlos el Temerario heredó de Felipe el Bueno. Compartir heredero no transformó los distintos condados y ducados en un título único.')),
+  ...['Flandes','Brabante','Holanda','Henao','Zelanda'].map(t=>relevo(t,'CAR1BORG',1467,'MARIABORG',1477,['herencia'],'María heredó los derechos de su padre, muerto en Nancy. Tuvo que negociar con los territorios y afrontar la intervención francesa; la herencia no garantizó conservar todas las posesiones borgoñonas.')),
+  relevo('Flandes','CARLOS5',1506,'FEL2ESP',1555,['abdicación'],'Carlos cedió a Felipe los territorios de los Países Bajos en 1555. La abdicación de las coronas hispánicas se produjo en 1556; no debe trasladarse esa fecha a Flandes.',{fechas:[{tipo:'acceso',anio:1555,nota:'Cesión de los Países Bajos en Bruselas.'}]}),
+  relevo('Inglaterra','RICARDO3ING',1483,'ENRIQ7ING',1485,['conquista'],'Enrique Tudor tomó el poder tras la derrota y muerte de Ricardo III en Bosworth. Su posterior matrimonio con Isabel de York reforzó el arreglo dinástico, pero no fue la causa de su acceso inicial.',{fechas:[{tipo:'acceso',anio:1485,nota:'Victoria de Bosworth, el 22 de agosto.'},{tipo:'coronación',anio:1485,nota:'Coronación en Westminster, el 30 de octubre; anterior al matrimonio con Isabel de York.'}]}),
+];
+
+export const CRISIS = [
+  {id:'avesnes-dampierre',titulo:'Una madre, dos herencias',territorios:['Flandes','Henao'],periodo:'1246–1280',
+    resumen:'Los hijos de los dos matrimonios de Margarita de Flandes defendieron derechos sobre sus patrimonios. La discusión sobre la legitimidad de los Avesnes y la intervención de poderes vecinos dieron al conflicto una dimensión política.',
+    candidatos:[
+      {persona:'JOHN1AVES',ascendencia:['MARG2FLANDES','JOHN1AVES'],fundamento:'Hijo del primer matrimonio de Margarita. Su línea defendió la herencia de Henao.',resultado:'Murió antes que su madre; su hijo Juan II heredó Henao en 1280.'},
+      {persona:'GUIDOFLA',ascendencia:['MARG2FLANDES','GUIDOFLA'],fundamento:'Hijo del matrimonio Dampierre de Margarita. Su línea recibió los derechos sobre Flandes.',resultado:'Asumió Flandes en 1278, antes de la muerte de Margarita.'},
+    ],desenlace:'El arbitraje de Luis IX de 1246 favoreció separar las herencias. Hubo conflictos posteriores: el reparto no equivale a una transmisión inmediata y pacífica de ambos condados.',fuentes},
+  {id:'brabante-1356',titulo:'Las hijas de Juan III y la herencia de Brabante',territorios:['Brabante','Flandes'],periodo:'1355–1357',
+    resumen:'La muerte de Juan III dejó la herencia a Juana, pero su cuñado Luis de Male reclamó derechos en nombre de Margarita, hermana de la duquesa. La guerra de 1356 mostró la distancia entre derecho hereditario y control del territorio.',
+    candidatos:[
+      {persona:'JUANABR',ascendencia:['JUAN3BRAB','JUANABR'],fundamento:'Hija mayor superviviente de Juan III; defendía la continuidad del ducado bajo su gobierno.',resultado:'Retuvo el ducado con concesiones al conde de Flandes.'},
+      {persona:'MARGABRAB1323',ascendencia:['JUAN3BRAB','MARGABRAB1323'],fundamento:'Hija de Juan III y esposa de Luis de Male, que sostuvo las reclamaciones de esta línea.',resultado:'Su descendencia fue decisiva en la posterior transmisión de Brabante a Antonio de Borgoña.'},
+    ],desenlace:'La paz de Ath de 1357 dejó a Juana al frente de Brabante, con importantes concesiones territoriales. El conflicto no terminó en una simple sustitución de una hermana por otra.',fuentes},
+  {id:'jacoba-1417',titulo:'Jacoba de Baviera y los tres condados',territorios:['Holanda','Henao','Zelanda'],periodo:'1417–1433',
+    resumen:'La herencia de Jacoba provocó una lucha por el reconocimiento y el control de los condados. Parentesco, matrimonios, facciones locales y acuerdos sucesivos sostuvieron reclamaciones diferentes.',
+    candidatos:[
+      {persona:'JACOBA',ascendencia:['ALB1BAV','GUILLERMO2BAV','JACOBA'],fundamento:'Hija y heredera de Guillermo II de Baviera-Straubing.',resultado:'Conservó los títulos tras Delft, pero acabó cediéndolos en 1433.'},
+      {persona:'JUAN3BAV',ascendencia:['ALB1BAV','JUAN3BAV'],fundamento:'Tío paterno de Jacoba. Disputó su herencia y obtuvo una posición de poder en Holanda y Zelanda.',resultado:'Murió en 1425; su desaparición favoreció la expansión de la posición borgoñona.'},
+      {persona:'FEL3BORG',ascendencia:['ALB1BAV','MARGBAV','FEL3BORG'],fundamento:'Primo de Jacoba por la familia de Baviera. Su autoridad se consolidó mediante acuerdos e intervención política y militar, no solo por ese parentesco.',resultado:'Regente desde 1428 y titular de los condados desde 1433.'},
+    ],desenlace:'Delft separó en 1428 el título de Jacoba del gobierno de Felipe. La cesión de 1433 cerró otra fase del conflicto; no debe adelantarse a 1417 la incorporación de los tres títulos a Borgoña.',fuentes},
+  {id:'gueldres-1371',titulo:'Dos líneas femeninas hacia Güeldres',territorios:['Güeldres'],periodo:'1371–1379',
+    resumen:'Eduardo y Reinaldo III murieron en 1371 sin descendencia legítima. Sus hermanas Matilde y María abrieron dos caminos hacia la herencia; la reclamación de María se sostuvo a favor de su hijo Guillermo.',
+    candidatos:[
+      {persona:'MATILDEGUELD1371',ascendencia:['REIN2GUELD','MATILDEGUELD1371'],fundamento:'Hija de Reinaldo II y hermana de los duques fallecidos.',resultado:'Su partido no logró consolidar el ducado y renunció a la reclamación en 1379.'},
+      {persona:'GUIL1GUELD',ascendencia:['REIN2GUELD','MARIAGUELDJUL','GUIL1GUELD'],fundamento:'Nieto de Reinaldo II por María de Güeldres. La reclamación fue defendida por su familia de Jülich.',resultado:'La resolución del conflicto afianzó a Guillermo como duque.'},
+    ],desenlace:'La casa de Jülich consolidó el ducado en 1379. La ficha distingue el periodo disputado de Guillermo de su gobierno posterior, sin crear un segundo acceso hereditario en esa fecha.',fuentes},
+];
