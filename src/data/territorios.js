@@ -280,7 +280,8 @@ export const TERRITORIOS = Object.freeze({
     "componentes": []
   },
   "Güeldres": {
-    "clase": "ducado",
+    "clase": "condado",
+    "etapas": [{"desde": 1339, "clase": "ducado"}],
     "naturaleza": "entidad",
     "componentes": []
   },
@@ -479,6 +480,7 @@ export const TERRITORIOS = Object.freeze({
     "naturaleza": "entidad",
     "componentes": []
   },
+  "Zelanda": {"clase":"condado","naturaleza":"entidad","componentes":[],"nota":"Condado vinculado a Holanda, con una sucesión y una identidad territorial propias; distinto de la agrupación de los Países Bajos."},
   "Holanda": {
     "clase": "condado",
     "naturaleza": "entidad",
@@ -1306,7 +1308,7 @@ export const TERRITORIOS = Object.freeze({
       "Flandes",
       "Brabante",
       "Henao",
-      "Holanda"
+      "Holanda", "Zelanda", "Güeldres", "Limburgo"
     ]
   },
   "Bizancio y Oriente latino": {
