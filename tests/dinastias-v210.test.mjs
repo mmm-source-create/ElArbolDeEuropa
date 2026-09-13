@@ -15,9 +15,9 @@ const {PERSONAS}=await import('data:text/javascript;base64,'+fs.readFileSync(new
 const by=Object.fromEntries(PERSONAS.map(p=>[p.id,p]));
 const pages=buildDynastyPages(PERSONAS);
 
-test('las doce historias y sus ramas tienen personas, territorios y fuentes válidos',()=>{
-  assert.equal(Object.keys(HISTORIA_DINASTIAS).length,12);
-  assert.equal(pages.filter(p=>p.editorial).length,12);
+test('las historias y sus ramas tienen personas, territorios y fuentes válidos',()=>{
+  assert.equal(Object.keys(HISTORIA_DINASTIAS).length,16);
+  assert.equal(pages.filter(p=>p.editorial).length,16);
   assert.deepEqual(auditDynasties(PERSONAS),[]);
   assert.equal(new Set(pages.map(p=>p.slug)).size,pages.length);
   for(const p of pages) {
