@@ -1,0 +1,12 @@
+import fs from 'node:fs/promises';
+import {ACCESOS_CORONAS,UNIONES_CORONAS} from './src/content/coronas/index.js';
+import {CRISIS} from './src/content/sucesiones/index.js';
+import {auditarCoronas} from './src/data/crowns.js';
+import {TERRITORIOS} from './src/data/territorios.js';
+import {SOURCES} from './src/content/sources.js';
+const {PERSONAS}=await import('data:text/javascript;base64,'+Buffer.from(await fs.readFile('./src/personas.jsx')).toString('base64'));
+const issues=auditarCoronas(PERSONAS,ACCESOS_CORONAS,UNIONES_CORONAS,TERRITORIOS,SOURCES);
+for(const c of CRISIS)if(!Number.isInteger(c.desde)||!Number.isInteger(c.hasta)||c.desde>c.hasta)issues.push({code:'CRISIS_YEAR_INVALID',subject:c.id,message:'Límites no utilizables en Europa en este año'});
+console.log(`Coronas: ${ACCESOS_CORONAS.length} accesos explicados · ${UNIONES_CORONAS.length} uniones · ${issues.length} errores`);
+for(const i of issues)console.error(`${i.code} · ${i.subject}: ${i.message}`);
+if(issues.length)process.exitCode=1;

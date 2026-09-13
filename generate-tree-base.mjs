@@ -1,3 +1,6 @@
+import {ACCESOS_CORONAS} from './src/content/coronas/index.js';
+import {RELEVOS} from './src/content/sucesiones/index.js';
+import {accesosDe} from './src/data/crowns.js';
 import {HISTORIA_DINASTIAS} from "./src/content/dinastias/index.js";
 import { sourcesForPerson } from "./src/content/sources.js";
 import { TERRITORIOS, componentesDe } from "./src/data/territorios.js";
@@ -1097,6 +1100,7 @@ async function generarPortadasPersona() {
       muerAprox: Boolean(persona.muerAprox),
       reinos: Array.isArray(persona.reinos) ? persona.reinos : [],
       reinados: reinadosLigero(persona),
+      accesosCoronas: accesosDe(persona,ACCESOS_CORONAS,RELEVOS),
       biografia: biografiaPublicaPersona(persona),
       fuentes: sourcesForPerson(persona.id),
       padres,

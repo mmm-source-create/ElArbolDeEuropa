@@ -1,18 +1,19 @@
 {
   "name": "arbol-v2-cgpt",
   "private": true,
-  "version": "2.11.0",
+  "version": "2.12.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "prebuild": "node audit-personas.mjs --fail-on-errors && node audit-territorios.mjs --fail-on-errors && node audit-dinastias.mjs && node audit-sucesiones.mjs && node generate-sitemap.mjs && node generate-tree-base.mjs && node generate-territorios.mjs && node generate-dinastias.mjs",
+    "prebuild": "node audit-personas.mjs --fail-on-errors && node audit-territorios.mjs --fail-on-errors && node audit-dinastias.mjs && node audit-sucesiones.mjs && node audit-coronas.mjs && node generate-sitemap.mjs && node generate-tree-base.mjs && node generate-territorios.mjs && node generate-dinastias.mjs",
     "build": "vite build",
     "preview": "vite preview",
     "audit": "node audit-personas.mjs",
     "audit:territorios": "node audit-territorios.mjs",
     "test": "node --import ./tests/jsx-loader.mjs --test tests/*.test.mjs",
     "audit:dinastias": "node audit-dinastias.mjs",
-    "audit:sucesiones": "node audit-sucesiones.mjs"
+    "audit:sucesiones": "node audit-sucesiones.mjs",
+    "audit:coronas": "node audit-coronas.mjs"
   },
   "dependencies": {
     "@vitejs/plugin-react": "6.0.5",

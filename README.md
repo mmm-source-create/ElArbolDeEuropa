@@ -3,8 +3,8 @@
 Atlas histórico y genealógico para explorar personas, dinastías, territorios y sus conexiones familiares. Incluye fichas públicas, historias, cronología y desafíos.
 
 - Web: [treeofeurope.eu](https://www.treeofeurope.eu/)
-- Versión: **2.11 — Sucesiones explicadas**
-- [Cambios, validación y revisión del repositorio](docs/V2.11.md)
+- Versión: **2.12 — Coronas y uniones**
+- [Cambios y validación de esta versión](docs/V2.12.md)
 - [Fuentes y metodología](https://www.treeofeurope.eu/es/fuentes)
 
 ## Empezar
@@ -33,6 +33,8 @@ Las variables públicas opcionales están documentadas en `env.example`. La web 
 | Grupos de filtros territoriales | `src/Territorios.jsx` |
 | Historias de territorios y dinastías | `src/content/territorios/`, `src/content/dinastias/` |
 | Relevos explicados y reclamaciones | `src/content/sucesiones/index.js` |
+| Accesos a títulos y uniones | `src/content/coronas/index.js` |
+| Síntesis del año global | `src/data/europeYear.js`, `src/explorer/EuropeYearDialog.jsx` |
 | Bibliografía compartida | `src/content/sources.js` |
 | Fichas públicas y navegación inicial | `src/public/`, `src/routing.js` |
 | Atlas y sucesión territorial | `src/explorer/` |
@@ -53,9 +55,9 @@ npm run prebuild
 npm run build
 ```
 
-El último comando vuelve a ejecutar `prebuild`; durante el trabajo normal basta `npm test` seguido de `npm run build`. También puedes lanzar por separado `npm run audit:territorios`, `npm run audit:dinastias` y `npm run audit:sucesiones`.
+El último comando vuelve a ejecutar `prebuild`; durante el trabajo normal basta `npm test` seguido de `npm run build`. También puedes lanzar por separado `npm run audit:territorios`, `npm run audit:dinastias`, `npm run audit:sucesiones` y `npm run audit:coronas`.
 
-Las pruebas usan `node:test`, React para renderizar componentes en memoria y el transformador incluido en Vite para leer JSX. No arrancan un servidor. Cubren rutas, persistencia, geometría, filtros, render de sucesiones y generación de preguntas, además de los contratos de datos. No sustituyen una revisión visual cuando se modifica CSS.
+Las pruebas usan `node:test`, React para renderizar componentes en memoria y el transformador incluido en Vite para leer JSX. No arrancan un servidor. Cubren rutas, persistencia, geometría, filtros, etapas de títulos, precisión del año global, render de sucesiones y generación de preguntas, además de los contratos de datos. No sustituyen una revisión visual cuando se modifica CSS.
 
 La configuración de GitHub Actions en `.github/workflows/ci.yml` ejecuta instalación reproducible, pruebas y build en pull requests y cambios de `main`. Usa permisos de lectura y acciones fijadas por SHA. **Se activará al incorporar el archivo al repositorio.** Para impedir una fusión con errores, configura una regla de protección de `main` que exija el check **Tests y build**; añadir el workflow por sí solo no impide saltarse ese control.
 
