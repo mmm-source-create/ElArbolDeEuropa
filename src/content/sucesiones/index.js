@@ -51,26 +51,26 @@ export const RELEVOS = [
 ];
 
 export const CRISIS = [
-  {id:'avesnes-dampierre',titulo:'Una madre, dos herencias',territorios:['Flandes','Henao'],periodo:'1246–1280',
+  {id:'avesnes-dampierre',titulo:'Una madre, dos herencias',territorios:['Flandes','Henao'],periodo:'1246–1280',desde:1246,hasta:1280,
     resumen:'Los hijos de los dos matrimonios de Margarita de Flandes defendieron derechos sobre sus patrimonios. La discusión sobre la legitimidad de los Avesnes y la intervención de poderes vecinos dieron al conflicto una dimensión política.',
     candidatos:[
       {persona:'JOHN1AVES',ascendencia:['MARG2FLANDES','JOHN1AVES'],fundamento:'Hijo del primer matrimonio de Margarita. Su línea defendió la herencia de Henao.',resultado:'Murió antes que su madre; su hijo Juan II heredó Henao en 1280.'},
       {persona:'GUIDOFLA',ascendencia:['MARG2FLANDES','GUIDOFLA'],fundamento:'Hijo del matrimonio Dampierre de Margarita. Su línea recibió los derechos sobre Flandes.',resultado:'Asumió Flandes en 1278, antes de la muerte de Margarita.'},
     ],desenlace:'El arbitraje de Luis IX de 1246 favoreció separar las herencias. Hubo conflictos posteriores: el reparto no equivale a una transmisión inmediata y pacífica de ambos condados.',fuentes},
-  {id:'brabante-1356',titulo:'Las hijas de Juan III y la herencia de Brabante',territorios:['Brabante','Flandes'],periodo:'1355–1357',
+  {id:'brabante-1356',titulo:'Las hijas de Juan III y la herencia de Brabante',territorios:['Brabante','Flandes'],periodo:'1355–1357',desde:1355,hasta:1357,
     resumen:'La muerte de Juan III dejó la herencia a Juana, pero su cuñado Luis de Male reclamó derechos en nombre de Margarita, hermana de la duquesa. La guerra de 1356 mostró la distancia entre derecho hereditario y control del territorio.',
     candidatos:[
       {persona:'JUANABR',ascendencia:['JUAN3BRAB','JUANABR'],fundamento:'Hija mayor superviviente de Juan III; defendía la continuidad del ducado bajo su gobierno.',resultado:'Retuvo el ducado con concesiones al conde de Flandes.'},
       {persona:'MARGABRAB1323',ascendencia:['JUAN3BRAB','MARGABRAB1323'],fundamento:'Hija de Juan III y esposa de Luis de Male, que sostuvo las reclamaciones de esta línea.',resultado:'Su descendencia fue decisiva en la posterior transmisión de Brabante a Antonio de Borgoña.'},
     ],desenlace:'La paz de Ath de 1357 dejó a Juana al frente de Brabante, con importantes concesiones territoriales. El conflicto no terminó en una simple sustitución de una hermana por otra.',fuentes},
-  {id:'jacoba-1417',titulo:'Jacoba de Baviera y los tres condados',territorios:['Holanda','Henao','Zelanda'],periodo:'1417–1433',
+  {id:'jacoba-1417',titulo:'Jacoba de Baviera y los tres condados',territorios:['Holanda','Henao','Zelanda'],periodo:'1417–1433',desde:1417,hasta:1433,
     resumen:'La herencia de Jacoba provocó una lucha por el reconocimiento y el control de los condados. Parentesco, matrimonios, facciones locales y acuerdos sucesivos sostuvieron reclamaciones diferentes.',
     candidatos:[
       {persona:'JACOBA',ascendencia:['ALB1BAV','GUILLERMO2BAV','JACOBA'],fundamento:'Hija y heredera de Guillermo II de Baviera-Straubing.',resultado:'Conservó los títulos tras Delft, pero acabó cediéndolos en 1433.'},
       {persona:'JUAN3BAV',ascendencia:['ALB1BAV','JUAN3BAV'],fundamento:'Tío paterno de Jacoba. Disputó su herencia y obtuvo una posición de poder en Holanda y Zelanda.',resultado:'Murió en 1425; su desaparición favoreció la expansión de la posición borgoñona.'},
       {persona:'FEL3BORG',ascendencia:['ALB1BAV','MARGBAV','FEL3BORG'],fundamento:'Primo de Jacoba por la familia de Baviera. Su autoridad se consolidó mediante acuerdos e intervención política y militar, no solo por ese parentesco.',resultado:'Regente desde 1428 y titular de los condados desde 1433.'},
     ],desenlace:'Delft separó en 1428 el título de Jacoba del gobierno de Felipe. La cesión de 1433 cerró otra fase del conflicto; no debe adelantarse a 1417 la incorporación de los tres títulos a Borgoña.',fuentes},
-  {id:'gueldres-1371',titulo:'Dos líneas femeninas hacia Güeldres',territorios:['Güeldres'],periodo:'1371–1379',
+  {id:'gueldres-1371',titulo:'Dos líneas femeninas hacia Güeldres',territorios:['Güeldres'],periodo:'1371–1379',desde:1371,hasta:1379,
     resumen:'Eduardo y Reinaldo III murieron en 1371 sin descendencia legítima. Sus hermanas Matilde y María abrieron dos caminos hacia la herencia; la reclamación de María se sostuvo a favor de su hijo Guillermo.',
     candidatos:[
       {persona:'MATILDEGUELD1371',ascendencia:['REIN2GUELD','MATILDEGUELD1371'],fundamento:'Hija de Reinaldo II y hermana de los duques fallecidos.',resultado:'Su partido no logró consolidar el ducado y renunció a la reclamación en 1379.'},
