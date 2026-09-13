@@ -1,3 +1,4 @@
+import CrownTimeline from "../components/CrownTimeline.jsx";
 import DocumentationNotes from "../components/DocumentationNotes.jsx";
 import { documentaryLife } from "../utils/documentaryDates.js";
 import { SOURCE_SECTIONS } from "../content/sources.js";
@@ -376,7 +377,7 @@ export function CatalogPage({ tipo }) {
             {filtrados.map((item) => (
               <article key={item.slug} className="public-entity-card">
                 <div className="public-entity-card-head"><div><span>{tipo === "dinastias" ? (item.editorial ? "Historia de la dinastía" : "Dinastía") : "Territorio"}</span><h2>{item.nombre}</h2></div><strong>{item.total}</strong></div>
-                {tipo === "dinastias" && item.resumen && <p className="public-muted">{item.resumen}</p>}
+                {tipo === "dinastias" && item.resumen && <p className="public-muted public-dynasty-summary">{item.resumen}</p>}
                 {!!item.miembros?.length && <div className="public-entity-members">{item.miembros.map((p) => <a key={p.id} href={rutaEntidad("persona", p.slug)}>{p.nombre}</a>)}</div>}
                 <a className="public-entity-action" href={rutaEntidad(tipo === "dinastias" ? "dinastia" : "territorio", item.slug)}>Ver ficha <ArrowRight size={13} /></a>
               </article>
@@ -477,6 +478,7 @@ export function PersonPage({ slug, legacyId, onExplore }) {
             <section className="public-content-card"><span>Red familiar</span><h2>Relaciones documentadas</h2><RelationList label="Padres" items={persona.padres} /><RelationList label={persona.conyuges?.length > 1 ? "Cónyuges" : "Cónyuge"} items={persona.conyuges} /><RelationList label="Hijos/as" items={persona.hijos} />{!persona.padres?.length && !persona.conyuges?.length && !persona.hijos?.length && <p className="public-muted">No hay relaciones directas cargadas para esta persona.</p>}</section>
           </div>
 
+          <CrownTimeline key={persona.id} persona={persona} accesos={persona.accesosCoronas} fuentes={persona.fuentes}/>
           <DocumentationNotes persona={persona}/>
           {!!persona.fuentes?.length && <section className="public-content-card"><span>Documentación</span><h2>Fuentes de esta ficha</h2><ul>{persona.fuentes.map(fuente => <li key={fuente.url}><a href={fuente.url} target="_blank" rel="noreferrer">{fuente.titulo}</a></li>)}</ul><p className="public-muted">Referencias biográficas y de contexto. <a href="/es/fuentes">Consultar metodología y bibliografía completa</a>.</p></section>}
 

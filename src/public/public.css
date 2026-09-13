@@ -230,3 +230,10 @@ button.public-door-card { width: 100%; font: inherit; }
   .territory-succession-card { padding:.85rem; }
   .territory-succession-list > li:not(:last-child) .territory-succession-card::after { display:none; }
 }
+
+/* Tres líneas reservadas para resumir una casa; el texto completo vive en su ficha. */
+.public-entity-card .public-dynasty-summary {
+  margin: 14px 0; font-size: 12px; line-height: 1.55;
+  height: 4.65em; overflow: hidden; display: -webkit-box;
+  -webkit-box-orient: vertical; -webkit-line-clamp: 3; line-clamp: 3;
+}
