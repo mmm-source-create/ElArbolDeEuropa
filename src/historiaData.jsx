@@ -2111,6 +2111,143 @@ export const EVENTOS_HISTORICOS = [
     ],
     "descripcion": "María y Martín llegaron a Sicilia con apoyo aragonés para imponerse a los barones. La legitimidad hereditaria de la reina no bastaba sin capacidad militar. El gobierno de la isla volvió a vincularse estrechamente con la Corona de Aragón.",
     "timeline": "historia"
+  },
+  {
+    "id": "MAGNUS_UNION_1319",
+    "timeline": "principal",
+    "anio": 1319,
+    "titulo": "Magnus reúne Suecia y Noruega",
+    "categoria": "politica",
+    "descripcion": "La herencia noruega por Ingeborg y la elección sueca convergen en Magnus Eriksson, todavía un niño. Cada reino conserva su consejo y sus leyes.",
+    "personas": [
+      "INGEBORGNORUEGA",
+      "MAGNUS4SUE",
+      "HAAKON5NOR"
+    ],
+    "territorios": [
+      "Suecia",
+      "Noruega"
+    ]
+  },
+  {
+    "id": "OLAF_UNION_1380",
+    "timeline": "principal",
+    "anio": 1380,
+    "titulo": "Olaf hereda Noruega",
+    "categoria": "politica",
+    "descripcion": "El hijo de Margarita, ya rey de Dinamarca, hereda la corona noruega de Haakon VI. El gobierno de la minoría queda en manos de Margarita.",
+    "personas": [
+      "OLAF2NORD",
+      "MARGARITA1NORD",
+      "HAAKON6NOR"
+    ],
+    "territorios": [
+      "Dinamarca",
+      "Noruega"
+    ]
+  },
+  {
+    "id": "KALMAR_1397",
+    "timeline": "principal",
+    "anio": 1397,
+    "titulo": "Coronación de Kalmar",
+    "categoria": "politica",
+    "descripcion": "La coronación de Erik expresa el proyecto de un monarca común para Dinamarca, Noruega y Suecia. Margarita mantiene una autoridad decisiva y los reinos conservan instituciones propias.",
+    "personas": [
+      "ERICOPOMERANIA",
+      "MARGARITA1NORD"
+    ],
+    "territorios": [
+      "Dinamarca",
+      "Noruega",
+      "Suecia"
+    ]
+  },
+  {
+    "id": "REBELION_SUECA_1434",
+    "timeline": "principal",
+    "anio": 1434,
+    "titulo": "Rebelión contra Erik de Pomerania",
+    "categoria": "politica",
+    "descripcion": "La revuelta sueca encabezada por Engelbrekt Engelbrektsson abre una fase de regencias, restauraciones y deposiciones. El gobierno de la unión deja de ser continuo.",
+    "personas": [
+      "ERICOPOMERANIA",
+      "CARLOS8SUE"
+    ],
+    "territorios": [
+      "Suecia"
+    ]
+  },
+  {
+    "id": "BRUNKEBERG_1471",
+    "timeline": "principal",
+    "anio": 1471,
+    "titulo": "La batalla de Brunkeberg",
+    "categoria": "politica",
+    "descripcion": "La victoria de Sten Sture el Viejo frente a Cristian I afianza la autonomía política sueca dentro de la crisis de la unión.",
+    "personas": [
+      "ESTENSTUREVIEJO",
+      "CRISTIAN1NORD"
+    ],
+    "territorios": [
+      "Suecia",
+      "Dinamarca"
+    ]
+  },
+  {
+    "id": "ESTOCOLMO_1520",
+    "timeline": "principal",
+    "anio": 1520,
+    "titulo": "Conquista y baño de sangre de Estocolmo",
+    "categoria": "politica",
+    "descripcion": "Tras la muerte de Sten Sture el Joven, Cristina Gyllenstierna sostiene la resistencia de Estocolmo. La capitulación, la coronación de Cristian II y las ejecuciones precipitan una nueva rebelión.",
+    "personas": [
+      "ESTENSTUREJOVEN",
+      "CHRISTINAGYLLEN",
+      "CRISTIAN2DIN",
+      "ERIKJOHVASA",
+      "GUSTAV1VASA"
+    ],
+    "territorios": [
+      "Suecia",
+      "Dinamarca"
+    ]
+  },
+  {
+    "id": "VASA_ELECCION_1523",
+    "timeline": "principal",
+    "anio": 1523,
+    "titulo": "Gustavo Vasa es elegido rey",
+    "categoria": "politica",
+    "descripcion": "La elección de Gustavo consolida la ruptura sueca con Kalmar. Dinamarca y Noruega siguen vinculadas, ahora bajo Federico I tras la deposición de Cristian II.",
+    "personas": [
+      "GUSTAV1VASA",
+      "FRED1DEN",
+      "CRISTIAN2DIN"
+    ],
+    "territorios": [
+      "Suecia",
+      "Dinamarca",
+      "Noruega"
+    ]
+  },
+  {
+    "id": "NORUEGA_1814",
+    "timeline": "principal",
+    "anio": 1814,
+    "titulo": "Noruega cambia de unión",
+    "categoria": "politica",
+    "descripcion": "La cesión pactada en Kiel es seguida por un proceso constitucional noruego y una guerra con Suecia. La nueva unión mantiene la constitución noruega con modificaciones.",
+    "personas": [
+      "FRED6DEN",
+      "CARLOS13SUE",
+      "CARLOS14JUAN"
+    ],
+    "territorios": [
+      "Noruega",
+      "Dinamarca",
+      "Suecia"
+    ]
   }
 ];
 

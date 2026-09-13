@@ -4795,3 +4795,7 @@ body.atlas-work-mode-active {
 .bio-discover-links a { padding: 4px 7px; border: 1px solid var(--eade-border, #D8CEB7); border-radius: 999px; background: var(--eade-paper-bright, #FFFDF7); color: #5E5546; font-family: -apple-system, 'Segoe UI', sans-serif; font-size: 9.5px; line-height: 1.2; text-decoration: none; }
 .bio-discover-links a:hover { border-color: #A9724F; color: #7A2E2E; background: #F7F0E0; }
 .bio-collapsible-content .bio-discover { margin-top: 0; padding-top: 0; border-top: 0; }
+
+.global-year-heading-row { flex-wrap:wrap; }
+.global-year-europe { padding:0; margin-left:auto; border:0; background:transparent; color:var(--eade-wine); cursor:pointer; font:600 10px/1.5 var(--eade-sans); text-decoration:underline; text-underline-offset:3px; }
+.global-year-europe:focus-visible { outline:2px solid var(--eade-wine); outline-offset:3px; }
