@@ -1,9 +1,11 @@
+import {CASAS_ESCANDINAVAS,CONEXIONES_ESCANDINAVAS} from "./escandinavia-v212.js";
 const MEDLANDS='https://fmg.ac/Projects/MedLands/index.htm';
 const RAH='https://historia-hispanica.rah.es/';
 const BRITANNICA='https://www.britannica.com/';
 
 // A house history is editorial context. Branches and matrimonial transfers are distinct relations.
 export const HISTORIA_DINASTIAS = {
+  ...CASAS_ESCANDINAVAS,
   'Capeto': {
     resumen:'Una casa real que se prolongó en numerosas ramas: comprender a los Capeto permite conectar las coronas francesas con Dreux, Évreux, Valois y Borbón.',
     origen:'La dinastía toma su nombre de Hugo Capeto, elegido rey de los francos en 987. Durante los primeros siglos consolidó la continuidad hereditaria de la monarquía. Sus hijos menores recibieron patrimonios que dieron origen a casas propias; compartir ascendencia capeta no significa haber gobernado simultáneamente Francia.',
@@ -111,4 +113,4 @@ export const RAMAS_DINASTICAS = [
   {id:'foix-navarra',origen:'Foix',destino:'Foix',tipo:'acceso_corona',periodo:'1479',fundador:'FRANCISCOFEBONAV',personas:['GASTON4FOIX','LEONOR1NAV','GASTONVIANA','FRANCISCOFEBONAV','CATALINA1NAV'],texto:'El matrimonio de Gastón IV con Leonor de Navarra conectó ambas herencias. Francisco Febo sucedió a su abuela Leonor; su padre había muerto antes que ella.'},
   {id:'albret-navarra',origen:'Foix',destino:'Albret',tipo:'continuidad_patrimonial',periodo:'1484',fundador:'JUAN3ALBRET',personas:['CATALINA1NAV','JUAN3ALBRET','ENRIQ2NAV','JUANA3NAV'],texto:'Catalina era la heredera navarra y Juan pertenecía a Albret. Sus descendientes reunieron derechos de ambas familias, sin convertir Albret y Navarra en un único territorio.'},
   {id:'borbon-navarra',origen:'Albret',destino:'Borbón',tipo:'continuidad_patrimonial',periodo:'1548',fundador:'ANTONIOBORBON',personas:['JUANA3NAV','ANTONIOBORBON','ENRIQ4FRA'],texto:'El matrimonio de Juana de Albret con Antonio de Borbón explica la herencia navarra de Enrique IV. Sus derechos franceses procedían de su ascendencia capeta por otra vía.'},
-].map(rama=>({...rama,fuentes:[MEDLANDS]}));
+].map(rama=>({...rama,fuentes:[MEDLANDS]})).concat(CONEXIONES_ESCANDINAVAS);
