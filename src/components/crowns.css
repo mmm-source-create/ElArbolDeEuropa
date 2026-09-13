@@ -1,0 +1,26 @@
+/* La misma paleta y escala que las fichas y desplegables del Atlas. */
+.crown-timeline { color:var(--eade-ink); }
+.crown-timeline .crown-intro, .crown-timeline .crown-note { font:400 12px/1.6 var(--eade-sans); color:var(--eade-muted); }
+.crown-timeline h3 { font:600 13px/1.5 var(--eade-sans); margin:18px 0 8px; }
+.crown-year { display:flex; flex-wrap:wrap; align-items:center; gap:8px; margin:14px 0; font:600 12px/1.5 var(--eade-sans); }
+.crown-year select { min-width:0; max-width:100%; padding:7px 9px; border:1px solid var(--eade-border); border-radius:4px; color:var(--eade-ink); background:var(--eade-paper-bright); font:inherit; }
+.crown-mandates { display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr)); gap:8px; padding:0; list-style:none; }
+.crown-mandates li { display:flex; flex-direction:column; gap:3px; padding:10px 12px; border:1px solid var(--eade-border); border-radius:4px; font:400 12px/1.5 var(--eade-sans); min-width:0; }
+.crown-mandates a { font-weight:600; }
+.crown-mandates small { color:var(--eade-muted); font-size:11px; }
+.crown-details { margin:14px 0; border-top:1px solid var(--eade-border); padding-top:12px; }
+.crown-details > summary, .crown-compact > summary { cursor:pointer; color:var(--eade-wine); font:600 13px/1.5 var(--eade-sans); }
+.crown-details p { font:400 13px/1.7 var(--eade-sans); }
+.crown-accessions { padding-left:20px; margin:14px 0; }
+.crown-accessions li { padding:0 0 16px 4px; font:400 13px/1.6 var(--eade-sans); }
+.crown-accessions li > strong, .crown-accessions li > span { display:block; }
+.crown-accessions li > span { font-size:11px; color:var(--eade-muted); margin-top:2px; }
+.crown-accessions p { margin:6px 0; }
+.crown-sources, .crown-related { display:flex; flex-wrap:wrap; gap:6px 14px; font:400 11px/1.6 var(--eade-sans); }
+.crown-sources a, .crown-related a, .crown-year-link { text-decoration:underline; text-underline-offset:3px; }
+.crown-year-link { display:inline-block; margin-top:10px; font:600 11px/1.5 var(--eade-sans); }
+.crown-compact { margin:14px 0; padding:12px 0; border-block:1px solid var(--eade-border); }
+.crown-compact .crown-mandates { grid-template-columns:1fr; }
+.crown-compact .crown-details p { font-size:12px; }
+.crown-compact[open] > summary { margin-bottom:12px; }
+.crown-timeline :is(a,summary,select):focus-visible, .historical-unions :is(a,summary):focus-visible { outline:2px solid var(--eade-wine); outline-offset:3px; }
