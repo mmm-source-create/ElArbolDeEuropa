@@ -18,6 +18,9 @@ import { nRomano, formatoFechas, sobrenombreDePersona, nombrePrincipal, pct, eti
 import { ALCANCES_FOCO, MODOS_COMPARACION, tipoRelacionEntre } from "./relationshipGraph.js";
 import { Chip, ModalProyecto } from "./ExplorerPrimitives.jsx";
 
+const EuropeYearDialog = React.lazy(() => import('./EuropeYearDialog.jsx'));
+const AtlasCrowns = React.lazy(() => import('./AtlasCrowns.jsx'));
+
 function FilterSection({ title, open, onToggle, activeCount = 0, children }) {
   return (
     <section className={`filter-static-section${open ? " is-open" : " is-collapsed"}`}>
@@ -117,6 +120,7 @@ export default function ExplorerView({ vm }) {
         <section className="workspace-topbar-section workspace-toolbar-year">
           <div className="global-year-heading-row">
             <div className="toolbar-label">Año global</div>
+            <button type="button" className="global-year-europe" onClick={()=>{setReproduciendoHistoria(false);setInfoProyecto("europa");}}>Europa en este año →</button>
             {Number.isFinite(anioGlobal) && (
               <span className="global-year-header-summary">
                 {personasVivasEnAnio.length} vivas · {gobernantesActivosEnAnio.length} gobernando
@@ -924,6 +928,7 @@ export default function ExplorerView({ vm }) {
                   </a>
 
                   <a className="bio-full-profile-link" href={`/es/dinastia/${slugPublico(personaBio.dinastia)}`}>Explorar la casa de {personaBio.dinastia} <ExternalLink size={11}/></a>
+                  <React.Suspense fallback={null}><AtlasCrowns key={personaBio.id} persona={personaBio} anio={anioGlobal} onYearChange={actualizarAnioDesdeRango}/></React.Suspense>
                   <DocumentationNotes persona={personaBio}/>
                   <BioSection
                     title="Datos y reinados"
@@ -1209,7 +1214,9 @@ export default function ExplorerView({ vm }) {
         </aside>
       )}
 
-      <ModalProyecto seccion={infoProyecto} onClose={() => setInfoProyecto(null)} persona={seleccion} personasVista={visiblePeople} onStartHistoria={iniciarHistoria} />
+      {infoProyecto === 'europa' ? <React.Suspense fallback={<div className="project-modal-backdrop"><div className="project-modal"><div className="project-modal-body" role="status">Preparando Europa en este año… <button type="button" onClick={()=>setInfoProyecto(null)}>Cerrar</button></div></div></div>}>
+        <EuropeYearDialog anio={anioGlobal} onYearChange={actualizarAnioDesdeRango} onClose={()=>setInfoProyecto(null)} onSelect={id=>{setInfoProyecto(null);seleccionarPersonaPorId(id);}} personas={queryTrim?visiblePeople.filter(p=>searchMatchSet.has(p.id)):visiblePeople} territorios={territorios} filtros={filtrosActivosCompactos} alcanceCompleto={!queryTrim&&!territorios.length&&visiblePeople.length===PERSONAS.length} min={TL_MIN} max={TL_MAX}/>
+      </React.Suspense> : <ModalProyecto seccion={infoProyecto} onClose={() => setInfoProyecto(null)} persona={seleccion} personasVista={visiblePeople} onStartHistoria={iniciarHistoria} />}
     </div>
     </>
   );

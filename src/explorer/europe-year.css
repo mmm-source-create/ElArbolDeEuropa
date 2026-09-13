@@ -1,0 +1,26 @@
+.europe-year-dialog { width:min(920px,100%); }
+.europe-year-form, .europe-year-form label { display:flex; flex-wrap:wrap; align-items:center; gap:8px; }
+.europe-year-form { margin-bottom:12px; }
+.europe-year-form input, .europe-life-search input { padding:7px 9px; font:inherit; color:var(--eade-ink); background:var(--eade-paper-bright); border:1px solid var(--eade-border); border-radius:4px; }
+.europe-year-form input { width:90px; }
+.europe-year-action { padding:7px 11px; color:var(--eade-wine); background:var(--eade-paper-bright); border:1px solid var(--eade-border); border-radius:4px; font:600 11px/1.5 var(--eade-sans); cursor:pointer; }
+.europe-year-counts { display:flex; flex-wrap:wrap; gap:8px 20px; margin:18px 0; padding:12px 0; border-block:1px solid var(--eade-border); font-size:12px; }
+.europe-year-counts b { color:var(--eade-wine); }
+.europe-government-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr)); gap:10px; }
+.europe-government-grid article { border:1px solid var(--eade-border); border-radius:4px; padding:12px; min-width:0; }
+.europe-year-dialog h4 { margin:0 0 8px; font:600 14px/1.5 var(--eade-serif); color:var(--eade-ink); }
+.europe-year-dialog a { color:var(--eade-wine); }
+.europe-person-link { padding:0; border:0; background:transparent; text-align:left; font:600 12px/1.6 var(--eade-sans); color:var(--eade-wine); cursor:pointer; text-decoration:underline; text-underline-offset:3px; }
+.europe-government-grid article > div + div { margin-top:10px; }
+.europe-government-grid small, .europe-life-list small { display:block; color:var(--eade-muted); font-size:11px; }
+.europe-government-grid details { margin:5px 0; font-size:11px; }
+.europe-year-dialog summary { cursor:pointer; }
+.project-modal-body .europe-year-note { margin:8px 0; color:var(--eade-muted); font-size:11px; }
+.europe-context { margin:12px 0; padding:0 0 12px; border-bottom:1px solid var(--eade-border); }
+.europe-context a { font-size:12px; }
+.europe-year-details { border-top:1px solid var(--eade-border); padding-top:13px; margin-top:18px; }
+.europe-year-details > summary { font-weight:600; color:var(--eade-wine); margin-bottom:10px; }
+.europe-life-search { display:flex; flex-wrap:wrap; gap:8px; align-items:center; font-size:12px; }
+.europe-life-search input { max-width:100%; min-width:0; box-sizing:border-box; }
+.europe-life-list { list-style:none; padding:0; display:grid; gap:9px; grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr)); }
+.europe-year-dialog :is(a,button,input,summary):focus-visible { outline:2px solid var(--eade-wine); outline-offset:3px; }
