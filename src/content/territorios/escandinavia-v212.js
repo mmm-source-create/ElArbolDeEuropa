@@ -1,0 +1,30 @@
+export default {
+ Dinamarca:{resumen:'La monarquía danesa articuló una red de uniones y rivalidades con Noruega, Suecia y los principados del Báltico. De las hijas de Valdemar IV a los Oldemburgo, elecciones, matrimonios y guerras produjeron coronas compartidas sin una única sucesión para todos los reinos.',evolucion:[
+ {anio:1376,texto:'Olaf, nieto de Valdemar IV, es elegido rey bajo la regencia de Margarita.'},
+ {anio:1380,texto:'Olaf hereda Noruega: comienza una prolongada asociación de ambas coronas.'},
+ {anio:1397,texto:'La coronación de Kalmar expresa el proyecto de un monarca común para tres reinos.'},
+ {anio:1448,texto:'La elección de Cristian I introduce la casa de Oldemburgo.'},
+ {anio:1523,texto:'Federico I sucede al depuesto Cristian II; Suecia elige a Gustavo Vasa.'},
+ {anio:1536,texto:'La Reforma y la reorganización de la monarquía transforman la relación con Noruega.'},
+ {anio:1814,texto:'La pérdida de Noruega pone fin al gobierno compartido de ambos reinos.'}]},
+ Noruega:{resumen:'La continuidad de la monarquía noruega pasó de la casa de Sverre a varias uniones personales. La transmisión por Ingeborg de Noruega y el matrimonio de Haakon VI con Margarita explican los vínculos con Suecia y Dinamarca. Cada cambio debe distinguir la herencia del título de la situación de las instituciones noruegas.',evolucion:[
+ {anio:1274,texto:'El derecho territorial de Magnus VI consolida la tradición jurídica del reino.'},
+ {anio:1319,texto:'Magnus Eriksson hereda a Haakon V y es elegido también rey de Suecia.'},
+ {anio:1355,texto:'Haakon VI asume el gobierno noruego, separado del de su padre en Suecia.'},
+ {anio:1380,texto:'Olaf, ya rey danés, hereda Noruega de Haakon VI.'},
+ {anio:1450,texto:'Cristian I consolida la unión con Dinamarca tras la disputa con Carlos Knutsson.'},
+ {anio:1537,texto:'La implantación de la Reforma refuerza la subordinación institucional a la monarquía danesa.'},
+ {anio:1814,texto:'Una constitución, la guerra con Suecia y el acuerdo posterior inauguran otra unión con autonomía noruega.'},
+ {anio:1905,texto:'La disolución de la unión con Suecia restablece una monarquía plenamente separada.'}]},
+ Suecia:{resumen:'La monarquía sueca alternó elecciones, herencias y regencias dentro y fuera de las uniones escandinavas. Bjälbo, Mecklemburgo, los reyes de Kalmar y los Vasa no forman una serie sin interrupciones: las resistencias internas y los cambios de casa son esenciales para comprenderla.',evolucion:[
+ {anio:1319,texto:'La elección de Magnus Eriksson coincide con su herencia noruega.'},
+ {anio:1364,texto:'Alberto de Mecklemburgo desplaza a Magnus y Haakon.'},
+ {anio:1389,texto:'La derrota de Alberto consolida la autoridad de Margarita.'},
+ {anio:1397,texto:'Erik es coronado en Kalmar junto al proyecto de unión de los tres reinos.'},
+ {anio:1434,texto:'La rebelión contra Erik abre una etapa de gobierno fragmentado y regencias.'},
+ {anio:1471,texto:'Brunkeberg afianza la posición de Sten Sture el Viejo frente a Cristian I.'},
+ {anio:1520,texto:'La conquista de Estocolmo y las ejecuciones agravan la crisis de la unión.'},
+ {anio:1523,texto:'Gustavo Vasa es elegido rey y consolida la separación de Dinamarca.'},
+ {anio:1599,texto:'La deposición de Segismundo separa el trono sueco del monarca de Polonia-Lituania.'},
+ {anio:1814,texto:'Comienza la unión con Noruega, que conserva su constitución con modificaciones.'}]},
+};
