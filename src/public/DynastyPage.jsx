@@ -1,3 +1,4 @@
+import {connectionUrl} from '../connections/connectionTree.js';
 import {entityMeta} from "./publicMeta.js";
 import React,{useMemo,useState} from 'react';
 import {ArrowRight,Search,Shield} from 'lucide-react';
@@ -37,7 +38,7 @@ export default function DynastyPage({slug,initialData=null}) {
         <div className="dynasty-branches">{d.ramas.map(r=><article id={r.id} key={r.id} className="public-content-card dynasty-branch">
           <span>{r.etiqueta} · {r.periodo}</span><h3>{r.origen===r.destino?`${r.origen} · ${r.fundador.nombre}`:<><a href={`/es/dinastia/${r.origenSlug}`}>{r.origen}</a><span aria-hidden="true"> → </span><a href={`/es/dinastia/${r.destinoSlug}`}>{r.destino}</a></>}</h3>
           <p>{r.texto}</p><div className="public-entity-members">{r.personas.map(p=><a key={p.id} href={`/es/persona/${p.slug}`}>{p.nombre}</a>)}</div>
-          <a className="public-entity-action" href={`/es/persona/${r.fundador.slug}?atlas=1`}>Seguir a {r.fundador.nombre} en el árbol <ArrowRight size={12}/></a>
+          <a className="public-entity-action" href={r.arbol?.ids?.length > 1 ? connectionUrl(r.arbol.ids,r.arbol.criterion) : `/es/persona/${r.fundador.slug}?atlas=1`}>Ver el origen de esta rama en el árbol <ArrowRight size={12}/></a>
         </article>)}</div>
       </section>}
       {!!d.territorios.length&&<section className="public-section"><div className="public-section-heading"><div><span>El contexto territorial</span><h2>Territorios vinculados</h2></div></div><div className="public-entity-members">{d.territorios.map(t=><a key={t} href={`/es/territorio/${slugPublico(t)}`}>{t}</a>)}</div></section>}
