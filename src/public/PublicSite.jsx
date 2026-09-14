@@ -1,3 +1,4 @@
+import {publicMeta,entityMeta} from "./publicMeta.js";
 import CrownTimeline from "../components/CrownTimeline.jsx";
 import DocumentationNotes from "../components/DocumentationNotes.jsx";
 import { documentaryLife } from "../utils/documentaryDates.js";
@@ -87,42 +88,31 @@ function setHreflangAlternates(items) {
 export function usePublicMeta({ title, description, path }) {
   useEffect(() => {
     if (typeof document === "undefined" || typeof window === "undefined") return;
-    const canonicalUrl = new URL(path || "/es/", PUBLIC_SITE_URL || window.location.origin).toString();
-    document.documentElement.lang = "es";
-    document.title = title;
-    setMetaContent('meta[name="description"]', { name: "description" }, description);
-    setMetaContent('meta[property="og:site_name"]', { property: "og:site_name" }, "El Árbol de Europa");
-    setMetaContent('meta[property="og:title"]', { property: "og:title" }, title);
-    setMetaContent('meta[property="og:description"]', { property: "og:description" }, description);
-    setMetaContent('meta[property="og:type"]', { property: "og:type" }, "website");
-    setMetaContent('meta[property="og:locale"]', { property: "og:locale" }, "es_ES");
-    setMetaContent('meta[property="og:url"]', { property: "og:url" }, canonicalUrl);
-    setMetaContent('meta[name="twitter:card"]', { name: "twitter:card" }, "summary");
-    setMetaContent('meta[name="twitter:title"]', { name: "twitter:title" }, title);
-    setMetaContent('meta[name="twitter:description"]', { name: "twitter:description" }, description);
-    ensureCanonical(canonicalUrl);
-    setHreflangAlternates([
-      { hreflang: "es", href: canonicalUrl },
-      { hreflang: "x-default", href: canonicalUrl },
-    ]);
+    const metadata=publicMeta({title,description,path},PUBLIC_SITE_URL);
+    document.documentElement.lang=metadata.lang;
+    document.title=metadata.title;
+    for(const [attribute,key,value] of metadata.meta)setMetaContent(`meta[${attribute}="${key}"]`,{[attribute]:key},value);
+    ensureCanonical(metadata.canonical);
+    setHreflangAlternates(metadata.alternates);
   }, [title, description, path]);
 }
 
-export function useJson(path) {
-  const [state, setState] = useState({ loading: true, data: null, error: false });
+export function useJson(path, initialData = null) {
+  const [state, setState] = useState(() => ({ path, loading: !initialData, data: initialData, error: false }));
   useEffect(() => {
+    if (initialData) return;
     let cancelled = false;
-    setState({ loading: true, data: null, error: false });
+    setState({ path, loading: true, data: null, error: false });
     loadJsonAsset(`${path}?v=${encodeURIComponent(BUILD_VERSION)}`)
-      .then((data) => { if (!cancelled) setState({ loading: false, data, error: false }); })
-      .catch(() => { if (!cancelled) setState({ loading: false, data: null, error: true }); });
+      .then((data) => { if (!cancelled) setState({ path, loading: false, data, error: false }); })
+      .catch(() => { if (!cancelled) setState({ path, loading: false, data: null, error: true }); });
     return () => { cancelled = true; };
-  }, [path]);
-  return state;
+  }, [path, initialData]);
+  return initialData ? {loading:false,data:initialData,error:false} : state.path===path ? state : {loading:true,data:null,error:false};
 }
 
-function PublicLayout({ children }) {
-  return <div className="public-site"><SiteHeader />{children}<SiteFooter /></div>;
+function PublicLayout({ children, pathname, prerendered = false }) {
+  return <div className="public-site"><SiteHeader pathname={pathname} prerendered={prerendered}/>{children}<SiteFooter /></div>;
 }
 
 function Breadcrumbs({ items }) {
@@ -419,12 +409,14 @@ function RelationList({ label, items }) {
   return <div className="public-relation-row"><strong>{label}</strong><div>{items.map((p) => <a key={p.id} href={rutaEntidad("persona", p.slug)}>{p.nombre}</a>)}</div></div>;
 }
 
-export function PersonPage({ slug, legacyId, onExplore }) {
+export function PersonPage({ slug, legacyId, onExplore, initialData = null }) {
   const [resolvedSlug, setResolvedSlug] = useState(slug || null);
-  const [state, setState] = useState({ loading: true, persona: null, error: false });
+  const [state, setState] = useState(() => ({ loading: !initialData, persona: initialData, error: false }));
 
   useEffect(() => {
+    if (initialData) return;
     let cancelled = false;
+    setState({loading:true,persona:null,error:false});
     async function load() {
       try {
         let finalSlug = slug;
@@ -446,17 +438,17 @@ export function PersonPage({ slug, legacyId, onExplore }) {
     }
     load();
     return () => { cancelled = true; };
-  }, [slug, legacyId]);
+  }, [slug, legacyId, initialData]);
 
-  const persona = state.persona;
-  const description = persona ? (persona.biografia || persona.resumen || "").replace(/\s+/g, " ").trim().slice(0, 155) : "Ficha histórica en El Árbol de Europa.";
-  usePublicMeta({ title: persona ? `${persona.nombre} — El Árbol de Europa` : "Persona — El Árbol de Europa", description, path: `/es/persona/${encodeURIComponent(resolvedSlug || slug || "persona")}` });
+  const persona = initialData || state.persona;
+  const metadata=entityMeta('persona',persona,resolvedSlug||slug);
+  usePublicMeta(metadata);
 
-  if (state.loading) return <PublicLayout><main className="public-main"><div className="public-loading">Preparando ficha histórica…</div></main></PublicLayout>;
-  if (state.error || !persona) return <PublicLayout><main className="public-main"><Breadcrumbs items={[{ label: "Inicio", href: "/es/" }, { label: "Personas", href: "/es/personas" }, { label: "Ficha" }]} /><div className="public-error"><h1>Ficha no disponible</h1><p>No se ha podido cargar esta ficha. El atlas completo sigue disponible.</p><button className="public-primary" onClick={onExplore}>Abrir atlas <ArrowRight size={15} /></button></div></main></PublicLayout>;
+  if (state.loading) return <PublicLayout pathname={metadata.path} prerendered={Boolean(initialData)}><main className="public-main"><div className="public-loading">Preparando ficha histórica…</div></main></PublicLayout>;
+  if (state.error || !persona) return <PublicLayout pathname={metadata.path} prerendered={Boolean(initialData)}><main className="public-main"><Breadcrumbs items={[{ label: "Inicio", href: "/es/" }, { label: "Personas", href: "/es/personas" }, { label: "Ficha" }]} /><div className="public-error"><h1>Ficha no disponible</h1><p>No se ha podido cargar esta ficha. El atlas completo sigue disponible.</p><button className="public-primary" onClick={onExplore}>Abrir atlas <ArrowRight size={15} /></button></div></main></PublicLayout>;
 
   return (
-    <PublicLayout>
+    <PublicLayout pathname={metadata.path} prerendered={Boolean(initialData)}>
       <main className="public-main public-person-page">
         <Breadcrumbs items={[{ label: "Inicio", href: "/es/" }, { label: "Personas", href: "/es/personas" }, { label: persona.nombre }]} />
         <article>
@@ -467,7 +459,7 @@ export function PersonPage({ slug, legacyId, onExplore }) {
               {persona.sobrenombre && <div className="public-person-nickname">«{persona.sobrenombre}»</div>}
               <p>{(persona.biografia || persona.resumen || "")}</p>
               <div className="public-person-badges"><span>{textoFechas(persona)}</span>{persona.titulo && <span>{persona.titulo}</span>}{persona.dinastia && <a href={rutaEntidad("dinastia", slugPublico(persona.dinastia))}>{persona.dinastia}</a>}</div>
-              <div className="public-person-actions"><button className="public-primary" type="button" onClick={onExplore}>Abrir en el atlas interactivo <ArrowRight size={15} /></button><a className="public-secondary" href="/es/personas"><ArrowLeft size={14} /> Volver a personas</a></div>
+              <div className="public-person-actions"><a className="public-primary" href={`${metadata.path}?atlas=1`} onClick={initialData?undefined:e=>{e.preventDefault();onExplore();}}>Abrir en el atlas interactivo <ArrowRight size={15} /></a><a className="public-secondary" href="/es/personas"><ArrowLeft size={14} /> Volver a personas</a></div>
             </div>
             <Portrait persona={persona} />
           </header>

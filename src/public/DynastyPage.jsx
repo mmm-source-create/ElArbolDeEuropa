@@ -1,3 +1,4 @@
+import {entityMeta} from "./publicMeta.js";
 import React,{useMemo,useState} from 'react';
 import {ArrowRight,Search,Shield} from 'lucide-react';
 import SiteHeader from '../components/SiteHeader.jsx';
@@ -6,14 +7,14 @@ import {useJson,usePublicMeta,PersonaMiniCard} from './PublicSite.jsx';
 import {normalizarBusquedaPublica,slugPublico} from '../utils/personLabels.js';
 import './dynasty.css';
 
-export default function DynastyPage({slug}) {
-  const {data:d,loading,error}=useJson(`/dinastias-meta/${encodeURIComponent(slug)}.json`);
+export default function DynastyPage({slug,initialData=null}) {
+  const {data:d,loading,error}=useJson(`/dinastias-meta/${encodeURIComponent(slug)}.json`,initialData);
   const [query,setQuery]=useState('');
   const [limit,setLimit]=useState(36);
   const members=useMemo(()=>{const q=normalizarBusquedaPublica(query);return (d?.miembros||[]).filter(p=>normalizarBusquedaPublica([p.nombre,p.titulo,...(p.aliases||[])].join(' ')).includes(q));},[d,query]);
-  usePublicMeta({title:d?`Casa de ${d.nombre} — El Árbol de Europa`:'Dinastía — El Árbol de Europa',description:d?.resumen||'Personas, ramas y territorios de una casa en el Atlas.',path:`/es/dinastia/${d?.slug||slug}`});
+  usePublicMeta(entityMeta('dinastia',d,slug));
   const atlas=`/es/dinastia/${d?.slug||slug}?atlas=1`;
-  return <div className="public-site"><SiteHeader/><main className="public-main dynasty-page">
+  return <div className="public-site"><SiteHeader pathname={`/es/dinastia/${slug}`} prerendered={Boolean(initialData)}/><main className="public-main dynasty-page">
     <nav className="public-breadcrumbs" aria-label="Migas de pan"><a href="/es/">Inicio</a><span>›</span><a href="/es/dinastias">Dinastías</a><span>›</span><span aria-current="page">{d?.nombre||'Ficha'}</span></nav>
     {loading?<p className="public-loading" role="status">Cargando ficha de la casa…</p>:error||!d?<section className="public-error"><h1>Ficha no disponible</h1><p>No se ha podido cargar esta casa.</p><a href="/es/dinastias">Volver al catálogo de dinastías</a></section>:<>
       <header className="public-page-title dynasty-hero">

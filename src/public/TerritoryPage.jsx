@@ -1,3 +1,4 @@
+import {entityMeta} from "./publicMeta.js";
 import HistoricalUnions from "../components/HistoricalUnions.jsx";
 import React,{useEffect} from 'react';
 import Sucesion from '../explorer/Sucesion.jsx';
@@ -7,9 +8,9 @@ import SiteFooter from '../components/SiteFooter.jsx';
 import {slugPublico} from '../utils/personLabels.js';
 import './public.css';
 const claseTexto=c=>String(c||'Territorio').replaceAll('_',' ');
-export function TerritoryPage({slug}) {
- const {data:t,loading,error}=useJson(`/territorios-meta/${encodeURIComponent(slug)}.json`);
- usePublicMeta({title:t?`${t.nombre} — Historia y sucesión`:'Territorio',description:t?.resumen||'Gobiernos, dinastías y conexiones históricas registradas.',path:`/es/territorio/${slug}`});
+export function TerritoryPage({slug,initialData=null}) {
+ const {data:t,loading,error}=useJson(`/territorios-meta/${encodeURIComponent(slug)}.json`,initialData);
+  usePublicMeta(entityMeta('territorio',t,slug));
  useEffect(()=>{
   if(!t)return;
   const openAnchor=()=>{
@@ -22,7 +23,7 @@ export function TerritoryPage({slug}) {
   return ()=>window.removeEventListener('hashchange',openAnchor);
  },[t]);
  const atlas=`/es/territorio/${encodeURIComponent(slug)}?atlas=1`;
- return <div className="public-site"><SiteHeader locale="es"/><main className="territory-page">
+ return <div className="public-site"><SiteHeader locale="es" pathname={`/es/territorio/${slug}`} prerendered={Boolean(initialData)}/><main className="territory-page">
  <a href="/es/territorios">← Territorios</a>
  {loading&&<p role="status">Cargando historia…</p>}{error&&<p role="alert">No se ha podido cargar esta ficha. <a href="/es/territorios">Consultar el catálogo</a></p>}
  {t&&<><header><p>{claseTexto(t.clase)} · {t.naturaleza==='agrupacion'?'Agrupación de exploración':t.naturaleza==='compuesta'?'Entidad compuesta':'Entidad histórica'}</p><h1>{t.nombre}</h1>
