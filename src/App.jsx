@@ -1,11 +1,8 @@
 import {resolverRuta} from "./routing.js";
 import React, { lazy, Suspense, useCallback, useEffect, useMemo, useState } from "react";
-import { ArrowRight } from "lucide-react";
 import { CatalogPage, HomePage, InfoPage, PersonPage } from "./public/PublicSite.jsx";
-import { SpeedInsights } from "@vercel/speed-insights/react";
 
-import SiteHeader from "./components/SiteHeader.jsx";
-import SiteFooter from "./components/SiteFooter.jsx";
+import EnglishLanding from "./public/EnglishLanding.jsx";
 import "./styles/theme.css";
 
 const DynastyPage = lazy(() => import("./public/DynastyPage.jsx"));
@@ -24,31 +21,6 @@ function normalizaRutaLigera() {
   if (/^\/(persona|dinastia|territorio|historia)(?:\/|$)/.test(pathname)) {
     window.history.replaceState(window.history.state, "", `/es${pathname}${search}${hash}`);
   }
-}
-
-function EnglishLanding() {
-  useEffect(() => {
-    if (typeof document === "undefined") return;
-    document.documentElement.lang = "en";
-    document.title = "The Tree of Europe | Interactive historical and genealogical atlas";
-  }, []);
-
-  return (
-    <>
-      <div className="public-site">
-        <SiteHeader locale="en" />
-        <main style={{ maxWidth: 760, margin: "70px auto", textAlign: "center", padding: "0 24px 70px" }}>
-          <div style={{ fontFamily: "var(--eade-sans)", fontSize: 10, fontWeight: 700, letterSpacing: 1.3, textTransform: "uppercase", color: "var(--eade-muted-soft)" }}>English edition</div>
-          <h1 style={{ margin: "12px 0", fontFamily: "var(--eade-serif)", fontSize: "clamp(34px, 5vw, 54px)", fontWeight: 500, lineHeight: 1.05, color: "var(--eade-ink)" }}>The Tree of Europe</h1>
-          <p style={{ margin: "0 auto", maxWidth: 620, fontFamily: "var(--eade-sans)", fontSize: 15, lineHeight: 1.7, color: "var(--eade-muted)" }}>An interactive historical and genealogical atlas for exploring the families, dynasties, reigns and political connections that shaped Europe.</p>
-          <p style={{ margin: "18px auto 28px", maxWidth: 620, fontFamily: "var(--eade-sans)", fontSize: 13, lineHeight: 1.6, color: "var(--eade-muted-soft)" }}>The English edition is being prepared progressively. The complete interactive application is currently available in Spanish.</p>
-          <a className="public-primary" href="/es/">Explore the Spanish version <ArrowRight size={14} /></a>
-        </main>
-        <SiteFooter />
-      </div>
-      <SpeedInsights />
-    </>
-  );
 }
 
 export default function App() {
@@ -71,30 +43,24 @@ export default function App() {
     setExplorerRequested(true);
   }, [initial.view]);
 
-  if (!explorerRequested && initial.view === "dynasty") return <><Suspense fallback={<p role="status">Cargando dinastía…</p>}><DynastyPage slug={initial.dynastySlug} /></Suspense><SpeedInsights /></>;
-  if (!explorerRequested && initial.view === "territory") return <><Suspense fallback={<p role="status">Cargando territorio…</p>}><TerritoryPage slug={initial.territorySlug} /></Suspense><SpeedInsights /></>;
+  if (!explorerRequested && initial.view === "dynasty") return <Suspense fallback={<p role="status">Cargando dinastía…</p>}><DynastyPage slug={initial.dynastySlug} /></Suspense>;
+  if (!explorerRequested && initial.view === "territory") return <Suspense fallback={<p role="status">Cargando territorio…</p>}><TerritoryPage slug={initial.territorySlug} /></Suspense>;
   if (initial.view === "english") return <EnglishLanding />;
   if (initial.view === "desafio") {
     return (
-      <>
-        <Suspense fallback={null}>
-          <DesafioPage />
-        </Suspense>
-        <SpeedInsights />
-      </>
+      <Suspense fallback={null}>
+        <DesafioPage />
+      </Suspense>
     );
   }
-  if (!explorerRequested && initial.view === "person") return <><PersonPage slug={initial.personSlug} legacyId={initial.legacyPersonId} onExplore={() => entrarAtlas(null)} /><SpeedInsights /></>;
-  if (!explorerRequested && initial.view === "catalog") return <><CatalogPage tipo={initial.catalog} /><SpeedInsights /></>;
-  if (!explorerRequested && initial.view === "info") return <><InfoPage tipo={initial.info} /><SpeedInsights /></>;
-  if (!explorerRequested && initial.view === "home") return <><HomePage onEnterAtlas={entrarAtlas} onOpenPanel={entrarAtlas} /><SpeedInsights /></>;
+  if (!explorerRequested && initial.view === "person") return <PersonPage slug={initial.personSlug} legacyId={initial.legacyPersonId} onExplore={() => entrarAtlas(null)} />;
+  if (!explorerRequested && initial.view === "catalog") return <CatalogPage tipo={initial.catalog} />;
+  if (!explorerRequested && initial.view === "info") return <InfoPage tipo={initial.info} />;
+  if (!explorerRequested && initial.view === "home") return <HomePage onEnterAtlas={entrarAtlas} onOpenPanel={entrarAtlas} />;
 
   return (
-    <>
-      <Suspense fallback={<p role="status" style={{ padding: 24 }}>Cargando Atlas…</p>}>
-        <Explorer initialPanel={initialPanel} />
-      </Suspense>
-      <SpeedInsights />
-    </>
+    <Suspense fallback={<p role="status" style={{ padding: 24 }}>Cargando Atlas…</p>}>
+      <Explorer initialPanel={initialPanel} />
+    </Suspense>
   );
 }

@@ -1,9 +1,7 @@
 import React, { useCallback, useMemo, useRef, useState } from "react";
 import {
   ArrowLeft,
-  ArrowRight,
   CalendarDays,
-  Check,
   ExternalLink,
   Flame,
   Heart,
@@ -16,7 +14,6 @@ import {
   Sparkles,
   Swords,
   Trophy,
-  X,
   Zap,
 } from "lucide-react";
 import { IMAGENES_PERSONAS } from "../imagenesPersonas.js";

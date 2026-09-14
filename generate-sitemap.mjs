@@ -1,3 +1,5 @@
+import {loadEnv} from "vite";
+import {resolveSiteUrl} from "./src/siteConfig.js";
 import { TERRITORIOS } from "./src/data/territorios.js";
 import fs from "node:fs/promises";
 import path from "node:path";
@@ -11,7 +13,7 @@ const OUTPUT_FILES = [
   path.join(ROOT, "public", "sitemap-full.xml"),
   path.join(ROOT, "public", "sitemap.xml"),
 ];
-const SITE_URL = String(process.env.VITE_SITE_URL || "https://www.treeofeurope.eu").replace(/\/+$/, "");
+const SITE_URL = resolveSiteUrl(loadEnv("production", ROOT, "VITE_").VITE_SITE_URL);
 
 async function importJsxData(filePath) {
   const source = await fs.readFile(filePath, "utf8");

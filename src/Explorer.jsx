@@ -1,3 +1,4 @@
+import EnglishLanding from "./public/EnglishLanding.jsx";
 import "./App.css";
 import React, { useState, useRef, useEffect, useLayoutEffect, useCallback, useMemo } from "react";
 import {
@@ -9,8 +10,6 @@ import {
 import { PERSONAS } from "./personas.jsx";
 import { EVENTOS_HISTORICOS, HISTORIAS } from "./historiaData.jsx";
 import { DEFAULT_LOCALE, SITE, t } from "./i18n.jsx";
-import SiteHeader from "./components/SiteHeader.jsx";
-import SiteFooter from "./components/SiteFooter.jsx";
 import { textoBusquedaPersona } from "./utils/personPresentation.js";
 import {
   OTRAS_DINASTIAS, SIN_FECHA, GRUPOS_DINASTICOS, DINASTIAS_DESTACADAS, getCategoriaDinastía,
@@ -1654,29 +1653,7 @@ export default function Explorer({ initialPanel = null, treeBase: TREE_BASE }) {
     window.location.assign(destino);
   }, [locale]);
 
-  if (locale === "en") {
-    return (
-      <div className="wrap">
-        <SiteHeader variant="atlas" locale="en" onLanguageChange={cambiarIdioma} />
-
-        <main style={{ maxWidth: 760, margin: "70px auto", textAlign: "center", padding: "0 24px" }}>
-          <div style={{ fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif", fontSize: 10, fontWeight: 700, letterSpacing: 1.3, textTransform: "uppercase", color: "#8A7F65" }}>English edition</div>
-          <h2 style={{ margin: "12px 0", fontFamily: "'Iowan Old Style', 'Palatino Linotype', Georgia, serif", fontSize: "clamp(34px, 5vw, 54px)", fontWeight: 500, lineHeight: 1.05, color: "#2C2620" }}>The Tree of Europe</h2>
-          <p style={{ margin: "0 auto", maxWidth: 620, fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif", fontSize: 15, lineHeight: 1.7, color: "#6B6350" }}>
-            An interactive historical and genealogical atlas for exploring the families, dynasties, reigns and political connections that shaped Europe.
-          </p>
-          <p style={{ margin: "18px auto 28px", maxWidth: 620, fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif", fontSize: 13, lineHeight: 1.6, color: "#8A7F65" }}>
-            The English edition is being prepared progressively. The complete interactive application is currently available in Spanish.
-          </p>
-          <button type="button" onClick={() => cambiarIdioma("es")}
-            style={{ border: "1px solid #7A2E2E", borderRadius: 4, background: "#7A2E2E", color: "#F8F3E6", padding: "10px 16px", cursor: "pointer", fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif", fontSize: 12, fontWeight: 700 }}>
-            Explore the Spanish version
-          </button>
-        </main>
-        <SiteFooter compact />
-      </div>
-    );
-  }
+  if (locale === "en") return <EnglishLanding />;
 
   const getExportSelection = (scope) => {
     let ids, edges, title;

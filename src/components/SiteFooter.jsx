@@ -1,3 +1,4 @@
+import {SITE_NAME} from "../siteConfig.js";
 import React from "react";
 
 export default function SiteFooter({ compact = false, onOpenStats, onReport }) {
@@ -28,7 +29,7 @@ export default function SiteFooter({ compact = false, onOpenStats, onReport }) {
         </div>
       </div>
       <div className="site-footer-meta">
-        <span>© 2026 El Árbol de Europa · Código, diseño, textos y estructura original de la base de datos: todos los derechos reservados.</span>
+        <span>© 2026 {SITE_NAME} · Código, diseño, textos y estructura original de la base de datos: todos los derechos reservados.</span>
         <span>Cartografía: <a href="https://www.mapchart.net/" target="_blank" rel="noreferrer">MapChart</a> · <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noreferrer">CC BY-SA 4.0</a></span>
       </div>
     </footer>

@@ -1,3 +1,4 @@
+import {SITE_NAME, SITE_NAME_EN, resolveSiteUrl} from "./siteConfig.js";
 // Textos públicos centrales. La interfaz sigue siendo española, pero este
 // archivo evita seguir incrustando la marca y metadatos en componentes y deja
 // preparado un punto único para una futura versión es/en.
@@ -35,19 +36,19 @@ export const ROUTE_SEGMENTS = {
   },
 };
 export const SITE = Object.freeze({
-  name: "El Árbol de Europa",
+  name: SITE_NAME,
   descriptor: "Atlas genealógico e histórico interactivo",
   period: "1200–1800",
   locale: "es_ES",
   language: "es",
   // Configurables en Vercel sin tocar el código. VITE_* es público por diseño.
-  publicUrl: String(import.meta.env.VITE_SITE_URL || "").replace(/\/$/, ""),
+  publicUrl: resolveSiteUrl(import.meta.env.VITE_SITE_URL),
   contactEmail: String(import.meta.env.VITE_CONTACT_EMAIL || "").trim(),
 });
 
 const MESSAGES = {
   es: {
-    "brand.name": "El Árbol de Europa",
+    "brand.name": SITE_NAME,
     "brand.descriptor": "Atlas genealógico e histórico interactivo",
     "brand.scope": "Genealogía · Dinastías · Reinados · Territorios · 1200–1800",
     "meta.defaultTitle": "El Árbol de Europa | Atlas genealógico e histórico interactivo",
@@ -56,7 +57,7 @@ const MESSAGES = {
     "share.personText": "Explora la ficha de {name} en El Árbol de Europa.",
   },
   en: {
-    "brand.name": "The Tree of Europe",
+    "brand.name": SITE_NAME_EN,
     "brand.descriptor": "Interactive historical and genealogical atlas",
     "brand.scope": "Genealogy · Dynasties · Reigns · Territories · 1200–1800",
     "meta.defaultTitle": "The Tree of Europe | Interactive historical and genealogical atlas",
