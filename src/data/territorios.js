@@ -1,4 +1,5 @@
 export const TERRITORIOS = Object.freeze({
+  "Saluzzo": {"clase":"marquesado","naturaleza":"entidad","componentes":[],"nota":"Marquesado alerámico del Piamonte occidental. La dependencia feudal respecto de otros poderes no elimina su identidad territorial."},
   "Albret": {"clase":"señorío","naturaleza":"entidad","componentes":[],"etapas":[{"desde":1550,"clase":"ducado"}],"nota":"Señorío de la casa de Albret, elevado a ducado en el siglo XVI; distinto del reino de Navarra."},
   "Dreux": {"clase":"condado","naturaleza":"entidad","componentes":[]},
   "Penthièvre": {"clase":"condado","naturaleza":"entidad","componentes":[],"nota":"Condado bretón; los derechos al ducado se registran por separado."},

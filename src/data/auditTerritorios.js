@@ -30,7 +30,7 @@ export function auditarTerritorios(personas, catalogo=TERRITORIOS) {
    const territorial=(t?.etapas||[]).map(e=>e.clase).concat(t?.clase||[]);
    const normalize=c=>({reino:'reinado',estado_pontificio:'pontificado',territorio_compuesto:'gobierno',republica:'gobierno'})[c]||c;
    const permitidas={Transilvania:['gobierno'],Valaquia:['voivodato'],Moldavia:['voivodato'],Bulgaria:['zarato'],Serbia:['despotado'],Rusia:['principado'],Sajonia:['ducado'],Baviera:['electorado'],Brandeburgo:['margraviato'],Palatinado:['condado','principado'],Florencia:['ducado'],Nassau:['principado'],Urbino:['condado'],Anjou:['condado'],Hannover:['electorado'], 'Países Bajos':['reinado']};
-   if(t&& !['regencia','estatuderato'].includes(g.clase)&& !territorial.map(normalize).concat(permitidas[g.territorio]||[]).includes(g.clase))add('ERROR','TERRITORY_CLASS_MISMATCH',key,`${g.territorio}: ${g.clase} no concuerda con su rango documentado`);
+   if(t&& !(g.clase==='gobierno'&&g.condicion==='regencia') && !['regencia','estatuderato'].includes(g.clase)&& !territorial.map(normalize).concat(permitidas[g.territorio]||[]).includes(g.clase))add('ERROR','TERRITORY_CLASS_MISMATCH',key,`${g.territorio}: ${g.clase} no concuerda con su rango documentado`);
   }
  }
  for(let i=0;i<gobiernos.length;i++)for(let j=i+1;j<gobiernos.length;j++){

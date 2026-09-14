@@ -1,3 +1,4 @@
+import {dynastyBranchSelection} from './dynastyBranchSelection.js';
 import {HISTORIA_DINASTIAS,DINASTIA_ALIASES,RAMAS_DINASTICAS,TIPOS_RAMAS} from '../content/dinastias/index.js';
 import {SOURCES} from '../content/sources.js';
 import {slugPublico,slugBasePersona} from '../utils/personLabels.js';
@@ -43,7 +44,7 @@ export function buildDynastyPages(personas) {
     const h=HISTORIA_DINASTIAS[nombre];
     const members=personas.filter(p=>canonicalDynasty(p.dinastia)===nombre).sort((a,b)=>(a.nac??9999)-(b.nac??9999)||a.nombre.localeCompare(b.nombre,'es'));
     const governments=members.flatMap(p=>(p.gobiernos||[]).map(g=>({...g,persona:ref(p.id)}))).sort((a,b)=>a.desde-b.desde);
-    const branches=RAMAS_DINASTICAS.filter(r=>r.origen===nombre||r.destino===nombre).map(r=>({...r,etiqueta:TIPOS_RAMAS[r.tipo],origenSlug:slugPublico(r.origen),destinoSlug:slugPublico(r.destino),fundador:ref(r.fundador),personas:r.personas.map(ref),fuentes:r.fuentes.map(source)}));
+    const branches=RAMAS_DINASTICAS.filter(r=>r.origen===nombre||r.destino===nombre).map(r=>({...r,arbol:dynastyBranchSelection(r,personas),etiqueta:TIPOS_RAMAS[r.tipo],origenSlug:slugPublico(r.origen),destinoSlug:slugPublico(r.destino),fundador:ref(r.fundador),personas:r.personas.map(ref),fuentes:r.fuentes.map(source)}));
     return {nombre,slug:slugPublico(nombre),editorial:Boolean(h),resumen:h?.resumen||'',origen:h?.origen||'',trayectoria:h?.trayectoria||'',legado:h?.legado||'',territorios:[...new Set([...(h?.territorios||[]),...governments.map(g=>g.territorio)])],protagonistas:(h?.protagonistas||members.slice(0,6).map(p=>p.id)).map(ref),miembros:members.map(p=>ref(p.id)),total:members.length,gobiernos:governments,ramas:branches,fuentes:(h?.fuentes||[]).map(source)};
   });
 }
