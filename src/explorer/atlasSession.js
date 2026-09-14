@@ -9,6 +9,8 @@ export function sanitizeSession(value, nested = false) {
   const out = { version: 1 };
   for (const field of arrayFields) out[field] = strings(value[field]);
   for (const field of stringFields) out[field] = typeof value[field] === 'string' ? value[field].slice(0, 500) : null;
+  out.connectionIds = strings(value.connectionIds).slice(0,5);
+  out.connectionCriterion = value.connectionCriterion === 'sangre' ? 'sangre' : 'matrimonio';
   out.query ||= '';
   out.zoom = finite(value.zoom, 0.8, 0.4, 1.4);
   out.anioGlobal = finite(value.anioGlobal, null, 0, 3000);
@@ -16,7 +18,7 @@ export function sanitizeSession(value, nested = false) {
   out.historiaPasoIndex = Math.floor(finite(value.historiaPasoIndex, 0, 0, 1000));
   out.currentSearchIndex = Math.floor(finite(value.currentSearchIndex, 0, -1, 3000));
   for (const [key, options, fallback] of [
-    ['mode', ['view','compare','foco'], 'view'], ['timelineMode', ['personas','eventos','ambos'], 'personas'],
+    ['mode', ['view','compare','foco','conexion'], 'view'], ['timelineMode', ['personas','eventos','ambos'], 'personas'],
     ['modoComparacion', ['corto','sangre','matrimonio','rutas'], 'corto'], ['focoAlcance', ['cercana','ascendencia','descendencia'], 'cercana'],
   ]) out[key] = options.includes(value[key]) ? value[key] : fallback;
   out.soloFavoritos = value.soloFavoritos === true;
@@ -47,7 +49,7 @@ export function sanitizeSession(value, nested = false) {
 export function shouldResumeAtlas(href) {
   const url = new URL(href, 'https://treeofeurope.eu');
   return /^\/es\/?$/.test(url.pathname) && url.searchParams.get('continuar') === '1'
-    && !['persona','territorio','territorios','dinastia','dinastias','titulo','titulos','siglo','siglos','relaciones','vista','q','anio','historia'].some(k => url.searchParams.has(k));
+    && !['conectar','vinculos','persona','territorio','territorios','dinastia','dinastias','titulo','titulos','siglo','siglos','relaciones','vista','q','anio','historia'].some(k => url.searchParams.has(k));
 }
 
 export function readAtlasSession(storage) {

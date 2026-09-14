@@ -1,3 +1,5 @@
+import ConnectionControls from "../connections/ConnectionControls.jsx";
+import TreeExport from "../connections/TreeExport.jsx";
 import DocumentationNotes from "../components/DocumentationNotes.jsx";
 import { responsiveImage } from "../utils/responsiveImage.js";
 import React from "react";
@@ -50,6 +52,7 @@ function BioSection({ title, open, onToggle, children }) {
 
 export default function ExplorerView({ vm }) {
   const {
+    connectionIds, setConnectionIds, connectionCriterion, setConnectionCriterion, connectionResult, getExportSelection,
     initialMapViewport, recordMapViewport, timelineVirtual, timelineListRef, scrollRef, tlScrollRef, locale, setLocale, query, setQuery,
     territorios, setTerritorios, dinastias, setDinastias, dinastiasExpandidas, setDinastiasExpandidas, territoriosExpandidos, setTerritoriosExpandidos,
     titulos, setTitulos, siglos, setSiglos, relaciones, setRelaciones, hovered, setHovered,
@@ -239,9 +242,9 @@ export default function ExplorerView({ vm }) {
               <div className="compare-split-control" ref={compareMenuRef}>
                 <button
                   type="button"
-                  className={`nav-btn nav-btn-wide compare-main-btn ${mode === "compare" ? "active" : ""}`}
+                  className={`nav-btn nav-btn-wide compare-main-btn ${["compare","conexion"].includes(mode) ? "active" : ""}`}
                   onClick={() => {
-                    const entrar = mode !== "compare";
+                    const entrar = !["compare","conexion"].includes(mode);
                     setMode(entrar ? "compare" : "view");
                     if (entrar) { setOrigen(null); setDestino(null); setCompareRouteIndex(0); }
                     setCompareMenuOpen(false);
@@ -252,7 +255,7 @@ export default function ExplorerView({ vm }) {
                 </button>
                 <button
                   type="button"
-                  className={`nav-btn compare-menu-btn ${mode === "compare" ? "active" : ""}`}
+                  className={`nav-btn compare-menu-btn ${["compare","conexion"].includes(mode) ? "active" : ""}`}
                   onClick={() => {
                     setCompareMenuOpen((actual) => !actual);
                     setFocoMenuOpen(false);
@@ -265,13 +268,14 @@ export default function ExplorerView({ vm }) {
                 </button>
                 {compareMenuOpen && (
                   <div className="compare-mode-menu" role="menu">
+                    <button type="button" role="menuitemradio" aria-checked={mode === "conexion"} className={`compare-mode-option${mode === "conexion" ? " active" : ""}`} onClick={() => {setMode("conexion");setVistasActivas({arbol:true,mapa:false});setCompareMenuOpen(false);}}><strong>Conectar 3–5 personas</strong><span>Reunir varias personas con los vínculos necesarios.</span></button>
                     {MODOS_COMPARACION.map((opcion) => (
                       <button
                         type="button"
                         key={opcion.id}
                         role="menuitemradio"
-                        aria-checked={modoComparacion === opcion.id}
-                        className={`compare-mode-option${modoComparacion === opcion.id ? " active" : ""}`}
+                        aria-checked={mode === "compare" && modoComparacion === opcion.id}
+                        className={`compare-mode-option${mode === "compare" && modoComparacion === opcion.id ? " active" : ""}`}
                         onClick={() => {
                           if (mode !== "compare") { setOrigen(null); setDestino(null); }
                           setModoComparacion(opcion.id);
@@ -406,6 +410,8 @@ export default function ExplorerView({ vm }) {
           <X size={16} />
         </button>
       )}
+
+      {mode === "conexion" && <ConnectionControls people={PERSONAS} ids={connectionIds} onChange={setConnectionIds} criterion={connectionCriterion} onCriterion={setConnectionCriterion} result={connectionResult} onSelect={seleccionarPersonaPorId}/>}
 
       {mode === "compare" && (
         <div className="compare-bar workspace-mode-bar">
@@ -666,6 +672,7 @@ export default function ExplorerView({ vm }) {
           {mostrarArbol && (
             <section className="workspace-stage workspace-tree-stage" aria-label="Árbol genealógico">
               <div className="tree-toolbar" aria-label="Controles del árbol">
+                <TreeExport getSelection={getExportSelection}/>
                 <button type="button" className="nav-btn" onClick={() => cambiarZoomArbol(zoom - 0.1)} title="Alejar árbol" aria-label="Alejar árbol"><ZoomOut size={13} /></button>
                 <button type="button" className="nav-btn" onClick={() => cambiarZoomArbol(0.8)} title="Restablecer árbol" aria-label="Restablecer árbol"><RotateCcw size={12} /></button>
                 <button type="button" className="nav-btn" onClick={() => cambiarZoomArbol(zoom + 0.1)} title="Acercar árbol" aria-label="Acercar árbol"><ZoomIn size={13} /></button>
@@ -676,7 +683,7 @@ export default function ExplorerView({ vm }) {
                 <button type="button" className="nav-btn" onClick={() => scrollBy(200, 0)} title="Mover árbol a la derecha" aria-label="Mover árbol a la derecha"><ArrowRight size={13} /></button>
               </div>
 
-              {collapsedIds.length > 0 && (
+              {mode !== "conexion" && collapsedIds.length > 0 && (
                 <div className="branch-collapse-bar branch-collapse-bar-floating">
                   <span>{collapsedIds.length} rama{collapsedIds.length === 1 ? "" : "s"} cerrada{collapsedIds.length === 1 ? "" : "s"} · {hiddenByCollapse.size} fichas ocultas</span>
                   <button type="button" onClick={() => setCollapsedIds([])}>Abrir todas</button>
