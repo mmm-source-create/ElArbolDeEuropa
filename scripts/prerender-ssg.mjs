@@ -15,7 +15,7 @@ const manifest=JSON.parse(await fs.readFile(path.join(dist,'.vite/manifest.json'
 const assets=assetGraph(manifest,'src/public/StaticPublicPage.jsx');
 for(const file of [...assets.css,...assets.js])await fs.access(path.join(dist,file));
 const allRoutes=routesFromSitemap(await fs.readFile(path.join(dist,'sitemap-full.xml'),'utf8'),siteUrl);
-const examples={persona:['carlos-v','isabel-i-de-castilla','fernando-iii','margarita-i-de-dinamarca','magnus-iv-de-suecia','juan-ii-de-dinamarca','juana-de-brabante','jacoba-de-baviera','enrique-iv-de-francia','alix-de-thouars','gustavo-i-vasa','erik-de-pomerania'],dinastia:['habsburgo','borbon','bjalbo','evreux'],territorio:['suecia','castilla','brabante','balcanes']};
+const examples={persona:['carlos-v','isabel-i-de-castilla','fernando-iii','margarita-i-de-dinamarca','juana-de-brabante','jacoba-de-baviera','alix-de-thouars','jelena-zrinski','ruxandra-rares','francisco-i-rakoczi','alejo-iv-de-trebisonda','petar-iv-zrinski'],dinastia:['habsburgo','borbon','zrinski','gran-comneno'],territorio:['castilla','croacia','herzegovina','trebisonda']};
 function selectSample(routes) {
  const out=[];
  for(const [kind,limit] of [['persona',12],['dinastia',4],['territorio',4]]) {

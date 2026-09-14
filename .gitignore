@@ -1,0 +1,24 @@
+node_modules
+node_modules/
+dist/
+.DS_Store
+.env
+.env.*
+!env.example
+*.log
+audit-report.json
+audit-territorios-report.json
+# Estos archivos se producen con npm run prebuild.
+src/generated/
+public/personas-meta/
+public/territorios-meta/
+public/dinastias-meta/
+public/tree-base.json
+
+# Renderizador temporal y muestra de fichas estáticas.
+.ssg-build-*/
+.ssg-sample/
+
+# Catálogos derivados y bundles temporales de las pruebas.
+public/catalogos/
+.connections-test-*/

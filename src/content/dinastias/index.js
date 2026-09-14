@@ -1,3 +1,4 @@
+import {CASAS_ADRIATICO,CONEXIONES_ADRIATICO} from "./adriatico-v214.js";
 import {CASAS_ALPINAS,RAMAS_ALPINAS} from "./alpes-v213.js";
 import {CASAS_ESCANDINAVAS,CONEXIONES_ESCANDINAVAS} from "./escandinavia-v212.js";
 const MEDLANDS='https://fmg.ac/Projects/MedLands/index.htm';
@@ -8,6 +9,7 @@ const BRITANNICA='https://www.britannica.com/';
 export const HISTORIA_DINASTIAS = {
   ...CASAS_ESCANDINAVAS,
   ...CASAS_ALPINAS,
+  ...CASAS_ADRIATICO,
   'Capeto': {
     resumen:'Una casa real que se prolongó en numerosas ramas: comprender a los Capeto permite conectar las coronas francesas con Dreux, Évreux, Valois y Borbón.',
     origen:'La dinastía toma su nombre de Hugo Capeto, elegido rey de los francos en 987. Durante los primeros siglos consolidó la continuidad hereditaria de la monarquía. Sus hijos menores recibieron patrimonios que dieron origen a casas propias; compartir ascendencia capeta no significa haber gobernado simultáneamente Francia.',
@@ -96,6 +98,7 @@ export const HISTORIA_DINASTIAS = {
 
 export {DINASTIA_ALIASES} from '../../data/dynastyAliases.js';
 export const TIPOS_RAMAS = {
+  alianza_matrimonial:'Alianza matrimonial',
   rama_cadete:'Rama cadete',
   establecimiento:'Establecimiento de una rama',
   continuidad_patrimonial:'Continuidad por matrimonio y herencia',
@@ -103,6 +106,7 @@ export const TIPOS_RAMAS = {
 };
 
 export const RAMAS_DINASTICAS = [
+  ...CONEXIONES_ADRIATICO,
   {id:'dreux-capeta',origen:'Capeto',destino:'Dreux',tipo:'rama_cadete',periodo:'1137',fundador:'ROBERT1DREUX',personas:['LUIS6FRA','LUIS7FRA','ROBERT1DREUX','ROBERT2DREUX','PIERRE1BRET'],texto:'Roberto I, hijo menor de Luis VI, recibió Dreux. La casa conserva una ascendencia capeta aunque sus titulares no fueran reyes de Francia.'},
   {id:'evreux-capeta',origen:'Capeto',destino:'Évreux',tipo:'rama_cadete',periodo:'Finales del siglo XIII',fundador:'LUISEVREUX',personas:['LUISEVREUX','FELIPEVREUX','CARLOS2NAV','CARLOS3NAVAR'],texto:'Luis, hijo de Felipe III, inicia la rama de Évreux. El matrimonio de su hijo Felipe con Juana II incorpora la conexión regia navarra.'},
   {id:'valois-capeta',origen:'Capeto',destino:'Valois',tipo:'rama_cadete',periodo:'Siglos XIII–XIV',fundador:'CARLOSVAL',personas:['CARLOSVAL','FEL6FRA','JUAN2FRA'],texto:'Carlos de Valois, hermano de Felipe IV, dio nombre a la rama. Su hijo Felipe VI accedió al trono en 1328.'},

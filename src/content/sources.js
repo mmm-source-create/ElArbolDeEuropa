@@ -1,8 +1,10 @@
+import {ADRIATICO_SOURCES} from "./sources-adriatico-v214.js";
 import {ALPES_SOURCES} from './sources-alpes-v213.js';
 // Bibliography shared by the public site, Atlas and generated entity pages.
 // A territorial reference supplies context; only explicit person IDs assign a biography.
 export const SOURCES = [
   ...ALPES_SOURCES,
+  ...ADRIATICO_SOURCES,
   {
     "titulo": "Foundation for Medieval Genealogy · MedLands",
     "url": "https://fmg.ac/Projects/MedLands/index.htm",

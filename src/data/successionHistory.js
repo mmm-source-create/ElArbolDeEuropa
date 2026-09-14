@@ -1,4 +1,4 @@
-export const MOTIVOS_SUCESION = ['herencia','elección','conquista','matrimonio','abdicación','deposición','acuerdo','regencia','restauración','disputa'];
+export const MOTIVOS_SUCESION = ['nombramiento','herencia','elección','conquista','matrimonio','abdicación','deposición','acuerdo','regencia','restauración','disputa'];
 export const TIPOS_FECHA = {acceso:'Acceso al título',coronación:'Coronación',gobierno:'Gobierno efectivo',inauguración:'Toma de posesión'};
 export const coincideMandato = (g, referencia, territorio) => g.territorio === territorio && g.desde === referencia.desde && (!referencia.clase || g.clase === referencia.clase);
 

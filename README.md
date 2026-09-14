@@ -3,8 +3,8 @@
 Atlas histórico y genealógico para explorar personas, dinastías, territorios y sus conexiones familiares. Incluye fichas públicas, historias, cronología y desafíos.
 
 - Web: [treeofeurope.eu](https://www.treeofeurope.eu/)
-- Versión: **2.13 — Conexiones familiares y casas alpinas**
-- [Cambios y validación de esta versión](docs/V2.13.md)
+- Versión: **2.14 — Del Adriático al mar Negro**
+- [Cambios y validación de esta versión](docs/V2.14.md)
 - [Fuentes y metodología](https://www.treeofeurope.eu/es/fuentes)
 
 ## Empezar
@@ -47,6 +47,8 @@ Las variables públicas opcionales están documentadas en `env.example`. La web 
 
 `personas.jsx` y `historiaData.jsx` son módulos de datos sin imports: los generadores los leen directamente con Node. Mantén sus identificadores estables. `persona.titulo` es un resumen; cada entrada de `gobiernos` debe indicar `territorio`, `titulo`, `clase`, `condicion`, `desde` y `hasta`. `reinados` conserva compatibilidad de lectura y no es otra base independiente.
 
+Las alianzas matrimoniales tienen una categoría propia: una boda no demuestra transferencia de territorio ni origen de una rama masculina. El nombramiento de un cargo y la toma de posesión pueden llevar fechas distintas.
+
 Una agrupación geográfica no es una soberanía. Una pretensión no equivale a gobierno efectivo. Los relevos explicados identifican mandatos concretos; nunca se generan simplemente ordenando nombres por fecha. Cada crisis documenta las reclamaciones y las filiaciones usadas para explicarlas.
 
 Las publicaciones se incorporan una sola vez a la bibliografía general. Sus asociaciones con personajes y territorios se mantienen en el mismo registro. Una referencia contextual no prueba todos los datos de una ficha. Los retratos nuevos los aporta el responsable del proyecto: no se descargan ni sustituyen automáticamente.
@@ -63,11 +65,11 @@ El último comando vuelve a ejecutar `prebuild`; durante el trabajo normal basta
 
 Las pruebas usan `node:test`, React para renderizar componentes en memoria y el transformador incluido en Vite para leer JSX. `jsdom` permite comprobar también la hidratación y los controles de las fichas. Es una dependencia de desarrollo, no se incorpora al JavaScript publicado. Las pruebas no arrancan un servidor. Cubren rutas, persistencia, geometría, filtros, etapas de títulos, precisión del año global, render de sucesiones y generación de preguntas, además de los contratos de datos. No sustituyen una revisión visual cuando se modifica CSS.
 
-La configuración de GitHub Actions en `.github/workflows/ci.yml` ejecuta instalación reproducible, pruebas, build y la hidratación de una muestra de 20 fichas reales en pull requests y cambios de `main`. Usa permisos de lectura y acciones fijadas por SHA. **Se activará al incorporar el archivo al repositorio.** Para impedir una fusión con errores, configura una regla de protección de `main` que exija el check **Tests y build**; añadir el workflow por sí solo no impide saltarse ese control.
+La configuración de GitHub Actions en `.github/workflows/ci.yml` ejecuta instalación reproducible, pruebas, build y la hidratación de una muestra de 20 fichas reales en pull requests y cambios de `main`. Usa permisos de lectura y acciones fijadas por SHA. La V2.14 incorpora este archivo, que no había llegado a GitHub con las entregas anteriores. Para impedir una fusión con errores, configura una regla de protección de `main` que exija el check **Tests y build**; añadir el workflow por sí solo no impide saltarse ese control.
 
 Vercel conserva el despliegue existente con `npm run build`, directorio `dist` y las rutas de `vercel.json`. Configura Node 24 también allí. Esta actualización no cambia ajustes remotos ni publica por sí sola.
 
-Las actualizaciones se entregan en un ZIP con **solo archivos añadidos o modificados**. Extrae su contenido en la raíz de la versión anterior, respetando las carpetas y los archivos ocultos como `.github/`. No subas `node_modules/` ni `dist/` como código fuente.
+Las actualizaciones se preparan en una rama de GitHub y se entregan mediante **pull request hacia `main`**, con el alcance y los resultados de validación. La fusión y el despliegue quedan separados de la preparación de la actualización. Como copia complementaria puede generarse un ZIP con solo los archivos añadidos o modificados respecto de la base de la pull request, incluidos los ocultos. No subas `node_modules/` ni `dist/` como código fuente.
 
 ## Conexiones y exportación
 
