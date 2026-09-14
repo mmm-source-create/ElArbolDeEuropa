@@ -567,29 +567,9 @@
   align-items: center;
   gap: 6px;
 }
-.desafio-fast-feedback-head button {
-  margin-left: auto;
-  border: 0;
-  background: transparent;
-  color: inherit;
-  cursor: pointer;
-  font-size: 9px;
-  font-weight: 800;
-  text-decoration: underline;
-  text-underline-offset: 2px;
-}
 .desafio-fast-feedback-detail { padding-top: 8px; text-align: left; }
 .desafio-fast-feedback-detail p { margin: 0 0 9px; line-height: 1.5; }
 .desafio-fast-feedback-detail > div { display: flex; gap: 7px; justify-content: flex-end; flex-wrap: wrap; }
-.desafio-fast-feedback.is-flash {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-}
-.desafio-fast-feedback.is-flash span {
-  margin-left: 4px;
-  color: #62594B;
-}
 
 .desafio-primary,
 .desafio-secondary,
@@ -733,18 +713,7 @@
 .desafio-racha-answer p { margin: 5px 0 0; line-height: 1.45; }
 
 .desafio-racha-motion .desafio-option {
-  transition: transform 420ms cubic-bezier(.2,.72,.2,1), opacity 300ms ease, border-color 150ms ease, background 150ms ease;
-}
-.desafio-racha-motion.racha-gana-derecha.fase-mover .desafio-option:first-child {
-  transform: translateX(calc(-100% - 10px));
-  opacity: 0;
-}
-.desafio-racha-motion.racha-gana-derecha.fase-mover .desafio-option:nth-child(2) {
-  transform: translateX(calc(-100% - 10px));
-}
-.desafio-racha-motion.racha-gana-izquierda.fase-mover .desafio-option:nth-child(2) {
-  transform: translateX(18%);
-  opacity: 0;
+  transition: border-color 150ms ease, background 150ms ease;
 }
 
 .desafio-daily-mini,
@@ -804,9 +773,7 @@
   .desafio-question-card h2 { font-size: 22px; }
   .desafio-option-portrait,
   .desafio-option-monogram { width: 46px; height: 52px; }
-  .desafio-fast-feedback.is-flash { align-items: flex-start; flex-wrap: wrap; }
-  .desafio-fast-feedback.is-flash span { width: 100%; margin-left: 0; }
-  .desafio-daily-blocks span { width: 28px; height: 28px; }
+      .desafio-daily-blocks span { width: 28px; height: 28px; }
 }
 
 /* ==========================================
@@ -931,19 +898,6 @@
 .desafio-name-suggestions span { color: #8A7F65; font-size: 8.5px; text-align: right; }
 .desafio-name-empty { padding: 11px; color: #8A7F65; font-size: 9.5px; }
 
-.desafio-portrait-correct {
-  margin-top: 10px;
-  padding: 9px 11px;
-  display: flex;
-  align-items: center;
-  gap: 7px;
-  border: 1px solid #BCD0B6;
-  border-radius: 7px;
-  background: #F0F7ED;
-  color: #45633F;
-  font-size: 10px;
-}
-.desafio-portrait-correct span { margin-left: auto; color: #5F725A; }
 
 .desafio-portrait-result {
   width: min(620px, 100%);
@@ -976,3 +930,22 @@
   .desafio-name-suggestions button { align-items: flex-start; flex-direction: column; gap: 3px; }
   .desafio-name-suggestions span { text-align: left; }
 }
+
+/* Aprender con el Atlas: mismos componentes y paleta, lectura sin temporizador. */
+.desafio-learning-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.desafio-learning-grid .desafio-mode-card { min-width: 0; }
+.desafio-fast-feedback-detail a { text-decoration: none; }
+.desafio-sources { margin: 10px 0 14px; font-size: 11px; }
+.desafio-sources summary { cursor: pointer; color: var(--eade-muted); }
+.desafio-sources ul { padding-left: 18px; line-height: 1.8; }
+.desafio-sources a { color: var(--eade-wine); overflow-wrap: anywhere; }
+.desafio-practice-label { font-size: 11px; color: var(--eade-muted); }
+.desafio-learning-end p { font-size: 13px; line-height: 1.7; color: var(--eade-muted); }
+.desafio-share-panel { margin-top: 22px; padding: 16px; border: 1px solid var(--eade-border); border-radius: 7px; background: var(--eade-paper-soft); font-size: 12px; }
+.desafio-share-panel p { color: var(--eade-muted); line-height: 1.6; }
+.desafio-share-panel > div { display: flex; flex-wrap: wrap; gap: 8px; }
+.desafio-share-panel input { flex: 1; min-width: 0; width: 100%; padding: 8px; font: inherit; border: 1px solid var(--eade-border); border-radius: 4px; background: var(--eade-paper-bright); color: inherit; }
+.desafio-share-panel [role=status] { display: block; margin-top: 8px; color: var(--eade-muted); }
+.desafio-review-portrait { display: block; width: 160px; height: 200px; object-fit: cover; margin: 16px auto; border-radius: 7px; }
+.desafio-question-card h2:focus { outline: none; }
+@media(max-width:760px) { .desafio-learning-grid { grid-template-columns: 1fr; } .desafio-share-panel input { flex-basis: 100%; } }

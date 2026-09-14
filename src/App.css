@@ -680,6 +680,11 @@ html, body {
   text-align: left;
 }
 
+.bio-panel { container: biography / inline-size; overflow-wrap: anywhere; }
+
+.bio-head > div:first-child { min-width: 0; overflow-wrap: anywhere; }
+.bio-head-actions { flex-shrink: 0; }
+
 .bio-head {
   display: flex;
   align-items: flex-start;
@@ -791,11 +796,13 @@ html, body {
 
 .bio-panel dl {
   display: grid;
-  grid-template-columns: auto 1fr;
-  gap: 6px 14px;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 6px 12px;
   margin: 12px 0 0;
   font-size: 13px;
 }
+
+.bio-panel dt, .bio-panel dd { min-width: 0; overflow-wrap: anywhere; }
 
 .bio-panel dt {
   font-weight: 600;
@@ -805,6 +812,13 @@ html, body {
 .bio-panel dd {
   margin: 0;
   color: #2C2620;
+}
+
+@container biography (max-width: 260px) {
+  .bio-portrait-card { grid-template-columns: 80px minmax(0, 1fr); gap: 8px; }
+  .bio-portrait-frame { width: 80px; height: 108px; }
+  .bio-panel dl { grid-template-columns: minmax(0, 1fr); gap: 3px; }
+  .bio-panel dd { margin-bottom: 7px; }
 }
 
 .bio-hint {
