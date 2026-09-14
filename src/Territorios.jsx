@@ -395,7 +395,7 @@ export const TERRITORIOS_SUB = {
     "Alemania", "Austria", "Austria Interior", "Baviera", "Bohemia",
     "Borgoña", "Condado de Borgoña", "Brabante", "Carintia", "Cléveris", "Flandes", "Habsburgo",
     "Henao", "Holanda", "Zelanda", "Limburgo", "Lorena", "Luxemburgo", "Milán",
-    "Monferrato", "Moravia", "Nassau", "Países Bajos", "Palatinado",
+    "Monferrato", "Saluzzo", "Moravia", "Nassau", "Países Bajos", "Palatinado",
     "Piamonte", "Saboya", "Sajonia", "Silesia", "Suabia", "Tirol",
     "Turingia", "Württemberg", "Pomerania", "Jülich", "Berg",
     "Hesse-Kassel", "Hesse-Darmstadt", "Baden", "Brunswick", "Mecklemburgo", "Oldemburgo", "Mark",
@@ -414,7 +414,7 @@ export const TERRITORIOS_SUB = {
 
   "Estados Italianos": [
     "Estados Pontificios", "Venecia", "Génova", "Ferrara", "Florencia", "Forlì", "Gravina",
-    "Mantua", "Módena", "Milán", "Monferrato", "Nápoles", "Parma", "Pesaro", "Urbino",
+    "Mantua", "Módena", "Milán", "Monferrato", "Saluzzo", "Nápoles", "Parma", "Pesaro", "Urbino",
     "Piamonte", "Romaña", "Saboya", "Sicilia", "Tarento", "Toscana",
     "Trinacria", "Anagni", "Bisceglie", "Brescia", "Camerino", "Cerdeña",
     "Cervia", "Cesena", "Como", "Fano", "Imola", "Ischia", "Lacio",

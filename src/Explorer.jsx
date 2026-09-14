@@ -30,6 +30,8 @@ import {
   siglo, nRomano, nombrePrincipal, TL_MIN, TL_MAX, inicioEvento, finEvento, nivelTimelineEvento, anioInicioPersona, anioFinPersona,
 } from "./explorer/timelineUtils.js";
 import { PersonBox } from "./explorer/ExplorerPrimitives.jsx";
+import {connectionTree,connectionFromSearch,connectionUrl} from "./connections/connectionTree.js";
+import {selectionLayout,selectionEdges,edgePath} from "./connections/selectionLayout.js";
 import ExplorerView from "./explorer/ExplorerView.jsx";
 import { useTreeViewport } from "./explorer/useTreeViewport.js";
 import { intersectsViewport } from "./explorer/treeViewport.js";
@@ -101,6 +103,8 @@ export default function Explorer({ initialPanel = null, treeBase: TREE_BASE }) {
   const [currentSearchIndex, setCurrentSearchIndex] = useState(savedSession?.currentSearchIndex ?? -1);
   const [zoom, setZoom] = useState(savedSession?.zoom ?? 0.8);
   const [mode, setMode] = useState(savedSession?.mode ?? "view");
+  const [connectionIds, setConnectionIds] = useState(() => (savedSession?.connectionIds || []).filter(id => BY_ID[id]));
+  const [connectionCriterion, setConnectionCriterion] = useState(savedSession?.connectionCriterion || "matrimonio");
   const [origen, setOrigen] = useState(savedSession?.origen ?? null);
   const [destino, setDestino] = useState(savedSession?.destino ?? null);
   const [modoComparacion, setModoComparacion] = useState(savedSession?.modoComparacion ?? "corto");
@@ -217,6 +221,8 @@ export default function Explorer({ initialPanel = null, treeBase: TREE_BASE }) {
   const gen = TREE_BASE.gen;
   const rows = TREE_BASE.rows;
   const graph = useMemo(() => buildGraph(PERSONAS), []);
+  const connectionResult = useMemo(() => connectionTree(graph, connectionIds, connectionCriterion), [graph, connectionIds, connectionCriterion]);
+  const connectionSet = useMemo(() => mode === "conexion" && connectionIds.length >= 2 ? new Set(connectionResult.ids) : null, [mode, connectionResult, connectionIds.length]);
   const favoritosSet = useMemo(() => new Set(favoritos), [favoritos]);
   const timelinePxPerYear = TIMELINE_SCALES[timelineScaleIndex];
   const timelineTrackWidth = Math.max(1180, Math.round((TL_MAX - TL_MIN) * timelinePxPerYear));
@@ -777,6 +783,7 @@ export default function Explorer({ initialPanel = null, treeBase: TREE_BASE }) {
   // OR, que suele ser el comportamiento más útil al explorar una genealogía.
   const matches = (persona) => {
     if (!persona) return false;
+    if (connectionSet) return connectionSet.has(persona.id);
     if (hiddenByCollapse.has(persona.id)) return false;
     if (focoSet && !focoSet.has(persona.id)) return false;
     if (soloFavoritos && !favoritosSet.has(persona.id)) return false;
@@ -814,7 +821,7 @@ export default function Explorer({ initialPanel = null, treeBase: TREE_BASE }) {
     return true;
   };
 
-  const visiblePeople = useMemo(() => PERSONAS.filter(matches), [hiddenByCollapse, focoSet, soloFavoritos, favoritosSet, territorios, dinastias, titulos, siglos, relaciones, opciones.otrasDinastias]);
+  const visiblePeople = useMemo(() => PERSONAS.filter(matches), [connectionSet, hiddenByCollapse, focoSet, soloFavoritos, favoritosSet, territorios, dinastias, titulos, siglos, relaciones, opciones.otrasDinastias]);
   const timelineRows = useMemo(() => timelineMode === "eventos"
     ? eventosOrdenados.map(item => ({ key: `event:${item.id}`, item, estimatedSize: 54 }))
     : visiblePeople.slice().sort((a, b) => (anioInicioPersona(a) ?? Infinity) - (anioInicioPersona(b) ?? Infinity) || a.nombre.localeCompare(b.nombre, "es"))
@@ -836,9 +843,10 @@ export default function Explorer({ initialPanel = null, treeBase: TREE_BASE }) {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [rows, visibleSignature]);
   const treeLayout = useMemo(() => {
+    if (connectionSet) return selectionLayout(connectionResult.ids, gen, BY_ID);
     if (visiblePeople.length === PERSONAS.length) return TREE_BASE.layout;
     return computeTreeLayout(visibleRows, BY_ID, HIJOS_POR_ID);
-  }, [visibleRows, visiblePeople.length]);
+  }, [visibleRows, visiblePeople.length, connectionSet, connectionResult, gen]);
   const positions = treeLayout.positions;
   const treeViewport = useTreeViewport(scrollRef, zoom, mostrarArbol);
   const renderedTreeUnits = useMemo(() => treeLayout.units.filter(unit => intersectsViewport(unit, treeViewport)), [treeLayout.units, treeViewport]);
@@ -879,7 +887,7 @@ export default function Explorer({ initialPanel = null, treeBase: TREE_BASE }) {
   useAtlasSession({
     ...savedSession, query, territorios, dinastias, titulos, siglos, relaciones, collapsedIds,
     dinastiasExpandidas, territoriosExpandidos, selectedId: seleccion?.id || null,
-    currentSearchIndex, zoom, mode, origen, destino, modoComparacion, focoId, focoAlcance,
+    currentSearchIndex, zoom, mode, connectionIds, connectionCriterion, origen, destino, modoComparacion, focoId, focoAlcance,
     anioGlobal, vistasActivas, panelesVisibles, personHistory, timelineScaleIndex, timelineMode,
     eventoSeleccionadoId, soloFavoritos, historiaActivaId, historiaPasoIndex, historiaSnapshot: historiaSnapshotRef.current,
   }, scrollRef, tlScrollRef, () => {
@@ -961,7 +969,7 @@ export default function Explorer({ initialPanel = null, treeBase: TREE_BASE }) {
 
   const groupsByRow = useMemo(() => computeParentGroups(PERSONAS, gen), [gen]);
 
-  const routing = useMemo(() => routeFamilyConnectors({
+  const routing = useMemo(() => connectionSet ? {families:[]} : routeFamilyConnectors({
     groupsByRow,
     positions,
     pairContacts: treeLayout.pairContacts,
@@ -969,7 +977,7 @@ export default function Explorer({ initialPanel = null, treeBase: TREE_BASE }) {
     rows: visibleRows,
     rowBands: treeLayout.rowBands,
     canvasWidth: treeLayout.width,
-  }), [groupsByRow, positions, treeLayout.pairContacts, gen, visibleRows, treeLayout.rowBands, treeLayout.width]);
+  }), [connectionSet, groupsByRow, positions, treeLayout.pairContacts, gen, visibleRows, treeLayout.rowBands, treeLayout.width]);
 
   const relacionFocoId = hovered || seleccion?.id || null;
   const amantesFoco = new Set(relacionFocoId ? listaAmantes(BY_ID[relacionFocoId]) : []);
@@ -994,7 +1002,7 @@ export default function Explorer({ initialPanel = null, treeBase: TREE_BASE }) {
   // Mantener el SVG montado permite actualizar colores sin recrear todas las líneas.
   const connectorLayerKey = visibleSignature;
 
-  const connectors = routing.families.map((family) => {
+  const connectors = connectionSet ? connectionResult.edges.map((edge,i) => <path key={`${edge.from}-${edge.to}`} d={edgePath(edge,positions,i)} fill="none" stroke={edge.type === "sangre" ? "#7a2e2e" : "#a77b43"} strokeWidth={2} strokeDasharray={edge.type === "sangre" ? undefined : "7 5"} />) : routing.families.map((family) => {
     const sharedStyle = styleForFamilyLine(family);
     return (
       <React.Fragment key={`family-${family.key}`}>
@@ -1047,6 +1055,8 @@ export default function Explorer({ initialPanel = null, treeBase: TREE_BASE }) {
   const endDrag = () => (dragState.current = null);
 
   const centerOn = id => queueViewport({ treeId: id, treeCenter: null });
+
+  useEffect(() => { if (connectionSet && connectionIds[0]) centerOn(connectionIds[0]); }, [connectionSet]);
 
   // El zoom se ancla SIEMPRE al centro visual actual del viewport. No importa
   // qué persona esté seleccionada, buscada o bajo el cursor: el punto que está
@@ -1103,7 +1113,8 @@ export default function Explorer({ initialPanel = null, treeBase: TREE_BASE }) {
     if (!slug) return;
     const url = new URL(window.location.href);
     url.pathname = rutaEntidadLocalizada("es", "persona", slug);
-    url.searchParams.delete("atlas");
+    if (mode === "conexion") url.searchParams.set("atlas", "1");
+    else url.searchParams.delete("atlas");
     const destino = `${url.pathname}${url.search}${url.hash}`;
     const actual = `${window.location.pathname}${window.location.search}${window.location.hash}`;
     if (destino === actual) return;
@@ -1154,6 +1165,11 @@ export default function Explorer({ initialPanel = null, treeBase: TREE_BASE }) {
     if (typeof window === "undefined") return undefined;
     const onPopState = () => {
       historyPopRef.current = true;
+      const incomingConnection = connectionFromSearch(window.location.search, BY_ID);
+      if (incomingConnection.ids.length) {
+        setConnectionIds(incomingConnection.ids);setConnectionCriterion(incomingConnection.criterion);setMode('conexion');
+        centerOn(incomingConnection.ids[0]);historyPopRef.current = false;return;
+      }
       const ruta = rutaPublicaDesdePath(window.location.pathname);
       const personaId = personaIdDesdeRuta(window.location.pathname);
 
@@ -1174,6 +1190,8 @@ export default function Explorer({ initialPanel = null, treeBase: TREE_BASE }) {
         setTimelineMode(anteriorHistoria.timelineMode);
         setEventoSeleccionadoId(anteriorHistoria.eventoSeleccionadoId || null);
         setMode(anteriorHistoria.mode || "view");
+    setConnectionIds(anteriorHistoria.connectionIds || []);
+    setConnectionCriterion(anteriorHistoria.connectionCriterion || "matrimonio");
         setOrigen(anteriorHistoria.origen || null);
         setDestino(anteriorHistoria.destino || null);
         setFocoId(anteriorHistoria.focoId || null);
@@ -1291,7 +1309,7 @@ export default function Explorer({ initialPanel = null, treeBase: TREE_BASE }) {
       historiaSnapshotRef.current = {
         query, territorios, dinastias, titulos, siglos, relaciones, soloFavoritos, anioGlobal,
         vistasActivas, seleccionId: seleccion?.id || null, timelineMode, eventoSeleccionadoId,
-        mode, origen, destino, focoId, focoAlcance, collapsedIds, compareRouteIndex,
+        mode, connectionIds, connectionCriterion, origen, destino, focoId, focoAlcance, collapsedIds, compareRouteIndex,
         rutaAnterior: typeof window !== "undefined"
           ? (historiaAbiertaDesdeEnlace ? "/es/historias" : `${window.location.pathname}${window.location.search}${window.location.hash}`)
           : "/es/",
@@ -1349,6 +1367,8 @@ export default function Explorer({ initialPanel = null, treeBase: TREE_BASE }) {
     setTimelineMode(anterior.timelineMode);
     setEventoSeleccionadoId(anterior.eventoSeleccionadoId || null);
     setMode(anterior.mode || "view");
+    setConnectionIds(anterior.connectionIds || []);
+    setConnectionCriterion(anterior.connectionCriterion || "matrimonio");
     setOrigen(anterior.origen || null);
     setDestino(anterior.destino || null);
     setFocoId(anterior.focoId || null);
@@ -1378,6 +1398,7 @@ export default function Explorer({ initialPanel = null, treeBase: TREE_BASE }) {
 
   const construirEnlaceCompartido = useCallback(() => {
     if (!seleccion || typeof window === "undefined") return "";
+    if (mode === "conexion") return new URL(connectionUrl(connectionIds, connectionCriterion), window.location.origin).href;
     const url = new URL(window.location.href);
     url.pathname = rutaEntidadLocalizada("es", "persona", slugPersonaPorLocale(seleccion, "es"));
     url.search = "";
@@ -1392,7 +1413,7 @@ export default function Explorer({ initialPanel = null, treeBase: TREE_BASE }) {
     siglos.forEach((valor) => url.searchParams.append("siglo", String(valor)));
     relaciones.forEach((valor) => url.searchParams.append("relacion", valor));
     return url.toString();
-  }, [seleccion, anioGlobal, vistaPrincipal, query, territorios, dinastias, titulos, siglos, relaciones]);
+  }, [seleccion, mode, connectionIds, connectionCriterion, anioGlobal, vistaPrincipal, query, territorios, dinastias, titulos, siglos, relaciones]);
 
   const compartirPersona = useCallback(async () => {
     const enlace = construirEnlaceCompartido();
@@ -1431,6 +1452,8 @@ export default function Explorer({ initialPanel = null, treeBase: TREE_BASE }) {
     if (urlStateLoadedRef.current || typeof window === "undefined") return;
     urlStateLoadedRef.current = true;
     const params = new URLSearchParams(window.location.search);
+    const connection = connectionFromSearch(params, BY_ID);
+    if (connection.ids.length) { setConnectionIds(connection.ids); setConnectionCriterion(connection.criterion); setMode("conexion"); centerOn(connection.ids[0]); }
     const rutaInicial = rutaPublicaDesdePath(window.location.pathname);
     if (rutaInicial?.locale === "en") return;
 
@@ -1492,8 +1515,27 @@ export default function Explorer({ initialPanel = null, treeBase: TREE_BASE }) {
     }
   }, [opciones, ajustarAnio]);
 
+  const previousConnectionMode = useRef(false);
+  useEffect(() => {
+    if (!urlStateLoadedRef.current) return;
+    if (mode === 'conexion') {
+      const url = new URL(connectionUrl(connectionIds, connectionCriterion), window.location.origin);
+      if (seleccion && connectionResult.ids.includes(seleccion.id)) url.searchParams.set('persona', seleccion.id);
+      window.history.replaceState({eade:'conexion'}, '', url.pathname + url.search);
+    } else if (previousConnectionMode.current && !historiaActivaId) {
+      const url = new URL(window.location.href);
+      url.searchParams.delete('conectar'); url.searchParams.delete('vinculos');
+      url.searchParams.set('atlas','1');
+      window.history.replaceState({eade:'atlas'}, '', url.pathname + url.search);
+    }
+    previousConnectionMode.current = mode === 'conexion';
+  }, [mode, connectionIds, connectionCriterion, seleccion?.id, historiaActivaId]);
+
   const handleBoxClick = (p) => {
-    if (mode === "compare") {
+    if (mode === "conexion") {
+      setConnectionIds(ids => ids.includes(p.id) || ids.length >= 5 ? ids : [...ids, p.id]);
+      seleccionarPersonaPorId(p.id);
+    } else if (mode === "compare") {
       if (!origen) { setOrigen(p.id); setDestino(null); }
       else if (!destino && p.id !== origen) { setDestino(p.id); }
       else { setOrigen(p.id); setDestino(null); }
@@ -1533,7 +1575,7 @@ export default function Explorer({ initialPanel = null, treeBase: TREE_BASE }) {
     if (hovered === id) cls += " hovered";
     else if (lineage.has(id)) cls += " lineage";
     if (comparePath && comparePath.includes(id)) cls += " path-hl";
-    if (mode === "compare" && (id === origen || id === destino)) cls += " pick";
+    if ((mode === "compare" && (id === origen || id === destino)) || (mode === "conexion" && connectionIds.includes(id))) cls += " pick";
     if (searchMatchSet.has(id)) cls += id === searchCurrentId ? " search-current" : " search-match";
     if (amantesFoco.has(id)) cls += " lover-related";
     if (historiaPersonasSet.has(id)) cls += " story-related";
@@ -1558,7 +1600,7 @@ export default function Explorer({ initialPanel = null, treeBase: TREE_BASE }) {
         onEnter={h.onEnter}
         onLeave={h.onLeave}
         onClick={h.onClick}
-        hasDescendants={(HIJOS_POR_ID[id] || []).length > 0}
+        hasDescendants={mode !== "conexion" && (HIJOS_POR_ID[id] || []).length > 0}
         descendantsCollapsed={collapsedSet.has(id)}
         onToggleDescendants={() => toggleDescendants(id)}
       />
@@ -1636,7 +1678,17 @@ export default function Explorer({ initialPanel = null, treeBase: TREE_BASE }) {
     );
   }
 
+  const getExportSelection = (scope) => {
+    let ids, edges, title;
+    if (scope !== 'visible' && mode === 'conexion' && connectionSet) { ids = connectionResult.ids; edges = connectionResult.edges; title = 'Conexión entre personas'; }
+    else if (scope !== 'visible' && mode === 'compare') { ids = comparePath || []; edges = ids.slice(1).map((id,i) => ({from:ids[i],to:id,type:(graph[ids[i]].find(e=>e.id===id)?.tipos||[]).includes('sangre')?'sangre':(graph[ids[i]].find(e=>e.id===id)?.tipos||[]).includes('matrimonio')?'matrimonio':'amante'})); title = 'Comparación de parentesco'; }
+    else if (scope === 'visible' || mode === 'foco') { ids = visibleIds; title = 'Rama del Atlas'; }
+    else { ids = seleccion ? [...conjuntoFoco(seleccion.id, 'cercana')] : []; title = seleccion ? `Familia de ${seleccion.nombre}` : 'Selección del árbol'; }
+    return {people:ids.map(id=>BY_ID[id]).filter(Boolean),edges:edges || selectionEdges(graph,ids),gen,terminals:mode==='conexion'?connectionIds:[seleccion?.id].filter(Boolean),title,url:mode==='conexion'?new URL(connectionUrl(connectionIds,connectionCriterion), window.location.origin).href:(construirEnlaceCompartido() || window.location.href)};
+  };
+
   const viewModel = {
+    connectionIds, setConnectionIds, connectionCriterion, setConnectionCriterion, connectionResult, getExportSelection,
     initialMapViewport: mapViewportRef.current, recordMapViewport, timelineVirtual, timelineListRef, scrollRef, tlScrollRef, locale, setLocale, query, setQuery,
     territorios, setTerritorios, dinastias, setDinastias, dinastiasExpandidas, setDinastiasExpandidas, territoriosExpandidos, setTerritoriosExpandidos,
     titulos, setTitulos, siglos, setSiglos, relaciones, setRelaciones, hovered, setHovered,
