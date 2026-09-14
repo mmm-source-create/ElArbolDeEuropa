@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useMemo, useRef, useState } from "react";
+import React, { useCallback, useMemo, useRef, useState } from "react";
 import {
   ArrowLeft,
   ArrowRight,
@@ -27,6 +27,10 @@ import {
   crearPreguntaRacha,
   describirDificultad,
 } from "./desafioEngine.jsx";
+import {PreguntaOpciones, PreguntaOrden, Explicacion} from './Question.jsx';
+import LearningSession from './LearningSession.jsx';
+import {successionBank, createChallenge, challengeUrl, readChallenge, readReview, reviewQuestions, updateReview, saveReview} from './learning.js';
+import {resumenCortoPersona} from '../utils/personPresentation.js';
 import "./desafio.css";
 
 const STORAGE_KEY = "arbol-europa-desafio-v2";
@@ -221,22 +225,6 @@ function TarjetaEstadistica({ valor, etiqueta }) {
   return <div className="desafio-stat"><strong>{valor}</strong><span>{etiqueta}</span></div>;
 }
 
-function RetratoOpcion({ persona }) {
-  const imagen = persona ? IMAGENES_PERSONAS[persona.id] : null;
-  if (!imagen) return <span className="desafio-option-monogram">{persona?.nombre?.slice(0, 1) || "?"}</span>;
-  return (
-    <span className="desafio-option-portrait">
-      <img
-        src={imagen.archivo}
-        alt=""
-        loading="lazy"
-        decoding="async"
-        style={{ objectPosition: imagen.encuadre || imagen.posicion || "50% 20%" }}
-      />
-    </span>
-  );
-}
-
 function Corazones({ vidas }) {
   return (
     <span className="desafio-lives" aria-label={`${vidas} vidas`}>
@@ -245,103 +233,19 @@ function Corazones({ vidas }) {
   );
 }
 
-function PreguntaOpciones({
-  pregunta,
-  byId,
-  seleccion,
-  respondida,
-  hidden = [],
-  onSelect,
-  campeonId = null,
-  className = "",
-}) {
-  const ocultas = new Set(hidden);
-  return (
-    <div className={`desafio-options desafio-options-${pregunta.opciones.length}${className ? ` ${className}` : ""}`}>
-      {pregunta.opciones.filter((opcion) => !ocultas.has(opcion.id)).map((opcion) => {
-        const persona = byId[opcion.id] || null;
-        const correcta = opcion.id === pregunta.correctaId;
-        const elegida = opcion.id === seleccion;
-        const clase = respondida
-          ? correcta ? " is-correct" : elegida ? " is-wrong" : " is-muted"
-          : "";
-        return (
-          <button
-            type="button"
-            key={opcion.id}
-            className={`desafio-option${persona ? " has-person" : ""}${campeonId === opcion.id ? " is-champion" : ""}${clase}`}
-            disabled={respondida}
-            onClick={() => onSelect(opcion.id)}
-          >
-            {persona && <RetratoOpcion persona={persona} />}
-            <span className="desafio-option-copy">
-              <strong>{opcion.label}</strong>
-              {persona && <small>{[persona.titulo, persona.dinastia].filter(Boolean).join(" · ") || "Personaje histórico"}</small>}
-              {campeonId === opcion.id && <em>continúa</em>}
-            </span>
-            {respondida && correcta && <Check size={16} aria-hidden="true" />}
-            {respondida && elegida && !correcta && <X size={16} aria-hidden="true" />}
-          </button>
-        );
-      })}
-    </div>
-  );
-}
-
-function PreguntaOrden({ pregunta, byId, orden, respondida, onPick }) {
-  return (
-    <div className="desafio-order-grid">
-      {pregunta.opciones.map((opcion) => {
-        const persona = byId[opcion.id] || null;
-        const posicion = orden.indexOf(opcion.id);
-        return (
-          <button
-            type="button"
-            key={opcion.id}
-            className={`desafio-order-card${posicion >= 0 ? " is-picked" : ""}`}
-            disabled={respondida}
-            onClick={() => onPick(opcion.id)}
-          >
-            {persona && <RetratoOpcion persona={persona} />}
-            <span><strong>{opcion.label}</strong>{persona && <small>{persona.titulo || persona.dinastia || "Personaje histórico"}</small>}</span>
-            {posicion >= 0 && <b>{posicion + 1}</b>}
-          </button>
-        );
-      })}
-    </div>
-  );
-}
-
-function ExplicacionCompacta({ correcta, explicacion, expandida, onExpand, onContinue, onAtlas, puedeAtlas }) {
-  return (
-    <div className={`desafio-fast-feedback${correcta ? " is-correct" : " is-wrong"}`} aria-live="polite">
-      <div className="desafio-fast-feedback-head">
-        {correcta ? <Check size={16} /> : <X size={16} />}
-        <strong>{correcta ? "Correcto" : "No esta vez"}</strong>
-        {!expandida && <button type="button" onClick={onExpand}>Ver por qué</button>}
-      </div>
-      {expandida && (
-        <div className="desafio-fast-feedback-detail">
-          <p>{explicacion}</p>
-          <div>
-            {puedeAtlas && <button type="button" className="desafio-secondary" onClick={onAtlas}>Ver en el atlas <ExternalLink size={13} /></button>}
-            <button type="button" className="desafio-primary" onClick={onContinue}>Continuar <ArrowRight size={13} /></button>
-          </div>
-        </div>
-      )}
-    </div>
-  );
-}
-
 export default function Desafio({ personas = [] }) {
   const byId = useMemo(() => Object.fromEntries(personas.map((p) => [p.id, p])), [personas]);
   const slugs = useMemo(() => construirSlugs(personas), [personas]);
   const personasConRetrato = useMemo(() => personas.filter((persona) => Boolean(IMAGENES_PERSONAS[persona.id]?.archivo)), [personas]);
   const [estadisticas, setEstadisticas] = useState(leerEstadisticas);
-  const [modo, setModo] = useState(null);
-  const [error, setError] = useState("");
-  const feedbackTimerRef = useRef(null);
-  const rachaTimersRef = useRef([]);
+  const bank = useMemo(() => successionBank(personas), [personas]);
+  const [shared] = useState(() => readChallenge(typeof window==='undefined'?'':window.location.search, bank));
+  const storage = () => { try { return window.localStorage; } catch { return null; } };
+  const [review, setReview] = useState(() => readReview(storage(), byId, bank));
+  const [reviewWarning, setReviewWarning] = useState('');
+  const [lesson, setLesson] = useState(() => shared?.preguntas ? {questions:shared.preguntas, url:challengeUrl(bank,shared.seed)} : null);
+  const [modo, setModo] = useState(shared?.preguntas ? 'compartido' : null);
+  const [error, setError] = useState(shared?.error || "");
   const retratoInputRef = useRef(null);
 
   const progreso = nivelCronista(estadisticas.totalAciertos);
@@ -357,28 +261,25 @@ export default function Desafio({ personas = [] }) {
     });
   }, []);
 
-  const limpiarFeedback = useCallback(() => {
-    if (feedbackTimerRef.current) window.clearTimeout(feedbackTimerRef.current);
-    feedbackTimerRef.current = null;
-  }, []);
-
-  const limpiarRachaTimers = useCallback(() => {
-    rachaTimersRef.current.forEach((timer) => window.clearTimeout(timer));
-    rachaTimersRef.current = [];
-  }, []);
-
-  useEffect(() => () => {
-    limpiarFeedback();
-    limpiarRachaTimers();
-  }, [limpiarFeedback, limpiarRachaTimers]);
-
   const abrirAtlas = (personaId) => {
     const slug = slugs[personaId];
     if (!personaId || !slug || typeof window === "undefined") return;
-    window.open(`/es/persona/${encodeURIComponent(slug)}`, "_blank", "noopener,noreferrer");
+    window.open(`/es/persona/${encodeURIComponent(slug)}?atlas=1`, "_blank", "noopener,noreferrer");
   };
 
-  const registrarPregunta = (acierto) => {
+  const remember = (question, correct) => {
+    const next = updateReview(review, question, correct);
+    setReview(next);
+    if (!saveReview(storage(), next)) setReviewWarning('El navegador no permite guardar el repaso. Podrás usarlo durante esta visita.');
+  };
+  const startLesson = mode => {
+    const seed = Array.from(crypto.getRandomValues(new Uint32Array(2)), n=>n.toString(36)).join('-');
+    const questions = mode==='repaso' ? reviewQuestions(review) : createChallenge(bank,seed);
+    setLesson({questions, url:mode==='compartido'?challengeUrl(bank,seed):null});
+    setModo(mode); setError('');
+  };
+  const registrarPregunta = (acierto, question) => {
+    if (question) remember(question,acierto);
     actualizarEstadisticas((actual) => ({
       ...actual,
       totalPreguntas: actual.totalPreguntas + 1,
@@ -394,7 +295,7 @@ export default function Desafio({ personas = [] }) {
   const [camino, setCamino] = useState(null);
   const [caminoTerminado, setCaminoTerminado] = useState(false);
 
-  const nuevaPreguntaCamino = (estado, { reemplazo = false } = {}) => {
+  const nuevaPreguntaCamino = (estado) => {
     const dificultad = nivelCamino(estado.ronda, estado.combo, estado.resultados);
     const recientes = [...leerRecientes(), ...estado.firmas];
     const pregunta = crearPreguntaCamino(personas, {
@@ -413,17 +314,14 @@ export default function Desafio({ personas = [] }) {
       orden: [],
       respondida: false,
       aciertoActual: null,
-      feedbackExpandido: false,
       hidden: [],
       hintVisible: false,
       pistasVisibles: pregunta.formato === "pistas" ? 1 : 0,
       pistasExtra: 0,
-      ...(reemplazo ? {} : {}),
     };
   };
 
   const iniciarCamino = () => {
-    limpiarFeedback();
     try {
       let estado = {
         ronda: 1,
@@ -440,8 +338,7 @@ export default function Desafio({ personas = [] }) {
         orden: [],
         respondida: false,
         aciertoActual: null,
-        feedbackExpandido: false,
-        hidden: [],
+          hidden: [],
         hintVisible: false,
         pistasVisibles: 0,
         pistasExtra: 0,
@@ -460,7 +357,6 @@ export default function Desafio({ personas = [] }) {
   };
 
   const finalizarCamino = (estado) => {
-    limpiarFeedback();
     setCamino(estado);
     setCaminoTerminado(true);
     actualizarEstadisticas((actual) => ({
@@ -473,7 +369,6 @@ export default function Desafio({ personas = [] }) {
   };
 
   const avanzarCamino = (estado) => {
-    limpiarFeedback();
     try {
       const base = { ...estado, ronda: estado.ronda + 1 };
       setCamino(nuevaPreguntaCamino(base));
@@ -482,14 +377,6 @@ export default function Desafio({ personas = [] }) {
       finalizarCamino(estado);
       setError("El recorrido terminó porque no se pudo generar otra pregunta sin repetir las anteriores.");
     }
-  };
-
-  const programarSiguienteCamino = (estado) => {
-    limpiarFeedback();
-    feedbackTimerRef.current = window.setTimeout(() => {
-      if (estado.vidas <= 0) finalizarCamino(estado);
-      else avanzarCamino(estado);
-    }, 1450);
   };
 
   const cerrarRespuestaCamino = (acierto, seleccionValue) => {
@@ -520,9 +407,8 @@ export default function Desafio({ personas = [] }) {
       descubiertos,
     };
     setCamino(siguiente);
-    registrarPregunta(acierto);
+    registrarPregunta(acierto, camino.pregunta);
     actualizarEstadisticas((actual) => ({ ...actual, mejorCombo: Math.max(actual.mejorCombo, siguienteCombo) }));
-    programarSiguienteCamino(siguiente);
   };
 
   const responderCamino = (opcionId) => {
@@ -542,11 +428,6 @@ export default function Desafio({ personas = [] }) {
     }
     const acierto = orden.join("|") === camino.pregunta.ordenCorrecto.join("|");
     cerrarRespuestaCamino(acierto, orden);
-  };
-
-  const expandirFeedbackCamino = () => {
-    limpiarFeedback();
-    setCamino((actual) => actual ? { ...actual, feedbackExpandido: true } : actual);
   };
 
   const continuarCamino = () => {
@@ -594,7 +475,7 @@ export default function Desafio({ personas = [] }) {
         firmas: [...camino.firmas, camino.pregunta.firma],
         comodines: { ...camino.comodines, swap: false },
       };
-      const reemplazada = nuevaPreguntaCamino(base, { reemplazo: true });
+      const reemplazada = nuevaPreguntaCamino(base);
       reemplazada.comodines = { ...camino.comodines, swap: false };
       setCamino(reemplazada);
     } catch (err) {
@@ -612,10 +493,8 @@ export default function Desafio({ personas = [] }) {
   const [seleccionRacha, setSeleccionRacha] = useState(null);
   const [rachaTerminada, setRachaTerminada] = useState(false);
   const [firmasRacha, setFirmasRacha] = useState([]);
-  const [transicionRacha, setTransicionRacha] = useState(null);
 
   const iniciarRacha = () => {
-    limpiarRachaTimers();
     try {
       const pregunta = crearPreguntaRacha(personas);
       setPreguntaRacha(pregunta);
@@ -624,7 +503,6 @@ export default function Desafio({ personas = [] }) {
       setSeleccionRacha(null);
       setRachaTerminada(false);
       setFirmasRacha([pregunta.firma]);
-      setTransicionRacha(null);
       setModo("racha");
       setError("");
     } catch (err) {
@@ -633,64 +511,27 @@ export default function Desafio({ personas = [] }) {
     }
   };
 
-  const programarRacha = (callback, ms) => {
-    const timer = window.setTimeout(callback, ms);
-    rachaTimersRef.current.push(timer);
-  };
-
   const responderRacha = (opcionId) => {
-    if (!preguntaRacha || seleccionRacha !== null || rachaTerminada || transicionRacha) return;
-    const ordenadas = campeonRacha
-      ? [preguntaRacha.opciones.find((o) => o.id === campeonRacha), ...preguntaRacha.opciones.filter((o) => o.id !== campeonRacha)].filter(Boolean)
-      : preguntaRacha.opciones;
-    const indiceElegido = ordenadas.findIndex((o) => o.id === opcionId);
+    if (!preguntaRacha || seleccionRacha !== null || rachaTerminada) return;
     const correcta = opcionId === preguntaRacha.correctaId;
-
-    registrarPregunta(correcta);
-    if (!correcta) {
-      setSeleccionRacha(opcionId);
-      setRachaTerminada(true);
-      actualizarEstadisticas((actual) => ({
-        ...actual,
-        rachasJugadas: actual.rachasJugadas + 1,
-        mejorRachaDuelo: Math.max(actual.mejorRachaDuelo, rachaDuelo),
-      }));
-      return;
-    }
-
-    const nuevaRacha = rachaDuelo + 1;
-    const nuevoCampeon = preguntaRacha.siguienteCampeonId;
-    let nueva;
-    try {
-      nueva = crearPreguntaRacha(personas, nuevoCampeon, { evitarFirmas: firmasRacha.slice(-120) });
-    } catch (err) {
-      setSeleccionRacha(opcionId);
-      setRachaDuelo(nuevaRacha);
-      setRachaTerminada(true);
-      actualizarEstadisticas((actual) => ({
-        ...actual,
-        rachasJugadas: actual.rachasJugadas + 1,
-        mejorRachaDuelo: Math.max(actual.mejorRachaDuelo, nuevaRacha),
-      }));
-      return;
-    }
-
-    actualizarEstadisticas((actual) => ({ ...actual, mejorRachaDuelo: Math.max(actual.mejorRachaDuelo, nuevaRacha) }));
-    const tipo = indiceElegido === 1 ? "gana-derecha" : "gana-izquierda";
     setSeleccionRacha(opcionId);
-    setTransicionRacha({ tipo, fase: "confirmar" });
-
-    programarRacha(() => {
-      setTransicionRacha({ tipo, fase: "mover" });
-      programarRacha(() => {
-        setCampeonRacha(nuevoCampeon);
-        setRachaDuelo(nuevaRacha);
-        setPreguntaRacha(nueva);
-        setFirmasRacha((actual) => [...actual, nueva.firma].slice(-140));
-        setSeleccionRacha(null);
-        setTransicionRacha(null);
-      }, 430);
-    }, 360);
+    registrarPregunta(correcta, preguntaRacha);
+    if (correcta) {
+      setRachaDuelo(rachaDuelo+1);
+      actualizarEstadisticas(actual=>({...actual,mejorRachaDuelo:Math.max(actual.mejorRachaDuelo,rachaDuelo+1)}));
+    }
+  };
+  const continuarRacha = () => {
+    if (seleccionRacha===null) return;
+    if (seleccionRacha===preguntaRacha.correctaId) {
+      try {
+        const next = crearPreguntaRacha(personas,preguntaRacha.siguienteCampeonId,{evitarFirmas:firmasRacha.slice(-120)});
+        setCampeonRacha(preguntaRacha.siguienteCampeonId); setPreguntaRacha(next);
+        setFirmasRacha([...firmasRacha,next.firma].slice(-140)); setSeleccionRacha(null); return;
+      } catch { setError('No quedan duelos disponibles para continuar esta racha.'); }
+    }
+    setRachaTerminada(true);
+    actualizarEstadisticas(actual=>({...actual,rachasJugadas:actual.rachasJugadas+1,mejorRachaDuelo:Math.max(actual.mejorRachaDuelo,rachaDuelo)}));
   };
 
   // ---------------------------------------------------------------------------
@@ -714,7 +555,6 @@ export default function Desafio({ personas = [] }) {
   };
 
   const iniciarRetratos = () => {
-    limpiarFeedback();
     if (personasConRetrato.length < 4) {
       setError("No hay suficientes retratos configurados para abrir este modo.");
       return;
@@ -742,7 +582,12 @@ export default function Desafio({ personas = [] }) {
     if (!personaRetrato || seleccionRetratoId || retratosTerminada) return;
     const acierto = personaId === personaRetrato.id;
     setSeleccionRetratoId(personaId);
-    registrarPregunta(acierto);
+    registrarPregunta(acierto, {
+      firma:`retrato:${personaRetrato.id}`, pregunta:'¿Quién aparece en este retrato?', formato:'retrato', tipo:'retrato', etiqueta:'Retratos',
+      correctaId:personaRetrato.id, atlasPersonId:personaRetrato.id, imagenId:personaRetrato.id,
+      explicacion:`${personaRetrato.nombre}. ${resumenCortoPersona(personaRetrato)}`,
+      opciones:[personaRetrato,...personasConRetrato.filter(p=>p.id!==personaRetrato.id).slice(0,3)].map(p=>({id:p.id,label:p.nombre})),
+    });
 
     if (!acierto) {
       setRetratosTerminada(true);
@@ -760,26 +605,14 @@ export default function Desafio({ personas = [] }) {
       ...actual,
       mejorRachaRetratos: Math.max(actual.mejorRachaRetratos, nuevaRacha),
     }));
-    limpiarFeedback();
-    feedbackTimerRef.current = window.setTimeout(() => {
-      try {
-        const siguiente = elegirPersonaRetrato(personasConRetrato, usadosRetratos, nuevaRacha);
-        if (!siguiente) throw new Error("No hay siguiente retrato.");
-        setPersonaRetrato(siguiente);
-        setConsultaRetrato("");
-        setSeleccionRetratoId(null);
-        setUsadosRetratos((actuales) => [...new Set([...actuales, siguiente.id])].slice(-Math.max(40, personasConRetrato.length)));
-        enfocarRetrato();
-      } catch (err) {
-        console.error("[Desafío V2 · Retratos] No se pudo continuar:", err);
-        setRetratosTerminada(true);
-        actualizarEstadisticas((actual) => ({
-          ...actual,
-          retratosJugados: actual.retratosJugados + 1,
-          mejorRachaRetratos: Math.max(actual.mejorRachaRetratos, nuevaRacha),
-        }));
-      }
-    }, 720);
+  };
+  const continuarRetrato = () => {
+    try {
+      const siguiente = elegirPersonaRetrato(personasConRetrato, usadosRetratos, rachaRetratos);
+      if (!siguiente) throw new Error('No hay siguiente retrato.');
+      setPersonaRetrato(siguiente); setConsultaRetrato(''); setSeleccionRetratoId(null);
+      setUsadosRetratos([...new Set([...usadosRetratos,siguiente.id])]); enfocarRetrato();
+    } catch { setRetratosTerminada(true); }
   };
 
   // ---------------------------------------------------------------------------
@@ -789,7 +622,6 @@ export default function Desafio({ personas = [] }) {
   const [shareStatus, setShareStatus] = useState("");
 
   const iniciarDiario = () => {
-    limpiarFeedback();
     const guardado = leerJson(DAILY_KEY, {})?.[fechaHoy];
     if (guardado) {
       setDaily({ terminado: true, guardado, preguntas: [], indice: 0, seleccion: null, orden: [], resultados: guardado.resultados || [] });
@@ -835,9 +667,7 @@ export default function Desafio({ personas = [] }) {
     const resultados = [...daily.resultados, acierto];
     const estado = { ...daily, seleccion: seleccionValue, orden: Array.isArray(seleccionValue) ? seleccionValue : daily.orden, aciertoActual: acierto, resultados };
     setDaily(estado);
-    registrarPregunta(acierto);
-    limpiarFeedback();
-    feedbackTimerRef.current = window.setTimeout(() => avanzarDiario(estado), 1050);
+    registrarPregunta(acierto, daily.preguntas[daily.indice]);
   };
 
   const responderDiario = (opcionId) => {
@@ -883,9 +713,9 @@ export default function Desafio({ personas = [] }) {
   };
 
   const volverAModos = () => {
-    limpiarFeedback();
-    limpiarRachaTimers();
     setModo(null);
+    const url = new URL(window.location.href);
+    if(url.searchParams.has('reto')) { url.searchParams.delete('reto'); url.searchParams.delete('banco'); window.history.replaceState(null,'',url); }
     setError("");
     setCamino(null);
     setCaminoTerminado(false);
@@ -903,13 +733,14 @@ export default function Desafio({ personas = [] }) {
   // ---------------------------------------------------------------------------
   // MENU
   // ---------------------------------------------------------------------------
+  if (lesson && ['repaso','sucesiones','compartido'].includes(modo)) return <LearningSession key={modo} mode={modo} questions={lesson.questions} sharedUrl={lesson.url} warning={reviewWarning} byId={byId} onBack={volverAModos} onAtlas={abrirAtlas} onAnswer={(question,correct)=>remember(question,correct)}/>;
   if (!modo) {
     const precision = estadisticas.precisionPreguntas
       ? Math.round((estadisticas.precisionAciertos / estadisticas.precisionPreguntas) * 100)
       : 0;
     return (
       <section className="desafio-shell desafio-hub">
-        <div className="desafio-hub-kicker"><Swords size={14} /> Desafío V2</div>
+        <div className="desafio-hub-kicker"><Swords size={14} /> Aprender con el Atlas</div>
         <h1>¿Hasta dónde puedes llegar?</h1>
         <p className="desafio-intro">Empieza fácil, aprende mientras juegas y deja que el atlas vaya subiendo el nivel. No hace falta saberlo todo para disfrutar.</p>
 
@@ -953,6 +784,12 @@ export default function Desafio({ personas = [] }) {
           </button>
         </div>
 
+        <div className="desafio-mode-grid desafio-learning-grid">
+          <button type="button" className="desafio-mode-card" onClick={()=>startLesson('sucesiones')}><span className="desafio-mode-icon"><Swords size={21}/></span><em>Historia documentada</em><strong>Resolver una sucesión</strong><span>5 preguntas · personas y motivos</span><small>Herencia, elección, regencia o conquista: descubre cómo cambió el gobierno y consulta su explicación.</small></button>
+          <button type="button" className="desafio-mode-card" onClick={()=>startLesson('repaso')}><span className="desafio-mode-icon"><RotateCcw size={21}/></span><em>Práctica sin presión</em><strong>Repasar errores</strong><span>{review.length} preguntas pendientes</span><small>Vuelve a las preguntas que te han costado. Sin vidas, puntos ni cambios en tus récords.</small></button>
+          <button type="button" className="desafio-mode-card" onClick={()=>startLesson('compartido')}><span className="desafio-mode-icon"><Share2 size={21}/></span><em>Para jugar con amigos</em><strong>Desafío compartido</strong><span>Un enlace · la misma partida</span><small>Comparte cinco preguntas de sucesiones en el mismo orden y compara los aciertos.</small></button>
+        </div>
+        {reviewWarning && <p className="desafio-fineprint" role="status">{reviewWarning}</p>}
         <div className="desafio-stats-grid desafio-stats-grid-wide" aria-label="Estadísticas del desafío">
           <TarjetaEstadistica valor={estadisticas.mejorCamino} etiqueta="mejor Camino" />
           <TarjetaEstadistica valor={estadisticas.mejorRachaDuelo} etiqueta="récord Racha" />
@@ -1062,11 +899,9 @@ export default function Desafio({ personas = [] }) {
         </div>
 
         {camino.respondida && (
-          <ExplicacionCompacta
+          <Explicacion
             correcta={camino.aciertoActual}
-            explicacion={pregunta.explicacion}
-            expandida={camino.feedbackExpandido}
-            onExpand={expandirFeedbackCamino}
+            pregunta={pregunta}
             onContinue={continuarCamino}
             puedeAtlas={Boolean(pregunta.atlasPersonId && byId[pregunta.atlasPersonId])}
             onAtlas={() => abrirAtlas(pregunta.atlasPersonId)}
@@ -1120,7 +955,7 @@ export default function Desafio({ personas = [] }) {
         <div className="desafio-question-card desafio-racha-card">
           <div className="desafio-question-topline"><span>Duelo rápido</span><small>1 fallo = fin</small></div>
           <h2>{preguntaRacha.pregunta}</h2>
-          <div className={`desafio-racha-motion${transicionRacha ? ` racha-${transicionRacha.tipo} fase-${transicionRacha.fase}` : ""}`}>
+          <div className="desafio-racha-motion">
             <PreguntaOpciones
               pregunta={preguntaVisible}
               byId={byId}
@@ -1131,6 +966,7 @@ export default function Desafio({ personas = [] }) {
             />
           </div>
         </div>
+        {seleccionRacha!==null && <Explicacion correcta={seleccionRacha===preguntaRacha.correctaId} pregunta={preguntaRacha} onContinue={continuarRacha} puedeAtlas={!!byId[preguntaRacha.atlasPersonId]} onAtlas={()=>abrirAtlas(preguntaRacha.atlasPersonId)}/>}
         <div className="desafio-racha-rule">La respuesta correcta se queda para el siguiente duelo. Si fallas, la racha termina.</div>
         <button type="button" className="desafio-back desafio-back-bottom" onClick={volverAModos}><ArrowLeft size={13} /> Salir de Racha</button>
       </section>
@@ -1163,6 +999,7 @@ export default function Desafio({ personas = [] }) {
               <small>{[personaRetrato.titulo, personaRetrato.dinastia].filter(Boolean).join(" · ")}</small>
             </div>
           </div>
+          <p className="desafio-intro">{resumenCortoPersona(personaRetrato)}</p>
           <div className="desafio-final-actions">
             <button type="button" className="desafio-primary" onClick={iniciarRetratos}><RotateCcw size={14} /> Nueva racha de retratos</button>
             <button type="button" className="desafio-secondary" onClick={() => abrirAtlas(personaRetrato.id)}>Ver en el atlas <ExternalLink size={13} /></button>
@@ -1231,11 +1068,10 @@ export default function Desafio({ personas = [] }) {
               </div>
             )}
 
-            {seleccionRetratoId === personaRetrato.id && (
-              <div className="desafio-portrait-correct"><Check size={15} /><strong>Correcto</strong><span>{personaRetrato.nombre}</span></div>
-            )}
+
           </div>
         </div>
+        {seleccionRetratoId===personaRetrato.id && <Explicacion correcta pregunta={{explicacion:`${personaRetrato.nombre}. ${resumenCortoPersona(personaRetrato)}`}} onContinue={continuarRetrato} puedeAtlas onAtlas={()=>abrirAtlas(personaRetrato.id)}/>}
         <div className="desafio-racha-rule">Cada acierto trae un nuevo retrato. La dificultad visual aumenta poco a poco y el primer fallo cierra la racha.</div>
         <button type="button" className="desafio-back desafio-back-bottom" onClick={volverAModos}><ArrowLeft size={13} /> Salir de Retratos</button>
       </section>
@@ -1287,11 +1123,7 @@ export default function Desafio({ personas = [] }) {
           )}
         </div>
         {respondida && (
-          <div className={`desafio-fast-feedback is-flash${daily.aciertoActual ? " is-correct" : " is-wrong"}`}>
-            {daily.aciertoActual ? <Check size={15} /> : <X size={15} />}
-            <strong>{daily.aciertoActual ? "Correcto" : "Incorrecto"}</strong>
-            <span>{pregunta.explicacion}</span>
-          </div>
+          <Explicacion correcta={daily.aciertoActual} pregunta={pregunta} onContinue={()=>avanzarDiario(daily)} puedeAtlas={!!byId[pregunta.atlasPersonId]} onAtlas={()=>abrirAtlas(pregunta.atlasPersonId)}/>
         )}
         <button type="button" className="desafio-back desafio-back-bottom" onClick={volverAModos}><ArrowLeft size={13} /> Salir</button>
       </section>
