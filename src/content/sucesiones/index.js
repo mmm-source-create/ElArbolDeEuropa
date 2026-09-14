@@ -1,3 +1,4 @@
+import {RELEVOS_ADRIATICO} from "./adriatico-v214.js";
 import {RELEVOS_ALPES} from './alpes-v213.js';
 // Relevos seleccionados editorialmente. No se deducen de la proximidad de dos fechas.
 const FMG = 'https://fmg.ac/Projects/MedLands/index.htm';
@@ -10,6 +11,7 @@ const relevo = (territorio, anterior, desdeAnterior, siguiente, desde, motivos, 
 });
 export const RELEVOS = [
   ...RELEVOS_ALPES,
+  ...RELEVOS_ADRIATICO,
   relevo('Brabante','ENRIQ3BR',1248,'ENRIQ4BRAB',1261,['herencia'],'Enrique IV heredó el ducado al morir su padre. La minoría del nuevo duque dejó la dirección política en manos de su madre, Adelaida de Borgoña.'),
   relevo('Brabante','ENRIQ4BRAB',1261,'JUAN1BR',1267,['abdicación','herencia'],'La renuncia de Enrique IV abrió la sucesión a su hermano Juan. No fue una transmisión directa de Enrique III a Juan I: entre ambos hubo otro titular.'),
   relevo('Brabante','JUAN1BR',1267,'JUAN2BRAB',1294,['herencia'],'Juan II heredó los ducados de su padre, muerto tras un torneo. Brabante y Limburgo compartieron titular sin perder sus identidades.'),

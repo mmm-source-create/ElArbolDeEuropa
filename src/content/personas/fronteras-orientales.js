@@ -51,17 +51,8 @@ export const FRONTERAS_ORIENTALES = Object.freeze({
   PETRURARESMOLD: {
     resumen: "Príncipe de Moldavia e hijo de Esteban el Grande. Intentó mantener una política activa entre Polonia, Hungría y el Imperio otomano durante una época en la que la autonomía moldava era cada vez más difícil de sostener."
   },
-  TVRTKO1BOS: {
-    resumen: "Primer monarca coronado como rey de Bosnia. Extendió su autoridad sobre amplias zonas del Adriático y aprovechó la herencia Nemanjić para formular una ambiciosa legitimidad dinástica serbo-bosnia."
-  },
-  JELENAGRUBABOS: {
-    resumen: "Reina de Bosnia por derecho propio entre 1395 y 1398. Su breve gobierno constituye uno de los escasos ejemplos de una mujer reinante en los Balcanes medievales."
-  },
   STEPHENTHOMASBOS: {
     resumen: "Rey de Bosnia en las décadas previas a la conquista otomana. Su reinado estuvo marcado por las tensiones religiosas internas y por la creciente presión de Hungría y Mehmed II."
-  },
-  STEPHENTOMASEVICBOS: {
-    resumen: "Último rey de la Bosnia medieval y, brevemente, déspota de Serbia. Su captura y ejecución tras la invasión otomana de 1463 sellaron la desaparición del reino bosnio independiente."
   },
   MUHAMMAD1NASR: {
     resumen: "Fundador de la dinastía nazarí y del emirato de Granada. En el siglo XIII construyó un estado capaz de sobrevivir entre Castilla y el Mediterráneo y estableció la base política de la Granada nazarí."

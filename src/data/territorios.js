@@ -1,4 +1,5 @@
 export const TERRITORIOS = Object.freeze({
+  "Herzegovina": {"clase":"ducado","naturaleza":"entidad","componentes":[],"nota":"Dominios de los Kosača asociados al título de duque de San Sava desde 1448. Distintos de la corona bosnia; no se les asigna una geometría moderna."},
   "Saluzzo": {"clase":"marquesado","naturaleza":"entidad","componentes":[],"nota":"Marquesado alerámico del Piamonte occidental. La dependencia feudal respecto de otros poderes no elimina su identidad territorial."},
   "Albret": {"clase":"señorío","naturaleza":"entidad","componentes":[],"etapas":[{"desde":1550,"clase":"ducado"}],"nota":"Señorío de la casa de Albret, elevado a ducado en el siglo XVI; distinto del reino de Navarra."},
   "Dreux": {"clase":"condado","naturaleza":"entidad","componentes":[]},

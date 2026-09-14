@@ -29,7 +29,7 @@ export function auditarTerritorios(personas, catalogo=TERRITORIOS) {
    if(seen.has(sig))add('ERROR','DUPLICATE_GOVERNMENT',key,sig);seen.add(sig);
    const territorial=(t?.etapas||[]).map(e=>e.clase).concat(t?.clase||[]);
    const normalize=c=>({reino:'reinado',estado_pontificio:'pontificado',territorio_compuesto:'gobierno',republica:'gobierno'})[c]||c;
-   const permitidas={Transilvania:['gobierno'],Valaquia:['voivodato'],Moldavia:['voivodato'],Bulgaria:['zarato'],Serbia:['despotado'],Rusia:['principado'],Sajonia:['ducado'],Baviera:['electorado'],Brandeburgo:['margraviato'],Palatinado:['condado','principado'],Florencia:['ducado'],Nassau:['principado'],Urbino:['condado'],Anjou:['condado'],Hannover:['electorado'], 'Países Bajos':['reinado']};
+   const permitidas={Croacia:['banato'],Transilvania:['gobierno'],Valaquia:['voivodato'],Moldavia:['voivodato'],Bulgaria:['zarato'],Serbia:['despotado'],Rusia:['principado'],Sajonia:['ducado'],Baviera:['electorado'],Brandeburgo:['margraviato'],Palatinado:['condado','principado'],Florencia:['ducado'],Nassau:['principado'],Urbino:['condado'],Anjou:['condado'],Hannover:['electorado'], 'Países Bajos':['reinado']};
    if(t&& !(g.clase==='gobierno'&&g.condicion==='regencia') && !['regencia','estatuderato'].includes(g.clase)&& !territorial.map(normalize).concat(permitidas[g.territorio]||[]).includes(g.clase))add('ERROR','TERRITORY_CLASS_MISMATCH',key,`${g.territorio}: ${g.clase} no concuerda con su rango documentado`);
   }
  }

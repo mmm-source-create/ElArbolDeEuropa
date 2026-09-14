@@ -428,7 +428,7 @@ export const TERRITORIOS_SUB = {
     "Edesa", "Epiro", "Ibelin", "Jerusalén", "Morea", "Nablus", "Torón",
     "Transjordania", "Trípoli", "Trebisonda",
   ],
-  Balcanes: ["Bulgaria", "Serbia", "Bosnia", "Valaquia", "Moldavia", "Croacia", "Sirmia", "Epiro"],
+  Balcanes: ["Bulgaria", "Serbia", "Bosnia", "Herzegovina", "Valaquia", "Moldavia", "Croacia", "Sirmia", "Epiro"],
   Escandinavia: ["Dinamarca", "Noruega", "Suecia", "Holstein", "Schleswig"],
   Rusia: ["Beloózero", "Moscú", "Pólotsk", "Rus de Kiev", "Vladímir"],
 };

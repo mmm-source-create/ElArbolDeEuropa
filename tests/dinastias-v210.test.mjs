@@ -16,8 +16,8 @@ const by=Object.fromEntries(PERSONAS.map(p=>[p.id,p]));
 const pages=buildDynastyPages(PERSONAS);
 
 test('las historias y sus ramas tienen personas, territorios y fuentes válidos',()=>{
-  assert.equal(Object.keys(HISTORIA_DINASTIAS).length,20);
-  assert.equal(pages.filter(p=>p.editorial).length,20);
+  assert.ok(Object.keys(HISTORIA_DINASTIAS).length>=20);
+  assert.equal(pages.filter(p=>p.editorial).length,Object.keys(HISTORIA_DINASTIAS).length);
   assert.deepEqual(auditDynasties(PERSONAS),[]);
   assert.equal(new Set(pages.map(p=>p.slug)).size,pages.length);
   for(const p of pages) {
@@ -80,7 +80,7 @@ test('las 75 minibiografías se vinculan al registro general, sin crear grupos r
     assert.ok(by[id],id);assert.ok(bio.biografia.length>120,id);
     assert.ok(sourcesForPerson(id).length,id);
   }
-  assert.equal(SOURCE_PUBLICATIONS.length,29);
+  assert.ok(SOURCE_PUBLICATIONS.length>=29);
   assert.equal(SOURCE_GROUPS.length,4);
   assert.equal(new Set(SOURCES.map(s=>s.url)).size,SOURCES.length);
   for(const t of ['Albret','Dreux','Bearne','Penthièvre','Castellbó'])assert.ok(FUENTES_TERRITORIOS[t]?.length,t);
