@@ -1,6 +1,8 @@
+import {ALPES_SOURCES} from './sources-alpes-v213.js';
 // Bibliography shared by the public site, Atlas and generated entity pages.
 // A territorial reference supplies context; only explicit person IDs assign a biography.
 export const SOURCES = [
+  ...ALPES_SOURCES,
   {
     "titulo": "Foundation for Medieval Genealogy · MedLands",
     "url": "https://fmg.ac/Projects/MedLands/index.htm",
@@ -197,7 +199,7 @@ export const SOURCES = [
     "titulo": "Treccani",
     "url": "https://www.treccani.it/",
     "grupo": "Repertorios principales",
-    "territorios": [],
+    "territorios": ["Saboya","Piamonte","Monferrato","Saluzzo"],
     "personas": [],
     "nota": "Apoyo biográfico y contextual para casas italianas, especialmente Médici, Saboya y figuras políticas o culturales del Renacimiento.",
     "general": true
