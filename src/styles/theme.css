@@ -214,3 +214,6 @@
 .documentary-notes dt { margin-top: 12px; color: var(--eade-ink); font-weight: 600; }
 .documentary-notes dd { margin: 4px 0 0; }
 .dynasty-editorial-filter { display: flex; align-items: center; gap: 8px; margin: 12px 0 24px; color: var(--eade-muted); font-size: 12px; }
+
+/* Preferencia aplicada antes del primer dibujo de una ficha estática. */
+html[data-eade-screen-notice="dismissed"] .site-screen-notice { display:none; }
