@@ -3,8 +3,8 @@
 Atlas histórico y genealógico para explorar personas, dinastías, territorios y sus conexiones familiares. Incluye fichas públicas, historias, cronología y desafíos.
 
 - Web: [treeofeurope.eu](https://www.treeofeurope.eu/)
-- Versión: **2.12.2 — Fichas estáticas e hidratación**
-- [Cambios y validación de esta versión](docs/V2.12.2.md)
+- Versión: **2.13 — Conexiones familiares y casas alpinas**
+- [Cambios y validación de esta versión](docs/V2.13.md)
 - [Fuentes y metodología](https://www.treeofeurope.eu/es/fuentes)
 
 ## Empezar
@@ -38,6 +38,8 @@ Las variables públicas opcionales están documentadas en `env.example`. La web 
 | Bibliografía compartida | `src/content/sources.js` |
 | Fichas públicas y navegación inicial | `src/public/`, `src/routing.js` |
 | Atlas y sucesión territorial | `src/explorer/` |
+| Conexión entre 2–5 personas y exportación SVG/PNG | `src/connections/` |
+| Selección familiar del origen de una rama | `src/data/dynastyBranchSelection.js` |
 | Motor del desafío | `src/desafio/` |
 | Generación estática de fichas | `scripts/prerender-ssg.mjs`, `src/public/ssg-entry.jsx` |
 | Auditoría del HTML generado | `scripts/audit-ssg.mjs` |
@@ -67,9 +69,17 @@ Vercel conserva el despliegue existente con `npm run build`, directorio `dist` y
 
 Las actualizaciones se entregan en un ZIP con **solo archivos añadidos o modificados**. Extrae su contenido en la raíz de la versión anterior, respetando las carpetas y los archivos ocultos como `.github/`. No subas `node_modules/` ni `dist/` como código fuente.
 
+## Conexiones y exportación
+
+En el menú **Comparar**, elige **Conectar 3–5 personas**. Admite de dos a cinco nombres, con búsqueda por nombres alternativos. Puedes limitar la conexión a filiaciones o incluir matrimonios, quitar personas y copiar un enlace que conserva la selección y el criterio. El cálculo usa toda la base, aunque haya filtros de exploración activos; estos vuelven a aplicarse al salir. Si faltan vínculos registrados, los grupos se muestran separados.
+
+Desde las ramas de una ficha dinástica, **Ver el origen de esta rama en el árbol** abre al fundador con sus padres y descendientes relevantes disponibles. El botón **Exportar** del árbol descarga la comparación, el foco, la familia de una persona o la vista actual en SVG o PNG. Incluye nombres completos, fechas, leyenda y referencia al proyecto. El PNG limita su tamaño para conservar legibilidad; las selecciones grandes pueden descargarse como SVG. No incluye retratos ni exportación PDF.
+
+El árbol mínimo reduce el número de vínculos registrados necesarios para reunir a las personas. No establece parentescos que falten en la base, ni demuestra por sí mismo derechos sucesorios. Los enlaces con incertidumbre siguen requiriendo consultar sus fichas y fuentes.
+
 ## Indexación
 
-Las 2973 fichas individuales de la base actual se publican con contenido y metadatos en el HTML inicial. React las hidrata con el mismo JSON incrustado, sin repetir su descarga. El Atlas (`?atlas=1`), las historias interactivas, los desafíos, los catálogos y las portadas conservan su arranque dinámico.
+Las 2999 fichas individuales de la base actual se publican con contenido y metadatos en el HTML inicial. React las hidrata con el mismo JSON incrustado, sin repetir su descarga. El Atlas (`?atlas=1`), las historias interactivas, los desafíos, los catálogos y las portadas conservan su arranque dinámico.
 
 `npm run audit:ssg` comprueba `dist/` después del build. `npm run ssg:sample` genera 20 ejemplos en `.ssg-sample/`, sin modificar las fichas publicables. Consulta [el procedimiento de validación y las rutas de alojamiento](docs/V2.12.2.md).
 
