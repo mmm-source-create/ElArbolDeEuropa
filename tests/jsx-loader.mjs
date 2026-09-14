@@ -8,7 +8,7 @@ registerHooks({
     if(url.endsWith('.css'))return {format:'module',source:'export default {};',shortCircuit:true};
     if(url.endsWith('.jsx')) {
       const path=fileURLToPath(url);
-      const result=transformSync(path,readFileSync(path,'utf8'),{lang:'jsx',jsx:{runtime:'automatic'}});
+      const result=transformSync(path,readFileSync(path,'utf8').replaceAll('import.meta.env.', '({}).'),{lang:'jsx',jsx:{runtime:'automatic'}});
       if(result.errors?.length)throw new Error(result.errors.map(e=>e.message).join('\n'));
       return {format:'module',source:result.code,shortCircuit:true};
     }
