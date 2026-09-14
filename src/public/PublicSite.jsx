@@ -1,3 +1,5 @@
+import {SITE_NAME, resolveSiteUrl} from "../siteConfig.js";
+import {setMetaContent, ensureCanonical, setHreflangAlternates} from "./headMetadata.js";
 import {publicMeta,entityMeta} from "./publicMeta.js";
 import CrownTimeline from "../components/CrownTimeline.jsx";
 import DocumentationNotes from "../components/DocumentationNotes.jsx";
@@ -31,7 +33,7 @@ import { loadJsonAsset } from "../utils/loadAsset.js";
 import "./public.css";
 import { responsiveImage } from "../utils/responsiveImage.js";
 
-const PUBLIC_SITE_URL = String(import.meta.env.VITE_SITE_URL || "https://www.treeofeurope.eu").replace(/\/+$/, "");
+const PUBLIC_SITE_URL = resolveSiteUrl(import.meta.env.VITE_SITE_URL);
 const BUILD_VERSION = String(SITE_META.buildVersion || SITE_META.personCount || "v2");
 
 
@@ -44,46 +46,6 @@ function rutaEntidad(tipo, slug, { atlas = false } = {}) {
 
 function textoFechas(persona) { return persona ? documentaryLife(persona) : "Fechas no documentadas"; }
 
-
-function ensureMetaTag(selector, attributes) {
-  if (typeof document === "undefined") return null;
-  let element = document.head.querySelector(selector);
-  if (!element) {
-    element = document.createElement("meta");
-    Object.entries(attributes).forEach(([key, value]) => element.setAttribute(key, value));
-    document.head.appendChild(element);
-  }
-  return element;
-}
-
-function setMetaContent(selector, attributes, content) {
-  const element = ensureMetaTag(selector, attributes);
-  if (element) element.setAttribute("content", content);
-}
-
-function ensureCanonical(href) {
-  if (typeof document === "undefined") return;
-  let link = document.head.querySelector('link[rel="canonical"]');
-  if (!link) {
-    link = document.createElement("link");
-    link.setAttribute("rel", "canonical");
-    document.head.appendChild(link);
-  }
-  link.setAttribute("href", href);
-}
-
-function setHreflangAlternates(items) {
-  if (typeof document === "undefined") return;
-  document.head.querySelectorAll('link[data-eade-hreflang="1"]').forEach((node) => node.remove());
-  items.filter((item) => item?.hreflang && item?.href).forEach((item) => {
-    const link = document.createElement("link");
-    link.setAttribute("rel", "alternate");
-    link.setAttribute("hreflang", item.hreflang);
-    link.setAttribute("href", item.href);
-    link.setAttribute("data-eade-hreflang", "1");
-    document.head.appendChild(link);
-  });
-}
 
 export function usePublicMeta({ title, description, path }) {
   useEffect(() => {
@@ -286,7 +248,7 @@ const INFO_PAGES = {
 export function InfoPage({ tipo }) {
   const page = INFO_PAGES[tipo] || INFO_PAGES.proyecto;
   const Icon = page.icon;
-  usePublicMeta({ title: `${page.title} — El Árbol de Europa`, description: page.description, path: `/es/${tipo}` });
+  usePublicMeta({ title: `${page.title} — ${SITE_NAME}`, description: page.description, path: `/es/${tipo}` });
   return (
     <PublicLayout>
       <main className="public-main public-info-page">
@@ -337,7 +299,7 @@ export function CatalogPage({ tipo }) {
   }, [items, query, tipo, soloHistoria]);
   const visibles = tipo === "personas" ? filtrados.slice(0, query.trim() ? 200 : 120) : filtrados;
   usePublicMeta({
-    title: `${config.title} — El Árbol de Europa`,
+    title: `${config.title} — ${SITE_NAME}`,
     description: config.description,
     path: `/es/${tipo}`,
   });

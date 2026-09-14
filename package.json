@@ -1,7 +1,7 @@
 {
-  "name": "arbol-v2-cgpt",
+  "name": "el-arbol-de-europa",
   "private": true,
-  "version": "2.15.0",
+  "version": "2.15.2",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -15,10 +15,12 @@
     "audit:sucesiones": "node audit-sucesiones.mjs",
     "audit:coronas": "node audit-coronas.mjs",
     "ssg:sample": "node scripts/prerender-ssg.mjs --sample",
-    "audit:ssg": "node scripts/audit-ssg.mjs"
+    "audit:ssg": "node scripts/audit-ssg.mjs",
+    "audit:security": "node scripts/audit-security.mjs && npm audit --audit-level=high",
+    "predev": "npm run prebuild"
   },
   "dependencies": {
-    "@vercel/speed-insights": "^2.0.0",
+    "@vercel/speed-insights": "2.0.0",
     "@vitejs/plugin-react": "6.0.5",
     "lucide-react": "1.30.0",
     "react": "19.2.8",

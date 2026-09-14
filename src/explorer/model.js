@@ -1,3 +1,4 @@
+export {setMetaContent, ensureCanonical, setHreflangAlternates} from "../public/headMetadata.js";
 import { PERSONAS } from "../personas.jsx";
 import { listaReinados } from "../Territorios.jsx";
 import { DEFAULT_LOCALE, SITE } from "../i18n.jsx";
@@ -198,46 +199,6 @@ export function personaIdDesdeRuta(pathname) {
 
 export function valorPorSlug(slug, valores) {
   return (valores || []).find((valor) => slugPublico(valor) === canonicalDynastySlug(slug)) || null;
-}
-
-export function ensureMetaTag(selector, attributes) {
-  if (typeof document === "undefined") return null;
-  let element = document.head.querySelector(selector);
-  if (!element) {
-    element = document.createElement("meta");
-    Object.entries(attributes).forEach(([key, value]) => element.setAttribute(key, value));
-    document.head.appendChild(element);
-  }
-  return element;
-}
-
-export function setMetaContent(selector, attributes, content) {
-  const element = ensureMetaTag(selector, attributes);
-  if (element) element.setAttribute("content", content);
-}
-
-export function ensureCanonical(href) {
-  if (typeof document === "undefined") return;
-  let link = document.head.querySelector('link[rel="canonical"]');
-  if (!link) {
-    link = document.createElement("link");
-    link.setAttribute("rel", "canonical");
-    document.head.appendChild(link);
-  }
-  link.setAttribute("href", href);
-}
-
-export function setHreflangAlternates(items) {
-  if (typeof document === "undefined") return;
-  document.head.querySelectorAll('link[data-eade-hreflang="1"]').forEach((node) => node.remove());
-  items.filter((item) => item?.hreflang && item?.href).forEach((item) => {
-    const link = document.createElement("link");
-    link.setAttribute("rel", "alternate");
-    link.setAttribute("hreflang", item.hreflang);
-    link.setAttribute("href", item.href);
-    link.setAttribute("data-eade-hreflang", "1");
-    document.head.appendChild(link);
-  });
 }
 
 export const CATEGORIAS_TITULO = [

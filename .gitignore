@@ -1,4 +1,3 @@
-node_modules
 node_modules/
 dist/
 .DS_Store
@@ -22,3 +21,7 @@ public/tree-base.json
 # Catálogos derivados y bundles temporales de las pruebas.
 public/catalogos/
 .connections-test-*/
+
+# Sitemaps derivados del mismo catálogo en prebuild.
+public/sitemap.xml
+public/sitemap-full.xml

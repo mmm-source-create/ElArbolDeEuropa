@@ -1,3 +1,4 @@
+import {SCREEN_NOTICE_SCRIPT} from '../src/public/screenNotice.js';
 import {STATIC_DATA_ID,serializePage,staticRoute} from '../src/public/staticData.js';
 export const escapeHtml = value => String(value).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;').replace(/'/g,'&#39;');
 const unescapeXml = value => value.replace(/&(?:amp|lt|gt|quot|apos);/g,x=>({'&amp;':'&','&lt;':'<','&gt;':'>','&quot;':'"','&apos;':"'"}[x]));
@@ -38,7 +39,7 @@ export function makeStaticDocument(shell,{html,meta},page,assets) {
  const metadata=[`<title>${escapeHtml(meta.title)}</title>`,...meta.meta.map(([attr,key,value])=>`<meta ${attr}="${key}" content="${escapeHtml(value)}">`),`<link rel="canonical" href="${escapeHtml(meta.canonical)}">`,...meta.alternates.map(a=>`<link rel="alternate" data-eade-hreflang="1" hreflang="${a.hreflang}" href="${escapeHtml(a.href)}">`)];
  const links=[...assets.css.map(file=>`<link rel="stylesheet" href="/${file}">`),...assets.js.map(file=>`<link rel="modulepreload" href="/${file}">`)].filter(tag=>!head.includes(tag.match(/href="([^"]+)"/)[1]));
  // La preferencia no cambia el HTML que React hidrata. Se aplica antes del primer dibujo.
- const notice='<script>try{if(sessionStorage.getItem("eade:screen-notice-dismissed")==="1")document.documentElement.dataset.eadeScreenNotice="dismissed"}catch{}</script>';
+ const notice=`<script>${SCREEN_NOTICE_SCRIPT}</script>`;
  head+='\n'+metadata.join('\n')+'\n'+links.join('\n')+'\n'+notice+'\n';
  const data=`<script id="${STATIC_DATA_ID}" type="application/json">${serializePage(page)}</script>`;
  return shell.replace(/<head>[\s\S]*?<\/head>/i,()=>`<head>${head}</head>`).replace('<div id="root"></div>',()=>`<div id="root">${html}</div>\n${data}`);

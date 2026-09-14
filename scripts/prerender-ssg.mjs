@@ -3,12 +3,12 @@ import path from 'node:path';
 import {pathToFileURL} from 'node:url';
 import {build,loadEnv} from 'vite';
 import {STATIC_SCHEMA,STATIC_FOLDERS,validatePage} from '../src/public/staticData.js';
-import {DEFAULT_SITE_URL} from '../src/public/publicMeta.js';
+import {resolveSiteUrl} from '../src/siteConfig.js';
 import {canonicalDynastySlug} from '../src/data/dynastyAliases.js';
 import {routesFromSitemap,assetGraph,makeStaticDocument} from './ssg-utils.mjs';
 
 const root=process.cwd(),dist=path.resolve(root,'dist');
-const siteUrl=String(loadEnv('production',root,'VITE_').VITE_SITE_URL||DEFAULT_SITE_URL).replace(/\/+$/,'');
+const siteUrl=resolveSiteUrl(loadEnv('production',root,'VITE_').VITE_SITE_URL);
 const sample=process.argv.includes('--sample');
 const shell=await fs.readFile(path.join(dist,'index.html'),'utf8');
 const manifest=JSON.parse(await fs.readFile(path.join(dist,'.vite/manifest.json'),'utf8'));

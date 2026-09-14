@@ -74,27 +74,66 @@ export function readChallenge(search, bank) {
   return {seed, preguntas:createChallenge(bank, seed)};
 }
 
-function validSource(url) { try { return typeof url==='string' && new URL(url).protocol==='https:'; } catch { return false; } }
+function validSource(url) {
+  try {
+    const parsed = new URL(url);
+    return typeof url === 'string' && url.length <= 2048 && parsed.protocol === 'https:' && !parsed.username && !parsed.password;
+  } catch { return false; }
+}
+const isRecord = value => value !== null && typeof value === 'object' && !Array.isArray(value);
+const boundedText = (value, max, min = 1) => typeof value === 'string' && value.length >= min && value.length <= max;
+
+export function sanitizeReviewQuestion(q, byId) {
+  if (!isRecord(q) || !boundedText(q.firma, 4000) || !boundedText(q.pregunta, 2000) || !boundedText(q.explicacion, 10000, 0)) return null;
+  if (!['opciones', 'pistas', 'orden', 'retrato'].includes(q.formato) || !Array.isArray(q.opciones) || q.opciones.length < 2 || q.opciones.length > 4) return null;
+  if (q.opciones.some(o => !isRecord(o) || !boundedText(o.id, 500) || !boundedText(o.label, 500)) || new Set(q.opciones.map(o => o.id)).size !== q.opciones.length) return null;
+  const clean = {firma: q.firma, pregunta: q.pregunta, explicacion: q.explicacion, formato: q.formato,
+    opciones: q.opciones.map(({id, label}) => ({id, label}))};
+  for (const field of ['id', 'etiqueta', 'tipo', 'territorio', 'relevoId', 'atlasPersonId', 'imagenId', 'atlasUrl']) {
+    if (q[field] == null) continue;
+    if (!boundedText(q[field], 500)) return null;
+    clean[field] = q[field];
+  }
+  for (const field of ['atlasPersonId', 'imagenId']) {
+    if (clean[field] && !Object.hasOwn(byId, clean[field])) return null;
+  }
+  if (q.dificultad != null) {
+    if (!Number.isInteger(q.dificultad) || q.dificultad < 0 || q.dificultad > 10) return null;
+    clean.dificultad = q.dificultad;
+  }
+  if (q.formato === 'orden') {
+    if (!Array.isArray(q.ordenCorrecto) || q.ordenCorrecto.length !== q.opciones.length || new Set(q.ordenCorrecto).size !== q.opciones.length || q.ordenCorrecto.some(id => !q.opciones.some(o => o.id === id))) return null;
+    clean.ordenCorrecto = [...q.ordenCorrecto];
+  } else {
+    if (!q.opciones.some(o => o.id === q.correctaId)) return null;
+    clean.correctaId = q.correctaId;
+  }
+  if (q.formato === 'pistas') {
+    if (!Array.isArray(q.pistas) || q.pistas.length < 1 || q.pistas.length > 10 || q.pistas.some(p => !boundedText(p, 2000))) return null;
+    clean.pistas = [...q.pistas];
+  }
+  if (q.fuentes != null) {
+    if (!Array.isArray(q.fuentes) || q.fuentes.length > 20 || q.fuentes.some(url => !validSource(url))) return null;
+    clean.fuentes = [...q.fuentes];
+  }
+  if (clean.atlasUrl || clean.territorio) {
+    if (!clean.territorio || clean.atlasUrl !== `/es/territorio/${slugPublico(clean.territorio)}#sucesion`) return null;
+  }
+  return clean;
+}
 export function validReviewQuestion(q, byId) {
-  if (!q || typeof q.firma !== 'string' || q.firma.length > 4000 || typeof q.pregunta !== 'string' || typeof q.explicacion !== 'string' || q.explicacion.length > 10000) return false;
-  if (!['opciones','pistas','orden','retrato'].includes(q.formato) || !Array.isArray(q.opciones) || q.opciones.length < 2 || q.opciones.length > 4) return false;
-  if (q.opciones.some(o=>!o || typeof o.id!=='string' || typeof o.label!=='string') || new Set(q.opciones.map(o=>o.id)).size !== q.opciones.length) return false;
-  if (q.formato==='orden') {
-    if (!Array.isArray(q.ordenCorrecto) || q.ordenCorrecto.length !== q.opciones.length || new Set(q.ordenCorrecto).size !== q.opciones.length || q.ordenCorrecto.some(id=>!q.opciones.some(o=>o.id===id))) return false;
-  } else if (!q.opciones.some(o=>o.id===q.correctaId)) return false;
-  if (q.formato==='pistas' && (!Array.isArray(q.pistas) || q.pistas.some(p=>typeof p!=='string'))) return false;
-  if (q.atlasPersonId && !byId[q.atlasPersonId]) return false;
-  if (q.imagenId && !byId[q.imagenId]) return false;
-  if (q.fuentes && (!Array.isArray(q.fuentes) || q.fuentes.some(url=>!validSource(url)))) return false;
-  if (q.territorio && q.atlasUrl !== `/es/territorio/${slugPublico(q.territorio)}#sucesion`) return false;
-  return true;
+  return sanitizeReviewQuestion(q, byId) !== null;
 }
 export function readReview(storage, byId, bank) {
   try {
-    const data = JSON.parse(storage?.getItem(REVIEW_KEY) || '[]');
+    const raw = storage?.getItem(REVIEW_KEY) || '[]';
+    if (typeof raw !== 'string' || raw.length > 4 * 1024 * 1024) return [];
+    const data = JSON.parse(raw);
     if (!Array.isArray(data)) return [];
-    const seen = new Set(), current = new Map(bank.map(q=>[q.firma,q]));
-    return data.filter(q=>validReviewQuestion(q,byId)).map(q=>q.relevoId?current.get(q.firma):q).filter(q=>q && !seen.has(q.firma) && seen.add(q.firma)).slice(-MAX_REVIEW);
+    const seen = new Set(), current = new Map(bank.map(q => [q.firma, q]));
+    return data.slice(-MAX_REVIEW * 4).map(q => sanitizeReviewQuestion(q, byId))
+      .filter(Boolean).map(q => q.relevoId ? current.get(q.firma) : q)
+      .filter(q => q && !seen.has(q.firma) && seen.add(q.firma)).slice(-MAX_REVIEW);
   } catch { return []; }
 }
 export function reviewQuestions(queue, random = Math.random) {

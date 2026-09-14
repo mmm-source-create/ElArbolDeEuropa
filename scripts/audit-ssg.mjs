@@ -1,3 +1,4 @@
+import {auditScriptPolicy} from './security-policy.mjs';
 import fs from 'node:fs/promises';
 import path from 'node:path';
 import {pathToFileURL} from 'node:url';
@@ -9,7 +10,7 @@ import {routesFromSitemap,assetGraph,escapeHtml} from './ssg-utils.mjs';
 
 // Comprueba el artefacto escrito, sin confiar en el informe del generador.
 export function auditDocument(html,page,assets,siteUrl=DEFAULT_SITE_URL) {
- const errors=[];
+ const errors=auditScriptPolicy(html,siteUrl);
  const head=html.match(/<head>([\s\S]*?)<\/head>/i)?.[1]||'';
  const meta=publicMeta(entityMeta(page.kind,page.data,page.slug),siteUrl);
  const exactly=(pattern,n=1)=>[...head.matchAll(pattern)].length===n;
@@ -46,7 +47,7 @@ export async function auditBuild(root=process.cwd()) {
  for(const asset of [...assets.css,...assets.js])await fs.access(path.join(dist,asset));
  const shell=await fs.readFile(path.join(dist,'index.html'),'utf8');
  if(!shell.includes('<div id="root"></div>')||shell.includes(STATIC_DATA_ID))throw new Error('El shell del Atlas ha sido reemplazado');
- const counts={persona:0,dinastia:0,territorio:0},errors=[];
+ const counts={persona:0,dinastia:0,territorio:0},errors=auditScriptPolicy(shell,siteUrl).map(e=>`Shell: ${e}`);
  for(const route of routes) {
   try {
    const data=JSON.parse(await fs.readFile(path.join(dist,STATIC_FOLDERS[route.kind],`${route.slug}.json`),'utf8'));

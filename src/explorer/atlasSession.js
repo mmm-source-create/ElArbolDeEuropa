@@ -1,3 +1,4 @@
+import {DEFAULT_SITE_URL} from '../siteConfig.js';
 export const ATLAS_SESSION_KEY = 'eade.atlasSession.v29';
 const arrayFields = ['territorios', 'dinastias', 'titulos', 'siglos', 'relaciones', 'collapsedIds', 'dinastiasExpandidas', 'territoriosExpandidos'];
 const stringFields = ['query', 'selectedId', 'origen', 'destino', 'focoId', 'eventoSeleccionadoId', 'historiaActivaId'];
@@ -47,7 +48,7 @@ export function sanitizeSession(value, nested = false) {
 }
 
 export function shouldResumeAtlas(href) {
-  const url = new URL(href, 'https://treeofeurope.eu');
+  const url = new URL(href, DEFAULT_SITE_URL);
   return /^\/es\/?$/.test(url.pathname) && url.searchParams.get('continuar') === '1'
     && !['conectar','vinculos','persona','territorio','territorios','dinastia','dinastias','titulo','titulos','siglo','siglos','relaciones','vista','q','anio','historia'].some(k => url.searchParams.has(k));
 }

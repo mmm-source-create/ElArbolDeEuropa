@@ -2,6 +2,9 @@ import React from "react";
 import {createRoot,hydrateRoot} from "react-dom/client";
 import {readInitialPage} from "./public/staticData.js";
 import "./index.css";
+import {startSpeedInsights} from "./monitoring.js";
+
+if (import.meta.env.PROD) startSpeedInsights();
 
 const root=document.getElementById("root");
 const page=readInitialPage(document,window.location);
