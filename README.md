@@ -3,8 +3,8 @@
 Atlas histórico y genealógico para explorar personas, dinastías, territorios y sus conexiones familiares. Incluye fichas públicas, historias, cronología y desafíos.
 
 - Web: [treeofeurope.eu](https://www.treeofeurope.eu/)
-- Versión: **2.12 — Coronas y uniones**
-- [Cambios y validación de esta versión](docs/V2.12.md)
+- Versión: **2.12.2 — Fichas estáticas e hidratación**
+- [Cambios y validación de esta versión](docs/V2.12.2.md)
 - [Fuentes y metodología](https://www.treeofeurope.eu/es/fuentes)
 
 ## Empezar
@@ -17,7 +17,7 @@ npm test
 npm run build
 ```
 
-`npm run build` ejecuta automáticamente `prebuild`: audita los datos y regenera índices, metadatos, fichas y sitemaps antes de compilar. El resultado publicable queda en `dist/`. No edites los archivos generados para cambiar contenido.
+`npm run build` ejecuta automáticamente `prebuild`: audita los datos y regenera índices, metadatos, fichas y sitemaps antes de compilar. Después de Vite, genera el HTML de las fichas individuales de personas, dinastías y territorios y audita sus metadatos, datos iniciales y estilos. El resultado publicable queda en `dist/`. No edites los archivos generados para cambiar contenido.
 
 Si vas a trabajar en la interfaz, después de generar los datos puedes iniciar Vite con `npm run dev`. Para ver la compilación puedes usar `npm run preview`. Las revisiones visuales mediante un servidor local se hacen cuando se solicitan; no son un paso automático de cada actualización.
 
@@ -39,6 +39,8 @@ Las variables públicas opcionales están documentadas en `env.example`. La web 
 | Fichas públicas y navegación inicial | `src/public/`, `src/routing.js` |
 | Atlas y sucesión territorial | `src/explorer/` |
 | Motor del desafío | `src/desafio/` |
+| Generación estática de fichas | `scripts/prerender-ssg.mjs`, `src/public/ssg-entry.jsx` |
+| Auditoría del HTML generado | `scripts/audit-ssg.mjs` |
 | Pruebas automáticas | `tests/` |
 
 `personas.jsx` y `historiaData.jsx` son módulos de datos sin imports: los generadores los leen directamente con Node. Mantén sus identificadores estables. `persona.titulo` es un resumen; cada entrada de `gobiernos` debe indicar `territorio`, `titulo`, `clase`, `condicion`, `desde` y `hasta`. `reinados` conserva compatibilidad de lectura y no es otra base independiente.
@@ -57,15 +59,19 @@ npm run build
 
 El último comando vuelve a ejecutar `prebuild`; durante el trabajo normal basta `npm test` seguido de `npm run build`. También puedes lanzar por separado `npm run audit:territorios`, `npm run audit:dinastias`, `npm run audit:sucesiones` y `npm run audit:coronas`.
 
-Las pruebas usan `node:test`, React para renderizar componentes en memoria y el transformador incluido en Vite para leer JSX. No arrancan un servidor. Cubren rutas, persistencia, geometría, filtros, etapas de títulos, precisión del año global, render de sucesiones y generación de preguntas, además de los contratos de datos. No sustituyen una revisión visual cuando se modifica CSS.
+Las pruebas usan `node:test`, React para renderizar componentes en memoria y el transformador incluido en Vite para leer JSX. `jsdom` permite comprobar también la hidratación y los controles de las fichas. Es una dependencia de desarrollo, no se incorpora al JavaScript publicado. Las pruebas no arrancan un servidor. Cubren rutas, persistencia, geometría, filtros, etapas de títulos, precisión del año global, render de sucesiones y generación de preguntas, además de los contratos de datos. No sustituyen una revisión visual cuando se modifica CSS.
 
-La configuración de GitHub Actions en `.github/workflows/ci.yml` ejecuta instalación reproducible, pruebas y build en pull requests y cambios de `main`. Usa permisos de lectura y acciones fijadas por SHA. **Se activará al incorporar el archivo al repositorio.** Para impedir una fusión con errores, configura una regla de protección de `main` que exija el check **Tests y build**; añadir el workflow por sí solo no impide saltarse ese control.
+La configuración de GitHub Actions en `.github/workflows/ci.yml` ejecuta instalación reproducible, pruebas, build y la hidratación de una muestra de 20 fichas reales en pull requests y cambios de `main`. Usa permisos de lectura y acciones fijadas por SHA. **Se activará al incorporar el archivo al repositorio.** Para impedir una fusión con errores, configura una regla de protección de `main` que exija el check **Tests y build**; añadir el workflow por sí solo no impide saltarse ese control.
 
 Vercel conserva el despliegue existente con `npm run build`, directorio `dist` y las rutas de `vercel.json`. Configura Node 24 también allí. Esta actualización no cambia ajustes remotos ni publica por sí sola.
 
 Las actualizaciones se entregan en un ZIP con **solo archivos añadidos o modificados**. Extrae su contenido en la raíz de la versión anterior, respetando las carpetas y los archivos ocultos como `.github/`. No subas `node_modules/` ni `dist/` como código fuente.
 
 ## Indexación
+
+Las 2973 fichas individuales de la base actual se publican con contenido y metadatos en el HTML inicial. React las hidrata con el mismo JSON incrustado, sin repetir su descarga. El Atlas (`?atlas=1`), las historias interactivas, los desafíos, los catálogos y las portadas conservan su arranque dinámico.
+
+`npm run audit:ssg` comprueba `dist/` después del build. `npm run ssg:sample` genera 20 ejemplos en `.ssg-sample/`, sin modificar las fichas publicables. Consulta [el procedimiento de validación y las rutas de alojamiento](docs/V2.12.2.md).
 
 El proyecto genera sitemaps y fichas enlazables. El acceso de un robot no garantiza la indexación ni la posición de una búsqueda. Para un diagnóstico real, usa Google Search Console con la propiedad del dominio:
 

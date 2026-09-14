@@ -2,7 +2,42 @@
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "rewrites": [
     {
-      "source": "/(.*)",
+      "source": "/es/:kind(persona|dinastia|territorio)/:slug",
+      "has": [
+        {
+          "type": "query",
+          "key": "atlas",
+          "value": "1"
+        }
+      ],
+      "destination": "/index.html"
+    },
+    {
+      "source": "/es/:kind(persona|dinastia|territorio)/:slug",
+      "destination": "/es/:kind/:slug/index.html"
+    },
+    {
+      "source": "/es/historia/:slug",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/es/:section(personas|dinastias|territorios|historias|desafio|proyecto|fuentes|licencias|agradecimientos)",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/es",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/en",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/:kind(persona|dinastia|territorio|historia)/:slug",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/",
       "destination": "/index.html"
     }
   ]
