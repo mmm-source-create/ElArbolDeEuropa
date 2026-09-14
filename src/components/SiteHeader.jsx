@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 const SCREEN_NOTICE_KEY = "eade:screen-notice-dismissed";
 
@@ -11,14 +11,17 @@ export default function SiteHeader({
   variant = "public",
   locale = "es",
   onLanguageChange,
+  pathname,
+  prerendered = false,
 }) {
-  const [noticeDismissed, setNoticeDismissed] = useState(noticeWasDismissed);
+  const [noticeDismissed, setNoticeDismissed] = useState(() => prerendered ? false : noticeWasDismissed());
+  useEffect(() => { if (prerendered) setNoticeDismissed(noticeWasDismissed()); }, [prerendered]);
   const dismissNotice = () => {
     setNoticeDismissed(true);
     try { window.sessionStorage.setItem(SCREEN_NOTICE_KEY, "1"); } catch { /* Navigation works without storage. */ }
   };
   const isAtlas = variant === "atlas";
-  const path = typeof window === "undefined" ? "/es/" : window.location.pathname;
+  const path = pathname || (typeof window === "undefined" ? "/es/" : window.location.pathname);
   const active = isAtlas ? "atlas" : /\/persona(?:s|\/|$)/.test(path) ? "personas" : /\/dinastia(?:s|\/|$)/.test(path) ? "dinastias" : /\/territorio(?:s|\/|$)/.test(path) ? "territorios" : /\/historia(?:s|\/|$)/.test(path) ? "historias" : /\/desafio/.test(path) ? "desafio" : null;
   const links = [["atlas", "Atlas", "/es/?atlas=1&continuar=1"], ["personas", "Personas", "/es/personas"], ["dinastias", "Dinastías", "/es/dinastias"], ["territorios", "Territorios", "/es/territorios"], ["historias", "Historias", "/es/historias"], ["desafio", "Desafío", "/es/desafio"]];
   const languageControl = onLanguageChange ? (
