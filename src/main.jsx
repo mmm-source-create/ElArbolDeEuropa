@@ -1,10 +1,16 @@
 import React from "react";
-import ReactDOM from "react-dom/client";
-import App from "./App.jsx";
+import {createRoot,hydrateRoot} from "react-dom/client";
+import {readInitialPage} from "./public/staticData.js";
 import "./index.css";
 
-ReactDOM.createRoot(document.getElementById("root")).render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
+const root=document.getElementById("root");
+const page=readInitialPage(document,window.location);
+if(page) {
+  import("./public/StaticPublicPage.jsx").then(({default:StaticPublicPage})=>{
+    hydrateRoot(root,<React.StrictMode><StaticPublicPage page={page}/></React.StrictMode>);
+  });
+} else {
+  import("./App.jsx").then(({default:App})=>{
+    createRoot(root).render(<React.StrictMode><App/></React.StrictMode>);
+  });
+}
