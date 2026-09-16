@@ -161,6 +161,98 @@ export const REINO_COLOR_DEFAULT = '#5C5346';
 // tocar nada más.
 export const REINO_VERSIONES = {
 
+Inglaterra: [
+  {
+    desde: -Infinity,
+    hasta: 1284, // Antes del Estatuto de Rhuddlan
+    ids: ["Northumberland","Cumberland","Durham","Somerset","Devon","Cornwall","Dorset","Hampshire","Sussex","Surrey","Kent","Essex","Suffolk","Norfolk","Cambridgeshire","Hertfordshire","Berkshire","Wiltshire","Oxfordshire","Buckinghamshire","Middlesex","Gloucestershire","Northamptonshire","Leicestershire","Nottinghamshire","Lincolnshire","East_Riding","North_Riding","West_Riding","Derbyshire","Warwickshire","Bedfordshire","Worcestershire","Herefordshire","Staffordshire","Shropshire","Cheshire","Lancashire","Westmorland"
+    ],
+  },
+
+  {
+    desde: 1284,
+    hasta: 1535, // Principado de Gales bajo la Corona inglesa
+    ids: [
+      "Northumberland","Cumberland","Durham",
+      "Somerset","Devon","Cornwall","Dorset",
+      "Hampshire","Sussex","Surrey","Kent",
+      "Essex","Suffolk","Norfolk",
+      "Cambridgeshire","Hertfordshire",
+      "Berkshire","Wiltshire","Oxfordshire",
+      "Buckinghamshire","Middlesex",
+      "Gloucestershire","Northamptonshire",
+      "Leicestershire","Nottinghamshire",
+      "Lincolnshire","East_Riding",
+      "North_Riding","West_Riding",
+      "Derbyshire","Warwickshire",
+      "Bedfordshire","Worcestershire",
+      "Herefordshire","Staffordshire",
+      "Shropshire","Cheshire",
+      "Lancashire","Westmorland",
+
+      // Gales conquistado
+      "Gwynedd","Powys","Brecon",
+      "Deheubarth","Glamorgan"
+    ],
+  },
+
+  {
+    desde: 1535,
+    hasta: 1707, // Leyes de Gales
+    ids: [
+      "Northumberland","Cumberland","Durham","Somerset","Devon","Cornwall","Dorset",
+      "Hampshire","Sussex","Surrey","Kent",
+      "Essex","Suffolk","Norfolk",
+      "Cambridgeshire","Hertfordshire",
+      "Berkshire","Wiltshire","Oxfordshire",
+      "Buckinghamshire","Middlesex",
+      "Gloucestershire","Northamptonshire",
+      "Leicestershire","Nottinghamshire",
+      "Lincolnshire","East_Riding",
+      "North_Riding","West_Riding",
+      "Derbyshire","Warwickshire","Bedfordshire","Worcestershire","Herefordshire","Staffordshire","Shropshire","Cheshire","Lancashire","Westmorland",
+
+      // Gales plenamente integrado
+      "Gwynedd","Powys","Brecon",
+      "Deheubarth","Glamorgan"
+    ],
+  },
+
+  {
+    desde: 1707,
+    hasta: Infinity, // Reino de Gran Bretaña
+    ids: [
+      "Northumberland","Cumberland","Durham",
+      "Somerset","Devon","Cornwall","Dorset",
+      "Hampshire","Sussex","Surrey","Kent",
+      "Essex","Suffolk","Norfolk",
+      "Cambridgeshire","Hertfordshire",
+      "Berkshire","Wiltshire","Oxfordshire",
+      "Buckinghamshire","Middlesex",
+      "Gloucestershire","Northamptonshire",
+      "Leicestershire","Nottinghamshire",
+      "Lincolnshire","East_Riding",
+      "North_Riding","West_Riding",
+      "Derbyshire","Warwickshire",
+      "Bedfordshire","Worcestershire",
+      "Herefordshire","Staffordshire",
+      "Shropshire","Cheshire",
+      "Lancashire","Westmorland",
+
+      "Gwynedd","Powys","Brecon",
+      "Deheubarth","Glamorgan",
+
+      // Escocia tras las Actas de Unión
+      "Galloway","Strathclyde","Teviotdale",
+      "Lothian","Angus","Aberdeenshire",
+      "Sutherland","Ross","Moray",
+      "Perthshire","Fife","Argyll",
+      "Inner_Hebrides","Outer_Hebrides",
+      "Northern_Isles"
+    ],
+  },
+],
+  
   Nápoles: [
     { desde: 1506,
       hasta: Infinity, // Nápoles bajo Aragón
