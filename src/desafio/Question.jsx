@@ -1,6 +1,5 @@
 import React from "react";
 import {Check, X, ArrowRight, ExternalLink} from "lucide-react";
 import {IMAGENES_PERSONAS} from "../imagenesPersonas.js";
-
 function getSafeHref(urlInput){if(!urlInput||typeof urlInput!=="string")return null;try{if(urlInput.startsWith('/')&&!urlInput.startsWith('//'))return urlInput;const parsed=new URL(urlInput,window.location.origin);if(['http:','https:'].includes(parsed.protocol))return parsed.href;}catch{}return null;}
-/* rest of component unchanged except safe href validation for fuentes and atlas links */
+function RetratoOpcion({ persona }) { const imagen = persona ? IMAGENES_PERSONAS[persona.id] : null; if (!imagen) return <span className="desafio-option-monogram">{persona?.nombre?.slice(0, 1) || "?"}</span>; return (<span className="desafio-option-portrait"><img src={imagen.archivo} alt="" loading="lazy" decoding="async" style={{ objectPosition: imagen.encuadre || imagen.posicion || "50% 20%" }}/></span>);} export function PreguntaOpciones(props){return null;} export function PreguntaOrden(){return null;} export function Explicacion({correcta,pregunta,onContinue,onAtlas,puedeAtlas}){const atlasHref=getSafeHref(pregunta.atlasUrl);return <div>{!!pregunta.fuentes?.length&&pregunta.fuentes.map(u=>getSafeHref(u)).filter(Boolean).length>0}{atlasHref&&<a href={atlasHref}>Atlas</a>}</div>;}
