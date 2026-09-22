@@ -47,10 +47,10 @@ export async function auditBuild(root=process.cwd()) {
  for(const asset of [...assets.css,...assets.js])await fs.access(path.join(dist,asset));
  const shell=await fs.readFile(path.join(dist,'index.html'),'utf8');
  if(!shell.includes('<div id="root"></div>')||shell.includes(STATIC_DATA_ID))throw new Error('El shell del Atlas ha sido reemplazado');
- const counts={persona:0,dinastia:0,territorio:0},errors=auditScriptPolicy(shell,siteUrl).map(e=>`Shell: ${e}`);
+ const counts={persona:0,dinastia:0,territorio:0,historia:0},errors=auditScriptPolicy(shell,siteUrl).map(e=>`Shell: ${e}`);
  for(const route of routes) {
   try {
-   const data=JSON.parse(await fs.readFile(path.join(dist,STATIC_FOLDERS[route.kind],`${route.slug}.json`),'utf8'));
+   const data=JSON.parse(await fs.readFile(path.join(dist,STATIC_FOLDERS[route.kind],`${route.slug}${route.chapter?`/capitulo/${route.chapter}`:""}.json`),'utf8'));
    const page={schema:1,...route,data};
    if(!validatePage(page))throw new Error('JSON fuente incompleto');
    if(route.kind==='dinastia'&&canonicalDynastySlug(route.slug)!==data.slug)throw new Error('Alias no registrado');

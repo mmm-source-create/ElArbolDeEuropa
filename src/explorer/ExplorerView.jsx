@@ -1,3 +1,4 @@
+import '../stories/stories.css';
 import ConnectionControls from "../connections/ConnectionControls.jsx";
 import TreeExport from "../connections/TreeExport.jsx";
 import DocumentationNotes from "../components/DocumentationNotes.jsx";
@@ -89,6 +90,7 @@ export default function ExplorerView({ vm }) {
     : null;
   return (
     <>
+      {vm.storyReturn && <a className="story-return" href={vm.storyReturn}>← Volver al capítulo</a>}
       {!modoTrabajo && <SiteHeader variant="atlas" locale={locale} onLanguageChange={cambiarIdioma} />}
     <div className={`wrap${modoTrabajo ? " atlas-work-mode" : ""}`}>
       <div className={`workspace-topbar${modoTrabajo ? " is-work-mode" : ""}`}>

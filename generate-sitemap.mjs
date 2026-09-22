@@ -67,7 +67,7 @@ const territorioUrls = Object.keys(TERRITORIOS)
 // páginas de contenido escaso hasta que el recorrido exista realmente.
 const historiaUrls = HISTORIAS
   .filter((historia) => historia?.disponible && historia?.titulo)
-  .map((historia) => `/es/historia/${slugPublico(historia.titulo)}`);
+  .flatMap((historia) => { const base = `/es/historia/${slugPublico(historia.titulo)}`; return [base, ...(historia.pasos || []).map((_, i) => `${base}/capitulo/${i + 1}`)]; });
 
 // /en/ sí existe como landing. Las fichas inglesas se añadirán automáticamente
 // cuando empecemos a incorporar nombreEn y contenido inglés completo.

@@ -5,6 +5,7 @@ import { CatalogPage, HomePage, InfoPage, PersonPage } from "./public/PublicSite
 import EnglishLanding from "./public/EnglishLanding.jsx";
 import "./styles/theme.css";
 
+const StoryPage = lazy(() => import("./stories/StoryPage.jsx"));
 const DynastyPage = lazy(() => import("./public/DynastyPage.jsx"));
 const TerritoryPage = lazy(() => import("./public/TerritoryPage.jsx").then(m => ({ default: m.TerritoryPage })));
 const Explorer = lazy(() => import("./explorer/AtlasLoader.jsx"));
@@ -43,6 +44,7 @@ export default function App() {
     setExplorerRequested(true);
   }, [initial.view]);
 
+  if (!explorerRequested && initial.view === "story") return <Suspense fallback={<main className="public-main" style={{minHeight:"65vh"}} role="status">Preparando lectura…</main>}><StoryPage slug={initial.storySlug} chapter={initial.chapter}/></Suspense>;
   if (!explorerRequested && initial.view === "dynasty") return <Suspense fallback={<p role="status">Cargando dinastía…</p>}><DynastyPage slug={initial.dynastySlug} /></Suspense>;
   if (!explorerRequested && initial.view === "territory") return <Suspense fallback={<p role="status">Cargando territorio…</p>}><TerritoryPage slug={initial.territorySlug} /></Suspense>;
   if (initial.view === "english") return <EnglishLanding />;

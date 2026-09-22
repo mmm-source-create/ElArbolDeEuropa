@@ -1,3 +1,4 @@
+import { safeStoryReturn } from './stories/storyModel.js';
 import EnglishLanding from "./public/EnglishLanding.jsx";
 import "./App.css";
 import React, { useState, useRef, useEffect, useLayoutEffect, useCallback, useMemo } from "react";
@@ -78,6 +79,11 @@ export default function Explorer({ initialPanel = null, treeBase: TREE_BASE }) {
     try { return shouldResumeAtlas(window.location.href) ? readAtlasSession(window.sessionStorage) : null; }
     catch { return null; }
   });
+  const [storySelection] = useState(() => {
+    const ids = new URLSearchParams(window.location.search).getAll('seleccion').filter(id => BY_ID[id]);
+    return ids.length ? new Set(ids) : null;
+  });
+  const [storyReturn] = useState(() => safeStoryReturn(window.location.search));
   const restoringSession = useRef(Boolean(savedSession));
   const initialSearchSignature = useRef(undefined);
   const mapViewportRef = useRef(savedSession?.mapViewport || null);
@@ -783,6 +789,7 @@ export default function Explorer({ initialPanel = null, treeBase: TREE_BASE }) {
   const matches = (persona) => {
     if (!persona) return false;
     if (connectionSet) return connectionSet.has(persona.id);
+    if (storySelection && !storySelection.has(persona.id)) return false;
     if (hiddenByCollapse.has(persona.id)) return false;
     if (focoSet && !focoSet.has(persona.id)) return false;
     if (soloFavoritos && !favoritosSet.has(persona.id)) return false;
@@ -820,7 +827,7 @@ export default function Explorer({ initialPanel = null, treeBase: TREE_BASE }) {
     return true;
   };
 
-  const visiblePeople = useMemo(() => PERSONAS.filter(matches), [connectionSet, hiddenByCollapse, focoSet, soloFavoritos, favoritosSet, territorios, dinastias, titulos, siglos, relaciones, opciones.otrasDinastias]);
+  const visiblePeople = useMemo(() => PERSONAS.filter(matches), [storySelection, connectionSet, hiddenByCollapse, focoSet, soloFavoritos, favoritosSet, territorios, dinastias, titulos, siglos, relaciones, opciones.otrasDinastias]);
   const timelineRows = useMemo(() => timelineMode === "eventos"
     ? eventosOrdenados.map(item => ({ key: `event:${item.id}`, item, estimatedSize: 54 }))
     : visiblePeople.slice().sort((a, b) => (anioInicioPersona(a) ?? Infinity) - (anioInicioPersona(b) ?? Infinity) || a.nombre.localeCompare(b.nombre, "es"))
@@ -1333,7 +1340,7 @@ export default function Explorer({ initialPanel = null, treeBase: TREE_BASE }) {
     // Una Historia debe tener la misma URL tanto si se abre desde una página
     // pública como si se inicia desde el panel del Atlas.
     if (typeof window !== "undefined" && !historyPopRef.current) {
-      const destinoHistoria = rutaEntidadLocalizada("es", "historia", slugPublico(historia.titulo));
+      const destinoHistoria = `${rutaEntidadLocalizada("es", "historia", slugPublico(historia.titulo))}?atlas=1`;
       const actual = `${window.location.pathname}${window.location.search}${window.location.hash}`;
       if (actual !== destinoHistoria) {
         window.history.pushState({ eade: "historia", id: historia.id }, "", destinoHistoria);
@@ -1665,6 +1672,7 @@ export default function Explorer({ initialPanel = null, treeBase: TREE_BASE }) {
   };
 
   const viewModel = {
+    storyReturn,
     connectionIds, setConnectionIds, connectionCriterion, setConnectionCriterion, connectionResult, getExportSelection,
     initialMapViewport: mapViewportRef.current, recordMapViewport, timelineVirtual, timelineListRef, scrollRef, tlScrollRef, locale, setLocale, query, setQuery,
     territorios, setTerritorios, dinastias, setDinastias, dinastiasExpandidas, setDinastiasExpandidas, territoriosExpandidos, setTerritoriosExpandidos,

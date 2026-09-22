@@ -132,3 +132,19 @@ if(process.env.EADE_SSG_SAMPLE) {
   await hydrated(page,undefined,{html});
  });
 }
+
+
+test('el capítulo conserva el HTML inicial y permite consultar una persona sin abandonar la lectura',async()=>{
+ const page={schema:1,kind:'historia',slug:'historia-prueba',chapter:1,path:'/es/historia/historia-prueba/capitulo/1',data:{id:'story-test',slug:'historia-prueba',chapter:1,nombre:'Un primer capítulo',storyTitle:'Historia de prueba',descripcion:'Premisa',pasos:[{anio:1500,titulo:'Un primer capítulo',texto:'Texto del capítulo',personas:['A']}],protagonists:[{id:'A',nombre:'Persona A',slug:'persona-a',resumen:'Una ficha breve'}],fuentes:[]}};
+ await hydrated(page,async node=>{
+  assert.match(node.textContent,/Texto del capítulo/);
+  const summary=node.querySelector('.story-people summary');
+  await act(async()=>summary.click());
+  assert.equal(summary.parentElement.open,true);
+  assert.equal(window.location.pathname,page.path);
+  assert.match(node.querySelector('.story-progress').textContent,/1 de 1 capítulos visitados/);
+  const atlas=new URL(node.querySelector('article .public-primary').href);
+  assert.equal(atlas.searchParams.get('regreso'),page.path);
+  assert.equal(atlas.searchParams.get('seleccion'),'A');
+ });
+});

@@ -2,6 +2,14 @@
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "rewrites": [
     {
+      "source": "/es/historia/:slug/capitulo/:chapter/",
+      "destination": "/es/historia/:slug/capitulo/:chapter/index.html"
+    },
+    {
+      "source": "/es/historia/:slug/capitulo/:chapter",
+      "destination": "/es/historia/:slug/capitulo/:chapter/index.html"
+    },
+    {
       "source": "/es/:kind(persona|dinastia|territorio)/:slug",
       "has": [
         {
@@ -33,11 +41,33 @@
     },
     {
       "source": "/es/historia/:slug",
-      "destination": "/index.html"
+      "destination": "/index.html",
+      "has": [
+        {
+          "type": "query",
+          "key": "atlas",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "source": "/es/historia/:slug",
+      "destination": "/es/historia/:slug/index.html"
     },
     {
       "source": "/es/historia/:slug/",
-      "destination": "/index.html"
+      "destination": "/index.html",
+      "has": [
+        {
+          "type": "query",
+          "key": "atlas",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "source": "/es/historia/:slug/",
+      "destination": "/es/historia/:slug/index.html"
     },
     {
       "source": "/es/:section(personas|dinastias|territorios|historias|desafio|proyecto|fuentes|licencias|agradecimientos)",
@@ -101,6 +131,128 @@
           "value": "camera=(), microphone=(), geolocation=()"
         }
       ]
+    }
+  ],
+  "redirects": [
+    {
+      "source": "/es/historia/borgona",
+      "destination": "/es/historia/borgona-el-reino-que-no-fue",
+      "permanent": true
+    },
+    {
+      "source": "/historia/borgona",
+      "destination": "/es/historia/borgona-el-reino-que-no-fue",
+      "permanent": true
+    },
+    {
+      "source": "/es/historia/papales",
+      "destination": "/es/historia/las-familias-papales",
+      "permanent": true
+    },
+    {
+      "source": "/historia/papales",
+      "destination": "/es/historia/las-familias-papales",
+      "permanent": true
+    },
+    {
+      "source": "/es/historia/condotieros",
+      "destination": "/es/historia/los-condotieros",
+      "permanent": true
+    },
+    {
+      "source": "/historia/condotieros",
+      "destination": "/es/historia/los-condotieros",
+      "permanent": true
+    },
+    {
+      "source": "/es/historia/cien-anos",
+      "destination": "/es/historia/la-guerra-de-los-cien-anos",
+      "permanent": true
+    },
+    {
+      "source": "/historia/cien-anos",
+      "destination": "/es/historia/la-guerra-de-los-cien-anos",
+      "permanent": true
+    },
+    {
+      "source": "/es/historia/gioconda",
+      "destination": "/es/historia/en-busca-de-la-gioconda",
+      "permanent": true
+    },
+    {
+      "source": "/historia/gioconda",
+      "destination": "/es/historia/en-busca-de-la-gioconda",
+      "permanent": true
+    },
+    {
+      "source": "/es/historia/revolucion-protestante",
+      "destination": "/es/historia/la-revolucion-protestante",
+      "permanent": true
+    },
+    {
+      "source": "/historia/revolucion-protestante",
+      "destination": "/es/historia/la-revolucion-protestante",
+      "permanent": true
+    },
+    {
+      "source": "/es/historia/favoritos-maquiavelo",
+      "destination": "/es/historia/los-favoritos-de-maquiavelo",
+      "permanent": true
+    },
+    {
+      "source": "/historia/favoritos-maquiavelo",
+      "destination": "/es/historia/los-favoritos-de-maquiavelo",
+      "permanent": true
+    },
+    {
+      "source": "/es/historia/republica-nobles",
+      "destination": "/es/historia/la-republica-de-los-nobles",
+      "permanent": true
+    },
+    {
+      "source": "/historia/republica-nobles",
+      "destination": "/es/historia/la-republica-de-los-nobles",
+      "permanent": true
+    },
+    {
+      "source": "/es/historia/corona-dos-credos",
+      "destination": "/es/historia/una-corona-entre-dos-credos",
+      "permanent": true
+    },
+    {
+      "source": "/historia/corona-dos-credos",
+      "destination": "/es/historia/una-corona-entre-dos-credos",
+      "permanent": true
+    },
+    {
+      "source": "/es/historia/reino-partido-dos",
+      "destination": "/es/historia/el-reino-partido-en-dos",
+      "permanent": true
+    },
+    {
+      "source": "/historia/reino-partido-dos",
+      "destination": "/es/historia/el-reino-partido-en-dos",
+      "permanent": true
+    },
+    {
+      "source": "/es/historia/lepanto-alianza",
+      "destination": "/es/historia/lepanto-la-alianza-imposible",
+      "permanent": true
+    },
+    {
+      "source": "/historia/lepanto-alianza",
+      "destination": "/es/historia/lepanto-la-alianza-imposible",
+      "permanent": true
+    },
+    {
+      "source": "/es/historia/puertas-viena",
+      "destination": "/es/historia/a-las-puertas-de-viena",
+      "permanent": true
+    },
+    {
+      "source": "/historia/puertas-viena",
+      "destination": "/es/historia/a-las-puertas-de-viena",
+      "permanent": true
     }
   ]
 }
