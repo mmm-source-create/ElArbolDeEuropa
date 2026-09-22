@@ -5,12 +5,13 @@ import { useJson, usePublicMeta } from '../public/PublicSite.jsx';
 import { entityMeta } from '../public/publicMeta.js';
 import { storyPath, storyAtlasUrl, readStoryProgress, saveStoryProgress } from './storyModel.js';
 import './stories.css';
+import ReadingSkeleton from './ReadingSkeleton.jsx';
 
 export default function StoryPage({ slug, chapter = null, initialData = null }) {
   const { data, loading, error } = useJson(`/historias-meta/${slug}${chapter ? `/capitulo/${chapter}` : ''}.json`, initialData);
   usePublicMeta(entityMeta('historia', data, slug));
   if (loading || error || !data) return <div className="public-site"><SiteHeader/><main className="public-main story-loading" aria-busy={loading}>
-    {loading ? <p role="status">Preparando lectura…</p> : <><h1>Historia no disponible</h1><p>No se ha podido abrir esta historia o capítulo.</p><button onClick={() => window.location.reload()}>Reintentar</button><a href="/es/historias">Ver historias</a></>}
+    {loading ? <ReadingSkeleton/> : <><h1>Historia no disponible</h1><p>No se ha podido abrir esta historia o capítulo.</p><button onClick={() => window.location.reload()}>Reintentar</button><a href="/es/historias">Ver historias</a></>}
   </main></div>;
   return <StoryReader key={`${data.id}:${data.chapter || 0}`} data={data} prerendered={Boolean(initialData)}/>;
 }
@@ -24,7 +25,7 @@ function StoryReader({ data, prerendered }) {
   }, [data.id, chapter, pasos.length]);
   const step = chapter ? pasos[chapter - 1] : null;
   const people = step ? protagonists.filter(p => (step.personas || [step.persona]).includes(p.id)) : protagonists;
-  return <div className="public-site"><SiteHeader pathname={storyPath(data.slug)} prerendered={prerendered}/>
+  return <div className="public-site"><SiteHeader pathname={storyPath(data.slug,chapter)} prerendered={prerendered}/>
     <main className="public-main story-page">
       <nav aria-label="Migas de pan"><a href="/es/historias">Historias</a>{chapter && <> / <a href={storyPath(data.slug)}>{data.storyTitle}</a></>}</nav>
       <header className="story-heading"><p className="story-eyebrow">{chapter ? `Capítulo ${chapter} de ${pasos.length} · ${step.anio}` : `${data.period} · ${pasos.length} capítulos`}</p><h1>{data.nombre}</h1><p>{chapter ? data.storyTitle : data.descripcion}</p></header>

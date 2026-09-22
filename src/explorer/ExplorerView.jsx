@@ -91,7 +91,7 @@ export default function ExplorerView({ vm }) {
     : null;
   return (
     <>
-      {vm.storyReturn && <a className="story-return" href={vm.storyReturn}>← Volver al capítulo</a>}
+      {vm.storyReturn && <a className="story-return" href={vm.storyReturn}>{vm.storyReturn.startsWith('/en/')?'← Back to chapter':'← Volver al capítulo'}</a>}
       {!modoTrabajo && <SiteHeader variant="atlas" locale={locale} onLanguageChange={cambiarIdioma} />}
       <AtlasGrowth {...vm.growth}/>
     <div className={`wrap${modoTrabajo ? " atlas-work-mode" : ""}`}>

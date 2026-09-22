@@ -14,6 +14,7 @@ export function auditDocument(html,page,assets,siteUrl=DEFAULT_SITE_URL) {
  const head=html.match(/<head>([\s\S]*?)<\/head>/i)?.[1]||'';
  const meta=publicMeta(entityMeta(page.kind,page.data,page.slug),siteUrl);
  const exactly=(pattern,n=1)=>[...head.matchAll(pattern)].length===n;
+ if(!html.includes(`<html lang="${meta.lang}">`))errors.push('Idioma del documento incorrecto');
  if(!exactly(/<title\b/g)||!head.includes(`<title>${escapeHtml(meta.title)}</title>`))errors.push('Título ausente, duplicado o incorrecto');
  if(!exactly(/<link\b[^>]*rel="canonical"/g)||!head.includes(`rel="canonical" href="${escapeHtml(meta.canonical)}"`))errors.push('Canonical incorrecto');
  for(const [attribute,key,value] of meta.meta) {
@@ -47,7 +48,7 @@ export async function auditBuild(root=process.cwd()) {
  for(const asset of [...assets.css,...assets.js])await fs.access(path.join(dist,asset));
  const shell=await fs.readFile(path.join(dist,'index.html'),'utf8');
  if(!shell.includes('<div id="root"></div>')||shell.includes(STATIC_DATA_ID))throw new Error('El shell del Atlas ha sido reemplazado');
- const counts={persona:0,dinastia:0,territorio:0,historia:0},errors=auditScriptPolicy(shell,siteUrl).map(e=>`Shell: ${e}`);
+ const counts={persona:0,dinastia:0,territorio:0,historia:0,english:0},errors=auditScriptPolicy(shell,siteUrl).map(e=>`Shell: ${e}`);
  for(const route of routes) {
   try {
    const data=JSON.parse(await fs.readFile(path.join(dist,STATIC_FOLDERS[route.kind],`${route.slug}${route.chapter?`/capitulo/${route.chapter}`:""}.json`),'utf8'));
@@ -65,10 +66,11 @@ export async function auditBuild(root=process.cwd()) {
   for(const entry of await fs.readdir(dir,{withFileTypes:true})) {
    const url=`${prefix}/${entry.name}`;
    if(entry.isDirectory())await inspect(path.join(dir,entry.name),url);
-   else if(entry.name==='index.html'&&!expected.has(prefix))errors.push(`HTML fuera del alcance SSG: ${prefix}`);
+   else if(entry.name==='index.html'&&!expected.has(prefix)&&!expected.has(prefix+'/'))errors.push(`HTML fuera del alcance SSG: ${prefix}`);
   }
  }
  await inspect(path.join(dist,'es'));
+ await inspect(path.join(dist,'en'),'/en');
  const report={version:JSON.parse(await fs.readFile(path.join(root,'package.json'),'utf8')).version,expected:routes.length,counts,errors};
  await fs.writeFile(path.join(dist,'ssg-audit.json'),JSON.stringify(report,null,2));
  if(errors.length)throw new Error(`Auditoría SSG: ${errors.length} errores\n${errors.slice(0,25).join('\n')}`);

@@ -2,6 +2,38 @@
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "rewrites": [
     {
+      "source": "/en",
+      "destination": "/en/index.html"
+    },
+    {
+      "source": "/en/",
+      "destination": "/en/index.html"
+    },
+    {
+      "source": "/en/story/:slug/chapter/:chapter",
+      "destination": "/en/story/:slug/chapter/:chapter/index.html"
+    },
+    {
+      "source": "/en/story/:slug/chapter/:chapter/",
+      "destination": "/en/story/:slug/chapter/:chapter/index.html"
+    },
+    {
+      "source": "/en/:kind(story|person)/:slug",
+      "destination": "/en/:kind/:slug/index.html"
+    },
+    {
+      "source": "/en/:kind(story|person)/:slug/",
+      "destination": "/en/:kind/:slug/index.html"
+    },
+    {
+      "source": "/en/:section(stories|people|methodology)",
+      "destination": "/en/:section/index.html"
+    },
+    {
+      "source": "/en/:section(stories|people|methodology)/",
+      "destination": "/en/:section/index.html"
+    },
+    {
       "source": "/embed/persona/:id",
       "destination": "/index.html"
     },
@@ -99,14 +131,6 @@
     },
     {
       "source": "/es/",
-      "destination": "/index.html"
-    },
-    {
-      "source": "/en",
-      "destination": "/index.html"
-    },
-    {
-      "source": "/en/",
       "destination": "/index.html"
     },
     {

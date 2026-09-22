@@ -1,7 +1,8 @@
 import {SITE_NAME} from "../siteConfig.js";
 import React from "react";
 
-export default function SiteFooter({ compact = false, onOpenStats, onReport }) {
+export default function SiteFooter({ compact = false, onOpenStats, onReport, locale = "es" }) {
+  if (locale === "en") return <footer className="site-footer"><div className="site-footer-inner"><div className="site-footer-group"><strong>Explore</strong><div className="site-footer-links"><a href="/en/">Home</a><a href="/en/stories">Stories</a><a href="/en/people">People</a><a href="/en/methodology">Sources and methodology</a></div></div><div className="site-footer-group"><strong>Project</strong><div className="site-footer-links"><a href="/es/">Complete Spanish edition</a><a href="/es/licencias">Licences (Spanish)</a><a href="/es/agradecimientos">Acknowledgements (Spanish)</a></div></div></div><div className="site-footer-meta"><span>© 2026 The Tree of Europe · Original code, design, text and database structure: all rights reserved.</span><span>Maps: <a href="https://www.mapchart.net/" target="_blank" rel="noreferrer">MapChart</a> · <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noreferrer">CC BY-SA 4.0</a></span></div></footer>;
   return (
     <footer className={`site-footer${compact ? " is-compact" : ""}`}>
       <div className="site-footer-inner">

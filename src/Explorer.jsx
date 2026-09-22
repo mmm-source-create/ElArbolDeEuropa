@@ -1,3 +1,4 @@
+import {translatedEquivalent} from './english/routes.js';
 import { nextRecordedYear } from './data/europeTimeline.js';
 import { familyIndex, familyIds, atlasIdsFromLocation, writeAtlasIds, isolatedPopes, groupIsolatedPopes } from './explorer/progressiveAtlas.js';
 import { safeStoryReturn } from './stories/storyModel.js';
@@ -1656,17 +1657,7 @@ export default function Explorer({ initialPanel = null, treeBase: TREE_BASE }) {
 
   const cambiarIdioma = useCallback((siguiente) => {
     if (typeof window === "undefined" || !["es", "en"].includes(siguiente) || siguiente === locale) return;
-    const rutaActual = rutaPublicaDesdePath(window.location.pathname);
-    let destino = siguiente === "en" ? "/en/" : "/es/";
-
-    // Solo conservamos una ficha individual al pasar a EN cuando exista una
-    // traducción explícita (nombreEn). Si no, vamos a la portada inglesa.
-    if (rutaActual?.tipo === "persona") {
-      const personaId = personaIdDesdeRuta(window.location.pathname);
-      const persona = personaId ? BY_ID[personaId] : null;
-      const slugDestino = slugPersonaPorLocale(persona, siguiente);
-      if (persona && slugDestino) destino = rutaEntidadLocalizada(siguiente, "persona", slugDestino);
-    }
+    const destino = translatedEquivalent(window.location.pathname, siguiente) || (siguiente === "en" ? "/en/" : "/es/");
 
     window.location.assign(destino);
   }, [locale]);

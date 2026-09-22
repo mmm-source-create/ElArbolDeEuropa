@@ -33,3 +33,7 @@ Las alianzas matrimoniales tienen una categoría propia: una boda no demuestra t
 Una agrupación geográfica no es una soberanía. Una pretensión no equivale a gobierno efectivo. Los relevos explicados identifican mandatos concretos; nunca se generan simplemente ordenando nombres por fecha. Cada crisis documenta las reclamaciones y las filiaciones usadas para explicarlas.
 
 Las publicaciones se incorporan una sola vez a la bibliografía general. Sus asociaciones con personajes y territorios se mantienen en el mismo registro. Una referencia contextual no prueba todos los datos de una ficha. Los retratos nuevos los aporta el responsable del proyecto: no se descargan ni sustituyen automáticamente.
+
+## Próximas mejoras implementadas
+
+[Seguimiento de next updates](NEXT_UPDATES.md) · [V2.21](V2.21.md)
