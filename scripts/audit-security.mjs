@@ -1,7 +1,7 @@
 import {execFileSync} from 'node:child_process';
 import fs from 'node:fs/promises';
 import {pathToFileURL} from 'node:url';
-import {SECURITY_HEADERS} from './security-policy.mjs';
+import {SECURITY_HEADERS, MAIN_FRAME_SOURCE, EMBED_SOURCES, EMBED_CSP} from './security-policy.mjs';
 
 // Complemento local a Secret Scanning de GitHub. Nunca muestra el valor hallado.
 const secretPatterns = [
@@ -22,9 +22,13 @@ export function activeSvgContent(svg) {
 export async function auditSecurity() {
   const issues = [];
   const config = JSON.parse(await fs.readFile('vercel.json', 'utf8'));
-  const headers = config.headers?.find(rule => rule.source === '/(.*)')?.headers;
+  const headers = [...(config.headers?.find(rule => rule.source === '/(.*)')?.headers || []), ...(config.headers?.find(rule => rule.source === MAIN_FRAME_SOURCE)?.headers || [])];
   for (const expected of SECURITY_HEADERS) {
     if (!headers?.some(h => h.key.toLowerCase() === expected.key.toLowerCase() && h.value === expected.value)) issues.push(`Cabecera ausente o desactualizada: ${expected.key}`);
+  }
+  for (const source of EMBED_SOURCES) {
+    const hs=config.headers?.find(rule=>rule.source===source)?.headers||[];
+    if(!hs.some(h=>h.key==='Content-Security-Policy'&&h.value===EMBED_CSP)||hs.some(h=>h.key==='X-Frame-Options'))issues.push(`Política de inserción incorrecta: ${source}`);
   }
   if (activeSvgContent(await fs.readFile('src/MapChart_Map.svg', 'utf8'))) issues.push('El SVG del mapa contiene contenido activo no permitido.');
   const files = execFileSync('git', ['ls-files', '-z', '--cached', '--others', '--exclude-standard'], {encoding: 'utf8'}).split('\0').filter(Boolean);

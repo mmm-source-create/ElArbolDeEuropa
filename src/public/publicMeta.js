@@ -1,16 +1,21 @@
 // Una sola definición de los metadatos para el HTML de compilación y el navegador.
+import {translatedEquivalent} from '../english/routes.js';
 import {SITE_NAME, DEFAULT_SITE_URL} from '../siteConfig.js';
 export {DEFAULT_SITE_URL} from '../siteConfig.js';
 export function publicMeta({title,description,path='/es/'},siteUrl=DEFAULT_SITE_URL) {
  const canonical=new URL(path,siteUrl).href;
- return {title,description,path,canonical,lang:'es',meta:[
+ const lang=path.startsWith('/en/')?'en':'es';
+ const equivalent=translatedEquivalent(path,lang==='en'?'es':'en');
+ const alternates=[{hreflang:lang,href:canonical},...(equivalent?[{hreflang:lang==='en'?'es':'en',href:new URL(equivalent,siteUrl).href}]:[]),{hreflang:'x-default',href:lang==='en'&&equivalent?new URL(equivalent,siteUrl).href:canonical}];
+ return {title,description,path,canonical,lang,meta:[
   ['name','description',description],['property','og:site_name',SITE_NAME],
   ['property','og:title',title],['property','og:description',description],
-  ['property','og:type','website'],['property','og:locale','es_ES'],['property','og:url',canonical],
+  ['property','og:type','website'],['property','og:locale',lang==='en'?'en_GB':'es_ES'],['property','og:url',canonical],
   ['name','twitter:card','summary'],['name','twitter:title',title],['name','twitter:description',description],
- ],alternates:[{hreflang:'es',href:canonical},{hreflang:'x-default',href:canonical}]};
+ ],alternates};
 }
 export function entityMeta(kind,data,slug) {
+ if(kind==='english')return {title:`${data?.nombre||'English edition'} — The Tree of Europe`,description:data?.description||'Explore European families and stories.',path:data?.path||'/en/'};
  if(kind==='historia')return {title:`${data?.nombre || 'Historia'} — ${SITE_NAME}`,description:(data?.chapter?data.pasos[data.chapter-1].texto:data?.descripcion||'Historias de Europa, capítulo a capítulo.').slice(0,155),path:`/es/historia/${encodeURIComponent(data?.slug||slug)}${data?.chapter?`/capitulo/${data.chapter}`:''}`};
  if(kind==='persona')return {
   title:data?`${data.nombre} — ${SITE_NAME}`:`Persona — ${SITE_NAME}`,

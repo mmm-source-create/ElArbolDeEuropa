@@ -112,6 +112,7 @@ export function PersonaMiniCard({ persona, compact = false }) {
 
 export function HomePage({ onEnterAtlas, onOpenPanel }) {
   const data = HOME_DATA;
+  const [visitYear, setVisitYear] = useState(1500);
   usePublicMeta({
     title: "El Árbol de Europa | Atlas genealógico e histórico interactivo",
     description: "Explora personas, dinastías, parentescos, reinados, territorios e historias de la Europa medieval y moderna.",
@@ -124,11 +125,12 @@ export function HomePage({ onEnterAtlas, onOpenPanel }) {
       <main className="public-main public-home">
         <section className="public-hero">
           <div className="public-hero-eyebrow">Genealogía · política · territorio · 1200–1800</div>
-          <h1>La historia de Europa, vista como una red</h1>
-          <p>Recorre familias, coronas, matrimonios, rivalidades y sucesiones en un atlas que une árbol genealógico, mapa, biografías, cronología e historias guiadas.</p>
-          <div className="public-hero-actions">
-            <button type="button" className="public-primary" onClick={() => onEnterAtlas?.(null)}>Explorar el atlas <ArrowRight size={16} /></button>
-            <a className="public-secondary" href="/es/historias"><BookOpen size={15} /> Ver historias</a>
+          <h1>Una familia. Una historia. Un año.</h1>
+          <p>Elige un punto de partida y descubre cómo se conectan las personas, las coronas y los acontecimientos de Europa entre 1200 y 1800.</p>
+          <div className="home-pathways">
+            <a className="home-pathway" href="/es/?atlas=1&seleccion="><Users size={25}/><h2>Explora una familia</h2><p>Empieza con una persona y amplía sus ramas a tu ritmo.</p><strong>Elegir personaje →</strong></a>
+            <a className="home-pathway" href="/es/historia/el-reino-partido-en-dos"><BookOpen size={25}/><h2>Comienza una historia</h2><p>Sicilia y Nápoles: sigue las herencias que partieron un reino en dos.</p><strong>Entrar en la historia →</strong></a>
+            <form className="home-pathway" action="/es/" method="get"><Landmark size={25}/><h2>Visita un año</h2><p>Descubre quién gobierna y qué ocurre al mismo tiempo en Europa.</p><input type="hidden" name="atlas" value="1"/><input type="hidden" name="panel" value="europa"/><label>Año <input aria-label="Año para visitar Europa" name="anio" type="number" min="1200" max="1800" required value={visitYear} onChange={e=>setVisitYear(e.target.value)}/></label><button type="submit">Ver Europa →</button></form>
           </div>
           <div className="public-hero-stats" aria-label="Resumen del proyecto">
             <span><strong>{stats.personas ?? "—"}</strong> personas</span>
@@ -138,17 +140,12 @@ export function HomePage({ onEnterAtlas, onOpenPanel }) {
           </div>
         </section>
 
-        <section className="public-section">
-          <div className="public-section-heading"><div><span>Entradas rápidas</span><h2>Elige cómo quieres empezar</h2></div></div>
-          <div className="public-door-grid">
-            <a href="/es/personas" className="public-door-card"><Users size={22} /><strong>Personas</strong><span>Busca una figura y entra por su familia, reinados y época.</span></a>
-            <a href="/es/dinastias" className="public-door-card"><Shield size={22} /><strong>Dinastías</strong><span>Capetos, Habsburgo, Trastámara, Borbones y muchas más.</span></a>
-            <a href="/es/territorios" className="public-door-card"><Landmark size={22} /><strong>Territorios</strong><span>Explora quién gobernó dónde y cómo se conectan las coronas.</span></a>
-            <a href="/es/historias" className="public-door-card"><BookOpen size={22} /><strong>Historias</strong><span>Recorridos guiados por guerras, artistas, favoritos y dinastías.</span></a>
-            <a href="/es/desafio" className="public-door-card"><Swords size={22} /><strong>Desafío</strong><span>El Camino, Racha, Retratos y un desafío diario con la propia base histórica.</span></a>
-            <button type="button" className="public-door-card" onClick={() => onOpenPanel?.("estadisticas")}><Sparkles size={22} /><strong>Estadísticas</strong><span>Descubre qué casas, territorios y figuras dominan la base.</span></button>
-          </div>
-        </section>
+        <section className="public-section home-recommendations"><div className="public-section-heading"><div><span>Recomendaciones del proyecto</span><h2>Tres recorridos para descubrirlo</h2></div></div><div className="public-door-grid">
+          <a className="public-door-card" href="/es/?atlas=1&familia=ISAB1CAST"><Users size={22}/><strong>La familia de Isabel de Castilla</strong><span>Abre sus vínculos inmediatos y añade las ramas que quieras conocer.</span></a>
+          <a className="public-door-card" href="/es/historia/en-busca-de-la-gioconda"><BookOpen size={22}/><strong>En busca de la Gioconda</strong><span>Sigue a Leonardo por las cortes, los retratos y las identidades propuestas.</span></a>
+          <a className="public-door-card" href="/es/?atlas=1&anio=1519&panel=europa"><Landmark size={22}/><strong>Europa en 1519</strong><span>Consulta el panorama completo y compara qué cambia desde el año anterior.</span></a>
+        </div></section>
+        <nav className="home-catalog-links" aria-label="Más formas de explorar"><a href="/es/personas">Todas las personas</a><a href="/es/dinastias">Dinastías</a><a href="/es/territorios">Territorios</a><a href="/es/historias">Todas las historias</a><a href="/es/desafio">Desafíos</a><button onClick={()=>onOpenPanel?.('estadisticas')}>Estadísticas</button></nav>
 
         {!!data?.personasDestacadas?.length && (
           <section className="public-section">

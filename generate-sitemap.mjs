@@ -1,3 +1,4 @@
+import {englishPaths} from './src/english/routes.js';
 import {loadEnv} from "vite";
 import {resolveSiteUrl} from "./src/siteConfig.js";
 import { TERRITORIOS } from "./src/data/territorios.js";
@@ -69,21 +70,7 @@ const historiaUrls = HISTORIAS
   .filter((historia) => historia?.disponible && historia?.titulo)
   .flatMap((historia) => { const base = `/es/historia/${slugPublico(historia.titulo)}`; return [base, ...(historia.pasos || []).map((_, i) => `${base}/capitulo/${i + 1}`)]; });
 
-// /en/ sí existe como landing. Las fichas inglesas se añadirán automáticamente
-// cuando empecemos a incorporar nombreEn y contenido inglés completo.
-const englishPersonaUrls = (() => {
-  const traducidas = PERSONAS.filter((p) => typeof p.nombreEn === "string" && p.nombreEn.trim());
-  const counts = traducidas.reduce((acc, p) => {
-    const base = slugBasePersona(p, "en");
-    acc[base] = (acc[base] || 0) + 1;
-    return acc;
-  }, {});
-  return traducidas.map((p) => {
-    const base = slugBasePersona(p, "en");
-    const slug = counts[base] > 1 ? `${base}-${slugPublico(p.id)}` : base;
-    return `/en/person/${slug}`;
-  });
-})();
+const englishUrls = englishPaths();
 
 const catalogoUrls = ["/es/personas", "/es/dinastias", "/es/territorios", "/es/historias"];
 const proyectoUrls = ["/es/proyecto", "/es/fuentes", "/es/licencias", "/es/agradecimientos"];
@@ -91,7 +78,6 @@ const experienciaUrls = ["/es/desafio"];
 
 const paths = [
   "/es/",
-  "/en/",
   ...catalogoUrls,
   ...proyectoUrls,
   ...experienciaUrls,
@@ -99,7 +85,7 @@ const paths = [
   ...dinastiaUrls,
   ...territorioUrls,
   ...historiaUrls,
-  ...englishPersonaUrls,
+  ...englishUrls,
 ];
 
 const uniquePaths = [...new Set(paths)];
@@ -128,4 +114,4 @@ console.log(`  Personas ES: ${personaUrls.length}`);
 console.log(`  Dinastías ES: ${dinastiaUrls.length}`);
 console.log(`  Territorios ES: ${territorioUrls.length}`);
 console.log(`  Historias ES: ${historiaUrls.length}`);
-console.log(`  Personas EN: ${englishPersonaUrls.length}`);
+console.log(`  Páginas EN: ${englishUrls.length}`);

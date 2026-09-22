@@ -7,7 +7,7 @@ export function wrapName(name,limit=25){
  for(const word of String(name).split(/\s+/)){if(line&&[...line+' '+word].length>limit){lines.push(line);line='';}for(let rest=word;rest;){const chunk=[...rest].slice(0,limit).join('');rest=[...rest].slice(limit).join('');if(rest){if(line){lines.push(line);line='';}lines.push(chunk);}else line+=(line?' ':'')+chunk;}}
  if(line)lines.push(line);return lines;
 }
-export function treeSvg({people,edges,gen={},terminals=[],title='Selección del árbol',url=`${DEFAULT_SITE_URL}/es/`}){
+export function treeSvg({people,edges,gen={},terminals=[],title='Selección del árbol',url=`${DEFAULT_SITE_URL}/es/`,margin=12}){
  if(!people.length)throw new Error('Selecciona una persona, una comparación o una rama antes de exportar.');
  const byId=Object.fromEntries(people.map(p=>[p.id,p])),ids=people.map(p=>p.id),layout=selectionLayout(ids,gen,byId);
  // Todas las filas reservan el alto del nombre más largo, también con fechas documentales.
@@ -21,8 +21,9 @@ export function treeSvg({people,edges,gen={},terminals=[],title='Selección del 
   const pos=layout.positions[p.id],t=text[p.id];
   return `<g><title>${escape(p.nombre)} · ${escape(documentaryLife(p))}</title><rect x="${pos.x}" y="${pos.y}" width="${pos.w}" height="${height}" rx="8" fill="#fffdf7" stroke="${selected.has(p.id)?'#7a2e2e':'#d5c7aa'}" stroke-width="${selected.has(p.id)?3:1.5}"/>${t.name.map((line,i)=>`<text x="${pos.x+12}" y="${pos.y+25+i*19}" font-size="16" font-weight="600">${escape(line)}</text>`).join('')}${t.dates.map((line,i)=>`<text x="${pos.x+12}" y="${pos.y+37+t.name.length*19+i*16}" fill="#706653" font-size="13">${escape(line)}</text>`).join('')}</g>`;
  }).join('');
- const svg=`<svg xmlns="http://www.w3.org/2000/svg" width="${w}" height="${h}" viewBox="0 0 ${w} ${h}" role="img" aria-labelledby="title desc"><title id="title">${escape(title)}</title><desc id="desc">${people.length} personas. Línea continua: filiación; discontinua: matrimonio; puntos: amantes. Borde granate: personas elegidas. Posiciones por generaciones, sin escala temporal.</desc><rect width="100%" height="100%" fill="#f6f1e5"/><g font-family="Georgia, serif" fill="#30291f"><text x="40" y="40" font-size="24">${escape(SITE_NAME)}</text><text x="40" y="65" font-size="15">${escape(title)} · ${people.length} personas</text>${edgeMarkup}${cards}<text x="40" y="${h-64}" font-size="13">Filiación: continua · Matrimonio: discontinua · Amantes: puntos · Elegidos: borde granate</text><text x="40" y="${h-44}" font-size="12">Generaciones sin escala temporal · Datos registrados en el Atlas</text><a href="${escape(url)}"><text x="40" y="${h-22}" font-size="12">${escape(new URL(DEFAULT_SITE_URL).hostname)} · Consultar el Atlas y sus fuentes</text></a></g></svg>`;
- return {svg,width:w,height:h};
+ const padding=[8,12,20].includes(Number(margin))?Number(margin):12;
+ const svg=`<svg xmlns="http://www.w3.org/2000/svg" width="${w+padding*2}" height="${h+padding*2}" viewBox="0 0 ${w+padding*2} ${h+padding*2}" role="img" aria-labelledby="title desc"><title id="title">${escape(title)}</title><desc id="desc">${people.length} personas. Línea continua: filiación; discontinua: matrimonio; puntos: amantes. Borde granate: personas elegidas. Posiciones por generaciones, sin escala temporal.</desc><rect width="100%" height="100%" fill="#f6f1e5"/><g transform="translate(${padding} ${padding})" font-family="Georgia, serif" fill="#30291f"><text x="40" y="40" font-size="24">${escape(SITE_NAME)}</text><text x="40" y="65" font-size="15">${escape(title)} · ${people.length} personas</text>${edgeMarkup}${cards}<text x="40" y="${h-64}" font-size="13">Filiación: continua · Matrimonio: discontinua · Amantes: puntos · Elegidos: borde granate</text><text x="40" y="${h-44}" font-size="12">Generaciones sin escala temporal · Datos registrados en el Atlas</text><a href="${escape(url)}"><text x="40" y="${h-22}" font-size="12">${escape(new URL(DEFAULT_SITE_URL).hostname)} · Consultar el Atlas y sus fuentes</text></a></g></svg>`;
+ return {svg,width:w+padding*2,height:h+padding*2};
 }
 export function pngDimensions(width,height){
  const scale=2;

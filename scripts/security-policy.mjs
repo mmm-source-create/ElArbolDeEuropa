@@ -43,3 +43,9 @@ export function auditScriptPolicy(html, siteUrl) {
   }
   return errors;
 }
+
+
+// Only purpose-built embeds can be framed cross-origin; normal pages retain SAMEORIGIN.
+export const MAIN_FRAME_SOURCE = '/((?!embed/(?:persona/[^/]+/?|arbol/?)$).*)';
+export const EMBED_SOURCES = ['/embed/persona/:id', '/embed/persona/:id/', '/embed/arbol', '/embed/arbol/'];
+export const EMBED_CSP = CONTENT_SECURITY_POLICY.replace("frame-ancestors 'self'", 'frame-ancestors *');

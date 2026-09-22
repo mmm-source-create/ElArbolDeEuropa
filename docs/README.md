@@ -11,6 +11,10 @@ Los informes describen el estado validado de cada entrega. Sus cifras y listas d
 
 | Versión | Contenido |
 | --- | --- |
+| [2.20](V2.20.md) | Portada con familias, historias y años |
+| [2.19](V2.19.md) | Exportación, impresión, material educativo e inserciones |
+| [2.18](V2.18.md) | Europa completa, comparación temporal y reproducción |
+| [2.17](V2.17.md) | Atlas gradual, búsqueda global y expansión reversible |
 | [2.16](V2.16.md) | Historias con entrada propia, capítulos y progreso |
 | [2.15.2](V2.15.2.md) | Seguridad, validación y limpieza |
 | [2.15](V2.15.md) | Aprender con el Atlas |
@@ -29,3 +33,7 @@ Las alianzas matrimoniales tienen una categoría propia: una boda no demuestra t
 Una agrupación geográfica no es una soberanía. Una pretensión no equivale a gobierno efectivo. Los relevos explicados identifican mandatos concretos; nunca se generan simplemente ordenando nombres por fecha. Cada crisis documenta las reclamaciones y las filiaciones usadas para explicarlas.
 
 Las publicaciones se incorporan una sola vez a la bibliografía general. Sus asociaciones con personajes y territorios se mantienen en el mismo registro. Una referencia contextual no prueba todos los datos de una ficha. Los retratos nuevos los aporta el responsable del proyecto: no se descargan ni sustituyen automáticamente.
+
+## Próximas mejoras implementadas
+
+[Seguimiento de next updates](NEXT_UPDATES.md) · [V2.21](V2.21.md)

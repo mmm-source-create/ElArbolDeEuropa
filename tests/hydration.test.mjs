@@ -148,3 +148,15 @@ test('el capítulo conserva el HTML inicial y permite consultar una persona sin 
   assert.equal(atlas.searchParams.get('seleccion'),'A');
  });
 });
+
+test('el capítulo inglés se hidrata y conserva idioma, progreso y regreso equivalente',async()=>{
+ const path='/en/story/burgundy-the-kingdom-that-never-was/chapter/1',esPath='/es/historia/borgona-el-reino-que-no-fue/capitulo/1';
+ const page={schema:1,kind:'english',slug:'story-burgundy-the-kingdom-that-never-was',chapter:1,path,data:{id:'english-test',slug:'story-burgundy-the-kingdom-that-never-was',chapter:1,path,esPath,type:'story',storyPath:'/en/story/burgundy-the-kingdom-that-never-was',nombre:'First chapter',title:'Burgundy',description:'A story',period:'1363–1506',pasos:[{anio:1363,titulo:'First chapter',texto:'Chapter text',personas:['A']}],protagonists:[{id:'A',nombre:'Person A',slug:'person-a',summary:null}],fuentes:[]}};
+ await hydrated(page,node=>{
+  assert.equal(document.documentElement.lang,'en');
+  assert.equal(node.querySelector('.site-language a').getAttribute('href'),esPath);
+  assert.match(node.querySelector('.story-progress').textContent,/1 of 1 chapters visited/);
+  assert.equal(new URL(node.querySelector('article .public-primary').href).searchParams.get('regreso'),path);
+  assert.match(node.querySelector('.story-people').textContent,/translation of this profile is not yet available/);
+ });
+});

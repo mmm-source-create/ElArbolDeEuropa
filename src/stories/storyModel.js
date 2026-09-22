@@ -27,5 +27,5 @@ export function storyAtlasUrl(story, chapter) {
 }
 export function safeStoryReturn(search) {
   const path = new URLSearchParams(search).get('regreso');
-  return /^\/es\/historia\/[a-z0-9]+(?:-[a-z0-9]+)*\/capitulo\/[1-9][0-9]*$/.test(path || '') ? path : null;
+  return /^(?:\/es\/historia\/[a-z0-9]+(?:-[a-z0-9]+)*\/capitulo|\/en\/story\/[a-z0-9]+(?:-[a-z0-9]+)*\/chapter)\/[1-9][0-9]*$/.test(path || '') ? path : null;
 }
