@@ -1,3 +1,4 @@
+import { familyIndex, familyIds, atlasIdsFromLocation, writeAtlasIds, isolatedPopes, groupIsolatedPopes } from './explorer/progressiveAtlas.js';
 import { safeStoryReturn } from './stories/storyModel.js';
 import EnglishLanding from "./public/EnglishLanding.jsx";
 import "./App.css";
@@ -75,14 +76,15 @@ function leerLayoutAtlas() {
 }
 
 export default function Explorer({ initialPanel = null, treeBase: TREE_BASE }) {
+  const familyData = useMemo(() => familyIndex(PERSONAS), []);
+  const isolatedPopeIds = useMemo(() => isolatedPopes(familyData), [familyData]);
   const [savedSession] = useState(() => {
     try { return shouldResumeAtlas(window.location.href) ? readAtlasSession(window.sessionStorage) : null; }
     catch { return null; }
   });
-  const [storySelection] = useState(() => {
-    const ids = new URLSearchParams(window.location.search).getAll('seleccion').filter(id => BY_ID[id]);
-    return ids.length ? new Set(ids) : null;
-  });
+  const [atlasIds, setAtlasIds] = useState(() => savedSession ? (savedSession.atlasIds ?? null) : atlasIdsFromLocation(window.location.pathname, window.location.search, familyData));
+  const atlasSet = useMemo(() => atlasIds === null ? null : new Set(atlasIds), [atlasIds]);
+  const [atlasUndo, setAtlasUndo] = useState([]);
   const [storyReturn] = useState(() => safeStoryReturn(window.location.search));
   const restoringSession = useRef(Boolean(savedSession));
   const initialSearchSignature = useRef(undefined);
@@ -127,12 +129,12 @@ export default function Explorer({ initialPanel = null, treeBase: TREE_BASE }) {
   const [vistasActivas, setVistasActivas] = useState(savedSession?.vistasActivas ?? { arbol: true, mapa: true });
   const [panelesVisibles, setPanelesVisibles] = useState(() => {
     if (savedSession) return savedSession.panelesVisibles;
-    const base = { filtros: true, biografia: true, cronologia: true };
+    const base = { filtros: atlasIds === null, biografia: true, cronologia: true };
     if (typeof window === "undefined") return base;
     try {
       const guardado = JSON.parse(window.localStorage.getItem(PANELES_STORAGE_KEY) || "null");
       return {
-        filtros: typeof guardado?.filtros === "boolean" ? guardado.filtros : true,
+        filtros: typeof guardado?.filtros === "boolean" ? guardado.filtros : base.filtros,
         biografia: typeof guardado?.biografia === "boolean" ? guardado.biografia : true,
         cronologia: typeof guardado?.cronologia === "boolean" ? guardado.cronologia : true,
       };
@@ -789,7 +791,7 @@ export default function Explorer({ initialPanel = null, treeBase: TREE_BASE }) {
   const matches = (persona) => {
     if (!persona) return false;
     if (connectionSet) return connectionSet.has(persona.id);
-    if (storySelection && !storySelection.has(persona.id)) return false;
+    if (atlasSet && !atlasSet.has(persona.id)) return false;
     if (hiddenByCollapse.has(persona.id)) return false;
     if (focoSet && !focoSet.has(persona.id)) return false;
     if (soloFavoritos && !favoritosSet.has(persona.id)) return false;
@@ -827,7 +829,7 @@ export default function Explorer({ initialPanel = null, treeBase: TREE_BASE }) {
     return true;
   };
 
-  const visiblePeople = useMemo(() => PERSONAS.filter(matches), [storySelection, connectionSet, hiddenByCollapse, focoSet, soloFavoritos, favoritosSet, territorios, dinastias, titulos, siglos, relaciones, opciones.otrasDinastias]);
+  const visiblePeople = useMemo(() => PERSONAS.filter(matches), [atlasSet, connectionSet, hiddenByCollapse, focoSet, soloFavoritos, favoritosSet, territorios, dinastias, titulos, siglos, relaciones, opciones.otrasDinastias]);
   const timelineRows = useMemo(() => timelineMode === "eventos"
     ? eventosOrdenados.map(item => ({ key: `event:${item.id}`, item, estimatedSize: 54 }))
     : visiblePeople.slice().sort((a, b) => (anioInicioPersona(a) ?? Infinity) - (anioInicioPersona(b) ?? Infinity) || a.nombre.localeCompare(b.nombre, "es"))
@@ -850,8 +852,8 @@ export default function Explorer({ initialPanel = null, treeBase: TREE_BASE }) {
   }, [rows, visibleSignature]);
   const treeLayout = useMemo(() => {
     if (connectionSet) return selectionLayout(connectionResult.ids, gen, BY_ID);
-    if (visiblePeople.length === PERSONAS.length) return TREE_BASE.layout;
-    return computeTreeLayout(visibleRows, BY_ID, HIJOS_POR_ID);
+    const layout = visiblePeople.length === PERSONAS.length ? TREE_BASE.layout : computeTreeLayout(visibleRows, BY_ID, HIJOS_POR_ID);
+    return groupIsolatedPopes(layout, [...isolatedPopeIds], BY_ID);
   }, [visibleRows, visiblePeople.length, connectionSet, connectionResult, gen]);
   const positions = treeLayout.positions;
   const treeViewport = useTreeViewport(scrollRef, zoom, mostrarArbol);
@@ -891,7 +893,7 @@ export default function Explorer({ initialPanel = null, treeBase: TREE_BASE }) {
 
 
   useAtlasSession({
-    ...savedSession, query, territorios, dinastias, titulos, siglos, relaciones, collapsedIds,
+    ...savedSession, atlasIds, query, territorios, dinastias, titulos, siglos, relaciones, collapsedIds,
     dinastiasExpandidas, territoriosExpandidos, selectedId: seleccion?.id || null,
     currentSearchIndex, zoom, mode, connectionIds, connectionCriterion, origen, destino, modoComparacion, focoId, focoAlcance,
     anioGlobal, vistasActivas, panelesVisibles, personHistory, timelineScaleIndex, timelineMode,
@@ -913,11 +915,11 @@ export default function Explorer({ initialPanel = null, treeBase: TREE_BASE }) {
   const queryTrim = normalizaTexto(query);
   const searchMatchIds = useMemo(() => {
     if (!queryTrim) return [];
-    return visiblePeople.filter((persona) => {
+    return PERSONAS.filter((persona) => {
       return SEARCH_TEXT_BY_ID[persona.id].includes(queryTrim);
     }).map((persona) => persona.id);
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [queryTrim, visibleSignature]);
+  }, [queryTrim]);
   const searchMatchSet = useMemo(() => new Set(searchMatchIds), [searchMatchIds]);
   const searchSignature = searchMatchIds.join("|");
   const searchCurrentId = searchMatchIds.length ? searchMatchIds[((currentSearchIndex % searchMatchIds.length) + searchMatchIds.length) % searchMatchIds.length] : null;
@@ -1119,8 +1121,8 @@ export default function Explorer({ initialPanel = null, treeBase: TREE_BASE }) {
     if (!slug) return;
     const url = new URL(window.location.href);
     url.pathname = rutaEntidadLocalizada("es", "persona", slug);
-    if (mode === "conexion") url.searchParams.set("atlas", "1");
-    else url.searchParams.delete("atlas");
+    url.searchParams.set("atlas", "1");
+    writeAtlasIds(url, atlasIds);
     const destino = `${url.pathname}${url.search}${url.hash}`;
     const actual = `${window.location.pathname}${window.location.search}${window.location.hash}`;
     if (destino === actual) return;
@@ -1163,7 +1165,7 @@ export default function Explorer({ initialPanel = null, treeBase: TREE_BASE }) {
     if (typeof window === "undefined") return;
     const url = new URL(window.location.href);
     url.pathname = "/es/";
-    url.searchParams.delete("atlas");
+    writeAtlasIds(url, atlasIds);
     window.history.pushState({ eade: "atlas" }, "", `${url.pathname}${url.search}${url.hash}`);
   };
 
@@ -1171,6 +1173,8 @@ export default function Explorer({ initialPanel = null, treeBase: TREE_BASE }) {
     if (typeof window === "undefined") return undefined;
     const onPopState = () => {
       historyPopRef.current = true;
+      setAtlasIds(atlasIdsFromLocation(window.location.pathname, window.location.search, familyData));
+      setAtlasUndo([]);
       const incomingConnection = connectionFromSearch(window.location.search, BY_ID);
       if (incomingConnection.ids.length) {
         setConnectionIds(incomingConnection.ids);setConnectionCriterion(incomingConnection.criterion);setMode('conexion');
@@ -1183,6 +1187,7 @@ export default function Explorer({ initialPanel = null, treeBase: TREE_BASE }) {
       // que existía antes de iniciar el recorrido, no solo la URL.
       const anteriorHistoria = historiaSnapshotRef.current;
       if (anteriorHistoria && ruta?.tipo !== "historia") {
+        setAtlasIds(anteriorHistoria.atlasIds ?? null);
         setQuery(anteriorHistoria.query);
         setTerritorios(anteriorHistoria.territorios);
         setDinastias(anteriorHistoria.dinastias);
@@ -1292,12 +1297,14 @@ export default function Explorer({ initialPanel = null, treeBase: TREE_BASE }) {
     const paso = historia?.pasos?.[index];
     if (!paso) return;
     setHistoriaPasoIndex(index);
+    setAtlasIds([...(paso.personas || [paso.persona])].filter(id => BY_ID[id]));
     setReproduciendoHistoria(false);
     setTimelineMode("ambos");
     setAnioGlobal(paso.anio);
     setAnioInput(String(paso.anio));
     setEventoSeleccionadoId(paso.eventoId || null);
     const personaId = paso.persona || (paso.personas || []).find((id) => BY_ID[id]);
+    if (!personaId && atlasIds?.length) centerOn(atlasIds[0]);
     if (personaId && BY_ID[personaId]) {
       setSeleccion(BY_ID[personaId]);
       setHovered(null);
@@ -1313,7 +1320,7 @@ export default function Explorer({ initialPanel = null, treeBase: TREE_BASE }) {
       const rutaActual = typeof window !== "undefined" ? rutaPublicaDesdePath(window.location.pathname) : null;
       const historiaAbiertaDesdeEnlace = rutaActual?.tipo === "historia";
       historiaSnapshotRef.current = {
-        query, territorios, dinastias, titulos, siglos, relaciones, soloFavoritos, anioGlobal,
+        atlasIds, query, territorios, dinastias, titulos, siglos, relaciones, soloFavoritos, anioGlobal,
         vistasActivas, seleccionId: seleccion?.id || null, timelineMode, eventoSeleccionadoId,
         mode, connectionIds, connectionCriterion, origen, destino, focoId, focoAlcance, collapsedIds, compareRouteIndex,
         rutaAnterior: typeof window !== "undefined"
@@ -1360,6 +1367,7 @@ export default function Explorer({ initialPanel = null, treeBase: TREE_BASE }) {
     setHistoriaPasoIndex(0);
     setEventoSeleccionadoId(null);
     if (!anterior) return;
+    setAtlasIds(anterior.atlasIds ?? null);
     setQuery(anterior.query);
     setTerritorios(anterior.territorios);
     setDinastias(anterior.dinastias);
@@ -1408,7 +1416,7 @@ export default function Explorer({ initialPanel = null, treeBase: TREE_BASE }) {
     const url = new URL(window.location.href);
     url.pathname = rutaEntidadLocalizada("es", "persona", slugPersonaPorLocale(seleccion, "es"));
     url.search = "";
-    url.searchParams.set("atlas", "1");
+    writeAtlasIds(url, atlasIds);
     url.hash = "";
     if (Number.isFinite(anioGlobal)) url.searchParams.set("anio", String(anioGlobal));
     url.searchParams.set("vista", vistaPrincipal);
@@ -1419,7 +1427,7 @@ export default function Explorer({ initialPanel = null, treeBase: TREE_BASE }) {
     siglos.forEach((valor) => url.searchParams.append("siglo", String(valor)));
     relaciones.forEach((valor) => url.searchParams.append("relacion", valor));
     return url.toString();
-  }, [seleccion, mode, connectionIds, connectionCriterion, anioGlobal, vistaPrincipal, query, territorios, dinastias, titulos, siglos, relaciones]);
+  }, [atlasIds, seleccion, mode, connectionIds, connectionCriterion, anioGlobal, vistaPrincipal, query, territorios, dinastias, titulos, siglos, relaciones]);
 
   const compartirPersona = useCallback(async () => {
     const enlace = construirEnlaceCompartido();
@@ -1513,6 +1521,7 @@ export default function Explorer({ initialPanel = null, treeBase: TREE_BASE }) {
     }
 
     const personaId = params.get("persona") || personaIdDesdeRuta(window.location.pathname);
+    if (!personaId && atlasIds?.length) centerOn(atlasIds[0]);
     if (personaId && BY_ID[personaId]) {
       setSeleccion(BY_ID[personaId]);
       setPersonHistory({ ids: [personaId], index: 0 });
@@ -1671,7 +1680,32 @@ export default function Explorer({ initialPanel = null, treeBase: TREE_BASE }) {
     return {people:ids.map(id=>BY_ID[id]).filter(Boolean),edges:edges || selectionEdges(graph,ids),gen,terminals:mode==='conexion'?connectionIds:[seleccion?.id].filter(Boolean),title,url:mode==='conexion'?new URL(connectionUrl(connectionIds,connectionCriterion), window.location.origin).href:(construirEnlaceCompartido() || window.location.href)};
   };
 
+  const changeAtlasScope = (next, { remember = true, center = null } = {}) => {
+    if (remember) setAtlasUndo(previous => [...previous.slice(-19), atlasIds]);
+    setAtlasIds(next);
+    const url = writeAtlasIds(new URL(window.location.href), next);
+    window.history.pushState({ eade: 'atlas-selection' }, '', url.pathname + url.search);
+    if (center) centerOn(center);
+  };
+  const startFamily = id => {
+    const ids = familyIds(familyData, id);
+    if (!ids.length) return;
+    limpiar(); setMode('view'); setFocoId(null); setCollapsedIds([]);
+    setSeleccion(BY_ID[id]);
+    changeAtlasScope(ids, { center: id });
+  };
+  const additions = Object.fromEntries(['parents','children','family'].map(kind => [kind, atlasIds !== null && seleccion ? familyIds(familyData, seleccion.id, kind).filter(id => !atlasSet.has(id)) : []]));
+  const growth = { ids: atlasIds, selected: seleccion, query, results: searchMatchIds.map(id => BY_ID[id]), additions,
+    onStart: startFamily, onSelect: id => seleccionarPersonaPorId(id, { centrar: atlasSet === null || atlasSet.has(id) }),
+    onExpand: kind => changeAtlasScope([...new Set([...(atlasIds || []), ...additions[kind]])], { center: seleccion?.id }),
+    onUndo: () => { const previous = atlasUndo.at(-1); setAtlasUndo(atlasUndo.slice(0, -1)); changeAtlasScope(previous, { remember: false, center: previous?.[0] }); },
+    canUndo: atlasUndo.length > 0, onFull: () => { limpiar(); setMode('view'); setFocoId(null); setCollapsedIds([]); changeAtlasScope(null); },
+    onNew: () => { limpiar(); setMode('view'); setSeleccion(null); changeAtlasScope([]); },
+    onFilters: () => alternarPanelAuxiliar('filtros'), filtersOpen: mostrarFiltros, popeCount: treeLayout.isolatedPopeCount,
+  };
+
   const viewModel = {
+    growth,
     storyReturn,
     connectionIds, setConnectionIds, connectionCriterion, setConnectionCriterion, connectionResult, getExportSelection,
     initialMapViewport: mapViewportRef.current, recordMapViewport, timelineVirtual, timelineListRef, scrollRef, tlScrollRef, locale, setLocale, query, setQuery,

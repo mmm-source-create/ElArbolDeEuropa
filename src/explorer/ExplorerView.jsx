@@ -1,3 +1,4 @@
+import AtlasGrowth from './AtlasGrowth.jsx';
 import '../stories/stories.css';
 import ConnectionControls from "../connections/ConnectionControls.jsx";
 import TreeExport from "../connections/TreeExport.jsx";
@@ -92,6 +93,7 @@ export default function ExplorerView({ vm }) {
     <>
       {vm.storyReturn && <a className="story-return" href={vm.storyReturn}>← Volver al capítulo</a>}
       {!modoTrabajo && <SiteHeader variant="atlas" locale={locale} onLanguageChange={cambiarIdioma} />}
+      <AtlasGrowth {...vm.growth}/>
     <div className={`wrap${modoTrabajo ? " atlas-work-mode" : ""}`}>
       <div className={`workspace-topbar${modoTrabajo ? " is-work-mode" : ""}`}>
         <section className="workspace-topbar-section workspace-toolbar-search">
@@ -485,7 +487,7 @@ export default function ExplorerView({ vm }) {
             <div className="panel-head panel-head-static">
               <span className="panel-title">Filtros</span>
               <span className="panel-count">
-                {hayFiltros ? `${visiblePeople.length} / ${PERSONAS.length} visibles` : `${PERSONAS.length} personas`}
+                {visiblePeople.length !== PERSONAS.length ? `${visiblePeople.length} / ${PERSONAS.length} visibles` : `${PERSONAS.length} personas`}
               </span>
             </div>
             <div className={`filter-active-overview${filtrosActivosCompactos.length ? " has-active" : ""}`}>

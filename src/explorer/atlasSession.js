@@ -8,6 +8,7 @@ const finite = (v, fallback, min, max) => typeof v === 'number' && Number.isFini
 export function sanitizeSession(value, nested = false) {
   if (!value || value.version !== 1 || typeof value !== 'object') return null;
   const out = { version: 1 };
+  out.atlasIds = Array.isArray(value.atlasIds) ? strings(value.atlasIds) : null;
   for (const field of arrayFields) out[field] = strings(value[field]);
   for (const field of stringFields) out[field] = typeof value[field] === 'string' ? value[field].slice(0, 500) : null;
   out.connectionIds = strings(value.connectionIds).slice(0,5);
@@ -50,7 +51,7 @@ export function sanitizeSession(value, nested = false) {
 export function shouldResumeAtlas(href) {
   const url = new URL(href, DEFAULT_SITE_URL);
   return /^\/es\/?$/.test(url.pathname) && url.searchParams.get('continuar') === '1'
-    && !['conectar','vinculos','persona','territorio','territorios','dinastia','dinastias','titulo','titulos','siglo','siglos','relaciones','vista','q','anio','historia'].some(k => url.searchParams.has(k));
+    && !['seleccion','familia','arbol','conectar','vinculos','persona','territorio','territorios','dinastia','dinastias','titulo','titulos','siglo','siglos','relaciones','vista','q','anio','historia'].some(k => url.searchParams.has(k));
 }
 
 export function readAtlasSession(storage) {
