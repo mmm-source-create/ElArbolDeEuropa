@@ -11,6 +11,7 @@ export function publicMeta({title,description,path='/es/'},siteUrl=DEFAULT_SITE_
  ],alternates:[{hreflang:'es',href:canonical},{hreflang:'x-default',href:canonical}]};
 }
 export function entityMeta(kind,data,slug) {
+ if(kind==='historia')return {title:`${data?.nombre || 'Historia'} — ${SITE_NAME}`,description:(data?.chapter?data.pasos[data.chapter-1].texto:data?.descripcion||'Historias de Europa, capítulo a capítulo.').slice(0,155),path:`/es/historia/${encodeURIComponent(data?.slug||slug)}${data?.chapter?`/capitulo/${data.chapter}`:''}`};
  if(kind==='persona')return {
   title:data?`${data.nombre} — ${SITE_NAME}`:`Persona — ${SITE_NAME}`,
   description:data?(data.biografia||data.resumen||'').replace(/\s+/g,' ').trim().slice(0,155):'Ficha histórica en El Árbol de Europa.',

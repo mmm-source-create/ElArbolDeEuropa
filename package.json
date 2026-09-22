@@ -1,11 +1,11 @@
 {
   "name": "el-arbol-de-europa",
   "private": true,
-  "version": "2.15.2",
+  "version": "2.16.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "prebuild": "node audit-personas.mjs --fail-on-errors && node audit-territorios.mjs --fail-on-errors && node audit-dinastias.mjs && node audit-sucesiones.mjs && node audit-coronas.mjs && node generate-sitemap.mjs && node generate-tree-base.mjs && node generate-territorios.mjs && node generate-dinastias.mjs",
+    "prebuild": "node audit-personas.mjs --fail-on-errors && node audit-territorios.mjs --fail-on-errors && node audit-dinastias.mjs && node audit-sucesiones.mjs && node audit-coronas.mjs && node generate-sitemap.mjs && node generate-tree-base.mjs && node generate-territorios.mjs && node generate-dinastias.mjs && node generate-historias.mjs",
     "build": "vite build --manifest && node scripts/prerender-ssg.mjs && node scripts/audit-ssg.mjs",
     "preview": "vite preview",
     "audit": "node audit-personas.mjs",

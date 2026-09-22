@@ -46,6 +46,8 @@ export function resolverRuta(rawPathname = "/", search = "") {
     const catalog = catalogoDesdePath(pathname);
     const info = infoDesdePath(pathname);
     const atlasRequested = params.get("atlas") === "1";
+    const storyMatch = pathname.match(/^\/es\/historia\/([^/]+)(?:\/capitulo\/([1-9][0-9]*))?\/?$/);
+    if (storyMatch && !atlasRequested) return { locale, view: "story", storySlug: decodificarSlug(storyMatch[1]), chapter: storyMatch[2] ? Number(storyMatch[2]) : null };
     const dynastyMatch = pathname.match(/^\/es\/dinastia\/([^/]+)\/?$/);
     if (dynastyMatch && !atlasRequested) return { locale, view: "dynasty", dynastySlug: decodificarSlug(dynastyMatch[1]) };
     const territoryMatch = pathname.match(/^\/es\/territorio\/([^/]+)\/?$/);

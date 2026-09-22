@@ -28,12 +28,12 @@ const routes=sample?selectSample(allRoutes):allRoutes;
 const temp=await fs.mkdtemp(path.join(root,'.ssg-build-'));
 const target=sample?path.join(root,'.ssg-sample'):dist;
 if(sample)await fs.rm(target,{recursive:true,force:true});
-const stats={version:JSON.parse(await fs.readFile('package.json','utf8')).version,mode:sample?'sample':'full',counts:{persona:0,dinastia:0,territorio:0},pages:[],css:assets.css};
+const stats={version:JSON.parse(await fs.readFile('package.json','utf8')).version,mode:sample?'sample':'full',counts:{persona:0,dinastia:0,territorio:0,historia:0},pages:[],css:assets.css};
 try {
  await build({configFile:false,root,publicDir:false,logLevel:'error',build:{ssr:'src/public/ssg-entry.jsx',outDir:path.join(temp,'renderer'),emptyOutDir:true,minify:false,rolldownOptions:{output:{entryFileNames:'entry.mjs'}}}});
  const {renderPage}=await import(pathToFileURL(path.join(temp,'renderer/entry.mjs')).href);
  for(const route of routes) {
-  const data=JSON.parse(await fs.readFile(path.join(dist,STATIC_FOLDERS[route.kind],`${route.slug}.json`),'utf8'));
+  const data=JSON.parse(await fs.readFile(path.join(dist,STATIC_FOLDERS[route.kind],`${route.slug}${route.chapter?`/capitulo/${route.chapter}`:""}.json`),'utf8'));
   if(route.kind==='dinastia'&&canonicalDynastySlug(route.slug)!==data.slug)throw new Error(`Alias dinástico no reconocido: ${route.path}`);
   const page={schema:STATIC_SCHEMA,...route,data};
   if(!validatePage(page))throw new Error(`Metadatos incompletos: ${route.path}`);

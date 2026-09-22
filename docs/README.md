@@ -11,6 +11,7 @@ Los informes describen el estado validado de cada entrega. Sus cifras y listas d
 
 | Versión | Contenido |
 | --- | --- |
+| [2.16](V2.16.md) | Historias con entrada propia, capítulos y progreso |
 | [2.15.2](V2.15.2.md) | Seguridad, validación y limpieza |
 | [2.15](V2.15.md) | Aprender con el Atlas |
 | [2.14](V2.14.md) | Del Adriático al mar Negro |

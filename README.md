@@ -2,8 +2,8 @@
 
 Atlas histórico y genealógico para explorar personas, dinastías, territorios y sus conexiones familiares.
 
-- [Web](https://www.treeofeurope.eu/es/) · **V2.15.2**
-- [Cambios de esta versión](docs/V2.15.2.md) · [Documentación e historial](docs/README.md) · [Seguridad](SECURITY.md)
+- [Web](https://www.treeofeurope.eu/es/) · **V2.16**
+- [Cambios de esta versión](docs/V2.16.md) · [Documentación e historial](docs/README.md) · [Seguridad](SECURITY.md)
 
 ## Instalación y validación
 
@@ -52,6 +52,6 @@ El ZIP complementario contiene solo archivos añadidos o modificados. Si una act
 
 ## Indexación y derechos
 
-Las fichas individuales se publican con contenido y metadatos en el HTML inicial. El Atlas, los desafíos, los catálogos y las portadas conservan su arranque dinámico. `sitemap.xml` y `sitemap-full.xml` se generan con las mismas rutas y ambas URL siguen disponibles. La indexación se supervisa en Google Search Console.
+Las historias, sus capítulos y las fichas individuales se publican con contenido y metadatos en el HTML inicial. El Atlas, los desafíos, los catálogos y las portadas conservan su arranque dinámico. `sitemap.xml` y `sitemap-full.xml` se generan con las mismas rutas y ambas URL siguen disponibles. La indexación se supervisa en Google Search Console.
 
 El código y los contenidos originales conservan **todos los derechos reservados**: [COPYRIGHT.md](COPYRIGHT.md). Las imágenes, la cartografía y otros materiales de terceros conservan sus atribuciones y condiciones.

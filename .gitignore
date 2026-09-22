@@ -25,3 +25,5 @@ public/catalogos/
 # Sitemaps derivados del mismo catálogo en prebuild.
 public/sitemap.xml
 public/sitemap-full.xml
+
+public/historias-meta/
