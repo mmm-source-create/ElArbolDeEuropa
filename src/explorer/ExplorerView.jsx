@@ -212,17 +212,19 @@ export default function ExplorerView({ vm }) {
                 <SkipForward size={12} />
               </button>
               <label className="history-speed-control">
-                <span>Velocidad</span>
+                <span>Años por avance</span>
                 <select
                   value={velocidadHistoria}
                   onChange={(event) => setVelocidadHistoria(Number(event.target.value))}
-                  aria-label="Velocidad de reproducción"
+                  aria-label="Años por avance"
                 >
                   <option value={1}>1 año/paso</option>
                   <option value={5}>5 años/paso</option>
                   <option value={10}>10 años/paso</option>
                 </select>
               </label>
+              <label className="history-speed-control"><span>Ritmo</span><select aria-label="Ritmo de reproducción" value={vm.playbackMs} onChange={e=>vm.setPlaybackMs(Number(e.target.value))}><option value={2000}>Pausado (2 s)</option><option value={1000}>Normal (1 s)</option><option value={500}>Rápido (0,5 s)</option></select></label>
+              <button type="button" className="history-playback-btn" disabled={vm.nextYear===null} onClick={()=>actualizarAnioDesdeRango(vm.nextYear)} title="Ir al siguiente acontecimiento registrado">Siguiente hito{vm.nextYear!==null?`: ${vm.nextYear}`:''}</button>
             </div>
           </div>
         </section>

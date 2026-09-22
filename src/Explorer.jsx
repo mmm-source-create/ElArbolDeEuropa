@@ -1,3 +1,4 @@
+import { nextRecordedYear } from './data/europeTimeline.js';
 import { familyIndex, familyIds, atlasIdsFromLocation, writeAtlasIds, isolatedPopes, groupIsolatedPopes } from './explorer/progressiveAtlas.js';
 import { safeStoryReturn } from './stories/storyModel.js';
 import EnglishLanding from "./public/EnglishLanding.jsx";
@@ -124,6 +125,7 @@ export default function Explorer({ initialPanel = null, treeBase: TREE_BASE }) {
   const [anioInput, setAnioInput] = useState(savedSession?.anioGlobal != null ? String(savedSession.anioGlobal) : "");
   const [reproduciendoHistoria, setReproduciendoHistoria] = useState(false);
   const [velocidadHistoria, setVelocidadHistoria] = useState(5);
+  const [playbackMs, setPlaybackMs] = useState(1000);
   const [shareStatus, setShareStatus] = useState("");
   const [collapsedIds, setCollapsedIds] = useState(savedSession?.collapsedIds ?? []);
   const [vistasActivas, setVistasActivas] = useState(savedSession?.vistasActivas ?? { arbol: true, mapa: true });
@@ -657,9 +659,9 @@ export default function Explorer({ initialPanel = null, treeBase: TREE_BASE }) {
         }
         return siguiente;
       });
-    }, 650);
+    }, playbackMs);
     return () => window.clearInterval(timer);
-  }, [reproduciendoHistoria, velocidadHistoria]);
+  }, [reproduciendoHistoria, velocidadHistoria, playbackMs]);
 
   const mostrarArbol = vistasActivas.arbol;
   const mostrarMapa = vistasActivas.mapa;
@@ -1705,6 +1707,7 @@ export default function Explorer({ initialPanel = null, treeBase: TREE_BASE }) {
   };
 
   const viewModel = {
+    playbackMs, setPlaybackMs, nextYear: nextRecordedYear(anioGlobal ?? TL_MIN - 1, { personas: PERSONAS, eventos: EVENTOS_HISTORICOS, min: TL_MIN, max: TL_MAX }),
     growth,
     storyReturn,
     connectionIds, setConnectionIds, connectionCriterion, setConnectionCriterion, connectionResult, getExportSelection,
