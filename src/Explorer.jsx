@@ -1675,11 +1675,17 @@ export default function Explorer({ initialPanel = null, treeBase: TREE_BASE }) {
 
   const getExportSelection = (scope) => {
     let ids, edges, title;
-    if (scope !== 'visible' && mode === 'conexion' && connectionSet) { ids = connectionResult.ids; edges = connectionResult.edges; title = 'Conexión entre personas'; }
-    else if (scope !== 'visible' && mode === 'compare') { ids = comparePath || []; edges = ids.slice(1).map((id,i) => ({from:ids[i],to:id,type:(graph[ids[i]].find(e=>e.id===id)?.tipos||[]).includes('sangre')?'sangre':(graph[ids[i]].find(e=>e.id===id)?.tipos||[]).includes('matrimonio')?'matrimonio':'amante'})); title = 'Comparación de parentesco'; }
-    else if (scope === 'visible' || mode === 'foco') { ids = visibleIds; title = 'Rama del Atlas'; }
-    else { ids = seleccion ? [...conjuntoFoco(seleccion.id, 'cercana')] : []; title = seleccion ? `Familia de ${seleccion.nombre}` : 'Selección del árbol'; }
-    return {people:ids.map(id=>BY_ID[id]).filter(Boolean),edges:edges || selectionEdges(graph,ids),gen,terminals:mode==='conexion'?connectionIds:[seleccion?.id].filter(Boolean),title,url:mode==='conexion'?new URL(connectionUrl(connectionIds,connectionCriterion), window.location.origin).href:(construirEnlaceCompartido() || window.location.href)};
+    if (scope === 'branch') { ids = seleccion ? familyIds(familyData, seleccion.id) : []; title = seleccion ? `Familia de ${seleccion.nombre}` : 'Familia'; }
+    else if (scope === 'visible') {
+      const el=scrollRef.current;
+      ids=el?visibleIds.filter(id=>{const p=positions[id];return p&&p.x+p.w>=el.scrollLeft/zoom&&p.x<=(el.scrollLeft+el.clientWidth)/zoom&&p.y+p.h>=el.scrollTop/zoom&&p.y<=(el.scrollTop+el.clientHeight)/zoom;}):[];
+      title='Encuadre visible del Atlas';
+    }
+    else if (mode === 'conexion' && connectionSet) { ids = connectionResult.ids; edges = connectionResult.edges; title = 'Conexión entre personas'; }
+    else if (mode === 'compare') { ids = comparePath || []; title = 'Comparación de parentesco'; }
+    else { ids = atlasIds ?? visibleIds; title = seleccion ? `Selección de ${seleccion.nombre}` : 'Selección del Atlas'; }
+
+    return {people:ids.map(id=>BY_ID[id] ? {...BY_ID[id],slug:slugPersonaPorLocale(BY_ID[id], "es")} : null).filter(Boolean),edges:edges || selectionEdges(graph,ids),gen,terminals:mode==='conexion'?connectionIds:[seleccion?.id].filter(Boolean),title,url:mode==='conexion'?new URL(connectionUrl(connectionIds,connectionCriterion), window.location.origin).href:(construirEnlaceCompartido() || window.location.href)};
   };
 
   const changeAtlasScope = (next, { remember = true, center = null } = {}) => {

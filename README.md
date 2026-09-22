@@ -2,8 +2,8 @@
 
 Atlas histórico y genealógico para explorar personas, dinastías, territorios y sus conexiones familiares.
 
-- [Web](https://www.treeofeurope.eu/es/) · **V2.18**
-- [Cambios de esta versión](docs/V2.18.md) · [Documentación e historial](docs/README.md) · [Seguridad](SECURITY.md)
+- [Web](https://www.treeofeurope.eu/es/) · **V2.19**
+- [Cambios de esta versión](docs/V2.19.md) · [Documentación e historial](docs/README.md) · [Seguridad](SECURITY.md)
 
 ## Instalación y validación
 

@@ -37,6 +37,8 @@ export function resolverRuta(rawPathname = "/", search = "") {
       : /^\/(persona|dinastia|territorio|historia)(?:\/|$)/.test(rawPathname)
         ? `/es${rawPathname}`
         : rawPathname;
+    const embedded = pathname.match(/^\/embed\/(?:persona\/([^/]+)|arbol)\/?$/);
+    if (embedded) return { locale: 'es', view: 'embed', personId: embedded[1] ? decodificarSlug(embedded[1]) : null };
     const params = new URLSearchParams(search);
     const locale = localeDesdePath(pathname);
     if (locale === "en") return { locale, view: "english", personSlug: null, legacyPersonId: null, catalog: null, info: null, panel: null };
