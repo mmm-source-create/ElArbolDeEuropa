@@ -11,6 +11,7 @@ Los informes describen el estado validado de cada entrega. Sus cifras y listas d
 
 | Versión | Contenido |
 | --- | --- |
+| [2.20](V2.20.md) | Portada con familias, historias y años |
 | [2.19](V2.19.md) | Exportación, impresión, material educativo e inserciones |
 | [2.18](V2.18.md) | Europa completa, comparación temporal y reproducción |
 | [2.17](V2.17.md) | Atlas gradual, búsqueda global y expansión reversible |
