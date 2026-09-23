@@ -1,13 +1,14 @@
 import React from "react";
 import {Check, X, ArrowRight, ExternalLink} from "lucide-react";
 import {IMAGENES_PERSONAS} from "../imagenesPersonas.js";
+import {responsiveImage} from "../utils/responsiveImage.js";
 function RetratoOpcion({ persona }) {
   const imagen = persona ? IMAGENES_PERSONAS[persona.id] : null;
   if (!imagen) return <span className="desafio-option-monogram">{persona?.nombre?.slice(0, 1) || "?"}</span>;
   return (
     <span className="desafio-option-portrait">
       <img
-        src={imagen.archivo}
+        {...responsiveImage(imagen.archivo, '72px')}
         alt=""
         loading="lazy"
         decoding="async"

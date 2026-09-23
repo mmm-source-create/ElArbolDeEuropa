@@ -17,6 +17,8 @@ import {
   Zap,
 } from "lucide-react";
 import { IMAGENES_PERSONAS } from "../imagenesPersonas.js";
+import { IMAGE_VARIANTS } from "../data/imageVariants.js";
+import { responsiveImage } from "../utils/responsiveImage.js";
 import { normalizarBusquedaPublica, slugPublico, tieneContenidoEditorial } from "../utils/personPresentation.js";
 import {
   crearDesafioDiario,
@@ -233,7 +235,7 @@ function Corazones({ vidas }) {
 export default function Desafio({ personas = [] }) {
   const byId = useMemo(() => Object.fromEntries(personas.map((p) => [p.id, p])), [personas]);
   const slugs = useMemo(() => construirSlugs(personas), [personas]);
-  const personasConRetrato = useMemo(() => personas.filter((persona) => Boolean(IMAGENES_PERSONAS[persona.id]?.archivo)), [personas]);
+  const personasConRetrato = useMemo(() => personas.filter((persona) => Boolean(IMAGE_VARIANTS[IMAGENES_PERSONAS[persona.id]?.archivo])), [personas]);
   const [estadisticas, setEstadisticas] = useState(leerEstadisticas);
   const bank = useMemo(() => successionBank(personas), [personas]);
   const [shared] = useState(() => readChallenge(typeof window==='undefined'?'':window.location.search, bank));
@@ -987,7 +989,7 @@ export default function Desafio({ personas = [] }) {
           <div className="desafio-portrait-result">
             {imagen?.archivo && (
               <span className="desafio-portrait-result-image">
-                <img src={imagen.archivo} alt={`Retrato de ${personaRetrato.nombre}`} style={{ objectPosition: imagen.encuadre || imagen.posicion || "50% 20%" }} />
+                <img {...responsiveImage(imagen.archivo, '96px')} alt={`Retrato de ${personaRetrato.nombre}`} style={{ objectPosition: imagen.encuadre || imagen.posicion || "50% 20%" }} />
               </span>
             )}
             <div>
@@ -1019,7 +1021,7 @@ export default function Desafio({ personas = [] }) {
           <div className="desafio-portrait-stage">
             {imagen?.archivo ? (
               <img
-                src={imagen.archivo}
+                {...responsiveImage(imagen.archivo, '(max-width: 600px) 80vw, 310px')}
                 alt="Retrato histórico por identificar"
                 draggable="false"
                 style={{

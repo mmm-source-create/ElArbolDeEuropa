@@ -1,6 +1,7 @@
 import React, {useEffect, useRef, useState} from 'react';
 import {ArrowLeft, Share2} from 'lucide-react';
 import {IMAGENES_PERSONAS} from '../imagenesPersonas.js';
+import {responsiveImage} from '../utils/responsiveImage.js';
 import {PreguntaOpciones, PreguntaOrden, Explicacion} from './Question.jsx';
 
 export default function LearningSession({questions, mode, sharedUrl, warning, byId, onAnswer, onBack, onAtlas}) {
@@ -36,7 +37,7 @@ export default function LearningSession({questions, mode, sharedUrl, warning, by
     </div> : <>
       <div className="desafio-question-card"><div className="desafio-question-topline"><span>{question.etiqueta||'Repaso'}</span><small>{question.territorio||'Conexiones del Atlas'}</small></div>
         <h2 ref={heading} tabIndex={-1}>{question.pregunta}</h2>
-        {question.imagenId && IMAGENES_PERSONAS[question.imagenId]?.archivo && <img className="desafio-review-portrait" src={IMAGENES_PERSONAS[question.imagenId].archivo} alt="Retrato histórico por identificar"/>}
+        {question.imagenId && IMAGENES_PERSONAS[question.imagenId]?.archivo && <img className="desafio-review-portrait" {...responsiveImage(IMAGENES_PERSONAS[question.imagenId].archivo, '160px')} alt="Retrato histórico por identificar"/>}
         {question.formato==='pistas' && <div className="desafio-clues">{question.pistas?.map((p,i)=><div key={i}><b>{i+1}</b><span>{p}</span></div>)}</div>}
         {question.formato==='orden' ? <PreguntaOrden pregunta={question} byId={byId} orden={order} respondida={selection!==null} onPick={pick}/> : <PreguntaOpciones pregunta={question} byId={question.imagenId?{}:byId} seleccion={selection} respondida={selection!==null} onSelect={answer}/>}
       </div>

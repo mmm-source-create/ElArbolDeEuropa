@@ -2,6 +2,7 @@
 
 Implementadas sucesivamente en una rama de revisión:
 
+- [V3.3](V3.3.md): edición inglesa más completa, corrección de retratos y contraste del tema oscuro.
 - [V3.2](V3.2.md): ajustes de visualización, privacidad y navegación uniforme en fichas e historias.
 - [V3.1](V3.1.md): lectura más cómoda dentro del Atlas, jerarquías visuales ajustadas, esqueletos fieles y 404 bilingüe propia.
 

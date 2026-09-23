@@ -78,9 +78,10 @@ test('repasar una ordenación conserva el orden elegido y corrige sin puntuar',a
 });
 test('Retratos mantiene la explicación del acierto y espera a Continuar',async()=>{
  const {IMAGENES_PERSONAS}=await import('../src/imagenesPersonas.js');
+ const {responsiveImage}=await import('../src/utils/responsiveImage.js');
  window.localStorage.clear();await mount();await click(button('Retratos'));
  const source=document.querySelector('.desafio-portrait-stage img').getAttribute('src');
- const person=PERSONAS.find(p=>IMAGENES_PERSONAS[p.id]?.archivo===source);assert.ok(person);
+ const person=PERSONAS.find(p=>responsiveImage(IMAGENES_PERSONAS[p.id]?.archivo).src===source);assert.ok(person);
  const input=document.querySelector('.desafio-name-input input');
  await act(async()=>{Object.getOwnPropertyDescriptor(window.HTMLInputElement.prototype,'value').set.call(input,person.nombre);input.dispatchEvent(new window.Event('input',{bubbles:true}));});
  await click([...document.querySelectorAll('.desafio-name-suggestions button')].find(b=>b.querySelector('strong').textContent===person.nombre));

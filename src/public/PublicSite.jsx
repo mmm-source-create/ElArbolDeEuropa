@@ -152,7 +152,7 @@ const HOME_COPY = {
     storiesEyebrow: "Guided journeys", storiesTitle: "Stories that open the Atlas", allStories: "All English stories", chapters: "chapters", start: "Begin the story",
     aboutEyebrow: "A growing project", aboutTitle: "A historical base to explore, not a closed list",
     about: "The project brings together genealogy, chronology and cartography. A missing person or relationship may simply not have been added yet. Documented corrections take priority over visual consistency.",
-    project: "About the project (Spanish)", methodology: "Sources and methodology",
+    project: "About the project", methodology: "Sources and methodology",
   },
 };
 
@@ -230,7 +230,7 @@ export function HomeContent({ data = HOME_DATA, locale = "es", title, onEnterAtl
         <section className="public-section public-about-strip">
           <div><span>{copy.aboutEyebrow}</span><h2>{copy.aboutTitle}</h2><p>{copy.about}</p></div>
           <div className="public-about-actions">
-            <a href="/es/proyecto">{copy.project}</a>
+            <a href={english ? "/en/about" : "/es/proyecto"}>{copy.project}</a>
             <a href={english ? "/en/methodology" : "/es/fuentes"}>{copy.methodology}</a>
           </div>
         </section>
@@ -255,7 +255,8 @@ const INFO_PAGES = {
         "Se priorizan figuras que conectan ramas, ejercen gobierno, fundan una línea relevante o aportan una conexión históricamente útil para la red. Las correcciones documentadas tienen prioridad sobre la mera coherencia visual."
       ]},
       { title: "Ámbito principal", paragraphs: [
-        "El periodo principal de trabajo es 1200–1800. El proyecto está en desarrollo y la base continúa ampliándose, corrigiéndose y documentándose."
+        "El periodo principal de trabajo es 1200–1800. El proyecto está en desarrollo y la base continúa ampliándose, corrigiéndose y documentándose.",
+        "Lo mantiene Manuel Muriel Cagigal, estudiante de Estudios Europeos con especialización en Relaciones Internacionales."
       ]},
     ],
   },
