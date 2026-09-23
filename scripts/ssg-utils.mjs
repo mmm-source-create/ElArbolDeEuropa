@@ -41,6 +41,6 @@ export function makeStaticDocument(shell,{html,meta},page,assets) {
  // La preferencia no cambia el HTML que React hidrata. Se aplica antes del primer dibujo.
  const notice=`<script>${SCREEN_NOTICE_SCRIPT}</script>`;
  head+='\n'+metadata.join('\n')+'\n'+links.join('\n')+'\n'+notice+'\n';
- const data=`<script id="${STATIC_DATA_ID}" type="application/json">${serializePage(page)}</script>`;
+ const data=page?`<script id="${STATIC_DATA_ID}" type="application/json">${serializePage(page)}</script>`:'';
  return shell.replace(/<html\b[^>]*>/i,`<html lang="${meta.lang}">`).replace(/<head>[\s\S]*?<\/head>/i,()=>`<head>${head}</head>`).replace('<div id="root"></div>',()=>`<div id="root">${html}</div>\n${data}`);
 }

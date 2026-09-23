@@ -6,6 +6,7 @@ import AtlasSkeleton from "./explorer/AtlasSkeleton.jsx";
 import ReadingSkeleton from "./stories/ReadingSkeleton.jsx";
 import SiteHeader from "./components/SiteHeader.jsx";
 import EnglishLanding from "./public/EnglishLanding.jsx";
+import NotFoundPage from "./public/NotFoundPage.jsx";
 import "./styles/theme.css";
 
 const EmbedPage = lazy(() => import("./embed/EmbedPage.jsx"));
@@ -53,6 +54,7 @@ export default function App() {
   if (!explorerRequested && initial.view === "dynasty") return <Suspense fallback={<p role="status">Cargando dinastía…</p>}><DynastyPage slug={initial.dynastySlug} /></Suspense>;
   if (!explorerRequested && initial.view === "territory") return <Suspense fallback={<p role="status">Cargando territorio…</p>}><TerritoryPage slug={initial.territorySlug} /></Suspense>;
   if (initial.view === "english") return <EnglishLanding />;
+  if (initial.view === "not-found") return <NotFoundPage locale={initial.locale} />;
   if (initial.view === "desafio") {
     return (
       <Suspense fallback={null}>
