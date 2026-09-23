@@ -1,6 +1,7 @@
 import {entityMeta} from "./publicMeta.js";
 import HistoricalUnions from "../components/HistoricalUnions.jsx";
 import React,{useEffect} from 'react';
+import {ArrowRight,Landmark} from 'lucide-react';
 import Sucesion from '../explorer/Sucesion.jsx';
 import {useJson,usePublicMeta} from './PublicSite.jsx';
 import SiteHeader from '../components/SiteHeader.jsx';
@@ -23,12 +24,12 @@ export function TerritoryPage({slug,initialData=null}) {
   return ()=>window.removeEventListener('hashchange',openAnchor);
  },[t]);
  const atlas=`/es/territorio/${encodeURIComponent(slug)}?atlas=1`;
- return <div className="public-site"><SiteHeader locale="es" pathname={`/es/territorio/${slug}`} prerendered={Boolean(initialData)}/><main className="territory-page">
- <a href="/es/territorios">← Territorios</a>
+ return <div className="public-site"><SiteHeader locale="es" pathname={`/es/territorio/${slug}`} prerendered={Boolean(initialData)}/><main className="public-main territory-page">
+ <nav className="public-breadcrumbs" aria-label="Migas de pan"><a href="/es/">Inicio</a><span aria-hidden="true">›</span><a href="/es/territorios">Territorios</a><span aria-hidden="true">›</span><span aria-current="page">{t?.nombre||'Ficha'}</span></nav>
  {loading&&<p role="status">Cargando historia…</p>}{error&&<p role="alert">No se ha podido cargar esta ficha. <a href="/es/territorios">Consultar el catálogo</a></p>}
- {t&&<><header><p>{claseTexto(t.clase)} · {t.naturaleza==='agrupacion'?'Agrupación de exploración':t.naturaleza==='compuesta'?'Entidad compuesta':'Entidad histórica'}</p><h1>{t.nombre}</h1>
+ {t&&<><header className="public-page-title territory-hero"><div className="public-page-icon"><Landmark size={22}/></div><span>{claseTexto(t.clase)} · {t.naturaleza==='agrupacion'?'Agrupación de exploración':t.naturaleza==='compuesta'?'Entidad compuesta':'Entidad histórica'}</span><h1>{t.nombre}</h1>
  <p>{t.resumen||`Esta ficha reúne los gobiernos y las conexiones documentadas en la base para ${t.nombre}. La serie puede ser incompleta: la ausencia de registros no implica que el territorio careciera de gobierno.`}</p>
- <div className="territory-actions"><a className="public-primary" href={atlas}>Abrir en el Atlas →</a><a className="public-secondary" href="#sucesion">Explorar Sucesión →</a></div></header>
+ <div className="territory-actions"><a className="public-primary" href={atlas}>Abrir en el Atlas <ArrowRight size={15}/></a><a className="public-secondary" href="#sucesion">Explorar sucesión <ArrowRight size={15}/></a></div></header>
  {t.nota&&<p>{t.nota}</p>}
  {!!t.pertenencias?.length&&<p>Vinculado a {t.pertenencias.map((v,i)=><React.Fragment key={i}><a href={`/es/territorio/${slugPublico(v.territorio)}`}>{v.territorio}</a> desde {v.desde}. </React.Fragment>)}</p>}
  {t.naturaleza!=='entidad'&&<section><h2>Territorios del conjunto</h2><p>Cada componente conserva sus títulos y cronología. Esta agrupación no establece una soberanía continua sobre todos ellos.</p><div className="territory-links">{t.componentes.map(n=><a key={n} href={`/es/territorio/${slugPublico(n)}`}>{n}</a>)}</div></section>}

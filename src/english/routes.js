@@ -19,7 +19,7 @@ export function englishRoute(pathname) {
 }
 export function translatedEquivalent(pathname,locale) {
  const path=String(pathname).replace(/\/$/,'');
- for(const [es,en] of [['/es','/en/'],['/es/fuentes','/en/methodology'],['/es/historias','/en/stories'],['/es/personas','/en/people']]) {
+ for(const [es,en] of [['/es','/en/'],['/es/fuentes','/en/methodology'],['/es/historias','/en/stories'],['/es/personas','/en/people'],['/es/privacidad','/en/privacy']]) {
   if(locale==='en'&&path===es)return en;
   if(locale==='es'&&path===en.replace(/\/$/,''))return es==='\/es'?'/es/':es;
  }

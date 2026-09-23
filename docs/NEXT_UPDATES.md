@@ -2,6 +2,7 @@
 
 Implementadas sucesivamente en una rama de revisión:
 
+- [V3.2](V3.2.md): ajustes de visualización, privacidad y navegación uniforme en fichas e historias.
 - [V3.1](V3.1.md): lectura más cómoda dentro del Atlas, jerarquías visuales ajustadas, esqueletos fieles y 404 bilingüe propia.
 
 - [V2.16](V2.16.md): entrada y capítulos propios de las 13 historias, progreso local, cronología y consulta de protagonistas; enlaces al Atlas y regreso.

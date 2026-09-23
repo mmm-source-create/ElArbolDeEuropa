@@ -43,7 +43,7 @@ export const SITE = Object.freeze({
   language: "es",
   // Configurables en Vercel sin tocar el código. VITE_* es público por diseño.
   publicUrl: resolveSiteUrl(import.meta.env.VITE_SITE_URL),
-  contactEmail: String(import.meta.env.VITE_CONTACT_EMAIL || "").trim(),
+  contactEmail: String(import.meta.env.VITE_CONTACT_EMAIL || "info@treeofeurope.eu").trim(),
 });
 
 const MESSAGES = {

@@ -2,7 +2,11 @@ import React from "react";
 import {createRoot,hydrateRoot} from "react-dom/client";
 import {readInitialPage} from "./public/staticData.js";
 import "./index.css";
+import './settings/preferences.css';
 import {startSpeedInsights} from "./monitoring.js";
+import {applyPreferences,readPreferences} from './settings/preferences.js';
+
+try { applyPreferences(readPreferences(window.localStorage)); } catch { applyPreferences({}); }
 
 if (import.meta.env.PROD) startSpeedInsights();
 
