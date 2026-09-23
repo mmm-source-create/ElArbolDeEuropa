@@ -11,7 +11,7 @@ export const TRANSLATED_PEOPLE = [
 ];
 export function englishRoute(pathname) {
  const path=String(pathname).replace(/\/$/,'');
- const simple={'/en':'home','/en/methodology':'methodology','/en/stories':'stories','/en/people':'people'};
+ const simple={'/en':'home','/en/about':'about','/en/methodology':'methodology','/en/stories':'stories','/en/people':'people'};
  if(simple[path])return {kind:'english',slug:simple[path],chapter:null,path:path==='/en'?'/en/':path};
  const match=path.match(/^\/en\/(story|person)\/([a-z0-9]+(?:-[a-z0-9]+)*)(?:\/chapter\/([1-9][0-9]*))?$/);
  if(!match||match[1]==='person'&&match[3])return null;
@@ -19,7 +19,7 @@ export function englishRoute(pathname) {
 }
 export function translatedEquivalent(pathname,locale) {
  const path=String(pathname).replace(/\/$/,'');
- for(const [es,en] of [['/es','/en/'],['/es/fuentes','/en/methodology'],['/es/historias','/en/stories'],['/es/personas','/en/people'],['/es/privacidad','/en/privacy']]) {
+ for(const [es,en] of [['/es','/en/'],['/es/proyecto','/en/about'],['/es/fuentes','/en/methodology'],['/es/historias','/en/stories'],['/es/personas','/en/people'],['/es/privacidad','/en/privacy']]) {
   if(locale==='en'&&path===es)return en;
   if(locale==='es'&&path===en.replace(/\/$/,''))return es==='\/es'?'/es/':es;
  }
@@ -33,5 +33,5 @@ export function translatedEquivalent(pathname,locale) {
  return null;
 }
 export function englishPaths() {
- return ['/en/','/en/stories','/en/people','/en/methodology',...TRANSLATED_PEOPLE.map(p=>`/en/person/${p.en}`),...TRANSLATED_STORIES.flatMap(s=>[`/en/story/${s.en}`,...Array.from({length:11},(_,i)=>`/en/story/${s.en}/chapter/${i+1}`)])];
+ return ['/en/','/en/about','/en/stories','/en/people','/en/methodology',...TRANSLATED_PEOPLE.map(p=>`/en/person/${p.en}`),...TRANSLATED_STORIES.flatMap(s=>[`/en/story/${s.en}`,...Array.from({length:11},(_,i)=>`/en/story/${s.en}/chapter/${i+1}`)])];
 }

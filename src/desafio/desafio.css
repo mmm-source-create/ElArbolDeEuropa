@@ -75,6 +75,7 @@
 }
 
 .desafio-level-card {
+  box-sizing: border-box;
   width: min(600px, 100%);
   margin: 24px auto 26px;
   padding: 12px 14px;

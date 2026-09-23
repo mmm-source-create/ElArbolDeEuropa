@@ -13,13 +13,13 @@ export default function EnglishPage({ page = null, pathname }) {
   const route = page || englishRoute(pathname || (typeof window === 'undefined' ? '/en/' : window.location.pathname));
   const state = useJson(route ? `/english-meta/${route.slug}${route.chapter ? `/capitulo/${route.chapter}` : ''}.json` : '/english-meta/unavailable.json', page?.data || null);
   const data = state.data;
-  const skeletonKind = route?.slug?.startsWith('person-') ? 'person' : route?.slug === 'home' ? 'home' : ['people', 'stories'].includes(route?.slug) ? 'catalog' : route?.slug === 'methodology' ? 'methodology' : 'story';
+  const skeletonKind = route?.slug?.startsWith('person-') ? 'person' : route?.slug === 'home' ? 'home' : ['people', 'stories'].includes(route?.slug) ? 'catalog' : ['methodology','about'].includes(route?.slug) ? 'methodology' : 'story';
   usePublicMeta(entityMeta('english', data, route?.slug));
   if (!data) return <div className="public-site"><SiteHeader locale="en"/><main className={`public-main${skeletonKind === 'story' ? ' story-page' : ''}`} aria-busy={state.loading}>{state.loading ? <ReadingSkeleton locale="en" kind={skeletonKind}/> : <div className="public-error" role="alert"><h1>Translation not available</h1><p>This page has not been translated or could not be loaded.</p><button className="public-primary" onClick={() => window.location.reload()}>Try again</button> <a className="public-secondary" href="/en/">English home</a></div>}</main><SiteFooter locale="en"/></div>;
   const prerendered = Boolean(page);
   if (data.type === 'story') return <StoryReader key={data.path} data={data} locale="en" prerendered={prerendered}/>;
   return <div className="public-site"><SiteHeader locale="en" pathname={data.path} prerendered={prerendered}/>
-    {data.type === 'home' ? <HomeContent data={data} locale="en" title={data.nombre} prerendered={prerendered}/> : data.type === 'person' ? <PersonContent persona={data} locale="en" path={data.path}/> : data.type === 'methodology' ? <EnglishMethodology data={data}/> : <EnglishCatalog data={data}/>}
+    {data.type === 'home' ? <HomeContent data={data} locale="en" title={data.nombre} prerendered={prerendered}/> : data.type === 'person' ? <PersonContent persona={data} locale="en" path={data.path}/> : ['methodology','about'].includes(data.type) ? <EnglishInfo data={data}/> : <EnglishCatalog data={data}/>}
     <SiteFooter locale="en"/>
   </div>;
 }
@@ -37,6 +37,7 @@ function EnglishCatalog({ data }) {
     <p className="english-catalog-note">{people ? 'Five short profiles' : 'Two complete stories'} are translated so far. <a href={data.esPath}>Browse the full Spanish collection</a>, or <a href="/es/?atlas=1&continuar=1">open the Spanish Atlas</a>.</p>
   </main>;
 }
-function EnglishMethodology({ data }) {
-  return <main className="public-main public-info-page"><PageTitle data={data} Icon={Info} eyebrow="About the project"/><div className="public-info-grid">{data.sections.map(([heading, text]) => <section className="public-info-card" key={heading}><h2>{heading}</h2><p>{text}</p></section>)}</div><p className="english-catalog-note"><a href="/es/fuentes">Full bibliography in its original language</a> · <a href="/es/?atlas=1&continuar=1">Explore the Spanish Atlas</a></p></main>;
+function EnglishInfo({ data }) {
+  const methodology=data.type==='methodology';
+  return <main className="public-main public-info-page"><PageTitle data={data} Icon={Info} eyebrow={methodology?'Sources and methodology':'The project'}/><div className="public-info-grid">{data.sections.map(section => <section className="public-info-card" key={section.title}><h2>{section.title}</h2>{section.paragraphs?.map(text=><p key={text}>{text}</p>)}{!!section.links?.length&&<div className="public-info-links">{section.links.map(([label,href])=><a key={href} href={href} target="_blank" rel="noreferrer">{label} ↗</a>)}</div>}</section>)}</div><p className="english-catalog-note">{methodology&&<><a href="/es/fuentes">Original Spanish source notes</a> · </>}<a href="/es/?atlas=1&continuar=1">Explore the Spanish Atlas</a></p></main>;
 }

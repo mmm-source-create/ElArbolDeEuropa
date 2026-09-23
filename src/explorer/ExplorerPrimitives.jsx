@@ -9,7 +9,7 @@ import { CORRECTORES, CORREOS_CORRECCIONES, HIJOS_POR_ID, listaAmantes, listaCon
 export function Chip({ label, active, onClick, color, small = false }) {
   return (
     <button type="button" onClick={onClick} className={`chip${small ? " chip-sm" : ""}`}
-      style={{ borderColor: color, background: active ? color : "transparent", color: active ? "#F6F1E4" : "#3A342A" }}>
+      style={{ borderColor: color, background: active ? color : "transparent", color: active ? "#F6F1E4" : "var(--eade-ink, #3A342A)" }}>
       {label}
     </button>
   );
@@ -300,4 +300,3 @@ export function Collapsible({ title, count, children, defaultOpen = true, headEx
     </div>
   );
 }
-

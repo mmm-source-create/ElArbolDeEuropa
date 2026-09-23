@@ -6,6 +6,18 @@ import { sanitizeSession, readAtlasSession, writeAtlasSession, shouldResumeAtlas
 import { SOURCES, sourcesForPerson, FUENTES_TERRITORIOS } from '../src/content/sources.js';
 import { TERRITORIOS } from '../src/data/territorios.js';
 import { responsiveImage } from '../src/utils/responsiveImage.js';
+import { IMAGE_VARIANTS } from '../src/data/imageVariants.js';
+import { IMAGENES_PERSONAS } from '../src/imagenesPersonas.js';
+
+test('los retratos usan solo variantes realmente publicadas', () => {
+  for (const image of Object.values(IMAGENES_PERSONAS)) {
+    const variants = IMAGE_VARIANTS[image.archivo]?.variants;
+    assert.ok(variants?.length, image.archivo);
+    assert.ok(fs.existsSync(`public${responsiveImage(image.archivo).src}`), image.archivo);
+    for (const variant of variants) assert.ok(fs.existsSync(`public${variant.src}`), variant.src);
+    assert.ok(!responsiveImage(image.archivo).srcSet.includes(image.archivo));
+  }
+});
 
 test('el centrado usa el zoom actual y el espacio real de cada panel', () => {
   const person = {x: 1000, y: 2400, w: 190, h: 70};

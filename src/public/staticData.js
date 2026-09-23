@@ -15,7 +15,7 @@ export function validatePage(page) {
  if(page?.schema!==STATIC_SCHEMA||!route||route.kind!==page.kind||route.slug!==page.slug||typeof page.data?.nombre!=='string'||!page.data.nombre.trim())return false;
  if(typeof page.data.slug!=='string'||!page.data.slug.match(/^[a-z0-9]+(?:-[a-z0-9]+)*$/))return false;
  if(page.kind!=='dinastia'&&page.data.slug!==page.slug)return false;
- if(page.kind==='english')return page.data.path===route.path&&page.chapter===route.chapter&&page.data.chapter===route.chapter&&['home','stories','people','methodology','person','story'].includes(page.data.type)&&(page.data.type!=='story'||Array.isArray(page.data.pasos)&&page.data.pasos.length>0&&(!page.chapter||page.chapter<=page.data.pasos.length)&&Array.isArray(page.data.protagonists));
+ if(page.kind==='english')return page.data.path===route.path&&page.chapter===route.chapter&&page.data.chapter===route.chapter&&['home','about','stories','people','methodology','person','story'].includes(page.data.type)&&(page.data.type!=='story'||Array.isArray(page.data.pasos)&&page.data.pasos.length>0&&(!page.chapter||page.chapter<=page.data.pasos.length)&&Array.isArray(page.data.protagonists));
  if(page.kind==='historia')return page.chapter===route.chapter&&page.data.chapter===route.chapter&&Array.isArray(page.data.pasos)&&page.data.pasos.length>0&&(!page.chapter||page.chapter<=page.data.pasos.length)&&['protagonists','fuentes'].every(k=>Array.isArray(page.data[k]));
  if(page.kind==='persona')return typeof page.data.id==='string'&&Array.isArray(page.data.reinados)&&Array.isArray(page.data.fuentes);
  if(page.kind==='dinastia')return ['miembros','ramas','gobiernos','fuentes','territorios','protagonistas'].every(k=>Array.isArray(page.data[k]));

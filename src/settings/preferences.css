@@ -25,3 +25,40 @@ html[data-eade-theme="dark"] .wrap :is(.tl-event-marker,.tl-event-row.selected .
 html[data-eade-theme="dark"] .wrap :is(.header h1,.header .sub,.note,.filter-title,.tl-axis,.tl-corner,.search-count){color:var(--eade-ink)}
 html[data-eade-theme="dark"] .wrap :is(input,select,textarea,button){color-scheme:dark}
 html[data-eade-theme="dark"] .reading-skeleton{--skeleton-fill:#5b5145;--skeleton-border:var(--eade-border)}
+
+/* Dark surfaces must change with their foreground: many Atlas and Challenge
+   panels use fixed light colours outside the shared theme tokens. */
+html[data-eade-theme="dark"] .public-site .public-info-links a{background:var(--eade-paper-soft);color:var(--eade-wine-dark);border:1px solid var(--eade-border)}
+html[data-eade-theme="dark"] .public-site .public-info-links a:hover{background:var(--eade-paper-bright);border-color:var(--eade-border-strong)}
+html[data-eade-theme="dark"] .public-site .public-info-card :is(h2,p){color:var(--eade-ink)}
+html[data-eade-theme="dark"] .public-site .public-info-card p{color:var(--eade-muted)}
+
+html[data-eade-theme="dark"] .desafio-page :is(.desafio-level-card,.desafio-mode-card,.desafio-question-card,.desafio-option,.desafio-order-card,.desafio-stat,.desafio-portrait-result,.desafio-name-suggestions){background:var(--eade-paper-bright);border-color:var(--eade-border);color:var(--eade-ink)}
+html[data-eade-theme="dark"] .desafio-page :is(.desafio-mode-card.is-path,.desafio-mode-card.is-streak,.desafio-mode-card.is-portrait,.desafio-mode-card.is-daily){background:linear-gradient(145deg,var(--eade-paper-bright),var(--eade-paper-soft))}
+html[data-eade-theme="dark"] .desafio-page :is(.desafio-hub h1,.desafio-final h2,.desafio-question-card h2,.desafio-mode-card strong,.desafio-option-copy strong,.desafio-order-card strong,.desafio-level-card b){color:var(--eade-ink)}
+html[data-eade-theme="dark"] .desafio-page :is(.desafio-intro,.desafio-mode-card>span:not(.desafio-mode-icon),.desafio-mode-card small,.desafio-level-card small,.desafio-option-copy small,.desafio-order-card small,.desafio-portrait-result span,.desafio-portrait-result small,.desafio-name-entry>small){color:var(--eade-muted)}
+html[data-eade-theme="dark"] .desafio-page :is(.desafio-level-card>span,.desafio-stat span,.desafio-fineprint,.desafio-question-topline small,.desafio-name-suggestions span){color:var(--eade-muted-soft)}
+html[data-eade-theme="dark"] .desafio-page :is(.desafio-option,.desafio-order-card,.desafio-mode-card):hover:not(:disabled){background:var(--eade-paper-soft);border-color:var(--eade-border-strong)}
+html[data-eade-theme="dark"] .desafio-page .desafio-option.is-correct{background:#29402e;border-color:#729b77;color:#eaf5e7}
+html[data-eade-theme="dark"] .desafio-page .desafio-option.is-wrong{background:#4a2d2b;border-color:#bb7b74;color:#f5dfd8}
+html[data-eade-theme="dark"] .desafio-page :is(.desafio-option-portrait,.desafio-option-monogram,.desafio-portrait-stage,.desafio-portrait-result-image){background:var(--eade-paper-soft);border-color:var(--eade-border)}
+html[data-eade-theme="dark"] .desafio-page :is(.desafio-name-input,.desafio-share-panel input){background:var(--eade-paper-soft);border-color:var(--eade-border);color:var(--eade-ink)}
+html[data-eade-theme="dark"] .desafio-page :is(.desafio-name-input input,.desafio-name-suggestions button){color:var(--eade-ink)}
+html[data-eade-theme="dark"] .desafio-page .desafio-name-entry>label{color:var(--eade-muted)}
+html[data-eade-theme="dark"] .desafio-page :is(.desafio-racha-rule,.desafio-discovered,.desafio-share-panel){background:var(--eade-paper-soft);border-color:var(--eade-border);color:var(--eade-muted)}
+html[data-eade-theme="dark"] .desafio-page :is(.desafio-secondary,.desafio-back,.desafio-lifelines button,.desafio-discovered button){background:var(--eade-paper-bright);border-color:var(--eade-border);color:var(--eade-ink)}
+html[data-eade-theme="dark"] .desafio-page :is(.desafio-streak-live,.desafio-record){background:var(--eade-paper-bright);color:var(--eade-gold)}
+html[data-eade-theme="dark"] .desafio-page :is(.desafio-hint,.desafio-clues>div,.desafio-racha-answer){background:var(--eade-paper-soft);border-color:var(--eade-border);color:var(--eade-ink)}
+html[data-eade-theme="dark"] .desafio-page .desafio-name-suggestions button:hover{background:var(--eade-paper-soft)}
+
+html[data-eade-theme="dark"] .wrap :is(.box,.box.selected,.tree-toolbar,.nav-btn,.search-nav-btn,.filter-active-overview,.bio-portrait-card){background:var(--eade-paper-bright);border-color:var(--eade-border);color:var(--eade-ink)}
+html[data-eade-theme="dark"] .wrap :is(.box .name,.bio-nombre,.bio-panel dd){color:var(--eade-ink)}
+html[data-eade-theme="dark"] .wrap :is(.box .role,.bio-texto,.bio-portrait-caption,.bio-portrait-caption strong,.bio-portrait-rights,.filter-active-overview-label,.filter-active-overview-values){color:var(--eade-muted)}
+html[data-eade-theme="dark"] .wrap :is(.bio-full-profile-link,.bio-portrait-caption a,.filter-section-count,.atlas-scope button){color:var(--eade-wine-dark)}
+html[data-eade-theme="dark"] .wrap .bio-portrait-frame{background:var(--eade-paper-soft);border-color:var(--eade-border)}
+html[data-eade-theme="dark"] .wrap .tree-toolbar-separator{background:var(--eade-border)}
+html[data-eade-theme="dark"] .wrap .nav-btn.active{background:#75332f;border-color:#a0635c;color:#fff5e8}
+html[data-eade-theme="dark"] .wrap :is(.nav-btn,.search-nav-btn):hover{background:var(--eade-paper-soft)}
+html[data-eade-theme="dark"] .wrap :is(.global-year-number,.history-playback-btn,.global-year-reset,.tree-toolbar button){background:var(--eade-paper-bright);border-color:var(--eade-border);color:var(--eade-ink)}
+html[data-eade-theme="dark"] .wrap :is(.history-playback-btn,.nav-btn).active{background:#75332f;border-color:#a0635c;color:#fff5e8}
+html[data-eade-theme="dark"] .wrap :is(.filter-section-title,.filter-section-meta,.filter-section-count,.panel-count,.bio-sobrenombre){color:var(--eade-muted)}

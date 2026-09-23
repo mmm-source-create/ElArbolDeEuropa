@@ -35,9 +35,19 @@ export const ENGLISH_PEOPLE = {
  MAXIM1:{name:'Maximilian I',role:'Holy Roman Emperor',summary:'Habsburg ruler whose marriage to Mary of Burgundy brought a major Burgundian inheritance into his family’s political network. His descendants connected that inheritance with the Iberian crowns and the wider monarchy of Charles V.'},
 };
 export const ENGLISH_METHOD = [
- ['Scope and coverage','The Tree of Europe is a growing historical and genealogical atlas, focused mainly on 1200–1800. A missing person, event or relationship may reflect incomplete coverage rather than historical absence.'],
- ['Relationships and succession','A recorded marriage does not prove a transfer of territory. A succession is explained only where the project has an editorial record supporting it; chronological proximity alone does not establish inheritance.'],
- ['Dates and uncertainty','Dates may be approximate, disputed or incomplete. Annual ranges do not establish that two rulers held power simultaneously on the same day. Consult the original documentary notes where precision matters.'],
- ['Territories and maps','Geographical groupings are navigation aids, not claims of common sovereignty. Nominal titles and claims are distinguished from effective government. The maps are a visual aid and must be read with their historical coverage limits.'],
- ['Sources and translations','This first English edition translates two complete stories, selected short profiles and the essential reading controls. Full archival references, detailed Spanish profiles and the complete Atlas remain available in Spanish. References attached to a person provide context, not automatic proof of every statement.'],
+ ['Bibliography','The general bibliography brings together the works, databases and institutions consulted. References to individual articles and biographies appear in the corresponding profiles.'],
+ ['Context and evidence','This database is a developing synthesis: a contextual reference does not by itself verify every detail in a profile.'],
+ ['Approximate dates','Dates are usually expressed by year; “c.” marks dates recorded as approximate.'],
+ ['Uncertain ranges','Where a date is known only as a range or bound, the profile displays it as such and adds a documentary explanation. The year filter includes years compatible with those bounds. Approximate dates retain their conventional year without inventing a margin of error.'],
+ ['Dynastic lines','Dynasty profiles distinguish cadet branches from transfers by marriage or inheritance. A shared family name does not by itself establish a line of descent among all its bearers.'],
+ ['Auxiliary references','Wikipedia is used as an auxiliary bibliographic guide. Disputed family relationships and chronologies require corroboration with specialist references.'],
+ ['Government','Government records distinguish territory, title, class and condition. A claim or nominal title is not equivalent to effective rule.'],
+ ['Successions','Explained successions are an editorial selection: a later entry does not by itself prove direct succession. Crises show historical claims; kinship is limited to recorded parentage. Accession to a title, coronation and effective rule are distinguished when specific information exists.'],
+ ['Crowns and years','Title stages group offices by year and distinguish effective rule, regency and nominal titles. Overlap within one year does not prove that two rulers held power on the same day. Unions may include breaks and do not imply uniform institutions. Europe in this year summarises only loaded data compatible with the selection; it does not extend lives beyond sufficiently documented bounds.'],
+ ['Cartography and coverage','The map is a simplified historical representation. An absent relationship means that it is not recorded in this database.'],
+];
+export const ENGLISH_ABOUT = [
+ ['What the project does','The Tree of Europe is an interactive historical genealogy project. It places family relationships, dynasties, reigns and political connections in medieval and early modern Europe within one navigable network.','The Atlas combines genealogy, chronology and maps so that a person can be explored through their family, their lifetime and the territories connected to them.'],
+ ['How to read the records','A missing person or relationship does not mean that it did not exist historically. The record may simply not have been added yet.','The project prioritises people who connect branches, held power, founded significant lines or make a historical connection easier to understand. Documented corrections take priority over visual consistency.'],
+ ['Scope and author','The main period covered is 1200–1800. The database is still being expanded, corrected and documented.','The project is maintained by Manuel Muriel Cagigal, a European Studies student specialising in International Relations.'],
 ];
