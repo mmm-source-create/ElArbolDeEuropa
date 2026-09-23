@@ -11,6 +11,7 @@ Los informes describen el estado validado de cada entrega. Sus cifras y listas d
 
 | Versión | Contenido |
 | --- | --- |
+| [3.2](V3.2.md) | Ajustes de visualización, privacidad y navegación uniforme |
 | [3.1](V3.1.md) | Pulido de lectura, loaders y página 404 propia |
 | [3.0](V3.0.md) | Coherencia visual, historias y exploración sencilla |
 | [2.20](V2.20.md) | Portada con familias, historias y años |
@@ -42,4 +43,4 @@ Las publicaciones se incorporan una sola vez a la bibliografía general. Sus aso
 
 ## V3
 
-[V3.1: pulido de lectura, loaders y página 404 propia](V3.1.md) · [V3.0: coherencia visual, historias y exploración sencilla](V3.0.md).
+[V3.2: ajustes, privacidad y navegación](V3.2.md) · [V3.1: pulido de lectura, loaders y página 404 propia](V3.1.md) · [V3.0: coherencia visual, historias y exploración sencilla](V3.0.md).

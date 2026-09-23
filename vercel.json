@@ -9,6 +9,8 @@
       "source": "/en/",
       "destination": "/en/index.html"
     },
+    {"source":"/en/privacy","destination":"/index.html"},
+    {"source":"/en/privacy/","destination":"/index.html"},
     {
       "source": "/en/story/:slug/chapter/:chapter",
       "destination": "/en/story/:slug/chapter/:chapter/index.html"
@@ -121,6 +123,8 @@
       "source": "/es/:section(personas|dinastias|territorios|historias|desafio|proyecto|fuentes|licencias|agradecimientos)",
       "destination": "/index.html"
     },
+    {"source":"/es/privacidad","destination":"/index.html"},
+    {"source":"/es/privacidad/","destination":"/index.html"},
     {
       "source": "/es/:section(personas|dinastias|territorios|historias|desafio|proyecto|fuentes|licencias|agradecimientos)/",
       "destination": "/index.html"

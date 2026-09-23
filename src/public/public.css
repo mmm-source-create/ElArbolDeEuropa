@@ -183,13 +183,22 @@ button.public-door-card { width: 100%; font: inherit; }
 .public-info-links { margin-top: 14px; display: flex; flex-wrap: wrap; gap: 7px; }
 .public-info-links a { display: inline-flex; align-items: center; gap: 4px; padding: 6px 8px; border-radius: 999px; background: #f1eadc; color: var(--eade-wine, #7a2e2e); font-size: 9.5px; font-weight: 700; text-decoration: none; }
 @media (max-width: 760px) { .public-info-grid { grid-template-columns: 1fr; } }
-.territory-page { max-width:1120px; margin:2rem auto; padding:0 1.5rem 3rem; font-size:1rem; line-height:1.65; }
-.territory-page h1 { font-family:var(--eade-serif); font-size:clamp(2.5rem,6vw,4.5rem); margin:.4em 0; }
-.territory-page h2 { font-family:var(--eade-serif); font-size:1.8rem; }
+.territory-page { max-width:1120px; font-size:12px; line-height:1.65; }
+.territory-page .territory-hero {max-width:820px;margin:8px auto 32px;padding:24px 0 34px;border-bottom:1px solid var(--eade-border)}
+.territory-page .territory-hero h1 {font:500 clamp(38px,6vw,60px)/1 var(--eade-serif);margin:7px 0 9px}
+.territory-page .territory-hero p {font-size:13px;line-height:1.6}
+.territory-page h2 { font-family:var(--eade-serif); font-size:24px; }
 .territory-page section { margin-top:2.5rem; padding-top:1rem; border-top:1px solid #c7bfb3; }
-.territory-page a { color:#822e41; }
+.territory-page > section:first-of-type{margin-top:0;border-top:0}
+.privacy-content{max-width:880px;margin:34px auto 0}
+.privacy-content section{padding:20px 0;border-top:1px solid var(--eade-border)}
+.privacy-content h2{margin:0 0 9px;color:var(--eade-ink);font:500 25px/1.2 var(--eade-serif)}
+.privacy-content p{max-width:77ch;margin:0;color:var(--eade-muted);font:400 12.5px/1.75 var(--eade-sans)}
+.privacy-content a{color:var(--eade-wine);text-underline-offset:3px}
+.territory-page a { color:var(--eade-wine); }
 .territory-actions,.territory-links { display:flex; flex-wrap:wrap; gap:.8rem 1.2rem; }
-.territory-actions .public-primary { color:white; }
+.territory-actions{justify-content:center;margin-top:23px}
+.territory-actions .public-primary { color:#fff8e8; }
 .territory-evolution { list-style:none; padding:0 0 0 1rem; border-left:3px solid #822e41; }
 .territory-evolution li { display:flex; gap:1.5rem; margin:1rem 0; }
 .territory-table { overflow:auto; }
@@ -224,7 +233,7 @@ button.public-door-card { width: 100%; font: inherit; }
 .territory-government-details > summary { cursor:pointer; font-weight:650; color:var(--eade-wine,#7a2e2e); }
 .territory-succession a:focus-visible,.territory-succession input:focus-visible,.territory-government-details > summary:focus-visible { outline:2px solid var(--eade-wine,#7a2e2e); outline-offset:3px; }
 @media (max-width:540px) {
-  .territory-page { padding-inline:1rem; }
+  .territory-page { padding-inline:0; }
   .territory-succession-list > li { grid-template-columns:1fr; gap:.35rem; }
   .territory-succession-date { text-align:left; padding-top:.35rem; }
   .territory-succession-card { padding:.85rem; }

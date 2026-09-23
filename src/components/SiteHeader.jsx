@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import {translatedEquivalent} from '../english/routes.js';
 import {SCREEN_NOTICE_KEY} from "../public/screenNotice.js";
 import {SITE_NAME, SITE_NAME_EN} from "../siteConfig.js";
+import SettingsPanel from '../settings/SettingsPanel.jsx';
 
 function noticeWasDismissed() {
   try { return typeof window !== "undefined" && window.sessionStorage.getItem(SCREEN_NOTICE_KEY) === "1"; }
@@ -54,7 +55,7 @@ export default function SiteHeader({
       </nav>
 
       {languageControl}
-      {!isAtlas && /\/(?:persona|dinastia|territorio|historia)\//.test(path) && <small className="site-translation-status">{equivalent ? <a href={equivalent}>English translation available</a> : "Traducción inglesa aún no disponible"}</small>}
+      <SettingsPanel locale={locale} prerendered={prerendered}/>
       {!noticeDismissed && <aside className="site-screen-notice" aria-label={locale === "en" ? "Viewing recommendation" : "Recomendación de visualización"}>
         <p>{locale === "en" ? "For a more comfortable view of the tree, map and timeline, we recommend using a larger screen." : "Para explorar el árbol, el mapa y la cronología con más comodidad, recomendamos usar una pantalla grande."}</p>
         <button type="button" onClick={dismissNotice} aria-label={locale === "en" ? "Dismiss recommendation" : "Cerrar aviso"}><span aria-hidden="true">×</span></button>

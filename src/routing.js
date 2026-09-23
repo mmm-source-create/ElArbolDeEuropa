@@ -43,6 +43,7 @@ export function resolverRuta(rawPathname = "/", search = "") {
     if (embedded) return { locale: 'es', view: 'embed', personId: embedded[1] ? decodificarSlug(embedded[1]) : null };
     const params = new URLSearchParams(search);
     const locale = localeDesdePath(pathname);
+    if (/^\/en\/privacy\/?$/.test(pathname) || /^\/es\/privacidad\/?$/.test(pathname)) return {locale,view:'privacy'};
     if (locale === "en") return englishRoute(pathname)
       ? { locale, view: "english", personSlug: null, legacyPersonId: null, catalog: null, info: null, panel: null }
       : { locale, view: "not-found" };

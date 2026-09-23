@@ -24,7 +24,7 @@
   min-height: 66px;
   padding: 10px clamp(16px, 4vw, 52px);
   display: grid;
-  grid-template-columns: minmax(230px, 1fr) auto minmax(70px, 1fr);
+  grid-template-columns: minmax(230px, 1fr) auto minmax(60px, 1fr) 30px;
   align-items: center;
   gap: 22px;
   background: rgba(251, 247, 236, .96);
@@ -94,9 +94,15 @@
 }
 .site-language a,
 .site-language button {
+  appearance:none;
+  display:inline-flex;
+  align-items:center;
+  min-height:24px;
   padding: 2px 3px;
+  line-height:1;
   cursor: pointer;
 }
+.site-language span{line-height:1}
 .site-language .active { color: var(--eade-wine); font-weight: 800; }
 
 .site-footer {
