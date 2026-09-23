@@ -2,6 +2,9 @@ import {resolverRuta} from "./routing.js";
 import React, { lazy, Suspense, useCallback, useEffect, useMemo, useState } from "react";
 import { CatalogPage, HomePage, InfoPage, PersonPage } from "./public/PublicSite.jsx";
 
+import AtlasSkeleton from "./explorer/AtlasSkeleton.jsx";
+import ReadingSkeleton from "./stories/ReadingSkeleton.jsx";
+import SiteHeader from "./components/SiteHeader.jsx";
 import EnglishLanding from "./public/EnglishLanding.jsx";
 import "./styles/theme.css";
 
@@ -46,7 +49,7 @@ export default function App() {
   }, [initial.view]);
 
   if (initial.view === "embed") return <Suspense fallback={<p role="status">Preparando ficha…</p>}><EmbedPage personId={initial.personId}/></Suspense>;
-  if (!explorerRequested && initial.view === "story") return <Suspense fallback={<main className="public-main" style={{minHeight:"65vh"}} role="status">Preparando lectura…</main>}><StoryPage slug={initial.storySlug} chapter={initial.chapter}/></Suspense>;
+  if (!explorerRequested && initial.view === "story") return <Suspense fallback={<div className="public-site"><SiteHeader/><main className="public-main story-page"><ReadingSkeleton/></main></div>}><StoryPage slug={initial.storySlug} chapter={initial.chapter}/></Suspense>;
   if (!explorerRequested && initial.view === "dynasty") return <Suspense fallback={<p role="status">Cargando dinastía…</p>}><DynastyPage slug={initial.dynastySlug} /></Suspense>;
   if (!explorerRequested && initial.view === "territory") return <Suspense fallback={<p role="status">Cargando territorio…</p>}><TerritoryPage slug={initial.territorySlug} /></Suspense>;
   if (initial.view === "english") return <EnglishLanding />;
@@ -63,7 +66,7 @@ export default function App() {
   if (!explorerRequested && initial.view === "home") return <HomePage onEnterAtlas={entrarAtlas} onOpenPanel={entrarAtlas} />;
 
   return (
-    <Suspense fallback={<p role="status" style={{ padding: 24 }}>Cargando Atlas…</p>}>
+    <Suspense fallback={<AtlasSkeleton/>}>
       <Explorer initialPanel={initialPanel} />
     </Suspense>
   );

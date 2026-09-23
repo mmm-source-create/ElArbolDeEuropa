@@ -1,3 +1,4 @@
+import AtlasSkeleton from "./AtlasSkeleton.jsx";
 import React, { useEffect, useState } from "react";
 import treeBaseUrl from "../generated/treeBase.json?url";
 import { loadJsonAsset } from "../utils/loadAsset.js";
@@ -26,7 +27,5 @@ export default function AtlasLoader(props) {
     return () => { cancelled = true; };
   }, [attempt]);
   if (atlas) return <atlas.Explorer {...props} treeBase={atlas.treeBase} />;
-  return <div style={{ padding: 24 }} role={error ? "alert" : "status"}>
-    {error ? <>No se ha podido cargar el Atlas. <button className="nav-btn" onClick={() => setAttempt(n => n + 1)}>Reintentar</button></> : "Cargando Atlas…"}
-  </div>;
+  return <AtlasSkeleton error={error} onRetry={()=>{setError(false);setAttempt(n=>n+1);}}/>;
 }

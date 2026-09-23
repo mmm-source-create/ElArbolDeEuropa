@@ -160,3 +160,17 @@ test('el capítulo inglés se hidrata y conserva idioma, progreso y regreso equi
   assert.match(node.querySelector('.story-people').textContent,/translation of this profile is not yet available/);
  });
 });
+
+test('la ficha inglesa comparte el retrato, cabecera y relaciones de la española sin presentar notas originales como traducciones',async()=>{
+ const path='/en/person/isabella-i-of-castile';
+ const page={schema:1,kind:'english',slug:'person-isabella-i-of-castile',chapter:null,path,data:{...structuredClone(person.data),chapter:null,id:'ISAB1CAST',slug:'person-isabella-i-of-castile',path,esPath:'/es/persona/isabel-i-de-castilla',type:'person',nombre:'Isabella I of Castile',role:'Queen of Castile',summary:'A translated short profile.',description:'A translated short profile.',padres:[{id:'P2',nombre:'A documented parent',slug:'persona-2'}]}};
+ await hydrated(page,node=>{
+  assert.equal(document.documentElement.lang,'en');
+  assert.ok(node.querySelector('.public-person-hero .public-portrait img'));
+  assert.match(node.querySelector('.public-person-hero-copy').textContent,/A translated short profile/);
+  assert.equal(node.querySelectorAll('.public-person-columns > .public-content-card').length,2);
+  assert.match(node.querySelector('.public-relation-row').textContent,/Parents.*A documented parent · ES/);
+  const original=node.querySelector('.public-original-content');assert.ok(original);assert.equal(original.open,false);assert.ok(original.querySelector('[lang="es"]'));
+  assert.equal(new URL(node.querySelector('.public-person-actions .public-primary').href).searchParams.get('familia'),'ISAB1CAST');
+ });
+});

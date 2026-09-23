@@ -1,3 +1,4 @@
+import {safeStoryReturn} from '../stories/storyModel.js';
 import {DEFAULT_SITE_URL} from '../siteConfig.js';
 export const ATLAS_SESSION_KEY = 'eade.atlasSession.v29';
 const arrayFields = ['territorios', 'dinastias', 'titulos', 'siglos', 'relaciones', 'collapsedIds', 'dinastiasExpandidas', 'territoriosExpandidos'];
@@ -11,6 +12,7 @@ export function sanitizeSession(value, nested = false) {
   out.atlasIds = Array.isArray(value.atlasIds) ? strings(value.atlasIds) : null;
   for (const field of arrayFields) out[field] = strings(value[field]);
   for (const field of stringFields) out[field] = typeof value[field] === 'string' ? value[field].slice(0, 500) : null;
+  out.storyReturn = typeof value.storyReturn === 'string' && /^\/(?:es\/historia|en\/story)\/[a-z0-9-]+\/(?:capitulo|chapter)\/[1-9][0-9]*$/.test(value.storyReturn) ? value.storyReturn : null;
   out.connectionIds = strings(value.connectionIds).slice(0,5);
   out.connectionCriterion = value.connectionCriterion === 'sangre' ? 'sangre' : 'matrimonio';
   out.query ||= '';
@@ -41,7 +43,7 @@ export function sanitizeSession(value, nested = false) {
     const clean = sanitizeSession({ ...snapshot, selectedId: snapshot.seleccionId, version: 1 }, true);
     out.historiaSnapshot = { ...clean, seleccionId: clean.selectedId,
       compareRouteIndex: Math.floor(finite(snapshot.compareRouteIndex, 0, 0, 100)),
-      rutaAnterior: typeof snapshot.rutaAnterior === 'string' && /^\/es(?:\/|\?|$)/.test(snapshot.rutaAnterior) ? snapshot.rutaAnterior : '/es/?atlas=1',
+      rutaAnterior: typeof snapshot.rutaAnterior === 'string' && (/^\/es(?:\/|\?|$)/.test(snapshot.rutaAnterior) || safeStoryReturn('?'+new URLSearchParams({regreso:snapshot.rutaAnterior}))) ? snapshot.rutaAnterior : '/es/?atlas=1',
       historiaAbiertaDesdeEnlace: snapshot.historiaAbiertaDesdeEnlace === true,
     };
   }

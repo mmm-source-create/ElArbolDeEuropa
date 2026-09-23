@@ -806,10 +806,13 @@ export function computeTreeLayout(rows, byId, childrenById) {
   const shiftX = TREE_PAD_X - minX;
   allUnits.forEach((unit) => { unit.x += shiftX; });
 
-  const rowHeights = rowUnits.map((row) => Math.max(TREE_BOX_H, ...row.map((unit) => unit.height)));
+  // A filtered selection retains the original generation indexes for routing,
+  // but generations without visible people must not consume canvas space.
+  const rowHeights = rowUnits.map((row) => row.length ? Math.max(TREE_BOX_H, ...row.map((unit) => unit.height)) : 0);
   const rowTops = [];
   let nextRowTop = TREE_PAD_TOP;
   rowHeights.forEach((height, rowIndex) => {
+    if (!height) return;
     rowTops[rowIndex] = nextRowTop;
     nextRowTop += height + TREE_ROW_GAP;
   });
@@ -845,14 +848,28 @@ export function computeTreeLayout(rows, byId, childrenById) {
   const width = Math.max(1200, maxX + TREE_PAD_X);
   const height = Math.max(
     700,
-    (rowTops[rowTops.length - 1] ?? TREE_PAD_TOP)
-      + (rowHeights[rowHeights.length - 1] ?? TREE_BOX_H)
+    (allUnits.length ? Math.max(...allUnits.map((unit) => unit.y + unit.height)) : TREE_PAD_TOP)
       + TREE_PAD_BOTTOM
   );
 
+  // Empty logical rows lie halfway through the real inter-generation gap.
+  // Connectors still address their original parent/child row indexes: the
+  // parent's exit lane uses the upper half and the child's entry the lower.
+  const nextVisibleTops = [];
+  let nextVisibleTop = nextRowTop - TREE_ROW_GAP;
+  for (let rowIndex = rows.length - 1; rowIndex >= 0; rowIndex -= 1) {
+    if (rowHeights[rowIndex]) nextVisibleTop = rowTops[rowIndex];
+    nextVisibleTops[rowIndex] = nextVisibleTop;
+  }
+  let previousBottom = TREE_PAD_TOP;
   const rowBands = rows.map((_, rowIndex) => {
-    const top = rowTops[rowIndex] ?? (TREE_PAD_TOP + rowIndex * TREE_ROW_STEP);
-    return [top, top + (rowHeights[rowIndex] || TREE_BOX_H)];
+    if (rowHeights[rowIndex]) {
+      const top = rowTops[rowIndex];
+      previousBottom = top + rowHeights[rowIndex];
+      return [top, previousBottom];
+    }
+    const middle = previousBottom + Math.max(0, nextVisibleTops[rowIndex] - previousBottom) / 2;
+    return [middle, middle];
   });
 
   return {
@@ -1166,4 +1183,3 @@ export function routeFamilyConnectors({ groupsByRow, positions, pairContacts, ge
     },
   };
 }
-

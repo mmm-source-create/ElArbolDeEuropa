@@ -1,7 +1,8 @@
 import {translatedEquivalent} from './english/routes.js';
 import { nextRecordedYear } from './data/europeTimeline.js';
 import { familyIndex, familyIds, atlasIdsFromLocation, writeAtlasIds, isolatedPopes, groupIsolatedPopes } from './explorer/progressiveAtlas.js';
-import { safeStoryReturn } from './stories/storyModel.js';
+import { safeStoryReturn, storyPeopleIds, saveStoryProgress } from './stories/storyModel.js';
+import {resolveStoryNavigation, writeStoryNavigation} from './explorer/storyNavigation.js';
 import EnglishLanding from "./public/EnglishLanding.jsx";
 import "./App.css";
 import React, { useState, useRef, useEffect, useLayoutEffect, useCallback, useMemo } from "react";
@@ -87,7 +88,7 @@ export default function Explorer({ initialPanel = null, treeBase: TREE_BASE }) {
   const [atlasIds, setAtlasIds] = useState(() => savedSession ? (savedSession.atlasIds ?? null) : atlasIdsFromLocation(window.location.pathname, window.location.search, familyData));
   const atlasSet = useMemo(() => atlasIds === null ? null : new Set(atlasIds), [atlasIds]);
   const [atlasUndo, setAtlasUndo] = useState([]);
-  const [storyReturn] = useState(() => safeStoryReturn(window.location.search));
+  const [storyReturn, setStoryReturn] = useState(() => savedSession?.storyReturn || safeStoryReturn(window.location.search));
   const restoringSession = useRef(Boolean(savedSession));
   const initialSearchSignature = useRef(undefined);
   const mapViewportRef = useRef(savedSession?.mapViewport || null);
@@ -125,8 +126,7 @@ export default function Explorer({ initialPanel = null, treeBase: TREE_BASE }) {
   const [anioGlobal, setAnioGlobal] = useState(savedSession?.anioGlobal ?? null);
   const [anioInput, setAnioInput] = useState(savedSession?.anioGlobal != null ? String(savedSession.anioGlobal) : "");
   const [reproduciendoHistoria, setReproduciendoHistoria] = useState(false);
-  const [velocidadHistoria, setVelocidadHistoria] = useState(5);
-  const [playbackMs, setPlaybackMs] = useState(1000);
+
   const [shareStatus, setShareStatus] = useState("");
   const [collapsedIds, setCollapsedIds] = useState(savedSession?.collapsedIds ?? []);
   const [vistasActivas, setVistasActivas] = useState(savedSession?.vistasActivas ?? { arbol: true, mapa: true });
@@ -186,6 +186,7 @@ export default function Explorer({ initialPanel = null, treeBase: TREE_BASE }) {
   });
   const [favoritosOpen, setFavoritosOpen] = useState(false);
   const [soloFavoritos, setSoloFavoritos] = useState(savedSession?.soloFavoritos ?? false);
+  const storyActionsRef = useRef(null);
   const [historiaActivaId, setHistoriaActivaId] = useState(savedSession?.historiaActivaId ?? null);
   const [historiaPasoIndex, setHistoriaPasoIndex] = useState(savedSession?.historiaPasoIndex ?? 0);
   const compareMenuRef = useRef(null);
@@ -193,7 +194,7 @@ export default function Explorer({ initialPanel = null, treeBase: TREE_BASE }) {
   const favoritosMenuRef = useRef(null);
   const historiaSnapshotRef = useRef(savedSession?.historiaSnapshot || null);
   const shareStatusTimerRef = useRef(null);
-  const urlStateLoadedRef = useRef(Boolean(savedSession));
+  const urlStateLoadedRef = useRef(Boolean(savedSession && !savedSession.historiaActivaId));
   const historyPopRef = useRef(false);
   const dragState = useRef(null);
   const workspaceGridRef = useRef(null);
@@ -563,6 +564,10 @@ export default function Explorer({ initialPanel = null, treeBase: TREE_BASE }) {
     return conjuntoFoco(focoId, focoAlcance);
   }, [mode, focoId, focoAlcance]);
 
+  useEffect(() => {
+    if (mode === 'foco' && focoId) centerOn(focoId);
+  }, [mode, focoId, focoAlcance]);
+
   const collapsedSet = useMemo(() => new Set(collapsedIds), [collapsedIds]);
   const hiddenByCollapse = useMemo(() => {
     const ocultos = new Set();
@@ -653,16 +658,16 @@ export default function Explorer({ initialPanel = null, treeBase: TREE_BASE }) {
     const timer = window.setInterval(() => {
       setAnioGlobal((actual) => {
         const base = Number.isFinite(actual) ? actual : TL_MIN;
-        const siguiente = Math.min(TL_MAX, base + velocidadHistoria);
+        const siguiente = Math.min(TL_MAX, base + 1);
         setAnioInput(String(siguiente));
         if (siguiente >= TL_MAX) {
           window.setTimeout(() => setReproduciendoHistoria(false), 0);
         }
         return siguiente;
       });
-    }, playbackMs);
+    }, 500);
     return () => window.clearInterval(timer);
-  }, [reproduciendoHistoria, velocidadHistoria, playbackMs]);
+  }, [reproduciendoHistoria]);
 
   const mostrarArbol = vistasActivas.arbol;
   const mostrarMapa = vistasActivas.mapa;
@@ -794,8 +799,8 @@ export default function Explorer({ initialPanel = null, treeBase: TREE_BASE }) {
   const matches = (persona) => {
     if (!persona) return false;
     if (connectionSet) return connectionSet.has(persona.id);
-    if (atlasSet && !atlasSet.has(persona.id)) return false;
-    if (hiddenByCollapse.has(persona.id)) return false;
+    if (!focoSet && atlasSet && !atlasSet.has(persona.id)) return false;
+    if (!focoSet && hiddenByCollapse.has(persona.id)) return false;
     if (focoSet && !focoSet.has(persona.id)) return false;
     if (soloFavoritos && !favoritosSet.has(persona.id)) return false;
 
@@ -900,7 +905,7 @@ export default function Explorer({ initialPanel = null, treeBase: TREE_BASE }) {
     dinastiasExpandidas, territoriosExpandidos, selectedId: seleccion?.id || null,
     currentSearchIndex, zoom, mode, connectionIds, connectionCriterion, origen, destino, modoComparacion, focoId, focoAlcance,
     anioGlobal, vistasActivas, panelesVisibles, personHistory, timelineScaleIndex, timelineMode,
-    eventoSeleccionadoId, soloFavoritos, historiaActivaId, historiaPasoIndex, historiaSnapshot: historiaSnapshotRef.current,
+    eventoSeleccionadoId, soloFavoritos, historiaActivaId, historiaPasoIndex, storyReturn, historiaSnapshot: historiaSnapshotRef.current,
   }, scrollRef, tlScrollRef, () => {
     const top = tlScrollRef.current && timelineListRef.current ? tlScrollRef.current.scrollTop - timelineListRef.current.offsetTop : null;
     const anchor = top !== null && timelineVirtual.items.find(row => row.start + row.size >= top);
@@ -935,7 +940,7 @@ export default function Explorer({ initialPanel = null, treeBase: TREE_BASE }) {
     if (initialSearchSignature.current === signature) return;
     initialSearchSignature.current = null;
     setCurrentSearchIndex(0);
-    if (searchMatchIds.length) {
+    if (searchMatchIds.length && positions[searchMatchIds[0]]) {
       centerOn(searchMatchIds[0]);
       centerOnTimeline(searchMatchIds[0]);
     }
@@ -947,8 +952,7 @@ export default function Explorer({ initialPanel = null, treeBase: TREE_BASE }) {
     if (!searchMatchIds.length) return;
     const next = ((currentSearchIndex + dir) % searchMatchIds.length + searchMatchIds.length) % searchMatchIds.length;
     setCurrentSearchIndex(next);
-    centerOn(searchMatchIds[next]);
-    centerOnTimeline(searchMatchIds[next]);
+    seleccionarPersonaPorId(searchMatchIds[next], { centrar: Boolean(positions[searchMatchIds[next]]) });
   };
 
   const hayFiltros = Boolean(query || territorios.length || dinastias.length || titulos.length || siglos.length || relaciones.length || soloFavoritos);
@@ -1123,7 +1127,8 @@ export default function Explorer({ initialPanel = null, treeBase: TREE_BASE }) {
     const slug = slugPersonaPorLocale(persona, "es");
     if (!slug) return;
     const url = new URL(window.location.href);
-    url.pathname = rutaEntidadLocalizada("es", "persona", slug);
+    if (historiaActiva) url.searchParams.set("persona", persona.id);
+    else url.pathname = rutaEntidadLocalizada("es", "persona", slug);
     url.searchParams.set("atlas", "1");
     writeAtlasIds(url, atlasIds);
     const destino = `${url.pathname}${url.search}${url.hash}`;
@@ -1168,6 +1173,7 @@ export default function Explorer({ initialPanel = null, treeBase: TREE_BASE }) {
     if (typeof window === "undefined") return;
     const url = new URL(window.location.href);
     url.pathname = "/es/";
+    url.searchParams.delete("persona");
     writeAtlasIds(url, atlasIds);
     window.history.pushState({ eade: "atlas" }, "", `${url.pathname}${url.search}${url.hash}`);
   };
@@ -1176,10 +1182,20 @@ export default function Explorer({ initialPanel = null, treeBase: TREE_BASE }) {
     if (typeof window === "undefined") return undefined;
     const onPopState = () => {
       historyPopRef.current = true;
+      const incomingStory = resolveStoryNavigation(window.location.pathname, window.location.search, HISTORIAS);
+      if (incomingStory) {
+        storyActionsRef.current.start(incomingStory.story.id, incomingStory.index, {returnPath:incomingStory.returnPath});
+        const selectedId = new URLSearchParams(window.location.search).get('persona');
+        if (BY_ID[selectedId]) {setSeleccion(BY_ID[selectedId]);centerOn(selectedId);}
+        historyPopRef.current = false;
+        return;
+      }
+      setStoryReturn(null);
       setAtlasIds(atlasIdsFromLocation(window.location.pathname, window.location.search, familyData));
       setAtlasUndo([]);
       const incomingConnection = connectionFromSearch(window.location.search, BY_ID);
       if (incomingConnection.ids.length) {
+        setHistoriaActivaId(null);setHistoriaPasoIndex(0);historiaSnapshotRef.current=null;
         setConnectionIds(incomingConnection.ids);setConnectionCriterion(incomingConnection.criterion);setMode('conexion');
         centerOn(incomingConnection.ids[0]);historyPopRef.current = false;return;
       }
@@ -1296,11 +1312,24 @@ export default function Explorer({ initialPanel = null, treeBase: TREE_BASE }) {
     centerTimelineOnYear(anio);
   };
 
-  const aplicarPasoHistoria = (historia, index) => {
+  const aplicarPasoHistoria = (historia, index, {replace = false, returnPath = storyReturn} = {}) => {
     const paso = historia?.pasos?.[index];
     if (!paso) return;
     setHistoriaPasoIndex(index);
-    setAtlasIds([...(paso.personas || [paso.persona])].filter(id => BY_ID[id]));
+    limpiar();setMode('view');setFocoId(null);setCollapsedIds([]);
+    const ids = storyPeopleIds(historia).filter(id => BY_ID[id]);
+    setAtlasIds(ids);
+    const currentUrl = new URL(window.location.href);
+    for (const key of ['q','territorio','dinastia','funcion','siglo','relacion']) currentUrl.searchParams.delete(key);
+    const principal = paso.persona || paso.personas?.find(id=>BY_ID[id]);
+    if (principal) currentUrl.searchParams.set('persona',principal);
+    const url = writeStoryNavigation(currentUrl, historia, index, returnPath, ids);
+    setStoryReturn(url.searchParams.get('regreso'));
+    try { saveStoryProgress(window.localStorage, historia.id, historia.pasos.length, index + 1); } catch { /* Storage can be unavailable. */ }
+    if (!historyPopRef.current) {
+      const destination = url.pathname + url.search;
+      if (destination !== window.location.pathname + window.location.search) window.history[replace ? 'replaceState' : 'pushState']({eade:'historia',id:historia.id,index}, '', destination);
+    }
     setReproduciendoHistoria(false);
     setTimelineMode("ambos");
     setAnioGlobal(paso.anio);
@@ -1316,18 +1345,17 @@ export default function Explorer({ initialPanel = null, treeBase: TREE_BASE }) {
     centerTimelineOnYear(paso.anio);
   };
 
-  const iniciarHistoria = (historiaId) => {
+  const iniciarHistoria = (historiaId, index = 0, {returnPath = storyReturn, replace = false} = {}) => {
     const historia = HISTORIAS.find((item) => item.id === historiaId && item.disponible);
     if (!historia?.pasos?.length) return;
     if (!historiaSnapshotRef.current) {
-      const rutaActual = typeof window !== "undefined" ? rutaPublicaDesdePath(window.location.pathname) : null;
-      const historiaAbiertaDesdeEnlace = rutaActual?.tipo === "historia";
+      const historiaAbiertaDesdeEnlace = Boolean(resolveStoryNavigation(window.location.pathname, window.location.search, HISTORIAS));
       historiaSnapshotRef.current = {
         atlasIds, query, territorios, dinastias, titulos, siglos, relaciones, soloFavoritos, anioGlobal,
         vistasActivas, seleccionId: seleccion?.id || null, timelineMode, eventoSeleccionadoId,
         mode, connectionIds, connectionCriterion, origen, destino, focoId, focoAlcance, collapsedIds, compareRouteIndex,
         rutaAnterior: typeof window !== "undefined"
-          ? (historiaAbiertaDesdeEnlace ? "/es/historias" : `${window.location.pathname}${window.location.search}${window.location.hash}`)
+          ? (historiaAbiertaDesdeEnlace ? (returnPath || "/es/historias") : `${window.location.pathname}${window.location.search}${window.location.hash}`)
           : "/es/",
         historiaAbiertaDesdeEnlace,
       };
@@ -1342,20 +1370,10 @@ export default function Explorer({ initialPanel = null, treeBase: TREE_BASE }) {
     setMode("view");
     setFocoId(null);
     setCollapsedIds([]);
-    setVistasActivas({ arbol: true, mapa: true });
+    setVistasActivas({ arbol: true, mapa: new URLSearchParams(window.location.search).get("vista") !== "arbol" });
     setHistoriaActivaId(historia.id);
     setInfoProyecto(null);
-    aplicarPasoHistoria(historia, 0);
-
-    // Una Historia debe tener la misma URL tanto si se abre desde una página
-    // pública como si se inicia desde el panel del Atlas.
-    if (typeof window !== "undefined" && !historyPopRef.current) {
-      const destinoHistoria = `${rutaEntidadLocalizada("es", "historia", slugPublico(historia.titulo))}?atlas=1`;
-      const actual = `${window.location.pathname}${window.location.search}${window.location.hash}`;
-      if (actual !== destinoHistoria) {
-        window.history.pushState({ eade: "historia", id: historia.id }, "", destinoHistoria);
-      }
-    }
+    aplicarPasoHistoria(historia, Math.max(0, Math.min(historia.pasos.length - 1, index)), {returnPath, replace});
   };
 
   const cambiarPasoHistoria = (delta) => {
@@ -1369,7 +1387,13 @@ export default function Explorer({ initialPanel = null, treeBase: TREE_BASE }) {
     setHistoriaActivaId(null);
     setHistoriaPasoIndex(0);
     setEventoSeleccionadoId(null);
-    if (!anterior) return;
+    setStoryReturn(null);
+    if (!anterior) {
+      const url = new URL(window.location.href);
+      for (const key of ['historia','paso','regreso','resaltar']) url.searchParams.delete(key);
+      window.history.replaceState({eade:'atlas'}, '', url.pathname+url.search);
+      return;
+    }
     setAtlasIds(anterior.atlasIds ?? null);
     setQuery(anterior.query);
     setTerritorios(anterior.territorios);
@@ -1407,6 +1431,8 @@ export default function Explorer({ initialPanel = null, treeBase: TREE_BASE }) {
     }
   };
 
+  storyActionsRef.current = {start:iniciarHistoria};
+
   const mostrarEstadoCompartir = useCallback((mensaje) => {
     setShareStatus(mensaje);
     if (shareStatusTimerRef.current) window.clearTimeout(shareStatusTimerRef.current);
@@ -1417,9 +1443,14 @@ export default function Explorer({ initialPanel = null, treeBase: TREE_BASE }) {
     if (!seleccion || typeof window === "undefined") return "";
     if (mode === "conexion") return new URL(connectionUrl(connectionIds, connectionCriterion), window.location.origin).href;
     const url = new URL(window.location.href);
+    if (historiaActiva) {
+      url.searchParams.set('persona',seleccion.id);
+      url.searchParams.set('vista',vistaPrincipal);
+      return writeStoryNavigation(url,historiaActiva,historiaPasoIndex,storyReturn,storyPeopleIds(historiaActiva).filter(id=>BY_ID[id])).href;
+    }
     url.pathname = rutaEntidadLocalizada("es", "persona", slugPersonaPorLocale(seleccion, "es"));
     url.search = "";
-    writeAtlasIds(url, atlasIds);
+    writeAtlasIds(url, focoSet ? visibleIds : atlasIds);
     url.hash = "";
     if (Number.isFinite(anioGlobal)) url.searchParams.set("anio", String(anioGlobal));
     url.searchParams.set("vista", vistaPrincipal);
@@ -1430,7 +1461,7 @@ export default function Explorer({ initialPanel = null, treeBase: TREE_BASE }) {
     siglos.forEach((valor) => url.searchParams.append("siglo", String(valor)));
     relaciones.forEach((valor) => url.searchParams.append("relacion", valor));
     return url.toString();
-  }, [atlasIds, seleccion, mode, connectionIds, connectionCriterion, anioGlobal, vistaPrincipal, query, territorios, dinastias, titulos, siglos, relaciones]);
+  }, [historiaActiva, historiaPasoIndex, storyReturn, focoSet, visibleIds, atlasIds, seleccion, mode, connectionIds, connectionCriterion, anioGlobal, vistaPrincipal, query, territorios, dinastias, titulos, siglos, relaciones]);
 
   const compartirPersona = useCallback(async () => {
     const enlace = construirEnlaceCompartido();
@@ -1441,7 +1472,7 @@ export default function Explorer({ initialPanel = null, treeBase: TREE_BASE }) {
       url: enlace,
     };
     try {
-      window.history.replaceState({}, "", enlace);
+      if (mode !== 'foco') window.history.replaceState({}, "", enlace);
       if (navigator.share) {
         await navigator.share(payload);
         mostrarEstadoCompartir("Enlace compartido");
@@ -1463,7 +1494,7 @@ export default function Explorer({ initialPanel = null, treeBase: TREE_BASE }) {
         window.prompt("Copia este enlace:", enlace);
       }
     }
-  }, [construirEnlaceCompartido, seleccion, mostrarEstadoCompartir]);
+  }, [construirEnlaceCompartido, seleccion, mostrarEstadoCompartir, mode]);
 
   useEffect(() => {
     if (urlStateLoadedRef.current || typeof window === "undefined") return;
@@ -1471,6 +1502,28 @@ export default function Explorer({ initialPanel = null, treeBase: TREE_BASE }) {
     const params = new URLSearchParams(window.location.search);
     const connection = connectionFromSearch(params, BY_ID);
     if (connection.ids.length) { setConnectionIds(connection.ids); setConnectionCriterion(connection.criterion); setMode("conexion"); centerOn(connection.ids[0]); }
+    const incomingStory = resolveStoryNavigation(window.location.pathname, window.location.search, HISTORIAS);
+    if (incomingStory) {
+      iniciarHistoria(incomingStory.story.id, incomingStory.index, {returnPath:incomingStory.returnPath,replace:true});
+      const selectedId = params.get('persona');
+      if (BY_ID[selectedId] && incomingStory.ids.includes(selectedId)) {
+        setSeleccion(BY_ID[selectedId]);centerOn(selectedId);
+        const url=new URL(window.location.href);url.searchParams.set('persona',selectedId);window.history.replaceState({eade:'historia'},'',url.pathname+url.search);
+      }
+      return;
+    }
+    if (savedSession?.historiaActivaId) {
+      iniciarHistoria(savedSession.historiaActivaId,savedSession.historiaPasoIndex,{returnPath:savedSession.storyReturn,replace:true});
+      setVistasActivas(savedSession.vistasActivas);
+      const resumedUrl=new URL(window.location.href);
+      resumedUrl.searchParams.set("vista",savedSession.vistasActivas.arbol ? (savedSession.vistasActivas.mapa ? "ambos" : "arbol") : "mapa");
+      window.history.replaceState({eade:"historia"},"",resumedUrl.pathname+resumedUrl.search);
+      if (BY_ID[savedSession.selectedId]) {
+        setSeleccion(BY_ID[savedSession.selectedId]);centerOn(savedSession.selectedId);
+        const url=new URL(window.location.href);url.searchParams.set('persona',savedSession.selectedId);window.history.replaceState({eade:'historia'},'',url.pathname+url.search);
+      }
+      return;
+    }
     const rutaInicial = rutaPublicaDesdePath(window.location.pathname);
     if (rutaInicial?.locale === "en") return;
 
@@ -1523,7 +1576,7 @@ export default function Explorer({ initialPanel = null, treeBase: TREE_BASE }) {
       setAnioInput(String(año));
     }
 
-    const personaId = params.get("persona") || personaIdDesdeRuta(window.location.pathname);
+    const personaId = params.get("persona") || params.get("familia") || personaIdDesdeRuta(window.location.pathname);
     if (!personaId && atlasIds?.length) centerOn(atlasIds[0]);
     if (personaId && BY_ID[personaId]) {
       setSeleccion(BY_ID[personaId]);
@@ -1537,6 +1590,7 @@ export default function Explorer({ initialPanel = null, treeBase: TREE_BASE }) {
   useEffect(() => {
     if (!urlStateLoadedRef.current) return;
     if (mode === 'conexion') {
+      if(historiaActivaId){setHistoriaActivaId(null);setStoryReturn(null);historiaSnapshotRef.current=null;}
       const url = new URL(connectionUrl(connectionIds, connectionCriterion), window.location.origin);
       if (seleccion && connectionResult.ids.includes(seleccion.id)) url.searchParams.set('persona', seleccion.id);
       window.history.replaceState({eade:'conexion'}, '', url.pathname + url.search);
@@ -1693,19 +1747,25 @@ export default function Explorer({ initialPanel = null, treeBase: TREE_BASE }) {
     setSeleccion(BY_ID[id]);
     changeAtlasScope(ids, { center: id });
   };
+  const focusAdditions = focoSet ? [...focoSet].filter(id => atlasSet && !atlasSet.has(id)) : [];
+  const keepFocus = () => {
+    if (historiaActiva || !focoSet || !atlasSet || !focusAdditions.length) return;
+    changeAtlasScope([...new Set([...atlasIds, ...focoSet])], {center:focoId});
+    setMode('view'); setFocoId(null);
+  };
   const additions = Object.fromEntries(['parents','children','family'].map(kind => [kind, atlasIds !== null && seleccion ? familyIds(familyData, seleccion.id, kind).filter(id => !atlasSet.has(id)) : []]));
   const growth = { ids: atlasIds, selected: seleccion, query, results: searchMatchIds.map(id => BY_ID[id]), additions,
-    onStart: startFamily, onSelect: id => seleccionarPersonaPorId(id, { centrar: atlasSet === null || atlasSet.has(id) }),
+    onStart: startFamily, onSelect: id => seleccionarPersonaPorId(id, { centrar: Boolean(positions[id]) }),
     onExpand: kind => changeAtlasScope([...new Set([...(atlasIds || []), ...additions[kind]])], { center: seleccion?.id }),
-    onUndo: () => { const previous = atlasUndo.at(-1); setAtlasUndo(atlasUndo.slice(0, -1)); changeAtlasScope(previous, { remember: false, center: previous?.[0] }); },
+    onUndo: () => { setMode('view');setFocoId(null);const previous = atlasUndo.at(-1); setAtlasUndo(atlasUndo.slice(0, -1)); changeAtlasScope(previous, { remember: false, center: previous?.[0] }); },
     canUndo: atlasUndo.length > 0, onFull: () => { limpiar(); setMode('view'); setFocoId(null); setCollapsedIds([]); changeAtlasScope(null); },
     onNew: () => { limpiar(); setMode('view'); setSeleccion(null); changeAtlasScope([]); },
     onFilters: () => alternarPanelAuxiliar('filtros'), filtersOpen: mostrarFiltros, popeCount: treeLayout.isolatedPopeCount,
   };
 
   const viewModel = {
-    playbackMs, setPlaybackMs, nextYear: nextRecordedYear(anioGlobal ?? TL_MIN - 1, { personas: PERSONAS, eventos: EVENTOS_HISTORICOS, min: TL_MIN, max: TL_MAX }),
-    growth,
+    nextYear: nextRecordedYear(anioGlobal ?? TL_MIN - 1, { personas: PERSONAS, eventos: EVENTOS_HISTORICOS, min: TL_MIN, max: TL_MAX }),
+    growth, focusAdditions, keepFocus,
     storyReturn,
     connectionIds, setConnectionIds, connectionCriterion, setConnectionCriterion, connectionResult, getExportSelection,
     initialMapViewport: mapViewportRef.current, recordMapViewport, timelineVirtual, timelineListRef, scrollRef, tlScrollRef, locale, setLocale, query, setQuery,
@@ -1714,7 +1774,7 @@ export default function Explorer({ initialPanel = null, treeBase: TREE_BASE }) {
     seleccion, setSeleccion, currentSearchIndex, setCurrentSearchIndex, zoom, setZoom, mode, setMode,
     origen, setOrigen, destino, setDestino, modoComparacion, setModoComparacion, compareMenuOpen, setCompareMenuOpen,
     compareRouteIndex, setCompareRouteIndex, focoMenuOpen, setFocoMenuOpen, focoId, setFocoId, focoAlcance, setFocoAlcance,
-    anioGlobal, setAnioGlobal, anioInput, setAnioInput, reproduciendoHistoria, setReproduciendoHistoria, velocidadHistoria, setVelocidadHistoria,
+    anioGlobal, setAnioGlobal, anioInput, setAnioInput, reproduciendoHistoria, setReproduciendoHistoria,
     shareStatus, setShareStatus, collapsedIds, setCollapsedIds, vistasActivas, setVistasActivas, panelesVisibles, setPanelesVisibles,
     infoProyecto, setInfoProyecto, timelineScaleIndex, setTimelineScaleIndex, timelineMode, setTimelineMode, eventoSeleccionadoId, setEventoSeleccionadoId,
     favoritos, setFavoritos, favoritosOpen, setFavoritosOpen, soloFavoritos, setSoloFavoritos, historiaActivaId, setHistoriaActivaId,
