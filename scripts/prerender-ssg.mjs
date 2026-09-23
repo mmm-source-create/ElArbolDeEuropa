@@ -31,7 +31,7 @@ if(sample)await fs.rm(target,{recursive:true,force:true});
 const stats={version:JSON.parse(await fs.readFile('package.json','utf8')).version,mode:sample?'sample':'full',counts:{persona:0,dinastia:0,territorio:0,historia:0,english:0},pages:[],css:assets.css};
 try {
  await build({configFile:false,root,publicDir:false,logLevel:'error',build:{ssr:'src/public/ssg-entry.jsx',outDir:path.join(temp,'renderer'),emptyOutDir:true,minify:false,rolldownOptions:{output:{entryFileNames:'entry.mjs'}}}});
- const {renderPage}=await import(pathToFileURL(path.join(temp,'renderer/entry.mjs')).href);
+ const {renderPage,renderNotFound}=await import(pathToFileURL(path.join(temp,'renderer/entry.mjs')).href);
  for(const route of routes) {
   const data=JSON.parse(await fs.readFile(path.join(dist,STATIC_FOLDERS[route.kind],`${route.slug}${route.chapter?`/capitulo/${route.chapter}`:""}.json`),'utf8'));
   if(route.kind==='dinastia'&&canonicalDynastySlug(route.slug)!==data.slug)throw new Error(`Alias dinástico no reconocido: ${route.path}`);
@@ -43,6 +43,12 @@ try {
   const out=path.join(target,route.path.slice(1),'index.html');
   await fs.mkdir(path.dirname(out),{recursive:true});await fs.writeFile(out,html);
   stats.counts[route.kind]++;stats.pages.push({path:route.path,canonical:rendered.meta.canonical,bytes:Buffer.byteLength(html)});
+ }
+ if(!sample) {
+  const rendered=renderNotFound('es',siteUrl);
+  const html=makeStaticDocument(shell,rendered,null,assets);
+  if(!/Esta rama no existe/.test(html)||!/noindex,follow/.test(html))throw new Error('La página 404 no contiene el contrato esperado');
+  await fs.writeFile(path.join(dist,'404.html'),html);
  }
  if(await fs.readFile(path.join(dist,'index.html'),'utf8')!==shell)throw new Error('Se ha alterado el shell dinámico');
  await fs.writeFile(path.join(sample?target:dist,sample?'report.json':'ssg-report.json'),JSON.stringify(stats,null,2));

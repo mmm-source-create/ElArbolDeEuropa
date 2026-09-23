@@ -2,6 +2,8 @@
 
 Implementadas sucesivamente en una rama de revisión:
 
+- [V3.1](V3.1.md): lectura más cómoda dentro del Atlas, jerarquías visuales ajustadas, esqueletos fieles y 404 bilingüe propia.
+
 - [V2.16](V2.16.md): entrada y capítulos propios de las 13 historias, progreso local, cronología y consulta de protagonistas; enlaces al Atlas y regreso.
 - [V2.17](V2.17.md): entrada gradual al Atlas, búsqueda global, expansión contada y reversible, selección compartible y agrupación de papas sin familia registrada.
 - [V2.18](V2.18.md): Europa completa o selección, regiones, comparación entre años, siguiente acontecimiento y separación de ritmo y salto anual.

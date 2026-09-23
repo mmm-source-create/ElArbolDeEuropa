@@ -9,6 +9,9 @@ import {PERSONAS} from '../src/personas.jsx';
 test('rutas públicas, catálogos, inglés y desafío conservan su destino',()=>{
  for(const [path,view] of [['/','home'],['/es/','home'],['/en/','english'],['/persona/carlos-v','person'],['/es/personas','catalog'],['/es/territorios/','catalog'],['/es/fuentes','info'],['/es/desafio','desafio'],['/es/dinastia/bourbon','dynasty'],['/territorio/brabante','territory']])assert.equal(resolverRuta(path).view,view,path);
  assert.equal(resolverRuta('/es/','?panel=desafio').view,'desafio');
+ assert.equal(resolverRuta('/es/rama-inexistente').view,'not-found');
+ assert.equal(resolverRuta('/en/missing-section').view,'not-found');
+ assert.equal(resolverRuta('/es/rama-inexistente','?atlas=1').view,'not-found');
 });
 test('enlaces al Atlas y a personas antiguas prevalecen sin perder el identificador',()=>{
  const old=resolverRuta('/','?persona=CARLOS5');assert.equal(old.view,'person');assert.equal(old.legacyPersonId,'CARLOS5');

@@ -28,13 +28,13 @@ export default function SiteHeader({
   const equivalent = translatedEquivalent(path, locale === "en" ? "es" : "en");
   const links = locale === "en" ? [["home", "Home", "/en/"], ["historias", "Stories", "/en/stories"], ["personas", "People", "/en/people"], ["methodology", "Methodology", "/en/methodology"], ["atlas", "Atlas (Spanish)", "/es/?atlas=1&continuar=1"]] : [["atlas", "Atlas", "/es/?atlas=1&continuar=1"], ["personas", "Personas", "/es/personas"], ["dinastias", "Dinastías", "/es/dinastias"], ["territorios", "Territorios", "/es/territorios"], ["historias", "Historias", "/es/historias"], ["desafio", "Desafío", "/es/desafio"]];
   const languageControl = onLanguageChange ? (
-    <div className="site-language" aria-label="Idioma / Language">
+    <div className="site-language" role="group" aria-label="Idioma / Language">
       <button type="button" className={locale === "es" ? "active" : ""} aria-current={locale === "es" ? "page" : undefined} onClick={() => onLanguageChange("es")}>ES</button>
       <span aria-hidden="true">|</span>
       <button type="button" className={locale === "en" ? "active" : ""} aria-current={locale === "en" ? "page" : undefined} onClick={() => onLanguageChange("en")}>EN</button>
     </div>
   ) : (
-    <div className="site-language" aria-label="Idioma / Language">
+    <div className="site-language" role="group" aria-label="Idioma / Language">
       {locale === "en" ? <><a href={equivalent || "/es/"}>ES</a><span aria-hidden="true">|</span><span className="active">EN</span></> : <><span className="active">ES</span><span aria-hidden="true">|</span><a href={equivalent || "/en/"} title={equivalent ? "Leer esta página en inglés" : "Sin traducción de esta página; abrir portada inglesa"}>EN</a></>}
     </div>
   );

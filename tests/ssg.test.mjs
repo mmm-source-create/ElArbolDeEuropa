@@ -47,6 +47,17 @@ test('el HTML contiene metadatos únicos, contenido y JSON seguro incluso con te
  dom.window.close();
  assert.throws(()=>makeStaticDocument('<head></head><div></div>',{},page,assets));
 });
+test('la página 404 estática conserva su contenido, idioma y no incluye datos de una ficha',()=>{
+ const meta=publicMeta({title:'Error 404 — Esta rama no existe',description:'Página no encontrada.',path:'/es/404'});
+ meta.meta.push(['name','robots','noindex,follow']);
+ const html=makeStaticDocument(shell,{html:'<main><h1>Esta rama no existe</h1></main>',meta},null,assets);
+ const dom=new JSDOM(html);
+ assert.equal(dom.window.document.documentElement.lang,'es');
+ assert.equal(dom.window.document.querySelector('meta[name="robots"]').content,'noindex,follow');
+ assert.equal(dom.window.document.querySelector('#eade-initial-page'),null);
+ assert.match(dom.window.document.querySelector('h1').textContent,/rama no existe/);
+ dom.window.close();
+});
 test('el auditor detecta contenido de carga, CSS ausente, canonical falso y divergencia del JSON',()=>{
  const html=htmlFor(person);assert.deepEqual(auditDocument(html,person,assets),[]);
  for(const bad of [html.replace('<h1>Persona 1</h1>','Preparando ficha histórica…'),html.replace('/assets/ficha.css','/otro.css'),html.replace('rel="canonical"','rel="otro"'),html.replace('"schema":1','"schema":2')])assert.ok(auditDocument(bad,person,assets).length>0);

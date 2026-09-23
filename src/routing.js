@@ -1,3 +1,5 @@
+import {englishRoute} from './english/routes.js';
+
 // Resolución inicial sin dependencias del DOM; los enlaces conservan el contrato público.
 function decodificarSlug(slug) { try { return decodeURIComponent(slug); } catch { return slug; } }
 
@@ -41,7 +43,9 @@ export function resolverRuta(rawPathname = "/", search = "") {
     if (embedded) return { locale: 'es', view: 'embed', personId: embedded[1] ? decodificarSlug(embedded[1]) : null };
     const params = new URLSearchParams(search);
     const locale = localeDesdePath(pathname);
-    if (locale === "en") return { locale, view: "english", personSlug: null, legacyPersonId: null, catalog: null, info: null, panel: null };
+    if (locale === "en") return englishRoute(pathname)
+      ? { locale, view: "english", personSlug: null, legacyPersonId: null, catalog: null, info: null, panel: null }
+      : { locale, view: "not-found" };
 
     const personSlug = slugPersonaDesdePath(pathname);
     const legacyPersonId = personaIdLegacyDesdeSearch(search);
@@ -63,5 +67,8 @@ export function resolverRuta(rawPathname = "/", search = "") {
     if (catalog && !atlasRequested) return { locale, view: "catalog", personSlug: null, legacyPersonId: null, catalog, info: null, panel: null };
     if (info && !atlasRequested) return { locale, view: "info", personSlug: null, legacyPersonId: null, catalog: null, info, panel: null };
     if (["/", "/es", "/es/"].includes(pathname) && !atlasRequested && !panel) return { locale, view: "home", personSlug: null, legacyPersonId: null, catalog: null, info: null, panel: null };
-    return { locale, view: "explorer", personSlug, legacyPersonId, catalog: null, info: null, panel };
+    const atlasPath = ["/", "/es", "/es/"].includes(pathname) || Boolean(personSlug || legacyPersonId || storyMatch || dynastyMatch || territoryMatch);
+    if (atlasRequested && atlasPath) return { locale, view: "explorer", personSlug, legacyPersonId, catalog: null, info: null, panel };
+    if (["/", "/es", "/es/"].includes(pathname) && panel) return { locale, view: "explorer", personSlug, legacyPersonId, catalog: null, info: null, panel };
+    return { locale, view: "not-found" };
 }

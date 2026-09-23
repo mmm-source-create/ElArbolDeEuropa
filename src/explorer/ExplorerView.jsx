@@ -338,7 +338,7 @@ export default function ExplorerView({ vm }) {
                     ))}
                     <div className="focus-menu-actions">
                       <button type="button" role="menuitem" className="compare-mode-option" disabled={Boolean(historiaActiva)||!vm.focusAdditions.length} onClick={()=>{vm.keepFocus();setFocoMenuOpen(false);}}><strong>Añadir el foco a mi selección{vm.focusAdditions.length?` (+${vm.focusAdditions.length})`:''}</strong><span>{historiaActiva?"La selección del recorrido se conserva completa":"Conserva estas personas al salir del foco"}</span></button>
-                      {!historiaActiva && vm.growth.canUndo && <button type="button" role="menuitem" className="compare-mode-option" onClick={()=>{vm.growth.onUndo();setFocoMenuOpen(false);}}>Deshacer ampliación</button>}
+                      {!historiaActiva && vm.growth.canUndo && <button type="button" role="menuitem" className="compare-mode-option" onClick={()=>{vm.growth.onUndo();setFocoMenuOpen(false);}}><strong>Deshacer ampliación</strong><span>Recupera la selección anterior</span></button>}
                     </div>
                   </div>
                 )}
