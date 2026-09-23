@@ -23,9 +23,11 @@ test('el progreso conserva capítulos visitados sin marcar como leídos los salt
  s.setItem(STORY_PROGRESS_KEY,'{');assert.equal(saveStoryProgress(s,'test',2,2).last,2);
  assert.deepEqual(readStoryProgress({getItem(){throw Error();}},'test',2),{last:1,read:[]});
 });
-test('el Atlas recibe todos los protagonistas del capítulo y solo permite un regreso interno de lectura',()=>{
+test('el Atlas conserva toda la historia, destaca el capítulo y solo permite un regreso interno de lectura',()=>{
  const u=new URL(storyAtlasUrl(story,1),'https://example.test');
- assert.deepEqual(u.searchParams.getAll('seleccion'),['A','B']);assert.equal(u.searchParams.get('anio'),'1250');
+ assert.deepEqual(u.searchParams.getAll('seleccion'),['A','B','C']);assert.equal(u.searchParams.get('anio'),'1250');
+ assert.deepEqual(u.searchParams.getAll('resaltar'),['A','B']);assert.equal(u.searchParams.get('historia'),'test');assert.equal(u.searchParams.get('paso'),'1');
+ const next=new URL(storyAtlasUrl(story,2),'https://example.test');assert.deepEqual(next.searchParams.getAll('seleccion'),u.searchParams.getAll('seleccion'));assert.deepEqual(next.searchParams.getAll('resaltar'),['C']);
  assert.equal(safeStoryReturn(u.search),'/es/historia/test/capitulo/1');
  for(const target of ['https://evil.test','//evil.test','/es/historia/test/capitulo/1?x=1','/es/historia/test/capitulo/0'])assert.equal(safeStoryReturn('?regreso='+encodeURIComponent(target)),null);
 });

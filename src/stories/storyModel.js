@@ -19,10 +19,26 @@ export function saveStoryProgress(storage, id, count, chapter) {
   } catch { /* Reading remains possible with storage disabled. */ }
   return next;
 }
-export function storyAtlasUrl(story, chapter) {
-  const step = story.pasos[chapter - 1];
-  const params = new URLSearchParams({ atlas: '1', vista: 'arbol', anio: String(step.anio), regreso: storyPath(story.slug, chapter) });
-  [...new Set(step.personas || [step.persona])].filter(Boolean).forEach(id => params.append('seleccion', id));
+export function storyStepIds(story, chapter) {
+  const step = story.pasos?.[chapter - 1];
+  return [...new Set(step?.personas || [step?.persona])].filter(Boolean);
+}
+export function storyPeopleIds(story) {
+  return [...new Set([...(story.protagonists || []).map(p => p.id), ...(story.pasos || []).flatMap((_, i) => storyStepIds(story, i + 1))])].filter(Boolean);
+}
+export function storyChapterPath(story, chapter = null, locale = 'es') {
+  if (locale === 'en') {
+    const base = story.storyPath || story.path?.replace(/\/chapter\/[1-9][0-9]*$/, '');
+    return `${base}${chapter ? `/chapter/${chapter}` : ''}`;
+  }
+  return storyPath(story.slug, chapter);
+}
+export function storyAtlasUrl(story, chapter, locale = story.path?.startsWith('/en/') ? 'en' : 'es') {
+  const step = story.pasos?.[chapter - 1];
+  if (!step) return '/es/?atlas=1';
+  const params = new URLSearchParams({ atlas: '1', vista: 'arbol', anio: String(step.anio), historia: story.id, paso: String(chapter), regreso: storyChapterPath(story, chapter, locale) });
+  storyPeopleIds(story).forEach(id => params.append('seleccion', id));
+  storyStepIds(story, chapter).forEach(id => params.append('resaltar', id));
   return `/es/?${params}`;
 }
 export function safeStoryReturn(search) {

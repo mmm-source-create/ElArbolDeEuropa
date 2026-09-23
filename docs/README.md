@@ -37,3 +37,7 @@ Las publicaciones se incorporan una sola vez a la bibliografía general. Sus aso
 ## Próximas mejoras implementadas
 
 [Seguimiento de next updates](NEXT_UPDATES.md) · [V2.21](V2.21.md)
+
+## V3.0
+
+[Coherencia visual, historias y exploración sencilla](V3.0.md).

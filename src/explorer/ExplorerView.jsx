@@ -1,4 +1,5 @@
 import AtlasGrowth from './AtlasGrowth.jsx';
+import StoryAtlasGuide from './StoryAtlasGuide.jsx';
 import '../stories/stories.css';
 import ConnectionControls from "../connections/ConnectionControls.jsx";
 import TreeExport from "../connections/TreeExport.jsx";
@@ -53,6 +54,8 @@ function BioSection({ title, open, onToggle, children }) {
 }
 
 export default function ExplorerView({ vm }) {
+  const [searchOpen,setSearchOpen] = React.useState(false);
+  const [mobileToolsOpen,setMobileToolsOpen] = React.useState(false);
   const {
     connectionIds, setConnectionIds, connectionCriterion, setConnectionCriterion, connectionResult, getExportSelection,
     initialMapViewport, recordMapViewport, timelineVirtual, timelineListRef, scrollRef, tlScrollRef, locale, setLocale, query, setQuery,
@@ -61,7 +64,7 @@ export default function ExplorerView({ vm }) {
     seleccion, setSeleccion, currentSearchIndex, setCurrentSearchIndex, zoom, setZoom, mode, setMode,
     origen, setOrigen, destino, setDestino, modoComparacion, setModoComparacion, compareMenuOpen, setCompareMenuOpen,
     compareRouteIndex, setCompareRouteIndex, focoMenuOpen, setFocoMenuOpen, focoId, setFocoId, focoAlcance, setFocoAlcance,
-    anioGlobal, setAnioGlobal, anioInput, setAnioInput, reproduciendoHistoria, setReproduciendoHistoria, velocidadHistoria, setVelocidadHistoria,
+    anioGlobal, setAnioGlobal, anioInput, setAnioInput, reproduciendoHistoria, setReproduciendoHistoria,
     shareStatus, setShareStatus, collapsedIds, setCollapsedIds, vistasActivas, setVistasActivas, panelesVisibles, setPanelesVisibles,
     infoProyecto, setInfoProyecto, timelineScaleIndex, setTimelineScaleIndex, timelineMode, setTimelineMode, eventoSeleccionadoId, setEventoSeleccionadoId,
     favoritos, setFavoritos, favoritosOpen, setFavoritosOpen, soloFavoritos, setSoloFavoritos, historiaActivaId, setHistoriaActivaId,
@@ -91,20 +94,20 @@ export default function ExplorerView({ vm }) {
     : null;
   return (
     <>
-      {vm.storyReturn && <a className="story-return" href={vm.storyReturn}>{vm.storyReturn.startsWith('/en/')?'← Back to chapter':'← Volver al capítulo'}</a>}
       {!modoTrabajo && <SiteHeader variant="atlas" locale={locale} onLanguageChange={cambiarIdioma} />}
-      <AtlasGrowth {...vm.growth}/>
     <div className={`wrap${modoTrabajo ? " atlas-work-mode" : ""}`}>
       <div className={`workspace-topbar${modoTrabajo ? " is-work-mode" : ""}`}>
-        <section className="workspace-topbar-section workspace-toolbar-search">
+        <section className="workspace-topbar-section workspace-toolbar-search" onBlur={e=>{if(!e.currentTarget.contains(e.relatedTarget))setSearchOpen(false);}}>
           <div className="toolbar-label">Búsqueda</div>
           <div className="search-box toolbar-search-box">
             <Search size={13} color="#8A7F65" />
             <input
               placeholder="Buscar nombre, título, dinastía o territorio…"
               value={query}
-              onChange={(event) => setQuery(event.target.value)}
+              onFocus={()=>setSearchOpen(true)}
+              onChange={(event) => {setQuery(event.target.value);setSearchOpen(true);}}
               onKeyDown={(event) => {
+                if (event.key === "Escape") setSearchOpen(false);
                 if (event.key === "Enter") irACoincidencia(event.shiftKey ? -1 : 1);
               }}
             />
@@ -122,6 +125,7 @@ export default function ExplorerView({ vm }) {
               </div>
             )}
           </div>
+          {searchOpen && queryTrim && <div className="atlas-search-results" aria-label="Resultados de toda la base"><span>{searchMatchIds.length ? `${searchMatchIds.length} coincidencias · toda la base` : 'No hay coincidencias'}</span>{vm.growth.results.slice(0,12).map(p=><button type="button" key={p.id} onClick={()=>{vm.growth.onSelect(p.id);setSearchOpen(false);}}><strong>{p.nombre}</strong><small>{positions[p.id]?'Ver persona':'Abrir ficha'}</small></button>)}</div>}
         </section>
 
         <section className="workspace-topbar-section workspace-toolbar-year">
@@ -197,7 +201,7 @@ export default function ExplorerView({ vm }) {
                 type="button"
                 className={`history-playback-btn history-playback-main${reproduciendoHistoria ? " active" : ""}`}
                 onClick={alternarReproduccionHistoria}
-                title={reproduciendoHistoria ? "Pausar reproducción" : "Reproducir historia"}
+                title={reproduciendoHistoria ? "Pausar reproducción" : "Reproducir: 1 año cada 0,5 segundos"}
                 aria-label={reproduciendoHistoria ? "Pausar reproducción" : "Reproducir historia"}
               >
                 {reproduciendoHistoria ? <Pause size={12} /> : <Play size={12} />}
@@ -211,26 +215,14 @@ export default function ExplorerView({ vm }) {
               >
                 <SkipForward size={12} />
               </button>
-              <label className="history-speed-control">
-                <span>Años por avance</span>
-                <select
-                  value={velocidadHistoria}
-                  onChange={(event) => setVelocidadHistoria(Number(event.target.value))}
-                  aria-label="Años por avance"
-                >
-                  <option value={1}>1 año/paso</option>
-                  <option value={5}>5 años/paso</option>
-                  <option value={10}>10 años/paso</option>
-                </select>
-              </label>
-              <label className="history-speed-control"><span>Ritmo</span><select aria-label="Ritmo de reproducción" value={vm.playbackMs} onChange={e=>vm.setPlaybackMs(Number(e.target.value))}><option value={2000}>Pausado (2 s)</option><option value={1000}>Normal (1 s)</option><option value={500}>Rápido (0,5 s)</option></select></label>
               <button type="button" className="history-playback-btn" disabled={vm.nextYear===null} onClick={()=>actualizarAnioDesdeRango(vm.nextYear)} title="Ir al siguiente acontecimiento registrado">Siguiente hito{vm.nextYear!==null?`: ${vm.nextYear}`:''}</button>
             </div>
           </div>
         </section>
 
+        {!modoTrabajo && <button type="button" className="atlas-tools-toggle" aria-expanded={mobileToolsOpen} aria-controls="atlas-secondary-tools" onClick={()=>setMobileToolsOpen(open=>!open)}>Herramientas del Atlas <ChevronDown size={12}/></button>}
         {!modoTrabajo && (
-        <div className="workspace-topbar-secondary">
+        <div id="atlas-secondary-tools" className={`workspace-topbar-secondary${mobileToolsOpen?' is-expanded':''}`}>
           <section className="workspace-topbar-section workspace-toolbar-view workspace-toolbar-panels">
             <div className="toolbar-label">Paneles visibles</div>
             <div className="segmented-control view-toggle-control panel-toggle-control" aria-label="Paneles visibles">
@@ -344,6 +336,10 @@ export default function ExplorerView({ vm }) {
                         <span>{opcion.descripcion}</span>
                       </button>
                     ))}
+                    <div className="focus-menu-actions">
+                      <button type="button" role="menuitem" className="compare-mode-option" disabled={Boolean(historiaActiva)||!vm.focusAdditions.length} onClick={()=>{vm.keepFocus();setFocoMenuOpen(false);}}><strong>Añadir el foco a mi selección{vm.focusAdditions.length?` (+${vm.focusAdditions.length})`:''}</strong><span>{historiaActiva?"La selección del recorrido se conserva completa":"Conserva estas personas al salir del foco"}</span></button>
+                      {!historiaActiva && vm.growth.canUndo && <button type="button" role="menuitem" className="compare-mode-option" onClick={()=>{vm.growth.onUndo();setFocoMenuOpen(false);}}>Deshacer ampliación</button>}
+                    </div>
                   </div>
                 )}
               </div>
@@ -468,12 +464,14 @@ export default function ExplorerView({ vm }) {
           <span className="compare-mode-label">{ALCANCES_FOCO.find((opcion) => opcion.id === focoAlcance)?.label || "Familia cercana"}</span>
           {focoSet && (
             <span className="focus-count">
-              {focoSet.size} persona{focoSet.size === 1 ? "" : "s"}
+              {visiblePeople.length} persona{visiblePeople.length === 1 ? "" : "s"} visibles
             </span>
           )}
-          <button className="clear-btn" style={{ marginTop: 0 }} onClick={() => setFocoId(null)}>reiniciar</button>
+          <button className="clear-btn" style={{ marginTop: 0 }} onClick={() => {setMode("view");setFocoId(null);}}>Salir del foco</button>
         </div>
       )}
+
+      {historiaActiva && <StoryAtlasGuide story={historiaActiva} index={historiaPasoIndex} returnPath={vm.storyReturn} count={vm.growth.ids?.length || 0} onStep={cambiarPasoHistoria} onCenter={()=>aplicarPasoHistoria(historiaActiva,historiaPasoIndex,{replace:true})} onExit={salirHistoria}/>}
 
       <div
         ref={workspaceGridRef}
@@ -500,6 +498,7 @@ export default function ExplorerView({ vm }) {
               </span>
             </div>
             <div className="panel-body workspace-panel-scroll workspace-filter-scroll">
+              <div className="atlas-scope"><strong>{vm.growth.ids===null?'Base completa':`${vm.growth.ids.length} personas en tu selección`}</strong><span>El modo foco permite explorar otras ramas.</span><div>{!historiaActiva&&<>{vm.growth.ids!==null&&<button onClick={vm.growth.onFull}>Ver todas</button>}<button onClick={vm.growth.onNew}>Nueva selección</button>{vm.growth.canUndo&&<button onClick={vm.growth.onUndo}>Deshacer</button>}</>}</div></div>
               <div className="filters-row filters-row-vertical filters-always-open">
                 <FilterSection
                   title="Territorios"
@@ -676,9 +675,9 @@ export default function ExplorerView({ vm }) {
           } : undefined}
         >
           {mostrarArbol && (
-            <section className="workspace-stage workspace-tree-stage" aria-label="Árbol genealógico">
+            <section className={`workspace-stage workspace-tree-stage${historiaActiva ? " story-tree-stage" : ""}`} aria-label="Árbol genealógico">
               <div className="tree-toolbar" aria-label="Controles del árbol">
-                <TreeExport getSelection={getExportSelection}/>
+                <span className="tree-scope-label">{visiblePeople.length} personas</span><TreeExport getSelection={getExportSelection}/>
                 <button type="button" className="nav-btn" onClick={() => cambiarZoomArbol(zoom - 0.1)} title="Alejar árbol" aria-label="Alejar árbol"><ZoomOut size={13} /></button>
                 <button type="button" className="nav-btn" onClick={() => cambiarZoomArbol(0.8)} title="Restablecer árbol" aria-label="Restablecer árbol"><RotateCcw size={12} /></button>
                 <button type="button" className="nav-btn" onClick={() => cambiarZoomArbol(zoom + 0.1)} title="Acercar árbol" aria-label="Acercar árbol"><ZoomIn size={13} /></button>
@@ -697,6 +696,7 @@ export default function ExplorerView({ vm }) {
               )}
 
               <div className="tree-outer">
+                {!historiaActiva && mode!=="foco" && <AtlasGrowth {...vm.growth}/>}
                 <div className="minimap" onClick={onMinimapClick}>
                   {PERSONAS.map((persona) => {
                     const pos = positions[persona.id];
@@ -1196,35 +1196,6 @@ export default function ExplorerView({ vm }) {
           onOpenStats={() => setInfoProyecto("estadisticas")}
           onReport={() => setInfoProyecto("reportar")}
         />
-      )}
-
-      {historiaActiva && historiaPasoActual && (
-        <aside className="story-guide" aria-live="polite">
-          <div className="story-guide-head">
-            <div>
-              <span>Historia · paso {historiaPasoIndex + 1} de {historiaActiva.pasos.length}</span>
-              <strong>{historiaActiva.titulo}</strong>
-            </div>
-            <button type="button" onClick={salirHistoria} aria-label="Salir del recorrido"><X size={14} /></button>
-          </div>
-          <div className="story-guide-year">{historiaPasoActual.anio}</div>
-          <h3>{historiaPasoActual.titulo}</h3>
-          <p>{historiaPasoActual.texto}</p>
-          {!!historiaPasoActual.personas?.length && (
-            <div className="story-guide-people">
-              {historiaPasoActual.personas.filter((id) => BY_ID[id]).map((id) => <a key={id} href={rutaEntidadLocalizada("es", "persona", slugPersonaPorLocale(BY_ID[id], "es"))} onClick={(event) => { event.preventDefault(); seleccionarPersonaPorId(id); }}>{BY_ID[id].nombre}</a>)}
-            </div>
-          )}
-          <div className="story-guide-actions">
-            <button type="button" disabled={historiaPasoIndex === 0} onClick={() => cambiarPasoHistoria(-1)}><ArrowLeft size={13} /> Anterior</button>
-            <button type="button" className="story-return-btn" onClick={() => aplicarPasoHistoria(historiaActiva, historiaPasoIndex)}>Volver al paso</button>
-            {historiaPasoIndex < historiaActiva.pasos.length - 1 ? (
-              <button type="button" className="story-next-btn" onClick={() => cambiarPasoHistoria(1)}>Continuar <ArrowRight size={13} /></button>
-            ) : (
-              <button type="button" className="story-next-btn" onClick={salirHistoria}>Terminar</button>
-            )}
-          </div>
-        </aside>
       )}
 
       {infoProyecto === 'europa' ? <React.Suspense fallback={<div className="project-modal-backdrop"><div className="project-modal"><div className="project-modal-body" role="status">Preparando Europa en este año… <button type="button" onClick={()=>setInfoProyecto(null)}>Cerrar</button></div></div></div>}>

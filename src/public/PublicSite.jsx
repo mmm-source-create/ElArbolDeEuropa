@@ -32,6 +32,8 @@ import HOME_DATA from "../generated/home.json";
 import { loadJsonAsset } from "../utils/loadAsset.js";
 import "./public.css";
 import { responsiveImage } from "../utils/responsiveImage.js";
+import ReadingSkeleton from "../stories/ReadingSkeleton.jsx";
+import { translatedEquivalent } from "../english/routes.js";
 
 const PUBLIC_SITE_URL = resolveSiteUrl(import.meta.env.VITE_SITE_URL);
 const BUILD_VERSION = String(SITE_META.buildVersion || SITE_META.personCount || "v2");
@@ -45,6 +47,7 @@ function rutaEntidad(tipo, slug, { atlas = false } = {}) {
 }
 
 function textoFechas(persona) { return persona ? documentaryLife(persona) : "Fechas no documentadas"; }
+function personaDates(persona, locale) { return locale === 'en' ? textoFechas(persona).replaceAll('antes de ', 'before ').replaceAll('después de ', 'after ').replace('Fechas no documentadas', 'Dates not recorded') : textoFechas(persona); }
 
 
 export function usePublicMeta({ title, description, path }) {
@@ -77,9 +80,9 @@ function PublicLayout({ children, pathname, prerendered = false }) {
   return <div className="public-site"><SiteHeader pathname={pathname} prerendered={prerendered}/>{children}<SiteFooter /></div>;
 }
 
-function Breadcrumbs({ items }) {
+function Breadcrumbs({ items, locale = 'es' }) {
   return (
-    <nav className="public-breadcrumbs" aria-label="Migas de pan">
+    <nav className="public-breadcrumbs" aria-label={locale === 'en' ? 'Breadcrumb' : 'Migas de pan'}>
       {items.map((item, index) => (
         <React.Fragment key={`${item.label}-${index}`}>
           {index > 0 && <span aria-hidden="true">›</span>}
@@ -90,11 +93,11 @@ function Breadcrumbs({ items }) {
   );
 }
 
-export function PersonaMiniCard({ persona, compact = false }) {
+export function PersonaMiniCard({ persona, compact = false, locale = 'es' }) {
   if (!persona) return null;
   const image = IMAGENES_PERSONAS[persona.id];
   return (
-    <a className={`public-person-card${compact ? " is-compact" : ""}`} href={rutaEntidad("persona", persona.slug)}>
+    <a className={`public-person-card${compact ? " is-compact" : ""}`} href={persona.path || rutaEntidad("persona", persona.slug)}>
       {image ? (
         <span className="public-person-thumb"><img {...responsiveImage(image.archivo, compact ? "44px" : "58px")} alt="" loading="lazy" decoding="async" style={{ objectPosition: image.encuadre || image.posicion || "50% 20%" }} /></span>
       ) : (
@@ -102,8 +105,8 @@ export function PersonaMiniCard({ persona, compact = false }) {
       )}
       <span className="public-person-copy">
         <strong>{persona.nombre}</strong>
-        <small>{[persona.titulo, persona.dinastia].filter(Boolean).join(" · ") || "Ficha histórica"}</small>
-        {(Number.isFinite(persona.nac) || Number.isFinite(persona.muer)) && <span>{textoFechas(persona)}</span>}
+        <small>{locale === 'en' ? persona.role || 'Historical profile · ES' : [persona.titulo, persona.dinastia].filter(Boolean).join(" · ") || "Ficha histórica"}</small>
+        {(Number.isFinite(persona.nac) || Number.isFinite(persona.muer)) && <span>{personaDates(persona, locale)}</span>}
       </span>
       <ArrowRight size={14} aria-hidden="true" />
     </a>
@@ -111,56 +114,113 @@ export function PersonaMiniCard({ persona, compact = false }) {
 }
 
 export function HomePage({ onEnterAtlas, onOpenPanel }) {
-  const data = HOME_DATA;
-  const [visitYear, setVisitYear] = useState(1500);
   usePublicMeta({
     title: "El Árbol de Europa | Atlas genealógico e histórico interactivo",
     description: "Explora personas, dinastías, parentescos, reinados, territorios e historias de la Europa medieval y moderna.",
     path: "/es/",
   });
 
-  const stats = data?.stats || {};
   return (
     <PublicLayout>
+      <HomeContent data={HOME_DATA} onEnterAtlas={onEnterAtlas} onOpenPanel={onOpenPanel} />
+    </PublicLayout>
+  );
+}
+
+const HOME_COPY = {
+  es: {
+    title: "La historia de Europa, vista como una red",
+    eyebrow: "Genealogía · política · territorio · 1200–1800",
+    introduction: "Recorre familias, coronas, matrimonios, rivalidades y sucesiones en un atlas que une árbol genealógico, mapa, biografías, cronología e historias guiadas.",
+    explore: "Explorar el atlas", stories: "Ver historias", year: "Europa en 1500",
+    statsLabel: "Resumen del proyecto", stats: ["personas", "dinastías", "territorios", "historias disponibles"],
+    doorsEyebrow: "Entradas rápidas", doorsTitle: "Elige cómo quieres empezar",
+    peopleEyebrow: "Personajes destacados", peopleTitle: "Puertas a la red", allPeople: "Ver todas las personas",
+    storiesEyebrow: "Recorridos guiados", storiesTitle: "Historias para entrar en el atlas", allStories: "Todas las historias", chapters: "capítulos", start: "Comenzar recorrido",
+    aboutEyebrow: "Un proyecto en crecimiento", aboutTitle: "Una base histórica para explorar, no una lista cerrada",
+    about: "El proyecto combina genealogía, cronología y cartografía. La ausencia de una relación o personaje puede significar que todavía no se ha incorporado; las correcciones documentadas tienen prioridad sobre la mera coherencia visual.",
+    project: "Acerca del proyecto", methodology: "Fuentes y metodología",
+  },
+  en: {
+    title: "The history of Europe, seen as a network",
+    eyebrow: "Genealogy · politics · territory · 1200–1800",
+    introduction: "Explore families, crowns, marriages, rivalries and successions in an Atlas that connects genealogy, maps, biographies, timelines and guided stories.",
+    explore: "Explore the Atlas (Spanish)", stories: "Read the stories", year: "Europe in 1500 (Spanish)",
+    statsLabel: "The complete Atlas", stats: ["people", "dynasties", "territories", "stories in the Atlas"],
+    doorsEyebrow: "Ways into the Atlas", doorsTitle: "Choose where to begin",
+    peopleEyebrow: "Featured people", peopleTitle: "Doors into the network", allPeople: "All English profiles",
+    storiesEyebrow: "Guided journeys", storiesTitle: "Stories that open the Atlas", allStories: "All English stories", chapters: "chapters", start: "Begin the story",
+    aboutEyebrow: "A growing project", aboutTitle: "A historical base to explore, not a closed list",
+    about: "The project brings together genealogy, chronology and cartography. A missing person or relationship may simply not have been added yet. Documented corrections take priority over visual consistency.",
+    project: "About the project (Spanish)", methodology: "Sources and methodology",
+  },
+};
+
+// Both editions use the original public layout; only the copy and available records differ.
+export function HomeContent({ data = HOME_DATA, locale = "es", title, onEnterAtlas, onOpenPanel, prerendered = false }) {
+  const english = locale === "en";
+  const copy = HOME_COPY[english ? "en" : "es"];
+  const stats = data?.stats || HOME_DATA.stats || {};
+  const people = english ? data?.people : data?.personasDestacadas;
+  const stories = english ? data?.stories : data?.historiasDestacadas;
+  const peoplePath = english ? "/en/people" : "/es/personas";
+  const storiesPath = english ? "/en/stories" : "/es/historias";
+  const doors = [
+    { href: peoplePath, Icon: Users, title: english ? "People" : "Personas", description: english ? "Begin with a person, their family and their time." : "Busca una figura y entra por su familia, reinados y época." },
+    { href: "/es/dinastias", Icon: Shield, title: english ? "Dynasties" : "Dinastías", description: english ? "Capetians, Habsburgs, Trastámaras, Bourbons and many more." : "Capetos, Habsburgo, Trastámara, Borbones y muchas más.", spanish: true },
+    { href: "/es/territorios", Icon: Landmark, title: english ? "Territories" : "Territorios", description: english ? "Discover who ruled where and how the crowns connect." : "Explora quién gobernó dónde y cómo se conectan las coronas.", spanish: true },
+    { href: storiesPath, Icon: BookOpen, title: english ? "Stories" : "Historias", description: english ? "Read guided journeys through art, politics and dynastic history." : "Recorridos guiados por guerras, artistas, favoritos y dinastías." },
+    { href: "/es/desafio", Icon: Swords, title: english ? "Challenge" : "Desafío", description: english ? "Test your knowledge through connections, portraits and a daily challenge." : "El Camino, Racha, Retratos y un desafío diario con la propia base histórica.", spanish: true },
+    { href: "/es/?atlas=1&panel=estadisticas", Icon: Sparkles, title: english ? "Statistics" : "Estadísticas", description: english ? "Explore the houses, territories and people represented in the Atlas." : "Descubre qué casas, territorios y figuras dominan la base.", spanish: true, panel: "estadisticas" },
+  ];
+  const navigateInApp = (event, callback, value) => {
+    if (typeof callback !== "function" || event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+    event.preventDefault();
+    callback(value);
+  };
+  return (
       <main className="public-main public-home">
         <section className="public-hero">
-          <div className="public-hero-eyebrow">Genealogía · política · territorio · 1200–1800</div>
-          <h1>Una familia. Una historia. Un año.</h1>
-          <p>Elige un punto de partida y descubre cómo se conectan las personas, las coronas y los acontecimientos de Europa entre 1200 y 1800.</p>
-          <div className="home-pathways">
-            <a className="home-pathway" href="/es/?atlas=1&seleccion="><Users size={25}/><h2>Explora una familia</h2><p>Empieza con una persona y amplía sus ramas a tu ritmo.</p><strong>Elegir personaje →</strong></a>
-            <a className="home-pathway" href="/es/historia/el-reino-partido-en-dos"><BookOpen size={25}/><h2>Comienza una historia</h2><p>Sicilia y Nápoles: sigue las herencias que partieron un reino en dos.</p><strong>Entrar en la historia →</strong></a>
-            <form className="home-pathway" action="/es/" method="get"><Landmark size={25}/><h2>Visita un año</h2><p>Descubre quién gobierna y qué ocurre al mismo tiempo en Europa.</p><input type="hidden" name="atlas" value="1"/><input type="hidden" name="panel" value="europa"/><label>Año <input aria-label="Año para visitar Europa" name="anio" type="number" min="1200" max="1800" required value={visitYear} onChange={e=>setVisitYear(e.target.value)}/></label><button type="submit">Ver Europa →</button></form>
+          <div className="public-hero-eyebrow">{copy.eyebrow}</div>
+          <h1>{title || copy.title}</h1>
+          <p>{copy.introduction}</p>
+          <div className="public-hero-actions">
+            <a className="public-primary" href="/es/?atlas=1" onClick={(event) => navigateInApp(event, onEnterAtlas, null)}>{copy.explore} <ArrowRight size={16} /></a>
+            <a className="public-secondary" href={storiesPath}><BookOpen size={15} /> {copy.stories}</a>
+            <a className="public-home-year" href="/es/?atlas=1&anio=1500&panel=europa"><Landmark size={14} /> {copy.year}</a>
           </div>
-          <div className="public-hero-stats" aria-label="Resumen del proyecto">
-            <span><strong>{stats.personas ?? "—"}</strong> personas</span>
-            <span><strong>{stats.dinastias ?? "—"}</strong> dinastías</span>
-            <span><strong>{stats.territorios ?? "—"}</strong> territorios</span>
-            <span><strong>{stats.historias ?? "—"}</strong> historias disponibles</span>
+          {english && <p className="public-home-edition">Selected profiles and stories are available in English. The interactive Atlas is in Spanish.</p>}
+          <div className="public-hero-stats" aria-label={copy.statsLabel}>
+            {["personas", "dinastias", "territorios", "historias"].map((key, index) => <span key={key}><strong>{stats[key] ?? "—"}</strong>{copy.stats[index]}</span>)}
           </div>
         </section>
 
-        <section className="public-section home-recommendations"><div className="public-section-heading"><div><span>Recomendaciones del proyecto</span><h2>Tres recorridos para descubrirlo</h2></div></div><div className="public-door-grid">
-          <a className="public-door-card" href="/es/?atlas=1&familia=ISAB1CAST"><Users size={22}/><strong>La familia de Isabel de Castilla</strong><span>Abre sus vínculos inmediatos y añade las ramas que quieras conocer.</span></a>
-          <a className="public-door-card" href="/es/historia/en-busca-de-la-gioconda"><BookOpen size={22}/><strong>En busca de la Gioconda</strong><span>Sigue a Leonardo por las cortes, los retratos y las identidades propuestas.</span></a>
-          <a className="public-door-card" href="/es/?atlas=1&anio=1519&panel=europa"><Landmark size={22}/><strong>Europa en 1519</strong><span>Consulta el panorama completo y compara qué cambia desde el año anterior.</span></a>
-        </div></section>
-        <nav className="home-catalog-links" aria-label="Más formas de explorar"><a href="/es/personas">Todas las personas</a><a href="/es/dinastias">Dinastías</a><a href="/es/territorios">Territorios</a><a href="/es/historias">Todas las historias</a><a href="/es/desafio">Desafíos</a><button onClick={()=>onOpenPanel?.('estadisticas')}>Estadísticas</button></nav>
+        <section className="public-section">
+          <div className="public-section-heading"><div><span>{copy.doorsEyebrow}</span><h2>{copy.doorsTitle}</h2></div></div>
+          <div className="public-door-grid">
+            {doors.map(({ href, Icon, title: doorTitle, description, spanish, panel }) => (
+              <a key={href} href={href} className="public-door-card" onClick={panel ? (event) => navigateInApp(event, onOpenPanel, panel) : undefined}>
+                <Icon size={22} aria-hidden="true" /><strong>{doorTitle}</strong><span>{description}</span>
+                {english && spanish && <small className="public-home-language">In Spanish</small>}
+              </a>
+            ))}
+          </div>
+        </section>
 
-        {!!data?.personasDestacadas?.length && (
+        {!!people?.length && (
           <section className="public-section">
-            <div className="public-section-heading"><div><span>Personajes destacados</span><h2>Seis puertas a la red</h2></div><a href="/es/personas">Ver todas las personas <ArrowRight size={13} /></a></div>
-            <div className="public-person-grid">{data.personasDestacadas.map((persona) => <PersonaMiniCard key={persona.id} persona={persona} />)}</div>
+            <div className="public-section-heading"><div><span>{copy.peopleEyebrow}</span><h2>{copy.peopleTitle}</h2></div><a href={peoplePath}>{copy.allPeople} <ArrowRight size={13} /></a></div>
+            <div className="public-person-grid">{people.map((persona) => <PersonaMiniCard key={persona.id} persona={persona} locale={locale} />)}</div>
           </section>
         )}
 
-        {!!data?.historiasDestacadas?.length && (
+        {!!stories?.length && (
           <section className="public-section">
-            <div className="public-section-heading"><div><span>Recorridos guiados</span><h2>Historias para entrar en el atlas</h2></div><a href="/es/historias">Todas las historias <ArrowRight size={13} /></a></div>
+            <div className="public-section-heading"><div><span>{copy.storiesEyebrow}</span><h2>{copy.storiesTitle}</h2></div><a href={storiesPath}>{copy.allStories} <ArrowRight size={13} /></a></div>
             <div className="public-story-grid">
-              {data.historiasDestacadas.map((historia) => (
-                <a key={historia.id} className="public-story-card" href={rutaEntidad("historia", historia.slug)}>
-                  <span>{historia.pasos} pasos</span><h3>{historia.titulo}</h3><p>{historia.subtitulo || historia.descripcion}</p><b>Comenzar recorrido <ArrowRight size={13} /></b>
+              {stories.map((historia) => (
+                <a key={historia.id} className="public-story-card" href={historia.path || rutaEntidad("historia", historia.slug)}>
+                  {Number.isFinite(historia.pasos) && <span>{historia.pasos} {copy.chapters}</span>}<h3>{english ? historia.nombre : historia.titulo}</h3><p>{english ? historia.description : historia.subtitulo || historia.descripcion}</p><b>{copy.start} <ArrowRight size={13} /></b>
                 </a>
               ))}
             </div>
@@ -168,15 +228,14 @@ export function HomePage({ onEnterAtlas, onOpenPanel }) {
         )}
 
         <section className="public-section public-about-strip">
-          <div><span>Un proyecto en crecimiento</span><h2>Una base histórica para explorar, no una lista cerrada</h2><p>El proyecto combina genealogía, cronología y cartografía. La ausencia de una relación o personaje puede significar que todavía no se ha incorporado; las correcciones documentadas tienen prioridad sobre la mera coherencia visual.</p></div>
+          <div><span>{copy.aboutEyebrow}</span><h2>{copy.aboutTitle}</h2><p>{copy.about}</p></div>
           <div className="public-about-actions">
-            <a href="/es/proyecto">Acerca del proyecto</a>
-            <a href="/es/fuentes">Fuentes y metodología</a>
+            <a href="/es/proyecto">{copy.project}</a>
+            <a href={english ? "/en/methodology" : "/es/fuentes"}>{copy.methodology}</a>
           </div>
         </section>
 
       </main>
-    </PublicLayout>
   );
 }
 
@@ -311,7 +370,7 @@ export function CatalogPage({ tipo }) {
         <label className="public-search"><Search size={16} /><input value={query} onChange={(e) => setQuery(e.target.value)} placeholder={`Buscar en ${config.title.toLowerCase()}…`} /><span>{filtrados.length}</span></label>
 
         {tipo === "dinastias" && <label className="dynasty-editorial-filter"><input type="checkbox" checked={soloHistoria} onChange={e=>setSoloHistoria(e.target.checked)}/> Mostrar solo casas con historia desarrollada</label>}
-        {loading && <div className="public-loading">Cargando catálogo…</div>}
+        {loading && <ReadingSkeleton kind="catalog"/>}
         {error && <div className="public-error">No se ha podido cargar este catálogo. Puedes seguir explorando el atlas.</div>}
 
         {!loading && !error && tipo === "personas" && (
@@ -350,22 +409,22 @@ export function CatalogPage({ tipo }) {
   );
 }
 
-function Portrait({ persona }) {
+function Portrait({ persona, locale = 'es' }) {
   const image = IMAGENES_PERSONAS[persona?.id];
   if (!image) return null;
   const objectPosition = image.encuadre || image.posicion || "50% 20%";
   const zoom = Number.isFinite(image.zoom) && image.zoom > 0 ? image.zoom : 1;
   return (
     <figure className="public-portrait">
-      <div className="public-portrait-frame"><img {...responsiveImage(image.archivo, "(max-width: 680px) 280px, 320px")} alt={image.alt || `Retrato de ${persona.nombre}`} decoding="async" style={{ objectPosition, transform: `scale(${zoom})`, transformOrigin: objectPosition }} /></div>
-      <figcaption><strong>{image.tipo}</strong><span>{image.obra}</span><span>{image.autor}{image.fecha ? ` · ${image.fecha}` : ""}</span>{image.institucion && <span>{image.institucion}</span>}<small>{image.derechos}{image.fuenteUrl && <> · <a href={image.fuenteUrl} target="_blank" rel="noreferrer">Fuente <ExternalLink size={10} /></a></>}</small></figcaption>
+      <div className="public-portrait-frame"><img {...responsiveImage(image.archivo, "(max-width: 680px) 280px, 320px")} alt={locale === 'en' ? `Portrait of ${persona.nombre}` : image.alt || `Retrato de ${persona.nombre}`} decoding="async" style={{ objectPosition, transform: `scale(${zoom})`, transformOrigin: objectPosition }} /></div>
+      <figcaption lang={locale === 'en' ? 'es' : undefined}><strong>{image.tipo}</strong><span>{image.obra}</span><span>{image.autor}{image.fecha ? ` · ${image.fecha}` : ""}</span>{image.institucion && <span>{image.institucion}</span>}<small>{image.derechos}{image.fuenteUrl && <> · <a href={image.fuenteUrl} target="_blank" rel="noreferrer">{locale === 'en' ? 'Source' : 'Fuente'} <ExternalLink size={10} /></a></>}</small></figcaption>
     </figure>
   );
 }
 
-function RelationList({ label, items }) {
+function RelationList({ label, items, locale = 'es' }) {
   if (!items?.length) return null;
-  return <div className="public-relation-row"><strong>{label}</strong><div>{items.map((p) => <a key={p.id} href={rutaEntidad("persona", p.slug)}>{p.nombre}</a>)}</div></div>;
+  return <div className="public-relation-row"><strong>{label}</strong><div>{items.map((p) => { const path = p.path || (locale === 'en' && translatedEquivalent(rutaEntidad('persona', p.slug), 'en')) || rutaEntidad('persona', p.slug); return <a key={p.id} href={path}>{p.nombre}{locale === 'en' && path.startsWith('/es/') ? ' · ES' : ''}</a>; })}</div></div>;
 }
 
 export function PersonPage({ slug, legacyId, onExplore, initialData = null }) {
@@ -403,45 +462,51 @@ export function PersonPage({ slug, legacyId, onExplore, initialData = null }) {
   const metadata=entityMeta('persona',persona,resolvedSlug||slug);
   usePublicMeta(metadata);
 
-  if (state.loading) return <PublicLayout pathname={metadata.path} prerendered={Boolean(initialData)}><main className="public-main"><div className="public-loading">Preparando ficha histórica…</div></main></PublicLayout>;
-  if (state.error || !persona) return <PublicLayout pathname={metadata.path} prerendered={Boolean(initialData)}><main className="public-main"><Breadcrumbs items={[{ label: "Inicio", href: "/es/" }, { label: "Personas", href: "/es/personas" }, { label: "Ficha" }]} /><div className="public-error"><h1>Ficha no disponible</h1><p>No se ha podido cargar esta ficha. El atlas completo sigue disponible.</p><button className="public-primary" onClick={onExplore}>Abrir atlas <ArrowRight size={15} /></button></div></main></PublicLayout>;
+  if (state.loading) return <PublicLayout pathname={metadata.path} prerendered={Boolean(initialData)}><main className="public-main"><ReadingSkeleton kind="person"/></main></PublicLayout>;
+  if (state.error || !persona) return <PublicLayout pathname={metadata.path} prerendered={Boolean(initialData)}><main className="public-main"><Breadcrumbs items={[{ label: "Inicio", href: "/es/" }, { label: "Personas", href: "/es/personas" }, { label: "Ficha" }]} /><div className="public-error" role="alert"><h1>Ficha no disponible</h1><p>No se ha podido cargar esta ficha. El atlas completo sigue disponible.</p><button className="public-primary" onClick={() => window.location.reload()}>Reintentar</button> <a className="public-secondary" href="/es/?atlas=1">Abrir atlas <ArrowRight size={15} /></a></div></main></PublicLayout>;
 
-  return (
-    <PublicLayout pathname={metadata.path} prerendered={Boolean(initialData)}>
-      <main className="public-main public-person-page">
-        <Breadcrumbs items={[{ label: "Inicio", href: "/es/" }, { label: "Personas", href: "/es/personas" }, { label: persona.nombre }]} />
-        <article>
-          <header className="public-person-hero">
-            <div className="public-person-hero-copy">
-              <span>El Árbol de Europa · Persona</span>
-              <h1>{persona.nombre}</h1>
-              {persona.sobrenombre && <div className="public-person-nickname">«{persona.sobrenombre}»</div>}
-              <p>{(persona.biografia || persona.resumen || "")}</p>
-              <div className="public-person-badges"><span>{textoFechas(persona)}</span>{persona.titulo && <span>{persona.titulo}</span>}{persona.dinastia && <a href={rutaEntidad("dinastia", slugPublico(persona.dinastia))}>{persona.dinastia}</a>}</div>
-              <div className="public-person-actions"><a className="public-primary" href={`${metadata.path}?atlas=1`} onClick={initialData?undefined:e=>{e.preventDefault();onExplore();}}>Abrir en el atlas interactivo <ArrowRight size={15} /></a><a className="public-secondary" href="/es/personas"><ArrowLeft size={14} /> Volver a personas</a></div>
-            </div>
-            <Portrait persona={persona} />
-          </header>
+  return <PublicLayout pathname={metadata.path} prerendered={Boolean(initialData)}><PersonContent persona={persona} path={metadata.path} onExplore={initialData?undefined:onExplore}/></PublicLayout>;
+}
 
-          <div className="public-person-columns">
-            <section className="public-content-card"><span>Perfil histórico</span><h2>Datos principales</h2>{persona.titulo && <p><strong>Título:</strong> {persona.titulo}</p>}{!!persona.aliases?.length && <p><strong>Otros nombres:</strong> {persona.aliases.join(" · ")}</p>}{persona.dinastia && <p><strong>Dinastía:</strong> <a href={rutaEntidad("dinastia", slugPublico(persona.dinastia))}>{persona.dinastia}</a></p>}{!!persona.reinos?.length && <p><strong>Territorios:</strong> {persona.reinos.map((r, i) => <React.Fragment key={r}>{i > 0 && " · "}<a href={rutaEntidad("territorio", slugPublico(r))}>{r}</a></React.Fragment>)}</p>}{!!persona.reinados?.length && <div className="public-reigns"><strong>Gobiernos y reinados registrados</strong>{persona.reinados.map((r, index) => <div key={`${r.territorio}-${r.desde}-${index}`}><span>{r.titulo} · {r.territorio || "Territorio"} · {etiquetaClaseGobierno(persona, r)}</span><b>{r.desde ?? "?"}–{r.hasta ?? "?"}</b>{r.condicion && <small>{r.condicion}</small>}</div>)}</div>}</section>
+export function PersonContent({ persona, locale = 'es', path, onExplore }) {
+  const en = locale === 'en';
+  const label = (es, english) => en ? english : es;
+  const profilePath = path || rutaEntidad('persona', persona.slug);
+  const atlasPath = en ? `/es/?atlas=1&familia=${encodeURIComponent(persona.id)}` : `${profilePath}?atlas=1`;
+  const peoplePath = en ? '/en/people' : '/es/personas';
+  const sourcePath = en ? '/en/methodology' : '/es/fuentes';
+  return <main className="public-main public-person-page">
+    <Breadcrumbs locale={locale} items={[{label:label('Inicio','Home'),href:en?'/en/':'/es/'},{label:label('Personas','People'),href:peoplePath},{label:persona.nombre}]}/>
+    <article>
+      <header className="public-person-hero">
+        <div className="public-person-hero-copy">
+          <span>{label('El Árbol de Europa · Persona','The Tree of Europe · Person')}</span>
+          <h1>{persona.nombre}</h1>
+          {!en && persona.sobrenombre && <div className="public-person-nickname">«{persona.sobrenombre}»</div>}
+          <p>{en ? persona.summary : persona.biografia || persona.resumen || ''}</p>
+          <div className="public-person-badges"><span>{personaDates(persona,locale)}</span>{(en?persona.role:persona.titulo)&&<span>{en?persona.role:persona.titulo}</span>}{persona.dinastia&&<a href={rutaEntidad('dinastia',slugPublico(persona.dinastia))}>{persona.dinastia}{en?' · ES':''}</a>}</div>
+          <div className="public-person-actions"><a className="public-primary" href={atlasPath} onClick={onExplore?e=>{e.preventDefault();onExplore();}:undefined}>{label('Abrir en el atlas interactivo','Explore this family · Spanish Atlas')}<ArrowRight size={15}/></a><a className="public-secondary" href={peoplePath}><ArrowLeft size={14}/>{label('Volver a personas','Back to people')}</a></div>
+        </div>
+        <Portrait persona={persona} locale={locale}/>
+      </header>
+      {en&&<p className="public-translation-note">This profile is translated. Names of dynasties and territories, picture credits and original documentary records retain their source language. Links marked ES open the Spanish edition.</p>}
+      <div className="public-person-columns">
+        <section className="public-content-card"><span>{label('Perfil histórico','Historical profile')}</span><h2>{label('Datos principales','Key details')}</h2>{(en?persona.role:persona.titulo)&&<p><strong>{label('Título:','Role:')}</strong> {en?persona.role:persona.titulo}</p>}{!!persona.aliases?.length&&<p><strong>{label('Otros nombres:','Other recorded names:')}</strong> {persona.aliases.join(' · ')}</p>}{persona.dinastia&&<p><strong>{label('Dinastía:','Dynasty:')}</strong> <a href={rutaEntidad('dinastia',slugPublico(persona.dinastia))}>{persona.dinastia}{en?' · ES':''}</a></p>}{!!persona.reinos?.length&&<p><strong>{label('Territorios:','Territories:')}</strong> {persona.reinos.map((r,i)=><React.Fragment key={r}>{i>0&&' · '}<a href={rutaEntidad('territorio',slugPublico(r))}>{r}{en?' (ES)':''}</a></React.Fragment>)}</p>}{!en&&<RecordedGovernments persona={persona}/>}</section>
+        <section className="public-content-card"><span>{label('Red familiar','Family network')}</span><h2>{label('Relaciones documentadas','Documented relationships')}</h2><RelationList locale={locale} label={label('Padres','Parents')} items={persona.padres}/><RelationList locale={locale} label={label(persona.conyuges?.length>1?'Cónyuges':'Cónyuge','Partners')} items={persona.conyuges}/><RelationList locale={locale} label={label('Hijos/as','Children')} items={persona.hijos}/>{!persona.padres?.length&&!persona.conyuges?.length&&!persona.hijos?.length&&<p className="public-muted">{label('No hay relaciones directas cargadas para esta persona.','No direct relationships are recorded for this person.')}</p>}</section>
+      </div>
+      {en ? <details className="public-original-content"><summary>Governments and documentary notes · Spanish original</summary><div lang="es"><RecordedGovernments persona={persona}/><CrownTimeline key={persona.id} persona={persona} accesos={persona.accesosCoronas} fuentes={persona.fuentes}/><DocumentationNotes persona={persona}/></div><p className="public-translation-note"><a href={persona.esPath}>Read the complete Spanish record →</a></p></details> : <><CrownTimeline key={persona.id} persona={persona} accesos={persona.accesosCoronas} fuentes={persona.fuentes}/><DocumentationNotes persona={persona}/></>}
+      {!!persona.fuentes?.length&&<section className="public-content-card"><span>{label('Documentación','Documentation')}</span><h2>{label('Fuentes de esta ficha','Sources for this profile')}</h2><ul>{persona.fuentes.map((f,i)=><li key={f.url||i}><a href={f.url} target="_blank" rel="noreferrer">{f.titulo}</a></li>)}</ul><p className="public-muted">{label('Referencias biográficas y de contexto.','Biographical and contextual references in their original language.')} <a href={sourcePath}>{label('Consultar metodología y bibliografía completa','Sources and methodology')}</a>.</p></section>}
+      {!!persona.historias?.length&&<section className="public-section public-person-section"><div className="public-section-heading"><div><span>{label('Historias relacionadas','Related stories')}</span><h2>{label('Aparece en estos recorridos','Follow this person through history')}</h2></div></div><div className="public-story-grid">{persona.historias.map(h=><a key={h.id} className="public-story-card" href={h.path||rutaEntidad('historia',h.slug)}><span>{en&&!h.path?'Story · Spanish original':label('Historia','Story')}</span><h3>{h.titulo}</h3><p>{h.subtitulo}</p><b>{label('Comenzar','Start reading')}<ArrowRight size={13}/></b></a>)}</div></section>}
+      <section className="public-section public-person-section"><div className="public-section-heading"><div><span>{label('Seguir explorando','Keep exploring')}</span><h2>{en?`More paths from ${persona.nombre}`:`Más caminos desde ${persona.nombre}`}</h2></div></div><div className="public-follow-grid">
+        <div><h3><GitBranch size={16}/>{label('Familia','Family')}</h3>{[...(persona.padres||[]),...(persona.conyuges||[]),...(persona.hijos||[])].slice(0,6).map(p=><PersonaMiniCard key={p.id} persona={p} compact locale={locale}/>)}</div>
+        <div><h3><Shield size={16}/>{label('Misma dinastía','Same dynasty')}</h3>{(persona.relacionadosDinastia||[]).map(p=><PersonaMiniCard key={p.id} persona={p} compact locale={locale}/>)}</div>
+        <div><h3><Users size={16}/>{label('En su época','In their lifetime')}</h3>{(persona.contemporaneos||[]).map(p=><PersonaMiniCard key={p.id} persona={p} compact locale={locale}/>)}</div>
+      </div></section>
+    </article>
+  </main>;
+}
 
-            <section className="public-content-card"><span>Red familiar</span><h2>Relaciones documentadas</h2><RelationList label="Padres" items={persona.padres} /><RelationList label={persona.conyuges?.length > 1 ? "Cónyuges" : "Cónyuge"} items={persona.conyuges} /><RelationList label="Hijos/as" items={persona.hijos} />{!persona.padres?.length && !persona.conyuges?.length && !persona.hijos?.length && <p className="public-muted">No hay relaciones directas cargadas para esta persona.</p>}</section>
-          </div>
-
-          <CrownTimeline key={persona.id} persona={persona} accesos={persona.accesosCoronas} fuentes={persona.fuentes}/>
-          <DocumentationNotes persona={persona}/>
-          {!!persona.fuentes?.length && <section className="public-content-card"><span>Documentación</span><h2>Fuentes de esta ficha</h2><ul>{persona.fuentes.map(fuente => <li key={fuente.url}><a href={fuente.url} target="_blank" rel="noreferrer">{fuente.titulo}</a></li>)}</ul><p className="public-muted">Referencias biográficas y de contexto. <a href="/es/fuentes">Consultar metodología y bibliografía completa</a>.</p></section>}
-
-          {!!persona.historias?.length && <section className="public-section public-person-section"><div className="public-section-heading"><div><span>Historias relacionadas</span><h2>Aparece en estos recorridos</h2></div></div><div className="public-story-grid">{persona.historias.map((h) => <a key={h.id} className="public-story-card" href={rutaEntidad("historia", h.slug)}><span>Historia</span><h3>{h.titulo}</h3><p>{h.subtitulo}</p><b>Comenzar <ArrowRight size={13} /></b></a>)}</div></section>}
-
-          <section className="public-section public-person-section"><div className="public-section-heading"><div><span>Seguir explorando</span><h2>Más caminos desde {persona.nombre}</h2></div></div><div className="public-follow-grid">
-            <div><h3><GitBranch size={16} /> Familia</h3>{[...(persona.padres || []), ...(persona.conyuges || []), ...(persona.hijos || [])].slice(0, 6).map((p) => <PersonaMiniCard key={p.id} persona={p} compact />)}</div>
-            <div><h3><Shield size={16} /> Misma dinastía</h3>{(persona.relacionadosDinastia || []).map((p) => <PersonaMiniCard key={p.id} persona={p} compact />)}</div>
-            <div><h3><Users size={16} /> En su época</h3>{(persona.contemporaneos || []).map((p) => <PersonaMiniCard key={p.id} persona={p} compact />)}</div>
-          </div></section>
-        </article>
-      </main>
-    </PublicLayout>
-  );
+function RecordedGovernments({persona}) {
+  if(!persona.reinados?.length)return null;
+  return <div className="public-reigns"><strong>Gobiernos y reinados registrados</strong>{persona.reinados.map((r,index)=><div key={`${r.territorio}-${r.desde}-${index}`}><span>{r.titulo} · {r.territorio||'Territorio'} · {etiquetaClaseGobierno(persona,r)}</span><b>{r.desde??'?'}–{r.hasta??'?'}</b>{r.condicion&&<small>{r.condicion}</small>}</div>)}</div>;
 }
