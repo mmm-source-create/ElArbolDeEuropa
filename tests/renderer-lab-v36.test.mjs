@@ -1,11 +1,13 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { readFileSync } from 'node:fs';
 import { PERSONAS } from '../src/personas.jsx';
-import { HIJOS_POR_ID } from '../src/explorer/model.js';
+import { BY_ID, HIJOS_POR_ID } from '../src/explorer/model.js';
+import { computeGenerations, buildRows, computeTreeLayout } from '../src/explorer/treeLayout.js';
 import { buildScene, hitTest, relatedIds, screenToWorld, visibleBoxes } from '../src/lab/scene.js';
 
-const base = JSON.parse(readFileSync(new URL('../src/generated/treeBase.json', import.meta.url), 'utf8'));
+const gen = computeGenerations(PERSONAS);
+const rows = buildRows(PERSONAS, gen);
+const base = { gen, rows, layout: computeTreeLayout(rows, BY_ID, HIJOS_POR_ID) };
 
 test('el laboratorio reutiliza posiciones y conexiones reales para ambos renderizadores', () => {
   const ids = relatedIds(PERSONAS, 14);
