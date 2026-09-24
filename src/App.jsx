@@ -16,6 +16,7 @@ const DynastyPage = lazy(() => import("./public/DynastyPage.jsx"));
 const TerritoryPage = lazy(() => import("./public/TerritoryPage.jsx").then(m => ({ default: m.TerritoryPage })));
 const Explorer = lazy(() => import("./explorer/AtlasLoader.jsx"));
 const DesafioPage = lazy(() => import("./desafio/DesafioPage.jsx"));
+const RendererLab = lazy(() => import("./lab/RendererLab.jsx"));
 
 function normalizaRutaLigera() {
   if (typeof window === "undefined") return;
@@ -49,6 +50,10 @@ export default function App() {
     setInitialPanel(panel);
     setExplorerRequested(true);
   }, [initial.view]);
+
+  if (typeof window !== "undefined" && /^\/es\/laboratorio-render\/?$/.test(window.location.pathname)) {
+    return <Suspense fallback={<AtlasSkeleton/>}><RendererLab /></Suspense>;
+  }
 
   if (initial.view === "embed") return <Suspense fallback={<p role="status">Preparando ficha…</p>}><EmbedPage personId={initial.personId}/></Suspense>;
   if (!explorerRequested && initial.view === "story") return <Suspense fallback={<div className="public-site"><SiteHeader/><main className="public-main story-page"><ReadingSkeleton/></main></div>}><StoryPage slug={initial.storySlug} chapter={initial.chapter}/></Suspense>;
