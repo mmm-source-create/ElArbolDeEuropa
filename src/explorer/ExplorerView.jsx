@@ -6,7 +6,7 @@ import TreeExport from "../connections/TreeExport.jsx";
 import DocumentationNotes from "../components/DocumentationNotes.jsx";
 import { responsiveImage } from "../utils/responsiveImage.js";
 import React from "react";
-import { Search, ChevronDown, ChevronRight, ArrowLeft, ArrowRight, ArrowUp, ArrowDown, ZoomIn, ZoomOut, RotateCcw, GitCompare, Focus, Share2, Play, Pause, SkipBack, SkipForward, X, Info, Heart, BookOpen, BarChart3, Scale, Flag, Mail, ExternalLink, Crosshair, Maximize2 } from "lucide-react";
+import { Search, ChevronDown, ChevronRight, ArrowLeft, ArrowRight, ZoomIn, ZoomOut, RotateCcw, GitCompare, Focus, Share2, Play, Pause, SkipBack, SkipForward, X, Info, Heart, BookOpen, BarChart3, Scale, Flag, Mail, ExternalLink, Crosshair, Maximize2, CircleHelp, SlidersHorizontal } from "lucide-react";
 import { MapaEuropa } from "../MapaEuropa";
 import { TERRITORIOS_SUB, TERRITORIOS_DESTACADOS, REINO_COLOR, REINO_COLOR_DEFAULT, listaReinados, territoriosGobernadosEnAño, reinadoEsEfectivo, esGobernante } from "../Territorios";
 import { PERSONAS } from "../personas.jsx";
@@ -22,6 +22,7 @@ import { ACCENTS, getCategoriaDinastía, DINASTIAS_DESTACADAS, GRUPOS_DINASTICOS
 import { nRomano, formatoFechas, sobrenombreDePersona, nombrePrincipal, pct, etiquetaFechaEvento, inicioEvento, finEvento, TL_MIN, TL_MAX, anioInicioPersona, anioFinPersona } from "./timelineUtils.js";
 import { ALCANCES_FOCO, MODOS_COMPARACION, tipoRelacionEntre } from "./relationshipGraph.js";
 import { Chip, ModalProyecto } from "./ExplorerPrimitives.jsx";
+import AtlasGuide from "./AtlasGuide.jsx";
 
 const EuropeYearDialog = React.lazy(() => import('./EuropeYearDialog.jsx'));
 const AtlasCrowns = React.lazy(() => import('./AtlasCrowns.jsx'));
@@ -56,6 +57,9 @@ function BioSection({ title, open, onToggle, children }) {
 export default function ExplorerView({ vm }) {
   const [searchOpen,setSearchOpen] = React.useState(false);
   const [mobileToolsOpen,setMobileToolsOpen] = React.useState(false);
+  const [guideOpen,setGuideOpen] = React.useState(false);
+  const guideButtonRef = React.useRef(null);
+  const closeGuide = () => { setGuideOpen(false); requestAnimationFrame(() => guideButtonRef.current?.focus()); };
   const {
     connectionIds, setConnectionIds, connectionCriterion, setConnectionCriterion, connectionResult, getExportSelection,
     initialMapViewport, recordMapViewport, timelineVirtual, timelineListRef, scrollRef, tlScrollRef, locale, setLocale, query, setQuery,
@@ -103,6 +107,7 @@ export default function ExplorerView({ vm }) {
             <Search size={13} color="#8A7F65" />
             <input
               placeholder="Buscar nombre, título, dinastía o territorio…"
+              aria-label="Buscar nombre, título, dinastía o territorio"
               value={query}
               onFocus={()=>setSearchOpen(true)}
               onChange={(event) => {setQuery(event.target.value);setSearchOpen(true);}}
@@ -220,22 +225,23 @@ export default function ExplorerView({ vm }) {
           </div>
         </section>
 
-        {!modoTrabajo && <button type="button" className="atlas-tools-toggle" aria-expanded={mobileToolsOpen} aria-controls="atlas-secondary-tools" onClick={()=>setMobileToolsOpen(open=>!open)}>Herramientas del Atlas <ChevronDown size={12}/></button>}
+        {!modoTrabajo && <button type="button" className="atlas-tools-toggle" aria-expanded={mobileToolsOpen} aria-controls="atlas-secondary-tools" onClick={()=>setMobileToolsOpen(open=>!open)}>Controles del Atlas <ChevronDown size={12}/></button>}
         {!modoTrabajo && (
         <div id="atlas-secondary-tools" className={`workspace-topbar-secondary${mobileToolsOpen?' is-expanded':''}`}>
           <section className="workspace-topbar-section workspace-toolbar-view workspace-toolbar-panels">
-            <div className="toolbar-label">Paneles visibles</div>
-            <div className="segmented-control view-toggle-control panel-toggle-control" aria-label="Paneles visibles">
-              <button type="button" className={`segment-btn${mostrarFiltros ? " active" : ""}`} aria-pressed={mostrarFiltros} onClick={() => alternarPanelAuxiliar("filtros")}>Filtros</button>
-              <button type="button" className={`segment-btn${mostrarArbol ? " active" : ""}`} aria-pressed={mostrarArbol} onClick={() => alternarVista("arbol")}>Árbol</button>
-              <button type="button" className={`segment-btn${mostrarMapa ? " active" : ""}`} aria-pressed={mostrarMapa} onClick={() => alternarVista("mapa")}>Mapa</button>
-              <button type="button" className={`segment-btn${mostrarBiografia ? " active" : ""}`} aria-pressed={mostrarBiografia} onClick={() => alternarPanelAuxiliar("biografia")}>Biografía</button>
-              <button type="button" className={`segment-btn${mostrarCronologia ? " active" : ""}`} aria-pressed={mostrarCronologia} onClick={() => alternarPanelAuxiliar("cronologia")}>Cronología</button>
-            </div>
+            <details className="atlas-toolbar-menu">
+              <summary>Vista: {mostrarArbol && mostrarMapa ? 'Árbol y mapa' : mostrarMapa ? 'Mapa' : 'Árbol'} <ChevronDown size={12} aria-hidden="true" /></summary>
+              <div className="atlas-toolbar-menu-panel" role="group" aria-label="Vista principal">
+                {[
+                  ['arbol', 'Árbol', true, false],
+                  ['mapa', 'Mapa', false, true],
+                  ['ambos', 'Árbol y mapa', true, true],
+                ].map(([key, label, arbol, mapa]) => <button key={key} type="button" aria-pressed={mostrarArbol === arbol && mostrarMapa === mapa} onClick={(event) => { setVistasActivas({ arbol, mapa }); const menu = event.currentTarget.closest('details'); menu.open = false; menu.querySelector('summary')?.focus(); }}>{label}</button>)}
+              </div>
+            </details>
           </section>
 
           <section className="workspace-topbar-section workspace-toolbar-actions">
-            <div className="toolbar-label">Interacción</div>
             <div className="nav-controls topbar-mode-controls">
               <div className="compare-split-control" ref={compareMenuRef}>
                 <button
@@ -249,7 +255,7 @@ export default function ExplorerView({ vm }) {
                     setFocoMenuOpen(false);
                   }}
                 >
-                  <GitCompare size={12} /> Comparar parentesco
+                  <GitCompare size={12} /> Comparar
                 </button>
                 <button
                   type="button"
@@ -265,8 +271,8 @@ export default function ExplorerView({ vm }) {
                   <ChevronDown size={11} />
                 </button>
                 {compareMenuOpen && (
-                  <div className="compare-mode-menu" role="menu">
-                    <button type="button" role="menuitemradio" aria-checked={mode === "conexion"} className={`compare-mode-option${mode === "conexion" ? " active" : ""}`} onClick={() => {setMode("conexion");setVistasActivas({arbol:true,mapa:false});setCompareMenuOpen(false);}}><strong>Conectar 3–5 personas</strong><span>Reunir varias personas con los vínculos necesarios.</span></button>
+                  <div className="compare-mode-menu" role="group">
+                    <button type="button" aria-pressed={mode === "conexion"} className={`compare-mode-option${mode === "conexion" ? " active" : ""}`} onClick={() => {setMode("conexion");setVistasActivas({arbol:true,mapa:false});setCompareMenuOpen(false);}}><strong>Conectar 3–5 personas</strong><span>Reunir varias personas con los vínculos necesarios.</span></button>
                     {MODOS_COMPARACION.map((opcion) => (
                       <button
                         type="button"
@@ -301,7 +307,7 @@ export default function ExplorerView({ vm }) {
                     setCompareMenuOpen(false);
                   }}
                 >
-                  <Focus size={12} /> Modo foco
+                  <Focus size={12} /> Explorar familia
                 </button>
                 <button
                   type="button"
@@ -317,7 +323,7 @@ export default function ExplorerView({ vm }) {
                   <ChevronDown size={11} />
                 </button>
                 {focoMenuOpen && (
-                  <div className="compare-mode-menu" role="menu">
+                  <div className="compare-mode-menu" role="group">
                     {ALCANCES_FOCO.map((opcion) => (
                       <button
                         type="button"
@@ -337,18 +343,18 @@ export default function ExplorerView({ vm }) {
                       </button>
                     ))}
                     <div className="focus-menu-actions">
-                      <button type="button" role="menuitem" className="compare-mode-option" disabled={Boolean(historiaActiva)||!vm.focusAdditions.length} onClick={()=>{vm.keepFocus();setFocoMenuOpen(false);}}><strong>Añadir el foco a mi selección{vm.focusAdditions.length?` (+${vm.focusAdditions.length})`:''}</strong><span>{historiaActiva?"La selección del recorrido se conserva completa":"Conserva estas personas al salir del foco"}</span></button>
-                      {!historiaActiva && vm.growth.canUndo && <button type="button" role="menuitem" className="compare-mode-option" onClick={()=>{vm.growth.onUndo();setFocoMenuOpen(false);}}><strong>Deshacer ampliación</strong><span>Recupera la selección anterior</span></button>}
+                      <button type="button" className="compare-mode-option" disabled={Boolean(historiaActiva)||!vm.focusAdditions.length} onClick={()=>{vm.keepFocus();setFocoMenuOpen(false);}}><strong>Añadir el foco a mi selección{vm.focusAdditions.length?` (+${vm.focusAdditions.length})`:''}</strong><span>{historiaActiva?"La selección del recorrido se conserva completa":"Conserva estas personas al salir del foco"}</span></button>
+                      {!historiaActiva && vm.growth.canUndo && <button type="button" className="compare-mode-option" onClick={()=>{vm.growth.onUndo();setFocoMenuOpen(false);}}><strong>Deshacer ampliación</strong><span>Recupera la selección anterior</span></button>}
                     </div>
                   </div>
                 )}
               </div>
               <div className="favorites-control" ref={favoritosMenuRef}>
-                <button type="button" className={`nav-btn nav-btn-wide${favoritosOpen || soloFavoritos ? " active" : ""}`} onClick={() => setFavoritosOpen((actual) => !actual)} aria-haspopup="menu" aria-expanded={favoritosOpen}>
+                <button type="button" className={`nav-btn nav-btn-wide${favoritosOpen || soloFavoritos ? " active" : ""}`} onClick={() => setFavoritosOpen((actual) => !actual)} aria-expanded={favoritosOpen}>
                   <span className="favorite-star-symbol" aria-hidden="true">★</span> Favoritos {favoritos.length ? `(${favoritos.length})` : ""}
                 </button>
                 {favoritosOpen && (
-                  <div className="favorites-menu" role="menu">
+                  <div className="favorites-menu" role="group">
                     <div className="favorites-menu-head"><strong>Mis favoritos</strong><span>{favoritos.length}</span></div>
                     <div className="favorites-menu-list">
                       {favoritos.length ? favoritos.map((id) => (
@@ -365,36 +371,23 @@ export default function ExplorerView({ vm }) {
                   </div>
                 )}
               </div>
-              <button
-                type="button"
-                className="nav-btn nav-btn-wide"
-                disabled={!seleccion}
-                onClick={centrarSeleccion}
-                title={seleccion ? `Centrar ${seleccion.nombre} en el árbol y la cronología` : "Selecciona una persona para centrarla"}
-              >
-                <Crosshair size={12} /> Centrar
-              </button>
-              <button
-                type="button"
-                className="nav-btn nav-btn-wide"
-                onClick={() => setModoTrabajo(true)}
-                title="Abrir el Atlas en modo de trabajo"
-              >
-                <Maximize2 size={12} /> Pantalla de trabajo
-              </button>
-              <div className="share-control-wrap">
-                <button
-                  type="button"
-                  className="nav-btn nav-btn-wide share-person-btn"
-                  disabled={!seleccion}
-                  onClick={compartirPersona}
-                  title={seleccion ? `Compartir ${seleccion.nombre}` : "Selecciona una persona para compartirla"}
-                  aria-label={seleccion ? `Compartir ${seleccion.nombre}` : "Selecciona una persona para compartirla"}
-                >
-                  <Share2 size={12} /> Compartir persona
-                </button>
-                {shareStatus && <span className="share-status" role="status">{shareStatus}</span>}
-              </div>
+              <button type="button" className="nav-btn nav-btn-wide" ref={guideButtonRef} onClick={() => setGuideOpen(true)}><CircleHelp size={13} /> Ayuda</button>
+              <details className="atlas-toolbar-menu atlas-tools-menu">
+                <summary><SlidersHorizontal size={13} aria-hidden="true" /> Herramientas <ChevronDown size={12} aria-hidden="true" /></summary>
+                <div className="atlas-toolbar-menu-panel" role="group" aria-label="Herramientas del Atlas">
+                  <strong>Paneles</strong>
+                  <button type="button" aria-pressed={mostrarFiltros} onClick={() => alternarPanelAuxiliar('filtros')}>Filtros {mostrarFiltros ? '✓' : ''}</button>
+                  <button type="button" aria-pressed={mostrarBiografia} onClick={() => alternarPanelAuxiliar('biografia')}>Biografía {mostrarBiografia ? '✓' : ''}</button>
+                  <button type="button" aria-pressed={mostrarCronologia} onClick={() => alternarPanelAuxiliar('cronologia')}>Cronología {mostrarCronologia ? '✓' : ''}</button>
+                  <strong>Persona seleccionada</strong>
+                  <button type="button" disabled={!seleccion} onClick={centrarSeleccion}><Crosshair size={13} /> Centrar persona</button>
+                  <button type="button" disabled={!seleccion} onClick={compartirPersona}><Share2 size={13} /> Compartir persona</button>
+                  {shareStatus && <span className="share-status" role="status">{shareStatus}</span>}
+                  <strong>Salida</strong>
+                  <TreeExport getSelection={getExportSelection} label="Exportar árbol" />
+                  <button type="button" onClick={() => setModoTrabajo(true)}><Maximize2 size={13} /> Pantalla de trabajo</button>
+                </div>
+              </details>
             </div>
           </section>
         </div>
@@ -677,15 +670,11 @@ export default function ExplorerView({ vm }) {
           {mostrarArbol && (
             <section className={`workspace-stage workspace-tree-stage${historiaActiva ? " story-tree-stage" : ""}`} aria-label="Árbol genealógico">
               <div className="tree-toolbar" aria-label="Controles del árbol">
-                <span className="tree-scope-label">{visiblePeople.length} personas</span><TreeExport getSelection={getExportSelection}/>
+                <span className="tree-scope-label">{visiblePeople.length} personas</span>
+                {modoTrabajo && <TreeExport getSelection={getExportSelection} />}
                 <button type="button" className="nav-btn" onClick={() => cambiarZoomArbol(zoom - 0.1)} title="Alejar árbol" aria-label="Alejar árbol"><ZoomOut size={13} /></button>
                 <button type="button" className="nav-btn" onClick={() => cambiarZoomArbol(0.8)} title="Restablecer árbol" aria-label="Restablecer árbol"><RotateCcw size={12} /></button>
                 <button type="button" className="nav-btn" onClick={() => cambiarZoomArbol(zoom + 0.1)} title="Acercar árbol" aria-label="Acercar árbol"><ZoomIn size={13} /></button>
-                <span className="tree-toolbar-separator" aria-hidden="true" />
-                <button type="button" className="nav-btn" onClick={() => scrollBy(-200, 0)} title="Mover árbol a la izquierda" aria-label="Mover árbol a la izquierda"><ArrowLeft size={13} /></button>
-                <button type="button" className="nav-btn" onClick={() => scrollBy(0, -150)} title="Mover árbol hacia arriba" aria-label="Mover árbol hacia arriba"><ArrowUp size={13} /></button>
-                <button type="button" className="nav-btn" onClick={() => scrollBy(0, 150)} title="Mover árbol hacia abajo" aria-label="Mover árbol hacia abajo"><ArrowDown size={13} /></button>
-                <button type="button" className="nav-btn" onClick={() => scrollBy(200, 0)} title="Mover árbol a la derecha" aria-label="Mover árbol a la derecha"><ArrowRight size={13} /></button>
               </div>
 
               {mode !== "conexion" && collapsedIds.length > 0 && (
@@ -696,7 +685,7 @@ export default function ExplorerView({ vm }) {
               )}
 
               <div className="tree-outer">
-                {!historiaActiva && mode!=="foco" && <AtlasGrowth {...vm.growth}/>}
+                {!historiaActiva && mode!=="foco" && <AtlasGrowth {...vm.growth} onHelp={() => setGuideOpen(true)}/>}
                 <div className="minimap" onClick={onMinimapClick}>
                   {PERSONAS.map((persona) => {
                     const pos = positions[persona.id];
@@ -718,6 +707,13 @@ export default function ExplorerView({ vm }) {
                 <div
                   className="tree-scroll"
                   ref={scrollRef}
+                  tabIndex={0}
+                  aria-label="Árbol genealógico. Usa las flechas para desplazarte; Tab para recorrer las personas visibles."
+                  onKeyDown={(event) => {
+                    if (event.target !== event.currentTarget) return;
+                    const offsets = { ArrowLeft: [-200, 0], ArrowRight: [200, 0], ArrowUp: [0, -150], ArrowDown: [0, 150] };
+                    if (offsets[event.key]) { event.preventDefault(); scrollBy(...offsets[event.key]); }
+                  }}
                   onMouseDown={onPointerDown}
                   onMouseMove={onPointerMove}
                   onMouseUp={endDrag}
@@ -1198,6 +1194,7 @@ export default function ExplorerView({ vm }) {
         />
       )}
 
+      {guideOpen && <AtlasGuide locale={locale} onClose={closeGuide} onSelect={() => vm.growth.onStart('CARLOS5')} onFocus={() => { setFocoId(seleccion?.id || 'CARLOS5'); setMode('foco'); setFocoMenuOpen(false); }} onYear={() => actualizarAnioDesdeRango(1500)} />}
       {infoProyecto === 'europa' ? <React.Suspense fallback={<div className="project-modal-backdrop"><div className="project-modal"><div className="project-modal-body" role="status">Preparando Europa en este año… <button type="button" onClick={()=>setInfoProyecto(null)}>Cerrar</button></div></div></div>}>
         <EuropeYearDialog anio={anioGlobal} onYearChange={actualizarAnioDesdeRango} onClose={()=>setInfoProyecto(null)} onSelect={id=>{setInfoProyecto(null);seleccionarPersonaPorId(id);}} personas={queryTrim?visiblePeople.filter(p=>searchMatchSet.has(p.id)):visiblePeople} territorios={territorios} filtros={filtrosActivosCompactos} alcanceCompleto={!queryTrim&&!territorios.length&&visiblePeople.length===PERSONAS.length} min={TL_MIN} max={TL_MAX}/>
       </React.Suspense> : <ModalProyecto seccion={infoProyecto} onClose={() => setInfoProyecto(null)} persona={seleccion} personasVista={visiblePeople} onStartHistoria={iniciarHistoria} />}
