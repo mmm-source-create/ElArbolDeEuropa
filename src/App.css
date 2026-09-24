@@ -4813,3 +4813,4 @@ body.atlas-work-mode-active {
 .global-year-heading-row { flex-wrap:wrap; }
 .global-year-europe { padding:0; margin-left:auto; border:0; background:transparent; color:var(--eade-wine); cursor:pointer; font:600 10px/1.5 var(--eade-sans); text-decoration:underline; text-underline-offset:3px; }
 .global-year-europe:focus-visible { outline:2px solid var(--eade-wine); outline-offset:3px; }
+.workspace-topbar-secondary > .workspace-toolbar-view { justify-content: flex-start; gap: 7px; }

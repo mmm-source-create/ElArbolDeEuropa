@@ -1,5 +1,4 @@
 import {translatedEquivalent} from './english/routes.js';
-import { nextRecordedYear } from './data/europeTimeline.js';
 import { familyIndex, familyIds, atlasIdsFromLocation, writeAtlasIds, isolatedPopes, groupIsolatedPopes } from './explorer/progressiveAtlas.js';
 import { safeStoryReturn, storyPeopleIds, saveStoryProgress } from './stories/storyModel.js';
 import {resolveStoryNavigation, writeStoryNavigation} from './explorer/storyNavigation.js';
@@ -1764,7 +1763,6 @@ export default function Explorer({ initialPanel = null, treeBase: TREE_BASE }) {
   };
 
   const viewModel = {
-    nextYear: nextRecordedYear(anioGlobal ?? TL_MIN - 1, { personas: PERSONAS, eventos: EVENTOS_HISTORICOS, min: TL_MIN, max: TL_MAX }),
     growth, focusAdditions, keepFocus,
     storyReturn,
     connectionIds, setConnectionIds, connectionCriterion, setConnectionCriterion, connectionResult, getExportSelection,

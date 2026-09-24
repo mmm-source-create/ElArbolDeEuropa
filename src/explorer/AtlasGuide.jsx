@@ -4,52 +4,60 @@ import './atlas-guide.css';
 
 const copy = {
   es: {
-    title: 'Primeros pasos en el Atlas', close: 'Cerrar guía', previous: 'Anterior', next: 'Siguiente', finish: 'Terminar',
+    title: 'Ayuda del Atlas', close: 'Cerrar guía', previous: 'Anterior', next: 'Siguiente', finish: 'Terminar',
+    tabs: ['Primeros pasos', 'Controles', 'Leer fichas'],
     steps: [
-      { title: '1 · Elige una persona', body: 'Busca un nombre o prueba con Carlos V. Su ficha aparece en la biografía y queda señalada en el árbol.', action: 'Mostrar a Carlos V' },
-      { title: '2 · Recorre su familia', body: 'Explorar familia muestra las relaciones cercanas. Después puedes cambiar el alcance desde la flecha del botón.', action: 'Explorar su familia' },
-      { title: '3 · Sitúala en el tiempo', body: 'El año global filtra las personas y los gobiernos visibles. Prueba 1500 y consulta «Europa en este año».', action: 'Ir al año 1500' },
+      { title: 'Elige una persona', body: 'La búsqueda abre su biografía y señala su ficha en el árbol.', action: 'Mostrar a Carlos V' },
+      { title: 'Recorre su familia', body: 'Explora sus relaciones cercanas. La flecha del botón cambia el alcance.', action: 'Explorar su familia' },
+      { title: 'Sitúala en el tiempo', body: 'Al elegir un año, el árbol y los gobiernos muestran ese momento.', action: 'Ir al año 1500' },
     ],
-    keyboard: 'Teclado: Tab recorre controles y fichas; Enter o Espacio activa una ficha. Enfoca el lienzo del árbol y usa las flechas para desplazarte. Los botones + y − cambian el zoom.',
-    glossary: 'Para leer las fichas',
+    controls: [['Moverse', 'Arrastra el árbol o usa las flechas del teclado cuando el lienzo tenga el foco.'], ['Ampliar', 'Usa + y − en el árbol.'], ['Abrir una ficha', 'Haz clic o pulsa Enter sobre una tarjeta. Tab recorre los controles.']],
     terms: [
-      ['Regencia', 'Gobierno ejercido en nombre de quien ostenta el título, por ejemplo durante una minoría de edad.'],
-      ['Pretensión', 'Reclamación de un título; no implica que se gobernara el territorio.'],
-      ['Gobierno efectivo', 'Ejercicio documentado del poder, distinto de poseer o reclamar un título.'],
-      ['Fechas y relaciones', 'Algunas fechas son aproximadas. Una relación ausente puede indicar que aún no está documentada en el Atlas; no demuestra que no existiera.'],
+      ['Regencia', 'Gobierno en nombre de quien ostenta el título.'],
+      ['Pretensión', 'Reclamación de un título; no acredita gobierno efectivo.'],
+      ['Gobierno efectivo', 'Ejercicio documentado del poder.'],
+      ['Fechas y relaciones', 'Pueden ser aproximadas o estar pendientes de documentación.'],
     ],
   },
   en: {
-    title: 'Getting started with the Atlas', close: 'Close guide', previous: 'Back', next: 'Next', finish: 'Finish',
+    title: 'Atlas help', close: 'Close guide', previous: 'Back', next: 'Next', finish: 'Finish',
+    tabs: ['Getting started', 'Controls', 'Reading records'],
     steps: [
-      { title: '1 · Choose a person', body: 'Search for a name or try Charles V. His biography opens and his card is highlighted in the tree.', action: 'Show Charles V' },
-      { title: '2 · Explore the family', body: 'Explore family shows close relatives. You can adjust the scope using the arrow beside the button.', action: 'Explore his family' },
-      { title: '3 · Place them in time', body: 'The global year filters visible people and rulers. Try 1500 and open “Europe in this year”.', action: 'Go to 1500' },
+      { title: 'Choose a person', body: 'Search opens the biography and highlights the card in the tree.', action: 'Show Charles V' },
+      { title: 'Explore the family', body: 'See close relatives. The arrow beside the button changes the scope.', action: 'Explore his family' },
+      { title: 'Place them in time', body: 'Choosing a year shows the tree and rulers at that moment.', action: 'Go to 1500' },
     ],
-    keyboard: 'Keyboard: Tab moves through controls and cards; Enter or Space opens a card. Focus the tree canvas and use arrow keys to pan. The + and − buttons adjust zoom.',
-    glossary: 'Reading the records',
+    controls: [['Move', 'Drag the tree or focus it and use the arrow keys.'], ['Zoom', 'Use + and − in the tree.'], ['Open a record', 'Click a card or press Enter. Tab moves through the controls.']],
     terms: [
-      ['Regency', 'Rule exercised on behalf of the titleholder, for example during childhood.'],
-      ['Claim', 'A claim to a title; it does not mean that the territory was governed.'],
-      ['Effective rule', 'Documented exercise of power, distinct from holding or claiming a title.'],
-      ['Dates and relationships', 'Some dates are approximate. A missing relationship may simply be undocumented in this Atlas; it does not prove none existed.'],
+      ['Regency', 'Rule exercised on behalf of a titleholder.'],
+      ['Claim', 'A claim to a title does not establish effective rule.'],
+      ['Effective rule', 'Documented exercise of power.'],
+      ['Dates and relationships', 'These may be approximate or awaiting documentation.'],
     ],
   },
 };
 
 export default function AtlasGuide({ locale, onClose, onSelect, onFocus, onYear }) {
+  const [section, setSection] = React.useState(0);
   const [step, setStep] = React.useState(0);
   const titleRef = React.useRef(null);
   React.useEffect(() => { titleRef.current?.focus(); }, []);
   const c = copy[locale === 'en' ? 'en' : 'es'];
   const actions = [onSelect, onFocus, onYear];
-  return <aside className="atlas-guide" role="region" aria-labelledby="atlas-guide-title" onKeyDown={event => { if (event.key === 'Escape') onClose(); }}>
-    <div className="atlas-guide-heading"><div><span className="atlas-guide-eyebrow">{step + 1} / 3</span><h2 id="atlas-guide-title" tabIndex={-1} ref={titleRef}>{c.title}</h2></div><button type="button" className="atlas-guide-close" onClick={onClose} aria-label={c.close}><X size={17} /></button></div>
-    <div className="atlas-guide-progress" aria-hidden="true"><span style={{ width: `${(step + 1) * 100 / 3}%` }} /></div>
-    <div aria-live="polite"><h3>{c.steps[step].title}</h3><p>{c.steps[step].body}</p></div>
-    <button type="button" className="atlas-guide-action" onClick={() => { actions[step](); if (step < 2) setStep(step + 1); }}>{c.steps[step].action}</button>
-    <div className="atlas-guide-navigation"><button type="button" disabled={step === 0} onClick={() => setStep(step - 1)}>{c.previous}</button><button type="button" onClick={() => step === 2 ? onClose() : setStep(step + 1)}>{step === 2 ? c.finish : c.next}</button></div>
-    <details><summary>{c.glossary}</summary><dl>{c.terms.map(([term, definition]) => <React.Fragment key={term}><dt>{term}</dt><dd>{definition}</dd></React.Fragment>)}</dl></details>
-    <p className="atlas-guide-keyboard">{c.keyboard}</p>
+  const advance = () => step === 2 ? onClose() : setStep(step + 1);
+
+  return <aside className="atlas-guide" role="region" aria-labelledby="atlas-guide-title" onKeyDown={event => { if (event.key === 'Escape') { event.stopPropagation(); onClose(); } }}>
+    <div className="atlas-guide-heading"><h2 id="atlas-guide-title" tabIndex={-1} ref={titleRef}>{c.title}</h2><button type="button" className="atlas-guide-close" onClick={onClose} aria-label={c.close}><X size={16} /></button></div>
+    <div className="atlas-guide-tabs" role="tablist" aria-label={c.title}>
+      {c.tabs.map((label, index) => <button key={label} type="button" role="tab" aria-selected={section === index} onClick={() => setSection(index)}>{label}</button>)}
+    </div>
+    {section === 0 && <div className="atlas-guide-content" role="tabpanel">
+      <div className="atlas-guide-step-heading"><span>{step + 1} / {c.steps.length}</span><h3>{c.steps[step].title}</h3></div>
+      <p>{c.steps[step].body}</p>
+      <button type="button" className="atlas-guide-action" onClick={() => { actions[step](); advance(); }}>{c.steps[step].action}</button>
+      <div className="atlas-guide-navigation"><button type="button" disabled={step === 0} onClick={() => setStep(step - 1)}>{c.previous}</button><div className="atlas-guide-dots" aria-label={`${step + 1} / ${c.steps.length}`}>{c.steps.map((_, index) => <span key={index} className={step === index ? 'is-current' : ''} />)}</div><button type="button" onClick={advance}>{step === 2 ? c.finish : c.next}</button></div>
+    </div>}
+    {section === 1 && <div className="atlas-guide-content" role="tabpanel"><dl>{c.controls.map(([term, definition]) => <React.Fragment key={term}><dt>{term}</dt><dd>{definition}</dd></React.Fragment>)}</dl></div>}
+    {section === 2 && <div className="atlas-guide-content" role="tabpanel"><dl>{c.terms.map(([term, definition]) => <React.Fragment key={term}><dt>{term}</dt><dd>{definition}</dd></React.Fragment>)}</dl></div>}
   </aside>;
 }

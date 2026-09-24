@@ -43,8 +43,12 @@ test('Atlas real: enlace de rama, búsqueda, retirada, exportación y salida con
  await click(button('Comparar'));assert.equal(document.querySelector('.connection-controls'),null);assert.equal(new URLSearchParams(window.location.search).has('conectar'),false);
  await click(button('Ayuda'));assert.match(document.querySelector('.atlas-guide').textContent,/Primeros pasos/);
  await click(button('Mostrar a Carlos V'));assert.match(document.querySelector('.atlas-guide h3').textContent,/Recorre su familia/);
+ assert.equal(document.querySelectorAll('.atlas-guide [role="tab"]').length,3);
  await click(document.querySelector('[aria-label="Cerrar guía"]'));assert.equal(document.querySelector('.atlas-guide'),null);
+ assert.equal(button('Siguiente hito'),undefined);
+ assert.equal(document.querySelector('.atlas-panels-menu [aria-label="Paneles visibles"]')?.querySelectorAll('button').length,3);
  await click(document.querySelector('.atlas-tools-menu summary'));
+ assert.equal(document.querySelector('.atlas-tools-menu [aria-label="Herramientas del Atlas"]')?.textContent.includes('Paneles'),false);
  await click(button('Pantalla de trabajo'));
  assert.ok(document.querySelector('.tree-toolbar [aria-label="Exportar el árbol"]'));
  assert.deepEqual(errors.filter(e=>!e.includes('not wrapped in act')),[]);
