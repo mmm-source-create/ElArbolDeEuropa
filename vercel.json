@@ -1,6 +1,8 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "rewrites": [
+    {"source":"/es/laboratorio-render","destination":"/index.html"},
+    {"source":"/es/laboratorio-render/","destination":"/index.html"},
     {
       "source": "/en",
       "destination": "/en/index.html"

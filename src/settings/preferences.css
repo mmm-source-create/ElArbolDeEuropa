@@ -62,3 +62,46 @@ html[data-eade-theme="dark"] .wrap :is(.nav-btn,.search-nav-btn):hover{backgroun
 html[data-eade-theme="dark"] .wrap :is(.global-year-number,.history-playback-btn,.global-year-reset,.tree-toolbar button){background:var(--eade-paper-bright);border-color:var(--eade-border);color:var(--eade-ink)}
 html[data-eade-theme="dark"] .wrap :is(.history-playback-btn,.nav-btn).active{background:#75332f;border-color:#a0635c;color:#fff5e8}
 html[data-eade-theme="dark"] .wrap :is(.filter-section-title,.filter-section-meta,.filter-section-count,.panel-count,.bio-sobrenombre){color:var(--eade-muted)}
+
+/* Atlas controls and chronology: keep the selected state and text legible on
+   the same dark surfaces as the rest of the workspace. */
+html[data-eade-theme="dark"] .wrap .panel-toggle-control .segment-btn,
+html[data-eade-theme="dark"] .wrap .timeline-mode-toggle button,
+html[data-eade-theme="dark"] .wrap .timeline-zoom-controls,
+html[data-eade-theme="dark"] .wrap .timeline-zoom-controls button,
+html[data-eade-theme="dark"] .wrap .compare-mode-menu,
+html[data-eade-theme="dark"] .wrap .favorites-menu{background:var(--eade-paper-bright);border-color:var(--eade-border);color:var(--eade-ink)}
+html[data-eade-theme="dark"] .wrap .panel-toggle-control .segment-btn:is(.active,:hover),
+html[data-eade-theme="dark"] .wrap .timeline-mode-toggle button.active{background:#75332f;border-color:#a0635c;color:#fff5e8}
+html[data-eade-theme="dark"] .wrap .timeline-zoom-controls button:hover:not(:disabled),
+html[data-eade-theme="dark"] .wrap .compare-mode-option:is(:hover,.active){background:var(--eade-paper-soft);color:var(--eade-ink)}
+html[data-eade-theme="dark"] .wrap .compare-mode-option{color:var(--eade-ink)}
+html[data-eade-theme="dark"] .wrap .compare-mode-option span{color:var(--eade-muted)}
+html[data-eade-theme="dark"] .wrap :is(.tl-header,.tl-corner,.tl-axis){background:var(--eade-paper-soft);border-color:var(--eade-border);color:var(--eade-muted)}
+html[data-eade-theme="dark"] .wrap :is(.tl-row,.tl-sticky-col){border-color:var(--eade-border)}
+html[data-eade-theme="dark"] .wrap .tl-sticky-col .name{color:var(--eade-ink)}
+html[data-eade-theme="dark"] .wrap .tl-sticky-col .meta{color:var(--eade-muted)}
+html[data-eade-theme="dark"] .wrap .tl-row.year-inactive{opacity:.78}
+html[data-eade-theme="dark"] .wrap .tl-row.year-inactive:is(:hover,.hovered){opacity:1}
+html[data-eade-theme="dark"] .wrap .tl-row.hovered,
+html[data-eade-theme="dark"] .wrap .tl-row.hovered .tl-sticky-col{background:var(--eade-paper-bright)}
+html[data-eade-theme="dark"] .wrap .tl-row.selected,
+html[data-eade-theme="dark"] .wrap .tl-row.selected .tl-sticky-col{background:#48332e}
+html[data-eade-theme="dark"] .wrap .tl-row.selected:is(:hover,.hovered),
+html[data-eade-theme="dark"] .wrap .tl-row.selected:is(:hover,.hovered) .tl-sticky-col{background:#584039}
+html[data-eade-theme="dark"] .wrap .tl-row.selected .tl-sticky-col .name{color:#ffd3c8}
+
+/* Project dialogs open above the Atlas, outside .wrap. Theme their entire
+   surface rather than leaving a large light sheet over the dark workspace. */
+html[data-eade-theme="dark"] .project-modal{background:var(--eade-paper-soft);border-color:var(--eade-border);color:var(--eade-ink)}
+html[data-eade-theme="dark"] .project-modal-head{border-color:var(--eade-border)}
+html[data-eade-theme="dark"] .project-modal :is(h2,h3,.project-modal-body,.project-lead,.project-report-template strong){color:var(--eade-ink)}
+html[data-eade-theme="dark"] .project-modal :is(.project-modal-kicker,.project-muted,.project-stat-grid span,.stats-summary-grid span,.stats-curiosities span,.stats-curiosities small,.project-source-list li>span,.project-report-context span){color:var(--eade-muted)}
+html[data-eade-theme="dark"] .project-modal :is(.project-modal-close,.project-stat-grid>div,.stats-summary-grid>div,.project-source-list li,.project-report-context,.project-report-template,.stats-curiosities>div,.project-license-note,.project-modal-body code){background:var(--eade-paper-bright);border-color:var(--eade-border);color:var(--eade-ink)}
+html[data-eade-theme="dark"] .project-modal :is(.project-modal-close:hover,.stats-scope-toggle button:hover:not(.active)){background:var(--eade-paper-soft);color:var(--eade-ink)}
+html[data-eade-theme="dark"] .project-modal :is(.stats-scope-toggle button,.europe-year-action,.europe-year-scope select,.europe-year-compare input,.europe-year-form input,.europe-life-search input){background:var(--eade-paper-bright);border-color:var(--eade-border);color:var(--eade-ink)}
+html[data-eade-theme="dark"] .project-modal .stats-scope-toggle button.active{background:#75332f;border-color:#a0635c;color:#fff5e8}
+html[data-eade-theme="dark"] .project-modal :is(.stats-summary-grid strong,.stats-ranking strong,.europe-year-counts b){color:var(--eade-wine-dark)}
+html[data-eade-theme="dark"] .project-modal :is(.stats-ranking li,.europe-year-details,.europe-government-grid article){border-color:var(--eade-border)}
+html[data-eade-theme="dark"] .project-modal :is(.stats-curiosities strong,.europe-year-dialog h4){color:var(--eade-ink)}
+html[data-eade-theme="dark"] .project-modal :is(.europe-year-action,.europe-person-link,.europe-year-dialog a,.europe-year-details>summary){color:var(--eade-wine-dark)}
