@@ -1,0 +1,38 @@
+.atlas-toolbar-menu { position: relative; font-family: -apple-system, 'Segoe UI', sans-serif; }
+.atlas-toolbar-menu > summary { display: inline-flex; align-items: center; justify-content: space-between; gap: 7px; min-height: 28px; box-sizing: border-box; padding: 4px 10px; border: 1px solid #cbbfa8; border-radius: 4px; background: #fffdf7; color: #3f382f; font-size: 11px; font-weight: 650; cursor: pointer; list-style: none; white-space: nowrap; }
+.atlas-toolbar-menu > summary::-webkit-details-marker { display: none; }
+.atlas-toolbar-menu > summary:focus-visible, .atlas-toolbar-menu-panel button:focus-visible, .atlas-guide button:focus-visible, .atlas-guide summary:focus-visible, .tree-scroll:focus-visible { outline: 3px solid #b57c26; outline-offset: 2px; }
+.atlas-toolbar-menu-panel { position: absolute; z-index: 70; top: calc(100% + 6px); left: 0; display: grid; gap: 2px; width: max-content; min-width: 178px; max-width: min(300px, calc(100vw - 20px)); padding: 7px; border: 1px solid #cbbfa8; border-radius: 6px; background: #fffdf7; box-shadow: 0 8px 24px #30271f35; }
+.atlas-tools-menu .atlas-toolbar-menu-panel { left: auto; right: 0; }
+.atlas-toolbar-menu-panel strong { padding: 9px 7px 3px; color: #765f3b; font-size: 10px; text-transform: uppercase; letter-spacing: .08em; }
+.atlas-toolbar-menu-panel button { display: flex; align-items: center; gap: 7px; min-height: 32px; padding: 5px 8px; border: 0; border-radius: 3px; background: transparent; color: #3f382f; font: inherit; font-size: 11px; text-align: left; cursor: pointer; }
+.atlas-toolbar-menu-panel button:hover, .atlas-toolbar-menu-panel button[aria-pressed="true"] { background: #eee5d2; }
+.atlas-toolbar-menu-panel button:disabled { opacity: .55; cursor: not-allowed; }
+.atlas-toolbar-menu-panel .share-status { padding: 3px 8px; }
+.atlas-guide { position: fixed; z-index: 110; right: clamp(12px, 2vw, 32px); bottom: clamp(12px, 2vw, 32px); width: min(390px, calc(100vw - 24px)); box-sizing: border-box; max-height: min(78vh, 650px); overflow: auto; padding: 20px 22px; border: 1px solid #b7a585; border-radius: 10px; background: #fffaf0; box-shadow: 0 16px 44px #201a1670; color: #302923; font-family: -apple-system, 'Segoe UI', sans-serif; }
+.atlas-guide-heading { display: flex; justify-content: space-between; gap: 10px; align-items: flex-start; }
+.atlas-guide-eyebrow { color: #855b28; font-size: 11px; font-weight: 700; letter-spacing: .12em; }
+.atlas-guide h2 { margin: 6px 0 13px; font: 600 23px/1.15 Georgia, serif; }
+.atlas-guide h3 { margin: 17px 0 8px; font: 600 18px/1.2 Georgia, serif; }
+.atlas-guide p { margin: 0 0 13px; font-size: 13px; line-height: 1.5; }
+.atlas-guide-close { border: 1px solid #c9b99d; border-radius: 4px; background: transparent; color: inherit; cursor: pointer; }
+.atlas-guide-progress { height: 4px; border-radius: 3px; background: #e5d8c0; }
+.atlas-guide-progress span { display: block; height: 100%; border-radius: inherit; background: #793632; transition: width .2s ease; }
+.atlas-guide-action { padding: 9px 13px; border: 1px solid #793632; border-radius: 4px; background: #793632; color: #fff9ef; font-weight: 650; cursor: pointer; }
+.atlas-guide-navigation { display: flex; justify-content: space-between; margin: 15px 0; }
+.atlas-guide-navigation button { padding: 5px 0; border: 0; background: transparent; color: #793632; font-weight: 650; cursor: pointer; }
+.atlas-guide-navigation button:disabled { color: #8b847a; cursor: default; }
+.atlas-guide details { border-top: 1px solid #d9ccb7; padding-top: 11px; font-size: 12px; }
+.atlas-guide summary { cursor: pointer; font-weight: 700; }
+.atlas-guide dl { margin-bottom: 6px; }
+.atlas-guide dt { margin-top: 10px; font-weight: 700; }
+.atlas-guide dd { margin: 3px 0 0; line-height: 1.45; }
+.atlas-guide .atlas-guide-keyboard { margin: 14px 0 0; color: #62594c; font-size: 11px; }
+.atlas-start-help { margin-top: 15px; border: 0; background: transparent; color: #7a2e2e; text-decoration: underline; cursor: pointer; }
+html[data-eade-theme="dark"] .atlas-toolbar-menu > summary, html[data-eade-theme="dark"] .atlas-toolbar-menu-panel, html[data-eade-theme="dark"] .atlas-guide { background: #302b27; border-color: #766b5b; color: #f2eadd; }
+html[data-eade-theme="dark"] .atlas-toolbar-menu-panel button { color: #f2eadd; }
+html[data-eade-theme="dark"] .atlas-toolbar-menu-panel button:hover, html[data-eade-theme="dark"] .atlas-toolbar-menu-panel button[aria-pressed="true"] { background: #55463b; }
+html[data-eade-theme="dark"] .atlas-toolbar-menu-panel strong, html[data-eade-theme="dark"] .atlas-guide-eyebrow, html[data-eade-theme="dark"] .atlas-guide .atlas-guide-keyboard { color: #e2c89a; }
+html[data-eade-theme="dark"] .atlas-guide-navigation button { color: #f0c69e; }
+html[data-eade-theme="dark"] .atlas-guide-close { color: #f2eadd; border-color: #766b5b; }
+@media (prefers-reduced-motion: reduce) { .atlas-guide-progress span { transition: none; } }
