@@ -70,6 +70,26 @@ html[data-eade-theme="dark"] .wrap :is(.global-year-number,.history-playback-btn
 html[data-eade-theme="dark"] .wrap :is(.history-playback-btn,.nav-btn).active{background:#75332f;border-color:#a0635c;color:#fff5e8}
 html[data-eade-theme="dark"] .wrap :is(.filter-section-title,.filter-section-meta,.filter-section-count,.panel-count,.bio-sobrenombre){color:var(--eade-muted)}
 
+/* Biography relationship and discovery labels share the Atlas dark palette. */
+html[data-eade-theme="dark"] .wrap :is(.bio-panel dt,.bio-relation-label,.bio-relations h4,.bio-discover-group>span,.bio-discover h4,.bio-relations-empty,.bio-empty,.bio-history-position){color:var(--eade-muted)}
+html[data-eade-theme="dark"] .wrap :is(.bio-collapsible-toggle,.bio-panel .close){color:var(--eade-muted)}
+html[data-eade-theme="dark"] .wrap .bio-collapsible-toggle:is(:hover,:focus-visible){color:var(--eade-ink)}
+html[data-eade-theme="dark"] .wrap :is(.bio-relations,.bio-collapsible,.bio-collapsible:last-of-type){border-color:var(--eade-border)}
+html[data-eade-theme="dark"] .wrap .bio-relation-link,
+html[data-eade-theme="dark"] .wrap .bio-discover-links a,
+html[data-eade-theme="dark"] .wrap .bio-discover-links a:visited{background:var(--eade-paper-bright);border-color:var(--eade-border-strong);color:var(--eade-ink)}
+html[data-eade-theme="dark"] .wrap .bio-relation-link.is-lover{background:#48303d;border-color:#a76b8a;color:#f5d6e7}
+html[data-eade-theme="dark"] .wrap .bio-relation-link:is(:hover,:focus-visible),
+html[data-eade-theme="dark"] .wrap .bio-discover-links a:is(:hover,:focus-visible){background:var(--eade-paper);border-color:var(--eade-gold);color:var(--eade-ink)}
+html[data-eade-theme="dark"] .wrap .bio-relation-link.is-disabled{opacity:.75;color:var(--eade-muted)}
+
+/* Favorites have their own popover, so its text and separators must follow the theme. */
+html[data-eade-theme="dark"] .wrap .favorites-menu :is(.favorites-menu-head,.favorite-menu-row>button:first-child,.favorites-filter-toggle){color:var(--eade-ink)}
+html[data-eade-theme="dark"] .wrap .favorites-menu :is(.favorites-menu-head span,.favorites-empty,.favorite-remove){color:var(--eade-muted)}
+html[data-eade-theme="dark"] .wrap .favorites-menu :is(.favorites-menu-list,.favorite-menu-row){border-color:var(--eade-border)}
+html[data-eade-theme="dark"] .wrap .favorites-menu .favorite-menu-row>button:first-child:hover{color:var(--eade-wine-dark)}
+html[data-eade-theme="dark"] .wrap .favorites-menu .favorites-filter-toggle input{accent-color:#a9655d}
+
 /* Atlas controls and chronology: keep the selected state and text legible on
    the same dark surfaces as the rest of the workspace. */
 html[data-eade-theme="dark"] .wrap .panel-toggle-control .segment-btn,

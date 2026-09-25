@@ -42,7 +42,7 @@ test('Atlas real: enlace de rama, búsqueda, retirada, exportación y salida con
  await click(document.querySelector('[aria-label="Exportar el árbol"]'));assert.ok(document.querySelector('dialog[open]'));await click(button('Descargar SVG'));assert.equal(downloads[0].type,'image/svg+xml;charset=utf-8');const svg=await downloads[0].text();assert.match(svg,/Tomás Francisco/);assert.match(svg,/El Árbol de Europa/);await click(document.querySelector('[aria-label="Cerrar exportación"]'));
  await click(button('Comparar'));assert.equal(document.querySelector('.connection-controls'),null);assert.equal(new URLSearchParams(window.location.search).has('conectar'),false);
  await click(button('Ayuda'));assert.match(document.querySelector('.atlas-guide').textContent,/Primeros pasos/);
- await click(button('Mostrar a Carlos V'));assert.match(document.querySelector('.atlas-guide h3').textContent,/Recorre su familia/);
+ await click(button('Mostrar a Carlos V'));assert.match(document.querySelector('.atlas-guide h3').textContent,/Añade su familia/);
  assert.equal(document.querySelectorAll('.atlas-guide [role="tab"]').length,3);
  await click(document.querySelector('[aria-label="Cerrar guía"]'));assert.equal(document.querySelector('.atlas-guide'),null);
  assert.equal(button('Siguiente hito'),undefined);
@@ -53,4 +53,32 @@ test('Atlas real: enlace de rama, búsqueda, retirada, exportación y salida con
  assert.ok(document.querySelector('.tree-toolbar [aria-label="Exportar el árbol"]'));
  assert.deepEqual(errors.filter(e=>!e.includes('not wrapped in act')),[]);
  }finally{console.error=originalError;}
+});
+
+test('una persona encontrada amplía el árbol en un clic y cada ampliación se puede deshacer',async()=>{
+ if(app){await act(async()=>app.unmount());app=null;}
+ document.getElementById('root').innerHTML='';
+ window.history.replaceState(null,'','/es/?atlas=1&seleccion=');
+ window.sessionStorage.clear();window.localStorage.clear();
+ await act(async()=>{app=runtime.mountAtlas(document.getElementById('root'),treeBase);await new Promise(r=>setTimeout(r,100));});
+ const input=document.querySelector('.workspace-toolbar-search input');
+ await act(async()=>{Object.getOwnPropertyDescriptor(window.HTMLInputElement.prototype,'value').set.call(input,'Carlos V');input.dispatchEvent(new window.Event('input',{bubbles:true}));});
+ const result=[...document.querySelectorAll('.atlas-search-results button')].find(item=>item.querySelector('strong')?.textContent==='Carlos V');
+ await click(result);
+ assert.match(document.querySelector('.family-add-button').textContent,/Añadir familia \(\+\d+\)/);
+ assert.equal(document.querySelector('.tree-scope-label').textContent.trim(),'0 personas');
+ await click(document.querySelector('.family-add-button'));
+ const closeFamilyCount=Number(document.querySelector('.tree-scope-label').textContent.match(/\d+/)?.[0]);
+ assert.ok(closeFamilyCount>1);
+ assert.match(document.querySelector('.family-expansion-feedback').textContent,/Se añadieron/);
+ const descendants=[...document.querySelectorAll('.bio-family-actions button')].find(item=>item.textContent.includes('Añadir descendientes'));
+ assert.ok(descendants,'la rama adicional está visible junto a la biografía');
+ await click(descendants);
+ assert.ok(Number(document.querySelector('.tree-scope-label').textContent.match(/\d+/)?.[0])>closeFamilyCount);
+ await click(document.querySelector('.family-expansion-feedback button'));
+ assert.equal(Number(document.querySelector('.tree-scope-label').textContent.match(/\d+/)?.[0]),closeFamilyCount);
+ await click(document.querySelector('.atlas-panels-menu summary'));
+ await click([...document.querySelectorAll('.atlas-panels-menu button')].find(item=>item.textContent==='Filtros'));
+ await click(document.querySelector('.atlas-scope button:last-child'));
+ assert.equal(document.querySelector('.tree-scope-label').textContent.trim(),'0 personas');
 });

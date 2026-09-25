@@ -8,6 +8,9 @@
 .atlas-toolbar-menu-panel > button { display: flex; align-items: center; justify-content: flex-start; gap: 7px; width: 100%; box-sizing: border-box; min-height: 32px; padding: 5px 8px; border: 0; border-radius: 3px; background: transparent; color: var(--eade-ink); font: inherit; font-size: 11px; text-align: left; cursor: pointer; }
 .atlas-toolbar-menu-panel > button:hover, .atlas-toolbar-menu-panel > button[aria-pressed="true"] { background: var(--eade-paper-soft); }
 .atlas-toolbar-menu-panel > button:disabled { opacity: .55; cursor: not-allowed; }
+.workspace-toolbar-panels .atlas-toolbar-menu > summary { width: 92px; }
+.workspace-toolbar-panels .atlas-toolbar-menu-panel { min-width: 186px; }
+.workspace-toolbar-panels .atlas-toolbar-menu-panel > button[aria-pressed="true"]::after { content: "✓"; margin-left: auto; color: var(--eade-wine); font-weight: 700; }
 .atlas-toolbar-menu-panel .share-status { padding: 3px 8px; }
 .atlas-guide { position: fixed; z-index: 110; right: clamp(12px, 2vw, 32px); bottom: clamp(12px, 2vw, 32px); width: min(335px, calc(100vw - 24px)); box-sizing: border-box; max-height: min(70vh, 470px); overflow: auto; padding: 16px; border: 1px solid var(--eade-border-strong); border-radius: 9px; background: var(--eade-paper-bright); box-shadow: 0 16px 44px #201a1670; color: var(--eade-ink); font-family: var(--eade-sans, -apple-system, 'Segoe UI', sans-serif); }
 .atlas-guide-heading { display: flex; justify-content: space-between; gap: 10px; align-items: center; margin-bottom: 12px; }
