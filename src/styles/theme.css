@@ -53,16 +53,18 @@
 .site-brand-copy strong { font: 600 19px/1.05 var(--eade-serif); }
 .site-brand-copy small {
   color: var(--eade-muted);
-  font-size: 8.5px;
+  font-size: 8px;
   font-weight: 650;
-  letter-spacing: .55px;
+  letter-spacing: .3px;
   text-transform: uppercase;
+  white-space: nowrap;
 }
 
 .site-nav {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  width: 630px;
   align-items: center;
-  justify-content: center;
   gap: 5px;
 }
 .site-nav a,
@@ -76,7 +78,8 @@
   font-size: 10.5px;
   font-weight: 650;
 }
-.site-nav a { padding: 7px 9px; border-radius: var(--eade-radius-sm); }
+.site-nav a { display: flex; align-items: center; justify-content: center; gap: 3px; padding: 7px 3px; border-radius: var(--eade-radius-sm); white-space: nowrap; }
+.site-nav-language { font-size: 8px; letter-spacing: .03em; color: var(--eade-muted); }
 .site-nav a:hover,
 .site-language a:hover,
 .site-language button:hover { color: var(--eade-wine); }
@@ -166,9 +169,13 @@
 }
 .site-footer.is-compact .site-footer-meta { margin-top: 14px; padding-top: 12px; }
 
+@media (max-width: 1150px) {
+  .site-header { grid-template-columns: minmax(0, 1fr) auto 30px; gap: 10px; }
+  .site-nav { grid-column: 1 / -1; order: 3; width: 100%; overflow-x: auto; padding-top: 4px; grid-template-columns: repeat(6, minmax(88px, 1fr)); }
+}
+
 @media (max-width: 860px) {
   .site-header { grid-template-columns: 1fr auto; gap: 10px; }
-  .site-nav { grid-column: 1 / -1; order: 3; justify-content: flex-start; overflow-x: auto; padding-top: 4px; }
     .site-brand-copy small { display: none; }
 }
 

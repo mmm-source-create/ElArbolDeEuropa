@@ -59,6 +59,7 @@ export default function ExplorerView({ vm }) {
   const [mobileToolsOpen,setMobileToolsOpen] = React.useState(false);
   const [guideOpen,setGuideOpen] = React.useState(false);
   const guideButtonRef = React.useRef(null);
+  const toolsMenuRef = React.useRef(null);
   const closeGuide = () => { setGuideOpen(false); requestAnimationFrame(() => guideButtonRef.current?.focus()); };
   const {
     connectionIds, setConnectionIds, connectionCriterion, setConnectionCriterion, connectionResult, getExportSelection,
@@ -220,7 +221,6 @@ export default function ExplorerView({ vm }) {
               >
                 <SkipForward size={12} />
               </button>
-              <button type="button" className="history-playback-btn" disabled={vm.nextYear===null} onClick={()=>actualizarAnioDesdeRango(vm.nextYear)} title="Ir al siguiente acontecimiento registrado">Siguiente hito{vm.nextYear!==null?`: ${vm.nextYear}`:''}</button>
             </div>
           </div>
         </section>
@@ -237,6 +237,14 @@ export default function ExplorerView({ vm }) {
                   ['mapa', 'Mapa', false, true],
                   ['ambos', 'Árbol y mapa', true, true],
                 ].map(([key, label, arbol, mapa]) => <button key={key} type="button" aria-pressed={mostrarArbol === arbol && mostrarMapa === mapa} onClick={(event) => { setVistasActivas({ arbol, mapa }); const menu = event.currentTarget.closest('details'); menu.open = false; menu.querySelector('summary')?.focus(); }}>{label}</button>)}
+              </div>
+            </details>
+            <details className="atlas-toolbar-menu atlas-panels-menu">
+              <summary>Paneles <ChevronDown size={12} aria-hidden="true" /></summary>
+              <div className="atlas-toolbar-menu-panel" role="group" aria-label="Paneles visibles">
+                <button type="button" aria-pressed={mostrarFiltros} onClick={() => alternarPanelAuxiliar('filtros')}>Filtros {mostrarFiltros ? '✓' : ''}</button>
+                <button type="button" aria-pressed={mostrarBiografia} onClick={() => alternarPanelAuxiliar('biografia')}>Biografía {mostrarBiografia ? '✓' : ''}</button>
+                <button type="button" aria-pressed={mostrarCronologia} onClick={() => alternarPanelAuxiliar('cronologia')}>Cronología {mostrarCronologia ? '✓' : ''}</button>
               </div>
             </details>
           </section>
@@ -371,14 +379,10 @@ export default function ExplorerView({ vm }) {
                   </div>
                 )}
               </div>
-              <button type="button" className="nav-btn nav-btn-wide" ref={guideButtonRef} onClick={() => setGuideOpen(true)}><CircleHelp size={13} /> Ayuda</button>
-              <details className="atlas-toolbar-menu atlas-tools-menu">
+              <button type="button" className="nav-btn nav-btn-wide" ref={guideButtonRef} onClick={() => { if (toolsMenuRef.current) toolsMenuRef.current.open = false; setGuideOpen(true); }}><CircleHelp size={13} /> Ayuda</button>
+              <details ref={toolsMenuRef} className="atlas-toolbar-menu atlas-tools-menu">
                 <summary><SlidersHorizontal size={13} aria-hidden="true" /> Herramientas <ChevronDown size={12} aria-hidden="true" /></summary>
                 <div className="atlas-toolbar-menu-panel" role="group" aria-label="Herramientas del Atlas">
-                  <strong>Paneles</strong>
-                  <button type="button" aria-pressed={mostrarFiltros} onClick={() => alternarPanelAuxiliar('filtros')}>Filtros {mostrarFiltros ? '✓' : ''}</button>
-                  <button type="button" aria-pressed={mostrarBiografia} onClick={() => alternarPanelAuxiliar('biografia')}>Biografía {mostrarBiografia ? '✓' : ''}</button>
-                  <button type="button" aria-pressed={mostrarCronologia} onClick={() => alternarPanelAuxiliar('cronologia')}>Cronología {mostrarCronologia ? '✓' : ''}</button>
                   <strong>Persona seleccionada</strong>
                   <button type="button" disabled={!seleccion} onClick={centrarSeleccion}><Crosshair size={13} /> Centrar persona</button>
                   <button type="button" disabled={!seleccion} onClick={compartirPersona}><Share2 size={13} /> Compartir persona</button>

@@ -25,9 +25,9 @@ export default function SiteHeader({
   };
   const isAtlas = variant === "atlas";
   const path = pathname || (typeof window === "undefined" ? "/es/" : window.location.pathname);
-  const active = locale === "en" ? (/\/story(?:\/|$)|\/stories/.test(path) ? "historias" : /\/person(?:\/|$)|\/people/.test(path) ? "personas" : path.includes("methodology") ? "methodology" : "home") : isAtlas ? "atlas" : /\/persona(?:s|\/|$)/.test(path) ? "personas" : /\/dinastia(?:s|\/|$)/.test(path) ? "dinastias" : /\/territorio(?:s|\/|$)/.test(path) ? "territorios" : /\/historia(?:s|\/|$)/.test(path) ? "historias" : /\/desafio/.test(path) ? "desafio" : null;
+  const active = locale === "en" ? (/\/story(?:\/|$)|\/stories/.test(path) ? "historias" : /\/person(?:\/|$)|\/people/.test(path) ? "personas" : null) : isAtlas ? "atlas" : /\/persona(?:s|\/|$)/.test(path) ? "personas" : /\/dinastia(?:s|\/|$)/.test(path) ? "dinastias" : /\/territorio(?:s|\/|$)/.test(path) ? "territorios" : /\/historia(?:s|\/|$)/.test(path) ? "historias" : /\/desafio/.test(path) ? "desafio" : null;
   const equivalent = translatedEquivalent(path, locale === "en" ? "es" : "en");
-  const links = locale === "en" ? [["home", "Home", "/en/"], ["historias", "Stories", "/en/stories"], ["personas", "People", "/en/people"], ["methodology", "Methodology", "/en/methodology"], ["atlas", "Atlas (Spanish)", "/es/?atlas=1&continuar=1"]] : [["atlas", "Atlas", "/es/?atlas=1&continuar=1"], ["personas", "Personas", "/es/personas"], ["dinastias", "Dinastías", "/es/dinastias"], ["territorios", "Territorios", "/es/territorios"], ["historias", "Historias", "/es/historias"], ["desafio", "Desafío", "/es/desafio"]];
+  const links = locale === "en" ? [["atlas", "Atlas", "/es/?atlas=1&continuar=1", true], ["personas", "People", "/en/people"], ["dinastias", "Dynasties", "/es/dinastias", true], ["territorios", "Territories", "/es/territorios", true], ["historias", "Stories", "/en/stories"], ["desafio", "Challenge", "/es/desafio", true]] : [["atlas", "Atlas", "/es/?atlas=1&continuar=1"], ["personas", "Personas", "/es/personas"], ["dinastias", "Dinastías", "/es/dinastias"], ["territorios", "Territorios", "/es/territorios"], ["historias", "Historias", "/es/historias"], ["desafio", "Desafío", "/es/desafio"]];
   const languageControl = onLanguageChange ? (
     <div className="site-language" role="group" aria-label="Idioma / Language">
       <button type="button" className={locale === "es" ? "active" : ""} aria-current={locale === "es" ? "page" : undefined} onClick={() => onLanguageChange("es")}>ES</button>
@@ -51,7 +51,7 @@ export default function SiteHeader({
       </a>
 
       <nav className="site-nav" aria-label={locale === "en" ? "Main navigation" : "Navegación principal"}>
-        {links.map(([id, label, href]) => <a key={id} href={href} aria-current={active === id ? "page" : undefined} onClick={isAtlas && id === "atlas" ? event => event.preventDefault() : undefined}>{label}</a>)}
+        {links.map(([id, label, href, spanishOnly]) => <a key={id} href={href} aria-current={active === id ? "page" : undefined} title={spanishOnly ? "This section is currently available in Spanish" : undefined} onClick={isAtlas && id === "atlas" ? event => event.preventDefault() : undefined}>{label}{spanishOnly && <span className="site-nav-language" aria-label="Spanish only">ES</span>}</a>)}
       </nav>
 
       {languageControl}
