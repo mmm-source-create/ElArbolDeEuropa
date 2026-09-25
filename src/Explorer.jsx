@@ -144,6 +144,7 @@ export default function Explorer({ initialPanel = null, treeBase: TREE_BASE }) {
       return base;
     }
   });
+  const [atlasExpansionFeedback, setAtlasExpansionFeedback] = useState(null);
   const [panelWidths, setPanelWidths] = useState(() => {
     const guardado = leerLayoutAtlas()?.panelWidths || {};
     return {
@@ -1733,6 +1734,7 @@ export default function Explorer({ initialPanel = null, treeBase: TREE_BASE }) {
   };
 
   const changeAtlasScope = (next, { remember = true, center = null } = {}) => {
+    setAtlasExpansionFeedback(null);
     if (remember) setAtlasUndo(previous => [...previous.slice(-19), atlasIds]);
     setAtlasIds(next);
     const url = writeAtlasIds(new URL(window.location.href), next);
@@ -1746,16 +1748,23 @@ export default function Explorer({ initialPanel = null, treeBase: TREE_BASE }) {
     setSeleccion(BY_ID[id]);
     changeAtlasScope(ids, { center: id });
   };
-  const focusAdditions = focoSet ? [...focoSet].filter(id => atlasSet && !atlasSet.has(id)) : [];
-  const keepFocus = () => {
-    if (historiaActiva || !focoSet || !atlasSet || !focusAdditions.length) return;
-    changeAtlasScope([...new Set([...atlasIds, ...focoSet])], {center:focoId});
-    setMode('view'); setFocoId(null);
+  const familyBranches = seleccion ? {
+    family: familyIds(familyData, seleccion.id),
+    ancestors: [...ancestorsOf(seleccion.id)],
+    descendants: [...descendantsOf(seleccion.id)],
+  } : { family: [], ancestors: [], descendants: [] };
+  const additions = Object.fromEntries(Object.entries(familyBranches).map(([kind, ids]) => [kind, atlasSet ? ids.filter(id => !atlasSet.has(id)) : []]));
+  const expandFamily = (kind) => {
+    if (historiaActiva || !seleccion || atlasIds === null || !additions[kind]?.length) return;
+    const count = additions[kind].length;
+    changeAtlasScope([...new Set([...atlasIds, ...familyBranches[kind]])], { center: seleccion.id });
+    setMode('view');
+    setFocoId(null);
+    setAtlasExpansionFeedback({ count, kind, person: seleccion.nombre });
   };
-  const additions = Object.fromEntries(['parents','children','family'].map(kind => [kind, atlasIds !== null && seleccion ? familyIds(familyData, seleccion.id, kind).filter(id => !atlasSet.has(id)) : []]));
-  const growth = { ids: atlasIds, selected: seleccion, query, results: searchMatchIds.map(id => BY_ID[id]), additions,
+  const growth = { ids: atlasIds, selected: seleccion, query, results: searchMatchIds.map(id => BY_ID[id]), additions, feedback: atlasExpansionFeedback,
     onStart: startFamily, onSelect: id => seleccionarPersonaPorId(id, { centrar: Boolean(positions[id]) }),
-    onExpand: kind => changeAtlasScope([...new Set([...(atlasIds || []), ...additions[kind]])], { center: seleccion?.id }),
+    onExpand: expandFamily,
     onUndo: () => { setMode('view');setFocoId(null);const previous = atlasUndo.at(-1); setAtlasUndo(atlasUndo.slice(0, -1)); changeAtlasScope(previous, { remember: false, center: previous?.[0] }); },
     canUndo: atlasUndo.length > 0, onFull: () => { limpiar(); setMode('view'); setFocoId(null); setCollapsedIds([]); changeAtlasScope(null); },
     onNew: () => { limpiar(); setMode('view'); setSeleccion(null); changeAtlasScope([]); },
@@ -1763,7 +1772,7 @@ export default function Explorer({ initialPanel = null, treeBase: TREE_BASE }) {
   };
 
   const viewModel = {
-    growth, focusAdditions, keepFocus,
+    growth,
     storyReturn,
     connectionIds, setConnectionIds, connectionCriterion, setConnectionCriterion, connectionResult, getExportSelection,
     initialMapViewport: mapViewportRef.current, recordMapViewport, timelineVirtual, timelineListRef, scrollRef, tlScrollRef, locale, setLocale, query, setQuery,
