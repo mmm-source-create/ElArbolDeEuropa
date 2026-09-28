@@ -56,7 +56,7 @@ export default function SiteHeader({
 
       {languageControl}
       <SettingsPanel locale={locale} prerendered={prerendered}/>
-      {!noticeDismissed && <aside className="site-screen-notice" aria-label={locale === "en" ? "Viewing recommendation" : "Recomendación de visualización"}>
+      {!isAtlas && !noticeDismissed && <aside className="site-screen-notice" aria-label={locale === "en" ? "Viewing recommendation" : "Recomendación de visualización"}>
         <p>{locale === "en" ? "For a more comfortable view of the tree, map and timeline, we recommend using a larger screen." : "Para explorar el árbol, el mapa y la cronología con más comodidad, recomendamos usar una pantalla grande."}</p>
         <button type="button" onClick={dismissNotice} aria-label={locale === "en" ? "Dismiss recommendation" : "Cerrar aviso"}><span aria-hidden="true">×</span></button>
       </aside>}

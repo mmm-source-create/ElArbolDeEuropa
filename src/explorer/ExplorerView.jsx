@@ -9,9 +9,10 @@ import React from "react";
 import { Search, ChevronDown, ChevronRight, ArrowLeft, ArrowRight, ZoomIn, ZoomOut, RotateCcw, GitCompare, UserRoundPlus, Share2, Play, Pause, SkipBack, SkipForward, X, Info, Heart, BookOpen, BarChart3, Scale, Flag, Mail, ExternalLink, Crosshair, Maximize2, CircleHelp, SlidersHorizontal } from "lucide-react";
 import { MapaEuropa } from "../MapaEuropa";
 import { TERRITORIOS_SUB, TERRITORIOS_DESTACADOS, REINO_COLOR, REINO_COLOR_DEFAULT, listaReinados, territoriosGobernadosEnAño, reinadoEsEfectivo, esGobernante } from "../Territorios";
+import { TERRITORIOS } from "../data/territorios.js";
 import { PERSONAS } from "../personas.jsx";
 import { IMAGENES_PERSONAS } from "../imagenesPersonas.js";
-import { HISTORIAS } from "../historiaData.jsx";
+import { EVENTOS_HISTORICOS, HISTORIAS } from "../historiaData.jsx";
 import { t } from "../i18n.jsx";
 import BioRelations from "../components/BioRelations.jsx";
 import BioDiscovery from "../components/BioDiscovery.jsx";
@@ -23,6 +24,12 @@ import { nRomano, formatoFechas, sobrenombreDePersona, nombrePrincipal, pct, eti
 import { ALCANCES_FOCO, MODOS_COMPARACION, tipoRelacionEntre } from "./relationshipGraph.js";
 import { Chip, ModalProyecto } from "./ExplorerPrimitives.jsx";
 import AtlasGuide from "./AtlasGuide.jsx";
+import { atlasSearch } from "./atlasSearch.js";
+import TreeAccessibleList from "./TreeAccessibleList.jsx";
+import "./v39.css";
+
+const SEARCH_DYNASTIES = [...new Set(PERSONAS.map(persona => persona.dinastia).filter(Boolean))];
+const SEARCH_TERRITORIES = Object.keys(TERRITORIOS);
 
 const EuropeYearDialog = React.lazy(() => import('./EuropeYearDialog.jsx'));
 const AtlasCrowns = React.lazy(() => import('./AtlasCrowns.jsx'));
@@ -58,6 +65,8 @@ export default function ExplorerView({ vm }) {
   const [searchOpen,setSearchOpen] = React.useState(false);
   const [mobileToolsOpen,setMobileToolsOpen] = React.useState(false);
   const [guideOpen,setGuideOpen] = React.useState(false);
+  const [bioTab,setBioTab] = React.useState('resumen');
+  const [bioMobileOpen,setBioMobileOpen] = React.useState(true);
   const guideButtonRef = React.useRef(null);
   const viewMenuRef = React.useRef(null);
   const panelsMenuRef = React.useRef(null);
@@ -88,7 +97,7 @@ export default function ExplorerView({ vm }) {
     initialMapViewport, recordMapViewport, timelineVirtual, timelineListRef, scrollRef, tlScrollRef, locale, setLocale, query, setQuery,
     territorios, setTerritorios, dinastias, setDinastias, dinastiasExpandidas, setDinastiasExpandidas, territoriosExpandidos, setTerritoriosExpandidos,
     titulos, setTitulos, siglos, setSiglos, relaciones, setRelaciones, hovered, setHovered,
-    seleccion, setSeleccion, currentSearchIndex, setCurrentSearchIndex, zoom, setZoom, mode, setMode,
+    seleccion, setSeleccion, currentSearchIndex, setCurrentSearchIndex, zoom, setZoom, mode, setMode, experience, setExperience, investigar,
     origen, setOrigen, destino, setDestino, modoComparacion, setModoComparacion, compareMenuOpen, setCompareMenuOpen,
     compareRouteIndex, setCompareRouteIndex, focoMenuOpen, setFocoMenuOpen, focoId, setFocoId, focoAlcance, setFocoAlcance,
     anioGlobal, setAnioGlobal, anioInput, setAnioInput, reproduciendoHistoria, setReproduciendoHistoria,
@@ -120,6 +129,11 @@ export default function ExplorerView({ vm }) {
     ? personHistory.ids[personHistory.index + 1]
     : null;
   const canAddFamily = Boolean(seleccion && !historiaActiva && vm.growth.ids !== null && vm.growth.additions.family.length);
+  const searchResults = React.useMemo(() => atlasSearch(queryTrim, {
+    people: PERSONAS, dynasties: SEARCH_DYNASTIES, territories: SEARCH_TERRITORIES,
+    stories: HISTORIAS, events: EVENTOS_HISTORICOS, normalize: normalizaTexto,
+  }, 4), [queryTrim]);
+  React.useEffect(() => { setBioTab('resumen'); setBioMobileOpen(true); }, [seleccion?.id]);
   const onToolbarMenuToggle = (event) => {
     if (!event.currentTarget.open) return;
     closeOtherToolbarMenus(event.currentTarget);
@@ -143,33 +157,46 @@ export default function ExplorerView({ vm }) {
         <section className="workspace-topbar-section workspace-toolbar-search" onBlur={e=>{if(!e.currentTarget.contains(e.relatedTarget))setSearchOpen(false);}}>
           <div className="toolbar-label">Búsqueda</div>
           <div className="search-box toolbar-search-box">
-            <Search size={13} color="#8A7F65" />
+            <Search size={13} aria-hidden="true" />
             <input
-              placeholder="Buscar nombre, título, dinastía o territorio…"
-              aria-label="Buscar nombre, título, dinastía o territorio"
+              placeholder="Buscar personas, casas, lugares, historias…"
+              aria-label="Buscar en todo el Atlas"
+              aria-expanded={searchOpen && Boolean(queryTrim)}
+              aria-controls="atlas-search-results"
               value={query}
               onFocus={()=>setSearchOpen(true)}
               onChange={(event) => {setQuery(event.target.value);setSearchOpen(true);}}
               onKeyDown={(event) => {
                 if (event.key === "Escape") setSearchOpen(false);
-                if (event.key === "Enter") irACoincidencia(event.shiftKey ? -1 : 1);
+                if (event.key === "Enter" && searchResults.people.length) {
+                  event.preventDefault();
+                  vm.growth.onSelect(searchResults.people[0].id);
+                  setSearchOpen(false);
+                }
               }}
             />
             {queryTrim && (
               <div className="toolbar-search-nav">
                 <span className="toolbar-search-count">
-                  {searchMatchIds.length ? `${currentSearchIndex + 1} / ${searchMatchIds.length}` : "0 / 0"}
+                  {searchMatchIds.length ? `${Math.max(1, currentSearchIndex + 1)} / ${searchMatchIds.length} personas` : "0 personas"}
                 </span>
-                <button type="button" className="nav-btn search-nav-btn" disabled={!searchMatchIds.length} onClick={() => irACoincidencia(-1)}>
+                <button type="button" className="nav-btn search-nav-btn" aria-label="Persona anterior de la búsqueda" disabled={!searchMatchIds.length} onClick={() => irACoincidencia(-1)}>
                   <ChevronRight size={10} style={{ transform: "rotate(180deg)" }} />
                 </button>
-                <button type="button" className="nav-btn search-nav-btn" disabled={!searchMatchIds.length} onClick={() => irACoincidencia(1)}>
+                <button type="button" className="nav-btn search-nav-btn" aria-label="Persona siguiente de la búsqueda" disabled={!searchMatchIds.length} onClick={() => irACoincidencia(1)}>
                   <ChevronRight size={10} />
                 </button>
               </div>
             )}
           </div>
-          {searchOpen && queryTrim && <div className="atlas-search-results" aria-label="Resultados de toda la base"><span>{searchMatchIds.length ? `${searchMatchIds.length} coincidencias · toda la base` : 'No hay coincidencias'}</span>{vm.growth.results.slice(0,12).map(p=><button type="button" key={p.id} onClick={()=>{vm.growth.onSelect(p.id);setSearchOpen(false);}}><strong>{p.nombre}</strong><small>{positions[p.id]?'Ver persona':'Abrir ficha'}</small></button>)}</div>}
+          {searchOpen && queryTrim && <div id="atlas-search-results" className="atlas-search-results" aria-label="Resultados de toda la base">
+            <span role="status">{searchResults.total ? `${searchResults.total} coincidencias en el Atlas` : 'No hay coincidencias'}</span>
+            {searchResults.people.length > 0 && <section aria-label="Personas"><strong>Personas</strong>{searchResults.people.map(p=><button type="button" key={p.id} onClick={()=>{vm.growth.onSelect(p.id);setSearchOpen(false);}}><span>{p.nombre}</span><small>{positions[p.id]?'Ver en el árbol':'Ver ficha y familia'}</small></button>)}</section>}
+            {searchResults.dynasties.length > 0 && <section aria-label="Dinastías"><strong>Dinastías</strong>{searchResults.dynasties.map(name=><a key={name} href={rutaEntidadLocalizada('es','dinastia',slugPublico(name))}><span>{name}</span><small>Abrir casa</small></a>)}</section>}
+            {searchResults.territories.length > 0 && <section aria-label="Territorios"><strong>Territorios</strong>{searchResults.territories.map(name=><a key={name} href={rutaEntidadLocalizada('es','territorio',slugPublico(name))}><span>{name}</span><small>Abrir territorio</small></a>)}</section>}
+            {searchResults.stories.length > 0 && <section aria-label="Historias"><strong>Historias</strong>{searchResults.stories.map(story=><a key={story.id} href={rutaEntidadLocalizada('es','historia',slugPublico(story.titulo))}><span>{story.titulo}</span><small>Leer historia</small></a>)}</section>}
+            {searchResults.events.length > 0 && <section aria-label="Acontecimientos"><strong>Acontecimientos</strong>{searchResults.events.map(event=><button type="button" key={event.id} onClick={()=>{seleccionarEvento(event);setSearchOpen(false);}}><span>{event.titulo}</span><small>Ir al año {event.anio ?? event.desde}</small></button>)}</section>}
+          </div>}
         </section>
 
         <section className="workspace-topbar-section workspace-toolbar-year">
@@ -263,7 +290,11 @@ export default function ExplorerView({ vm }) {
           </div>
         </section>
 
-        {!modoTrabajo && <button type="button" className="atlas-tools-toggle" aria-expanded={mobileToolsOpen} aria-controls="atlas-secondary-tools" onClick={()=>setMobileToolsOpen(open=>!open)}>Controles del Atlas <ChevronDown size={12}/></button>}
+        {!modoTrabajo && <div className="atlas-experience-control" role="group" aria-label="Forma de explorar el Atlas">
+          <button type="button" aria-pressed={!investigar} onClick={() => {setExperience('explorar');setMode('view');setCompareMenuOpen(false);setFocoId(null);}}>Explorar</button>
+          <button type="button" aria-pressed={investigar} onClick={() => setExperience('investigar')}>Investigar</button>
+        </div>}
+        {!modoTrabajo && <button type="button" className="atlas-tools-toggle" aria-expanded={mobileToolsOpen} aria-controls="atlas-secondary-tools" onClick={()=>setMobileToolsOpen(open=>!open)}>{investigar ? 'Vistas y herramientas' : 'Elegir vista'} <ChevronDown size={12}/></button>}
         {!modoTrabajo && (
         <div id="atlas-secondary-tools" className={`workspace-topbar-secondary${mobileToolsOpen?' is-expanded':''}`}>
           <section className="workspace-topbar-section workspace-toolbar-view workspace-toolbar-panels">
@@ -277,19 +308,19 @@ export default function ExplorerView({ vm }) {
                 ].map(([key, label, arbol, mapa]) => <button key={key} type="button" aria-pressed={mostrarArbol === arbol && mostrarMapa === mapa} onClick={(event) => { setVistasActivas({ arbol, mapa }); const menu = event.currentTarget.closest('details'); menu.open = false; menu.querySelector('summary')?.focus(); }}>{label}</button>)}
               </div>
             </details>
-            <details ref={panelsMenuRef} className="atlas-toolbar-menu atlas-panels-menu" onToggle={onToolbarMenuToggle}>
+            {investigar && <details ref={panelsMenuRef} className="atlas-toolbar-menu atlas-panels-menu" onToggle={onToolbarMenuToggle}>
               <summary>Paneles <ChevronDown size={12} aria-hidden="true" /></summary>
               <div className="atlas-toolbar-menu-panel" role="group" aria-label="Paneles visibles">
                 <button type="button" aria-pressed={mostrarFiltros} onClick={() => alternarPanelAuxiliar('filtros')}>Filtros</button>
                 <button type="button" aria-pressed={mostrarBiografia} onClick={() => alternarPanelAuxiliar('biografia')}>Biografía</button>
                 <button type="button" aria-pressed={mostrarCronologia} onClick={() => alternarPanelAuxiliar('cronologia')}>Cronología</button>
               </div>
-            </details>
+            </details>}
           </section>
 
           <section className="workspace-topbar-section workspace-toolbar-actions">
             <div className="nav-controls topbar-mode-controls">
-              <div className="compare-split-control" ref={compareMenuRef}>
+              {investigar && <div className="compare-split-control" ref={compareMenuRef}>
                 <button
                   type="button"
                   className={`nav-btn nav-btn-wide compare-main-btn ${["compare","conexion"].includes(mode) ? "active" : ""}`}
@@ -342,9 +373,9 @@ export default function ExplorerView({ vm }) {
                     ))}
                   </div>
                 )}
-              </div>
+              </div>}
               <button type="button" className="nav-btn nav-btn-wide family-add-button" aria-disabled={!canAddFamily} onClick={() => { if (canAddFamily) vm.growth.onExpand('family'); }} title={historiaActiva ? 'La selección del recorrido se conserva completa' : !seleccion ? 'Elige primero una persona' : vm.growth.ids === null ? 'Ya se muestra la base completa' : vm.growth.additions.family.length ? `Añadir familiares de ${seleccion.nombre} al árbol` : 'La familia cercana ya está en el árbol'}>
-                <UserRoundPlus size={12} /> Añadir familia{seleccion && vm.growth.additions.family.length ? ` (+${vm.growth.additions.family.length})` : ''}
+                  <UserRoundPlus size={12} /> {vm.growth.ids?.length && !canAddFamily ? 'Familia visible' : 'Explorar familia'}{seleccion && vm.growth.additions.family.length ? ` (+${vm.growth.additions.family.length})` : ''}
               </button>
               <div className="favorites-control" ref={favoritosMenuRef}>
                 <button type="button" className={`nav-btn nav-btn-wide${favoritosOpen || soloFavoritos ? " active" : ""}`} onClick={() => { closeOtherToolbarMenus(); setCompareMenuOpen(false); setFavoritosOpen((actual) => !actual); }} aria-expanded={favoritosOpen}>
@@ -369,7 +400,7 @@ export default function ExplorerView({ vm }) {
                 )}
               </div>
               <button type="button" className="nav-btn nav-btn-wide" ref={guideButtonRef} onClick={() => { if (toolsMenuRef.current) toolsMenuRef.current.open = false; setGuideOpen(true); }}><CircleHelp size={13} /> Ayuda</button>
-              <details ref={toolsMenuRef} className="atlas-toolbar-menu atlas-tools-menu" onToggle={onToolbarMenuToggle}>
+              {investigar && <details ref={toolsMenuRef} className="atlas-toolbar-menu atlas-tools-menu" onToggle={onToolbarMenuToggle}>
                 <summary><SlidersHorizontal size={13} aria-hidden="true" /> Herramientas <ChevronDown size={12} aria-hidden="true" /></summary>
                 <div className="atlas-toolbar-menu-panel" role="group" aria-label="Herramientas del Atlas">
                   <strong>Persona seleccionada</strong>
@@ -380,12 +411,17 @@ export default function ExplorerView({ vm }) {
                   <TreeExport getSelection={getExportSelection} label="Exportar árbol" />
                   <button type="button" onClick={() => setModoTrabajo(true)}><Maximize2 size={13} /> Pantalla de trabajo</button>
                 </div>
-              </details>
+              </details>}
             </div>
           </section>
         </div>
         )}
       </div>
+
+      <p className="atlas-visually-hidden" role="status" aria-live="polite">
+        {seleccion ? `Persona seleccionada: ${seleccion.nombre}.` : 'No hay persona seleccionada.'}
+        {Number.isFinite(anioGlobal) ? ` Año ${anioGlobal}.` : ' Todos los años.'}
+      </p>
 
       {vm.growth.feedback && !historiaActiva && (
         <div className="family-expansion-feedback" role="status">
@@ -705,7 +741,7 @@ export default function ExplorerView({ vm }) {
                 </div>
 
                 <div
-                  className="tree-scroll"
+                  className={`tree-scroll tree-zoom-${zoom < 0.65 ? 'far' : zoom < 1.05 ? 'middle' : 'near'}`}
                   ref={scrollRef}
                   tabIndex={0}
                   aria-label="Árbol genealógico. Usa las flechas para desplazarte; Tab para recorrer las personas visibles."
@@ -759,6 +795,7 @@ export default function ExplorerView({ vm }) {
                   </div>
                 </div>
               </div>
+              {visiblePeople.length > 0 && <TreeAccessibleList people={visiblePeople} selectedId={seleccion?.id} onSelect={seleccionarPersonaPorId}/>}
             </section>
           )}
 
@@ -823,8 +860,9 @@ export default function ExplorerView({ vm }) {
         )}
 
         {mostrarBiografia && (
-        <aside className="workspace-inspector">
-          <section className="panel workspace-fixed-panel workspace-bio-panel">
+        <aside className={`workspace-inspector${personaBio ? ' has-person' : ''}${bioMobileOpen ? ' mobile-open' : ' mobile-collapsed'}`}>
+          {personaBio && <button type="button" className="bio-mobile-toggle" aria-expanded={bioMobileOpen} aria-controls="atlas-biography-panel" onClick={()=>setBioMobileOpen(open=>!open)}>{bioMobileOpen ? 'Ocultar ficha' : `Ver ficha de ${personaBio.nombre}`} <ChevronDown size={15}/></button>}
+          <section id="atlas-biography-panel" className="panel workspace-fixed-panel workspace-bio-panel">
             <div className="panel-head panel-head-static">
               <span className="panel-title">Biografía</span>
               <span className="panel-count">{personaBio ? "1 personaje" : "ninguno"}</span>
@@ -882,6 +920,23 @@ export default function ExplorerView({ vm }) {
                     </div>
                   </div>
 
+                  <div className="bio-tabs" role="tablist" aria-label={`Apartados de ${personaBio.nombre}`}>
+                    {[
+                      ['resumen','Resumen'],['familia','Familia'],['coronas','Coronas'],['historias','Historias'],['fuentes','Fuentes'],
+                    ].map(([key,label], index, tabs)=><button key={key} type="button" role="tab" aria-selected={bioTab===key} aria-controls={`bio-tab-${key}`} tabIndex={bioTab===key ? 0 : -1} onClick={()=>setBioTab(key)} onKeyDown={event=>{
+                      const offset = event.key==='ArrowRight' ? 1 : event.key==='ArrowLeft' ? -1 : 0;
+                      if (!offset) return;
+                      event.preventDefault();
+                      const next = tabs[(index + offset + tabs.length) % tabs.length][0];
+                      const tablist = event.currentTarget.parentElement;
+                      setBioTab(next);
+                      requestAnimationFrame(()=>tablist?.querySelector(`[aria-controls="bio-tab-${next}"]`)?.focus());
+                    }}>{label}</button>)}
+                  </div>
+
+                  {seleccion?.id === personaBio.id && !historiaActiva && canAddFamily && <button type="button" className="bio-primary-action" onClick={()=>vm.growth.onExpand('family')}><UserRoundPlus size={15}/> Explorar familia · añadir {vm.growth.additions.family.length} persona{vm.growth.additions.family.length===1?'':'s'}</button>}
+
+                  {bioTab==='familia' && <div id="bio-tab-familia" role="tabpanel">
                   {seleccion?.id === personaBio.id && !historiaActiva && (
                     <div className="bio-family-actions" aria-label="Ampliar la familia en el árbol">
                       {vm.growth.ids !== null && (vm.growth.additions.ancestors.length > 0 || vm.growth.additions.descendants.length > 0) && (
@@ -896,6 +951,26 @@ export default function ExplorerView({ vm }) {
                       <button type="button" className="bio-focus-link" onClick={() => { setFocoId(personaBio.id); setFocoAlcance('cercana'); setMode('foco'); setCompareMenuOpen(false); }}>Ver solo esta rama</button>
                     </div>
                   )}
+
+                  <BioSection
+                    title="Relaciones documentadas"
+                    open={bioSectionsOpen.relaciones}
+                    onToggle={() => alternarSeccionBio("relaciones")}
+                  >
+                    <div className="bio-relations bio-relations-collapsible">
+                      <BioRelations etiqueta="Padre" ids={personaBio.padre ? [personaBio.padre] : []} byId={BY_ID} hrefForId={(id) => rutaEntidadLocalizada("es", "persona", slugPersonaPorLocale(BY_ID[id], "es"))} onSelect={seleccionarPersonaPorId} />
+                      <BioRelations etiqueta="Madre" ids={personaBio.madre ? [personaBio.madre] : []} byId={BY_ID} hrefForId={(id) => rutaEntidadLocalizada("es", "persona", slugPersonaPorLocale(BY_ID[id], "es"))} onSelect={seleccionarPersonaPorId} />
+                      <BioRelations etiqueta={listaConyuges(personaBio).length > 1 ? "Cónyuges" : "Cónyuge"} ids={listaConyuges(personaBio)} byId={BY_ID} hrefForId={(id) => rutaEntidadLocalizada("es", "persona", slugPersonaPorLocale(BY_ID[id], "es"))} onSelect={seleccionarPersonaPorId} />
+                      <BioRelations etiqueta={listaAmantes(personaBio).length > 1 ? "Amantes" : "Amante"} ids={listaAmantes(personaBio)} tipo="amantes" byId={BY_ID} hrefForId={(id) => rutaEntidadLocalizada("es", "persona", slugPersonaPorLocale(BY_ID[id], "es"))} onSelect={seleccionarPersonaPorId} />
+                      <BioRelations etiqueta="Hijos/as" ids={HIJOS_POR_ID[personaBio.id] || []} byId={BY_ID} hrefForId={(id) => rutaEntidadLocalizada("es", "persona", slugPersonaPorLocale(BY_ID[id], "es"))} onSelect={seleccionarPersonaPorId} />
+                      {!personaBio.padre && !personaBio.madre && !listaConyuges(personaBio).length && !listaAmantes(personaBio).length && !(HIJOS_POR_ID[personaBio.id] || []).length && (
+                        <div className="bio-relations-empty">No hay relaciones cargadas para esta persona.</div>
+                      )}
+                    </div>
+                  </BioSection>
+                  </div>}
+
+                  {bioTab==='resumen' && <div id="bio-tab-resumen" role="tabpanel">
 
                   {IMAGENES_PERSONAS[personaBio.id] && (() => {
                     const imagen = IMAGENES_PERSONAS[personaBio.id];
@@ -952,8 +1027,10 @@ export default function ExplorerView({ vm }) {
                   </a>
 
                   <a className="bio-full-profile-link" href={`/es/dinastia/${slugPublico(personaBio.dinastia)}`}>Explorar la casa de {personaBio.dinastia} <ExternalLink size={11}/></a>
+                  </div>}
+
+                  {bioTab==='coronas' && <div id="bio-tab-coronas" role="tabpanel">
                   <React.Suspense fallback={null}><AtlasCrowns key={personaBio.id} persona={personaBio} anio={anioGlobal} onYearChange={actualizarAnioDesdeRango}/></React.Suspense>
-                  <DocumentationNotes persona={personaBio}/>
                   <BioSection
                     title="Datos y reinados"
                     open={bioSectionsOpen.datos}
@@ -981,29 +1058,9 @@ export default function ExplorerView({ vm }) {
                       })}
                     </dl>
                   </BioSection>
+                  </div>}
 
-                  <BioSection
-                    title="Relaciones documentadas"
-                    open={bioSectionsOpen.relaciones}
-                    onToggle={() => alternarSeccionBio("relaciones")}
-                  >
-                    <div className="bio-relations bio-relations-collapsible">
-                      <BioRelations etiqueta="Padre" ids={personaBio.padre ? [personaBio.padre] : []} byId={BY_ID} hrefForId={(id) => rutaEntidadLocalizada("es", "persona", slugPersonaPorLocale(BY_ID[id], "es"))} onSelect={seleccionarPersonaPorId} />
-                      <BioRelations etiqueta="Madre" ids={personaBio.madre ? [personaBio.madre] : []} byId={BY_ID} hrefForId={(id) => rutaEntidadLocalizada("es", "persona", slugPersonaPorLocale(BY_ID[id], "es"))} onSelect={seleccionarPersonaPorId} />
-                      <BioRelations etiqueta={listaConyuges(personaBio).length > 1 ? "Cónyuges" : "Cónyuge"} ids={listaConyuges(personaBio)} byId={BY_ID} hrefForId={(id) => rutaEntidadLocalizada("es", "persona", slugPersonaPorLocale(BY_ID[id], "es"))} onSelect={seleccionarPersonaPorId} />
-                      <BioRelations etiqueta={listaAmantes(personaBio).length > 1 ? "Amantes" : "Amante"} ids={listaAmantes(personaBio)} tipo="amantes" byId={BY_ID} hrefForId={(id) => rutaEntidadLocalizada("es", "persona", slugPersonaPorLocale(BY_ID[id], "es"))} onSelect={seleccionarPersonaPorId} />
-                      <BioRelations etiqueta="Hijos/as" ids={HIJOS_POR_ID[personaBio.id] || []} byId={BY_ID} hrefForId={(id) => rutaEntidadLocalizada("es", "persona", slugPersonaPorLocale(BY_ID[id], "es"))} onSelect={seleccionarPersonaPorId} />
-                      {!personaBio.padre && !personaBio.madre && !listaConyuges(personaBio).length && !listaAmantes(personaBio).length && !(HIJOS_POR_ID[personaBio.id] || []).length && (
-                        <div className="bio-relations-empty">No hay relaciones cargadas para esta persona.</div>
-                      )}
-                    </div>
-                  </BioSection>
-
-                  <BioSection
-                    title="Historias y contexto"
-                    open={bioSectionsOpen.contexto}
-                    onToggle={() => alternarSeccionBio("contexto")}
-                  >
+                  {bioTab==='historias' && <div id="bio-tab-historias" role="tabpanel">
                     <BioDiscovery
                       persona={personaBio}
                       personas={PERSONAS}
@@ -1018,7 +1075,15 @@ export default function ExplorerView({ vm }) {
                       onSelect={seleccionarPersonaPorId}
                       onStartHistoria={iniciarHistoria}
                     />
-                  </BioSection>
+                    <a className="bio-full-profile-link" href="/es/historias">Ver todas las historias <ExternalLink size={11}/></a>
+                  </div>}
+
+                  {bioTab==='fuentes' && <div id="bio-tab-fuentes" role="tabpanel" className="bio-source-tab">
+                    <DocumentationNotes persona={personaBio}/>
+                    <p>Las fechas y relaciones incompletas se indican en la ficha. Consulta el método y la bibliografía general para interpretar los datos.</p>
+                    <a className="bio-full-profile-link" href="/es/fuentes">Fuentes y metodología <ExternalLink size={11}/></a>
+                    <button type="button" onClick={()=>setInfoProyecto('reportar')}>Sugerir una corrección documentada</button>
+                  </div>}
 
                   {hovered && seleccion && hovered !== seleccion.id && (
                     <div className="bio-hint">Vista previa de {personaBio.nombre} — al quitar el ratón volverás a ver a {seleccion.nombre}.</div>
