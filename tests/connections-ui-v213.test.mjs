@@ -46,7 +46,6 @@ test('Atlas real: enlace de rama, búsqueda, retirada, exportación y salida con
  assert.equal(document.querySelectorAll('.atlas-guide [role="tab"]').length,3);
  await click(document.querySelector('[aria-label="Cerrar guía"]'));assert.equal(document.querySelector('.atlas-guide'),null);
  assert.equal(button('Siguiente hito'),undefined);
- await click(button('Investigar'));
  assert.equal(document.querySelector('.atlas-panels-menu [aria-label="Paneles visibles"]')?.querySelectorAll('button').length,3);
  await click(document.querySelector('.atlas-tools-menu summary'));
  assert.equal(document.querySelector('.atlas-tools-menu [aria-label="Herramientas del Atlas"]')?.textContent.includes('Paneles'),false);
@@ -73,13 +72,12 @@ test('una persona encontrada amplía el árbol en un clic y cada ampliación se 
  assert.ok(closeFamilyCount>1);
  assert.match(document.querySelector('.family-expansion-feedback').textContent,/Se añadieron/);
  await click([...document.querySelectorAll('[role="tab"]')].find(item=>item.textContent==='Familia'));
- const descendants=[...document.querySelectorAll('.bio-family-actions button')].find(item=>item.textContent.includes('Añadir descendientes'));
+ const descendants=[...document.querySelectorAll('.bio-family-actions button')].find(item=>item.textContent.includes('Descendientes'));
  assert.ok(descendants,'la rama adicional está visible junto a la biografía');
  await click(descendants);
  assert.ok(Number(document.querySelector('.tree-scope-label').textContent.match(/\d+/)?.[0])>closeFamilyCount);
  await click(document.querySelector('.family-expansion-feedback button'));
  assert.equal(Number(document.querySelector('.tree-scope-label').textContent.match(/\d+/)?.[0]),closeFamilyCount);
- await click(button('Investigar'));
  await click(document.querySelector('.atlas-panels-menu summary'));
  await click([...document.querySelectorAll('.atlas-panels-menu button')].find(item=>item.textContent==='Filtros'));
  await click(document.querySelector('.atlas-scope button:last-child'));
