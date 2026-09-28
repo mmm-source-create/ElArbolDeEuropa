@@ -10,13 +10,13 @@ function memoryStorage() {
 
 test('los ajustes inválidos vuelven a valores seguros y el modo sistema sigue al navegador',()=>{
  const storage=memoryStorage();storage.setItem(PREFERENCES_KEY,'{broken');
- assert.deepEqual(readPreferences(storage),{theme:'system',textSize:'normal',motion:'system'});
- assert.deepEqual(cleanPreferences({theme:'unknown',textSize:'large',motion:'reduce'}),{theme:'system',textSize:'large',motion:'reduce'});
- savePreferences(storage,{theme:'dark',textSize:'larger',motion:'reduce'});
- assert.deepEqual(readPreferences(storage),{theme:'dark',textSize:'larger',motion:'reduce'});
+ assert.deepEqual(readPreferences(storage),{theme:'system',textSize:'normal',motion:'system',treeView:'visual'});
+ assert.deepEqual(cleanPreferences({theme:'unknown',textSize:'large',motion:'reduce'}),{theme:'system',textSize:'large',motion:'reduce',treeView:'visual'});
+ savePreferences(storage,{theme:'dark',textSize:'larger',motion:'reduce',treeView:'list'});
+ assert.deepEqual(readPreferences(storage),{theme:'dark',textSize:'larger',motion:'reduce',treeView:'list'});
  const doc={documentElement:{dataset:{}}},win={matchMedia:()=>({matches:false})};
  applyPreferences(readPreferences(storage),doc,win);
- assert.deepEqual(doc.documentElement.dataset,{eadeTheme:'dark',eadeTextSize:'larger',eadeMotion:'reduce'});
+ assert.deepEqual(doc.documentElement.dataset,{eadeTheme:'dark',eadeTextSize:'larger',eadeMotion:'reduce',eadeTreeView:'list'});
  applyPreferences({theme:'system'},doc,{matchMedia:()=>({matches:true})});
  assert.equal(doc.documentElement.dataset.eadeTheme,'dark');
 });

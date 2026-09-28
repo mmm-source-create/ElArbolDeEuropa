@@ -47,7 +47,6 @@ import { useAtlasSession } from "./explorer/useAtlasSession.js";
 const SEARCH_TEXT_BY_ID = Object.fromEntries(PERSONAS.map(persona => [persona.id, normalizaTexto([textoBusquedaPersona(persona), nombrePrincipal(persona)].join(" "))]));
 
 const ATLAS_LAYOUT_STORAGE_KEY = "eade.atlasLayout.v24";
-const ATLAS_EXPERIENCE_STORAGE_KEY = "eade.atlasExperience.v39";
 const DEFAULT_PANEL_WIDTHS = Object.freeze({ filtros: 280, biografia: 330 });
 const DEFAULT_FILTER_SECTIONS = Object.freeze({
   territorios: true,
@@ -113,11 +112,6 @@ export default function Explorer({ initialPanel = null, treeBase: TREE_BASE }) {
   const [currentSearchIndex, setCurrentSearchIndex] = useState(savedSession?.currentSearchIndex ?? -1);
   const [zoom, setZoom] = useState(savedSession?.zoom ?? 0.8);
   const [mode, setMode] = useState(savedSession?.mode ?? "view");
-  const [experience, setExperience] = useState(() => {
-    if (typeof window === "undefined") return "explorar";
-    try { return window.localStorage.getItem(ATLAS_EXPERIENCE_STORAGE_KEY) === "investigar" ? "investigar" : "explorar"; }
-    catch { return "explorar"; }
-  });
   const [connectionIds, setConnectionIds] = useState(() => (savedSession?.connectionIds || []).filter(id => BY_ID[id]));
   const [connectionCriterion, setConnectionCriterion] = useState(savedSession?.connectionCriterion || "matrimonio");
   const [origen, setOrigen] = useState(savedSession?.origen ?? null);
@@ -223,10 +217,6 @@ export default function Explorer({ initialPanel = null, treeBase: TREE_BASE }) {
     }
   }, [panelWidths, treeMapSplit, filterSectionsOpen, bioSectionsOpen]);
 
-  useEffect(() => {
-    try { window.localStorage.setItem(ATLAS_EXPERIENCE_STORAGE_KEY, experience); }
-    catch { /* La preferencia no es necesaria para explorar. */ }
-  }, [experience]);
 
   useEffect(() => {
     if (!modoTrabajo || typeof document === "undefined") return undefined;
@@ -685,10 +675,9 @@ export default function Explorer({ initialPanel = null, treeBase: TREE_BASE }) {
 
   const mostrarArbol = vistasActivas.arbol;
   const mostrarMapa = vistasActivas.mapa;
-  const investigar = experience === "investigar" || mode === "compare" || mode === "conexion" || mode === "foco";
-  const mostrarFiltros = investigar && panelesVisibles.filtros;
-  const mostrarBiografia = !investigar || panelesVisibles.biografia;
-  const mostrarCronologia = investigar && panelesVisibles.cronologia;
+  const mostrarFiltros = panelesVisibles.filtros;
+  const mostrarBiografia = panelesVisibles.biografia;
+  const mostrarCronologia = panelesVisibles.cronologia;
   const vistaPrincipal = mostrarArbol && mostrarMapa ? "ambos" : (mostrarArbol ? "arbol" : "mapa");
   const layoutLaterales = mostrarFiltros && mostrarBiografia
     ? "workspace-layout-both"
@@ -1790,7 +1779,7 @@ export default function Explorer({ initialPanel = null, treeBase: TREE_BASE }) {
     initialMapViewport: mapViewportRef.current, recordMapViewport, timelineVirtual, timelineListRef, scrollRef, tlScrollRef, locale, setLocale, query, setQuery,
     territorios, setTerritorios, dinastias, setDinastias, dinastiasExpandidas, setDinastiasExpandidas, territoriosExpandidos, setTerritoriosExpandidos,
     titulos, setTitulos, siglos, setSiglos, relaciones, setRelaciones, hovered, setHovered,
-    seleccion, setSeleccion, currentSearchIndex, setCurrentSearchIndex, zoom, setZoom, mode, setMode, experience, setExperience, investigar,
+    seleccion, setSeleccion, currentSearchIndex, setCurrentSearchIndex, zoom, setZoom, mode, setMode,
     origen, setOrigen, destino, setDestino, modoComparacion, setModoComparacion, compareMenuOpen, setCompareMenuOpen,
     compareRouteIndex, setCompareRouteIndex, focoMenuOpen, setFocoMenuOpen, focoId, setFocoId, focoAlcance, setFocoAlcance,
     anioGlobal, setAnioGlobal, anioInput, setAnioInput, reproduciendoHistoria, setReproduciendoHistoria,

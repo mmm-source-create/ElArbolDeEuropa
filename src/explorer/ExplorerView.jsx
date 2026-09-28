@@ -6,7 +6,7 @@ import TreeExport from "../connections/TreeExport.jsx";
 import DocumentationNotes from "../components/DocumentationNotes.jsx";
 import { responsiveImage } from "../utils/responsiveImage.js";
 import React from "react";
-import { Search, ChevronDown, ChevronRight, ArrowLeft, ArrowRight, ZoomIn, ZoomOut, RotateCcw, GitCompare, UserRoundPlus, Share2, Play, Pause, SkipBack, SkipForward, X, Info, Heart, BookOpen, BarChart3, Scale, Flag, Mail, ExternalLink, Crosshair, Maximize2, CircleHelp, SlidersHorizontal } from "lucide-react";
+import { Search, ChevronDown, ChevronRight, ArrowLeft, ArrowRight, ZoomIn, ZoomOut, RotateCcw, GitCompare, UserRoundPlus, Share2, Play, Pause, SkipBack, SkipForward, X, Info, Heart, BookOpen, BarChart3, Scale, Flag, Mail, ExternalLink, Crosshair, Maximize2, CircleHelp, SlidersHorizontal, List } from "lucide-react";
 import { MapaEuropa } from "../MapaEuropa";
 import { TERRITORIOS_SUB, TERRITORIOS_DESTACADOS, REINO_COLOR, REINO_COLOR_DEFAULT, listaReinados, territoriosGobernadosEnAño, reinadoEsEfectivo, esGobernante } from "../Territorios";
 import { TERRITORIOS } from "../data/territorios.js";
@@ -26,7 +26,11 @@ import { Chip, ModalProyecto } from "./ExplorerPrimitives.jsx";
 import AtlasGuide from "./AtlasGuide.jsx";
 import { atlasSearch } from "./atlasSearch.js";
 import TreeAccessibleList from "./TreeAccessibleList.jsx";
+import EvidencePanel from '../evidence/EvidencePanel.jsx';
+import CoverageDialog from '../evidence/CoverageDialog.jsx';
+import {readPreferences} from '../settings/preferences.js';
 import "./v39.css";
+import "./v40.css";
 
 const SEARCH_DYNASTIES = [...new Set(PERSONAS.map(persona => persona.dinastia).filter(Boolean))];
 const SEARCH_TERRITORIES = Object.keys(TERRITORIOS);
@@ -67,6 +71,14 @@ export default function ExplorerView({ vm }) {
   const [guideOpen,setGuideOpen] = React.useState(false);
   const [bioTab,setBioTab] = React.useState('resumen');
   const [bioMobileOpen,setBioMobileOpen] = React.useState(true);
+  const [treeListOpen,setTreeListOpen] = React.useState(() => {
+    try { return readPreferences(window.localStorage).treeView === 'list'; } catch { return false; }
+  });
+  React.useEffect(() => {
+    const onPreferences = (event) => setTreeListOpen(event.detail?.treeView === 'list');
+    window.addEventListener('eade:preferences-changed', onPreferences);
+    return () => window.removeEventListener('eade:preferences-changed', onPreferences);
+  }, []);
   const guideButtonRef = React.useRef(null);
   const viewMenuRef = React.useRef(null);
   const panelsMenuRef = React.useRef(null);
@@ -97,7 +109,7 @@ export default function ExplorerView({ vm }) {
     initialMapViewport, recordMapViewport, timelineVirtual, timelineListRef, scrollRef, tlScrollRef, locale, setLocale, query, setQuery,
     territorios, setTerritorios, dinastias, setDinastias, dinastiasExpandidas, setDinastiasExpandidas, territoriosExpandidos, setTerritoriosExpandidos,
     titulos, setTitulos, siglos, setSiglos, relaciones, setRelaciones, hovered, setHovered,
-    seleccion, setSeleccion, currentSearchIndex, setCurrentSearchIndex, zoom, setZoom, mode, setMode, experience, setExperience, investigar,
+    seleccion, setSeleccion, currentSearchIndex, setCurrentSearchIndex, zoom, setZoom, mode, setMode,
     origen, setOrigen, destino, setDestino, modoComparacion, setModoComparacion, compareMenuOpen, setCompareMenuOpen,
     compareRouteIndex, setCompareRouteIndex, focoMenuOpen, setFocoMenuOpen, focoId, setFocoId, focoAlcance, setFocoAlcance,
     anioGlobal, setAnioGlobal, anioInput, setAnioInput, reproduciendoHistoria, setReproduciendoHistoria,
@@ -290,11 +302,7 @@ export default function ExplorerView({ vm }) {
           </div>
         </section>
 
-        {!modoTrabajo && <div className="atlas-experience-control" role="group" aria-label="Forma de explorar el Atlas">
-          <button type="button" aria-pressed={!investigar} onClick={() => {setExperience('explorar');setMode('view');setCompareMenuOpen(false);setFocoId(null);}}>Explorar</button>
-          <button type="button" aria-pressed={investigar} onClick={() => setExperience('investigar')}>Investigar</button>
-        </div>}
-        {!modoTrabajo && <button type="button" className="atlas-tools-toggle" aria-expanded={mobileToolsOpen} aria-controls="atlas-secondary-tools" onClick={()=>setMobileToolsOpen(open=>!open)}>{investigar ? 'Vistas y herramientas' : 'Elegir vista'} <ChevronDown size={12}/></button>}
+        {!modoTrabajo && <button type="button" className="atlas-tools-toggle" aria-expanded={mobileToolsOpen} aria-controls="atlas-secondary-tools" onClick={()=>setMobileToolsOpen(open=>!open)}>Vistas y herramientas <ChevronDown size={12}/></button>}
         {!modoTrabajo && (
         <div id="atlas-secondary-tools" className={`workspace-topbar-secondary${mobileToolsOpen?' is-expanded':''}`}>
           <section className="workspace-topbar-section workspace-toolbar-view workspace-toolbar-panels">
@@ -308,19 +316,19 @@ export default function ExplorerView({ vm }) {
                 ].map(([key, label, arbol, mapa]) => <button key={key} type="button" aria-pressed={mostrarArbol === arbol && mostrarMapa === mapa} onClick={(event) => { setVistasActivas({ arbol, mapa }); const menu = event.currentTarget.closest('details'); menu.open = false; menu.querySelector('summary')?.focus(); }}>{label}</button>)}
               </div>
             </details>
-            {investigar && <details ref={panelsMenuRef} className="atlas-toolbar-menu atlas-panels-menu" onToggle={onToolbarMenuToggle}>
+            <details ref={panelsMenuRef} className="atlas-toolbar-menu atlas-panels-menu" onToggle={onToolbarMenuToggle}>
               <summary>Paneles <ChevronDown size={12} aria-hidden="true" /></summary>
               <div className="atlas-toolbar-menu-panel" role="group" aria-label="Paneles visibles">
                 <button type="button" aria-pressed={mostrarFiltros} onClick={() => alternarPanelAuxiliar('filtros')}>Filtros</button>
                 <button type="button" aria-pressed={mostrarBiografia} onClick={() => alternarPanelAuxiliar('biografia')}>Biografía</button>
                 <button type="button" aria-pressed={mostrarCronologia} onClick={() => alternarPanelAuxiliar('cronologia')}>Cronología</button>
               </div>
-            </details>}
+            </details>
           </section>
 
           <section className="workspace-topbar-section workspace-toolbar-actions">
             <div className="nav-controls topbar-mode-controls">
-              {investigar && <div className="compare-split-control" ref={compareMenuRef}>
+              <div className="compare-split-control" ref={compareMenuRef}>
                 <button
                   type="button"
                   className={`nav-btn nav-btn-wide compare-main-btn ${["compare","conexion"].includes(mode) ? "active" : ""}`}
@@ -373,7 +381,7 @@ export default function ExplorerView({ vm }) {
                     ))}
                   </div>
                 )}
-              </div>}
+              </div>
               <button type="button" className="nav-btn nav-btn-wide family-add-button" aria-disabled={!canAddFamily} onClick={() => { if (canAddFamily) vm.growth.onExpand('family'); }} title={historiaActiva ? 'La selección del recorrido se conserva completa' : !seleccion ? 'Elige primero una persona' : vm.growth.ids === null ? 'Ya se muestra la base completa' : vm.growth.additions.family.length ? `Añadir familiares de ${seleccion.nombre} al árbol` : 'La familia cercana ya está en el árbol'}>
                   <UserRoundPlus size={12} /> {vm.growth.ids?.length && !canAddFamily ? 'Familia visible' : 'Explorar familia'}{seleccion && vm.growth.additions.family.length ? ` (+${vm.growth.additions.family.length})` : ''}
               </button>
@@ -400,7 +408,7 @@ export default function ExplorerView({ vm }) {
                 )}
               </div>
               <button type="button" className="nav-btn nav-btn-wide" ref={guideButtonRef} onClick={() => { if (toolsMenuRef.current) toolsMenuRef.current.open = false; setGuideOpen(true); }}><CircleHelp size={13} /> Ayuda</button>
-              {investigar && <details ref={toolsMenuRef} className="atlas-toolbar-menu atlas-tools-menu" onToggle={onToolbarMenuToggle}>
+              <details ref={toolsMenuRef} className="atlas-toolbar-menu atlas-tools-menu" onToggle={onToolbarMenuToggle}>
                 <summary><SlidersHorizontal size={13} aria-hidden="true" /> Herramientas <ChevronDown size={12} aria-hidden="true" /></summary>
                 <div className="atlas-toolbar-menu-panel" role="group" aria-label="Herramientas del Atlas">
                   <strong>Persona seleccionada</strong>
@@ -409,9 +417,10 @@ export default function ExplorerView({ vm }) {
                   {shareStatus && <span className="share-status" role="status">{shareStatus}</span>}
                   <strong>Salida</strong>
                   <TreeExport getSelection={getExportSelection} label="Exportar árbol" />
+                  <button type="button" onClick={() => setInfoProyecto('cobertura')}><BarChart3 size={13} /> Cobertura documental</button>
                   <button type="button" onClick={() => setModoTrabajo(true)}><Maximize2 size={13} /> Pantalla de trabajo</button>
                 </div>
-              </details>}
+              </details>
             </div>
           </section>
         </div>
@@ -704,10 +713,11 @@ export default function ExplorerView({ vm }) {
           } : undefined}
         >
           {mostrarArbol && (
-            <section className={`workspace-stage workspace-tree-stage${mostrarMapa ? " tree-with-map" : ""}${historiaActiva ? " story-tree-stage" : ""}`} aria-label="Árbol genealógico">
+            <section className={`workspace-stage workspace-tree-stage${mostrarMapa ? " tree-with-map" : ""}${historiaActiva ? " story-tree-stage" : ""}${treeListOpen ? " showing-list" : ""}`} aria-label="Árbol genealógico">
               <div className="tree-toolbar" aria-label="Controles del árbol">
                 <span className="tree-scope-label">{visiblePeople.length} personas</span>
                 {modoTrabajo && <TreeExport getSelection={getExportSelection} />}
+                <button type="button" className="nav-btn tree-list-toggle" aria-label={treeListOpen ? 'Mostrar árbol gráfico' : 'Mostrar personas como lista accesible'} title={treeListOpen ? 'Árbol gráfico' : 'Lista accesible'} aria-pressed={treeListOpen} onClick={() => setTreeListOpen(open => !open)}><List size={14} aria-hidden="true" /></button>
                 <button type="button" className="nav-btn" onClick={() => cambiarZoomArbol(zoom - 0.1)} title="Alejar árbol" aria-label="Alejar árbol"><ZoomOut size={13} /></button>
                 <button type="button" className="nav-btn" onClick={() => cambiarZoomArbol(0.8)} title="Restablecer árbol" aria-label="Restablecer árbol"><RotateCcw size={12} /></button>
                 <button type="button" className="nav-btn" onClick={() => cambiarZoomArbol(zoom + 0.1)} title="Acercar árbol" aria-label="Acercar árbol"><ZoomIn size={13} /></button>
@@ -742,6 +752,8 @@ export default function ExplorerView({ vm }) {
 
                 <div
                   className={`tree-scroll tree-zoom-${zoom < 0.65 ? 'far' : zoom < 1.05 ? 'middle' : 'near'}`}
+                  hidden={treeListOpen}
+                  inert={treeListOpen ? true : undefined}
                   ref={scrollRef}
                   tabIndex={0}
                   aria-label="Árbol genealógico. Usa las flechas para desplazarte; Tab para recorrer las personas visibles."
@@ -795,7 +807,7 @@ export default function ExplorerView({ vm }) {
                   </div>
                 </div>
               </div>
-              {visiblePeople.length > 0 && <TreeAccessibleList people={visiblePeople} selectedId={seleccion?.id} onSelect={seleccionarPersonaPorId}/>}
+              {treeListOpen && <TreeAccessibleList people={visiblePeople} selectedId={seleccion?.id} onSelect={seleccionarPersonaPorId}/>}
             </section>
           )}
 
@@ -934,17 +946,15 @@ export default function ExplorerView({ vm }) {
                     }}>{label}</button>)}
                   </div>
 
-                  {seleccion?.id === personaBio.id && !historiaActiva && canAddFamily && <button type="button" className="bio-primary-action" onClick={()=>vm.growth.onExpand('family')}><UserRoundPlus size={15}/> Explorar familia · añadir {vm.growth.additions.family.length} persona{vm.growth.additions.family.length===1?'':'s'}</button>}
-
                   {bioTab==='familia' && <div id="bio-tab-familia" role="tabpanel">
                   {seleccion?.id === personaBio.id && !historiaActiva && (
                     <div className="bio-family-actions" aria-label="Ampliar la familia en el árbol">
                       {vm.growth.ids !== null && (vm.growth.additions.ancestors.length > 0 || vm.growth.additions.descendants.length > 0) && (
                         <>
-                          <span>Ampliar otras ramas</span>
+                          <span>Ampliar ramas de {personaBio.nombre}</span>
                           <div>
-                            {vm.growth.additions.ancestors.length > 0 && <button type="button" onClick={() => vm.growth.onExpand('ancestors')}>Añadir antepasados (+{vm.growth.additions.ancestors.length})</button>}
-                            {vm.growth.additions.descendants.length > 0 && <button type="button" onClick={() => vm.growth.onExpand('descendants')}>Añadir descendientes (+{vm.growth.additions.descendants.length})</button>}
+                            {vm.growth.additions.ancestors.length > 0 && <button type="button" onClick={() => vm.growth.onExpand('ancestors')}>Antepasados <small>+{vm.growth.additions.ancestors.length}</small></button>}
+                            {vm.growth.additions.descendants.length > 0 && <button type="button" onClick={() => vm.growth.onExpand('descendants')}>Descendientes <small>+{vm.growth.additions.descendants.length}</small></button>}
                           </div>
                         </>
                       )}
@@ -1080,6 +1090,7 @@ export default function ExplorerView({ vm }) {
 
                   {bioTab==='fuentes' && <div id="bio-tab-fuentes" role="tabpanel" className="bio-source-tab">
                     <DocumentationNotes persona={personaBio}/>
+                    <EvidencePanel personId={personaBio.id} compact />
                     <p>Las fechas y relaciones incompletas se indican en la ficha. Consulta el método y la bibliografía general para interpretar los datos.</p>
                     <a className="bio-full-profile-link" href="/es/fuentes">Fuentes y metodología <ExternalLink size={11}/></a>
                     <button type="button" onClick={()=>setInfoProyecto('reportar')}>Sugerir una corrección documentada</button>
@@ -1275,9 +1286,10 @@ export default function ExplorerView({ vm }) {
       )}
 
       {guideOpen && <AtlasGuide locale={locale} onClose={closeGuide} onSelect={() => vm.growth.onSelect('CARLOS5')} onExpand={() => vm.growth.onExpand('family')} onYear={() => actualizarAnioDesdeRango(1500)} selectedId={seleccion?.id} canExpand={canAddFamily} />}
+      {infoProyecto === 'cobertura' && <CoverageDialog onClose={() => setInfoProyecto(null)} />}
       {infoProyecto === 'europa' ? <React.Suspense fallback={<div className="project-modal-backdrop"><div className="project-modal"><div className="project-modal-body" role="status">Preparando Europa en este año… <button type="button" onClick={()=>setInfoProyecto(null)}>Cerrar</button></div></div></div>}>
         <EuropeYearDialog anio={anioGlobal} onYearChange={actualizarAnioDesdeRango} onClose={()=>setInfoProyecto(null)} onSelect={id=>{setInfoProyecto(null);seleccionarPersonaPorId(id);}} personas={queryTrim?visiblePeople.filter(p=>searchMatchSet.has(p.id)):visiblePeople} territorios={territorios} filtros={filtrosActivosCompactos} alcanceCompleto={!queryTrim&&!territorios.length&&visiblePeople.length===PERSONAS.length} min={TL_MIN} max={TL_MAX}/>
-      </React.Suspense> : <ModalProyecto seccion={infoProyecto} onClose={() => setInfoProyecto(null)} persona={seleccion} personasVista={visiblePeople} onStartHistoria={iniciarHistoria} />}
+      </React.Suspense> : infoProyecto !== 'cobertura' && <ModalProyecto seccion={infoProyecto} onClose={() => setInfoProyecto(null)} persona={seleccion} personasVista={visiblePeople} onStartHistoria={iniciarHistoria} />}
     </div>
     </>
   );

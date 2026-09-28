@@ -5,6 +5,7 @@ import CrownTimeline from "../components/CrownTimeline.jsx";
 import DocumentationNotes from "../components/DocumentationNotes.jsx";
 import { documentaryLife } from "../utils/documentaryDates.js";
 import { SOURCE_SECTIONS } from "../content/sources.js";
+import EvidencePanel from '../evidence/EvidencePanel.jsx';
 import React, { useEffect, useMemo, useState } from "react";
 import {
   ArrowLeft,
@@ -497,6 +498,7 @@ export function PersonContent({ persona, locale = 'es', path, onExplore }) {
       </div>
       {en ? <details className="public-original-content"><summary>Governments and documentary notes · Spanish original</summary><div lang="es"><RecordedGovernments persona={persona}/><CrownTimeline key={persona.id} persona={persona} accesos={persona.accesosCoronas} fuentes={persona.fuentes}/><DocumentationNotes persona={persona}/></div><p className="public-translation-note"><a href={persona.esPath}>Read the complete Spanish record →</a></p></details> : <><CrownTimeline key={persona.id} persona={persona} accesos={persona.accesosCoronas} fuentes={persona.fuentes}/><DocumentationNotes persona={persona}/></>}
       {!!persona.fuentes?.length&&<section className="public-content-card"><span>{label('Documentación','Documentation')}</span><h2>{label('Fuentes de esta ficha','Sources for this profile')}</h2><ul>{persona.fuentes.map((f,i)=><li key={f.url||i}><a href={f.url} target="_blank" rel="noreferrer">{f.titulo}</a></li>)}</ul><p className="public-muted">{label('Referencias biográficas y de contexto.','Biographical and contextual references in their original language.')} <a href={sourcePath}>{label('Consultar metodología y bibliografía completa','Sources and methodology')}</a>.</p></section>}
+      <EvidencePanel personId={persona.id} locale={locale} />
       {!!persona.historias?.length&&<section className="public-section public-person-section"><div className="public-section-heading"><div><span>{label('Historias relacionadas','Related stories')}</span><h2>{label('Aparece en estos recorridos','Follow this person through history')}</h2></div></div><div className="public-story-grid">{persona.historias.map(h=><a key={h.id} className="public-story-card" href={h.path||rutaEntidad('historia',h.slug)}><span>{en&&!h.path?'Story · Spanish original':label('Historia','Story')}</span><h3>{h.titulo}</h3><p>{h.subtitulo}</p><b>{label('Comenzar','Start reading')}<ArrowRight size={13}/></b></a>)}</div></section>}
       <section className="public-section public-person-section"><div className="public-section-heading"><div><span>{label('Seguir explorando','Keep exploring')}</span><h2>{en?`More paths from ${persona.nombre}`:`Más caminos desde ${persona.nombre}`}</h2></div></div><div className="public-follow-grid">
         <div><h3><GitBranch size={16}/>{label('Familia','Family')}</h3>{[...(persona.padres||[]),...(persona.conyuges||[]),...(persona.hijos||[])].slice(0,6).map(p=><PersonaMiniCard key={p.id} persona={p} compact locale={locale}/>)}</div>

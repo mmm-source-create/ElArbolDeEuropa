@@ -12,8 +12,8 @@ export default function TreeAccessibleList({ people, selectedId, onSelect }) {
   }, [people, query]);
   const pages = Math.max(1, Math.ceil(filtered.length / PAGE_SIZE));
   const current = Math.min(page, pages - 1);
-  return <details className="tree-list-alternative">
-    <summary>Ver personas como lista <span>({people.length})</span></summary>
+  return <section className="tree-list-alternative" aria-labelledby="tree-list-heading">
+    <h2 id="tree-list-heading">Personas del árbol <span>({people.length})</span></h2>
     <div className="tree-list-content">
       <label>Buscar en las personas visibles
         <input type="search" value={query} onChange={event => { setQuery(event.target.value); setPage(0); }} />
@@ -30,5 +30,5 @@ export default function TreeAccessibleList({ people, selectedId, onSelect }) {
         <button type="button" disabled={current >= pages - 1} onClick={() => setPage(current + 1)}>Siguiente</button>
       </div>}
     </div>
-  </details>;
+  </section>;
 }

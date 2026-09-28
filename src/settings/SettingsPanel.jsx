@@ -4,8 +4,8 @@ import {applyPreferences,clearLocalData,DEFAULT_PREFERENCES,readPreferences,save
 import './settings.css';
 
 const COPY={
-  es:{button:'Configuración',title:'Ajustes de visualización',hint:'Se guardan solo en este navegador.',theme:'Apariencia',themeOptions:[['system','Navegador'],['light','Claro'],['dark','Oscuro']],text:'Tamaño de texto',textOptions:[['normal','Normal'],['large','Grande'],['larger','Muy grande']],motion:'Animaciones',motionOptions:[['system','Según el sistema'],['reduce','Reducir']],data:'Datos guardados',favorites:'Borrar favoritos',progress:'Borrar progreso',confirm:'Confirmar borrado',cancel:'Cancelar',close:'Cerrar configuración',privacy:'Privacidad',done:'Datos borrados en este navegador.'},
-  en:{button:'Settings',title:'Display settings',hint:'Saved only in this browser.',theme:'Appearance',themeOptions:[['system','Browser'],['light','Light'],['dark','Dark']],text:'Text size',textOptions:[['normal','Normal'],['large','Large'],['larger','Very large']],motion:'Animation',motionOptions:[['system','Follow system'],['reduce','Reduce']],data:'Saved data',favorites:'Clear favourites',progress:'Clear progress',confirm:'Confirm deletion',cancel:'Cancel',close:'Close settings',privacy:'Privacy',done:'Data cleared in this browser.'},
+  es:{button:'Configuración',title:'Ajustes de visualización',hint:'Se guardan solo en este navegador.',theme:'Apariencia',themeOptions:[['system','Navegador'],['light','Claro'],['dark','Oscuro']],text:'Tamaño de texto',textOptions:[['normal','Normal'],['large','Grande'],['larger','Muy grande']],motion:'Animaciones',motionOptions:[['system','Según el sistema'],['reduce','Reducir']],tree:'Árbol genealógico',treeOptions:[['visual','Vista gráfica'],['list','Lista accesible']],treeHint:'La lista permite buscar y seleccionar personas sin depender de la posición visual.',data:'Datos guardados',favorites:'Borrar favoritos',progress:'Borrar progreso',confirm:'Confirmar borrado',cancel:'Cancelar',close:'Cerrar configuración',privacy:'Privacidad',done:'Datos borrados en este navegador.'},
+  en:{button:'Settings',title:'Display settings',hint:'Saved only in this browser.',theme:'Appearance',themeOptions:[['system','Browser'],['light','Light'],['dark','Dark']],text:'Text size',textOptions:[['normal','Normal'],['large','Large'],['larger','Very large']],motion:'Animation',motionOptions:[['system','Follow system'],['reduce','Reduce']],tree:'Family tree',treeOptions:[['visual','Visual view'],['list','Accessible list']],treeHint:'Search and select people without relying on their visual position.',data:'Saved data',favorites:'Clear favourites',progress:'Clear progress',confirm:'Confirm deletion',cancel:'Cancel',close:'Close settings',privacy:'Privacy',done:'Data cleared in this browser.'},
 };
 
 export default function SettingsPanel({locale='es',prerendered=false}) {
@@ -31,6 +31,7 @@ export default function SettingsPanel({locale='es',prerendered=false}) {
   const update=(key,value)=>{
     const next={...preferences,[key]:value};setPreferences(next);applyPreferences(next);
     try{savePreferences(window.localStorage,next);}catch{/* Storage may be unavailable. */}
+    window.dispatchEvent(new CustomEvent('eade:preferences-changed',{detail:next}));
   };
   const clear=()=>{
     try{clearLocalData(window.localStorage,pending);}catch{/* Storage may be unavailable. */}
@@ -45,6 +46,8 @@ export default function SettingsPanel({locale='es',prerendered=false}) {
       {select(copy.theme,'theme',copy.themeOptions)}
       {select(copy.text,'textSize',copy.textOptions)}
       {select(copy.motion,'motion',copy.motionOptions)}
+      {select(copy.tree,'treeView',copy.treeOptions)}
+      <p className="settings-field-hint">{copy.treeHint}</p>
       <div className="settings-data"><strong>{copy.data}</strong><div><button type="button" onClick={()=>{setPending('favorites');setMessage('');}}>{copy.favorites}</button><button type="button" onClick={()=>{setPending('progress');setMessage('');}}>{copy.progress}</button></div>{pending&&<p><span>{pending==='favorites'?copy.favorites:copy.progress}?</span><button type="button" onClick={clear}>{copy.confirm}</button><button type="button" onClick={()=>setPending(null)}>{copy.cancel}</button></p>}{message&&<p role="status">{message}</p>}</div>
       <a className="settings-privacy" href={locale==='en'?'/en/privacy':'/es/privacidad'}>{copy.privacy}</a>
     </section>}

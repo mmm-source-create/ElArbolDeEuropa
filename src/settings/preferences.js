@@ -3,8 +3,8 @@ export const FAVORITES_KEY = 'arbol-europa-favoritos-v1';
 export const STORY_PROGRESS_KEY = 'eade.storyProgress.v1';
 export const CHALLENGE_KEYS = ['arbol-europa-desafio-v2', 'arbol-europa-desafio-v1'];
 
-export const DEFAULT_PREFERENCES = Object.freeze({theme:'system', textSize:'normal', motion:'system'});
-const choices = {theme:['system','light','dark'], textSize:['normal','large','larger'], motion:['system','reduce']};
+export const DEFAULT_PREFERENCES = Object.freeze({theme:'system', textSize:'normal', motion:'system', treeView:'visual'});
+const choices = {theme:['system','light','dark'], textSize:['normal','large','larger'], motion:['system','reduce'], treeView:['visual','list']};
 
 export function cleanPreferences(value) {
   return Object.fromEntries(Object.entries(choices).map(([key, valid]) => [key, valid.includes(value?.[key]) ? value[key] : DEFAULT_PREFERENCES[key]]));
@@ -21,6 +21,7 @@ export function applyPreferences(preferences, doc = document, win = window) {
   doc.documentElement.dataset.eadeTheme=dark?'dark':'light';
   doc.documentElement.dataset.eadeTextSize=value.textSize;
   doc.documentElement.dataset.eadeMotion=value.motion;
+  doc.documentElement.dataset.eadeTreeView=value.treeView;
   return value;
 }
 
