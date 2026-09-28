@@ -1,0 +1,19 @@
+/* V4.0: personal controls, compact family actions and a full-height list view. */
+.workspace-tree-stage.showing-list .tree-outer { display: none; }
+.workspace-tree-stage.showing-list .tree-list-alternative { display: flex; flex-direction: column; flex: 1 1 auto; min-height: 0; overflow: hidden; }
+.workspace-tree-stage.showing-list .tree-list-content { display: flex; flex-direction: column; min-height: 0; flex: 1 1 auto; }
+.workspace-tree-stage.showing-list .tree-list-content ul { flex: 1 1 auto; min-height: 0; max-height: none; align-content: start; }
+.tree-list-alternative h2 { padding-right: 225px; }
+.tree-list-toggle[aria-pressed="true"] { border-color: var(--eade-wine); color: var(--eade-wine); }
+
+.bio-family-actions { gap: 9px; margin: 11px 0 14px; padding: 12px; border-radius: 7px; }
+.bio-family-actions > span { font: 700 10px/1.4 var(--eade-sans); letter-spacing: .045em; }
+.bio-family-actions > div { display: grid; grid-template-columns: repeat(auto-fit, minmax(125px,1fr)); gap: 7px; }
+.bio-family-actions > div button { display: flex; align-items: center; justify-content: space-between; gap: 5px; min-height: 36px; padding: 6px 9px; font: 600 11px var(--eade-sans); }
+.bio-family-actions > div button small { padding: 2px 4px; border-radius: 3px; background: var(--eade-paper-soft); color: var(--eade-wine); font: 700 10px var(--eade-sans); }
+.bio-family-actions .bio-focus-link { padding: 3px 0; min-height: 28px; justify-self: start; }
+
+@media(max-width:700px) {
+  .tree-list-alternative h2 { padding-right: 12px; padding-top: 65px; }
+  .workspace-tree-stage.showing-list .tree-list-content ul { grid-template-columns: 1fr; }
+}
