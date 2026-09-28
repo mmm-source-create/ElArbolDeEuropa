@@ -17,14 +17,40 @@ export function Chip({ label, active, onClick, color, small = false }) {
 
 export const PersonBox = React.memo(function PersonBox({
   p, cls, accent, style, setRef, onEnter, onLeave, onClick,
-  hasDescendants = false, descendantsCollapsed = false, onToggleDescendants,
+  hasDescendants = false, descendantsCollapsed = false, onToggleDescendants, showDates = false,
 }) {
   const roleText = `${p.titulo} · ${(p.reinos || []).join(" · ")}`;
+  const navigateCard = (event) => {
+    const directions = { ArrowLeft: [-1, 0], ArrowRight: [1, 0], ArrowUp: [0, -1], ArrowDown: [0, 1] };
+    const direction = directions[event.key];
+    if (!direction) return;
+    const root = event.currentTarget.closest('.tree-scroll');
+    if (!root) return;
+    const current = event.currentTarget.getBoundingClientRect();
+    const cx = current.left + current.width / 2;
+    const cy = current.top + current.height / 2;
+    const candidates = [...root.querySelectorAll('.box-main')].filter(card => card !== event.currentTarget).map(card => {
+      const rect = card.getBoundingClientRect();
+      const dx = rect.left + rect.width / 2 - cx;
+      const dy = rect.top + rect.height / 2 - cy;
+      const along = dx * direction[0] + dy * direction[1];
+      const across = Math.abs(dx * direction[1] - dy * direction[0]);
+      return { card, along, score: along + across * 2 };
+    }).filter(candidate => candidate.along > 3).sort((a, b) => a.score - b.score);
+    if (!candidates.length) return;
+    event.preventDefault();
+    event.stopPropagation();
+    candidates[0].card.focus();
+    candidates[0].card.click();
+  };
   return (
     <div ref={setRef} className={`${cls}${hasDescendants ? " has-descendants" : ""}`} style={{ borderLeft: `6px solid ${accent}`, ...style }}
-      role="button" tabIndex={0}
-      onMouseEnter={onEnter} onMouseLeave={onLeave} onClick={onClick}
-      onKeyDown={(event) => { if (event.key === "Enter" || event.key === " ") { event.preventDefault(); onClick?.(event); } }}>
+      onMouseEnter={onEnter} onMouseLeave={onLeave}>
+      <button type="button" className="box-main" data-person-id={p.id} onClick={onClick} onKeyDown={navigateCard} aria-label={`${p.nombre} · ${roleText}`} aria-pressed={cls.includes('selected')}>
+        <span className="name" title={p.nombre}>{p.nombre}</span>
+        <span className="role" title={roleText}>{roleText}</span>
+        {showDates && <span className="box-dates">{Number.isFinite(p.nac) ? p.nac : '?'}–{Number.isFinite(p.muer) ? p.muer : '?'}</span>}
+      </button>
       {hasDescendants && (
         <button
           type="button"
@@ -38,8 +64,6 @@ export const PersonBox = React.memo(function PersonBox({
           {descendantsCollapsed ? <ChevronRight size={10} /> : <ChevronDown size={10} />}
         </button>
       )}
-      <div className="name" title={p.nombre}>{p.nombre}</div>
-      <div className="role" title={roleText}>{roleText}</div>
     </div>
   );
 });
