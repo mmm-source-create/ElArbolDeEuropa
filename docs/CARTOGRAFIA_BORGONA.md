@@ -1,6 +1,6 @@
 # Borgoña: sucesión, geometría y límites del mapa
 
-La V4.3 deja de tratar «Borgoña» como el dibujo de todo un Estado. El **ducado** francés se aproxima con `Dijonnais` y `Autunnais`; el **condado** imperial o Franco Condado se aproxima por separado con `Aval`, `Millieu` y `Amont`. Un mismo tono borgoña identifica los feudos de esta herencia al seleccionar a sus protagonistas, mientras las líneas claras separan sus unidades. El color no convierte esos feudos en un Estado unitario ni prueba soberanía plena. Fuera de esa secuencia, los territorios conservan su propia paleta. Milán, los reinos hispánicos y Austria de Carlos V no reciben el tono borgoñón.
+La V4.3 deja de tratar «Borgoña» como el dibujo de todo un Estado. El **ducado** francés se aproxima con `Dijonnais` y `Autunnais`; el **condado** imperial o Franco Condado se aproxima por separado con `Aval`, `Millieu` y `Amont`. Un mismo tono borgoña identifica los feudos de esta herencia al seleccionar a sus protagonistas, sin añadir contornos internos a las regiones coloreadas. El color no convierte esos feudos en un Estado unitario ni prueba soberanía plena. Fuera de esa secuencia, los territorios conservan su propia paleta. Milán, los reinos hispánicos y Austria de Carlos V no reciben el tono borgoñón.
 
 ## Secuencia que debe poder recorrerse
 

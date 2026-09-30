@@ -205,7 +205,7 @@ export function MapaEuropa({ seleccion, anioGlobal = null, onSelectTerritorio, i
             const target = buscarElemento(id);
             if (!target) return;
             target.style.setProperty("fill", color, "important");
-            target.style.setProperty("stroke", "var(--eade-paper-bright)", "important");
+            target.style.setProperty("stroke", color, "important");
             target.style.setProperty("stroke-width", "0.6px", "important");
             pintadosRef.current.add(id);
           });
