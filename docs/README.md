@@ -1,6 +1,8 @@
 # Documentación
 
 - [Uso del Atlas y desafíos](ATLAS.md)
+- [Guía documental de los Capetos](CAPETOS.md)
+- [Criterios de cartografía de Irlanda](CARTOGRAFIA_IRLANDA.md)
 - [Criterios de contenido](#criterios-de-contenido)
 - [Política de seguridad](../SECURITY.md)
 - [Fuentes y metodología](https://www.treeofeurope.eu/es/fuentes)
@@ -11,6 +13,7 @@ Los informes describen el estado validado de cada entrega. Sus cifras y listas d
 
 | Versión | Contenido |
 | --- | --- |
+| [4.2](V4.2.md) | Capetos, herencia borgoñona, mapa de Irlanda y documentación actualizada |
 | [4.1](V4.1.md) | Corredor histórico, filtro de evidencia, revisión de los Austrias y tareas editoriales |
 | [4.0](V4.0.md) | Modelo de afirmaciones, cobertura y simplificación del Atlas |
 | [3.3](V3.3.md) | Edición inglesa, retratos del Desafío y contraste oscuro |

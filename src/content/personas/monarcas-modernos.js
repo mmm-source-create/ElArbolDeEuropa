@@ -1,7 +1,7 @@
 // Contenido editorial separado de la base genealógica.
 export const MONARCAS_MODERNOS = Object.freeze({
   "CARLOS5": {
-    "resumen": "Emperador del Sacro Imperio y soberano de una monarquía compuesta que se extendía por la península ibérica, Italia, los Países Bajos y América. Tras la muerte de Francesco II Sforza en 1535 mantuvo Milán bajo control imperial; más tarde atribuyó el título ducal a su hijo Felipe. Su reinado estuvo marcado por la Reforma, la rivalidad con Francia y la expansión otomana."
+    "resumen": "Emperador del Sacro Imperio y soberano de una monarquía compuesta que alcanzaba la península ibérica, Italia, los Países Bajos y América. De Felipe I heredó el Franco Condado y Artois: conservó la dignidad ducal de Borgoña, pero no gobernó el ducado incorporado a Francia. Desde 1535 mantuvo Milán bajo control imperial; la investidura y posesión posterior de Felipe II deben distinguirse de ese gobierno."
   },
   "FEL2ESP": {
     "resumen": "Rey de la Monarquía Hispánica en el momento de su máxima proyección europea y atlántica. Durante su reinado se produjeron Lepanto, la unión dinástica con Portugal y la gran rebelión de los Países Bajos."

@@ -54,6 +54,33 @@ export const REINO_A_IDS = {
 
   Holanda: ["North_Holland", "South_Holland"],
 
+  // El ducado incorporado a Francia en 1477 no es el condado imperial.
+  // La serie compuesta de Borgoña de abajo solo representa el Estado de los
+  // duques antes de la partición; los títulos posteriores se pintan por feudo.
+  "Condado de Borgoña": ["Aval", "Millieu", "Amont"],
+  Flandes: ["West_Flanders", "East_Flanders", "Roman_Flanders"],
+  Zelanda: ["Zealand"],
+
+  // Las unidades del SVG son una aproximación regional, no deslindes de
+  // señoríos o condados modernos. Véase docs/CARTOGRAFIA_IRLANDA.md.
+  Irlanda: [],
+  Connacht: ["Roscommon", "Mayo", "Galway"],
+  Leinster: ["Wexford", "Kilkenny", "Kildare"],
+  "Tír Eoghain": ["Tyrone"],
+  "Tír Chonaill": ["Donegal"],
+  "Condado de Tyrone": ["Tyrone"],
+  "Condado de Tyrconnell": ["Donegal"],
+  Thomond: ["Clare"],
+  "Condado de Thomond": ["Clare"],
+  Desmond: ["Desmond"],
+  "Condado de Desmond": ["Limerick"],
+  "Condado de Clancare": ["Desmond"],
+  "Condado de Ulster": ["Antrim", "Down"],
+  Kildare: ["Kildare"],
+  Ormond: ["Tipperary"],
+  Clanricarde: ["Galway"],
+  "Vizcondado de Mayo": ["Mayo"],
+
   "Estados Pontificios": ["Campagna","Marittima","Patrimonio","Spoleto","Marche","Urbino","Romagna","Perugia","Bologna"],
 
   "Imperio Latino": ["Constantinople", "Achaea", "Corinthia", "Ilia", "Arcadia", "Argolis", "Messenia", "Laconia"],
@@ -104,6 +131,26 @@ export const REINO_COLOR = {
   Alemania: '#8E7729',
   "Sacro Imperio": '#2F8E29',
   Borgoña: '#8E295C',
+  "Condado de Borgoña": '#8E295C',
+  Flandes: '#8E295C',
+  Zelanda: '#8E295C',
+  Irlanda: '#45705D',
+  Connacht: '#497B69',
+  Leinster: '#4D7D72',
+  "Tír Eoghain": '#407466',
+  "Tír Chonaill": '#407466',
+  "Condado de Tyrone": '#407466',
+  "Condado de Tyrconnell": '#407466',
+  Thomond: '#7A667F',
+  "Condado de Thomond": '#7A667F',
+  Desmond: '#7A667F',
+  "Condado de Desmond": '#7A667F',
+  "Condado de Clancare": '#7A667F',
+  "Condado de Ulster": '#497B69',
+  Kildare: '#5A786C',
+  Ormond: '#5A786C',
+  Clanricarde: '#5A786C',
+  "Vizcondado de Mayo": '#5A786C',
   "Corona de Castilla": '#C5A62B',
   "Corona de Aragón": '#ba3737',
   "Países Bajos y Flandes": '#3E6F91',
@@ -275,12 +322,17 @@ Inglaterra: [
     { desde: 1474,
       hasta: 1478, // Lorena
       ids: ["North_Holland","Limburg","Kempenland","South_Holland","Antwerp","East_Luxembourg","West_Luxembourg","Hainaut","Lower_Artois","Vermandois","Upper_Artois","West_Flanders","Roman_Flanders","East_Flanders","Brabant","Namur","Loon","Liege","Amienois","Ponthieu","Dijonnais","Aval","Millieu","Amont","Autunnais","Auxerrois","Gelderland","Overijssel","Niederrhein","Pays_Nancy","Pays_Messin","Vosges","Verdunois","Barrois","Upper_Alsace"],},
-    { desde: 1478,
-      hasta: 1493, // Pérdidas a Luis IX (1477)
-      ids: ["Gelderland","Overijssel","Niederrhein","North_Holland","Limburg","Kempenland","South_Holland","Antwerp","East_Luxembourg","West_Luxembourg","Hainaut","West_Flanders","Roman_Flanders","East_Flanders","Brabant","Namur","Loon","Liege",],},
-    { desde: 1493,
-      hasta: Infinity, // Felipe el Hermoso, T.Senils 1493
-      ids: ["Gelderland","Overijssel","Niederrhein","North_Holland","Limburg","Kempenland","South_Holland","Antwerp","East_Luxembourg","West_Luxembourg","Hainaut","Lower_Artois","Upper_Artois","West_Flanders","Roman_Flanders","East_Flanders","Brabant","Namur","Loon","Liege","Aval","Millieu","Amont"],},
+    // Desde 1477 el ducado y los feudos heredados toman caminos distintos.
+    // No extender la antigua unión al patrimonio de Felipe I o Carlos V.
+    { desde: 1478, hasta: Infinity, ids: ["Dijonnais", "Autunnais", "Auxerrois", "Nevernais"] },
+  ],
+
+  Irlanda: [
+    // La alta realeza medieval y el nuevo título de 1542 no prueban dominio
+    // directo de toda la isla. Se evita pintarla completa antes de 1603.
+    { desde: -Infinity, hasta: 1542, ids: [] },
+    { desde: 1542, hasta: 1603, ids: ["Dublin", "Meath", "Kildare"] },
+    { desde: 1603, hasta: Infinity, ids: ["Donegal", "Antrim", "Derry", "Tyrone", "Down", "Breifne", "Oriel", "Roscommon", "Mayo", "Meath", "Galway", "Dublin", "Kildare", "Tipperary", "Kilkenny", "Clare", "Wexford", "Limerick", "Waterford", "Cork", "Desmond"] },
   ],
 
   Hungría: [

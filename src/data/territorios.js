@@ -233,7 +233,8 @@ export const TERRITORIOS = Object.freeze({
   "Borgoña": {
     "clase": "ducado",
     "naturaleza": "entidad",
-    "componentes": []
+    "componentes": [],
+    "nota": "Ducado incorporado a la Corona francesa tras 1477; no equivale al condado imperial de Borgoña ni a todos los dominios de los duques Valois. La dignidad ducal posterior de los Habsburgo se registra como titular."
   },
   "Brabante": {
     "clase": "ducado",
@@ -1219,7 +1220,8 @@ export const TERRITORIOS = Object.freeze({
   "Condado de Borgoña": {
     "clase": "condado",
     "naturaleza": "entidad",
-    "componentes": []
+    "componentes": [],
+    "nota": "Franco Condado, distinto del ducado. El tratado de Senlis de 1493 lo restituyó a la casa de Austria; pasó a Felipe I y Carlos V dentro de la herencia borgoñona."
   },
   "Corona de Castilla": {
     "clase": "corona_compuesta",

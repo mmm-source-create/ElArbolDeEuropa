@@ -7,6 +7,7 @@ const PARES_CARLOS='https://pares.cultura.gob.es/ParesBusquedas20/catalogo/autor
 const PARES_JUANA='https://pares.cultura.gob.es/ParesBusquedas20/catalogo/autoridad/46503';
 const PARES_CARLOS_II='https://pares.cultura.gob.es/ParesBusquedas20/catalogo/autoridad/46849';
 const HABSBURG_FERDINAND_IV='https://www.habsburger.net/en/persons/habsburg/ferdinand-iv';
+const SENLIS='https://ccfr.bnf.fr/portailccfr/ark:/16871/004a80306914';
 const acceso=(persona,territorio,desde,motivos,explicacion,fuentes=[FMG,BRIT],clase='reinado')=>({persona,territorio,desde,clase,motivos,explicacion,fuentes});
 
 // Cada explicación se ancla a un mandato real de la base, nunca al título resumen.
@@ -45,6 +46,10 @@ export const ACCESOS_CORONAS = [
  acceso('JACOBO1ING','Inglaterra',1603,['herencia'],'Sucedió a Isabel I por su ascendencia Tudor. Ya reinaba en Escocia: compartieron soberano, pero conservaron parlamentos y ordenamientos separados.',[BRIT]),
  acceso('SEGIS3VASA','Suecia',1592,['herencia'],'Heredó a su padre Juan III cuando ya era rey electo de Polonia. El conflicto con su tío Carlos y la oposición sueca terminó con su deposición en 1599.',[BRIT]),
  ...[['Flandes','condado'],['Condado de Borgoña','condado'],['Brabante','ducado'],['Limburgo','ducado'],['Holanda','condado'],['Henao','condado'],['Zelanda','condado']].map(([t,c])=>acceso('CARLOS5',t,1506,['herencia'],'La muerte de Felipe el Hermoso transmitió a Carlos estos patrimonios de origen borgoñón. Durante su minoría hubo regencias: heredar un título no significa que el niño dirigiera personalmente el gobierno.',[RAH],c)),
+ acceso('FEL1CAST','Condado de Borgoña',1493,['acuerdo','herencia'],'El tratado de Senlis restituyó el Franco Condado a la casa de Austria. Felipe heredó esos derechos; no se trata del ducado francés.',[SENLIS],'condado'),
+ acceso('FEL1CAST','Artois',1493,['acuerdo','herencia'],'Artois fue otro de los condados restituidos por Senlis a la casa de Austria. El comienzo personal se infiere de esa sucesión.',[SENLIS],'condado'),
+ acceso('CARLOS5','Artois',1506,['herencia'],'Carlos recibió Artois dentro de la herencia de Felipe I. Senlis documenta la restitución anterior a la casa de Austria; el año de acceso procede de la sucesión paterna.',[SENLIS],'condado'),
+ acceso('FEL2ESP','Artois',1555,['herencia'],'Felipe recibió Artois en el relevo de los Países Bajos borgoñones. El tratado de Senlis documenta la restitución de 1493, no el día exacto del relevo de 1555.',[SENLIS],'condado'),
  acceso('CARLOS5','Borgoña',1506,['herencia'],'Carlos conservó el título ducal heredado de Felipe, pero el ducado estaba bajo control francés. Esta pretensión no se cuenta como gobierno efectivo; el Condado de Borgoña tenía una situación distinta.',[RAH],'ducado'),
  ...['León','Nápoles','Trinacria'].map(t=>acceso('CARLOS5',t,1516,['herencia'],'La muerte de Fernando abrió esta sucesión dentro del patrimonio dinástico hispánico. Cada territorio mantuvo su título y sus instituciones; los reconocimientos y juramentos no ocurrieron todos a la vez.',[RAH])),
  ...[['Milán','ducado'],['Nápoles','reinado'],['Trinacria','reinado'],['Cerdeña','reinado']].map(([t,c])=>acceso('CARLOS2ESP',t,1665,['herencia'],'Carlos II heredó este dominio siendo menor de edad. PARES enumera sus títulos italianos; Mariana de Austria ejerció la regencia durante su minoría.',[PARES_CARLOS_II],c)),

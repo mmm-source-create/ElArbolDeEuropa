@@ -3,6 +3,10 @@ import {ALPES_SOURCES} from './sources-alpes-v213.js';
 // Bibliography shared by the public site, Atlas and generated entity pages.
 // A territorial reference supplies context; only explicit person IDs assign a biography.
 export const SOURCES = [
+  {titulo:"BnF · Felipe II y la conquista de Normandía",url:"https://catalogue.bnf.fr/ark:/12148/cb11958988j",grupo:"Archivos e instituciones",territorios:["Francia"],personas:["FEL2FRA"]},
+  {titulo:"FranceArchives · Felipe IV y la sucesión navarra",url:"https://francearchives.gouv.fr/fr/facomponent/99021b3b7153c3d2ac6535e7392a4a520f017001",grupo:"Archivos e instituciones",territorios:["Francia","Navarra"],personas:["FEL4FRA","FEL5FRA","CARLOS4FRA","JUANA2NAV"]},
+  {titulo:"BnF, CCFr · Tratado de Senlis de 1493",url:"https://ccfr.bnf.fr/portailccfr/ark:/16871/004a80306914",grupo:"Archivos e instituciones",territorios:["Borgoña","Condado de Borgoña","Artois"],personas:["MARIABORG","FEL1CAST","CARLOS5","FEL2ESP"]},
+  {titulo:"Cambridge University Press · Irlanda hacia 1530 (mapa)",url:"https://assets.cambridge.org/97805210/89272/frontmatter/9780521089272_frontmatter.pdf",grupo:"Cartografía",territorios:["Irlanda","Tír Eoghain","Tír Chonaill","Thomond","Desmond","Condado de Desmond","Ormond","Kildare"],personas:[]},
   {titulo:"Lombardia Beni Culturali · Stato di Milano (1535–1749)",url:"https://www.lombardiabeniculturali.it/istituzioni/schede/8000356/",grupo:"Archivos e instituciones",territorios:["Milán"],personas:["CARLOS5","FEL2ESP","FEL3ESP","FEL4ESP","CARLOS2ESP"]},
   {titulo:"Lombardia Beni Culturali · Milano bajo la dominación española",url:"https://www.lombardiabeniculturali.it/istituzioni/storia/?unita=03.05",grupo:"Archivos e instituciones",territorios:["Milán"],personas:["CARLOS5","FEL2ESP"]},
   {titulo:"PARES · Carlos I",url:"https://pares.cultura.gob.es/ParesBusquedas20/catalogo/autoridad/46080",grupo:"Archivos e instituciones",territorios:["Cerdeña"],personas:["CARLOS5"]},

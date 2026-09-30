@@ -60,6 +60,8 @@ const paresCarlos2Italy=pares('Carlos II',46849,'Identificación y fechas de rei
 const ccbaeFelipe2={title:'Catálogo Colectivo de Bibliotecas de Archivos Estatales · Felipe II',url:'https://www.mcu.es/ccbae/es/consulta_aut/registro.do?control=BAA20170154457',locator:'Formas alternativas del nombre → rey de Cerdeña y duque de Milán'};
 const habsburgFerdinand={title:'Die Welt der Habsburger · Ferdinand I: new crowns for the Habsburgs',url:'https://www.habsburger.net/en/chapter/ferdinand-i-new-crowns-habsburgs',locator:'Sección sobre Hungría tras Mohács y Juan Zápolya'};
 const habsburgFerdinand4={title:'Die Welt der Habsburger · Ferdinand IV',url:'https://www.habsburger.net/en/persons/habsburg/ferdinand-iv',locator:'Ficha biográfica, cabecera y párrafo biográfico'};
+const senlis={title:'BnF, CCFr · Tratado de Senlis',url:'https://ccfr.bnf.fr/portailccfr/ark:/16871/004a80306914',locator:'Ms 1022, folio 230: condados de Borgoña y Artois, 1493'};
+const burgundianInheritance=(note)=>({certainty:'inferred',sources:[senlis],note,reviewedAt:'2026-09-30',editor:'El Árbol de Europa'});
 const dispute = (sources,note,alternatives,timeLabel=null) => ({
   certainty:'disputed',sources,note,alternatives,timeLabel,
   reviewedAt:'2026-09-30',editor:'El Árbol de Europa',
@@ -96,11 +98,16 @@ export const CLAIM_REVIEWS = Object.freeze({
   'person:FEL1CAST:father': related(felipeFamily),
   'person:FEL1CAST:mother': related(felipeFamily),
   'person:FEL1CAST:spouse:JUANA1CAST': related(paresJuanaMarriage),
+  'person:FEL1CAST:government:Condado de Borgoña:1493:1506:Conde': burgundianInheritance('Senlis documenta la restitución del condado a la casa de Austria en 1493. La atribución personal a Felipe y el final en 1506 se infieren de la sucesión; requieren cotejo con documentación condal.'),
+  'person:FEL1CAST:government:Artois:1493:1506:Conde': burgundianInheritance('Senlis documenta la restitución de Artois a la casa de Austria en 1493. Las fechas personales se infieren de la sucesión.'),
   'person:CARLOS5:birth': dated(carlosHeader, '1500-02-24'),
   'person:CARLOS5:death': dated(carlosHeader, '1558-09-21'),
   'person:CARLOS5:father': related(carlosFamily),
   'person:CARLOS5:mother': related(carlosFamily),
   'person:CARLOS5:spouse:ISABPORTEMP': related(paresCarlosMarriage),
+  'person:CARLOS5:government:Condado de Borgoña:1506:1555:Conde': burgundianInheritance('Senlis establece la restitución de 1493. El inicio de 1506 y el relevo de 1555 se infieren de las sucesiones de Felipe I y Carlos V; falta una fuente condal específica para ambos extremos.'),
+  'person:CARLOS5:government:Artois:1506:1555:Conde': burgundianInheritance('Artois figura entre los condados restituidos en Senlis. El intervalo personal procede de la cronología sucesoria y queda pendiente de cotejo local.'),
+  'person:FEL2ESP:government:Artois:1555:1598:Conde': burgundianInheritance('Continuidad de Artois en la herencia borgoñona. Los extremos personales requieren cotejo con una fuente territorial específica.'),
   'person:CARLOS5:government:Castilla:1516:1556:Rey': {certainty:'inferred',sources:[paresCarlosReign,paresCarlosInheritance],note:'PARES da 1516–1556 para el conjunto de reinos hispanos y menciona Castilla entre las herencias; el Atlas desglosa Castilla. Falta cotejo territorial específico.',reviewedAt:'2026-09-30',editor:'El Árbol de Europa'},
   'person:CARLOS5:government:Aragón:1516:1556:Rey': {certainty:'inferred',sources:[paresCarlosReign,paresCarlosInheritance],note:'PARES da 1516–1556 para el conjunto de reinos hispanos y menciona Aragón entre las herencias; el Atlas desglosa Aragón. Falta cotejo territorial específico.',reviewedAt:'2026-09-30',editor:'El Árbol de Europa'},
   'person:CARLOS5:government:Sacro Imperio:1519:1556:Emperador': dispute([paresCarlosReign],'PARES enumera 1520–1558 para el título imperial, mientras el Atlas representa 1519–1556 como ejercicio. Hay que separar elección, coronación, abdicación y titularidad antes de cambiar el intervalo.',['1519–1556 · Atlas, ejercicio','1520–1558 · PARES, título']),

@@ -25,7 +25,7 @@ export default {
     ]
   },
   "Borgoña": {
-    "resumen": "El ducado de Borgoña debe distinguirse del condado de Borgoña o Franco Condado. Los duques Valois reunieron un conjunto de dominios franceses e imperiales; después de 1477, el título ducal de sus herederos dejó de equivaler al control del ducado.",
+    "resumen": "El ducado de Borgoña, incorporado a la Corona francesa tras la muerte de Carlos el Temerario en 1477, no era el mismo territorio que el condado imperial de Borgoña o Franco Condado. La herencia de María de Borgoña también comprendía dominios de los Países Bajos. Los Habsburgo conservaron el título ducal, pero ese título no permite colorear el ducado como dominio efectivo de Felipe I o Carlos V.",
     "evolucion": [
       {
         "anio": 1363,
@@ -37,12 +37,12 @@ export default {
       },
       {
         "anio": 1493,
-        "texto": "Senlis confirma una distribución de la herencia borgoñona"
+        "texto": "El tratado de Senlis restituye a la casa de Austria el condado de Borgoña, Artois y Charolais; el ducado permanece bajo la Corona francesa."
       }
     ]
   },
   "Condado de Borgoña": {
-    "resumen": "El condado de Borgoña, conocido como Franco Condado, era una entidad distinta del ducado vecino. Su pertenencia al espacio imperial y su transmisión a los Habsburgo explican una trayectoria política diferente.",
+    "resumen": "El condado de Borgoña o Franco Condado pertenecía al espacio imperial y no se confundía con el ducado vecino. Tras la guerra sucesoria de 1477, el tratado de Senlis de 1493 restituyó el condado a la casa de Austria. Felipe I lo transmitió a Carlos V en 1506 y este a Felipe II en 1555–1556; el título ducal borgoñón de esos soberanos no representa el control del ducado francés. El mapa emplea las tres regiones del SVG histórico como aproximación al condado.",
     "evolucion": [
       {
         "anio": 1384,
