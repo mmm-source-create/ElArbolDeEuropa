@@ -2,8 +2,8 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import {PERSONAS} from '../src/personas.jsx';
 import {TERRITORIOS} from '../src/data/territorios.js';
-import {sanitizeSession,shouldResumeAtlas} from '../src/explorer/atlasSession.js';
 import {CLAIM_REVIEWS,PILOT_PERSON_IDS,citationText,coverageTasks,hasDocumentedClaim,personClaims} from '../src/evidence/claims.js';
+import {sanitizeSession,shouldResumeAtlas} from '../src/explorer/atlasSession.js';
 
 const byId=new Map(PERSONAS.map(person=>[person.id,person]));
 
@@ -23,6 +23,7 @@ test('las referencias del piloto apuntan a afirmaciones existentes y a un pasaje
   assert.ok(reviewed.size>=9);
   assert.ok(Object.keys(CLAIM_REVIEWS).length>=45);
 });
+
 test('el filtro exige al menos una afirmación documentada y con fuente individual',()=>{
   assert.equal(hasDocumentedClaim(byId.get('CARLOS5')),true);
   assert.equal(hasDocumentedClaim(byId.get('FEL3ESP')),true);
@@ -50,7 +51,6 @@ test('Milán y los títulos italianos de los Austrias reflejan los hitos contras
   assert.equal(ferdinandHungary.value.condicion,'rama');
   assert.match(ferdinandHungary.value.ambito,/Noroeste/);
 });
-
 
 test('las discrepancias no se convierten en fechas documentadas ni se ocultan en la cita',()=>{
   const fernando=personClaims(byId.get('FERN2ARAG')).find(item=>item.field==='Nacimiento');
