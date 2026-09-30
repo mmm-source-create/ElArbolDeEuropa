@@ -5,7 +5,9 @@ import CrownTimeline from "../components/CrownTimeline.jsx";
 import DocumentationNotes from "../components/DocumentationNotes.jsx";
 import { documentaryLife } from "../utils/documentaryDates.js";
 import { SOURCE_SECTIONS } from "../content/sources.js";
-import EvidencePanel from '../evidence/EvidencePanel.jsx';
+import EvidencePanel,{EvidenceMark} from '../evidence/EvidencePanel.jsx';
+import {formatClaimDate,personClaims} from '../evidence/claims.js';
+import {PERSONAS} from '../personas.jsx';
 import React, { useEffect, useMemo, useState } from "react";
 import {
   ArrowLeft,
@@ -424,9 +426,9 @@ function Portrait({ persona, locale = 'es' }) {
   );
 }
 
-function RelationList({ label, items, locale = 'es' }) {
+function RelationList({ label, items, locale = 'es', claims = [], field }) {
   if (!items?.length) return null;
-  return <div className="public-relation-row"><strong>{label}</strong><div>{items.map((p) => { const path = p.path || (locale === 'en' && translatedEquivalent(rutaEntidad('persona', p.slug), 'en')) || rutaEntidad('persona', p.slug); return <a key={p.id} href={path}>{p.nombre}{locale === 'en' && path.startsWith('/es/') ? ' · ES' : ''}</a>; })}</div></div>;
+  return <div className="public-relation-row"><strong>{label}</strong><div>{items.map((p) => { const path = p.path || (locale === 'en' && translatedEquivalent(rutaEntidad('persona', p.slug), 'en')) || rutaEntidad('persona', p.slug); const claim=claims.find(c=>c.value===p.id && (field==='parents' ? ['Padre','Madre'].includes(c.field) : field==='partners' ? c.field==='Matrimonio o vínculo conyugal' : false)); return <span key={p.id} className="public-relation-evidence"><a href={path}>{p.nombre}{locale === 'en' && path.startsWith('/es/') ? ' · ES' : ''}</a>{claim&&<EvidenceMark claim={claim} locale={locale}/>}</span>; })}</div></div>;
 }
 
 export function PersonPage({ slug, legacyId, onExplore, initialData = null }) {
@@ -477,6 +479,8 @@ export function PersonContent({ persona, locale = 'es', path, onExplore }) {
   const atlasPath = en ? `/es/?atlas=1&familia=${encodeURIComponent(persona.id)}` : `${profilePath}?atlas=1`;
   const peoplePath = en ? '/en/people' : '/es/personas';
   const sourcePath = en ? '/en/methodology' : '/es/fuentes';
+  const claims=personClaims(PERSONAS.find(record=>record.id===persona.id));
+  const fact=field=>claims.find(claim=>claim.field===field);
   return <main className="public-main public-person-page">
     <Breadcrumbs locale={locale} items={[{label:label('Inicio','Home'),href:en?'/en/':'/es/'},{label:label('Personas','People'),href:peoplePath},{label:persona.nombre}]}/>
     <article>
@@ -493,8 +497,8 @@ export function PersonContent({ persona, locale = 'es', path, onExplore }) {
       </header>
       {en&&<p className="public-translation-note">This profile is translated. Names of dynasties and territories, picture credits and original documentary records retain their source language. Links marked ES open the Spanish edition.</p>}
       <div className="public-person-columns">
-        <section className="public-content-card"><span>{label('Perfil histórico','Historical profile')}</span><h2>{label('Datos principales','Key details')}</h2>{(en?persona.role:persona.titulo)&&<p><strong>{label('Título:','Role:')}</strong> {en?persona.role:persona.titulo}</p>}{!!persona.aliases?.length&&<p><strong>{label('Otros nombres:','Other recorded names:')}</strong> {persona.aliases.join(' · ')}</p>}{persona.dinastia&&<p><strong>{label('Dinastía:','Dynasty:')}</strong> <a href={rutaEntidad('dinastia',slugPublico(persona.dinastia))}>{persona.dinastia}{en?' · ES':''}</a></p>}{!!persona.reinos?.length&&<p><strong>{label('Territorios:','Territories:')}</strong> {persona.reinos.map((r,i)=><React.Fragment key={r}>{i>0&&' · '}<a href={rutaEntidad('territorio',slugPublico(r))}>{r}{en?' (ES)':''}</a></React.Fragment>)}</p>}{!en&&<RecordedGovernments persona={persona}/>}</section>
-        <section className="public-content-card"><span>{label('Red familiar','Family network')}</span><h2>{label('Relaciones documentadas','Documented relationships')}</h2><RelationList locale={locale} label={label('Padres','Parents')} items={persona.padres}/><RelationList locale={locale} label={label(persona.conyuges?.length>1?'Cónyuges':'Cónyuge','Partners')} items={persona.conyuges}/><RelationList locale={locale} label={label('Hijos/as','Children')} items={persona.hijos}/>{!persona.padres?.length&&!persona.conyuges?.length&&!persona.hijos?.length&&<p className="public-muted">{label('No hay relaciones directas cargadas para esta persona.','No direct relationships are recorded for this person.')}</p>}</section>
+        <section className="public-content-card"><span>{label('Perfil histórico','Historical profile')}</span><h2>{label('Datos principales','Key details')}</h2>{fact('Nacimiento')&&<p><strong>{label('Nacimiento:','Birth:')}</strong> {formatClaimDate(fact('Nacimiento'),locale)} <EvidenceMark claim={fact('Nacimiento')} locale={locale}/></p>}{fact('Fallecimiento')&&<p><strong>{label('Fallecimiento:','Death:')}</strong> {formatClaimDate(fact('Fallecimiento'),locale)} <EvidenceMark claim={fact('Fallecimiento')} locale={locale}/></p>}{(en?persona.role:persona.titulo)&&<p><strong>{label('Título:','Role:')}</strong> {en?persona.role:persona.titulo}</p>}{!!persona.aliases?.length&&<p><strong>{label('Otros nombres:','Other recorded names:')}</strong> {persona.aliases.join(' · ')}</p>}{persona.dinastia&&<p><strong>{label('Dinastía:','Dynasty:')}</strong> <a href={rutaEntidad('dinastia',slugPublico(persona.dinastia))}>{persona.dinastia}{en?' · ES':''}</a></p>}{!!persona.reinos?.length&&<p><strong>{label('Territorios:','Territories:')}</strong> {persona.reinos.map((r,i)=><React.Fragment key={r}>{i>0&&' · '}<a href={rutaEntidad('territorio',slugPublico(r))}>{r}{en?' (ES)':''}</a></React.Fragment>)}</p>}{!en&&<RecordedGovernments persona={persona} claims={claims}/>}</section>
+        <section className="public-content-card"><span>{label('Red familiar','Family network')}</span><h2>{label('Relaciones registradas','Recorded relationships')}</h2><RelationList locale={locale} label={label('Padres','Parents')} items={persona.padres} claims={claims} field="parents"/><RelationList locale={locale} label={label(persona.conyuges?.length>1?'Cónyuges':'Cónyuge','Partners')} items={persona.conyuges} claims={claims} field="partners"/><RelationList locale={locale} label={label('Hijos/as','Children')} items={persona.hijos}/>{!persona.padres?.length&&!persona.conyuges?.length&&!persona.hijos?.length&&<p className="public-muted">{label('No hay relaciones directas cargadas para esta persona.','No direct relationships are recorded for this person.')}</p>}</section>
       </div>
       {en ? <details className="public-original-content"><summary>Governments and documentary notes · Spanish original</summary><div lang="es"><RecordedGovernments persona={persona}/><CrownTimeline key={persona.id} persona={persona} accesos={persona.accesosCoronas} fuentes={persona.fuentes}/><DocumentationNotes persona={persona}/></div><p className="public-translation-note"><a href={persona.esPath}>Read the complete Spanish record →</a></p></details> : <><CrownTimeline key={persona.id} persona={persona} accesos={persona.accesosCoronas} fuentes={persona.fuentes}/><DocumentationNotes persona={persona}/></>}
       {!!persona.fuentes?.length&&<section className="public-content-card"><span>{label('Documentación','Documentation')}</span><h2>{label('Fuentes de esta ficha','Sources for this profile')}</h2><ul>{persona.fuentes.map((f,i)=><li key={f.url||i}><a href={f.url} target="_blank" rel="noreferrer">{f.titulo}</a></li>)}</ul><p className="public-muted">{label('Referencias biográficas y de contexto.','Biographical and contextual references in their original language.')} <a href={sourcePath}>{label('Consultar metodología y bibliografía completa','Sources and methodology')}</a>.</p></section>}
@@ -509,7 +513,7 @@ export function PersonContent({ persona, locale = 'es', path, onExplore }) {
   </main>;
 }
 
-function RecordedGovernments({persona}) {
+function RecordedGovernments({persona,claims=[]}) {
   if(!persona.reinados?.length)return null;
-  return <div className="public-reigns"><strong>Gobiernos y reinados registrados</strong>{persona.reinados.map((r,index)=><div key={`${r.territorio}-${r.desde}-${index}`}><span>{r.titulo} · {r.territorio||'Territorio'} · {etiquetaClaseGobierno(persona,r)}</span><b>{r.desde??'?'}–{r.hasta??'?'}</b>{r.condicion&&<small>{r.condicion}</small>}</div>)}</div>;
+  return <div className="public-reigns"><strong>Gobiernos y reinados registrados</strong>{persona.reinados.map((r,index)=>{const claim=claims.find(c=>c.field==='Gobierno'&&c.value.territorio===r.territorio&&c.interval.from===r.desde&&c.interval.to===r.hasta&&c.value.titulo===r.titulo);return <div key={`${r.territorio}-${r.desde}-${index}`}><span>{r.titulo} · {r.territorio||'Territorio'} · {etiquetaClaseGobierno(persona,r)} {claim&&<EvidenceMark claim={claim}/>}</span><b>{r.desde??'?'}–{r.hasta??'?'}</b>{r.condicion&&<small>{r.condicion}</small>}</div>;})}</div>;
 }

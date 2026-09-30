@@ -13,9 +13,11 @@ test('cada dato personal registrado conserva una afirmación estable sin fuente 
   assert.ok(claims.some(claim=>claim.field==='Gobierno'&&claim.value.territorio==='Castilla'));
   assert.ok(claims.some(claim=>claim.field==='Sucesión'));
   assert.equal(new Set(claims.map(claim=>claim.id)).size,claims.length);
-  assert.ok(claims.every(claim=>claim.sources.length===0&&claim.certainty in CERTAINTY));
-  assert.match(citationText(claims[0],carlos.nombre),/Sin fuente específica/);
-  assert.match(citationText(claims[0],carlos.nombre,'en'),/No claim-specific source/);
+  assert.ok(claims.every(claim=>claim.certainty in CERTAINTY));
+  const unreviewed=claims.find(claim=>claim.field==='Gobierno'&&!claim.sources.length);
+  assert.ok(unreviewed);
+  assert.match(citationText(unreviewed,carlos.nombre),/Sin fuente específica/);
+  assert.match(citationText(unreviewed,carlos.nombre,'en'),/No claim-specific source/);
 });
 
 test('una fuente precisa solo respalda las afirmaciones revisadas y conserva el historial',()=>{
