@@ -1,6 +1,12 @@
 const FMG='https://fmg.ac/Projects/MedLands/index.htm';
 const BRIT='https://www.britannica.com/';
 const RAH='https://historia-hispanica.rah.es/';
+const MILAN='https://www.lombardiabeniculturali.it/istituzioni/schede/8000356/';
+const MILAN_HISTORY='https://www.lombardiabeniculturali.it/istituzioni/storia/?unita=03.05';
+const PARES_CARLOS='https://pares.cultura.gob.es/ParesBusquedas20/catalogo/autoridad/46080';
+const PARES_JUANA='https://pares.cultura.gob.es/ParesBusquedas20/catalogo/autoridad/46503';
+const PARES_CARLOS_II='https://pares.cultura.gob.es/ParesBusquedas20/catalogo/autoridad/46849';
+const HABSBURG_FERDINAND_IV='https://www.habsburger.net/en/persons/habsburg/ferdinand-iv';
 const acceso=(persona,territorio,desde,motivos,explicacion,fuentes=[FMG,BRIT],clase='reinado')=>({persona,territorio,desde,clase,motivos,explicacion,fuentes});
 
 // Cada explicación se ancla a un mandato real de la base, nunca al título resumen.
@@ -26,6 +32,14 @@ export const ACCESOS_CORONAS = [
  acceso('FERN2ARAG','Castilla',1474,['matrimonio','acuerdo'],'Gobernó junto a Isabel como su esposo, con atribuciones delimitadas por acuerdos políticos. El derecho hereditario castellano pertenecía a Isabel.',[RAH]),
  acceso('CARLOS5','Castilla',1516,['herencia'],'Tras la muerte de Fernando, Carlos asumió el título regio junto a su madre Juana, que conservó la condición de reina. La proclamación de Carlos no fue una abdicación de Juana.',[RAH]),
  acceso('CARLOS5','Aragón',1516,['herencia'],'La muerte de Fernando abrió la sucesión aragonesa. El reconocimiento y los juramentos en los distintos territorios se desarrollaron posteriormente; 1516 identifica el acceso registrado.',[RAH]),
+ acceso('CARLOS5','Cerdeña',1516,['herencia'],'El título de rey de Cerdeña acompañó la herencia aragonesa, junto a Juana I. El inicio anual se deriva de la sucesión general; no acredita una ceremonia local específica.',[PARES_CARLOS]),
+ acceso('JUANA1CAST','Cerdeña',1516,['herencia'],'PARES enumera a Juana reina de Cerdeña junto a Carlos I entre 1516 y 1555. La titularidad no indica ejercicio personal del gobierno.',[PARES_JUANA]),
+ acceso('CARLOS5','Milán',1535,['herencia'],'La muerte de Francesco II Sforza devolvió el feudo imperial a Carlos V, que lo mantuvo bajo control directo. La investidura del hijo Felipe y la posesión de 1556 fueron fases posteriores.',[MILAN],'ducado'),
+ acceso('FEL2ESP','Milán',1546,['nombramiento'],'La ficha histórica lombarda fecha la investidura de Felipe en 1546; otra cronología institucional sitúa el título en 1540. El control directo imperial continuó hasta 1556: este acceso representa una dignidad disputada en su fecha, no posesión efectiva.',[MILAN],'ducado'),
+ acceso('FEL2ESP','Milán',1556,['abdicación'],'La narración histórica lombarda sitúa la toma de posesión de Felipe tras la abdicación de Carlos V en 1556.',[MILAN_HISTORY],'ducado'),
+ acceso('FERN4BOH','Bohemia',1646,['nombramiento'],'Coronado rey en vida de su padre Fernando III. El título no supone una sucesión imperial ni una autoridad exclusiva sobre todos los dominios paternos.',[HABSBURG_FERDINAND_IV]),
+ acceso('FERN4BOH','Hungría',1647,['nombramiento'],'Coronado rey en vida de Fernando III. Su padre siguió reinando; se registra como corregencia, no como sucesión exclusiva.',[HABSBURG_FERDINAND_IV]),
+ acceso('FERN4BOH','Alemania',1653,['elección'],'Elegido rey de Romanos y heredero designado del emperador Fernando III; murió antes que él y nunca llegó a emperador.',[HABSBURG_FERDINAND_IV]),
  acceso('CARLOS5','Sacro Imperio',1519,['elección'],'La elección de 1519 abrió su etapa imperial; fue coronado rey de Romanos en 1520 y emperador por el papa en 1530. El intervalo de la base parte de la elección, no de la coronación papal.',[RAH], 'imperio'),
  acceso('FEL2ESP','Portugal',1580,['herencia','conquista'],'La muerte del cardenal Enrique abrió una disputa. Felipe alegó su descendencia de Manuel I por Isabel de Portugal y se impuso militarmente; las Cortes de Tomar lo reconocieron en 1581.',[RAH]),
  acceso('JACOBO1ING','Inglaterra',1603,['herencia'],'Sucedió a Isabel I por su ascendencia Tudor. Ya reinaba en Escocia: compartieron soberano, pero conservaron parlamentos y ordenamientos separados.',[BRIT]),
@@ -33,6 +47,7 @@ export const ACCESOS_CORONAS = [
  ...[['Flandes','condado'],['Condado de Borgoña','condado'],['Brabante','ducado'],['Limburgo','ducado'],['Holanda','condado'],['Henao','condado'],['Zelanda','condado']].map(([t,c])=>acceso('CARLOS5',t,1506,['herencia'],'La muerte de Felipe el Hermoso transmitió a Carlos estos patrimonios de origen borgoñón. Durante su minoría hubo regencias: heredar un título no significa que el niño dirigiera personalmente el gobierno.',[RAH],c)),
  acceso('CARLOS5','Borgoña',1506,['herencia'],'Carlos conservó el título ducal heredado de Felipe, pero el ducado estaba bajo control francés. Esta pretensión no se cuenta como gobierno efectivo; el Condado de Borgoña tenía una situación distinta.',[RAH],'ducado'),
  ...['León','Nápoles','Trinacria'].map(t=>acceso('CARLOS5',t,1516,['herencia'],'La muerte de Fernando abrió esta sucesión dentro del patrimonio dinástico hispánico. Cada territorio mantuvo su título y sus instituciones; los reconocimientos y juramentos no ocurrieron todos a la vez.',[RAH])),
+ ...[['Milán','ducado'],['Nápoles','reinado'],['Trinacria','reinado'],['Cerdeña','reinado']].map(([t,c])=>acceso('CARLOS2ESP',t,1665,['herencia'],'Carlos II heredó este dominio siendo menor de edad. PARES enumera sus títulos italianos; Mariana de Austria ejerció la regencia durante su minoría.',[PARES_CARLOS_II],c)),
  acceso('CARLOS5','Navarra',1516,['herencia'],'Continuó la soberanía de los Austrias sobre la Alta Navarra conquistada por Fernando. Los Albret conservaron derechos y gobierno al norte de los Pirineos: el mandato no representa una sucesión aceptada sobre todo el reino histórico.',[RAH]),
  acceso('CARLOS5','Austria',1519,['herencia'],'La muerte de Maximiliano I transmitió los territorios hereditarios austríacos a Carlos. Los acuerdos con su hermano Fernando iniciaron su cesión a la rama austríaca; esta herencia era distinta de la elección imperial.',[RAH],'archiducado'),
  acceso('CARLOS5','Alemania',1519,['elección'],'Los electores eligieron a Carlos rey de Romanos en 1519. La coronación de Aquisgrán fue en 1520. Este título y el imperial forman parte de una misma estructura política y no describen dos Estados independientes.',[RAH]),

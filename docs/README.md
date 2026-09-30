@@ -11,7 +11,7 @@ Los informes describen el estado validado de cada entrega. Sus cifras y listas d
 
 | Versión | Contenido |
 | --- | --- |
-| [4.1](V4.1.md) | Corredor histórico revisado, incertidumbres y tareas editoriales |
+| [4.1](V4.1.md) | Corredor histórico, filtro de evidencia, revisión de los Austrias y tareas editoriales |
 | [4.0](V4.0.md) | Modelo de afirmaciones, cobertura y simplificación del Atlas |
 | [3.3](V3.3.md) | Edición inglesa, retratos del Desafío y contraste oscuro |
 | [3.2](V3.2.md) | Ajustes de visualización, privacidad y navegación uniforme |

@@ -17,7 +17,7 @@ export default {
     ]
   },
   "Milán": {
-    "resumen": "El dominio de los Visconti evolucionó de señorío a ducado y pasó después a los Sforza. Su posición económica y estratégica convirtió la sucesión milanesa en una cuestión europea.",
+    "resumen": "El dominio de los Visconti evolucionó de señorío a ducado y pasó después a los Sforza. Muerto el último duque Sforza en 1535, Carlos V lo mantuvo bajo control imperial. La investidura de Felipe, fechada de modo dispar entre 1540 y 1546, y su posesión de 1556 fueron etapas distintas.",
     "evolucion": [
       {
         "anio": 1395,
@@ -33,7 +33,15 @@ export default {
       },
       {
         "anio": 1535,
-        "texto": "Extinción de la línea ducal Sforza"
+        "texto": "Muerte de Francesco II Sforza; control directo de Carlos V"
+      },
+      {
+        "anio": 1546,
+        "texto": "Investidura de Felipe según la ficha histórica lombarda; otra cronología propone 1540"
+      },
+      {
+        "anio": 1556,
+        "texto": "Felipe toma posesión tras la abdicación de Carlos V"
       }
     ]
   },

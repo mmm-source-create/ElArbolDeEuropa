@@ -115,7 +115,7 @@ export default function ExplorerView({ vm }) {
     anioGlobal, setAnioGlobal, anioInput, setAnioInput, reproduciendoHistoria, setReproduciendoHistoria,
     shareStatus, setShareStatus, collapsedIds, setCollapsedIds, vistasActivas, setVistasActivas, panelesVisibles, setPanelesVisibles,
     infoProyecto, setInfoProyecto, timelineScaleIndex, setTimelineScaleIndex, timelineMode, setTimelineMode, eventoSeleccionadoId, setEventoSeleccionadoId,
-    favoritos, setFavoritos, favoritosOpen, setFavoritosOpen, soloFavoritos, setSoloFavoritos, historiaActivaId, setHistoriaActivaId,
+    favoritos, setFavoritos, favoritosOpen, setFavoritosOpen, soloFavoritos, setSoloFavoritos, soloDocumentados, setSoloDocumentados, historiaActivaId, setHistoriaActivaId,
     historiaPasoIndex, setHistoriaPasoIndex, compareMenuRef, focoMenuRef, favoritosMenuRef, historiaSnapshotRef, shareStatusTimerRef, urlStateLoadedRef,
     historyPopRef, dragState, workspaceGridRef, workspaceMainRef, panelWidths, setPanelWidths, treeMapSplit, setTreeMapSplit, filterSectionsOpen, setFilterSectionsOpen,
     bioSectionsOpen, setBioSectionsOpen, personHistory, modoTrabajo, setModoTrabajo,
@@ -671,6 +671,18 @@ export default function ExplorerView({ vm }) {
                       />
                     ))}
                   </div>
+                </FilterSection>
+                <FilterSection
+                  title="Evidencia histórica"
+                  open={filterSectionsOpen.evidencia}
+                  onToggle={() => alternarSeccionFiltro("evidencia")}
+                  activeCount={soloDocumentados ? 1 : 0}
+                >
+                  <label className="evidence-filter-toggle">
+                    <input type="checkbox" checked={soloDocumentados} onChange={event => setSoloDocumentados(event.target.checked)} />
+                    <span>Con al menos un dato documentado</span>
+                  </label>
+                  <p className="evidence-filter-hint">La revisión es aún parcial. Cada persona visible tiene al menos una afirmación contrastada con una fuente concreta; otros datos de su ficha pueden seguir pendientes.</p>
                 </FilterSection>
               </div>
 

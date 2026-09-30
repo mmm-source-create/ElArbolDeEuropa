@@ -43,6 +43,7 @@ import { useViewportTask } from "./explorer/useViewportTask.js";
 import { centeredScroll } from "./explorer/virtualRows.js";
 import { readAtlasSession, shouldResumeAtlas } from "./explorer/atlasSession.js";
 import { useAtlasSession } from "./explorer/useAtlasSession.js";
+import { hasDocumentedClaim } from "./evidence/claims.js";
 
 const SEARCH_TEXT_BY_ID = Object.fromEntries(PERSONAS.map(persona => [persona.id, normalizaTexto([textoBusquedaPersona(persona), nombrePrincipal(persona)].join(" "))]));
 
@@ -54,6 +55,7 @@ const DEFAULT_FILTER_SECTIONS = Object.freeze({
   titulos: true,
   siglos: true,
   relaciones: true,
+  evidencia: false,
 });
 const DEFAULT_BIO_SECTIONS = Object.freeze({
   datos: true,
@@ -189,6 +191,7 @@ export default function Explorer({ initialPanel = null, treeBase: TREE_BASE }) {
   });
   const [favoritosOpen, setFavoritosOpen] = useState(false);
   const [soloFavoritos, setSoloFavoritos] = useState(savedSession?.soloFavoritos ?? false);
+  const [soloDocumentados, setSoloDocumentados] = useState(savedSession?.soloDocumentados ?? false);
   const storyActionsRef = useRef(null);
   const [historiaActivaId, setHistoriaActivaId] = useState(savedSession?.historiaActivaId ?? null);
   const [historiaPasoIndex, setHistoriaPasoIndex] = useState(savedSession?.historiaPasoIndex ?? 0);
@@ -802,6 +805,7 @@ export default function Explorer({ initialPanel = null, treeBase: TREE_BASE }) {
   // OR, que suele ser el comportamiento más útil al explorar una genealogía.
   const matches = (persona) => {
     if (!persona) return false;
+    if (soloDocumentados && !documentedPeopleSet.has(persona.id)) return false;
     if (connectionSet) return connectionSet.has(persona.id);
     if (!focoSet && atlasSet && !atlasSet.has(persona.id)) return false;
     if (!focoSet && hiddenByCollapse.has(persona.id)) return false;
@@ -841,7 +845,9 @@ export default function Explorer({ initialPanel = null, treeBase: TREE_BASE }) {
     return true;
   };
 
-  const visiblePeople = useMemo(() => PERSONAS.filter(matches), [atlasSet, connectionSet, hiddenByCollapse, focoSet, soloFavoritos, favoritosSet, territorios, dinastias, titulos, siglos, relaciones, opciones.otrasDinastias]);
+  const documentedPeopleSet = useMemo(() => soloDocumentados
+    ? new Set(PERSONAS.filter(hasDocumentedClaim).map(person => person.id)) : null, [soloDocumentados]);
+  const visiblePeople = useMemo(() => PERSONAS.filter(matches), [atlasSet, connectionSet, hiddenByCollapse, focoSet, soloFavoritos, favoritosSet, soloDocumentados, documentedPeopleSet, territorios, dinastias, titulos, siglos, relaciones, opciones.otrasDinastias]);
   const timelineRows = useMemo(() => timelineMode === "eventos"
     ? eventosOrdenados.map(item => ({ key: `event:${item.id}`, item, estimatedSize: 54 }))
     : visiblePeople.slice().sort((a, b) => (anioInicioPersona(a) ?? Infinity) - (anioInicioPersona(b) ?? Infinity) || a.nombre.localeCompare(b.nombre, "es"))
@@ -909,7 +915,7 @@ export default function Explorer({ initialPanel = null, treeBase: TREE_BASE }) {
     dinastiasExpandidas, territoriosExpandidos, selectedId: seleccion?.id || null,
     currentSearchIndex, zoom, mode, connectionIds, connectionCriterion, origen, destino, modoComparacion, focoId, focoAlcance,
     anioGlobal, vistasActivas, panelesVisibles, personHistory, timelineScaleIndex, timelineMode,
-    eventoSeleccionadoId, soloFavoritos, historiaActivaId, historiaPasoIndex, storyReturn, historiaSnapshot: historiaSnapshotRef.current,
+    eventoSeleccionadoId, soloFavoritos, soloDocumentados, historiaActivaId, historiaPasoIndex, storyReturn, historiaSnapshot: historiaSnapshotRef.current,
   }, scrollRef, tlScrollRef, () => {
     const top = tlScrollRef.current && timelineListRef.current ? tlScrollRef.current.scrollTop - timelineListRef.current.offsetTop : null;
     const anchor = top !== null && timelineVirtual.items.find(row => row.start + row.size >= top);
@@ -955,8 +961,8 @@ export default function Explorer({ initialPanel = null, treeBase: TREE_BASE }) {
     seleccionarPersonaPorId(searchMatchIds[next], { centrar: Boolean(positions[searchMatchIds[next]]) });
   };
 
-  const hayFiltros = Boolean(query || territorios.length || dinastias.length || titulos.length || siglos.length || relaciones.length || soloFavoritos);
-  const limpiar = () => { setQuery(""); setTerritorios([]); setDinastias([]); setTitulos([]); setSiglos([]); setRelaciones([]); setSoloFavoritos(false); };
+  const hayFiltros = Boolean(query || territorios.length || dinastias.length || titulos.length || siglos.length || relaciones.length || soloFavoritos || soloDocumentados);
+  const limpiar = () => { setQuery(""); setTerritorios([]); setDinastias([]); setTitulos([]); setSiglos([]); setRelaciones([]); setSoloFavoritos(false); setSoloDocumentados(false); };
 
   const lineage = hovered
     ? ancestorsOf(hovered)
@@ -1214,6 +1220,7 @@ export default function Explorer({ initialPanel = null, treeBase: TREE_BASE }) {
         setSiglos(anteriorHistoria.siglos);
         setRelaciones(anteriorHistoria.relaciones);
         setSoloFavoritos(anteriorHistoria.soloFavoritos);
+        setSoloDocumentados(anteriorHistoria.soloDocumentados ?? false);
         setAnioGlobal(anteriorHistoria.anioGlobal);
         setAnioInput(Number.isFinite(anteriorHistoria.anioGlobal) ? String(anteriorHistoria.anioGlobal) : "");
         setVistasActivas(anteriorHistoria.vistasActivas);
@@ -1351,7 +1358,7 @@ export default function Explorer({ initialPanel = null, treeBase: TREE_BASE }) {
     if (!historiaSnapshotRef.current) {
       const historiaAbiertaDesdeEnlace = Boolean(resolveStoryNavigation(window.location.pathname, window.location.search, HISTORIAS));
       historiaSnapshotRef.current = {
-        atlasIds, query, territorios, dinastias, titulos, siglos, relaciones, soloFavoritos, anioGlobal,
+        atlasIds, query, territorios, dinastias, titulos, siglos, relaciones, soloFavoritos, soloDocumentados, anioGlobal,
         vistasActivas, seleccionId: seleccion?.id || null, timelineMode, eventoSeleccionadoId,
         mode, connectionIds, connectionCriterion, origen, destino, focoId, focoAlcance, collapsedIds, compareRouteIndex,
         rutaAnterior: typeof window !== "undefined"
@@ -1367,6 +1374,7 @@ export default function Explorer({ initialPanel = null, treeBase: TREE_BASE }) {
     setSiglos([]);
     setRelaciones([]);
     setSoloFavoritos(false);
+    setSoloDocumentados(false);
     setMode("view");
     setFocoId(null);
     setCollapsedIds([]);
@@ -1402,6 +1410,7 @@ export default function Explorer({ initialPanel = null, treeBase: TREE_BASE }) {
     setSiglos(anterior.siglos);
     setRelaciones(anterior.relaciones);
     setSoloFavoritos(anterior.soloFavoritos);
+    setSoloDocumentados(anterior.soloDocumentados ?? false);
     setAnioGlobal(anterior.anioGlobal);
     setAnioInput(Number.isFinite(anterior.anioGlobal) ? String(anterior.anioGlobal) : "");
     setVistasActivas(anterior.vistasActivas);
@@ -1460,8 +1469,9 @@ export default function Explorer({ initialPanel = null, treeBase: TREE_BASE }) {
     titulos.forEach((valor) => url.searchParams.append("funcion", valor));
     siglos.forEach((valor) => url.searchParams.append("siglo", String(valor)));
     relaciones.forEach((valor) => url.searchParams.append("relacion", valor));
+    if (soloDocumentados) url.searchParams.set("evidencia", "1");
     return url.toString();
-  }, [historiaActiva, historiaPasoIndex, storyReturn, focoSet, visibleIds, atlasIds, seleccion, mode, connectionIds, connectionCriterion, anioGlobal, vistaPrincipal, query, territorios, dinastias, titulos, siglos, relaciones]);
+  }, [historiaActiva, historiaPasoIndex, storyReturn, focoSet, visibleIds, atlasIds, seleccion, mode, connectionIds, connectionCriterion, anioGlobal, vistaPrincipal, query, territorios, dinastias, titulos, siglos, relaciones, soloDocumentados]);
 
   const compartirPersona = useCallback(async () => {
     const enlace = construirEnlaceCompartido();
@@ -1547,6 +1557,7 @@ export default function Explorer({ initialPanel = null, treeBase: TREE_BASE }) {
       valor === SIN_FECHA || opciones.siglos.includes(valor)
     ));
     setRelaciones(params.getAll("relacion").filter((valor) => relacionesValidas.has(valor)));
+    setSoloDocumentados(params.get("evidencia") === "1");
 
     const rutaPublica = rutaPublicaDesdePath(window.location.pathname);
     if (rutaPublica?.tipo === "territorio") {
@@ -1707,8 +1718,9 @@ export default function Explorer({ initialPanel = null, treeBase: TREE_BASE }) {
       lista.push(filtro?.label || id);
     });
     if (soloFavoritos) lista.push("Favoritos");
+    if (soloDocumentados) lista.push("Con datos documentados");
     return lista;
-  }, [queryTrim, query, territorios, dinastias, titulos, siglos, relaciones, soloFavoritos, opciones.titulos]);
+  }, [queryTrim, query, territorios, dinastias, titulos, siglos, relaciones, soloFavoritos, soloDocumentados, opciones.titulos]);
 
   const cambiarIdioma = useCallback((siguiente) => {
     if (typeof window === "undefined" || !["es", "en"].includes(siguiente) || siguiente === locale) return;
@@ -1785,7 +1797,7 @@ export default function Explorer({ initialPanel = null, treeBase: TREE_BASE }) {
     anioGlobal, setAnioGlobal, anioInput, setAnioInput, reproduciendoHistoria, setReproduciendoHistoria,
     shareStatus, setShareStatus, collapsedIds, setCollapsedIds, vistasActivas, setVistasActivas, panelesVisibles, setPanelesVisibles,
     infoProyecto, setInfoProyecto, timelineScaleIndex, setTimelineScaleIndex, timelineMode, setTimelineMode, eventoSeleccionadoId, setEventoSeleccionadoId,
-    favoritos, setFavoritos, favoritosOpen, setFavoritosOpen, soloFavoritos, setSoloFavoritos, historiaActivaId, setHistoriaActivaId,
+    favoritos, setFavoritos, favoritosOpen, setFavoritosOpen, soloFavoritos, setSoloFavoritos, soloDocumentados, setSoloDocumentados, historiaActivaId, setHistoriaActivaId,
     historiaPasoIndex, setHistoriaPasoIndex, compareMenuRef, focoMenuRef, favoritosMenuRef, historiaSnapshotRef, shareStatusTimerRef, urlStateLoadedRef,
     historyPopRef, dragState, workspaceGridRef, workspaceMainRef, panelWidths, setPanelWidths, treeMapSplit, setTreeMapSplit, filterSectionsOpen, setFilterSectionsOpen,
     bioSectionsOpen, setBioSectionsOpen, personHistory, modoTrabajo, setModoTrabajo,

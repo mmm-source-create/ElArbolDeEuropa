@@ -3,6 +3,15 @@ import {ALPES_SOURCES} from './sources-alpes-v213.js';
 // Bibliography shared by the public site, Atlas and generated entity pages.
 // A territorial reference supplies context; only explicit person IDs assign a biography.
 export const SOURCES = [
+  {titulo:"Lombardia Beni Culturali · Stato di Milano (1535–1749)",url:"https://www.lombardiabeniculturali.it/istituzioni/schede/8000356/",grupo:"Archivos e instituciones",territorios:["Milán"],personas:["CARLOS5","FEL2ESP","FEL3ESP","FEL4ESP","CARLOS2ESP"]},
+  {titulo:"Lombardia Beni Culturali · Milano bajo la dominación española",url:"https://www.lombardiabeniculturali.it/istituzioni/storia/?unita=03.05",grupo:"Archivos e instituciones",territorios:["Milán"],personas:["CARLOS5","FEL2ESP"]},
+  {titulo:"PARES · Carlos I",url:"https://pares.cultura.gob.es/ParesBusquedas20/catalogo/autoridad/46080",grupo:"Archivos e instituciones",territorios:["Cerdeña"],personas:["CARLOS5"]},
+  {titulo:"PARES · Juana I",url:"https://pares.cultura.gob.es/ParesBusquedas20/catalogo/autoridad/46503",grupo:"Archivos e instituciones",territorios:["Cerdeña"],personas:["JUANA1CAST"]},
+  {titulo:"PARES · Felipe III",url:"https://pares.cultura.gob.es/ParesBusquedas20/catalogo/autoridad/46877",grupo:"Archivos e instituciones",territorios:["Cerdeña"],personas:["FEL3ESP"]},
+  {titulo:"PARES · Felipe IV",url:"https://pares.cultura.gob.es/ParesBusquedas20/catalogo/autoridad/46878",grupo:"Archivos e instituciones",territorios:["Cerdeña"],personas:["FEL4ESP"]},
+  {titulo:"PARES · Carlos II",url:"https://pares.cultura.gob.es/ParesBusquedas20/catalogo/autoridad/46849",grupo:"Archivos e instituciones",territorios:["Cerdeña","Milán","Nápoles","Trinacria"],personas:["CARLOS2ESP"]},
+  {titulo:"Die Welt der Habsburger · Ferdinand I: new crowns for the Habsburgs",url:"https://www.habsburger.net/en/chapter/ferdinand-i-new-crowns-habsburgs",grupo:"Archivos e instituciones",territorios:["Hungría"],personas:["FERN1EMP"]},
+  {titulo:"Die Welt der Habsburger · Fernando IV",url:"https://www.habsburger.net/en/persons/habsburg/ferdinand-iv",grupo:"Archivos e instituciones",territorios:["Bohemia","Hungría","Alemania"],personas:["FERN4BOH"]},
   ...ALPES_SOURCES,
   ...ADRIATICO_SOURCES,
   {

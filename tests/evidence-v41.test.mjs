@@ -2,7 +2,8 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import {PERSONAS} from '../src/personas.jsx';
 import {TERRITORIOS} from '../src/data/territorios.js';
-import {CLAIM_REVIEWS,PILOT_PERSON_IDS,citationText,coverageTasks,personClaims} from '../src/evidence/claims.js';
+import {CLAIM_REVIEWS,PILOT_PERSON_IDS,citationText,coverageTasks,hasDocumentedClaim,personClaims} from '../src/evidence/claims.js';
+import {sanitizeSession,shouldResumeAtlas} from '../src/explorer/atlasSession.js';
 
 const byId=new Map(PERSONAS.map(person=>[person.id,person]));
 
@@ -15,12 +16,48 @@ test('las referencias del piloto apuntan a afirmaciones existentes y a un pasaje
     const claim=personClaims(byId.get(personId)).find(item=>item.id===id);
     assert.ok(claim,`No existe la afirmación ${id}`);
     assert.ok(review.sources.length,`${id} no tiene fuente`);
-    for(const source of review.sources){assert.ok(source.url.startsWith('https://historia-hispanica.rah.es/biografias/')||source.url.startsWith('https://pares.cultura.gob.es/ParesBusquedas20/catalogo/autoridad/'));assert.ok(source.locator);}
+    for(const source of review.sources){assert.ok(['https://historia-hispanica.rah.es/biografias/','https://pares.cultura.gob.es/ParesBusquedas20/catalogo/autoridad/','https://www.lombardiabeniculturali.it/istituzioni/','https://www.mcu.es/ccbae/','https://www.habsburger.net/en/chapter/','https://www.habsburger.net/en/persons/'].some(prefix=>source.url.startsWith(prefix)),source.url);assert.ok(source.locator);}
     if(review.exactDate)assert.equal(Number(review.exactDate.slice(0,4)),claim.value);
     reviewed.add(personId);
   }
   assert.ok(reviewed.size>=9);
   assert.ok(Object.keys(CLAIM_REVIEWS).length>=45);
+});
+
+test('el filtro exige al menos una afirmación documentada y con fuente individual',()=>{
+  assert.equal(hasDocumentedClaim(byId.get('CARLOS5')),true);
+  assert.equal(hasDocumentedClaim(byId.get('FEL3ESP')),true);
+  assert.equal(hasDocumentedClaim({id:'sin-revisiones',nac:1500,muer:1510}),false);
+  assert.equal(hasDocumentedClaim(null),false);
+  assert.equal(sanitizeSession({version:1,soloDocumentados:true}).soloDocumentados,true);
+  assert.equal(sanitizeSession({version:1,soloDocumentados:'true'}).soloDocumentados,false);
+  assert.equal(shouldResumeAtlas('/es/?continuar=1&evidencia=1'),false);
+});
+
+test('Milán y los títulos italianos de los Austrias reflejan los hitos contrastados',()=>{
+  const govt=(id,territory)=>personClaims(byId.get(id)).filter(c=>c.field==='Gobierno'&&c.value.territorio===territory);
+  const milanCarlos=govt('CARLOS5','Milán');
+  assert.equal(milanCarlos.length,1);
+  assert.equal(milanCarlos[0].interval.from,1535);
+  assert.equal(milanCarlos[0].certainty,'inferred');
+  const milanFelipe=govt('FEL2ESP','Milán');
+  assert.deepEqual(milanFelipe.map(c=>c.interval.from).sort(),[1546,1556]);
+  assert.equal(milanFelipe.find(c=>c.interval.from===1546).certainty,'disputed');
+  assert.equal(milanFelipe.find(c=>c.interval.from===1556).certainty,'documented');
+  for(const id of ['CARLOS5','FEL2ESP','FEL3ESP','FEL4ESP','CARLOS2ESP'])assert.equal(govt(id,'Cerdeña').length,1,id);
+  assert.equal(govt('JUANA1CAST','Cerdeña')[0].value.condicion,'titular');
+  for(const territory of ['Milán','Nápoles','Trinacria','Cerdeña'])assert.equal(govt('CARLOS2ESP',territory).length,1,territory);
+  const ferdinandHungary=govt('FERN1EMP','Hungría')[0];
+  assert.equal(ferdinandHungary.value.condicion,'rama');
+  assert.match(ferdinandHungary.value.ambito,/Noroeste/);
+  for(const [territory,year] of [['Bohemia',1646],['Hungría',1647],['Alemania',1653]]){
+    const claims=govt('FERN4BOH',territory);
+    assert.equal(claims.length,1,territory);
+    assert.equal(claims[0].interval.from,year);
+    assert.equal(claims[0].value.condicion,'corregente');
+    assert.equal(claims[0].certainty,'documented');
+  }
+  assert.equal(govt('FERN4BOH','Sacro Imperio').length,0);
 });
 
 test('las discrepancias no se convierten en fechas documentadas ni se ocultan en la cita',()=>{
