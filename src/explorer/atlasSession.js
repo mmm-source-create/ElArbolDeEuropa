@@ -25,8 +25,8 @@ export function sanitizeSession(value, nested = false) {
     ['mode', ['view','compare','foco','conexion'], 'view'], ['timelineMode', ['personas','eventos','ambos'], 'personas'],
     ['modoComparacion', ['corto','sangre','matrimonio','rutas'], 'corto'], ['focoAlcance', ['cercana','ascendencia','descendencia'], 'cercana'],
   ]) out[key] = options.includes(value[key]) ? value[key] : fallback;
-  out.soloDocumentados = value.soloDocumentados === true;
   out.soloFavoritos = value.soloFavoritos === true;
+  out.soloDocumentados = value.soloDocumentados === true;
   out.vistasActivas = { arbol: value.vistasActivas?.arbol !== false, mapa: value.vistasActivas?.mapa !== false };
   if (!out.vistasActivas.arbol && !out.vistasActivas.mapa) out.vistasActivas.arbol = true;
   out.panelesVisibles = Object.fromEntries(['filtros','biografia','cronologia'].map(k => [k, value.panelesVisibles?.[k] !== false]));
