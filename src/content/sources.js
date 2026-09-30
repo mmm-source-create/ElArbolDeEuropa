@@ -11,6 +11,7 @@ export const SOURCES = [
   {titulo:"PARES · Felipe IV",url:"https://pares.cultura.gob.es/ParesBusquedas20/catalogo/autoridad/46878",grupo:"Archivos e instituciones",territorios:["Cerdeña"],personas:["FEL4ESP"]},
   {titulo:"PARES · Carlos II",url:"https://pares.cultura.gob.es/ParesBusquedas20/catalogo/autoridad/46849",grupo:"Archivos e instituciones",territorios:["Cerdeña","Milán","Nápoles","Trinacria"],personas:["CARLOS2ESP"]},
   {titulo:"Die Welt der Habsburger · Ferdinand I: new crowns for the Habsburgs",url:"https://www.habsburger.net/en/chapter/ferdinand-i-new-crowns-habsburgs",grupo:"Archivos e instituciones",territorios:["Hungría"],personas:["FERN1EMP"]},
+  {titulo:"Die Welt der Habsburger · Fernando IV",url:"https://www.habsburger.net/en/persons/habsburg/ferdinand-iv",grupo:"Archivos e instituciones",territorios:["Bohemia","Hungría","Alemania"],personas:["FERN4BOH"]},
   ...ALPES_SOURCES,
   ...ADRIATICO_SOURCES,
   {
