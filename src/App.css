@@ -4231,6 +4231,7 @@ body.atlas-is-resizing * {
 .filter-static-section.is-collapsed {
   padding-bottom: 4px;
 }
+
 .evidence-filter-toggle {
   display: flex;
   align-items: flex-start;
@@ -4240,7 +4241,6 @@ body.atlas-is-resizing * {
 }
 .evidence-filter-toggle input { margin-top: 0.2rem; accent-color: #842e32; }
 .evidence-filter-hint { margin: 0.45rem 0 0 1.5rem; font-size: 0.82rem; line-height: 1.45; color: inherit; opacity: 0.8; }
-
 
 .filter-section-toggle {
   appearance: none;
