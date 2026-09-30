@@ -42,8 +42,8 @@ import { useVirtualRows } from "./explorer/useVirtualRows.js";
 import { useViewportTask } from "./explorer/useViewportTask.js";
 import { centeredScroll } from "./explorer/virtualRows.js";
 import { readAtlasSession, shouldResumeAtlas } from "./explorer/atlasSession.js";
-import { hasDocumentedClaim } from "./evidence/claims.js";
 import { useAtlasSession } from "./explorer/useAtlasSession.js";
+import { hasDocumentedClaim } from "./evidence/claims.js";
 
 const SEARCH_TEXT_BY_ID = Object.fromEntries(PERSONAS.map(persona => [persona.id, normalizaTexto([textoBusquedaPersona(persona), nombrePrincipal(persona)].join(" "))]));
 
@@ -54,8 +54,8 @@ const DEFAULT_FILTER_SECTIONS = Object.freeze({
   dinastias: true,
   titulos: true,
   siglos: true,
-  evidencia: false,
   relaciones: true,
+  evidencia: false,
 });
 const DEFAULT_BIO_SECTIONS = Object.freeze({
   datos: true,
@@ -190,8 +190,8 @@ export default function Explorer({ initialPanel = null, treeBase: TREE_BASE }) {
     }
   });
   const [favoritosOpen, setFavoritosOpen] = useState(false);
-  const [soloDocumentados, setSoloDocumentados] = useState(savedSession?.soloDocumentados ?? false);
   const [soloFavoritos, setSoloFavoritos] = useState(savedSession?.soloFavoritos ?? false);
+  const [soloDocumentados, setSoloDocumentados] = useState(savedSession?.soloDocumentados ?? false);
   const storyActionsRef = useRef(null);
   const [historiaActivaId, setHistoriaActivaId] = useState(savedSession?.historiaActivaId ?? null);
   const [historiaPasoIndex, setHistoriaPasoIndex] = useState(savedSession?.historiaPasoIndex ?? 0);
@@ -804,8 +804,8 @@ export default function Explorer({ initialPanel = null, treeBase: TREE_BASE }) {
   // (varios territorios, dinastías, categorías, siglos o relaciones) se usa
   // OR, que suele ser el comportamiento más útil al explorar una genealogía.
   const matches = (persona) => {
-    if (soloDocumentados && !documentedPeopleSet.has(persona.id)) return false;
     if (!persona) return false;
+    if (soloDocumentados && !documentedPeopleSet.has(persona.id)) return false;
     if (connectionSet) return connectionSet.has(persona.id);
     if (!focoSet && atlasSet && !atlasSet.has(persona.id)) return false;
     if (!focoSet && hiddenByCollapse.has(persona.id)) return false;
@@ -1219,8 +1219,8 @@ export default function Explorer({ initialPanel = null, treeBase: TREE_BASE }) {
         setTitulos(anteriorHistoria.titulos);
         setSiglos(anteriorHistoria.siglos);
         setRelaciones(anteriorHistoria.relaciones);
-        setSoloDocumentados(anteriorHistoria.soloDocumentados ?? false);
         setSoloFavoritos(anteriorHistoria.soloFavoritos);
+        setSoloDocumentados(anteriorHistoria.soloDocumentados ?? false);
         setAnioGlobal(anteriorHistoria.anioGlobal);
         setAnioInput(Number.isFinite(anteriorHistoria.anioGlobal) ? String(anteriorHistoria.anioGlobal) : "");
         setVistasActivas(anteriorHistoria.vistasActivas);
@@ -1373,8 +1373,8 @@ export default function Explorer({ initialPanel = null, treeBase: TREE_BASE }) {
     setTitulos([]);
     setSiglos([]);
     setRelaciones([]);
-    setSoloDocumentados(false);
     setSoloFavoritos(false);
+    setSoloDocumentados(false);
     setMode("view");
     setFocoId(null);
     setCollapsedIds([]);
@@ -1409,8 +1409,8 @@ export default function Explorer({ initialPanel = null, treeBase: TREE_BASE }) {
     setTitulos(anterior.titulos);
     setSiglos(anterior.siglos);
     setRelaciones(anterior.relaciones);
-    setSoloDocumentados(anterior.soloDocumentados ?? false);
     setSoloFavoritos(anterior.soloFavoritos);
+    setSoloDocumentados(anterior.soloDocumentados ?? false);
     setAnioGlobal(anterior.anioGlobal);
     setAnioInput(Number.isFinite(anterior.anioGlobal) ? String(anterior.anioGlobal) : "");
     setVistasActivas(anterior.vistasActivas);
@@ -1468,8 +1468,8 @@ export default function Explorer({ initialPanel = null, treeBase: TREE_BASE }) {
     dinastias.forEach((valor) => url.searchParams.append("dinastia", valor));
     titulos.forEach((valor) => url.searchParams.append("funcion", valor));
     siglos.forEach((valor) => url.searchParams.append("siglo", String(valor)));
-    if (soloDocumentados) url.searchParams.set("evidencia", "1");
     relaciones.forEach((valor) => url.searchParams.append("relacion", valor));
+    if (soloDocumentados) url.searchParams.set("evidencia", "1");
     return url.toString();
   }, [historiaActiva, historiaPasoIndex, storyReturn, focoSet, visibleIds, atlasIds, seleccion, mode, connectionIds, connectionCriterion, anioGlobal, vistaPrincipal, query, territorios, dinastias, titulos, siglos, relaciones, soloDocumentados]);
 
@@ -1556,8 +1556,8 @@ export default function Explorer({ initialPanel = null, treeBase: TREE_BASE }) {
     setSiglos(params.getAll("siglo").map((valor) => valor === SIN_FECHA ? SIN_FECHA : Number(valor)).filter((valor) =>
       valor === SIN_FECHA || opciones.siglos.includes(valor)
     ));
-    setSoloDocumentados(params.get("evidencia") === "1");
     setRelaciones(params.getAll("relacion").filter((valor) => relacionesValidas.has(valor)));
+    setSoloDocumentados(params.get("evidencia") === "1");
 
     const rutaPublica = rutaPublicaDesdePath(window.location.pathname);
     if (rutaPublica?.tipo === "territorio") {
@@ -1717,8 +1717,8 @@ export default function Explorer({ initialPanel = null, treeBase: TREE_BASE }) {
       const filtro = FILTROS_RELACION.find((item) => item.id === id);
       lista.push(filtro?.label || id);
     });
-    if (soloDocumentados) lista.push("Con datos documentados");
     if (soloFavoritos) lista.push("Favoritos");
+    if (soloDocumentados) lista.push("Con datos documentados");
     return lista;
   }, [queryTrim, query, territorios, dinastias, titulos, siglos, relaciones, soloFavoritos, soloDocumentados, opciones.titulos]);
 
