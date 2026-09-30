@@ -16,7 +16,7 @@ test('las referencias del piloto apuntan a afirmaciones existentes y a un pasaje
     const claim=personClaims(byId.get(personId)).find(item=>item.id===id);
     assert.ok(claim,`No existe la afirmación ${id}`);
     assert.ok(review.sources.length,`${id} no tiene fuente`);
-    for(const source of review.sources){assert.ok(['https://historia-hispanica.rah.es/biografias/','https://pares.cultura.gob.es/ParesBusquedas20/catalogo/autoridad/','https://www.lombardiabeniculturali.it/istituzioni/','https://www.mcu.es/ccbae/','https://www.habsburger.net/en/chapter/'].some(prefix=>source.url.startsWith(prefix)),source.url);assert.ok(source.locator);}
+    for(const source of review.sources){assert.ok(['https://historia-hispanica.rah.es/biografias/','https://pares.cultura.gob.es/ParesBusquedas20/catalogo/autoridad/','https://www.lombardiabeniculturali.it/istituzioni/','https://www.mcu.es/ccbae/','https://www.habsburger.net/en/chapter/','https://www.habsburger.net/en/persons/'].some(prefix=>source.url.startsWith(prefix)),source.url);assert.ok(source.locator);}
     if(review.exactDate)assert.equal(Number(review.exactDate.slice(0,4)),claim.value);
     reviewed.add(personId);
   }
@@ -50,6 +50,14 @@ test('Milán y los títulos italianos de los Austrias reflejan los hitos contras
   const ferdinandHungary=govt('FERN1EMP','Hungría')[0];
   assert.equal(ferdinandHungary.value.condicion,'rama');
   assert.match(ferdinandHungary.value.ambito,/Noroeste/);
+  for(const [territory,year] of [['Bohemia',1646],['Hungría',1647],['Alemania',1653]]){
+    const claims=govt('FERN4BOH',territory);
+    assert.equal(claims.length,1,territory);
+    assert.equal(claims[0].interval.from,year);
+    assert.equal(claims[0].value.condicion,'corregente');
+    assert.equal(claims[0].certainty,'documented');
+  }
+  assert.equal(govt('FERN4BOH','Sacro Imperio').length,0);
 });
 
 test('las discrepancias no se convierten en fechas documentadas ni se ocultan en la cita',()=>{
