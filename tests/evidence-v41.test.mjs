@@ -16,7 +16,11 @@ test('las referencias del piloto apuntan a afirmaciones existentes y a un pasaje
     const claim=personClaims(byId.get(personId)).find(item=>item.id===id);
     assert.ok(claim,`No existe la afirmación ${id}`);
     assert.ok(review.sources.length,`${id} no tiene fuente`);
-    for(const source of review.sources){assert.ok(['https://historia-hispanica.rah.es/biografias/','https://pares.cultura.gob.es/ParesBusquedas20/catalogo/autoridad/','https://www.lombardiabeniculturali.it/istituzioni/','https://www.mcu.es/ccbae/','https://www.habsburger.net/en/chapter/','https://www.habsburger.net/en/persons/'].some(prefix=>source.url.startsWith(prefix)),source.url);assert.ok(source.locator);}
+    for(const source of review.sources){
+      const allowedHosts=new Set(['historia-hispanica.rah.es','pares.cultura.gob.es','www.lombardiabeniculturali.it','www.mcu.es','www.habsburger.net','ccfr.bnf.fr','www.rijksmuseum.nl','luxembourg.public.lu','citadelle.namur.be','www.canonvannederland.nl','www.archieven.nl','www.dbnl.org']);
+      assert.ok(allowedHosts.has(new URL(source.url).hostname),source.url);
+      assert.ok(source.locator);
+    }
     if(review.exactDate)assert.equal(Number(review.exactDate.slice(0,4)),claim.value);
     reviewed.add(personId);
   }

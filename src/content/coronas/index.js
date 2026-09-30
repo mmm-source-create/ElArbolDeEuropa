@@ -7,6 +7,14 @@ const PARES_CARLOS='https://pares.cultura.gob.es/ParesBusquedas20/catalogo/autor
 const PARES_JUANA='https://pares.cultura.gob.es/ParesBusquedas20/catalogo/autoridad/46503';
 const PARES_CARLOS_II='https://pares.cultura.gob.es/ParesBusquedas20/catalogo/autoridad/46849';
 const HABSBURG_FERDINAND_IV='https://www.habsburger.net/en/persons/habsburg/ferdinand-iv';
+const SENLIS='https://ccfr.bnf.fr/portailccfr/ark:/16871/004a80306914';
+const RIJKSMUSEUM_NETHERLANDS='https://www.rijksmuseum.nl/en/collection/object/Allegory-on-the-Abdication-of-Emperor-Charles-v-in-Brussels--2cb744f2469fe62413bb6aab920d4e03';
+const FRISIA_1524='https://www.dbnl.org/tekst/_gid001193001_01/_gid001193001_01_0055.php';
+const UTRECHT_1528='https://www.archieven.nl/nl/zoeken?miadt=39&miaet=14&micode=BIBLIO_BOEK&minr=40665930&mivast=0&miview=ldt&mizig=307';
+const OVERIJSSEL_1528='https://www.canonvannederland.nl/nl/overijssel/overijssel/oversticht';
+const DRENTE_1536='https://www.canonvannederland.nl/nl/page/99041/kinkhorst';
+const GRONINGA_1536='https://www.canonvannederland.nl/nl/groningen/groningen/habsburgs-gezag';
+const GUELDRES_1543='https://www.rijksmuseum.nl/en/collection/node/Gelderse%2Boorlogen--e8ad752027a7c20d0e2cbf9568e18ca8';
 const acceso=(persona,territorio,desde,motivos,explicacion,fuentes=[FMG,BRIT],clase='reinado')=>({persona,territorio,desde,clase,motivos,explicacion,fuentes});
 
 // Cada explicación se ancla a un mandato real de la base, nunca al título resumen.
@@ -45,6 +53,17 @@ export const ACCESOS_CORONAS = [
  acceso('JACOBO1ING','Inglaterra',1603,['herencia'],'Sucedió a Isabel I por su ascendencia Tudor. Ya reinaba en Escocia: compartieron soberano, pero conservaron parlamentos y ordenamientos separados.',[BRIT]),
  acceso('SEGIS3VASA','Suecia',1592,['herencia'],'Heredó a su padre Juan III cuando ya era rey electo de Polonia. El conflicto con su tío Carlos y la oposición sueca terminó con su deposición en 1599.',[BRIT]),
  ...[['Flandes','condado'],['Condado de Borgoña','condado'],['Brabante','ducado'],['Limburgo','ducado'],['Holanda','condado'],['Henao','condado'],['Zelanda','condado']].map(([t,c])=>acceso('CARLOS5',t,1506,['herencia'],'La muerte de Felipe el Hermoso transmitió a Carlos estos patrimonios de origen borgoñón. Durante su minoría hubo regencias: heredar un título no significa que el niño dirigiera personalmente el gobierno.',[RAH],c)),
+ ...[['Namur','condado'],['Luxemburgo','ducado']].map(([t,c])=>acceso('CARLOS5',t,1506,['herencia'],'Carlos heredó este territorio del patrimonio borgoñón de Felipe I; el año de acceso sigue la sucesión paterna. Su representación cartográfica es aproximada.',[RIJKSMUSEUM_NETHERLANDS],c)),
+ acceso('CARLOS5','Frisia',1524,['acuerdo'],'Carlos había adquirido derechos en 1515, pero el acuerdo general con los frisones quedó cerrado en 1524.',[FRISIA_1524],'señorío'),
+ acceso('CARLOS5','Utrecht',1528,['acuerdo'],'El obispo transfirió a Carlos el poder temporal en 1528. Utrecht permanece sin color porque el SVG carece de un polígono propio.',[UTRECHT_1528],'señorío'),
+ acceso('CARLOS5','Overijssel',1528,['acuerdo'],'Overijssel reconoció a Carlos como señor en 1528, dentro de la separación del antiguo poder temporal episcopal.',[OVERIJSSEL_1528],'señorío'),
+ acceso('CARLOS5','Drente',1536,['acuerdo'],'Drente pasó a la autoridad de Carlos en 1536; la geometría es una aproximación regional.',[DRENTE_1536],'señorío'),
+ acceso('CARLOS5','Groninga',1536,['acuerdo'],'La ciudad y los Ommelanden se sometieron a Carlos en 1536; el SVG solo permite aproximar los Ommelanden.',[GRONINGA_1536],'señorío'),
+ acceso('CARLOS5','Güeldres',1543,['acuerdo','conquista'],'El tratado de Venlo de 1543 cerró las guerras de Güeldres y confirmó la autoridad de Carlos sobre el ducado.',[GUELDRES_1543],'ducado'),
+ acceso('FEL1CAST','Condado de Borgoña',1493,['acuerdo','herencia'],'El tratado de Senlis restituyó el Franco Condado a la casa de Austria. Felipe heredó esos derechos; no se trata del ducado francés.',[SENLIS],'condado'),
+ acceso('FEL1CAST','Artois',1493,['acuerdo','herencia'],'Artois fue otro de los condados restituidos por Senlis a la casa de Austria. El comienzo personal se infiere de esa sucesión.',[SENLIS],'condado'),
+ acceso('CARLOS5','Artois',1506,['herencia'],'Carlos recibió Artois dentro de la herencia de Felipe I. Senlis documenta la restitución anterior a la casa de Austria; el año de acceso procede de la sucesión paterna.',[SENLIS],'condado'),
+ acceso('FEL2ESP','Artois',1555,['herencia'],'Felipe recibió Artois en el relevo de los Países Bajos borgoñones. El tratado de Senlis documenta la restitución de 1493, no el día exacto del relevo de 1555.',[SENLIS],'condado'),
  acceso('CARLOS5','Borgoña',1506,['herencia'],'Carlos conservó el título ducal heredado de Felipe, pero el ducado estaba bajo control francés. Esta pretensión no se cuenta como gobierno efectivo; el Condado de Borgoña tenía una situación distinta.',[RAH],'ducado'),
  ...['León','Nápoles','Trinacria'].map(t=>acceso('CARLOS5',t,1516,['herencia'],'La muerte de Fernando abrió esta sucesión dentro del patrimonio dinástico hispánico. Cada territorio mantuvo su título y sus instituciones; los reconocimientos y juramentos no ocurrieron todos a la vez.',[RAH])),
  ...[['Milán','ducado'],['Nápoles','reinado'],['Trinacria','reinado'],['Cerdeña','reinado']].map(([t,c])=>acceso('CARLOS2ESP',t,1665,['herencia'],'Carlos II heredó este dominio siendo menor de edad. PARES enumera sus títulos italianos; Mariana de Austria ejerció la regencia durante su minoría.',[PARES_CARLOS_II],c)),

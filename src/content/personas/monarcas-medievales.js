@@ -22,7 +22,10 @@ export const MONARCAS_MEDIEVALES = Object.freeze({
     "resumen": "Duque de Borgoña y constructor de un poderoso estado territorial entre Francia y el Imperio. Su corte fue una de las más brillantes de la Europa del siglo XV."
   },
   "CAR1BORG": {
-    "resumen": "Último gran duque Valois de Borgoña. Su intento de convertir sus dominios dispersos en una potencia territorial continua terminó con su muerte ante Nancy."
+    "resumen": "Último gran duque Valois de Borgoña. Murió ante Nancy en 1477; la Corona francesa incorporó el ducado, mientras su hija María heredó derechos sobre los Países Bajos y el Franco Condado. La herencia se disputó y no permaneció como un Estado unido."
+  },
+  "MARIABORG": {
+    "resumen": "Heredera de Carlos el Temerario desde 1477 y duquesa titular de Borgoña. Su matrimonio con Maximiliano de Habsburgo vinculó a esa casa con los Países Bajos borgoñones. La disputa con Francia por el ducado, el Franco Condado y Artois impide presentar toda la herencia como territorio que gobernó sin interrupciones."
   },
   "ENRIQ8ING": {
     "resumen": "Rey Tudor cuya ruptura con Roma transformó la Iglesia y la política inglesas. Sus matrimonios y problemas sucesorios condicionaron la historia dinástica del siglo XVI."
@@ -217,7 +220,7 @@ export const MONARCAS_MEDIEVALES = Object.freeze({
     "resumen": "Reina de Castilla y Aragón, hija de los Reyes Católicos y madre de Carlos V. Su incapacidad política efectiva permitió que el gobierno pasara sucesivamente a su padre, su esposo y su hijo."
   },
   "FEL1CAST": {
-    "resumen": "Archiduque Habsburgo y duque de Borgoña que se convirtió en rey de Castilla por su matrimonio con Juana I. Su unión dinástica llevó la herencia borgoñona y austríaca a la siguiente generación hispánica."
+    "resumen": "Hijo de María de Borgoña y Maximiliano de Habsburgo, heredó los Países Bajos y, tras Senlis (1493), el Franco Condado y Artois. Conservó la dignidad de duque de Borgoña, aunque el ducado estaba bajo la Corona francesa. Su matrimonio con Juana I lo llevó a Castilla y transmitió patrimonios distintos a Carlos V."
   },
   "MAN1PORT": {
     "resumen": "Rey de Portugal durante el gran ciclo de expansión oceánica. Bajo su reinado se consolidaron las rutas portuguesas hacia India, África y Brasil y Lisboa se convirtió en un gran centro imperial."

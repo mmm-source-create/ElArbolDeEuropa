@@ -2,10 +2,18 @@
 
 Atlas histórico y genealógico para explorar personas, dinastías, territorios y sus conexiones familiares.
 
-- [Web](https://www.treeofeurope.eu/es/) · **V4.1**
-- [Cambios de esta versión](docs/V4.1.md) · [Documentación e historial](docs/README.md) · [Seguridad](SECURITY.md)
+- [Web](https://www.treeofeurope.eu/es/) · **V4.2**
+- [Cambios de esta versión](docs/V4.2.md) · [Documentación e historial](docs/README.md) · [Seguridad](SECURITY.md)
 
-La V4.1 añade un filtro para encontrar personas con al menos una afirmación documentada y continúa la revisión de la base histórica. «Con datos documentados» no significa que toda la ficha esté verificada: el panel de evidencia identifica exactamente qué afirmación tiene fuente, certeza y fecha de revisión. La [revisión de Carlos V y los Austrias](docs/V4.1.md#revisión-de-los-austrias-y-los-dominios-italianos) distingue el gobierno de Milán, la investidura discutida de Felipe II, la titularidad de Cerdeña, los límites del gobierno de Fernando I en Hungría y los títulos de Fernando IV.
+La V4.2 amplía la historia de los [Capetos](docs/CAPETOS.md), separa el **ducado** de Borgoña del **Franco Condado** en la herencia de los Austrias y hace visibles los [territorios irlandeses](docs/CARTOGRAFIA_IRLANDA.md) del Atlas. El tratado de Senlis de 1493 fundamenta la restitución a la casa de Austria del condado de Borgoña y Artois; Carlos V mantuvo un título ducal sobre Borgoña, pero ese ducado estaba en manos francesas. Las delimitaciones irlandesas son aproximaciones regionales por periodo, no fronteras exactas de cada señorío.
+
+La [revisión cartográfica de Borgoña y los Países Bajos](docs/REVISION_BORGONA.md) corrige un error de la primera versión: `Zealand` era la isla danesa cercana a Copenhague, no Zelanda neerlandesa. Carlos V incluye ahora Namur y Luxemburgo, además de Frisia, Overijssel, Drente, Groninga y Güeldres desde sus respectivos accesos. Utrecht y Zelanda permanecen en la ficha histórica, pero sin color en el mapa hasta disponer de polígonos propios.
+
+## Recorrer el proyecto
+
+La [portada](https://www.treeofeurope.eu/es/) ofrece entradas al Atlas, las historias guiadas y las fichas. En el Atlas, busca una persona para ver su árbol, biografía, cronología y territorios vinculados; el año global limita el mapa a los gobiernos registrados entonces. Las fichas de [dinastías](https://www.treeofeurope.eu/es/dinastias) y [territorios](https://www.treeofeurope.eu/es/territorios) explican las conexiones históricas. La [guía de uso](docs/ATLAS.md) recoge las funciones y sus controles.
+
+El panel de evidencia distingue afirmaciones documentadas, aproximadas, discutidas, inferidas y pendientes de revisión. El filtro **Con datos documentados** selecciona personas con *al menos una* afirmación individual citada; no certifica toda su ficha. La bibliografía de contexto tampoco demuestra por sí sola cada parentesco o fecha. Las correcciones pueden enviarse a [info@treeofeurope.eu](mailto:info@treeofeurope.eu) indicando el dato, la fuente y el pasaje correspondiente.
 
 ## Instalación y validación
 
@@ -32,6 +40,7 @@ Las variables opcionales se documentan en `env.example`. `VITE_SITE_URL` debe se
 | Evidencia por afirmación y revisiones editoriales | `src/evidence/` |
 | Minibiografías | `src/content/personas/` |
 | Territorios y filtros | `src/data/territorios.js`, `src/Territorios.jsx` |
+| Correspondencias de regiones del mapa | `src/Territorios.jsx`, `src/MapChart_Map.svg`, `docs/CARTOGRAFIA_IRLANDA.md` |
 | Historias de casas y territorios | `src/content/dinastias/`, `src/content/territorios/` |
 | Sucesiones y títulos explicados | `src/content/sucesiones/`, `src/content/coronas/` |
 | Bibliografía compartida | `src/content/sources.js` |
