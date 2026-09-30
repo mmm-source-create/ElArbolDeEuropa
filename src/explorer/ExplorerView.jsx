@@ -671,6 +671,7 @@ export default function ExplorerView({ vm }) {
                       />
                     ))}
                   </div>
+                </FilterSection>
                 <FilterSection
                   title="Evidencia histórica"
                   open={filterSectionsOpen.evidencia}
@@ -682,7 +683,6 @@ export default function ExplorerView({ vm }) {
                     <span>Con al menos un dato documentado</span>
                   </label>
                   <p className="evidence-filter-hint">La revisión es aún parcial. Cada persona visible tiene al menos una afirmación contrastada con una fuente concreta; otros datos de su ficha pueden seguir pendientes.</p>
-                </FilterSection>
                 </FilterSection>
               </div>
 
