@@ -25,6 +25,7 @@ export function sanitizeSession(value, nested = false) {
     ['mode', ['view','compare','foco','conexion'], 'view'], ['timelineMode', ['personas','eventos','ambos'], 'personas'],
     ['modoComparacion', ['corto','sangre','matrimonio','rutas'], 'corto'], ['focoAlcance', ['cercana','ascendencia','descendencia'], 'cercana'],
   ]) out[key] = options.includes(value[key]) ? value[key] : fallback;
+  out.soloDocumentados = value.soloDocumentados === true;
   out.soloFavoritos = value.soloFavoritos === true;
   out.vistasActivas = { arbol: value.vistasActivas?.arbol !== false, mapa: value.vistasActivas?.mapa !== false };
   if (!out.vistasActivas.arbol && !out.vistasActivas.mapa) out.vistasActivas.arbol = true;
@@ -53,7 +54,7 @@ export function sanitizeSession(value, nested = false) {
 export function shouldResumeAtlas(href) {
   const url = new URL(href, DEFAULT_SITE_URL);
   return /^\/es\/?$/.test(url.pathname) && url.searchParams.get('continuar') === '1'
-    && !['seleccion','familia','arbol','conectar','vinculos','persona','territorio','territorios','dinastia','dinastias','titulo','titulos','siglo','siglos','relaciones','vista','q','anio','historia'].some(k => url.searchParams.has(k));
+    && !['seleccion','familia','arbol','conectar','vinculos','persona','territorio','territorios','dinastia','dinastias','titulo','titulos','siglo','siglos','relaciones','vista','q','anio','historia','evidencia'].some(k => url.searchParams.has(k));
 }
 
 export function readAtlasSession(storage) {
