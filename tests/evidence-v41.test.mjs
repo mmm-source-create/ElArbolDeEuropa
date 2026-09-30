@@ -1,0 +1,63 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import {PERSONAS} from '../src/personas.jsx';
+import {TERRITORIOS} from '../src/data/territorios.js';
+import {CLAIM_REVIEWS,PILOT_PERSON_IDS,citationText,coverageTasks,personClaims} from '../src/evidence/claims.js';
+
+const byId=new Map(PERSONAS.map(person=>[person.id,person]));
+
+test('las referencias del piloto apuntan a afirmaciones existentes y a un pasaje localizado',()=>{
+  assert.equal(PILOT_PERSON_IDS.length,13);
+  for(const id of PILOT_PERSON_IDS)assert.ok(byId.has(id),id);
+  const reviewed=new Set();
+  for(const [id,review] of Object.entries(CLAIM_REVIEWS).filter(([id])=>!id.includes('GERALD8KILDARE'))){
+    const personId=id.split(':')[1];
+    const claim=personClaims(byId.get(personId)).find(item=>item.id===id);
+    assert.ok(claim,`No existe la afirmación ${id}`);
+    assert.ok(review.sources.length,`${id} no tiene fuente`);
+    for(const source of review.sources){assert.ok(source.url.startsWith('https://historia-hispanica.rah.es/biografias/')||source.url.startsWith('https://pares.cultura.gob.es/ParesBusquedas20/catalogo/autoridad/'));assert.ok(source.locator);}
+    if(review.exactDate)assert.equal(Number(review.exactDate.slice(0,4)),claim.value);
+    reviewed.add(personId);
+  }
+  assert.ok(reviewed.size>=9);
+  assert.ok(Object.keys(CLAIM_REVIEWS).length>=45);
+});
+
+test('las discrepancias no se convierten en fechas documentadas ni se ocultan en la cita',()=>{
+  const fernando=personClaims(byId.get('FERN2ARAG')).find(item=>item.field==='Nacimiento');
+  assert.equal(fernando.certainty,'disputed');
+  assert.equal(fernando.exactDate,null);
+  assert.equal(fernando.sources.length,2);
+  assert.match(citationText(fernando,'Fernando II'),/1452-03-10.*1452-05-10/);
+  const juana=personClaims(byId.get('JUANA1CAST'));
+  assert.equal(juana.find(item=>item.field==='Gobierno'&&item.value.territorio==='Castilla').certainty,'documented');
+  assert.equal(juana.find(item=>item.field==='Gobierno'&&item.value.territorio==='Navarra').certainty,'disputed');
+  assert.equal(juana.find(item=>item.field==='Gobierno'&&item.value.territorio==='Nápoles').certainty,'disputed');
+  const carlos=personClaims(byId.get('CARLOS5'));
+  assert.equal(carlos.find(item=>item.field==='Gobierno'&&item.value.territorio==='Castilla').certainty,'inferred');
+  assert.equal(carlos.find(item=>item.field==='Gobierno'&&item.value.territorio==='Sacro Imperio').certainty,'disputed');
+  assert.ok(coverageTasks(PERSONAS,Infinity,TERRITORIOS).some(task=>task.kind==='conflict'&&task.personId==='JUANA1CAST'));
+});
+
+test('la fecha incierta no se transforma en fecha exacta y la cita utiliza nombres y localizadores',()=>{
+  const uncertain=personClaims(byId.get('ISABPORT3')).find(item=>item.field==='Nacimiento');
+  assert.equal(uncertain.certainty,'approximate');
+  assert.equal(uncertain.interval.precision,'circa');
+  assert.equal(uncertain.timeLabel,'¿1428?');
+  assert.equal(uncertain.exactDate,null);
+  const carlos=byId.get('CARLOS5');
+  const father=personClaims(carlos).find(item=>item.field==='Padre');
+  const text=citationText(father,carlos.nombre,'es',id=>byId.get(id)?.nombre);
+  assert.match(text,/Felipe I de Castilla/);
+  assert.match(text,/Biografía, párrafo 1/);
+  assert.doesNotMatch(text,/FEL1CAST/);
+  assert.ok(personClaims(carlos).some(item=>item.field==='Gobierno'&&item.certainty==='pending'));
+});
+
+test('la cola editorial separa revisión pendiente de posible error y enlaza huecos territoriales',()=>{
+  const tasks=coverageTasks(PERSONAS,Infinity,TERRITORIOS);
+  assert.ok(tasks.some(task=>task.kind==='government'&&task.status==='not_researched'));
+  assert.ok(tasks.some(task=>task.kind==='territory_gap'&&task.territory));
+  assert.ok(tasks.every(task=>task.status!=='possible_error'||['chronology','conflict'].includes(task.kind)));
+  assert.equal(new Set(tasks.map(task=>task.id)).size,tasks.length);
+});
