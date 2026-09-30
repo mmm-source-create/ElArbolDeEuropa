@@ -53,6 +53,12 @@ export function personClaims(person, reviews = CLAIM_REVIEWS) {
   }
   return claims;
 }
+// This filter describes people with at least one individually sourced,
+// documented claim. It does not certify their entire biography.
+export function hasDocumentedClaim(person) {
+  return personClaims(person).some(claim => claim.certainty === 'documented' && claim.sources.length > 0);
+}
+
 
 export function coverageReport(people, territories = {}, stories = []) {
   const claims = people.flatMap(person => personClaims(person));
