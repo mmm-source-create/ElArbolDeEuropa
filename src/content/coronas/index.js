@@ -6,6 +6,7 @@ const MILAN_HISTORY='https://www.lombardiabeniculturali.it/istituzioni/storia/?u
 const PARES_CARLOS='https://pares.cultura.gob.es/ParesBusquedas20/catalogo/autoridad/46080';
 const PARES_JUANA='https://pares.cultura.gob.es/ParesBusquedas20/catalogo/autoridad/46503';
 const PARES_CARLOS_II='https://pares.cultura.gob.es/ParesBusquedas20/catalogo/autoridad/46849';
+const HABSBURG_FERDINAND_IV='https://www.habsburger.net/en/persons/habsburg/ferdinand-iv';
 const acceso=(persona,territorio,desde,motivos,explicacion,fuentes=[FMG,BRIT],clase='reinado')=>({persona,territorio,desde,clase,motivos,explicacion,fuentes});
 
 // Cada explicación se ancla a un mandato real de la base, nunca al título resumen.
@@ -36,6 +37,9 @@ export const ACCESOS_CORONAS = [
  acceso('CARLOS5','Milán',1535,['herencia'],'La muerte de Francesco II Sforza devolvió el feudo imperial a Carlos V, que lo mantuvo bajo control directo. La investidura del hijo Felipe y la posesión de 1556 fueron fases posteriores.',[MILAN],'ducado'),
  acceso('FEL2ESP','Milán',1546,['nombramiento'],'La ficha histórica lombarda fecha la investidura de Felipe en 1546; otra cronología institucional sitúa el título en 1540. El control directo imperial continuó hasta 1556: este acceso representa una dignidad disputada en su fecha, no posesión efectiva.',[MILAN],'ducado'),
  acceso('FEL2ESP','Milán',1556,['abdicación'],'La narración histórica lombarda sitúa la toma de posesión de Felipe tras la abdicación de Carlos V en 1556.',[MILAN_HISTORY],'ducado'),
+ acceso('FERN4BOH','Bohemia',1646,['nombramiento'],'Coronado rey en vida de su padre Fernando III. El título no supone una sucesión imperial ni una autoridad exclusiva sobre todos los dominios paternos.',[HABSBURG_FERDINAND_IV]),
+ acceso('FERN4BOH','Hungría',1647,['nombramiento'],'Coronado rey en vida de Fernando III. Su padre siguió reinando; se registra como corregencia, no como sucesión exclusiva.',[HABSBURG_FERDINAND_IV]),
+ acceso('FERN4BOH','Alemania',1653,['elección'],'Elegido rey de Romanos y heredero designado del emperador Fernando III; murió antes que él y nunca llegó a emperador.',[HABSBURG_FERDINAND_IV]),
  acceso('CARLOS5','Sacro Imperio',1519,['elección'],'La elección de 1519 abrió su etapa imperial; fue coronado rey de Romanos en 1520 y emperador por el papa en 1530. El intervalo de la base parte de la elección, no de la coronación papal.',[RAH], 'imperio'),
  acceso('FEL2ESP','Portugal',1580,['herencia','conquista'],'La muerte del cardenal Enrique abrió una disputa. Felipe alegó su descendencia de Manuel I por Isabel de Portugal y se impuso militarmente; las Cortes de Tomar lo reconocieron en 1581.',[RAH]),
  acceso('JACOBO1ING','Inglaterra',1603,['herencia'],'Sucedió a Isabel I por su ascendencia Tudor. Ya reinaba en Escocia: compartieron soberano, pero conservaron parlamentos y ordenamientos separados.',[BRIT]),
