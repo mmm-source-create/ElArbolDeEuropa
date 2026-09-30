@@ -21,6 +21,29 @@ test('la herencia borgoñona no convierte el título ducal de Carlos V en posesi
   assert.ok(personClaims(carlos).some(c=>c.field==='Gobierno'&&c.value.territorio==='Condado de Borgoña'&&c.certainty==='inferred'&&c.sources.length));
 });
 
+test('Zelanda no apunta a la isla danesa y el mapa de Carlos V incluye sus provincias neerlandesas reales',()=>{
+  const svg=fs.readFileSync(new URL('../src/MapChart_Map.svg',import.meta.url),'utf8');
+  const svgIds=new Set([...svg.matchAll(/\bid="([^"]+)"/g)].map(match=>match[1]));
+  assert.ok(svgIds.has('Zealand'),'el SVG contiene la isla danesa que causó el error');
+  assert.deepEqual(REINO_A_IDS.Zelanda,[],'no existe un polígono de Zelanda neerlandesa');
+  assert.deepEqual(REINO_A_IDS.Utrecht,[],'no existe un polígono propio de Utrecht');
+  const carlos=person('CARLOS5');
+  const expected={Namur:['Namur'],Luxemburgo:['East_Luxembourg','West_Luxembourg'],Frisia:['Friesland'],Overijssel:['Overijssel'],Drente:['Drenthe'],Groninga:['Ommelanden'],'Güeldres':['Gelderland']};
+  for(const [territory,ids] of Object.entries(expected)){
+    assert.deepEqual(REINO_A_IDS[territory],ids,territory);
+    for(const id of ids)assert.ok(svgIds.has(id),`${territory}: falta ${id}`);
+  }
+  const active=year=>new Set(reinadosActivos(carlos,year,{soloEfectivos:true}).map(g=>g.territorio));
+  assert.ok(active(1506).has('Namur') && active(1506).has('Luxemburgo'));
+  for(const [year,territory] of [[1524,'Frisia'],[1528,'Overijssel'],[1536,'Drente'],[1536,'Groninga'],[1543,'Güeldres']]){
+    assert.ok(!active(year-1).has(territory),`${territory} aún no pertenecía a Carlos en ${year-1}`);
+    assert.ok(active(year).has(territory),`${territory} falta en ${year}`);
+  }
+  const coloured=new Set([...active(1544)].flatMap(territory=>idsDeReinoEnAño(territory,1544)));
+  for(const ids of Object.values(expected))for(const id of ids)assert.ok(coloured.has(id),`falta colorear ${id}`);
+  assert.ok(!coloured.has('Zealand'),'Copenhague no debe recibir el color de Carlos V');
+});
+
 test('Irlanda usa regiones presentes en el SVG y no pinta la isla entera en 1542',()=>{
   const svg=fs.readFileSync(new URL('../src/MapChart_Map.svg',import.meta.url),'utf8');
   const svgIds=new Set([...svg.matchAll(/\bid="([^"]+)"/g)].map(match=>match[1]));

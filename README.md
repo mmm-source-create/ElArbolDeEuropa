@@ -7,6 +7,8 @@ Atlas histórico y genealógico para explorar personas, dinastías, territorios 
 
 La V4.2 amplía la historia de los [Capetos](docs/CAPETOS.md), separa el **ducado** de Borgoña del **Franco Condado** en la herencia de los Austrias y hace visibles los [territorios irlandeses](docs/CARTOGRAFIA_IRLANDA.md) del Atlas. El tratado de Senlis de 1493 fundamenta la restitución a la casa de Austria del condado de Borgoña y Artois; Carlos V mantuvo un título ducal sobre Borgoña, pero ese ducado estaba en manos francesas. Las delimitaciones irlandesas son aproximaciones regionales por periodo, no fronteras exactas de cada señorío.
 
+La [revisión cartográfica de Borgoña y los Países Bajos](docs/REVISION_BORGONA.md) corrige un error de la primera versión: `Zealand` era la isla danesa cercana a Copenhague, no Zelanda neerlandesa. Carlos V incluye ahora Namur y Luxemburgo, además de Frisia, Overijssel, Drente, Groninga y Güeldres desde sus respectivos accesos. Utrecht y Zelanda permanecen en la ficha histórica, pero sin color en el mapa hasta disponer de polígonos propios.
+
 ## Recorrer el proyecto
 
 La [portada](https://www.treeofeurope.eu/es/) ofrece entradas al Atlas, las historias guiadas y las fichas. En el Atlas, busca una persona para ver su árbol, biografía, cronología y territorios vinculados; el año global limita el mapa a los gobiernos registrados entonces. Las fichas de [dinastías](https://www.treeofeurope.eu/es/dinastias) y [territorios](https://www.treeofeurope.eu/es/territorios) explican las conexiones históricas. La [guía de uso](docs/ATLAS.md) recoge las funciones y sus controles.

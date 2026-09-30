@@ -1,4 +1,9 @@
 export const TERRITORIOS = Object.freeze({
+  "Frisia": {"clase":"señorío","naturaleza":"entidad","componentes":[],"nota":"Señorío de Frisia. Carlos V adquirió derechos en 1515, pero la sumisión general se acordó en 1524; el mapa usa la región Friesland del SVG."},
+  "Utrecht": {"clase":"señorío","naturaleza":"entidad","componentes":[],"nota":"Poder temporal recibido del obispo en 1528. El SVG actual no tiene un polígono propio para Utrecht."},
+  "Overijssel": {"clase":"señorío","naturaleza":"entidad","componentes":[],"nota":"Parte del Oversticht, reconoció a Carlos V como señor en 1528; no se confunde con el obispado espiritual de Utrecht."},
+  "Drente": {"clase":"señorío","naturaleza":"entidad","componentes":[],"nota":"Jurisdicción del norte, bajo autoridad efectiva de Carlos V desde 1536 según la cronología territorial utilizada."},
+  "Groninga": {"clase":"señorío","naturaleza":"entidad","componentes":[],"nota":"La ciudad y los Ommelanden aceptaron la autoridad de Carlos V en 1536. El polígono Ommelanden es una aproximación regional."},
   "Herzegovina": {"clase":"ducado","naturaleza":"entidad","componentes":[],"nota":"Dominios de los Kosača asociados al título de duque de San Sava desde 1448. Distintos de la corona bosnia; no se les asigna una geometría moderna."},
   "Saluzzo": {"clase":"marquesado","naturaleza":"entidad","componentes":[],"nota":"Marquesado alerámico del Piamonte occidental. La dependencia feudal respecto de otros poderes no elimina su identidad territorial."},
   "Albret": {"clase":"señorío","naturaleza":"entidad","componentes":[],"etapas":[{"desde":1550,"clase":"ducado"}],"nota":"Señorío de la casa de Albret, elevado a ducado en el siglo XVI; distinto del reino de Navarra."},

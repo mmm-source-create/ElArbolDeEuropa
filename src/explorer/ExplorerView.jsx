@@ -35,6 +35,7 @@ import "./v40.css";
 const SEARCH_DYNASTIES = [...new Set(PERSONAS.map(persona => persona.dinastia).filter(Boolean))];
 const SEARCH_TERRITORIES = Object.keys(TERRITORIOS);
 const IRISH_MAP_TERRITORIES = new Set(['Irlanda','Connacht','Leinster','Tír Eoghain','Tír Chonaill','Condado de Tyrone','Condado de Tyrconnell','Thomond','Condado de Thomond','Desmond','Condado de Desmond','Condado de Clancare','Condado de Ulster','Kildare','Ormond','Clanricarde','Vizcondado de Mayo']);
+const UNMAPPED_LOW_COUNTRIES = new Set(['Zelanda','Utrecht']);
 
 const EuropeYearDialog = React.lazy(() => import('./EuropeYearDialog.jsx'));
 const AtlasCrowns = React.lazy(() => import('./AtlasCrowns.jsx'));
@@ -863,6 +864,10 @@ export default function ExplorerView({ vm }) {
                       ? `Año ${anioGlobal}: haz clic sobre una persona para ver qué territorios gobernaba entonces.`
                       : "Haz clic sobre una persona para ver los territorios que gobernó.")}
                 {seleccion?.gobiernos?.some(gobierno => IRISH_MAP_TERRITORIES.has(gobierno.territorio)) && <span> Irlanda: contornos regionales aproximados; los señoríos y condados no coincidían necesariamente con estas divisiones.</span>}
+                {seleccion && (() => {
+                  const missing = territoriosGobernadosEnAño(seleccion, anioGlobal).filter(nombre => UNMAPPED_LOW_COUNTRIES.has(nombre));
+                  return missing.length ? <span> Sin polígono propio en este mapa: {missing.join(', ')}.</span> : null;
+                })()}
               </div>
             </section>
           )}

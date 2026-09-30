@@ -59,7 +59,16 @@ export const REINO_A_IDS = {
   // duques antes de la partición; los títulos posteriores se pintan por feudo.
   "Condado de Borgoña": ["Aval", "Millieu", "Amont"],
   Flandes: ["West_Flanders", "East_Flanders", "Roman_Flanders"],
-  Zelanda: ["Zealand"],
+  Namur: ["Namur"],
+  "Güeldres": ["Gelderland"],
+  Frisia: ["Friesland"],
+  Overijssel: ["Overijssel"],
+  Drente: ["Drenthe"],
+  Groninga: ["Ommelanden"],
+  // El SVG no desglosa Zelanda ni Utrecht. "Zealand" es la isla danesa:
+  // usarla aquí pintaría Copenhague como posesión de Carlos V.
+  Zelanda: [],
+  Utrecht: [],
 
   // Las unidades del SVG son una aproximación regional, no deslindes de
   // señoríos o condados modernos. Véase docs/CARTOGRAFIA_IRLANDA.md.
@@ -133,7 +142,14 @@ export const REINO_COLOR = {
   Borgoña: '#8E295C',
   "Condado de Borgoña": '#8E295C',
   Flandes: '#8E295C',
+  Namur: '#8E295C',
+  "Güeldres": '#8E295C',
+  Frisia: '#8E295C',
+  Overijssel: '#8E295C',
+  Drente: '#8E295C',
+  Groninga: '#8E295C',
   Zelanda: '#8E295C',
+  Utrecht: '#8E295C',
   Irlanda: '#45705D',
   Connacht: '#497B69',
   Leinster: '#4D7D72',
