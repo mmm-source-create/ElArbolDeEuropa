@@ -2,24 +2,13 @@
 // on that biography; claim-level sources must be entered explicitly below.
 import {RELEVOS} from '../content/sucesiones/index.js';
 import {ACCESOS_CORONAS} from '../content/coronas/index.js';
+import {CLAIM_REVIEWS, EDITORIAL_HISTORY, PILOT_PERSON_IDS} from './reviewRecords.js';
+export {CLAIM_REVIEWS, EDITORIAL_HISTORY, PILOT_PERSON_IDS};
 export const CERTAINTY = Object.freeze({
   documented: 'Documentado', approximate: 'Aproximado', disputed: 'Discutido',
   inferred: 'Inferido', pending: 'Pendiente de revisión',
 });
 
-// Keyed by stable assertion ID. A review must name the exact source and editor.
-// Empty on migration: the legacy bibliography does not identify which passage
-// supports each date, relationship or mandate.
-const DIB_GERALD = {title:'Dictionary of Irish Biography · Gerald FitzGerald (Gearóid Mór)',url:'https://www.dib.ie/index.php/biography/fitzgerald-gerald-gearoid-mor-a3148'};
-export const CLAIM_REVIEWS = Object.freeze({
-  'person:GERALD8KILDARE:birth':{certainty:'approximate',sources:[DIB_GERALD],note:'El repertorio fecha el nacimiento en 1456 o 1457; el año del Atlas es orientativo.',reviewedAt:'2026-09-28',editor:'El Árbol de Europa'},
-  'person:GERALD8KILDARE:death':{certainty:'documented',sources:[DIB_GERALD],note:'El repertorio registra el fallecimiento el 3 de septiembre de 1513.',reviewedAt:'2026-09-28',editor:'El Árbol de Europa'},
-  'person:GERALD8KILDARE:father':{certainty:'documented',sources:[DIB_GERALD],note:'Identificado como hijo de Thomas FitzGerald, VII conde de Kildare.',reviewedAt:'2026-09-28',editor:'El Árbol de Europa'},
-});
-export const EDITORIAL_HISTORY = Object.freeze([
-  {id:'v4-evidence-schema',scope:'all',date:'2026-09-28',editor:'El Árbol de Europa',change:'Registro de afirmaciones añadido; datos históricos existentes conservados.',reason:'Hacer visible qué afirmaciones aún necesitan una fuente específica.'},
-  {id:'v4-gerald-review',scope:'GERALD8KILDARE',date:'2026-09-28',editor:'El Árbol de Europa',change:'Se añadió una referencia específica a nacimiento, muerte y filiación paterna.',reason:'La entrada biográfica precisa esos datos y aclara que el nacimiento es aproximado.'},
-]);
 
 const year = value => Number.isInteger(value) ? value : null;
 const interval = (from, to = from) => ({from: year(from), to: year(to)});
@@ -38,7 +27,9 @@ export function personClaims(person, reviews = CLAIM_REVIEWS) {
       : field === 'Fallecimiento' && (person.muerAprox || person.documentacion?.fechas?.muer?.tipo === 'aproximada') ? 'approximate'
       : 'pending';
     claims.push({id, subject:{kind:'person', id:person.id}, field, value,
-      interval:time, certainty, sources:review.sources || [],
+      interval:{...time,precision:review.precision || 'year'}, certainty, sources:review.sources || [],
+      exactDate:review.exactDate || null,timeLabel:review.timeLabel || null,
+      alternatives:review.alternatives || [],
       note:review.note || fallbackNote || documentaryNote?.texto || '',
       reviewedAt:review.reviewedAt || null, editor:review.editor || null});
   };
@@ -109,13 +100,57 @@ export function coverageReport(people, territories = {}, stories = []) {
     possibleContradictions,territoryGaps,storiesToReview};
 }
 
-export function citationText(claim, personName, locale = 'es') {
+export function citationText(claim, personName, locale = 'es', personNameById = () => null) {
   const english = locale === 'en';
-  const source = claim.sources[0];
   const subject = personName || claim.subject.id;
   const value = typeof claim.value === 'object'
     ? `${claim.field === 'Sucesión' ? (english ? 'Succession' : 'Sucesión') : claim.value.titulo || (english ? 'Government' : 'Gobierno')} ${english ? 'in' : 'en'} ${claim.value.territorio}, ${claim.interval.from ?? '?'}${claim.interval.to !== claim.interval.from ? `–${claim.interval.to ?? '?'}` : ''}`
-    : String(claim.value);
+    : ['Padre','Madre','Matrimonio o vínculo conyugal'].includes(claim.field)
+      ? personNameById(claim.value) || String(claim.value) : claim.timeLabel || String(claim.value);
   const field = english ? ({Nacimiento:'birth',Fallecimiento:'death',Padre:'father',Madre:'mother','Matrimonio o vínculo conyugal':'marriage or partnership',Gobierno:'government',Sucesión:'succession'}[claim.field] || claim.field.toLowerCase()) : claim.field.toLowerCase();
-  return `${subject}, ${field}: ${value}. El Árbol de Europa, ${english ? 'claim' : 'afirmación'} ${claim.id}. ${source ? `${source.title} (${source.url}).` : english ? 'No claim-specific source; pending review.' : 'Sin fuente específica; pendiente de revisión.'}`;
+  const located = claim.sources.length ? claim.sources.map(source=>`${source.title}${source.locator ? `, ${source.locator}` : ''} (${source.url})`).join('; ')+'.' : english ? 'No claim-specific source; pending review.' : 'Sin fuente específica; pendiente de revisión.';
+  const alternatives=claim.alternatives.length ? ` ${english ? 'Recorded alternatives' : 'Alternativas registradas'}: ${claim.alternatives.join('; ')}.` : '';
+  return `${subject}, ${field}: ${value}${claim.exactDate ? ` (${claim.exactDate})` : ''}. El Árbol de Europa, ${english ? 'claim' : 'afirmación'} ${claim.id}. ${located}${alternatives}`;
+}
+
+export function formatClaimDate(claim,locale='es') {
+  if (claim?.timeLabel) return claim.timeLabel;
+  if (claim?.exactDate) return new Intl.DateTimeFormat(locale==='en'?'en-GB':'es-ES',{day:'numeric',month:'long',year:'numeric',timeZone:'UTC'}).format(new Date(`${claim.exactDate}T00:00:00Z`));
+  return claim?.value ?? '';
+}
+
+// These are triage leads, not automatically diagnosed historical mistakes.
+export function coverageTasks(people, limit = 60, territories = {}) {
+  const byId = new Map(people.map(person => [person.id,person]));
+  const tasks = [];
+  const pilot = new Set(PILOT_PERSON_IDS);
+  for (const person of people) {
+    const priority = pilot.has(person.id) ? 0 : 1;
+    if (!person.padre && !person.madre) tasks.push({id:`parents:${person.id}`,personId:person.id,personName:person.nombre,kind:'parents',status:person.documentacion?.ausencias?.padres==='unknown'?'unknown':'not_researched',priority});
+    if (!year(person.nac) || !year(person.muer)) tasks.push({id:`dates:${person.id}`,personId:person.id,personName:person.nombre,kind:'dates',status:person.documentacion?.ausencias?.fechas==='unknown'?'unknown':'not_researched',priority});
+    for (const claim of personClaims(person)) {
+      if (claim.certainty==='disputed') tasks.push({id:`conflict:${claim.id}`,personId:person.id,personName:person.nombre,kind:'conflict',status:'possible_error',priority:-2,detail:`${claim.field}: ${claim.alternatives.join(' · ') || claim.note}`});
+      if (claim.field === 'Gobierno' && !claim.sources.length)
+        tasks.push({id:claim.id,personId:person.id,personName:person.nombre,kind:'government',status:'not_researched',priority,detail:`${claim.value.titulo} · ${claim.value.territorio} (${claim.interval.from ?? '?'}–${claim.interval.to ?? '?'})`});
+    }
+    if (year(person.nac) !== null && year(person.muer) !== null && person.nac > person.muer ||
+        ['padre','madre'].some(field => {const parent=byId.get(person[field]);return parent && year(person.nac)!==null && year(parent.nac)!==null && person.nac-parent.nac<12;}))
+      tasks.push({id:`chronology:${person.id}`,personId:person.id,personName:person.nombre,kind:'chronology',status:'possible_error',priority:-1});
+  }
+  const byTerritory=new Map();
+  for (const person of people) for (const government of person.gobiernos || []) {
+    if (!Number.isInteger(government.desde)||!Number.isInteger(government.hasta)) continue;
+    const list=byTerritory.get(government.territorio)||[];
+    list.push(government);byTerritory.set(government.territorio,list);
+  }
+  for (const [territory,list] of byTerritory) {
+    if (!territories[territory]||territories[territory].naturaleza==='agrupacion') continue;
+    const ordered=list.sort((a,b)=>a.desde-b.desde);
+    let end=ordered[0]?.hasta;
+    for (const government of ordered.slice(1)) {
+      if (government.desde-end>50) tasks.push({id:`gap:${territory}:${end}:${government.desde}`,territory,personName:territory,kind:'territory_gap',status:'not_researched',priority:2,detail:`${end}–${government.desde}`});
+      end=Math.max(end,government.hasta);
+    }
+  }
+  return tasks.sort((a,b)=>a.priority-b.priority || a.personName.localeCompare(b.personName,'es') || a.id.localeCompare(b.id)).slice(0,limit);
 }
