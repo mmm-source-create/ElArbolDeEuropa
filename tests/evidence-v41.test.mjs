@@ -2,6 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import {PERSONAS} from '../src/personas.jsx';
 import {TERRITORIOS} from '../src/data/territorios.js';
+import {sanitizeSession,shouldResumeAtlas} from '../src/explorer/atlasSession.js';
 import {CLAIM_REVIEWS,PILOT_PERSON_IDS,citationText,coverageTasks,hasDocumentedClaim,personClaims} from '../src/evidence/claims.js';
 
 const byId=new Map(PERSONAS.map(person=>[person.id,person]));
@@ -27,6 +28,9 @@ test('el filtro exige al menos una afirmación documentada y con fuente individu
   assert.equal(hasDocumentedClaim(byId.get('FEL3ESP')),true);
   assert.equal(hasDocumentedClaim({id:'sin-revisiones',nac:1500,muer:1510}),false);
   assert.equal(hasDocumentedClaim(null),false);
+  assert.equal(sanitizeSession({version:1,soloDocumentados:true}).soloDocumentados,true);
+  assert.equal(sanitizeSession({version:1,soloDocumentados:'true'}).soloDocumentados,false);
+  assert.equal(shouldResumeAtlas('/es/?continuar=1&evidencia=1'),false);
 });
 
 test('Milán y los títulos italianos de los Austrias reflejan los hitos contrastados',()=>{
