@@ -28,8 +28,8 @@ Las variables opcionales se documentan en `env.example`. `VITE_SITE_URL` debe se
 
 | Contenido o función | Ubicación |
 | --- | --- |
-| Evidencia por afirmación y revisiones editoriales | `src/evidence/` |
 | Personas, filiaciones y gobiernos | `src/personas.jsx` |
+| Evidencia por afirmación y revisiones editoriales | `src/evidence/` |
 | Minibiografías | `src/content/personas/` |
 | Territorios y filtros | `src/data/territorios.js`, `src/Territorios.jsx` |
 | Historias de casas y territorios | `src/content/dinastias/`, `src/content/territorios/` |
