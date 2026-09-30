@@ -17,7 +17,7 @@ test('las referencias del piloto apuntan a afirmaciones existentes y a un pasaje
     assert.ok(claim,`No existe la afirmación ${id}`);
     assert.ok(review.sources.length,`${id} no tiene fuente`);
     for(const source of review.sources){
-      const allowedHosts=new Set(['historia-hispanica.rah.es','pares.cultura.gob.es','www.lombardiabeniculturali.it','www.mcu.es','www.habsburger.net','ccfr.bnf.fr','www.rijksmuseum.nl','luxembourg.public.lu','citadelle.namur.be','www.canonvannederland.nl','www.archieven.nl','www.dbnl.org']);
+      const allowedHosts=new Set(['historia-hispanica.rah.es','pares.cultura.gob.es','www.lombardiabeniculturali.it','www.mcu.es','www.habsburger.net','ccfr.bnf.fr','www.rijksmuseum.nl','luxembourg.public.lu','citadelle.namur.be','www.canonvannederland.nl','www.archieven.nl','www.dbnl.org','catalogue.bnf.fr','sigilla.irht.cnrs.fr','orbi.uliege.be','connaitrelawallonie.wallonie.be','portail.biblissima.fr']);
       assert.ok(allowedHosts.has(new URL(source.url).hostname),source.url);
       assert.ok(source.locator);
     }

@@ -1,4 +1,7 @@
 export const TERRITORIOS = Object.freeze({
+  "Nevers": {"clase":"condado","naturaleza":"entidad","componentes":[],"nota":"Condado del Nivernais. Tras la herencia de Margarita III pasó a la rama menor de los Valois de Borgoña; no era parte del ducado de Dijon."},
+  "Rethel": {"clase":"condado","naturaleza":"entidad","componentes":[],"nota":"Condado del Rethelois. La línea de Antonio y Felipe de Nevers lo gobernó por separado de los duques principales."},
+  "Auxerre": {"clase":"condado","naturaleza":"entidad","componentes":[],"nota":"Condado distinto del ducado de Borgoña; fue cedido a Felipe el Bueno en el tratado de Arrás de 1435 y retornó al control francés tras 1477."},
   "Frisia": {"clase":"señorío","naturaleza":"entidad","componentes":[],"nota":"Señorío de Frisia. Carlos V adquirió derechos en 1515, pero la sumisión general se acordó en 1524; el mapa usa la región Friesland del SVG."},
   "Utrecht": {"clase":"señorío","naturaleza":"entidad","componentes":[],"nota":"Poder temporal recibido del obispo en 1528. El SVG actual no tiene un polígono propio para Utrecht."},
   "Overijssel": {"clase":"señorío","naturaleza":"entidad","componentes":[],"nota":"Parte del Oversticht, reconoció a Carlos V como señor en 1528; no se confunde con el obispado espiritual de Utrecht."},

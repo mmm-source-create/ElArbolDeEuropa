@@ -11,8 +11,7 @@ import {
 import mapSvgUrl from "./MapChart_Map.svg?url";
 import { loadTextAsset, forgetTextAsset } from "./utils/loadAsset.js";
 import {
-  REINO_COLOR,
-  REINO_COLOR_DEFAULT,
+  colorTerritorioEnMapa,
   idsDeReinoEnAño,
   añoReferenciaTerritorial,
   listaReinados,
@@ -201,12 +200,12 @@ export function MapaEuropa({ seleccion, anioGlobal = null, onSelectTerritorio, i
           const año = Number.isFinite(anioGlobal)
             ? anioGlobal
             : añoReferenciaTerritorial(seleccion, reino);
-          const color = REINO_COLOR[reino] || REINO_COLOR_DEFAULT;
+          const color = colorTerritorioEnMapa(seleccion, reino);
           idsDeReinoEnAño(reino, año).forEach((id) => {
             const target = buscarElemento(id);
             if (!target) return;
             target.style.setProperty("fill", color, "important");
-            target.style.setProperty("stroke", color, "important");
+            target.style.setProperty("stroke", "var(--eade-paper-bright)", "important");
             target.style.setProperty("stroke-width", "0.6px", "important");
             pintadosRef.current.add(id);
           });

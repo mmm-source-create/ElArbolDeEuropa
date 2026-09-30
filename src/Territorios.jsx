@@ -26,7 +26,8 @@ export const REINO_A_IDS = {
 
   Habsburgo: ["Aargau","Upper_Alsace","Waldstatte"],
 
-  Brabante: ["Brabant", "Antwerp"],
+  // Kempenland pertenece a la Meierij de 's-Hertogenbosch (Brabante).
+  Brabante: ["Brabant", "Antwerp", "Kempenland"],
 
   Limburgo: ["Limburg"],
 
@@ -54,10 +55,14 @@ export const REINO_A_IDS = {
 
   Holanda: ["North_Holland", "South_Holland"],
 
-  // El ducado incorporado a Francia en 1477 no es el condado imperial.
-  // La serie compuesta de Borgoña de abajo solo representa el Estado de los
-  // duques antes de la partición; los títulos posteriores se pintan por feudo.
+  // Un título territorial nunca equivale a todo el Estado borgoñón.
+  // El ducado francés, el condado imperial y los demás feudos se pintan
+  // únicamente cuando la persona tiene el gobierno fechado correspondiente.
+  Borgoña: ["Dijonnais", "Autunnais"],
   "Condado de Borgoña": ["Aval", "Millieu", "Amont"],
+  Nevers: ["Nevernais"],
+  Rethel: ["Rethelois"],
+  Auxerre: ["Auxerrois"],
   Flandes: ["West_Flanders", "East_Flanders", "Roman_Flanders"],
   Namur: ["Namur"],
   "Güeldres": ["Gelderland"],
@@ -141,6 +146,9 @@ export const REINO_COLOR = {
   "Sacro Imperio": '#2F8E29',
   Borgoña: '#8E295C',
   "Condado de Borgoña": '#8E295C',
+  Nevers: '#8E295C',
+  Rethel: '#8E295C',
+  Auxerre: '#8E295C',
   Flandes: '#8E295C',
   Namur: '#8E295C',
   "Güeldres": '#8E295C',
@@ -207,6 +215,26 @@ export const REINO_COLOR = {
 // Color de respaldo por si algún día añades un reino a PERSONAS y te
 // olvidas de darle color aquí (para que no rompa nada, solo se vea gris).
 export const REINO_COLOR_DEFAULT = '#5C5346';
+
+// Una sola familia cromática para los feudos reunidos por los Valois de
+// Borgoña y sus herederos. Fuera de estas personas cada territorio conserva
+// su color propio; la pertenencia nunca se deduce del color.
+const PERSONAS_HERENCIA_BORGONONA = new Set([
+  'MARGFRAFLA', 'LUIS2FLA', 'MARGFLAN', 'FEL2BORG', 'JUAN1BORG',
+  'FEL3BORG', 'CAR1BORG', 'MARIABORG', 'FEL1CAST', 'CARLOS5', 'FEL2ESP',
+]);
+const FEUDOS_HERENCIA_BORGONONA = new Set([
+  'Borgoña', 'Condado de Borgoña', 'Artois', 'Flandes', 'Nevers', 'Rethel',
+  'Auxerre', 'Ponthieu', 'Namur', 'Brabante', 'Limburgo', 'Henao', 'Holanda',
+  'Zelanda', 'Luxemburgo', 'Güeldres', 'Frisia', 'Utrecht', 'Overijssel',
+  'Drente', 'Groninga',
+]);
+export function colorTerritorioEnMapa(persona, territorio) {
+  if (PERSONAS_HERENCIA_BORGONONA.has(persona?.id) && FEUDOS_HERENCIA_BORGONONA.has(territorio)) {
+    return REINO_COLOR.Borgoña;
+  }
+  return REINO_COLOR[territorio] || REINO_COLOR_DEFAULT;
+}
 
 // ---------------------------------------------------------------------------
 // Versiones territoriales por fecha: los límites de un reino no fueron los
@@ -326,21 +354,6 @@ Inglaterra: [
     { desde: 1506,
       hasta: Infinity, // Trinacria bajo Aragón
       ids: [],},
-  ],
-
-  Borgoña: [
-    { desde: 1363,
-      hasta: 1404, // Felipe el Audaz
-      ids: ["Lower_Artois","Upper_Artois","West_Flanders","Roman_Flanders","East_Flanders","Aval","Millieu","Amont","Dijonnais","Autunnais","Auxerrois","Nevernais","Rethelois"],},
-    { desde: 1467,
-      hasta: 1474, // Felipe III el Bueno
-      ids: ["North_Holland","Limburg","Kempenland","South_Holland","Antwerp","East_Luxembourg","West_Luxembourg","Hainaut","Lower_Artois","Vermandois","Upper_Artois","West_Flanders","Roman_Flanders","East_Flanders","Brabant","Namur","Loon","Liege","Amienois","Ponthieu","Dijonnais","Aval","Millieu","Amont","Autunnais","Auxerrois"],},
-    { desde: 1474,
-      hasta: 1478, // Lorena
-      ids: ["North_Holland","Limburg","Kempenland","South_Holland","Antwerp","East_Luxembourg","West_Luxembourg","Hainaut","Lower_Artois","Vermandois","Upper_Artois","West_Flanders","Roman_Flanders","East_Flanders","Brabant","Namur","Loon","Liege","Amienois","Ponthieu","Dijonnais","Aval","Millieu","Amont","Autunnais","Auxerrois","Gelderland","Overijssel","Niederrhein","Pays_Nancy","Pays_Messin","Vosges","Verdunois","Barrois","Upper_Alsace"],},
-    // Desde 1477 el ducado y los feudos heredados toman caminos distintos.
-    // No extender la antigua unión al patrimonio de Felipe I o Carlos V.
-    { desde: 1478, hasta: Infinity, ids: ["Dijonnais", "Autunnais", "Auxerrois", "Nevernais"] },
   ],
 
   Irlanda: [
@@ -531,10 +544,10 @@ export const TERRITORIOS_DESTACADOS = [
 // su historia política o geográfica lo justifica (Borgoña, Silesia, Saboya…).
 export const TERRITORIOS_SUB = {
   Francia: [
-    "Albret", "Dreux", "Alençon", "Angulema", "Anjou", "Aquitania", "Artois", "Auvernia",
+    "Albret", "Dreux", "Alençon", "Angulema", "Anjou", "Aquitania", "Artois", "Auxerre", "Auvernia",
     "Berry", "Borgoña", "Borbón", "Boulogne", "Bretaña", "Champaña",
-    "Clermont", "Évreux", "Foix", "Armagnac", "Guisa", "La Marche", "Montpellier",
-    "Orleans", "Ponthieu", "Provenza", "Saint-Pol", "Valois", "Vendôme", "Bearne",
+    "Clermont", "Évreux", "Foix", "Armagnac", "Guisa", "La Marche", "Montpellier", "Nevers",
+    "Orleans", "Ponthieu", "Provenza", "Rethel", "Saint-Pol", "Valois", "Vendôme", "Bearne",
   ],
 
   Bretaña: ["Penthièvre"],
@@ -553,7 +566,7 @@ export const TERRITORIOS_SUB = {
 
   "Sacro Imperio": [
     "Alemania", "Austria", "Austria Interior", "Baviera", "Bohemia",
-    "Borgoña", "Condado de Borgoña", "Brabante", "Carintia", "Cléveris", "Flandes", "Habsburgo",
+    "Condado de Borgoña", "Brabante", "Carintia", "Cléveris", "Flandes", "Habsburgo",
     "Henao", "Holanda", "Zelanda", "Limburgo", "Lorena", "Luxemburgo", "Milán",
     "Monferrato", "Saluzzo", "Moravia", "Nassau", "Países Bajos", "Palatinado",
     "Piamonte", "Saboya", "Sajonia", "Silesia", "Suabia", "Tirol",

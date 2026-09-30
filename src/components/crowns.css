@@ -6,7 +6,12 @@
 .crown-year select { min-width:0; max-width:100%; padding:7px 9px; border:1px solid var(--eade-border); border-radius:4px; color:var(--eade-ink); background:var(--eade-paper-bright); font:inherit; }
 .crown-mandates { display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr)); gap:8px; padding:0; list-style:none; }
 .crown-mandates li { display:flex; flex-direction:column; gap:3px; padding:10px 12px; border:1px solid var(--eade-border); border-radius:4px; font:400 12px/1.5 var(--eade-sans); min-width:0; }
-.crown-mandates a { font-weight:600; }
+.crown-mandates a,
+.crown-mandates a:visited,
+.public-site .crown-mandates a,
+.public-site .crown-mandates a:visited { color:var(--eade-wine); font-weight:600; text-decoration:underline; text-underline-offset:2px; }
+.crown-mandates a:hover,
+.public-site .crown-mandates a:hover { color:var(--eade-ink); }
 .crown-mandates small { color:var(--eade-muted); font-size:11px; }
 .crown-details { margin:14px 0; border-top:1px solid var(--eade-border); padding-top:12px; }
 .crown-details > summary { cursor:pointer; color:var(--eade-wine); font:600 13px/1.5 var(--eade-sans); }
