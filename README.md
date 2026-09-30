@@ -5,7 +5,7 @@ Atlas histórico y genealógico para explorar personas, dinastías, territorios 
 - [Web](https://www.treeofeurope.eu/es/) · **V4.1**
 - [Cambios de esta versión](docs/V4.1.md) · [Documentación e historial](docs/README.md) · [Seguridad](SECURITY.md)
 
-La V4.1 añade un filtro para encontrar personas con al menos una afirmación documentada y continúa la revisión de la base histórica. «Con datos documentados» no significa que toda la ficha esté verificada: el panel de evidencia identifica exactamente qué afirmación tiene fuente, certeza y fecha de revisión. La [revisión de Carlos V y los Austrias](docs/V4.1.md#revisión-de-los-austrias-y-los-dominios-italianos) distingue el gobierno de Milán, la investidura discutida de Felipe II, la titularidad de Cerdeña y los límites del gobierno de Fernando I en Hungría.
+La V4.1 añade un filtro para encontrar personas con al menos una afirmación documentada y continúa la revisión de la base histórica. «Con datos documentados» no significa que toda la ficha esté verificada: el panel de evidencia identifica exactamente qué afirmación tiene fuente, certeza y fecha de revisión. La [revisión de Carlos V y los Austrias](docs/V4.1.md#revisión-de-los-austrias-y-los-dominios-italianos) distingue el gobierno de Milán, la investidura discutida de Felipe II, la titularidad de Cerdeña, los límites del gobierno de Fernando I en Hungría y los títulos de Fernando IV.
 
 ## Instalación y validación
 
