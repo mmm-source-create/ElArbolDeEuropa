@@ -15,10 +15,42 @@ const OVERIJSSEL_1528='https://www.canonvannederland.nl/nl/overijssel/overijssel
 const DRENTE_1536='https://www.canonvannederland.nl/nl/page/99041/kinkhorst';
 const GRONINGA_1536='https://www.canonvannederland.nl/nl/groningen/groningen/habsburgs-gezag';
 const GUELDRES_1543='https://www.rijksmuseum.nl/en/collection/node/Gelderse%2Boorlogen--e8ad752027a7c20d0e2cbf9568e18ca8';
+const BNF_MARGARITA='https://catalogue.bnf.fr/ark:/12148/cb16161030k';
+const BIBLISSIMA_LUIS='https://portail.biblissima.fr/ark:/43093/pdata72015d9dbbe4171cc1369eb56e627ee49a8ef9de';
+const MET_BORGONA='https://www.metmuseum.org/fr/essays/burgundian-netherlands-court-life-and-patronage';
+const BIBLISSIMA_FELIPE='https://portail.biblissima.fr/fr/ark:/43093/pdata71295e340f36a2c35285ffc09fff863e1dd66edb';
+const CANON_JACOBA='https://www.canonvannederland.nl/nl/page/439262/jacoba-van-beieren';
+const WALLONIE_NAMUR='https://connaitrelawallonie.wallonie.be/histoire/timeline/13-mars-1429-entree-de-philippe-de-bourgogne-namur';
+const LUXEMBURGO_1443='https://luxembourg.public.lu/en/society-and-culture/history/helm-holy-roman-empire.html';
+const CAMBRIDGE_PONTHIEU='https://www.cambridge.org/core/books/abs/war-and-government-in-the-french-provinces/return-to-allegiance-picardy-and-the-francoburgundian-wars-147093/C99410404ADED4EF0ABA86A39803BC3C';
+const BNF_AUXERRE='https://gallica.bnf.fr/ark:/12148/bpt6k947101.pdf';
+const BIBLISSIMA_NEVERS='https://portail.biblissima.fr/fr/ark:/43093/pdata8ddd5493a80916491d6eb6a23bd52ecc916100d4';
+const SIGILLA_JUAN='https://sigilla.irht.cnrs.fr/A.php/41813';
+const SIGILLA_FELIPE_NEVERS='https://sigilla.irht.cnrs.fr/44802';
+const ULIEGE_RETHEL='https://orbi.uliege.be/bitstream/2268/247248/1/Trulla%20et%20Cartae.pdf';
 const acceso=(persona,territorio,desde,motivos,explicacion,fuentes=[FMG,BRIT],clase='reinado')=>({persona,territorio,desde,clase,motivos,explicacion,fuentes});
 
 // Cada explicación se ancla a un mandato real de la base, nunca al título resumen.
 export const ACCESOS_CORONAS = [
+ acceso('MARGFRAFLA','Condado de Borgoña',1361,['herencia'],'El condado imperial y Artois pasaron a Margarita de Francia antes de la generación de Luis de Male; no eran partes del ducado francés.',[BIBLISSIMA_LUIS],'condado'),
+ acceso('LUIS2FLA','Condado de Borgoña',1382,['herencia'],'Luis de Male heredó de su madre el Franco Condado y Artois en 1382, dos años antes de su propia muerte.',[BIBLISSIMA_LUIS],'condado'),
+ ...['Nevers','Rethel'].map(t=>acceso('LUIS2FLA',t,1346,['herencia'],'Luis de Male heredó este condado junto a Flandes; en 1384 pasó a su hija Margarita III.',[BIBLISSIMA_LUIS],'condado')),
+ ...['Flandes','Artois','Condado de Borgoña','Nevers','Rethel'].map(t=>acceso('MARGFLAN',t,1384,['herencia'],'Margarita III heredó los cinco condados de Luis de Male. Nevers y Rethel fueron entregados a hijos menores como apanages; el título de Margarita no equivale al gobierno posterior de cada uno.',[BNF_MARGARITA,MET_BORGONA],'condado')),
+ acceso('FEL2BORG','Borgoña',1363,['nombramiento'],'Juan II de Francia concedió el ducado a su hijo Felipe; la herencia flamenca llegaría por Margarita III en 1384.',[MET_BORGONA],'ducado'),
+ acceso('FEL2BORG','Flandes',1384,['matrimonio','herencia'],'Felipe gobernó por los derechos hereditarios de Margarita III. Los condados seguían siendo títulos separados del ducado de Dijon.',[BNF_MARGARITA,MET_BORGONA],'condado'),
+ ...['Flandes','Artois','Condado de Borgoña'].map(t=>acceso('JUAN1BORG',t,1404,['herencia'],'Juan sucedió a su padre en 1404 como conde; Margarita III conservó sus derechos propios hasta morir en 1405. Nevers y Rethel siguieron la rama de sus hermanos.',[SIGILLA_JUAN,BNF_MARGARITA],'condado')),
+ acceso('JUAN1BORG','Nevers',1384,['herencia'],'Juan recibió Nevers como apanage siendo joven y lo cedió a su hermano Felipe al heredar el ducado en 1404.',[SIGILLA_JUAN],'condado'),
+ acceso('ANTONBRAB','Rethel',1393,['acuerdo'],'Margarita III y Felipe el Atrevido cedieron Rethel a su hijo Antonio en 1393; pasó a Felipe de Nevers en 1406.',[ULIEGE_RETHEL],'condado'),
+ acceso('PHIL2NEVERS','Nevers',1404,['herencia'],'Al acceder Juan sin Miedo al ducado en 1404, su hermano Felipe recibió Nevers; Rethel llegaría en 1406.',[SIGILLA_FELIPE_NEVERS],'condado'),
+ acceso('JUAN3NAMUR','Namur',1418,['herencia'],'Juan III conservó Namur hasta su muerte. Vendió en 1421 el derecho a sucederle a Felipe el Bueno, que tomó posesión en 1429.',[WALLONIE_NAMUR],'condado'),
+ acceso('FEL3BORG','Namur',1429,['acuerdo','herencia'],'La compra del derecho fue de 1421; Felipe tomó posesión del condado tras la muerte de Juan III en 1429.',[WALLONIE_NAMUR],'condado'),
+ ...['Brabante','Limburgo'].map(t=>acceso('FEL3BORG',t,1430,['herencia'],'La muerte sin heredero de Felipe de Saint-Pol incorporó el ducado a la línea principal de los Valois de Borgoña.',[BIBLISSIMA_FELIPE],'ducado')),
+ ...['Holanda','Henao','Zelanda'].map(t=>acceso('FEL3BORG',t,1433,['acuerdo'],'El acuerdo de Delft de 1428 precedió a la renuncia definitiva de Jacoba en 1433. El gobierno previo se registra como regencia.',[CANON_JACOBA,BIBLISSIMA_FELIPE],'condado')),
+ acceso('FEL3BORG','Luxemburgo',1443,['acuerdo','conquista'],'Isabel de Görlitz vendió sus derechos en 1441; Felipe tomó la ciudad en 1443. La dignidad ducal se fecha a veces en 1444.',[LUXEMBURGO_1443,BIBLISSIMA_FELIPE],'ducado'),
+ acceso('FEL3BORG','Auxerre',1435,['acuerdo'],'El tratado de Arrás cedió este condado a Felipe. Era distinto del ducado de Borgoña.',[BNF_AUXERRE],'condado'),
+ acceso('FEL3BORG','Ponthieu',1435,['acuerdo'],'El tratado de Arrás cedió este condado a Felipe; el polígono regional no representa cada ciudad del Somme.',[CAMBRIDGE_PONTHIEU],'condado'),
+ ...['Nevers','Rethel'].map(t=>acceso('CAR1NEVERS',t,1415,['herencia'],'Carlos heredó el condado de su padre Felipe de Nevers. Esta línea familiar era distinta de los duques que gobernaron Dijon y Flandes.',[BIBLISSIMA_NEVERS],'condado')),
+ ...['Nevers','Rethel'].map(t=>acceso('JUAN2NEVERS',t,1464,['herencia'],'Juan sucedió a su hermano Carlos, sin que el condado se reuniera por ello con los territorios de Carlos el Temerario.',[BIBLISSIMA_NEVERS],'condado')),
  acceso('FERN3','Castilla',1217,['herencia','abdicación'],'Berenguela heredó tras la muerte de Enrique I y cedió la corona a su hijo Fernando. La herencia castellana procedía de su madre.',[RAH]),
  acceso('FERN3','León',1230,['herencia','acuerdo'],'A la muerte de Alfonso IX, Fernando hizo valer su derecho frente a sus medio hermanas Sancha y Dulce. El acuerdo con ellas permitió reunir las coronas de León y Castilla.',[RAH]),
  acceso('MAGNUS4SUE','Noruega',1319,['herencia'],'Heredó a su abuelo materno Haakon V a través de Ingeborg de Noruega. La minoría del rey exigió un gobierno de regencia.'),
@@ -83,6 +115,10 @@ export const ACCESOS_CORONAS = [
 
 // Un marco de unión puede contener rupturas. Sus límites no afirman un gobierno continuo.
 export const UNIONES_CORONAS = [
+ {id:'herencia-borgonona',titulo:'La herencia borgoñona, feudo a feudo',territorios:['Borgoña','Flandes','Artois','Condado de Borgoña','Nevers','Rethel','Auxerre','Ponthieu','Brabante','Limburgo','Holanda','Henao','Zelanda','Namur','Luxemburgo'],desde:1363,hasta:1555,
+ resumen:'Matrimonio, sucesión, compra, renuncia y conquista reunieron feudos jurídicamente distintos. El mapa debe seguir cada gobierno efectivo, no pintar todos los dominios desde la investidura ducal.',
+ instituciones:'El ducado de Dijon era un feudo francés; el Franco Condado, un feudo imperial. Nevers y Rethel siguieron una rama menor. Tras 1477, Francia tomó el ducado; las reclamaciones de María y sus herederos no equivalen a posesión.',
+ etapas:[{anio:1363,titulo:'El ducado de Felipe el Atrevido',texto:'El ducado francés estaba centrado en Dijon. Los condados del norte y el Franco Condado llegarían por Margarita III.',personas:['FEL2BORG','MARGFRAFLA','LUIS2FLA']},{anio:1384,titulo:'La herencia de Margarita III',texto:'Flandes, Artois y el Franco Condado se sumaron por derecho hereditario de Margarita; sus hijos recibieron Nevers y Rethel como apanages antes de 1405.',personas:['LUIS2FLA','MARGFLAN','FEL2BORG','JUAN1BORG','ANTONBRAB','PHIL2NEVERS']},{anio:1429,titulo:'Namur y Brabante',texto:'Felipe el Bueno tomó Namur en 1429 y heredó Brabante y Limburgo en 1430.',personas:['JUAN3NAMUR','PHILSTPOL','FEL3BORG']},{anio:1433,titulo:'Los condados de Jacoba',texto:'Después de la regencia acordada en Delft, Jacoba renunció en 1433 a Holanda, Henao y Zelanda.',personas:['JACOBA','FEL3BORG']},{anio:1443,titulo:'Luxemburgo',texto:'La compra de derechos de 1441 y la toma de la ciudad en 1443 completaron otra incorporación gradual.',personas:['ISABELGORLITZ','FEL3BORG']},{anio:1477,titulo:'Ruptura de la herencia',texto:'Muerto Carlos el Temerario, María retuvo los Países Bajos; Francia tomó el ducado y disputó Artois y el Franco Condado.',personas:['CAR1BORG','MARIABORG','MAXIM1']},{anio:1493,titulo:'Senlis y los Habsburgo',texto:'Artois y el Franco Condado volvieron a la casa de Austria; Felipe I y Carlos V los transmitieron con los Países Bajos.',personas:['FEL1CAST','CARLOS5']}],fuentes:[BNF_MARGARITA,MET_BORGONA,BIBLISSIMA_FELIPE,CANON_JACOBA,LUXEMBURGO_1443,SIGILLA_JUAN,ULIEGE_RETHEL]},
  {id:'magnus-1319',titulo:'Dos herencias, un rey niño',territorios:['Noruega','Suecia'],desde:1319,hasta:1355,
  resumen:'Magnus Eriksson reunió Noruega por herencia y Suecia por elección. La conexión pasó por su madre Ingeborg y su padre Erik Magnusson.',
  instituciones:'Cada reino mantuvo su consejo y sus leyes. La unión personal no convirtió Noruega en una provincia sueca.',
