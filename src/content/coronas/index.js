@@ -1,8 +1,16 @@
 const FMG='https://fmg.ac/Projects/MedLands/index.htm';
 const BRIT='https://www.britannica.com/';
 const RAH='https://historia-hispanica.rah.es/';
+const CORONA_ARAGON='https://www.enciclopedia.cat/gran-enciclopedia-catalana/corona-catalanoaragonesa';
+const NAPOLI_1707='https://www.treccani.it/enciclopedia/napoli/';
+const AUSTRIAN_ITALY='https://www.treccani.it/enciclopedia/carlo-vi-imperatore-del-sacro-romano-impero_%28Dizionario-di-Storia%29/';
+const SARDEGNA_1708='https://www.treccani.it/enciclopedia/sardegna_%28Dizionario-di-Storia%29/';
+const SAVOY_SARDINIA='https://www.treccani.it/enciclopedia/savoia_%28Enciclopedia-Italiana%29/';
+const CARLO_BORBONE='https://www.treccani.it/enciclopedia/carlo-di-borbone-re-di-napoli-e-di-sicilia_%28Dizionario-Biografico%29/';
+const FERDINANDO_NAPOLI='https://www.treccani.it/enciclopedia/ferdinando-i-di-borbone-re-delle-delle-due-sicilie_%28Enciclopedia-Italiana%29/';
 const MILAN='https://www.lombardiabeniculturali.it/istituzioni/schede/8000356/';
 const MILAN_HISTORY='https://www.lombardiabeniculturali.it/istituzioni/storia/?unita=03.05';
+const MILAN_OCCUPATION='https://www.lombardiabeniculturali.it/istituzioni/storia/?unita=03.06';
 const PARES_CARLOS='https://pares.cultura.gob.es/ParesBusquedas20/catalogo/autoridad/46080';
 const PARES_JUANA='https://pares.cultura.gob.es/ParesBusquedas20/catalogo/autoridad/46503';
 const PARES_CARLOS_II='https://pares.cultura.gob.es/ParesBusquedas20/catalogo/autoridad/46849';
@@ -72,6 +80,9 @@ export const ACCESOS_CORONAS = [
  acceso('FERN2ARAG','Castilla',1474,['matrimonio','acuerdo'],'Gobernó junto a Isabel como su esposo, con atribuciones delimitadas por acuerdos políticos. El derecho hereditario castellano pertenecía a Isabel.',[RAH]),
  acceso('CARLOS5','Castilla',1516,['herencia'],'Tras la muerte de Fernando, Carlos asumió el título regio junto a su madre Juana, que conservó la condición de reina. La proclamación de Carlos no fue una abdicación de Juana.',[RAH]),
  acceso('CARLOS5','Aragón',1516,['herencia'],'La muerte de Fernando abrió la sucesión aragonesa. El reconocimiento y los juramentos en los distintos territorios se desarrollaron posteriormente; 1516 identifica el acceso registrado.',[RAH]),
+ acceso('CARLOS5','Condado de Barcelona',1516,['herencia'],'Carlos heredó la dignidad de conde de Barcelona junto con la corona aragonesa. El condado y el reino de Aragón conservaron sus instituciones propias.',[CORONA_ARAGON],'condado'),
+ acceso('CARLOS5','Valencia',1516,['herencia'],'Carlos heredó el reino de Valencia como parte de la monarquía de la Corona de Aragón, sin convertirlo en una provincia del reino aragonés.',[CORONA_ARAGON]),
+ acceso('CARLOS5','Mallorca',1516,['herencia'],'La sucesión de Fernando comprendía también el reino de Mallorca, reincorporado a la Corona de Aragón desde 1343.',[CORONA_ARAGON]),
  acceso('CARLOS5','Cerdeña',1516,['herencia'],'El título de rey de Cerdeña acompañó la herencia aragonesa, junto a Juana I. El inicio anual se deriva de la sucesión general; no acredita una ceremonia local específica.',[PARES_CARLOS]),
  acceso('JUANA1CAST','Cerdeña',1516,['herencia'],'PARES enumera a Juana reina de Cerdeña junto a Carlos I entre 1516 y 1555. La titularidad no indica ejercicio personal del gobierno.',[PARES_JUANA]),
  acceso('CARLOS5','Milán',1535,['herencia'],'La muerte de Francesco II Sforza devolvió el feudo imperial a Carlos V, que lo mantuvo bajo control directo. La investidura del hijo Felipe y la posesión de 1556 fueron fases posteriores.',[MILAN],'ducado'),
@@ -82,6 +93,15 @@ export const ACCESOS_CORONAS = [
  acceso('FERN4BOH','Alemania',1653,['elección'],'Elegido rey de Romanos y heredero designado del emperador Fernando III; murió antes que él y nunca llegó a emperador.',[HABSBURG_FERDINAND_IV]),
  acceso('CARLOS5','Sacro Imperio',1519,['elección'],'La elección de 1519 abrió su etapa imperial; fue coronado rey de Romanos en 1520 y emperador por el papa en 1530. El intervalo de la base parte de la elección, no de la coronación papal.',[RAH], 'imperio'),
  acceso('FEL2ESP','Portugal',1580,['herencia','conquista'],'La muerte del cardenal Enrique abrió una disputa. Felipe alegó su descendencia de Manuel I por Isabel de Portugal y se impuso militarmente; las Cortes de Tomar lo reconocieron en 1581.',[RAH]),
+ acceso('FEL5ESP','Milán',1700,['herencia'],'Felipe heredó la posición ducal de Carlos II; las tropas imperiales tomaron Milán en 1706 y el dominio borbónico cesó.',[MILAN_HISTORY],'ducado'),
+ acceso('FEL5ESP','Cerdeña',1717,['conquista'],'La expedición española de 1717 recuperó Cerdeña temporalmente. El acuerdo posterior condujo a su transferencia a Saboya en 1720.',[SAVOY_SARDINIA]),
+ acceso('CARLOS6HRE','Milán',1706,['conquista'],'El ejército imperial ocupó el Milanesado en 1706; la paz de 1714 reconoció la transferencia. La ocupación franco-sarda de 1733–1736 se señala como límite pendiente.',[MILAN_HISTORY,AUSTRIAN_ITALY],'ducado'),
+ acceso('CARLOS6HRE','Nápoles',1707,['conquista'],'La toma austríaca del reino continental precedió al reconocimiento de paz y no otorgó automáticamente la isla de Sicilia.',[NAPOLI_1707]),
+ acceso('CARLOS6HRE','Cerdeña',1708,['conquista'],'Cagliari capituló en 1708 ante fuerzas que apoyaban la candidatura austracista; la isla quedó bajo esa obediencia hasta 1717.',[SARDEGNA_1708]),
+ acceso('CARLOS6HRE','Trinacria',1720,['acuerdo'],'Recibió Sicilia a cambio de Cerdeña en el arreglo de 1720; ambos reinos siguieron siendo entidades diferentes.',[AUSTRIAN_ITALY]),
+ acceso('CARLOS3ESP','Nápoles',1734,['conquista'],'Carlos de Borbón tomó el reino continental en 1734. Al heredar España en 1759 transfirió Nápoles a su hijo Fernando.',[CARLO_BORBONE]),
+ acceso('CARLOS3ESP','Trinacria',1734,['conquista'],'La conquista de Sicilia fue de 1734 y la coronación en Palermo de 1735. No se trataba de una provincia napolitana.',[CARLO_BORBONE]),
+ ...['Nápoles','Trinacria'].map(t=>acceso('FERN4NAP',t,1759,['herencia'],'Carlos de Borbón cedió el reino a su hijo Fernando al suceder a Fernando VI en España; Fernando era menor y gobernó inicialmente un consejo de regencia.',[FERDINANDO_NAPOLI])),
  acceso('JACOBO1ING','Inglaterra',1603,['herencia'],'Sucedió a Isabel I por su ascendencia Tudor. Ya reinaba en Escocia: compartieron soberano, pero conservaron parlamentos y ordenamientos separados.',[BRIT]),
  acceso('SEGIS3VASA','Suecia',1592,['herencia'],'Heredó a su padre Juan III cuando ya era rey electo de Polonia. El conflicto con su tío Carlos y la oposición sueca terminó con su deposición en 1599.',[BRIT]),
  ...[['Flandes','condado'],['Condado de Borgoña','condado'],['Brabante','ducado'],['Limburgo','ducado'],['Holanda','condado'],['Henao','condado'],['Zelanda','condado']].map(([t,c])=>acceso('CARLOS5',t,1506,['herencia'],'La muerte de Felipe el Hermoso transmitió a Carlos estos patrimonios de origen borgoñón. Durante su minoría hubo regencias: heredar un título no significa que el niño dirigiera personalmente el gobierno.',[RAH],c)),
@@ -99,6 +119,7 @@ export const ACCESOS_CORONAS = [
  acceso('CARLOS5','Borgoña',1506,['herencia'],'Carlos conservó el título ducal heredado de Felipe, pero el ducado estaba bajo control francés. Esta pretensión no se cuenta como gobierno efectivo; el Condado de Borgoña tenía una situación distinta.',[RAH],'ducado'),
  ...['León','Nápoles','Trinacria'].map(t=>acceso('CARLOS5',t,1516,['herencia'],'La muerte de Fernando abrió esta sucesión dentro del patrimonio dinástico hispánico. Cada territorio mantuvo su título y sus instituciones; los reconocimientos y juramentos no ocurrieron todos a la vez.',[RAH])),
  ...[['Milán','ducado'],['Nápoles','reinado'],['Trinacria','reinado'],['Cerdeña','reinado']].map(([t,c])=>acceso('CARLOS2ESP',t,1665,['herencia'],'Carlos II heredó este dominio siendo menor de edad. PARES enumera sus títulos italianos; Mariana de Austria ejerció la regencia durante su minoría.',[PARES_CARLOS_II],c)),
+ acceso('CARLOSEMANUEL3SAB','Milán',1733,['conquista'],'Carlos Manuel III ocupó el Estado de Milán con fuerzas franco-sardas hasta 1736. Se registra gobierno de hecho, no una investidura ducal.',[MILAN_OCCUPATION],'gobierno'),
  acceso('CARLOS5','Navarra',1516,['herencia'],'Continuó la soberanía de los Austrias sobre la Alta Navarra conquistada por Fernando. Los Albret conservaron derechos y gobierno al norte de los Pirineos: el mandato no representa una sucesión aceptada sobre todo el reino histórico.',[RAH]),
  acceso('CARLOS5','Austria',1519,['herencia'],'La muerte de Maximiliano I transmitió los territorios hereditarios austríacos a Carlos. Los acuerdos con su hermano Fernando iniciaron su cesión a la rama austríaca; esta herencia era distinta de la elección imperial.',[RAH],'archiducado'),
  acceso('CARLOS5','Alemania',1519,['elección'],'Los electores eligieron a Carlos rey de Romanos en 1519. La coronación de Aquisgrán fue en 1520. Este título y el imperial forman parte de una misma estructura política y no describen dos Estados independientes.',[RAH]),

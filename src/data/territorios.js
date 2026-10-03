@@ -66,6 +66,13 @@ export const TERRITORIOS = Object.freeze({
       }
     ]
   },
+  "Condado de Barcelona": {
+    "clase": "condado",
+    "naturaleza": "entidad",
+    "componentes": [],
+    "pertenencias": [{"territorio":"Corona de Aragón","desde":1137}],
+    "nota": "El conde de Barcelona era también rey de Aragón desde Alfonso II. El mapa del condado representa el núcleo catalán de su gobierno, no todos los señoríos catalanes ni el conjunto de la Corona de Aragón. Urgell se incorpora al patrimonio real en 1413."
+  },
   "Navarra": {
     "clase": "reino",
     "naturaleza": "entidad",
@@ -74,7 +81,8 @@ export const TERRITORIOS = Object.freeze({
   "Portugal": {
     "clase": "reino",
     "naturaleza": "entidad",
-    "componentes": []
+    "componentes": [],
+    "nota": "Portugal conservó corona e instituciones propias durante la unión dinástica de 1580–1640. Madeira se representa desde su poblamiento de 1425 y el conjunto de las Azores desde 1452, fecha en que constan descubiertas también las islas occidentales."
   },
   "Francia": {
     "clase": "reino",
@@ -147,7 +155,8 @@ export const TERRITORIOS = Object.freeze({
   "Mallorca": {
     "clase": "reino",
     "naturaleza": "entidad",
-    "componentes": []
+    "componentes": [],
+    "nota": "Reino distinto bajo una rama propia entre 1276 y 1343, aunque reconoció dependencia feudal en parte de ese periodo. La toma aragonesa de 1343 puso fin al gobierno efectivo de Jaime III en la isla; sus pretensiones continuaron."
   },
   "Valencia": {
     "clase": "reino",
@@ -163,7 +172,8 @@ export const TERRITORIOS = Object.freeze({
   "Cerdeña": {
     "clase": "reino",
     "naturaleza": "entidad",
-    "componentes": []
+    "componentes": [],
+    "nota": "El título pontificio de 1297 no supone posesión efectiva de toda la isla. La conquista comenzó en 1323, Arborea mantuvo su autonomía hasta 1420 y Córcega no se incluye como posesión aragonesa."
   },
   "Jerusalén": {
     "clase": "reino",
@@ -325,6 +335,7 @@ export const TERRITORIOS = Object.freeze({
     "clase": "ducado",
     "naturaleza": "entidad",
     "componentes": [],
+    "nota": "El dominio milanés perdió Bergamo y Brescia frente a Venecia en 1428; no se atribuyen al ducado habsbúrgico del siglo XVI. El SVG no distingue Como como región propia.",
     "etapas": [
       {
         "desde": null,
@@ -1063,7 +1074,8 @@ export const TERRITORIOS = Object.freeze({
   "Granada": {
     "clase": "emirato",
     "naturaleza": "entidad",
-    "componentes": []
+    "componentes": [],
+    "nota": "El emirato nazarí se representa mediante las regiones agregadas de Málaga, Almería y Granada. Málaga pasó a Castilla en 1487, Almería en 1489 y Granada en 1492; cada región del SVG contiene también zonas cuya trayectoria local fue más compleja."
   },
   "Lituania": {
     "clase": "gran_ducado",
@@ -1073,7 +1085,8 @@ export const TERRITORIOS = Object.freeze({
   "Toscana": {
     "clase": "gran_ducado",
     "naturaleza": "entidad",
-    "componentes": []
+    "componentes": [],
+    "nota": "El gran ducado se representa desde 1569 con el antiguo territorio florentino y Siena. Lucca permanece separada; esta cartografía regional no refleja cada enclave o fase de la conquista sienesa."
   },
   "Prusia": {
     "clase": "reino",
@@ -1197,7 +1210,8 @@ export const TERRITORIOS = Object.freeze({
   "Estados Pontificios": {
     "clase": "estado_pontificio",
     "naturaleza": "entidad",
-    "componentes": []
+    "componentes": [],
+    "nota": "El mapa distingue soberanía formal de administración territorial efectiva: no incluye Urbino, Ferrara ni los señoríos de Romaña antes de su incorporación efectiva. Los cortes regionales son aproximaciones anuales, no fronteras de cada vicariato."
   },
   "Países Bajos": {
     "clase": "territorio_compuesto",
@@ -1245,10 +1259,15 @@ export const TERRITORIOS = Object.freeze({
     "naturaleza": "compuesta",
     "componentes": [
       "Aragón",
+      "Condado de Barcelona",
       "Valencia",
-      "Mallorca"
+      "Mallorca",
+      "Cerdeña",
+      "Trinacria",
+      "Nápoles"
     ],
-    "desde": 1137
+    "desde": 1137,
+    "nota": "Unión dinástica de entidades con leyes e instituciones propias; los componentes muestran su historia conjunta, no posesión simultánea en 1137. Cada gobierno y polígono se fecha por separado."
   },
   "Polonia-Lituania": {
     "clase": "union_compuesta",

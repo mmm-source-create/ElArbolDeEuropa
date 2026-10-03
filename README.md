@@ -2,10 +2,10 @@
 
 Atlas histórico y genealógico para explorar personas, dinastías, territorios y sus conexiones familiares.
 
-- [Web](https://www.treeofeurope.eu/es/) · Versión del repositorio: **V4.3**
-- [Cambios propuestos](docs/V4.3.md) · [Documentación e historial](docs/README.md) · [Seguridad](SECURITY.md)
+- [Web](https://www.treeofeurope.eu/es/) · Versión del repositorio: **V4.4**
+- [Cambios propuestos](docs/V4.4.md) · [Documentación e historial](docs/README.md) · [Seguridad](SECURITY.md)
 
-La V4.3 corrige la figura compuesta de Borgoña: el mapa del ducado representa solo su núcleo, y cada condado y ducado asociado aparece conforme al gobierno fechado de la persona seleccionada. La [secuencia documentada de la herencia borgoñona](docs/CARTOGRAFIA_BORGONA.md) enlaza a sus protagonistas desde Luis de Male y Margarita III hasta Carlos V, separando los apanages de Nevers y Rethel, la regencia de Holanda y los títulos reclamados. Todos los feudos de esa secuencia comparten un tono borgoña, con contornos separados; Milán y los demás gobiernos de Carlos V mantienen sus propios colores.
+La V4.4 revisa la coherencia territorial de Iberia e Italia: separa los reinos y condados de las coronas compuestas, fecha conquistas y cambios de posesión, y completa la sucesión italiana de 1700 a 1759. La [auditoría de España, Portugal e Italia](docs/CARTOGRAFIA_IBERIA_ITALIA.md) explica las decisiones y los límites que aún impide resolver el mapa regional. La [secuencia de la herencia borgoñona](docs/CARTOGRAFIA_BORGONA.md) de V4.3 conserva sus colores y delimitaciones.
 
 La [revisión cartográfica anterior](docs/REVISION_BORGONA.md) corrigió el error de `Zealand`: ese identificador pertenece a la isla danesa cercana a Copenhague, no a Zelanda neerlandesa. La nueva auditoría contrasta las cien etiquetas regionales propuestas; Utrecht, Zelanda y varias ciudades y enclaves permanecen sin color porque el SVG no los delimita. Las [fronteras irlandesas](docs/CARTOGRAFIA_IRLANDA.md) también siguen siendo aproximaciones regionales.
 
@@ -40,7 +40,7 @@ Las variables opcionales se documentan en `env.example`. `VITE_SITE_URL` debe se
 | Evidencia por afirmación y revisiones editoriales | `src/evidence/` |
 | Minibiografías | `src/content/personas/` |
 | Territorios y filtros | `src/data/territorios.js`, `src/Territorios.jsx` |
-| Correspondencias de regiones del mapa | `src/Territorios.jsx`, `src/MapChart_Map.svg`, `docs/CARTOGRAFIA_BORGONA.md`, `docs/CARTOGRAFIA_IRLANDA.md` |
+| Correspondencias de regiones del mapa | `src/Territorios.jsx`, `src/MapChart_Map.svg`, `docs/CARTOGRAFIA_IBERIA_ITALIA.md`, `docs/CARTOGRAFIA_BORGONA.md`, `docs/CARTOGRAFIA_IRLANDA.md` |
 | Historias de casas y territorios | `src/content/dinastias/`, `src/content/territorios/` |
 | Sucesiones y títulos explicados | `src/content/sucesiones/`, `src/content/coronas/` |
 | Bibliografía compartida | `src/content/sources.js` |

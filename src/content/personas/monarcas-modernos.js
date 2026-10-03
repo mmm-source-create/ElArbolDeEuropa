@@ -37,10 +37,13 @@ export const MONARCAS_MODERNOS = Object.freeze({
     "resumen": "Jacobo VI de Escocia y I de Inglaterra unió en su persona las coronas inglesa y escocesa en 1603. Su reinado abrió la etapa de los Estuardo en Inglaterra."
   },
   "FEL5ESP": {
-    "resumen": "Primer rey Borbón de España. La Guerra de Sucesión española aseguró su corona pero transformó el equilibrio europeo y la organización de la monarquía."
+    "resumen": "Primer rey Borbón de España. La Guerra de Sucesión le hizo perder Milán, Nápoles y Cerdeña; recuperó esta última brevemente entre 1717 y 1720. Sus dominios peninsulares e italianos siguieron trayectorias distintas."
   },
   "CARLOS3ESP": {
-    "resumen": "Rey Borbón asociado a un amplio programa reformista y a la transformación urbana y administrativa de la España del siglo XVIII."
+    "resumen": "Gobernó Nápoles y Sicilia desde 1734 antes de heredar la monarquía española en 1759. Entonces cedió ambos reinos italianos a su hijo Fernando. Su reinado español impulsó reformas urbanas y administrativas."
+  },
+  "FERN4NAP": {
+    "resumen": "Hijo de Carlos III, recibió en 1759 las coronas separadas de Nápoles y Sicilia siendo niño. Las crisis revolucionarias interrumpieron su control del continente; ambos reinos se unieron formalmente en 1816."
   },
   "GUSTAV2ADOLFO": {
     "resumen": "Rey de Suecia y gran reformador militar. Su intervención en la Guerra de los Treinta Años convirtió a Suecia en una de las principales potencias del Báltico."
@@ -109,7 +112,7 @@ export const MONARCAS_MODERNOS = Object.freeze({
     "resumen": "Emperador Habsburgo durante casi medio siglo. Su reinado estuvo marcado por las guerras contra Luis XIV y por el gran enfrentamiento con el Imperio otomano culminado en Viena en 1683."
   },
   "CARLOS6HRE": {
-    "resumen": "Emperador Habsburgo y último varón de su línea directa. La Pragmática Sanción buscó asegurar la herencia de sus dominios a su hija María Teresa."
+    "resumen": "Emperador Habsburgo y rival de Felipe V en la Guerra de Sucesión. Su casa gobernó Milán, Nápoles y Cerdeña en distintas fechas; intercambió Cerdeña por Sicilia en 1720. La Pragmática Sanción buscó asegurar su herencia a María Teresa."
   },
   "MARIATERESAHAB": {
     "resumen": "Soberana de los dominios hereditarios de los Habsburgo y una de las grandes figuras del siglo XVIII. Defendió su herencia en la Guerra de Sucesión austríaca e impulsó importantes reformas administrativas."
