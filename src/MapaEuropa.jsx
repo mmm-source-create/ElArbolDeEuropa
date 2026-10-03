@@ -11,6 +11,7 @@ import {
 import mapSvgUrl from "./MapChart_Map.svg?url";
 import { loadTextAsset, forgetTextAsset } from "./utils/loadAsset.js";
 import {
+  agrupacionesPoliticasEnMapa,
   colorTerritorioEnMapa,
   idsDeReinoEnAño,
   añoReferenciaTerritorial,
@@ -101,6 +102,8 @@ export function MapaEuropa({ seleccion, anioGlobal = null, onSelectTerritorio, i
   const [mapReady, setMapReady] = useState(false);
   const [mapError, setMapError] = useState(false);
   const [mapAttempt, setMapAttempt] = useState(0);
+  const activeGroups = seleccion && Number.isFinite(anioGlobal)
+    ? agrupacionesPoliticasEnMapa(seleccion, anioGlobal) : [];
 
   useEffect(() => {
     if (!containerRef.current || svgInyectadoRef.current) return;
@@ -254,6 +257,9 @@ export function MapaEuropa({ seleccion, anioGlobal = null, onSelectTerritorio, i
   const resetView = useCallback(() => {
     if (initialViewBoxRef.current) setViewBox({ ...initialViewBoxRef.current });
   }, []);
+  const showWorld = useCallback(() => {
+    if (originalViewBoxRef.current) setViewBox({ ...originalViewBoxRef.current });
+  }, []);
 
   const handlePointerDown = (event) => {
     if (event.button !== 0 || event.target.closest(".mapa-toolbar")) return;
@@ -314,8 +320,11 @@ export function MapaEuropa({ seleccion, anioGlobal = null, onSelectTerritorio, i
         {mapError ? <>No se ha podido cargar el mapa. <button className="nav-btn" onClick={() => setMapAttempt(n => n + 1)}>Reintentar</button></> : "Cargando mapa…"}
       </div>}
       <div className="mapa-toolbar" aria-label="Controles del mapa">
+        <button type="button" className="mapa-preset" onClick={resetView} title="Centrar la vista inicial en Europa">Europa</button>
+        <button type="button" className="mapa-preset" onClick={showWorld} title="Mostrar el mapa completo">Mundo</button>
+        <span className="mapa-toolbar-separator" aria-hidden="true" />
         <button type="button" className="nav-btn" onClick={() => zoomBy(1 / MAP_ZOOM_FACTOR)} title="Alejar mapa" aria-label="Alejar mapa"><ZoomOut size={13} /></button>
-        <button type="button" className="nav-btn" onClick={resetView} title="Restablecer mapa" aria-label="Restablecer mapa"><RotateCcw size={12} /></button>
+        <button type="button" className="nav-btn" onClick={resetView} title="Volver a Europa" aria-label="Volver a Europa"><RotateCcw size={12} /></button>
         <button type="button" className="nav-btn" onClick={() => zoomBy(MAP_ZOOM_FACTOR)} title="Acercar mapa" aria-label="Acercar mapa"><ZoomIn size={13} /></button>
         <span className="mapa-toolbar-separator" aria-hidden="true" />
         <button type="button" className="nav-btn" onClick={() => panBy(-MAP_PAN_STEP, 0)} title="Mover mapa a la izquierda" aria-label="Mover mapa a la izquierda"><ArrowLeft size={13} /></button>
@@ -323,6 +332,15 @@ export function MapaEuropa({ seleccion, anioGlobal = null, onSelectTerritorio, i
         <button type="button" className="nav-btn" onClick={() => panBy(0, MAP_PAN_STEP)} title="Mover mapa hacia abajo" aria-label="Mover mapa hacia abajo"><ArrowDown size={13} /></button>
         <button type="button" className="nav-btn" onClick={() => panBy(MAP_PAN_STEP, 0)} title="Mover mapa a la derecha" aria-label="Mover mapa a la derecha"><ArrowRight size={13} /></button>
       </div>
+      {seleccion && <details className="mapa-color-legend">
+        <summary>¿Por qué estos colores?</summary>
+        {Number.isFinite(anioGlobal) ? (
+          activeGroups.length ? activeGroups.map(grupo => <div className="mapa-color-legend-item" key={grupo.id}>
+            <span className="mapa-color-swatch" style={{ backgroundColor: grupo.color }} aria-hidden="true" />
+            <div><strong>{grupo.nombre}</strong><p>{grupo.nota} {grupo.fuente && <a href={grupo.fuente} target="_blank" rel="noreferrer">Fuente</a>}</p></div>
+          </div>) : <p>Los colores corresponden a los territorios gobernados por esta persona en {anioGlobal}; no indican que todos formasen un único Estado.</p>
+        ) : <p>Elige un año para distinguir los conjuntos políticos de cada etapa. Sin año, el mapa reúne los gobiernos de toda la vida de esta persona.</p>}
+      </details>}
 
       <div
         ref={containerRef}

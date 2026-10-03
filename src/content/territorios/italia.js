@@ -101,7 +101,7 @@ export default {
     ]
   },
   "Venecia": {
-    "resumen": "Venecia fue una república gobernada por instituciones aristocráticas y por un dogo elegido. El Atlas conserva sus conexiones genealógicas, pero la ausencia de una serie de dogos no significa ausencia de gobierno.",
+    "resumen": "Venecia fue una república gobernada por instituciones aristocráticas y por un dogo elegido. La sucesión de dogos del Atlas permite seguir el cargo entre 1400 y 1605; los dominios de la república no eran patrimonio personal ni familiar del magistrado. Los años de vacancia y los cambios territoriales se registran por separado.",
     "evolucion": [
       {
         "anio": 1204,

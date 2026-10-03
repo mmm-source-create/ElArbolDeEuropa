@@ -277,25 +277,72 @@ const CORONA_ARAGONESA = new Set([
 const MONARQUIA_HISPANICA = new Set([
   'Castilla', 'León', 'Aragón', 'Condado de Barcelona', 'Valencia',
   'Mallorca', 'Cerdeña', 'Nápoles', 'Trinacria', 'Milán', 'Navarra',
-  'Portugal',
 ]);
 const ESTADOS_SABOYANOS = new Set(['Saboya', 'Piamonte', 'Cerdeña']);
+const ADMINISTRACION_AUSTRO_BOHEMIA = new Set(['Austria', 'Bohemia']);
+
+// La pertenencia a un conjunto se evalúa por territorio y fecha; compartir
+// dinastía o soberano nunca basta para colorear todos sus títulos por igual.
+const AGRUPACIONES_POLITICAS = [
+  {
+    id: 'monarquia-hispanica', nombre: 'Monarquía Hispánica', territorios: MONARQUIA_HISPANICA,
+    color: REINO_COLOR.España, desde: 1516,
+    aplica: (activos) => activos.has('Castilla') && activos.has('Aragón'),
+    nota: 'Conjunto de coronas y dominios de la monarquía. Portugal conservó una administración propia durante la unión dinástica de 1580–1640.',
+    fuente: 'https://www.cambridge.org/core/journals/social-science-history/article/turning-points-in-leadership-ship-size-in-the-portuguese-and-dutch-merchant-empires/05AA8EAB13D75D6DE5BCBDD02B8739A2',
+  },
+  {
+    id: 'corona-aragon', nombre: 'Corona de Aragón', territorios: CORONA_ARAGONESA,
+    color: REINO_COLOR.Aragón, desde: -Infinity,
+    aplica: (activos) => activos.has('Aragón'),
+    nota: 'Los reinos y territorios de la Corona mantenían instituciones propias.',
+    fuente: 'https://www.enciclopedia.cat/gran-enciclopedia-catalana/corona-catalanoaragonesa',
+  },
+  {
+    id: 'castilla-leon', nombre: 'Coronas de Castilla y León', territorios: new Set(['Castilla', 'León']),
+    color: REINO_COLOR.Castilla, desde: 1230,
+    aplica: (activos) => activos.has('Castilla') && activos.has('León'),
+    nota: 'Coronas reunidas bajo un soberano común; el mapa conserva las denominaciones históricas.',
+  },
+  {
+    id: 'austro-bohemia', nombre: 'Administración austro-bohemia', territorios: ADMINISTRACION_AUSTRO_BOHEMIA,
+    color: REINO_COLOR.Austria, desde: 1749,
+    aplica: (activos) => activos.has('Austria') && activos.has('Bohemia'),
+    nota: 'Las reformas de 1749 centralizaron la administración de las tierras austríacas y bohemias; Hungría quedó fuera de esa integración.',
+    fuente: 'https://www.habsburger.net/de/kapitel/die-maria-theresianischen-reformen',
+  },
+  {
+    id: 'saboya', nombre: 'Estados saboyanos', territorios: ESTADOS_SABOYANOS,
+    color: REINO_COLOR.Saboya, desde: -Infinity,
+    aplica: (activos) => activos.has('Saboya') || activos.has('Piamonte'),
+    nota: 'Conjunto de territorios gobernados por la casa de Saboya, solo cuando su gobierno está fechado y activo.',
+  },
+  {
+    id: 'herencia-borgonona', nombre: 'Estados borgoñones', territorios: FEUDOS_HERENCIA_BORGONONA,
+    color: REINO_COLOR.Borgoña, desde: -Infinity,
+    aplica: (_activos, persona) => PERSONAS_HERENCIA_BORGONONA.has(persona?.id),
+    nota: 'Agrupación patrimonial de los feudos borgoñones; no incluye otros reinos del mismo soberano.',
+  },
+];
+
+export function agrupacionesPoliticasEnMapa(persona, año) {
+  const activos = new Set(reinadosActivos(persona, año, { soloEfectivos: true }).map(r => r.territorio));
+  const cubiertos = new Set();
+  return AGRUPACIONES_POLITICAS.filter(grupo => {
+    if (año < grupo.desde || !grupo.aplica(activos, persona)) return false;
+    const propios = [...grupo.territorios].filter(territorio => activos.has(territorio) && !cubiertos.has(territorio));
+    propios.forEach(territorio => cubiertos.add(territorio));
+    return propios.length > 0;
+  });
+}
 export function colorTerritorioEnMapa(persona, territorio, año) {
   // Una unión personal no convierte todos los títulos en un mismo estado.
   // El color compartido se limita a los miembros explícitos de cada conjunto;
   // Inglaterra, Borgoña, Hungría, Bohemia o Polonia conservan su identidad.
   const activos = new Set(reinadosActivos(persona, año, { soloEfectivos: true }).map(r => r.territorio));
   if (!activos.has(territorio)) return REINO_COLOR[territorio] || REINO_COLOR_DEFAULT;
-  if (año >= 1516 && activos.has('Castilla') && activos.has('Aragón')
-      && MONARQUIA_HISPANICA.has(territorio)) return REINO_COLOR.España;
-  if (activos.has('Aragón') && CORONA_ARAGONESA.has(territorio)) return REINO_COLOR.Aragón;
-  if (activos.has('Castilla') && activos.has('León')
-      && (territorio === 'Castilla' || territorio === 'León')) return REINO_COLOR.Castilla;
-  if ((activos.has('Saboya') || activos.has('Piamonte'))
-      && ESTADOS_SABOYANOS.has(territorio)) return REINO_COLOR.Saboya;
-  if (PERSONAS_HERENCIA_BORGONONA.has(persona?.id) && FEUDOS_HERENCIA_BORGONONA.has(territorio)) {
-    return REINO_COLOR.Borgoña;
-  }
+  const agrupacion = agrupacionesPoliticasEnMapa(persona, año).find(grupo => grupo.territorios.has(territorio));
+  if (agrupacion) return agrupacion.color;
   return REINO_COLOR[territorio] || REINO_COLOR_DEFAULT;
 }
 

@@ -13,6 +13,30 @@
 .bio-family-actions > div button small { padding: 2px 4px; border-radius: 3px; background: var(--eade-paper-soft); color: var(--eade-wine); font: 700 10px var(--eade-sans); }
 .bio-family-actions .bio-focus-link { padding: 3px 0; min-height: 28px; justify-self: start; }
 
+.workspace-filter-clear {
+  display: block;
+  width: calc(100% - 24px);
+  min-height: 38px;
+  margin: 9px 12px 4px;
+  padding: 7px 10px;
+  border: 1px solid var(--eade-wine);
+  border-radius: 5px;
+  background: var(--eade-wine);
+  color: var(--eade-paper-bright);
+  font: 700 12px var(--eade-sans);
+  text-align: center;
+  cursor: pointer;
+}
+.workspace-filter-clear:is(:hover,:focus-visible) {
+  outline: 2px solid var(--eade-gold);
+  outline-offset: 2px;
+}
+html[data-eade-theme="dark"] .workspace-filter-clear {
+  background: #a94b48;
+  border-color: #c76861;
+  color: #fffaf1;
+}
+
 @media(max-width:700px) {
   .tree-list-alternative h2 { padding-right: 12px; padding-top: 65px; }
   .workspace-tree-stage.showing-list .tree-list-content ul { grid-template-columns: 1fr; }

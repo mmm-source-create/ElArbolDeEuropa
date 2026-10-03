@@ -1887,6 +1887,44 @@ html, body {
   backdrop-filter: blur(5px);
 }
 
+.mapa-preset {
+  min-height: 28px;
+  padding: 4px 7px;
+  border: 1px solid var(--eade-border, #C9BFA8);
+  border-radius: 3px;
+  background: var(--eade-paper-bright, #FBF7EC);
+  color: var(--eade-ink, #2C2620);
+  font: 700 11px var(--eade-sans, sans-serif);
+  cursor: pointer;
+}
+.mapa-preset:is(:hover,:focus-visible) {
+  border-color: var(--eade-gold, #b2945b);
+  outline: 2px solid var(--eade-gold, #b2945b);
+  outline-offset: 1px;
+}
+.mapa-color-legend {
+  position: absolute;
+  left: 8px;
+  bottom: 8px;
+  z-index: 5;
+  max-width: min(340px, calc(100% - 16px));
+  max-height: 55%;
+  overflow: auto;
+  padding: 7px 9px;
+  border: 1px solid var(--eade-border, #C9BFA8);
+  border-radius: 5px;
+  background: var(--eade-paper-bright, #FBF7EC);
+  color: var(--eade-ink, #2C2620);
+  box-shadow: 0 2px 9px rgba(44,38,32,.16);
+  font: 11px/1.45 var(--eade-sans, sans-serif);
+}
+.mapa-color-legend summary { cursor: pointer; font-weight: 700; }
+.mapa-color-legend p { margin: 5px 0 0; }
+.mapa-color-legend-item { display: flex; gap: 8px; margin-top: 8px; }
+.mapa-color-legend-item strong { font-size: 11px; }
+.mapa-color-swatch { flex: 0 0 14px; height: 14px; border: 1px solid var(--eade-border-strong, #8c806b); border-radius: 2px; }
+.mapa-color-legend a { color: var(--eade-wine, #7A2E2E); text-decoration: underline; }
+
 .mapa-toolbar-separator {
   width: 1px;
   height: 18px;

@@ -15,6 +15,7 @@ Los informes describen el estado validado de cada entrega. Sus cifras y listas d
 
 | Versión | Contenido |
 | --- | --- |
+| [4.5](V4.5.md) | Biografía continua, dogos venecianos, Pignatelli y auditoría cartográfica |
 | [4.4](V4.4.md) | Revisión de España, Portugal e Italia; coronas separadas y sucesión italiana |
 | [4.3](V4.3.md) | Sucesión borgoñona por feudo, corrección cromática y auditoría de cien regiones |
 | [4.2](V4.2.md) | Capetos, herencia borgoñona, mapa de Irlanda y documentación actualizada |

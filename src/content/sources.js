@@ -1,8 +1,20 @@
 import {ADRIATICO_SOURCES} from "./sources-adriatico-v214.js";
 import {ALPES_SOURCES} from './sources-alpes-v213.js';
+const DOGES_1400_1605 = [
+  'MICHELE_STENO_DOGE','PASQUALE_MALIPIERO_DOGE','CRISTOFORO_MORO_DOGE',
+  'NICOLO_TRON_DOGE','NICOLO_MARCELLO_DOGE','PIETRO_MOCENIGO_DOGE',
+  'ANDREA_VENDRAMIN_DOGE','GIOVANNI_MOCENIGO_DOGE','MARCO_BARBARIGO_DOGE',
+  'ANTONIO_GRIMANI_DOGE','PIETRO_LANDO_DOGE','FRANCESCO_DONA_DOGE',
+  'MARCANTONIO_TREVISAN_DOGE','FRANCESCO_VENIER_DOGE','LORENZO_PRIULI_DOGE',
+  'GIROLAMO_PRIULI_DOGE','PIETRO_LOREDAN_DOGE','ALVISE_MOCENIGO_I_DOGE',
+  'SEBASTIANOVENIER','NICOLO_DA_PONTE_DOGE','PASQUALE_CICOGNA_DOGE',
+];
 // Bibliography shared by the public site, Atlas and generated entity pages.
 // A territorial reference supplies context; only explicit person IDs assign a biography.
 export const SOURCES = [
+  {titulo:"Lombardia Beni Culturali · Cronología de los dux de Venecia",url:"https://www.lombardiabeniculturali.it/istituzioni/cronologie/cariche/3/",grupo:"Archivos e instituciones",territorios:["Venecia"],personas:DOGES_1400_1605},
+  {titulo:"Treccani · Inocencio XII y la rama de Cerchiara",url:"https://www.treccani.it/enciclopedia/innocenzo-xii_%28Enciclopedia-dei-Papi%29/",grupo:"Repertorios principales",territorios:["Estados Pontificios"],personas:["PAPA_INOCENCIO12","FRANCESCO_PIGN_SPINAZZOLA","PORZIA_CARAFA","FABRIZIO_CARAFA_PORZIA"]},
+  {titulo:"Treccani · Francesco Pignatelli y su familia",url:"https://www.treccani.it/enciclopedia/francesco-pignatelli_%28Dizionario-Biografico%29/",grupo:"Repertorios principales",territorios:["Estados Pontificios","Nápoles"],personas:["CARD_FRANCESCO_PIGN","GIULIO_PIGN_CERCHIARA","BEATRICE_CARAFA_NOJA","NICOLA_PIGN_VICERE"]},
   {titulo:"Treccani · Venecia y la expansión en Terraferma",url:"https://www.treccani.it/enciclopedia/venezia-e-l-entroterra_%28Storia-di-Venezia%29/",grupo:"Repertorios principales",territorios:["Venecia","Milán"],personas:["TOMMOCENIGODOGE","FRANFOSCARIDOGE"]},
   {titulo:"Treccani · Creta bajo Venecia",url:"https://www.treccani.it/enciclopedia/la-romania-veneziana_%28Storia-di-Venezia%29/",grupo:"Repertorios principales",territorios:["Venecia"],personas:["TOMMOCENIGODOGE"]},
   {titulo:"Treccani · Chipre entre Venecia y el Imperio otomano",url:"https://www.treccani.it/enciclopedia/cipro/",grupo:"Repertorios principales",territorios:["Venecia"],personas:["AGOBAREDOGE","LEOLOREDANDOGE","ANDGRITTIDOGE"]},
