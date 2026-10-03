@@ -15,7 +15,13 @@ export const REINO_A_IDS = {
   // Núcleo de la Prusia ducal; Warmia y Prusia Real siguieron otra trayectoria.
   Prusia: ["Lower_Prussia", "Upper_Prussia", "Masuria"],
 
-  Austria: ["Ober_dem_Wienerwald", "Unter_dem_Wienerwald", "Salzburger_Land", "Eastern_Styria", "Upper_Styria", "Middle_Styria", "Lower_Styria", "Upper_Carinthia", "Lower_Carinthia", "Upper_Carniola", "Lower_Carniola", "South_Tirol", "Vorarlberg"],
+  // El ducado/archiducado en sentido estricto: Austria sobre y bajo el Enns.
+  // Estiria, Carintia, Carniola y Tirol son gobiernos separados, aunque una
+  // misma rama de la casa de Habsburgo llegase a reunirlos.
+  Austria: ["Unter_dem_Manhartsberg", "Ober_dem_Manhartsberg", "Ober_dem_Wienerwald", "Unter_dem_Wienerwald", "Traungau", "Muhlviertel"],
+  "Austria Interior": ["Eastern_Styria", "Upper_Styria", "Middle_Styria", "Lower_Styria", "Upper_Carinthia", "Lower_Carinthia", "Upper_Carniola", "Lower_Carniola"],
+  Carintia: ["Upper_Carinthia", "Lower_Carinthia"],
+  Tirol: ["Oberinntal", "Unterinntal", "South_Tirol"],
 
   Baviera: ["Main_Franconia", "Frankenwald", "Tauberfranken", "Franconian_Alb", "Swabian_Alb", "Eastern_Upper_Swabia", "Western_Upper_Swabia"],
 
@@ -150,6 +156,9 @@ export const REINO_COLOR = {
   Polonia: '#da63cc',
   Prusia: '#303C59',
   Austria: '#8E293C',
+  "Austria Interior": '#A64D5A',
+  Carintia: '#A64D5A',
+  Tirol: '#996342',
   Baviera: '#69c4c4',
   Luxemburgo: '#8E8B29',
   Bizancio: '#6A8E29',
@@ -279,7 +288,8 @@ const MONARQUIA_HISPANICA = new Set([
   'Mallorca', 'Cerdeña', 'Nápoles', 'Trinacria', 'Milán', 'Navarra',
 ]);
 const ESTADOS_SABOYANOS = new Set(['Saboya', 'Piamonte', 'Cerdeña']);
-const ADMINISTRACION_AUSTRO_BOHEMIA = new Set(['Austria', 'Bohemia']);
+const TIERRAS_AUSTRIACAS = new Set(['Austria', 'Austria Interior', 'Tirol', 'Carintia']);
+const ADMINISTRACION_AUSTRO_BOHEMIA = new Set(['Austria', 'Austria Interior', 'Tirol', 'Carintia', 'Bohemia']);
 
 // La pertenencia a un conjunto se evalúa por territorio y fecha; compartir
 // dinastía o soberano nunca basta para colorear todos sus títulos por igual.
@@ -310,6 +320,13 @@ const AGRUPACIONES_POLITICAS = [
     aplica: (activos) => activos.has('Austria') && activos.has('Bohemia'),
     nota: 'Las reformas de 1749 centralizaron la administración de las tierras austríacas y bohemias; Hungría quedó fuera de esa integración.',
     fuente: 'https://www.habsburger.net/de/kapitel/die-maria-theresianischen-reformen',
+  },
+  {
+    id: 'tierras-austriacas', nombre: 'Tierras austríacas reunidas', territorios: TIERRAS_AUSTRIACAS,
+    color: REINO_COLOR.Austria, desde: -Infinity,
+    aplica: (activos) => [...TIERRAS_AUSTRIACAS].filter(territorio => activos.has(territorio)).length > 1,
+    nota: 'El tono común solo agrupa las tierras austríacas que esta persona gobernó a la vez; no incluye automáticamente Bohemia, Hungría ni los demás estados del Imperio.',
+    fuente: 'https://www.habsburger.net/en/chapter/tripartite-division-austrian-inheritance',
   },
   {
     id: 'saboya', nombre: 'Estados saboyanos', territorios: ESTADOS_SABOYANOS,
@@ -596,27 +613,10 @@ Inglaterra: [
     { desde: 1234, hasta: Infinity, ids: [...REINO_A_IDS.León,"Caceres","Merida","Badajoz","Trujillo","Villanueva_de_la_Serena"] },
   ],
 
-  Austria: [
-    {
-      desde: -Infinity,
-      hasta: 1300, // Rodolfo I ////1276
-      ids: ["Aargau","Upper_Alsace","Waldstatte","Unter_dem_Manhartsberg","Ober_dem_Manhartsberg","Ober_dem_Wienerwald","Unter_dem_Wienerwald","Eastern_Styria","Upper_Styria","Middle_Styria","Lower_Carinthia","Traungau","Muhlviertel","Lower_Styria","Thurgau",],
-    },
-    {
-      desde: 1300,
-      hasta: 1378, // ???
-      ids: ["Aargau","Upper_Alsace","Thurgau","Unter_dem_Manhartsberg","Ober_dem_Manhartsberg","Ober_dem_Wienerwald","Unter_dem_Wienerwald","Eastern_Styria","Lower_Styria","Lower_Carniola","Upper_Carniola","Lower_Carinthia","Middle_Styria","Upper_Styria","Traungau","Muhlviertel","Waldstatte",],
-    },
-    {
-      desde: 1378,
-      hasta: 1400, // ???
-      ids: ["Aargau","Upper_Alsace","Waldstatte","Unter_dem_Manhartsberg","Ober_dem_Manhartsberg","Ober_dem_Wienerwald","Unter_dem_Wienerwald","Eastern_Styria","Upper_Styria","Middle_Styria","Lower_Carinthia","Traungau","Muhlviertel","Lower_Styria","Thurgau","Upper_Carniola","Lower_Carniola","South_Tirol","Oberinntal","Unterinntal"],
-    },
-    {
-      desde: 1400,
-      hasta: Infinity, // aproximación pendiente de revisión histórica
-      ids: ["Upper_Alsace","Unter_dem_Manhartsberg","Ober_dem_Manhartsberg","Ober_dem_Wienerwald","Unter_dem_Wienerwald","Eastern_Styria","Upper_Styria","Middle_Styria","Lower_Carinthia","Traungau","Muhlviertel","Lower_Styria","Upper_Carniola","Lower_Carniola","South_Tirol","Oberinntal","Unterinntal","Upper_Carinthia","Istria","Gorizia","Hegau","Vorarlberg"],
-    },
+  Austria: [{ desde: -Infinity, hasta: Infinity, ids: REINO_A_IDS.Austria }],
+  "Austria Interior": [
+    { desde: -Infinity, hasta: 1500, ids: REINO_A_IDS["Austria Interior"] },
+    { desde: 1500, hasta: Infinity, ids: [...REINO_A_IDS["Austria Interior"], "Gorizia"] },
   ],
 
   Baviera: [

@@ -13,8 +13,8 @@ html[data-eade-theme="dark"] .wrap .search-box input::placeholder { color: var(-
 html[data-eade-theme="dark"] .wrap .search-box svg { color: var(--eade-muted); }
 
 
-.bio-tabs { position: sticky; top: 0; z-index: 4; display: flex; flex-wrap: wrap; gap: 3px; margin: 13px 0 12px; padding-top: 4px; border-bottom: 1px solid var(--eade-border); background: var(--eade-paper-soft); }
-.bio-tabs button { flex: 1 1 calc(33.333% - 3px); min-height: 39px; padding: 7px 5px; border: 0; border-bottom: 3px solid transparent; background: transparent; color: var(--eade-muted); font: 600 11px var(--eade-sans); cursor: pointer; }
+.bio-tabs { flex: 0 0 auto; display: flex; gap: 2px; min-width: 0; margin: 0; padding: 0 8px; overflow-x: auto; scrollbar-width: thin; border-bottom: 1px solid var(--eade-border); background: var(--eade-paper-soft); }
+.bio-tabs button { flex: 1 0 auto; min-width: 64px; min-height: 40px; padding: 7px 5px; border: 0; border-bottom: 3px solid transparent; background: transparent; color: var(--eade-muted); font: 600 11px var(--eade-sans); cursor: pointer; }
 .bio-tabs button[aria-current="location"] { color: var(--eade-wine); border-bottom-color: var(--eade-wine); }
 .bio-tabs button:focus-visible { outline: 2px solid var(--eade-gold); outline-offset: -2px; }
 .bio-scroll-section { padding: 8px 0 16px; border-bottom: 1px solid var(--eade-border); }

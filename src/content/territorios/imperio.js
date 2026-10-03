@@ -38,24 +38,48 @@ export default {
     ]
   },
   "Austria": {
-    "resumen": "Austria fue el núcleo de una expansión dinástica de los Habsburgo que reunió territorios con gobiernos propios. La dignidad archiducal y las particiones entre ramas familiares requieren distinguir el título del ámbito efectivo de cada príncipe.",
+    "resumen": "El ducado de Austria, centrado en las tierras sobre y bajo el Enns, pasó a los Habsburgo en 1282. La dignidad de archiduque, promovida en el siglo XIV y reconocida en 1453, elevó el rango del título: no convirtió automáticamente Estiria, Carintia, Carniola o Tirol en partes del archiducado. Las ramas familiares gobernaron esas tierras por separado en varios periodos.",
     "evolucion": [
       {
         "anio": 1282,
         "texto": "Investidura de los Habsburgo"
       },
       {
+        "anio": 1379,
+        "texto": "Partición de Neuberg: Austria danubiana queda separada de la línea leopoldina"
+      },
+      {
         "anio": 1453,
         "texto": "Reconocimiento de la dignidad archiducal"
+      },
+      {
+        "anio": 1521,
+        "texto": "Carlos V transfiere las tierras austríacas a Fernando I; el acuerdo sobre Tirol se completa en 1522"
       },
       {
         "anio": 1526,
         "texto": "Herencias de Bohemia y Hungría"
       },
       {
+        "anio": 1564,
+        "texto": "Nueva partición entre Austria danubiana, Austria Interior y Tirol"
+      },
+      {
+        "anio": 1619,
+        "texto": "La rama de Austria Interior reúne también el gobierno de Austria danubiana"
+      },
+      {
         "anio": 1740,
         "texto": "Sucesión de María Teresa"
       }
+    ]
+  },
+  "Austria Interior": {
+    "resumen": "Conjunto dinástico de Estiria, Carintia y Carniola, distinto del ducado o archiducado de Austria. La partición de 1564 lo asignó a Carlos II; su línea heredó Austria danubiana en 1619. El mapa aproxima esas tierras mediante regiones actuales y no presupone fronteras o administración uniformes.",
+    "evolucion": [
+      { "anio": 1379, "texto": "La partición de Neuberg separa la línea leopoldina" },
+      { "anio": 1564, "texto": "Carlos II recibe Austria Interior en la partición familiar" },
+      { "anio": 1619, "texto": "Fernando II reúne Austria Interior con Austria danubiana" }
     ]
   },
   "Bohemia": {
@@ -93,7 +117,7 @@ export default {
     ]
   },
   "Tirol": {
-    "resumen": "El condado del Tirol controlaba importantes pasos alpinos. Sus vínculos dinásticos con Carintia y Austria no alteraron la naturaleza condal del título territorial.",
+    "resumen": "El condado del Tirol controlaba importantes pasos alpinos y conservó su identidad territorial aunque lo gobernaran archiduques Habsburgo. Segismundo lo cedió a Maximiliano I en 1490; Fernando I lo recibió de Carlos V en 1522. Tras la partición de 1564 formó una rama separada hasta su reunión con la línea principal en 1665.",
     "evolucion": [
       {
         "anio": 1295,
@@ -102,6 +126,22 @@ export default {
       {
         "anio": 1363,
         "texto": "Margarita transmite Tirol a los Habsburgo"
+      },
+      {
+        "anio": 1490,
+        "texto": "Segismundo cede Tirol a Maximiliano I"
+      },
+      {
+        "anio": 1522,
+        "texto": "Fernando I recibe Tirol mediante el acuerdo con Carlos V"
+      },
+      {
+        "anio": 1564,
+        "texto": "Fernando II de Tirol recibe el condado en la partición familiar"
+      },
+      {
+        "anio": 1665,
+        "texto": "La línea tirolesa se extingue y el condado vuelve a la rama principal"
       }
     ]
   },

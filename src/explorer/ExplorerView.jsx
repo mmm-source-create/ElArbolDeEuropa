@@ -206,15 +206,14 @@ export default function ExplorerView({ vm }) {
     const section = scroller?.querySelector(`#bio-section-${key}`);
     if (!scroller || !section) return;
     setBioSection(key);
-    const navHeight = scroller.querySelector('.bio-tabs')?.getBoundingClientRect().height || 0;
-    const top = section.getBoundingClientRect().top - scroller.getBoundingClientRect().top + scroller.scrollTop - navHeight - 8;
-    scroller.scrollTo({ top, behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'instant' : 'smooth' });
+    const top = section.getBoundingClientRect().top - scroller.getBoundingClientRect().top + scroller.scrollTop - 8;
+    scroller.scrollTo({ top, behavior: 'instant' });
     section.focus({ preventScroll: true });
   };
   const updateBioSectionOnScroll = () => {
     const scroller = bioScrollRef.current;
     if (!scroller) return;
-    const top = (scroller.querySelector('.bio-tabs')?.getBoundingClientRect().bottom || scroller.getBoundingClientRect().top) + 16;
+    const top = scroller.getBoundingClientRect().top + 16;
     const sections = [...scroller.querySelectorAll('[data-bio-section]')];
     const current = sections.filter(section => section.getBoundingClientRect().top <= top).at(-1) || sections[0];
     if (current) setBioSection(current.dataset.bioSection);
@@ -939,6 +938,11 @@ export default function ExplorerView({ vm }) {
               <span className="panel-title">Biografía</span>
               <span className="panel-count">{personaBio ? "1 personaje" : "ninguno"}</span>
             </div>
+            {personaBio && <nav className="bio-tabs" aria-label={`Apartados de ${personaBio.nombre}`}>
+              {[
+                ['resumen','Resumen'],['familia','Familia'],['coronas','Coronas'],['historias','Historias'],['fuentes','Fuentes'],
+              ].map(([key,label])=><button key={key} type="button" aria-current={bioSection===key ? 'location' : undefined} aria-controls={`bio-section-${key}`} onClick={()=>scrollToBioSection(key)}>{label}</button>)}
+            </nav>}
             <div className="panel-body workspace-panel-scroll workspace-bio-scroll" ref={bioScrollRef} onScroll={updateBioSectionOnScroll}>
               {personaBio ? (
                 <div className="bio-panel">
@@ -991,12 +995,6 @@ export default function ExplorerView({ vm }) {
                       )}
                     </div>
                   </div>
-
-                  <nav className="bio-tabs" aria-label={`Apartados de ${personaBio.nombre}`}>
-                    {[
-                      ['resumen','Resumen'],['familia','Familia'],['coronas','Coronas'],['historias','Historias'],['fuentes','Fuentes'],
-                    ].map(([key,label])=><button key={key} type="button" aria-current={bioSection===key ? 'location' : undefined} aria-controls={`bio-section-${key}`} onClick={()=>scrollToBioSection(key)}>{label}</button>)}
-                  </nav>
 
                   <section id="bio-section-resumen" data-bio-section="resumen" className="bio-scroll-section" aria-labelledby="bio-heading-resumen" tabIndex={-1}>
                     <h4 id="bio-heading-resumen" className="bio-section-heading">Resumen</h4>
