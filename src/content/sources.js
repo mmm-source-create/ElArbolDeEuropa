@@ -12,6 +12,8 @@ const DOGES_1400_1605 = [
 // Bibliography shared by the public site, Atlas and generated entity pages.
 // A territorial reference supplies context; only explicit person IDs assign a biography.
 export const SOURCES = [
+  {titulo:"Die Welt der Habsburger · Cesión de las tierras austríacas a Fernando I",url:"https://www.habsburger.net/en/chapter/ferdinand-i-overshadowed-his-elder-brother",grupo:"Archivos e instituciones",territorios:["Austria","Austria Interior","Tirol"],personas:["CARLOS5","FERN1EMP"]},
+  {titulo:"Die Welt der Habsburger · Partición de 1564",url:"https://www.habsburger.net/en/chapter/tripartite-division-austrian-inheritance",grupo:"Archivos e instituciones",territorios:["Austria","Austria Interior","Tirol"],personas:["MAXIM2","FERN2TIROL","CARLOS2ESTIRIA","FERN2EMP"]},
   {titulo:"Lombardia Beni Culturali · Cronología de los dux de Venecia",url:"https://www.lombardiabeniculturali.it/istituzioni/cronologie/cariche/3/",grupo:"Archivos e instituciones",territorios:["Venecia"],personas:DOGES_1400_1605},
   {titulo:"Treccani · Inocencio XII y la rama de Cerchiara",url:"https://www.treccani.it/enciclopedia/innocenzo-xii_%28Enciclopedia-dei-Papi%29/",grupo:"Repertorios principales",territorios:["Estados Pontificios"],personas:["PAPA_INOCENCIO12","FRANCESCO_PIGN_SPINAZZOLA","PORZIA_CARAFA","FABRIZIO_CARAFA_PORZIA"]},
   {titulo:"Treccani · Francesco Pignatelli y su familia",url:"https://www.treccani.it/enciclopedia/francesco-pignatelli_%28Dizionario-Biografico%29/",grupo:"Repertorios principales",territorios:["Estados Pontificios","Nápoles"],personas:["CARD_FRANCESCO_PIGN","GIULIO_PIGN_CERCHIARA","BEATRICE_CARAFA_NOJA","NICOLA_PIGN_VICERE"]},

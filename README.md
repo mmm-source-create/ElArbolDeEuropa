@@ -2,10 +2,12 @@
 
 Atlas histórico y genealógico para explorar personas, dinastías, territorios y sus conexiones familiares.
 
-- [Web](https://www.treeofeurope.eu/es/) · Versión del repositorio: **V4.5**
-- [Cambios de V4.5](docs/V4.5.md) · [Documentación e historial](docs/README.md) · [Seguridad](SECURITY.md)
+- [Web](https://www.treeofeurope.eu/es/) · Versión del repositorio: **V4.6**
+- [Cambios de V4.6](docs/V4.6.md) · [Documentación e historial](docs/README.md) · [Seguridad](SECURITY.md)
 
-La V4.5 convierte las pestañas de biografía en un índice que desplaza a secciones siempre visibles, ajusta el árbol para acercar personas coetáneas cuando las relaciones lo permiten y mejora el borrado de filtros sin borrar la búsqueda. Completa la secuencia de dogos venecianos entre 1400 y 1605 como cargos electivos, amplía dos ramas documentadas de los Pignatelli y añade una auditoría automática de huecos de dogado y geometría cartográfica. El mapa explica sus agrupaciones de color por fecha; Austria y Bohemia comparten administración desde las reformas de 1749, mientras Hungría sigue separada. La vista mundial queda disponible junto al encuadre europeo habitual.
+La V4.6 abre el mapa directamente sobre Europa, compacta el filtro de evidencia y la biografía, y separa Austria danubiana, Austria Interior y Tirol con gobiernos fechados. Cuando se consulta a un emperador entre 1512 y 1792, un marco gris identifica una aproximación al ámbito jurídico del Sacro Imperio sin confundirlo con sus posesiones personales. El cambio de 1648 distingue los Países Bajos meridionales de la República neerlandesa y retira Suiza. La [revisión cartográfica del Imperio](docs/CARTOGRAFIA_SACRO_IMPERIO.md) documenta fuentes, exclusiones y zonas aún pendientes.
+
+La V4.5 convirtió las pestañas de biografía en un índice de secciones siempre visibles, acercó personas coetáneas en el árbol y mejoró el borrado de filtros. Completó la secuencia de dogos venecianos entre 1400 y 1605, amplió dos ramas Pignatelli y añadió auditorías de cartografía y dogado. Su documentación de las [reformas de 1749](docs/V4.5.md) sigue vigente; los botones de encuadre mundial introducidos entonces se retiraron en V4.6.
 
 La V4.4 revisa la coherencia territorial de Iberia e Italia: separa los reinos y condados de las coronas compuestas, fecha conquistas y cambios de posesión, y completa la sucesión italiana de 1700 a 1759. Esta revisión amplía las regiones documentadas de Venecia, Milán, Saboya, Piamonte y los Estados Pontificios, añade una muestra de dogos venecianos y hace que el color responda al conjunto político y al año, no a todos los títulos de un soberano. Los filtros muestran la jerarquía España → coronas → reinos, reúnen la herencia borgoñona y las incorporaciones neerlandesas del siglo XVI, y corrigen su contraste en oscuro. Prusia utiliza el azul de los Hohenzollern también en su filtro. La [auditoría de España, Portugal e Italia](docs/CARTOGRAFIA_IBERIA_ITALIA.md) explica las decisiones y los límites del mapa regional. La [secuencia de la herencia borgoñona](docs/CARTOGRAFIA_BORGONA.md) de V4.3 conserva sus delimitaciones y su color propio bajo Carlos V y Felipe II.
 

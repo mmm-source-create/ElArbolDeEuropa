@@ -10,6 +10,7 @@ import {
 } from "lucide-react";
 import mapSvgUrl from "./MapChart_Map.svg?url";
 import { loadTextAsset, forgetTextAsset } from "./utils/loadAsset.js";
+import { imperialFrameIds } from "./data/imperialFrame.js";
 import {
   agrupacionesPoliticasEnMapa,
   colorTerritorioEnMapa,
@@ -40,15 +41,13 @@ function parseViewBox(svg) {
 }
 
 function initialViewBox(original) {
-  // Reproduce aproximadamente el encuadre que antes generaba scale(1.9)
-  // con transform-origin 47% 8%, pero mediante viewBox para que el drag y
-  // el zoom sean precisos y el SVG permanezca nítido.
-  const scale = 1.9;
-  const originX = original.x + original.width * 0.47;
-  const originY = original.y + original.height * 0.08;
+  // El SVG es mundial y Europa ocupa una fracción pequeña de su lienzo.
+  // El encuadre de entrada muestra Europa, el Mediterráneo y su contexto
+  // inmediato; el usuario puede seguir arrastrando y alejando hasta el mundo.
+  const scale = 1 / 0.23;
   return {
-    x: originX + (original.x - originX) / scale,
-    y: originY + (original.y - originY) / scale,
+    x: original.x + original.width * 0.385,
+    y: original.y + original.height * 0.1,
     width: original.width / scale,
     height: original.height / scale,
   };
@@ -104,6 +103,10 @@ export function MapaEuropa({ seleccion, anioGlobal = null, onSelectTerritorio, i
   const [mapAttempt, setMapAttempt] = useState(0);
   const activeGroups = seleccion && Number.isFinite(anioGlobal)
     ? agrupacionesPoliticasEnMapa(seleccion, anioGlobal) : [];
+  const hasImperialOffice = Boolean(seleccion && Number.isFinite(anioGlobal)
+    && reinadosActivos(seleccion, anioGlobal, { soloEfectivos: true })
+      .some((gobierno) => gobierno.territorio === 'Sacro Imperio'));
+  const imperialReferenceActive = hasImperialOffice && imperialFrameIds(anioGlobal).length > 0;
 
   useEffect(() => {
     if (!containerRef.current || svgInyectadoRef.current) return;
@@ -124,7 +127,12 @@ export function MapaEuropa({ seleccion, anioGlobal = null, onSelectTerritorio, i
 
     const original = parseViewBox(svg);
     const initial = clampViewBox(initialViewBox(original), original);
-    const restored = initialViewport ? clampViewBox(initialViewport, original) : initial;
+    // Las sesiones V4.5 guardaron el encuadre mundial antiguo como si fuera
+    // una preferencia. Solo ese valor exacto migra al nuevo inicio europeo.
+    const legacyDefault = initialViewport
+      && Math.abs(initialViewport.width - original.width / 1.9) < 0.01
+      && Math.abs(initialViewport.height - original.height / 1.9) < 0.01;
+    const restored = initialViewport && !legacyDefault ? clampViewBox(initialViewport, original) : initial;
     originalViewBoxRef.current = original;
     initialViewBoxRef.current = initial;
 
@@ -178,6 +186,17 @@ export function MapaEuropa({ seleccion, anioGlobal = null, onSelectTerritorio, i
       });
       pintadosRef.current = new Set();
 
+      if (imperialReferenceActive) {
+        imperialFrameIds(anioGlobal).forEach((id) => {
+          const target = buscarElemento(id);
+          if (!target) return;
+          target.style.setProperty('fill', '#aaa397', 'important');
+          target.style.setProperty('stroke', '#aaa397', 'important');
+          target.style.setProperty('stroke-width', '0.6px', 'important');
+          pintadosRef.current.add(id);
+        });
+      }
+
       if (seleccion) {
         const reinadosDetallados = listaReinados(seleccion).filter(reinadoEsEfectivo);
         const entradas = reinadosDetallados.length
@@ -204,7 +223,11 @@ export function MapaEuropa({ seleccion, anioGlobal = null, onSelectTerritorio, i
             ? anioGlobal
             : añoReferenciaTerritorial(seleccion, reino);
           const color = colorTerritorioEnMapa(seleccion, reino, año);
-          idsDeReinoEnAño(reino, año).forEach((id) => {
+          // Una ficha con ámbito de rama no colorea todo el archiducado.
+          const ids = reino === 'Austria' && entrada.ambito?.includes('Austria Interior')
+            ? [...idsDeReinoEnAño('Austria Interior', año), ...(año >= 1619 ? idsDeReinoEnAño('Austria', año) : [])]
+            : idsDeReinoEnAño(reino, año);
+          ids.forEach((id) => {
             const target = buscarElemento(id);
             if (!target) return;
             target.style.setProperty("fill", color, "important");
@@ -217,7 +240,7 @@ export function MapaEuropa({ seleccion, anioGlobal = null, onSelectTerritorio, i
     } catch (error) {
       console.error("[MapaEuropa] Error al renderizar:", error);
     }
-  }, [seleccion, anioGlobal, mapReady]);
+  }, [seleccion, anioGlobal, mapReady, imperialReferenceActive]);
 
   const updateViewBox = useCallback((producer) => {
     setViewBox((current) => {
@@ -256,9 +279,6 @@ export function MapaEuropa({ seleccion, anioGlobal = null, onSelectTerritorio, i
 
   const resetView = useCallback(() => {
     if (initialViewBoxRef.current) setViewBox({ ...initialViewBoxRef.current });
-  }, []);
-  const showWorld = useCallback(() => {
-    if (originalViewBoxRef.current) setViewBox({ ...originalViewBoxRef.current });
   }, []);
 
   const handlePointerDown = (event) => {
@@ -320,9 +340,6 @@ export function MapaEuropa({ seleccion, anioGlobal = null, onSelectTerritorio, i
         {mapError ? <>No se ha podido cargar el mapa. <button className="nav-btn" onClick={() => setMapAttempt(n => n + 1)}>Reintentar</button></> : "Cargando mapa…"}
       </div>}
       <div className="mapa-toolbar" aria-label="Controles del mapa">
-        <button type="button" className="mapa-preset" onClick={resetView} title="Centrar la vista inicial en Europa">Europa</button>
-        <button type="button" className="mapa-preset" onClick={showWorld} title="Mostrar el mapa completo">Mundo</button>
-        <span className="mapa-toolbar-separator" aria-hidden="true" />
         <button type="button" className="nav-btn" onClick={() => zoomBy(1 / MAP_ZOOM_FACTOR)} title="Alejar mapa" aria-label="Alejar mapa"><ZoomOut size={13} /></button>
         <button type="button" className="nav-btn" onClick={resetView} title="Volver a Europa" aria-label="Volver a Europa"><RotateCcw size={12} /></button>
         <button type="button" className="nav-btn" onClick={() => zoomBy(MAP_ZOOM_FACTOR)} title="Acercar mapa" aria-label="Acercar mapa"><ZoomIn size={13} /></button>
@@ -334,6 +351,8 @@ export function MapaEuropa({ seleccion, anioGlobal = null, onSelectTerritorio, i
       </div>
       {seleccion && <details className="mapa-color-legend">
         <summary>¿Por qué estos colores?</summary>
+        {imperialReferenceActive && <p>El tono gris muestra una aproximación regional al ámbito jurídico del Sacro Imperio en {anioGlobal}. Los colores vivos indican gobiernos efectivos de esta persona. Pertenecer al Imperio no equivalía a ser una posesión del emperador. <a href="/es/metodologia/">Método y límites</a>.</p>}
+        {hasImperialOffice && !imperialReferenceActive && <p>El marco imperial no está reconstruido para este año. Solo se colorean los gobiernos territoriales documentados de la persona.</p>}
         {Number.isFinite(anioGlobal) ? (
           activeGroups.length ? activeGroups.map(grupo => <div className="mapa-color-legend-item" key={grupo.id}>
             <span className="mapa-color-swatch" style={{ backgroundColor: grupo.color }} aria-hidden="true" />
