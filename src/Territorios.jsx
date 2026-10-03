@@ -22,7 +22,12 @@ export const REINO_A_IDS = {
 
   Lituania: ["Siauliai","Medininkai","Upyte","Raseiniai","Vilkmerge","Kaunas","Vilnius","Trakai","Breslauja","Novogrudok","Grodno","Lida","Slonin","Vawkavysk","Suwalki","Ashmyany","Svir"],
 
-  Milán: ["Milano", "Pavia", "Cremona"], // Bergamo y Brescia pasan a Venecia en 1428.
+  // Monza aproxima el norte del Milanese; el SVG no separa Lodi, Como,
+  // Tortona ni Vigevano. Novara y Alessandria salen del Estado en el XVIII.
+  Milán: ["Milano", "Monza", "Pavia", "Cremona", "Novara", "Alessandria"],
+  Venecia: ["Venice"],
+  Saboya: ["Savoy", "Aosta", "Bresse", "Nice"],
+  Piamonte: ["Torino", "Mondovi"],
 
   Habsburgo: ["Aargau","Upper_Alsace","Waldstatte"],
 
@@ -146,6 +151,9 @@ export const REINO_COLOR = {
   Bizancio: '#6A8E29',
   Lituania: '#43298E',
   Milán: '#1a6684',
+  Venecia: '#278477',
+  Saboya: '#596e9b',
+  Piamonte: '#596e9b',
   Habsburgo: '#298E70',
   Brabante: '#568E29',
   Limburgo: '#298E84',
@@ -156,7 +164,7 @@ export const REINO_COLOR = {
   León: '#efe558',
   España: '#C5A62B',
   Navarra: '#84a531',
-  Mallorca: '#7E8E29',
+  Mallorca: '#a34b43',
   Portugal: '#298e47',
   Francia: '#295D8E',
   Inglaterra: '#7A4F3B',
@@ -255,7 +263,17 @@ const FEUDOS_HERENCIA_BORGONONA = new Set([
   'Zelanda', 'Luxemburgo', 'Güeldres', 'Frisia', 'Utrecht', 'Overijssel',
   'Drente', 'Groninga',
 ]);
-export function colorTerritorioEnMapa(persona, territorio) {
+export function colorTerritorioEnMapa(persona, territorio, año) {
+  // La paleta expresa un gobierno personal simultáneo, no una absorción
+  // jurídica de las coronas. Fuera del año elegido no se infiere una unión.
+  const activos = new Set(reinadosActivos(persona, año, { soloEfectivos: true }).map(r => r.territorio));
+  if (activos.has('Castilla') && activos.has('Aragón') && año >= 1516) return REINO_COLOR.España;
+  if (activos.has('Aragón')) return REINO_COLOR.Aragón;
+  if (activos.has('Castilla') && activos.has('León')) return REINO_COLOR.Castilla;
+  if (activos.has('Francia')) return REINO_COLOR.Francia;
+  if (activos.has('Austria')) return REINO_COLOR.Austria;
+  if (activos.has('Hungría')) return REINO_COLOR.Hungría;
+  if (activos.has('Saboya') || activos.has('Piamonte')) return REINO_COLOR.Saboya;
   if (PERSONAS_HERENCIA_BORGONONA.has(persona?.id) && FEUDOS_HERENCIA_BORGONONA.has(territorio)) {
     return REINO_COLOR.Borgoña;
   }
@@ -390,8 +408,42 @@ Inglaterra: [
     { desde: 1659, hasta: Infinity, ids: [...REINO_A_IDS.Francia,"Rosello"] },
   ],
   Milán: [
-    { desde: -Infinity, hasta: 1428, ids: ["Milano","Pavia","Cremona","Bergamo","Brescia"] },
-    { desde: 1428, hasta: Infinity, ids: REINO_A_IDS.Milán },
+    { desde: -Infinity, hasta: 1428, ids: [...REINO_A_IDS.Milán,"Bergamo","Brescia"] },
+    { desde: 1428, hasta: 1499, ids: REINO_A_IDS.Milán },
+    { desde: 1499, hasta: 1509, ids: REINO_A_IDS.Milán.filter(id => id !== 'Cremona') },
+    { desde: 1509, hasta: 1713, ids: REINO_A_IDS.Milán },
+    { desde: 1713, hasta: 1738, ids: REINO_A_IDS.Milán.filter(id => id !== 'Alessandria') },
+    { desde: 1738, hasta: Infinity, ids: REINO_A_IDS.Milán.filter(id => !['Alessandria', 'Novara'].includes(id)) },
+  ],
+  Venecia: [
+    { desde: -Infinity, hasta: 1211, ids: REINO_A_IDS.Venecia },
+    { desde: 1211, hasta: 1404, ids: [...REINO_A_IDS.Venecia, 'Crete'] },
+    { desde: 1404, hasta: 1405, ids: [...REINO_A_IDS.Venecia, 'Crete', 'Vicenza', 'Belluno'] },
+    { desde: 1405, hasta: 1411, ids: [...REINO_A_IDS.Venecia, 'Crete', 'Vicenza', 'Padua', 'Verona', 'Belluno'] },
+    { desde: 1411, hasta: 1420, ids: [...REINO_A_IDS.Venecia, 'Crete', 'Vicenza', 'Padua', 'Verona'] },
+    { desde: 1420, hasta: 1428, ids: [...REINO_A_IDS.Venecia, 'Crete', 'Vicenza', 'Padua', 'Verona', 'Belluno', 'Friuli'] },
+    { desde: 1428, hasta: 1489, ids: [...REINO_A_IDS.Venecia, 'Crete', 'Vicenza', 'Padua', 'Verona', 'Belluno', 'Friuli', 'Bergamo', 'Brescia'] },
+    { desde: 1489, hasta: 1499, ids: [...REINO_A_IDS.Venecia, 'Crete', 'Vicenza', 'Padua', 'Verona', 'Belluno', 'Friuli', 'Bergamo', 'Brescia', 'Cyprus'] },
+    { desde: 1499, hasta: 1509, ids: [...REINO_A_IDS.Venecia, 'Crete', 'Vicenza', 'Padua', 'Verona', 'Belluno', 'Friuli', 'Bergamo', 'Brescia', 'Cyprus', 'Cremona'] },
+    // La Liga de Cambrai arrebató buena parte de Terraferma; Padua volvió
+    // en 1509, mientras Brescia y Verona no se recuperaron hasta 1516.
+    { desde: 1509, hasta: 1516, ids: [...REINO_A_IDS.Venecia, 'Crete', 'Padua', 'Cyprus'] },
+    { desde: 1516, hasta: 1571, ids: [...REINO_A_IDS.Venecia, 'Crete', 'Vicenza', 'Padua', 'Verona', 'Belluno', 'Friuli', 'Bergamo', 'Brescia', 'Cyprus'] },
+    { desde: 1571, hasta: 1669, ids: [...REINO_A_IDS.Venecia, 'Crete', 'Vicenza', 'Padua', 'Verona', 'Belluno', 'Friuli', 'Bergamo', 'Brescia'] },
+    { desde: 1669, hasta: 1797, ids: [...REINO_A_IDS.Venecia, 'Vicenza', 'Padua', 'Verona', 'Belluno', 'Friuli', 'Bergamo', 'Brescia'] },
+    { desde: 1797, hasta: Infinity, ids: [] },
+  ],
+  Saboya: [
+    { desde: -Infinity, hasta: 1388, ids: REINO_A_IDS.Saboya.filter(id => id !== 'Nice') },
+    { desde: 1388, hasta: 1601, ids: REINO_A_IDS.Saboya },
+    { desde: 1601, hasta: Infinity, ids: REINO_A_IDS.Saboya.filter(id => id !== 'Bresse') },
+  ],
+  Piamonte: [
+    { desde: -Infinity, hasta: 1601, ids: REINO_A_IDS.Piamonte },
+    { desde: 1601, hasta: 1708, ids: [...REINO_A_IDS.Piamonte, 'Saluzzo'] },
+    { desde: 1708, hasta: 1713, ids: [...REINO_A_IDS.Piamonte, 'Saluzzo', 'Monferrato'] },
+    { desde: 1713, hasta: 1738, ids: [...REINO_A_IDS.Piamonte, 'Saluzzo', 'Monferrato', 'Alessandria'] },
+    { desde: 1738, hasta: Infinity, ids: [...REINO_A_IDS.Piamonte, 'Saluzzo', 'Monferrato', 'Alessandria', 'Novara'] },
   ],
   Valencia: [
     { desde: -Infinity, hasta: 1305, ids: REINO_A_IDS.Valencia },
@@ -430,7 +482,11 @@ Inglaterra: [
   "Estados Pontificios": [
     { desde: -Infinity, hasta: 1506, ids: REINO_A_IDS["Estados Pontificios"] },
     { desde: 1506, hasta: 1512, ids: [...REINO_A_IDS["Estados Pontificios"],"Bologna"] },
-    { desde: 1512, hasta: 1540, ids: [...REINO_A_IDS["Estados Pontificios"],"Bologna","Romagna"] },
+    { desde: 1512, hasta: 1515, ids: [...REINO_A_IDS["Estados Pontificios"],"Bologna","Romagna", 'Parma', 'Piacenza'] },
+    { desde: 1515, hasta: 1521, ids: [...REINO_A_IDS["Estados Pontificios"],"Bologna","Romagna"] },
+    { desde: 1521, hasta: 1540, ids: [...REINO_A_IDS["Estados Pontificios"],"Bologna","Romagna", 'Parma', 'Piacenza'] },
+    { desde: 1540, hasta: 1545, ids: [...REINO_A_IDS["Estados Pontificios"],"Bologna","Romagna","Perugia", 'Parma', 'Piacenza'] },
+    { desde: 1545, hasta: 1598, ids: [...REINO_A_IDS["Estados Pontificios"],"Bologna","Romagna","Perugia"] },
     { desde: 1540, hasta: 1598, ids: [...REINO_A_IDS["Estados Pontificios"],"Bologna","Romagna","Perugia"] },
     { desde: 1598, hasta: 1631, ids: [...REINO_A_IDS["Estados Pontificios"],"Bologna","Romagna","Perugia","Ferrara"] },
     { desde: 1631, hasta: Infinity, ids: [...REINO_A_IDS["Estados Pontificios"],"Bologna","Romagna","Perugia","Ferrara","Urbino"] },
@@ -588,11 +644,7 @@ export const TERRITORIOS_DESTACADOS = [
   "Georgia y Cáucaso",
   "España",
   "Portugal",
-  "Navarra",
   "Sacro Imperio",
-  "Austria",
-  "Bohemia",
-  "Baviera",
   "Países Bajos y Flandes",
   "Estados Italianos",
   "Hungría",

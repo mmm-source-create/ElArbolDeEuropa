@@ -2156,6 +2156,18 @@ html, body {
   box-shadow: none;
 }
 
+.workspace-filter-scroll .territory-filter-children {
+  margin: 5px 0 7px 10px;
+  padding: 5px 0 2px 9px;
+  border-left: 1px solid var(--eade-border, #d9cfb6);
+  display: grid;
+  gap: 5px;
+  min-width: 0;
+}
+.workspace-filter-scroll .territory-filter-node.is-nested { min-width: 0; }
+.workspace-filter-scroll .territory-filter-node.is-nested .dinastia-chip-row { display: flex; min-width: 0; }
+.workspace-filter-scroll .territory-filter-node.is-nested .chip { min-width: 0; white-space: normal; }
+
 .workspace-bio-scroll .bio-panel {
   max-height: none;
   overflow: visible;

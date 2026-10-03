@@ -2,7 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import {PERSONAS} from '../src/personas.jsx';
-import {REINO_A_IDS, REINO_VERSIONES, idsDeReinoEnAño, reinadosActivos} from '../src/Territorios.jsx';
+import {REINO_A_IDS, REINO_VERSIONES, REINO_COLOR, TERRITORIOS_SUB, colorTerritorioEnMapa, idsDeReinoEnAño, reinadosActivos, subterritoriosDeFiltro} from '../src/Territorios.jsx';
 
 const person = id => PERSONAS.find(p => p.id === id);
 const painted = (id, year) => new Set(reinadosActivos(person(id), year, {soloEfectivos:true})
@@ -95,6 +95,44 @@ test('los estados italianos no se absorben por título ni soberanía formal', ()
   assert.ok(!contains('Sicilia', 1300, 'Calabria_Ultra'));
 });
 
+test('Venecia, Milán y Saboya cambian de regiones cuando cambia el control', () => {
+  assert.ok(contains('Venecia', 1427, 'Padua'));
+  assert.ok(!contains('Venecia', 1427, 'Bergamo'));
+  assert.ok(contains('Venecia', 1428, 'Bergamo'));
+  assert.ok(contains('Venecia', 1500, 'Cremona'));
+  assert.ok(!contains('Milán', 1500, 'Cremona'));
+  assert.ok(!contains('Venecia', 1510, 'Brescia'));
+  assert.ok(contains('Venecia', 1516, 'Brescia'));
+  assert.ok(contains('Venecia', 1560, 'Cyprus'));
+  assert.ok(!contains('Venecia', 1572, 'Cyprus'));
+  assert.ok(!contains('Venecia', 1670, 'Crete'));
+  assert.ok(contains('Milán', 1540, 'Novara'));
+  assert.ok(contains('Milán', 1540, 'Alessandria'));
+  assert.ok(!contains('Milán', 1714, 'Alessandria'));
+  assert.ok(!contains('Milán', 1739, 'Novara'));
+  assert.ok(!contains('Saboya', 1387, 'Nice'));
+  assert.ok(contains('Saboya', 1388, 'Nice'));
+  assert.ok(!contains('Saboya', 1601, 'Bresse'));
+  assert.ok(contains('Piamonte', 1739, 'Novara'));
+  assert.ok(painted('FRANFOSCARIDOGE', 1430).has('Bergamo'));
+  assert.ok(painted('VICTORAMADEO2SAB', 1725).has('Torino'));
+});
+
+test('el color agrupa gobiernos simultáneos sin borrar la identidad de sus reinos', () => {
+  const carlos = person('CARLOS5');
+  for (const realm of ['Castilla', 'León', 'Aragón', 'Mallorca', 'Nápoles', 'Trinacria', 'Milán', 'Flandes']) {
+    assert.equal(colorTerritorioEnMapa(carlos, realm, 1540), REINO_COLOR.España, realm);
+  }
+  assert.equal(colorTerritorioEnMapa(carlos, 'Flandes', 1510), REINO_COLOR.Borgoña);
+  const fernando = person('FERN2ARAG');
+  assert.equal(colorTerritorioEnMapa(fernando, 'Nápoles', 1510), REINO_COLOR.Aragón);
+  assert.equal(colorTerritorioEnMapa(fernando, 'Mallorca', 1510), REINO_COLOR.Aragón);
+  assert.notEqual(REINO_COLOR.Mallorca, REINO_COLOR.Aragón);
+  assert.equal(colorTerritorioEnMapa(person('VICTORAMADEO2SAB'), 'Piamonte', 1725), REINO_COLOR.Saboya);
+  assert.ok(subterritoriosDeFiltro('España').includes('Mallorca'));
+  assert.deepEqual(TERRITORIOS_SUB.España.slice(0, 2), ['Corona de Castilla', 'Corona de Aragón']);
+});
+
 test('la sucesión italiana de 1700–1759 cambia de monarca sin fusionar reinos', () => {
   assert.ok(painted('FEL5ESP', 1705).has('Milano'));
   assert.ok(!painted('FEL5ESP', 1707).has('Milano'));
@@ -125,7 +163,7 @@ test('cada región añadida existe en el SVG cartográfico', () => {
   const svgIds = new Set([...svg.matchAll(/\bid="([^"]+)"/g)].map(match => match[1]));
   const supplied = `Tursan Bayonne Navarre Bearn_Bigorre Comminges Barbastro Huesca Urgell Rosello Girona Osona Barcelona New_Catalonia Razes Foix Armagnac Toulousain Coruna Lugo Ourense Tras_Os_Montes Beira_Alta Beira_Baixa Ribatejo Alto_Alentejo Baixo_Alentejo Algarve Estremadura Beira_Litoral Santiago Minho Huelva Sevilla Cadiz Malaga Canary_Islands Madeira Cordoba Jaen Granada Almeria Murcia Orihuela Jativa Castellon Alcaniz Teruel Alarcon Albacete Hellin Valencia Ocana West_Mancha Toledo Madrid East_Mancha Villanueva_de_la_Serena Merida Mallorca Logudoro Arborea Cagliari Gallura Pumonte Cismonte Mazara Girgenti Noto Demena Tunis Sahel_Tun Qabisa Kairouan Bizerte Medjerda Annaba Constantine Kabylia Mitidja Dahra Ouarsenis Oran Tlemcen Oujda Kert Errif Habat Azghar Fez Tamasna Dukkala Haha Sus Cuenca Guadalajara Calatayud Zaragoza Soria Segovia Avila Salamanca Zamora Valladolid Leon Palencia Lerma Burgos Alava Gipuzkoa Montana East_Asturias West_Asturias Astorga Benavente Ciudad_Rodrigo Plasencia Caceres Badajoz Trujillo Biscay Calabria_Citra Calabria_Ultra Otranto Basilicata Bari Principato_Citra Capitanata Abruzzo_Citra Molise Principato_Ultra Lavoro Abruzzo_Ultra Marche Istria Friuli Gorizia Venice Padua Ferrara Romagna Urbino Spoleto Campagna Marittima Perugia Arezzo Patrimonio Florence Bologna Siena Grosseto Pisa Lucca Modena Reggioem Levante Punente Mondovi Saluzzo Monferrato Torino Savoy Pavia Piacenza Parma Alessandria Novara Milano Monza Cremona Brescia Verona Vicenza Belluno South_Tirol Mantua Trentino Bergamo Valtellina Ticino Aosta Oberwallis Nice Dracenois Dignois Aquisextain Avignonnais Gresivaudan Valentinois Crete Rodos Argolis Arcadia Messenia Ilia Laconia Corinthia Achaea Ionian_Islands Aetolia South_Epirus North_Epirus Neopatras Attica Euboea Naxos Chios Cyprus Albania Illyria Zeta Hum South_Dalmatia North_Dalmatia Lika`.split(' ');
   for (const id of supplied) assert.ok(svgIds.has(id), `etiqueta aportada: ${id}`);
-  const affected = ['Castilla','León','Granada','Aragón','Condado de Barcelona','Valencia','Mallorca','Cerdeña','Portugal','Francia','Sicilia','Nápoles','Trinacria','Milán','Estados Pontificios','Ferrara','Florencia','Mantua','Módena','Monferrato','Saluzzo','Parma','Urbino','Toscana'];
+  const affected = ['Castilla','León','Granada','Aragón','Condado de Barcelona','Valencia','Mallorca','Cerdeña','Portugal','Francia','Sicilia','Nápoles','Trinacria','Milán','Venecia','Saboya','Piamonte','Estados Pontificios','Ferrara','Florencia','Mantua','Módena','Monferrato','Saluzzo','Parma','Urbino','Toscana'];
   for (const territory of affected) {
     const regions = [...REINO_A_IDS[territory], ...(REINO_VERSIONES[territory] || []).flatMap(v => v.ids)];
     for (const id of regions) assert.ok(svgIds.has(id), `${territory} → ${id}`);

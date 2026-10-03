@@ -335,7 +335,7 @@ export const TERRITORIOS = Object.freeze({
     "clase": "ducado",
     "naturaleza": "entidad",
     "componentes": [],
-    "nota": "El dominio milanés perdió Bergamo y Brescia frente a Venecia en 1428; no se atribuyen al ducado habsbúrgico del siglo XVI. El SVG no distingue Como como región propia.",
+    "nota": "El dominio milanés perdió Bergamo y Brescia frente a Venecia en 1428; no se atribuyen al ducado habsbúrgico del siglo XVI. Monza, Novara y Alessandria sí tienen etiquetas propias; el SVG no distingue Como, Lodi, Tortona o Vigevano como regiones separadas.",
     "etapas": [
       {
         "desde": null,
@@ -832,7 +832,8 @@ export const TERRITORIOS = Object.freeze({
   "Venecia": {
     "clase": "republica",
     "naturaleza": "entidad",
-    "componentes": []
+    "componentes": [],
+    "nota": "El dogo es magistrado electivo, no dueño de los dominios de la República. El mapa ofrece cortes regionales documentados, sin equiparar Istria, Dalmacia o el conjunto de las islas Jónicas a posesiones venecianas completas."
   },
   "Anagni": {
     "clase": "ciudad",
@@ -1574,7 +1575,7 @@ export const TERRITORIOS = Object.freeze({
   }
 });
 
-export const TITULOS_POR_CLASE = {"reinado": ["Rey", "Rey de Romanos", "Alto rey", "Reina"], "imperio": ["Emperatriz", "Emperador"], "ducado": ["Duquesa", "Duque"], "archiducado": ["Archiduque", "Archiduquesa"], "condado": ["Conde", "Conde palatino", "Condesa"], "electorado": ["Elector"], "principado": ["Princesa", "Gran župan", "Príncipe"], "gran_ducado": ["Gran duque", "Gran duquesa"], "gran_principado": ["Gran príncipe"], "zarato": ["Zarina", "Zar"], "margraviato": ["Margrave"], "marquesado": ["Marqués"], "landgraviato": ["Landgrave"], "señorío": ["Señor", "Señora"], "regencia": ["Regente"], "estatuderato": ["Estatúder"], "emirato": ["Emir"], "sultanato": ["Sultán"], "despotado": ["Déspota"], "banato": ["Ban"], "voivodato": ["Voivoda"], "pontificado": ["Papa"], "gobierno": ["Gobernante", "Soberano", "Soberana", "Gobernador", "Gobernadora"], "vizcondado": ["Vizconde", "Vizcondesa"]};
+export const TITULOS_POR_CLASE = {"reinado": ["Rey", "Rey de Romanos", "Alto rey", "Reina"], "imperio": ["Emperatriz", "Emperador"], "ducado": ["Duquesa", "Duque"], "archiducado": ["Archiduque", "Archiduquesa"], "condado": ["Conde", "Conde palatino", "Condesa"], "electorado": ["Elector"], "principado": ["Princesa", "Gran župan", "Príncipe"], "gran_ducado": ["Gran duque", "Gran duquesa"], "gran_principado": ["Gran príncipe"], "zarato": ["Zarina", "Zar"], "margraviato": ["Margrave"], "marquesado": ["Marqués"], "landgraviato": ["Landgrave"], "señorío": ["Señor", "Señora"], "regencia": ["Regente"], "estatuderato": ["Estatúder"], "emirato": ["Emir"], "sultanato": ["Sultán"], "despotado": ["Déspota"], "banato": ["Ban"], "voivodato": ["Voivoda"], "pontificado": ["Papa"], "gobierno": ["Gobernante", "Soberano", "Soberana", "Gobernador", "Gobernadora", "Dogo"], "vizcondado": ["Vizconde", "Vizcondesa"]};
 export const CONDICIONES = ["efectivo","jure uxoris","corregente","regencia","pretensión","titular","rival","disputado","rama"];
 export function componentesDe(nombre, vistos = new Set()) {
  if(vistos.has(nombre)) return []; vistos.add(nombre);

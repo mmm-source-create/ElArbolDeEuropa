@@ -19,6 +19,7 @@ const related = (source, note = '') => ({
   certainty: 'documented', sources: [source], note,
   reviewedAt: '2026-09-30', editor: 'El Árbol de Europa',
 });
+const relatedToday = (source, note = '') => ({...related(source, note), reviewedAt: '2026-10-03'});
 
 const isabelHeader = rah('Isabel I', '24039-isabel-i', 'Cabecera biográfica');
 const isabelFamily = rah('Isabel I', '24039-isabel-i', 'Biografía, párrafo 1');
@@ -97,6 +98,12 @@ const dispute = (sources,note,alternatives,timeLabel=null) => ({
 });
 
 export const CLAIM_REVIEWS = Object.freeze({
+  'person:TOMMOCENIGODOGE:government:Venecia:1414:1423:Dogo': relatedToday({title:'Treccani · Tommaso Mocenigo',url:'https://www.treccani.it/enciclopedia/tommaso-mocenigo/',locator:'Biografía, elección de 1414 y fallecimiento de 1423'},'Cargo electivo de la República, no patrimonio territorial personal.'),
+  'person:FRANFOSCARIDOGE:government:Venecia:1423:1457:Dogo': relatedToday({title:'Treccani · Francesco Foscari',url:'https://www.treccani.it/enciclopedia/francesco-foscari_%28Dizionario-di-Storia%29/',locator:'Cabecera y dogado'},'Cargo electivo de la República, no patrimonio territorial personal.'),
+  'person:AGOBAREDOGE:government:Venecia:1486:1501:Dogo': relatedToday({title:'Treccani · Agostino Barbarigo',url:'https://www.treccani.it/enciclopedia/agostino-barbarigo_%28Dizionario-Biografico%29/',locator:'Elección de 1486 y muerte en 1501'},'Cargo electivo de la República, no patrimonio territorial personal.'),
+  'person:LEOLOREDANDOGE:government:Venecia:1501:1521:Dogo': relatedToday({title:'Treccani · Leonardo Loredan',url:'https://www.treccani.it/enciclopedia/leonardo-loredan_%28Enciclopedia-Italiana%29/',locator:'Cabecera y dogado'},'Cargo electivo de la República, no patrimonio territorial personal.'),
+  'person:ANDGRITTIDOGE:government:Venecia:1523:1538:Dogo': relatedToday({title:'Treccani · Andrea Gritti',url:'https://www.treccani.it/enciclopedia/andrea-gritti_%28Dizionario-Biografico%29/',locator:'Elección de 1523 y fallecimiento de 1538'},'Cargo electivo de la República, no patrimonio territorial personal.'),
+  'person:MARGRIMANIDOGE:government:Venecia:1595:1605:Dogo': relatedToday({title:'Treccani · Marino Grimani',url:'https://www.treccani.it/enciclopedia/marino-grimani/',locator:'Cabecera, elección de 1595 y muerte de 1605'},'Cargo electivo de la República, no patrimonio territorial personal.'),
   'person:MARGFLAN:government:Nevers:1384:1405:Condesa': {...related(bnfMarguerite,'La BnF registra el título; la administración se entregó en apanage a Juan. Titularidad no equivale a gobierno efectivo.'),sources:[bnfMarguerite,sigillaJeanNevers]},
   'person:MARGFLAN:government:Rethel:1384:1405:Condesa': {...related(bnfMarguerite,'La BnF registra el título; sus padres cedieron el gobierno a Antonio en 1393.'),sources:[bnfMarguerite,uliegeRethel]},
   'person:JUAN1BORG:government:Nevers:1384:1404:Conde': related(sigillaJeanNevers),

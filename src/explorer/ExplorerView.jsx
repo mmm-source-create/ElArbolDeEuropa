@@ -55,6 +55,31 @@ function FilterSection({ title, open, onToggle, activeCount = 0, children }) {
   );
 }
 
+function TerritoryFilterNode({ name, options, selected, expanded, onToggleTerritory, onToggleExpanded, depth = 0, ancestors = [] }) {
+  if (ancestors.includes(name)) return null;
+  const children = options[name] || [];
+  const hasChildren = children.length > 0;
+  const isExpanded = expanded.includes(name);
+  const color = REINO_COLOR[name] || REINO_COLOR_DEFAULT;
+  return (
+    <div className={`dinastia-block territory-filter-node${depth ? ' is-nested' : ''}`}>
+      <span className="dinastia-chip-row">
+        <Chip label={name} small={depth > 0} active={selected.includes(name)} color={color} onClick={() => onToggleTerritory(name)} />
+        {hasChildren && <button type="button" className="dinastia-expand-btn"
+          onClick={() => onToggleExpanded(name)} aria-expanded={isExpanded}
+          aria-label={`${isExpanded ? 'Ocultar' : 'Mostrar'} territorios de ${name}`}>
+          {isExpanded ? <ChevronDown size={12} /> : <ChevronRight size={12} />}
+        </button>}
+      </span>
+      {hasChildren && isExpanded && <div className="territory-filter-children">
+        {children.map(child => <TerritoryFilterNode key={child} name={child} options={options}
+          selected={selected} expanded={expanded} onToggleTerritory={onToggleTerritory}
+          onToggleExpanded={onToggleExpanded} depth={depth + 1} ancestors={[...ancestors, name]} />)}
+      </div>}
+    </div>
+  );
+}
+
 function BioSection({ title, open, onToggle, children }) {
   return (
     <section className={`bio-collapsible${open ? " is-open" : " is-collapsed"}`}>
@@ -547,37 +572,11 @@ export default function ExplorerView({ vm }) {
                   activeCount={territorios.length}
                 >
                   <div className="filter-group filter-group-dinastias">
-                    {opciones.territorios.map((territorio) => {
-                      const hijos = opciones.subsPorTerritorio[territorio] || [];
-                      const tieneHijos = hijos.length > 0;
-                      const expandido = territoriosExpandidos.includes(territorio);
-                      const colorPadre = REINO_COLOR[territorio] || REINO_COLOR_DEFAULT;
-                      return (
-                        <div key={territorio} className="dinastia-block">
-                          <span className="dinastia-chip-row">
-                            <Chip label={territorio} active={territorios.includes(territorio)} color={colorPadre} onClick={() => toggle(setTerritorios, territorios, territorio)} />
-                            {tieneHijos && (
-                              <button
-                                type="button"
-                                className="dinastia-expand-btn"
-                                onClick={() => toggle(setTerritoriosExpandidos, territoriosExpandidos, territorio)}
-                                title={expandido ? "Ocultar sub-territorios" : `Ver sub-territorios de ${territorio}`}
-                                aria-label={expandido ? `Ocultar sub-territorios de ${territorio}` : `Mostrar sub-territorios de ${territorio}`}
-                              >
-                                {expandido ? <ChevronDown size={11} /> : <ChevronRight size={11} />}
-                              </button>
-                            )}
-                          </span>
-                          {tieneHijos && expandido && (
-                            <div className="dinastia-ramas">
-                              {hijos.map((hijo) => (
-                                <Chip key={hijo} small label={hijo} active={territorios.includes(hijo)} color={REINO_COLOR[hijo] || colorPadre} onClick={() => toggle(setTerritorios, territorios, hijo)} />
-                              ))}
-                            </div>
-                          )}
-                        </div>
-                      );
-                    })}
+                    {opciones.territorios.map((territorio) => <TerritoryFilterNode key={territorio}
+                      name={territorio} options={opciones.subsPorTerritorio} selected={territorios}
+                      expanded={territoriosExpandidos}
+                      onToggleTerritory={(name) => toggle(setTerritorios, territorios, name)}
+                      onToggleExpanded={(name) => toggle(setTerritoriosExpandidos, territoriosExpandidos, name)} />)}
                   </div>
                 </FilterSection>
 

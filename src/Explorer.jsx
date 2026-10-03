@@ -527,10 +527,10 @@ export default function Explorer({ initialPanel = null, treeBase: TREE_BASE }) {
       return false;
     };
     const territoriosPadreOrdenados = TERRITORIOS_DESTACADOS.filter(territorioTieneDatos);
-    const territoriosPadreAdicionales = Object.keys(TERRITORIOS_SUB)
-      .filter((principal) => !territoriosPadreOrdenados.includes(principal) && territorioTieneDatos(principal))
-      .sort(alfabetico);
     const todosLosSubterritorios = new Set(Object.values(TERRITORIOS_SUB).flat());
+    const territoriosPadreAdicionales = Object.keys(TERRITORIOS_SUB)
+      .filter((principal) => !territoriosPadreOrdenados.includes(principal) && !todosLosSubterritorios.has(principal) && territorioTieneDatos(principal))
+      .sort(alfabetico);
     const territoriosIndependientes = territoriosEnDatos
       .filter((territorio) => !todosLosSubterritorios.has(territorio) && !territoriosPadreOrdenados.includes(territorio))
       .sort(alfabetico);
