@@ -1,4 +1,4 @@
-# Sacro Imperio y tierras austríacas · criterio cartográfico V4.6
+# Sacro Imperio y tierras austríacas · criterio cartográfico V4.7
 
 El Sacro Imperio **no era el patrimonio territorial del emperador**. El mapa usa dos lecturas simultáneas cuando se consulta a una persona que ostenta la dignidad imperial y se fija un año: un gris neutro para un **marco jurídico regional aproximado** del Imperio y los colores habituales para sus **gobiernos territoriales efectivos**. El gris no significa administración directa, mismo soberano en cada feudo ni fronteras exactas. No se dibujan contornos internos entre feudos.
 
@@ -19,6 +19,8 @@ El **Franco Condado** (`Amont`, `Millieu`, `Aval`) pertenece al marco hasta 1677
 El título de archiduque fue impulsado mediante el *Privilegium maius* de Rodolfo IV en 1358/59 y [confirmado por Federico III en 1453](https://www.habsburger.net/en/chapter/almost-crown-austrian-archducal-coronet); el cambio de rango no absorbió automáticamente otros ducados y condados. La [partición de Neuberg de 1379](https://www.habsburger.net/en/chapter/albrecht-iii-and-nascent-land-austria) separó Austria danubiana de Estiria, Carintia, Carniola, Tirol y los dominios occidentales. [Maximiliano recibió Tirol de Segismundo](https://www.habsburger.net/en/chapter/last-knight-maximilian-i). Carlos V heredó las tierras austríacas de Maximiliano y [cedió Austria y Austria Interior a Fernando en 1521, y Tirol en 1522](https://www.habsburger.net/en/chapter/ferdinand-i-overshadowed-his-elder-brother).
 
 Tras la [partición de 1564](https://www.habsburger.net/en/chapter/tripartite-division-austrian-inheritance), Maximiliano II gobernó Austria danubiana, Fernando II de Tirol gobernó Tirol y Carlos II gobernó Austria Interior. La rama de Graz reunió Austria Interior con las tierras danubianas en 1619; Tirol siguió separado hasta 1665. El mapa agrupa en un mismo tono solo los gobiernos austríacos que **la persona consultada** ejercía simultáneamente. Bohemia y Hungría conservan sus propios colores; la administración austro-bohemia se identifica desde las reformas de 1749 y el título de emperador de Austria no aparece antes de 1804.
+
+La [revisión V4.7](V4.7.md) completa la secuencia de Tirol entre 1595 y 1665. El inspector del mapa separa titular, gobernador y regente; los solapamientos de esos cargos no significan que hubiera varios soberanos independientes. El grupo «Sacro Imperio» de los filtros es una ayuda de navegación, no una prueba de pertenencia jurídica fechada. Los círculos imperiales y las tierras gobernadas por los Habsburgo son relaciones distintas.
 
 ## Trabajo cartográfico pendiente
 

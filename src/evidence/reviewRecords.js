@@ -153,9 +153,33 @@ const pignatelliReviews = {
   'person:NICOLA_PIGN_VICERE:mother': relatedToday(francescoFamily),
 };
 
+// V4.7: las fuentes distinguen titularidad, gobierno delegado y regencia en Tirol.
+const tyrolArchive = {title:'Tiroler Landesarchiv · Inventar de la cancillería de Tirol',url:'https://www.tirol.gv.at/fileadmin/themen/kunst-kultur/landesarchiv/downloads/TGQ47.pdf',locator:'Introducción: Maximiliano III gobierna desde 1602 por encargo de los herederos; cancillería de Leopoldo V desde 1619'};
+const tyrolPartition = {title:'Die Welt der Habsburger · The tripartite division of the Austrian inheritance',url:'https://www.habsburger.net/en/chapter/tripartite-division-austrian-inheritance',locator:'Párrafo sobre el regreso a la casa en 1595, Maximiliano III en 1602 y la reunión de 1665'};
+const tyrolLeopold = {title:'Die Welt der Habsburger · Leopold V',url:'https://www.habsburger.net/en/persons/habsburg/leopold-v',locator:'Cabecera: gobernador 1619–1630 y gobernante desde 1630'};
+const tyrolClaudia = {title:'Universität Innsbruck · Claudia de Medici',url:'https://www.uibk.ac.at/archive/ipoint/buch_der_woche/1126.html',locator:'Regencia de 1632 a 1646 y entrega del gobierno a Fernando Carlos'};
+const tyrolFerdinandKarl = {title:'Die Welt der Habsburger · Ferdinand Karl',url:'https://www.habsburger.net/en/persons/habsburg/ferdinand-karl',locator:'Cabecera: titular desde 1632, tutela hasta 1646, gobierno propio hasta 1662'};
+const tyrolSigismund = {title:'Die Welt der Habsburger · Sigismund Franz',url:'https://www.habsburger.net/en/persons/habsburg/sigismund-franz',locator:'Cabecera: gobernante 1662–1665; párrafo sobre el retorno a la rama principal'};
+const tyrolReview = (source, note, certainty='documented') => ({certainty,sources:[source],note,reviewedAt:'2026-10-04',editor:'El Árbol de Europa'});
+const tyrolReviews = {
+  'person:MAXIM3TIROL:government:Tirol:1602:1618:Regente': tyrolReview(tyrolArchive,'Gobierno delegado por la comunidad de herederos Habsburgo; no se atribuye soberanía patrimonial independiente.'),
+  'person:FERN2EMP:government:Tirol:1619:1629:Conde': tyrolReview(tyrolLeopold,'La autoridad familiar de Fernando II se deduce del gobierno de su hermano en su nombre; el inicio de 1619 y cierre anterior a la cesión completa de 1630 son una periodización anual.', 'inferred'),
+  'person:LEOP5TIROL:government:Tirol:1619:1629:Gobernador': tyrolReview(tyrolLeopold,'Gobernador, no soberano hereditario durante este tramo; la transición a gobernante se completó en 1630.'),
+  'person:LEOP5TIROL:government:Tirol:1630:1632:Conde': tyrolReview(tyrolLeopold,'Gobernante territorial desde 1630 hasta su muerte en 1632.'),
+  'person:CLAUDIA_MEDICI:government:Tirol:1632:1646:Regente': tyrolReview(tyrolClaudia,'Regencia tutelar mientras su hijo Fernando Carlos era titular.'),
+  'person:FERNKARLTIROL:government:Tirol:1632:1662:Conde': tyrolReview(tyrolFerdinandKarl,'Titular desde 1632; gobierno personal desde 1646.'),
+  'person:SIGFRANZTIROL:government:Tirol:1662:1665:Conde': tyrolReview(tyrolSigismund,'Su muerte en 1665 extinguió la línea masculina tirolesa.'),
+  'person:LEOP1HRE:government:Tirol:1665:1705:Conde': tyrolReview(tyrolPartition,'La incorporación de Tirol a la rama principal en 1665 está documentada; el final personal de 1705 sigue la muerte de Leopoldo I.', 'inferred'),
+  'person:FERN1EMP:government:Austria:1521:1564:Archiduque': tyrolReview(habsburgAustrianTransfer,'Worms (1521) documenta el comienzo. El final de 1564 sigue la muerte de Fernando I y la partición sucesoria.', 'inferred'),
+  'person:MATIAS1EMP:government:Austria:1608:1619:Archiduque': tyrolReview({title:'Die Welt der Habsburger · Matthias: rise and fall',url:'https://www.habsburger.net/en/chapter/matthias-rise-and-fall',locator:'Tratado de Lieben de 1608 y muerte de Matías en 1619'},'El acuerdo cedió Austria Superior e Inferior a Matías.'),
+  'person:FERN3HRE:government:Austria:1637:1657:Archiduque': tyrolReview({title:'Die Welt der Habsburger · Ferdinand III',url:'https://www.habsburger.net/en/persons/habsburg-emperor/ferdinand-iii',locator:'Cabecera: gobierno de la monarquía de 1637 a 1657'},'El desglose de Austria como territorio propio procede de su gobierno de la monarquía compuesta.', 'inferred'),
+  'person:LEOP1HRE:government:Austria:1657:1705:Archiduque': tyrolReview({title:'Die Welt der Habsburger · Leopold I',url:'https://www.habsburger.net/en/persons/habsburg-emperor/leopold-i',locator:'Cabecera: gobierno de la monarquía desde 1657 hasta 1705'},'El desglose de Austria como territorio propio procede de su gobierno de la monarquía compuesta.', 'inferred'),
+};
+
 export const CLAIM_REVIEWS = Object.freeze({
   ...dogeReviews,
   ...pignatelliReviews,
+  ...tyrolReviews,
   'person:TOMMOCENIGODOGE:government:Venecia:1414:1423:Dogo': relatedToday({title:'Treccani · Tommaso Mocenigo',url:'https://www.treccani.it/enciclopedia/tommaso-mocenigo/',locator:'Biografía, elección de 1414 y fallecimiento de 1423'},'Cargo electivo de la República, no patrimonio territorial personal.'),
   'person:FRANFOSCARIDOGE:government:Venecia:1423:1457:Dogo': relatedToday({title:'Treccani · Francesco Foscari',url:'https://www.treccani.it/enciclopedia/francesco-foscari_%28Dizionario-di-Storia%29/',locator:'Cabecera y dogado'},'Cargo electivo de la República, no patrimonio territorial personal.'),
   'person:AGOBAREDOGE:government:Venecia:1486:1501:Dogo': relatedToday({title:'Treccani · Agostino Barbarigo',url:'https://www.treccani.it/enciclopedia/agostino-barbarigo_%28Dizionario-Biografico%29/',locator:'Elección de 1486 y muerte en 1501'},'Cargo electivo de la República, no patrimonio territorial personal.'),
@@ -304,6 +328,7 @@ export const CLAIM_REVIEWS = Object.freeze({
 });
 
 export const EDITORIAL_HISTORY = Object.freeze([
+  {id:'v47-tyrol-continuity',scope:'all',date:'2026-10-04',editor:'El Árbol de Europa',change:'Se registra la administración colectiva tras 1595, el gobierno delegado de Maximiliano III y Leopoldo V, la regencia de Claudia de Médici y la reunión bajo Leopoldo I en 1665.',reason:'La sucesión anterior dejaba Tirol sin responsables identificados durante buena parte de 1595–1665 y confundía autoridad familiar, gobierno delegado y titularidad.'},
   {id:'v46-austrian-lands',scope:'all',date:'2026-10-03',editor:'El Árbol de Europa',change:'El mapa separa Austria danubiana, Austria Interior y Tirol; se documentan las transferencias de 1521–1522, la partición de 1564 y la reunión parcial de 1619.',reason:'El polígono anterior de «Austria» mezclaba el archiducado con Estiria, Carintia, Carniola, Tirol y Salzburgo sin atender a sus gobiernos.'},
   {id:'v43-burgundy-dated-fiefs',scope:'all',date:'2026-09-30',editor:'El Árbol de Europa',change:'El mapa del ducado se limita a Dijon y Autun; el Franco Condado, Artois y los demás feudos se incorporan solo desde los gobiernos de cada persona. Se añaden Juan III de Namur y la rama de Nevers/Rethel.',reason:'La figura anterior sumaba condados futuros, territorios de Lorena y Lieja, y áreas ajenas a la herencia como si el ducado los incluyera desde 1363.',changeEn:'The duchy is limited to Dijon and Autun; each other fief now enters the map only under its dated ruler. John III of Namur and the Nevers/Rethel branch were added.',reasonEn:'The previous shape combined later counties and unrelated lands as if all belonged to the duchy from 1363.'},
   {id:'v43-nevers-rethel-appanages',scope:'MARGFLAN',date:'2026-09-30',editor:'El Árbol de Europa',change:'Nevers y Rethel quedan como títulos de Margarita; el ejercicio se muestra en Juan, Antonio y Felipe de Nevers según los apanages de 1384, 1393, 1404 y 1406.',reason:'Los repertorios de sellos y un estudio universitario permiten separar título hereditario y gobierno territorial.',changeEn:'Margaret retains the titles, while the territorial governments follow the appanages to John, Anthony and Philip of Nevers.',reasonEn:'Seal registers and a university study distinguish hereditary title from territorial government.'},

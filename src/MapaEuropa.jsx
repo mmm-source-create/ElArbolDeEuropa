@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useRef, useState } from "react";
+import React, { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import {
   ArrowDown,
   ArrowLeft,
@@ -7,10 +7,13 @@ import {
   RotateCcw,
   ZoomIn,
   ZoomOut,
+  X,
 } from "lucide-react";
 import mapSvgUrl from "./MapChart_Map.svg?url";
 import { loadTextAsset, forgetTextAsset } from "./utils/loadAsset.js";
 import { imperialFrameIds } from "./data/imperialFrame.js";
+import { buildPoliticalMapIndex, inspectMapRegion } from "./data/politicalMapIndex.js";
+import { PERSONAS } from "./personas.jsx";
 import {
   agrupacionesPoliticasEnMapa,
   colorTerritorioEnMapa,
@@ -89,7 +92,7 @@ function viewBoxString(box) {
 // El mapa solo reacciona al CLIC (a `seleccion`), no al hover. El movimiento
 // y el zoom alteran únicamente el viewBox del SVG: no interfieren con el
 // coloreado imperativo de los territorios.
-export function MapaEuropa({ seleccion, anioGlobal = null, onSelectTerritorio, initialViewport = null, onViewportChange }) {
+export function MapaEuropa({ seleccion, anioGlobal = null, onSelectTerritorio, onSelectPersona, initialViewport = null, onViewportChange }) {
   const containerRef = useRef(null);
   const svgInyectadoRef = useRef(false);
   const pintadosRef = useRef(new Set());
@@ -101,6 +104,13 @@ export function MapaEuropa({ seleccion, anioGlobal = null, onSelectTerritorio, i
   const [mapReady, setMapReady] = useState(false);
   const [mapError, setMapError] = useState(false);
   const [mapAttempt, setMapAttempt] = useState(0);
+  const [selectedRegionId, setSelectedRegionId] = useState(null);
+  const politicalIndex = useMemo(() => selectedRegionId && Number.isInteger(anioGlobal)
+    ? buildPoliticalMapIndex(PERSONAS, anioGlobal) : new Map(), [selectedRegionId, anioGlobal]);
+  const inspectedRegion = selectedRegionId && Number.isInteger(anioGlobal)
+    ? inspectMapRegion(selectedRegionId, anioGlobal, politicalIndex) : null;
+  const selectedPersonEntries = inspectedRegion?.entries.filter(entry => entry.person?.id === seleccion?.id) || [];
+  const otherRegionEntries = inspectedRegion?.entries.filter(entry => entry.person?.id !== seleccion?.id) || [];
   const activeGroups = seleccion && Number.isFinite(anioGlobal)
     ? agrupacionesPoliticasEnMapa(seleccion, anioGlobal) : [];
   const hasImperialOffice = Boolean(seleccion && Number.isFinite(anioGlobal)
@@ -295,7 +305,6 @@ export function MapaEuropa({ seleccion, anioGlobal = null, onSelectTerritorio, i
       moved: false,
     };
     suppressClickRef.current = false;
-    event.currentTarget.setPointerCapture?.(event.pointerId);
   };
 
   const handlePointerMove = (event) => {
@@ -304,7 +313,10 @@ export function MapaEuropa({ seleccion, anioGlobal = null, onSelectTerritorio, i
 
     const deltaX = event.clientX - drag.startX;
     const deltaY = event.clientY - drag.startY;
-    if (!drag.moved && Math.hypot(deltaX, deltaY) >= MAP_DRAG_THRESHOLD) drag.moved = true;
+    if (!drag.moved && Math.hypot(deltaX, deltaY) >= MAP_DRAG_THRESHOLD) {
+      drag.moved = true;
+      event.currentTarget.setPointerCapture?.(event.pointerId);
+    }
     if (!drag.moved) return;
 
     const next = {
@@ -315,12 +327,21 @@ export function MapaEuropa({ seleccion, anioGlobal = null, onSelectTerritorio, i
     setViewBox(clampViewBox(next, originalViewBoxRef.current));
   };
 
+  const selectRegionAt = (target) => {
+    const path = target?.closest?.("path[id], polygon[id]");
+    if (!path || !containerRef.current?.contains(path)) return;
+    setSelectedRegionId(path.id);
+    onSelectTerritorio?.(path.id);
+  };
+
   const finishPointer = (event) => {
     const drag = dragRef.current;
     if (!drag || drag.pointerId !== event.pointerId) return;
     suppressClickRef.current = drag.moved;
     dragRef.current = null;
-    event.currentTarget.releasePointerCapture?.(event.pointerId);
+    if (event.currentTarget.hasPointerCapture?.(event.pointerId)) {
+      event.currentTarget.releasePointerCapture(event.pointerId);
+    }
   };
 
   const handleClick = (event) => {
@@ -328,11 +349,27 @@ export function MapaEuropa({ seleccion, anioGlobal = null, onSelectTerritorio, i
       suppressClickRef.current = false;
       return;
     }
-    const target = event.target.closest("path, polygon, g[id]");
-    if (!target) return;
-    const idDetectado = target.id || target.getAttribute("title") || target.getAttribute("data-name");
-    if (idDetectado && onSelectTerritorio) onSelectTerritorio(idDetectado);
+    selectRegionAt(event.target);
   };
+
+  // El SVG se inserta como contenido externo. Sus paths no son elementos
+  // creados por React, así que los gestos se escuchan en el DOM nativo.
+  useEffect(() => {
+    const node = containerRef.current;
+    if (!node) return;
+    node.addEventListener('pointerdown', handlePointerDown);
+    node.addEventListener('pointermove', handlePointerMove);
+    node.addEventListener('pointerup', finishPointer);
+    node.addEventListener('pointercancel', finishPointer);
+    node.addEventListener('click', handleClick);
+    return () => {
+      node.removeEventListener('pointerdown', handlePointerDown);
+      node.removeEventListener('pointermove', handlePointerMove);
+      node.removeEventListener('pointerup', finishPointer);
+      node.removeEventListener('pointercancel', finishPointer);
+      node.removeEventListener('click', handleClick);
+    };
+  }, [viewBox, onSelectTerritorio]);
 
   return (
     <div className="mapa-stage">
@@ -363,16 +400,36 @@ export function MapaEuropa({ seleccion, anioGlobal = null, onSelectTerritorio, i
 
       <div
         ref={containerRef}
-        onClick={handleClick}
-        onPointerDown={handlePointerDown}
-        onPointerMove={handlePointerMove}
-        onPointerUp={finishPointer}
-        onPointerCancel={finishPointer}
         className="mapa-wrapper"
         role="application"
         tabIndex={0}
         aria-label="Mapa histórico interactivo de territorios europeos; arrastra para moverlo"
       />
+      {selectedRegionId && <aside className="mapa-region-inspector" aria-label={`Información histórica de ${selectedRegionId.replaceAll('_',' ')}`}>
+        <div className="mapa-region-inspector-head"><div><small>Región del mapa · {Number.isInteger(anioGlobal) ? anioGlobal : 'sin año'}</small><h3>{selectedRegionId.replaceAll('_',' ')}</h3></div><button type="button" onClick={() => setSelectedRegionId(null)} aria-label="Cerrar información de la región"><X size={16}/></button></div>
+        {!Number.isInteger(anioGlobal) ? <p>Elige un año para consultar quién gobernaba aquí y con qué título.</p> : <>
+          <p className="mapa-region-precision">{inspectedRegion.precision}</p>
+          {inspectedRegion.imperialLegalFrame && <p className="mapa-region-legal">Marco jurídico imperial aproximado en {anioGlobal}. Pertenecer al Imperio no significaba estar bajo el gobierno directo del emperador ni integrar necesariamente un círculo imperial.</p>}
+          {inspectedRegion.entries.length ? <>
+            <p>Los registros comparten esta geometría regional; pueden representar títulos o jurisdicciones distintos.</p>
+            {selectedPersonEntries.length > 0 && <><h4>Persona seleccionada</h4><ul>{selectedPersonEntries.map((entry, index) => {
+              const {person,government,claim,territory} = entry;
+              return <li key={`${territory}-${person.id}-${index}`}><strong>{territory}</strong><div>{person.nombre}</div><small>{government.titulo} · {government.condicion} · {government.desde}–{government.hasta}</small>{government.nota && <p>{government.nota}</p>}<small className="mapa-region-evidence">{claim?.sources.length ? ({documented:'Documentado',inferred:'Inferido',approximate:'Aproximado',disputed:'Discutido'}[claim.certainty] || 'Pendiente de revisión') : 'Sin fuente específica'}</small>{claim?.sources.length ? claim.sources.map(source => <a key={source.url} href={source.url} target="_blank" rel="noreferrer">{source.title}{source.locator ? ` · ${source.locator}` : ''}</a>) : <span className="mapa-region-unsourced">Afirmación territorial pendiente de revisión documental.</span>}</li>;
+            })}</ul></>}
+            {otherRegionEntries.length > 0 && <details className="mapa-region-other" open={!selectedPersonEntries.length}><summary>Otros registros relacionados ({otherRegionEntries.length})</summary><ul>{otherRegionEntries.map((entry, index) => {
+            const {person,government,claim,collective,territory} = entry;
+            return <li key={`${territory}-${person?.id || 'collective'}-${index}`}>
+              <strong>{territory}</strong>
+              <div>{person ? <button type="button" className="mapa-region-person" onClick={() => onSelectPersona?.(person.id)}>{person.nombre}</button> : collective.nombre}</div>
+              <small>{collective ? `${collective.cargo} · ${collective.desde}–${collective.hasta}` : `${government.titulo} · ${government.condicion} · ${government.desde}–${government.hasta}`}</small>
+              {(government?.nota || collective?.nota) && <p>{government?.nota || collective?.nota}</p>}
+              <small className="mapa-region-evidence">{collective?.certeza || (claim?.sources.length ? ({documented:'Documentado',inferred:'Inferido',approximate:'Aproximado',disputed:'Discutido'}[claim.certainty] || 'Pendiente de revisión') : 'Sin fuente específica')}</small>
+              {collective?.fuente ? <a href={collective.fuente.url} target="_blank" rel="noreferrer">{collective.fuente.title}</a> : claim?.sources.length ? claim.sources.map(source => <a key={source.url} href={source.url} target="_blank" rel="noreferrer">{source.title}{source.locator ? ` · ${source.locator}` : ''}</a>) : <span className="mapa-region-unsourced">Afirmación territorial pendiente de revisión documental.</span>}
+            </li>;
+          })}</ul></details>}
+          </> : <p>No hay un gobierno personal documentado en la base para esta región y este año. El mapa no atribuye por ello un soberano.</p>}
+        </>}
+      </aside>}
     </div>
   );
 }

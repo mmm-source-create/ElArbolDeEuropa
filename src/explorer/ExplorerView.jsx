@@ -620,6 +620,11 @@ export default function ExplorerView({ vm }) {
                   onToggle={() => alternarSeccionFiltro("territorios")}
                   activeCount={territorios.length}
                 >
+                  <details className="territory-filter-method"><summary>Qué significa cada relación política</summary>
+                    <p><strong>Territorio del Imperio:</strong> vínculo jurídico que cambió con el tiempo. Este grupo sirve para navegar fichas; no certifica la pertenencia de cada feudo en el año elegido.</p>
+                    <p><strong>Círculo imperial:</strong> distrito de administración imperial. No todos los territorios del Imperio pertenecían a uno.</p>
+                    <p><strong>Gobierno Habsburgo:</strong> se consulta por persona y año en el mapa o mediante el filtro de la dinastía Habsburgo; no equivale a territorio imperial.</p>
+                  </details>
                   <div className="filter-group filter-group-dinastias">
                     {opciones.territorios.map((territorio) => <TerritoryFilterNode key={territorio}
                       name={territorio} options={opciones.subsPorTerritorio} selected={territorios}
@@ -889,7 +894,7 @@ export default function ExplorerView({ vm }) {
                 onViewportChange={recordMapViewport}
                 seleccion={seleccion}
                 anioGlobal={anioGlobal}
-                onSelectTerritorio={(idRegion) => console.log("ID pulsado:", idRegion)}
+                onSelectPersona={seleccionarPersonaPorId}
               />
               <div className="territory-hint workspace-map-hint">
                 {seleccion
