@@ -796,10 +796,10 @@ html, body {
 
 .bio-panel dl {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-  gap: 6px 12px;
+  grid-template-columns: minmax(96px, 38%) minmax(0, 1fr);
+  gap: 5px 10px;
   margin: 12px 0 0;
-  font-size: 13px;
+  font: 11.5px/1.4 var(--eade-sans);
 }
 
 .bio-panel dt, .bio-panel dd { min-width: 0; overflow-wrap: anywhere; }
@@ -1887,21 +1887,6 @@ html, body {
   backdrop-filter: blur(5px);
 }
 
-.mapa-preset {
-  min-height: 28px;
-  padding: 4px 7px;
-  border: 1px solid var(--eade-border, #C9BFA8);
-  border-radius: 3px;
-  background: var(--eade-paper-bright, #FBF7EC);
-  color: var(--eade-ink, #2C2620);
-  font: 700 11px var(--eade-sans, sans-serif);
-  cursor: pointer;
-}
-.mapa-preset:is(:hover,:focus-visible) {
-  border-color: var(--eade-gold, #b2945b);
-  outline: 2px solid var(--eade-gold, #b2945b);
-  outline-offset: 1px;
-}
 .mapa-color-legend {
   position: absolute;
   left: 8px;
@@ -4288,9 +4273,10 @@ body.atlas-is-resizing * {
   gap: 0.6rem;
   cursor: pointer;
   color: inherit;
+  font: 600 12px/1.35 var(--eade-sans);
 }
-.evidence-filter-toggle input { margin-top: 0.2rem; accent-color: #842e32; }
-.evidence-filter-hint { margin: 0.45rem 0 0 1.5rem; font-size: 0.82rem; line-height: 1.45; color: inherit; opacity: 0.8; }
+.evidence-filter-toggle input { flex: 0 0 auto; width: 15px; height: 15px; margin: 1px 0 0; accent-color: #842e32; }
+.evidence-filter-hint { margin: 6px 0 0 25px; color: var(--eade-muted); font: 11px/1.45 var(--eade-sans); }
 
 .filter-section-toggle {
   appearance: none;

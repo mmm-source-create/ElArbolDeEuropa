@@ -15,6 +15,7 @@ const PARES_CARLOS='https://pares.cultura.gob.es/ParesBusquedas20/catalogo/autor
 const PARES_JUANA='https://pares.cultura.gob.es/ParesBusquedas20/catalogo/autoridad/46503';
 const PARES_CARLOS_II='https://pares.cultura.gob.es/ParesBusquedas20/catalogo/autoridad/46849';
 const HABSBURG_FERDINAND_IV='https://www.habsburger.net/en/persons/habsburg/ferdinand-iv';
+const HABSBURG_AUSTRIAN_TRANSFER='https://www.habsburger.net/en/chapter/ferdinand-i-overshadowed-his-elder-brother';
 const SENLIS='https://ccfr.bnf.fr/portailccfr/ark:/16871/004a80306914';
 const RIJKSMUSEUM_NETHERLANDS='https://www.rijksmuseum.nl/en/collection/object/Allegory-on-the-Abdication-of-Emperor-Charles-v-in-Brussels--2cb744f2469fe62413bb6aab920d4e03';
 const FRISIA_1524='https://www.dbnl.org/tekst/_gid001193001_01/_gid001193001_01_0055.php';
@@ -122,6 +123,8 @@ export const ACCESOS_CORONAS = [
  acceso('CARLOSEMANUEL3SAB','Milán',1733,['conquista'],'Carlos Manuel III ocupó el Estado de Milán con fuerzas franco-sardas hasta 1736. Se registra gobierno de hecho, no una investidura ducal.',[MILAN_OCCUPATION],'gobierno'),
  acceso('CARLOS5','Navarra',1516,['herencia'],'Continuó la soberanía de los Austrias sobre la Alta Navarra conquistada por Fernando. Los Albret conservaron derechos y gobierno al norte de los Pirineos: el mandato no representa una sucesión aceptada sobre todo el reino histórico.',[RAH]),
  acceso('CARLOS5','Austria',1519,['herencia'],'La muerte de Maximiliano I transmitió los territorios hereditarios austríacos a Carlos. Los acuerdos con su hermano Fernando iniciaron su cesión a la rama austríaca; esta herencia era distinta de la elección imperial.',[RAH],'archiducado'),
+ acceso('CARLOS5','Austria Interior',1519,['herencia'],'Carlos heredó las tierras austríacas de Maximiliano; cedió Austria Interior a Fernando en Worms en 1521. No era el mismo gobierno que el archiducado danubiano.',[HABSBURG_AUSTRIAN_TRANSFER],'archiducado'),
+ acceso('CARLOS5','Tirol',1519,['herencia'],'Carlos heredó Tirol y lo transfirió a Fernando por el acuerdo de Bruselas de 1522, un año después del reparto inicial de Worms.',[HABSBURG_AUSTRIAN_TRANSFER],'condado'),
  acceso('CARLOS5','Alemania',1519,['elección'],'Los electores eligieron a Carlos rey de Romanos en 1519. La coronación de Aquisgrán fue en 1520. Este título y el imperial forman parte de una misma estructura política y no describen dos Estados independientes.',[RAH]),
  ...[['Dinamarca',1481],['Noruega',1483]].map(([t,a])=>acceso('JUAN2NORD',t,a,['herencia','elección'],'Sucedió a su padre Cristian I mediante los reconocimientos y acuerdos propios de cada reino. La herencia dinástica no eliminó la intervención de los consejos.')),
  ...['Dinamarca','Noruega'].map(t=>acceso('CRISTIAN2DIN',t,1513,['herencia','elección'],'La muerte de su padre Juan abrió la sucesión. El reconocimiento en los reinos vinculados sostuvo su acceso; Suecia permaneció fuera de su gobierno hasta la conquista de 1520.')),

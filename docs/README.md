@@ -5,6 +5,7 @@
 - [Criterios de cartografía de Irlanda](CARTOGRAFIA_IRLANDA.md)
 - [Borgoña: sucesión y límites del mapa](CARTOGRAFIA_BORGONA.md)
 - [Iberia e Italia: gobiernos y límites del mapa](CARTOGRAFIA_IBERIA_ITALIA.md)
+- [Sacro Imperio y tierras austríacas: marco y límites del mapa](CARTOGRAFIA_SACRO_IMPERIO.md)
 - [Criterios de contenido](#criterios-de-contenido)
 - [Política de seguridad](../SECURITY.md)
 - [Fuentes y metodología](https://www.treeofeurope.eu/es/fuentes)
@@ -15,6 +16,7 @@ Los informes describen el estado validado de cada entrega. Sus cifras y listas d
 
 | Versión | Contenido |
 | --- | --- |
+| [4.6](V4.6.md) | Encuadre europeo, biografía compacta y separación entre Austria e Imperio |
 | [4.5](V4.5.md) | Biografía continua, dogos venecianos, Pignatelli y auditoría cartográfica |
 | [4.4](V4.4.md) | Revisión de España, Portugal e Italia; coronas separadas y sucesión italiana |
 | [4.3](V4.3.md) | Sucesión borgoñona por feudo, corrección cromática y auditoría de cien regiones |
