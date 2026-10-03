@@ -13,10 +13,14 @@ html[data-eade-theme="dark"] .wrap .search-box input::placeholder { color: var(-
 html[data-eade-theme="dark"] .wrap .search-box svg { color: var(--eade-muted); }
 
 
-.bio-tabs { display: flex; flex-wrap: wrap; gap: 3px; margin: 13px 0 12px; border-bottom: 1px solid var(--eade-border); }
+.bio-tabs { position: sticky; top: 0; z-index: 4; display: flex; flex-wrap: wrap; gap: 3px; margin: 13px 0 12px; padding-top: 4px; border-bottom: 1px solid var(--eade-border); background: var(--eade-paper-soft); }
 .bio-tabs button { flex: 1 1 calc(33.333% - 3px); min-height: 39px; padding: 7px 5px; border: 0; border-bottom: 3px solid transparent; background: transparent; color: var(--eade-muted); font: 600 11px var(--eade-sans); cursor: pointer; }
-.bio-tabs button[aria-selected="true"] { color: var(--eade-wine); border-bottom-color: var(--eade-wine); }
+.bio-tabs button[aria-current="location"] { color: var(--eade-wine); border-bottom-color: var(--eade-wine); }
 .bio-tabs button:focus-visible { outline: 2px solid var(--eade-gold); outline-offset: -2px; }
+.bio-scroll-section { padding: 8px 0 16px; border-bottom: 1px solid var(--eade-border); }
+.bio-scroll-section:focus { outline: none; }
+.bio-scroll-section:focus-visible { outline: 2px solid var(--eade-gold); outline-offset: 3px; }
+.bio-section-heading { margin: 0 0 12px; color: var(--eade-ink); font: 700 13px var(--eade-sans); }
 .bio-family-actions { display: grid; gap: 7px; padding: 8px 0 14px; }
 .bio-family-actions > span { color: var(--eade-muted); font: 700 10px var(--eade-sans); text-transform: uppercase; }
 .bio-family-actions > div { display: flex; flex-wrap: wrap; gap: 5px; }
@@ -66,3 +70,15 @@ html[data-eade-theme="dark"] .wrap .desc-toggle { background: var(--eade-paper-b
   .bio-tabs button { min-height: 44px; }
   .tree-list-content ul { max-height: 230px; }
 }
+.bio-office-sequence {
+  margin: 0 0 1rem;
+  padding: .85rem;
+  border: 1px solid var(--eade-border);
+  border-radius: .6rem;
+  color: var(--eade-ink);
+  background: var(--eade-paper-bright);
+}
+.bio-office-sequence p { margin: .4rem 0 .8rem; line-height: 1.45; }
+.bio-office-sequence-links { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: .5rem; }
+.bio-office-sequence-links button { border: 1px solid currentColor; border-radius: .35rem; padding: .3rem .5rem; background: transparent; color: inherit; cursor: pointer; }
+.bio-office-sequence-links button:hover, .bio-office-sequence-links button:focus-visible { text-decoration: underline; }

@@ -129,7 +129,7 @@ test('el color sigue a cada conjunto político, no a todos los títulos de una p
   const felipe = person('FEL2ESP');
   assert.equal(colorTerritorioEnMapa(felipe, 'Inglaterra', 1556), REINO_COLOR.Inglaterra);
   assert.equal(colorTerritorioEnMapa(felipe, 'Flandes', 1556), REINO_COLOR.Borgoña);
-  assert.equal(colorTerritorioEnMapa(felipe, 'Portugal', 1585), REINO_COLOR.España);
+  assert.equal(colorTerritorioEnMapa(felipe, 'Portugal', 1585), REINO_COLOR.Portugal);
   const fernando = person('FERN2ARAG');
   assert.equal(colorTerritorioEnMapa(fernando, 'Nápoles', 1510), REINO_COLOR.Aragón);
   assert.equal(colorTerritorioEnMapa(fernando, 'Mallorca', 1510), REINO_COLOR.Aragón);

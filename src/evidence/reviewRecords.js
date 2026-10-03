@@ -97,7 +97,60 @@ const dispute = (sources,note,alternatives,timeLabel=null) => ({
   reviewedAt:'2026-09-30',editor:'El Árbol de Europa',
 });
 
+const dogeChronology = {
+  title: 'Lombardia Beni Culturali · Dogi di Venezia',
+  url: 'https://www.lombardiabeniculturali.it/istituzioni/cronologie/cariche/3/',
+};
+const dogeExceptions = {
+  ANDREA_VENDRAMIN_DOGE: {title:'Treccani · Andrea Vendramin',url:'https://www.treccani.it/enciclopedia/andrea-vendramin_%28Enciclopedia-Italiana%29/'},
+  PIETRO_LANDO_DOGE: {title:'Treccani · Pietro Lando',url:'https://www.treccani.it/enciclopedia/pietro-lando_%28Dizionario-Biografico%29/'},
+  FRANCESCO_DONA_DOGE: {title:'Treccani · Francesco Donà',url:'https://www.treccani.it/enciclopedia/francesco-dona_%28Dizionario-Biografico%29/'},
+};
+const dogeRows = [
+  ['MICHELE_STENO_DOGE','Michele Steno',1400,1413],
+  ['PASQUALE_MALIPIERO_DOGE','Pasquale Malipiero',1457,1462],
+  ['CRISTOFORO_MORO_DOGE','Cristoforo Moro',1462,1471],
+  ['NICOLO_TRON_DOGE','Nicolò Tron',1471,1473],
+  ['NICOLO_MARCELLO_DOGE','Nicolò Marcello',1473,1474],
+  ['PIETRO_MOCENIGO_DOGE','Pietro Mocenigo',1474,1476],
+  ['ANDREA_VENDRAMIN_DOGE','Andrea Vendramin',1476,1478],
+  ['GIOVANNI_MOCENIGO_DOGE','Giovanni Mocenigo',1478,1485],
+  ['MARCO_BARBARIGO_DOGE','Marco Barbarigo',1485,1486],
+  ['ANTONIO_GRIMANI_DOGE','Antonio Grimani',1521,1523],
+  ['PIETRO_LANDO_DOGE','Pietro Lando',1539,1545],
+  ['FRANCESCO_DONA_DOGE','Francesco Donà',1545,1553],
+  ['MARCANTONIO_TREVISAN_DOGE','Marcantonio Trevisan',1553,1554],
+  ['FRANCESCO_VENIER_DOGE','Francesco Venier',1554,1556],
+  ['LORENZO_PRIULI_DOGE','Lorenzo Priuli',1556,1559],
+  ['GIROLAMO_PRIULI_DOGE','Girolamo Priuli',1559,1567],
+  ['PIETRO_LOREDAN_DOGE','Pietro Loredan',1567,1570],
+  ['ALVISE_MOCENIGO_I_DOGE','Alvise I Mocenigo',1570,1577],
+  ['NICOLO_DA_PONTE_DOGE','Nicolò da Ponte',1578,1585],
+  ['PASQUALE_CICOGNA_DOGE','Pasquale Cicogna',1585,1595],
+  ['SEBASTIANOVENIER','Sebastiano Venier',1577,1578],
+];
+const dogeReviews = Object.fromEntries(dogeRows.map(([id,name,desde,hasta]) => [
+  `person:${id}:government:Venecia:${desde}:${hasta}:Dogo`,
+  relatedToday({...(dogeExceptions[id] || dogeChronology),locator:`Entrada de ${name}, ${desde}–${hasta}`},
+    'Cargo electivo de la República; la serie no implica propiedad dinástica de sus dominios.'),
+]));
+const innocenzoFamily = {title:'Treccani · Inocencio XII',url:'https://www.treccani.it/enciclopedia/innocenzo-xii_%28Enciclopedia-dei-Papi%29/',locator:'Biografía, primer párrafo: filiación y línea de Cerchiara'};
+const francescoFamily = {title:'Treccani · Francesco Pignatelli',url:'https://www.treccani.it/enciclopedia/francesco-pignatelli_%28Dizionario-Biografico%29/',locator:'Biografía, primeros párrafos: filiación, hermano Nicola y parentesco no directo con Inocencio XII'};
+const pignatelliReviews = {
+  'person:PAPA_INOCENCIO12:father': relatedToday(innocenzoFamily),
+  'person:PAPA_INOCENCIO12:mother': relatedToday(innocenzoFamily),
+  'person:PORZIA_CARAFA:father': relatedToday(innocenzoFamily),
+  'person:CARD_FRANCESCO_PIGN:birth': relatedToday(francescoFamily),
+  'person:CARD_FRANCESCO_PIGN:death': relatedToday({...francescoFamily,locator:'Biografía, fallecimiento del 5 de diciembre de 1734'}),
+  'person:CARD_FRANCESCO_PIGN:father': relatedToday(francescoFamily),
+  'person:CARD_FRANCESCO_PIGN:mother': relatedToday(francescoFamily),
+  'person:NICOLA_PIGN_VICERE:father': relatedToday(francescoFamily),
+  'person:NICOLA_PIGN_VICERE:mother': relatedToday(francescoFamily),
+};
+
 export const CLAIM_REVIEWS = Object.freeze({
+  ...dogeReviews,
+  ...pignatelliReviews,
   'person:TOMMOCENIGODOGE:government:Venecia:1414:1423:Dogo': relatedToday({title:'Treccani · Tommaso Mocenigo',url:'https://www.treccani.it/enciclopedia/tommaso-mocenigo/',locator:'Biografía, elección de 1414 y fallecimiento de 1423'},'Cargo electivo de la República, no patrimonio territorial personal.'),
   'person:FRANFOSCARIDOGE:government:Venecia:1423:1457:Dogo': relatedToday({title:'Treccani · Francesco Foscari',url:'https://www.treccani.it/enciclopedia/francesco-foscari_%28Dizionario-di-Storia%29/',locator:'Cabecera y dogado'},'Cargo electivo de la República, no patrimonio territorial personal.'),
   'person:AGOBAREDOGE:government:Venecia:1486:1501:Dogo': relatedToday({title:'Treccani · Agostino Barbarigo',url:'https://www.treccani.it/enciclopedia/agostino-barbarigo_%28Dizionario-Biografico%29/',locator:'Elección de 1486 y muerte en 1501'},'Cargo electivo de la República, no patrimonio territorial personal.'),

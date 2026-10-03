@@ -16,6 +16,7 @@ export const TREE_PARTNER_EXIT_BASE = 14;
 export const TREE_PARTNER_EXIT_STEP = 10;
 
 export function computeGenerations(people) {
+  const byId = Object.fromEntries(people.map(persona => [persona.id, persona]));
   const knownIds = new Set(people.map((persona) => persona.id));
   const gen = Object.fromEntries(people.map((persona) => [persona.id, 0]));
   const maxPasses = Math.max(40, people.length + 5);
@@ -61,17 +62,13 @@ export function computeGenerations(people) {
   // Primero respetamos exclusivamente la genealogía conocida.
   let hitGuard = relaxConstraints();
 
-  // Las personas sin padres registrados ya no se amontonan automáticamente
-  // en la primera fila. Estimamos el ritmo generacional real de la propia
-  // base (mediana de la diferencia padre/madre -> hijo) y situamos cada
-  // componente de pareja sin ascendencia conocida cerca de sus coetáneos.
-  // Esto solo eleva raíces desconectadas: nunca mueve a un hijo por encima de
-  // sus progenitores ni separa cónyuges/amantes de su misma fila.
+  // El ritmo generacional se estima con fechas plausibles. La cronología
+  // alinea componentes desconectados sin alterar el orden padre -> hijo.
   const parentAgeGaps = [];
   people.forEach((persona) => {
     if (!Number.isFinite(persona.nac)) return;
     [persona.padre, persona.madre].forEach((parentId) => {
-      const parent = BY_ID[parentId];
+      const parent = byId[parentId];
       if (!knownIds.has(parentId) || !Number.isFinite(parent?.nac)) return;
       const gap = persona.nac - parent.nac;
       if (gap >= 14 && gap <= 65) parentAgeGaps.push(gap);
@@ -87,6 +84,15 @@ export function computeGenerations(people) {
   const originYear = mediana(originSamples)
     ?? (datedYears.length ? Math.min(...datedYears) : 1200);
 
+  const adjacency = new Map(people.map(persona => [persona.id, new Set()]));
+  const link = (a, b) => {
+    if (!knownIds.has(a) || !knownIds.has(b)) return;
+    adjacency.get(a).add(b);
+    adjacency.get(b).add(a);
+  };
+  people.forEach(persona => {
+    [persona.padre, persona.madre, ...listaParejas(persona)].forEach(id => link(persona.id, id));
+  });
   const visited = new Set();
   people.forEach((persona) => {
     if (visited.has(persona.id)) return;
@@ -97,31 +103,22 @@ export function computeGenerations(people) {
     while (queue.length) {
       const currentId = queue.shift();
       component.push(currentId);
-      listaParejas(BY_ID[currentId]).forEach((partnerId) => {
+      adjacency.get(currentId).forEach((partnerId) => {
         if (!knownIds.has(partnerId) || visited.has(partnerId)) return;
         visited.add(partnerId);
         queue.push(partnerId);
       });
     }
 
-    const hasKnownParent = component.some((id) => {
-      const member = BY_ID[id];
-      return [member?.padre, member?.madre].some((parentId) => knownIds.has(parentId));
-    });
-    if (hasKnownParent) return;
-
-    const cohortYear = mediana(component.map((id) => BY_ID[id]?.nac).filter(Number.isFinite));
-    if (!Number.isFinite(cohortYear)) return;
-    const targetGeneration = Math.max(
-      ...component.map((id) => gen[id]),
-      Math.max(0, Math.round((cohortYear - originYear) / generationSpan))
-    );
-    component.forEach((id) => {
-      gen[id] = targetGeneration;
-    });
+    const exact = component.filter(id => Number.isFinite(byId[id]?.nac) && !byId[id].nacAprox);
+    const dated = exact.length >= 2 ? exact : component.filter(id => Number.isFinite(byId[id]?.nac));
+    const componentOrigin = mediana(dated.map(id => byId[id].nac - gen[id] * generationSpan));
+    if (!Number.isFinite(componentOrigin)) return;
+    const shift = Math.round((componentOrigin - originYear) / generationSpan);
+    component.forEach(id => { gen[id] += shift; });
   });
 
-  // Al elevar una raíz coetánea, toda su descendencia debe acompañarla.
+  // Las parejas y la filiación siguen siendo restricciones duras.
   hitGuard = relaxConstraints() || hitGuard;
 
   // Evita filas vacías por encima de la primera cohorte visible.

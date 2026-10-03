@@ -71,7 +71,7 @@ test('una persona encontrada amplía el árbol en un clic y cada ampliación se 
  const closeFamilyCount=Number(document.querySelector('.tree-scope-label').textContent.match(/\d+/)?.[0]);
  assert.ok(closeFamilyCount>1);
  assert.match(document.querySelector('.family-expansion-feedback').textContent,/Se añadieron/);
- await click([...document.querySelectorAll('[role="tab"]')].find(item=>item.textContent==='Familia'));
+ await click([...document.querySelectorAll('.bio-tabs button')].find(item=>item.textContent==='Familia'));
  const descendants=[...document.querySelectorAll('.bio-family-actions button')].find(item=>item.textContent.includes('Descendientes'));
  assert.ok(descendants,'la rama adicional está visible junto a la biografía');
  await click(descendants);

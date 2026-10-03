@@ -962,7 +962,8 @@ export default function Explorer({ initialPanel = null, treeBase: TREE_BASE }) {
   };
 
   const hayFiltros = Boolean(query || territorios.length || dinastias.length || titulos.length || siglos.length || relaciones.length || soloFavoritos || soloDocumentados);
-  const limpiar = () => { setQuery(""); setTerritorios([]); setDinastias([]); setTitulos([]); setSiglos([]); setRelaciones([]); setSoloFavoritos(false); setSoloDocumentados(false); };
+  const limpiarSoloFiltros = () => { setTerritorios([]); setDinastias([]); setTitulos([]); setSiglos([]); setRelaciones([]); setSoloFavoritos(false); setSoloDocumentados(false); };
+  const limpiar = () => { setQuery(""); limpiarSoloFiltros(); };
 
   const lineage = hovered
     ? ancestorsOf(hovered)
@@ -1809,7 +1810,7 @@ export default function Explorer({ initialPanel = null, treeBase: TREE_BASE }) {
     mostrarArbol, mostrarMapa, mostrarFiltros, mostrarBiografia, mostrarCronologia, vistaPrincipal, layoutLaterales, alternarVista,
     alternarPanelAuxiliar, personasVivasEnAnio, gobernantesActivosEnAnio, matches, visiblePeople, visibleIds, visibleSignature, visibleRows,
     treeLayout, renderedTreeUnits, positions, canvasSize, queryTrim, searchMatchIds, searchMatchSet, searchSignature, searchCurrentId,
-    irACoincidencia, hayFiltros, limpiar, lineage, comparePaths, comparePath, pathEdges, groupsByRow,
+    irACoincidencia, hayFiltros, limpiar, limpiarSoloFiltros, lineage, comparePaths, comparePath, pathEdges, groupsByRow,
     routing, relacionFocoId, amantesFoco, styleForFamilyLine, connectorLayerKey, connectors, scrollBy, onPointerDown,
     onPointerMove, endDrag, centerOn, pendingZoomCenterRef, cambiarZoomArbol, centerOnTimeline, seleccionarPersonaPorId, navegarHistorialPersona, centrarSeleccion, cerrarSeleccion,
     centerTimelineOnYear, alternarFavorito, seleccionarEvento, aplicarPasoHistoria, iniciarHistoria, cambiarPasoHistoria, salirHistoria, mostrarEstadoCompartir,

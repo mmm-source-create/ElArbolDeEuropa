@@ -13,6 +13,7 @@ import { MILITARES_POLITICOS } from "./militares-politicos.js";
 import { CULTURA_PENSAMIENTO } from "./cultura-pensamiento.js";
 import { FRONTERAS_ORIENTALES } from "./fronteras-orientales.js";
 import { PRINCIPADOS_DUCADOS } from "./principados-ducados.js";
+import { VENECIA_PIGNATELLI_V45 } from "./venecia-pignatelli-v45.js";
 
 export const PERSONA_CONTENT = Object.freeze({
   ...MONARCAS_MEDIEVALES,
@@ -30,6 +31,7 @@ export const PERSONA_CONTENT = Object.freeze({
   ...ESCANDINAVIA_V212,
   ...ALPES_V213,
   ...ADRIATICO_V214,
+  ...VENECIA_PIGNATELLI_V45,
 });
 
 export function contenidoPersona(personaOId) {
