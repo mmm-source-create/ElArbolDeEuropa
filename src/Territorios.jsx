@@ -12,6 +12,9 @@ export const REINO_A_IDS = {
 
   Polonia: ["Chelmno", "Kuyavia", "Plock", "Dobrzyn", "Poznan", "Gniezno", "Leczyca", "Lublin", "Sieradz", "Kalisz", "Glogow", "Wroclaw", "Opole", "Sandomierz", "Krakow"],
 
+  // Núcleo de la Prusia ducal; Warmia y Prusia Real siguieron otra trayectoria.
+  Prusia: ["Lower_Prussia", "Upper_Prussia", "Masuria"],
+
   Austria: ["Ober_dem_Wienerwald", "Unter_dem_Wienerwald", "Salzburger_Land", "Eastern_Styria", "Upper_Styria", "Middle_Styria", "Lower_Styria", "Upper_Carinthia", "Lower_Carinthia", "Upper_Carniola", "Lower_Carniola", "South_Tirol", "Vorarlberg"],
 
   Baviera: ["Main_Franconia", "Frankenwald", "Tauberfranken", "Franconian_Alb", "Swabian_Alb", "Eastern_Upper_Swabia", "Western_Upper_Swabia"],
@@ -22,7 +25,12 @@ export const REINO_A_IDS = {
 
   Lituania: ["Siauliai","Medininkai","Upyte","Raseiniai","Vilkmerge","Kaunas","Vilnius","Trakai","Breslauja","Novogrudok","Grodno","Lida","Slonin","Vawkavysk","Suwalki","Ashmyany","Svir"],
 
-  Milán: ["Milano", "Pavia", "Bergamo", "Brescia", "Cremona"], // El SVG no contiene un path con id="Como".
+  // Monza aproxima el norte del Milanese; el SVG no separa Lodi, Como,
+  // Tortona ni Vigevano. Novara y Alessandria salen del Estado en el XVIII.
+  Milán: ["Milano", "Monza", "Pavia", "Cremona", "Novara", "Alessandria"],
+  Venecia: ["Venice"],
+  Saboya: ["Savoy", "Aosta", "Bresse", "Nice"],
+  Piamonte: ["Torino", "Mondovi"],
 
   Habsburgo: ["Aargau","Upper_Alsace","Waldstatte"],
 
@@ -31,7 +39,12 @@ export const REINO_A_IDS = {
 
   Limburgo: ["Limburg"],
 
-  Aragón: ["Mallorca","Jativa","Orihuela","Valencia","Castellon","Alcaniz","Teruel","Calatayud","Zaragoza","Huesca","Barbastro","Urgell","New_Catalonia","Osona","Barcelona","Girona","Rosello"],
+  // Cada entrada representa la entidad indicada, no todos los reinos de su monarca.
+  Aragón: ["Alcaniz","Teruel","Calatayud","Zaragoza","Huesca","Barbastro"],
+  "Condado de Barcelona": ["New_Catalonia","Osona","Barcelona","Girona"],
+  Valencia: ["Jativa","Valencia","Castellon"],
+  Mallorca: ["Mallorca"],
+  Cerdeña: ["Cagliari","Arborea","Logudoro","Gallura"],
 
   Sicilia: ["Noto","Demena","Girgenti","Mazara","Calabria_Ultra","Calabria_Citra","Basilicata","Otranto","Bari","Capitanata","Principato_Ultra","Principato_Citra","Molise","Abruzzo_Citra","Abruzzo_Ultra","Lavoro"],
   
@@ -39,11 +52,15 @@ export const REINO_A_IDS = {
 
   Trinacria: ["Noto","Demena","Girgenti","Mazara"],
 
-  Castilla: ["Coruna","Santiago","Lugo","Astorga","Ourense","West_Asturias","Benavente","Leon","Montana","East_Asturias","Palencia","Lerma","Soria","Burgos","Alava","Biscay","Gipuzkoa","Valladolid","Zamora","Ciudad_Rodrigo","Salamanca","Avila","Segovia","Guadalajara","Caceres","Merida","Badajoz","Cuenca","Alarcon","Albacete","Hellin","Murcia","Jaen","Cordoba","Sevilla","Cadiz","Huelva","Villanueva_de_la_Serena","Trujillo","Toledo","Ocana","West_Mancha","East_Mancha","Madrid","Plasencia"],
+  // Castilla y León conservan gobiernos separados después de 1230. La
+  // representación del soberano común reúne las dos series, sin duplicarlas.
+  Castilla: ["Montana","Palencia","Lerma","Soria","Burgos","Alava","Biscay","Gipuzkoa","Valladolid","Avila","Segovia","Guadalajara","Cuenca","Alarcon","Toledo","Madrid","Ocana","Plasencia"],
+  León: ["Coruna","Santiago","Lugo","Astorga","Ourense","West_Asturias","Benavente","Leon","East_Asturias","Zamora","Ciudad_Rodrigo","Salamanca"],
 
   Navarra: ["Navarre"],
+  Granada: ["Granada","Malaga","Almeria"],
 
-  Portugal: ["Minho", "Tras_Os_Montes", "Beira_Alta", "Beira_Litoral", "Beira_Baixa", "Estremadura", "Alto_Alentejo", "Baixo_Alentejo", "Algarve", "Ribatejo", "Azores"],
+  Portugal: ["Minho", "Tras_Os_Montes", "Beira_Alta", "Beira_Litoral", "Beira_Baixa", "Estremadura", "Alto_Alentejo", "Baixo_Alentejo", "Algarve", "Ribatejo"],
 
   Francia: ["Narbonnais","Razes","Foix","Comminges","Armagnac","Tursan","Bearn_Bigorre","Bayonne","Bazadais","Perigord","Bordelais","Saintonge","Lower_Poitou","Anjou","Ebroicien","Caennais","Lower_Maine","Upper_Maine","Cotentin","Rouennais","Caux","Nantais","Vannetais","Ploermel","Rennais","Tregor","Cornouaille","Touraine","Upper_Poitou","Lower_Berry","La_Marche","Limousin","Turenne","Quercy","Angouleme","Agenais","Toulousain","Castres","Rouergue","Nimois","Gevaudan","Vivarais","Upper_Auvergne","Lower_Auvergne","Lyonnais","Combraille","Bourbon","Upper_Berry","Blois","Orleanais","Perche","Chartrain","Pays_France","Gatinais","Senonais","Auxerrois","Nevernais","Autunnais","Beaujolais","Ponthieu","Beauvaisis","Amienois","Vermandois","Soissonais","Brie_Champenois","Remois","Champagne","Perthois","Upper_Artois","Roman_Flanders"],
 
@@ -95,7 +112,20 @@ export const REINO_A_IDS = {
   Clanricarde: ["Galway"],
   "Vizcondado de Mayo": ["Mayo"],
 
-  "Estados Pontificios": ["Campagna","Marittima","Patrimonio","Spoleto","Marche","Urbino","Romagna","Perugia","Bologna"],
+  "Estados Pontificios": ["Campagna","Marittima","Patrimonio","Spoleto","Marche"],
+  Ferrara: ["Ferrara"],
+  Florencia: ["Florence","Arezzo","Pisa"],
+  Mantua: ["Mantua"],
+  Módena: ["Modena","Reggioem"],
+  Monferrato: ["Monferrato"],
+  Saluzzo: ["Saluzzo"],
+  Parma: ["Parma","Piacenza"],
+  Urbino: ["Urbino"],
+  Toscana: ["Florence","Arezzo","Pisa","Siena","Grosseto"],
+  // El SVG no distingue los señoríos urbanos de estos dominios mayores.
+  Pesaro: [],
+  Forlì: [],
+  Romaña: [],
 
   "Imperio Latino": ["Constantinople", "Achaea", "Corinthia", "Ilia", "Arcadia", "Argolis", "Messenia", "Laconia"],
 
@@ -112,15 +142,22 @@ export const REINO_A_IDS = {
 
 export const REINO_COLOR = {
   Aragón: '#ba3737',
+  "Condado de Barcelona": '#ba3737',
+  Valencia: '#ba3737',
+  Cerdeña: '#ba3737',
   Bohemia: '#6b56a5',
   Hungría: '#db772f',
   Polonia: '#da63cc',
+  Prusia: '#303C59',
   Austria: '#8E293C',
   Baviera: '#69c4c4',
   Luxemburgo: '#8E8B29',
   Bizancio: '#6A8E29',
   Lituania: '#43298E',
   Milán: '#1a6684',
+  Venecia: '#278477',
+  Saboya: '#596e9b',
+  Piamonte: '#596e9b',
   Habsburgo: '#298E70',
   Brabante: '#568E29',
   Limburgo: '#298E84',
@@ -128,9 +165,10 @@ export const REINO_COLOR = {
   Nápoles: '#56298E',
   Trinacria: '#6A298E',
   Castilla: '#efe558',
+  León: '#efe558',
   España: '#C5A62B',
   Navarra: '#84a531',
-  Mallorca: '#7E8E29',
+  Mallorca: '#a34b43',
   Portugal: '#298e47',
   Francia: '#295D8E',
   Inglaterra: '#7A4F3B',
@@ -177,7 +215,10 @@ export const REINO_COLOR = {
   "Vizcondado de Mayo": '#5A786C',
   "Corona de Castilla": '#C5A62B',
   "Corona de Aragón": '#ba3737',
-  "Países Bajos y Flandes": '#3E6F91',
+  "Países Bajos y Flandes": '#8E295C',
+  "Borgoña y Países Bajos": '#8E295C',
+  "Borgoña y Franco Condado": '#8E295C',
+  "Incorporaciones del siglo XVI": '#8E295C',
   "Estados Italianos": '#6F7652',
   "Polonia-Lituania": '#8B5AA5',
   "Bizancio y Oriente latino": '#6A8E29',
@@ -229,7 +270,29 @@ const FEUDOS_HERENCIA_BORGONONA = new Set([
   'Zelanda', 'Luxemburgo', 'Güeldres', 'Frisia', 'Utrecht', 'Overijssel',
   'Drente', 'Groninga',
 ]);
-export function colorTerritorioEnMapa(persona, territorio) {
+const CORONA_ARAGONESA = new Set([
+  'Aragón', 'Condado de Barcelona', 'Valencia', 'Mallorca', 'Cerdeña',
+  'Nápoles', 'Sicilia', 'Trinacria',
+]);
+const MONARQUIA_HISPANICA = new Set([
+  'Castilla', 'León', 'Aragón', 'Condado de Barcelona', 'Valencia',
+  'Mallorca', 'Cerdeña', 'Nápoles', 'Trinacria', 'Milán', 'Navarra',
+  'Portugal',
+]);
+const ESTADOS_SABOYANOS = new Set(['Saboya', 'Piamonte', 'Cerdeña']);
+export function colorTerritorioEnMapa(persona, territorio, año) {
+  // Una unión personal no convierte todos los títulos en un mismo estado.
+  // El color compartido se limita a los miembros explícitos de cada conjunto;
+  // Inglaterra, Borgoña, Hungría, Bohemia o Polonia conservan su identidad.
+  const activos = new Set(reinadosActivos(persona, año, { soloEfectivos: true }).map(r => r.territorio));
+  if (!activos.has(territorio)) return REINO_COLOR[territorio] || REINO_COLOR_DEFAULT;
+  if (año >= 1516 && activos.has('Castilla') && activos.has('Aragón')
+      && MONARQUIA_HISPANICA.has(territorio)) return REINO_COLOR.España;
+  if (activos.has('Aragón') && CORONA_ARAGONESA.has(territorio)) return REINO_COLOR.Aragón;
+  if (activos.has('Castilla') && activos.has('León')
+      && (territorio === 'Castilla' || territorio === 'León')) return REINO_COLOR.Castilla;
+  if ((activos.has('Saboya') || activos.has('Piamonte'))
+      && ESTADOS_SABOYANOS.has(territorio)) return REINO_COLOR.Saboya;
   if (PERSONAS_HERENCIA_BORGONONA.has(persona?.id) && FEUDOS_HERENCIA_BORGONONA.has(territorio)) {
     return REINO_COLOR.Borgoña;
   }
@@ -250,6 +313,8 @@ export function colorTerritorioEnMapa(persona, territorio) {
 // revísalos y ajústalos como hiciste con REINO_A_IDS. Para versionar un
 // nuevo reino, añade una entrada aquí con el mismo formato; no hace falta
 // tocar nada más.
+const REINO_VERSIONES_CASTILLA_1262 = [...REINO_A_IDS.Castilla,"West_Mancha","East_Mancha","Cordoba","Murcia","Albacete","Hellin","Jaen","Sevilla","Cadiz","Huelva"];
+
 export const REINO_VERSIONES = {
 
 Inglaterra: [
@@ -344,16 +409,106 @@ Inglaterra: [
   },
 ],
   
-  Nápoles: [
-    { desde: 1506,
-      hasta: Infinity, // Nápoles bajo Aragón
-      ids: [],},
+  // Nápoles y Trinacria conservan gobiernos e instituciones propios bajo un
+  // mismo monarca. Nunca se vacían sus polígonos por una unión dinástica.
+  Sicilia: [
+    { desde: 1282, hasta: Infinity, ids: REINO_A_IDS.Trinacria },
   ],
-
-  Trinacria: [
-    { desde: 1506,
-      hasta: Infinity, // Trinacria bajo Aragón
-      ids: [],},
+  Granada: [
+    { desde: -Infinity, hasta: 1487, ids: REINO_A_IDS.Granada },
+    { desde: 1487, hasta: 1489, ids: ["Granada","Almeria"] },
+    { desde: 1489, hasta: 1492, ids: ["Granada"] },
+    { desde: 1492, hasta: Infinity, ids: [] },
+  ],
+  Francia: [
+    { desde: -Infinity, hasta: 1462, ids: REINO_A_IDS.Francia },
+    { desde: 1462, hasta: 1493, ids: [...REINO_A_IDS.Francia,"Rosello"] },
+    { desde: 1493, hasta: 1659, ids: REINO_A_IDS.Francia },
+    { desde: 1659, hasta: Infinity, ids: [...REINO_A_IDS.Francia,"Rosello"] },
+  ],
+  Milán: [
+    { desde: -Infinity, hasta: 1428, ids: [...REINO_A_IDS.Milán,"Bergamo","Brescia"] },
+    { desde: 1428, hasta: 1499, ids: REINO_A_IDS.Milán },
+    { desde: 1499, hasta: 1509, ids: REINO_A_IDS.Milán.filter(id => id !== 'Cremona') },
+    { desde: 1509, hasta: 1713, ids: REINO_A_IDS.Milán },
+    { desde: 1713, hasta: 1738, ids: REINO_A_IDS.Milán.filter(id => id !== 'Alessandria') },
+    { desde: 1738, hasta: Infinity, ids: REINO_A_IDS.Milán.filter(id => !['Alessandria', 'Novara'].includes(id)) },
+  ],
+  Venecia: [
+    { desde: -Infinity, hasta: 1211, ids: REINO_A_IDS.Venecia },
+    { desde: 1211, hasta: 1404, ids: [...REINO_A_IDS.Venecia, 'Crete'] },
+    { desde: 1404, hasta: 1405, ids: [...REINO_A_IDS.Venecia, 'Crete', 'Vicenza', 'Belluno'] },
+    { desde: 1405, hasta: 1411, ids: [...REINO_A_IDS.Venecia, 'Crete', 'Vicenza', 'Padua', 'Verona', 'Belluno'] },
+    { desde: 1411, hasta: 1420, ids: [...REINO_A_IDS.Venecia, 'Crete', 'Vicenza', 'Padua', 'Verona'] },
+    { desde: 1420, hasta: 1428, ids: [...REINO_A_IDS.Venecia, 'Crete', 'Vicenza', 'Padua', 'Verona', 'Belluno', 'Friuli'] },
+    { desde: 1428, hasta: 1489, ids: [...REINO_A_IDS.Venecia, 'Crete', 'Vicenza', 'Padua', 'Verona', 'Belluno', 'Friuli', 'Bergamo', 'Brescia'] },
+    { desde: 1489, hasta: 1499, ids: [...REINO_A_IDS.Venecia, 'Crete', 'Vicenza', 'Padua', 'Verona', 'Belluno', 'Friuli', 'Bergamo', 'Brescia', 'Cyprus'] },
+    { desde: 1499, hasta: 1509, ids: [...REINO_A_IDS.Venecia, 'Crete', 'Vicenza', 'Padua', 'Verona', 'Belluno', 'Friuli', 'Bergamo', 'Brescia', 'Cyprus', 'Cremona'] },
+    // La Liga de Cambrai arrebató buena parte de Terraferma; Padua volvió
+    // en 1509, mientras Brescia y Verona no se recuperaron hasta 1516.
+    { desde: 1509, hasta: 1516, ids: [...REINO_A_IDS.Venecia, 'Crete', 'Padua', 'Cyprus'] },
+    { desde: 1516, hasta: 1571, ids: [...REINO_A_IDS.Venecia, 'Crete', 'Vicenza', 'Padua', 'Verona', 'Belluno', 'Friuli', 'Bergamo', 'Brescia', 'Cyprus'] },
+    { desde: 1571, hasta: 1669, ids: [...REINO_A_IDS.Venecia, 'Crete', 'Vicenza', 'Padua', 'Verona', 'Belluno', 'Friuli', 'Bergamo', 'Brescia'] },
+    { desde: 1669, hasta: 1797, ids: [...REINO_A_IDS.Venecia, 'Vicenza', 'Padua', 'Verona', 'Belluno', 'Friuli', 'Bergamo', 'Brescia'] },
+    { desde: 1797, hasta: Infinity, ids: [] },
+  ],
+  Saboya: [
+    { desde: -Infinity, hasta: 1388, ids: REINO_A_IDS.Saboya.filter(id => id !== 'Nice') },
+    { desde: 1388, hasta: 1601, ids: REINO_A_IDS.Saboya },
+    { desde: 1601, hasta: Infinity, ids: REINO_A_IDS.Saboya.filter(id => id !== 'Bresse') },
+  ],
+  Piamonte: [
+    { desde: -Infinity, hasta: 1601, ids: REINO_A_IDS.Piamonte },
+    { desde: 1601, hasta: 1708, ids: [...REINO_A_IDS.Piamonte, 'Saluzzo'] },
+    { desde: 1708, hasta: 1713, ids: [...REINO_A_IDS.Piamonte, 'Saluzzo', 'Monferrato'] },
+    { desde: 1713, hasta: 1738, ids: [...REINO_A_IDS.Piamonte, 'Saluzzo', 'Monferrato', 'Alessandria'] },
+    { desde: 1738, hasta: Infinity, ids: [...REINO_A_IDS.Piamonte, 'Saluzzo', 'Monferrato', 'Alessandria', 'Novara'] },
+  ],
+  Valencia: [
+    { desde: -Infinity, hasta: 1305, ids: REINO_A_IDS.Valencia },
+    { desde: 1305, hasta: Infinity, ids: [...REINO_A_IDS.Valencia,"Orihuela"] },
+  ],
+  Mallorca: [
+    { desde: -Infinity, hasta: 1276, ids: REINO_A_IDS.Mallorca },
+    { desde: 1276, hasta: 1343, ids: [...REINO_A_IDS.Mallorca,"Rosello"] },
+    { desde: 1343, hasta: Infinity, ids: REINO_A_IDS.Mallorca },
+  ],
+  "Condado de Barcelona": [
+    { desde: -Infinity, hasta: 1276, ids: [...REINO_A_IDS["Condado de Barcelona"],"Rosello"] },
+    { desde: 1276, hasta: 1343, ids: REINO_A_IDS["Condado de Barcelona"] },
+    { desde: 1343, hasta: 1413, ids: [...REINO_A_IDS["Condado de Barcelona"],"Rosello"] },
+    { desde: 1413, hasta: 1462, ids: [...REINO_A_IDS["Condado de Barcelona"],"Urgell","Rosello"] },
+    { desde: 1462, hasta: 1493, ids: [...REINO_A_IDS["Condado de Barcelona"],"Urgell"] },
+    { desde: 1493, hasta: 1659, ids: [...REINO_A_IDS["Condado de Barcelona"],"Urgell","Rosello"] },
+    { desde: 1659, hasta: Infinity, ids: [...REINO_A_IDS["Condado de Barcelona"],"Urgell"] },
+  ],
+  Cerdeña: [
+    { desde: -Infinity, hasta: 1323, ids: [] },
+    // La conquista de 1323–1326 no sometió el juzgado de Arborea.
+    { desde: 1323, hasta: 1420, ids: ["Cagliari","Logudoro","Gallura"] },
+    { desde: 1420, hasta: Infinity, ids: REINO_A_IDS.Cerdeña },
+  ],
+  Portugal: [
+    { desde: -Infinity, hasta: 1249, ids: REINO_A_IDS.Portugal.filter(id => id !== "Algarve") },
+    { desde: 1249, hasta: 1425, ids: REINO_A_IDS.Portugal },
+    { desde: 1425, hasta: 1452, ids: [...REINO_A_IDS.Portugal,"Madeira"] },
+    { desde: 1452, hasta: Infinity, ids: [...REINO_A_IDS.Portugal,"Madeira","Azores"] },
+  ],
+  Florencia: [
+    { desde: -Infinity, hasta: 1406, ids: ["Florence","Arezzo"] },
+    { desde: 1406, hasta: Infinity, ids: REINO_A_IDS.Florencia },
+  ],
+  "Estados Pontificios": [
+    { desde: -Infinity, hasta: 1506, ids: REINO_A_IDS["Estados Pontificios"] },
+    { desde: 1506, hasta: 1512, ids: [...REINO_A_IDS["Estados Pontificios"],"Bologna"] },
+    { desde: 1512, hasta: 1515, ids: [...REINO_A_IDS["Estados Pontificios"],"Bologna","Romagna", 'Parma', 'Piacenza'] },
+    { desde: 1515, hasta: 1521, ids: [...REINO_A_IDS["Estados Pontificios"],"Bologna","Romagna"] },
+    { desde: 1521, hasta: 1540, ids: [...REINO_A_IDS["Estados Pontificios"],"Bologna","Romagna", 'Parma', 'Piacenza'] },
+    { desde: 1540, hasta: 1545, ids: [...REINO_A_IDS["Estados Pontificios"],"Bologna","Romagna","Perugia", 'Parma', 'Piacenza'] },
+    { desde: 1545, hasta: 1598, ids: [...REINO_A_IDS["Estados Pontificios"],"Bologna","Romagna","Perugia"] },
+    { desde: 1540, hasta: 1598, ids: [...REINO_A_IDS["Estados Pontificios"],"Bologna","Romagna","Perugia"] },
+    { desde: 1598, hasta: 1631, ids: [...REINO_A_IDS["Estados Pontificios"],"Bologna","Romagna","Perugia","Ferrara"] },
+    { desde: 1631, hasta: Infinity, ids: [...REINO_A_IDS["Estados Pontificios"],"Bologna","Romagna","Perugia","Ferrara","Urbino"] },
   ],
 
   Irlanda: [
@@ -373,32 +528,25 @@ Inglaterra: [
       ids: ["Zagreb","Torda","Doboka","Szekelyfold","Kiralyfold","Feher","Maramaros","Zemplen","Szepes","Trencsen","Pozsony","Hont","Nograd","Heves","Buda","Sopron","Vas","Zala","Somogy","Baranya","Fejer","Csongrad","Szolnok","Bihar","Szatmar","Szabolcs","Kraszna","Pest","Bacs","Csanad","Zarand_Hun","East_Banat","West_Banat","Vukovar_Syrmia","Bjelovar","Una_Sana","Lika","North_Dalmatia"],},
   ],
 
-  Aragón: [
-    { desde: -Infinity,
-      hasta: 1326, // Sin cerdeña
-      ids: ["Mallorca","Jativa","Orihuela","Valencia","Castellon","Alcaniz","Teruel","Calatayud","Zaragoza","Huesca","Barbastro","Urgell","New_Catalonia","Osona","Barcelona","Girona","Rosello"],},
-    { desde: 1326,
-      hasta: 1447, // Corcega y Cerdeña
-      ids: ["Mallorca","Jativa","Orihuela","Valencia","Castellon","Alcaniz","Teruel","Calatayud","Zaragoza","Huesca","Barbastro","Urgell","New_Catalonia","Osona","Barcelona","Girona","Rosello","Cagliari","Arborea","Logudoro","Gallura","Cismonte","Pumonte"],},
-    { desde: 1447,
-      hasta: 1506, // Con Cerdeña
-      ids: ["Mallorca","Jativa","Orihuela","Valencia","Castellon","Alcaniz","Teruel","Calatayud","Zaragoza","Huesca","Barbastro","Urgell","New_Catalonia","Osona","Barcelona","Girona","Rosello","Cagliari","Arborea","Logudoro","Gallura"],},
-    { desde: 1506,
-      hasta: Infinity, // Con Cerdeña Nápoles y Sicilia
-      ids: ["Mallorca","Jativa","Orihuela","Valencia","Castellon","Alcaniz","Teruel","Calatayud","Zaragoza","Huesca","Barbastro","Urgell","New_Catalonia","Osona","Barcelona","Girona","Rosello","Cagliari","Arborea","Logudoro","Gallura","Noto","Demena","Girgenti","Mazara","Calabria_Ultra","Calabria_Citra","Basilicata","Otranto","Bari","Capitanata","Principato_Ultra","Principato_Citra","Molise","Abruzzo_Citra","Abruzzo_Ultra","Lavoro"],},
-  ],
-
   Castilla: [
-    {
-      desde: -Infinity,
-      hasta: 1492, //
-      ids:["Coruna","Santiago","Lugo","Astorga","Ourense","West_Asturias","Benavente","Leon","Montana","East_Asturias","Palencia","Lerma","Soria","Burgos","Alava","Biscay","Gipuzkoa","Valladolid","Zamora","Ciudad_Rodrigo","Salamanca","Avila","Segovia","Guadalajara","Caceres","Merida","Badajoz","Cuenca","Alarcon","Albacete","Hellin","Murcia","Jaen","Cordoba","Sevilla","Cadiz","Huelva","Villanueva_de_la_Serena","Trujillo","Toledo","Ocana","West_Mancha","East_Mancha","Madrid","Plasencia"],
-    },
-    {
-      desde: 1492,
-      hasta: Infinity, // incorporación de Granada
-      ids:["Coruna","Santiago","Lugo","Astorga","Ourense","West_Asturias","Benavente","Leon","Montana","East_Asturias","Palencia","Lerma","Soria","Burgos","Alava","Biscay","Gipuzkoa","Valladolid","Zamora","Ciudad_Rodrigo","Salamanca","Avila","Segovia","Guadalajara","Caceres","Merida","Badajoz","Cuenca","Alarcon","Albacete","Hellin","Murcia","Jaen","Cordoba","Sevilla","Cadiz","Huelva","Villanueva_de_la_Serena","Trujillo","Toledo","Ocana","West_Mancha","East_Mancha","Madrid","Plasencia", "Almeria","Granada","Malaga"],
-    },
+    { desde: -Infinity, hasta: 1230, ids: REINO_A_IDS.Castilla },
+    { desde: 1230, hasta: 1236, ids: [...REINO_A_IDS.Castilla,"West_Mancha","East_Mancha"] },
+    { desde: 1236, hasta: 1243, ids: [...REINO_A_IDS.Castilla,"West_Mancha","East_Mancha","Cordoba"] },
+    { desde: 1243, hasta: 1246, ids: [...REINO_A_IDS.Castilla,"West_Mancha","East_Mancha","Cordoba","Murcia","Albacete","Hellin"] },
+    { desde: 1246, hasta: 1248, ids: [...REINO_A_IDS.Castilla,"West_Mancha","East_Mancha","Cordoba","Murcia","Albacete","Hellin","Jaen"] },
+    { desde: 1248, hasta: 1262, ids: [...REINO_A_IDS.Castilla,"West_Mancha","East_Mancha","Cordoba","Murcia","Albacete","Hellin","Jaen","Sevilla"] },
+    { desde: 1262, hasta: 1487, ids: [...REINO_A_IDS.Castilla,"West_Mancha","East_Mancha","Cordoba","Murcia","Albacete","Hellin","Jaen","Sevilla","Cadiz","Huelva"] },
+    { desde: 1487, hasta: 1489, ids: [...REINO_VERSIONES_CASTILLA_1262,"Malaga"] },
+    { desde: 1489, hasta: 1492, ids: [...REINO_VERSIONES_CASTILLA_1262,"Malaga","Almeria"] },
+    { desde: 1492, hasta: 1496, ids: [...REINO_VERSIONES_CASTILLA_1262,...REINO_A_IDS.Granada] },
+    { desde: 1496, hasta: Infinity, ids: [...REINO_VERSIONES_CASTILLA_1262,...REINO_A_IDS.Granada,"Canary_Islands"] },
+  ],
+  León: [
+    { desde: -Infinity, hasta: 1229, ids: REINO_A_IDS.León },
+    { desde: 1229, hasta: 1230, ids: [...REINO_A_IDS.León,"Caceres"] },
+    { desde: 1230, hasta: 1233, ids: [...REINO_A_IDS.León,"Caceres","Merida","Badajoz"] },
+    { desde: 1233, hasta: 1234, ids: [...REINO_A_IDS.León,"Caceres","Merida","Badajoz","Trujillo"] },
+    { desde: 1234, hasta: Infinity, ids: [...REINO_A_IDS.León,"Caceres","Merida","Badajoz","Trujillo","Villanueva_de_la_Serena"] },
   ],
 
   Austria: [
@@ -473,17 +621,9 @@ Inglaterra: [
 // REINO_A_IDS. Si falta un tramo temporal, usa la última versión ya vigente;
 // para años anteriores a la primera versión prefiere el mapa base.
 export function idsDeReinoEnAño(reino, año) {
-  // «España» funciona como paraguas cartográfico de las dos coronas
-  // peninsulares de la Monarquía Hispánica. Navarra mantiene un reinado
-  // separado en los datos y por eso no se añade aquí automáticamente.
-  if (reino === "España") {
-    return [...new Set([
-      ...idsDeReinoEnAño("Castilla", año),
-      ...idsDeReinoEnAño("Aragón", año),
-    ])];
-  }
-  if (reino === "Corona de Castilla") return idsDeReinoEnAño("Castilla", año);
-  if (reino === "Corona de Aragón") return idsDeReinoEnAño("Aragón", año);
+  // Las agrupaciones y coronas compuestas sirven para consultar; solo un
+  // gobierno fechado de una entidad constituyente puede colorear el mapa.
+  if (["España","Corona de Castilla","Corona de Aragón"].includes(reino)) return [];
 
   const base = REINO_A_IDS[reino] ?? [];
   const versiones = REINO_VERSIONES[reino];
@@ -523,12 +663,8 @@ export const TERRITORIOS_DESTACADOS = [
   "Georgia y Cáucaso",
   "España",
   "Portugal",
-  "Navarra",
   "Sacro Imperio",
-  "Austria",
-  "Bohemia",
-  "Baviera",
-  "Países Bajos y Flandes",
+  "Borgoña y Países Bajos",
   "Estados Italianos",
   "Hungría",
   "Polonia-Lituania",
@@ -560,7 +696,7 @@ export const TERRITORIOS_SUB = {
 
   España: ["Corona de Castilla", "Corona de Aragón", "Navarra", "Granada"],
   "Corona de Castilla": ["Castilla", "León"],
-  "Corona de Aragón": ["Aragón", "Gandía", "Mallorca", "Urgel", "Valencia"],
+  "Corona de Aragón": ["Aragón", "Condado de Barcelona", "Valencia", "Mallorca", "Cerdeña", "Trinacria", "Nápoles", "Gandía", "Urgel"],
   Portugal: ["Brasil"],
   Navarra: [],
 
@@ -580,10 +716,12 @@ export const TERRITORIOS_SUB = {
   Bohemia: ["Moravia", "Silesia"],
   Baviera: [],
 
-  "Países Bajos y Flandes": [
-    "Artois", "Borgoña", "Brabante", "Cléveris", "Flandes", "Henao",
-    "Holanda", "Zelanda", "Limburgo", "Luxemburgo", "Países Bajos", "Güeldres", "Namur",
-  ],
+  // Agrupación de navegación: no afirma que estos feudos formasen un Estado
+  // unitario. Las incorporaciones de Carlos V se distinguen de la herencia.
+  "Borgoña y Países Bajos": ["Borgoña y Franco Condado", "Países Bajos y Flandes", "Incorporaciones del siglo XVI"],
+  "Borgoña y Franco Condado": ["Borgoña", "Condado de Borgoña", "Nevers", "Rethel", "Auxerre", "Ponthieu"],
+  "Países Bajos y Flandes": ["Países Bajos", "Artois", "Flandes", "Brabante", "Limburgo", "Henao", "Holanda", "Zelanda", "Luxemburgo", "Namur"],
+  "Incorporaciones del siglo XVI": ["Güeldres", "Frisia", "Utrecht", "Overijssel", "Drente", "Groninga"],
 
   "Estados Italianos": [
     "Estados Pontificios", "Venecia", "Génova", "Ferrara", "Florencia", "Forlì", "Gravina",

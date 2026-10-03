@@ -64,7 +64,7 @@ test('Nevers y Rethel tienen una sucesión propia, separada de Carlos el Temerar
   assert.ok(UNIONES_CORONAS.find(u=>u.id==='herencia-borgonona')?.etapas.some(e=>e.personas.includes('MARGFLAN')));
 });
 
-test('los topónimos aportados están en el SVG; el mapa usa una sola familia de color sin recolorear Milán',()=>{
+test('los topónimos aportados están en el SVG; el color borgoñón precede a la unión hispánica',()=>{
   const svg=fs.readFileSync(new URL('../src/MapChart_Map.svg',import.meta.url),'utf8');
   const ids=new Set([...svg.matchAll(/\bid="([^"]+)"/g)].map(m=>m[1]));
   const requested=`West_Flanders Upper_Artois Lower_Artois Ponthieu Amienois Vermandois Caux Thierache Soissonais Remois Rethelois West_Luxembourg Verdunois Barrois Pays_Nancy Sarregueminois Lower_Alsace Upper_Alsace Rhine_Valley Schwarzwald Neckar Kraichgau Palatinate Hunsruck Pays_Messin East_Luxembourg Eifel Namur Liege Julich Koln_Bucht Limburg Niederrhein Gelderland Overijssel Drenthe Friesland Ommelanden North_Holland South_Holland Antwerp Kempenland East_Friesland Emsland Munsterland Ruhr Bergisches_Land Westerwald Taunus Untermain Odenwald Swabian_Alb Hegau Vosges Amont Millieu Aval Dijonnais Auxerrois Bassigny Perthois Senonais Champagne Brie_Champenois Beauvaisis Rouennais Hainaut Roman_Flanders East_Flanders Brabant Loon Neuchatel Vaud Bresse Autunnais Beaujolais Viennois Lyonnais Nevernais Orleanais Upper_Berry Gatinais Pays_France Chartrain Savoy Gresivaudan Dignois Avignonnais Dracenois Aquisextain Valentinois Vivarais Nimois Gevaudan Lower_Auvergne Bourbon Combraille Upper_Auvergne Turenne Nice`.split(' ');
@@ -76,7 +76,7 @@ test('los topónimos aportados están en el SVG; el mapa usa una sola familia de
     }
   }
   const carlos=person('CARLOS5');
-  assert.equal(colorTerritorioEnMapa(carlos,'Artois'),colorTerritorioEnMapa(carlos,'Flandes'));
-  assert.equal(colorTerritorioEnMapa(carlos,'Flandes'),colorTerritorioEnMapa(carlos,'Luxemburgo'));
-  assert.notEqual(colorTerritorioEnMapa(carlos,'Flandes'),colorTerritorioEnMapa(carlos,'Milán'));
+  assert.equal(colorTerritorioEnMapa(carlos,'Artois',1510),colorTerritorioEnMapa(carlos,'Flandes',1510));
+  assert.equal(colorTerritorioEnMapa(carlos,'Flandes',1510),colorTerritorioEnMapa(carlos,'Luxemburgo',1510));
+  assert.notEqual(colorTerritorioEnMapa(carlos,'Flandes',1540),colorTerritorioEnMapa(carlos,'Milán',1540));
 });

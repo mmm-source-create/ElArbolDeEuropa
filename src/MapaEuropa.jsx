@@ -200,7 +200,7 @@ export function MapaEuropa({ seleccion, anioGlobal = null, onSelectTerritorio, i
           const año = Number.isFinite(anioGlobal)
             ? anioGlobal
             : añoReferenciaTerritorial(seleccion, reino);
-          const color = colorTerritorioEnMapa(seleccion, reino);
+          const color = colorTerritorioEnMapa(seleccion, reino, año);
           idsDeReinoEnAño(reino, año).forEach((id) => {
             const target = buscarElemento(id);
             if (!target) return;

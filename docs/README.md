@@ -4,6 +4,7 @@
 - [Guía documental de los Capetos](CAPETOS.md)
 - [Criterios de cartografía de Irlanda](CARTOGRAFIA_IRLANDA.md)
 - [Borgoña: sucesión y límites del mapa](CARTOGRAFIA_BORGONA.md)
+- [Iberia e Italia: gobiernos y límites del mapa](CARTOGRAFIA_IBERIA_ITALIA.md)
 - [Criterios de contenido](#criterios-de-contenido)
 - [Política de seguridad](../SECURITY.md)
 - [Fuentes y metodología](https://www.treeofeurope.eu/es/fuentes)
@@ -14,6 +15,7 @@ Los informes describen el estado validado de cada entrega. Sus cifras y listas d
 
 | Versión | Contenido |
 | --- | --- |
+| [4.4](V4.4.md) | Revisión de España, Portugal e Italia; coronas separadas y sucesión italiana |
 | [4.3](V4.3.md) | Sucesión borgoñona por feudo, corrección cromática y auditoría de cien regiones |
 | [4.2](V4.2.md) | Capetos, herencia borgoñona, mapa de Irlanda y documentación actualizada |
 | [4.1](V4.1.md) | Corredor histórico, filtro de evidencia, revisión de los Austrias y tareas editoriales |

@@ -7,9 +7,13 @@ import { listaReinados, reinadoEsEfectivo } from "../Territorios.jsx";
 import { CORRECTORES, CORREOS_CORRECCIONES, HIJOS_POR_ID, listaAmantes, listaConyuges, rutaEntidadLocalizada, slugPublico } from "./model.js";
 
 export function Chip({ label, active, onClick, color, small = false }) {
+  const red = parseInt(color?.slice(1, 3) || '5c', 16);
+  const green = parseInt(color?.slice(3, 5) || '53', 16);
+  const blue = parseInt(color?.slice(5, 7) || '46', 16);
+  const lightInk = (0.2126 * red + 0.7152 * green + 0.0722 * blue) < 150;
   return (
     <button type="button" onClick={onClick} className={`chip${small ? " chip-sm" : ""}`}
-      style={{ borderColor: color, background: active ? color : "transparent", color: active ? "#F6F1E4" : "var(--eade-ink, #3A342A)" }}>
+      style={{ borderColor: color, background: active ? color : "transparent", color: active ? (lightInk ? "#fff9ee" : "#25211d") : "var(--eade-ink, #3A342A)" }}>
       {label}
     </button>
   );

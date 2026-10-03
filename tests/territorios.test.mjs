@@ -42,7 +42,8 @@ test('un solapamiento de soberanos no marcado produce advertencia; el año de re
 test('Sucesión mantiene mandatos separados y no presenta agrupaciones como reinos',()=>{
  const s=sucesionDe(PERSONAS,'Bohemia',{disputas:true}).filter(f=>f.persona.id==='ENRIQCAR');assert.equal(s.length,2);
  assert.ok(sucesionDe(PERSONAS,'España').every(f=>f.gobierno.territorio!=='España'));
- assert.equal(sucesionDe(PERSONAS,'Venecia').length,0);
+ assert.equal(sucesionDe(PERSONAS,'Venecia').length,6);
+ assert.ok(sucesionDe(PERSONAS,'Venecia').every(entry=>entry.gobierno.titulo==='Dogo'));
  assert.ok(sucesionDe(PERSONAS,'Castilla',{disputas:true}).some(f=>f.persona.id==='JUANA1CAST'));
  assert.ok(!sucesionDe(PERSONAS,'Castilla').some(f=>f.persona.id==='JUANA1CAST'));
  for(const condicion of ['titular','pretensión','rival','disputado'])assert.equal(gobiernoEfectivo(gov('Castilla',{condicion})),false);

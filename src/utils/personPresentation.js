@@ -31,6 +31,9 @@ export function resumenCortoPersona(persona) {
   const dinastia = String(persona.dinastia || "").trim();
   const reinos = Array.isArray(persona.reinos) ? persona.reinos.filter(Boolean) : [];
   const reinado = primerReinadoUtil(persona);
+  if (titulo === 'Dogo' && reinado?.territorio === 'Venecia') {
+    return `Dogo electo de la República de Venecia, ${reinado.desde}–${reinado.hasta}. La magistratura no era hereditaria; los territorios del mapa pertenecían a la República.`;
+  }
   const primera = dinastia && !/^sin casa/i.test(dinastia)
     ? `${titulo} de la dinastía ${dinastia}.`
     : `${titulo}.`;
@@ -58,4 +61,3 @@ export function contenidoEditorialPersona(persona) {
 }
 
 export { tieneContenidoEditorial };
-
