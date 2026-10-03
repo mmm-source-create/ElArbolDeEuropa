@@ -2,7 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import {PERSONAS} from '../src/personas.jsx';
-import {REINO_A_IDS, REINO_VERSIONES, REINO_COLOR, TERRITORIOS_SUB, colorTerritorioEnMapa, idsDeReinoEnAño, reinadosActivos, subterritoriosDeFiltro} from '../src/Territorios.jsx';
+import {REINO_A_IDS, REINO_VERSIONES, REINO_COLOR, TERRITORIOS_DESTACADOS, TERRITORIOS_SUB, colorTerritorioEnMapa, idsDeReinoEnAño, reinadosActivos, subterritoriosDeFiltro, territorioCoincideConFiltro} from '../src/Territorios.jsx';
 
 const person = id => PERSONAS.find(p => p.id === id);
 const painted = (id, year) => new Set(reinadosActivos(person(id), year, {soloEfectivos:true})
@@ -118,19 +118,55 @@ test('Venecia, Milán y Saboya cambian de regiones cuando cambia el control', ()
   assert.ok(painted('VICTORAMADEO2SAB', 1725).has('Torino'));
 });
 
-test('el color agrupa gobiernos simultáneos sin borrar la identidad de sus reinos', () => {
+test('el color sigue a cada conjunto político, no a todos los títulos de una persona', () => {
   const carlos = person('CARLOS5');
-  for (const realm of ['Castilla', 'León', 'Aragón', 'Mallorca', 'Nápoles', 'Trinacria', 'Milán', 'Flandes']) {
+  for (const realm of ['Castilla', 'León', 'Aragón', 'Mallorca', 'Nápoles', 'Trinacria', 'Milán']) {
     assert.equal(colorTerritorioEnMapa(carlos, realm, 1540), REINO_COLOR.España, realm);
   }
+  assert.equal(colorTerritorioEnMapa(carlos, 'Flandes', 1540), REINO_COLOR.Borgoña);
+  assert.equal(colorTerritorioEnMapa(carlos, 'Condado de Borgoña', 1540), REINO_COLOR.Borgoña);
   assert.equal(colorTerritorioEnMapa(carlos, 'Flandes', 1510), REINO_COLOR.Borgoña);
+  const felipe = person('FEL2ESP');
+  assert.equal(colorTerritorioEnMapa(felipe, 'Inglaterra', 1556), REINO_COLOR.Inglaterra);
+  assert.equal(colorTerritorioEnMapa(felipe, 'Flandes', 1556), REINO_COLOR.Borgoña);
+  assert.equal(colorTerritorioEnMapa(felipe, 'Portugal', 1585), REINO_COLOR.España);
   const fernando = person('FERN2ARAG');
   assert.equal(colorTerritorioEnMapa(fernando, 'Nápoles', 1510), REINO_COLOR.Aragón);
   assert.equal(colorTerritorioEnMapa(fernando, 'Mallorca', 1510), REINO_COLOR.Aragón);
+  assert.equal(colorTerritorioEnMapa(fernando, 'Castilla', 1510), REINO_COLOR.Castilla);
   assert.notEqual(REINO_COLOR.Mallorca, REINO_COLOR.Aragón);
   assert.equal(colorTerritorioEnMapa(person('VICTORAMADEO2SAB'), 'Piamonte', 1725), REINO_COLOR.Saboya);
+  assert.equal(colorTerritorioEnMapa(person('VICTORAMADEO2SAB'), 'Cerdeña', 1725), REINO_COLOR.Saboya);
+  const carlosVI = person('CARLOS6HRE');
+  assert.equal(colorTerritorioEnMapa(carlosVI, 'Austria', 1725), REINO_COLOR.Austria);
+  assert.equal(colorTerritorioEnMapa(carlosVI, 'Bohemia', 1725), REINO_COLOR.Bohemia);
+  assert.equal(colorTerritorioEnMapa(carlosVI, 'Hungría', 1725), REINO_COLOR.Hungría);
+  assert.equal(colorTerritorioEnMapa(carlosVI, 'Milán', 1725), REINO_COLOR.Milán);
+  const unionPersonal = {gobiernos: ['Polonia', 'Bohemia', 'Hungría'].map(territorio => ({territorio, desde: 1500, hasta: 1600, condicion: 'efectivo'}))};
+  for (const realm of ['Polonia', 'Bohemia', 'Hungría']) {
+    assert.equal(colorTerritorioEnMapa(unionPersonal, realm, 1550), REINO_COLOR[realm]);
+  }
   assert.ok(subterritoriosDeFiltro('España').includes('Mallorca'));
   assert.deepEqual(TERRITORIOS_SUB.España.slice(0, 2), ['Corona de Castilla', 'Corona de Aragón']);
+});
+
+test('los feudos borgoñones y las adquisiciones de Carlos V comparten una ruta de filtros', () => {
+  const grupo = 'Borgoña y Países Bajos';
+  assert.ok(TERRITORIOS_DESTACADOS.includes(grupo));
+  assert.ok(!TERRITORIOS_DESTACADOS.includes('Países Bajos y Flandes'));
+  for (const realm of ['Borgoña', 'Condado de Borgoña', 'Flandes', 'Namur', 'Güeldres', 'Frisia', 'Utrecht', 'Overijssel', 'Drente', 'Groninga']) {
+    assert.ok(territorioCoincideConFiltro(realm, grupo), realm);
+  }
+  assert.ok(!territorioCoincideConFiltro('Cléveris', grupo));
+  assert.deepEqual(TERRITORIOS_SUB['Incorporaciones del siglo XVI'], ['Güeldres', 'Frisia', 'Utrecht', 'Overijssel', 'Drente', 'Groninga']);
+});
+
+test('Prusia usa el azul de los Hohenzollern en filtro y núcleo cartográfico', () => {
+  assert.equal(REINO_COLOR.Prusia, '#303C59');
+  assert.deepEqual(idsDeReinoEnAño('Prusia', 1550), ['Lower_Prussia', 'Upper_Prussia', 'Masuria']);
+  assert.equal(colorTerritorioEnMapa(person('ALBERTPRUSSIA'), 'Prusia', 1550), REINO_COLOR.Prusia);
+  const svg=fs.readFileSync(new URL('../src/MapChart_Map.svg',import.meta.url),'utf8');
+  for (const id of REINO_A_IDS.Prusia) assert.match(svg, new RegExp(`\\bid="${id}"`));
 });
 
 test('la sucesión italiana de 1700–1759 cambia de monarca sin fusionar reinos', () => {

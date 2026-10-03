@@ -12,6 +12,9 @@ export const REINO_A_IDS = {
 
   Polonia: ["Chelmno", "Kuyavia", "Plock", "Dobrzyn", "Poznan", "Gniezno", "Leczyca", "Lublin", "Sieradz", "Kalisz", "Glogow", "Wroclaw", "Opole", "Sandomierz", "Krakow"],
 
+  // Núcleo de la Prusia ducal; Warmia y Prusia Real siguieron otra trayectoria.
+  Prusia: ["Lower_Prussia", "Upper_Prussia", "Masuria"],
+
   Austria: ["Ober_dem_Wienerwald", "Unter_dem_Wienerwald", "Salzburger_Land", "Eastern_Styria", "Upper_Styria", "Middle_Styria", "Lower_Styria", "Upper_Carinthia", "Lower_Carinthia", "Upper_Carniola", "Lower_Carniola", "South_Tirol", "Vorarlberg"],
 
   Baviera: ["Main_Franconia", "Frankenwald", "Tauberfranken", "Franconian_Alb", "Swabian_Alb", "Eastern_Upper_Swabia", "Western_Upper_Swabia"],
@@ -145,6 +148,7 @@ export const REINO_COLOR = {
   Bohemia: '#6b56a5',
   Hungría: '#db772f',
   Polonia: '#da63cc',
+  Prusia: '#303C59',
   Austria: '#8E293C',
   Baviera: '#69c4c4',
   Luxemburgo: '#8E8B29',
@@ -211,7 +215,10 @@ export const REINO_COLOR = {
   "Vizcondado de Mayo": '#5A786C',
   "Corona de Castilla": '#C5A62B',
   "Corona de Aragón": '#ba3737',
-  "Países Bajos y Flandes": '#3E6F91',
+  "Países Bajos y Flandes": '#8E295C',
+  "Borgoña y Países Bajos": '#8E295C',
+  "Borgoña y Franco Condado": '#8E295C',
+  "Incorporaciones del siglo XVI": '#8E295C',
   "Estados Italianos": '#6F7652',
   "Polonia-Lituania": '#8B5AA5',
   "Bizancio y Oriente latino": '#6A8E29',
@@ -263,17 +270,29 @@ const FEUDOS_HERENCIA_BORGONONA = new Set([
   'Zelanda', 'Luxemburgo', 'Güeldres', 'Frisia', 'Utrecht', 'Overijssel',
   'Drente', 'Groninga',
 ]);
+const CORONA_ARAGONESA = new Set([
+  'Aragón', 'Condado de Barcelona', 'Valencia', 'Mallorca', 'Cerdeña',
+  'Nápoles', 'Sicilia', 'Trinacria',
+]);
+const MONARQUIA_HISPANICA = new Set([
+  'Castilla', 'León', 'Aragón', 'Condado de Barcelona', 'Valencia',
+  'Mallorca', 'Cerdeña', 'Nápoles', 'Trinacria', 'Milán', 'Navarra',
+  'Portugal',
+]);
+const ESTADOS_SABOYANOS = new Set(['Saboya', 'Piamonte', 'Cerdeña']);
 export function colorTerritorioEnMapa(persona, territorio, año) {
-  // La paleta expresa un gobierno personal simultáneo, no una absorción
-  // jurídica de las coronas. Fuera del año elegido no se infiere una unión.
+  // Una unión personal no convierte todos los títulos en un mismo estado.
+  // El color compartido se limita a los miembros explícitos de cada conjunto;
+  // Inglaterra, Borgoña, Hungría, Bohemia o Polonia conservan su identidad.
   const activos = new Set(reinadosActivos(persona, año, { soloEfectivos: true }).map(r => r.territorio));
-  if (activos.has('Castilla') && activos.has('Aragón') && año >= 1516) return REINO_COLOR.España;
-  if (activos.has('Aragón')) return REINO_COLOR.Aragón;
-  if (activos.has('Castilla') && activos.has('León')) return REINO_COLOR.Castilla;
-  if (activos.has('Francia')) return REINO_COLOR.Francia;
-  if (activos.has('Austria')) return REINO_COLOR.Austria;
-  if (activos.has('Hungría')) return REINO_COLOR.Hungría;
-  if (activos.has('Saboya') || activos.has('Piamonte')) return REINO_COLOR.Saboya;
+  if (!activos.has(territorio)) return REINO_COLOR[territorio] || REINO_COLOR_DEFAULT;
+  if (año >= 1516 && activos.has('Castilla') && activos.has('Aragón')
+      && MONARQUIA_HISPANICA.has(territorio)) return REINO_COLOR.España;
+  if (activos.has('Aragón') && CORONA_ARAGONESA.has(territorio)) return REINO_COLOR.Aragón;
+  if (activos.has('Castilla') && activos.has('León')
+      && (territorio === 'Castilla' || territorio === 'León')) return REINO_COLOR.Castilla;
+  if ((activos.has('Saboya') || activos.has('Piamonte'))
+      && ESTADOS_SABOYANOS.has(territorio)) return REINO_COLOR.Saboya;
   if (PERSONAS_HERENCIA_BORGONONA.has(persona?.id) && FEUDOS_HERENCIA_BORGONONA.has(territorio)) {
     return REINO_COLOR.Borgoña;
   }
@@ -645,7 +664,7 @@ export const TERRITORIOS_DESTACADOS = [
   "España",
   "Portugal",
   "Sacro Imperio",
-  "Países Bajos y Flandes",
+  "Borgoña y Países Bajos",
   "Estados Italianos",
   "Hungría",
   "Polonia-Lituania",
@@ -697,10 +716,12 @@ export const TERRITORIOS_SUB = {
   Bohemia: ["Moravia", "Silesia"],
   Baviera: [],
 
-  "Países Bajos y Flandes": [
-    "Artois", "Borgoña", "Brabante", "Cléveris", "Flandes", "Henao",
-    "Holanda", "Zelanda", "Limburgo", "Luxemburgo", "Países Bajos", "Güeldres", "Namur",
-  ],
+  // Agrupación de navegación: no afirma que estos feudos formasen un Estado
+  // unitario. Las incorporaciones de Carlos V se distinguen de la herencia.
+  "Borgoña y Países Bajos": ["Borgoña y Franco Condado", "Países Bajos y Flandes", "Incorporaciones del siglo XVI"],
+  "Borgoña y Franco Condado": ["Borgoña", "Condado de Borgoña", "Nevers", "Rethel", "Auxerre", "Ponthieu"],
+  "Países Bajos y Flandes": ["Países Bajos", "Artois", "Flandes", "Brabante", "Limburgo", "Henao", "Holanda", "Zelanda", "Luxemburgo", "Namur"],
+  "Incorporaciones del siglo XVI": ["Güeldres", "Frisia", "Utrecht", "Overijssel", "Drente", "Groninga"],
 
   "Estados Italianos": [
     "Estados Pontificios", "Venecia", "Génova", "Ferrara", "Florencia", "Forlì", "Gravina",
