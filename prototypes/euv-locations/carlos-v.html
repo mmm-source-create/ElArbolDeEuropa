@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Dominios de Carlos V · Laboratorio EU V Locations</title>
+  <style>
+    :root { font:16px/1.5 system-ui,sans-serif; color:#eee7dc; background:#27231f; }
+    * { box-sizing:border-box; }
+    body { margin:0; padding:20px; }
+    main,header,footer { max-width:1500px; margin-inline:auto; }
+    a { color:#efc792; }
+    h1 { font:clamp(2rem,4vw,3.4rem)/1.1 Georgia,serif; margin:.15em 0; }
+    h2 { font:1.4rem/1.2 Georgia,serif; }
+    p { max-width:85ch; color:#d5cbbd; }
+    .eyebrow { font-weight:700; text-transform:uppercase; letter-spacing:.12em; color:#d2b68c; }
+    .toolbar { display:grid; grid-template-columns:minmax(260px,1fr) auto; gap:16px; align-items:end; background:#332e29; border:1px solid #70675b; border-radius:12px; padding:16px; margin-block:18px; }
+    .year-label { display:flex; justify-content:space-between; align-items:baseline; gap:12px; font-weight:700; }
+    .year-label output { font:2rem Georgia,serif; color:#f4dfaf; }
+    input[type=range] { width:100%; accent-color:#b78b38; cursor:pointer; }
+    input[type=search],button { font:inherit; border:1px solid #8d8171; border-radius:7px; padding:8px 10px; }
+    input[type=search] { background:#f8f4eb; color:#29251f; min-width:210px; }
+    button { background:#493f35; color:#f4ede1; cursor:pointer; }
+    button:hover,button:focus-visible,a:focus-visible,input:focus-visible { outline:2px solid #f4d89a; outline-offset:2px; }
+    button.active { border-color:#f4d89a; background:#634536; }
+    .milestones { display:flex; gap:8px; flex-wrap:wrap; margin-top:8px; }
+    .search { display:flex; gap:8px; align-items:end; flex-wrap:wrap; }
+    .search label { display:grid; gap:4px; font-size:.9rem; font-weight:700; }
+    .legend { display:flex; flex-wrap:wrap; gap:10px 22px; margin-block:14px; }
+    .legend span { display:inline-flex; align-items:center; gap:7px; }
+    .swatch { display:inline-block; width:18px; height:18px; border-radius:3px; border:1px solid #8d8171; }
+    .map-shell { background:#faf7ef; border:1px solid #8d8171; border-radius:12px; overflow:hidden; }
+    #map { height:min(70vh,840px); min-height:380px; cursor:grab; touch-action:none; }
+    #map:active { cursor:grabbing; }
+    #map svg { display:block; height:100%; width:100%; }
+    .info { color:#2c2721; background:#f2eadc; border-top:1px solid #c6bba9; padding:10px 15px; min-height:50px; }
+    .info strong { color:#402b2a; }
+    .note { border-left:4px solid #b78b38; padding:3px 0 3px 16px; margin-block:20px; }
+    .status { margin-block:8px; min-height:24px; color:#d5cbbd; }
+    footer { padding-bottom:20px; font-size:.9rem; }
+    @media (max-width:750px) { body{padding:10px}.toolbar{grid-template-columns:1fr}#map{height:55vh;min-height:330px} }
+  </style>
+</head>
+<body>
+  <header>
+    <p class="eyebrow">Laboratorio cartográfico · mapa paralelo</p>
+    <h1>Los dominios de Carlos V</h1>
+    <p>Recreación fechada sobre <em>EU V Locations</em>. Los colores distinguen los reinos hispánicos y Milán, la herencia borgoñona y, durante unos años, las tierras austríacas. El cargo de emperador no implicaba gobernar cada territorio del Sacro Imperio.</p>
+    <p><a href="./">Volver a la comparación de mapas</a></p>
+  </header>
+  <main>
+    <div class="toolbar">
+      <div>
+        <label class="year-label" for="year">Año mostrado <output id="year-output" for="year">1548</output></label>
+        <input id="year" type="range" min="1506" max="1555" value="1548" step="1" aria-describedby="year-description">
+        <div id="year-description">Años completos; cada cambio se muestra en el año en que ocurrió.</div>
+        <div class="milestones" aria-label="Saltos cronológicos">
+          <button type="button" data-year="1506">1506 · Borgoña</button>
+          <button type="button" data-year="1517">1517 · España</button>
+          <button type="button" data-year="1520">1520 · Austria</button>
+          <button type="button" data-year="1535">1535 · Milán</button>
+          <button type="button" data-year="1548">1548 · balance</button>
+        </div>
+      </div>
+      <div class="search">
+        <label for="location-search">Buscar location por ID
+          <input id="location-search" type="search" list="location-ids" placeholder="Middelburg, Milano, Granada…" autocomplete="off">
+        </label>
+        <datalist id="location-ids"></datalist>
+        <button type="button" id="search-button">Consultar</button>
+        <button type="button" id="reset-view">Restablecer vista</button>
+      </div>
+    </div>
+    <div class="legend" aria-label="Leyenda">
+      <span><i class="swatch" style="background:#bd9b45"></i>Monarquía hispánica y Milán</span>
+      <span><i class="swatch" style="background:#8e295c"></i>Herencia borgoñona y Países Bajos</span>
+      <span><i class="swatch" style="background:#9c4750"></i>Territorios austríacos, 1519–1522</span>
+      <span><i class="swatch" style="background:#d8d6ce"></i>Sin atribución en este ensayo</span>
+    </div>
+    <div id="status" class="status" role="status">Cargando mapa y cronología…</div>
+    <div class="map-shell">
+      <div id="map" aria-label="Mapa de los dominios de Carlos V por año"></div>
+      <div id="info" class="info" aria-live="polite">Pulsa una location para ver qué jurisdicción se le ha asignado.</div>
+    </div>
+    <div class="note">
+      <h2>Cómo leerlo</h2>
+      <p>El color indica jurisdicciones fechadas en la base del Atlas, transferidas por solapamiento geométrico y corregidas donde hemos documentado errores. No equivale a soberanía uniforme ni a fronteras exactas de cada localidad. Las zonas grises incluyen entidades ajenas, compartidas o todavía sin correspondencia fiable. Este ensayo no modifica el mapa público.</p>
+    </div>
+  </main>
+  <footer>
+    <p>Geometría y mapa base: <a href="https://www.mapchart.net/eu-v-locations.html">MapChart</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>. Véase la <a href="./README.md">metodología y el registro de límites</a>.</p>
+  </footer>
+  <script type="module">
+    const FRAME={x:475,y:15,w:315,h:240};
+    const COLORS={spanish:'#bd9b45',burgundian:'#8e295c',austrian:'#9c4750'};
+    const BASE='#d8d6ce';
+    const $=id=>document.getElementById(id);
+    const state={svg:null,paths:new Map(),data:null,painted:new Set(),assignments:new Map(),view:{...FRAME}};
+    function activeVersion(territory,year){
+      if(year<territory.from||year>territory.through)return null;
+      return [...territory.versions].reverse().find(version=>version.from<=year)||null;
+    }
+    function setInfo(id){
+      const assignment=state.assignments.get(id);
+      if(!id){$('info').textContent='Pulsa una location para ver qué jurisdicción se le ha asignado.';return;}
+      if(!state.paths.has(id)){$('info').textContent=`${id}: no está en el recorte del mapa.`;return;}
+      if(!assignment){$('info').textContent=`${id}: sin dominio atribuido a Carlos V en ${$('year').value}. El gris puede indicar otro soberano, una jurisdicción compartida o una correspondencia pendiente.`;return;}
+      const names=[...assignment.territories].join(', ');
+      $('info').replaceChildren();
+      const title=document.createElement('strong');title.textContent=id;
+      $('info').append(title,document.createTextNode(` · ${names} · ${$('year').value}. Asignación del prototipo; consulta las fuentes y excepciones en la metodología.`));
+    }
+    function render(){
+      const year=Number($('year').value);
+      $('year-output').value=String(year);
+      for(const id of state.painted){const path=state.paths.get(id);if(path){path.style.fill=BASE;path.style.stroke=BASE;}}
+      state.painted.clear();state.assignments.clear();
+      let jurisdictions=0;
+      for(const territory of state.data.territories){
+        const version=activeVersion(territory,year);
+        if(!version)continue;
+        jurisdictions++;
+        for(const id of version.ids){
+          const path=state.paths.get(id);if(!path)continue;
+          const existing=state.assignments.get(id);
+          if(existing&&existing.group!==territory.group)continue;
+          if(existing)existing.territories.add(territory.territory);
+          else state.assignments.set(id,{group:territory.group,territories:new Set([territory.territory])});
+          path.style.fill=COLORS[territory.group];path.style.stroke=COLORS[territory.group];
+          state.painted.add(id);
+        }
+      }
+      $('status').textContent=`${year}: ${jurisdictions} jurisdicciones activas · ${state.painted.size} locations coloreadas. Arrastra o usa la rueda para explorar.`;
+      document.querySelectorAll('[data-year]').forEach(button=>button.classList.toggle('active',Number(button.dataset.year)===year));
+      setInfo($('location-search').value.trim());
+    }
+    function viewBox(){state.svg?.setAttribute('viewBox',`${state.view.x} ${state.view.y} ${state.view.w} ${state.view.h}`);}
+    function suggest(query){
+      const list=$('location-ids');list.replaceChildren();
+      if(!query.trim())return;
+      const needle=query.trim().toLocaleLowerCase('es');let count=0;
+      for(const id of state.paths.keys()){
+        if(!id.toLocaleLowerCase('es').includes(needle))continue;
+        const option=document.createElement('option');option.value=id;list.append(option);
+        if(++count===35)break;
+      }
+    }
+    async function load(){
+      const [svgResponse,dataResponse]=await Promise.all([fetch('./euv-locations-crop.svg'),fetch('./carlos-v-locations.json')]);
+      if(!svgResponse.ok||!dataResponse.ok)throw new Error('No se pudo cargar el mapa o los datos');
+      state.data=await dataResponse.json();
+      const doc=new DOMParser().parseFromString(await svgResponse.text(),'image/svg+xml');
+      if(doc.querySelector('parsererror'))throw new Error('El SVG no es válido');
+      const svg=doc.documentElement;
+      svg.querySelector('metadata')?.remove();svg.querySelector('#legend-svg')?.remove();
+      svg.removeAttribute('width');svg.removeAttribute('height');svg.setAttribute('preserveAspectRatio','xMidYMid meet');
+      svg.setAttribute('role','img');svg.setAttribute('aria-label','EU V Locations: dominios de Carlos V en el año seleccionado');
+      state.svg=svg;
+      state.paths=new Map([...svg.querySelectorAll('#map > path[id]')].map(path=>[path.id,path]));
+      $('map').replaceChildren(svg);
+      $('map').addEventListener('click',event=>{
+        const path=event.target.closest('path[id]');if(!path)return;
+        $('location-search').value=path.id;setInfo(path.id);
+      });
+      $('map').addEventListener('wheel',event=>{
+        event.preventDefault();const scale=event.deltaY>0?1.12:1/1.12;
+        const rect=$('map').getBoundingClientRect(),px=(event.clientX-rect.left)/rect.width,py=(event.clientY-rect.top)/rect.height;
+        state.view={x:state.view.x+state.view.w*px*(1-scale),y:state.view.y+state.view.h*py*(1-scale),w:state.view.w*scale,h:state.view.h*scale};viewBox();
+      },{passive:false});
+      let drag=null;
+      $('map').addEventListener('pointerdown',event=>{drag={x:event.clientX,y:event.clientY,view:{...state.view}};$('map').setPointerCapture(event.pointerId);});
+      $('map').addEventListener('pointermove',event=>{
+        if(!drag)return;const rect=$('map').getBoundingClientRect();
+        state.view={...drag.view,x:drag.view.x-(event.clientX-drag.x)/rect.width*drag.view.w,y:drag.view.y-(event.clientY-drag.y)/rect.height*drag.view.h};viewBox();
+      });
+      $('map').addEventListener('pointerup',()=>{drag=null;});$('map').addEventListener('pointercancel',()=>{drag=null;});
+      viewBox();render();
+    }
+    $('year').addEventListener('input',()=>{if(state.data)render();});
+    document.querySelectorAll('[data-year]').forEach(button=>button.addEventListener('click',()=>{$('year').value=button.dataset.year;if(state.data)render();}));
+    $('location-search').addEventListener('input',event=>suggest(event.currentTarget.value));
+    $('location-search').addEventListener('keydown',event=>{if(event.key==='Enter')setInfo(event.currentTarget.value.trim());});
+    $('search-button').addEventListener('click',()=>setInfo($('location-search').value.trim()));
+    $('reset-view').addEventListener('click',()=>{state.view={...FRAME};viewBox();});
+    load().catch(error=>{$('status').textContent=`Error: ${error.message}`;});
+  </script>
+</body>
+</html>

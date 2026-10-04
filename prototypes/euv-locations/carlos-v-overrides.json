@@ -1,0 +1,152 @@
+[
+  {
+    "territory": "Holanda", "id": "Utrecht", "action": "remove", "from": 1506, "through": 1555,
+    "reason": "Utrecht only passed to Charles in 1528; the old Holland polygon swallowed it.",
+    "source": "https://www.habsburger.net/en/chapter/charles-v-empire-which-sun-never-set"
+  },
+  {
+    "territory": "Holanda", "id": "Amersfoort", "action": "remove", "from": 1506, "through": 1555,
+    "reason": "Amersfoort belongs to the Utrecht jurisdiction, not the County of Holland.",
+    "source": "https://www.canonvannederland.nl/nl/overijssel/overijssel/wapen-van-overijssel"
+  },
+  {
+    "territory": "Holanda", "id": "Middelburg", "action": "remove", "from": 1506, "through": 1555,
+    "reason": "Middelburg is Zeeland, distinct from Holland.",
+    "source": "https://www.rijksmuseum.nl/nl/collectie/object/Allegorie-op-de-troonsafstand-van-keizer-Karel-v-te-Brussel--2cb744f2469fe62413bb6aab920d4e03?tab=catalogue"
+  },
+  {
+    "territory": "Zelanda", "id": "Middelburg", "action": "add", "from": 1506, "through": 1555,
+    "reason": "Zeeland was inherited with the Burgundian Netherlands; the old SVG had no Zeeland ID.",
+    "source": "https://www.rijksmuseum.nl/nl/collectie/object/Allegorie-op-de-troonsafstand-van-keizer-Karel-v-te-Brussel--2cb744f2469fe62413bb6aab920d4e03?tab=catalogue"
+  },
+  {
+    "territory": "Utrecht", "id": "Utrecht", "action": "add", "from": 1528, "through": 1555,
+    "reason": "Temporal rule acquired from the bishop of Utrecht in 1528.",
+    "source": "https://www.habsburger.net/en/chapter/charles-v-empire-which-sun-never-set"
+  },
+  {
+    "territory": "Utrecht", "id": "Amersfoort", "action": "add", "from": 1528, "through": 1555,
+    "reason": "Utrecht jurisdiction, acquired in 1528.",
+    "source": "https://www.habsburger.net/en/chapter/charles-v-empire-which-sun-never-set"
+  },
+  {
+    "territory": "Flandes", "id": "Tournai", "action": "remove", "from": 1506, "through": 1555,
+    "reason": "Tournai was acquired separately in 1521, not part of the inherited County of Flanders.",
+    "source": "https://mhm.tournai.be/en/tournai-a-city-with-a-rich-military-past"
+  },
+  {
+    "territory": "Tournaisis", "id": "Tournai", "action": "add", "from": 1521, "through": 1555,
+    "reason": "Charles captured Tournai in 1521 after its French interval; shown as a separate acquisition.",
+    "source": "https://mhm.tournai.be/en/tournai-a-city-with-a-rich-military-past"
+  },
+  {
+    "territory": "Brabante", "id": "Mechelen", "action": "remove", "from": 1506, "through": 1555,
+    "reason": "Mechelen was a distinct lordship among the Burgundian-Habsburg Netherlands.",
+    "source": "https://stadsarchief.mechelen.be/vandaag-in-de-mechelse-geschiedenis-het-parlement-van-mechelen-1474-"
+  },
+  {
+    "territory": "Señorío de Malinas", "id": "Mechelen", "action": "add", "from": 1506, "through": 1555,
+    "reason": "Separate inherited Lordship of Mechelen/Malines.",
+    "source": "https://stadsarchief.mechelen.be/vandaag-in-de-mechelse-geschiedenis-het-parlement-van-mechelen-1474-"
+  },
+  {
+    "territory": "Artois", "id": "Cambrai", "action": "remove", "from": 1506, "through": 1555,
+    "reason": "Cambrai was a prince-bishopric, not part of the County of Artois. Imperial garrison and influence are not identical to this hereditary county.",
+    "source": "https://shs.cairn.info/revue-du-nord-2013-2-page-699?lang=fr"
+  },
+  {
+    "territory": "Limburgo", "id": "Roermond", "action": "remove", "from": 1506, "through": 1555,
+    "reason": "Roermond belongs with Guelders, acquired only in 1543.",
+    "source": "https://www.canonvannederland.nl/nl/gelderland/gelderland/van-graafschap-tot-hertogdom"
+  },
+  {
+    "territory": "Limburgo", "id": "Venlo", "action": "remove", "from": 1506, "through": 1555,
+    "reason": "Venlo belongs with Guelders, acquired only in 1543.",
+    "source": "https://media.gelderland.nl/Folder_Past_Present_Future_20054ee6ef.pdf"
+  },
+  {
+    "territory": "Limburgo", "id": "Maastricht", "action": "remove", "from": 1506, "through": 1555,
+    "reason": "Shared jurisdiction with the prince-bishop of Liège cannot be expressed as sole control of the whole location.",
+    "source": "https://www.visitmaastricht.com/en/this-is-maastricht/building-on-the-past/history/middle-ages"
+  },
+  {
+    "territory": "Limburgo", "id": "Weert", "action": "remove", "from": 1506, "through": 1555,
+    "reason": "Lordship of Weert/Horne is not the Duchy of Limburg.",
+    "source": "https://www.museum.nl/en/museum-w/showpiece/count-of-horn"
+  },
+  {
+    "territory": "Limburgo", "id": "Limbourg", "action": "add", "from": 1506, "through": 1555,
+    "reason": "The new map separates the duchy's eponymous location from the coarse old Limburg province.",
+    "source": "https://www.rijksmuseum.nl/nl/collectie/object/Allegorie-op-de-troonsafstand-van-keizer-Karel-v-te-Brussel--2cb744f2469fe62413bb6aab920d4e03?tab=catalogue"
+  },
+  {
+    "territory": "Güeldres", "id": "Roermond", "action": "add", "from": 1543, "through": 1555,
+    "reason": "Guelders entered Charles's Netherlands after the Treaty of Venlo in 1543.",
+    "source": "https://www.habsburger.net/en/chapter/charles-v-empire-which-sun-never-set"
+  },
+  {
+    "territory": "Güeldres", "id": "Venlo", "action": "add", "from": 1543, "through": 1555,
+    "reason": "Guelders entered Charles's Netherlands after the Treaty of Venlo in 1543.",
+    "source": "https://www.habsburger.net/en/chapter/charles-v-empire-which-sun-never-set"
+  },
+  {
+    "territory": "Nápoles", "id": "Benevento", "action": "remove", "from": 1516, "through": 1555,
+    "reason": "Papal enclave inside the Kingdom of Naples.",
+    "source": "https://www.treccani.it/enciclopedia/benevento_%28Federiciana%29/"
+  },
+  {
+    "territory": "Trinacria", "id": "Malta", "action": "remove", "from": 1530, "through": 1555,
+    "reason": "Charles granted Malta, Gozo and Comino to the Order of St John in 1530.",
+    "source": "https://www.orderofmalta.int/news/the-national-library-of-malta-celebrates-the-orders-past-and-present/"
+  },
+  {
+    "territory": "Milán", "id": "Biella", "action": "remove", "from": 1535, "through": 1555,
+    "reason": "Biella had passed to Savoy in 1379.",
+    "source": "https://www.treccani.it/enciclopedia/biella_%28Enciclopedia-Italiana%29/"
+  },
+  {
+    "territory": "Milán", "id": "Vercelli", "action": "remove", "from": 1535, "through": 1555,
+    "reason": "Vercelli was ceded to Savoy in 1427.",
+    "source": "https://www.treccani.it/enciclopedia/vercelli_%28Enciclopedia-Italiana%29/"
+  },
+  {
+    "territory": "Milán", "id": "Rovegno", "action": "remove", "from": 1535, "through": 1555,
+    "reason": "Borderland in the Trebbia valley; omitted pending a verified 16th-century jurisdiction source.",
+    "source": "https://siusa-archivi.cultura.gov.it/cgi-bin/siusa/pagina.pl?Chiave=7319&RicSez=prodenti&RicTipoScheda=pe&RicVM=indice&TipoPag=prodente"
+  },
+  {
+    "territory": "Condado de Barcelona", "id": "Andorra_la_Vella", "action": "remove", "from": 1516, "through": 1555,
+    "reason": "Andorra's co-principality was not absorbed into the County of Barcelona.",
+    "source": "https://www.govern.ad/ca/tematiques/cultura-i-esports/patrimoni-cultural/coneixer-el-patrimoni-cultural/historia-d-andorra"
+  },
+  {
+    "territory": "Condado de Borgoña", "id": "Besancon", "action": "remove", "from": 1506, "through": 1555,
+    "reason": "Besançon was a free imperial city, politically and administratively separate from the county.",
+    "source": "https://inventaire-patrimoine.bourgognefranchecomte.fr/dossier/IA25000374"
+  },
+  {
+    "territory": "Condado de Borgoña", "id": "Montbeliard", "action": "remove", "from": 1506, "through": 1555,
+    "reason": "Montbéliard was governed by the counts and dukes of Württemberg, not the count of Burgundy.",
+    "source": "https://www.montbeliard.fr/mes-sorties-mes-activites/musees-de-montbeliard/musee-du-chateau-des-ducs-de-wurtemberg/le-circuit-historique-2/"
+  },
+  {
+    "territory": "Condado de Borgoña", "id": "Saint_Claude", "action": "remove", "from": 1506, "through": 1555,
+    "reason": "The abbey's territory had direct imperial standing and was independent of the county; the polygon cannot represent county rule.",
+    "source": "https://www.newadvent.org/cathen/13341a.htm"
+  },
+  {
+    "territory": "Luxemburgo", "id": "Bouillon", "action": "remove", "from": 1506, "through": 1555,
+    "reason": "Bouillon was a distinct lordship connected to Liège, not a constituent of the Duchy of Luxembourg.",
+    "source": "https://www.larousse.fr/encyclopedie/autre-region/duch%C3%A9_de_Bouillon/109685"
+  },
+  {
+    "territory": "Brabante", "id": "Cuijk", "action": "remove", "from": 1506, "through": 1555,
+    "reason": "Keep the Land van Cuijk as its own lordship. It was administered by the Egmond pledge-holders from 1517 and only incorporated into Brabant in 1549; neither tenure nor incorporation makes its local title identical to Brabant throughout the period.",
+    "source": "https://www.canonvannederland.nl/nl/noord-brabant/grave/keteltje"
+  },
+  {
+    "territory": "Señorío de Cuijk", "id": "Cuijk", "action": "add", "from": 1509, "through": 1555,
+    "reason": "Charles was recognised as lord from 1509 in the supplied chronology. The title and superior authority continue through the 1517 pledge to the Egmond family; this color does not assert direct administration until the pledge ended in 1549. The 1509 investiture year still needs primary confirmation.",
+    "source": "https://nl.wikipedia.org/wiki/Land_van_Cuijk_(heerlijkheid)"
+  }
+]
