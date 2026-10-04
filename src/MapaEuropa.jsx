@@ -18,6 +18,7 @@ import {
   agrupacionesPoliticasEnMapa,
   colorTerritorioEnMapa,
   idsDeReinoEnAño,
+  idsDeGobiernoEnAño,
   añoReferenciaTerritorial,
   listaReinados,
   reinadoEsEfectivo,
@@ -236,7 +237,7 @@ export function MapaEuropa({ seleccion, anioGlobal = null, onSelectTerritorio, o
           // Una ficha con ámbito de rama no colorea todo el archiducado.
           const ids = reino === 'Austria' && entrada.ambito?.includes('Austria Interior')
             ? [...idsDeReinoEnAño('Austria Interior', año), ...(año >= 1619 ? idsDeReinoEnAño('Austria', año) : [])]
-            : idsDeReinoEnAño(reino, año);
+            : idsDeGobiernoEnAño(entrada, año, seleccion.id);
           ids.forEach((id) => {
             const target = buscarElemento(id);
             if (!target) return;

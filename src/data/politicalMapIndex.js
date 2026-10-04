@@ -1,4 +1,4 @@
-import {idsDeReinoEnAño} from '../Territorios.jsx';
+import {idsDeReinoEnAño, idsDeGobiernoEnAño} from '../Territorios.jsx';
 import {gobiernoEfectivo} from './territorios.js';
 import {imperialFrameIds} from './imperialFrame.js';
 import {personClaims} from '../evidence/claims.js';
@@ -29,7 +29,7 @@ export function buildPoliticalMapIndex(personas, year) {
     const claims = new Map(personClaims(person).filter(claim => claim.field === 'Gobierno').map(claim => [claim.value,claim]));
     for (const government of person.gobiernos || []) {
       if (!gobiernoEfectivo(government) || government.desde > year || government.hasta < year) continue;
-      const ids = idsDeReinoEnAño(government.territorio, year);
+      const ids = idsDeGobiernoEnAño(government, year, person.id);
       for (const id of ids) push(id, {person,government,claim:claims.get(government) || null,territory:government.territorio});
     }
   }

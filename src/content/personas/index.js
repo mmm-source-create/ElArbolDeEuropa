@@ -15,6 +15,7 @@ import { FRONTERAS_ORIENTALES } from "./fronteras-orientales.js";
 import { PRINCIPADOS_DUCADOS } from "./principados-ducados.js";
 import { VENECIA_PIGNATELLI_V45 } from "./venecia-pignatelli-v45.js";
 import { TIROL_V47 } from './tirol-v47.js';
+import { CORRIDORS_V48 } from './corridors-v48.js';
 
 export const PERSONA_CONTENT = Object.freeze({
   ...MONARCAS_MEDIEVALES,
@@ -34,6 +35,7 @@ export const PERSONA_CONTENT = Object.freeze({
   ...ADRIATICO_V214,
   ...VENECIA_PIGNATELLI_V45,
   ...TIROL_V47,
+  ...CORRIDORS_V48,
 });
 
 export function contenidoPersona(personaOId) {

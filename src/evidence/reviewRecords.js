@@ -1,3 +1,5 @@
+import { CORRIDOR_REVIEWS } from './corridorReviews.js';
+
 // The pilot follows three generations around the succession of Castile.
 // A source here supports only the claim and passage named in each review.
 export const PILOT_PERSON_IDS = Object.freeze([
@@ -177,6 +179,7 @@ const tyrolReviews = {
 };
 
 export const CLAIM_REVIEWS = Object.freeze({
+  ...CORRIDOR_REVIEWS,
   ...dogeReviews,
   ...pignatelliReviews,
   ...tyrolReviews,
@@ -189,9 +192,9 @@ export const CLAIM_REVIEWS = Object.freeze({
   'person:MARGFLAN:government:Nevers:1384:1405:Condesa': {...related(bnfMarguerite,'La BnF registra el título; la administración se entregó en apanage a Juan. Titularidad no equivale a gobierno efectivo.'),sources:[bnfMarguerite,sigillaJeanNevers]},
   'person:MARGFLAN:government:Rethel:1384:1405:Condesa': {...related(bnfMarguerite,'La BnF registra el título; sus padres cedieron el gobierno a Antonio en 1393.'),sources:[bnfMarguerite,uliegeRethel]},
   'person:JUAN1BORG:government:Nevers:1384:1404:Conde': related(sigillaJeanNevers),
-  'person:JUAN1BORG:government:Flandes:1404:1419:Conde': related(sigillaJeanNevers,'Margarita III retuvo sus derechos hasta 1405; los títulos se solapan.'),
-  'person:JUAN1BORG:government:Artois:1404:1419:Conde': related(sigillaJeanNevers,'Margarita III retuvo sus derechos hasta 1405; los títulos se solapan.'),
-  'person:JUAN1BORG:government:Condado de Borgoña:1404:1419:Conde': related(sigillaJeanNevers,'Margarita III retuvo sus derechos hasta 1405; los títulos se solapan.'),
+  'person:JUAN1BORG:government:Flandes:1405:1419:Conde': {certainty:'inferred',sources:[sigillaJeanNevers,bnfMarguerite],note:'Sigilla registra el título desde 1404; el ejercicio territorial se inicia en 1405 tras la muerte de Margarita III.',reviewedAt:'2026-10-04',editor:'El Árbol de Europa'},
+  'person:JUAN1BORG:government:Artois:1405:1419:Conde': {certainty:'inferred',sources:[sigillaJeanNevers,bnfMarguerite],note:'El título figura desde 1404, pero Margarita III conservó el condado hasta su muerte en 1405.',reviewedAt:'2026-10-04',editor:'El Árbol de Europa'},
+  'person:JUAN1BORG:government:Condado de Borgoña:1405:1419:Conde': {certainty:'inferred',sources:[sigillaJeanNevers,bnfMarguerite],note:'El título figura desde 1404, pero Margarita III conservó el condado hasta su muerte en 1405.',reviewedAt:'2026-10-04',editor:'El Árbol de Europa'},
   'person:ANTONBRAB:government:Rethel:1393:1406:Conde': related(uliegeRethel),
   'person:PHIL2NEVERS:government:Nevers:1404:1415:Conde': related(sigillaPhilippeNevers),
   'person:PHIL2NEVERS:government:Rethel:1406:1415:Conde': related(sigillaPhilippeNevers),
@@ -328,6 +331,7 @@ export const CLAIM_REVIEWS = Object.freeze({
 });
 
 export const EDITORIAL_HISTORY = Object.freeze([
+  {id:'v48-bavaria-palatinate-rhineland',scope:'all',date:'2026-10-04',editor:'El Árbol de Europa',change:'Baviera deja de colorear Franconia y Suabia; las ramas de 1392 se representan con núcleos prudentes. El Palatinado electoral se separa de Pfalz-Neuburg y se completa su sucesión. Jülich, Berg y Cléveris adquieren geometría diferenciada; Mark y Ravensberg quedan sin polígono propio.',reason:'La misma región podía atribuirse a gobernantes incompatibles o a un título distinto. Los límites del SVG no permiten convertir Mark en Sauerland ni Ravensberg en Lippe.'},
   {id:'v47-tyrol-continuity',scope:'all',date:'2026-10-04',editor:'El Árbol de Europa',change:'Se registra la administración colectiva tras 1595, el gobierno delegado de Maximiliano III y Leopoldo V, la regencia de Claudia de Médici y la reunión bajo Leopoldo I en 1665.',reason:'La sucesión anterior dejaba Tirol sin responsables identificados durante buena parte de 1595–1665 y confundía autoridad familiar, gobierno delegado y titularidad.'},
   {id:'v46-austrian-lands',scope:'all',date:'2026-10-03',editor:'El Árbol de Europa',change:'El mapa separa Austria danubiana, Austria Interior y Tirol; se documentan las transferencias de 1521–1522, la partición de 1564 y la reunión parcial de 1619.',reason:'El polígono anterior de «Austria» mezclaba el archiducado con Estiria, Carintia, Carniola, Tirol y Salzburgo sin atender a sus gobiernos.'},
   {id:'v43-burgundy-dated-fiefs',scope:'all',date:'2026-09-30',editor:'El Árbol de Europa',change:'El mapa del ducado se limita a Dijon y Autun; el Franco Condado, Artois y los demás feudos se incorporan solo desde los gobiernos de cada persona. Se añaden Juan III de Namur y la rama de Nevers/Rethel.',reason:'La figura anterior sumaba condados futuros, territorios de Lorena y Lieja, y áreas ajenas a la herencia como si el ducado los incluyera desde 1363.',changeEn:'The duchy is limited to Dijon and Autun; each other fief now enters the map only under its dated ruler. John III of Namur and the Nevers/Rethel branch were added.',reasonEn:'The previous shape combined later counties and unrelated lands as if all belonged to the duchy from 1363.'},
