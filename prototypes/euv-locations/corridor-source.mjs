@@ -19,6 +19,8 @@ const corridors = {
   Centroeuropa: [
     'Austria', 'Austria Interior', 'Tirol', 'Baviera',
     'Palatinado', 'Bohemia', 'Hungría',
+    'Principado episcopal de Brixen', 'Principado episcopal de Trento',
+    'Arzobispado principesco de Salzburgo',
   ],
   'Polonia–Lituania': [
     'Corona de Polonia', 'Ducado de Mazovia', 'Prusia Real',
@@ -49,6 +51,11 @@ const LITHUANIA_TRANSFER_1569 = [
   'Chornobyl', 'Ovruch', 'Olevsk',
 ];
 const specialSeries = {
+  // Only independently sourced locations are colored. The broader, often
+  // overlapping ecclesiastical jurisdictions remain open for later audit.
+  'Principado episcopal de Brixen': () => [],
+  'Principado episcopal de Trento': () => [],
+  'Arzobispado principesco de Salzburgo': () => [],
   'Corona de Polonia': year => [
     ...POLAND_CORE,
     ...(year >= 1462 ? ['Rawa'] : []),
@@ -115,6 +122,9 @@ const notes = {
   Palatinado: 'Palatinado electoral, no todas las ramas Wittelsbach. La Alta Palatinado se transfiere a Baviera en 1628.',
   Bohemia: 'Tierras de la Corona de Bohemia: incluye Moravia y partes de Silesia, además del reino estricto.',
   Hungría: 'Corona compuesta de San Esteban antes de Mohács: incluye Croacia y Transilvania. Desde 1526 la partición queda sin colorear hasta modelar cada sucesor.',
+  'Principado episcopal de Brixen': 'Solo los núcleos Brixen y Bruneck están identificados; el dominio temporal completo del obispo tenía jurisdicciones superpuestas y aún no está dibujado.',
+  'Principado episcopal de Trento': 'Solo Trento y Cavalese/Fiemme están identificados. La autonomía de Fiemme dentro del principado y sus límites requieren una capa más fina.',
+  'Arzobispado principesco de Salzburgo': 'Solo núcleos comprobados, incluido el enclave de Mühldorf; no equivale a toda la diócesis ni a una frontera cerrada del Estado eclesiástico.',
   'Corona de Polonia': 'Corona, no todos los dominios de los Jagellón. Mazovia se incorpora por etapas; los voivodatos transferidos desde Lituania se muestran desde 1569. Moldavia y Pomerania occidental no se absorben por vasallaje o proximidad.',
   'Ducado de Mazovia': 'Ducado vasallo pero políticamente distinto. Rawa sale en 1462, Płock en 1495 y el núcleo restante en 1526.',
   'Prusia Real': 'Provincia de la Corona desde 1466, distinta de Prusia ducal. Warmia conserva su condición eclesiástica dentro de esta agrupación cartográfica.',
@@ -132,6 +142,9 @@ const territories = Object.entries(corridors).flatMap(([corridor, names]) => nam
     }
   }
   const colors = {
+    'Principado episcopal de Brixen': '#96814e',
+    'Principado episcopal de Trento': '#907050',
+    'Arzobispado principesco de Salzburgo': '#8a6948',
     'Corona de Polonia': REINO_COLOR.Polonia, 'Ducado de Mazovia': '#b7789d',
     'Prusia Real': '#ae4e9b', 'Prusia de la Orden': '#495672',
     'Prusia ducal': REINO_COLOR.Prusia, 'Gran Ducado de Lituania': REINO_COLOR.Lituania,

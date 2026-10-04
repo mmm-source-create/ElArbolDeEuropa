@@ -16,6 +16,15 @@ puerto, usa ese número). Los mapas se muestran con el mismo encuadre;
 puedes buscar un ID, pulsar una zona, arrastrar y ampliar. El mapa nuevo se
 carga solo al visitar el laboratorio. No entra en el flujo habitual del Atlas.
 
+También hay un **ensayo integrado en el Atlas**, sin cambiar el mapa normal:
+`http://localhost:5173/es/?atlas=1&vista=mapa&mapa=locations-lab`.
+Selecciona una persona y fija un año. El mapa conserva la búsqueda, la
+biografía, el control temporal y el desplazamiento del Atlas. Los colores
+proceden de las jurisdicciones ya trasladadas y, para los cinco titulares de
+la sucesión borgoñona, de esa capa fechada; Cuijk y otros señoríos locales se
+muestran solo en este ensayo. Un lugar gris no demuestra que careciera de
+gobierno. La ruta normal del Atlas sigue cargando el SVG de Provinces.
+
 El [ensayo de los dominios de Carlos V](carlos-v.html) añade un selector de
 1506–1555 sobre el mapa nuevo. Permite comprobar qué cambia al adquirir las
 coronas hispánicas, los territorios austríacos, Milán y los Países Bajos
@@ -30,7 +39,7 @@ lista lateral conserva sus condados, ducados y señoríos como jurisdicciones
 distintas.
 
 El [visor de corredores territoriales](territorial-corridors.html)
-traslada 39 jurisdicciones de Iberia, Italia, Centroeuropa y Polonia–Lituania con versiones anuales dentro de 1400–1650. Cada una
+traslada 42 jurisdicciones de Iberia, Italia, Centroeuropa y Polonia–Lituania con versiones anuales dentro de 1400–1650. Cada una
 mantiene su propio color y alcance aunque comparta soberano con otra. El
 visor permite seleccionar año, territorio e ID, consultar la corrección
 documentada y centrar el mapa en la localidad buscada. Es una capa de
@@ -271,6 +280,33 @@ de la guerra de los Trece Años. Por eso se muestra solo el núcleo lituano
 y la zona de las transferencias estudiadas; el gris no significa tierra
 sin gobierno. El corredor termina en **1569**: de 1570 en adelante no
 se proyecta una frontera inmutable sobre guerras posteriores.
+
+### Sexta entrega: principados eclesiásticos y ensayo integrado
+
+Los núcleos de **Brixen** y **Bruneck**, antes excluidos prudentemente del
+Tirol secular, se muestran bajo un principado episcopal propio. **Trento** y
+**Cavalese/Fiemme** forman una segunda capa; Fiemme conservaba autogobierno
+local bajo la autoridad superior del príncipe-obispo. **Salzburgo**, **Hallein**,
+**Laufen** y el enclave de **Mühldorf** forman la tercera. Las 8 locations
+identificadas son puntos de partida, no fronteras completas de los tres
+estados eclesiásticos. La fuente para Brixen y Bruneck es el [Archivo del
+Land Tirol](https://www.tirol.gv.at/fileadmin/themen/kunst-kultur/landesarchiv/downloads/Grundsteueranschlag1508-1509.pdf); para Fiemme, la [Provincia autónoma de
+Trento](https://www.ufficiostampa.provincia.tn.it/content/download/18455/374120/file/Palazzo_Magnifica_Comunit%C3%A0_di_Fiemme.pdf); y para Salzburgo, el [Historisches Lexikon Bayerns](https://www.historisches-lexikon-bayerns.de/Lexikon/Artikel_45331).
+
+La vista integrada del Atlas carga el recorte solo al recibir
+`mapa=locations-lab`. El resto de la interfaz sigue funcionando; el mapa
+normal, las preferencias guardadas y las exportaciones no se sustituyen.
+El ensayo usa únicamente un año fijado por el visitante para no superponer
+gobiernos vitalicios. Se comprobó en el navegador Carlos V en 1548: Madrid y
+Milán adoptan el color hispánico, Utrecht y Cuijk el borgoñón, mientras
+Londres y Dijon quedan grises. Pulsar Madrid abre una ficha que indica la
+jurisdicción trasladada y la precisión provisional de la geometría.
+
+Sigue pendiente **Hungría desde 1526**: la capa medieval se interrumpe en
+Mohács y no se convierte automáticamente en «Hungría real», Transilvania o
+zona otomana. Esos tres sucesores requieren límites fechados y fuentes más
+finas antes de colorearlos. También faltan pruebas comparativas de memoria y
+fluidez en móvil antes de plantear la sustitución general del SVG.
 
 ### Dudas de esta entrega
 

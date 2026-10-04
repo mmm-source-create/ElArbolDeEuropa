@@ -17,7 +17,7 @@ function ids(name, year) {
 }
 
 test('territorial crosswalk uses only SVG IDs and never assigns one ID twice within a corridor', () => {
-  assert.equal(data.territories.length, 39);
+  assert.equal(data.territories.length, 42);
   for (let year = data.from; year <= data.through; year++) {
     for (const corridor of ['Iberia', 'Italia', 'Centroeuropa', 'Polonia–Lituania']) {
       const owner = new Map();
@@ -87,6 +87,11 @@ test('Central European jurisdictions respect dated transfers and separate imperi
   }
   assert(ids('Palatinado', 1409).has('Zweibrucken'));
   assert(!ids('Palatinado', 1410).has('Zweibrucken'));
+  assert(ids('Principado episcopal de Brixen', 1500).has('Brixen'));
+  assert(ids('Principado episcopal de Brixen', 1500).has('Bruneck'));
+  assert(ids('Principado episcopal de Trento', 1500).has('Cavalese'));
+  assert(ids('Arzobispado principesco de Salzburgo', 1500).has('Muhldorf'));
+  assert(ids('Arzobispado principesco de Salzburgo', 1500).has('Laufen'));
 });
 
 test('Hungarian-Croatian aggregate stops at Mohács and does not reclaim Venetian Dalmatia', () => {

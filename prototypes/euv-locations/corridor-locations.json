@@ -6974,6 +6974,62 @@
       ]
     },
     {
+      "corridor": "Centroeuropa",
+      "name": "Principado episcopal de Brixen",
+      "color": "#96814e",
+      "active": null,
+      "note": "Solo los núcleos Brixen y Bruneck están identificados; el dominio temporal completo del obispo tenía jurisdicciones superpuestas y aún no está dibujado.",
+      "versions": [
+        {
+          "from": 1400,
+          "oldIds": [],
+          "ids": [
+            "Brixen",
+            "Bruneck"
+          ],
+          "borderline": []
+        }
+      ]
+    },
+    {
+      "corridor": "Centroeuropa",
+      "name": "Principado episcopal de Trento",
+      "color": "#907050",
+      "active": null,
+      "note": "Solo Trento y Cavalese/Fiemme están identificados. La autonomía de Fiemme dentro del principado y sus límites requieren una capa más fina.",
+      "versions": [
+        {
+          "from": 1400,
+          "oldIds": [],
+          "ids": [
+            "Cavalese",
+            "Trento"
+          ],
+          "borderline": []
+        }
+      ]
+    },
+    {
+      "corridor": "Centroeuropa",
+      "name": "Arzobispado principesco de Salzburgo",
+      "color": "#8a6948",
+      "active": null,
+      "note": "Solo núcleos comprobados, incluido el enclave de Mühldorf; no equivale a toda la diócesis ni a una frontera cerrada del Estado eclesiástico.",
+      "versions": [
+        {
+          "from": 1400,
+          "oldIds": [],
+          "ids": [
+            "Hallein",
+            "Laufen",
+            "Muhldorf",
+            "Salzburg"
+          ],
+          "borderline": []
+        }
+      ]
+    },
+    {
       "corridor": "Polonia–Lituania",
       "name": "Corona de Polonia",
       "color": "#da63cc",
@@ -9998,6 +10054,78 @@
       "through": 1569,
       "reason": "Christburg/Dzierzgoń was on the Royal Prussian side of the 1466 border.",
       "source": "https://zpe.gov.pl/a/prezentacja-multimedialna/DbYm1LK96"
+    },
+    {
+      "territory": "Principado episcopal de Brixen",
+      "id": "Brixen",
+      "action": "add",
+      "from": 1400,
+      "through": 1650,
+      "reason": "The Brixen city location represents an identified centre of the distinct prince-bishopric, not a complete diocesan boundary.",
+      "source": "https://www.tirol.gv.at/fileadmin/themen/kunst-kultur/landesarchiv/downloads/Grundsteueranschlag1508-1509.pdf"
+    },
+    {
+      "territory": "Principado episcopal de Brixen",
+      "id": "Bruneck",
+      "action": "add",
+      "from": 1400,
+      "through": 1650,
+      "reason": "Bruneck is listed among the prince-bishopric's cities; only its location is attributed here.",
+      "source": "https://www.tirol.gv.at/fileadmin/themen/kunst-kultur/landesarchiv/downloads/Grundsteueranschlag1508-1509.pdf"
+    },
+    {
+      "territory": "Principado episcopal de Trento",
+      "id": "Trento",
+      "action": "add",
+      "from": 1400,
+      "through": 1650,
+      "reason": "The city was the seat of the prince-bishop; this location does not delimit the entire temporal principality.",
+      "source": "https://www.provincia.tn.it/News/Approfondimenti/Radici-storiche-dell-autonomia"
+    },
+    {
+      "territory": "Principado episcopal de Trento",
+      "id": "Cavalese",
+      "action": "add",
+      "from": 1400,
+      "through": 1650,
+      "reason": "Fiemme retained local self-government under the prince-bishop of Trento; the location is only an approximate geographic token.",
+      "source": "https://www.ufficiostampa.provincia.tn.it/content/download/18455/374120/file/Palazzo_Magnifica_Comunit%C3%A0_di_Fiemme.pdf"
+    },
+    {
+      "territory": "Arzobispado principesco de Salzburgo",
+      "id": "Salzburg",
+      "action": "add",
+      "from": 1400,
+      "through": 1650,
+      "reason": "Salzburg was a city of its distinct prince-archbishopric.",
+      "source": "https://www.historisches-lexikon-bayerns.de/Lexikon/Artikel_45331"
+    },
+    {
+      "territory": "Arzobispado principesco de Salzburgo",
+      "id": "Hallein",
+      "action": "add",
+      "from": 1400,
+      "through": 1650,
+      "reason": "Hallein belonged to the territorial archbishopric, not the Duchy of Bavaria.",
+      "source": "https://www.historisches-lexikon-bayerns.de/Lexikon/Artikel_45331"
+    },
+    {
+      "territory": "Arzobispado principesco de Salzburgo",
+      "id": "Muhldorf",
+      "action": "add",
+      "from": 1400,
+      "through": 1650,
+      "reason": "Mühldorf was a Salzburg enclave; its high-court jurisdiction is recorded from 1442, so this location should not be read as an unchanged bundle of rights.",
+      "source": "https://www.historisches-lexikon-bayerns.de/Lexikon/Artikel_45331"
+    },
+    {
+      "territory": "Arzobispado principesco de Salzburgo",
+      "id": "Laufen",
+      "action": "add",
+      "from": 1400,
+      "through": 1650,
+      "reason": "Laufen was a Salzburg territorial town, distinct from Bavarian control.",
+      "source": "https://www.historisches-lexikon-bayerns.de/Lexikon/Artikel_45331"
     }
   ],
   "audit": {

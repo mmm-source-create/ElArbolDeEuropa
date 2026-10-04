@@ -1261,6 +1261,45 @@
       ]
     },
     {
+      "corridor": "Centroeuropa",
+      "name": "Principado episcopal de Brixen",
+      "color": "#96814e",
+      "active": null,
+      "note": "Solo los núcleos Brixen y Bruneck están identificados; el dominio temporal completo del obispo tenía jurisdicciones superpuestas y aún no está dibujado.",
+      "versions": [
+        {
+          "from": 1400,
+          "oldIds": []
+        }
+      ]
+    },
+    {
+      "corridor": "Centroeuropa",
+      "name": "Principado episcopal de Trento",
+      "color": "#907050",
+      "active": null,
+      "note": "Solo Trento y Cavalese/Fiemme están identificados. La autonomía de Fiemme dentro del principado y sus límites requieren una capa más fina.",
+      "versions": [
+        {
+          "from": 1400,
+          "oldIds": []
+        }
+      ]
+    },
+    {
+      "corridor": "Centroeuropa",
+      "name": "Arzobispado principesco de Salzburgo",
+      "color": "#8a6948",
+      "active": null,
+      "note": "Solo núcleos comprobados, incluido el enclave de Mühldorf; no equivale a toda la diócesis ni a una frontera cerrada del Estado eclesiástico.",
+      "versions": [
+        {
+          "from": 1400,
+          "oldIds": []
+        }
+      ]
+    },
+    {
       "corridor": "Polonia–Lituania",
       "name": "Corona de Polonia",
       "color": "#da63cc",
