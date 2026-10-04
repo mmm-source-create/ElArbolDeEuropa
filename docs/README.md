@@ -16,6 +16,7 @@ Los informes describen el estado validado de cada entrega. Sus cifras y listas d
 
 | Versión | Contenido |
 | --- | --- |
+| [4.8](V4.8.md) | Particiones bávaras, Palatinado electoral y herencia renana; límites explícitos de Flandes/Artois |
 | [4.7](V4.7.md) | Continuidad de Tirol, inspector territorial y auditoría de fuentes del mapa |
 | [4.6](V4.6.md) | Encuadre europeo, biografía compacta y separación entre Austria e Imperio |
 | [4.5](V4.5.md) | Biografía continua, dogos venecianos, Pignatelli y auditoría cartográfica |
@@ -55,7 +56,7 @@ Las publicaciones se incorporan una sola vez a la bibliografía general. Sus aso
 
 [Seguimiento de next updates](NEXT_UPDATES.md) · [V2.21](V2.21.md)
 
-Las dos ideas reservadas para la próxima entrega están en [propuestas para V4.8](V4.8_PROPUESTAS.md); el alcance permanece abierto.
+La [cartografía comparada y subregional](V4.8_PROPUESTAS.md) sigue como trabajo pendiente después de la revisión de corredores de V4.8.
 
 ## V3
 

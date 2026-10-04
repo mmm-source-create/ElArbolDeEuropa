@@ -1,4 +1,6 @@
 export const TERRITORIOS = Object.freeze({
+  "Ravensberg": {"clase":"condado","naturaleza":"entidad","componentes":[],"nota":"Condado westfaliano de Bielefeld y Vlotho. Lippe es un territorio distinto y el SVG no permite aislar Ravensberg."},
+  "Palatinado-Neoburgo": {"clase":"ducado","naturaleza":"entidad","componentes":[],"nota":"Principado de Pfalz-Neuburg creado tras la guerra de sucesión de Landshut (1505). No equivale al Palatinado electoral; el SVG no lo delimita con precisión."},
   "Nevers": {"clase":"condado","naturaleza":"entidad","componentes":[],"nota":"Condado del Nivernais. Tras la herencia de Margarita III pasó a la rama menor de los Valois de Borgoña; no era parte del ducado de Dijon."},
   "Rethel": {"clase":"condado","naturaleza":"entidad","componentes":[],"nota":"Condado del Rethelois. La línea de Antonio y Felipe de Nevers lo gobernó por separado de los duques principales."},
   "Auxerre": {"clase":"condado","naturaleza":"entidad","componentes":[],"nota":"Condado distinto del ducado de Borgoña; fue cedido a Felipe el Bueno en el tratado de Arrás de 1435 y retornó al control francés tras 1477."},
