@@ -17,9 +17,9 @@ function ids(name, year) {
 }
 
 test('territorial crosswalk uses only SVG IDs and never assigns one ID twice within a corridor', () => {
-  assert.equal(data.territories.length, 42);
+  assert.equal(data.territories.length, 77);
   for (let year = data.from; year <= data.through; year++) {
-    for (const corridor of ['Iberia', 'Italia', 'Centroeuropa', 'Polonia–Lituania']) {
+    for (const corridor of ['Iberia', 'Italia', 'Centroeuropa', 'Polonia–Lituania', 'Francia e islas británicas']) {
       const owner = new Map();
       for (const territory of data.territories.filter(item => item.corridor === corridor)) {
         for (const id of ids(territory.name, year)) {
@@ -30,6 +30,96 @@ test('territorial crosswalk uses only SVG IDs and never assigns one ID twice wit
       }
     }
   }
+});
+
+test('Burgundian jurisdictions stay distinct while their ownership changes', () => {
+  assert(ids('Borgoña', 1476).has('Dijon'));
+  assert(!ids('Borgoña', 1477).has('Dijon'));
+  assert(ids('Francia', 1477).has('Dijon'));
+  assert(ids('Condado de Borgoña', 1476).has('Dole'));
+  assert(!ids('Condado de Borgoña', 1477).has('Dole'));
+  assert(ids('Condado de Borgoña', 1493).has('Dole'));
+  assert(!ids('Utrecht', 1527).has('Utrecht'));
+  assert(ids('Utrecht', 1528).has('Utrecht'));
+  assert(ids('Señorío de Cuijk', 1509).has('Cuijk'));
+  assert(!ids('Brabante', 1509).has('Cuijk'));
+  for (const year of [1419, 1476, 1477, 1493, 1548]) {
+    const owner = new Map();
+    for (const territory of data.territories.filter(item => item.corridor === 'Borgoña e Imperio'
+      && item.name !== 'Marco jurídico del Sacro Imperio')) {
+      for (const id of ids(territory.name, year)) {
+        assert(pathIds.has(id));
+        assert(!owner.has(id), `${id} overlaps ${owner.get(id)} and ${territory.name} in ${year}`);
+        owner.set(id, territory.name);
+      }
+    }
+  }
+});
+
+test('imperial legal reference changes at Westphalia without becoming an emperor possession', () => {
+  const frame = data.territories.find(item => item.name === 'Marco jurídico del Sacro Imperio');
+  assert(frame?.note.includes('no un Estado unificado'));
+  assert.equal(ids(frame.name, 1511).size, 0);
+  for (const id of ['Aachen', 'Vienna', 'Prague', 'Milano', 'Brussels']) {
+    assert(ids(frame.name, 1512).has(id));
+    assert(pathIds.has(id));
+  }
+  for (const id of ['Dijon', 'Calais', 'London', 'Venice', 'Bordeaux']) {
+    assert(!ids(frame.name, 1512).has(id));
+  }
+  assert(ids(frame.name, 1647).has('Amsterdam'));
+  assert(!ids(frame.name, 1648).has('Amsterdam'));
+  assert(ids(frame.name, 1647).has('Bern'));
+  assert(!ids(frame.name, 1648).has('Bern'));
+  assert(ids(frame.name, 1648).has('Brussels'));
+});
+
+test('western corridor respects French incorporations and English continental withdrawals', () => {
+  assert.equal(ids('Francia', 1452).size, 0, 'the Hundred Years War frontier remains unaudited');
+  assert(ids('Bretaña', 1531).has('Rennes'));
+  assert(!ids('Francia', 1531).has('Rennes'));
+  assert(ids('Francia', 1532).has('Rennes'));
+  assert.equal(ids('Bretaña', 1532).size, 0);
+  assert(ids('Provenza', 1485).has('Aix_En_Provence'));
+  assert(ids('Francia', 1486).has('Aix_En_Provence'));
+  assert(!ids('Provenza', 1486).has('Aix_En_Provence'));
+  for (const name of ['Francia', 'Provenza']) assert(!ids(name, 1500).has('Barcelonnette'));
+  assert(ids('Saboya', 1500).has('Barcelonnette'));
+  assert(ids('Bailiazgo de Jersey', 1460).has('Jersey'));
+  assert(ids('Francia', 1461).has('Jersey'));
+  assert(!ids('Bailiazgo de Jersey', 1461).has('Jersey'));
+  assert(ids('Bailiazgo de Jersey', 1468).has('Jersey'));
+  assert(!ids('Francia', 1468).has('Jersey'));
+  assert(ids('Plaza inglesa de Calais', 1557).has('Calais'));
+  assert(!ids('Francia', 1557).has('Calais'));
+  assert(ids('Francia', 1558).has('Calais'));
+  assert.equal(ids('Plaza inglesa de Calais', 1558).size, 0);
+  assert(ids('Plazas inglesas de Guyena', 1450).has('Bordeaux'));
+  assert(!ids('Plazas inglesas de Guyena', 1451).has('Bordeaux'));
+  assert(ids('Plazas inglesas de Guyena', 1452).has('Bordeaux'));
+  assert.equal(ids('Plazas inglesas de Guyena', 1453).size, 0);
+});
+
+test('British and Irish locations do not follow a shared monarch into the wrong kingdom', () => {
+  assert(ids('Escocia', 1603).has('Edinburgh'));
+  assert(!ids('Inglaterra', 1603).has('Edinburgh'));
+  assert(!ids('Escocia', 1400).has('Orkney'));
+  assert(!ids('Escocia', 1468).has('Shetland'));
+  for (const id of ['Orkney', 'Shetland']) assert(ids('Escocia', 1469).has(id));
+  assert(!ids('Escocia', 1500).has('Torshavn'));
+  assert(!ids('Escocia', 1500).has('Mann'));
+  assert(ids('Señorío de Man', 1406).has('Mann'));
+  assert(ids('Inglaterra', 1460).has('Berwick'));
+  assert(ids('Escocia', 1461).has('Berwick'));
+  assert(!ids('Inglaterra', 1481).has('Berwick'));
+  assert(ids('Inglaterra', 1482).has('Berwick'));
+  assert(!ids('Escocia', 1482).has('Berwick'));
+  const pale = ids('Núcleo inglés en Irlanda', 1500);
+  for (const id of ['Dublin', 'Trim', 'Drogheda', 'Dundalk']) assert(pale.has(id));
+  for (const id of ['Galway', 'Longford', 'Wicklow_Mountains']) assert(!pale.has(id));
+  assert.notEqual(data.territories.find(t => t.name === 'Núcleo inglés en Irlanda').color,
+    data.territories.find(t => t.name === 'Inglaterra').color,
+    'the Irish jurisdiction retains its own color under the same monarch');
 });
 
 test('Polish-Lithuanian corridor separates incorporation, fief and the 1569 union', () => {

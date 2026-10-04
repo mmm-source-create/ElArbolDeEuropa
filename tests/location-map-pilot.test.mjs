@@ -2,7 +2,7 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import path from 'node:path';
 import test from 'node:test';
-import { pilotBurgundianGovernmentsFor, pilotLocationContext, pilotLocationsFor } from '../src/data/locationMapPilot.js';
+import { pilotBurgundianGovernmentsFor, pilotImperialFrameFor, pilotLocationContext, pilotLocationsFor } from '../src/data/locationMapPilot.js';
 
 const data = JSON.parse(fs.readFileSync(path.resolve(import.meta.dirname,
   '../prototypes/euv-locations/corridor-locations.json'), 'utf8'));
@@ -21,6 +21,17 @@ test('the Atlas trial paints only audited dated jurisdictions, not every possess
   assert.deepEqual(pilotLocationsFor(data, 'Polonia', 1570), []);
 });
 
+test('western Atlas aliases preserve the separate kingdoms and dated French annexations', () => {
+  assert(pilotLocationsFor(data, 'Inglaterra', 1500).includes('Calais'));
+  assert(!pilotLocationsFor(data, 'Inglaterra', 1558).includes('Calais'));
+  assert(pilotLocationsFor(data, 'Francia', 1532).includes('Rennes'));
+  assert(!pilotLocationsFor(data, 'Francia', 1531).includes('Rennes'));
+  assert(pilotLocationsFor(data, 'Escocia', 1603).includes('Edinburgh'));
+  assert(!pilotLocationsFor(data, 'Inglaterra', 1603).includes('Edinburgh'));
+  assert(pilotLocationsFor(data, 'Irlanda', 1500).includes('Dublin'));
+  assert(!pilotLocationsFor(data, 'Irlanda', 1500).includes('Galway'));
+});
+
 test('an inspected location reports its distinct political context and sourced correction', () => {
   const [malbork] = pilotLocationContext(data, 'Malbork', 1500);
   assert.equal(malbork.name, 'Prusia Real');
@@ -37,4 +48,12 @@ test('the Atlas trial reuses the dated Burgundian succession without painting th
   assert(pilotLocationContext(data, 'Cuijk', 1548, 'CARLOS5')
     .some(item => item.name === 'Señorío de Cuijk'));
   assert(!pilotBurgundianGovernmentsFor(data, 'CARLOS5', 1500).length);
+});
+
+test('the emperor receives a legal backdrop without claiming that he governs each estate', () => {
+  assert(pilotImperialFrameFor(data, 1548).includes('Aachen'));
+  assert(pilotImperialFrameFor(data, 1548).includes('Brussels'));
+  assert(!pilotImperialFrameFor(data, 1548).includes('Dijon'));
+  assert.deepEqual(pilotLocationsFor(data, 'Sacro Imperio', 1548), []);
+  assert(pilotLocationContext(data, 'Utrecht', 1548).some(item => item.name === 'Utrecht'));
 });

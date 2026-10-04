@@ -114,8 +114,21 @@ function VenetianOfficeSequence({ persona, onSelect }) {
 }
 
 export default function ExplorerView({ vm }) {
-  const locationsLabMode = typeof window !== 'undefined'
-    && new URLSearchParams(window.location.search).get('mapa') === 'locations-lab';
+  const [locationsLabMode, setLocationsLabMode] = React.useState(() => typeof window !== 'undefined'
+    && new URLSearchParams(window.location.search).get('mapa') === 'locations-lab');
+  React.useEffect(() => {
+    const syncMapMode = () => setLocationsLabMode(new URLSearchParams(window.location.search).get('mapa') === 'locations-lab');
+    window.addEventListener('popstate', syncMapMode);
+    return () => window.removeEventListener('popstate', syncMapMode);
+  }, []);
+  const toggleLocationsLab = () => {
+    const next = !locationsLabMode;
+    const url = new URL(window.location.href);
+    if (next) url.searchParams.set('mapa', 'locations-lab');
+    else url.searchParams.delete('mapa');
+    window.history.replaceState(window.history.state, '', `${url.pathname}${url.search}${url.hash}`);
+    setLocationsLabMode(next);
+  };
   const [searchOpen,setSearchOpen] = React.useState(false);
   const [mobileToolsOpen,setMobileToolsOpen] = React.useState(false);
   const [guideOpen,setGuideOpen] = React.useState(false);
@@ -892,6 +905,7 @@ export default function ExplorerView({ vm }) {
             <section className="workspace-stage workspace-map-stage" aria-label="Mapa de territorios">
               <MapaEuropa
                 labMode={locationsLabMode}
+                onToggleLabMode={toggleLocationsLab}
                 initialViewport={initialMapViewport}
                 onViewportChange={recordMapViewport}
                 seleccion={seleccion}

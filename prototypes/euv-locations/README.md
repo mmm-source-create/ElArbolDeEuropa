@@ -39,7 +39,7 @@ lista lateral conserva sus condados, ducados y señoríos como jurisdicciones
 distintas.
 
 El [visor de corredores territoriales](territorial-corridors.html)
-traslada 42 jurisdicciones de Iberia, Italia, Centroeuropa y Polonia–Lituania con versiones anuales dentro de 1400–1650. Cada una
+traslada 52 jurisdicciones de Iberia, Italia, Centroeuropa, Polonia–Lituania, Francia e islas británicas con versiones anuales dentro de 1400–1650. Cada una
 mantiene su propio color y alcance aunque comparta soberano con otra. El
 visor permite seleccionar año, territorio e ID, consultar la corrección
 documentada y centrar el mapa en la localidad buscada. Es una capa de
@@ -307,6 +307,74 @@ Mohács y no se convierte automáticamente en «Hungría real», Transilvania o
 zona otomana. Esos tres sucesores requieren límites fechados y fuentes más
 finas antes de colorearlos. También faltan pruebas comparativas de memoria y
 fluidez en móvil antes de plantear la sustitución general del SVG.
+
+### Séptima entrega: Francia e islas británicas
+
+Diez jurisdicciones occidentales elevan el visor a **52**. No se combinan por
+monarca: Inglaterra y Escocia mantienen colores y límites separados tras la
+unión personal de 1603; el señorío de Man y el bailiazgo de Jersey conservan
+su identidad. El mapa se inspeccionó visualmente en Francia e Inglaterra en
+1500, y las transferencias fechadas tienen pruebas de IDs y exclusividad.
+
+| Secuencia | Tratamiento en el laboratorio | Base documental |
+|---|---|---|
+| Francia | Las campañas de la Guerra de los Cien Años anteriores a 1453 permanecen grises hasta trazar ocupaciones locales. El ducado de Borgoña entra en el agregado francés en 1477, Provenza en 1486 y Bretaña en 1532. Béarn se incorpora desde 1620. Los feudos dentro de la monarquía todavía requieren una separación más fina. | [Archivos Nacionales británicos: tierras francesas de los reyes ingleses](https://www.nationalarchives.gov.uk/help-with-your-research/research-guides/french-lands-english-kings/), [Bibliothèque nationale de France: unión de Provenza](https://ccfr.bnf.fr/portailccfr/ark:/16871/004D22012314), [unión de Bretaña](https://ccfr.bnf.fr/portailccfr/ark:/16871/004D36F12606) y [Béarn](https://ccfr.bnf.fr/portailccfr/ark:/16871/004D36E13365). |
+| Costa y enclaves | Calais se mantiene como plaza inglesa hasta 1557 y pasa a Francia desde 1558. Burdeos se muestra como plaza inglesa hasta 1450 y de nuevo en 1452; Bayonne solo hasta 1450. Jersey permanece separado de Francia y de Inglaterra, excepto su ocupación francesa de 1461–1467. | [Archivos Nacionales británicos](https://www.nationalarchives.gov.uk/help-with-your-research/research-guides/french-lands-english-kings/), [Gobierno de Jersey](https://www.gov.je/sitecollectiondocuments/life%20events/id%20citizenship%20test%20-%20jersey%20supplement%20-%2020190304.pdf). |
+| Provenza y Saboya | El polígono antiguo de «Provenza» apuntaba erróneamente a Avignon y Nice. El nuevo núcleo utiliza Aix, Draguignan y Digne; Barcelonnette se atribuye a Saboya, que la recibió con el interior de Nice en 1388. | [Bibliothèque nationale de France: dedición de 1388](https://catalogue.bnf.fr/ark:/12148/cb12224467j). |
+| Reinos británicos | Orkney y Shetland entran en Escocia desde 1469; Berwick es inglés hasta 1460, escocés en 1461–1481 e inglés desde 1482. Tórshavn no se muestra como Escocia. Man queda como señorío propio desde 1406. Gales está dentro del agregado inglés heredado, una simplificación que se desglosará. | [Historic Environment Scotland: Orkney](https://www.historicenvironment.scot/visit/all/maeshowe-chambered-cairn/history-and-stories/) y [Shetland](https://www.historicenvironment.scot/visit/all/jarlshof-prehistoric-and-norse-settlement/history-and-stories/), [Historic England: Berwick](https://historicengland.org.uk/listing/the-list/list-entry/1015520), [Manx National Heritage](https://manxnationalheritage.im/news/medieval-ring-declared-treasure/) y [Gobierno de las Islas Feroe](https://www.faroeislands.fo/the-big-picture/history-of-the-faroe-islands/historical-timeline). |
+| Irlanda | Nueve locations señalan únicamente un núcleo urbano inglés en Dublin, Meath, Kildare y Louth. No forman una frontera continua de la *Pale*, ni representan el control inglés de toda la isla o la expansión Tudor. | [Investigación cartográfica irlandesa publicada por el Gobierno de Irlanda](https://assets.ireland.ie/documents/GIDC-SAIS_Vol_5_2_2_web_002.pdf), [archivo de Louth](https://louthcoco.ie/en/services/heritage/what_is_heritage/cultural/county_and_boroughs/). |
+
+**Pendiente:** reconstruir la Francia feudal por gobiernos y ocupaciones
+locales; separar Gales del agregado inglés antes de las leyes de unión;
+fechar Noruega/Dinamarca, la expansión inglesa en Irlanda y las guerras del
+siglo XVII. Un ID coincidente o un solapamiento del 55 % no prueban por sí
+solos soberanía histórica. El laboratorio sigue siendo opcional y no
+sustituye todavía el mapa habitual del Atlas.
+
+### Octava entrega: jurisdicciones borgoñonas y marco imperial
+
+El visor territorial integra las **24 jurisdicciones** de la sucesión
+borgoñona ya auditada y las deja seleccionar por separado. Al cambiar de año
+se observan el ducado francés hasta 1476, la pérdida o disputa de algunos
+territorios después de 1477, las restituciones de 1493 y las incorporaciones
+neerlandesas del reinado de Carlos V. El **ducado de Borgoña** no se convierte
+en el **Condado de Borgoña** por compartir nombre; tampoco se convierte la
+herencia de los Países Bajos en una provincia única del Imperio. El ensayo
+termina en **1555**: la etapa de Felipe II, la revuelta y la división de los
+Países Bajos exigen una secuencia propia antes de colorearlas.
+
+El **marco jurídico del Sacro Imperio** es una capa de referencia adicional,
+con **909 locations candidatas en 1512** y **807 en 1648**. Aparece en gris
+medio detrás de los gobiernos efectivos al seleccionar un emperador en el
+Atlas. No afirma que esas tierras fueran patrimonio suyo ni que cada una
+perteneciese a un círculo imperial: Bohemia, Italia imperial y Suiza ilustran
+por qué esas categorías deben permanecer distintas. Los Países Bajos del
+norte y Suiza salen de este marco de referencia desde la Paz de Westfalia;
+los meridionales y el Franco Condado no se borran con ellos. El solapamiento
+de 55 % con provincias anteriores sigue siendo **candidato geométrico**, no
+frontera legal documentada location por location. Véanse el [mapa de los
+círculos de 1512](https://germanhistorydocs.org/en/from-the-reformations-to-the-thirty-years-war-1500-1648/ghdi:map-2809),
+los [tratados de Westfalia](https://germanhistorydocs.org/en/from-the-reformations-to-the-thirty-years-war-1500-1648/peace-treaties-of-westphalia-october-14-24-1648)
+y la [revisión del marco imperial anterior](../../docs/CARTOGRAFIA_SACRO_IMPERIO.md).
+
+La separación entre **Corona inglesa** y **reino de Inglaterra** también se
+conserva: Calais y las plazas documentadas de Guyena pueden compartir el
+color del monarca inglés, pero permanecen como jurisdicciones continentales
+identificables. No se infiere de ese color su incorporación institucional
+idéntica a la de los condados ingleses. Los [Archivos Nacionales
+británicos](https://www.nationalarchives.gov.uk/help-with-your-research/research-guides/french-lands-english-kings/)
+describen por separado las tierras francesas administradas por la Corona;
+los [Gascon Rolls](https://discovery.nationalarchives.gov.uk/details/r/C3621)
+documentan la administración del ducado de Aquitania/Guyena.
+
+Se usa la [serie cartográfica de IEG Mainz](https://www.ieg-maps.uni-mainz.de/map1.htm)
+para contrastar el ámbito imperial, y la [ficha del Rijksmuseum sobre la
+abdicación de Carlos V](https://www.rijksmuseum.nl/en/collection/object/Allegory-on-the-Abdication-of-Emperor-Charles-v-in-Brussels--2cb744f2469fe62413bb6aab920d4e03)
+para comprobar que sus posesiones neerlandesas conservaban ducados, condados
+y señoríos distintos. Las correcciones localizadas de la sucesión siguen
+enumeradas en `burgundian-locations.json` con sus URL de fuente. El
+laboratorio es accesible desde el botón **Probar mapa detallado** en la vista
+Mapa del Atlas; el parámetro `mapa=locations-lab` permite compartirlo.
 
 ### Dudas de esta entrega
 
