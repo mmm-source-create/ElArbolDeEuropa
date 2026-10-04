@@ -8,6 +8,7 @@
       "name": "Castilla",
       "color": "#efe558",
       "active": null,
+      "note": null,
       "versions": [
         {
           "from": 1400,
@@ -191,6 +192,7 @@
       "name": "León",
       "color": "#efe558",
       "active": null,
+      "note": null,
       "versions": [
         {
           "from": 1400,
@@ -221,6 +223,7 @@
       "name": "Navarra",
       "color": "#84a531",
       "active": null,
+      "note": null,
       "versions": [
         {
           "from": 1400,
@@ -235,6 +238,7 @@
       "name": "Granada",
       "color": "#4F7C68",
       "active": null,
+      "note": null,
       "versions": [
         {
           "from": 1400,
@@ -268,6 +272,7 @@
       "name": "Portugal",
       "color": "#298e47",
       "active": null,
+      "note": null,
       "versions": [
         {
           "from": 1400,
@@ -324,6 +329,7 @@
       "name": "Aragón",
       "color": "#ba3737",
       "active": null,
+      "note": null,
       "versions": [
         {
           "from": 1400,
@@ -343,6 +349,7 @@
       "name": "Condado de Barcelona",
       "color": "#ba3737",
       "active": null,
+      "note": null,
       "versions": [
         {
           "from": 1400,
@@ -393,6 +400,7 @@
       "name": "Valencia",
       "color": "#ba3737",
       "active": null,
+      "note": null,
       "versions": [
         {
           "from": 1400,
@@ -410,6 +418,7 @@
       "name": "Mallorca",
       "color": "#a34b43",
       "active": null,
+      "note": null,
       "versions": [
         {
           "from": 1400,
@@ -424,6 +433,7 @@
       "name": "Cerdeña",
       "color": "#ba3737",
       "active": null,
+      "note": null,
       "versions": [
         {
           "from": 1400,
@@ -449,6 +459,7 @@
       "name": "Trinacria",
       "color": "#6A298E",
       "active": null,
+      "note": null,
       "versions": [
         {
           "from": 1400,
@@ -466,6 +477,7 @@
       "name": "Nápoles",
       "color": "#56298E",
       "active": null,
+      "note": null,
       "versions": [
         {
           "from": 1400,
@@ -491,6 +503,7 @@
       "name": "Milán",
       "color": "#1a6684",
       "active": null,
+      "note": null,
       "versions": [
         {
           "from": 1400,
@@ -544,6 +557,7 @@
       "name": "Venecia",
       "color": "#278477",
       "active": null,
+      "note": null,
       "versions": [
         {
           "from": 1400,
@@ -684,6 +698,7 @@
       "name": "Saboya",
       "color": "#596e9b",
       "active": null,
+      "note": null,
       "versions": [
         {
           "from": 1400,
@@ -709,6 +724,7 @@
       "name": "Piamonte",
       "color": "#596e9b",
       "active": null,
+      "note": null,
       "versions": [
         {
           "from": 1400,
@@ -732,6 +748,7 @@
       "name": "Estados Pontificios",
       "color": "#8E3C29",
       "active": null,
+      "note": null,
       "versions": [
         {
           "from": 1400,
@@ -862,6 +879,7 @@
         "reason": "Desde 1569 se muestra el Gran Ducado de Toscana.",
         "source": "https://www.treccani.it/enciclopedia/giovanna-d-austria-granduchessa-di-toscana_(Dizionario-Biografico)/"
       },
+      "note": null,
       "versions": [
         {
           "from": 1400,
@@ -889,6 +907,7 @@
         "reason": "Título granducal concedido a Cosme I en 1569.",
         "source": "https://www.treccani.it/enciclopedia/giovanna-d-austria-granduchessa-di-toscana_(Dizionario-Biografico)/"
       },
+      "note": null,
       "versions": [
         {
           "from": 1400,
@@ -907,6 +926,7 @@
       "name": "Mantua",
       "color": "#735f4c",
       "active": null,
+      "note": null,
       "versions": [
         {
           "from": 1400,
@@ -921,6 +941,7 @@
       "name": "Módena",
       "color": "#7E5E42",
       "active": null,
+      "note": null,
       "versions": [
         {
           "from": 1400,
@@ -940,6 +961,7 @@
         "reason": "El ducado de Ferrara fue devuelto a los Estados Pontificios en 1598.",
         "source": "https://www.treccani.it/enciclopedia/ferrara_(Enciclopedia-Italiana)/"
       },
+      "note": null,
       "versions": [
         {
           "from": 1400,
@@ -958,6 +980,7 @@
         "reason": "El ducado fue integrado en los Estados Pontificios en 1631.",
         "source": "https://www.treccani.it/enciclopedia/stato-pontificio/"
       },
+      "note": null,
       "versions": [
         {
           "from": 1400,
@@ -976,6 +999,7 @@
         "reason": "El ducado separado de Parma y Piacenza se creó en 1545; los gobiernos anteriores requieren sus propias jurisdicciones.",
         "source": "https://www.treccani.it/enciclopedia/parma-e-piacenza-ducato-di_(Dizionario-di-Storia)/"
       },
+      "note": null,
       "versions": [
         {
           "from": 1400,
@@ -991,6 +1015,7 @@
       "name": "Monferrato",
       "color": "#735f4c",
       "active": null,
+      "note": null,
       "versions": [
         {
           "from": 1400,
@@ -1009,11 +1034,228 @@
         "reason": "El marquesado pasó formalmente a Saboya por el tratado de Lyon de 1601; su ocupación desde 1588 requiere otra capa.",
         "source": "https://www.treccani.it/enciclopedia/marchesato-di-saluzzo_(Dizionario-di-Storia)/"
       },
+      "note": null,
       "versions": [
         {
           "from": 1400,
           "oldIds": [
             "Saluzzo"
+          ]
+        }
+      ]
+    },
+    {
+      "corridor": "Centroeuropa",
+      "name": "Austria",
+      "color": "#8E293C",
+      "active": null,
+      "note": "Ducado/archiducado danubiano: no equivale al conjunto de posesiones de la Casa de Austria.",
+      "versions": [
+        {
+          "from": 1400,
+          "oldIds": [
+            "Unter_dem_Manhartsberg",
+            "Ober_dem_Manhartsberg",
+            "Ober_dem_Wienerwald",
+            "Unter_dem_Wienerwald",
+            "Traungau",
+            "Muhlviertel"
+          ]
+        }
+      ]
+    },
+    {
+      "corridor": "Centroeuropa",
+      "name": "Austria Interior",
+      "color": "#A64D5A",
+      "active": null,
+      "note": "Estiria, Carintia, Carniola y litoral habsbúrgico. Pitten y Wiener Neustadt seguían la rama estiria aunque hoy estén en Baja Austria.",
+      "versions": [
+        {
+          "from": 1400,
+          "oldIds": [
+            "Eastern_Styria",
+            "Upper_Styria",
+            "Middle_Styria",
+            "Lower_Styria",
+            "Upper_Carinthia",
+            "Lower_Carinthia",
+            "Upper_Carniola",
+            "Lower_Carniola"
+          ]
+        },
+        {
+          "from": 1500,
+          "oldIds": [
+            "Eastern_Styria",
+            "Upper_Styria",
+            "Middle_Styria",
+            "Lower_Styria",
+            "Upper_Carinthia",
+            "Lower_Carinthia",
+            "Upper_Carniola",
+            "Lower_Carniola",
+            "Gorizia"
+          ]
+        }
+      ]
+    },
+    {
+      "corridor": "Centroeuropa",
+      "name": "Tirol",
+      "color": "#996342",
+      "active": null,
+      "note": "Condado del Tirol. Se excluyen los obispados de Brixen y Trento; Kufstein y Kitzbühel entran en 1504 y Lienz en 1500.",
+      "versions": [
+        {
+          "from": 1400,
+          "oldIds": [
+            "Oberinntal",
+            "Unterinntal",
+            "South_Tirol"
+          ]
+        }
+      ]
+    },
+    {
+      "corridor": "Centroeuropa",
+      "name": "Baviera",
+      "color": "#69c4c4",
+      "active": {
+        "from": 1505,
+        "reason": "Antes de la reunificación de 1505 había ducados bávaros de distintas ramas; esta capa solo muestra el núcleo reunido.",
+        "source": "https://www.historisches-lexikon-bayerns.de/Lexikon/K%C3%B6lner_Schiedsspruch%2C_30._Juli_1505"
+      },
+      "note": "Núcleo reunificado en 1505. Las ciudades imperiales, obispados y Pfalz-Neuburg conservan jurisdicción separada; la Alta Palatinado se incorpora en 1628.",
+      "versions": [
+        {
+          "from": 1400,
+          "oldIds": [
+            "Munchner_Schotterebene",
+            "Donau_Moos",
+            "Gauboden",
+            "Bayerischer_Wald",
+            "Chiemgau",
+            "Alpenvorland"
+          ]
+        },
+        {
+          "from": 1628,
+          "oldIds": [
+            "Munchner_Schotterebene",
+            "Donau_Moos",
+            "Gauboden",
+            "Bayerischer_Wald",
+            "Chiemgau",
+            "Alpenvorland",
+            "Oberpfalzer_Wald"
+          ]
+        }
+      ]
+    },
+    {
+      "corridor": "Centroeuropa",
+      "name": "Palatinado",
+      "color": "#b39364",
+      "active": null,
+      "note": "Palatinado electoral, no todas las ramas Wittelsbach. La Alta Palatinado se transfiere a Baviera en 1628.",
+      "versions": [
+        {
+          "from": 1400,
+          "oldIds": [
+            "Palatinate",
+            "Oberpfalzer_Wald"
+          ]
+        },
+        {
+          "from": 1628,
+          "oldIds": [
+            "Palatinate"
+          ]
+        }
+      ]
+    },
+    {
+      "corridor": "Centroeuropa",
+      "name": "Bohemia",
+      "color": "#6b56a5",
+      "active": null,
+      "note": "Tierras de la Corona de Bohemia: incluye Moravia y partes de Silesia, además del reino estricto.",
+      "versions": [
+        {
+          "from": 1400,
+          "oldIds": [
+            "Boleslavsko",
+            "Litomericko",
+            "Zatecko",
+            "Chebsko",
+            "Plzensko",
+            "Prachensko",
+            "Bechinsko",
+            "Znojemsko",
+            "Brnensko",
+            "Olomoucko",
+            "Hradistsko",
+            "Opavsko",
+            "Hradecko",
+            "Prague",
+            "Chrudimsko"
+          ]
+        }
+      ]
+    },
+    {
+      "corridor": "Centroeuropa",
+      "name": "Hungría",
+      "color": "#db772f",
+      "active": {
+        "through": 1525,
+        "reason": "Después de Mohács (1526), título y control se disputaron; no se debe proyectar el reino medieval completo sobre la Hungría real, Transilvania y el dominio otomano.",
+        "source": "https://www.habsburger.net/en/chapter/ferdinand-i-new-crowns-habsburgs"
+      },
+      "note": "Corona compuesta de San Esteban antes de Mohács: incluye Croacia y Transilvania. Desde 1526 la partición queda sin colorear hasta modelar cada sucesor.",
+      "versions": [
+        {
+          "from": 1400,
+          "oldIds": [
+            "Zagreb",
+            "Torda",
+            "Doboka",
+            "Szekelyfold",
+            "Kiralyfold",
+            "Feher",
+            "Maramaros",
+            "Zemplen",
+            "Szepes",
+            "Trencsen",
+            "Pozsony",
+            "Hont",
+            "Nograd",
+            "Heves",
+            "Buda",
+            "Sopron",
+            "Vas",
+            "Zala",
+            "Somogy",
+            "Baranya",
+            "Fejer",
+            "Csongrad",
+            "Szolnok",
+            "Bihar",
+            "Szatmar",
+            "Szabolcs",
+            "Kraszna",
+            "Pest",
+            "Bacs",
+            "Csanad",
+            "Zarand_Hun",
+            "East_Banat",
+            "West_Banat",
+            "Vukovar_Syrmia",
+            "Bjelovar",
+            "Una_Sana",
+            "Lika",
+            "North_Dalmatia"
           ]
         }
       ]

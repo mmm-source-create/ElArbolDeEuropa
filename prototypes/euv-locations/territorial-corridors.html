@@ -30,15 +30,15 @@
 </head>
 <body>
   <header>
-    <p class="eyebrow">Laboratorio cartográfico · tercera entrega</p>
-    <h1>Iberia e Italia, territorio por territorio</h1>
+    <p class="eyebrow">Laboratorio cartográfico · cuarta entrega</p>
+    <h1>Iberia, Italia y Centroeuropa, territorio por territorio</h1>
     <p>Las versiones territoriales del Atlas se proyectan sobre EU V Locations, conservando separados reinos, ducados, condados y repúblicas. Elige una jurisdicción y un año para examinar su geometría. Este visor no atribuye automáticamente todos los títulos al mismo Estado ni convierte una localización en un límite histórico probado.</p>
     <p><a href="./">Comparar mapas</a> · <a href="./carlos-v.html">Dominios de Carlos V</a> · <a href="./burgundian-succession.html">Sucesión borgoñona</a></p>
   </header>
   <main>
     <div class="controls">
       <label for="corridor">Corredor
-        <select id="corridor"><option>Iberia</option><option>Italia</option></select>
+        <select id="corridor"><option>Iberia</option><option>Italia</option><option>Centroeuropa</option></select>
       </label>
       <label for="territory">Jurisdicción
         <select id="territory"></select>
@@ -68,12 +68,12 @@
     </div>
     <div class="note">
       <h2>Qué se ha trasladado</h2>
-      <p>El visor lee las versiones territoriales fechadas del Atlas y conserva la identidad de cada jurisdicción. Las nuevas locations son candidatas cuando al menos el 55 % de su área cae en la provincia antigua correspondiente; las excepciones verificadas se registran por ID, año y fuente. La base geométrica de MapChart es una aproximación, y el mapa público aún no se reemplaza. <a href="./README.md#tercera-entrega-iberia-e-italia">Método, auditoría y fuentes</a>.</p>
+      <p>El visor lee las versiones territoriales fechadas del Atlas y conserva la identidad de cada jurisdicción. Las nuevas locations son candidatas cuando al menos el 55 % de su área cae en la provincia antigua correspondiente; las excepciones verificadas se registran por ID, año y fuente. La base geométrica de MapChart es una aproximación, y el mapa público aún no se reemplaza. <a href="./README.md#cuarta-entrega-centroeuropa">Método, auditoría y fuentes</a>.</p>
     </div>
   </main>
   <footer>Geometría: <a href="https://www.mapchart.net/eu-v-locations.html">MapChart</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>.</footer>
   <script type="module">
-    const FRAMES={Iberia:{x:518,y:158,w:77,h:66},Italia:{x:575,y:143,w:64,h:68}};
+    const FRAMES={Iberia:{x:518,y:158,w:77,h:66},Italia:{x:575,y:143,w:64,h:68},Centroeuropa:{x:592,y:91,w:134,h:116}};
     const TERRITORY_FRAMES={'Cerdeña':{x:581,y:175,w:25,h:31},'Trinacria':{x:592,y:180,w:34,h:32},'Venecia':{x:588,y:143,w:100,h:76}};
     const BASE='#d8d6ce';const $=id=>document.getElementById(id);
     const state={svg:null,paths:new Map(),data:null,painted:new Set(),view:{...FRAMES.Iberia}};
@@ -97,13 +97,27 @@
       for(const id of version.ids){const path=state.paths.get(id);if(!path)continue;path.style.fill=territory.color;path.style.stroke=territory.color;state.painted.add(id)}
       $('territory-name').textContent=territory.name;
       const active=territory.active,isActive=!active||(active.from??1400)<=year&&year<=(active.through??1650);
-      $('territory-note').textContent=isActive?`${territory.corridor}. Se muestra esta jurisdicción por separado, no todos los dominios de quien la gobernaba.`:active.reason;
+      $('territory-note').textContent=isActive?`${territory.note||territory.corridor+'. Se muestra esta jurisdicción por separado, no todos los dominios de quien la gobernaba.'}`:active.reason;
       $('old-ids').textContent=version.oldIds.join(', ')||'Sin equivalencia en el mapa anterior';
       $('new-count').textContent=String(version.ids.length);$('version-from').textContent=String(version.from);
       $('status').textContent=isActive?`${territory.name} · ${year}: ${version.ids.length} locations candidatas (${version.borderline.length} dudosas excluidas).`:`${territory.name} · ${year}: fuera de su etapa como jurisdicción separada en este ensayo.`;
       setInfo($('location-search').value.trim());
     }
-    function focusTerritory(){state.view={...(TERRITORY_FRAMES[$('territory').value]||FRAMES[$('corridor').value])};viewBox()}
+    function focusTerritory(){
+      const territory=selectedTerritory(),year=Number($('year').value);
+      let ids=territory?activeVersion(territory,year).ids:[];
+      if(territory?.corridor==='Centroeuropa'&&!ids.length&&territory.active){
+        const comparisonYear=territory.active.from??territory.active.through;
+        ids=activeVersion(territory,comparisonYear).ids;
+      }
+      const boxes=ids.map(id=>state.paths.get(id)).filter(Boolean).map(path=>path.getBBox());
+      if(territory?.corridor==='Centroeuropa'&&boxes.length){const x=Math.min(...boxes.map(b=>b.x)),y=Math.min(...boxes.map(b=>b.y));
+        const right=Math.max(...boxes.map(b=>b.x+b.width)),bottom=Math.max(...boxes.map(b=>b.y+b.height));
+        const w=Math.max(25,right-x),h=Math.max(20,bottom-y),pad=Math.max(3,Math.min(w,h)*.13);
+        state.view={x:x-pad,y:y-pad,w:w+2*pad,h:h+2*pad}
+      }else state.view={...(TERRITORY_FRAMES[$('territory').value]||FRAMES[$('corridor').value])};
+      viewBox()
+    }
     function consultLocation(){const id=$('location-search').value.trim();setInfo(id);const path=state.paths.get(id);if(!path)return;
       const box=path.getBBox(),size=Math.max(box.width,box.height,4),width=Math.max(size*4,12),height=Math.max(size*3.4,11);
       state.view={x:box.x+box.width/2-width/2,y:box.y+box.height/2-height/2,w:width,h:height};viewBox()}
@@ -136,7 +150,7 @@
       $('map').addEventListener('pointerup',()=>{drag=null});$('map').addEventListener('pointercancel',()=>{drag=null});viewBox();updateTerritories()
     }
     $('corridor').addEventListener('change',()=>state.data&&updateTerritories());$('territory').addEventListener('change',()=>{if(state.data){focusTerritory();render()}});
-    $('year').addEventListener('input',()=>state.data&&render());$('location-search').addEventListener('input',event=>suggest(event.currentTarget.value));
+    $('year').addEventListener('input',()=>{if(state.data){focusTerritory();render()}});$('location-search').addEventListener('input',event=>suggest(event.currentTarget.value));
     $('location-search').addEventListener('keydown',event=>{if(event.key==='Enter'&&state.data)consultLocation()});
     $('search-button').addEventListener('click',()=>state.data&&consultLocation());
     $('reset-view').addEventListener('click',focusTerritory);

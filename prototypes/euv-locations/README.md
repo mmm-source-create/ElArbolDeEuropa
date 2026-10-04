@@ -28,8 +28,8 @@ cada año. Un mismo morado identifica el conjunto político borgoñón, pero la
 lista lateral conserva sus condados, ducados y señoríos como jurisdicciones
 distintas.
 
-La [tercera entrega, corredores de Iberia e Italia](territorial-corridors.html),
-traslada 26 jurisdicciones con versiones anuales de 1400 a 1650. Cada una
+El [visor de corredores territoriales](territorial-corridors.html)
+traslada 33 jurisdicciones de Iberia, Italia y Centroeuropa con versiones anuales de 1400 a 1650. Cada una
 mantiene su propio color y alcance aunque comparta soberano con otra. El
 visor permite seleccionar año, territorio e ID, consultar la corrección
 documentada y centrar el mapa en la localidad buscada. Es una capa de
@@ -178,7 +178,7 @@ incorporación que toda la etapa anterior fuera un ducado homogéneo.
 
 ### Tercera entrega: Iberia e Italia
 
-`corridor-source.json` extrae las versiones de 26 jurisdicciones del Atlas.
+`corridor-source.json` extrae las versiones de 26 jurisdicciones ibéricas e italianas del Atlas.
 `build-corridor-map.py` cruza 143 polígonos provinciales con 940 locations
 candidatas del SVG recortado y conserva cada cambio anual. El umbral del 55 %
 produce **candidatos espaciales**, nunca prueba de soberanía. La auditoría y
@@ -207,8 +207,36 @@ están en los datos si el recorte general los incluye, aunque el encuadre
 regional inicial no los muestra todos; el buscador permite centrarlos.
 Quedan pendientes de cotejo cartográfico fino Saluzzo, los enclaves
 italianos, las fronteras del Reino de Granada y las situaciones de control
-militar intermitente. Polonia–Lituania, Austria, Hungría y Baviera son los
-corredores prioritarios de las próximas entregas.
+militar intermitente.
+
+### Cuarta entrega: Centroeuropa
+
+Se han añadido siete jurisdicciones al mismo visor: Austria danubiana,
+Austria Interior, Tirol, Baviera, Palatinado electoral, las tierras de la
+Corona de Bohemia y la Corona de San Esteban. El cruce suma ahora **33
+jurisdicciones**, **222** polígonos provinciales antiguos y **1552** locations
+candidatas. Estas cifras miden el trabajo geométrico del generador; no son
+territorios históricos documentados individualmente. El selector muestra
+la nota de alcance de cada jurisdicción junto con los IDs antiguos y los
+nuevos. Se revisó el encuadre visual en Austria, Baviera y Hungría, además
+de comprobar las transiciones fechadas en el navegador.
+
+| Jurisdicción | Criterio aplicado | Fuentes |
+|---|---|---|
+| Austria y Austria Interior | El archiducado danubiano no absorbe Estiria, Carintia, Carniola ni el litoral. Pitten y Wiener Neustadt se mantienen con la rama estiria. Trieste se muestra desde 1400 por su sujeción de 1382; Rijeka desde 1466. | [Habsburger.net: división de Neuberg](https://www.habsburger.net/en/chapter/albrecht-iii-and-nascent-land-austria), [Trieste](https://www.habsburger.net/en/locations/trieste), [Treccani: Fiume](https://www.treccani.it/enciclopedia/fiume_res-fbec9b86-8bae-11dc-8e9d-0016357eee51_(Enciclopedia-Italiana)/). |
+| Tirol | Lienz se retira de Austria Interior y entra en Tirol desde la herencia de Görz en 1500. Kufstein y Kitzbühel entran desde la conquista de 1504. Brixen, Bruneck y Cavalese quedan fuera de la capa secular por sus principados episcopales. | [Archivo del Land Tirol: Lienz](https://www.tirol.gv.at/fileadmin/themen/kunst-kultur/landesarchiv/downloads/TGQ34_OCR_Gesamt_homepage.pdf), [Kufstein y Kitzbühel](https://www.tirol.gv.at/kunst-kultur/landesarchiv/archiv-quelle/18/), [Brixen y Bruneck](https://www.tirol.gv.at/fileadmin/themen/kunst-kultur/landesarchiv/downloads/Grundsteueranschlag1508-1509.pdf), [Provincia de Trento: Cavalese](https://www.ufficiostampa.provincia.tn.it/content/download/18455/374120/file/Palazzo_Magnifica_Comunit%C3%A0_di_Fiemme.pdf). |
+| Baviera y Palatinado | La capa bávara reunificada comienza en 1505; la Alta Palatinado pasa del elector a Baviera en 1628. Se excluyen los obispados de Freising y Passau, la ciudad imperial de Regensburg, las plazas de Salzburg y el estado separado de Pfalz-Neuburg. El Palatinado electoral excluye Speyer, Landau, Leiningen, Leuchtenberg, Pirmasens y, desde la partición de 1410, Zweibrücken. | [Historisches Lexikon Bayerns: arbitraje de 1505](https://www.historisches-lexikon-bayerns.de/Lexikon/K%C3%B6lner_Schiedsspruch%2C_30._Juli_1505), [Alta Palatinado](https://www.historisches-lexikon-bayerns.de/Lexikon/Landst%C3%A4nde_der_Oberpfalz), [Freising](https://www.historisches-lexikon-bayerns.de/Lexikon/Freising%2C_Bistum%3A_Politische_Geschichte_%28Sp%C3%A4tmittelalter%29), [Salzburg](https://www.historisches-lexikon-bayerns.de/Lexikon/Artikel_45331), [divisiones palatinas](https://www.historisches-lexikon-bayerns.de/Lexikon/Pf%C3%A4lzische_Teilungen). |
+| Bohemia y Hungría | Bohemia designa aquí la **Corona**, incluidos Moravia y sectores silesios, no solo el reino estricto. La capa húngara agrupa la Corona de San Esteban antes de Mohács, con Croacia y Transilvania. Desde 1526 se deja gris: no se adjudican todo el reino medieval ni las tierras de la Sublime Puerta a un único titular. Zadar (1409), Šibenik (1420) y Rijeka (1466) se retiran del agregado húngaro cuando pasan a otras jurisdicciones. | [Habsburger.net: las nuevas coronas de Fernando I](https://www.habsburger.net/en/chapter/ferdinand-i-new-crowns-habsburgs), [Treccani: Dalmacia](https://www.treccani.it/enciclopedia/dalmazia_(Enciclopedia-Italiana)/), [Fiume](https://www.treccani.it/enciclopedia/fiume_res-fbec9b86-8bae-11dc-8e9d-0016357eee51_(Enciclopedia-Italiana)/). |
+
+Los límites de las locations siguen siendo candidatos geométricos. En
+particular, los pequeños señoríos de la Alta Palatinado, los derechos
+seculares de los obispados alpinos, el valle del Ziller y la frontera
+de Croacia necesitan cartografía jurisdiccional más fina. La partición
+de Hungría después de 1526 exige capas separadas para Hungría real,
+Transilvania y dominio otomano, con cambios fechados; el gris actual
+expresa esa revisión pendiente, no ausencia de gobierno. El siguiente
+corredor prioritario es Polonia–Lituania, seguido de estas excepciones
+alpinas y húngaras. Ninguna de estas capas sustituye aún el mapa público.
 
 ### Dudas de esta entrega
 

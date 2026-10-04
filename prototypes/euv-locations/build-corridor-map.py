@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Transfer the existing Iberian and Italian territory series to EU V Locations.
+"""Transfer the selected territorial series to EU V Locations.
 
 The 55% location-area overlap identifies candidates. All old regions and
 ambiguous location matches are retained for visual and historical review.
@@ -94,7 +94,7 @@ def main():
                 versions.append({"from": year, "oldIds": old_version["oldIds"],
                                  "ids": selected,
                                  "borderline": sorted(i for i, fraction in scores.items() if .25 <= fraction < THRESHOLD) if is_active else []})
-        output_territories.append({key: territory[key] for key in ("corridor", "name", "color", "active")}
+        output_territories.append({key: territory[key] for key in ("corridor", "name", "color", "active", "note")}
                                   | {"versions": versions})
 
     out = {

@@ -17,9 +17,9 @@ function ids(name, year) {
 }
 
 test('territorial crosswalk uses only SVG IDs and never assigns one ID twice within a corridor', () => {
-  assert.equal(data.territories.length, 26);
+  assert.equal(data.territories.length, 33);
   for (let year = data.from; year <= data.through; year++) {
-    for (const corridor of ['Iberia', 'Italia']) {
+    for (const corridor of ['Iberia', 'Italia', 'Centroeuropa']) {
       const owner = new Map();
       for (const territory of data.territories.filter(item => item.corridor === corridor)) {
         for (const id of ids(territory.name, year)) {
@@ -30,6 +30,47 @@ test('territorial crosswalk uses only SVG IDs and never assigns one ID twice wit
       }
     }
   }
+});
+
+test('Central European jurisdictions respect dated transfers and separate imperial estates', () => {
+  assert(ids('Austria Interior', 1400).has('Trieste'));
+  assert(!ids('Austria Interior', 1465).has('Rijeka'));
+  assert(ids('Austria Interior', 1466).has('Rijeka'));
+  assert(!ids('Austria Interior', 1499).has('Lienz'));
+  assert(!ids('Tirol', 1499).has('Lienz'));
+  assert(ids('Tirol', 1500).has('Lienz'));
+  for (const id of ['Kufstein', 'Kitzbuhel']) {
+    assert(!ids('Tirol', 1503).has(id));
+    assert(ids('Tirol', 1504).has(id));
+  }
+  for (const id of ['Brixen', 'Bruneck', 'Cavalese']) assert(!ids('Tirol', 1500).has(id));
+  assert.equal(ids('Baviera', 1504).size, 0);
+  assert(ids('Baviera', 1505).has('Munich'));
+  for (const id of ['Freising', 'Garmisch', 'Passau', 'Regensburg', 'Muhldorf', 'Laufen', 'Neuburg_an_der_Donau']) {
+    assert(!ids('Baviera', 1505).has(id));
+  }
+  assert(ids('Palatinado', 1627).has('Amberg'));
+  assert(!ids('Palatinado', 1628).has('Amberg'));
+  assert(ids('Baviera', 1628).has('Amberg'));
+  assert(!ids('Baviera', 1628).has('Leuchtenberg'));
+  for (const id of ['Leiningen', 'Leuchtenberg', 'Speyer', 'Landau_Rhineland', 'Pirmasens']) {
+    assert(!ids('Palatinado', 1500).has(id));
+  }
+  assert(ids('Palatinado', 1409).has('Zweibrucken'));
+  assert(!ids('Palatinado', 1410).has('Zweibrucken'));
+});
+
+test('Hungarian-Croatian aggregate stops at Mohács and does not reclaim Venetian Dalmatia', () => {
+  assert(ids('Hungría', 1525).has('Buda'));
+  assert.equal(ids('Hungría', 1526).size, 0);
+  assert.equal(ids('Hungría', 1650).size, 0);
+  assert(ids('Hungría', 1408).has('Zadar'));
+  assert(!ids('Hungría', 1409).has('Zadar'));
+  assert(ids('Venecia', 1409).has('Zadar'));
+  assert(ids('Hungría', 1419).has('Sibenik'));
+  assert(!ids('Hungría', 1420).has('Sibenik'));
+  assert(ids('Venecia', 1420).has('Sibenik'));
+  assert(data.territories.find(t => t.name === 'Bohemia').note.includes('Moravia'));
 });
 
 test('dated Iberian transfers move individual locations rather than an entire old province', () => {

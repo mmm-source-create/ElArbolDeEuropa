@@ -16,6 +16,10 @@ const corridors = {
     'Estados Pontificios', 'Florencia', 'Toscana', 'Mantua',
     'Módena', 'Ferrara', 'Urbino', 'Parma', 'Monferrato', 'Saluzzo',
   ],
+  Centroeuropa: [
+    'Austria', 'Austria Interior', 'Tirol', 'Baviera',
+    'Palatinado', 'Bohemia', 'Hungría',
+  ],
 };
 
 // A territorial label can outlive its independent government in the Atlas.
@@ -34,6 +38,20 @@ const active = {
     source: 'https://www.treccani.it/enciclopedia/marchesato-di-saluzzo_(Dizionario-di-Storia)/' },
   Parma: { from: 1545, reason: 'El ducado separado de Parma y Piacenza se creó en 1545; los gobiernos anteriores requieren sus propias jurisdicciones.',
     source: 'https://www.treccani.it/enciclopedia/parma-e-piacenza-ducato-di_(Dizionario-di-Storia)/' },
+  Baviera: { from: 1505, reason: 'Antes de la reunificación de 1505 había ducados bávaros de distintas ramas; esta capa solo muestra el núcleo reunido.',
+    source: 'https://www.historisches-lexikon-bayerns.de/Lexikon/K%C3%B6lner_Schiedsspruch%2C_30._Juli_1505' },
+  Hungría: { through: 1525, reason: 'Después de Mohács (1526), título y control se disputaron; no se debe proyectar el reino medieval completo sobre la Hungría real, Transilvania y el dominio otomano.',
+    source: 'https://www.habsburger.net/en/chapter/ferdinand-i-new-crowns-habsburgs' },
+};
+
+const notes = {
+  Austria: 'Ducado/archiducado danubiano: no equivale al conjunto de posesiones de la Casa de Austria.',
+  'Austria Interior': 'Estiria, Carintia, Carniola y litoral habsbúrgico. Pitten y Wiener Neustadt seguían la rama estiria aunque hoy estén en Baja Austria.',
+  Tirol: 'Condado del Tirol. Se excluyen los obispados de Brixen y Trento; Kufstein y Kitzbühel entran en 1504 y Lienz en 1500.',
+  Baviera: 'Núcleo reunificado en 1505. Las ciudades imperiales, obispados y Pfalz-Neuburg conservan jurisdicción separada; la Alta Palatinado se incorpora en 1628.',
+  Palatinado: 'Palatinado electoral, no todas las ramas Wittelsbach. La Alta Palatinado se transfiere a Baviera en 1628.',
+  Bohemia: 'Tierras de la Corona de Bohemia: incluye Moravia y partes de Silesia, además del reino estricto.',
+  Hungría: 'Corona compuesta de San Esteban antes de Mohács: incluye Croacia y Transilvania. Desde 1526 la partición queda sin colorear hasta modelar cada sucesor.',
 };
 
 const territories = Object.entries(corridors).flatMap(([corridor, names]) => names.map(name => {
@@ -45,7 +63,7 @@ const territories = Object.entries(corridors).flatMap(([corridor, names]) => nam
     }
   }
   return { corridor, name, color: REINO_COLOR[name] || '#735f4c',
-    active: active[name] || null, versions };
+    active: active[name] || null, note: notes[name] || null, versions };
 }));
 
 const output = new URL('./corridor-source.json', import.meta.url);
