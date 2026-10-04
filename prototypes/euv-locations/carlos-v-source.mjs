@@ -36,6 +36,8 @@ reigns.push(
     condition: 'efectivo', scope: 'Tournai adquirida en 1521', versions: [{ from: 1521, oldIds: [] }] },
   { territory: 'Señorío de Malinas', group: 'burgundian', from: 1506, through: 1555,
     condition: 'efectivo', scope: 'Señorío distinto de Brabante', versions: [{ from: 1506, oldIds: [] }] },
+  { territory: 'Señorío de Cuijk', group: 'burgundian', from: 1509, through: 1555,
+    condition: 'señorío superior', scope: 'Investidura atribuida a 1509; administración empeñada a los Egmond desde 1517 hasta 1549', versions: [{ from: 1509, oldIds: [] }] },
 );
 const out = new URL('./carlos-v-source.json', import.meta.url);
 fs.writeFileSync(out, `${JSON.stringify({ person: person.nombre, personId: person.id, reigns }, null, 2)}\n`);

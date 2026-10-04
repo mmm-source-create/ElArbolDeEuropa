@@ -28,6 +28,13 @@ cada año. Un mismo morado identifica el conjunto político borgoñón, pero la
 lista lateral conserva sus condados, ducados y señoríos como jurisdicciones
 distintas.
 
+La [tercera entrega, corredores de Iberia e Italia](territorial-corridors.html),
+traslada 26 jurisdicciones con versiones anuales de 1400 a 1650. Cada una
+mantiene su propio color y alcance aunque comparta soberano con otra. El
+visor permite seleccionar año, territorio e ID, consultar la corrección
+documentada y centrar el mapa en la localidad buscada. Es una capa de
+investigación separada de las dos anteriores.
+
 ![Carlos V en 1520: Austria todavía bajo su gobierno](carlos-v-1520.png)
 ![Carlos V en 1548: herencia hispánica y borgoñona, sin pintar el Imperio entero](carlos-v-1548.png)
 
@@ -49,6 +56,8 @@ python3 prototypes/euv-locations/build-carlos-v-map.py --tags '/ruta/a/Texto peg
 python3 prototypes/euv-locations/render-carlos-v-svg.py 1548 /tmp/carlos-v-1548.svg
 node --import ./tests/jsx-loader.mjs prototypes/euv-locations/burgundian-source.mjs
 python3 prototypes/euv-locations/build-burgundian-map.py
+node --import ./tests/jsx-loader.mjs prototypes/euv-locations/corridor-source.mjs
+python3 prototypes/euv-locations/build-corridor-map.py
 ```
 
 La exportación original no se incluye: el SVG adjunto por el usuario está en
@@ -136,7 +145,7 @@ Cada gris significa «no atribuido en este ensayo», no «sin dueño».
 | Mâcon | Condado distinguido del ducado; se incorpora al conjunto borgoñón desde 1435 y se pierde tras 1476. | [Municipio de Mâcon, diagnóstico histórico](https://www.macon.fr/fileadmin/medias/03_MACON_ET_VOUS/Urbanisme/PLU/Revision_PLU_2022/01-08_PROJET_ARRETE_DE_REVISION_DU_PLU/01_-_RAPPORT_DE_PRESENTATION/01a.Diagnostic_et_Projet_de_PLU.pdf). |
 | Malinas y Tournai | Malinas figura como señorío propio; Tournai solo en el tramo de Carlos V desde 1521. | [Archivo municipal de Malinas](https://stadsarchief.mechelen.be/vandaag-in-de-mechelse-geschiedenis-het-parlement-van-mechelen-1474-) y [museo municipal de Tournai](https://mhm.tournai.be/en/tournai-a-city-with-a-rich-military-past). |
 | Besançon, Montbéliard y Saint-Claude | No se absorben en el Franco Condado por proximidad geográfica: ciudad libre, posesión de Württemberg y abadía con señorío propio, respectivamente. | [Inventario patrimonial de Besançon](https://inventaire-patrimoine.bourgognefranchecomte.fr/dossier/IA25000374), [municipio de Montbéliard](https://www.montbeliard.fr/mes-sorties-mes-activites/musees-de-montbeliard/musee-du-chateau-des-ducs-de-wurtemberg/le-circuit-historique-2/) y [nota histórica sobre Saint-Claude](https://www.newadvent.org/cathen/13341a.htm). |
-| Bouillon y Cuijk | No se atribuyen por defecto a Luxemburgo o Brabante. Bouillon fue señorío aparte; Cuijk fue señorío distinto de Brabante, aunque Carlos V sí consta como su señor en el siglo XVI. | [Larousse: ducado de Bouillon](https://www.larousse.fr/encyclopedie/autre-region/duch%C3%A9_de_Bouillon/109685) y [archivo regional BHIC: Cuijk y Carlos V](https://www.bhic.nl/ontdekken/verhalen/cuijkse-heggenleggers-en-kartuizers-in-het-midden-van-de-zestiende-eeuw). |
+| Bouillon y Cuijk | Bouillon no se atribuye por defecto a Luxemburgo. Cuijk se separa de Brabante y se añade como señorío propio de Carlos V desde 1509, con fecha de investidura todavía provisional. | [Larousse: ducado de Bouillon](https://www.larousse.fr/encyclopedie/autre-region/duch%C3%A9_de_Bouillon/109685), [historia local de Cuijk](https://www.canonvannederland.nl/nl/noord-brabant/grave/keteltje) y [BHIC: Cuijk y Carlos V](https://www.bhic.nl/ontdekken/verhalen/cuijkse-heggenleggers-en-kartuizers-in-het-midden-van-de-zestiende-eeuw). |
 
 La diferencia entre heredar y gobernar se marca también en la interfaz:
 Felipe I heredó en 1482 siendo menor; la fase hasta 1493 se muestra con
@@ -150,11 +159,62 @@ Franco Condado, permanecen grises hasta su restitución, aunque la situación
 en el terreno fue más compleja; el [tratado de Senlis](https://archives.cotedor.fr/v2/site/AD21/Apprendre/Atelier_du_chancelier_Rolin/Paleographie/Groupe_confirmes/Documents_etudies_en_2008-2009/Documents_1_a_3_-_Le_traite_de_Senlis_23_mai_1493_)
 sirve como hito para el mapa anual.
 
+### Señorío de Cuijk
+
+El ID `Cuijk` figura bajo el **Señorío de Cuijk** de Carlos V de 1509 a 1555,
+sin confundirse con el ducado de Brabante. La [cronología neerlandesa
+aportada](https://nl.wikipedia.org/wiki/Land_van_Cuijk_(heerlijkheid)) da
+1509 como comienzo; falta localizar la investidura primaria y por eso el
+año sigue marcado como provisional. Según el [Canon local de
+Grave](https://www.canonvannederland.nl/nl/noord-brabant/grave/keteltje),
+Grave y Cuijk se empeñaron a Floris van Egmond en 1517: el color representa
+señorío superior, **no administración directa** durante la prenda. Esa fuente
+atribuye a **Felipe II** el pago de 20.000 florines que puso fin al empeño en
+1549, en contra de la formulación que lo atribuye a Carlos V. Una [revisión
+histórica sobre Cuijk](https://www.dbnl.org/tekst/_bij005196201_01/_bij005196201_01.pdf)
+sitúa en 1549 su incorporación a Brabante. El prototipo conserva el señorío
+como entidad diferenciada hasta la abdicación de 1555; no deduce de esa
+incorporación que toda la etapa anterior fuera un ducado homogéneo.
+
+### Tercera entrega: Iberia e Italia
+
+`corridor-source.json` extrae las versiones de 26 jurisdicciones del Atlas.
+`build-corridor-map.py` cruza 143 polígonos provinciales con 940 locations
+candidatas del SVG recortado y conserva cada cambio anual. El umbral del 55 %
+produce **candidatos espaciales**, nunca prueba de soberanía. La auditoría y
+las correcciones por ID, fecha, motivo y fuente quedan en
+`corridor-locations.json` y `corridor-overrides.json`. El visor muestra una
+jurisdicción cada vez; sus tonos no pretenden colorear todos los títulos de
+una persona como un único Estado.
+
+Se comprobaron específicamente estas transferencias:
+
+| Región | Cambio en el prototipo | Fuente |
+|---|---|---|
+| Granada–Castilla | Gibraltar pasa en 1462; Antequera en 1410; Ronda en 1485 y Loja en 1486. Las conquistas se separan del cambio de toda la provincia antigua de Málaga o Granada. | [Gobierno de Gibraltar](https://www.gibraltar.gov.gi/maritime), [Ayuntamiento de Antequera](https://www.antequera.es/municipio/historia/) y [Treccani: España](https://www.treccani.it/enciclopedia/spagna_(Enciclopedia-Italiana)/). |
+| Sicilia | Malta deja de colorearse con Trinacria en 1530, tras su cesión a la Orden de San Juan. | [Orden de Malta](https://www.orderofmalta.int/news/the-national-library-of-malta-celebrates-the-orders-past-and-present/). |
+| Nápoles y Estados Pontificios | Benevento deja de atribuirse a Nápoles y aparece como enclave pontificio. | [Treccani: Benevento](https://www.treccani.it/enciclopedia/benevento_(Federiciana)/). |
+| Milán y Piamonte | Biella se retira de Milán durante todo el ensayo y Vercelli desde 1427; ambas se asignan a la jurisdicción saboyana de Piamonte. | [Treccani: Biella](https://www.treccani.it/enciclopedia/biella_(Enciclopedia-Italiana)/) y [Vercelli](https://www.treccani.it/enciclopedia/vercelli_(Enciclopedia-Italiana)/). |
+| Ferrara y Venecia | Rovigo pasa a Venecia en 1484; se registra la interrupción de la guerra de la Liga de Cambrai y su retorno en 1516. La devolución de Ferrara al papa en 1598 no arrastra Rovigo. | [Treccani: política veneciana](https://www.treccani.it/enciclopedia/venezia-e-la-politica-italiana-1454-1530_(Storia-di-Venezia)/). |
+| Istria y Dalmacia venecianas | Se añaden Pola y Rovinj en la costa istriana; Zadar desde 1409; Šibenik, Split, Brač y Kotor desde 1420 con un criterio anual conservador. Trieste, el interior de Istria y Ragusa quedan fuera. `Zara` es otro ID del SVG: la ciudad dálmata se llama `Zadar`. | [Treccani: Istria](https://www.treccani.it/enciclopedia/istria_(Enciclopedia-Italiana)/), [Dalmacia](https://www.treccani.it/enciclopedia/dalmazia_(Enciclopedia-Italiana)/) y [campaña de 1420](https://www.treccani.it/enciclopedia/le-frontiere-navali_(Storia-di-Venezia)/). |
+| Italia central | Parma solo aparece como ducado separado desde 1545; Florencia deja paso a Toscana en 1569; Ferrara y Urbino se integran en los Estados Pontificios en 1598 y 1631. Piombino, Mirandola y Guastalla se excluyen de Toscana o Módena cuando eran Estados separados. | [Treccani: Parma y Piacenza](https://www.treccani.it/enciclopedia/parma-e-piacenza-ducato-di_(Dizionario-di-Storia)/), [Piombino](https://www.treccani.it/enciclopedia/piombino-ed-elba-principato-di_(Dizionario-di-Storia)/) y [Mirandola](https://www.treccani.it/enciclopedia/mirandola_(Enciclopedia-Italiana)/). |
+
+La revisión automática comprueba que ningún ID esté en dos jurisdicciones
+del mismo corredor en los años de muestra. El gris puede significar que
+falta un Estado en esta entrega, no que la zona careciera de gobierno. Los
+archipiélagos atlánticos de Portugal y las posesiones orientales de Venecia
+están en los datos si el recorte general los incluye, aunque el encuadre
+regional inicial no los muestra todos; el buscador permite centrarlos.
+Quedan pendientes de cotejo cartográfico fino Saluzzo, los enclaves
+italianos, las fronteras del Reino de Granada y las situaciones de control
+militar intermitente. Polonia–Lituania, Austria, Hungría y Baviera son los
+corredores prioritarios de las próximas entregas.
+
 ### Dudas de esta entrega
 
-- Falta una fecha documentada para incorporar el señorío de **Cuijk** como
-  territorio propio de Carlos V. El archivo acredita su señorío a mediados
-  del XVI; colorearlo como Brabante sería incorrecto. Permanece gris.
+- La fecha de investidura de **Cuijk en 1509** todavía necesita contraste con
+  documentación primaria. Se muestra como hipótesis fechada, con la prenda
+  administrativa de 1517–1549 explicada por separado.
 - **Montreuil**, **Luxeuil** y algunos bordes de Ponthieu/Franco Condado
   siguen siendo candidatos por solapamiento y requieren cotejo de cartografía
   jurisdiccional fechada antes de pasar al producto.

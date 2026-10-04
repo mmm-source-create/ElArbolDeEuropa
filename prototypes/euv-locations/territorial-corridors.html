@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Corredores territoriales · EU V Locations</title>
+  <style>
+    :root{font:16px/1.48 system-ui,sans-serif;color:#eee7dc;background:#27231f}
+    *{box-sizing:border-box}body{margin:0;padding:20px}header,main,footer{max-width:1450px;margin:auto}
+    h1{font:clamp(2rem,4vw,3.35rem)/1.1 Georgia,serif;margin:.2em 0}
+    h2{font:1.4rem Georgia,serif;margin:.2em 0}.eyebrow{color:#d8b783;text-transform:uppercase;letter-spacing:.1em;font-weight:700}
+    p{max-width:90ch;color:#d6cabc}a{color:#f1c995}
+    .controls{display:flex;gap:14px;align-items:end;flex-wrap:wrap;padding:15px;background:#342f29;border:1px solid #766c5e;border-radius:12px;margin:18px 0}
+    label{display:grid;gap:4px;font-weight:700}select,input,button{font:inherit;border:1px solid #aa9d8a;border-radius:7px;padding:8px 10px}
+    select,input{background:#f8f4eb;color:#29251f}button{background:#514638;color:#fff4e6;cursor:pointer}
+    input[type=range]{width:min(38vw,340px);accent-color:#9d5c68;padding:0}input[type=search]{width:220px}
+    :is(button,select,input,a):focus-visible{outline:2px solid #e8cb8c;outline-offset:2px}
+    .year-row{display:flex;gap:10px;align-items:center}.year-row output{font:1.8rem Georgia,serif;color:#f3d895;min-width:78px}
+    .layout{display:grid;grid-template-columns:minmax(0,1fr) minmax(240px,310px);gap:16px}
+    .map-shell{border-radius:12px;overflow:hidden;background:#faf7ef;border:1px solid #8b806f;min-width:0}
+    #map{height:min(69vh,730px);min-height:400px;cursor:grab;touch-action:none}#map:active{cursor:grabbing}#map svg{display:block;width:100%;height:100%}
+    #info{background:#f3eada;border-top:1px solid #c9bfae;padding:12px 15px;color:#2e281f;min-height:58px}
+    aside{background:#342f29;border:1px solid #766c5e;border-radius:12px;padding:17px;max-height:min(69vh,730px);overflow:auto}
+    aside dl{display:grid;grid-template-columns:auto 1fr;gap:5px 12px}aside dt{color:#cfc0ad}aside dd{margin:0}
+    .note{border-left:4px solid #af8245;margin:23px 0;padding:3px 0 3px 16px}
+    footer{font-size:.9rem;padding-bottom:18px}
+    @media(max-width:900px){body{padding:10px}.layout{grid-template-columns:1fr}aside{max-height:none}#map{height:58vh;min-height:330px}input[type=range]{width:180px}}
+  </style>
+</head>
+<body>
+  <header>
+    <p class="eyebrow">Laboratorio cartográfico · tercera entrega</p>
+    <h1>Iberia e Italia, territorio por territorio</h1>
+    <p>Las versiones territoriales del Atlas se proyectan sobre EU V Locations, conservando separados reinos, ducados, condados y repúblicas. Elige una jurisdicción y un año para examinar su geometría. Este visor no atribuye automáticamente todos los títulos al mismo Estado ni convierte una localización en un límite histórico probado.</p>
+    <p><a href="./">Comparar mapas</a> · <a href="./carlos-v.html">Dominios de Carlos V</a> · <a href="./burgundian-succession.html">Sucesión borgoñona</a></p>
+  </header>
+  <main>
+    <div class="controls">
+      <label for="corridor">Corredor
+        <select id="corridor"><option>Iberia</option><option>Italia</option></select>
+      </label>
+      <label for="territory">Jurisdicción
+        <select id="territory"></select>
+      </label>
+      <label for="year">Año
+        <span class="year-row"><input type="range" id="year" min="1400" max="1650" value="1500"><output id="year-output" for="year">1500</output></span>
+      </label>
+      <label for="location-search">Buscar una location
+        <input id="location-search" type="search" list="location-ids" placeholder="Madrid, Venice…" autocomplete="off">
+      </label>
+      <datalist id="location-ids"></datalist>
+      <button type="button" id="search-button">Consultar</button>
+      <button type="button" id="reset-view">Centrar mapa</button>
+    </div>
+    <p id="status" role="status">Cargando mapa y datos…</p>
+    <div class="layout">
+      <div class="map-shell">
+        <div id="map" aria-label="Mapa de la jurisdicción elegida"></div>
+        <div id="info" aria-live="polite">Pulsa una location para consultar la correspondencia.</div>
+      </div>
+      <aside>
+        <h2 id="territory-name">Cargando…</h2>
+        <p id="territory-note"></p>
+        <dl><dt>Provincia anterior</dt><dd id="old-ids"></dd><dt>Locations nuevas</dt><dd id="new-count"></dd><dt>Versión desde</dt><dd id="version-from"></dd></dl>
+        <p>El gris significa «no atribuido a esta jurisdicción en este ensayo». Puede pertenecer a otra entidad, incluso si la gobierna la misma persona.</p>
+      </aside>
+    </div>
+    <div class="note">
+      <h2>Qué se ha trasladado</h2>
+      <p>El visor lee las versiones territoriales fechadas del Atlas y conserva la identidad de cada jurisdicción. Las nuevas locations son candidatas cuando al menos el 55 % de su área cae en la provincia antigua correspondiente; las excepciones verificadas se registran por ID, año y fuente. La base geométrica de MapChart es una aproximación, y el mapa público aún no se reemplaza. <a href="./README.md#tercera-entrega-iberia-e-italia">Método, auditoría y fuentes</a>.</p>
+    </div>
+  </main>
+  <footer>Geometría: <a href="https://www.mapchart.net/eu-v-locations.html">MapChart</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>.</footer>
+  <script type="module">
+    const FRAMES={Iberia:{x:518,y:158,w:77,h:66},Italia:{x:575,y:143,w:64,h:68}};
+    const TERRITORY_FRAMES={'Cerdeña':{x:581,y:175,w:25,h:31},'Trinacria':{x:592,y:180,w:34,h:32},'Venecia':{x:588,y:143,w:100,h:76}};
+    const BASE='#d8d6ce';const $=id=>document.getElementById(id);
+    const state={svg:null,paths:new Map(),data:null,painted:new Set(),view:{...FRAMES.Iberia}};
+    function activeVersion(territory,year){return [...territory.versions].reverse().find(v=>v.from<=year)||territory.versions[0]}
+    function selectedTerritory(){return state.data.territories.find(t=>t.name===$('territory').value&&t.corridor===$('corridor').value)}
+    function viewBox(){state.svg?.setAttribute('viewBox',`${state.view.x} ${state.view.y} ${state.view.w} ${state.view.h}`)}
+    function setInfo(id){
+      const info=$('info');if(!id){info.textContent='Pulsa una location para consultar la correspondencia.';return}
+      if(!state.paths.has(id)){info.textContent=`${id}: fuera del recorte.`;return}
+      const territory=selectedTerritory(),year=Number($('year').value),version=activeVersion(territory,year);
+      const override=state.data.overrides.find(o=>o.territory===territory.name&&o.id===id&&o.from<=year&&year<=o.through);
+      const verdict=version.ids.includes(id)?override?'Incluida por corrección documentada.':'Candidata por solapamiento; revisar límite local.':override?'Excluida por corrección documentada.':version.borderline.includes(id)?'Solapamiento parcial; excluida para revisión.':'No atribuida a esta jurisdicción.';
+      info.replaceChildren();const strong=document.createElement('strong');strong.textContent=id;info.append(strong,document.createTextNode(` · ${verdict}`));
+      if(override){info.append(document.createTextNode(` ${override.reason} `));const link=document.createElement('a');link.href=override.source;link.target='_blank';link.rel='noopener noreferrer';link.textContent='Fuente';info.append(link)}
+    }
+    function render(){
+      const territory=selectedTerritory();if(!territory)return;
+      const year=Number($('year').value),version=activeVersion(territory,year);$('year-output').value=String(year);
+      for(const id of state.painted){const path=state.paths.get(id);if(path){path.style.fill=BASE;path.style.stroke=BASE}}
+      state.painted.clear();
+      for(const id of version.ids){const path=state.paths.get(id);if(!path)continue;path.style.fill=territory.color;path.style.stroke=territory.color;state.painted.add(id)}
+      $('territory-name').textContent=territory.name;
+      const active=territory.active,isActive=!active||(active.from??1400)<=year&&year<=(active.through??1650);
+      $('territory-note').textContent=isActive?`${territory.corridor}. Se muestra esta jurisdicción por separado, no todos los dominios de quien la gobernaba.`:active.reason;
+      $('old-ids').textContent=version.oldIds.join(', ')||'Sin equivalencia en el mapa anterior';
+      $('new-count').textContent=String(version.ids.length);$('version-from').textContent=String(version.from);
+      $('status').textContent=isActive?`${territory.name} · ${year}: ${version.ids.length} locations candidatas (${version.borderline.length} dudosas excluidas).`:`${territory.name} · ${year}: fuera de su etapa como jurisdicción separada en este ensayo.`;
+      setInfo($('location-search').value.trim());
+    }
+    function focusTerritory(){state.view={...(TERRITORY_FRAMES[$('territory').value]||FRAMES[$('corridor').value])};viewBox()}
+    function consultLocation(){const id=$('location-search').value.trim();setInfo(id);const path=state.paths.get(id);if(!path)return;
+      const box=path.getBBox(),size=Math.max(box.width,box.height,4),width=Math.max(size*4,12),height=Math.max(size*3.4,11);
+      state.view={x:box.x+box.width/2-width/2,y:box.y+box.height/2-height/2,w:width,h:height};viewBox()}
+    function updateTerritories(){
+      const corridor=$('corridor').value,select=$('territory'),prior=select.value;
+      select.replaceChildren();for(const t of state.data.territories.filter(t=>t.corridor===corridor)){
+        const option=document.createElement('option');option.value=t.name;option.textContent=t.name;select.append(option)
+      }
+      if([...select.options].some(o=>o.value===prior))select.value=prior;
+      focusTerritory();render();
+    }
+    function suggest(query){const list=$('location-ids');list.replaceChildren();if(!query.trim())return;let count=0;
+      for(const id of state.paths.keys())if(id.toLocaleLowerCase('es').includes(query.trim().toLocaleLowerCase('es'))){const option=document.createElement('option');option.value=id;list.append(option);if(++count===35)break}
+    }
+    async function load(){
+      const [svgResponse,dataResponse]=await Promise.all([fetch('./euv-locations-crop.svg'),fetch('./corridor-locations.json')]);
+      if(!svgResponse.ok||!dataResponse.ok)throw new Error('No se pudo cargar el mapa o los datos');
+      state.data=await dataResponse.json();
+      const doc=new DOMParser().parseFromString(await svgResponse.text(),'image/svg+xml');if(doc.querySelector('parsererror'))throw new Error('SVG no válido');
+      const svg=doc.documentElement;svg.querySelector('metadata')?.remove();svg.querySelector('#legend-svg')?.remove();svg.removeAttribute('width');svg.removeAttribute('height');
+      svg.setAttribute('preserveAspectRatio','xMidYMid meet');svg.setAttribute('role','img');svg.setAttribute('aria-label','EU V Locations: territorio seleccionado');
+      state.svg=svg;state.paths=new Map([...svg.querySelectorAll('#map > path[id]')].map(p=>[p.id,p]));$('map').replaceChildren(svg);
+      $('map').addEventListener('click',event=>{const path=event.target.closest('path[id]');if(!path)return;$('location-search').value=path.id;setInfo(path.id)});
+      $('map').addEventListener('wheel',event=>{event.preventDefault();const scale=event.deltaY>0?1.12:1/1.12;
+        const rect=$('map').getBoundingClientRect(),px=(event.clientX-rect.left)/rect.width,py=(event.clientY-rect.top)/rect.height;
+        state.view={x:state.view.x+state.view.w*px*(1-scale),y:state.view.y+state.view.h*py*(1-scale),w:state.view.w*scale,h:state.view.h*scale};viewBox()
+      },{passive:false});
+      let drag=null;$('map').addEventListener('pointerdown',event=>{drag={x:event.clientX,y:event.clientY,view:{...state.view}};$('map').setPointerCapture(event.pointerId)});
+      $('map').addEventListener('pointermove',event=>{if(!drag)return;const rect=$('map').getBoundingClientRect();state.view={...drag.view,x:drag.view.x-(event.clientX-drag.x)/rect.width*drag.view.w,y:drag.view.y-(event.clientY-drag.y)/rect.height*drag.view.h};viewBox()});
+      $('map').addEventListener('pointerup',()=>{drag=null});$('map').addEventListener('pointercancel',()=>{drag=null});viewBox();updateTerritories()
+    }
+    $('corridor').addEventListener('change',()=>state.data&&updateTerritories());$('territory').addEventListener('change',()=>{if(state.data){focusTerritory();render()}});
+    $('year').addEventListener('input',()=>state.data&&render());$('location-search').addEventListener('input',event=>suggest(event.currentTarget.value));
+    $('location-search').addEventListener('keydown',event=>{if(event.key==='Enter'&&state.data)consultLocation()});
+    $('search-button').addEventListener('click',()=>state.data&&consultLocation());
+    $('reset-view').addEventListener('click',focusTerritory);
+    load().catch(error=>{$('status').textContent=`Error: ${error.message}`});
+  </script>
+</body>
+</html>

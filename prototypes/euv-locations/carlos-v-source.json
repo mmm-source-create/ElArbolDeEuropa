@@ -611,6 +611,20 @@
           "oldIds": []
         }
       ]
+    },
+    {
+      "territory": "Señorío de Cuijk",
+      "group": "burgundian",
+      "from": 1509,
+      "through": 1555,
+      "condition": "señorío superior",
+      "scope": "Investidura atribuida a 1509; administración empeñada a los Egmond desde 1517 hasta 1549",
+      "versions": [
+        {
+          "from": 1509,
+          "oldIds": []
+        }
+      ]
     }
   ]
 }

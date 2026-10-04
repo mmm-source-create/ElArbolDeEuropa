@@ -1277,6 +1277,23 @@
           "borderline": []
         }
       ]
+    },
+    {
+      "territory": "Señorío de Cuijk",
+      "group": "burgundian",
+      "from": 1509,
+      "through": 1555,
+      "condition": "señorío superior",
+      "scope": "Investidura atribuida a 1509; administración empeñada a los Egmond desde 1517 hasta 1549",
+      "versions": [
+        {
+          "from": 1509,
+          "ids": [
+            "Cuijk"
+          ],
+          "borderline": []
+        }
+      ]
     }
   ],
   "overrides": [
@@ -1538,8 +1555,17 @@
       "action": "remove",
       "from": 1506,
       "through": 1555,
-      "reason": "Cuijk was a distinct lordship. Carlos V was its lord by the mid-16th century, but the accession date is not established here; omit this location from Brabant until its own dated jurisdiction is modelled.",
-      "source": "https://www.bhic.nl/ontdekken/verhalen/cuijkse-heggenleggers-en-kartuizers-in-het-midden-van-de-zestiende-eeuw"
+      "reason": "Keep the Land van Cuijk as its own lordship. It was administered by the Egmond pledge-holders from 1517 and only incorporated into Brabant in 1549; neither tenure nor incorporation makes its local title identical to Brabant throughout the period.",
+      "source": "https://www.canonvannederland.nl/nl/noord-brabant/grave/keteltje"
+    },
+    {
+      "territory": "Señorío de Cuijk",
+      "id": "Cuijk",
+      "action": "add",
+      "from": 1509,
+      "through": 1555,
+      "reason": "Charles was recognised as lord from 1509 in the supplied chronology. The title and superior authority continue through the 1517 pledge to the Egmond family; this color does not assert direct administration until the pledge ended in 1549. The 1509 investiture year still needs primary confirmation.",
+      "source": "https://nl.wikipedia.org/wiki/Land_van_Cuijk_(heerlijkheid)"
     }
   ],
   "audit": {

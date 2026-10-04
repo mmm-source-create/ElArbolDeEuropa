@@ -28,7 +28,7 @@ def overrides():
                "Condado de Borgoña", "Luxemburgo"}
     result = []
     for item in inherited:
-        if item["territory"] not in earlier | {"Utrecht", "Tournaisis"}:
+        if item["territory"] not in earlier | {"Utrecht", "Tournaisis", "Señorío de Cuijk"}:
             continue
         changed = dict(item)
         if item["territory"] in earlier:

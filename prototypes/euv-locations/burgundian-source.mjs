@@ -62,6 +62,9 @@ const people = succession.map(({ id, from, through }) => {
   }
   if (id === 'CARLOS5') governments.push({ territory: 'Tournaisis', from: 1521,
     through, condition: 'local-supplement', versions: [{ from: 1521, oldIds: [] }] });
+  if (id === 'CARLOS5') governments.push({ territory: 'Señorío de Cuijk', from: 1509,
+    through, condition: 'señorío superior; empeñado a los Egmond desde 1517 hasta 1549',
+    versions: [{ from: 1509, oldIds: [] }] });
   return { id, name: person.nombre, from, through, governments,
     status: id === 'FEL1CAST' ? [
       { from: 1482, through: 1493, label: 'Heredero menor; gobierno ejercido mediante regencias' },
