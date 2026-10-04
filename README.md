@@ -5,6 +5,8 @@ Atlas histórico y genealógico para explorar personas, dinastías, territorios 
 - [Web](https://www.treeofeurope.eu/es/) · Versión del repositorio: **V4.8**
 - [Cambios de V4.8](docs/V4.8.md) · [Documentación e historial](docs/README.md) · [Próximos pasos cartográficos](docs/V4.8_PROPUESTAS.md) · [Seguridad](SECURITY.md)
 
+El [laboratorio paralelo EU V Locations](prototypes/euv-locations/README.md) compara el mapa actual de Provinces con una exportación recortada a Europa–Urales, norte de África y Oriente Próximo. Es un prototipo de investigación: el Atlas público conserva su cartografía y sus correspondencias territoriales.
+
 La V4.8 revisa Baviera y sus particiones, completa la secuencia del Palatinado electoral y separa Pfalz-Neuburg. La herencia Jülich–Cléveris–Berg–Mark–Ravensberg muestra la unión de 1511/1521 y el reparto de 1614; el mapa usa solo los polígonos que puede atribuir prudentemente. Francia deja de absorber Artois y Flandes antes de tiempo. La [revisión y sus límites](docs/V4.8.md) explican por qué Mark, Ravensberg y varios tramos de Flandes no se colorean como si el SVG contuviera fronteras feudales exactas.
 
 La V4.7 completa la sucesión de Tirol entre 1595 y 1665 separando autoridad familiar, gobierno delegado, regencia y titularidad. Pulsar una región del mapa abre un inspector con la entidad, su gobernante registrado para el año, el título, la fuente individual y el límite de precisión cartográfica. La nueva auditoría señala años sin autoridad, solapamientos inexplicados y gobiernos que colorean regiones sin fuente específica; [su informe](docs/V4.7.md) delimita el alcance de los hallazgos. Los filtros explican por qué territorio imperial, círculo imperial y gobierno Habsburgo son relaciones distintas.
