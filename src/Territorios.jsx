@@ -23,7 +23,16 @@ export const REINO_A_IDS = {
   Carintia: ["Upper_Carinthia", "Lower_Carinthia"],
   Tirol: ["Oberinntal", "Unterinntal", "South_Tirol"],
 
-  Baviera: ["Main_Franconia", "Frankenwald", "Tauberfranken", "Franconian_Alb", "Swabian_Alb", "Eastern_Upper_Swabia", "Western_Upper_Swabia"],
+  // Núcleo regional conservador de la Vieja Baviera. Franconia, Suabia,
+  // Salzburgo, Tirol y Carintia no eran partes del ducado por vecindad.
+  Baviera: ["Munchner_Schotterebene", "Donau_Moos", "Gauboden", "Bayerischer_Wald", "Chiemgau", "Alpenvorland"],
+  Palatinado: ["Palatinate"],
+  "Palatinado-Neoburgo": [], // El SVG no separa Neuburg del Donau_Moos mixto.
+  "Jülich": ["Julich"],
+  "Berg": ["Bergisches_Land"],
+  "Cléveris": ["Niederrhein"],
+  "Mark": [], // Sauerland y Ruhr no equivalen al condado completo.
+  "Ravensberg": [], // Lippe es otro señorío, no Ravensberg.
 
   Luxemburgo: ["East_Luxembourg", "West_Luxembourg"],
 
@@ -68,7 +77,7 @@ export const REINO_A_IDS = {
 
   Portugal: ["Minho", "Tras_Os_Montes", "Beira_Alta", "Beira_Litoral", "Beira_Baixa", "Estremadura", "Alto_Alentejo", "Baixo_Alentejo", "Algarve", "Ribatejo"],
 
-  Francia: ["Narbonnais","Razes","Foix","Comminges","Armagnac","Tursan","Bearn_Bigorre","Bayonne","Bazadais","Perigord","Bordelais","Saintonge","Lower_Poitou","Anjou","Ebroicien","Caennais","Lower_Maine","Upper_Maine","Cotentin","Rouennais","Caux","Nantais","Vannetais","Ploermel","Rennais","Tregor","Cornouaille","Touraine","Upper_Poitou","Lower_Berry","La_Marche","Limousin","Turenne","Quercy","Angouleme","Agenais","Toulousain","Castres","Rouergue","Nimois","Gevaudan","Vivarais","Upper_Auvergne","Lower_Auvergne","Lyonnais","Combraille","Bourbon","Upper_Berry","Blois","Orleanais","Perche","Chartrain","Pays_France","Gatinais","Senonais","Auxerrois","Nevernais","Autunnais","Beaujolais","Ponthieu","Beauvaisis","Amienois","Vermandois","Soissonais","Brie_Champenois","Remois","Champagne","Perthois","Upper_Artois","Roman_Flanders"],
+  Francia: ["Narbonnais","Razes","Foix","Comminges","Armagnac","Tursan","Bearn_Bigorre","Bayonne","Bazadais","Perigord","Bordelais","Saintonge","Lower_Poitou","Anjou","Ebroicien","Caennais","Lower_Maine","Upper_Maine","Cotentin","Rouennais","Caux","Nantais","Vannetais","Ploermel","Rennais","Tregor","Cornouaille","Touraine","Upper_Poitou","Lower_Berry","La_Marche","Limousin","Turenne","Quercy","Angouleme","Agenais","Toulousain","Castres","Rouergue","Nimois","Gevaudan","Vivarais","Upper_Auvergne","Lower_Auvergne","Lyonnais","Combraille","Bourbon","Upper_Berry","Blois","Orleanais","Perche","Chartrain","Pays_France","Gatinais","Senonais","Auxerrois","Nevernais","Autunnais","Beaujolais","Ponthieu","Beauvaisis","Amienois","Vermandois","Soissonais","Brie_Champenois","Remois","Champagne","Perthois"],
 
   Bretaña: ["Tregor", "Cornouaille", "Vannetais"],
 
@@ -160,6 +169,11 @@ export const REINO_COLOR = {
   Carintia: '#A64D5A',
   Tirol: '#996342',
   Baviera: '#69c4c4',
+  Palatinado: '#b39364',
+  'Palatinado-Neoburgo': '#ad8664',
+  Cléveris: '#6b8a9c',
+  Mark: '#8d7658',
+  Ravensberg: '#8d7658',
   Luxemburgo: '#8E8B29',
   Bizancio: '#6A8E29',
   Lituania: '#43298E',
@@ -488,7 +502,8 @@ Inglaterra: [
     { desde: -Infinity, hasta: 1462, ids: REINO_A_IDS.Francia },
     { desde: 1462, hasta: 1493, ids: [...REINO_A_IDS.Francia,"Rosello"] },
     { desde: 1493, hasta: 1659, ids: REINO_A_IDS.Francia },
-    { desde: 1659, hasta: Infinity, ids: [...REINO_A_IDS.Francia,"Rosello"] },
+    { desde: 1659, hasta: 1678, ids: [...REINO_A_IDS.Francia,"Rosello"] },
+    { desde: 1678, hasta: Infinity, ids: [...REINO_A_IDS.Francia,"Rosello",...REINO_A_IDS.Artois,"Roman_Flanders"] },
   ],
   Milán: [
     { desde: -Infinity, hasta: 1428, ids: [...REINO_A_IDS.Milán,"Bergamo","Brescia"] },
@@ -622,14 +637,28 @@ Inglaterra: [
   Baviera: [
     {
       desde: -Infinity,
-      hasta: 1400, // ANTES DE LA PARTICIÓN
-      ids: ["Munchner_Schotterebene","Donau_Moos","Oberpfalzer_Wald","Bayerischer_Wald","Gauboden","Chiemgau","Alpenvorland","Franconian_Alb","Schaunberg"],
+      hasta: 1628,
+      ids: REINO_A_IDS.Baviera,
     },
     {
-      desde: 1400,
-      hasta: Infinity, // FALTA POR HACER
-      ids: REINO_A_IDS.Baviera, // aproximación neutra hasta completar la partición histórica
+      desde: 1628,
+      hasta: Infinity,
+      ids: [...REINO_A_IDS.Baviera, "Oberpfalzer_Wald"],
     },
+  ],
+  Palatinado: [
+    { desde: -Infinity, hasta: 1628, ids: ["Palatinate", "Oberpfalzer_Wald"] },
+    { desde: 1628, hasta: Infinity, ids: ["Palatinate"] },
+  ],
+  // Estos polígonos son indivisibles; entre 1659 y 1678 Artois y Flandes
+  // romanés estaban partidos. No atribuimos la región entera a un soberano.
+  Artois: [
+    { desde: -Infinity, hasta: 1659, ids: REINO_A_IDS.Artois },
+    { desde: 1659, hasta: Infinity, ids: [] },
+  ],
+  Flandes: [
+    { desde: -Infinity, hasta: 1659, ids: REINO_A_IDS.Flandes },
+    { desde: 1659, hasta: Infinity, ids: ["West_Flanders", "East_Flanders"] },
   ],
 
   Polonia: [
@@ -689,6 +718,29 @@ export function idsDeReinoEnAño(reino, año) {
   // no la versión futura más reciente de toda la serie.
   const anterior = [...ordenadas].reverse().find((version) => version.desde <= año);
   return anterior?.ids ?? base;
+}
+
+// La división dinástica de 1392 no se puede inferir a partir del nombre
+// «Baviera» solamente. Usamos la rama de la ficha; los polígonos mixtos
+// quedan sin atribución antes de la reunión de 1505.
+export function idsDeGobiernoEnAño(gobierno, año, personaId = '') {
+  if (!gobierno) return [];
+  if (gobierno.territorio !== 'Baviera') return idsDeReinoEnAño(gobierno.territorio, año);
+  if (/Leuchtenberg/.test(gobierno.ambito || '')) return [];
+  // Las particiones anteriores a 1392 tampoco equivalen al ducado entero.
+  if (año < 1392 && gobierno.condicion === 'rama') return [];
+  if (año >= 1505 || gobierno.condicion !== 'rama') return idsDeReinoEnAño('Baviera', año);
+  const munich = new Set(['JUAN2BAV','ERNESTBAV','GUILLERMO3BAV','ALB3BAV','JUAN4BAV','SIGISBAV','ALB4BAV']);
+  const straubing = new Set(['GUILLERMO1BAV','ALB1BAV','ALB2BAV','GUILLERMO2BAV','JUAN3BAV']);
+  const ingolstadt = new Set(['ESTEBAN3BAV','LUIS7BAV','LUIS8BAV']);
+  const landshut = new Set(['FED1BAV','ENRIQ16BAV','LUIS9BAV','JORGE1BAV']);
+  // La herencia de Straubing de 1429 partió Gauboden y el bosque bávaro
+  // entre Múnich y Landshut; no se asigna el polígono entero a ninguno.
+  if (munich.has(personaId)) return ['Munchner_Schotterebene'];
+  if (straubing.has(personaId)) return ['Gauboden'];
+  if (ingolstadt.has(personaId)) return ['Donau_Moos'];
+  if (landshut.has(personaId)) return año >= 1447 ? ['Donau_Moos'] : [];
+  return [];
 }
 
 // ---------------------------------------------------------------------------
@@ -751,7 +803,7 @@ export const TERRITORIOS_SUB = {
     "Alemania", "Austria", "Austria Interior", "Baviera", "Bohemia",
     "Condado de Borgoña", "Brabante", "Carintia", "Cléveris", "Flandes", "Habsburgo",
     "Henao", "Holanda", "Zelanda", "Limburgo", "Lorena", "Luxemburgo", "Milán",
-    "Monferrato", "Saluzzo", "Moravia", "Nassau", "Países Bajos", "Palatinado",
+    "Monferrato", "Saluzzo", "Moravia", "Nassau", "Países Bajos", "Palatinado", "Palatinado-Neoburgo", "Ravensberg",
     "Piamonte", "Saboya", "Sajonia", "Silesia", "Suabia", "Tirol",
     "Turingia", "Württemberg", "Pomerania", "Jülich", "Berg",
     "Hesse-Kassel", "Hesse-Darmstadt", "Baden", "Brunswick", "Mecklemburgo", "Oldemburgo", "Mark",

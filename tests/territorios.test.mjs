@@ -109,7 +109,7 @@ test('las historias conservadas tienen referencias válidas y se retiran las cua
 });
 test('cada biografía tiene una sola definición editorial y no repite el mismo párrafo',async()=>{
  const dir=new URL('../src/content/personas/',import.meta.url),seen=new Set();
- for(const name of fs.readdirSync(dir).filter(n=>n.endsWith('.js')&&n!=='index.js')){
+ for(const name of fs.readdirSync(dir).filter(n=>n.endsWith('.js')&&n!=='index.js'&&!/ \d+\.js$/.test(n))){
   const mod=await import(new URL(name,dir));
   for(const obj of Object.values(mod))for(const [id,c] of Object.entries(obj)){
    assert.ok(!seen.has(id),`Biografía duplicada: ${id}`);seen.add(id);

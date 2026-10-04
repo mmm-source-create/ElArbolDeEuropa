@@ -22,7 +22,7 @@ export const PRINCIPADOS_DUCADOS = Object.freeze({
     resumen: "Último duque de Jülich-Cléveris-Berg de su línea. Su muerte sin hijos en 1609 abrió una disputa sucesoria que involucró a Brandeburgo, Palatinado-Neuburg y las grandes potencias vecinas."
   },
   WOLFGANGWILHELMNEUBURG: {
-    resumen: "Príncipe de Palatinado-Neuburg y uno de los principales herederos de la crisis de Jülich. La partición de la herencia renana reforzó a su rama en Jülich y Berg frente a Brandeburgo."
+    resumen: "Hijo de Felipe Luis y Ana de Jülich-Cléveris-Berg, obtuvo Jülich y Berg en el reparto provisional de Xanten de 1614. Cléveris, Mark y Ravensberg correspondieron a Brandeburgo."
   },
   GEORGEWILLIAMCELLE: {
     resumen: "Duque de Brunswick-Lüneburg en la rama de Celle. Su hija Sofía Dorotea enlazó esta línea con Hannover, una conexión dinástica decisiva para la futura sucesión británica."
