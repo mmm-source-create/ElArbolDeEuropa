@@ -25,6 +25,12 @@ def burgundian_jurisdictions(first_year, last_year):
     """Reuse the dated succession audit, keeping each lordship separate."""
     mapped = json.loads((HERE / "burgundian-locations.json").read_text())
     source = json.loads((HERE / "burgundian-source.json").read_text())
+    if [person["id"] for person in mapped["people"]] != [person["id"] for person in source["people"]]:
+        raise ValueError("Burgundian source and geometry have different people")
+    for mapped_person, source_person in zip(mapped["people"], source["people"]):
+        if [government["territory"] for government in mapped_person["governments"]] != [
+                government["territory"] for government in source_person["governments"]]:
+            raise ValueError(f"Burgundian governments differ for {mapped_person['id']}")
     names = sorted({government["territory"] for person in mapped["people"]
                     for government in person["governments"]})
     territories = []

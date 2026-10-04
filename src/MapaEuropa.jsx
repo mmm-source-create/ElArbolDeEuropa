@@ -126,7 +126,8 @@ export function MapaEuropa({ seleccion, anioGlobal = null, onSelectTerritorio, o
     && reinadosActivos(seleccion, anioGlobal, { soloEfectivos: true })
       .some((gobierno) => gobierno.territorio === 'Sacro Imperio'));
   const imperialReferenceActive = !labMode && hasImperialOffice && imperialFrameIds(anioGlobal).length > 0;
-  const labImperialReferenceActive = labMode && hasImperialOffice && Number.isInteger(anioGlobal);
+  const labImperialReferenceActive = labMode && hasImperialOffice && Number.isInteger(anioGlobal)
+    && anioGlobal >= 1512 && anioGlobal <= 1650;
 
   useEffect(() => {
     if (!containerRef.current) return;
