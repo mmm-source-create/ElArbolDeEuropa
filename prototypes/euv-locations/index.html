@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Laboratorio EU V Locations · El Árbol de Europa</title>
+  <style>
+    :root { color-scheme: light; font: 16px/1.45 system-ui, sans-serif; background:#282521; color:#f4ede1; }
+    * { box-sizing:border-box; }
+    body { margin:0; padding:24px; }
+    h1 { font: 2.2rem/1.1 Georgia,serif; margin:.2em 0; }
+    p { max-width:75ch; color:#d2c7b7; }
+    header, .controls, .metrics, .maps, footer { max-width:1800px; margin-inline:auto; }
+    .controls { display:flex; gap:14px; align-items:end; flex-wrap:wrap; padding:18px; border:1px solid #726959; border-radius:12px; background:#332e29; margin-block:20px; }
+    label { display:grid; gap:5px; font-weight:700; }
+    input, button { font:inherit; border:1px solid #ab9c83; border-radius:7px; padding:9px 12px; }
+    input { min-width:min(95vw,320px); background:#f9f5eb; color:#282521; }
+    button { background:#5a4c3f; color:#fff8ed; cursor:pointer; }
+    button:hover, button:focus-visible { outline:2px solid #efd59e; outline-offset:2px; }
+    button.active { background:#863d3d; }
+    .samples { display:flex; flex-wrap:wrap; gap:7px; align-items:center; }
+    .samples span { color:#d2c7b7; }
+    .metrics { display:flex; flex-wrap:wrap; gap:16px; color:#dacfbf; margin-block:10px; }
+    .maps { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:18px; }
+    .panel { border:1px solid #726959; border-radius:12px; overflow:hidden; background:#f9f5eb; color:#282521; }
+    .panel h2 { margin:0; padding:12px 15px; background:#403a33; color:#f4ede1; font-size:1.1rem; }
+    .panel small { display:block; padding:0 15px 12px; background:#403a33; color:#d7cdbb; }
+    .map { height:min(68vh,750px); overflow:hidden; cursor:grab; touch-action:none; }
+    .map:active { cursor:grabbing; }
+    .map > svg { display:block; width:100%; height:100%; }
+    .map path[id] { cursor:crosshair; }
+    .map path[id].selected-location { fill:#953f3c !important; stroke:#953f3c !important; stroke-width:.2 !important; }
+    .info { padding:12px 15px; border-top:1px solid #d6cbbb; min-height:50px; }
+    code { color:#f2c795; }
+    footer { padding-block:20px; font-size:.9rem; }
+    footer a { color:#f2c795; }
+    @media (max-width:900px) { body{padding:12px} .maps{grid-template-columns:1fr} .map{height:55vh} }
+  </style>
+</head>
+<body>
+  <header>
+    <p>Prototipo paralelo · sin sustituir el mapa del Atlas</p>
+    <h1>EU V Provinces ↔ EU V Locations</h1>
+    <p>Los dos mapas usan el mismo encuadre geográfico. Busca un ID o pulsa una zona para comparar la escala de las geometrías. Coincidir en el nombre no prueba que las fronteras históricas sean equivalentes.</p>
+    <p><a href="./carlos-v.html" style="color:#f2c795">Abrir el primer ensayo histórico: dominios de Carlos V, 1506–1555 →</a></p>
+    <p><a href="./burgundian-succession.html" style="color:#f2c795">Seguir la sucesión borgoñona: de Felipe el Bueno a Carlos V, 1419–1555 →</a></p>
+    <p><a href="./territorial-corridors.html" style="color:#f2c795">Examinar 39 jurisdicciones de Iberia, Italia, Centroeuropa y Polonia–Lituania, 1400–1650 →</a></p>
+  </header>
+  <div class="controls">
+    <label>Buscar ID de una location <input id="location-search" list="location-ids" placeholder="Venice, Milano, Madrid…" autocomplete="off"></label>
+    <datalist id="location-ids"></datalist>
+    <button type="button" id="search-button">Resaltar</button>
+    <button type="button" id="reset-button">Restablecer encuadre</button>
+    <div class="samples"><span>Ejemplos:</span><button type="button" data-id="Venice">Venice</button><button type="button" data-id="Milano">Milano</button><button type="button" data-id="Madrid">Madrid</button><button type="button" data-id="Baghdad">Baghdad</button></div>
+  </div>
+  <div class="metrics" aria-live="polite" id="metrics">Cargando ambos mapas…</div>
+  <main class="maps">
+    <section class="panel">
+      <h2>Mapa actual: Provinces</h2>
+      <small>El que usa el Atlas; no se modifica.</small>
+      <div class="map" id="old-map" aria-label="Mapa actual de provincias"></div>
+      <div class="info" id="old-info" aria-live="polite">Pulsa una provincia para consultar su ID.</div>
+    </section>
+    <section class="panel">
+      <h2>Prototipo: Locations recortado</h2>
+      <small>Europa–Urales · norte de África · Oriente Próximo. Sin bordes entre locations.</small>
+      <div class="map" id="new-map" aria-label="Mapa prototipo de locations"></div>
+      <div class="info" id="new-info" aria-live="polite">Pulsa una location para consultar su ID.</div>
+    </section>
+  </main>
+  <footer>
+    <p>Rueda o pellizco para ampliar; arrastra para desplazarte. La selección por ID está disponible con teclado mediante el buscador. La asignación de jurisdicciones y fechas queda pendiente de revisión histórica, no se deduce del nombre.</p>
+    <p>Geometría de <a href="https://www.mapchart.net/eu-v-locations.html">MapChart</a>; exportación atribuida a MapChart bajo <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>. Prototipo de investigación.</p>
+  </footer>
+  <script type="module">
+    const FRAME={x:475,y:15,w:315,h:240};
+    const state={old:null,new:null,selected:null,view:{...FRAME}};
+    const $=id=>document.getElementById(id);
+    const fmt=n=>new Intl.NumberFormat('es').format(n);
+    function suggest(query){
+      const list=$('location-ids');list.replaceChildren();
+      if(!state.new)return;
+      const needle=query.trim().toLocaleLowerCase('es');
+      if(!needle)return;
+      let count=0;
+      for(const id of state.new.ids.keys()){
+        if(!id.toLocaleLowerCase('es').includes(needle))continue;
+        const option=document.createElement('option');option.value=id;list.append(option);
+        if(++count===40)break;
+      }
+    }
+    function viewBox(){
+      for(const key of ['old','new']) state[key]?.svg.setAttribute('viewBox',`${state.view.x} ${state.view.y} ${state.view.w} ${state.view.h}`);
+    }
+    function setInfo(key,id){$(key+'-info').textContent=id?`ID: ${id}`:'Sin selección';}
+    function select(id,source='search'){
+      state.selected=id;
+      $('location-search').value=id||'';
+      for(const key of ['old','new']){
+        const item=state[key]; if(!item)continue;
+        item.svg.querySelectorAll('.selected-location').forEach(p=>p.classList.remove('selected-location'));
+        const path=item.ids.get(id);
+        if(path)path.classList.add('selected-location');
+        setInfo(key,path?id:`${id}: sin ID idéntico en ${key==='old'?'Provinces':'Locations'}`);
+      }
+      if(source==='search'&&!state.new?.ids.has(id))$('new-info').textContent=`${id}: no existe en el recorte`;
+    }
+    async function load(key,url){
+      const start=performance.now();
+      const response=await fetch(url);
+      if(!response.ok)throw new Error(`${url}: ${response.status}`);
+      const text=await response.text();
+      // The current export lacks an xmlns on its outer element. DOMParser
+      // otherwise creates a generic XML element, which ignores viewBox.
+      const normalized=key==='old'?text.replace(/<svg\b/, '<svg xmlns="http://www.w3.org/2000/svg"'):text;
+      const doc=new DOMParser().parseFromString(normalized,'image/svg+xml');
+      if(doc.querySelector('parsererror'))throw new Error(`SVG no válido: ${url}`);
+      const svg=doc.documentElement;
+      // Metadata is kept in the source file, but some HTML renderers expose
+      // its text when the parsed SVG is inserted directly into the page.
+      svg.querySelector('metadata')?.remove();
+      svg.querySelector('#legend-svg')?.remove();
+      svg.removeAttribute('width');svg.removeAttribute('height');
+      svg.setAttribute('preserveAspectRatio','xMidYMid meet');
+      svg.setAttribute('role','img');
+      svg.setAttribute('aria-label',key==='new'?'Mapa EU V Locations recortado':'Mapa EU V Provinces actual');
+      const ids=new Map([...svg.querySelectorAll('#map > path[id]')].map(path=>[path.id,path]));
+      const target=$(key+'-map');target.replaceChildren(svg);
+      state[key]={svg,ids,bytes:new TextEncoder().encode(text).length,parseMs:performance.now()-start};
+      target.addEventListener('click',event=>{const path=event.target.closest('path[id]');if(path)select(path.id,key);});
+      target.addEventListener('wheel',event=>{
+        event.preventDefault();
+        const scale=event.deltaY>0?1.12:1/1.12;
+        const rect=target.getBoundingClientRect();
+        const px=(event.clientX-rect.left)/rect.width,py=(event.clientY-rect.top)/rect.height;
+        state.view={x:state.view.x+state.view.w*px*(1-scale),y:state.view.y+state.view.h*py*(1-scale),w:state.view.w*scale,h:state.view.h*scale};
+        viewBox();
+      },{passive:false});
+      let drag=null;
+      target.addEventListener('pointerdown',event=>{drag={x:event.clientX,y:event.clientY,view:{...state.view}};target.setPointerCapture(event.pointerId);});
+      target.addEventListener('pointermove',event=>{
+        if(!drag)return;
+        const rect=target.getBoundingClientRect();
+        state.view={...drag.view,x:drag.view.x-(event.clientX-drag.x)/rect.width*drag.view.w,y:drag.view.y-(event.clientY-drag.y)/rect.height*drag.view.h};viewBox();
+      });
+      target.addEventListener('pointerup',()=>{drag=null;});
+      target.addEventListener('pointercancel',()=>{drag=null;});
+      viewBox();
+    }
+    Promise.all([load('old','../../src/MapChart_Map.svg'),load('new','./euv-locations-crop.svg')]).then(()=>{
+      const exact=[...state.old.ids.keys()].filter(id=>state.new.ids.has(id)).length;
+      $('metrics').textContent=`Provinces: ${fmt(state.old.ids.size)} polígonos · ${(state.old.bytes/1e6).toFixed(2)} MB. Locations recortado: ${fmt(state.new.ids.size)} polígonos · ${(state.new.bytes/1e6).toFixed(2)} MB. IDs idénticos en este encuadre: ${fmt(exact)} (candidatos, sin equivalencia histórica validada). Carga local orientativa: ${state.old.parseMs.toFixed(0)} / ${state.new.parseMs.toFixed(0)} ms.`;
+      suggest($('location-search').value);
+    }).catch(error=>{$('metrics').textContent=`Error al cargar mapas: ${error.message}`;});
+    $('location-search').addEventListener('input',event=>suggest(event.currentTarget.value));
+    $('search-button').addEventListener('click',()=>select($('location-search').value.trim()));
+    $('location-search').addEventListener('keydown',event=>{if(event.key==='Enter')select(event.currentTarget.value.trim());});
+    $('reset-button').addEventListener('click',()=>{state.view={...FRAME};viewBox();});
+    document.querySelectorAll('[data-id]').forEach(button=>button.addEventListener('click',()=>select(button.dataset.id)));
+  </script>
+</body>
+</html>

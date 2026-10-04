@@ -10,7 +10,11 @@ import {
   X,
 } from "lucide-react";
 import mapSvgUrl from "./MapChart_Map.svg?url";
-import { loadTextAsset, forgetTextAsset } from "./utils/loadAsset.js";
+import locationsSvgUrl from "../prototypes/euv-locations/euv-locations-crop.svg?url";
+import locationsDataUrl from "../prototypes/euv-locations/corridor-locations.json?url";
+import burgundianDataUrl from "../prototypes/euv-locations/burgundian-locations.json?url";
+import { loadTextAsset, loadJsonAsset, forgetTextAsset } from "./utils/loadAsset.js";
+import { pilotBurgundianGovernmentsFor, pilotLocationContext, pilotLocationsFor } from "./data/locationMapPilot.js";
 import { imperialFrameIds } from "./data/imperialFrame.js";
 import { buildPoliticalMapIndex, inspectMapRegion } from "./data/politicalMapIndex.js";
 import { PERSONAS } from "./personas.jsx";
@@ -57,10 +61,10 @@ function initialViewBox(original) {
   };
 }
 
-function clampViewBox(box, original) {
+function clampViewBox(box, original, minVisibleRatio = MAP_MIN_VISIBLE_RATIO) {
   if (!original) return box;
   const aspect = original.width / original.height;
-  const minWidth = original.width * MAP_MIN_VISIBLE_RATIO;
+  const minWidth = original.width * minVisibleRatio;
   const requestedCenterX = box.x + box.width / 2;
   const requestedCenterY = box.y + box.height / 2;
   let width = Math.max(minWidth, Math.min(original.width, box.width));
@@ -93,7 +97,7 @@ function viewBoxString(box) {
 // El mapa solo reacciona al CLIC (a `seleccion`), no al hover. El movimiento
 // y el zoom alteran únicamente el viewBox del SVG: no interfieren con el
 // coloreado imperativo de los territorios.
-export function MapaEuropa({ seleccion, anioGlobal = null, onSelectTerritorio, onSelectPersona, initialViewport = null, onViewportChange }) {
+export function MapaEuropa({ seleccion, anioGlobal = null, onSelectTerritorio, onSelectPersona, initialViewport = null, onViewportChange, labMode = false }) {
   const containerRef = useRef(null);
   const svgInyectadoRef = useRef(false);
   const pintadosRef = useRef(new Set());
@@ -106,10 +110,14 @@ export function MapaEuropa({ seleccion, anioGlobal = null, onSelectTerritorio, o
   const [mapError, setMapError] = useState(false);
   const [mapAttempt, setMapAttempt] = useState(0);
   const [selectedRegionId, setSelectedRegionId] = useState(null);
-  const politicalIndex = useMemo(() => selectedRegionId && Number.isInteger(anioGlobal)
-    ? buildPoliticalMapIndex(PERSONAS, anioGlobal) : new Map(), [selectedRegionId, anioGlobal]);
-  const inspectedRegion = selectedRegionId && Number.isInteger(anioGlobal)
+  const [pilotData, setPilotData] = useState(null);
+  const mapAssetUrl = labMode ? locationsSvgUrl : mapSvgUrl;
+  const politicalIndex = useMemo(() => !labMode && selectedRegionId && Number.isInteger(anioGlobal)
+    ? buildPoliticalMapIndex(PERSONAS, anioGlobal) : new Map(), [labMode, selectedRegionId, anioGlobal]);
+  const inspectedRegion = !labMode && selectedRegionId && Number.isInteger(anioGlobal)
     ? inspectMapRegion(selectedRegionId, anioGlobal, politicalIndex) : null;
+  const pilotContext = labMode && selectedRegionId && Number.isInteger(anioGlobal)
+    ? pilotLocationContext(pilotData, selectedRegionId, anioGlobal, seleccion?.id) : [];
   const selectedPersonEntries = inspectedRegion?.entries.filter(entry => entry.person?.id === seleccion?.id) || [];
   const otherRegionEntries = inspectedRegion?.entries.filter(entry => entry.person?.id !== seleccion?.id) || [];
   const activeGroups = seleccion && Number.isFinite(anioGlobal)
@@ -117,14 +125,19 @@ export function MapaEuropa({ seleccion, anioGlobal = null, onSelectTerritorio, o
   const hasImperialOffice = Boolean(seleccion && Number.isFinite(anioGlobal)
     && reinadosActivos(seleccion, anioGlobal, { soloEfectivos: true })
       .some((gobierno) => gobierno.territorio === 'Sacro Imperio'));
-  const imperialReferenceActive = hasImperialOffice && imperialFrameIds(anioGlobal).length > 0;
+  const imperialReferenceActive = !labMode && hasImperialOffice && imperialFrameIds(anioGlobal).length > 0;
 
   useEffect(() => {
-    if (!containerRef.current || svgInyectadoRef.current) return;
+    if (!containerRef.current) return;
 
     let cancelled = false;
+    svgInyectadoRef.current = false;
+    setMapReady(false);
     setMapError(false);
-    loadTextAsset(mapSvgUrl).then(mapSvgContent => {
+    setPilotData(null);
+    setSelectedRegionId(null);
+    Promise.all([loadTextAsset(mapAssetUrl), labMode ? loadJsonAsset(locationsDataUrl) : Promise.resolve(null),
+      labMode ? loadJsonAsset(burgundianDataUrl) : Promise.resolve(null)]).then(([mapSvgContent, locationData, burgundianData]) => {
     if (cancelled || !containerRef.current) return;
     containerRef.current.innerHTML = mapSvgContent;
     svgInyectadoRef.current = true;
@@ -132,18 +145,20 @@ export function MapaEuropa({ seleccion, anioGlobal = null, onSelectTerritorio, o
     const svg = containerRef.current.querySelector("svg");
     if (!svg) {
       svgInyectadoRef.current = false;
-      forgetTextAsset(mapSvgUrl);
+      forgetTextAsset(mapAssetUrl);
       throw new Error("Mapa no válido");
     }
 
     const original = parseViewBox(svg);
-    const initial = clampViewBox(initialViewBox(original), original);
+    const minRatio = labMode ? 0.015 : MAP_MIN_VISIBLE_RATIO;
+    const initial = labMode ? original : clampViewBox(initialViewBox(original), original);
     // Las sesiones V4.5 guardaron el encuadre mundial antiguo como si fuera
     // una preferencia. Solo ese valor exacto migra al nuevo inicio europeo.
     const legacyDefault = initialViewport
       && Math.abs(initialViewport.width - original.width / 1.9) < 0.01
       && Math.abs(initialViewport.height - original.height / 1.9) < 0.01;
-    const restored = initialViewport && !legacyDefault ? clampViewBox(initialViewport, original) : initial;
+    const restored = !labMode && initialViewport && !legacyDefault
+      ? clampViewBox(initialViewport, original, minRatio) : initial;
     originalViewBoxRef.current = original;
     initialViewBoxRef.current = initial;
 
@@ -156,14 +171,15 @@ export function MapaEuropa({ seleccion, anioGlobal = null, onSelectTerritorio, o
     svg.style.transform = "none";
     svg.setAttribute("viewBox", viewBoxString(restored));
     setViewBox(restored);
+    setPilotData(locationData ? { ...locationData, burgundy: burgundianData } : null);
     setMapReady(true);
     }).catch(() => { if (!cancelled) setMapError(true); });
     return () => { cancelled = true; };
-  }, [mapAttempt]);
+  }, [labMode, mapAssetUrl, mapAttempt]);
 
   useEffect(() => {
-    if (viewBox) onViewportChange?.(viewBox);
-  }, [viewBox, onViewportChange]);
+    if (viewBox && !labMode) onViewportChange?.(viewBox);
+  }, [viewBox, onViewportChange, labMode]);
 
   useEffect(() => {
     const svg = containerRef.current?.querySelector("svg");
@@ -173,7 +189,7 @@ export function MapaEuropa({ seleccion, anioGlobal = null, onSelectTerritorio, o
 
   useEffect(() => {
     const svg = containerRef.current?.querySelector("svg");
-    if (!svg) return;
+    if (!svg || (labMode && !pilotData)) return;
 
     const buscarElemento = (id) => {
       if (!id) return null;
@@ -208,7 +224,7 @@ export function MapaEuropa({ seleccion, anioGlobal = null, onSelectTerritorio, o
         });
       }
 
-      if (seleccion) {
+      if (seleccion && (!labMode || Number.isInteger(anioGlobal))) {
         const reinadosDetallados = listaReinados(seleccion).filter(reinadoEsEfectivo);
         const entradas = reinadosDetallados.length
           ? (Number.isFinite(anioGlobal)
@@ -235,36 +251,53 @@ export function MapaEuropa({ seleccion, anioGlobal = null, onSelectTerritorio, o
             : añoReferenciaTerritorial(seleccion, reino);
           const color = colorTerritorioEnMapa(seleccion, reino, año);
           // Una ficha con ámbito de rama no colorea todo el archiducado.
-          const ids = reino === 'Austria' && entrada.ambito?.includes('Austria Interior')
-            ? [...idsDeReinoEnAño('Austria Interior', año), ...(año >= 1619 ? idsDeReinoEnAño('Austria', año) : [])]
-            : idsDeGobiernoEnAño(entrada, año, seleccion.id);
+          const ids = labMode
+            ? (reino === 'Austria' && entrada.ambito?.includes('Austria Interior')
+              ? [...pilotLocationsFor(pilotData, 'Austria Interior', año), ...(año >= 1619 ? pilotLocationsFor(pilotData, 'Austria', año) : [])]
+              : pilotLocationsFor(pilotData, reino, año))
+            : (reino === 'Austria' && entrada.ambito?.includes('Austria Interior')
+              ? [...idsDeReinoEnAño('Austria Interior', año), ...(año >= 1619 ? idsDeReinoEnAño('Austria', año) : [])]
+              : idsDeGobiernoEnAño(entrada, año, seleccion.id));
           ids.forEach((id) => {
             const target = buscarElemento(id);
             if (!target) return;
             target.style.setProperty("fill", color, "important");
             target.style.setProperty("stroke", color, "important");
-            target.style.setProperty("stroke-width", "0.6px", "important");
+            if (!labMode) target.style.setProperty("stroke-width", "0.6px", "important");
             pintadosRef.current.add(id);
           });
         });
+        if (labMode) {
+          pilotBurgundianGovernmentsFor(pilotData, seleccion.id, anioGlobal).forEach(government => {
+            const color = government.condition === 'regencia' ? '#907085'
+              : colorTerritorioEnMapa(seleccion, 'Flandes', anioGlobal);
+            government.ids.forEach(id => {
+              const target = buscarElemento(id);
+              if (!target) return;
+              target.style.setProperty('fill', color, 'important');
+              target.style.setProperty('stroke', color, 'important');
+              pintadosRef.current.add(id);
+            });
+          });
+        }
       }
     } catch (error) {
       console.error("[MapaEuropa] Error al renderizar:", error);
     }
-  }, [seleccion, anioGlobal, mapReady, imperialReferenceActive]);
+  }, [seleccion, anioGlobal, mapReady, imperialReferenceActive, labMode, pilotData]);
 
   const updateViewBox = useCallback((producer) => {
     setViewBox((current) => {
       if (!current || !originalViewBoxRef.current) return current;
-      return clampViewBox(producer(current), originalViewBoxRef.current);
+      return clampViewBox(producer(current), originalViewBoxRef.current, labMode ? 0.015 : MAP_MIN_VISIBLE_RATIO);
     });
-  }, []);
+  }, [labMode]);
 
   const zoomBy = useCallback((factor) => {
     setViewBox((current) => {
       const original = originalViewBoxRef.current;
       if (!current || !original) return current;
-      const minWidth = original.width * MAP_MIN_VISIBLE_RATIO;
+      const minWidth = original.width * (labMode ? 0.015 : MAP_MIN_VISIBLE_RATIO);
       const targetWidth = Math.max(minWidth, Math.min(original.width, current.width * factor));
       if (Math.abs(targetWidth - current.width) < 0.0001) return current;
       const aspect = original.width / original.height;
@@ -276,9 +309,9 @@ export function MapaEuropa({ seleccion, anioGlobal = null, onSelectTerritorio, o
         y: centerY - targetHeight / 2,
         width: targetWidth,
         height: targetHeight,
-      }, original);
+      }, original, labMode ? 0.015 : MAP_MIN_VISIBLE_RATIO);
     });
-  }, []);
+  }, [labMode]);
 
   const panBy = useCallback((xRatio, yRatio) => {
     updateViewBox((current) => ({
@@ -325,7 +358,7 @@ export function MapaEuropa({ seleccion, anioGlobal = null, onSelectTerritorio, o
       x: drag.viewBox.x - deltaX * (drag.viewBox.width / Math.max(1, drag.rect.width)),
       y: drag.viewBox.y - deltaY * (drag.viewBox.height / Math.max(1, drag.rect.height)),
     };
-    setViewBox(clampViewBox(next, originalViewBoxRef.current));
+    setViewBox(clampViewBox(next, originalViewBoxRef.current, labMode ? 0.015 : MAP_MIN_VISIBLE_RATIO));
   };
 
   const selectRegionAt = (target) => {
@@ -387,8 +420,10 @@ export function MapaEuropa({ seleccion, anioGlobal = null, onSelectTerritorio, o
         <button type="button" className="nav-btn" onClick={() => panBy(0, MAP_PAN_STEP)} title="Mover mapa hacia abajo" aria-label="Mover mapa hacia abajo"><ArrowDown size={13} /></button>
         <button type="button" className="nav-btn" onClick={() => panBy(MAP_PAN_STEP, 0)} title="Mover mapa a la derecha" aria-label="Mover mapa a la derecha"><ArrowRight size={13} /></button>
       </div>
+      {labMode && <div className="mapa-lab-badge">EU V Locations · ensayo parcial</div>}
       {seleccion && <details className="mapa-color-legend">
         <summary>¿Por qué estos colores?</summary>
+        {labMode && <p>En este mapa experimental solo se colorean jurisdicciones ya trasladadas y años auditados. Elige un año concreto. El gris no significa ausencia de gobierno. Las fronteras son candidatas por correspondencia geométrica.</p>}
         {imperialReferenceActive && <p>El tono gris muestra una aproximación regional al ámbito jurídico del Sacro Imperio en {anioGlobal}. Los colores vivos indican gobiernos efectivos de esta persona. Pertenecer al Imperio no equivalía a ser una posesión del emperador. <a href="/es/metodologia/">Método y límites</a>.</p>}
         {hasImperialOffice && !imperialReferenceActive && <p>El marco imperial no está reconstruido para este año. Solo se colorean los gobiernos territoriales documentados de la persona.</p>}
         {Number.isFinite(anioGlobal) ? (
@@ -406,7 +441,15 @@ export function MapaEuropa({ seleccion, anioGlobal = null, onSelectTerritorio, o
         tabIndex={0}
         aria-label="Mapa histórico interactivo de territorios europeos; arrastra para moverlo"
       />
-      {selectedRegionId && <aside className="mapa-region-inspector" aria-label={`Información histórica de ${selectedRegionId.replaceAll('_',' ')}`}>
+      {selectedRegionId && (labMode ? <aside className="mapa-region-inspector" aria-label={`Información provisional de ${selectedRegionId.replaceAll('_',' ')}`}>
+        <div className="mapa-region-inspector-head"><div><small>Location del laboratorio · {Number.isInteger(anioGlobal) ? anioGlobal : 'sin año'}</small><h3>{selectedRegionId.replaceAll('_',' ')}</h3></div><button type="button" onClick={() => setSelectedRegionId(null)} aria-label="Cerrar información de la location"><X size={16}/></button></div>
+        <p className="mapa-region-precision">Correspondencia provisional con el SVG anterior; el polígono no acredita por sí solo una frontera histórica.</p>
+        {!Number.isInteger(anioGlobal) ? <p>Elige un año para consultar las jurisdicciones trasladadas.</p> : pilotContext.length ? <ul>{pilotContext.map(entry => <li key={entry.name}>
+          <strong>{entry.name}</strong><div>{entry.corridor}</div>
+          {entry.note && <p>{entry.note}</p>}
+          {entry.correction && <><p>{entry.correction.reason}</p><a href={entry.correction.source} target="_blank" rel="noreferrer">Fuente de la corrección</a></>}
+        </li>)}</ul> : <p>Esta location no está atribuida en la parte auditada del laboratorio para este año.</p>}
+      </aside> : <aside className="mapa-region-inspector" aria-label={`Información histórica de ${selectedRegionId.replaceAll('_',' ')}`}>
         <div className="mapa-region-inspector-head"><div><small>Región del mapa · {Number.isInteger(anioGlobal) ? anioGlobal : 'sin año'}</small><h3>{selectedRegionId.replaceAll('_',' ')}</h3></div><button type="button" onClick={() => setSelectedRegionId(null)} aria-label="Cerrar información de la región"><X size={16}/></button></div>
         {!Number.isInteger(anioGlobal) ? <p>Elige un año para consultar quién gobernaba aquí y con qué título.</p> : <>
           <p className="mapa-region-precision">{inspectedRegion.precision}</p>
@@ -430,7 +473,7 @@ export function MapaEuropa({ seleccion, anioGlobal = null, onSelectTerritorio, o
           })}</ul></details>}
           </> : <p>No hay un gobierno personal documentado en la base para esta región y este año. El mapa no atribuye por ello un soberano.</p>}
         </>}
-      </aside>}
+      </aside>)}
     </div>
   );
 }

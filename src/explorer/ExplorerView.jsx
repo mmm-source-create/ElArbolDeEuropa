@@ -114,6 +114,8 @@ function VenetianOfficeSequence({ persona, onSelect }) {
 }
 
 export default function ExplorerView({ vm }) {
+  const locationsLabMode = typeof window !== 'undefined'
+    && new URLSearchParams(window.location.search).get('mapa') === 'locations-lab';
   const [searchOpen,setSearchOpen] = React.useState(false);
   const [mobileToolsOpen,setMobileToolsOpen] = React.useState(false);
   const [guideOpen,setGuideOpen] = React.useState(false);
@@ -889,6 +891,7 @@ export default function ExplorerView({ vm }) {
           {mostrarMapa && (
             <section className="workspace-stage workspace-map-stage" aria-label="Mapa de territorios">
               <MapaEuropa
+                labMode={locationsLabMode}
                 initialViewport={initialMapViewport}
                 onViewportChange={recordMapViewport}
                 seleccion={seleccion}
@@ -896,6 +899,7 @@ export default function ExplorerView({ vm }) {
                 onSelectPersona={seleccionarPersonaPorId}
               />
               <div className="territory-hint workspace-map-hint">
+                {locationsLabMode ? <span>Ensayo EU V Locations: {Number.isInteger(anioGlobal) ? `año ${anioGlobal}.` : 'elige un año.'} Solo aparecen coloreadas las jurisdicciones trasladadas; las demás zonas permanecen grises aunque tengan gobernante.</span> : <>
                 {seleccion
                   ? (esGobernante(seleccion)
                       ? (Number.isFinite(anioGlobal)
@@ -915,6 +919,7 @@ export default function ExplorerView({ vm }) {
                   const missing = [...new Set(gobiernos.filter(gobierno => !idsDeGobiernoEnAño(gobierno, Number.isFinite(anioGlobal) ? anioGlobal : añoReferenciaTerritorial(seleccion, gobierno.territorio), seleccion.id).length).map(gobierno => gobierno.territorio))];
                   return missing.length ? <span> Sin polígono propio en este mapa: {missing.join(', ')}.</span> : null;
                 })()}
+                </>}
               </div>
             </section>
           )}

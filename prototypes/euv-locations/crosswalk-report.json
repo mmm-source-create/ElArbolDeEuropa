@@ -1,0 +1,1275 @@
+{
+  "note": "An identical ID is a toponymic candidate, not a validated one-to-one polygon or jurisdiction.",
+  "legacyIds": 561,
+  "exactIdCandidates": 245,
+  "missingIdCandidates": [
+    "Aargau",
+    "Aberdeenshire",
+    "Abruzzo_Citra",
+    "Abruzzo_Ultra",
+    "Achaea",
+    "Agenais",
+    "Alava",
+    "Algarve",
+    "Alpenvorland",
+    "Alto_Alentejo",
+    "Amienois",
+    "Amont",
+    "Angus",
+    "Anjou",
+    "Antrim",
+    "Arborea",
+    "Arcadia",
+    "Argolis",
+    "Argyll",
+    "Armagnac",
+    "Arnskrone",
+    "Autunnais",
+    "Auxerrois",
+    "Aval",
+    "Avignonnais",
+    "Azores",
+    "Baixo_Alentejo",
+    "Balti_Moldova",
+    "Baranya",
+    "Basarabia",
+    "Basilicata",
+    "Bayerischer_Wald",
+    "Bazadais",
+    "Bearn_Bigorre",
+    "Beaujolais",
+    "Beauvaisis",
+    "Bechinsko",
+    "Bedfordshire",
+    "Beira_Alta",
+    "Beira_Baixa",
+    "Beira_Litoral",
+    "Bergisches_Land",
+    "Berkshire",
+    "Biscay",
+    "Boh",
+    "Boleslavsko",
+    "Bordelais",
+    "Brabant",
+    "Brecon",
+    "Breifne",
+    "Breslauja",
+    "Bresse",
+    "Bresta",
+    "Brie_Champenois",
+    "Brnensko",
+    "Buckinghamshire",
+    "Caennais",
+    "Calabria_Citra",
+    "Calabria_Ultra",
+    "Cambridgeshire",
+    "Canary_Islands",
+    "Capitanata",
+    "Castellon",
+    "Caux",
+    "Central_Macedonia",
+    "Champagne",
+    "Chartrain",
+    "Chebsko",
+    "Checiny",
+    "Cheshire",
+    "Chiemgau",
+    "Chrudimsko",
+    "Clare",
+    "Combraille",
+    "Comminges",
+    "Corinthia",
+    "Cornouaille",
+    "Cornwall",
+    "Cotentin",
+    "Crete",
+    "Csongrad",
+    "Cumberland",
+    "Cyprus",
+    "Danzig",
+    "Deheubarth",
+    "Demena",
+    "Derbyshire",
+    "Desmond",
+    "Devon",
+    "Dijonnais",
+    "Doboka",
+    "Donau_Moos",
+    "Donetsk",
+    "Dorohei",
+    "Dorset",
+    "Down",
+    "Drenthe",
+    "East_Asturias",
+    "East_Banat",
+    "East_Flanders",
+    "East_Luxembourg",
+    "East_Mancha",
+    "East_Riding",
+    "Eastern_Podolia",
+    "Eastern_Styria",
+    "Ebroicien",
+    "Essex",
+    "Estremadura",
+    "Feher",
+    "Fejer",
+    "Fife",
+    "Friesland",
+    "Friuli",
+    "Galloway",
+    "Gallura",
+    "Gatinais",
+    "Gauboden",
+    "Gelderland",
+    "Gevaudan",
+    "Gipuzkoa",
+    "Glamorgan",
+    "Gloucestershire",
+    "Gwynedd",
+    "Hainaut",
+    "Hampshire",
+    "Herefordshire",
+    "Hertfordshire",
+    "Hradecko",
+    "Hradistsko",
+    "Ilia",
+    "Inner_Hebrides",
+    "Julich",
+    "Kempenland",
+    "Kent",
+    "Kiralyfold",
+    "Kodaky",
+    "Koslin",
+    "Kraszna",
+    "Kuyavia",
+    "La_Marche",
+    "Laconia",
+    "Lancashire",
+    "Lavoro",
+    "Leicestershire",
+    "Lika",
+    "Limburg",
+    "Limousin",
+    "Lincolnshire",
+    "Litomericko",
+    "Logudoro",
+    "Lothian",
+    "Lower_Artois",
+    "Lower_Auvergne",
+    "Lower_Berry",
+    "Lower_Carinthia",
+    "Lower_Carniola",
+    "Lower_Macedonia",
+    "Lower_Maine",
+    "Lower_Poitou",
+    "Lower_Prussia",
+    "Lower_Styria",
+    "Lyonnais",
+    "Madeira",
+    "Mallorca",
+    "Mantua",
+    "Maramaros",
+    "Marche",
+    "Marittima",
+    "Masuria",
+    "Mayo",
+    "Meath",
+    "Messenia",
+    "Middle_Styria",
+    "Middlesex",
+    "Millieu",
+    "Minho",
+    "Molise",
+    "Monferrato",
+    "Montana",
+    "Moray",
+    "Muhlviertel",
+    "Munchner_Schotterebene",
+    "Nantais",
+    "Narbonnais",
+    "Navarre",
+    "Nevernais",
+    "New_Catalonia",
+    "Niederrhein",
+    "Nimois",
+    "Norfolk",
+    "North_Dalmatia",
+    "North_Epirus",
+    "North_Holland",
+    "North_Riding",
+    "Northamptonshire",
+    "Northern_Isles",
+    "Northumberland",
+    "Nottinghamshire",
+    "Ober_dem_Manhartsberg",
+    "Ober_dem_Wienerwald",
+    "Oberinntal",
+    "Oberpfalzer_Wald",
+    "Olomoucko",
+    "Ommelanden",
+    "Opavsko",
+    "Orleanais",
+    "Osona",
+    "Otranto",
+    "Outer_Hebrides",
+    "Overijssel",
+    "Oxfordshire",
+    "Padua",
+    "Palatinate",
+    "Patrimonio",
+    "Pays_France",
+    "Perche",
+    "Perigord",
+    "Perthois",
+    "Perthshire",
+    "Plzensko",
+    "Pocutia",
+    "Podlasie",
+    "Ponthieu",
+    "Porossia",
+    "Powys",
+    "Pozsony",
+    "Prachensko",
+    "Principato_Citra",
+    "Principato_Ultra",
+    "Quercy",
+    "Razes",
+    "Remois",
+    "Rennais",
+    "Rethelois",
+    "Ribatejo",
+    "Romagna",
+    "Roman_Flanders",
+    "Rosello",
+    "Ross",
+    "Rouennais",
+    "Rouergue",
+    "Saintonge",
+    "Santiago",
+    "Savoy",
+    "Senonais",
+    "Shropshire",
+    "Slonin",
+    "Soissonais",
+    "Somerset",
+    "Somogy",
+    "South_Dalmatia",
+    "South_Epirus",
+    "South_Holland",
+    "South_Tirol",
+    "Staffordshire",
+    "Stolp",
+    "Strathclyde",
+    "Suffolk",
+    "Surrey",
+    "Sussex",
+    "Sutherland",
+    "Szczyrzyc",
+    "Szekelyfold",
+    "Szepes",
+    "Teviotdale",
+    "Thessaly",
+    "Torda",
+    "Torgovytsia",
+    "Torino",
+    "Toulousain",
+    "Touraine",
+    "Tras_Os_Montes",
+    "Traungau",
+    "Tregor",
+    "Trencsen",
+    "Tursan",
+    "Tyrone",
+    "Una_Sana",
+    "Unter_dem_Manhartsberg",
+    "Unter_dem_Wienerwald",
+    "Unterinntal",
+    "Upper_Alsace",
+    "Upper_Artois",
+    "Upper_Auvergne",
+    "Upper_Berry",
+    "Upper_Carinthia",
+    "Upper_Carniola",
+    "Upper_Macedonia",
+    "Upper_Maine",
+    "Upper_Poitou",
+    "Upper_Prussia",
+    "Upper_Styria",
+    "Urgell",
+    "Vannetais",
+    "Vas",
+    "Vermandois",
+    "Vivarais",
+    "Vukovar_Syrmia",
+    "Waldstatte",
+    "Warwickshire",
+    "West_Asturias",
+    "West_Banat",
+    "West_Flanders",
+    "West_Luxembourg",
+    "West_Mancha",
+    "West_Riding",
+    "Western_Podolia",
+    "Westmorland",
+    "Wiltshire",
+    "Worcestershire",
+    "Zala",
+    "Zarand_Hun",
+    "Zatecko",
+    "Zemplen",
+    "Znojemsko",
+    "Zviahel"
+  ],
+  "realms": {
+    "Bohemia": {
+      "provinceIds": 15,
+      "exactIdCandidates": [
+        "Prague"
+      ],
+      "missingIds": [
+        "Boleslavsko",
+        "Litomericko",
+        "Zatecko",
+        "Chebsko",
+        "Plzensko",
+        "Prachensko",
+        "Bechinsko",
+        "Znojemsko",
+        "Brnensko",
+        "Olomoucko",
+        "Hradistsko",
+        "Opavsko",
+        "Hradecko",
+        "Chrudimsko"
+      ]
+    },
+    "Hungría": {
+      "provinceIds": 39,
+      "exactIdCandidates": [
+        "Zagreb",
+        "Hont",
+        "Nograd",
+        "Heves",
+        "Buda",
+        "Sopron",
+        "Szolnok",
+        "Bihar",
+        "Szatmar",
+        "Szabolcs",
+        "Pest",
+        "Bacs",
+        "Csanad",
+        "Bjelovar"
+      ],
+      "missingIds": [
+        "Torda",
+        "Doboka",
+        "Szekelyfold",
+        "Kiralyfold",
+        "Feher",
+        "Maramaros",
+        "Zemplen",
+        "Szepes",
+        "Trencsen",
+        "Pozsony",
+        "Vas",
+        "Zala",
+        "Somogy",
+        "Baranya",
+        "Fejer",
+        "Csongrad",
+        "Kraszna",
+        "Zarand_Hun",
+        "East_Banat",
+        "West_Banat",
+        "Vukovar_Syrmia",
+        "Una_Sana",
+        "Lika",
+        "North_Dalmatia",
+        "South_Dalmatia"
+      ]
+    },
+    "Polonia": {
+      "provinceIds": 15,
+      "exactIdCandidates": [
+        "Chelmno",
+        "Plock",
+        "Dobrzyn",
+        "Poznan",
+        "Gniezno",
+        "Leczyca",
+        "Lublin",
+        "Sieradz",
+        "Kalisz",
+        "Glogow",
+        "Wroclaw",
+        "Opole",
+        "Sandomierz",
+        "Krakow"
+      ],
+      "missingIds": [
+        "Kuyavia"
+      ]
+    },
+    "Prusia": {
+      "provinceIds": 3,
+      "exactIdCandidates": [],
+      "missingIds": [
+        "Lower_Prussia",
+        "Upper_Prussia",
+        "Masuria"
+      ]
+    },
+    "Austria": {
+      "provinceIds": 6,
+      "exactIdCandidates": [],
+      "missingIds": [
+        "Unter_dem_Manhartsberg",
+        "Ober_dem_Manhartsberg",
+        "Ober_dem_Wienerwald",
+        "Unter_dem_Wienerwald",
+        "Traungau",
+        "Muhlviertel"
+      ]
+    },
+    "Austria Interior": {
+      "provinceIds": 8,
+      "exactIdCandidates": [],
+      "missingIds": [
+        "Eastern_Styria",
+        "Upper_Styria",
+        "Middle_Styria",
+        "Lower_Styria",
+        "Upper_Carinthia",
+        "Lower_Carinthia",
+        "Upper_Carniola",
+        "Lower_Carniola"
+      ]
+    },
+    "Carintia": {
+      "provinceIds": 2,
+      "exactIdCandidates": [],
+      "missingIds": [
+        "Upper_Carinthia",
+        "Lower_Carinthia"
+      ]
+    },
+    "Tirol": {
+      "provinceIds": 3,
+      "exactIdCandidates": [],
+      "missingIds": [
+        "Oberinntal",
+        "Unterinntal",
+        "South_Tirol"
+      ]
+    },
+    "Baviera": {
+      "provinceIds": 6,
+      "exactIdCandidates": [],
+      "missingIds": [
+        "Munchner_Schotterebene",
+        "Donau_Moos",
+        "Gauboden",
+        "Bayerischer_Wald",
+        "Chiemgau",
+        "Alpenvorland"
+      ]
+    },
+    "Palatinado": {
+      "provinceIds": 1,
+      "exactIdCandidates": [],
+      "missingIds": [
+        "Palatinate"
+      ]
+    },
+    "Palatinado-Neoburgo": {
+      "provinceIds": 0,
+      "exactIdCandidates": [],
+      "missingIds": []
+    },
+    "Jülich": {
+      "provinceIds": 1,
+      "exactIdCandidates": [],
+      "missingIds": [
+        "Julich"
+      ]
+    },
+    "Berg": {
+      "provinceIds": 1,
+      "exactIdCandidates": [],
+      "missingIds": [
+        "Bergisches_Land"
+      ]
+    },
+    "Cléveris": {
+      "provinceIds": 1,
+      "exactIdCandidates": [],
+      "missingIds": [
+        "Niederrhein"
+      ]
+    },
+    "Mark": {
+      "provinceIds": 0,
+      "exactIdCandidates": [],
+      "missingIds": []
+    },
+    "Ravensberg": {
+      "provinceIds": 0,
+      "exactIdCandidates": [],
+      "missingIds": []
+    },
+    "Luxemburgo": {
+      "provinceIds": 2,
+      "exactIdCandidates": [],
+      "missingIds": [
+        "East_Luxembourg",
+        "West_Luxembourg"
+      ]
+    },
+    "Bizancio": {
+      "provinceIds": 8,
+      "exactIdCandidates": [
+        "Constantinople",
+        "Smyrna"
+      ],
+      "missingIds": [
+        "Central_Macedonia",
+        "Lower_Macedonia",
+        "Upper_Macedonia",
+        "North_Epirus",
+        "South_Epirus",
+        "Thessaly"
+      ]
+    },
+    "Lituania": {
+      "provinceIds": 17,
+      "exactIdCandidates": [
+        "Siauliai",
+        "Medininkai",
+        "Upyte",
+        "Raseiniai",
+        "Vilkmerge",
+        "Kaunas",
+        "Vilnius",
+        "Trakai",
+        "Novogrudok",
+        "Grodno",
+        "Lida",
+        "Vawkavysk",
+        "Suwalki",
+        "Ashmyany",
+        "Svir"
+      ],
+      "missingIds": [
+        "Breslauja",
+        "Slonin"
+      ]
+    },
+    "Milán": {
+      "provinceIds": 6,
+      "exactIdCandidates": [
+        "Milano",
+        "Monza",
+        "Pavia",
+        "Cremona",
+        "Novara",
+        "Alessandria"
+      ],
+      "missingIds": []
+    },
+    "Venecia": {
+      "provinceIds": 1,
+      "exactIdCandidates": [
+        "Venice"
+      ],
+      "missingIds": []
+    },
+    "Saboya": {
+      "provinceIds": 4,
+      "exactIdCandidates": [
+        "Aosta",
+        "Nice"
+      ],
+      "missingIds": [
+        "Savoy",
+        "Bresse"
+      ]
+    },
+    "Piamonte": {
+      "provinceIds": 2,
+      "exactIdCandidates": [
+        "Mondovi"
+      ],
+      "missingIds": [
+        "Torino"
+      ]
+    },
+    "Habsburgo": {
+      "provinceIds": 3,
+      "exactIdCandidates": [],
+      "missingIds": [
+        "Aargau",
+        "Upper_Alsace",
+        "Waldstatte"
+      ]
+    },
+    "Brabante": {
+      "provinceIds": 3,
+      "exactIdCandidates": [
+        "Antwerp"
+      ],
+      "missingIds": [
+        "Brabant",
+        "Kempenland"
+      ]
+    },
+    "Limburgo": {
+      "provinceIds": 1,
+      "exactIdCandidates": [],
+      "missingIds": [
+        "Limburg"
+      ]
+    },
+    "Aragón": {
+      "provinceIds": 6,
+      "exactIdCandidates": [
+        "Alcaniz",
+        "Teruel",
+        "Calatayud",
+        "Zaragoza",
+        "Huesca",
+        "Barbastro"
+      ],
+      "missingIds": []
+    },
+    "Condado de Barcelona": {
+      "provinceIds": 4,
+      "exactIdCandidates": [
+        "Barcelona",
+        "Girona"
+      ],
+      "missingIds": [
+        "New_Catalonia",
+        "Osona"
+      ]
+    },
+    "Valencia": {
+      "provinceIds": 3,
+      "exactIdCandidates": [
+        "Jativa",
+        "Valencia"
+      ],
+      "missingIds": [
+        "Castellon"
+      ]
+    },
+    "Mallorca": {
+      "provinceIds": 1,
+      "exactIdCandidates": [],
+      "missingIds": [
+        "Mallorca"
+      ]
+    },
+    "Cerdeña": {
+      "provinceIds": 4,
+      "exactIdCandidates": [
+        "Cagliari"
+      ],
+      "missingIds": [
+        "Arborea",
+        "Logudoro",
+        "Gallura"
+      ]
+    },
+    "Sicilia": {
+      "provinceIds": 16,
+      "exactIdCandidates": [
+        "Noto",
+        "Girgenti",
+        "Mazara",
+        "Bari"
+      ],
+      "missingIds": [
+        "Demena",
+        "Calabria_Ultra",
+        "Calabria_Citra",
+        "Basilicata",
+        "Otranto",
+        "Capitanata",
+        "Principato_Ultra",
+        "Principato_Citra",
+        "Molise",
+        "Abruzzo_Citra",
+        "Abruzzo_Ultra",
+        "Lavoro"
+      ]
+    },
+    "Nápoles": {
+      "provinceIds": 12,
+      "exactIdCandidates": [
+        "Bari"
+      ],
+      "missingIds": [
+        "Calabria_Ultra",
+        "Calabria_Citra",
+        "Basilicata",
+        "Otranto",
+        "Capitanata",
+        "Principato_Ultra",
+        "Principato_Citra",
+        "Molise",
+        "Abruzzo_Citra",
+        "Abruzzo_Ultra",
+        "Lavoro"
+      ]
+    },
+    "Trinacria": {
+      "provinceIds": 4,
+      "exactIdCandidates": [
+        "Noto",
+        "Girgenti",
+        "Mazara"
+      ],
+      "missingIds": [
+        "Demena"
+      ]
+    },
+    "Castilla": {
+      "provinceIds": 18,
+      "exactIdCandidates": [
+        "Palencia",
+        "Lerma",
+        "Soria",
+        "Burgos",
+        "Valladolid",
+        "Avila",
+        "Segovia",
+        "Guadalajara",
+        "Cuenca",
+        "Alarcon",
+        "Toledo",
+        "Madrid",
+        "Ocana",
+        "Plasencia"
+      ],
+      "missingIds": [
+        "Montana",
+        "Alava",
+        "Biscay",
+        "Gipuzkoa"
+      ]
+    },
+    "León": {
+      "provinceIds": 12,
+      "exactIdCandidates": [
+        "Coruna",
+        "Lugo",
+        "Astorga",
+        "Ourense",
+        "Benavente",
+        "Leon",
+        "Zamora",
+        "Ciudad_Rodrigo",
+        "Salamanca"
+      ],
+      "missingIds": [
+        "Santiago",
+        "West_Asturias",
+        "East_Asturias"
+      ]
+    },
+    "Navarra": {
+      "provinceIds": 1,
+      "exactIdCandidates": [],
+      "missingIds": [
+        "Navarre"
+      ]
+    },
+    "Granada": {
+      "provinceIds": 3,
+      "exactIdCandidates": [
+        "Granada",
+        "Malaga",
+        "Almeria"
+      ],
+      "missingIds": []
+    },
+    "Portugal": {
+      "provinceIds": 10,
+      "exactIdCandidates": [],
+      "missingIds": [
+        "Minho",
+        "Tras_Os_Montes",
+        "Beira_Alta",
+        "Beira_Litoral",
+        "Beira_Baixa",
+        "Estremadura",
+        "Alto_Alentejo",
+        "Baixo_Alentejo",
+        "Algarve",
+        "Ribatejo"
+      ]
+    },
+    "Francia": {
+      "provinceIds": 68,
+      "exactIdCandidates": [
+        "Foix",
+        "Bayonne",
+        "Ploermel",
+        "Turenne",
+        "Angouleme",
+        "Castres",
+        "Bourbon",
+        "Blois"
+      ],
+      "missingIds": [
+        "Narbonnais",
+        "Razes",
+        "Comminges",
+        "Armagnac",
+        "Tursan",
+        "Bearn_Bigorre",
+        "Bazadais",
+        "Perigord",
+        "Bordelais",
+        "Saintonge",
+        "Lower_Poitou",
+        "Anjou",
+        "Ebroicien",
+        "Caennais",
+        "Lower_Maine",
+        "Upper_Maine",
+        "Cotentin",
+        "Rouennais",
+        "Caux",
+        "Nantais",
+        "Vannetais",
+        "Rennais",
+        "Tregor",
+        "Cornouaille",
+        "Touraine",
+        "Upper_Poitou",
+        "Lower_Berry",
+        "La_Marche",
+        "Limousin",
+        "Quercy",
+        "Agenais",
+        "Toulousain",
+        "Rouergue",
+        "Nimois",
+        "Gevaudan",
+        "Vivarais",
+        "Upper_Auvergne",
+        "Lower_Auvergne",
+        "Lyonnais",
+        "Combraille",
+        "Upper_Berry",
+        "Orleanais",
+        "Perche",
+        "Chartrain",
+        "Pays_France",
+        "Gatinais",
+        "Senonais",
+        "Auxerrois",
+        "Nevernais",
+        "Autunnais",
+        "Beaujolais",
+        "Ponthieu",
+        "Beauvaisis",
+        "Amienois",
+        "Vermandois",
+        "Soissonais",
+        "Brie_Champenois",
+        "Remois",
+        "Champagne",
+        "Perthois"
+      ]
+    },
+    "Bretaña": {
+      "provinceIds": 3,
+      "exactIdCandidates": [],
+      "missingIds": [
+        "Tregor",
+        "Cornouaille",
+        "Vannetais"
+      ]
+    },
+    "Artois": {
+      "provinceIds": 2,
+      "exactIdCandidates": [],
+      "missingIds": [
+        "Upper_Artois",
+        "Lower_Artois"
+      ]
+    },
+    "Henao": {
+      "provinceIds": 1,
+      "exactIdCandidates": [],
+      "missingIds": [
+        "Hainaut"
+      ]
+    },
+    "Holanda": {
+      "provinceIds": 2,
+      "exactIdCandidates": [],
+      "missingIds": [
+        "North_Holland",
+        "South_Holland"
+      ]
+    },
+    "Borgoña": {
+      "provinceIds": 2,
+      "exactIdCandidates": [],
+      "missingIds": [
+        "Dijonnais",
+        "Autunnais"
+      ]
+    },
+    "Condado de Borgoña": {
+      "provinceIds": 3,
+      "exactIdCandidates": [],
+      "missingIds": [
+        "Aval",
+        "Millieu",
+        "Amont"
+      ]
+    },
+    "Nevers": {
+      "provinceIds": 1,
+      "exactIdCandidates": [],
+      "missingIds": [
+        "Nevernais"
+      ]
+    },
+    "Rethel": {
+      "provinceIds": 1,
+      "exactIdCandidates": [],
+      "missingIds": [
+        "Rethelois"
+      ]
+    },
+    "Auxerre": {
+      "provinceIds": 1,
+      "exactIdCandidates": [],
+      "missingIds": [
+        "Auxerrois"
+      ]
+    },
+    "Flandes": {
+      "provinceIds": 3,
+      "exactIdCandidates": [],
+      "missingIds": [
+        "West_Flanders",
+        "East_Flanders",
+        "Roman_Flanders"
+      ]
+    },
+    "Namur": {
+      "provinceIds": 1,
+      "exactIdCandidates": [
+        "Namur"
+      ],
+      "missingIds": []
+    },
+    "Güeldres": {
+      "provinceIds": 1,
+      "exactIdCandidates": [],
+      "missingIds": [
+        "Gelderland"
+      ]
+    },
+    "Frisia": {
+      "provinceIds": 1,
+      "exactIdCandidates": [],
+      "missingIds": [
+        "Friesland"
+      ]
+    },
+    "Overijssel": {
+      "provinceIds": 1,
+      "exactIdCandidates": [],
+      "missingIds": [
+        "Overijssel"
+      ]
+    },
+    "Drente": {
+      "provinceIds": 1,
+      "exactIdCandidates": [],
+      "missingIds": [
+        "Drenthe"
+      ]
+    },
+    "Groninga": {
+      "provinceIds": 1,
+      "exactIdCandidates": [],
+      "missingIds": [
+        "Ommelanden"
+      ]
+    },
+    "Zelanda": {
+      "provinceIds": 0,
+      "exactIdCandidates": [],
+      "missingIds": []
+    },
+    "Utrecht": {
+      "provinceIds": 0,
+      "exactIdCandidates": [],
+      "missingIds": []
+    },
+    "Irlanda": {
+      "provinceIds": 0,
+      "exactIdCandidates": [],
+      "missingIds": []
+    },
+    "Connacht": {
+      "provinceIds": 3,
+      "exactIdCandidates": [
+        "Roscommon",
+        "Galway"
+      ],
+      "missingIds": [
+        "Mayo"
+      ]
+    },
+    "Leinster": {
+      "provinceIds": 3,
+      "exactIdCandidates": [
+        "Wexford",
+        "Kilkenny",
+        "Kildare"
+      ],
+      "missingIds": []
+    },
+    "Tír Eoghain": {
+      "provinceIds": 1,
+      "exactIdCandidates": [],
+      "missingIds": [
+        "Tyrone"
+      ]
+    },
+    "Tír Chonaill": {
+      "provinceIds": 1,
+      "exactIdCandidates": [
+        "Donegal"
+      ],
+      "missingIds": []
+    },
+    "Condado de Tyrone": {
+      "provinceIds": 1,
+      "exactIdCandidates": [],
+      "missingIds": [
+        "Tyrone"
+      ]
+    },
+    "Condado de Tyrconnell": {
+      "provinceIds": 1,
+      "exactIdCandidates": [
+        "Donegal"
+      ],
+      "missingIds": []
+    },
+    "Thomond": {
+      "provinceIds": 1,
+      "exactIdCandidates": [],
+      "missingIds": [
+        "Clare"
+      ]
+    },
+    "Condado de Thomond": {
+      "provinceIds": 1,
+      "exactIdCandidates": [],
+      "missingIds": [
+        "Clare"
+      ]
+    },
+    "Desmond": {
+      "provinceIds": 1,
+      "exactIdCandidates": [],
+      "missingIds": [
+        "Desmond"
+      ]
+    },
+    "Condado de Desmond": {
+      "provinceIds": 1,
+      "exactIdCandidates": [
+        "Limerick"
+      ],
+      "missingIds": []
+    },
+    "Condado de Clancare": {
+      "provinceIds": 1,
+      "exactIdCandidates": [],
+      "missingIds": [
+        "Desmond"
+      ]
+    },
+    "Condado de Ulster": {
+      "provinceIds": 2,
+      "exactIdCandidates": [],
+      "missingIds": [
+        "Antrim",
+        "Down"
+      ]
+    },
+    "Kildare": {
+      "provinceIds": 1,
+      "exactIdCandidates": [
+        "Kildare"
+      ],
+      "missingIds": []
+    },
+    "Ormond": {
+      "provinceIds": 1,
+      "exactIdCandidates": [
+        "Tipperary"
+      ],
+      "missingIds": []
+    },
+    "Clanricarde": {
+      "provinceIds": 1,
+      "exactIdCandidates": [
+        "Galway"
+      ],
+      "missingIds": []
+    },
+    "Vizcondado de Mayo": {
+      "provinceIds": 1,
+      "exactIdCandidates": [],
+      "missingIds": [
+        "Mayo"
+      ]
+    },
+    "Estados Pontificios": {
+      "provinceIds": 5,
+      "exactIdCandidates": [
+        "Campagna",
+        "Spoleto"
+      ],
+      "missingIds": [
+        "Marittima",
+        "Patrimonio",
+        "Marche"
+      ]
+    },
+    "Ferrara": {
+      "provinceIds": 1,
+      "exactIdCandidates": [
+        "Ferrara"
+      ],
+      "missingIds": []
+    },
+    "Florencia": {
+      "provinceIds": 3,
+      "exactIdCandidates": [
+        "Florence",
+        "Arezzo",
+        "Pisa"
+      ],
+      "missingIds": []
+    },
+    "Mantua": {
+      "provinceIds": 1,
+      "exactIdCandidates": [],
+      "missingIds": [
+        "Mantua"
+      ]
+    },
+    "Módena": {
+      "provinceIds": 2,
+      "exactIdCandidates": [
+        "Modena",
+        "Reggioem"
+      ],
+      "missingIds": []
+    },
+    "Monferrato": {
+      "provinceIds": 1,
+      "exactIdCandidates": [],
+      "missingIds": [
+        "Monferrato"
+      ]
+    },
+    "Saluzzo": {
+      "provinceIds": 1,
+      "exactIdCandidates": [
+        "Saluzzo"
+      ],
+      "missingIds": []
+    },
+    "Parma": {
+      "provinceIds": 2,
+      "exactIdCandidates": [
+        "Parma",
+        "Piacenza"
+      ],
+      "missingIds": []
+    },
+    "Urbino": {
+      "provinceIds": 1,
+      "exactIdCandidates": [
+        "Urbino"
+      ],
+      "missingIds": []
+    },
+    "Toscana": {
+      "provinceIds": 5,
+      "exactIdCandidates": [
+        "Florence",
+        "Arezzo",
+        "Pisa",
+        "Siena",
+        "Grosseto"
+      ],
+      "missingIds": []
+    },
+    "Pesaro": {
+      "provinceIds": 0,
+      "exactIdCandidates": [],
+      "missingIds": []
+    },
+    "Forlì": {
+      "provinceIds": 0,
+      "exactIdCandidates": [],
+      "missingIds": []
+    },
+    "Romaña": {
+      "provinceIds": 0,
+      "exactIdCandidates": [],
+      "missingIds": []
+    },
+    "Imperio Latino": {
+      "provinceIds": 8,
+      "exactIdCandidates": [
+        "Constantinople"
+      ],
+      "missingIds": [
+        "Achaea",
+        "Corinthia",
+        "Ilia",
+        "Arcadia",
+        "Argolis",
+        "Messenia",
+        "Laconia"
+      ]
+    },
+    "Provenza": {
+      "provinceIds": 2,
+      "exactIdCandidates": [
+        "Nice"
+      ],
+      "missingIds": [
+        "Avignonnais"
+      ]
+    },
+    "Alemania": {
+      "provinceIds": 0,
+      "exactIdCandidates": [],
+      "missingIds": []
+    },
+    "Sacro Imperio": {
+      "provinceIds": 0,
+      "exactIdCandidates": [],
+      "missingIds": []
+    }
+  }
+}

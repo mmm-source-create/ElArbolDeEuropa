@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>La herencia borgoñona, 1419–1555 · Laboratorio cartográfico</title>
+  <style>
+    :root{font:16px/1.5 system-ui,sans-serif;color:#eee7dc;background:#27231f}
+    *{box-sizing:border-box}
+    body{margin:0;padding:20px}
+    header,main,footer{max-width:1450px;margin:auto}
+    h1{font:clamp(2rem,4vw,3.5rem)/1.1 Georgia,serif;margin:.18em 0}
+    h2{font:1.45rem/1.2 Georgia,serif;margin:0 0 .35em}
+    p{max-width:85ch;color:#d5cbbd}
+    a{color:#efc792}
+    .eyebrow{font-weight:750;text-transform:uppercase;letter-spacing:.11em;color:#d2b68c}
+    .toolbar{display:grid;grid-template-columns:minmax(280px,1fr) auto;gap:16px;align-items:end;background:#332e29;border:1px solid #70675b;border-radius:12px;padding:16px;margin:18px 0}
+    .year-label{display:flex;justify-content:space-between;align-items:baseline;gap:10px;font-weight:700}
+    .year-label output{font:2rem Georgia,serif;color:#f4dfaf}
+    input[type=range]{width:100%;accent-color:#a75b85;cursor:pointer}
+    select,input[type=search],button{font:inherit;border:1px solid #8d8171;border-radius:7px;padding:8px 10px}
+    select,input[type=search]{background:#f8f4eb;color:#29251f}
+    button{background:#493f35;color:#f4ede1;cursor:pointer}
+    button:hover,button:focus-visible,a:focus-visible,select:focus-visible,input:focus-visible{outline:2px solid #f4d89a;outline-offset:2px}
+    .secondary-controls{display:flex;flex-wrap:wrap;gap:8px;align-items:end}
+    .secondary-controls label{display:grid;gap:4px;font-size:.87rem;font-weight:700}
+    .secondary-controls input{max-width:240px}
+    .identity{background:#332e29;border-left:5px solid #8e295c;border-radius:8px;padding:14px 18px;margin:15px 0}
+    .identity strong{font:1.6rem Georgia,serif}
+    .identity p{margin:4px 0 0}
+    .legend{display:flex;flex-wrap:wrap;gap:12px 23px;margin:14px 0;font-size:.94rem}
+    .legend span{display:inline-flex;align-items:center;gap:8px}
+    .swatch{display:inline-block;width:19px;height:19px;border-radius:3px;border:1px solid #958a7b}
+    .layout{display:grid;grid-template-columns:minmax(0,1fr) minmax(240px,300px);gap:15px}
+    .map-shell{background:#faf7ef;border:1px solid #8d8171;border-radius:12px;overflow:hidden;min-width:0}
+    #map{height:min(66vh,760px);min-height:380px;cursor:grab;touch-action:none}
+    #map:active{cursor:grabbing}
+    #map svg{display:block;width:100%;height:100%}
+    .info{color:#2c2721;background:#f2eadc;border-top:1px solid #c6bba9;padding:11px 15px;min-height:64px}
+    .side{background:#332e29;border:1px solid #70675b;border-radius:12px;padding:16px;max-height:min(66vh,760px);overflow:auto}
+    .side p{margin-top:0}
+    .territories{display:grid;gap:5px;list-style:none;margin:0;padding:0}
+    .territories li{display:flex;gap:8px;justify-content:space-between;border-bottom:1px solid #5a5146;padding:5px 0}
+    .territories small{color:#cabaa8;white-space:nowrap}
+    .note{border-left:4px solid #b78b38;padding:3px 0 3px 16px;margin:24px 0}
+    .status{min-height:24px;color:#d5cbbd;margin:8px 0}
+    footer{font-size:.9rem;padding-bottom:20px}
+    @media(max-width:900px){body{padding:10px}.toolbar,.layout{grid-template-columns:1fr}.side{max-height:none}#map{height:56vh;min-height:330px}}
+  </style>
+</head>
+<body>
+  <header>
+    <p class="eyebrow">Laboratorio cartográfico · segunda entrega</p>
+    <h1>Cómo se concentró la herencia borgoñona</h1>
+    <p>De Felipe el Bueno a Carlos V. El mapa muestra, al cierre de cada año, las jurisdicciones de la persona indicada. Un mismo morado identifica el conjunto borgoñón; no convierte sus condados y ducados en un Estado unitario.</p>
+    <p><a href="./">Comparar ambos mapas</a> · <a href="./carlos-v.html">Ver todos los dominios de Carlos V</a></p>
+  </header>
+  <main>
+    <div class="toolbar">
+      <div>
+        <label class="year-label" for="year">Año al cierre <output id="year-output" for="year">1476</output></label>
+        <input id="year" type="range" min="1419" max="1555" step="1" value="1476">
+        <div>Desliza para seguir adquisiciones, pérdidas y transmisiones familiares.</div>
+      </div>
+      <div class="secondary-controls">
+        <label for="milestone">Ir a un hito
+          <select id="milestone">
+            <option value="1476">1476 · antes de Nancy</option>
+            <option value="1419">1419 · Felipe el Bueno</option>
+            <option value="1435">1435 · Arrás y Picardía</option>
+            <option value="1467">1467 · Carlos el Temerario</option>
+            <option value="1473">1473 · Güeldres</option>
+            <option value="1477">1477 · María y la crisis</option>
+            <option value="1482">1482 · Felipe hereda</option>
+            <option value="1493">1493 · Senlis</option>
+            <option value="1506">1506 · Carlos hereda</option>
+            <option value="1528">1528 · Utrecht</option>
+            <option value="1543">1543 · Güeldres</option>
+          </select>
+        </label>
+        <label for="location-search">Buscar una location
+          <input id="location-search" type="search" list="location-ids" placeholder="Calais, Utrecht, Dijon…" autocomplete="off">
+        </label>
+        <datalist id="location-ids"></datalist>
+        <button type="button" id="search-button">Consultar</button>
+        <button type="button" id="reset-view">Centrar mapa</button>
+      </div>
+    </div>
+    <div class="identity" aria-live="polite">
+      <strong id="holder">Cargando…</strong>
+      <p id="holder-status"></p>
+    </div>
+    <div class="legend" aria-label="Leyenda">
+      <span><i class="swatch" style="background:#8e295c"></i>Jurisdicción representada</span>
+      <span><i class="swatch" style="background:#a86f91"></i>Herencia bajo regencia, 1482–1493</span>
+      <span><i class="swatch" style="background:#d8d6ce"></i>Sin atribución en este ensayo</span>
+    </div>
+    <div id="status" class="status" role="status">Cargando mapa y cronología…</div>
+    <div class="layout">
+      <div class="map-shell">
+        <div id="map" aria-label="Mapa de la sucesión borgoñona por año"></div>
+        <div id="info" class="info" aria-live="polite">Pulsa una location para ver la jurisdicción atribuida y su origen.</div>
+      </div>
+      <aside class="side" aria-label="Jurisdicciones del año">
+        <h2>Jurisdicciones incluidas</h2>
+        <p id="side-summary"></p>
+        <ul id="territories" class="territories"></ul>
+      </aside>
+    </div>
+    <div class="note">
+      <h2>Alcance de esta entrega</h2>
+      <p>El trazado nuevo se obtuvo por nombres y solapamiento con las provincias antiguas, y después se corrigieron casos concretos al examinar sus localidades y fuentes. No equivale a una frontera local documentada. Los títulos disputados o solo nominales no se colorean. El mapa principal del Atlas sigue usando la geometría anterior mientras continúa la revisión.</p>
+      <p>Las etapas de 1467, 1477, 1482 y 1506 se leen <strong>al cierre del año</strong>, para no asignar dos veces el mismo territorio en un año de sucesión. En Felipe I, el tono claro entre 1482 y 1493 recuerda que heredó siendo niño y hubo regencias; no indica que gobernara personalmente. <a href="./README.md#segunda-entrega-la-sucesion-borgonona">Fuentes, correcciones y dudas</a>.</p>
+    </div>
+  </main>
+  <footer>Geometría y mapa base: <a href="https://www.mapchart.net/eu-v-locations.html">MapChart</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>.</footer>
+  <script type="module">
+    const FRAME={x:555,y:111,w:60,h:53};
+    const BASE='#d8d6ce',PURPLE='#8e295c',REGENCY='#a86f91';
+    const $=id=>document.getElementById(id);
+    const state={svg:null,paths:new Map(),data:null,painted:new Set(),assignments:new Map(),view:{...FRAME}};
+    function activeVersion(government,year){
+      if(year<government.from||year>government.through)return null;
+      return [...government.versions].reverse().find(version=>version.from<=year)||null;
+    }
+    function setInfo(id){
+      const info=$('info');
+      if(!id){info.textContent='Pulsa una location para ver la jurisdicción atribuida y su origen.';return;}
+      if(!state.paths.has(id)){info.textContent=`${id}: no está en este recorte.`;return;}
+      const assignment=state.assignments.get(id);
+      if(!assignment){info.textContent=`${id}: sin atribución en este ensayo para ${$('year').value}. El gris no determina quién lo gobernaba.`;return;}
+      const sources=state.data.overrides.filter(item=>item.id===id&&item.action==='add'&&assignment.territories.has(item.territory)&&item.from<=Number($('year').value)&&item.through>=Number($('year').value));
+      const provenance=sources.length?'Corrección con fuente registrada':'Candidato por solapamiento geométrico; límite local provisional';
+      info.replaceChildren();
+      const strong=document.createElement('strong');strong.textContent=id;
+      info.append(strong,document.createTextNode(` · ${[...assignment.territories].join(', ')} · ${provenance}.`));
+    }
+    function render(){
+      const year=Number($('year').value);
+      $('year-output').value=String(year);
+      const person=state.data.people.find(item=>item.from<=year&&year<=item.through);
+      for(const id of state.painted){const path=state.paths.get(id);if(path){path.style.fill=BASE;path.style.stroke=BASE;}}
+      state.painted.clear();state.assignments.clear();
+      if(!person)return;
+      const phase=person.status.find(item=>item.from<=year&&year<=item.through);
+      $('holder').textContent=person.name;
+      $('holder-status').textContent=phase?.label||`${person.from}–${person.through} en esta reconstrucción. Misma familia política, títulos territoriales separados.`;
+      const active=[];
+      for(const government of person.governments){
+        const version=activeVersion(government,year);
+        if(!version)continue;
+        active.push({name:government.territory,count:version.ids.length});
+        for(const id of version.ids){
+          const path=state.paths.get(id);if(!path)continue;
+          const entry=state.assignments.get(id)||{territories:new Set()};
+          entry.territories.add(government.territory);state.assignments.set(id,entry);
+          path.style.fill=phase?REGENCY:PURPLE;path.style.stroke=phase?REGENCY:PURPLE;
+          state.painted.add(id);
+        }
+      }
+      $('status').textContent=`${year}: ${active.length} jurisdicciones · ${state.painted.size} locations representadas.`;
+      $('side-summary').textContent='Cada nombre conserva su identidad jurídica. El número indica polígonos del mapa, no señoríos independientes.';
+      const list=$('territories');list.replaceChildren();
+      for(const item of active.sort((a,b)=>a.name.localeCompare(b.name,'es'))){
+        const li=document.createElement('li');const name=document.createElement('span');name.textContent=item.name;
+        const count=document.createElement('small');count.textContent=`${item.count} loc.`;
+        li.append(name,count);list.append(li);
+      }
+      setInfo($('location-search').value.trim());
+    }
+    function viewBox(){state.svg?.setAttribute('viewBox',`${state.view.x} ${state.view.y} ${state.view.w} ${state.view.h}`)}
+    function suggest(query){
+      const list=$('location-ids');list.replaceChildren();if(!query.trim())return;
+      const needle=query.trim().toLocaleLowerCase('es');let count=0;
+      for(const id of state.paths.keys()){
+        if(!id.toLocaleLowerCase('es').includes(needle))continue;
+        const option=document.createElement('option');option.value=id;list.append(option);
+        if(++count===35)break;
+      }
+    }
+    async function load(){
+      const [svgResponse,dataResponse]=await Promise.all([fetch('./euv-locations-crop.svg'),fetch('./burgundian-locations.json')]);
+      if(!svgResponse.ok||!dataResponse.ok)throw new Error('No se pudo cargar el mapa o la cronología');
+      state.data=await dataResponse.json();
+      const doc=new DOMParser().parseFromString(await svgResponse.text(),'image/svg+xml');
+      if(doc.querySelector('parsererror'))throw new Error('El SVG no es válido');
+      const svg=doc.documentElement;svg.querySelector('metadata')?.remove();svg.querySelector('#legend-svg')?.remove();
+      svg.removeAttribute('width');svg.removeAttribute('height');svg.setAttribute('preserveAspectRatio','xMidYMid meet');
+      svg.setAttribute('role','img');svg.setAttribute('aria-label','EU V Locations: herencia borgoñona en el año seleccionado');
+      state.svg=svg;state.paths=new Map([...svg.querySelectorAll('#map > path[id]')].map(path=>[path.id,path]));
+      $('map').replaceChildren(svg);
+      $('map').addEventListener('click',event=>{const path=event.target.closest('path[id]');if(!path)return;$('location-search').value=path.id;setInfo(path.id)});
+      $('map').addEventListener('wheel',event=>{
+        event.preventDefault();const scale=event.deltaY>0?1.12:1/1.12;
+        const rect=$('map').getBoundingClientRect(),px=(event.clientX-rect.left)/rect.width,py=(event.clientY-rect.top)/rect.height;
+        state.view={x:state.view.x+state.view.w*px*(1-scale),y:state.view.y+state.view.h*py*(1-scale),w:state.view.w*scale,h:state.view.h*scale};viewBox();
+      },{passive:false});
+      let drag=null;
+      $('map').addEventListener('pointerdown',event=>{drag={x:event.clientX,y:event.clientY,view:{...state.view}};$('map').setPointerCapture(event.pointerId)});
+      $('map').addEventListener('pointermove',event=>{
+        if(!drag)return;const rect=$('map').getBoundingClientRect();
+        state.view={...drag.view,x:drag.view.x-(event.clientX-drag.x)/rect.width*drag.view.w,y:drag.view.y-(event.clientY-drag.y)/rect.height*drag.view.h};viewBox();
+      });
+      $('map').addEventListener('pointerup',()=>{drag=null});$('map').addEventListener('pointercancel',()=>{drag=null});
+      viewBox();render();
+    }
+    $('year').addEventListener('input',()=>{if(state.data)render()});
+    $('milestone').addEventListener('change',event=>{$('year').value=event.target.value;if(state.data)render()});
+    $('location-search').addEventListener('input',event=>suggest(event.currentTarget.value));
+    $('location-search').addEventListener('keydown',event=>{if(event.key==='Enter')setInfo(event.currentTarget.value.trim())});
+    $('search-button').addEventListener('click',()=>setInfo($('location-search').value.trim()));
+    $('reset-view').addEventListener('click',()=>{state.view={...FRAME};viewBox()});
+    load().catch(error=>{$('status').textContent=`Error: ${error.message}`});
+  </script>
+</body>
+</html>
