@@ -21,6 +21,17 @@ test('the Atlas trial paints only audited dated jurisdictions, not every possess
   assert.deepEqual(pilotLocationsFor(data, 'Polonia', 1570), []);
 });
 
+test('western Atlas aliases preserve the separate kingdoms and dated French annexations', () => {
+  assert(pilotLocationsFor(data, 'Inglaterra', 1500).includes('Calais'));
+  assert(!pilotLocationsFor(data, 'Inglaterra', 1558).includes('Calais'));
+  assert(pilotLocationsFor(data, 'Francia', 1532).includes('Rennes'));
+  assert(!pilotLocationsFor(data, 'Francia', 1531).includes('Rennes'));
+  assert(pilotLocationsFor(data, 'Escocia', 1603).includes('Edinburgh'));
+  assert(!pilotLocationsFor(data, 'Inglaterra', 1603).includes('Edinburgh'));
+  assert(pilotLocationsFor(data, 'Irlanda', 1500).includes('Dublin'));
+  assert(!pilotLocationsFor(data, 'Irlanda', 1500).includes('Galway'));
+});
+
 test('an inspected location reports its distinct political context and sourced correction', () => {
   const [malbork] = pilotLocationContext(data, 'Malbork', 1500);
   assert.equal(malbork.name, 'Prusia Real');

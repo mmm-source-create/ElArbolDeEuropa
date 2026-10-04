@@ -39,7 +39,7 @@ lista lateral conserva sus condados, ducados y señoríos como jurisdicciones
 distintas.
 
 El [visor de corredores territoriales](territorial-corridors.html)
-traslada 42 jurisdicciones de Iberia, Italia, Centroeuropa y Polonia–Lituania con versiones anuales dentro de 1400–1650. Cada una
+traslada 52 jurisdicciones de Iberia, Italia, Centroeuropa, Polonia–Lituania, Francia e islas británicas con versiones anuales dentro de 1400–1650. Cada una
 mantiene su propio color y alcance aunque comparta soberano con otra. El
 visor permite seleccionar año, territorio e ID, consultar la corrección
 documentada y centrar el mapa en la localidad buscada. Es una capa de
@@ -307,6 +307,29 @@ Mohács y no se convierte automáticamente en «Hungría real», Transilvania o
 zona otomana. Esos tres sucesores requieren límites fechados y fuentes más
 finas antes de colorearlos. También faltan pruebas comparativas de memoria y
 fluidez en móvil antes de plantear la sustitución general del SVG.
+
+### Séptima entrega: Francia e islas británicas
+
+Diez jurisdicciones occidentales elevan el visor a **52**. No se combinan por
+monarca: Inglaterra y Escocia mantienen colores y límites separados tras la
+unión personal de 1603; el señorío de Man y el bailiazgo de Jersey conservan
+su identidad. El mapa se inspeccionó visualmente en Francia e Inglaterra en
+1500, y las transferencias fechadas tienen pruebas de IDs y exclusividad.
+
+| Secuencia | Tratamiento en el laboratorio | Base documental |
+|---|---|---|
+| Francia | Las campañas de la Guerra de los Cien Años anteriores a 1453 permanecen grises hasta trazar ocupaciones locales. El ducado de Borgoña entra en el agregado francés en 1477, Provenza en 1486 y Bretaña en 1532. Béarn se incorpora desde 1620. Los feudos dentro de la monarquía todavía requieren una separación más fina. | [Archivos Nacionales británicos: tierras francesas de los reyes ingleses](https://www.nationalarchives.gov.uk/help-with-your-research/research-guides/french-lands-english-kings/), [Bibliothèque nationale de France: unión de Provenza](https://ccfr.bnf.fr/portailccfr/ark:/16871/004D22012314), [unión de Bretaña](https://ccfr.bnf.fr/portailccfr/ark:/16871/004D36F12606) y [Béarn](https://ccfr.bnf.fr/portailccfr/ark:/16871/004D36E13365). |
+| Costa y enclaves | Calais se mantiene como plaza inglesa hasta 1557 y pasa a Francia desde 1558. Burdeos se muestra como plaza inglesa hasta 1450 y de nuevo en 1452; Bayonne solo hasta 1450. Jersey permanece separado de Francia y de Inglaterra, excepto su ocupación francesa de 1461–1467. | [Archivos Nacionales británicos](https://www.nationalarchives.gov.uk/help-with-your-research/research-guides/french-lands-english-kings/), [Gobierno de Jersey](https://www.gov.je/sitecollectiondocuments/life%20events/id%20citizenship%20test%20-%20jersey%20supplement%20-%2020190304.pdf). |
+| Provenza y Saboya | El polígono antiguo de «Provenza» apuntaba erróneamente a Avignon y Nice. El nuevo núcleo utiliza Aix, Draguignan y Digne; Barcelonnette se atribuye a Saboya, que la recibió con el interior de Nice en 1388. | [Bibliothèque nationale de France: dedición de 1388](https://catalogue.bnf.fr/ark:/12148/cb12224467j). |
+| Reinos británicos | Orkney y Shetland entran en Escocia desde 1469; Berwick es inglés hasta 1460, escocés en 1461–1481 e inglés desde 1482. Tórshavn no se muestra como Escocia. Man queda como señorío propio desde 1406. Gales está dentro del agregado inglés heredado, una simplificación que se desglosará. | [Historic Environment Scotland: Orkney](https://www.historicenvironment.scot/visit/all/maeshowe-chambered-cairn/history-and-stories/) y [Shetland](https://www.historicenvironment.scot/visit/all/jarlshof-prehistoric-and-norse-settlement/history-and-stories/), [Historic England: Berwick](https://historicengland.org.uk/listing/the-list/list-entry/1015520), [Manx National Heritage](https://manxnationalheritage.im/news/medieval-ring-declared-treasure/) y [Gobierno de las Islas Feroe](https://www.faroeislands.fo/the-big-picture/history-of-the-faroe-islands/historical-timeline). |
+| Irlanda | Nueve locations señalan únicamente un núcleo urbano inglés en Dublin, Meath, Kildare y Louth. No forman una frontera continua de la *Pale*, ni representan el control inglés de toda la isla o la expansión Tudor. | [Investigación cartográfica irlandesa publicada por el Gobierno de Irlanda](https://assets.ireland.ie/documents/GIDC-SAIS_Vol_5_2_2_web_002.pdf), [archivo de Louth](https://louthcoco.ie/en/services/heritage/what_is_heritage/cultural/county_and_boroughs/). |
+
+**Pendiente:** reconstruir la Francia feudal por gobiernos y ocupaciones
+locales; separar Gales del agregado inglés antes de las leyes de unión;
+fechar Noruega/Dinamarca, la expansión inglesa en Irlanda y las guerras del
+siglo XVII. Un ID coincidente o un solapamiento del 55 % no prueban por sí
+solos soberanía histórica. El laboratorio sigue siendo opcional y no
+sustituye todavía el mapa habitual del Atlas.
 
 ### Dudas de esta entrega
 

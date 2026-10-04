@@ -26,7 +26,25 @@ const corridors = {
     'Corona de Polonia', 'Ducado de Mazovia', 'Prusia Real',
     'Prusia de la Orden', 'Prusia ducal', 'Gran Ducado de Lituania',
   ],
+  'Francia e islas británicas': [
+    'Francia', 'Bretaña', 'Provenza', 'Inglaterra', 'Escocia',
+    'Plaza inglesa de Calais', 'Plazas inglesas de Guyena',
+    'Núcleo inglés en Irlanda', 'Señorío de Man', 'Bailiazgo de Jersey',
+  ],
 };
+
+// The existing France shape includes territories before their incorporation,
+// and the old Provence shape is Avignon plus Nice rather than Provence. Keep
+// the jurisdictions distinct until a dated union, and omit early French
+// wartime borders rather than passing the old blanket polygon off as fact.
+const BRITTANY_OLD = ['Nantais', 'Vannetais', 'Ploermel', 'Rennais', 'Tregor', 'Cornouaille'];
+const PROVENCE_OLD = ['Aquisextain', 'Dracenois', 'Dignois'];
+const SCOTLAND_OLD = idsDeReinoEnAño('Inglaterra', 1707)
+  .filter(id => !idsDeReinoEnAño('Inglaterra', 1600).includes(id));
+const FRENCH_SEPARATE = new Set([
+  ...BRITTANY_OLD, 'Dijonnais', 'Autunnais', 'Auxerrois', 'Ponthieu',
+  'Nevernais', 'Bearn_Bigorre', 'Jersey',
+]);
 
 // The Atlas's single post-1386 polygon lists anachronistically absorbs
 // Mazovia, Pomerania and Moldavian vassals. This pilot separates the
@@ -51,6 +69,21 @@ const LITHUANIA_TRANSFER_1569 = [
   'Chornobyl', 'Ovruch', 'Olevsk',
 ];
 const specialSeries = {
+  Francia: year => [
+    ...idsDeReinoEnAño('Francia', year).filter(id => !FRENCH_SEPARATE.has(id)),
+    ...(year >= 1477 ? ['Dijonnais', 'Autunnais', 'Auxerrois', 'Ponthieu'] : []),
+    ...(year >= 1486 ? PROVENCE_OLD : []),
+    ...(year >= 1532 ? BRITTANY_OLD : []),
+    ...(year >= 1620 ? ['Bearn_Bigorre'] : []),
+  ],
+  Bretaña: () => BRITTANY_OLD,
+  Provenza: () => PROVENCE_OLD,
+  Escocia: () => SCOTLAND_OLD,
+  'Plaza inglesa de Calais': () => [],
+  'Plazas inglesas de Guyena': () => [],
+  'Núcleo inglés en Irlanda': () => [],
+  'Señorío de Man': () => [],
+  'Bailiazgo de Jersey': () => [],
   // Only independently sourced locations are colored. The broader, often
   // overlapping ecclesiastical jurisdictions remain open for later audit.
   'Principado episcopal de Brixen': () => [],
@@ -84,6 +117,18 @@ const specialSeries = {
 // Keep the old shape available for audit, but stop painting it as a separate
 // political map after incorporation into a successor jurisdiction.
 const active = {
+  Francia: { from: 1453, reason: 'Antes de 1453 las ocupaciones de la Guerra de los Cien Años necesitan capas fechadas locales; el agregado queda gris.',
+    source: 'https://www.nationalarchives.gov.uk/help-with-your-research/research-guides/french-lands-english-kings/' },
+  Bretaña: { through: 1531, reason: 'El ducado se unió a la Corona francesa en 1532; el matrimonio dinástico anterior no lo borró.',
+    source: 'https://ccfr.bnf.fr/portailccfr/ark:/16871/004D36F12606' },
+  Provenza: { through: 1485, reason: 'La unión formal del condado de Provenza a la Corona francesa está documentada en las letras de octubre de 1486.',
+    source: 'https://ccfr.bnf.fr/portailccfr/ark:/16871/004D22012314' },
+  'Plaza inglesa de Calais': { through: 1557, reason: 'Calais y su marcha permanecieron en manos inglesas hasta comienzos de 1558.',
+    source: 'https://www.nationalarchives.gov.uk/help-with-your-research/research-guides/french-lands-english-kings/' },
+  'Plazas inglesas de Guyena': { through: 1452, reason: 'Solo se muestran los núcleos documentados; la situación de Burdeos cambió en 1451–1453 y no se generaliza a toda Guyena.',
+    source: 'https://discovery.nationalarchives.gov.uk/details/r/C3621' },
+  'Señorío de Man': { from: 1406, reason: 'El señorío de los Stanley se estableció por concesión inglesa en 1406; la jurisdicción insular era distinta de Inglaterra y Escocia.',
+    source: 'https://manxnationalheritage.im/news/medieval-ring-declared-treasure/' },
   Florencia: { through: 1568, reason: 'Desde 1569 se muestra el Gran Ducado de Toscana.',
     source: 'https://www.treccani.it/enciclopedia/giovanna-d-austria-granduchessa-di-toscana_(Dizionario-Biografico)/' },
   Toscana: { from: 1569, reason: 'Título granducal concedido a Cosme I en 1569.',
@@ -115,6 +160,16 @@ const active = {
 };
 
 const notes = {
+  Francia: 'Agregado francés conservador desde 1453: Bretaña entra en 1532, Provenza en 1486 y el ducado de Borgoña en 1477. Los feudos y ocupaciones discutidos se revisan por separado; antes de 1453 el gris no significa ausencia de Corona francesa.',
+  Bretaña: 'Ducado separado hasta la unión formal de 1532. Incluye los seis polígonos bretones antiguos, no solo los tres de la ficha anterior.',
+  Provenza: 'Núcleo provenzal de Aix, Draguignan y Digne. No usa Avignon, bajo el Papado, ni Nice o Barcelonnette, cedidos a Saboya en 1388. Se incorpora a Francia desde 1486.',
+  Inglaterra: 'Reino inglés, con Gales bajo su Corona en esta escala; Escocia permanece separada incluso después de la unión personal de 1603. Calais y los núcleos de Guyena se registran aparte.',
+  Escocia: 'Reino separado de Inglaterra durante todo este ensayo (1400–1650), incluso cuando comparten soberano desde 1603. Se corrigen las adscripciones erróneas del agregado antiguo: Man y las Feroe nunca se pintan como Escocia; Orkney y Shetland entran en 1469 y Berwick solo se muestra entre 1461 y 1481.',
+  'Plaza inglesa de Calais': 'Solo Calais, no todo Artois ni toda la costa del canal. La plaza pasó a Francia a comienzos de 1558.',
+  'Plazas inglesas de Guyena': 'Núcleos urbanos documentados, no una reconstrucción completa de Gasconia ni de las ocupaciones de la Guerra de los Cien Años.',
+  'Núcleo inglés en Irlanda': 'Solo nueve locations urbanas y próximas a los núcleos de Dublin, Meath, Kildare y Louth. No equivale a una frontera cerrada ni al control efectivo de toda Irlanda; su extensión variable y la expansión Tudor quedan por fechar.',
+  'Señorío de Man': 'La isla conserva una jurisdicción señorial propia bajo los Stanley desde 1406. Su vínculo feudal con la Corona inglesa no la convierte en parte del reino inglés.',
+  'Bailiazgo de Jersey': 'Jersey mantuvo su vínculo separado con la Corona inglesa desde 1204. Durante la ocupación francesa de 1461–1467 se muestra bajo Francia y reaparece como bailiazgo a partir de 1468.',
   Austria: 'Ducado/archiducado danubiano: no equivale al conjunto de posesiones de la Casa de Austria.',
   'Austria Interior': 'Estiria, Carintia, Carniola y litoral habsbúrgico. Pitten y Wiener Neustadt seguían la rama estiria aunque hoy estén en Baja Austria.',
   Tirol: 'Condado del Tirol. Se excluyen los obispados de Brixen y Trento; Kufstein y Kitzbühel entran en 1504 y Lienz en 1500.',
@@ -142,6 +197,11 @@ const territories = Object.entries(corridors).flatMap(([corridor, names]) => nam
     }
   }
   const colors = {
+    'Plaza inglesa de Calais': REINO_COLOR.Inglaterra,
+    'Plazas inglesas de Guyena': REINO_COLOR.Inglaterra,
+    'Núcleo inglés en Irlanda': REINO_COLOR.Inglaterra,
+    'Señorío de Man': '#9b8160',
+    'Bailiazgo de Jersey': REINO_COLOR.Inglaterra,
     'Principado episcopal de Brixen': '#96814e',
     'Principado episcopal de Trento': '#907050',
     'Arzobispado principesco de Salzburgo': '#8a6948',

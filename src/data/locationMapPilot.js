@@ -1,6 +1,8 @@
 // The new geometry is an opt-in research layer. These aliases describe
 // political jurisdictions, not every territory or title held by one person.
 export function pilotJurisdictionsFor(territory, year) {
+  if (territory === 'Inglaterra') return ['Inglaterra', 'Plaza inglesa de Calais', 'Plazas inglesas de Guyena'];
+  if (territory === 'Irlanda') return ['Núcleo inglés en Irlanda'];
   if (territory === 'Polonia') return ['Corona de Polonia', 'Prusia Real'];
   if (territory === 'Lituania') return ['Gran Ducado de Lituania'];
   if (territory === 'Mazovia') return ['Ducado de Mazovia'];
