@@ -17,7 +17,7 @@ function ids(name, year) {
 }
 
 test('territorial crosswalk uses only SVG IDs and never assigns one ID twice within a corridor', () => {
-  assert.equal(data.territories.length, 52);
+  assert.equal(data.territories.length, 77);
   for (let year = data.from; year <= data.through; year++) {
     for (const corridor of ['Iberia', 'Italia', 'Centroeuropa', 'Polonia–Lituania', 'Francia e islas británicas']) {
       const owner = new Map();
@@ -30,6 +30,48 @@ test('territorial crosswalk uses only SVG IDs and never assigns one ID twice wit
       }
     }
   }
+});
+
+test('Burgundian jurisdictions stay distinct while their ownership changes', () => {
+  assert(ids('Borgoña', 1476).has('Dijon'));
+  assert(!ids('Borgoña', 1477).has('Dijon'));
+  assert(ids('Francia', 1477).has('Dijon'));
+  assert(ids('Condado de Borgoña', 1476).has('Dole'));
+  assert(!ids('Condado de Borgoña', 1477).has('Dole'));
+  assert(ids('Condado de Borgoña', 1493).has('Dole'));
+  assert(!ids('Utrecht', 1527).has('Utrecht'));
+  assert(ids('Utrecht', 1528).has('Utrecht'));
+  assert(ids('Señorío de Cuijk', 1509).has('Cuijk'));
+  assert(!ids('Brabante', 1509).has('Cuijk'));
+  for (const year of [1419, 1476, 1477, 1493, 1548]) {
+    const owner = new Map();
+    for (const territory of data.territories.filter(item => item.corridor === 'Borgoña e Imperio'
+      && item.name !== 'Marco jurídico del Sacro Imperio')) {
+      for (const id of ids(territory.name, year)) {
+        assert(pathIds.has(id));
+        assert(!owner.has(id), `${id} overlaps ${owner.get(id)} and ${territory.name} in ${year}`);
+        owner.set(id, territory.name);
+      }
+    }
+  }
+});
+
+test('imperial legal reference changes at Westphalia without becoming an emperor possession', () => {
+  const frame = data.territories.find(item => item.name === 'Marco jurídico del Sacro Imperio');
+  assert(frame?.note.includes('no un Estado unificado'));
+  assert.equal(ids(frame.name, 1511).size, 0);
+  for (const id of ['Aachen', 'Vienna', 'Prague', 'Milano', 'Brussels']) {
+    assert(ids(frame.name, 1512).has(id));
+    assert(pathIds.has(id));
+  }
+  for (const id of ['Dijon', 'Calais', 'London', 'Venice', 'Bordeaux']) {
+    assert(!ids(frame.name, 1512).has(id));
+  }
+  assert(ids(frame.name, 1647).has('Amsterdam'));
+  assert(!ids(frame.name, 1648).has('Amsterdam'));
+  assert(ids(frame.name, 1647).has('Bern'));
+  assert(!ids(frame.name, 1648).has('Bern'));
+  assert(ids(frame.name, 1648).has('Brussels'));
 });
 
 test('western corridor respects French incorporations and English continental withdrawals', () => {

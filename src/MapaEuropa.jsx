@@ -14,7 +14,7 @@ import locationsSvgUrl from "../prototypes/euv-locations/euv-locations-crop.svg?
 import locationsDataUrl from "../prototypes/euv-locations/corridor-locations.json?url";
 import burgundianDataUrl from "../prototypes/euv-locations/burgundian-locations.json?url";
 import { loadTextAsset, loadJsonAsset, forgetTextAsset } from "./utils/loadAsset.js";
-import { pilotBurgundianGovernmentsFor, pilotLocationContext, pilotLocationsFor } from "./data/locationMapPilot.js";
+import { pilotBurgundianGovernmentsFor, pilotImperialFrameFor, pilotLocationContext, pilotLocationsFor } from "./data/locationMapPilot.js";
 import { imperialFrameIds } from "./data/imperialFrame.js";
 import { buildPoliticalMapIndex, inspectMapRegion } from "./data/politicalMapIndex.js";
 import { PERSONAS } from "./personas.jsx";
@@ -97,7 +97,7 @@ function viewBoxString(box) {
 // El mapa solo reacciona al CLIC (a `seleccion`), no al hover. El movimiento
 // y el zoom alteran únicamente el viewBox del SVG: no interfieren con el
 // coloreado imperativo de los territorios.
-export function MapaEuropa({ seleccion, anioGlobal = null, onSelectTerritorio, onSelectPersona, initialViewport = null, onViewportChange, labMode = false }) {
+export function MapaEuropa({ seleccion, anioGlobal = null, onSelectTerritorio, onSelectPersona, initialViewport = null, onViewportChange, labMode = false, onToggleLabMode }) {
   const containerRef = useRef(null);
   const svgInyectadoRef = useRef(false);
   const pintadosRef = useRef(new Set());
@@ -126,6 +126,7 @@ export function MapaEuropa({ seleccion, anioGlobal = null, onSelectTerritorio, o
     && reinadosActivos(seleccion, anioGlobal, { soloEfectivos: true })
       .some((gobierno) => gobierno.territorio === 'Sacro Imperio'));
   const imperialReferenceActive = !labMode && hasImperialOffice && imperialFrameIds(anioGlobal).length > 0;
+  const labImperialReferenceActive = labMode && hasImperialOffice && Number.isInteger(anioGlobal);
 
   useEffect(() => {
     if (!containerRef.current) return;
@@ -223,6 +224,15 @@ export function MapaEuropa({ seleccion, anioGlobal = null, onSelectTerritorio, o
           pintadosRef.current.add(id);
         });
       }
+      if (labImperialReferenceActive) {
+        pilotImperialFrameFor(pilotData, anioGlobal).forEach((id) => {
+          const target = buscarElemento(id);
+          if (!target) return;
+          target.style.setProperty('fill', '#a49b8e', 'important');
+          target.style.setProperty('stroke', '#a49b8e', 'important');
+          pintadosRef.current.add(id);
+        });
+      }
 
       if (seleccion && (!labMode || Number.isInteger(anioGlobal))) {
         const reinadosDetallados = listaReinados(seleccion).filter(reinadoEsEfectivo);
@@ -284,7 +294,7 @@ export function MapaEuropa({ seleccion, anioGlobal = null, onSelectTerritorio, o
     } catch (error) {
       console.error("[MapaEuropa] Error al renderizar:", error);
     }
-  }, [seleccion, anioGlobal, mapReady, imperialReferenceActive, labMode, pilotData]);
+  }, [seleccion, anioGlobal, mapReady, imperialReferenceActive, labImperialReferenceActive, labMode, pilotData]);
 
   const updateViewBox = useCallback((producer) => {
     setViewBox((current) => {
@@ -420,10 +430,14 @@ export function MapaEuropa({ seleccion, anioGlobal = null, onSelectTerritorio, o
         <button type="button" className="nav-btn" onClick={() => panBy(0, MAP_PAN_STEP)} title="Mover mapa hacia abajo" aria-label="Mover mapa hacia abajo"><ArrowDown size={13} /></button>
         <button type="button" className="nav-btn" onClick={() => panBy(MAP_PAN_STEP, 0)} title="Mover mapa a la derecha" aria-label="Mover mapa a la derecha"><ArrowRight size={13} /></button>
       </div>
-      {labMode && <div className="mapa-lab-badge">EU V Locations · ensayo parcial</div>}
+      <button type="button" className="mapa-lab-switch" onClick={onToggleLabMode}
+        aria-pressed={labMode} aria-label={labMode ? 'Volver al mapa actual' : 'Probar el mapa detallado experimental'}>
+        {labMode ? 'Mapa detallado · volver al actual' : 'Probar mapa detallado'}
+      </button>
       {seleccion && <details className="mapa-color-legend">
         <summary>¿Por qué estos colores?</summary>
         {labMode && <p>En este mapa experimental solo se colorean jurisdicciones ya trasladadas y años auditados. Elige un año concreto. El gris no significa ausencia de gobierno. Las fronteras son candidatas por correspondencia geométrica.</p>}
+        {labImperialReferenceActive && <p>El gris medio señala una referencia jurídica provisional del Sacro Imperio. No representa tierras gobernadas directamente por el emperador ni identifica todos los círculos imperiales. <a href="https://germanhistorydocs.org/en/from-the-reformations-to-the-thirty-years-war-1500-1648/ghdi:map-2809" target="_blank" rel="noreferrer">Fuente cartográfica</a>.</p>}
         {imperialReferenceActive && <p>El tono gris muestra una aproximación regional al ámbito jurídico del Sacro Imperio en {anioGlobal}. Los colores vivos indican gobiernos efectivos de esta persona. Pertenecer al Imperio no equivalía a ser una posesión del emperador. <a href="/es/metodologia/">Método y límites</a>.</p>}
         {hasImperialOffice && !imperialReferenceActive && <p>El marco imperial no está reconstruido para este año. Solo se colorean los gobiernos territoriales documentados de la persona.</p>}
         {Number.isFinite(anioGlobal) ? (

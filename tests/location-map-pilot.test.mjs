@@ -2,7 +2,7 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import path from 'node:path';
 import test from 'node:test';
-import { pilotBurgundianGovernmentsFor, pilotLocationContext, pilotLocationsFor } from '../src/data/locationMapPilot.js';
+import { pilotBurgundianGovernmentsFor, pilotImperialFrameFor, pilotLocationContext, pilotLocationsFor } from '../src/data/locationMapPilot.js';
 
 const data = JSON.parse(fs.readFileSync(path.resolve(import.meta.dirname,
   '../prototypes/euv-locations/corridor-locations.json'), 'utf8'));
@@ -48,4 +48,12 @@ test('the Atlas trial reuses the dated Burgundian succession without painting th
   assert(pilotLocationContext(data, 'Cuijk', 1548, 'CARLOS5')
     .some(item => item.name === 'Señorío de Cuijk'));
   assert(!pilotBurgundianGovernmentsFor(data, 'CARLOS5', 1500).length);
+});
+
+test('the emperor receives a legal backdrop without claiming that he governs each estate', () => {
+  assert(pilotImperialFrameFor(data, 1548).includes('Aachen'));
+  assert(pilotImperialFrameFor(data, 1548).includes('Brussels'));
+  assert(!pilotImperialFrameFor(data, 1548).includes('Dijon'));
+  assert.deepEqual(pilotLocationsFor(data, 'Sacro Imperio', 1548), []);
+  assert(pilotLocationContext(data, 'Utrecht', 1548).some(item => item.name === 'Utrecht'));
 });

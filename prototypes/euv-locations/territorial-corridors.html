@@ -32,13 +32,13 @@
   <header>
     <p class="eyebrow">Laboratorio cartográfico · mapa en evaluación</p>
     <h1>Corredores territoriales del Atlas</h1>
-    <p>Las versiones territoriales del Atlas se proyectan sobre EU V Locations, conservando separados reinos, ducados, condados y repúblicas. Elige una jurisdicción y un año para examinar su geometría. Este visor no atribuye automáticamente todos los títulos al mismo Estado ni convierte una localización en un límite histórico probado.</p>
+    <p>Las versiones territoriales del Atlas se proyectan sobre EU V Locations, conservando separados reinos, ducados, condados y repúblicas. Elige una jurisdicción y un año para examinar su geometría. Borgoña reúne 24 señoríos fechados de 1419 a 1555; el marco imperial gris es una referencia jurídica, no un dominio personal del emperador. Ningún solapamiento convierte una location en frontera histórica probada.</p>
     <p><a href="./">Comparar mapas</a> · <a href="./carlos-v.html">Dominios de Carlos V</a> · <a href="./burgundian-succession.html">Sucesión borgoñona</a></p>
   </header>
   <main>
     <div class="controls">
       <label for="corridor">Corredor
-        <select id="corridor"><option>Iberia</option><option>Italia</option><option>Centroeuropa</option><option>Polonia–Lituania</option><option>Francia e islas británicas</option></select>
+        <select id="corridor"><option>Iberia</option><option>Italia</option><option>Centroeuropa</option><option>Polonia–Lituania</option><option>Francia e islas británicas</option><option>Borgoña e Imperio</option></select>
       </label>
       <label for="territory">Jurisdicción
         <select id="territory"></select>
@@ -68,12 +68,12 @@
     </div>
     <div class="note">
       <h2>Qué se ha trasladado</h2>
-      <p>El visor lee las versiones territoriales fechadas del Atlas y conserva la identidad de cada jurisdicción. Corrige agrupaciones demasiado amplias y separa las incorporaciones de Bretaña, Provenza, Mazovia y Prusia. Las nuevas locations son candidatas cuando al menos el 55 % de su área cae en la provincia antigua correspondiente; las excepciones verificadas se registran por ID, año y fuente. La base geométrica de MapChart es una aproximación, y el mapa público aún no se reemplaza. <a href="./README.md">Método, auditoría y fuentes</a>.</p>
+      <p>El visor lee las versiones territoriales fechadas del Atlas y conserva la identidad de cada jurisdicción. Corrige agrupaciones demasiado amplias y separa las incorporaciones de Bretaña, Provenza, Mazovia y Prusia. Reutiliza la sucesión borgoñona ya auditada y distingue el ducado francés del condado imperial. Las nuevas locations son candidatas cuando al menos el 55 % de su área cae en la provincia antigua correspondiente; las excepciones verificadas se registran por ID, año y fuente. La base geométrica de MapChart es una aproximación, y el mapa habitual del Atlas sigue siendo el predeterminado. <a href="./README.md">Método, auditoría y fuentes</a>.</p>
     </div>
   </main>
   <footer>Geometría: <a href="https://www.mapchart.net/eu-v-locations.html">MapChart</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>.</footer>
   <script type="module">
-    const FRAMES={Iberia:{x:518,y:158,w:77,h:66},Italia:{x:575,y:143,w:64,h:68},Centroeuropa:{x:592,y:91,w:134,h:116},'Polonia–Lituania':{x:632,y:92,w:110,h:74},'Francia e islas británicas':{x:493,y:82,w:145,h:120}};
+    const FRAMES={Iberia:{x:518,y:158,w:77,h:66},Italia:{x:575,y:143,w:64,h:68},Centroeuropa:{x:592,y:91,w:134,h:116},'Polonia–Lituania':{x:632,y:92,w:110,h:74},'Francia e islas británicas':{x:493,y:82,w:145,h:120},'Borgoña e Imperio':{x:522,y:85,w:170,h:105}};
     const TERRITORY_FRAMES={'Cerdeña':{x:581,y:175,w:25,h:31},'Trinacria':{x:592,y:180,w:34,h:32},'Venecia':{x:588,y:143,w:100,h:76}};
     const BASE='#d8d6ce';const $=id=>document.getElementById(id);
     const state={svg:null,paths:new Map(),data:null,painted:new Set(),view:{...FRAMES.Iberia}};
@@ -106,12 +106,12 @@
     function focusTerritory(){
       const territory=selectedTerritory(),year=Number($('year').value);
       let ids=territory?activeVersion(territory,year).ids:[];
-      if(['Centroeuropa','Polonia–Lituania','Francia e islas británicas'].includes(territory?.corridor)&&!ids.length&&territory.active){
+      if(['Centroeuropa','Polonia–Lituania','Francia e islas británicas','Borgoña e Imperio'].includes(territory?.corridor)&&!ids.length&&territory.active){
         const comparisonYear=territory.active.from??territory.active.through;
         ids=activeVersion(territory,comparisonYear).ids;
       }
       const boxes=ids.map(id=>state.paths.get(id)).filter(Boolean).map(path=>path.getBBox());
-      if(['Centroeuropa','Polonia–Lituania','Francia e islas británicas'].includes(territory?.corridor)&&boxes.length){const x=Math.min(...boxes.map(b=>b.x)),y=Math.min(...boxes.map(b=>b.y));
+      if(['Centroeuropa','Polonia–Lituania','Francia e islas británicas','Borgoña e Imperio'].includes(territory?.corridor)&&boxes.length){const x=Math.min(...boxes.map(b=>b.x)),y=Math.min(...boxes.map(b=>b.y));
         const right=Math.max(...boxes.map(b=>b.x+b.width)),bottom=Math.max(...boxes.map(b=>b.y+b.height));
         const northern=territory.corridor==='Polonia–Lituania';
         const w=Math.max(northern?10:25,right-x),h=Math.max(northern?8:20,bottom-y),pad=Math.max(northern?1.5:3,Math.min(w,h)*.13);

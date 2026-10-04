@@ -3,6 +3,7 @@
 // person governed several of them. Geometry is only a candidate crosswalk.
 import fs from 'node:fs';
 import { idsDeReinoEnAño, REINO_COLOR } from '../../src/Territorios.jsx';
+import { imperialFrameIds } from '../../src/data/imperialFrame.js';
 
 const FROM = 1400;
 const THROUGH = 1650;
@@ -30,6 +31,9 @@ const corridors = {
     'Francia', 'Bretaña', 'Provenza', 'Inglaterra', 'Escocia',
     'Plaza inglesa de Calais', 'Plazas inglesas de Guyena',
     'Núcleo inglés en Irlanda', 'Señorío de Man', 'Bailiazgo de Jersey',
+  ],
+  'Borgoña e Imperio': [
+    'Marco jurídico del Sacro Imperio',
   ],
 };
 
@@ -84,6 +88,7 @@ const specialSeries = {
   'Núcleo inglés en Irlanda': () => [],
   'Señorío de Man': () => [],
   'Bailiazgo de Jersey': () => [],
+  'Marco jurídico del Sacro Imperio': year => imperialFrameIds(year),
   // Only independently sourced locations are colored. The broader, often
   // overlapping ecclesiastical jurisdictions remain open for later audit.
   'Principado episcopal de Brixen': () => [],
@@ -157,6 +162,8 @@ const active = {
     source: 'https://agad.gov.pl/inwentarze/Metr_Korx.xml' },
   'Gran Ducado de Lituania': { through: 1569, reason: 'La frontera de este corredor se ha auditado hasta la Unión de Lublin de 1569; los cambios posteriores quedan por fechar.',
     source: 'https://agad.gov.pl/inwentarze/Metr_Korx.xml' },
+  'Marco jurídico del Sacro Imperio': { from: 1512, reason: 'Referencia institucional desde la organización de los círculos imperiales; no es una posesión territorial del emperador.',
+    source: 'https://germanhistorydocs.org/en/from-the-reformations-to-the-thirty-years-war-1500-1648/ghdi:map-2809' },
 };
 
 const notes = {
@@ -186,6 +193,7 @@ const notes = {
   'Prusia de la Orden': 'Remanente de la Orden tras la Segunda Paz de Toruń; su sujeción feudal a Polonia no equivale a incorporación.',
   'Prusia ducal': 'Sucesor secularizado del Estado de la Orden desde 1525, feudo polaco; la propia entidad mantiene color separado.',
   'Gran Ducado de Lituania': 'Núcleo occidental y voivodatos cuya transferencia de 1569 se ha revisado. La frontera oriental y el litoral del mar Negro quedan deliberadamente grises hasta una auditoría fechada.',
+  'Marco jurídico del Sacro Imperio': 'Capa de referencia jurídica, no un Estado unificado ni dominio directo del emperador. Los círculos imperiales no abarcaron todas las tierras del Imperio. La frontera sigue siendo una aproximación regional y debe leerse debajo de las jurisdicciones efectivas.',
 };
 
 const territories = Object.entries(corridors).flatMap(([corridor, names]) => names.map(name => {
@@ -208,6 +216,7 @@ const territories = Object.entries(corridors).flatMap(([corridor, names]) => nam
     'Corona de Polonia': REINO_COLOR.Polonia, 'Ducado de Mazovia': '#b7789d',
     'Prusia Real': '#ae4e9b', 'Prusia de la Orden': '#495672',
     'Prusia ducal': REINO_COLOR.Prusia, 'Gran Ducado de Lituania': REINO_COLOR.Lituania,
+    'Marco jurídico del Sacro Imperio': '#a49b8e',
   };
   return { corridor, name, color: colors[name] || REINO_COLOR[name] || '#735f4c',
     active: active[name] || null, note: notes[name] || null, versions };

@@ -21,6 +21,49 @@ ROOT = HERE.parents[1]
 THRESHOLD = .55
 
 
+def burgundian_jurisdictions(first_year, last_year):
+    """Reuse the dated succession audit, keeping each lordship separate."""
+    mapped = json.loads((HERE / "burgundian-locations.json").read_text())
+    source = json.loads((HERE / "burgundian-source.json").read_text())
+    names = sorted({government["territory"] for person in mapped["people"]
+                    for government in person["governments"]})
+    territories = []
+    for name in names:
+        versions = []
+        nonempty_years = []
+        for year in range(first_year, last_year + 1):
+            ids, old_ids, borderline = set(), set(), set()
+            for mapped_person, source_person in zip(mapped["people"], source["people"]):
+                if not mapped_person["from"] <= year <= mapped_person["through"]:
+                    continue
+                for government, raw in zip(mapped_person["governments"], source_person["governments"]):
+                    if government["territory"] != name or not government["from"] <= year <= government["through"]:
+                        continue
+                    version = next(v for v in reversed(government["versions"]) if v["from"] <= year)
+                    raw_version = next(v for v in reversed(raw["versions"]) if v["from"] <= year)
+                    ids.update(version["ids"])
+                    old_ids.update(raw_version["oldIds"])
+                    borderline.update(version["borderline"])
+            if ids:
+                nonempty_years.append(year)
+            selected = sorted(ids)
+            if not versions or selected != versions[-1]["ids"]:
+                versions.append({"from": year, "oldIds": sorted(old_ids), "ids": selected,
+                                 "borderline": sorted(borderline)})
+        if not nonempty_years:
+            continue
+        note = ("Sucesión borgoñona auditada por señorío, no un único Estado. "
+                "Los vacíos representan disputa, pérdida o falta de atribución; "
+                "el título personal por sí solo no colorea este territorio.")
+        if name == "Borgoña":
+            note += " El ducado francés no se confunde con el Condado imperial de Borgoña."
+        territories.append({"corridor": "Borgoña e Imperio", "name": name,
+                            "color": "#8b245f", "active": {"from": nonempty_years[0],
+                                "through": nonempty_years[-1], "reason": "Fuera de la etapa territorial documentada para la sucesión borgoñona en este ensayo."},
+                            "note": note, "versions": versions})
+    return territories, mapped["overrides"]
+
+
 def main():
     source = json.loads((HERE / "corridor-source.json").read_text())
     corrections = json.loads((HERE / "corridor-overrides.json").read_text())
@@ -97,14 +140,17 @@ def main():
         output_territories.append({key: territory[key] for key in ("corridor", "name", "color", "active", "note")}
                                   | {"versions": versions})
 
+    burgundy, burgundian_corrections = burgundian_jurisdictions(source["from"], source["through"])
+    output_territories.extend(burgundy)
     out = {
         "from": source["from"], "through": source["through"],
         "method": "Atlas territorial versions; >=55% of each new location inside the old territory polygon, with sourced corrections",
-        "territories": output_territories, "overrides": corrections,
+        "territories": output_territories, "overrides": corrections + burgundian_corrections,
         "audit": {"oldIds": len(old_shapes), "newPathsConsidered": looked,
                   "newPathsTotal": len(new_paths),
                   "oldWithNoCandidate": sorted(i for i, hits in overlaps.items() if not hits),
                   "exactNameOldIds": sum(1 for i in old_shapes if i in new_paths),
+                  "burgundianJurisdictionsReused": len(burgundy),
                   "borderlineIds": sorted({i for t in output_territories for v in t["versions"] for i in v["borderline"]}),
                   "sourceCaveat": "Geometric candidate coverage is not a historical border or ownership claim."}
     }

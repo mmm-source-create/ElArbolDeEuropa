@@ -1,6 +1,7 @@
 // The new geometry is an opt-in research layer. These aliases describe
 // political jurisdictions, not every territory or title held by one person.
 export function pilotJurisdictionsFor(territory, year) {
+  if (territory === 'Sacro Imperio') return [];
   if (territory === 'Inglaterra') return ['Inglaterra', 'Plaza inglesa de Calais', 'Plazas inglesas de Guyena'];
   if (territory === 'Irlanda') return ['Núcleo inglés en Irlanda'];
   if (territory === 'Polonia') return ['Corona de Polonia', 'Prusia Real'];
@@ -8,6 +9,10 @@ export function pilotJurisdictionsFor(territory, year) {
   if (territory === 'Mazovia') return ['Ducado de Mazovia'];
   if (territory === 'Prusia') return [year < 1525 ? 'Prusia de la Orden' : 'Prusia ducal'];
   return [territory];
+}
+
+export function pilotImperialFrameFor(data, year) {
+  return pilotLocationsFor(data, 'Marco jurídico del Sacro Imperio', year);
 }
 
 export function pilotVersionFor(entry, year) {

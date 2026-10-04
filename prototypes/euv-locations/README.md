@@ -331,6 +331,51 @@ siglo XVII. Un ID coincidente o un solapamiento del 55 % no prueban por sí
 solos soberanía histórica. El laboratorio sigue siendo opcional y no
 sustituye todavía el mapa habitual del Atlas.
 
+### Octava entrega: jurisdicciones borgoñonas y marco imperial
+
+El visor territorial integra las **24 jurisdicciones** de la sucesión
+borgoñona ya auditada y las deja seleccionar por separado. Al cambiar de año
+se observan el ducado francés hasta 1476, la pérdida o disputa de algunos
+territorios después de 1477, las restituciones de 1493 y las incorporaciones
+neerlandesas del reinado de Carlos V. El **ducado de Borgoña** no se convierte
+en el **Condado de Borgoña** por compartir nombre; tampoco se convierte la
+herencia de los Países Bajos en una provincia única del Imperio. El ensayo
+termina en **1555**: la etapa de Felipe II, la revuelta y la división de los
+Países Bajos exigen una secuencia propia antes de colorearlas.
+
+El **marco jurídico del Sacro Imperio** es una capa de referencia adicional,
+con **909 locations candidatas en 1512** y **807 en 1648**. Aparece en gris
+medio detrás de los gobiernos efectivos al seleccionar un emperador en el
+Atlas. No afirma que esas tierras fueran patrimonio suyo ni que cada una
+perteneciese a un círculo imperial: Bohemia, Italia imperial y Suiza ilustran
+por qué esas categorías deben permanecer distintas. Los Países Bajos del
+norte y Suiza salen de este marco de referencia desde la Paz de Westfalia;
+los meridionales y el Franco Condado no se borran con ellos. El solapamiento
+de 55 % con provincias anteriores sigue siendo **candidato geométrico**, no
+frontera legal documentada location por location. Véanse el [mapa de los
+círculos de 1512](https://germanhistorydocs.org/en/from-the-reformations-to-the-thirty-years-war-1500-1648/ghdi:map-2809),
+los [tratados de Westfalia](https://germanhistorydocs.org/en/from-the-reformations-to-the-thirty-years-war-1500-1648/peace-treaties-of-westphalia-october-14-24-1648)
+y la [revisión del marco imperial anterior](../../docs/CARTOGRAFIA_SACRO_IMPERIO.md).
+
+La separación entre **Corona inglesa** y **reino de Inglaterra** también se
+conserva: Calais y las plazas documentadas de Guyena pueden compartir el
+color del monarca inglés, pero permanecen como jurisdicciones continentales
+identificables. No se infiere de ese color su incorporación institucional
+idéntica a la de los condados ingleses. Los [Archivos Nacionales
+británicos](https://www.nationalarchives.gov.uk/help-with-your-research/research-guides/french-lands-english-kings/)
+describen por separado las tierras francesas administradas por la Corona;
+los [Gascon Rolls](https://discovery.nationalarchives.gov.uk/details/r/C3621)
+documentan la administración del ducado de Aquitania/Guyena.
+
+Se usa la [serie cartográfica de IEG Mainz](https://www.ieg-maps.uni-mainz.de/map1.htm)
+para contrastar el ámbito imperial, y la [ficha del Rijksmuseum sobre la
+abdicación de Carlos V](https://www.rijksmuseum.nl/en/collection/object/Allegory-on-the-Abdication-of-Emperor-Charles-v-in-Brussels--2cb744f2469fe62413bb6aab920d4e03)
+para comprobar que sus posesiones neerlandesas conservaban ducados, condados
+y señoríos distintos. Las correcciones localizadas de la sucesión siguen
+enumeradas en `burgundian-locations.json` con sus URL de fuente. El
+laboratorio es accesible desde el botón **Probar mapa detallado** en la vista
+Mapa del Atlas; el parámetro `mapa=locations-lab` permite compartirlo.
+
 ### Dudas de esta entrega
 
 - La fecha de investidura de **Cuijk en 1509** todavía necesita contraste con

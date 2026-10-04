@@ -1887,7 +1887,7 @@ html, body {
   backdrop-filter: blur(5px);
 }
 
-.mapa-lab-badge {
+.mapa-lab-switch {
   position: absolute;
   top: 9px;
   left: 9px;
@@ -1901,7 +1901,13 @@ html, body {
   font-size: 0.8rem;
   font-weight: 700;
   line-height: 1.3;
-  pointer-events: none;
+  cursor: pointer;
+}
+.mapa-lab-switch:hover,
+.mapa-lab-switch:focus-visible {
+  background: #654932;
+  outline: 2px solid #e7c48c;
+  outline-offset: 2px;
 }
 
 .mapa-color-legend {
