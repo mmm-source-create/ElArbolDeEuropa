@@ -16,6 +16,7 @@ Los informes describen el estado validado de cada entrega. Sus cifras y listas d
 
 | Versión | Contenido |
 | --- | --- |
+| [4.7](V4.7.md) | Continuidad de Tirol, inspector territorial y auditoría de fuentes del mapa |
 | [4.6](V4.6.md) | Encuadre europeo, biografía compacta y separación entre Austria e Imperio |
 | [4.5](V4.5.md) | Biografía continua, dogos venecianos, Pignatelli y auditoría cartográfica |
 | [4.4](V4.4.md) | Revisión de España, Portugal e Italia; coronas separadas y sucesión italiana |
@@ -53,6 +54,8 @@ Las publicaciones se incorporan una sola vez a la bibliografía general. Sus aso
 ## Próximas mejoras implementadas
 
 [Seguimiento de next updates](NEXT_UPDATES.md) · [V2.21](V2.21.md)
+
+Las dos ideas reservadas para la próxima entrega están en [propuestas para V4.8](V4.8_PROPUESTAS.md); el alcance permanece abierto.
 
 ## V3
 

@@ -139,9 +139,15 @@ export default {
         "anio": 1564,
         "texto": "Fernando II de Tirol recibe el condado en la partición familiar"
       },
+      {"anio":1595,"texto":"Tras Fernando II, la autoridad vuelve a la comunidad de herederos Habsburgo"},
+      {"anio":1602,"texto":"Maximiliano III gobierna Tirol por encargo de los herederos"},
+      {"anio":1619,"texto":"Leopoldo V comienza su gobierno delegado; Fernando II conserva la autoridad familiar"},
+      {"anio":1630,"texto":"Leopoldo V recibe la soberanía hereditaria tras una transferencia por etapas"},
+      {"anio":1632,"texto":"Fernando Carlos hereda Tirol; Claudia de Médici ejerce la regencia hasta 1646"},
+      {"anio":1662,"texto":"Segismundo Francisco sucede a Fernando Carlos"},
       {
         "anio": 1665,
-        "texto": "La línea tirolesa se extingue y el condado vuelve a la rama principal"
+        "texto": "Muere Segismundo Francisco; Leopoldo I reúne Tirol con la rama principal"
       }
     ]
   },

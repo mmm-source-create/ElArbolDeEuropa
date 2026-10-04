@@ -2,8 +2,10 @@
 
 Atlas histórico y genealógico para explorar personas, dinastías, territorios y sus conexiones familiares.
 
-- [Web](https://www.treeofeurope.eu/es/) · Versión del repositorio: **V4.6**
-- [Cambios de V4.6](docs/V4.6.md) · [Documentación e historial](docs/README.md) · [Seguridad](SECURITY.md)
+- [Web](https://www.treeofeurope.eu/es/) · Versión del repositorio: **V4.7**
+- [Cambios de V4.7](docs/V4.7.md) · [Documentación e historial](docs/README.md) · [Propuestas para V4.8](docs/V4.8_PROPUESTAS.md) · [Seguridad](SECURITY.md)
+
+La V4.7 completa la sucesión de Tirol entre 1595 y 1665 separando autoridad familiar, gobierno delegado, regencia y titularidad. Pulsar una región del mapa abre un inspector con la entidad, su gobernante registrado para el año, el título, la fuente individual y el límite de precisión cartográfica. La nueva auditoría señala años sin autoridad, solapamientos inexplicados y gobiernos que colorean regiones sin fuente específica; [su informe](docs/V4.7.md) delimita el alcance de los hallazgos. Los filtros explican por qué territorio imperial, círculo imperial y gobierno Habsburgo son relaciones distintas.
 
 La V4.6 abre el mapa directamente sobre Europa, compacta el filtro de evidencia y la biografía, y separa Austria danubiana, Austria Interior y Tirol con gobiernos fechados. Cuando se consulta a un emperador entre 1512 y 1792, un marco gris identifica una aproximación al ámbito jurídico del Sacro Imperio sin confundirlo con sus posesiones personales. El cambio de 1648 distingue los Países Bajos meridionales de la República neerlandesa y retira Suiza. La [revisión cartográfica del Imperio](docs/CARTOGRAFIA_SACRO_IMPERIO.md) documenta fuentes, exclusiones y zonas aún pendientes.
 

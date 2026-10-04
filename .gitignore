@@ -8,6 +8,7 @@ dist/
 audit-report.json
 audit-territorios-report.json
 audit-political-map-report.json
+audit-map-continuity-report.json
 # Estos archivos se producen con npm run prebuild.
 src/generated/
 public/personas-meta/
