@@ -2,7 +2,9 @@
 
 El Atlas sigue usando **EU V Provinces** (`src/MapChart_Map.svg`). Este
 laboratorio compara esa geometría con la exportación **EU V Locations** sin
-cambiar ni los datos históricos ni el mapa público.
+cambiar el mapa público. Los ensayos fechados generan capas propias a partir
+de la base histórica y registran las correcciones que todavía no se han
+integrado en el Atlas.
 
 ![Encuadre del prototipo](preview.png)
 
@@ -18,6 +20,13 @@ El [ensayo de los dominios de Carlos V](carlos-v.html) añade un selector de
 coronas hispánicas, los territorios austríacos, Milán y los Países Bajos
 septentrionales. Es una capa paralela: no altera `src/MapChart_Map.svg` ni los
 colores del producto.
+
+La [segunda entrega, la sucesión borgoñona](burgundian-succession.html),
+recorre 1419–1555 desde Felipe el Bueno hasta Carlos V. Permite buscar una
+*location* y comparar pérdidas, adquisiciones y transmisiones al cierre de
+cada año. Un mismo morado identifica el conjunto político borgoñón, pero la
+lista lateral conserva sus condados, ducados y señoríos como jurisdicciones
+distintas.
 
 ![Carlos V en 1520: Austria todavía bajo su gobierno](carlos-v-1520.png)
 ![Carlos V en 1548: herencia hispánica y borgoñona, sin pintar el Imperio entero](carlos-v-1548.png)
@@ -38,6 +47,8 @@ de generación, no dependencias del sitio:
 node --import ./tests/jsx-loader.mjs prototypes/euv-locations/carlos-v-source.mjs
 python3 prototypes/euv-locations/build-carlos-v-map.py --tags '/ruta/a/Texto pegado.txt'
 python3 prototypes/euv-locations/render-carlos-v-svg.py 1548 /tmp/carlos-v-1548.svg
+node --import ./tests/jsx-loader.mjs prototypes/euv-locations/burgundian-source.mjs
+python3 prototypes/euv-locations/build-burgundian-map.py
 ```
 
 La exportación original no se incluye: el SVG adjunto por el usuario está en
@@ -104,6 +115,55 @@ morado para la herencia borgoñona y las adquisiciones neerlandesas, rojo para
 los territorios austríacos durante su breve gobierno. En 1548 hay **636**
 locations coloreadas y ningún conflicto entre esos tres grupos en los datos
 generados. El número mide polígonos del SVG, no unidades políticas.
+
+## Segunda entrega: la sucesión borgoñona
+
+El [mapa interactivo](burgundian-succession.html) sigue cinco titulares:
+Felipe III de Borgoña (1419–1466), Carlos el Temerario (1467–1476),
+María de Borgoña (1477–1481), Felipe I (1482–1505) y Carlos V
+(1506–1555). Son **instantáneas al cierre del año**, no una cronología
+mensual. El origen de cada tramo está en `burgundian-source.json`: gobiernos
+fechados de `PERSONAS`, versiones del mapa antiguo y suplementos locales
+declarados en `burgundian-source.mjs`. El cruce geométrico reutiliza el umbral
+de 55 %, pero los casos estudiados se corrigen en
+`build-burgundian-map.py` y `carlos-v-overrides.json` con motivo y fuente.
+Cada gris significa «no atribuido en este ensayo», no «sin dueño».
+
+| Revisión | Resultado en el prototipo | Comprobación |
+|---|---|---|
+| Calais y Boulogne | Fuera de Ponthieu; no se colorean por el solapamiento del polígono antiguo. | [Archivos Nacionales británicos: Calais inglés hasta 1558](https://www.nationalarchives.gov.uk/help-with-your-research/research-guides/french-lands-english-kings/) y [Inventario de Hauts-de-France: condado de Boulogne](https://inventaire.hautsdefrance.fr/dossier/IA62005335). |
+| Charolais | Condado separado de Borgoña; desaparece del conjunto habsbúrgico entre 1477 y 1492 y vuelve desde 1493. | [BnF: adquisición borgoñona](https://essentiels.bnf.fr/fr/article/d22e6192-1011-4527-bf32-5ea610af1df2-heraldique-son-apogee-armoiries-devises-et-emblemes) y [Archivos de Côte-d’Or: tratado de Senlis](https://archives.cotedor.fr/v2/site/AD21/Apprendre/Atelier_du_chancelier_Rolin/Paleographie/Groupe_confirmes/Documents_etudies_en_2008-2009/Documents_1_a_3_-_Le_traite_de_Senlis_23_mai_1493_). |
+| Mâcon | Condado distinguido del ducado; se incorpora al conjunto borgoñón desde 1435 y se pierde tras 1476. | [Municipio de Mâcon, diagnóstico histórico](https://www.macon.fr/fileadmin/medias/03_MACON_ET_VOUS/Urbanisme/PLU/Revision_PLU_2022/01-08_PROJET_ARRETE_DE_REVISION_DU_PLU/01_-_RAPPORT_DE_PRESENTATION/01a.Diagnostic_et_Projet_de_PLU.pdf). |
+| Malinas y Tournai | Malinas figura como señorío propio; Tournai solo en el tramo de Carlos V desde 1521. | [Archivo municipal de Malinas](https://stadsarchief.mechelen.be/vandaag-in-de-mechelse-geschiedenis-het-parlement-van-mechelen-1474-) y [museo municipal de Tournai](https://mhm.tournai.be/en/tournai-a-city-with-a-rich-military-past). |
+| Besançon, Montbéliard y Saint-Claude | No se absorben en el Franco Condado por proximidad geográfica: ciudad libre, posesión de Württemberg y abadía con señorío propio, respectivamente. | [Inventario patrimonial de Besançon](https://inventaire-patrimoine.bourgognefranchecomte.fr/dossier/IA25000374), [municipio de Montbéliard](https://www.montbeliard.fr/mes-sorties-mes-activites/musees-de-montbeliard/musee-du-chateau-des-ducs-de-wurtemberg/le-circuit-historique-2/) y [nota histórica sobre Saint-Claude](https://www.newadvent.org/cathen/13341a.htm). |
+| Bouillon y Cuijk | No se atribuyen por defecto a Luxemburgo o Brabante. Bouillon fue señorío aparte; Cuijk fue señorío distinto de Brabante, aunque Carlos V sí consta como su señor en el siglo XVI. | [Larousse: ducado de Bouillon](https://www.larousse.fr/encyclopedie/autre-region/duch%C3%A9_de_Bouillon/109685) y [archivo regional BHIC: Cuijk y Carlos V](https://www.bhic.nl/ontdekken/verhalen/cuijkse-heggenleggers-en-kartuizers-in-het-midden-van-de-zestiende-eeuw). |
+
+La diferencia entre heredar y gobernar se marca también en la interfaz:
+Felipe I heredó en 1482 siendo menor; la fase hasta 1493 se muestra con
+un tono de regencia y el gobierno personal desde 1494. El registro actual de
+`PERSONAS` lo llama «efectivo» desde 1482 y queda señalado para corrección
+editorial, no modificado a escondidas en este ensayo. Véanse el
+[Rijksmuseum sobre Felipe](https://www.rijksmuseum.nl/en/collection/object/Portrait-of-Philip-the-Fair-Duke-of-Burgundy--abd4bb32d07bc58b59f99db5ad95195c)
+y [Habsburger.net sobre su minoría y regencia](https://www.habsburger.net/en/chapter/philip-fair-child-guarantor-cohesion-burgundy).
+En 1477–1493 los títulos disputados o nominales, especialmente Artois y el
+Franco Condado, permanecen grises hasta su restitución, aunque la situación
+en el terreno fue más compleja; el [tratado de Senlis](https://archives.cotedor.fr/v2/site/AD21/Apprendre/Atelier_du_chancelier_Rolin/Paleographie/Groupe_confirmes/Documents_etudies_en_2008-2009/Documents_1_a_3_-_Le_traite_de_Senlis_23_mai_1493_)
+sirve como hito para el mapa anual.
+
+### Dudas de esta entrega
+
+- Falta una fecha documentada para incorporar el señorío de **Cuijk** como
+  territorio propio de Carlos V. El archivo acredita su señorío a mediados
+  del XVI; colorearlo como Brabante sería incorrecto. Permanece gris.
+- **Montreuil**, **Luxeuil** y algunos bordes de Ponthieu/Franco Condado
+  siguen siendo candidatos por solapamiento y requieren cotejo de cartografía
+  jurisdiccional fechada antes de pasar al producto.
+- La restitución de 1493 y las ocupaciones de 1477–1492 no se pueden reducir
+  siempre a un año y un único dueño efectivo. El estado anual conservador
+  omite el control discutido; no presenta el vacío como ausencia histórica.
+- El corredor es un ensayo trazable de varias etapas, no una garantía de que
+  todas las fronteras de las 254 locations candidatas sean históricamente
+  exactas. El mapa nuevo aún no sustituye el público.
 
 ### Límites que requieren otra pasada
 

@@ -1,0 +1,1132 @@
+{
+  "basis": "Atlas PERSONAS + year-end succession rule",
+  "people": [
+    {
+      "id": "FEL3BORG",
+      "name": "Felipe III de Borgoña",
+      "from": 1419,
+      "through": 1466,
+      "governments": [
+        {
+          "territory": "Borgoña",
+          "from": 1419,
+          "through": 1466,
+          "condition": "efectivo",
+          "versions": [
+            {
+              "from": 1419,
+              "oldIds": [
+                "Dijonnais",
+                "Autunnais"
+              ]
+            }
+          ]
+        },
+        {
+          "territory": "Flandes",
+          "from": 1419,
+          "through": 1466,
+          "condition": "efectivo",
+          "versions": [
+            {
+              "from": 1419,
+              "oldIds": [
+                "West_Flanders",
+                "East_Flanders",
+                "Roman_Flanders"
+              ]
+            }
+          ]
+        },
+        {
+          "territory": "Brabante",
+          "from": 1430,
+          "through": 1466,
+          "condition": "efectivo",
+          "versions": [
+            {
+              "from": 1430,
+              "oldIds": [
+                "Brabant",
+                "Antwerp",
+                "Kempenland"
+              ]
+            }
+          ]
+        },
+        {
+          "territory": "Limburgo",
+          "from": 1430,
+          "through": 1466,
+          "condition": "efectivo",
+          "versions": [
+            {
+              "from": 1430,
+              "oldIds": [
+                "Limburg"
+              ]
+            }
+          ]
+        },
+        {
+          "territory": "Holanda",
+          "from": 1428,
+          "through": 1432,
+          "condition": "regencia",
+          "versions": [
+            {
+              "from": 1428,
+              "oldIds": [
+                "North_Holland",
+                "South_Holland"
+              ]
+            }
+          ]
+        },
+        {
+          "territory": "Holanda",
+          "from": 1433,
+          "through": 1466,
+          "condition": "efectivo",
+          "versions": [
+            {
+              "from": 1433,
+              "oldIds": [
+                "North_Holland",
+                "South_Holland"
+              ]
+            }
+          ]
+        },
+        {
+          "territory": "Henao",
+          "from": 1428,
+          "through": 1432,
+          "condition": "regencia",
+          "versions": [
+            {
+              "from": 1428,
+              "oldIds": [
+                "Hainaut"
+              ]
+            }
+          ]
+        },
+        {
+          "territory": "Henao",
+          "from": 1433,
+          "through": 1466,
+          "condition": "efectivo",
+          "versions": [
+            {
+              "from": 1433,
+              "oldIds": [
+                "Hainaut"
+              ]
+            }
+          ]
+        },
+        {
+          "territory": "Zelanda",
+          "from": 1428,
+          "through": 1432,
+          "condition": "regencia",
+          "versions": [
+            {
+              "from": 1428,
+              "oldIds": []
+            }
+          ]
+        },
+        {
+          "territory": "Zelanda",
+          "from": 1433,
+          "through": 1466,
+          "condition": "efectivo",
+          "versions": [
+            {
+              "from": 1433,
+              "oldIds": []
+            }
+          ]
+        },
+        {
+          "territory": "Artois",
+          "from": 1419,
+          "through": 1466,
+          "condition": "efectivo",
+          "versions": [
+            {
+              "from": 1419,
+              "oldIds": [
+                "Upper_Artois",
+                "Lower_Artois"
+              ]
+            }
+          ]
+        },
+        {
+          "territory": "Condado de Borgoña",
+          "from": 1419,
+          "through": 1466,
+          "condition": "efectivo",
+          "versions": [
+            {
+              "from": 1419,
+              "oldIds": [
+                "Aval",
+                "Millieu",
+                "Amont"
+              ]
+            }
+          ]
+        },
+        {
+          "territory": "Namur",
+          "from": 1429,
+          "through": 1466,
+          "condition": "efectivo",
+          "versions": [
+            {
+              "from": 1429,
+              "oldIds": [
+                "Namur"
+              ]
+            }
+          ]
+        },
+        {
+          "territory": "Luxemburgo",
+          "from": 1443,
+          "through": 1466,
+          "condition": "efectivo",
+          "versions": [
+            {
+              "from": 1443,
+              "oldIds": [
+                "East_Luxembourg",
+                "West_Luxembourg"
+              ]
+            }
+          ]
+        },
+        {
+          "territory": "Auxerre",
+          "from": 1435,
+          "through": 1466,
+          "condition": "efectivo",
+          "versions": [
+            {
+              "from": 1435,
+              "oldIds": [
+                "Auxerrois"
+              ]
+            }
+          ]
+        },
+        {
+          "territory": "Ponthieu",
+          "from": 1435,
+          "through": 1466,
+          "condition": "efectivo",
+          "versions": [
+            {
+              "from": 1435,
+              "oldIds": [
+                "Ponthieu"
+              ]
+            }
+          ]
+        },
+        {
+          "territory": "Señorío de Malinas",
+          "from": 1419,
+          "through": 1466,
+          "condition": "local-supplement",
+          "versions": [
+            {
+              "from": 1419,
+              "oldIds": []
+            }
+          ]
+        },
+        {
+          "territory": "Condado de Charolais",
+          "from": 1419,
+          "through": 1466,
+          "condition": "local-supplement",
+          "versions": [
+            {
+              "from": 1419,
+              "oldIds": []
+            }
+          ]
+        },
+        {
+          "territory": "Condado de Mâcon",
+          "from": 1435,
+          "through": 1466,
+          "condition": "local-supplement",
+          "versions": [
+            {
+              "from": 1435,
+              "oldIds": []
+            }
+          ]
+        }
+      ],
+      "status": []
+    },
+    {
+      "id": "CAR1BORG",
+      "name": "Carlos I de Borgoña",
+      "from": 1467,
+      "through": 1476,
+      "governments": [
+        {
+          "territory": "Borgoña",
+          "from": 1467,
+          "through": 1476,
+          "condition": "efectivo",
+          "versions": [
+            {
+              "from": 1467,
+              "oldIds": [
+                "Dijonnais",
+                "Autunnais"
+              ]
+            }
+          ]
+        },
+        {
+          "territory": "Flandes",
+          "from": 1467,
+          "through": 1476,
+          "condition": "efectivo",
+          "versions": [
+            {
+              "from": 1467,
+              "oldIds": [
+                "West_Flanders",
+                "East_Flanders",
+                "Roman_Flanders"
+              ]
+            }
+          ]
+        },
+        {
+          "territory": "Brabante",
+          "from": 1467,
+          "through": 1476,
+          "condition": "efectivo",
+          "versions": [
+            {
+              "from": 1467,
+              "oldIds": [
+                "Brabant",
+                "Antwerp",
+                "Kempenland"
+              ]
+            }
+          ]
+        },
+        {
+          "territory": "Limburgo",
+          "from": 1467,
+          "through": 1476,
+          "condition": "efectivo",
+          "versions": [
+            {
+              "from": 1467,
+              "oldIds": [
+                "Limburg"
+              ]
+            }
+          ]
+        },
+        {
+          "territory": "Holanda",
+          "from": 1467,
+          "through": 1476,
+          "condition": "efectivo",
+          "versions": [
+            {
+              "from": 1467,
+              "oldIds": [
+                "North_Holland",
+                "South_Holland"
+              ]
+            }
+          ]
+        },
+        {
+          "territory": "Henao",
+          "from": 1467,
+          "through": 1476,
+          "condition": "efectivo",
+          "versions": [
+            {
+              "from": 1467,
+              "oldIds": [
+                "Hainaut"
+              ]
+            }
+          ]
+        },
+        {
+          "territory": "Zelanda",
+          "from": 1467,
+          "through": 1476,
+          "condition": "efectivo",
+          "versions": [
+            {
+              "from": 1467,
+              "oldIds": []
+            }
+          ]
+        },
+        {
+          "territory": "Güeldres",
+          "from": 1473,
+          "through": 1476,
+          "condition": "efectivo",
+          "versions": [
+            {
+              "from": 1473,
+              "oldIds": [
+                "Gelderland"
+              ]
+            }
+          ]
+        },
+        {
+          "territory": "Namur",
+          "from": 1467,
+          "through": 1476,
+          "condition": "efectivo",
+          "versions": [
+            {
+              "from": 1467,
+              "oldIds": [
+                "Namur"
+              ]
+            }
+          ]
+        },
+        {
+          "territory": "Luxemburgo",
+          "from": 1467,
+          "through": 1476,
+          "condition": "efectivo",
+          "versions": [
+            {
+              "from": 1467,
+              "oldIds": [
+                "East_Luxembourg",
+                "West_Luxembourg"
+              ]
+            }
+          ]
+        },
+        {
+          "territory": "Artois",
+          "from": 1467,
+          "through": 1476,
+          "condition": "efectivo",
+          "versions": [
+            {
+              "from": 1467,
+              "oldIds": [
+                "Upper_Artois",
+                "Lower_Artois"
+              ]
+            }
+          ]
+        },
+        {
+          "territory": "Condado de Borgoña",
+          "from": 1467,
+          "through": 1476,
+          "condition": "efectivo",
+          "versions": [
+            {
+              "from": 1467,
+              "oldIds": [
+                "Aval",
+                "Millieu",
+                "Amont"
+              ]
+            }
+          ]
+        },
+        {
+          "territory": "Auxerre",
+          "from": 1467,
+          "through": 1476,
+          "condition": "efectivo",
+          "versions": [
+            {
+              "from": 1467,
+              "oldIds": [
+                "Auxerrois"
+              ]
+            }
+          ]
+        },
+        {
+          "territory": "Ponthieu",
+          "from": 1467,
+          "through": 1476,
+          "condition": "efectivo",
+          "versions": [
+            {
+              "from": 1467,
+              "oldIds": [
+                "Ponthieu"
+              ]
+            }
+          ]
+        },
+        {
+          "territory": "Señorío de Malinas",
+          "from": 1467,
+          "through": 1476,
+          "condition": "local-supplement",
+          "versions": [
+            {
+              "from": 1467,
+              "oldIds": []
+            }
+          ]
+        },
+        {
+          "territory": "Condado de Charolais",
+          "from": 1467,
+          "through": 1476,
+          "condition": "local-supplement",
+          "versions": [
+            {
+              "from": 1467,
+              "oldIds": []
+            }
+          ]
+        },
+        {
+          "territory": "Condado de Mâcon",
+          "from": 1467,
+          "through": 1476,
+          "condition": "local-supplement",
+          "versions": [
+            {
+              "from": 1467,
+              "oldIds": []
+            }
+          ]
+        }
+      ],
+      "status": []
+    },
+    {
+      "id": "MARIABORG",
+      "name": "María de Borgoña",
+      "from": 1477,
+      "through": 1481,
+      "governments": [
+        {
+          "territory": "Brabante",
+          "from": 1477,
+          "through": 1481,
+          "condition": "efectivo",
+          "versions": [
+            {
+              "from": 1477,
+              "oldIds": [
+                "Brabant",
+                "Antwerp",
+                "Kempenland"
+              ]
+            }
+          ]
+        },
+        {
+          "territory": "Limburgo",
+          "from": 1477,
+          "through": 1481,
+          "condition": "efectivo",
+          "versions": [
+            {
+              "from": 1477,
+              "oldIds": [
+                "Limburg"
+              ]
+            }
+          ]
+        },
+        {
+          "territory": "Flandes",
+          "from": 1477,
+          "through": 1481,
+          "condition": "efectivo",
+          "versions": [
+            {
+              "from": 1477,
+              "oldIds": [
+                "West_Flanders",
+                "East_Flanders",
+                "Roman_Flanders"
+              ]
+            }
+          ]
+        },
+        {
+          "territory": "Holanda",
+          "from": 1477,
+          "through": 1481,
+          "condition": "efectivo",
+          "versions": [
+            {
+              "from": 1477,
+              "oldIds": [
+                "North_Holland",
+                "South_Holland"
+              ]
+            }
+          ]
+        },
+        {
+          "territory": "Henao",
+          "from": 1477,
+          "through": 1481,
+          "condition": "efectivo",
+          "versions": [
+            {
+              "from": 1477,
+              "oldIds": [
+                "Hainaut"
+              ]
+            }
+          ]
+        },
+        {
+          "territory": "Zelanda",
+          "from": 1477,
+          "through": 1481,
+          "condition": "efectivo",
+          "versions": [
+            {
+              "from": 1477,
+              "oldIds": []
+            }
+          ]
+        },
+        {
+          "territory": "Namur",
+          "from": 1477,
+          "through": 1481,
+          "condition": "efectivo",
+          "versions": [
+            {
+              "from": 1477,
+              "oldIds": [
+                "Namur"
+              ]
+            }
+          ]
+        },
+        {
+          "territory": "Luxemburgo",
+          "from": 1477,
+          "through": 1481,
+          "condition": "efectivo",
+          "versions": [
+            {
+              "from": 1477,
+              "oldIds": [
+                "East_Luxembourg",
+                "West_Luxembourg"
+              ]
+            }
+          ]
+        },
+        {
+          "territory": "Señorío de Malinas",
+          "from": 1477,
+          "through": 1481,
+          "condition": "local-supplement",
+          "versions": [
+            {
+              "from": 1477,
+              "oldIds": []
+            }
+          ]
+        }
+      ],
+      "status": []
+    },
+    {
+      "id": "FEL1CAST",
+      "name": "Felipe I de Castilla",
+      "from": 1482,
+      "through": 1505,
+      "governments": [
+        {
+          "territory": "Flandes",
+          "from": 1482,
+          "through": 1505,
+          "condition": "efectivo",
+          "versions": [
+            {
+              "from": 1482,
+              "oldIds": [
+                "West_Flanders",
+                "East_Flanders",
+                "Roman_Flanders"
+              ]
+            }
+          ]
+        },
+        {
+          "territory": "Brabante",
+          "from": 1482,
+          "through": 1505,
+          "condition": "efectivo",
+          "versions": [
+            {
+              "from": 1482,
+              "oldIds": [
+                "Brabant",
+                "Antwerp",
+                "Kempenland"
+              ]
+            }
+          ]
+        },
+        {
+          "territory": "Limburgo",
+          "from": 1482,
+          "through": 1505,
+          "condition": "efectivo",
+          "versions": [
+            {
+              "from": 1482,
+              "oldIds": [
+                "Limburg"
+              ]
+            }
+          ]
+        },
+        {
+          "territory": "Holanda",
+          "from": 1482,
+          "through": 1505,
+          "condition": "efectivo",
+          "versions": [
+            {
+              "from": 1482,
+              "oldIds": [
+                "North_Holland",
+                "South_Holland"
+              ]
+            }
+          ]
+        },
+        {
+          "territory": "Henao",
+          "from": 1482,
+          "through": 1505,
+          "condition": "efectivo",
+          "versions": [
+            {
+              "from": 1482,
+              "oldIds": [
+                "Hainaut"
+              ]
+            }
+          ]
+        },
+        {
+          "territory": "Zelanda",
+          "from": 1482,
+          "through": 1505,
+          "condition": "efectivo",
+          "versions": [
+            {
+              "from": 1482,
+              "oldIds": []
+            }
+          ]
+        },
+        {
+          "territory": "Condado de Borgoña",
+          "from": 1493,
+          "through": 1505,
+          "condition": "efectivo",
+          "versions": [
+            {
+              "from": 1493,
+              "oldIds": [
+                "Aval",
+                "Millieu",
+                "Amont"
+              ]
+            }
+          ]
+        },
+        {
+          "territory": "Artois",
+          "from": 1493,
+          "through": 1505,
+          "condition": "efectivo",
+          "versions": [
+            {
+              "from": 1493,
+              "oldIds": [
+                "Upper_Artois",
+                "Lower_Artois"
+              ]
+            }
+          ]
+        },
+        {
+          "territory": "Namur",
+          "from": 1482,
+          "through": 1505,
+          "condition": "efectivo",
+          "versions": [
+            {
+              "from": 1482,
+              "oldIds": [
+                "Namur"
+              ]
+            }
+          ]
+        },
+        {
+          "territory": "Luxemburgo",
+          "from": 1482,
+          "through": 1505,
+          "condition": "efectivo",
+          "versions": [
+            {
+              "from": 1482,
+              "oldIds": [
+                "East_Luxembourg",
+                "West_Luxembourg"
+              ]
+            }
+          ]
+        },
+        {
+          "territory": "Señorío de Malinas",
+          "from": 1482,
+          "through": 1505,
+          "condition": "local-supplement",
+          "versions": [
+            {
+              "from": 1482,
+              "oldIds": []
+            }
+          ]
+        },
+        {
+          "territory": "Condado de Charolais",
+          "from": 1493,
+          "through": 1505,
+          "condition": "local-supplement",
+          "versions": [
+            {
+              "from": 1493,
+              "oldIds": []
+            }
+          ]
+        }
+      ],
+      "status": [
+        {
+          "from": 1482,
+          "through": 1493,
+          "label": "Heredero menor; gobierno ejercido mediante regencias"
+        },
+        {
+          "from": 1494,
+          "through": 1505,
+          "label": "Gobierno personal"
+        }
+      ]
+    },
+    {
+      "id": "CARLOS5",
+      "name": "Carlos V",
+      "from": 1506,
+      "through": 1555,
+      "governments": [
+        {
+          "territory": "Flandes",
+          "from": 1506,
+          "through": 1555,
+          "condition": "efectivo",
+          "versions": [
+            {
+              "from": 1506,
+              "oldIds": [
+                "West_Flanders",
+                "East_Flanders",
+                "Roman_Flanders"
+              ]
+            }
+          ]
+        },
+        {
+          "territory": "Condado de Borgoña",
+          "from": 1506,
+          "through": 1555,
+          "condition": "efectivo",
+          "versions": [
+            {
+              "from": 1506,
+              "oldIds": [
+                "Aval",
+                "Millieu",
+                "Amont"
+              ]
+            }
+          ]
+        },
+        {
+          "territory": "Brabante",
+          "from": 1506,
+          "through": 1555,
+          "condition": "efectivo",
+          "versions": [
+            {
+              "from": 1506,
+              "oldIds": [
+                "Brabant",
+                "Antwerp",
+                "Kempenland"
+              ]
+            }
+          ]
+        },
+        {
+          "territory": "Limburgo",
+          "from": 1506,
+          "through": 1555,
+          "condition": "efectivo",
+          "versions": [
+            {
+              "from": 1506,
+              "oldIds": [
+                "Limburg"
+              ]
+            }
+          ]
+        },
+        {
+          "territory": "Holanda",
+          "from": 1506,
+          "through": 1555,
+          "condition": "efectivo",
+          "versions": [
+            {
+              "from": 1506,
+              "oldIds": [
+                "North_Holland",
+                "South_Holland"
+              ]
+            }
+          ]
+        },
+        {
+          "territory": "Henao",
+          "from": 1506,
+          "through": 1555,
+          "condition": "efectivo",
+          "versions": [
+            {
+              "from": 1506,
+              "oldIds": [
+                "Hainaut"
+              ]
+            }
+          ]
+        },
+        {
+          "territory": "Zelanda",
+          "from": 1506,
+          "through": 1555,
+          "condition": "efectivo",
+          "versions": [
+            {
+              "from": 1506,
+              "oldIds": []
+            }
+          ]
+        },
+        {
+          "territory": "Artois",
+          "from": 1506,
+          "through": 1555,
+          "condition": "efectivo",
+          "versions": [
+            {
+              "from": 1506,
+              "oldIds": [
+                "Upper_Artois",
+                "Lower_Artois"
+              ]
+            }
+          ]
+        },
+        {
+          "territory": "Namur",
+          "from": 1506,
+          "through": 1555,
+          "condition": "efectivo",
+          "versions": [
+            {
+              "from": 1506,
+              "oldIds": [
+                "Namur"
+              ]
+            }
+          ]
+        },
+        {
+          "territory": "Luxemburgo",
+          "from": 1506,
+          "through": 1555,
+          "condition": "efectivo",
+          "versions": [
+            {
+              "from": 1506,
+              "oldIds": [
+                "East_Luxembourg",
+                "West_Luxembourg"
+              ]
+            }
+          ]
+        },
+        {
+          "territory": "Frisia",
+          "from": 1524,
+          "through": 1555,
+          "condition": "efectivo",
+          "versions": [
+            {
+              "from": 1524,
+              "oldIds": [
+                "Friesland"
+              ]
+            }
+          ]
+        },
+        {
+          "territory": "Utrecht",
+          "from": 1528,
+          "through": 1555,
+          "condition": "efectivo",
+          "versions": [
+            {
+              "from": 1528,
+              "oldIds": []
+            }
+          ]
+        },
+        {
+          "territory": "Overijssel",
+          "from": 1528,
+          "through": 1555,
+          "condition": "efectivo",
+          "versions": [
+            {
+              "from": 1528,
+              "oldIds": [
+                "Overijssel"
+              ]
+            }
+          ]
+        },
+        {
+          "territory": "Drente",
+          "from": 1536,
+          "through": 1555,
+          "condition": "efectivo",
+          "versions": [
+            {
+              "from": 1536,
+              "oldIds": [
+                "Drenthe"
+              ]
+            }
+          ]
+        },
+        {
+          "territory": "Groninga",
+          "from": 1536,
+          "through": 1555,
+          "condition": "efectivo",
+          "versions": [
+            {
+              "from": 1536,
+              "oldIds": [
+                "Ommelanden"
+              ]
+            }
+          ]
+        },
+        {
+          "territory": "Güeldres",
+          "from": 1543,
+          "through": 1555,
+          "condition": "efectivo",
+          "versions": [
+            {
+              "from": 1543,
+              "oldIds": [
+                "Gelderland"
+              ]
+            }
+          ]
+        },
+        {
+          "territory": "Señorío de Malinas",
+          "from": 1506,
+          "through": 1555,
+          "condition": "local-supplement",
+          "versions": [
+            {
+              "from": 1506,
+              "oldIds": []
+            }
+          ]
+        },
+        {
+          "territory": "Condado de Charolais",
+          "from": 1506,
+          "through": 1555,
+          "condition": "local-supplement",
+          "versions": [
+            {
+              "from": 1506,
+              "oldIds": []
+            }
+          ]
+        },
+        {
+          "territory": "Tournaisis",
+          "from": 1521,
+          "through": 1555,
+          "condition": "local-supplement",
+          "versions": [
+            {
+              "from": 1521,
+              "oldIds": []
+            }
+          ]
+        }
+      ],
+      "status": []
+    }
+  ]
+}

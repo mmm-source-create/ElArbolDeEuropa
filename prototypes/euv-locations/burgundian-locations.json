@@ -1,0 +1,1861 @@
+{
+  "method": "Year-end snapshot; new location overlap with old polygons >=55%, then sourced overrides",
+  "people": [
+    {
+      "id": "FEL3BORG",
+      "name": "Felipe III de Borgoña",
+      "from": 1419,
+      "through": 1466,
+      "status": [],
+      "governments": [
+        {
+          "territory": "Borgoña",
+          "from": 1419,
+          "through": 1466,
+          "condition": "efectivo",
+          "versions": [
+            {
+              "from": 1419,
+              "ids": [
+                "Autun",
+                "Auxonne",
+                "Beaune",
+                "Chalon_Sur_Saone",
+                "Dijon",
+                "Louhans",
+                "Montcenis",
+                "Semur_En_Brionnais"
+              ],
+              "borderline": []
+            }
+          ]
+        },
+        {
+          "territory": "Flandes",
+          "from": 1419,
+          "through": 1466,
+          "condition": "efectivo",
+          "versions": [
+            {
+              "from": 1419,
+              "ids": [
+                "Aalst",
+                "Bruges",
+                "Cassel",
+                "Douai",
+                "Dunkirk",
+                "Ghent",
+                "Hulst",
+                "Kortriik",
+                "Lille",
+                "Ostend",
+                "Oudenaarde",
+                "Sint_Niklaas",
+                "Veurne",
+                "Ypres"
+              ],
+              "borderline": []
+            }
+          ]
+        },
+        {
+          "territory": "Brabante",
+          "from": 1430,
+          "through": 1466,
+          "condition": "efectivo",
+          "versions": [
+            {
+              "from": 1430,
+              "ids": [
+                "Antwerp",
+                "Bergen_Zoom",
+                "Breda",
+                "Brussels",
+                "Eindhoven",
+                "Helmond",
+                "Hertogenbosch",
+                "Leuven",
+                "Nivelles",
+                "Turnhout"
+              ],
+              "borderline": []
+            }
+          ]
+        },
+        {
+          "territory": "Limburgo",
+          "from": 1430,
+          "through": 1466,
+          "condition": "efectivo",
+          "versions": [
+            {
+              "from": 1430,
+              "ids": [
+                "Limbourg"
+              ],
+              "borderline": []
+            }
+          ]
+        },
+        {
+          "territory": "Holanda",
+          "from": 1428,
+          "through": 1432,
+          "condition": "regencia",
+          "versions": [
+            {
+              "from": 1428,
+              "ids": [
+                "Alkmaar",
+                "Amsterdam",
+                "Dordrecht",
+                "Geertruidenberg",
+                "Hoorn",
+                "Leiden",
+                "Rotterdam",
+                "The_Hague"
+              ],
+              "borderline": []
+            }
+          ]
+        },
+        {
+          "territory": "Holanda",
+          "from": 1433,
+          "through": 1466,
+          "condition": "efectivo",
+          "versions": [
+            {
+              "from": 1433,
+              "ids": [
+                "Alkmaar",
+                "Amsterdam",
+                "Dordrecht",
+                "Geertruidenberg",
+                "Hoorn",
+                "Leiden",
+                "Rotterdam",
+                "The_Hague"
+              ],
+              "borderline": []
+            }
+          ]
+        },
+        {
+          "territory": "Henao",
+          "from": 1428,
+          "through": 1432,
+          "condition": "regencia",
+          "versions": [
+            {
+              "from": 1428,
+              "ids": [
+                "Ath",
+                "Chimay",
+                "Enghien",
+                "Maubeuge",
+                "Mons",
+                "Valenciennes"
+              ],
+              "borderline": []
+            }
+          ]
+        },
+        {
+          "territory": "Henao",
+          "from": 1433,
+          "through": 1466,
+          "condition": "efectivo",
+          "versions": [
+            {
+              "from": 1433,
+              "ids": [
+                "Ath",
+                "Chimay",
+                "Enghien",
+                "Maubeuge",
+                "Mons",
+                "Valenciennes"
+              ],
+              "borderline": []
+            }
+          ]
+        },
+        {
+          "territory": "Zelanda",
+          "from": 1428,
+          "through": 1432,
+          "condition": "regencia",
+          "versions": [
+            {
+              "from": 1428,
+              "ids": [
+                "Middelburg"
+              ],
+              "borderline": []
+            }
+          ]
+        },
+        {
+          "territory": "Zelanda",
+          "from": 1433,
+          "through": 1466,
+          "condition": "efectivo",
+          "versions": [
+            {
+              "from": 1433,
+              "ids": [
+                "Middelburg"
+              ],
+              "borderline": []
+            }
+          ]
+        },
+        {
+          "territory": "Artois",
+          "from": 1419,
+          "through": 1466,
+          "condition": "efectivo",
+          "versions": [
+            {
+              "from": 1419,
+              "ids": [
+                "Arras",
+                "Bapaume",
+                "Bethune",
+                "Hesdin",
+                "Lens",
+                "Saint_Omer",
+                "Saint_Pol"
+              ],
+              "borderline": []
+            }
+          ]
+        },
+        {
+          "territory": "Condado de Borgoña",
+          "from": 1419,
+          "through": 1466,
+          "condition": "efectivo",
+          "versions": [
+            {
+              "from": 1419,
+              "ids": [
+                "Baume",
+                "Dole",
+                "Gray",
+                "Luxeuil",
+                "Montbozon",
+                "Orgelet",
+                "Ornans",
+                "Poligny",
+                "Pontarlier",
+                "Salins_les_Bains",
+                "Vesoul"
+              ],
+              "borderline": []
+            }
+          ]
+        },
+        {
+          "territory": "Namur",
+          "from": 1429,
+          "through": 1466,
+          "condition": "efectivo",
+          "versions": [
+            {
+              "from": 1429,
+              "ids": [
+                "Dinant",
+                "Namur",
+                "Orchimont",
+                "Walcourt"
+              ],
+              "borderline": []
+            }
+          ]
+        },
+        {
+          "territory": "Luxemburgo",
+          "from": 1443,
+          "through": 1466,
+          "condition": "efectivo",
+          "versions": [
+            {
+              "from": 1443,
+              "ids": [
+                "Arlon",
+                "Bastogne",
+                "La_Roche",
+                "Luxembourg",
+                "Montmedy",
+                "Neufchateau_Luxembourg",
+                "Thionville",
+                "Vianden"
+              ],
+              "borderline": []
+            }
+          ]
+        },
+        {
+          "territory": "Auxerre",
+          "from": 1435,
+          "through": 1466,
+          "condition": "efectivo",
+          "versions": [
+            {
+              "from": 1435,
+              "ids": [
+                "Auxerre"
+              ],
+              "borderline": []
+            }
+          ]
+        },
+        {
+          "territory": "Ponthieu",
+          "from": 1435,
+          "through": 1466,
+          "condition": "efectivo",
+          "versions": [
+            {
+              "from": 1435,
+              "ids": [
+                "Abbeville",
+                "Montreuil"
+              ],
+              "borderline": []
+            }
+          ]
+        },
+        {
+          "territory": "Señorío de Malinas",
+          "from": 1419,
+          "through": 1466,
+          "condition": "local-supplement",
+          "versions": [
+            {
+              "from": 1419,
+              "ids": [
+                "Mechelen"
+              ],
+              "borderline": []
+            }
+          ]
+        },
+        {
+          "territory": "Condado de Charolais",
+          "from": 1419,
+          "through": 1466,
+          "condition": "local-supplement",
+          "versions": [
+            {
+              "from": 1419,
+              "ids": [
+                "Charolles"
+              ],
+              "borderline": []
+            }
+          ]
+        },
+        {
+          "territory": "Condado de Mâcon",
+          "from": 1435,
+          "through": 1466,
+          "condition": "local-supplement",
+          "versions": [
+            {
+              "from": 1435,
+              "ids": [
+                "Macon"
+              ],
+              "borderline": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "CAR1BORG",
+      "name": "Carlos I de Borgoña",
+      "from": 1467,
+      "through": 1476,
+      "status": [],
+      "governments": [
+        {
+          "territory": "Borgoña",
+          "from": 1467,
+          "through": 1476,
+          "condition": "efectivo",
+          "versions": [
+            {
+              "from": 1467,
+              "ids": [
+                "Autun",
+                "Auxonne",
+                "Beaune",
+                "Chalon_Sur_Saone",
+                "Dijon",
+                "Louhans",
+                "Montcenis",
+                "Semur_En_Brionnais"
+              ],
+              "borderline": []
+            }
+          ]
+        },
+        {
+          "territory": "Flandes",
+          "from": 1467,
+          "through": 1476,
+          "condition": "efectivo",
+          "versions": [
+            {
+              "from": 1467,
+              "ids": [
+                "Aalst",
+                "Bruges",
+                "Cassel",
+                "Douai",
+                "Dunkirk",
+                "Ghent",
+                "Hulst",
+                "Kortriik",
+                "Lille",
+                "Ostend",
+                "Oudenaarde",
+                "Sint_Niklaas",
+                "Veurne",
+                "Ypres"
+              ],
+              "borderline": []
+            }
+          ]
+        },
+        {
+          "territory": "Brabante",
+          "from": 1467,
+          "through": 1476,
+          "condition": "efectivo",
+          "versions": [
+            {
+              "from": 1467,
+              "ids": [
+                "Antwerp",
+                "Bergen_Zoom",
+                "Breda",
+                "Brussels",
+                "Eindhoven",
+                "Helmond",
+                "Hertogenbosch",
+                "Leuven",
+                "Nivelles",
+                "Turnhout"
+              ],
+              "borderline": []
+            }
+          ]
+        },
+        {
+          "territory": "Limburgo",
+          "from": 1467,
+          "through": 1476,
+          "condition": "efectivo",
+          "versions": [
+            {
+              "from": 1467,
+              "ids": [
+                "Limbourg"
+              ],
+              "borderline": []
+            }
+          ]
+        },
+        {
+          "territory": "Holanda",
+          "from": 1467,
+          "through": 1476,
+          "condition": "efectivo",
+          "versions": [
+            {
+              "from": 1467,
+              "ids": [
+                "Alkmaar",
+                "Amsterdam",
+                "Dordrecht",
+                "Geertruidenberg",
+                "Hoorn",
+                "Leiden",
+                "Rotterdam",
+                "The_Hague"
+              ],
+              "borderline": []
+            }
+          ]
+        },
+        {
+          "territory": "Henao",
+          "from": 1467,
+          "through": 1476,
+          "condition": "efectivo",
+          "versions": [
+            {
+              "from": 1467,
+              "ids": [
+                "Ath",
+                "Chimay",
+                "Enghien",
+                "Maubeuge",
+                "Mons",
+                "Valenciennes"
+              ],
+              "borderline": []
+            }
+          ]
+        },
+        {
+          "territory": "Zelanda",
+          "from": 1467,
+          "through": 1476,
+          "condition": "efectivo",
+          "versions": [
+            {
+              "from": 1467,
+              "ids": [
+                "Middelburg"
+              ],
+              "borderline": []
+            }
+          ]
+        },
+        {
+          "territory": "Güeldres",
+          "from": 1473,
+          "through": 1476,
+          "condition": "efectivo",
+          "versions": [
+            {
+              "from": 1473,
+              "ids": [
+                "Apeldoorn",
+                "Arnhem",
+                "Doetinchem",
+                "Harderwijk",
+                "Nijmegen",
+                "Roermond",
+                "Tiel",
+                "Venlo",
+                "Zutphen"
+              ],
+              "borderline": []
+            }
+          ]
+        },
+        {
+          "territory": "Namur",
+          "from": 1467,
+          "through": 1476,
+          "condition": "efectivo",
+          "versions": [
+            {
+              "from": 1467,
+              "ids": [
+                "Dinant",
+                "Namur",
+                "Orchimont",
+                "Walcourt"
+              ],
+              "borderline": []
+            }
+          ]
+        },
+        {
+          "territory": "Luxemburgo",
+          "from": 1467,
+          "through": 1476,
+          "condition": "efectivo",
+          "versions": [
+            {
+              "from": 1467,
+              "ids": [
+                "Arlon",
+                "Bastogne",
+                "La_Roche",
+                "Luxembourg",
+                "Montmedy",
+                "Neufchateau_Luxembourg",
+                "Thionville",
+                "Vianden"
+              ],
+              "borderline": []
+            }
+          ]
+        },
+        {
+          "territory": "Artois",
+          "from": 1467,
+          "through": 1476,
+          "condition": "efectivo",
+          "versions": [
+            {
+              "from": 1467,
+              "ids": [
+                "Arras",
+                "Bapaume",
+                "Bethune",
+                "Hesdin",
+                "Lens",
+                "Saint_Omer",
+                "Saint_Pol"
+              ],
+              "borderline": []
+            }
+          ]
+        },
+        {
+          "territory": "Condado de Borgoña",
+          "from": 1467,
+          "through": 1476,
+          "condition": "efectivo",
+          "versions": [
+            {
+              "from": 1467,
+              "ids": [
+                "Baume",
+                "Dole",
+                "Gray",
+                "Luxeuil",
+                "Montbozon",
+                "Orgelet",
+                "Ornans",
+                "Poligny",
+                "Pontarlier",
+                "Salins_les_Bains",
+                "Vesoul"
+              ],
+              "borderline": []
+            }
+          ]
+        },
+        {
+          "territory": "Auxerre",
+          "from": 1467,
+          "through": 1476,
+          "condition": "efectivo",
+          "versions": [
+            {
+              "from": 1467,
+              "ids": [
+                "Auxerre"
+              ],
+              "borderline": []
+            }
+          ]
+        },
+        {
+          "territory": "Ponthieu",
+          "from": 1467,
+          "through": 1476,
+          "condition": "efectivo",
+          "versions": [
+            {
+              "from": 1467,
+              "ids": [
+                "Abbeville",
+                "Montreuil"
+              ],
+              "borderline": []
+            }
+          ]
+        },
+        {
+          "territory": "Señorío de Malinas",
+          "from": 1467,
+          "through": 1476,
+          "condition": "local-supplement",
+          "versions": [
+            {
+              "from": 1467,
+              "ids": [
+                "Mechelen"
+              ],
+              "borderline": []
+            }
+          ]
+        },
+        {
+          "territory": "Condado de Charolais",
+          "from": 1467,
+          "through": 1476,
+          "condition": "local-supplement",
+          "versions": [
+            {
+              "from": 1467,
+              "ids": [
+                "Charolles"
+              ],
+              "borderline": []
+            }
+          ]
+        },
+        {
+          "territory": "Condado de Mâcon",
+          "from": 1467,
+          "through": 1476,
+          "condition": "local-supplement",
+          "versions": [
+            {
+              "from": 1467,
+              "ids": [
+                "Macon"
+              ],
+              "borderline": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "MARIABORG",
+      "name": "María de Borgoña",
+      "from": 1477,
+      "through": 1481,
+      "status": [],
+      "governments": [
+        {
+          "territory": "Brabante",
+          "from": 1477,
+          "through": 1481,
+          "condition": "efectivo",
+          "versions": [
+            {
+              "from": 1477,
+              "ids": [
+                "Antwerp",
+                "Bergen_Zoom",
+                "Breda",
+                "Brussels",
+                "Eindhoven",
+                "Helmond",
+                "Hertogenbosch",
+                "Leuven",
+                "Nivelles",
+                "Turnhout"
+              ],
+              "borderline": []
+            }
+          ]
+        },
+        {
+          "territory": "Limburgo",
+          "from": 1477,
+          "through": 1481,
+          "condition": "efectivo",
+          "versions": [
+            {
+              "from": 1477,
+              "ids": [
+                "Limbourg"
+              ],
+              "borderline": []
+            }
+          ]
+        },
+        {
+          "territory": "Flandes",
+          "from": 1477,
+          "through": 1481,
+          "condition": "efectivo",
+          "versions": [
+            {
+              "from": 1477,
+              "ids": [
+                "Aalst",
+                "Bruges",
+                "Cassel",
+                "Douai",
+                "Dunkirk",
+                "Ghent",
+                "Hulst",
+                "Kortriik",
+                "Lille",
+                "Ostend",
+                "Oudenaarde",
+                "Sint_Niklaas",
+                "Veurne",
+                "Ypres"
+              ],
+              "borderline": []
+            }
+          ]
+        },
+        {
+          "territory": "Holanda",
+          "from": 1477,
+          "through": 1481,
+          "condition": "efectivo",
+          "versions": [
+            {
+              "from": 1477,
+              "ids": [
+                "Alkmaar",
+                "Amsterdam",
+                "Dordrecht",
+                "Geertruidenberg",
+                "Hoorn",
+                "Leiden",
+                "Rotterdam",
+                "The_Hague"
+              ],
+              "borderline": []
+            }
+          ]
+        },
+        {
+          "territory": "Henao",
+          "from": 1477,
+          "through": 1481,
+          "condition": "efectivo",
+          "versions": [
+            {
+              "from": 1477,
+              "ids": [
+                "Ath",
+                "Chimay",
+                "Enghien",
+                "Maubeuge",
+                "Mons",
+                "Valenciennes"
+              ],
+              "borderline": []
+            }
+          ]
+        },
+        {
+          "territory": "Zelanda",
+          "from": 1477,
+          "through": 1481,
+          "condition": "efectivo",
+          "versions": [
+            {
+              "from": 1477,
+              "ids": [
+                "Middelburg"
+              ],
+              "borderline": []
+            }
+          ]
+        },
+        {
+          "territory": "Namur",
+          "from": 1477,
+          "through": 1481,
+          "condition": "efectivo",
+          "versions": [
+            {
+              "from": 1477,
+              "ids": [
+                "Dinant",
+                "Namur",
+                "Orchimont",
+                "Walcourt"
+              ],
+              "borderline": []
+            }
+          ]
+        },
+        {
+          "territory": "Luxemburgo",
+          "from": 1477,
+          "through": 1481,
+          "condition": "efectivo",
+          "versions": [
+            {
+              "from": 1477,
+              "ids": [
+                "Arlon",
+                "Bastogne",
+                "La_Roche",
+                "Luxembourg",
+                "Montmedy",
+                "Neufchateau_Luxembourg",
+                "Thionville",
+                "Vianden"
+              ],
+              "borderline": []
+            }
+          ]
+        },
+        {
+          "territory": "Señorío de Malinas",
+          "from": 1477,
+          "through": 1481,
+          "condition": "local-supplement",
+          "versions": [
+            {
+              "from": 1477,
+              "ids": [
+                "Mechelen"
+              ],
+              "borderline": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "FEL1CAST",
+      "name": "Felipe I de Castilla",
+      "from": 1482,
+      "through": 1505,
+      "status": [
+        {
+          "from": 1482,
+          "through": 1493,
+          "label": "Heredero menor; gobierno ejercido mediante regencias"
+        },
+        {
+          "from": 1494,
+          "through": 1505,
+          "label": "Gobierno personal"
+        }
+      ],
+      "governments": [
+        {
+          "territory": "Flandes",
+          "from": 1482,
+          "through": 1505,
+          "condition": "efectivo",
+          "versions": [
+            {
+              "from": 1482,
+              "ids": [
+                "Aalst",
+                "Bruges",
+                "Cassel",
+                "Douai",
+                "Dunkirk",
+                "Ghent",
+                "Hulst",
+                "Kortriik",
+                "Lille",
+                "Ostend",
+                "Oudenaarde",
+                "Sint_Niklaas",
+                "Veurne",
+                "Ypres"
+              ],
+              "borderline": []
+            }
+          ]
+        },
+        {
+          "territory": "Brabante",
+          "from": 1482,
+          "through": 1505,
+          "condition": "efectivo",
+          "versions": [
+            {
+              "from": 1482,
+              "ids": [
+                "Antwerp",
+                "Bergen_Zoom",
+                "Breda",
+                "Brussels",
+                "Eindhoven",
+                "Helmond",
+                "Hertogenbosch",
+                "Leuven",
+                "Nivelles",
+                "Turnhout"
+              ],
+              "borderline": []
+            }
+          ]
+        },
+        {
+          "territory": "Limburgo",
+          "from": 1482,
+          "through": 1505,
+          "condition": "efectivo",
+          "versions": [
+            {
+              "from": 1482,
+              "ids": [
+                "Limbourg"
+              ],
+              "borderline": []
+            }
+          ]
+        },
+        {
+          "territory": "Holanda",
+          "from": 1482,
+          "through": 1505,
+          "condition": "efectivo",
+          "versions": [
+            {
+              "from": 1482,
+              "ids": [
+                "Alkmaar",
+                "Amsterdam",
+                "Dordrecht",
+                "Geertruidenberg",
+                "Hoorn",
+                "Leiden",
+                "Rotterdam",
+                "The_Hague"
+              ],
+              "borderline": []
+            }
+          ]
+        },
+        {
+          "territory": "Henao",
+          "from": 1482,
+          "through": 1505,
+          "condition": "efectivo",
+          "versions": [
+            {
+              "from": 1482,
+              "ids": [
+                "Ath",
+                "Chimay",
+                "Enghien",
+                "Maubeuge",
+                "Mons",
+                "Valenciennes"
+              ],
+              "borderline": []
+            }
+          ]
+        },
+        {
+          "territory": "Zelanda",
+          "from": 1482,
+          "through": 1505,
+          "condition": "efectivo",
+          "versions": [
+            {
+              "from": 1482,
+              "ids": [
+                "Middelburg"
+              ],
+              "borderline": []
+            }
+          ]
+        },
+        {
+          "territory": "Condado de Borgoña",
+          "from": 1493,
+          "through": 1505,
+          "condition": "efectivo",
+          "versions": [
+            {
+              "from": 1493,
+              "ids": [
+                "Baume",
+                "Dole",
+                "Gray",
+                "Luxeuil",
+                "Montbozon",
+                "Orgelet",
+                "Ornans",
+                "Poligny",
+                "Pontarlier",
+                "Salins_les_Bains",
+                "Vesoul"
+              ],
+              "borderline": []
+            }
+          ]
+        },
+        {
+          "territory": "Artois",
+          "from": 1493,
+          "through": 1505,
+          "condition": "efectivo",
+          "versions": [
+            {
+              "from": 1493,
+              "ids": [
+                "Arras",
+                "Bapaume",
+                "Bethune",
+                "Hesdin",
+                "Lens",
+                "Saint_Omer",
+                "Saint_Pol"
+              ],
+              "borderline": []
+            }
+          ]
+        },
+        {
+          "territory": "Namur",
+          "from": 1482,
+          "through": 1505,
+          "condition": "efectivo",
+          "versions": [
+            {
+              "from": 1482,
+              "ids": [
+                "Dinant",
+                "Namur",
+                "Orchimont",
+                "Walcourt"
+              ],
+              "borderline": []
+            }
+          ]
+        },
+        {
+          "territory": "Luxemburgo",
+          "from": 1482,
+          "through": 1505,
+          "condition": "efectivo",
+          "versions": [
+            {
+              "from": 1482,
+              "ids": [
+                "Arlon",
+                "Bastogne",
+                "La_Roche",
+                "Luxembourg",
+                "Montmedy",
+                "Neufchateau_Luxembourg",
+                "Thionville",
+                "Vianden"
+              ],
+              "borderline": []
+            }
+          ]
+        },
+        {
+          "territory": "Señorío de Malinas",
+          "from": 1482,
+          "through": 1505,
+          "condition": "local-supplement",
+          "versions": [
+            {
+              "from": 1482,
+              "ids": [
+                "Mechelen"
+              ],
+              "borderline": []
+            }
+          ]
+        },
+        {
+          "territory": "Condado de Charolais",
+          "from": 1493,
+          "through": 1505,
+          "condition": "local-supplement",
+          "versions": [
+            {
+              "from": 1493,
+              "ids": [
+                "Charolles"
+              ],
+              "borderline": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "CARLOS5",
+      "name": "Carlos V",
+      "from": 1506,
+      "through": 1555,
+      "status": [],
+      "governments": [
+        {
+          "territory": "Flandes",
+          "from": 1506,
+          "through": 1555,
+          "condition": "efectivo",
+          "versions": [
+            {
+              "from": 1506,
+              "ids": [
+                "Aalst",
+                "Bruges",
+                "Cassel",
+                "Douai",
+                "Dunkirk",
+                "Ghent",
+                "Hulst",
+                "Kortriik",
+                "Lille",
+                "Ostend",
+                "Oudenaarde",
+                "Sint_Niklaas",
+                "Veurne",
+                "Ypres"
+              ],
+              "borderline": []
+            }
+          ]
+        },
+        {
+          "territory": "Condado de Borgoña",
+          "from": 1506,
+          "through": 1555,
+          "condition": "efectivo",
+          "versions": [
+            {
+              "from": 1506,
+              "ids": [
+                "Baume",
+                "Dole",
+                "Gray",
+                "Luxeuil",
+                "Montbozon",
+                "Orgelet",
+                "Ornans",
+                "Poligny",
+                "Pontarlier",
+                "Salins_les_Bains",
+                "Vesoul"
+              ],
+              "borderline": []
+            }
+          ]
+        },
+        {
+          "territory": "Brabante",
+          "from": 1506,
+          "through": 1555,
+          "condition": "efectivo",
+          "versions": [
+            {
+              "from": 1506,
+              "ids": [
+                "Antwerp",
+                "Bergen_Zoom",
+                "Breda",
+                "Brussels",
+                "Eindhoven",
+                "Helmond",
+                "Hertogenbosch",
+                "Leuven",
+                "Nivelles",
+                "Turnhout"
+              ],
+              "borderline": []
+            }
+          ]
+        },
+        {
+          "territory": "Limburgo",
+          "from": 1506,
+          "through": 1555,
+          "condition": "efectivo",
+          "versions": [
+            {
+              "from": 1506,
+              "ids": [
+                "Limbourg"
+              ],
+              "borderline": []
+            }
+          ]
+        },
+        {
+          "territory": "Holanda",
+          "from": 1506,
+          "through": 1555,
+          "condition": "efectivo",
+          "versions": [
+            {
+              "from": 1506,
+              "ids": [
+                "Alkmaar",
+                "Amsterdam",
+                "Dordrecht",
+                "Geertruidenberg",
+                "Hoorn",
+                "Leiden",
+                "Rotterdam",
+                "The_Hague"
+              ],
+              "borderline": []
+            }
+          ]
+        },
+        {
+          "territory": "Henao",
+          "from": 1506,
+          "through": 1555,
+          "condition": "efectivo",
+          "versions": [
+            {
+              "from": 1506,
+              "ids": [
+                "Ath",
+                "Chimay",
+                "Enghien",
+                "Maubeuge",
+                "Mons",
+                "Valenciennes"
+              ],
+              "borderline": []
+            }
+          ]
+        },
+        {
+          "territory": "Zelanda",
+          "from": 1506,
+          "through": 1555,
+          "condition": "efectivo",
+          "versions": [
+            {
+              "from": 1506,
+              "ids": [
+                "Middelburg"
+              ],
+              "borderline": []
+            }
+          ]
+        },
+        {
+          "territory": "Artois",
+          "from": 1506,
+          "through": 1555,
+          "condition": "efectivo",
+          "versions": [
+            {
+              "from": 1506,
+              "ids": [
+                "Arras",
+                "Bapaume",
+                "Bethune",
+                "Hesdin",
+                "Lens",
+                "Saint_Omer",
+                "Saint_Pol"
+              ],
+              "borderline": []
+            }
+          ]
+        },
+        {
+          "territory": "Namur",
+          "from": 1506,
+          "through": 1555,
+          "condition": "efectivo",
+          "versions": [
+            {
+              "from": 1506,
+              "ids": [
+                "Dinant",
+                "Namur",
+                "Orchimont",
+                "Walcourt"
+              ],
+              "borderline": []
+            }
+          ]
+        },
+        {
+          "territory": "Luxemburgo",
+          "from": 1506,
+          "through": 1555,
+          "condition": "efectivo",
+          "versions": [
+            {
+              "from": 1506,
+              "ids": [
+                "Arlon",
+                "Bastogne",
+                "La_Roche",
+                "Luxembourg",
+                "Montmedy",
+                "Neufchateau_Luxembourg",
+                "Thionville",
+                "Vianden"
+              ],
+              "borderline": []
+            }
+          ]
+        },
+        {
+          "territory": "Frisia",
+          "from": 1524,
+          "through": 1555,
+          "condition": "efectivo",
+          "versions": [
+            {
+              "from": 1524,
+              "ids": [
+                "Harlingen",
+                "Leeuwarden",
+                "Sloten",
+                "Stavoren",
+                "Wolvega"
+              ],
+              "borderline": []
+            }
+          ]
+        },
+        {
+          "territory": "Utrecht",
+          "from": 1528,
+          "through": 1555,
+          "condition": "efectivo",
+          "versions": [
+            {
+              "from": 1528,
+              "ids": [
+                "Amersfoort",
+                "Utrecht"
+              ],
+              "borderline": []
+            }
+          ]
+        },
+        {
+          "territory": "Overijssel",
+          "from": 1528,
+          "through": 1555,
+          "condition": "efectivo",
+          "versions": [
+            {
+              "from": 1528,
+              "ids": [
+                "Deventer",
+                "Kampen",
+                "Oldenzaal",
+                "Zwolle"
+              ],
+              "borderline": []
+            }
+          ]
+        },
+        {
+          "territory": "Drente",
+          "from": 1536,
+          "through": 1555,
+          "condition": "efectivo",
+          "versions": [
+            {
+              "from": 1536,
+              "ids": [
+                "Assen",
+                "Coevorden",
+                "Meppel"
+              ],
+              "borderline": []
+            }
+          ]
+        },
+        {
+          "territory": "Groninga",
+          "from": 1536,
+          "through": 1555,
+          "condition": "efectivo",
+          "versions": [
+            {
+              "from": 1536,
+              "ids": [
+                "Appingedam",
+                "Groningen",
+                "Wedde"
+              ],
+              "borderline": []
+            }
+          ]
+        },
+        {
+          "territory": "Güeldres",
+          "from": 1543,
+          "through": 1555,
+          "condition": "efectivo",
+          "versions": [
+            {
+              "from": 1543,
+              "ids": [
+                "Apeldoorn",
+                "Arnhem",
+                "Doetinchem",
+                "Harderwijk",
+                "Nijmegen",
+                "Roermond",
+                "Tiel",
+                "Venlo",
+                "Zutphen"
+              ],
+              "borderline": []
+            }
+          ]
+        },
+        {
+          "territory": "Señorío de Malinas",
+          "from": 1506,
+          "through": 1555,
+          "condition": "local-supplement",
+          "versions": [
+            {
+              "from": 1506,
+              "ids": [
+                "Mechelen"
+              ],
+              "borderline": []
+            }
+          ]
+        },
+        {
+          "territory": "Condado de Charolais",
+          "from": 1506,
+          "through": 1555,
+          "condition": "local-supplement",
+          "versions": [
+            {
+              "from": 1506,
+              "ids": [
+                "Charolles"
+              ],
+              "borderline": []
+            }
+          ]
+        },
+        {
+          "territory": "Tournaisis",
+          "from": 1521,
+          "through": 1555,
+          "condition": "local-supplement",
+          "versions": [
+            {
+              "from": 1521,
+              "ids": [
+                "Tournai"
+              ],
+              "borderline": []
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "overrides": [
+    {
+      "territory": "Holanda",
+      "id": "Utrecht",
+      "action": "remove",
+      "from": 1419,
+      "through": 1555,
+      "reason": "Utrecht only passed to Charles in 1528; the old Holland polygon swallowed it. Geographic correction reused for the Burgundian succession.",
+      "source": "https://www.habsburger.net/en/chapter/charles-v-empire-which-sun-never-set"
+    },
+    {
+      "territory": "Holanda",
+      "id": "Amersfoort",
+      "action": "remove",
+      "from": 1419,
+      "through": 1555,
+      "reason": "Amersfoort belongs to the Utrecht jurisdiction, not the County of Holland. Geographic correction reused for the Burgundian succession.",
+      "source": "https://www.canonvannederland.nl/nl/overijssel/overijssel/wapen-van-overijssel"
+    },
+    {
+      "territory": "Holanda",
+      "id": "Middelburg",
+      "action": "remove",
+      "from": 1419,
+      "through": 1555,
+      "reason": "Middelburg is Zeeland, distinct from Holland. Geographic correction reused for the Burgundian succession.",
+      "source": "https://www.rijksmuseum.nl/nl/collectie/object/Allegorie-op-de-troonsafstand-van-keizer-Karel-v-te-Brussel--2cb744f2469fe62413bb6aab920d4e03?tab=catalogue"
+    },
+    {
+      "territory": "Zelanda",
+      "id": "Middelburg",
+      "action": "add",
+      "from": 1419,
+      "through": 1555,
+      "reason": "Zeeland was inherited with the Burgundian Netherlands; the old SVG had no Zeeland ID. Geographic correction reused for the Burgundian succession.",
+      "source": "https://www.rijksmuseum.nl/nl/collectie/object/Allegorie-op-de-troonsafstand-van-keizer-Karel-v-te-Brussel--2cb744f2469fe62413bb6aab920d4e03?tab=catalogue"
+    },
+    {
+      "territory": "Utrecht",
+      "id": "Utrecht",
+      "action": "add",
+      "from": 1528,
+      "through": 1555,
+      "reason": "Temporal rule acquired from the bishop of Utrecht in 1528.",
+      "source": "https://www.habsburger.net/en/chapter/charles-v-empire-which-sun-never-set"
+    },
+    {
+      "territory": "Utrecht",
+      "id": "Amersfoort",
+      "action": "add",
+      "from": 1528,
+      "through": 1555,
+      "reason": "Utrecht jurisdiction, acquired in 1528.",
+      "source": "https://www.habsburger.net/en/chapter/charles-v-empire-which-sun-never-set"
+    },
+    {
+      "territory": "Flandes",
+      "id": "Tournai",
+      "action": "remove",
+      "from": 1419,
+      "through": 1555,
+      "reason": "Tournai was acquired separately in 1521, not part of the inherited County of Flanders. Geographic correction reused for the Burgundian succession.",
+      "source": "https://mhm.tournai.be/en/tournai-a-city-with-a-rich-military-past"
+    },
+    {
+      "territory": "Tournaisis",
+      "id": "Tournai",
+      "action": "add",
+      "from": 1521,
+      "through": 1555,
+      "reason": "Charles captured Tournai in 1521 after its French interval; shown as a separate acquisition.",
+      "source": "https://mhm.tournai.be/en/tournai-a-city-with-a-rich-military-past"
+    },
+    {
+      "territory": "Brabante",
+      "id": "Mechelen",
+      "action": "remove",
+      "from": 1419,
+      "through": 1555,
+      "reason": "Mechelen was a distinct lordship among the Burgundian-Habsburg Netherlands. Geographic correction reused for the Burgundian succession.",
+      "source": "https://stadsarchief.mechelen.be/vandaag-in-de-mechelse-geschiedenis-het-parlement-van-mechelen-1474-"
+    },
+    {
+      "territory": "Señorío de Malinas",
+      "id": "Mechelen",
+      "action": "add",
+      "from": 1419,
+      "through": 1555,
+      "reason": "Separate inherited Lordship of Mechelen/Malines. Geographic correction reused for the Burgundian succession.",
+      "source": "https://stadsarchief.mechelen.be/vandaag-in-de-mechelse-geschiedenis-het-parlement-van-mechelen-1474-"
+    },
+    {
+      "territory": "Artois",
+      "id": "Cambrai",
+      "action": "remove",
+      "from": 1419,
+      "through": 1555,
+      "reason": "Cambrai was a prince-bishopric, not part of the County of Artois. Imperial garrison and influence are not identical to this hereditary county. Geographic correction reused for the Burgundian succession.",
+      "source": "https://shs.cairn.info/revue-du-nord-2013-2-page-699?lang=fr"
+    },
+    {
+      "territory": "Limburgo",
+      "id": "Roermond",
+      "action": "remove",
+      "from": 1419,
+      "through": 1555,
+      "reason": "Roermond belongs with Guelders, acquired only in 1543. Geographic correction reused for the Burgundian succession.",
+      "source": "https://www.canonvannederland.nl/nl/gelderland/gelderland/van-graafschap-tot-hertogdom"
+    },
+    {
+      "territory": "Limburgo",
+      "id": "Venlo",
+      "action": "remove",
+      "from": 1419,
+      "through": 1555,
+      "reason": "Venlo belongs with Guelders, acquired only in 1543. Geographic correction reused for the Burgundian succession.",
+      "source": "https://media.gelderland.nl/Folder_Past_Present_Future_20054ee6ef.pdf"
+    },
+    {
+      "territory": "Limburgo",
+      "id": "Maastricht",
+      "action": "remove",
+      "from": 1419,
+      "through": 1555,
+      "reason": "Shared jurisdiction with the prince-bishop of Liège cannot be expressed as sole control of the whole location. Geographic correction reused for the Burgundian succession.",
+      "source": "https://www.visitmaastricht.com/en/this-is-maastricht/building-on-the-past/history/middle-ages"
+    },
+    {
+      "territory": "Limburgo",
+      "id": "Weert",
+      "action": "remove",
+      "from": 1419,
+      "through": 1555,
+      "reason": "Lordship of Weert/Horne is not the Duchy of Limburg. Geographic correction reused for the Burgundian succession.",
+      "source": "https://www.museum.nl/en/museum-w/showpiece/count-of-horn"
+    },
+    {
+      "territory": "Limburgo",
+      "id": "Limbourg",
+      "action": "add",
+      "from": 1419,
+      "through": 1555,
+      "reason": "The new map separates the duchy's eponymous location from the coarse old Limburg province. Geographic correction reused for the Burgundian succession.",
+      "source": "https://www.rijksmuseum.nl/nl/collectie/object/Allegorie-op-de-troonsafstand-van-keizer-Karel-v-te-Brussel--2cb744f2469fe62413bb6aab920d4e03?tab=catalogue"
+    },
+    {
+      "territory": "Güeldres",
+      "id": "Roermond",
+      "action": "add",
+      "from": 1419,
+      "through": 1555,
+      "reason": "Guelders entered Charles's Netherlands after the Treaty of Venlo in 1543. Geographic correction reused for the Burgundian succession.",
+      "source": "https://www.habsburger.net/en/chapter/charles-v-empire-which-sun-never-set"
+    },
+    {
+      "territory": "Güeldres",
+      "id": "Venlo",
+      "action": "add",
+      "from": 1419,
+      "through": 1555,
+      "reason": "Guelders entered Charles's Netherlands after the Treaty of Venlo in 1543. Geographic correction reused for the Burgundian succession.",
+      "source": "https://www.habsburger.net/en/chapter/charles-v-empire-which-sun-never-set"
+    },
+    {
+      "territory": "Condado de Borgoña",
+      "id": "Besancon",
+      "action": "remove",
+      "from": 1419,
+      "through": 1555,
+      "reason": "Besançon was a free imperial city, politically and administratively separate from the county. Geographic correction reused for the Burgundian succession.",
+      "source": "https://inventaire-patrimoine.bourgognefranchecomte.fr/dossier/IA25000374"
+    },
+    {
+      "territory": "Condado de Borgoña",
+      "id": "Montbeliard",
+      "action": "remove",
+      "from": 1419,
+      "through": 1555,
+      "reason": "Montbéliard was governed by the counts and dukes of Württemberg, not the count of Burgundy. Geographic correction reused for the Burgundian succession.",
+      "source": "https://www.montbeliard.fr/mes-sorties-mes-activites/musees-de-montbeliard/musee-du-chateau-des-ducs-de-wurtemberg/le-circuit-historique-2/"
+    },
+    {
+      "territory": "Condado de Borgoña",
+      "id": "Saint_Claude",
+      "action": "remove",
+      "from": 1419,
+      "through": 1555,
+      "reason": "The abbey's territory had direct imperial standing and was independent of the county; the polygon cannot represent county rule. Geographic correction reused for the Burgundian succession.",
+      "source": "https://www.newadvent.org/cathen/13341a.htm"
+    },
+    {
+      "territory": "Luxemburgo",
+      "id": "Bouillon",
+      "action": "remove",
+      "from": 1419,
+      "through": 1555,
+      "reason": "Bouillon was a distinct lordship connected to Liège, not a constituent of the Duchy of Luxembourg. Geographic correction reused for the Burgundian succession.",
+      "source": "https://www.larousse.fr/encyclopedie/autre-region/duch%C3%A9_de_Bouillon/109685"
+    },
+    {
+      "territory": "Brabante",
+      "id": "Cuijk",
+      "action": "remove",
+      "from": 1419,
+      "through": 1555,
+      "reason": "Cuijk was a distinct lordship. Carlos V was its lord by the mid-16th century, but the accession date is not established here; omit this location from Brabant until its own dated jurisdiction is modelled. Geographic correction reused for the Burgundian succession.",
+      "source": "https://www.bhic.nl/ontdekken/verhalen/cuijkse-heggenleggers-en-kartuizers-in-het-midden-van-de-zestiende-eeuw"
+    },
+    {
+      "territory": "Ponthieu",
+      "id": "Calais",
+      "action": "remove",
+      "from": 1419,
+      "through": 1555,
+      "reason": "Calais was held by England from 1347 to 1558, not by the Burgundian count of Ponthieu.",
+      "source": "https://www.nationalarchives.gov.uk/help-with-your-research/research-guides/french-lands-english-kings/"
+    },
+    {
+      "territory": "Ponthieu",
+      "id": "Boulogne_Sur_Mer",
+      "action": "remove",
+      "from": 1419,
+      "through": 1555,
+      "reason": "Boulogne was a separate county; its union with this lordship cannot be assumed from an overlapping old polygon.",
+      "source": "https://inventaire.hautsdefrance.fr/dossier/IA62005335"
+    },
+    {
+      "territory": "Auxerre",
+      "id": "Aignay",
+      "action": "remove",
+      "from": 1419,
+      "through": 1555,
+      "reason": "The old Auxerrois polygon reaches a different Burgundian bailliage; retain only Auxerre until a local boundary is sourced.",
+      "source": "https://ccfr.bnf.fr/portailccfr/ark:/16871/0011204294"
+    },
+    {
+      "territory": "Auxerre",
+      "id": "Arnay",
+      "action": "remove",
+      "from": 1419,
+      "through": 1555,
+      "reason": "The old Auxerrois polygon reaches a different Burgundian bailliage; retain only Auxerre until a local boundary is sourced.",
+      "source": "https://ccfr.bnf.fr/portailccfr/ark:/16871/0011204294"
+    },
+    {
+      "territory": "Auxerre",
+      "id": "Avallon",
+      "action": "remove",
+      "from": 1419,
+      "through": 1555,
+      "reason": "The old Auxerrois polygon reaches a different Burgundian bailliage; retain only Auxerre until a local boundary is sourced.",
+      "source": "https://ccfr.bnf.fr/portailccfr/ark:/16871/0011204294"
+    },
+    {
+      "territory": "Auxerre",
+      "id": "Chatillon_Sur_Seine",
+      "action": "remove",
+      "from": 1419,
+      "through": 1555,
+      "reason": "The old Auxerrois polygon reaches a different Burgundian bailliage; retain only Auxerre until a local boundary is sourced.",
+      "source": "https://ccfr.bnf.fr/portailccfr/ark:/16871/0011204294"
+    },
+    {
+      "territory": "Auxerre",
+      "id": "Semur_En_Auxois",
+      "action": "remove",
+      "from": 1419,
+      "through": 1555,
+      "reason": "The old Auxerrois polygon reaches a different Burgundian bailliage; retain only Auxerre until a local boundary is sourced.",
+      "source": "https://ccfr.bnf.fr/portailccfr/ark:/16871/0011204294"
+    },
+    {
+      "territory": "Borgoña",
+      "id": "Macon",
+      "action": "remove",
+      "from": 1419,
+      "through": 1476,
+      "reason": "Mâcon was a separate county and entered the ducal set in 1435; it must not be painted in 1419.",
+      "source": "https://www.macon.fr/fileadmin/medias/03_MACON_ET_VOUS/Urbanisme/PLU/Revision_PLU_2022/01-08_PROJET_ARRETE_DE_REVISION_DU_PLU/01_-_RAPPORT_DE_PRESENTATION/01a.Diagnostic_et_Projet_de_PLU.pdf"
+    },
+    {
+      "territory": "Condado de Mâcon",
+      "id": "Macon",
+      "action": "add",
+      "from": 1435,
+      "through": 1476,
+      "reason": "Municipal history dates incorporation of the Mâcon county into the Burgundian duchy to 1435.",
+      "source": "https://www.macon.fr/fileadmin/medias/03_MACON_ET_VOUS/Urbanisme/PLU/Revision_PLU_2022/01-08_PROJET_ARRETE_DE_REVISION_DU_PLU/01_-_RAPPORT_DE_PRESENTATION/01a.Diagnostic_et_Projet_de_PLU.pdf"
+    },
+    {
+      "territory": "Borgoña",
+      "id": "Charolles",
+      "action": "remove",
+      "from": 1419,
+      "through": 1476,
+      "reason": "Charolais was a separate county within the Burgundian holdings.",
+      "source": "https://essentiels.bnf.fr/fr/article/d22e6192-1011-4527-bf32-5ea610af1df2-heraldique-son-apogee-armoiries-devises-et-emblemes"
+    },
+    {
+      "territory": "Condado de Charolais",
+      "id": "Charolles",
+      "action": "add",
+      "from": 1419,
+      "through": 1555,
+      "reason": "Distinct county acquired in 1390, taken by France in 1477 and restored to the Habsburg line by Senlis in 1493; the dated person records determine the gap.",
+      "source": "https://archives.cotedor.fr/v2/site/AD21/Apprendre/Atelier_du_chancelier_Rolin/Paleographie/Groupe_confirmes/Documents_etudies_en_2008-2009/Documents_1_a_3_-_Le_traite_de_Senlis_23_mai_1493_"
+    }
+  ],
+  "audit": {
+    "oldIds": 27,
+    "newPathsConsidered": 254,
+    "newPathsTotal": 7672,
+    "oldWithNoCandidate": [],
+    "yearOwnershipConflicts": [],
+    "sourceLimitations": [
+      "Felipe I inherited in 1482 but did not govern personally until 1493/94; the Atlas currently marks 1482-1506 as efectivo.",
+      "Disputed and titular claims (notably Artois and Franche-Comté in 1477-1493) are deliberately unpainted.",
+      "The EU V Locations polygons are game geography, not independently sourced historical borders."
+    ]
+  }
+}

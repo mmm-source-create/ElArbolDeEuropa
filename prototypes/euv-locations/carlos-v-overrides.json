@@ -118,5 +118,30 @@
     "territory": "Condado de Barcelona", "id": "Andorra_la_Vella", "action": "remove", "from": 1516, "through": 1555,
     "reason": "Andorra's co-principality was not absorbed into the County of Barcelona.",
     "source": "https://www.govern.ad/ca/tematiques/cultura-i-esports/patrimoni-cultural/coneixer-el-patrimoni-cultural/historia-d-andorra"
+  },
+  {
+    "territory": "Condado de Borgoña", "id": "Besancon", "action": "remove", "from": 1506, "through": 1555,
+    "reason": "Besançon was a free imperial city, politically and administratively separate from the county.",
+    "source": "https://inventaire-patrimoine.bourgognefranchecomte.fr/dossier/IA25000374"
+  },
+  {
+    "territory": "Condado de Borgoña", "id": "Montbeliard", "action": "remove", "from": 1506, "through": 1555,
+    "reason": "Montbéliard was governed by the counts and dukes of Württemberg, not the count of Burgundy.",
+    "source": "https://www.montbeliard.fr/mes-sorties-mes-activites/musees-de-montbeliard/musee-du-chateau-des-ducs-de-wurtemberg/le-circuit-historique-2/"
+  },
+  {
+    "territory": "Condado de Borgoña", "id": "Saint_Claude", "action": "remove", "from": 1506, "through": 1555,
+    "reason": "The abbey's territory had direct imperial standing and was independent of the county; the polygon cannot represent county rule.",
+    "source": "https://www.newadvent.org/cathen/13341a.htm"
+  },
+  {
+    "territory": "Luxemburgo", "id": "Bouillon", "action": "remove", "from": 1506, "through": 1555,
+    "reason": "Bouillon was a distinct lordship connected to Liège, not a constituent of the Duchy of Luxembourg.",
+    "source": "https://www.larousse.fr/encyclopedie/autre-region/duch%C3%A9_de_Bouillon/109685"
+  },
+  {
+    "territory": "Brabante", "id": "Cuijk", "action": "remove", "from": 1506, "through": 1555,
+    "reason": "Cuijk was a distinct lordship. Carlos V was its lord by the mid-16th century, but the accession date is not established here; omit this location from Brabant until its own dated jurisdiction is modelled.",
+    "source": "https://www.bhic.nl/ontdekken/verhalen/cuijkse-heggenleggers-en-kartuizers-in-het-midden-van-de-zestiende-eeuw"
   }
 ]
