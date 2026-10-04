@@ -199,7 +199,7 @@ const territories = Object.entries(corridors).flatMap(([corridor, names]) => nam
   const colors = {
     'Plaza inglesa de Calais': REINO_COLOR.Inglaterra,
     'Plazas inglesas de Guyena': REINO_COLOR.Inglaterra,
-    'Núcleo inglés en Irlanda': REINO_COLOR.Inglaterra,
+    'Núcleo inglés en Irlanda': REINO_COLOR.Irlanda,
     'Señorío de Man': '#9b8160',
     'Bailiazgo de Jersey': REINO_COLOR.Inglaterra,
     'Principado episcopal de Brixen': '#96814e',

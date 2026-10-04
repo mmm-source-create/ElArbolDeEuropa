@@ -75,6 +75,9 @@ test('British and Irish locations do not follow a shared monarch into the wrong 
   const pale = ids('Núcleo inglés en Irlanda', 1500);
   for (const id of ['Dublin', 'Trim', 'Drogheda', 'Dundalk']) assert(pale.has(id));
   for (const id of ['Galway', 'Longford', 'Wicklow_Mountains']) assert(!pale.has(id));
+  assert.notEqual(data.territories.find(t => t.name === 'Núcleo inglés en Irlanda').color,
+    data.territories.find(t => t.name === 'Inglaterra').color,
+    'the Irish jurisdiction retains its own color under the same monarch');
 });
 
 test('Polish-Lithuanian corridor separates incorporation, fief and the 1569 union', () => {
