@@ -20,6 +20,57 @@ const corridors = {
     'Austria', 'Austria Interior', 'Tirol', 'Baviera',
     'Palatinado', 'Bohemia', 'Hungría',
   ],
+  'Polonia–Lituania': [
+    'Corona de Polonia', 'Ducado de Mazovia', 'Prusia Real',
+    'Prusia de la Orden', 'Prusia ducal', 'Gran Ducado de Lituania',
+  ],
+};
+
+// The Atlas's single post-1386 polygon lists anachronistically absorbs
+// Mazovia, Pomerania and Moldavian vassals. This pilot separates the
+// jurisdictions before applying the same geometric crosswalk as the others.
+const POLAND_EXCLUDE = new Set([
+  'Czersk', 'Warsaw', 'Lomza', 'Ciechanow', 'Rawa', 'Plock',
+  'Stolp', 'Koslin', 'Basarabia', 'Barlad', 'Bacau', 'Orhei',
+  'Iasi', 'Balti_Moldova', 'Dorohei', 'Suceava',
+]);
+const POLAND_CORE = idsDeReinoEnAño('Polonia', 1400).filter(id => !POLAND_EXCLUDE.has(id));
+const LITHUANIA_CORE = [
+  'Medininkai', 'Siauliai', 'Upyte', 'Vilnius', 'Vilkmerge', 'Raseiniai',
+  'Kaunas', 'Suwalki', 'Trakai', 'Bresta', 'Kobryn', 'Vawkavysk',
+  'Slonin', 'Grodno', 'Lida', 'Dzisna', 'Vitebsk', 'Breslauja',
+  'Svir', 'Lahoysk', 'Barysaw', 'Ashmyany', 'Minsk', 'Novogrudok',
+  'Orsha', 'Mogilev', 'Mstsislaw', 'Rechytsa', 'Slutsk', 'Kletsk',
+  'Pinsk', 'Mazyr', 'Turov',
+];
+const LITHUANIA_TRANSFER_1569 = [
+  'Podlasie', 'Lutsk', 'Rivne', 'Zviahel', 'Zhytomyr', 'Porossia',
+  'Vinnytsia', 'Torgovytsia', 'Bratslav', 'Cherkasy', 'Kyiv',
+  'Chornobyl', 'Ovruch', 'Olevsk',
+];
+const specialSeries = {
+  'Corona de Polonia': year => [
+    ...POLAND_CORE,
+    ...(year >= 1462 ? ['Rawa'] : []),
+    ...(year >= 1495 ? ['Plock'] : []),
+    ...(year >= 1526 ? ['Czersk', 'Warsaw', 'Lomza', 'Ciechanow'] : []),
+    ...(year >= 1569 ? LITHUANIA_TRANSFER_1569 : []),
+  ],
+  'Ducado de Mazovia': year => [
+    ...(year < 1526 ? ['Czersk', 'Warsaw', 'Lomza', 'Ciechanow'] : []),
+    ...(year < 1495 ? ['Plock'] : []),
+    ...(year < 1462 ? ['Rawa'] : []),
+  ],
+  'Prusia Real': year => year >= 1466 ? ['Danzig', 'Chelmno', 'Warmia'] : [],
+  'Prusia de la Orden': year => year <= 1524 ? [
+    ...idsDeReinoEnAño('Prusia', year),
+    ...(year < 1454 ? ['Danzig', 'Chelmno', 'Warmia'] : []),
+  ] : [],
+  'Prusia ducal': year => year >= 1525 ? idsDeReinoEnAño('Prusia', year) : [],
+  'Gran Ducado de Lituania': year => [
+    ...LITHUANIA_CORE,
+    ...(year < 1569 ? LITHUANIA_TRANSFER_1569 : []),
+  ],
 };
 
 // A territorial label can outlive its independent government in the Atlas.
@@ -42,6 +93,18 @@ const active = {
     source: 'https://www.historisches-lexikon-bayerns.de/Lexikon/K%C3%B6lner_Schiedsspruch%2C_30._Juli_1505' },
   Hungría: { through: 1525, reason: 'Después de Mohács (1526), título y control se disputaron; no se debe proyectar el reino medieval completo sobre la Hungría real, Transilvania y el dominio otomano.',
     source: 'https://www.habsburger.net/en/chapter/ferdinand-i-new-crowns-habsburgs' },
+  'Ducado de Mazovia': { through: 1525, reason: 'El último ducado mazoviano fue incorporado a la Corona en 1526; Rawa y Płock habían pasado antes.',
+    source: 'https://agad.gov.pl/?page_id=486' },
+  'Prusia Real': { from: 1466, through: 1569, reason: 'La Prusia Real se integró en la Corona en 1466; ocupaciones posteriores a 1569 quedan por fechar en este corredor.',
+    source: 'https://zpe.gov.pl/a/polskie-dynastie-jagiellonowie/D12LkQne7' },
+  'Prusia de la Orden': { through: 1524, reason: 'El estado de la Orden Teutónica fue secularizado como Ducado de Prusia en 1525.',
+    source: 'https://zpe.gov.pl/a/prezentacja-multimedialna/DbYm1LK96' },
+  'Prusia ducal': { from: 1525, through: 1569, reason: 'Ducado separado y feudo polaco desde 1525; cambios posteriores a 1569 quedan por auditar.',
+    source: 'https://zpe.gov.pl/a/prezentacja-multimedialna/DbYm1LK96' },
+  'Corona de Polonia': { through: 1569, reason: 'La frontera de este corredor se ha auditado hasta la Unión de Lublin de 1569; conflictos y cambios posteriores quedan por fechar.',
+    source: 'https://agad.gov.pl/inwentarze/Metr_Korx.xml' },
+  'Gran Ducado de Lituania': { through: 1569, reason: 'La frontera de este corredor se ha auditado hasta la Unión de Lublin de 1569; los cambios posteriores quedan por fechar.',
+    source: 'https://agad.gov.pl/inwentarze/Metr_Korx.xml' },
 };
 
 const notes = {
@@ -52,22 +115,33 @@ const notes = {
   Palatinado: 'Palatinado electoral, no todas las ramas Wittelsbach. La Alta Palatinado se transfiere a Baviera en 1628.',
   Bohemia: 'Tierras de la Corona de Bohemia: incluye Moravia y partes de Silesia, además del reino estricto.',
   Hungría: 'Corona compuesta de San Esteban antes de Mohács: incluye Croacia y Transilvania. Desde 1526 la partición queda sin colorear hasta modelar cada sucesor.',
+  'Corona de Polonia': 'Corona, no todos los dominios de los Jagellón. Mazovia se incorpora por etapas; los voivodatos transferidos desde Lituania se muestran desde 1569. Moldavia y Pomerania occidental no se absorben por vasallaje o proximidad.',
+  'Ducado de Mazovia': 'Ducado vasallo pero políticamente distinto. Rawa sale en 1462, Płock en 1495 y el núcleo restante en 1526.',
+  'Prusia Real': 'Provincia de la Corona desde 1466, distinta de Prusia ducal. Warmia conserva su condición eclesiástica dentro de esta agrupación cartográfica.',
+  'Prusia de la Orden': 'Remanente de la Orden tras la Segunda Paz de Toruń; su sujeción feudal a Polonia no equivale a incorporación.',
+  'Prusia ducal': 'Sucesor secularizado del Estado de la Orden desde 1525, feudo polaco; la propia entidad mantiene color separado.',
+  'Gran Ducado de Lituania': 'Núcleo occidental y voivodatos cuya transferencia de 1569 se ha revisado. La frontera oriental y el litoral del mar Negro quedan deliberadamente grises hasta una auditoría fechada.',
 };
 
 const territories = Object.entries(corridors).flatMap(([corridor, names]) => names.map(name => {
   const versions = [];
   for (let year = FROM; year <= THROUGH; year++) {
-    const oldIds = idsDeReinoEnAño(name, year);
+    const oldIds = specialSeries[name]?.(year) ?? idsDeReinoEnAño(name, year);
     if (!versions.length || JSON.stringify(oldIds) !== JSON.stringify(versions.at(-1).oldIds)) {
       versions.push({ from: year, oldIds });
     }
   }
-  return { corridor, name, color: REINO_COLOR[name] || '#735f4c',
+  const colors = {
+    'Corona de Polonia': REINO_COLOR.Polonia, 'Ducado de Mazovia': '#b7789d',
+    'Prusia Real': '#ae4e9b', 'Prusia de la Orden': '#495672',
+    'Prusia ducal': REINO_COLOR.Prusia, 'Gran Ducado de Lituania': REINO_COLOR.Lituania,
+  };
+  return { corridor, name, color: colors[name] || REINO_COLOR[name] || '#735f4c',
     active: active[name] || null, note: notes[name] || null, versions };
 }));
 
 const output = new URL('./corridor-source.json', import.meta.url);
 fs.writeFileSync(output, `${JSON.stringify({ from: FROM, through: THROUGH,
-  basis: 'REINO_A_IDS and REINO_VERSIONES through idsDeReinoEnAño; territorial scope only',
+  basis: 'REINO_A_IDS and REINO_VERSIONES through idsDeReinoEnAño; Polonia–Lituania has explicit dated corrections; territorial scope only',
   territories }, null, 2)}\n`);
 console.log(`Wrote ${territories.length} territories to ${output.pathname}`);

@@ -1,7 +1,7 @@
 {
   "from": 1400,
   "through": 1650,
-  "basis": "REINO_A_IDS and REINO_VERSIONES through idsDeReinoEnAño; territorial scope only",
+  "basis": "REINO_A_IDS and REINO_VERSIONES through idsDeReinoEnAño; Polonia–Lituania has explicit dated corrections; territorial scope only",
   "territories": [
     {
       "corridor": "Iberia",
@@ -1256,6 +1256,496 @@
             "Una_Sana",
             "Lika",
             "North_Dalmatia"
+          ]
+        }
+      ]
+    },
+    {
+      "corridor": "Polonia–Lituania",
+      "name": "Corona de Polonia",
+      "color": "#da63cc",
+      "active": {
+        "through": 1569,
+        "reason": "La frontera de este corredor se ha auditado hasta la Unión de Lublin de 1569; conflictos y cambios posteriores quedan por fechar.",
+        "source": "https://agad.gov.pl/inwentarze/Metr_Korx.xml"
+      },
+      "note": "Corona, no todos los dominios de los Jagellón. Mazovia se incorpora por etapas; los voivodatos transferidos desde Lituania se muestran desde 1569. Moldavia y Pomerania occidental no se absorben por vasallaje o proximidad.",
+      "versions": [
+        {
+          "from": 1400,
+          "oldIds": [
+            "Lublin",
+            "Sandomierz",
+            "Krakow",
+            "Pilzno",
+            "Czestochowa",
+            "Wielun",
+            "Kalisz",
+            "Poznan",
+            "Gniezno",
+            "Pyzdry",
+            "Koscian",
+            "Naklo",
+            "Radom",
+            "Checiny",
+            "Sieradz",
+            "Znin",
+            "Konin",
+            "Leczyca",
+            "Nowy_Sacz",
+            "Szczyrzyc",
+            "Arnskrone",
+            "Kuyavia",
+            "Dobrzyn",
+            "Chelm",
+            "Volodymyr",
+            "Belz",
+            "Lviv",
+            "Przemysl",
+            "Sanok",
+            "Drohobych",
+            "Zhydachiv",
+            "Pocutia",
+            "Halych",
+            "Eastern_Podolia",
+            "Western_Podolia",
+            "Terebovlia",
+            "Kremenets"
+          ]
+        },
+        {
+          "from": 1462,
+          "oldIds": [
+            "Lublin",
+            "Sandomierz",
+            "Krakow",
+            "Pilzno",
+            "Czestochowa",
+            "Wielun",
+            "Kalisz",
+            "Poznan",
+            "Gniezno",
+            "Pyzdry",
+            "Koscian",
+            "Naklo",
+            "Radom",
+            "Checiny",
+            "Sieradz",
+            "Znin",
+            "Konin",
+            "Leczyca",
+            "Nowy_Sacz",
+            "Szczyrzyc",
+            "Arnskrone",
+            "Kuyavia",
+            "Dobrzyn",
+            "Chelm",
+            "Volodymyr",
+            "Belz",
+            "Lviv",
+            "Przemysl",
+            "Sanok",
+            "Drohobych",
+            "Zhydachiv",
+            "Pocutia",
+            "Halych",
+            "Eastern_Podolia",
+            "Western_Podolia",
+            "Terebovlia",
+            "Kremenets",
+            "Rawa"
+          ]
+        },
+        {
+          "from": 1495,
+          "oldIds": [
+            "Lublin",
+            "Sandomierz",
+            "Krakow",
+            "Pilzno",
+            "Czestochowa",
+            "Wielun",
+            "Kalisz",
+            "Poznan",
+            "Gniezno",
+            "Pyzdry",
+            "Koscian",
+            "Naklo",
+            "Radom",
+            "Checiny",
+            "Sieradz",
+            "Znin",
+            "Konin",
+            "Leczyca",
+            "Nowy_Sacz",
+            "Szczyrzyc",
+            "Arnskrone",
+            "Kuyavia",
+            "Dobrzyn",
+            "Chelm",
+            "Volodymyr",
+            "Belz",
+            "Lviv",
+            "Przemysl",
+            "Sanok",
+            "Drohobych",
+            "Zhydachiv",
+            "Pocutia",
+            "Halych",
+            "Eastern_Podolia",
+            "Western_Podolia",
+            "Terebovlia",
+            "Kremenets",
+            "Rawa",
+            "Plock"
+          ]
+        },
+        {
+          "from": 1526,
+          "oldIds": [
+            "Lublin",
+            "Sandomierz",
+            "Krakow",
+            "Pilzno",
+            "Czestochowa",
+            "Wielun",
+            "Kalisz",
+            "Poznan",
+            "Gniezno",
+            "Pyzdry",
+            "Koscian",
+            "Naklo",
+            "Radom",
+            "Checiny",
+            "Sieradz",
+            "Znin",
+            "Konin",
+            "Leczyca",
+            "Nowy_Sacz",
+            "Szczyrzyc",
+            "Arnskrone",
+            "Kuyavia",
+            "Dobrzyn",
+            "Chelm",
+            "Volodymyr",
+            "Belz",
+            "Lviv",
+            "Przemysl",
+            "Sanok",
+            "Drohobych",
+            "Zhydachiv",
+            "Pocutia",
+            "Halych",
+            "Eastern_Podolia",
+            "Western_Podolia",
+            "Terebovlia",
+            "Kremenets",
+            "Rawa",
+            "Plock",
+            "Czersk",
+            "Warsaw",
+            "Lomza",
+            "Ciechanow"
+          ]
+        },
+        {
+          "from": 1569,
+          "oldIds": [
+            "Lublin",
+            "Sandomierz",
+            "Krakow",
+            "Pilzno",
+            "Czestochowa",
+            "Wielun",
+            "Kalisz",
+            "Poznan",
+            "Gniezno",
+            "Pyzdry",
+            "Koscian",
+            "Naklo",
+            "Radom",
+            "Checiny",
+            "Sieradz",
+            "Znin",
+            "Konin",
+            "Leczyca",
+            "Nowy_Sacz",
+            "Szczyrzyc",
+            "Arnskrone",
+            "Kuyavia",
+            "Dobrzyn",
+            "Chelm",
+            "Volodymyr",
+            "Belz",
+            "Lviv",
+            "Przemysl",
+            "Sanok",
+            "Drohobych",
+            "Zhydachiv",
+            "Pocutia",
+            "Halych",
+            "Eastern_Podolia",
+            "Western_Podolia",
+            "Terebovlia",
+            "Kremenets",
+            "Rawa",
+            "Plock",
+            "Czersk",
+            "Warsaw",
+            "Lomza",
+            "Ciechanow",
+            "Podlasie",
+            "Lutsk",
+            "Rivne",
+            "Zviahel",
+            "Zhytomyr",
+            "Porossia",
+            "Vinnytsia",
+            "Torgovytsia",
+            "Bratslav",
+            "Cherkasy",
+            "Kyiv",
+            "Chornobyl",
+            "Ovruch",
+            "Olevsk"
+          ]
+        }
+      ]
+    },
+    {
+      "corridor": "Polonia–Lituania",
+      "name": "Ducado de Mazovia",
+      "color": "#b7789d",
+      "active": {
+        "through": 1525,
+        "reason": "El último ducado mazoviano fue incorporado a la Corona en 1526; Rawa y Płock habían pasado antes.",
+        "source": "https://agad.gov.pl/?page_id=486"
+      },
+      "note": "Ducado vasallo pero políticamente distinto. Rawa sale en 1462, Płock en 1495 y el núcleo restante en 1526.",
+      "versions": [
+        {
+          "from": 1400,
+          "oldIds": [
+            "Czersk",
+            "Warsaw",
+            "Lomza",
+            "Ciechanow",
+            "Plock",
+            "Rawa"
+          ]
+        },
+        {
+          "from": 1462,
+          "oldIds": [
+            "Czersk",
+            "Warsaw",
+            "Lomza",
+            "Ciechanow",
+            "Plock"
+          ]
+        },
+        {
+          "from": 1495,
+          "oldIds": [
+            "Czersk",
+            "Warsaw",
+            "Lomza",
+            "Ciechanow"
+          ]
+        },
+        {
+          "from": 1526,
+          "oldIds": []
+        }
+      ]
+    },
+    {
+      "corridor": "Polonia–Lituania",
+      "name": "Prusia Real",
+      "color": "#ae4e9b",
+      "active": {
+        "from": 1466,
+        "through": 1569,
+        "reason": "La Prusia Real se integró en la Corona en 1466; ocupaciones posteriores a 1569 quedan por fechar en este corredor.",
+        "source": "https://zpe.gov.pl/a/polskie-dynastie-jagiellonowie/D12LkQne7"
+      },
+      "note": "Provincia de la Corona desde 1466, distinta de Prusia ducal. Warmia conserva su condición eclesiástica dentro de esta agrupación cartográfica.",
+      "versions": [
+        {
+          "from": 1400,
+          "oldIds": []
+        },
+        {
+          "from": 1466,
+          "oldIds": [
+            "Danzig",
+            "Chelmno",
+            "Warmia"
+          ]
+        }
+      ]
+    },
+    {
+      "corridor": "Polonia–Lituania",
+      "name": "Prusia de la Orden",
+      "color": "#495672",
+      "active": {
+        "through": 1524,
+        "reason": "El estado de la Orden Teutónica fue secularizado como Ducado de Prusia en 1525.",
+        "source": "https://zpe.gov.pl/a/prezentacja-multimedialna/DbYm1LK96"
+      },
+      "note": "Remanente de la Orden tras la Segunda Paz de Toruń; su sujeción feudal a Polonia no equivale a incorporación.",
+      "versions": [
+        {
+          "from": 1400,
+          "oldIds": [
+            "Lower_Prussia",
+            "Upper_Prussia",
+            "Masuria",
+            "Danzig",
+            "Chelmno",
+            "Warmia"
+          ]
+        },
+        {
+          "from": 1454,
+          "oldIds": [
+            "Lower_Prussia",
+            "Upper_Prussia",
+            "Masuria"
+          ]
+        },
+        {
+          "from": 1525,
+          "oldIds": []
+        }
+      ]
+    },
+    {
+      "corridor": "Polonia–Lituania",
+      "name": "Prusia ducal",
+      "color": "#303C59",
+      "active": {
+        "from": 1525,
+        "through": 1569,
+        "reason": "Ducado separado y feudo polaco desde 1525; cambios posteriores a 1569 quedan por auditar.",
+        "source": "https://zpe.gov.pl/a/prezentacja-multimedialna/DbYm1LK96"
+      },
+      "note": "Sucesor secularizado del Estado de la Orden desde 1525, feudo polaco; la propia entidad mantiene color separado.",
+      "versions": [
+        {
+          "from": 1400,
+          "oldIds": []
+        },
+        {
+          "from": 1525,
+          "oldIds": [
+            "Lower_Prussia",
+            "Upper_Prussia",
+            "Masuria"
+          ]
+        }
+      ]
+    },
+    {
+      "corridor": "Polonia–Lituania",
+      "name": "Gran Ducado de Lituania",
+      "color": "#43298E",
+      "active": {
+        "through": 1569,
+        "reason": "La frontera de este corredor se ha auditado hasta la Unión de Lublin de 1569; los cambios posteriores quedan por fechar.",
+        "source": "https://agad.gov.pl/inwentarze/Metr_Korx.xml"
+      },
+      "note": "Núcleo occidental y voivodatos cuya transferencia de 1569 se ha revisado. La frontera oriental y el litoral del mar Negro quedan deliberadamente grises hasta una auditoría fechada.",
+      "versions": [
+        {
+          "from": 1400,
+          "oldIds": [
+            "Medininkai",
+            "Siauliai",
+            "Upyte",
+            "Vilnius",
+            "Vilkmerge",
+            "Raseiniai",
+            "Kaunas",
+            "Suwalki",
+            "Trakai",
+            "Bresta",
+            "Kobryn",
+            "Vawkavysk",
+            "Slonin",
+            "Grodno",
+            "Lida",
+            "Dzisna",
+            "Vitebsk",
+            "Breslauja",
+            "Svir",
+            "Lahoysk",
+            "Barysaw",
+            "Ashmyany",
+            "Minsk",
+            "Novogrudok",
+            "Orsha",
+            "Mogilev",
+            "Mstsislaw",
+            "Rechytsa",
+            "Slutsk",
+            "Kletsk",
+            "Pinsk",
+            "Mazyr",
+            "Turov",
+            "Podlasie",
+            "Lutsk",
+            "Rivne",
+            "Zviahel",
+            "Zhytomyr",
+            "Porossia",
+            "Vinnytsia",
+            "Torgovytsia",
+            "Bratslav",
+            "Cherkasy",
+            "Kyiv",
+            "Chornobyl",
+            "Ovruch",
+            "Olevsk"
+          ]
+        },
+        {
+          "from": 1569,
+          "oldIds": [
+            "Medininkai",
+            "Siauliai",
+            "Upyte",
+            "Vilnius",
+            "Vilkmerge",
+            "Raseiniai",
+            "Kaunas",
+            "Suwalki",
+            "Trakai",
+            "Bresta",
+            "Kobryn",
+            "Vawkavysk",
+            "Slonin",
+            "Grodno",
+            "Lida",
+            "Dzisna",
+            "Vitebsk",
+            "Breslauja",
+            "Svir",
+            "Lahoysk",
+            "Barysaw",
+            "Ashmyany",
+            "Minsk",
+            "Novogrudok",
+            "Orsha",
+            "Mogilev",
+            "Mstsislaw",
+            "Rechytsa",
+            "Slutsk",
+            "Kletsk",
+            "Pinsk",
+            "Mazyr",
+            "Turov"
           ]
         }
       ]

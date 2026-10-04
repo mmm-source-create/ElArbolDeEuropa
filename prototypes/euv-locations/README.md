@@ -10,8 +10,9 @@ integrado en el Atlas.
 
 ## Probarlo
 
-Desde la raíz del repositorio, inicia Vite y abre
-`/prototypes/euv-locations/`. Los mapas se muestran con el mismo encuadre;
+Desde la raíz del repositorio, ejecuta `./node_modules/.bin/vite` y abre
+`http://localhost:5173/prototypes/euv-locations/` (si Vite anuncia otro
+puerto, usa ese número). Los mapas se muestran con el mismo encuadre;
 puedes buscar un ID, pulsar una zona, arrastrar y ampliar. El mapa nuevo se
 carga solo al visitar el laboratorio. No entra en el flujo habitual del Atlas.
 
@@ -29,7 +30,7 @@ lista lateral conserva sus condados, ducados y señoríos como jurisdicciones
 distintas.
 
 El [visor de corredores territoriales](territorial-corridors.html)
-traslada 33 jurisdicciones de Iberia, Italia y Centroeuropa con versiones anuales de 1400 a 1650. Cada una
+traslada 39 jurisdicciones de Iberia, Italia, Centroeuropa y Polonia–Lituania con versiones anuales dentro de 1400–1650. Cada una
 mantiene su propio color y alcance aunque comparta soberano con otra. El
 visor permite seleccionar año, territorio e ID, consultar la corrección
 documentada y centrar el mapa en la localidad buscada. Es una capa de
@@ -87,6 +88,11 @@ internas que el Atlas no quiere mostrar.
 | Paths geográficos | 3.838 | 22.711 | 7.672 |
 | SVG sin comprimir | 6,67 MB | 14,60 MB | 4,39 MB |
 | Gzip aproximado | 2,16 MB | 4,43 MB | 1,24 MB |
+
+El recorte nuevo **descarga menos bytes** que el SVG actual (1,24 frente a
+2,16 MB comprimidos), pero contiene el doble de paths. No se ha demostrado
+todavía que consuma menos memoria ni que el arrastre y el zoom sean más
+fluidos; esa comparación debe medirse antes de sustituir el mapa público.
 
 `crosswalk-report.json` registra el primer cruce de nombres: de **561** IDs
 usados en `REINO_A_IDS` y `REINO_VERSIONES`, **245** existen literalmente en
@@ -235,8 +241,36 @@ de Croacia necesitan cartografía jurisdiccional más fina. La partición
 de Hungría después de 1526 exige capas separadas para Hungría real,
 Transilvania y dominio otomano, con cambios fechados; el gris actual
 expresa esa revisión pendiente, no ausencia de gobierno. El siguiente
-corredor prioritario es Polonia–Lituania, seguido de estas excepciones
-alpinas y húngaras. Ninguna de estas capas sustituye aún el mapa público.
+corredor prioritario era Polonia–Lituania, ahora iniciado; siguen pendientes
+estas excepciones alpinas y húngaras. Ninguna capa sustituye aún el mapa público.
+
+### Quinta entrega: Polonia–Lituania
+
+El visor añade **seis jurisdicciones** al corredor nororiental. Suma ahora
+**39 jurisdicciones** en total. Esta capa no hereda sin más la versión
+posterior a 1386 de `Polonia` en el Atlas, porque mezcla la Corona con
+Mazovia antes de su incorporación, Pomerania occidental y señoríos
+moldavos. Se distinguen Corona de Polonia, ducado de Mazovia, Prusia Real,
+Prusia de la Orden, Prusia ducal y Gran Ducado de Lituania. Compartir
+monarca o vínculo feudal no los funde en un solo territorio pintado.
+
+| Cambio | Decisión cartográfica | Fuente |
+|---|---|---|
+| Mazovia | Rawa y Gostynin pasan a la Corona en 1462; Sochaczew permanece mazoviana hasta 1476, Płock hasta 1495 y el núcleo de Varsovia hasta 1526. | [Archivo Central de Actas Antiguas (AGAD)](https://agad.gov.pl/?page_id=486). |
+| Prusia | La Segunda Paz de Toruń (1466) separa Prusia Real —incluidas Pomerelia, Chełmno, Warmia, Malbork, Elbląg y Dzierzgoń— del remanente de la Orden. La guerra de 1454–1466 deja varias plazas en gris porque el control cambió durante el conflicto. En 1525 el remanente se convierte en ducado, **feudo** polaco y no provincia administrada por la Corona. | [Fuente educativa polaca sobre los Jagellón](https://zpe.gov.pl/a/polskie-dynastie-jagiellonowie/D12LkQne7) y [texto de la Segunda Paz de Toruń reproducido en el portal público](https://zpe.gov.pl/a/prezentacja-multimedialna/DbYm1LK96). |
+| Unión de Lublin | Podlasie, Volinia, Kiev y Bracław pasan del Gran Ducado a la Corona en la capa anual de 1569. Lituania conserva entidad propia y su núcleo no adopta automáticamente el color de Polonia. | [Registro de la Cancillería de la Corona, AGAD](https://agad.gov.pl/inwentarze/Metr_Korx.xml) y [documentos ucranianos conservados por AGAD](https://agad.gov.pl/?page_id=392). |
+
+El mapa parte del solapamiento geométrico del **55 %** y aplica
+correcciones fechadas por *location* en `corridor-overrides.json`. La
+correspondencia visual se comprobó en el navegador para Prusia Real (1466),
+la Corona y Lituania (1569). El norte prusiano, Mazovia y las transferencias
+de 1569 tienen comprobaciones automáticas de fechas, IDs y exclusividad.
+Quedan **pendientes** la frontera oriental del Gran Ducado, las oscilaciones
+del litoral del mar Negro, la administración de Warmia y las ocupaciones
+de la guerra de los Trece Años. Por eso se muestra solo el núcleo lituano
+y la zona de las transferencias estudiadas; el gris no significa tierra
+sin gobierno. El corredor termina en **1569**: de 1570 en adelante no
+se proyecta una frontera inmutable sobre guerras posteriores.
 
 ### Dudas de esta entrega
 

@@ -17,9 +17,9 @@ function ids(name, year) {
 }
 
 test('territorial crosswalk uses only SVG IDs and never assigns one ID twice within a corridor', () => {
-  assert.equal(data.territories.length, 33);
+  assert.equal(data.territories.length, 39);
   for (let year = data.from; year <= data.through; year++) {
-    for (const corridor of ['Iberia', 'Italia', 'Centroeuropa']) {
+    for (const corridor of ['Iberia', 'Italia', 'Centroeuropa', 'Polonia–Lituania']) {
       const owner = new Map();
       for (const territory of data.territories.filter(item => item.corridor === corridor)) {
         for (const id of ids(territory.name, year)) {
@@ -30,6 +30,35 @@ test('territorial crosswalk uses only SVG IDs and never assigns one ID twice wit
       }
     }
   }
+});
+
+test('Polish-Lithuanian corridor separates incorporation, fief and the 1569 union', () => {
+  assert(ids('Ducado de Mazovia', 1461).has('Rawa'));
+  assert(ids('Corona de Polonia', 1462).has('Rawa'));
+  assert(ids('Ducado de Mazovia', 1475).has('Sochaczew'));
+  assert(ids('Corona de Polonia', 1476).has('Sochaczew'));
+  assert(ids('Ducado de Mazovia', 1494).has('Plock'));
+  assert(ids('Corona de Polonia', 1495).has('Plock'));
+  assert(ids('Ducado de Mazovia', 1525).has('Warsaw'));
+  assert(ids('Corona de Polonia', 1526).has('Warsaw'));
+
+  for (const id of ['Malbork', 'Elblag', 'Dzierzgon']) {
+    assert(ids('Prusia de la Orden', 1400).has(id));
+    assert(!ids('Prusia de la Orden', 1466).has(id));
+    assert(ids('Prusia Real', 1466).has(id));
+    assert(!ids('Prusia ducal', 1525).has(id));
+  }
+  assert(ids('Prusia de la Orden', 1524).has('Konigsberg'));
+  assert(ids('Prusia ducal', 1525).has('Konigsberg'));
+  assert(!ids('Corona de Polonia', 1525).has('Konigsberg'));
+
+  assert(ids('Gran Ducado de Lituania', 1568).has('Kyiv'));
+  assert(!ids('Corona de Polonia', 1568).has('Kyiv'));
+  assert(ids('Corona de Polonia', 1569).has('Kyiv'));
+  assert(!ids('Gran Ducado de Lituania', 1569).has('Kyiv'));
+  assert(ids('Gran Ducado de Lituania', 1569).has('Vilnius'));
+  for (const id of ['Suceava', 'Iasi', 'Slupsk']) assert(!ids('Corona de Polonia', 1500).has(id));
+  assert.equal(ids('Corona de Polonia', 1570).size, 0, 'later changes need their own audit');
 });
 
 test('Central European jurisdictions respect dated transfers and separate imperial estates', () => {
