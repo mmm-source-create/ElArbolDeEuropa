@@ -1,0 +1,616 @@
+{
+  "person": "Carlos V",
+  "personId": "CARLOS5",
+  "reigns": [
+    {
+      "territory": "Flandes",
+      "group": "burgundian",
+      "from": 1506,
+      "through": 1555,
+      "condition": "efectivo",
+      "scope": null,
+      "versions": [
+        {
+          "from": 1506,
+          "oldIds": [
+            "West_Flanders",
+            "East_Flanders",
+            "Roman_Flanders"
+          ]
+        }
+      ]
+    },
+    {
+      "territory": "Castilla",
+      "group": "spanish",
+      "from": 1516,
+      "through": 1556,
+      "condition": "efectivo",
+      "scope": null,
+      "versions": [
+        {
+          "from": 1516,
+          "oldIds": [
+            "Montana",
+            "Palencia",
+            "Lerma",
+            "Soria",
+            "Burgos",
+            "Alava",
+            "Biscay",
+            "Gipuzkoa",
+            "Valladolid",
+            "Avila",
+            "Segovia",
+            "Guadalajara",
+            "Cuenca",
+            "Alarcon",
+            "Toledo",
+            "Madrid",
+            "Ocana",
+            "Plasencia",
+            "West_Mancha",
+            "East_Mancha",
+            "Cordoba",
+            "Murcia",
+            "Albacete",
+            "Hellin",
+            "Jaen",
+            "Sevilla",
+            "Cadiz",
+            "Huelva",
+            "Granada",
+            "Malaga",
+            "Almeria",
+            "Canary_Islands"
+          ]
+        }
+      ]
+    },
+    {
+      "territory": "Aragón",
+      "group": "spanish",
+      "from": 1516,
+      "through": 1556,
+      "condition": "efectivo",
+      "scope": null,
+      "versions": [
+        {
+          "from": 1516,
+          "oldIds": [
+            "Alcaniz",
+            "Teruel",
+            "Calatayud",
+            "Zaragoza",
+            "Huesca",
+            "Barbastro"
+          ]
+        }
+      ]
+    },
+    {
+      "territory": "Navarra",
+      "group": "spanish",
+      "from": 1516,
+      "through": 1556,
+      "condition": "rama",
+      "scope": "Alta Navarra tras la conquista",
+      "versions": [
+        {
+          "from": 1516,
+          "oldIds": [
+            "Navarre"
+          ]
+        }
+      ]
+    },
+    {
+      "territory": "Nápoles",
+      "group": "spanish",
+      "from": 1516,
+      "through": 1556,
+      "condition": "efectivo",
+      "scope": null,
+      "versions": [
+        {
+          "from": 1516,
+          "oldIds": [
+            "Calabria_Ultra",
+            "Calabria_Citra",
+            "Basilicata",
+            "Otranto",
+            "Bari",
+            "Capitanata",
+            "Principato_Ultra",
+            "Principato_Citra",
+            "Molise",
+            "Abruzzo_Citra",
+            "Abruzzo_Ultra",
+            "Lavoro"
+          ]
+        }
+      ]
+    },
+    {
+      "territory": "Trinacria",
+      "group": "spanish",
+      "from": 1516,
+      "through": 1556,
+      "condition": "efectivo",
+      "scope": null,
+      "versions": [
+        {
+          "from": 1516,
+          "oldIds": [
+            "Noto",
+            "Demena",
+            "Girgenti",
+            "Mazara"
+          ]
+        }
+      ]
+    },
+    {
+      "territory": "Austria",
+      "group": "austrian",
+      "from": 1519,
+      "through": 1521,
+      "condition": "efectivo",
+      "scope": null,
+      "versions": [
+        {
+          "from": 1519,
+          "oldIds": [
+            "Unter_dem_Manhartsberg",
+            "Ober_dem_Manhartsberg",
+            "Ober_dem_Wienerwald",
+            "Unter_dem_Wienerwald",
+            "Traungau",
+            "Muhlviertel"
+          ]
+        }
+      ]
+    },
+    {
+      "territory": "León",
+      "group": "spanish",
+      "from": 1516,
+      "through": 1556,
+      "condition": "efectivo",
+      "scope": null,
+      "versions": [
+        {
+          "from": 1516,
+          "oldIds": [
+            "Coruna",
+            "Santiago",
+            "Lugo",
+            "Astorga",
+            "Ourense",
+            "West_Asturias",
+            "Benavente",
+            "Leon",
+            "East_Asturias",
+            "Zamora",
+            "Ciudad_Rodrigo",
+            "Salamanca",
+            "Caceres",
+            "Merida",
+            "Badajoz",
+            "Trujillo",
+            "Villanueva_de_la_Serena"
+          ]
+        }
+      ]
+    },
+    {
+      "territory": "Condado de Borgoña",
+      "group": "burgundian",
+      "from": 1506,
+      "through": 1555,
+      "condition": "efectivo",
+      "scope": null,
+      "versions": [
+        {
+          "from": 1506,
+          "oldIds": [
+            "Aval",
+            "Millieu",
+            "Amont"
+          ]
+        }
+      ]
+    },
+    {
+      "territory": "Brabante",
+      "group": "burgundian",
+      "from": 1506,
+      "through": 1555,
+      "condition": "efectivo",
+      "scope": null,
+      "versions": [
+        {
+          "from": 1506,
+          "oldIds": [
+            "Brabant",
+            "Antwerp",
+            "Kempenland"
+          ]
+        }
+      ]
+    },
+    {
+      "territory": "Limburgo",
+      "group": "burgundian",
+      "from": 1506,
+      "through": 1555,
+      "condition": "efectivo",
+      "scope": null,
+      "versions": [
+        {
+          "from": 1506,
+          "oldIds": [
+            "Limburg"
+          ]
+        }
+      ]
+    },
+    {
+      "territory": "Holanda",
+      "group": "burgundian",
+      "from": 1506,
+      "through": 1555,
+      "condition": "efectivo",
+      "scope": null,
+      "versions": [
+        {
+          "from": 1506,
+          "oldIds": [
+            "North_Holland",
+            "South_Holland"
+          ]
+        }
+      ]
+    },
+    {
+      "territory": "Henao",
+      "group": "burgundian",
+      "from": 1506,
+      "through": 1555,
+      "condition": "efectivo",
+      "scope": null,
+      "versions": [
+        {
+          "from": 1506,
+          "oldIds": [
+            "Hainaut"
+          ]
+        }
+      ]
+    },
+    {
+      "territory": "Zelanda",
+      "group": "burgundian",
+      "from": 1506,
+      "through": 1555,
+      "condition": "efectivo",
+      "scope": null,
+      "versions": [
+        {
+          "from": 1506,
+          "oldIds": []
+        }
+      ]
+    },
+    {
+      "territory": "Cerdeña",
+      "group": "spanish",
+      "from": 1516,
+      "through": 1556,
+      "condition": "efectivo",
+      "scope": null,
+      "versions": [
+        {
+          "from": 1516,
+          "oldIds": [
+            "Cagliari",
+            "Arborea",
+            "Logudoro",
+            "Gallura"
+          ]
+        }
+      ]
+    },
+    {
+      "territory": "Milán",
+      "group": "spanish",
+      "from": 1535,
+      "through": 1555,
+      "condition": "efectivo",
+      "scope": null,
+      "versions": [
+        {
+          "from": 1535,
+          "oldIds": [
+            "Milano",
+            "Monza",
+            "Pavia",
+            "Cremona",
+            "Novara",
+            "Alessandria"
+          ]
+        }
+      ]
+    },
+    {
+      "territory": "Artois",
+      "group": "burgundian",
+      "from": 1506,
+      "through": 1555,
+      "condition": "efectivo",
+      "scope": null,
+      "versions": [
+        {
+          "from": 1506,
+          "oldIds": [
+            "Upper_Artois",
+            "Lower_Artois"
+          ]
+        }
+      ]
+    },
+    {
+      "territory": "Namur",
+      "group": "burgundian",
+      "from": 1506,
+      "through": 1555,
+      "condition": "efectivo",
+      "scope": null,
+      "versions": [
+        {
+          "from": 1506,
+          "oldIds": [
+            "Namur"
+          ]
+        }
+      ]
+    },
+    {
+      "territory": "Luxemburgo",
+      "group": "burgundian",
+      "from": 1506,
+      "through": 1555,
+      "condition": "efectivo",
+      "scope": null,
+      "versions": [
+        {
+          "from": 1506,
+          "oldIds": [
+            "East_Luxembourg",
+            "West_Luxembourg"
+          ]
+        }
+      ]
+    },
+    {
+      "territory": "Frisia",
+      "group": "burgundian",
+      "from": 1524,
+      "through": 1555,
+      "condition": "efectivo",
+      "scope": null,
+      "versions": [
+        {
+          "from": 1524,
+          "oldIds": [
+            "Friesland"
+          ]
+        }
+      ]
+    },
+    {
+      "territory": "Utrecht",
+      "group": "burgundian",
+      "from": 1528,
+      "through": 1555,
+      "condition": "efectivo",
+      "scope": null,
+      "versions": [
+        {
+          "from": 1528,
+          "oldIds": []
+        }
+      ]
+    },
+    {
+      "territory": "Overijssel",
+      "group": "burgundian",
+      "from": 1528,
+      "through": 1555,
+      "condition": "efectivo",
+      "scope": null,
+      "versions": [
+        {
+          "from": 1528,
+          "oldIds": [
+            "Overijssel"
+          ]
+        }
+      ]
+    },
+    {
+      "territory": "Drente",
+      "group": "burgundian",
+      "from": 1536,
+      "through": 1555,
+      "condition": "efectivo",
+      "scope": null,
+      "versions": [
+        {
+          "from": 1536,
+          "oldIds": [
+            "Drenthe"
+          ]
+        }
+      ]
+    },
+    {
+      "territory": "Groninga",
+      "group": "burgundian",
+      "from": 1536,
+      "through": 1555,
+      "condition": "efectivo",
+      "scope": null,
+      "versions": [
+        {
+          "from": 1536,
+          "oldIds": [
+            "Ommelanden"
+          ]
+        }
+      ]
+    },
+    {
+      "territory": "Güeldres",
+      "group": "burgundian",
+      "from": 1543,
+      "through": 1555,
+      "condition": "efectivo",
+      "scope": null,
+      "versions": [
+        {
+          "from": 1543,
+          "oldIds": [
+            "Gelderland"
+          ]
+        }
+      ]
+    },
+    {
+      "territory": "Condado de Barcelona",
+      "group": "spanish",
+      "from": 1516,
+      "through": 1556,
+      "condition": "efectivo",
+      "scope": null,
+      "versions": [
+        {
+          "from": 1516,
+          "oldIds": [
+            "New_Catalonia",
+            "Osona",
+            "Barcelona",
+            "Girona",
+            "Urgell",
+            "Rosello"
+          ]
+        }
+      ]
+    },
+    {
+      "territory": "Valencia",
+      "group": "spanish",
+      "from": 1516,
+      "through": 1556,
+      "condition": "efectivo",
+      "scope": null,
+      "versions": [
+        {
+          "from": 1516,
+          "oldIds": [
+            "Jativa",
+            "Valencia",
+            "Castellon",
+            "Orihuela"
+          ]
+        }
+      ]
+    },
+    {
+      "territory": "Mallorca",
+      "group": "spanish",
+      "from": 1516,
+      "through": 1556,
+      "condition": "efectivo",
+      "scope": null,
+      "versions": [
+        {
+          "from": 1516,
+          "oldIds": [
+            "Mallorca"
+          ]
+        }
+      ]
+    },
+    {
+      "territory": "Austria Interior",
+      "group": "austrian",
+      "from": 1519,
+      "through": 1521,
+      "condition": "efectivo",
+      "scope": null,
+      "versions": [
+        {
+          "from": 1519,
+          "oldIds": [
+            "Eastern_Styria",
+            "Upper_Styria",
+            "Middle_Styria",
+            "Lower_Styria",
+            "Upper_Carinthia",
+            "Lower_Carinthia",
+            "Upper_Carniola",
+            "Lower_Carniola",
+            "Gorizia"
+          ]
+        }
+      ]
+    },
+    {
+      "territory": "Tirol",
+      "group": "austrian",
+      "from": 1519,
+      "through": 1522,
+      "condition": "efectivo",
+      "scope": null,
+      "versions": [
+        {
+          "from": 1519,
+          "oldIds": [
+            "Oberinntal",
+            "Unterinntal",
+            "South_Tirol"
+          ]
+        }
+      ]
+    },
+    {
+      "territory": "Tournaisis",
+      "group": "burgundian",
+      "from": 1521,
+      "through": 1555,
+      "condition": "efectivo",
+      "scope": "Tournai adquirida en 1521",
+      "versions": [
+        {
+          "from": 1521,
+          "oldIds": []
+        }
+      ]
+    },
+    {
+      "territory": "Señorío de Malinas",
+      "group": "burgundian",
+      "from": 1506,
+      "through": 1555,
+      "condition": "efectivo",
+      "scope": "Señorío distinto de Brabante",
+      "versions": [
+        {
+          "from": 1506,
+          "oldIds": []
+        }
+      ]
+    }
+  ]
+}
