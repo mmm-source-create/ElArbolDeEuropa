@@ -91,16 +91,17 @@ const SWEDEN_CORE = [
   'Vastergotland', 'Ostergotland', 'Sodermanland', 'Uppland', 'Dalarna',
   'Varmland', 'Gastrikland', 'Halsingland', 'Angermanland', 'Vasterbotten',
   'Sodra_Osterbotten', 'Norra_Osterbotten', 'Ostra_Smaland',
-  'Finland', 'Tavastland', 'Nyland', 'Savolax',
+  'Finland', 'Tavastland', 'Nyland', 'Savolax', 'Satakunta',
+  'Vastmanland', 'Nerike', 'Dalsland', 'Tioharad',
 ];
 const NORWAY_CORE = [
   'Agder', 'Bergenhus', 'Buskerud', 'Finnmark', 'Hedmark', 'Nordland',
   'Nor_Trondelag', 'Sor_Trondelag', 'Oppland', 'Rogaland', 'Romsdalen',
-  'Sogn', 'Vestfold', 'Bohus', 'Jamtland',
+  'Sogn', 'Vestfold', 'Bohus', 'Jamtland', 'Troms', 'Akershus', 'Ostfold',
 ];
 const DENMARK_CORE = [
   'Western_Jutland', 'Eastern_Jutland', 'Vendsyssel_Thy', 'Zealand', 'Funen',
-  'Halland', 'Blekinge', 'Gotland',
+  'Halland', 'Blekinge', 'Gotland', 'Gonge', 'Malmohus',
 ];
 const POMERANIA_OLD = ['Stettin', 'Stolp', 'Koslin'];
 const MOSCOVY_CORE = ['Moscow', 'Vladimir', 'Kostroma'];
@@ -384,10 +385,10 @@ const notes = {
   'Riga libre': 'Solo el marcador de Riga; la condición política de la ciudad y su hinterland cambiaron durante la disolución de la Confederación Livona.',
   'Riga bajo la Mancomunidad': 'Marcador urbano desde la sumisión de 1581. La ciudad no se expande a todas las tierras de Livonia.',
   'Riga bajo Suecia': 'Marcador urbano desde la toma sueca de 1621; la posesión más amplia de Livonia queda en otra capa desde 1629.',
-  'Reino de Dinamarca': 'El reino danés se dibuja separado de Noruega, Schleswig y Holstein. Halland y Gotland salen en 1645; Blekinge permanece danesa hasta después del corte del prototipo.',
-  'Reino de Noruega': 'Reino bajo monarca común con Dinamarca; Noruega queda institucionalmente subordinada desde 1537, pero no se fusiona en el color danés. Orkney y Shetland se transfieren a Escocia en 1469.',
+  'Reino de Dinamarca': 'El reino danés se dibuja separado de Noruega, Schleswig y Holstein. La revisión visual incluye Escania y las celdas interiores de Jutlandia omitidas por el cruce entre provincias. Halland y Gotland salen en 1645; Blekinge permanece danesa hasta después del corte del prototipo.',
+  'Reino de Noruega': 'La revisión visual incluye Troms, Akershus y Østfold. Reino bajo monarca común con Dinamarca; Noruega queda institucionalmente subordinada desde 1537, pero no se fusiona en el color danés. Orkney y Shetland se transfieren a Escocia en 1469.',
   'Islas Feroe bajo la Corona noruega': 'Dependencia noruega dentro de la monarquía danesa-noruega. Se representa únicamente con Tórshavn como punto de referencia; no se colorea como Dinamarca ni se infiere una frontera insular.',
-  'Reino de Suecia': 'Se mantiene como reino distinto incluso durante la Unión de Kalmar. Jämtland, Halland y Gotland entran desde 1645; Ösel se muestra como marcador insular separado.',
+  'Reino de Suecia': 'La revisión visual incluye Västmanland, Närke, Dalsland, la zona de Tiohärad en Småland y Satakunta en Finlandia. Se mantiene como reino distinto incluso durante la Unión de Kalmar. Jämtland, Halland y Gotland entran desde 1645; Ösel se muestra como marcador insular separado.',
   'Ducado de Schleswig': 'Ducado separado de Dinamarca. Se conserva separado del condado/ducado de Holstein aunque ambos tuvieran un mismo gobernante desde 1460.',
   'Ducado de Holstein': 'Jurisdicción del Sacro Imperio y patrimonio ducal propio bajo los reyes daneses; no se pinta como parte del Reino de Dinamarca.',
   Mecklemburgo: 'Ducado separado. La base disponible solo proporciona una región amplia; Wismar se representa como feudo sueco independiente del control general de Mecklemburgo desde 1648.',

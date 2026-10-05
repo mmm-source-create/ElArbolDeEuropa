@@ -2,7 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import {JSDOM} from 'jsdom';
-import {clampMapViewBox,clipMapToViewBox,fittedMapViewBox,mapControlLimits,resizeMapViewBox,zoomMapViewBox} from '../src/mapViewport.js';
+import {clampMapViewBox,clipMapToBounds,fittedMapViewBox,mapControlLimits,resizeMapViewBox,zoomMapViewBox} from '../src/mapViewport.js';
 
 const original={x:0,y:0,width:1000,height:400};
 const close=(a,b)=>assert.ok(Math.abs(a-b)<1e-8,`${a} should equal ${b}`);
@@ -10,18 +10,19 @@ const close=(a,b)=>assert.ok(Math.abs(a-b)<1e-8,`${a} should equal ${b}`);
 test('the outer zoom limit stays on the real map bounds in wide and tall panels',()=>{
  const wide=fittedMapViewBox(original,{width:1200,height:300});
  const tall=fittedMapViewBox(original,{width:400,height:800});
- assert.deepEqual(wide,original);
- assert.deepEqual(tall,original);
+ assert.deepEqual(wide,{x:0,y:75,width:1000,height:250});
+ assert.deepEqual(tall,{x:400,y:0,width:200,height:400});
+ close(wide.width/wide.height,1200/300);close(tall.width/tall.height,400/800);
 });
 
 test('zooming out and panning cannot expose space beyond the map frame',()=>{
  const viewport={width:900,height:450},fit=fittedMapViewBox(original,viewport);
- const maxed=clampMapViewBox({x:9999,y:9999,width:fit.width*4,height:fit.height*4},original,viewport);
- assert.deepEqual(maxed,fit);
+ const maxed=clampMapViewBox({x:fit.x,y:fit.y,width:fit.width*4,height:fit.height*4},original,viewport);
+ close(maxed.width,fit.width);close(maxed.height,fit.height);
  const minZoom=clampMapViewBox({x:0,y:0,width:fit.width/1000,height:fit.height/1000},original,viewport);
  close(minZoom.width,fit.width*0.015);close(minZoom.height,fit.height*0.015);
  const panned=clampMapViewBox({...fit,x:-999,y:999},original,viewport);
- close(panned.x,fit.x);close(panned.y,fit.y);
+ close(panned.x,original.x);close(panned.y+ panned.height,original.y+original.height);
  const zoomed={x:200,y:80,width:500,height:200};
  const edge=clampMapViewBox({...zoomed,x:9999,y:-9999},original,viewport);
  close(edge.x+edge.width,original.x+original.width);
@@ -34,9 +35,9 @@ test('resizing preserves zoom level and re-clamps to the map bounds',()=>{
  const resized=resizeMapViewBox(start,original,before,after);
  const fit=fittedMapViewBox(original,after);
  close(fit.width/resized.width,2);
- close(resized.width/resized.height,original.width/original.height);
- assert.ok(resized.x>=fit.x&&resized.x+resized.width<=fit.x+fit.width);
- assert.ok(resized.y>=fit.y&&resized.y+resized.height<=fit.y+fit.height);
+ close(resized.width/resized.height,after.width/after.height);
+ assert.ok(resized.x>=original.x&&resized.x+resized.width<=original.x+original.width);
+ assert.ok(resized.y>=original.y&&resized.y+resized.height<=original.y+original.height);
 });
 
 test('zoom controls change scale and stop at the exact outer and inner bounds',()=>{
@@ -62,19 +63,30 @@ test('the actual nested world SVG is clipped in the overview and after zooming',
  const svg=dom.window.document.querySelector('svg');
  const [x,y,width,height]=svg.getAttribute('viewBox').split(' ').map(Number);
  const frame={x,y,width,height};
- clipMapToViewBox(svg,frame);
+ clipMapToBounds(svg,frame);
  assert.equal(svg.querySelector('#map-group').getAttribute('clip-path'),'url(#atlas-viewport-clip)');
  assert.equal(svg.querySelector('#atlas-viewport-clip').getAttribute('clipPathUnits'),'userSpaceOnUse');
  const zoom=zoomMapViewBox(frame,.82,frame,{width:1466,height:480});
- clipMapToViewBox(svg,zoom);
+ clipMapToBounds(svg,frame);
  assert.equal(svg.querySelectorAll('#atlas-viewport-clip').length,1);
- for(const key of ['x','y','width','height']) assert.equal(Number(svg.querySelector('#atlas-viewport-clip rect').getAttribute(key)),zoom[key]);
+ for(const key of ['x','y','width','height']) assert.equal(Number(svg.querySelector('#atlas-viewport-clip rect').getAttribute(key)),frame[key]);
  assert.equal(svg.querySelectorAll('#map path').length>4000,true);
  dom.window.close();
 });
 
 test('navigation controls reflect the map boundaries',()=>{
- assert.deepEqual(mapControlLimits(original,original),{zoomOut:false,zoomIn:true,left:false,right:false,up:false,down:false});
+ assert.deepEqual(mapControlLimits(original,original,{width:1000,height:400}),{zoomOut:false,zoomIn:true,left:false,right:false,up:false,down:false});
  const zoom=clampMapViewBox({x:0,y:0,width:15,height:6},original);
- assert.deepEqual(mapControlLimits(zoom,original),{zoomOut:true,zoomIn:false,left:false,right:true,up:false,down:true});
+ assert.deepEqual(mapControlLimits(zoom,original,{width:1000,height:400}),{zoomOut:true,zoomIn:false,left:false,right:true,up:false,down:true});
+});
+
+
+test('wide panel camera pans north and south at minimum zoom without masks following it',()=>{
+ const frame={x:475,y:15,width:315,height:240},panel={width:2132,height:758};
+ const camera=fittedMapViewBox(frame,panel),limits=mapControlLimits(camera,frame,panel);
+ assert(!limits.zoomOut&&limits.up&&limits.down);
+ const north=clampMapViewBox({...camera,y:-1000},frame,panel);
+ const south=clampMapViewBox({...camera,y:1000},frame,panel);
+ close(north.y,frame.y);close(south.y+south.height,frame.y+frame.height);
+ for(const box of [camera,north,south,zoomMapViewBox(camera,.82,frame,panel)]) close(box.width/box.height,panel.width/panel.height);
 });

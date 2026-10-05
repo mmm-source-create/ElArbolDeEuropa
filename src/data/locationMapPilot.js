@@ -21,6 +21,17 @@ function layerIndex(data) {
 
 export function pilotJurisdictionsFor(territory, year, personId = null) {
   if (territory === 'Sacro Imperio') return [];
+  if (territory === 'Brandeburgo') return personId === 'JOHNALCHEMIST' ? [] : ['Núcleo de Brandeburgo'];
+  if (territory === 'Sajonia') return ['ALBERTSAX','GEORGESAX','HENRYPIOUSSAX'].includes(personId)
+    || personId === 'MORITZSAX' && year < 1547 ? ['Sajonia albertina'] : ['Sajonia electoral'];
+  if (territory === 'Württemberg') {
+    if (year >= 1442 && year < 1482) return personId === 'ULRICH5WURTT'
+      ? ['Württemberg-Stuttgart'] : ['Württemberg-Urach'];
+    return ['Núcleo de Württemberg'];
+  }
+  if (territory === 'Hesse') return ['Núcleo de Hesse'];
+  if (territory === 'Hesse-Kassel') return ['Núcleo de Hesse-Kassel'];
+  if (territory === 'Hesse-Darmstadt') return ['Núcleo de Hesse-Darmstadt'];
   if (territory === 'Países Bajos') return ['Flandes', 'Brabante', 'Limburgo', 'Holanda',
     'Henao', 'Zelanda', 'Artois', 'Namur', 'Luxemburgo', 'Frisia', 'Utrecht',
     'Overijssel', 'Drente', 'Groninga', 'Güeldres', 'Señorío de Malinas'];

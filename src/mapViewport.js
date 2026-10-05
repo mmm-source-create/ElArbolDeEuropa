@@ -1,14 +1,18 @@
-// Keep the overview on the map's actual SVG bounds. The SVG uses
-// preserveAspectRatio="meet" to letterbox when the panel has another ratio;
-// expanding this viewBox to the panel would expose empty space outside the map.
-export function fittedMapViewBox(original, _viewport) {
-  return { ...original };
+// Fill the panel with the largest rectangle contained in the Europe bounds.
+// At the outer zoom limit the shorter axis can still pan across Europe.
+export function fittedMapViewBox(original, viewport) {
+  const aspect = viewport?.width > 0 && viewport?.height > 0
+    ? viewport.width / viewport.height : original.width / original.height;
+  const width = Math.min(original.width, original.height * aspect);
+  const height = width / aspect;
+  return {x: original.x + (original.width-width)/2,
+    y: original.y + (original.height-height)/2, width, height};
 }
 
 // A viewBox positions content; it does not clip world paths in a nested SVG.
-// Clip the map group to the current, bounded view so letterboxing cannot reveal
-// either the original world map or regions outside the zoomed viewport.
-export function clipMapToViewBox(svg, box) {
+// Clip only to the fixed Europe bounds; the camera can then reveal the entire
+// width of the panel at any zoom, without moving masks through visible land.
+export function clipMapToBounds(svg, box) {
   const group = svg.querySelector('#map-group');
   if (!group || !box) return;
   const ns = 'http://www.w3.org/2000/svg';
@@ -26,12 +30,13 @@ export function clipMapToViewBox(svg, box) {
   group.setAttribute('clip-path', 'url(#atlas-viewport-clip)');
 }
 
-export function mapControlLimits(box, original, minZoom = 0.015) {
+export function mapControlLimits(box, original, viewport, minZoom = 0.015) {
   if (!box || !original) return {};
+  const frame = fittedMapViewBox(original, viewport);
   const epsilon = original.width * 1e-7;
   return {
-    zoomOut: box.width < original.width - epsilon,
-    zoomIn: box.width > original.width * minZoom + epsilon,
+    zoomOut: box.width < frame.width - epsilon,
+    zoomIn: box.width > frame.width * minZoom + epsilon,
     left: box.x > original.x + epsilon,
     right: box.x + box.width < original.x + original.width - epsilon,
     up: box.y > original.y + epsilon,
@@ -46,10 +51,10 @@ export function clampMapViewBox(box, original, viewport, minZoom = 0.015) {
   const minWidth = frame.width * minZoom;
   const width = Math.max(minWidth, Math.min(frame.width, box.width));
   const height = width / aspect;
-  const minX = frame.x;
-  const maxX = frame.x + frame.width - width;
-  const minY = frame.y;
-  const maxY = frame.y + frame.height - height;
+  const minX = original.x;
+  const maxX = original.x + original.width - width;
+  const minY = original.y;
+  const maxY = original.y + original.height - height;
   const centerX = box.x + box.width / 2;
   const centerY = box.y + box.height / 2;
   return {

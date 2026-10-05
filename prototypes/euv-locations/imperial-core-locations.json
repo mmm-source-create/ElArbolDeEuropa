@@ -1,0 +1,239 @@
+{
+  "territories": [
+    {
+      "corridor": "Borgoña e Imperio",
+      "name": "Núcleo de Brandeburgo",
+      "color": "#8b7460",
+      "active": {
+        "from": 1415,
+        "through": 1650,
+        "reason": "Núcleos de la Kurmark bajo los Hohenzollern desde 1415. Las celdas se han revisado por su posición y vecinos; aproximan los entornos de estas ciudades. No incluyen Neumark, Franconia, Prusia ni Pomerania, que tienen historias y jurisdicciones distintas. Ruppin se incorpora únicamente desde 1524, tras la extinción de los condes de Lindow-Ruppin.",
+        "source": "https://www.politische-bildung-brandenburg.de/themen/die-entstehung-der-mark"
+      },
+      "note": "Núcleos de la Kurmark bajo los Hohenzollern desde 1415. Las celdas se han revisado por su posición y vecinos; aproximan los entornos de estas ciudades. No incluyen Neumark, Franconia, Prusia ni Pomerania, que tienen historias y jurisdicciones distintas. Ruppin se incorpora únicamente desde 1524, tras la extinción de los condes de Lindow-Ruppin.",
+      "versions": [
+        {
+          "from": 1415,
+          "oldIds": [],
+          "ids": [
+            "Berlin",
+            "Brandenburg",
+            "Stendal",
+            "Wittenberge"
+          ],
+          "borderline": []
+        }
+      ]
+    },
+    {
+      "corridor": "Borgoña e Imperio",
+      "name": "Sajonia electoral",
+      "color": "#8b7460",
+      "active": {
+        "from": 1423,
+        "through": 1650,
+        "reason": "Núcleos de la Sajonia de los Wettin. La partición de Leipzig (1485) separa las ramas; desde 1547 la dignidad electoral y Wittenberg pasan a los albertinos. Solo se representan estas celdas, sin reconstruir toda Turingia ni sumar posesiones eclesiásticas.",
+        "source": "https://www.landtag.sachsen.de/de/service/parlamentsgeschichte/staendeversammlung-9227.cshtml"
+      },
+      "note": "Núcleos de la Sajonia de los Wettin. La partición de Leipzig (1485) separa las ramas; desde 1547 la dignidad electoral y Wittenberg pasan a los albertinos. Solo se representan estas celdas, sin reconstruir toda Turingia ni sumar posesiones eclesiásticas.",
+      "versions": [
+        {
+          "from": 1423,
+          "oldIds": [],
+          "ids": [
+            "Wittenberg",
+            "Torgau",
+            "Dresden",
+            "Meissen",
+            "Leipzig"
+          ],
+          "borderline": []
+        },
+        {
+          "from": 1485,
+          "oldIds": [],
+          "ids": [
+            "Wittenberg",
+            "Torgau"
+          ],
+          "borderline": []
+        },
+        {
+          "from": 1547,
+          "oldIds": [],
+          "ids": [
+            "Wittenberg",
+            "Torgau",
+            "Dresden",
+            "Meissen",
+            "Leipzig"
+          ],
+          "borderline": []
+        }
+      ]
+    },
+    {
+      "corridor": "Borgoña e Imperio",
+      "name": "Sajonia albertina",
+      "color": "#8b7460",
+      "active": {
+        "from": 1485,
+        "through": 1546,
+        "reason": "Núcleos ducales albertinos entre la partición de 1485 y la transferencia electoral de 1547; se mantienen separados de Wittenberg y Torgau. Los contornos regionales son aproximados.",
+        "source": "https://www.landtag.sachsen.de/de/service/parlamentsgeschichte/staendeversammlung-9227.cshtml"
+      },
+      "note": "Núcleos ducales albertinos entre la partición de 1485 y la transferencia electoral de 1547; se mantienen separados de Wittenberg y Torgau. Los contornos regionales son aproximados.",
+      "versions": [
+        {
+          "from": 1485,
+          "oldIds": [],
+          "ids": [
+            "Dresden",
+            "Meissen",
+            "Leipzig"
+          ],
+          "borderline": []
+        }
+      ]
+    },
+    {
+      "corridor": "Borgoña e Imperio",
+      "name": "Núcleo de Württemberg",
+      "color": "#8b7460",
+      "active": {
+        "from": 1400,
+        "through": 1650,
+        "reason": "Núcleos de Stuttgart, Tübingen y Urach, verificados visualmente. El mapa no colorea las ciudades imperiales vecinas ni todo el valle del Neckar. La partición de 1442–1482 se resuelve por rama; el condado se convierte en ducado en 1495.",
+        "source": "https://www.leo-bw.de/media/kgl_atlas/current/delivered/pdf/HABW_6_2.pdf"
+      },
+      "note": "Núcleos de Stuttgart, Tübingen y Urach, verificados visualmente. El mapa no colorea las ciudades imperiales vecinas ni todo el valle del Neckar. La partición de 1442–1482 se resuelve por rama; el condado se convierte en ducado en 1495.",
+      "versions": [
+        {
+          "from": 1400,
+          "oldIds": [],
+          "ids": [
+            "Stuttgart",
+            "Tubingen",
+            "Urach"
+          ],
+          "borderline": []
+        }
+      ]
+    },
+    {
+      "corridor": "Borgoña e Imperio",
+      "name": "Württemberg-Urach",
+      "color": "#8b7460",
+      "active": {
+        "from": 1442,
+        "through": 1481,
+        "reason": "Núcleos de la rama de Urach tras la partición de 1442, hasta la reunión de 1482. Celdas aproximadas; no un perímetro completo de sus posesiones dispersas.",
+        "source": "https://www.leo-bw.de/media/kgl_atlas/current/delivered/pdf/HABW_6_2.pdf"
+      },
+      "note": "Núcleos de la rama de Urach tras la partición de 1442, hasta la reunión de 1482. Celdas aproximadas; no un perímetro completo de sus posesiones dispersas.",
+      "versions": [
+        {
+          "from": 1442,
+          "oldIds": [],
+          "ids": [
+            "Tubingen",
+            "Urach"
+          ],
+          "borderline": []
+        }
+      ]
+    },
+    {
+      "corridor": "Borgoña e Imperio",
+      "name": "Württemberg-Stuttgart",
+      "color": "#8b7460",
+      "active": {
+        "from": 1442,
+        "through": 1481,
+        "reason": "Núcleo de la rama de Stuttgart tras la partición de 1442, hasta la reunión de 1482. No absorbe la rama de Urach ni las ciudades imperiales colindantes.",
+        "source": "https://www.leo-bw.de/media/kgl_atlas/current/delivered/pdf/HABW_6_2.pdf"
+      },
+      "note": "Núcleo de la rama de Stuttgart tras la partición de 1442, hasta la reunión de 1482. No absorbe la rama de Urach ni las ciudades imperiales colindantes.",
+      "versions": [
+        {
+          "from": 1442,
+          "oldIds": [],
+          "ids": [
+            "Stuttgart"
+          ],
+          "borderline": []
+        }
+      ]
+    },
+    {
+      "corridor": "Borgoña e Imperio",
+      "name": "Núcleo de Hesse",
+      "color": "#8b7460",
+      "active": {
+        "from": 1509,
+        "through": 1566,
+        "reason": "Núcleos del landgraviato antes de la partición de 1567. Kassel, Marburg, Darmstadt y Ziegenhain se han comprobado en el SVG; las celdas no reconstruyen las fronteras de cada señorío o enclave.",
+        "source": "https://www.lagis-hessen.de/de/subjects/browse/current/26/ex/browse/sn/ga"
+      },
+      "note": "Núcleos del landgraviato antes de la partición de 1567. Kassel, Marburg, Darmstadt y Ziegenhain se han comprobado en el SVG; las celdas no reconstruyen las fronteras de cada señorío o enclave.",
+      "versions": [
+        {
+          "from": 1509,
+          "oldIds": [],
+          "ids": [
+            "Kassel",
+            "Marburg",
+            "Darmstadt",
+            "Ziegenhain"
+          ],
+          "borderline": []
+        }
+      ]
+    },
+    {
+      "corridor": "Borgoña e Imperio",
+      "name": "Núcleo de Hesse-Kassel",
+      "color": "#8b7460",
+      "active": {
+        "from": 1567,
+        "through": 1650,
+        "reason": "Núcleos de Hesse-Kassel tras 1567; Marburg permanece fuera porque su herencia y control posterior requieren una capa específica. No se extiende este gobierno a toda Hesse.",
+        "source": "https://www.lagis-hessen.de/de/subjects/browse/current/26/ex/browse/sn/ga"
+      },
+      "note": "Núcleos de Hesse-Kassel tras 1567; Marburg permanece fuera porque su herencia y control posterior requieren una capa específica. No se extiende este gobierno a toda Hesse.",
+      "versions": [
+        {
+          "from": 1567,
+          "oldIds": [],
+          "ids": [
+            "Kassel",
+            "Ziegenhain"
+          ],
+          "borderline": []
+        }
+      ]
+    },
+    {
+      "corridor": "Borgoña e Imperio",
+      "name": "Núcleo de Hesse-Darmstadt",
+      "color": "#8b7460",
+      "active": {
+        "from": 1567,
+        "through": 1650,
+        "reason": "Núcleo de Hesse-Darmstadt tras 1567. La localización regional aproxima el entorno urbano y no incorpora las herencias disputadas de Marburg ni toda Hesse.",
+        "source": "https://www.lagis-hessen.de/de/subjects/browse/current/26/ex/browse/sn/ga"
+      },
+      "note": "Núcleo de Hesse-Darmstadt tras 1567. La localización regional aproxima el entorno urbano y no incorpora las herencias disputadas de Marburg ni toda Hesse.",
+      "versions": [
+        {
+          "from": 1567,
+          "oldIds": [],
+          "ids": [
+            "Darmstadt"
+          ],
+          "borderline": []
+        }
+      ]
+    }
+  ]
+}

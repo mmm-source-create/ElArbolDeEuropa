@@ -81,6 +81,14 @@
         ],
         "borderline": []
       },
+      "Akershus": {
+        "ids": [
+          "Eidsvoll",
+          "Oslo",
+          "Ski"
+        ],
+        "borderline": []
+      },
       "Alarcon": {
         "ids": [
           "Alarcon",
@@ -1599,6 +1607,14 @@
         ],
         "borderline": []
       },
+      "Dalsland": {
+        "ids": [
+          "Amal",
+          "Dalaborg",
+          "Vedbo"
+        ],
+        "borderline": []
+      },
       "Danzig": {
         "ids": [
           "Gdansk",
@@ -2371,6 +2387,14 @@
           "Gomel",
           "Tereshkovichy",
           "Volosovichy"
+        ],
+        "borderline": []
+      },
+      "Gonge": {
+        "ids": [
+          "Asbo",
+          "Gladsax",
+          "Osby"
         ],
         "borderline": []
       },
@@ -3609,6 +3633,14 @@
         ],
         "borderline": []
       },
+      "Malmohus": {
+        "ids": [
+          "Helsingborg",
+          "Lund",
+          "Malmo"
+        ],
+        "borderline": []
+      },
       "Mantua": {
         "ids": [
           "Goito",
@@ -4023,6 +4055,14 @@
           "Tubingen",
           "Urach",
           "Vaihingen"
+        ],
+        "borderline": []
+      },
+      "Nerike": {
+        "ids": [
+          "Goksholm",
+          "Orebro",
+          "Riseberga"
         ],
         "borderline": []
       },
@@ -4579,6 +4619,15 @@
           "Norrkoping",
           "Soderkoping",
           "Vadstena"
+        ],
+        "borderline": []
+      },
+      "Ostfold": {
+        "ids": [
+          "Borg",
+          "Halden",
+          "Moss",
+          "Trogstad"
         ],
         "borderline": []
       },
@@ -5422,6 +5471,19 @@
         ],
         "borderline": []
       },
+      "Satakunta": {
+        "ids": [
+          "Birkala",
+          "Bjorneborg",
+          "Hvittis",
+          "Ikalis",
+          "Orivesi",
+          "Raumo",
+          "Sastamala",
+          "Sastmola"
+        ],
+        "borderline": []
+      },
       "Sauerland": {
         "ids": [
           "Altena",
@@ -6190,6 +6252,20 @@
         ],
         "borderline": []
       },
+      "Tioharad": {
+        "ids": [
+          "Albo",
+          "Konga",
+          "Ljungby",
+          "Trollaborg",
+          "Uppvidinge",
+          "Vallsjo",
+          "Vaxjo",
+          "Vetlanda",
+          "Waestbo"
+        ],
+        "borderline": []
+      },
       "Tipperary": {
         "ids": [
           "Cashel",
@@ -6331,6 +6407,16 @@
           "Western_Carpathians1",
           "Western_Carpathians2",
           "Zilina"
+        ],
+        "borderline": []
+      },
+      "Troms": {
+        "ids": [
+          "Bardodalen",
+          "Raisa",
+          "Senja",
+          "Troms",
+          "Trondenes"
         ],
         "borderline": []
       },
@@ -6727,6 +6813,18 @@
           "Tiveden",
           "Utlandet",
           "Vartofta"
+        ],
+        "borderline": []
+      },
+      "Vastmanland": {
+        "ids": [
+          "Arboga",
+          "Grythyttan",
+          "Linde",
+          "Nora",
+          "Sala",
+          "Skinskatteberg",
+          "Vasteras"
         ],
         "borderline": []
       },
@@ -10810,6 +10908,7 @@
             "Crete"
           ],
           "ids": [
+            "Argos",
             "Candia",
             "Castelfranco",
             "Ceneda",
@@ -10839,6 +10938,7 @@
             "Belluno"
           ],
           "ids": [
+            "Argos",
             "Bassano",
             "Belluno",
             "Candia",
@@ -10880,6 +10980,7 @@
             "Belluno"
           ],
           "ids": [
+            "Argos",
             "Bassano",
             "Belluno",
             "Candia",
@@ -10927,6 +11028,7 @@
             "Belluno"
           ],
           "ids": [
+            "Argos",
             "Bassano",
             "Belluno",
             "Candia",
@@ -10974,6 +11076,7 @@
             "Verona"
           ],
           "ids": [
+            "Argos",
             "Bassano",
             "Candia",
             "Castelfranco",
@@ -11017,6 +11120,7 @@
           ],
           "ids": [
             "Aquileia",
+            "Argos",
             "Bassano",
             "Belluno",
             "Brac",
@@ -11079,6 +11183,7 @@
           ],
           "ids": [
             "Aquileia",
+            "Argos",
             "Asola",
             "Bassano",
             "Belluno",
@@ -11108,6 +11213,80 @@
             "Kotor",
             "Legnago",
             "Mestre",
+            "Monselice",
+            "Nozza",
+            "Padova",
+            "Palazzolo",
+            "Peschiera",
+            "Pieve",
+            "Pola",
+            "Pordenone",
+            "Rethymno",
+            "Rhaetian_Alps6",
+            "Rovinj",
+            "Salo_Ita",
+            "Schio",
+            "Sibenik",
+            "Siteia",
+            "Spilimbergo",
+            "Split",
+            "Tolmezzo",
+            "Treviso",
+            "Udine",
+            "Venice",
+            "Verona",
+            "Viannos",
+            "Vicenza",
+            "Zadar",
+            "Zogno"
+          ],
+          "borderline": []
+        },
+        {
+          "from": 1463,
+          "oldIds": [
+            "Venice",
+            "Crete",
+            "Vicenza",
+            "Padua",
+            "Verona",
+            "Belluno",
+            "Friuli",
+            "Bergamo",
+            "Brescia"
+          ],
+          "ids": [
+            "Aquileia",
+            "Asola",
+            "Bassano",
+            "Belluno",
+            "Bergamo",
+            "Brac",
+            "Breno",
+            "Brescia",
+            "Candia",
+            "Castelfranco",
+            "Ceneda",
+            "Chania",
+            "Chioggia",
+            "Cividale",
+            "Clusone",
+            "Conegliano",
+            "Cortenuova",
+            "Dolomite_Alps2",
+            "Dolomite_Alps5",
+            "Dolomite_Alps6",
+            "Dolomite_Alps7",
+            "Elounda",
+            "Este",
+            "Feltre",
+            "Gemona",
+            "Gergeri",
+            "Hagios_Pavlos",
+            "Kotor",
+            "Legnago",
+            "Mestre",
+            "Monemvasia",
             "Monselice",
             "Nozza",
             "Padova",
@@ -11181,6 +11360,7 @@
             "Kotor",
             "Legnago",
             "Mestre",
+            "Monemvasia",
             "Monselice",
             "Nozza",
             "Padova",
@@ -11260,6 +11440,7 @@
             "Legnago",
             "Limassol",
             "Mestre",
+            "Monemvasia",
             "Monselice",
             "Morphou",
             "Nicosia_Cyp",
@@ -11346,6 +11527,7 @@
             "Limassol",
             "Lodi",
             "Mestre",
+            "Monemvasia",
             "Monselice",
             "Morphou",
             "Nicosia_Cyp",
@@ -11406,6 +11588,7 @@
             "Larnaca",
             "Limassol",
             "Mestre",
+            "Monemvasia",
             "Monselice",
             "Morphou",
             "Nicosia_Cyp",
@@ -11426,6 +11609,89 @@
         },
         {
           "from": 1516,
+          "oldIds": [
+            "Venice",
+            "Crete",
+            "Vicenza",
+            "Padua",
+            "Verona",
+            "Belluno",
+            "Friuli",
+            "Bergamo",
+            "Brescia",
+            "Cyprus"
+          ],
+          "ids": [
+            "Aquileia",
+            "Asola",
+            "Bassano",
+            "Belluno",
+            "Bergamo",
+            "Brac",
+            "Breno",
+            "Brescia",
+            "Candia",
+            "Castelfranco",
+            "Ceneda",
+            "Chania",
+            "Chioggia",
+            "Cividale",
+            "Clusone",
+            "Conegliano",
+            "Cortenuova",
+            "Dolomite_Alps2",
+            "Dolomite_Alps5",
+            "Dolomite_Alps6",
+            "Dolomite_Alps7",
+            "Elounda",
+            "Este",
+            "Famagusta",
+            "Feltre",
+            "Gemona",
+            "Gergeri",
+            "Hagios_Pavlos",
+            "Kotor",
+            "Kyrenia",
+            "Larnaca",
+            "Legnago",
+            "Limassol",
+            "Mestre",
+            "Monemvasia",
+            "Monselice",
+            "Morphou",
+            "Nicosia_Cyp",
+            "Nozza",
+            "Padova",
+            "Palazzolo",
+            "Paphos",
+            "Peschiera",
+            "Pieve",
+            "Pola",
+            "Pordenone",
+            "Rethymno",
+            "Rhaetian_Alps6",
+            "Rovigo",
+            "Rovinj",
+            "Salo_Ita",
+            "Schio",
+            "Sibenik",
+            "Siteia",
+            "Spilimbergo",
+            "Split",
+            "Tolmezzo",
+            "Treviso",
+            "Udine",
+            "Venice",
+            "Verona",
+            "Viannos",
+            "Vicenza",
+            "Zadar",
+            "Zogno"
+          ],
+          "borderline": []
+        },
+        {
+          "from": 1540,
           "oldIds": [
             "Venice",
             "Crete",
@@ -17540,7 +17806,7 @@
         "reason": "Reino propio dentro de la Unión de Kalmar y luego de la monarquía danesa-noruega; Schleswig y Holstein permanecen como ducados distintos.",
         "source": "https://snl.no/Kalmarunionen"
       },
-      "note": "El reino danés se dibuja separado de Noruega, Schleswig y Holstein. Halland y Gotland salen en 1645; Blekinge permanece danesa hasta después del corte del prototipo.",
+      "note": "El reino danés se dibuja separado de Noruega, Schleswig y Holstein. La revisión visual incluye Escania y las celdas interiores de Jutlandia omitidas por el cruce entre provincias. Halland y Gotland salen en 1645; Blekinge permanece danesa hasta después del corte del prototipo. Incluye las celdas del núcleo de Escania, omitidas en la capa anterior.",
       "versions": [
         {
           "from": 1400,
@@ -17553,18 +17819,25 @@
             "Halland",
             "Blekinge",
             "Gotland",
+            "Gonge",
+            "Malmohus",
             "Halland",
             "Gotland"
           ],
           "ids": [
+            "Aalborg",
             "Aarhus",
+            "Ars",
+            "Asbo",
             "Assens",
             "Bolling",
             "Bregne",
             "Falster",
+            "Gladsax",
             "Grindsted",
             "Halmstad",
             "Hammershus",
+            "Helsingborg",
             "Helsingor",
             "Hjorring",
             "Hoborg",
@@ -17575,8 +17848,12 @@
             "Kolding",
             "Kungsbacka",
             "Laholm",
+            "Lund",
+            "Malmo",
             "Navskov",
             "Odense",
+            "Osby",
+            "Randers",
             "Ringkobing",
             "Ringsted",
             "Ronneby",
@@ -17590,6 +17867,7 @@
             "Thisted",
             "Varberg",
             "Varde",
+            "Viborg",
             "Visby",
             "Vordingborg"
           ],
@@ -17603,16 +17881,23 @@
             "Vendsyssel_Thy",
             "Zealand",
             "Funen",
-            "Blekinge"
+            "Blekinge",
+            "Gonge",
+            "Malmohus"
           ],
           "ids": [
+            "Aalborg",
             "Aarhus",
+            "Ars",
+            "Asbo",
             "Assens",
             "Bolling",
             "Bregne",
             "Falster",
+            "Gladsax",
             "Grindsted",
             "Hammershus",
+            "Helsingborg",
             "Helsingor",
             "Hjorring",
             "Holstebro_Lundenes",
@@ -17620,8 +17905,12 @@
             "Kalundborg",
             "Kobenhavn",
             "Kolding",
+            "Lund",
+            "Malmo",
             "Navskov",
             "Odense",
+            "Osby",
+            "Randers",
             "Ringkobing",
             "Ringsted",
             "Ronneby",
@@ -17633,6 +17922,7 @@
             "Svendborg",
             "Thisted",
             "Varde",
+            "Viborg",
             "Vordingborg"
           ],
           "borderline": []
@@ -17649,7 +17939,7 @@
         "reason": "Reino diferenciado bajo la misma monarquía que Dinamarca; la subordinación institucional de 1537 no convierte Noruega en Dinamarca.",
         "source": "https://snl.no/Kalmarunionen"
       },
-      "note": "Reino bajo monarca común con Dinamarca; Noruega queda institucionalmente subordinada desde 1537, pero no se fusiona en el color danés. Orkney y Shetland se transfieren a Escocia en 1469.",
+      "note": "La revisión visual incluye Troms, Akershus y Østfold. Reino bajo monarca común con Dinamarca; Noruega queda institucionalmente subordinada desde 1537, pero no se fusiona en el color danés. Orkney y Shetland se transfieren a Escocia en 1469.",
       "versions": [
         {
           "from": 1400,
@@ -17668,7 +17958,10 @@
             "Sogn",
             "Vestfold",
             "Bohus",
-            "Jamtland"
+            "Jamtland",
+            "Troms",
+            "Akershus",
+            "Ostfold"
           ],
           "ids": [
             "Alstahaug",
@@ -17677,15 +17970,18 @@
             "Amli",
             "Amot",
             "Aurland",
+            "Bardodalen",
             "Berg",
             "Bergen",
             "Birndal",
             "Bodo",
+            "Borg",
             "Borgund",
             "Bragernes",
             "Deatnu",
             "Eid",
             "Eidfjord",
+            "Eidsvoll",
             "Elverum",
             "Fana",
             "Flekkefjord",
@@ -17695,6 +17991,7 @@
             "Gildeskal",
             "Glommadal",
             "Grenland",
+            "Halden",
             "Hallingdal",
             "Hamar",
             "Hamaroy",
@@ -17728,6 +18025,7 @@
             "Meraker",
             "Mjosa",
             "Molde",
+            "Moss",
             "Moster",
             "N_Jamtland_Wasteland",
             "Namdal",
@@ -17744,12 +18042,14 @@
             "Orkdal",
             "Orkney",
             "Orland",
+            "Oslo",
             "Otredal",
             "Otta",
             "Oviken",
             "Oyestad",
             "Porsanger",
             "Ragunda",
+            "Raisa",
             "Rana",
             "Rauma",
             "Ringerike",
@@ -17757,11 +18057,13 @@
             "Ryfylke",
             "S_Jamtland_Wasteland",
             "Sande",
+            "Senja",
             "Shetland",
             "Sigdal",
             "Sirudal",
             "Skanderna",
             "Skaun",
+            "Ski",
             "Skien",
             "Snasa",
             "Sogndal",
@@ -17781,6 +18083,9 @@
             "Sveg",
             "Tofte",
             "Tonsberg",
+            "Trogstad",
+            "Troms",
+            "Trondenes",
             "Trysil",
             "Tynset",
             "Uddevalla",
@@ -17813,7 +18118,10 @@
             "Sogn",
             "Vestfold",
             "Bohus",
-            "Jamtland"
+            "Jamtland",
+            "Troms",
+            "Akershus",
+            "Ostfold"
           ],
           "ids": [
             "Alstahaug",
@@ -17822,15 +18130,18 @@
             "Amli",
             "Amot",
             "Aurland",
+            "Bardodalen",
             "Berg",
             "Bergen",
             "Birndal",
             "Bodo",
+            "Borg",
             "Borgund",
             "Bragernes",
             "Deatnu",
             "Eid",
             "Eidfjord",
+            "Eidsvoll",
             "Elverum",
             "Fana",
             "Flekkefjord",
@@ -17840,6 +18151,7 @@
             "Gildeskal",
             "Glommadal",
             "Grenland",
+            "Halden",
             "Hallingdal",
             "Hamar",
             "Hamaroy",
@@ -17873,6 +18185,7 @@
             "Meraker",
             "Mjosa",
             "Molde",
+            "Moss",
             "Moster",
             "N_Jamtland_Wasteland",
             "Namdal",
@@ -17888,12 +18201,14 @@
             "Oppdal",
             "Orkdal",
             "Orland",
+            "Oslo",
             "Otredal",
             "Otta",
             "Oviken",
             "Oyestad",
             "Porsanger",
             "Ragunda",
+            "Raisa",
             "Rana",
             "Rauma",
             "Ringerike",
@@ -17901,10 +18216,12 @@
             "Ryfylke",
             "S_Jamtland_Wasteland",
             "Sande",
+            "Senja",
             "Sigdal",
             "Sirudal",
             "Skanderna",
             "Skaun",
+            "Ski",
             "Skien",
             "Snasa",
             "Sogndal",
@@ -17924,6 +18241,9 @@
             "Sveg",
             "Tofte",
             "Tonsberg",
+            "Trogstad",
+            "Troms",
+            "Trondenes",
             "Trysil",
             "Tynset",
             "Uddevalla",
@@ -17955,7 +18275,10 @@
             "Romsdalen",
             "Sogn",
             "Vestfold",
-            "Bohus"
+            "Bohus",
+            "Troms",
+            "Akershus",
+            "Ostfold"
           ],
           "ids": [
             "Alstahaug",
@@ -17964,14 +18287,17 @@
             "Amli",
             "Amot",
             "Aurland",
+            "Bardodalen",
             "Bergen",
             "Birndal",
             "Bodo",
+            "Borg",
             "Borgund",
             "Bragernes",
             "Deatnu",
             "Eid",
             "Eidfjord",
+            "Eidsvoll",
             "Elverum",
             "Fana",
             "Flekkefjord",
@@ -17980,6 +18306,7 @@
             "Gildeskal",
             "Glommadal",
             "Grenland",
+            "Halden",
             "Hallingdal",
             "Hamar",
             "Hamaroy",
@@ -18011,6 +18338,7 @@
             "Meraker",
             "Mjosa",
             "Molde",
+            "Moss",
             "Moster",
             "Namdal",
             "Nidaros",
@@ -18024,20 +18352,24 @@
             "Oppdal",
             "Orkdal",
             "Orland",
+            "Oslo",
             "Otredal",
             "Otta",
             "Oyestad",
             "Porsanger",
+            "Raisa",
             "Rana",
             "Rauma",
             "Ringerike",
             "Roros",
             "Ryfylke",
             "Sande",
+            "Senja",
             "Sigdal",
             "Sirudal",
             "Skanderna",
             "Skaun",
+            "Ski",
             "Skien",
             "Snasa",
             "Sogndal",
@@ -18056,6 +18388,9 @@
             "Sunnmore",
             "Tofte",
             "Tonsberg",
+            "Trogstad",
+            "Troms",
+            "Trondenes",
             "Trysil",
             "Tynset",
             "Uddevalla",
@@ -18083,7 +18418,7 @@
         "reason": "Reino separado de Dinamarca y Noruega desde 1523; antes conserva una capa propia para no confundir unión personal con incorporación.",
         "source": "https://snl.no/Kalmarunionen"
       },
-      "note": "Se mantiene como reino distinto incluso durante la Unión de Kalmar. Jämtland, Halland y Gotland entran desde 1645; Ösel se muestra como marcador insular separado.",
+      "note": "La revisión visual incluye Västmanland, Närke, Dalsland, la zona de Tiohärad en Småland y Satakunta en Finlandia. Se mantiene como reino distinto incluso durante la Unión de Kalmar. Jämtland, Halland y Gotland entran desde 1645; Ösel se muestra como marcador insular separado.",
       "versions": [
         {
           "from": 1400,
@@ -18104,22 +18439,33 @@
             "Finland",
             "Tavastland",
             "Nyland",
-            "Savolax"
+            "Savolax",
+            "Satakunta",
+            "Vastmanland",
+            "Nerike",
+            "Dalsland",
+            "Tioharad"
           ],
           "ids": [
             "Abo",
+            "Albo",
             "Alfta",
             "Allingsas",
             "Alvastra",
             "Alvsby",
+            "Amal",
             "Anundsjo",
+            "Arboga",
             "Avesta",
+            "Birkala",
+            "Bjorneborg",
             "Bodebyn",
             "Bogesund",
             "Brahestad",
             "Branna",
             "Bygdea",
             "Byske",
+            "Dalaborg",
             "Ekenas",
             "Ekholm",
             "Enkoping",
@@ -18131,9 +18477,11 @@
             "Fryksdal",
             "Gefle",
             "Gillberg",
+            "Goksholm",
             "Grange",
             "Gratesk",
             "Grundsunda",
+            "Grythyttan",
             "Hamrange",
             "Handbord",
             "Harnosand",
@@ -18148,8 +18496,10 @@
             "Hogdal",
             "Hollola",
             "Hudiksvall",
+            "Hvittis",
             "Idensalmi",
             "Idre",
+            "Ikalis",
             "Itis",
             "Jamsa",
             "Janakkala",
@@ -18166,6 +18516,7 @@
             "Kinda",
             "Kittila",
             "Kolmarden",
+            "Konga",
             "Koppo",
             "Korsholm",
             "Kuivaniemi",
@@ -18175,7 +18526,9 @@
             "Leksand",
             "Lidkoping",
             "Liljendal",
+            "Linde",
             "Linkoping",
+            "Ljungby",
             "Lodose",
             "Lohja",
             "Lulea",
@@ -18183,6 +18536,7 @@
             "Mikkeli",
             "Mora",
             "Nas",
+            "Nora",
             "Nordmark",
             "Norrkoping",
             "Norrtalje",
@@ -18192,6 +18546,8 @@
             "Oland",
             "Olofsborg",
             "Oppunda",
+            "Orebro",
+            "Orivesi",
             "Orsa",
             "Pajala",
             "Pedersore",
@@ -18203,10 +18559,15 @@
             "Ramsele",
             "Ranea",
             "Ranua",
+            "Raumo",
             "Rautavaara",
+            "Riseberga",
             "Ristiina",
             "Rovaniemi",
             "Saarijarvi",
+            "Sala",
+            "Sastamala",
+            "Sastmola",
             "Sauvo",
             "Savonranta",
             "Selanger",
@@ -18219,6 +18580,7 @@
             "Skara",
             "Skelleftea",
             "Skene",
+            "Skinskatteberg",
             "Soderala",
             "Soderbarke",
             "Soderkoping",
@@ -18236,17 +18598,26 @@
             "Tiveden",
             "Tjust",
             "Tornea",
+            "Trollaborg",
             "Uleaborg",
             "Umea",
             "Uppsala",
+            "Uppvidinge",
             "Utajarvi",
             "Utlandet",
             "Vadstena",
+            "Vallsjo",
             "Varnum",
             "Vartofta",
+            "Vasteras",
+            "Vaxjo",
+            "Vedbo",
+            "Vetlanda",
             "Viitasaari",
             "Vindeln",
-            "Vora"
+            "Vora",
+            "Vyborg",
+            "Waestbo"
           ],
           "borderline": []
         },
@@ -18270,25 +18641,36 @@
             "Tavastland",
             "Nyland",
             "Savolax",
+            "Satakunta",
+            "Vastmanland",
+            "Nerike",
+            "Dalsland",
+            "Tioharad",
             "Jamtland",
             "Halland",
             "Gotland"
           ],
           "ids": [
             "Abo",
+            "Albo",
             "Alfta",
             "Allingsas",
             "Alvastra",
             "Alvsby",
+            "Amal",
             "Anundsjo",
+            "Arboga",
             "Avesta",
             "Berg",
+            "Birkala",
+            "Bjorneborg",
             "Bodebyn",
             "Bogesund",
             "Brahestad",
             "Branna",
             "Bygdea",
             "Byske",
+            "Dalaborg",
             "Ekenas",
             "Ekholm",
             "Enkoping",
@@ -18301,9 +18683,11 @@
             "Fryksdal",
             "Gefle",
             "Gillberg",
+            "Goksholm",
             "Grange",
             "Gratesk",
             "Grundsunda",
+            "Grythyttan",
             "Halmstad",
             "Hammerdal",
             "Hamrange",
@@ -18322,8 +18706,10 @@
             "Hogdal",
             "Hollola",
             "Hudiksvall",
+            "Hvittis",
             "Idensalmi",
             "Idre",
+            "Ikalis",
             "Itis",
             "Jamsa",
             "Janakkala",
@@ -18340,6 +18726,7 @@
             "Kinda",
             "Kittila",
             "Kolmarden",
+            "Konga",
             "Koppo",
             "Korsholm",
             "Kuivaniemi",
@@ -18351,7 +18738,9 @@
             "Leksand",
             "Lidkoping",
             "Liljendal",
+            "Linde",
             "Linkoping",
+            "Ljungby",
             "Lodose",
             "Lohja",
             "Lulea",
@@ -18360,6 +18749,7 @@
             "Mora",
             "N_Jamtland_Wasteland",
             "Nas",
+            "Nora",
             "Nordmark",
             "Norrkoping",
             "Norrtalje",
@@ -18370,6 +18760,8 @@
             "Oland",
             "Olofsborg",
             "Oppunda",
+            "Orebro",
+            "Orivesi",
             "Orsa",
             "Oviken",
             "Pajala",
@@ -18383,11 +18775,16 @@
             "Ramsele",
             "Ranea",
             "Ranua",
+            "Raumo",
             "Rautavaara",
+            "Riseberga",
             "Ristiina",
             "Rovaniemi",
             "S_Jamtland_Wasteland",
             "Saarijarvi",
+            "Sala",
+            "Sastamala",
+            "Sastmola",
             "Sauvo",
             "Savonranta",
             "Selanger",
@@ -18400,6 +18797,7 @@
             "Skara",
             "Skelleftea",
             "Skene",
+            "Skinskatteberg",
             "Slite",
             "Soderala",
             "Soderbarke",
@@ -18419,19 +18817,28 @@
             "Tiveden",
             "Tjust",
             "Tornea",
+            "Trollaborg",
             "Uleaborg",
             "Umea",
             "Uppsala",
+            "Uppvidinge",
             "Utajarvi",
             "Utlandet",
             "Vadstena",
+            "Vallsjo",
             "Varberg",
             "Varnum",
             "Vartofta",
+            "Vasteras",
+            "Vaxjo",
+            "Vedbo",
+            "Vetlanda",
             "Viitasaari",
             "Vindeln",
             "Visby",
-            "Vora"
+            "Vora",
+            "Vyborg",
+            "Waestbo"
           ],
           "borderline": []
         }
@@ -27075,6 +27482,40 @@
       ]
     },
     {
+      "corridor": "Hungría y Balcanes",
+      "name": "Banato húngaro de Jajce",
+      "color": "#a08545",
+      "active": {
+        "from": 1463,
+        "through": 1526,
+        "source": "https://www.enciklopedija.hr/clanak/jajce",
+        "reason": "Fortaleza y núcleo del banato recuperados por Matías Corvino en 1463; caída en diciembre de 1527."
+      },
+      "note": "Se representa solo la celda de Jajce. No se atribuye toda Bosnia a Hungría ni se dibuja el perímetro completo del banato.",
+      "versions": [
+        {
+          "from": 1400,
+          "oldIds": [],
+          "ids": [],
+          "borderline": []
+        },
+        {
+          "from": 1463,
+          "oldIds": [],
+          "ids": [
+            "Jajce"
+          ],
+          "borderline": []
+        },
+        {
+          "from": 1527,
+          "oldIds": [],
+          "ids": [],
+          "borderline": []
+        }
+      ]
+    },
+    {
       "corridor": "Borgoña e Imperio",
       "name": "Artois",
       "color": "#8b245f",
@@ -28081,26 +28522,6 @@
         },
         {
           "from": 1556,
-          "oldIds": [],
-          "ids": [],
-          "borderline": []
-        }
-      ]
-    },
-    {
-      "corridor": "Hungría y Balcanes",
-      "name": "Banato húngaro de Jajce",
-      "color": "#a08545",
-      "active": {
-        "from": 1463,
-        "through": 1526,
-        "source": "https://www.enciklopedija.hr/clanak/jajce",
-        "reason": "Fortaleza y núcleo del banato recuperados por Matías Corvino en 1463; caída en diciembre de 1527."
-      },
-      "note": "Se representa solo la celda de Jajce. No se atribuye toda Bosnia a Hungría ni se dibuja el perímetro completo del banato.",
-      "versions": [
-        {
-          "from": 1400,
           "oldIds": [],
           "ids": [],
           "borderline": []
@@ -31692,6 +32113,241 @@
           "borderline": []
         }
       ]
+    },
+    {
+      "corridor": "Borgoña e Imperio",
+      "name": "Núcleo de Brandeburgo",
+      "color": "#8b7460",
+      "active": {
+        "from": 1415,
+        "through": 1650,
+        "reason": "Núcleos de la Kurmark bajo los Hohenzollern desde 1415. Las celdas se han revisado por su posición y vecinos; aproximan los entornos de estas ciudades. No incluyen Neumark, Franconia, Prusia ni Pomerania, que tienen historias y jurisdicciones distintas. Ruppin se incorpora únicamente desde 1524, tras la extinción de los condes de Lindow-Ruppin.",
+        "source": "https://www.politische-bildung-brandenburg.de/themen/die-entstehung-der-mark"
+      },
+      "note": "Núcleos de la Kurmark bajo los Hohenzollern desde 1415. Las celdas se han revisado por su posición y vecinos; aproximan los entornos de estas ciudades. No incluyen Neumark, Franconia, Prusia ni Pomerania, que tienen historias y jurisdicciones distintas. Ruppin se incorpora únicamente desde 1524, tras la extinción de los condes de Lindow-Ruppin.",
+      "versions": [
+        {
+          "from": 1415,
+          "oldIds": [],
+          "ids": [
+            "Berlin",
+            "Brandenburg",
+            "Stendal",
+            "Wittenberge"
+          ],
+          "borderline": []
+        }
+      ]
+    },
+    {
+      "corridor": "Borgoña e Imperio",
+      "name": "Sajonia electoral",
+      "color": "#8b7460",
+      "active": {
+        "from": 1423,
+        "through": 1650,
+        "reason": "Núcleos de la Sajonia de los Wettin. La partición de Leipzig (1485) separa las ramas; desde 1547 la dignidad electoral y Wittenberg pasan a los albertinos. Solo se representan estas celdas, sin reconstruir toda Turingia ni sumar posesiones eclesiásticas.",
+        "source": "https://www.landtag.sachsen.de/de/service/parlamentsgeschichte/staendeversammlung-9227.cshtml"
+      },
+      "note": "Núcleos de la Sajonia de los Wettin. La partición de Leipzig (1485) separa las ramas; desde 1547 la dignidad electoral y Wittenberg pasan a los albertinos. Solo se representan estas celdas, sin reconstruir toda Turingia ni sumar posesiones eclesiásticas.",
+      "versions": [
+        {
+          "from": 1423,
+          "oldIds": [],
+          "ids": [
+            "Wittenberg",
+            "Torgau",
+            "Dresden",
+            "Meissen",
+            "Leipzig"
+          ],
+          "borderline": []
+        },
+        {
+          "from": 1485,
+          "oldIds": [],
+          "ids": [
+            "Wittenberg",
+            "Torgau"
+          ],
+          "borderline": []
+        },
+        {
+          "from": 1547,
+          "oldIds": [],
+          "ids": [
+            "Wittenberg",
+            "Torgau",
+            "Dresden",
+            "Meissen",
+            "Leipzig"
+          ],
+          "borderline": []
+        }
+      ]
+    },
+    {
+      "corridor": "Borgoña e Imperio",
+      "name": "Sajonia albertina",
+      "color": "#8b7460",
+      "active": {
+        "from": 1485,
+        "through": 1546,
+        "reason": "Núcleos ducales albertinos entre la partición de 1485 y la transferencia electoral de 1547; se mantienen separados de Wittenberg y Torgau. Los contornos regionales son aproximados.",
+        "source": "https://www.landtag.sachsen.de/de/service/parlamentsgeschichte/staendeversammlung-9227.cshtml"
+      },
+      "note": "Núcleos ducales albertinos entre la partición de 1485 y la transferencia electoral de 1547; se mantienen separados de Wittenberg y Torgau. Los contornos regionales son aproximados.",
+      "versions": [
+        {
+          "from": 1485,
+          "oldIds": [],
+          "ids": [
+            "Dresden",
+            "Meissen",
+            "Leipzig"
+          ],
+          "borderline": []
+        }
+      ]
+    },
+    {
+      "corridor": "Borgoña e Imperio",
+      "name": "Núcleo de Württemberg",
+      "color": "#8b7460",
+      "active": {
+        "from": 1400,
+        "through": 1650,
+        "reason": "Núcleos de Stuttgart, Tübingen y Urach, verificados visualmente. El mapa no colorea las ciudades imperiales vecinas ni todo el valle del Neckar. La partición de 1442–1482 se resuelve por rama; el condado se convierte en ducado en 1495.",
+        "source": "https://www.leo-bw.de/media/kgl_atlas/current/delivered/pdf/HABW_6_2.pdf"
+      },
+      "note": "Núcleos de Stuttgart, Tübingen y Urach, verificados visualmente. El mapa no colorea las ciudades imperiales vecinas ni todo el valle del Neckar. La partición de 1442–1482 se resuelve por rama; el condado se convierte en ducado en 1495.",
+      "versions": [
+        {
+          "from": 1400,
+          "oldIds": [],
+          "ids": [
+            "Stuttgart",
+            "Tubingen",
+            "Urach"
+          ],
+          "borderline": []
+        }
+      ]
+    },
+    {
+      "corridor": "Borgoña e Imperio",
+      "name": "Württemberg-Urach",
+      "color": "#8b7460",
+      "active": {
+        "from": 1442,
+        "through": 1481,
+        "reason": "Núcleos de la rama de Urach tras la partición de 1442, hasta la reunión de 1482. Celdas aproximadas; no un perímetro completo de sus posesiones dispersas.",
+        "source": "https://www.leo-bw.de/media/kgl_atlas/current/delivered/pdf/HABW_6_2.pdf"
+      },
+      "note": "Núcleos de la rama de Urach tras la partición de 1442, hasta la reunión de 1482. Celdas aproximadas; no un perímetro completo de sus posesiones dispersas.",
+      "versions": [
+        {
+          "from": 1442,
+          "oldIds": [],
+          "ids": [
+            "Tubingen",
+            "Urach"
+          ],
+          "borderline": []
+        }
+      ]
+    },
+    {
+      "corridor": "Borgoña e Imperio",
+      "name": "Württemberg-Stuttgart",
+      "color": "#8b7460",
+      "active": {
+        "from": 1442,
+        "through": 1481,
+        "reason": "Núcleo de la rama de Stuttgart tras la partición de 1442, hasta la reunión de 1482. No absorbe la rama de Urach ni las ciudades imperiales colindantes.",
+        "source": "https://www.leo-bw.de/media/kgl_atlas/current/delivered/pdf/HABW_6_2.pdf"
+      },
+      "note": "Núcleo de la rama de Stuttgart tras la partición de 1442, hasta la reunión de 1482. No absorbe la rama de Urach ni las ciudades imperiales colindantes.",
+      "versions": [
+        {
+          "from": 1442,
+          "oldIds": [],
+          "ids": [
+            "Stuttgart"
+          ],
+          "borderline": []
+        }
+      ]
+    },
+    {
+      "corridor": "Borgoña e Imperio",
+      "name": "Núcleo de Hesse",
+      "color": "#8b7460",
+      "active": {
+        "from": 1509,
+        "through": 1566,
+        "reason": "Núcleos del landgraviato antes de la partición de 1567. Kassel, Marburg, Darmstadt y Ziegenhain se han comprobado en el SVG; las celdas no reconstruyen las fronteras de cada señorío o enclave.",
+        "source": "https://www.lagis-hessen.de/de/subjects/browse/current/26/ex/browse/sn/ga"
+      },
+      "note": "Núcleos del landgraviato antes de la partición de 1567. Kassel, Marburg, Darmstadt y Ziegenhain se han comprobado en el SVG; las celdas no reconstruyen las fronteras de cada señorío o enclave.",
+      "versions": [
+        {
+          "from": 1509,
+          "oldIds": [],
+          "ids": [
+            "Kassel",
+            "Marburg",
+            "Darmstadt",
+            "Ziegenhain"
+          ],
+          "borderline": []
+        }
+      ]
+    },
+    {
+      "corridor": "Borgoña e Imperio",
+      "name": "Núcleo de Hesse-Kassel",
+      "color": "#8b7460",
+      "active": {
+        "from": 1567,
+        "through": 1650,
+        "reason": "Núcleos de Hesse-Kassel tras 1567; Marburg permanece fuera porque su herencia y control posterior requieren una capa específica. No se extiende este gobierno a toda Hesse.",
+        "source": "https://www.lagis-hessen.de/de/subjects/browse/current/26/ex/browse/sn/ga"
+      },
+      "note": "Núcleos de Hesse-Kassel tras 1567; Marburg permanece fuera porque su herencia y control posterior requieren una capa específica. No se extiende este gobierno a toda Hesse.",
+      "versions": [
+        {
+          "from": 1567,
+          "oldIds": [],
+          "ids": [
+            "Kassel",
+            "Ziegenhain"
+          ],
+          "borderline": []
+        }
+      ]
+    },
+    {
+      "corridor": "Borgoña e Imperio",
+      "name": "Núcleo de Hesse-Darmstadt",
+      "color": "#8b7460",
+      "active": {
+        "from": 1567,
+        "through": 1650,
+        "reason": "Núcleo de Hesse-Darmstadt tras 1567. La localización regional aproxima el entorno urbano y no incorpora las herencias disputadas de Marburg ni toda Hesse.",
+        "source": "https://www.lagis-hessen.de/de/subjects/browse/current/26/ex/browse/sn/ga"
+      },
+      "note": "Núcleo de Hesse-Darmstadt tras 1567. La localización regional aproxima el entorno urbano y no incorpora las herencias disputadas de Marburg ni toda Hesse.",
+      "versions": [
+        {
+          "from": 1567,
+          "oldIds": [],
+          "ids": [
+            "Darmstadt"
+          ],
+          "borderline": []
+        }
+      ]
     }
   ],
   "overrides": [
@@ -32765,6 +33421,438 @@
       "through": 1462,
       "reason": "Plaza veneciana antes de la conquista otomana de 1463; celda regional aproximada.",
       "source": "https://enciklopedija.hr/clanak/argos"
+    },
+    {
+      "territory": "Reino de Dinamarca",
+      "id": "Aalborg",
+      "action": "add",
+      "from": 1400,
+      "through": 1650,
+      "reason": "Celda de Nørrejylland comprobada visualmente dentro de Jutlandia. El cruce automático omitía estas celdas entre provincias; no se incorpora Schleswig ni Holstein al reino.",
+      "source": "https://natmus.dk/historisk-viden/danmark/middelalder-1000-1536/byer-fra-middelalderen/"
+    },
+    {
+      "territory": "Reino de Dinamarca",
+      "id": "Ars",
+      "action": "add",
+      "from": 1400,
+      "through": 1650,
+      "reason": "Celda de Nørrejylland comprobada visualmente dentro de Jutlandia. El cruce automático omitía estas celdas entre provincias; no se incorpora Schleswig ni Holstein al reino.",
+      "source": "https://natmus.dk/historisk-viden/danmark/middelalder-1000-1536/byer-fra-middelalderen/"
+    },
+    {
+      "territory": "Reino de Dinamarca",
+      "id": "Viborg",
+      "action": "add",
+      "from": 1400,
+      "through": 1650,
+      "reason": "Celda de Nørrejylland comprobada visualmente dentro de Jutlandia. El cruce automático omitía estas celdas entre provincias; no se incorpora Schleswig ni Holstein al reino.",
+      "source": "https://natmus.dk/historisk-viden/danmark/middelalder-1000-1536/byer-fra-middelalderen/"
+    },
+    {
+      "territory": "Reino de Dinamarca",
+      "id": "Randers",
+      "action": "add",
+      "from": 1400,
+      "through": 1650,
+      "reason": "Celda de Nørrejylland comprobada visualmente dentro de Jutlandia. El cruce automático omitía estas celdas entre provincias; no se incorpora Schleswig ni Holstein al reino.",
+      "source": "https://natmus.dk/historisk-viden/danmark/middelalder-1000-1536/byer-fra-middelalderen/"
+    },
+    {
+      "territory": "Núcleo de Brandeburgo",
+      "id": "Ruppin",
+      "action": "add",
+      "from": 1524,
+      "through": 1650,
+      "reason": "Ruppin pasa al electorado en 1524. Antes conserva la autoridad de los condes de Lindow-Ruppin; no basta con estar en la región de Brandeburgo.",
+      "source": "https://blha.brandenburg.de/sixcms/media.php/9/79981-9783867329767_ebook_PC.pdf"
+    },
+    {
+      "territory": "Reino de Suecia",
+      "id": "Albo",
+      "action": "add",
+      "from": 1400,
+      "through": 1650,
+      "reason": "Västmanland, Närke, Dalsland y Tiohärad/Småland revisados por su forma y posición. Aproximación regional de tierras del reino; no un lindero feudal exacto.",
+      "source": "https://medeltiden.kalmarlansmuseum.se/samhallet/landets-indelning/landskapslag-och-landslag/"
+    },
+    {
+      "territory": "Reino de Suecia",
+      "id": "Amal",
+      "action": "add",
+      "from": 1400,
+      "through": 1650,
+      "reason": "Västmanland, Närke, Dalsland y Tiohärad/Småland revisados por su forma y posición. Aproximación regional de tierras del reino; no un lindero feudal exacto.",
+      "source": "https://medeltiden.kalmarlansmuseum.se/samhallet/landets-indelning/landskapslag-och-landslag/"
+    },
+    {
+      "territory": "Reino de Suecia",
+      "id": "Arboga",
+      "action": "add",
+      "from": 1400,
+      "through": 1650,
+      "reason": "Västmanland, Närke, Dalsland y Tiohärad/Småland revisados por su forma y posición. Aproximación regional de tierras del reino; no un lindero feudal exacto.",
+      "source": "https://medeltiden.kalmarlansmuseum.se/samhallet/landets-indelning/landskapslag-och-landslag/"
+    },
+    {
+      "territory": "Reino de Suecia",
+      "id": "Birkala",
+      "action": "add",
+      "from": 1400,
+      "through": 1650,
+      "reason": "Celda de Satakunta en el núcleo occidental de Finlandia bajo el reino sueco. Forma y vecinos comprobados en el SVG; no se extiende esa equivalencia a toda Carelia o Laponia.",
+      "source": "https://www.medeltiden.kalmarlansmuseum.se/samhallet/lander-runt-ostersjon/finland/finland-under-medeltiden/"
+    },
+    {
+      "territory": "Reino de Suecia",
+      "id": "Bjorneborg",
+      "action": "add",
+      "from": 1400,
+      "through": 1650,
+      "reason": "Celda de Satakunta en el núcleo occidental de Finlandia bajo el reino sueco. Forma y vecinos comprobados en el SVG; no se extiende esa equivalencia a toda Carelia o Laponia.",
+      "source": "https://www.medeltiden.kalmarlansmuseum.se/samhallet/lander-runt-ostersjon/finland/finland-under-medeltiden/"
+    },
+    {
+      "territory": "Reino de Suecia",
+      "id": "Dalaborg",
+      "action": "add",
+      "from": 1400,
+      "through": 1650,
+      "reason": "Västmanland, Närke, Dalsland y Tiohärad/Småland revisados por su forma y posición. Aproximación regional de tierras del reino; no un lindero feudal exacto.",
+      "source": "https://medeltiden.kalmarlansmuseum.se/samhallet/landets-indelning/landskapslag-och-landslag/"
+    },
+    {
+      "territory": "Reino de Suecia",
+      "id": "Goksholm",
+      "action": "add",
+      "from": 1400,
+      "through": 1650,
+      "reason": "Västmanland, Närke, Dalsland y Tiohärad/Småland revisados por su forma y posición. Aproximación regional de tierras del reino; no un lindero feudal exacto.",
+      "source": "https://medeltiden.kalmarlansmuseum.se/samhallet/landets-indelning/landskapslag-och-landslag/"
+    },
+    {
+      "territory": "Reino de Suecia",
+      "id": "Grythyttan",
+      "action": "add",
+      "from": 1400,
+      "through": 1650,
+      "reason": "Västmanland, Närke, Dalsland y Tiohärad/Småland revisados por su forma y posición. Aproximación regional de tierras del reino; no un lindero feudal exacto.",
+      "source": "https://medeltiden.kalmarlansmuseum.se/samhallet/landets-indelning/landskapslag-och-landslag/"
+    },
+    {
+      "territory": "Reino de Suecia",
+      "id": "Hvittis",
+      "action": "add",
+      "from": 1400,
+      "through": 1650,
+      "reason": "Celda de Satakunta en el núcleo occidental de Finlandia bajo el reino sueco. Forma y vecinos comprobados en el SVG; no se extiende esa equivalencia a toda Carelia o Laponia.",
+      "source": "https://www.medeltiden.kalmarlansmuseum.se/samhallet/lander-runt-ostersjon/finland/finland-under-medeltiden/"
+    },
+    {
+      "territory": "Reino de Suecia",
+      "id": "Ikalis",
+      "action": "add",
+      "from": 1400,
+      "through": 1650,
+      "reason": "Celda de Satakunta en el núcleo occidental de Finlandia bajo el reino sueco. Forma y vecinos comprobados en el SVG; no se extiende esa equivalencia a toda Carelia o Laponia.",
+      "source": "https://www.medeltiden.kalmarlansmuseum.se/samhallet/lander-runt-ostersjon/finland/finland-under-medeltiden/"
+    },
+    {
+      "territory": "Reino de Suecia",
+      "id": "Konga",
+      "action": "add",
+      "from": 1400,
+      "through": 1650,
+      "reason": "Västmanland, Närke, Dalsland y Tiohärad/Småland revisados por su forma y posición. Aproximación regional de tierras del reino; no un lindero feudal exacto.",
+      "source": "https://medeltiden.kalmarlansmuseum.se/samhallet/landets-indelning/landskapslag-och-landslag/"
+    },
+    {
+      "territory": "Reino de Suecia",
+      "id": "Linde",
+      "action": "add",
+      "from": 1400,
+      "through": 1650,
+      "reason": "Västmanland, Närke, Dalsland y Tiohärad/Småland revisados por su forma y posición. Aproximación regional de tierras del reino; no un lindero feudal exacto.",
+      "source": "https://medeltiden.kalmarlansmuseum.se/samhallet/landets-indelning/landskapslag-och-landslag/"
+    },
+    {
+      "territory": "Reino de Suecia",
+      "id": "Ljungby",
+      "action": "add",
+      "from": 1400,
+      "through": 1650,
+      "reason": "Västmanland, Närke, Dalsland y Tiohärad/Småland revisados por su forma y posición. Aproximación regional de tierras del reino; no un lindero feudal exacto.",
+      "source": "https://medeltiden.kalmarlansmuseum.se/samhallet/landets-indelning/landskapslag-och-landslag/"
+    },
+    {
+      "territory": "Reino de Suecia",
+      "id": "Nora",
+      "action": "add",
+      "from": 1400,
+      "through": 1650,
+      "reason": "Västmanland, Närke, Dalsland y Tiohärad/Småland revisados por su forma y posición. Aproximación regional de tierras del reino; no un lindero feudal exacto.",
+      "source": "https://medeltiden.kalmarlansmuseum.se/samhallet/landets-indelning/landskapslag-och-landslag/"
+    },
+    {
+      "territory": "Reino de Suecia",
+      "id": "Orebro",
+      "action": "add",
+      "from": 1400,
+      "through": 1650,
+      "reason": "Västmanland, Närke, Dalsland y Tiohärad/Småland revisados por su forma y posición. Aproximación regional de tierras del reino; no un lindero feudal exacto.",
+      "source": "https://medeltiden.kalmarlansmuseum.se/samhallet/landets-indelning/landskapslag-och-landslag/"
+    },
+    {
+      "territory": "Reino de Suecia",
+      "id": "Orivesi",
+      "action": "add",
+      "from": 1400,
+      "through": 1650,
+      "reason": "Celda de Satakunta en el núcleo occidental de Finlandia bajo el reino sueco. Forma y vecinos comprobados en el SVG; no se extiende esa equivalencia a toda Carelia o Laponia.",
+      "source": "https://www.medeltiden.kalmarlansmuseum.se/samhallet/lander-runt-ostersjon/finland/finland-under-medeltiden/"
+    },
+    {
+      "territory": "Reino de Suecia",
+      "id": "Raumo",
+      "action": "add",
+      "from": 1400,
+      "through": 1650,
+      "reason": "Celda de Satakunta en el núcleo occidental de Finlandia bajo el reino sueco. Forma y vecinos comprobados en el SVG; no se extiende esa equivalencia a toda Carelia o Laponia.",
+      "source": "https://www.medeltiden.kalmarlansmuseum.se/samhallet/lander-runt-ostersjon/finland/finland-under-medeltiden/"
+    },
+    {
+      "territory": "Reino de Suecia",
+      "id": "Riseberga",
+      "action": "add",
+      "from": 1400,
+      "through": 1650,
+      "reason": "Västmanland, Närke, Dalsland y Tiohärad/Småland revisados por su forma y posición. Aproximación regional de tierras del reino; no un lindero feudal exacto.",
+      "source": "https://medeltiden.kalmarlansmuseum.se/samhallet/landets-indelning/landskapslag-och-landslag/"
+    },
+    {
+      "territory": "Reino de Suecia",
+      "id": "Sala",
+      "action": "add",
+      "from": 1400,
+      "through": 1650,
+      "reason": "Västmanland, Närke, Dalsland y Tiohärad/Småland revisados por su forma y posición. Aproximación regional de tierras del reino; no un lindero feudal exacto.",
+      "source": "https://medeltiden.kalmarlansmuseum.se/samhallet/landets-indelning/landskapslag-och-landslag/"
+    },
+    {
+      "territory": "Reino de Suecia",
+      "id": "Sastamala",
+      "action": "add",
+      "from": 1400,
+      "through": 1650,
+      "reason": "Celda de Satakunta en el núcleo occidental de Finlandia bajo el reino sueco. Forma y vecinos comprobados en el SVG; no se extiende esa equivalencia a toda Carelia o Laponia.",
+      "source": "https://www.medeltiden.kalmarlansmuseum.se/samhallet/lander-runt-ostersjon/finland/finland-under-medeltiden/"
+    },
+    {
+      "territory": "Reino de Suecia",
+      "id": "Sastmola",
+      "action": "add",
+      "from": 1400,
+      "through": 1650,
+      "reason": "Celda de Satakunta en el núcleo occidental de Finlandia bajo el reino sueco. Forma y vecinos comprobados en el SVG; no se extiende esa equivalencia a toda Carelia o Laponia.",
+      "source": "https://www.medeltiden.kalmarlansmuseum.se/samhallet/lander-runt-ostersjon/finland/finland-under-medeltiden/"
+    },
+    {
+      "territory": "Reino de Suecia",
+      "id": "Skinskatteberg",
+      "action": "add",
+      "from": 1400,
+      "through": 1650,
+      "reason": "Västmanland, Närke, Dalsland y Tiohärad/Småland revisados por su forma y posición. Aproximación regional de tierras del reino; no un lindero feudal exacto.",
+      "source": "https://medeltiden.kalmarlansmuseum.se/samhallet/landets-indelning/landskapslag-och-landslag/"
+    },
+    {
+      "territory": "Reino de Suecia",
+      "id": "Trollaborg",
+      "action": "add",
+      "from": 1400,
+      "through": 1650,
+      "reason": "Västmanland, Närke, Dalsland y Tiohärad/Småland revisados por su forma y posición. Aproximación regional de tierras del reino; no un lindero feudal exacto.",
+      "source": "https://medeltiden.kalmarlansmuseum.se/samhallet/landets-indelning/landskapslag-och-landslag/"
+    },
+    {
+      "territory": "Reino de Suecia",
+      "id": "Uppvidinge",
+      "action": "add",
+      "from": 1400,
+      "through": 1650,
+      "reason": "Västmanland, Närke, Dalsland y Tiohärad/Småland revisados por su forma y posición. Aproximación regional de tierras del reino; no un lindero feudal exacto.",
+      "source": "https://medeltiden.kalmarlansmuseum.se/samhallet/landets-indelning/landskapslag-och-landslag/"
+    },
+    {
+      "territory": "Reino de Suecia",
+      "id": "Vallsjo",
+      "action": "add",
+      "from": 1400,
+      "through": 1650,
+      "reason": "Västmanland, Närke, Dalsland y Tiohärad/Småland revisados por su forma y posición. Aproximación regional de tierras del reino; no un lindero feudal exacto.",
+      "source": "https://medeltiden.kalmarlansmuseum.se/samhallet/landets-indelning/landskapslag-och-landslag/"
+    },
+    {
+      "territory": "Reino de Suecia",
+      "id": "Vasteras",
+      "action": "add",
+      "from": 1400,
+      "through": 1650,
+      "reason": "Västmanland, Närke, Dalsland y Tiohärad/Småland revisados por su forma y posición. Aproximación regional de tierras del reino; no un lindero feudal exacto.",
+      "source": "https://medeltiden.kalmarlansmuseum.se/samhallet/landets-indelning/landskapslag-och-landslag/"
+    },
+    {
+      "territory": "Reino de Suecia",
+      "id": "Vaxjo",
+      "action": "add",
+      "from": 1400,
+      "through": 1650,
+      "reason": "Västmanland, Närke, Dalsland y Tiohärad/Småland revisados por su forma y posición. Aproximación regional de tierras del reino; no un lindero feudal exacto.",
+      "source": "https://medeltiden.kalmarlansmuseum.se/samhallet/landets-indelning/landskapslag-och-landslag/"
+    },
+    {
+      "territory": "Reino de Suecia",
+      "id": "Vedbo",
+      "action": "add",
+      "from": 1400,
+      "through": 1650,
+      "reason": "Västmanland, Närke, Dalsland y Tiohärad/Småland revisados por su forma y posición. Aproximación regional de tierras del reino; no un lindero feudal exacto.",
+      "source": "https://medeltiden.kalmarlansmuseum.se/samhallet/landets-indelning/landskapslag-och-landslag/"
+    },
+    {
+      "territory": "Reino de Suecia",
+      "id": "Vetlanda",
+      "action": "add",
+      "from": 1400,
+      "through": 1650,
+      "reason": "Västmanland, Närke, Dalsland y Tiohärad/Småland revisados por su forma y posición. Aproximación regional de tierras del reino; no un lindero feudal exacto.",
+      "source": "https://medeltiden.kalmarlansmuseum.se/samhallet/landets-indelning/landskapslag-och-landslag/"
+    },
+    {
+      "territory": "Reino de Suecia",
+      "id": "Waestbo",
+      "action": "add",
+      "from": 1400,
+      "through": 1650,
+      "reason": "Västmanland, Närke, Dalsland y Tiohärad/Småland revisados por su forma y posición. Aproximación regional de tierras del reino; no un lindero feudal exacto.",
+      "source": "https://medeltiden.kalmarlansmuseum.se/samhallet/landets-indelning/landskapslag-och-landslag/"
+    },
+    {
+      "territory": "Reino de Noruega",
+      "id": "Bardodalen",
+      "action": "add",
+      "from": 1400,
+      "through": 1650,
+      "reason": "Troms, Akershus y Østfold revisados visualmente; se representa el reino, sin convertir los derechos tributarios noruegos en dominio exclusivo sobre toda Sápmi.",
+      "source": "https://snl.no/Troms"
+    },
+    {
+      "territory": "Reino de Noruega",
+      "id": "Borg",
+      "action": "add",
+      "from": 1400,
+      "through": 1650,
+      "reason": "Troms, Akershus y Østfold revisados visualmente; se representa el reino, sin convertir los derechos tributarios noruegos en dominio exclusivo sobre toda Sápmi.",
+      "source": "https://snl.no/Norges_historie"
+    },
+    {
+      "territory": "Reino de Noruega",
+      "id": "Eidsvoll",
+      "action": "add",
+      "from": 1400,
+      "through": 1650,
+      "reason": "Troms, Akershus y Østfold revisados visualmente; se representa el reino, sin convertir los derechos tributarios noruegos en dominio exclusivo sobre toda Sápmi.",
+      "source": "https://snl.no/Norges_historie"
+    },
+    {
+      "territory": "Reino de Noruega",
+      "id": "Halden",
+      "action": "add",
+      "from": 1400,
+      "through": 1650,
+      "reason": "Troms, Akershus y Østfold revisados visualmente; se representa el reino, sin convertir los derechos tributarios noruegos en dominio exclusivo sobre toda Sápmi.",
+      "source": "https://snl.no/Norges_historie"
+    },
+    {
+      "territory": "Reino de Noruega",
+      "id": "Moss",
+      "action": "add",
+      "from": 1400,
+      "through": 1650,
+      "reason": "Troms, Akershus y Østfold revisados visualmente; se representa el reino, sin convertir los derechos tributarios noruegos en dominio exclusivo sobre toda Sápmi.",
+      "source": "https://snl.no/Norges_historie"
+    },
+    {
+      "territory": "Reino de Noruega",
+      "id": "Oslo",
+      "action": "add",
+      "from": 1400,
+      "through": 1650,
+      "reason": "Troms, Akershus y Østfold revisados visualmente; se representa el reino, sin convertir los derechos tributarios noruegos en dominio exclusivo sobre toda Sápmi.",
+      "source": "https://snl.no/Norges_historie"
+    },
+    {
+      "territory": "Reino de Noruega",
+      "id": "Raisa",
+      "action": "add",
+      "from": 1400,
+      "through": 1650,
+      "reason": "Troms, Akershus y Østfold revisados visualmente; se representa el reino, sin convertir los derechos tributarios noruegos en dominio exclusivo sobre toda Sápmi.",
+      "source": "https://snl.no/Troms"
+    },
+    {
+      "territory": "Reino de Noruega",
+      "id": "Senja",
+      "action": "add",
+      "from": 1400,
+      "through": 1650,
+      "reason": "Troms, Akershus y Østfold revisados visualmente; se representa el reino, sin convertir los derechos tributarios noruegos en dominio exclusivo sobre toda Sápmi.",
+      "source": "https://snl.no/Troms"
+    },
+    {
+      "territory": "Reino de Noruega",
+      "id": "Ski",
+      "action": "add",
+      "from": 1400,
+      "through": 1650,
+      "reason": "Troms, Akershus y Østfold revisados visualmente; se representa el reino, sin convertir los derechos tributarios noruegos en dominio exclusivo sobre toda Sápmi.",
+      "source": "https://snl.no/Norges_historie"
+    },
+    {
+      "territory": "Reino de Noruega",
+      "id": "Trogstad",
+      "action": "add",
+      "from": 1400,
+      "through": 1650,
+      "reason": "Troms, Akershus y Østfold revisados visualmente; se representa el reino, sin convertir los derechos tributarios noruegos en dominio exclusivo sobre toda Sápmi.",
+      "source": "https://snl.no/Norges_historie"
+    },
+    {
+      "territory": "Reino de Noruega",
+      "id": "Troms",
+      "action": "add",
+      "from": 1400,
+      "through": 1650,
+      "reason": "Troms, Akershus y Østfold revisados visualmente; se representa el reino, sin convertir los derechos tributarios noruegos en dominio exclusivo sobre toda Sápmi.",
+      "source": "https://snl.no/Troms"
+    },
+    {
+      "territory": "Reino de Noruega",
+      "id": "Trondenes",
+      "action": "add",
+      "from": 1400,
+      "through": 1650,
+      "reason": "Troms, Akershus y Østfold revisados visualmente; se representa el reino, sin convertir los derechos tributarios noruegos en dominio exclusivo sobre toda Sápmi.",
+      "source": "https://snl.no/Troms"
+    },
+    {
+      "territory": "Reino de Dinamarca",
+      "id": "Asbo",
+      "action": "add",
+      "from": 1400,
+      "through": 1650,
+      "reason": "Núcleos de Escania bajo la Corona danesa antes de su cesión en 1658. Revisión visual de Göinge y Malmöhus; las celdas son aproximadas.",
+      "source": "https://regionmuseet.se/wp-content/uploads/2024/08/1600-tal_lararhandl.pdf"
     },
     {
       "territory": "Riga libre",
@@ -38186,19 +39274,19 @@
     }
   ],
   "audit": {
-    "oldIds": 623,
-    "crosswalkOldIds": 710,
-    "newPathsConsidered": 4376,
+    "oldIds": 633,
+    "crosswalkOldIds": 720,
+    "newPathsConsidered": 4377,
     "newPathsTotal": 7672,
     "oldWithNoCandidate": [],
     "crosswalkOldWithNoCandidate": [],
     "legacyIdsWithoutSvgPath": [],
-    "exactNameOldIds": 216,
+    "exactNameOldIds": 217,
     "burgundianJurisdictionsReused": 24,
     "hungaryBalkansJurisdictions": 13,
     "borderlineIds": [
       "North_Skanderna"
     ],
-    "sourceCaveat": "Geometric candidates and curated location cells are not surveyed historical borders; every reviewed attribution has a date and source."
+    "sourceCaveat": "Geometric candidate coverage is not a historical border or ownership claim."
   }
 }

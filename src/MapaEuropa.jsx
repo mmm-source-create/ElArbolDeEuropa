@@ -13,7 +13,7 @@ import locationsSvgUrl from "../prototypes/euv-locations/euv-locations-crop.svg?
 import locationsDataUrl from "../prototypes/euv-locations/corridor-locations.json?url";
 import burgundianDataUrl from "../prototypes/euv-locations/burgundian-locations.json?url";
 import { loadTextAsset, loadJsonAsset, forgetTextAsset } from "./utils/loadAsset.js";
-import { clampMapViewBox, clipMapToViewBox, fittedMapViewBox, mapControlLimits, resizeMapViewBox, zoomMapViewBox } from "./mapViewport.js";
+import { clampMapViewBox, clipMapToBounds, fittedMapViewBox, mapControlLimits, resizeMapViewBox, zoomMapViewBox } from "./mapViewport.js";
 import { mapLocationsForGovernment, pilotImperialFrameFor, pilotLocationContext, pilotLocationsFor } from "./data/locationMapPilot.js";
 import { buildPoliticalMapIndex, inspectMapRegion } from "./data/politicalMapIndex.js";
 import { AUTHORITY_LABELS, mapAuthoritiesForPerson } from "./data/mapAuthorities.js";
@@ -93,7 +93,7 @@ export function MapaEuropa({ seleccion, anioGlobal = null, onSelectTerritorio, o
   const [mapAttempt, setMapAttempt] = useState(0);
   const [selectedRegionId, setSelectedRegionId] = useState(null);
   const [pilotData, setPilotData] = useState(null);
-  const controlLimits = mapControlLimits(viewBox, originalMapFrame, MAP_MIN_ZOOM);
+  const controlLimits = mapControlLimits(viewBox, originalMapFrame, viewportRef.current, MAP_MIN_ZOOM);
   const mapAssetUrl = locationsSvgUrl;
   const politicalIndex = useMemo(() => selectedRegionId && Number.isInteger(anioGlobal)
     ? buildPoliticalMapIndex(PERSONAS, anioGlobal, pilotData, {includeClaims: true}) : new Map(), [selectedRegionId, anioGlobal, pilotData]);
@@ -170,7 +170,7 @@ export function MapaEuropa({ seleccion, anioGlobal = null, onSelectTerritorio, o
     svg.style.backgroundColor = "var(--atlas-sea)";
     svg.querySelector("#svg-background")?.setAttribute("fill", "var(--atlas-sea)");
     svg.setAttribute("viewBox", viewBoxString(restored));
-    clipMapToViewBox(svg, restored);
+    clipMapToBounds(svg, original);
     setViewBox(restored);
     setPilotData(locationData ? { ...locationData, burgundy: burgundianData } : null);
     setMapReady(true);
@@ -219,7 +219,7 @@ export function MapaEuropa({ seleccion, anioGlobal = null, onSelectTerritorio, o
     const svg = containerRef.current?.querySelector("svg");
     if (!svg || !viewBox) return;
     svg.setAttribute("viewBox", viewBoxString(viewBox));
-    clipMapToViewBox(svg, viewBox);
+    clipMapToBounds(svg, originalViewBoxRef.current);
   }, [viewBox]);
 
   useEffect(() => {

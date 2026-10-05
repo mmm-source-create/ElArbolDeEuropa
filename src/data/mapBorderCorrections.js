@@ -18,11 +18,30 @@ export function cerdanyaBorderCorrection(territory, year) {
   };
 }
 
+export const SOUTHERN_PYRENEES_SOURCE = Object.freeze({
+  title: 'Generalitat de Catalunya · Pirineu Comtal',
+  url: 'https://act.gencat.cat/wp-content/uploads/2012/06/RutaPirineuComtal.pdf',
+  locator: 'Cerdanya, Berguedà y Ripollès; partición de la Cerdanya por el Tratado de los Pirineos',
+});
+
+// Visual review: this elongated cell lies south of Puigcerdà, between the
+// Catalan Pyrenean valleys and Ripoll. Its English name is not a French claim.
+// It is a regional approximation, not a surveyed border along the ridge.
+export function southernPyreneesCorrection(territory, year) {
+  if (!Number.isInteger(year) || year < 1493 || year > 1900
+      || !['Francia', 'Condado de Barcelona', 'España'].includes(territory)) return null;
+  return {id: 'South_Eastern_Pyrenees', action: territory === 'Francia' ? 'remove' : 'add',
+    source: SOUTHERN_PYRENEES_SOURCE,
+    note: 'La celda al sur de Puigcerdà aproxima el Pirineo catalán meridional; no se identifica con el Rosellón cedido a Francia. El contorno es orientativo y no separa cada valle o municipio.'};
+}
+
 export function applyMapBorderCorrections(ids, territory, year) {
-  const correction = cerdanyaBorderCorrection(territory, year);
-  if (!correction) return ids;
+  const corrections = [cerdanyaBorderCorrection(territory, year), southernPyreneesCorrection(territory, year)].filter(Boolean);
+  if (!corrections.length) return ids;
   const corrected = new Set(ids);
-  if (correction.action === 'remove') corrected.delete(correction.id);
-  else corrected.add(correction.id);
+  for (const correction of corrections) {
+    if (correction.action === 'remove') corrected.delete(correction.id);
+    else corrected.add(correction.id);
+  }
   return [...corrected];
 }
