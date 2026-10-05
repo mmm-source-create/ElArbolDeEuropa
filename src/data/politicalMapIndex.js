@@ -1,8 +1,7 @@
-import {idsDeReinoEnAño, idsDeGobiernoEnAño} from '../Territorios.jsx';
-import {gobiernoEfectivo} from './territorios.js';
+import {idsDeReinoEnAño} from '../Territorios.jsx';
 import {imperialFrameIds} from './imperialFrame.js';
-import {personClaims} from '../evidence/claims.js';
 import {mapLocationsForGovernment, pilotImperialFrameFor} from './locationMapPilot.js';
+import {mapAuthoritiesForPerson} from './mapAuthorities.js';
 
 // Hay años en los que la autoridad no puede atribuirse honestamente a una
 // sola persona. Estas entradas se muestran en el inspector, sin inventar un
@@ -17,9 +16,9 @@ export const COLLECTIVE_AUTHORITIES = Object.freeze([
   },
 ]);
 
-export const MAP_GEOMETRY_PRECISION = 'El mapa detallado usa locations modernas como aproximaciones regionales; no reconstruye por sí solo la frontera exacta del feudo en este año.';
+export const MAP_GEOMETRY_PRECISION = 'El mapa detallado usa celdas cartográficas como aproximaciones regionales; no reconstruye por sí solo la frontera exacta del feudo en este año.';
 
-export function buildPoliticalMapIndex(personas, year, mapData = null) {
+export function buildPoliticalMapIndex(personas, year, mapData = null, options = {}) {
   const regions = new Map();
   if (!Number.isInteger(year)) return regions;
   const push = (id, entry) => {
@@ -27,14 +26,9 @@ export function buildPoliticalMapIndex(personas, year, mapData = null) {
     regions.get(id).push(entry);
   };
   for (const person of personas) {
-    const claims = new Map(personClaims(person).filter(claim => claim.field === 'Gobierno').map(claim => [claim.value,claim]));
-    for (const government of person.gobiernos || []) {
-      if (!gobiernoEfectivo(government) || government.desde > year || government.hasta < year) continue;
-      const legacyIds = idsDeGobiernoEnAño(government, year, person.id);
-      const ids = mapData
-        ? mapLocationsForGovernment(mapData, government, year, person.id, legacyIds)
-        : legacyIds;
-      for (const id of ids) push(id, {person,government,claim:claims.get(government) || null,territory:government.territorio});
+    if (!(person.gobiernos || []).some(g => g.desde <= year && year <= g.hasta)) continue;
+    for (const entry of mapAuthoritiesForPerson(person, year, mapData, options)) {
+      for (const id of entry.ids) push(id, entry);
     }
   }
   for (const authority of COLLECTIVE_AUTHORITIES) {
@@ -44,7 +38,8 @@ export function buildPoliticalMapIndex(personas, year, mapData = null) {
       ? mapLocationsForGovernment(mapData, authority, year, null, legacyIds)
       : legacyIds;
     for (const id of ids) {
-      push(id, {person:null,government:null,claim:null,territory:authority.territorio,collective:authority});
+      push(id, {person:null,government:null,claim:null,territory:authority.territorio,
+        collective:authority,kind:'collective',paint:true});
     }
   }
   return regions;
@@ -52,11 +47,12 @@ export function buildPoliticalMapIndex(personas, year, mapData = null) {
 
 export function inspectMapRegion(regionId, year, index, mapData = null) {
   if (!regionId || !Number.isInteger(year)) return null;
-  const entries = (index.get(regionId) || []).slice().sort((a,b) =>
+  const allEntries = (index.get(regionId) || []).slice().sort((a,b) =>
     Number(Boolean(b.claim?.sources.length)) - Number(Boolean(a.claim?.sources.length)) ||
     a.territory.localeCompare(b.territory, 'es'));
   return {
-    regionId, year, entries,
+    regionId, year, entries: allEntries.filter(e => e.paint !== false),
+    claims: allEntries.filter(e => e.paint === false),
     imperialLegalFrame: (mapData
       ? pilotImperialFrameFor(mapData, year).includes(regionId)
       : imperialFrameIds(year).includes(regionId)),

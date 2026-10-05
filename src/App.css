@@ -1834,6 +1834,7 @@ html, body {
 
 /* Mapa desplazable y ampliable mediante viewBox. */
 .mapa-stage {
+  --atlas-sea: #dbe7e6;
   position: relative;
   min-width: 0;
 }
@@ -1847,7 +1848,7 @@ html, body {
   touch-action: none;
   cursor: grab;
   user-select: none;
-  background: #FAF7F0;
+  background: var(--atlas-sea);
   border: 1px solid #E2D8C3;
   border-radius: 8px;
 }
@@ -1871,6 +1872,23 @@ html, body {
   pointer-events: auto;
 }
 
+.mapa-wrapper #svg-background { fill: var(--atlas-sea); }
+.mapa-wrapper [data-atlas-selected] {
+  stroke: #49361f !important;
+  stroke-width: 2px !important;
+  vector-effect: non-scaling-stroke;
+}
+.mapa-authority-key { display: grid; gap: 5px; margin-top: 9px; }
+.mapa-authority-key span { display: flex; align-items: center; gap: 7px; }
+.mapa-authority-key i { width: 18px; height: 13px; border: 1px solid #65594b; border-radius: 2px; background: #876641; }
+.mapa-authority-key .mapa-key-delegated { background: repeating-linear-gradient(45deg, #907085 0 3px, #e1d8df 3px 5px); }
+.mapa-authority-key .mapa-key-disputed { background: repeating-linear-gradient(-45deg, #756598 0 3px, #ddd7e7 3px 5px); }
+.mapa-region-inspector .mapa-authority-badge { display: inline-block; margin: 0 0 5px; padding: 2px 6px; border: 1px solid var(--eade-border); border-radius: 4px; font-size: 10px; font-weight: 700; }
+.mapa-authority-delegated { border-left: 3px solid #907085 !important; }
+.mapa-authority-disputed { border-left: 3px solid #756598 !important; }
+.mapa-title-claims { margin-top: 12px; }
+.mapa-title-claims summary { cursor: pointer; font-weight: 600; }
+
 .mapa-toolbar {
   position: absolute;
   top: 8px;
@@ -1885,6 +1903,11 @@ html, body {
   background: rgba(251, 247, 236, 0.94);
   box-shadow: 0 3px 9px rgba(44, 38, 32, 0.13);
   backdrop-filter: blur(5px);
+}
+
+@media (pointer: coarse), (max-width: 600px) {
+  .mapa-toolbar .nav-btn { min-width: 34px; min-height: 38px; }
+  .mapa-toolbar { gap: 2px; }
 }
 
 .mapa-lab-switch {

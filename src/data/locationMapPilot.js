@@ -1,14 +1,33 @@
 // These aliases connect the Atlas government records to reviewed new-map
 // jurisdictions, without treating every title held by one ruler as one state.
 import {imperialFrameIds} from './imperialFrame.js';
+import {authorityExtensionFor} from './atlasAuthorityExtensions.js';
+
+const layerIndexes = new WeakMap();
+export function reviewedMapLayers(data) {
+  if (!data) return [];
+  if (!layerIndexes.has(data)) {
+    const entries = [...(data.territories || []), ...(data.additionalTerritories || [])];
+    layerIndexes.set(data, {entries, byName: new Map(entries.map(entry => [entry.name, entry]))});
+  }
+  return layerIndexes.get(data).entries;
+}
+
+function layerIndex(data) {
+  reviewedMapLayers(data);
+  return layerIndexes.get(data)?.byName || new Map();
+}
 
 export function pilotJurisdictionsFor(territory, year, personId = null) {
   if (territory === 'Sacro Imperio') return [];
+  if (territory === 'Países Bajos') return ['Flandes', 'Brabante', 'Limburgo', 'Holanda',
+    'Henao', 'Zelanda', 'Artois', 'Namur', 'Luxemburgo', 'Frisia', 'Utrecht',
+    'Overijssel', 'Drente', 'Groninga', 'Güeldres', 'Señorío de Malinas'];
   if (territory === 'Hungría') {
     if (personId === 'JUAN1ZAPOLYA') return ['Núcleo oriental de Zápolya'];
     if (personId === 'JUAN2SIGZAPOLYA') return year >= 1551 && year <= 1555 ? [] : ['Transilvania'];
-    if (year <= 1525) return ['Hungría'];
-    return ['Hungría real', ...(personId === 'FERN1EMP' && year >= 1551 && year <= 1555 ? ['Ocupación habsbúrgica de Transilvania'] : [])];
+    if (year <= 1525) return ['Hungría', 'Banato húngaro de Jajce'];
+    return ['Hungría real', 'Banato húngaro de Jajce', ...(personId === 'FERN1EMP' && year >= 1551 && year <= 1555 ? ['Ocupación habsbúrgica de Transilvania'] : [])];
   }
   if (territory === 'Croacia') return year >= 1527 ? ['Croacia habsbúrgica'] : [];
   if (territory === 'Transilvania' && personId === 'FERN1EMP' && year >= 1551 && year <= 1555) {
@@ -32,10 +51,12 @@ export function pilotJurisdictionsFor(territory, year, personId = null) {
     : [];
   if (territory === 'Mazovia') return ['Ducado de Mazovia'];
   if (territory === 'Prusia') return [year < 1525 ? 'Prusia de la Orden' : 'Prusia ducal'];
-  if (territory === 'Dinamarca') return ['Reino de Dinamarca'];
+  if (territory === 'Dinamarca') return ['Reino de Dinamarca', 'Ösel bajo Dinamarca'];
   if (territory === 'Noruega') return ['Reino de Noruega', 'Islas Feroe bajo la Corona noruega'];
   if (territory === 'Feroe' || territory === 'Islas Feroe') return ['Islas Feroe bajo la Corona noruega'];
-  if (territory === 'Suecia') return ['Reino de Suecia'];
+  if (territory === 'Suecia') return ['Reino de Suecia', 'Estonia sueca', 'Livonia sueca',
+    'Riga bajo Suecia', 'Ösel bajo Suecia', 'Pomerania bajo ocupación sueca',
+    'Pomerania sueca', 'Señorío sueco de Wismar'];
   if (territory === 'Escandinavia') return ['Reino de Dinamarca', 'Reino de Noruega', 'Reino de Suecia'];
   if (territory === 'Rusia') return ['Moscovia y Zarato de Rusia'];
   if (territory === 'Curlandia') return ['Ducado de Curlandia'];
@@ -65,10 +86,9 @@ export function pilotVersionFor(entry, year) {
 
 export function pilotLocationsFor(data, territory, year, personId = null) {
   if (!data || !Number.isInteger(year) || year < data.from || year > data.through) return [];
-  const entries = [...(data.territories || []), ...(data.additionalTerritories || [])];
-  const byName = new Map(entries.map(entry => [entry.name, entry]));
+  const byName = layerIndex(data);
   return [...new Set(pilotJurisdictionsFor(territory, year, personId).flatMap(name =>
-    pilotVersionFor(byName.get(name), year)?.ids || []))];
+    reviewedLayerLocations(data, byName.get(name), year, personId)))];
 }
 
 function layerActiveInYear(entry, year, from = 1400, through = 1650) {
@@ -88,22 +108,26 @@ function applyLayerCorrections(data, entry, ids, year) {
   return [...corrected];
 }
 
+export function reviewedLayerLocations(data, entry, year, personId = null) {
+  if (!entry || !Number.isInteger(year) || year < data.from || year > data.through) return [];
+  const extension = authorityExtensionFor(entry.name, year, personId);
+  if (extension) return applyLayerCorrections(data, entry,
+    pilotVersionFor(entry, extension.referenceYear)?.ids || [], extension.referenceYear);
+  if (!layerActiveInYear(entry, year, data.from, data.through)) return [];
+  return applyLayerCorrections(data, entry, pilotVersionFor(entry, year)?.ids || [], year);
+}
+
 // Prefer a dated, named jurisdiction when the research layer has one. For
 // territories not yet migrated, transform their legacy region IDs through
 // the audited geometry crosswalk; unmappable/ambiguous regions stay unpainted.
 export function mapLocationsForGovernment(data, government, year, personId = null, legacyIds = []) {
   if (!data || !government?.territorio || !Number.isInteger(year)) return [];
-  const entries = [...(data.territories || []), ...(data.additionalTerritories || [])];
-  const byName = new Map(entries.map(entry => [entry.name, entry]));
+  const byName = layerIndex(data);
   const withinDatedLayerRange = year >= data.from && year <= data.through;
   const layers = (withinDatedLayerRange ? pilotJurisdictionsFor(government.territorio, year, personId) : [])
     .map(name => byName.get(name)).filter(Boolean);
   if (layers.length) {
-    return [...new Set(layers.flatMap(entry => {
-      if (!layerActiveInYear(entry, year, data.from, data.through)) return [];
-      const ids = pilotVersionFor(entry, year)?.ids || [];
-      return applyLayerCorrections(data, entry, ids, year);
-    }))];
+    return [...new Set(layers.flatMap(entry => reviewedLayerLocations(data, entry, year, personId)))];
   }
   const crosswalk = data.locationCrosswalk?.newIdsByOldId || {};
   return [...new Set(legacyIds.flatMap(id => crosswalk[id]?.ids || []))];
@@ -131,24 +155,24 @@ export function pilotBurgundianGovernmentsFor(data, personId, year) {
     if (year < government.from || year > government.through) return [];
     const version = pilotVersionFor(government, year);
     return version?.ids.length ? [{ territory: government.territory,
-      condition: government.condition, ids: version.ids }] : [];
+      condition: government.condition, from: government.from, through: government.through,
+      ids: version.ids }] : [];
   });
 }
 
 export function pilotLocationContext(data, id, year, personId = null) {
   if (!data || !id || !Number.isInteger(year) || year < data.from || year > data.through) return [];
-  const entries = [...(data.territories || []), ...(data.additionalTerritories || [])];
+  const entries = reviewedMapLayers(data);
   const corridor = entries.flatMap(entry => {
-    if (!layerActiveInYear(entry, year, data.from, data.through)) return [];
-    const version = pilotVersionFor(entry, year);
-    if (!version?.ids.includes(id)) return [];
+    if (!reviewedLayerLocations(data, entry, year).includes(id)) return [];
+    const extension = authorityExtensionFor(entry.name, year);
     return [{
       name: entry.name,
       corridor: entry.corridor,
       note: entry.note,
-      source: entry.active?.source || null,
-      activeReason: entry.active?.reason || null,
-      correction: data.overrides.find(item => item.territory === entry.name && item.id === id
+      source: extension?.source.url || entry.active?.source || null,
+      activeReason: extension?.note || entry.active?.reason || null,
+      correction: (data.overrides || []).find(item => item.territory === entry.name && item.id === id
         && item.from <= year && year <= item.through) || null,
     }];
   });
