@@ -7,6 +7,7 @@ import { entityMeta } from '../public/publicMeta.js';
 import { storyChapterPath, storyAtlasUrl, readStoryProgress, saveStoryProgress, storyStepIds } from './storyModel.js';
 import './stories.css';
 import ReadingSkeleton from './ReadingSkeleton.jsx';
+import '../styles/theme.css';
 
 export default function StoryPage({ slug, chapter = null, initialData = null }) {
   const { data, loading, error } = useJson(`/historias-meta/${slug}${chapter ? `/capitulo/${chapter}` : ''}.json`, initialData);

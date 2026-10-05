@@ -1,5 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
+import {readFileSync} from 'node:fs';
+import {runInNewContext} from 'node:vm';
 import {resolverRuta} from '../src/routing.js';
 import {applyPreferences,clearLocalData,cleanPreferences,readPreferences,savePreferences,PREFERENCES_KEY,FAVORITES_KEY,STORY_PROGRESS_KEY,CHALLENGE_KEYS} from '../src/settings/preferences.js';
 
@@ -19,6 +21,29 @@ test('los ajustes inválidos vuelven a valores seguros y el modo sistema sigue a
  assert.deepEqual(doc.documentElement.dataset,{eadeTheme:'dark',eadeTextSize:'larger',eadeMotion:'reduce',eadeTreeView:'list'});
  applyPreferences({theme:'system'},doc,{matchMedia:()=>({matches:true})});
  assert.equal(doc.documentElement.dataset.eadeTheme,'dark');
+ applyPreferences({theme:'light',motion:'system'},doc,{matchMedia:query=>({matches:query.includes('reduced-motion')})});
+ assert.equal(doc.documentElement.dataset.eadeMotion,'reduce');
+ applyPreferences({theme:'light',motion:'system'},doc,{matchMedia:()=>({matches:false})});
+ assert.equal(doc.documentElement.dataset.eadeMotion,'normal');
+});
+
+test('las preferencias iniciales aplican tema y movimiento antes del primer dibujo',()=>{
+ const source=readFileSync(new URL('../public/preferences-bootstrap.js',import.meta.url),'utf8');
+ const htmlRoot={dataset:{}};
+ runInNewContext(source,{
+  document:{documentElement:htmlRoot},
+  localStorage:{getItem:()=>JSON.stringify({theme:'system',textSize:'larger',motion:'system',treeView:'list'})},
+  window:{matchMedia:query=>({matches:query.includes('color-scheme')||query.includes('reduced-motion')})},
+ });
+ assert.deepEqual(htmlRoot.dataset,{eadeTheme:'dark',eadeTextSize:'larger',eadeMotion:'reduce',eadeTreeView:'list'});
+
+ const invalidRoot={dataset:{}};
+ runInNewContext(source,{
+  document:{documentElement:invalidRoot},
+  localStorage:{getItem:()=>JSON.stringify({theme:'invalid',motion:'invalid'})},
+  window:{matchMedia:query=>({matches:query.includes('color-scheme')||query.includes('reduced-motion')})},
+ });
+ assert.deepEqual(invalidRoot.dataset,{eadeTheme:'dark',eadeTextSize:'normal',eadeMotion:'reduce',eadeTreeView:'visual'});
 });
 
 test('borrar progreso y favoritos no borra ajustes ni datos ajenos',()=>{

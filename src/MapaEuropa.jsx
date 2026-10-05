@@ -13,6 +13,7 @@ import locationsSvgUrl from "../prototypes/euv-locations/euv-locations-crop.svg?
 import locationsDataUrl from "../prototypes/euv-locations/corridor-locations.json?url";
 import burgundianDataUrl from "../prototypes/euv-locations/burgundian-locations.json?url";
 import { loadTextAsset, loadJsonAsset, forgetTextAsset } from "./utils/loadAsset.js";
+import { clampMapViewBox, fittedMapViewBox, resizeMapViewBox, zoomMapViewBox } from "./mapViewport.js";
 import { mapLocationsForGovernment, pilotBurgundianGovernmentsFor, pilotDisputedHungarianClaimsFor, pilotImperialFrameFor, pilotLocationContext, pilotLocationsFor } from "./data/locationMapPilot.js";
 import { buildPoliticalMapIndex, inspectMapRegion } from "./data/politicalMapIndex.js";
 import { PERSONAS } from "./personas.jsx";
@@ -27,7 +28,7 @@ import {
 } from "./Territorios";
 
 const MAP_ZOOM_FACTOR = 0.82;
-const MAP_MIN_VISIBLE_RATIO = 0.015;
+const MAP_MIN_ZOOM = 0.015;
 const MAP_PAN_STEP = 0.12;
 const MAP_DRAG_THRESHOLD = 4;
 
@@ -45,35 +46,6 @@ function parseViewBox(svg) {
   return { x: 0, y: 0, width, height };
 }
 
-function clampViewBox(box, original, minVisibleRatio = MAP_MIN_VISIBLE_RATIO) {
-  if (!original) return box;
-  const aspect = original.width / original.height;
-  const minWidth = original.width * minVisibleRatio;
-  const requestedCenterX = box.x + box.width / 2;
-  const requestedCenterY = box.y + box.height / 2;
-  let width = Math.max(minWidth, Math.min(original.width, box.width));
-  let height = width / aspect;
-
-  if (height > original.height) {
-    height = original.height;
-    width = height * aspect;
-  }
-
-  const minX = original.x;
-  const maxX = original.x + original.width - width;
-  const minY = original.y;
-  const maxY = original.y + original.height - height;
-  const centeredX = requestedCenterX - width / 2;
-  const centeredY = requestedCenterY - height / 2;
-
-  return {
-    x: Math.max(minX, Math.min(maxX, centeredX)),
-    y: Math.max(minY, Math.min(maxY, centeredY)),
-    width,
-    height,
-  };
-}
-
 function viewBoxString(box) {
   return `${box.x} ${box.y} ${box.width} ${box.height}`;
 }
@@ -89,9 +61,11 @@ export function MapaEuropa({ seleccion, anioGlobal = null, onSelectTerritorio, o
   const pintadosRef = useRef(new Set());
   const originalViewBoxRef = useRef(null);
   const initialViewBoxRef = useRef(null);
+  const viewportRef = useRef(null);
   const dragRef = useRef(null);
   const suppressClickRef = useRef(false);
   const [viewBox, setViewBox] = useState(null);
+  const [originalMapFrame, setOriginalMapFrame] = useState(null);
   const [mapReady, setMapReady] = useState(false);
   const [mapError, setMapError] = useState(false);
   const [mapAttempt, setMapAttempt] = useState(0);
@@ -119,6 +93,11 @@ export function MapaEuropa({ seleccion, anioGlobal = null, onSelectTerritorio, o
 
     let cancelled = false;
     svgInyectadoRef.current = false;
+    originalViewBoxRef.current = null;
+    initialViewBoxRef.current = null;
+    viewportRef.current = null;
+    setViewBox(null);
+    setOriginalMapFrame(null);
     setMapReady(false);
     setMapError(false);
     setPilotData(null);
@@ -149,9 +128,16 @@ export function MapaEuropa({ seleccion, anioGlobal = null, onSelectTerritorio, o
       && initialViewport.y >= original.y - paddingY
       && initialViewport.x + initialViewport.width <= original.x + original.width + paddingX
       && initialViewport.y + initialViewport.height <= original.y + original.height + paddingY;
-    const restored = savedViewFits ? clampViewBox(initialViewport, original) : original;
+    const bounds = containerRef.current.getBoundingClientRect();
+    const viewport = { width: bounds.width || original.width, height: bounds.height || original.height };
+    const fitted = fittedMapViewBox(original, viewport);
+    const restored = savedViewFits
+      ? clampMapViewBox(initialViewport, original, viewport, MAP_MIN_ZOOM)
+      : fitted;
     originalViewBoxRef.current = original;
-    initialViewBoxRef.current = original;
+    setOriginalMapFrame(original);
+    initialViewBoxRef.current = fitted;
+    viewportRef.current = viewport;
 
     svg.removeAttribute("width");
     svg.removeAttribute("height");
@@ -167,6 +153,39 @@ export function MapaEuropa({ seleccion, anioGlobal = null, onSelectTerritorio, o
     }).catch(() => { if (!cancelled) setMapError(true); });
     return () => { cancelled = true; };
   }, [mapAssetUrl, mapAttempt]);
+
+  // The Atlas can resize when its panels, view mode, or viewport change. Keep
+  // the same zoom and center while recalculating the outer zoom limit.
+  useEffect(() => {
+    const node = containerRef.current;
+    const original = originalMapFrame;
+    if (!mapReady || !node || !original) return;
+    const update = rect => {
+      if (!(rect.width > 0 && rect.height > 0)) return;
+      const next = { width: rect.width, height: rect.height };
+      const previous = viewportRef.current;
+      viewportRef.current = next;
+      if (!previous) {
+        setViewBox(current => current ? clampMapViewBox(current, original, next, MAP_MIN_ZOOM) : fittedMapViewBox(original, next));
+        initialViewBoxRef.current = fittedMapViewBox(original, next);
+        return;
+      }
+      if (Math.abs(previous.width - next.width) < 1 && Math.abs(previous.height - next.height) < 1) return;
+      const fitted = fittedMapViewBox(original, next);
+      initialViewBoxRef.current = fitted;
+      setViewBox(current => current
+        ? resizeMapViewBox(current, original, previous, next, MAP_MIN_ZOOM)
+        : fitted);
+    };
+    if (typeof ResizeObserver !== 'undefined') {
+      const observer = new ResizeObserver(entries => update(entries[0]?.contentRect || node.getBoundingClientRect()));
+      observer.observe(node);
+      return () => observer.disconnect();
+    }
+    const onResize = () => update(node.getBoundingClientRect());
+    window.addEventListener('resize', onResize);
+    return () => window.removeEventListener('resize', onResize);
+  }, [mapReady, originalMapFrame]);
 
   useEffect(() => {
     if (viewBox) onViewportChange?.(viewBox);
@@ -283,7 +302,7 @@ export function MapaEuropa({ seleccion, anioGlobal = null, onSelectTerritorio, o
   const updateViewBox = useCallback((producer) => {
     setViewBox((current) => {
       if (!current || !originalViewBoxRef.current) return current;
-      return clampViewBox(producer(current), originalViewBoxRef.current);
+      return clampMapViewBox(producer(current), originalViewBoxRef.current, viewportRef.current, MAP_MIN_ZOOM);
     });
   }, []);
 
@@ -291,19 +310,7 @@ export function MapaEuropa({ seleccion, anioGlobal = null, onSelectTerritorio, o
     setViewBox((current) => {
       const original = originalViewBoxRef.current;
       if (!current || !original) return current;
-      const minWidth = original.width * MAP_MIN_VISIBLE_RATIO;
-      const targetWidth = Math.max(minWidth, Math.min(original.width, current.width * factor));
-      if (Math.abs(targetWidth - current.width) < 0.0001) return current;
-      const aspect = original.width / original.height;
-      const targetHeight = targetWidth / aspect;
-      const centerX = current.x + current.width / 2;
-      const centerY = current.y + current.height / 2;
-      return clampViewBox({
-        x: centerX - targetWidth / 2,
-        y: centerY - targetHeight / 2,
-        width: targetWidth,
-        height: targetHeight,
-      }, original);
+      return zoomMapViewBox(current, factor, original, viewportRef.current, MAP_MIN_ZOOM);
     });
   }, []);
 
@@ -352,7 +359,7 @@ export function MapaEuropa({ seleccion, anioGlobal = null, onSelectTerritorio, o
       x: drag.viewBox.x - deltaX * (drag.viewBox.width / Math.max(1, drag.rect.width)),
       y: drag.viewBox.y - deltaY * (drag.viewBox.height / Math.max(1, drag.rect.height)),
     };
-    setViewBox(clampViewBox(next, originalViewBoxRef.current));
+    setViewBox(clampMapViewBox(next, originalViewBoxRef.current, viewportRef.current, MAP_MIN_ZOOM));
   };
 
   const selectRegionAt = (target) => {

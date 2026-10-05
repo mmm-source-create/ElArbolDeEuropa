@@ -27,6 +27,21 @@ export function assetGraph(manifest,entry) {
  visit(entry);
  return {css:[...css],js:[...js]};
 }
+export const STATIC_PAGE_ENTRIES=Object.freeze({
+ english:'src/english/EnglishPage.jsx',
+ historia:'src/stories/StoryPage.jsx',
+ persona:'src/public/PublicSite.jsx',
+ dinastia:'src/public/DynastyPage.jsx',
+ territorio:'src/public/TerritoryPage.jsx',
+});
+const STATIC_PAGE_NAMES=Object.freeze({english:'EnglishPage',historia:'StoryPage',persona:'PublicSite',dinastia:'DynastyPage',territorio:'TerritoryPage'});
+export function assetsForStaticPage(manifest,kind) {
+ let entry=STATIC_PAGE_ENTRIES[kind];
+ if(!entry)throw new Error(`Tipo de ficha sin punto de entrada: ${kind}`);
+ if(!manifest[entry])entry=Object.entries(manifest).find(([,item])=>item.name===STATIC_PAGE_NAMES[kind]&&item.file?.endsWith('.js'))?.[0];
+ if(!entry)throw new Error(`Entrada dinámica ausente del manifest: ${kind}`);
+ return assetGraph(manifest,entry);
+}
 export function makeStaticDocument(shell,{html,meta},page,assets) {
  if(!/<div id="root"><\/div>/.test(shell))throw new Error('El shell no contiene una raíz vacía');
  const metaKeys=new Set(meta.meta.map(([a,key])=>`${a}:${key}`));

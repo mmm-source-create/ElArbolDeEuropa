@@ -1,5 +1,3 @@
-import { PERSONAS } from '../personas.jsx';
-
 const bayern = {title:'Historisches Lexikon Bayerns · Bayerische Teilungen',url:'https://www.historisches-lexikon-bayerns.de/Lexikon/Bayerische_Teilungen',locator:'División de 1392 y sucesiones de Straubing, Ingolstadt y Landshut'};
 const bayernTerritory = {title:'Historisches Lexikon Bayerns · Territorialentwicklung in Altbayern',url:'https://www.historisches-lexikon-bayerns.de/Lexikon/Territorialentwicklung_in_Altbayern_%281180-1505%29',locator:'Particiones y reunión de 1505'};
 const kurpfalz = {title:'Historisches Lexikon Bayerns · Kurpfalz: Politische Geschichte',url:'https://www.historisches-lexikon-bayerns.de/Lexikon/Artikel_45783',locator:'Cronología de electores, pérdida de 1623 y restitución de 1648'};
@@ -12,8 +10,9 @@ const johann2 = {title:'Deutsche Biographie · Johann II. von Kleve',url:'https:
 const selectedPalatines = new Set(['LUIS3PAL','LUIS4PAL','FRED1PAL','PHILIPPAL','LUIS5PAL','FRED2PAL','OTTHEINRICHPAL','FRED3PAL','LUIS6PAL','FRED4PAL','FED5PALBOH','KARLLUDWIGPAL','KARL2PAL','PHILIPWILHELMPAL','JUANGUILLERMOPAL']);
 const rhineland = new Set(['WILHELM4JULBERG','JOHN3CLEVES','WILHELM5CLEVES','JOHNWILLIAMCLEVES','WOLFGANGWILHELMNEUBURG','PHILIPWILHELMPAL','JUANGUILLERMOPAL','JOHN1CLEVES','JOHN2CLEVES','JOHNSIGBRAND','GEORGEWILLIAMBRAND','FREDWILGREAT','FRED1PRUSSIA']);
 const bavarianBranches = new Set(['ESTEBAN3BAV','FED1BAV','JUAN2BAV','ENRIQ16BAV','ERNESTBAV','GUILLERMO3BAV','GUILLERMO2BAV','LUIS7BAV','JUAN3BAV','ALB3BAV','LUIS8BAV','LUIS9BAV','JUAN4BAV','SIGISBAV','JORGE1BAV','ALB4BAV']);
+export function buildCorridorReviews(people) {
 const reviewed = {};
-for (const person of PERSONAS) {
+for (const person of people) {
   for (const government of person.gobiernos || []) {
     const {territorio,desde,hasta,titulo} = government;
     let sources = null;
@@ -44,4 +43,5 @@ for (const [id,field,source,note] of [
   ['JOHN3CLEVES','mother',johann2,'La biografía identifica a Matilde de Hesse como madre.'],
 ]) reviewed[`person:${id}:${field}`] = {certainty:'documented',sources:[source],note,reviewedAt:'2026-10-04',editor:'El Árbol de Europa'};
 
-export const CORRIDOR_REVIEWS = Object.freeze(reviewed);
+return Object.freeze(reviewed);
+}

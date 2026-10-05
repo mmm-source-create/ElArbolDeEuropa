@@ -7,6 +7,7 @@ import SiteFooter from '../components/SiteFooter.jsx';
 import {useJson,usePublicMeta,PersonaMiniCard} from './PublicSite.jsx';
 import {normalizarBusquedaPublica,slugPublico} from '../utils/personLabels.js';
 import './dynasty.css';
+import '../styles/theme.css';
 
 export default function DynastyPage({slug,initialData=null}) {
   const {data:d,loading,error}=useJson(`/dinastias-meta/${encodeURIComponent(slug)}.json`,initialData);
