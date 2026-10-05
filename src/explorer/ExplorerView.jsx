@@ -1146,7 +1146,7 @@ export default function ExplorerView({ vm }) {
                   <section id="bio-section-fuentes" data-bio-section="fuentes" className="bio-scroll-section bio-source-tab" aria-labelledby="bio-heading-fuentes" tabIndex={-1}>
                     <h4 id="bio-heading-fuentes" className="bio-section-heading">Fuentes</h4>
                     <DocumentationNotes persona={personaBio}/>
-                    <EvidencePanel personId={personaBio.id} compact />
+                    <EvidencePanel person={personaBio} personNameById={id=>BY_ID[id]?.nombre} compact />
                     <p>Las fechas y relaciones incompletas se indican en la ficha. Consulta el método y la bibliografía general para interpretar los datos.</p>
                     <a className="bio-full-profile-link" href="/es/fuentes">Fuentes y metodología <ExternalLink size={11}/></a>
                     <button type="button" onClick={()=>setInfoProyecto('reportar')}>Sugerir una corrección documentada</button>

@@ -8,6 +8,7 @@ import SiteHeader from '../components/SiteHeader.jsx';
 import SiteFooter from '../components/SiteFooter.jsx';
 import {slugPublico} from '../utils/personLabels.js';
 import './public.css';
+import '../styles/theme.css';
 const claseTexto=c=>String(c||'Territorio').replaceAll('_',' ');
 export function TerritoryPage({slug,initialData=null}) {
  const {data:t,loading,error}=useJson(`/territorios-meta/${encodeURIComponent(slug)}.json`,initialData);

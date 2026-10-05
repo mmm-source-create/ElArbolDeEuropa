@@ -35,9 +35,10 @@ export function personClaims(person, reviews = CLAIM_REVIEWS) {
   };
   if (year(person.nac) !== null) add('birth','Nacimiento',person.nac,interval(person.nac),person.documentacion?.fechas?.nac?.nota);
   if (year(person.muer) !== null) add('death','Fallecimiento',person.muer,interval(person.muer),person.documentacion?.fechas?.muer?.nota);
-  if (person.padre) add('father','Padre',person.padre);
-  if (person.madre) add('mother','Madre',person.madre);
-  for (const id of [...new Set([person.conyuge,...(person.conyuges || [])].filter(Boolean))]) add(`spouse:${id}`,'Matrimonio o vínculo conyugal',id);
+  if (person.padre || person.padres?.[0]?.id) add('father','Padre',person.padre || person.padres[0].id);
+  if (person.madre || person.padres?.[1]?.id) add('mother','Madre',person.madre || person.padres[1].id);
+  const spouseIds = person.conyugesIds || [person.conyuge,...(person.conyuges || [])].map(value => typeof value === 'string' ? value : value?.id);
+  for (const id of [...new Set(spouseIds.filter(Boolean))]) add(`spouse:${id}`,'Matrimonio o vínculo conyugal',id);
   for (const government of person.gobiernos || person.reinados || []) {
     const key = [government.territorio, government.desde, government.hasta, government.titulo].join(':');
     add(`government:${key}`,'Gobierno',government,interval(government.desde,government.hasta));

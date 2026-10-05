@@ -8,6 +8,7 @@ import { englishRoute } from './routes.js';
 import { StoryReader } from '../stories/StoryPage.jsx';
 import ReadingSkeleton from '../stories/ReadingSkeleton.jsx';
 import '../stories/stories.css';
+import '../styles/theme.css';
 
 export default function EnglishPage({ page = null, pathname }) {
   const route = page || englishRoute(pathname || (typeof window === 'undefined' ? '/en/' : window.location.pathname));

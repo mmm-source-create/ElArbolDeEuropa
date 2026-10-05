@@ -3,6 +3,7 @@ import {RELEVOS} from './src/content/sucesiones/index.js';
 import {accesosDe} from './src/data/crowns.js';
 import {HISTORIA_DINASTIAS} from "./src/content/dinastias/index.js";
 import { sourcesForPerson } from "./src/content/sources.js";
+import { buildCorridorReviews } from "./src/evidence/corridorReviews.js";
 import { TERRITORIOS, componentesDe } from "./src/data/territorios.js";
 import fs from "node:fs/promises";
 import path from "node:path";
@@ -1098,6 +1099,14 @@ async function generarPortadasPersona() {
       documentacion: persona.documentacion || null,
       nacAprox: Boolean(persona.nacAprox),
       muerAprox: Boolean(persona.muerAprox),
+      padre: persona.padre || null,
+      madre: persona.madre || null,
+      conyuge: persona.conyuge || null,
+      conyugesIds: [persona.conyuge, persona.conyuge2, ...(persona.conyuges || [])].filter(Boolean),
+      evidenceNames: Object.fromEntries([...new Set([
+        persona.padre, persona.madre, persona.conyuge, persona.conyuge2, ...(persona.conyuges || []),
+        ...RELEVOS.filter(item => item.sucesor?.persona === persona.id).flatMap(item => [item.predecesor?.persona, item.sucesor?.persona]),
+      ].filter(Boolean))].map(id => [id, BY_ID[id]?.nombre]).filter(([, name]) => name)),
       reinos: Array.isArray(persona.reinos) ? persona.reinos : [],
       reinados: reinadosLigero(persona),
       accesosCoronas: accesosDe(persona,ACCESOS_CORONAS,RELEVOS),
@@ -1174,6 +1183,8 @@ const rows = buildRows(PERSONAS, gen);
 const layout = computeTreeLayout(rows, BY_ID, HIJOS_POR_ID);
 
 await fs.mkdir(OUTPUT_DIR, { recursive: true });
+const corridorReviews = buildCorridorReviews(PERSONAS);
+await fs.writeFile(path.join(OUTPUT_DIR, "corridorReviews.js"), `export const CORRIDOR_REVIEWS=Object.freeze(${JSON.stringify(corridorReviews)});\n`, "utf8");
 const catalogStats = await generarCatalogosPublicos();
 await fs.writeFile(OUTPUT_FILE, JSON.stringify({ gen, rows, layout }), "utf8");
 await fs.writeFile(META_FILE, JSON.stringify({

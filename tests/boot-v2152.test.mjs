@@ -20,10 +20,11 @@ before(async () => {
   await build({configFile: false, publicDir: false, logLevel: 'error', plugins: [{
     name: 'boot-route-fixtures', enforce: 'pre',
     resolveId(id, importer) {
-      if (importer?.endsWith('/src/main.jsx') && ['./App.jsx', './public/StaticPublicPage.jsx'].includes(id)) return '\0boot:' + id;
+      if (importer?.endsWith('/src/main.jsx') && ['./App.jsx', './public/PublicSite.jsx'].includes(id)) return '\0boot:' + id;
     },
     load(id) {
-      if (id.startsWith('\0boot:')) return `import React from 'react';export default function Page(){return React.createElement('h1',null,'${id.includes('StaticPublicPage') ? 'SSG' : 'SPA'}');}`;
+      if (id === '\0boot:./public/PublicSite.jsx') return `import React from 'react';export function PersonPage(){return React.createElement('h1',null,'SSG');}`;
+      if (id === '\0boot:./App.jsx') return `import React from 'react';export default function Page(){return React.createElement('h1',null,'SPA');}`;
     },
   }], build: {ssr: 'src/main.jsx', outDir: temp, minify: false, rolldownOptions: {output: {entryFileNames: 'entry.mjs'}}}});
   if (nodeEnv === undefined) delete process.env.NODE_ENV; else process.env.NODE_ENV = nodeEnv;

@@ -7,7 +7,6 @@ import { documentaryLife } from "../utils/documentaryDates.js";
 import { SOURCE_SECTIONS } from "../content/sources.js";
 import EvidencePanel,{EvidenceMark} from '../evidence/EvidencePanel.jsx';
 import {formatClaimDate,personClaims} from '../evidence/claims.js';
-import {PERSONAS} from '../personas.jsx';
 import React, { useEffect, useMemo, useState } from "react";
 import {
   ArrowLeft,
@@ -37,6 +36,7 @@ import "./public.css";
 import { responsiveImage } from "../utils/responsiveImage.js";
 import ReadingSkeleton from "../stories/ReadingSkeleton.jsx";
 import { translatedEquivalent } from "../english/routes.js";
+import '../styles/theme.css';
 
 const PUBLIC_SITE_URL = resolveSiteUrl(import.meta.env.VITE_SITE_URL);
 const BUILD_VERSION = String(SITE_META.buildVersion || SITE_META.personCount || "v2");
@@ -479,7 +479,7 @@ export function PersonContent({ persona, locale = 'es', path, onExplore }) {
   const atlasPath = en ? `/es/?atlas=1&familia=${encodeURIComponent(persona.id)}` : `${profilePath}?atlas=1`;
   const peoplePath = en ? '/en/people' : '/es/personas';
   const sourcePath = en ? '/en/methodology' : '/es/fuentes';
-  const claims=personClaims(PERSONAS.find(record=>record.id===persona.id));
+  const claims=personClaims(persona);
   const fact=field=>claims.find(claim=>claim.field===field);
   return <main className="public-main public-person-page">
     <Breadcrumbs locale={locale} items={[{label:label('Inicio','Home'),href:en?'/en/':'/es/'},{label:label('Personas','People'),href:peoplePath},{label:persona.nombre}]}/>
@@ -502,7 +502,7 @@ export function PersonContent({ persona, locale = 'es', path, onExplore }) {
       </div>
       {en ? <details className="public-original-content"><summary>Governments and documentary notes · Spanish original</summary><div lang="es"><RecordedGovernments persona={persona}/><CrownTimeline key={persona.id} persona={persona} accesos={persona.accesosCoronas} fuentes={persona.fuentes}/><DocumentationNotes persona={persona}/></div><p className="public-translation-note"><a href={persona.esPath}>Read the complete Spanish record →</a></p></details> : <><CrownTimeline key={persona.id} persona={persona} accesos={persona.accesosCoronas} fuentes={persona.fuentes}/><DocumentationNotes persona={persona}/></>}
       {!!persona.fuentes?.length&&<section className="public-content-card"><span>{label('Documentación','Documentation')}</span><h2>{label('Fuentes de esta ficha','Sources for this profile')}</h2><ul>{persona.fuentes.map((f,i)=><li key={f.url||i}><a href={f.url} target="_blank" rel="noreferrer">{f.titulo}</a></li>)}</ul><p className="public-muted">{label('Referencias biográficas y de contexto.','Biographical and contextual references in their original language.')} <a href={sourcePath}>{label('Consultar metodología y bibliografía completa','Sources and methodology')}</a>.</p></section>}
-      <EvidencePanel personId={persona.id} locale={locale} />
+      <EvidencePanel person={persona} locale={locale} />
       {!!persona.historias?.length&&<section className="public-section public-person-section"><div className="public-section-heading"><div><span>{label('Historias relacionadas','Related stories')}</span><h2>{label('Aparece en estos recorridos','Follow this person through history')}</h2></div></div><div className="public-story-grid">{persona.historias.map(h=><a key={h.id} className="public-story-card" href={h.path||rutaEntidad('historia',h.slug)}><span>{en&&!h.path?'Story · Spanish original':label('Historia','Story')}</span><h3>{h.titulo}</h3><p>{h.subtitulo}</p><b>{label('Comenzar','Start reading')}<ArrowRight size={13}/></b></a>)}</div></section>}
       <section className="public-section public-person-section"><div className="public-section-heading"><div><span>{label('Seguir explorando','Keep exploring')}</span><h2>{en?`More paths from ${persona.nombre}`:`Más caminos desde ${persona.nombre}`}</h2></div></div><div className="public-follow-grid">
         <div><h3><GitBranch size={16}/>{label('Familia','Family')}</h3>{[...(persona.padres||[]),...(persona.conyuges||[]),...(persona.hijos||[])].slice(0,6).map(p=><PersonaMiniCard key={p.id} persona={p} compact locale={locale}/>)}</div>

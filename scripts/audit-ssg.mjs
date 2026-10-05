@@ -6,7 +6,7 @@ import {loadEnv} from 'vite';
 import {STATIC_DATA_ID,STATIC_FOLDERS,validatePage} from '../src/public/staticData.js';
 import {DEFAULT_SITE_URL,entityMeta,publicMeta} from '../src/public/publicMeta.js';
 import {canonicalDynastySlug} from '../src/data/dynastyAliases.js';
-import {routesFromSitemap,assetGraph,escapeHtml} from './ssg-utils.mjs';
+import {routesFromSitemap,assetsForStaticPage,escapeHtml} from './ssg-utils.mjs';
 
 // Comprueba el artefacto escrito, sin confiar en el informe del generador.
 export function auditDocument(html,page,assets,siteUrl=DEFAULT_SITE_URL) {
@@ -44,13 +44,14 @@ export async function auditBuild(root=process.cwd()) {
  const dist=path.join(root,'dist');
  const siteUrl=loadEnv('production',root,'VITE_').VITE_SITE_URL||DEFAULT_SITE_URL;
  const routes=routesFromSitemap(await fs.readFile(path.join(dist,'sitemap-full.xml'),'utf8'),siteUrl);
- const assets=assetGraph(JSON.parse(await fs.readFile(path.join(dist,'.vite/manifest.json'),'utf8')),'src/public/StaticPublicPage.jsx');
- for(const asset of [...assets.css,...assets.js])await fs.access(path.join(dist,asset));
+ const manifest=JSON.parse(await fs.readFile(path.join(dist,'.vite/manifest.json'),'utf8'));
  const shell=await fs.readFile(path.join(dist,'index.html'),'utf8');
  if(!shell.includes('<div id="root"></div>')||shell.includes(STATIC_DATA_ID))throw new Error('El shell del Atlas ha sido reemplazado');
  const counts={persona:0,dinastia:0,territorio:0,historia:0,english:0},errors=auditScriptPolicy(shell,siteUrl).map(e=>`Shell: ${e}`);
  for(const route of routes) {
   try {
+   const assets=assetsForStaticPage(manifest,route.kind);
+   for(const asset of [...assets.css,...assets.js])await fs.access(path.join(dist,asset));
    const data=JSON.parse(await fs.readFile(path.join(dist,STATIC_FOLDERS[route.kind],`${route.slug}${route.chapter?`/capitulo/${route.chapter}`:""}.json`),'utf8'));
    const page={schema:1,...route,data};
    if(!validatePage(page))throw new Error('JSON fuente incompleto');

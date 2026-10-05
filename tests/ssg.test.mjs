@@ -4,7 +4,7 @@ import fs from 'node:fs/promises';
 import {JSDOM} from 'jsdom';
 import {staticRoute,validatePage,initialPageForLocation,readInitialPage,serializePage} from '../src/public/staticData.js';
 import {entityMeta,publicMeta} from '../src/public/publicMeta.js';
-import {routesFromSitemap,assetGraph,makeStaticDocument} from '../scripts/ssg-utils.mjs';
+import {routesFromSitemap,assetGraph,assetsForStaticPage,makeStaticDocument} from '../scripts/ssg-utils.mjs';
 import {auditDocument} from '../scripts/audit-ssg.mjs';
 import {person,dynasty,territory} from './fixtures/static-pages.mjs';
 const shell='<!doctype html><html lang="es"><head><title>Portada</title><meta name="description" content="Inicio"><meta property="og:title" content="Portada"><link rel="canonical" href="https://example.org"><link rel="alternate" href="https://example.org"></head><body><div id="root"></div></body></html>';
@@ -30,6 +30,19 @@ test('los estilos y preloads recorren imports comunes, sin cargar el motor diná
  const manifest={ficha:{file:'ficha.js',css:['ficha.css'],imports:['shared'],dynamicImports:['atlas']},shared:{file:'shared.js',css:['shared.css'],imports:['ficha']},atlas:{file:'atlas.js'}};
  assert.deepEqual(assetGraph(manifest,'ficha'),{css:['ficha.css','shared.css'],js:['ficha.js','shared.js']});
  delete manifest.shared;assert.throws(()=>assetGraph(manifest,'ficha'),/manifest/);
+});
+test('cada tipo de ficha pública carga solo su módulo y las dependencias estáticas compartidas',()=>{
+ const manifest={
+  'src/public/PublicSite.jsx':{file:'persona.js',name:'PublicSite',src:'src/public/PublicSite.jsx',isDynamicEntry:true,css:['persona.css'],imports:['shared']},
+  'src/public/DynastyPage.jsx':{file:'dynasty.js',name:'DynastyPage',src:'src/public/DynastyPage.jsx',isDynamicEntry:true,imports:['shared']},
+  '_StoryPage-test.js':{file:'story.js',name:'StoryPage',imports:['shared']},
+  shared:{file:'shared.js',css:['shared.css']},
+  'src/public/StaticPublicPage.jsx':{file:'all-pages.js'},
+ };
+ assert.deepEqual(assetsForStaticPage(manifest,'persona'),{css:['persona.css','shared.css'],js:['persona.js','shared.js']});
+ assert.deepEqual(assetsForStaticPage(manifest,'dinastia'),{css:['shared.css'],js:['dynasty.js','shared.js']});
+ assert.deepEqual(assetsForStaticPage(manifest,'historia'),{css:['shared.css'],js:['story.js','shared.js']});
+ assert.throws(()=>assetsForStaticPage(manifest,'unknown'),/punto de entrada/);
 });
 test('el HTML contiene metadatos únicos, contenido y JSON seguro incluso con texto hostil',()=>{
  const page=structuredClone(person);page.data.biografia='</script><img src=x onerror=alert(1)> & $& \u2028 \u2029';

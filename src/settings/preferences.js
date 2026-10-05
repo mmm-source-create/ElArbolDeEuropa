@@ -20,7 +20,8 @@ export function applyPreferences(preferences, doc = document, win = window) {
   const dark=value.theme==='dark'||value.theme==='system'&&win.matchMedia?.('(prefers-color-scheme: dark)').matches;
   doc.documentElement.dataset.eadeTheme=dark?'dark':'light';
   doc.documentElement.dataset.eadeTextSize=value.textSize;
-  doc.documentElement.dataset.eadeMotion=value.motion;
+  const reducedMotion=value.motion==='reduce'||value.motion==='system'&&win.matchMedia?.('(prefers-reduced-motion: reduce)').matches;
+  doc.documentElement.dataset.eadeMotion=reducedMotion?'reduce':'normal';
   doc.documentElement.dataset.eadeTreeView=value.treeView;
   return value;
 }
