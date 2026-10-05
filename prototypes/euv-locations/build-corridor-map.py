@@ -73,14 +73,17 @@ def burgundian_jurisdictions(first_year, last_year):
 def main():
     source = json.loads((HERE / "corridor-source.json").read_text())
     corrections = json.loads((HERE / "corridor-overrides.json").read_text())
+    corrections.extend(source.get("corrections", []))
     old_paths = paths(ROOT / "src/MapChart_Map.svg")
     new_paths = paths(HERE / "euv-locations-crop.svg")
     territories = {t["name"] for t in source["territories"]}
-    old_ids = {old_id for territory in source["territories"]
-               for version in territory["versions"] for old_id in version["oldIds"]}
-    missing = old_ids - old_paths.keys()
+    corridor_old_ids = {old_id for territory in source["territories"]
+                         for version in territory["versions"] for old_id in version["oldIds"]}
+    missing = corridor_old_ids - old_paths.keys()
     if missing:
         raise ValueError(f"Missing old polygons: {sorted(missing)}")
+    map_region_ids = set(source.get("mapRegionIds", []))
+    old_ids = corridor_old_ids | (map_region_ids & old_paths.keys())
     for item in corrections:
         if item["territory"] not in territories or item["id"] not in new_paths:
             raise ValueError(f"Invalid correction: {item}")
@@ -148,16 +151,60 @@ def main():
 
     burgundy, burgundian_corrections = burgundian_jurisdictions(source["from"], source["through"])
     output_territories.extend(burgundy)
+    hungary_balkans = json.loads((HERE / "hungary-balkans-locations.json").read_text())
+    if [territory["name"] for territory in hungary_balkans["territories"]] != [
+        "Núcleo oriental de Zápolya", "Hungría real", "Croacia habsbúrgica",
+        "Transilvania", "Ocupación habsbúrgica de Transilvania",
+        "Hungría otomana", "Bosnia y Herzegovina otomanas",
+        "Balcanes meridionales otomanos", "República de Ragusa",
+        "Despotado de Serbia", "Reino de Bosnia",
+        "Principado de Valaquia", "Principado de Moldavia"]:
+        raise ValueError("Unexpected Hungary/Balkans layers")
+    additional_territories = hungary_balkans["territories"]
+    balkan_corrections = [
+        {"territory": evidence["territory"], "id": location_id, "action": "add",
+         "from": evidence["from"], "through": evidence["through"],
+         "reason": evidence["reason"], "source": evidence["source"]}
+        for evidence in hungary_balkans["evidence"] for location_id in evidence["ids"]
+    ]
+    location_crosswalk = {
+        old_id: {
+            "ids": sorted(location_id for location_id, fraction in overlaps[old_id].items()
+                           if fraction >= THRESHOLD),
+            "borderline": sorted(location_id for location_id, fraction in overlaps[old_id].items()
+                                  if .25 <= fraction < THRESHOLD),
+        }
+        for old_id in sorted(old_ids)
+    }
+    corridor_unmapped = sorted(old_id for old_id in corridor_old_ids
+                               if not overlaps.get(old_id))
+    crosswalk_unmapped = sorted(old_id for old_id, match in location_crosswalk.items()
+                                if not match["ids"])
+    missing_source_map_ids = sorted(map_region_ids - old_paths.keys())
     out = {
         "from": source["from"], "through": source["through"],
         "method": "Atlas territorial versions; >=55% of each new location inside the old territory polygon, with sourced corrections",
-        "territories": output_territories, "overrides": corrections + burgundian_corrections,
-        "audit": {"oldIds": len(old_shapes), "newPathsConsidered": looked,
+        "locationCrosswalk": {
+            "method": "Each new location is assigned to an Atlas regional polygon when at least 55% of its area lies inside it; 25–55% matches remain review candidates.",
+            "threshold": THRESHOLD,
+            "newIdsByOldId": location_crosswalk,
+            "unmappedOldIds": crosswalk_unmapped,
+            "legacyIdsWithoutSvgPath": missing_source_map_ids,
+        },
+        "territories": output_territories,
+        "additionalTerritories": additional_territories,
+        "overrides": corrections + burgundian_corrections + balkan_corrections,
+        "audit": {"oldIds": len(corridor_old_ids),
+                  "crosswalkOldIds": len(old_shapes),
+                  "newPathsConsidered": looked,
                   "newPathsTotal": len(new_paths),
-                  "oldWithNoCandidate": sorted(i for i, hits in overlaps.items() if not hits),
-                  "exactNameOldIds": sum(1 for i in old_shapes if i in new_paths),
+                  "oldWithNoCandidate": corridor_unmapped,
+                  "crosswalkOldWithNoCandidate": crosswalk_unmapped,
+                  "legacyIdsWithoutSvgPath": missing_source_map_ids,
+                  "exactNameOldIds": sum(1 for i in corridor_old_ids if i in new_paths),
                   "burgundianJurisdictionsReused": len(burgundy),
-                  "borderlineIds": sorted({i for t in output_territories for v in t["versions"] for i in v["borderline"]}),
+                  "hungaryBalkansJurisdictions": len(hungary_balkans["territories"]),
+                  "borderlineIds": sorted({i for t in output_territories + additional_territories for v in t["versions"] for i in v["borderline"]}),
                   "sourceCaveat": "Geometric candidate coverage is not a historical border or ownership claim."}
     }
     output = HERE / "corridor-locations.json"

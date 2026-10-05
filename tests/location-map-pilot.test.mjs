@@ -2,7 +2,7 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import path from 'node:path';
 import test from 'node:test';
-import { pilotBurgundianGovernmentsFor, pilotImperialFrameFor, pilotLocationContext, pilotLocationsFor } from '../src/data/locationMapPilot.js';
+import { mapLocationsForGovernment, pilotBurgundianGovernmentsFor, pilotImperialFrameFor, pilotLocationContext, pilotLocationsFor } from '../src/data/locationMapPilot.js';
 
 const data = JSON.parse(fs.readFileSync(path.resolve(import.meta.dirname,
   '../prototypes/euv-locations/corridor-locations.json'), 'utf8'));
@@ -18,7 +18,11 @@ test('the Atlas trial paints only audited dated jurisdictions, not every possess
   assert(!pilotLocationsFor(data, 'Prusia', 1525).includes('Malbork'));
   assert(!pilotLocationsFor(data, 'Hungría', 1541).includes('Buda'),
     'post-Mohács Hungary remains unassigned pending a successor-state audit');
-  assert.deepEqual(pilotLocationsFor(data, 'Polonia', 1570), []);
+  const polishCrown = pilotLocationsFor(data, 'Polonia', 1570);
+  assert(polishCrown.includes('Kyiv'), 'the Crown retains its post-Lublin territories');
+  assert(!polishCrown.includes('Vilnius'), 'the Lithuanian core remains politically distinct');
+  const commonwealth = pilotLocationsFor(data, 'Polonia-Lituania', 1570);
+  assert(commonwealth.includes('Kyiv') && commonwealth.includes('Vilnius'));
 });
 
 test('western Atlas aliases preserve the separate kingdoms and dated French annexations', () => {
@@ -30,6 +34,20 @@ test('western Atlas aliases preserve the separate kingdoms and dated French anne
   assert(!pilotLocationsFor(data, 'Inglaterra', 1603).includes('Edinburgh'));
   assert(pilotLocationsFor(data, 'Irlanda', 1500).includes('Dublin'));
   assert(!pilotLocationsFor(data, 'Irlanda', 1500).includes('Galway'));
+});
+
+test('Balkan country views follow each polity and do not absorb tributary principalities', () => {
+  assert(pilotLocationsFor(data, 'Serbia', 1426).includes('Belgrad'));
+  assert(!pilotLocationsFor(data, 'Serbia', 1427).includes('Belgrad'));
+  assert(pilotLocationsFor(data, 'Bosnia', 1462).includes('Vrhbosna'));
+  assert(pilotLocationsFor(data, 'Bosnia', 1463).includes('Vrhbosna'));
+  assert(pilotLocationsFor(data, 'Valaquia', 1500).includes('Bucharest'));
+  assert(pilotLocationsFor(data, 'Moldavia', 1500).includes('Suceava'));
+  assert(!pilotLocationsFor(data, 'Imperio otomano', 1500).includes('Bucharest'));
+  assert(!pilotLocationsFor(data, 'Imperio otomano', 1500).includes('Suceava'));
+  assert(pilotLocationsFor(data, 'Moldavia', 1537).includes('Tighina'));
+  assert(!pilotLocationsFor(data, 'Moldavia', 1538).includes('Tighina'));
+  assert(pilotLocationsFor(data, 'Imperio otomano', 1538).includes('Tighina'));
 });
 
 test('an inspected location reports its distinct political context and sourced correction', () => {
@@ -56,4 +74,16 @@ test('the emperor receives a legal backdrop without claiming that he governs eac
   assert(!pilotImperialFrameFor(data, 1548).includes('Dijon'));
   assert.deepEqual(pilotLocationsFor(data, 'Sacro Imperio', 1548), []);
   assert(pilotLocationContext(data, 'Utrecht', 1548).some(item => item.name === 'Utrecht'));
+});
+
+test('the Atlas uses reviewed layers first and the all-territory crosswalk for unmigrated jurisdictions', () => {
+  const lithuania = mapLocationsForGovernment(data, {territorio:'Lituania'}, 1570, 'SIG3POL', ['Vilnius']);
+  const lithuaniaAfterPilotRange = mapLocationsForGovernment(data, {territorio:'Lituania'}, 1700, 'AUG2POL', ['Vilnius']);
+  const unreviewed = mapLocationsForGovernment(data, {territorio:'Habsburgo'}, 1500, 'MAX1HAB', ['Aargau','Upper_Alsace']);
+  const earlyFrance = mapLocationsForGovernment(data, {territorio:'Francia'}, 1400, 'CAR6FRA', ['Paris']);
+
+  assert(lithuania.includes('Vilnius'));
+  assert(lithuaniaAfterPilotRange.includes('Vilnius'), 'the Atlas keeps older dated coverage outside the pilot timeline');
+  assert(unreviewed.length > 0, 'legacy territories with no named corridor layer use the measured geometry bridge');
+  assert.deepEqual(earlyFrance, [], 'an explicit source date prevents the generic bridge from projecting a future boundary');
 });

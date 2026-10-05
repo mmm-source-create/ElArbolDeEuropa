@@ -2,6 +2,7 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import path from 'node:path';
 import test from 'node:test';
+import { pilotLocationsFor } from '../src/data/locationMapPilot.js';
 
 const lab = path.resolve(import.meta.dirname, '../prototypes/euv-locations');
 const data = JSON.parse(fs.readFileSync(path.join(lab, 'corridor-locations.json'), 'utf8'));
@@ -17,14 +18,18 @@ function ids(name, year) {
 }
 
 test('territorial crosswalk uses only SVG IDs and never assigns one ID twice within a corridor', () => {
-  assert.equal(data.territories.length, 77);
+  assert.equal(data.territories.length, 105);
   for (let year = data.from; year <= data.through; year++) {
-    for (const corridor of ['Iberia', 'Italia', 'Centroeuropa', 'Polonia–Lituania', 'Francia e islas británicas']) {
+    for (const corridor of ['Iberia', 'Italia', 'Centroeuropa', 'Europa septentrional y oriental', 'Francia e islas británicas']) {
       const owner = new Map();
       for (const territory of data.territories.filter(item => item.corridor === corridor)) {
         for (const id of ids(territory.name, year)) {
           assert(pathIds.has(id), `${id} is absent from the cropped map`);
-          assert(!owner.has(id), `${id} is claimed by ${owner.get(id)} and ${territory.name} in ${year}`);
+          const prior = owner.get(id);
+          const documentedOccupation = prior === 'Ducado de Pomerania'
+            && territory.name === 'Pomerania bajo ocupación sueca' && year >= 1630 && year <= 1636;
+          assert(!prior || documentedOccupation,
+            `${id} is claimed by ${prior} and ${territory.name} in ${year}`);
           owner.set(id, territory.name);
         }
       }
@@ -148,7 +153,54 @@ test('Polish-Lithuanian corridor separates incorporation, fief and the 1569 unio
   assert(!ids('Gran Ducado de Lituania', 1569).has('Kyiv'));
   assert(ids('Gran Ducado de Lituania', 1569).has('Vilnius'));
   for (const id of ['Suceava', 'Iasi', 'Slupsk']) assert(!ids('Corona de Polonia', 1500).has(id));
-  assert.equal(ids('Corona de Polonia', 1570).size, 0, 'later changes need their own audit');
+  assert(ids('Corona de Polonia', 1570).has('Kyiv'), 'the dated Union of Lublin transfer remains on the Crown side');
+});
+
+test('northern and eastern jurisdictions change at documented dates without swallowing enclaves', () => {
+  assert(ids('Corona de Polonia', 1569).has('Kyiv'));
+  assert(!ids('Gran Ducado de Lituania', 1569).has('Kyiv'));
+  assert(ids('Gran Ducado de Lituania', 1569).has('Vilnius'));
+  assert(ids('Prusia Real', 1500).has('Gdansk'));
+  assert(!ids('Corona de Polonia', 1500).has('Gdansk'));
+  assert.equal(data.territories.find(t => t.name === 'Corona de Polonia').color,
+    data.territories.find(t => t.name === 'Prusia Real').color);
+
+  assert(ids('Estonia sueca', 1561).has('Tallinn'));
+  assert(ids('Livonia del Commonwealth', 1569).size > 0);
+  assert(!ids('Livonia del Commonwealth', 1629).size);
+  assert(ids('Livonia sueca', 1629).size > 0);
+  assert(ids('Riga libre', 1570).has('Riga'));
+  assert(ids('Riga bajo la Mancomunidad', 1581).has('Riga'));
+  assert(ids('Riga bajo Suecia', 1621).has('Riga'));
+  assert(!ids('Livonia del Commonwealth', 1581).has('Riga'));
+
+  for (const island of ['Orkney', 'Shetland']) {
+    assert(ids('Reino de Noruega', 1468).has(island));
+    assert(!ids('Reino de Noruega', 1469).has(island));
+    assert(ids('Escocia', 1469).has(island));
+  }
+  assert(ids('Islas Feroe bajo la Corona noruega', 1500).has('Torshavn'));
+  assert(ids('Reino de Dinamarca', 1644).has('Halmstad'));
+  assert(ids('Reino de Dinamarca', 1644).has('Visby'));
+  assert(ids('Reino de Suecia', 1645).has('Halmstad'));
+  assert(ids('Reino de Suecia', 1645).has('Visby'));
+  assert(!ids('Reino de Suecia', 1644).has('Halmstad'));
+  assert(ids('Ösel bajo Dinamarca', 1644).has('Kuressaare'));
+  assert(ids('Ösel bajo Suecia', 1645).has('Kuressaare'));
+  assert(!ids('Mecklemburgo', 1648).has('Wismar'));
+  assert(ids('Señorío sueco de Wismar', 1648).has('Wismar'));
+
+  assert(ids('República de Pskov', 1509).has('Pskov'));
+  assert(!ids('República de Pskov', 1510).size);
+  assert(ids('Moscovia y Zarato de Rusia', 1510).has('Pskov'));
+  assert(ids('Principado de Tver', 1484).has('Tver'));
+  assert(!ids('Principado de Tver', 1485).size);
+  assert(ids('Moscovia y Zarato de Rusia', 1485).has('Tver'));
+  assert(ids('Principado de Riazán', 1520).has('Ryazan'));
+  assert(ids('Moscovia y Zarato de Rusia', 1521).has('Ryazan'));
+  assert(ids('Kanato de Kazán', 1551).has('Kazan'));
+  assert(ids('Moscovia y Zarato de Rusia', 1552).has('Kazan'));
+  assert(pilotLocationsFor(data, 'Noruega', 1468).includes('Torshavn'));
 });
 
 test('Central European jurisdictions respect dated transfers and separate imperial estates', () => {
@@ -182,6 +234,54 @@ test('Central European jurisdictions respect dated transfers and separate imperi
   assert(ids('Principado episcopal de Trento', 1500).has('Cavalese'));
   assert(ids('Arzobispado principesco de Salzburgo', 1500).has('Muhldorf'));
   assert(ids('Arzobispado principesco de Salzburgo', 1500).has('Laufen'));
+});
+
+test('Balkan layers fill regional areas while keeping tributary principalities distinct', () => {
+  const layers = data.additionalTerritories.filter(item => item.corridor === 'Hungría y Balcanes');
+  const layer = name => layers.find(item => item.name === name);
+  const layerIds = (name, year) => new Set([...layer(name).versions].reverse().find(version => version.from <= year)?.ids || []);
+  const expected = ['Núcleo oriental de Zápolya', 'Hungría real', 'Croacia habsbúrgica',
+    'Transilvania', 'Ocupación habsbúrgica de Transilvania', 'Hungría otomana',
+    'Bosnia y Herzegovina otomanas', 'Balcanes meridionales otomanos', 'República de Ragusa',
+    'Despotado de Serbia', 'Reino de Bosnia', 'Principado de Valaquia', 'Principado de Moldavia'];
+  assert.deepEqual(layers.map(item => item.name), expected);
+
+  assert.equal(layerIds('Balcanes meridionales otomanos', 1500).size, 172,
+    'the Ottoman map should fill regional locations instead of showing only 29 scattered sites');
+  assert.ok(layerIds('Balcanes meridionales otomanos', 1500).has('Cherven'));
+  assert.ok(layerIds('Balcanes meridionales otomanos', 1500).has('Tripolitsa'));
+  assert.ok(!layerIds('Balcanes meridionales otomanos', 1500).has('Dinaric_Alps2'));
+  assert.ok(!layerIds('Balcanes meridionales otomanos', 1500).has('Pindus_Mountains1'));
+
+  assert.ok(layerIds('Reino de Bosnia', 1462).has('Vrhbosna'));
+  assert.equal(layerIds('Reino de Bosnia', 1463).size, 0);
+  assert.ok(layerIds('Bosnia y Herzegovina otomanas', 1463).has('Vrhbosna'));
+  assert.ok(layerIds('Despotado de Serbia', 1426).has('Belgrad'));
+  assert.ok(!layerIds('Despotado de Serbia', 1427).has('Belgrad'));
+  assert.ok(!layerIds('Balcanes meridionales otomanos', 1520).has('Belgrad'));
+  assert.ok(layerIds('Balcanes meridionales otomanos', 1521).has('Belgrad'));
+
+  assert.ok(layerIds('Principado de Valaquia', 1500).has('Bucharest'));
+  assert.ok(!layerIds('Balcanes meridionales otomanos', 1500).has('Bucharest'));
+  assert.ok(layerIds('Principado de Moldavia', 1483).has('Chilia'));
+  assert.ok(!layerIds('Principado de Moldavia', 1484).has('Chilia'));
+  assert.ok(layerIds('Balcanes meridionales otomanos', 1484).has('Chilia'));
+  assert.ok(layerIds('Principado de Moldavia', 1537).has('Tighina'));
+  assert.ok(!layerIds('Principado de Moldavia', 1538).has('Tighina'));
+  assert.ok(layerIds('Balcanes meridionales otomanos', 1538).has('Tighina'));
+
+  for (let year = data.from; year <= data.through; year++) {
+    const owner = new Map();
+    for (const territory of layers) {
+      const version = [...territory.versions].reverse().find(item => item.from <= year);
+      for (const id of version?.ids || []) {
+        assert.ok(pathIds.has(id), `${id} must exist in the map in ${year}`);
+        assert.ok(!/(mountain|alps|carpathian)/i.test(id), `${id} is physical relief, not a polity`);
+        assert.ok(!owner.has(id), `${id} overlaps ${owner.get(id)} and ${territory.name} in ${year}`);
+        owner.set(id, territory.name);
+      }
+    }
+  }
 });
 
 test('Hungarian-Croatian aggregate stops at Mohács and does not reclaim Venetian Dalmatia', () => {
