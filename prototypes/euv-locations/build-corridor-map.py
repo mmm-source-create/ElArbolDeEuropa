@@ -77,7 +77,7 @@ def main():
     old_paths = paths(ROOT / "src/MapChart_Map.svg")
     new_paths = paths(HERE / "euv-locations-crop.svg")
     territories = {t["name"] for t in source["territories"]}
-    territories.update(t["name"] for name in ["hungary-balkans-locations.json", "imperial-core-locations.json"]
+    territories.update(t["name"] for name in ["hungary-balkans-locations.json", "imperial-core-locations.json", "priority-territories-locations.json"]
                        for t in json.loads((HERE / name).read_text())["territories"])
     corridor_old_ids = {old_id for territory in source["territories"]
                          for version in territory["versions"] for old_id in version["oldIds"]}
@@ -162,7 +162,7 @@ def main():
         "Despotado de Serbia", "Reino de Bosnia",
         "Principado de Valaquia", "Principado de Moldavia"]:
         raise ValueError("Unexpected Hungary/Balkans layers")
-    additional_territories = hungary_balkans["territories"] + json.loads((HERE / "imperial-core-locations.json").read_text())["territories"]
+    additional_territories = hungary_balkans["territories"] + json.loads((HERE / "imperial-core-locations.json").read_text())["territories"] + json.loads((HERE / "priority-territories-locations.json").read_text())["territories"]
     balkan_corrections = [
         {"territory": evidence["territory"], "id": location_id, "action": "add",
          "from": evidence["from"], "through": evidence["through"],

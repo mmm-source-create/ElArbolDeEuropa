@@ -1578,7 +1578,7 @@ export const TERRITORIOS = Object.freeze({
 });
 
 export const TITULOS_POR_CLASE = {"reinado": ["Rey", "Rey de Romanos", "Alto rey", "Reina"], "imperio": ["Emperatriz", "Emperador"], "ducado": ["Duquesa", "Duque"], "archiducado": ["Archiduque", "Archiduquesa"], "condado": ["Conde", "Conde palatino", "Condesa"], "electorado": ["Elector"], "principado": ["Princesa", "Gran župan", "Príncipe"], "gran_ducado": ["Gran duque", "Gran duquesa"], "gran_principado": ["Gran príncipe"], "zarato": ["Zarina", "Zar"], "margraviato": ["Margrave"], "marquesado": ["Marqués"], "landgraviato": ["Landgrave"], "señorío": ["Señor", "Señora"], "regencia": ["Regente"], "estatuderato": ["Estatúder"], "emirato": ["Emir"], "sultanato": ["Sultán"], "despotado": ["Déspota"], "banato": ["Ban"], "voivodato": ["Voivoda"], "pontificado": ["Papa"], "gobierno": ["Gobernante", "Soberano", "Soberana", "Gobernador", "Gobernadora", "Dogo"], "vizcondado": ["Vizconde", "Vizcondesa"]};
-export const CONDICIONES = ["efectivo","jure uxoris","corregente","regencia","pretensión","titular","rival","disputado","rama"];
+export const CONDICIONES = ["efectivo","jure uxoris","corregente","regencia","gobierno delegado","ocupación","pretensión","titular","rival","disputado","rama"];
 export function componentesDe(nombre, vistos = new Set()) {
  if(vistos.has(nombre)) return []; vistos.add(nombre);
  return [...new Set((TERRITORIOS[nombre]?.componentes || []).flatMap(n => [n,...componentesDe(n,vistos)]))];

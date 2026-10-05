@@ -5,11 +5,12 @@ const read = name => JSON.parse(fs.readFileSync(new URL(name, import.meta.url)))
 const data = read('corridor-locations.json');
 const balkans = read('hungary-balkans-locations.json');
 const imperial = read('imperial-core-locations.json');
+const priority = read('priority-territories-locations.json');
 const canonical = read('corridor-overrides.json');
 const names = new Set(balkans.territories.map(t => t.name));
 const key = o => [o.territory,o.id,o.action,o.from,o.through].join('|');
 const canonicalKeys = new Set(canonical.map(key));
-data.additionalTerritories = [...balkans.territories, ...imperial.territories];
+data.additionalTerritories = [...balkans.territories, ...imperial.territories, ...priority.territories];
 data.overrides = [
   ...canonical,
   ...data.overrides.filter(o => !names.has(o.territory) && !canonicalKeys.has(key(o))),

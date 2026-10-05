@@ -19,8 +19,9 @@
     .year-row{display:flex;gap:10px;align-items:center}.year-row output{font:1.8rem Georgia,serif;color:#f3d895;min-width:78px}
     .layout{display:grid;grid-template-columns:minmax(0,1fr) minmax(240px,310px);gap:16px}
     .map-shell{border-radius:12px;overflow:hidden;background:#faf7ef;border:1px solid #8b806f;min-width:0}
-    #map{height:min(69vh,730px);min-height:400px;cursor:grab;touch-action:none}#map:active{cursor:grabbing}#map svg{display:block;width:100%;height:100%}
+    #map-stage{height:min(69vh,730px);min-height:400px;cursor:grab;touch-action:none}#map-stage:active{cursor:grabbing}#map-stage svg{display:block;width:100%;height:100%}
     #info{background:#f3eada;border-top:1px solid #c9bfae;padding:12px 15px;color:#2e281f;min-height:58px}
+    #info a{color:#725019}#info a,#mosaic-legend a{display:inline-block;margin-right:.65em}
     aside{background:#342f29;border:1px solid #766c5e;border-radius:12px;padding:17px;max-height:min(69vh,730px);overflow:auto}
     aside dl{display:grid;grid-template-columns:auto 1fr;gap:5px 12px}aside dt{color:#cfc0ad}aside dd{margin:0}#old-ids{max-height:9rem;overflow:auto;overflow-wrap:anywhere}
     #mosaic-legend{list-style:none;padding:0;margin:12px 0;display:grid;gap:8px}
@@ -29,21 +30,21 @@
     .mosaic-meta{display:block;color:#baad9c;font-size:.84rem}.mosaic-empty{color:#d7b581}
     .note{border-left:4px solid #af8245;margin:23px 0;padding:3px 0 3px 16px}
     footer{font-size:.9rem;padding-bottom:18px}
-    @media(max-width:900px){body{padding:10px}.layout{grid-template-columns:1fr}aside{max-height:none}#map{height:58vh;min-height:330px}input[type=range]{width:180px}}
+    @media(max-width:900px){body{padding:10px}.layout{grid-template-columns:1fr}aside{max-height:none}#map-stage{height:58vh;min-height:330px}input[type=range]{width:180px}}
   </style>
 </head>
 <body>
   <header>
     <p class="eyebrow">Laboratorio cartográfico · mapa en evaluación</p>
     <h1>Corredores territoriales del Atlas</h1>
-    <p>Elige un año para ver todos los gobiernos territoriales del Atlas que tienen geometría disponible en EU V Locations (1400–1650). Cada territorio conserva su color al cambiar de año. Las 114 jurisdicciones revisadas usan capas fechadas y fuentes; el resto se proyecta mediante una correspondencia geométrica general, marcada como aproximada. Busca en la leyenda o pulsa una location para consultar autoridades y referencias. El marco gris del Sacro Imperio es referencia jurídica, no dominio personal del emperador.</p>
-    <p><a href="./">Comparar mapas</a> · <a href="./carlos-v.html">Dominios de Carlos V</a> · <a href="./burgundian-succession.html">Sucesión borgoñona</a></p>
+    <p>Elige un año para ver todos los gobiernos territoriales del Atlas que tienen geometría disponible en EU V Locations (1400–1650). Cada territorio conserva su color al cambiar de año. Las jurisdicciones revisadas usan capas fechadas y fuentes; el resto se proyecta mediante una correspondencia geométrica general, marcada como aproximada. Busca en la leyenda o pulsa una location para consultar autoridades y referencias. El marco gris del Sacro Imperio es referencia jurídica, no dominio personal del emperador.</p>
+    <p><a href="/es/?atlas=1">Volver al Atlas</a> · <a href="https://github.com/mmm-source-create/ElArbolDeEuropa/blob/main/prototypes/euv-locations/README.md" target="_blank" rel="noopener noreferrer">Método y fuentes</a></p>
   </header>
   <main>
     <div class="controls">
       <button type="button" id="mosaic-toggle" aria-pressed="true">Ver una jurisdicción</button>
       <label for="corridor" id="corridor-control">Corredor
-        <select id="corridor"><option>Iberia</option><option>Italia</option><option>Centroeuropa</option><option>Europa septentrional y oriental</option><option>Francia e islas británicas</option><option>Borgoña e Imperio</option><option>Hungría y Balcanes</option></select>
+        <select id="corridor"><option>Iberia</option><option>Italia</option><option>Centroeuropa</option><option>Europa septentrional y oriental</option><option>Francia e islas británicas</option><option>Borgoña e Imperio</option><option>Hungría y Balcanes</option><option>Mediterráneo oriental</option></select>
       </label>
       <label for="territory" id="territory-control">Jurisdicción
         <select id="territory"></select>
@@ -56,12 +57,14 @@
       </label>
       <datalist id="location-ids"></datalist>
       <button type="button" id="search-button">Consultar</button>
+      <button type="button" id="zoom-out" aria-label="Alejar mapa conjunto">−</button>
+      <button type="button" id="zoom-in" aria-label="Acercar mapa conjunto">+</button>
       <button type="button" id="reset-view">Centrar mapa</button>
     </div>
     <p id="status" role="status">Cargando mapa y datos…</p>
     <div class="layout">
       <div class="map-shell">
-        <div id="map" aria-label="Mosaico de los gobiernos territoriales registrados en el Atlas"></div>
+        <div id="map-stage" aria-label="Mosaico de los gobiernos territoriales registrados en el Atlas"></div>
         <div id="info" aria-live="polite">Mosaico político: elige un año o pulsa una location para ver los gobiernos representados.</div>
       </div>
       <aside>
@@ -85,21 +88,33 @@
     </div>
     <div class="note">
       <h2>Qué se ha trasladado</h2>
-      <p>El visor reúne las capas territoriales investigadas para comparar sus cambios año a año. El mapa del Atlas usa ya este recorte EU V Locations; el resto de sus gobiernos se proyecta mediante una correspondencia geométrica general hasta que cada capa se revise por separado. Una location nueva se asigna automáticamente cuando al menos el 55 % de su área cae dentro de una región antigua. Esa coincidencia es una ayuda cartográfica, no una frontera histórica probada. Las correcciones fechadas incluyen su fuente y las fichas del Atlas muestran las referencias disponibles para cada afirmación. <a href="./README.md">Método, auditoría y fuentes</a>.</p>
+      <p>El visor reúne las capas territoriales investigadas para comparar sus cambios año a año. El mapa del Atlas usa ya este recorte EU V Locations; el resto de sus gobiernos se proyecta mediante una correspondencia geométrica general hasta que cada capa se revise por separado. Una location nueva se asigna automáticamente cuando al menos el 55 % de su área cae dentro de una región antigua. Esa coincidencia es una ayuda cartográfica, no una frontera histórica probada. Las correcciones fechadas incluyen su fuente y las fichas del Atlas muestran las referencias disponibles para cada afirmación. <a href="https://github.com/mmm-source-create/ElArbolDeEuropa/blob/main/prototypes/euv-locations/README.md" target="_blank" rel="noopener noreferrer">Método, auditoría y fuentes</a>.</p>
     </div>
   </main>
   <footer>Geometría: <a href="https://www.mapchart.net/eu-v-locations.html">MapChart</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>.</footer>
   <script type="module">
     import {atlasMosaicPalette,atlasPoliticalMosaicAt} from './atlas-mosaic.js';
-    const FRAMES={Iberia:{x:518,y:158,w:77,h:66},Italia:{x:575,y:143,w:64,h:68},Centroeuropa:{x:592,y:91,w:134,h:116},'Europa septentrional y oriental':{x:615,y:20,w:170,h:145},'Francia e islas británicas':{x:493,y:82,w:145,h:120},'Borgoña e Imperio':{x:522,y:85,w:170,h:105},'Hungría y Balcanes':{x:600,y:137,w:83,h:72}};
+    import mapUrl from './euv-locations-crop.svg?url';
+    import dataUrl from './corridor-locations.json?url';
+    import {reviewedLayerLocations} from '../../src/data/locationMapPilot.js';
+    import {clampMapViewBox,clipMapToBounds} from '../../src/mapViewport.js';
+    const FRAMES={Iberia:{x:518,y:158,w:77,h:66},Italia:{x:575,y:143,w:64,h:68},Centroeuropa:{x:592,y:91,w:134,h:116},'Europa septentrional y oriental':{x:615,y:20,w:170,h:145},'Francia e islas británicas':{x:493,y:82,w:145,h:120},'Borgoña e Imperio':{x:522,y:85,w:170,h:105},'Hungría y Balcanes':{x:600,y:137,w:83,h:72},'Mediterráneo oriental':{x:640,y:185,w:100,h:60}};
     const FULL={x:475,y:15,w:315,h:240};
     const TERRITORY_FRAMES={'Cerdeña':{x:581,y:175,w:25,h:31},'Trinacria':{x:592,y:180,w:34,h:32},'Venecia':{x:588,y:143,w:100,h:76}};
     const BASE='#d8d6ce';const $=id=>document.getElementById(id);
     const state={svg:null,paths:new Map(),data:null,painted:new Set(),view:{...FULL},viewMode:'mosaic',palette:null,mosaic:null};
-    function activeVersion(territory,year){return [...territory.versions].reverse().find(v=>v.from<=year)||territory.versions[0]}
+    function activeVersion(territory,year){return [...territory.versions].reverse().find(v=>v.from<=year)||{from:year,oldIds:[],ids:[],borderline:[]}}
     function allTerritories(){return [...state.data.territories,...(state.data.additionalTerritories||[])]}
     function selectedTerritory(){return allTerritories().find(t=>t.name===$('territory').value&&t.corridor===$('corridor').value)}
-    function viewBox(){state.svg?.setAttribute('viewBox',`${state.view.x} ${state.view.y} ${state.view.w} ${state.view.h}`)}
+    function viewBox(){
+      if(!state.svg)return;
+      const rect=$('map-stage').getBoundingClientRect();
+      const box=clampMapViewBox({x:state.view.x,y:state.view.y,width:state.view.w,height:state.view.h},{x:FULL.x,y:FULL.y,width:FULL.w,height:FULL.h},rect);
+      state.view={x:box.x,y:box.y,w:box.width,h:box.height};
+      state.svg.setAttribute('viewBox',`${box.x} ${box.y} ${box.width} ${box.height}`);
+      $('zoom-out').disabled=box.width>=Math.min(FULL.w,FULL.h*rect.width/rect.height)-.001;
+    }
+    function zoomBy(scale){const current=state.view,w=current.w*scale,h=current.h*scale;state.view={x:current.x+(current.w-w)/2,y:current.y+(current.h-h)/2,w,h};viewBox()}
     function correctedIds(territory,year,ids){const result=new Set(ids);for(const item of state.data.overrides||[]){if(item.territory!==territory.name||item.from>year||item.through<year)continue;if(item.action==='add')result.add(item.id);if(item.action==='remove')result.delete(item.id)}return [...result]}
     function setInfo(id){
       const info=$('info');if(!id){info.textContent=state.viewMode==='mosaic'?'Mosaico de gobiernos territoriales: elige un año o pulsa una location para ver las atribuciones disponibles.':'Pulsa una location para consultar la correspondencia.';return}
@@ -175,7 +190,7 @@
     function render(){
       if(state.viewMode==='mosaic'){renderMosaic();return}
       const territory=selectedTerritory();if(!territory)return;
-      const year=Number($('year').value),baseVersion=activeVersion(territory,year),version={...baseVersion,ids:correctedIds(territory,year,baseVersion.ids)};$('year-output').value=String(year);
+      const year=Number($('year').value),baseVersion=activeVersion(territory,year),version={...baseVersion,ids:reviewedLayerLocations(state.data,territory,year)};$('year-output').value=String(year);
       for(const id of state.painted){const path=state.paths.get(id);if(path){path.style.fill=BASE;path.style.stroke=BASE}}
       state.painted.clear();
       for(const id of version.ids){const path=state.paths.get(id);if(!path)continue;path.style.fill=territory.color;path.style.stroke=territory.color;state.painted.add(id)}
@@ -222,23 +237,30 @@
       for(const id of state.paths.keys())if(id.toLocaleLowerCase('es').includes(query.trim().toLocaleLowerCase('es'))){const option=document.createElement('option');option.value=id;list.append(option);if(++count===35)break}
     }
     async function load(){
-      const [svgResponse,dataResponse]=await Promise.all([fetch('./euv-locations-crop.svg'),fetch('./corridor-locations.json')]);
+      const [svgResponse,dataResponse]=await Promise.all([fetch(mapUrl),fetch(dataUrl)]);
       if(!svgResponse.ok||!dataResponse.ok)throw new Error('No se pudo cargar el mapa o los datos');
       state.data=await dataResponse.json();
       const doc=new DOMParser().parseFromString(await svgResponse.text(),'image/svg+xml');if(doc.querySelector('parsererror'))throw new Error('SVG no válido');
       const svg=doc.documentElement;svg.querySelector('metadata')?.remove();svg.querySelector('#legend-svg')?.remove();svg.removeAttribute('width');svg.removeAttribute('height');
       svg.setAttribute('preserveAspectRatio','xMidYMid meet');svg.setAttribute('role','img');svg.setAttribute('aria-label','EU V Locations: territorio seleccionado');
-      state.svg=svg;state.paths=new Map([...svg.querySelectorAll('#map > path[id]')].map(p=>[p.id,p]));$('map').replaceChildren(svg);
-      $('map').addEventListener('click',event=>{const path=event.target.closest('path[id]');if(!path)return;$('location-search').value=path.id;setInfo(path.id)});
-      $('map').addEventListener('wheel',event=>{event.preventDefault();const scale=event.deltaY>0?1.12:1/1.12;
-        const rect=$('map').getBoundingClientRect(),px=(event.clientX-rect.left)/rect.width,py=(event.clientY-rect.top)/rect.height;
+      clipMapToBounds(svg,{x:FULL.x,y:FULL.y,width:FULL.w,height:FULL.h});
+      svg.style.backgroundColor='#dbe7e6';svg.querySelector('#svg-background')?.setAttribute('fill','#dbe7e6');
+      state.svg=svg;state.paths=new Map([...svg.querySelectorAll('#map > path[id]')].map(p=>[p.id,p]));$('map-stage').replaceChildren(svg);
+      $('map-stage').addEventListener('click',event=>{const path=event.target.closest('path[id]');if(!path)return;$('location-search').value=path.id;setInfo(path.id)});
+      $('map-stage').addEventListener('wheel',event=>{event.preventDefault();const scale=event.deltaY>0?1.12:1/1.12;
+        const rect=$('map-stage').getBoundingClientRect(),px=(event.clientX-rect.left)/rect.width,py=(event.clientY-rect.top)/rect.height;
         state.view={x:state.view.x+state.view.w*px*(1-scale),y:state.view.y+state.view.h*py*(1-scale),w:state.view.w*scale,h:state.view.h*scale};viewBox()
       },{passive:false});
-      let drag=null;$('map').addEventListener('pointerdown',event=>{drag={x:event.clientX,y:event.clientY,view:{...state.view}};$('map').setPointerCapture(event.pointerId)});
-      $('map').addEventListener('pointermove',event=>{if(!drag)return;const rect=$('map').getBoundingClientRect();state.view={...drag.view,x:drag.view.x-(event.clientX-drag.x)/rect.width*drag.view.w,y:drag.view.y-(event.clientY-drag.y)/rect.height*drag.view.h};viewBox()});
-      $('map').addEventListener('pointerup',()=>{drag=null});$('map').addEventListener('pointercancel',()=>{drag=null});
-      state.palette=atlasMosaicPalette(state.data);viewBox();updateTerritories();setMosaicMode(true)
+      let drag=null;$('map-stage').addEventListener('pointerdown',event=>{drag={x:event.clientX,y:event.clientY,view:{...state.view}};$('map-stage').setPointerCapture(event.pointerId)});
+      $('map-stage').addEventListener('pointermove',event=>{if(!drag)return;const rect=$('map-stage').getBoundingClientRect();state.view={...drag.view,x:drag.view.x-(event.clientX-drag.x)/rect.width*drag.view.w,y:drag.view.y-(event.clientY-drag.y)/rect.height*drag.view.h};viewBox()});
+      $('map-stage').addEventListener('pointerup',()=>{drag=null});$('map-stage').addEventListener('pointercancel',()=>{drag=null});
+      const queryYear=Number(new URLSearchParams(location.search).get('year'));
+      if(Number.isInteger(queryYear)&&queryYear>=1400&&queryYear<=1650)$('year').value=queryYear;
+      state.palette=atlasMosaicPalette(state.data);viewBox();updateTerritories();setMosaicMode(true);
+      new ResizeObserver(()=>viewBox()).observe($('map-stage'))
     }
+    $('zoom-out').addEventListener('click',()=>zoomBy(1.2));
+    $('zoom-in').addEventListener('click',()=>zoomBy(1/1.2));
     $('mosaic-toggle').addEventListener('click',()=>setMosaicMode(state.viewMode!=='mosaic'));
     $('mosaic-filter').addEventListener('input',updateMosaicLegend);
     $('corridor').addEventListener('change',()=>{if(state.data){updateTerritories();if(state.viewMode==='mosaic')setMosaicMode(true)}});$('territory').addEventListener('change',()=>{if(state.data){focusTerritory();render()}});

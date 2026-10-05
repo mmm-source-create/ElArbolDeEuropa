@@ -461,6 +461,7 @@ export function MapaEuropa({ seleccion, anioGlobal = null, onSelectTerritorio, o
       </div>
       {seleccion && <details className="mapa-color-legend">
         <summary>¿Por qué estos colores?</summary>
+        <p><a href="/es/mapa-completo" target="_blank" rel="noopener noreferrer">Probar el mapa conjunto · 1400–1650</a></p>
         <div className="mapa-authority-key">
           <span><i className="mapa-key-solid" aria-hidden="true"/>Autoridad territorial</span>
           <span><i className="mapa-key-delegated" aria-hidden="true"/>Gobierno delegado</span>

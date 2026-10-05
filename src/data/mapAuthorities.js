@@ -4,6 +4,7 @@ import {personClaims} from '../evidence/claims.js';
 import {mapLocationsForGovernment, pilotBurgundianGovernmentsFor,
   pilotDisputedHungarianClaimsFor, pilotLocationsFor, reviewedMapLayers} from './locationMapPilot.js';
 import {authorityExtensionFor, REVOLT_SOURCE} from './atlasAuthorityExtensions.js';
+import {authorityMapScope} from './authorityMapScopes.js';
 import {cerdanyaBorderCorrection, southernPyreneesCorrection} from './mapBorderCorrections.js';
 
 export const AUTHORITY_LABELS = Object.freeze({
@@ -51,6 +52,7 @@ export function mapAuthoritiesForPerson(person, year, mapData = null, {includeCl
       ids = [...pilotLocationsFor(mapData, 'Austria Interior', year, person.id),
         ...(year >= 1619 ? pilotLocationsFor(mapData, 'Austria', year, person.id) : [])];
     }
+    const scope = mapData && authorityMapScope(person.id, government.territorio, year);
     const extension = mapData && authorityExtensionFor(government.territorio, year, person.id);
     const border = mapData && cerdanyaBorderCorrection(government.territorio, year);
     const southernBorder = mapData && southernPyreneesCorrection(government.territorio, year);
@@ -65,8 +67,8 @@ export function mapAuthoritiesForPerson(person, year, mapData = null, {includeCl
         || ['Flandes','Brabante'].includes(government.territorio) && year >= 1576);
     entries.push({person, government, claim: claims.get(government) || null,
       territory: government.territorio, kind: revolt ? 'disputed' : authorityKind(government, year),
-      paint: effective, ids, mapSources: [...(extension ? [extension.source] : []), ...(revolt ? [REVOLT_SOURCE] : []), ...(border?.action === 'add' && !border.occupation ? [border.source] : []), ...(southernBorder?.action === 'add' ? [southernBorder.source] : [])],
-      mapNote: revolt ? 'Soberanía y control disputados durante la revuelta. La trama no afirma posesión uniforme de toda la provincia.' : extension?.note || [border?.action === 'add' ? border.note : null, southernBorder?.action === 'add' ? southernBorder.note : null].filter(Boolean).join(' ') || null});
+      paint: effective, ids, mapSources: [...(scope ? [scope.source, ...(scope.additionalSources || []), ...(scope.evidenceGroups || []).map(group => group.source)].filter(Boolean) : []), ...(extension ? [extension.source] : []), ...(revolt ? [REVOLT_SOURCE] : []), ...(border?.action === 'add' && !border.occupation ? [border.source] : []), ...(southernBorder?.action === 'add' ? [southernBorder.source] : [])],
+      mapNote: revolt ? 'Soberanía y control disputados durante la revuelta. La trama no afirma posesión uniforme de toda la provincia.' : scope?.note || extension?.note || [border?.action === 'add' ? border.note : null, southernBorder?.action === 'add' ? southernBorder.note : null].filter(Boolean).join(' ') || null});
   }
   if (!mapData) return entries;
 

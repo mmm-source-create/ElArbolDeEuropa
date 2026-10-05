@@ -3,6 +3,7 @@
 import {imperialFrameIds} from './imperialFrame.js';
 import {authorityExtensionFor} from './atlasAuthorityExtensions.js';
 import {applyMapBorderCorrections} from './mapBorderCorrections.js';
+import {authorityMapScope} from './authorityMapScopes.js';
 
 const layerIndexes = new WeakMap();
 export function reviewedMapLayers(data) {
@@ -21,6 +22,14 @@ function layerIndex(data) {
 
 export function pilotJurisdictionsFor(territory, year, personId = null) {
   if (territory === 'Sacro Imperio') return [];
+  if (territory === 'Herzegovina') return ['Núcleo de Herzegovina'];
+  if (territory === 'Morea') return personId === 'THEODORE2MOREA' ? ['Núcleo de Mistra'] : [];
+  if (territory === 'Lorena') return ['Núcleo de Lorena'];
+  if (territory === 'Chipre') return ['Núcleo del reino de Chipre'];
+  if (territory === 'Brunswick') return personId === 'WILLIAMYOUNGERBRUN' ? ['Núcleo de Lüneburg-Celle']
+    : personId === 'GEORGEBRUNSCAL' ? ['Núcleo de Calenberg-Hannover'] : [];
+  if (territory === 'Baden') return personId === 'CHRISTOPH1BADEN' ? ['Núcleo de Baden']
+    : personId === 'BERNHARD3BADEN' ? ['Núcleo de Baden-Baden'] : ['Núcleo de Baden-Durlach'];
   if (territory === 'Brandeburgo') return personId === 'JOHNALCHEMIST' ? [] : ['Núcleo de Brandeburgo'];
   if (territory === 'Sajonia') return ['ALBERTSAX','GEORGESAX','HENRYPIOUSSAX'].includes(personId)
     || personId === 'MORITZSAX' && year < 1547 ? ['Sajonia albertina'] : ['Sajonia electoral'];
@@ -48,7 +57,8 @@ export function pilotJurisdictionsFor(territory, year, personId = null) {
   if (territory === 'Transilvania') return ['Transilvania'];
   if (territory === 'Serbia' && year >= 1402 && year <= 1458) return ['Despotado de Serbia'];
   if (territory === 'Bosnia') return year <= 1462 ? ['Reino de Bosnia'] : ['Bosnia y Herzegovina otomanas'];
-  if (territory === 'Valaquia') return ['Principado de Valaquia'];
+  if (territory === 'Valaquia') return ['Principado de Valaquia',
+    ...(personId === 'MIRCEA1WAL' && year >= 1402 && year <= 1418 ? ['Núcleos de Dobruja bajo Mircea'] : [])];
   if (territory === 'Moldavia') return ['Principado de Moldavia'];
   if (territory === 'Imperio otomano') return [
     'Hungría otomana', 'Bosnia y Herzegovina otomanas', 'Balcanes meridionales otomanos',
@@ -112,11 +122,12 @@ function layerActiveInYear(entry, year, from = 1400, through = 1650) {
 
 function applyLayerCorrections(data, entry, ids, year) {
   const corrected = new Set(ids);
-  for (const correction of data?.overrides || []) {
-    if (correction.territory !== entry.name || correction.from > year || correction.through < year) continue;
-    if (correction.action === 'add') corrected.add(correction.id);
-    if (correction.action === 'remove') corrected.delete(correction.id);
-  }
+  const active = (data?.overrides || []).filter(correction => correction.territory === entry.name
+    && correction.from <= year && year <= correction.through);
+  // An explicit dated exclusion wins over a broad earlier inclusion, whatever
+  // order the canonical corrections and source groups were merged in.
+  active.filter(c => c.action === 'add').forEach(c => corrected.add(c.id));
+  active.filter(c => c.action === 'remove').forEach(c => corrected.delete(c.id));
   return [...corrected];
 }
 
@@ -139,7 +150,9 @@ export function mapLocationsForGovernment(data, government, year, personId = nul
   const layers = (withinDatedLayerRange ? pilotJurisdictionsFor(government.territorio, year, personId) : [])
     .map(name => byName.get(name)).filter(Boolean);
   if (layers.length) {
-    return applyMapBorderCorrections([...new Set(layers.flatMap(entry => reviewedLayerLocations(data, entry, year, personId)))], government.territorio, year);
+    const scope = authorityMapScope(personId, government.territorio, year);
+    const ids = [...new Set(layers.flatMap(entry => reviewedLayerLocations(data, entry, year, personId)))];
+    return applyMapBorderCorrections(scope ? ids.filter(id => scope.ids.includes(id)) : ids, government.territorio, year);
   }
   const crosswalk = data.locationCrosswalk?.newIdsByOldId || {};
   return applyMapBorderCorrections([...new Set(legacyIds.flatMap(id => crosswalk[id]?.ids || []))], government.territorio, year);

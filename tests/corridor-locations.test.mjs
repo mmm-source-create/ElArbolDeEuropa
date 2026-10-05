@@ -2,7 +2,7 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import path from 'node:path';
 import test from 'node:test';
-import { pilotLocationsFor } from '../src/data/locationMapPilot.js';
+import { pilotLocationsFor, reviewedLayerLocations } from '../src/data/locationMapPilot.js';
 
 const lab = path.resolve(import.meta.dirname, '../prototypes/euv-locations');
 const data = JSON.parse(fs.readFileSync(path.join(lab, 'corridor-locations.json'), 'utf8'));
@@ -239,11 +239,12 @@ test('Central European jurisdictions respect dated transfers and separate imperi
 test('Balkan layers fill regional areas while keeping tributary principalities distinct', () => {
   const layers = data.additionalTerritories.filter(item => item.corridor === 'Hungría y Balcanes');
   const layer = name => layers.find(item => item.name === name);
-  const layerIds = (name, year) => new Set([...layer(name).versions].reverse().find(version => version.from <= year)?.ids || []);
+  const layerIds = (name, year) => new Set(reviewedLayerLocations(data, layer(name), year));
   const expected = ['Núcleo oriental de Zápolya', 'Hungría real', 'Croacia habsbúrgica',
     'Transilvania', 'Ocupación habsbúrgica de Transilvania', 'Hungría otomana',
     'Bosnia y Herzegovina otomanas', 'Balcanes meridionales otomanos', 'República de Ragusa',
-    'Despotado de Serbia', 'Reino de Bosnia', 'Principado de Valaquia', 'Principado de Moldavia'];
+    'Despotado de Serbia', 'Reino de Bosnia', 'Principado de Valaquia', 'Principado de Moldavia',
+    'Núcleo de Herzegovina', 'Núcleo de Mistra', 'Núcleos de Dobruja bajo Mircea'];
   assert.deepEqual(layers.map(item => item.name), expected);
 
   assert.ok(layerIds('Balcanes meridionales otomanos', 1500).size >= 150,
@@ -273,8 +274,7 @@ test('Balkan layers fill regional areas while keeping tributary principalities d
   for (let year = data.from; year <= data.through; year++) {
     const owner = new Map();
     for (const territory of layers) {
-      const version = [...territory.versions].reverse().find(item => item.from <= year);
-      for (const id of version?.ids || []) {
+      for (const id of reviewedLayerLocations(data, territory, year)) {
         assert.ok(pathIds.has(id), `${id} must exist in the map in ${year}`);
         assert.ok(!/(mountain|alps|carpathian)/i.test(id), `${id} is physical relief, not a polity`);
         assert.ok(!owner.has(id), `${id} overlaps ${owner.get(id)} and ${territory.name} in ${year}`);

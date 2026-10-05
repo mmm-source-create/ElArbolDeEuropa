@@ -3,7 +3,7 @@
     {
       "corridor": "Borgoña e Imperio",
       "name": "Núcleo de Brandeburgo",
-      "color": "#8b7460",
+      "color": "#AD5C48",
       "active": {
         "from": 1415,
         "through": 1650,
@@ -28,7 +28,7 @@
     {
       "corridor": "Borgoña e Imperio",
       "name": "Sajonia electoral",
-      "color": "#8b7460",
+      "color": "#6B7A47",
       "active": {
         "from": 1423,
         "through": 1650,
@@ -75,7 +75,7 @@
     {
       "corridor": "Borgoña e Imperio",
       "name": "Sajonia albertina",
-      "color": "#8b7460",
+      "color": "#899651",
       "active": {
         "from": 1485,
         "through": 1546,
@@ -99,7 +99,7 @@
     {
       "corridor": "Borgoña e Imperio",
       "name": "Núcleo de Württemberg",
-      "color": "#8b7460",
+      "color": "#8A684C",
       "active": {
         "from": 1400,
         "through": 1650,
@@ -123,7 +123,7 @@
     {
       "corridor": "Borgoña e Imperio",
       "name": "Württemberg-Urach",
-      "color": "#8b7460",
+      "color": "#A08456",
       "active": {
         "from": 1442,
         "through": 1481,
@@ -146,7 +146,7 @@
     {
       "corridor": "Borgoña e Imperio",
       "name": "Württemberg-Stuttgart",
-      "color": "#8b7460",
+      "color": "#8A684C",
       "active": {
         "from": 1442,
         "through": 1481,
@@ -168,7 +168,7 @@
     {
       "corridor": "Borgoña e Imperio",
       "name": "Núcleo de Hesse",
-      "color": "#8b7460",
+      "color": "#637D72",
       "active": {
         "from": 1509,
         "through": 1566,
@@ -193,7 +193,7 @@
     {
       "corridor": "Borgoña e Imperio",
       "name": "Núcleo de Hesse-Kassel",
-      "color": "#8b7460",
+      "color": "#6C7854",
       "active": {
         "from": 1567,
         "through": 1650,
@@ -216,7 +216,7 @@
     {
       "corridor": "Borgoña e Imperio",
       "name": "Núcleo de Hesse-Darmstadt",
-      "color": "#8b7460",
+      "color": "#80634D",
       "active": {
         "from": 1567,
         "through": 1650,

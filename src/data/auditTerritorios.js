@@ -29,7 +29,7 @@ export function auditarTerritorios(personas, catalogo=TERRITORIOS) {
    if(seen.has(sig))add('ERROR','DUPLICATE_GOVERNMENT',key,sig);seen.add(sig);
    const territorial=(t?.etapas||[]).map(e=>e.clase).concat(t?.clase||[]);
    const normalize=c=>({reino:'reinado',estado_pontificio:'pontificado',territorio_compuesto:'gobierno',republica:'gobierno'})[c]||c;
-   const permitidas={Croacia:['banato'],Transilvania:['gobierno'],Valaquia:['voivodato'],Moldavia:['voivodato'],Bulgaria:['zarato'],Serbia:['despotado'],Rusia:['principado'],Sajonia:['ducado'],Baviera:['electorado'],Brandeburgo:['margraviato'],Palatinado:['condado','principado'],Florencia:['ducado'],Nassau:['principado'],Urbino:['condado'],Anjou:['condado'],Hannover:['electorado'],Milán:['gobierno'], 'Países Bajos':['reinado'], 'Austria Interior':['ducado','archiducado']};
+   const permitidas={'Imperio otomano':['emirato'],Croacia:['banato'],Transilvania:['gobierno'],Valaquia:['voivodato'],Moldavia:['voivodato'],Bulgaria:['zarato'],Serbia:['despotado'],Rusia:['principado'],Sajonia:['ducado'],Baviera:['electorado'],Brandeburgo:['margraviato'],Palatinado:['condado','principado'],Florencia:['ducado'],Nassau:['principado'],Urbino:['condado'],Anjou:['condado'],Hannover:['electorado'],Milán:['gobierno'], 'Países Bajos':['reinado'], 'Austria Interior':['ducado','archiducado']};
    if(t&& !(g.clase==='gobierno'&&g.condicion==='regencia') && !['regencia','estatuderato'].includes(g.clase)&& !territorial.map(normalize).concat(permitidas[g.territorio]||[]).includes(g.clase))add('ERROR','TERRITORY_CLASS_MISMATCH',key,`${g.territorio}: ${g.clase} no concuerda con su rango documentado`);
   }
  }
@@ -39,6 +39,7 @@ export function auditarTerritorios(personas, catalogo=TERRITORIOS) {
   if(!gobiernoEfectivo(a.g)||!gobiernoEfectivo(b.g))continue;
   if(Math.max(a.g.desde,b.g.desde)>=Math.min(a.g.hasta,b.g.hasta))continue;
   if([a.g,b.g].some(g=>['corregente','jure uxoris'].includes(g.condicion)))continue;
+  if(a.g.soberano===b.p.id||b.g.soberano===a.p.id)continue;
   if([a.g,b.g].some(g=>g.condicion==='rama') && a.g.ambito!==b.g.ambito)continue;
   add('WARNING','SUCCESSION_OVERLAP',`${a.key}/${b.key}`,`${a.g.territorio}: ${a.p.nombre} (${a.g.desde}–${a.g.hasta}) / ${b.p.nombre} (${b.g.desde}–${b.g.hasta})`);
  }

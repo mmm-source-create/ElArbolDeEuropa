@@ -23,7 +23,7 @@ test('Ottoman succession covers 1617–1640 without swallowing the Romanian prin
  }
  assert(inspect('Edirne',1400).entries.some(e=>e.person?.id==='BAYEZID1OSM'));
  assert(inspect('Edirne',1415).entries.some(e=>e.person?.id==='MEHMED1OSM'));
- assert.equal(inspect('Edirne',1408).entries.length,0,'the interregnum is not assigned to a single invented ruler');
+ assert(inspect('Edirne',1408).entries.some(e=>e.person?.id==='SULEYMANCELEBI'&&e.kind==='disputed'),'the interregnum has a documented regional emir, not an invented reunited sultan');
 });
 
 test('Wallachia and Moldavia have sourced princely governments throughout 1601–1650',()=>{

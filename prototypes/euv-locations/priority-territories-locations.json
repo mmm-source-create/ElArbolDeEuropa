@@ -1,0 +1,475 @@
+{
+  "from": 1400,
+  "through": 1650,
+  "scope": "Núcleos regionales de territorios ya presentes en el Atlas. Revisión visual del SVG y fuentes de alcance; las omisiones indicadas permanecen pendientes.",
+  "territories": [
+    {
+      "corridor": "Hungría y Balcanes",
+      "name": "Núcleo de Herzegovina",
+      "color": "#9A7342",
+      "active": {
+        "from": 1448,
+        "through": 1466,
+        "reason": "Cuatro celdas del núcleo de Hum bajo Esteban Vukčić Kosača. Desde 1465 se retiran por la conquista del interior; sus últimas posesiones costeras de Herceg Novi no tienen una celda independiente. Konjic era mixto y no se atribuye al duque. Son entornos regionales aproximados.",
+        "source": "https://www.enciklopedija.hr/clanak/kosaca-stjepan-vukcic"
+      },
+      "note": "Cuatro celdas del núcleo de Hum bajo Esteban Vukčić Kosača. Desde 1465 se retiran por la conquista del interior; sus últimas posesiones costeras de Herceg Novi no tienen una celda independiente. Konjic era mixto y no se atribuye al duque. Son entornos regionales aproximados.",
+      "versions": [
+        {
+          "from": 1448,
+          "oldIds": [],
+          "ids": [
+            "Mostar",
+            "Nevesinje",
+            "Gacko",
+            "Trebinje"
+          ],
+          "borderline": []
+        },
+        {
+          "from": 1465,
+          "oldIds": [],
+          "ids": [],
+          "borderline": []
+        }
+      ],
+      "sources": [
+        {
+          "url": "https://www.enciklopedija.hr/clanak/kosaca-stjepan-vukcic",
+          "locator": "Entrada Kosača, Stjepan Vukčić: ducado de 1448, alcance desde Lim/Cetina/Rama/Kotor, pérdida del interior desde 1465.",
+          "title": "Núcleo de Herzegovina · alcance documentado"
+        },
+        {
+          "url": "https://www.enciklopedija.hr/clanak/nevesinje",
+          "locator": "Entrada Nevesinje: dominio de la familia Kosača desde 1373.",
+          "title": "Núcleo de Herzegovina · alcance documentado"
+        },
+        {
+          "url": "https://www.enciklopedija.hr/clanak/konjic",
+          "locator": "Entrada Konjic: Biograd pertenecía a los Kosača y Konjic a los reyes bosnios.",
+          "title": "Núcleo de Herzegovina · alcance documentado"
+        }
+      ]
+    },
+    {
+      "corridor": "Hungría y Balcanes",
+      "name": "Núcleo de Mistra",
+      "color": "#967747",
+      "active": {
+        "from": 1407,
+        "through": 1443,
+        "reason": "Entorno de Mistra para Teodoro II, hasta su salida de Morea en 1443. La rama de Tomás y las conquistas sucesivas no se confunden con Mistra. Esta celda regional no representa toda Morea ni las plazas venecianas.",
+        "source": "https://digitallibrary.academyofathens.gr/archive/download/e8729921-962a-4a54-882f-64fd4f4ca119.pdf"
+      },
+      "note": "Entorno de Mistra para Teodoro II, hasta su salida de Morea en 1443. La rama de Tomás y las conquistas sucesivas no se confunden con Mistra. Esta celda regional no representa toda Morea ni las plazas venecianas.",
+      "versions": [
+        {
+          "from": 1407,
+          "oldIds": [],
+          "ids": [
+            "Mystras"
+          ],
+          "borderline": []
+        }
+      ],
+      "sources": [
+        {
+          "url": "https://digitallibrary.academyofathens.gr/archive/download/e8729921-962a-4a54-882f-64fd4f4ca119.pdf",
+          "locator": "Aspasia Louvi-Kizi, H Frangkiki Proklisi ston Byzantino Mystra, vol. I, Academia de Atenas 74 (2019), p. 290: Teodoro II, 1407–1443; p. 189: intercambio de Mistra por Selimbria en 1443.",
+          "title": "Academia de Atenas · Teodoro II y Mistra"
+        },
+        {
+          "url": "https://castleroute.culture.gov.gr/en/mistras/",
+          "locator": "Ministerio griego de Cultura: Teodoro I muere en 1407; Constantino gobierna Mistra en 1443–1448 y Demetrio después. La sucesión territorial no se extiende a toda la península.",
+          "title": "Núcleo de Mistra · alcance documentado"
+        }
+      ]
+    },
+    {
+      "corridor": "Borgoña e Imperio",
+      "name": "Núcleo de Lorena",
+      "color": "#A06D8A",
+      "active": {
+        "from": 1431,
+        "through": 1631,
+        "reason": "Núcleos ducales de Nancy y Lunéville, revisados en el SVG. Se excluyen Metz, Toul y Verdun, jurisdicciones episcopales distintas, y Épinal, cuya historia no sigue la misma cronología. La capa termina antes de las ocupaciones francesas. Los contornos regionales son aproximados.",
+        "source": "https://musee-lorrain.nancy.fr/fileadmin/ML/images/Expositions_passees/fichier_src_dossier.pedagogique.expo.renaissance.ml.pdf"
+      },
+      "note": "Núcleos ducales de Nancy y Lunéville, revisados en el SVG. Se excluyen Metz, Toul y Verdun, jurisdicciones episcopales distintas, y Épinal, cuya historia no sigue la misma cronología. La capa termina antes de las ocupaciones francesas. Los contornos regionales son aproximados.",
+      "versions": [
+        {
+          "from": 1431,
+          "oldIds": [],
+          "ids": [
+            "Nancy",
+            "Luneville"
+          ],
+          "borderline": []
+        }
+      ],
+      "sources": [
+        {
+          "url": "https://musee-lorrain.nancy.fr/fileadmin/ML/images/Expositions_passees/fichier_src_dossier.pedagogique.expo.renaissance.ml.pdf",
+          "locator": "Musée lorrain, La Renaissance en Lorraine, pp.6–7 y cronología: sucesión y regencia de Carlos III,1545–1608; tres obispados separados.",
+          "title": "Núcleo de Lorena · alcance documentado"
+        },
+        {
+          "url": "https://chateauluneville.meurthe-et-moselle.fr/decouvrir-le-domaine/le-chateau",
+          "locator": "Consejo departamental: Lunéville es residencia de los duques de Lorena desde el siglo XIII.",
+          "title": "Núcleo de Lorena · alcance documentado"
+        },
+        {
+          "url": "https://www.cours-appel.justice.fr/nancy/histoire-et-patrimoine-de-la-cour-dappel",
+          "locator": "Nancy capital ducal; matrimonio de Isabel y Renato en 1420; los tres obispados son distintos del ducado.",
+          "title": "Núcleo de Lorena · alcance documentado"
+        },
+        {
+          "url": "https://www.persee.fr/doc/efr_0223-5099_2001_act_287_1_7152",
+          "locator": "Michel Sylvestre, École française de Rome 287(2001), p.281: Renato I duque de Lorena 1431–1453.",
+          "title": "Renato I · ducado de Lorena 1431–1453"
+        }
+      ]
+    },
+    {
+      "corridor": "Borgoña e Imperio",
+      "name": "Núcleo de Baden",
+      "color": "#7B5968",
+      "active": {
+        "from": 1475,
+        "through": 1514,
+        "reason": "Núcleos de Cristóbal I. Hachberg ya era badense; Müllheim entra desde 1503 con la herencia de Sausenberg. Se representan cuatro celdas regionales, sin agregar ciudades imperiales ni toda Suabia.",
+        "source": "https://www.leo-bw.de/media/kgl_atlas/current/delivered/pdf/HABW_6_1_1a.pdf"
+      },
+      "note": "Núcleos de Cristóbal I. Hachberg ya era badense; Müllheim entra desde 1503 con la herencia de Sausenberg. Se representan cuatro celdas regionales, sin agregar ciudades imperiales ni toda Suabia.",
+      "versions": [
+        {
+          "from": 1475,
+          "oldIds": [],
+          "ids": [
+            "Baden",
+            "Durlach",
+            "Hachberg"
+          ],
+          "borderline": []
+        },
+        {
+          "from": 1503,
+          "oldIds": [],
+          "ids": [
+            "Baden",
+            "Durlach",
+            "Hachberg",
+            "Mullheim"
+          ],
+          "borderline": []
+        }
+      ],
+      "sources": [
+        {
+          "url": "https://www.leo-bw.de/media/kgl_atlas/current/delivered/pdf/HABW_6_1_1a.pdf",
+          "locator": "Joachim Fischer, Historischer Atlas, pp.3–4: Cristóbal I 1475–1515, unión de Sausenberg 1503, reparto 1515.",
+          "title": "Núcleo de Baden · alcance documentado"
+        }
+      ]
+    },
+    {
+      "corridor": "Borgoña e Imperio",
+      "name": "Núcleo de Baden-Baden",
+      "color": "#9B6175",
+      "active": {
+        "from": 1535,
+        "through": 1650,
+        "reason": "Celda de Baden-Baden desde el reparto de 1535. Bernardo III no recibe este núcleo en 1515. La ocupación por Baden-Durlach de 1594–1622 queda fuera de esta capa. Delimitación regional aproximada.",
+        "source": "https://www.leo-bw.de/media/kgl_atlas/current/delivered/pdf/HABW_6_1_1a.pdf"
+      },
+      "note": "Celda de Baden-Baden desde el reparto de 1535. Bernardo III no recibe este núcleo en 1515. La ocupación por Baden-Durlach de 1594–1622 queda fuera de esta capa. Delimitación regional aproximada.",
+      "versions": [
+        {
+          "from": 1535,
+          "oldIds": [],
+          "ids": [
+            "Baden"
+          ],
+          "borderline": []
+        },
+        {
+          "from": 1594,
+          "oldIds": [],
+          "ids": [],
+          "borderline": []
+        },
+        {
+          "from": 1622,
+          "oldIds": [],
+          "ids": [
+            "Baden"
+          ],
+          "borderline": []
+        }
+      ],
+      "sources": [
+        {
+          "url": "https://www.leo-bw.de/media/kgl_atlas/current/delivered/pdf/HABW_6_1_1a.pdf",
+          "locator": "Joachim Fischer, Historischer Atlas, pp.4–5: Bernardo recibe Baden-Baden en 1535; ocupación 1594–1622.",
+          "title": "Núcleo de Baden-Baden · alcance documentado"
+        }
+      ],
+      "periods": [
+        {
+          "from": 1535,
+          "through": 1593
+        },
+        {
+          "from": 1622,
+          "through": 1650
+        }
+      ]
+    },
+    {
+      "corridor": "Borgoña e Imperio",
+      "name": "Núcleo de Baden-Durlach",
+      "color": "#765988",
+      "active": {
+        "from": 1515,
+        "through": 1650,
+        "reason": "Ernesto recibe Hachberg y Müllheim en 1515; Durlach se añade en 1535. La ocupación de 1635–1647 suspende esta capa hasta la restitución de 1648. No incluye Baden-Baden ni reconstruye enclaves dispersos.",
+        "source": "https://www.leo-bw.de/media/kgl_atlas/current/delivered/pdf/HABW_6_1_1a.pdf"
+      },
+      "note": "Ernesto recibe Hachberg y Müllheim en 1515; Durlach se añade en 1535. La ocupación de 1635–1647 suspende esta capa hasta la restitución de 1648. No incluye Baden-Baden ni reconstruye enclaves dispersos.",
+      "versions": [
+        {
+          "from": 1515,
+          "oldIds": [],
+          "ids": [
+            "Hachberg",
+            "Mullheim"
+          ],
+          "borderline": []
+        },
+        {
+          "from": 1535,
+          "oldIds": [],
+          "ids": [
+            "Durlach",
+            "Hachberg",
+            "Mullheim"
+          ],
+          "borderline": []
+        },
+        {
+          "from": 1635,
+          "oldIds": [],
+          "ids": [],
+          "borderline": []
+        },
+        {
+          "from": 1648,
+          "oldIds": [],
+          "ids": [
+            "Durlach",
+            "Hachberg",
+            "Mullheim"
+          ],
+          "borderline": []
+        }
+      ],
+      "sources": [
+        {
+          "url": "https://www.leo-bw.de/media/kgl_atlas/current/delivered/pdf/HABW_6_1_1a.pdf",
+          "locator": "Joachim Fischer, Historischer Atlas, pp.4–6: herencia de Ernesto 1515/1535; Carlos II 1553–1577; ocupación 1635–1648 y restitución posterior.",
+          "title": "Núcleo de Baden-Durlach · alcance documentado"
+        }
+      ],
+      "periods": [
+        {
+          "from": 1515,
+          "through": 1634
+        },
+        {
+          "from": 1648,
+          "through": 1650
+        }
+      ]
+    },
+    {
+      "corridor": "Borgoña e Imperio",
+      "name": "Núcleo de Lüneburg-Celle",
+      "color": "#536F7E",
+      "active": {
+        "from": 1559,
+        "through": 1592,
+        "reason": "Celle representa la rama de Guillermo el Joven, no todos los ducados Welf. Lüneburg se añade desde su homenaje de 1562. Las celdas regionales no reconstruyen el principado completo; Brunswick y Wolfenbüttel quedan separados.",
+        "source": "https://www.residenzmuseum.de/die-celler-herzoege.html"
+      },
+      "note": "Celle representa la rama de Guillermo el Joven, no todos los ducados Welf. Lüneburg se añade desde su homenaje de 1562. Las celdas regionales no reconstruyen el principado completo; Brunswick y Wolfenbüttel quedan separados.",
+      "versions": [
+        {
+          "from": 1559,
+          "oldIds": [],
+          "ids": [
+            "Celle"
+          ],
+          "borderline": []
+        },
+        {
+          "from": 1562,
+          "oldIds": [],
+          "ids": [
+            "Celle",
+            "Luneburg"
+          ],
+          "borderline": []
+        }
+      ],
+      "sources": [
+        {
+          "url": "https://www.residenzmuseum.de/die-celler-herzoege.html",
+          "locator": "Residenzmuseum, Die Celler Herzöge: Guillermo y Enrique II 1559–1592, Enrique hasta 1569.",
+          "title": "Núcleo de Lüneburg-Celle · alcance documentado"
+        },
+        {
+          "url": "https://www.deutsche-biographie.de/sfz38817.html",
+          "locator": "ADB, Wilhelm der Jüngere: tratado de Celle 19 marzo 1562 y homenaje de Lüneburg 19 agosto 1562; Enrique separado en 1569.",
+          "title": "Núcleo de Lüneburg-Celle · alcance documentado"
+        }
+      ]
+    },
+    {
+      "corridor": "Borgoña e Imperio",
+      "name": "Núcleo de Calenberg-Hannover",
+      "color": "#597E68",
+      "active": {
+        "from": 1636,
+        "through": 1641,
+        "reason": "Entorno de Hannover bajo Jorge de Calenberg desde 1636. Su gobierno no se extiende a Celle, Brunswick o Wolfenbüttel; el título dinástico común no reúne esas ramas. Celda regional aproximada. La representación comienza con la residencia de Hannover en 1636; el gobierno de 1635 todavía carece de delimitación cartográfica en este núcleo.",
+        "source": "https://www.residenzmuseum.de/staatsgemaecher-ii.html"
+      },
+      "note": "Entorno de Hannover bajo Jorge de Calenberg desde 1636. Su gobierno no se extiende a Celle, Brunswick o Wolfenbüttel; el título dinástico común no reúne esas ramas. Celda regional aproximada. La representación comienza con la residencia de Hannover en 1636; el gobierno de 1635 todavía carece de delimitación cartográfica en este núcleo.",
+      "versions": [
+        {
+          "from": 1636,
+          "oldIds": [],
+          "ids": [
+            "Hanover"
+          ],
+          "borderline": []
+        }
+      ],
+      "sources": [
+        {
+          "url": "https://www.residenzmuseum.de/staatsgemaecher-ii.html",
+          "locator": "Residenzmuseum, Die Welfen in Celle: Jorge gobierna Calenberg desde 1636; su hijo lo sucede en 1641.",
+          "title": "Núcleo de Calenberg-Hannover · alcance documentado"
+        },
+        {
+          "url": "https://www.hannover.de/Kultur-Freizeit/Geschichte-Geschichten/Geschichte-der-Stadt-Hannover/Hannovers-Geschichte-in-Zahlen/Residenzstadt-in-F%C3%BCrstentum%2C-Kurf%C3%BCrstentum-und-K%C3%B6nigreich",
+          "locator": "Ciudad de Hannover: Jorge de Calenberg fija su residencia enHannover en 1636.",
+          "title": "Núcleo de Calenberg-Hannover · alcance documentado"
+        }
+      ]
+    },
+    {
+      "corridor": "Mediterráneo oriental",
+      "name": "Núcleo del reino de Chipre",
+      "color": "#4F8C98",
+      "active": {
+        "from": 1400,
+        "through": 1488,
+        "reason": "Cinco celdas del núcleo real lusignano. Famagusta y Kyrenia quedan fuera porque tienen episodios de control distinto. La guerra dinástica de 1460–1463 requiere una capa específica y se mantiene sin atribución. No representa toda la isla ni el posterior gobierno veneciano.",
+        "source": "https://www.visitcyprus.com/wp-content/uploads/files/PracticalInfo/2022_Travel_Planner_-_English_WEB_VERSION.pdf"
+      },
+      "note": "Cinco celdas del núcleo real lusignano. Famagusta y Kyrenia quedan fuera porque tienen episodios de control distinto. La guerra dinástica de 1460–1463 requiere una capa específica y se mantiene sin atribución. No representa toda la isla ni el posterior gobierno veneciano.",
+      "versions": [
+        {
+          "from": 1400,
+          "oldIds": [],
+          "ids": [
+            "Morphou",
+            "Nicosia_Cyp",
+            "Paphos",
+            "Larnaca",
+            "Limassol"
+          ],
+          "borderline": []
+        },
+        {
+          "from": 1460,
+          "oldIds": [],
+          "ids": [],
+          "borderline": []
+        },
+        {
+          "from": 1464,
+          "oldIds": [],
+          "ids": [
+            "Morphou",
+            "Nicosia_Cyp",
+            "Paphos",
+            "Larnaca",
+            "Limassol"
+          ],
+          "borderline": []
+        }
+      ],
+      "sources": [
+        {
+          "url": "https://www.visitcyprus.com/wp-content/uploads/files/PracticalInfo/2022_Travel_Planner_-_English_WEB_VERSION.pdf",
+          "locator": "Deputy Ministry of Tourism, Cyprus Travel Planner 2022, The History of Cyprus: período lusignano 1192–1489 y transición veneciana.",
+          "title": "Núcleo del reino de Chipre · alcance documentado"
+        }
+      ],
+      "periods": [
+        {
+          "from": 1400,
+          "through": 1459
+        },
+        {
+          "from": 1464,
+          "through": 1488
+        }
+      ]
+    },
+    {
+      "corridor": "Hungría y Balcanes",
+      "name": "Núcleos de Dobruja bajo Mircea",
+      "color": "#6C5E85",
+      "active": {
+        "from": 1402,
+        "through": 1418,
+        "reason": "Cuatro núcleos danubianos y costeros bajo Mircea tras Ankara. Son celdas regionales aproximadas; no reconstruyen toda Dobruja ni atribuyen Varna completa. El año 1402 incluye la transición.",
+        "source": "https://islamansiklopedisi.org.tr/balcik"
+      },
+      "note": "Drastar, Constanța, Karvuna y Kaliakra bajo Mircea. Revisión visual: Constanta corresponde al puerto del Mar Negro; Constantia_Bul está en Tracia y no se incluye. La escala anual incorpora los cambios de 1402 y 1418.",
+      "versions": [
+        {
+          "from": 1402,
+          "oldIds": [],
+          "ids": [
+            "Drastar",
+            "Constanta",
+            "Karvuna",
+            "Kaliakra"
+          ],
+          "borderline": []
+        }
+      ],
+      "sources": [
+        {
+          "title": "Machiel Kiel · TDV · Silistre",
+          "url": "https://islamansiklopedisi.org.tr/silistre",
+          "locator": "Recuperación de Silistra por Mircea en 1402 y dominio hasta su muerte en 1418."
+        },
+        {
+          "title": "Bogdan Murgescu · TDV · Köstence",
+          "url": "https://islamansiklopedisi.org.tr/kostence",
+          "locator": "Constanța bajo Mircea desde 1402; conquista otomana de 1419."
+        },
+        {
+          "title": "Machiel Kiel · TDV · Balçık",
+          "url": "https://islamansiklopedisi.org.tr/balcik",
+          "locator": "Dobruja y fortalezas costeras recuperadas después de Ankara; dominio de Mircea hasta 1418."
+        }
+      ]
+    }
+  ]
+}

@@ -1,3 +1,4 @@
+import {reviewedLayerLocations} from '../../src/data/locationMapPilot.js';
 const FRAME_ONLY_LAYERS = new Set(['Marco jurídico del Sacro Imperio']);
 
 function entriesFor(data) {
@@ -12,14 +13,7 @@ function isActive(entry, year, data) {
 }
 
 function idsFor(entry, data, year) {
-  const version = [...(entry.versions || [])].reverse().find(candidate => candidate.from <= year);
-  const ids = new Set(version?.ids || []);
-  for (const correction of data.overrides || []) {
-    if (correction.territory !== entry.name || correction.from > year || correction.through < year) continue;
-    if (correction.action === 'add') ids.add(correction.id);
-    if (correction.action === 'remove') ids.delete(correction.id);
-  }
-  return [...ids];
+  return reviewedLayerLocations(data, entry, year);
 }
 
 function layerKey(entry) {

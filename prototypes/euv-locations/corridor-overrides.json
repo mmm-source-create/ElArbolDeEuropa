@@ -1,169 +1,1910 @@
 [
-  {"territory":"Castilla","id":"Gibraltar","action":"remove","from":1400,"through":1461,"reason":"Gibraltar passed to Castile in 1462, not throughout the old Cádiz polygon's span.","source":"https://www.gibraltar.gov.gi/maritime"},
-  {"territory":"Granada","id":"Gibraltar","action":"add","from":1400,"through":1461,"reason":"Keep the Nasrid frontier at Gibraltar until the Castilian capture in 1462.","source":"https://www.gibraltar.gov.gi/maritime"},
-  {"territory":"Granada","id":"Antequera","action":"remove","from":1410,"through":1486,"reason":"Antequera fell to Castile in 1410, before the old Málaga polygon's transfer.","source":"https://www.antequera.es/municipio/historia/"},
-  {"territory":"Castilla","id":"Antequera","action":"add","from":1410,"through":1486,"reason":"Antequera passed to Castile in 1410.","source":"https://www.antequera.es/municipio/historia/"},
-  {"territory":"Granada","id":"Ronda","action":"remove","from":1485,"through":1486,"reason":"Ronda fell to Castile in 1485, before the old Málaga polygon's transfer.","source":"https://www.treccani.it/enciclopedia/spagna_(Enciclopedia-Italiana)/"},
-  {"territory":"Castilla","id":"Ronda","action":"add","from":1485,"through":1486,"reason":"Castilian conquest of Ronda in 1485.","source":"https://www.treccani.it/enciclopedia/spagna_(Enciclopedia-Italiana)/"},
-  {"territory":"Granada","id":"Loja","action":"remove","from":1486,"through":1491,"reason":"Loja fell to Castile in 1486, before the old Granada polygon's transfer.","source":"https://www.treccani.it/enciclopedia/spagna_(Enciclopedia-Italiana)/"},
-  {"territory":"Castilla","id":"Loja","action":"add","from":1486,"through":1491,"reason":"Castilian conquest of Loja in 1486.","source":"https://www.treccani.it/enciclopedia/spagna_(Enciclopedia-Italiana)/"},
-  {"territory":"Trinacria","id":"Malta","action":"remove","from":1530,"through":1650,"reason":"Charles V granted Malta to the Order of St John in 1530.","source":"https://www.orderofmalta.int/news/the-national-library-of-malta-celebrates-the-orders-past-and-present/"},
-  {"territory":"Nápoles","id":"Benevento","action":"remove","from":1400,"through":1650,"reason":"Benevento was a papal enclave within the kingdom of Naples.","source":"https://www.treccani.it/enciclopedia/benevento_(Federiciana)/"},
-  {"territory":"Estados Pontificios","id":"Benevento","action":"add","from":1400,"through":1650,"reason":"Benevento remained a papal enclave within the kingdom of Naples.","source":"https://www.treccani.it/enciclopedia/benevento_(Federiciana)/"},
-  {"territory":"Milán","id":"Biella","action":"remove","from":1400,"through":1650,"reason":"Biella had passed to Savoy before this corridor starts.","source":"https://www.treccani.it/enciclopedia/biella_(Enciclopedia-Italiana)/"},
-  {"territory":"Piamonte","id":"Biella","action":"add","from":1400,"through":1650,"reason":"Biella belonged to the Savoyard sphere during this series.","source":"https://www.treccani.it/enciclopedia/biella_(Enciclopedia-Italiana)/"},
-  {"territory":"Milán","id":"Vercelli","action":"remove","from":1427,"through":1650,"reason":"Milan ceded Vercelli to Savoy in 1427.","source":"https://www.treccani.it/enciclopedia/vercelli_(Enciclopedia-Italiana)/"},
-  {"territory":"Piamonte","id":"Vercelli","action":"add","from":1427,"through":1650,"reason":"Vercelli passed to Savoy from Milan in 1427.","source":"https://www.treccani.it/enciclopedia/vercelli_(Enciclopedia-Italiana)/"},
-  {"territory":"Estados Pontificios","id":"Rovigo","action":"remove","from":1598,"through":1650,"reason":"The Ferrara devolution did not include Venetian Rovigo.","source":"https://www.treccani.it/enciclopedia/venezia-e-la-politica-italiana-1454-1530_(Storia-di-Venezia)/"},
-  {"territory":"Ferrara","id":"Rovigo","action":"remove","from":1484,"through":1508,"reason":"The 1484 peace transferred Rovigo/Polesine to Venice.","source":"https://www.treccani.it/enciclopedia/venezia-e-la-politica-italiana-1454-1530_(Storia-di-Venezia)/"},
-  {"territory":"Ferrara","id":"Rovigo","action":"remove","from":1516,"through":1597,"reason":"Rovigo returned to Venice after the League of Cambrai conflict.","source":"https://www.treccani.it/enciclopedia/venezia-e-la-politica-italiana-1454-1530_(Storia-di-Venezia)/"},
-  {"territory":"Venecia","id":"Rovigo","action":"add","from":1484,"through":1508,"reason":"Venice held Rovigo/Polesine following the 1484 peace.","source":"https://www.treccani.it/enciclopedia/venezia-e-la-politica-italiana-1454-1530_(Storia-di-Venezia)/"},
-  {"territory":"Venecia","id":"Rovigo","action":"add","from":1516,"through":1650,"reason":"Rovigo returned to Venetian control after the League of Cambrai war.","source":"https://www.treccani.it/enciclopedia/venezia-e-la-politica-italiana-1454-1530_(Storia-di-Venezia)/"},
-  {"territory":"Venecia","id":"Pola","action":"add","from":1400,"through":1650,"reason":"The coastal Istrian city of Pola entered Venetian rule in 1331; this does not paint the Habsburg inland peninsula.","source":"https://www.treccani.it/enciclopedia/istria_(Enciclopedia-Italiana)/"},
-  {"territory":"Venecia","id":"Rovinj","action":"add","from":1400,"through":1650,"reason":"Rovinj was among the Venetian coastal communities of Istria, distinct from the inland Habsburg territories.","source":"https://www.treccani.it/enciclopedia/rovigno-d-istria_(Enciclopedia-Italiana)/"},
-  {"territory":"Venecia","id":"Zadar","action":"add","from":1409,"through":1650,"reason":"Zadar was acquired by Venice in 1409. The EU V ID is Zadar; Zara on this map is elsewhere.","source":"https://www.treccani.it/enciclopedia/zara_(Enciclopedia-Italiana)/"},
-  {"territory":"Venecia","id":"Sibenik","action":"add","from":1420,"through":1650,"reason":"Conservative year-end assignment following the 1409–1420 Venetian reconquest of Dalmatian coastal towns.","source":"https://www.treccani.it/enciclopedia/dalmazia_(Enciclopedia-Italiana)/"},
-  {"territory":"Venecia","id":"Split","action":"add","from":1420,"through":1650,"reason":"Split submitted to Venice during the 1420 Adriatic campaign.","source":"https://www.treccani.it/enciclopedia/le-frontiere-navali_(Storia-di-Venezia)/"},
-  {"territory":"Venecia","id":"Brac","action":"add","from":1420,"through":1650,"reason":"Brač was among the islands acquired in the 1420 Venetian Adriatic campaign.","source":"https://www.treccani.it/enciclopedia/pietro-loredan_(Dizionario-Biografico)/"},
-  {"territory":"Venecia","id":"Kotor","action":"add","from":1420,"through":1650,"reason":"Kotor/Cattaro submitted to Venice in 1419; shown from 1420 in this conservative annual layer.","source":"https://www.treccani.it/enciclopedia/dalmazia_(Enciclopedia-Italiana)/"},
-  {"territory":"Toscana","id":"Piombino","action":"remove","from":1569,"through":1650,"reason":"Piombino was a separate Appiano/Ludovisi state, not part of Medici Tuscany.","source":"https://www.treccani.it/enciclopedia/piombino-ed-elba-principato-di_(Dizionario-di-Storia)/"},
-  {"territory":"Módena","id":"Mirandola","action":"remove","from":1400,"through":1650,"reason":"Mirandola was not acquired by Modena until 1711.","source":"https://www.treccani.it/enciclopedia/mirandola_(Enciclopedia-Italiana)/"},
-  {"territory":"Módena","id":"Guastalla","action":"remove","from":1400,"through":1650,"reason":"Guastalla was a separate Gonzaga duchy during this series.","source":"https://www.treccani.it/enciclopedia/giuseppe-maria-gonzaga_(Dizionario-Biografico)/"},
-  {"territory":"Hungría","id":"Zadar","action":"remove","from":1409,"through":1525,"reason":"Venice acquired Zadar in 1409; the old Croatian polygon must not continue to paint it as Hungarian.","source":"https://www.treccani.it/enciclopedia/zara_(Enciclopedia-Italiana)/"},
-  {"territory":"Hungría","id":"Sibenik","action":"remove","from":1420,"through":1525,"reason":"The Venetian Dalmatian campaign of 1420 removed Šibenik from this Hungarian-Croatian aggregate.","source":"https://www.treccani.it/enciclopedia/dalmazia_(Enciclopedia-Italiana)/"},
-  {"territory":"Austria Interior","id":"Trieste","action":"add","from":1400,"through":1499,"reason":"Trieste accepted Habsburg protection in 1382, before the Gorizia inheritance in 1500.","source":"https://www.habsburger.net/en/locations/trieste"},
-  {"territory":"Austria Interior","id":"Rijeka","action":"add","from":1466,"through":1650,"reason":"Fiume/Rijeka passed to the Habsburgs in 1466; the coarse Carniola polygon misses this port.","source":"https://www.treccani.it/enciclopedia/fiume_res-fbec9b86-8bae-11dc-8e9d-0016357eee51_(Enciclopedia-Italiana)/"},
-  {"territory":"Hungría","id":"Rijeka","action":"remove","from":1466,"through":1525,"reason":"Rijeka/Fiume passed to the Habsburgs in 1466; the old Croatian polygon must not keep it under Hungary.","source":"https://www.treccani.it/enciclopedia/fiume_res-fbec9b86-8bae-11dc-8e9d-0016357eee51_(Enciclopedia-Italiana)/"},
-  {"territory":"Austria Interior","id":"Lienz","action":"remove","from":1400,"through":1650,"reason":"Lienz belonged to the separate Görz lordship until 1500 and then was attached to the County of Tyrol, not Inner Austria.","source":"https://www.tirol.gv.at/fileadmin/themen/kunst-kultur/landesarchiv/downloads/TGQ34_OCR_Gesamt_homepage.pdf"},
-  {"territory":"Tirol","id":"Lienz","action":"add","from":1500,"through":1650,"reason":"Maximilian attached Lienz and the western Gorizian lands to Tyrol after the 1500 inheritance.","source":"https://www.tirol.gv.at/fileadmin/themen/kunst-kultur/landesarchiv/downloads/TGQ34_OCR_Gesamt_homepage.pdf"},
-  {"territory":"Tirol","id":"Kufstein","action":"remove","from":1400,"through":1503,"reason":"The former Bavarian court of Kufstein passed to Tyrol after Maximilian's 1504 conquest.","source":"https://www.tirol.gv.at/kunst-kultur/landesarchiv/archiv-quelle/18/"},
-  {"territory":"Tirol","id":"Kitzbuhel","action":"remove","from":1400,"through":1503,"reason":"Kitzbühel belonged to the Bavarian courts transferred to Tyrol in 1504.","source":"https://www.tirol.gv.at/kunst-kultur/landesarchiv/archiv-quelle/18/"},
-  {"territory":"Tirol","id":"Brixen","action":"remove","from":1400,"through":1650,"reason":"Brixen was a separate prince-bishopric; its city was not the secular county of Tyrol.","source":"https://www.tirol.gv.at/fileadmin/themen/kunst-kultur/landesarchiv/downloads/Grundsteueranschlag1508-1509.pdf"},
-  {"territory":"Tirol","id":"Bruneck","action":"remove","from":1400,"through":1650,"reason":"Bruneck was listed among the Brixen prince-bishopric's cities.","source":"https://www.tirol.gv.at/fileadmin/themen/kunst-kultur/landesarchiv/downloads/Grundsteueranschlag1508-1509.pdf"},
-  {"territory":"Tirol","id":"Cavalese","action":"remove","from":1400,"through":1650,"reason":"The Fiemme/Cavalese area belonged to the prince-bishopric of Trento, not directly to the secular County of Tyrol.","source":"https://www.tirol.gv.at/fileadmin/themen/kunst-kultur/landesarchiv/downloads/Landgerichtskarte-Tirol.PDF"},
-  {"territory":"Baviera","id":"Freising","action":"remove","from":1505,"through":1650,"reason":"Freising belonged to the independent prince-bishopric.","source":"https://www.historisches-lexikon-bayerns.de/Lexikon/Freising%2C_Bistum%3A_Politische_Geschichte_%28Sp%C3%A4tmittelalter%29"},
-  {"territory":"Baviera","id":"Garmisch","action":"remove","from":1505,"through":1650,"reason":"The County of Werdenfels around Garmisch belonged to the Freising prince-bishopric.","source":"https://www.historisches-lexikon-bayerns.de/Lexikon/Freising%2C_Bistum%3A_Politische_Geschichte_%28Sp%C3%A4tmittelalter%29"},
-  {"territory":"Baviera","id":"Passau","action":"remove","from":1505,"through":1650,"reason":"Passau was a prince-bishopric distinct from the Bavarian duchy.","source":"https://www.historisches-lexikon-bayerns.de/Lexikon/Artikel_45683"},
-  {"territory":"Baviera","id":"Regensburg","action":"remove","from":1505,"through":1650,"reason":"The imperial city of Regensburg was not incorporated into Bavaria in this period.","source":"https://www.historisches-lexikon-bayerns.de/Lexikon/Ende_des_Alten_Reiches"},
-  {"territory":"Baviera","id":"Muhldorf","action":"remove","from":1505,"through":1650,"reason":"Mühldorf belonged to the Salzburg prince-archbishopric until the 19th century.","source":"https://www.historisches-lexikon-bayerns.de/Lexikon/Artikel_45331"},
-  {"territory":"Baviera","id":"Laufen","action":"remove","from":1505,"through":1650,"reason":"Laufen was a Salzburg city, not a town of the Bavarian duchy.","source":"https://www.historisches-lexikon-bayerns.de/Lexikon/Artikel_45331"},
-  {"territory":"Baviera","id":"Neuburg_an_der_Donau","action":"remove","from":1505,"through":1650,"reason":"Pfalz-Neuburg was created as a separate Wittelsbach principality in the 1505 settlement.","source":"https://www.historisches-lexikon-bayerns.de/Lexikon/Artikel_45317"},
-  {"territory":"Baviera","id":"Leuchtenberg","action":"remove","from":1628,"through":1650,"reason":"The landgraviate of Leuchtenberg remained a separate immediate territory after the Upper Palatinate transferred to Bavaria.","source":"https://www.historisches-lexikon-bayerns.de/Lexikon/Territorialentwicklung_in_Altbayern"},
-  {"territory":"Palatinado","id":"Leuchtenberg","action":"remove","from":1400,"through":1650,"reason":"Leuchtenberg was an immediate landgraviate, not the Electoral Palatinate.","source":"https://www.historisches-lexikon-bayerns.de/Lexikon/Territorialentwicklung_in_Altbayern"},
-  {"territory":"Palatinado","id":"Speyer","action":"remove","from":1400,"through":1650,"reason":"Speyer was a free imperial city; a political alliance with the elector did not make it Palatine territory.","source":"https://www.historisches-lexikon-bayerns.de/Lexikon/Pfalz_%28Sp%C3%A4tmittelalter/Fr%C3%BChe_Neuzeit%29"},
-  {"territory":"Palatinado","id":"Landau_Rhineland","action":"remove","from":1400,"through":1650,"reason":"Landau was an imperial city pledged to the bishop of Speyer, then independent again; it was not Electoral Palatinate.","source":"https://www.landau.de/Leben-Wohnen/Stadtportrait/Stadtgeschichte/Zeittafel/"},
-  {"territory":"Palatinado","id":"Leiningen","action":"remove","from":1400,"through":1650,"reason":"The counts of Leiningen had their own territory rather than forming a district of the Electoral Palatinate.","source":"https://www.historisches-lexikon-bayerns.de/Lexikon/Pfalz_%28Sp%C3%A4tmittelalter/Fr%C3%BChe_Neuzeit%29"},
-  {"territory":"Palatinado","id":"Pirmasens","action":"remove","from":1400,"through":1650,"reason":"Pirmasens/Lemberg followed the counts of Zweibrücken-Bitsch and later Hanau-Lichtenberg, not the Electoral Palatinate.","source":"https://arcinsys.hessen.de/arcinsys/showFondsDetails?fondsId=3932"},
-  {"territory":"Palatinado","id":"Zweibrucken","action":"remove","from":1410,"through":1650,"reason":"The 1410 Palatine partition assigned Zweibrücken to a separate Wittelsbach line.","source":"https://www.historisches-lexikon-bayerns.de/Lexikon/Pf%C3%A4lzische_Teilungen"},
-  {"territory":"Corona de Polonia","id":"Sochaczew","action":"remove","from":1462,"through":1475,"reason":"Sochaczew did not join the Crown with Rawa and Gostynin in 1462; its incorporation dates to 1476.","source":"https://agad.gov.pl/?page_id=486"},
-  {"territory":"Ducado de Mazovia","id":"Sochaczew","action":"add","from":1462,"through":1475,"reason":"Sochaczew remained Mazovian until incorporation into the Crown in 1476.","source":"https://agad.gov.pl/?page_id=486"},
-  {"territory":"Prusia de la Orden","id":"Tuchola","action":"add","from":1400,"through":1453,"reason":"The Tuchola/Schlochau area belonged to the Order before the Thirteen Years' War; its status during the war is left uncolored.","source":"https://zpe.gov.pl/a/prezentacja-multimedialna/DbYm1LK96"},
-  {"territory":"Prusia Real","id":"Tuchola","action":"add","from":1466,"through":1569,"reason":"Pomerelia, including Tuchola, entered Royal Prussia after the Second Peace of Thorn.","source":"https://zpe.gov.pl/a/polskie-dynastie-jagiellonowie/D12LkQne7"},
-  {"territory":"Prusia Real","id":"Malbork","action":"add","from":1466,"through":1569,"reason":"The treaty explicitly assigned Malbork/Marienburg to the Polish Crown, not to the Teutonic remnant.","source":"https://zpe.gov.pl/a/prezentacja-multimedialna/DbYm1LK96"},
-  {"territory":"Prusia Real","id":"Elblag","action":"add","from":1466,"through":1569,"reason":"The treaty explicitly assigned Elbląg/Elbing to Royal Prussia.","source":"https://zpe.gov.pl/a/prezentacja-multimedialna/DbYm1LK96"},
-  {"territory":"Prusia Real","id":"Dzierzgon","action":"add","from":1466,"through":1569,"reason":"The treaty includes Christburg/Dzierzgoń in the lands transferred to the Crown.","source":"https://zpe.gov.pl/a/prezentacja-multimedialna/DbYm1LK96"},
-  {"territory":"Prusia de la Orden","id":"Malbork","action":"remove","from":1454,"through":1524,"reason":"Malbork changed hands in the Thirteen Years' War and was definitively ceded to Royal Prussia in 1466; the contested years are left gray.","source":"https://zpe.gov.pl/a/prezentacja-multimedialna/DbYm1LK96"},
-  {"territory":"Prusia de la Orden","id":"Elblag","action":"remove","from":1454,"through":1524,"reason":"Elbląg changed hands during the Thirteen Years' War and passed to Royal Prussia in 1466; contested years are left gray.","source":"https://zpe.gov.pl/a/prezentacja-multimedialna/DbYm1LK96"},
-  {"territory":"Prusia de la Orden","id":"Dzierzgon","action":"remove","from":1454,"through":1524,"reason":"Christburg/Dzierzgoń was transferred to the Crown in 1466; the wartime interval remains uncolored.","source":"https://zpe.gov.pl/a/prezentacja-multimedialna/DbYm1LK96"},
-  {"territory":"Prusia ducal","id":"Malbork","action":"remove","from":1525,"through":1569,"reason":"Malbork was Royal Prussia, not the secularized Duchy of Prussia.","source":"https://zpe.gov.pl/a/prezentacja-multimedialna/DbYm1LK96"},
-  {"territory":"Prusia ducal","id":"Elblag","action":"remove","from":1525,"through":1569,"reason":"Elbląg was Royal Prussia, not the secularized Duchy of Prussia.","source":"https://zpe.gov.pl/a/prezentacja-multimedialna/DbYm1LK96"},
-  {"territory":"Prusia ducal","id":"Dzierzgon","action":"remove","from":1525,"through":1569,"reason":"Christburg/Dzierzgoń was on the Royal Prussian side of the 1466 border.","source":"https://zpe.gov.pl/a/prezentacja-multimedialna/DbYm1LK96"},
-  {"territory":"Principado episcopal de Brixen","id":"Brixen","action":"add","from":1400,"through":1650,"reason":"The Brixen city location represents an identified centre of the distinct prince-bishopric, not a complete diocesan boundary.","source":"https://www.tirol.gv.at/fileadmin/themen/kunst-kultur/landesarchiv/downloads/Grundsteueranschlag1508-1509.pdf"},
-  {"territory":"Principado episcopal de Brixen","id":"Bruneck","action":"add","from":1400,"through":1650,"reason":"Bruneck is listed among the prince-bishopric's cities; only its location is attributed here.","source":"https://www.tirol.gv.at/fileadmin/themen/kunst-kultur/landesarchiv/downloads/Grundsteueranschlag1508-1509.pdf"},
-  {"territory":"Principado episcopal de Trento","id":"Trento","action":"add","from":1400,"through":1650,"reason":"The city was the seat of the prince-bishop; this location does not delimit the entire temporal principality.","source":"https://www.provincia.tn.it/News/Approfondimenti/Radici-storiche-dell-autonomia"},
-  {"territory":"Principado episcopal de Trento","id":"Cavalese","action":"add","from":1400,"through":1650,"reason":"Fiemme retained local self-government under the prince-bishop of Trento; the location is only an approximate geographic token.","source":"https://www.ufficiostampa.provincia.tn.it/content/download/18455/374120/file/Palazzo_Magnifica_Comunit%C3%A0_di_Fiemme.pdf"},
-  {"territory":"Arzobispado principesco de Salzburgo","id":"Salzburg","action":"add","from":1400,"through":1650,"reason":"Salzburg was a city of its distinct prince-archbishopric.","source":"https://www.historisches-lexikon-bayerns.de/Lexikon/Artikel_45331"},
-  {"territory":"Arzobispado principesco de Salzburgo","id":"Hallein","action":"add","from":1400,"through":1650,"reason":"Hallein belonged to the territorial archbishopric, not the Duchy of Bavaria.","source":"https://www.historisches-lexikon-bayerns.de/Lexikon/Artikel_45331"},
-  {"territory":"Arzobispado principesco de Salzburgo","id":"Muhldorf","action":"add","from":1400,"through":1650,"reason":"Mühldorf was a Salzburg enclave; its high-court jurisdiction is recorded from 1442, so this location should not be read as an unchanged bundle of rights.","source":"https://www.historisches-lexikon-bayerns.de/Lexikon/Artikel_45331"},
-  {"territory":"Arzobispado principesco de Salzburgo","id":"Laufen","action":"add","from":1400,"through":1650,"reason":"Laufen was a Salzburg territorial town, distinct from Bavarian control.","source":"https://www.historisches-lexikon-bayerns.de/Lexikon/Artikel_45331"},
-  {"territory":"Plaza inglesa de Calais","id":"Calais","action":"add","from":1400,"through":1557,"reason":"The Calais town location marks the English-held port and Pale until its French capture in early 1558; the entire surrounding location set is not claimed.","source":"https://www.nationalarchives.gov.uk/help-with-your-research/research-guides/french-lands-english-kings/"},
-  {"territory":"Plazas inglesas de Guyena","id":"Bordeaux","action":"add","from":1400,"through":1450,"reason":"Bordeaux was a centre of English Gascony; the 1451 French submission and the later English recapture require separate annual entries.","source":"https://discovery.nationalarchives.gov.uk/details/r/C3621"},
-  {"territory":"Plazas inglesas de Guyena","id":"Bordeaux","action":"add","from":1452,"through":1452,"reason":"English forces regained Bordeaux in 1452, before the final French capture in October 1453.","source":"https://catalogue.bnf.fr/ark:/12148/cb11938577c"},
-  {"territory":"Plazas inglesas de Guyena","id":"Bayonne","action":"add","from":1400,"through":1450,"reason":"Bayonne was part of the English-administered Gascon core before the French campaign of 1451; this is a city location, not all of Gascony.","source":"https://discovery.nationalarchives.gov.uk/details/r/C3621"},
-  {"territory":"Francia","id":"Calais","action":"remove","from":1453,"through":1557,"reason":"The English held Calais until the French capture in 1558; the overlap with old Ponthieu must not transfer this location to France in 1477.","source":"https://www.nationalarchives.gov.uk/help-with-your-research/research-guides/french-lands-english-kings/"},
-  {"territory":"Provenza","id":"Barcelonnette","action":"remove","from":1400,"through":1485,"reason":"Barcelonnette and the Nice hinterland were ceded from Provence to Savoy in 1388.","source":"https://catalogue.bnf.fr/ark:/12148/cb12224467j"},
-  {"territory":"Francia","id":"Barcelonnette","action":"remove","from":1486,"through":1650,"reason":"The 1486 annexation of Provence did not restore Barcelonnette, ceded to Savoy in 1388.","source":"https://catalogue.bnf.fr/ark:/12148/cb12224467j"},
-  {"territory":"Saboya","id":"Barcelonnette","action":"add","from":1400,"through":1650,"reason":"Barcelonnette was among the Nice hinterland transferred to Savoy in 1388; the separate Savoyard layer records the location.","source":"https://catalogue.bnf.fr/ark:/12148/cb12224467j"},
-  {"territory":"Escocia","id":"Torshavn","action":"remove","from":1400,"through":1650,"reason":"Tórshavn lies in the Faroes, under the Norwegian Crown within the Danish-Norwegian monarchy, not Scotland.","source":"https://www.faroeislands.fo/the-big-picture/history-of-the-faroe-islands/historical-timeline"},
-  {"territory":"Escocia","id":"Mann","action":"remove","from":1400,"through":1650,"reason":"The Isle of Man had a distinct Stanley lordship from 1406 and is not a Scottish county.","source":"https://manxnationalheritage.im/news/medieval-ring-declared-treasure/"},
-  {"territory":"Señorío de Man","id":"Mann","action":"add","from":1406,"through":1650,"reason":"The Man location denotes the Stanley lordship established in 1406, a jurisdiction distinct from the English and Scottish kingdoms.","source":"https://manxnationalheritage.im/news/medieval-ring-declared-treasure/"},
-  {"territory":"Escocia","id":"Orkney","action":"remove","from":1400,"through":1468,"reason":"Orkney remained under Norwegian rule until 1469; earlier years are left to a future Norway-Denmark layer.","source":"https://www.historicenvironment.scot/visit/all/maeshowe-chambered-cairn/history-and-stories/"},
-  {"territory":"Escocia","id":"Shetland","action":"remove","from":1400,"through":1468,"reason":"Shetland passed from Norway to Scotland in 1469; earlier years are left to a future Norway-Denmark layer.","source":"https://www.historicenvironment.scot/visit/all/jarlshof-prehistoric-and-norse-settlement/history-and-stories/"},
-  {"territory":"Escocia","id":"Berwick","action":"remove","from":1400,"through":1460,"reason":"Berwick was held by England from 1333 until its transfer to Scotland in 1461.","source":"https://historicengland.org.uk/listing/the-list/list-entry/1015520"},
-  {"territory":"Escocia","id":"Berwick","action":"remove","from":1482,"through":1650,"reason":"England retook Berwick in 1482 and retained it thereafter.","source":"https://historicengland.org.uk/listing/the-list/list-entry/1015520"},
-  {"territory":"Inglaterra","id":"Berwick","action":"add","from":1400,"through":1460,"reason":"Berwick was in English hands from 1333 until its transfer to Scotland in 1461.","source":"https://historicengland.org.uk/listing/the-list/list-entry/1015520"},
-  {"territory":"Inglaterra","id":"Berwick","action":"add","from":1482,"through":1650,"reason":"England retook Berwick in 1482 and retained it thereafter.","source":"https://historicengland.org.uk/listing/the-list/list-entry/1015520"},
-  {"territory":"Núcleo inglés en Irlanda","id":"Dublin","action":"add","from":1400,"through":1650,"reason":"Dublin remained the central English administrative town in Ireland; this location is a core point, not the Pale's complete outline.","source":"https://www.nationalarchives.gov.uk/help-with-your-research/research-guides/irish-maps-c1558-c1610/"},
-  {"territory":"Núcleo inglés en Irlanda","id":"Fingal","action":"add","from":1400,"through":1650,"reason":"Fingal is immediately north of Dublin within the English Pale core; this location is a cautious token, not a dated frontier.","source":"https://www.nationalarchives.gov.uk/help-with-your-research/research-guides/irish-maps-c1558-c1610/"},
-  {"territory":"Núcleo inglés en Irlanda","id":"Navan","action":"add","from":1400,"through":1650,"reason":"Navan lies in Meath, one of the Pale's core counties; this is a location-level token, not a border claim.","source":"https://www.nationalarchives.gov.uk/help-with-your-research/research-guides/irish-maps-c1558-c1610/"},
-  {"territory":"Núcleo inglés en Irlanda","id":"Trim","action":"add","from":1400,"through":1650,"reason":"Trim lies in Meath, in the core English-administered area; no complete Meath frontier is inferred.","source":"https://www.nationalarchives.gov.uk/help-with-your-research/research-guides/irish-maps-c1558-c1610/"},
-  {"territory":"Núcleo inglés en Irlanda","id":"Naas","action":"add","from":1400,"through":1650,"reason":"Naas is a Kildare core location of the Pale; the extent of English power beyond it varied.","source":"https://www.nationalarchives.gov.uk/help-with-your-research/research-guides/irish-maps-c1558-c1610/"},
-  {"territory":"Núcleo inglés en Irlanda","id":"Kildare","action":"add","from":1400,"through":1650,"reason":"Kildare is shown as an English Pale core location, without implying county-wide effective control.","source":"https://www.nationalarchives.gov.uk/help-with-your-research/research-guides/irish-maps-c1558-c1610/"},
-  {"territory":"Núcleo inglés en Irlanda","id":"Athy","action":"add","from":1400,"through":1650,"reason":"Athy is a Kildare garrison location in the English lordship; its location does not define the Pale's whole frontier.","source":"https://assets.ireland.ie/documents/GIDC-SAIS_Vol_5_2_2_web_002.pdf"},
-  {"territory":"Núcleo inglés en Irlanda","id":"Drogheda","action":"add","from":1400,"through":1650,"reason":"Drogheda was a principal town in the Louth/Meath Pale area; this is an urban token, not a county-wide polygon.","source":"https://assets.ireland.ie/documents/GIDC-SAIS_Vol_5_2_2_web_002.pdf"},
-  {"territory":"Núcleo inglés en Irlanda","id":"Dundalk","action":"add","from":1400,"through":1650,"reason":"Louth was one of the Pale counties; Dundalk marks its northern urban core without claiming a precise frontier.","source":"https://louthcoco.ie/en/services/heritage/what_is_heritage/cultural/county_and_boroughs/"},
-  {"territory":"Francia","id":"Jersey","action":"remove","from":1453,"through":1650,"reason":"The old Normandy polygon overlaps Jersey; the island was otherwise a separate bailiwick loyal to the English Crown, except for the occupation of 1461–1467.","source":"https://www.gov.je/Leisure/Jersey/Pages/History.aspx"},
-  {"territory":"Bailiazgo de Jersey","id":"Jersey","action":"add","from":1400,"through":1460,"reason":"Jersey retained a separate allegiance to the English Crown after 1204, before its seven-year French occupation.","source":"https://www.gov.je/SiteCollectionDocuments/Life%20events/ID%20Citizenship%20Test%20-%20Jersey%20Supplement%20-%2020190304.pdf"},
-  {"territory":"Francia","id":"Jersey","action":"add","from":1461,"through":1467,"reason":"The French occupied Jersey for seven years during the Wars of the Roses before it was recovered in 1468.","source":"https://www.gov.je/SiteCollectionDocuments/Life%20events/ID%20Citizenship%20Test%20-%20Jersey%20Supplement%20-%2020190304.pdf"},
-  {"territory":"Bailiazgo de Jersey","id":"Jersey","action":"add","from":1468,"through":1650,"reason":"The English Crown recovered Jersey in 1468; the island kept its distinct bailiwick rather than becoming part of England.","source":"https://www.gov.je/SiteCollectionDocuments/Life%20events/ID%20Citizenship%20Test%20-%20Jersey%20Supplement%20-%2020190304.pdf"},
-  {"territory":"Hungría","id":"Sinj","action":"remove","from":1513,"through":1525,"reason":"Sinj passed to Ottoman rule in 1513; remove it from the coarse Hungarian-Croatian aggregate for those years.","source":"https://enciklopedija.hr/Clanak/cetinska-krajina?handler=ButtonSnimi"},
-  {"territory":"Hungría","id":"Knin","action":"remove","from":1522,"through":1525,"reason":"Knin fell to the Ottomans in 1522; remove it from the coarse Hungarian-Croatian aggregate for those years.","source":"https://enciklopedija.hr/clanak/knin"},
-  {"territory":"Reino de Dinamarca","id":"Helsingborg","action":"add","from":1400,"through":1650,"reason":"Núcleo de Escania bajo la Corona danesa durante el intervalo revisado; la cesión a Suecia se produjo en 1658. La celda es una aproximación regional.","source":"https://danmarkshistorien.lex.dk/Roskildefreden,_26._februar_1658"},
-  {"territory":"Reino de Dinamarca","id":"Lund","action":"add","from":1400,"through":1650,"reason":"Núcleo de Escania bajo la Corona danesa durante el intervalo revisado; la cesión a Suecia se produjo en 1658. La celda es una aproximación regional.","source":"https://danmarkshistorien.lex.dk/Roskildefreden,_26._februar_1658"},
-  {"territory":"Reino de Dinamarca","id":"Malmo","action":"add","from":1400,"through":1650,"reason":"Núcleo de Escania bajo la Corona danesa durante el intervalo revisado; la cesión a Suecia se produjo en 1658. La celda es una aproximación regional.","source":"https://danmarkshistorien.lex.dk/Roskildefreden,_26._februar_1658"},
-  {"territory":"Reino de Dinamarca","id":"Osby","action":"add","from":1400,"through":1650,"reason":"Núcleo de Escania bajo la Corona danesa durante el intervalo revisado; la cesión a Suecia se produjo en 1658. La celda es una aproximación regional.","source":"https://danmarkshistorien.lex.dk/Roskildefreden,_26._februar_1658"},
-  {"territory":"Reino de Dinamarca","id":"Gladsax","action":"add","from":1400,"through":1650,"reason":"Núcleo de Escania bajo la Corona danesa durante el intervalo revisado; la cesión a Suecia se produjo en 1658. La celda es una aproximación regional.","source":"https://danmarkshistorien.lex.dk/Roskildefreden,_26._februar_1658"},
-  {"territory":"Bosnia y Herzegovina otomanas","id":"Jajce","action":"add","from":1527,"through":1650,"reason":"Jajce cayó en diciembre de 1527; se usa el estado al cierre del año, no se retrasa a 1528.","source":"https://www.enciklopedija.hr/clanak/jajce"},
-  {"territory":"Banato húngaro de Jajce","id":"Jajce","action":"add","from":1463,"through":1526,"reason":"Recuperada por Matías Corvino al final de 1463; fortaleza bajo autoridad húngara hasta su conquista otomana de 1527.","source":"https://www.enciklopedija.hr/clanak/jajce"},
-  {"territory":"Reino de Suecia","id":"Vyborg","action":"add","from":1400,"through":1650,"reason":"Núcleo de la fortaleza de Vyborg dentro del sistema defensivo sueco de Finlandia; no se extiende a toda Carelia ni se afirma un límite oriental exacto.","source":"https://www.kansallismuseo.fi/en/olavinlinna/historiaa"},
-  {"territory":"Venecia","id":"Monemvasia","action":"add","from":1463,"through":1539,"reason":"Monemvasía conservó gobierno veneciano hasta su entrega a los otomanos en 1540; no se incorpora con Morea en 1460.","source":"https://monemvasia.gr/2017/05/history/"},
-  {"territory":"Venecia","id":"Argos","action":"add","from":1400,"through":1462,"reason":"Plaza veneciana antes de la conquista otomana de 1463; celda regional aproximada.","source":"https://enciklopedija.hr/clanak/argos"},
-  {"territory":"Reino de Dinamarca","id":"Aalborg","action":"add","from":1400,"through":1650,"reason":"Celda de Nørrejylland comprobada visualmente dentro de Jutlandia. El cruce automático omitía estas celdas entre provincias; no se incorpora Schleswig ni Holstein al reino.","source":"https://natmus.dk/historisk-viden/danmark/middelalder-1000-1536/byer-fra-middelalderen/"},
-  {"territory":"Reino de Dinamarca","id":"Ars","action":"add","from":1400,"through":1650,"reason":"Celda de Nørrejylland comprobada visualmente dentro de Jutlandia. El cruce automático omitía estas celdas entre provincias; no se incorpora Schleswig ni Holstein al reino.","source":"https://natmus.dk/historisk-viden/danmark/middelalder-1000-1536/byer-fra-middelalderen/"},
-  {"territory":"Reino de Dinamarca","id":"Viborg","action":"add","from":1400,"through":1650,"reason":"Celda de Nørrejylland comprobada visualmente dentro de Jutlandia. El cruce automático omitía estas celdas entre provincias; no se incorpora Schleswig ni Holstein al reino.","source":"https://natmus.dk/historisk-viden/danmark/middelalder-1000-1536/byer-fra-middelalderen/"},
-  {"territory":"Reino de Dinamarca","id":"Randers","action":"add","from":1400,"through":1650,"reason":"Celda de Nørrejylland comprobada visualmente dentro de Jutlandia. El cruce automático omitía estas celdas entre provincias; no se incorpora Schleswig ni Holstein al reino.","source":"https://natmus.dk/historisk-viden/danmark/middelalder-1000-1536/byer-fra-middelalderen/"},
-  {"territory":"Núcleo de Brandeburgo","id":"Ruppin","action":"add","from":1524,"through":1650,"reason":"Ruppin pasa al electorado en 1524. Antes conserva la autoridad de los condes de Lindow-Ruppin; no basta con estar en la región de Brandeburgo.","source":"https://blha.brandenburg.de/sixcms/media.php/9/79981-9783867329767_ebook_PC.pdf"},
-  {"territory":"Reino de Suecia","id":"Albo","action":"add","from":1400,"through":1650,"reason":"Västmanland, Närke, Dalsland y Tiohärad/Småland revisados por su forma y posición. Aproximación regional de tierras del reino; no un lindero feudal exacto.","source":"https://medeltiden.kalmarlansmuseum.se/samhallet/landets-indelning/landskapslag-och-landslag/"},
-  {"territory":"Reino de Suecia","id":"Amal","action":"add","from":1400,"through":1650,"reason":"Västmanland, Närke, Dalsland y Tiohärad/Småland revisados por su forma y posición. Aproximación regional de tierras del reino; no un lindero feudal exacto.","source":"https://medeltiden.kalmarlansmuseum.se/samhallet/landets-indelning/landskapslag-och-landslag/"},
-  {"territory":"Reino de Suecia","id":"Arboga","action":"add","from":1400,"through":1650,"reason":"Västmanland, Närke, Dalsland y Tiohärad/Småland revisados por su forma y posición. Aproximación regional de tierras del reino; no un lindero feudal exacto.","source":"https://medeltiden.kalmarlansmuseum.se/samhallet/landets-indelning/landskapslag-och-landslag/"},
-  {"territory":"Reino de Suecia","id":"Birkala","action":"add","from":1400,"through":1650,"reason":"Celda de Satakunta en el núcleo occidental de Finlandia bajo el reino sueco. Forma y vecinos comprobados en el SVG; no se extiende esa equivalencia a toda Carelia o Laponia.","source":"https://www.medeltiden.kalmarlansmuseum.se/samhallet/lander-runt-ostersjon/finland/finland-under-medeltiden/"},
-  {"territory":"Reino de Suecia","id":"Bjorneborg","action":"add","from":1400,"through":1650,"reason":"Celda de Satakunta en el núcleo occidental de Finlandia bajo el reino sueco. Forma y vecinos comprobados en el SVG; no se extiende esa equivalencia a toda Carelia o Laponia.","source":"https://www.medeltiden.kalmarlansmuseum.se/samhallet/lander-runt-ostersjon/finland/finland-under-medeltiden/"},
-  {"territory":"Reino de Suecia","id":"Dalaborg","action":"add","from":1400,"through":1650,"reason":"Västmanland, Närke, Dalsland y Tiohärad/Småland revisados por su forma y posición. Aproximación regional de tierras del reino; no un lindero feudal exacto.","source":"https://medeltiden.kalmarlansmuseum.se/samhallet/landets-indelning/landskapslag-och-landslag/"},
-  {"territory":"Reino de Suecia","id":"Goksholm","action":"add","from":1400,"through":1650,"reason":"Västmanland, Närke, Dalsland y Tiohärad/Småland revisados por su forma y posición. Aproximación regional de tierras del reino; no un lindero feudal exacto.","source":"https://medeltiden.kalmarlansmuseum.se/samhallet/landets-indelning/landskapslag-och-landslag/"},
-  {"territory":"Reino de Suecia","id":"Grythyttan","action":"add","from":1400,"through":1650,"reason":"Västmanland, Närke, Dalsland y Tiohärad/Småland revisados por su forma y posición. Aproximación regional de tierras del reino; no un lindero feudal exacto.","source":"https://medeltiden.kalmarlansmuseum.se/samhallet/landets-indelning/landskapslag-och-landslag/"},
-  {"territory":"Reino de Suecia","id":"Hvittis","action":"add","from":1400,"through":1650,"reason":"Celda de Satakunta en el núcleo occidental de Finlandia bajo el reino sueco. Forma y vecinos comprobados en el SVG; no se extiende esa equivalencia a toda Carelia o Laponia.","source":"https://www.medeltiden.kalmarlansmuseum.se/samhallet/lander-runt-ostersjon/finland/finland-under-medeltiden/"},
-  {"territory":"Reino de Suecia","id":"Ikalis","action":"add","from":1400,"through":1650,"reason":"Celda de Satakunta en el núcleo occidental de Finlandia bajo el reino sueco. Forma y vecinos comprobados en el SVG; no se extiende esa equivalencia a toda Carelia o Laponia.","source":"https://www.medeltiden.kalmarlansmuseum.se/samhallet/lander-runt-ostersjon/finland/finland-under-medeltiden/"},
-  {"territory":"Reino de Suecia","id":"Konga","action":"add","from":1400,"through":1650,"reason":"Västmanland, Närke, Dalsland y Tiohärad/Småland revisados por su forma y posición. Aproximación regional de tierras del reino; no un lindero feudal exacto.","source":"https://medeltiden.kalmarlansmuseum.se/samhallet/landets-indelning/landskapslag-och-landslag/"},
-  {"territory":"Reino de Suecia","id":"Linde","action":"add","from":1400,"through":1650,"reason":"Västmanland, Närke, Dalsland y Tiohärad/Småland revisados por su forma y posición. Aproximación regional de tierras del reino; no un lindero feudal exacto.","source":"https://medeltiden.kalmarlansmuseum.se/samhallet/landets-indelning/landskapslag-och-landslag/"},
-  {"territory":"Reino de Suecia","id":"Ljungby","action":"add","from":1400,"through":1650,"reason":"Västmanland, Närke, Dalsland y Tiohärad/Småland revisados por su forma y posición. Aproximación regional de tierras del reino; no un lindero feudal exacto.","source":"https://medeltiden.kalmarlansmuseum.se/samhallet/landets-indelning/landskapslag-och-landslag/"},
-  {"territory":"Reino de Suecia","id":"Nora","action":"add","from":1400,"through":1650,"reason":"Västmanland, Närke, Dalsland y Tiohärad/Småland revisados por su forma y posición. Aproximación regional de tierras del reino; no un lindero feudal exacto.","source":"https://medeltiden.kalmarlansmuseum.se/samhallet/landets-indelning/landskapslag-och-landslag/"},
-  {"territory":"Reino de Suecia","id":"Orebro","action":"add","from":1400,"through":1650,"reason":"Västmanland, Närke, Dalsland y Tiohärad/Småland revisados por su forma y posición. Aproximación regional de tierras del reino; no un lindero feudal exacto.","source":"https://medeltiden.kalmarlansmuseum.se/samhallet/landets-indelning/landskapslag-och-landslag/"},
-  {"territory":"Reino de Suecia","id":"Orivesi","action":"add","from":1400,"through":1650,"reason":"Celda de Satakunta en el núcleo occidental de Finlandia bajo el reino sueco. Forma y vecinos comprobados en el SVG; no se extiende esa equivalencia a toda Carelia o Laponia.","source":"https://www.medeltiden.kalmarlansmuseum.se/samhallet/lander-runt-ostersjon/finland/finland-under-medeltiden/"},
-  {"territory":"Reino de Suecia","id":"Raumo","action":"add","from":1400,"through":1650,"reason":"Celda de Satakunta en el núcleo occidental de Finlandia bajo el reino sueco. Forma y vecinos comprobados en el SVG; no se extiende esa equivalencia a toda Carelia o Laponia.","source":"https://www.medeltiden.kalmarlansmuseum.se/samhallet/lander-runt-ostersjon/finland/finland-under-medeltiden/"},
-  {"territory":"Reino de Suecia","id":"Riseberga","action":"add","from":1400,"through":1650,"reason":"Västmanland, Närke, Dalsland y Tiohärad/Småland revisados por su forma y posición. Aproximación regional de tierras del reino; no un lindero feudal exacto.","source":"https://medeltiden.kalmarlansmuseum.se/samhallet/landets-indelning/landskapslag-och-landslag/"},
-  {"territory":"Reino de Suecia","id":"Sala","action":"add","from":1400,"through":1650,"reason":"Västmanland, Närke, Dalsland y Tiohärad/Småland revisados por su forma y posición. Aproximación regional de tierras del reino; no un lindero feudal exacto.","source":"https://medeltiden.kalmarlansmuseum.se/samhallet/landets-indelning/landskapslag-och-landslag/"},
-  {"territory":"Reino de Suecia","id":"Sastamala","action":"add","from":1400,"through":1650,"reason":"Celda de Satakunta en el núcleo occidental de Finlandia bajo el reino sueco. Forma y vecinos comprobados en el SVG; no se extiende esa equivalencia a toda Carelia o Laponia.","source":"https://www.medeltiden.kalmarlansmuseum.se/samhallet/lander-runt-ostersjon/finland/finland-under-medeltiden/"},
-  {"territory":"Reino de Suecia","id":"Sastmola","action":"add","from":1400,"through":1650,"reason":"Celda de Satakunta en el núcleo occidental de Finlandia bajo el reino sueco. Forma y vecinos comprobados en el SVG; no se extiende esa equivalencia a toda Carelia o Laponia.","source":"https://www.medeltiden.kalmarlansmuseum.se/samhallet/lander-runt-ostersjon/finland/finland-under-medeltiden/"},
-  {"territory":"Reino de Suecia","id":"Skinskatteberg","action":"add","from":1400,"through":1650,"reason":"Västmanland, Närke, Dalsland y Tiohärad/Småland revisados por su forma y posición. Aproximación regional de tierras del reino; no un lindero feudal exacto.","source":"https://medeltiden.kalmarlansmuseum.se/samhallet/landets-indelning/landskapslag-och-landslag/"},
-  {"territory":"Reino de Suecia","id":"Trollaborg","action":"add","from":1400,"through":1650,"reason":"Västmanland, Närke, Dalsland y Tiohärad/Småland revisados por su forma y posición. Aproximación regional de tierras del reino; no un lindero feudal exacto.","source":"https://medeltiden.kalmarlansmuseum.se/samhallet/landets-indelning/landskapslag-och-landslag/"},
-  {"territory":"Reino de Suecia","id":"Uppvidinge","action":"add","from":1400,"through":1650,"reason":"Västmanland, Närke, Dalsland y Tiohärad/Småland revisados por su forma y posición. Aproximación regional de tierras del reino; no un lindero feudal exacto.","source":"https://medeltiden.kalmarlansmuseum.se/samhallet/landets-indelning/landskapslag-och-landslag/"},
-  {"territory":"Reino de Suecia","id":"Vallsjo","action":"add","from":1400,"through":1650,"reason":"Västmanland, Närke, Dalsland y Tiohärad/Småland revisados por su forma y posición. Aproximación regional de tierras del reino; no un lindero feudal exacto.","source":"https://medeltiden.kalmarlansmuseum.se/samhallet/landets-indelning/landskapslag-och-landslag/"},
-  {"territory":"Reino de Suecia","id":"Vasteras","action":"add","from":1400,"through":1650,"reason":"Västmanland, Närke, Dalsland y Tiohärad/Småland revisados por su forma y posición. Aproximación regional de tierras del reino; no un lindero feudal exacto.","source":"https://medeltiden.kalmarlansmuseum.se/samhallet/landets-indelning/landskapslag-och-landslag/"},
-  {"territory":"Reino de Suecia","id":"Vaxjo","action":"add","from":1400,"through":1650,"reason":"Västmanland, Närke, Dalsland y Tiohärad/Småland revisados por su forma y posición. Aproximación regional de tierras del reino; no un lindero feudal exacto.","source":"https://medeltiden.kalmarlansmuseum.se/samhallet/landets-indelning/landskapslag-och-landslag/"},
-  {"territory":"Reino de Suecia","id":"Vedbo","action":"add","from":1400,"through":1650,"reason":"Västmanland, Närke, Dalsland y Tiohärad/Småland revisados por su forma y posición. Aproximación regional de tierras del reino; no un lindero feudal exacto.","source":"https://medeltiden.kalmarlansmuseum.se/samhallet/landets-indelning/landskapslag-och-landslag/"},
-  {"territory":"Reino de Suecia","id":"Vetlanda","action":"add","from":1400,"through":1650,"reason":"Västmanland, Närke, Dalsland y Tiohärad/Småland revisados por su forma y posición. Aproximación regional de tierras del reino; no un lindero feudal exacto.","source":"https://medeltiden.kalmarlansmuseum.se/samhallet/landets-indelning/landskapslag-och-landslag/"},
-  {"territory":"Reino de Suecia","id":"Waestbo","action":"add","from":1400,"through":1650,"reason":"Västmanland, Närke, Dalsland y Tiohärad/Småland revisados por su forma y posición. Aproximación regional de tierras del reino; no un lindero feudal exacto.","source":"https://medeltiden.kalmarlansmuseum.se/samhallet/landets-indelning/landskapslag-och-landslag/"},
-  {"territory":"Reino de Noruega","id":"Bardodalen","action":"add","from":1400,"through":1650,"reason":"Troms, Akershus y Østfold revisados visualmente; se representa el reino, sin convertir los derechos tributarios noruegos en dominio exclusivo sobre toda Sápmi.","source":"https://snl.no/Troms"},
-  {"territory":"Reino de Noruega","id":"Borg","action":"add","from":1400,"through":1650,"reason":"Troms, Akershus y Østfold revisados visualmente; se representa el reino, sin convertir los derechos tributarios noruegos en dominio exclusivo sobre toda Sápmi.","source":"https://snl.no/Norges_historie"},
-  {"territory":"Reino de Noruega","id":"Eidsvoll","action":"add","from":1400,"through":1650,"reason":"Troms, Akershus y Østfold revisados visualmente; se representa el reino, sin convertir los derechos tributarios noruegos en dominio exclusivo sobre toda Sápmi.","source":"https://snl.no/Norges_historie"},
-  {"territory":"Reino de Noruega","id":"Halden","action":"add","from":1400,"through":1650,"reason":"Troms, Akershus y Østfold revisados visualmente; se representa el reino, sin convertir los derechos tributarios noruegos en dominio exclusivo sobre toda Sápmi.","source":"https://snl.no/Norges_historie"},
-  {"territory":"Reino de Noruega","id":"Moss","action":"add","from":1400,"through":1650,"reason":"Troms, Akershus y Østfold revisados visualmente; se representa el reino, sin convertir los derechos tributarios noruegos en dominio exclusivo sobre toda Sápmi.","source":"https://snl.no/Norges_historie"},
-  {"territory":"Reino de Noruega","id":"Oslo","action":"add","from":1400,"through":1650,"reason":"Troms, Akershus y Østfold revisados visualmente; se representa el reino, sin convertir los derechos tributarios noruegos en dominio exclusivo sobre toda Sápmi.","source":"https://snl.no/Norges_historie"},
-  {"territory":"Reino de Noruega","id":"Raisa","action":"add","from":1400,"through":1650,"reason":"Troms, Akershus y Østfold revisados visualmente; se representa el reino, sin convertir los derechos tributarios noruegos en dominio exclusivo sobre toda Sápmi.","source":"https://snl.no/Troms"},
-  {"territory":"Reino de Noruega","id":"Senja","action":"add","from":1400,"through":1650,"reason":"Troms, Akershus y Østfold revisados visualmente; se representa el reino, sin convertir los derechos tributarios noruegos en dominio exclusivo sobre toda Sápmi.","source":"https://snl.no/Troms"},
-  {"territory":"Reino de Noruega","id":"Ski","action":"add","from":1400,"through":1650,"reason":"Troms, Akershus y Østfold revisados visualmente; se representa el reino, sin convertir los derechos tributarios noruegos en dominio exclusivo sobre toda Sápmi.","source":"https://snl.no/Norges_historie"},
-  {"territory":"Reino de Noruega","id":"Trogstad","action":"add","from":1400,"through":1650,"reason":"Troms, Akershus y Østfold revisados visualmente; se representa el reino, sin convertir los derechos tributarios noruegos en dominio exclusivo sobre toda Sápmi.","source":"https://snl.no/Norges_historie"},
-  {"territory":"Reino de Noruega","id":"Troms","action":"add","from":1400,"through":1650,"reason":"Troms, Akershus y Østfold revisados visualmente; se representa el reino, sin convertir los derechos tributarios noruegos en dominio exclusivo sobre toda Sápmi.","source":"https://snl.no/Troms"},
-  {"territory":"Reino de Noruega","id":"Trondenes","action":"add","from":1400,"through":1650,"reason":"Troms, Akershus y Østfold revisados visualmente; se representa el reino, sin convertir los derechos tributarios noruegos en dominio exclusivo sobre toda Sápmi.","source":"https://snl.no/Troms"},
-  {"territory":"Reino de Dinamarca","id":"Asbo","action":"add","from":1400,"through":1650,"reason":"Núcleos de Escania bajo la Corona danesa antes de su cesión en 1658. Revisión visual de Göinge y Malmöhus; las celdas son aproximadas.","source":"https://regionmuseet.se/wp-content/uploads/2024/08/1600-tal_lararhandl.pdf"}
+  {
+    "territory": "Castilla",
+    "id": "Gibraltar",
+    "action": "remove",
+    "from": 1400,
+    "through": 1461,
+    "reason": "Gibraltar passed to Castile in 1462, not throughout the old Cádiz polygon's span.",
+    "source": "https://www.gibraltar.gov.gi/maritime"
+  },
+  {
+    "territory": "Granada",
+    "id": "Gibraltar",
+    "action": "add",
+    "from": 1400,
+    "through": 1461,
+    "reason": "Keep the Nasrid frontier at Gibraltar until the Castilian capture in 1462.",
+    "source": "https://www.gibraltar.gov.gi/maritime"
+  },
+  {
+    "territory": "Granada",
+    "id": "Antequera",
+    "action": "remove",
+    "from": 1410,
+    "through": 1486,
+    "reason": "Antequera fell to Castile in 1410, before the old Málaga polygon's transfer.",
+    "source": "https://www.antequera.es/municipio/historia/"
+  },
+  {
+    "territory": "Castilla",
+    "id": "Antequera",
+    "action": "add",
+    "from": 1410,
+    "through": 1486,
+    "reason": "Antequera passed to Castile in 1410.",
+    "source": "https://www.antequera.es/municipio/historia/"
+  },
+  {
+    "territory": "Granada",
+    "id": "Ronda",
+    "action": "remove",
+    "from": 1485,
+    "through": 1486,
+    "reason": "Ronda fell to Castile in 1485, before the old Málaga polygon's transfer.",
+    "source": "https://www.treccani.it/enciclopedia/spagna_(Enciclopedia-Italiana)/"
+  },
+  {
+    "territory": "Castilla",
+    "id": "Ronda",
+    "action": "add",
+    "from": 1485,
+    "through": 1486,
+    "reason": "Castilian conquest of Ronda in 1485.",
+    "source": "https://www.treccani.it/enciclopedia/spagna_(Enciclopedia-Italiana)/"
+  },
+  {
+    "territory": "Granada",
+    "id": "Loja",
+    "action": "remove",
+    "from": 1486,
+    "through": 1491,
+    "reason": "Loja fell to Castile in 1486, before the old Granada polygon's transfer.",
+    "source": "https://www.treccani.it/enciclopedia/spagna_(Enciclopedia-Italiana)/"
+  },
+  {
+    "territory": "Castilla",
+    "id": "Loja",
+    "action": "add",
+    "from": 1486,
+    "through": 1491,
+    "reason": "Castilian conquest of Loja in 1486.",
+    "source": "https://www.treccani.it/enciclopedia/spagna_(Enciclopedia-Italiana)/"
+  },
+  {
+    "territory": "Trinacria",
+    "id": "Malta",
+    "action": "remove",
+    "from": 1530,
+    "through": 1650,
+    "reason": "Charles V granted Malta to the Order of St John in 1530.",
+    "source": "https://www.orderofmalta.int/news/the-national-library-of-malta-celebrates-the-orders-past-and-present/"
+  },
+  {
+    "territory": "Nápoles",
+    "id": "Benevento",
+    "action": "remove",
+    "from": 1400,
+    "through": 1650,
+    "reason": "Benevento was a papal enclave within the kingdom of Naples.",
+    "source": "https://www.treccani.it/enciclopedia/benevento_(Federiciana)/"
+  },
+  {
+    "territory": "Estados Pontificios",
+    "id": "Benevento",
+    "action": "add",
+    "from": 1400,
+    "through": 1650,
+    "reason": "Benevento remained a papal enclave within the kingdom of Naples.",
+    "source": "https://www.treccani.it/enciclopedia/benevento_(Federiciana)/"
+  },
+  {
+    "territory": "Milán",
+    "id": "Biella",
+    "action": "remove",
+    "from": 1400,
+    "through": 1650,
+    "reason": "Biella had passed to Savoy before this corridor starts.",
+    "source": "https://www.treccani.it/enciclopedia/biella_(Enciclopedia-Italiana)/"
+  },
+  {
+    "territory": "Piamonte",
+    "id": "Biella",
+    "action": "add",
+    "from": 1400,
+    "through": 1650,
+    "reason": "Biella belonged to the Savoyard sphere during this series.",
+    "source": "https://www.treccani.it/enciclopedia/biella_(Enciclopedia-Italiana)/"
+  },
+  {
+    "territory": "Milán",
+    "id": "Vercelli",
+    "action": "remove",
+    "from": 1427,
+    "through": 1650,
+    "reason": "Milan ceded Vercelli to Savoy in 1427.",
+    "source": "https://www.treccani.it/enciclopedia/vercelli_(Enciclopedia-Italiana)/"
+  },
+  {
+    "territory": "Piamonte",
+    "id": "Vercelli",
+    "action": "add",
+    "from": 1427,
+    "through": 1650,
+    "reason": "Vercelli passed to Savoy from Milan in 1427.",
+    "source": "https://www.treccani.it/enciclopedia/vercelli_(Enciclopedia-Italiana)/"
+  },
+  {
+    "territory": "Estados Pontificios",
+    "id": "Rovigo",
+    "action": "remove",
+    "from": 1598,
+    "through": 1650,
+    "reason": "The Ferrara devolution did not include Venetian Rovigo.",
+    "source": "https://www.treccani.it/enciclopedia/venezia-e-la-politica-italiana-1454-1530_(Storia-di-Venezia)/"
+  },
+  {
+    "territory": "Ferrara",
+    "id": "Rovigo",
+    "action": "remove",
+    "from": 1484,
+    "through": 1508,
+    "reason": "The 1484 peace transferred Rovigo/Polesine to Venice.",
+    "source": "https://www.treccani.it/enciclopedia/venezia-e-la-politica-italiana-1454-1530_(Storia-di-Venezia)/"
+  },
+  {
+    "territory": "Ferrara",
+    "id": "Rovigo",
+    "action": "remove",
+    "from": 1516,
+    "through": 1597,
+    "reason": "Rovigo returned to Venice after the League of Cambrai conflict.",
+    "source": "https://www.treccani.it/enciclopedia/venezia-e-la-politica-italiana-1454-1530_(Storia-di-Venezia)/"
+  },
+  {
+    "territory": "Venecia",
+    "id": "Rovigo",
+    "action": "add",
+    "from": 1484,
+    "through": 1508,
+    "reason": "Venice held Rovigo/Polesine following the 1484 peace.",
+    "source": "https://www.treccani.it/enciclopedia/venezia-e-la-politica-italiana-1454-1530_(Storia-di-Venezia)/"
+  },
+  {
+    "territory": "Venecia",
+    "id": "Rovigo",
+    "action": "add",
+    "from": 1516,
+    "through": 1650,
+    "reason": "Rovigo returned to Venetian control after the League of Cambrai war.",
+    "source": "https://www.treccani.it/enciclopedia/venezia-e-la-politica-italiana-1454-1530_(Storia-di-Venezia)/"
+  },
+  {
+    "territory": "Venecia",
+    "id": "Pola",
+    "action": "add",
+    "from": 1400,
+    "through": 1650,
+    "reason": "The coastal Istrian city of Pola entered Venetian rule in 1331; this does not paint the Habsburg inland peninsula.",
+    "source": "https://www.treccani.it/enciclopedia/istria_(Enciclopedia-Italiana)/"
+  },
+  {
+    "territory": "Venecia",
+    "id": "Rovinj",
+    "action": "add",
+    "from": 1400,
+    "through": 1650,
+    "reason": "Rovinj was among the Venetian coastal communities of Istria, distinct from the inland Habsburg territories.",
+    "source": "https://www.treccani.it/enciclopedia/rovigno-d-istria_(Enciclopedia-Italiana)/"
+  },
+  {
+    "territory": "Venecia",
+    "id": "Zadar",
+    "action": "add",
+    "from": 1409,
+    "through": 1650,
+    "reason": "Zadar was acquired by Venice in 1409. The EU V ID is Zadar; Zara on this map is elsewhere.",
+    "source": "https://www.treccani.it/enciclopedia/zara_(Enciclopedia-Italiana)/"
+  },
+  {
+    "territory": "Venecia",
+    "id": "Sibenik",
+    "action": "add",
+    "from": 1420,
+    "through": 1650,
+    "reason": "Conservative year-end assignment following the 1409–1420 Venetian reconquest of Dalmatian coastal towns.",
+    "source": "https://www.treccani.it/enciclopedia/dalmazia_(Enciclopedia-Italiana)/"
+  },
+  {
+    "territory": "Venecia",
+    "id": "Split",
+    "action": "add",
+    "from": 1420,
+    "through": 1650,
+    "reason": "Split submitted to Venice during the 1420 Adriatic campaign.",
+    "source": "https://www.treccani.it/enciclopedia/le-frontiere-navali_(Storia-di-Venezia)/"
+  },
+  {
+    "territory": "Venecia",
+    "id": "Brac",
+    "action": "add",
+    "from": 1420,
+    "through": 1650,
+    "reason": "Brač was among the islands acquired in the 1420 Venetian Adriatic campaign.",
+    "source": "https://www.treccani.it/enciclopedia/pietro-loredan_(Dizionario-Biografico)/"
+  },
+  {
+    "territory": "Venecia",
+    "id": "Kotor",
+    "action": "add",
+    "from": 1420,
+    "through": 1650,
+    "reason": "Kotor/Cattaro submitted to Venice in 1419; shown from 1420 in this conservative annual layer.",
+    "source": "https://www.treccani.it/enciclopedia/dalmazia_(Enciclopedia-Italiana)/"
+  },
+  {
+    "territory": "Toscana",
+    "id": "Piombino",
+    "action": "remove",
+    "from": 1569,
+    "through": 1650,
+    "reason": "Piombino was a separate Appiano/Ludovisi state, not part of Medici Tuscany.",
+    "source": "https://www.treccani.it/enciclopedia/piombino-ed-elba-principato-di_(Dizionario-di-Storia)/"
+  },
+  {
+    "territory": "Módena",
+    "id": "Mirandola",
+    "action": "remove",
+    "from": 1400,
+    "through": 1650,
+    "reason": "Mirandola was not acquired by Modena until 1711.",
+    "source": "https://www.treccani.it/enciclopedia/mirandola_(Enciclopedia-Italiana)/"
+  },
+  {
+    "territory": "Módena",
+    "id": "Guastalla",
+    "action": "remove",
+    "from": 1400,
+    "through": 1650,
+    "reason": "Guastalla was a separate Gonzaga duchy during this series.",
+    "source": "https://www.treccani.it/enciclopedia/giuseppe-maria-gonzaga_(Dizionario-Biografico)/"
+  },
+  {
+    "territory": "Hungría",
+    "id": "Zadar",
+    "action": "remove",
+    "from": 1409,
+    "through": 1525,
+    "reason": "Venice acquired Zadar in 1409; the old Croatian polygon must not continue to paint it as Hungarian.",
+    "source": "https://www.treccani.it/enciclopedia/zara_(Enciclopedia-Italiana)/"
+  },
+  {
+    "territory": "Hungría",
+    "id": "Sibenik",
+    "action": "remove",
+    "from": 1420,
+    "through": 1525,
+    "reason": "The Venetian Dalmatian campaign of 1420 removed Šibenik from this Hungarian-Croatian aggregate.",
+    "source": "https://www.treccani.it/enciclopedia/dalmazia_(Enciclopedia-Italiana)/"
+  },
+  {
+    "territory": "Austria Interior",
+    "id": "Trieste",
+    "action": "add",
+    "from": 1400,
+    "through": 1499,
+    "reason": "Trieste accepted Habsburg protection in 1382, before the Gorizia inheritance in 1500.",
+    "source": "https://www.habsburger.net/en/locations/trieste"
+  },
+  {
+    "territory": "Austria Interior",
+    "id": "Rijeka",
+    "action": "add",
+    "from": 1466,
+    "through": 1650,
+    "reason": "Fiume/Rijeka passed to the Habsburgs in 1466; the coarse Carniola polygon misses this port.",
+    "source": "https://www.treccani.it/enciclopedia/fiume_res-fbec9b86-8bae-11dc-8e9d-0016357eee51_(Enciclopedia-Italiana)/"
+  },
+  {
+    "territory": "Hungría",
+    "id": "Rijeka",
+    "action": "remove",
+    "from": 1466,
+    "through": 1525,
+    "reason": "Rijeka/Fiume passed to the Habsburgs in 1466; the old Croatian polygon must not keep it under Hungary.",
+    "source": "https://www.treccani.it/enciclopedia/fiume_res-fbec9b86-8bae-11dc-8e9d-0016357eee51_(Enciclopedia-Italiana)/"
+  },
+  {
+    "territory": "Austria Interior",
+    "id": "Lienz",
+    "action": "remove",
+    "from": 1400,
+    "through": 1650,
+    "reason": "Lienz belonged to the separate Görz lordship until 1500 and then was attached to the County of Tyrol, not Inner Austria.",
+    "source": "https://www.tirol.gv.at/fileadmin/themen/kunst-kultur/landesarchiv/downloads/TGQ34_OCR_Gesamt_homepage.pdf"
+  },
+  {
+    "territory": "Tirol",
+    "id": "Lienz",
+    "action": "add",
+    "from": 1500,
+    "through": 1650,
+    "reason": "Maximilian attached Lienz and the western Gorizian lands to Tyrol after the 1500 inheritance.",
+    "source": "https://www.tirol.gv.at/fileadmin/themen/kunst-kultur/landesarchiv/downloads/TGQ34_OCR_Gesamt_homepage.pdf"
+  },
+  {
+    "territory": "Tirol",
+    "id": "Kufstein",
+    "action": "remove",
+    "from": 1400,
+    "through": 1503,
+    "reason": "The former Bavarian court of Kufstein passed to Tyrol after Maximilian's 1504 conquest.",
+    "source": "https://www.tirol.gv.at/kunst-kultur/landesarchiv/archiv-quelle/18/"
+  },
+  {
+    "territory": "Tirol",
+    "id": "Kitzbuhel",
+    "action": "remove",
+    "from": 1400,
+    "through": 1503,
+    "reason": "Kitzbühel belonged to the Bavarian courts transferred to Tyrol in 1504.",
+    "source": "https://www.tirol.gv.at/kunst-kultur/landesarchiv/archiv-quelle/18/"
+  },
+  {
+    "territory": "Tirol",
+    "id": "Brixen",
+    "action": "remove",
+    "from": 1400,
+    "through": 1650,
+    "reason": "Brixen was a separate prince-bishopric; its city was not the secular county of Tyrol.",
+    "source": "https://www.tirol.gv.at/fileadmin/themen/kunst-kultur/landesarchiv/downloads/Grundsteueranschlag1508-1509.pdf"
+  },
+  {
+    "territory": "Tirol",
+    "id": "Bruneck",
+    "action": "remove",
+    "from": 1400,
+    "through": 1650,
+    "reason": "Bruneck was listed among the Brixen prince-bishopric's cities.",
+    "source": "https://www.tirol.gv.at/fileadmin/themen/kunst-kultur/landesarchiv/downloads/Grundsteueranschlag1508-1509.pdf"
+  },
+  {
+    "territory": "Tirol",
+    "id": "Cavalese",
+    "action": "remove",
+    "from": 1400,
+    "through": 1650,
+    "reason": "The Fiemme/Cavalese area belonged to the prince-bishopric of Trento, not directly to the secular County of Tyrol.",
+    "source": "https://www.tirol.gv.at/fileadmin/themen/kunst-kultur/landesarchiv/downloads/Landgerichtskarte-Tirol.PDF"
+  },
+  {
+    "territory": "Baviera",
+    "id": "Freising",
+    "action": "remove",
+    "from": 1505,
+    "through": 1650,
+    "reason": "Freising belonged to the independent prince-bishopric.",
+    "source": "https://www.historisches-lexikon-bayerns.de/Lexikon/Freising%2C_Bistum%3A_Politische_Geschichte_%28Sp%C3%A4tmittelalter%29"
+  },
+  {
+    "territory": "Baviera",
+    "id": "Garmisch",
+    "action": "remove",
+    "from": 1505,
+    "through": 1650,
+    "reason": "The County of Werdenfels around Garmisch belonged to the Freising prince-bishopric.",
+    "source": "https://www.historisches-lexikon-bayerns.de/Lexikon/Freising%2C_Bistum%3A_Politische_Geschichte_%28Sp%C3%A4tmittelalter%29"
+  },
+  {
+    "territory": "Baviera",
+    "id": "Passau",
+    "action": "remove",
+    "from": 1505,
+    "through": 1650,
+    "reason": "Passau was a prince-bishopric distinct from the Bavarian duchy.",
+    "source": "https://www.historisches-lexikon-bayerns.de/Lexikon/Artikel_45683"
+  },
+  {
+    "territory": "Baviera",
+    "id": "Regensburg",
+    "action": "remove",
+    "from": 1505,
+    "through": 1650,
+    "reason": "The imperial city of Regensburg was not incorporated into Bavaria in this period.",
+    "source": "https://www.historisches-lexikon-bayerns.de/Lexikon/Ende_des_Alten_Reiches"
+  },
+  {
+    "territory": "Baviera",
+    "id": "Muhldorf",
+    "action": "remove",
+    "from": 1505,
+    "through": 1650,
+    "reason": "Mühldorf belonged to the Salzburg prince-archbishopric until the 19th century.",
+    "source": "https://www.historisches-lexikon-bayerns.de/Lexikon/Artikel_45331"
+  },
+  {
+    "territory": "Baviera",
+    "id": "Laufen",
+    "action": "remove",
+    "from": 1505,
+    "through": 1650,
+    "reason": "Laufen was a Salzburg city, not a town of the Bavarian duchy.",
+    "source": "https://www.historisches-lexikon-bayerns.de/Lexikon/Artikel_45331"
+  },
+  {
+    "territory": "Baviera",
+    "id": "Neuburg_an_der_Donau",
+    "action": "remove",
+    "from": 1505,
+    "through": 1650,
+    "reason": "Pfalz-Neuburg was created as a separate Wittelsbach principality in the 1505 settlement.",
+    "source": "https://www.historisches-lexikon-bayerns.de/Lexikon/Artikel_45317"
+  },
+  {
+    "territory": "Baviera",
+    "id": "Leuchtenberg",
+    "action": "remove",
+    "from": 1628,
+    "through": 1650,
+    "reason": "The landgraviate of Leuchtenberg remained a separate immediate territory after the Upper Palatinate transferred to Bavaria.",
+    "source": "https://www.historisches-lexikon-bayerns.de/Lexikon/Territorialentwicklung_in_Altbayern"
+  },
+  {
+    "territory": "Palatinado",
+    "id": "Leuchtenberg",
+    "action": "remove",
+    "from": 1400,
+    "through": 1650,
+    "reason": "Leuchtenberg was an immediate landgraviate, not the Electoral Palatinate.",
+    "source": "https://www.historisches-lexikon-bayerns.de/Lexikon/Territorialentwicklung_in_Altbayern"
+  },
+  {
+    "territory": "Palatinado",
+    "id": "Speyer",
+    "action": "remove",
+    "from": 1400,
+    "through": 1650,
+    "reason": "Speyer was a free imperial city; a political alliance with the elector did not make it Palatine territory.",
+    "source": "https://www.historisches-lexikon-bayerns.de/Lexikon/Pfalz_%28Sp%C3%A4tmittelalter/Fr%C3%BChe_Neuzeit%29"
+  },
+  {
+    "territory": "Palatinado",
+    "id": "Landau_Rhineland",
+    "action": "remove",
+    "from": 1400,
+    "through": 1650,
+    "reason": "Landau was an imperial city pledged to the bishop of Speyer, then independent again; it was not Electoral Palatinate.",
+    "source": "https://www.landau.de/Leben-Wohnen/Stadtportrait/Stadtgeschichte/Zeittafel/"
+  },
+  {
+    "territory": "Palatinado",
+    "id": "Leiningen",
+    "action": "remove",
+    "from": 1400,
+    "through": 1650,
+    "reason": "The counts of Leiningen had their own territory rather than forming a district of the Electoral Palatinate.",
+    "source": "https://www.historisches-lexikon-bayerns.de/Lexikon/Pfalz_%28Sp%C3%A4tmittelalter/Fr%C3%BChe_Neuzeit%29"
+  },
+  {
+    "territory": "Palatinado",
+    "id": "Pirmasens",
+    "action": "remove",
+    "from": 1400,
+    "through": 1650,
+    "reason": "Pirmasens/Lemberg followed the counts of Zweibrücken-Bitsch and later Hanau-Lichtenberg, not the Electoral Palatinate.",
+    "source": "https://arcinsys.hessen.de/arcinsys/showFondsDetails?fondsId=3932"
+  },
+  {
+    "territory": "Palatinado",
+    "id": "Zweibrucken",
+    "action": "remove",
+    "from": 1410,
+    "through": 1650,
+    "reason": "The 1410 Palatine partition assigned Zweibrücken to a separate Wittelsbach line.",
+    "source": "https://www.historisches-lexikon-bayerns.de/Lexikon/Pf%C3%A4lzische_Teilungen"
+  },
+  {
+    "territory": "Corona de Polonia",
+    "id": "Sochaczew",
+    "action": "remove",
+    "from": 1462,
+    "through": 1475,
+    "reason": "Sochaczew did not join the Crown with Rawa and Gostynin in 1462; its incorporation dates to 1476.",
+    "source": "https://agad.gov.pl/?page_id=486"
+  },
+  {
+    "territory": "Ducado de Mazovia",
+    "id": "Sochaczew",
+    "action": "add",
+    "from": 1462,
+    "through": 1475,
+    "reason": "Sochaczew remained Mazovian until incorporation into the Crown in 1476.",
+    "source": "https://agad.gov.pl/?page_id=486"
+  },
+  {
+    "territory": "Prusia de la Orden",
+    "id": "Tuchola",
+    "action": "add",
+    "from": 1400,
+    "through": 1453,
+    "reason": "The Tuchola/Schlochau area belonged to the Order before the Thirteen Years' War; its status during the war is left uncolored.",
+    "source": "https://zpe.gov.pl/a/prezentacja-multimedialna/DbYm1LK96"
+  },
+  {
+    "territory": "Prusia Real",
+    "id": "Tuchola",
+    "action": "add",
+    "from": 1466,
+    "through": 1569,
+    "reason": "Pomerelia, including Tuchola, entered Royal Prussia after the Second Peace of Thorn.",
+    "source": "https://zpe.gov.pl/a/polskie-dynastie-jagiellonowie/D12LkQne7"
+  },
+  {
+    "territory": "Prusia Real",
+    "id": "Malbork",
+    "action": "add",
+    "from": 1466,
+    "through": 1569,
+    "reason": "The treaty explicitly assigned Malbork/Marienburg to the Polish Crown, not to the Teutonic remnant.",
+    "source": "https://zpe.gov.pl/a/prezentacja-multimedialna/DbYm1LK96"
+  },
+  {
+    "territory": "Prusia Real",
+    "id": "Elblag",
+    "action": "add",
+    "from": 1466,
+    "through": 1569,
+    "reason": "The treaty explicitly assigned Elbląg/Elbing to Royal Prussia.",
+    "source": "https://zpe.gov.pl/a/prezentacja-multimedialna/DbYm1LK96"
+  },
+  {
+    "territory": "Prusia Real",
+    "id": "Dzierzgon",
+    "action": "add",
+    "from": 1466,
+    "through": 1569,
+    "reason": "The treaty includes Christburg/Dzierzgoń in the lands transferred to the Crown.",
+    "source": "https://zpe.gov.pl/a/prezentacja-multimedialna/DbYm1LK96"
+  },
+  {
+    "territory": "Prusia de la Orden",
+    "id": "Malbork",
+    "action": "remove",
+    "from": 1454,
+    "through": 1524,
+    "reason": "Malbork changed hands in the Thirteen Years' War and was definitively ceded to Royal Prussia in 1466; the contested years are left gray.",
+    "source": "https://zpe.gov.pl/a/prezentacja-multimedialna/DbYm1LK96"
+  },
+  {
+    "territory": "Prusia de la Orden",
+    "id": "Elblag",
+    "action": "remove",
+    "from": 1454,
+    "through": 1524,
+    "reason": "Elbląg changed hands during the Thirteen Years' War and passed to Royal Prussia in 1466; contested years are left gray.",
+    "source": "https://zpe.gov.pl/a/prezentacja-multimedialna/DbYm1LK96"
+  },
+  {
+    "territory": "Prusia de la Orden",
+    "id": "Dzierzgon",
+    "action": "remove",
+    "from": 1454,
+    "through": 1524,
+    "reason": "Christburg/Dzierzgoń was transferred to the Crown in 1466; the wartime interval remains uncolored.",
+    "source": "https://zpe.gov.pl/a/prezentacja-multimedialna/DbYm1LK96"
+  },
+  {
+    "territory": "Prusia ducal",
+    "id": "Malbork",
+    "action": "remove",
+    "from": 1525,
+    "through": 1569,
+    "reason": "Malbork was Royal Prussia, not the secularized Duchy of Prussia.",
+    "source": "https://zpe.gov.pl/a/prezentacja-multimedialna/DbYm1LK96"
+  },
+  {
+    "territory": "Prusia ducal",
+    "id": "Elblag",
+    "action": "remove",
+    "from": 1525,
+    "through": 1569,
+    "reason": "Elbląg was Royal Prussia, not the secularized Duchy of Prussia.",
+    "source": "https://zpe.gov.pl/a/prezentacja-multimedialna/DbYm1LK96"
+  },
+  {
+    "territory": "Prusia ducal",
+    "id": "Dzierzgon",
+    "action": "remove",
+    "from": 1525,
+    "through": 1569,
+    "reason": "Christburg/Dzierzgoń was on the Royal Prussian side of the 1466 border.",
+    "source": "https://zpe.gov.pl/a/prezentacja-multimedialna/DbYm1LK96"
+  },
+  {
+    "territory": "Principado episcopal de Brixen",
+    "id": "Brixen",
+    "action": "add",
+    "from": 1400,
+    "through": 1650,
+    "reason": "The Brixen city location represents an identified centre of the distinct prince-bishopric, not a complete diocesan boundary.",
+    "source": "https://www.tirol.gv.at/fileadmin/themen/kunst-kultur/landesarchiv/downloads/Grundsteueranschlag1508-1509.pdf"
+  },
+  {
+    "territory": "Principado episcopal de Brixen",
+    "id": "Bruneck",
+    "action": "add",
+    "from": 1400,
+    "through": 1650,
+    "reason": "Bruneck is listed among the prince-bishopric's cities; only its location is attributed here.",
+    "source": "https://www.tirol.gv.at/fileadmin/themen/kunst-kultur/landesarchiv/downloads/Grundsteueranschlag1508-1509.pdf"
+  },
+  {
+    "territory": "Principado episcopal de Trento",
+    "id": "Trento",
+    "action": "add",
+    "from": 1400,
+    "through": 1650,
+    "reason": "The city was the seat of the prince-bishop; this location does not delimit the entire temporal principality.",
+    "source": "https://www.provincia.tn.it/News/Approfondimenti/Radici-storiche-dell-autonomia"
+  },
+  {
+    "territory": "Principado episcopal de Trento",
+    "id": "Cavalese",
+    "action": "add",
+    "from": 1400,
+    "through": 1650,
+    "reason": "Fiemme retained local self-government under the prince-bishop of Trento; the location is only an approximate geographic token.",
+    "source": "https://www.ufficiostampa.provincia.tn.it/content/download/18455/374120/file/Palazzo_Magnifica_Comunit%C3%A0_di_Fiemme.pdf"
+  },
+  {
+    "territory": "Arzobispado principesco de Salzburgo",
+    "id": "Salzburg",
+    "action": "add",
+    "from": 1400,
+    "through": 1650,
+    "reason": "Salzburg was a city of its distinct prince-archbishopric.",
+    "source": "https://www.historisches-lexikon-bayerns.de/Lexikon/Artikel_45331"
+  },
+  {
+    "territory": "Arzobispado principesco de Salzburgo",
+    "id": "Hallein",
+    "action": "add",
+    "from": 1400,
+    "through": 1650,
+    "reason": "Hallein belonged to the territorial archbishopric, not the Duchy of Bavaria.",
+    "source": "https://www.historisches-lexikon-bayerns.de/Lexikon/Artikel_45331"
+  },
+  {
+    "territory": "Arzobispado principesco de Salzburgo",
+    "id": "Muhldorf",
+    "action": "add",
+    "from": 1400,
+    "through": 1650,
+    "reason": "Mühldorf was a Salzburg enclave; its high-court jurisdiction is recorded from 1442, so this location should not be read as an unchanged bundle of rights.",
+    "source": "https://www.historisches-lexikon-bayerns.de/Lexikon/Artikel_45331"
+  },
+  {
+    "territory": "Arzobispado principesco de Salzburgo",
+    "id": "Laufen",
+    "action": "add",
+    "from": 1400,
+    "through": 1650,
+    "reason": "Laufen was a Salzburg territorial town, distinct from Bavarian control.",
+    "source": "https://www.historisches-lexikon-bayerns.de/Lexikon/Artikel_45331"
+  },
+  {
+    "territory": "Plaza inglesa de Calais",
+    "id": "Calais",
+    "action": "add",
+    "from": 1400,
+    "through": 1557,
+    "reason": "The Calais town location marks the English-held port and Pale until its French capture in early 1558; the entire surrounding location set is not claimed.",
+    "source": "https://www.nationalarchives.gov.uk/help-with-your-research/research-guides/french-lands-english-kings/"
+  },
+  {
+    "territory": "Plazas inglesas de Guyena",
+    "id": "Bordeaux",
+    "action": "add",
+    "from": 1400,
+    "through": 1450,
+    "reason": "Bordeaux was a centre of English Gascony; the 1451 French submission and the later English recapture require separate annual entries.",
+    "source": "https://discovery.nationalarchives.gov.uk/details/r/C3621"
+  },
+  {
+    "territory": "Plazas inglesas de Guyena",
+    "id": "Bordeaux",
+    "action": "add",
+    "from": 1452,
+    "through": 1452,
+    "reason": "English forces regained Bordeaux in 1452, before the final French capture in October 1453.",
+    "source": "https://catalogue.bnf.fr/ark:/12148/cb11938577c"
+  },
+  {
+    "territory": "Plazas inglesas de Guyena",
+    "id": "Bayonne",
+    "action": "add",
+    "from": 1400,
+    "through": 1450,
+    "reason": "Bayonne was part of the English-administered Gascon core before the French campaign of 1451; this is a city location, not all of Gascony.",
+    "source": "https://discovery.nationalarchives.gov.uk/details/r/C3621"
+  },
+  {
+    "territory": "Francia",
+    "id": "Calais",
+    "action": "remove",
+    "from": 1453,
+    "through": 1557,
+    "reason": "The English held Calais until the French capture in 1558; the overlap with old Ponthieu must not transfer this location to France in 1477.",
+    "source": "https://www.nationalarchives.gov.uk/help-with-your-research/research-guides/french-lands-english-kings/"
+  },
+  {
+    "territory": "Provenza",
+    "id": "Barcelonnette",
+    "action": "remove",
+    "from": 1400,
+    "through": 1485,
+    "reason": "Barcelonnette and the Nice hinterland were ceded from Provence to Savoy in 1388.",
+    "source": "https://catalogue.bnf.fr/ark:/12148/cb12224467j"
+  },
+  {
+    "territory": "Francia",
+    "id": "Barcelonnette",
+    "action": "remove",
+    "from": 1486,
+    "through": 1650,
+    "reason": "The 1486 annexation of Provence did not restore Barcelonnette, ceded to Savoy in 1388.",
+    "source": "https://catalogue.bnf.fr/ark:/12148/cb12224467j"
+  },
+  {
+    "territory": "Saboya",
+    "id": "Barcelonnette",
+    "action": "add",
+    "from": 1400,
+    "through": 1650,
+    "reason": "Barcelonnette was among the Nice hinterland transferred to Savoy in 1388; the separate Savoyard layer records the location.",
+    "source": "https://catalogue.bnf.fr/ark:/12148/cb12224467j"
+  },
+  {
+    "territory": "Escocia",
+    "id": "Torshavn",
+    "action": "remove",
+    "from": 1400,
+    "through": 1650,
+    "reason": "Tórshavn lies in the Faroes, under the Norwegian Crown within the Danish-Norwegian monarchy, not Scotland.",
+    "source": "https://www.faroeislands.fo/the-big-picture/history-of-the-faroe-islands/historical-timeline"
+  },
+  {
+    "territory": "Escocia",
+    "id": "Mann",
+    "action": "remove",
+    "from": 1400,
+    "through": 1650,
+    "reason": "The Isle of Man had a distinct Stanley lordship from 1406 and is not a Scottish county.",
+    "source": "https://manxnationalheritage.im/news/medieval-ring-declared-treasure/"
+  },
+  {
+    "territory": "Señorío de Man",
+    "id": "Mann",
+    "action": "add",
+    "from": 1406,
+    "through": 1650,
+    "reason": "The Man location denotes the Stanley lordship established in 1406, a jurisdiction distinct from the English and Scottish kingdoms.",
+    "source": "https://manxnationalheritage.im/news/medieval-ring-declared-treasure/"
+  },
+  {
+    "territory": "Escocia",
+    "id": "Orkney",
+    "action": "remove",
+    "from": 1400,
+    "through": 1468,
+    "reason": "Orkney remained under Norwegian rule until 1469; earlier years are left to a future Norway-Denmark layer.",
+    "source": "https://www.historicenvironment.scot/visit/all/maeshowe-chambered-cairn/history-and-stories/"
+  },
+  {
+    "territory": "Escocia",
+    "id": "Shetland",
+    "action": "remove",
+    "from": 1400,
+    "through": 1468,
+    "reason": "Shetland passed from Norway to Scotland in 1469; earlier years are left to a future Norway-Denmark layer.",
+    "source": "https://www.historicenvironment.scot/visit/all/jarlshof-prehistoric-and-norse-settlement/history-and-stories/"
+  },
+  {
+    "territory": "Escocia",
+    "id": "Berwick",
+    "action": "remove",
+    "from": 1400,
+    "through": 1460,
+    "reason": "Berwick was held by England from 1333 until its transfer to Scotland in 1461.",
+    "source": "https://historicengland.org.uk/listing/the-list/list-entry/1015520"
+  },
+  {
+    "territory": "Escocia",
+    "id": "Berwick",
+    "action": "remove",
+    "from": 1482,
+    "through": 1650,
+    "reason": "England retook Berwick in 1482 and retained it thereafter.",
+    "source": "https://historicengland.org.uk/listing/the-list/list-entry/1015520"
+  },
+  {
+    "territory": "Inglaterra",
+    "id": "Berwick",
+    "action": "add",
+    "from": 1400,
+    "through": 1460,
+    "reason": "Berwick was in English hands from 1333 until its transfer to Scotland in 1461.",
+    "source": "https://historicengland.org.uk/listing/the-list/list-entry/1015520"
+  },
+  {
+    "territory": "Inglaterra",
+    "id": "Berwick",
+    "action": "add",
+    "from": 1482,
+    "through": 1650,
+    "reason": "England retook Berwick in 1482 and retained it thereafter.",
+    "source": "https://historicengland.org.uk/listing/the-list/list-entry/1015520"
+  },
+  {
+    "territory": "Núcleo inglés en Irlanda",
+    "id": "Dublin",
+    "action": "add",
+    "from": 1400,
+    "through": 1650,
+    "reason": "Dublin remained the central English administrative town in Ireland; this location is a core point, not the Pale's complete outline.",
+    "source": "https://www.nationalarchives.gov.uk/help-with-your-research/research-guides/irish-maps-c1558-c1610/"
+  },
+  {
+    "territory": "Núcleo inglés en Irlanda",
+    "id": "Fingal",
+    "action": "add",
+    "from": 1400,
+    "through": 1650,
+    "reason": "Fingal is immediately north of Dublin within the English Pale core; this location is a cautious token, not a dated frontier.",
+    "source": "https://www.nationalarchives.gov.uk/help-with-your-research/research-guides/irish-maps-c1558-c1610/"
+  },
+  {
+    "territory": "Núcleo inglés en Irlanda",
+    "id": "Navan",
+    "action": "add",
+    "from": 1400,
+    "through": 1650,
+    "reason": "Navan lies in Meath, one of the Pale's core counties; this is a location-level token, not a border claim.",
+    "source": "https://www.nationalarchives.gov.uk/help-with-your-research/research-guides/irish-maps-c1558-c1610/"
+  },
+  {
+    "territory": "Núcleo inglés en Irlanda",
+    "id": "Trim",
+    "action": "add",
+    "from": 1400,
+    "through": 1650,
+    "reason": "Trim lies in Meath, in the core English-administered area; no complete Meath frontier is inferred.",
+    "source": "https://www.nationalarchives.gov.uk/help-with-your-research/research-guides/irish-maps-c1558-c1610/"
+  },
+  {
+    "territory": "Núcleo inglés en Irlanda",
+    "id": "Naas",
+    "action": "add",
+    "from": 1400,
+    "through": 1650,
+    "reason": "Naas is a Kildare core location of the Pale; the extent of English power beyond it varied.",
+    "source": "https://www.nationalarchives.gov.uk/help-with-your-research/research-guides/irish-maps-c1558-c1610/"
+  },
+  {
+    "territory": "Núcleo inglés en Irlanda",
+    "id": "Kildare",
+    "action": "add",
+    "from": 1400,
+    "through": 1650,
+    "reason": "Kildare is shown as an English Pale core location, without implying county-wide effective control.",
+    "source": "https://www.nationalarchives.gov.uk/help-with-your-research/research-guides/irish-maps-c1558-c1610/"
+  },
+  {
+    "territory": "Núcleo inglés en Irlanda",
+    "id": "Athy",
+    "action": "add",
+    "from": 1400,
+    "through": 1650,
+    "reason": "Athy is a Kildare garrison location in the English lordship; its location does not define the Pale's whole frontier.",
+    "source": "https://assets.ireland.ie/documents/GIDC-SAIS_Vol_5_2_2_web_002.pdf"
+  },
+  {
+    "territory": "Núcleo inglés en Irlanda",
+    "id": "Drogheda",
+    "action": "add",
+    "from": 1400,
+    "through": 1650,
+    "reason": "Drogheda was a principal town in the Louth/Meath Pale area; this is an urban token, not a county-wide polygon.",
+    "source": "https://assets.ireland.ie/documents/GIDC-SAIS_Vol_5_2_2_web_002.pdf"
+  },
+  {
+    "territory": "Núcleo inglés en Irlanda",
+    "id": "Dundalk",
+    "action": "add",
+    "from": 1400,
+    "through": 1650,
+    "reason": "Louth was one of the Pale counties; Dundalk marks its northern urban core without claiming a precise frontier.",
+    "source": "https://louthcoco.ie/en/services/heritage/what_is_heritage/cultural/county_and_boroughs/"
+  },
+  {
+    "territory": "Francia",
+    "id": "Jersey",
+    "action": "remove",
+    "from": 1453,
+    "through": 1650,
+    "reason": "The old Normandy polygon overlaps Jersey; the island was otherwise a separate bailiwick loyal to the English Crown, except for the occupation of 1461–1467.",
+    "source": "https://www.gov.je/Leisure/Jersey/Pages/History.aspx"
+  },
+  {
+    "territory": "Bailiazgo de Jersey",
+    "id": "Jersey",
+    "action": "add",
+    "from": 1400,
+    "through": 1460,
+    "reason": "Jersey retained a separate allegiance to the English Crown after 1204, before its seven-year French occupation.",
+    "source": "https://www.gov.je/SiteCollectionDocuments/Life%20events/ID%20Citizenship%20Test%20-%20Jersey%20Supplement%20-%2020190304.pdf"
+  },
+  {
+    "territory": "Francia",
+    "id": "Jersey",
+    "action": "add",
+    "from": 1461,
+    "through": 1467,
+    "reason": "The French occupied Jersey for seven years during the Wars of the Roses before it was recovered in 1468.",
+    "source": "https://www.gov.je/SiteCollectionDocuments/Life%20events/ID%20Citizenship%20Test%20-%20Jersey%20Supplement%20-%2020190304.pdf"
+  },
+  {
+    "territory": "Bailiazgo de Jersey",
+    "id": "Jersey",
+    "action": "add",
+    "from": 1468,
+    "through": 1650,
+    "reason": "The English Crown recovered Jersey in 1468; the island kept its distinct bailiwick rather than becoming part of England.",
+    "source": "https://www.gov.je/SiteCollectionDocuments/Life%20events/ID%20Citizenship%20Test%20-%20Jersey%20Supplement%20-%2020190304.pdf"
+  },
+  {
+    "territory": "Hungría",
+    "id": "Sinj",
+    "action": "remove",
+    "from": 1513,
+    "through": 1525,
+    "reason": "Sinj passed to Ottoman rule in 1513; remove it from the coarse Hungarian-Croatian aggregate for those years.",
+    "source": "https://enciklopedija.hr/Clanak/cetinska-krajina?handler=ButtonSnimi"
+  },
+  {
+    "territory": "Hungría",
+    "id": "Knin",
+    "action": "remove",
+    "from": 1522,
+    "through": 1525,
+    "reason": "Knin fell to the Ottomans in 1522; remove it from the coarse Hungarian-Croatian aggregate for those years.",
+    "source": "https://enciklopedija.hr/clanak/knin"
+  },
+  {
+    "territory": "Reino de Dinamarca",
+    "id": "Helsingborg",
+    "action": "add",
+    "from": 1400,
+    "through": 1650,
+    "reason": "Núcleo de Escania bajo la Corona danesa durante el intervalo revisado; la cesión a Suecia se produjo en 1658. La celda es una aproximación regional.",
+    "source": "https://danmarkshistorien.lex.dk/Roskildefreden,_26._februar_1658"
+  },
+  {
+    "territory": "Reino de Dinamarca",
+    "id": "Lund",
+    "action": "add",
+    "from": 1400,
+    "through": 1650,
+    "reason": "Núcleo de Escania bajo la Corona danesa durante el intervalo revisado; la cesión a Suecia se produjo en 1658. La celda es una aproximación regional.",
+    "source": "https://danmarkshistorien.lex.dk/Roskildefreden,_26._februar_1658"
+  },
+  {
+    "territory": "Reino de Dinamarca",
+    "id": "Malmo",
+    "action": "add",
+    "from": 1400,
+    "through": 1650,
+    "reason": "Núcleo de Escania bajo la Corona danesa durante el intervalo revisado; la cesión a Suecia se produjo en 1658. La celda es una aproximación regional.",
+    "source": "https://danmarkshistorien.lex.dk/Roskildefreden,_26._februar_1658"
+  },
+  {
+    "territory": "Reino de Dinamarca",
+    "id": "Osby",
+    "action": "add",
+    "from": 1400,
+    "through": 1650,
+    "reason": "Núcleo de Escania bajo la Corona danesa durante el intervalo revisado; la cesión a Suecia se produjo en 1658. La celda es una aproximación regional.",
+    "source": "https://danmarkshistorien.lex.dk/Roskildefreden,_26._februar_1658"
+  },
+  {
+    "territory": "Reino de Dinamarca",
+    "id": "Gladsax",
+    "action": "add",
+    "from": 1400,
+    "through": 1650,
+    "reason": "Núcleo de Escania bajo la Corona danesa durante el intervalo revisado; la cesión a Suecia se produjo en 1658. La celda es una aproximación regional.",
+    "source": "https://danmarkshistorien.lex.dk/Roskildefreden,_26._februar_1658"
+  },
+  {
+    "territory": "Bosnia y Herzegovina otomanas",
+    "id": "Jajce",
+    "action": "add",
+    "from": 1527,
+    "through": 1650,
+    "reason": "Jajce cayó en diciembre de 1527; se usa el estado al cierre del año, no se retrasa a 1528.",
+    "source": "https://www.enciklopedija.hr/clanak/jajce"
+  },
+  {
+    "territory": "Banato húngaro de Jajce",
+    "id": "Jajce",
+    "action": "add",
+    "from": 1463,
+    "through": 1526,
+    "reason": "Recuperada por Matías Corvino al final de 1463; fortaleza bajo autoridad húngara hasta su conquista otomana de 1527.",
+    "source": "https://www.enciklopedija.hr/clanak/jajce"
+  },
+  {
+    "territory": "Reino de Suecia",
+    "id": "Vyborg",
+    "action": "add",
+    "from": 1400,
+    "through": 1650,
+    "reason": "Núcleo de la fortaleza de Vyborg dentro del sistema defensivo sueco de Finlandia; no se extiende a toda Carelia ni se afirma un límite oriental exacto.",
+    "source": "https://www.kansallismuseo.fi/en/olavinlinna/historiaa"
+  },
+  {
+    "territory": "Venecia",
+    "id": "Monemvasia",
+    "action": "add",
+    "from": 1463,
+    "through": 1539,
+    "reason": "Monemvasía conservó gobierno veneciano hasta su entrega a los otomanos en 1540; no se incorpora con Morea en 1460.",
+    "source": "https://monemvasia.gr/2017/05/history/"
+  },
+  {
+    "territory": "Venecia",
+    "id": "Argos",
+    "action": "add",
+    "from": 1400,
+    "through": 1462,
+    "reason": "Plaza veneciana antes de la conquista otomana de 1463; celda regional aproximada.",
+    "source": "https://enciklopedija.hr/clanak/argos"
+  },
+  {
+    "territory": "Reino de Dinamarca",
+    "id": "Aalborg",
+    "action": "add",
+    "from": 1400,
+    "through": 1650,
+    "reason": "Celda de Nørrejylland comprobada visualmente dentro de Jutlandia. El cruce automático omitía estas celdas entre provincias; no se incorpora Schleswig ni Holstein al reino.",
+    "source": "https://natmus.dk/historisk-viden/danmark/middelalder-1000-1536/byer-fra-middelalderen/"
+  },
+  {
+    "territory": "Reino de Dinamarca",
+    "id": "Ars",
+    "action": "add",
+    "from": 1400,
+    "through": 1650,
+    "reason": "Celda de Nørrejylland comprobada visualmente dentro de Jutlandia. El cruce automático omitía estas celdas entre provincias; no se incorpora Schleswig ni Holstein al reino.",
+    "source": "https://natmus.dk/historisk-viden/danmark/middelalder-1000-1536/byer-fra-middelalderen/"
+  },
+  {
+    "territory": "Reino de Dinamarca",
+    "id": "Viborg",
+    "action": "add",
+    "from": 1400,
+    "through": 1650,
+    "reason": "Celda de Nørrejylland comprobada visualmente dentro de Jutlandia. El cruce automático omitía estas celdas entre provincias; no se incorpora Schleswig ni Holstein al reino.",
+    "source": "https://natmus.dk/historisk-viden/danmark/middelalder-1000-1536/byer-fra-middelalderen/"
+  },
+  {
+    "territory": "Reino de Dinamarca",
+    "id": "Randers",
+    "action": "add",
+    "from": 1400,
+    "through": 1650,
+    "reason": "Celda de Nørrejylland comprobada visualmente dentro de Jutlandia. El cruce automático omitía estas celdas entre provincias; no se incorpora Schleswig ni Holstein al reino.",
+    "source": "https://natmus.dk/historisk-viden/danmark/middelalder-1000-1536/byer-fra-middelalderen/"
+  },
+  {
+    "territory": "Núcleo de Brandeburgo",
+    "id": "Ruppin",
+    "action": "add",
+    "from": 1524,
+    "through": 1650,
+    "reason": "Ruppin pasa al electorado en 1524. Antes conserva la autoridad de los condes de Lindow-Ruppin; no basta con estar en la región de Brandeburgo.",
+    "source": "https://blha.brandenburg.de/sixcms/media.php/9/79981-9783867329767_ebook_PC.pdf"
+  },
+  {
+    "territory": "Reino de Suecia",
+    "id": "Albo",
+    "action": "add",
+    "from": 1400,
+    "through": 1650,
+    "reason": "Västmanland, Närke, Dalsland y Tiohärad/Småland revisados por su forma y posición. Aproximación regional de tierras del reino; no un lindero feudal exacto.",
+    "source": "https://medeltiden.kalmarlansmuseum.se/samhallet/landets-indelning/landskapslag-och-landslag/"
+  },
+  {
+    "territory": "Reino de Suecia",
+    "id": "Amal",
+    "action": "add",
+    "from": 1400,
+    "through": 1650,
+    "reason": "Västmanland, Närke, Dalsland y Tiohärad/Småland revisados por su forma y posición. Aproximación regional de tierras del reino; no un lindero feudal exacto.",
+    "source": "https://medeltiden.kalmarlansmuseum.se/samhallet/landets-indelning/landskapslag-och-landslag/"
+  },
+  {
+    "territory": "Reino de Suecia",
+    "id": "Arboga",
+    "action": "add",
+    "from": 1400,
+    "through": 1650,
+    "reason": "Västmanland, Närke, Dalsland y Tiohärad/Småland revisados por su forma y posición. Aproximación regional de tierras del reino; no un lindero feudal exacto.",
+    "source": "https://medeltiden.kalmarlansmuseum.se/samhallet/landets-indelning/landskapslag-och-landslag/"
+  },
+  {
+    "territory": "Reino de Suecia",
+    "id": "Birkala",
+    "action": "add",
+    "from": 1400,
+    "through": 1650,
+    "reason": "Celda de Satakunta en el núcleo occidental de Finlandia bajo el reino sueco. Forma y vecinos comprobados en el SVG; no se extiende esa equivalencia a toda Carelia o Laponia.",
+    "source": "https://www.medeltiden.kalmarlansmuseum.se/samhallet/lander-runt-ostersjon/finland/finland-under-medeltiden/"
+  },
+  {
+    "territory": "Reino de Suecia",
+    "id": "Bjorneborg",
+    "action": "add",
+    "from": 1400,
+    "through": 1650,
+    "reason": "Celda de Satakunta en el núcleo occidental de Finlandia bajo el reino sueco. Forma y vecinos comprobados en el SVG; no se extiende esa equivalencia a toda Carelia o Laponia.",
+    "source": "https://www.medeltiden.kalmarlansmuseum.se/samhallet/lander-runt-ostersjon/finland/finland-under-medeltiden/"
+  },
+  {
+    "territory": "Reino de Suecia",
+    "id": "Dalaborg",
+    "action": "add",
+    "from": 1400,
+    "through": 1650,
+    "reason": "Västmanland, Närke, Dalsland y Tiohärad/Småland revisados por su forma y posición. Aproximación regional de tierras del reino; no un lindero feudal exacto.",
+    "source": "https://medeltiden.kalmarlansmuseum.se/samhallet/landets-indelning/landskapslag-och-landslag/"
+  },
+  {
+    "territory": "Reino de Suecia",
+    "id": "Goksholm",
+    "action": "add",
+    "from": 1400,
+    "through": 1650,
+    "reason": "Västmanland, Närke, Dalsland y Tiohärad/Småland revisados por su forma y posición. Aproximación regional de tierras del reino; no un lindero feudal exacto.",
+    "source": "https://medeltiden.kalmarlansmuseum.se/samhallet/landets-indelning/landskapslag-och-landslag/"
+  },
+  {
+    "territory": "Reino de Suecia",
+    "id": "Grythyttan",
+    "action": "add",
+    "from": 1400,
+    "through": 1650,
+    "reason": "Västmanland, Närke, Dalsland y Tiohärad/Småland revisados por su forma y posición. Aproximación regional de tierras del reino; no un lindero feudal exacto.",
+    "source": "https://medeltiden.kalmarlansmuseum.se/samhallet/landets-indelning/landskapslag-och-landslag/"
+  },
+  {
+    "territory": "Reino de Suecia",
+    "id": "Hvittis",
+    "action": "add",
+    "from": 1400,
+    "through": 1650,
+    "reason": "Celda de Satakunta en el núcleo occidental de Finlandia bajo el reino sueco. Forma y vecinos comprobados en el SVG; no se extiende esa equivalencia a toda Carelia o Laponia.",
+    "source": "https://www.medeltiden.kalmarlansmuseum.se/samhallet/lander-runt-ostersjon/finland/finland-under-medeltiden/"
+  },
+  {
+    "territory": "Reino de Suecia",
+    "id": "Ikalis",
+    "action": "add",
+    "from": 1400,
+    "through": 1650,
+    "reason": "Celda de Satakunta en el núcleo occidental de Finlandia bajo el reino sueco. Forma y vecinos comprobados en el SVG; no se extiende esa equivalencia a toda Carelia o Laponia.",
+    "source": "https://www.medeltiden.kalmarlansmuseum.se/samhallet/lander-runt-ostersjon/finland/finland-under-medeltiden/"
+  },
+  {
+    "territory": "Reino de Suecia",
+    "id": "Konga",
+    "action": "add",
+    "from": 1400,
+    "through": 1650,
+    "reason": "Västmanland, Närke, Dalsland y Tiohärad/Småland revisados por su forma y posición. Aproximación regional de tierras del reino; no un lindero feudal exacto.",
+    "source": "https://medeltiden.kalmarlansmuseum.se/samhallet/landets-indelning/landskapslag-och-landslag/"
+  },
+  {
+    "territory": "Reino de Suecia",
+    "id": "Linde",
+    "action": "add",
+    "from": 1400,
+    "through": 1650,
+    "reason": "Västmanland, Närke, Dalsland y Tiohärad/Småland revisados por su forma y posición. Aproximación regional de tierras del reino; no un lindero feudal exacto.",
+    "source": "https://medeltiden.kalmarlansmuseum.se/samhallet/landets-indelning/landskapslag-och-landslag/"
+  },
+  {
+    "territory": "Reino de Suecia",
+    "id": "Ljungby",
+    "action": "add",
+    "from": 1400,
+    "through": 1650,
+    "reason": "Västmanland, Närke, Dalsland y Tiohärad/Småland revisados por su forma y posición. Aproximación regional de tierras del reino; no un lindero feudal exacto.",
+    "source": "https://medeltiden.kalmarlansmuseum.se/samhallet/landets-indelning/landskapslag-och-landslag/"
+  },
+  {
+    "territory": "Reino de Suecia",
+    "id": "Nora",
+    "action": "add",
+    "from": 1400,
+    "through": 1650,
+    "reason": "Västmanland, Närke, Dalsland y Tiohärad/Småland revisados por su forma y posición. Aproximación regional de tierras del reino; no un lindero feudal exacto.",
+    "source": "https://medeltiden.kalmarlansmuseum.se/samhallet/landets-indelning/landskapslag-och-landslag/"
+  },
+  {
+    "territory": "Reino de Suecia",
+    "id": "Orebro",
+    "action": "add",
+    "from": 1400,
+    "through": 1650,
+    "reason": "Västmanland, Närke, Dalsland y Tiohärad/Småland revisados por su forma y posición. Aproximación regional de tierras del reino; no un lindero feudal exacto.",
+    "source": "https://medeltiden.kalmarlansmuseum.se/samhallet/landets-indelning/landskapslag-och-landslag/"
+  },
+  {
+    "territory": "Reino de Suecia",
+    "id": "Orivesi",
+    "action": "add",
+    "from": 1400,
+    "through": 1650,
+    "reason": "Celda de Satakunta en el núcleo occidental de Finlandia bajo el reino sueco. Forma y vecinos comprobados en el SVG; no se extiende esa equivalencia a toda Carelia o Laponia.",
+    "source": "https://www.medeltiden.kalmarlansmuseum.se/samhallet/lander-runt-ostersjon/finland/finland-under-medeltiden/"
+  },
+  {
+    "territory": "Reino de Suecia",
+    "id": "Raumo",
+    "action": "add",
+    "from": 1400,
+    "through": 1650,
+    "reason": "Celda de Satakunta en el núcleo occidental de Finlandia bajo el reino sueco. Forma y vecinos comprobados en el SVG; no se extiende esa equivalencia a toda Carelia o Laponia.",
+    "source": "https://www.medeltiden.kalmarlansmuseum.se/samhallet/lander-runt-ostersjon/finland/finland-under-medeltiden/"
+  },
+  {
+    "territory": "Reino de Suecia",
+    "id": "Riseberga",
+    "action": "add",
+    "from": 1400,
+    "through": 1650,
+    "reason": "Västmanland, Närke, Dalsland y Tiohärad/Småland revisados por su forma y posición. Aproximación regional de tierras del reino; no un lindero feudal exacto.",
+    "source": "https://medeltiden.kalmarlansmuseum.se/samhallet/landets-indelning/landskapslag-och-landslag/"
+  },
+  {
+    "territory": "Reino de Suecia",
+    "id": "Sala",
+    "action": "add",
+    "from": 1400,
+    "through": 1650,
+    "reason": "Västmanland, Närke, Dalsland y Tiohärad/Småland revisados por su forma y posición. Aproximación regional de tierras del reino; no un lindero feudal exacto.",
+    "source": "https://medeltiden.kalmarlansmuseum.se/samhallet/landets-indelning/landskapslag-och-landslag/"
+  },
+  {
+    "territory": "Reino de Suecia",
+    "id": "Sastamala",
+    "action": "add",
+    "from": 1400,
+    "through": 1650,
+    "reason": "Celda de Satakunta en el núcleo occidental de Finlandia bajo el reino sueco. Forma y vecinos comprobados en el SVG; no se extiende esa equivalencia a toda Carelia o Laponia.",
+    "source": "https://www.medeltiden.kalmarlansmuseum.se/samhallet/lander-runt-ostersjon/finland/finland-under-medeltiden/"
+  },
+  {
+    "territory": "Reino de Suecia",
+    "id": "Sastmola",
+    "action": "add",
+    "from": 1400,
+    "through": 1650,
+    "reason": "Celda de Satakunta en el núcleo occidental de Finlandia bajo el reino sueco. Forma y vecinos comprobados en el SVG; no se extiende esa equivalencia a toda Carelia o Laponia.",
+    "source": "https://www.medeltiden.kalmarlansmuseum.se/samhallet/lander-runt-ostersjon/finland/finland-under-medeltiden/"
+  },
+  {
+    "territory": "Reino de Suecia",
+    "id": "Skinskatteberg",
+    "action": "add",
+    "from": 1400,
+    "through": 1650,
+    "reason": "Västmanland, Närke, Dalsland y Tiohärad/Småland revisados por su forma y posición. Aproximación regional de tierras del reino; no un lindero feudal exacto.",
+    "source": "https://medeltiden.kalmarlansmuseum.se/samhallet/landets-indelning/landskapslag-och-landslag/"
+  },
+  {
+    "territory": "Reino de Suecia",
+    "id": "Trollaborg",
+    "action": "add",
+    "from": 1400,
+    "through": 1650,
+    "reason": "Västmanland, Närke, Dalsland y Tiohärad/Småland revisados por su forma y posición. Aproximación regional de tierras del reino; no un lindero feudal exacto.",
+    "source": "https://medeltiden.kalmarlansmuseum.se/samhallet/landets-indelning/landskapslag-och-landslag/"
+  },
+  {
+    "territory": "Reino de Suecia",
+    "id": "Uppvidinge",
+    "action": "add",
+    "from": 1400,
+    "through": 1650,
+    "reason": "Västmanland, Närke, Dalsland y Tiohärad/Småland revisados por su forma y posición. Aproximación regional de tierras del reino; no un lindero feudal exacto.",
+    "source": "https://medeltiden.kalmarlansmuseum.se/samhallet/landets-indelning/landskapslag-och-landslag/"
+  },
+  {
+    "territory": "Reino de Suecia",
+    "id": "Vallsjo",
+    "action": "add",
+    "from": 1400,
+    "through": 1650,
+    "reason": "Västmanland, Närke, Dalsland y Tiohärad/Småland revisados por su forma y posición. Aproximación regional de tierras del reino; no un lindero feudal exacto.",
+    "source": "https://medeltiden.kalmarlansmuseum.se/samhallet/landets-indelning/landskapslag-och-landslag/"
+  },
+  {
+    "territory": "Reino de Suecia",
+    "id": "Vasteras",
+    "action": "add",
+    "from": 1400,
+    "through": 1650,
+    "reason": "Västmanland, Närke, Dalsland y Tiohärad/Småland revisados por su forma y posición. Aproximación regional de tierras del reino; no un lindero feudal exacto.",
+    "source": "https://medeltiden.kalmarlansmuseum.se/samhallet/landets-indelning/landskapslag-och-landslag/"
+  },
+  {
+    "territory": "Reino de Suecia",
+    "id": "Vaxjo",
+    "action": "add",
+    "from": 1400,
+    "through": 1650,
+    "reason": "Västmanland, Närke, Dalsland y Tiohärad/Småland revisados por su forma y posición. Aproximación regional de tierras del reino; no un lindero feudal exacto.",
+    "source": "https://medeltiden.kalmarlansmuseum.se/samhallet/landets-indelning/landskapslag-och-landslag/"
+  },
+  {
+    "territory": "Reino de Suecia",
+    "id": "Vedbo",
+    "action": "add",
+    "from": 1400,
+    "through": 1650,
+    "reason": "Västmanland, Närke, Dalsland y Tiohärad/Småland revisados por su forma y posición. Aproximación regional de tierras del reino; no un lindero feudal exacto.",
+    "source": "https://medeltiden.kalmarlansmuseum.se/samhallet/landets-indelning/landskapslag-och-landslag/"
+  },
+  {
+    "territory": "Reino de Suecia",
+    "id": "Vetlanda",
+    "action": "add",
+    "from": 1400,
+    "through": 1650,
+    "reason": "Västmanland, Närke, Dalsland y Tiohärad/Småland revisados por su forma y posición. Aproximación regional de tierras del reino; no un lindero feudal exacto.",
+    "source": "https://medeltiden.kalmarlansmuseum.se/samhallet/landets-indelning/landskapslag-och-landslag/"
+  },
+  {
+    "territory": "Reino de Suecia",
+    "id": "Waestbo",
+    "action": "add",
+    "from": 1400,
+    "through": 1650,
+    "reason": "Västmanland, Närke, Dalsland y Tiohärad/Småland revisados por su forma y posición. Aproximación regional de tierras del reino; no un lindero feudal exacto.",
+    "source": "https://medeltiden.kalmarlansmuseum.se/samhallet/landets-indelning/landskapslag-och-landslag/"
+  },
+  {
+    "territory": "Reino de Noruega",
+    "id": "Bardodalen",
+    "action": "add",
+    "from": 1400,
+    "through": 1650,
+    "reason": "Troms, Akershus y Østfold revisados visualmente; se representa el reino, sin convertir los derechos tributarios noruegos en dominio exclusivo sobre toda Sápmi.",
+    "source": "https://snl.no/Troms"
+  },
+  {
+    "territory": "Reino de Noruega",
+    "id": "Borg",
+    "action": "add",
+    "from": 1400,
+    "through": 1650,
+    "reason": "Troms, Akershus y Østfold revisados visualmente; se representa el reino, sin convertir los derechos tributarios noruegos en dominio exclusivo sobre toda Sápmi.",
+    "source": "https://snl.no/Norges_historie"
+  },
+  {
+    "territory": "Reino de Noruega",
+    "id": "Eidsvoll",
+    "action": "add",
+    "from": 1400,
+    "through": 1650,
+    "reason": "Troms, Akershus y Østfold revisados visualmente; se representa el reino, sin convertir los derechos tributarios noruegos en dominio exclusivo sobre toda Sápmi.",
+    "source": "https://snl.no/Norges_historie"
+  },
+  {
+    "territory": "Reino de Noruega",
+    "id": "Halden",
+    "action": "add",
+    "from": 1400,
+    "through": 1650,
+    "reason": "Troms, Akershus y Østfold revisados visualmente; se representa el reino, sin convertir los derechos tributarios noruegos en dominio exclusivo sobre toda Sápmi.",
+    "source": "https://snl.no/Norges_historie"
+  },
+  {
+    "territory": "Reino de Noruega",
+    "id": "Moss",
+    "action": "add",
+    "from": 1400,
+    "through": 1650,
+    "reason": "Troms, Akershus y Østfold revisados visualmente; se representa el reino, sin convertir los derechos tributarios noruegos en dominio exclusivo sobre toda Sápmi.",
+    "source": "https://snl.no/Norges_historie"
+  },
+  {
+    "territory": "Reino de Noruega",
+    "id": "Oslo",
+    "action": "add",
+    "from": 1400,
+    "through": 1650,
+    "reason": "Troms, Akershus y Østfold revisados visualmente; se representa el reino, sin convertir los derechos tributarios noruegos en dominio exclusivo sobre toda Sápmi.",
+    "source": "https://snl.no/Norges_historie"
+  },
+  {
+    "territory": "Reino de Noruega",
+    "id": "Raisa",
+    "action": "add",
+    "from": 1400,
+    "through": 1650,
+    "reason": "Troms, Akershus y Østfold revisados visualmente; se representa el reino, sin convertir los derechos tributarios noruegos en dominio exclusivo sobre toda Sápmi.",
+    "source": "https://snl.no/Troms"
+  },
+  {
+    "territory": "Reino de Noruega",
+    "id": "Senja",
+    "action": "add",
+    "from": 1400,
+    "through": 1650,
+    "reason": "Troms, Akershus y Østfold revisados visualmente; se representa el reino, sin convertir los derechos tributarios noruegos en dominio exclusivo sobre toda Sápmi.",
+    "source": "https://snl.no/Troms"
+  },
+  {
+    "territory": "Reino de Noruega",
+    "id": "Ski",
+    "action": "add",
+    "from": 1400,
+    "through": 1650,
+    "reason": "Troms, Akershus y Østfold revisados visualmente; se representa el reino, sin convertir los derechos tributarios noruegos en dominio exclusivo sobre toda Sápmi.",
+    "source": "https://snl.no/Norges_historie"
+  },
+  {
+    "territory": "Reino de Noruega",
+    "id": "Trogstad",
+    "action": "add",
+    "from": 1400,
+    "through": 1650,
+    "reason": "Troms, Akershus y Østfold revisados visualmente; se representa el reino, sin convertir los derechos tributarios noruegos en dominio exclusivo sobre toda Sápmi.",
+    "source": "https://snl.no/Norges_historie"
+  },
+  {
+    "territory": "Reino de Noruega",
+    "id": "Troms",
+    "action": "add",
+    "from": 1400,
+    "through": 1650,
+    "reason": "Troms, Akershus y Østfold revisados visualmente; se representa el reino, sin convertir los derechos tributarios noruegos en dominio exclusivo sobre toda Sápmi.",
+    "source": "https://snl.no/Troms"
+  },
+  {
+    "territory": "Reino de Noruega",
+    "id": "Trondenes",
+    "action": "add",
+    "from": 1400,
+    "through": 1650,
+    "reason": "Troms, Akershus y Østfold revisados visualmente; se representa el reino, sin convertir los derechos tributarios noruegos en dominio exclusivo sobre toda Sápmi.",
+    "source": "https://snl.no/Troms"
+  },
+  {
+    "territory": "Reino de Dinamarca",
+    "id": "Asbo",
+    "action": "add",
+    "from": 1400,
+    "through": 1650,
+    "reason": "Núcleos de Escania bajo la Corona danesa antes de su cesión en 1658. Revisión visual de Göinge y Malmöhus; las celdas son aproximadas.",
+    "source": "https://regionmuseet.se/wp-content/uploads/2024/08/1600-tal_lararhandl.pdf"
+  },
+  {
+    "territory": "Balcanes meridionales otomanos",
+    "id": "Babadag",
+    "action": "remove",
+    "from": 1402,
+    "through": 1418,
+    "reason": "El dominio de Mircea en Dobruja impide asignarla a Süleyman,Musa o Mehmed I. El año 1402 es de transición; documentación conservadora des de 1403.",
+    "source": "https://islamansiklopedisi.org.tr/balcik"
+  },
+  {
+    "territory": "Balcanes meridionales otomanos",
+    "id": "Cernavoda",
+    "action": "remove",
+    "from": 1402,
+    "through": 1418,
+    "reason": "El dominio de Mircea en Dobruja impide asignarla a Süleyman,Musa o Mehmed I. El año 1402 es de transición; documentación conservadora des de 1403.",
+    "source": "https://islamansiklopedisi.org.tr/balcik"
+  },
+  {
+    "territory": "Balcanes meridionales otomanos",
+    "id": "Enisala",
+    "action": "remove",
+    "from": 1402,
+    "through": 1418,
+    "reason": "El dominio de Mircea en Dobruja impide asignarla a Süleyman,Musa o Mehmed I. El año 1402 es de transición; documentación conservadora des de 1403.",
+    "source": "https://islamansiklopedisi.org.tr/balcik"
+  },
+  {
+    "territory": "Balcanes meridionales otomanos",
+    "id": "Harsova",
+    "action": "remove",
+    "from": 1402,
+    "through": 1418,
+    "reason": "El dominio de Mircea en Dobruja impide asignarla a Süleyman,Musa o Mehmed I. El año 1402 es de transición; documentación conservadora des de 1403.",
+    "source": "https://islamansiklopedisi.org.tr/balcik"
+  },
+  {
+    "territory": "Balcanes meridionales otomanos",
+    "id": "Isaccea",
+    "action": "remove",
+    "from": 1402,
+    "through": 1418,
+    "reason": "El dominio de Mircea en Dobruja impide asignarla a Süleyman,Musa o Mehmed I. El año 1402 es de transición; documentación conservadora des de 1403.",
+    "source": "https://islamansiklopedisi.org.tr/balcik"
+  },
+  {
+    "territory": "Balcanes meridionales otomanos",
+    "id": "Kaliakra",
+    "action": "remove",
+    "from": 1402,
+    "through": 1418,
+    "reason": "El dominio de Mircea en Dobruja impide asignarla a Süleyman,Musa o Mehmed I. El año 1402 es de transición; documentación conservadora des de 1403.",
+    "source": "https://islamansiklopedisi.org.tr/balcik"
+  },
+  {
+    "territory": "Balcanes meridionales otomanos",
+    "id": "Karvuna",
+    "action": "remove",
+    "from": 1402,
+    "through": 1418,
+    "reason": "El dominio de Mircea en Dobruja impide asignarla a Süleyman,Musa o Mehmed I. El año 1402 es de transición; documentación conservadora des de 1403.",
+    "source": "https://islamansiklopedisi.org.tr/balcik"
+  },
+  {
+    "territory": "Balcanes meridionales otomanos",
+    "id": "Kladentsi",
+    "action": "remove",
+    "from": 1402,
+    "through": 1418,
+    "reason": "El dominio de Mircea en Dobruja impide asignarla a Süleyman,Musa o Mehmed I. El año 1402 es de transición; documentación conservadora des de 1403.",
+    "source": "https://islamansiklopedisi.org.tr/balcik"
+  },
+  {
+    "territory": "Balcanes meridionales otomanos",
+    "id": "Pangalia",
+    "action": "remove",
+    "from": 1402,
+    "through": 1418,
+    "reason": "El dominio de Mircea en Dobruja impide asignarla a Süleyman,Musa o Mehmed I. El año 1402 es de transición; documentación conservadora des de 1403.",
+    "source": "https://islamansiklopedisi.org.tr/balcik"
+  },
+  {
+    "territory": "Balcanes meridionales otomanos",
+    "id": "Tulcea",
+    "action": "remove",
+    "from": 1402,
+    "through": 1418,
+    "reason": "El dominio de Mircea en Dobruja impide asignarla a Süleyman,Musa o Mehmed I. El año 1402 es de transición; documentación conservadora des de 1403.",
+    "source": "https://islamansiklopedisi.org.tr/balcik"
+  },
+  {
+    "territory": "Balcanes meridionales otomanos",
+    "id": "Drastar",
+    "action": "remove",
+    "from": 1402,
+    "through": 1418,
+    "reason": "El dominio de Mircea en Dobruja impide asignarla a Süleyman,Musa o Mehmed I. El año 1402 es de transición; documentación conservadora des de 1403.",
+    "source": "https://islamansiklopedisi.org.tr/balcik"
+  },
+  {
+    "territory": "Balcanes meridionales otomanos",
+    "id": "Tutrakan",
+    "action": "remove",
+    "from": 1402,
+    "through": 1418,
+    "reason": "El dominio de Mircea en Dobruja impide asignarla a Süleyman,Musa o Mehmed I. El año 1402 es de transición; documentación conservadora des de 1403.",
+    "source": "https://islamansiklopedisi.org.tr/balcik"
+  },
+  {
+    "territory": "Balcanes meridionales otomanos",
+    "id": "Varna",
+    "action": "remove",
+    "from": 1402,
+    "through": 1418,
+    "reason": "El dominio de Mircea en Dobruja impide asignarla a Süleyman,Musa o Mehmed I. El año 1402 es de transición; documentación conservadora des de 1403.",
+    "source": "https://islamansiklopedisi.org.tr/balcik"
+  },
+  {
+    "territory": "Balcanes meridionales otomanos",
+    "id": "Ahtopol",
+    "action": "remove",
+    "from": 1403,
+    "through": 1423,
+    "reason": "Reserva de celdas costeras: comprende territorios cedidos a Bizancio desde 1403 o de límite incierto. La reconstrucción regional no justifica atribuir la celda completa a un emir otomano.",
+    "source": "https://islamansiklopedisi.org.tr/suleyman-celebi-emir"
+  },
+  {
+    "territory": "Balcanes meridionales otomanos",
+    "id": "Burgas",
+    "action": "remove",
+    "from": 1403,
+    "through": 1423,
+    "reason": "Reserva de celdas costeras: comprende territorios cedidos a Bizancio desde 1403 o de límite incierto. La reconstrucción regional no justifica atribuir la celda completa a un emir otomano.",
+    "source": "https://islamansiklopedisi.org.tr/suleyman-celebi-emir"
+  },
+  {
+    "territory": "Balcanes meridionales otomanos",
+    "id": "Catalca",
+    "action": "remove",
+    "from": 1403,
+    "through": 1423,
+    "reason": "Reserva de celdas costeras: comprende territorios cedidos a Bizancio desde 1403 o de límite incierto. La reconstrucción regional no justifica atribuir la celda completa a un emir otomano.",
+    "source": "https://islamansiklopedisi.org.tr/suleyman-celebi-emir"
+  },
+  {
+    "territory": "Balcanes meridionales otomanos",
+    "id": "Corlu",
+    "action": "remove",
+    "from": 1403,
+    "through": 1423,
+    "reason": "Reserva de celdas costeras: comprende territorios cedidos a Bizancio desde 1403 o de límite incierto. La reconstrucción regional no justifica atribuir la celda completa a un emir otomano.",
+    "source": "https://islamansiklopedisi.org.tr/suleyman-celebi-emir"
+  },
+  {
+    "territory": "Balcanes meridionales otomanos",
+    "id": "Kiyikoy",
+    "action": "remove",
+    "from": 1403,
+    "through": 1423,
+    "reason": "Reserva de celdas costeras: comprende territorios cedidos a Bizancio desde 1403 o de límite incierto. La reconstrucción regional no justifica atribuir la celda completa a un emir otomano.",
+    "source": "https://islamansiklopedisi.org.tr/suleyman-celebi-emir"
+  },
+  {
+    "territory": "Balcanes meridionales otomanos",
+    "id": "Rodoscuk",
+    "action": "remove",
+    "from": 1403,
+    "through": 1423,
+    "reason": "Reserva de celdas costeras: comprende territorios cedidos a Bizancio desde 1403 o de límite incierto. La reconstrucción regional no justifica atribuir la celda completa a un emir otomano.",
+    "source": "https://islamansiklopedisi.org.tr/suleyman-celebi-emir"
+  },
+  {
+    "territory": "Balcanes meridionales otomanos",
+    "id": "Silivri",
+    "action": "remove",
+    "from": 1403,
+    "through": 1423,
+    "reason": "Reserva de celdas costeras: comprende territorios cedidos a Bizancio desde 1403 o de límite incierto. La reconstrucción regional no justifica atribuir la celda completa a un emir otomano.",
+    "source": "https://islamansiklopedisi.org.tr/suleyman-celebi-emir"
+  },
+  {
+    "territory": "Balcanes meridionales otomanos",
+    "id": "Sozopol",
+    "action": "remove",
+    "from": 1403,
+    "through": 1423,
+    "reason": "Reserva de celdas costeras: comprende territorios cedidos a Bizancio desde 1403 o de límite incierto. La reconstrucción regional no justifica atribuir la celda completa a un emir otomano.",
+    "source": "https://islamansiklopedisi.org.tr/suleyman-celebi-emir"
+  },
+  {
+    "territory": "Balcanes meridionales otomanos",
+    "id": "Vize",
+    "action": "remove",
+    "from": 1403,
+    "through": 1423,
+    "reason": "Reserva de celdas costeras: comprende territorios cedidos a Bizancio desde 1403 o de límite incierto. La reconstrucción regional no justifica atribuir la celda completa a un emir otomano.",
+    "source": "https://islamansiklopedisi.org.tr/suleyman-celebi-emir"
+  },
+  {
+    "territory": "Balcanes meridionales otomanos",
+    "id": "Gynaikokastro",
+    "action": "remove",
+    "from": 1403,
+    "through": 1423,
+    "reason": "Reserva de celdas costeras: comprende territorios cedidos a Bizancio desde 1403 o de límite incierto. La reconstrucción regional no justifica atribuir la celda completa a un emir otomano.",
+    "source": "https://islamansiklopedisi.org.tr/suleyman-celebi-emir"
+  },
+  {
+    "territory": "Balcanes meridionales otomanos",
+    "id": "Kilkis",
+    "action": "remove",
+    "from": 1403,
+    "through": 1423,
+    "reason": "Reserva de celdas costeras: comprende territorios cedidos a Bizancio desde 1403 o de límite incierto. La reconstrucción regional no justifica atribuir la celda completa a un emir otomano.",
+    "source": "https://islamansiklopedisi.org.tr/suleyman-celebi-emir"
+  },
+  {
+    "territory": "Balcanes meridionales otomanos",
+    "id": "Rentina",
+    "action": "remove",
+    "from": 1403,
+    "through": 1423,
+    "reason": "Reserva de celdas costeras: comprende territorios cedidos a Bizancio desde 1403 o de límite incierto. La reconstrucción regional no justifica atribuir la celda completa a un emir otomano.",
+    "source": "https://islamansiklopedisi.org.tr/suleyman-celebi-emir"
+  },
+  {
+    "territory": "Balcanes meridionales otomanos",
+    "id": "Ahtopol",
+    "action": "remove",
+    "from": 1413,
+    "through": 1423,
+    "reason": "Mehmed confirmó la relación de 1403 al reunificar el Imperio. Murad recobró gran parte en 1424; no se incorporan automáticamente celdas de Mesembria/Derkoi excepto con prueba independiente.",
+    "source": "https://www.cambridge.org/core/journals/byzantine-and-modern-greek-studies/article/ottoman-merchants-in-constantinople-during-the-first-half-of-the-fifteenth-century/37D875CE9B670B813425BABEFD69D37C"
+  },
+  {
+    "territory": "Balcanes meridionales otomanos",
+    "id": "Burgas",
+    "action": "remove",
+    "from": 1413,
+    "through": 1423,
+    "reason": "Mehmed confirmó la relación de 1403 al reunificar el Imperio. Murad recobró gran parte en 1424; no se incorporan automáticamente celdas de Mesembria/Derkoi excepto con prueba independiente.",
+    "source": "https://www.cambridge.org/core/journals/byzantine-and-modern-greek-studies/article/ottoman-merchants-in-constantinople-during-the-first-half-of-the-fifteenth-century/37D875CE9B670B813425BABEFD69D37C"
+  },
+  {
+    "territory": "Balcanes meridionales otomanos",
+    "id": "Catalca",
+    "action": "remove",
+    "from": 1413,
+    "through": 1423,
+    "reason": "Mehmed confirmó la relación de 1403 al reunificar el Imperio. Murad recobró gran parte en 1424; no se incorporan automáticamente celdas de Mesembria/Derkoi excepto con prueba independiente.",
+    "source": "https://www.cambridge.org/core/journals/byzantine-and-modern-greek-studies/article/ottoman-merchants-in-constantinople-during-the-first-half-of-the-fifteenth-century/37D875CE9B670B813425BABEFD69D37C"
+  },
+  {
+    "territory": "Balcanes meridionales otomanos",
+    "id": "Corlu",
+    "action": "remove",
+    "from": 1413,
+    "through": 1423,
+    "reason": "Mehmed confirmó la relación de 1403 al reunificar el Imperio. Murad recobró gran parte en 1424; no se incorporan automáticamente celdas de Mesembria/Derkoi excepto con prueba independiente.",
+    "source": "https://www.cambridge.org/core/journals/byzantine-and-modern-greek-studies/article/ottoman-merchants-in-constantinople-during-the-first-half-of-the-fifteenth-century/37D875CE9B670B813425BABEFD69D37C"
+  },
+  {
+    "territory": "Balcanes meridionales otomanos",
+    "id": "Kiyikoy",
+    "action": "remove",
+    "from": 1413,
+    "through": 1423,
+    "reason": "Mehmed confirmó la relación de 1403 al reunificar el Imperio. Murad recobró gran parte en 1424; no se incorporan automáticamente celdas de Mesembria/Derkoi excepto con prueba independiente.",
+    "source": "https://www.cambridge.org/core/journals/byzantine-and-modern-greek-studies/article/ottoman-merchants-in-constantinople-during-the-first-half-of-the-fifteenth-century/37D875CE9B670B813425BABEFD69D37C"
+  },
+  {
+    "territory": "Balcanes meridionales otomanos",
+    "id": "Rodoscuk",
+    "action": "remove",
+    "from": 1413,
+    "through": 1423,
+    "reason": "Mehmed confirmó la relación de 1403 al reunificar el Imperio. Murad recobró gran parte en 1424; no se incorporan automáticamente celdas de Mesembria/Derkoi excepto con prueba independiente.",
+    "source": "https://www.cambridge.org/core/journals/byzantine-and-modern-greek-studies/article/ottoman-merchants-in-constantinople-during-the-first-half-of-the-fifteenth-century/37D875CE9B670B813425BABEFD69D37C"
+  },
+  {
+    "territory": "Balcanes meridionales otomanos",
+    "id": "Silivri",
+    "action": "remove",
+    "from": 1413,
+    "through": 1423,
+    "reason": "Mehmed confirmó la relación de 1403 al reunificar el Imperio. Murad recobró gran parte en 1424; no se incorporan automáticamente celdas de Mesembria/Derkoi excepto con prueba independiente.",
+    "source": "https://www.cambridge.org/core/journals/byzantine-and-modern-greek-studies/article/ottoman-merchants-in-constantinople-during-the-first-half-of-the-fifteenth-century/37D875CE9B670B813425BABEFD69D37C"
+  },
+  {
+    "territory": "Balcanes meridionales otomanos",
+    "id": "Sozopol",
+    "action": "remove",
+    "from": 1413,
+    "through": 1423,
+    "reason": "Mehmed confirmó la relación de 1403 al reunificar el Imperio. Murad recobró gran parte en 1424; no se incorporan automáticamente celdas de Mesembria/Derkoi excepto con prueba independiente.",
+    "source": "https://www.cambridge.org/core/journals/byzantine-and-modern-greek-studies/article/ottoman-merchants-in-constantinople-during-the-first-half-of-the-fifteenth-century/37D875CE9B670B813425BABEFD69D37C"
+  },
+  {
+    "territory": "Balcanes meridionales otomanos",
+    "id": "Vize",
+    "action": "remove",
+    "from": 1413,
+    "through": 1423,
+    "reason": "Mehmed confirmó la relación de 1403 al reunificar el Imperio. Murad recobró gran parte en 1424; no se incorporan automáticamente celdas de Mesembria/Derkoi excepto con prueba independiente.",
+    "source": "https://www.cambridge.org/core/journals/byzantine-and-modern-greek-studies/article/ottoman-merchants-in-constantinople-during-the-first-half-of-the-fifteenth-century/37D875CE9B670B813425BABEFD69D37C"
+  },
+  {
+    "territory": "Balcanes meridionales otomanos",
+    "id": "Gynaikokastro",
+    "action": "remove",
+    "from": 1413,
+    "through": 1423,
+    "reason": "Mehmed confirmó la relación de 1403 al reunificar el Imperio. Murad recobró gran parte en 1424; no se incorporan automáticamente celdas de Mesembria/Derkoi excepto con prueba independiente.",
+    "source": "https://www.cambridge.org/core/journals/byzantine-and-modern-greek-studies/article/ottoman-merchants-in-constantinople-during-the-first-half-of-the-fifteenth-century/37D875CE9B670B813425BABEFD69D37C"
+  },
+  {
+    "territory": "Balcanes meridionales otomanos",
+    "id": "Kilkis",
+    "action": "remove",
+    "from": 1413,
+    "through": 1423,
+    "reason": "Mehmed confirmó la relación de 1403 al reunificar el Imperio. Murad recobró gran parte en 1424; no se incorporan automáticamente celdas de Mesembria/Derkoi excepto con prueba independiente.",
+    "source": "https://www.cambridge.org/core/journals/byzantine-and-modern-greek-studies/article/ottoman-merchants-in-constantinople-during-the-first-half-of-the-fifteenth-century/37D875CE9B670B813425BABEFD69D37C"
+  },
+  {
+    "territory": "Balcanes meridionales otomanos",
+    "id": "Rentina",
+    "action": "remove",
+    "from": 1413,
+    "through": 1423,
+    "reason": "Mehmed confirmó la relación de 1403 al reunificar el Imperio. Murad recobró gran parte en 1424; no se incorporan automáticamente celdas de Mesembria/Derkoi excepto con prueba independiente.",
+    "source": "https://www.cambridge.org/core/journals/byzantine-and-modern-greek-studies/article/ottoman-merchants-in-constantinople-during-the-first-half-of-the-fifteenth-century/37D875CE9B670B813425BABEFD69D37C"
+  },
+  {
+    "territory": "Balcanes meridionales otomanos",
+    "id": "Nis",
+    "action": "remove",
+    "from": 1413,
+    "through": 1427,
+    "source": "https://islamansiklopedisi.org.tr/nis",
+    "reason": "Niš: entrega a Stefan en 1413, reconquista otomana en 1428, devolución a Serbia en 1444 y conquista definitiva en 1456. La escala anual reúne los relevos dentro del año."
+  },
+  {
+    "territory": "Balcanes meridionales otomanos",
+    "id": "Nis",
+    "action": "remove",
+    "from": 1444,
+    "through": 1455,
+    "source": "https://islamansiklopedisi.org.tr/nis",
+    "reason": "Niš: entrega a Stefan en 1413, reconquista otomana en 1428, devolución a Serbia en 1444 y conquista definitiva en 1456. La escala anual reúne los relevos dentro del año."
+  },
+  {
+    "territory": "Despotado de Serbia",
+    "id": "Nis",
+    "action": "add",
+    "from": 1413,
+    "through": 1427,
+    "source": "https://islamansiklopedisi.org.tr/nis",
+    "reason": "Niš: entrega a Stefan en 1413, reconquista otomana en 1428, devolución a Serbia en 1444 y conquista definitiva en 1456. La escala anual reúne los relevos dentro del año."
+  },
+  {
+    "territory": "Despotado de Serbia",
+    "id": "Nis",
+    "action": "add",
+    "from": 1444,
+    "through": 1455,
+    "source": "https://islamansiklopedisi.org.tr/nis",
+    "reason": "Niš: entrega a Stefan en 1413, reconquista otomana en 1428, devolución a Serbia en 1444 y conquista definitiva en 1456. La escala anual reúne los relevos dentro del año."
+  },
+  {
+    "territory": "Despotado de Serbia",
+    "id": "Nis",
+    "action": "remove",
+    "from": 1402,
+    "through": 1412,
+    "source": "https://islamansiklopedisi.org.tr/nis",
+    "reason": "Niš: entrega a Stefan en 1413, reconquista otomana en 1428, devolución a Serbia en 1444 y conquista definitiva en 1456. La escala anual reúne los relevos dentro del año."
+  },
+  {
+    "territory": "Despotado de Serbia",
+    "id": "Nis",
+    "action": "remove",
+    "from": 1428,
+    "through": 1443,
+    "source": "https://islamansiklopedisi.org.tr/nis",
+    "reason": "Niš: entrega a Stefan en 1413, reconquista otomana en 1428, devolución a Serbia en 1444 y conquista definitiva en 1456. La escala anual reúne los relevos dentro del año."
+  },
+  {
+    "territory": "Despotado de Serbia",
+    "id": "Nis",
+    "action": "remove",
+    "from": 1456,
+    "through": 1458,
+    "source": "https://islamansiklopedisi.org.tr/nis",
+    "reason": "Niš: entrega a Stefan en 1413, reconquista otomana en 1428, devolución a Serbia en 1444 y conquista definitiva en 1456. La escala anual reúne los relevos dentro del año."
+  },
+  {
+    "territory": "Balcanes meridionales otomanos",
+    "id": "Constanta",
+    "action": "remove",
+    "from": 1402,
+    "through": 1418,
+    "source": "https://islamansiklopedisi.org.tr/kostence",
+    "reason": "Constanța pasó a Mircea en 1402 y fue conquistada por los otomanos en 1419."
+  }
 ]
