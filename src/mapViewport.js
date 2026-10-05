@@ -43,3 +43,21 @@ export function resizeMapViewBox(box, original, previousViewport, nextViewport, 
     height,
   }, original, nextViewport, minZoom);
 }
+
+export function zoomMapViewBox(box, factor, original, viewport, minZoom = 0.015) {
+  if (!box || !original || !Number.isFinite(factor) || factor <= 0) return box;
+  const current = clampMapViewBox(box, original, viewport, minZoom);
+  const fitted = fittedMapViewBox(original, viewport);
+  const minWidth = fitted.width * minZoom;
+  const width = Math.max(minWidth, Math.min(fitted.width, current.width * factor));
+  if (Math.abs(width - current.width) < 0.0001) return current;
+  const height = width / (fitted.width / fitted.height);
+  const centerX = current.x + current.width / 2;
+  const centerY = current.y + current.height / 2;
+  return clampMapViewBox({
+    x: centerX - width / 2,
+    y: centerY - height / 2,
+    width,
+    height,
+  }, original, viewport, minZoom);
+}

@@ -13,7 +13,7 @@ import locationsSvgUrl from "../prototypes/euv-locations/euv-locations-crop.svg?
 import locationsDataUrl from "../prototypes/euv-locations/corridor-locations.json?url";
 import burgundianDataUrl from "../prototypes/euv-locations/burgundian-locations.json?url";
 import { loadTextAsset, loadJsonAsset, forgetTextAsset } from "./utils/loadAsset.js";
-import { clampMapViewBox, fittedMapViewBox, resizeMapViewBox } from "./mapViewport.js";
+import { clampMapViewBox, fittedMapViewBox, resizeMapViewBox, zoomMapViewBox } from "./mapViewport.js";
 import { mapLocationsForGovernment, pilotBurgundianGovernmentsFor, pilotDisputedHungarianClaimsFor, pilotImperialFrameFor, pilotLocationContext, pilotLocationsFor } from "./data/locationMapPilot.js";
 import { buildPoliticalMapIndex, inspectMapRegion } from "./data/politicalMapIndex.js";
 import { PERSONAS } from "./personas.jsx";
@@ -65,6 +65,7 @@ export function MapaEuropa({ seleccion, anioGlobal = null, onSelectTerritorio, o
   const dragRef = useRef(null);
   const suppressClickRef = useRef(false);
   const [viewBox, setViewBox] = useState(null);
+  const [originalMapFrame, setOriginalMapFrame] = useState(null);
   const [mapReady, setMapReady] = useState(false);
   const [mapError, setMapError] = useState(false);
   const [mapAttempt, setMapAttempt] = useState(0);
@@ -92,6 +93,11 @@ export function MapaEuropa({ seleccion, anioGlobal = null, onSelectTerritorio, o
 
     let cancelled = false;
     svgInyectadoRef.current = false;
+    originalViewBoxRef.current = null;
+    initialViewBoxRef.current = null;
+    viewportRef.current = null;
+    setViewBox(null);
+    setOriginalMapFrame(null);
     setMapReady(false);
     setMapError(false);
     setPilotData(null);
@@ -129,6 +135,7 @@ export function MapaEuropa({ seleccion, anioGlobal = null, onSelectTerritorio, o
       ? clampMapViewBox(initialViewport, original, viewport, MAP_MIN_ZOOM)
       : fitted;
     originalViewBoxRef.current = original;
+    setOriginalMapFrame(original);
     initialViewBoxRef.current = fitted;
     viewportRef.current = viewport;
 
@@ -151,7 +158,7 @@ export function MapaEuropa({ seleccion, anioGlobal = null, onSelectTerritorio, o
   // the same zoom and center while recalculating the outer zoom limit.
   useEffect(() => {
     const node = containerRef.current;
-    const original = originalViewBoxRef.current;
+    const original = originalMapFrame;
     if (!mapReady || !node || !original) return;
     const update = rect => {
       if (!(rect.width > 0 && rect.height > 0)) return;
@@ -178,7 +185,7 @@ export function MapaEuropa({ seleccion, anioGlobal = null, onSelectTerritorio, o
     const onResize = () => update(node.getBoundingClientRect());
     window.addEventListener('resize', onResize);
     return () => window.removeEventListener('resize', onResize);
-  }, [mapReady]);
+  }, [mapReady, originalMapFrame]);
 
   useEffect(() => {
     if (viewBox) onViewportChange?.(viewBox);
@@ -303,20 +310,7 @@ export function MapaEuropa({ seleccion, anioGlobal = null, onSelectTerritorio, o
     setViewBox((current) => {
       const original = originalViewBoxRef.current;
       if (!current || !original) return current;
-      const fitted = fittedMapViewBox(original, viewportRef.current);
-      const minWidth = fitted.width * MAP_MIN_ZOOM;
-      const targetWidth = Math.max(minWidth, Math.min(fitted.width, current.width * factor));
-      if (Math.abs(targetWidth - current.width) < 0.0001) return current;
-      const aspect = fitted.width / fitted.height;
-      const targetHeight = targetWidth / aspect;
-      const centerX = current.x + current.width / 2;
-      const centerY = current.y + current.height / 2;
-      return clampViewBox({
-        x: centerX - targetWidth / 2,
-        y: centerY - targetHeight / 2,
-        width: targetWidth,
-        height: targetHeight,
-      }, original, viewportRef.current, MAP_MIN_ZOOM);
+      return zoomMapViewBox(current, factor, original, viewportRef.current, MAP_MIN_ZOOM);
     });
   }, []);
 

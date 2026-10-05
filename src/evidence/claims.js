@@ -37,7 +37,9 @@ export function personClaims(person, reviews = CLAIM_REVIEWS) {
   if (year(person.muer) !== null) add('death','Fallecimiento',person.muer,interval(person.muer),person.documentacion?.fechas?.muer?.nota);
   if (person.padre || person.padres?.[0]?.id) add('father','Padre',person.padre || person.padres[0].id);
   if (person.madre || person.padres?.[1]?.id) add('mother','Madre',person.madre || person.padres[1].id);
-  const spouseIds = person.conyugesIds || [person.conyuge,...(person.conyuges || [])].map(value => typeof value === 'string' ? value : value?.id);
+  const spouseIds = Array.isArray(person.conyugesIds) && person.conyugesIds.length
+    ? person.conyugesIds
+    : [person.conyuge,...(person.conyuges || [])].map(value => typeof value === 'string' ? value : value?.id);
   for (const id of [...new Set(spouseIds.filter(Boolean))]) add(`spouse:${id}`,'Matrimonio o vínculo conyugal',id);
   for (const government of person.gobiernos || person.reinados || []) {
     const key = [government.territorio, government.desde, government.hasta, government.titulo].join(':');

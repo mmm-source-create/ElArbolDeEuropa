@@ -27,6 +27,13 @@ test('las fichas ligeras conservan las afirmaciones de parentesco sin cargar el 
   assert.deepEqual(personClaims(lite).map(claim=>[claim.field,claim.value]),personClaims(person).map(claim=>[claim.field,claim.value]));
 });
 
+test('una lista ligera vacía conserva los vínculos conyugales heredados de la ficha',()=>{
+  const person=PERSONAS.find(record=>record.id==='CARLOS5');
+  const lite={...person,conyugesIds:[]};
+  const claims=personClaims(lite).filter(claim=>claim.field==='Matrimonio o vínculo conyugal');
+  assert.deepEqual(claims.map(claim=>claim.value),personClaims(person).filter(claim=>claim.field==='Matrimonio o vínculo conyugal').map(claim=>claim.value));
+});
+
 test('una fuente precisa solo respalda las afirmaciones revisadas y conserva el historial',()=>{
   const gerald=PERSONAS.find(person=>person.id==='GERALD8KILDARE');
   const claims=personClaims(gerald);
