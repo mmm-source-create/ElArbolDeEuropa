@@ -124,7 +124,7 @@ const layers = [
       { from: 1499, ids: ['Makarska'], reason: 'Makarska passed into Ottoman control at the end of the fifteenth century.', source: sources.herzegovina },
       { from: 1512, ids: ['Srebrenica','Srebrenik','Teocak','Soli'], reason: 'La expansión del sanjacado de Zvornik incorporó Srebrenica y las fortalezas del noreste bosnio; se fechan aquí y no en la conquista inicial de 1463.', source: sources.bosnia },
       { from: 1522, ids: ['Knin'], reason: 'Knin fell to the Ottoman Bosnian governor in 1522.', source: `${ENC}knin` },
-      { from: 1528, ids: ['Jajce'], reason: 'The Habsburg-Hungarian Jajce banate fell in 1528.', source: `${ENC}jajce` },
+      { from: 1527, ids: ['Jajce'], reason: 'Jajce cayó en diciembre de 1527; se representa el estado al cierre del año.', source: `${ENC}jajce` },
       { from: 1513, ids: ['Sinj'], reason: 'Sinj entered Ottoman rule in 1513; it remains separate from Venetian coastal towns.', source: `${ENC}cetinska-krajina` },
       { from: 1592, ids: ['Bihac'], reason: 'Bihać was captured by Ottoman forces in 1592.', source: `${ENC}bihac` },
     ],
@@ -158,10 +158,13 @@ const layers = [
       ], reason: 'Tras la caída de Smederevo en 1459, el Despotado serbio fue anexionado. Estas celdas cubren el núcleo interior; Belgrado se añade solo desde 1521.', source: sources.serbia },
       { from: 1460, ids: [
         'Mystras','Andravida','Andritsaina','Kyparissia','Vostitsa','Patras','Karytaina','Kalavryta',
-        'Kalamata','Tripolitsa','Xylokastro','Veligosti','Leuktron','Oitylo','Monemvasia','Argos',
+        'Kalamata','Tripolitsa','Xylokastro','Veligosti','Leuktron','Oitylo',
         'Astros','Megara','Livadeia','Atalanti','Gravia','Salona','Loidoriki','Neopatras','Zetounion',
         'Bodonitsa'
       ], reason: 'La conquista de Morea en 1460 incorporó el interior del Peloponeso y otros centros griegos. Se excluyen las plazas e islas venecianas; algunos límites locales siguen sin precisión suficiente.', source: sources.ottomans },
+      { from: 1540, ids: ['Monemvasia'], reason: 'Monemvasía fue veneciana desde 1463 hasta su entrega a los otomanos en 1540; no se incorpora con Morea en 1460.', source: 'https://monemvasia.gr/2017/05/history/' },
+      { from: 1463, ids: ['Argos'], reason: 'Argos siguió siendo una plaza veneciana después de 1460; su conquista otomana se fecha en 1463. La celda no reconstruye las operaciones dentro del año.', source: `${ENC}argos` },
+      { from: 1439, through: 1443, ids: ['Branicevo','Kucevo','Debrc','Valjevo','Krupanj','Rudnik','Jagodina','Krusevac','Uzice','Zica','Arilje','Brvenik','Gradac','Smederevo'], reason: 'Núcleo ocupado tras la caída de Smederevo en agosto de 1439, antes de la restitución de agosto de 1444; no incluye Belgrado ni adjudica toda la frontera serbia.', source: 'https://islamansiklopedisi.org.tr/semendire' },
       { from: 1479, ids: ['Shkoder','Kruje','Elbasan','Berat','Koman','Lezha','Avlonya','Argyrokastro','Kleisoura_Epirus'], reason: 'Tras la guerra otomano-veneciana de 1463–1479, el tratado transfirió territorios albaneses al sultán. Durres permanece fuera hasta 1501 y las celdas de montaña no se interpretan como frontera política.', source: sources.ottomans },
       { from: 1501, ids: ['Durres'], reason: 'Durres se incorpora tras el fin de la guerra otomano-veneciana y el cambio de control de 1501.', source: sources.ottomans },
       { from: 1484, ids: ['Cetatea_Alba','Chilia'], reason: 'La campaña de Bayezid II tomó las fortalezas de Chilia y Cetatea Albă en 1484; no se transfiere por ello toda Moldavia al gobierno directo otomano.', source: sources.ottomans },
@@ -179,7 +182,8 @@ const layers = [
   },
   {
     name: 'Despotado de Serbia', color: '#756598', active: { from: 1402, through: 1458 },
-    note: 'Estado serbio restaurado tras la batalla de Ankara; su relación tributaria con los otomanos y su frontera fluctuaron. Se muestran celdas conservadoras del núcleo septentrional. Belgrado pasa a Hungría en 1427; Smederevo fue la capital hasta la conquista otomana de 1459.',
+    periods: [{from: 1402, through: 1438}, {from: 1444, through: 1458}],
+    note: 'Estado serbio restaurado tras la batalla de Ankara; su relación tributaria con los otomanos y su frontera fluctuaron. Se muestran celdas conservadoras del núcleo septentrional. Belgrado pasa a Hungría en 1427; La ocupación otomana de 1439–1443 se representa aparte; el despotado fue restituido en agosto de 1444. Smederevo fue la capital hasta la conquista otomana de 1459.',
     groups: [
       { from: 1402, through: 1426, ids: ['Belgrad','Branicevo','Kucevo','Debrc','Valjevo','Krupanj','Rudnik','Jagodina','Krusevac','Uzice','Zica','Arilje','Brvenik','Gradac','Smederevo'], reason: 'Núcleo norte del Despotado durante el gobierno de Esteban Lazarević; Belgrado fue su capital desde 1403 hasta la devolución a Hungría en 1427.', source: sources.serbia },
       { from: 1427, through: 1458, ids: ['Branicevo','Kucevo','Debrc','Valjevo','Krupanj','Rudnik','Jagodina','Krusevac','Uzice','Zica','Arilje','Brvenik','Gradac','Smederevo'], reason: 'Tras 1427, Smederevo sustituyó a Belgrado como capital. La capa termina en 1458, el último año completo antes de la caída del Despotado.', source: sources.serbia },

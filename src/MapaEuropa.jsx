@@ -13,7 +13,7 @@ import locationsSvgUrl from "../prototypes/euv-locations/euv-locations-crop.svg?
 import locationsDataUrl from "../prototypes/euv-locations/corridor-locations.json?url";
 import burgundianDataUrl from "../prototypes/euv-locations/burgundian-locations.json?url";
 import { loadTextAsset, loadJsonAsset, forgetTextAsset } from "./utils/loadAsset.js";
-import { clampMapViewBox, fittedMapViewBox, resizeMapViewBox, zoomMapViewBox } from "./mapViewport.js";
+import { clampMapViewBox, clipMapToViewBox, fittedMapViewBox, mapControlLimits, resizeMapViewBox, zoomMapViewBox } from "./mapViewport.js";
 import { mapLocationsForGovernment, pilotImperialFrameFor, pilotLocationContext, pilotLocationsFor } from "./data/locationMapPilot.js";
 import { buildPoliticalMapIndex, inspectMapRegion } from "./data/politicalMapIndex.js";
 import { AUTHORITY_LABELS, mapAuthoritiesForPerson } from "./data/mapAuthorities.js";
@@ -93,6 +93,7 @@ export function MapaEuropa({ seleccion, anioGlobal = null, onSelectTerritorio, o
   const [mapAttempt, setMapAttempt] = useState(0);
   const [selectedRegionId, setSelectedRegionId] = useState(null);
   const [pilotData, setPilotData] = useState(null);
+  const controlLimits = mapControlLimits(viewBox, originalMapFrame, MAP_MIN_ZOOM);
   const mapAssetUrl = locationsSvgUrl;
   const politicalIndex = useMemo(() => selectedRegionId && Number.isInteger(anioGlobal)
     ? buildPoliticalMapIndex(PERSONAS, anioGlobal, pilotData, {includeClaims: true}) : new Map(), [selectedRegionId, anioGlobal, pilotData]);
@@ -169,6 +170,7 @@ export function MapaEuropa({ seleccion, anioGlobal = null, onSelectTerritorio, o
     svg.style.backgroundColor = "var(--atlas-sea)";
     svg.querySelector("#svg-background")?.setAttribute("fill", "var(--atlas-sea)");
     svg.setAttribute("viewBox", viewBoxString(restored));
+    clipMapToViewBox(svg, restored);
     setViewBox(restored);
     setPilotData(locationData ? { ...locationData, burgundy: burgundianData } : null);
     setMapReady(true);
@@ -217,6 +219,7 @@ export function MapaEuropa({ seleccion, anioGlobal = null, onSelectTerritorio, o
     const svg = containerRef.current?.querySelector("svg");
     if (!svg || !viewBox) return;
     svg.setAttribute("viewBox", viewBoxString(viewBox));
+    clipMapToViewBox(svg, viewBox);
   }, [viewBox]);
 
   useEffect(() => {
@@ -447,14 +450,14 @@ export function MapaEuropa({ seleccion, anioGlobal = null, onSelectTerritorio, o
         {mapError ? <>No se ha podido cargar el mapa. <button className="nav-btn" onClick={() => setMapAttempt(n => n + 1)}>Reintentar</button></> : "Cargando mapa…"}
       </div>}
       <div className="mapa-toolbar" aria-label="Controles del mapa">
-        <button type="button" className="nav-btn" onClick={() => zoomBy(1 / MAP_ZOOM_FACTOR)} title="Alejar mapa" aria-label="Alejar mapa"><ZoomOut size={13} /></button>
+        <button type="button" className="nav-btn" disabled={!controlLimits.zoomOut} onClick={() => zoomBy(1 / MAP_ZOOM_FACTOR)} title={controlLimits.zoomOut ? 'Alejar mapa' : 'Límite del mapa de Europa'} aria-label="Alejar mapa"><ZoomOut size={13} /></button>
         <button type="button" className="nav-btn" onClick={resetView} title="Volver a Europa" aria-label="Volver a Europa"><RotateCcw size={12} /></button>
-        <button type="button" className="nav-btn" onClick={() => zoomBy(MAP_ZOOM_FACTOR)} title="Acercar mapa" aria-label="Acercar mapa"><ZoomIn size={13} /></button>
+        <button type="button" className="nav-btn" disabled={!controlLimits.zoomIn} onClick={() => zoomBy(MAP_ZOOM_FACTOR)} title="Acercar mapa" aria-label="Acercar mapa"><ZoomIn size={13} /></button>
         <span className="mapa-toolbar-separator" aria-hidden="true" />
-        <button type="button" className="nav-btn" onClick={() => panBy(-MAP_PAN_STEP, 0)} title="Mover mapa a la izquierda" aria-label="Mover mapa a la izquierda"><ArrowLeft size={13} /></button>
-        <button type="button" className="nav-btn" onClick={() => panBy(0, -MAP_PAN_STEP)} title="Mover mapa hacia arriba" aria-label="Mover mapa hacia arriba"><ArrowUp size={13} /></button>
-        <button type="button" className="nav-btn" onClick={() => panBy(0, MAP_PAN_STEP)} title="Mover mapa hacia abajo" aria-label="Mover mapa hacia abajo"><ArrowDown size={13} /></button>
-        <button type="button" className="nav-btn" onClick={() => panBy(MAP_PAN_STEP, 0)} title="Mover mapa a la derecha" aria-label="Mover mapa a la derecha"><ArrowRight size={13} /></button>
+        <button type="button" className="nav-btn" disabled={!controlLimits.left} onClick={() => panBy(-MAP_PAN_STEP, 0)} title="Mover mapa a la izquierda" aria-label="Mover mapa a la izquierda"><ArrowLeft size={13} /></button>
+        <button type="button" className="nav-btn" disabled={!controlLimits.up} onClick={() => panBy(0, -MAP_PAN_STEP)} title="Mover mapa hacia arriba" aria-label="Mover mapa hacia arriba"><ArrowUp size={13} /></button>
+        <button type="button" className="nav-btn" disabled={!controlLimits.down} onClick={() => panBy(0, MAP_PAN_STEP)} title="Mover mapa hacia abajo" aria-label="Mover mapa hacia abajo"><ArrowDown size={13} /></button>
+        <button type="button" className="nav-btn" disabled={!controlLimits.right} onClick={() => panBy(MAP_PAN_STEP, 0)} title="Mover mapa a la derecha" aria-label="Mover mapa a la derecha"><ArrowRight size={13} /></button>
       </div>
       {seleccion && <details className="mapa-color-legend">
         <summary>¿Por qué estos colores?</summary>

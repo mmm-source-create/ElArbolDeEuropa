@@ -5,6 +5,40 @@ export function fittedMapViewBox(original, _viewport) {
   return { ...original };
 }
 
+// A viewBox positions content; it does not clip world paths in a nested SVG.
+// Clip the map group to the current, bounded view so letterboxing cannot reveal
+// either the original world map or regions outside the zoomed viewport.
+export function clipMapToViewBox(svg, box) {
+  const group = svg.querySelector('#map-group');
+  if (!group || !box) return;
+  const ns = 'http://www.w3.org/2000/svg';
+  let clip = svg.querySelector('#atlas-viewport-clip');
+  if (!clip) {
+    const defs = svg.ownerDocument.createElementNS(ns, 'defs');
+    clip = svg.ownerDocument.createElementNS(ns, 'clipPath');
+    clip.id = 'atlas-viewport-clip';
+    clip.setAttribute('clipPathUnits', 'userSpaceOnUse');
+    clip.append(svg.ownerDocument.createElementNS(ns, 'rect'));
+    defs.append(clip);
+    svg.prepend(defs);
+  }
+  for (const key of ['x', 'y', 'width', 'height']) clip.firstElementChild.setAttribute(key, box[key]);
+  group.setAttribute('clip-path', 'url(#atlas-viewport-clip)');
+}
+
+export function mapControlLimits(box, original, minZoom = 0.015) {
+  if (!box || !original) return {};
+  const epsilon = original.width * 1e-7;
+  return {
+    zoomOut: box.width < original.width - epsilon,
+    zoomIn: box.width > original.width * minZoom + epsilon,
+    left: box.x > original.x + epsilon,
+    right: box.x + box.width < original.x + original.width - epsilon,
+    up: box.y > original.y + epsilon,
+    down: box.y + box.height < original.y + original.height - epsilon,
+  };
+}
+
 export function clampMapViewBox(box, original, viewport, minZoom = 0.015) {
   if (!original) return box;
   const frame = fittedMapViewBox(original, viewport);

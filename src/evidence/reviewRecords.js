@@ -1,5 +1,6 @@
 import { CORRIDOR_REVIEWS } from './corridorReviewData.js';
 import { ATLAS_AUTHORITY_REVIEWS } from './atlasReviewData.js';
+import { BALKAN_AUTHORITY_REVIEWS } from './balkanReviewData.js';
 
 // The pilot follows three generations around the succession of Castile.
 // A source here supports only the claim and passage named in each review.
@@ -182,6 +183,7 @@ const tyrolReviews = {
 export const CLAIM_REVIEWS = Object.freeze({
   ...CORRIDOR_REVIEWS,
   ...ATLAS_AUTHORITY_REVIEWS,
+  ...BALKAN_AUTHORITY_REVIEWS,
   ...dogeReviews,
   ...pignatelliReviews,
   ...tyrolReviews,

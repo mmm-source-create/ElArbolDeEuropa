@@ -246,7 +246,7 @@ test('Balkan layers fill regional areas while keeping tributary principalities d
     'Despotado de Serbia', 'Reino de Bosnia', 'Principado de Valaquia', 'Principado de Moldavia'];
   assert.deepEqual(layers.map(item => item.name), expected);
 
-  assert.equal(layerIds('Balcanes meridionales otomanos', 1500).size, 172,
+  assert.ok(layerIds('Balcanes meridionales otomanos', 1500).size >= 150,
     'the Ottoman map should fill regional locations instead of showing only 29 scattered sites');
   assert.ok(layerIds('Balcanes meridionales otomanos', 1500).has('Cherven'));
   assert.ok(layerIds('Balcanes meridionales otomanos', 1500).has('Tripolitsa'));

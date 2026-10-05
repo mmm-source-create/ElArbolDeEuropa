@@ -2,6 +2,7 @@
 // jurisdictions, without treating every title held by one ruler as one state.
 import {imperialFrameIds} from './imperialFrame.js';
 import {authorityExtensionFor} from './atlasAuthorityExtensions.js';
+import {applyMapBorderCorrections} from './mapBorderCorrections.js';
 
 const layerIndexes = new WeakMap();
 export function reviewedMapLayers(data) {
@@ -127,10 +128,10 @@ export function mapLocationsForGovernment(data, government, year, personId = nul
   const layers = (withinDatedLayerRange ? pilotJurisdictionsFor(government.territorio, year, personId) : [])
     .map(name => byName.get(name)).filter(Boolean);
   if (layers.length) {
-    return [...new Set(layers.flatMap(entry => reviewedLayerLocations(data, entry, year, personId)))];
+    return applyMapBorderCorrections([...new Set(layers.flatMap(entry => reviewedLayerLocations(data, entry, year, personId)))], government.territorio, year);
   }
   const crosswalk = data.locationCrosswalk?.newIdsByOldId || {};
-  return [...new Set(legacyIds.flatMap(id => crosswalk[id]?.ids || []))];
+  return applyMapBorderCorrections([...new Set(legacyIds.flatMap(id => crosswalk[id]?.ids || []))], government.territorio, year);
 }
 
 export function pilotDisputedHungarianClaimsFor(data, personId, year) {
