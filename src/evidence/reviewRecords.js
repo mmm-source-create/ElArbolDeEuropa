@@ -1,4 +1,4 @@
-import { CORRIDOR_REVIEWS } from '../generated/corridorReviews.js';
+import { CORRIDOR_REVIEWS } from './corridorReviewData.js';
 
 // The pilot follows three generations around the succession of Castile.
 // A source here supports only the claim and passage named in each review.

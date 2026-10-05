@@ -1184,7 +1184,7 @@ const layout = computeTreeLayout(rows, BY_ID, HIJOS_POR_ID);
 
 await fs.mkdir(OUTPUT_DIR, { recursive: true });
 const corridorReviews = buildCorridorReviews(PERSONAS);
-await fs.writeFile(path.join(OUTPUT_DIR, "corridorReviews.js"), `export const CORRIDOR_REVIEWS=Object.freeze(${JSON.stringify(corridorReviews)});\n`, "utf8");
+await fs.writeFile(path.join(ROOT, "src", "evidence", "corridorReviewData.js"), `export const CORRIDOR_REVIEWS=Object.freeze(${JSON.stringify(corridorReviews)});\n`, "utf8");
 const catalogStats = await generarCatalogosPublicos();
 await fs.writeFile(OUTPUT_FILE, JSON.stringify({ gen, rows, layout }), "utf8");
 await fs.writeFile(META_FILE, JSON.stringify({
