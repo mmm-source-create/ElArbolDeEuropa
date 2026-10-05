@@ -2,7 +2,7 @@
 // This keeps Castile, Aragon, Naples, Milan, etc. separate even when one
 // person governed several of them. Geometry is only a candidate crosswalk.
 import fs from 'node:fs';
-import { idsDeReinoEnAño, REINO_COLOR } from '../../src/Territorios.jsx';
+import { idsDeReinoEnAño, REINO_A_IDS, REINO_COLOR, REINO_VERSIONES } from '../../src/Territorios.jsx';
 import { imperialFrameIds } from '../../src/data/imperialFrame.js';
 
 const FROM = 1400;
@@ -23,9 +23,20 @@ const corridors = {
     'Principado episcopal de Brixen', 'Principado episcopal de Trento',
     'Arzobispado principesco de Salzburgo',
   ],
-  'Polonia–Lituania': [
+  'Europa septentrional y oriental': [
     'Corona de Polonia', 'Ducado de Mazovia', 'Prusia Real',
     'Prusia de la Orden', 'Prusia ducal', 'Gran Ducado de Lituania',
+    'Principado episcopal de Warmia', 'Livonia del Commonwealth',
+    'Livonia sueca', 'Estonia sueca', 'Ducado de Curlandia',
+    'Riga libre', 'Riga bajo la Mancomunidad', 'Riga bajo Suecia',
+    'Reino de Dinamarca', 'Reino de Noruega', 'Reino de Suecia',
+    'Ducado de Schleswig', 'Ducado de Holstein', 'Mecklemburgo',
+    'Ducado de Pomerania', 'Pomerania bajo ocupación sueca',
+    'Pomerania sueca', 'Pomerania de Brandeburgo', 'Señorío sueco de Wismar',
+    'Ösel bajo Dinamarca', 'Ösel bajo Suecia',
+    'Moscovia y Zarato de Rusia', 'República de Nóvgorod',
+    'República de Pskov', 'Principado de Tver', 'Principado de Riazán',
+    'Kanato de Kazán', 'Islas Feroe bajo la Corona noruega',
   ],
   'Francia e islas británicas': [
     'Francia', 'Bretaña', 'Provenza', 'Inglaterra', 'Escocia',
@@ -72,6 +83,76 @@ const LITHUANIA_TRANSFER_1569 = [
   'Vinnytsia', 'Torgovytsia', 'Bratslav', 'Cherkasy', 'Kyiv',
   'Chornobyl', 'Ovruch', 'Olevsk',
 ];
+
+// The previous atlas map has regional polygons, not the modern EU V
+// locations. These source polygons are only a crosswalk; dated local
+// corrections below handle the transitions the old map cannot express.
+const SWEDEN_CORE = [
+  'Vastergotland', 'Ostergotland', 'Sodermanland', 'Uppland', 'Dalarna',
+  'Varmland', 'Gastrikland', 'Halsingland', 'Angermanland', 'Vasterbotten',
+  'Sodra_Osterbotten', 'Norra_Osterbotten', 'Ostra_Smaland',
+  'Finland', 'Tavastland', 'Nyland', 'Savolax',
+];
+const NORWAY_CORE = [
+  'Agder', 'Bergenhus', 'Buskerud', 'Finnmark', 'Hedmark', 'Nordland',
+  'Nor_Trondelag', 'Sor_Trondelag', 'Oppland', 'Rogaland', 'Romsdalen',
+  'Sogn', 'Vestfold', 'Bohus', 'Jamtland',
+];
+const DENMARK_CORE = [
+  'Western_Jutland', 'Eastern_Jutland', 'Vendsyssel_Thy', 'Zealand', 'Funen',
+  'Halland', 'Blekinge', 'Gotland',
+];
+const POMERANIA_OLD = ['Stettin', 'Stolp', 'Koslin'];
+const MOSCOVY_CORE = ['Moscow', 'Vladimir', 'Kostroma'];
+
+// Direct location additions are used only for named cities/islands that the
+// old Atlas SVG has no polygon for. They are marked as point proxies in the
+// layer notes and do not assert a surveyed boundary.
+const datedCorrections = [
+  { territory: 'Riga libre', id: 'Riga', action: 'add', from: 1561, through: 1580,
+    reason: 'Riga is represented by its city location only; the autonomous city is not expanded into a territorial polygon.',
+    source: 'https://enciklopedija.lv/skirklis/198863' },
+  { territory: 'Riga bajo la Mancomunidad', id: 'Riga', action: 'add', from: 1581, through: 1620,
+    reason: 'The city submitted to the Polish-Lithuanian Commonwealth in 1581; this location marker does not define its hinterland.',
+    source: 'https://www.rigamuz.lv/rvkm/en/ekspoz_eng/riga-history-riga-under-the-polish-and-swedish-rule-1581-1710/' },
+  { territory: 'Riga bajo Suecia', id: 'Riga', action: 'add', from: 1621, through: 1650,
+    reason: 'Sweden captured Riga in 1621; the city location is a point proxy, not the whole Swedish Livonia border.',
+    source: 'https://www.riga.lv/en/rigas-vesture' },
+  { territory: 'Livonia del Commonwealth', id: 'Riga', action: 'remove', from: 1569, through: 1628,
+    reason: 'Riga is tracked as a separate city jurisdiction, so the regional Livonia layer does not repaint its urban marker.',
+    source: 'https://enciklopedija.lv/skirklis/198863' },
+  { territory: 'Ösel bajo Dinamarca', id: 'Kuressaare', action: 'add', from: 1559, through: 1644,
+    reason: 'Kuressaare is a city-level proxy for Danish possession of Ösel from 1559; it does not draw the island boundary.',
+    source: 'https://lex.dk/Saaremaa' },
+  { territory: 'Ösel bajo Suecia', id: 'Kuressaare', action: 'add', from: 1645, through: 1650,
+    reason: 'Ösel passed to Sweden in the Treaty of Brömsebro; Kuressaare is shown only as a location proxy.',
+    source: 'https://lex.dk/Br%C3%B6msebro' },
+  { territory: 'Reino de Noruega', id: 'Orkney', action: 'add', from: 1400, through: 1468,
+    reason: 'Orkney remained under the Norwegian crown until its transfer to Scotland in 1469; this is a point proxy, not a boundary.',
+    source: 'https://www.historicenvironment.scot/visit/all/maeshowe-chambered-cairn/history-and-stories/' },
+  { territory: 'Reino de Noruega', id: 'Shetland', action: 'add', from: 1400, through: 1468,
+    reason: 'Shetland passed from Norway to Scotland in 1469; this is a point proxy, not a boundary.',
+    source: 'https://www.historicenvironment.scot/visit/all/jarlshof-prehistoric-and-norse-settlement/history-and-stories/' },
+  { territory: 'Islas Feroe bajo la Corona noruega', id: 'Torshavn', action: 'add', from: 1400, through: 1650,
+    reason: 'Tórshavn is only a city marker for the Faroes, which remained a Norwegian dependency under the Danish-Norwegian monarchy; no island boundary is inferred.',
+    source: 'https://www.faroeislands.fo/the-big-picture/history-of-the-faroe-islands/historical-timeline' },
+  { territory: 'Pomerania sueca', id: 'Rugen', action: 'add', from: 1648, through: 1650,
+    reason: 'Rügen was included in the Swedish part assigned at Westphalia; the city/region ID is a cartographic proxy.',
+    source: 'https://historiapomorza.pl/en/epoka/swedish-pomerania-1637-1815/' },
+  { territory: 'Señorío sueco de Wismar', id: 'Wismar', action: 'add', from: 1648, through: 1650,
+    reason: 'Westphalia assigned Wismar to Sweden as an imperial fief; this city marker does not imply control of Mecklenburg.',
+    source: 'https://germanhistorydocs.org/en/from-the-reformations-to-the-thirty-years-war-1500-1648/peace-treaties-of-westphalia-october-14-24-1648' },
+  { territory: 'Mecklemburgo', id: 'Wismar', action: 'remove', from: 1648, through: 1650,
+    reason: 'Wismar is separated as a Swedish imperial fief after Westphalia; it is not painted as ordinary Mecklenburg territory.',
+    source: 'https://germanhistorydocs.org/en/from-the-reformations-to-the-thirty-years-war-1500-1648/peace-treaties-of-westphalia-october-14-24-1648' },
+  { territory: 'República de Nóvgorod', id: 'Novgorod', action: 'add', from: 1400, through: 1477,
+    reason: 'Novgorod is represented by its city location; no border is inferred from the point.',
+    source: 'https://www.cambridge.org/core/books/abs/cambridge-history-of-russia/growth-of-muscovy-14621533/BCBC6FD430448E9337252DFBCE9069EE' },
+  { territory: 'Moscovia y Zarato de Rusia', id: 'Novgorod', action: 'add', from: 1478, through: 1650,
+    reason: 'Ivan III annexed Novgorod in 1478; the new-map city location supplements the older regional crosswalk.',
+    source: 'https://www.cambridge.org/core/books/abs/cambridge-history-of-russia/growth-of-muscovy-14621533/BCBC6FD430448E9337252DFBCE9069EE' },
+];
+
 const specialSeries = {
   Francia: year => [
     ...idsDeReinoEnAño('Francia', year).filter(id => !FRENCH_SEPARATE.has(id)),
@@ -106,7 +187,8 @@ const specialSeries = {
     ...(year < 1495 ? ['Plock'] : []),
     ...(year < 1462 ? ['Rawa'] : []),
   ],
-  'Prusia Real': year => year >= 1466 ? ['Danzig', 'Chelmno', 'Warmia'] : [],
+  'Prusia Real': year => year >= 1466 ? ['Danzig', 'Chelmno'] : [],
+  'Principado episcopal de Warmia': year => year >= 1466 ? ['Warmia'] : [],
   'Prusia de la Orden': year => year <= 1524 ? [
     ...idsDeReinoEnAño('Prusia', year),
     ...(year < 1454 ? ['Danzig', 'Chelmno', 'Warmia'] : []),
@@ -116,6 +198,51 @@ const specialSeries = {
     ...LITHUANIA_CORE,
     ...(year < 1569 ? LITHUANIA_TRANSFER_1569 : []),
   ],
+  'Livonia del Commonwealth': year => year >= 1561 && year <= 1628
+    ? ['North_Livonia', 'Inner_Livonia', 'South_Livonia'] : [],
+  'Livonia sueca': year => year >= 1629 ? ['North_Livonia', 'Inner_Livonia'] : [],
+  'Estonia sueca': year => year >= 1561 ? ['Estonia'] : [],
+  'Ducado de Curlandia': year => year >= 1561 ? ['Courland'] : [],
+  'Riga libre': () => [],
+  'Riga bajo la Mancomunidad': () => [],
+  'Riga bajo Suecia': () => [],
+  'Reino de Dinamarca': year => [
+    ...DENMARK_CORE.filter(id => !['Halland', 'Gotland'].includes(id) || year < 1645),
+    ...(year < 1645 ? ['Halland', 'Gotland'] : []),
+  ],
+  'Reino de Noruega': year => [
+    ...NORWAY_CORE.filter(id => !['Jamtland'].includes(id) || year < 1645),
+  ],
+  'Islas Feroe bajo la Corona noruega': () => [],
+  'Reino de Suecia': year => [
+    ...SWEDEN_CORE,
+    ...(year >= 1645 ? ['Jamtland', 'Halland', 'Gotland'] : []),
+  ],
+  'Ducado de Schleswig': () => ['Slesvig'],
+  'Ducado de Holstein': () => ['Holstein'],
+  Mecklemburgo: () => ['Schwerin'],
+  'Ducado de Pomerania': year => year <= 1636 ? POMERANIA_OLD : [],
+  'Pomerania bajo ocupación sueca': year => year >= 1630 && year <= 1647 ? POMERANIA_OLD : [],
+  'Pomerania sueca': year => year >= 1648 ? ['Stettin'] : [],
+  'Pomerania de Brandeburgo': year => year >= 1648 ? ['Stolp', 'Koslin'] : [],
+  'Señorío sueco de Wismar': () => [],
+  'Ösel bajo Dinamarca': () => [],
+  'Ösel bajo Suecia': () => [],
+  'Moscovia y Zarato de Rusia': year => [
+    ...MOSCOVY_CORE,
+    ...(year >= 1463 ? ['Yaroslavl'] : []),
+    ...(year >= 1474 ? ['Rostov'] : []),
+    ...(year >= 1485 ? ['Tver', 'Tverskaya'] : []),
+    ...(year >= 1510 ? ['North_Pskov', 'South_Pskov'] : []),
+    ...(year >= 1514 && year <= 1610 || year >= 1634 ? ['Smolensk'] : []),
+    ...(year >= 1521 ? ['Ryazan'] : []),
+    ...(year >= 1552 ? ['Kazan'] : []),
+  ],
+  'República de Nóvgorod': () => [],
+  'República de Pskov': year => year <= 1509 ? ['North_Pskov', 'South_Pskov'] : [],
+  'Principado de Tver': year => year <= 1484 ? ['Tver', 'Tverskaya'] : [],
+  'Principado de Riazán': year => year <= 1520 ? ['Ryazan'] : [],
+  'Kanato de Kazán': year => year <= 1551 ? ['Kazan'] : [],
 };
 
 // A territorial label can outlive its independent government in the Atlas.
@@ -152,16 +279,72 @@ const active = {
     source: 'https://www.habsburger.net/en/chapter/ferdinand-i-new-crowns-habsburgs' },
   'Ducado de Mazovia': { through: 1525, reason: 'El último ducado mazoviano fue incorporado a la Corona en 1526; Rawa y Płock habían pasado antes.',
     source: 'https://agad.gov.pl/?page_id=486' },
-  'Prusia Real': { from: 1466, through: 1569, reason: 'La Prusia Real se integró en la Corona en 1466; ocupaciones posteriores a 1569 quedan por fechar en este corredor.',
+  'Prusia Real': { from: 1466, through: 1650, reason: 'Provincia autónoma dentro de la Corona polaca; conserva identidad regional sin convertirse en un Estado vecino.',
     source: 'https://zpe.gov.pl/a/polskie-dynastie-jagiellonowie/D12LkQne7' },
+  'Principado episcopal de Warmia': { from: 1466, through: 1650, reason: 'Warmia se muestra como principado episcopal diferenciado tras la Segunda Paz de Toruń; no se dibuja como parte de la administración ordinaria de la Corona.',
+    source: 'https://www.agad.gov.pl/mow/unia2C_eng.pdf' },
   'Prusia de la Orden': { through: 1524, reason: 'El estado de la Orden Teutónica fue secularizado como Ducado de Prusia en 1525.',
     source: 'https://zpe.gov.pl/a/prezentacja-multimedialna/DbYm1LK96' },
-  'Prusia ducal': { from: 1525, through: 1569, reason: 'Ducado separado y feudo polaco desde 1525; cambios posteriores a 1569 quedan por auditar.',
+  'Prusia ducal': { from: 1525, through: 1650, reason: 'Ducado separado y feudo polaco desde 1525; la unión personal con Brandeburgo desde 1618 no lo incorporó a la Corona.',
     source: 'https://zpe.gov.pl/a/prezentacja-multimedialna/DbYm1LK96' },
-  'Corona de Polonia': { through: 1569, reason: 'La frontera de este corredor se ha auditado hasta la Unión de Lublin de 1569; conflictos y cambios posteriores quedan por fechar.',
-    source: 'https://agad.gov.pl/inwentarze/Metr_Korx.xml' },
-  'Gran Ducado de Lituania': { through: 1569, reason: 'La frontera de este corredor se ha auditado hasta la Unión de Lublin de 1569; los cambios posteriores quedan por fechar.',
-    source: 'https://agad.gov.pl/inwentarze/Metr_Korx.xml' },
+  'Corona de Polonia': { through: 1650, reason: 'Se prolonga la configuración posterior a Lublin; las tierras transferidas en 1569 pasan a la Corona, sin absorber Curlandia ni la Prusia ducal.',
+    source: 'https://www.agad.gov.pl/mow/unia2C_eng.pdf' },
+  'Gran Ducado de Lituania': { through: 1650, reason: 'La unión de 1569 creó una comunidad política común, pero el Gran Ducado mantuvo gobierno y territorio propios después de las transferencias a la Corona.',
+    source: 'https://www.agad.gov.pl/mow/unia2C_eng.pdf' },
+  'Livonia del Commonwealth': { from: 1569, through: 1628, reason: 'Livonia se incorporó en 1569 como condominio de Corona y Gran Ducado; Altmark en 1629 transfirió la mayor parte a Suecia y Latgale permaneció en la Mancomunidad.',
+    source: 'https://www.agad.gov.pl/mow/unia2C_eng.pdf' },
+  'Livonia sueca': { from: 1629, through: 1650, reason: 'Se muestra la posesión reconocida por Altmark; no se retrotrae la frontera sueca a la capitulación de Estonia de 1561.',
+    source: 'https://onlinelibrary.wiley.com/doi/full/10.1111/ehr.13410' },
+  'Estonia sueca': { from: 1561, through: 1650, reason: 'Tallin y Harju-Viru aceptaron el gobierno sueco en 1561; el color no implica control sueco de toda Livonia.',
+    source: 'https://ojs.utlib.ee/index.php/EAA/article/view/AA.2017.1.02' },
+  'Ducado de Curlandia': { from: 1561, through: 1650, reason: 'Ducado autónomo y feudo de la Mancomunidad desde 1561; se conserva separado de Polonia-Lituania.',
+    source: 'https://dspace.lu.lv/items/8812084a-b442-4c43-b827-e490e42aac55' },
+  'Riga libre': { from: 1561, through: 1580, reason: 'Riga se representa solo como ciudad; su estatus cambió durante la disolución de la Confederación Livona.',
+    source: 'https://www.britannica.com/place/Riga/History' },
+  'Riga bajo la Mancomunidad': { from: 1581, through: 1620, reason: 'La ciudad pasó a la Mancomunidad; se marca solo Riga, no toda Livonia.',
+    source: 'https://www.britannica.com/place/Riga/History' },
+  'Riga bajo Suecia': { from: 1621, through: 1650, reason: 'Suecia tomó Riga en 1621; Altmark reconoció en 1629 la posesión de la mayor parte de Livonia.',
+    source: 'https://www.britannica.com/place/Riga/History' },
+  'Reino de Dinamarca': { from: 1400, through: 1650, reason: 'Reino propio dentro de la Unión de Kalmar y luego de la monarquía danesa-noruega; Schleswig y Holstein permanecen como ducados distintos.',
+    source: 'https://snl.no/Kalmarunionen' },
+  'Reino de Noruega': { from: 1400, through: 1650, reason: 'Reino diferenciado bajo la misma monarquía que Dinamarca; la subordinación institucional de 1537 no convierte Noruega en Dinamarca.',
+    source: 'https://snl.no/Kalmarunionen' },
+  'Islas Feroe bajo la Corona noruega': { from: 1400, through: 1650, reason: 'Dependencia de la Corona noruega durante la unión con Dinamarca; Tórshavn es un punto cartográfico y no un perímetro territorial.',
+    source: 'https://www.faroeislands.fo/the-big-picture/history-of-the-faroe-islands/historical-timeline' },
+  'Reino de Suecia': { from: 1400, through: 1650, reason: 'Reino separado de Dinamarca y Noruega desde 1523; antes conserva una capa propia para no confundir unión personal con incorporación.',
+    source: 'https://snl.no/Kalmarunionen' },
+  'Ducado de Schleswig': { from: 1400, through: 1650, reason: 'Ducado ligado a la Corona danesa, pero jurisdicción distinta del Reino de Dinamarca; unido dinásticamente a Holstein desde 1460.',
+    source: 'https://www.schleswig-holstein.de/DE/fachinhalte/L/landeskundegeschichte/Chronologie_Augenblicke_Landesgeschichte/1460_VertragRipen' },
+  'Ducado de Holstein': { from: 1400, through: 1650, reason: 'Ducado separado, parte del Sacro Imperio y gobernado por los reyes daneses como duques; no se colorea como Dinamarca.',
+    source: 'https://www.schleswig-holstein.de/DE/fachinhalte/L/landeskundegeschichte/Chronologie_Augenblicke_Landesgeschichte/1460_VertragRipen' },
+  Mecklemburgo: { from: 1400, through: 1650, reason: 'Un polígono aproxima el ducado; Wismar se separa como feudo sueco desde 1648 y aquí no se dividen las ramas de Schwerin y Güstrow.',
+    source: 'https://germanhistorydocs.org/en/from-the-reformations-to-the-thirty-years-war-1500-1648/peace-treaties-of-westphalia-october-14-24-1648' },
+  'Ducado de Pomerania': { from: 1400, through: 1636, reason: 'Ducado de los Griffins hasta la muerte de Bogislaw XIV en 1637; después la sucesión quedó disputada.',
+    source: 'https://historiapomorza.pl/en/epoka/the-duchy-of-pomerania-and-the-thirty-years-war/' },
+  'Pomerania bajo ocupación sueca': { from: 1630, through: 1647, reason: 'Capa de control militar sueco desde 1630. Tras la muerte del último duque en 1637 la sucesión siguió disputada; no se presenta como cesión legal anterior a Westfalia.',
+    source: 'https://historiapomorza.pl/en/epoka/swedish-pomerania-1637-1815/' },
+  'Pomerania sueca': { from: 1648, through: 1650, reason: 'Westfalia asignó la parte occidental a Suecia; el deslinde local se fijó en 1653, por lo que Stettin y Rügen son proxies.',
+    source: 'https://historiapomorza.pl/en/epoka/swedish-pomerania-1637-1815/' },
+  'Pomerania de Brandeburgo': { from: 1648, through: 1650, reason: 'Westfalia reconoció la sucesión de Brandeburgo en la parte oriental; el deslinde local no quedó fijado hasta 1653.',
+    source: 'https://historiapomorza.pl/en/epoka/pomerania-in-the-brandenburg-period-1648-1653-1701-1713/' },
+  'Señorío sueco de Wismar': { from: 1648, through: 1650, reason: 'Wismar fue asignada a Suecia como feudo imperial; el marcador de ciudad no representa el ducado de Mecklemburgo.',
+    source: 'https://germanhistorydocs.org/en/from-the-reformations-to-the-thirty-years-war-1500-1648/peace-treaties-of-westphalia-october-14-24-1648' },
+  'Ösel bajo Dinamarca': { from: 1559, through: 1644, reason: 'Kuressaare marca la posesión danesa de Ösel como punto; no se dibuja un perímetro insular.',
+    source: 'https://lex.dk/Br%C3%B6msebro' },
+  'Ösel bajo Suecia': { from: 1645, through: 1650, reason: 'Ösel pasó a Suecia en 1645; Kuressaare es únicamente un marcador cartográfico.',
+    source: 'https://lex.dk/Br%C3%B6msebro' },
+  'Moscovia y Zarato de Rusia': { from: 1400, through: 1650, reason: 'La capa sigue adquisiciones fechadas de Moscovia y el Zarato; Nóvgorod, Pskov, Tver, Riazán y Kazán se separan hasta sus anexiones.',
+    source: 'https://www.cambridge.org/core/books/abs/cambridge-history-of-russia/growth-of-muscovy-14621533/BCBC6FD430448E9337252DFBCE9069EE' },
+  'República de Nóvgorod': { from: 1400, through: 1477, reason: 'República independiente hasta la anexión moscovita de 1478; se representa solo la ciudad, sin inventar sus fronteras.',
+    source: 'https://www.cambridge.org/core/books/abs/cambridge-history-of-russia/growth-of-muscovy-14621533/BCBC6FD430448E9337252DFBCE9069EE' },
+  'República de Pskov': { from: 1400, through: 1509, reason: 'República independiente hasta la anexión de 1510; la equivalencia regional es aproximada.',
+    source: 'https://pskov.ru/region/istoriya/prisoedinenie-k-moskve' },
+  'Principado de Tver': { from: 1400, through: 1484, reason: 'Principado separado hasta la anexión moscovita de 1485.',
+    source: 'https://www.tver.ru/en/about/history/xv-xvii.php' },
+  'Principado de Riazán': { from: 1400, through: 1520, reason: 'Principado separado hasta su incorporación a Moscovia en 1521.',
+    source: 'https://www.cambridge.org/core/books/abs/cambridge-history-of-russia/growth-of-muscovy-14621533/BCBC6FD430448E9337252DFBCE9069EE' },
+  'Kanato de Kazán': { from: 1400, through: 1551, reason: 'Kanato independiente hasta la conquista moscovita de 1552.',
+    source: 'https://assets.cambridge.org/052181/2275/frontmatter/0521812275_frontmatter.htm' },
   'Marco jurídico del Sacro Imperio': { from: 1512, reason: 'Referencia institucional desde la organización de los círculos imperiales; no es una posesión territorial del emperador.',
     source: 'https://germanhistorydocs.org/en/from-the-reformations-to-the-thirty-years-war-1500-1648/ghdi:map-2809' },
 };
@@ -189,10 +372,38 @@ const notes = {
   'Arzobispado principesco de Salzburgo': 'Solo núcleos comprobados, incluido el enclave de Mühldorf; no equivale a toda la diócesis ni a una frontera cerrada del Estado eclesiástico.',
   'Corona de Polonia': 'Corona, no todos los dominios de los Jagellón. Mazovia se incorpora por etapas; los voivodatos transferidos desde Lituania se muestran desde 1569. Moldavia y Pomerania occidental no se absorben por vasallaje o proximidad.',
   'Ducado de Mazovia': 'Ducado vasallo pero políticamente distinto. Rawa sale en 1462, Płock en 1495 y el núcleo restante en 1526.',
-  'Prusia Real': 'Provincia de la Corona desde 1466, distinta de Prusia ducal. Warmia conserva su condición eclesiástica dentro de esta agrupación cartográfica.',
+  'Prusia Real': 'Provincia autónoma de la Corona desde 1466. Danzig y Chelmno se mantienen como regiones históricas, pero reciben el mismo color que la Corona polaca; Warmia queda en una capa episcopal propia.',
   'Prusia de la Orden': 'Remanente de la Orden tras la Segunda Paz de Toruń; su sujeción feudal a Polonia no equivale a incorporación.',
-  'Prusia ducal': 'Sucesor secularizado del Estado de la Orden desde 1525, feudo polaco; la propia entidad mantiene color separado.',
-  'Gran Ducado de Lituania': 'Núcleo occidental y voivodatos cuya transferencia de 1569 se ha revisado. La frontera oriental y el litoral del mar Negro quedan deliberadamente grises hasta una auditoría fechada.',
+  'Prusia ducal': 'Ducado secular desde 1525 y feudo polaco. La unión personal con Brandeburgo desde 1618 no supuso incorporación ni convierte sus tierras en territorio de Brandeburgo.',
+  'Gran Ducado de Lituania': 'Gobierno separado dentro de la Mancomunidad. En 1569 transfiere Podlaquia, Volinia, Bráclav y Kiev a la Corona polaca; las tierras orientales no verificadas siguen grises.',
+  'Principado episcopal de Warmia': 'Se muestra solo el polígono regional heredado de Warmia; el príncipe-obispo conservó una jurisdicción diferenciada bajo la protección y autoridad superior polaca.',
+  'Livonia del Commonwealth': 'Capa amplia de las tierras livonias incorporadas como condominio en 1569. La subdivisión antigua del mapa es aproximada; Riga se separa como ciudad y Latgale se conserva tras Altmark.',
+  'Livonia sueca': 'Desde Altmark (1629), incluye las provincias antiguas North_Livonia e Inner_Livonia; Riga tiene su marcador urbano desde 1621. No se atribuye a Suecia Latgale.',
+  'Estonia sueca': 'Solo la provincia antigua Estonia, desde la sumisión a Suecia en 1561. No equivale a todo el territorio de la actual Estonia ni a Livonia entera.',
+  'Ducado de Curlandia': 'Ducado autónomo vasallo de la Mancomunidad, no provincia integrada de Polonia-Lituania. El polígono Courland es una aproximación al ducado y Semigalia.',
+  'Riga libre': 'Solo el marcador de Riga; la condición política de la ciudad y su hinterland cambiaron durante la disolución de la Confederación Livona.',
+  'Riga bajo la Mancomunidad': 'Marcador urbano desde la sumisión de 1581. La ciudad no se expande a todas las tierras de Livonia.',
+  'Riga bajo Suecia': 'Marcador urbano desde la toma sueca de 1621; la posesión más amplia de Livonia queda en otra capa desde 1629.',
+  'Reino de Dinamarca': 'El reino danés se dibuja separado de Noruega, Schleswig y Holstein. Halland y Gotland salen en 1645; Blekinge permanece danesa hasta después del corte del prototipo.',
+  'Reino de Noruega': 'Reino bajo monarca común con Dinamarca; Noruega queda institucionalmente subordinada desde 1537, pero no se fusiona en el color danés. Orkney y Shetland se transfieren a Escocia en 1469.',
+  'Islas Feroe bajo la Corona noruega': 'Dependencia noruega dentro de la monarquía danesa-noruega. Se representa únicamente con Tórshavn como punto de referencia; no se colorea como Dinamarca ni se infiere una frontera insular.',
+  'Reino de Suecia': 'Se mantiene como reino distinto incluso durante la Unión de Kalmar. Jämtland, Halland y Gotland entran desde 1645; Ösel se muestra como marcador insular separado.',
+  'Ducado de Schleswig': 'Ducado separado de Dinamarca. Se conserva separado del condado/ducado de Holstein aunque ambos tuvieran un mismo gobernante desde 1460.',
+  'Ducado de Holstein': 'Jurisdicción del Sacro Imperio y patrimonio ducal propio bajo los reyes daneses; no se pinta como parte del Reino de Dinamarca.',
+  Mecklemburgo: 'Ducado separado. La base disponible solo proporciona una región amplia; Wismar se representa como feudo sueco independiente del control general de Mecklemburgo desde 1648.',
+  'Ducado de Pomerania': 'Territorio de los Griffins hasta la extinción de la línea ducal en 1637; el fallecimiento y la ocupación sueca abrieron una disputa sucesoria.',
+  'Pomerania bajo ocupación sueca': 'Control militar efectivo desde 1630 sobre el ducado; la ocupación no elimina la soberanía del último duque antes de 1637 ni equivale a la partición legal de 1648.',
+  'Pomerania sueca': 'Solo la parte occidental asignada a Suecia en Westfalia: Stettin y Rügen se usan como proxies. El límite exacto con Brandeburgo se fijó en 1653.',
+  'Pomerania de Brandeburgo': 'Parte oriental asignada a Brandeburgo en Westfalia; Stolp y Koslin son proxies regionales, no un deslinde exacto anterior al tratado de 1653.',
+  'Señorío sueco de Wismar': 'Localidad/feudo imperial asignado a Suecia en 1648. No representa la costa entera de Mecklemburgo ni una incorporación al Reino de Suecia.',
+  'Ösel bajo Dinamarca': 'Solo Kuressaare como marcador de la posesión danesa de Ösel entre 1559 y 1644; no es un mapa de la isla.',
+  'Ösel bajo Suecia': 'Solo Kuressaare como marcador tras la cesión de Ösel a Suecia en 1645; no es un mapa de la isla.',
+  'Moscovia y Zarato de Rusia': 'Moscovia incorpora principados y repúblicas por fechas; el título de zar se adopta en 1547. Las ubicaciones de Novgorod, Pskov, Tver, Riazán y Kazán se asignan solo tras su anexión.',
+  'República de Nóvgorod': 'Una localización urbana antes de la anexión de 1478; no se afirma que el mapa represente la vasta esfera comercial de la república.',
+  'República de Pskov': 'Regiones antiguas aproximadas hasta la anexión de 1510; el mapa no presenta la república como un principado moscovita antes de esa fecha.',
+  'Principado de Tver': 'Las regiones Tver y Tverskaya se separan de Moscovia hasta la anexión de 1485.',
+  'Principado de Riazán': 'Región antigua de Ryazan separada hasta la incorporación moscovita de 1521.',
+  'Kanato de Kazán': 'Región antigua de Kazan separada hasta la conquista de 1552; no se incorpora a Moscovia antes de esa fecha.',
   'Marco jurídico del Sacro Imperio': 'Capa de referencia jurídica, no un Estado unificado ni dominio directo del emperador. Los círculos imperiales no abarcaron todas las tierras del Imperio. La frontera sigue siendo una aproximación regional y debe leerse debajo de las jurisdicciones efectivas.',
 };
 
@@ -214,16 +425,40 @@ const territories = Object.entries(corridors).flatMap(([corridor, names]) => nam
     'Principado episcopal de Trento': '#907050',
     'Arzobispado principesco de Salzburgo': '#8a6948',
     'Corona de Polonia': REINO_COLOR.Polonia, 'Ducado de Mazovia': '#b7789d',
-    'Prusia Real': '#ae4e9b', 'Prusia de la Orden': '#495672',
+    'Prusia Real': REINO_COLOR.Polonia, 'Prusia de la Orden': '#495672',
     'Prusia ducal': REINO_COLOR.Prusia, 'Gran Ducado de Lituania': REINO_COLOR.Lituania,
+    'Principado episcopal de Warmia': '#947a55',
+    'Livonia del Commonwealth': '#8b5aa5', 'Livonia sueca': '#607b96',
+    'Estonia sueca': '#547493', 'Ducado de Curlandia': '#71854f',
+    'Riga libre': '#8a8a6e', 'Riga bajo la Mancomunidad': REINO_COLOR.Polonia,
+    'Riga bajo Suecia': '#607b96',
+    'Reino de Dinamarca': '#8a554c', 'Reino de Noruega': '#6f7f88',
+    'Islas Feroe bajo la Corona noruega': '#87907d',
+    'Reino de Suecia': '#4d7192', 'Ducado de Schleswig': '#8b7464',
+    'Ducado de Holstein': '#6f7180', Mecklemburgo: REINO_COLOR.Mecklemburgo,
+    'Ducado de Pomerania': REINO_COLOR.Pomerania,
+    'Pomerania bajo ocupación sueca': '#607b96', 'Pomerania sueca': '#607b96',
+    'Pomerania de Brandeburgo': '#8a6d4f', 'Señorío sueco de Wismar': '#607b96',
+    'Ösel bajo Dinamarca': '#8a554c', 'Ösel bajo Suecia': '#4d7192',
+    'Moscovia y Zarato de Rusia': '#86694f', 'República de Nóvgorod': '#678b81',
+    'República de Pskov': '#738c73', 'Principado de Tver': '#9a7d58',
+    'Principado de Riazán': '#7f704f', 'Kanato de Kazán': '#8b794e',
     'Marco jurídico del Sacro Imperio': '#a49b8e',
   };
   return { corridor, name, color: colors[name] || REINO_COLOR[name] || '#735f4c',
     active: active[name] || null, note: notes[name] || null, versions };
 }));
 
+// The permanent Atlas map needs a geometric bridge for every legacy regional
+// ID, not only the selected research corridors above. Preserve the full set of
+// IDs used by the Atlas so the app can migrate uncorridored governments too.
+const mapRegionIds = [...new Set([
+  ...Object.values(REINO_A_IDS).flat(),
+  ...Object.values(REINO_VERSIONES).flatMap(versions => versions.flatMap(version => version.ids)),
+])].sort();
+
 const output = new URL('./corridor-source.json', import.meta.url);
 fs.writeFileSync(output, `${JSON.stringify({ from: FROM, through: THROUGH,
-  basis: 'REINO_A_IDS and REINO_VERSIONES through idsDeReinoEnAño; Polonia–Lituania has explicit dated corrections; territorial scope only',
-  territories }, null, 2)}\n`);
+  basis: 'REINO_A_IDS and REINO_VERSIONES through idsDeReinoEnAño; historic borders and jurisdiction changes use dated source corrections; territorial scope only',
+  territories, mapRegionIds, corrections: datedCorrections }, null, 2)}\n`);
 console.log(`Wrote ${territories.length} territories to ${output.pathname}`);

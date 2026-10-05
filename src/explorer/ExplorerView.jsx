@@ -114,21 +114,6 @@ function VenetianOfficeSequence({ persona, onSelect }) {
 }
 
 export default function ExplorerView({ vm }) {
-  const [locationsLabMode, setLocationsLabMode] = React.useState(() => typeof window !== 'undefined'
-    && new URLSearchParams(window.location.search).get('mapa') === 'locations-lab');
-  React.useEffect(() => {
-    const syncMapMode = () => setLocationsLabMode(new URLSearchParams(window.location.search).get('mapa') === 'locations-lab');
-    window.addEventListener('popstate', syncMapMode);
-    return () => window.removeEventListener('popstate', syncMapMode);
-  }, []);
-  const toggleLocationsLab = () => {
-    const next = !locationsLabMode;
-    const url = new URL(window.location.href);
-    if (next) url.searchParams.set('mapa', 'locations-lab');
-    else url.searchParams.delete('mapa');
-    window.history.replaceState(window.history.state, '', `${url.pathname}${url.search}${url.hash}`);
-    setLocationsLabMode(next);
-  };
   const [searchOpen,setSearchOpen] = React.useState(false);
   const [mobileToolsOpen,setMobileToolsOpen] = React.useState(false);
   const [guideOpen,setGuideOpen] = React.useState(false);
@@ -904,8 +889,6 @@ export default function ExplorerView({ vm }) {
           {mostrarMapa && (
             <section className="workspace-stage workspace-map-stage" aria-label="Mapa de territorios">
               <MapaEuropa
-                labMode={locationsLabMode}
-                onToggleLabMode={toggleLocationsLab}
                 initialViewport={initialMapViewport}
                 onViewportChange={recordMapViewport}
                 seleccion={seleccion}
@@ -913,7 +896,6 @@ export default function ExplorerView({ vm }) {
                 onSelectPersona={seleccionarPersonaPorId}
               />
               <div className="territory-hint workspace-map-hint">
-                {locationsLabMode ? <span>Ensayo EU V Locations: {Number.isInteger(anioGlobal) ? `año ${anioGlobal}.` : 'elige un año.'} Solo aparecen coloreadas las jurisdicciones trasladadas; las demás zonas permanecen grises aunque tengan gobernante.</span> : <>
                 {seleccion
                   ? (esGobernante(seleccion)
                       ? (Number.isFinite(anioGlobal)
@@ -926,14 +908,6 @@ export default function ExplorerView({ vm }) {
                       ? `Año ${anioGlobal}: haz clic sobre una persona para ver qué territorios gobernaba entonces.`
                       : "Haz clic sobre una persona para ver los territorios que gobernó.")}
                 {seleccion?.gobiernos?.some(gobierno => IRISH_MAP_TERRITORIES.has(gobierno.territorio)) && <span> Irlanda: contornos regionales aproximados; los señoríos y condados no coincidían necesariamente con estas divisiones.</span>}
-                {seleccion && (() => {
-                  const gobiernos = Number.isFinite(anioGlobal)
-                    ? reinadosActivos(seleccion, anioGlobal, { soloEfectivos: true })
-                    : listaReinados(seleccion).filter(reinadoEsEfectivo);
-                  const missing = [...new Set(gobiernos.filter(gobierno => !idsDeGobiernoEnAño(gobierno, Number.isFinite(anioGlobal) ? anioGlobal : añoReferenciaTerritorial(seleccion, gobierno.territorio), seleccion.id).length).map(gobierno => gobierno.territorio))];
-                  return missing.length ? <span> Sin polígono propio en este mapa: {missing.join(', ')}.</span> : null;
-                })()}
-                </>}
               </div>
             </section>
           )}

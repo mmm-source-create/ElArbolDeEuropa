@@ -1,35 +1,47 @@
-# Laboratorio paralelo: EU V Locations
+# Mapa del Atlas y laboratorio: EU V Locations
 
-El Atlas sigue usando **EU V Provinces** (`src/MapChart_Map.svg`). Este
-laboratorio compara esa geometría con la exportación **EU V Locations** sin
-cambiar el mapa público. Los ensayos fechados generan capas propias a partir
-de la base histórica y registran las correcciones que todavía no se han
-integrado en el Atlas.
+El Atlas usa **EU V Locations**, recortado a Europa, los Urales, el norte de
+África y Oriente Próximo (`euv-locations-crop.svg`). **EU V Provinces**
+(`src/MapChart_Map.svg`) se conserva como referencia geométrica para construir
+la correspondencia histórica. El mapa de locations es más detallado, pero su
+geometría no demuestra por sí sola las fronteras políticas de cada época.
+
+La correspondencia general enlaza los 710 IDs regionales usados por el Atlas
+con locations nuevas cuando al menos el 55 % del área cae dentro de la región
+anterior. Las coincidencias del 25–55 % se conservan como candidatas de
+revisión. Para 114 jurisdicciones hay capas fechadas con correcciones y fuentes
+propias; estas prevalecen sobre la equivalencia general. El inspector del Atlas
+muestra los gobiernos y citas disponibles. El gris significa «sin atribución
+en esta base para este año», no ausencia de gobierno.
 
 ![Encuadre del prototipo](preview.png)
 
 ## Probarlo
 
 Desde la raíz del repositorio, ejecuta `./node_modules/.bin/vite` y abre
-`http://localhost:5173/prototypes/euv-locations/` (si Vite anuncia otro
-puerto, usa ese número). Los mapas se muestran con el mismo encuadre;
-puedes buscar un ID, pulsar una zona, arrastrar y ampliar. El mapa nuevo se
-carga solo al visitar el laboratorio. No entra en el flujo habitual del Atlas.
+`http://localhost:5173/prototypes/euv-locations/territorial-corridors.html`
+(si Vite anuncia otro puerto, usa ese número). El laboratorio abre el mosaico
+en 1500 con todos los gobiernos territoriales activos que tienen geometría en
+el mapa. Las capas revisadas y las aproximadas usan colores propios; las
+superposiciones se rayan y la leyenda permite buscar territorios y abrir las
+fuentes disponibles. Una fuente de gobierno respalda esa afirmación, no la
+frontera aproximada. Las zonas sin atribución siguen grises. **Ver una
+jurisdicción** conserva el análisis individual: permite escoger corredor,
+entidad, año e ID, y centrar el mapa en una location.
 
-También hay un **ensayo integrado en el Atlas**, sin cambiar el mapa normal:
-`http://localhost:5173/es/?atlas=1&vista=mapa&mapa=locations-lab`.
-Selecciona una persona y fija un año. El mapa conserva la búsqueda, la
-biografía, el control temporal y el desplazamiento del Atlas. Los colores
-proceden de las jurisdicciones ya trasladadas y, para los cinco titulares de
-la sucesión borgoñona, de esa capa fechada; Cuijk y otros señoríos locales se
-muestran solo en este ensayo. Un lugar gris no demuestra que careciera de
-gobierno. La ruta normal del Atlas sigue cargando el SVG de Provinces.
+El mapa detallado ya es el mapa normal del Atlas. Selecciona una persona y fija
+un año para ver sus gobiernos; pulsa una location para abrir su ficha de
+evidencia. Las capas revisadas ofrecen notas y fuentes históricas, mientras
+las equivalencias automáticas se identifican como aproximaciones. Los estados
+del Sacro Imperio siguen siendo referencia jurídica, no posesiones del
+emperador. Los enlaces antiguos con `mapa=locations-lab` continúan cargando el
+mismo mapa detallado.
 
 El [ensayo de los dominios de Carlos V](carlos-v.html) añade un selector de
 1506–1555 sobre el mapa nuevo. Permite comprobar qué cambia al adquirir las
 coronas hispánicas, los territorios austríacos, Milán y los Países Bajos
-septentrionales. Es una capa paralela: no altera `src/MapChart_Map.svg` ni los
-colores del producto.
+septentrionales. Se conserva como recorrido analítico; el mapa de producción ya
+usa el mismo recorte y las capas históricas disponibles.
 
 La [segunda entrega, la sucesión borgoñona](burgundian-succession.html),
 recorre 1419–1555 desde Felipe el Bueno hasta Carlos V. Permite buscar una
@@ -38,12 +50,12 @@ cada año. Un mismo morado identifica el conjunto político borgoñón, pero la
 lista lateral conserva sus condados, ducados y señoríos como jurisdicciones
 distintas.
 
-El [visor de corredores territoriales](territorial-corridors.html)
-traslada 52 jurisdicciones de Iberia, Italia, Centroeuropa, Polonia–Lituania, Francia e islas británicas con versiones anuales dentro de 1400–1650. Cada una
-mantiene su propio color y alcance aunque comparta soberano con otra. El
-visor permite seleccionar año, territorio e ID, consultar la corrección
-documentada y centrar el mapa en la localidad buscada. Es una capa de
-investigación separada de las dos anteriores.
+El visor integra 81 capas regionales de Iberia, Italia, Centroeuropa, Europa
+septentrional y oriental, Francia e islas británicas con versiones anuales
+dentro de 1400–1650; añade 24 señoríos borgoñones y nueve capas de Hungría y
+los Balcanes. La Corona de Polonia y el Gran Ducado de Lituania siguen
+separados después de 1569; los gobiernos escandinavos y bálticos, pequeños
+estados rusos y enclaves también mantienen su jurisdicción y fechas propias.
 
 ![Carlos V en 1520: Austria todavía bajo su gobierno](carlos-v-1520.png)
 ![Carlos V en 1548: herencia hispánica y borgoñona, sin pintar el Imperio entero](carlos-v-1548.png)
@@ -56,7 +68,7 @@ node --import ./tests/jsx-loader.mjs prototypes/euv-locations/audit-crosswalk.mj
 ```
 
 Para regenerar la capa de Carlos V, primero se extraen de la base sus
-gobiernos fechados y las versiones del mapa actual. El paso geométrico
+gobiernos fechados y las versiones del mapa de provincias de referencia. El paso geométrico
 requiere `shapely` y `svgpathtools` en el entorno de trabajo; son herramientas
 de generación, no dependencias del sitio:
 
@@ -67,6 +79,7 @@ python3 prototypes/euv-locations/render-carlos-v-svg.py 1548 /tmp/carlos-v-1548.
 node --import ./tests/jsx-loader.mjs prototypes/euv-locations/burgundian-source.mjs
 python3 prototypes/euv-locations/build-burgundian-map.py
 node --import ./tests/jsx-loader.mjs prototypes/euv-locations/corridor-source.mjs
+node prototypes/euv-locations/hungary-balkans-source.mjs
 python3 prototypes/euv-locations/build-corridor-map.py
 ```
 
@@ -92,23 +105,24 @@ internas que el Atlas no quiere mostrar.
 
 ## Tamaño y correspondencias
 
-| | Provinces actual | Locations completo | Locations recortado |
+| | Provinces de referencia | Locations completo | Locations integrado |
 |---|---:|---:|---:|
 | Paths geográficos | 3.838 | 22.711 | 7.672 |
 | SVG sin comprimir | 6,67 MB | 14,60 MB | 4,39 MB |
 | Gzip aproximado | 2,16 MB | 4,43 MB | 1,24 MB |
 
-El recorte nuevo **descarga menos bytes** que el SVG actual (1,24 frente a
-2,16 MB comprimidos), pero contiene el doble de paths. No se ha demostrado
-todavía que consuma menos memoria ni que el arrastre y el zoom sean más
-fluidos; esa comparación debe medirse antes de sustituir el mapa público.
+El SVG integrado **descarga menos bytes** que el mapa Provinces de referencia
+(1,24 frente a 2,16 MB comprimidos), aunque contiene el doble de paths. El
+Atlas ya usa este recorte; las cifras de memoria y fluidez siguen siendo
+métricas pendientes de medir en dispositivos móviles.
 
-`crosswalk-report.json` registra el primer cruce de nombres: de **561** IDs
-usados en `REINO_A_IDS` y `REINO_VERSIONES`, **245** existen literalmente en
-el recorte. Los otros **316** necesitan una asociación geográfica, a menudo
-uno-a-muchos. También los 245 coincidentes necesitan revisión visual e
-histórica: un nombre igual no garantiza que una *location* cubra la misma
-provincia, ni que una localidad equivalga a toda una jurisdicción.
+`corridor-locations.json` contiene el cruce geométrico actualizado de **710**
+IDs regionales: una location nueva se asigna cuando al menos el 55 % de su
+área cae dentro de la región anterior; los cruces del 25–55 % quedan anotados
+para revisión y no se pintan como parte de las capas históricas revisadas.
+Un nombre coincidente tampoco garantiza que una *location* cubra exactamente
+la misma provincia. Por eso el inspector conserva la advertencia de precisión
+y distingue el puente geométrico de las 114 capas fechadas con fuentes.
 
 ## Primer cruce histórico: Carlos V
 
@@ -251,12 +265,14 @@ de Hungría después de 1526 exige capas separadas para Hungría real,
 Transilvania y dominio otomano, con cambios fechados; el gris actual
 expresa esa revisión pendiente, no ausencia de gobierno. El siguiente
 corredor prioritario era Polonia–Lituania, ahora iniciado; siguen pendientes
-estas excepciones alpinas y húngaras. Ninguna capa sustituye aún el mapa público.
+estas excepciones alpinas y húngaras. Las capas y su nivel de evidencia ya se
+usan en el mapa público; esta documentación registra decisiones y cuestiones
+que aún pueden corregirse.
 
-### Quinta entrega: Polonia–Lituania
+### Quinta entrega: Polonia–Lituania (versión inicial)
 
-El visor añade **seis jurisdicciones** al corredor nororiental. Suma ahora
-**39 jurisdicciones** en total. Esta capa no hereda sin más la versión
+La versión inicial añadió **seis jurisdicciones** al corredor nororiental.
+La actualización actual amplía esa etapa hasta 1650. Esta capa no hereda sin más la versión
 posterior a 1386 de `Polonia` en el Atlas, porque mezcla la Corona con
 Mazovia antes de su incorporación, Pomerania occidental y señoríos
 moldavos. Se distinguen Corona de Polonia, ducado de Mazovia, Prusia Real,
@@ -278,8 +294,7 @@ Quedan **pendientes** la frontera oriental del Gran Ducado, las oscilaciones
 del litoral del mar Negro, la administración de Warmia y las ocupaciones
 de la guerra de los Trece Años. Por eso se muestra solo el núcleo lituano
 y la zona de las transferencias estudiadas; el gris no significa tierra
-sin gobierno. El corredor termina en **1569**: de 1570 en adelante no
-se proyecta una frontera inmutable sobre guerras posteriores.
+sin gobierno. La secuencia posterior a 1569 se describe en la entrega actual.
 
 ### Sexta entrega: principados eclesiásticos y ensayo integrado
 
@@ -302,11 +317,87 @@ Milán adoptan el color hispánico, Utrecht y Cuijk el borgoñón, mientras
 Londres y Dijon quedan grises. Pulsar Madrid abre una ficha que indica la
 jurisdicción trasladada y la precisión provisional de la geometría.
 
-Sigue pendiente **Hungría desde 1526**: la capa medieval se interrumpe en
-Mohács y no se convierte automáticamente en «Hungría real», Transilvania o
-zona otomana. Esos tres sucesores requieren límites fechados y fuentes más
-finas antes de colorearlos. También faltan pruebas comparativas de memoria y
-fluidez en móvil antes de plantear la sustitución general del SVG.
+La novena entrega añadió una primera secuencia fechada para **Hungría después
+de 1526 y los Balcanes**, detallada abajo. La revisión actual amplía las
+localizaciones a áreas regionales contiguas y añade gobiernos principescos
+separados; sigue siendo una reconstrucción cartográfica aproximada, no un
+deslinde jurídico de cada frontera histórica. También faltan pruebas
+comparativas de memoria y fluidez en móvil.
+
+### Novena entrega: Hungría después de Mohács y los Balcanes
+
+El laboratorio añade trece capas complementarias, con **47 grupos de datos
+fechados y enlazados a fuentes**. Tras la doble elección de 1526–1527 separa
+el núcleo habsbúrgico de la Corona de Hungría, las localidades del partido de
+Juan Zápolya y la administración otomana directa. La capa de Zápolya no
+reclama toda Hungría oriental: distingue la competencia por la Corona de una
+frontera estable. **Buda cambia de manos y queda bajo administración otomana
+desde 1541**; Temesvár/Banat entra en 1552. Eger y Nagykanizsa cambian en
+1596 y 1600, respectivamente. La [síntesis de la Enciclopedia Croata sobre
+Hungría](https://enciklopedija.hr/clanak/madjarska) y la [historia de las
+coronas de Fernando I](https://www.habsburger.net/en/chapter/ferdinand-i-new-crowns-habsburgs)
+respaldan esta secuencia y la toma de Buda, Esztergom y Székesfehérvár.
+
+**Transilvania queda como jurisdicción propia**, tributaria del sultán, no
+como provincia otomana. En 1551–1555 aparece bajo una capa temporal propia de
+**ocupación habsbúrgica**, no como Hungría real ni como gobierno Zápolya; el
+núcleo transilvano separado vuelve desde 1556, tras el retorno de Isabella y
+Juan Segismundo. El título principesco formal corresponde a una etapa
+posterior, no a todos los años de la serie.
+Fuentes: [Enciclopedia Croata: Transilvania](https://www.enciklopedija.hr/clanak/transilvanija)
+y el estudio diplomático de la [ocupación habsbúrgica de 1551 y el regreso
+de los Zápolya](https://gams.uni-graz.at/o:vrancic.introduction/sdef:TEI/get?locale=en&mode=view:transl).
+
+La cronología distingue además el saqueo de Osijek en 1526 de su etapa de
+gobierno otomano sostenido, que el estudio de fuentes turcas inicia en 1529;
+Ilok y Vukovar se registran desde la campaña de 1526. Véanse el artículo
+académico [Osijek en las fuentes otomanas](https://hrcak.srce.hr/en/107130)
+y el estudio de [continuidad en la frontera otomana occidental](https://unis.asbu.edu.tr/yayin-detay/2_CZCuCpC_87/beyond-conquest-continuity-and-change-on-the-ottoman-western-frontier-from-the-late-15th-to-mid-16th-century/pdf%3D1).
+
+La capa otomana se amplió de **29 a 172 celdas del mapa en 1500**: ahora
+rellena zonas contiguas de Bulgaria, Macedonia, Tracia, Serbia, Albania y
+Grecia en vez de señalar solo capitales aisladas. Las fechas separan la caída
+del Despotado serbio en 1459 de la toma de Belgrado en 1521, así como la
+captura de Tesalónica en 1430, Morea en 1460 y las plazas albanesas en 1479.
+El reino de Bosnia se representa hasta su caída en 1463; la capa otomana de
+Bosnia y Herzegovina se amplía por etapas, con la anexión de Herzegovina hacia
+1482 y las fortalezas fronterizas fechadas aparte. Tighina se asigna desde
+1538 según la entrada sobre [Bender](https://www.enciklopedija.hr/clanak/bender).
+También se incorporan
+**Valaquia y Moldavia como principados tributarios con gobierno propio**, no
+como provincias otomanas: Chilia y Cetatea Albă cambian en 1484 y Tighina en
+1538. **Croacia habsbúrgica, la costa dálmata veneciana y la República de
+Ragusa permanecen separadas**. Ragusa conservó su república y pagó tributo al
+sultán; la proximidad o el vasallaje no la convierten en provincia otomana.
+Se contrastaron las entradas de [Serbia](https://enciklopedija.hr/clanak/srbija),
+[Bosnia y Herzegovina](https://enciklopedija.hr/clanak/bosna-i-hercegovina),
+[el Imperio otomano](https://www.enciklopedija.hr/clanak/osmansko-carstvo),
+[Valaquia](https://enciklopedija.hr/clanak/65082),
+[Moldavia](https://enciklopedija.hr/clanak/moldavija-drzava), [Dalmacia](https://enciklopedija.hr/clanak/dalmacija)
+y la [República de Ragusa](https://enciklopedija.hr/clanak/dubrovacka-republika)
+de la Enciclopedia Croata.
+
+Las celdas de relieve físico —Alpes Dináricos, montes Balcanes, Ródope,
+Pindo y Cárpatos— no se atribuyen a ningún soberano. La fuente del mapa
+define ubicaciones, no fronteras históricas: cada selección regional es una
+aproximación documentada y se evita colorear puertos venecianos, la costa de
+Ragusa o los principados tributarios como territorio otomano directo.
+
+La comprobación automática no encontró el mismo ID en dos jurisdicciones
+activas de este corredor en un mismo año en las 13 capas, incluida la
+transición entre Serbia y los otomanos, el reino y el sanjacado de Bosnia y
+las tomas moldavas. También rechaza IDs geográficos de montañas y celdas que
+no existan en el SVG recortado. Estas pruebas comprueban coherencia interna,
+no exactitud de cada frontera.
+Los grupos nuevos se conservan en `hungary-balkans-source.mjs` y
+`hungary-balkans-locations.json`; su inclusión en el Atlas sigue limitada al
+modo de laboratorio.
+
+**Pendiente antes de dar esta región por revisada:** delimitar Partium y
+Banat por señorío, fechar fortalezas y cambios de la Frontera Militar croata,
+cotejar celdas ambiguas con mapas históricos de escala local y ampliar las
+jurisdicciones venecianas, raguseas y eclesiásticas. El gris significa «sin
+atribución revisada en este ensayo», no tierra sin gobierno.
 
 ### Séptima entrega: Francia e islas británicas
 
@@ -328,8 +419,8 @@ su identidad. El mapa se inspeccionó visualmente en Francia e Inglaterra en
 locales; separar Gales del agregado inglés antes de las leyes de unión;
 fechar Noruega/Dinamarca, la expansión inglesa en Irlanda y las guerras del
 siglo XVII. Un ID coincidente o un solapamiento del 55 % no prueban por sí
-solos soberanía histórica. El laboratorio sigue siendo opcional y no
-sustituye todavía el mapa habitual del Atlas.
+solos soberanía histórica. El laboratorio permite comparar jurisdicciones;
+el mapa detallado integrado es ya el mapa habitual del Atlas.
 
 ### Octava entrega: jurisdicciones borgoñonas y marco imperial
 
@@ -372,24 +463,25 @@ para contrastar el ámbito imperial, y la [ficha del Rijksmuseum sobre la
 abdicación de Carlos V](https://www.rijksmuseum.nl/en/collection/object/Allegory-on-the-Abdication-of-Emperor-Charles-v-in-Brussels--2cb744f2469fe62413bb6aab920d4e03)
 para comprobar que sus posesiones neerlandesas conservaban ducados, condados
 y señoríos distintos. Las correcciones localizadas de la sucesión siguen
-enumeradas en `burgundian-locations.json` con sus URL de fuente. El
-laboratorio es accesible desde el botón **Probar mapa detallado** en la vista
-Mapa del Atlas; el parámetro `mapa=locations-lab` permite compartirlo.
+enumeradas en `burgundian-locations.json` con sus URL de fuente. El Atlas usa
+por defecto el mapa EU V Locations; al pulsar una location se abre su ficha
+con los gobiernos registrados y las fuentes disponibles. El parámetro antiguo
+`mapa=locations-lab` se sigue aceptando como enlace, pero ya no cambia de mapa.
 
-### Dudas de esta entrega
+### Pendientes de la octava entrega (Borgoña e Imperio)
 
 - La fecha de investidura de **Cuijk en 1509** todavía necesita contraste con
   documentación primaria. Se muestra como hipótesis fechada, con la prenda
   administrativa de 1517–1549 explicada por separado.
 - **Montreuil**, **Luxeuil** y algunos bordes de Ponthieu/Franco Condado
   siguen siendo candidatos por solapamiento y requieren cotejo de cartografía
-  jurisdiccional fechada antes de pasar al producto.
+  jurisdiccional fechada antes de tratar sus geometrías como exactas.
 - La restitución de 1493 y las ocupaciones de 1477–1492 no se pueden reducir
   siempre a un año y un único dueño efectivo. El estado anual conservador
   omite el control discutido; no presenta el vacío como ausencia histórica.
-- El corredor es un ensayo trazable de varias etapas, no una garantía de que
-  todas las fronteras de las 254 locations candidatas sean históricamente
-  exactas. El mapa nuevo aún no sustituye el público.
+- El corredor es una capa trazable, no una garantía de que todas las fronteras
+  de las 254 locations candidatas sean históricamente exactas. El mapa está
+  integrado en el Atlas y sus límites siguen marcados para revisión.
 
 ### Límites que requieren otra pasada
 
@@ -407,7 +499,8 @@ Mapa del Atlas; el parámetro `mapa=locations-lab` permite compartirlo.
   de `Rovegno` queda suspendida hasta resolver su jurisdicción del siglo XVI.
 - La siguiente fase debe cotejar las locations conflictivas contra cartografía
   académica fechada y documentos jurisdiccionales, además de probar fluidez y
-  memoria en móvil antes de considerar una migración del Atlas.
+  memoria en móvil. La sustitución del mapa ya está integrada; la equivalencia
+  geométrica general sigue siendo provisional donde aún no hay revisión local.
 
 Fuentes principales para las correcciones: [mundo de los Habsburgo](https://www.habsburger.net/en/chapter/charles-v-empire-which-sun-never-set),
 [museo municipal de Tournai](https://mhm.tournai.be/en/tournai-a-city-with-a-rich-military-past),
@@ -421,13 +514,61 @@ Las cifras de carga que muestra el navegador son orientativas de esa sesión;
 no miden fluidez sostenida ni memoria móvil. El menor peso de transferencia no
 compensa automáticamente el doble de nodos SVG.
 
-## Decisión pendiente antes de migrar
+## Revisión continua tras integrar el mapa
 
-1. Construir y revisar una tabla `provincia anterior → locations nuevas`
-   para corredores piloto (Venecia–Milán, Borgoña/Países Bajos, Austria/Baviera).
-2. Validar visualmente fronteras y por fechas con fuentes históricas. Los
-   nombres de MapChart ayudan a localizar geometría, pero no prueban soberanía.
-3. Medir primer dibujo, interacción y memoria en escritorio y móvil con
-   territorios coloreados. Mantener la estética sin límites feudales negros.
-4. Migrar por zonas solo si la precisión y el rendimiento mejoran de forma
-   verificable; conservar el mapa actual como referencia durante la transición.
+1. Resolver las equivalencias geométricas dudosas por región y periodo con
+   cartografía histórica y documentación jurisdiccional.
+2. Completar gobiernos y fuentes allí donde el puente geométrico aún sea la
+   única base para colorear una location.
+3. Medir primer dibujo, interacción, memoria y exportación en escritorio y
+   móvil; conservar la estética sin límites feudales negros.
+4. Actualizar las capas y los informes de cobertura a medida que se revisen
+   los territorios; las incertidumbres deben seguir visibles en el Atlas.
+
+## Novena entrega: Europa septentrional y oriental
+
+La ampliación añade 28 capas al corredor nororiental y extiende las seis
+polaco-lituanas hasta 1650. La Corona polaca y el Gran Ducado siguen separados
+después de 1569: Podlaquia, Volinia, Bráclav y Kiev pasan a la Corona, mientras
+Livonia entra como condominio y Curlandia permanece como ducado vasallo
+autónomo. Estonia del norte queda bajo Suecia desde 1561; la mayor parte de
+Livonia pasa a Suecia en 1629, mientras Latgale permanece en la Mancomunidad.
+Riga se marca como ciudad —libre entre 1561 y 1580, bajo la Mancomunidad desde
+1581 y bajo Suecia desde 1621—, sin extender ese punto a una frontera
+provincial.
+
+Dinamarca, Noruega y Suecia se representan como reinos distintos durante la
+Unión de Kalmar y la unión danesa-noruega. Schleswig y Holstein quedan como
+ducados separados del reino danés; un mismo gobernante no los convierte en
+una jurisdicción. Orkney y Shetland aparecen bajo la Corona noruega hasta
+1468 y bajo Escocia desde 1469. Las Feroe se muestran como dependencia noruega
+con Tórshavn como marcador, sin inventar un perímetro. Gotland, Jämtland,
+Halland y Ösel cambian de capa en 1645 según Brömsebro. Ösel utiliza
+Kuressaare como marcador urbano, no como polígono insular. Pomerania distingue al ducado griffino, la ocupación sueca
+desde 1630 y las partes asignadas en Westfalia; la frontera no se fijó hasta
+1653, así que Stettin, Stolp y Koslin se usan como proxies regionales. Wismar
+se representa aparte como feudo sueco, sin colorear todo Mecklemburgo.
+
+La expansión moscovita se fecha de forma acumulativa: Yaroslavl (1463), Rostov
+(1474), Nóvgorod (1478), Tver (1485), Pskov (1510), Smolensk (1514; vuelve a
+la Mancomunidad en 1611 y a Moscovia en 1634), Riazán (1521) y Kazán (1552).
+Los principados y repúblicas anteriores a su anexión conservan capas propias.
+Nóvgorod se marca solo por su ciudad porque el mapa nuevo no ofrece un límite
+regional confiable; las demás áreas derivan de provincias antiguas y no
+equivalen a deslindes históricos medidos.
+
+| Transición o jurisdicción | Criterio | Fuentes |
+|---|---|---|
+| Unión de Lublin (1569) | Podlaquia, Volinia, Bráclav y Kiev pasan a la Corona; Lituania permanece como entidad separada y Livonia queda como condominio. | [AGAD, exposición y texto de la Unión](https://www.agad.gov.pl/mow/unia2C_eng.pdf). |
+| Estonia, Livonia y Curlandia | Estonia del norte pasa a Suecia en 1561; Curlandia nace como ducado autónomo ese año; la mayor parte de Livonia pasa a Suecia en 1629, con Latgale en la Mancomunidad. | [Estonian Historical Journal](https://ojs.utlib.ee/index.php/EAA/article/view/AA.2017.1.02), [Universidad de Letonia](https://dspace.lu.lv/items/8812084a-b442-4c43-b827-e490e42aac55), [Economic History Review](https://onlinelibrary.wiley.com/doi/full/10.1111/ehr.13410). |
+| Riga | La ciudad se mantiene como marcador separado y cambia de jurisdicción en 1581 y 1621. | [Enciclopedia letona](https://enciklopedija.lv/skirklis/198863), [Museo de Historia y Navegación de Riga](https://www.rigamuz.lv/rvkm/en/ekspoz_eng/riga-history-riga-under-the-polish-and-swedish-rule-1581-1710/). |
+| Escandinavia y Holstein | Los reinos de la Unión de Kalmar permanecen diferenciados; Schleswig y Holstein no se incorporan al color de Dinamarca. Orkney y Shetland pasan de Noruega a Escocia en 1469; las Feroe siguen como dependencia de la Corona noruega. Brömsebro transfiere Gotland, Ösel, Jämtland y Halland a Suecia, Halland por treinta años. | [Store norske leksikon](https://snl.no/Kalmarunionen), [Gobierno de Schleswig-Holstein](https://www.schleswig-holstein.de/DE/fachinhalte/L/landeskundegeschichte/Chronologie_Augenblicke_Landesgeschichte/1460_VertragRipen), [Historic Environment Scotland: Orkney](https://www.historicenvironment.scot/visit/all/maeshowe-chambered-cairn/history-and-stories/), [Shetland](https://www.historicenvironment.scot/visit/all/jarlshof-prehistoric-and-norse-settlement/history-and-stories/), [Gobierno de las Feroe](https://www.faroeislands.fo/the-big-picture/history-of-the-faroe-islands/historical-timeline), [Museo de Halland](https://www.museumhalland.se/hallands-historia/), [Lex: Brömsebro](https://lex.dk/Br%C3%B6msebro), [Lex: Saaremaa](https://lex.dk/Saaremaa). |
+| Pomerania y Wismar | La ocupación sueca desde 1630 se distingue de la asignación de Westfalia de 1648; el deslinde local se fijó en 1653. | [Historia Pomorza](https://historiapomorza.pl/en/epoka/swedish-pomerania-1637-1815/), [texto de Westfalia](https://germanhistorydocs.org/en/from-the-reformations-to-the-thirty-years-war-1500-1648/peace-treaties-of-westphalia-october-14-24-1648). |
+| Principados rusos | Nóvgorod, Tver, Pskov, Riazán y Kazán siguen separados hasta su anexión; Smolensk se retira durante el control polaco-lituano de 1611–1633. | [Cambridge History of Russia](https://assets.cambridge.org/052181/2275/frontmatter/0521812275_frontmatter.htm), [gobierno de Pskov](https://pskov.ru/region/istoriya/prisoedinenie-k-moskve), [gobierno de Tver](https://www.tver.ru/en/about/history/xv-xvii.php). |
+
+**Límites de esta entrega.** Las unidades antiguas `North_Livonia` e
+`Inner_Livonia` no siguen con exactitud las líneas de los tratados, así que
+son equivalencias candidatas documentadas. El periodo acaba en 1650, antes de
+la delimitación de Pomerania de 1653 y de la cesión de Blekinge, Bohuslän y
+Scania a Suecia en 1658; esas transferencias no se proyectan hacia atrás. La
+geometría requiere cotejo visual por *location* para afinar el mapa integrado.
