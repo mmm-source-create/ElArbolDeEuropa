@@ -390,8 +390,8 @@ las tomas moldavas. También rechaza IDs geográficos de montañas y celdas que
 no existan en el SVG recortado. Estas pruebas comprueban coherencia interna,
 no exactitud de cada frontera.
 Los grupos nuevos se conservan en `hungary-balkans-source.mjs` y
-`hungary-balkans-locations.json`; su inclusión en el Atlas sigue limitada al
-modo de laboratorio.
+`hungary-balkans-locations.json`; estas capas alimentan ahora el Atlas y el
+laboratorio se conserva como herramienta de revisión.
 
 **Pendiente antes de dar esta región por revisada:** delimitar Partium y
 Banat por señorío, fechar fortalezas y cambios de la Frontera Militar croata,
@@ -572,3 +572,58 @@ son equivalencias candidatas documentadas. El periodo acaba en 1650, antes de
 la delimitación de Pomerania de 1653 y de la cesión de Blekinge, Bohuslän y
 Scania a Suecia en 1658; esas transferencias no se proyectan hacia atrás. La
 geometría requiere cotejo visual por *location* para afinar el mapa integrado.
+
+### Revisión del Atlas: continuidad balcánica y límites (5 de octubre de 2026)
+
+El Atlas incorpora 25 gobernantes y 44 mandatos nuevos, con 45 revisiones
+individuales de fuentes al incluir el mandato existente de Tvrtko II.
+Valaquia y Moldavia tienen autoridad registrada en cada año entre 1601 y
+1650, la sucesión otomana cubre 1617–1640 y Transilvania incorpora a
+Segismundo Rákóczi y Gabriel Báthory. El tributo otomano no convierte estos
+principados en provincias directamente gobernadas por el sultán. Ragusa se
+consulta como república con rector y consejos, sin inventar un soberano.
+
+La ocupación de Serbia de 1439–1443 se separa de la restauración de 1444;
+Argos pasa de Venecia a los otomanos en 1463 y Monemvasia en 1540. La toma de
+Jajce queda fijada en 1527 tanto en los datos originales como en el Atlas.
+Bosnia muestra trama durante la rivalidad de 1420–1421 y la disputa de
+Tvrtko II con Radivoj de 1433–1435. La geometría sigue siendo aproximada.
+
+Fuentes de esta revisión: [catálogo de documentos del Museo Municipal de
+Bucarest](https://muzeulbucurestiului.ro/wp-content/uploads/2023/03/Catalogul-expozitiei-Secolul-al-XVII-lea-in-Documente-si-Imagini-din-Patrimoniul-MMB.pdf),
+[cronología de la Sociedad Histórica Turca](https://ttk.gov.tr/osmanli-padisahlari/),
+[Semendire en la enciclopedia TDV](https://islamansiklopedisi.org.tr/semendire),
+[Ayuntamiento de Monemvasia](https://monemvasia.gr/2017/05/history/),
+[Argos](https://enciklopedija.hr/clanak/argos),
+[Stjepan Ostojić](https://www.enciklopedija.hr/clanak/stjepan-ostojic),
+[Tvrtko II](https://www.enciklopedija.hr/clanak/tvrtko-ii-kotromanic) y
+[República de Ragusa](https://enciklopedija.hr/clanak/dubrovacka-republika)
+en la enciclopedia del instituto lexicográfico croata. Cada mandato conserva
+su referencia y pasaje en `src/evidence/balkanReviewData.js`; esas fuentes no
+se extienden automáticamente a fechas de nacimiento o parentescos.
+
+Para regenerar las 13 capas balcánicas y sus 50 grupos documentados sin
+recalcular las equivalencias geométricas:
+
+```sh
+node prototypes/euv-locations/hungary-balkans-source.mjs
+node prototypes/euv-locations/sync-balkan-map.mjs
+```
+
+La auditoría de continuidad de 1400–1650 reduce las combinaciones región/año
+sin autoridad en estas capas de 15.377 a 5.354 (65,2 %). No es una medida de
+exactitud cartográfica. Permanecen pendientes los gobiernos rumanos más
+tempranos, el interregno otomano de 1403–1412, Transilvania en 1603–1604 y los
+deslindes de Partium, Banat y la Frontera Militar croata. La revisión otomana
+se limita a estas capas balcánicas y húngaras; no reconstruye Anatolia.
+
+Puigcerdà se verifica bajo Carlos V y se conserva en la parte hispánica tras
+1659, corrigiendo la equivalencia antigua con Rosellón. Las ocupaciones
+francesas de 1708–1714 y 1812–1814 llevan trama, según
+[Turisme Cerdanya](https://cerdanya.org/fr/decouvrir/culture/histoire/).
+Su celda no reproduce todos los municipios ni el enclave de Llívia.
+
+El límite de zoom y desplazamiento se acompaña de un recorte real del grupo
+SVG, actualizado con cada encuadre. Así, las franjas laterales del panel no
+revelan el mapa mundial subyacente. Los controles se desactivan al alcanzar
+el límite. La versión del mapa para modo oscuro queda para otra entrega.

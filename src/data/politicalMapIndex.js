@@ -8,6 +8,13 @@ import {mapAuthoritiesForPerson} from './mapAuthorities.js';
 // gobierno personal en la base genealógica.
 export const COLLECTIVE_AUTHORITIES = Object.freeze([
   {
+    territorio: 'República de Ragusa', desde: 1400, hasta: 1650,
+    nombre: 'Rector y consejos de la República de Ragusa', cargo: 'Gobierno republicano',
+    condicion: 'colectiva', certeza: 'documentado',
+    nota: 'El rector presidía los consejos con un mandato mensual. El tributo al sultán, desde 1458, no eliminó el gobierno republicano ni hizo de Ragusa una provincia otomana.',
+    fuente: {title: 'Hrvatska enciklopedija · Dubrovačka Republika', url: 'https://enciklopedija.hr/clanak/dubrovacka-republika'},
+  },
+  {
     territorio: 'Tirol', desde: 1595, hasta: 1601,
     nombre: 'Comunidad de herederos Habsburgo', cargo: 'Administración de la casa',
     condicion: 'colectiva', certeza: 'inferido',

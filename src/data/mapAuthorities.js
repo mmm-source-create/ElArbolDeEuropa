@@ -4,6 +4,7 @@ import {personClaims} from '../evidence/claims.js';
 import {mapLocationsForGovernment, pilotBurgundianGovernmentsFor,
   pilotDisputedHungarianClaimsFor, pilotLocationsFor, reviewedMapLayers} from './locationMapPilot.js';
 import {authorityExtensionFor, REVOLT_SOURCE} from './atlasAuthorityExtensions.js';
+import {cerdanyaBorderCorrection, southernPyreneesCorrection} from './mapBorderCorrections.js';
 
 export const AUTHORITY_LABELS = Object.freeze({
   sovereign: 'Autoridad territorial', delegated: 'Gobierno delegado',
@@ -18,8 +19,10 @@ function claimsFor(person) {
   return governmentClaims.get(person);
 }
 
-export function authorityKind(government) {
+export function authorityKind(government, year = null) {
   if (['titular', 'pretensión'].includes(government?.condicion) || government?.efectivo === false) return 'titular';
+  const disputes = [].concat(government?.controlDisputado || []);
+  if (disputes.some(period => period.desde <= year && year <= period.hasta)) return 'disputed';
   if (['rival', 'disputado', 'ocupación'].includes(government?.condicion)) return 'disputed';
   if (['regencia', 'gobierno delegado'].includes(government?.condicion)
       || /gobernador|regente|virrey/i.test(government?.titulo || '')) return 'delegated';
@@ -49,13 +52,21 @@ export function mapAuthoritiesForPerson(person, year, mapData = null, {includeCl
         ...(year >= 1619 ? pilotLocationsFor(mapData, 'Austria', year, person.id) : [])];
     }
     const extension = mapData && authorityExtensionFor(government.territorio, year, person.id);
+    const border = mapData && cerdanyaBorderCorrection(government.territorio, year);
+    const southernBorder = mapData && southernPyreneesCorrection(government.territorio, year);
+    if (border?.occupation && effective && ids.includes(border.id)) {
+      ids = ids.filter(id => id !== border.id);
+      entries.push({person, government, claim: claims.get(government) || null,
+        territory: 'Ocupación francesa de Puigcerdà', kind: 'disputed', paint: true,
+        ids: [border.id], mapSources: [border.source], mapNote: border.note});
+    }
     const revolt = person.id === 'FEL2ESP' && effective
       && (['Holanda','Zelanda'].includes(government.territorio) && year >= 1572
         || ['Flandes','Brabante'].includes(government.territorio) && year >= 1576);
     entries.push({person, government, claim: claims.get(government) || null,
-      territory: government.territorio, kind: revolt ? 'disputed' : authorityKind(government),
-      paint: effective, ids, mapSources: [...(extension ? [extension.source] : []), ...(revolt ? [REVOLT_SOURCE] : [])],
-      mapNote: revolt ? 'Soberanía y control disputados durante la revuelta. La trama no afirma posesión uniforme de toda la provincia.' : extension?.note});
+      territory: government.territorio, kind: revolt ? 'disputed' : authorityKind(government, year),
+      paint: effective, ids, mapSources: [...(extension ? [extension.source] : []), ...(revolt ? [REVOLT_SOURCE] : []), ...(border?.action === 'add' && !border.occupation ? [border.source] : []), ...(southernBorder?.action === 'add' ? [southernBorder.source] : [])],
+      mapNote: revolt ? 'Soberanía y control disputados durante la revuelta. La trama no afirma posesión uniforme de toda la provincia.' : extension?.note || [border?.action === 'add' ? border.note : null, southernBorder?.action === 'add' ? southernBorder.note : null].filter(Boolean).join(' ') || null});
   }
   if (!mapData) return entries;
 

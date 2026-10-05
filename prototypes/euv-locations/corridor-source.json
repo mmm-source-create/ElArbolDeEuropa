@@ -1979,7 +1979,7 @@
         "reason": "Reino propio dentro de la Unión de Kalmar y luego de la monarquía danesa-noruega; Schleswig y Holstein permanecen como ducados distintos.",
         "source": "https://snl.no/Kalmarunionen"
       },
-      "note": "El reino danés se dibuja separado de Noruega, Schleswig y Holstein. Halland y Gotland salen en 1645; Blekinge permanece danesa hasta después del corte del prototipo. Incluye las celdas del núcleo de Escania, omitidas en la capa anterior.",
+      "note": "El reino danés se dibuja separado de Noruega, Schleswig y Holstein. La revisión visual incluye Escania y las celdas interiores de Jutlandia omitidas por el cruce entre provincias. Halland y Gotland salen en 1645; Blekinge permanece danesa hasta después del corte del prototipo. Incluye las celdas del núcleo de Escania, omitidas en la capa anterior.",
       "versions": [
         {
           "from": 1400,
@@ -1992,6 +1992,8 @@
             "Halland",
             "Blekinge",
             "Gotland",
+            "Gonge",
+            "Malmohus",
             "Halland",
             "Gotland"
           ]
@@ -2004,7 +2006,9 @@
             "Vendsyssel_Thy",
             "Zealand",
             "Funen",
-            "Blekinge"
+            "Blekinge",
+            "Gonge",
+            "Malmohus"
           ]
         }
       ]
@@ -2019,7 +2023,7 @@
         "reason": "Reino diferenciado bajo la misma monarquía que Dinamarca; la subordinación institucional de 1537 no convierte Noruega en Dinamarca.",
         "source": "https://snl.no/Kalmarunionen"
       },
-      "note": "Reino bajo monarca común con Dinamarca; Noruega queda institucionalmente subordinada desde 1537, pero no se fusiona en el color danés. Orkney y Shetland se transfieren a Escocia en 1469.",
+      "note": "La revisión visual incluye Troms, Akershus y Østfold. Reino bajo monarca común con Dinamarca; Noruega queda institucionalmente subordinada desde 1537, pero no se fusiona en el color danés. Orkney y Shetland se transfieren a Escocia en 1469.",
       "versions": [
         {
           "from": 1400,
@@ -2038,7 +2042,10 @@
             "Sogn",
             "Vestfold",
             "Bohus",
-            "Jamtland"
+            "Jamtland",
+            "Troms",
+            "Akershus",
+            "Ostfold"
           ]
         },
         {
@@ -2057,7 +2064,10 @@
             "Romsdalen",
             "Sogn",
             "Vestfold",
-            "Bohus"
+            "Bohus",
+            "Troms",
+            "Akershus",
+            "Ostfold"
           ]
         }
       ]
@@ -2072,7 +2082,7 @@
         "reason": "Reino separado de Dinamarca y Noruega desde 1523; antes conserva una capa propia para no confundir unión personal con incorporación.",
         "source": "https://snl.no/Kalmarunionen"
       },
-      "note": "Se mantiene como reino distinto incluso durante la Unión de Kalmar. Jämtland, Halland y Gotland entran desde 1645; Ösel se muestra como marcador insular separado.",
+      "note": "La revisión visual incluye Västmanland, Närke, Dalsland, la zona de Tiohärad en Småland y Satakunta en Finlandia. Se mantiene como reino distinto incluso durante la Unión de Kalmar. Jämtland, Halland y Gotland entran desde 1645; Ösel se muestra como marcador insular separado.",
       "versions": [
         {
           "from": 1400,
@@ -2093,7 +2103,12 @@
             "Finland",
             "Tavastland",
             "Nyland",
-            "Savolax"
+            "Savolax",
+            "Satakunta",
+            "Vastmanland",
+            "Nerike",
+            "Dalsland",
+            "Tioharad"
           ]
         },
         {
@@ -2116,6 +2131,11 @@
             "Tavastland",
             "Nyland",
             "Savolax",
+            "Satakunta",
+            "Vastmanland",
+            "Nerike",
+            "Dalsland",
+            "Tioharad",
             "Jamtland",
             "Halland",
             "Gotland"
