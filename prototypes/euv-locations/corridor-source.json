@@ -1979,7 +1979,7 @@
         "reason": "Reino propio dentro de la Unión de Kalmar y luego de la monarquía danesa-noruega; Schleswig y Holstein permanecen como ducados distintos.",
         "source": "https://snl.no/Kalmarunionen"
       },
-      "note": "El reino danés se dibuja separado de Noruega, Schleswig y Holstein. Halland y Gotland salen en 1645; Blekinge permanece danesa hasta después del corte del prototipo.",
+      "note": "El reino danés se dibuja separado de Noruega, Schleswig y Holstein. Halland y Gotland salen en 1645; Blekinge permanece danesa hasta después del corte del prototipo. Incluye las celdas del núcleo de Escania, omitidas en la capa anterior.",
       "versions": [
         {
           "from": 1400,
@@ -3673,6 +3673,24 @@
             "Millieu",
             "Aval"
           ]
+        }
+      ]
+    },
+    {
+      "corridor": "Hungría y Balcanes",
+      "name": "Banato húngaro de Jajce",
+      "color": "#a08545",
+      "active": {
+        "from": 1463,
+        "through": 1526,
+        "source": "https://www.enciklopedija.hr/clanak/jajce",
+        "reason": "Fortaleza y núcleo del banato recuperados por Matías Corvino en 1463; caída en diciembre de 1527."
+      },
+      "note": "Se representa solo la celda de Jajce. No se atribuye toda Bosnia a Hungría ni se dibuja el perímetro completo del banato.",
+      "versions": [
+        {
+          "from": 1400,
+          "oldIds": []
         }
       ]
     }

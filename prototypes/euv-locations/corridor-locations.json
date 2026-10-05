@@ -28086,6 +28086,26 @@
           "borderline": []
         }
       ]
+    },
+    {
+      "corridor": "Hungría y Balcanes",
+      "name": "Banato húngaro de Jajce",
+      "color": "#a08545",
+      "active": {
+        "from": 1463,
+        "through": 1526,
+        "source": "https://www.enciklopedija.hr/clanak/jajce",
+        "reason": "Fortaleza y núcleo del banato recuperados por Matías Corvino en 1463; caída en diciembre de 1527."
+      },
+      "note": "Se representa solo la celda de Jajce. No se atribuye toda Bosnia a Hungría ni se dibuja el perímetro completo del banato.",
+      "versions": [
+        {
+          "from": 1400,
+          "oldIds": [],
+          "ids": [],
+          "borderline": []
+        }
+      ]
     }
   ],
   "additionalTerritories": [
@@ -37334,6 +37354,78 @@
       "through": 1650,
       "reason": "La campaña otomana de 1538 incrementó la subordinación y tomó Tighina, sin abolir el principado moldavo.",
       "source": "https://enciklopedija.hr/clanak/moldavija-drzava"
+    },
+    {
+      "territory": "Reino de Dinamarca",
+      "id": "Helsingborg",
+      "action": "add",
+      "from": 1400,
+      "through": 1650,
+      "reason": "Núcleo de Escania bajo la Corona danesa durante el intervalo revisado; la cesión a Suecia se produjo en 1658. La celda es una aproximación regional.",
+      "source": "https://danmarkshistorien.lex.dk/Roskildefreden,_26._februar_1658"
+    },
+    {
+      "territory": "Reino de Dinamarca",
+      "id": "Lund",
+      "action": "add",
+      "from": 1400,
+      "through": 1650,
+      "reason": "Núcleo de Escania bajo la Corona danesa durante el intervalo revisado; la cesión a Suecia se produjo en 1658. La celda es una aproximación regional.",
+      "source": "https://danmarkshistorien.lex.dk/Roskildefreden,_26._februar_1658"
+    },
+    {
+      "territory": "Reino de Dinamarca",
+      "id": "Malmo",
+      "action": "add",
+      "from": 1400,
+      "through": 1650,
+      "reason": "Núcleo de Escania bajo la Corona danesa durante el intervalo revisado; la cesión a Suecia se produjo en 1658. La celda es una aproximación regional.",
+      "source": "https://danmarkshistorien.lex.dk/Roskildefreden,_26._februar_1658"
+    },
+    {
+      "territory": "Reino de Dinamarca",
+      "id": "Osby",
+      "action": "add",
+      "from": 1400,
+      "through": 1650,
+      "reason": "Núcleo de Escania bajo la Corona danesa durante el intervalo revisado; la cesión a Suecia se produjo en 1658. La celda es una aproximación regional.",
+      "source": "https://danmarkshistorien.lex.dk/Roskildefreden,_26._februar_1658"
+    },
+    {
+      "territory": "Reino de Dinamarca",
+      "id": "Gladsax",
+      "action": "add",
+      "from": 1400,
+      "through": 1650,
+      "reason": "Núcleo de Escania bajo la Corona danesa durante el intervalo revisado; la cesión a Suecia se produjo en 1658. La celda es una aproximación regional.",
+      "source": "https://danmarkshistorien.lex.dk/Roskildefreden,_26._februar_1658"
+    },
+    {
+      "territory": "Bosnia y Herzegovina otomanas",
+      "id": "Jajce",
+      "action": "add",
+      "from": 1527,
+      "through": 1650,
+      "reason": "Jajce cayó en diciembre de 1527; se usa el estado al cierre del año, no se retrasa a 1528.",
+      "source": "https://www.enciklopedija.hr/clanak/jajce"
+    },
+    {
+      "territory": "Banato húngaro de Jajce",
+      "id": "Jajce",
+      "action": "add",
+      "from": 1463,
+      "through": 1526,
+      "reason": "Recuperada por Matías Corvino al final de 1463; fortaleza bajo autoridad húngara hasta su conquista otomana de 1527.",
+      "source": "https://www.enciklopedija.hr/clanak/jajce"
+    },
+    {
+      "territory": "Reino de Suecia",
+      "id": "Vyborg",
+      "action": "add",
+      "from": 1400,
+      "through": 1650,
+      "reason": "Núcleo de la fortaleza de Vyborg dentro del sistema defensivo sueco de Finlandia; no se extiende a toda Carelia ni se afirma un límite oriental exacto.",
+      "source": "https://www.kansallismuseo.fi/en/olavinlinna/historiaa"
     }
   ],
   "audit": {

@@ -18,7 +18,7 @@ function ids(name, year) {
 }
 
 test('territorial crosswalk uses only SVG IDs and never assigns one ID twice within a corridor', () => {
-  assert.equal(data.territories.length, 105);
+  assert.equal(data.territories.length, 106);
   for (let year = data.from; year <= data.through; year++) {
     for (const corridor of ['Iberia', 'Italia', 'Centroeuropa', 'Europa septentrional y oriental', 'Francia e islas británicas']) {
       const owner = new Map();

@@ -449,6 +449,28 @@ const territories = Object.entries(corridors).flatMap(([corridor, names]) => nam
     active: active[name] || null, note: notes[name] || null, versions };
 }));
 
+// Jajce remained a Hungarian frontier stronghold after the fall of the Bosnian kingdom.
+territories.push({
+  "corridor": "Hungría y Balcanes",
+  "name": "Banato húngaro de Jajce",
+  "color": "#a08545",
+  "active": {
+    "from": 1463,
+    "through": 1526,
+    "source": "https://www.enciklopedija.hr/clanak/jajce",
+    "reason": "Fortaleza y núcleo del banato recuperados por Matías Corvino en 1463; caída en diciembre de 1527."
+  },
+  "note": "Se representa solo la celda de Jajce. No se atribuye toda Bosnia a Hungría ni se dibuja el perímetro completo del banato.",
+  "versions": [
+    {
+      "from": 1400,
+      "oldIds": []
+    }
+  ]
+});
+const denmarkLayer = territories.find(t => t.name === "Reino de Dinamarca");
+denmarkLayer.note += " Incluye las celdas del núcleo de Escania, omitidas en la capa anterior.";
+
 // The permanent Atlas map needs a geometric bridge for every legacy regional
 // ID, not only the selected research corridors above. Preserve the full set of
 // IDs used by the Atlas so the app can migrate uncorridored governments too.
