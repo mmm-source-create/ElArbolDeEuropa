@@ -31,6 +31,12 @@ import CoverageDialog from '../evidence/CoverageDialog.jsx';
 import {readPreferences} from '../settings/preferences.js';
 import "./v39.css";
 import "./v40.css";
+import SegmentedControl from "../ui/SegmentedControl.jsx";
+import ActionDial from "../ui/ActionDial.jsx";
+import "./atlas-interactions.css";
+
+const VIEW_OPTIONS = [{value:'arbol',label:'Árbol'},{value:'mapa',label:'Mapa'},{value:'ambos',label:'Árbol y mapa'}];
+const BIO_OPTIONS = ['resumen','familia','coronas','historias','fuentes'].map((value,index)=>({value,label:['Resumen','Familia','Coronas','Historias','Fuentes'][index],controls:`bio-section-${value}`}));
 
 const SEARCH_DYNASTIES = [...new Set(PERSONAS.map(persona => persona.dinastia).filter(Boolean))];
 const SEARCH_TERRITORIES = Object.keys(TERRITORIOS);
@@ -378,16 +384,7 @@ export default function ExplorerView({ vm }) {
         {!modoTrabajo && (
         <div id="atlas-secondary-tools" className={`workspace-topbar-secondary${mobileToolsOpen?' is-expanded':''}`}>
           <section className="workspace-topbar-section workspace-toolbar-view workspace-toolbar-panels">
-            <details ref={viewMenuRef} className="atlas-toolbar-menu" onToggle={onToolbarMenuToggle}>
-              <summary>Vista <ChevronDown size={12} aria-hidden="true" /></summary>
-              <div className="atlas-toolbar-menu-panel" role="group" aria-label="Vista principal">
-                {[
-                  ['arbol', 'Árbol', true, false],
-                  ['mapa', 'Mapa', false, true],
-                  ['ambos', 'Árbol y mapa', true, true],
-                ].map(([key, label, arbol, mapa]) => <button key={key} type="button" aria-pressed={mostrarArbol === arbol && mostrarMapa === mapa} onClick={(event) => { setVistasActivas({ arbol, mapa }); const menu = event.currentTarget.closest('details'); menu.open = false; menu.querySelector('summary')?.focus(); }}>{label}</button>)}
-              </div>
-            </details>
+            <SegmentedControl className="atlas-view-pills" label="Vista principal" options={VIEW_OPTIONS} value={mostrarArbol && mostrarMapa ? 'ambos' : mostrarMapa ? 'mapa' : 'arbol'} onChange={value=>setVistasActivas({arbol:value!=='mapa',mapa:value!=='arbol'})}/>
             <details ref={panelsMenuRef} className="atlas-toolbar-menu atlas-panels-menu" onToggle={onToolbarMenuToggle}>
               <summary>Paneles <ChevronDown size={12} aria-hidden="true" /></summary>
               <div className="atlas-toolbar-menu-panel" role="group" aria-label="Paneles visibles">
@@ -939,9 +936,7 @@ export default function ExplorerView({ vm }) {
               <span className="panel-count">{personaBio ? "1 personaje" : "ninguno"}</span>
             </div>
             {personaBio && <nav className="bio-tabs" aria-label={`Apartados de ${personaBio.nombre}`}>
-              {[
-                ['resumen','Resumen'],['familia','Familia'],['coronas','Coronas'],['historias','Historias'],['fuentes','Fuentes'],
-              ].map(([key,label])=><button key={key} type="button" aria-current={bioSection===key ? 'location' : undefined} aria-controls={`bio-section-${key}`} onClick={()=>scrollToBioSection(key)}>{label}</button>)}
+              <SegmentedControl current="location" label="Apartados de la biografía" options={BIO_OPTIONS} value={bioSection} onChange={scrollToBioSection}/>
             </nav>}
             <div className="panel-body workspace-panel-scroll workspace-bio-scroll" ref={bioScrollRef} onScroll={updateBioSectionOnScroll}>
               {personaBio ? (
@@ -1341,6 +1336,11 @@ export default function ExplorerView({ vm }) {
         />
       )}
 
+      {!modoTrabajo && !guideOpen && !infoProyecto && <ActionDial className="atlas-quick-actions" label="Acciones del Atlas" actions={[
+        {id:'center',label:'Centrar persona',Icon:Crosshair,disabled:!seleccion,onClick:centrarSeleccion},
+        {id:'filters',label:mostrarFiltros?'Ocultar filtros':'Mostrar filtros',Icon:SlidersHorizontal,onClick:()=>alternarPanelAuxiliar('filtros')},
+        {id:'timeline',label:mostrarCronologia?'Ocultar cronología':'Mostrar cronología',Icon:List,onClick:()=>alternarPanelAuxiliar('cronologia')},
+      ]}/>}
       {guideOpen && <AtlasGuide locale={locale} onClose={closeGuide} onSelect={() => vm.growth.onSelect('CARLOS5')} onExpand={() => vm.growth.onExpand('family')} onYear={() => actualizarAnioDesdeRango(1500)} selectedId={seleccion?.id} canExpand={canAddFamily} />}
       {infoProyecto === 'cobertura' && <CoverageDialog onClose={() => setInfoProyecto(null)} />}
       {infoProyecto === 'europa' ? <React.Suspense fallback={<div className="project-modal-backdrop"><div className="project-modal"><div className="project-modal-body" role="status">Preparando Europa en este año… <button type="button" onClick={()=>setInfoProyecto(null)}>Cerrar</button></div></div></div>}>

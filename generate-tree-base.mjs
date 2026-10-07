@@ -1142,7 +1142,8 @@ async function generarCatalogosPublicos() {
     pasos: Array.isArray(historia.pasos) ? historia.pasos.length : 0,
   }));
 
-  const destacadosIds = ["FED2HOH", "EDUARDO3ING", "ISAB1CAST", "CARLOS5", "LUIS14FRA", "CATHERINE2RUS"];
+  // Puertas de distintas épocas con imágenes y créditos ya disponibles en el Atlas.
+  const destacadosIds = ["FED2HOH", "JUANAARCO", "ISAB1CAST", "CARLOS5", "JUAN3SOBIESKI", "CARLOS3ESP"];
   const personasDestacadas = destacadosIds.map(referenciaPersona).filter(Boolean);
   if (personasDestacadas.length < 6) {
     const existentes = new Set(personasDestacadas.map((p) => p.id));

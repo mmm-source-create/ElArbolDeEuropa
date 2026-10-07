@@ -1,0 +1,10 @@
+.atlas-view-pills{padding:3px;gap:0}
+.atlas-view-pills>.ui-segments-indicator{top:3px;bottom:3px}
+.atlas-view-pills>button{font-size:10px;padding:8px 12px}
+.bio-tabs .ui-segments{display:flex;width:100%;padding:3px;gap:0;border:0;border-radius:999px;overflow-x:auto;scrollbar-width:none}
+.bio-tabs .ui-segments>button{flex:1;font-size:9px;padding:8px 7px;border:0;border-radius:999px;background:transparent;line-height:1.2;min-width:0}
+.bio-tabs .ui-segments-indicator{top:3px;bottom:3px}
+.bio-tabs .ui-segments>button[aria-current="location"]{color:var(--eade-wine);background:transparent;box-shadow:none}
+.bio-tabs .ui-segments:not(:has(.ui-segments-indicator))>button[aria-current="location"]{background:var(--eade-paper-bright)}
+.atlas-quick-actions{display:none}
+@media(max-width:860px){.atlas-quick-actions{display:block}.atlas-view-pills>button{font-size:11px;padding:9px 14px}.workspace-bio-scroll{scroll-padding-bottom:85px}}

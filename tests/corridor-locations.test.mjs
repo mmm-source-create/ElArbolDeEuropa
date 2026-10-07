@@ -2,7 +2,7 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import path from 'node:path';
 import test from 'node:test';
-import { pilotLocationsFor, reviewedLayerLocations } from '../src/data/locationMapPilot.js';
+import { pilotLocationsFor, reviewedLayerLocations, reviewedLayerEvidence } from '../src/data/locationMapPilot.js';
 
 const lab = path.resolve(import.meta.dirname, '../prototypes/euv-locations');
 const data = JSON.parse(fs.readFileSync(path.join(lab, 'corridor-locations.json'), 'utf8'));
@@ -276,7 +276,7 @@ test('Balkan layers fill regional areas while keeping tributary principalities d
     for (const territory of layers) {
       for (const id of reviewedLayerLocations(data, territory, year)) {
         assert.ok(pathIds.has(id), `${id} must exist in the map in ${year}`);
-        if (/(mountain|alps|carpathian)/i.test(id)) assert.ok(data.overrides.some(item => item.territory===territory.name && item.id===id && item.from<=year && year<=item.through && item.source && item.reason) || territory.sources?.length, `${id} requires dated political evidence despite its physical-feature name`);
+        if (/(mountain|alps|carpathian)/i.test(id)) assert.ok(data.overrides.some(item => item.territory===territory.name && item.id===id && item.from<=year && year<=item.through && item.source && item.reason) || reviewedLayerEvidence(territory,year).sources?.length, `${id} requires dated political evidence despite its physical-feature name`);
         assert.ok(!owner.has(id), `${id} overlaps ${owner.get(id)} and ${territory.name} in ${year}`);
         owner.set(id, territory.name);
       }

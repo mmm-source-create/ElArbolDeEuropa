@@ -1,4 +1,4 @@
-import React, { useCallback, useMemo, useRef, useState } from "react";
+import React, { useCallback, useId, useMemo, useRef, useState } from "react";
 import {
   ArrowLeft,
   CalendarDays,
@@ -28,6 +28,9 @@ import {
 } from "./desafioEngine.jsx";
 import {PreguntaOpciones, PreguntaOrden, Explicacion} from './Question.jsx';
 import LearningSession from './LearningSession.jsx';
+import Odometer from '../ui/Odometer.jsx';
+import SegmentedControl from '../ui/SegmentedControl.jsx';
+import './desafio-interactions.css';
 import {successionBank, createChallenge, challengeUrl, readChallenge, readReview, reviewQuestions, updateReview, saveReview} from './learning.js';
 import {resumenCortoPersona} from '../utils/personPresentation.js';
 import "./desafio.css";
@@ -220,8 +223,10 @@ function fechaDiaria() {
   return new Date().toISOString().slice(0, 10);
 }
 
+const HUB_TABS = [{value:'jugar',label:'Jugar'},{value:'aprender',label:'Aprender'}];
+
 function TarjetaEstadistica({ valor, etiqueta }) {
-  return <div className="desafio-stat"><strong>{valor}</strong><span>{etiqueta}</span></div>;
+  return <div className="desafio-stat"><strong><Odometer value={valor}/></strong><span>{etiqueta}</span></div>;
 }
 
 function Corazones({ vidas }) {
@@ -236,6 +241,8 @@ export default function Desafio({ personas = [] }) {
   const byId = useMemo(() => Object.fromEntries(personas.map((p) => [p.id, p])), [personas]);
   const slugs = useMemo(() => construirSlugs(personas), [personas]);
   const personasConRetrato = useMemo(() => personas.filter((persona) => Boolean(IMAGE_VARIANTS[IMAGENES_PERSONAS[persona.id]?.archivo])), [personas]);
+  const [hubTab, setHubTab] = useState('jugar');
+  const hubId = useId();
   const [estadisticas, setEstadisticas] = useState(leerEstadisticas);
   const bank = useMemo(() => successionBank(personas), [personas]);
   const [shared] = useState(() => readChallenge(typeof window==='undefined'?'':window.location.search, bank));
@@ -745,11 +752,12 @@ export default function Desafio({ personas = [] }) {
 
         <div className="desafio-level-card">
           <span>Nivel de cronista</span>
-          <strong>{progreso.nivel}</strong>
+          <strong><Odometer value={progreso.nivel}/></strong>
           <div><b>{progreso.titulo}</b><small>{estadisticas.totalAciertos} respuestas correctas acumuladas</small></div>
         </div>
 
-        <div className="desafio-mode-grid desafio-mode-grid-v2">
+        <SegmentedControl id={hubId} tabs label="Modos del desafío" options={HUB_TABS} value={hubTab} onChange={setHubTab}/>
+        <div id={`${hubId}-panel-jugar`} role="tabpanel" aria-labelledby={`${hubId}-tab-jugar`} hidden={hubTab!=='jugar'} className="desafio-mode-grid desafio-mode-grid-v2">
           <button type="button" className="desafio-mode-card is-path" onClick={iniciarCamino}>
             <span className="desafio-mode-icon"><Sparkles size={21} /></span>
             <em>Modo principal</em>
@@ -783,7 +791,7 @@ export default function Desafio({ personas = [] }) {
           </button>
         </div>
 
-        <div className="desafio-mode-grid desafio-learning-grid">
+        <div id={`${hubId}-panel-aprender`} role="tabpanel" aria-labelledby={`${hubId}-tab-aprender`} hidden={hubTab!=='aprender'} className="desafio-mode-grid desafio-learning-grid">
           <button type="button" className="desafio-mode-card" onClick={()=>startLesson('sucesiones')}><span className="desafio-mode-icon"><Swords size={21}/></span><em>Historia documentada</em><strong>Resolver una sucesión</strong><span>5 preguntas · personas y motivos</span><small>Herencia, elección, regencia o conquista: descubre cómo cambió el gobierno y consulta su explicación.</small></button>
           <button type="button" className="desafio-mode-card" onClick={()=>startLesson('repaso')}><span className="desafio-mode-icon"><RotateCcw size={21}/></span><em>Práctica sin presión</em><strong>Repasar errores</strong><span>{review.length} preguntas pendientes</span><small>Vuelve a las preguntas que te han costado. Sin vidas, puntos ni cambios en tus récords.</small></button>
           <button type="button" className="desafio-mode-card" onClick={()=>startLesson('compartido')}><span className="desafio-mode-icon"><Share2 size={21}/></span><em>Para jugar con amigos</em><strong>Desafío compartido</strong><span>Un enlace · la misma partida</span><small>Comparte cinco preguntas de sucesiones en el mismo orden y compara los aciertos.</small></button>

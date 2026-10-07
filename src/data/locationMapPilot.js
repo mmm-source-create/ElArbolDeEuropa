@@ -5,6 +5,7 @@ import {authorityExtensionFor} from './atlasAuthorityExtensions.js';
 import {applyMapBorderCorrections} from './mapBorderCorrections.js';
 import {authorityMapScope} from './authorityMapScopes.js';
 import {chronologyJurisdictionsFor, appendChronologyJurisdictions} from './atlasChronologyRoutes.js';
+import {regionalExtentJurisdictions, supersededRegionalLayers} from './regionalExtentRoutes.js';
 
 const layerIndexes = new WeakMap();
 export function reviewedMapLayers(data) {
@@ -28,7 +29,7 @@ function layerIndex(data) {
 
 export function pilotJurisdictionsFor(territory, year, personId = null) {
   const chronological=chronologyJurisdictionsFor(territory,year,personId);
-  return appendChronologyJurisdictions(chronological ?? basePilotJurisdictionsFor(territory,year,personId),territory,personId);
+  return regionalExtentJurisdictions(appendChronologyJurisdictions(chronological ?? basePilotJurisdictionsFor(territory,year,personId),territory,personId),territory,year,personId);
 }
 
 function basePilotJurisdictionsFor(territory, year, personId) {
@@ -265,7 +266,8 @@ export function pilotBurgundianGovernmentsFor(data, personId, year) {
 
 export function pilotLocationContext(data, id, year, personId = null) {
   if (!data || !id || !Number.isInteger(year) || year < data.from || year > data.through) return [];
-  const entries = reviewedMapLayers(data);
+  const superseded = supersededRegionalLayers(data, year);
+  const entries = reviewedMapLayers(data).filter(entry => !superseded.has(entry.name));
   const corridor = entries.flatMap(entry => {
     if (!reviewedLayerLocations(data, entry, year).includes(id)) return [];
     const extension = authorityExtensionFor(entry.name, year);
