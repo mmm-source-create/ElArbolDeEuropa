@@ -1,0 +1,448 @@
+{
+  "from": 1200,
+  "through": 1800,
+  "reviewedAt": "2026-10-08",
+  "method": "Cada año de las 15 identidades prioritarias. El laboratorio y los mandatos personales se comprueban por separado. Se reconocen los gobiernos de Austria Interior que incluyen sus provincias, sin inventarles mandatos individuales. Un año sin gobernante documentado no prueba la extinción del territorio; tener alguna geometría no acredita cobertura completa.",
+  "counts": {
+    "identities": 15,
+    "labContinuityErrors": 0,
+    "identitiesWithMissingPersonalGeometry": 0,
+    "identitiesWithUnrecordedMandateYears": 13
+  },
+  "territories": [
+    {
+      "identity": "Francia",
+      "title": "Reino de Francia",
+      "from": 1200,
+      "through": 1800,
+      "lab": {
+        "missingYears": 0,
+        "missingIntervals": [],
+        "minCells": 113,
+        "maxCells": 441,
+        "limitedCoreIntervals": [
+          {
+            "from": 1200,
+            "through": 1800
+          }
+        ]
+      },
+      "personal": {
+        "recordedMandates": 29,
+        "yearsWithNoRecordedEffectiveMandate": 8,
+        "noMandateIntervals": [
+          {
+            "from": 1793,
+            "through": 1800
+          }
+        ],
+        "yearsWithMandatesButNoGeometry": 0,
+        "missingGeometryIntervals": []
+      }
+    },
+    {
+      "identity": "Bohemia",
+      "title": "Reino de Bohemia",
+      "from": 1200,
+      "through": 1800,
+      "lab": {
+        "missingYears": 0,
+        "missingIntervals": [],
+        "minCells": 39,
+        "maxCells": 40,
+        "limitedCoreIntervals": []
+      },
+      "personal": {
+        "recordedMandates": 35,
+        "yearsWithNoRecordedEffectiveMandate": 13,
+        "noMandateIntervals": [
+          {
+            "from": 1440,
+            "through": 1452
+          }
+        ],
+        "yearsWithMandatesButNoGeometry": 0,
+        "missingGeometryIntervals": []
+      }
+    },
+    {
+      "identity": "Moravia",
+      "title": "Margraviato de Moravia",
+      "from": 1200,
+      "through": 1800,
+      "lab": {
+        "missingYears": 0,
+        "missingIntervals": [],
+        "minCells": 15,
+        "maxCells": 16,
+        "limitedCoreIntervals": []
+      },
+      "personal": {
+        "recordedMandates": 35,
+        "yearsWithNoRecordedEffectiveMandate": 68,
+        "noMandateIntervals": [
+          {
+            "from": 1279,
+            "through": 1333
+          },
+          {
+            "from": 1440,
+            "through": 1452
+          }
+        ],
+        "yearsWithMandatesButNoGeometry": 0,
+        "missingGeometryIntervals": []
+      }
+    },
+    {
+      "identity": "Dinamarca",
+      "title": "Reino de Dinamarca",
+      "from": 1200,
+      "through": 1800,
+      "lab": {
+        "missingYears": 0,
+        "missingIntervals": [],
+        "minCells": 28,
+        "maxCells": 45,
+        "limitedCoreIntervals": []
+      },
+      "personal": {
+        "recordedMandates": 29,
+        "yearsWithNoRecordedEffectiveMandate": 7,
+        "noMandateIntervals": [
+          {
+            "from": 1333,
+            "through": 1339
+          }
+        ],
+        "yearsWithMandatesButNoGeometry": 0,
+        "missingGeometryIntervals": []
+      }
+    },
+    {
+      "identity": "Noruega",
+      "title": "Reino de Noruega",
+      "from": 1200,
+      "through": 1800,
+      "lab": {
+        "missingYears": 0,
+        "missingIntervals": [],
+        "minCells": 92,
+        "maxCells": 136,
+        "limitedCoreIntervals": []
+      },
+      "personal": {
+        "recordedMandates": 24,
+        "yearsWithNoRecordedEffectiveMandate": 22,
+        "noMandateIntervals": [
+          {
+            "from": 1200,
+            "through": 1216
+          },
+          {
+            "from": 1449,
+            "through": 1449
+          },
+          {
+            "from": 1482,
+            "through": 1482
+          },
+          {
+            "from": 1534,
+            "through": 1536
+          }
+        ],
+        "yearsWithMandatesButNoGeometry": 0,
+        "missingGeometryIntervals": []
+      }
+    },
+    {
+      "identity": "Suecia",
+      "title": "Reino de Suecia",
+      "from": 1200,
+      "through": 1800,
+      "lab": {
+        "missingYears": 0,
+        "missingIntervals": [],
+        "minCells": 118,
+        "maxCells": 229,
+        "limitedCoreIntervals": []
+      },
+      "personal": {
+        "recordedMandates": 50,
+        "yearsWithNoRecordedEffectiveMandate": 0,
+        "noMandateIntervals": [],
+        "yearsWithMandatesButNoGeometry": 0,
+        "missingGeometryIntervals": []
+      }
+    },
+    {
+      "identity": "Inglaterra",
+      "title": "Reino de Inglaterra",
+      "from": 1200,
+      "through": 1706,
+      "lab": {
+        "missingYears": 0,
+        "missingIntervals": [],
+        "minCells": 160,
+        "maxCells": 189,
+        "limitedCoreIntervals": []
+      },
+      "personal": {
+        "recordedMandates": 28,
+        "yearsWithNoRecordedEffectiveMandate": 10,
+        "noMandateIntervals": [
+          {
+            "from": 1650,
+            "through": 1659
+          }
+        ],
+        "yearsWithMandatesButNoGeometry": 0,
+        "missingGeometryIntervals": []
+      }
+    },
+    {
+      "identity": "Escocia",
+      "title": "Reino de Escocia",
+      "from": 1200,
+      "through": 1706,
+      "lab": {
+        "missingYears": 0,
+        "missingIntervals": [],
+        "minCells": 60,
+        "maxCells": 67,
+        "limitedCoreIntervals": []
+      },
+      "personal": {
+        "recordedMandates": 23,
+        "yearsWithNoRecordedEffectiveMandate": 22,
+        "noMandateIntervals": [
+          {
+            "from": 1287,
+            "through": 1291
+          },
+          {
+            "from": 1297,
+            "through": 1305
+          },
+          {
+            "from": 1652,
+            "through": 1659
+          }
+        ],
+        "yearsWithMandatesButNoGeometry": 0,
+        "missingGeometryIntervals": []
+      }
+    },
+    {
+      "identity": "Irlanda",
+      "title": "Señorío de Irlanda",
+      "from": 1200,
+      "through": 1800,
+      "lab": {
+        "missingYears": 0,
+        "missingIntervals": [],
+        "minCells": 9,
+        "maxCells": 85,
+        "limitedCoreIntervals": [
+          {
+            "from": 1200,
+            "through": 1650
+          }
+        ]
+      },
+      "personal": {
+        "recordedMandates": 14,
+        "yearsWithNoRecordedEffectiveMandate": 352,
+        "noMandateIntervals": [
+          {
+            "from": 1200,
+            "through": 1541
+          },
+          {
+            "from": 1650,
+            "through": 1659
+          }
+        ],
+        "yearsWithMandatesButNoGeometry": 0,
+        "missingGeometryIntervals": []
+      }
+    },
+    {
+      "identity": "Gran Bretaña",
+      "title": "Reino de Gran Bretaña",
+      "from": 1707,
+      "through": 1800,
+      "lab": {
+        "missingYears": 0,
+        "missingIntervals": [],
+        "minCells": 255,
+        "maxCells": 255,
+        "limitedCoreIntervals": []
+      },
+      "personal": {
+        "recordedMandates": 4,
+        "yearsWithNoRecordedEffectiveMandate": 0,
+        "noMandateIntervals": [],
+        "yearsWithMandatesButNoGeometry": 0,
+        "missingGeometryIntervals": []
+      }
+    },
+    {
+      "identity": "Polonia",
+      "title": "Corona de Polonia",
+      "from": 1320,
+      "through": 1794,
+      "lab": {
+        "missingYears": 0,
+        "missingIntervals": [],
+        "minCells": 89,
+        "maxCells": 261,
+        "limitedCoreIntervals": []
+      },
+      "personal": {
+        "recordedMandates": 24,
+        "yearsWithNoRecordedEffectiveMandate": 3,
+        "noMandateIntervals": [
+          {
+            "from": 1383,
+            "through": 1383
+          },
+          {
+            "from": 1445,
+            "through": 1446
+          }
+        ],
+        "yearsWithMandatesButNoGeometry": 0,
+        "missingGeometryIntervals": []
+      }
+    },
+    {
+      "identity": "Lituania",
+      "title": "Reino de Lituania",
+      "from": 1253,
+      "through": 1794,
+      "lab": {
+        "missingYears": 0,
+        "missingIntervals": [],
+        "minCells": 52,
+        "maxCells": 243,
+        "limitedCoreIntervals": [
+          {
+            "from": 1253,
+            "through": 1399
+          }
+        ]
+      },
+      "personal": {
+        "recordedMandates": 21,
+        "yearsWithNoRecordedEffectiveMandate": 133,
+        "noMandateIntervals": [
+          {
+            "from": 1253,
+            "through": 1376
+          },
+          {
+            "from": 1431,
+            "through": 1439
+          }
+        ],
+        "yearsWithMandatesButNoGeometry": 0,
+        "missingGeometryIntervals": []
+      }
+    },
+    {
+      "identity": "Carintia",
+      "title": "Ducado de Carintia",
+      "from": 1200,
+      "through": 1800,
+      "lab": {
+        "missingYears": 0,
+        "missingIntervals": [],
+        "minCells": 13,
+        "maxCells": 13,
+        "limitedCoreIntervals": []
+      },
+      "personal": {
+        "recordedMandates": 22,
+        "yearsWithNoRecordedEffectiveMandate": 132,
+        "noMandateIntervals": [
+          {
+            "from": 1200,
+            "through": 1294
+          },
+          {
+            "from": 1387,
+            "through": 1423
+          }
+        ],
+        "yearsWithMandatesButNoGeometry": 0,
+        "missingGeometryIntervals": []
+      }
+    },
+    {
+      "identity": "Carniola",
+      "title": "Señorío de Carniola",
+      "from": 1200,
+      "through": 1800,
+      "lab": {
+        "missingYears": 0,
+        "missingIntervals": [],
+        "minCells": 9,
+        "maxCells": 9,
+        "limitedCoreIntervals": []
+      },
+      "personal": {
+        "recordedMandates": 22,
+        "yearsWithNoRecordedEffectiveMandate": 172,
+        "noMandateIntervals": [
+          {
+            "from": 1200,
+            "through": 1334
+          },
+          {
+            "from": 1387,
+            "through": 1423
+          }
+        ],
+        "yearsWithMandatesButNoGeometry": 0,
+        "missingGeometryIntervals": []
+      }
+    },
+    {
+      "identity": "Estiria",
+      "title": "Ducado de Estiria",
+      "from": 1200,
+      "through": 1800,
+      "lab": {
+        "missingYears": 0,
+        "missingIntervals": [],
+        "minCells": 22,
+        "maxCells": 22,
+        "limitedCoreIntervals": []
+      },
+      "personal": {
+        "recordedMandates": 24,
+        "yearsWithNoRecordedEffectiveMandate": 72,
+        "noMandateIntervals": [
+          {
+            "from": 1247,
+            "through": 1281
+          },
+          {
+            "from": 1387,
+            "through": 1423
+          }
+        ],
+        "yearsWithMandatesButNoGeometry": 0,
+        "missingGeometryIntervals": []
+      }
+    }
+  ],
+  "limitations": [
+    "Las celdas modernas aproximan superficies históricas. Las curvas fronterizas exactas y los enclaves menores no están reconstruidos.",
+    "El Pale irlandés medieval y el núcleo lituano temprano siguen siendo parciales; no se declara cobertura histórica completa de 1200–1400.",
+    "Las ocupaciones temporales y la soberanía superior no convierten una región en un Estado nuevo.",
+    "Faltan fases menores de la guerra de los Cien Años, la ocupación rusa de Finlandia y los repartos de la Mancomunidad; deben ampliarse como episodios de control, no duplicando las entidades."
+  ]
+}

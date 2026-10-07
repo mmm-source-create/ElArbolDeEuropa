@@ -2,17 +2,17 @@
   "scope": {
     "from": 1200,
     "through": 1800,
-    "catalogueTerritories": 263,
+    "catalogueTerritories": 261,
     "svgLocations": 7672
   },
   "method": "Se comprueba cada año de cada mandato marcado efectivo dentro de 1200–1800 mediante la misma autoridad y correspondencia que usa el mapa. Una entidad se considera representada si al menos un mandato tiene alguna location SVG válida; esto no acredita el contorno completo. Los rangos sin geometría no se interpretan automáticamente como errores históricos.",
   "counts": {
     "unrepresentedEntities": 53,
-    "representedEntities": 131,
-    "partialMandateGeometry": 54,
-    "partialEntireTerritoryYears": 52,
+    "representedEntities": 129,
+    "partialMandateGeometry": 52,
+    "partialEntireTerritoryYears": 50,
     "explicitLimitedCores": 44,
-    "partiallyRepresentedUnique": 65,
+    "partiallyRepresentedUnique": 64,
     "imperialLegalFrameExclusions": 2,
     "governmentsOnlyOutsidePeriod": 4,
     "titlesOnlyInsidePeriod": 1,
@@ -13448,6 +13448,63 @@
       ]
     },
     {
+      "territory": "Condado de Bihar",
+      "status": "represented",
+      "counts": {
+        "effectiveMandatesAllTime": 1,
+        "effectiveMandatesInScope": 1,
+        "nonpaintingMandatesInScope": 0,
+        "locations": 3,
+        "yearsWithGovernment": 6,
+        "yearsWithGeometry": 5,
+        "yearsWithoutGeometry": 1,
+        "mandatesWithSomeMissingGeometry": 1,
+        "mandatesEntirelyWithoutGeometry": 0
+      },
+      "hasMandateGeometryGaps": true,
+      "hasEntireTerritoryYearGaps": true,
+      "limitedCore": true,
+      "missingGeometryIntervals": [
+        {
+          "from": 1534,
+          "through": 1534
+        }
+      ],
+      "layers": [
+        {
+          "name": "Gobierno de Bihar de Imre Czibak",
+          "note": "Núcleos con gobierno propio documentado. La tributación y la delegación se identifican en la ficha; los polígonos son aproximaciones cartográficas y no atribuyen el resto del país."
+        }
+      ],
+      "governments": [
+        {
+          "personId": "IMRECZIBAK",
+          "personName": "Imre Czibak",
+          "government": {
+            "territory": "Condado de Bihar",
+            "title": "Gobernador",
+            "from": 1529,
+            "through": 1534,
+            "class": "gobierno",
+            "condition": "gobierno delegado"
+          },
+          "auditFrom": 1529,
+          "auditThrough": 1534,
+          "yearsWithGeometry": 5,
+          "yearsWithoutGeometry": 1,
+          "locations": 3,
+          "missingGeometryIntervals": [
+            {
+              "from": 1534,
+              "through": 1534
+            }
+          ]
+        }
+      ],
+      "nonpaintingGovernments": [],
+      "outsidePeriodGovernments": []
+    },
+    {
       "territory": "Condado de Borgoña",
       "status": "represented",
       "counts": {
@@ -13767,6 +13824,75 @@
           "auditThrough": 1482
         }
       ],
+      "outsidePeriodGovernments": []
+    },
+    {
+      "territory": "Condado de Temes",
+      "status": "represented",
+      "counts": {
+        "effectiveMandatesAllTime": 2,
+        "effectiveMandatesInScope": 2,
+        "nonpaintingMandatesInScope": 0,
+        "locations": 3,
+        "yearsWithGovernment": 12,
+        "yearsWithGeometry": 12,
+        "yearsWithoutGeometry": 0,
+        "mandatesWithSomeMissingGeometry": 0,
+        "mandatesEntirelyWithoutGeometry": 0
+      },
+      "hasMandateGeometryGaps": false,
+      "hasEntireTerritoryYearGaps": false,
+      "limitedCore": true,
+      "missingGeometryIntervals": [],
+      "layers": [
+        {
+          "name": "Gobierno de Temes de Péter Petrovics",
+          "note": "Núcleos con gobierno propio documentado. La tributación y la delegación se identifican en la ficha; los polígonos son aproximaciones cartográficas y no atribuyen el resto del país."
+        },
+        {
+          "name": "Gobierno de Temesvár de Bálint Török",
+          "note": "Núcleos con gobierno propio documentado. La tributación y la delegación se identifican en la ficha; los polígonos son aproximaciones cartográficas y no atribuyen el resto del país."
+        }
+      ],
+      "governments": [
+        {
+          "personId": "BALINTTOROK",
+          "personName": "Bálint Török",
+          "government": {
+            "territory": "Condado de Temes",
+            "title": "Gobernador",
+            "from": 1529,
+            "through": 1530,
+            "class": "gobierno",
+            "condition": "gobierno delegado"
+          },
+          "auditFrom": 1529,
+          "auditThrough": 1530,
+          "yearsWithGeometry": 2,
+          "yearsWithoutGeometry": 0,
+          "locations": 1,
+          "missingGeometryIntervals": []
+        },
+        {
+          "personId": "PETERPETROVICS",
+          "personName": "Péter Petrovics",
+          "government": {
+            "territory": "Condado de Temes",
+            "title": "Gobernador",
+            "from": 1541,
+            "through": 1550,
+            "class": "gobierno",
+            "condition": "gobierno delegado"
+          },
+          "auditFrom": 1541,
+          "auditThrough": 1550,
+          "yearsWithGeometry": 10,
+          "yearsWithoutGeometry": 0,
+          "locations": 3,
+          "missingGeometryIntervals": []
+        }
+      ],
+      "nonpaintingGovernments": [],
       "outsidePeriodGovernments": []
     },
     {
@@ -14687,481 +14813,6 @@
       ]
     },
     {
-      "territory": "Dinamarca",
-      "status": "represented",
-      "counts": {
-        "effectiveMandatesAllTime": 21,
-        "effectiveMandatesInScope": 20,
-        "nonpaintingMandatesInScope": 0,
-        "locations": 46,
-        "yearsWithGovernment": 471,
-        "yearsWithGeometry": 251,
-        "yearsWithoutGeometry": 220,
-        "mandatesWithSomeMissingGeometry": 12,
-        "mandatesEntirelyWithoutGeometry": 9
-      },
-      "hasMandateGeometryGaps": true,
-      "hasEntireTerritoryYearGaps": true,
-      "limitedCore": false,
-      "missingGeometryIntervals": [
-        {
-          "from": 1241,
-          "through": 1250
-        },
-        {
-          "from": 1340,
-          "through": 1399
-        },
-        {
-          "from": 1651,
-          "through": 1800
-        }
-      ],
-      "layers": [
-        {
-          "name": "Ösel bajo Dinamarca",
-          "note": "Solo Kuressaare como marcador de la posesión danesa de Ösel entre 1559 y 1644; no es un mapa de la isla."
-        },
-        {
-          "name": "Reino de Dinamarca",
-          "note": "El reino danés se dibuja separado de Noruega, Schleswig y Holstein. La revisión visual incluye Escania y las celdas interiores de Jutlandia omitidas por el cruce entre provincias. Halland y Gotland salen en 1645; Blekinge permanece danesa hasta después del corte del prototipo. Incluye las celdas del núcleo de Escania, omitidas en la capa anterior."
-        }
-      ],
-      "governments": [
-        {
-          "personId": "CRISTIAN2DIN",
-          "personName": "Cristián II de Dinamarca",
-          "government": {
-            "territory": "Dinamarca",
-            "title": "Rey",
-            "from": 1513,
-            "through": 1523,
-            "class": "reinado",
-            "condition": "efectivo"
-          },
-          "auditFrom": 1513,
-          "auditThrough": 1523,
-          "yearsWithGeometry": 11,
-          "yearsWithoutGeometry": 0,
-          "locations": 45,
-          "missingGeometryIntervals": []
-        },
-        {
-          "personId": "VALDEMAR4DIN",
-          "personName": "Valdemar IV de Dinamarca",
-          "government": {
-            "territory": "Dinamarca",
-            "title": "Rey",
-            "from": 1340,
-            "through": 1375,
-            "class": "reinado",
-            "condition": "efectivo"
-          },
-          "auditFrom": 1340,
-          "auditThrough": 1375,
-          "yearsWithGeometry": 0,
-          "yearsWithoutGeometry": 36,
-          "locations": 0,
-          "missingGeometryIntervals": [
-            {
-              "from": 1340,
-              "through": 1375
-            }
-          ]
-        },
-        {
-          "personId": "MARGARITA1NORD",
-          "personName": "Margarita I de Dinamarca",
-          "government": {
-            "territory": "Dinamarca",
-            "title": "Regente",
-            "from": 1376,
-            "through": 1387,
-            "class": "regencia",
-            "condition": "regencia"
-          },
-          "auditFrom": 1376,
-          "auditThrough": 1387,
-          "yearsWithGeometry": 0,
-          "yearsWithoutGeometry": 12,
-          "locations": 0,
-          "missingGeometryIntervals": [
-            {
-              "from": 1376,
-              "through": 1387
-            }
-          ]
-        },
-        {
-          "personId": "MARGARITA1NORD",
-          "personName": "Margarita I de Dinamarca",
-          "government": {
-            "territory": "Dinamarca",
-            "title": "Reina",
-            "from": 1387,
-            "through": 1412,
-            "class": "reinado",
-            "condition": "corregente"
-          },
-          "auditFrom": 1387,
-          "auditThrough": 1412,
-          "yearsWithGeometry": 13,
-          "yearsWithoutGeometry": 13,
-          "locations": 45,
-          "missingGeometryIntervals": [
-            {
-              "from": 1387,
-              "through": 1399
-            }
-          ]
-        },
-        {
-          "personId": "ERICOPOMERANIA",
-          "personName": "Erik de Pomerania",
-          "government": {
-            "territory": "Dinamarca",
-            "title": "Rey",
-            "from": 1396,
-            "through": 1439,
-            "class": "reinado",
-            "condition": "efectivo"
-          },
-          "auditFrom": 1396,
-          "auditThrough": 1439,
-          "yearsWithGeometry": 40,
-          "yearsWithoutGeometry": 4,
-          "locations": 45,
-          "missingGeometryIntervals": [
-            {
-              "from": 1396,
-              "through": 1399
-            }
-          ]
-        },
-        {
-          "personId": "CRISTOBALBAVSUE",
-          "personName": "Cristóbal de Baviera",
-          "government": {
-            "territory": "Dinamarca",
-            "title": "Rey",
-            "from": 1440,
-            "through": 1448,
-            "class": "reinado",
-            "condition": "efectivo"
-          },
-          "auditFrom": 1440,
-          "auditThrough": 1448,
-          "yearsWithGeometry": 9,
-          "yearsWithoutGeometry": 0,
-          "locations": 45,
-          "missingGeometryIntervals": []
-        },
-        {
-          "personId": "CRISTIAN1NORD",
-          "personName": "Cristián I de Dinamarca",
-          "government": {
-            "territory": "Dinamarca",
-            "title": "Rey",
-            "from": 1448,
-            "through": 1481,
-            "class": "reinado",
-            "condition": "efectivo"
-          },
-          "auditFrom": 1448,
-          "auditThrough": 1481,
-          "yearsWithGeometry": 34,
-          "yearsWithoutGeometry": 0,
-          "locations": 45,
-          "missingGeometryIntervals": []
-        },
-        {
-          "personId": "JUAN2NORD",
-          "personName": "Juan de Dinamarca",
-          "government": {
-            "territory": "Dinamarca",
-            "title": "Rey",
-            "from": 1481,
-            "through": 1513,
-            "class": "reinado",
-            "condition": "efectivo"
-          },
-          "auditFrom": 1481,
-          "auditThrough": 1513,
-          "yearsWithGeometry": 33,
-          "yearsWithoutGeometry": 0,
-          "locations": 45,
-          "missingGeometryIntervals": []
-        },
-        {
-          "personId": "FRED1DEN",
-          "personName": "Federico I de Dinamarca",
-          "government": {
-            "territory": "Dinamarca",
-            "title": "Rey",
-            "from": 1523,
-            "through": 1533,
-            "class": "reinado",
-            "condition": "efectivo"
-          },
-          "auditFrom": 1523,
-          "auditThrough": 1533,
-          "yearsWithGeometry": 11,
-          "yearsWithoutGeometry": 0,
-          "locations": 45,
-          "missingGeometryIntervals": []
-        },
-        {
-          "personId": "CHRISTIAN3DEN",
-          "personName": "Cristián III de Dinamarca",
-          "government": {
-            "territory": "Dinamarca",
-            "title": "Rey",
-            "from": 1534,
-            "through": 1559,
-            "class": "reinado",
-            "condition": "efectivo"
-          },
-          "auditFrom": 1534,
-          "auditThrough": 1559,
-          "yearsWithGeometry": 26,
-          "yearsWithoutGeometry": 0,
-          "locations": 46,
-          "missingGeometryIntervals": []
-        },
-        {
-          "personId": "FRED2DEN",
-          "personName": "Federico II de Dinamarca",
-          "government": {
-            "territory": "Dinamarca",
-            "title": "Rey",
-            "from": 1559,
-            "through": 1588,
-            "class": "reinado",
-            "condition": "efectivo"
-          },
-          "auditFrom": 1559,
-          "auditThrough": 1588,
-          "yearsWithGeometry": 30,
-          "yearsWithoutGeometry": 0,
-          "locations": 46,
-          "missingGeometryIntervals": []
-        },
-        {
-          "personId": "CHRISTIAN4DEN",
-          "personName": "Cristián IV de Dinamarca",
-          "government": {
-            "territory": "Dinamarca",
-            "title": "Rey",
-            "from": 1588,
-            "through": 1648,
-            "class": "reinado",
-            "condition": "efectivo"
-          },
-          "auditFrom": 1588,
-          "auditThrough": 1648,
-          "yearsWithGeometry": 61,
-          "yearsWithoutGeometry": 0,
-          "locations": 46,
-          "missingGeometryIntervals": []
-        },
-        {
-          "personId": "FRED3DEN",
-          "personName": "Federico III de Dinamarca",
-          "government": {
-            "territory": "Dinamarca",
-            "title": "Rey",
-            "from": 1648,
-            "through": 1670,
-            "class": "reinado",
-            "condition": "efectivo"
-          },
-          "auditFrom": 1648,
-          "auditThrough": 1670,
-          "yearsWithGeometry": 3,
-          "yearsWithoutGeometry": 20,
-          "locations": 38,
-          "missingGeometryIntervals": [
-            {
-              "from": 1651,
-              "through": 1670
-            }
-          ]
-        },
-        {
-          "personId": "CHRISTIAN5DEN",
-          "personName": "Cristián V de Dinamarca",
-          "government": {
-            "territory": "Dinamarca",
-            "title": "Rey",
-            "from": 1670,
-            "through": 1699,
-            "class": "reinado",
-            "condition": "efectivo"
-          },
-          "auditFrom": 1670,
-          "auditThrough": 1699,
-          "yearsWithGeometry": 0,
-          "yearsWithoutGeometry": 30,
-          "locations": 0,
-          "missingGeometryIntervals": [
-            {
-              "from": 1670,
-              "through": 1699
-            }
-          ]
-        },
-        {
-          "personId": "FRED4DEN",
-          "personName": "Federico IV de Dinamarca",
-          "government": {
-            "territory": "Dinamarca",
-            "title": "Rey",
-            "from": 1699,
-            "through": 1730,
-            "class": "reinado",
-            "condition": "efectivo"
-          },
-          "auditFrom": 1699,
-          "auditThrough": 1730,
-          "yearsWithGeometry": 0,
-          "yearsWithoutGeometry": 32,
-          "locations": 0,
-          "missingGeometryIntervals": [
-            {
-              "from": 1699,
-              "through": 1730
-            }
-          ]
-        },
-        {
-          "personId": "CHRISTIAN6DEN",
-          "personName": "Cristián VI de Dinamarca",
-          "government": {
-            "territory": "Dinamarca",
-            "title": "Rey",
-            "from": 1730,
-            "through": 1746,
-            "class": "reinado",
-            "condition": "efectivo"
-          },
-          "auditFrom": 1730,
-          "auditThrough": 1746,
-          "yearsWithGeometry": 0,
-          "yearsWithoutGeometry": 17,
-          "locations": 0,
-          "missingGeometryIntervals": [
-            {
-              "from": 1730,
-              "through": 1746
-            }
-          ]
-        },
-        {
-          "personId": "FRED5DEN",
-          "personName": "Federico V de Dinamarca",
-          "government": {
-            "territory": "Dinamarca",
-            "title": "Rey",
-            "from": 1746,
-            "through": 1766,
-            "class": "reinado",
-            "condition": "efectivo"
-          },
-          "auditFrom": 1746,
-          "auditThrough": 1766,
-          "yearsWithGeometry": 0,
-          "yearsWithoutGeometry": 21,
-          "locations": 0,
-          "missingGeometryIntervals": [
-            {
-              "from": 1746,
-              "through": 1766
-            }
-          ]
-        },
-        {
-          "personId": "CHRISTIAN7DEN",
-          "personName": "Cristián VII de Dinamarca",
-          "government": {
-            "territory": "Dinamarca",
-            "title": "Rey",
-            "from": 1766,
-            "through": 1808,
-            "class": "reinado",
-            "condition": "efectivo"
-          },
-          "auditFrom": 1766,
-          "auditThrough": 1800,
-          "yearsWithGeometry": 0,
-          "yearsWithoutGeometry": 35,
-          "locations": 0,
-          "missingGeometryIntervals": [
-            {
-              "from": 1766,
-              "through": 1800
-            }
-          ]
-        },
-        {
-          "personId": "ERIK4DEN",
-          "personName": "Erik IV de Dinamarca",
-          "government": {
-            "territory": "Dinamarca",
-            "title": "Rey",
-            "from": 1241,
-            "through": 1250,
-            "class": "reinado",
-            "condition": "efectivo"
-          },
-          "auditFrom": 1241,
-          "auditThrough": 1250,
-          "yearsWithGeometry": 0,
-          "yearsWithoutGeometry": 10,
-          "locations": 0,
-          "missingGeometryIntervals": [
-            {
-              "from": 1241,
-              "through": 1250
-            }
-          ]
-        },
-        {
-          "personId": "OLAF2NORD",
-          "personName": "Olaf II de Dinamarca y IV de Noruega",
-          "government": {
-            "territory": "Dinamarca",
-            "title": "Rey",
-            "from": 1376,
-            "through": 1387,
-            "class": "reinado",
-            "condition": "efectivo"
-          },
-          "auditFrom": 1376,
-          "auditThrough": 1387,
-          "yearsWithGeometry": 0,
-          "yearsWithoutGeometry": 12,
-          "locations": 0,
-          "missingGeometryIntervals": [
-            {
-              "from": 1376,
-              "through": 1387
-            }
-          ]
-        }
-      ],
-      "nonpaintingGovernments": [],
-      "outsidePeriodGovernments": [
-        {
-          "personId": "FRED6DEN",
-          "personName": "Federico VI de Dinamarca",
-          "title": "Rey",
-          "from": 1808,
-          "through": 1839,
-          "condition": "efectivo"
-        }
-      ]
-    },
-    {
       "territory": "Epiro de los Tocco",
       "status": "represented",
       "counts": {
@@ -15258,40 +14909,20 @@
       "territory": "Escocia",
       "status": "represented",
       "counts": {
-        "effectiveMandatesAllTime": 25,
-        "effectiveMandatesInScope": 25,
+        "effectiveMandatesAllTime": 26,
+        "effectiveMandatesInScope": 26,
         "nonpaintingMandatesInScope": 2,
         "locations": 67,
-        "yearsWithGovernment": 568,
-        "yearsWithGeometry": 251,
-        "yearsWithoutGeometry": 317,
-        "mandatesWithSomeMissingGeometry": 16,
-        "mandatesEntirelyWithoutGeometry": 14
+        "yearsWithGovernment": 572,
+        "yearsWithGeometry": 485,
+        "yearsWithoutGeometry": 87,
+        "mandatesWithSomeMissingGeometry": 3,
+        "mandatesEntirelyWithoutGeometry": 3
       },
       "hasMandateGeometryGaps": true,
       "hasEntireTerritoryYearGaps": true,
       "limitedCore": false,
       "missingGeometryIntervals": [
-        {
-          "from": 1200,
-          "through": 1286
-        },
-        {
-          "from": 1292,
-          "through": 1296
-        },
-        {
-          "from": 1306,
-          "through": 1399
-        },
-        {
-          "from": 1651,
-          "through": 1651
-        },
-        {
-          "from": 1660,
-          "through": 1702
-        },
         {
           "from": 1714,
           "through": 1800
@@ -15300,7 +14931,7 @@
       "layers": [
         {
           "name": "Escocia",
-          "note": "Reino separado de Inglaterra durante todo este ensayo (1400–1650), incluso cuando comparten soberano desde 1603. Se corrigen las adscripciones erróneas del agregado antiguo: Man y las Feroe nunca se pintan como Escocia; Orkney y Shetland entran en 1469 y Berwick solo se muestra entre 1461 y 1481."
+          "note": "Reino propio hasta 1706; la unión dinástica de 1603 no lo borra del mapa."
         }
       ],
       "governments": [
@@ -15371,15 +15002,10 @@
           },
           "auditFrom": 1649,
           "auditThrough": 1651,
-          "yearsWithGeometry": 2,
-          "yearsWithoutGeometry": 1,
+          "yearsWithGeometry": 3,
+          "yearsWithoutGeometry": 0,
           "locations": 66,
-          "missingGeometryIntervals": [
-            {
-              "from": 1651,
-              "through": 1651
-            }
-          ]
+          "missingGeometryIntervals": []
         },
         {
           "personId": "CARLOS2ING",
@@ -15394,15 +15020,10 @@
           },
           "auditFrom": 1660,
           "auditThrough": 1685,
-          "yearsWithGeometry": 0,
-          "yearsWithoutGeometry": 26,
-          "locations": 0,
-          "missingGeometryIntervals": [
-            {
-              "from": 1660,
-              "through": 1685
-            }
-          ]
+          "yearsWithGeometry": 26,
+          "yearsWithoutGeometry": 0,
+          "locations": 66,
+          "missingGeometryIntervals": []
         },
         {
           "personId": "JACOBO2ING",
@@ -15417,15 +15038,10 @@
           },
           "auditFrom": 1685,
           "auditThrough": 1688,
-          "yearsWithGeometry": 0,
-          "yearsWithoutGeometry": 4,
-          "locations": 0,
-          "missingGeometryIntervals": [
-            {
-              "from": 1685,
-              "through": 1688
-            }
-          ]
+          "yearsWithGeometry": 4,
+          "yearsWithoutGeometry": 0,
+          "locations": 66,
+          "missingGeometryIntervals": []
         },
         {
           "personId": "JACOBO4ESCOCIA",
@@ -15563,15 +15179,10 @@
           },
           "auditFrom": 1689,
           "auditThrough": 1694,
-          "yearsWithGeometry": 0,
-          "yearsWithoutGeometry": 6,
-          "locations": 0,
-          "missingGeometryIntervals": [
-            {
-              "from": 1689,
-              "through": 1694
-            }
-          ]
+          "yearsWithGeometry": 6,
+          "yearsWithoutGeometry": 0,
+          "locations": 66,
+          "missingGeometryIntervals": []
         },
         {
           "personId": "WILLIAM3ORANGE",
@@ -15586,15 +15197,10 @@
           },
           "auditFrom": 1689,
           "auditThrough": 1702,
-          "yearsWithGeometry": 0,
-          "yearsWithoutGeometry": 14,
-          "locations": 0,
-          "missingGeometryIntervals": [
-            {
-              "from": 1689,
-              "through": 1702
-            }
-          ]
+          "yearsWithGeometry": 14,
+          "yearsWithoutGeometry": 0,
+          "locations": 66,
+          "missingGeometryIntervals": []
         },
         {
           "personId": "WILLIAM1SCOT",
@@ -15609,15 +15215,10 @@
           },
           "auditFrom": 1200,
           "auditThrough": 1214,
-          "yearsWithGeometry": 0,
-          "yearsWithoutGeometry": 15,
-          "locations": 0,
-          "missingGeometryIntervals": [
-            {
-              "from": 1200,
-              "through": 1214
-            }
-          ]
+          "yearsWithGeometry": 15,
+          "yearsWithoutGeometry": 0,
+          "locations": 60,
+          "missingGeometryIntervals": []
         },
         {
           "personId": "ALEXANDER2SCOT",
@@ -15632,15 +15233,10 @@
           },
           "auditFrom": 1214,
           "auditThrough": 1249,
-          "yearsWithGeometry": 0,
-          "yearsWithoutGeometry": 36,
-          "locations": 0,
-          "missingGeometryIntervals": [
-            {
-              "from": 1214,
-              "through": 1249
-            }
-          ]
+          "yearsWithGeometry": 36,
+          "yearsWithoutGeometry": 0,
+          "locations": 60,
+          "missingGeometryIntervals": []
         },
         {
           "personId": "ALEXANDER3SCOT",
@@ -15655,15 +15251,10 @@
           },
           "auditFrom": 1249,
           "auditThrough": 1286,
-          "yearsWithGeometry": 0,
-          "yearsWithoutGeometry": 38,
-          "locations": 0,
-          "missingGeometryIntervals": [
-            {
-              "from": 1249,
-              "through": 1286
-            }
-          ]
+          "yearsWithGeometry": 38,
+          "yearsWithoutGeometry": 0,
+          "locations": 64,
+          "missingGeometryIntervals": []
         },
         {
           "personId": "JOHN1BALLIOL",
@@ -15678,15 +15269,10 @@
           },
           "auditFrom": 1292,
           "auditThrough": 1296,
-          "yearsWithGeometry": 0,
-          "yearsWithoutGeometry": 5,
-          "locations": 0,
-          "missingGeometryIntervals": [
-            {
-              "from": 1292,
-              "through": 1296
-            }
-          ]
+          "yearsWithGeometry": 5,
+          "yearsWithoutGeometry": 0,
+          "locations": 64,
+          "missingGeometryIntervals": []
         },
         {
           "personId": "ROBERT1BRUCE",
@@ -15701,15 +15287,10 @@
           },
           "auditFrom": 1306,
           "auditThrough": 1329,
-          "yearsWithGeometry": 0,
-          "yearsWithoutGeometry": 24,
-          "locations": 0,
-          "missingGeometryIntervals": [
-            {
-              "from": 1306,
-              "through": 1329
-            }
-          ]
+          "yearsWithGeometry": 24,
+          "yearsWithoutGeometry": 0,
+          "locations": 64,
+          "missingGeometryIntervals": []
         },
         {
           "personId": "DAVID2SCOT",
@@ -15724,15 +15305,10 @@
           },
           "auditFrom": 1329,
           "auditThrough": 1371,
-          "yearsWithGeometry": 0,
-          "yearsWithoutGeometry": 43,
-          "locations": 0,
-          "missingGeometryIntervals": [
-            {
-              "from": 1329,
-              "through": 1371
-            }
-          ]
+          "yearsWithGeometry": 43,
+          "yearsWithoutGeometry": 0,
+          "locations": 64,
+          "missingGeometryIntervals": []
         },
         {
           "personId": "ROBERT2SCOT",
@@ -15747,15 +15323,10 @@
           },
           "auditFrom": 1371,
           "auditThrough": 1390,
-          "yearsWithGeometry": 0,
-          "yearsWithoutGeometry": 20,
-          "locations": 0,
-          "missingGeometryIntervals": [
-            {
-              "from": 1371,
-              "through": 1390
-            }
-          ]
+          "yearsWithGeometry": 20,
+          "yearsWithoutGeometry": 0,
+          "locations": 64,
+          "missingGeometryIntervals": []
         },
         {
           "personId": "ROBERT3SCOT",
@@ -15770,15 +15341,10 @@
           },
           "auditFrom": 1390,
           "auditThrough": 1406,
-          "yearsWithGeometry": 7,
-          "yearsWithoutGeometry": 10,
+          "yearsWithGeometry": 17,
+          "yearsWithoutGeometry": 0,
           "locations": 64,
-          "missingGeometryIntervals": [
-            {
-              "from": 1390,
-              "through": 1399
-            }
-          ]
+          "missingGeometryIntervals": []
         },
         {
           "personId": "JAMES1SCOT",
@@ -15833,6 +15399,24 @@
           "yearsWithoutGeometry": 0,
           "locations": 67,
           "missingGeometryIntervals": []
+        },
+        {
+          "personId": "ANNEQUEEN",
+          "personName": "Ana Estuardo",
+          "government": {
+            "territory": "Escocia",
+            "title": "Reina",
+            "from": 1702,
+            "through": 1706,
+            "class": "reinado",
+            "condition": "efectivo"
+          },
+          "auditFrom": 1702,
+          "auditThrough": 1706,
+          "yearsWithGeometry": 5,
+          "yearsWithoutGeometry": 0,
+          "locations": 66,
+          "missingGeometryIntervals": []
         }
       ],
       "nonpaintingGovernments": [
@@ -15868,7 +15452,7 @@
       "outsidePeriodGovernments": []
     },
     {
-      "territory": "Eslavonia disputada (núcleos)",
+      "territory": "Eslavonia",
       "status": "represented",
       "counts": {
         "effectiveMandatesAllTime": 1,
@@ -15896,7 +15480,7 @@
           "personId": "SIMUNBAKACERDODY",
           "personName": "Šimun Bakač-Erdődy",
           "government": {
-            "territory": "Eslavonia disputada (núcleos)",
+            "territory": "Eslavonia",
             "title": "Ban",
             "from": 1530,
             "through": 1534,
@@ -17933,26 +17517,21 @@
         "effectiveMandatesAllTime": 31,
         "effectiveMandatesInScope": 29,
         "nonpaintingMandatesInScope": 0,
-        "locations": 369,
+        "locations": 432,
         "yearsWithGovernment": 593,
-        "yearsWithGeometry": 540,
-        "yearsWithoutGeometry": 53,
-        "mandatesWithSomeMissingGeometry": 3,
-        "mandatesEntirelyWithoutGeometry": 1
+        "yearsWithGeometry": 593,
+        "yearsWithoutGeometry": 0,
+        "mandatesWithSomeMissingGeometry": 0,
+        "mandatesEntirelyWithoutGeometry": 0
       },
-      "hasMandateGeometryGaps": true,
-      "hasEntireTerritoryYearGaps": true,
+      "hasMandateGeometryGaps": false,
+      "hasEntireTerritoryYearGaps": false,
       "limitedCore": true,
-      "missingGeometryIntervals": [
-        {
-          "from": 1400,
-          "through": 1452
-        }
-      ],
+      "missingGeometryIntervals": [],
       "layers": [
         {
           "name": "Francia",
-          "note": "Agregado francés conservador desde 1453: Bretaña entra en 1532, Provenza en 1486 y el ducado de Borgoña en 1477. Los feudos y ocupaciones discutidos se revisan por separado; antes de 1453 el gris no significa ausencia de Corona francesa."
+          "note": "Reino de Francia y, desde 1792, República francesa. Superficie regional de autoridad regia: no identifica cada señorío ni convierte todos los vasallos en propiedad real. La guerra de los Cien Años usa cortes documentados, no una reconstrucción diaria de frentes."
         },
         {
           "name": "Núcleos borgoñones y anexiones bajo Francia",
@@ -17975,7 +17554,7 @@
           "auditThrough": 1270,
           "yearsWithGeometry": 45,
           "yearsWithoutGeometry": 0,
-          "locations": 338,
+          "locations": 177,
           "missingGeometryIntervals": []
         },
         {
@@ -17993,7 +17572,7 @@
           "auditThrough": 1285,
           "yearsWithGeometry": 16,
           "yearsWithoutGeometry": 0,
-          "locations": 338,
+          "locations": 235,
           "missingGeometryIntervals": []
         },
         {
@@ -18011,7 +17590,7 @@
           "auditThrough": 1314,
           "yearsWithGeometry": 30,
           "yearsWithoutGeometry": 0,
-          "locations": 338,
+          "locations": 235,
           "missingGeometryIntervals": []
         },
         {
@@ -18029,7 +17608,7 @@
           "auditThrough": 1322,
           "yearsWithGeometry": 7,
           "yearsWithoutGeometry": 0,
-          "locations": 338,
+          "locations": 235,
           "missingGeometryIntervals": []
         },
         {
@@ -18047,7 +17626,7 @@
           "auditThrough": 1350,
           "yearsWithGeometry": 23,
           "yearsWithoutGeometry": 0,
-          "locations": 338,
+          "locations": 246,
           "missingGeometryIntervals": []
         },
         {
@@ -18065,7 +17644,7 @@
           "auditThrough": 1364,
           "yearsWithGeometry": 15,
           "yearsWithoutGeometry": 0,
-          "locations": 338,
+          "locations": 246,
           "missingGeometryIntervals": []
         },
         {
@@ -18083,7 +17662,7 @@
           "auditThrough": 1380,
           "yearsWithGeometry": 17,
           "yearsWithoutGeometry": 0,
-          "locations": 338,
+          "locations": 275,
           "missingGeometryIntervals": []
         },
         {
@@ -18101,7 +17680,7 @@
           "auditThrough": 1316,
           "yearsWithGeometry": 3,
           "yearsWithoutGeometry": 0,
-          "locations": 338,
+          "locations": 235,
           "missingGeometryIntervals": []
         },
         {
@@ -18117,15 +17696,10 @@
           },
           "auditFrom": 1422,
           "auditThrough": 1461,
-          "yearsWithGeometry": 9,
-          "yearsWithoutGeometry": 31,
-          "locations": 285,
-          "missingGeometryIntervals": [
-            {
-              "from": 1422,
-              "through": 1452
-            }
-          ]
+          "yearsWithGeometry": 40,
+          "yearsWithoutGeometry": 0,
+          "locations": 296,
+          "missingGeometryIntervals": []
         },
         {
           "personId": "CATAMEDICI",
@@ -18142,7 +17716,7 @@
           "auditThrough": 1563,
           "yearsWithGeometry": 4,
           "yearsWithoutGeometry": 0,
-          "locations": 343,
+          "locations": 354,
           "missingGeometryIntervals": []
         },
         {
@@ -18160,7 +17734,7 @@
           "auditThrough": 1574,
           "yearsWithGeometry": 15,
           "yearsWithoutGeometry": 0,
-          "locations": 343,
+          "locations": 354,
           "missingGeometryIntervals": []
         },
         {
@@ -18178,7 +17752,7 @@
           "auditThrough": 1223,
           "yearsWithGeometry": 24,
           "yearsWithoutGeometry": 0,
-          "locations": 338,
+          "locations": 163,
           "missingGeometryIntervals": []
         },
         {
@@ -18196,7 +17770,7 @@
           "auditThrough": 1226,
           "yearsWithGeometry": 4,
           "yearsWithoutGeometry": 0,
-          "locations": 338,
+          "locations": 177,
           "missingGeometryIntervals": []
         },
         {
@@ -18214,7 +17788,7 @@
           "auditThrough": 1316,
           "yearsWithGeometry": 1,
           "yearsWithoutGeometry": 0,
-          "locations": 338,
+          "locations": 235,
           "missingGeometryIntervals": []
         },
         {
@@ -18232,7 +17806,7 @@
           "auditThrough": 1328,
           "yearsWithGeometry": 7,
           "yearsWithoutGeometry": 0,
-          "locations": 338,
+          "locations": 235,
           "missingGeometryIntervals": []
         },
         {
@@ -18248,15 +17822,10 @@
           },
           "auditFrom": 1380,
           "auditThrough": 1422,
-          "yearsWithGeometry": 20,
-          "yearsWithoutGeometry": 23,
-          "locations": 338,
-          "missingGeometryIntervals": [
-            {
-              "from": 1400,
-              "through": 1422
-            }
-          ]
+          "yearsWithGeometry": 43,
+          "yearsWithoutGeometry": 0,
+          "locations": 274,
+          "missingGeometryIntervals": []
         },
         {
           "personId": "LUIS11FRA",
@@ -18273,7 +17842,7 @@
           "auditThrough": 1483,
           "yearsWithGeometry": 23,
           "yearsWithoutGeometry": 0,
-          "locations": 308,
+          "locations": 319,
           "missingGeometryIntervals": []
         },
         {
@@ -18291,7 +17860,7 @@
           "auditThrough": 1498,
           "yearsWithGeometry": 16,
           "yearsWithoutGeometry": 0,
-          "locations": 319,
+          "locations": 330,
           "missingGeometryIntervals": []
         },
         {
@@ -18309,7 +17878,7 @@
           "auditThrough": 1515,
           "yearsWithGeometry": 18,
           "yearsWithoutGeometry": 0,
-          "locations": 315,
+          "locations": 326,
           "missingGeometryIntervals": []
         },
         {
@@ -18327,7 +17896,7 @@
           "auditThrough": 1547,
           "yearsWithGeometry": 33,
           "yearsWithoutGeometry": 0,
-          "locations": 342,
+          "locations": 353,
           "missingGeometryIntervals": []
         },
         {
@@ -18345,7 +17914,7 @@
           "auditThrough": 1559,
           "yearsWithGeometry": 13,
           "yearsWithoutGeometry": 0,
-          "locations": 343,
+          "locations": 354,
           "missingGeometryIntervals": []
         },
         {
@@ -18363,7 +17932,7 @@
           "auditThrough": 1560,
           "yearsWithGeometry": 2,
           "yearsWithoutGeometry": 0,
-          "locations": 343,
+          "locations": 354,
           "missingGeometryIntervals": []
         },
         {
@@ -18381,7 +17950,7 @@
           "auditThrough": 1589,
           "yearsWithGeometry": 16,
           "yearsWithoutGeometry": 0,
-          "locations": 343,
+          "locations": 354,
           "missingGeometryIntervals": []
         },
         {
@@ -18399,7 +17968,7 @@
           "auditThrough": 1610,
           "yearsWithGeometry": 22,
           "yearsWithoutGeometry": 0,
-          "locations": 343,
+          "locations": 354,
           "missingGeometryIntervals": []
         },
         {
@@ -18417,7 +17986,7 @@
           "auditThrough": 1643,
           "yearsWithGeometry": 34,
           "yearsWithoutGeometry": 0,
-          "locations": 348,
+          "locations": 359,
           "missingGeometryIntervals": []
         },
         {
@@ -18435,7 +18004,7 @@
           "auditThrough": 1715,
           "yearsWithGeometry": 73,
           "yearsWithoutGeometry": 0,
-          "locations": 358,
+          "locations": 395,
           "missingGeometryIntervals": []
         },
         {
@@ -18453,7 +18022,7 @@
           "auditThrough": 1774,
           "yearsWithGeometry": 60,
           "yearsWithoutGeometry": 0,
-          "locations": 12,
+          "locations": 418,
           "missingGeometryIntervals": []
         },
         {
@@ -18471,7 +18040,7 @@
           "auditThrough": 1792,
           "yearsWithGeometry": 19,
           "yearsWithoutGeometry": 0,
-          "locations": 13,
+          "locations": 428,
           "missingGeometryIntervals": []
         },
         {
@@ -18487,15 +18056,10 @@
           },
           "auditFrom": 1422,
           "auditThrough": 1435,
-          "yearsWithGeometry": 0,
-          "yearsWithoutGeometry": 14,
-          "locations": 0,
-          "missingGeometryIntervals": [
-            {
-              "from": 1422,
-              "through": 1435
-            }
-          ]
+          "yearsWithGeometry": 14,
+          "yearsWithoutGeometry": 0,
+          "locations": 225,
+          "missingGeometryIntervals": []
         }
       ],
       "nonpaintingGovernments": [],
@@ -18517,157 +18081,6 @@
           "condition": "efectivo"
         }
       ]
-    },
-    {
-      "territory": "Gobierno de Bihar de Imre Czibak",
-      "status": "represented",
-      "counts": {
-        "effectiveMandatesAllTime": 1,
-        "effectiveMandatesInScope": 1,
-        "nonpaintingMandatesInScope": 0,
-        "locations": 3,
-        "yearsWithGovernment": 6,
-        "yearsWithGeometry": 5,
-        "yearsWithoutGeometry": 1,
-        "mandatesWithSomeMissingGeometry": 1,
-        "mandatesEntirelyWithoutGeometry": 0
-      },
-      "hasMandateGeometryGaps": true,
-      "hasEntireTerritoryYearGaps": true,
-      "limitedCore": true,
-      "missingGeometryIntervals": [
-        {
-          "from": 1534,
-          "through": 1534
-        }
-      ],
-      "layers": [
-        {
-          "name": "Gobierno de Bihar de Imre Czibak",
-          "note": "Núcleos con gobierno propio documentado. La tributación y la delegación se identifican en la ficha; los polígonos son aproximaciones cartográficas y no atribuyen el resto del país."
-        }
-      ],
-      "governments": [
-        {
-          "personId": "IMRECZIBAK",
-          "personName": "Imre Czibak",
-          "government": {
-            "territory": "Gobierno de Bihar de Imre Czibak",
-            "title": "Gobernador",
-            "from": 1529,
-            "through": 1534,
-            "class": "gobierno",
-            "condition": "gobierno delegado"
-          },
-          "auditFrom": 1529,
-          "auditThrough": 1534,
-          "yearsWithGeometry": 5,
-          "yearsWithoutGeometry": 1,
-          "locations": 3,
-          "missingGeometryIntervals": [
-            {
-              "from": 1534,
-              "through": 1534
-            }
-          ]
-        }
-      ],
-      "nonpaintingGovernments": [],
-      "outsidePeriodGovernments": []
-    },
-    {
-      "territory": "Gobierno de Temes de Péter Petrovics",
-      "status": "represented",
-      "counts": {
-        "effectiveMandatesAllTime": 1,
-        "effectiveMandatesInScope": 1,
-        "nonpaintingMandatesInScope": 0,
-        "locations": 3,
-        "yearsWithGovernment": 10,
-        "yearsWithGeometry": 10,
-        "yearsWithoutGeometry": 0,
-        "mandatesWithSomeMissingGeometry": 0,
-        "mandatesEntirelyWithoutGeometry": 0
-      },
-      "hasMandateGeometryGaps": false,
-      "hasEntireTerritoryYearGaps": false,
-      "limitedCore": true,
-      "missingGeometryIntervals": [],
-      "layers": [
-        {
-          "name": "Gobierno de Temes de Péter Petrovics",
-          "note": "Núcleos con gobierno propio documentado. La tributación y la delegación se identifican en la ficha; los polígonos son aproximaciones cartográficas y no atribuyen el resto del país."
-        }
-      ],
-      "governments": [
-        {
-          "personId": "PETERPETROVICS",
-          "personName": "Péter Petrovics",
-          "government": {
-            "territory": "Gobierno de Temes de Péter Petrovics",
-            "title": "Gobernador",
-            "from": 1541,
-            "through": 1550,
-            "class": "gobierno",
-            "condition": "gobierno delegado"
-          },
-          "auditFrom": 1541,
-          "auditThrough": 1550,
-          "yearsWithGeometry": 10,
-          "yearsWithoutGeometry": 0,
-          "locations": 3,
-          "missingGeometryIntervals": []
-        }
-      ],
-      "nonpaintingGovernments": [],
-      "outsidePeriodGovernments": []
-    },
-    {
-      "territory": "Gobierno de Temesvár de Bálint Török",
-      "status": "represented",
-      "counts": {
-        "effectiveMandatesAllTime": 1,
-        "effectiveMandatesInScope": 1,
-        "nonpaintingMandatesInScope": 0,
-        "locations": 1,
-        "yearsWithGovernment": 2,
-        "yearsWithGeometry": 2,
-        "yearsWithoutGeometry": 0,
-        "mandatesWithSomeMissingGeometry": 0,
-        "mandatesEntirelyWithoutGeometry": 0
-      },
-      "hasMandateGeometryGaps": false,
-      "hasEntireTerritoryYearGaps": false,
-      "limitedCore": true,
-      "missingGeometryIntervals": [],
-      "layers": [
-        {
-          "name": "Gobierno de Temesvár de Bálint Török",
-          "note": "Núcleos con gobierno propio documentado. La tributación y la delegación se identifican en la ficha; los polígonos son aproximaciones cartográficas y no atribuyen el resto del país."
-        }
-      ],
-      "governments": [
-        {
-          "personId": "BALINTTOROK",
-          "personName": "Bálint Török",
-          "government": {
-            "territory": "Gobierno de Temesvár de Bálint Török",
-            "title": "Gobernador",
-            "from": 1529,
-            "through": 1530,
-            "class": "gobierno",
-            "condition": "gobierno delegado"
-          },
-          "auditFrom": 1529,
-          "auditThrough": 1530,
-          "yearsWithGeometry": 2,
-          "yearsWithoutGeometry": 0,
-          "locations": 1,
-          "missingGeometryIntervals": []
-        }
-      ],
-      "nonpaintingGovernments": [],
-      "outsidePeriodGovernments": []
     },
     {
       "territory": "Granada",
@@ -20804,12 +20217,12 @@
       "territory": "Irlanda",
       "status": "represented",
       "counts": {
-        "effectiveMandatesAllTime": 14,
-        "effectiveMandatesInScope": 13,
+        "effectiveMandatesAllTime": 15,
+        "effectiveMandatesInScope": 14,
         "nonpaintingMandatesInScope": 0,
-        "locations": 96,
-        "yearsWithGovernment": 238,
-        "yearsWithGeometry": 238,
+        "locations": 87,
+        "yearsWithGovernment": 249,
+        "yearsWithGeometry": 249,
         "yearsWithoutGeometry": 0,
         "mandatesWithSomeMissingGeometry": 0,
         "mandatesEntirelyWithoutGeometry": 0
@@ -20821,7 +20234,7 @@
       "layers": [
         {
           "name": "Núcleo inglés en Irlanda",
-          "note": "Solo nueve locations urbanas y próximas a los núcleos de Dublin, Meath, Kildare y Louth. No equivale a una frontera cerrada ni al control efectivo de toda Irlanda; su extensión variable y la expansión Tudor quedan por fechar."
+          "note": "Antes de 1651 se mantiene la reconstrucción limitada del Pale, sin convertir el título de señor de Irlanda en control de toda la isla. Desde 1651, marco territorial del reino: la propiedad de los señores locales y las rebeliones se documentan aparte."
         }
       ],
       "governments": [
@@ -20876,7 +20289,7 @@
           "auditThrough": 1685,
           "yearsWithGeometry": 26,
           "yearsWithoutGeometry": 0,
-          "locations": 96,
+          "locations": 85,
           "missingGeometryIntervals": []
         },
         {
@@ -20894,7 +20307,7 @@
           "auditThrough": 1688,
           "yearsWithGeometry": 4,
           "yearsWithoutGeometry": 0,
-          "locations": 96,
+          "locations": 85,
           "missingGeometryIntervals": []
         },
         {
@@ -20984,7 +20397,7 @@
           "auditThrough": 1727,
           "yearsWithGeometry": 14,
           "yearsWithoutGeometry": 0,
-          "locations": 96,
+          "locations": 85,
           "missingGeometryIntervals": []
         },
         {
@@ -21002,7 +20415,7 @@
           "auditThrough": 1760,
           "yearsWithGeometry": 34,
           "yearsWithoutGeometry": 0,
-          "locations": 96,
+          "locations": 85,
           "missingGeometryIntervals": []
         },
         {
@@ -21020,7 +20433,7 @@
           "auditThrough": 1800,
           "yearsWithGeometry": 41,
           "yearsWithoutGeometry": 0,
-          "locations": 96,
+          "locations": 85,
           "missingGeometryIntervals": []
         },
         {
@@ -21038,7 +20451,7 @@
           "auditThrough": 1694,
           "yearsWithGeometry": 6,
           "yearsWithoutGeometry": 0,
-          "locations": 96,
+          "locations": 85,
           "missingGeometryIntervals": []
         },
         {
@@ -21056,7 +20469,25 @@
           "auditThrough": 1702,
           "yearsWithGeometry": 14,
           "yearsWithoutGeometry": 0,
-          "locations": 96,
+          "locations": 85,
+          "missingGeometryIntervals": []
+        },
+        {
+          "personId": "ANNEQUEEN",
+          "personName": "Ana Estuardo",
+          "government": {
+            "territory": "Irlanda",
+            "title": "Reina",
+            "from": 1702,
+            "through": 1714,
+            "class": "reinado",
+            "condition": "efectivo"
+          },
+          "auditFrom": 1702,
+          "auditThrough": 1714,
+          "yearsWithGeometry": 13,
+          "yearsWithoutGeometry": 0,
+          "locations": 85,
           "missingGeometryIntervals": []
         }
       ],
@@ -21408,6 +20839,438 @@
         }
       ],
       "nonpaintingGovernments": [],
+      "outsidePeriodGovernments": []
+    },
+    {
+      "territory": "Lituania",
+      "status": "represented",
+      "counts": {
+        "effectiveMandatesAllTime": 21,
+        "effectiveMandatesInScope": 21,
+        "nonpaintingMandatesInScope": 1,
+        "locations": 243,
+        "yearsWithGovernment": 410,
+        "yearsWithGeometry": 409,
+        "yearsWithoutGeometry": 1,
+        "mandatesWithSomeMissingGeometry": 1,
+        "mandatesEntirelyWithoutGeometry": 0
+      },
+      "hasMandateGeometryGaps": true,
+      "hasEntireTerritoryYearGaps": true,
+      "limitedCore": false,
+      "missingGeometryIntervals": [
+        {
+          "from": 1795,
+          "through": 1795
+        }
+      ],
+      "layers": [
+        {
+          "name": "Gran Ducado de Lituania",
+          "note": "Identidad lituana diferenciada. La etapa de 1253–1399 es un núcleo regional limitado, no una afirmación sobre todas las conquistas rutenias de Gediminas y Algirdas. Las fronteras de los repartos son aproximadas."
+        }
+      ],
+      "governments": [
+        {
+          "personId": "LADI2",
+          "personName": "Ladislao II de Polonia",
+          "government": {
+            "territory": "Lituania",
+            "title": "Gran duque",
+            "from": 1377,
+            "through": 1381,
+            "class": "gran_ducado",
+            "condition": "corregente"
+          },
+          "auditFrom": 1377,
+          "auditThrough": 1381,
+          "yearsWithGeometry": 5,
+          "yearsWithoutGeometry": 0,
+          "locations": 52,
+          "missingGeometryIntervals": []
+        },
+        {
+          "personId": "LADI2",
+          "personName": "Ladislao II de Polonia",
+          "government": {
+            "territory": "Lituania",
+            "title": "Gran duque",
+            "from": 1382,
+            "through": 1401,
+            "class": "gran_ducado",
+            "condition": "corregente"
+          },
+          "auditFrom": 1382,
+          "auditThrough": 1401,
+          "yearsWithGeometry": 20,
+          "yearsWithoutGeometry": 0,
+          "locations": 243,
+          "missingGeometryIntervals": []
+        },
+        {
+          "personId": "CASI4",
+          "personName": "Casimiro IV",
+          "government": {
+            "territory": "Lituania",
+            "title": "Gran duque",
+            "from": 1440,
+            "through": 1492,
+            "class": "gran_ducado",
+            "condition": "efectivo"
+          },
+          "auditFrom": 1440,
+          "auditThrough": 1492,
+          "yearsWithGeometry": 53,
+          "yearsWithoutGeometry": 0,
+          "locations": 243,
+          "missingGeometryIntervals": []
+        },
+        {
+          "personId": "SEGIS1JAG",
+          "personName": "Segismundo I Jagellón",
+          "government": {
+            "territory": "Lituania",
+            "title": "Gran duque",
+            "from": 1506,
+            "through": 1548,
+            "class": "gran_ducado",
+            "condition": "efectivo"
+          },
+          "auditFrom": 1506,
+          "auditThrough": 1548,
+          "yearsWithGeometry": 43,
+          "yearsWithoutGeometry": 0,
+          "locations": 243,
+          "missingGeometryIntervals": []
+        },
+        {
+          "personId": "SEGIS2JAG",
+          "personName": "Segismundo II Augusto",
+          "government": {
+            "territory": "Lituania",
+            "title": "Gran duque",
+            "from": 1544,
+            "through": 1548,
+            "class": "gran_ducado",
+            "condition": "corregente"
+          },
+          "auditFrom": 1544,
+          "auditThrough": 1548,
+          "yearsWithGeometry": 5,
+          "yearsWithoutGeometry": 0,
+          "locations": 243,
+          "missingGeometryIntervals": []
+        },
+        {
+          "personId": "SEGIS2JAG",
+          "personName": "Segismundo II Augusto",
+          "government": {
+            "territory": "Lituania",
+            "title": "Gran duque",
+            "from": 1549,
+            "through": 1572,
+            "class": "gran_ducado",
+            "condition": "efectivo"
+          },
+          "auditFrom": 1549,
+          "auditThrough": 1572,
+          "yearsWithGeometry": 24,
+          "yearsWithoutGeometry": 0,
+          "locations": 243,
+          "missingGeometryIntervals": []
+        },
+        {
+          "personId": "ALEJANDRO1POL",
+          "personName": "Alejandro I de Polonia",
+          "government": {
+            "territory": "Lituania",
+            "title": "Gran duque",
+            "from": 1492,
+            "through": 1506,
+            "class": "gran_ducado",
+            "condition": "efectivo"
+          },
+          "auditFrom": 1492,
+          "auditThrough": 1506,
+          "yearsWithGeometry": 15,
+          "yearsWithoutGeometry": 0,
+          "locations": 243,
+          "missingGeometryIntervals": []
+        },
+        {
+          "personId": "ENRIQ3FRA",
+          "personName": "Enrique III de Francia",
+          "government": {
+            "territory": "Lituania",
+            "title": "Gran duque",
+            "from": 1573,
+            "through": 1575,
+            "class": "gran_ducado",
+            "condition": "efectivo"
+          },
+          "auditFrom": 1573,
+          "auditThrough": 1575,
+          "yearsWithGeometry": 3,
+          "yearsWithoutGeometry": 0,
+          "locations": 167,
+          "missingGeometryIntervals": []
+        },
+        {
+          "personId": "ANAJAG",
+          "personName": "Ana Jagellón",
+          "government": {
+            "territory": "Lituania",
+            "title": "Gran duquesa",
+            "from": 1575,
+            "through": 1587,
+            "class": "gran_ducado",
+            "condition": "corregente"
+          },
+          "auditFrom": 1575,
+          "auditThrough": 1587,
+          "yearsWithGeometry": 13,
+          "yearsWithoutGeometry": 0,
+          "locations": 167,
+          "missingGeometryIntervals": []
+        },
+        {
+          "personId": "ESTEBANBATHORY",
+          "personName": "Esteban Báthory",
+          "government": {
+            "territory": "Lituania",
+            "title": "Gran duque",
+            "from": 1576,
+            "through": 1586,
+            "class": "gran_ducado",
+            "condition": "efectivo"
+          },
+          "auditFrom": 1576,
+          "auditThrough": 1586,
+          "yearsWithGeometry": 11,
+          "yearsWithoutGeometry": 0,
+          "locations": 167,
+          "missingGeometryIntervals": []
+        },
+        {
+          "personId": "SEGIS3VASA",
+          "personName": "Segismundo III Vasa",
+          "government": {
+            "territory": "Lituania",
+            "title": "Gran duque",
+            "from": 1587,
+            "through": 1632,
+            "class": "gran_ducado",
+            "condition": "efectivo"
+          },
+          "auditFrom": 1587,
+          "auditThrough": 1632,
+          "yearsWithGeometry": 46,
+          "yearsWithoutGeometry": 0,
+          "locations": 167,
+          "missingGeometryIntervals": []
+        },
+        {
+          "personId": "AUGUST2SAXPOL",
+          "personName": "Augusto II de Polonia",
+          "government": {
+            "territory": "Lituania",
+            "title": "Gran duque",
+            "from": 1697,
+            "through": 1704,
+            "class": "gran_ducado",
+            "condition": "efectivo"
+          },
+          "auditFrom": 1697,
+          "auditThrough": 1704,
+          "yearsWithGeometry": 8,
+          "yearsWithoutGeometry": 0,
+          "locations": 167,
+          "missingGeometryIntervals": []
+        },
+        {
+          "personId": "AUGUST2SAXPOL",
+          "personName": "Augusto II de Polonia",
+          "government": {
+            "territory": "Lituania",
+            "title": "Gran duque",
+            "from": 1709,
+            "through": 1733,
+            "class": "gran_ducado",
+            "condition": "efectivo"
+          },
+          "auditFrom": 1709,
+          "auditThrough": 1733,
+          "yearsWithGeometry": 25,
+          "yearsWithoutGeometry": 0,
+          "locations": 167,
+          "missingGeometryIntervals": []
+        },
+        {
+          "personId": "AUGUST3SAXPOL",
+          "personName": "Augusto III de Polonia",
+          "government": {
+            "territory": "Lituania",
+            "title": "Gran duque",
+            "from": 1733,
+            "through": 1763,
+            "class": "gran_ducado",
+            "condition": "efectivo"
+          },
+          "auditFrom": 1733,
+          "auditThrough": 1763,
+          "yearsWithGeometry": 31,
+          "yearsWithoutGeometry": 0,
+          "locations": 167,
+          "missingGeometryIntervals": []
+        },
+        {
+          "personId": "VYTAUTASLIT",
+          "personName": "Vitautas el Grande",
+          "government": {
+            "territory": "Lituania",
+            "title": "Gran duque",
+            "from": 1392,
+            "through": 1430,
+            "class": "gran_ducado",
+            "condition": "efectivo"
+          },
+          "auditFrom": 1392,
+          "auditThrough": 1430,
+          "yearsWithGeometry": 39,
+          "yearsWithoutGeometry": 0,
+          "locations": 243,
+          "missingGeometryIntervals": []
+        },
+        {
+          "personId": "WLAD4VASA",
+          "personName": "Ladislao IV Vasa",
+          "government": {
+            "territory": "Lituania",
+            "title": "Gran duque",
+            "from": 1632,
+            "through": 1648,
+            "class": "gran_ducado",
+            "condition": "efectivo"
+          },
+          "auditFrom": 1632,
+          "auditThrough": 1648,
+          "yearsWithGeometry": 17,
+          "yearsWithoutGeometry": 0,
+          "locations": 167,
+          "missingGeometryIntervals": []
+        },
+        {
+          "personId": "JUAN2CASIVASA",
+          "personName": "Juan II Casimiro Vasa",
+          "government": {
+            "territory": "Lituania",
+            "title": "Gran duque",
+            "from": 1648,
+            "through": 1668,
+            "class": "gran_ducado",
+            "condition": "efectivo"
+          },
+          "auditFrom": 1648,
+          "auditThrough": 1668,
+          "yearsWithGeometry": 21,
+          "yearsWithoutGeometry": 0,
+          "locations": 167,
+          "missingGeometryIntervals": []
+        },
+        {
+          "personId": "MIGUELKORYBUT",
+          "personName": "Miguel Korybut Wiśniowiecki",
+          "government": {
+            "territory": "Lituania",
+            "title": "Gran duque",
+            "from": 1669,
+            "through": 1673,
+            "class": "gran_ducado",
+            "condition": "efectivo"
+          },
+          "auditFrom": 1669,
+          "auditThrough": 1673,
+          "yearsWithGeometry": 5,
+          "yearsWithoutGeometry": 0,
+          "locations": 167,
+          "missingGeometryIntervals": []
+        },
+        {
+          "personId": "JUAN3SOBIESKI",
+          "personName": "Juan III Sobieski",
+          "government": {
+            "territory": "Lituania",
+            "title": "Gran duque",
+            "from": 1674,
+            "through": 1696,
+            "class": "gran_ducado",
+            "condition": "efectivo"
+          },
+          "auditFrom": 1674,
+          "auditThrough": 1696,
+          "yearsWithGeometry": 23,
+          "yearsWithoutGeometry": 0,
+          "locations": 167,
+          "missingGeometryIntervals": []
+        },
+        {
+          "personId": "STAN1LESZ",
+          "personName": "Estanislao I Leszczyński",
+          "government": {
+            "territory": "Lituania",
+            "title": "Gran duque",
+            "from": 1704,
+            "through": 1709,
+            "class": "gran_ducado",
+            "condition": "efectivo"
+          },
+          "auditFrom": 1704,
+          "auditThrough": 1709,
+          "yearsWithGeometry": 6,
+          "yearsWithoutGeometry": 0,
+          "locations": 167,
+          "missingGeometryIntervals": []
+        },
+        {
+          "personId": "STAN2PONIAT",
+          "personName": "Estanislao II Augusto Poniatowski",
+          "government": {
+            "territory": "Lituania",
+            "title": "Gran duque",
+            "from": 1764,
+            "through": 1795,
+            "class": "gran_ducado",
+            "condition": "efectivo"
+          },
+          "auditFrom": 1764,
+          "auditThrough": 1795,
+          "yearsWithGeometry": 31,
+          "yearsWithoutGeometry": 1,
+          "locations": 167,
+          "missingGeometryIntervals": [
+            {
+              "from": 1795,
+              "through": 1795
+            }
+          ]
+        }
+      ],
+      "nonpaintingGovernments": [
+        {
+          "personId": "STAN1LESZ",
+          "personName": "Estanislao I Leszczyński",
+          "government": {
+            "territory": "Lituania",
+            "title": "Gran duque",
+            "from": 1733,
+            "through": 1736,
+            "class": "gran_ducado",
+            "condition": "rival"
+          },
+          "auditFrom": 1733,
+          "auditThrough": 1736
+        }
+      ],
       "outsidePeriodGovernments": []
     },
     {
@@ -23633,12 +23496,12 @@
       "territory": "Moravia",
       "status": "represented",
       "counts": {
-        "effectiveMandatesAllTime": 27,
-        "effectiveMandatesInScope": 27,
+        "effectiveMandatesAllTime": 35,
+        "effectiveMandatesInScope": 35,
         "nonpaintingMandatesInScope": 1,
-        "locations": 2,
-        "yearsWithGovernment": 439,
-        "yearsWithGeometry": 439,
+        "locations": 16,
+        "yearsWithGovernment": 533,
+        "yearsWithGeometry": 533,
         "yearsWithoutGeometry": 0,
         "mandatesWithSomeMissingGeometry": 0,
         "mandatesEntirelyWithoutGeometry": 0
@@ -23649,12 +23512,8 @@
       "missingGeometryIntervals": [],
       "layers": [
         {
-          "name": "Moravia (núcleo de Brno)",
-          "note": "Núcleo urbano y residencial de Brno, sin convertir el título del margrave en propiedad de toda Moravia. Juan Enrique y Jobst tienen mandatos propios; Alberto recibe Moravia en 1423; Matías Corvino ejerce autoridad regional desde 1469 y Vladislao desde 1490. La sucesión morava pasa de Rodolfo a Matías en 1608, tres años antes que Bohemia. No se atribuye autoridad personal durante el interregno de 1440–1452."
-        },
-        {
-          "name": "Moravia (núcleo de Olomouc)",
-          "note": "Entorno de la ciudad real de Olomouc desde el privilegio original de Jobst de 1378. La autoridad regional del margrave no convierte la celda en propiedad exclusiva ni borra la jurisdicción episcopal. Se distingue de la realeza bohemia bajo Corvino y en 1608–1611. Las ocupaciones sueca de 1642–1650 y prusiana de 1741–1742 tienen capas propias; la escala anual incluye el año de capitulación de diciembre de 1741. El interregno de 1440–1452 queda fuera."
+          "name": "Margraviato de Moravia",
+          "note": "Margraviato de Moravia. La falta de un mandato personal durante una minoría o interregno no extingue el territorio. Las ocupaciones locales de Olomouc se muestran aparte y no sustituyen todo el margraviato."
         },
         {
           "name": "Olomouc (ocupación prusiana)",
@@ -23666,6 +23525,24 @@
         }
       ],
       "governments": [
+        {
+          "personId": "OTAK2",
+          "personName": "Otakar II",
+          "government": {
+            "territory": "Moravia",
+            "title": "Margrave",
+            "from": 1247,
+            "through": 1278,
+            "class": "margraviato",
+            "condition": "efectivo"
+          },
+          "auditFrom": 1247,
+          "auditThrough": 1278,
+          "yearsWithGeometry": 32,
+          "yearsWithoutGeometry": 0,
+          "locations": 16,
+          "missingGeometryIntervals": []
+        },
         {
           "personId": "SEGIS1",
           "personName": "Segismundo de Luxemburgo",
@@ -23682,7 +23559,25 @@
           "auditThrough": 1422,
           "yearsWithGeometry": 4,
           "yearsWithoutGeometry": 0,
-          "locations": 2,
+          "locations": 16,
+          "missingGeometryIntervals": []
+        },
+        {
+          "personId": "CARLOS4",
+          "personName": "Carlos IV de Luxemburgo",
+          "government": {
+            "territory": "Moravia",
+            "title": "Margrave",
+            "from": 1334,
+            "through": 1348,
+            "class": "margraviato",
+            "condition": "efectivo"
+          },
+          "auditFrom": 1334,
+          "auditThrough": 1348,
+          "yearsWithGeometry": 15,
+          "yearsWithoutGeometry": 0,
+          "locations": 16,
           "missingGeometryIntervals": []
         },
         {
@@ -23701,7 +23596,7 @@
           "auditThrough": 1419,
           "yearsWithGeometry": 9,
           "yearsWithoutGeometry": 0,
-          "locations": 2,
+          "locations": 16,
           "missingGeometryIntervals": []
         },
         {
@@ -23720,7 +23615,7 @@
           "auditThrough": 1564,
           "yearsWithGeometry": 39,
           "yearsWithoutGeometry": 0,
-          "locations": 2,
+          "locations": 16,
           "missingGeometryIntervals": []
         },
         {
@@ -23739,7 +23634,7 @@
           "auditThrough": 1490,
           "yearsWithGeometry": 22,
           "yearsWithoutGeometry": 0,
-          "locations": 2,
+          "locations": 16,
           "missingGeometryIntervals": []
         },
         {
@@ -23758,7 +23653,7 @@
           "auditThrough": 1516,
           "yearsWithGeometry": 27,
           "yearsWithoutGeometry": 0,
-          "locations": 2,
+          "locations": 16,
           "missingGeometryIntervals": []
         },
         {
@@ -23777,7 +23672,7 @@
           "auditThrough": 1439,
           "yearsWithGeometry": 17,
           "yearsWithoutGeometry": 0,
-          "locations": 2,
+          "locations": 16,
           "missingGeometryIntervals": []
         },
         {
@@ -23796,7 +23691,7 @@
           "auditThrough": 1457,
           "yearsWithGeometry": 5,
           "yearsWithoutGeometry": 0,
-          "locations": 2,
+          "locations": 16,
           "missingGeometryIntervals": []
         },
         {
@@ -23815,7 +23710,7 @@
           "auditThrough": 1576,
           "yearsWithGeometry": 13,
           "yearsWithoutGeometry": 0,
-          "locations": 2,
+          "locations": 16,
           "missingGeometryIntervals": []
         },
         {
@@ -23834,7 +23729,7 @@
           "auditThrough": 1619,
           "yearsWithGeometry": 12,
           "yearsWithoutGeometry": 0,
-          "locations": 2,
+          "locations": 16,
           "missingGeometryIntervals": []
         },
         {
@@ -23852,7 +23747,7 @@
           "auditThrough": 1375,
           "yearsWithGeometry": 27,
           "yearsWithoutGeometry": 0,
-          "locations": 1,
+          "locations": 16,
           "missingGeometryIntervals": []
         },
         {
@@ -23870,7 +23765,7 @@
           "auditThrough": 1411,
           "yearsWithGeometry": 37,
           "yearsWithoutGeometry": 0,
-          "locations": 2,
+          "locations": 16,
           "missingGeometryIntervals": []
         },
         {
@@ -23889,7 +23784,7 @@
           "auditThrough": 1608,
           "yearsWithGeometry": 33,
           "yearsWithoutGeometry": 0,
-          "locations": 2,
+          "locations": 16,
           "missingGeometryIntervals": []
         },
         {
@@ -23908,7 +23803,7 @@
           "auditThrough": 1619,
           "yearsWithGeometry": 1,
           "yearsWithoutGeometry": 0,
-          "locations": 2,
+          "locations": 16,
           "missingGeometryIntervals": []
         },
         {
@@ -23927,7 +23822,7 @@
           "auditThrough": 1637,
           "yearsWithGeometry": 17,
           "yearsWithoutGeometry": 0,
-          "locations": 2,
+          "locations": 16,
           "missingGeometryIntervals": []
         },
         {
@@ -23946,7 +23841,25 @@
           "auditThrough": 1526,
           "yearsWithGeometry": 11,
           "yearsWithoutGeometry": 0,
-          "locations": 2,
+          "locations": 16,
+          "missingGeometryIntervals": []
+        },
+        {
+          "personId": "OTAK1",
+          "personName": "Otakar I de Bohemia",
+          "government": {
+            "territory": "Moravia",
+            "title": "Príncipe",
+            "from": 1223,
+            "through": 1223,
+            "class": "principado",
+            "condition": "efectivo"
+          },
+          "auditFrom": 1223,
+          "auditThrough": 1223,
+          "yearsWithGeometry": 1,
+          "yearsWithoutGeometry": 0,
+          "locations": 16,
           "missingGeometryIntervals": []
         },
         {
@@ -23965,7 +23878,7 @@
           "auditThrough": 1468,
           "yearsWithGeometry": 11,
           "yearsWithoutGeometry": 0,
-          "locations": 2,
+          "locations": 16,
           "missingGeometryIntervals": []
         },
         {
@@ -23984,7 +23897,7 @@
           "auditThrough": 1620,
           "yearsWithGeometry": 2,
           "yearsWithoutGeometry": 0,
-          "locations": 2,
+          "locations": 16,
           "missingGeometryIntervals": []
         },
         {
@@ -24003,7 +23916,7 @@
           "auditThrough": 1657,
           "yearsWithGeometry": 21,
           "yearsWithoutGeometry": 0,
-          "locations": 2,
+          "locations": 16,
           "missingGeometryIntervals": []
         },
         {
@@ -24022,7 +23935,7 @@
           "auditThrough": 1705,
           "yearsWithGeometry": 49,
           "yearsWithoutGeometry": 0,
-          "locations": 2,
+          "locations": 16,
           "missingGeometryIntervals": []
         },
         {
@@ -24041,7 +23954,7 @@
           "auditThrough": 1711,
           "yearsWithGeometry": 7,
           "yearsWithoutGeometry": 0,
-          "locations": 2,
+          "locations": 16,
           "missingGeometryIntervals": []
         },
         {
@@ -24060,7 +23973,7 @@
           "auditThrough": 1740,
           "yearsWithGeometry": 30,
           "yearsWithoutGeometry": 0,
-          "locations": 2,
+          "locations": 16,
           "missingGeometryIntervals": []
         },
         {
@@ -24079,7 +23992,7 @@
           "auditThrough": 1780,
           "yearsWithGeometry": 41,
           "yearsWithoutGeometry": 0,
-          "locations": 2,
+          "locations": 16,
           "missingGeometryIntervals": []
         },
         {
@@ -24098,7 +24011,7 @@
           "auditThrough": 1790,
           "yearsWithGeometry": 11,
           "yearsWithoutGeometry": 0,
-          "locations": 2,
+          "locations": 16,
           "missingGeometryIntervals": []
         },
         {
@@ -24117,7 +24030,7 @@
           "auditThrough": 1792,
           "yearsWithGeometry": 3,
           "yearsWithoutGeometry": 0,
-          "locations": 2,
+          "locations": 16,
           "missingGeometryIntervals": []
         },
         {
@@ -24136,7 +24049,7 @@
           "auditThrough": 1800,
           "yearsWithGeometry": 9,
           "yearsWithoutGeometry": 0,
-          "locations": 2,
+          "locations": 16,
           "missingGeometryIntervals": []
         },
         {
@@ -24175,6 +24088,97 @@
           "yearsWithGeometry": 2,
           "yearsWithoutGeometry": 0,
           "locations": 1,
+          "missingGeometryIntervals": []
+        },
+        {
+          "personId": "VLADHENMOR",
+          "personName": "Vladislav Enrique de Moravia",
+          "government": {
+            "territory": "Moravia",
+            "title": "Margrave",
+            "from": 1197,
+            "through": 1211,
+            "class": "margraviato",
+            "condition": "rama",
+            "scope": "Brno y Znojmo; Olomouc bajo autoridad del rey bohemio"
+          },
+          "auditFrom": 1200,
+          "auditThrough": 1211,
+          "yearsWithGeometry": 12,
+          "yearsWithoutGeometry": 0,
+          "locations": 8,
+          "missingGeometryIntervals": []
+        },
+        {
+          "personId": "VLADHENMOR",
+          "personName": "Vladislav Enrique de Moravia",
+          "government": {
+            "territory": "Moravia",
+            "title": "Margrave",
+            "from": 1212,
+            "through": 1222,
+            "class": "margraviato",
+            "condition": "efectivo"
+          },
+          "auditFrom": 1212,
+          "auditThrough": 1222,
+          "yearsWithGeometry": 11,
+          "yearsWithoutGeometry": 0,
+          "locations": 16,
+          "missingGeometryIntervals": []
+        },
+        {
+          "personId": "VLAD2MOR",
+          "personName": "Vladislav II de Moravia",
+          "government": {
+            "territory": "Moravia",
+            "title": "Margrave",
+            "from": 1224,
+            "through": 1227,
+            "class": "margraviato",
+            "condition": "efectivo"
+          },
+          "auditFrom": 1224,
+          "auditThrough": 1227,
+          "yearsWithGeometry": 4,
+          "yearsWithoutGeometry": 0,
+          "locations": 16,
+          "missingGeometryIntervals": []
+        },
+        {
+          "personId": "PREMYSLMOR",
+          "personName": "Přemysl de Moravia",
+          "government": {
+            "territory": "Moravia",
+            "title": "Margrave",
+            "from": 1228,
+            "through": 1239,
+            "class": "margraviato",
+            "condition": "efectivo"
+          },
+          "auditFrom": 1228,
+          "auditThrough": 1239,
+          "yearsWithGeometry": 12,
+          "yearsWithoutGeometry": 0,
+          "locations": 16,
+          "missingGeometryIntervals": []
+        },
+        {
+          "personId": "VLAD3MOR",
+          "personName": "Vladislav III de Moravia",
+          "government": {
+            "territory": "Moravia",
+            "title": "Margrave",
+            "from": 1239,
+            "through": 1247,
+            "class": "margraviato",
+            "condition": "efectivo"
+          },
+          "auditFrom": 1239,
+          "auditThrough": 1247,
+          "yearsWithGeometry": 9,
+          "yearsWithoutGeometry": 0,
+          "locations": 16,
           "missingGeometryIntervals": []
         }
       ],
@@ -25835,34 +25839,25 @@
         "effectiveMandatesAllTime": 28,
         "effectiveMandatesInScope": 24,
         "nonpaintingMandatesInScope": 1,
-        "locations": 133,
+        "locations": 137,
         "yearsWithGovernment": 579,
-        "yearsWithGeometry": 246,
-        "yearsWithoutGeometry": 333,
-        "mandatesWithSomeMissingGeometry": 16,
-        "mandatesEntirelyWithoutGeometry": 13
+        "yearsWithGeometry": 579,
+        "yearsWithoutGeometry": 0,
+        "mandatesWithSomeMissingGeometry": 0,
+        "mandatesEntirelyWithoutGeometry": 0
       },
-      "hasMandateGeometryGaps": true,
-      "hasEntireTerritoryYearGaps": true,
-      "limitedCore": false,
-      "missingGeometryIntervals": [
-        {
-          "from": 1217,
-          "through": 1399
-        },
-        {
-          "from": 1651,
-          "through": 1800
-        }
-      ],
+      "hasMandateGeometryGaps": false,
+      "hasEntireTerritoryYearGaps": false,
+      "limitedCore": true,
+      "missingGeometryIntervals": [],
       "layers": [
         {
           "name": "Islas Feroe bajo la Corona noruega",
-          "note": "Dependencia noruega dentro de la monarquía danesa-noruega. Se representa únicamente con Tórshavn como punto de referencia; no se colorea como Dinamarca ni se infiere una frontera insular."
+          "note": "Islas Feroe: dependencia de la Corona noruega y, desde 1380, de la monarquía danesa-noruega. Los Gabel administran las islas entre 1655 y 1709; desde 1709 la administración es danesa directa. Estos cambios de administración no crean un territorio nuevo. Tórshavn es un punto de referencia: todavía no se representa el perímetro del archipiélago."
         },
         {
           "name": "Reino de Noruega",
-          "note": "La revisión visual incluye Troms, Akershus y Østfold. Reino bajo monarca común con Dinamarca; Noruega queda institucionalmente subordinada desde 1537, pero no se fusiona en el color danés. Orkney y Shetland se transfieren a Escocia en 1469."
+          "note": "Reino diferenciado dentro de la monarquía danesa-noruega. En el extremo septentrional, el color aproxima espacios de tributación: no prueba una frontera exclusiva sobre los territorios sami."
         }
       ],
       "governments": [
@@ -25897,15 +25892,10 @@
           },
           "auditFrom": 1319,
           "auditThrough": 1355,
-          "yearsWithGeometry": 0,
-          "yearsWithoutGeometry": 37,
-          "locations": 0,
-          "missingGeometryIntervals": [
-            {
-              "from": 1319,
-              "through": 1355
-            }
-          ]
+          "yearsWithGeometry": 37,
+          "yearsWithoutGeometry": 0,
+          "locations": 133,
+          "missingGeometryIntervals": []
         },
         {
           "personId": "HAAKON6NOR",
@@ -25920,15 +25910,10 @@
           },
           "auditFrom": 1355,
           "auditThrough": 1380,
-          "yearsWithGeometry": 0,
-          "yearsWithoutGeometry": 26,
-          "locations": 0,
-          "missingGeometryIntervals": [
-            {
-              "from": 1355,
-              "through": 1380
-            }
-          ]
+          "yearsWithGeometry": 26,
+          "yearsWithoutGeometry": 0,
+          "locations": 133,
+          "missingGeometryIntervals": []
         },
         {
           "personId": "MARGARITA1NORD",
@@ -25943,15 +25928,10 @@
           },
           "auditFrom": 1380,
           "auditThrough": 1387,
-          "yearsWithGeometry": 0,
-          "yearsWithoutGeometry": 8,
-          "locations": 0,
-          "missingGeometryIntervals": [
-            {
-              "from": 1380,
-              "through": 1387
-            }
-          ]
+          "yearsWithGeometry": 8,
+          "yearsWithoutGeometry": 0,
+          "locations": 133,
+          "missingGeometryIntervals": []
         },
         {
           "personId": "MARGARITA1NORD",
@@ -25966,15 +25946,10 @@
           },
           "auditFrom": 1388,
           "auditThrough": 1412,
-          "yearsWithGeometry": 13,
-          "yearsWithoutGeometry": 12,
+          "yearsWithGeometry": 25,
+          "yearsWithoutGeometry": 0,
           "locations": 133,
-          "missingGeometryIntervals": [
-            {
-              "from": 1388,
-              "through": 1399
-            }
-          ]
+          "missingGeometryIntervals": []
         },
         {
           "personId": "ERICOPOMERANIA",
@@ -25989,15 +25964,10 @@
           },
           "auditFrom": 1389,
           "auditThrough": 1442,
-          "yearsWithGeometry": 43,
-          "yearsWithoutGeometry": 11,
+          "yearsWithGeometry": 54,
+          "yearsWithoutGeometry": 0,
           "locations": 133,
-          "missingGeometryIntervals": [
-            {
-              "from": 1389,
-              "through": 1399
-            }
-          ]
+          "missingGeometryIntervals": []
         },
         {
           "personId": "CRISTOBALBAVSUE",
@@ -26138,15 +26108,10 @@
           },
           "auditFrom": 1648,
           "auditThrough": 1670,
-          "yearsWithGeometry": 3,
-          "yearsWithoutGeometry": 20,
+          "yearsWithGeometry": 23,
+          "yearsWithoutGeometry": 0,
           "locations": 121,
-          "missingGeometryIntervals": [
-            {
-              "from": 1651,
-              "through": 1670
-            }
-          ]
+          "missingGeometryIntervals": []
         },
         {
           "personId": "CHRISTIAN5DEN",
@@ -26161,15 +26126,10 @@
           },
           "auditFrom": 1670,
           "auditThrough": 1699,
-          "yearsWithGeometry": 0,
-          "yearsWithoutGeometry": 30,
-          "locations": 0,
-          "missingGeometryIntervals": [
-            {
-              "from": 1670,
-              "through": 1699
-            }
-          ]
+          "yearsWithGeometry": 30,
+          "yearsWithoutGeometry": 0,
+          "locations": 117,
+          "missingGeometryIntervals": []
         },
         {
           "personId": "FRED4DEN",
@@ -26184,15 +26144,10 @@
           },
           "auditFrom": 1699,
           "auditThrough": 1730,
-          "yearsWithGeometry": 0,
-          "yearsWithoutGeometry": 32,
-          "locations": 0,
-          "missingGeometryIntervals": [
-            {
-              "from": 1699,
-              "through": 1730
-            }
-          ]
+          "yearsWithGeometry": 32,
+          "yearsWithoutGeometry": 0,
+          "locations": 117,
+          "missingGeometryIntervals": []
         },
         {
           "personId": "CHRISTIAN6DEN",
@@ -26207,15 +26162,10 @@
           },
           "auditFrom": 1730,
           "auditThrough": 1746,
-          "yearsWithGeometry": 0,
-          "yearsWithoutGeometry": 17,
-          "locations": 0,
-          "missingGeometryIntervals": [
-            {
-              "from": 1730,
-              "through": 1746
-            }
-          ]
+          "yearsWithGeometry": 17,
+          "yearsWithoutGeometry": 0,
+          "locations": 117,
+          "missingGeometryIntervals": []
         },
         {
           "personId": "FRED5DEN",
@@ -26230,15 +26180,10 @@
           },
           "auditFrom": 1746,
           "auditThrough": 1766,
-          "yearsWithGeometry": 0,
-          "yearsWithoutGeometry": 21,
-          "locations": 0,
-          "missingGeometryIntervals": [
-            {
-              "from": 1746,
-              "through": 1766
-            }
-          ]
+          "yearsWithGeometry": 21,
+          "yearsWithoutGeometry": 0,
+          "locations": 117,
+          "missingGeometryIntervals": []
         },
         {
           "personId": "CHRISTIAN7DEN",
@@ -26253,15 +26198,10 @@
           },
           "auditFrom": 1766,
           "auditThrough": 1800,
-          "yearsWithGeometry": 0,
-          "yearsWithoutGeometry": 35,
-          "locations": 0,
-          "missingGeometryIntervals": [
-            {
-              "from": 1766,
-              "through": 1800
-            }
-          ]
+          "yearsWithGeometry": 35,
+          "yearsWithoutGeometry": 0,
+          "locations": 117,
+          "missingGeometryIntervals": []
         },
         {
           "personId": "ERIK2NORWAY",
@@ -26276,15 +26216,10 @@
           },
           "auditFrom": 1280,
           "auditThrough": 1299,
-          "yearsWithGeometry": 0,
-          "yearsWithoutGeometry": 20,
-          "locations": 0,
-          "missingGeometryIntervals": [
-            {
-              "from": 1280,
-              "through": 1299
-            }
-          ]
+          "yearsWithGeometry": 20,
+          "yearsWithoutGeometry": 0,
+          "locations": 133,
+          "missingGeometryIntervals": []
         },
         {
           "personId": "HAAKON4NOR",
@@ -26299,15 +26234,10 @@
           },
           "auditFrom": 1217,
           "auditThrough": 1263,
-          "yearsWithGeometry": 0,
-          "yearsWithoutGeometry": 47,
-          "locations": 0,
-          "missingGeometryIntervals": [
-            {
-              "from": 1217,
-              "through": 1263
-            }
-          ]
+          "yearsWithGeometry": 47,
+          "yearsWithoutGeometry": 0,
+          "locations": 137,
+          "missingGeometryIntervals": []
         },
         {
           "personId": "MAGNUS6NOR",
@@ -26322,15 +26252,10 @@
           },
           "auditFrom": 1263,
           "auditThrough": 1280,
-          "yearsWithGeometry": 0,
-          "yearsWithoutGeometry": 18,
-          "locations": 0,
-          "missingGeometryIntervals": [
-            {
-              "from": 1263,
-              "through": 1280
-            }
-          ]
+          "yearsWithGeometry": 18,
+          "yearsWithoutGeometry": 0,
+          "locations": 137,
+          "missingGeometryIntervals": []
         },
         {
           "personId": "HAAKON5NOR",
@@ -26345,15 +26270,10 @@
           },
           "auditFrom": 1299,
           "auditThrough": 1319,
-          "yearsWithGeometry": 0,
-          "yearsWithoutGeometry": 21,
-          "locations": 0,
-          "missingGeometryIntervals": [
-            {
-              "from": 1299,
-              "through": 1319
-            }
-          ]
+          "yearsWithGeometry": 21,
+          "yearsWithoutGeometry": 0,
+          "locations": 133,
+          "missingGeometryIntervals": []
         },
         {
           "personId": "OLAF2NORD",
@@ -26368,15 +26288,10 @@
           },
           "auditFrom": 1380,
           "auditThrough": 1387,
-          "yearsWithGeometry": 0,
-          "yearsWithoutGeometry": 8,
-          "locations": 0,
-          "missingGeometryIntervals": [
-            {
-              "from": 1380,
-              "through": 1387
-            }
-          ]
+          "yearsWithGeometry": 8,
+          "yearsWithoutGeometry": 0,
+          "locations": 133,
+          "missingGeometryIntervals": []
         }
       ],
       "nonpaintingGovernments": [
@@ -27465,6 +27380,573 @@
         }
       ],
       "nonpaintingGovernments": [],
+      "outsidePeriodGovernments": []
+    },
+    {
+      "territory": "Polonia",
+      "status": "represented",
+      "counts": {
+        "effectiveMandatesAllTime": 27,
+        "effectiveMandatesInScope": 27,
+        "nonpaintingMandatesInScope": 1,
+        "locations": 276,
+        "yearsWithGovernment": 482,
+        "yearsWithGeometry": 472,
+        "yearsWithoutGeometry": 10,
+        "mandatesWithSomeMissingGeometry": 4,
+        "mandatesEntirelyWithoutGeometry": 3
+      },
+      "hasMandateGeometryGaps": true,
+      "hasEntireTerritoryYearGaps": true,
+      "limitedCore": false,
+      "missingGeometryIntervals": [
+        {
+          "from": 1295,
+          "through": 1296
+        },
+        {
+          "from": 1300,
+          "through": 1306
+        },
+        {
+          "from": 1795,
+          "through": 1795
+        }
+      ],
+      "layers": [
+        {
+          "name": "Corona de Polonia",
+          "note": "Corona de Polonia, diferenciada del Gran Ducado de Lituania. Las particiones representan superficies regionales aproximadas; no límites exactos de 1772 y 1793. Antes de 1320 los ducados deben revisarse por separado."
+        },
+        {
+          "name": "Prusia Real",
+          "note": "Provincia autónoma de la Corona desde 1466. Danzig y Chelmno se mantienen como regiones históricas, pero reciben el mismo color que la Corona polaca; Warmia queda en una capa episcopal propia."
+        }
+      ],
+      "governments": [
+        {
+          "personId": "PREM2",
+          "personName": "Premislao II",
+          "government": {
+            "territory": "Polonia",
+            "title": "Rey",
+            "from": 1295,
+            "through": 1296,
+            "class": "reinado",
+            "condition": "efectivo"
+          },
+          "auditFrom": 1295,
+          "auditThrough": 1296,
+          "yearsWithGeometry": 0,
+          "yearsWithoutGeometry": 2,
+          "locations": 0,
+          "missingGeometryIntervals": [
+            {
+              "from": 1295,
+              "through": 1296
+            }
+          ]
+        },
+        {
+          "personId": "WEN2",
+          "personName": "Wenceslao II",
+          "government": {
+            "territory": "Polonia",
+            "title": "Rey",
+            "from": 1300,
+            "through": 1305,
+            "class": "reinado",
+            "condition": "efectivo"
+          },
+          "auditFrom": 1300,
+          "auditThrough": 1305,
+          "yearsWithGeometry": 0,
+          "yearsWithoutGeometry": 6,
+          "locations": 0,
+          "missingGeometryIntervals": [
+            {
+              "from": 1300,
+              "through": 1305
+            }
+          ]
+        },
+        {
+          "personId": "LADI1",
+          "personName": "Ladislao I",
+          "government": {
+            "territory": "Polonia",
+            "title": "Rey",
+            "from": 1320,
+            "through": 1333,
+            "class": "reinado",
+            "condition": "efectivo"
+          },
+          "auditFrom": 1320,
+          "auditThrough": 1333,
+          "yearsWithGeometry": 14,
+          "yearsWithoutGeometry": 0,
+          "locations": 89,
+          "missingGeometryIntervals": []
+        },
+        {
+          "personId": "WEN3",
+          "personName": "Wenceslao III",
+          "government": {
+            "territory": "Polonia",
+            "title": "Rey",
+            "from": 1305,
+            "through": 1306,
+            "class": "reinado",
+            "condition": "efectivo"
+          },
+          "auditFrom": 1305,
+          "auditThrough": 1306,
+          "yearsWithGeometry": 0,
+          "yearsWithoutGeometry": 2,
+          "locations": 0,
+          "missingGeometryIntervals": [
+            {
+              "from": 1305,
+              "through": 1306
+            }
+          ]
+        },
+        {
+          "personId": "CASI3",
+          "personName": "Casimiro III",
+          "government": {
+            "territory": "Polonia",
+            "title": "Rey",
+            "from": 1333,
+            "through": 1370,
+            "class": "reinado",
+            "condition": "efectivo"
+          },
+          "auditFrom": 1333,
+          "auditThrough": 1370,
+          "yearsWithGeometry": 38,
+          "yearsWithoutGeometry": 0,
+          "locations": 117,
+          "missingGeometryIntervals": []
+        },
+        {
+          "personId": "LUIS1",
+          "personName": "Luis I",
+          "government": {
+            "territory": "Polonia",
+            "title": "Rey",
+            "from": 1370,
+            "through": 1382,
+            "class": "reinado",
+            "condition": "efectivo"
+          },
+          "auditFrom": 1370,
+          "auditThrough": 1382,
+          "yearsWithGeometry": 13,
+          "yearsWithoutGeometry": 0,
+          "locations": 117,
+          "missingGeometryIntervals": []
+        },
+        {
+          "personId": "LADI2",
+          "personName": "Ladislao II de Polonia",
+          "government": {
+            "territory": "Polonia",
+            "title": "Rey",
+            "from": 1386,
+            "through": 1434,
+            "class": "reinado",
+            "condition": "corregente"
+          },
+          "auditFrom": 1386,
+          "auditThrough": 1434,
+          "yearsWithGeometry": 49,
+          "yearsWithoutGeometry": 0,
+          "locations": 159,
+          "missingGeometryIntervals": []
+        },
+        {
+          "personId": "EDUV1",
+          "personName": "Santa Eduviges I",
+          "government": {
+            "territory": "Polonia",
+            "title": "Rey",
+            "from": 1384,
+            "through": 1399,
+            "class": "reinado",
+            "condition": "efectivo"
+          },
+          "auditFrom": 1384,
+          "auditThrough": 1399,
+          "yearsWithGeometry": 16,
+          "yearsWithoutGeometry": 0,
+          "locations": 117,
+          "missingGeometryIntervals": []
+        },
+        {
+          "personId": "LADI3",
+          "personName": "Ladislao III",
+          "government": {
+            "territory": "Polonia",
+            "title": "Rey",
+            "from": 1434,
+            "through": 1444,
+            "class": "reinado",
+            "condition": "efectivo"
+          },
+          "auditFrom": 1434,
+          "auditThrough": 1444,
+          "yearsWithGeometry": 11,
+          "yearsWithoutGeometry": 0,
+          "locations": 159,
+          "missingGeometryIntervals": []
+        },
+        {
+          "personId": "CASI4",
+          "personName": "Casimiro IV",
+          "government": {
+            "territory": "Polonia",
+            "title": "Rey",
+            "from": 1447,
+            "through": 1492,
+            "class": "reinado",
+            "condition": "efectivo"
+          },
+          "auditFrom": 1447,
+          "auditThrough": 1492,
+          "yearsWithGeometry": 46,
+          "yearsWithoutGeometry": 0,
+          "locations": 179,
+          "missingGeometryIntervals": []
+        },
+        {
+          "personId": "SEGIS1JAG",
+          "personName": "Segismundo I Jagellón",
+          "government": {
+            "territory": "Polonia",
+            "title": "Rey",
+            "from": 1506,
+            "through": 1548,
+            "class": "reinado",
+            "condition": "efectivo"
+          },
+          "auditFrom": 1506,
+          "auditThrough": 1548,
+          "yearsWithGeometry": 43,
+          "yearsWithoutGeometry": 0,
+          "locations": 200,
+          "missingGeometryIntervals": []
+        },
+        {
+          "personId": "JUAN1ALBERTO",
+          "personName": "Juan I Alberto",
+          "government": {
+            "territory": "Polonia",
+            "title": "Rey",
+            "from": 1492,
+            "through": 1501,
+            "class": "reinado",
+            "condition": "efectivo"
+          },
+          "auditFrom": 1492,
+          "auditThrough": 1501,
+          "yearsWithGeometry": 10,
+          "yearsWithoutGeometry": 0,
+          "locations": 183,
+          "missingGeometryIntervals": []
+        },
+        {
+          "personId": "SEGIS2JAG",
+          "personName": "Segismundo II Augusto",
+          "government": {
+            "territory": "Polonia",
+            "title": "Rey",
+            "from": 1548,
+            "through": 1572,
+            "class": "reinado",
+            "condition": "efectivo"
+          },
+          "auditFrom": 1548,
+          "auditThrough": 1572,
+          "yearsWithGeometry": 25,
+          "yearsWithoutGeometry": 0,
+          "locations": 276,
+          "missingGeometryIntervals": []
+        },
+        {
+          "personId": "ALEJANDRO1POL",
+          "personName": "Alejandro I de Polonia",
+          "government": {
+            "territory": "Polonia",
+            "title": "Rey",
+            "from": 1501,
+            "through": 1506,
+            "class": "reinado",
+            "condition": "efectivo"
+          },
+          "auditFrom": 1501,
+          "auditThrough": 1506,
+          "yearsWithGeometry": 6,
+          "yearsWithoutGeometry": 0,
+          "locations": 183,
+          "missingGeometryIntervals": []
+        },
+        {
+          "personId": "ENRIQ3FRA",
+          "personName": "Enrique III de Francia",
+          "government": {
+            "territory": "Polonia",
+            "title": "Rey",
+            "from": 1573,
+            "through": 1575,
+            "class": "reinado",
+            "condition": "efectivo"
+          },
+          "auditFrom": 1573,
+          "auditThrough": 1575,
+          "yearsWithGeometry": 3,
+          "yearsWithoutGeometry": 0,
+          "locations": 272,
+          "missingGeometryIntervals": []
+        },
+        {
+          "personId": "ANAJAG",
+          "personName": "Ana Jagellón",
+          "government": {
+            "territory": "Polonia",
+            "title": "Reina",
+            "from": 1575,
+            "through": 1587,
+            "class": "reinado",
+            "condition": "corregente"
+          },
+          "auditFrom": 1575,
+          "auditThrough": 1587,
+          "yearsWithGeometry": 13,
+          "yearsWithoutGeometry": 0,
+          "locations": 272,
+          "missingGeometryIntervals": []
+        },
+        {
+          "personId": "ESTEBANBATHORY",
+          "personName": "Esteban Báthory",
+          "government": {
+            "territory": "Polonia",
+            "title": "Rey",
+            "from": 1576,
+            "through": 1586,
+            "class": "reinado",
+            "condition": "efectivo"
+          },
+          "auditFrom": 1576,
+          "auditThrough": 1586,
+          "yearsWithGeometry": 11,
+          "yearsWithoutGeometry": 0,
+          "locations": 272,
+          "missingGeometryIntervals": []
+        },
+        {
+          "personId": "SEGIS3VASA",
+          "personName": "Segismundo III Vasa",
+          "government": {
+            "territory": "Polonia",
+            "title": "Rey",
+            "from": 1587,
+            "through": 1632,
+            "class": "reinado",
+            "condition": "efectivo"
+          },
+          "auditFrom": 1587,
+          "auditThrough": 1632,
+          "yearsWithGeometry": 46,
+          "yearsWithoutGeometry": 0,
+          "locations": 272,
+          "missingGeometryIntervals": []
+        },
+        {
+          "personId": "AUGUST2SAXPOL",
+          "personName": "Augusto II de Polonia",
+          "government": {
+            "territory": "Polonia",
+            "title": "Rey",
+            "from": 1697,
+            "through": 1704,
+            "class": "reinado",
+            "condition": "efectivo"
+          },
+          "auditFrom": 1697,
+          "auditThrough": 1704,
+          "yearsWithGeometry": 8,
+          "yearsWithoutGeometry": 0,
+          "locations": 260,
+          "missingGeometryIntervals": []
+        },
+        {
+          "personId": "AUGUST2SAXPOL",
+          "personName": "Augusto II de Polonia",
+          "government": {
+            "territory": "Polonia",
+            "title": "Rey",
+            "from": 1709,
+            "through": 1733,
+            "class": "reinado",
+            "condition": "efectivo"
+          },
+          "auditFrom": 1709,
+          "auditThrough": 1733,
+          "yearsWithGeometry": 25,
+          "yearsWithoutGeometry": 0,
+          "locations": 260,
+          "missingGeometryIntervals": []
+        },
+        {
+          "personId": "AUGUST3SAXPOL",
+          "personName": "Augusto III de Polonia",
+          "government": {
+            "territory": "Polonia",
+            "title": "Rey",
+            "from": 1733,
+            "through": 1763,
+            "class": "reinado",
+            "condition": "efectivo"
+          },
+          "auditFrom": 1733,
+          "auditThrough": 1763,
+          "yearsWithGeometry": 31,
+          "yearsWithoutGeometry": 0,
+          "locations": 260,
+          "missingGeometryIntervals": []
+        },
+        {
+          "personId": "WLAD4VASA",
+          "personName": "Ladislao IV Vasa",
+          "government": {
+            "territory": "Polonia",
+            "title": "Rey",
+            "from": 1632,
+            "through": 1648,
+            "class": "reinado",
+            "condition": "efectivo"
+          },
+          "auditFrom": 1632,
+          "auditThrough": 1648,
+          "yearsWithGeometry": 17,
+          "yearsWithoutGeometry": 0,
+          "locations": 272,
+          "missingGeometryIntervals": []
+        },
+        {
+          "personId": "JUAN2CASIVASA",
+          "personName": "Juan II Casimiro Vasa",
+          "government": {
+            "territory": "Polonia",
+            "title": "Rey",
+            "from": 1648,
+            "through": 1668,
+            "class": "reinado",
+            "condition": "efectivo"
+          },
+          "auditFrom": 1648,
+          "auditThrough": 1668,
+          "yearsWithGeometry": 21,
+          "yearsWithoutGeometry": 0,
+          "locations": 272,
+          "missingGeometryIntervals": []
+        },
+        {
+          "personId": "MIGUELKORYBUT",
+          "personName": "Miguel Korybut Wiśniowiecki",
+          "government": {
+            "territory": "Polonia",
+            "title": "Rey",
+            "from": 1669,
+            "through": 1673,
+            "class": "reinado",
+            "condition": "efectivo"
+          },
+          "auditFrom": 1669,
+          "auditThrough": 1673,
+          "yearsWithGeometry": 5,
+          "yearsWithoutGeometry": 0,
+          "locations": 260,
+          "missingGeometryIntervals": []
+        },
+        {
+          "personId": "JUAN3SOBIESKI",
+          "personName": "Juan III Sobieski",
+          "government": {
+            "territory": "Polonia",
+            "title": "Rey",
+            "from": 1674,
+            "through": 1696,
+            "class": "reinado",
+            "condition": "efectivo"
+          },
+          "auditFrom": 1674,
+          "auditThrough": 1696,
+          "yearsWithGeometry": 23,
+          "yearsWithoutGeometry": 0,
+          "locations": 250,
+          "missingGeometryIntervals": []
+        },
+        {
+          "personId": "STAN1LESZ",
+          "personName": "Estanislao I Leszczyński",
+          "government": {
+            "territory": "Polonia",
+            "title": "Rey",
+            "from": 1704,
+            "through": 1709,
+            "class": "reinado",
+            "condition": "efectivo"
+          },
+          "auditFrom": 1704,
+          "auditThrough": 1709,
+          "yearsWithGeometry": 6,
+          "yearsWithoutGeometry": 0,
+          "locations": 260,
+          "missingGeometryIntervals": []
+        },
+        {
+          "personId": "STAN2PONIAT",
+          "personName": "Estanislao II Augusto Poniatowski",
+          "government": {
+            "territory": "Polonia",
+            "title": "Rey",
+            "from": 1764,
+            "through": 1795,
+            "class": "reinado",
+            "condition": "efectivo"
+          },
+          "auditFrom": 1764,
+          "auditThrough": 1795,
+          "yearsWithGeometry": 31,
+          "yearsWithoutGeometry": 1,
+          "locations": 260,
+          "missingGeometryIntervals": [
+            {
+              "from": 1795,
+              "through": 1795
+            }
+          ]
+        }
+      ],
+      "nonpaintingGovernments": [
+        {
+          "personId": "STAN1LESZ",
+          "personName": "Estanislao I Leszczyński",
+          "government": {
+            "territory": "Polonia",
+            "title": "Rey",
+            "from": 1733,
+            "through": 1736,
+            "class": "reinado",
+            "condition": "rival"
+          },
+          "auditFrom": 1733,
+          "auditThrough": 1736
+        }
+      ],
       "outsidePeriodGovernments": []
     },
     {
@@ -29988,8 +30470,8 @@
       "territory": "Silesia",
       "status": "represented",
       "counts": {
-        "effectiveMandatesAllTime": 26,
-        "effectiveMandatesInScope": 26,
+        "effectiveMandatesAllTime": 30,
+        "effectiveMandatesInScope": 30,
         "nonpaintingMandatesInScope": 0,
         "locations": 47,
         "yearsWithGovernment": 446,
@@ -30010,6 +30492,10 @@
         {
           "name": "Silesia · parte prusiana",
           "note": "Silesia prusiana con el condado bohemio de Glatz cedido en el mismo tratado. No incluye Teschen/Bielsko ni los entornos austríacos de Opava, Krnov y Jeseník. Frontera de celdas aproximada, no trazado exacto de los ríos."
+        },
+        {
+          "name": "Silesia · remanente austríaco",
+          "note": "Teschen y Bielsko; partes meridionales de Troppau/Opava, Jägerndorf/Krnov y Nysa/Jeseník. Las celdas Opava, Krnov y Fryvaldov cruzan el deslinde histórico: asignación regional aproximada al lado austríaco, sin afirmar que todo su contorno quedara allí."
         },
         {
           "name": "Silesia · soberanía de la Corona",
@@ -30444,6 +30930,82 @@
           "missingGeometryIntervals": []
         },
         {
+          "personId": "MARIATERESAHAB",
+          "personName": "María Teresa de Austria",
+          "government": {
+            "territory": "Silesia",
+            "title": "Soberano",
+            "from": 1742,
+            "through": 1780,
+            "class": "gobierno",
+            "condition": "efectivo",
+            "scope": "Remanente de los ducados silesianos conservado por la monarquía habsbúrgica desde 1742; no toda Silesia"
+          },
+          "auditFrom": 1742,
+          "auditThrough": 1780,
+          "yearsWithGeometry": 39,
+          "yearsWithoutGeometry": 0,
+          "locations": 5,
+          "missingGeometryIntervals": []
+        },
+        {
+          "personId": "JOSE2HRE",
+          "personName": "José II del Sacro Imperio",
+          "government": {
+            "territory": "Silesia",
+            "title": "Soberano",
+            "from": 1780,
+            "through": 1790,
+            "class": "gobierno",
+            "condition": "efectivo",
+            "scope": "Remanente de los ducados silesianos conservado por la monarquía habsbúrgica desde 1742; no toda Silesia"
+          },
+          "auditFrom": 1780,
+          "auditThrough": 1790,
+          "yearsWithGeometry": 11,
+          "yearsWithoutGeometry": 0,
+          "locations": 5,
+          "missingGeometryIntervals": []
+        },
+        {
+          "personId": "LEOP2HRE",
+          "personName": "Leopoldo II del Sacro Imperio",
+          "government": {
+            "territory": "Silesia",
+            "title": "Soberano",
+            "from": 1790,
+            "through": 1792,
+            "class": "gobierno",
+            "condition": "efectivo",
+            "scope": "Remanente de los ducados silesianos conservado por la monarquía habsbúrgica desde 1742; no toda Silesia"
+          },
+          "auditFrom": 1790,
+          "auditThrough": 1792,
+          "yearsWithGeometry": 3,
+          "yearsWithoutGeometry": 0,
+          "locations": 5,
+          "missingGeometryIntervals": []
+        },
+        {
+          "personId": "FRAN2HRE",
+          "personName": "Francisco II del Sacro Imperio",
+          "government": {
+            "territory": "Silesia",
+            "title": "Soberano",
+            "from": 1792,
+            "through": 1835,
+            "class": "gobierno",
+            "condition": "efectivo",
+            "scope": "Remanente de los ducados silesianos conservado por la monarquía habsbúrgica desde 1742; no toda Silesia"
+          },
+          "auditFrom": 1792,
+          "auditThrough": 1800,
+          "yearsWithGeometry": 9,
+          "yearsWithoutGeometry": 0,
+          "locations": 5,
+          "missingGeometryIntervals": []
+        },
+        {
           "personId": "FRED2PRUSSIA",
           "personName": "Federico II de Prusia",
           "government": {
@@ -30522,1137 +31084,6 @@
       ],
       "nonpaintingGovernments": [],
       "outsidePeriodGovernments": []
-    },
-    {
-      "territory": "Suecia",
-      "status": "represented",
-      "counts": {
-        "effectiveMandatesAllTime": 53,
-        "effectiveMandatesInScope": 50,
-        "nonpaintingMandatesInScope": 1,
-        "locations": 216,
-        "yearsWithGovernment": 601,
-        "yearsWithGeometry": 251,
-        "yearsWithoutGeometry": 350,
-        "mandatesWithSomeMissingGeometry": 25,
-        "mandatesEntirelyWithoutGeometry": 22
-      },
-      "hasMandateGeometryGaps": true,
-      "hasEntireTerritoryYearGaps": true,
-      "limitedCore": false,
-      "missingGeometryIntervals": [
-        {
-          "from": 1200,
-          "through": 1399
-        },
-        {
-          "from": 1651,
-          "through": 1800
-        }
-      ],
-      "layers": [
-        {
-          "name": "Estonia sueca",
-          "note": "Solo la provincia antigua Estonia, desde la sumisión a Suecia en 1561. No equivale a todo el territorio de la actual Estonia ni a Livonia entera."
-        },
-        {
-          "name": "Livonia sueca",
-          "note": "Desde Altmark (1629), incluye las provincias antiguas North_Livonia e Inner_Livonia; Riga tiene su marcador urbano desde 1621. No se atribuye a Suecia Latgale."
-        },
-        {
-          "name": "Ösel bajo Suecia",
-          "note": "Solo Kuressaare como marcador tras la cesión de Ösel a Suecia en 1645; no es un mapa de la isla."
-        },
-        {
-          "name": "Pomerania bajo ocupación sueca",
-          "note": "Control militar efectivo desde 1630 sobre el ducado; la ocupación no elimina la soberanía del último duque antes de 1637 ni equivale a la partición legal de 1648."
-        },
-        {
-          "name": "Pomerania sueca",
-          "note": "Solo la parte occidental asignada a Suecia en Westfalia: Stettin y Rügen se usan como proxies. El límite exacto con Brandeburgo se fijó en 1653."
-        },
-        {
-          "name": "Reino de Suecia",
-          "note": "La revisión visual incluye Västmanland, Närke, Dalsland, la zona de Tiohärad en Småland y Satakunta en Finlandia. Se mantiene como reino distinto incluso durante la Unión de Kalmar. Jämtland, Halland y Gotland entran desde 1645; Ösel se muestra como marcador insular separado."
-        },
-        {
-          "name": "Riga bajo Suecia",
-          "note": "Marcador urbano desde la toma sueca de 1621; la posesión más amplia de Livonia queda en otra capa desde 1629."
-        },
-        {
-          "name": "Señorío sueco de Wismar",
-          "note": "Localidad/feudo imperial asignado a Suecia en 1648. No representa la costa entera de Mecklemburgo ni una incorporación al Reino de Suecia."
-        }
-      ],
-      "governments": [
-        {
-          "personId": "CRISTIAN2DIN",
-          "personName": "Cristián II de Dinamarca",
-          "government": {
-            "territory": "Suecia",
-            "title": "Rey",
-            "from": 1520,
-            "through": 1521,
-            "class": "reinado",
-            "condition": "efectivo"
-          },
-          "auditFrom": 1520,
-          "auditThrough": 1521,
-          "yearsWithGeometry": 2,
-          "yearsWithoutGeometry": 0,
-          "locations": 171,
-          "missingGeometryIntervals": []
-        },
-        {
-          "personId": "JUAN3SUECIA",
-          "personName": "Juan III de Suecia",
-          "government": {
-            "territory": "Suecia",
-            "title": "Rey",
-            "from": 1568,
-            "through": 1592,
-            "class": "reinado",
-            "condition": "efectivo"
-          },
-          "auditFrom": 1568,
-          "auditThrough": 1592,
-          "yearsWithGeometry": 25,
-          "yearsWithoutGeometry": 0,
-          "locations": 179,
-          "missingGeometryIntervals": []
-        },
-        {
-          "personId": "SEGIS3VASA",
-          "personName": "Segismundo III Vasa",
-          "government": {
-            "territory": "Suecia",
-            "title": "Rey",
-            "from": 1592,
-            "through": 1599,
-            "class": "reinado",
-            "condition": "efectivo"
-          },
-          "auditFrom": 1592,
-          "auditThrough": 1599,
-          "yearsWithGeometry": 8,
-          "yearsWithoutGeometry": 0,
-          "locations": 179,
-          "missingGeometryIntervals": []
-        },
-        {
-          "personId": "SVERKER2SUE",
-          "personName": "Sverker II de Suecia",
-          "government": {
-            "territory": "Suecia",
-            "title": "Rey",
-            "from": 1196,
-            "through": 1208,
-            "class": "reinado",
-            "condition": "efectivo"
-          },
-          "auditFrom": 1200,
-          "auditThrough": 1208,
-          "yearsWithGeometry": 0,
-          "yearsWithoutGeometry": 9,
-          "locations": 0,
-          "missingGeometryIntervals": [
-            {
-              "from": 1200,
-              "through": 1208
-            }
-          ]
-        },
-        {
-          "personId": "ERIK10SUE",
-          "personName": "Erik X de Suecia",
-          "government": {
-            "territory": "Suecia",
-            "title": "Rey",
-            "from": 1208,
-            "through": 1216,
-            "class": "reinado",
-            "condition": "efectivo"
-          },
-          "auditFrom": 1208,
-          "auditThrough": 1216,
-          "yearsWithGeometry": 0,
-          "yearsWithoutGeometry": 9,
-          "locations": 0,
-          "missingGeometryIntervals": [
-            {
-              "from": 1208,
-              "through": 1216
-            }
-          ]
-        },
-        {
-          "personId": "JUAN1SUE",
-          "personName": "Juan I de Suecia",
-          "government": {
-            "territory": "Suecia",
-            "title": "Rey",
-            "from": 1216,
-            "through": 1222,
-            "class": "reinado",
-            "condition": "efectivo"
-          },
-          "auditFrom": 1216,
-          "auditThrough": 1222,
-          "yearsWithGeometry": 0,
-          "yearsWithoutGeometry": 7,
-          "locations": 0,
-          "missingGeometryIntervals": [
-            {
-              "from": 1216,
-              "through": 1222
-            }
-          ]
-        },
-        {
-          "personId": "ERIK11SUE",
-          "personName": "Erik XI de Suecia",
-          "government": {
-            "territory": "Suecia",
-            "title": "Rey",
-            "from": 1222,
-            "through": 1229,
-            "class": "reinado",
-            "condition": "efectivo"
-          },
-          "auditFrom": 1222,
-          "auditThrough": 1229,
-          "yearsWithGeometry": 0,
-          "yearsWithoutGeometry": 8,
-          "locations": 0,
-          "missingGeometryIntervals": [
-            {
-              "from": 1222,
-              "through": 1229
-            }
-          ]
-        },
-        {
-          "personId": "ERIK11SUE",
-          "personName": "Erik XI de Suecia",
-          "government": {
-            "territory": "Suecia",
-            "title": "Rey",
-            "from": 1234,
-            "through": 1250,
-            "class": "reinado",
-            "condition": "efectivo"
-          },
-          "auditFrom": 1234,
-          "auditThrough": 1250,
-          "yearsWithGeometry": 0,
-          "yearsWithoutGeometry": 17,
-          "locations": 0,
-          "missingGeometryIntervals": [
-            {
-              "from": 1234,
-              "through": 1250
-            }
-          ]
-        },
-        {
-          "personId": "KNUT2SUE",
-          "personName": "Canuto II de Suecia",
-          "government": {
-            "territory": "Suecia",
-            "title": "Rey",
-            "from": 1229,
-            "through": 1234,
-            "class": "reinado",
-            "condition": "efectivo"
-          },
-          "auditFrom": 1229,
-          "auditThrough": 1234,
-          "yearsWithGeometry": 0,
-          "yearsWithoutGeometry": 6,
-          "locations": 0,
-          "missingGeometryIntervals": [
-            {
-              "from": 1229,
-              "through": 1234
-            }
-          ]
-        },
-        {
-          "personId": "BIRGERJARL",
-          "personName": "Birger Jarl",
-          "government": {
-            "territory": "Suecia",
-            "title": "Regente",
-            "from": 1250,
-            "through": 1266,
-            "class": "regencia",
-            "condition": "efectivo"
-          },
-          "auditFrom": 1250,
-          "auditThrough": 1266,
-          "yearsWithGeometry": 0,
-          "yearsWithoutGeometry": 17,
-          "locations": 0,
-          "missingGeometryIntervals": [
-            {
-              "from": 1250,
-              "through": 1266
-            }
-          ]
-        },
-        {
-          "personId": "VALDEMARSUE",
-          "personName": "Valdemar de Suecia",
-          "government": {
-            "territory": "Suecia",
-            "title": "Rey",
-            "from": 1250,
-            "through": 1275,
-            "class": "reinado",
-            "condition": "efectivo"
-          },
-          "auditFrom": 1250,
-          "auditThrough": 1275,
-          "yearsWithGeometry": 0,
-          "yearsWithoutGeometry": 26,
-          "locations": 0,
-          "missingGeometryIntervals": [
-            {
-              "from": 1250,
-              "through": 1275
-            }
-          ]
-        },
-        {
-          "personId": "MAGNUS3SUE",
-          "personName": "Magnus III de Suecia",
-          "government": {
-            "territory": "Suecia",
-            "title": "Rey",
-            "from": 1275,
-            "through": 1290,
-            "class": "reinado",
-            "condition": "efectivo"
-          },
-          "auditFrom": 1275,
-          "auditThrough": 1290,
-          "yearsWithGeometry": 0,
-          "yearsWithoutGeometry": 16,
-          "locations": 0,
-          "missingGeometryIntervals": [
-            {
-              "from": 1275,
-              "through": 1290
-            }
-          ]
-        },
-        {
-          "personId": "BIRGERSUE",
-          "personName": "Birger de Suecia",
-          "government": {
-            "territory": "Suecia",
-            "title": "Rey",
-            "from": 1290,
-            "through": 1318,
-            "class": "reinado",
-            "condition": "efectivo"
-          },
-          "auditFrom": 1290,
-          "auditThrough": 1318,
-          "yearsWithGeometry": 0,
-          "yearsWithoutGeometry": 29,
-          "locations": 0,
-          "missingGeometryIntervals": [
-            {
-              "from": 1290,
-              "through": 1318
-            }
-          ]
-        },
-        {
-          "personId": "MAGNUS4SUE",
-          "personName": "Magnus IV de Suecia",
-          "government": {
-            "territory": "Suecia",
-            "title": "Rey",
-            "from": 1319,
-            "through": 1364,
-            "class": "reinado",
-            "condition": "efectivo"
-          },
-          "auditFrom": 1319,
-          "auditThrough": 1364,
-          "yearsWithGeometry": 0,
-          "yearsWithoutGeometry": 46,
-          "locations": 0,
-          "missingGeometryIntervals": [
-            {
-              "from": 1319,
-              "through": 1364
-            }
-          ]
-        },
-        {
-          "personId": "ERIK12SUE",
-          "personName": "Erik XII de Suecia",
-          "government": {
-            "territory": "Suecia",
-            "title": "Rey",
-            "from": 1356,
-            "through": 1359,
-            "class": "reinado",
-            "condition": "corregente"
-          },
-          "auditFrom": 1356,
-          "auditThrough": 1359,
-          "yearsWithGeometry": 0,
-          "yearsWithoutGeometry": 4,
-          "locations": 0,
-          "missingGeometryIntervals": [
-            {
-              "from": 1356,
-              "through": 1359
-            }
-          ]
-        },
-        {
-          "personId": "HAAKON6NOR",
-          "personName": "Haakon VI de Noruega",
-          "government": {
-            "territory": "Suecia",
-            "title": "Rey",
-            "from": 1362,
-            "through": 1364,
-            "class": "reinado",
-            "condition": "corregente"
-          },
-          "auditFrom": 1362,
-          "auditThrough": 1364,
-          "yearsWithGeometry": 0,
-          "yearsWithoutGeometry": 3,
-          "locations": 0,
-          "missingGeometryIntervals": [
-            {
-              "from": 1362,
-              "through": 1364
-            }
-          ]
-        },
-        {
-          "personId": "ALBERTOSUE",
-          "personName": "Alberto de Suecia",
-          "government": {
-            "territory": "Suecia",
-            "title": "Rey",
-            "from": 1364,
-            "through": 1389,
-            "class": "reinado",
-            "condition": "efectivo"
-          },
-          "auditFrom": 1364,
-          "auditThrough": 1389,
-          "yearsWithGeometry": 0,
-          "yearsWithoutGeometry": 26,
-          "locations": 0,
-          "missingGeometryIntervals": [
-            {
-              "from": 1364,
-              "through": 1389
-            }
-          ]
-        },
-        {
-          "personId": "MARGARITA1NORD",
-          "personName": "Margarita I de Dinamarca",
-          "government": {
-            "territory": "Suecia",
-            "title": "Reina",
-            "from": 1389,
-            "through": 1412,
-            "class": "reinado",
-            "condition": "corregente"
-          },
-          "auditFrom": 1389,
-          "auditThrough": 1412,
-          "yearsWithGeometry": 13,
-          "yearsWithoutGeometry": 11,
-          "locations": 171,
-          "missingGeometryIntervals": [
-            {
-              "from": 1389,
-              "through": 1399
-            }
-          ]
-        },
-        {
-          "personId": "ERICOPOMERANIA",
-          "personName": "Erik de Pomerania",
-          "government": {
-            "territory": "Suecia",
-            "title": "Rey",
-            "from": 1396,
-            "through": 1434,
-            "class": "reinado",
-            "condition": "efectivo"
-          },
-          "auditFrom": 1396,
-          "auditThrough": 1434,
-          "yearsWithGeometry": 35,
-          "yearsWithoutGeometry": 4,
-          "locations": 171,
-          "missingGeometryIntervals": [
-            {
-              "from": 1396,
-              "through": 1399
-            }
-          ]
-        },
-        {
-          "personId": "CRISTOBALBAVSUE",
-          "personName": "Cristóbal de Baviera",
-          "government": {
-            "territory": "Suecia",
-            "title": "Rey",
-            "from": 1441,
-            "through": 1448,
-            "class": "reinado",
-            "condition": "efectivo"
-          },
-          "auditFrom": 1441,
-          "auditThrough": 1448,
-          "yearsWithGeometry": 8,
-          "yearsWithoutGeometry": 0,
-          "locations": 171,
-          "missingGeometryIntervals": []
-        },
-        {
-          "personId": "CARLOS8SUE",
-          "personName": "Carlos VIII de Suecia",
-          "government": {
-            "territory": "Suecia",
-            "title": "Regente",
-            "from": 1436,
-            "through": 1437,
-            "class": "regencia",
-            "condition": "regencia"
-          },
-          "auditFrom": 1436,
-          "auditThrough": 1437,
-          "yearsWithGeometry": 2,
-          "yearsWithoutGeometry": 0,
-          "locations": 171,
-          "missingGeometryIntervals": []
-        },
-        {
-          "personId": "CARLOS8SUE",
-          "personName": "Carlos VIII de Suecia",
-          "government": {
-            "territory": "Suecia",
-            "title": "Regente",
-            "from": 1438,
-            "through": 1440,
-            "class": "regencia",
-            "condition": "regencia"
-          },
-          "auditFrom": 1438,
-          "auditThrough": 1440,
-          "yearsWithGeometry": 3,
-          "yearsWithoutGeometry": 0,
-          "locations": 171,
-          "missingGeometryIntervals": []
-        },
-        {
-          "personId": "CARLOS8SUE",
-          "personName": "Carlos VIII de Suecia",
-          "government": {
-            "territory": "Suecia",
-            "title": "Rey",
-            "from": 1448,
-            "through": 1457,
-            "class": "reinado",
-            "condition": "efectivo"
-          },
-          "auditFrom": 1448,
-          "auditThrough": 1457,
-          "yearsWithGeometry": 10,
-          "yearsWithoutGeometry": 0,
-          "locations": 171,
-          "missingGeometryIntervals": []
-        },
-        {
-          "personId": "CARLOS8SUE",
-          "personName": "Carlos VIII de Suecia",
-          "government": {
-            "territory": "Suecia",
-            "title": "Rey",
-            "from": 1464,
-            "through": 1465,
-            "class": "reinado",
-            "condition": "efectivo"
-          },
-          "auditFrom": 1464,
-          "auditThrough": 1465,
-          "yearsWithGeometry": 2,
-          "yearsWithoutGeometry": 0,
-          "locations": 171,
-          "missingGeometryIntervals": []
-        },
-        {
-          "personId": "CARLOS8SUE",
-          "personName": "Carlos VIII de Suecia",
-          "government": {
-            "territory": "Suecia",
-            "title": "Rey",
-            "from": 1467,
-            "through": 1470,
-            "class": "reinado",
-            "condition": "efectivo"
-          },
-          "auditFrom": 1467,
-          "auditThrough": 1470,
-          "yearsWithGeometry": 4,
-          "yearsWithoutGeometry": 0,
-          "locations": 171,
-          "missingGeometryIntervals": []
-        },
-        {
-          "personId": "CRISTIAN1NORD",
-          "personName": "Cristián I de Dinamarca",
-          "government": {
-            "territory": "Suecia",
-            "title": "Rey",
-            "from": 1457,
-            "through": 1464,
-            "class": "reinado",
-            "condition": "efectivo"
-          },
-          "auditFrom": 1457,
-          "auditThrough": 1464,
-          "yearsWithGeometry": 8,
-          "yearsWithoutGeometry": 0,
-          "locations": 171,
-          "missingGeometryIntervals": []
-        },
-        {
-          "personId": "ESTENSTUREVIEJO",
-          "personName": "Sten Sture el Viejo",
-          "government": {
-            "territory": "Suecia",
-            "title": "Regente",
-            "from": 1470,
-            "through": 1497,
-            "class": "regencia",
-            "condition": "efectivo"
-          },
-          "auditFrom": 1470,
-          "auditThrough": 1497,
-          "yearsWithGeometry": 28,
-          "yearsWithoutGeometry": 0,
-          "locations": 171,
-          "missingGeometryIntervals": []
-        },
-        {
-          "personId": "ESTENSTUREVIEJO",
-          "personName": "Sten Sture el Viejo",
-          "government": {
-            "territory": "Suecia",
-            "title": "Regente",
-            "from": 1501,
-            "through": 1503,
-            "class": "regencia",
-            "condition": "efectivo"
-          },
-          "auditFrom": 1501,
-          "auditThrough": 1503,
-          "yearsWithGeometry": 3,
-          "yearsWithoutGeometry": 0,
-          "locations": 171,
-          "missingGeometryIntervals": []
-        },
-        {
-          "personId": "JUAN2NORD",
-          "personName": "Juan de Dinamarca",
-          "government": {
-            "territory": "Suecia",
-            "title": "Rey",
-            "from": 1497,
-            "through": 1501,
-            "class": "reinado",
-            "condition": "efectivo"
-          },
-          "auditFrom": 1497,
-          "auditThrough": 1501,
-          "yearsWithGeometry": 5,
-          "yearsWithoutGeometry": 0,
-          "locations": 171,
-          "missingGeometryIntervals": []
-        },
-        {
-          "personId": "SVANTENILSSON",
-          "personName": "Svante Nilsson",
-          "government": {
-            "territory": "Suecia",
-            "title": "Regente",
-            "from": 1504,
-            "through": 1512,
-            "class": "regencia",
-            "condition": "efectivo"
-          },
-          "auditFrom": 1504,
-          "auditThrough": 1512,
-          "yearsWithGeometry": 9,
-          "yearsWithoutGeometry": 0,
-          "locations": 171,
-          "missingGeometryIntervals": []
-        },
-        {
-          "personId": "ESTENSTUREJOVEN",
-          "personName": "Sten Sture el Joven",
-          "government": {
-            "territory": "Suecia",
-            "title": "Regente",
-            "from": 1512,
-            "through": 1520,
-            "class": "regencia",
-            "condition": "efectivo"
-          },
-          "auditFrom": 1512,
-          "auditThrough": 1520,
-          "yearsWithGeometry": 9,
-          "yearsWithoutGeometry": 0,
-          "locations": 171,
-          "missingGeometryIntervals": []
-        },
-        {
-          "personId": "GUSTAV1VASA",
-          "personName": "Gustavo I Vasa",
-          "government": {
-            "territory": "Suecia",
-            "title": "Regente",
-            "from": 1521,
-            "through": 1523,
-            "class": "regencia",
-            "condition": "regencia"
-          },
-          "auditFrom": 1521,
-          "auditThrough": 1523,
-          "yearsWithGeometry": 3,
-          "yearsWithoutGeometry": 0,
-          "locations": 171,
-          "missingGeometryIntervals": []
-        },
-        {
-          "personId": "GUSTAV1VASA",
-          "personName": "Gustavo I Vasa",
-          "government": {
-            "territory": "Suecia",
-            "title": "Rey",
-            "from": 1523,
-            "through": 1560,
-            "class": "reinado",
-            "condition": "efectivo"
-          },
-          "auditFrom": 1523,
-          "auditThrough": 1560,
-          "yearsWithGeometry": 38,
-          "yearsWithoutGeometry": 0,
-          "locations": 171,
-          "missingGeometryIntervals": []
-        },
-        {
-          "personId": "ERIK14SUE",
-          "personName": "Erik XIV de Suecia",
-          "government": {
-            "territory": "Suecia",
-            "title": "Rey",
-            "from": 1560,
-            "through": 1568,
-            "class": "reinado",
-            "condition": "efectivo"
-          },
-          "auditFrom": 1560,
-          "auditThrough": 1568,
-          "yearsWithGeometry": 9,
-          "yearsWithoutGeometry": 0,
-          "locations": 179,
-          "missingGeometryIntervals": []
-        },
-        {
-          "personId": "CARLOS9SUE",
-          "personName": "Carlos IX de Suecia",
-          "government": {
-            "territory": "Suecia",
-            "title": "Regente",
-            "from": 1599,
-            "through": 1604,
-            "class": "regencia",
-            "condition": "regencia"
-          },
-          "auditFrom": 1599,
-          "auditThrough": 1604,
-          "yearsWithGeometry": 6,
-          "yearsWithoutGeometry": 0,
-          "locations": 179,
-          "missingGeometryIntervals": []
-        },
-        {
-          "personId": "CARLOS9SUE",
-          "personName": "Carlos IX de Suecia",
-          "government": {
-            "territory": "Suecia",
-            "title": "Rey",
-            "from": 1604,
-            "through": 1611,
-            "class": "reinado",
-            "condition": "efectivo"
-          },
-          "auditFrom": 1604,
-          "auditThrough": 1611,
-          "yearsWithGeometry": 8,
-          "yearsWithoutGeometry": 0,
-          "locations": 179,
-          "missingGeometryIntervals": []
-        },
-        {
-          "personId": "GUSTAV2ADOLFO",
-          "personName": "Gustavo II Adolfo de Suecia",
-          "government": {
-            "territory": "Suecia",
-            "title": "Rey",
-            "from": 1611,
-            "through": 1632,
-            "class": "reinado",
-            "condition": "efectivo"
-          },
-          "auditFrom": 1611,
-          "auditThrough": 1632,
-          "yearsWithGeometry": 22,
-          "yearsWithoutGeometry": 0,
-          "locations": 191,
-          "missingGeometryIntervals": []
-        },
-        {
-          "personId": "CRISTINASUE",
-          "personName": "Cristina de Suecia",
-          "government": {
-            "territory": "Suecia",
-            "title": "Reina",
-            "from": 1632,
-            "through": 1654,
-            "class": "reinado",
-            "condition": "efectivo"
-          },
-          "auditFrom": 1632,
-          "auditThrough": 1654,
-          "yearsWithGeometry": 19,
-          "yearsWithoutGeometry": 4,
-          "locations": 216,
-          "missingGeometryIntervals": [
-            {
-              "from": 1651,
-              "through": 1654
-            }
-          ]
-        },
-        {
-          "personId": "CARLOS10GUSTAVO",
-          "personName": "Carlos X Gustavo de Suecia",
-          "government": {
-            "territory": "Suecia",
-            "title": "Rey",
-            "from": 1654,
-            "through": 1660,
-            "class": "reinado",
-            "condition": "efectivo"
-          },
-          "auditFrom": 1654,
-          "auditThrough": 1660,
-          "yearsWithGeometry": 0,
-          "yearsWithoutGeometry": 7,
-          "locations": 0,
-          "missingGeometryIntervals": [
-            {
-              "from": 1654,
-              "through": 1660
-            }
-          ]
-        },
-        {
-          "personId": "CARLOS11SUE",
-          "personName": "Carlos XI de Suecia",
-          "government": {
-            "territory": "Suecia",
-            "title": "Rey",
-            "from": 1660,
-            "through": 1697,
-            "class": "reinado",
-            "condition": "efectivo"
-          },
-          "auditFrom": 1660,
-          "auditThrough": 1697,
-          "yearsWithGeometry": 0,
-          "yearsWithoutGeometry": 38,
-          "locations": 0,
-          "missingGeometryIntervals": [
-            {
-              "from": 1660,
-              "through": 1697
-            }
-          ]
-        },
-        {
-          "personId": "CARLOS12SUE",
-          "personName": "Carlos XII de Suecia",
-          "government": {
-            "territory": "Suecia",
-            "title": "Rey",
-            "from": 1697,
-            "through": 1718,
-            "class": "reinado",
-            "condition": "efectivo"
-          },
-          "auditFrom": 1697,
-          "auditThrough": 1718,
-          "yearsWithGeometry": 0,
-          "yearsWithoutGeometry": 22,
-          "locations": 0,
-          "missingGeometryIntervals": [
-            {
-              "from": 1697,
-              "through": 1718
-            }
-          ]
-        },
-        {
-          "personId": "ULRICALEONORASUE",
-          "personName": "Ulrica Leonor de Suecia",
-          "government": {
-            "territory": "Suecia",
-            "title": "Reina",
-            "from": 1719,
-            "through": 1720,
-            "class": "reinado",
-            "condition": "efectivo"
-          },
-          "auditFrom": 1719,
-          "auditThrough": 1720,
-          "yearsWithGeometry": 0,
-          "yearsWithoutGeometry": 2,
-          "locations": 0,
-          "missingGeometryIntervals": [
-            {
-              "from": 1719,
-              "through": 1720
-            }
-          ]
-        },
-        {
-          "personId": "FEDERICO1SUE",
-          "personName": "Federico I de Suecia",
-          "government": {
-            "territory": "Suecia",
-            "title": "Rey",
-            "from": 1720,
-            "through": 1751,
-            "class": "reinado",
-            "condition": "efectivo"
-          },
-          "auditFrom": 1720,
-          "auditThrough": 1751,
-          "yearsWithGeometry": 0,
-          "yearsWithoutGeometry": 32,
-          "locations": 0,
-          "missingGeometryIntervals": [
-            {
-              "from": 1720,
-              "through": 1751
-            }
-          ]
-        },
-        {
-          "personId": "ADOLFOFEDERICOSUE",
-          "personName": "Adolfo Federico de Suecia",
-          "government": {
-            "territory": "Suecia",
-            "title": "Rey",
-            "from": 1751,
-            "through": 1771,
-            "class": "reinado",
-            "condition": "efectivo"
-          },
-          "auditFrom": 1751,
-          "auditThrough": 1771,
-          "yearsWithGeometry": 0,
-          "yearsWithoutGeometry": 21,
-          "locations": 0,
-          "missingGeometryIntervals": [
-            {
-              "from": 1751,
-              "through": 1771
-            }
-          ]
-        },
-        {
-          "personId": "GUSTAV3SUE",
-          "personName": "Gustavo III de Suecia",
-          "government": {
-            "territory": "Suecia",
-            "title": "Rey",
-            "from": 1771,
-            "through": 1792,
-            "class": "reinado",
-            "condition": "efectivo"
-          },
-          "auditFrom": 1771,
-          "auditThrough": 1792,
-          "yearsWithGeometry": 0,
-          "yearsWithoutGeometry": 22,
-          "locations": 0,
-          "missingGeometryIntervals": [
-            {
-              "from": 1771,
-              "through": 1792
-            }
-          ]
-        },
-        {
-          "personId": "GUSTAV4ADOLF",
-          "personName": "Gustavo IV Adolfo de Suecia",
-          "government": {
-            "territory": "Suecia",
-            "title": "Rey",
-            "from": 1792,
-            "through": 1809,
-            "class": "reinado",
-            "condition": "efectivo"
-          },
-          "auditFrom": 1792,
-          "auditThrough": 1800,
-          "yearsWithGeometry": 0,
-          "yearsWithoutGeometry": 9,
-          "locations": 0,
-          "missingGeometryIntervals": [
-            {
-              "from": 1792,
-              "through": 1800
-            }
-          ]
-        },
-        {
-          "personId": "ENGELBREKT",
-          "personName": "Engelbrekt Engelbrektsson",
-          "government": {
-            "territory": "Suecia",
-            "title": "Regente",
-            "from": 1435,
-            "through": 1435,
-            "class": "regencia",
-            "condition": "regencia"
-          },
-          "auditFrom": 1435,
-          "auditThrough": 1435,
-          "yearsWithGeometry": 1,
-          "yearsWithoutGeometry": 0,
-          "locations": 171,
-          "missingGeometryIntervals": []
-        },
-        {
-          "personId": "ENGELBREKT",
-          "personName": "Engelbrekt Engelbrektsson",
-          "government": {
-            "territory": "Suecia",
-            "title": "Regente",
-            "from": 1436,
-            "through": 1436,
-            "class": "regencia",
-            "condition": "regencia"
-          },
-          "auditFrom": 1436,
-          "auditThrough": 1436,
-          "yearsWithGeometry": 1,
-          "yearsWithoutGeometry": 0,
-          "locations": 171,
-          "missingGeometryIntervals": []
-        },
-        {
-          "personId": "JONSBENGTSSON",
-          "personName": "Jöns Bengtsson Oxenstierna",
-          "government": {
-            "territory": "Suecia",
-            "title": "Regente",
-            "from": 1465,
-            "through": 1466,
-            "class": "regencia",
-            "condition": "regencia"
-          },
-          "auditFrom": 1465,
-          "auditThrough": 1466,
-          "yearsWithGeometry": 2,
-          "yearsWithoutGeometry": 0,
-          "locations": 171,
-          "missingGeometryIntervals": []
-        },
-        {
-          "personId": "ERIKAXELSSONTOTT",
-          "personName": "Erik Axelsson Tott",
-          "government": {
-            "territory": "Suecia",
-            "title": "Regente",
-            "from": 1466,
-            "through": 1467,
-            "class": "regencia",
-            "condition": "regencia"
-          },
-          "auditFrom": 1466,
-          "auditThrough": 1467,
-          "yearsWithGeometry": 2,
-          "yearsWithoutGeometry": 0,
-          "locations": 171,
-          "missingGeometryIntervals": []
-        }
-      ],
-      "nonpaintingGovernments": [
-        {
-          "personId": "ERICOPOMERANIA",
-          "personName": "Erik de Pomerania",
-          "government": {
-            "territory": "Suecia",
-            "title": "Rey",
-            "from": 1434,
-            "through": 1439,
-            "class": "reinado",
-            "condition": "disputado"
-          },
-          "auditFrom": 1434,
-          "auditThrough": 1439
-        }
-      ],
-      "outsidePeriodGovernments": [
-        {
-          "personId": "CARLOS13SUE",
-          "personName": "Carlos XIII de Suecia",
-          "title": "Rey",
-          "from": 1809,
-          "through": 1818,
-          "condition": "efectivo"
-        },
-        {
-          "personId": "CARLOS14JUAN",
-          "personName": "Carlos XIV Juan de Suecia",
-          "title": "Rey",
-          "from": 1818,
-          "through": 1844,
-          "condition": "efectivo"
-        },
-        {
-          "personId": "OSCAR1SUE",
-          "personName": "Óscar I de Suecia",
-          "title": "Rey",
-          "from": 1844,
-          "through": 1859,
-          "condition": "efectivo"
-        }
-      ]
     },
     {
       "territory": "Tirol",
@@ -39675,11 +39106,11 @@
     "source": "audit-map-continuity-report.json → locations",
     "units": "Capas cartográficas y locations; no entidades únicas del catálogo del Atlas.",
     "counts": {
-      "layersWithAuthorityGaps": 106,
-      "locationIntervalsWithoutAuthority": 4178,
-      "uniqueLocationsWithAuthorityGaps": 2772,
-      "locationYearsWithoutAuthority": 134424,
-      "groupedReviewTasks": 205
+      "layersWithAuthorityGaps": 116,
+      "locationIntervalsWithoutAuthority": 4907,
+      "uniqueLocationsWithAuthorityGaps": 2982,
+      "locationYearsWithoutAuthority": 157032,
+      "groupedReviewTasks": 231
     },
     "layers": [
       {
@@ -39840,7 +39271,31 @@
           {
             "from": 1387,
             "through": 1423,
-            "locations": 45,
+            "locations": 22,
+            "sharedWith": [
+              "Estiria"
+            ]
+          },
+          {
+            "from": 1387,
+            "through": 1423,
+            "locations": 13,
+            "sharedWith": [
+              "Carintia"
+            ]
+          },
+          {
+            "from": 1387,
+            "through": 1423,
+            "locations": 9,
+            "sharedWith": [
+              "Carniola"
+            ]
+          },
+          {
+            "from": 1387,
+            "through": 1423,
+            "locations": 1,
             "sharedWith": []
           },
           {
@@ -39856,6 +39311,20 @@
         "intervals": [
           {
             "from": 1400,
+            "through": 1418,
+            "locations": 1,
+            "sharedWith": []
+          },
+          {
+            "from": 1419,
+            "through": 1449,
+            "locations": 1,
+            "sharedWith": [
+              "Normandía · ocupación inglesa"
+            ]
+          },
+          {
+            "from": 1450,
             "through": 1460,
             "locations": 1,
             "sharedWith": []
@@ -39874,7 +39343,7 @@
           {
             "from": 1688,
             "through": 1800,
-            "locations": 218,
+            "locations": 221,
             "sharedWith": []
           },
           {
@@ -39902,12 +39371,6 @@
             "sharedWith": []
           },
           {
-            "from": 1796,
-            "through": 1800,
-            "locations": 3,
-            "sharedWith": []
-          },
-          {
             "from": 1715,
             "through": 1769,
             "locations": 1,
@@ -39921,7 +39384,7 @@
           {
             "from": 1440,
             "through": 1452,
-            "locations": 54,
+            "locations": 40,
             "sharedWith": []
           }
         ]
@@ -39932,7 +39395,7 @@
           {
             "from": 1307,
             "through": 1362,
-            "locations": 5,
+            "locations": 8,
             "sharedWith": []
           }
         ]
@@ -39973,6 +39436,55 @@
             "through": 1531,
             "locations": 27,
             "sharedWith": []
+          }
+        ]
+      },
+      {
+        "name": "Carintia",
+        "intervals": [
+          {
+            "from": 1200,
+            "through": 1294,
+            "locations": 13,
+            "sharedWith": []
+          },
+          {
+            "from": 1387,
+            "through": 1423,
+            "locations": 13,
+            "sharedWith": [
+              "Austria Interior"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Carintia habsbúrgica antes de Neuberg",
+        "intervals": [
+          {
+            "from": 1335,
+            "through": 1378,
+            "locations": 1,
+            "sharedWith": []
+          }
+        ]
+      },
+      {
+        "name": "Carniola",
+        "intervals": [
+          {
+            "from": 1200,
+            "through": 1334,
+            "locations": 9,
+            "sharedWith": []
+          },
+          {
+            "from": 1387,
+            "through": 1423,
+            "locations": 9,
+            "sharedWith": [
+              "Austria Interior"
+            ]
           }
         ]
       },
@@ -40034,6 +39546,12 @@
             "through": 1446,
             "locations": 159,
             "sharedWith": []
+          },
+          {
+            "from": 1383,
+            "through": 1383,
+            "locations": 117,
+            "sharedWith": []
           }
         ]
       },
@@ -40094,7 +39612,9 @@
             "from": 1247,
             "through": 1281,
             "locations": 22,
-            "sharedWith": []
+            "sharedWith": [
+              "Estiria"
+            ]
           }
         ]
       },
@@ -40145,6 +39665,17 @@
         ]
       },
       {
+        "name": "Ducado de Normandía",
+        "intervals": [
+          {
+            "from": 1200,
+            "through": 1203,
+            "locations": 28,
+            "sharedWith": []
+          }
+        ]
+      },
+      {
         "name": "Ducado de Pomerania",
         "intervals": [
           {
@@ -40174,6 +39705,29 @@
             "from": 1400,
             "through": 1650,
             "locations": 5,
+            "sharedWith": []
+          }
+        ]
+      },
+      {
+        "name": "Escocia",
+        "intervals": [
+          {
+            "from": 1652,
+            "through": 1659,
+            "locations": 66,
+            "sharedWith": []
+          },
+          {
+            "from": 1287,
+            "through": 1291,
+            "locations": 64,
+            "sharedWith": []
+          },
+          {
+            "from": 1297,
+            "through": 1305,
+            "locations": 64,
             "sharedWith": []
           }
         ]
@@ -40221,6 +39775,27 @@
             "through": 1315,
             "locations": 2,
             "sharedWith": []
+          }
+        ]
+      },
+      {
+        "name": "Estiria",
+        "intervals": [
+          {
+            "from": 1247,
+            "through": 1281,
+            "locations": 22,
+            "sharedWith": [
+              "Ducado de Estiria"
+            ]
+          },
+          {
+            "from": 1387,
+            "through": 1423,
+            "locations": 22,
+            "sharedWith": [
+              "Austria Interior"
+            ]
           }
         ]
       },
@@ -40310,6 +39885,12 @@
             "from": 1431,
             "through": 1439,
             "locations": 243,
+            "sharedWith": []
+          },
+          {
+            "from": 1253,
+            "through": 1376,
+            "locations": 52,
             "sharedWith": []
           }
         ]
@@ -40451,7 +40032,7 @@
         "intervals": [
           {
             "from": 1650,
-            "through": 1650,
+            "through": 1659,
             "locations": 189,
             "sharedWith": []
           }
@@ -40471,6 +40052,12 @@
       {
         "name": "Islas Feroe bajo la Corona noruega",
         "intervals": [
+          {
+            "from": 1200,
+            "through": 1216,
+            "locations": 1,
+            "sharedWith": []
+          },
           {
             "from": 1449,
             "through": 1449,
@@ -40583,6 +40170,29 @@
             "from": 1628,
             "through": 1650,
             "locations": 3,
+            "sharedWith": []
+          }
+        ]
+      },
+      {
+        "name": "Margraviato de Moravia",
+        "intervals": [
+          {
+            "from": 1279,
+            "through": 1333,
+            "locations": 16,
+            "sharedWith": []
+          },
+          {
+            "from": 1440,
+            "through": 1452,
+            "locations": 16,
+            "sharedWith": []
+          },
+          {
+            "from": 1200,
+            "through": 1211,
+            "locations": 8,
             "sharedWith": []
           }
         ]
@@ -40749,6 +40359,25 @@
         ]
       },
       {
+        "name": "Normandía · ocupación inglesa",
+        "intervals": [
+          {
+            "from": 1419,
+            "through": 1449,
+            "locations": 27,
+            "sharedWith": []
+          },
+          {
+            "from": 1419,
+            "through": 1449,
+            "locations": 1,
+            "sharedWith": [
+              "Bailiazgo de Jersey"
+            ]
+          }
+        ]
+      },
+      {
         "name": "Núcleo de Baden-Baden",
         "intervals": [
           {
@@ -40830,15 +40459,33 @@
         "name": "Núcleo inglés en Irlanda",
         "intervals": [
           {
-            "from": 1650,
-            "through": 1650,
-            "locations": 9,
+            "from": 1651,
+            "through": 1659,
+            "locations": 72,
             "sharedWith": []
           },
           {
-            "from": 1400,
+            "from": 1650,
+            "through": 1659,
+            "locations": 7,
+            "sharedWith": []
+          },
+          {
+            "from": 1200,
             "through": 1541,
             "locations": 6,
+            "sharedWith": []
+          },
+          {
+            "from": 1200,
+            "through": 1346,
+            "locations": 3,
+            "sharedWith": []
+          },
+          {
+            "from": 1362,
+            "through": 1374,
+            "locations": 3,
             "sharedWith": []
           },
           {
@@ -40851,6 +40498,12 @@
             "from": 1535,
             "through": 1541,
             "locations": 3,
+            "sharedWith": []
+          },
+          {
+            "from": 1650,
+            "through": 1650,
+            "locations": 2,
             "sharedWith": []
           }
         ]
@@ -40972,9 +40625,15 @@
         "name": "Principado de Moldavia",
         "intervals": [
           {
-            "from": 1796,
+            "from": 1654,
             "through": 1800,
             "locations": 18,
+            "sharedWith": []
+          },
+          {
+            "from": 1654,
+            "through": 1774,
+            "locations": 4,
             "sharedWith": []
           }
         ]
@@ -41092,8 +40751,36 @@
         ]
       },
       {
+        "name": "Reino de Córcega",
+        "intervals": [
+          {
+            "from": 1794,
+            "through": 1795,
+            "locations": 9,
+            "sharedWith": []
+          }
+        ]
+      },
+      {
+        "name": "Reino de Dinamarca",
+        "intervals": [
+          {
+            "from": 1333,
+            "through": 1339,
+            "locations": 29,
+            "sharedWith": []
+          }
+        ]
+      },
+      {
         "name": "Reino de Noruega",
         "intervals": [
+          {
+            "from": 1200,
+            "through": 1216,
+            "locations": 136,
+            "sharedWith": []
+          },
           {
             "from": 1449,
             "through": 1449,

@@ -1,5 +1,6 @@
 import {reviewedLayerLocations, reviewedLayerActive, reviewedLayerEvidence} from '../../src/data/locationMapPilot.js';
 import {supersededRegionalLayers} from '../../src/data/regionalExtentRoutes.js';
+import {territorialColor, coalesceTerritorialLayers} from '../../src/data/territorialIdentity.js';
 const FRAME_ONLY_LAYERS = new Set(['Marco jurídico del Sacro Imperio']);
 
 function entriesFor(data) {
@@ -19,12 +20,7 @@ export function mosaicPalette(data, approximateTerritories = []) {
     ...entriesFor(data).map(layerKey),
     ...approximateTerritories.map(name => `approximate\u0000${name}`),
   ])].sort((a, b) => a.localeCompare(b, 'es'));
-  return new Map(keys.map((key, index) => {
-    const hue = (17 + index * 137.507764) % 360;
-    const saturation = index % 2 ? 67 : 58;
-    const lightness = index % 3 ? 46 : 41;
-    return [key, `hsl(${hue.toFixed(1)} ${saturation}% ${lightness}%)`];
-  }));
+  return new Map(keys.map(key => [key, territorialColor(key.split('\u0000')[1])]));
 }
 
 export function politicalMosaicAt(data, year, palette = mosaicPalette(data)) {
@@ -32,7 +28,7 @@ export function politicalMosaicAt(data, year, palette = mosaicPalette(data)) {
     return {year, layers: [], byLocation: new Map(), overlapCount: 0};
   }
   const superseded = supersededRegionalLayers(data, year);
-  const layers = entriesFor(data)
+  const rawLayers = entriesFor(data)
     .filter(entry => !FRAME_ONLY_LAYERS.has(entry.name) && !superseded.has(entry.name) && reviewedLayerActive(data, entry, year))
     .map(entry => {
       const evidence = reviewedLayerEvidence(entry, year);
@@ -43,6 +39,12 @@ export function politicalMosaicAt(data, year, palette = mosaicPalette(data)) {
         ids: idsFor(entry, data, year)};
     }).filter(layer => layer.ids.length)
     .sort((a, b) => a.name.localeCompare(b.name, 'es') || a.corridor.localeCompare(b.corridor, 'es'));
+  // Preserve the provinces inside a government grouping. The grouping keeps
+  // its additional coastal jurisdictions, without repainting the provinces.
+  const provinces = new Set(rawLayers.filter(layer => ['Estiria', 'Carintia', 'Carniola'].includes(layer.name)).flatMap(layer => layer.ids));
+  const layers = coalesceTerritorialLayers(rawLayers.map(layer => layer.name === 'Austria Interior'
+    ? {...layer, ids: layer.ids.filter(id => !provinces.has(id)), note: 'Agrupación de gobierno de Austria Interior. Estiria, Carintia y Carniola figuran por separado; aquí se conservan sus jurisdicciones adicionales del litoral. '+layer.note}
+    : layer).filter(layer => layer.ids.length), year);
   const byLocation = new Map();
   for (const layer of layers) {
     for (const id of layer.ids) {

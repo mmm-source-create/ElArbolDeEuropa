@@ -143,7 +143,7 @@ export const REGIONAL_EXTENT_REVIEWS = Object.freeze({
     "reviewedAt": "2026-10-07",
     "editor": "El Árbol de Europa"
   },
-  "person:ALB2AUS:government:Carintia habsbúrgica antes de Neuberg:1335:1358:Duque": {
+  "person:ALB2AUS:government:Carintia:1335:1358:Duque": {
     "certainty": "documented",
     "sources": [
       {
@@ -156,7 +156,7 @@ export const REGIONAL_EXTENT_REVIEWS = Object.freeze({
     "reviewedAt": "2026-10-07",
     "editor": "El Árbol de Europa"
   },
-  "person:OTONAUST:government:Carintia habsbúrgica antes de Neuberg:1335:1339:Duque": {
+  "person:OTONAUST:government:Carintia:1335:1339:Duque": {
     "certainty": "documented",
     "sources": [
       {
@@ -195,7 +195,7 @@ export const REGIONAL_EXTENT_REVIEWS = Object.freeze({
     "reviewedAt": "2026-10-07",
     "editor": "El Árbol de Europa"
   },
-  "person:RUD4AUS:government:Carintia habsbúrgica antes de Neuberg:1358:1365:Duque": {
+  "person:RUD4AUS:government:Carintia:1358:1365:Duque": {
     "certainty": "documented",
     "sources": [
       {
@@ -221,7 +221,7 @@ export const REGIONAL_EXTENT_REVIEWS = Object.freeze({
     "reviewedAt": "2026-10-07",
     "editor": "El Árbol de Europa"
   },
-  "person:ALB3AUST:government:Carintia habsbúrgica antes de Neuberg:1365:1378:Duque": {
+  "person:ALB3AUST:government:Carintia:1365:1378:Duque": {
     "certainty": "documented",
     "sources": [
       {
@@ -234,7 +234,7 @@ export const REGIONAL_EXTENT_REVIEWS = Object.freeze({
     "reviewedAt": "2026-10-07",
     "editor": "El Árbol de Europa"
   },
-  "person:ALB3AUST:government:Carniola habsbúrgica antes de Neuberg:1365:1378:Duque": {
+  "person:ALB3AUST:government:Carniola:1365:1378:Duque": {
     "certainty": "documented",
     "sources": [
       {
@@ -260,7 +260,7 @@ export const REGIONAL_EXTENT_REVIEWS = Object.freeze({
     "reviewedAt": "2026-10-07",
     "editor": "El Árbol de Europa"
   },
-  "person:LEOP3AUS:government:Carintia habsbúrgica antes de Neuberg:1365:1378:Duque": {
+  "person:LEOP3AUS:government:Carintia:1365:1378:Duque": {
     "certainty": "documented",
     "sources": [
       {
@@ -273,7 +273,7 @@ export const REGIONAL_EXTENT_REVIEWS = Object.freeze({
     "reviewedAt": "2026-10-07",
     "editor": "El Árbol de Europa"
   },
-  "person:LEOP3AUS:government:Carniola habsbúrgica antes de Neuberg:1365:1378:Duque": {
+  "person:LEOP3AUS:government:Carniola:1365:1378:Duque": {
     "certainty": "documented",
     "sources": [
       {
@@ -890,7 +890,7 @@ export const REGIONAL_EXTENT_REVIEWS = Object.freeze({
     "reviewedAt": "2026-10-07",
     "editor": "El Árbol de Europa"
   },
-  "person:MARIATERESAHAB:government:Silesia austríaca:1742:1780:Soberano": {
+  "person:MARIATERESAHAB:government:Silesia:1742:1780:Soberano": {
     "certainty": "inferred",
     "sources": [
       {
@@ -918,7 +918,7 @@ export const REGIONAL_EXTENT_REVIEWS = Object.freeze({
     "reviewedAt": "2026-10-07",
     "editor": "El Árbol de Europa"
   },
-  "person:JOSE2HRE:government:Silesia austríaca:1780:1790:Soberano": {
+  "person:JOSE2HRE:government:Silesia:1780:1790:Soberano": {
     "certainty": "inferred",
     "sources": [
       {
@@ -946,7 +946,7 @@ export const REGIONAL_EXTENT_REVIEWS = Object.freeze({
     "reviewedAt": "2026-10-07",
     "editor": "El Árbol de Europa"
   },
-  "person:LEOP2HRE:government:Silesia austríaca:1790:1792:Soberano": {
+  "person:LEOP2HRE:government:Silesia:1790:1792:Soberano": {
     "certainty": "inferred",
     "sources": [
       {
@@ -974,7 +974,7 @@ export const REGIONAL_EXTENT_REVIEWS = Object.freeze({
     "reviewedAt": "2026-10-07",
     "editor": "El Árbol de Europa"
   },
-  "person:FRAN2HRE:government:Silesia austríaca:1792:1835:Soberano": {
+  "person:FRAN2HRE:government:Silesia:1792:1835:Soberano": {
     "certainty": "inferred",
     "sources": [
       {
@@ -1162,7 +1162,7 @@ export const REGIONAL_EXTENT_REVIEWS = Object.freeze({
     "reviewedAt": "2026-10-07",
     "editor": "El Árbol de Europa"
   },
-  "person:RUD4AUS:government:Carniola habsbúrgica antes de Neuberg:1358:1363:Señor": {
+  "person:RUD4AUS:government:Carniola:1358:1363:Señor": {
     "certainty": "documented",
     "sources": [
       {
@@ -1180,7 +1180,7 @@ export const REGIONAL_EXTENT_REVIEWS = Object.freeze({
     "reviewedAt": "2026-10-07",
     "editor": "El Árbol de Europa"
   },
-  "person:RUD4AUS:government:Carniola habsbúrgica antes de Neuberg:1364:1365:Duque": {
+  "person:RUD4AUS:government:Carniola:1364:1365:Duque": {
     "certainty": "documented",
     "sources": [
       {
@@ -1198,7 +1198,7 @@ export const REGIONAL_EXTENT_REVIEWS = Object.freeze({
     "reviewedAt": "2026-10-07",
     "editor": "El Árbol de Europa"
   },
-  "person:ALB2AUS:government:Carniola habsbúrgica antes de Neuberg:1335:1358:Señor": {
+  "person:ALB2AUS:government:Carniola:1335:1358:Señor": {
     "certainty": "documented",
     "sources": [
       {
@@ -1252,7 +1252,7 @@ export const REGIONAL_EXTENT_REVIEWS = Object.freeze({
     "reviewedAt": "2026-10-07",
     "editor": "El Árbol de Europa"
   },
-  "person:OTONAUST:government:Carniola habsbúrgica antes de Neuberg:1335:1339:Señor": {
+  "person:OTONAUST:government:Carniola:1335:1339:Señor": {
     "certainty": "documented",
     "sources": [
       {
