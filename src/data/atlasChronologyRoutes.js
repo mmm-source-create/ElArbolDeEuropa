@@ -1554,7 +1554,7 @@ export const CHRONOLOGY_ROUTES = Object.freeze([
   },
   {
     "personId": "MARIATERESAHAB",
-    "territorio": "Silesia austríaca",
+    "territorio": "Silesia",
     "desde": 1742,
     "hasta": 1780,
     "atlasAliases": [
@@ -1564,7 +1564,7 @@ export const CHRONOLOGY_ROUTES = Object.freeze([
   },
   {
     "personId": "JOSE2HRE",
-    "territorio": "Silesia austríaca",
+    "territorio": "Silesia",
     "desde": 1780,
     "hasta": 1790,
     "atlasAliases": [
@@ -1574,7 +1574,7 @@ export const CHRONOLOGY_ROUTES = Object.freeze([
   },
   {
     "personId": "LEOP2HRE",
-    "territorio": "Silesia austríaca",
+    "territorio": "Silesia",
     "desde": 1790,
     "hasta": 1792,
     "atlasAliases": [
@@ -1584,7 +1584,7 @@ export const CHRONOLOGY_ROUTES = Object.freeze([
   },
   {
     "personId": "FRAN2HRE",
-    "territorio": "Silesia austríaca",
+    "territorio": "Silesia",
     "desde": 1792,
     "hasta": 1835,
     "atlasAliases": [

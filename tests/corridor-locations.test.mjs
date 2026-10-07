@@ -80,7 +80,10 @@ test('imperial legal reference changes at Westphalia without becoming an emperor
 });
 
 test('western corridor respects French incorporations and English continental withdrawals', () => {
-  assert.equal(ids('Francia', 1452).size, 0, 'the Hundred Years War frontier remains unaudited');
+  assert(ids('Francia', 1452).has('Paris'));
+  assert(ids('Francia', 1452).has('Rouen'));
+  assert(!ids('Francia', 1452).has('Bordeaux'), 'Guyenne remains under English control before Castillon');
+  assert(!ids('Francia', 1429).has('Rouen'), 'English occupation does not erase the whole French kingdom');
   assert(ids('Bretaña', 1531).has('Rennes'));
   assert(!ids('Francia', 1531).has('Rennes'));
   assert(ids('Francia', 1532).has('Rennes'));

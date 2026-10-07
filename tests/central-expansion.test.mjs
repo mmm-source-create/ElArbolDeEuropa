@@ -217,7 +217,9 @@ test('real correction sources retain usable links and labels in both string and 
     .find(entry => entry.territory === 'Moravia');
   assert.equal(nominal.kind, 'titular');
   assert.equal(nominal.paint, false);
-  assert.deepEqual([...nominal.ids].sort(), ['Brno', 'Olomouc']);
+  const moravia=reviewedMapLayers(runtimeData).find(entry=>entry.name==='Margraviato de Moravia');
+  assert.deepEqual([...nominal.ids].sort(), reviewedLayerLocations(runtimeData,moravia,1618).sort());
+  assert(nominal.ids.length > 10, 'a nominal claim refers to the margraviate, while paint remains false');
   assert(nominal.claim.sources.every(source => source.url && source.title));
 });
 

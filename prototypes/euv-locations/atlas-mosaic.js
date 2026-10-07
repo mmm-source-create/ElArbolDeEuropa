@@ -3,6 +3,7 @@ import {idsDeGobiernoEnAño, listaReinados, reinadoEsEfectivo} from '../../src/T
 import {personClaims} from '../../src/evidence/claims.js';
 import {mapLocationsForGovernment, pilotJurisdictionsFor, reviewedLayerCovered} from '../../src/data/locationMapPilot.js';
 import {mosaicPalette, politicalMosaicAt} from './location-mosaic.js';
+import {territorialIdentity, territorialLabel} from '../../src/data/territorialIdentity.js';
 
 const entriesFor = data => [...(data?.territories || []), ...(data?.additionalTerritories || [])];
 const evidenceByPerson = new Map(PERSONAS.map(person => [person.id, new Map(personClaims(person)
@@ -49,6 +50,8 @@ function approximateGovernmentLayers(data, people, year, directByLocation, palet
         layer = {
           key,
           name,
+          entityId: territorialIdentity(name),
+          displayName: territorialLabel(name, year),
           corridor: 'Equivalencia geométrica aproximada',
           approximate: true,
           note: 'Proyección de un gobierno del Atlas mediante el solapamiento de regiones antiguas y locations modernas. No prueba una frontera histórica.',

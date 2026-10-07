@@ -364,6 +364,12 @@ export const AUTHORITY_MAP_SCOPES = Object.freeze([
 ]);
 
 export function authorityMapScope(personId, territory, year) {
+  if (personId === 'VLADHENMOR' && territory === 'Moravia' && year >= 1197 && year <= 1211)
+    return {ids:['Brno','Hodonin','Pernstejn','Vyskov','Bitov','Dacice','Jihlava','Znojmo'],
+      source:{title:'Moravské zemské muzeum · Stříbrný poklad ze Střelic',
+        url:'https://www.mzm.cz/uploads/tx_aimeos/1.d/files/1/d/1d98ad7e_Stribrny_poklad_ukazka.pdf',
+        locator:'p.10: Brno y Znojmo antes de 1212; Olomouc bajo Otakar I.'},
+      note:'Gobierno del margrave en Brno y Znojmo; no se le atribuye Olomouc antes de 1212.'};
   return AUTHORITY_MAP_SCOPES.find(scope => scope.personId === personId
     && scope.territory === territory && scope.from <= year && year <= scope.through) || null;
 }

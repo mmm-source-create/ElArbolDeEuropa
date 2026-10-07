@@ -4,6 +4,7 @@ import fs from 'node:fs';
 import {fileURLToPath} from 'node:url';
 import path from 'node:path';
 import {applyRegionalExtents} from './apply-regional-extents.mjs';
+import {applyContinuityReview} from './apply-continuity-review.mjs';
 const read = name => JSON.parse(fs.readFileSync(new URL(name, import.meta.url), 'utf8'));
 const correctionKey = item => [item.territory,item.id,item.action,item.from,item.through].join('|');
 
@@ -44,6 +45,7 @@ export function mergeMapExpansions(data) {
       ...(group.supportingSources?.length ? {supportingSources:group.supportingSources} : {})})))].map(item=>({...item,supplement:'map-expansion'}));
   data.overrides = [...new Map([...(data.overrides || []).filter(item=>item.supplement !== 'map-expansion'),...corrections].map(item => [correctionKey(item),item])).values()];
   applyRegionalExtents(data, read('regional-extent-review.json'));
+  applyContinuityReview(data, read('continuity-review.json'));
   layers = [...data.territories, ...data.additionalTerritories];
   const svg = fs.readFileSync(new URL('euv-locations-crop.svg',import.meta.url),'utf8');
   const ids = new Set([...svg.matchAll(/<path\b[^>]*\bid="([^"]+)"/g)].map(match => match[1]));

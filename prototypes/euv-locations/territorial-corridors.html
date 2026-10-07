@@ -81,7 +81,7 @@
           <h2 id="territory-name">Cargando…</h2>
           <p id="territory-note"></p>
           <p id="territory-source"></p>
-          <dl><dt>Provincia anterior</dt><dd id="old-ids"></dd><dt>Locations nuevas</dt><dd id="new-count"></dd><dt>Versión desde</dt><dd id="version-from"></dd></dl>
+          <dl><dt>Provincia anterior</dt><dd id="old-ids"></dd><dt>Locations nuevas</dt><dd id="new-count"></dd><dt>Último cambio cartografiado</dt><dd id="version-from"></dd></dl>
           <p>El gris significa «no atribuido a esta jurisdicción en este ensayo». Puede pertenecer a otra entidad, incluso si la gobierna la misma persona.</p>
         </section>
       </aside>
@@ -98,6 +98,8 @@
     import dataUrl from './corridor-locations.json?url';
     import {reviewedLayerLocations,reviewedLayerVersion,reviewedLayerActive,reviewedLayerEvidence,mapSourceReference} from '../../src/data/locationMapPilot.js';
     import {clampMapViewBox,clipMapToBounds} from '../../src/mapViewport.js';
+    import {territorialLabel,territorialColor} from '../../src/data/territorialIdentity.js';
+    import {supersededRegionalLayers} from '../../src/data/regionalExtentRoutes.js';
     const FRAMES={Iberia:{x:518,y:158,w:77,h:66},Italia:{x:575,y:143,w:64,h:68},Centroeuropa:{x:592,y:91,w:134,h:116},'Europa septentrional y oriental':{x:615,y:20,w:170,h:145},'Francia e islas británicas':{x:493,y:82,w:145,h:120},'Borgoña e Imperio':{x:522,y:85,w:170,h:105},'Hungría y Balcanes':{x:600,y:137,w:83,h:72},'Mediterráneo oriental':{x:640,y:185,w:100,h:60}};
     const FULL={x:475,y:15,w:315,h:240};
     const TERRITORY_FRAMES={'Cerdeña':{x:581,y:175,w:25,h:31},'Trinacria':{x:592,y:180,w:34,h:32},'Venecia':{x:588,y:143,w:100,h:76}};
@@ -126,11 +128,13 @@
         info.append(document.createTextNode(` · ${layers.length} ${layers.length===1?'capa activa':'capas activas'} en ${$('year').value}.`));
         const list=document.createElement('ul');for(const layer of layers){
           const item=document.createElement('li'),name=document.createElement('strong'),meta=document.createElement('span');
-          name.textContent=layer.name;meta.className='mosaic-meta';meta.textContent=layer.corridor;item.append(name,meta);
+          name.textContent=layer.displayName||layer.name;meta.className='mosaic-meta';meta.textContent=layer.corridor;item.append(name,meta);
           if(layer.approximate){const holders=document.createElement('span');holders.className='mosaic-meta';holders.textContent=`Gobiernos registrados: ${layer.holders.join('; ')}`;item.append(holders)}
-          if(layer.note){const note=document.createElement('span');note.className='mosaic-meta';note.textContent=layer.note;item.append(note)}
+          const localScopes=(layer.scopes||[]).filter(scope=>scope.ids.includes(id));
+          if(localScopes.length){for(const scope of localScopes){const note=document.createElement('span');note.className='mosaic-meta';note.textContent=`${scope.label}: ${scope.note||'Consultar las fuentes del ámbito.'}`;item.append(note)}}
+          else if(layer.note){const note=document.createElement('span');note.className='mosaic-meta';note.textContent=layer.note;item.append(note)}
           if(layer.active?.reason){const note=document.createElement('span');note.className='mosaic-meta';note.textContent=layer.active.reason;item.append(note)}
-          const sources=[...(layer.sources||[]),layer.active?.source?{url:layer.active.source,title:'Fuente de la capa'}:null,...state.data.overrides.filter(o=>o.territory===layer.name&&o.id===id&&o.from<=Number($('year').value)&&o.through>=Number($('year').value)).flatMap(o=>[{url:o.source,title:'Fuente de la corrección'},...(o.supportingSources||[]).map(mapSourceReference)])].filter(Boolean);
+          const sources=[...(localScopes.length?localScopes.flatMap(scope=>scope.sources):layer.sources||[]),...state.data.overrides.filter(o=>(layer.memberNames||[layer.name]).includes(o.territory)&&o.id===id&&o.from<=Number($('year').value)&&o.through>=Number($('year').value)).flatMap(o=>[{url:o.source,title:'Fuente de la corrección'},...(o.supportingSources||[]).map(mapSourceReference)])].filter(Boolean);
           for(const source of [...new Map(sources.filter(item=>item?.url).map(item=>[item.url,item])).values()]){const link=document.createElement('a');link.href=source.url;link.target='_blank';link.rel='noopener noreferrer';link.textContent=layer.approximate?'Fuente de la afirmación (no del polígono)':source.title||source.label||'Fuente territorial';item.append(link)}
           list.append(item)
         }info.append(list);return
@@ -144,9 +148,9 @@
     function updateMosaicLegend(){
       const list=$('mosaic-legend'),query=$('mosaic-filter').value.trim().toLocaleLowerCase('es');list.replaceChildren();
       for(const layer of state.mosaic?.layers||[]){
-        if(query&&!`${layer.name} ${layer.corridor}`.toLocaleLowerCase('es').includes(query))continue;
+        if(query&&!`${layer.displayName||layer.name} ${layer.corridor}`.toLocaleLowerCase('es').includes(query))continue;
         const item=document.createElement('li'),swatch=document.createElement('span'),body=document.createElement('span'),name=document.createElement('strong'),meta=document.createElement('span');
-        swatch.className='mosaic-swatch';swatch.style.backgroundColor=layer.mosaicColor;name.textContent=layer.name;
+        swatch.className='mosaic-swatch';swatch.style.backgroundColor=layer.mosaicColor;name.textContent=layer.displayName||layer.name;
         meta.className=`mosaic-meta${layer.ids.length?'':' mosaic-empty'}`;
         meta.textContent=layer.ids.length?`${layer.approximate?'Aproximación':layer.precision==='documented_core'||layer.limitedCore?'Núcleos documentados':'Capa revisada'} · ${layer.ids.length} locations${layer.holders?` · ${layer.holders.length} titulares registrados`:''}`:`${layer.corridor} · sin geometría en este año`;
         body.append(name,meta);const sources=[...(layer.sources||[]),layer.active?.source?{url:layer.active.source,title:'Fuente de la capa'}:null,...state.data.overrides.filter(item=>item.territory===layer.name&&item.from<=state.mosaic.year&&item.through>=state.mosaic.year).flatMap(item=>[{url:item.source,title:'Fuente de la corrección'},...(item.supportingSources||[]).map(mapSourceReference)])].filter(Boolean);
@@ -193,8 +197,8 @@
       const year=Number($('year').value),baseVersion=activeVersion(territory,year),version={...baseVersion,ids:reviewedLayerLocations(state.data,territory,year)};$('year-output').value=String(year);
       for(const id of state.painted){const path=state.paths.get(id);if(path){path.style.fill=BASE;path.style.stroke=BASE}}
       state.painted.clear();
-      for(const id of version.ids){const path=state.paths.get(id);if(!path)continue;path.style.fill=territory.color;path.style.stroke=territory.color;state.painted.add(id)}
-      $('territory-name').textContent=territory.name;
+      for(const id of version.ids){const path=state.paths.get(id);if(!path)continue;path.style.fill=territorialColor(territory.name);path.style.stroke=territorialColor(territory.name);state.painted.add(id)}
+      $('territory-name').textContent=territorialLabel(territory.name,year);
       const active=territory.active,isActive=reviewedLayerActive(state.data,territory,year);
       const evidence=reviewedLayerEvidence(territory,year);
       $('territory-note').textContent=isActive?(evidence.note||territory.corridor+'. Se muestra esta jurisdicción por separado.'):active?.reason||'Sin geometría documentada para este año.';
@@ -202,23 +206,24 @@
       $('new-count').textContent=String(version.ids.length);$('version-from').textContent=String(version.from);
       const source=evidence.sources[0]?.url||state.data.overrides.find(item=>item.territory===territory.name&&item.from<=year&&item.through>=year)?.source;
       $('territory-source').replaceChildren();if(source){const link=document.createElement('a');link.href=source;link.target='_blank';link.rel='noopener noreferrer';link.textContent='Fuente histórica';$('territory-source').append(link)}
-      $('status').textContent=isActive?`${territory.name} · ${year}: ${version.ids.length} locations candidatas (${version.borderline.length} dudosas excluidas).`:`${territory.name} · ${year}: fuera de su etapa como jurisdicción separada en este ensayo.`;
+      const label=territorialLabel(territory.name,year);
+      $('status').textContent=isActive?`${label} · ${year}: ${version.ids.length} celdas cartografiadas. ${version.event||''}`:`${label} · ${year}: sin superficie revisada para este año.`;
       setInfo($('location-search').value.trim());
     }
     function focusTerritory(){
       const territory=selectedTerritory(),year=Number($('year').value);
       let ids=territory?correctedIds(territory,year,activeVersion(territory,year).ids):[];
-      if(['Centroeuropa','Europa septentrional y oriental','Francia e islas británicas','Borgoña e Imperio','Hungría y Balcanes','Revisión de superficies regionales'].includes(territory?.corridor)&&!ids.length&&territory.active){
+      if(['Centroeuropa','Europa septentrional y oriental','Francia e islas británicas','Borgoña e Imperio','Hungría y Balcanes','Revisión de superficies regionales','Continuidad e identidad territorial'].includes(territory?.corridor)&&!ids.length&&territory.active){
         const comparisonYear=territory.active.from??territory.active.through;
         ids=activeVersion(territory,comparisonYear).ids;
       }
       const boxes=ids.map(id=>state.paths.get(id)).filter(Boolean).map(path=>path.getBBox());
-      if(['Centroeuropa','Europa septentrional y oriental','Francia e islas británicas','Borgoña e Imperio','Hungría y Balcanes','Revisión de superficies regionales'].includes(territory?.corridor)&&boxes.length){const x=Math.min(...boxes.map(b=>b.x)),y=Math.min(...boxes.map(b=>b.y));
+      if(['Centroeuropa','Europa septentrional y oriental','Francia e islas británicas','Borgoña e Imperio','Hungría y Balcanes','Revisión de superficies regionales','Continuidad e identidad territorial'].includes(territory?.corridor)&&boxes.length){const x=Math.min(...boxes.map(b=>b.x)),y=Math.min(...boxes.map(b=>b.y));
         const right=Math.max(...boxes.map(b=>b.x+b.width)),bottom=Math.max(...boxes.map(b=>b.y+b.height));
         const northern=territory.corridor==='Europa septentrional y oriental';
         const w=Math.max(northern?10:25,right-x),h=Math.max(northern?8:20,bottom-y),pad=Math.max(northern?1.5:3,Math.min(w,h)*.13);
         state.view={x:x-pad,y:y-pad,w:w+2*pad,h:h+2*pad}
-      }else state.view={...(TERRITORY_FRAMES[$('territory').value]||FRAMES[$('corridor').value])};
+      }else state.view={...(TERRITORY_FRAMES[$('territory').value]||FRAMES[$('corridor').value]||FULL)};
       viewBox()
     }
     function consultLocation(){const id=$('location-search').value.trim();setInfo(id);const path=state.paths.get(id);if(!path)return;
@@ -226,8 +231,13 @@
       state.view={x:box.x+box.width/2-width/2,y:box.y+box.height/2-height/2,w:width,h:height};viewBox()}
     function updateTerritories(){
       const corridor=$('corridor').value,select=$('territory'),prior=select.value;
-      select.replaceChildren();for(const t of allTerritories().filter(t=>t.corridor===corridor)){
-        const option=document.createElement('option');option.value=t.name;option.textContent=t.name;select.append(option)
+      const superseded=supersededRegionalLayers(state.data,Number($('year').value));
+      const candidates=allTerritories().filter(t=>t.corridor===corridor&&!superseded.has(t.name));
+      const labelFor=t=>territorialLabel(t.name,Number($('year').value));
+      select.replaceChildren();for(const t of candidates){
+        const label=labelFor(t),period=t.coverage||t.active;
+        const scope=t.name.includes('·')?t.name.split('·').slice(1).join('·').trim():period?`${period.from}–${period.through}`:t.name;
+        const option=document.createElement('option');option.value=t.name;option.textContent=label+(candidates.filter(other=>labelFor(other)===label).length>1?' · '+scope:'');select.append(option)
       }
       if([...select.options].some(o=>o.value===prior))select.value=prior;
       focusTerritory();render();
@@ -239,6 +249,7 @@
       const [svgResponse,dataResponse]=await Promise.all([fetch(mapUrl),fetch(dataUrl)]);
       if(!svgResponse.ok||!dataResponse.ok)throw new Error('No se pudo cargar el mapa o los datos');
       state.data=await dataResponse.json();
+      for(const corridor of new Set(allTerritories().map(t=>t.corridor))){if([...$('corridor').options].some(o=>o.value===corridor))continue;const option=document.createElement('option');option.value=corridor;option.textContent=corridor;$('corridor').append(option)}
       const doc=new DOMParser().parseFromString(await svgResponse.text(),'image/svg+xml');if(doc.querySelector('parsererror'))throw new Error('SVG no válido');
       const svg=doc.documentElement;svg.querySelector('metadata')?.remove();svg.querySelector('#legend-svg')?.remove();svg.removeAttribute('width');svg.removeAttribute('height');
       svg.setAttribute('preserveAspectRatio','xMidYMid meet');svg.setAttribute('role','img');svg.setAttribute('aria-label','EU V Locations: territorio seleccionado');
@@ -264,7 +275,7 @@
     $('mosaic-toggle').addEventListener('click',()=>setMosaicMode(state.viewMode!=='mosaic'));
     $('mosaic-filter').addEventListener('input',updateMosaicLegend);
     $('corridor').addEventListener('change',()=>{if(state.data){updateTerritories();if(state.viewMode==='mosaic')setMosaicMode(true)}});$('territory').addEventListener('change',()=>{if(state.data){focusTerritory();render()}});
-    $('year').addEventListener('input',()=>{if(state.data){if(state.viewMode==='mosaic')renderMosaic();else{focusTerritory();render()}}});$('location-search').addEventListener('input',event=>suggest(event.currentTarget.value));
+    $('year').addEventListener('input',()=>{if(state.data){if(state.viewMode==='mosaic')renderMosaic();else{updateTerritories()}}});$('location-search').addEventListener('input',event=>suggest(event.currentTarget.value));
     $('location-search').addEventListener('keydown',event=>{if(event.key==='Enter'&&state.data)consultLocation()});
     $('search-button').addEventListener('click',()=>state.data&&consultLocation());
     $('reset-view').addEventListener('click',()=>state.viewMode==='mosaic'?setMosaicMode(true):focusTerritory());

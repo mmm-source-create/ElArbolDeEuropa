@@ -87,5 +87,8 @@ test('the Atlas uses reviewed layers first and the all-territory crosswalk for u
   assert(lithuania.includes('Vilnius'));
   assert(lithuaniaAfterPilotRange.includes('Vilnius'), 'the Atlas keeps older dated coverage outside the pilot timeline');
   assert(unreviewed.length > 0, 'legacy territories with no named corridor layer use the measured geometry bridge');
-  assert.deepEqual(earlyFrance, [], 'an explicit source date prevents the generic bridge from projecting a future boundary');
+  assert(earlyFrance.includes('Paris'), 'the reviewed medieval series replaces the old 1453-only cutoff');
+  assert(!earlyFrance.includes('Bordeaux'));
+  assert(!earlyFrance.includes('Perpignan'));
+  assert(!earlyFrance.includes('Calais'));
 });

@@ -6,6 +6,7 @@ import {applyMapBorderCorrections} from './mapBorderCorrections.js';
 import {authorityMapScope} from './authorityMapScopes.js';
 import {chronologyJurisdictionsFor, appendChronologyJurisdictions} from './atlasChronologyRoutes.js';
 import {regionalExtentJurisdictions, supersededRegionalLayers} from './regionalExtentRoutes.js';
+import {continuityJurisdictions, territorialLabel} from './territorialIdentity.js';
 
 const layerIndexes = new WeakMap();
 export function reviewedMapLayers(data) {
@@ -29,7 +30,7 @@ function layerIndex(data) {
 
 export function pilotJurisdictionsFor(territory, year, personId = null) {
   const chronological=chronologyJurisdictionsFor(territory,year,personId);
-  return regionalExtentJurisdictions(appendChronologyJurisdictions(chronological ?? basePilotJurisdictionsFor(territory,year,personId),territory,personId),territory,year,personId);
+  return continuityJurisdictions(regionalExtentJurisdictions(appendChronologyJurisdictions(chronological ?? basePilotJurisdictionsFor(territory,year,personId),territory,personId),territory,year,personId),territory,year,personId);
 }
 
 function basePilotJurisdictionsFor(territory, year, personId) {
@@ -169,7 +170,8 @@ export function reviewedLayerEvidence(entry, year) {
     .filter(source => source?.url).map(source => [source.url, source])).values()];
   return {note: selected?.note || null, sources,
     precision:selected?.precision || entry?.precision || null,
-    limitedCore:selected?.limitedCore ?? entry?.limitedCore ?? false,
+    limitedCore:(selected?.limitedCore ?? entry?.limitedCore ?? false)
+      || (selected?.limitedCorePeriods || []).some(period => period.from <= year && year <= period.through),
     activeReason:selected?.active?.reason || (extension ? selected?.note : null)};
 }
 
@@ -223,7 +225,7 @@ export function reviewedAuthorityConditions(data, territory, year, personId = nu
 export function mapLocationsForGovernment(data, government, year, personId = null, legacyIds = []) {
   if (!data || !government?.territorio || !Number.isInteger(year)) return [];
   const chronological=chronologyJurisdictionsFor(government.territorio,year,personId);
-  if(chronological?.length === 0)return [];
+  if(chronological?.length === 0 && !pilotJurisdictionsFor(government.territorio,year,personId).length)return [];
   const byName = layerIndex(data);
   const withinDatedLayerRange = year >= data.from && year <= data.through;
   const layers = (withinDatedLayerRange ? pilotJurisdictionsFor(government.territorio, year, personId) : [])
@@ -273,7 +275,8 @@ export function pilotLocationContext(data, id, year, personId = null) {
     const extension = authorityExtensionFor(entry.name, year);
     const evidence = reviewedLayerEvidence(entry, year);
     return [{
-      name: entry.name,
+      name: territorialLabel(entry.name, year),
+      layerName: entry.name,
       corridor: entry.corridor,
       note: evidence.note,
       source: extension?.source.url || evidence.sources[0]?.url || null,

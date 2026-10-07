@@ -62,7 +62,7 @@ export const ATLAS_CHRONOLOGY_REVIEWS = Object.freeze({
     "editor": "El Árbol de Europa",
     "note": "Sucedió siendo menor. Perdió Arta en marzo de 1449 y Angelokastro en 1460, conservando Vonitsa hasta la campaña de 1479. La capa reduce el dominio al núcleo realmente conservado en cada intervalo."
   },
-  "person:BALINTTOROK:government:Gobierno de Temesvár de Bálint Török:1529:1530:Gobernador": {
+  "person:BALINTTOROK:government:Condado de Temes:1529:1530:Gobernador": {
     "certainty": "documented",
     "sources": [
       {
@@ -80,7 +80,7 @@ export const ATLAS_CHRONOLOGY_REVIEWS = Object.freeze({
     "editor": "El Árbol de Europa",
     "note": "Conde de Temes y comandante al servicio de Fernando. El gobierno se limita al núcleo de Temesvár documentado por las órdenes de 1530 y termina con su relevo del 13 de septiembre; no atribuye todo el Banato a Fernando."
   },
-  "person:PETERPETROVICS:government:Gobierno de Temes de Péter Petrovics:1541:1550:Gobernador": {
+  "person:PETERPETROVICS:government:Condado de Temes:1541:1550:Gobernador": {
     "certainty": "documented",
     "sources": [
       {
@@ -1274,7 +1274,7 @@ export const ATLAS_CHRONOLOGY_REVIEWS = Object.freeze({
     "reviewedAt": "2026-10-07",
     "editor": "El Árbol de Europa"
   },
-  "person:MARIATERESAHAB:government:Silesia austríaca:1742:1780:Soberano": {
+  "person:MARIATERESAHAB:government:Silesia:1742:1780:Soberano": {
     "certainty": "inferred",
     "sources": [
       {
@@ -1292,7 +1292,7 @@ export const ATLAS_CHRONOLOGY_REVIEWS = Object.freeze({
     "reviewedAt": "2026-10-07",
     "editor": "El Árbol de Europa"
   },
-  "person:JOSE2HRE:government:Silesia austríaca:1780:1790:Soberano": {
+  "person:JOSE2HRE:government:Silesia:1780:1790:Soberano": {
     "certainty": "inferred",
     "sources": [
       {
@@ -1310,7 +1310,7 @@ export const ATLAS_CHRONOLOGY_REVIEWS = Object.freeze({
     "reviewedAt": "2026-10-07",
     "editor": "El Árbol de Europa"
   },
-  "person:LEOP2HRE:government:Silesia austríaca:1790:1792:Soberano": {
+  "person:LEOP2HRE:government:Silesia:1790:1792:Soberano": {
     "certainty": "inferred",
     "sources": [
       {
@@ -1328,7 +1328,7 @@ export const ATLAS_CHRONOLOGY_REVIEWS = Object.freeze({
     "reviewedAt": "2026-10-07",
     "editor": "El Árbol de Europa"
   },
-  "person:FRAN2HRE:government:Silesia austríaca:1792:1835:Soberano": {
+  "person:FRAN2HRE:government:Silesia:1792:1835:Soberano": {
     "certainty": "inferred",
     "sources": [
       {
@@ -2188,7 +2188,7 @@ export const ATLAS_CHRONOLOGY_REVIEWS = Object.freeze({
     "reviewedAt": "2026-10-07",
     "editor": "El Árbol de Europa"
   },
-  "person:IMRECZIBAK:government:Gobierno de Bihar de Imre Czibak:1529:1534:Gobernador": {
+  "person:IMRECZIBAK:government:Condado de Bihar:1529:1534:Gobernador": {
     "certainty": "documented",
     "sources": [
       {
@@ -2206,7 +2206,7 @@ export const ATLAS_CHRONOLOGY_REVIEWS = Object.freeze({
     "editor": "El Árbol de Europa",
     "note": "Gobierno del condado de Bihar en nombre de Juan Zápolya, conservado durante su regreso y hasta el asesinato de Czibak en agosto de 1534. La capa limita el mandato a Oradea, Cheresig y Beiuș y reserva el año de muerte a una revisión de sucesión. No atribuye todo el occidente de Transilvania."
   },
-  "person:SIMUNBAKACERDODY:government:Eslavonia disputada (núcleos):1530:1534:Ban": {
+  "person:SIMUNBAKACERDODY:government:Eslavonia:1530:1534:Ban": {
     "certainty": "documented",
     "sources": [
       {

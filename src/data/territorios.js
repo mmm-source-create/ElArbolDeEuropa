@@ -1,7 +1,5 @@
 export const TERRITORIOS = Object.freeze({
-  "Ducado de Estiria": {"clase":"ducado","naturaleza":"entidad","desde":1200,"hasta":1378,"componentes":[],"nota":"Jurisdicción provincial diferenciada, con superficie regional aproximada y mandatos personales documentados por separado."},
-  "Carintia habsbúrgica antes de Neuberg": {"clase":"ducado","naturaleza":"entidad","desde":1335,"hasta":1378,"componentes":[],"nota":"Jurisdicción provincial diferenciada, con superficie regional aproximada y mandatos personales documentados por separado."},
-  "Carniola habsbúrgica antes de Neuberg": {"etapas":[{"clase":"señorío","desde":1335,"hasta":1363},{"clase":"ducado","desde":1364,"hasta":1378}],"clase":"ducado","naturaleza":"entidad","desde":1335,"hasta":1378,"componentes":[],"nota":"Jurisdicción provincial diferenciada, con superficie regional aproximada y mandatos personales documentados por separado."},
+  "Ducado de Estiria": {"clase":"ducado","naturaleza":"entidad","desde":1200,"componentes":[],"nota":"Jurisdicción provincial diferenciada, con superficie regional aproximada y mandatos personales documentados por separado."},
   "Transilvania habsbúrgica": {"clase":"principado","naturaleza":"entidad","desde":1699,"hasta":1800,"componentes":[],"nota":"Jurisdicción provincial diferenciada, con superficie regional aproximada y mandatos personales documentados por separado."},
   "Norte de Serbia habsbúrgico": {"clase":"gobierno","naturaleza":"entidad","desde":1718,"hasta":1738,"componentes":[],"nota":"Jurisdicción provincial diferenciada, con superficie regional aproximada y mandatos personales documentados por separado."},
   "Oltenia habsbúrgica": {"clase":"gobierno","naturaleza":"entidad","desde":1718,"hasta":1738,"componentes":[],"nota":"Jurisdicción provincial diferenciada, con superficie regional aproximada y mandatos personales documentados por separado."},
@@ -9,20 +7,15 @@ export const TERRITORIOS = Object.freeze({
   "Estados de Holanda": {"clase":"gobierno","naturaleza":"entidad","desde":1651,"hasta":1794,"nota":"Instituciones provinciales dentro de las Provincias Unidas; no monarquía personal del estatúder. Núcleo regional, no perímetro federal completo.","componentes":[]},
   "República de Venecia": {"clase":"gobierno","naturaleza":"entidad","desde":1651,"hasta":1796,"nota":"Autoridad republicana del período tardío; pérdidas de Candia y fin de la República se resuelven en versiones propias. El dogo es su magistrado electivo, no propietario hereditario.","componentes":[]},
   "Comuna y República de Florencia": {"clase":"gobierno","naturaleza":"entidad","desde":1200,"hasta":1399,"nota":"Autoridad comunal y republicana del núcleo de Florence; reformas del Popolo 1250 y priorato 1282. No anticipa un soberano Medici.","componentes":[]},
-  "República francesa": {"clase":"gobierno","naturaleza":"entidad","desde":1792,"hasta":1800,"nota":"Capa parcial de núcleos borgoñones y anexiones; no es toda Francia. Gobierno colectivo republicano, no un título real o el Imperio posterior.","componentes":[]},
+  "República francesa": {"clase":"gobierno","naturaleza":"entidad","desde":1792,"hasta":1800,"nota":"Identidad francesa bajo gobierno colectivo republicano desde 1792. La geometría fechada se amplía en la capa de Francia; las anexiones y ocupaciones conservan ámbitos y fuentes propios.","componentes":[]},
   "República Partenopea": {"clase":"gobierno","naturaleza":"entidad","desde":1799,"hasta":1799,"nota":"Episodio de enero–junio seguido de restauración borbónica; celda de Napoli como resumen anual disputado.","componentes":[]},
   "Administración de ocupación austro-rusa de Lombardía": {"clase":"gobierno","naturaleza":"entidad","desde":1799,"hasta":1800,"nota":"Ocupación de Milano abril 1799–mayo 1800. La versión 1800 conserva únicamente Mantova, ocupada hasta 1801.","componentes":[]},
   "República Cisalpina": {"clase":"gobierno","naturaleza":"entidad","desde":1797,"hasta":1800,"nota":"Gobierno republicano colectivo, interrumpido en 1799; reconstruido desde 17 junio 1800. Núcleo de fin de año; Mantova excluida en 1800.","componentes":[]},
   "Morea veneciana (núcleos)": {"clase":"gobierno","naturaleza":"entidad","desde":1699,"hasta":1714,"nota":"Provincia colonial veneciana reconocida en Karlowitz, representada sólo por seis núcleos inspeccionados.","componentes":[]},
   "Monte Athos autónomo bajo autoridad otomana": {"clase":"señorío","naturaleza":"entidad","desde":1430,"hasta":1800,"nota":"Autogobierno monástico con privilegios y autoridad superior otomana; no se identifica con una provincia de administración directa.","componentes":[]},
-  "Eslavonia disputada (núcleos)": {"clase":"banato","naturaleza":"entidad","desde":1527,"hasta":1536,"nota":"Capa de soberanía disputada y adhesiones locales; los mandatos provinciales no amplían por sí solos su geometría.","componentes":[]},
-  "Gobierno de Bihar de Imre Czibak": {"clase":"gobierno","naturaleza":"entidad","desde":1529,"hasta":1534,"nota":"Delegación de Juan Zápolya en Bihar, con tres núcleos cartográficos documentados.","componentes":[]},
   "Brzeg": {"clase":"ducado","naturaleza":"entidad","componentes":[],"nota":"Ducado piasta subordinado a la Corona de Bohemia; el gobierno del príncipe se distingue de la soberanía superior."},
-  "Silesia austríaca": {"clase":"gobierno","naturaleza":"entidad","desde":1742,"componentes":[],"nota":"Remanente de Silesia bajo autoridad habsbúrgica. La cartografía representa Teschen/Bielsko y las partes austríacas de Opava, Krnov y Jeseník mediante celdas regionales aproximadas."},
   "Señorío de Ioannina": {"clase":"señorío","naturaleza":"entidad","desde":1400,"hasta":1411,"nota":"Núcleo de gobierno de Esau Buondelmonti representado durante el intervalo documentado.","componentes":[]},
   "Epiro de los Tocco": {"clase":"despotado","naturaleza":"entidad","desde":1411,"hasta":1479,"nota":"Dominio cambiante de los Tocco; la capa distingue las pérdidas de Ioannina, Arta, Angelokastro y Vonitsa.","componentes":[]},
-  "Gobierno de Temesvár de Bálint Török": {"clase":"gobierno","naturaleza":"entidad","desde":1529,"hasta":1530,"nota":"Administración militar delegada de Fernando, restringida al núcleo documentado de Temesvár.","componentes":[]},
-  "Gobierno de Temes de Péter Petrovics": {"clase":"gobierno","naturaleza":"entidad","desde":1541,"hasta":1550,"nota":"Administración delegada del reino oriental tributario, anterior a la provincia otomana de 1552.","componentes":[]},
   "Ravensberg": {"clase":"condado","naturaleza":"entidad","componentes":[],"nota":"Condado westfaliano de Bielefeld y Vlotho. Lippe es un territorio distinto y el SVG no permite aislar Ravensberg."},
   "Palatinado-Neoburgo": {"clase":"ducado","naturaleza":"entidad","componentes":[],"nota":"Principado de Pfalz-Neuburg creado tras la guerra de sucesión de Landshut (1505). No equivale al Palatinado electoral; el mapa representa los núcleos de Neuburg y Burglengenfeld con sus particiones y ocupación imperial."},
   "Nevers": {"clase":"condado","naturaleza":"entidad","componentes":[],"nota":"Condado del Nivernais. Tras la herencia de Margarita III pasó a la rama menor de los Valois de Borgoña; no era parte del ducado de Dijon."},
@@ -96,7 +89,12 @@ export const TERRITORIOS = Object.freeze({
     "clase": "condado",
     "naturaleza": "entidad",
     "componentes": [],
-    "pertenencias": [{"territorio":"Corona de Aragón","desde":1137}],
+    "pertenencias": [
+      {
+        "territorio": "Corona de Aragón",
+        "desde": 1137
+      }
+    ],
     "nota": "El conde de Barcelona era también rey de Aragón desde Alfonso II. El mapa del condado representa el núcleo catalán de su gobierno, no todos los señoríos catalanes ni el conjunto de la Corona de Aragón. Urgell se incorpora al patrimonio real en 1413."
   },
   "Navarra": {
@@ -328,7 +326,12 @@ export const TERRITORIOS = Object.freeze({
   },
   "Güeldres": {
     "clase": "condado",
-    "etapas": [{"desde": 1339, "clase": "ducado"}],
+    "etapas": [
+      {
+        "desde": 1339,
+        "clase": "ducado"
+      }
+    ],
     "naturaleza": "entidad",
     "componentes": []
   },
@@ -735,9 +738,10 @@ export const TERRITORIOS = Object.freeze({
     "componentes": []
   },
   "Silesia": {
-    "clase": "principado",
+    "clase": "territorio_compuesto",
     "naturaleza": "entidad",
-    "componentes": []
+    "componentes": [],
+    "nota": "Conjunto de ducados con gobiernos locales y soberanía superior de la Corona bohemia; desde 1742, dividido entre Prusia y el remanente habsbúrgico. La partición no crea una nueva identidad por cada soberano."
   },
   "Squillace": {
     "clase": "principado",
@@ -1366,7 +1370,10 @@ export const TERRITORIOS = Object.freeze({
       "Flandes",
       "Brabante",
       "Henao",
-      "Holanda", "Zelanda", "Güeldres", "Limburgo"
+      "Holanda",
+      "Zelanda",
+      "Güeldres",
+      "Limburgo"
     ]
   },
   "Bizancio y Oriente latino": {
@@ -1598,6 +1605,43 @@ export const TERRITORIOS = Object.freeze({
     "componentes": [],
     "nota": "Condado creado para la rama de los Burkes de Connacht en 1543. Sus titulares no son monarcas de Connacht.",
     "desde": 1543
+  },
+  "Carniola": {
+    "clase": "señorío",
+    "naturaleza": "entidad",
+    "componentes": [],
+    "etapas": [
+      {
+        "desde": 1364,
+        "clase": "ducado"
+      }
+    ],
+    "nota": "Señorío elevado a ducado en 1364. El dominio habsbúrgico y las particiones de Neuberg no crean otra entidad territorial."
+  },
+  "Eslavonia": {
+    "clase": "reino",
+    "naturaleza": "entidad",
+    "componentes": [],
+    "nota": "Reino histórico vinculado a la Corona húngara. Los banes y las disputas de control se registran como autoridades o episodios, no como territorios nuevos."
+  },
+  "Condado de Bihar": {
+    "clase": "condado",
+    "naturaleza": "entidad",
+    "componentes": [],
+    "nota": "Condado húngaro; sus condes y administradores delegados tienen mandatos personales fechados. La geometría disponible sigue limitada a los núcleos revisados."
+  },
+  "Condado de Temes": {
+    "clase": "condado",
+    "naturaleza": "entidad",
+    "componentes": [],
+    "nota": "Condado húngaro; sus condes y administradores delegados tienen mandatos personales fechados. La geometría disponible sigue limitada a los núcleos revisados."
+  },
+  "Gran Bretaña": {
+    "clase": "reino",
+    "naturaleza": "entidad",
+    "desde": 1707,
+    "componentes": [],
+    "nota": "Reino creado por la unión de Inglaterra y Escocia en 1707. Irlanda conserva un reino separado hasta 1800; no confundir con el Reino Unido de 1801."
   }
 });
 
