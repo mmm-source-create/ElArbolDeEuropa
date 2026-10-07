@@ -3,6 +3,7 @@
 import fs from 'node:fs';
 import {fileURLToPath} from 'node:url';
 import path from 'node:path';
+import {applyRegionalExtents} from './apply-regional-extents.mjs';
 const read = name => JSON.parse(fs.readFileSync(new URL(name, import.meta.url), 'utf8'));
 const correctionKey = item => [item.territory,item.id,item.action,item.from,item.through].join('|');
 
@@ -20,7 +21,7 @@ export function mergeMapExpansions(data) {
     throw new Error('Duplicate researched layer names');
   const addedNames = new Set([...additions.map(entry => entry.name),...(data.expansion?.layerNames || [])]);
   data.additionalTerritories = [...data.additionalTerritories.filter(entry => !addedNames.has(entry.name)), ...additions];
-  const layers = [...data.territories,...data.additionalTerritories];
+  let layers = [...data.territories,...data.additionalTerritories];
   const byName = new Map(layers.map(entry => [entry.name,entry]));
   for (const entry of layers) delete entry.temporalExtensions;
   const temporalExtensions=[...chronology.temporalExtensions,...(central.temporalExtensions || []),...(balkans.temporalExtensions || [])];
@@ -42,6 +43,8 @@ export function mergeMapExpansions(data) {
       ...(group.authorityCondition ? {authorityCondition:group.authorityCondition} : {}),
       ...(group.supportingSources?.length ? {supportingSources:group.supportingSources} : {})})))].map(item=>({...item,supplement:'map-expansion'}));
   data.overrides = [...new Map([...(data.overrides || []).filter(item=>item.supplement !== 'map-expansion'),...corrections].map(item => [correctionKey(item),item])).values()];
+  applyRegionalExtents(data, read('regional-extent-review.json'));
+  layers = [...data.territories, ...data.additionalTerritories];
   const svg = fs.readFileSync(new URL('euv-locations-crop.svg',import.meta.url),'utf8');
   const ids = new Set([...svg.matchAll(/<path\b[^>]*\bid="([^"]+)"/g)].map(match => match[1]));
   for (const layer of layers) {
@@ -53,6 +56,13 @@ export function mergeMapExpansions(data) {
       for (const id of version.ids) if (!ids.has(id)) throw new Error(`Missing SVG region: ${id}`);
     }
   }
+  for (const layer of layers.filter(entry => entry.corridor === 'Revisión de superficies regionales')) {
+    if (!layer.sources?.length || !layer.coverage || layer.coverage.from < data.from || layer.coverage.through > data.through)
+      throw new Error(`Invalid regional evidence: ${layer.name}`);
+  }
+  for (const item of data.overrides.filter(item => item.supplement === 'regional-extent'))
+    if (!layers.some(layer => layer.name === item.territory) || !ids.has(item.id) || !item.source)
+      throw new Error(`Invalid regional exclusion: ${item.id}`);
   for (const layer of additions) if (!layer.coverage || layer.coverage.from < data.from
     || layer.coverage.through > data.through || layer.coverage.from > layer.coverage.through)
     throw new Error(`Missing or invalid layer coverage: ${layer.name}`);

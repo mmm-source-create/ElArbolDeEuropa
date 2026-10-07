@@ -682,3 +682,22 @@ en cada capa. `authorityMapScopes.js` limita los emires del interregno
 otomano y a Moisés Székely a ámbitos regionales; Basta conserva su vínculo
 como gobernador de Rodolfo II. Las exclusiones fechadas prevalecen sobre
 inclusiones generales tanto en el mosaico como en el mapa de una persona.
+
+
+## Revisión de superficies de 7 de octubre de 2026
+
+La extensión temporal se corrige con 28 series regionales y 20 capas fechadas.
+Silesia incluye 46 celdas bajo soberanía de la Corona; la partición de 1742
+separa 42 prusianas y cinco austríacas. Austria, Italia e Iberia conservan
+superficies completas en los períodos revisados. Anatolia se resuelve por
+beylicatos y provincias con sus pérdidas y recuperaciones, no por una máscara
+única de ciudades.
+
+El [informe de revisión](../../docs/atlas-superficies-2026-10-07.md) reúne
+fuentes, límites, comparación de áreas y los 53 territorios aún sin relleno.
+`regional-extent-source.py` genera selecciones documentadas;
+`build-regional-extent-cells.py` mide cada ID del SVG;
+`npm run audit:regional-extents` comprueba la recuperación de superficie.
+Los dos primeros pasos requieren respectivamente Python y el entorno geométrico
+existente con Shapely/svgpathtools. No se ejecuta ni se importan las máscaras del
+HTML facilitado como ejemplo. La cobertura 1200–1800 sigue siendo parcial.

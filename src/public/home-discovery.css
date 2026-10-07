@@ -4,8 +4,9 @@
 .public-home .public-hero>p{max-width:640px;font-size:16px;line-height:1.65}
 .public-home .public-hero-actions{gap:18px;margin-top:25px}
 .public-home .public-hero-actions .public-primary{min-height:46px;padding:14px 23px;border-radius:999px;font-size:12px}
-.public-home .public-hero-actions .public-secondary{min-height:42px;padding:10px 0;background:transparent;border:0;font-size:12px}
+.public-home .public-hero-actions .public-secondary{min-height:46px;padding:14px 20px;gap:8px;background:transparent;border:0;font-size:12px}
 .public-home .public-home-year{display:inline-flex;align-items:center;gap:6px;margin-top:18px;color:var(--eade-muted);font-size:11px}
+.public-home .public-home-year:is(:hover,:focus-visible){text-decoration:none}
 .public-home .public-hero-stats{margin-top:28px;max-width:720px;border-bottom:0}
 .public-home .public-hero-stats>span{padding:20px 8px;gap:6px;font-size:10px;letter-spacing:.035em}
 .public-home .public-hero-stats strong{font-size:30px;font-weight:500}

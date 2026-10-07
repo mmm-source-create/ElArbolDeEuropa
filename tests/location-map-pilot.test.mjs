@@ -55,7 +55,9 @@ test('an inspected location reports its distinct political context and sourced c
   assert.equal(malbork.name, 'Prusia Real');
   assert(malbork.correction?.source);
   assert(pilotLocationContext(data, 'Brixen', 1500).some(item => item.name === 'Principado episcopal de Brixen'));
-  assert.deepEqual(pilotLocationContext(data, 'Buda', 1700), []);
+  const buda = pilotLocationContext(data, 'Buda', 1700);
+  assert.deepEqual(buda.map(layer => layer.name), ['Hungría real']);
+  assert(buda[0].source && buda[0].note.includes('Corona húngara'));
 });
 
 test('the Atlas trial reuses the dated Burgundian succession without painting the French duchy for Charles V', () => {

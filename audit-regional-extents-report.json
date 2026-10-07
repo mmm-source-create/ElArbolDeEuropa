@@ -1,0 +1,1546 @@
+{
+  "reviewedAt": "2026-10-07",
+  "units": "SVG coordinate units squared",
+  "measuredCells": 1712,
+  "series": [
+    {
+      "name": "Castilla",
+      "previous1651": {
+        "cells": 89,
+        "svgArea": 192.72688,
+        "unmeasured": []
+      },
+      "corrected1651": {
+        "cells": 205,
+        "svgArea": 434.97464,
+        "unmeasured": []
+      },
+      "sources": [
+        {
+          "title": "IGN · Atlas Nacional de España: Historia",
+          "url": "https://www.ign.es/web/resources/acercaDe/libDigPub/06_Referencias_historicas_2020_20230601.pdf",
+          "locator": "pp. 21–22: reinos, expansión y fronteras medievales; pp. 29–30: monarquía hispánica y tratados. Comparación de superficies, no solo ciudades."
+        },
+        {
+          "title": "Ayuntamiento de Algeciras · Historia",
+          "url": "https://www.algeciras.es/es/ciudad/historia/",
+          "locator": "Conquista castellana de 1344; recuperación nazarí en 1369 y destrucción posterior. Un título de rey de Algeciras no acredita control de la plaza."
+        }
+      ]
+    },
+    {
+      "name": "León",
+      "previous1651": {
+        "cells": 68,
+        "svgArea": 146.72074,
+        "unmeasured": []
+      },
+      "corrected1651": {
+        "cells": 89,
+        "svgArea": 189.18898,
+        "unmeasured": []
+      },
+      "sources": [
+        {
+          "title": "IGN · Atlas Nacional de España: Historia",
+          "url": "https://www.ign.es/web/resources/acercaDe/libDigPub/06_Referencias_historicas_2020_20230601.pdf",
+          "locator": "pp. 21–22: reinos, expansión y fronteras medievales; pp. 29–30: monarquía hispánica y tratados. Comparación de superficies, no solo ciudades."
+        }
+      ]
+    },
+    {
+      "name": "Portugal",
+      "previous1651": {
+        "cells": 52,
+        "svgArea": 108.88407,
+        "unmeasured": []
+      },
+      "corrected1651": {
+        "cells": 73,
+        "svgArea": 145.50284,
+        "unmeasured": []
+      },
+      "sources": [
+        {
+          "title": "IGN · Atlas Nacional de España: Historia",
+          "url": "https://www.ign.es/web/resources/acercaDe/libDigPub/06_Referencias_historicas_2020_20230601.pdf",
+          "locator": "pp. 21–22: reinos, expansión y fronteras medievales; pp. 29–30: monarquía hispánica y tratados. Comparación de superficies, no solo ciudades."
+        }
+      ]
+    },
+    {
+      "name": "Aragón",
+      "previous1651": {
+        "cells": 7,
+        "svgArea": 19.14702,
+        "unmeasured": []
+      },
+      "corrected1651": {
+        "cells": 33,
+        "svgArea": 78.97632,
+        "unmeasured": []
+      },
+      "sources": [
+        {
+          "title": "IGN · Atlas Nacional de España: Historia",
+          "url": "https://www.ign.es/web/resources/acercaDe/libDigPub/06_Referencias_historicas_2020_20230601.pdf",
+          "locator": "pp. 21–22: reinos, expansión y fronteras medievales; pp. 29–30: monarquía hispánica y tratados. Comparación de superficies, no solo ciudades."
+        }
+      ]
+    },
+    {
+      "name": "Condado de Barcelona",
+      "previous1651": {
+        "cells": 0,
+        "svgArea": 0,
+        "unmeasured": []
+      },
+      "corrected1651": {
+        "cells": 0,
+        "svgArea": 0,
+        "unmeasured": []
+      },
+      "sources": [
+        {
+          "title": "IGN · Atlas Nacional de España: Historia",
+          "url": "https://www.ign.es/web/resources/acercaDe/libDigPub/06_Referencias_historicas_2020_20230601.pdf",
+          "locator": "pp. 21–22: reinos, expansión y fronteras medievales; pp. 29–30: monarquía hispánica y tratados. Comparación de superficies, no solo ciudades."
+        }
+      ]
+    },
+    {
+      "name": "Valencia",
+      "previous1651": {
+        "cells": 10,
+        "svgArea": 18.25813,
+        "unmeasured": []
+      },
+      "corrected1651": {
+        "cells": 17,
+        "svgArea": 33.31211,
+        "unmeasured": []
+      },
+      "sources": [
+        {
+          "title": "IGN · Atlas Nacional de España: Historia",
+          "url": "https://www.ign.es/web/resources/acercaDe/libDigPub/06_Referencias_historicas_2020_20230601.pdf",
+          "locator": "pp. 21–22: reinos, expansión y fronteras medievales; pp. 29–30: monarquía hispánica y tratados. Comparación de superficies, no solo ciudades."
+        }
+      ]
+    },
+    {
+      "name": "Mallorca",
+      "previous1651": {
+        "cells": 5,
+        "svgArea": 8.14632,
+        "unmeasured": []
+      },
+      "corrected1651": {
+        "cells": 5,
+        "svgArea": 8.14632,
+        "unmeasured": []
+      },
+      "sources": [
+        {
+          "title": "IGN · Atlas Nacional de España: Historia",
+          "url": "https://www.ign.es/web/resources/acercaDe/libDigPub/06_Referencias_historicas_2020_20230601.pdf",
+          "locator": "pp. 21–22: reinos, expansión y fronteras medievales; pp. 29–30: monarquía hispánica y tratados. Comparación de superficies, no solo ciudades."
+        }
+      ]
+    },
+    {
+      "name": "Granada",
+      "previous1651": {
+        "cells": 0,
+        "svgArea": 0,
+        "unmeasured": []
+      },
+      "corrected1651": {
+        "cells": 0,
+        "svgArea": 0,
+        "unmeasured": []
+      },
+      "sources": [
+        {
+          "title": "IGN · Atlas Nacional de España: Historia",
+          "url": "https://www.ign.es/web/resources/acercaDe/libDigPub/06_Referencias_historicas_2020_20230601.pdf",
+          "locator": "pp. 21–22: reinos, expansión y fronteras medievales; pp. 29–30: monarquía hispánica y tratados. Comparación de superficies, no solo ciudades."
+        }
+      ]
+    },
+    {
+      "name": "Nápoles",
+      "previous1651": {
+        "cells": 9,
+        "svgArea": 17.863,
+        "unmeasured": []
+      },
+      "corrected1651": {
+        "cells": 72,
+        "svgArea": 125.67382,
+        "unmeasured": []
+      },
+      "sources": [
+        {
+          "title": "Ministero della Cultura · SIAS: Regno di Sicilia",
+          "url": "https://sias-archivi.cultura.gov.it/cgi-bin/pagina.pl?Chiave=28&TipoPag=contesto",
+          "locator": "Regnum insular y continental antes de 1282; Vísperas y separación confirmada en Caltabellotta (1302). La superficie regional procede de los contornos insulares y continentales ya revisados."
+        }
+      ]
+    },
+    {
+      "name": "Trinacria",
+      "previous1651": {
+        "cells": 7,
+        "svgArea": 14.02925,
+        "unmeasured": []
+      },
+      "corrected1651": {
+        "cells": 26,
+        "svgArea": 39.27509,
+        "unmeasured": []
+      },
+      "sources": [
+        {
+          "title": "Ministero della Cultura · SIAS: Regno di Sicilia",
+          "url": "https://sias-archivi.cultura.gov.it/cgi-bin/pagina.pl?Chiave=28&TipoPag=contesto",
+          "locator": "Regnum insular y continental antes de 1282; Vísperas y separación confirmada en Caltabellotta (1302). La superficie regional procede de los contornos insulares y continentales ya revisados."
+        }
+      ]
+    },
+    {
+      "name": "Austria",
+      "previous1651": {
+        "cells": 7,
+        "svgArea": 12.91105,
+        "unmeasured": []
+      },
+      "corrected1651": {
+        "cells": 28,
+        "svgArea": 53.73658,
+        "unmeasured": []
+      },
+      "sources": [
+        {
+          "title": "German Historical Institute · Growth of the Habsburg Empire, 1282–1918",
+          "url": "https://germanhistorydocs.org/en/the-holy-roman-empire-1648-1815/the-growth-of-the-habsburg-empire",
+          "locator": "Mapa de adquisiciones: Austria y Estiria 1282, Carintia 1335, Tirol 1363, Bohemia y Silesia 1526, Hungría 1699 y Banato 1718. El cargo imperial no equivale al dominio de todos sus estados."
+        },
+        {
+          "title": "German Historical Institute · Administrative Divisions, 1780",
+          "url": "https://germanhistorydocs.org/en/the-holy-roman-empire-1648-1815/administrative-divisions-of-the-habsburg-empire-1780",
+          "locator": "Superficies de las provincias hereditarias, Hungría y remanente austríaco de Silesia."
+        }
+      ]
+    },
+    {
+      "name": "Austria Interior",
+      "previous1651": {
+        "cells": 8,
+        "svgArea": 16.17111,
+        "unmeasured": []
+      },
+      "corrected1651": {
+        "cells": 49,
+        "svgArea": 92.78694,
+        "unmeasured": []
+      },
+      "sources": [
+        {
+          "title": "German Historical Institute · Growth of the Habsburg Empire, 1282–1918",
+          "url": "https://germanhistorydocs.org/en/the-holy-roman-empire-1648-1815/the-growth-of-the-habsburg-empire",
+          "locator": "Mapa de adquisiciones: Austria y Estiria 1282, Carintia 1335, Tirol 1363, Bohemia y Silesia 1526, Hungría 1699 y Banato 1718. El cargo imperial no equivale al dominio de todos sus estados."
+        },
+        {
+          "title": "German Historical Institute · Administrative Divisions, 1780",
+          "url": "https://germanhistorydocs.org/en/the-holy-roman-empire-1648-1815/administrative-divisions-of-the-habsburg-empire-1780",
+          "locator": "Superficies de las provincias hereditarias, Hungría y remanente austríaco de Silesia."
+        }
+      ]
+    },
+    {
+      "name": "Tirol",
+      "previous1651": {
+        "cells": 8,
+        "svgArea": 13.7713,
+        "unmeasured": []
+      },
+      "corrected1651": {
+        "cells": 22,
+        "svgArea": 37.41237,
+        "unmeasured": []
+      },
+      "sources": [
+        {
+          "title": "German Historical Institute · Growth of the Habsburg Empire, 1282–1918",
+          "url": "https://germanhistorydocs.org/en/the-holy-roman-empire-1648-1815/the-growth-of-the-habsburg-empire",
+          "locator": "Mapa de adquisiciones: Austria y Estiria 1282, Carintia 1335, Tirol 1363, Bohemia y Silesia 1526, Hungría 1699 y Banato 1718. El cargo imperial no equivale al dominio de todos sus estados."
+        },
+        {
+          "title": "German Historical Institute · Administrative Divisions, 1780",
+          "url": "https://germanhistorydocs.org/en/the-holy-roman-empire-1648-1815/administrative-divisions-of-the-habsburg-empire-1780",
+          "locator": "Superficies de las provincias hereditarias, Hungría y remanente austríaco de Silesia."
+        }
+      ]
+    },
+    {
+      "name": "Balcanes meridionales otomanos",
+      "previous1651": {
+        "cells": 0,
+        "svgArea": 0,
+        "unmeasured": []
+      },
+      "corrected1651": {
+        "cells": 249,
+        "svgArea": 610.401,
+        "unmeasured": []
+      },
+      "sources": [
+        {
+          "title": "Atatürk Research Center · Türkiye Cumhuriyeti Tarihi I",
+          "url": "https://atam.gov.tr/wp-content/uploads/2023/10/TURKIYE-CUMHURIYETI-TARIHI-1a.pdf",
+          "locator": "Harita 1 y 2 (pp. PDF 1489–1490): expansión 1299–1683, territorios directos, tributarios y pérdidas. Las incursiones no se consideran anexiones."
+        },
+        {
+          "title": "TDV İslâm Ansiklopedisi · Karlofça",
+          "url": "https://islamansiklopedisi.org.tr/karlofca",
+          "locator": "Tratado de 26 enero 1699: Hungría y Transilvania, Morea y Podolia; Banato conservado por los otomanos."
+        },
+        {
+          "title": "TDV İslâm Ansiklopedisi · Pasarofça Antlaşması",
+          "url": "https://islamansiklopedisi.org.tr/pasarofca-antlasmasi",
+          "locator": "Tratado de 21 julio 1718: Banato, Belgrado/norte de Serbia y Oltenia; Morea otomana."
+        }
+      ]
+    },
+    {
+      "name": "Bosnia y Herzegovina otomanas",
+      "previous1651": {
+        "cells": 0,
+        "svgArea": 0,
+        "unmeasured": []
+      },
+      "corrected1651": {
+        "cells": 37,
+        "svgArea": 99.10314,
+        "unmeasured": []
+      },
+      "sources": [
+        {
+          "title": "Atatürk Research Center · Türkiye Cumhuriyeti Tarihi I",
+          "url": "https://atam.gov.tr/wp-content/uploads/2023/10/TURKIYE-CUMHURIYETI-TARIHI-1a.pdf",
+          "locator": "Harita 1 y 2 (pp. PDF 1489–1490): expansión 1299–1683, territorios directos, tributarios y pérdidas. Las incursiones no se consideran anexiones."
+        },
+        {
+          "title": "TDV İslâm Ansiklopedisi · Karlofça",
+          "url": "https://islamansiklopedisi.org.tr/karlofca",
+          "locator": "Tratado de 26 enero 1699: Hungría y Transilvania, Morea y Podolia; Banato conservado por los otomanos."
+        }
+      ]
+    },
+    {
+      "name": "Principado de Valaquia",
+      "previous1651": {
+        "cells": 0,
+        "svgArea": 0,
+        "unmeasured": []
+      },
+      "corrected1651": {
+        "cells": 36,
+        "svgArea": 108.62585,
+        "unmeasured": []
+      },
+      "sources": [
+        {
+          "title": "Atatürk Research Center · Türkiye Cumhuriyeti Tarihi I",
+          "url": "https://atam.gov.tr/wp-content/uploads/2023/10/TURKIYE-CUMHURIYETI-TARIHI-1a.pdf",
+          "locator": "Harita 1 y 2 (pp. PDF 1489–1490): expansión 1299–1683, territorios directos, tributarios y pérdidas. Las incursiones no se consideran anexiones."
+        },
+        {
+          "title": "TDV İslâm Ansiklopedisi · Pasarofça Antlaşması",
+          "url": "https://islamansiklopedisi.org.tr/pasarofca-antlasmasi",
+          "locator": "Tratado de 21 julio 1718: Banato, Belgrado/norte de Serbia y Oltenia; Morea otomana."
+        }
+      ]
+    },
+    {
+      "name": "Principado de Moldavia",
+      "previous1651": {
+        "cells": 0,
+        "svgArea": 0,
+        "unmeasured": []
+      },
+      "corrected1651": {
+        "cells": 22,
+        "svgArea": 81.01503,
+        "unmeasured": []
+      },
+      "sources": [
+        {
+          "title": "Atatürk Research Center · Türkiye Cumhuriyeti Tarihi I",
+          "url": "https://atam.gov.tr/wp-content/uploads/2023/10/TURKIYE-CUMHURIYETI-TARIHI-1a.pdf",
+          "locator": "Harita 1 y 2 (pp. PDF 1489–1490): expansión 1299–1683, territorios directos, tributarios y pérdidas. Las incursiones no se consideran anexiones."
+        },
+        {
+          "title": "German Historical Institute · Growth of the Habsburg Empire, 1282–1918",
+          "url": "https://germanhistorydocs.org/en/the-holy-roman-empire-1648-1815/the-growth-of-the-habsburg-empire",
+          "locator": "Mapa de adquisiciones: Austria y Estiria 1282, Carintia 1335, Tirol 1363, Bohemia y Silesia 1526, Hungría 1699 y Banato 1718. El cargo imperial no equivale al dominio de todos sus estados."
+        }
+      ]
+    },
+    {
+      "name": "Hungría real",
+      "previous1651": {
+        "cells": 0,
+        "svgArea": 0,
+        "unmeasured": []
+      },
+      "corrected1651": {
+        "cells": 33,
+        "svgArea": 97.95178,
+        "unmeasured": []
+      },
+      "sources": [
+        {
+          "title": "German Historical Institute · Growth of the Habsburg Empire, 1282–1918",
+          "url": "https://germanhistorydocs.org/en/the-holy-roman-empire-1648-1815/the-growth-of-the-habsburg-empire",
+          "locator": "Mapa de adquisiciones: Austria y Estiria 1282, Carintia 1335, Tirol 1363, Bohemia y Silesia 1526, Hungría 1699 y Banato 1718. El cargo imperial no equivale al dominio de todos sus estados."
+        },
+        {
+          "title": "TDV İslâm Ansiklopedisi · Karlofça",
+          "url": "https://islamansiklopedisi.org.tr/karlofca",
+          "locator": "Tratado de 26 enero 1699: Hungría y Transilvania, Morea y Podolia; Banato conservado por los otomanos."
+        },
+        {
+          "title": "TDV İslâm Ansiklopedisi · Pasarofça Antlaşması",
+          "url": "https://islamansiklopedisi.org.tr/pasarofca-antlasmasi",
+          "locator": "Tratado de 21 julio 1718: Banato, Belgrado/norte de Serbia y Oltenia; Morea otomana."
+        }
+      ]
+    },
+    {
+      "name": "Hungría otomana",
+      "previous1651": {
+        "cells": 0,
+        "svgArea": 0,
+        "unmeasured": []
+      },
+      "corrected1651": {
+        "cells": 29,
+        "svgArea": 100.6182,
+        "unmeasured": []
+      },
+      "sources": [
+        {
+          "title": "Atatürk Research Center · Türkiye Cumhuriyeti Tarihi I",
+          "url": "https://atam.gov.tr/wp-content/uploads/2023/10/TURKIYE-CUMHURIYETI-TARIHI-1a.pdf",
+          "locator": "Harita 1 y 2 (pp. PDF 1489–1490): expansión 1299–1683, territorios directos, tributarios y pérdidas. Las incursiones no se consideran anexiones."
+        },
+        {
+          "title": "TDV İslâm Ansiklopedisi · Karlofça",
+          "url": "https://islamansiklopedisi.org.tr/karlofca",
+          "locator": "Tratado de 26 enero 1699: Hungría y Transilvania, Morea y Podolia; Banato conservado por los otomanos."
+        },
+        {
+          "title": "TDV İslâm Ansiklopedisi · Pasarofça Antlaşması",
+          "url": "https://islamansiklopedisi.org.tr/pasarofca-antlasmasi",
+          "locator": "Tratado de 21 julio 1718: Banato, Belgrado/norte de Serbia y Oltenia; Morea otomana."
+        }
+      ]
+    },
+    {
+      "name": "Transilvania",
+      "previous1651": {
+        "cells": 0,
+        "svgArea": 0,
+        "unmeasured": []
+      },
+      "corrected1651": {
+        "cells": 27,
+        "svgArea": 72.83519,
+        "unmeasured": []
+      },
+      "sources": [
+        {
+          "title": "Atatürk Research Center · Türkiye Cumhuriyeti Tarihi I",
+          "url": "https://atam.gov.tr/wp-content/uploads/2023/10/TURKIYE-CUMHURIYETI-TARIHI-1a.pdf",
+          "locator": "Harita 1 y 2 (pp. PDF 1489–1490): expansión 1299–1683, territorios directos, tributarios y pérdidas. Las incursiones no se consideran anexiones."
+        },
+        {
+          "title": "TDV İslâm Ansiklopedisi · Karlofça",
+          "url": "https://islamansiklopedisi.org.tr/karlofca",
+          "locator": "Tratado de 26 enero 1699: Hungría y Transilvania, Morea y Podolia; Banato conservado por los otomanos."
+        }
+      ]
+    },
+    {
+      "name": "Milán",
+      "previous1651": {
+        "cells": 8,
+        "svgArea": 12.88733,
+        "unmeasured": []
+      },
+      "corrected1651": {
+        "cells": 24,
+        "svgArea": 31.06006,
+        "unmeasured": []
+      },
+      "sources": [
+        {
+          "key": "visconti",
+          "title": "Archivio di Stato di Milano: Visconti",
+          "url": "https://archiviodistatomilano.cultura.gov.it/fileadmin/risorse/Patrimonio_archivistico/Soggetti_produttori/Visconti__sec._XII_-_sec._XV_.pdf",
+          "locator": "Comuna medieval; Matteo y vicariato de 1294; exilio Visconti 1302–1310; expansión desde 1310; ducado desde 1395."
+        },
+        {
+          "key": "utrecht",
+          "title": "Archivo de la Corona de Aragón: Tratado de Utrecht",
+          "url": "https://www.cultura.gob.es/archivos-aca/actividades/documentos-para-la-historia-de-europa/utrecht.html",
+          "locator": "Tratados 1713–1715: separación de Milán, Nápoles, Sicilia y los Países Bajos de la monarquía española; Gibraltar y Menorca."
+        },
+        {
+          "key": "milan",
+          "title": "Regione Lombardia: administración austríaca de Milán",
+          "url": "https://lombardiabeniculturali.it/istituzioni/storia/?unita=03.06",
+          "locator": "Transferencia de dominios occidentales a Saboya y organización de la administración austríaca hasta mayo de 1796. Los núcleos occidentales litigiosos se excluyen de las versiones posteriores."
+        },
+        {
+          "key": "cisalpina",
+          "title": "Archivio di Stato di Milano: Albinaggio",
+          "url": "https://archiviodistatomilano.cultura.gov.it/fileadmin/risorse/Patrimonio_archivistico/Fondi_e_Inventari/Atti_di_Governo/Albinaggio_parte_antica_AG_5.pdf",
+          "locator": "Administración lombarda 1796–1797 y República Cisalpina 1797–1802; no prolongar el mandato efectivo del duque Habsburgo hasta 1800."
+        },
+        {
+          "title": "Regione Lombardia · Stato di Milano, 1535–1749",
+          "url": "https://www.lombardiabeniculturali.it/istituzioni/schede/8000356/",
+          "locator": "Nueve provincias; cesiones occidentales tras las guerras de sucesión. Aquisgrán confirma Ossola, la ribera occidental del Lago Maggiore, Vigevano y el Oltrepò."
+        },
+        {
+          "title": "Regione Lombardia · Provincia d’Oltrepo e Siccomario",
+          "url": "https://www.lombardiabeniculturali.it/archivi/soggetti-produttori/ente/MIDB001830/",
+          "locator": "Tratado de Worms, 13 septiembre 1743: Vigevanasco, Siccomario y Oltrepò; confirmado en 1748."
+        }
+      ]
+    },
+    {
+      "name": "Toscana",
+      "previous1651": {
+        "cells": 6,
+        "svgArea": 10.986,
+        "unmeasured": []
+      },
+      "corrected1651": {
+        "cells": 19,
+        "svgArea": 32.2135,
+        "unmeasured": []
+      },
+      "sources": [
+        {
+          "key": "florence",
+          "title": "Archivio di Stato di Firenze: guía institucional",
+          "url": "https://archiviodistatofirenze.cultura.gov.it/asfi/fileadmin/risorse/allegati_pubblicazioni_online/guida_on_line/guida_siasfi.pdf",
+          "locator": "República florentina desde el siglo XII hasta 1532; reformas del Popolo en 1250 y priorato de las artes 1282. No se extiende a Siena o Pisa en 1200."
+        },
+        {
+          "key": "toscana",
+          "title": "Archivio di Stato di Firenze: primer período lorenés",
+          "url": "https://archiviodistatofirenze.cultura.gov.it/asfi/index.php?id=225",
+          "locator": "Cambio dinástico en 1737; regencia por Francesco Stefano y gobierno de Pietro Leopoldo; separación de Toscana en favor de Ferdinando III en 1790."
+        },
+        {
+          "key": "toscana1799",
+          "title": "Archivio di Stato di Firenze: Segreteria delle Finanze",
+          "url": "https://archiviodistatofirenze.cultura.gov.it/inventari/s/segre_finanze/intro/introduzione.html",
+          "locator": "Ferdinando III sale el 25 marzo 1799; Senado, regencia y ocupación francesa se suceden hasta el triunvirato de noviembre de 1800. Precisión anual insuficiente para resolver los cambios internos."
+        }
+      ]
+    },
+    {
+      "name": "Venecia",
+      "previous1651": {
+        "cells": 12,
+        "svgArea": 19.33355,
+        "unmeasured": []
+      },
+      "corrected1651": {
+        "cells": 57,
+        "svgArea": 81.69298,
+        "unmeasured": []
+      },
+      "sources": [
+        {
+          "key": "venice",
+          "title": "Archivio di Stato di Venezia: 1600 anni",
+          "url": "https://1600anni.archiviodistatovenezia.it/mostra-documentaria/introduzione-mostra.html",
+          "locator": "Comuna de Venecia inicialmente lagunar; final de la República en 1797. El núcleo 1200 no anticipa la futura Terraferma."
+        },
+        {
+          "key": "candia",
+          "title": "Ministero della Cultura: Morosini, Candia y Morea",
+          "url": "https://cultura.gov.it/comunicato/presentazione-alla-stampa-delle-celebrazioni-per-i-400-anni-dalla-nascita-di-francesco-morosini-e-della-mostra-francesco-morosini-in-guerra-a-candia-e-in-morea-al-via-dal-prossimo-12-luglio-presso-la-sede-della-gdf-a-venezia",
+          "locator": "Pérdida de Candia/Creta en 1669; conquista de Morea en la campaña 1684–1699 y pérdida en la guerra 1714–1718. En 1651 solo se conserva el núcleo de Candia, no toda Creta."
+        },
+        {
+          "key": "venice1797",
+          "title": "Sistema Archivistico Nazionale: Dominazione francese",
+          "url": "https://inventari-san.cultura.gov.it/inventari/533/ca/1093823",
+          "locator": "Municipalidades de 1797 y transferencia de Venecia a Austria en Campoformio; instalación austríaca enero de 1798."
+        }
+      ]
+    },
+    {
+      "name": "Estados Pontificios",
+      "previous1651": {
+        "cells": 8,
+        "svgArea": 12.33349,
+        "unmeasured": []
+      },
+      "corrected1651": {
+        "cells": 46,
+        "svgArea": 73.08089,
+        "unmeasured": []
+      },
+      "sources": [
+        {
+          "key": "rome",
+          "title": "Archivio di Stato di Roma: Tre volte Repubblica",
+          "url": "https://archiviodistatoroma.cultura.gov.it/2026/05/08/mostra-tre-volte-repubblica-roma-1798-1849-1946-sala-alessandrina-13-maggio-3-giugno-2026/",
+          "locator": "República Romana 1798–1799; no se representa la ocupación republicana como gobierno pontificio efectivo."
+        },
+        {
+          "key": "papalMedieval",
+          "title": "Sandro Carocci / Università Tor Vergata: Vassalli del papa",
+          "url": "https://art.torvergata.it/bitstream/2108/89191/1/PapalState%20bozza%202.pdf",
+          "locator": "Investigación con documentación pontificia original, capítulos sobre territorio, fidelidad bajo Inocencio III y Roma bajo Bonifacio VIII. Jurisdicción papal con autonomías y poderes comunales, no gobierno directo uniforme."
+        },
+        {
+          "key": "papalTuscia",
+          "title": "Università di Siena: Istituzioni e governo del territorio nello Stato Pontificio",
+          "url": "https://usiena-air.unisi.it/handle/11365/1064636",
+          "locator": "Investigación del Patrimonium en Tuscia y parlamento celebrado en Viterbo en 1207; sustenta el núcleo jurisdiccional, no la totalidad de Italia central."
+        },
+        {
+          "key": "bologna1506",
+          "title": "Comune di Bologna: Giulio II e Bologna",
+          "url": "https://nonocentenario.comune.bologna.it/giulio-ii-e-bologna/",
+          "locator": "Entrada de Julio II en Bologna el 11 noviembre 1506 y salida de los Bentivoglio. La autonomía municipal posterior se distingue de soberanía independiente."
+        },
+        {
+          "key": "ferrara1598",
+          "title": "Ministero della Cultura / Archivio di Stato di Modena: devolución de Ferrara",
+          "url": "https://cultura.gov.it/comunicato/la-cultura-non-si-ferma-l-addio-degli-estensi-a-ferrara-nei-preziosi-documenti-dell-archivio-di-stato-di-modena",
+          "locator": "Bula original de Clemente VIII y Convenzioni Faentine de 1598: transferencia de Ferrara a la Santa Sede; Modena continúa bajo los Este."
+        },
+        {
+          "key": "urbino1631",
+          "title": "Archivio di Stato di Urbino: documentos del ducado",
+          "url": "https://asurbino.cultura.gov.it/en/news-list/news-article?cHash=17aea118590c3d5267ad6073d2342d68&tx_news_pi1%5Baction%5D=detail&tx_news_pi1%5Bcontroller%5D=News&tx_news_pi1%5Bnews%5D=46",
+          "locator": "Devolución del ducado de Urbino al Estado Pontificio en 1631 y transferencia del archivo."
+        },
+        {
+          "key": "ancona1532",
+          "title": "SIAS / Archivio di Stato di Ancona: Governatore di Ancona",
+          "url": "https://sias-archivi.cultura.gov.it/cgi-bin/pagina.pl?Chiave=66880&RicProgetto=as-ancona&TipoPag=prodente",
+          "locator": "Gobierno pontificio de Ancona 1532–1808: ciudad, suburbio y castillos. No se anticipa como dominio directo en 1200."
+        },
+        {
+          "key": "perugia1540",
+          "title": "Sistema Archivistico Nazionale: Comune di Fratta",
+          "url": "https://inventari-san.cultura.gov.it/inventari/244/sp/919",
+          "locator": "Guerra del sale de 1540, inicio de plena dominación pontificia sobre Perugia."
+        },
+        {
+          "key": "cisalpinaChronology",
+          "title": "Regione Lombardia: La Repubblica cisalpina",
+          "url": "https://lombardiabeniculturali.it/istituzioni/storia/?unita=04.02",
+          "locator": "Fechas explícitas 29 junio 1797–26 abril 1799 y 17 junio 1800–26 enero 1802; ocupación austríaca intermedia. Mantova no vuelve a Cisalpina hasta 1801, por eso se excluye en 1800."
+        }
+      ]
+    },
+    {
+      "name": "Piamonte",
+      "previous1651": {
+        "cells": 4,
+        "svgArea": 4.46253,
+        "unmeasured": []
+      },
+      "corrected1651": {
+        "cells": 17,
+        "svgArea": 24.84338,
+        "unmeasured": []
+      },
+      "sources": [
+        {
+          "key": "piemonte",
+          "title": "Archivio di Stato di Torino: administración francesa",
+          "url": "https://archiviodistatotorino.cultura.gov.it/fondi/?id=270090",
+          "locator": "Gobierno francés del territorio continental desde 1798; el soberano saboyano no controla efectivamente Turín en 1800."
+        },
+        {
+          "key": "piemonte1798",
+          "title": "Archivio di Stato di Torino: historia de las instituciones",
+          "url": "https://archiviodistatotorino.cultura.gov.it/wp-content/uploads/2025/02/Storia_delle_istituzioni_per_archivisti_piemontesi_Marco_Carassi.pdf",
+          "locator": "Ocupación continental y salida del rey diciembre de 1798; reconquista napoleónica en 1800. Se evita reproducir el nombre equivocado del rey en un párrafo de este estudio."
+        },
+        {
+          "key": "utrecht",
+          "title": "Archivo de la Corona de Aragón: Tratado de Utrecht",
+          "url": "https://www.cultura.gob.es/archivos-aca/actividades/documentos-para-la-historia-de-europa/utrecht.html",
+          "locator": "Tratados 1713–1715: separación de Milán, Nápoles, Sicilia y los Países Bajos de la monarquía española; Gibraltar y Menorca."
+        },
+        {
+          "key": "milan",
+          "title": "Regione Lombardia: administración austríaca de Milán",
+          "url": "https://lombardiabeniculturali.it/istituzioni/storia/?unita=03.06",
+          "locator": "Transferencia de dominios occidentales a Saboya y organización de la administración austríaca hasta mayo de 1796. Los núcleos occidentales litigiosos se excluyen de las versiones posteriores."
+        },
+        {
+          "title": "Regione Lombardia · Stato di Milano, 1535–1749",
+          "url": "https://www.lombardiabeniculturali.it/istituzioni/schede/8000356/",
+          "locator": "Nueve provincias; cesiones occidentales tras las guerras de sucesión. Aquisgrán confirma Ossola, la ribera occidental del Lago Maggiore, Vigevano y el Oltrepò."
+        },
+        {
+          "title": "Regione Lombardia · Provincia d’Oltrepo e Siccomario",
+          "url": "https://www.lombardiabeniculturali.it/archivi/soggetti-produttori/ente/MIDB001830/",
+          "locator": "Tratado de Worms, 13 septiembre 1743: Vigevanasco, Siccomario y Oltrepò; confirmado en 1748."
+        }
+      ]
+    },
+    {
+      "name": "Saboya",
+      "previous1651": {
+        "cells": 1,
+        "svgArea": 2.91464,
+        "unmeasured": []
+      },
+      "corrected1651": {
+        "cells": 19,
+        "svgArea": 38.23065,
+        "unmeasured": []
+      },
+      "sources": [
+        {
+          "key": "piemonte",
+          "title": "Archivio di Stato di Torino: administración francesa",
+          "url": "https://archiviodistatotorino.cultura.gov.it/fondi/?id=270090",
+          "locator": "Gobierno francés del territorio continental desde 1798; el soberano saboyano no controla efectivamente Turín en 1800."
+        },
+        {
+          "key": "piemonte1798",
+          "title": "Archivio di Stato di Torino: historia de las instituciones",
+          "url": "https://archiviodistatotorino.cultura.gov.it/wp-content/uploads/2025/02/Storia_delle_istituzioni_per_archivisti_piemontesi_Marco_Carassi.pdf",
+          "locator": "Ocupación continental y salida del rey diciembre de 1798; reconquista napoleónica en 1800. Se evita reproducir el nombre equivocado del rey en un párrafo de este estudio."
+        },
+        {
+          "key": "chambery1232",
+          "title": "Département de la Savoie: Moyen Âge",
+          "url": "https://patrimoines.savoie.fr/web/psp_23012/moyen-age",
+          "locator": "1232: compra de la ciudad de Chambéry por los condes de Saboya. No sirve como fecha de incorporación de todo Piamonte."
+        },
+        {
+          "key": "susa1046",
+          "title": "Turismo Torino e Provincia / Comune di Susa: I Savoia a Susa",
+          "url": "https://turismotorino.org/it/visita/eventi/i-savoia-a-susa-due-matrimoni-una-citta/",
+          "locator": "Matrimonio de Adelaide de Susa y Oddone de Saboya hacia 1046: vínculo territorial con Susa anterior a 1200. Núcleo, no toda la marca."
+        },
+        {
+          "key": "savoie1792",
+          "title": "Université de Perpignan: decreto de reunión de Saboya, 27 noviembre 1792",
+          "url": "https://mjp.univ-perp.fr/france/d1792savoie.htm",
+          "locator": "Texto primario de la Convención nacional: Saboya se incorpora a la República francesa y forma el departamento del Mont-Blanc."
+        }
+      ]
+    },
+    {
+      "name": "Borgoña",
+      "previous1651": {
+        "cells": 0,
+        "svgArea": 0,
+        "unmeasured": []
+      },
+      "corrected1651": {
+        "cells": 0,
+        "svgArea": 0,
+        "unmeasured": []
+      },
+      "sources": [
+        {
+          "key": "bourgogne",
+          "title": "Archives départementales de la Côte-d’Or: fondos conservados",
+          "url": "https://archives.cotedor.fr/v2/site/AD21/les_archives_departementales/Fonds_conserves",
+          "locator": "Tesoro creado bajo Eudes III (1193–1218); el ducado pasa a dominio real francés en 1477 y continúa como provincia hasta la Revolución."
+        }
+      ]
+    },
+    {
+      "name": "Condado de Borgoña",
+      "previous1651": {
+        "cells": 5,
+        "svgArea": 10.93582,
+        "unmeasured": []
+      },
+      "corrected1651": {
+        "cells": 11,
+        "svgArea": 25.75216,
+        "unmeasured": []
+      },
+      "sources": [
+        {
+          "key": "bourgogne",
+          "title": "Archives départementales de la Côte-d’Or: fondos conservados",
+          "url": "https://archives.cotedor.fr/v2/site/AD21/les_archives_departementales/Fonds_conserves",
+          "locator": "Tesoro creado bajo Eudes III (1193–1218); el ducado pasa a dominio real francés en 1477 y continúa como provincia hasta la Revolución."
+        },
+        {
+          "key": "comte",
+          "title": "Centre de musique baroque de Versailles: Doubs",
+          "url": "https://philidor.cmbv.fr/Publications/Bases-prosopographiques/MUSEFREM-Base-de-donnees-prosopographique-des-musiciens-d-Eglise-en-1790/Doubs",
+          "locator": "Conquista francesa de 1674 y reunión legal de Franco Condado en 1678; ducado y condado son entidades distintas."
+        }
+      ]
+    }
+  ],
+  "regionalLayers": [
+    {
+      "name": "Gibraltar meriní",
+      "coverage": {
+        "from": 1333,
+        "through": 1373
+      },
+      "cuts": [
+        {
+          "year": 1333,
+          "cells": 1,
+          "svgArea": 0.53794,
+          "unmeasured": [],
+          "event": "Plaza meriní después del sitio de 1333; dominio nazarí desde 1374."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Gibraltar Ministry for Heritage · Timelines",
+          "url": "https://www.ministryforheritage.gi/explore-our-heritage/timelines",
+          "locator": "Castilla 1309–1332; meriníes 1333–1373; Granada 1374–1461; conquista castellana de 1462."
+        }
+      ]
+    },
+    {
+      "name": "Reino de Sicilia antes de 1282",
+      "coverage": {
+        "from": 1200,
+        "through": 1281
+      },
+      "cuts": [
+        {
+          "year": 1200,
+          "cells": 99,
+          "svgArea": 165.47091,
+          "unmeasured": [],
+          "event": "Reino insular y continental; división de las Vísperas desde 1282."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Ministero della Cultura · SIAS: Regno di Sicilia",
+          "url": "https://sias-archivi.cultura.gov.it/cgi-bin/pagina.pl?Chiave=28&TipoPag=contesto",
+          "locator": "Regnum insular y continental antes de 1282; Vísperas y separación confirmada en Caltabellotta (1302). La superficie regional procede de los contornos insulares y continentales ya revisados."
+        }
+      ]
+    },
+    {
+      "name": "Ducado de Estiria",
+      "coverage": {
+        "from": 1200,
+        "through": 1378
+      },
+      "cuts": [
+        {
+          "year": 1200,
+          "cells": 22,
+          "svgArea": 46.86478,
+          "unmeasured": [],
+          "event": "Estiria como ducado propio, incorporada por los Babenberg en 1192."
+        }
+      ],
+      "sources": [
+        {
+          "title": "German Historical Institute · Growth of the Habsburg Empire, 1282–1918",
+          "url": "https://germanhistorydocs.org/en/the-holy-roman-empire-1648-1815/the-growth-of-the-habsburg-empire",
+          "locator": "Mapa de adquisiciones: Austria y Estiria 1282, Carintia 1335, Tirol 1363, Bohemia y Silesia 1526, Hungría 1699 y Banato 1718. El cargo imperial no equivale al dominio de todos sus estados."
+        }
+      ]
+    },
+    {
+      "name": "Carintia habsbúrgica antes de Neuberg",
+      "coverage": {
+        "from": 1335,
+        "through": 1378
+      },
+      "cuts": [
+        {
+          "year": 1335,
+          "cells": 14,
+          "svgArea": 22.6422,
+          "unmeasured": [],
+          "event": "Concesión de Carintia a Alberto II y Otón en 1335."
+        }
+      ],
+      "sources": [
+        {
+          "title": "German Historical Institute · Growth of the Habsburg Empire, 1282–1918",
+          "url": "https://germanhistorydocs.org/en/the-holy-roman-empire-1648-1815/the-growth-of-the-habsburg-empire",
+          "locator": "Mapa de adquisiciones: Austria y Estiria 1282, Carintia 1335, Tirol 1363, Bohemia y Silesia 1526, Hungría 1699 y Banato 1718. El cargo imperial no equivale al dominio de todos sus estados."
+        }
+      ]
+    },
+    {
+      "name": "Carniola habsbúrgica antes de Neuberg",
+      "coverage": {
+        "from": 1335,
+        "through": 1378
+      },
+      "cuts": [
+        {
+          "year": 1335,
+          "cells": 9,
+          "svgArea": 19.24096,
+          "unmeasured": [],
+          "event": "Dominios carniolanos anteriores a la agrupación de 1379."
+        }
+      ],
+      "sources": [
+        {
+          "title": "German Historical Institute · Growth of the Habsburg Empire, 1282–1918",
+          "url": "https://germanhistorydocs.org/en/the-holy-roman-empire-1648-1815/the-growth-of-the-habsburg-empire",
+          "locator": "Mapa de adquisiciones: Austria y Estiria 1282, Carintia 1335, Tirol 1363, Bohemia y Silesia 1526, Hungría 1699 y Banato 1718. El cargo imperial no equivale al dominio de todos sus estados."
+        }
+      ]
+    },
+    {
+      "name": "Silesia · soberanía de la Corona",
+      "coverage": {
+        "from": 1335,
+        "through": 1740
+      },
+      "cuts": [
+        {
+          "year": 1335,
+          "cells": 41,
+          "svgArea": 76.02006,
+          "unmeasured": [],
+          "event": "Ducados feudatarios; Schweidnitz-Jauer aún separado."
+        },
+        {
+          "year": 1392,
+          "cells": 46,
+          "svgArea": 85.28841,
+          "unmeasured": [],
+          "event": "Incorporación definitiva de Schweidnitz-Jauer; soberanía superior de la Corona."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Homann · Ducatus Silesiae, 1716 · David Rumsey Collection",
+          "url": "https://www.davidrumsey.com/luna/servlet/detail/RUMSEY~8~1~305907~90076292:Ducatus-Silesiae-",
+          "locator": "Mapa regional de Alta y Baja Silesia y sus ducados. Se distingue la soberanía de la Corona del gobierno local de cada príncipe."
+        },
+        {
+          "title": "German Historical Institute · Growth of the Habsburg Empire, 1282–1918",
+          "url": "https://germanhistorydocs.org/en/the-holy-roman-empire-1648-1815/the-growth-of-the-habsburg-empire",
+          "locator": "Mapa de adquisiciones: Austria y Estiria 1282, Carintia 1335, Tirol 1363, Bohemia y Silesia 1526, Hungría 1699 y Banato 1718. El cargo imperial no equivale al dominio de todos sus estados."
+        },
+        {
+          "title": "Municipio de Wschowa · Historia",
+          "url": "https://ambasador.wschowa.pl/page/historia",
+          "locator": "Wschowa pasa a Polonia en 1343. No se copia su atribución habsbúrgica del ejemplo adjunto."
+        }
+      ]
+    },
+    {
+      "name": "Silesia · ocupación prusiana",
+      "coverage": {
+        "from": 1741,
+        "through": 1741
+      },
+      "cuts": [
+        {
+          "year": 1741,
+          "cells": 25,
+          "svgArea": 46.7507,
+          "unmeasured": [],
+          "event": "Ocupación anterior a la cesión de 1742; avance aproximado al cierre del año."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Municipio de Opava · Historia de la ciudad",
+          "url": "https://www.opava-city.cz/cz/mesto-urad/o-meste/aktuality/historie-mesta.html",
+          "locator": "Partición de 1742: Opava, capital de la Silesia austríaca. Los contornos de Opava, Krnov y Jeseník/Fryvaldov aproximan las partes meridionales conservadas, no la frontera fluvial exacta."
+        },
+        {
+          "title": "German Historical Institute · Growth of the Habsburg Empire, 1282–1918",
+          "url": "https://germanhistorydocs.org/en/the-holy-roman-empire-1648-1815/the-growth-of-the-habsburg-empire",
+          "locator": "Mapa de adquisiciones: Austria y Estiria 1282, Carintia 1335, Tirol 1363, Bohemia y Silesia 1526, Hungría 1699 y Banato 1718. El cargo imperial no equivale al dominio de todos sus estados."
+        }
+      ]
+    },
+    {
+      "name": "Silesia · parte prusiana",
+      "coverage": {
+        "from": 1742,
+        "through": 1800
+      },
+      "cuts": [
+        {
+          "year": 1742,
+          "cells": 42,
+          "svgArea": 77.43563,
+          "unmeasured": [],
+          "event": "Partición de 1742: mayor parte de Silesia y condado de Glatz."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Municipio de Opava · Historia de la ciudad",
+          "url": "https://www.opava-city.cz/cz/mesto-urad/o-meste/aktuality/historie-mesta.html",
+          "locator": "Partición de 1742: Opava, capital de la Silesia austríaca. Los contornos de Opava, Krnov y Jeseník/Fryvaldov aproximan las partes meridionales conservadas, no la frontera fluvial exacta."
+        },
+        {
+          "title": "German Historical Institute · Administrative Divisions, 1780",
+          "url": "https://germanhistorydocs.org/en/the-holy-roman-empire-1648-1815/administrative-divisions-of-the-habsburg-empire-1780",
+          "locator": "Superficies de las provincias hereditarias, Hungría y remanente austríaco de Silesia."
+        }
+      ]
+    },
+    {
+      "name": "Silesia · remanente austríaco",
+      "coverage": {
+        "from": 1742,
+        "through": 1800
+      },
+      "cuts": [
+        {
+          "year": 1742,
+          "cells": 5,
+          "svgArea": 10.53628,
+          "unmeasured": [],
+          "event": "Remanente meridional después de la cesión a Prusia."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Municipio de Opava · Historia de la ciudad",
+          "url": "https://www.opava-city.cz/cz/mesto-urad/o-meste/aktuality/historie-mesta.html",
+          "locator": "Partición de 1742: Opava, capital de la Silesia austríaca. Los contornos de Opava, Krnov y Jeseník/Fryvaldov aproximan las partes meridionales conservadas, no la frontera fluvial exacta."
+        },
+        {
+          "title": "German Historical Institute · Administrative Divisions, 1780",
+          "url": "https://germanhistorydocs.org/en/the-holy-roman-empire-1648-1815/administrative-divisions-of-the-habsburg-empire-1780",
+          "locator": "Superficies de las provincias hereditarias, Hungría y remanente austríaco de Silesia."
+        }
+      ]
+    },
+    {
+      "name": "Transilvania habsbúrgica",
+      "coverage": {
+        "from": 1699,
+        "through": 1800
+      },
+      "cuts": [
+        {
+          "year": 1699,
+          "cells": 27,
+          "svgArea": 72.83519,
+          "unmeasured": [],
+          "event": "Soberanía habsbúrgica reconocida en Karlowitz; provincia con administración propia."
+        }
+      ],
+      "sources": [
+        {
+          "title": "German Historical Institute · Growth of the Habsburg Empire, 1282–1918",
+          "url": "https://germanhistorydocs.org/en/the-holy-roman-empire-1648-1815/the-growth-of-the-habsburg-empire",
+          "locator": "Mapa de adquisiciones: Austria y Estiria 1282, Carintia 1335, Tirol 1363, Bohemia y Silesia 1526, Hungría 1699 y Banato 1718. El cargo imperial no equivale al dominio de todos sus estados."
+        },
+        {
+          "title": "TDV İslâm Ansiklopedisi · Karlofça",
+          "url": "https://islamansiklopedisi.org.tr/karlofca",
+          "locator": "Tratado de 26 enero 1699: Hungría y Transilvania, Morea y Podolia; Banato conservado por los otomanos."
+        }
+      ]
+    },
+    {
+      "name": "Norte de Serbia habsbúrgico",
+      "coverage": {
+        "from": 1718,
+        "through": 1738
+      },
+      "cuts": [
+        {
+          "year": 1718,
+          "cells": 6,
+          "svgArea": 16.96075,
+          "unmeasured": [],
+          "event": "Provincia de Serbia del tratado de Passarowitz."
+        }
+      ],
+      "sources": [
+        {
+          "title": "TDV İslâm Ansiklopedisi · Pasarofça Antlaşması",
+          "url": "https://islamansiklopedisi.org.tr/pasarofca-antlasmasi",
+          "locator": "Tratado de 21 julio 1718: Banato, Belgrado/norte de Serbia y Oltenia; Morea otomana."
+        },
+        {
+          "title": "Atatürk Research Center · Türkiye Cumhuriyeti Tarihi I",
+          "url": "https://atam.gov.tr/wp-content/uploads/2023/10/TURKIYE-CUMHURIYETI-TARIHI-1a.pdf",
+          "locator": "Harita 1 y 2 (pp. PDF 1489–1490): expansión 1299–1683, territorios directos, tributarios y pérdidas. Las incursiones no se consideran anexiones."
+        }
+      ]
+    },
+    {
+      "name": "Oltenia habsbúrgica",
+      "coverage": {
+        "from": 1718,
+        "through": 1738
+      },
+      "cuts": [
+        {
+          "year": 1718,
+          "cells": 12,
+          "svgArea": 35.26908,
+          "unmeasured": [],
+          "event": "Valaquia occidental bajo administración habsbúrgica."
+        }
+      ],
+      "sources": [
+        {
+          "title": "TDV İslâm Ansiklopedisi · Pasarofça Antlaşması",
+          "url": "https://islamansiklopedisi.org.tr/pasarofca-antlasmasi",
+          "locator": "Tratado de 21 julio 1718: Banato, Belgrado/norte de Serbia y Oltenia; Morea otomana."
+        },
+        {
+          "title": "Atatürk Research Center · Türkiye Cumhuriyeti Tarihi I",
+          "url": "https://atam.gov.tr/wp-content/uploads/2023/10/TURKIYE-CUMHURIYETI-TARIHI-1a.pdf",
+          "locator": "Harita 1 y 2 (pp. PDF 1489–1490): expansión 1299–1683, territorios directos, tributarios y pérdidas. Las incursiones no se consideran anexiones."
+        }
+      ]
+    },
+    {
+      "name": "Morea veneciana · superficie regional",
+      "coverage": {
+        "from": 1699,
+        "through": 1714
+      },
+      "cuts": [
+        {
+          "year": 1699,
+          "cells": 24,
+          "svgArea": 31.05907,
+          "unmeasured": [],
+          "event": "Provincia veneciana reconocida por Karlowitz; recuperada por los otomanos en 1715."
+        }
+      ],
+      "sources": [
+        {
+          "title": "TDV İslâm Ansiklopedisi · Karlofça",
+          "url": "https://islamansiklopedisi.org.tr/karlofca",
+          "locator": "Tratado de 26 enero 1699: Hungría y Transilvania, Morea y Podolia; Banato conservado por los otomanos."
+        },
+        {
+          "title": "Atatürk Research Center · Türkiye Cumhuriyeti Tarihi I",
+          "url": "https://atam.gov.tr/wp-content/uploads/2023/10/TURKIYE-CUMHURIYETI-TARIHI-1a.pdf",
+          "locator": "Harita 1 y 2 (pp. PDF 1489–1490): expansión 1299–1683, territorios directos, tributarios y pérdidas. Las incursiones no se consideran anexiones."
+        }
+      ]
+    },
+    {
+      "name": "Anatolia otomana · Bitinia y expansión occidental",
+      "coverage": {
+        "from": 1299,
+        "through": 1800
+      },
+      "cuts": [
+        {
+          "year": 1299,
+          "cells": 7,
+          "svgArea": 19.27894,
+          "unmeasured": [],
+          "event": "Beylicato inicial: no toda Bitinia."
+        },
+        {
+          "year": 1337,
+          "cells": 20,
+          "svgArea": 57.50108,
+          "unmeasured": [],
+          "event": "Bursa, Nicea y Nicomedia: región bitinia revisada."
+        },
+        {
+          "year": 1345,
+          "cells": 37,
+          "svgArea": 101.08853,
+          "unmeasured": [],
+          "event": "Karesi incorporada: costa y espacios interiores."
+        },
+        {
+          "year": 1354,
+          "cells": 46,
+          "svgArea": 134.14224,
+          "unmeasured": [],
+          "event": "Ankara se incorpora; el corte no absorbe Karaman ni Candar."
+        },
+        {
+          "year": 1390,
+          "cells": 113,
+          "svgArea": 319.5105,
+          "unmeasured": [],
+          "event": "Primera incorporación de beylicatos occidentales."
+        },
+        {
+          "year": 1402,
+          "cells": 37,
+          "svgArea": 101.08853,
+          "unmeasured": [],
+          "event": "Ankara y restauración de los beylicatos; no mantener el mapa de Bayezid I."
+        },
+        {
+          "year": 1416,
+          "cells": 54,
+          "svgArea": 156.652,
+          "unmeasured": [],
+          "event": "Restablecimiento del dominio en Saruhan; regiones todavía en disputa se reservan."
+        },
+        {
+          "year": 1426,
+          "cells": 101,
+          "svgArea": 288.39124,
+          "unmeasured": [],
+          "event": "Aydin y Menteşe reincorporadas; Germiyan aún separado."
+        },
+        {
+          "year": 1429,
+          "cells": 114,
+          "svgArea": 321.04717,
+          "unmeasured": [],
+          "event": "Legado de Germiyan: superficie occidental, incluidos relieves y costas."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Atatürk Research Center · Türkiye Cumhuriyeti Tarihi I",
+          "url": "https://atam.gov.tr/wp-content/uploads/2023/10/TURKIYE-CUMHURIYETI-TARIHI-1a.pdf",
+          "locator": "Harita 1 y 2 (pp. PDF 1489–1490): expansión 1299–1683, territorios directos, tributarios y pérdidas. Las incursiones no se consideran anexiones."
+        },
+        {
+          "title": "TDV İslâm Ansiklopedisi · Karesioğulları",
+          "url": "https://islamansiklopedisi.org.tr/karesiogullari",
+          "locator": "Balıkesir, Bergama y Edremit: incorporación en 1345 o inmediatamente después; describe el territorio y sus costas."
+        },
+        {
+          "title": "TDV İslâm Ansiklopedisi · Ankara",
+          "url": "https://islamansiklopedisi.org.tr/ankara",
+          "locator": "Incorporación de 1354; inscripción de Murad I de 1362–1363. Se distingue la ciudad de toda la Anatolia central."
+        },
+        {
+          "title": "TDV İslâm Ansiklopedisi · Saruhanoğulları",
+          "url": "https://islamansiklopedisi.org.tr/saruhanogullari",
+          "locator": "Primer dominio de 1390, restitución tras Ankara y control consolidado en 1416; resistencias hasta 1426."
+        },
+        {
+          "title": "TDV İslâm Ansiklopedisi · Aydınoğulları",
+          "url": "https://islamansiklopedisi.org.tr/aydinogullari",
+          "locator": "Primera anexión de 1390, restitución de 1402 y caída definitiva de Cüneyd en 1425–1426."
+        },
+        {
+          "title": "TDV İslâm Ansiklopedisi · Menteşeoğulları",
+          "url": "https://islamansiklopedisi.org.tr/menteseogullari",
+          "locator": "Primera incorporación en 1390; restauración por Timur en 1402; dominio definitivo desde 1424."
+        },
+        {
+          "title": "TDV İslâm Ansiklopedisi · Germiyanoğulları",
+          "url": "https://islamansiklopedisi.org.tr/germiyanogullari",
+          "locator": "Cesiones matrimoniales desde 1381 y legado de Yakub II en 1429. La capa no adelanta todo el beylicato a la primera cesión."
+        }
+      ]
+    },
+    {
+      "name": "Anatolia otomana · Candar y costa póntica",
+      "coverage": {
+        "from": 1461,
+        "through": 1800
+      },
+      "cuts": [
+        {
+          "year": 1461,
+          "cells": 40,
+          "svgArea": 117.36429,
+          "unmeasured": [],
+          "event": "Candar y Trebisonda conquistados; se incorporan las superficies de costa y cordilleras."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Atatürk Research Center · Türkiye Cumhuriyeti Tarihi I",
+          "url": "https://atam.gov.tr/wp-content/uploads/2023/10/TURKIYE-CUMHURIYETI-TARIHI-1a.pdf",
+          "locator": "Harita 1 y 2 (pp. PDF 1489–1490): expansión 1299–1683, territorios directos, tributarios y pérdidas. Las incursiones no se consideran anexiones."
+        },
+        {
+          "title": "TDV İslâm Ansiklopedisi · Candaroğulları",
+          "url": "https://islamansiklopedisi.org.tr/candarogullari",
+          "locator": "Sinop y Kastamonu: incorporación final de 1461. No se adelanta toda la costa a los períodos de sometimiento parcial."
+        }
+      ]
+    },
+    {
+      "name": "Anatolia otomana · Karaman",
+      "coverage": {
+        "from": 1468,
+        "through": 1800
+      },
+      "cuts": [
+        {
+          "year": 1468,
+          "cells": 3,
+          "svgArea": 11.54506,
+          "unmeasured": [],
+          "event": "Conquista de Konya; no anticipa todo Taurus e İç İl."
+        },
+        {
+          "year": 1474,
+          "cells": 35,
+          "svgArea": 109.75706,
+          "unmeasured": [],
+          "event": "Campaña final: interior, montañas y costas de İç İl."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Atatürk Research Center · Türkiye Cumhuriyeti Tarihi I",
+          "url": "https://atam.gov.tr/wp-content/uploads/2023/10/TURKIYE-CUMHURIYETI-TARIHI-1a.pdf",
+          "locator": "Harita 1 y 2 (pp. PDF 1489–1490): expansión 1299–1683, territorios directos, tributarios y pérdidas. Las incursiones no se consideran anexiones."
+        },
+        {
+          "title": "TDV İslâm Ansiklopedisi · Karamanoğulları",
+          "url": "https://islamansiklopedisi.org.tr/karamanogullari",
+          "locator": "Konya conquistada en 1468; Niğde, Develi, montañas del Taurus y costas de İç İl sometidas en 1474."
+        }
+      ]
+    },
+    {
+      "name": "Anatolia otomana · provincias orientales",
+      "coverage": {
+        "from": 1515,
+        "through": 1800
+      },
+      "cuts": [
+        {
+          "year": 1515,
+          "cells": 107,
+          "svgArea": 340.22436,
+          "unmeasured": [],
+          "event": "Provincias interiores y orientales después de Çaldıran y la incorporación de Dulkadir."
+        },
+        {
+          "year": 1516,
+          "cells": 124,
+          "svgArea": 380.39091,
+          "unmeasured": [],
+          "event": "Cilicia y costa de Alejandreta tras la campaña contra los mamelucos; Kars_Armenia es la celda cilicia, no la Kars del Cáucaso."
+        },
+        {
+          "year": 1519,
+          "cells": 125,
+          "svgArea": 383.23514,
+          "unmeasured": [],
+          "event": "Incorporación de Erzurum estimada por la fuente en 1518–1519; la provincia completa se activa en 1534."
+        },
+        {
+          "year": 1534,
+          "cells": 153,
+          "svgArea": 463.50149,
+          "unmeasured": [],
+          "event": "Provincia de Erzurum organizada: no se adelanta su superficie a 1481 ni a 1514."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Atatürk Research Center · Türkiye Cumhuriyeti Tarihi I",
+          "url": "https://atam.gov.tr/wp-content/uploads/2023/10/TURKIYE-CUMHURIYETI-TARIHI-1a.pdf",
+          "locator": "Harita 1 y 2 (pp. PDF 1489–1490): expansión 1299–1683, territorios directos, tributarios y pérdidas. Las incursiones no se consideran anexiones."
+        },
+        {
+          "title": "TDV İslâm Ansiklopedisi · Erzurum",
+          "url": "https://islamansiklopedisi.org.tr/erzurum",
+          "locator": "TD 387 sitúa Erzurum dentro del dominio otomano en los registros de 1520–1530; la fecha de incorporación se estima en 1518–1519. La provincia se organiza en 1534. No se pinta Erzurum como otomana en 1481."
+        }
+      ]
+    },
+    {
+      "name": "Anatolia otomana · Van",
+      "coverage": {
+        "from": 1534,
+        "through": 1800
+      },
+      "cuts": [
+        {
+          "year": 1534,
+          "cells": 3,
+          "svgArea": 9.44178,
+          "unmeasured": [],
+          "event": "Presencia temporal durante la campaña de Irakeyn."
+        },
+        {
+          "year": 1536,
+          "cells": 0,
+          "svgArea": 0,
+          "unmeasured": [],
+          "event": "Restablecimiento safávida: no prolongar una incursión hasta la conquista definitiva."
+        },
+        {
+          "year": 1548,
+          "cells": 13,
+          "svgArea": 39.24512,
+          "unmeasured": [],
+          "event": "Provincia de Van después de la conquista de la plaza."
+        },
+        {
+          "year": 1552,
+          "cells": 11,
+          "svgArea": 34.99552,
+          "unmeasured": [],
+          "event": "Ahlat y Erciş capturados por los safávidas; Van conserva su defensa."
+        },
+        {
+          "year": 1555,
+          "cells": 13,
+          "svgArea": 39.24512,
+          "unmeasured": [],
+          "event": "Amasya reconoce Van y su entorno bajo soberanía otomana."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Atatürk Research Center · Türkiye Cumhuriyeti Tarihi I",
+          "url": "https://atam.gov.tr/wp-content/uploads/2023/10/TURKIYE-CUMHURIYETI-TARIHI-1a.pdf",
+          "locator": "Harita 1 y 2 (pp. PDF 1489–1490): expansión 1299–1683, territorios directos, tributarios y pérdidas. Las incursiones no se consideran anexiones."
+        },
+        {
+          "title": "TDV İslâm Ansiklopedisi · Van",
+          "url": "https://islamansiklopedisi.org.tr/van",
+          "locator": "Presencia temporal en 1534–1535; regreso safávida en 1536. Conquista de 1548; Ahlat y Erciş perdidos en 1552 y reconocidos otomanos por Amasya en 1555."
+        }
+      ]
+    },
+    {
+      "name": "Anatolia otomana · frontera de Kars",
+      "coverage": {
+        "from": 1537,
+        "through": 1800
+      },
+      "cuts": [
+        {
+          "year": 1537,
+          "cells": 2,
+          "svgArea": 7.24832,
+          "unmeasured": [],
+          "event": "Kars incorporada con certeza; Oltu ya en la frontera otomana; no se anticipa Tortum."
+        },
+        {
+          "year": 1565,
+          "cells": 1,
+          "svgArea": 3.16911,
+          "unmeasured": [],
+          "event": "Kars cedida a Persia: la jurisdicción de Erzurum no acredita posesión de la plaza."
+        },
+        {
+          "year": 1576,
+          "cells": 2,
+          "svgArea": 7.24832,
+          "unmeasured": [],
+          "event": "Regreso de Kars antes de 1576; corte anual conservador."
+        },
+        {
+          "year": 1578,
+          "cells": 9,
+          "svgArea": 30.34818,
+          "unmeasured": [],
+          "event": "Superficie regional de la frontera nororiental; no Yerevan ni Surmali."
+        },
+        {
+          "year": 1604,
+          "cells": 8,
+          "svgArea": 26.26898,
+          "unmeasured": [],
+          "event": "La plaza de Kars tomada y destruida por Shah Abbas; no se extiende esa captura a cada celda vecina."
+        },
+        {
+          "year": 1616,
+          "cells": 9,
+          "svgArea": 30.34818,
+          "unmeasured": [],
+          "event": "Reconstrucción otomana de la plaza; frontera estabilizada en 1639."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Atatürk Research Center · Türkiye Cumhuriyeti Tarihi I",
+          "url": "https://atam.gov.tr/wp-content/uploads/2023/10/TURKIYE-CUMHURIYETI-TARIHI-1a.pdf",
+          "locator": "Harita 1 y 2 (pp. PDF 1489–1490): expansión 1299–1683, territorios directos, tributarios y pérdidas. Las incursiones no se consideran anexiones."
+        },
+        {
+          "title": "TDV İslâm Ansiklopedisi · Kars",
+          "url": "https://islamansiklopedisi.org.tr/kars",
+          "locator": "Incorporación cierta en 1537; cesión a Persia en 1565 y regreso antes de 1576; destrucción safávida de 1604 y reconstrucción otomana de 1616. Provincia propia desde 1580."
+        }
+      ]
+    },
+    {
+      "name": "Islas egeas otomanas",
+      "coverage": {
+        "from": 1462,
+        "through": 1800
+      },
+      "cuts": [
+        {
+          "year": 1462,
+          "cells": 2,
+          "svgArea": 2.59216,
+          "unmeasured": [],
+          "event": "Lesbos incorporada en 1462, no en 1362."
+        },
+        {
+          "year": 1522,
+          "cells": 3,
+          "svgArea": 4.6886,
+          "unmeasured": [],
+          "event": "Rodas conquistada."
+        },
+        {
+          "year": 1566,
+          "cells": 4,
+          "svgArea": 6.10961,
+          "unmeasured": [],
+          "event": "Quíos incorporada."
+        },
+        {
+          "year": 1669,
+          "cells": 12,
+          "svgArea": 18.41432,
+          "unmeasured": [],
+          "event": "Candia conquistada; fortalezas venecianas supervivientes requieren división de celdas."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Atatürk Research Center · Türkiye Cumhuriyeti Tarihi I",
+          "url": "https://atam.gov.tr/wp-content/uploads/2023/10/TURKIYE-CUMHURIYETI-TARIHI-1a.pdf",
+          "locator": "Harita 1 y 2 (pp. PDF 1489–1490): expansión 1299–1683, territorios directos, tributarios y pérdidas. Las incursiones no se consideran anexiones."
+        }
+      ]
+    }
+  ],
+  "limitations": [
+    "Las superficies regionales son aproximaciones de celdas SVG. Una fuente sobre soberanía no certifica cada segmento de frontera.",
+    "Las particiones internas de Silesia no desaparecen: el color de la Corona representa soberanía superior, no propiedad ducal directa.",
+    "Anatolia incorpora superficies occidentales, costa póntica, Karaman y provincias orientales. Van y Kars tienen series propias; el detalle de cada fortaleza y los beylicatos durante el interregno sigue pendiente; no se copian las máscaras del HTML adjunto.",
+    "Los cortes de 1699 y 1718 resumen tratados; el detalle de los cambios militares de 1683–1698 sigue pendiente."
+  ]
+}

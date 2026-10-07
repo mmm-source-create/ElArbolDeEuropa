@@ -1,4 +1,5 @@
 import {reviewedLayerLocations, reviewedLayerActive, reviewedLayerEvidence} from '../../src/data/locationMapPilot.js';
+import {supersededRegionalLayers} from '../../src/data/regionalExtentRoutes.js';
 const FRAME_ONLY_LAYERS = new Set(['Marco jurídico del Sacro Imperio']);
 
 function entriesFor(data) {
@@ -30,8 +31,9 @@ export function politicalMosaicAt(data, year, palette = mosaicPalette(data)) {
   if (!data || !Number.isInteger(year) || year < data.from || year > data.through) {
     return {year, layers: [], byLocation: new Map(), overlapCount: 0};
   }
+  const superseded = supersededRegionalLayers(data, year);
   const layers = entriesFor(data)
-    .filter(entry => !FRAME_ONLY_LAYERS.has(entry.name) && reviewedLayerActive(data, entry, year))
+    .filter(entry => !FRAME_ONLY_LAYERS.has(entry.name) && !superseded.has(entry.name) && reviewedLayerActive(data, entry, year))
     .map(entry => {
       const evidence = reviewedLayerEvidence(entry, year);
       return {...entry, note: evidence.note, sources: evidence.sources,
