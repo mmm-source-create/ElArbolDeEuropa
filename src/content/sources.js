@@ -12,6 +12,7 @@ const DOGES_1400_1605 = [
 // Bibliography shared by the public site, Atlas and generated entity pages.
 // A territorial reference supplies context; only explicit person IDs assign a biography.
 export const SOURCES = [
+  {titulo:'Historisches Lexikon Bayerns · Pfalz-Neuburg: historia política',url:'https://www.historisches-lexikon-bayerns.de/Lexikon/Artikel_45317',grupo:'Archivos e instituciones',territorios:['Palatinado-Neoburgo'],personas:['CARLOS5']},
   {titulo:"Die Welt der Habsburger · Cesión de las tierras austríacas a Fernando I",url:"https://www.habsburger.net/en/chapter/ferdinand-i-overshadowed-his-elder-brother",grupo:"Archivos e instituciones",territorios:["Austria","Austria Interior","Tirol"],personas:["CARLOS5","FERN1EMP"]},
   {titulo:"Die Welt der Habsburger · Partición de 1564",url:"https://www.habsburger.net/en/chapter/tripartite-division-austrian-inheritance",grupo:"Archivos e instituciones",territorios:["Austria","Austria Interior","Tirol"],personas:["MAXIM2","FERN2TIROL","CARLOS2ESTIRIA","FERN2EMP"]},
   {titulo:"Tiroler Landesarchiv · Inventario de la cancillería tirolesa",url:"https://www.tirol.gv.at/fileadmin/themen/kunst-kultur/landesarchiv/downloads/TGQ47.pdf",grupo:"Archivos e instituciones",territorios:["Tirol"],personas:["MAXIM3TIROL","LEOP5TIROL"]},

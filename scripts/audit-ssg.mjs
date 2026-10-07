@@ -35,7 +35,7 @@ export function auditDocument(html,page,assets,siteUrl=DEFAULT_SITE_URL) {
  } catch {errors.push('Datos iniciales ausentes, inseguros o distintos del JSON fuente');}
  const links=[...head.matchAll(/<link\b[^>]*>/g)].map(m=>m[0]);
  for(const css of assets.css)if(!links.some(tag=>tag.includes('rel="stylesheet"')&&tag.includes(`href="/${css}"`)))errors.push(`CSS ausente: ${css}`);
- for(const js of assets.js)if(!head.includes(`src="/${js}"`)&&!head.includes(`rel="modulepreload" href="/${js}"`))errors.push(`Módulo ausente: ${js}`);
+ for(const js of assets.js)if(!head.includes(`src="/${js}"`)&&!links.some(tag=>tag.includes('rel="modulepreload"')&&tag.includes(`href="/${js}"`)))errors.push(`Módulo ausente: ${js}`);
  if(!body.includes('?atlas=1'))errors.push('Falta el acceso al Atlas');
  return errors;
 }

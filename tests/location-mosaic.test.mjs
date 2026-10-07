@@ -35,7 +35,7 @@ test('the mosaic follows dated transfers and marks corrections with sources', ()
 });
 
 test('out-of-range years produce an empty mosaic instead of projecting a future map', () => {
-  assert.equal(politicalMosaicAt(data, 1651, palette).layers.length, 0);
+  assert.equal(politicalMosaicAt(data, data.through + 1, palette).layers.length, 0);
 });
 
 test('the Atlas mosaic adds every mappable active government with a distinct approximate color', () => {

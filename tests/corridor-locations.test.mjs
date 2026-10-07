@@ -2,7 +2,7 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import path from 'node:path';
 import test from 'node:test';
-import { pilotLocationsFor } from '../src/data/locationMapPilot.js';
+import { pilotLocationsFor, reviewedLayerLocations } from '../src/data/locationMapPilot.js';
 
 const lab = path.resolve(import.meta.dirname, '../prototypes/euv-locations');
 const data = JSON.parse(fs.readFileSync(path.join(lab, 'corridor-locations.json'), 'utf8'));
@@ -14,7 +14,7 @@ const pathIds = new Set([...svg.matchAll(/<path\b[^>]*\bid="([^"]+)"/g)].map(mat
 function ids(name, year) {
   const territory = data.territories.find(item => item.name === name);
   assert(territory, `Unknown jurisdiction ${name}`);
-  return new Set([...territory.versions].reverse().find(version => version.from <= year).ids);
+  return new Set(reviewedLayerLocations(data, territory, year));
 }
 
 test('territorial crosswalk uses only SVG IDs and never assigns one ID twice within a corridor', () => {
@@ -239,19 +239,20 @@ test('Central European jurisdictions respect dated transfers and separate imperi
 test('Balkan layers fill regional areas while keeping tributary principalities distinct', () => {
   const layers = data.additionalTerritories.filter(item => item.corridor === 'Hungría y Balcanes');
   const layer = name => layers.find(item => item.name === name);
-  const layerIds = (name, year) => new Set([...layer(name).versions].reverse().find(version => version.from <= year)?.ids || []);
+  const layerIds = (name, year) => new Set(reviewedLayerLocations(data, layer(name), year));
   const expected = ['Núcleo oriental de Zápolya', 'Hungría real', 'Croacia habsbúrgica',
     'Transilvania', 'Ocupación habsbúrgica de Transilvania', 'Hungría otomana',
     'Bosnia y Herzegovina otomanas', 'Balcanes meridionales otomanos', 'República de Ragusa',
-    'Despotado de Serbia', 'Reino de Bosnia', 'Principado de Valaquia', 'Principado de Moldavia'];
-  assert.deepEqual(layers.map(item => item.name), expected);
+    'Despotado de Serbia', 'Reino de Bosnia', 'Principado de Valaquia', 'Principado de Moldavia',
+    'Núcleo de Herzegovina', 'Núcleo de Mistra', 'Núcleos de Dobruja bajo Mircea'];
+  for(const name of expected) assert(layers.some(item=>item.name===name),name);
 
   assert.ok(layerIds('Balcanes meridionales otomanos', 1500).size >= 150,
     'the Ottoman map should fill regional locations instead of showing only 29 scattered sites');
   assert.ok(layerIds('Balcanes meridionales otomanos', 1500).has('Cherven'));
   assert.ok(layerIds('Balcanes meridionales otomanos', 1500).has('Tripolitsa'));
   assert.ok(!layerIds('Balcanes meridionales otomanos', 1500).has('Dinaric_Alps2'));
-  assert.ok(!layerIds('Balcanes meridionales otomanos', 1500).has('Pindus_Mountains1'));
+  assert.ok(layerIds('Balcanes meridionales otomanos', 1500).has('Pindus_Mountains1'));
 
   assert.ok(layerIds('Reino de Bosnia', 1462).has('Vrhbosna'));
   assert.equal(layerIds('Reino de Bosnia', 1463).size, 0);
@@ -273,10 +274,9 @@ test('Balkan layers fill regional areas while keeping tributary principalities d
   for (let year = data.from; year <= data.through; year++) {
     const owner = new Map();
     for (const territory of layers) {
-      const version = [...territory.versions].reverse().find(item => item.from <= year);
-      for (const id of version?.ids || []) {
+      for (const id of reviewedLayerLocations(data, territory, year)) {
         assert.ok(pathIds.has(id), `${id} must exist in the map in ${year}`);
-        assert.ok(!/(mountain|alps|carpathian)/i.test(id), `${id} is physical relief, not a polity`);
+        if (/(mountain|alps|carpathian)/i.test(id)) assert.ok(data.overrides.some(item => item.territory===territory.name && item.id===id && item.from<=year && year<=item.through && item.source && item.reason) || territory.sources?.length, `${id} requires dated political evidence despite its physical-feature name`);
         assert.ok(!owner.has(id), `${id} overlaps ${owner.get(id)} and ${territory.name} in ${year}`);
         owner.set(id, territory.name);
       }

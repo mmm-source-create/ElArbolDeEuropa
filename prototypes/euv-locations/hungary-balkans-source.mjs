@@ -117,10 +117,10 @@ const layers = [
   },
   {
     name: 'Bosnia y Herzegovina otomanas', color: '#4d7765', active: { from: 1463 },
-    note: 'Sectores de los sanjacados bosnio y herzegovino y sus avances fronterizos, no una restauración del reino de Bosnia. Jajce, Knin y Bihać cambian solo en sus años documentados. La costa veneciana y la República de Ragusa quedan aparte.',
+    note: 'Sectores de los sanjacados bosnio y herzegovino y sus avances fronterizos, no una restauración del reino de Bosnia. Jajce, Knin y Bihać cambian solo en sus años documentados. La costa veneciana y la República de Ragusa quedan aparte. Revisión visual: se excluyen Foca (Foça, en Anatolia) y Ravno (celda al este de Serbia), homónimos que no representan localidades bosnias.',
     groups: [
-      { from: 1463, ids: ['Vrhbosna','Zenica','Olovo','Foca','Visegrad','Kljuc','Livno','Doboj','Glamoc'], reason: 'Núcleo del sanjacado bosnio tras la caída del reino en 1463; no representa toda la conquista de una sola vez.', source: sources.bosnia },
-      { from: 1482, ids: ['Mostar','Trebinje','Nevesinje','Gacko','Pljevlja','Drijeva','Konjic','Ustikolina','Borac','Ravno'], reason: 'La incorporación de Herzegovina se completa hacia 1482; las localidades marcan su núcleo interior y sus valles principales.', source: sources.herzegovina },
+      { from: 1463, ids: ['Vrhbosna','Zenica','Olovo','Visegrad','Kljuc','Livno','Doboj','Glamoc'], reason: 'Núcleo del sanjacado bosnio tras la caída del reino en 1463; no representa toda la conquista de una sola vez.', source: sources.bosnia },
+      { from: 1482, ids: ['Mostar','Trebinje','Nevesinje','Gacko','Pljevlja','Drijeva','Konjic','Ustikolina','Borac'], reason: 'La incorporación de Herzegovina se completa hacia 1482; las localidades marcan su núcleo interior y sus valles principales.', source: sources.herzegovina },
       { from: 1499, ids: ['Makarska'], reason: 'Makarska passed into Ottoman control at the end of the fifteenth century.', source: sources.herzegovina },
       { from: 1512, ids: ['Srebrenica','Srebrenik','Teocak','Soli'], reason: 'La expansión del sanjacado de Zvornik incorporó Srebrenica y las fortalezas del noreste bosnio; se fechan aquí y no en la conquista inicial de 1463.', source: sources.bosnia },
       { from: 1522, ids: ['Knin'], reason: 'Knin fell to the Ottoman Bosnian governor in 1522.', source: `${ENC}knin` },
@@ -191,9 +191,9 @@ const layers = [
   },
   {
     name: 'Reino de Bosnia', color: '#b28d58', active: { from: 1400, through: 1462 },
-    note: 'Núcleo del reino de Bosnia antes de la conquista de 1463. La entidad comprendía territorios cambiantes y señoríos fronterizos; las localizaciones coloreadas no pretenden fijar una frontera moderna exacta.',
+    note: 'Núcleo del reino de Bosnia antes de la conquista de 1463. La entidad comprendía territorios cambiantes y señoríos fronterizos; las localizaciones coloreadas no pretenden fijar una frontera moderna exacta. Revisión visual: se excluyen Foca (Foça, en Anatolia) y Ravno (celda al este de Serbia), homónimos que no representan localidades bosnias.',
     groups: [
-      { from: 1400, through: 1462, ids: ['Jajce','Kljuc','Zenica','Olovo','Vrhbosna','Foca','Visegrad','Doboj','Srebrenik','Soli','Teocak','Livno','Glamoc','Ravno','Konjic','Ustikolina','Borac'], reason: 'Celdas del núcleo bosnio y de sus principales fortalezas, separadas de las posesiones venecianas y del Despotado serbio. El reino cayó en 1463.', source: sources.bosnia },
+      { from: 1400, through: 1462, ids: ['Jajce','Kljuc','Zenica','Olovo','Vrhbosna','Visegrad','Doboj','Srebrenik','Soli','Teocak','Livno','Glamoc','Konjic','Ustikolina','Borac'], reason: 'Celdas del núcleo bosnio y de sus principales fortalezas, separadas de las posesiones venecianas y del Despotado serbio. El reino cayó en 1463.', source: sources.bosnia },
     ],
   },
   {

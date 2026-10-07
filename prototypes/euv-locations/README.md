@@ -9,7 +9,7 @@ geometría no demuestra por sí sola las fronteras políticas de cada época.
 La correspondencia general enlaza los 710 IDs regionales usados por el Atlas
 con locations nuevas cuando al menos el 55 % del área cae dentro de la región
 anterior. Las coincidencias del 25–55 % se conservan como candidatas de
-revisión. Para 114 jurisdicciones hay capas fechadas con correcciones y fuentes
+revisión. Las jurisdicciones revisadas tienen capas fechadas con correcciones y fuentes
 propias; estas prevalecen sobre la equivalencia general. El inspector del Atlas
 muestra los gobiernos y citas disponibles. El gris significa «sin atribución
 en esta base para este año», no ausencia de gobierno.
@@ -17,6 +17,16 @@ en esta base para este año», no ausencia de gobierno.
 ![Encuadre del prototipo](preview.png)
 
 ## Probarlo
+
+El mosaico se publica junto al Atlas en `/es/mapa-completo?year=1530`.
+El selector permite explorar **1200–1800**. La ampliación de Iberia, Italia,
+Borgoña y Austria utiliza series medievales y posteriores a 1650 con sus
+propias fechas y fuentes; no prolonga automáticamente las fronteras de 1650.
+«Núcleos documentados» significa cobertura regional limitada. Los intervalos
+sin delimitación suficiente quedan vacíos y constan como revisión pendiente.
+También se puede abrir desde «¿Por qué estos colores?» en el mapa de una persona.
+El build compila el visor y sus assets; no depende de servir el código fuente.
+
 
 Desde la raíz del repositorio, ejecuta `./node_modules/.bin/vite` y abre
 `http://localhost:5173/prototypes/euv-locations/territorial-corridors.html`
@@ -50,12 +60,39 @@ cada año. Un mismo morado identifica el conjunto político borgoñón, pero la
 lista lateral conserva sus condados, ducados y señoríos como jurisdicciones
 distintas.
 
-El visor integra 81 capas regionales de Iberia, Italia, Centroeuropa, Europa
+El visor integra capas regionales de Iberia, Italia, Centroeuropa, Europa
 septentrional y oriental, Francia e islas británicas con versiones anuales
-dentro de 1400–1650; añade 24 señoríos borgoñones y nueve capas de Hungría y
-los Balcanes. La Corona de Polonia y el Gran Ducado de Lituania siguen
+dentro de 1400–1650; añade los señoríos borgoñones y las capas de Hungría,
+los Balcanes y el Mediterráneo oriental. El número de capas activas se calcula
+para el año seleccionado. La Corona de Polonia y el Gran Ducado de Lituania siguen
 separados después de 1569; los gobiernos escandinavos y bálticos, pequeños
 estados rusos y enclaves también mantienen su jurisdicción y fechas propias.
+
+## Ampliación cronológica y autoridad regional
+
+`extended-corridors-source.py`, `central-expansion-source.py` y
+`balkan-expansion-source.mjs` conservan las selecciones y su evidencia.
+`merge-map-expansions.mjs` incorpora esas series al final del generador
+principal y comprueba IDs, intervalos y anclas independientes. La entrega añade
+ramas bávaras anteriores a 1505, núcleos croatas anteriores a 1527, Moravia,
+Pfalz-Neuburg, Trebisonda y Silesia. Los núcleos silesianos distinguen el
+gobierno piasta, la soberanía superior, la ocupación prusiana de 1741 y la
+división de 1742; Teschen es un núcleo del remanente austríaco, no su frontera
+completa.
+
+En los Balcanes se separan los Tocco tributarios, los gobiernos delegados de
+Temes y Bihar, las adhesiones y disputas locales de Eslavonia, Athos autónomo
+y la Morea veneciana de 1699–1714. Una cordillera puede pertenecer a una
+jurisdicción documentada: su nombre físico no obliga a dejarla vacía ni
+demuestra por sí solo a quién atribuirla. Las celdas que cruzan fronteras o
+carecen de evidencia suficiente siguen pendientes.
+
+`audit-map-spatial.mjs` mide también la tierra visible **independientemente de
+los nombres ya vinculados**. Sus ventanas de Hungría y sureste europeo
+incluyen fragmentos vecinos de Anatolia y Ucrania. Los resultados cuentan
+celdas y área SVG, nunca países ni kilómetros cuadrados. Se mantienen además
+las auditorías de gobiernos, geometría y continuidad para todos los años de
+1200–1800. Ninguna de estas métricas certifica fronteras exactas.
 
 ![Carlos V en 1520: Austria todavía bajo su gobierno](carlos-v-1520.png)
 ![Carlos V en 1548: herencia hispánica y borgoñona, sin pintar el Imperio entero](carlos-v-1548.png)
@@ -122,7 +159,7 @@ IDs regionales: una location nueva se asigna cuando al menos el 55 % de su
 para revisión y no se pintan como parte de las capas históricas revisadas.
 Un nombre coincidente tampoco garantiza que una *location* cubra exactamente
 la misma provincia. Por eso el inspector conserva la advertencia de precisión
-y distingue el puente geométrico de las 114 capas fechadas con fuentes.
+y distingue el puente geométrico de las capas históricas fechadas con fuentes.
 
 ## Primer cruce histórico: Carlos V
 
@@ -627,3 +664,21 @@ El límite de zoom y desplazamiento se acompaña de un recorte real del grupo
 SVG, actualizado con cada encuadre. Así, las franjas laterales del panel no
 revelan el mapa mundial subyacente. Los controles se desactivan al alcanzar
 el límite. La versión del mapa para modo oscuro queda para otra entrega.
+
+## Inventario de representación
+
+`npm run audit:atlas-coverage` comprueba cada año de cada mandato efectivo de
+1400–1650 mediante el mismo alcance que usa el Atlas. El reporte
+`audit-atlas-coverage-report.json` separa entidades totalmente sin relleno,
+mandatos o años sin geometría y núcleos explícitamente parciales. Un núcleo
+no acredita una frontera completa. Excluye del relleno personal los cargos
+imperiales y mantiene aparte títulos nominales y mandatos de otros siglos.
+No se suman las entidades pendientes a las capas con huecos de autoridad.
+
+Las capas de `priority-territories-locations.json` añaden los núcleos
+documentados de Herzegovina, Mistra, Lorena, Baden, ramas Welf, Chipre y
+Dobruja bajo Mircea. Sus límites pendientes y sus cambios de fecha constan
+en cada capa. `authorityMapScopes.js` limita los emires del interregno
+otomano y a Moisés Székely a ámbitos regionales; Basta conserva su vínculo
+como gobernador de Rodolfo II. Las exclusiones fechadas prevalecen sobre
+inclusiones generales tanto en el mosaico como en el mapa de una persona.

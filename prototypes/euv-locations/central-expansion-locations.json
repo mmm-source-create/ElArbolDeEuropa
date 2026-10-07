@@ -1,0 +1,1513 @@
+{
+  "from": 1200,
+  "through": 1800,
+  "scope": "Núcleos centrales, croatas y pónticos revisados visualmente en el SVG. Cada capa limita su cobertura y distingue la soberanía de jurisdicciones locales; no son reconstrucciones de fronteras completas.",
+  "territories": [
+    {
+      "corridor": "Borgoña e Imperio",
+      "name": "Baviera indivisa (núcleos)",
+      "color": "#B68B3E",
+      "precision": "documented_core",
+      "coverage": {
+        "from": 1200,
+        "through": 1391
+      },
+      "active": {
+        "from": 1200,
+        "through": 1391,
+        "reason": "Núcleos ducales de Múnich, Landshut y Burghausen, con Ingolstadt en las reunificaciones posteriores. Solo se activa antes del reparto de 1255, en 1340–1348 y en 1363–1391. Straubing permanece separado desde 1353; los obispados, ciudades imperiales y posesiones palatinas se excluyen. Son entornos regionales aproximados.",
+        "source": "https://www.historisches-lexikon-bayerns.de/Lexikon/Territorialentwicklung_in_Altbayern"
+      },
+      "note": "Núcleos ducales de Múnich, Landshut y Burghausen, con Ingolstadt en las reunificaciones posteriores. Solo se activa antes del reparto de 1255, en 1340–1348 y en 1363–1391. Straubing permanece separado desde 1353; los obispados, ciudades imperiales y posesiones palatinas se excluyen. Son entornos regionales aproximados.",
+      "versions": [
+        {
+          "from": 1200,
+          "oldIds": [],
+          "ids": [
+            "Munich",
+            "Burghausen"
+          ],
+          "borderline": []
+        },
+        {
+          "from": 1204,
+          "oldIds": [],
+          "ids": [
+            "Munich",
+            "Landshut",
+            "Burghausen"
+          ],
+          "borderline": []
+        },
+        {
+          "from": 1340,
+          "oldIds": [],
+          "ids": [
+            "Munich",
+            "Landshut",
+            "Burghausen",
+            "Ingolstadt"
+          ],
+          "borderline": []
+        }
+      ],
+      "sources": [
+        {
+          "title": "Historisches Lexikon Bayerns · Gerhard Immler",
+          "url": "https://www.historisches-lexikon-bayerns.de/Lexikon/Territorialentwicklung_in_Altbayern",
+          "locator": "Divisiones de 1255, 1349, 1353 y 1392; localidades de cada rama; reparto de Straubing en 1429; herencia de Ingolstadt en 1445 y acuerdo de 1450; cesiones de 1505."
+        },
+        {
+          "title": "Historisches Lexikon Bayerns · Burghausen, Burg",
+          "url": "https://www.historisches-lexikon-bayerns.de/Lexikon/Burghausen,_Burg",
+          "locator": "Residencia de Baja Baviera desde 1255 y segunda residencia de Baviera-Landshut, 1392–1503."
+        }
+      ],
+      "periods": [
+        {
+          "from": 1200,
+          "through": 1254
+        },
+        {
+          "from": 1340,
+          "through": 1348
+        },
+        {
+          "from": 1363,
+          "through": 1391
+        }
+      ]
+    },
+    {
+      "corridor": "Borgoña e Imperio",
+      "name": "Alta Baviera (Múnich)",
+      "color": "#BA9850",
+      "precision": "documented_core",
+      "coverage": {
+        "from": 1255,
+        "through": 1362
+      },
+      "active": {
+        "from": 1255,
+        "through": 1362,
+        "reason": "Celda del núcleo de Múnich en Alta Baviera. Se mantiene separada de Ingolstadt para poder documentar el reparto entre Rodolfo y Luis de 1310–1313. La autoridad de cada persona depende de su rama, no del título genérico de duque de Baviera.",
+        "source": "https://www.historisches-lexikon-bayerns.de/Lexikon/Territorialentwicklung_in_Altbayern"
+      },
+      "note": "Celda del núcleo de Múnich en Alta Baviera. Se mantiene separada de Ingolstadt para poder documentar el reparto entre Rodolfo y Luis de 1310–1313. La autoridad de cada persona depende de su rama, no del título genérico de duque de Baviera.",
+      "versions": [
+        {
+          "from": 1255,
+          "oldIds": [],
+          "ids": [
+            "Munich"
+          ],
+          "borderline": []
+        }
+      ],
+      "sources": [
+        {
+          "title": "Historisches Lexikon Bayerns · Gerhard Immler",
+          "url": "https://www.historisches-lexikon-bayerns.de/Lexikon/Territorialentwicklung_in_Altbayern",
+          "locator": "Divisiones de 1255, 1349, 1353 y 1392; localidades de cada rama; reparto de Straubing en 1429; herencia de Ingolstadt en 1445 y acuerdo de 1450; cesiones de 1505."
+        }
+      ],
+      "periods": [
+        {
+          "from": 1255,
+          "through": 1339
+        },
+        {
+          "from": 1349,
+          "through": 1362
+        }
+      ]
+    },
+    {
+      "corridor": "Borgoña e Imperio",
+      "name": "Alta Baviera (Ingolstadt)",
+      "color": "#AE843E",
+      "precision": "documented_core",
+      "coverage": {
+        "from": 1255,
+        "through": 1362
+      },
+      "active": {
+        "from": 1255,
+        "through": 1362,
+        "reason": "Núcleo de Ingolstadt en Alta Baviera, separado del de Múnich en el reparto de 1310–1313. La celda no representa todo el ducado ni incluye jurisdicciones episcopales.",
+        "source": "https://www.historisches-lexikon-bayerns.de/Lexikon/Territorialentwicklung_in_Altbayern"
+      },
+      "note": "Núcleo de Ingolstadt en Alta Baviera, separado del de Múnich en el reparto de 1310–1313. La celda no representa todo el ducado ni incluye jurisdicciones episcopales.",
+      "versions": [
+        {
+          "from": 1255,
+          "oldIds": [],
+          "ids": [
+            "Ingolstadt"
+          ],
+          "borderline": []
+        }
+      ],
+      "sources": [
+        {
+          "title": "Historisches Lexikon Bayerns · Gerhard Immler",
+          "url": "https://www.historisches-lexikon-bayerns.de/Lexikon/Territorialentwicklung_in_Altbayern",
+          "locator": "Divisiones de 1255, 1349, 1353 y 1392; localidades de cada rama; reparto de Straubing en 1429; herencia de Ingolstadt en 1445 y acuerdo de 1450; cesiones de 1505."
+        }
+      ],
+      "periods": [
+        {
+          "from": 1255,
+          "through": 1339
+        },
+        {
+          "from": 1349,
+          "through": 1362
+        }
+      ]
+    },
+    {
+      "corridor": "Borgoña e Imperio",
+      "name": "Baja Baviera (Landshut)",
+      "color": "#B17A3D",
+      "precision": "documented_core",
+      "coverage": {
+        "from": 1255,
+        "through": 1362
+      },
+      "active": {
+        "from": 1255,
+        "through": 1362,
+        "reason": "Núcleo de la residencia de Landshut en Baja Baviera. Se separa de Burghausen para reflejar los repartos del primer tercio del siglo XIV. No se adjudica a Enrique XV, cuya rama principal se encontraba en Deggendorf.",
+        "source": "https://www.historisches-lexikon-bayerns.de/Lexikon/Territorialentwicklung_in_Altbayern"
+      },
+      "note": "Núcleo de la residencia de Landshut en Baja Baviera. Se separa de Burghausen para reflejar los repartos del primer tercio del siglo XIV. No se adjudica a Enrique XV, cuya rama principal se encontraba en Deggendorf.",
+      "versions": [
+        {
+          "from": 1255,
+          "oldIds": [],
+          "ids": [
+            "Landshut"
+          ],
+          "borderline": []
+        }
+      ],
+      "sources": [
+        {
+          "title": "Historisches Lexikon Bayerns · Gerhard Immler",
+          "url": "https://www.historisches-lexikon-bayerns.de/Lexikon/Territorialentwicklung_in_Altbayern",
+          "locator": "Divisiones de 1255, 1349, 1353 y 1392; localidades de cada rama; reparto de Straubing en 1429; herencia de Ingolstadt en 1445 y acuerdo de 1450; cesiones de 1505."
+        }
+      ],
+      "periods": [
+        {
+          "from": 1255,
+          "through": 1339
+        },
+        {
+          "from": 1349,
+          "through": 1362
+        }
+      ]
+    },
+    {
+      "corridor": "Borgoña e Imperio",
+      "name": "Baja Baviera (Burghausen)",
+      "color": "#B77F47",
+      "precision": "documented_core",
+      "coverage": {
+        "from": 1255,
+        "through": 1362
+      },
+      "active": {
+        "from": 1255,
+        "through": 1362,
+        "reason": "Núcleo de la residencia de Burghausen en Baja Baviera. En el reparto de 1310 corresponde a Otón IV; no se atribuye automáticamente a la rama de Landshut o a la de Deggendorf.",
+        "source": "https://www.historisches-lexikon-bayerns.de/Lexikon/Territorialentwicklung_in_Altbayern"
+      },
+      "note": "Núcleo de la residencia de Burghausen en Baja Baviera. En el reparto de 1310 corresponde a Otón IV; no se atribuye automáticamente a la rama de Landshut o a la de Deggendorf.",
+      "versions": [
+        {
+          "from": 1255,
+          "oldIds": [],
+          "ids": [
+            "Burghausen"
+          ],
+          "borderline": []
+        }
+      ],
+      "sources": [
+        {
+          "title": "Historisches Lexikon Bayerns · Gerhard Immler",
+          "url": "https://www.historisches-lexikon-bayerns.de/Lexikon/Territorialentwicklung_in_Altbayern",
+          "locator": "Divisiones de 1255, 1349, 1353 y 1392; localidades de cada rama; reparto de Straubing en 1429; herencia de Ingolstadt en 1445 y acuerdo de 1450; cesiones de 1505."
+        },
+        {
+          "title": "Historisches Lexikon Bayerns · Burghausen, Burg",
+          "url": "https://www.historisches-lexikon-bayerns.de/Lexikon/Burghausen,_Burg",
+          "locator": "Residencia de Baja Baviera desde 1255 y segunda residencia de Baviera-Landshut, 1392–1503."
+        }
+      ],
+      "periods": [
+        {
+          "from": 1255,
+          "through": 1339
+        },
+        {
+          "from": 1349,
+          "through": 1362
+        }
+      ]
+    },
+    {
+      "corridor": "Borgoña e Imperio",
+      "name": "Baviera-Múnich (núcleos)",
+      "color": "#A78647",
+      "precision": "documented_core",
+      "coverage": {
+        "from": 1392,
+        "through": 1504
+      },
+      "active": {
+        "from": 1392,
+        "through": 1504,
+        "reason": "Múnich y Pfaffenhofen desde el reparto de 1392; Straubing, Kelheim y Regen se añaden tras el laudo de 1429. No se adjudican Landshut, Ingolstadt ni las sedes episcopales a esta rama. Sigismundo abandona el gobierno en 1467 y sus usufructos posteriores no autorizan colorear todo el núcleo.",
+        "source": "https://www.historisches-lexikon-bayerns.de/Lexikon/Territorialentwicklung_in_Altbayern"
+      },
+      "note": "Múnich y Pfaffenhofen desde el reparto de 1392; Straubing, Kelheim y Regen se añaden tras el laudo de 1429. No se adjudican Landshut, Ingolstadt ni las sedes episcopales a esta rama. Sigismundo abandona el gobierno en 1467 y sus usufructos posteriores no autorizan colorear todo el núcleo.",
+      "versions": [
+        {
+          "from": 1392,
+          "oldIds": [],
+          "ids": [
+            "Munich",
+            "Pfaffenhofen"
+          ],
+          "borderline": []
+        },
+        {
+          "from": 1429,
+          "oldIds": [],
+          "ids": [
+            "Munich",
+            "Pfaffenhofen",
+            "Straubing",
+            "Kelheim",
+            "Bavaria_Regen"
+          ],
+          "borderline": []
+        }
+      ],
+      "sources": [
+        {
+          "title": "Historisches Lexikon Bayerns · Gerhard Immler",
+          "url": "https://www.historisches-lexikon-bayerns.de/Lexikon/Territorialentwicklung_in_Altbayern",
+          "locator": "Divisiones de 1255, 1349, 1353 y 1392; localidades de cada rama; reparto de Straubing en 1429; herencia de Ingolstadt en 1445 y acuerdo de 1450; cesiones de 1505."
+        },
+        {
+          "title": "Historisches Lexikon Bayerns · Dorit-Maria Krenn",
+          "url": "https://www.historisches-lexikon-bayerns.de/Lexikon/Straubinger_Erbfall,_1425-1429",
+          "locator": "Muerte de Juan III en 1425; administración de los estamentos hasta el laudo de 1429; Straubing, Kelheim y Regen a Múnich."
+        }
+      ]
+    },
+    {
+      "corridor": "Borgoña e Imperio",
+      "name": "Baviera-Landshut (núcleos)",
+      "color": "#BC874B",
+      "precision": "documented_core",
+      "coverage": {
+        "from": 1392,
+        "through": 1503
+      },
+      "active": {
+        "from": 1392,
+        "through": 1503,
+        "reason": "Landshut y Burghausen; Landau tras el reparto de Straubing de 1429. Las celdas de Ingolstadt se añaden en 1446, primer año completo después de la toma de Enrique XVI de 1445, cuya sucesión se acuerda jurídicamente en 1450. La capa termina en 1503 antes de la guerra sucesoria; Kufstein y Kitzbühel no son Tirol hasta 1505.",
+        "source": "https://www.historisches-lexikon-bayerns.de/Lexikon/Territorialentwicklung_in_Altbayern"
+      },
+      "note": "Landshut y Burghausen; Landau tras el reparto de Straubing de 1429. Las celdas de Ingolstadt se añaden en 1446, primer año completo después de la toma de Enrique XVI de 1445, cuya sucesión se acuerda jurídicamente en 1450. La capa termina en 1503 antes de la guerra sucesoria; Kufstein y Kitzbühel no son Tirol hasta 1505.",
+      "versions": [
+        {
+          "from": 1392,
+          "oldIds": [],
+          "ids": [
+            "Landshut",
+            "Burghausen"
+          ],
+          "borderline": []
+        },
+        {
+          "from": 1429,
+          "oldIds": [],
+          "ids": [
+            "Landshut",
+            "Burghausen",
+            "Landau"
+          ],
+          "borderline": []
+        },
+        {
+          "from": 1446,
+          "oldIds": [],
+          "ids": [
+            "Landshut",
+            "Burghausen",
+            "Landau",
+            "Ingolstadt",
+            "Neuburg_an_der_Donau",
+            "Friedberg",
+            "Wasserburg",
+            "Kufstein",
+            "Kitzbuhel"
+          ],
+          "borderline": []
+        }
+      ],
+      "sources": [
+        {
+          "title": "Historisches Lexikon Bayerns · Gerhard Immler",
+          "url": "https://www.historisches-lexikon-bayerns.de/Lexikon/Territorialentwicklung_in_Altbayern",
+          "locator": "Divisiones de 1255, 1349, 1353 y 1392; localidades de cada rama; reparto de Straubing en 1429; herencia de Ingolstadt en 1445 y acuerdo de 1450; cesiones de 1505."
+        },
+        {
+          "title": "Historisches Lexikon Bayerns · Julian Holzapfl",
+          "url": "https://www.historisches-lexikon-bayerns.de/Lexikon/Artikel_45122",
+          "locator": "Bayerische Teilungen: Ingolstadt, Neuburg, Friedberg y Chiemgau/Kufstein/Kitzbühel en la rama de 1392; fin de la línea en 1447."
+        },
+        {
+          "title": "Historisches Lexikon Bayerns · Burghausen, Burg",
+          "url": "https://www.historisches-lexikon-bayerns.de/Lexikon/Burghausen,_Burg",
+          "locator": "Residencia de Baja Baviera desde 1255 y segunda residencia de Baviera-Landshut, 1392–1503."
+        }
+      ]
+    },
+    {
+      "corridor": "Borgoña e Imperio",
+      "name": "Baviera-Ingolstadt (núcleos)",
+      "color": "#A47748",
+      "precision": "documented_core",
+      "coverage": {
+        "from": 1392,
+        "through": 1445
+      },
+      "active": {
+        "from": 1392,
+        "through": 1445,
+        "reason": "Núcleos de Ingolstadt, Neuburg y Friedberg y posesiones separadas del Inn/Chiemgau desde 1392. Se conservan hasta el año de la muerte de Luis VIII y la toma de Enrique XVI en 1445; el fallecimiento de Luis VII en 1447 no prolonga su gobierno efectivo. Se excluyen las tierras de Múnich y Landshut.",
+        "source": "https://www.historisches-lexikon-bayerns.de/Lexikon/Artikel_45122"
+      },
+      "note": "Núcleos de Ingolstadt, Neuburg y Friedberg y posesiones separadas del Inn/Chiemgau desde 1392. Se conservan hasta el año de la muerte de Luis VIII y la toma de Enrique XVI en 1445; el fallecimiento de Luis VII en 1447 no prolonga su gobierno efectivo. Se excluyen las tierras de Múnich y Landshut.",
+      "versions": [
+        {
+          "from": 1392,
+          "oldIds": [],
+          "ids": [
+            "Ingolstadt",
+            "Neuburg_an_der_Donau",
+            "Friedberg",
+            "Wasserburg",
+            "Kufstein",
+            "Kitzbuhel"
+          ],
+          "borderline": []
+        }
+      ],
+      "sources": [
+        {
+          "title": "Historisches Lexikon Bayerns · Julian Holzapfl",
+          "url": "https://www.historisches-lexikon-bayerns.de/Lexikon/Artikel_45122",
+          "locator": "Bayerische Teilungen: Ingolstadt, Neuburg, Friedberg y Chiemgau/Kufstein/Kitzbühel en la rama de 1392; fin de la línea en 1447."
+        },
+        {
+          "title": "Historisches Lexikon Bayerns · Gerhard Immler",
+          "url": "https://www.historisches-lexikon-bayerns.de/Lexikon/Territorialentwicklung_in_Altbayern",
+          "locator": "Divisiones de 1255, 1349, 1353 y 1392; localidades de cada rama; reparto de Straubing en 1429; herencia de Ingolstadt en 1445 y acuerdo de 1450; cesiones de 1505."
+        }
+      ]
+    },
+    {
+      "corridor": "Borgoña e Imperio",
+      "name": "Baviera-Straubing (núcleos)",
+      "color": "#A8945A",
+      "precision": "documented_core",
+      "coverage": {
+        "from": 1353,
+        "through": 1425
+      },
+      "active": {
+        "from": 1353,
+        "through": 1425,
+        "reason": "Núcleos de Straubing, Kelheim y Regen de la rama Straubing-Holland, desde el reparto de 1353 hasta la muerte de Juan III en 1425. No se atribuyen a los otros duques durante la administración de los estamentos de 1426–1428; Múnich los recibe en 1429.",
+        "source": "https://www.historisches-lexikon-bayerns.de/Lexikon/Territorialentwicklung_in_Altbayern"
+      },
+      "note": "Núcleos de Straubing, Kelheim y Regen de la rama Straubing-Holland, desde el reparto de 1353 hasta la muerte de Juan III en 1425. No se atribuyen a los otros duques durante la administración de los estamentos de 1426–1428; Múnich los recibe en 1429.",
+      "versions": [
+        {
+          "from": 1353,
+          "oldIds": [],
+          "ids": [
+            "Straubing",
+            "Kelheim",
+            "Bavaria_Regen"
+          ],
+          "borderline": []
+        }
+      ],
+      "sources": [
+        {
+          "title": "Historisches Lexikon Bayerns · Gerhard Immler",
+          "url": "https://www.historisches-lexikon-bayerns.de/Lexikon/Territorialentwicklung_in_Altbayern",
+          "locator": "Divisiones de 1255, 1349, 1353 y 1392; localidades de cada rama; reparto de Straubing en 1429; herencia de Ingolstadt en 1445 y acuerdo de 1450; cesiones de 1505."
+        },
+        {
+          "title": "Historisches Lexikon Bayerns · Dorit-Maria Krenn",
+          "url": "https://www.historisches-lexikon-bayerns.de/Lexikon/Straubinger_Erbfall,_1425-1429",
+          "locator": "Muerte de Juan III en 1425; administración de los estamentos hasta el laudo de 1429; Straubing, Kelheim y Regen a Múnich."
+        }
+      ]
+    },
+    {
+      "corridor": "Borgoña e Imperio",
+      "name": "Palatinado-Neoburgo (Danubio)",
+      "color": "#AE6F65",
+      "precision": "documented_core",
+      "coverage": {
+        "from": 1505,
+        "through": 1800
+      },
+      "active": {
+        "from": 1505,
+        "through": 1800,
+        "reason": "Núcleo de Neuburg an der Donau del principado creado en 1505. En el reparto de 1535–1541 corresponde a Otón Enrique. Se interrumpe la autoridad de los príncipes entre la ocupación imperial de 1546 y la restitución de 1552. Lauingen/Höchstädt carecen de celdas propias: no se incorpora por ello toda la celda episcopal de Dillingen.",
+        "source": "https://www.historisches-lexikon-bayerns.de/Lexikon/Artikel_45318"
+      },
+      "note": "Núcleo de Neuburg an der Donau del principado creado en 1505. En el reparto de 1535–1541 corresponde a Otón Enrique. Se interrumpe la autoridad de los príncipes entre la ocupación imperial de 1546 y la restitución de 1552. Lauingen/Höchstädt carecen de celdas propias: no se incorpora por ello toda la celda episcopal de Dillingen.",
+      "versions": [
+        {
+          "from": 1505,
+          "oldIds": [],
+          "ids": [
+            "Neuburg_an_der_Donau"
+          ],
+          "borderline": []
+        }
+      ],
+      "sources": [
+        {
+          "title": "Historisches Lexikon Bayerns · Markus Nadler",
+          "url": "https://www.historisches-lexikon-bayerns.de/Lexikon/Artikel_45318",
+          "locator": "Pfalz-Neuburg (Territorium): fundación en 1505; Neuburg en el Danubio y Burglengenfeld en el Nordgau. Dillingen no equivale a las posesiones de Lauingen/Höchstädt."
+        },
+        {
+          "title": "Historisches Lexikon Bayerns · Pfalz-Neuburg (Politische Geschichte)",
+          "url": "https://www.historisches-lexikon-bayerns.de/Lexikon/Artikel_45317",
+          "locator": "Corregencia de Otón Enrique y Felipe desde 1522; reparto de 1535–1541; ocupación imperial de 1546; restitución por la Paz de Passau en 1552; sucesión hasta Carlos Teodoro."
+        },
+        {
+          "title": "Haus der Bayerischen Geschichte · tapices de Pfalz-Neuburg",
+          "url": "https://archiv.hdbg.de/bildteppiche/bildteppiche_teppiche_pfalz-neuburg_liste.php",
+          "locator": "Residencia de Felipe en Burglengenfeld durante el reparto de 1535; residencia de Otón Enrique en Neuburg. Las ramas no reciben automáticamente ambas celdas."
+        }
+      ],
+      "periods": [
+        {
+          "from": 1505,
+          "through": 1545
+        },
+        {
+          "from": 1552,
+          "through": 1800
+        }
+      ]
+    },
+    {
+      "corridor": "Borgoña e Imperio",
+      "name": "Palatinado-Neoburgo (Burglengenfeld)",
+      "color": "#A87868",
+      "precision": "documented_core",
+      "coverage": {
+        "from": 1505,
+        "through": 1800
+      },
+      "active": {
+        "from": 1505,
+        "through": 1800,
+        "reason": "Núcleo de Burglengenfeld, principal oficina del Nordgau de Pfalz-Neuburg desde 1505. En el reparto de 1535–1541 corresponde a Felipe. No pertenece al electorado palatino ni se transfiere a Baviera por la cesión del Alto Palatinado de 1628. Interrupción de la autoridad principesca durante la ocupación imperial de 1546–1551.",
+        "source": "https://www.historisches-lexikon-bayerns.de/Lexikon/Artikel_45318"
+      },
+      "note": "Núcleo de Burglengenfeld, principal oficina del Nordgau de Pfalz-Neuburg desde 1505. En el reparto de 1535–1541 corresponde a Felipe. No pertenece al electorado palatino ni se transfiere a Baviera por la cesión del Alto Palatinado de 1628. Interrupción de la autoridad principesca durante la ocupación imperial de 1546–1551.",
+      "versions": [
+        {
+          "from": 1505,
+          "oldIds": [],
+          "ids": [
+            "Burglengenfeld"
+          ],
+          "borderline": []
+        }
+      ],
+      "sources": [
+        {
+          "title": "Historisches Lexikon Bayerns · Markus Nadler",
+          "url": "https://www.historisches-lexikon-bayerns.de/Lexikon/Artikel_45318",
+          "locator": "Pfalz-Neuburg (Territorium): fundación en 1505; Neuburg en el Danubio y Burglengenfeld en el Nordgau. Dillingen no equivale a las posesiones de Lauingen/Höchstädt."
+        },
+        {
+          "title": "Historisches Lexikon Bayerns · Pfalz-Neuburg (Politische Geschichte)",
+          "url": "https://www.historisches-lexikon-bayerns.de/Lexikon/Artikel_45317",
+          "locator": "Corregencia de Otón Enrique y Felipe desde 1522; reparto de 1535–1541; ocupación imperial de 1546; restitución por la Paz de Passau en 1552; sucesión hasta Carlos Teodoro."
+        },
+        {
+          "title": "Haus der Bayerischen Geschichte · tapices de Pfalz-Neuburg",
+          "url": "https://archiv.hdbg.de/bildteppiche/bildteppiche_teppiche_pfalz-neuburg_liste.php",
+          "locator": "Residencia de Felipe en Burglengenfeld durante el reparto de 1535; residencia de Otón Enrique en Neuburg. Las ramas no reciben automáticamente ambas celdas."
+        }
+      ],
+      "periods": [
+        {
+          "from": 1505,
+          "through": 1545
+        },
+        {
+          "from": 1552,
+          "through": 1800
+        }
+      ]
+    },
+    {
+      "corridor": "Borgoña e Imperio",
+      "name": "Neoburgo (ocupación imperial)",
+      "color": "#927BA3",
+      "precision": "documented_core",
+      "coverage": {
+        "from": 1546,
+        "through": 1551
+      },
+      "active": {
+        "from": 1546,
+        "through": 1551,
+        "reason": "Ocupación imperial tras la Guerra de Esmalcalda: Otón Enrique se exilia en 1546 y recupera su principado por la Paz de Passau en 1552. Debe mostrarse como ocupación de Carlos V, no como gobierno territorial permanente ni como autoridad efectiva de los príncipes exiliados.",
+        "source": "https://www.historisches-lexikon-bayerns.de/Lexikon/Artikel_45317"
+      },
+      "note": "Ocupación imperial tras la Guerra de Esmalcalda: Otón Enrique se exilia en 1546 y recupera su principado por la Paz de Passau en 1552. Debe mostrarse como ocupación de Carlos V, no como gobierno territorial permanente ni como autoridad efectiva de los príncipes exiliados.",
+      "versions": [
+        {
+          "from": 1546,
+          "oldIds": [],
+          "ids": [
+            "Neuburg_an_der_Donau",
+            "Burglengenfeld"
+          ],
+          "borderline": []
+        }
+      ],
+      "sources": [
+        {
+          "title": "Historisches Lexikon Bayerns · Pfalz-Neuburg (Politische Geschichte)",
+          "url": "https://www.historisches-lexikon-bayerns.de/Lexikon/Artikel_45317",
+          "locator": "Corregencia de Otón Enrique y Felipe desde 1522; reparto de 1535–1541; ocupación imperial de 1546; restitución por la Paz de Passau en 1552; sucesión hasta Carlos Teodoro."
+        }
+      ],
+      "authorityCondition": "control disputado"
+    },
+    {
+      "corridor": "Hungría y Balcanes",
+      "name": "Croacia anterior a 1527 (Knin)",
+      "color": "#A17153",
+      "precision": "documented_core",
+      "coverage": {
+        "from": 1200,
+        "through": 1521
+      },
+      "active": {
+        "from": 1200,
+        "through": 1521,
+        "reason": "Núcleo interior de Knin del reino croata, con señoríos y administración del ban bajo el monarca de la Corona húngaro-croata. Se retira durante el dominio bosnio de 1388–1392 y desde la conquista otomana de mayo de 1522. No incluye las ciudades costeras de Venecia ni convierte soberanía en propiedad directa.",
+        "source": "https://www.enciklopedija.hr/clanak/knin"
+      },
+      "note": "Núcleo interior de Knin del reino croata, con señoríos y administración del ban bajo el monarca de la Corona húngaro-croata. Se retira durante el dominio bosnio de 1388–1392 y desde la conquista otomana de mayo de 1522. No incluye las ciudades costeras de Venecia ni convierte soberanía en propiedad directa.",
+      "versions": [
+        {
+          "from": 1200,
+          "oldIds": [],
+          "ids": [
+            "Knin"
+          ],
+          "borderline": []
+        }
+      ],
+      "sources": [
+        {
+          "title": "Hrvatska enciklopedija · Knin",
+          "url": "https://www.enciklopedija.hr/clanak/knin",
+          "locator": "Centro del reino croata y del ban; dominio del reino bosnio de 1388 a 1392; conquista otomana el 29 de mayo de 1522."
+        }
+      ],
+      "periods": [
+        {
+          "from": 1200,
+          "through": 1387
+        },
+        {
+          "from": 1393,
+          "through": 1521
+        }
+      ]
+    },
+    {
+      "corridor": "Hungría y Balcanes",
+      "name": "Croacia anterior a 1527 (Bihać)",
+      "color": "#A78359",
+      "precision": "documented_core",
+      "coverage": {
+        "from": 1262,
+        "through": 1526
+      },
+      "active": {
+        "from": 1262,
+        "through": 1526,
+        "reason": "Entorno de la ciudad real de Bihać desde el privilegio de Bela IV de 1262. Los empeños y señoríos de Hrvoje y los Frankopan se reconocen documentalmente y no borran la soberanía de la Corona croata. La capa termina antes de la elección de Fernando en 1527 y deja la etapa habsbúrgica a su capa existente.",
+        "source": "https://enciklopedija.hr/clanak/bihac-grad"
+      },
+      "note": "Entorno de la ciudad real de Bihać desde el privilegio de Bela IV de 1262. Los empeños y señoríos de Hrvoje y los Frankopan se reconocen documentalmente y no borran la soberanía de la Corona croata. La capa termina antes de la elección de Fernando en 1527 y deja la etapa habsbúrgica a su capa existente.",
+      "versions": [
+        {
+          "from": 1262,
+          "oldIds": [],
+          "ids": [
+            "Bihac"
+          ],
+          "borderline": []
+        }
+      ],
+      "sources": [
+        {
+          "title": "Hrvatska enciklopedija · Bihać (grad)",
+          "url": "https://enciklopedija.hr/clanak/bihac-grad",
+          "locator": "Privilegio de ciudad real de Bela IV en 1262; cesiones y empeños feudales de 1412–1527; dependencia de la Corona croata, sin equipararla con posesión directa del monarca."
+        }
+      ]
+    },
+    {
+      "corridor": "Hungría y Balcanes",
+      "name": "Croacia anterior a 1527 (Senj)",
+      "color": "#A37B4E",
+      "precision": "documented_core",
+      "coverage": {
+        "from": 1469,
+        "through": 1526
+      },
+      "active": {
+        "from": 1469,
+        "through": 1526,
+        "reason": "Núcleo de la capitanía real de Senj recuperado por Matías Corvino de los Frankopan en 1469. No se asignan Rijeka, las islas o las plazas venecianas de Dalmacia. La celda regional contiene el entorno de Senj y no reconstruye cada jurisdicción local.",
+        "source": "https://enciklopedija.hr/clanak/senjska-kapetanija"
+      },
+      "note": "Núcleo de la capitanía real de Senj recuperado por Matías Corvino de los Frankopan en 1469. No se asignan Rijeka, las islas o las plazas venecianas de Dalmacia. La celda regional contiene el entorno de Senj y no reconstruye cada jurisdicción local.",
+      "versions": [
+        {
+          "from": 1469,
+          "oldIds": [],
+          "ids": [
+            "Senj"
+          ],
+          "borderline": []
+        }
+      ],
+      "sources": [
+        {
+          "title": "Hrvatska enciklopedija · Senjska kapetanija",
+          "url": "https://enciklopedija.hr/clanak/senjska-kapetanija",
+          "locator": "Matías Corvino recupera Senj de los Frankopan en 1469 y crea la capitanía real; integración posterior en la Frontera Militar en 1527."
+        }
+      ]
+    },
+    {
+      "corridor": "Hungría y Balcanes",
+      "name": "Eslavonia anterior a 1527 (núcleos)",
+      "color": "#A69454",
+      "precision": "documented_core",
+      "coverage": {
+        "from": 1209,
+        "through": 1526
+      },
+      "active": {
+        "from": 1209,
+        "through": 1526,
+        "reason": "Núcleos de ciudades reales de Eslavonia: Varaždin desde 1209, Gradec/Zagreb desde 1242 y Koprivnica desde 1356. La soberanía de la Corona se distingue de jurisdicciones episcopales, castillos, señoríos y empeños dentro de estas celdas. Eslavonia y Croacia eligen reyes distintos en 1527; la capa no extrapola la elección croata al conjunto eslavón.",
+        "source": "https://www.enciklopedija.hr/clanak/slavonija"
+      },
+      "note": "Núcleos de ciudades reales de Eslavonia: Varaždin desde 1209, Gradec/Zagreb desde 1242 y Koprivnica desde 1356. La soberanía de la Corona se distingue de jurisdicciones episcopales, castillos, señoríos y empeños dentro de estas celdas. Eslavonia y Croacia eligen reyes distintos en 1527; la capa no extrapola la elección croata al conjunto eslavón.",
+      "versions": [
+        {
+          "from": 1209,
+          "oldIds": [],
+          "ids": [
+            "Varazdin"
+          ],
+          "borderline": []
+        },
+        {
+          "from": 1242,
+          "oldIds": [],
+          "ids": [
+            "Varazdin",
+            "Zagreb"
+          ],
+          "borderline": []
+        },
+        {
+          "from": 1356,
+          "oldIds": [],
+          "ids": [
+            "Varazdin",
+            "Zagreb",
+            "Koprivnica"
+          ],
+          "borderline": []
+        }
+      ],
+      "sources": [
+        {
+          "title": "Hrvatska enciklopedija · Slavonija",
+          "url": "https://www.enciklopedija.hr/clanak/slavonija",
+          "locator": "Reino medieval de Eslavonia; en 1527 sus estamentos y los croatas eligieron reyes diferentes. No se extiende una elección automáticamente al otro reino."
+        },
+        {
+          "title": "Hrvatska enciklopedija · Varaždin",
+          "url": "https://www.enciklopedija.hr/clanak/varazdin",
+          "locator": "Privilegio real de Andrés II en 1209; confirmaciones de Luis I y Segismundo. Ciudad, castillo y jurisdicciones señoriales no son idénticos."
+        },
+        {
+          "title": "Hrvatska enciklopedija · Zagreb",
+          "url": "https://www.enciklopedija.hr/clanak/zagreb",
+          "locator": "Gradec recibe el privilegio de ciudad real de Bela IV en 1242; Kaptol conserva jurisdicción episcopal. La celda representa un entorno mixto bajo soberanía de la Corona."
+        },
+        {
+          "title": "Ciudad de Koprivnica · transcripción del privilegio de 1356",
+          "url": "https://koprivnica.hr/koprivnica/dan-grada-koprivnice/",
+          "locator": "Carta de Luis I de 4 de noviembre de 1356: ciudad libre real. La soberanía no elimina posteriores señoríos o empeños."
+        }
+      ]
+    },
+    {
+      "corridor": "Borgoña e Imperio",
+      "name": "Moravia (núcleo de Brno)",
+      "color": "#8C8052",
+      "precision": "documented_core",
+      "coverage": {
+        "from": 1349,
+        "through": 1800
+      },
+      "active": {
+        "from": 1349,
+        "through": 1800,
+        "reason": "Núcleo urbano y residencial de Brno, sin convertir el título del margrave en propiedad de toda Moravia. Juan Enrique y Jobst tienen mandatos propios; Alberto recibe Moravia en 1423; Matías Corvino ejerce autoridad regional desde 1469 y Vladislao desde 1490. La sucesión morava pasa de Rodolfo a Matías en 1608, tres años antes que Bohemia. No se atribuye autoridad personal durante el interregno de 1440–1452.",
+        "source": "https://encyklopedie.brna.cz/home-mmb/?acc=profil_osobnosti&load=1780"
+      },
+      "note": "Núcleo urbano y residencial de Brno, sin convertir el título del margrave en propiedad de toda Moravia. Juan Enrique y Jobst tienen mandatos propios; Alberto recibe Moravia en 1423; Matías Corvino ejerce autoridad regional desde 1469 y Vladislao desde 1490. La sucesión morava pasa de Rodolfo a Matías en 1608, tres años antes que Bohemia. No se atribuye autoridad personal durante el interregno de 1440–1452.",
+      "versions": [
+        {
+          "from": 1349,
+          "oldIds": [],
+          "ids": [
+            "Brno"
+          ],
+          "borderline": []
+        }
+      ],
+      "sources": [
+        {
+          "title": "Encyklopedie dějin města Brna · Juan Enrique",
+          "url": "https://encyklopedie.brna.cz/home-mmb/?acc=profil_osobnosti&load=1780",
+          "locator": "Juan Enrique, margrave de Moravia, 1349–1375; residencia en Brno/Špilberk; reparto de propiedades entre sus tres hijos."
+        },
+        {
+          "title": "Encyklopedie dějin města Brna · Jobst",
+          "url": "https://encyklopedie.brna.cz/home-mmb/?acc=profil_osobnosti&load=225",
+          "locator": "Jobst, margrave, 1375–1411; Brno como residencia. Sus hermanos conservaban propiedades: no se representa toda Moravia como dominio exclusivo suyo."
+        },
+        {
+          "title": "Archivo municipal de Brno · privilegio de 17 de febrero de 1411",
+          "url": "https://encyklopedie.brna.cz/home-mmb/?acc=profil-udalosti&load=419",
+          "locator": "Wenceslao IV remite impuestos de Brno tras la muerte de Jobst; referencia al original del Archivo de Brno, colección de cartas y mandatos."
+        },
+        {
+          "title": "Instituto de Historia de la Academia Checa · Jiří-Joseph Veselý",
+          "url": "https://biography.hiu.cas.cz/wiki/ALBRECHT_II._Habsbursk%C3%BD_1397%E2%80%931439",
+          "locator": "Biografický slovník českých zemí 1 (2004), pp. 55–56: Segismundo concede Moravia como feudo a Alberto en octubre de 1423; sometimiento en 1424; no se espera a su realeza bohemia de 1438."
+        },
+        {
+          "title": "Archivo de Brno · Brno v minulosti a dnes 4",
+          "url": "https://archiv.brno.cz/documents/3815428/6181739/BMD04.pdf/ba164c4e-3c6b-40e6-0a0b-e758256e7fef?t=1693828117412",
+          "locator": "Fiscalidad de las ciudades reales moravas: Brno, Znojmo, Jihlava y Olomouc; interregno 1439–1453; Ladislao asume el gobierno en Brno en el verano de 1453; Matías ejerce autoridad desde la guerra de 1468/1469; reunificación con Vladislao en 1490."
+        },
+        {
+          "title": "Český sněm · edición de documentos parlamentarios de 1611",
+          "url": "https://public.psp.cz/eknih/snemy/v15a/1611/uvod01.htm",
+          "locator": "Tratado de Libeň de 1608: Rodolfo cede Hungría, Austria y Moravia a Matías, mientras conserva Bohemia. La geografía morava no sigue la sucesión bohemia hasta 1611."
+        },
+        {
+          "title": "Instituto de Historia de la Academia Checa · Jaroslav Pánek",
+          "url": "https://biography.hiu.cas.cz/wiki/FERDINAND_I._1503%E2%80%931564",
+          "locator": "Biografický slovník českých zemí 16 (2013), pp. 119–122: aceptación hereditaria separada de Moravia y Silesia en 1526; no son una mera proyección del título bohemio."
+        }
+      ],
+      "periods": [
+        {
+          "from": 1349,
+          "through": 1439
+        },
+        {
+          "from": 1453,
+          "through": 1800
+        }
+      ]
+    },
+    {
+      "corridor": "Borgoña e Imperio",
+      "name": "Moravia (núcleo de Olomouc)",
+      "color": "#92875A",
+      "precision": "documented_core",
+      "coverage": {
+        "from": 1378,
+        "through": 1800
+      },
+      "active": {
+        "from": 1378,
+        "through": 1800,
+        "reason": "Entorno de la ciudad real de Olomouc desde el privilegio original de Jobst de 1378. La autoridad regional del margrave no convierte la celda en propiedad exclusiva ni borra la jurisdicción episcopal. Se distingue de la realeza bohemia bajo Corvino y en 1608–1611. Las ocupaciones sueca de 1642–1650 y prusiana de 1741–1742 tienen capas propias; la escala anual incluye el año de capitulación de diciembre de 1741. El interregno de 1440–1452 queda fuera.",
+        "source": "https://archivy.olomouc.eu/archivy/detail-archivalie/19594"
+      },
+      "note": "Entorno de la ciudad real de Olomouc desde el privilegio original de Jobst de 1378. La autoridad regional del margrave no convierte la celda en propiedad exclusiva ni borra la jurisdicción episcopal. Se distingue de la realeza bohemia bajo Corvino y en 1608–1611. Las ocupaciones sueca de 1642–1650 y prusiana de 1741–1742 tienen capas propias; la escala anual incluye el año de capitulación de diciembre de 1741. El interregno de 1440–1452 queda fuera.",
+      "versions": [
+        {
+          "from": 1378,
+          "oldIds": [],
+          "ids": [
+            "Olomouc"
+          ],
+          "borderline": []
+        }
+      ],
+      "sources": [
+        {
+          "title": "Archivo municipal de Olomouc · carta original de Jobst",
+          "url": "https://archivy.olomouc.eu/archivy/detail-archivalie/19594",
+          "locator": "Archivo del distrito de Olomouc, fondo Archivo de la ciudad, Cartas, inventario 37: permiso del margrave Jobst de 1378 para construir ayuntamiento y casa mercantil."
+        },
+        {
+          "title": "Municipio de Olomouc · historia de la ciudad",
+          "url": "https://tourism.olomouc.eu/historie/",
+          "locator": "Privilegio de Jobst en 1378; fidelidad a Segismundo; elección de Corvino en 1469 y acuerdo de 1479; Federico del Palatinado en 1620; ocupación sueca 1642–1650 y prusiana 1741–1742; confirmación regia de María Teresa en 1762."
+        },
+        {
+          "title": "Municipio de Olomouc · Matías Corvino",
+          "url": "https://tourism.olomouc.eu/osobnosti/matyas-korvin/",
+          "locator": "Elección en Olomouc de 1469; acuerdo de 1478/1479: Vladislao gobierna Bohemia y Matías conserva Moravia, Silesia y Lusacia."
+        },
+        {
+          "title": "Municipio de Olomouc · restauración de los escudos de la casa consistorial",
+          "url": "https://www.olomouc.eu/media/tiskove-zpravy/25811",
+          "locator": "Escudos de Vladislao de poco después de 1490: Hungría, Bohemia, margraviato de Moravia y ducado de Silesia, separados del escudo municipal."
+        },
+        {
+          "title": "Český sněm · edición de documentos parlamentarios de 1611",
+          "url": "https://public.psp.cz/eknih/snemy/v15a/1611/uvod01.htm",
+          "locator": "Tratado de Libeň de 1608: Rodolfo cede Hungría, Austria y Moravia a Matías, mientras conserva Bohemia. La geografía morava no sigue la sucesión bohemia hasta 1611."
+        },
+        {
+          "title": "Municipio de Olomouc · historia de la fortaleza",
+          "url": "https://www.olomouc.eu/aktualni-informace/aktuality/6124",
+          "locator": "Ocupación sueca de 1642–1650; declaración como fortaleza por Fernando III el 15 de septiembre de 1655; capitulación ante Prusia negociada el 27 de diciembre de 1741. La historia municipal fecha la ocupación en 1741–1742."
+        }
+      ],
+      "periods": [
+        {
+          "from": 1378,
+          "through": 1439
+        },
+        {
+          "from": 1453,
+          "through": 1641
+        },
+        {
+          "from": 1651,
+          "through": 1740
+        },
+        {
+          "from": 1743,
+          "through": 1800
+        }
+      ]
+    },
+    {
+      "corridor": "Borgoña e Imperio",
+      "name": "Olomouc (ocupación sueca)",
+      "color": "#927BA3",
+      "precision": "documented_core",
+      "coverage": {
+        "from": 1642,
+        "through": 1650
+      },
+      "active": {
+        "from": 1642,
+        "through": 1650,
+        "reason": "Ocupación militar sueca de Olomouc desde su toma en 1642 hasta la retirada después del pago de la indemnización en 1650. No es una anexión de Moravia al reino sueco ni un título de margrave de Cristina.",
+        "source": "https://tourism.olomouc.eu/historie/"
+      },
+      "note": "Ocupación militar sueca de Olomouc desde su toma en 1642 hasta la retirada después del pago de la indemnización en 1650. No es una anexión de Moravia al reino sueco ni un título de margrave de Cristina.",
+      "versions": [
+        {
+          "from": 1642,
+          "oldIds": [],
+          "ids": [
+            "Olomouc"
+          ],
+          "borderline": []
+        }
+      ],
+      "sources": [
+        {
+          "title": "Municipio de Olomouc · historia de la ciudad",
+          "url": "https://tourism.olomouc.eu/historie/",
+          "locator": "Privilegio de Jobst en 1378; fidelidad a Segismundo; elección de Corvino en 1469 y acuerdo de 1479; Federico del Palatinado en 1620; ocupación sueca 1642–1650 y prusiana 1741–1742; confirmación regia de María Teresa en 1762."
+        },
+        {
+          "title": "Municipio de Olomouc · historia de la fortaleza",
+          "url": "https://www.olomouc.eu/aktualni-informace/aktuality/6124",
+          "locator": "Ocupación sueca de 1642–1650; declaración como fortaleza por Fernando III el 15 de septiembre de 1655; capitulación ante Prusia negociada el 27 de diciembre de 1741. La historia municipal fecha la ocupación en 1741–1742."
+        }
+      ],
+      "authorityCondition": "control disputado"
+    },
+    {
+      "corridor": "Borgoña e Imperio",
+      "name": "Olomouc (ocupación prusiana)",
+      "color": "#927BA3",
+      "precision": "documented_core",
+      "coverage": {
+        "from": 1741,
+        "through": 1742
+      },
+      "active": {
+        "from": 1741,
+        "through": 1742,
+        "reason": "Ocupación prusiana de Olomouc: capitulación del 27 de diciembre de 1741 y evacuación en 1742 según la historia municipal. No se confunde con la cesión permanente de los núcleos de Baja Silesia a Prusia en 1742 ni se extiende a toda Moravia.",
+        "source": "https://www.olomouc.eu/aktualni-informace/aktuality/6124"
+      },
+      "note": "Ocupación prusiana de Olomouc: capitulación del 27 de diciembre de 1741 y evacuación en 1742 según la historia municipal. No se confunde con la cesión permanente de los núcleos de Baja Silesia a Prusia en 1742 ni se extiende a toda Moravia.",
+      "versions": [
+        {
+          "from": 1741,
+          "oldIds": [],
+          "ids": [
+            "Olomouc"
+          ],
+          "borderline": []
+        }
+      ],
+      "sources": [
+        {
+          "title": "Municipio de Olomouc · historia de la fortaleza",
+          "url": "https://www.olomouc.eu/aktualni-informace/aktuality/6124",
+          "locator": "Ocupación sueca de 1642–1650; declaración como fortaleza por Fernando III el 15 de septiembre de 1655; capitulación ante Prusia negociada el 27 de diciembre de 1741. La historia municipal fecha la ocupación en 1741–1742."
+        },
+        {
+          "title": "Municipio de Olomouc · historia de la ciudad",
+          "url": "https://tourism.olomouc.eu/historie/",
+          "locator": "Privilegio de Jobst en 1378; fidelidad a Segismundo; elección de Corvino en 1469 y acuerdo de 1479; Federico del Palatinado en 1620; ocupación sueca 1642–1650 y prusiana 1741–1742; confirmación regia de María Teresa en 1762."
+        }
+      ],
+      "authorityCondition": "control disputado"
+    },
+    {
+      "corridor": "Hungría y Balcanes",
+      "name": "Trebisonda (núcleo de Trabzon, Sürmene y Rize)",
+      "color": "#78885B",
+      "precision": "documented_core",
+      "coverage": {
+        "from": 1204,
+        "through": 1460
+      },
+      "active": {
+        "from": 1204,
+        "through": 1460,
+        "reason": "Núcleo oriental de la costa póntica bajo los Comnenos de Trebisonda: Trabzon, Sürmene y Rize, con cronología regional documentada. Se excluyen Giresun/Ordu, de control turcomano cambiante, y los macizos o entornos lazios cuyo control no se ha delimitado. Termina en 1460: la conquista otomana de 1461 se resuelve con la cronología otomana y no con un imperio prolongado hasta 1800.",
+        "source": "https://trabzon.ktb.gov.tr/TR-212974/tarihcesi.html"
+      },
+      "note": "Núcleo oriental de la costa póntica bajo los Comnenos de Trebisonda: Trabzon, Sürmene y Rize, con cronología regional documentada. Se excluyen Giresun/Ordu, de control turcomano cambiante, y los macizos o entornos lazios cuyo control no se ha delimitado. Termina en 1460: la conquista otomana de 1461 se resuelve con la cronología otomana y no con un imperio prolongado hasta 1800.",
+      "versions": [
+        {
+          "from": 1204,
+          "oldIds": [],
+          "ids": [
+            "Trebizond",
+            "Surmene",
+            "Rize"
+          ],
+          "borderline": []
+        }
+      ],
+      "sources": [
+        {
+          "title": "Ministerio turco de Cultura · historia de Trabzon",
+          "url": "https://trabzon.ktb.gov.tr/TR-212974/tarihcesi.html",
+          "locator": "Fundación del imperio de los Comnenos en 1204; conquista y rendición a Mehmed II en 1461. La capa termina en 1460 por la escala anual."
+        },
+        {
+          "title": "Ministerio turco de Cultura · Sürmene",
+          "url": "https://trabzon.ktb.gov.tr/TR-57625/surmene.html",
+          "locator": "Sürmene dentro de la autoridad de los Comnenos de Trabzon entre 1204 y 1461. Se excluyen los entornos occidentales de control turcomano cambiante."
+        },
+        {
+          "title": "Gobernación de Rize · historia de la región",
+          "url": "https://www.rize.gov.tr/rizenin-tarihcesi",
+          "locator": "Rize queda dentro del imperio de los Comnenos establecido en 1204; incorporación otomana en 1461. No se deduce de ello control de toda Lazica o de todos los macizos del Cáucaso."
+        }
+      ]
+    },
+    {
+      "corridor": "Borgoña e Imperio",
+      "name": "Silesia real (Wrocław y Środa)",
+      "color": "#8C6996",
+      "precision": "documented_core",
+      "coverage": {
+        "from": 1335,
+        "through": 1740
+      },
+      "active": {
+        "from": 1335,
+        "through": 1740,
+        "reason": "Núcleo del ducado real de Wrocław, incorporado a la Corona bohemia en 1335. No incluye automáticamente los ducados de los Piastas ni Nysa episcopal. El rechazo local de Jorge de Poděbrady y el homenaje provisional de 1460 se documentan como disputa; Matías Corvino recibe autoridad regional en 1469. Federico del Palatinado es reconocido en Wrocław en 1620. La capa termina antes de la conquista prusiana de 1741.",
+        "source": "https://www.wroclaw.pl/dla-mieszkanca/historia-wroclawia-najwazniejsze-fakty"
+      },
+      "note": "Núcleo del ducado real de Wrocław, incorporado a la Corona bohemia en 1335. No incluye automáticamente los ducados de los Piastas ni Nysa episcopal. El rechazo local de Jorge de Poděbrady y el homenaje provisional de 1460 se documentan como disputa; Matías Corvino recibe autoridad regional en 1469. Federico del Palatinado es reconocido en Wrocław en 1620. La capa termina antes de la conquista prusiana de 1741.",
+      "versions": [
+        {
+          "from": 1335,
+          "oldIds": [],
+          "ids": [
+            "Wroclaw",
+            "Sroda_Slaska"
+          ],
+          "borderline": []
+        }
+      ],
+      "sources": [
+        {
+          "title": "Municipio de Wrocław · historia",
+          "url": "https://www.wroclaw.pl/dla-mieszkanca/historia-wroclawia-najwazniejsze-fakty",
+          "locator": "Ducado de Wrocław incorporado a la Corona de Bohemia en 1335 tras la muerte de Enrique VI; Habsburgo en 1526; conquista prusiana en 1741."
+        },
+        {
+          "title": "Powiat Średzki · historia institucional",
+          "url": "https://powiat-sredzki.pl/historia/",
+          "locator": "Środa Śląska dentro del ducado real de Wrocław tras 1335; etapa habsbúrgica desde 1526 y cambio prusiano de 1742."
+        },
+        {
+          "title": "Universidad de Opole · Bogusław Czechowicz, investigación original",
+          "url": "https://repo.uni.opole.pl/info/book/UO837c49b0a5a647cbaf6138d9f7575bb7",
+          "locator": "Idea i państwo, tomo 2: Wrocław rechaza la elección de Jorge en 1458; homenaje provisional en 1460, con plazo de tres años. Se conserva como control disputado, no autoridad uniforme."
+        },
+        {
+          "title": "Archiwa Państwowe · carta real original de 1469",
+          "url": "https://www.szukajwarchiwach.gov.pl/jednostka/-/jednostka/36351512",
+          "locator": "Matías Corvino confirma en 1469 los privilegios de Wrocław y Środa Śląska concedidos por Juan y Wenceslao. Autoridad regional efectiva pese a su título rival en Bohemia."
+        },
+        {
+          "title": "Instituto de Historia de la Academia Checa · Jaroslav Pánek",
+          "url": "https://biography.hiu.cas.cz/wiki/FERDINAND_I._1503%E2%80%931564",
+          "locator": "Biografický slovník českých zemí 16 (2013), pp. 119–122: aceptación hereditaria separada de Moravia y Silesia en 1526; no son una mera proyección del título bohemio."
+        },
+        {
+          "title": "Portal gubernamental ZPE · impreso de homenaje de 1620",
+          "url": "https://zpe.gov.pl/kronika/756505",
+          "locator": "Thomas Sagittarius, Porta pacis, 1620: entrada de Federico, rey de Bohemia, en Wrocław en febrero de 1620. Su reconocimiento no se sustituye por la pretensión rival de Fernando II."
+        }
+      ],
+      "periods": [
+        {
+          "from": 1335,
+          "through": 1439
+        },
+        {
+          "from": 1453,
+          "through": 1457
+        },
+        {
+          "from": 1460,
+          "through": 1463
+        },
+        {
+          "from": 1469,
+          "through": 1740
+        }
+      ]
+    },
+    {
+      "corridor": "Borgoña e Imperio",
+      "name": "Silesia real (Głogów)",
+      "color": "#92759A",
+      "precision": "documented_core",
+      "coverage": {
+        "from": 1508,
+        "through": 1740
+      },
+      "active": {
+        "from": 1508,
+        "through": 1740,
+        "reason": "Núcleo de Głogów desde su incorporación formal al patrimonio hereditario de la Corona en 1508. Los gobiernos principescos jagellones y la transición de 1488–1508 quedan fuera. No se asimila a todos los ducados silesianos; la soberanía bohemia y después habsbúrgica termina antes de la ocupación prusiana de 1741.",
+        "source": "https://powiat.glogow.pl/powiat-glogowski-dawniej/"
+      },
+      "note": "Núcleo de Głogów desde su incorporación formal al patrimonio hereditario de la Corona en 1508. Los gobiernos principescos jagellones y la transición de 1488–1508 quedan fuera. No se asimila a todos los ducados silesianos; la soberanía bohemia y después habsbúrgica termina antes de la ocupación prusiana de 1741.",
+      "versions": [
+        {
+          "from": 1508,
+          "oldIds": [],
+          "ids": [
+            "Glogow"
+          ],
+          "borderline": []
+        }
+      ],
+      "sources": [
+        {
+          "title": "Powiat Głogowski · historia institucional",
+          "url": "https://powiat.glogow.pl/powiat-glogowski-dawniej/",
+          "locator": "Feudo de la Corona desde 1329–1331; territorio hereditario de la Corona de facto en 1488 y formalmente en 1508; Habsburgo en 1526; Prusia desde 1742. Se inicia en 1508 para excluir los gobiernos principescos jagellones anteriores."
+        },
+        {
+          "title": "Instituto de Historia de la Academia Checa · Jaroslav Pánek",
+          "url": "https://biography.hiu.cas.cz/wiki/FERDINAND_I._1503%E2%80%931564",
+          "locator": "Biografický slovník českých zemí 16 (2013), pp. 119–122: aceptación hereditaria separada de Moravia y Silesia en 1526; no son una mera proyección del título bohemio."
+        }
+      ]
+    },
+    {
+      "corridor": "Borgoña e Imperio",
+      "name": "Silesia (ocupación prusiana de 1741)",
+      "color": "#927BA3",
+      "precision": "documented_core",
+      "coverage": {
+        "from": 1741,
+        "through": 1741
+      },
+      "active": {
+        "from": 1741,
+        "through": 1741,
+        "reason": "Núcleos ocupados por Federico II en la campaña de 1741. Se representan como ocupación: los homenajes de octubre/noviembre de 1741 preceden a la cesión pactada en 1742. La escala anual no reconstruye movimientos diarios ni equipara ocupación y soberanía reconocida.",
+        "source": "https://archivdatenbank.gsta.spk-berlin.de/midosasearch-gsta/MidosaSEARCH/i_ha_gr_rep_46_b/xml/inhalt/GStA_i_ha_gr_rep_46_b_15_2.htm"
+      },
+      "note": "Núcleos ocupados por Federico II en la campaña de 1741. Se representan como ocupación: los homenajes de octubre/noviembre de 1741 preceden a la cesión pactada en 1742. La escala anual no reconstruye movimientos diarios ni equipara ocupación y soberanía reconocida.",
+      "versions": [
+        {
+          "from": 1741,
+          "oldIds": [],
+          "ids": [
+            "Wroclaw",
+            "Sroda_Slaska",
+            "Glogow"
+          ],
+          "borderline": []
+        }
+      ],
+      "sources": [
+        {
+          "title": "Geheimes Staatsarchiv Preußischer Kulturbesitz · documentos de homenaje de 1741",
+          "url": "https://archivdatenbank.gsta.spk-berlin.de/midosasearch-gsta/MidosaSEARCH/i_ha_gr_rep_46_b/xml/inhalt/GStA_i_ha_gr_rep_46_b_15_2.htm",
+          "locator": "I. HA GR Rep. 46 B, Nr. 94–98: homenaje de Baja Silesia a Federico II en octubre y noviembre de 1741. Ocupación en 1741; cesión jurídica territorial en 1742."
+        },
+        {
+          "title": "Municipio de Wrocław · historia",
+          "url": "https://www.wroclaw.pl/dla-mieszkanca/historia-wroclawia-najwazniejsze-fakty",
+          "locator": "Ducado de Wrocław incorporado a la Corona de Bohemia en 1335 tras la muerte de Enrique VI; Habsburgo en 1526; conquista prusiana en 1741."
+        },
+        {
+          "title": "Powiat Głogowski · historia institucional",
+          "url": "https://powiat.glogow.pl/powiat-glogowski-dawniej/",
+          "locator": "Feudo de la Corona desde 1329–1331; territorio hereditario de la Corona de facto en 1488 y formalmente en 1508; Habsburgo en 1526; Prusia desde 1742. Se inicia en 1508 para excluir los gobiernos principescos jagellones anteriores."
+        }
+      ],
+      "authorityCondition": "control disputado"
+    },
+    {
+      "corridor": "Borgoña e Imperio",
+      "name": "Silesia prusiana (núcleos)",
+      "color": "#65778A",
+      "precision": "documented_core",
+      "coverage": {
+        "from": 1742,
+        "through": 1800
+      },
+      "active": {
+        "from": 1742,
+        "through": 1800,
+        "reason": "Núcleos de Wrocław, Środa Śląska y Głogów bajo soberanía prusiana desde el tratado de 1742. No se afirma que estos tres entornos agoten toda la Silesia prusiana. Teschen queda en el remanente de la Corona habsbúrgica y no se colorea como prusiano.",
+        "source": "https://www.opava-city.cz/cz/mesto-urad/o-meste/aktuality/vyznamne-udalosti.html"
+      },
+      "note": "Núcleos de Wrocław, Środa Śląska y Głogów bajo soberanía prusiana desde el tratado de 1742. No se afirma que estos tres entornos agoten toda la Silesia prusiana. Teschen queda en el remanente de la Corona habsbúrgica y no se colorea como prusiano.",
+      "versions": [
+        {
+          "from": 1742,
+          "oldIds": [],
+          "ids": [
+            "Wroclaw",
+            "Sroda_Slaska",
+            "Glogow"
+          ],
+          "borderline": []
+        }
+      ],
+      "sources": [
+        {
+          "title": "Municipio de Opava · historia de la ciudad",
+          "url": "https://www.opava-city.cz/cz/mesto-urad/o-meste/aktuality/vyznamne-udalosti.html",
+          "locator": "Tratado de Wrocław de 11 de junio de 1742: división de Silesia entre Prusia y Austria. El río Opava separa jurisdicciones; no se atribuyen celdas enteras de Opava, Hlučín o Krnov al remanente austríaco."
+        },
+        {
+          "title": "Geheimes Staatsarchiv Preußischer Kulturbesitz · documentos de homenaje de 1741",
+          "url": "https://archivdatenbank.gsta.spk-berlin.de/midosasearch-gsta/MidosaSEARCH/i_ha_gr_rep_46_b/xml/inhalt/GStA_i_ha_gr_rep_46_b_15_2.htm",
+          "locator": "I. HA GR Rep. 46 B, Nr. 94–98: homenaje de Baja Silesia a Federico II en octubre y noviembre de 1741. Ocupación en 1741; cesión jurídica territorial en 1742."
+        },
+        {
+          "title": "Powiat Głogowski · historia institucional",
+          "url": "https://powiat.glogow.pl/powiat-glogowski-dawniej/",
+          "locator": "Feudo de la Corona desde 1329–1331; territorio hereditario de la Corona de facto en 1488 y formalmente en 1508; Habsburgo en 1526; Prusia desde 1742. Se inicia en 1508 para excluir los gobiernos principescos jagellones anteriores."
+        }
+      ]
+    },
+    {
+      "corridor": "Borgoña e Imperio",
+      "name": "Silesia austríaca (núcleo de Teschen)",
+      "color": "#9A7780",
+      "precision": "documented_core",
+      "coverage": {
+        "from": 1742,
+        "through": 1800
+      },
+      "active": {
+        "from": 1742,
+        "through": 1800,
+        "reason": "Núcleo de Teschen/Cieszyn en la Silesia que permanece bajo soberanía de la Corona habsbúrgica tras 1742. Los duques de Lorena y después Sajonia-Teschen ejercen el señorío delegado del feudo; María Teresa no se convierte por ello en duquesa propietaria. Opava, Hlučín y Krnov se omiten porque la nueva frontera fluvial divide sus entornos regionales.",
+        "source": "https://www.archiwum.cieszyn.pl/?iCategory=2473&p=categoriesShow"
+      },
+      "note": "Núcleo de Teschen/Cieszyn en la Silesia que permanece bajo soberanía de la Corona habsbúrgica tras 1742. Los duques de Lorena y después Sajonia-Teschen ejercen el señorío delegado del feudo; María Teresa no se convierte por ello en duquesa propietaria. Opava, Hlučín y Krnov se omiten porque la nueva frontera fluvial divide sus entornos regionales.",
+      "versions": [
+        {
+          "from": 1742,
+          "oldIds": [],
+          "ids": [
+            "Tesin"
+          ],
+          "borderline": []
+        }
+      ],
+      "sources": [
+        {
+          "title": "Archivo/municipio de Cieszyn · investigación de los duques de Teschen",
+          "url": "https://www.archiwum.cieszyn.pl/?iCategory=2473&p=categoriesShow",
+          "locator": "Feudo de la Corona bohemia desde 1327; soberanía habsbúrgica desde 1526; Piastas hasta 1653. Ducado habsbúrgico 1653–1722; Lorena 1722–1765; José II 1765–1766; María Cristina y Alberto de Sajonia desde 1766. Permanece en el lado austríaco tras 1742."
+        },
+        {
+          "title": "Municipio de Opava · historia de la ciudad",
+          "url": "https://www.opava-city.cz/cz/mesto-urad/o-meste/aktuality/vyznamne-udalosti.html",
+          "locator": "Tratado de Wrocław de 11 de junio de 1742: división de Silesia entre Prusia y Austria. El río Opava separa jurisdicciones; no se atribuyen celdas enteras de Opava, Hlučín o Krnov al remanente austríaco."
+        }
+      ]
+    },
+    {
+      "corridor": "Borgoña e Imperio",
+      "name": "Ducado de Brzeg (núcleo piasta)",
+      "color": "#AD7959",
+      "precision": "documented_core",
+      "coverage": {
+        "from": 1547,
+        "through": 1586
+      },
+      "active": {
+        "from": 1547,
+        "through": 1586,
+        "reason": "Núcleo ducal de Brzeg durante el gobierno de Jorge II, 1547–1586. Autoridad territorial de un príncipe feudatario de la Corona bohemia, distinta del dominio directo del rey. Se omiten otros ducados y las posteriores administraciones hasta completar sus mandatos.",
+        "source": "https://atlasmiast.umk.pl/pliki/brzeg/AHMP_Brzeg_opis.pdf"
+      },
+      "note": "Núcleo ducal de Brzeg durante el gobierno de Jorge II, 1547–1586. Autoridad territorial de un príncipe feudatario de la Corona bohemia, distinta del dominio directo del rey. Se omiten otros ducados y las posteriores administraciones hasta completar sus mandatos.",
+      "versions": [
+        {
+          "from": 1547,
+          "oldIds": [],
+          "ids": [
+            "Brzeg"
+          ],
+          "borderline": []
+        }
+      ],
+      "sources": [
+        {
+          "title": "Universidad Nicolás Copérnico · Atlas histórico de Brzeg",
+          "url": "https://atlasmiast.umk.pl/pliki/brzeg/AHMP_Brzeg_opis.pdf",
+          "locator": "Atlas histórico de ciudades polacas: Jorge II gobierna Brzeg en 1547–1586; Joaquín Federico 1586–1602; Juan Cristián 1609–1639; administración imperial desde 1635. No equivale al dominio directo del rey sobre todos los ducados piastas."
+        }
+      ]
+    }
+  ],
+  "evidence": [
+    {
+      "territory": "Palatinado",
+      "from": 1505,
+      "through": 1800,
+      "ids": [
+        "Burglengenfeld"
+      ],
+      "action": "remove",
+      "source": "https://www.historisches-lexikon-bayerns.de/Lexikon/Artikel_45318",
+      "reason": "Burglengenfeld pertenece a Pfalz-Neuburg desde 1505, no al electorado palatino. Los posibles empeños palatinos anteriores requieren una cronología independiente.",
+      "supportingSources": [
+        {
+          "title": "Historisches Lexikon Bayerns · Markus Nadler",
+          "url": "https://www.historisches-lexikon-bayerns.de/Lexikon/Artikel_45318",
+          "locator": "Pfalz-Neuburg (Territorium): fundación en 1505; Neuburg en el Danubio y Burglengenfeld en el Nordgau. Dillingen no equivale a las posesiones de Lauingen/Höchstädt."
+        },
+        {
+          "title": "Historisches Lexikon Bayerns · Pfalz-Neuburg (Politische Geschichte)",
+          "url": "https://www.historisches-lexikon-bayerns.de/Lexikon/Artikel_45317",
+          "locator": "Corregencia de Otón Enrique y Felipe desde 1522; reparto de 1535–1541; ocupación imperial de 1546; restitución por la Paz de Passau en 1552; sucesión hasta Carlos Teodoro."
+        }
+      ]
+    },
+    {
+      "territory": "Baviera",
+      "from": 1505,
+      "through": 1800,
+      "ids": [
+        "Burglengenfeld"
+      ],
+      "action": "remove",
+      "source": "https://www.historisches-lexikon-bayerns.de/Lexikon/Artikel_45318",
+      "reason": "Burglengenfeld queda en Pfalz-Neuburg; la cesión del Alto Palatinado a Baviera en 1628 no lo transfiere. La unión personal de 1777/1778 tampoco elimina retrospectivamente el principado.",
+      "supportingSources": [
+        {
+          "title": "Historisches Lexikon Bayerns · Markus Nadler",
+          "url": "https://www.historisches-lexikon-bayerns.de/Lexikon/Artikel_45318",
+          "locator": "Pfalz-Neuburg (Territorium): fundación en 1505; Neuburg en el Danubio y Burglengenfeld en el Nordgau. Dillingen no equivale a las posesiones de Lauingen/Höchstädt."
+        },
+        {
+          "title": "Historisches Lexikon Bayerns · Pfalz-Neuburg (Politische Geschichte)",
+          "url": "https://www.historisches-lexikon-bayerns.de/Lexikon/Artikel_45317",
+          "locator": "Corregencia de Otón Enrique y Felipe desde 1522; reparto de 1535–1541; ocupación imperial de 1546; restitución por la Paz de Passau en 1552; sucesión hasta Carlos Teodoro."
+        }
+      ]
+    },
+    {
+      "territory": "Tirol",
+      "from": 1200,
+      "through": 1503,
+      "ids": [
+        "Kufstein",
+        "Kitzbuhel"
+      ],
+      "action": "remove",
+      "source": "https://www.historisches-lexikon-bayerns.de/Lexikon/Territorialentwicklung_in_Altbayern",
+      "reason": "Estos núcleos de las ramas bávaras no pertenecen al Tirol anterior a la guerra sucesoria. Se conserva por separado la ocupación de 1504 y el arreglo jurídico de 1505.",
+      "supportingSources": [
+        {
+          "title": "Historisches Lexikon Bayerns · Gerhard Immler",
+          "url": "https://www.historisches-lexikon-bayerns.de/Lexikon/Territorialentwicklung_in_Altbayern",
+          "locator": "Divisiones de 1255, 1349, 1353 y 1392; localidades de cada rama; reparto de Straubing en 1429; herencia de Ingolstadt en 1445 y acuerdo de 1450; cesiones de 1505."
+        },
+        {
+          "title": "Archivo del Tirol · fuente 18: Kufstein 1504",
+          "url": "https://www.tirol.gv.at/kunst-kultur/landesarchiv/archiv-quelle/18/",
+          "locator": "Maximiliano toma Kufstein el 17 de octubre de 1504 durante la guerra sucesoria. La ocupación de 1504 se distingue de las cesiones fijadas por el arbitraje de 1505."
+        }
+      ]
+    },
+    {
+      "territory": "Tirol",
+      "from": 1504,
+      "through": 1504,
+      "ids": [
+        "Kufstein",
+        "Kitzbuhel"
+      ],
+      "action": "add",
+      "authorityCondition": "control disputado",
+      "source": "https://www.tirol.gv.at/kunst-kultur/landesarchiv/archiv-quelle/18/",
+      "reason": "Control adquirido en la guerra sucesoria de 1504, con toma de Kufstein el 17 de octubre. Se muestra como ocupación/control disputado antes del arbitraje y la cesión de 1505.",
+      "supportingSources": [
+        {
+          "title": "Archivo del Tirol · fuente 18: Kufstein 1504",
+          "url": "https://www.tirol.gv.at/kunst-kultur/landesarchiv/archiv-quelle/18/",
+          "locator": "Maximiliano toma Kufstein el 17 de octubre de 1504 durante la guerra sucesoria. La ocupación de 1504 se distingue de las cesiones fijadas por el arbitraje de 1505."
+        },
+        {
+          "title": "Historisches Lexikon Bayerns · Gerhard Immler",
+          "url": "https://www.historisches-lexikon-bayerns.de/Lexikon/Territorialentwicklung_in_Altbayern",
+          "locator": "Divisiones de 1255, 1349, 1353 y 1392; localidades de cada rama; reparto de Straubing en 1429; herencia de Ingolstadt en 1445 y acuerdo de 1450; cesiones de 1505."
+        }
+      ]
+    },
+    {
+      "territory": "Bohemia",
+      "from": 1349,
+      "through": 1800,
+      "ids": [
+        "Brno"
+      ],
+      "action": "remove",
+      "source": "https://encyklopedie.brna.cz/home-mmb/?acc=profil_osobnosti&load=1780",
+      "reason": "Brno se resuelve por sus mandatos moravos propios desde Juan Enrique: no hereda automáticamente la cronología del rey de Bohemia, especialmente bajo Alberto desde 1423, Corvino en 1469–1490 y Matías en 1608–1611.",
+      "supportingSources": [
+        {
+          "title": "Encyklopedie dějin města Brna · Juan Enrique",
+          "url": "https://encyklopedie.brna.cz/home-mmb/?acc=profil_osobnosti&load=1780",
+          "locator": "Juan Enrique, margrave de Moravia, 1349–1375; residencia en Brno/Špilberk; reparto de propiedades entre sus tres hijos."
+        },
+        {
+          "title": "Encyklopedie dějin města Brna · Jobst",
+          "url": "https://encyklopedie.brna.cz/home-mmb/?acc=profil_osobnosti&load=225",
+          "locator": "Jobst, margrave, 1375–1411; Brno como residencia. Sus hermanos conservaban propiedades: no se representa toda Moravia como dominio exclusivo suyo."
+        },
+        {
+          "title": "Instituto de Historia de la Academia Checa · Jiří-Joseph Veselý",
+          "url": "https://biography.hiu.cas.cz/wiki/ALBRECHT_II._Habsbursk%C3%BD_1397%E2%80%931439",
+          "locator": "Biografický slovník českých zemí 1 (2004), pp. 55–56: Segismundo concede Moravia como feudo a Alberto en octubre de 1423; sometimiento en 1424; no se espera a su realeza bohemia de 1438."
+        },
+        {
+          "title": "Český sněm · edición de documentos parlamentarios de 1611",
+          "url": "https://public.psp.cz/eknih/snemy/v15a/1611/uvod01.htm",
+          "locator": "Tratado de Libeň de 1608: Rodolfo cede Hungría, Austria y Moravia a Matías, mientras conserva Bohemia. La geografía morava no sigue la sucesión bohemia hasta 1611."
+        }
+      ]
+    },
+    {
+      "territory": "Bohemia",
+      "from": 1378,
+      "through": 1800,
+      "ids": [
+        "Olomouc"
+      ],
+      "action": "remove",
+      "source": "https://archivy.olomouc.eu/archivy/detail-archivalie/19594",
+      "reason": "El privilegio original de Jobst y la cronología municipal permiten separar el núcleo moravo de Olomouc, incluidas sus ocupaciones temporales, de la sucesión bohemia genérica.",
+      "supportingSources": [
+        {
+          "title": "Archivo municipal de Olomouc · carta original de Jobst",
+          "url": "https://archivy.olomouc.eu/archivy/detail-archivalie/19594",
+          "locator": "Archivo del distrito de Olomouc, fondo Archivo de la ciudad, Cartas, inventario 37: permiso del margrave Jobst de 1378 para construir ayuntamiento y casa mercantil."
+        },
+        {
+          "title": "Municipio de Olomouc · historia de la ciudad",
+          "url": "https://tourism.olomouc.eu/historie/",
+          "locator": "Privilegio de Jobst en 1378; fidelidad a Segismundo; elección de Corvino en 1469 y acuerdo de 1479; Federico del Palatinado en 1620; ocupación sueca 1642–1650 y prusiana 1741–1742; confirmación regia de María Teresa en 1762."
+        },
+        {
+          "title": "Municipio de Olomouc · Matías Corvino",
+          "url": "https://tourism.olomouc.eu/osobnosti/matyas-korvin/",
+          "locator": "Elección en Olomouc de 1469; acuerdo de 1478/1479: Vladislao gobierna Bohemia y Matías conserva Moravia, Silesia y Lusacia."
+        }
+      ]
+    }
+  ]
+}

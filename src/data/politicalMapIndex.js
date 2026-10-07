@@ -2,11 +2,13 @@ import {idsDeReinoEnAño} from '../Territorios.jsx';
 import {imperialFrameIds} from './imperialFrame.js';
 import {mapLocationsForGovernment, pilotImperialFrameFor} from './locationMapPilot.js';
 import {mapAuthoritiesForPerson} from './mapAuthorities.js';
+import {CHRONOLOGY_COLLECTIVE_AUTHORITIES} from './atlasChronologyCollectives.js';
 
 // Hay años en los que la autoridad no puede atribuirse honestamente a una
 // sola persona. Estas entradas se muestran en el inspector, sin inventar un
 // gobierno personal en la base genealógica.
 export const COLLECTIVE_AUTHORITIES = Object.freeze([
+  ...CHRONOLOGY_COLLECTIVE_AUTHORITIES,
   {
     territorio: 'República de Ragusa', desde: 1400, hasta: 1650,
     nombre: 'Rector y consejos de la República de Ragusa', cargo: 'Gobierno republicano',
@@ -40,13 +42,14 @@ export function buildPoliticalMapIndex(personas, year, mapData = null, options =
   }
   for (const authority of COLLECTIVE_AUTHORITIES) {
     if (authority.desde > year || authority.hasta < year) continue;
+    if (authority.periods && !authority.periods.some(period=>period.desde<=year&&year<=period.hasta)) continue;
     const legacyIds = idsDeReinoEnAño(authority.territorio, year);
     const ids = mapData
       ? mapLocationsForGovernment(mapData, authority, year, null, legacyIds)
       : legacyIds;
     for (const id of ids) {
       push(id, {person:null,government:null,claim:null,territory:authority.territorio,
-        collective:authority,kind:'collective',paint:true});
+        collective:authority,kind:authority.kind || 'collective',paint:true});
     }
   }
   return regions;

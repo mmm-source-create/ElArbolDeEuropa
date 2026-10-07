@@ -1,25 +1,12 @@
+import {reviewedLayerLocations, reviewedLayerActive, reviewedLayerEvidence} from '../../src/data/locationMapPilot.js';
 const FRAME_ONLY_LAYERS = new Set(['Marco jurídico del Sacro Imperio']);
 
 function entriesFor(data) {
   return [...(data?.territories || []), ...(data?.additionalTerritories || [])];
 }
 
-function isActive(entry, year, data) {
-  if (entry.periods) return entry.periods.some(period => period.from <= year
-    && year <= (period.through ?? data.through));
-  return !entry.active || (entry.active.from ?? data.from) <= year
-    && year <= (entry.active.through ?? data.through);
-}
-
 function idsFor(entry, data, year) {
-  const version = [...(entry.versions || [])].reverse().find(candidate => candidate.from <= year);
-  const ids = new Set(version?.ids || []);
-  for (const correction of data.overrides || []) {
-    if (correction.territory !== entry.name || correction.from > year || correction.through < year) continue;
-    if (correction.action === 'add') ids.add(correction.id);
-    if (correction.action === 'remove') ids.delete(correction.id);
-  }
-  return [...ids];
+  return reviewedLayerLocations(data, entry, year);
 }
 
 function layerKey(entry) {
@@ -44,8 +31,15 @@ export function politicalMosaicAt(data, year, palette = mosaicPalette(data)) {
     return {year, layers: [], byLocation: new Map(), overlapCount: 0};
   }
   const layers = entriesFor(data)
-    .filter(entry => !FRAME_ONLY_LAYERS.has(entry.name) && isActive(entry, year, data))
-    .map(entry => ({...entry, key: layerKey(entry), mosaicColor: palette.get(layerKey(entry)), approximate: false, ids: idsFor(entry, data, year)}))
+    .filter(entry => !FRAME_ONLY_LAYERS.has(entry.name) && reviewedLayerActive(data, entry, year))
+    .map(entry => {
+      const evidence = reviewedLayerEvidence(entry, year);
+      return {...entry, note: evidence.note, sources: evidence.sources,
+        precision:evidence.precision, limitedCore:evidence.limitedCore,
+        active:{...entry.active,reason:evidence.activeReason,source:evidence.sources[0]?.url},
+        key: layerKey(entry), mosaicColor: palette.get(layerKey(entry)), approximate: false,
+        ids: idsFor(entry, data, year)};
+    }).filter(layer => layer.ids.length)
     .sort((a, b) => a.name.localeCompare(b.name, 'es') || a.corridor.localeCompare(b.corridor, 'es'));
   const byLocation = new Map();
   for (const layer of layers) {

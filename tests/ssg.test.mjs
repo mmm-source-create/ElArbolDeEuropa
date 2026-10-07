@@ -12,6 +12,12 @@ const assets={css:['assets/ficha.css'],js:['assets/ficha.js']};
 const sitemap=urls=>`<urlset>${urls.map(url=>`<url><loc>https://www.treeofeurope.eu${url}</loc></url>`).join('')}</urlset>`;
 const htmlFor=page=>makeStaticDocument(shell,{html:`<h1>${page.data.nombre}</h1><a href="${page.path}?atlas=1">Atlas</a>`,meta:publicMeta(entityMeta(page.kind,page.data,page.slug))},page,assets);
 
+test('la auditoría reconoce los preloads con crossorigin de una compilación multipágina',()=>{
+ const html=htmlFor(person).replace('rel="modulepreload" href=', 'rel="modulepreload" crossorigin href=');
+ assert.deepEqual(auditDocument(html,person,assets),[]);
+ assert(auditDocument(html.replace('href="/assets/ficha.js"','href="/assets/otra.js"'),person,assets).some(error=>error.includes('Módulo ausente')));
+});
+
 test('SSG admite solo fichas públicas y conserva el escape hacia el Atlas',()=>{
  for(const page of [person,dynasty,territory]) {
   assert.equal(validatePage(page),true);
