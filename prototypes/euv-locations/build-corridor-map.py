@@ -9,6 +9,7 @@ Requires shapely and svgpathtools in the generator environment.
 from __future__ import annotations
 
 import json
+import subprocess
 from pathlib import Path
 
 from shapely.strtree import STRtree
@@ -211,6 +212,7 @@ def main():
     }
     output = HERE / "corridor-locations.json"
     output.write_text(json.dumps(out, ensure_ascii=False, indent=2) + "\n")
+    subprocess.run(["node", str(HERE / "merge-map-expansions.mjs")], check=True)
     print(f"Wrote {output}: {len(output_territories)} territories, {len(old_shapes)} old polygons, {looked} candidate locations")
     for territory in output_territories:
         print(f"{territory['corridor']} / {territory['name']}: {len(territory['versions'])} versions, {len(territory['versions'][0]['ids'])} initial locations")

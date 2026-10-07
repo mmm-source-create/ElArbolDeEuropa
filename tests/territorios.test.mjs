@@ -43,7 +43,9 @@ test('Sucesión mantiene mandatos separados y no presenta agrupaciones como rein
  const s=sucesionDe(PERSONAS,'Bohemia',{disputas:true}).filter(f=>f.persona.id==='ENRIQCAR');assert.equal(s.length,2);
  assert.ok(sucesionDe(PERSONAS,'España').every(f=>f.gobierno.territorio!=='España'));
  assert.ok(sucesionDe(PERSONAS,'Venecia').length>=27);
- assert.ok(sucesionDe(PERSONAS,'Venecia').every(entry=>entry.gobierno.titulo==='Dogo'));
+ const venecia=sucesionDe(PERSONAS,'Venecia');
+ assert.ok(venecia.filter(entry=>entry.gobierno.desde<1798).every(entry=>entry.gobierno.titulo==='Dogo'));
+ assert.ok(venecia.some(entry=>entry.persona.id==='FRAN2HRE'&&entry.gobierno.desde===1798&&entry.gobierno.titulo==='Soberano'));
  assert.ok(sucesionDe(PERSONAS,'Castilla',{disputas:true}).some(f=>f.persona.id==='JUANA1CAST'));
  assert.ok(!sucesionDe(PERSONAS,'Castilla').some(f=>f.persona.id==='JUANA1CAST'));
  for(const condicion of ['titular','pretensión','rival','disputado'])assert.equal(gobiernoEfectivo(gov('Castilla',{condicion})),false);

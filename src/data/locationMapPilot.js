@@ -4,13 +4,19 @@ import {imperialFrameIds} from './imperialFrame.js';
 import {authorityExtensionFor} from './atlasAuthorityExtensions.js';
 import {applyMapBorderCorrections} from './mapBorderCorrections.js';
 import {authorityMapScope} from './authorityMapScopes.js';
+import {chronologyJurisdictionsFor, appendChronologyJurisdictions} from './atlasChronologyRoutes.js';
 
 const layerIndexes = new WeakMap();
 export function reviewedMapLayers(data) {
   if (!data) return [];
   if (!layerIndexes.has(data)) {
     const entries = [...(data.territories || []), ...(data.additionalTerritories || [])];
-    layerIndexes.set(data, {entries, byName: new Map(entries.map(entry => [entry.name, entry]))});
+    const corrections = new Map();
+    for (const correction of data.overrides || []) {
+      if (!corrections.has(correction.territory)) corrections.set(correction.territory, []);
+      corrections.get(correction.territory).push(correction);
+    }
+    layerIndexes.set(data, {entries, byName: new Map(entries.map(entry => [entry.name, entry])), corrections});
   }
   return layerIndexes.get(data).entries;
 }
@@ -21,6 +27,11 @@ function layerIndex(data) {
 }
 
 export function pilotJurisdictionsFor(territory, year, personId = null) {
+  const chronological=chronologyJurisdictionsFor(territory,year,personId);
+  return appendChronologyJurisdictions(chronological ?? basePilotJurisdictionsFor(territory,year,personId),territory,personId);
+}
+
+function basePilotJurisdictionsFor(territory, year, personId) {
   if (territory === 'Sacro Imperio') return [];
   if (territory === 'Herzegovina') return ['Núcleo de Herzegovina'];
   if (territory === 'Morea') return personId === 'THEODORE2MOREA' ? ['Núcleo de Mistra'] : [];
@@ -95,7 +106,7 @@ export function pilotJurisdictionsFor(territory, year, personId = null) {
 
 export function pilotImperialFrameFor(data, year) {
   if (!Number.isInteger(year)) return [];
-  if (year >= (data?.from ?? 1400) && year <= (data?.through ?? 1650)) {
+  if (reviewedLayerCovered(data, layerIndex(data).get('Marco jurídico del Sacro Imperio'), year)) {
     return pilotLocationsFor(data, 'Marco jurídico del Sacro Imperio', year);
   }
   return mapLocationsForGovernment(data, {territorio:'Sacro Imperio'}, year, null, imperialFrameIds(year));
@@ -120,10 +131,56 @@ function layerActiveInYear(entry, year, from = 1400, through = 1650) {
     && year <= (entry.active.through ?? through);
 }
 
+function temporalExtensionFor(entry, year) {
+  return (entry?.temporalExtensions || []).find(extension => extension.periods.some(period =>
+    period.from <= year && year <= period.through));
+}
+
+// Each layer has its own researched span. Expanding the timeline must never
+// carry a 1650 border into 1800 merely because it is the last stored version.
+export function reviewedLayerCovered(data, entry, year) {
+  if (!entry || !Number.isInteger(year) || year < data.from || year > data.through) return false;
+  if (temporalExtensionFor(entry, year)) return true;
+  const coverage = entry.coverage || data.basePeriod || {from: data.from, through: data.through};
+  return coverage.from <= year && year <= coverage.through;
+}
+
+export function reviewedLayerActive(data, entry, year) {
+  if (!reviewedLayerCovered(data, entry, year)) return false;
+  if (temporalExtensionFor(entry, year)) return true;
+  const coverage = entry.coverage || data.basePeriod || {from: data.from, through: data.through};
+  return layerActiveInYear(entry, year, coverage.from, coverage.through);
+}
+
+export function reviewedLayerVersion(data, entry, year) {
+  if (!reviewedLayerActive(data, entry, year)) return null;
+  const extension = temporalExtensionFor(entry, year);
+  return pilotVersionFor(extension || entry, year);
+}
+
+export function reviewedLayerEvidence(entry, year) {
+  const extension = temporalExtensionFor(entry, year);
+  const selected = extension || entry;
+  const raw = [...(selected?.sources || []), ...(selected?.source ? [selected.source] : []),
+    ...(selected?.active?.source ? [selected.active.source] : [])];
+  const sources = [...new Map(raw.map(source => typeof source === 'string'
+    ? {url: source, label: 'Fuente de la capa territorial'} : source)
+    .filter(source => source?.url).map(source => [source.url, source])).values()];
+  return {note: selected?.note || null, sources,
+    precision:selected?.precision || entry?.precision || null,
+    limitedCore:selected?.limitedCore ?? entry?.limitedCore ?? false,
+    activeReason:selected?.active?.reason || (extension ? selected?.note : null)};
+}
+
+export function mapSourceReference(source) {
+  return typeof source === 'string' ? {url:source,title:'Fuente complementaria'} : source;
+}
+
 function applyLayerCorrections(data, entry, ids, year) {
   const corrected = new Set(ids);
-  const active = (data?.overrides || []).filter(correction => correction.territory === entry.name
-    && correction.from <= year && year <= correction.through);
+  reviewedMapLayers(data);
+  const active = (layerIndexes.get(data)?.corrections.get(entry.name) || [])
+    .filter(correction => correction.from <= year && year <= correction.through);
   // An explicit dated exclusion wins over a broad earlier inclusion, whatever
   // order the canonical corrections and source groups were merged in.
   active.filter(c => c.action === 'add').forEach(c => corrected.add(c.id));
@@ -136,8 +193,27 @@ export function reviewedLayerLocations(data, entry, year, personId = null) {
   const extension = authorityExtensionFor(entry.name, year, personId);
   if (extension) return applyLayerCorrections(data, entry,
     pilotVersionFor(entry, extension.referenceYear)?.ids || [], extension.referenceYear);
-  if (!layerActiveInYear(entry, year, data.from, data.through)) return [];
-  return applyLayerCorrections(data, entry, pilotVersionFor(entry, year)?.ids || [], year);
+  if (!reviewedLayerActive(data, entry, year)) return [];
+  return applyLayerCorrections(data, entry, reviewedLayerVersion(data, entry, year)?.ids || [], year);
+}
+
+// Political status can differ within one kingdom. Keep the dated regional
+// dispute on its own cells instead of hatching every possession of the ruler.
+export function reviewedAuthorityConditions(data, territory, year, personId = null) {
+  const conditions = new Map();
+  const names = pilotJurisdictionsFor(territory, year, personId);
+  for (const name of names) {
+    const entry = layerIndex(data).get(name);
+    const ids = new Set(reviewedLayerLocations(data, entry, year, personId));
+    if (entry?.authorityCondition) for (const id of ids)
+      conditions.set(id,{condition:entry.authorityCondition,note:entry.note,sources:reviewedLayerEvidence(entry,year).sources});
+    for (const correction of layerIndexes.get(data)?.corrections.get(name) || []) {
+      if (!correction.authorityCondition || correction.from > year || correction.through < year || !ids.has(correction.id)) continue;
+      conditions.set(correction.id,{condition:correction.authorityCondition,note:correction.reason,
+        sources:[{url:correction.source,title:'Fuente del control regional',locator:correction.reason}]});
+    }
+  }
+  return conditions;
 }
 
 // Prefer a dated, named jurisdiction when the research layer has one. For
@@ -145,11 +221,13 @@ export function reviewedLayerLocations(data, entry, year, personId = null) {
 // the audited geometry crosswalk; unmappable/ambiguous regions stay unpainted.
 export function mapLocationsForGovernment(data, government, year, personId = null, legacyIds = []) {
   if (!data || !government?.territorio || !Number.isInteger(year)) return [];
+  const chronological=chronologyJurisdictionsFor(government.territorio,year,personId);
+  if(chronological?.length === 0)return [];
   const byName = layerIndex(data);
   const withinDatedLayerRange = year >= data.from && year <= data.through;
   const layers = (withinDatedLayerRange ? pilotJurisdictionsFor(government.territorio, year, personId) : [])
     .map(name => byName.get(name)).filter(Boolean);
-  if (layers.length) {
+  if (layers.some(entry => reviewedLayerCovered(data, entry, year))) {
     const scope = authorityMapScope(personId, government.territorio, year);
     const ids = [...new Set(layers.flatMap(entry => reviewedLayerLocations(data, entry, year, personId)))];
     return applyMapBorderCorrections(scope ? ids.filter(id => scope.ids.includes(id)) : ids, government.territorio, year);
@@ -162,7 +240,7 @@ export function pilotDisputedHungarianClaimsFor(data, personId, year) {
   if (!Number.isInteger(year)) return [];
   if (personId === 'JUAN1ZAPOLYA' && year >= 1527 && year <= 1540) {
     return [{ territory: 'Hungría oriental de Zápolya', color: '#756598',
-      ids: pilotLocationsFor(data, 'Núcleo oriental de Zápolya', year) }];
+      ids: pilotLocationsFor(data, 'Hungría', year, personId) }];
   }
   if (personId === 'JUAN2SIGZAPOLYA'
       && ((year >= 1541 && year <= 1550) || (year >= 1556 && year <= 1569))) {
@@ -191,12 +269,13 @@ export function pilotLocationContext(data, id, year, personId = null) {
   const corridor = entries.flatMap(entry => {
     if (!reviewedLayerLocations(data, entry, year).includes(id)) return [];
     const extension = authorityExtensionFor(entry.name, year);
+    const evidence = reviewedLayerEvidence(entry, year);
     return [{
       name: entry.name,
       corridor: entry.corridor,
-      note: entry.note,
-      source: extension?.source.url || entry.active?.source || null,
-      activeReason: extension?.note || entry.active?.reason || null,
+      note: evidence.note,
+      source: extension?.source.url || evidence.sources[0]?.url || null,
+      activeReason: extension?.note || evidence.activeReason || null,
       correction: (data.overrides || []).find(item => item.territory === entry.name && item.id === id
         && item.from <= year && year <= item.through) || null,
     }];

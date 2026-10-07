@@ -19,6 +19,11 @@ en esta base para este año», no ausencia de gobierno.
 ## Probarlo
 
 El mosaico se publica junto al Atlas en `/es/mapa-completo?year=1530`.
+El selector permite explorar **1200–1800**. La ampliación de Iberia, Italia,
+Borgoña y Austria utiliza series medievales y posteriores a 1650 con sus
+propias fechas y fuentes; no prolonga automáticamente las fronteras de 1650.
+«Núcleos documentados» significa cobertura regional limitada. Los intervalos
+sin delimitación suficiente quedan vacíos y constan como revisión pendiente.
 También se puede abrir desde «¿Por qué estos colores?» en el mapa de una persona.
 El build compila el visor y sus assets; no depende de servir el código fuente.
 
@@ -62,6 +67,32 @@ los Balcanes y el Mediterráneo oriental. El número de capas activas se calcula
 para el año seleccionado. La Corona de Polonia y el Gran Ducado de Lituania siguen
 separados después de 1569; los gobiernos escandinavos y bálticos, pequeños
 estados rusos y enclaves también mantienen su jurisdicción y fechas propias.
+
+## Ampliación cronológica y autoridad regional
+
+`extended-corridors-source.py`, `central-expansion-source.py` y
+`balkan-expansion-source.mjs` conservan las selecciones y su evidencia.
+`merge-map-expansions.mjs` incorpora esas series al final del generador
+principal y comprueba IDs, intervalos y anclas independientes. La entrega añade
+ramas bávaras anteriores a 1505, núcleos croatas anteriores a 1527, Moravia,
+Pfalz-Neuburg, Trebisonda y Silesia. Los núcleos silesianos distinguen el
+gobierno piasta, la soberanía superior, la ocupación prusiana de 1741 y la
+división de 1742; Teschen es un núcleo del remanente austríaco, no su frontera
+completa.
+
+En los Balcanes se separan los Tocco tributarios, los gobiernos delegados de
+Temes y Bihar, las adhesiones y disputas locales de Eslavonia, Athos autónomo
+y la Morea veneciana de 1699–1714. Una cordillera puede pertenecer a una
+jurisdicción documentada: su nombre físico no obliga a dejarla vacía ni
+demuestra por sí solo a quién atribuirla. Las celdas que cruzan fronteras o
+carecen de evidencia suficiente siguen pendientes.
+
+`audit-map-spatial.mjs` mide también la tierra visible **independientemente de
+los nombres ya vinculados**. Sus ventanas de Hungría y sureste europeo
+incluyen fragmentos vecinos de Anatolia y Ucrania. Los resultados cuentan
+celdas y área SVG, nunca países ni kilómetros cuadrados. Se mantienen además
+las auditorías de gobiernos, geometría y continuidad para todos los años de
+1200–1800. Ninguna de estas métricas certifica fronteras exactas.
 
 ![Carlos V en 1520: Austria todavía bajo su gobierno](carlos-v-1520.png)
 ![Carlos V en 1548: herencia hispánica y borgoñona, sin pintar el Imperio entero](carlos-v-1548.png)

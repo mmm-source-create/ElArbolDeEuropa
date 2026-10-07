@@ -1,0 +1,1903 @@
+{
+  "from": 1200,
+  "through": 1800,
+  "basis": "Ampliaciones por jurisdicción documentada, revisión visual de los polígonos reales y cortes conservadores. No se asigna tierra por nombre o por proximidad.",
+  "evidence": [
+    {
+      "territory": "Balcanes meridionales otomanos",
+      "from": 1424,
+      "through": 1800,
+      "ids": [
+        "Trikala",
+        "Larissa",
+        "Karditsa",
+        "Farsala",
+        "Pyli",
+        "Tyrnavos",
+        "Stomio",
+        "Elassona",
+        "Demetrias",
+        "Mount_Olympos"
+      ],
+      "source": "https://islamansiklopedisi.org.tr/tirhala",
+      "reason": "El sanjacado de Tırhala comprendía Tesalia y se amplió en1424. Se incluyen llanuras y relieve, con sus celdas reales; las islas Espóradas quedan aparte. Las restituciones de1403 impiden retrotraer uniformemente la selección a1400."
+    },
+    {
+      "territory": "Balcanes meridionales otomanos",
+      "from": 1430,
+      "through": 1800,
+      "ids": [
+        "Ioannina",
+        "Konitsa"
+      ],
+      "source": "https://islamansiklopedisi.org.tr/yanya",
+      "reason": "Entrega de Ioannina en octubre1430 y posterior sanjacado de Epiro interior. Se conserva la continuidad provincial y se excluyen los enclaves venecianos de Butrinto y Parga."
+    },
+    {
+      "territory": "Balcanes meridionales otomanos",
+      "from": 1449,
+      "through": 1800,
+      "ids": [
+        "Arta"
+      ],
+      "source": "https://islamansiklopedisi.org.tr/narda",
+      "reason": "Arta fue un dominio de los Tocco tributarios después1430 y se incorporó al gobierno otomano directo en marzo1449; el tributo anterior no equivale a anexión."
+    },
+    {
+      "territory": "Balcanes meridionales otomanos",
+      "from": 1460,
+      "through": 1800,
+      "ids": [
+        "Angelokastron"
+      ],
+      "source": "https://islamansiklopedisi.org.tr/karli-ili",
+      "reason": "Leonardo III perdió el interior continental en1460. El sanjacado de Karlı-ili documenta Angelokastro y las regiones rurales montañosas en registros fiscales."
+    },
+    {
+      "territory": "Balcanes meridionales otomanos",
+      "from": 1479,
+      "through": 1650,
+      "ids": [
+        "Vonitsa"
+      ],
+      "source": "https://islamansiklopedisi.org.tr/karli-ili",
+      "reason": "Último núcleo continental de Leonardo III, perdido en la campaña de Gedik Ahmed Paşa de1479. No se prolonga después1650 por los cambios venecianos de la guerra de Morea."
+    },
+    {
+      "territory": "Balcanes meridionales otomanos",
+      "from": 1503,
+      "through": 1650,
+      "ids": [
+        "Leukas"
+      ],
+      "source": "https://www.statodamar.it/index.php?id=102&page=entita.php",
+      "reason": "Leucade fue otomana desde1479, con ocupación veneciana alrededor1500–1502; este intervalo empieza después de esa interrupción y termina antes de la conquista veneciana1684."
+    },
+    {
+      "territory": "Balcanes meridionales otomanos",
+      "from": 1430,
+      "through": 1800,
+      "ids": [
+        "Edessa",
+        "Giannitsa",
+        "Florina",
+        "Ostrovo",
+        "Veria",
+        "Kastoria",
+        "Siatista",
+        "Grevena",
+        "Servia",
+        "Hatera"
+      ],
+      "source": "https://islamansiklopedisi.org.tr/vodina",
+      "reason": "Interior de Macedonia otomana, con Vodina en los registros de1530. Las celdas de Kastoria y Servia se corroboran también con sus estudios específicos; no se usa este grupo para la costa restituida a Bizancio en1403.",
+      "supportingSources": [
+        "https://islamansiklopedisi.org.tr/kesriye",
+        "https://dergipark.org.tr/tr/pub/ankarad/article/905269"
+      ]
+    },
+    {
+      "territory": "Balcanes meridionales otomanos",
+      "from": 1430,
+      "through": 1800,
+      "ids": [
+        "Polygyros",
+        "Kassandreia"
+      ],
+      "source": "https://www.pkm.gov.gr/i-chalkidiki-mas/istoria-xalkidikis/",
+      "reason": "La Región de Macedonia Central documenta la incorporación de Calcídica al sanjacado de Salónica en 1430 y sus distritos fiscales. Los dos polígonos se inspeccionaron en la península de Calcídica; Athos se conserva en una capa propia por su autonomía monástica.",
+      "supportingSources": [
+        "https://www.efachagor.gr/"
+      ]
+    },
+    {
+      "territory": "Monte Athos autónomo bajo autoridad otomana",
+      "from": 1430,
+      "through": 1800,
+      "ids": [
+        "Mount_Athos"
+      ],
+      "source": "https://islamansiklopedisi.org.tr/aynaroz",
+      "reason": "Athos reconoció la autoridad otomana desde 1430 conservando privilegios y administración monástica propia. El haseki de Karyes y los firmans imperiales documentan esa relación; no se representa como una provincia gobernada directamente ni se inventa una sucesión de protos.",
+      "authorityCondition": "autonomía tributaria",
+      "supportingSources": [
+        "https://www.pkm.gov.gr/i-chalkidiki-mas/istoria-xalkidikis/"
+      ]
+    },
+    {
+      "territory": "Balcanes meridionales otomanos",
+      "from": 1430,
+      "through": 1800,
+      "ids": [
+        "Pindus_Mountains4",
+        "Pindus_Mountains8",
+        "Pindus_Mountains9",
+        "Pindus_Mountains10"
+      ],
+      "source": "https://islamansiklopedisi.org.tr/vodina",
+      "reason": "La fuente documenta la jurisdicción regional; el polígono del relieve se comprobó visualmente dentro de ella. La celda no es una frontera histórica exacta. Partes inspeccionadas entre Florina, Edessa, Ostrovo, Veria y Servia, sin invadir Corfú ni Epiro costero."
+    },
+    {
+      "territory": "Balcanes meridionales otomanos",
+      "from": 1449,
+      "through": 1800,
+      "ids": [
+        "Pindus_Mountains5",
+        "Pindus_Mountains6",
+        "Pindus_Mountains7",
+        "Pindus_Mountains11"
+      ],
+      "source": "https://islamansiklopedisi.org.tr/tesalya",
+      "reason": "La fuente documenta la jurisdicción regional; el polígono del relieve se comprobó visualmente dentro de ella. La celda no es una frontera histórica exacta. Partes entre Kastoria, Grevena, Konitsa, Ioannina, Trikala y Karditsa; se espera a la consolidación de Arta en1449 para no suponer una frontera exacta entre Epiro y Tesalia.",
+      "supportingSources": [
+        "https://islamansiklopedisi.org.tr/yanya",
+        "https://islamansiklopedisi.org.tr/narda"
+      ]
+    },
+    {
+      "territory": "Balcanes meridionales otomanos",
+      "from": 1460,
+      "through": 1800,
+      "ids": [
+        "Pindus_Mountains12",
+        "Karpenisi"
+      ],
+      "source": "https://islamansiklopedisi.org.tr/karli-ili",
+      "reason": "La fuente documenta la jurisdicción regional; el polígono del relieve se comprobó visualmente dentro de ella. La celda no es una frontera histórica exacta. Pindus12 está entre Karpenisi y el interior de Karlı-ili; queda separado de Vonitsa y de las islas jónicas."
+    },
+    {
+      "territory": "Balcanes meridionales otomanos",
+      "from": 1480,
+      "through": 1650,
+      "ids": [
+        "Pindus_Mountains1",
+        "Pindus_Mountains2",
+        "Pindus_Mountains3",
+        "Debar",
+        "Devol",
+        "Has",
+        "Dukagjini",
+        "Gjakova",
+        "Peja",
+        "Mitrovica"
+      ],
+      "source": "https://islamansiklopedisi.org.tr/arnavutluk",
+      "reason": "Interior albanés y macedonio después de las conquistas de Krujë1478 y Shkodër1479. Las celdas montañosas se comprobaron entre Prizren, Debar, Tetovo y Kičevo. No se retrotrae esta configuración a los señoríos de Skanderbeg ni se incluye la costa veneciana.",
+      "supportingSources": [
+        "https://islamansiklopedisi.org.tr/iskender-bey",
+        "https://islamansiklopedisi.org.tr/kosova"
+      ]
+    },
+    {
+      "territory": "Balcanes meridionales otomanos",
+      "from": 1430,
+      "through": 1800,
+      "ids": [
+        "Balkan_Mountains1",
+        "Balkan_Mountains2",
+        "Balkan_Mountains3",
+        "Balkan_Mountains4",
+        "Balkan_Mountains5",
+        "Balkan_Mountains6",
+        "Rhodope_Mountains1",
+        "Rhodope_Mountains2",
+        "Rhodope_Mountains3",
+        "Rhodope_Mountains4",
+        "Rhodope_Mountains5",
+        "Rhodope_Mountains6",
+        "Dospat",
+        "Zemlungrad",
+        "Dobrolak",
+        "Sliven",
+        "Hiambouli",
+        "Velbuzd",
+        "Ustra",
+        "Traianopolis"
+      ],
+      "source": "https://islamansiklopedisi.org.tr/bulgaristan",
+      "reason": "La fuente documenta la jurisdicción regional; el polígono del relieve se comprobó visualmente dentro de ella. La celda no es una frontera histórica exacta. Se revisaron las piezas interiores de Bulgaria y Ródope entre Vidin, Sofia, Plovdiv y Drama. La fecha conservadora1430 evita tratar la restauración costera de1403 como dominio otomano uniforme.",
+      "supportingSources": [
+        "https://islamansiklopedisi.org.tr/filibe",
+        "https://islamansiklopedisi.org.tr/sofya",
+        "https://islamansiklopedisi.org.tr/samakov"
+      ]
+    },
+    {
+      "territory": "Balcanes meridionales otomanos",
+      "from": 1460,
+      "through": 1650,
+      "ids": [
+        "Peloponnesian_Mountains1",
+        "Chalandritsa",
+        "Pontikokastro"
+      ],
+      "source": "https://islamansiklopedisi.org.tr/mora",
+      "reason": "La fuente documenta la jurisdicción regional; el polígono del relieve se comprobó visualmente dentro de ella. La celda no es una frontera histórica exacta. Interior de Morea después de la conquista de 1460. Los enclaves venecianos de Nauplia y Ermioni quedan separados. Damala se reserva para una revisión específica de su polígono costero. La pieza Peloponnesian_Mountains2 alcanza la frontera de Mani y no se atribuye uniformemente antes de su sometimiento de 1670."
+    },
+    {
+      "territory": "Balcanes meridionales otomanos",
+      "from": 1651,
+      "through": 1683,
+      "ids": [
+        "Peloponnesian_Mountains1",
+        "Chalandritsa",
+        "Pontikokastro",
+        "Ermioni",
+        "Nafplio"
+      ],
+      "source": "https://islamansiklopedisi.org.tr/mora",
+      "reason": "Serie independiente de cinco núcleos inspeccionados de Morea. Los registros y la descripción de Evliya Çelebi documentan la administración otomana antes de la guerra veneciana de 1684. No se heredan los demás polígonos de 1650 ni se incluye Mani semiautónomo."
+    },
+    {
+      "territory": "Balcanes meridionales otomanos",
+      "from": 1671,
+      "through": 1683,
+      "ids": [
+        "Peloponnesian_Mountains2"
+      ],
+      "source": "https://islamansiklopedisi.org.tr/mora",
+      "reason": "La fuente fecha el sometimiento y las nuevas guarniciones de Mani en 1670–1671. Esta pieza de Taygetos llega a la frontera de Leuctro y se incorpora sólo después de ese cambio, como aproximación de jurisdicción; no representa toda la península de Mani."
+    },
+    {
+      "territory": "Morea veneciana (núcleos)",
+      "from": 1699,
+      "through": 1714,
+      "ids": [
+        "Peloponnesian_Mountains1",
+        "Chalandritsa",
+        "Pontikokastro",
+        "Ermioni",
+        "Nafplio",
+        "Peloponnesian_Mountains2"
+      ],
+      "source": "https://islamansiklopedisi.org.tr/karlofca#2-karlofca-antlasmasi",
+      "reason": "El tratado de Karlowitz de 1699 reconoce la Morea veneciana. Se representan seis núcleos inspeccionados del interior, Nauplia y Ermioni; el corte comienza en el tratado para no fingir conocer la conquista de cada celda durante la campaña de 1684–1687. Termina antes del retorno otomano de 1715.",
+      "supportingSources": [
+        "https://islamansiklopedisi.org.tr/mora"
+      ],
+      "annualTransition": true
+    },
+    {
+      "territory": "Balcanes meridionales otomanos",
+      "from": 1715,
+      "through": 1800,
+      "ids": [
+        "Peloponnesian_Mountains1",
+        "Chalandritsa",
+        "Pontikokastro",
+        "Ermioni",
+        "Nafplio"
+      ],
+      "source": "https://islamansiklopedisi.org.tr/mora",
+      "reason": "Retorno otomano de Morea durante la campaña del verano de 1715, seguido por el registro fiscal de 1716 y la administración provincial del siglo XVIII. Sólo se incorporan cinco núcleos explícitos; el año de transición no supone control durante los doce meses. La insurrección de 1770 y las operaciones temporales requieren una revisión local adicional.",
+      "annualTransition": true
+    },
+    {
+      "territory": "Balcanes meridionales otomanos",
+      "from": 1715,
+      "through": 1769,
+      "ids": [
+        "Peloponnesian_Mountains2"
+      ],
+      "source": "https://islamansiklopedisi.org.tr/mora",
+      "reason": "Pieza de Taygetos de la Morea recuperada en 1715, cartográficamente próxima a Mani. Se detiene antes de la insurrección de 1770 y la posterior autonomía de Mani: no se extrapola esa celda mixta hasta 1800 sin una frontera documentada.",
+      "annualTransition": true
+    },
+    {
+      "territory": "Venecia",
+      "from": 1503,
+      "through": 1536,
+      "ids": [
+        "Ermioni"
+      ],
+      "source": "https://ermion.gr/name-history/",
+      "reason": "Ermioni/Kastri y Thermisia fueron venecianas hasta la conquista otomana de septiembre de 1537; la historia municipal cita la crónica de Dorotheos. El corte de 1537 se considera una transición anual."
+    },
+    {
+      "territory": "Balcanes meridionales otomanos",
+      "from": 1538,
+      "through": 1650,
+      "ids": [
+        "Ermioni"
+      ],
+      "source": "https://ermion.gr/name-history/",
+      "reason": "Ermioni/Kastri pasa a los otomanos en septiembre de 1537. Se empieza en 1538 para evitar presentar el año de conquista como dominio continuo."
+    },
+    {
+      "territory": "Balcanes meridionales otomanos",
+      "from": 1540,
+      "through": 1650,
+      "ids": [
+        "Nafplio"
+      ],
+      "source": "https://www.treccani.it/enciclopedia/venezia-dal-rinascimento-all-eta-barocca_%28Storia-di-Venezia%29/",
+      "reason": "La paz de1540 cedió Nauplia y Monemvasia a los otomanos; antes de ese año Nauplia se incorpora como enclave veneciano, no otomano."
+    },
+    {
+      "territory": "Venecia",
+      "from": 1503,
+      "through": 1539,
+      "ids": [
+        "Nafplio"
+      ],
+      "source": "https://www.treccani.it/enciclopedia/venezia-dal-rinascimento-all-eta-barocca_%28Storia-di-Venezia%29/",
+      "reason": "Enclave veneciano de Nauplia anterior a la cesión1540. El inicio1503 es conservador respecto al tratado veneciano-otomano."
+    },
+    {
+      "territory": "Venecia",
+      "from": 1409,
+      "through": 1645,
+      "ids": [
+        "Novigrad"
+      ],
+      "source": "https://www.enciklopedija.hr/clanak/novigrad-zadar",
+      "reason": "Novigrad de Dalmacia fue veneciano desde1409; su celda se comprobó junto a Zadar y Šibenik, no el Novigrad de Istria. Ocupación otomana1646–1647 separada."
+    },
+    {
+      "territory": "Venecia",
+      "from": 1648,
+      "through": 1650,
+      "ids": [
+        "Novigrad"
+      ],
+      "source": "https://www.enciklopedija.hr/clanak/novigrad-zadar",
+      "reason": "Recuperación veneciana posterior a la ocupación1646–1647; la escala anual conserva la transición en la corrección disputada."
+    },
+    {
+      "territory": "Balcanes meridionales otomanos",
+      "from": 1646,
+      "through": 1647,
+      "ids": [
+        "Novigrad"
+      ],
+      "source": "https://www.enciklopedija.hr/clanak/novigrad-zadar",
+      "reason": "Ocupación temporal en la guerra de Candía; se retira de Venecia durante estos cortes anuales.",
+      "authorityCondition": "ocupación",
+      "annualTransition": true
+    },
+    {
+      "territory": "Venecia",
+      "from": 1480,
+      "through": 1650,
+      "ids": [
+        "Krk"
+      ],
+      "source": "https://hrcak.srce.hr/file/352830",
+      "reason": "El catastro de Veglia documenta la administración veneciana iniciada en1480. La celda cubre la isla de Krk, no el continente de Senj."
+    },
+    {
+      "territory": "Venecia",
+      "from": 1400,
+      "through": 1650,
+      "ids": [
+        "Corfu",
+        "Butrint"
+      ],
+      "source": "https://www.statodamar.it/index.php?id=99&page=entita.php",
+      "reason": "Posesiones venecianas dependientes de Corfú desde1386. Butrinto es un enclave propio; su celda se comprobó en la costa frente a Corfú.",
+      "supportingSources": [
+        "https://www.getty.edu/vow/TGNFullDisplay?english=N&subjectid=7010736"
+      ]
+    },
+    {
+      "territory": "Venecia",
+      "from": 1501,
+      "through": 1650,
+      "ids": [
+        "Cephalonia"
+      ],
+      "source": "https://www.statodamar.it/index.php?id=1986&page=relazione.php",
+      "reason": "La relación del provveditore Marco Barbaro de1609 fecha la conquista veneciana de Cefalonia en1500; la capa empieza1501 para separar el año de transición."
+    },
+    {
+      "territory": "Bosnia y Herzegovina otomanas",
+      "from": 1528,
+      "through": 1650,
+      "ids": [
+        "Dinaric_Alps1",
+        "Dinaric_Alps2",
+        "Dinaric_Alps3",
+        "Dinaric_Alps4",
+        "Dinaric_Alps5"
+      ],
+      "source": "https://www.enciklopedija.hr/clanak/bosna-i-hercegovina",
+      "reason": "La fuente documenta la jurisdicción regional; el polígono del relieve se comprobó visualmente dentro de ella. La celda no es una frontera histórica exacta. Piezas interiores entre Knin-Livno, Ključ-Jajce-Zenica y Herzegovina; se espera a la caída de Jajce1527/1528 para no atribuir prematuramente la banovina húngara.",
+      "supportingSources": [
+        "https://www.enciklopedija.hr/clanak/jajacka-banovina",
+        "https://www.enciklopedija.hr/clanak/hercegovacki-sandzak"
+      ]
+    },
+    {
+      "territory": "Bosnia y Herzegovina otomanas",
+      "from": 1528,
+      "through": 1650,
+      "ids": [
+        "Dinaric_Alps6",
+        "Dinaric_Alps8",
+        "Onogost",
+        "Prijepolje",
+        "Budimlja",
+        "Brskovo"
+      ],
+      "source": "https://www.enciklopedija.hr/clanak/hercegovacki-sandzak",
+      "reason": "Interior de Herzegovina y del sanjacado de Novi Pazar; las piezas se comprobaron entre Gacko, Pljevlja, Sjenica y Onogošt. Onogošt/Nikšić fue conquistado1465; no se añade Kotor ni el núcleo occidental autónomo de Cetinje.",
+      "supportingSources": [
+        "https://www.enciklopedija.hr/clanak/niksic",
+        "https://islamansiklopedisi.org.tr/taslica",
+        "https://islamansiklopedisi.org.tr/yenipazar"
+      ]
+    },
+    {
+      "territory": "Balcanes meridionales otomanos",
+      "from": 1479,
+      "through": 1650,
+      "ids": [
+        "Podgorica"
+      ],
+      "source": "https://podgorica.me/istorija-podgorice/",
+      "reason": "Núcleo fortificado otomano de Podgorica, fechado por el ayuntamiento desde1474. No implica anexar toda la montaña montenegrina ni Kotor veneciano."
+    },
+    {
+      "territory": "Eslavonia disputada (núcleos)",
+      "from": 1527,
+      "through": 1534,
+      "ids": [
+        "Kutina"
+      ],
+      "source": "https://hbl.lzmk.hr/clanak/5717",
+      "reason": "Kutina y Moslavina pertenecían a Petar I Erdődy, partidario de Juan Zápolya desde 1527. Hubo tregua local en 1530 y encuentros en 1531 y 1533; Petar y el obispo Šimun pasaron a Fernando en 1535. Se representa la autoridad regia disputada, conservando el señorío local.",
+      "authorityCondition": "control disputado",
+      "supportingSources": [
+        "https://www.enciklopedija.hr/clanak/slavonija"
+      ]
+    },
+    {
+      "territory": "Eslavonia disputada (núcleos)",
+      "from": 1529,
+      "through": 1531,
+      "ids": [
+        "Pakrac"
+      ],
+      "source": "https://hrcak.srce.hr/en/file/19646",
+      "reason": "Ivan Tahy, prior de Vrana y señor de Pakrac, continuaba del lado de Juan en las negociaciones de 1530. En 1532 Stjepan Berislavić atacó sus posesiones porque Tahy había pasado a Fernando. El intervalo conserva la disputa y termina antes del cambio documentado.",
+      "authorityCondition": "control disputado",
+      "supportingSources": [
+        "https://www.enciklopedija.hr/clanak/pakrac"
+      ]
+    },
+    {
+      "territory": "Eslavonia disputada (núcleos)",
+      "from": 1527,
+      "through": 1536,
+      "ids": [
+        "Pozega"
+      ],
+      "source": "https://www.hrz.hr/images/stories/publikacije/knjige/Barilovic.pdf",
+      "reason": "La guerra civil de las facciones croatas y eslavonas está documentada entre 1527 y 1538. Požega se mantiene como núcleo de soberanía regia disputada hasta su conquista otomana de 1537; esto no afirma una ocupación local exclusiva por un monarca ni convierte la elección de 1527 en control continuo.",
+      "authorityCondition": "control disputado",
+      "supportingSources": [
+        "https://www.enciklopedija.hr/clanak/slavonija",
+        "https://www.enciklopedija.hr/clanak/pozega"
+      ]
+    },
+    {
+      "territory": "Croacia habsbúrgica",
+      "from": 1535,
+      "through": 1539,
+      "ids": [
+        "Kutina",
+        "Bjelovar"
+      ],
+      "source": "https://hbl.lzmk.hr/clanak/5717",
+      "reason": "Moslavina y Kutina después del cambio de fidelidad de Petar I Erdődy y el obispo Šimun a Fernando en 1535. Bjelovar es una celda rural amplia de la misma región, cartográficamente aproximada; se excluye del corte de 1530 por falta de control local suficiente.",
+      "supportingSources": [
+        "https://www.enciklopedija.hr/clanak/moslavina"
+      ]
+    },
+    {
+      "territory": "Croacia habsbúrgica",
+      "from": 1532,
+      "through": 1543,
+      "ids": [
+        "Pakrac"
+      ],
+      "source": "https://hrcak.srce.hr/en/file/19646",
+      "reason": "Pakrac bajo Ivan Tahy después de su adhesión documentada a Fernando en 1532. Conserva el priorato de Vrana hasta la conquista otomana de 1544.",
+      "supportingSources": [
+        "https://www.enciklopedija.hr/clanak/pakrac"
+      ]
+    },
+    {
+      "territory": "Croacia habsbúrgica",
+      "from": 1535,
+      "through": 1551,
+      "ids": [
+        "Virovitica"
+      ],
+      "source": "https://www.enciklopedija.hr/clanak/slavonija",
+      "reason": "Núcleo de la Corona en la convergencia provincial posterior a la adhesión de los Erdődy en 1535; Virovitica no pasa a los otomanos hasta 1552. Los años de conflicto anterior quedan pendientes de control local.",
+      "supportingSources": [
+        "https://www.enciklopedija.hr/clanak/virovitica",
+        "https://hbl.lzmk.hr/clanak/5717"
+      ]
+    },
+    {
+      "territory": "Croacia habsbúrgica",
+      "from": 1527,
+      "through": 1578,
+      "ids": [
+        "Karlovac"
+      ],
+      "source": "https://www.karlovac.hr/wp-content/uploads/2024/05/Konzervatorska-KA2024_tekst.pdf",
+      "reason": "La celda de Karlovac comprende el antiguo territorio de Dubovac y el río Kupa. La fundación urbana1579 no significa que el espacio fuese políticamente vacío en1530."
+    },
+    {
+      "territory": "Croacia habsbúrgica",
+      "from": 1527,
+      "through": 1591,
+      "ids": [
+        "Petrinja"
+      ],
+      "source": "https://www.enciklopedija.hr/clanak/petrinja-grad",
+      "reason": "Celda territorial del Pokuplje anterior a la nueva fortaleza otomana1592. No se confunde la fundación de la ciudad moderna con el inicio de la autoridad sobre toda su celda."
+    },
+    {
+      "territory": "Croacia habsbúrgica",
+      "from": 1595,
+      "through": 1650,
+      "ids": [
+        "Petrinja"
+      ],
+      "source": "https://www.enciklopedija.hr/clanak/petrinja-grad",
+      "reason": "Recuperación croata duradera1595, seguida de la capitanía de Petrinja."
+    },
+    {
+      "territory": "Bosnia y Herzegovina otomanas",
+      "from": 1592,
+      "through": 1594,
+      "ids": [
+        "Petrinja"
+      ],
+      "source": "https://www.enciklopedija.hr/clanak/petrinja-grad",
+      "reason": "Fortaleza y ocupación otomana1592–1595; la versión anual reserva1595 a la recuperación croata.",
+      "authorityCondition": "ocupación"
+    },
+    {
+      "territory": "Hungría otomana",
+      "from": 1537,
+      "through": 1650,
+      "ids": [
+        "Pozega"
+      ],
+      "source": "https://www.enciklopedija.hr/clanak/pozega",
+      "reason": "Conquista1537 y sede del sanjacado de Požega."
+    },
+    {
+      "territory": "Hungría otomana",
+      "from": 1544,
+      "through": 1650,
+      "ids": [
+        "Pakrac"
+      ],
+      "source": "https://www.enciklopedija.hr/clanak/pakrac",
+      "reason": "Conquista1544; la enciclopedia croata difiere de la fecha1543 de algunas cronologías, que se conserva como incertidumbre en la nota."
+    },
+    {
+      "territory": "Hungría otomana",
+      "from": 1552,
+      "through": 1650,
+      "ids": [
+        "Virovitica",
+        "Kutina",
+        "Vaska"
+      ],
+      "source": "https://www.enciklopedija.hr/clanak/slavonija",
+      "reason": "Después1552 la frontera entre Drava y Sava queda fijada en Ilova y entre Virovitica-Đurđevac. Estas celdas están al este de esa línea; Bjelovar no se incorpora por la ambigüedad de su polígono.",
+      "supportingSources": [
+        "https://www.enciklopedija.hr/clanak/virovitica",
+        "https://www.enciklopedija.hr/clanak/moslavina"
+      ]
+    },
+    {
+      "territory": "Hungría otomana",
+      "from": 1526,
+      "through": 1650,
+      "ids": [
+        "Petrovaradin",
+        "Sremska_Mitrovica"
+      ],
+      "source": "https://islamansiklopedisi.org.tr/srem",
+      "reason": "Sirmia entre Danubio y Sava quedó bajo administración otomana en1521–1526. Se añaden sus celdas inspeccionadas al sur del Danubio, sin atribuir por ello Bačka al norte.",
+      "supportingSources": [
+        "https://www.enciklopedija.hr/clanak/petrovaradin"
+      ]
+    },
+    {
+      "territory": "Núcleo oriental de Zápolya",
+      "from": 1530,
+      "through": 1538,
+      "ids": [
+        "Alba_Iulia",
+        "Aiud",
+        "Dej",
+        "Baia_de_Aries",
+        "Hateg",
+        "Chezdi_Osorheiu",
+        "Inner_Carpathians"
+      ],
+      "source": "https://tti.abtk.hu/terkepek/terkepek/1529-torok-hadjarat-belharobu",
+      "reason": "Tras Feldioara22-6-1529, el interior transilvano reconoció a Juan, salvo Sibiu. Las celdas incluyen tierra rural y macizos interiores, no sólo ciudades. Se detiene1538 ante la rebelión de Maylád1539–1541."
+    },
+    {
+      "territory": "Núcleo oriental de Zápolya",
+      "from": 1530,
+      "through": 1538,
+      "ids": [
+        "Sic",
+        "Baita",
+        "Zalau",
+        "Crasna",
+        "Huedin",
+        "Baia_Crisului"
+      ],
+      "source": "https://tti.abtk.hu/terkepek/terkepek/1529-torok-hadjarat-belharobu",
+      "reason": "Continuación de las celdas interiores inspeccionadas de Transilvania y su acceso occidental. La síntesis del Instituto de Historia documenta el reconocimiento de Juan después de Feldioara, excepto Sibiu. No incluye el Banato de Temesvár ni las posesiones concedidas a Petru Rareș."
+    },
+    {
+      "territory": "Núcleo oriental de Zápolya",
+      "from": 1530,
+      "through": 1538,
+      "ids": [
+        "Kecskemet",
+        "Karcag",
+        "Hajduszoboszlo",
+        "Szolnok",
+        "Felegyhaza",
+        "Szarvas",
+        "Bekes",
+        "Halas",
+        "Szeged",
+        "Mako"
+      ],
+      "source": "https://mek.oszk.hu/02100/02109/html/93.html",
+      "reason": "La historia de Transilvania de la Academia húngara identifica el Alföld como parte del reino de Juan tras la división de 1529, con un frente relativamente estable y fuerte poder de los señores locales. Se inspeccionaron las celdas de la llanura central y oriental; el color expresa autoridad regia, no posesión patrimonial ni ocupación de cada aldea. Se excluyen Temesvár, la franja occidental y los núcleos de fidelidad distinta.",
+      "supportingSources": [
+        "https://tti.abtk.hu/terkepek/terkepek/1529-torok-hadjarat-belharobu"
+      ]
+    },
+    {
+      "territory": "Gobierno de Bihar de Imre Czibak",
+      "from": 1529,
+      "through": 1533,
+      "ids": [
+        "Oradea",
+        "Cheresig",
+        "Beius"
+      ],
+      "source": "https://mek.oszk.hu/02100/02109/html/93.html",
+      "reason": "Imre Czibak ejercía el poder en Bihar en nombre de Juan hasta su asesinato en agosto de 1534. Núcleos inspeccionados de Várad/Oradea y sus entornos occidental y meridional. El corte empieza en 1529 y reserva el año de muerte a una revisión de sucesión; no se extiende a toda la frontera occidental de Transilvania.",
+      "authorityCondition": "gobierno delegado",
+      "supportingSources": [
+        "https://lexikon.katolikus.hu/C/Czibak.html"
+      ]
+    },
+    {
+      "territory": "Núcleo oriental de Zápolya",
+      "from": 1529,
+      "through": 1538,
+      "ids": [
+        "Ineu",
+        "Lipova"
+      ],
+      "source": "https://tti.abtk.hu/terkepek/terkepek/1529-torok-hadjarat-belharobu",
+      "reason": "La campaña1529 documenta la toma de Jenő/Ineu y la sede de Juan en Lippa/Lipova; no se extiende por esa razón a Temesvár ni a todo Banato."
+    },
+    {
+      "territory": "Hungría real",
+      "from": 1529,
+      "through": 1535,
+      "ids": [
+        "Sibiu"
+      ],
+      "source": "https://tti.abtk.hu/terkepek/terkepek/1529-torok-hadjarat-belharobu",
+      "reason": "Sibiu/Szeben fue la excepción habsbúrgica a la consolidación transilvana de Juan en1529; se rindió a Juan en1536.",
+      "supportingSources": [
+        "https://mek.oszk.hu/00900/00940/html/doc/c300663.htm",
+        "https://mek.oszk.hu/02100/02109/html/93.html"
+      ]
+    },
+    {
+      "territory": "Núcleo oriental de Zápolya",
+      "from": 1536,
+      "through": 1538,
+      "ids": [
+        "Sibiu"
+      ],
+      "source": "https://mek.oszk.hu/02100/02109/html/93.html",
+      "reason": "Rendición de Szeben a Juan a principios1536; se detiene ante la crisis1539."
+    },
+    {
+      "territory": "Gobierno de Temesvár de Bálint Török",
+      "from": 1529,
+      "through": 1530,
+      "ids": [
+        "Timisoara"
+      ],
+      "source": "https://mek.oszk.hu/02200/02211/html/torokb8.htm",
+      "reason": "Correspondencia primaria: Fernando exige defender Temesvár el5-7 y3-9-1530; releva a Bálint del cargo de conde de Temes el13-9-1530. Se limita al núcleo documentado, sin atribuir todo Banato."
+    },
+    {
+      "territory": "Gobierno de Temes de Péter Petrovics",
+      "from": 1541,
+      "through": 1550,
+      "ids": [
+        "Timisoara",
+        "Lipova",
+        "Veliky_Beckerek"
+      ],
+      "source": "https://islamansiklopedisi.org.tr/timisvar",
+      "reason": "Petrovics administró Temesvár, Lipova y Bečkerek para el reino oriental tributario. Se mantiene como gobierno delegado de los Zápolya, distinto de la provincia otomana creada1552."
+    },
+    {
+      "territory": "Hungría otomana",
+      "from": 1552,
+      "through": 1650,
+      "ids": [
+        "Timisoara",
+        "Lipova",
+        "Veliky_Beckerek",
+        "Recas",
+        "Semlacu_Mare",
+        "Modos",
+        "Carasova",
+        "Mihalt"
+      ],
+      "source": "https://islamansiklopedisi.org.tr/timisvar",
+      "reason": "Después de la toma de Temesvár26-7-1552 se creó el eyalato del Banato. Las celdas de la llanura se comprobó entre el Mureș y el Danubio; Lugoj y Caransebeș se excluyen de la prolongación por los relevos de la frontera transilvana."
+    },
+    {
+      "territory": "Señorío de Ioannina",
+      "from": 1400,
+      "through": 1410,
+      "ids": [
+        "Ioannina"
+      ],
+      "source": "https://islamansiklopedisi.org.tr/yanya",
+      "reason": "Esau Buondelmonti conservó su gobierno de Ioannina mediante alianzas y dependencia respecto a los otomanos. Una ayuda militar no equivale a gobierno provincial directo."
+    },
+    {
+      "territory": "Epiro de los Tocco",
+      "from": 1411,
+      "through": 1429,
+      "ids": [
+        "Ioannina",
+        "Vonitsa",
+        "Angelokastron"
+      ],
+      "source": "https://islamansiklopedisi.org.tr/karli-ili",
+      "reason": "Carlo I se hizo con Ioannina1411; tras1412–1413 dependió de los otomanos y conservó administración propia. Se excluye Arta hasta1416 y Lepanto veneciano."
+    },
+    {
+      "territory": "Epiro de los Tocco",
+      "from": 1416,
+      "through": 1448,
+      "ids": [
+        "Arta"
+      ],
+      "source": "https://islamansiklopedisi.org.tr/karli-ili",
+      "reason": "Carlo I tomó Arta1416; Carlo II lo sucedió1429 y tras1430 mantuvo este núcleo como príncipe tributario."
+    },
+    {
+      "territory": "Epiro de los Tocco",
+      "from": 1430,
+      "through": 1448,
+      "ids": [
+        "Vonitsa",
+        "Angelokastron"
+      ],
+      "source": "https://islamansiklopedisi.org.tr/karli-ili",
+      "reason": "Carlo II conservó estos territorios bajo vasallaje otomano tras perder Ioannina1430."
+    },
+    {
+      "territory": "Epiro de los Tocco",
+      "from": 1449,
+      "through": 1459,
+      "ids": [
+        "Vonitsa",
+        "Angelokastron"
+      ],
+      "source": "https://islamansiklopedisi.org.tr/karli-ili",
+      "reason": "Leonardo III perdió Arta1449 pero retuvo Vonitsa y Angelokastro con gobierno propio tributario."
+    },
+    {
+      "territory": "Epiro de los Tocco",
+      "from": 1460,
+      "through": 1478,
+      "ids": [
+        "Vonitsa"
+      ],
+      "source": "https://islamansiklopedisi.org.tr/karli-ili",
+      "reason": "Tras1460 sólo subsiste el último núcleo continental de Vonitsa hasta la campaña1479."
+    },
+    {
+      "territory": "Núcleo oriental de Zápolya",
+      "action": "remove",
+      "from": 1529,
+      "through": 1535,
+      "ids": [
+        "Sibiu"
+      ],
+      "source": "https://tti.abtk.hu/terkepek/terkepek/1529-torok-hadjarat-belharobu",
+      "reason": "Sibiu fue la excepción habsbúrgica y se rindió en 1536; no debe conservarse dentro del núcleo oriental en 1530."
+    },
+    {
+      "territory": "Principado de Moldavia",
+      "action": "remove",
+      "from": 1400,
+      "through": 1800,
+      "ids": [
+        "Crasna"
+      ],
+      "source": "https://primariacrasna.ro/",
+      "supportingSources": [
+        "https://mek.oszk.hu/04700/04750/cedula.html"
+      ],
+      "reason": "Corrección de topónimo por geometría: centroid [638.804,152.736], límites [637.911,151.920,639.700,153.500]. La celda está entre Zalău, Bihar y Huedin, al oeste de Cluj; corresponde a Kraszna/Crasna de Sălaj, confirmada por el ayuntamiento y la monografía de Szilágy. La atribución moldava confundía localidades homónimas y contradice su propia descripción de tierras al este de los Cárpatos."
+    },
+    {
+      "territory": "Hungría",
+      "action": "remove",
+      "from": 1409,
+      "through": 1525,
+      "ids": [
+        "Novigrad"
+      ],
+      "source": "https://www.enciklopedija.hr/clanak/novigrad-zadar",
+      "reason": "Novigrad de Dalmacia, inspeccionado entre Zadar y Šibenik, pasó a Venecia en 1409. Se retira del agregado húngaro posterior; no es Novigrad de Istria."
+    },
+    {
+      "territory": "Hungría",
+      "action": "remove",
+      "from": 1480,
+      "through": 1525,
+      "ids": [
+        "Krk"
+      ],
+      "source": "https://hrcak.srce.hr/file/352830",
+      "reason": "El catastro de Veglia fecha la administración veneciana desde 1480. La celda cubre la isla de Krk, no la tierra continental de Senj; el agregado húngaro no conserva esa isla después del cambio."
+    },
+    {
+      "territory": "Núcleo oriental de Zápolya",
+      "action": "remove",
+      "from": 1529,
+      "through": 1533,
+      "ids": [
+        "Oradea"
+      ],
+      "source": "https://mek.oszk.hu/02100/02109/html/93.html",
+      "supportingSources": [
+        "https://lexikon.katolikus.hu/C/Czibak.html"
+      ],
+      "reason": "El núcleo de Oradea se representa durante este intervalo en la capa del gobierno delegado de Imre Czibak, documentado en Bihar. La soberanía de Juan permanece accesible por la ruta agregada de Bihar, pero el mosaico no duplica la celda como dos dominios distintos."
+    },
+    {
+      "territory": "Croacia habsbúrgica",
+      "from": 1527,
+      "through": 1534,
+      "ids": [
+        "Kutina"
+      ],
+      "source": "https://hbl.lzmk.hr/clanak/5717",
+      "reason": "Se reserva para la capa de soberanía disputada. Kutina y Moslavina pertenecían a Petar I Erdődy, partidario de Juan Zápolya desde 1527. Hubo tregua local en 1530 y encuentros en 1531 y 1533; Petar y el obispo Šimun pasaron a Fernando en 1535. Se representa la autoridad regia disputada, conservando el señorío local.",
+      "authorityCondition": "control disputado",
+      "supportingSources": [
+        "https://www.enciklopedija.hr/clanak/slavonija"
+      ],
+      "action": "remove"
+    },
+    {
+      "territory": "Croacia habsbúrgica",
+      "from": 1529,
+      "through": 1531,
+      "ids": [
+        "Pakrac"
+      ],
+      "source": "https://hrcak.srce.hr/en/file/19646",
+      "reason": "Se reserva para la capa de soberanía disputada. Ivan Tahy, prior de Vrana y señor de Pakrac, continuaba del lado de Juan en las negociaciones de 1530. En 1532 Stjepan Berislavić atacó sus posesiones porque Tahy había pasado a Fernando. El intervalo conserva la disputa y termina antes del cambio documentado.",
+      "authorityCondition": "control disputado",
+      "supportingSources": [
+        "https://www.enciklopedija.hr/clanak/pakrac"
+      ],
+      "action": "remove"
+    },
+    {
+      "territory": "Croacia habsbúrgica",
+      "from": 1527,
+      "through": 1536,
+      "ids": [
+        "Pozega"
+      ],
+      "source": "https://www.hrz.hr/images/stories/publikacije/knjige/Barilovic.pdf",
+      "reason": "Se reserva para la capa de soberanía disputada. La guerra civil de las facciones croatas y eslavonas está documentada entre 1527 y 1538. Požega se mantiene como núcleo de soberanía regia disputada hasta su conquista otomana de 1537; esto no afirma una ocupación local exclusiva por un monarca ni convierte la elección de 1527 en control continuo.",
+      "authorityCondition": "control disputado",
+      "supportingSources": [
+        "https://www.enciklopedija.hr/clanak/slavonija",
+        "https://www.enciklopedija.hr/clanak/pozega"
+      ],
+      "action": "remove"
+    }
+  ],
+  "territories": [
+    {
+      "corridor": "Ampliación balcánica documentada",
+      "name": "Gobierno de Temesvár de Bálint Török",
+      "color": "#a584bc",
+      "coverage": {
+        "from": 1529,
+        "through": 1530
+      },
+      "active": {
+        "from": 1529,
+        "through": 1530
+      },
+      "note": "Núcleos con gobierno propio documentado. La tributación y la delegación se identifican en la ficha; los polígonos son aproximaciones cartográficas y no atribuyen el resto del país.",
+      "versions": [
+        {
+          "from": 1529,
+          "oldIds": [],
+          "ids": [
+            "Timisoara"
+          ],
+          "borderline": []
+        },
+        {
+          "from": 1531,
+          "oldIds": [],
+          "ids": [],
+          "borderline": []
+        }
+      ],
+      "sources": [
+        {
+          "url": "https://mek.oszk.hu/02200/02211/html/torokb8.htm",
+          "label": "Historia y documentos húngaros",
+          "locator": "Correspondencia primaria: Fernando exige defender Temesvár el5-7 y3-9-1530; releva a Bálint del cargo de conde de Temes el13-9-1530. Se limita al núcleo documentado, sin atribuir todo Banato."
+        }
+      ]
+    },
+    {
+      "corridor": "Ampliación balcánica documentada",
+      "name": "Gobierno de Temes de Péter Petrovics",
+      "color": "#a584bc",
+      "coverage": {
+        "from": 1541,
+        "through": 1550
+      },
+      "active": {
+        "from": 1541,
+        "through": 1550
+      },
+      "note": "Núcleos con gobierno propio documentado. La tributación y la delegación se identifican en la ficha; los polígonos son aproximaciones cartográficas y no atribuyen el resto del país.",
+      "versions": [
+        {
+          "from": 1541,
+          "oldIds": [],
+          "ids": [
+            "Lipova",
+            "Timisoara",
+            "Veliky_Beckerek"
+          ],
+          "borderline": []
+        },
+        {
+          "from": 1551,
+          "oldIds": [],
+          "ids": [],
+          "borderline": []
+        }
+      ],
+      "sources": [
+        {
+          "url": "https://islamansiklopedisi.org.tr/timisvar",
+          "label": "TDV İslâm Ansiklopedisi",
+          "locator": "Petrovics administró Temesvár, Lipova y Bečkerek para el reino oriental tributario. Se mantiene como gobierno delegado de los Zápolya, distinto de la provincia otomana creada1552."
+        }
+      ]
+    },
+    {
+      "corridor": "Ampliación balcánica documentada",
+      "name": "Gobierno de Bihar de Imre Czibak",
+      "color": "#a584bc",
+      "authorityCondition": "gobierno delegado",
+      "coverage": {
+        "from": 1529,
+        "through": 1533
+      },
+      "active": {
+        "from": 1529,
+        "through": 1533
+      },
+      "note": "Núcleos con gobierno propio documentado. La tributación y la delegación se identifican en la ficha; los polígonos son aproximaciones cartográficas y no atribuyen el resto del país.",
+      "versions": [
+        {
+          "from": 1529,
+          "oldIds": [],
+          "ids": [
+            "Beius",
+            "Cheresig",
+            "Oradea"
+          ],
+          "borderline": []
+        },
+        {
+          "from": 1534,
+          "oldIds": [],
+          "ids": [],
+          "borderline": []
+        }
+      ],
+      "sources": [
+        {
+          "url": "https://mek.oszk.hu/02100/02109/html/93.html",
+          "label": "Historia y documentos húngaros",
+          "locator": "Imre Czibak ejercía el poder en Bihar en nombre de Juan hasta su asesinato en agosto de 1534. Núcleos inspeccionados de Várad/Oradea y sus entornos occidental y meridional. El corte empieza en 1529 y reserva el año de muerte a una revisión de sucesión; no se extiende a toda la frontera occidental de Transilvania."
+        },
+        {
+          "url": "https://lexikon.katolikus.hu/C/Czibak.html",
+          "label": "Fuente histórica de la jurisdicción",
+          "locator": "Imre Czibak ejercía el poder en Bihar en nombre de Juan hasta su asesinato en agosto de 1534. Núcleos inspeccionados de Várad/Oradea y sus entornos occidental y meridional. El corte empieza en 1529 y reserva el año de muerte a una revisión de sucesión; no se extiende a toda la frontera occidental de Transilvania."
+        }
+      ]
+    },
+    {
+      "corridor": "Ampliación balcánica documentada",
+      "name": "Señorío de Ioannina",
+      "color": "#b49a61",
+      "coverage": {
+        "from": 1400,
+        "through": 1410
+      },
+      "active": {
+        "from": 1400,
+        "through": 1410
+      },
+      "note": "Núcleos con gobierno propio documentado. La tributación y la delegación se identifican en la ficha; los polígonos son aproximaciones cartográficas y no atribuyen el resto del país.",
+      "versions": [
+        {
+          "from": 1400,
+          "oldIds": [],
+          "ids": [
+            "Ioannina"
+          ],
+          "borderline": []
+        },
+        {
+          "from": 1411,
+          "oldIds": [],
+          "ids": [],
+          "borderline": []
+        }
+      ],
+      "sources": [
+        {
+          "url": "https://islamansiklopedisi.org.tr/yanya",
+          "label": "TDV İslâm Ansiklopedisi",
+          "locator": "Esau Buondelmonti conservó su gobierno de Ioannina mediante alianzas y dependencia respecto a los otomanos. Una ayuda militar no equivale a gobierno provincial directo."
+        }
+      ]
+    },
+    {
+      "corridor": "Ampliación balcánica documentada",
+      "name": "Epiro de los Tocco",
+      "color": "#b49a61",
+      "coverage": {
+        "from": 1411,
+        "through": 1478
+      },
+      "active": {
+        "from": 1411,
+        "through": 1478
+      },
+      "note": "Núcleos con gobierno propio documentado. La tributación y la delegación se identifican en la ficha; los polígonos son aproximaciones cartográficas y no atribuyen el resto del país.",
+      "versions": [
+        {
+          "from": 1411,
+          "oldIds": [],
+          "ids": [
+            "Angelokastron",
+            "Ioannina",
+            "Vonitsa"
+          ],
+          "borderline": []
+        },
+        {
+          "from": 1416,
+          "oldIds": [],
+          "ids": [
+            "Angelokastron",
+            "Arta",
+            "Ioannina",
+            "Vonitsa"
+          ],
+          "borderline": []
+        },
+        {
+          "from": 1430,
+          "oldIds": [],
+          "ids": [
+            "Angelokastron",
+            "Arta",
+            "Vonitsa"
+          ],
+          "borderline": []
+        },
+        {
+          "from": 1449,
+          "oldIds": [],
+          "ids": [
+            "Angelokastron",
+            "Vonitsa"
+          ],
+          "borderline": []
+        },
+        {
+          "from": 1460,
+          "oldIds": [],
+          "ids": [
+            "Vonitsa"
+          ],
+          "borderline": []
+        },
+        {
+          "from": 1479,
+          "oldIds": [],
+          "ids": [],
+          "borderline": []
+        }
+      ],
+      "sources": [
+        {
+          "url": "https://islamansiklopedisi.org.tr/karli-ili",
+          "label": "TDV İslâm Ansiklopedisi",
+          "locator": "Carlo I se hizo con Ioannina1411; tras1412–1413 dependió de los otomanos y conservó administración propia. Se excluye Arta hasta1416 y Lepanto veneciano. Carlo I tomó Arta1416; Carlo II lo sucedió1429 y tras1430 mantuvo este núcleo como príncipe tributario. Carlo II conservó estos territorios bajo vasallaje otomano tras perder Ioannina1430. Leonardo III perdió Arta1449 pero retuvo Vonitsa y Angelokastro con gobierno propio tributario. Tras1460 sólo subsiste el último núcleo continental de Vonitsa hasta la campaña1479."
+        }
+      ]
+    },
+    {
+      "corridor": "Ampliación balcánica documentada",
+      "name": "Eslavonia disputada (núcleos)",
+      "color": "#8e789e",
+      "authorityCondition": "control disputado",
+      "coverage": {
+        "from": 1527,
+        "through": 1536
+      },
+      "active": {
+        "from": 1527,
+        "through": 1536
+      },
+      "note": "Núcleos de soberanía regia disputada: el rayado no afirma una ocupación simultánea ni control uniforme de cada celda. Las fechas distinguen adhesiones documentadas y conquistas.",
+      "versions": [
+        {
+          "from": 1527,
+          "oldIds": [],
+          "ids": [
+            "Kutina",
+            "Pozega"
+          ],
+          "borderline": []
+        },
+        {
+          "from": 1529,
+          "oldIds": [],
+          "ids": [
+            "Kutina",
+            "Pakrac",
+            "Pozega"
+          ],
+          "borderline": []
+        },
+        {
+          "from": 1532,
+          "oldIds": [],
+          "ids": [
+            "Kutina",
+            "Pozega"
+          ],
+          "borderline": []
+        },
+        {
+          "from": 1535,
+          "oldIds": [],
+          "ids": [
+            "Pozega"
+          ],
+          "borderline": []
+        },
+        {
+          "from": 1537,
+          "oldIds": [],
+          "ids": [],
+          "borderline": []
+        }
+      ],
+      "sources": [
+        {
+          "url": "https://hbl.lzmk.hr/clanak/5717",
+          "label": "Hrvatski biografski leksikon",
+          "locator": "Kutina y Moslavina pertenecían a Petar I Erdődy, partidario de Juan Zápolya desde 1527. Hubo tregua local en 1530 y encuentros en 1531 y 1533; Petar y el obispo Šimun pasaron a Fernando en 1535. Se representa la autoridad regia disputada, conservando el señorío local."
+        },
+        {
+          "url": "https://www.enciklopedija.hr/clanak/slavonija",
+          "label": "Fuente histórica de la jurisdicción",
+          "locator": "Kutina y Moslavina pertenecían a Petar I Erdődy, partidario de Juan Zápolya desde 1527. Hubo tregua local en 1530 y encuentros en 1531 y 1533; Petar y el obispo Šimun pasaron a Fernando en 1535. Se representa la autoridad regia disputada, conservando el señorío local. La guerra civil de las facciones croatas y eslavonas está documentada entre 1527 y 1538. Požega se mantiene como núcleo de soberanía regia disputada hasta su conquista otomana de 1537; esto no afirma una ocupación local exclusiva por un monarca ni convierte la elección de 1527 en control continuo."
+        },
+        {
+          "url": "https://hrcak.srce.hr/en/file/19646",
+          "label": "Fuente histórica de la jurisdicción",
+          "locator": "Ivan Tahy, prior de Vrana y señor de Pakrac, continuaba del lado de Juan en las negociaciones de 1530. En 1532 Stjepan Berislavić atacó sus posesiones porque Tahy había pasado a Fernando. El intervalo conserva la disputa y termina antes del cambio documentado."
+        },
+        {
+          "url": "https://www.enciklopedija.hr/clanak/pakrac",
+          "label": "Fuente histórica de la jurisdicción",
+          "locator": "Ivan Tahy, prior de Vrana y señor de Pakrac, continuaba del lado de Juan en las negociaciones de 1530. En 1532 Stjepan Berislavić atacó sus posesiones porque Tahy había pasado a Fernando. El intervalo conserva la disputa y termina antes del cambio documentado."
+        },
+        {
+          "url": "https://www.hrz.hr/images/stories/publikacije/knjige/Barilovic.pdf",
+          "label": "Fuente histórica de la jurisdicción",
+          "locator": "La guerra civil de las facciones croatas y eslavonas está documentada entre 1527 y 1538. Požega se mantiene como núcleo de soberanía regia disputada hasta su conquista otomana de 1537; esto no afirma una ocupación local exclusiva por un monarca ni convierte la elección de 1527 en control continuo."
+        },
+        {
+          "url": "https://www.enciklopedija.hr/clanak/pozega",
+          "label": "Fuente histórica de la jurisdicción",
+          "locator": "La guerra civil de las facciones croatas y eslavonas está documentada entre 1527 y 1538. Požega se mantiene como núcleo de soberanía regia disputada hasta su conquista otomana de 1537; esto no afirma una ocupación local exclusiva por un monarca ni convierte la elección de 1527 en control continuo."
+        }
+      ]
+    },
+    {
+      "corridor": "Ampliación balcánica documentada",
+      "name": "Monte Athos autónomo bajo autoridad otomana",
+      "color": "#7c988f",
+      "authorityCondition": "autonomía tributaria",
+      "coverage": {
+        "from": 1430,
+        "through": 1800
+      },
+      "active": {
+        "from": 1430,
+        "through": 1800
+      },
+      "note": "Administración propia de los monasterios, con autoridad superior otomana y privilegios fiscales. La capa no convierte el autogobierno monástico en un gobierno provincial directo.",
+      "versions": [
+        {
+          "from": 1430,
+          "oldIds": [],
+          "ids": [
+            "Mount_Athos"
+          ],
+          "borderline": []
+        },
+        {
+          "from": 1801,
+          "oldIds": [],
+          "ids": [],
+          "borderline": []
+        }
+      ],
+      "sources": [
+        {
+          "url": "https://islamansiklopedisi.org.tr/aynaroz",
+          "label": "TDV İslâm Ansiklopedisi",
+          "locator": "Athos reconoció la autoridad otomana desde 1430 conservando privilegios y administración monástica propia. El haseki de Karyes y los firmans imperiales documentan esa relación; no se representa como una provincia gobernada directamente ni se inventa una sucesión de protos."
+        },
+        {
+          "url": "https://www.pkm.gov.gr/i-chalkidiki-mas/istoria-xalkidikis/",
+          "label": "Región de Macedonia Central",
+          "locator": "Athos reconoció la autoridad otomana desde 1430 conservando privilegios y administración monástica propia. El haseki de Karyes y los firmans imperiales documentan esa relación; no se representa como una provincia gobernada directamente ni se inventa una sucesión de protos."
+        }
+      ]
+    },
+    {
+      "corridor": "Ampliación balcánica documentada",
+      "name": "Morea veneciana (núcleos)",
+      "color": "#4f97a9",
+      "coverage": {
+        "from": 1699,
+        "through": 1714
+      },
+      "active": {
+        "from": 1699,
+        "through": 1714
+      },
+      "note": "Núcleos con gobierno propio documentado. La tributación y la delegación se identifican en la ficha; los polígonos son aproximaciones cartográficas y no atribuyen el resto del país.",
+      "versions": [
+        {
+          "from": 1699,
+          "oldIds": [],
+          "ids": [
+            "Chalandritsa",
+            "Ermioni",
+            "Nafplio",
+            "Peloponnesian_Mountains1",
+            "Peloponnesian_Mountains2",
+            "Pontikokastro"
+          ],
+          "borderline": []
+        },
+        {
+          "from": 1715,
+          "oldIds": [],
+          "ids": [],
+          "borderline": []
+        }
+      ],
+      "sources": [
+        {
+          "url": "https://islamansiklopedisi.org.tr/karlofca#2-karlofca-antlasmasi",
+          "label": "TDV İslâm Ansiklopedisi",
+          "locator": "El tratado de Karlowitz de 1699 reconoce la Morea veneciana. Se representan seis núcleos inspeccionados del interior, Nauplia y Ermioni; el corte comienza en el tratado para no fingir conocer la conquista de cada celda durante la campaña de 1684–1687. Termina antes del retorno otomano de 1715."
+        },
+        {
+          "url": "https://islamansiklopedisi.org.tr/mora",
+          "label": "TDV İslâm Ansiklopedisi",
+          "locator": "El tratado de Karlowitz de 1699 reconoce la Morea veneciana. Se representan seis núcleos inspeccionados del interior, Nauplia y Ermioni; el corte comienza en el tratado para no fingir conocer la conquista de cada celda durante la campaña de 1684–1687. Termina antes del retorno otomano de 1715."
+        }
+      ]
+    }
+  ],
+  "temporalExtensions": [
+    {
+      "name": "Balcanes meridionales otomanos",
+      "periods": [
+        {
+          "from": 1651,
+          "through": 1800
+        }
+      ],
+      "note": "Serie independiente de los únicos núcleos cuya continuidad posterior está documentada. No hereda el mapa completo de 1650.",
+      "versions": [
+        {
+          "from": 1651,
+          "oldIds": [],
+          "ids": [
+            "Angelokastron",
+            "Arta",
+            "Balkan_Mountains1",
+            "Balkan_Mountains2",
+            "Balkan_Mountains3",
+            "Balkan_Mountains4",
+            "Balkan_Mountains5",
+            "Balkan_Mountains6",
+            "Chalandritsa",
+            "Demetrias",
+            "Dobrolak",
+            "Dospat",
+            "Edessa",
+            "Elassona",
+            "Ermioni",
+            "Farsala",
+            "Florina",
+            "Giannitsa",
+            "Grevena",
+            "Hatera",
+            "Hiambouli",
+            "Ioannina",
+            "Karditsa",
+            "Karpenisi",
+            "Kassandreia",
+            "Kastoria",
+            "Konitsa",
+            "Larissa",
+            "Mount_Olympos",
+            "Nafplio",
+            "Ostrovo",
+            "Peloponnesian_Mountains1",
+            "Pindus_Mountains10",
+            "Pindus_Mountains11",
+            "Pindus_Mountains12",
+            "Pindus_Mountains4",
+            "Pindus_Mountains5",
+            "Pindus_Mountains6",
+            "Pindus_Mountains7",
+            "Pindus_Mountains8",
+            "Pindus_Mountains9",
+            "Polygyros",
+            "Pontikokastro",
+            "Pyli",
+            "Rhodope_Mountains1",
+            "Rhodope_Mountains2",
+            "Rhodope_Mountains3",
+            "Rhodope_Mountains4",
+            "Rhodope_Mountains5",
+            "Rhodope_Mountains6",
+            "Servia",
+            "Siatista",
+            "Sliven",
+            "Stomio",
+            "Traianopolis",
+            "Trikala",
+            "Tyrnavos",
+            "Ustra",
+            "Velbuzd",
+            "Veria",
+            "Zemlungrad"
+          ],
+          "borderline": []
+        },
+        {
+          "from": 1671,
+          "oldIds": [],
+          "ids": [
+            "Angelokastron",
+            "Arta",
+            "Balkan_Mountains1",
+            "Balkan_Mountains2",
+            "Balkan_Mountains3",
+            "Balkan_Mountains4",
+            "Balkan_Mountains5",
+            "Balkan_Mountains6",
+            "Chalandritsa",
+            "Demetrias",
+            "Dobrolak",
+            "Dospat",
+            "Edessa",
+            "Elassona",
+            "Ermioni",
+            "Farsala",
+            "Florina",
+            "Giannitsa",
+            "Grevena",
+            "Hatera",
+            "Hiambouli",
+            "Ioannina",
+            "Karditsa",
+            "Karpenisi",
+            "Kassandreia",
+            "Kastoria",
+            "Konitsa",
+            "Larissa",
+            "Mount_Olympos",
+            "Nafplio",
+            "Ostrovo",
+            "Peloponnesian_Mountains1",
+            "Peloponnesian_Mountains2",
+            "Pindus_Mountains10",
+            "Pindus_Mountains11",
+            "Pindus_Mountains12",
+            "Pindus_Mountains4",
+            "Pindus_Mountains5",
+            "Pindus_Mountains6",
+            "Pindus_Mountains7",
+            "Pindus_Mountains8",
+            "Pindus_Mountains9",
+            "Polygyros",
+            "Pontikokastro",
+            "Pyli",
+            "Rhodope_Mountains1",
+            "Rhodope_Mountains2",
+            "Rhodope_Mountains3",
+            "Rhodope_Mountains4",
+            "Rhodope_Mountains5",
+            "Rhodope_Mountains6",
+            "Servia",
+            "Siatista",
+            "Sliven",
+            "Stomio",
+            "Traianopolis",
+            "Trikala",
+            "Tyrnavos",
+            "Ustra",
+            "Velbuzd",
+            "Veria",
+            "Zemlungrad"
+          ],
+          "borderline": []
+        },
+        {
+          "from": 1684,
+          "oldIds": [],
+          "ids": [
+            "Angelokastron",
+            "Arta",
+            "Balkan_Mountains1",
+            "Balkan_Mountains2",
+            "Balkan_Mountains3",
+            "Balkan_Mountains4",
+            "Balkan_Mountains5",
+            "Balkan_Mountains6",
+            "Demetrias",
+            "Dobrolak",
+            "Dospat",
+            "Edessa",
+            "Elassona",
+            "Farsala",
+            "Florina",
+            "Giannitsa",
+            "Grevena",
+            "Hatera",
+            "Hiambouli",
+            "Ioannina",
+            "Karditsa",
+            "Karpenisi",
+            "Kassandreia",
+            "Kastoria",
+            "Konitsa",
+            "Larissa",
+            "Mount_Olympos",
+            "Ostrovo",
+            "Pindus_Mountains10",
+            "Pindus_Mountains11",
+            "Pindus_Mountains12",
+            "Pindus_Mountains4",
+            "Pindus_Mountains5",
+            "Pindus_Mountains6",
+            "Pindus_Mountains7",
+            "Pindus_Mountains8",
+            "Pindus_Mountains9",
+            "Polygyros",
+            "Pyli",
+            "Rhodope_Mountains1",
+            "Rhodope_Mountains2",
+            "Rhodope_Mountains3",
+            "Rhodope_Mountains4",
+            "Rhodope_Mountains5",
+            "Rhodope_Mountains6",
+            "Servia",
+            "Siatista",
+            "Sliven",
+            "Stomio",
+            "Traianopolis",
+            "Trikala",
+            "Tyrnavos",
+            "Ustra",
+            "Velbuzd",
+            "Veria",
+            "Zemlungrad"
+          ],
+          "borderline": []
+        },
+        {
+          "from": 1715,
+          "oldIds": [],
+          "ids": [
+            "Angelokastron",
+            "Arta",
+            "Balkan_Mountains1",
+            "Balkan_Mountains2",
+            "Balkan_Mountains3",
+            "Balkan_Mountains4",
+            "Balkan_Mountains5",
+            "Balkan_Mountains6",
+            "Chalandritsa",
+            "Demetrias",
+            "Dobrolak",
+            "Dospat",
+            "Edessa",
+            "Elassona",
+            "Ermioni",
+            "Farsala",
+            "Florina",
+            "Giannitsa",
+            "Grevena",
+            "Hatera",
+            "Hiambouli",
+            "Ioannina",
+            "Karditsa",
+            "Karpenisi",
+            "Kassandreia",
+            "Kastoria",
+            "Konitsa",
+            "Larissa",
+            "Mount_Olympos",
+            "Nafplio",
+            "Ostrovo",
+            "Peloponnesian_Mountains1",
+            "Peloponnesian_Mountains2",
+            "Pindus_Mountains10",
+            "Pindus_Mountains11",
+            "Pindus_Mountains12",
+            "Pindus_Mountains4",
+            "Pindus_Mountains5",
+            "Pindus_Mountains6",
+            "Pindus_Mountains7",
+            "Pindus_Mountains8",
+            "Pindus_Mountains9",
+            "Polygyros",
+            "Pontikokastro",
+            "Pyli",
+            "Rhodope_Mountains1",
+            "Rhodope_Mountains2",
+            "Rhodope_Mountains3",
+            "Rhodope_Mountains4",
+            "Rhodope_Mountains5",
+            "Rhodope_Mountains6",
+            "Servia",
+            "Siatista",
+            "Sliven",
+            "Stomio",
+            "Traianopolis",
+            "Trikala",
+            "Tyrnavos",
+            "Ustra",
+            "Velbuzd",
+            "Veria",
+            "Zemlungrad"
+          ],
+          "borderline": []
+        },
+        {
+          "from": 1770,
+          "oldIds": [],
+          "ids": [
+            "Angelokastron",
+            "Arta",
+            "Balkan_Mountains1",
+            "Balkan_Mountains2",
+            "Balkan_Mountains3",
+            "Balkan_Mountains4",
+            "Balkan_Mountains5",
+            "Balkan_Mountains6",
+            "Chalandritsa",
+            "Demetrias",
+            "Dobrolak",
+            "Dospat",
+            "Edessa",
+            "Elassona",
+            "Ermioni",
+            "Farsala",
+            "Florina",
+            "Giannitsa",
+            "Grevena",
+            "Hatera",
+            "Hiambouli",
+            "Ioannina",
+            "Karditsa",
+            "Karpenisi",
+            "Kassandreia",
+            "Kastoria",
+            "Konitsa",
+            "Larissa",
+            "Mount_Olympos",
+            "Nafplio",
+            "Ostrovo",
+            "Peloponnesian_Mountains1",
+            "Pindus_Mountains10",
+            "Pindus_Mountains11",
+            "Pindus_Mountains12",
+            "Pindus_Mountains4",
+            "Pindus_Mountains5",
+            "Pindus_Mountains6",
+            "Pindus_Mountains7",
+            "Pindus_Mountains8",
+            "Pindus_Mountains9",
+            "Polygyros",
+            "Pontikokastro",
+            "Pyli",
+            "Rhodope_Mountains1",
+            "Rhodope_Mountains2",
+            "Rhodope_Mountains3",
+            "Rhodope_Mountains4",
+            "Rhodope_Mountains5",
+            "Rhodope_Mountains6",
+            "Servia",
+            "Siatista",
+            "Sliven",
+            "Stomio",
+            "Traianopolis",
+            "Trikala",
+            "Tyrnavos",
+            "Ustra",
+            "Velbuzd",
+            "Veria",
+            "Zemlungrad"
+          ],
+          "borderline": []
+        },
+        {
+          "from": 1801,
+          "oldIds": [],
+          "ids": [],
+          "borderline": []
+        }
+      ],
+      "sources": [
+        {
+          "url": "https://islamansiklopedisi.org.tr/tirhala",
+          "label": "Continuidad territorial documentada"
+        },
+        {
+          "url": "https://islamansiklopedisi.org.tr/yanya",
+          "label": "Continuidad territorial documentada"
+        },
+        {
+          "url": "https://islamansiklopedisi.org.tr/narda",
+          "label": "Continuidad territorial documentada"
+        },
+        {
+          "url": "https://islamansiklopedisi.org.tr/karli-ili",
+          "label": "Continuidad territorial documentada"
+        },
+        {
+          "url": "https://islamansiklopedisi.org.tr/vodina",
+          "label": "Continuidad territorial documentada"
+        },
+        {
+          "url": "https://islamansiklopedisi.org.tr/kesriye",
+          "label": "Continuidad territorial documentada"
+        },
+        {
+          "url": "https://dergipark.org.tr/tr/pub/ankarad/article/905269",
+          "label": "Continuidad territorial documentada"
+        },
+        {
+          "url": "https://www.pkm.gov.gr/i-chalkidiki-mas/istoria-xalkidikis/",
+          "label": "Continuidad territorial documentada"
+        },
+        {
+          "url": "https://www.efachagor.gr/",
+          "label": "Continuidad territorial documentada"
+        },
+        {
+          "url": "https://islamansiklopedisi.org.tr/tesalya",
+          "label": "Continuidad territorial documentada"
+        },
+        {
+          "url": "https://islamansiklopedisi.org.tr/bulgaristan",
+          "label": "Continuidad territorial documentada"
+        },
+        {
+          "url": "https://islamansiklopedisi.org.tr/filibe",
+          "label": "Continuidad territorial documentada"
+        },
+        {
+          "url": "https://islamansiklopedisi.org.tr/sofya",
+          "label": "Continuidad territorial documentada"
+        },
+        {
+          "url": "https://islamansiklopedisi.org.tr/samakov",
+          "label": "Continuidad territorial documentada"
+        },
+        {
+          "url": "https://islamansiklopedisi.org.tr/mora",
+          "label": "Continuidad territorial documentada"
+        }
+      ]
+    }
+  ],
+  "removals": [
+    {
+      "territory": "Núcleo oriental de Zápolya",
+      "action": "remove",
+      "from": 1529,
+      "through": 1535,
+      "ids": [
+        "Sibiu"
+      ],
+      "source": "https://tti.abtk.hu/terkepek/terkepek/1529-torok-hadjarat-belharobu",
+      "reason": "Sibiu fue la excepción habsbúrgica y se rindió en 1536; no debe conservarse dentro del núcleo oriental en 1530."
+    },
+    {
+      "territory": "Principado de Moldavia",
+      "action": "remove",
+      "from": 1400,
+      "through": 1800,
+      "ids": [
+        "Crasna"
+      ],
+      "source": "https://primariacrasna.ro/",
+      "supportingSources": [
+        "https://mek.oszk.hu/04700/04750/cedula.html"
+      ],
+      "reason": "Corrección de topónimo por geometría: centroid [638.804,152.736], límites [637.911,151.920,639.700,153.500]. La celda está entre Zalău, Bihar y Huedin, al oeste de Cluj; corresponde a Kraszna/Crasna de Sălaj, confirmada por el ayuntamiento y la monografía de Szilágy. La atribución moldava confundía localidades homónimas y contradice su propia descripción de tierras al este de los Cárpatos."
+    },
+    {
+      "territory": "Hungría",
+      "action": "remove",
+      "from": 1409,
+      "through": 1525,
+      "ids": [
+        "Novigrad"
+      ],
+      "source": "https://www.enciklopedija.hr/clanak/novigrad-zadar",
+      "reason": "Novigrad de Dalmacia, inspeccionado entre Zadar y Šibenik, pasó a Venecia en 1409. Se retira del agregado húngaro posterior; no es Novigrad de Istria."
+    },
+    {
+      "territory": "Hungría",
+      "action": "remove",
+      "from": 1480,
+      "through": 1525,
+      "ids": [
+        "Krk"
+      ],
+      "source": "https://hrcak.srce.hr/file/352830",
+      "reason": "El catastro de Veglia fecha la administración veneciana desde 1480. La celda cubre la isla de Krk, no la tierra continental de Senj; el agregado húngaro no conserva esa isla después del cambio."
+    },
+    {
+      "territory": "Núcleo oriental de Zápolya",
+      "action": "remove",
+      "from": 1529,
+      "through": 1533,
+      "ids": [
+        "Oradea"
+      ],
+      "source": "https://mek.oszk.hu/02100/02109/html/93.html",
+      "supportingSources": [
+        "https://lexikon.katolikus.hu/C/Czibak.html"
+      ],
+      "reason": "El núcleo de Oradea se representa durante este intervalo en la capa del gobierno delegado de Imre Czibak, documentado en Bihar. La soberanía de Juan permanece accesible por la ruta agregada de Bihar, pero el mosaico no duplica la celda como dos dominios distintos."
+    },
+    {
+      "territory": "Croacia habsbúrgica",
+      "from": 1527,
+      "through": 1534,
+      "ids": [
+        "Kutina"
+      ],
+      "source": "https://hbl.lzmk.hr/clanak/5717",
+      "reason": "Se reserva para la capa de soberanía disputada. Kutina y Moslavina pertenecían a Petar I Erdődy, partidario de Juan Zápolya desde 1527. Hubo tregua local en 1530 y encuentros en 1531 y 1533; Petar y el obispo Šimun pasaron a Fernando en 1535. Se representa la autoridad regia disputada, conservando el señorío local.",
+      "authorityCondition": "control disputado",
+      "supportingSources": [
+        "https://www.enciklopedija.hr/clanak/slavonija"
+      ],
+      "action": "remove"
+    },
+    {
+      "territory": "Croacia habsbúrgica",
+      "from": 1529,
+      "through": 1531,
+      "ids": [
+        "Pakrac"
+      ],
+      "source": "https://hrcak.srce.hr/en/file/19646",
+      "reason": "Se reserva para la capa de soberanía disputada. Ivan Tahy, prior de Vrana y señor de Pakrac, continuaba del lado de Juan en las negociaciones de 1530. En 1532 Stjepan Berislavić atacó sus posesiones porque Tahy había pasado a Fernando. El intervalo conserva la disputa y termina antes del cambio documentado.",
+      "authorityCondition": "control disputado",
+      "supportingSources": [
+        "https://www.enciklopedija.hr/clanak/pakrac"
+      ],
+      "action": "remove"
+    },
+    {
+      "territory": "Croacia habsbúrgica",
+      "from": 1527,
+      "through": 1536,
+      "ids": [
+        "Pozega"
+      ],
+      "source": "https://www.hrz.hr/images/stories/publikacije/knjige/Barilovic.pdf",
+      "reason": "Se reserva para la capa de soberanía disputada. La guerra civil de las facciones croatas y eslavonas está documentada entre 1527 y 1538. Požega se mantiene como núcleo de soberanía regia disputada hasta su conquista otomana de 1537; esto no afirma una ocupación local exclusiva por un monarca ni convierte la elección de 1527 en control continuo.",
+      "authorityCondition": "control disputado",
+      "supportingSources": [
+        "https://www.enciklopedija.hr/clanak/slavonija",
+        "https://www.enciklopedija.hr/clanak/pozega"
+      ],
+      "action": "remove"
+    }
+  ],
+  "overrides": [],
+  "limitations": [
+    "Los cortes de 1400–1650 son la prioridad de integración. Los intervalos posteriores se añaden sólo donde la fuente documenta continuidad; no se prolonga Banato, Dalmacia o Morea de forma automática.",
+    "La montaña montenegrina occidental/Cetinje sigue pendiente de una capa de autoridad local y tributaria; no se convierte en provincia otomana uniforme.",
+    "Hungría central en 1530 requiere más fuentes de control local en la guerra entre los dos reyes. Quedan celdas sin una atribución arbitraria.",
+    "La ampliación no sustituye las máscaras especiales del interregno de 1403–1413, que deben conservar sus exclusiones de costa y Serbia."
+  ]
+}

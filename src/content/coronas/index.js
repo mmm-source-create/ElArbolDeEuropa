@@ -41,6 +41,7 @@ const acceso=(persona,territorio,desde,motivos,explicacion,fuentes=[FMG,BRIT],cl
 
 // Cada explicación se ancla a un mandato real de la base, nunca al título resumen.
 export const ACCESOS_CORONAS = [
+ acceso('CARLOS5','Palatinado-Neoburgo',1546,['conquista'],'Ocupación imperial durante la guerra de Esmalcalda. Se representa como ocupación y se cierra antes de la restitución de Otón Enrique por la Paz de Passau en 1552; no fue una herencia del principado.', ['https://www.historisches-lexikon-bayerns.de/Lexikon/Artikel_45317'],'gobierno'),
  acceso('MARGFRAFLA','Condado de Borgoña',1361,['herencia'],'El condado imperial y Artois pasaron a Margarita de Francia antes de la generación de Luis de Male; no eran partes del ducado francés.',[BIBLISSIMA_LUIS],'condado'),
  acceso('LUIS2FLA','Condado de Borgoña',1382,['herencia'],'Luis de Male heredó de su madre el Franco Condado y Artois en 1382, dos años antes de su propia muerte.',[BIBLISSIMA_LUIS],'condado'),
  ...['Nevers','Rethel'].map(t=>acceso('LUIS2FLA',t,1346,['herencia'],'Luis de Male heredó este condado junto a Flandes; en 1384 pasó a su hija Margarita III.',[BIBLISSIMA_LUIS],'condado')),

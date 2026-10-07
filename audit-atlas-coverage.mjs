@@ -86,7 +86,12 @@ export function auditAtlasCoverage(personas, data, locationIds, catalogue = TERR
     const hasMandateGeometryGaps = status === 'represented'
       && mandates.some(mandate => mandate.yearsWithoutGeometry);
     const hasEntireTerritoryYearGaps = status === 'represented' && missingYears.length > 0;
-    const limitedCore = status === 'represented' && LIMITED_CORES.has(territory);
+    const limitedCore = status === 'represented' && (LIMITED_CORES.has(territory)
+      || [...layerNames].some(name => {
+        const layer=layers.find(layer=>layer.name===name);
+        return [layer,...(layer?.temporalExtensions || [])].some(period=>
+          period?.precision === 'documented_core' || period?.limitedCore);
+      }));
     return {territory, status,
       counts: {effectiveMandatesAllTime: effectiveAllTime.length,
         effectiveMandatesInScope: effectiveInScope.length,
@@ -144,12 +149,12 @@ export function auditAtlasCoverage(personas, data, locationIds, catalogue = TERR
       'Los grupos parcialmenteRepresented, los mandatos sin geometría y los núcleos limitados pueden solaparse. No se suman sus conteos.',
       'Un mandato sin relleno puede tener un contemporáneo que sí pinte algunas celdas. Se conservan el hueco del mandato y el hueco de toda la entidad por separado.',
       'La ausencia de correspondencia no significa que el SVG carezca de una celda utilizable. Una celda con el nombre de una ciudad requiere revisión visual, cronológica y documental antes de representar todo el señorío.',
-      'La auditoría previa withoutGeometry mezcla gobiernos de todos los siglos con un mapa de 1400–1650 y oculta cobertura parcial si algún mandato se pinta una vez.',
-      'La continuidad por capas espera autoridad solo en las fechas activas de la geometría. Así puede omitir gobiernos anteriores a la primera capa: Baviera antes de 1505 y Croacia antes de 1527 son ejemplos que debe revisar este inventario por mandato.',
+      'La auditoría previa withoutGeometry mezcla gobiernos de todos los siglos con el período del mapa y oculta cobertura parcial si algún mandato se pinta una vez.',
+      'La continuidad por capas espera autoridad solo en las fechas revisadas de la geometría. Este inventario comprueba también los mandatos anteriores y posteriores a esas fechas; la ampliación de la línea temporal no convierte toda la cobertura en una reconstrucción completa.',
       'Este inventario de mandatos no certifica autoridades para entidades que solo aparecen en reinos[] o en el catálogo, sin gobierno registrado. Tampoco inventaría todos los territorios históricos que aún no existen en la base.',
       'Cero etiquetas geométricas inexistentes solo confirma que las correspondencias ya escritas apuntan a rutas válidas; no demuestra que toda la tierra visible ni toda la historia estén representadas.',
       'Alemania y Sacro Imperio se excluyen de los pendientes de relleno: el cargo imperial utiliza un marco jurídico, que no equivale a dominio territorial personal sobre los estados imperiales.',
-      'Los títulos no efectivos permanecen inspeccionables sin adquirir color. Jerusalén y Armenia cilicia solo tienen mandatos titulares dentro del período del mapa.',
+      'Los títulos no efectivos permanecen inspeccionables sin adquirir color. Los mandatos efectivos medievales se auditan por separado de las pretensiones posteriores sobre un mismo territorio.',
       'Las locations fuera del alcance vinculado contienen también rutas del SVG mundial. No son un conteo de territorios del Atlas pendientes.',
     ],
   };

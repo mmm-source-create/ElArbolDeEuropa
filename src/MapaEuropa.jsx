@@ -14,7 +14,7 @@ import locationsDataUrl from "../prototypes/euv-locations/corridor-locations.jso
 import burgundianDataUrl from "../prototypes/euv-locations/burgundian-locations.json?url";
 import { loadTextAsset, loadJsonAsset, forgetTextAsset } from "./utils/loadAsset.js";
 import { clampMapViewBox, clipMapToBounds, fittedMapViewBox, mapControlLimits, resizeMapViewBox, zoomMapViewBox } from "./mapViewport.js";
-import { mapLocationsForGovernment, pilotImperialFrameFor, pilotLocationContext, pilotLocationsFor } from "./data/locationMapPilot.js";
+import { mapLocationsForGovernment, pilotImperialFrameFor, pilotLocationContext, pilotLocationsFor, mapSourceReference } from "./data/locationMapPilot.js";
 import { buildPoliticalMapIndex, inspectMapRegion } from "./data/politicalMapIndex.js";
 import { AUTHORITY_LABELS, mapAuthoritiesForPerson } from "./data/mapAuthorities.js";
 import { PERSONAS } from "./personas.jsx";
@@ -461,7 +461,7 @@ export function MapaEuropa({ seleccion, anioGlobal = null, onSelectTerritorio, o
       </div>
       {seleccion && <details className="mapa-color-legend">
         <summary>¿Por qué estos colores?</summary>
-        <p><a href="/es/mapa-completo" target="_blank" rel="noopener noreferrer">Probar el mapa conjunto · 1400–1650</a></p>
+        <p><a href="/es/mapa-completo" target="_blank" rel="noopener noreferrer">Probar el mapa conjunto · 1200–1800</a></p>
         <div className="mapa-authority-key">
           <span><i className="mapa-key-solid" aria-hidden="true"/>Autoridad territorial</span>
           <span><i className="mapa-key-delegated" aria-hidden="true"/>Gobierno delegado</span>
@@ -498,7 +498,7 @@ export function MapaEuropa({ seleccion, anioGlobal = null, onSelectTerritorio, o
             {entry.government?.soberano && <p>En nombre de {PERSONAS.find(p => p.id === entry.government.soberano)?.nombre || entry.government.soberano}. La soberanía se conserva en su ficha.</p>}
             {entry.government?.nota && <p>{entry.government.nota}</p>}
             {entry.mapNote && <p>{entry.mapNote}</p>}
-            {entry.mapSources?.map(source => <a key={source.url} href={source.url} target="_blank" rel="noreferrer">{source.title}</a>)}
+            {entry.mapSources?.map(mapSourceReference).map(source => <a key={source.url} href={source.url} target="_blank" rel="noreferrer">{source.title || source.label || 'Fuente territorial'}</a>)}
             {entry.collective && <p>{entry.collective.nota}</p>}
             {entry.collective?.fuente && <a href={entry.collective.fuente.url} target="_blank" rel="noreferrer">{entry.collective.fuente.title}</a>}
             {entry.government && <small>{entry.government.titulo} · {entry.government.condicion} · {entry.government.desde}–{entry.government.hasta}</small>}
@@ -516,7 +516,7 @@ export function MapaEuropa({ seleccion, anioGlobal = null, onSelectTerritorio, o
           {entry.note && <p>{entry.note}</p>}
           {entry.activeReason && <p>{entry.activeReason}</p>}
           {entry.source && <a href={entry.source} target="_blank" rel="noreferrer">Fuente histórica de la capa</a>}
-          {entry.correction && <><p>{entry.correction.reason}</p><a href={entry.correction.source} target="_blank" rel="noreferrer">Fuente de la corrección</a></>}
+          {entry.correction && <><p>{entry.correction.reason}</p><a href={entry.correction.source} target="_blank" rel="noreferrer">Fuente de la corrección</a>{entry.correction.supportingSources?.map(mapSourceReference).map(source => <a key={source.url} href={source.url} target="_blank" rel="noreferrer">{source.title || source.label || 'Fuente complementaria'}</a>)}</>}
         </li>)}</ul> : inspectedRegion?.entries.length ? null : <p>Esta región no está atribuida a una jurisdicción revisada para este año. No se infiere por ello quién la gobernaba.</p>}
         </>}
       </aside>}

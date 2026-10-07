@@ -19,8 +19,8 @@ function extendInterval(target, key, year, detail) {
 
 export function auditLocationMap(personas, data, svgIds, {from = data.from, through = data.through} = {}) {
   const layers = reviewedMapLayers(data).filter(layer => layer.name !== 'Marco jurídico del Sacro Imperio');
-  const references = layers.flatMap(layer => layer.versions.flatMap(version =>
-    version.ids.map(id => ({layer: layer.name, id}))));
+  const references = layers.flatMap(layer => [layer,...(layer.temporalExtensions || [])].flatMap(entry => entry.versions.flatMap(version =>
+    version.ids.map(id => ({layer: layer.name, id})))));
   const crosswalkIds = Object.values(data.locationCrosswalk?.newIdsByOldId || {}).flatMap(match => match.ids);
   const supplementIds = (data.burgundy?.people || []).flatMap(person => person.governments
     .flatMap(g => g.versions.flatMap(v => v.ids)));
@@ -66,7 +66,7 @@ export function auditLocationMap(personas, data, svgIds, {from = data.from, thro
         unsourced.get(key).regions.add(id);
       }
     }
-    if ([1400, 1459, 1527, 1560, 1581, 1629, 1648, through].includes(year)) cuts.push({year, coloredRegions, reviewedRegions: expected.size});
+    if ([from,1200,1300,1400,1459,1527,1530,1560,1581,1629,1648,1700,1800,through].includes(year)) cuts.push({year, coloredRegions, reviewedRegions: expected.size});
     previous = current;
   }
   const flatten = map => [...map.values()].flat();

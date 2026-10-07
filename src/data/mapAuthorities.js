@@ -2,10 +2,12 @@ import {idsDeGobiernoEnAño} from '../Territorios.jsx';
 import {gobiernoEfectivo} from './territorios.js';
 import {personClaims} from '../evidence/claims.js';
 import {mapLocationsForGovernment, pilotBurgundianGovernmentsFor,
-  pilotDisputedHungarianClaimsFor, pilotLocationsFor, reviewedMapLayers} from './locationMapPilot.js';
+  pilotDisputedHungarianClaimsFor, pilotLocationsFor, reviewedMapLayers,
+  pilotJurisdictionsFor, reviewedLayerEvidence, reviewedLayerActive, reviewedLayerLocations, reviewedAuthorityConditions} from './locationMapPilot.js';
 import {authorityExtensionFor, REVOLT_SOURCE} from './atlasAuthorityExtensions.js';
 import {authorityMapScope} from './authorityMapScopes.js';
 import {cerdanyaBorderCorrection, southernPyreneesCorrection} from './mapBorderCorrections.js';
+import {chronologyReferenceJurisdictionsFor} from './atlasChronologyRoutes.js';
 
 export const AUTHORITY_LABELS = Object.freeze({
   sovereign: 'Autoridad territorial', delegated: 'Gobierno delegado',
@@ -45,14 +47,20 @@ export function mapAuthoritiesForPerson(person, year, mapData = null, {includeCl
       ? mapLocationsForGovernment(mapData, government, year, person.id, legacyIds) : legacyIds;
     if (mapData && !effective && !ids.length) {
       // A title's geographic reference is visible only in the claims section.
-      const layer = reviewedMapLayers(mapData).find(l => l.name === government.territorio);
-      ids = [...(layer?.versions || [])].reverse().find(v => v.from <= year && v.ids.length)?.ids || [];
+      const names=chronologyReferenceJurisdictionsFor(government.territorio);
+      ids=[...new Set(reviewedMapLayers(mapData).filter(layer=>names.includes(layer.name))
+        .flatMap(layer=>[...(layer.versions || [])].reverse().find(v=>v.from<=year&&v.ids.length)?.ids || []))];
     }
     if (mapData && government.territorio === 'Austria' && government.ambito?.includes('Austria Interior')) {
       ids = [...pilotLocationsFor(mapData, 'Austria Interior', year, person.id),
         ...(year >= 1619 ? pilotLocationsFor(mapData, 'Austria', year, person.id) : [])];
     }
     const scope = mapData && authorityMapScope(person.id, government.territorio, year);
+    const layerEvidence = mapData ? pilotJurisdictionsFor(government.territorio, year, person.id)
+      .map(name => reviewedMapLayers(mapData).find(layer => layer.name === name))
+      .filter(layer => layer && reviewedLayerActive(mapData, layer, year)
+        && reviewedLayerLocations(mapData, layer, year, person.id).some(id => ids.includes(id)))
+      .map(layer => reviewedLayerEvidence(layer, year)) : [];
     const extension = mapData && authorityExtensionFor(government.territorio, year, person.id);
     const border = mapData && cerdanyaBorderCorrection(government.territorio, year);
     const southernBorder = mapData && southernPyreneesCorrection(government.territorio, year);
@@ -65,10 +73,18 @@ export function mapAuthoritiesForPerson(person, year, mapData = null, {includeCl
     const revolt = person.id === 'FEL2ESP' && effective
       && (['Holanda','Zelanda'].includes(government.territorio) && year >= 1572
         || ['Flandes','Brabante'].includes(government.territorio) && year >= 1576);
-    entries.push({person, government, claim: claims.get(government) || null,
+    const regional = mapData ? reviewedAuthorityConditions(mapData,government.territorio,year,person.id) : new Map();
+    const contested = ids.filter(id=>regional.get(id)?.condition === 'control disputado');
+    const baseEntry = {person, government, claim: claims.get(government) || null,
       territory: government.territorio, kind: revolt ? 'disputed' : authorityKind(government, year),
-      paint: effective, ids, mapSources: [...(scope ? [scope.source, ...(scope.additionalSources || []), ...(scope.evidenceGroups || []).map(group => group.source)].filter(Boolean) : []), ...(extension ? [extension.source] : []), ...(revolt ? [REVOLT_SOURCE] : []), ...(border?.action === 'add' && !border.occupation ? [border.source] : []), ...(southernBorder?.action === 'add' ? [southernBorder.source] : [])],
-      mapNote: revolt ? 'Soberanía y control disputados durante la revuelta. La trama no afirma posesión uniforme de toda la provincia.' : scope?.note || extension?.note || [border?.action === 'add' ? border.note : null, southernBorder?.action === 'add' ? southernBorder.note : null].filter(Boolean).join(' ') || null});
+      paint: effective, ids, mapSources: [...layerEvidence.flatMap(evidence => evidence.sources), ...(scope ? [scope.source, ...(scope.additionalSources || []), ...(scope.evidenceGroups || []).map(group => group.source)].filter(Boolean) : []), ...(extension ? [extension.source] : []), ...(revolt ? [REVOLT_SOURCE] : []), ...(border?.action === 'add' && !border.occupation ? [border.source] : []), ...(southernBorder?.action === 'add' ? [southernBorder.source] : [])],
+      mapNote: revolt ? 'Soberanía y control disputados durante la revuelta. La trama no afirma posesión uniforme de toda la provincia.' : scope?.note || extension?.note || [border?.action === 'add' ? border.note : null, southernBorder?.action === 'add' ? southernBorder.note : null].filter(Boolean).join(' ') || null};
+    if (contested.length) {
+      entries.push({...baseEntry,ids:ids.filter(id=>!contested.includes(id))});
+      entries.push({...baseEntry,ids:contested,kind:'disputed',
+        mapNote:[...new Set(contested.map(id=>regional.get(id).note).filter(Boolean))].join(' '),
+        mapSources:[...baseEntry.mapSources,...contested.flatMap(id=>regional.get(id).sources)]});
+    } else entries.push(baseEntry);
   }
   if (!mapData) return entries;
 
@@ -92,8 +108,7 @@ export function mapAuthoritiesForPerson(person, year, mapData = null, {includeCl
       && g.desde <= year && year <= g.hasta);
     if (!government) continue;
     // Only the reviewed eastern core is painted, never the whole claimed kingdom.
-    const existing = entries.find(e => e.government === government);
-    if (existing) entries.splice(entries.indexOf(existing), 1);
+    for (let index=entries.length-1;index>=0;index--) if (entries[index].government===government) entries.splice(index,1);
     entries.push({person, government, claim: claims.get(government) || null,
       territory: disputed.territory, kind: 'disputed', paint: true,
       color: disputed.color, ids: disputed.ids});

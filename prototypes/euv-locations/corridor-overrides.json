@@ -931,6 +931,15 @@
     "id": "Jersey",
     "action": "remove",
     "from": 1453,
+    "through": 1460,
+    "reason": "The old Normandy polygon overlaps Jersey; the island was otherwise a separate bailiwick loyal to the English Crown, except for the occupation of 1461–1467.",
+    "source": "https://www.gov.je/Leisure/Jersey/Pages/History.aspx"
+  },
+  {
+    "territory": "Francia",
+    "id": "Jersey",
+    "action": "remove",
+    "from": 1468,
     "through": 1650,
     "reason": "The old Normandy polygon overlaps Jersey; the island was otherwise a separate bailiwick loyal to the English Crown, except for the occupation of 1461–1467.",
     "source": "https://www.gov.je/Leisure/Jersey/Pages/History.aspx"

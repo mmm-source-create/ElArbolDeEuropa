@@ -1,3 +1,4 @@
+import { ATLAS_CHRONOLOGY_REVIEWS } from './atlasChronologyReviewData.js';
 import { CORRIDOR_REVIEWS } from './corridorReviewData.js';
 import { ATLAS_AUTHORITY_REVIEWS } from './atlasReviewData.js';
 import { NORTHERN_AUTHORITY_REVIEWS } from './northernReviewData.js';
@@ -184,6 +185,7 @@ const tyrolReviews = {
 };
 
 export const CLAIM_REVIEWS = Object.freeze({
+  ...ATLAS_CHRONOLOGY_REVIEWS,
   ...CORRIDOR_REVIEWS,
   ...ATLAS_AUTHORITY_REVIEWS,
   ...BALKAN_AUTHORITY_REVIEWS,

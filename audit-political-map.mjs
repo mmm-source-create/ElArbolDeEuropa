@@ -18,7 +18,7 @@ for (const person of PERSONAS) for (const g of person.gobiernos || []) {
   if (start > end) continue;
   // Probe all geometry change dates within each mandate, as well as its start.
   const years = new Set([start, end, ...[...mapData.territories, ...mapData.additionalTerritories]
-    .flatMap(layer => layer.versions.map(v => v.from)).filter(y => y >= start && y <= end),
+    .flatMap(layer => [layer,...(layer.temporalExtensions || [])].flatMap(entry => entry.versions.map(v => v.from))).filter(y => y >= start && y <= end),
     ...mapData.overrides.flatMap(o => [o.from, o.through + 1]).filter(y => y >= start && y <= end)]);
   for (const year of years) for (const entry of mapAuthoritiesForPerson(person, year, mapData)) {
     if (entry.ids.some(id => pathIds.has(id))) mappedTerritories.add(entry.territory);
@@ -42,7 +42,7 @@ const dogeOverlaps = doges.flatMap((a, index) => doges.slice(index + 1)
 
 const report = {
   generatedAt: new Date().toISOString(),
-  scope: 'EU V Locations, 1400–1650. Geometría de gobiernos y continuidad de cargos; las advertencias requieren revisión histórica individual.',
+  scope: `EU V Locations, ${mapData.from}–${mapData.through}. Geometría de gobiernos y continuidad de cargos; las advertencias requieren revisión histórica individual.`,
   totals: { pathIds: pathIds.size, activeGovernmentTerritories: usedTerritories.size, doges: doges.length },
   withoutGeometry,
   missingPathIds,

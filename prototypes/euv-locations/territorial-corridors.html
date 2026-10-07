@@ -37,7 +37,7 @@
   <header>
     <p class="eyebrow">Laboratorio cartográfico · mapa en evaluación</p>
     <h1>Corredores territoriales del Atlas</h1>
-    <p>Elige un año para ver todos los gobiernos territoriales del Atlas que tienen geometría disponible en EU V Locations (1400–1650). Cada territorio conserva su color al cambiar de año. Las jurisdicciones revisadas usan capas fechadas y fuentes; el resto se proyecta mediante una correspondencia geométrica general, marcada como aproximada. Busca en la leyenda o pulsa una location para consultar autoridades y referencias. El marco gris del Sacro Imperio es referencia jurídica, no dominio personal del emperador.</p>
+    <p>Elige un año para ver todos los gobiernos territoriales del Atlas que tienen geometría disponible en EU V Locations (1200–1800; cobertura ampliada de Iberia, Italia, Borgoña y Austria). Cada territorio conserva su color al cambiar de año. Las jurisdicciones revisadas usan capas fechadas y fuentes; el resto se proyecta mediante una correspondencia geométrica general, marcada como aproximada. Busca en la leyenda o pulsa una location para consultar autoridades y referencias. El marco gris del Sacro Imperio es referencia jurídica, no dominio personal del emperador.</p>
     <p><a href="/es/?atlas=1">Volver al Atlas</a> · <a href="https://github.com/mmm-source-create/ElArbolDeEuropa/blob/main/prototypes/euv-locations/README.md" target="_blank" rel="noopener noreferrer">Método y fuentes</a></p>
   </header>
   <main>
@@ -50,7 +50,7 @@
         <select id="territory"></select>
       </label>
       <label for="year">Año
-        <span class="year-row"><input type="range" id="year" min="1400" max="1650" value="1500"><output id="year-output" for="year">1500</output></span>
+        <span class="year-row"><input type="range" id="year" min="1200" max="1800" value="1500"><output id="year-output" for="year">1500</output></span>
       </label>
       <label for="location-search">Buscar una location
         <input id="location-search" type="search" list="location-ids" placeholder="Rennes, Berwick, Madrid…" autocomplete="off">
@@ -96,14 +96,14 @@
     import {atlasMosaicPalette,atlasPoliticalMosaicAt} from './atlas-mosaic.js';
     import mapUrl from './euv-locations-crop.svg?url';
     import dataUrl from './corridor-locations.json?url';
-    import {reviewedLayerLocations} from '../../src/data/locationMapPilot.js';
+    import {reviewedLayerLocations,reviewedLayerVersion,reviewedLayerActive,reviewedLayerEvidence,mapSourceReference} from '../../src/data/locationMapPilot.js';
     import {clampMapViewBox,clipMapToBounds} from '../../src/mapViewport.js';
     const FRAMES={Iberia:{x:518,y:158,w:77,h:66},Italia:{x:575,y:143,w:64,h:68},Centroeuropa:{x:592,y:91,w:134,h:116},'Europa septentrional y oriental':{x:615,y:20,w:170,h:145},'Francia e islas británicas':{x:493,y:82,w:145,h:120},'Borgoña e Imperio':{x:522,y:85,w:170,h:105},'Hungría y Balcanes':{x:600,y:137,w:83,h:72},'Mediterráneo oriental':{x:640,y:185,w:100,h:60}};
     const FULL={x:475,y:15,w:315,h:240};
     const TERRITORY_FRAMES={'Cerdeña':{x:581,y:175,w:25,h:31},'Trinacria':{x:592,y:180,w:34,h:32},'Venecia':{x:588,y:143,w:100,h:76}};
     const BASE='#d8d6ce';const $=id=>document.getElementById(id);
     const state={svg:null,paths:new Map(),data:null,painted:new Set(),view:{...FULL},viewMode:'mosaic',palette:null,mosaic:null};
-    function activeVersion(territory,year){return [...territory.versions].reverse().find(v=>v.from<=year)||{from:year,oldIds:[],ids:[],borderline:[]}}
+    function activeVersion(territory,year){return reviewedLayerVersion(state.data,territory,year)||{from:year,oldIds:[],ids:[],borderline:[]}}
     function allTerritories(){return [...state.data.territories,...(state.data.additionalTerritories||[])]}
     function selectedTerritory(){return allTerritories().find(t=>t.name===$('territory').value&&t.corridor===$('corridor').value)}
     function viewBox(){
@@ -115,7 +115,7 @@
       $('zoom-out').disabled=box.width>=Math.min(FULL.w,FULL.h*rect.width/rect.height)-.001;
     }
     function zoomBy(scale){const current=state.view,w=current.w*scale,h=current.h*scale;state.view={x:current.x+(current.w-w)/2,y:current.y+(current.h-h)/2,w,h};viewBox()}
-    function correctedIds(territory,year,ids){const result=new Set(ids);for(const item of state.data.overrides||[]){if(item.territory!==territory.name||item.from>year||item.through<year)continue;if(item.action==='add')result.add(item.id);if(item.action==='remove')result.delete(item.id)}return [...result]}
+    function correctedIds(territory,year){return reviewedLayerLocations(state.data,territory,year)}
     function setInfo(id){
       const info=$('info');if(!id){info.textContent=state.viewMode==='mosaic'?'Mosaico de gobiernos territoriales: elige un año o pulsa una location para ver las atribuciones disponibles.':'Pulsa una location para consultar la correspondencia.';return}
       if(!state.paths.has(id)){info.textContent=`${id}: fuera del recorte.`;return}
@@ -128,10 +128,10 @@
           const item=document.createElement('li'),name=document.createElement('strong'),meta=document.createElement('span');
           name.textContent=layer.name;meta.className='mosaic-meta';meta.textContent=layer.corridor;item.append(name,meta);
           if(layer.approximate){const holders=document.createElement('span');holders.className='mosaic-meta';holders.textContent=`Gobiernos registrados: ${layer.holders.join('; ')}`;item.append(holders)}
-          if(layer.approximate&&layer.note){const note=document.createElement('span');note.className='mosaic-meta';note.textContent=layer.note;item.append(note)}
+          if(layer.note){const note=document.createElement('span');note.className='mosaic-meta';note.textContent=layer.note;item.append(note)}
           if(layer.active?.reason){const note=document.createElement('span');note.className='mosaic-meta';note.textContent=layer.active.reason;item.append(note)}
-          const sources=[...(layer.sources||[]),layer.active?.source?{url:layer.active.source,title:'Fuente de la capa'}:null,...state.data.overrides.filter(o=>o.territory===layer.name&&o.id===id&&o.from<=Number($('year').value)&&o.through>=Number($('year').value)).map(o=>({url:o.source,title:'Fuente de la corrección'}))].filter(Boolean);
-          for(const source of [...new Map(sources.filter(item=>item?.url).map(item=>[item.url,item])).values()]){const link=document.createElement('a');link.href=source.url;link.target='_blank';link.rel='noopener noreferrer';link.textContent=layer.approximate?'Fuente de la afirmación (no del polígono)':source.title||'Fuente territorial';item.append(link)}
+          const sources=[...(layer.sources||[]),layer.active?.source?{url:layer.active.source,title:'Fuente de la capa'}:null,...state.data.overrides.filter(o=>o.territory===layer.name&&o.id===id&&o.from<=Number($('year').value)&&o.through>=Number($('year').value)).flatMap(o=>[{url:o.source,title:'Fuente de la corrección'},...(o.supportingSources||[]).map(mapSourceReference)])].filter(Boolean);
+          for(const source of [...new Map(sources.filter(item=>item?.url).map(item=>[item.url,item])).values()]){const link=document.createElement('a');link.href=source.url;link.target='_blank';link.rel='noopener noreferrer';link.textContent=layer.approximate?'Fuente de la afirmación (no del polígono)':source.title||source.label||'Fuente territorial';item.append(link)}
           list.append(item)
         }info.append(list);return
       }
@@ -148,9 +148,9 @@
         const item=document.createElement('li'),swatch=document.createElement('span'),body=document.createElement('span'),name=document.createElement('strong'),meta=document.createElement('span');
         swatch.className='mosaic-swatch';swatch.style.backgroundColor=layer.mosaicColor;name.textContent=layer.name;
         meta.className=`mosaic-meta${layer.ids.length?'':' mosaic-empty'}`;
-        meta.textContent=layer.ids.length?`${layer.approximate?'Aproximación':'Capa revisada'} · ${layer.ids.length} locations${layer.holders?` · ${layer.holders.length} titulares registrados`:''}`:`${layer.corridor} · sin geometría en este año`;
-        body.append(name,meta);const sources=[...(layer.sources||[]),layer.active?.source?{url:layer.active.source,title:'Fuente de la capa'}:null,...state.data.overrides.filter(item=>item.territory===layer.name&&item.from<=state.mosaic.year&&item.through>=state.mosaic.year).map(item=>({url:item.source,title:'Fuente de la corrección'}))].filter(Boolean);
-        for(const source of [...new Map(sources.filter(item=>item?.url).map(item=>[item.url,item])).values()]){const link=document.createElement('a');link.href=source.url;link.target='_blank';link.rel='noopener noreferrer';link.textContent=layer.approximate?'Fuente de la afirmación (no del polígono)':source.title||'Fuente territorial';body.append(link)}
+        meta.textContent=layer.ids.length?`${layer.approximate?'Aproximación':layer.precision==='documented_core'||layer.limitedCore?'Núcleos documentados':'Capa revisada'} · ${layer.ids.length} locations${layer.holders?` · ${layer.holders.length} titulares registrados`:''}`:`${layer.corridor} · sin geometría en este año`;
+        body.append(name,meta);const sources=[...(layer.sources||[]),layer.active?.source?{url:layer.active.source,title:'Fuente de la capa'}:null,...state.data.overrides.filter(item=>item.territory===layer.name&&item.from<=state.mosaic.year&&item.through>=state.mosaic.year).flatMap(item=>[{url:item.source,title:'Fuente de la corrección'},...(item.supportingSources||[]).map(mapSourceReference)])].filter(Boolean);
+        for(const source of [...new Map(sources.filter(item=>item?.url).map(item=>[item.url,item])).values()]){const link=document.createElement('a');link.href=source.url;link.target='_blank';link.rel='noopener noreferrer';link.textContent=layer.approximate?'Fuente de la afirmación (no del polígono)':source.title||source.label||'Fuente territorial';body.append(link)}
         item.append(swatch,body);list.append(item)
       }
     }
@@ -195,13 +195,12 @@
       state.painted.clear();
       for(const id of version.ids){const path=state.paths.get(id);if(!path)continue;path.style.fill=territory.color;path.style.stroke=territory.color;state.painted.add(id)}
       $('territory-name').textContent=territory.name;
-      const active=territory.active,isActive=territory.periods
-        ? territory.periods.some(period=>period.from<=year&&year<=(period.through??1650))
-        : !active||(active.from??1400)<=year&&year<=(active.through??1650);
-      $('territory-note').textContent=isActive?`${territory.note||territory.corridor+'. Se muestra esta jurisdicción por separado, no todos los dominios de quien la gobernaba.'}`:active.reason;
+      const active=territory.active,isActive=reviewedLayerActive(state.data,territory,year);
+      const evidence=reviewedLayerEvidence(territory,year);
+      $('territory-note').textContent=isActive?(evidence.note||territory.corridor+'. Se muestra esta jurisdicción por separado.'):active?.reason||'Sin geometría documentada para este año.';
       $('old-ids').textContent=version.oldIds.join(', ')||'Sin equivalencia en el mapa anterior';
       $('new-count').textContent=String(version.ids.length);$('version-from').textContent=String(version.from);
-      const source=territory.active?.source||state.data.overrides.find(item=>item.territory===territory.name&&item.from<=year&&item.through>=year)?.source;
+      const source=evidence.sources[0]?.url||state.data.overrides.find(item=>item.territory===territory.name&&item.from<=year&&item.through>=year)?.source;
       $('territory-source').replaceChildren();if(source){const link=document.createElement('a');link.href=source;link.target='_blank';link.rel='noopener noreferrer';link.textContent='Fuente histórica';$('territory-source').append(link)}
       $('status').textContent=isActive?`${territory.name} · ${year}: ${version.ids.length} locations candidatas (${version.borderline.length} dudosas excluidas).`:`${territory.name} · ${year}: fuera de su etapa como jurisdicción separada en este ensayo.`;
       setInfo($('location-search').value.trim());
@@ -255,7 +254,8 @@
       $('map-stage').addEventListener('pointermove',event=>{if(!drag)return;const rect=$('map-stage').getBoundingClientRect();state.view={...drag.view,x:drag.view.x-(event.clientX-drag.x)/rect.width*drag.view.w,y:drag.view.y-(event.clientY-drag.y)/rect.height*drag.view.h};viewBox()});
       $('map-stage').addEventListener('pointerup',()=>{drag=null});$('map-stage').addEventListener('pointercancel',()=>{drag=null});
       const queryYear=Number(new URLSearchParams(location.search).get('year'));
-      if(Number.isInteger(queryYear)&&queryYear>=1400&&queryYear<=1650)$('year').value=queryYear;
+      $('year').min=state.data.from;$('year').max=state.data.through;
+      if(Number.isInteger(queryYear)&&queryYear>=state.data.from&&queryYear<=state.data.through)$('year').value=queryYear;
       state.palette=atlasMosaicPalette(state.data);viewBox();updateTerritories();setMosaicMode(true);
       new ResizeObserver(()=>viewBox()).observe($('map-stage'))
     }
