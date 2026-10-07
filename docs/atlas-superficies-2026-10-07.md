@@ -118,7 +118,7 @@ Prioridad de la siguiente revisión: 1) completar las superficies balcánicas y 
 
 ### Entidades con lagunas de mandatos o períodos
 
-El JSON de cobertura especifica intervalos y personas. La lista incluye también los casos de núcleos limitados o cobertura temporal parcial, por lo que su tamaño no coincide con la cifra de 54 mandatos parcialmente cartografiados.
+El JSON de cobertura especifica intervalos y personas. La lista incluye también los casos de núcleos limitados o cobertura temporal parcial, por lo que su tamaño no coincide con la cifra de 54 entidades con mandatos parcialmente cartografiados.
 
 - Artois
 - Auxerre
