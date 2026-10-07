@@ -39,7 +39,7 @@
 .public-secondary { border: 1px solid #c7b99f; background: #fffdf7; color: #5f5547; }
 .public-secondary:hover { border-color: #8f795a; color: #7a2e2e; }
 .public-hero-stats { margin: 34px auto 0; max-width: 780px; display: grid; grid-template-columns: repeat(4, minmax(0,1fr)); border-top: 1px solid #d8ceb7; border-bottom: 1px solid #d8ceb7; }
-.public-hero-stats span { padding: 16px 8px; display: grid; gap: 3px; color: #8a7f65; font-size: 9px; text-transform: uppercase; letter-spacing: .5px; }
+.public-hero-stats > span { padding: 16px 8px; display: grid; gap: 3px; color: #8a7f65; font-size: 9px; text-transform: uppercase; letter-spacing: .5px; }
 .public-hero-stats strong { color: #7a2e2e; font: 600 23px/1 "Iowan Old Style", "Palatino Linotype", Georgia, serif; }
 .public-section { padding: 42px 0; border-top: 1px solid #ddd3bd; }
 .public-section-heading { margin-bottom: 18px; display: flex; align-items: end; justify-content: space-between; gap: 20px; }

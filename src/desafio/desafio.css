@@ -213,7 +213,7 @@
   font: 650 20px/1 var(--eade-serif, Georgia, serif);
   color: var(--eade-wine, #7A2E2E);
 }
-.desafio-stat span {
+.desafio-stat > span {
   color: var(--eade-muted-soft, #8A7F65);
   font-size: 8.5px;
   font-weight: 700;

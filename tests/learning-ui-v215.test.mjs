@@ -20,11 +20,13 @@ const option=label=>[...document.querySelectorAll('.desafio-option')].find(b=>b.
 test('partida compartida: explicación visible tras acertar y fallar, avance manual y resultado final',async()=>{
  window.localStorage.clear();const qs=createChallenge(bank,'ui-flow');await mount(challengeUrl(bank,'ui-flow').slice('/es/desafio'.length));
  assert.equal(document.querySelector('h2').textContent,qs[0].pregunta);
+ assert.equal(document.querySelector('[role=progressbar]').getAttribute('aria-valuenow'),'0');
  assert.equal(document.querySelector('.desafio-fast-feedback'),null);
  const copied=document.querySelector('[aria-label="Enlace del desafío compartido"]').value;assert.match(copied,/reto=ui-flow/);
  for(let i=0;i<qs.length;i++){
   const q=qs[i];const chosen=i===0?q.opciones.find(o=>o.id!==q.correctaId):q.opciones.find(o=>o.id===q.correctaId);
   await click(option(chosen.label));
+  assert.equal(document.querySelector('[role=progressbar]').getAttribute('aria-valuenow'),String(i+1));
   assert.equal(document.querySelector('h2').textContent,q.pregunta);assert.match(document.querySelector('[role=status]').textContent,new RegExp(i===0?'No esta vez':'Correcto'));
   assert.ok(document.querySelector('.desafio-fast-feedback').textContent.includes(q.explicacion));
   assert.equal(document.querySelectorAll('.desafio-option:disabled').length,4);
@@ -38,11 +40,11 @@ test('partida compartida: explicación visible tras acertar y fallar, avance man
 });
 test('el repaso sobrevive a recargar y un acierto lo elimina sin modificar récords',async()=>{
  const legacy={totalAciertos:42,precisionPreguntas:10,precisionAciertos:8};window.localStorage.setItem('arbol-europa-desafio-v2',JSON.stringify(legacy));
- const [q]=JSON.parse(window.localStorage.getItem(REVIEW_KEY));assert.ok(q);await mount();await click(button('Repasar errores'));
+ const [q]=JSON.parse(window.localStorage.getItem(REVIEW_KEY));assert.ok(q);await mount();await click(button('Aprender'));await click(button('Repasar errores'));
  assert.equal(document.querySelector('h2').textContent,q.pregunta);
  await click(option(q.opciones.find(o=>o.id===q.correctaId).label));await click(button('Continuar'));
  assert.deepEqual(JSON.parse(window.localStorage.getItem(REVIEW_KEY)),[]);assert.deepEqual(JSON.parse(window.localStorage.getItem('arbol-europa-desafio-v2')),legacy);
- await mount();await click(button('Repasar errores'));assert.match(document.querySelector('h2').textContent,/Todavía no hay errores/);
+ await mount();await click(button('Aprender'));await click(button('Repasar errores'));assert.match(document.querySelector('h2').textContent,/Todavía no hay errores/);
 });
 test('un enlace de otra edición muestra una salida clara y conserva los modos',async()=>{
  await mount('?reto=old&banco=unknown');assert.match(document.querySelector('[role=alert]').textContent,/otra edición/);assert.ok(button('Desafío compartido'));
@@ -71,7 +73,7 @@ test('El Camino y Racha mantienen la explicación y avanzan solo con Continuar',
 test('repasar una ordenación conserva el orden elegido y corrige sin puntuar',async()=>{
  const ids=PERSONAS.slice(0,3).map(p=>p.id);
  const q={firma:'orden:fixture',formato:'orden',tipo:'orden',pregunta:'Ordena estas tres personas',explicacion:'Orden de comprobación',ordenCorrecto:ids,opciones:ids.map(id=>({id,label:PERSONAS.find(p=>p.id===id).nombre}))};
- window.localStorage.clear();window.localStorage.setItem(REVIEW_KEY,JSON.stringify([q]));await mount();await click(button('Repasar errores'));
+ window.localStorage.clear();window.localStorage.setItem(REVIEW_KEY,JSON.stringify([q]));await mount();await click(button('Aprender'));await click(button('Repasar errores'));
  for(const id of ids)await click([...document.querySelectorAll('.desafio-order-card')].find(b=>b.querySelector('strong').textContent===q.opciones.find(o=>o.id===id).label));
  assert.match(document.querySelector('.desafio-fast-feedback').textContent,/Correcto/);
  assert.equal(window.localStorage.getItem('arbol-europa-desafio-v2'),null);assert.deepEqual(JSON.parse(window.localStorage.getItem(REVIEW_KEY)),[]);

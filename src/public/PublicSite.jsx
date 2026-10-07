@@ -33,6 +33,8 @@ import { etiquetaClaseGobierno, slugPublico, textoBusquedaPersona, normalizarBus
 import HOME_DATA from "../generated/home.json";
 import { loadJsonAsset } from "../utils/loadAsset.js";
 import "./public.css";
+import HomeDiscovery, {DynastyMarquee} from "./HomeDiscovery.jsx";
+import Odometer from "../ui/Odometer.jsx";
 import { responsiveImage } from "../utils/responsiveImage.js";
 import ReadingSkeleton from "../stories/ReadingSkeleton.jsx";
 import { translatedEquivalent } from "../english/routes.js";
@@ -190,15 +192,18 @@ export function HomeContent({ data = HOME_DATA, locale = "es", title, onEnterAtl
           <div className="public-hero-actions">
             <a className="public-primary" href="/es/?atlas=1" onClick={(event) => navigateInApp(event, onEnterAtlas, null)}>{copy.explore} <ArrowRight size={16} /></a>
             <a className="public-secondary" href={storiesPath}><BookOpen size={15} /> {copy.stories}</a>
-            <a className="public-home-year" href="/es/?atlas=1&anio=1500&panel=europa"><Landmark size={14} /> {copy.year}</a>
           </div>
+          <a className="public-home-year" href="/es/?atlas=1&anio=1500&panel=europa"><Landmark size={14}/> {copy.year}</a>
           {english && <p className="public-home-edition">Selected profiles and stories are available in English. The interactive Atlas is in Spanish.</p>}
           <div className="public-hero-stats" aria-label={copy.statsLabel}>
-            {["personas", "dinastias", "territorios", "historias"].map((key, index) => <span key={key}><strong>{stats[key] ?? "—"}</strong>{copy.stats[index]}</span>)}
+            {["personas", "dinastias", "territorios", "historias"].map((key, index) => <span key={key}><strong><Odometer value={stats[key]} locale={locale}/></strong>{copy.stats[index]}</span>)}
           </div>
         </section>
 
-        <section className="public-section">
+        <HomeDiscovery people={people} stories={stories} locale={locale} peoplePath={peoplePath} storiesPath={storiesPath}/>
+        <DynastyMarquee dynasties={data?.dinastiasDestacadas || HOME_DATA.dinastiasDestacadas} locale={locale}/>
+
+        <section className="public-section home-quick-links" aria-label={copy.doorsTitle}>
           <div className="public-section-heading"><div><span>{copy.doorsEyebrow}</span><h2>{copy.doorsTitle}</h2></div></div>
           <div className="public-door-grid">
             {doors.map(({ href, Icon, title: doorTitle, description, spanish, panel }) => (
@@ -209,26 +214,6 @@ export function HomeContent({ data = HOME_DATA, locale = "es", title, onEnterAtl
             ))}
           </div>
         </section>
-
-        {!!people?.length && (
-          <section className="public-section">
-            <div className="public-section-heading"><div><span>{copy.peopleEyebrow}</span><h2>{copy.peopleTitle}</h2></div><a href={peoplePath}>{copy.allPeople} <ArrowRight size={13} /></a></div>
-            <div className="public-person-grid">{people.map((persona) => <PersonaMiniCard key={persona.id} persona={persona} locale={locale} />)}</div>
-          </section>
-        )}
-
-        {!!stories?.length && (
-          <section className="public-section">
-            <div className="public-section-heading"><div><span>{copy.storiesEyebrow}</span><h2>{copy.storiesTitle}</h2></div><a href={storiesPath}>{copy.allStories} <ArrowRight size={13} /></a></div>
-            <div className="public-story-grid">
-              {stories.map((historia) => (
-                <a key={historia.id} className="public-story-card" href={historia.path || rutaEntidad("historia", historia.slug)}>
-                  {Number.isFinite(historia.pasos) && <span>{historia.pasos} {copy.chapters}</span>}<h3>{english ? historia.nombre : historia.titulo}</h3><p>{english ? historia.description : historia.subtitulo || historia.descripcion}</p><b>{copy.start} <ArrowRight size={13} /></b>
-                </a>
-              ))}
-            </div>
-          </section>
-        )}
 
         <section className="public-section public-about-strip">
           <div><span>{copy.aboutEyebrow}</span><h2>{copy.aboutTitle}</h2><p>{copy.about}</p></div>

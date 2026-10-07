@@ -4,3 +4,5 @@
 /* Keep the whole story readable while its current chapter is highlighted. */
 .story-tree-stage .box.year-inactive{opacity:.72;filter:grayscale(.3)}
 .story-tree-stage .box.year-inactive:hover,.story-tree-stage .box.year-inactive.selected,.story-tree-stage .box.year-inactive.story-related{opacity:1;filter:none}
+
+.story-atlas-progress{margin:12px 0 6px;height:3px}
