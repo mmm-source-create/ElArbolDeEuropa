@@ -232,8 +232,12 @@
     function updateTerritories(){
       const corridor=$('corridor').value,select=$('territory'),prior=select.value;
       const superseded=supersededRegionalLayers(state.data,Number($('year').value));
-      select.replaceChildren();for(const t of allTerritories().filter(t=>t.corridor===corridor&&!superseded.has(t.name))){
-        const option=document.createElement('option');option.value=t.name;option.textContent=territorialLabel(t.name,Number($('year').value));select.append(option)
+      const candidates=allTerritories().filter(t=>t.corridor===corridor&&!superseded.has(t.name));
+      const labelFor=t=>territorialLabel(t.name,Number($('year').value));
+      select.replaceChildren();for(const t of candidates){
+        const label=labelFor(t),period=t.coverage||t.active;
+        const scope=t.name.includes('·')?t.name.split('·').slice(1).join('·').trim():period?`${period.from}–${period.through}`:t.name;
+        const option=document.createElement('option');option.value=t.name;option.textContent=label+(candidates.filter(other=>labelFor(other)===label).length>1?' · '+scope:'');select.append(option)
       }
       if([...select.options].some(o=>o.value===prior))select.value=prior;
       focusTerritory();render();
