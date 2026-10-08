@@ -4,6 +4,7 @@ import {reviewedLayerLocations, reviewedMapLayers} from './src/data/locationMapP
 const read = path => JSON.parse(fs.readFileSync(new URL(path, import.meta.url), 'utf8'));
 const data = read('./prototypes/euv-locations/corridor-locations.json');
 const review = read('./prototypes/euv-locations/regional-extent-review.json');
+const frontier = read('./prototypes/euv-locations/frontier-review.json');
 const inventory = read('./prototypes/euv-locations/regional-extent-cells.json');
 const original = read('./prototypes/euv-locations/extended-corridors-locations.json');
 const areas = new Map(inventory.cells.map(cell => [cell.id, cell.area]));
@@ -21,10 +22,16 @@ const report = {reviewedAt: review.reviewedAt, units: inventory.units,
   measuredCells: inventory.cells.length, series: rows,
   regionalLayers: review.territories.map(layer => ({name: layer.name, coverage: layer.coverage,
     cuts: layer.versions.map(version => ({year: version.from, ...corrected(layer.name, version.from), event: version.event})),
-    sources: layer.sources})), limitations: review.limitations};
+    sources: layer.sources})), limitations: review.limitations,
+  frontierReviewedAt: frontier.reviewedAt,
+  frontierLayers: [...frontier.replacements,...frontier.territories].map(layer=>({name:layer.name,
+    coverage:layer.coverage, sources:layer.sources,
+    cuts:layer.versions.map(version=>({year:version.from,...corrected(layer.name,version.from),event:version.event}))})),
+  frontierLimitations:frontier.limitations};
 fs.writeFileSync(new URL('./audit-regional-extents-report.json', import.meta.url), JSON.stringify(report, null, 2) + '\n');
 for (const row of rows.filter(row => row.corrected1651.cells))
   console.log(`${row.name}: ${row.previous1651.cells} → ${row.corrected1651.cells} celdas; superficie SVG ${row.previous1651.svgArea} → ${row.corrected1651.svgArea}`);
-const failures = [...rows.map(row => row.corrected1651), ...report.regionalLayers.flatMap(layer => layer.cuts)]
+const failures = [...rows.map(row => row.corrected1651), ...report.regionalLayers.flatMap(layer => layer.cuts),
+  ...report.frontierLayers.flatMap(layer=>layer.cuts)]
   .flatMap(row => row.unmeasured);
 if (failures.length) throw new Error(`Missing spatial measurements: ${[...new Set(failures)].join(', ')}`);

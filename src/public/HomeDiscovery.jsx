@@ -19,44 +19,87 @@ function Portrait({id, className = '', sizes = '300px'}) {
 }
 
 export function DiscoveryCarousel({items, renderItem, label, locale = 'es', hint}) {
-  const track = useRef(null), frame = useRef(null);
+  const track = useRef(null), frame = useRef(null), settle = useRef(null);
+  const initialized = useRef(false), target = useRef(null), current = useRef(0);
   const id = useId(), reduced = useReducedMotion();
-  const [position, setPosition] = useState({index: 0, previous: false, next: false});
+  const [index, setIndex] = useState(0);
+  const count = items.length, circular = count > 1;
+  const nearest = element => [...element.children].reduce((best, card, i, cards) =>
+    Math.abs(card.offsetLeft - element.scrollLeft) < Math.abs(cards[best].offsetLeft - element.scrollLeft) ? i : best, 0);
+  const jump = (element, left) => {
+    element.style.scrollSnapType = 'none';
+    element.scrollLeft = left;
+    if (frame.current) cancelAnimationFrame(frame.current);
+    frame.current = requestAnimationFrame(() => { element.style.scrollSnapType = ''; });
+  };
   const measure = () => {
     const element = track.current;
-    if (!element?.clientWidth) return;
-    const cards = [...element.children];
-    const relative = element.scrollLeft;
-    if (!cards.length) return;
-    const index = cards.reduce((nearest, card, current) => Math.abs(card.offsetLeft - element.offsetLeft - relative)
-      < Math.abs(cards[nearest].offsetLeft - element.offsetLeft - relative) ? current : nearest, 0);
-    setPosition({index, previous: relative > 2, next: relative + element.clientWidth < element.scrollWidth - 2});
+    if (!element?.clientWidth || !element.children.length) return;
+    current.current = nearest(element) % count;
+    setIndex(current.current);
+  };
+  const normalize = () => {
+    const element = track.current;
+    if (!element?.clientWidth || !circular) return;
+    const physical = nearest(element), logical = physical % count;
+    // Rebase between identical copies only after motion has ended. The visible
+    // cards do not change, so the last-to-first transition always moves forward.
+    if (physical < count || physical >= count * 2) {
+      jump(element, element.scrollLeft + element.children[count + logical].offsetLeft - element.children[physical].offsetLeft);
+    }
+    target.current = null;
+    measure();
   };
   useEffect(() => {
-    measure();
-    const observer = typeof ResizeObserver === 'function' ? new ResizeObserver(measure) : null;
+    initialized.current = false; current.current = 0; target.current = null;
+    const resize = () => {
+      const element = track.current;
+      if (!element?.clientWidth || !element.children.length) return;
+      jump(element, element.children[(circular ? count : 0) + current.current].offsetLeft);
+      initialized.current = true;
+      target.current = null;
+      measure();
+    };
+    resize();
+    const observer = typeof ResizeObserver === 'function' ? new ResizeObserver(resize) : null;
     if (track.current) observer?.observe(track.current);
-    window.addEventListener('resize', measure);
-    return () => {observer?.disconnect(); window.removeEventListener('resize', measure); if (frame.current) cancelAnimationFrame(frame.current);};
+    const element = track.current;
+    element?.addEventListener('scrollend', normalize);
+    window.addEventListener('resize', resize);
+    return () => {observer?.disconnect(); element?.removeEventListener('scrollend', normalize); window.removeEventListener('resize', resize); clearTimeout(settle.current); if (frame.current) cancelAnimationFrame(frame.current);};
   }, [items]);
-  const move = direction => track.current?.scrollBy({left: direction * track.current.clientWidth * .85, behavior: reduced ? 'instant' : 'smooth'});
+  const move = direction => {
+    const element = track.current;
+    if (!initialized.current || !circular) return;
+    let physical = target.current ?? nearest(element);
+    if (physical + direction < 0 || physical + direction >= element.children.length) {
+      jump(element, element.children[count + physical % count].offsetLeft);
+      physical = count + physical % count;
+    }
+    target.current = physical + direction;
+    element.scrollTo({left: element.children[target.current].offsetLeft, behavior: reduced ? 'instant' : 'smooth'});
+    if (reduced) normalize();
+  };
   const onScroll = () => {
-    if (frame.current) cancelAnimationFrame(frame.current);
-    frame.current = requestAnimationFrame(measure);
+    measure();
+    clearTimeout(settle.current);
+    settle.current = setTimeout(normalize, 180);
   };
   if (!items.length) return null;
   return <div className="home-carousel" role="region" aria-roledescription={locale === 'en' ? 'carousel' : 'carrusel'} aria-label={label}>
     <div className="home-carousel-track" id={id} ref={track} onScroll={onScroll} tabIndex={0} onKeyDown={event => {
-      if (event.key === 'ArrowRight' || event.key === 'ArrowLeft') {event.preventDefault(); move(event.key === 'ArrowRight' ? 1 : -1);}
+      if (event.target === event.currentTarget && (event.key === 'ArrowRight' || event.key === 'ArrowLeft')) {event.preventDefault(); move(event.key === 'ArrowRight' ? 1 : -1);}
     }}>
-      {items.map((item, index) => <div key={item.id} className="home-carousel-slide" role="group" aria-label={`${index + 1} / ${items.length}`}>{renderItem(item, index)}</div>)}
+      {(circular ? [0, 1, 2] : [1]).flatMap(copy => items.map((item, index) => <div key={`${copy}-${item.id}`} className="home-carousel-slide" role="group" aria-hidden={copy !== 1 ? true : undefined} aria-label={`${index + 1} / ${count}`} ref={element => {
+        if (copy !== 1) element?.querySelectorAll('a,button,input,select,textarea,[tabindex]').forEach(child => { child.tabIndex = -1; });
+      }}>{renderItem(item, index)}</div>))}
     </div>
     <div className="home-carousel-footer">
       <span>{hint || (locale === 'en' ? 'Follow a life. Discover its connections.' : 'Sigue una vida. Descubre sus conexiones.')}</span>
       <div className="home-carousel-navigation">
-        <span className="home-carousel-count" aria-live="polite" aria-atomic="true">{String(position.index + 1).padStart(2, '0')} <i aria-hidden="true">/</i> {String(items.length).padStart(2, '0')}</span>
-        <button type="button" aria-label={locale === 'en' ? 'Previous cards' : 'Tarjetas anteriores'} aria-controls={id} disabled={!position.previous} onClick={() => move(-1)}><ArrowLeft size={18}/></button>
-        <button type="button" aria-label={locale === 'en' ? 'Next cards' : 'Tarjetas siguientes'} aria-controls={id} disabled={!position.next} onClick={() => move(1)}><ArrowRight size={18}/></button>
+        <span className="home-carousel-count" aria-live="polite" aria-atomic="true">{String(index + 1).padStart(2, '0')} <i aria-hidden="true">/</i> {String(count).padStart(2, '0')}</span>
+        <button type="button" aria-label={locale === 'en' ? 'Previous cards' : 'Tarjetas anteriores'} aria-controls={id} disabled={!circular} onClick={() => move(-1)}><ArrowLeft size={18}/></button>
+        <button type="button" aria-label={locale === 'en' ? 'Next cards' : 'Tarjetas siguientes'} aria-controls={id} disabled={!circular} onClick={() => move(1)}><ArrowRight size={18}/></button>
       </div>
     </div>
   </div>;

@@ -1,16 +1,17 @@
 # Territorios sin relleno personal · auditoría 1200–1800
 
-Fecha de revisión: 8 de octubre de 2026. **53 entidades** tienen gobiernos efectivos registrados y ningún relleno personal disponible dentro de este intervalo. No se cuentan títulos nominales, territorios con gobiernos sólo fuera del período ni el marco jurídico imperial.
+Fecha de revisión: 8 de octubre de 2026. **44 entidades** tienen gobiernos efectivos registrados y ningún relleno personal disponible dentro de este intervalo. No se cuentan títulos nominales, territorios con gobiernos sólo fuera del período ni el marco jurídico imperial.
 
-La existencia de un color del reino superior en el laboratorio no demuestra que el feudo tenga geometría propia. Los intervalos siguientes son años con gobierno registrado y sin mapa; no son fechas de existencia del territorio. El informe también distingue **64 entidades parcialmente representadas**; 52 presentan al menos un mandato con geometría ausente y 44 contienen núcleos declarados parciales. Estas categorías se solapan y no deben sumarse.
+La existencia de un color del reino superior en el laboratorio no demuestra que el feudo tenga geometría propia. Los intervalos siguientes son años con gobierno registrado y sin mapa; no son fechas de existencia del territorio. El informe también distingue **66 entidades parcialmente representadas**; 54 presentan al menos un mandato con geometría ausente y 44 contienen núcleos declarados parciales. Estas categorías se solapan y no deben sumarse.
 
 ## Orden recomendado
 
-1. **Bulgaria medieval y Sirmia:** mayor impacto sobre los huecos balcánicos de 1200–1400. Separar Tarnovo, Vidin y autoridades locales cuando las fechas lo exijan; no reutilizar sin revisión todo el perímetro otomano posterior.
-2. **Meißen, Turingia, Suabia, Nassau y Hannover:** completar las grandes superficies y sucesiones imperiales. Resolver las extinciones y particiones antes de colorear una provincia moderna entera.
-3. **Aquitania, Anjou, Champaña, Foix, Bearne y Armagnac:** afinar la evolución francesa y pirenaica con feudos, soberanía superior y ocupación diferenciados.
-4. **Georgia y Armenia cilicia:** prioridad para la evolución del Cáucaso y el Mediterráneo oriental, con estados fragmentados y sucesiones propias.
-5. Los señoríos y apanages menores, después de comprobar que cada celda del SVG permite una representación útil sin apropiarse del territorio vecino.
+1. **Meißen, Turingia, Suabia y Nassau:** completar superficies y sucesiones imperiales, con particiones y extinciones documentadas. Hannover ya tiene selección propia en esta entrega.
+2. **Georgia y Armenia cilicia:** estados fragmentados y sucesiones propias; no rellenar el Cáucaso por proximidad.
+3. **Albret, Alençon, Angulema, Berry, Borbón, La Marche y Orleans:** revisar feudos y apanages franceses, conservando la relación con la Corona y los títulos reales.
+4. Los demás señoríos y apanages menores, cuando las celdas permitan una atribución útil sin apropiarse de estados vecinos.
+
+Bulgaria, Sirmia, Aquitania, Anjou, Champaña, Foix, Bearne, Armagnac y Hannover salen de la lista de entidades totalmente ausentes. **Esto no certifica sus fronteras completas.** La [revisión de fronteras](atlas-frontier-review.md) mantiene pendientes Dobruja, sucesión búlgara, recuperaciones húngaras y costa croata; Anjou conserva un mandato sin geometría en 1576–1584. Estas tareas se suman a las entidades del inventario, sin confundir ambos recuentos.
 
 ## Inventario completo
 
@@ -19,29 +20,21 @@ La existencia de un color del reino superior en el laboratorio no demuestra que 
 | Albret | 1401–1522 |
 | Alençon | 1404–1474; 1478–1525 |
 | Angulema | 1407–1496 |
-| Anjou | 1360–1417; 1434–1480; 1576–1584 |
 | Annandale | 1215–1304 |
 | Ansbach | 1486–1515 |
 | Antioquía | 1200–1216; 1219–1268 |
-| Aquitania | 1200–1204 |
-| Armagnac | 1391–1497 |
 | Armenia cilicia | 1200–1375 |
-| Bearne | 1229–1572 |
 | Berry | 1360–1416 |
 | Borbón | 1262–1310; 1327–1356; 1488–1503 |
-| Bulgaria | 1200–1277; 1280–1292; 1300–1396 |
 | Castellbó | 1315–1381 |
-| Champaña | 1201–1305 |
 | Clermont | 1269–1317 |
 | Curlandia | 1758–1763 |
 | Dreux | 1200–1218 |
 | Évreux | 1298–1319 |
-| Foix | 1241–1472 |
 | Forlì | 1488–1500 |
 | Gandía | 1488–1551 |
 | Georgia | 1200–1289; 1318–1490 |
 | Guisa | 1528–1588 |
-| Hannover | 1692–1800 |
 | Imericia | 1259–1293; 1463–1478; 1484–1681; 1683–1696; 1698–1701; 1707–1716; 1719–1800 |
 | Imola | 1488–1499 |
 | Jerusalén | 1200–1228; 1243–1246; 1269–1291 |
@@ -61,7 +54,6 @@ La existencia de un color del reino superior en el laboratorio no demuestra que 
 | Richmond | 1452–1456 |
 | Romaña | 1501–1503 |
 | Samtsje | 1285–1306 |
-| Sirmia | 1284–1316 |
 | Suabia | 1200–1208; 1254–1268 |
 | Tarento | 1463–1465 |
 | Trípoli | 1200–1289 |

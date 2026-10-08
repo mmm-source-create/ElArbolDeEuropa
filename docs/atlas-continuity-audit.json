@@ -18,8 +18,8 @@
       "lab": {
         "missingYears": 0,
         "missingIntervals": [],
-        "minCells": 113,
-        "maxCells": 441,
+        "minCells": 103,
+        "maxCells": 449,
         "limitedCoreIntervals": [
           {
             "from": 1200,

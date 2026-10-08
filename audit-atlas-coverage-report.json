@@ -2,17 +2,17 @@
   "scope": {
     "from": 1200,
     "through": 1800,
-    "catalogueTerritories": 261,
+    "catalogueTerritories": 264,
     "svgLocations": 7672
   },
   "method": "Se comprueba cada año de cada mandato marcado efectivo dentro de 1200–1800 mediante la misma autoridad y correspondencia que usa el mapa. Una entidad se considera representada si al menos un mandato tiene alguna location SVG válida; esto no acredita el contorno completo. Los rangos sin geometría no se interpretan automáticamente como errores históricos.",
   "counts": {
-    "unrepresentedEntities": 53,
-    "representedEntities": 129,
-    "partialMandateGeometry": 52,
-    "partialEntireTerritoryYears": 50,
+    "unrepresentedEntities": 44,
+    "representedEntities": 141,
+    "partialMandateGeometry": 54,
+    "partialEntireTerritoryYears": 52,
     "explicitLimitedCores": 44,
-    "partiallyRepresentedUnique": 64,
+    "partiallyRepresentedUnique": 66,
     "imperialLegalFrameExclusions": 2,
     "governmentsOnlyOutsidePeriod": 4,
     "titlesOnlyInsidePeriod": 1,
@@ -311,135 +311,6 @@
             {
               "from": 1467,
               "through": 1496
-            }
-          ]
-        }
-      ],
-      "nonpaintingGovernments": [],
-      "outsidePeriodGovernments": []
-    },
-    {
-      "territory": "Anjou",
-      "status": "unrepresented_effective",
-      "counts": {
-        "effectiveMandatesAllTime": 4,
-        "effectiveMandatesInScope": 4,
-        "nonpaintingMandatesInScope": 0,
-        "locations": 0,
-        "yearsWithGovernment": 114,
-        "yearsWithGeometry": 0,
-        "yearsWithoutGeometry": 114,
-        "mandatesWithSomeMissingGeometry": 4,
-        "mandatesEntirelyWithoutGeometry": 4
-      },
-      "hasMandateGeometryGaps": false,
-      "hasEntireTerritoryYearGaps": false,
-      "limitedCore": false,
-      "missingGeometryIntervals": [
-        {
-          "from": 1360,
-          "through": 1417
-        },
-        {
-          "from": 1434,
-          "through": 1480
-        },
-        {
-          "from": 1576,
-          "through": 1584
-        }
-      ],
-      "layers": [],
-      "governments": [
-        {
-          "personId": "LUIS1ANJOU",
-          "personName": "Luis I de Anjou",
-          "government": {
-            "territory": "Anjou",
-            "title": "Duque",
-            "from": 1360,
-            "through": 1384,
-            "class": "ducado",
-            "condition": "efectivo"
-          },
-          "auditFrom": 1360,
-          "auditThrough": 1384,
-          "yearsWithGeometry": 0,
-          "yearsWithoutGeometry": 25,
-          "locations": 0,
-          "missingGeometryIntervals": [
-            {
-              "from": 1360,
-              "through": 1384
-            }
-          ]
-        },
-        {
-          "personId": "LUIS2ANJOU",
-          "personName": "Luis II de Anjou",
-          "government": {
-            "territory": "Anjou",
-            "title": "Duque",
-            "from": 1384,
-            "through": 1417,
-            "class": "ducado",
-            "condition": "efectivo"
-          },
-          "auditFrom": 1384,
-          "auditThrough": 1417,
-          "yearsWithGeometry": 0,
-          "yearsWithoutGeometry": 34,
-          "locations": 0,
-          "missingGeometryIntervals": [
-            {
-              "from": 1384,
-              "through": 1417
-            }
-          ]
-        },
-        {
-          "personId": "RENATOANJOU",
-          "personName": "Renato I de Anjou",
-          "government": {
-            "territory": "Anjou",
-            "title": "Duque",
-            "from": 1434,
-            "through": 1480,
-            "class": "ducado",
-            "condition": "efectivo"
-          },
-          "auditFrom": 1434,
-          "auditThrough": 1480,
-          "yearsWithGeometry": 0,
-          "yearsWithoutGeometry": 47,
-          "locations": 0,
-          "missingGeometryIntervals": [
-            {
-              "from": 1434,
-              "through": 1480
-            }
-          ]
-        },
-        {
-          "personId": "FRANCISCOANJOU",
-          "personName": "Francisco de Anjou",
-          "government": {
-            "territory": "Anjou",
-            "title": "Duque",
-            "from": 1576,
-            "through": 1584,
-            "class": "ducado",
-            "condition": "efectivo"
-          },
-          "auditFrom": 1576,
-          "auditThrough": 1584,
-          "yearsWithGeometry": 0,
-          "yearsWithoutGeometry": 9,
-          "locations": 0,
-          "missingGeometryIntervals": [
-            {
-              "from": 1576,
-              "through": 1584
             }
           ]
         }
@@ -812,179 +683,6 @@
           "condition": "jure uxoris"
         }
       ]
-    },
-    {
-      "territory": "Aquitania",
-      "status": "unrepresented_effective",
-      "counts": {
-        "effectiveMandatesAllTime": 1,
-        "effectiveMandatesInScope": 1,
-        "nonpaintingMandatesInScope": 0,
-        "locations": 0,
-        "yearsWithGovernment": 5,
-        "yearsWithGeometry": 0,
-        "yearsWithoutGeometry": 5,
-        "mandatesWithSomeMissingGeometry": 1,
-        "mandatesEntirelyWithoutGeometry": 1
-      },
-      "hasMandateGeometryGaps": false,
-      "hasEntireTerritoryYearGaps": false,
-      "limitedCore": false,
-      "missingGeometryIntervals": [
-        {
-          "from": 1200,
-          "through": 1204
-        }
-      ],
-      "layers": [],
-      "governments": [
-        {
-          "personId": "ELEANORAQUIT",
-          "personName": "Leonor de Aquitania",
-          "government": {
-            "territory": "Aquitania",
-            "title": "Duquesa",
-            "from": 1137,
-            "through": 1204,
-            "class": "ducado",
-            "condition": "efectivo"
-          },
-          "auditFrom": 1200,
-          "auditThrough": 1204,
-          "yearsWithGeometry": 0,
-          "yearsWithoutGeometry": 5,
-          "locations": 0,
-          "missingGeometryIntervals": [
-            {
-              "from": 1200,
-              "through": 1204
-            }
-          ]
-        }
-      ],
-      "nonpaintingGovernments": [],
-      "outsidePeriodGovernments": []
-    },
-    {
-      "territory": "Armagnac",
-      "status": "unrepresented_effective",
-      "counts": {
-        "effectiveMandatesAllTime": 4,
-        "effectiveMandatesInScope": 4,
-        "nonpaintingMandatesInScope": 0,
-        "locations": 0,
-        "yearsWithGovernment": 107,
-        "yearsWithGeometry": 0,
-        "yearsWithoutGeometry": 107,
-        "mandatesWithSomeMissingGeometry": 4,
-        "mandatesEntirelyWithoutGeometry": 4
-      },
-      "hasMandateGeometryGaps": false,
-      "hasEntireTerritoryYearGaps": false,
-      "limitedCore": false,
-      "missingGeometryIntervals": [
-        {
-          "from": 1391,
-          "through": 1497
-        }
-      ],
-      "layers": [],
-      "governments": [
-        {
-          "personId": "BERNARD7ARM",
-          "personName": "Bernardo VII de Armagnac",
-          "government": {
-            "territory": "Armagnac",
-            "title": "Conde",
-            "from": 1391,
-            "through": 1418,
-            "class": "condado",
-            "condition": "efectivo"
-          },
-          "auditFrom": 1391,
-          "auditThrough": 1418,
-          "yearsWithGeometry": 0,
-          "yearsWithoutGeometry": 28,
-          "locations": 0,
-          "missingGeometryIntervals": [
-            {
-              "from": 1391,
-              "through": 1418
-            }
-          ]
-        },
-        {
-          "personId": "JOHN4ARM",
-          "personName": "Juan IV de Armagnac",
-          "government": {
-            "territory": "Armagnac",
-            "title": "Conde",
-            "from": 1418,
-            "through": 1450,
-            "class": "condado",
-            "condition": "efectivo"
-          },
-          "auditFrom": 1418,
-          "auditThrough": 1450,
-          "yearsWithGeometry": 0,
-          "yearsWithoutGeometry": 33,
-          "locations": 0,
-          "missingGeometryIntervals": [
-            {
-              "from": 1418,
-              "through": 1450
-            }
-          ]
-        },
-        {
-          "personId": "JOHN5ARM",
-          "personName": "Juan V de Armagnac",
-          "government": {
-            "territory": "Armagnac",
-            "title": "Conde",
-            "from": 1450,
-            "through": 1473,
-            "class": "condado",
-            "condition": "efectivo"
-          },
-          "auditFrom": 1450,
-          "auditThrough": 1473,
-          "yearsWithGeometry": 0,
-          "yearsWithoutGeometry": 24,
-          "locations": 0,
-          "missingGeometryIntervals": [
-            {
-              "from": 1450,
-              "through": 1473
-            }
-          ]
-        },
-        {
-          "personId": "CHARLES1ARM",
-          "personName": "Carlos I de Armagnac",
-          "government": {
-            "territory": "Armagnac",
-            "title": "Conde",
-            "from": 1473,
-            "through": 1497,
-            "class": "condado",
-            "condition": "efectivo"
-          },
-          "auditFrom": 1473,
-          "auditThrough": 1497,
-          "yearsWithGeometry": 0,
-          "yearsWithoutGeometry": 25,
-          "locations": 0,
-          "missingGeometryIntervals": [
-            {
-              "from": 1473,
-              "through": 1497
-            }
-          ]
-        }
-      ],
-      "nonpaintingGovernments": [],
-      "outsidePeriodGovernments": []
     },
     {
       "territory": "Armenia cilicia",
@@ -1602,395 +1300,6 @@
       ]
     },
     {
-      "territory": "Bearne",
-      "status": "unrepresented_effective",
-      "counts": {
-        "effectiveMandatesAllTime": 15,
-        "effectiveMandatesInScope": 15,
-        "nonpaintingMandatesInScope": 1,
-        "locations": 0,
-        "yearsWithGovernment": 344,
-        "yearsWithGeometry": 0,
-        "yearsWithoutGeometry": 344,
-        "mandatesWithSomeMissingGeometry": 15,
-        "mandatesEntirelyWithoutGeometry": 15
-      },
-      "hasMandateGeometryGaps": false,
-      "hasEntireTerritoryYearGaps": false,
-      "limitedCore": false,
-      "missingGeometryIntervals": [
-        {
-          "from": 1229,
-          "through": 1572
-        }
-      ],
-      "layers": [],
-      "governments": [
-        {
-          "personId": "GASTON4FOIX",
-          "personName": "Gastón IV de Foix",
-          "government": {
-            "territory": "Bearne",
-            "title": "Vizconde",
-            "from": 1436,
-            "through": 1472,
-            "class": "vizcondado",
-            "condition": "efectivo"
-          },
-          "auditFrom": 1436,
-          "auditThrough": 1472,
-          "yearsWithGeometry": 0,
-          "yearsWithoutGeometry": 37,
-          "locations": 0,
-          "missingGeometryIntervals": [
-            {
-              "from": 1436,
-              "through": 1472
-            }
-          ]
-        },
-        {
-          "personId": "FRANCISCOFEBONAV",
-          "personName": "Francisco Febo de Navarra",
-          "government": {
-            "territory": "Bearne",
-            "title": "Vizconde",
-            "from": 1472,
-            "through": 1483,
-            "class": "vizcondado",
-            "condition": "efectivo"
-          },
-          "auditFrom": 1472,
-          "auditThrough": 1483,
-          "yearsWithGeometry": 0,
-          "yearsWithoutGeometry": 12,
-          "locations": 0,
-          "missingGeometryIntervals": [
-            {
-              "from": 1472,
-              "through": 1483
-            }
-          ]
-        },
-        {
-          "personId": "CATALINA1NAV",
-          "personName": "Catalina I de Navarra",
-          "government": {
-            "territory": "Bearne",
-            "title": "Vizcondesa",
-            "from": 1483,
-            "through": 1517,
-            "class": "vizcondado",
-            "condition": "efectivo"
-          },
-          "auditFrom": 1483,
-          "auditThrough": 1517,
-          "yearsWithGeometry": 0,
-          "yearsWithoutGeometry": 35,
-          "locations": 0,
-          "missingGeometryIntervals": [
-            {
-              "from": 1483,
-              "through": 1517
-            }
-          ]
-        },
-        {
-          "personId": "ENRIQ2NAV",
-          "personName": "Enrique II de Navarra",
-          "government": {
-            "territory": "Bearne",
-            "title": "Vizconde",
-            "from": 1517,
-            "through": 1555,
-            "class": "vizcondado",
-            "condition": "efectivo"
-          },
-          "auditFrom": 1517,
-          "auditThrough": 1555,
-          "yearsWithGeometry": 0,
-          "yearsWithoutGeometry": 39,
-          "locations": 0,
-          "missingGeometryIntervals": [
-            {
-              "from": 1517,
-              "through": 1555
-            }
-          ]
-        },
-        {
-          "personId": "JUANA3NAV",
-          "personName": "Juana III de Navarra",
-          "government": {
-            "territory": "Bearne",
-            "title": "Vizcondesa",
-            "from": 1555,
-            "through": 1572,
-            "class": "vizcondado",
-            "condition": "efectivo"
-          },
-          "auditFrom": 1555,
-          "auditThrough": 1572,
-          "yearsWithGeometry": 0,
-          "yearsWithoutGeometry": 18,
-          "locations": 0,
-          "missingGeometryIntervals": [
-            {
-              "from": 1555,
-              "through": 1572
-            }
-          ]
-        },
-        {
-          "personId": "GASTON3FEBUS",
-          "personName": "Gastón III de Foix",
-          "government": {
-            "territory": "Bearne",
-            "title": "Vizconde",
-            "from": 1343,
-            "through": 1391,
-            "class": "vizcondado",
-            "condition": "efectivo"
-          },
-          "auditFrom": 1343,
-          "auditThrough": 1391,
-          "yearsWithGeometry": 0,
-          "yearsWithoutGeometry": 49,
-          "locations": 0,
-          "missingGeometryIntervals": [
-            {
-              "from": 1343,
-              "through": 1391
-            }
-          ]
-        },
-        {
-          "personId": "JOHN1FOIX",
-          "personName": "Juan I de Foix",
-          "government": {
-            "territory": "Bearne",
-            "title": "Vizconde",
-            "from": 1412,
-            "through": 1436,
-            "class": "vizcondado",
-            "condition": "efectivo"
-          },
-          "auditFrom": 1412,
-          "auditThrough": 1436,
-          "yearsWithGeometry": 0,
-          "yearsWithoutGeometry": 25,
-          "locations": 0,
-          "missingGeometryIntervals": [
-            {
-              "from": 1412,
-              "through": 1436
-            }
-          ]
-        },
-        {
-          "personId": "ROGERBERNARD3FOIX",
-          "personName": "Roger Bernardo III de Foix",
-          "government": {
-            "territory": "Bearne",
-            "title": "Vizconde",
-            "from": 1290,
-            "through": 1302,
-            "class": "vizcondado",
-            "condition": "jure uxoris"
-          },
-          "auditFrom": 1290,
-          "auditThrough": 1302,
-          "yearsWithGeometry": 0,
-          "yearsWithoutGeometry": 13,
-          "locations": 0,
-          "missingGeometryIntervals": [
-            {
-              "from": 1290,
-              "through": 1302
-            }
-          ]
-        },
-        {
-          "personId": "GASTON7BEARN",
-          "personName": "Gastón VII de Bearne",
-          "government": {
-            "territory": "Bearne",
-            "title": "Vizconde",
-            "from": 1229,
-            "through": 1290,
-            "class": "vizcondado",
-            "condition": "efectivo"
-          },
-          "auditFrom": 1229,
-          "auditThrough": 1290,
-          "yearsWithGeometry": 0,
-          "yearsWithoutGeometry": 62,
-          "locations": 0,
-          "missingGeometryIntervals": [
-            {
-              "from": 1229,
-              "through": 1290
-            }
-          ]
-        },
-        {
-          "personId": "MARGUERITEBEARN",
-          "personName": "Margarita de Bearne",
-          "government": {
-            "territory": "Bearne",
-            "title": "Vizcondesa",
-            "from": 1290,
-            "through": 1319,
-            "class": "vizcondado",
-            "condition": "corregente"
-          },
-          "auditFrom": 1290,
-          "auditThrough": 1319,
-          "yearsWithGeometry": 0,
-          "yearsWithoutGeometry": 30,
-          "locations": 0,
-          "missingGeometryIntervals": [
-            {
-              "from": 1290,
-              "through": 1319
-            }
-          ]
-        },
-        {
-          "personId": "GASTON1FOIX",
-          "personName": "Gastón I de Foix",
-          "government": {
-            "territory": "Bearne",
-            "title": "Vizconde",
-            "from": 1302,
-            "through": 1315,
-            "class": "vizcondado",
-            "condition": "efectivo"
-          },
-          "auditFrom": 1302,
-          "auditThrough": 1315,
-          "yearsWithGeometry": 0,
-          "yearsWithoutGeometry": 14,
-          "locations": 0,
-          "missingGeometryIntervals": [
-            {
-              "from": 1302,
-              "through": 1315
-            }
-          ]
-        },
-        {
-          "personId": "GASTON2FOIX",
-          "personName": "Gastón II de Foix",
-          "government": {
-            "territory": "Bearne",
-            "title": "Vizconde",
-            "from": 1315,
-            "through": 1343,
-            "class": "vizcondado",
-            "condition": "efectivo"
-          },
-          "auditFrom": 1315,
-          "auditThrough": 1343,
-          "yearsWithGeometry": 0,
-          "yearsWithoutGeometry": 29,
-          "locations": 0,
-          "missingGeometryIntervals": [
-            {
-              "from": 1315,
-              "through": 1343
-            }
-          ]
-        },
-        {
-          "personId": "MATTHIEUFOIX",
-          "personName": "Mateo de Foix",
-          "government": {
-            "territory": "Bearne",
-            "title": "Vizconde",
-            "from": 1391,
-            "through": 1398,
-            "class": "vizcondado",
-            "condition": "efectivo"
-          },
-          "auditFrom": 1391,
-          "auditThrough": 1398,
-          "yearsWithGeometry": 0,
-          "yearsWithoutGeometry": 8,
-          "locations": 0,
-          "missingGeometryIntervals": [
-            {
-              "from": 1391,
-              "through": 1398
-            }
-          ]
-        },
-        {
-          "personId": "ISABELLEFOIX",
-          "personName": "Isabel de Foix-Castellbó",
-          "government": {
-            "territory": "Bearne",
-            "title": "Vizcondesa",
-            "from": 1398,
-            "through": 1412,
-            "class": "vizcondado",
-            "condition": "efectivo"
-          },
-          "auditFrom": 1398,
-          "auditThrough": 1412,
-          "yearsWithGeometry": 0,
-          "yearsWithoutGeometry": 15,
-          "locations": 0,
-          "missingGeometryIntervals": [
-            {
-              "from": 1398,
-              "through": 1412
-            }
-          ]
-        },
-        {
-          "personId": "ARCHAMBAUDGRAILLY",
-          "personName": "Archambaud de Grailly",
-          "government": {
-            "territory": "Bearne",
-            "title": "Vizconde",
-            "from": 1398,
-            "through": 1412,
-            "class": "vizcondado",
-            "condition": "jure uxoris"
-          },
-          "auditFrom": 1398,
-          "auditThrough": 1412,
-          "yearsWithGeometry": 0,
-          "yearsWithoutGeometry": 15,
-          "locations": 0,
-          "missingGeometryIntervals": [
-            {
-              "from": 1398,
-              "through": 1412
-            }
-          ]
-        }
-      ],
-      "nonpaintingGovernments": [
-        {
-          "personId": "ISABELLEFOIX",
-          "personName": "Isabel de Foix-Castellbó",
-          "government": {
-            "territory": "Bearne",
-            "title": "Vizcondesa",
-            "from": 1412,
-            "through": 1428,
-            "class": "vizcondado",
-            "condition": "titular"
-          },
-          "auditFrom": 1412,
-          "auditThrough": 1428
-        }
-      ],
-      "outsidePeriodGovernments": []
-    },
-    {
       "territory": "Berry",
       "status": "unrepresented_effective",
       "counts": {
@@ -2195,376 +1504,6 @@
       "outsidePeriodGovernments": []
     },
     {
-      "territory": "Bulgaria",
-      "status": "unrepresented_effective",
-      "counts": {
-        "effectiveMandatesAllTime": 15,
-        "effectiveMandatesInScope": 14,
-        "nonpaintingMandatesInScope": 0,
-        "locations": 0,
-        "yearsWithGovernment": 188,
-        "yearsWithGeometry": 0,
-        "yearsWithoutGeometry": 188,
-        "mandatesWithSomeMissingGeometry": 14,
-        "mandatesEntirelyWithoutGeometry": 14
-      },
-      "hasMandateGeometryGaps": false,
-      "hasEntireTerritoryYearGaps": false,
-      "limitedCore": false,
-      "missingGeometryIntervals": [
-        {
-          "from": 1200,
-          "through": 1277
-        },
-        {
-          "from": 1280,
-          "through": 1292
-        },
-        {
-          "from": 1300,
-          "through": 1396
-        }
-      ],
-      "layers": [],
-      "governments": [
-        {
-          "personId": "KALOYANBUL",
-          "personName": "Kaloyan de Bulgaria",
-          "government": {
-            "territory": "Bulgaria",
-            "title": "Zar",
-            "from": 1197,
-            "through": 1207,
-            "class": "zarato",
-            "condition": "efectivo"
-          },
-          "auditFrom": 1200,
-          "auditThrough": 1207,
-          "yearsWithGeometry": 0,
-          "yearsWithoutGeometry": 8,
-          "locations": 0,
-          "missingGeometryIntervals": [
-            {
-              "from": 1200,
-              "through": 1207
-            }
-          ]
-        },
-        {
-          "personId": "BORILBUL",
-          "personName": "Boril de Bulgaria",
-          "government": {
-            "territory": "Bulgaria",
-            "title": "Zar",
-            "from": 1207,
-            "through": 1218,
-            "class": "zarato",
-            "condition": "efectivo"
-          },
-          "auditFrom": 1207,
-          "auditThrough": 1218,
-          "yearsWithGeometry": 0,
-          "yearsWithoutGeometry": 12,
-          "locations": 0,
-          "missingGeometryIntervals": [
-            {
-              "from": 1207,
-              "through": 1218
-            }
-          ]
-        },
-        {
-          "personId": "IVANASEN2BUL",
-          "personName": "Iván Asen II",
-          "government": {
-            "territory": "Bulgaria",
-            "title": "Zar",
-            "from": 1218,
-            "through": 1241,
-            "class": "zarato",
-            "condition": "efectivo"
-          },
-          "auditFrom": 1218,
-          "auditThrough": 1241,
-          "yearsWithGeometry": 0,
-          "yearsWithoutGeometry": 24,
-          "locations": 0,
-          "missingGeometryIntervals": [
-            {
-              "from": 1218,
-              "through": 1241
-            }
-          ]
-        },
-        {
-          "personId": "KALIMAN1BUL",
-          "personName": "Kalimán I Asen",
-          "government": {
-            "territory": "Bulgaria",
-            "title": "Zar",
-            "from": 1241,
-            "through": 1246,
-            "class": "zarato",
-            "condition": "efectivo"
-          },
-          "auditFrom": 1241,
-          "auditThrough": 1246,
-          "yearsWithGeometry": 0,
-          "yearsWithoutGeometry": 6,
-          "locations": 0,
-          "missingGeometryIntervals": [
-            {
-              "from": 1241,
-              "through": 1246
-            }
-          ]
-        },
-        {
-          "personId": "MICHAEL2ASENBUL",
-          "personName": "Miguel II Asen",
-          "government": {
-            "territory": "Bulgaria",
-            "title": "Zar",
-            "from": 1246,
-            "through": 1256,
-            "class": "zarato",
-            "condition": "efectivo"
-          },
-          "auditFrom": 1246,
-          "auditThrough": 1256,
-          "yearsWithGeometry": 0,
-          "yearsWithoutGeometry": 11,
-          "locations": 0,
-          "missingGeometryIntervals": [
-            {
-              "from": 1246,
-              "through": 1256
-            }
-          ]
-        },
-        {
-          "personId": "CONSTANTINETIKHBUL",
-          "personName": "Constantino Tikh",
-          "government": {
-            "territory": "Bulgaria",
-            "title": "Zar",
-            "from": 1257,
-            "through": 1277,
-            "class": "zarato",
-            "condition": "efectivo"
-          },
-          "auditFrom": 1257,
-          "auditThrough": 1277,
-          "yearsWithGeometry": 0,
-          "yearsWithoutGeometry": 21,
-          "locations": 0,
-          "missingGeometryIntervals": [
-            {
-              "from": 1257,
-              "through": 1277
-            }
-          ]
-        },
-        {
-          "personId": "GEORGE1TERTERBUL",
-          "personName": "Jorge I Terter",
-          "government": {
-            "territory": "Bulgaria",
-            "title": "Zar",
-            "from": 1280,
-            "through": 1292,
-            "class": "zarato",
-            "condition": "efectivo"
-          },
-          "auditFrom": 1280,
-          "auditThrough": 1292,
-          "yearsWithGeometry": 0,
-          "yearsWithoutGeometry": 13,
-          "locations": 0,
-          "missingGeometryIntervals": [
-            {
-              "from": 1280,
-              "through": 1292
-            }
-          ]
-        },
-        {
-          "personId": "THEODORESVETBUL",
-          "personName": "Teodoro Svetoslav",
-          "government": {
-            "territory": "Bulgaria",
-            "title": "Zar",
-            "from": 1300,
-            "through": 1322,
-            "class": "zarato",
-            "condition": "efectivo"
-          },
-          "auditFrom": 1300,
-          "auditThrough": 1322,
-          "yearsWithGeometry": 0,
-          "yearsWithoutGeometry": 23,
-          "locations": 0,
-          "missingGeometryIntervals": [
-            {
-              "from": 1300,
-              "through": 1322
-            }
-          ]
-        },
-        {
-          "personId": "GEORGE2TERTERBUL",
-          "personName": "Jorge II Terter",
-          "government": {
-            "territory": "Bulgaria",
-            "title": "Zar",
-            "from": 1322,
-            "through": 1323,
-            "class": "zarato",
-            "condition": "efectivo"
-          },
-          "auditFrom": 1322,
-          "auditThrough": 1323,
-          "yearsWithGeometry": 0,
-          "yearsWithoutGeometry": 2,
-          "locations": 0,
-          "missingGeometryIntervals": [
-            {
-              "from": 1322,
-              "through": 1323
-            }
-          ]
-        },
-        {
-          "personId": "MICHAEL3SHISHBUL",
-          "personName": "Miguel III Shishman",
-          "government": {
-            "territory": "Bulgaria",
-            "title": "Zar",
-            "from": 1323,
-            "through": 1330,
-            "class": "zarato",
-            "condition": "efectivo"
-          },
-          "auditFrom": 1323,
-          "auditThrough": 1330,
-          "yearsWithGeometry": 0,
-          "yearsWithoutGeometry": 8,
-          "locations": 0,
-          "missingGeometryIntervals": [
-            {
-              "from": 1323,
-              "through": 1330
-            }
-          ]
-        },
-        {
-          "personId": "IVANSTEPHENBUL",
-          "personName": "Iván Esteban de Bulgaria",
-          "government": {
-            "territory": "Bulgaria",
-            "title": "Zar",
-            "from": 1330,
-            "through": 1331,
-            "class": "zarato",
-            "condition": "efectivo"
-          },
-          "auditFrom": 1330,
-          "auditThrough": 1331,
-          "yearsWithGeometry": 0,
-          "yearsWithoutGeometry": 2,
-          "locations": 0,
-          "missingGeometryIntervals": [
-            {
-              "from": 1330,
-              "through": 1331
-            }
-          ]
-        },
-        {
-          "personId": "IVANALEXBUL",
-          "personName": "Iván Alejandro de Bulgaria",
-          "government": {
-            "territory": "Bulgaria",
-            "title": "Zar",
-            "from": 1331,
-            "through": 1371,
-            "class": "zarato",
-            "condition": "efectivo"
-          },
-          "auditFrom": 1331,
-          "auditThrough": 1371,
-          "yearsWithGeometry": 0,
-          "yearsWithoutGeometry": 41,
-          "locations": 0,
-          "missingGeometryIntervals": [
-            {
-              "from": 1331,
-              "through": 1371
-            }
-          ]
-        },
-        {
-          "personId": "IVANSTRATSIMIRBUL",
-          "personName": "Iván Sratsimir",
-          "government": {
-            "territory": "Bulgaria",
-            "title": "Zar",
-            "from": 1360,
-            "through": 1396,
-            "class": "zarato",
-            "condition": "rama",
-            "scope": "Vidin"
-          },
-          "auditFrom": 1360,
-          "auditThrough": 1396,
-          "yearsWithGeometry": 0,
-          "yearsWithoutGeometry": 37,
-          "locations": 0,
-          "missingGeometryIntervals": [
-            {
-              "from": 1360,
-              "through": 1396
-            }
-          ]
-        },
-        {
-          "personId": "IVANSHISHMANBUL",
-          "personName": "Iván Shishman",
-          "government": {
-            "territory": "Bulgaria",
-            "title": "Zar",
-            "from": 1371,
-            "through": 1393,
-            "class": "zarato",
-            "condition": "rama",
-            "scope": "Tarnovo"
-          },
-          "auditFrom": 1371,
-          "auditThrough": 1393,
-          "yearsWithGeometry": 0,
-          "yearsWithoutGeometry": 23,
-          "locations": 0,
-          "missingGeometryIntervals": [
-            {
-              "from": 1371,
-              "through": 1393
-            }
-          ]
-        }
-      ],
-      "nonpaintingGovernments": [],
-      "outsidePeriodGovernments": [
-        {
-          "personId": "IVANASEN1BUL",
-          "personName": "Iván Asen I",
-          "title": "Zar",
-          "from": 1186,
-          "through": 1196,
-          "condition": "efectivo"
-        }
-      ]
-    },
-    {
       "territory": "Castellbó",
       "status": "unrepresented_effective",
       "counts": {
@@ -2632,127 +1571,6 @@
             {
               "from": 1350,
               "through": 1381
-            }
-          ]
-        }
-      ],
-      "nonpaintingGovernments": [],
-      "outsidePeriodGovernments": []
-    },
-    {
-      "territory": "Champaña",
-      "status": "unrepresented_effective",
-      "counts": {
-        "effectiveMandatesAllTime": 4,
-        "effectiveMandatesInScope": 4,
-        "nonpaintingMandatesInScope": 0,
-        "locations": 0,
-        "yearsWithGovernment": 105,
-        "yearsWithGeometry": 0,
-        "yearsWithoutGeometry": 105,
-        "mandatesWithSomeMissingGeometry": 4,
-        "mandatesEntirelyWithoutGeometry": 4
-      },
-      "hasMandateGeometryGaps": false,
-      "hasEntireTerritoryYearGaps": false,
-      "limitedCore": false,
-      "missingGeometryIntervals": [
-        {
-          "from": 1201,
-          "through": 1305
-        }
-      ],
-      "layers": [],
-      "governments": [
-        {
-          "personId": "TEOB1NAV",
-          "personName": "Teobaldo I de Navarra",
-          "government": {
-            "territory": "Champaña",
-            "title": "Conde",
-            "from": 1201,
-            "through": 1253,
-            "class": "condado",
-            "condition": "efectivo"
-          },
-          "auditFrom": 1201,
-          "auditThrough": 1253,
-          "yearsWithGeometry": 0,
-          "yearsWithoutGeometry": 53,
-          "locations": 0,
-          "missingGeometryIntervals": [
-            {
-              "from": 1201,
-              "through": 1253
-            }
-          ]
-        },
-        {
-          "personId": "ENRIQ1NAV",
-          "personName": "Enrique I",
-          "government": {
-            "territory": "Champaña",
-            "title": "Conde",
-            "from": 1270,
-            "through": 1274,
-            "class": "condado",
-            "condition": "efectivo"
-          },
-          "auditFrom": 1270,
-          "auditThrough": 1274,
-          "yearsWithGeometry": 0,
-          "yearsWithoutGeometry": 5,
-          "locations": 0,
-          "missingGeometryIntervals": [
-            {
-              "from": 1270,
-              "through": 1274
-            }
-          ]
-        },
-        {
-          "personId": "TEOB2NAV",
-          "personName": "Teobaldo II",
-          "government": {
-            "territory": "Champaña",
-            "title": "Conde",
-            "from": 1253,
-            "through": 1270,
-            "class": "condado",
-            "condition": "efectivo"
-          },
-          "auditFrom": 1253,
-          "auditThrough": 1270,
-          "yearsWithGeometry": 0,
-          "yearsWithoutGeometry": 18,
-          "locations": 0,
-          "missingGeometryIntervals": [
-            {
-              "from": 1253,
-              "through": 1270
-            }
-          ]
-        },
-        {
-          "personId": "JUANA1NAV",
-          "personName": "Juana I de Navarra",
-          "government": {
-            "territory": "Champaña",
-            "title": "Condesa",
-            "from": 1274,
-            "through": 1305,
-            "class": "condado",
-            "condition": "efectivo"
-          },
-          "auditFrom": 1274,
-          "auditThrough": 1305,
-          "yearsWithGeometry": 0,
-          "yearsWithoutGeometry": 32,
-          "locations": 0,
-          "missingGeometryIntervals": [
-            {
-              "from": 1274,
-              "through": 1305
             }
           ]
         }
@@ -2980,280 +1798,6 @@
         }
       ],
       "nonpaintingGovernments": [],
-      "outsidePeriodGovernments": []
-    },
-    {
-      "territory": "Foix",
-      "status": "unrepresented_effective",
-      "counts": {
-        "effectiveMandatesAllTime": 10,
-        "effectiveMandatesInScope": 10,
-        "nonpaintingMandatesInScope": 1,
-        "locations": 0,
-        "yearsWithGovernment": 232,
-        "yearsWithGeometry": 0,
-        "yearsWithoutGeometry": 232,
-        "mandatesWithSomeMissingGeometry": 10,
-        "mandatesEntirelyWithoutGeometry": 10
-      },
-      "hasMandateGeometryGaps": false,
-      "hasEntireTerritoryYearGaps": false,
-      "limitedCore": false,
-      "missingGeometryIntervals": [
-        {
-          "from": 1241,
-          "through": 1472
-        }
-      ],
-      "layers": [],
-      "governments": [
-        {
-          "personId": "GASTON4FOIX",
-          "personName": "Gastón IV de Foix",
-          "government": {
-            "territory": "Foix",
-            "title": "Conde",
-            "from": 1436,
-            "through": 1472,
-            "class": "condado",
-            "condition": "efectivo"
-          },
-          "auditFrom": 1436,
-          "auditThrough": 1472,
-          "yearsWithGeometry": 0,
-          "yearsWithoutGeometry": 37,
-          "locations": 0,
-          "missingGeometryIntervals": [
-            {
-              "from": 1436,
-              "through": 1472
-            }
-          ]
-        },
-        {
-          "personId": "GASTON3FEBUS",
-          "personName": "Gastón III de Foix",
-          "government": {
-            "territory": "Foix",
-            "title": "Conde",
-            "from": 1343,
-            "through": 1391,
-            "class": "condado",
-            "condition": "efectivo"
-          },
-          "auditFrom": 1343,
-          "auditThrough": 1391,
-          "yearsWithGeometry": 0,
-          "yearsWithoutGeometry": 49,
-          "locations": 0,
-          "missingGeometryIntervals": [
-            {
-              "from": 1343,
-              "through": 1391
-            }
-          ]
-        },
-        {
-          "personId": "JOHN1FOIX",
-          "personName": "Juan I de Foix",
-          "government": {
-            "territory": "Foix",
-            "title": "Conde",
-            "from": 1412,
-            "through": 1436,
-            "class": "condado",
-            "condition": "efectivo"
-          },
-          "auditFrom": 1412,
-          "auditThrough": 1436,
-          "yearsWithGeometry": 0,
-          "yearsWithoutGeometry": 25,
-          "locations": 0,
-          "missingGeometryIntervals": [
-            {
-              "from": 1412,
-              "through": 1436
-            }
-          ]
-        },
-        {
-          "personId": "ROGER4FOIX",
-          "personName": "Roger IV de Foix",
-          "government": {
-            "territory": "Foix",
-            "title": "Conde",
-            "from": 1241,
-            "through": 1265,
-            "class": "condado",
-            "condition": "efectivo"
-          },
-          "auditFrom": 1241,
-          "auditThrough": 1265,
-          "yearsWithGeometry": 0,
-          "yearsWithoutGeometry": 25,
-          "locations": 0,
-          "missingGeometryIntervals": [
-            {
-              "from": 1241,
-              "through": 1265
-            }
-          ]
-        },
-        {
-          "personId": "ROGERBERNARD3FOIX",
-          "personName": "Roger Bernardo III de Foix",
-          "government": {
-            "territory": "Foix",
-            "title": "Conde",
-            "from": 1265,
-            "through": 1302,
-            "class": "condado",
-            "condition": "efectivo"
-          },
-          "auditFrom": 1265,
-          "auditThrough": 1302,
-          "yearsWithGeometry": 0,
-          "yearsWithoutGeometry": 38,
-          "locations": 0,
-          "missingGeometryIntervals": [
-            {
-              "from": 1265,
-              "through": 1302
-            }
-          ]
-        },
-        {
-          "personId": "GASTON1FOIX",
-          "personName": "Gastón I de Foix",
-          "government": {
-            "territory": "Foix",
-            "title": "Conde",
-            "from": 1302,
-            "through": 1315,
-            "class": "condado",
-            "condition": "efectivo"
-          },
-          "auditFrom": 1302,
-          "auditThrough": 1315,
-          "yearsWithGeometry": 0,
-          "yearsWithoutGeometry": 14,
-          "locations": 0,
-          "missingGeometryIntervals": [
-            {
-              "from": 1302,
-              "through": 1315
-            }
-          ]
-        },
-        {
-          "personId": "GASTON2FOIX",
-          "personName": "Gastón II de Foix",
-          "government": {
-            "territory": "Foix",
-            "title": "Conde",
-            "from": 1315,
-            "through": 1343,
-            "class": "condado",
-            "condition": "efectivo"
-          },
-          "auditFrom": 1315,
-          "auditThrough": 1343,
-          "yearsWithGeometry": 0,
-          "yearsWithoutGeometry": 29,
-          "locations": 0,
-          "missingGeometryIntervals": [
-            {
-              "from": 1315,
-              "through": 1343
-            }
-          ]
-        },
-        {
-          "personId": "MATTHIEUFOIX",
-          "personName": "Mateo de Foix",
-          "government": {
-            "territory": "Foix",
-            "title": "Conde",
-            "from": 1391,
-            "through": 1398,
-            "class": "condado",
-            "condition": "efectivo"
-          },
-          "auditFrom": 1391,
-          "auditThrough": 1398,
-          "yearsWithGeometry": 0,
-          "yearsWithoutGeometry": 8,
-          "locations": 0,
-          "missingGeometryIntervals": [
-            {
-              "from": 1391,
-              "through": 1398
-            }
-          ]
-        },
-        {
-          "personId": "ISABELLEFOIX",
-          "personName": "Isabel de Foix-Castellbó",
-          "government": {
-            "territory": "Foix",
-            "title": "Condesa",
-            "from": 1398,
-            "through": 1412,
-            "class": "condado",
-            "condition": "efectivo"
-          },
-          "auditFrom": 1398,
-          "auditThrough": 1412,
-          "yearsWithGeometry": 0,
-          "yearsWithoutGeometry": 15,
-          "locations": 0,
-          "missingGeometryIntervals": [
-            {
-              "from": 1398,
-              "through": 1412
-            }
-          ]
-        },
-        {
-          "personId": "ARCHAMBAUDGRAILLY",
-          "personName": "Archambaud de Grailly",
-          "government": {
-            "territory": "Foix",
-            "title": "Conde",
-            "from": 1398,
-            "through": 1412,
-            "class": "condado",
-            "condition": "jure uxoris"
-          },
-          "auditFrom": 1398,
-          "auditThrough": 1412,
-          "yearsWithGeometry": 0,
-          "yearsWithoutGeometry": 15,
-          "locations": 0,
-          "missingGeometryIntervals": [
-            {
-              "from": 1398,
-              "through": 1412
-            }
-          ]
-        }
-      ],
-      "nonpaintingGovernments": [
-        {
-          "personId": "ISABELLEFOIX",
-          "personName": "Isabel de Foix-Castellbó",
-          "government": {
-            "territory": "Foix",
-            "title": "Condesa",
-            "from": 1412,
-            "through": 1428,
-            "class": "condado",
-            "condition": "titular"
-          },
-          "auditFrom": 1412,
-          "auditThrough": 1428
-        }
-      ],
       "outsidePeriodGovernments": []
     },
     {
@@ -4026,127 +2570,6 @@
             {
               "from": 1563,
               "through": 1588
-            }
-          ]
-        }
-      ],
-      "nonpaintingGovernments": [],
-      "outsidePeriodGovernments": []
-    },
-    {
-      "territory": "Hannover",
-      "status": "unrepresented_effective",
-      "counts": {
-        "effectiveMandatesAllTime": 4,
-        "effectiveMandatesInScope": 4,
-        "nonpaintingMandatesInScope": 0,
-        "locations": 0,
-        "yearsWithGovernment": 109,
-        "yearsWithGeometry": 0,
-        "yearsWithoutGeometry": 109,
-        "mandatesWithSomeMissingGeometry": 4,
-        "mandatesEntirelyWithoutGeometry": 4
-      },
-      "hasMandateGeometryGaps": false,
-      "hasEntireTerritoryYearGaps": false,
-      "limitedCore": false,
-      "missingGeometryIntervals": [
-        {
-          "from": 1692,
-          "through": 1800
-        }
-      ],
-      "layers": [],
-      "governments": [
-        {
-          "personId": "ERNSTAUGUSTHAN",
-          "personName": "Ernesto Augusto de Hannover",
-          "government": {
-            "territory": "Hannover",
-            "title": "Elector",
-            "from": 1692,
-            "through": 1698,
-            "class": "electorado",
-            "condition": "efectivo"
-          },
-          "auditFrom": 1692,
-          "auditThrough": 1698,
-          "yearsWithGeometry": 0,
-          "yearsWithoutGeometry": 7,
-          "locations": 0,
-          "missingGeometryIntervals": [
-            {
-              "from": 1692,
-              "through": 1698
-            }
-          ]
-        },
-        {
-          "personId": "GEORGE1GB",
-          "personName": "Jorge I de Gran Bretaña",
-          "government": {
-            "territory": "Hannover",
-            "title": "Elector",
-            "from": 1698,
-            "through": 1727,
-            "class": "electorado",
-            "condition": "efectivo"
-          },
-          "auditFrom": 1698,
-          "auditThrough": 1727,
-          "yearsWithGeometry": 0,
-          "yearsWithoutGeometry": 30,
-          "locations": 0,
-          "missingGeometryIntervals": [
-            {
-              "from": 1698,
-              "through": 1727
-            }
-          ]
-        },
-        {
-          "personId": "GEORGE2GB",
-          "personName": "Jorge II de Gran Bretaña",
-          "government": {
-            "territory": "Hannover",
-            "title": "Elector",
-            "from": 1727,
-            "through": 1760,
-            "class": "electorado",
-            "condition": "efectivo"
-          },
-          "auditFrom": 1727,
-          "auditThrough": 1760,
-          "yearsWithGeometry": 0,
-          "yearsWithoutGeometry": 34,
-          "locations": 0,
-          "missingGeometryIntervals": [
-            {
-              "from": 1727,
-              "through": 1760
-            }
-          ]
-        },
-        {
-          "personId": "GEORGE3GB",
-          "personName": "Jorge III de Gran Bretaña",
-          "government": {
-            "territory": "Hannover",
-            "title": "Elector",
-            "from": 1760,
-            "through": 1806,
-            "class": "electorado",
-            "condition": "efectivo"
-          },
-          "auditFrom": 1760,
-          "auditThrough": 1800,
-          "yearsWithGeometry": 0,
-          "yearsWithoutGeometry": 41,
-          "locations": 0,
-          "missingGeometryIntervals": [
-            {
-              "from": 1760,
-              "through": 1800
             }
           ]
         }
@@ -8613,58 +7036,6 @@
       "outsidePeriodGovernments": []
     },
     {
-      "territory": "Sirmia",
-      "status": "unrepresented_effective",
-      "counts": {
-        "effectiveMandatesAllTime": 1,
-        "effectiveMandatesInScope": 1,
-        "nonpaintingMandatesInScope": 0,
-        "locations": 0,
-        "yearsWithGovernment": 33,
-        "yearsWithGeometry": 0,
-        "yearsWithoutGeometry": 33,
-        "mandatesWithSomeMissingGeometry": 1,
-        "mandatesEntirelyWithoutGeometry": 1
-      },
-      "hasMandateGeometryGaps": false,
-      "hasEntireTerritoryYearGaps": false,
-      "limitedCore": false,
-      "missingGeometryIntervals": [
-        {
-          "from": 1284,
-          "through": 1316
-        }
-      ],
-      "layers": [],
-      "governments": [
-        {
-          "personId": "DRAGUTINSER",
-          "personName": "Stefan Dragutin",
-          "government": {
-            "territory": "Sirmia",
-            "title": "Rey",
-            "from": 1284,
-            "through": 1316,
-            "class": "reinado",
-            "condition": "efectivo"
-          },
-          "auditFrom": 1284,
-          "auditThrough": 1316,
-          "yearsWithGeometry": 0,
-          "yearsWithoutGeometry": 33,
-          "locations": 0,
-          "missingGeometryIntervals": [
-            {
-              "from": 1284,
-              "through": 1316
-            }
-          ]
-        }
-      ],
-      "nonpaintingGovernments": [],
-      "outsidePeriodGovernments": []
-    },
-    {
       "territory": "Suabia",
       "status": "unrepresented_effective",
       "counts": {
@@ -9515,6 +7886,402 @@
     }
   ],
   "partiallyRepresented": [
+    {
+      "territory": "Anjou",
+      "status": "represented",
+      "counts": {
+        "effectiveMandatesAllTime": 5,
+        "effectiveMandatesInScope": 5,
+        "nonpaintingMandatesInScope": 0,
+        "locations": 13,
+        "yearsWithGovernment": 118,
+        "yearsWithGeometry": 109,
+        "yearsWithoutGeometry": 9,
+        "mandatesWithSomeMissingGeometry": 1,
+        "mandatesEntirelyWithoutGeometry": 1
+      },
+      "hasMandateGeometryGaps": true,
+      "hasEntireTerritoryYearGaps": true,
+      "limitedCore": false,
+      "missingGeometryIntervals": [
+        {
+          "from": 1576,
+          "through": 1584
+        }
+      ],
+      "layers": [
+        {
+          "name": "Condado de Anjou",
+          "note": "Condado y, desde 1360, ducado de Anjou. Conserva identidad como apanage hasta su reunión a la Corona en 1480; un feudo no equivale a un Estado independiente."
+        },
+        {
+          "name": "Touraine angevina",
+          "note": "Touraine bajo Juan I; no se prolonga automáticamente después de 1204."
+        }
+      ],
+      "governments": [
+        {
+          "personId": "LUIS1ANJOU",
+          "personName": "Luis I de Anjou",
+          "government": {
+            "territory": "Anjou",
+            "title": "Duque",
+            "from": 1360,
+            "through": 1384,
+            "class": "ducado",
+            "condition": "efectivo"
+          },
+          "auditFrom": 1360,
+          "auditThrough": 1384,
+          "yearsWithGeometry": 25,
+          "yearsWithoutGeometry": 0,
+          "locations": 8,
+          "missingGeometryIntervals": []
+        },
+        {
+          "personId": "LUIS2ANJOU",
+          "personName": "Luis II de Anjou",
+          "government": {
+            "territory": "Anjou",
+            "title": "Duque",
+            "from": 1384,
+            "through": 1417,
+            "class": "ducado",
+            "condition": "efectivo"
+          },
+          "auditFrom": 1384,
+          "auditThrough": 1417,
+          "yearsWithGeometry": 34,
+          "yearsWithoutGeometry": 0,
+          "locations": 8,
+          "missingGeometryIntervals": []
+        },
+        {
+          "personId": "RENATOANJOU",
+          "personName": "Renato I de Anjou",
+          "government": {
+            "territory": "Anjou",
+            "title": "Duque",
+            "from": 1434,
+            "through": 1480,
+            "class": "ducado",
+            "condition": "efectivo"
+          },
+          "auditFrom": 1434,
+          "auditThrough": 1480,
+          "yearsWithGeometry": 47,
+          "yearsWithoutGeometry": 0,
+          "locations": 8,
+          "missingGeometryIntervals": []
+        },
+        {
+          "personId": "FRANCISCOANJOU",
+          "personName": "Francisco de Anjou",
+          "government": {
+            "territory": "Anjou",
+            "title": "Duque",
+            "from": 1576,
+            "through": 1584,
+            "class": "ducado",
+            "condition": "efectivo"
+          },
+          "auditFrom": 1576,
+          "auditThrough": 1584,
+          "yearsWithGeometry": 0,
+          "yearsWithoutGeometry": 9,
+          "locations": 0,
+          "missingGeometryIntervals": [
+            {
+              "from": 1576,
+              "through": 1584
+            }
+          ]
+        },
+        {
+          "personId": "JUANSINTIERRA",
+          "personName": "Juan I de Inglaterra",
+          "government": {
+            "territory": "Anjou",
+            "title": "Conde",
+            "from": 1199,
+            "through": 1203,
+            "class": "condado",
+            "condition": "efectivo"
+          },
+          "auditFrom": 1200,
+          "auditThrough": 1203,
+          "yearsWithGeometry": 4,
+          "yearsWithoutGeometry": 0,
+          "locations": 13,
+          "missingGeometryIntervals": []
+        }
+      ],
+      "nonpaintingGovernments": [],
+      "outsidePeriodGovernments": []
+    },
+    {
+      "territory": "Aquitania",
+      "status": "represented",
+      "counts": {
+        "effectiveMandatesAllTime": 12,
+        "effectiveMandatesInScope": 12,
+        "nonpaintingMandatesInScope": 0,
+        "locations": 70,
+        "yearsWithGovernment": 254,
+        "yearsWithGeometry": 252,
+        "yearsWithoutGeometry": 2,
+        "mandatesWithSomeMissingGeometry": 1,
+        "mandatesEntirelyWithoutGeometry": 0
+      },
+      "hasMandateGeometryGaps": true,
+      "hasEntireTerritoryYearGaps": true,
+      "limitedCore": false,
+      "missingGeometryIntervals": [
+        {
+          "from": 1451,
+          "through": 1451
+        },
+        {
+          "from": 1453,
+          "through": 1453
+        }
+      ],
+      "layers": [
+        {
+          "name": "Ducado de Aquitania",
+          "note": "Ducado de Aquitania/Guyena. Soberanía y control divergen durante confiscaciones y campañas: cortes regionales, no una frontera diaria. No atribuye todo Bearne ni Navarra a Inglaterra."
+        }
+      ],
+      "governments": [
+        {
+          "personId": "EDUARDO2ING",
+          "personName": "Eduardo II de Inglaterra",
+          "government": {
+            "territory": "Aquitania",
+            "title": "Duque",
+            "from": 1306,
+            "through": 1325,
+            "class": "ducado",
+            "condition": "efectivo"
+          },
+          "auditFrom": 1306,
+          "auditThrough": 1325,
+          "yearsWithGeometry": 20,
+          "yearsWithoutGeometry": 0,
+          "locations": 20,
+          "missingGeometryIntervals": []
+        },
+        {
+          "personId": "RICARDO2ING",
+          "personName": "Ricardo II de Inglaterra",
+          "government": {
+            "territory": "Aquitania",
+            "title": "Duque",
+            "from": 1377,
+            "through": 1399,
+            "class": "ducado",
+            "condition": "efectivo"
+          },
+          "auditFrom": 1377,
+          "auditThrough": 1399,
+          "yearsWithGeometry": 23,
+          "yearsWithoutGeometry": 0,
+          "locations": 20,
+          "missingGeometryIntervals": []
+        },
+        {
+          "personId": "ENRIQ5ING",
+          "personName": "Enrique V de Inglaterra",
+          "government": {
+            "territory": "Aquitania",
+            "title": "Duque",
+            "from": 1413,
+            "through": 1422,
+            "class": "ducado",
+            "condition": "efectivo"
+          },
+          "auditFrom": 1413,
+          "auditThrough": 1422,
+          "yearsWithGeometry": 10,
+          "yearsWithoutGeometry": 0,
+          "locations": 20,
+          "missingGeometryIntervals": []
+        },
+        {
+          "personId": "ENRIQ6ING",
+          "personName": "Enrique VI de Inglaterra",
+          "government": {
+            "territory": "Aquitania",
+            "title": "Duque",
+            "from": 1422,
+            "through": 1453,
+            "class": "ducado",
+            "condition": "efectivo"
+          },
+          "auditFrom": 1422,
+          "auditThrough": 1453,
+          "yearsWithGeometry": 30,
+          "yearsWithoutGeometry": 2,
+          "locations": 20,
+          "missingGeometryIntervals": [
+            {
+              "from": 1451,
+              "through": 1451
+            },
+            {
+              "from": 1453,
+              "through": 1453
+            }
+          ]
+        },
+        {
+          "personId": "EDUARDO3ING",
+          "personName": "Eduardo III de Inglaterra",
+          "government": {
+            "territory": "Aquitania",
+            "title": "Duque",
+            "from": 1325,
+            "through": 1362,
+            "class": "ducado",
+            "condition": "efectivo"
+          },
+          "auditFrom": 1325,
+          "auditThrough": 1362,
+          "yearsWithGeometry": 38,
+          "yearsWithoutGeometry": 0,
+          "locations": 70,
+          "missingGeometryIntervals": []
+        },
+        {
+          "personId": "EDUARDO3ING",
+          "personName": "Eduardo III de Inglaterra",
+          "government": {
+            "territory": "Aquitania",
+            "title": "Duque",
+            "from": 1372,
+            "through": 1377,
+            "class": "ducado",
+            "condition": "efectivo"
+          },
+          "auditFrom": 1372,
+          "auditThrough": 1377,
+          "yearsWithGeometry": 6,
+          "yearsWithoutGeometry": 0,
+          "locations": 70,
+          "missingGeometryIntervals": []
+        },
+        {
+          "personId": "EDUNEGRO",
+          "personName": "Eduardo de Woodstock",
+          "government": {
+            "territory": "Aquitania",
+            "title": "Príncipe",
+            "from": 1362,
+            "through": 1372,
+            "class": "principado",
+            "condition": "efectivo"
+          },
+          "auditFrom": 1362,
+          "auditThrough": 1372,
+          "yearsWithGeometry": 11,
+          "yearsWithoutGeometry": 0,
+          "locations": 70,
+          "missingGeometryIntervals": []
+        },
+        {
+          "personId": "ELEANORAQUIT",
+          "personName": "Leonor de Aquitania",
+          "government": {
+            "territory": "Aquitania",
+            "title": "Duquesa",
+            "from": 1137,
+            "through": 1204,
+            "class": "ducado",
+            "condition": "efectivo"
+          },
+          "auditFrom": 1200,
+          "auditThrough": 1204,
+          "yearsWithGeometry": 5,
+          "yearsWithoutGeometry": 0,
+          "locations": 56,
+          "missingGeometryIntervals": []
+        },
+        {
+          "personId": "JUANSINTIERRA",
+          "personName": "Juan I de Inglaterra",
+          "government": {
+            "territory": "Aquitania",
+            "title": "Duque",
+            "from": 1204,
+            "through": 1216,
+            "class": "ducado",
+            "condition": "efectivo"
+          },
+          "auditFrom": 1204,
+          "auditThrough": 1216,
+          "yearsWithGeometry": 13,
+          "yearsWithoutGeometry": 0,
+          "locations": 56,
+          "missingGeometryIntervals": []
+        },
+        {
+          "personId": "ENRIQ3ING",
+          "personName": "Enrique III de Inglaterra",
+          "government": {
+            "territory": "Aquitania",
+            "title": "Duque",
+            "from": 1216,
+            "through": 1254,
+            "class": "ducado",
+            "condition": "efectivo"
+          },
+          "auditFrom": 1216,
+          "auditThrough": 1254,
+          "yearsWithGeometry": 39,
+          "yearsWithoutGeometry": 0,
+          "locations": 56,
+          "missingGeometryIntervals": []
+        },
+        {
+          "personId": "EDUARDO1ING",
+          "personName": "Eduardo I de Inglaterra",
+          "government": {
+            "territory": "Aquitania",
+            "title": "Duque",
+            "from": 1254,
+            "through": 1306,
+            "class": "ducado",
+            "condition": "efectivo"
+          },
+          "auditFrom": 1254,
+          "auditThrough": 1306,
+          "yearsWithGeometry": 53,
+          "yearsWithoutGeometry": 0,
+          "locations": 20,
+          "missingGeometryIntervals": []
+        },
+        {
+          "personId": "ENRIQ4ING",
+          "personName": "Enrique IV de Inglaterra",
+          "government": {
+            "territory": "Aquitania",
+            "title": "Duque",
+            "from": 1399,
+            "through": 1413,
+            "class": "ducado",
+            "condition": "efectivo"
+          },
+          "auditFrom": 1399,
+          "auditThrough": 1413,
+          "yearsWithGeometry": 15,
+          "yearsWithoutGeometry": 0,
+          "locations": 20,
+          "missingGeometryIntervals": []
+        }
+      ],
+      "nonpaintingGovernments": [],
+      "outsidePeriodGovernments": []
+    },
     {
       "territory": "Artois",
       "status": "represented",
@@ -12754,6 +11521,361 @@
       "outsidePeriodGovernments": []
     },
     {
+      "territory": "Bulgaria",
+      "status": "represented",
+      "counts": {
+        "effectiveMandatesAllTime": 17,
+        "effectiveMandatesInScope": 16,
+        "nonpaintingMandatesInScope": 0,
+        "locations": 99,
+        "yearsWithGovernment": 190,
+        "yearsWithGeometry": 189,
+        "yearsWithoutGeometry": 1,
+        "mandatesWithSomeMissingGeometry": 1,
+        "mandatesEntirelyWithoutGeometry": 0
+      },
+      "hasMandateGeometryGaps": true,
+      "hasEntireTerritoryYearGaps": true,
+      "limitedCore": false,
+      "missingGeometryIntervals": [
+        {
+          "from": 1396,
+          "through": 1396
+        }
+      ],
+      "layers": [
+        {
+          "name": "Bulgaria",
+          "note": "Segundo Imperio búlgaro. La tributación mongola no extingue automáticamente el zarato. No se atribuyen Valaquia y Moldavia completas por una reivindicación imperial; quedan pendientes sus fronteras tempranas."
+        },
+        {
+          "name": "Bulgaria · gobierno rival en Tarnovo",
+          "note": "Ámbito acreditado en la capital; no se atribuye todo el zarato por el título."
+        },
+        {
+          "name": "Zarato de Tarnovo",
+          "note": "Zarato de Tarnovo, tributario de los otomanos desde la década de 1370. El vasallaje no equivale a administración directa. Desde 1393 solo se representa Nikopol; los frentes menores continúan pendientes."
+        },
+        {
+          "name": "Zarato de Vidin",
+          "note": "Zarato separado, con ocupación húngara de 1365–1369. Su dependencia otomana no convierte a Sratsimir en gobernador provincial del sultán."
+        }
+      ],
+      "governments": [
+        {
+          "personId": "KALOYANBUL",
+          "personName": "Kaloyan de Bulgaria",
+          "government": {
+            "territory": "Bulgaria",
+            "title": "Zar",
+            "from": 1197,
+            "through": 1207,
+            "class": "zarato",
+            "condition": "efectivo"
+          },
+          "auditFrom": 1200,
+          "auditThrough": 1207,
+          "yearsWithGeometry": 8,
+          "yearsWithoutGeometry": 0,
+          "locations": 74,
+          "missingGeometryIntervals": []
+        },
+        {
+          "personId": "BORILBUL",
+          "personName": "Boril de Bulgaria",
+          "government": {
+            "territory": "Bulgaria",
+            "title": "Zar",
+            "from": 1207,
+            "through": 1218,
+            "class": "zarato",
+            "condition": "efectivo"
+          },
+          "auditFrom": 1207,
+          "auditThrough": 1218,
+          "yearsWithGeometry": 12,
+          "yearsWithoutGeometry": 0,
+          "locations": 74,
+          "missingGeometryIntervals": []
+        },
+        {
+          "personId": "IVANASEN2BUL",
+          "personName": "Iván Asen II",
+          "government": {
+            "territory": "Bulgaria",
+            "title": "Zar",
+            "from": 1218,
+            "through": 1241,
+            "class": "zarato",
+            "condition": "efectivo"
+          },
+          "auditFrom": 1218,
+          "auditThrough": 1241,
+          "yearsWithGeometry": 24,
+          "yearsWithoutGeometry": 0,
+          "locations": 97,
+          "missingGeometryIntervals": []
+        },
+        {
+          "personId": "KALIMAN1BUL",
+          "personName": "Kalimán I Asen",
+          "government": {
+            "territory": "Bulgaria",
+            "title": "Zar",
+            "from": 1241,
+            "through": 1246,
+            "class": "zarato",
+            "condition": "efectivo"
+          },
+          "auditFrom": 1241,
+          "auditThrough": 1246,
+          "yearsWithGeometry": 6,
+          "yearsWithoutGeometry": 0,
+          "locations": 97,
+          "missingGeometryIntervals": []
+        },
+        {
+          "personId": "MICHAEL2ASENBUL",
+          "personName": "Miguel II Asen",
+          "government": {
+            "territory": "Bulgaria",
+            "title": "Zar",
+            "from": 1246,
+            "through": 1256,
+            "class": "zarato",
+            "condition": "efectivo"
+          },
+          "auditFrom": 1246,
+          "auditThrough": 1256,
+          "yearsWithGeometry": 11,
+          "yearsWithoutGeometry": 0,
+          "locations": 62,
+          "missingGeometryIntervals": []
+        },
+        {
+          "personId": "CONSTANTINETIKHBUL",
+          "personName": "Constantino Tikh",
+          "government": {
+            "territory": "Bulgaria",
+            "title": "Zar",
+            "from": 1257,
+            "through": 1277,
+            "class": "zarato",
+            "condition": "efectivo"
+          },
+          "auditFrom": 1257,
+          "auditThrough": 1277,
+          "yearsWithGeometry": 21,
+          "yearsWithoutGeometry": 0,
+          "locations": 62,
+          "missingGeometryIntervals": []
+        },
+        {
+          "personId": "GEORGE1TERTERBUL",
+          "personName": "Jorge I Terter",
+          "government": {
+            "territory": "Bulgaria",
+            "title": "Zar",
+            "from": 1280,
+            "through": 1292,
+            "class": "zarato",
+            "condition": "efectivo"
+          },
+          "auditFrom": 1280,
+          "auditThrough": 1292,
+          "yearsWithGeometry": 13,
+          "yearsWithoutGeometry": 0,
+          "locations": 62,
+          "missingGeometryIntervals": []
+        },
+        {
+          "personId": "THEODORESVETBUL",
+          "personName": "Teodoro Svetoslav",
+          "government": {
+            "territory": "Bulgaria",
+            "title": "Zar",
+            "from": 1300,
+            "through": 1322,
+            "class": "zarato",
+            "condition": "efectivo"
+          },
+          "auditFrom": 1300,
+          "auditThrough": 1322,
+          "yearsWithGeometry": 23,
+          "yearsWithoutGeometry": 0,
+          "locations": 63,
+          "missingGeometryIntervals": []
+        },
+        {
+          "personId": "GEORGE2TERTERBUL",
+          "personName": "Jorge II Terter",
+          "government": {
+            "territory": "Bulgaria",
+            "title": "Zar",
+            "from": 1322,
+            "through": 1323,
+            "class": "zarato",
+            "condition": "efectivo"
+          },
+          "auditFrom": 1322,
+          "auditThrough": 1323,
+          "yearsWithGeometry": 2,
+          "yearsWithoutGeometry": 0,
+          "locations": 63,
+          "missingGeometryIntervals": []
+        },
+        {
+          "personId": "MICHAEL3SHISHBUL",
+          "personName": "Miguel III Shishman",
+          "government": {
+            "territory": "Bulgaria",
+            "title": "Zar",
+            "from": 1323,
+            "through": 1330,
+            "class": "zarato",
+            "condition": "efectivo"
+          },
+          "auditFrom": 1323,
+          "auditThrough": 1330,
+          "yearsWithGeometry": 8,
+          "yearsWithoutGeometry": 0,
+          "locations": 63,
+          "missingGeometryIntervals": []
+        },
+        {
+          "personId": "IVANSTEPHENBUL",
+          "personName": "Iván Esteban de Bulgaria",
+          "government": {
+            "territory": "Bulgaria",
+            "title": "Zar",
+            "from": 1330,
+            "through": 1331,
+            "class": "zarato",
+            "condition": "efectivo"
+          },
+          "auditFrom": 1330,
+          "auditThrough": 1331,
+          "yearsWithGeometry": 2,
+          "yearsWithoutGeometry": 0,
+          "locations": 63,
+          "missingGeometryIntervals": []
+        },
+        {
+          "personId": "IVANALEXBUL",
+          "personName": "Iván Alejandro de Bulgaria",
+          "government": {
+            "territory": "Bulgaria",
+            "title": "Zar",
+            "from": 1331,
+            "through": 1371,
+            "class": "zarato",
+            "condition": "efectivo"
+          },
+          "auditFrom": 1331,
+          "auditThrough": 1371,
+          "yearsWithGeometry": 41,
+          "yearsWithoutGeometry": 0,
+          "locations": 69,
+          "missingGeometryIntervals": []
+        },
+        {
+          "personId": "IVANSTRATSIMIRBUL",
+          "personName": "Iván Sratsimir",
+          "government": {
+            "territory": "Bulgaria",
+            "title": "Zar",
+            "from": 1360,
+            "through": 1396,
+            "class": "zarato",
+            "condition": "rama",
+            "scope": "Vidin"
+          },
+          "auditFrom": 1360,
+          "auditThrough": 1396,
+          "yearsWithGeometry": 32,
+          "yearsWithoutGeometry": 5,
+          "locations": 9,
+          "missingGeometryIntervals": [
+            {
+              "from": 1365,
+              "through": 1368
+            },
+            {
+              "from": 1396,
+              "through": 1396
+            }
+          ]
+        },
+        {
+          "personId": "IVANSHISHMANBUL",
+          "personName": "Iván Shishman",
+          "government": {
+            "territory": "Bulgaria",
+            "title": "Zar",
+            "from": 1371,
+            "through": 1395,
+            "class": "zarato",
+            "condition": "rama",
+            "scope": "Tarnovo"
+          },
+          "auditFrom": 1371,
+          "auditThrough": 1395,
+          "yearsWithGeometry": 25,
+          "yearsWithoutGeometry": 0,
+          "locations": 50,
+          "missingGeometryIntervals": []
+        },
+        {
+          "personId": "IVAYLOBUL",
+          "personName": "Ivaylo de Bulgaria",
+          "government": {
+            "territory": "Bulgaria",
+            "title": "Zar",
+            "from": 1277,
+            "through": 1280,
+            "class": "zarato",
+            "condition": "efectivo"
+          },
+          "auditFrom": 1277,
+          "auditThrough": 1280,
+          "yearsWithGeometry": 4,
+          "yearsWithoutGeometry": 0,
+          "locations": 62,
+          "missingGeometryIntervals": []
+        },
+        {
+          "personId": "IVANASEN3BUL",
+          "personName": "Iván Asen III",
+          "government": {
+            "territory": "Bulgaria",
+            "title": "Zar",
+            "from": 1279,
+            "through": 1280,
+            "class": "zarato",
+            "condition": "efectivo",
+            "scope": "Tarnovo"
+          },
+          "auditFrom": 1279,
+          "auditThrough": 1280,
+          "yearsWithGeometry": 2,
+          "yearsWithoutGeometry": 0,
+          "locations": 2,
+          "missingGeometryIntervals": []
+        }
+      ],
+      "nonpaintingGovernments": [],
+      "outsidePeriodGovernments": [
+        {
+          "personId": "IVANASEN1BUL",
+          "personName": "Iván Asen I",
+          "title": "Zar",
+          "from": 1186,
+          "through": 1196,
+          "condition": "efectivo"
+        }
+      ]
+    },
+    {
       "territory": "Chipre",
       "status": "represented",
       "counts": {
@@ -13902,25 +13024,17 @@
         "effectiveMandatesAllTime": 43,
         "effectiveMandatesInScope": 42,
         "nonpaintingMandatesInScope": 1,
-        "locations": 16,
+        "locations": 20,
         "yearsWithGovernment": 599,
-        "yearsWithGeometry": 440,
-        "yearsWithoutGeometry": 159,
-        "mandatesWithSomeMissingGeometry": 15,
-        "mandatesEntirelyWithoutGeometry": 13
+        "yearsWithGeometry": 449,
+        "yearsWithoutGeometry": 150,
+        "mandatesWithSomeMissingGeometry": 12,
+        "mandatesEntirelyWithoutGeometry": 10
       },
       "hasMandateGeometryGaps": true,
       "hasEntireTerritoryYearGaps": true,
       "limitedCore": true,
       "missingGeometryIntervals": [
-        {
-          "from": 1200,
-          "through": 1204
-        },
-        {
-          "from": 1302,
-          "through": 1305
-        },
         {
           "from": 1651,
           "through": 1800
@@ -13928,24 +13042,12 @@
       ],
       "layers": [
         {
-          "name": "Croacia anterior a 1527 (Bihać)",
-          "note": "Entorno de la ciudad real de Bihać desde el privilegio de Bela IV de 1262. Los empeños y señoríos de Hrvoje y los Frankopan se reconocen documentalmente y no borran la soberanía de la Corona croata. La capa termina antes de la elección de Fernando en 1527 y deja la etapa habsbúrgica a su capa existente."
-        },
-        {
-          "name": "Croacia anterior a 1527 (Knin)",
-          "note": "Núcleo interior de Knin del reino croata, con señoríos y administración del ban bajo el monarca de la Corona húngaro-croata. Se retira durante el dominio bosnio de 1388–1392 y desde la conquista otomana de mayo de 1522. No incluye las ciudades costeras de Venecia ni convierte soberanía en propiedad directa."
-        },
-        {
-          "name": "Croacia anterior a 1527 (Senj)",
-          "note": "Núcleo de la capitanía real de Senj recuperado por Matías Corvino de los Frankopan en 1469. No se asignan Rijeka, las islas o las plazas venecianas de Dalmacia. La celda regional contiene el entorno de Senj y no reconstruye cada jurisdicción local."
-        },
-        {
           "name": "Croacia habsbúrgica",
           "note": "Resto croata bajo la Corona elegida en Cetin en 1527, no un apéndice geográfico de Austria ni la costa dálmata veneciana. Se representan centros y fortalezas conservadores; la Frontera Militar y el área disputada necesitan una capa propia."
         },
         {
-          "name": "Eslavonia anterior a 1527 (núcleos)",
-          "note": "Núcleos de ciudades reales de Eslavonia: Varaždin desde 1209, Gradec/Zagreb desde 1242 y Koprivnica desde 1356. La soberanía de la Corona se distingue de jurisdicciones episcopales, castillos, señoríos y empeños dentro de estas celdas. Eslavonia y Croacia eligen reyes distintos en 1527; la capa no extrapola la elección croata al conjunto eslavón."
+          "name": "Croacia medieval",
+          "note": "Marco regional interior bajo la Corona croata: señoríos, bans y ciudades no equivalen a propiedad directa del rey. No se incluyen Rijeka, Krk ni las ciudades venecianas de Dalmacia. Las pérdidas de Lika y Krbava necesitan una revisión más fina."
         },
         {
           "name": "Eslavonia disputada (núcleos)",
@@ -13968,7 +13070,7 @@
           "auditThrough": 1270,
           "yearsWithGeometry": 36,
           "yearsWithoutGeometry": 0,
-          "locations": 4,
+          "locations": 9,
           "missingGeometryIntervals": []
         },
         {
@@ -13986,7 +13088,7 @@
           "auditThrough": 1301,
           "yearsWithGeometry": 12,
           "yearsWithoutGeometry": 0,
-          "locations": 4,
+          "locations": 9,
           "missingGeometryIntervals": []
         },
         {
@@ -14004,7 +13106,7 @@
           "auditThrough": 1272,
           "yearsWithGeometry": 3,
           "yearsWithoutGeometry": 0,
-          "locations": 4,
+          "locations": 9,
           "missingGeometryIntervals": []
         },
         {
@@ -14022,7 +13124,7 @@
           "auditThrough": 1342,
           "yearsWithGeometry": 35,
           "yearsWithoutGeometry": 0,
-          "locations": 4,
+          "locations": 9,
           "missingGeometryIntervals": []
         },
         {
@@ -14040,7 +13142,7 @@
           "auditThrough": 1290,
           "yearsWithGeometry": 19,
           "yearsWithoutGeometry": 0,
-          "locations": 4,
+          "locations": 9,
           "missingGeometryIntervals": []
         },
         {
@@ -14056,15 +13158,10 @@
           },
           "auditFrom": 1301,
           "auditThrough": 1305,
-          "yearsWithGeometry": 0,
-          "yearsWithoutGeometry": 5,
-          "locations": 0,
-          "missingGeometryIntervals": [
-            {
-              "from": 1301,
-              "through": 1305
-            }
-          ]
+          "yearsWithGeometry": 5,
+          "yearsWithoutGeometry": 0,
+          "locations": 9,
+          "missingGeometryIntervals": []
         },
         {
           "personId": "LUIS1",
@@ -14081,7 +13178,7 @@
           "auditThrough": 1382,
           "yearsWithGeometry": 41,
           "yearsWithoutGeometry": 0,
-          "locations": 5,
+          "locations": 9,
           "missingGeometryIntervals": []
         },
         {
@@ -14099,7 +13196,7 @@
           "auditThrough": 1444,
           "yearsWithGeometry": 5,
           "yearsWithoutGeometry": 0,
-          "locations": 5,
+          "locations": 9,
           "missingGeometryIntervals": []
         },
         {
@@ -14117,7 +13214,7 @@
           "auditThrough": 1385,
           "yearsWithGeometry": 4,
           "yearsWithoutGeometry": 0,
-          "locations": 5,
+          "locations": 9,
           "missingGeometryIntervals": []
         },
         {
@@ -14135,7 +13232,7 @@
           "auditThrough": 1395,
           "yearsWithGeometry": 10,
           "yearsWithoutGeometry": 0,
-          "locations": 5,
+          "locations": 9,
           "missingGeometryIntervals": []
         },
         {
@@ -14153,7 +13250,7 @@
           "auditThrough": 1437,
           "yearsWithGeometry": 51,
           "yearsWithoutGeometry": 0,
-          "locations": 5,
+          "locations": 9,
           "missingGeometryIntervals": []
         },
         {
@@ -14189,7 +13286,7 @@
           "auditThrough": 1490,
           "yearsWithGeometry": 33,
           "yearsWithoutGeometry": 0,
-          "locations": 6,
+          "locations": 9,
           "missingGeometryIntervals": []
         },
         {
@@ -14207,7 +13304,7 @@
           "auditThrough": 1516,
           "yearsWithGeometry": 27,
           "yearsWithoutGeometry": 0,
-          "locations": 6,
+          "locations": 9,
           "missingGeometryIntervals": []
         },
         {
@@ -14225,7 +13322,7 @@
           "auditThrough": 1439,
           "yearsWithGeometry": 3,
           "yearsWithoutGeometry": 0,
-          "locations": 5,
+          "locations": 9,
           "missingGeometryIntervals": []
         },
         {
@@ -14243,7 +13340,7 @@
           "auditThrough": 1457,
           "yearsWithGeometry": 13,
           "yearsWithoutGeometry": 0,
-          "locations": 5,
+          "locations": 9,
           "missingGeometryIntervals": []
         },
         {
@@ -14385,15 +13482,10 @@
           },
           "auditFrom": 1200,
           "auditThrough": 1204,
-          "yearsWithGeometry": 0,
-          "yearsWithoutGeometry": 5,
-          "locations": 0,
-          "missingGeometryIntervals": [
-            {
-              "from": 1200,
-              "through": 1204
-            }
-          ]
+          "yearsWithGeometry": 5,
+          "yearsWithoutGeometry": 0,
+          "locations": 9,
+          "missingGeometryIntervals": []
         },
         {
           "personId": "LADISLAO3HUN",
@@ -14408,15 +13500,10 @@
           },
           "auditFrom": 1204,
           "auditThrough": 1205,
-          "yearsWithGeometry": 0,
-          "yearsWithoutGeometry": 2,
-          "locations": 0,
-          "missingGeometryIntervals": [
-            {
-              "from": 1204,
-              "through": 1205
-            }
-          ]
+          "yearsWithGeometry": 2,
+          "yearsWithoutGeometry": 0,
+          "locations": 9,
+          "missingGeometryIntervals": []
         },
         {
           "personId": "ANDRES2HUN",
@@ -14433,7 +13520,7 @@
           "auditThrough": 1235,
           "yearsWithGeometry": 31,
           "yearsWithoutGeometry": 0,
-          "locations": 2,
+          "locations": 9,
           "missingGeometryIntervals": []
         },
         {
@@ -14451,7 +13538,7 @@
           "auditThrough": 1526,
           "yearsWithGeometry": 11,
           "yearsWithoutGeometry": 0,
-          "locations": 6,
+          "locations": 8,
           "missingGeometryIntervals": []
         },
         {
@@ -14469,7 +13556,7 @@
           "auditThrough": 1386,
           "yearsWithGeometry": 2,
           "yearsWithoutGeometry": 0,
-          "locations": 5,
+          "locations": 9,
           "missingGeometryIntervals": []
         },
         {
@@ -17517,7 +16604,7 @@
         "effectiveMandatesAllTime": 31,
         "effectiveMandatesInScope": 29,
         "nonpaintingMandatesInScope": 0,
-        "locations": 432,
+        "locations": 441,
         "yearsWithGovernment": 593,
         "yearsWithGeometry": 593,
         "yearsWithoutGeometry": 0,
@@ -17531,7 +16618,11 @@
       "layers": [
         {
           "name": "Francia",
-          "note": "Reino de Francia y, desde 1792, República francesa. Superficie regional de autoridad regia: no identifica cada señorío ni convierte todos los vasallos en propiedad real. La guerra de los Cien Años usa cortes documentados, no una reconstrucción diaria de frentes."
+          "note": "Reino de Francia y, desde 1792, República francesa. Superficie regional de autoridad regia: no identifica cada señorío ni convierte todos los vasallos en propiedad real. La guerra de los Cien Años usa cortes documentados, no una reconstrucción diaria de frentes. Se retiran Jersey, Foix (hasta 1607), Bearne (hasta 1620) y Lyon anticipados; Brétigny pierde también Poitou y Rouergue. Bresse/Bugey/Gex se integran desde 1601, Besançon y el contorno comtois desde 1674, la celda regional de Avignon desde 1791 (no separa todo el Comtat). Bélgica y el Rin revolucionarios se mantienen en capas fechadas aparte; no se importan estados suizos o alemanes del HTML."
+        },
+        {
+          "name": "Menorca francesa",
+          "note": "Ocupación francesa hasta la restitución de 1763."
         },
         {
           "name": "Núcleos borgoñones y anexiones bajo Francia",
@@ -17554,7 +16645,7 @@
           "auditThrough": 1270,
           "yearsWithGeometry": 45,
           "yearsWithoutGeometry": 0,
-          "locations": 177,
+          "locations": 166,
           "missingGeometryIntervals": []
         },
         {
@@ -17572,7 +16663,7 @@
           "auditThrough": 1285,
           "yearsWithGeometry": 16,
           "yearsWithoutGeometry": 0,
-          "locations": 235,
+          "locations": 223,
           "missingGeometryIntervals": []
         },
         {
@@ -17590,7 +16681,7 @@
           "auditThrough": 1314,
           "yearsWithGeometry": 30,
           "yearsWithoutGeometry": 0,
-          "locations": 235,
+          "locations": 224,
           "missingGeometryIntervals": []
         },
         {
@@ -17608,7 +16699,7 @@
           "auditThrough": 1322,
           "yearsWithGeometry": 7,
           "yearsWithoutGeometry": 0,
-          "locations": 235,
+          "locations": 224,
           "missingGeometryIntervals": []
         },
         {
@@ -17626,7 +16717,7 @@
           "auditThrough": 1350,
           "yearsWithGeometry": 23,
           "yearsWithoutGeometry": 0,
-          "locations": 246,
+          "locations": 235,
           "missingGeometryIntervals": []
         },
         {
@@ -17644,7 +16735,7 @@
           "auditThrough": 1364,
           "yearsWithGeometry": 15,
           "yearsWithoutGeometry": 0,
-          "locations": 246,
+          "locations": 235,
           "missingGeometryIntervals": []
         },
         {
@@ -17662,7 +16753,7 @@
           "auditThrough": 1380,
           "yearsWithGeometry": 17,
           "yearsWithoutGeometry": 0,
-          "locations": 275,
+          "locations": 264,
           "missingGeometryIntervals": []
         },
         {
@@ -17680,7 +16771,7 @@
           "auditThrough": 1316,
           "yearsWithGeometry": 3,
           "yearsWithoutGeometry": 0,
-          "locations": 235,
+          "locations": 224,
           "missingGeometryIntervals": []
         },
         {
@@ -17698,7 +16789,7 @@
           "auditThrough": 1461,
           "yearsWithGeometry": 40,
           "yearsWithoutGeometry": 0,
-          "locations": 296,
+          "locations": 286,
           "missingGeometryIntervals": []
         },
         {
@@ -17716,7 +16807,7 @@
           "auditThrough": 1563,
           "yearsWithGeometry": 4,
           "yearsWithoutGeometry": 0,
-          "locations": 354,
+          "locations": 344,
           "missingGeometryIntervals": []
         },
         {
@@ -17734,7 +16825,7 @@
           "auditThrough": 1574,
           "yearsWithGeometry": 15,
           "yearsWithoutGeometry": 0,
-          "locations": 354,
+          "locations": 344,
           "missingGeometryIntervals": []
         },
         {
@@ -17752,7 +16843,7 @@
           "auditThrough": 1223,
           "yearsWithGeometry": 24,
           "yearsWithoutGeometry": 0,
-          "locations": 163,
+          "locations": 152,
           "missingGeometryIntervals": []
         },
         {
@@ -17770,7 +16861,7 @@
           "auditThrough": 1226,
           "yearsWithGeometry": 4,
           "yearsWithoutGeometry": 0,
-          "locations": 177,
+          "locations": 166,
           "missingGeometryIntervals": []
         },
         {
@@ -17788,7 +16879,7 @@
           "auditThrough": 1316,
           "yearsWithGeometry": 1,
           "yearsWithoutGeometry": 0,
-          "locations": 235,
+          "locations": 224,
           "missingGeometryIntervals": []
         },
         {
@@ -17806,7 +16897,7 @@
           "auditThrough": 1328,
           "yearsWithGeometry": 7,
           "yearsWithoutGeometry": 0,
-          "locations": 235,
+          "locations": 224,
           "missingGeometryIntervals": []
         },
         {
@@ -17824,7 +16915,7 @@
           "auditThrough": 1422,
           "yearsWithGeometry": 43,
           "yearsWithoutGeometry": 0,
-          "locations": 274,
+          "locations": 264,
           "missingGeometryIntervals": []
         },
         {
@@ -17842,7 +16933,7 @@
           "auditThrough": 1483,
           "yearsWithGeometry": 23,
           "yearsWithoutGeometry": 0,
-          "locations": 319,
+          "locations": 309,
           "missingGeometryIntervals": []
         },
         {
@@ -17860,7 +16951,7 @@
           "auditThrough": 1498,
           "yearsWithGeometry": 16,
           "yearsWithoutGeometry": 0,
-          "locations": 330,
+          "locations": 320,
           "missingGeometryIntervals": []
         },
         {
@@ -17878,7 +16969,7 @@
           "auditThrough": 1515,
           "yearsWithGeometry": 18,
           "yearsWithoutGeometry": 0,
-          "locations": 326,
+          "locations": 316,
           "missingGeometryIntervals": []
         },
         {
@@ -17896,7 +16987,7 @@
           "auditThrough": 1547,
           "yearsWithGeometry": 33,
           "yearsWithoutGeometry": 0,
-          "locations": 353,
+          "locations": 343,
           "missingGeometryIntervals": []
         },
         {
@@ -17914,7 +17005,7 @@
           "auditThrough": 1559,
           "yearsWithGeometry": 13,
           "yearsWithoutGeometry": 0,
-          "locations": 354,
+          "locations": 344,
           "missingGeometryIntervals": []
         },
         {
@@ -17932,7 +17023,7 @@
           "auditThrough": 1560,
           "yearsWithGeometry": 2,
           "yearsWithoutGeometry": 0,
-          "locations": 354,
+          "locations": 344,
           "missingGeometryIntervals": []
         },
         {
@@ -17950,7 +17041,7 @@
           "auditThrough": 1589,
           "yearsWithGeometry": 16,
           "yearsWithoutGeometry": 0,
-          "locations": 354,
+          "locations": 344,
           "missingGeometryIntervals": []
         },
         {
@@ -17968,7 +17059,7 @@
           "auditThrough": 1610,
           "yearsWithGeometry": 22,
           "yearsWithoutGeometry": 0,
-          "locations": 354,
+          "locations": 357,
           "missingGeometryIntervals": []
         },
         {
@@ -17986,7 +17077,7 @@
           "auditThrough": 1643,
           "yearsWithGeometry": 34,
           "yearsWithoutGeometry": 0,
-          "locations": 359,
+          "locations": 363,
           "missingGeometryIntervals": []
         },
         {
@@ -18004,7 +17095,7 @@
           "auditThrough": 1715,
           "yearsWithGeometry": 73,
           "yearsWithoutGeometry": 0,
-          "locations": 395,
+          "locations": 402,
           "missingGeometryIntervals": []
         },
         {
@@ -18022,7 +17113,7 @@
           "auditThrough": 1774,
           "yearsWithGeometry": 60,
           "yearsWithoutGeometry": 0,
-          "locations": 418,
+          "locations": 426,
           "missingGeometryIntervals": []
         },
         {
@@ -18040,7 +17131,7 @@
           "auditThrough": 1792,
           "yearsWithGeometry": 19,
           "yearsWithoutGeometry": 0,
-          "locations": 428,
+          "locations": 436,
           "missingGeometryIntervals": []
         },
         {
@@ -18058,7 +17149,7 @@
           "auditThrough": 1435,
           "yearsWithGeometry": 14,
           "yearsWithoutGeometry": 0,
-          "locations": 225,
+          "locations": 215,
           "missingGeometryIntervals": []
         }
       ],
@@ -31758,496 +30849,6 @@
       "outsidePeriodGovernments": []
     },
     {
-      "territory": "Transilvania",
-      "status": "represented",
-      "counts": {
-        "effectiveMandatesAllTime": 22,
-        "effectiveMandatesInScope": 22,
-        "nonpaintingMandatesInScope": 3,
-        "locations": 27,
-        "yearsWithGovernment": 140,
-        "yearsWithGeometry": 118,
-        "yearsWithoutGeometry": 22,
-        "mandatesWithSomeMissingGeometry": 2,
-        "mandatesEntirelyWithoutGeometry": 2
-      },
-      "hasMandateGeometryGaps": true,
-      "hasEntireTerritoryYearGaps": true,
-      "limitedCore": false,
-      "missingGeometryIntervals": [
-        {
-          "from": 1510,
-          "through": 1526
-        },
-        {
-          "from": 1530,
-          "through": 1534
-        }
-      ],
-      "layers": [
-        {
-          "name": "Transilvania",
-          "note": "Núcleo del voivodato y luego principado transilvano, distinto del gobierno directo otomano. Después de 1541 los Zápolya lo conservaron bajo soberanía otomana; la ocupación habsbúrgica de 1551–1556 y las crisis posteriores afectan al titular, no convierten al país en una provincia otomana. El título principesco formal se fijó en 1570."
-        }
-      ],
-      "governments": [
-        {
-          "personId": "RODOLFO2HRE",
-          "personName": "Rodolfo II del Sacro Imperio",
-          "government": {
-            "territory": "Transilvania",
-            "title": "Gobernante",
-            "from": 1602,
-            "through": 1604,
-            "class": "gobierno",
-            "condition": "ocupación",
-            "scope": "Administración imperial durante la guerra de los Quince Años"
-          },
-          "auditFrom": 1602,
-          "auditThrough": 1604,
-          "yearsWithGeometry": 3,
-          "yearsWithoutGeometry": 0,
-          "locations": 27,
-          "missingGeometryIntervals": []
-        },
-        {
-          "personId": "ESTEBANBATHORY",
-          "personName": "Esteban Báthory",
-          "government": {
-            "territory": "Transilvania",
-            "title": "Voivoda",
-            "from": 1571,
-            "through": 1576,
-            "class": "voivodato",
-            "condition": "efectivo"
-          },
-          "auditFrom": 1571,
-          "auditThrough": 1576,
-          "yearsWithGeometry": 6,
-          "yearsWithoutGeometry": 0,
-          "locations": 27,
-          "missingGeometryIntervals": []
-        },
-        {
-          "personId": "ESTEBANBATHORY",
-          "personName": "Esteban Báthory",
-          "government": {
-            "territory": "Transilvania",
-            "title": "Príncipe",
-            "from": 1576,
-            "through": 1586,
-            "class": "principado",
-            "condition": "efectivo"
-          },
-          "auditFrom": 1576,
-          "auditThrough": 1586,
-          "yearsWithGeometry": 11,
-          "yearsWithoutGeometry": 0,
-          "locations": 27,
-          "missingGeometryIntervals": []
-        },
-        {
-          "personId": "JUAN1ZAPOLYA",
-          "personName": "Juan I de Zápolya",
-          "government": {
-            "territory": "Transilvania",
-            "title": "Voivoda",
-            "from": 1510,
-            "through": 1526,
-            "class": "voivodato",
-            "condition": "efectivo"
-          },
-          "auditFrom": 1510,
-          "auditThrough": 1526,
-          "yearsWithGeometry": 0,
-          "yearsWithoutGeometry": 17,
-          "locations": 0,
-          "missingGeometryIntervals": [
-            {
-              "from": 1510,
-              "through": 1526
-            }
-          ]
-        },
-        {
-          "personId": "JUAN2SIGZAPOLYA",
-          "personName": "Juan II Segismundo de Zápolya",
-          "government": {
-            "territory": "Transilvania",
-            "title": "Príncipe",
-            "from": 1570,
-            "through": 1571,
-            "class": "principado",
-            "condition": "efectivo"
-          },
-          "auditFrom": 1570,
-          "auditThrough": 1571,
-          "yearsWithGeometry": 2,
-          "yearsWithoutGeometry": 0,
-          "locations": 27,
-          "missingGeometryIntervals": []
-        },
-        {
-          "personId": "CHRISTOPHERBATH",
-          "personName": "Cristóbal Báthory",
-          "government": {
-            "territory": "Transilvania",
-            "title": "Voivoda",
-            "from": 1576,
-            "through": 1581,
-            "class": "voivodato",
-            "condition": "efectivo"
-          },
-          "auditFrom": 1576,
-          "auditThrough": 1581,
-          "yearsWithGeometry": 6,
-          "yearsWithoutGeometry": 0,
-          "locations": 27,
-          "missingGeometryIntervals": []
-        },
-        {
-          "personId": "SIGISBATH",
-          "personName": "Segismundo Báthory",
-          "government": {
-            "territory": "Transilvania",
-            "title": "Voivoda",
-            "from": 1581,
-            "through": 1586,
-            "class": "voivodato",
-            "condition": "efectivo"
-          },
-          "auditFrom": 1581,
-          "auditThrough": 1586,
-          "yearsWithGeometry": 6,
-          "yearsWithoutGeometry": 0,
-          "locations": 27,
-          "missingGeometryIntervals": []
-        },
-        {
-          "personId": "SIGISBATH",
-          "personName": "Segismundo Báthory",
-          "government": {
-            "territory": "Transilvania",
-            "title": "Príncipe",
-            "from": 1586,
-            "through": 1598,
-            "class": "principado",
-            "condition": "efectivo"
-          },
-          "auditFrom": 1586,
-          "auditThrough": 1598,
-          "yearsWithGeometry": 13,
-          "yearsWithoutGeometry": 0,
-          "locations": 27,
-          "missingGeometryIntervals": []
-        },
-        {
-          "personId": "SIGISBATH",
-          "personName": "Segismundo Báthory",
-          "government": {
-            "territory": "Transilvania",
-            "title": "Príncipe",
-            "from": 1598,
-            "through": 1599,
-            "class": "principado",
-            "condition": "efectivo"
-          },
-          "auditFrom": 1598,
-          "auditThrough": 1599,
-          "yearsWithGeometry": 2,
-          "yearsWithoutGeometry": 0,
-          "locations": 27,
-          "missingGeometryIntervals": []
-        },
-        {
-          "personId": "SIGISBATH",
-          "personName": "Segismundo Báthory",
-          "government": {
-            "territory": "Transilvania",
-            "title": "Príncipe",
-            "from": 1601,
-            "through": 1602,
-            "class": "principado",
-            "condition": "efectivo"
-          },
-          "auditFrom": 1601,
-          "auditThrough": 1602,
-          "yearsWithGeometry": 2,
-          "yearsWithoutGeometry": 0,
-          "locations": 27,
-          "missingGeometryIntervals": []
-        },
-        {
-          "personId": "BOCSKAI",
-          "personName": "Esteban Bocskai",
-          "government": {
-            "territory": "Transilvania",
-            "title": "Príncipe",
-            "from": 1605,
-            "through": 1606,
-            "class": "principado",
-            "condition": "efectivo"
-          },
-          "auditFrom": 1605,
-          "auditThrough": 1606,
-          "yearsWithGeometry": 2,
-          "yearsWithoutGeometry": 0,
-          "locations": 27,
-          "missingGeometryIntervals": []
-        },
-        {
-          "personId": "GABRIELBETHLEN",
-          "personName": "Gabriel Bethlen",
-          "government": {
-            "territory": "Transilvania",
-            "title": "Príncipe",
-            "from": 1613,
-            "through": 1629,
-            "class": "principado",
-            "condition": "efectivo"
-          },
-          "auditFrom": 1613,
-          "auditThrough": 1629,
-          "yearsWithGeometry": 17,
-          "yearsWithoutGeometry": 0,
-          "locations": 27,
-          "missingGeometryIntervals": []
-        },
-        {
-          "personId": "CATHERINEBRANDTRANS",
-          "personName": "Catalina de Brandeburgo, princesa de Transilvania",
-          "government": {
-            "territory": "Transilvania",
-            "title": "Princesa",
-            "from": 1629,
-            "through": 1630,
-            "class": "principado",
-            "condition": "efectivo"
-          },
-          "auditFrom": 1629,
-          "auditThrough": 1630,
-          "yearsWithGeometry": 2,
-          "yearsWithoutGeometry": 0,
-          "locations": 27,
-          "missingGeometryIntervals": []
-        },
-        {
-          "personId": "GEORGE1RAKOCZI",
-          "personName": "Jorge I Rákóczi",
-          "government": {
-            "territory": "Transilvania",
-            "title": "Príncipe",
-            "from": 1630,
-            "through": 1648,
-            "class": "principado",
-            "condition": "efectivo"
-          },
-          "auditFrom": 1630,
-          "auditThrough": 1648,
-          "yearsWithGeometry": 19,
-          "yearsWithoutGeometry": 0,
-          "locations": 27,
-          "missingGeometryIntervals": []
-        },
-        {
-          "personId": "GEORGE2RAKOCZI",
-          "personName": "Jorge II Rákóczi",
-          "government": {
-            "territory": "Transilvania",
-            "title": "Príncipe",
-            "from": 1648,
-            "through": 1657,
-            "class": "principado",
-            "condition": "efectivo"
-          },
-          "auditFrom": 1648,
-          "auditThrough": 1657,
-          "yearsWithGeometry": 10,
-          "yearsWithoutGeometry": 0,
-          "locations": 27,
-          "missingGeometryIntervals": []
-        },
-        {
-          "personId": "MICHAELAPAFI",
-          "personName": "Miguel I Apafi",
-          "government": {
-            "territory": "Transilvania",
-            "title": "Príncipe",
-            "from": 1661,
-            "through": 1690,
-            "class": "principado",
-            "condition": "efectivo"
-          },
-          "auditFrom": 1661,
-          "auditThrough": 1690,
-          "yearsWithGeometry": 30,
-          "yearsWithoutGeometry": 0,
-          "locations": 27,
-          "missingGeometryIntervals": []
-        },
-        {
-          "personId": "ESTEBANBATHPADRE",
-          "personName": "Esteban Báthory de Somlyó",
-          "government": {
-            "territory": "Transilvania",
-            "title": "Voivoda",
-            "from": 1530,
-            "through": 1534,
-            "class": "voivodato",
-            "condition": "efectivo"
-          },
-          "auditFrom": 1530,
-          "auditThrough": 1534,
-          "yearsWithGeometry": 0,
-          "yearsWithoutGeometry": 5,
-          "locations": 0,
-          "missingGeometryIntervals": [
-            {
-              "from": 1530,
-              "through": 1534
-            }
-          ]
-        },
-        {
-          "personId": "MIHAIBRAVE",
-          "personName": "Miguel el Valiente",
-          "government": {
-            "territory": "Transilvania",
-            "title": "Gobernador",
-            "from": 1599,
-            "through": 1600,
-            "class": "gobierno",
-            "condition": "efectivo"
-          },
-          "auditFrom": 1599,
-          "auditThrough": 1600,
-          "yearsWithGeometry": 2,
-          "yearsWithoutGeometry": 0,
-          "locations": 27,
-          "missingGeometryIntervals": []
-        },
-        {
-          "personId": "SIGISMUNDRAKOCZI",
-          "personName": "Segismundo Rákóczi",
-          "government": {
-            "territory": "Transilvania",
-            "title": "Príncipe",
-            "from": 1607,
-            "through": 1608,
-            "class": "principado",
-            "condition": "efectivo"
-          },
-          "auditFrom": 1607,
-          "auditThrough": 1608,
-          "yearsWithGeometry": 2,
-          "yearsWithoutGeometry": 0,
-          "locations": 27,
-          "missingGeometryIntervals": []
-        },
-        {
-          "personId": "GABRIELBATHORY",
-          "personName": "Gabriel Báthory",
-          "government": {
-            "territory": "Transilvania",
-            "title": "Príncipe",
-            "from": 1608,
-            "through": 1613,
-            "class": "principado",
-            "condition": "efectivo"
-          },
-          "auditFrom": 1608,
-          "auditThrough": 1613,
-          "yearsWithGeometry": 6,
-          "yearsWithoutGeometry": 0,
-          "locations": 27,
-          "missingGeometryIntervals": []
-        },
-        {
-          "personId": "GIORGIOBASTA",
-          "personName": "Giorgio Basta",
-          "government": {
-            "territory": "Transilvania",
-            "title": "Gobernador",
-            "from": 1602,
-            "through": 1604,
-            "class": "gobierno",
-            "condition": "gobierno delegado",
-            "scope": "Administración militar de Rodolfo II"
-          },
-          "auditFrom": 1602,
-          "auditThrough": 1604,
-          "yearsWithGeometry": 3,
-          "yearsWithoutGeometry": 0,
-          "locations": 27,
-          "missingGeometryIntervals": []
-        },
-        {
-          "personId": "MOSESSZEKELY",
-          "personName": "Moisés Székely",
-          "government": {
-            "territory": "Transilvania",
-            "title": "Príncipe",
-            "from": 1603,
-            "through": 1603,
-            "class": "principado",
-            "condition": "efectivo",
-            "scope": "Núcleos favorables a la rebelión de 1603"
-          },
-          "auditFrom": 1603,
-          "auditThrough": 1603,
-          "yearsWithGeometry": 1,
-          "yearsWithoutGeometry": 0,
-          "locations": 6,
-          "missingGeometryIntervals": []
-        }
-      ],
-      "nonpaintingGovernments": [
-        {
-          "personId": "GEORGE2RAKOCZI",
-          "personName": "Jorge II Rákóczi",
-          "government": {
-            "territory": "Transilvania",
-            "title": "Príncipe",
-            "from": 1658,
-            "through": 1660,
-            "class": "principado",
-            "condition": "rival"
-          },
-          "auditFrom": 1658,
-          "auditThrough": 1660
-        },
-        {
-          "personId": "FERENC1RAK",
-          "personName": "Francisco I Rákóczi",
-          "government": {
-            "territory": "Transilvania",
-            "title": "Príncipe",
-            "from": 1652,
-            "through": 1676,
-            "class": "principado",
-            "condition": "titular"
-          },
-          "auditFrom": 1652,
-          "auditThrough": 1676
-        },
-        {
-          "personId": "FERENC2RAK",
-          "personName": "Francisco II Rákóczi",
-          "government": {
-            "territory": "Transilvania",
-            "title": "Príncipe",
-            "from": 1704,
-            "through": 1711,
-            "class": "principado",
-            "condition": "disputado"
-          },
-          "auditFrom": 1704,
-          "auditThrough": 1711
-        }
-      ],
-      "outsidePeriodGovernments": []
-    },
-    {
       "territory": "Trebisonda",
       "status": "represented",
       "counts": {
@@ -39106,11 +37707,11 @@
     "source": "audit-map-continuity-report.json → locations",
     "units": "Capas cartográficas y locations; no entidades únicas del catálogo del Atlas.",
     "counts": {
-      "layersWithAuthorityGaps": 116,
-      "locationIntervalsWithoutAuthority": 4907,
-      "uniqueLocationsWithAuthorityGaps": 2982,
-      "locationYearsWithoutAuthority": 157032,
-      "groupedReviewTasks": 231
+      "layersWithAuthorityGaps": 124,
+      "locationIntervalsWithoutAuthority": 5256,
+      "uniqueLocationsWithAuthorityGaps": 3123,
+      "locationYearsWithoutAuthority": 159784,
+      "groupedReviewTasks": 249
     },
     "layers": [
       {
@@ -39316,14 +37917,6 @@
             "sharedWith": []
           },
           {
-            "from": 1419,
-            "through": 1449,
-            "locations": 1,
-            "sharedWith": [
-              "Normandía · ocupación inglesa"
-            ]
-          },
-          {
             "from": 1450,
             "through": 1460,
             "locations": 1,
@@ -39440,6 +38033,17 @@
         ]
       },
       {
+        "name": "Bulgaria",
+        "intervals": [
+          {
+            "from": 1293,
+            "through": 1299,
+            "locations": 62,
+            "sharedWith": []
+          }
+        ]
+      },
+      {
         "name": "Carintia",
         "intervals": [
           {
@@ -39511,6 +38115,23 @@
         ]
       },
       {
+        "name": "Condado de Armagnac",
+        "intervals": [
+          {
+            "from": 1200,
+            "through": 1390,
+            "locations": 5,
+            "sharedWith": []
+          },
+          {
+            "from": 1498,
+            "through": 1606,
+            "locations": 5,
+            "sharedWith": []
+          }
+        ]
+      },
+      {
         "name": "Condado de Barcelona",
         "intervals": [
           {
@@ -39539,6 +38160,46 @@
         ]
       },
       {
+        "name": "Condado de Champaña",
+        "intervals": [
+          {
+            "from": 1200,
+            "through": 1200,
+            "locations": 13,
+            "sharedWith": []
+          },
+          {
+            "from": 1306,
+            "through": 1360,
+            "locations": 1,
+            "sharedWith": []
+          }
+        ]
+      },
+      {
+        "name": "Condado de Foix",
+        "intervals": [
+          {
+            "from": 1200,
+            "through": 1240,
+            "locations": 2,
+            "sharedWith": []
+          },
+          {
+            "from": 1473,
+            "through": 1606,
+            "locations": 2,
+            "sharedWith": []
+          },
+          {
+            "from": 1200,
+            "through": 1208,
+            "locations": 1,
+            "sharedWith": []
+          }
+        ]
+      },
+      {
         "name": "Corona de Polonia",
         "intervals": [
           {
@@ -39562,7 +38223,9 @@
             "from": 1306,
             "through": 1307,
             "locations": 1,
-            "sharedWith": []
+            "sharedWith": [
+              "Croacia medieval"
+            ]
           }
         ]
       },
@@ -39572,6 +38235,58 @@
           {
             "from": 1306,
             "through": 1307,
+            "locations": 1,
+            "sharedWith": [
+              "Croacia medieval"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Croacia medieval",
+        "intervals": [
+          {
+            "from": 1306,
+            "through": 1307,
+            "locations": 1,
+            "sharedWith": [
+              "Croacia anterior a 1527 (Bihać)"
+            ]
+          },
+          {
+            "from": 1306,
+            "through": 1307,
+            "locations": 1,
+            "sharedWith": [
+              "Croacia anterior a 1527 (Knin)"
+            ]
+          },
+          {
+            "from": 1306,
+            "through": 1307,
+            "locations": 7,
+            "sharedWith": []
+          }
+        ]
+      },
+      {
+        "name": "Despotado de Dobruja",
+        "intervals": [
+          {
+            "from": 1359,
+            "through": 1388,
+            "locations": 6,
+            "sharedWith": []
+          },
+          {
+            "from": 1346,
+            "through": 1388,
+            "locations": 4,
+            "sharedWith": []
+          },
+          {
+            "from": 1369,
+            "through": 1388,
             "locations": 1,
             "sharedWith": []
           }
@@ -39665,17 +38380,6 @@
         ]
       },
       {
-        "name": "Ducado de Normandía",
-        "intervals": [
-          {
-            "from": 1200,
-            "through": 1203,
-            "locations": 28,
-            "sharedWith": []
-          }
-        ]
-      },
-      {
         "name": "Ducado de Pomerania",
         "intervals": [
           {
@@ -39739,6 +38443,27 @@
             "from": 1306,
             "through": 1307,
             "locations": 2,
+            "sharedWith": [
+              "Eslavonia medieval"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Eslavonia medieval",
+        "intervals": [
+          {
+            "from": 1306,
+            "through": 1307,
+            "locations": 2,
+            "sharedWith": [
+              "Eslavonia anterior a 1527 (núcleos)"
+            ]
+          },
+          {
+            "from": 1306,
+            "through": 1307,
+            "locations": 10,
             "sharedWith": []
           }
         ]
@@ -40005,24 +38730,55 @@
         ]
       },
       {
+        "name": "Hungría",
+        "intervals": [
+          {
+            "from": 1306,
+            "through": 1307,
+            "locations": 139,
+            "sharedWith": []
+          },
+          {
+            "from": 1306,
+            "through": 1307,
+            "locations": 49,
+            "sharedWith": [
+              "Transilvania medieval"
+            ]
+          }
+        ]
+      },
+      {
         "name": "Hungría otomana",
         "intervals": [
           {
             "from": 1688,
-            "through": 1698,
-            "locations": 22,
+            "through": 1715,
+            "locations": 15,
             "sharedWith": []
           },
           {
             "from": 1688,
-            "through": 1715,
-            "locations": 7,
+            "through": 1689,
+            "locations": 10,
             "sharedWith": []
           },
           {
-            "from": 1699,
-            "through": 1715,
-            "locations": 4,
+            "from": 1688,
+            "through": 1691,
+            "locations": 5,
+            "sharedWith": []
+          },
+          {
+            "from": 1688,
+            "through": 1694,
+            "locations": 2,
+            "sharedWith": []
+          },
+          {
+            "from": 1688,
+            "through": 1698,
+            "locations": 2,
             "sharedWith": []
           }
         ]
@@ -40355,25 +39111,6 @@
             "through": 1434,
             "locations": 72,
             "sharedWith": []
-          }
-        ]
-      },
-      {
-        "name": "Normandía · ocupación inglesa",
-        "intervals": [
-          {
-            "from": 1419,
-            "through": 1449,
-            "locations": 27,
-            "sharedWith": []
-          },
-          {
-            "from": 1419,
-            "through": 1449,
-            "locations": 1,
-            "sharedWith": [
-              "Bailiazgo de Jersey"
-            ]
           }
         ]
       },
@@ -40985,14 +39722,39 @@
           {
             "from": 1658,
             "through": 1660,
-            "locations": 27,
+            "locations": 54,
             "sharedWith": []
           },
           {
             "from": 1691,
             "through": 1698,
-            "locations": 27,
+            "locations": 54,
             "sharedWith": []
+          },
+          {
+            "from": 1603,
+            "through": 1604,
+            "locations": 32,
+            "sharedWith": []
+          },
+          {
+            "from": 1658,
+            "through": 1659,
+            "locations": 5,
+            "sharedWith": []
+          }
+        ]
+      },
+      {
+        "name": "Transilvania medieval",
+        "intervals": [
+          {
+            "from": 1306,
+            "through": 1307,
+            "locations": 49,
+            "sharedWith": [
+              "Hungría"
+            ]
           }
         ]
       },
@@ -41118,6 +39880,23 @@
             "from": 1648,
             "through": 1650,
             "locations": 1,
+            "sharedWith": []
+          }
+        ]
+      },
+      {
+        "name": "Vizcondado de Bearne",
+        "intervals": [
+          {
+            "from": 1200,
+            "through": 1228,
+            "locations": 3,
+            "sharedWith": []
+          },
+          {
+            "from": 1573,
+            "through": 1619,
+            "locations": 3,
             "sharedWith": []
           }
         ]

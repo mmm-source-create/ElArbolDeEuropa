@@ -1,4 +1,5 @@
 import { REGIONAL_EXTENT_REVIEWS } from './regionalExtentReviewData.js';
+import { FRONTIER_REVIEWS } from './frontierReviewData.js';
 import { TERRITORIAL_CONTINUITY_REVIEWS } from './territorialContinuityReviewData.js';
 import { ATLAS_CHRONOLOGY_REVIEWS } from './atlasChronologyReviewData.js';
 import { CORRIDOR_REVIEWS } from './corridorReviewData.js';
@@ -190,6 +191,7 @@ export const CLAIM_REVIEWS = Object.freeze({
   ...ATLAS_CHRONOLOGY_REVIEWS,
   ...REGIONAL_EXTENT_REVIEWS,
   ...TERRITORIAL_CONTINUITY_REVIEWS,
+  ...FRONTIER_REVIEWS,
   ...CORRIDOR_REVIEWS,
   ...ATLAS_AUTHORITY_REVIEWS,
   ...BALKAN_AUTHORITY_REVIEWS,

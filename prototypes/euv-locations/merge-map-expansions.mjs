@@ -46,6 +46,13 @@ export function mergeMapExpansions(data) {
   data.overrides = [...new Map([...(data.overrides || []).filter(item=>item.supplement !== 'map-expansion'),...corrections].map(item => [correctionKey(item),item])).values()];
   applyRegionalExtents(data, read('regional-extent-review.json'));
   applyContinuityReview(data, read('continuity-review.json'));
+  const continuity = data.continuityReview;
+  const frontier = read('frontier-review.json');
+  applyContinuityReview(data, frontier);
+  data.frontierReview = data.continuityReview;
+  data.continuityReview = continuity;
+  data.overrides = [...data.overrides.filter(item => item.supplement !== 'frontier-review'),
+    ...frontier.overrides.map(item => ({...item, supplement:'frontier-review'}))];
   layers = [...data.territories, ...data.additionalTerritories];
   const svg = fs.readFileSync(new URL('euv-locations-crop.svg',import.meta.url),'utf8');
   const ids = new Set([...svg.matchAll(/<path\b[^>]*\bid="([^"]+)"/g)].map(match => match[1]));
@@ -62,8 +69,10 @@ export function mergeMapExpansions(data) {
     if (!layer.sources?.length || !layer.coverage || layer.coverage.from < data.from || layer.coverage.through > data.through)
       throw new Error(`Invalid regional evidence: ${layer.name}`);
   }
-  for (const item of data.overrides.filter(item => item.supplement === 'regional-extent'))
-    if (!layers.some(layer => layer.name === item.territory) || !ids.has(item.id) || !item.source)
+  for (const item of data.overrides.filter(item => ['regional-extent','frontier-review'].includes(item.supplement)))
+    if (!layers.some(layer => layer.name === item.territory) || !ids.has(item.id)
+        || !item.source || !item.reason || !Number.isInteger(item.from) || !Number.isInteger(item.through)
+        || item.from < data.from || item.through > data.through || item.from > item.through)
       throw new Error(`Invalid regional exclusion: ${item.id}`);
   for (const layer of additions) if (!layer.coverage || layer.coverage.from < data.from
     || layer.coverage.through > data.through || layer.coverage.from > layer.coverage.through)

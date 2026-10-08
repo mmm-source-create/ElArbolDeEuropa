@@ -19,7 +19,8 @@ export function auditarTerritorios(personas, catalogo=TERRITORIOS) {
    if(!t)add('ERROR','GOV_TERRITORY_UNKNOWN',key,g.territorio);
    if(t?.naturaleza==='compuesta'&&Number.isFinite(t.desde)&&g.desde<t.desde)add('ERROR','GOV_BEFORE_ENTITY',key,`Gobierno anterior a la formación de ${g.territorio} en ${t.desde}`);
    if(t?.naturaleza==='agrupacion')add('ERROR','GROUP_GOVERNMENT',key,`${g.territorio} es una agrupación, no admite gobiernos`);
-   if(!TITULOS_POR_CLASE[g.clase]?.includes(g.titulo))add('ERROR','TITLE_CLASS_MISMATCH',key,`${g.titulo} no corresponde a ${g.clase}`);
+   const provincialSovereign=g.clase==='gobierno'&&g.condicion==='efectivo'&&t?.titulosDeGobierno?.includes(g.titulo);
+   if(!TITULOS_POR_CLASE[g.clase]?.includes(g.titulo)&&!provincialSovereign)add('ERROR','TITLE_CLASS_MISMATCH',key,`${g.titulo} no corresponde a ${g.clase}`);
    if(!CONDICIONES.includes(g.condicion))add('ERROR','CONDITION_UNKNOWN',key,g.condicion);
    if(!Number.isFinite(g.desde)||!Number.isFinite(g.hasta)||g.desde>g.hasta)add('ERROR','GOV_DATES',key,'Intervalo no válido');
    if(g.efectivo===true&&['titular','pretensión'].includes(g.condicion))add('ERROR','CONDITION_CONTRADICTION',key,'Título nominal marcado efectivo');

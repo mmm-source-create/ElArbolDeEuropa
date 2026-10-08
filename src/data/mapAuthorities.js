@@ -74,7 +74,7 @@ export function mapAuthoritiesForPerson(person, year, mapData = null, {includeCl
       && (['Holanda','Zelanda'].includes(government.territorio) && year >= 1572
         || ['Flandes','Brabante'].includes(government.territorio) && year >= 1576);
     const regional = mapData ? reviewedAuthorityConditions(mapData,government.territorio,year,person.id) : new Map();
-    const contested = ids.filter(id=>regional.get(id)?.condition === 'control disputado');
+    const contested = ids.filter(id=>['control disputado','ocupación'].includes(regional.get(id)?.condition));
     const baseEntry = {person, government, claim: claims.get(government) || null,
       territory: government.territorio, kind: revolt ? 'disputed' : authorityKind(government, year),
       paint: effective, ids, mapSources: [...layerEvidence.flatMap(evidence => evidence.sources), ...(scope ? [scope.source, ...(scope.additionalSources || []), ...(scope.evidenceGroups || []).map(group => group.source)].filter(Boolean) : []), ...(extension ? [extension.source] : []), ...(revolt ? [REVOLT_SOURCE] : []), ...(border?.action === 'add' && !border.occupation ? [border.source] : []), ...(southernBorder?.action === 'add' ? [southernBorder.source] : [])],

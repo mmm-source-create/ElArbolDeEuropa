@@ -280,21 +280,25 @@ test('Balkan layers fill regional areas while keeping tributary principalities d
       for (const id of reviewedLayerLocations(data, territory, year)) {
         assert.ok(pathIds.has(id), `${id} must exist in the map in ${year}`);
         if (/(mountain|alps|carpathian)/i.test(id)) assert.ok(data.overrides.some(item => item.territory===territory.name && item.id===id && item.from<=year && year<=item.through && item.source && item.reason) || reviewedLayerEvidence(territory,year).sources?.length, `${id} requires dated political evidence despite its physical-feature name`);
-        assert.ok(!owner.has(id), `${id} overlaps ${owner.get(id)} and ${territory.name} in ${year}`);
+        const rival=owner.has(id)&&new Set([owner.get(id),territory.name]).size===2
+          && [owner.get(id),territory.name].every(name=>['Hungría real','Núcleo oriental de Zápolya'].includes(name))
+          && layer('Núcleo oriental de Zápolya').authorityCondition==='control disputado';
+        assert.ok(!owner.has(id)||rival, `${id} overlaps ${owner.get(id)} and ${territory.name} in ${year}`);
         owner.set(id, territory.name);
       }
     }
   }
 });
 
-test('Hungarian-Croatian aggregate stops at Mohács and does not reclaim Venetian Dalmatia', () => {
+test('medieval Hungary survives the annual Mohács cut without absorbing Croatia or Venetian Dalmatia', () => {
   assert(ids('Hungría', 1525).has('Buda'));
-  assert.equal(ids('Hungría', 1526).size, 0);
+  assert(ids('Hungría', 1526).has('Buda'));
+  assert.equal(ids('Hungría', 1527).size, 0);
   assert.equal(ids('Hungría', 1650).size, 0);
-  assert(ids('Hungría', 1408).has('Zadar'));
+  assert(!ids('Hungría', 1408).has('Zadar'));
   assert(!ids('Hungría', 1409).has('Zadar'));
   assert(ids('Venecia', 1409).has('Zadar'));
-  assert(ids('Hungría', 1419).has('Sibenik'));
+  assert(!ids('Hungría', 1419).has('Sibenik'));
   assert(!ids('Hungría', 1420).has('Sibenik'));
   assert(ids('Venecia', 1420).has('Sibenik'));
   assert(data.territories.find(t => t.name === 'Bohemia').note.includes('Moravia'));

@@ -7,6 +7,7 @@ import {authorityMapScope} from './authorityMapScopes.js';
 import {chronologyJurisdictionsFor, appendChronologyJurisdictions} from './atlasChronologyRoutes.js';
 import {regionalExtentJurisdictions, supersededRegionalLayers} from './regionalExtentRoutes.js';
 import {continuityJurisdictions, territorialLabel} from './territorialIdentity.js';
+import {frontierJurisdictions} from './frontierRoutes.js';
 
 const layerIndexes = new WeakMap();
 export function reviewedMapLayers(data) {
@@ -30,7 +31,7 @@ function layerIndex(data) {
 
 export function pilotJurisdictionsFor(territory, year, personId = null) {
   const chronological=chronologyJurisdictionsFor(territory,year,personId);
-  return continuityJurisdictions(regionalExtentJurisdictions(appendChronologyJurisdictions(chronological ?? basePilotJurisdictionsFor(territory,year,personId),territory,personId),territory,year,personId),territory,year,personId);
+  return frontierJurisdictions(continuityJurisdictions(regionalExtentJurisdictions(appendChronologyJurisdictions(chronological ?? basePilotJurisdictionsFor(territory,year,personId),territory,personId),territory,year,personId),territory,year,personId),territory,year,personId);
 }
 
 function basePilotJurisdictionsFor(territory, year, personId) {
@@ -241,7 +242,7 @@ export function mapLocationsForGovernment(data, government, year, personId = nul
 
 export function pilotDisputedHungarianClaimsFor(data, personId, year) {
   if (!Number.isInteger(year)) return [];
-  if (personId === 'JUAN1ZAPOLYA' && year >= 1527 && year <= 1540) {
+  if (personId === 'JUAN1ZAPOLYA' && year >= 1526 && year <= 1540) {
     return [{ territory: 'Hungría oriental de Zápolya', color: '#756598',
       ids: pilotLocationsFor(data, 'Hungría', year, personId) }];
   }
