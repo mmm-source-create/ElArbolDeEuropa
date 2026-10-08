@@ -87,6 +87,7 @@ test('French annexations and English Aquitaine preserve dates and neighbouring i
    assert(cells('Francia',date).includes(id),`${id} after annexation`);
  }
  for(const id of ['Jersey','Bern','Zurich','Geneva','Puigcerda']) assert(!cells('Francia',1715).includes(id),id);
+ assert.equal(territorialLabel('Touraine angevina',1200),'Condado de Touraine');
  const prince=authority('EDUNEGRO',1365).find(e=>e.territory==='Aquitania');
  assert(prince?.ids.includes('Poitiers')&&prince.claim?.sources.length);
  assert(!authority('ENRIQ6ING',1453).some(e=>e.territory==='Aquitania'));
