@@ -18,6 +18,8 @@ en esta base para este año», no ausencia de gobierno.
 
 ## Probarlo
 
+**Celdas nunca coloreadas** abre el inventario de todas las áreas visibles que no reciben color en ningún año de 1200 a 1800. Incluye relieve e islas; permite buscar, filtrar y centrar una celda, consultar candidatos sin verificar y descargar CSV/JSON. Los candidatos no pintan el mapa. La [revisión V4.12](../../docs/V4.12.md) documenta el método, las sucesiones y los límites de esta entrega. `npm run audit:uncolored` regenera la lista desde los mosaicos anuales reales.
+
 El mosaico se publica junto al Atlas en `/es/mapa-completo?year=1530`.
 El selector permite explorar **1200–1800**. La ampliación de Iberia, Italia,
 Borgoña y Austria utiliza series medievales y posteriores a 1650 con sus

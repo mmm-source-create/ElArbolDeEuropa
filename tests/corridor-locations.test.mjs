@@ -12,7 +12,7 @@ const svg = fs.readFileSync(path.join(lab, 'euv-locations-crop.svg'), 'utf8');
 const pathIds = new Set([...svg.matchAll(/<path\b[^>]*\bid="([^"]+)"/g)].map(match => match[1]));
 
 function ids(name, year) {
-  const territory = data.territories.find(item => item.name === name);
+  const territory = [...data.territories,...data.additionalTerritories].find(item => item.name === name);
   assert(territory, `Unknown jurisdiction ${name}`);
   return new Set(reviewedLayerLocations(data, territory, year));
 }
@@ -297,10 +297,10 @@ test('medieval Hungary survives the annual Mohács cut without absorbing Croatia
   assert.equal(ids('Hungría', 1650).size, 0);
   assert(!ids('Hungría', 1408).has('Zadar'));
   assert(!ids('Hungría', 1409).has('Zadar'));
-  assert(ids('Venecia', 1409).has('Zadar'));
+  assert(ids('Dalmacia veneciana', 1409).has('Zadar'));
   assert(!ids('Hungría', 1419).has('Sibenik'));
   assert(!ids('Hungría', 1420).has('Sibenik'));
-  assert(ids('Venecia', 1420).has('Sibenik'));
+  assert(ids('Dalmacia veneciana', 1420).has('Sibenik'));
   assert(data.territories.find(t => t.name === 'Bohemia').note.includes('Moravia'));
 });
 
@@ -328,12 +328,16 @@ test('Italian enclaves, transfers and successor states remain separate', () => {
   assert(ids('Venecia', 1516).has('Rovigo'));
   assert(!ids('Estados Pontificios', 1598).has('Rovigo'));
   for (const id of ['Pola', 'Rovinj']) assert(ids('Venecia', 1400).has(id));
-  assert(!ids('Venecia', 1408).has('Zadar'));
-  assert(ids('Venecia', 1409).has('Zadar'));
-  for (const id of ['Sibenik', 'Split', 'Brac', 'Kotor']) {
-    assert(!ids('Venecia', 1419).has(id));
-    assert(ids('Venecia', 1420).has(id));
+  assert(!ids('Dalmacia veneciana', 1408).has('Zadar'));
+  assert(ids('Dalmacia veneciana', 1409).has('Zadar'));
+  assert(!ids('Dalmacia veneciana', 1411).has('Sibenik'));
+  assert(ids('Dalmacia veneciana', 1412).has('Sibenik'));
+  for (const id of ['Split', 'Brac']) {
+    assert(!ids('Dalmacia veneciana', 1419).has(id));
+    assert(ids('Dalmacia veneciana', 1420).has(id));
   }
+  assert(!ids('Venecia', 1419).has('Kotor'));
+  assert(ids('Venecia', 1420).has('Kotor'));
   assert(!ids('Venecia', 1500).has('Zara'), 'Zara is a different EU V location');
   assert(!ids('Venecia', 1500).has('Dubrovnik'), 'The Republic of Ragusa was not Venice');
   assert(!ids('Parma', 1544).has('Parma'));

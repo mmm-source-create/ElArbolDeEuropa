@@ -51034,22 +51034,14 @@
       "corridor": "Hungría y Balcanes",
       "name": "Croacia habsbúrgica",
       "color": "#a6664c",
-      "active": {
-        "from": 1527
-      },
-      "note": "Resto croata bajo la Corona elegida en Cetin en 1527, no un apéndice geográfico de Austria ni la costa dálmata veneciana. Se representan centros y fortalezas conservadores; la Frontera Militar y el área disputada necesitan una capa propia.",
+      "note": "Reino de Croacia y territorios fronterizos bajo la Corona. Lika no pertenece a la Corona durante la ocupación otomana; su administración militar posterior no implica restitución de cada señorío.",
       "versions": [
-        {
-          "from": 1400,
-          "oldIds": [],
-          "ids": [],
-          "borderline": []
-        },
         {
           "from": 1527,
           "oldIds": [],
           "ids": [
             "Bihac",
+            "Crikvenica",
             "Koprivnica",
             "Otocac",
             "Senj",
@@ -51065,6 +51057,7 @@
           "oldIds": [],
           "ids": [
             "Bihac",
+            "Crikvenica",
             "Karlovac",
             "Koprivnica",
             "Otocac",
@@ -51080,6 +51073,7 @@
           "from": 1592,
           "oldIds": [],
           "ids": [
+            "Crikvenica",
             "Karlovac",
             "Koprivnica",
             "Otocac",
@@ -51090,8 +51084,166 @@
             "Zagreb"
           ],
           "borderline": []
+        },
+        {
+          "from": 1689,
+          "ids": [
+            "Crikvenica",
+            "Dinaric_Alps9",
+            "Karlovac",
+            "Kaseg",
+            "Koprivnica",
+            "Otocac",
+            "Senj",
+            "Sisak",
+            "Slunj",
+            "Srb",
+            "Varazdin",
+            "Zagreb"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Recuperación de Lika y Krbava, bajo administración fronteriza diferenciada."
+        },
+        {
+          "from": 1689,
+          "ids": [
+            "Crikvenica",
+            "Dinaric_Alps9",
+            "Karlovac",
+            "Kaseg",
+            "Koprivnica",
+            "Otocac",
+            "Senj",
+            "Sisak",
+            "Slunj",
+            "Srb",
+            "Varazdin",
+            "Zagreb"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Recuperación de Lika y Krbava, bajo administración fronteriza diferenciada."
+        },
+        {
+          "from": 1689,
+          "ids": [
+            "Crikvenica",
+            "Dinaric_Alps9",
+            "Karlovac",
+            "Kaseg",
+            "Koprivnica",
+            "Otocac",
+            "Senj",
+            "Sisak",
+            "Slunj",
+            "Srb",
+            "Varazdin",
+            "Zagreb"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Recuperación de Lika y Krbava, bajo administración fronteriza diferenciada."
+        },
+        {
+          "from": 1689,
+          "ids": [
+            "Crikvenica",
+            "Dinaric_Alps9",
+            "Karlovac",
+            "Kaseg",
+            "Koprivnica",
+            "Otocac",
+            "Senj",
+            "Sisak",
+            "Slunj",
+            "Srb",
+            "Varazdin",
+            "Zagreb"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Recuperación de Lika y Krbava, bajo administración fronteriza diferenciada."
+        },
+        {
+          "from": 1689,
+          "ids": [
+            "Crikvenica",
+            "Dinaric_Alps9",
+            "Karlovac",
+            "Kaseg",
+            "Koprivnica",
+            "Otocac",
+            "Senj",
+            "Sisak",
+            "Slunj",
+            "Srb",
+            "Varazdin",
+            "Zagreb"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Recuperación de Lika y Krbava, bajo administración fronteriza diferenciada."
         }
-      ]
+      ],
+      "coverage": {
+        "from": 1527,
+        "through": 1800
+      },
+      "sources": [
+        {
+          "title": "Milan Kruhek · Fortificaciones otomanas en Lika y Krbava",
+          "url": "https://hrcak.srce.hr/129805",
+          "locator": "Senjski zbornik 40 (2013), pp.471–507: ámbito de Lika y Krbava 1527–1689. La costa de Senj y Gacka no se incorporan por contigüidad."
+        },
+        {
+          "title": "Instituto Lexicográfico Miroslav Krleža · Dalmacija",
+          "url": "https://www.enciklopedija.hr/clanak/dalmacija",
+          "locator": "Ciudades, dominios venecianos, Zadar y sus interrupciones; paz de 1358, venta de 1409, Split y Brač en 1420; Makarska en 1452 y conquista otomana de 1498."
+        },
+        {
+          "title": "Milan Kruhek · Fortificaciones otomanas en Lika y Krbava",
+          "url": "https://hrcak.srce.hr/129805",
+          "locator": "Senjski zbornik 40 (2013), pp.471–507: ámbito de Lika y Krbava 1527–1689. La costa de Senj y Gacka no se incorporan por contigüidad."
+        },
+        {
+          "title": "Instituto Lexicográfico Miroslav Krleža · Dalmacija",
+          "url": "https://www.enciklopedija.hr/clanak/dalmacija",
+          "locator": "Ciudades, dominios venecianos, Zadar y sus interrupciones; paz de 1358, venta de 1409, Split y Brač en 1420; Makarska en 1452 y conquista otomana de 1498."
+        },
+        {
+          "title": "Milan Kruhek · Fortificaciones otomanas en Lika y Krbava",
+          "url": "https://hrcak.srce.hr/129805",
+          "locator": "Senjski zbornik 40 (2013), pp.471–507: ámbito de Lika y Krbava 1527–1689. La costa de Senj y Gacka no se incorporan por contigüidad."
+        },
+        {
+          "title": "Instituto Lexicográfico Miroslav Krleža · Dalmacija",
+          "url": "https://www.enciklopedija.hr/clanak/dalmacija",
+          "locator": "Ciudades, dominios venecianos, Zadar y sus interrupciones; paz de 1358, venta de 1409, Split y Brač en 1420; Makarska en 1452 y conquista otomana de 1498."
+        },
+        {
+          "title": "Milan Kruhek · Fortificaciones otomanas en Lika y Krbava",
+          "url": "https://hrcak.srce.hr/129805",
+          "locator": "Senjski zbornik 40 (2013), pp.471–507: ámbito de Lika y Krbava 1527–1689. La costa de Senj y Gacka no se incorporan por contigüidad."
+        },
+        {
+          "title": "Instituto Lexicográfico Miroslav Krleža · Dalmacija",
+          "url": "https://www.enciklopedija.hr/clanak/dalmacija",
+          "locator": "Ciudades, dominios venecianos, Zadar y sus interrupciones; paz de 1358, venta de 1409, Split y Brač en 1420; Makarska en 1452 y conquista otomana de 1498."
+        },
+        {
+          "title": "Milan Kruhek · Fortificaciones otomanas en Lika y Krbava",
+          "url": "https://hrcak.srce.hr/129805",
+          "locator": "Senjski zbornik 40 (2013), pp.471–507: ámbito de Lika y Krbava 1527–1689. La costa de Senj y Gacka no se incorporan por contigüidad."
+        },
+        {
+          "title": "Instituto Lexicográfico Miroslav Krleža · Dalmacija",
+          "url": "https://www.enciklopedija.hr/clanak/dalmacija",
+          "locator": "Ciudades, dominios venecianos, Zadar y sus interrupciones; paz de 1358, venta de 1409, Split y Brač en 1420; Makarska en 1452 y conquista otomana de 1498."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": false
     },
     {
       "corridor": "Hungría y Balcanes",
@@ -56388,21 +56540,71 @@
       "corridor": "Hungría y Balcanes",
       "name": "República de Ragusa",
       "color": "#b28d58",
-      "active": {
-        "from": 1400
-      },
-      "note": "Dubrovnik/Ragusa conservó su gobierno republicano y autonomía incluso al pagar tributo al sultán; no se colorea como provincia otomana ni como dominio veneciano.",
+      "note": "Comuna y República de Ragusa: gobiernos e instituciones propios. La dependencia veneciana de 1205 a 1358 y el tributo posterior no borran su autonomía. Lastovo es una isla, aunque el SVG la denomine wasteland.",
       "versions": [
         {
-          "from": 1400,
+          "from": 1200,
+          "ids": [
+            "Dubrovnik"
+          ],
           "oldIds": [],
+          "borderline": [],
+          "event": "Comuna de Dubrovnik, con instituciones propias."
+        },
+        {
+          "from": 1205,
+          "ids": [
+            "Dubrovnik"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Comienza la dependencia veneciana; se conserva la identidad comunal."
+        },
+        {
+          "from": 1272,
           "ids": [
             "Dubrovnik",
+            "Lastovo_Island_Wasteland"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Lastovo acreditado antes de los estatutos de 1272; este corte conservador no fija su fecha exacta de adquisición."
+        },
+        {
+          "from": 1358,
+          "ids": [
+            "Dubrovnik",
+            "Lastovo_Island_Wasteland"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Fin de la dependencia veneciana; reconocimiento de la Corona húngaro-croata con autonomía propia."
+        },
+        {
+          "from": 1399,
+          "ids": [
+            "Dubrovnik",
+            "Lastovo_Island_Wasteland",
             "Slano"
           ],
-          "borderline": []
+          "oldIds": [],
+          "borderline": [],
+          "event": "Adquisición de Slano."
         }
-      ]
+      ],
+      "coverage": {
+        "from": 1200,
+        "through": 1800
+      },
+      "sources": [
+        {
+          "title": "Instituto Lexicográfico Miroslav Krleža · Dubrovačka Republika",
+          "url": "https://www.enciklopedija.hr/clanak/dubrovacka-republika",
+          "locator": "Lastovo adquirido antes de 1272; Pelješac 1333 y Slano 1399. La república tributaria conserva su gobierno propio."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": false
     },
     {
       "corridor": "Hungría y Balcanes",
@@ -56970,23 +57172,17 @@
       "corridor": "Borgoña e Imperio",
       "name": "Sajonia electoral",
       "color": "#6B7A47",
-      "active": {
-        "from": 1423,
-        "through": 1650,
-        "reason": "Núcleos de la Sajonia de los Wettin. La partición de Leipzig (1485) separa las ramas; desde 1547 la dignidad electoral y Wittenberg pasan a los albertinos. Solo se representan estas celdas, sin reconstruir toda Turingia ni sumar posesiones eclesiásticas.",
-        "source": "https://www.landtag.sachsen.de/de/service/parlamentsgeschichte/staendeversammlung-9227.cshtml"
-      },
-      "note": "Núcleos de la Sajonia de los Wettin. La partición de Leipzig (1485) separa las ramas; desde 1547 la dignidad electoral y Wittenberg pasan a los albertinos. Solo se representan estas celdas, sin reconstruir toda Turingia ni sumar posesiones eclesiásticas.",
+      "note": "Núcleos de la Sajonia de los Wettin. La partición de Leipzig (1485) separa las ramas; desde 1547 la dignidad electoral y Wittenberg pasan a los albertinos. Solo se representan estas celdas, sin reconstruir toda Turingia ni sumar posesiones eclesiásticas. Completar el ámbito meißniano sin incorporar Turingia ernestina ni Wurzen episcopal. Completar el ámbito meißniano sin incorporar Turingia ernestina ni Wurzen episcopal. Completar el ámbito meißniano sin incorporar Turingia ernestina ni Wurzen episcopal. Completar el ámbito meißniano sin incorporar Turingia ernestina ni Wurzen episcopal. Completar el ámbito meißniano sin incorporar Turingia ernestina ni Wurzen episcopal.",
       "versions": [
         {
           "from": 1423,
           "oldIds": [],
           "ids": [
-            "Wittenberg",
-            "Torgau",
             "Dresden",
+            "Leipzig",
             "Meissen",
-            "Leipzig"
+            "Torgau",
+            "Wittenberg"
           ],
           "borderline": []
         },
@@ -56994,8 +57190,8 @@
           "from": 1485,
           "oldIds": [],
           "ids": [
-            "Wittenberg",
-            "Torgau"
+            "Torgau",
+            "Wittenberg"
           ],
           "borderline": []
         },
@@ -57003,39 +57199,165 @@
           "from": 1547,
           "oldIds": [],
           "ids": [
-            "Wittenberg",
-            "Torgau",
+            "Chemnitz",
+            "Delitzsch",
             "Dresden",
+            "Freiberg",
+            "Grimma",
+            "Leipzig",
             "Meissen",
-            "Leipzig"
+            "Pirna",
+            "Rochlitz",
+            "Sayda",
+            "Torgau",
+            "Wittenberg",
+            "Zwickau"
           ],
           "borderline": []
         }
-      ]
+      ],
+      "coverage": {
+        "from": 1423,
+        "through": 1800
+      },
+      "sources": [
+        {
+          "title": "Gobierno de Sajonia · Sachsen im Mittelalter",
+          "url": "https://www.geschichte.sachsen.de/sachsen-im-mittelalter-6764.html",
+          "locator": "Mapas y explicación de Leipzig 1485; título electoral desde 1423. Las posesiones ernestinas y albertinas no son una superficie intercambiable."
+        },
+        {
+          "title": "ISGV · Guillermo I de Meißen",
+          "url": "https://saebi.isgv.de/biografie/Wilhelm_I._%28der_Ein%C3%A4ugige%29%2C_Markgraf_von_Mei%C3%9Fen_%281343-1407%29",
+          "locator": "Distritos del margraviato, adquisición de Dohna en 1402 y gobierno conjunto de Freiberg; 1382 separa Turingia y Osterland."
+        },
+        {
+          "title": "Gobierno de Sajonia · Sachsen im Mittelalter",
+          "url": "https://www.geschichte.sachsen.de/sachsen-im-mittelalter-6764.html",
+          "locator": "Mapas y explicación de Leipzig 1485; título electoral desde 1423. Las posesiones ernestinas y albertinas no son una superficie intercambiable."
+        },
+        {
+          "title": "ISGV · Guillermo I de Meißen",
+          "url": "https://saebi.isgv.de/biografie/Wilhelm_I._%28der_Ein%C3%A4ugige%29%2C_Markgraf_von_Mei%C3%9Fen_%281343-1407%29",
+          "locator": "Distritos del margraviato, adquisición de Dohna en 1402 y gobierno conjunto de Freiberg; 1382 separa Turingia y Osterland."
+        },
+        {
+          "title": "Gobierno de Sajonia · Sachsen im Mittelalter",
+          "url": "https://www.geschichte.sachsen.de/sachsen-im-mittelalter-6764.html",
+          "locator": "Mapas y explicación de Leipzig 1485; título electoral desde 1423. Las posesiones ernestinas y albertinas no son una superficie intercambiable."
+        },
+        {
+          "title": "ISGV · Guillermo I de Meißen",
+          "url": "https://saebi.isgv.de/biografie/Wilhelm_I._%28der_Ein%C3%A4ugige%29%2C_Markgraf_von_Mei%C3%9Fen_%281343-1407%29",
+          "locator": "Distritos del margraviato, adquisición de Dohna en 1402 y gobierno conjunto de Freiberg; 1382 separa Turingia y Osterland."
+        },
+        {
+          "title": "Gobierno de Sajonia · Sachsen im Mittelalter",
+          "url": "https://www.geschichte.sachsen.de/sachsen-im-mittelalter-6764.html",
+          "locator": "Mapas y explicación de Leipzig 1485; título electoral desde 1423. Las posesiones ernestinas y albertinas no son una superficie intercambiable."
+        },
+        {
+          "title": "ISGV · Guillermo I de Meißen",
+          "url": "https://saebi.isgv.de/biografie/Wilhelm_I._%28der_Ein%C3%A4ugige%29%2C_Markgraf_von_Mei%C3%9Fen_%281343-1407%29",
+          "locator": "Distritos del margraviato, adquisición de Dohna en 1402 y gobierno conjunto de Freiberg; 1382 separa Turingia y Osterland."
+        },
+        {
+          "title": "Gobierno de Sajonia · Sachsen im Mittelalter",
+          "url": "https://www.geschichte.sachsen.de/sachsen-im-mittelalter-6764.html",
+          "locator": "Mapas y explicación de Leipzig 1485; título electoral desde 1423. Las posesiones ernestinas y albertinas no son una superficie intercambiable."
+        },
+        {
+          "title": "ISGV · Guillermo I de Meißen",
+          "url": "https://saebi.isgv.de/biografie/Wilhelm_I._%28der_Ein%C3%A4ugige%29%2C_Markgraf_von_Mei%C3%9Fen_%281343-1407%29",
+          "locator": "Distritos del margraviato, adquisición de Dohna en 1402 y gobierno conjunto de Freiberg; 1382 separa Turingia y Osterland."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": false
     },
     {
       "corridor": "Borgoña e Imperio",
       "name": "Sajonia albertina",
       "color": "#899651",
-      "active": {
-        "from": 1485,
-        "through": 1546,
-        "reason": "Núcleos ducales albertinos entre la partición de 1485 y la transferencia electoral de 1547; se mantienen separados de Wittenberg y Torgau. Los contornos regionales son aproximados.",
-        "source": "https://www.landtag.sachsen.de/de/service/parlamentsgeschichte/staendeversammlung-9227.cshtml"
-      },
-      "note": "Núcleos ducales albertinos entre la partición de 1485 y la transferencia electoral de 1547; se mantienen separados de Wittenberg y Torgau. Los contornos regionales son aproximados.",
+      "note": "Núcleos ducales albertinos entre la partición de 1485 y la transferencia electoral de 1547; se mantienen separados de Wittenberg y Torgau. Los contornos regionales son aproximados. Completar el ámbito meißniano sin incorporar Turingia ernestina ni Wurzen episcopal. Completar el ámbito meißniano sin incorporar Turingia ernestina ni Wurzen episcopal. Completar el ámbito meißniano sin incorporar Turingia ernestina ni Wurzen episcopal. Completar el ámbito meißniano sin incorporar Turingia ernestina ni Wurzen episcopal. Completar el ámbito meißniano sin incorporar Turingia ernestina ni Wurzen episcopal.",
       "versions": [
         {
           "from": 1485,
           "oldIds": [],
           "ids": [
+            "Chemnitz",
+            "Delitzsch",
             "Dresden",
+            "Freiberg",
+            "Grimma",
+            "Leipzig",
             "Meissen",
-            "Leipzig"
+            "Pirna",
+            "Rochlitz",
+            "Sayda",
+            "Zwickau"
           ],
           "borderline": []
         }
-      ]
+      ],
+      "coverage": {
+        "from": 1485,
+        "through": 1800
+      },
+      "sources": [
+        {
+          "title": "Gobierno de Sajonia · Sachsen im Mittelalter",
+          "url": "https://www.geschichte.sachsen.de/sachsen-im-mittelalter-6764.html",
+          "locator": "Mapas y explicación de Leipzig 1485; título electoral desde 1423. Las posesiones ernestinas y albertinas no son una superficie intercambiable."
+        },
+        {
+          "title": "ISGV · Guillermo I de Meißen",
+          "url": "https://saebi.isgv.de/biografie/Wilhelm_I._%28der_Ein%C3%A4ugige%29%2C_Markgraf_von_Mei%C3%9Fen_%281343-1407%29",
+          "locator": "Distritos del margraviato, adquisición de Dohna en 1402 y gobierno conjunto de Freiberg; 1382 separa Turingia y Osterland."
+        },
+        {
+          "title": "Gobierno de Sajonia · Sachsen im Mittelalter",
+          "url": "https://www.geschichte.sachsen.de/sachsen-im-mittelalter-6764.html",
+          "locator": "Mapas y explicación de Leipzig 1485; título electoral desde 1423. Las posesiones ernestinas y albertinas no son una superficie intercambiable."
+        },
+        {
+          "title": "ISGV · Guillermo I de Meißen",
+          "url": "https://saebi.isgv.de/biografie/Wilhelm_I._%28der_Ein%C3%A4ugige%29%2C_Markgraf_von_Mei%C3%9Fen_%281343-1407%29",
+          "locator": "Distritos del margraviato, adquisición de Dohna en 1402 y gobierno conjunto de Freiberg; 1382 separa Turingia y Osterland."
+        },
+        {
+          "title": "Gobierno de Sajonia · Sachsen im Mittelalter",
+          "url": "https://www.geschichte.sachsen.de/sachsen-im-mittelalter-6764.html",
+          "locator": "Mapas y explicación de Leipzig 1485; título electoral desde 1423. Las posesiones ernestinas y albertinas no son una superficie intercambiable."
+        },
+        {
+          "title": "ISGV · Guillermo I de Meißen",
+          "url": "https://saebi.isgv.de/biografie/Wilhelm_I._%28der_Ein%C3%A4ugige%29%2C_Markgraf_von_Mei%C3%9Fen_%281343-1407%29",
+          "locator": "Distritos del margraviato, adquisición de Dohna en 1402 y gobierno conjunto de Freiberg; 1382 separa Turingia y Osterland."
+        },
+        {
+          "title": "Gobierno de Sajonia · Sachsen im Mittelalter",
+          "url": "https://www.geschichte.sachsen.de/sachsen-im-mittelalter-6764.html",
+          "locator": "Mapas y explicación de Leipzig 1485; título electoral desde 1423. Las posesiones ernestinas y albertinas no son una superficie intercambiable."
+        },
+        {
+          "title": "ISGV · Guillermo I de Meißen",
+          "url": "https://saebi.isgv.de/biografie/Wilhelm_I._%28der_Ein%C3%A4ugige%29%2C_Markgraf_von_Mei%C3%9Fen_%281343-1407%29",
+          "locator": "Distritos del margraviato, adquisición de Dohna en 1402 y gobierno conjunto de Freiberg; 1382 separa Turingia y Osterland."
+        },
+        {
+          "title": "Gobierno de Sajonia · Sachsen im Mittelalter",
+          "url": "https://www.geschichte.sachsen.de/sachsen-im-mittelalter-6764.html",
+          "locator": "Mapas y explicación de Leipzig 1485; título electoral desde 1423. Las posesiones ernestinas y albertinas no son una superficie intercambiable."
+        },
+        {
+          "title": "ISGV · Guillermo I de Meißen",
+          "url": "https://saebi.isgv.de/biografie/Wilhelm_I._%28der_Ein%C3%A4ugige%29%2C_Markgraf_von_Mei%C3%9Fen_%281343-1407%29",
+          "locator": "Distritos del margraviato, adquisición de Dohna en 1402 y gobierno conjunto de Freiberg; 1382 separa Turingia y Osterland."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": false
     },
     {
       "corridor": "Borgoña e Imperio",
@@ -64584,11 +64906,7 @@
       "corridor": "Fronteras y dominios europeos",
       "coverage": {
         "from": 1346,
-        "through": 1388
-      },
-      "active": {
-        "from": 1346,
-        "through": 1388
+        "through": 1390
       },
       "versions": [
         {
@@ -64608,6 +64926,7 @@
           "ids": [
             "Babadag",
             "Cernavoda",
+            "Constanta",
             "Enisala",
             "Harsova",
             "Isaccea",
@@ -64626,6 +64945,7 @@
           "ids": [
             "Babadag",
             "Cernavoda",
+            "Constanta",
             "Enisala",
             "Harsova",
             "Isaccea",
@@ -64639,16 +64959,35 @@
           "oldIds": [],
           "borderline": [],
           "event": "Varna bajo Dobrotitsa."
+        },
+        {
+          "from": 1388,
+          "ids": [
+            "Constanta",
+            "Kaliakra",
+            "Karvuna",
+            "Kladentsi",
+            "Pangalia",
+            "Varna"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Núcleo costero de Ivanko después de la campaña de 1388; fin incierto hacia 1390–1391."
         }
       ],
       "sources": [
         {
+          "title": "Nikolay Antov · Dobrudja, Radovi ZHP 51 (2019)",
+          "url": "https://hrcak.srce.hr/file/342790",
+          "locator": "pp.63–68: Balik y su hermano Dobrotitsa; Ivanko, tratado de 1387 y transición de 1388–1391; conquista otomana escalonada. No acredita un frente uniforme."
+        },
+        {
           "title": "Kemal Karpat · TDV · Dobruca",
           "url": "https://islamansiklopedisi.org.tr/dobruca",
-          "locator": "Principado de Balik, Dobrotitsa e Ivanko; expansión de 1359 y transición disputada de fines del XIV. No todo el territorio moderno ni una soberanía búlgara uniforme."
+          "locator": "Expansión de 1359, dominios de Mircea y conquista final situada en 1419; otras reconstrucciones dan 1417. Se conserva explícitamente la incertidumbre."
         }
       ],
-      "note": "Despotado costero de Karvuna/Dobruja. El límite septentrional y el relevo de 1388–1389 son inciertos: no se colorea toda Dobruja moderna ni se fuerza una frontera precisa.",
+      "note": "Despotado costero de Karvuna/Dobruja. El límite septentrional y el relevo de 1388–1389 son inciertos: no se colorea toda Dobruja moderna ni se fuerza una frontera precisa. Se integra la celda costera de Constanța. Hasta 1385 se mantiene la superficie aproximada anterior; después se distingue la contracción de Ivanko.",
       "precision": "regional_approximation",
       "limitedCore": false,
       "supersedes": [],
@@ -64744,16 +65083,14 @@
         "from": 1200,
         "through": 1526
       },
-      "active": {
-        "from": 1200,
-        "through": 1526
-      },
       "versions": [
         {
           "from": 1200,
           "ids": [
             "Bihac",
+            "Crikvenica",
             "Dinaric_Alps1",
+            "Dinaric_Alps9",
             "Kaseg",
             "Knin",
             "Otocac",
@@ -64770,7 +65107,9 @@
           "from": 1388,
           "ids": [
             "Bihac",
+            "Crikvenica",
             "Dinaric_Alps1",
+            "Dinaric_Alps9",
             "Kaseg",
             "Otocac",
             "Senj",
@@ -64786,7 +65125,9 @@
           "from": 1393,
           "ids": [
             "Bihac",
+            "Crikvenica",
             "Dinaric_Alps1",
+            "Dinaric_Alps9",
             "Kaseg",
             "Knin",
             "Otocac",
@@ -64803,7 +65144,9 @@
           "from": 1513,
           "ids": [
             "Bihac",
+            "Crikvenica",
             "Dinaric_Alps1",
+            "Dinaric_Alps9",
             "Kaseg",
             "Knin",
             "Otocac",
@@ -64819,7 +65162,9 @@
           "from": 1522,
           "ids": [
             "Bihac",
+            "Crikvenica",
             "Dinaric_Alps1",
+            "Dinaric_Alps9",
             "Kaseg",
             "Otocac",
             "Senj",
@@ -64851,9 +65196,19 @@
           "title": "Instituto Lexicográfico Miroslav Krleža · Cetinska krajina",
           "url": "https://www.enciklopedija.hr/clanak/cetinska-krajina",
           "locator": "Pérdida de la región de Sinj desde 1513; el artículo de la ciudad ofrece 1524. El corte regional es aproximado y no resuelve cada fortaleza."
+        },
+        {
+          "title": "Instituto Lexicográfico Miroslav Krleža · Dalmacija",
+          "url": "https://www.enciklopedija.hr/clanak/dalmacija",
+          "locator": "Ciudades, dominios venecianos, Zadar y sus interrupciones; paz de 1358, venta de 1409, Split y Brač en 1420; Makarska en 1452 y conquista otomana de 1498."
+        },
+        {
+          "title": "Milan Kruhek · Fortificaciones otomanas en Lika y Krbava",
+          "url": "https://hrcak.srce.hr/129805",
+          "locator": "Senjski zbornik 40 (2013), pp.471–507: ámbito de Lika y Krbava 1527–1689. La costa de Senj y Gacka no se incorporan por contigüidad."
         }
       ],
-      "note": "Marco regional interior bajo la Corona croata: señoríos, bans y ciudades no equivalen a propiedad directa del rey. No se incluyen Rijeka, Krk ni las ciudades venecianas de Dalmacia. Las pérdidas de Lika y Krbava necesitan una revisión más fina.",
+      "note": "Marco regional interior bajo la Corona croata: señoríos, bans y ciudades no equivalen a propiedad directa del rey. No se incluyen Rijeka, Krk ni las ciudades venecianas de Dalmacia. Las pérdidas de Lika y Krbava necesitan una revisión más fina. Se añaden Vinodol/Crikvenica y el relieve de Lika; Krk, Pag y las ciudades dálmatas siguen autoridades y fechas propias.",
       "precision": "regional_approximation",
       "limitedCore": false,
       "supersedes": [
@@ -66062,6 +66417,2725 @@
       "precision": "regional_approximation",
       "limitedCore": false,
       "supersedes": [],
+      "color": "#86715d"
+    },
+    {
+      "name": "Dobruja · dominios de Valaquia",
+      "corridor": "Fronteras y dominios europeos",
+      "coverage": {
+        "from": 1389,
+        "through": 1418
+      },
+      "active": {
+        "from": 1389,
+        "through": 1418
+      },
+      "versions": [
+        {
+          "from": 1389,
+          "ids": [
+            "Babadag",
+            "Cernavoda",
+            "Drastar",
+            "Enisala",
+            "Harsova",
+            "Isaccea",
+            "Tulcea"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Expansión danubiana de Mircea, mientras Ivanko conserva un núcleo costero."
+        },
+        {
+          "from": 1391,
+          "ids": [
+            "Babadag",
+            "Cernavoda",
+            "Constanta",
+            "Drastar",
+            "Enisala",
+            "Harsova",
+            "Isaccea",
+            "Kaliakra",
+            "Karvuna",
+            "Kladentsi",
+            "Pangalia",
+            "Tulcea"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Titulatura de Mircea sobre tierras de Dobrotitsa y Silistra; transición aproximada."
+        },
+        {
+          "from": 1395,
+          "ids": [],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Pérdida durante la guerra con Bayezid; no prolongar el color por la titulatura."
+        },
+        {
+          "from": 1402,
+          "ids": [
+            "Babadag",
+            "Cernavoda",
+            "Constanta",
+            "Drastar",
+            "Enisala",
+            "Harsova",
+            "Isaccea",
+            "Kaliakra",
+            "Karvuna",
+            "Kladentsi",
+            "Pangalia",
+            "Tulcea"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Recuperación después de Ankara."
+        },
+        {
+          "from": 1417,
+          "ids": [
+            "Babadag",
+            "Cernavoda",
+            "Constanta",
+            "Drastar",
+            "Enisala",
+            "Harsova",
+            "Isaccea",
+            "Kaliakra",
+            "Karvuna",
+            "Tulcea"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Retirada aproximada: 1417–1419 discutido."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Nikolay Antov · Dobrudja, Radovi ZHP 51 (2019)",
+          "url": "https://hrcak.srce.hr/file/342790",
+          "locator": "pp.63–68: Balik y su hermano Dobrotitsa; Ivanko, tratado de 1387 y transición de 1388–1391; conquista otomana escalonada. No acredita un frente uniforme."
+        },
+        {
+          "title": "Kemal Karpat · TDV · Dobruca",
+          "url": "https://islamansiklopedisi.org.tr/dobruca",
+          "locator": "Expansión de 1359, dominios de Mircea y conquista final situada en 1419; otras reconstrucciones dan 1417. Se conserva explícitamente la incertidumbre."
+        }
+      ],
+      "note": "Dominio valaco en Dobruja, distinto del principado costero. Fechas y contornos regionales inciertos; no incluye Varna automáticamente.",
+      "precision": "regional_approximation",
+      "limitedCore": false,
+      "color": "#86715d",
+      "authorityCondition": "control disputado"
+    },
+    {
+      "name": "Dobruja otomana",
+      "corridor": "Fronteras y dominios europeos",
+      "coverage": {
+        "from": 1395,
+        "through": 1800
+      },
+      "active": {
+        "from": 1395,
+        "through": 1800
+      },
+      "versions": [
+        {
+          "from": 1395,
+          "ids": [
+            "Babadag",
+            "Cernavoda",
+            "Constanta",
+            "Drastar",
+            "Enisala",
+            "Harsova",
+            "Isaccea",
+            "Kaliakra",
+            "Karvuna",
+            "Kladentsi",
+            "Pangalia",
+            "Tulcea",
+            "Varna"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Conquista de Bayezid, con fronteras de campaña aproximadas."
+        },
+        {
+          "from": 1402,
+          "ids": [
+            "Varna"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Ankara: separar la recuperación valaca."
+        },
+        {
+          "from": 1417,
+          "ids": [
+            "Kladentsi",
+            "Pangalia",
+            "Varna"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Inicio aproximado de la conquista final."
+        },
+        {
+          "from": 1419,
+          "ids": [
+            "Babadag",
+            "Cernavoda",
+            "Constanta",
+            "Drastar",
+            "Enisala",
+            "Harsova",
+            "Isaccea",
+            "Kaliakra",
+            "Karvuna",
+            "Kladentsi",
+            "Pangalia",
+            "Tulcea",
+            "Varna"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Corte conservador al completar la conquista otomana."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Nikolay Antov · Dobrudja, Radovi ZHP 51 (2019)",
+          "url": "https://hrcak.srce.hr/file/342790",
+          "locator": "pp.63–68: Balik y su hermano Dobrotitsa; Ivanko, tratado de 1387 y transición de 1388–1391; conquista otomana escalonada. No acredita un frente uniforme."
+        },
+        {
+          "title": "Kemal Karpat · TDV · Dobruca",
+          "url": "https://islamansiklopedisi.org.tr/dobruca",
+          "locator": "Expansión de 1359, dominios de Mircea y conquista final situada en 1419; otras reconstrucciones dan 1417. Se conserva explícitamente la incertidumbre."
+        }
+      ],
+      "note": "Dobruja bajo administración otomana; no identifica la provincia con la totalidad del zarato ni anticipa su conquista final.",
+      "precision": "regional_approximation",
+      "limitedCore": false,
+      "color": "#86715d"
+    },
+    {
+      "name": "Lika otomana",
+      "corridor": "Fronteras y dominios europeos",
+      "coverage": {
+        "from": 1527,
+        "through": 1688
+      },
+      "active": {
+        "from": 1527,
+        "through": 1688
+      },
+      "versions": [
+        {
+          "from": 1527,
+          "ids": [
+            "Dinaric_Alps9",
+            "Kaseg",
+            "Srb"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Lika y Krbava conquistadas; excluidas Senj, Otočac y Vinodol."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Milan Kruhek · Fortificaciones otomanas en Lika y Krbava",
+          "url": "https://hrcak.srce.hr/129805",
+          "locator": "Senjski zbornik 40 (2013), pp.471–507: ámbito de Lika y Krbava 1527–1689. La costa de Senj y Gacka no se incorporan por contigüidad."
+        }
+      ],
+      "note": "Sancados y fortificaciones de Lika/Krbava, superficie aproximada; incluir la cordillera no supone dominio de toda la costa.",
+      "precision": "regional_approximation",
+      "limitedCore": false,
+      "color": "#86715d"
+    },
+    {
+      "name": "Dalmacia bajo la Corona croata",
+      "corridor": "Fronteras y dominios europeos",
+      "coverage": {
+        "from": 1200,
+        "through": 1479
+      },
+      "active": {
+        "from": 1200,
+        "through": 1479
+      },
+      "versions": [
+        {
+          "from": 1200,
+          "ids": [
+            "Brac",
+            "Makarska",
+            "Pag",
+            "Sibenik",
+            "Split",
+            "Zadar"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Marco costero croata, con Zadar hasta 1203."
+        },
+        {
+          "from": 1203,
+          "ids": [
+            "Brac",
+            "Makarska",
+            "Pag",
+            "Sibenik",
+            "Split"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Zadar veneciana."
+        },
+        {
+          "from": 1242,
+          "ids": [
+            "Brac",
+            "Makarska",
+            "Pag",
+            "Sibenik",
+            "Split",
+            "Zadar"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Recuperación temporal de Zadar."
+        },
+        {
+          "from": 1244,
+          "ids": [
+            "Brac",
+            "Makarska",
+            "Pag",
+            "Sibenik",
+            "Split"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Restauración veneciana."
+        },
+        {
+          "from": 1278,
+          "ids": [
+            "Makarska",
+            "Pag",
+            "Sibenik",
+            "Split"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Brač veneciana."
+        },
+        {
+          "from": 1311,
+          "ids": [
+            "Makarska",
+            "Pag",
+            "Sibenik",
+            "Split",
+            "Zadar"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Nueva rebelión de Zadar."
+        },
+        {
+          "from": 1314,
+          "ids": [
+            "Makarska",
+            "Pag",
+            "Sibenik",
+            "Split"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Fin de la rebelión."
+        },
+        {
+          "from": 1322,
+          "ids": [
+            "Makarska",
+            "Pag",
+            "Split"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Expansión veneciana en las ciudades; contornos de campaña aproximados."
+        },
+        {
+          "from": 1324,
+          "ids": [
+            "Pag",
+            "Split"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Makarska reconoce a los Kotromanić desde1324."
+        },
+        {
+          "from": 1327,
+          "ids": [
+            "Pag"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Split pasa a Venecia en1327."
+        },
+        {
+          "from": 1345,
+          "ids": [
+            "Pag",
+            "Zadar"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Rebelión de Zadar1345–1346."
+        },
+        {
+          "from": 1347,
+          "ids": [
+            "Pag"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Restauración veneciana después de la rebelión."
+        },
+        {
+          "from": 1358,
+          "ids": [
+            "Brac",
+            "Krk",
+            "Pag",
+            "Sibenik",
+            "Split",
+            "Zadar"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Paz de Zadar; incluir Krk bajo la Corona, con gobierno Frankopan."
+        },
+        {
+          "from": 1409,
+          "ids": [
+            "Brac",
+            "Krk",
+            "Sibenik",
+            "Split"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Venta de Zadar y Pag; otras ciudades no se ceden de inmediato."
+        },
+        {
+          "from": 1412,
+          "ids": [
+            "Brac",
+            "Krk",
+            "Split"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Šibenik pasa a Venecia."
+        },
+        {
+          "from": 1420,
+          "ids": [
+            "Krk"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Split y Brač venecianas."
+        },
+        {
+          "from": 1452,
+          "ids": [
+            "Krk"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Makarska bajo Venecia."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Instituto Lexicográfico Miroslav Krleža · Dalmacija",
+          "url": "https://www.enciklopedija.hr/clanak/dalmacija",
+          "locator": "Ciudades, dominios venecianos, Zadar y sus interrupciones; paz de 1358, venta de 1409, Split y Brač en 1420; Makarska en 1452 y conquista otomana de 1498."
+        },
+        {
+          "title": "Instituto Lexicográfico Miroslav Krleža · Krk",
+          "url": "https://www.enciklopedija.hr/clanak/krk-otok",
+          "locator": "Soberanía veneciana anterior a 1358, señores Frankopan; Corona húngaro-croata 1358–1480; dominio veneciano 1480–1797."
+        },
+        {
+          "title": "Instituto Lexicográfico Miroslav Krleža · Split",
+          "url": "https://enciklopedija.hr/clanak/split",
+          "locator": "Venecia1327–1357; disputa dinástica desde1390, Hrvoje1403 y restauración de Segismundo1413; Venecia1420–1797."
+        },
+        {
+          "title": "Instituto Lexicográfico Miroslav Krleža · Brač",
+          "url": "https://enciklopedija.hr/clanak/brac-otok",
+          "locator": "Autoridades: Venecia con interrupciones1278–1358; Corona1358–1390; Tvrtko1390–1391, Hrvoje1403–1416 y Venecia1420–1797."
+        }
+      ],
+      "note": "Autoridad superior de la Corona croata en áreas costeras; no propiedad directa de todas las comunas o señores. Los intervalos breves se resumen por años.",
+      "precision": "regional_approximation",
+      "limitedCore": false,
+      "color": "#86715d"
+    },
+    {
+      "name": "Dalmacia veneciana",
+      "corridor": "Fronteras y dominios europeos",
+      "coverage": {
+        "from": 1200,
+        "through": 1796
+      },
+      "active": {
+        "from": 1200,
+        "through": 1796
+      },
+      "versions": [
+        {
+          "from": 1200,
+          "ids": [
+            "Krk"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Soberanía veneciana con señorío Frankopan."
+        },
+        {
+          "from": 1203,
+          "ids": [
+            "Krk",
+            "Zadar"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Zadar veneciana."
+        },
+        {
+          "from": 1242,
+          "ids": [
+            "Krk"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Zadar fuera durante la rebelión."
+        },
+        {
+          "from": 1244,
+          "ids": [
+            "Krk",
+            "Zadar"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Restauración."
+        },
+        {
+          "from": 1278,
+          "ids": [
+            "Brac",
+            "Krk",
+            "Zadar"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Dominio veneciano de Brač, con interrupciones aún pendientes de mayor resolución."
+        },
+        {
+          "from": 1311,
+          "ids": [
+            "Brac",
+            "Krk"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Nueva rebelión."
+        },
+        {
+          "from": 1314,
+          "ids": [
+            "Brac",
+            "Krk",
+            "Zadar"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Restauración."
+        },
+        {
+          "from": 1322,
+          "ids": [
+            "Brac",
+            "Krk",
+            "Sibenik",
+            "Zadar"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Expansión costera; escala regional aproximada."
+        },
+        {
+          "from": 1327,
+          "ids": [
+            "Brac",
+            "Krk",
+            "Sibenik",
+            "Split",
+            "Zadar"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Split bajo Venecia1327–1357."
+        },
+        {
+          "from": 1345,
+          "ids": [
+            "Brac",
+            "Krk",
+            "Sibenik",
+            "Split"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Rebelión de Zadar1345–1346."
+        },
+        {
+          "from": 1347,
+          "ids": [
+            "Brac",
+            "Krk",
+            "Sibenik",
+            "Split",
+            "Zadar"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Restauración veneciana después de la rebelión."
+        },
+        {
+          "from": 1358,
+          "ids": [],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Retirada veneciana después de la paz de Zadar."
+        },
+        {
+          "from": 1409,
+          "ids": [
+            "Pag",
+            "Zadar"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Adquisición inicial de 1409."
+        },
+        {
+          "from": 1412,
+          "ids": [
+            "Pag",
+            "Sibenik",
+            "Zadar"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Conquista de Šibenik."
+        },
+        {
+          "from": 1420,
+          "ids": [
+            "Brac",
+            "Pag",
+            "Sibenik",
+            "Split",
+            "Zadar"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Dominio de Split y Brač."
+        },
+        {
+          "from": 1452,
+          "ids": [
+            "Brac",
+            "Makarska",
+            "Pag",
+            "Sibenik",
+            "Split",
+            "Zadar"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Makarska."
+        },
+        {
+          "from": 1480,
+          "ids": [
+            "Brac",
+            "Krk",
+            "Makarska",
+            "Pag",
+            "Sibenik",
+            "Split",
+            "Zadar"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Krk bajo administración veneciana."
+        },
+        {
+          "from": 1498,
+          "ids": [
+            "Brac",
+            "Krk",
+            "Pag",
+            "Sibenik",
+            "Split",
+            "Zadar"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Pérdida de Makarska."
+        },
+        {
+          "from": 1572,
+          "ids": [
+            "Brac",
+            "Krk",
+            "Makarska",
+            "Pag",
+            "Sibenik",
+            "Split",
+            "Zadar"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Ocupación veneciana1572."
+        },
+        {
+          "from": 1573,
+          "ids": [
+            "Brac",
+            "Krk",
+            "Pag",
+            "Sibenik",
+            "Split",
+            "Zadar"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Restitución otomana1573."
+        },
+        {
+          "from": 1646,
+          "ids": [
+            "Brac",
+            "Krk",
+            "Makarska",
+            "Pag",
+            "Sibenik",
+            "Split",
+            "Zadar"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Ocupación veneciana en la guerra de Candía."
+        },
+        {
+          "from": 1671,
+          "ids": [
+            "Brac",
+            "Krk",
+            "Pag",
+            "Sibenik",
+            "Split",
+            "Zadar"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Restauración otomana1671."
+        },
+        {
+          "from": 1684,
+          "ids": [
+            "Brac",
+            "Krk",
+            "Makarska",
+            "Pag",
+            "Sibenik",
+            "Split",
+            "Zadar"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Recuperaciones en la guerra de Morea; corte regional de campaña."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Instituto Lexicográfico Miroslav Krleža · Dalmacija",
+          "url": "https://www.enciklopedija.hr/clanak/dalmacija",
+          "locator": "Ciudades, dominios venecianos, Zadar y sus interrupciones; paz de 1358, venta de 1409, Split y Brač en 1420; Makarska en 1452 y conquista otomana de 1498."
+        },
+        {
+          "title": "Instituto Lexicográfico Miroslav Krleža · Krk",
+          "url": "https://www.enciklopedija.hr/clanak/krk-otok",
+          "locator": "Soberanía veneciana anterior a 1358, señores Frankopan; Corona húngaro-croata 1358–1480; dominio veneciano 1480–1797."
+        },
+        {
+          "title": "Instituto Lexicográfico Miroslav Krleža · Split",
+          "url": "https://enciklopedija.hr/clanak/split",
+          "locator": "Venecia1327–1357; disputa dinástica desde1390, Hrvoje1403 y restauración de Segismundo1413; Venecia1420–1797."
+        },
+        {
+          "title": "Instituto Lexicográfico Miroslav Krleža · Brač",
+          "url": "https://enciklopedija.hr/clanak/brac-otok",
+          "locator": "Autoridades: Venecia con interrupciones1278–1358; Corona1358–1390; Tvrtko1390–1391, Hrvoje1403–1416 y Venecia1420–1797."
+        }
+      ],
+      "note": "Dominio veneciano costero fechado por ciudad e isla: Brač desde 1278, Šibenik desde 1322, Split desde 1327, con retiradas y reconquistas separadas. No ocupa Dubrovnik, Senj o Vinodol; las interrupciones menores aún requieren investigación.",
+      "precision": "regional_approximation",
+      "limitedCore": false,
+      "color": "#86715d"
+    },
+    {
+      "name": "Makarska otomana",
+      "corridor": "Fronteras y dominios europeos",
+      "coverage": {
+        "from": 1498,
+        "through": 1683
+      },
+      "active": {
+        "from": 1498,
+        "through": 1683
+      },
+      "versions": [
+        {
+          "from": 1498,
+          "ids": [
+            "Makarska"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Dominio otomano hasta las reconquistas de la guerra de Morea."
+        },
+        {
+          "from": 1572,
+          "ids": [],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Ocupación veneciana."
+        },
+        {
+          "from": 1573,
+          "ids": [
+            "Makarska"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Restitución otomana."
+        },
+        {
+          "from": 1646,
+          "ids": [],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Ocupación veneciana."
+        },
+        {
+          "from": 1671,
+          "ids": [
+            "Makarska"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Restauración otomana."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Instituto Lexicográfico Miroslav Krleža · Dalmacija",
+          "url": "https://www.enciklopedija.hr/clanak/dalmacija",
+          "locator": "Ciudades, dominios venecianos, Zadar y sus interrupciones; paz de 1358, venta de 1409, Split y Brač en 1420; Makarska en 1452 y conquista otomana de 1498."
+        },
+        {
+          "title": "Instituto Lexicográfico Miroslav Krleža · Makarska",
+          "url": "https://enciklopedija.hr/clanak/makarska",
+          "locator": "Bosnia1324; Venecia1452; conquista otomana incierta en los1490; cambios1572/1573,1646,1671/1684. No prolongar un dominio uniforme desde1498."
+        }
+      ],
+      "note": "Celda costera de Makarska, sin atribuir automáticamente toda Dalmacia. La fecha1498 es un corte regional aproximado: la fuente municipal sitúa la conquista en los1490 sin año cierto.",
+      "precision": "regional_approximation",
+      "limitedCore": false,
+      "color": "#86715d"
+    },
+    {
+      "name": "Dalmacia austríaca",
+      "corridor": "Fronteras y dominios europeos",
+      "coverage": {
+        "from": 1797,
+        "through": 1800
+      },
+      "active": {
+        "from": 1797,
+        "through": 1800
+      },
+      "versions": [
+        {
+          "from": 1797,
+          "ids": [
+            "Brac",
+            "Krk",
+            "Makarska",
+            "Pag",
+            "Sibenik",
+            "Split",
+            "Zadar"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Fin de Venecia y cesión a Austria."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Instituto Lexicográfico Miroslav Krleža · Dalmacija",
+          "url": "https://www.enciklopedija.hr/clanak/dalmacija",
+          "locator": "Ciudades, dominios venecianos, Zadar y sus interrupciones; paz de 1358, venta de 1409, Split y Brač en 1420; Makarska en 1452 y conquista otomana de 1498."
+        }
+      ],
+      "note": "Dalmacia administrada como provincia austríaca, distinta de una reunificación inmediata con Croacia.",
+      "precision": "regional_approximation",
+      "limitedCore": false,
+      "color": "#86715d"
+    },
+    {
+      "name": "Margraviato de Meißen",
+      "corridor": "Fronteras y dominios europeos",
+      "coverage": {
+        "from": 1200,
+        "through": 1484
+      },
+      "active": {
+        "from": 1200,
+        "through": 1484
+      },
+      "versions": [
+        {
+          "from": 1200,
+          "ids": [
+            "Altenburg",
+            "Chemnitz",
+            "Delitzsch",
+            "Dresden",
+            "Freiberg",
+            "Grimma",
+            "Leipzig",
+            "Meissen",
+            "Rochlitz",
+            "Sayda",
+            "Torgau",
+            "Zwickau"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Margraviato regional; Wurzen episcopal y Pirna/Dohna quedan fuera."
+        },
+        {
+          "from": 1285,
+          "ids": [
+            "Chemnitz",
+            "Dresden",
+            "Freiberg",
+            "Grimma",
+            "Meissen",
+            "Rochlitz",
+            "Sayda",
+            "Zwickau"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Landsberg/Osterland separado bajo Federico Tuta."
+        },
+        {
+          "from": 1288,
+          "ids": [
+            "Chemnitz",
+            "Freiberg",
+            "Grimma",
+            "Meissen",
+            "Rochlitz",
+            "Sayda",
+            "Zwickau"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Sucesión y división: Dresden de Federico Clem, no toda Meißen de Tuta."
+        },
+        {
+          "from": 1289,
+          "ids": [
+            "Chemnitz",
+            "Dresden",
+            "Freiberg",
+            "Grimma",
+            "Meissen",
+            "Rochlitz",
+            "Sayda",
+            "Zwickau"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Compra del ámbito de Dresden."
+        },
+        {
+          "from": 1294,
+          "ids": [],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Campañas regias: las fortalezas documentadas se representan aparte, no una frontera uniforme."
+        },
+        {
+          "from": 1298,
+          "ids": [
+            "Chemnitz",
+            "Dresden",
+            "Freiberg",
+            "Grimma",
+            "Meissen",
+            "Rochlitz",
+            "Sayda",
+            "Zwickau"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Recuperación parcial Wettin; superficie regional disputada."
+        },
+        {
+          "from": 1299,
+          "ids": [],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Nuevo conflicto con Alberto I, sin adjudicar todo el territorio por la reclamación."
+        },
+        {
+          "from": 1307,
+          "ids": [
+            "Altenburg",
+            "Chemnitz",
+            "Delitzsch",
+            "Dresden",
+            "Freiberg",
+            "Grimma",
+            "Leipzig",
+            "Meissen",
+            "Rochlitz",
+            "Sayda",
+            "Torgau",
+            "Zwickau"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Consolidación tras Lucka."
+        },
+        {
+          "from": 1382,
+          "ids": [
+            "Chemnitz",
+            "Dresden",
+            "Freiberg",
+            "Grimma",
+            "Meissen",
+            "Rochlitz",
+            "Sayda",
+            "Zwickau"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Partición de Chemnitz; Osterland separado."
+        },
+        {
+          "from": 1402,
+          "ids": [
+            "Chemnitz",
+            "Dresden",
+            "Freiberg",
+            "Grimma",
+            "Meissen",
+            "Pirna",
+            "Rochlitz",
+            "Sayda",
+            "Zwickau"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Fin de la contienda de Dohna."
+        },
+        {
+          "from": 1407,
+          "ids": [
+            "Altenburg",
+            "Chemnitz",
+            "Delitzsch",
+            "Dresden",
+            "Freiberg",
+            "Grimma",
+            "Leipzig",
+            "Meissen",
+            "Pirna",
+            "Rochlitz",
+            "Sayda",
+            "Torgau",
+            "Zwickau"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Herencia de Guillermo I, inicialmente compartida."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Comisión Histórica de Baviera · Wettiner, NDB 27 (2020)",
+          "url": "https://www.deutsche-biographie.de/downloadPDF?url=sfz135137.pdf",
+          "locator": "Sucesión de Meißen/Turingia, crisis de 1288–1307, gobierno conjunto, partición de 1379/1382 y Leipzig 1485. No confundir Lausitz, obispados y Vogtland con toda Sajonia."
+        },
+        {
+          "title": "ISGV · Guillermo I de Meißen",
+          "url": "https://saebi.isgv.de/biografie/Wilhelm_I._%28der_Ein%C3%A4ugige%29%2C_Markgraf_von_Mei%C3%9Fen_%281343-1407%29",
+          "locator": "Distritos del margraviato, adquisición de Dohna en 1402 y gobierno conjunto de Freiberg; 1382 separa Turingia y Osterland."
+        },
+        {
+          "title": "Gobierno de Sajonia · Sachsen im Mittelalter",
+          "url": "https://www.geschichte.sachsen.de/sachsen-im-mittelalter-6764.html",
+          "locator": "Mapas y explicación de Leipzig 1485; título electoral desde 1423. Las posesiones ernestinas y albertinas no son una superficie intercambiable."
+        }
+      ],
+      "note": "Margraviato feudal de Meißen. La identidad persiste al recibir los Wettin el electorado; las superficies cambian con particiones, compras y conflictos. No incluye Wurzen, Erfurt, Magdeburgo o Lusacia por vecindad.",
+      "precision": "regional_approximation",
+      "limitedCore": false,
+      "color": "#86715d"
+    },
+    {
+      "name": "Meißen · administración regia",
+      "corridor": "Fronteras y dominios europeos",
+      "coverage": {
+        "from": 1294,
+        "through": 1306
+      },
+      "active": {
+        "from": 1294,
+        "through": 1306
+      },
+      "versions": [
+        {
+          "from": 1294,
+          "ids": [
+            "Freiberg",
+            "Meissen"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Fortalezas ocupadas durante la campaña de Adolfo."
+        },
+        {
+          "from": 1298,
+          "ids": [],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Recuperación Wettin."
+        },
+        {
+          "from": 1299,
+          "ids": [
+            "Freiberg",
+            "Meissen"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Continuación del conflicto regio; núcleo documentado conservador."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Deutsche Biographie · Federico I de Meißen",
+          "url": "https://www.deutsche-biographie.de/gnd118535706.html",
+          "locator": "Campañas de Adolfo y Alberto I, toma de Meißen y Freiberg y batalla de Lucka de 1307."
+        }
+      ],
+      "note": "Núcleo de ocupación regia, sin convertir una pretensión imperial en dominio sobre todas las tierras Wettin.",
+      "precision": "regional_approximation",
+      "limitedCore": false,
+      "color": "#86715d",
+      "authorityCondition": "control disputado"
+    },
+    {
+      "name": "Osterland",
+      "corridor": "Fronteras y dominios europeos",
+      "coverage": {
+        "from": 1285,
+        "through": 1406
+      },
+      "active": {
+        "from": 1285,
+        "through": 1406
+      },
+      "versions": [
+        {
+          "from": 1285,
+          "ids": [
+            "Altenburg",
+            "Delitzsch",
+            "Leipzig",
+            "Torgau"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Landsberg/Osterland bajo Federico Tuta."
+        },
+        {
+          "from": 1294,
+          "ids": [],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Conflicto regio."
+        },
+        {
+          "from": 1307,
+          "ids": [],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Reunión del ámbito al margraviato."
+        },
+        {
+          "from": 1382,
+          "ids": [
+            "Altenburg",
+            "Delitzsch",
+            "Leipzig",
+            "Torgau"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Partición de Chemnitz: hermanos Federico y Guillermo."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Comisión Histórica de Baviera · Wettiner, NDB 27 (2020)",
+          "url": "https://www.deutsche-biographie.de/downloadPDF?url=sfz135137.pdf",
+          "locator": "Sucesión de Meißen/Turingia, crisis de 1288–1307, gobierno conjunto, partición de 1379/1382 y Leipzig 1485. No confundir Lausitz, obispados y Vogtland con toda Sajonia."
+        },
+        {
+          "title": "ISGV · Guillermo I de Meißen",
+          "url": "https://saebi.isgv.de/biografie/Wilhelm_I._%28der_Ein%C3%A4ugige%29%2C_Markgraf_von_Mei%C3%9Fen_%281343-1407%29",
+          "locator": "Distritos del margraviato, adquisición de Dohna en 1402 y gobierno conjunto de Freiberg; 1382 separa Turingia y Osterland."
+        }
+      ],
+      "note": "Ámbito de Osterland en las particiones Wettin; sus límites feudales no coinciden exactamente con cuatro celdas. Desde 1407 se reúne con Meißen.",
+      "precision": "regional_approximation",
+      "limitedCore": false,
+      "color": "#86715d"
+    },
+    {
+      "name": "Landgraviato de Turingia",
+      "corridor": "Fronteras y dominios europeos",
+      "coverage": {
+        "from": 1200,
+        "through": 1484
+      },
+      "active": {
+        "from": 1200,
+        "through": 1484
+      },
+      "versions": [
+        {
+          "from": 1200,
+          "ids": [
+            "Eisenach",
+            "Gotha",
+            "Langensalza",
+            "Ohrdruf"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Marco ludovingio: señoríos orientales no anticipados."
+        },
+        {
+          "from": 1247,
+          "ids": [
+            "Eisenach",
+            "Gotha",
+            "Langensalza",
+            "Ohrdruf"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Extinción masculina ludovingia y guerra de sucesión; Hesse separado."
+        },
+        {
+          "from": 1265,
+          "ids": [
+            "Eisenach",
+            "Gotha",
+            "Langensalza",
+            "Ohrdruf"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Partición Wettin bajo Alberto II."
+        },
+        {
+          "from": 1342,
+          "ids": [
+            "Apolda",
+            "Eisenach",
+            "Eisenberg",
+            "Gotha",
+            "Langensalza",
+            "Ohrdruf",
+            "Weimar"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Compras de Weimar-Orlamünde: contornos orientales aproximados."
+        },
+        {
+          "from": 1382,
+          "ids": [
+            "Apolda",
+            "Eisenach",
+            "Eisenberg",
+            "Gotha",
+            "Langensalza",
+            "Ohrdruf",
+            "Weimar"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Turingia de Baltasar."
+        },
+        {
+          "from": 1440,
+          "ids": [
+            "Apolda",
+            "Eisenach",
+            "Eisenberg",
+            "Gotha",
+            "Langensalza",
+            "Ohrdruf",
+            "Weimar"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Extinción de Federico IV y herencia de la rama electoral."
+        },
+        {
+          "from": 1445,
+          "ids": [
+            "Apolda",
+            "Eisenach",
+            "Eisenberg",
+            "Gotha",
+            "Langensalza",
+            "Ohrdruf",
+            "Saalfeld",
+            "Weimar"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Partición de Altenburg: Guillermo III recibe Turingia y posesiones occidentales."
+        },
+        {
+          "from": 1482,
+          "ids": [
+            "Apolda",
+            "Eisenach",
+            "Eisenberg",
+            "Gotha",
+            "Langensalza",
+            "Ohrdruf",
+            "Saalfeld",
+            "Weimar"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Extinción de Guillermo III y reunión con sus sobrinos."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Comisión Histórica de Baviera · Wettiner, NDB 27 (2020)",
+          "url": "https://www.deutsche-biographie.de/downloadPDF?url=sfz135137.pdf",
+          "locator": "Sucesión de Meißen/Turingia, crisis de 1288–1307, gobierno conjunto, partición de 1379/1382 y Leipzig 1485. No confundir Lausitz, obispados y Vogtland con toda Sajonia."
+        },
+        {
+          "title": "Landesarchiv Thüringen · Recesos y particiones ernestinas",
+          "url": "https://www.archive-in-thueringen.de/de/findbuch/view/bestand/24151/vorwort/1/systematik/55875",
+          "locator": "4-99-006, signaturas 27,31,33,39: particiones de 1572/1603 y estructura ernestina hasta 1796. El inventario acredita los ámbitos administrativos, no cada límite de la celda."
+        },
+        {
+          "title": "Deutsche Biographie · Federico II de Meißen",
+          "url": "https://www.deutsche-biographie.de/downloadPDF?url=sfz69829.pdf",
+          "locator": "Compra de derechos de Weimar-Orlamünde en1342; no anticipar Weimar bajo los Ludovingios."
+        }
+      ],
+      "note": "Landgraviato de Turingia; los cambios de dinastía no lo convierten en territorio + persona. Hesse, Erfurt y los señoríos independientes no se incorporan por un nombre regional.",
+      "precision": "regional_approximation",
+      "limitedCore": false,
+      "color": "#86715d"
+    },
+    {
+      "name": "Turingia ernestina",
+      "corridor": "Fronteras y dominios europeos",
+      "coverage": {
+        "from": 1485,
+        "through": 1571
+      },
+      "active": {
+        "from": 1485,
+        "through": 1571
+      },
+      "versions": [
+        {
+          "from": 1485,
+          "ids": [
+            "Altenburg",
+            "Apolda",
+            "Eisenach",
+            "Eisenberg",
+            "Gotha",
+            "Langensalza",
+            "Ohrdruf",
+            "Saalfeld",
+            "Weimar"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Leipzig: Altenburg permanece en la rama ernestina."
+        },
+        {
+          "from": 1547,
+          "ids": [
+            "Altenburg",
+            "Apolda",
+            "Eisenach",
+            "Eisenberg",
+            "Gotha",
+            "Langensalza",
+            "Ohrdruf",
+            "Saalfeld",
+            "Weimar"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Pérdida del electorado; subsiste el ducado ernestino."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Gobierno de Sajonia · Sachsen im Mittelalter",
+          "url": "https://www.geschichte.sachsen.de/sachsen-im-mittelalter-6764.html",
+          "locator": "Mapas y explicación de Leipzig 1485; título electoral desde 1423. Las posesiones ernestinas y albertinas no son una superficie intercambiable."
+        },
+        {
+          "title": "Landesarchiv Thüringen · Recesos y particiones ernestinas",
+          "url": "https://www.archive-in-thueringen.de/de/findbuch/view/bestand/24151/vorwort/1/systematik/55875",
+          "locator": "4-99-006, signaturas 27,31,33,39: particiones de 1572/1603 y estructura ernestina hasta 1796. El inventario acredita los ámbitos administrativos, no cada límite de la celda."
+        }
+      ],
+      "note": "Ámbito territorial de los duques ernestinos de Sajonia, con jurisdicciones compartidas; la pérdida de la dignidad electoral no vacía Turingia.",
+      "precision": "regional_approximation",
+      "limitedCore": false,
+      "color": "#86715d"
+    },
+    {
+      "name": "Ducado de Sajonia-Weimar",
+      "corridor": "Fronteras y dominios europeos",
+      "coverage": {
+        "from": 1572,
+        "through": 1800
+      },
+      "active": {
+        "from": 1572,
+        "through": 1800
+      },
+      "versions": [
+        {
+          "from": 1572,
+          "ids": [
+            "Altenburg",
+            "Apolda",
+            "Eisenberg",
+            "Langensalza",
+            "Saalfeld",
+            "Weimar"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Partición de Erfurt: núcleo de Weimar."
+        },
+        {
+          "from": 1603,
+          "ids": [
+            "Apolda",
+            "Langensalza",
+            "Weimar"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Partición de Altenburg; Eisenberg en la rama de Altenburg."
+        },
+        {
+          "from": 1638,
+          "ids": [
+            "Apolda",
+            "Eisenach",
+            "Gotha",
+            "Langensalza",
+            "Ohrdruf",
+            "Weimar"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Herencia de la rama occidental extinta; ámbitos inspeccionados, sin todo el territorio de Coburgo."
+        },
+        {
+          "from": 1640,
+          "ids": [
+            "Apolda",
+            "Langensalza",
+            "Weimar"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Nuevas ramas de Gotha y Eisenach."
+        },
+        {
+          "from": 1644,
+          "ids": [
+            "Apolda",
+            "Eisenach",
+            "Langensalza",
+            "Weimar"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Extinción de Alberto y retorno de Eisenach."
+        },
+        {
+          "from": 1662,
+          "ids": [
+            "Apolda",
+            "Langensalza",
+            "Weimar"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Nueva rama de Eisenach."
+        },
+        {
+          "from": 1741,
+          "ids": [
+            "Apolda",
+            "Eisenach",
+            "Langensalza",
+            "Weimar"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Extinción de Eisenach y unión personal; no anticipar la unión constitucional de 1809."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Landesarchiv Thüringen · Recesos y particiones ernestinas",
+          "url": "https://www.archive-in-thueringen.de/de/findbuch/view/bestand/24151/vorwort/1/systematik/55875",
+          "locator": "4-99-006, signaturas 27,31,33,39: particiones de 1572/1603 y estructura ernestina hasta 1796. El inventario acredita los ámbitos administrativos, no cada límite de la celda."
+        },
+        {
+          "title": "Archivo eclesiástico de Eisenach · Superintendentur Saalfeld",
+          "url": "https://www.archive-in-thueringen.de/de/findbuch/view/bestand/25859/vorwort/1",
+          "locator": "Weimar1572, Altenburg1603, Gotha1673; ducadoSaalfeld1680–1745, despuésCoburgo-Saalfeld."
+        }
+      ],
+      "note": "Selección administrativa de Weimar. Las adquisiciones y particiones menores de Saalfeld siguen pendientes; no es un perímetro exacto de todos los ducados ernestinos.",
+      "precision": "regional_approximation",
+      "limitedCore": false,
+      "color": "#86715d"
+    },
+    {
+      "name": "Ducados de Sajonia-Coburgo y Sajonia-Eisenach",
+      "corridor": "Fronteras y dominios europeos",
+      "coverage": {
+        "from": 1572,
+        "through": 1595
+      },
+      "active": {
+        "from": 1572,
+        "through": 1595
+      },
+      "versions": [
+        {
+          "from": 1572,
+          "ids": [
+            "Eisenach",
+            "Gotha",
+            "Ohrdruf"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Partición de 1572; núcleo occidental compartido."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Landesarchiv Thüringen · Recesos y particiones ernestinas",
+          "url": "https://www.archive-in-thueringen.de/de/findbuch/view/bestand/24151/vorwort/1/systematik/55875",
+          "locator": "4-99-006, signaturas 27,31,33,39: particiones de 1572/1603 y estructura ernestina hasta 1796. El inventario acredita los ámbitos administrativos, no cada límite de la celda."
+        }
+      ],
+      "note": "Resumen de las ramas occidentales: se documenta la partición, sin fingir que el SVG separa todos los exclaves.",
+      "precision": "regional_approximation",
+      "limitedCore": false,
+      "color": "#86715d"
+    },
+    {
+      "name": "Ducado de Sajonia-Gotha",
+      "corridor": "Fronteras y dominios europeos",
+      "coverage": {
+        "from": 1640,
+        "through": 1800
+      },
+      "active": {
+        "from": 1640,
+        "through": 1800
+      },
+      "versions": [
+        {
+          "from": 1640,
+          "ids": [
+            "Gotha",
+            "Ohrdruf"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Partición de 1640 bajo Ernesto I."
+        },
+        {
+          "from": 1672,
+          "ids": [
+            "Altenburg",
+            "Eisenberg",
+            "Gotha",
+            "Ohrdruf"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Extinción de la primera rama Altenburg; herencia de Gotha-Altenburg."
+        },
+        {
+          "from": 1673,
+          "ids": [
+            "Altenburg",
+            "Eisenberg",
+            "Gotha",
+            "Ohrdruf",
+            "Saalfeld"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Saalfeld bajo Gotha."
+        },
+        {
+          "from": 1680,
+          "ids": [
+            "Altenburg",
+            "Gotha",
+            "Ohrdruf"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Particiones de Saalfeld y Eisenberg."
+        },
+        {
+          "from": 1707,
+          "ids": [
+            "Altenburg",
+            "Eisenberg",
+            "Gotha",
+            "Ohrdruf"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Extinción y reversión de Eisenberg."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Landesarchiv Thüringen · Recesos y particiones ernestinas",
+          "url": "https://www.archive-in-thueringen.de/de/findbuch/view/bestand/24151/vorwort/1/systematik/55875",
+          "locator": "4-99-006, signaturas 27,31,33,39: particiones de 1572/1603 y estructura ernestina hasta 1796. El inventario acredita los ámbitos administrativos, no cada límite de la celda."
+        }
+      ],
+      "note": "Desde 1672 Sajonia-Gotha-Altenburg. Eisenberg se separa 1680–1707: se resuelve en una capa propia.",
+      "precision": "regional_approximation",
+      "limitedCore": false,
+      "color": "#86715d"
+    },
+    {
+      "name": "Ducado de Sajonia-Eisenach",
+      "corridor": "Fronteras y dominios europeos",
+      "coverage": {
+        "from": 1596,
+        "through": 1740
+      },
+      "active": {
+        "from": 1596,
+        "through": 1740
+      },
+      "versions": [
+        {
+          "from": 1596,
+          "ids": [
+            "Eisenach"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Partición bajo Juan Ernesto."
+        },
+        {
+          "from": 1633,
+          "ids": [
+            "Eisenach",
+            "Gotha",
+            "Ohrdruf"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Extinción de Coburgo y herencia."
+        },
+        {
+          "from": 1638,
+          "ids": [],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Extinción de Juan Ernesto y reparto entre Weimar y Altenburg."
+        },
+        {
+          "from": 1640,
+          "ids": [
+            "Eisenach"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Rama de Alberto."
+        },
+        {
+          "from": 1644,
+          "ids": [],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Extinción y retorno a Weimar."
+        },
+        {
+          "from": 1662,
+          "ids": [
+            "Eisenach"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Nueva partición."
+        },
+        {
+          "from": 1741,
+          "ids": [],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Extinción de la rama y herencia de Weimar."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Landesarchiv Thüringen · Recesos y particiones ernestinas",
+          "url": "https://www.archive-in-thueringen.de/de/findbuch/view/bestand/24151/vorwort/1/systematik/55875",
+          "locator": "4-99-006, signaturas 27,31,33,39: particiones de 1572/1603 y estructura ernestina hasta 1796. El inventario acredita los ámbitos administrativos, no cada límite de la celda."
+        }
+      ],
+      "note": "Ducado territorial distinto de Weimar antes de su unión personal de 1741.",
+      "precision": "regional_approximation",
+      "limitedCore": false,
+      "color": "#86715d"
+    },
+    {
+      "name": "Ducado de Sajonia-Eisenberg",
+      "corridor": "Fronteras y dominios europeos",
+      "coverage": {
+        "from": 1680,
+        "through": 1706
+      },
+      "active": {
+        "from": 1680,
+        "through": 1706
+      },
+      "versions": [
+        {
+          "from": 1680,
+          "ids": [
+            "Eisenberg"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Partición de Gotha bajo Cristián."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Landesarchiv Thüringen · Recesos y particiones ernestinas",
+          "url": "https://www.archive-in-thueringen.de/de/findbuch/view/bestand/24151/vorwort/1/systematik/55875",
+          "locator": "4-99-006, signaturas 27,31,33,39: particiones de 1572/1603 y estructura ernestina hasta 1796. El inventario acredita los ámbitos administrativos, no cada límite de la celda."
+        }
+      ],
+      "note": "Extinción en 1707 y reversión a Gotha-Altenburg.",
+      "precision": "regional_approximation",
+      "limitedCore": false,
+      "color": "#86715d"
+    },
+    {
+      "name": "Ducado de Suabia",
+      "corridor": "Fronteras y dominios europeos",
+      "coverage": {
+        "from": 1200,
+        "through": 1268
+      },
+      "active": {
+        "from": 1200,
+        "through": 1268
+      },
+      "versions": [
+        {
+          "from": 1200,
+          "ids": [
+            "Balingen",
+            "Biberach",
+            "Heidenheim",
+            "Helfenstein",
+            "Hohenberg",
+            "Memmingen",
+            "Ravensburg",
+            "Riedlingen",
+            "Saulgau",
+            "Sigmaringen",
+            "Ulm",
+            "Waldburg",
+            "Waldsee"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Jurisdicción ducal regional Staufen; excluidos obispados y abadías independientes."
+        },
+        {
+          "from": 1209,
+          "ids": [],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Vacancia ducal: no prolongar a Felipe después de su muerte."
+        },
+        {
+          "from": 1212,
+          "ids": [
+            "Balingen",
+            "Biberach",
+            "Heidenheim",
+            "Helfenstein",
+            "Hohenberg",
+            "Memmingen",
+            "Ravensburg",
+            "Riedlingen",
+            "Saulgau",
+            "Sigmaringen",
+            "Ulm",
+            "Waldburg",
+            "Waldsee"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Federico II."
+        },
+        {
+          "from": 1217,
+          "ids": [
+            "Balingen",
+            "Biberach",
+            "Heidenheim",
+            "Helfenstein",
+            "Hohenberg",
+            "Memmingen",
+            "Ravensburg",
+            "Riedlingen",
+            "Saulgau",
+            "Sigmaringen",
+            "Ulm",
+            "Waldburg",
+            "Waldsee"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Enrique VII."
+        },
+        {
+          "from": 1235,
+          "ids": [
+            "Balingen",
+            "Biberach",
+            "Heidenheim",
+            "Helfenstein",
+            "Hohenberg",
+            "Memmingen",
+            "Ravensburg",
+            "Riedlingen",
+            "Saulgau",
+            "Sigmaringen",
+            "Ulm",
+            "Waldburg",
+            "Waldsee"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Conrado IV."
+        },
+        {
+          "from": 1254,
+          "ids": [
+            "Balingen",
+            "Biberach",
+            "Heidenheim",
+            "Helfenstein",
+            "Hohenberg",
+            "Memmingen",
+            "Ravensburg",
+            "Riedlingen",
+            "Saulgau",
+            "Sigmaringen",
+            "Ulm",
+            "Waldburg",
+            "Waldsee"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Conradino; poder regional fragmentado."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Landesbildungsserver Baden-Württemberg · Los Staufen en el suroeste",
+          "url": "https://www.schule-bw.de/faecher-und-schularten/gesellschaftswissenschaftliche-und-philosophische-faecher/landeskunde-landesgeschichte/module/epochen/mittelalter/staufer/staufer_suedwest/3landesgeschichte.htm",
+          "locator": "Enrique VII, Conrado IV duque desde 1235 y fin del poder Staufen; creciente independencia de los príncipes y ciudades. El ducado es una jurisdicción regional, no propiedad uniforme."
+        },
+        {
+          "title": "Universidad de Friburgo · Stälin, Wirtembergische Geschichte II",
+          "url": "https://dl.ub.uni-freiburg.de/diglit/staelin1847-2/0006/ocr",
+          "locator": "Cronología ducal: Federico II 1212–1216, Enrique 1217–1235, Conrado IV 1235–1254, Conradino 1254–1268."
+        }
+      ],
+      "note": "Jurisdicción ducal aproximada, compatible con señoríos y derechos urbanos propios. El mapa no afirma propiedad ducal de cada lugar. Tras 1268 desaparece el marco Staufen efectivo; los títulos posteriores no recrean su superficie.",
+      "precision": "regional_approximation",
+      "limitedCore": false,
+      "color": "#86715d"
+    },
+    {
+      "name": "Condado de Nassau",
+      "corridor": "Fronteras y dominios europeos",
+      "coverage": {
+        "from": 1200,
+        "through": 1254
+      },
+      "active": {
+        "from": 1200,
+        "through": 1254
+      },
+      "versions": [
+        {
+          "from": 1200,
+          "ids": [
+            "Dillenburg",
+            "Hadamar",
+            "Siegen",
+            "Usingen",
+            "Wiesbaden"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Condado antes de la partición de 1255; Diez conserva otra casa."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Hessisches Hauptstaatsarchiv · Nassau-Dillenburg y ramas",
+          "url": "https://arcinsys.hessen.de/arcinsys/showFondsDetails?fondsId=2004",
+          "locator": "HHStAW170III: división de 1255 al norte de la Lahn, Hadamar 1303–1394, Beilstein 1343 y extinción 1561, partición 1607; extinciones de Hadamar1711, Siegen1734/1743 y Dillenburg1739, reunión en Dietz1743."
+        },
+        {
+          "title": "Hessisches Hauptstaatsarchiv · Nassau-Weilburg",
+          "url": "https://arcinsys.hessen.de/arcinsys/showFondsDetails?fondsId=1981",
+          "locator": "HHStAW150: línea walramiana, separación de Weilburg, herencia de Saarbrücken1381, extinción de Idstein1605 y reunión hasta1629. Weilburg no tiene celda separable."
+        }
+      ],
+      "note": "Jurisdicción regional conjunta; no equivale a toda la provincia de Nassau del siglo XIX.",
+      "precision": "regional_approximation",
+      "limitedCore": false,
+      "color": "#86715d"
+    },
+    {
+      "name": "Nassau · rama otoniana",
+      "corridor": "Fronteras y dominios europeos",
+      "coverage": {
+        "from": 1255,
+        "through": 1302
+      },
+      "active": {
+        "from": 1255,
+        "through": 1302
+      },
+      "versions": [
+        {
+          "from": 1255,
+          "ids": [
+            "Dillenburg",
+            "Hadamar",
+            "Siegen"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Tierras septentrionales de la división de 1255."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Hessisches Hauptstaatsarchiv · Nassau-Dillenburg y ramas",
+          "url": "https://arcinsys.hessen.de/arcinsys/showFondsDetails?fondsId=2004",
+          "locator": "HHStAW170III: división de 1255 al norte de la Lahn, Hadamar 1303–1394, Beilstein 1343 y extinción 1561, partición 1607; extinciones de Hadamar1711, Siegen1734/1743 y Dillenburg1739, reunión en Dietz1743."
+        }
+      ],
+      "note": "Gobierno otoniano antes de la partición de 1303; no incluye Nassau-Wiesbaden.",
+      "precision": "regional_approximation",
+      "limitedCore": false,
+      "color": "#86715d"
+    },
+    {
+      "name": "Nassau · rama walramiana",
+      "corridor": "Fronteras y dominios europeos",
+      "coverage": {
+        "from": 1255,
+        "through": 1360
+      },
+      "active": {
+        "from": 1255,
+        "through": 1360
+      },
+      "versions": [
+        {
+          "from": 1255,
+          "ids": [
+            "Usingen",
+            "Wiesbaden"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Tierras al sur de la Lahn; Weilburg/Idstein no separables."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Hessisches Hauptstaatsarchiv · Nassau-Weilburg",
+          "url": "https://arcinsys.hessen.de/arcinsys/showFondsDetails?fondsId=1981",
+          "locator": "HHStAW150: línea walramiana, separación de Weilburg, herencia de Saarbrücken1381, extinción de Idstein1605 y reunión hasta1629. Weilburg no tiene celda separable."
+        }
+      ],
+      "note": "Gobierno walramiano, seguido por la partición de Weilburg e Idstein. La celda Usingen no sustituye a Weilburg.",
+      "precision": "regional_approximation",
+      "limitedCore": false,
+      "color": "#86715d"
+    },
+    {
+      "name": "Condado de Nassau-Wiesbaden-Idstein",
+      "corridor": "Fronteras y dominios europeos",
+      "coverage": {
+        "from": 1361,
+        "through": 1604
+      },
+      "active": {
+        "from": 1361,
+        "through": 1604
+      },
+      "versions": [
+        {
+          "from": 1361,
+          "ids": [
+            "Usingen",
+            "Wiesbaden"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Rama de Wiesbaden-Idstein; límites regionales aproximados."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Hessisches Hauptstaatsarchiv · Nassau-Weilburg",
+          "url": "https://arcinsys.hessen.de/arcinsys/showFondsDetails?fondsId=1981",
+          "locator": "HHStAW150: línea walramiana, separación de Weilburg, herencia de Saarbrücken1381, extinción de Idstein1605 y reunión hasta1629. Weilburg no tiene celda separable."
+        }
+      ],
+      "note": "No se adjudica a los Nassau otonianos. Extinción en1605; las celdas no separan todas las divisiones internas de Idstein.",
+      "precision": "regional_approximation",
+      "limitedCore": false,
+      "color": "#86715d"
+    },
+    {
+      "name": "Nassau-Weilburg · herencia de Idstein",
+      "corridor": "Fronteras y dominios europeos",
+      "coverage": {
+        "from": 1605,
+        "through": 1628
+      },
+      "active": {
+        "from": 1605,
+        "through": 1628
+      },
+      "versions": [
+        {
+          "from": 1605,
+          "ids": [
+            "Usingen",
+            "Wiesbaden"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Extinción de Idstein y reunión de tierras walramianas."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Hessisches Hauptstaatsarchiv · Nassau-Weilburg",
+          "url": "https://arcinsys.hessen.de/arcinsys/showFondsDetails?fondsId=1981",
+          "locator": "HHStAW150: línea walramiana, separación de Weilburg, herencia de Saarbrücken1381, extinción de Idstein1605 y reunión hasta1629. Weilburg no tiene celda separable."
+        }
+      ],
+      "note": "Herencia de Idstein: Weilburg y Saarbrücken se conservan como identidades distintas. No se sustituye Weilburg por Wetzlar.",
+      "precision": "regional_approximation",
+      "limitedCore": false,
+      "color": "#86715d"
+    },
+    {
+      "name": "Nassau-Idstein y Nassau-Usingen",
+      "corridor": "Fronteras y dominios europeos",
+      "coverage": {
+        "from": 1629,
+        "through": 1800
+      },
+      "active": {
+        "from": 1629,
+        "through": 1800
+      },
+      "versions": [
+        {
+          "from": 1629,
+          "ids": [
+            "Usingen",
+            "Wiesbaden"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Nueva división walramiana."
+        },
+        {
+          "from": 1721,
+          "ids": [
+            "Usingen",
+            "Wiesbaden"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Extinción de Idstein y sucesión en Usingen."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Hessisches Hauptstaatsarchiv · Nassau-Weilburg",
+          "url": "https://arcinsys.hessen.de/arcinsys/showFondsDetails?fondsId=1981",
+          "locator": "HHStAW150: línea walramiana, separación de Weilburg, herencia de Saarbrücken1381, extinción de Idstein1605 y reunión hasta1629. Weilburg no tiene celda separable."
+        },
+        {
+          "title": "Deutsche Biographie · Casa de Nassau",
+          "url": "https://www.deutsche-biographie.de/gnd118738038.html",
+          "locator": "Ramas walramianas, particiones y extinciones; título principesco no equivale a reunión de todos los condados."
+        }
+      ],
+      "note": "Ámbitos walramianos no separables completamente en este SVG; no trasladar sus tierras a Dietz ni Orange por compartir casa.",
+      "precision": "regional_approximation",
+      "limitedCore": false,
+      "color": "#86715d"
+    },
+    {
+      "name": "Nassau-Siegen",
+      "corridor": "Fronteras y dominios europeos",
+      "coverage": {
+        "from": 1303,
+        "through": 1742
+      },
+      "active": {
+        "from": 1303,
+        "through": 1742
+      },
+      "versions": [
+        {
+          "from": 1303,
+          "ids": [
+            "Siegen"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Partición de1303."
+        },
+        {
+          "from": 1328,
+          "ids": [
+            "Dillenburg",
+            "Siegen"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Extinción de la primera rama Dillenburg."
+        },
+        {
+          "from": 1607,
+          "ids": [
+            "Siegen"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Partición de1607; ramas católica y reformada todavía sin polígonos separables."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Hessisches Hauptstaatsarchiv · Nassau-Dillenburg y ramas",
+          "url": "https://arcinsys.hessen.de/arcinsys/showFondsDetails?fondsId=2004",
+          "locator": "HHStAW170III: división de 1255 al norte de la Lahn, Hadamar 1303–1394, Beilstein 1343 y extinción 1561, partición 1607; extinciones de Hadamar1711, Siegen1734/1743 y Dillenburg1739, reunión en Dietz1743."
+        }
+      ],
+      "note": "Territorio de Siegen; desde1607 se limita a su celda, no a la totalidad del patrimonio otoniano.",
+      "precision": "regional_approximation",
+      "limitedCore": false,
+      "color": "#86715d"
+    },
+    {
+      "name": "Nassau-Dillenburg",
+      "corridor": "Fronteras y dominios europeos",
+      "coverage": {
+        "from": 1303,
+        "through": 1738
+      },
+      "active": {
+        "from": 1303,
+        "through": 1738
+      },
+      "versions": [
+        {
+          "from": 1303,
+          "ids": [
+            "Dillenburg"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Primera rama."
+        },
+        {
+          "from": 1328,
+          "ids": [],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Herencia en Siegen."
+        },
+        {
+          "from": 1607,
+          "ids": [
+            "Dillenburg"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Nueva partición."
+        },
+        {
+          "from": 1739,
+          "ids": [],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Extinción y herencia en Dietz/Orange."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Hessisches Hauptstaatsarchiv · Nassau-Dillenburg y ramas",
+          "url": "https://arcinsys.hessen.de/arcinsys/showFondsDetails?fondsId=2004",
+          "locator": "HHStAW170III: división de 1255 al norte de la Lahn, Hadamar 1303–1394, Beilstein 1343 y extinción 1561, partición 1607; extinciones de Hadamar1711, Siegen1734/1743 y Dillenburg1739, reunión en Dietz1743."
+        }
+      ],
+      "note": "El título de Nassau-Dillenburg no colorea automáticamente las ramas de Hadamar o Dietz después de1607.",
+      "precision": "regional_approximation",
+      "limitedCore": false,
+      "color": "#86715d"
+    },
+    {
+      "name": "Nassau-Hadamar",
+      "corridor": "Fronteras y dominios europeos",
+      "coverage": {
+        "from": 1303,
+        "through": 1710
+      },
+      "active": {
+        "from": 1303,
+        "through": 1710
+      },
+      "versions": [
+        {
+          "from": 1303,
+          "ids": [
+            "Hadamar"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Primera rama."
+        },
+        {
+          "from": 1394,
+          "ids": [],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Extinción; patrimonio repartido con Katzenelnbogen."
+        },
+        {
+          "from": 1607,
+          "ids": [
+            "Hadamar"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Nueva rama de la partición."
+        },
+        {
+          "from": 1711,
+          "ids": [],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Extinción; herencia compartida, no reunión instantánea de todo Nassau."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Hessisches Hauptstaatsarchiv · Nassau-Dillenburg y ramas",
+          "url": "https://arcinsys.hessen.de/arcinsys/showFondsDetails?fondsId=2004",
+          "locator": "HHStAW170III: división de 1255 al norte de la Lahn, Hadamar 1303–1394, Beilstein 1343 y extinción 1561, partición 1607; extinciones de Hadamar1711, Siegen1734/1743 y Dillenburg1739, reunión en Dietz1743."
+        }
+      ],
+      "note": "Celda regional de Hadamar; la distribución parcial después de1394 y1711 exige mayor resolución que este SVG.",
+      "precision": "regional_approximation",
+      "limitedCore": false,
+      "color": "#86715d"
+    },
+    {
+      "name": "Nassau-Dietz",
+      "corridor": "Fronteras y dominios europeos",
+      "coverage": {
+        "from": 1386,
+        "through": 1800
+      },
+      "active": {
+        "from": 1386,
+        "through": 1800
+      },
+      "versions": [
+        {
+          "from": 1386,
+          "ids": [
+            "Diez"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Adquisición parcial del condado de Diez, con derechos compartidos."
+        },
+        {
+          "from": 1607,
+          "ids": [
+            "Diez"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Rama propia de Dietz."
+        },
+        {
+          "from": 1739,
+          "ids": [
+            "Diez",
+            "Dillenburg"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Extinción de Dillenburg."
+        },
+        {
+          "from": 1743,
+          "ids": [
+            "Diez",
+            "Dillenburg",
+            "Hadamar",
+            "Siegen"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Reunión final de tierras otonianas bajo Dietz/Orange."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Hessisches Hauptstaatsarchiv · Nassau-Dillenburg y ramas",
+          "url": "https://arcinsys.hessen.de/arcinsys/showFondsDetails?fondsId=2004",
+          "locator": "HHStAW170III: división de 1255 al norte de la Lahn, Hadamar 1303–1394, Beilstein 1343 y extinción 1561, partición 1607; extinciones de Hadamar1711, Siegen1734/1743 y Dillenburg1739, reunión en Dietz1743."
+        }
+      ],
+      "note": "Nassau-Dietz/Diez; la celda medieval mezcla derechos de Nassau y otros señores. Desde1654 principado, y desde1743 territorios otonianos reunidos; nunca todos los territorios walramianos.",
+      "precision": "regional_approximation",
+      "limitedCore": false,
+      "color": "#86715d"
+    },
+    {
+      "name": "Condado de Diez",
+      "corridor": "Fronteras y dominios europeos",
+      "coverage": {
+        "from": 1200,
+        "through": 1385
+      },
+      "active": {
+        "from": 1200,
+        "through": 1385
+      },
+      "versions": [
+        {
+          "from": 1200,
+          "ids": [
+            "Diez"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Casa propia de Diez, anterior a las adquisiciones Nassau."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Hessisches Hauptstaatsarchiv · Nassau-Dillenburg y ramas",
+          "url": "https://arcinsys.hessen.de/arcinsys/showFondsDetails?fondsId=2004",
+          "locator": "HHStAW170III: división de 1255 al norte de la Lahn, Hadamar 1303–1394, Beilstein 1343 y extinción 1561, partición 1607; extinciones de Hadamar1711, Siegen1734/1743 y Dillenburg1739, reunión en Dietz1743."
+        }
+      ],
+      "note": "Condado independiente de la sucesión Nassau temprana; no anticipar una herencia del siglo XIV.",
+      "precision": "regional_approximation",
+      "limitedCore": false,
+      "color": "#86715d"
+    },
+    {
+      "name": "Bulgaria · Chaka en Tarnovo",
+      "corridor": "Fronteras y dominios europeos",
+      "coverage": {
+        "from": 1299,
+        "through": 1300
+      },
+      "active": {
+        "from": 1299,
+        "through": 1300
+      },
+      "versions": [
+        {
+          "from": 1299,
+          "ids": [
+            "Lyaskovets",
+            "Tarnovo"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Gobierno breve de Chaka; ámbito capitalino conservador."
+        }
+      ],
+      "sources": [
+        {
+          "title": "CEU · Eszter Tarjan (2017)",
+          "url": "https://www.etd.ceu.edu/2017/tarjan_eszter.pdf",
+          "locator": "p.57: Chaka1299–1300. La titulatura y extensión efectiva se discuten."
+        }
+      ],
+      "note": "Control capitalino de Chaka; no se colorea toda Bulgaria por el título.",
+      "precision": "regional_approximation",
+      "limitedCore": false,
+      "color": "#86715d",
+      "authorityCondition": "control disputado"
+    },
+    {
+      "name": "Makarska bajo Bosnia y Hum",
+      "corridor": "Fronteras y dominios europeos",
+      "coverage": {
+        "from": 1324,
+        "through": 1451
+      },
+      "active": {
+        "from": 1324,
+        "through": 1451
+      },
+      "versions": [
+        {
+          "from": 1324,
+          "ids": [
+            "Makarska"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Soberanía bosnia y posteriores señoríos de Hum."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Instituto Lexicográfico Miroslav Krleža · Makarska",
+          "url": "https://enciklopedija.hr/clanak/makarska",
+          "locator": "Bosnia1324; Venecia1452; conquista otomana incierta en los1490; cambios1572/1573,1646,1671/1684. No prolongar un dominio uniforme desde1498."
+        }
+      ],
+      "note": "Autoridad regional bosnia y de los señores de Hum; las relaciones señoriales cambian. No se atribuye a los reyes croatas solo por su antigua pertenencia.",
+      "precision": "regional_approximation",
+      "limitedCore": false,
+      "color": "#86715d"
+    },
+    {
+      "name": "Split · control dinástico disputado",
+      "corridor": "Fronteras y dominios europeos",
+      "coverage": {
+        "from": 1390,
+        "through": 1412
+      },
+      "active": {
+        "from": 1390,
+        "through": 1412
+      },
+      "versions": [
+        {
+          "from": 1390,
+          "ids": [
+            "Split"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Tvrtko/Dabiša, Segismundo y posteriormente Ladislao/Hrvoje; sucesión regional disputada."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Instituto Lexicográfico Miroslav Krleža · Split",
+          "url": "https://enciklopedija.hr/clanak/split",
+          "locator": "Venecia1327–1357; disputa dinástica desde1390, Hrvoje1403 y restauración de Segismundo1413; Venecia1420–1797."
+        }
+      ],
+      "note": "La soberanía croata reclamada y la administración local divergen. Se marca la disputa, sin asignar cada celda a una corona uniforme.",
+      "precision": "regional_approximation",
+      "limitedCore": false,
+      "color": "#86715d",
+      "authorityCondition": "control disputado"
+    },
+    {
+      "name": "Ducado de Sajonia-Altenburg",
+      "corridor": "Fronteras y dominios europeos",
+      "coverage": {
+        "from": 1603,
+        "through": 1671
+      },
+      "active": {
+        "from": 1603,
+        "through": 1671
+      },
+      "versions": [
+        {
+          "from": 1603,
+          "ids": [
+            "Altenburg",
+            "Eisenberg",
+            "Saalfeld"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Partición de1603 y administración separada."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Landesarchiv Thüringen · Recesos y particiones ernestinas",
+          "url": "https://www.archive-in-thueringen.de/de/findbuch/view/bestand/24151/vorwort/1/systematik/55875",
+          "locator": "4-99-006, signaturas 27,31,33,39: particiones de 1572/1603 y estructura ernestina hasta 1796. El inventario acredita los ámbitos administrativos, no cada límite de la celda."
+        },
+        {
+          "title": "Archivo eclesiástico de Eisenach · Superintendentur Saalfeld",
+          "url": "https://www.archive-in-thueringen.de/de/findbuch/view/bestand/25859/vorwort/1",
+          "locator": "Weimar1572, Altenburg1603, Gotha1673; ducadoSaalfeld1680–1745, despuésCoburgo-Saalfeld."
+        }
+      ],
+      "note": "Primera casa de Sajonia-Altenburg; extinción en1672. Los contornos son ámbitos administrativos aproximados.",
+      "precision": "regional_approximation",
+      "limitedCore": false,
+      "color": "#86715d"
+    },
+    {
+      "name": "Ducado de Sajonia-Saalfeld",
+      "corridor": "Fronteras y dominios europeos",
+      "coverage": {
+        "from": 1680,
+        "through": 1744
+      },
+      "active": {
+        "from": 1680,
+        "through": 1744
+      },
+      "versions": [
+        {
+          "from": 1680,
+          "ids": [
+            "Saalfeld"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Partición de1680."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Archivo eclesiástico de Eisenach · Superintendentur Saalfeld",
+          "url": "https://www.archive-in-thueringen.de/de/findbuch/view/bestand/25859/vorwort/1",
+          "locator": "Weimar1572, Altenburg1603, Gotha1673; ducadoSaalfeld1680–1745, despuésCoburgo-Saalfeld."
+        }
+      ],
+      "note": "Ducado de Sajonia-Saalfeld; desde1745 Coburgo-Saalfeld. No prolongar su pertenencia a Weimar.",
+      "precision": "regional_approximation",
+      "limitedCore": false,
+      "color": "#86715d"
+    },
+    {
+      "name": "Ducado de Sajonia-Coburgo-Saalfeld",
+      "corridor": "Fronteras y dominios europeos",
+      "coverage": {
+        "from": 1745,
+        "through": 1800
+      },
+      "active": {
+        "from": 1745,
+        "through": 1800
+      },
+      "versions": [
+        {
+          "from": 1745,
+          "ids": [
+            "Saalfeld"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Nuevo ámbito dinástico de Coburgo-Saalfeld."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Archivo eclesiástico de Eisenach · Superintendentur Saalfeld",
+          "url": "https://www.archive-in-thueringen.de/de/findbuch/view/bestand/25859/vorwort/1",
+          "locator": "Weimar1572, Altenburg1603, Gotha1673; ducadoSaalfeld1680–1745, despuésCoburgo-Saalfeld."
+        }
+      ],
+      "note": "Se representa el ámbito de Saalfeld; la superficie completa de Coburgo necesita ampliación independiente.",
+      "precision": "regional_approximation",
+      "limitedCore": false,
+      "color": "#86715d"
+    },
+    {
+      "name": "Brač · gobierno dinástico disputado",
+      "corridor": "Fronteras y dominios europeos",
+      "coverage": {
+        "from": 1390,
+        "through": 1416
+      },
+      "active": {
+        "from": 1390,
+        "through": 1416
+      },
+      "versions": [
+        {
+          "from": 1390,
+          "ids": [
+            "Brac"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Tvrtko, Corona croata y posterior gobierno de Hrvoje; marco disputado."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Instituto Lexicográfico Miroslav Krleža · Brač",
+          "url": "https://enciklopedija.hr/clanak/brac-otok",
+          "locator": "Autoridades: Venecia con interrupciones1278–1358; Corona1358–1390; Tvrtko1390–1391, Hrvoje1403–1416 y Venecia1420–1797."
+        }
+      ],
+      "note": "Brač durante los cambios dinásticos1390–1416; no se acredita un único soberano uniforme para todo el intervalo.",
+      "precision": "regional_approximation",
+      "limitedCore": false,
+      "color": "#86715d",
+      "authorityCondition": "control disputado"
+    },
+    {
+      "name": "Ducado de Sajonia-Coburgo",
+      "corridor": "Fronteras y dominios europeos",
+      "coverage": {
+        "from": 1596,
+        "through": 1632
+      },
+      "active": {
+        "from": 1596,
+        "through": 1632
+      },
+      "versions": [
+        {
+          "from": 1596,
+          "ids": [
+            "Gotha",
+            "Ohrdruf"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Parte occidental de Juan Casimiro; Coburgo propiamente dicho requiere superficie separada."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Landesarchiv Thüringen · Recesos y particiones ernestinas",
+          "url": "https://www.archive-in-thueringen.de/de/findbuch/view/bestand/24151/vorwort/1/systematik/55875",
+          "locator": "4-99-006, signaturas 27,31,33,39: particiones de 1572/1603 y estructura ernestina hasta 1796. El inventario acredita los ámbitos administrativos, no cada límite de la celda."
+        }
+      ],
+      "note": "Ámbitos de Gotha/Ohrdruf de la rama de Coburgo, no todo el territorio de Turingia; extinción1633.",
+      "precision": "regional_approximation",
+      "limitedCore": false,
       "color": "#86715d"
     }
   ],
@@ -75943,6 +79017,366 @@
       "supplement": "regional-extent"
     },
     {
+      "territory": "Balcanes meridionales otomanos",
+      "id": "Cernavoda",
+      "from": 1200,
+      "through": 1800,
+      "action": "remove",
+      "source": "https://hrcak.srce.hr/file/342790",
+      "reason": "Dobruja se resuelve en series propias con recuperación valaca y conquista escalonada.",
+      "supplement": "succession-review"
+    },
+    {
+      "territory": "Balcanes meridionales otomanos",
+      "id": "Harsova",
+      "from": 1200,
+      "through": 1800,
+      "action": "remove",
+      "source": "https://hrcak.srce.hr/file/342790",
+      "reason": "Dobruja se resuelve en series propias con recuperación valaca y conquista escalonada.",
+      "supplement": "succession-review"
+    },
+    {
+      "territory": "Balcanes meridionales otomanos",
+      "id": "Babadag",
+      "from": 1200,
+      "through": 1800,
+      "action": "remove",
+      "source": "https://hrcak.srce.hr/file/342790",
+      "reason": "Dobruja se resuelve en series propias con recuperación valaca y conquista escalonada.",
+      "supplement": "succession-review"
+    },
+    {
+      "territory": "Balcanes meridionales otomanos",
+      "id": "Enisala",
+      "from": 1200,
+      "through": 1800,
+      "action": "remove",
+      "source": "https://hrcak.srce.hr/file/342790",
+      "reason": "Dobruja se resuelve en series propias con recuperación valaca y conquista escalonada.",
+      "supplement": "succession-review"
+    },
+    {
+      "territory": "Balcanes meridionales otomanos",
+      "id": "Tulcea",
+      "from": 1200,
+      "through": 1800,
+      "action": "remove",
+      "source": "https://hrcak.srce.hr/file/342790",
+      "reason": "Dobruja se resuelve en series propias con recuperación valaca y conquista escalonada.",
+      "supplement": "succession-review"
+    },
+    {
+      "territory": "Balcanes meridionales otomanos",
+      "id": "Isaccea",
+      "from": 1200,
+      "through": 1800,
+      "action": "remove",
+      "source": "https://hrcak.srce.hr/file/342790",
+      "reason": "Dobruja se resuelve en series propias con recuperación valaca y conquista escalonada.",
+      "supplement": "succession-review"
+    },
+    {
+      "territory": "Balcanes meridionales otomanos",
+      "id": "Drastar",
+      "from": 1200,
+      "through": 1800,
+      "action": "remove",
+      "source": "https://hrcak.srce.hr/file/342790",
+      "reason": "Dobruja se resuelve en series propias con recuperación valaca y conquista escalonada.",
+      "supplement": "succession-review"
+    },
+    {
+      "territory": "Balcanes meridionales otomanos",
+      "id": "Karvuna",
+      "from": 1200,
+      "through": 1800,
+      "action": "remove",
+      "source": "https://hrcak.srce.hr/file/342790",
+      "reason": "Dobruja se resuelve en series propias con recuperación valaca y conquista escalonada.",
+      "supplement": "succession-review"
+    },
+    {
+      "territory": "Balcanes meridionales otomanos",
+      "id": "Kaliakra",
+      "from": 1200,
+      "through": 1800,
+      "action": "remove",
+      "source": "https://hrcak.srce.hr/file/342790",
+      "reason": "Dobruja se resuelve en series propias con recuperación valaca y conquista escalonada.",
+      "supplement": "succession-review"
+    },
+    {
+      "territory": "Balcanes meridionales otomanos",
+      "id": "Kladentsi",
+      "from": 1200,
+      "through": 1800,
+      "action": "remove",
+      "source": "https://hrcak.srce.hr/file/342790",
+      "reason": "Dobruja se resuelve en series propias con recuperación valaca y conquista escalonada.",
+      "supplement": "succession-review"
+    },
+    {
+      "territory": "Balcanes meridionales otomanos",
+      "id": "Pangalia",
+      "from": 1200,
+      "through": 1800,
+      "action": "remove",
+      "source": "https://hrcak.srce.hr/file/342790",
+      "reason": "Dobruja se resuelve en series propias con recuperación valaca y conquista escalonada.",
+      "supplement": "succession-review"
+    },
+    {
+      "territory": "Balcanes meridionales otomanos",
+      "id": "Varna",
+      "from": 1200,
+      "through": 1800,
+      "action": "remove",
+      "source": "https://hrcak.srce.hr/file/342790",
+      "reason": "Dobruja se resuelve en series propias con recuperación valaca y conquista escalonada.",
+      "supplement": "succession-review"
+    },
+    {
+      "territory": "Balcanes meridionales otomanos",
+      "id": "Constanta",
+      "from": 1200,
+      "through": 1800,
+      "action": "remove",
+      "source": "https://hrcak.srce.hr/file/342790",
+      "reason": "Dobruja se resuelve en series propias con recuperación valaca y conquista escalonada.",
+      "supplement": "succession-review"
+    },
+    {
+      "territory": "Núcleos de Dobruja bajo Mircea",
+      "id": "Cernavoda",
+      "from": 1200,
+      "through": 1800,
+      "action": "remove",
+      "source": "https://hrcak.srce.hr/file/342790",
+      "reason": "Dobruja se resuelve en series propias con recuperación valaca y conquista escalonada.",
+      "supplement": "succession-review"
+    },
+    {
+      "territory": "Núcleos de Dobruja bajo Mircea",
+      "id": "Harsova",
+      "from": 1200,
+      "through": 1800,
+      "action": "remove",
+      "source": "https://hrcak.srce.hr/file/342790",
+      "reason": "Dobruja se resuelve en series propias con recuperación valaca y conquista escalonada.",
+      "supplement": "succession-review"
+    },
+    {
+      "territory": "Núcleos de Dobruja bajo Mircea",
+      "id": "Babadag",
+      "from": 1200,
+      "through": 1800,
+      "action": "remove",
+      "source": "https://hrcak.srce.hr/file/342790",
+      "reason": "Dobruja se resuelve en series propias con recuperación valaca y conquista escalonada.",
+      "supplement": "succession-review"
+    },
+    {
+      "territory": "Núcleos de Dobruja bajo Mircea",
+      "id": "Enisala",
+      "from": 1200,
+      "through": 1800,
+      "action": "remove",
+      "source": "https://hrcak.srce.hr/file/342790",
+      "reason": "Dobruja se resuelve en series propias con recuperación valaca y conquista escalonada.",
+      "supplement": "succession-review"
+    },
+    {
+      "territory": "Núcleos de Dobruja bajo Mircea",
+      "id": "Tulcea",
+      "from": 1200,
+      "through": 1800,
+      "action": "remove",
+      "source": "https://hrcak.srce.hr/file/342790",
+      "reason": "Dobruja se resuelve en series propias con recuperación valaca y conquista escalonada.",
+      "supplement": "succession-review"
+    },
+    {
+      "territory": "Núcleos de Dobruja bajo Mircea",
+      "id": "Isaccea",
+      "from": 1200,
+      "through": 1800,
+      "action": "remove",
+      "source": "https://hrcak.srce.hr/file/342790",
+      "reason": "Dobruja se resuelve en series propias con recuperación valaca y conquista escalonada.",
+      "supplement": "succession-review"
+    },
+    {
+      "territory": "Núcleos de Dobruja bajo Mircea",
+      "id": "Drastar",
+      "from": 1200,
+      "through": 1800,
+      "action": "remove",
+      "source": "https://hrcak.srce.hr/file/342790",
+      "reason": "Dobruja se resuelve en series propias con recuperación valaca y conquista escalonada.",
+      "supplement": "succession-review"
+    },
+    {
+      "territory": "Núcleos de Dobruja bajo Mircea",
+      "id": "Karvuna",
+      "from": 1200,
+      "through": 1800,
+      "action": "remove",
+      "source": "https://hrcak.srce.hr/file/342790",
+      "reason": "Dobruja se resuelve en series propias con recuperación valaca y conquista escalonada.",
+      "supplement": "succession-review"
+    },
+    {
+      "territory": "Núcleos de Dobruja bajo Mircea",
+      "id": "Kaliakra",
+      "from": 1200,
+      "through": 1800,
+      "action": "remove",
+      "source": "https://hrcak.srce.hr/file/342790",
+      "reason": "Dobruja se resuelve en series propias con recuperación valaca y conquista escalonada.",
+      "supplement": "succession-review"
+    },
+    {
+      "territory": "Núcleos de Dobruja bajo Mircea",
+      "id": "Kladentsi",
+      "from": 1200,
+      "through": 1800,
+      "action": "remove",
+      "source": "https://hrcak.srce.hr/file/342790",
+      "reason": "Dobruja se resuelve en series propias con recuperación valaca y conquista escalonada.",
+      "supplement": "succession-review"
+    },
+    {
+      "territory": "Núcleos de Dobruja bajo Mircea",
+      "id": "Pangalia",
+      "from": 1200,
+      "through": 1800,
+      "action": "remove",
+      "source": "https://hrcak.srce.hr/file/342790",
+      "reason": "Dobruja se resuelve en series propias con recuperación valaca y conquista escalonada.",
+      "supplement": "succession-review"
+    },
+    {
+      "territory": "Núcleos de Dobruja bajo Mircea",
+      "id": "Varna",
+      "from": 1200,
+      "through": 1800,
+      "action": "remove",
+      "source": "https://hrcak.srce.hr/file/342790",
+      "reason": "Dobruja se resuelve en series propias con recuperación valaca y conquista escalonada.",
+      "supplement": "succession-review"
+    },
+    {
+      "territory": "Núcleos de Dobruja bajo Mircea",
+      "id": "Constanta",
+      "from": 1200,
+      "through": 1800,
+      "action": "remove",
+      "source": "https://hrcak.srce.hr/file/342790",
+      "reason": "Dobruja se resuelve en series propias con recuperación valaca y conquista escalonada.",
+      "supplement": "succession-review"
+    },
+    {
+      "territory": "Venecia",
+      "id": "Zadar",
+      "from": 1200,
+      "through": 1800,
+      "action": "remove",
+      "source": "https://www.enciklopedija.hr/clanak/dalmacija",
+      "reason": "La costa se fecha por ciudad e isla en Dalmacia veneciana; no anticipar las adquisiciones por una selección regional antigua.",
+      "supplement": "succession-review"
+    },
+    {
+      "territory": "Venecia",
+      "id": "Sibenik",
+      "from": 1200,
+      "through": 1800,
+      "action": "remove",
+      "source": "https://www.enciklopedija.hr/clanak/dalmacija",
+      "reason": "La costa se fecha por ciudad e isla en Dalmacia veneciana; no anticipar las adquisiciones por una selección regional antigua.",
+      "supplement": "succession-review"
+    },
+    {
+      "territory": "Venecia",
+      "id": "Split",
+      "from": 1200,
+      "through": 1800,
+      "action": "remove",
+      "source": "https://www.enciklopedija.hr/clanak/dalmacija",
+      "reason": "La costa se fecha por ciudad e isla en Dalmacia veneciana; no anticipar las adquisiciones por una selección regional antigua.",
+      "supplement": "succession-review"
+    },
+    {
+      "territory": "Venecia",
+      "id": "Brac",
+      "from": 1200,
+      "through": 1800,
+      "action": "remove",
+      "source": "https://www.enciklopedija.hr/clanak/dalmacija",
+      "reason": "La costa se fecha por ciudad e isla en Dalmacia veneciana; no anticipar las adquisiciones por una selección regional antigua.",
+      "supplement": "succession-review"
+    },
+    {
+      "territory": "Venecia",
+      "id": "Makarska",
+      "from": 1200,
+      "through": 1800,
+      "action": "remove",
+      "source": "https://www.enciklopedija.hr/clanak/dalmacija",
+      "reason": "La costa se fecha por ciudad e isla en Dalmacia veneciana; no anticipar las adquisiciones por una selección regional antigua.",
+      "supplement": "succession-review"
+    },
+    {
+      "territory": "Venecia",
+      "id": "Pag",
+      "from": 1200,
+      "through": 1800,
+      "action": "remove",
+      "source": "https://www.enciklopedija.hr/clanak/dalmacija",
+      "reason": "La costa se fecha por ciudad e isla en Dalmacia veneciana; no anticipar las adquisiciones por una selección regional antigua.",
+      "supplement": "succession-review"
+    },
+    {
+      "territory": "Venecia",
+      "id": "Krk",
+      "from": 1200,
+      "through": 1800,
+      "action": "remove",
+      "source": "https://www.enciklopedija.hr/clanak/dalmacija",
+      "reason": "La costa se fecha por ciudad e isla en Dalmacia veneciana; no anticipar las adquisiciones por una selección regional antigua.",
+      "supplement": "succession-review"
+    },
+    {
+      "territory": "Ducado de Sajonia-Gotha",
+      "id": "Eisenberg",
+      "from": 1680,
+      "through": 1706,
+      "action": "remove",
+      "source": "https://www.archive-in-thueringen.de/de/findbuch/view/bestand/24151/vorwort/1/systematik/55875",
+      "reason": "Partición independiente de Sajonia-Eisenberg.",
+      "supplement": "succession-review"
+    },
+    {
+      "territory": "Dalmacia bajo la Corona croata",
+      "id": "Split",
+      "from": 1390,
+      "through": 1412,
+      "action": "remove",
+      "source": "https://enciklopedija.hr/clanak/split",
+      "reason": "Resolver el gobierno local rival en su propia serie; restauración de Segismundo1413.",
+      "supplement": "succession-review"
+    },
+    {
+      "territory": "Dalmacia bajo la Corona croata",
+      "id": "Brac",
+      "from": 1390,
+      "through": 1416,
+      "action": "remove",
+      "source": "https://enciklopedija.hr/clanak/brac-otok",
+      "reason": "Separar los cambios dinásticos de Brač y el gobierno de Hrvoje de una soberanía croata uniforme.",
+      "supplement": "succession-review"
+    },
+    {
       "territory": "Hungría real",
       "id": "Nograd",
       "action": "remove",
@@ -76565,6 +79999,61 @@
       "Contornos regionales aproximados, contrastados visualmente. No reconstruyen todas las guarniciones ni cada frontera diaria.",
       "No se importa automáticamente la cartografía del HTML de referencia: algunas atribuciones abarcan estados vecinos.",
       "Las atribuciones feudales francesas anteriores a 1453 siguen distinguiendo el dominio del rey de los feudos. No se presenta una frontera única e inmóvil durante la Guerra de los Cien Años."
+    ]
+  },
+  "successionReview": {
+    "reviewedAt": "2026-10-08",
+    "series": [
+      "Despotado de Dobruja",
+      "Croacia medieval",
+      "Croacia habsbúrgica",
+      "República de Ragusa",
+      "Sajonia albertina",
+      "Sajonia electoral"
+    ],
+    "layerNames": [
+      "Dobruja · dominios de Valaquia",
+      "Dobruja otomana",
+      "Lika otomana",
+      "Dalmacia bajo la Corona croata",
+      "Dalmacia veneciana",
+      "Makarska otomana",
+      "Dalmacia austríaca",
+      "Margraviato de Meißen",
+      "Meißen · administración regia",
+      "Osterland",
+      "Landgraviato de Turingia",
+      "Turingia ernestina",
+      "Ducado de Sajonia-Weimar",
+      "Ducados de Sajonia-Coburgo y Sajonia-Eisenach",
+      "Ducado de Sajonia-Gotha",
+      "Ducado de Sajonia-Eisenach",
+      "Ducado de Sajonia-Eisenberg",
+      "Ducado de Suabia",
+      "Condado de Nassau",
+      "Nassau · rama otoniana",
+      "Nassau · rama walramiana",
+      "Condado de Nassau-Wiesbaden-Idstein",
+      "Nassau-Weilburg · herencia de Idstein",
+      "Nassau-Idstein y Nassau-Usingen",
+      "Nassau-Siegen",
+      "Nassau-Dillenburg",
+      "Nassau-Hadamar",
+      "Nassau-Dietz",
+      "Condado de Diez",
+      "Bulgaria · Chaka en Tarnovo",
+      "Makarska bajo Bosnia y Hum",
+      "Split · control dinástico disputado",
+      "Ducado de Sajonia-Altenburg",
+      "Ducado de Sajonia-Saalfeld",
+      "Ducado de Sajonia-Coburgo-Saalfeld",
+      "Brač · gobierno dinástico disputado",
+      "Ducado de Sajonia-Coburgo"
+    ],
+    "limitations": [
+      "Selecciones regionales aproximadas; el SVG no permite separar todos los enclaves, señoríos ni derechos compartidos.",
+      "Las transiciones de Dobruja de 1388–1391 y 1417–1419 no tienen una fecha de conquista indiscutida.",
+      "Weilburg, Idstein y Beilstein no tienen celdas separables: no se sustituyen por ciudades vecinas. Las sucesiones ernestinas menores y las dos ramas de Siegen requieren aún desagregación."
     ]
   }
 }

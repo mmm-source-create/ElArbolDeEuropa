@@ -8,6 +8,7 @@ import {chronologyJurisdictionsFor, appendChronologyJurisdictions} from './atlas
 import {regionalExtentJurisdictions, supersededRegionalLayers} from './regionalExtentRoutes.js';
 import {continuityJurisdictions, territorialLabel} from './territorialIdentity.js';
 import {frontierJurisdictions} from './frontierRoutes.js';
+import {successionJurisdictions} from './successionRoutes.js';
 
 const layerIndexes = new WeakMap();
 export function reviewedMapLayers(data) {
@@ -31,7 +32,8 @@ function layerIndex(data) {
 
 export function pilotJurisdictionsFor(territory, year, personId = null) {
   const chronological=chronologyJurisdictionsFor(territory,year,personId);
-  return frontierJurisdictions(continuityJurisdictions(regionalExtentJurisdictions(appendChronologyJurisdictions(chronological ?? basePilotJurisdictionsFor(territory,year,personId),territory,personId),territory,year,personId),territory,year,personId),territory,year,personId);
+  const frontier=frontierJurisdictions(continuityJurisdictions(regionalExtentJurisdictions(appendChronologyJurisdictions(chronological ?? basePilotJurisdictionsFor(territory,year,personId),territory,personId),territory,year,personId),territory,year,personId),territory,year,personId);
+  return successionJurisdictions(frontier,territory,year,personId);
 }
 
 function basePilotJurisdictionsFor(territory, year, personId) {

@@ -51,6 +51,12 @@ export function mergeMapExpansions(data) {
   applyContinuityReview(data, frontier);
   data.frontierReview = data.continuityReview;
   data.continuityReview = continuity;
+  const succession = read('succession-review.json');
+  applyContinuityReview(data, succession);
+  data.successionReview = data.continuityReview;
+  data.continuityReview = continuity;
+  data.overrides = [...data.overrides.filter(item => item.supplement !== 'succession-review'),
+    ...succession.overrides.map(item => ({...item, supplement:'succession-review'}))];
   data.overrides = [...data.overrides.filter(item => item.supplement !== 'frontier-review'),
     ...frontier.overrides.map(item => ({...item, supplement:'frontier-review'}))];
   layers = [...data.territories, ...data.additionalTerritories];
@@ -69,7 +75,7 @@ export function mergeMapExpansions(data) {
     if (!layer.sources?.length || !layer.coverage || layer.coverage.from < data.from || layer.coverage.through > data.through)
       throw new Error(`Invalid regional evidence: ${layer.name}`);
   }
-  for (const item of data.overrides.filter(item => ['regional-extent','frontier-review'].includes(item.supplement)))
+  for (const item of data.overrides.filter(item => ['regional-extent','frontier-review','succession-review'].includes(item.supplement)))
     if (!layers.some(layer => layer.name === item.territory) || !ids.has(item.id)
         || !item.source || !item.reason || !Number.isInteger(item.from) || !Number.isInteger(item.through)
         || item.from < data.from || item.through > data.through || item.from > item.through)
