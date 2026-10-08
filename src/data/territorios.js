@@ -1,4 +1,7 @@
 export const TERRITORIOS = Object.freeze({
+  "Normandía": {"clase":"ducado","naturaleza":"entidad","componentes":[],"nota":"Ducado bajo gobiernos angevinos y franceses; las ocupaciones inglesas se fechan por separado."},
+  "Maine": {"clase":"condado","naturaleza":"entidad","componentes":[],"nota":"Condado continental, distinto de la ocupación inglesa de 1425–1448."},
+  "Banato de Temes": {"clase":"gobierno","titulosDeGobierno":["Emperador","Archiduquesa"],"naturaleza":"entidad","desde":1716,"hasta":1778,"componentes":[],"nota":"Provincia imperial habsbúrgica separada de Hungría hasta 1778–1779; distinta del eyalato otomano de Temesvár."},
   "Ducado de Estiria": {"clase":"ducado","naturaleza":"entidad","desde":1200,"componentes":[],"nota":"Jurisdicción provincial diferenciada, con superficie regional aproximada y mandatos personales documentados por separado."},
   "Transilvania habsbúrgica": {"clase":"principado","naturaleza":"entidad","desde":1699,"hasta":1800,"componentes":[],"nota":"Jurisdicción provincial diferenciada, con superficie regional aproximada y mandatos personales documentados por separado."},
   "Norte de Serbia habsbúrgico": {"clase":"gobierno","naturaleza":"entidad","desde":1718,"hasta":1738,"componentes":[],"nota":"Jurisdicción provincial diferenciada, con superficie regional aproximada y mandatos personales documentados por separado."},
@@ -254,6 +257,7 @@ export const TERRITORIOS = Object.freeze({
   },
   "Aquitania": {
     "clase": "ducado",
+    "etapas": [{"clase":"principado","desde":1362,"hasta":1372,"nota":"Principado concedido a Eduardo de Woodstock, conservando la relación con el rey inglés y el ámbito aquitano."}],
     "naturaleza": "entidad",
     "componentes": []
   },

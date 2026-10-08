@@ -13,6 +13,13 @@ review = json.loads((HERE / 'regional-extent-review.json').read_text())
 used = {cell for layer in review['replacements'] + review['territories']
         for version in layer['versions'] for cell in version['ids']}
 used.update(item['id'] for item in review['overrides'])
+frontier = json.loads((HERE / 'frontier-review.json').read_text())
+used.update(cell for layer in frontier['replacements'] + frontier['territories']
+            for version in layer['versions'] for cell in version['ids'])
+used.update(item['id'] for item in frontier['overrides'])
+# Older dated corrections can add a cell absent from the replacement anchor.
+data = json.loads((HERE / 'corridor-locations.json').read_text())
+used.update(item['id'] for item in data['overrides'])
 source = paths(HERE / 'euv-locations-crop.svg')
 cells = []
 for cell in sorted(used):

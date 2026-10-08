@@ -16,6 +16,7 @@ Los informes describen el estado validado de cada entrega. Sus cifras y listas d
 
 | Versión | Contenido |
 | --- | --- |
+| [4.11](V4.11.md) | Carruseles circulares, Bulgaria medieval/Sirmia, Hungría y feudos franceses, dominios ingleses/británicos |
 | [4.8](V4.8.md) | Particiones bávaras, Palatinado electoral y herencia renana; límites explícitos de Flandes/Artois |
 | [4.7](V4.7.md) | Continuidad de Tirol, inspector territorial y auditoría de fuentes del mapa |
 | [4.6](V4.6.md) | Encuadre europeo, biografía compacta y separación entre Austria e Imperio |

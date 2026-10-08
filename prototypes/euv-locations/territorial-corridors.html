@@ -44,7 +44,7 @@
     <div class="controls">
       <button type="button" id="mosaic-toggle" aria-pressed="true">Ver una jurisdicción</button>
       <label for="corridor" id="corridor-control">Corredor
-        <select id="corridor"><option>Iberia</option><option>Italia</option><option>Centroeuropa</option><option>Europa septentrional y oriental</option><option>Francia e islas británicas</option><option>Borgoña e Imperio</option><option>Hungría y Balcanes</option><option>Mediterráneo oriental</option><option>Revisión de superficies regionales</option></select>
+        <select id="corridor"><option>Iberia</option><option>Italia</option><option>Centroeuropa</option><option>Europa septentrional y oriental</option><option>Francia e islas británicas</option><option>Borgoña e Imperio</option><option>Hungría y Balcanes</option><option>Mediterráneo oriental</option><option>Revisión de superficies regionales</option><option>Fronteras y dominios europeos</option></select>
       </label>
       <label for="territory" id="territory-control">Jurisdicción
         <select id="territory"></select>
@@ -213,16 +213,18 @@
     function focusTerritory(){
       const territory=selectedTerritory(),year=Number($('year').value);
       let ids=territory?correctedIds(territory,year,activeVersion(territory,year).ids):[];
-      if(['Centroeuropa','Europa septentrional y oriental','Francia e islas británicas','Borgoña e Imperio','Hungría y Balcanes','Revisión de superficies regionales','Continuidad e identidad territorial'].includes(territory?.corridor)&&!ids.length&&territory.active){
+      if(['Centroeuropa','Europa septentrional y oriental','Francia e islas británicas','Borgoña e Imperio','Hungría y Balcanes','Revisión de superficies regionales','Continuidad e identidad territorial','Fronteras y dominios europeos'].includes(territory?.corridor)&&!ids.length&&territory.active){
         const comparisonYear=territory.active.from??territory.active.through;
         ids=activeVersion(territory,comparisonYear).ids;
       }
       const boxes=ids.map(id=>state.paths.get(id)).filter(Boolean).map(path=>path.getBBox());
-      if(['Centroeuropa','Europa septentrional y oriental','Francia e islas británicas','Borgoña e Imperio','Hungría y Balcanes','Revisión de superficies regionales','Continuidad e identidad territorial'].includes(territory?.corridor)&&boxes.length){const x=Math.min(...boxes.map(b=>b.x)),y=Math.min(...boxes.map(b=>b.y));
+      if(['Centroeuropa','Europa septentrional y oriental','Francia e islas británicas','Borgoña e Imperio','Hungría y Balcanes','Revisión de superficies regionales','Continuidad e identidad territorial','Fronteras y dominios europeos'].includes(territory?.corridor)&&boxes.length){const x=Math.min(...boxes.map(b=>b.x)),y=Math.min(...boxes.map(b=>b.y));
         const right=Math.max(...boxes.map(b=>b.x+b.width)),bottom=Math.max(...boxes.map(b=>b.y+b.height));
         const northern=territory.corridor==='Europa septentrional y oriental';
         const w=Math.max(northern?10:25,right-x),h=Math.max(northern?8:20,bottom-y),pad=Math.max(northern?1.5:3,Math.min(w,h)*.13);
-        state.view={x:x-pad,y:y-pad,w:w+2*pad,h:h+2*pad}
+        const rect=$('map-stage').getBoundingClientRect(),aspect=rect.width/rect.height;
+        const width=Math.max(w+2*pad,(h+2*pad)*aspect),height=width/aspect;
+        state.view={x:(x+right-width)/2,y:(y+bottom-height)/2,w:width,h:height}
       }else state.view={...(TERRITORY_FRAMES[$('territory').value]||FRAMES[$('corridor').value]||FULL)};
       viewBox()
     }

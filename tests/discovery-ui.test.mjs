@@ -61,19 +61,27 @@ test('los enlaces traducidos mantienen su destino y un carrusel vacío no invent
   assert.equal(node.textContent,'');
 });
 
-test('las flechas recorren el carrusel y se desactivan en sus límites',async()=>{
+test('el último elemento avanza al primero y el primero retrocede al último sin duplicar enlaces de teclado',async()=>{
   await mount(React.createElement(DiscoveryCarousel,{items:[{id:'a'},{id:'b'},{id:'c'}],renderItem:item=>React.createElement('a',{href:`/${item.id}`},item.id),label:'Puertas'}));
-  const track=node.querySelector('.home-carousel-track');
-  for(const [key,value] of Object.entries({clientWidth:200,scrollWidth:600,offsetLeft:0})) Object.defineProperty(track,key,{value,configurable:true});
+  const track=node.querySelector('.home-carousel-track'), moves=[];
+  Object.defineProperty(track,'clientWidth',{value:200,configurable:true});
   [...track.children].forEach((card,index)=>Object.defineProperty(card,'offsetLeft',{value:index*200}));
-  track.scrollBy=({left})=>{track.scrollLeft=Math.max(0,Math.min(400,track.scrollLeft+left));window.dispatchEvent(new Event('resize'));};
+  track.scrollTo=({left,behavior})=>{moves.push({left,behavior});track.scrollLeft=left;track.dispatchEvent(new Event('scroll'));};
   await act(async()=>window.dispatchEvent(new Event('resize')));
   const [previous,next]=node.querySelectorAll('.home-carousel-navigation button');
-  assert.equal(previous.disabled,true);assert.equal(next.disabled,false);
-  await click(next);assert.ok(track.scrollLeft>0);assert.equal(previous.disabled,false);
-  await key(track,'ArrowRight');await click(next);
-  assert.equal(track.scrollLeft,400);assert.equal(next.disabled,true);
-  await click(previous);assert.ok(track.scrollLeft<400);
+  const counter=()=>node.querySelector('.home-carousel-count').textContent;
+  const finish=()=>act(async()=>track.dispatchEvent(new Event('scrollend')));
+  assert.equal(previous.disabled,false);assert.equal(next.disabled,false);
+  assert.equal(node.querySelectorAll('.home-carousel-slide:not([aria-hidden]) a').length,3);
+  assert.ok([...node.querySelectorAll('.home-carousel-slide[aria-hidden] a')].every(a=>a.tabIndex===-1));
+  await click(next);await finish();assert.match(counter(),/^02/);
+  await key(track,'ArrowRight');await finish();assert.match(counter(),/^03/);
+  const before=track.scrollLeft;
+  await click(next);assert.ok(moves.at(-1).left>before,'El paso al primero mantiene la dirección de avance');
+  await finish();assert.match(counter(),/^01/);
+  await click(previous);await finish();assert.match(counter(),/^03/);
+  const last=track.scrollLeft;
+  await key(track.querySelector('a'),'ArrowRight');assert.equal(track.scrollLeft,last,'No intercepta teclas de enlaces internos');
 });
 
 test('los controles del Atlas responden al teclado desde la opción enfocada',async()=>{

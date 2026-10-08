@@ -1,7 +1,7 @@
 {
   "reviewedAt": "2026-10-07",
   "units": "SVG coordinate units squared",
-  "measuredCells": 1712,
+  "measuredCells": 2387,
   "series": [
     {
       "name": "Castilla",
@@ -396,8 +396,8 @@
         "unmeasured": []
       },
       "corrected1651": {
-        "cells": 33,
-        "svgArea": 97.95178,
+        "cells": 66,
+        "svgArea": 193.49408,
         "unmeasured": []
       },
       "sources": [
@@ -426,8 +426,8 @@
         "unmeasured": []
       },
       "corrected1651": {
-        "cells": 29,
-        "svgArea": 100.6182,
+        "cells": 66,
+        "svgArea": 222.10009,
         "unmeasured": []
       },
       "sources": [
@@ -456,8 +456,8 @@
         "unmeasured": []
       },
       "corrected1651": {
-        "cells": 27,
-        "svgArea": 72.83519,
+        "cells": 59,
+        "svgArea": 155.97343,
         "unmeasured": []
       },
       "sources": [
@@ -1049,8 +1049,8 @@
       "cuts": [
         {
           "year": 1699,
-          "cells": 27,
-          "svgArea": 72.83519,
+          "cells": 49,
+          "svgArea": 123.06452,
           "unmeasured": [],
           "event": "Soberanía habsbúrgica reconocida en Karlowitz; provincia con administración propia."
         }
@@ -1542,5 +1542,1906 @@
     "Las particiones internas de Silesia no desaparecen: el color de la Corona representa soberanía superior, no propiedad ducal directa.",
     "Anatolia incorpora superficies occidentales, costa póntica, Karaman y provincias orientales. Van y Kars tienen series propias; el detalle de cada fortaleza y los beylicatos durante el interregno sigue pendiente; no se copian las máscaras del HTML adjunto.",
     "Los cortes de 1699 y 1718 resumen tratados; el detalle de los cambios militares de 1683–1698 sigue pendiente."
+  ],
+  "frontierReviewedAt": "2026-10-08",
+  "frontierLayers": [
+    {
+      "name": "Hungría",
+      "coverage": {
+        "from": 1200,
+        "through": 1526
+      },
+      "sources": [
+        {
+          "title": "C. A. Macartney · Hungary: A Short History, Biblioteca Nacional de Hungría",
+          "url": "https://mek.oszk.hu/02000/02086/02086.htm",
+          "locator": "Caps.1–5: reino medieval y partición; Karlowitz conserva el Banato otomano. Diferenciar el reino de Croacia y la administración separada del Banato."
+        },
+        {
+          "title": "Géza Dávid · TDV · Budin",
+          "url": "https://islamansiklopedisi.org.tr/budin",
+          "locator": "Gobiernos rivales de 1526–1529; eyalato desde 1541; registro territorial de los sancados, conquista habsbúrgica de 1686. La incursión de 1526 no es anexión permanente de toda Hungría."
+        }
+      ],
+      "cuts": [
+        {
+          "year": 1200,
+          "cells": 188,
+          "svgArea": 562.62444,
+          "unmeasured": [],
+          "event": "Reino medieval; Croacia conserva jurisdicción propia."
+        },
+        {
+          "year": 1412,
+          "cells": 187,
+          "svgArea": 558.77566,
+          "unmeasured": [],
+          "event": "Prenda de ciudades del Spiš a Polonia; celda aproximada."
+        },
+        {
+          "year": 1526,
+          "cells": 183,
+          "svgArea": 544.80865,
+          "unmeasured": [],
+          "event": "Mohács y gobiernos rivales: el corte anual no supone control uniforme."
+        }
+      ]
+    },
+    {
+      "name": "Núcleo oriental de Zápolya",
+      "coverage": {
+        "from": 1526,
+        "through": 1540
+      },
+      "sources": [
+        {
+          "title": "C. A. Macartney · Hungary: A Short History, Biblioteca Nacional de Hungría",
+          "url": "https://mek.oszk.hu/02000/02086/02086.htm",
+          "locator": "Caps.1–5: reino medieval y partición; Karlowitz conserva el Banato otomano. Diferenciar el reino de Croacia y la administración separada del Banato."
+        },
+        {
+          "title": "Academia de Ciencias de Hungría · History of Transylvania",
+          "url": "https://mek.oszk.hu/03400/03407/html/",
+          "locator": "Vol.II: principado y Partium, frontera cambiante, Várad perdida en 1660; ocupación de 1551–1556 y dominación imperial posterior."
+        },
+        {
+          "title": "Géza Dávid · TDV · Budin",
+          "url": "https://islamansiklopedisi.org.tr/budin",
+          "locator": "Gobiernos rivales de 1526–1529; eyalato desde 1541; registro territorial de los sancados, conquista habsbúrgica de 1686. La incursión de 1526 no es anexión permanente de toda Hungría."
+        }
+      ],
+      "cuts": [
+        {
+          "year": 1526,
+          "cells": 118,
+          "svgArea": 355.10049,
+          "unmeasured": [],
+          "event": "Gobierno rival de Juan I, no una frontera estable."
+        },
+        {
+          "year": 1527,
+          "cells": 120,
+          "svgArea": 362.48008,
+          "unmeasured": [],
+          "event": "Fernando ocupa Buda; Juan mantiene la base oriental."
+        },
+        {
+          "year": 1529,
+          "cells": 120,
+          "svgArea": 358.77438,
+          "unmeasured": [],
+          "event": "Buda restituida a Juan bajo protección otomana."
+        },
+        {
+          "year": 1537,
+          "cells": 122,
+          "svgArea": 366.6867,
+          "unmeasured": [],
+          "event": "Požega pasa a administración otomana."
+        }
+      ]
+    },
+    {
+      "name": "Hungría real",
+      "coverage": {
+        "from": 1527,
+        "through": 1800
+      },
+      "sources": [
+        {
+          "title": "C. A. Macartney · Hungary: A Short History, Biblioteca Nacional de Hungría",
+          "url": "https://mek.oszk.hu/02000/02086/02086.htm",
+          "locator": "Caps.1–5: reino medieval y partición; Karlowitz conserva el Banato otomano. Diferenciar el reino de Croacia y la administración separada del Banato."
+        },
+        {
+          "title": "Géza Dávid · TDV · Budin",
+          "url": "https://islamansiklopedisi.org.tr/budin",
+          "locator": "Gobiernos rivales de 1526–1529; eyalato desde 1541; registro territorial de los sancados, conquista habsbúrgica de 1686. La incursión de 1526 no es anexión permanente de toda Hungría."
+        },
+        {
+          "title": "Géza Dávid · TDV · Tımışvar",
+          "url": "https://islamansiklopedisi.org.tr/timisvar",
+          "locator": "Eyalato 1552–1716. El Banato no se cede con el resto de Hungría en 1699; su reincorporación administrativa a Hungría (1778–1779) se contrasta con Macartney."
+        },
+        {
+          "title": "Academia de Ciencias de Hungría · History of Transylvania",
+          "url": "https://mek.oszk.hu/03400/03407/html/",
+          "locator": "Vol.II: principado y Partium, frontera cambiante, Várad perdida en 1660; ocupación de 1551–1556 y dominación imperial posterior."
+        },
+        {
+          "title": "Municipio de Gyula · Historia",
+          "url": "https://gyula.hu/gyula/elet-gyulan/varosinformacio/varostortenet/",
+          "locator": "Ciudad y castillo de Fernando en la década de 1550; conquista otomana de 1566 y recuperación de 1695. La tributación rural anterior no implica la caída del castillo."
+        },
+        {
+          "title": "Mihai Maxim · TDV · Varad",
+          "url": "https://islamansiklopedisi.org.tr/varad",
+          "locator": "Eyalato de Várad desde 1660; conquista imperial y fin de la administración otomana regional en 1692."
+        }
+      ],
+      "cuts": [
+        {
+          "year": 1527,
+          "cells": 84,
+          "svgArea": 249.19517,
+          "unmeasured": [],
+          "event": "Hungría occidental y septentrional; control rival."
+        },
+        {
+          "year": 1529,
+          "cells": 83,
+          "svgArea": 248.37043,
+          "unmeasured": [],
+          "event": "Buda vuelve a Juan I."
+        },
+        {
+          "year": 1537,
+          "cells": 81,
+          "svgArea": 239.98566,
+          "unmeasured": [],
+          "event": "Pérdida de Požega; Buda sigue fuera del gobierno de Fernando."
+        },
+        {
+          "year": 1543,
+          "cells": 75,
+          "svgArea": 221.92923,
+          "unmeasured": [],
+          "event": "Pérdida de Esztergom."
+        },
+        {
+          "year": 1552,
+          "cells": 74,
+          "svgArea": 220.31465,
+          "unmeasured": [],
+          "event": "Conquista de Nógrád y las comarcas centrales."
+        },
+        {
+          "year": 1566,
+          "cells": 68,
+          "svgArea": 200.92149,
+          "unmeasured": [],
+          "event": "Pérdidas en Somogy y Gyula."
+        },
+        {
+          "year": 1596,
+          "cells": 67,
+          "svgArea": 196.52978,
+          "unmeasured": [],
+          "event": "Pérdida de Eger."
+        },
+        {
+          "year": 1600,
+          "cells": 66,
+          "svgArea": 193.49408,
+          "unmeasured": [],
+          "event": "Conquista de Kanizsa."
+        },
+        {
+          "year": 1686,
+          "cells": 102,
+          "svgArea": 311.95295,
+          "unmeasured": [],
+          "event": "Recuperación de Buda; Eger y Kanizsa todavía no se restituyen."
+        },
+        {
+          "year": 1687,
+          "cells": 103,
+          "svgArea": 316.34466,
+          "unmeasured": [],
+          "event": "Restitución de Eger."
+        },
+        {
+          "year": 1690,
+          "cells": 113,
+          "svgArea": 347.30403,
+          "unmeasured": [],
+          "event": "Restitución de Kanizsa, sin anticipar Gyula."
+        },
+        {
+          "year": 1692,
+          "cells": 118,
+          "svgArea": 366.10184,
+          "unmeasured": [],
+          "event": "Recuperación de Várad/Bihar, sin Gyula."
+        },
+        {
+          "year": 1695,
+          "cells": 120,
+          "svgArea": 372.90775,
+          "unmeasured": [],
+          "event": "Recuperación de Gyula y su ámbito."
+        },
+        {
+          "year": 1699,
+          "cells": 124,
+          "svgArea": 384.65699,
+          "unmeasured": [],
+          "event": "Karlowitz: Hungría bajo los Habsburgo; Transilvania y Banato mantienen administración separada."
+        },
+        {
+          "year": 1779,
+          "cells": 139,
+          "svgArea": 439.55992,
+          "unmeasured": [],
+          "event": "Reincorporación administrativa del Banato de Temes."
+        }
+      ]
+    },
+    {
+      "name": "Hungría otomana",
+      "coverage": {
+        "from": 1526,
+        "through": 1716
+      },
+      "sources": [
+        {
+          "title": "Géza Dávid · TDV · Budin",
+          "url": "https://islamansiklopedisi.org.tr/budin",
+          "locator": "Gobiernos rivales de 1526–1529; eyalato desde 1541; registro territorial de los sancados, conquista habsbúrgica de 1686. La incursión de 1526 no es anexión permanente de toda Hungría."
+        },
+        {
+          "title": "Géza Dávid · TDV · Tımışvar",
+          "url": "https://islamansiklopedisi.org.tr/timisvar",
+          "locator": "Eyalato 1552–1716. El Banato no se cede con el resto de Hungría en 1699; su reincorporación administrativa a Hungría (1778–1779) se contrasta con Macartney."
+        },
+        {
+          "title": "C. A. Macartney · Hungary: A Short History, Biblioteca Nacional de Hungría",
+          "url": "https://mek.oszk.hu/02000/02086/02086.htm",
+          "locator": "Caps.1–5: reino medieval y partición; Karlowitz conserva el Banato otomano. Diferenciar el reino de Croacia y la administración separada del Banato."
+        },
+        {
+          "title": "Municipio de Gyula · Historia",
+          "url": "https://gyula.hu/gyula/elet-gyulan/varosinformacio/varostortenet/",
+          "locator": "Ciudad y castillo de Fernando en la década de 1550; conquista otomana de 1566 y recuperación de 1695. La tributación rural anterior no implica la caída del castillo."
+        },
+        {
+          "title": "Mihai Maxim · TDV · Varad",
+          "url": "https://islamansiklopedisi.org.tr/varad",
+          "locator": "Eyalato de Várad desde 1660; conquista imperial y fin de la administración otomana regional en 1692."
+        }
+      ],
+      "cuts": [
+        {
+          "year": 1526,
+          "cells": 4,
+          "svgArea": 14.96512,
+          "unmeasured": [],
+          "event": "Frontera conquistada; Buda no queda anexada."
+        },
+        {
+          "year": 1529,
+          "cells": 5,
+          "svgArea": 17.81579,
+          "unmeasured": [],
+          "event": "Expansión fronteriza."
+        },
+        {
+          "year": 1537,
+          "cells": 6,
+          "svgArea": 22.07858,
+          "unmeasured": [],
+          "event": "Požega bajo administración otomana."
+        },
+        {
+          "year": 1541,
+          "cells": 21,
+          "svgArea": 72.14818,
+          "unmeasured": [],
+          "event": "Creación del eyalato de Budin."
+        },
+        {
+          "year": 1543,
+          "cells": 29,
+          "svgArea": 97.45113,
+          "unmeasured": [],
+          "event": "Expansión a Pécs y Esztergom."
+        },
+        {
+          "year": 1552,
+          "cells": 56,
+          "svgArea": 188.69822,
+          "unmeasured": [],
+          "event": "Nuevo eyalato de Temesvár; no se anticipa la conquista de Gyula en 1566."
+        },
+        {
+          "year": 1566,
+          "cells": 64,
+          "svgArea": 214.67267,
+          "unmeasured": [],
+          "event": "Expansión meridional."
+        },
+        {
+          "year": 1596,
+          "cells": 65,
+          "svgArea": 219.06438,
+          "unmeasured": [],
+          "event": "Eyalato de Eğri."
+        },
+        {
+          "year": 1600,
+          "cells": 66,
+          "svgArea": 222.10009,
+          "unmeasured": [],
+          "event": "Kanizsa otomana."
+        },
+        {
+          "year": 1660,
+          "cells": 71,
+          "svgArea": 240.8979,
+          "unmeasured": [],
+          "event": "Eyalato de Várad; Debrecen conserva jurisdicción municipal bajo dependencia tributaria."
+        },
+        {
+          "year": 1686,
+          "cells": 35,
+          "svgArea": 122.43903,
+          "unmeasured": [],
+          "event": "Pérdida de Budin; otros ámbitos siguen otomanos."
+        },
+        {
+          "year": 1687,
+          "cells": 34,
+          "svgArea": 118.04732,
+          "unmeasured": [],
+          "event": "Eger deja de ser otomana."
+        },
+        {
+          "year": 1690,
+          "cells": 24,
+          "svgArea": 87.08795,
+          "unmeasured": [],
+          "event": "Kanizsa cae; Gyula aún otomana."
+        },
+        {
+          "year": 1692,
+          "cells": 19,
+          "svgArea": 68.29014,
+          "unmeasured": [],
+          "event": "Pérdida del eyalato de Várad."
+        },
+        {
+          "year": 1695,
+          "cells": 17,
+          "svgArea": 61.48423,
+          "unmeasured": [],
+          "event": "Pérdida de Gyula."
+        },
+        {
+          "year": 1699,
+          "cells": 15,
+          "svgArea": 54.90294,
+          "unmeasured": [],
+          "event": "Karlowitz conserva el Banato de Temesvár."
+        },
+        {
+          "year": 1716,
+          "cells": 0,
+          "svgArea": 0,
+          "unmeasured": [],
+          "event": "Conquista de Temesvár."
+        }
+      ]
+    },
+    {
+      "name": "Transilvania",
+      "coverage": {
+        "from": 1541,
+        "through": 1698
+      },
+      "sources": [
+        {
+          "title": "Academia de Ciencias de Hungría · History of Transylvania",
+          "url": "https://mek.oszk.hu/03400/03407/html/",
+          "locator": "Vol.II: principado y Partium, frontera cambiante, Várad perdida en 1660; ocupación de 1551–1556 y dominación imperial posterior."
+        },
+        {
+          "title": "C. A. Macartney · Hungary: A Short History, Biblioteca Nacional de Hungría",
+          "url": "https://mek.oszk.hu/02000/02086/02086.htm",
+          "locator": "Caps.1–5: reino medieval y partición; Karlowitz conserva el Banato otomano. Diferenciar el reino de Croacia y la administración separada del Banato."
+        }
+      ],
+      "cuts": [
+        {
+          "year": 1541,
+          "cells": 86,
+          "svgArea": 250.4906,
+          "unmeasured": [],
+          "event": "Reino oriental y Partium, antes del título principesco de 1570."
+        },
+        {
+          "year": 1543,
+          "cells": 84,
+          "svgArea": 243.24408,
+          "unmeasured": [],
+          "event": "Conquistas otomanas en la llanura meridional."
+        },
+        {
+          "year": 1551,
+          "cells": 0,
+          "svgArea": 0,
+          "unmeasured": [],
+          "event": "Administración imperial temporal."
+        },
+        {
+          "year": 1556,
+          "cells": 61,
+          "svgArea": 162.55472,
+          "unmeasured": [],
+          "event": "Restauración del gobierno oriental, sin Temesvár y Lipova."
+        },
+        {
+          "year": 1566,
+          "cells": 59,
+          "svgArea": 155.97343,
+          "unmeasured": [],
+          "event": "Pérdidas occidentales frente a los otomanos."
+        },
+        {
+          "year": 1660,
+          "cells": 54,
+          "svgArea": 137.17561,
+          "unmeasured": [],
+          "event": "Várad y su ámbito bajo administración otomana."
+        }
+      ]
+    },
+    {
+      "name": "Ocupación habsbúrgica de Transilvania",
+      "coverage": {
+        "from": 1551,
+        "through": 1555
+      },
+      "sources": [
+        {
+          "title": "Academia de Ciencias de Hungría · History of Transylvania",
+          "url": "https://mek.oszk.hu/03400/03407/html/",
+          "locator": "Vol.II: principado y Partium, frontera cambiante, Várad perdida en 1660; ocupación de 1551–1556 y dominación imperial posterior."
+        }
+      ],
+      "cuts": [
+        {
+          "year": 1551,
+          "cells": 76,
+          "svgArea": 217.45766,
+          "unmeasured": [],
+          "event": "Gobierno temporal imperial."
+        },
+        {
+          "year": 1552,
+          "cells": 61,
+          "svgArea": 162.55472,
+          "unmeasured": [],
+          "event": "Pérdida de Temesvár; continúa la administración imperial de Transilvania."
+        }
+      ]
+    },
+    {
+      "name": "Transilvania habsbúrgica",
+      "coverage": {
+        "from": 1699,
+        "through": 1800
+      },
+      "sources": [
+        {
+          "title": "Academia de Ciencias de Hungría · History of Transylvania",
+          "url": "https://mek.oszk.hu/03400/03407/html/",
+          "locator": "Vol.II: principado y Partium, frontera cambiante, Várad perdida en 1660; ocupación de 1551–1556 y dominación imperial posterior."
+        },
+        {
+          "title": "C. A. Macartney · Hungary: A Short History, Biblioteca Nacional de Hungría",
+          "url": "https://mek.oszk.hu/02000/02086/02086.htm",
+          "locator": "Caps.1–5: reino medieval y partición; Karlowitz conserva el Banato otomano. Diferenciar el reino de Croacia y la administración separada del Banato."
+        }
+      ],
+      "cuts": [
+        {
+          "year": 1699,
+          "cells": 49,
+          "svgArea": 123.06452,
+          "unmeasured": [],
+          "event": "Provincia separada bajo los Habsburgo."
+        }
+      ]
+    },
+    {
+      "name": "Plaza inglesa de Calais",
+      "coverage": {
+        "from": 1347,
+        "through": 1557
+      },
+      "sources": [
+        {
+          "title": "The National Archives · French lands of the English kings",
+          "url": "https://www.nationalarchives.gov.uk/help-with-your-research/research-guides/french-lands-english-kings/",
+          "locator": "Normandía, Ponthieu, Calais y Aquitania; registros administrativos separados. Calais 1347–1558; último dominio continental desde 1453."
+        }
+      ],
+      "cuts": [
+        {
+          "year": 1347,
+          "cells": 1,
+          "svgArea": 0.76463,
+          "unmeasured": [],
+          "event": "Calais inglesa y marcha inmediata."
+        }
+      ]
+    },
+    {
+      "name": "Francia",
+      "coverage": {
+        "from": 1200,
+        "through": 1800
+      },
+      "sources": [
+        {
+          "title": "BnF · Longnon: royaume de France, 1429–1430",
+          "url": "https://gallica.bnf.fr/ark:/12148/btv1b8446192m",
+          "locator": "Comparación visual de las superficies francesas, inglesas y borgoñonas durante la misión de Juana de Arco; no son las fronteras de Francia moderna."
+        },
+        {
+          "title": "BnF · Longnon: royaume de France, 1270",
+          "url": "https://gallica.bnf.fr/ark:/12148/btv1b55010936b",
+          "locator": "Mapa histórico: dominio real, apanages y feudos diferenciados. El Delfinado queda fuera del reino francés."
+        },
+        {
+          "title": "BnF · Franchises du Dauphiné, jurées par Charles en 1349",
+          "url": "https://ccfr.bnf.fr/portailccfr/ark:/16871/004D13A15103",
+          "locator": "Fol. 72, con cartas y tratados de 1349: transmisión del Delfinado y conservación de sus franquicias. El relieve regional aproxima el territorio, sin incluir Saboya ni Barcelonnette."
+        },
+        {
+          "title": "English Heritage · The Sieges of Dover",
+          "url": "https://www.english-heritage.org.uk/sieges-of-dover",
+          "locator": "Pérdida de Normandía y Anjou por Juan en 1204; separar la identidad de los feudos del reino de Inglaterra."
+        },
+        {
+          "title": "Château de Versailles · Versailles et l’Espagne",
+          "url": "https://www.chateauversailles.fr/decouvrir/histoire/les-grandes-dates/versailles-espagne",
+          "locator": "Conquista de Franco Condado en 1674 y cesión en 1678; nuevas plazas de Flandes. Distinguir conquista efectiva y ratificación."
+        },
+        {
+          "title": "Archives diplomatiques · Limites / Espagne",
+          "url": "https://archivesdiplomatiques.diplomatie.gouv.fr/ark:/14366/x5lcmwfsd78p",
+          "locator": "Tratado de los Pirineos, 1659, y delimitación posterior. Puigcerdà y los relieves meridionales de Cerdaña no se ceden con el Rosellón."
+        },
+        {
+          "title": "Archives départementales de Meurthe-et-Moselle · Lettres de noblesse de Stanislas, 1766",
+          "url": "https://archives.meurthe-et-moselle.fr/content/lettres-de-noblesse-donn%C3%A9es-par-le-roi-stanislas-le-13-janvier-1766",
+          "locator": "Incorporación de Lorena y Bar a Francia tras la muerte de Estanislao en 1766, no desde el inicio de su gobierno."
+        },
+        {
+          "title": "Musée de la Corse · La Citadelle",
+          "url": "https://www.museudiacorsica.corsica/fr/la-citadelle/",
+          "locator": "Cesión genovesa de derechos en 1768; conquista francesa de Corte tras Ponte Novu en mayo de 1769. Reino anglocorso de 1794–1796: no soberanía francesa insular continua."
+        },
+        {
+          "title": "National Library of Scotland · Minto, private letters and dispatches, 1794–1796",
+          "url": "https://manuscripts.nls.uk/repositories/2/archival_objects/51542",
+          "locator": "Correspondencia original del virrey de Córcega con el gobierno británico, 1794–1796. La escala anual reúne autoridades durante la recuperación francesa de 1796."
+        },
+        {
+          "title": "The National Archives · French lands of the English kings",
+          "url": "https://www.nationalarchives.gov.uk/help-with-your-research/research-guides/french-lands-english-kings/",
+          "locator": "Normandía, Ponthieu, Calais y Aquitania; registros administrativos separados. Calais 1347–1558; último dominio continental desde 1453."
+        },
+        {
+          "title": "The Gascon Rolls Project · edición de los registros originales C61",
+          "url": "https://www.gasconrolls.org/en/edition/calendars/C61_86/chronological.html",
+          "locator": "Introducción y registros 1373–1374: pérdida de Poitou/Saintonge, dimisión de Eduardo de Woodstock en octubre de 1372 y contracción de Aquitania."
+        },
+        {
+          "title": "Departamento de Ain · Chronologie",
+          "url": "https://patrimoines.ain.fr/chronologie/liste/l-ain-en-dates-2/n%3A134",
+          "locator": "Tratado de Lyon de 1601: Bresse, Bugey, Valromey y Gex; Saluces permanece fuera de Francia."
+        },
+        {
+          "title": "Archives municipales d’Avignon · Réunion à la France",
+          "url": "https://www.expositions-archives.avignon.fr/du-mont-de-pi%C3%A9t%C3%A9-au-cr%C3%A9dit-municipal",
+          "locator": "Decreto de 14 de septiembre de 1791: Avignon y Comtat Venaissin."
+        },
+        {
+          "title": "Académie de Lyon · Charte sapaudine, contexte historique",
+          "url": "https://daac.ac-lyon.fr/docs/docs_charte_sapaudine/CONTEXTE%20HISTORIQUE%202.pdf",
+          "locator": "10 de abril de 1312: cesión del poder político y judicial del arzobispo al rey; no anticipar Lyon antes de esta fecha."
+        },
+        {
+          "title": "Larousse · Comté de Foix",
+          "url": "https://www.larousse.fr/encyclopedie/autre-region/Foix/119785",
+          "locator": "Reunión del condado a la Corona por Enrique IV en 1607, distinta de la unión de Bearne de 1620."
+        },
+        {
+          "title": "Archives communales de Pau · Série EE, Occitanica",
+          "url": "https://www.occitanica.eu/items/show/3279",
+          "locator": "Instituciones bearnesas y reunión a Francia en 1620; se separa el vizcondado de la Bigorra y de la Baja Navarra."
+        },
+        {
+          "title": "Treccani · Armagnac",
+          "url": "https://www.treccani.it/enciclopedia/armagnac_(Enciclopedia-Italiana)/",
+          "locator": "Condado gascón, extinción de la casa en 1497 y reunión de los dominios a Francia en 1607; el título no implica todas las tierras del partido político armagnac."
+        }
+      ],
+      "cuts": [
+        {
+          "year": 1200,
+          "cells": 103,
+          "svgArea": 216.53086,
+          "unmeasured": [],
+          "event": "Superficie regia reconstruida antes de las conquistas de Felipe Augusto."
+        },
+        {
+          "year": 1204,
+          "cells": 152,
+          "svgArea": 326.84309,
+          "unmeasured": [],
+          "event": "Normandía, Anjou, Maine y Touraine."
+        },
+        {
+          "year": 1224,
+          "cells": 166,
+          "svgArea": 360.21075,
+          "unmeasured": [],
+          "event": "Incorporación regional de Poitou."
+        },
+        {
+          "year": 1271,
+          "cells": 206,
+          "svgArea": 450.61137,
+          "unmeasured": [],
+          "event": "Incorporación de Toulouse y Languedoc."
+        },
+        {
+          "year": 1284,
+          "cells": 223,
+          "svgArea": 487.90537,
+          "unmeasured": [],
+          "event": "Champagne vinculada a la Corona, antes de su integración institucional."
+        },
+        {
+          "year": 1312,
+          "cells": 224,
+          "svgArea": 489.80905,
+          "unmeasured": [],
+          "event": "Lyon rejoint la Couronne."
+        },
+        {
+          "year": 1349,
+          "cells": 235,
+          "svgArea": 515.09614,
+          "unmeasured": [],
+          "event": "Delfinado transmitido al delfín, conservando su estatuto propio."
+        },
+        {
+          "year": 1360,
+          "cells": 215,
+          "svgArea": 465.9931,
+          "unmeasured": [],
+          "event": "Brétigny: control inglés ampliado en Aquitania."
+        },
+        {
+          "year": 1373,
+          "cells": 261,
+          "svgArea": 573.08666,
+          "unmeasured": [],
+          "event": "Reconquistas tras la contracción inglesa."
+        },
+        {
+          "year": 1375,
+          "cells": 264,
+          "svgArea": 579.36841,
+          "unmeasured": [],
+          "event": "Reconquistas de Carlos V; Guyena costera permanece inglesa."
+        },
+        {
+          "year": 1419,
+          "cells": 237,
+          "svgArea": 521.89457,
+          "unmeasured": [],
+          "event": "Conquista inglesa de Normandía."
+        },
+        {
+          "year": 1422,
+          "cells": 215,
+          "svgArea": 481.1779,
+          "unmeasured": [],
+          "event": "Gobiernos rivales tras Troyes; no extinguir todo el reino francés."
+        },
+        {
+          "year": 1436,
+          "cells": 237,
+          "svgArea": 521.89457,
+          "unmeasured": [],
+          "event": "Recuperación de París."
+        },
+        {
+          "year": 1450,
+          "cells": 264,
+          "svgArea": 579.36841,
+          "unmeasured": [],
+          "event": "Reconquista de Normandía."
+        },
+        {
+          "year": 1453,
+          "cells": 285,
+          "svgArea": 622.36716,
+          "unmeasured": [],
+          "event": "Continuidad de la superficie regional revisada."
+        },
+        {
+          "year": 1461,
+          "cells": 286,
+          "svgArea": 622.91853,
+          "unmeasured": [],
+          "event": "Continuidad de la superficie regional revisada."
+        },
+        {
+          "year": 1462,
+          "cells": 290,
+          "svgArea": 631.18623,
+          "unmeasured": [],
+          "event": "Continuidad de la superficie regional revisada."
+        },
+        {
+          "year": 1468,
+          "cells": 289,
+          "svgArea": 630.63486,
+          "unmeasured": [],
+          "event": "Continuidad de la superficie regional revisada."
+        },
+        {
+          "year": 1477,
+          "cells": 308,
+          "svgArea": 674.22401,
+          "unmeasured": [],
+          "event": "Continuidad de la superficie regional revisada."
+        },
+        {
+          "year": 1486,
+          "cells": 320,
+          "svgArea": 700.84499,
+          "unmeasured": [],
+          "event": "Continuidad de la superficie regional revisada."
+        },
+        {
+          "year": 1493,
+          "cells": 316,
+          "svgArea": 692.57729,
+          "unmeasured": [],
+          "event": "Continuidad de la superficie regional revisada."
+        },
+        {
+          "year": 1532,
+          "cells": 343,
+          "svgArea": 759.09443,
+          "unmeasured": [],
+          "event": "Continuidad de la superficie regional revisada."
+        },
+        {
+          "year": 1558,
+          "cells": 344,
+          "svgArea": 759.85906,
+          "unmeasured": [],
+          "event": "Continuidad de la superficie regional revisada."
+        },
+        {
+          "year": 1601,
+          "cells": 349,
+          "svgArea": 768.41225,
+          "unmeasured": [],
+          "event": "Lyon: Bresse, Bugey y Gex."
+        },
+        {
+          "year": 1607,
+          "cells": 357,
+          "svgArea": 785.16224,
+          "unmeasured": [],
+          "event": "Reunión de los dominios patrimoniales franceses de Enrique IV."
+        },
+        {
+          "year": 1620,
+          "cells": 363,
+          "svgArea": 800.72894,
+          "unmeasured": [],
+          "event": "Unión de Bearne, distinta de los feudos de 1607."
+        },
+        {
+          "year": 1648,
+          "cells": 370,
+          "svgArea": 812.35492,
+          "unmeasured": [],
+          "event": "Westfalia: Tres Obispados y dominios habsbúrgicos alsacianos; no Mulhouse ni toda Alsacia."
+        },
+        {
+          "year": 1659,
+          "cells": 379,
+          "svgArea": 825.91286,
+          "unmeasured": [],
+          "event": "Pirineos: Rosellón y parte de Artois. Puigcerdà permanece al sur de la frontera."
+        },
+        {
+          "year": 1662,
+          "cells": 380,
+          "svgArea": 827.32427,
+          "unmeasured": [],
+          "event": "Compra de Dunkerque."
+        },
+        {
+          "year": 1668,
+          "cells": 382,
+          "svgArea": 829.91118,
+          "unmeasured": [],
+          "event": "Lille y Douai ratificadas en Aquisgrán."
+        },
+        {
+          "year": 1674,
+          "cells": 395,
+          "svgArea": 858.27087,
+          "unmeasured": [],
+          "event": "Conquista de Franco Condado; cesión jurídica en 1678."
+        },
+        {
+          "year": 1678,
+          "cells": 399,
+          "svgArea": 865.99014,
+          "unmeasured": [],
+          "event": "Nimega: Franco Condado y plazas flamencas."
+        },
+        {
+          "year": 1681,
+          "cells": 400,
+          "svgArea": 867.43916,
+          "unmeasured": [],
+          "event": "Estrasburgo incorporada."
+        },
+        {
+          "year": 1766,
+          "cells": 416,
+          "svgArea": 893.44286,
+          "unmeasured": [],
+          "event": "Lorena y Bar integrados tras la muerte de Estanislao."
+        },
+        {
+          "year": 1769,
+          "cells": 425,
+          "svgArea": 908.08475,
+          "unmeasured": [],
+          "event": "Conquista efectiva de Córcega, posterior a la cesión de derechos de 1768."
+        },
+        {
+          "year": 1791,
+          "cells": 426,
+          "svgArea": 910.70188,
+          "unmeasured": [],
+          "event": "Reunión de Avignon y Comtat."
+        },
+        {
+          "year": 1792,
+          "cells": 436,
+          "svgArea": 930.31173,
+          "unmeasured": [],
+          "event": "Saboya integrada en la República francesa."
+        },
+        {
+          "year": 1793,
+          "cells": 440,
+          "svgArea": 940.2442,
+          "unmeasured": [],
+          "event": "Niza integrada; las ocupaciones del Rin no equivalen a anexión jurídica."
+        },
+        {
+          "year": 1794,
+          "cells": 431,
+          "svgArea": 925.6023,
+          "unmeasured": [],
+          "event": "Reino anglocorso: no se mantiene el dominio francés de toda la isla."
+        },
+        {
+          "year": 1796,
+          "cells": 440,
+          "svgArea": 940.2442,
+          "unmeasured": [],
+          "event": "Recuperación francesa de Córcega; el corte anual reúne el relevo de autoridades."
+        }
+      ]
+    },
+    {
+      "name": "Bulgaria",
+      "coverage": {
+        "from": 1200,
+        "through": 1370
+      },
+      "sources": [
+        {
+          "title": "Universidad de Atenas · G. Arvaniti, relaciones bizantino-búlgaras (2018)",
+          "url": "https://pergamos.lib.uoa.gr/uoa/dl/object/2819196/file.pdf",
+          "locator": "pp.27–45 y mapa p.106 (PDF p.111): expansión y contracción bajo los Asen; separar las áreas rayadas de vasallaje. No se adopta sin reserva su gran ámbito al norte del Danubio."
+        },
+        {
+          "title": "Museo Histórico de Veliko Tarnovo · Iglesia de los Cuarenta Mártires",
+          "url": "https://tickets.museumvt.com/en/sites-tickets/holy-forty-martyr-s-church-and-the-great-laurel-monastic-complex?ulo=true",
+          "locator": "Inscripción original de Iván Asen II y victoria de 1230; Kaloyan muerto en 1207. Acredita autoridad y acontecimientos, no todos los contornos."
+        },
+        {
+          "title": "Museo de Knjaževac · Vidin y la región del Timok",
+          "url": "https://pojmovnik.muzejknjazevac.org.rs/pojam/vidin/",
+          "locator": "Región entre Iskar y Timok; conquista otomana de Vidin en 1396. La celda de Koželj se verifica en Serbia, no por mera coincidencia del nombre."
+        },
+        {
+          "title": "Kemal Karpat · TDV · Dobruca",
+          "url": "https://islamansiklopedisi.org.tr/dobruca",
+          "locator": "Principado de Balik, Dobrotitsa e Ivanko; expansión de 1359 y transición disputada de fines del XIV. No todo el territorio moderno ni una soberanía búlgara uniforme."
+        }
+      ],
+      "cuts": [
+        {
+          "year": 1200,
+          "cells": 41,
+          "svgArea": 111.61733,
+          "unmeasured": [],
+          "event": "Marco conservador de Moesia; no anticipar Varna."
+        },
+        {
+          "year": 1201,
+          "cells": 42,
+          "svgArea": 113.73907,
+          "unmeasured": [],
+          "event": "Conquista de Varna."
+        },
+        {
+          "year": 1205,
+          "cells": 74,
+          "svgArea": 184.63075,
+          "unmeasured": [],
+          "event": "Expansión hacia Sredets y Tracia; cortes regionales, no un frente diario."
+        },
+        {
+          "year": 1230,
+          "cells": 97,
+          "svgArea": 251.28226,
+          "unmeasured": [],
+          "event": "Klokotnitsa: expansión meridional. Tesalónica y Epiro no se convierten en dominio directo."
+        },
+        {
+          "year": 1246,
+          "cells": 62,
+          "svgArea": 160.79797,
+          "unmeasured": [],
+          "event": "Contracción frente a Nicea después de la muerte de Kalimán."
+        },
+        {
+          "year": 1304,
+          "cells": 63,
+          "svgArea": 164.45532,
+          "unmeasured": [],
+          "event": "Recuperaciones de Teodoro Svetoslav."
+        },
+        {
+          "year": 1344,
+          "cells": 69,
+          "svgArea": 176.66057,
+          "unmeasured": [],
+          "event": "Cesiones tracias a Iván Alejandro."
+        },
+        {
+          "year": 1346,
+          "cells": 65,
+          "svgArea": 163.5457,
+          "unmeasured": [],
+          "event": "Principado costero diferenciado."
+        },
+        {
+          "year": 1359,
+          "cells": 59,
+          "svgArea": 142.13342,
+          "unmeasured": [],
+          "event": "Expansión septentrional del despotado de Dobruja."
+        },
+        {
+          "year": 1360,
+          "cells": 51,
+          "svgArea": 124.25967,
+          "unmeasured": [],
+          "event": "Vidin y Dobruja tienen gobiernos separados."
+        },
+        {
+          "year": 1369,
+          "cells": 50,
+          "svgArea": 122.13794,
+          "unmeasured": [],
+          "event": "Varna pasa al despotado costero."
+        }
+      ]
+    },
+    {
+      "name": "Zarato de Tarnovo",
+      "coverage": {
+        "from": 1371,
+        "through": 1395
+      },
+      "sources": [
+        {
+          "title": "Universidad de Atenas · G. Arvaniti, relaciones bizantino-búlgaras (2018)",
+          "url": "https://pergamos.lib.uoa.gr/uoa/dl/object/2819196/file.pdf",
+          "locator": "pp.27–45 y mapa p.106 (PDF p.111): expansión y contracción bajo los Asen; separar las áreas rayadas de vasallaje. No se adopta sin reserva su gran ámbito al norte del Danubio."
+        },
+        {
+          "title": "Museo de Knjaževac · Vidin y la región del Timok",
+          "url": "https://pojmovnik.muzejknjazevac.org.rs/pojam/vidin/",
+          "locator": "Región entre Iskar y Timok; conquista otomana de Vidin en 1396. La celda de Koželj se verifica en Serbia, no por mera coincidencia del nombre."
+        },
+        {
+          "title": "Kemal Karpat · TDV · Dobruca",
+          "url": "https://islamansiklopedisi.org.tr/dobruca",
+          "locator": "Principado de Balik, Dobrotitsa e Ivanko; expansión de 1359 y transición disputada de fines del XIV. No todo el territorio moderno ni una soberanía búlgara uniforme."
+        }
+      ],
+      "cuts": [
+        {
+          "year": 1371,
+          "cells": 50,
+          "svgArea": 122.13794,
+          "unmeasured": [],
+          "event": "Zarato oriental de Iván Shishman."
+        },
+        {
+          "year": 1382,
+          "cells": 43,
+          "svgArea": 105.56638,
+          "unmeasured": [],
+          "event": "Pérdida del área de Sofía."
+        },
+        {
+          "year": 1388,
+          "cells": 10,
+          "svgArea": 25.47039,
+          "unmeasured": [],
+          "event": "Contracción tras la campaña otomana de 1388."
+        },
+        {
+          "year": 1393,
+          "cells": 1,
+          "svgArea": 3.18418,
+          "unmeasured": [],
+          "event": "Tarnovo cae; Shishman conserva Nikopol hasta 1395."
+        }
+      ]
+    },
+    {
+      "name": "Zarato de Vidin",
+      "coverage": {
+        "from": 1360,
+        "through": 1396
+      },
+      "sources": [
+        {
+          "title": "Museo de Knjaževac · Vidin y la región del Timok",
+          "url": "https://pojmovnik.muzejknjazevac.org.rs/pojam/vidin/",
+          "locator": "Región entre Iskar y Timok; conquista otomana de Vidin en 1396. La celda de Koželj se verifica en Serbia, no por mera coincidencia del nombre."
+        },
+        {
+          "title": "Municipio de Vidin · Historia de Vidin",
+          "url": "https://old.vidin.bg/pages/Istoriq-na-Vidin-140",
+          "locator": "Estado de Iván Sratsimir y caída de 1396; no extender Vidin sobre toda Bulgaria."
+        },
+        {
+          "title": "Universidad de Atenas · G. Arvaniti, relaciones bizantino-búlgaras (2018)",
+          "url": "https://pergamos.lib.uoa.gr/uoa/dl/object/2819196/file.pdf",
+          "locator": "pp.27–45 y mapa p.106 (PDF p.111): expansión y contracción bajo los Asen; separar las áreas rayadas de vasallaje. No se adopta sin reserva su gran ámbito al norte del Danubio."
+        }
+      ],
+      "cuts": [
+        {
+          "year": 1360,
+          "cells": 9,
+          "svgArea": 22.05934,
+          "unmeasured": [],
+          "event": "Gobierno regional de Iván Sratsimir."
+        },
+        {
+          "year": 1365,
+          "cells": 0,
+          "svgArea": 0,
+          "unmeasured": [],
+          "event": "Ocupación húngara; el zar permanece cautivo."
+        },
+        {
+          "year": 1369,
+          "cells": 9,
+          "svgArea": 22.05934,
+          "unmeasured": [],
+          "event": "Restauración de Iván Sratsimir."
+        },
+        {
+          "year": 1396,
+          "cells": 0,
+          "svgArea": 0,
+          "unmeasured": [],
+          "event": "Conquista otomana de Vidin; termina la superficie regia."
+        }
+      ]
+    },
+    {
+      "name": "Vidin · ocupación húngara",
+      "coverage": {
+        "from": 1365,
+        "through": 1368
+      },
+      "sources": [
+        {
+          "title": "Universidad de Atenas · G. Arvaniti, relaciones bizantino-búlgaras (2018)",
+          "url": "https://pergamos.lib.uoa.gr/uoa/dl/object/2819196/file.pdf",
+          "locator": "pp.27–45 y mapa p.106 (PDF p.111): expansión y contracción bajo los Asen; separar las áreas rayadas de vasallaje. No se adopta sin reserva su gran ámbito al norte del Danubio."
+        },
+        {
+          "title": "Museo de Knjaževac · Vidin y la región del Timok",
+          "url": "https://pojmovnik.muzejknjazevac.org.rs/pojam/vidin/",
+          "locator": "Región entre Iskar y Timok; conquista otomana de Vidin en 1396. La celda de Koželj se verifica en Serbia, no por mera coincidencia del nombre."
+        }
+      ],
+      "cuts": [
+        {
+          "year": 1365,
+          "cells": 9,
+          "svgArea": 22.05934,
+          "unmeasured": [],
+          "event": "Gobierno militar húngaro de Vidin."
+        }
+      ]
+    },
+    {
+      "name": "Despotado de Dobruja",
+      "coverage": {
+        "from": 1346,
+        "through": 1388
+      },
+      "sources": [
+        {
+          "title": "Kemal Karpat · TDV · Dobruca",
+          "url": "https://islamansiklopedisi.org.tr/dobruca",
+          "locator": "Principado de Balik, Dobrotitsa e Ivanko; expansión de 1359 y transición disputada de fines del XIV. No todo el territorio moderno ni una soberanía búlgara uniforme."
+        }
+      ],
+      "cuts": [
+        {
+          "year": 1346,
+          "cells": 4,
+          "svgArea": 13.11487,
+          "unmeasured": [],
+          "event": "Dominio costero de Balik y Dobrotitsa."
+        },
+        {
+          "year": 1359,
+          "cells": 10,
+          "svgArea": 34.52715,
+          "unmeasured": [],
+          "event": "Expansión septentrional documentada por Karpat."
+        },
+        {
+          "year": 1369,
+          "cells": 11,
+          "svgArea": 36.64888,
+          "unmeasured": [],
+          "event": "Varna bajo Dobrotitsa."
+        }
+      ]
+    },
+    {
+      "name": "Bulgaria · gobierno rival en Tarnovo",
+      "coverage": {
+        "from": 1279,
+        "through": 1280
+      },
+      "sources": [
+        {
+          "title": "Instituto Lexicográfico Miroslav Krleža · Ivan Asen III",
+          "url": "https://www.enciklopedija.hr/clanak/ivan-asen-iii",
+          "locator": "Reinado rival 1279–1280."
+        }
+      ],
+      "cuts": [
+        {
+          "year": 1279,
+          "cells": 2,
+          "svgArea": 6.12516,
+          "unmeasured": [],
+          "event": "Gobierno de Iván Asen III en la capital, enfrentado a Ivaylo."
+        }
+      ]
+    },
+    {
+      "name": "Sirmia",
+      "coverage": {
+        "from": 1284,
+        "through": 1316
+      },
+      "sources": [
+        {
+          "title": "Instituto Lexicográfico Miroslav Krleža · Stefan Dragutin",
+          "url": "https://www.enciklopedija.hr/clanak/dragutin-stefan",
+          "locator": "1284: Mačva con Belgrado y Usora; señoríos serbios retenidos desde 1282. No identifica este reino con toda la Sirmia geográfica al norte del Sava."
+        }
+      ],
+      "cuts": [
+        {
+          "year": 1284,
+          "cells": 12,
+          "svgArea": 39.05178,
+          "unmeasured": [],
+          "event": "Mačva, Belgrado, Usora/Soli y señoríos retenidos de Dragutin."
+        }
+      ]
+    },
+    {
+      "name": "Croacia medieval",
+      "coverage": {
+        "from": 1200,
+        "through": 1526
+      },
+      "sources": [
+        {
+          "title": "Instituto Lexicográfico Miroslav Krleža · Knin",
+          "url": "https://www.enciklopedija.hr/clanak/knin",
+          "locator": "Centro del reino croata; conquista otomana en mayo de 1522; no todas las ciudades de la costa pertenecen a Croacia."
+        },
+        {
+          "title": "Instituto Lexicográfico Miroslav Krleža · Slavonija",
+          "url": "https://www.enciklopedija.hr/clanak/slavonija",
+          "locator": "Condados medievales de Zagreb y Križevci; incorporación posterior de Varaždin y Virovitica; Požega, Vukovo y Sirmia pertenecen a Hungría, no a la Eslavonia medieval. Desde 1552 la frontera otomana separa el ámbito oriental."
+        },
+        {
+          "title": "C. A. Macartney · Hungary: A Short History, Biblioteca Nacional de Hungría",
+          "url": "https://mek.oszk.hu/02000/02086/02086.htm",
+          "locator": "Caps.1–5: reino medieval y partición; Karlowitz conserva el Banato otomano. Diferenciar el reino de Croacia y la administración separada del Banato."
+        },
+        {
+          "title": "Instituto Lexicográfico Miroslav Krleža · Cetinska krajina",
+          "url": "https://www.enciklopedija.hr/clanak/cetinska-krajina",
+          "locator": "Pérdida de la región de Sinj desde 1513; el artículo de la ciudad ofrece 1524. El corte regional es aproximado y no resuelve cada fortaleza."
+        }
+      ],
+      "cuts": [
+        {
+          "year": 1200,
+          "cells": 9,
+          "svgArea": 24.55484,
+          "unmeasured": [],
+          "event": "Ámbito interior de la Corona croata."
+        },
+        {
+          "year": 1388,
+          "cells": 8,
+          "svgArea": 22.26641,
+          "unmeasured": [],
+          "event": "Knin bajo autoridad bosnia."
+        },
+        {
+          "year": 1393,
+          "cells": 9,
+          "svgArea": 24.55484,
+          "unmeasured": [],
+          "event": "Restauración en Knin."
+        },
+        {
+          "year": 1513,
+          "cells": 8,
+          "svgArea": 22.37192,
+          "unmeasured": [],
+          "event": "Retirar Sinj desde la pérdida regional, sin fijar cada fortaleza."
+        },
+        {
+          "year": 1522,
+          "cells": 7,
+          "svgArea": 20.08349,
+          "unmeasured": [],
+          "event": "Conquista otomana de Knin."
+        }
+      ]
+    },
+    {
+      "name": "Eslavonia medieval",
+      "coverage": {
+        "from": 1200,
+        "through": 1526
+      },
+      "sources": [
+        {
+          "title": "Instituto Lexicográfico Miroslav Krleža · Slavonija",
+          "url": "https://www.enciklopedija.hr/clanak/slavonija",
+          "locator": "Condados medievales de Zagreb y Križevci; incorporación posterior de Varaždin y Virovitica; Požega, Vukovo y Sirmia pertenecen a Hungría, no a la Eslavonia medieval. Desde 1552 la frontera otomana separa el ámbito oriental."
+        },
+        {
+          "title": "C. A. Macartney · Hungary: A Short History, Biblioteca Nacional de Hungría",
+          "url": "https://mek.oszk.hu/02000/02086/02086.htm",
+          "locator": "Caps.1–5: reino medieval y partición; Karlowitz conserva el Banato otomano. Diferenciar el reino de Croacia y la administración separada del Banato."
+        }
+      ],
+      "cuts": [
+        {
+          "year": 1200,
+          "cells": 12,
+          "svgArea": 38.37402,
+          "unmeasured": [],
+          "event": "Jurisdicción regional medieval, no sólo ciudades con carta real."
+        }
+      ]
+    },
+    {
+      "name": "Transilvania medieval",
+      "coverage": {
+        "from": 1200,
+        "through": 1540
+      },
+      "sources": [
+        {
+          "title": "Academia de Ciencias de Hungría · History of Transylvania",
+          "url": "https://mek.oszk.hu/03400/03407/html/",
+          "locator": "Vol.II: principado y Partium, frontera cambiante, Várad perdida en 1660; ocupación de 1551–1556 y dominación imperial posterior."
+        },
+        {
+          "title": "C. A. Macartney · Hungary: A Short History, Biblioteca Nacional de Hungría",
+          "url": "https://mek.oszk.hu/02000/02086/02086.htm",
+          "locator": "Caps.1–5: reino medieval y partición; Karlowitz conserva el Banato otomano. Diferenciar el reino de Croacia y la administración separada del Banato."
+        }
+      ],
+      "cuts": [
+        {
+          "year": 1200,
+          "cells": 49,
+          "svgArea": 123.06452,
+          "unmeasured": [],
+          "event": "Voivodato de la Corona húngara, anterior al principado."
+        }
+      ]
+    },
+    {
+      "name": "Banato de Temes",
+      "coverage": {
+        "from": 1716,
+        "through": 1778
+      },
+      "sources": [
+        {
+          "title": "Géza Dávid · TDV · Tımışvar",
+          "url": "https://islamansiklopedisi.org.tr/timisvar",
+          "locator": "Eyalato 1552–1716. El Banato no se cede con el resto de Hungría en 1699; su reincorporación administrativa a Hungría (1778–1779) se contrasta con Macartney."
+        },
+        {
+          "title": "C. A. Macartney · Hungary: A Short History, Biblioteca Nacional de Hungría",
+          "url": "https://mek.oszk.hu/02000/02086/02086.htm",
+          "locator": "Caps.1–5: reino medieval y partición; Karlowitz conserva el Banato otomano. Diferenciar el reino de Croacia y la administración separada del Banato."
+        }
+      ],
+      "cuts": [
+        {
+          "year": 1716,
+          "cells": 15,
+          "svgArea": 54.90294,
+          "unmeasured": [],
+          "event": "Conquista y administración imperial del Banato; ratificación en 1718."
+        }
+      ]
+    },
+    {
+      "name": "Ducado de Aquitania",
+      "coverage": {
+        "from": 1200,
+        "through": 1452
+      },
+      "sources": [
+        {
+          "title": "The National Archives · French lands of the English kings",
+          "url": "https://www.nationalarchives.gov.uk/help-with-your-research/research-guides/french-lands-english-kings/",
+          "locator": "Normandía, Ponthieu, Calais y Aquitania; registros administrativos separados. Calais 1347–1558; último dominio continental desde 1453."
+        },
+        {
+          "title": "The Gascon Rolls Project · edición de los registros originales C61",
+          "url": "https://www.gasconrolls.org/en/edition/calendars/C61_86/chronological.html",
+          "locator": "Introducción y registros 1373–1374: pérdida de Poitou/Saintonge, dimisión de Eduardo de Woodstock en octubre de 1372 y contracción de Aquitania."
+        },
+        {
+          "title": "The Gascon Rolls Project · Introducción histórica",
+          "url": "https://www.gasconrolls.org/fr/the-project/historical-introduction/index.html",
+          "locator": "Tratados de París y Brétigny; autoridad ducal y soberanía superior francesa no equivalen a propiedad del reino inglés."
+        }
+      ],
+      "cuts": [
+        {
+          "year": 1200,
+          "cells": 56,
+          "svgArea": 120.49336,
+          "unmeasured": [],
+          "event": "Ducado angevino; señoríos interiores y homenaje francés diferenciados."
+        },
+        {
+          "year": 1224,
+          "cells": 20,
+          "svgArea": 40.69603,
+          "unmeasured": [],
+          "event": "Pérdida de Poitou; marco conservador de Guyena."
+        },
+        {
+          "year": 1360,
+          "cells": 70,
+          "svgArea": 156.8888,
+          "unmeasured": [],
+          "event": "Brétigny: ampliación regional de Aquitania."
+        },
+        {
+          "year": 1373,
+          "cells": 20,
+          "svgArea": 40.69603,
+          "unmeasured": [],
+          "event": "Reconquista francesa y contracción al ámbito gascón."
+        },
+        {
+          "year": 1451,
+          "cells": 0,
+          "svgArea": 0,
+          "unmeasured": [],
+          "event": "Primera conquista francesa de Burdeos."
+        },
+        {
+          "year": 1452,
+          "cells": 1,
+          "svgArea": 1.64336,
+          "unmeasured": [],
+          "event": "Retorno inglés local, antes de Castillon."
+        }
+      ]
+    },
+    {
+      "name": "Condado de Anjou",
+      "coverage": {
+        "from": 1200,
+        "through": 1480
+      },
+      "sources": [
+        {
+          "title": "The National Archives · French lands of the English kings",
+          "url": "https://www.nationalarchives.gov.uk/help-with-your-research/research-guides/french-lands-english-kings/",
+          "locator": "Normandía, Ponthieu, Calais y Aquitania; registros administrativos separados. Calais 1347–1558; último dominio continental desde 1453."
+        },
+        {
+          "title": "BnF · Longnon, Francia 1429–1430",
+          "url": "https://gallica.bnf.fr/ark:/12148/btv1b8446192m",
+          "locator": "Mapa de autoridades rivales: Normandía, Maine y París ocupados, dominios borgoñones separados. No colorear toda Francia por el tratado de Troyes."
+        }
+      ],
+      "cuts": [
+        {
+          "year": 1200,
+          "cells": 8,
+          "svgArea": 20.96,
+          "unmeasured": [],
+          "event": "Condado angevino de Juan I."
+        },
+        {
+          "year": 1204,
+          "cells": 8,
+          "svgArea": 20.96,
+          "unmeasured": [],
+          "event": "Incorporación a la Corona francesa; identidad del feudo conservada."
+        }
+      ]
+    },
+    {
+      "name": "Condado de Maine",
+      "coverage": {
+        "from": 1200,
+        "through": 1203
+      },
+      "sources": [
+        {
+          "title": "The National Archives · French lands of the English kings",
+          "url": "https://www.nationalarchives.gov.uk/help-with-your-research/research-guides/french-lands-english-kings/",
+          "locator": "Normandía, Ponthieu, Calais y Aquitania; registros administrativos separados. Calais 1347–1558; último dominio continental desde 1453."
+        }
+      ],
+      "cuts": [
+        {
+          "year": 1200,
+          "cells": 9,
+          "svgArea": 19.00715,
+          "unmeasured": [],
+          "event": "Dominio angevino continental."
+        }
+      ]
+    },
+    {
+      "name": "Touraine angevina",
+      "coverage": {
+        "from": 1200,
+        "through": 1203
+      },
+      "sources": [
+        {
+          "title": "The National Archives · French lands of the English kings",
+          "url": "https://www.nationalarchives.gov.uk/help-with-your-research/research-guides/french-lands-english-kings/",
+          "locator": "Normandía, Ponthieu, Calais y Aquitania; registros administrativos separados. Calais 1347–1558; último dominio continental desde 1453."
+        }
+      ],
+      "cuts": [
+        {
+          "year": 1200,
+          "cells": 5,
+          "svgArea": 12.87125,
+          "unmeasured": [],
+          "event": "Dominio angevino continental."
+        }
+      ]
+    },
+    {
+      "name": "Francia · ocupación inglesa",
+      "coverage": {
+        "from": 1420,
+        "through": 1435
+      },
+      "sources": [
+        {
+          "title": "BnF · Longnon, Francia 1429–1430",
+          "url": "https://gallica.bnf.fr/ark:/12148/btv1b8446192m",
+          "locator": "Mapa de autoridades rivales: Normandía, Maine y París ocupados, dominios borgoñones separados. No colorear toda Francia por el tratado de Troyes."
+        },
+        {
+          "title": "The National Archives · French lands of the English kings",
+          "url": "https://www.nationalarchives.gov.uk/help-with-your-research/research-guides/french-lands-english-kings/",
+          "locator": "Normandía, Ponthieu, Calais y Aquitania; registros administrativos separados. Calais 1347–1558; último dominio continental desde 1453."
+        }
+      ],
+      "cuts": [
+        {
+          "year": 1420,
+          "cells": 12,
+          "svgArea": 23.04701,
+          "unmeasured": [],
+          "event": "Administración anglofrancesa en París y su entorno."
+        }
+      ]
+    },
+    {
+      "name": "Maine · ocupación inglesa",
+      "coverage": {
+        "from": 1425,
+        "through": 1447
+      },
+      "sources": [
+        {
+          "title": "BnF · Longnon, Francia 1429–1430",
+          "url": "https://gallica.bnf.fr/ark:/12148/btv1b8446192m",
+          "locator": "Mapa de autoridades rivales: Normandía, Maine y París ocupados, dominios borgoñones separados. No colorear toda Francia por el tratado de Troyes."
+        },
+        {
+          "title": "The National Archives · French lands of the English kings",
+          "url": "https://www.nationalarchives.gov.uk/help-with-your-research/research-guides/french-lands-english-kings/",
+          "locator": "Normandía, Ponthieu, Calais y Aquitania; registros administrativos separados. Calais 1347–1558; último dominio continental desde 1453."
+        }
+      ],
+      "cuts": [
+        {
+          "year": 1425,
+          "cells": 9,
+          "svgArea": 19.00715,
+          "unmeasured": [],
+          "event": "Conquista y administración inglesa del Maine."
+        }
+      ]
+    },
+    {
+      "name": "Gibraltar · ocupación anglo-neerlandesa",
+      "coverage": {
+        "from": 1704,
+        "through": 1712
+      },
+      "sources": [
+        {
+          "title": "The National Archives · Royal Marines and Utrecht",
+          "url": "https://blog.nationalarchives.gov.uk/happy-350th-anniversary-royal-marines/",
+          "locator": "Captura de Gibraltar en 1704; cesión a la Corona británica por Utrecht en 1713. La celda excede la ciudad y fortificaciones: aproximación regional."
+        }
+      ],
+      "cuts": [
+        {
+          "year": 1704,
+          "cells": 1,
+          "svgArea": 0.53794,
+          "unmeasured": [],
+          "event": "Ocupación de la plaza en nombre del pretendiente Carlos."
+        }
+      ]
+    },
+    {
+      "name": "Gibraltar",
+      "coverage": {
+        "from": 1713,
+        "through": 1800
+      },
+      "sources": [
+        {
+          "title": "The National Archives · Royal Marines and Utrecht",
+          "url": "https://blog.nationalarchives.gov.uk/happy-350th-anniversary-royal-marines/",
+          "locator": "Captura de Gibraltar en 1704; cesión a la Corona británica por Utrecht en 1713. La celda excede la ciudad y fortificaciones: aproximación regional."
+        }
+      ],
+      "cuts": [
+        {
+          "year": 1713,
+          "cells": 1,
+          "svgArea": 0.53794,
+          "unmeasured": [],
+          "event": "Cesión de la ciudad, castillo, puerto y fortificaciones a Gran Bretaña."
+        }
+      ]
+    },
+    {
+      "name": "Menorca británica",
+      "coverage": {
+        "from": 1713,
+        "through": 1800
+      },
+      "sources": [
+        {
+          "title": "Consorcio Militar de Menorca · Ocupación francesa",
+          "url": "https://www.consorciomilitarmenorca.com/es/la-ocupacion-francesa-de-menorca-1756-1763/",
+          "locator": "Dominio francés 1756–1763, intercalado entre los dominios británicos. Conquista española de 1782 y nuevo dominio británico desde 1798."
+        },
+        {
+          "title": "The National Archives · Royal Marines and Utrecht",
+          "url": "https://blog.nationalarchives.gov.uk/happy-350th-anniversary-royal-marines/",
+          "locator": "Captura de Gibraltar en 1704; cesión a la Corona británica por Utrecht en 1713. La celda excede la ciudad y fortificaciones: aproximación regional."
+        }
+      ],
+      "cuts": [
+        {
+          "year": 1713,
+          "cells": 1,
+          "svgArea": 1.19263,
+          "unmeasured": [],
+          "event": "Menorca cedida a Gran Bretaña."
+        },
+        {
+          "year": 1756,
+          "cells": 0,
+          "svgArea": 0,
+          "unmeasured": [],
+          "event": "Conquista francesa."
+        },
+        {
+          "year": 1763,
+          "cells": 1,
+          "svgArea": 1.19263,
+          "unmeasured": [],
+          "event": "Restitución británica."
+        },
+        {
+          "year": 1782,
+          "cells": 0,
+          "svgArea": 0,
+          "unmeasured": [],
+          "event": "Recuperación española."
+        },
+        {
+          "year": 1798,
+          "cells": 1,
+          "svgArea": 1.19263,
+          "unmeasured": [],
+          "event": "Nueva ocupación británica."
+        }
+      ]
+    },
+    {
+      "name": "Menorca · ocupación británica",
+      "coverage": {
+        "from": 1708,
+        "through": 1712
+      },
+      "sources": [
+        {
+          "title": "Consorcio Militar de Menorca · Ocupación francesa",
+          "url": "https://www.consorciomilitarmenorca.com/es/la-ocupacion-francesa-de-menorca-1756-1763/",
+          "locator": "Dominio francés 1756–1763, intercalado entre los dominios británicos. Conquista española de 1782 y nuevo dominio británico desde 1798."
+        }
+      ],
+      "cuts": [
+        {
+          "year": 1708,
+          "cells": 1,
+          "svgArea": 1.19263,
+          "unmeasured": [],
+          "event": "Ocupación aliada anterior a Utrecht."
+        }
+      ]
+    },
+    {
+      "name": "Menorca francesa",
+      "coverage": {
+        "from": 1756,
+        "through": 1762
+      },
+      "sources": [
+        {
+          "title": "Consorcio Militar de Menorca · Ocupación francesa",
+          "url": "https://www.consorciomilitarmenorca.com/es/la-ocupacion-francesa-de-menorca-1756-1763/",
+          "locator": "Dominio francés 1756–1763, intercalado entre los dominios británicos. Conquista española de 1782 y nuevo dominio británico desde 1798."
+        }
+      ],
+      "cuts": [
+        {
+          "year": 1756,
+          "cells": 1,
+          "svgArea": 1.19263,
+          "unmeasured": [],
+          "event": "Ocupación y administración francesa."
+        }
+      ]
+    },
+    {
+      "name": "Electorado de Hannover",
+      "coverage": {
+        "from": 1692,
+        "through": 1800
+      },
+      "sources": [
+        {
+          "title": "Gobierno de Baja Sajonia · Ascenso de Hannover",
+          "url": "https://www.niedersachsen.de/startseite/land_leute/die_geschichte/geschichte_des_landes_niedersachsen/entstehung_des_absolutismus_und_aufstieg_kurhannovers/entstehung-des-absolutismus-und-aufstieg-kurhannovers-19813.html",
+          "locator": "Unión personal de 1714, no incorporación a Gran Bretaña; Bremen-Verden adquirido en 1715, título ratificado en 1719; Bentheim prendado desde 1752."
+        },
+        {
+          "title": "Municipio de Celle · Historia",
+          "url": "https://www.celle.de/Stadt/%C3%9Cber-Celle/Stadtgeschichte/?La=1",
+          "locator": "Extinción de la rama de Celle y herencia en 1705; no adjudicar Lüneburg a Hannover desde 1692."
+        }
+      ],
+      "cuts": [
+        {
+          "year": 1692,
+          "cells": 9,
+          "svgArea": 17.32136,
+          "unmeasured": [],
+          "event": "Dignidad electoral: Calenberg y dominios asociados, sin Celle."
+        },
+        {
+          "year": 1705,
+          "cells": 24,
+          "svgArea": 44.62296,
+          "unmeasured": [],
+          "event": "Herencia de Lüneburg-Celle y dominios asociados."
+        },
+        {
+          "year": 1715,
+          "cells": 30,
+          "svgArea": 54.52676,
+          "unmeasured": [],
+          "event": "Adquisición de Bremen-Verden; ratificación sueca en 1719."
+        }
+      ]
+    },
+    {
+      "name": "Condado de Foix",
+      "coverage": {
+        "from": 1200,
+        "through": 1606
+      },
+      "sources": [
+        {
+          "title": "IRHT · Carta de Roger IV para Lézat, 1244",
+          "url": "https://telma-chartes.irht.cnrs.fr/chartae-galliae.php/112340",
+          "locator": "Título de conde de Foix y homenaje al abad: las jurisdicciones señoriales y eclesiásticas pueden coexistir dentro de una celda; el título no acredita toda propiedad local."
+        },
+        {
+          "title": "Larousse · Comté de Foix",
+          "url": "https://www.larousse.fr/encyclopedie/autre-region/Foix/119785",
+          "locator": "Reunión del condado a la Corona por Enrique IV en 1607, distinta de la unión de Bearne de 1620."
+        }
+      ],
+      "cuts": [
+        {
+          "year": 1200,
+          "cells": 3,
+          "svgArea": 4.9624,
+          "unmeasured": [],
+          "event": "Condado antes de la cruzada albigense."
+        },
+        {
+          "year": 1209,
+          "cells": 2,
+          "svgArea": 2.88101,
+          "unmeasured": [],
+          "event": "Mirepoix fuera del gobierno condal."
+        }
+      ]
+    },
+    {
+      "name": "Vizcondado de Bearne",
+      "coverage": {
+        "from": 1200,
+        "through": 1619
+      },
+      "sources": [
+        {
+          "title": "Archives communales de Pau · Série EE, Occitanica",
+          "url": "https://www.occitanica.eu/items/show/3279",
+          "locator": "Instituciones bearnesas y reunión a Francia en 1620; se separa el vizcondado de la Bigorra y de la Baja Navarra."
+        }
+      ],
+      "cuts": [
+        {
+          "year": 1200,
+          "cells": 3,
+          "svgArea": 7.05403,
+          "unmeasured": [],
+          "event": "Superficie regional bearnesa."
+        }
+      ]
+    },
+    {
+      "name": "Condado de Champaña",
+      "coverage": {
+        "from": 1200,
+        "through": 1360
+      },
+      "sources": [
+        {
+          "title": "FranceArchives · La Champagne au temps des comtes",
+          "url": "https://francearchives.gouv.fr/fr/actualite/1166490060",
+          "locator": "Principado de Champaña y Brie: matrimonio de 1284 e integración progresiva; culminación de los derechos en 1361. No se confunde con todas las diócesis de Champagne."
+        }
+      ],
+      "cuts": [
+        {
+          "year": 1200,
+          "cells": 13,
+          "svgArea": 29.02292,
+          "unmeasured": [],
+          "event": "Champaña y Brie: ámbito condal aproximado, excluido Reims arzobispal."
+        }
+      ]
+    },
+    {
+      "name": "Condado de Armagnac",
+      "coverage": {
+        "from": 1200,
+        "through": 1606
+      },
+      "sources": [
+        {
+          "title": "Treccani · Armagnac",
+          "url": "https://www.treccani.it/enciclopedia/armagnac_(Enciclopedia-Italiana)/",
+          "locator": "Condado gascón, extinción de la casa en 1497 y reunión de los dominios a Francia en 1607; el título no implica todas las tierras del partido político armagnac."
+        }
+      ],
+      "cuts": [
+        {
+          "year": 1200,
+          "cells": 5,
+          "svgArea": 11.96889,
+          "unmeasured": [],
+          "event": "Ámbito regional gascón del condado."
+        }
+      ]
+    }
+  ],
+  "frontierLimitations": [
+    "Contornos regionales aproximados, contrastados visualmente. No reconstruyen todas las guarniciones ni cada frontera diaria.",
+    "No se importa automáticamente la cartografía del HTML de referencia: algunas atribuciones abarcan estados vecinos.",
+    "Las atribuciones feudales francesas anteriores a 1453 siguen distinguiendo el dominio del rey de los feudos. No se presenta una frontera única e inmóvil durante la Guerra de los Cien Años."
   ]
 }

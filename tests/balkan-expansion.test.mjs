@@ -104,7 +104,9 @@ test('the western Transylvanian Crasna is not assigned to Moldavia by its ambigu
     assert(!owners.some(owner => owner.name === 'Principado de Moldavia'), String(year));
   }
   const owners = politicalMosaicAt(integrated,1530).byLocation.get('Crasna');
-  assert.deepEqual(owners.map(owner => owner.name),['Núcleo oriental de Zápolya']);
+  assert.deepEqual(owners.map(owner => owner.entityId),['Hungría']);
+  assert.deepEqual(owners[0].scopes.filter(scope=>scope.ids.includes('Crasna')).map(scope=>scope.name),
+    ['Núcleo oriental de Zápolya']);
 });
 
 test('Venetian Dalmatia and the delegated Bihar core are not duplicated as different mosaic domains', () => {

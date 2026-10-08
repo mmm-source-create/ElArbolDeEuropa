@@ -668,7 +668,7 @@ el límite. La versión del mapa para modo oscuro queda para otra entrega.
 ## Inventario de representación
 
 `npm run audit:atlas-coverage` comprueba cada año de cada mandato efectivo de
-1400–1650 mediante el mismo alcance que usa el Atlas. El reporte
+1200–1800 mediante el mismo alcance que usa el Atlas. El reporte
 `audit-atlas-coverage-report.json` separa entidades totalmente sin relleno,
 mandatos o años sin geometría y núcleos explícitamente parciales. Un núcleo
 no acredita una frontera completa. Excluye del relleno personal los cargos
@@ -701,3 +701,12 @@ fuentes, límites, comparación de áreas y los 53 territorios aún sin relleno.
 Los dos primeros pasos requieren respectivamente Python y el entorno geométrico
 existente con Shapely/svgpathtools. No se ejecuta ni se importan las máscaras del
 HTML facilitado como ejemplo. La cobertura 1200–1800 sigue siendo parcial.
+
+## Fronteras y dominios europeos · 8 de octubre de 2026
+
+`frontier-source.py` genera 9 series sustitutivas y 27 capas fechadas a partir de
+selecciones regionales explícitas. Después se ejecuta `merge-map-expansions.mjs`.
+`frontier-anchors.json` conserva la Hungría anterior como entrada inmutable.
+Las mismas rutas abastecen los mapas personales y el laboratorio.
+La [revisión documentada](../../docs/atlas-frontier-review.md) explica Bulgaria,
+Sirmia, Hungría, Francia, Aquitania y los dominios británicos, con sus límites.

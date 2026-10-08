@@ -34,6 +34,19 @@ const ALIASES = Object.freeze({
   'Morea veneciana (núcleos)': 'Morea',
   'Morea veneciana · superficie regional': 'Morea',
   'Normandía · ocupación inglesa': 'Ducado de Normandía',
+  'Bulgaria · gobierno rival en Tarnovo': 'Bulgaria',
+  'Hungría real': 'Hungría',
+  'Núcleo oriental de Zápolya': 'Hungría',
+  'Croacia medieval': 'Croacia',
+  'Eslavonia medieval': 'Eslavonia',
+  'Transilvania medieval': 'Transilvania',
+  'Touraine angevina': 'Touraine',
+  'Condado de Anjou': 'Anjou',
+  'Condado de Foix': 'Foix',
+  'Vizcondado de Bearne': 'Bearne',
+  'Condado de Armagnac': 'Armagnac',
+  'Condado de Champaña': 'Champaña',
+  'Electorado de Hannover': 'Hannover',
 });
 
 export const territorialIdentity = name => ALIASES[name] || name;
@@ -54,7 +67,15 @@ export function territorialLabel(name, year) {
     Francia: year >= 1792 ? 'República francesa' : 'Reino de Francia',
     'Gran Bretaña': 'Reino de Gran Bretaña',
     Dinamarca: 'Reino de Dinamarca', Noruega: 'Reino de Noruega', Suecia: 'Reino de Suecia',
-    Transilvania: 'Principado de Transilvania', Morea: 'Morea',
+    Transilvania: year < 1570 ? 'Voivodato de Transilvania' : 'Principado de Transilvania', Morea: 'Morea',
+    Hungría: 'Reino de Hungría', Croacia: 'Reino de Croacia',
+    Bulgaria: 'Segundo Imperio búlgaro', Sirmia: 'Reino de Sirmia',
+    Anjou: year < 1360 ? 'Condado de Anjou' : 'Ducado de Anjou',
+    Touraine: 'Condado de Touraine',
+    Foix: 'Condado de Foix', Bearne: 'Vizcondado de Bearne',
+    Armagnac: 'Condado de Armagnac', Champaña: 'Condado de Champaña',
+    Hannover: 'Electorado de Brunswick-Lüneburg (Hannover)',
+    'Hungría otomana': year < 1541 ? 'Conquistas otomanas en Hungría' : 'Eyalatos otomanos de Hungría',
   };
   return labels[identity] || identity;
 }
@@ -90,7 +111,9 @@ export function coalesceTerritorialLayers(layers, year) {
     const identity = territorialIdentity(layer.name);
     const scope = {name: layer.name, ids: [...layer.ids], note: layer.note,
       condition: layer.authorityCondition, sources: layer.sources || [],
-      label: layer.name.includes('·') ? layer.name.split('·').slice(1).join('·').trim()
+      label: layer.name === 'Hungría real' ? 'Gobierno real occidental y septentrional'
+        : layer.name === 'Núcleo oriental de Zápolya' ? 'Gobierno rival del reino oriental'
+        : layer.name.includes('·') ? layer.name.split('·').slice(1).join('·').trim()
         : layer.authorityCondition || (layer.approximate ? 'Gobierno registrado' : 'Ámbito territorial revisado')};
     const existing = groups.get(identity);
     if (!existing) {
