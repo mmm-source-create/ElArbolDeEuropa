@@ -7,6 +7,7 @@ import {personClaims} from '../src/evidence/claims.js';
 import {mapAuthoritiesForPerson} from '../src/data/mapAuthorities.js';
 import {reviewedMapLayers,reviewedLayerLocations,pilotLocationsFor} from '../src/data/locationMapPilot.js';
 import {auditLocationCoverage} from '../audit-uncolored-locations.mjs';
+import {territorialLabel} from '../src/data/territorialIdentity.js';
 const data=JSON.parse(fs.readFileSync(new URL('../prototypes/euv-locations/corridor-locations.json',import.meta.url)));
 const inventory=JSON.parse(fs.readFileSync(new URL('../prototypes/euv-locations/location-inventory.json',import.meta.url)));
 const people=new Map(PERSONAS.map(p=>[p.id,p]));
@@ -21,6 +22,9 @@ test('Bulgarian accession crises have sourced mandates and Chaka has only a capi
 });
 test('Dobruja separates the coastal despot, Wallachian recovery and final Ottoman administration',()=>{
  assert.equal(people.get('BALIKDOB').gobiernos[0].titulo,'Arconte');
+ assert.equal(territorialLabel('Despotado de Dobruja',1360),'Principado de Karvuna');
+ assert.equal(territorialLabel('Despotado de Dobruja',1370),'Despotado de Dobruja');
+ assert.equal(SUCCESSION_REVIEWS['person:DOBROTITSA:government:Dobruja:1347:1385:Déspota'].certainty,'approximate');
  assert(authority('DOBROTITSA',1360).includes('Constanta'));
  assert(!authority('IVANKODOB',1389).includes('Tulcea'));
  assert(layer('Dobruja · dominios de Valaquia',1405).includes('Tulcea'));

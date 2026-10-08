@@ -79,15 +79,15 @@ export const SUCCESSION_REVIEWS = Object.freeze({
     "editor": "El Árbol de Europa"
   },
   "person:DOBROTITSA:government:Dobruja:1347:1385:Déspota": {
-    "certainty": "documented",
+    "certainty": "approximate",
     "sources": [
       {
         "title": "Nikolay Antov · Dobruja (2019)",
         "url": "https://hrcak.srce.hr/file/342790",
-        "locator": "p. 63: Balik, Dobrotitsa 1347–1385, Ivanko 1385–c.1390/1391 y tratado 1387; Balik no recibió el título de déspota. Fechas de relevo inciertas."
+        "locator": "p. 63: gobierno de Dobrotitsa 1347–1385; traslado de la capital a Kaliakra y concesión del rango de déspota por Juan Alejandro hacia 1370. La fecha del rango no se confunde con el inicio de su gobierno."
       }
     ],
-    "note": "Relevo y fin de gobierno aproximados; no se inventan fechas de nacimiento ni parentescos no acreditados.",
+    "note": "Mandato de 1347–1385. Antov sitúa la concesión del rango de déspota hacia 1370; el título de esta entrada resume su carrera y no acredita ese rango en cada año del mandato.",
     "reviewedAt": "2026-10-08",
     "editor": "El Árbol de Europa"
   },
