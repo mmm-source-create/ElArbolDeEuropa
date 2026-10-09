@@ -2,6 +2,7 @@
 export const SITE_NAME = 'El Árbol de Europa';
 export const SITE_NAME_EN = 'The Tree of Europe';
 export const DEFAULT_SITE_URL = 'https://www.treeofeurope.eu';
+export const SUPPORT_URL = 'https://ko-fi.com/treeofeurope';
 
 export function resolveSiteUrl(value) {
   if (!value?.trim()) return DEFAULT_SITE_URL;

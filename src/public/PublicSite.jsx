@@ -29,6 +29,7 @@ import { IMAGENES_PERSONAS } from "../imagenesPersonas.js";
 import SITE_META from "../generated/siteMeta.json";
 import SiteHeader from "../components/SiteHeader.jsx";
 import SiteFooter from "../components/SiteFooter.jsx";
+import ProjectSupport from '../components/ProjectSupport.jsx';
 import { etiquetaClaseGobierno, slugPublico, textoBusquedaPersona, normalizarBusquedaPublica } from "../utils/personLabels.js";
 import HOME_DATA from "../generated/home.json";
 import { loadJsonAsset } from "../utils/loadAsset.js";
@@ -312,6 +313,7 @@ export function InfoPage({ tipo }) {
               {!!section.links?.length && <div className="public-info-links">{section.links.map(([label, href]) => <a key={href} href={href} target="_blank" rel="noreferrer">{label} <ExternalLink size={11} /></a>)}</div>}
             </section>
           ))}
+          {tipo === 'proyecto' && <ProjectSupport />}
         </div>
       </main>
     </PublicLayout>
