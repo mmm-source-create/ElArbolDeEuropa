@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { ArrowRight, BookOpen, Search, Users, Info } from 'lucide-react';
 import SiteHeader from '../components/SiteHeader.jsx';
 import SiteFooter from '../components/SiteFooter.jsx';
+import ProjectSupport from '../components/ProjectSupport.jsx';
 import { HomeContent, PersonContent, PersonaMiniCard, useJson, usePublicMeta } from '../public/PublicSite.jsx';
 import { entityMeta } from '../public/publicMeta.js';
 import { englishRoute } from './routes.js';
@@ -40,5 +41,5 @@ function EnglishCatalog({ data }) {
 }
 function EnglishInfo({ data }) {
   const methodology=data.type==='methodology';
-  return <main className="public-main public-info-page"><PageTitle data={data} Icon={Info} eyebrow={methodology?'Sources and methodology':'The project'}/><div className="public-info-grid">{data.sections.map(section => <section className="public-info-card" key={section.title}><h2>{section.title}</h2>{section.paragraphs?.map(text=><p key={text}>{text}</p>)}{!!section.links?.length&&<div className="public-info-links">{section.links.map(([label,href])=><a key={href} href={href} target="_blank" rel="noreferrer">{label} ↗</a>)}</div>}</section>)}</div><p className="english-catalog-note">{methodology&&<><a href="/es/fuentes">Original Spanish source notes</a> · </>}<a href="/es/?atlas=1&continuar=1">Explore the Spanish Atlas</a></p></main>;
+  return <main className="public-main public-info-page"><PageTitle data={data} Icon={Info} eyebrow={methodology?'Sources and methodology':'The project'}/><div className="public-info-grid">{data.sections.map(section => <section className="public-info-card" key={section.title}><h2>{section.title}</h2>{section.paragraphs?.map(text=><p key={text}>{text}</p>)}{!!section.links?.length&&<div className="public-info-links">{section.links.map(([label,href])=><a key={href} href={href} target="_blank" rel="noreferrer">{label} ↗</a>)}</div>}</section>)}{!methodology && <ProjectSupport locale="en" />}</div><p className="english-catalog-note">{methodology&&<><a href="/es/fuentes">Original Spanish source notes</a> · </>}<a href="/es/?atlas=1&continuar=1">Explore the Spanish Atlas</a></p></main>;
 }

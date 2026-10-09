@@ -1,0 +1,27 @@
+.project-support-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  text-decoration: none;
+}
+.project-support-link > svg { flex-shrink: 0; }
+.site-footer .project-support-link {
+  min-height: 32px;
+  padding: 4px 9px;
+  border: 1px solid var(--eade-border-strong);
+  border-radius: var(--eade-radius-sm);
+  color: var(--eade-wine);
+}
+.project-support-card .project-support-link.is-prominent {
+  min-height: 44px;
+  padding: 10px 14px;
+  border: 1px solid var(--eade-wine);
+  border-radius: var(--eade-radius-sm);
+  background: var(--eade-paper-soft);
+  color: var(--eade-wine);
+  font: 700 12px/1.4 var(--eade-sans);
+}
+.project-support-link:hover { text-decoration: underline; text-underline-offset: 3px; }
+.project-support-link:focus-visible { outline: 2px solid var(--eade-wine); outline-offset: 3px; }
+.project-support-card p.project-support-note { margin-bottom: 0; font-size: 11px; }
