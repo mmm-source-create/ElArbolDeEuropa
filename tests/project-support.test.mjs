@@ -15,7 +15,12 @@ before(async () => {
   temp = await fs.mkdtemp(path.join(root, '.ssg-build-support-test-'));
   const nodeEnv = process.env.NODE_ENV;
   try {
-    await build({root, configFile: false, publicDir: false, logLevel: 'error', build: {
+    await build({root, configFile: false, publicDir: false, logLevel: 'error', plugins: [{
+      name: 'fixture-generated-project-support',
+      enforce: 'pre',
+      resolveId(id) { if (/generated\/(home|siteMeta)\.json$/.test(id)) return `\0project-support-fixture:${id}.js`; },
+      load(id) { if (id.startsWith('\0project-support-fixture:')) return 'export default {buildVersion:"test"};'; },
+    }], build: {
       ssr: 'tests/fixtures/project-support-entry.jsx', outDir: temp, emptyOutDir: false,
       minify: false, rolldownOptions: {output: {entryFileNames: 'entry.mjs'}},
     }});
