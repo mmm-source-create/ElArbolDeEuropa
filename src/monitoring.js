@@ -1,4 +1,5 @@
 import {injectSpeedInsights} from '@vercel/speed-insights';
+import {HOSTING_PROVIDER} from './hosting.js';
 
 // Los filtros, las búsquedas y las semillas de los desafíos no son métricas.
 export function metricWithoutParameters(event) {
@@ -9,7 +10,8 @@ export function metricWithoutParameters(event) {
   } catch { return null; }
 }
 
-export function startSpeedInsights() {
+export function startSpeedInsights(provider = HOSTING_PROVIDER) {
+  if (provider !== 'vercel') return;
   // El SDK evita insertar el script una segunda vez. Fuera del árbol React,
   // cubre tanto la hidratación SSG como el arranque dinámico y StrictMode.
   return injectSpeedInsights({framework: 'react', beforeSend: metricWithoutParameters});

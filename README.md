@@ -76,6 +76,11 @@ Cada actualización se prepara en una rama y se entrega mediante **pull request 
 
 Vercel compila con `npm run build`, Node 24 y directorio de salida `dist`. Las rutas y cabeceras están en `vercel.json`. La PR genera una vista previa; fusionarla actualiza la rama de producción según la integración existente.
 
+Para probar Cloudflare en paralelo, usa `npm run build:cloudflare` y
+`npm run preview:cloudflare`. La [guía de compatibilidad](docs/CLOUDFLARE.md)
+describe las rutas, privacidad, cabeceras y despliegue de prueba; la
+configuración inicial no conecta el dominio de producción.
+
 El ZIP complementario contiene solo archivos añadidos o modificados. Si una actualización elimina o mueve archivos, su documento de versión indica las rutas afectadas. No subas `node_modules/`, `dist/` ni datos regenerables como código fuente.
 
 ## Indexación y derechos

@@ -37,3 +37,8 @@ public/english-meta/
 outputs/
 audit-uncolored-locations-report.json
 public/map-audit/
+
+# Estado local de Cloudflare y secretos del Worker.
+.wrangler/
+.dev.vars
+.dev.vars.*
