@@ -8,6 +8,11 @@
     "prebuild": "node audit-personas.mjs --fail-on-errors && node audit-territorios.mjs --fail-on-errors && node --import ./tests/jsx-loader.mjs audit-political-map.mjs --fail-on-errors && node --import ./tests/jsx-loader.mjs audit-map-continuity.mjs --fail-on-errors && node --import ./tests/jsx-loader.mjs audit-territorial-continuity.mjs --fail-on-errors && node --import ./tests/jsx-loader.mjs audit-map-spatial.mjs && node --import ./tests/jsx-loader.mjs audit-regional-extents.mjs && node --import ./tests/jsx-loader.mjs audit-atlas-coverage.mjs && npm run audit:uncolored && node audit-dinastias.mjs && node audit-sucesiones.mjs && node audit-coronas.mjs && node generate-sitemap.mjs && node generate-tree-base.mjs && node generate-territorios.mjs && node generate-dinastias.mjs && node generate-historias.mjs && node generate-english.mjs",
     "build": "vite build --manifest && node scripts/prerender-ssg.mjs && node scripts/audit-ssg.mjs",
     "preview": "vite preview",
+    "build:cloudflare": "node scripts/build-cloudflare.mjs",
+    "preview:cloudflare": "wrangler dev --config wrangler.jsonc",
+    "check:cloudflare": "wrangler deploy --config wrangler.jsonc --dry-run",
+    "deploy:cloudflare:preview": "npm run build:cloudflare && wrangler deploy --config wrangler.jsonc",
+    "test:cloudflare": "node --test tests/cloudflare.test.mjs",
     "audit": "node audit-personas.mjs",
     "audit:territorios": "node audit-territorios.mjs",
     "audit:political-map": "node --import ./tests/jsx-loader.mjs audit-political-map.mjs",
@@ -39,6 +44,7 @@
     "node": ">=24 <25"
   },
   "devDependencies": {
-    "jsdom": "30.0.1"
+    "jsdom": "30.0.1",
+    "wrangler": "4.149.0"
   }
 }

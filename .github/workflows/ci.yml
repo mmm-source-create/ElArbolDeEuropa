@@ -33,3 +33,7 @@ jobs:
           EADE_SSG_SAMPLE: .ssg-sample
       - name: Comprobar los datos regenerados
         run: node audit-personas.mjs --fail-on-errors
+      - name: Compilar y empaquetar Cloudflare sin publicar
+        run: |
+          npm run build:cloudflare -- --reuse-generated
+          npm run check:cloudflare
