@@ -1,5 +1,6 @@
 import { REGIONAL_EXTENT_REVIEWS } from './regionalExtentReviewData.js';
 import { FRONTIER_REVIEWS } from './frontierReviewData.js';
+import { SUCCESSION_REVIEWS } from './successionReviewData.js';
 import { TERRITORIAL_CONTINUITY_REVIEWS } from './territorialContinuityReviewData.js';
 import { ATLAS_CHRONOLOGY_REVIEWS } from './atlasChronologyReviewData.js';
 import { CORRIDOR_REVIEWS } from './corridorReviewData.js';
@@ -192,6 +193,7 @@ export const CLAIM_REVIEWS = Object.freeze({
   ...REGIONAL_EXTENT_REVIEWS,
   ...TERRITORIAL_CONTINUITY_REVIEWS,
   ...FRONTIER_REVIEWS,
+  ...SUCCESSION_REVIEWS,
   ...CORRIDOR_REVIEWS,
   ...ATLAS_AUTHORITY_REVIEWS,
   ...BALKAN_AUTHORITY_REVIEWS,
@@ -349,6 +351,7 @@ export const CLAIM_REVIEWS = Object.freeze({
 });
 
 export const EDITORIAL_HISTORY = Object.freeze([
+  {id:'v412-location-succession',scope:'all',date:'2026-10-08',editor:'El Árbol de Europa',change:'Dobruja, costa croata, Lika y Lastovo se fechan por separado; Meißen/Turingia, Suabia y las ramas de Nassau reciben superficies revisadas y mandatos sucesorios propios. Se inventarían todas las celdas nunca coloreadas, incluidas cordilleras.',reason:'La ausencia de color puede indicar una laguna de modelado. El relieve no excluye autoridad política y compartir título o dinastía no justifica sumar superficies incompatibles.'},
   {id:'v48-bavaria-palatinate-rhineland',scope:'all',date:'2026-10-04',editor:'El Árbol de Europa',change:'Baviera deja de colorear Franconia y Suabia; las ramas de 1392 se representan con núcleos prudentes. El Palatinado electoral se separa de Pfalz-Neuburg y se completa su sucesión. Jülich, Berg y Cléveris adquieren geometría diferenciada; Mark y Ravensberg quedan sin polígono propio.',reason:'La misma región podía atribuirse a gobernantes incompatibles o a un título distinto. Los límites del SVG no permiten convertir Mark en Sauerland ni Ravensberg en Lippe.'},
   {id:'v47-tyrol-continuity',scope:'all',date:'2026-10-04',editor:'El Árbol de Europa',change:'Se registra la administración colectiva tras 1595, el gobierno delegado de Maximiliano III y Leopoldo V, la regencia de Claudia de Médici y la reunión bajo Leopoldo I en 1665.',reason:'La sucesión anterior dejaba Tirol sin responsables identificados durante buena parte de 1595–1665 y confundía autoridad familiar, gobierno delegado y titularidad.'},
   {id:'v46-austrian-lands',scope:'all',date:'2026-10-03',editor:'El Árbol de Europa',change:'El mapa separa Austria danubiana, Austria Interior y Tirol; se documentan las transferencias de 1521–1522, la partición de 1564 y la reunión parcial de 1619.',reason:'El polígono anterior de «Austria» mezclaba el archiducado con Estiria, Carintia, Carniola, Tirol y Salzburgo sin atender a sus gobiernos.'},

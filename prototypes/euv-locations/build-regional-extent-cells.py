@@ -17,6 +17,10 @@ frontier = json.loads((HERE / 'frontier-review.json').read_text())
 used.update(cell for layer in frontier['replacements'] + frontier['territories']
             for version in layer['versions'] for cell in version['ids'])
 used.update(item['id'] for item in frontier['overrides'])
+succession = json.loads((HERE / 'succession-review.json').read_text())
+used.update(cell for layer in succession['replacements'] + succession['territories']
+            for version in layer['versions'] for cell in version['ids'])
+used.update(item['id'] for item in succession['overrides'])
 # Older dated corrections can add a cell absent from the replacement anchor.
 data = json.loads((HERE / 'corridor-locations.json').read_text())
 used.update(item['id'] for item in data['overrides'])

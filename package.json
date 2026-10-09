@@ -1,11 +1,11 @@
 {
   "name": "el-arbol-de-europa",
   "private": true,
-  "version": "4.11.0",
+  "version": "4.12.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "prebuild": "node audit-personas.mjs --fail-on-errors && node audit-territorios.mjs --fail-on-errors && node --import ./tests/jsx-loader.mjs audit-political-map.mjs --fail-on-errors && node --import ./tests/jsx-loader.mjs audit-map-continuity.mjs --fail-on-errors && node --import ./tests/jsx-loader.mjs audit-territorial-continuity.mjs --fail-on-errors && node --import ./tests/jsx-loader.mjs audit-map-spatial.mjs && node --import ./tests/jsx-loader.mjs audit-regional-extents.mjs && node --import ./tests/jsx-loader.mjs audit-atlas-coverage.mjs && node audit-dinastias.mjs && node audit-sucesiones.mjs && node audit-coronas.mjs && node generate-sitemap.mjs && node generate-tree-base.mjs && node generate-territorios.mjs && node generate-dinastias.mjs && node generate-historias.mjs && node generate-english.mjs",
+    "prebuild": "node audit-personas.mjs --fail-on-errors && node audit-territorios.mjs --fail-on-errors && node --import ./tests/jsx-loader.mjs audit-political-map.mjs --fail-on-errors && node --import ./tests/jsx-loader.mjs audit-map-continuity.mjs --fail-on-errors && node --import ./tests/jsx-loader.mjs audit-territorial-continuity.mjs --fail-on-errors && node --import ./tests/jsx-loader.mjs audit-map-spatial.mjs && node --import ./tests/jsx-loader.mjs audit-regional-extents.mjs && node --import ./tests/jsx-loader.mjs audit-atlas-coverage.mjs && npm run audit:uncolored && node audit-dinastias.mjs && node audit-sucesiones.mjs && node audit-coronas.mjs && node generate-sitemap.mjs && node generate-tree-base.mjs && node generate-territorios.mjs && node generate-dinastias.mjs && node generate-historias.mjs && node generate-english.mjs",
     "build": "vite build --manifest && node scripts/prerender-ssg.mjs && node scripts/audit-ssg.mjs",
     "preview": "vite preview",
     "audit": "node audit-personas.mjs",
@@ -23,7 +23,8 @@
     "audit:security": "node scripts/audit-security.mjs && npm audit --audit-level=high",
     "predev": "npm run prebuild",
     "audit:regional-extents": "node --import ./tests/jsx-loader.mjs audit-regional-extents.mjs",
-    "audit:spatial": "node --import ./tests/jsx-loader.mjs audit-map-spatial.mjs"
+    "audit:spatial": "node --import ./tests/jsx-loader.mjs audit-map-spatial.mjs",
+    "audit:uncolored": "node --import ./tests/jsx-loader.mjs audit-uncolored-locations.mjs --publish"
   },
   "dependencies": {
     "@vercel/speed-insights": "2.0.0",

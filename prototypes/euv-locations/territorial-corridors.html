@@ -21,6 +21,7 @@
     .map-shell{border-radius:12px;overflow:hidden;background:#faf7ef;border:1px solid #8b806f;min-width:0}
     #map-stage{height:min(69vh,730px);min-height:400px;cursor:grab;touch-action:none}#map-stage:active{cursor:grabbing}#map-stage svg{display:block;width:100%;height:100%}
     #info{background:#f3eada;border-top:1px solid #c9bfae;padding:12px 15px;color:#2e281f;min-height:58px}
+    #info p{color:inherit}
     #info a{color:#725019}#info a,#mosaic-legend a{display:inline-block;margin-right:.65em}
     aside{background:#342f29;border:1px solid #766c5e;border-radius:12px;padding:17px;max-height:min(69vh,730px);overflow:auto}
     aside dl{display:grid;grid-template-columns:auto 1fr;gap:5px 12px}aside dt{color:#cfc0ad}aside dd{margin:0}#old-ids{max-height:9rem;overflow:auto;overflow-wrap:anywhere}
@@ -29,6 +30,8 @@
     .mosaic-swatch{width:14px;height:14px;border:1px solid #e6dccb;border-radius:3px;margin-top:3px}
     .mosaic-meta{display:block;color:#baad9c;font-size:.84rem}.mosaic-empty{color:#d7b581}
     .note{border-left:4px solid #af8245;margin:23px 0;padding:3px 0 3px 16px}
+    #audit-list{list-style:none;padding:0;display:grid;gap:10px}#audit-list button{width:100%;text-align:left;overflow-wrap:anywhere}
+    #audit-list small{display:block;font-weight:400;margin-top:4px;color:#e7d8c4}#audit-panel input[type=search],#audit-queue{width:100%}
     footer{font-size:.9rem;padding-bottom:18px}
     @media(max-width:900px){body{padding:10px}.layout{grid-template-columns:1fr}aside{max-height:none}#map-stage{height:58vh;min-height:330px}input[type=range]{width:180px}}
   </style>
@@ -43,6 +46,7 @@
   <main>
     <div class="controls">
       <button type="button" id="mosaic-toggle" aria-pressed="true">Ver una jurisdicción</button>
+      <button type="button" id="audit-toggle" aria-pressed="false">Celdas nunca coloreadas</button>
       <label for="corridor" id="corridor-control">Corredor
         <select id="corridor"><option>Iberia</option><option>Italia</option><option>Centroeuropa</option><option>Europa septentrional y oriental</option><option>Francia e islas británicas</option><option>Borgoña e Imperio</option><option>Hungría y Balcanes</option><option>Mediterráneo oriental</option><option>Revisión de superficies regionales</option><option>Fronteras y dominios europeos</option></select>
       </label>
@@ -68,6 +72,18 @@
         <div id="info" aria-live="polite">Mosaico político: elige un año o pulsa una location para ver los gobiernos representados.</div>
       </div>
       <aside>
+        <section id="audit-panel" hidden>
+          <h2>Pendientes de cartografiar</h2>
+          <p id="audit-summary"></p>
+          <p>El naranja señala celdas sin color en ningún año de 1200–1800. Las entidades sugeridas son pistas para investigar; requieren comprobar fronteras, autoridad y fechas.</p>
+          <p><a href="/map-audit/never-colored.csv" download>Lista completa · CSV</a> · <a href="/map-audit/never-colored.json" download>Datos · JSON</a></p>
+          <label for="audit-filter">Buscar celda o entidad<input id="audit-filter" type="search" placeholder="Alps, Erfurt, Moldavia…"></label>
+          <label for="audit-queue">Zona de revisión<select id="audit-queue"><option value="">Todas las zonas</option></select></label>
+          <label><span><input type="checkbox" id="audit-physical"> Solo relieve e islas físicas</span></label>
+          <p id="audit-count" role="status"></p>
+          <ul id="audit-list"></ul>
+          <button type="button" id="audit-more">Mostrar más celdas</button>
+        </section>
         <section id="mosaic-panel">
           <h2 id="mosaic-title">Mosaico político</h2>
           <p id="mosaic-summary"></p>
@@ -104,7 +120,7 @@
     const FULL={x:475,y:15,w:315,h:240};
     const TERRITORY_FRAMES={'Cerdeña':{x:581,y:175,w:25,h:31},'Trinacria':{x:592,y:180,w:34,h:32},'Venecia':{x:588,y:143,w:100,h:76}};
     const BASE='#d8d6ce';const $=id=>document.getElementById(id);
-    const state={svg:null,paths:new Map(),data:null,painted:new Set(),view:{...FULL},viewMode:'mosaic',palette:null,mosaic:null};
+    const state={svg:null,paths:new Map(),data:null,painted:new Set(),view:{...FULL},viewMode:'mosaic',palette:null,mosaic:null,audit:null,auditRows:100};
     function activeVersion(territory,year){return reviewedLayerVersion(state.data,territory,year)||{from:year,oldIds:[],ids:[],borderline:[]}}
     function allTerritories(){return [...state.data.territories,...(state.data.additionalTerritories||[])]}
     function selectedTerritory(){return allTerritories().find(t=>t.name===$('territory').value&&t.corridor===$('corridor').value)}
@@ -120,6 +136,13 @@
     function correctedIds(territory,year){return reviewedLayerLocations(state.data,territory,year)}
     function setInfo(id){
       const info=$('info');if(!id){info.textContent=state.viewMode==='mosaic'?'Mosaico de gobiernos territoriales: elige un año o pulsa una location para ver las atribuciones disponibles.':'Pulsa una location para consultar la correspondencia.';return}
+      if(state.viewMode==='audit') {
+        info.replaceChildren();const row=state.audit.cells.find(c=>c.id===id);
+        const title=document.createElement('strong');title.textContent=id;info.append(title);
+        if(!row){info.append(document.createTextNode(' · Esta celda recibe color al menos un año o queda fuera del encuadre auditado.'));return}
+        const description=document.createElement('p');description.textContent=`Nunca coloreada en 1200–1800 · ${row.physicalFeature?'relieve o isla física · ':''}${row.research.queue}. ${row.research.note}`;info.append(description);
+        const targets=document.createElement('p');targets.textContent='Investigar: '+row.research.targets.map(t=>`${t.name} (${t.state==='existing_layer'?'capa existente':t.state==='existing_entity'?'entidad del Atlas':'entidad por incorporar'})`).join('; ');info.append(targets);return;
+      }
       if(!state.paths.has(id)){info.textContent=`${id}: fuera del recorte.`;return}
       if(state.viewMode==='mosaic'){
         const layers=state.mosaic?.byLocation.get(id)||[];info.replaceChildren();
@@ -185,6 +208,7 @@
       updateMosaicLegend();setInfo($('location-search').value.trim())
     }
     function setMosaicMode(enabled){
+      $('audit-panel').hidden=true;$('audit-toggle').setAttribute('aria-pressed','false');$('audit-toggle').textContent='Celdas nunca coloreadas';$('year').closest('label').hidden=false;
       state.viewMode=enabled?'mosaic':'detail';$('mosaic-toggle').setAttribute('aria-pressed',String(enabled));
       $('mosaic-toggle').textContent=enabled?'Ver una jurisdicción':'Ver todos los territorios';
       $('mosaic-panel').hidden=!enabled;$('detail-panel').hidden=enabled;
@@ -192,6 +216,7 @@
       if(enabled){state.view={...FULL};viewBox();renderMosaic()}else{focusTerritory();render()}
     }
     function render(){
+      if(state.viewMode==='audit'){renderAudit();return}
       if(state.viewMode==='mosaic'){renderMosaic();return}
       const territory=selectedTerritory();if(!territory)return;
       const year=Number($('year').value),baseVersion=activeVersion(territory,year),version={...baseVersion,ids:reviewedLayerLocations(state.data,territory,year)};$('year-output').value=String(year);
@@ -247,6 +272,32 @@
     function suggest(query){const list=$('location-ids');list.replaceChildren();if(!query.trim())return;let count=0;
       for(const id of state.paths.keys())if(id.toLocaleLowerCase('es').includes(query.trim().toLocaleLowerCase('es'))){const option=document.createElement('option');option.value=id;list.append(option);if(++count===35)break}
     }
+    function renderAudit(){
+      const query=$('audit-filter').value.trim().toLocaleLowerCase('es'),queue=$('audit-queue').value;
+      const rows=state.audit.cells.filter(row=>(!queue||row.research.queue===queue)&&(!$('audit-physical').checked||row.physicalFeature)
+        &&(!query||(row.id+' '+row.research.targets.map(t=>t.name).join(' ')).toLocaleLowerCase('es').includes(query)));
+      for(const id of state.painted){const path=state.paths.get(id);if(path){path.style.fill=BASE;path.style.stroke=BASE}}state.painted.clear();
+      for(const row of rows){const path=state.paths.get(row.id);if(path){path.style.fill='#bd8059';path.style.stroke='#bd8059';state.painted.add(row.id)}}
+      $('audit-summary').textContent=`${state.audit.summary.neverColored.toLocaleString('es')} celdas pendientes · ${state.audit.summary.neverColoredPhysical} de relieve. Las ${state.audit.summary.paths.toLocaleString('es')} áreas del SVG se han comprobado; ${state.audit.summary.outsideFrame} quedan fuera del encuadre.`;
+      $('status').textContent=`Auditoría 1200–1800 · ${rows.length.toLocaleString('es')} celdas coinciden con los filtros. Naranja = pendiente, sin atribución política.`;
+      $('audit-count').textContent=`${rows.length.toLocaleString('es')} resultados · ${Math.min(rows.length,state.auditRows)} en la lista.`;
+      $('audit-list').replaceChildren();for(const row of rows.slice(0,state.auditRows)){
+        const item=document.createElement('li'),button=document.createElement('button'),meta=document.createElement('small');button.type='button';
+        button.textContent=row.id;meta.textContent=row.research.targets.map(t=>t.name).join(' · ');button.append(meta);
+        button.addEventListener('click',()=>{$('location-search').value=row.id;consultLocation()});item.append(button);$('audit-list').append(item);
+      }
+      $('audit-more').hidden=rows.length<=state.auditRows;setInfo($('location-search').value.trim());
+    }
+    async function setAuditMode(){
+      if(!state.data)return;
+      if(state.viewMode==='audit'){setMosaicMode(true);return}
+      if(!state.audit){const response=await fetch('/map-audit/never-colored.json');if(!response.ok)throw new Error('No se pudo cargar el inventario de celdas');state.audit=await response.json();
+        for(const entry of state.audit.queues){const option=document.createElement('option');option.value=entry.queue;option.textContent=`${entry.queue} · ${entry.cells}`;$('audit-queue').append(option)}}
+      state.viewMode='audit';state.auditRows=100;$('audit-panel').hidden=false;$('mosaic-panel').hidden=true;$('detail-panel').hidden=true;
+      $('corridor-control').hidden=true;$('territory-control').hidden=true;$('year').closest('label').hidden=true;
+      $('audit-toggle').setAttribute('aria-pressed','true');$('audit-toggle').textContent='Volver al mapa por años';$('mosaic-toggle').textContent='Ver todos los territorios';$('mosaic-toggle').setAttribute('aria-pressed','false');
+      state.view={...FULL};viewBox();renderAudit();
+    }
     async function load(){
       const [svgResponse,dataResponse]=await Promise.all([fetch(mapUrl),fetch(dataUrl)]);
       if(!svgResponse.ok||!dataResponse.ok)throw new Error('No se pudo cargar el mapa o los datos');
@@ -275,12 +326,15 @@
     $('zoom-out').addEventListener('click',()=>zoomBy(1.2));
     $('zoom-in').addEventListener('click',()=>zoomBy(1/1.2));
     $('mosaic-toggle').addEventListener('click',()=>setMosaicMode(state.viewMode!=='mosaic'));
+    $('audit-toggle').addEventListener('click',()=>setAuditMode().catch(error=>{$('status').textContent=error.message}));
+    for(const id of ['audit-filter','audit-queue','audit-physical'])$(id).addEventListener('input',()=>{state.auditRows=100;if(state.viewMode==='audit')renderAudit()});
+    $('audit-more').addEventListener('click',()=>{state.auditRows+=100;renderAudit()});
     $('mosaic-filter').addEventListener('input',updateMosaicLegend);
     $('corridor').addEventListener('change',()=>{if(state.data){updateTerritories();if(state.viewMode==='mosaic')setMosaicMode(true)}});$('territory').addEventListener('change',()=>{if(state.data){focusTerritory();render()}});
     $('year').addEventListener('input',()=>{if(state.data){if(state.viewMode==='mosaic')renderMosaic();else{updateTerritories()}}});$('location-search').addEventListener('input',event=>suggest(event.currentTarget.value));
     $('location-search').addEventListener('keydown',event=>{if(event.key==='Enter'&&state.data)consultLocation()});
     $('search-button').addEventListener('click',()=>state.data&&consultLocation());
-    $('reset-view').addEventListener('click',()=>state.viewMode==='mosaic'?setMosaicMode(true):focusTerritory());
+    $('reset-view').addEventListener('click',()=>{if(state.viewMode==='detail')focusTerritory();else{state.view={...FULL};viewBox()}});
     load().catch(error=>{$('status').textContent=`Error: ${error.message}`});
   </script>
 </body>

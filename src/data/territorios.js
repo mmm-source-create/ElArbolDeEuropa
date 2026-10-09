@@ -1,4 +1,11 @@
 export const TERRITORIOS = Object.freeze({
+  "Sajonia-Weimar": {"clase": "ducado", "naturaleza": "entidad", "componentes": [], "nota": "Jurisdicción ernestina, con particiones y extinciones documentadas; no un nuevo nombre para todo el territorio de Turingia."},
+  "Sajonia-Coburgo-Eisenach": {"clase": "ducado", "naturaleza": "entidad", "componentes": [], "nota": "Jurisdicción ernestina, con particiones y extinciones documentadas; no un nuevo nombre para todo el territorio de Turingia."},
+  "Sajonia-Coburgo": {"clase": "ducado", "naturaleza": "entidad", "componentes": [], "nota": "Jurisdicción ernestina, con particiones y extinciones documentadas; no un nuevo nombre para todo el territorio de Turingia."},
+  "Sajonia-Eisenach": {"clase": "ducado", "naturaleza": "entidad", "componentes": [], "nota": "Jurisdicción ernestina, con particiones y extinciones documentadas; no un nuevo nombre para todo el territorio de Turingia."},
+  "Sajonia-Gotha": {"clase": "ducado", "naturaleza": "entidad", "componentes": [], "nota": "Jurisdicción ernestina, con particiones y extinciones documentadas; no un nuevo nombre para todo el territorio de Turingia."},
+
+  "Dobruja": {"clase":"despotado","etapas":[{"clase":"gobierno","desde":1346,"hasta":1347}],"titulosDeGobierno":["Arconte"],"naturaleza":"entidad","componentes":[],"nota":"Principado costero de Karvuna/Dobruja. Balik fue arconte; el título de déspota pertenece a sus sucesores. Relevos y conquista de1388–1391 discutidos."},
   "Normandía": {"clase":"ducado","naturaleza":"entidad","componentes":[],"nota":"Ducado bajo gobiernos angevinos y franceses; las ocupaciones inglesas se fechan por separado."},
   "Maine": {"clase":"condado","naturaleza":"entidad","componentes":[],"nota":"Condado continental, distinto de la ocupación inglesa de 1425–1448."},
   "Banato de Temes": {"clase":"gobierno","titulosDeGobierno":["Emperador","Archiduquesa"],"naturaleza":"entidad","desde":1716,"hasta":1778,"componentes":[],"nota":"Provincia imperial habsbúrgica separada de Hungría hasta 1778–1779; distinta del eyalato otomano de Temesvár."},

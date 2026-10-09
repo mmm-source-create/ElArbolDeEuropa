@@ -35,3 +35,5 @@ public/english-meta/
 
 # Evidencias locales de revisión visual; no forman parte del sitio publicado.
 outputs/
+audit-uncolored-locations-report.json
+public/map-audit/

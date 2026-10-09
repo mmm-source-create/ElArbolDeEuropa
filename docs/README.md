@@ -16,6 +16,7 @@ Los informes describen el estado validado de cada entrega. Sus cifras y listas d
 
 | Versión | Contenido |
 | --- | --- |
+| [4.12](V4.12.md) | Dobruja, costa croata, sucesiones búlgaras, particiones Wettin/Staufen/Nassau e inventario de IDs nunca coloreados |
 | [4.11](V4.11.md) | Carruseles circulares, Bulgaria medieval/Sirmia, Hungría y feudos franceses, dominios ingleses/británicos |
 | [4.8](V4.8.md) | Particiones bávaras, Palatinado electoral y herencia renana; límites explícitos de Flandes/Artois |
 | [4.7](V4.7.md) | Continuidad de Tirol, inspector territorial y auditoría de fuentes del mapa |

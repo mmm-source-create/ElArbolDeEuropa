@@ -2,17 +2,17 @@
   "scope": {
     "from": 1200,
     "through": 1800,
-    "catalogueTerritories": 264,
+    "catalogueTerritories": 270,
     "svgLocations": 7672
   },
   "method": "Se comprueba cada año de cada mandato marcado efectivo dentro de 1200–1800 mediante la misma autoridad y correspondencia que usa el mapa. Una entidad se considera representada si al menos un mandato tiene alguna location SVG válida; esto no acredita el contorno completo. Los rangos sin geometría no se interpretan automáticamente como errores históricos.",
   "counts": {
-    "unrepresentedEntities": 44,
-    "representedEntities": 141,
-    "partialMandateGeometry": 54,
-    "partialEntireTerritoryYears": 52,
+    "unrepresentedEntities": 40,
+    "representedEntities": 151,
+    "partialMandateGeometry": 58,
+    "partialEntireTerritoryYears": 55,
     "explicitLimitedCores": 44,
-    "partiallyRepresentedUnique": 66,
+    "partiallyRepresentedUnique": 72,
     "imperialLegalFrameExclusions": 2,
     "governmentsOnlyOutsidePeriod": 4,
     "titlesOnlyInsidePeriod": 1,
@@ -5700,611 +5700,6 @@
       "outsidePeriodGovernments": []
     },
     {
-      "territory": "Meißen",
-      "status": "unrepresented_effective",
-      "counts": {
-        "effectiveMandatesAllTime": 6,
-        "effectiveMandatesInScope": 6,
-        "nonpaintingMandatesInScope": 0,
-        "locations": 0,
-        "yearsWithGovernment": 186,
-        "yearsWithGeometry": 0,
-        "yearsWithoutGeometry": 186,
-        "mandatesWithSomeMissingGeometry": 6,
-        "mandatesEntirelyWithoutGeometry": 6
-      },
-      "hasMandateGeometryGaps": false,
-      "hasEntireTerritoryYearGaps": false,
-      "limitedCore": false,
-      "missingGeometryIntervals": [
-        {
-          "from": 1200,
-          "through": 1288
-        },
-        {
-          "from": 1307,
-          "through": 1381
-        },
-        {
-          "from": 1407,
-          "through": 1428
-        }
-      ],
-      "layers": [],
-      "governments": [
-        {
-          "personId": "DIETRICHMEISSEN",
-          "personName": "Dietrich de Meißen",
-          "government": {
-            "territory": "Meißen",
-            "title": "Margrave",
-            "from": 1198,
-            "through": 1221,
-            "class": "margraviato",
-            "condition": "efectivo"
-          },
-          "auditFrom": 1200,
-          "auditThrough": 1221,
-          "yearsWithGeometry": 0,
-          "yearsWithoutGeometry": 22,
-          "locations": 0,
-          "missingGeometryIntervals": [
-            {
-              "from": 1200,
-              "through": 1221
-            }
-          ]
-        },
-        {
-          "personId": "HEINRICH3MEISSEN",
-          "personName": "Enrique III de Meißen",
-          "government": {
-            "territory": "Meißen",
-            "title": "Margrave",
-            "from": 1221,
-            "through": 1288,
-            "class": "margraviato",
-            "condition": "efectivo"
-          },
-          "auditFrom": 1221,
-          "auditThrough": 1288,
-          "yearsWithGeometry": 0,
-          "yearsWithoutGeometry": 68,
-          "locations": 0,
-          "missingGeometryIntervals": [
-            {
-              "from": 1221,
-              "through": 1288
-            }
-          ]
-        },
-        {
-          "personId": "FRED1MEISSEN",
-          "personName": "Federico I de Meißen",
-          "government": {
-            "territory": "Meißen",
-            "title": "Margrave",
-            "from": 1307,
-            "through": 1323,
-            "class": "margraviato",
-            "condition": "efectivo"
-          },
-          "auditFrom": 1307,
-          "auditThrough": 1323,
-          "yearsWithGeometry": 0,
-          "yearsWithoutGeometry": 17,
-          "locations": 0,
-          "missingGeometryIntervals": [
-            {
-              "from": 1307,
-              "through": 1323
-            }
-          ]
-        },
-        {
-          "personId": "FRED2MEISSEN",
-          "personName": "Federico II de Meißen",
-          "government": {
-            "territory": "Meißen",
-            "title": "Margrave",
-            "from": 1323,
-            "through": 1349,
-            "class": "margraviato",
-            "condition": "efectivo"
-          },
-          "auditFrom": 1323,
-          "auditThrough": 1349,
-          "yearsWithGeometry": 0,
-          "yearsWithoutGeometry": 27,
-          "locations": 0,
-          "missingGeometryIntervals": [
-            {
-              "from": 1323,
-              "through": 1349
-            }
-          ]
-        },
-        {
-          "personId": "FRED3MEISSEN",
-          "personName": "Federico III de Meißen",
-          "government": {
-            "territory": "Meißen",
-            "title": "Margrave",
-            "from": 1349,
-            "through": 1381,
-            "class": "margraviato",
-            "condition": "efectivo"
-          },
-          "auditFrom": 1349,
-          "auditThrough": 1381,
-          "yearsWithGeometry": 0,
-          "yearsWithoutGeometry": 33,
-          "locations": 0,
-          "missingGeometryIntervals": [
-            {
-              "from": 1349,
-              "through": 1381
-            }
-          ]
-        },
-        {
-          "personId": "FRED1SAX",
-          "personName": "Federico I de Sajonia",
-          "government": {
-            "territory": "Meißen",
-            "title": "Margrave",
-            "from": 1407,
-            "through": 1428,
-            "class": "margraviato",
-            "condition": "efectivo"
-          },
-          "auditFrom": 1407,
-          "auditThrough": 1428,
-          "yearsWithGeometry": 0,
-          "yearsWithoutGeometry": 22,
-          "locations": 0,
-          "missingGeometryIntervals": [
-            {
-              "from": 1407,
-              "through": 1428
-            }
-          ]
-        }
-      ],
-      "nonpaintingGovernments": [],
-      "outsidePeriodGovernments": []
-    },
-    {
-      "territory": "Nassau",
-      "status": "unrepresented_effective",
-      "counts": {
-        "effectiveMandatesAllTime": 17,
-        "effectiveMandatesInScope": 17,
-        "nonpaintingMandatesInScope": 0,
-        "locations": 0,
-        "yearsWithGovernment": 582,
-        "yearsWithGeometry": 0,
-        "yearsWithoutGeometry": 582,
-        "mandatesWithSomeMissingGeometry": 17,
-        "mandatesEntirelyWithoutGeometry": 17
-      },
-      "hasMandateGeometryGaps": false,
-      "hasEntireTerritoryYearGaps": false,
-      "limitedCore": false,
-      "missingGeometryIntervals": [
-        {
-          "from": 1200,
-          "through": 1290
-        },
-        {
-          "from": 1303,
-          "through": 1632
-        },
-        {
-          "from": 1640,
-          "through": 1800
-        }
-      ],
-      "layers": [],
-      "governments": [
-        {
-          "personId": "WALRAM2",
-          "personName": "Walram II de Nassau",
-          "government": {
-            "territory": "Nassau",
-            "title": "Conde",
-            "from": 1251,
-            "through": 1276,
-            "class": "condado",
-            "condition": "rama",
-            "scope": "Rama walramiana"
-          },
-          "auditFrom": 1251,
-          "auditThrough": 1276,
-          "yearsWithGeometry": 0,
-          "yearsWithoutGeometry": 26,
-          "locations": 0,
-          "missingGeometryIntervals": [
-            {
-              "from": 1251,
-              "through": 1276
-            }
-          ]
-        },
-        {
-          "personId": "HENRY2NASSAU",
-          "personName": "Enrique II de Nassau",
-          "government": {
-            "territory": "Nassau",
-            "title": "Conde",
-            "from": 1198,
-            "through": 1251,
-            "class": "condado",
-            "condition": "efectivo"
-          },
-          "auditFrom": 1200,
-          "auditThrough": 1251,
-          "yearsWithGeometry": 0,
-          "yearsWithoutGeometry": 52,
-          "locations": 0,
-          "missingGeometryIntervals": [
-            {
-              "from": 1200,
-              "through": 1251
-            }
-          ]
-        },
-        {
-          "personId": "OTTO1NASSAU",
-          "personName": "Otón I de Nassau",
-          "government": {
-            "territory": "Nassau",
-            "title": "Conde",
-            "from": 1251,
-            "through": 1290,
-            "class": "condado",
-            "condition": "rama",
-            "scope": "Rama otoniana"
-          },
-          "auditFrom": 1251,
-          "auditThrough": 1290,
-          "yearsWithGeometry": 0,
-          "yearsWithoutGeometry": 40,
-          "locations": 0,
-          "missingGeometryIntervals": [
-            {
-              "from": 1251,
-              "through": 1290
-            }
-          ]
-        },
-        {
-          "personId": "HENRY1SIEGEN",
-          "personName": "Enrique I de Nassau-Siegen",
-          "government": {
-            "territory": "Nassau",
-            "title": "Conde",
-            "from": 1303,
-            "through": 1343,
-            "class": "condado",
-            "condition": "efectivo"
-          },
-          "auditFrom": 1303,
-          "auditThrough": 1343,
-          "yearsWithGeometry": 0,
-          "yearsWithoutGeometry": 41,
-          "locations": 0,
-          "missingGeometryIntervals": [
-            {
-              "from": 1303,
-              "through": 1343
-            }
-          ]
-        },
-        {
-          "personId": "OTTO2SIEGEN",
-          "personName": "Otón II de Nassau-Siegen",
-          "government": {
-            "territory": "Nassau",
-            "title": "Conde",
-            "from": 1343,
-            "through": 1351,
-            "class": "condado",
-            "condition": "efectivo"
-          },
-          "auditFrom": 1343,
-          "auditThrough": 1351,
-          "yearsWithGeometry": 0,
-          "yearsWithoutGeometry": 9,
-          "locations": 0,
-          "missingGeometryIntervals": [
-            {
-              "from": 1343,
-              "through": 1351
-            }
-          ]
-        },
-        {
-          "personId": "JOHN1NASSAU",
-          "personName": "Juan I de Nassau-Siegen",
-          "government": {
-            "territory": "Nassau",
-            "title": "Conde",
-            "from": 1351,
-            "through": 1416,
-            "class": "condado",
-            "condition": "efectivo"
-          },
-          "auditFrom": 1351,
-          "auditThrough": 1416,
-          "yearsWithGeometry": 0,
-          "yearsWithoutGeometry": 66,
-          "locations": 0,
-          "missingGeometryIntervals": [
-            {
-              "from": 1351,
-              "through": 1416
-            }
-          ]
-        },
-        {
-          "personId": "ENGELBERT1NASSAU",
-          "personName": "Engelberto I de Nassau",
-          "government": {
-            "territory": "Nassau",
-            "title": "Conde",
-            "from": 1416,
-            "through": 1442,
-            "class": "condado",
-            "condition": "efectivo"
-          },
-          "auditFrom": 1416,
-          "auditThrough": 1442,
-          "yearsWithGeometry": 0,
-          "yearsWithoutGeometry": 27,
-          "locations": 0,
-          "missingGeometryIntervals": [
-            {
-              "from": 1416,
-              "through": 1442
-            }
-          ]
-        },
-        {
-          "personId": "JOHN4NASSAU",
-          "personName": "Juan IV de Nassau-Breda",
-          "government": {
-            "territory": "Nassau",
-            "title": "Conde",
-            "from": 1442,
-            "through": 1475,
-            "class": "condado",
-            "condition": "efectivo"
-          },
-          "auditFrom": 1442,
-          "auditThrough": 1475,
-          "yearsWithGeometry": 0,
-          "yearsWithoutGeometry": 34,
-          "locations": 0,
-          "missingGeometryIntervals": [
-            {
-              "from": 1442,
-              "through": 1475
-            }
-          ]
-        },
-        {
-          "personId": "JOHN5NASSAU",
-          "personName": "Juan V de Nassau-Siegen",
-          "government": {
-            "territory": "Nassau",
-            "title": "Conde",
-            "from": 1475,
-            "through": 1516,
-            "class": "condado",
-            "condition": "efectivo"
-          },
-          "auditFrom": 1475,
-          "auditThrough": 1516,
-          "yearsWithGeometry": 0,
-          "yearsWithoutGeometry": 42,
-          "locations": 0,
-          "missingGeometryIntervals": [
-            {
-              "from": 1475,
-              "through": 1516
-            }
-          ]
-        },
-        {
-          "personId": "WILLIAMRICHNASSAU",
-          "personName": "Guillermo I de Nassau-Dillenburg",
-          "government": {
-            "territory": "Nassau",
-            "title": "Conde",
-            "from": 1516,
-            "through": 1559,
-            "class": "condado",
-            "condition": "efectivo"
-          },
-          "auditFrom": 1516,
-          "auditThrough": 1559,
-          "yearsWithGeometry": 0,
-          "yearsWithoutGeometry": 44,
-          "locations": 0,
-          "missingGeometryIntervals": [
-            {
-              "from": 1516,
-              "through": 1559
-            }
-          ]
-        },
-        {
-          "personId": "JOHN6NASSAU",
-          "personName": "Juan VI de Nassau-Dillenburg",
-          "government": {
-            "territory": "Nassau",
-            "title": "Conde",
-            "from": 1559,
-            "through": 1606,
-            "class": "condado",
-            "condition": "efectivo"
-          },
-          "auditFrom": 1559,
-          "auditThrough": 1606,
-          "yearsWithGeometry": 0,
-          "yearsWithoutGeometry": 48,
-          "locations": 0,
-          "missingGeometryIntervals": [
-            {
-              "from": 1559,
-              "through": 1606
-            }
-          ]
-        },
-        {
-          "personId": "ERNSTCASIMIRNASSAU",
-          "personName": "Ernesto Casimiro de Nassau-Dietz",
-          "government": {
-            "territory": "Nassau",
-            "title": "Conde",
-            "from": 1606,
-            "through": 1632,
-            "class": "condado",
-            "condition": "efectivo"
-          },
-          "auditFrom": 1606,
-          "auditThrough": 1632,
-          "yearsWithGeometry": 0,
-          "yearsWithoutGeometry": 27,
-          "locations": 0,
-          "missingGeometryIntervals": [
-            {
-              "from": 1606,
-              "through": 1632
-            }
-          ]
-        },
-        {
-          "personId": "WILLIAMFREDNASSAU",
-          "personName": "Guillermo Federico de Nassau-Dietz",
-          "government": {
-            "territory": "Nassau",
-            "title": "Conde",
-            "from": 1640,
-            "through": 1664,
-            "class": "condado",
-            "condition": "efectivo"
-          },
-          "auditFrom": 1640,
-          "auditThrough": 1664,
-          "yearsWithGeometry": 0,
-          "yearsWithoutGeometry": 25,
-          "locations": 0,
-          "missingGeometryIntervals": [
-            {
-              "from": 1640,
-              "through": 1664
-            }
-          ]
-        },
-        {
-          "personId": "HENRYCASIMIR2",
-          "personName": "Enrique Casimiro II de Nassau-Dietz",
-          "government": {
-            "territory": "Nassau",
-            "title": "Conde",
-            "from": 1664,
-            "through": 1696,
-            "class": "condado",
-            "condition": "efectivo"
-          },
-          "auditFrom": 1664,
-          "auditThrough": 1696,
-          "yearsWithGeometry": 0,
-          "yearsWithoutGeometry": 33,
-          "locations": 0,
-          "missingGeometryIntervals": [
-            {
-              "from": 1664,
-              "through": 1696
-            }
-          ]
-        },
-        {
-          "personId": "JOHNWILLIAMFRISO",
-          "personName": "Juan Guillermo Friso de Orange-Nassau",
-          "government": {
-            "territory": "Nassau",
-            "title": "Príncipe",
-            "from": 1696,
-            "through": 1711,
-            "class": "principado",
-            "condition": "efectivo"
-          },
-          "auditFrom": 1696,
-          "auditThrough": 1711,
-          "yearsWithGeometry": 0,
-          "yearsWithoutGeometry": 16,
-          "locations": 0,
-          "missingGeometryIntervals": [
-            {
-              "from": 1696,
-              "through": 1711
-            }
-          ]
-        },
-        {
-          "personId": "WILLIAM4ORANGE",
-          "personName": "Guillermo IV de Orange-Nassau",
-          "government": {
-            "territory": "Nassau",
-            "title": "Príncipe",
-            "from": 1711,
-            "through": 1751,
-            "class": "principado",
-            "condition": "efectivo"
-          },
-          "auditFrom": 1711,
-          "auditThrough": 1751,
-          "yearsWithGeometry": 0,
-          "yearsWithoutGeometry": 41,
-          "locations": 0,
-          "missingGeometryIntervals": [
-            {
-              "from": 1711,
-              "through": 1751
-            }
-          ]
-        },
-        {
-          "personId": "WILLIAM5ORANGE",
-          "personName": "Guillermo V de Orange-Nassau",
-          "government": {
-            "territory": "Nassau",
-            "title": "Príncipe",
-            "from": 1751,
-            "through": 1806,
-            "class": "principado",
-            "condition": "efectivo"
-          },
-          "auditFrom": 1751,
-          "auditThrough": 1800,
-          "yearsWithGeometry": 0,
-          "yearsWithoutGeometry": 50,
-          "locations": 0,
-          "missingGeometryIntervals": [
-            {
-              "from": 1751,
-              "through": 1800
-            }
-          ]
-        }
-      ],
-      "nonpaintingGovernments": [],
-      "outsidePeriodGovernments": []
-    },
-    {
       "territory": "Oldemburgo",
       "status": "unrepresented_effective",
       "counts": {
@@ -7036,85 +6431,6 @@
       "outsidePeriodGovernments": []
     },
     {
-      "territory": "Suabia",
-      "status": "unrepresented_effective",
-      "counts": {
-        "effectiveMandatesAllTime": 2,
-        "effectiveMandatesInScope": 2,
-        "nonpaintingMandatesInScope": 0,
-        "locations": 0,
-        "yearsWithGovernment": 24,
-        "yearsWithGeometry": 0,
-        "yearsWithoutGeometry": 24,
-        "mandatesWithSomeMissingGeometry": 2,
-        "mandatesEntirelyWithoutGeometry": 2
-      },
-      "hasMandateGeometryGaps": false,
-      "hasEntireTerritoryYearGaps": false,
-      "limitedCore": false,
-      "missingGeometryIntervals": [
-        {
-          "from": 1200,
-          "through": 1208
-        },
-        {
-          "from": 1254,
-          "through": 1268
-        }
-      ],
-      "layers": [],
-      "governments": [
-        {
-          "personId": "FELIPESUABIA",
-          "personName": "Felipe de Suabia",
-          "government": {
-            "territory": "Suabia",
-            "title": "Duque",
-            "from": 1196,
-            "through": 1208,
-            "class": "ducado",
-            "condition": "efectivo"
-          },
-          "auditFrom": 1200,
-          "auditThrough": 1208,
-          "yearsWithGeometry": 0,
-          "yearsWithoutGeometry": 9,
-          "locations": 0,
-          "missingGeometryIntervals": [
-            {
-              "from": 1200,
-              "through": 1208
-            }
-          ]
-        },
-        {
-          "personId": "CONRADINOHOH",
-          "personName": "Conradino de Hohenstaufen",
-          "government": {
-            "territory": "Suabia",
-            "title": "Duque",
-            "from": 1254,
-            "through": 1268,
-            "class": "ducado",
-            "condition": "efectivo"
-          },
-          "auditFrom": 1254,
-          "auditThrough": 1268,
-          "yearsWithGeometry": 0,
-          "yearsWithoutGeometry": 15,
-          "locations": 0,
-          "missingGeometryIntervals": [
-            {
-              "from": 1254,
-              "through": 1268
-            }
-          ]
-        }
-      ],
-      "nonpaintingGovernments": [],
-      "outsidePeriodGovernments": []
-    },
-    {
       "territory": "Tarento",
       "status": "unrepresented_effective",
       "counts": {
@@ -7318,181 +6634,6 @@
           "condition": "efectivo"
         }
       ]
-    },
-    {
-      "territory": "Turingia",
-      "status": "unrepresented_effective",
-      "counts": {
-        "effectiveMandatesAllTime": 6,
-        "effectiveMandatesInScope": 6,
-        "nonpaintingMandatesInScope": 0,
-        "locations": 0,
-        "yearsWithGovernment": 142,
-        "yearsWithGeometry": 0,
-        "yearsWithoutGeometry": 142,
-        "mandatesWithSomeMissingGeometry": 6,
-        "mandatesEntirelyWithoutGeometry": 6
-      },
-      "hasMandateGeometryGaps": false,
-      "hasEntireTerritoryYearGaps": false,
-      "limitedCore": false,
-      "missingGeometryIntervals": [
-        {
-          "from": 1200,
-          "through": 1217
-        },
-        {
-          "from": 1241,
-          "through": 1247
-        },
-        {
-          "from": 1265,
-          "through": 1381
-        }
-      ],
-      "layers": [],
-      "governments": [
-        {
-          "personId": "ENRIQUERASPE",
-          "personName": "Enrique Raspe",
-          "government": {
-            "territory": "Turingia",
-            "title": "Landgrave",
-            "from": 1241,
-            "through": 1247,
-            "class": "landgraviato",
-            "condition": "efectivo"
-          },
-          "auditFrom": 1241,
-          "auditThrough": 1247,
-          "yearsWithGeometry": 0,
-          "yearsWithoutGeometry": 7,
-          "locations": 0,
-          "missingGeometryIntervals": [
-            {
-              "from": 1241,
-              "through": 1247
-            }
-          ]
-        },
-        {
-          "personId": "HERMANN1THUR",
-          "personName": "Hermann I de Turingia",
-          "government": {
-            "territory": "Turingia",
-            "title": "Landgrave",
-            "from": 1190,
-            "through": 1217,
-            "class": "landgraviato",
-            "condition": "efectivo"
-          },
-          "auditFrom": 1200,
-          "auditThrough": 1217,
-          "yearsWithGeometry": 0,
-          "yearsWithoutGeometry": 18,
-          "locations": 0,
-          "missingGeometryIntervals": [
-            {
-              "from": 1200,
-              "through": 1217
-            }
-          ]
-        },
-        {
-          "personId": "ALB2MEISSEN",
-          "personName": "Alberto II de Meißen",
-          "government": {
-            "territory": "Turingia",
-            "title": "Landgrave",
-            "from": 1265,
-            "through": 1307,
-            "class": "landgraviato",
-            "condition": "efectivo"
-          },
-          "auditFrom": 1265,
-          "auditThrough": 1307,
-          "yearsWithGeometry": 0,
-          "yearsWithoutGeometry": 43,
-          "locations": 0,
-          "missingGeometryIntervals": [
-            {
-              "from": 1265,
-              "through": 1307
-            }
-          ]
-        },
-        {
-          "personId": "FRED1MEISSEN",
-          "personName": "Federico I de Meißen",
-          "government": {
-            "territory": "Turingia",
-            "title": "Landgrave",
-            "from": 1307,
-            "through": 1323,
-            "class": "landgraviato",
-            "condition": "efectivo"
-          },
-          "auditFrom": 1307,
-          "auditThrough": 1323,
-          "yearsWithGeometry": 0,
-          "yearsWithoutGeometry": 17,
-          "locations": 0,
-          "missingGeometryIntervals": [
-            {
-              "from": 1307,
-              "through": 1323
-            }
-          ]
-        },
-        {
-          "personId": "FRED2MEISSEN",
-          "personName": "Federico II de Meißen",
-          "government": {
-            "territory": "Turingia",
-            "title": "Landgrave",
-            "from": 1323,
-            "through": 1349,
-            "class": "landgraviato",
-            "condition": "efectivo"
-          },
-          "auditFrom": 1323,
-          "auditThrough": 1349,
-          "yearsWithGeometry": 0,
-          "yearsWithoutGeometry": 27,
-          "locations": 0,
-          "missingGeometryIntervals": [
-            {
-              "from": 1323,
-              "through": 1349
-            }
-          ]
-        },
-        {
-          "personId": "FRED3MEISSEN",
-          "personName": "Federico III de Meißen",
-          "government": {
-            "territory": "Turingia",
-            "title": "Landgrave",
-            "from": 1349,
-            "through": 1381,
-            "class": "landgraviato",
-            "condition": "efectivo"
-          },
-          "auditFrom": 1349,
-          "auditThrough": 1381,
-          "yearsWithGeometry": 0,
-          "yearsWithoutGeometry": 33,
-          "locations": 0,
-          "missingGeometryIntervals": [
-            {
-              "from": 1349,
-              "through": 1381
-            }
-          ]
-        }
-      ],
-      "nonpaintingGovernments": [],
-      "outsidePeriodGovernments": []
     },
     {
       "territory": "Valois",
@@ -11524,12 +10665,12 @@
       "territory": "Bulgaria",
       "status": "represented",
       "counts": {
-        "effectiveMandatesAllTime": 17,
-        "effectiveMandatesInScope": 16,
+        "effectiveMandatesAllTime": 22,
+        "effectiveMandatesInScope": 21,
         "nonpaintingMandatesInScope": 0,
         "locations": 99,
-        "yearsWithGovernment": 190,
-        "yearsWithGeometry": 189,
+        "yearsWithGovernment": 197,
+        "yearsWithGeometry": 196,
         "yearsWithoutGeometry": 1,
         "mandatesWithSomeMissingGeometry": 1,
         "mandatesEntirelyWithoutGeometry": 0
@@ -11547,6 +10688,10 @@
         {
           "name": "Bulgaria",
           "note": "Segundo Imperio búlgaro. La tributación mongola no extingue automáticamente el zarato. No se atribuyen Valaquia y Moldavia completas por una reivindicación imperial; quedan pendientes sus fronteras tempranas."
+        },
+        {
+          "name": "Bulgaria · Chaka en Tarnovo",
+          "note": "Control capitalino de Chaka; no se colorea toda Bulgaria por el título."
         },
         {
           "name": "Bulgaria · gobierno rival en Tarnovo",
@@ -11857,6 +11002,96 @@
           },
           "auditFrom": 1279,
           "auditThrough": 1280,
+          "yearsWithGeometry": 2,
+          "yearsWithoutGeometry": 0,
+          "locations": 2,
+          "missingGeometryIntervals": []
+        },
+        {
+          "personId": "KALIMAN2BUL",
+          "personName": "Kalimán II Asen",
+          "government": {
+            "territory": "Bulgaria",
+            "title": "Zar",
+            "from": 1256,
+            "through": 1256,
+            "class": "zarato",
+            "condition": "efectivo"
+          },
+          "auditFrom": 1256,
+          "auditThrough": 1256,
+          "yearsWithGeometry": 1,
+          "yearsWithoutGeometry": 0,
+          "locations": 62,
+          "missingGeometryIntervals": []
+        },
+        {
+          "personId": "MITSOASENBUL",
+          "personName": "Mitso Asen",
+          "government": {
+            "territory": "Bulgaria",
+            "title": "Zar",
+            "from": 1256,
+            "through": 1257,
+            "class": "zarato",
+            "condition": "efectivo"
+          },
+          "auditFrom": 1256,
+          "auditThrough": 1257,
+          "yearsWithGeometry": 2,
+          "yearsWithoutGeometry": 0,
+          "locations": 62,
+          "missingGeometryIntervals": []
+        },
+        {
+          "personId": "SMILETSBUL",
+          "personName": "Smilets",
+          "government": {
+            "territory": "Bulgaria",
+            "title": "Zar",
+            "from": 1292,
+            "through": 1298,
+            "class": "zarato",
+            "condition": "efectivo"
+          },
+          "auditFrom": 1292,
+          "auditThrough": 1298,
+          "yearsWithGeometry": 7,
+          "yearsWithoutGeometry": 0,
+          "locations": 62,
+          "missingGeometryIntervals": []
+        },
+        {
+          "personId": "IVAN2SMILETSBUL",
+          "personName": "Iván II Smilets",
+          "government": {
+            "territory": "Bulgaria",
+            "title": "Zar",
+            "from": 1298,
+            "through": 1299,
+            "class": "zarato",
+            "condition": "efectivo"
+          },
+          "auditFrom": 1298,
+          "auditThrough": 1299,
+          "yearsWithGeometry": 2,
+          "yearsWithoutGeometry": 0,
+          "locations": 62,
+          "missingGeometryIntervals": []
+        },
+        {
+          "personId": "CHAKABUL",
+          "personName": "Chaka",
+          "government": {
+            "territory": "Bulgaria",
+            "title": "Zar",
+            "from": 1299,
+            "through": 1300,
+            "class": "zarato",
+            "condition": "efectivo"
+          },
+          "auditFrom": 1299,
+          "auditThrough": 1300,
           "yearsWithGeometry": 2,
           "yearsWithoutGeometry": 0,
           "locations": 2,
@@ -13024,30 +12259,29 @@
         "effectiveMandatesAllTime": 43,
         "effectiveMandatesInScope": 42,
         "nonpaintingMandatesInScope": 1,
-        "locations": 20,
+        "locations": 29,
         "yearsWithGovernment": 599,
-        "yearsWithGeometry": 449,
-        "yearsWithoutGeometry": 150,
-        "mandatesWithSomeMissingGeometry": 12,
-        "mandatesEntirelyWithoutGeometry": 10
+        "yearsWithGeometry": 599,
+        "yearsWithoutGeometry": 0,
+        "mandatesWithSomeMissingGeometry": 0,
+        "mandatesEntirelyWithoutGeometry": 0
       },
-      "hasMandateGeometryGaps": true,
-      "hasEntireTerritoryYearGaps": true,
+      "hasMandateGeometryGaps": false,
+      "hasEntireTerritoryYearGaps": false,
       "limitedCore": true,
-      "missingGeometryIntervals": [
-        {
-          "from": 1651,
-          "through": 1800
-        }
-      ],
+      "missingGeometryIntervals": [],
       "layers": [
         {
           "name": "Croacia habsbúrgica",
-          "note": "Resto croata bajo la Corona elegida en Cetin en 1527, no un apéndice geográfico de Austria ni la costa dálmata veneciana. Se representan centros y fortalezas conservadores; la Frontera Militar y el área disputada necesitan una capa propia."
+          "note": "Reino de Croacia y territorios fronterizos bajo la Corona. Lika no pertenece a la Corona durante la ocupación otomana; su administración militar posterior no implica restitución de cada señorío."
         },
         {
           "name": "Croacia medieval",
-          "note": "Marco regional interior bajo la Corona croata: señoríos, bans y ciudades no equivalen a propiedad directa del rey. No se incluyen Rijeka, Krk ni las ciudades venecianas de Dalmacia. Las pérdidas de Lika y Krbava necesitan una revisión más fina."
+          "note": "Marco regional interior bajo la Corona croata: señoríos, bans y ciudades no equivalen a propiedad directa del rey. No se incluyen Rijeka, Krk ni las ciudades venecianas de Dalmacia. Las pérdidas de Lika y Krbava necesitan una revisión más fina. Se añaden Vinodol/Crikvenica y el relieve de Lika; Krk, Pag y las ciudades dálmatas siguen autoridades y fechas propias."
+        },
+        {
+          "name": "Dalmacia bajo la Corona croata",
+          "note": "Autoridad superior de la Corona croata en áreas costeras; no propiedad directa de todas las comunas o señores. Los intervalos breves se resumen por años."
         },
         {
           "name": "Eslavonia disputada (núcleos)",
@@ -13070,7 +12304,7 @@
           "auditThrough": 1270,
           "yearsWithGeometry": 36,
           "yearsWithoutGeometry": 0,
-          "locations": 9,
+          "locations": 17,
           "missingGeometryIntervals": []
         },
         {
@@ -13088,7 +12322,7 @@
           "auditThrough": 1301,
           "yearsWithGeometry": 12,
           "yearsWithoutGeometry": 0,
-          "locations": 9,
+          "locations": 15,
           "missingGeometryIntervals": []
         },
         {
@@ -13106,7 +12340,7 @@
           "auditThrough": 1272,
           "yearsWithGeometry": 3,
           "yearsWithoutGeometry": 0,
-          "locations": 9,
+          "locations": 16,
           "missingGeometryIntervals": []
         },
         {
@@ -13124,7 +12358,7 @@
           "auditThrough": 1342,
           "yearsWithGeometry": 35,
           "yearsWithoutGeometry": 0,
-          "locations": 9,
+          "locations": 16,
           "missingGeometryIntervals": []
         },
         {
@@ -13142,7 +12376,7 @@
           "auditThrough": 1290,
           "yearsWithGeometry": 19,
           "yearsWithoutGeometry": 0,
-          "locations": 9,
+          "locations": 16,
           "missingGeometryIntervals": []
         },
         {
@@ -13160,7 +12394,7 @@
           "auditThrough": 1305,
           "yearsWithGeometry": 5,
           "yearsWithoutGeometry": 0,
-          "locations": 9,
+          "locations": 15,
           "missingGeometryIntervals": []
         },
         {
@@ -13178,7 +12412,7 @@
           "auditThrough": 1382,
           "yearsWithGeometry": 41,
           "yearsWithoutGeometry": 0,
-          "locations": 9,
+          "locations": 17,
           "missingGeometryIntervals": []
         },
         {
@@ -13196,7 +12430,7 @@
           "auditThrough": 1444,
           "yearsWithGeometry": 5,
           "yearsWithoutGeometry": 0,
-          "locations": 9,
+          "locations": 12,
           "missingGeometryIntervals": []
         },
         {
@@ -13214,7 +12448,7 @@
           "auditThrough": 1385,
           "yearsWithGeometry": 4,
           "yearsWithoutGeometry": 0,
-          "locations": 9,
+          "locations": 17,
           "missingGeometryIntervals": []
         },
         {
@@ -13232,7 +12466,7 @@
           "auditThrough": 1395,
           "yearsWithGeometry": 10,
           "yearsWithoutGeometry": 0,
-          "locations": 9,
+          "locations": 17,
           "missingGeometryIntervals": []
         },
         {
@@ -13250,7 +12484,7 @@
           "auditThrough": 1437,
           "yearsWithGeometry": 51,
           "yearsWithoutGeometry": 0,
-          "locations": 9,
+          "locations": 17,
           "missingGeometryIntervals": []
         },
         {
@@ -13268,7 +12502,7 @@
           "auditThrough": 1564,
           "yearsWithGeometry": 38,
           "yearsWithoutGeometry": 0,
-          "locations": 15,
+          "locations": 16,
           "missingGeometryIntervals": []
         },
         {
@@ -13286,7 +12520,7 @@
           "auditThrough": 1490,
           "yearsWithGeometry": 33,
           "yearsWithoutGeometry": 0,
-          "locations": 9,
+          "locations": 12,
           "missingGeometryIntervals": []
         },
         {
@@ -13304,7 +12538,7 @@
           "auditThrough": 1516,
           "yearsWithGeometry": 27,
           "yearsWithoutGeometry": 0,
-          "locations": 9,
+          "locations": 11,
           "missingGeometryIntervals": []
         },
         {
@@ -13322,7 +12556,7 @@
           "auditThrough": 1439,
           "yearsWithGeometry": 3,
           "yearsWithoutGeometry": 0,
-          "locations": 9,
+          "locations": 12,
           "missingGeometryIntervals": []
         },
         {
@@ -13340,7 +12574,7 @@
           "auditThrough": 1457,
           "yearsWithGeometry": 13,
           "yearsWithoutGeometry": 0,
-          "locations": 9,
+          "locations": 12,
           "missingGeometryIntervals": []
         },
         {
@@ -13358,7 +12592,7 @@
           "auditThrough": 1564,
           "yearsWithGeometry": 2,
           "yearsWithoutGeometry": 0,
-          "locations": 10,
+          "locations": 11,
           "missingGeometryIntervals": []
         },
         {
@@ -13376,7 +12610,7 @@
           "auditThrough": 1576,
           "yearsWithGeometry": 12,
           "yearsWithoutGeometry": 0,
-          "locations": 10,
+          "locations": 11,
           "missingGeometryIntervals": []
         },
         {
@@ -13394,7 +12628,7 @@
           "auditThrough": 1619,
           "yearsWithGeometry": 12,
           "yearsWithoutGeometry": 0,
-          "locations": 9,
+          "locations": 10,
           "missingGeometryIntervals": []
         },
         {
@@ -13412,7 +12646,7 @@
           "auditThrough": 1576,
           "yearsWithGeometry": 5,
           "yearsWithoutGeometry": 0,
-          "locations": 10,
+          "locations": 11,
           "missingGeometryIntervals": []
         },
         {
@@ -13430,7 +12664,7 @@
           "auditThrough": 1608,
           "yearsWithGeometry": 32,
           "yearsWithoutGeometry": 0,
-          "locations": 10,
+          "locations": 11,
           "missingGeometryIntervals": []
         },
         {
@@ -13448,7 +12682,7 @@
           "auditThrough": 1619,
           "yearsWithGeometry": 2,
           "yearsWithoutGeometry": 0,
-          "locations": 9,
+          "locations": 10,
           "missingGeometryIntervals": []
         },
         {
@@ -13466,7 +12700,7 @@
           "auditThrough": 1637,
           "yearsWithGeometry": 18,
           "yearsWithoutGeometry": 0,
-          "locations": 9,
+          "locations": 10,
           "missingGeometryIntervals": []
         },
         {
@@ -13484,7 +12718,7 @@
           "auditThrough": 1204,
           "yearsWithGeometry": 5,
           "yearsWithoutGeometry": 0,
-          "locations": 9,
+          "locations": 17,
           "missingGeometryIntervals": []
         },
         {
@@ -13502,7 +12736,7 @@
           "auditThrough": 1205,
           "yearsWithGeometry": 2,
           "yearsWithoutGeometry": 0,
-          "locations": 9,
+          "locations": 16,
           "missingGeometryIntervals": []
         },
         {
@@ -13520,7 +12754,7 @@
           "auditThrough": 1235,
           "yearsWithGeometry": 31,
           "yearsWithoutGeometry": 0,
-          "locations": 9,
+          "locations": 16,
           "missingGeometryIntervals": []
         },
         {
@@ -13538,7 +12772,7 @@
           "auditThrough": 1526,
           "yearsWithGeometry": 11,
           "yearsWithoutGeometry": 0,
-          "locations": 8,
+          "locations": 10,
           "missingGeometryIntervals": []
         },
         {
@@ -13556,7 +12790,7 @@
           "auditThrough": 1386,
           "yearsWithGeometry": 2,
           "yearsWithoutGeometry": 0,
-          "locations": 9,
+          "locations": 17,
           "missingGeometryIntervals": []
         },
         {
@@ -13572,15 +12806,10 @@
           },
           "auditFrom": 1637,
           "auditThrough": 1657,
-          "yearsWithGeometry": 14,
-          "yearsWithoutGeometry": 7,
-          "locations": 9,
-          "missingGeometryIntervals": [
-            {
-              "from": 1651,
-              "through": 1657
-            }
-          ]
+          "yearsWithGeometry": 21,
+          "yearsWithoutGeometry": 0,
+          "locations": 10,
+          "missingGeometryIntervals": []
         },
         {
           "personId": "LEOP1HRE",
@@ -13595,15 +12824,10 @@
           },
           "auditFrom": 1655,
           "auditThrough": 1657,
-          "yearsWithGeometry": 0,
-          "yearsWithoutGeometry": 3,
-          "locations": 0,
-          "missingGeometryIntervals": [
-            {
-              "from": 1655,
-              "through": 1657
-            }
-          ]
+          "yearsWithGeometry": 3,
+          "yearsWithoutGeometry": 0,
+          "locations": 9,
+          "missingGeometryIntervals": []
         },
         {
           "personId": "LEOP1HRE",
@@ -13618,15 +12842,10 @@
           },
           "auditFrom": 1658,
           "auditThrough": 1705,
-          "yearsWithGeometry": 0,
-          "yearsWithoutGeometry": 48,
-          "locations": 0,
-          "missingGeometryIntervals": [
-            {
-              "from": 1658,
-              "through": 1705
-            }
-          ]
+          "yearsWithGeometry": 48,
+          "yearsWithoutGeometry": 0,
+          "locations": 12,
+          "missingGeometryIntervals": []
         },
         {
           "personId": "JOSE1HRE",
@@ -13641,15 +12860,10 @@
           },
           "auditFrom": 1687,
           "auditThrough": 1705,
-          "yearsWithGeometry": 0,
-          "yearsWithoutGeometry": 19,
-          "locations": 0,
-          "missingGeometryIntervals": [
-            {
-              "from": 1687,
-              "through": 1705
-            }
-          ]
+          "yearsWithGeometry": 19,
+          "yearsWithoutGeometry": 0,
+          "locations": 12,
+          "missingGeometryIntervals": []
         },
         {
           "personId": "JOSE1HRE",
@@ -13664,15 +12878,10 @@
           },
           "auditFrom": 1706,
           "auditThrough": 1711,
-          "yearsWithGeometry": 0,
-          "yearsWithoutGeometry": 6,
-          "locations": 0,
-          "missingGeometryIntervals": [
-            {
-              "from": 1706,
-              "through": 1711
-            }
-          ]
+          "yearsWithGeometry": 6,
+          "yearsWithoutGeometry": 0,
+          "locations": 12,
+          "missingGeometryIntervals": []
         },
         {
           "personId": "CARLOS6HRE",
@@ -13687,15 +12896,10 @@
           },
           "auditFrom": 1711,
           "auditThrough": 1740,
-          "yearsWithGeometry": 0,
-          "yearsWithoutGeometry": 30,
-          "locations": 0,
-          "missingGeometryIntervals": [
-            {
-              "from": 1711,
-              "through": 1740
-            }
-          ]
+          "yearsWithGeometry": 30,
+          "yearsWithoutGeometry": 0,
+          "locations": 12,
+          "missingGeometryIntervals": []
         },
         {
           "personId": "MARIATERESAHAB",
@@ -13710,15 +12914,10 @@
           },
           "auditFrom": 1740,
           "auditThrough": 1780,
-          "yearsWithGeometry": 0,
-          "yearsWithoutGeometry": 41,
-          "locations": 0,
-          "missingGeometryIntervals": [
-            {
-              "from": 1740,
-              "through": 1780
-            }
-          ]
+          "yearsWithGeometry": 41,
+          "yearsWithoutGeometry": 0,
+          "locations": 12,
+          "missingGeometryIntervals": []
         },
         {
           "personId": "JOSE2HRE",
@@ -13733,15 +12932,10 @@
           },
           "auditFrom": 1780,
           "auditThrough": 1790,
-          "yearsWithGeometry": 0,
-          "yearsWithoutGeometry": 11,
-          "locations": 0,
-          "missingGeometryIntervals": [
-            {
-              "from": 1780,
-              "through": 1790
-            }
-          ]
+          "yearsWithGeometry": 11,
+          "yearsWithoutGeometry": 0,
+          "locations": 12,
+          "missingGeometryIntervals": []
         },
         {
           "personId": "LEOP2HRE",
@@ -13756,15 +12950,10 @@
           },
           "auditFrom": 1790,
           "auditThrough": 1792,
-          "yearsWithGeometry": 0,
-          "yearsWithoutGeometry": 3,
-          "locations": 0,
-          "missingGeometryIntervals": [
-            {
-              "from": 1790,
-              "through": 1792
-            }
-          ]
+          "yearsWithGeometry": 3,
+          "yearsWithoutGeometry": 0,
+          "locations": 12,
+          "missingGeometryIntervals": []
         },
         {
           "personId": "FRAN2HRE",
@@ -13779,15 +12968,10 @@
           },
           "auditFrom": 1792,
           "auditThrough": 1800,
-          "yearsWithGeometry": 0,
-          "yearsWithoutGeometry": 9,
-          "locations": 0,
-          "missingGeometryIntervals": [
-            {
-              "from": 1792,
-              "through": 1800
-            }
-          ]
+          "yearsWithGeometry": 9,
+          "yearsWithoutGeometry": 0,
+          "locations": 12,
+          "missingGeometryIntervals": []
         },
         {
           "personId": "NIKOLA4ZRIN",
@@ -13804,7 +12988,7 @@
           "auditThrough": 1556,
           "yearsWithGeometry": 15,
           "yearsWithoutGeometry": 0,
-          "locations": 12,
+          "locations": 13,
           "missingGeometryIntervals": []
         },
         {
@@ -13822,7 +13006,7 @@
           "auditThrough": 1626,
           "yearsWithGeometry": 5,
           "yearsWithoutGeometry": 0,
-          "locations": 9,
+          "locations": 10,
           "missingGeometryIntervals": []
         },
         {
@@ -13838,15 +13022,10 @@
           },
           "auditFrom": 1647,
           "auditThrough": 1664,
-          "yearsWithGeometry": 4,
-          "yearsWithoutGeometry": 14,
-          "locations": 9,
-          "missingGeometryIntervals": [
-            {
-              "from": 1651,
-              "through": 1664
-            }
-          ]
+          "yearsWithGeometry": 18,
+          "yearsWithoutGeometry": 0,
+          "locations": 10,
+          "missingGeometryIntervals": []
         },
         {
           "personId": "PETAR4ZRIN",
@@ -13861,15 +13040,10 @@
           },
           "auditFrom": 1665,
           "auditThrough": 1670,
-          "yearsWithGeometry": 0,
-          "yearsWithoutGeometry": 6,
-          "locations": 0,
-          "missingGeometryIntervals": [
-            {
-              "from": 1665,
-              "through": 1670
-            }
-          ]
+          "yearsWithGeometry": 6,
+          "yearsWithoutGeometry": 0,
+          "locations": 9,
+          "missingGeometryIntervals": []
         }
       ],
       "nonpaintingGovernments": [
@@ -13898,6 +13072,99 @@
           "condition": "efectivo"
         }
       ]
+    },
+    {
+      "territory": "Dobruja",
+      "status": "represented",
+      "counts": {
+        "effectiveMandatesAllTime": 3,
+        "effectiveMandatesInScope": 3,
+        "nonpaintingMandatesInScope": 0,
+        "locations": 12,
+        "yearsWithGovernment": 46,
+        "yearsWithGeometry": 45,
+        "yearsWithoutGeometry": 1,
+        "mandatesWithSomeMissingGeometry": 1,
+        "mandatesEntirelyWithoutGeometry": 0
+      },
+      "hasMandateGeometryGaps": true,
+      "hasEntireTerritoryYearGaps": true,
+      "limitedCore": false,
+      "missingGeometryIntervals": [
+        {
+          "from": 1391,
+          "through": 1391
+        }
+      ],
+      "layers": [
+        {
+          "name": "Despotado de Dobruja",
+          "note": "Despotado costero de Karvuna/Dobruja. El límite septentrional y el relevo de 1388–1389 son inciertos: no se colorea toda Dobruja moderna ni se fuerza una frontera precisa. Se integra la celda costera de Constanța. Hasta 1385 se mantiene la superficie aproximada anterior; después se distingue la contracción de Ivanko."
+        }
+      ],
+      "governments": [
+        {
+          "personId": "BALIKDOB",
+          "personName": "Balik de Karvuna",
+          "government": {
+            "territory": "Dobruja",
+            "title": "Arconte",
+            "from": 1346,
+            "through": 1347,
+            "class": "gobierno",
+            "condition": "efectivo"
+          },
+          "auditFrom": 1346,
+          "auditThrough": 1347,
+          "yearsWithGeometry": 2,
+          "yearsWithoutGeometry": 0,
+          "locations": 4,
+          "missingGeometryIntervals": []
+        },
+        {
+          "personId": "DOBROTITSA",
+          "personName": "Dobrotitsa",
+          "government": {
+            "territory": "Dobruja",
+            "title": "Déspota",
+            "from": 1347,
+            "through": 1385,
+            "class": "despotado",
+            "condition": "efectivo"
+          },
+          "auditFrom": 1347,
+          "auditThrough": 1385,
+          "yearsWithGeometry": 39,
+          "yearsWithoutGeometry": 0,
+          "locations": 12,
+          "missingGeometryIntervals": []
+        },
+        {
+          "personId": "IVANKODOB",
+          "personName": "Ivanko de Dobruja",
+          "government": {
+            "territory": "Dobruja",
+            "title": "Déspota",
+            "from": 1385,
+            "through": 1391,
+            "class": "despotado",
+            "condition": "efectivo"
+          },
+          "auditFrom": 1385,
+          "auditThrough": 1391,
+          "yearsWithGeometry": 6,
+          "yearsWithoutGeometry": 1,
+          "locations": 12,
+          "missingGeometryIntervals": [
+            {
+              "from": 1391,
+              "through": 1391
+            }
+          ]
+        }
+      ],
+      "nonpaintingGovernments": [],
+      "outsidePeriodGovernments": []
     },
     {
       "territory": "Epiro de los Tocco",
@@ -21028,6 +20295,301 @@
       "outsidePeriodGovernments": []
     },
     {
+      "territory": "Meißen",
+      "status": "represented",
+      "counts": {
+        "effectiveMandatesAllTime": 13,
+        "effectiveMandatesInScope": 13,
+        "nonpaintingMandatesInScope": 0,
+        "locations": 13,
+        "yearsWithGovernment": 286,
+        "yearsWithGeometry": 273,
+        "yearsWithoutGeometry": 13,
+        "mandatesWithSomeMissingGeometry": 2,
+        "mandatesEntirelyWithoutGeometry": 0
+      },
+      "hasMandateGeometryGaps": true,
+      "hasEntireTerritoryYearGaps": true,
+      "limitedCore": false,
+      "missingGeometryIntervals": [
+        {
+          "from": 1294,
+          "through": 1297
+        },
+        {
+          "from": 1299,
+          "through": 1306
+        },
+        {
+          "from": 1485,
+          "through": 1485
+        }
+      ],
+      "layers": [
+        {
+          "name": "Margraviato de Meißen",
+          "note": "Margraviato feudal de Meißen. La identidad persiste al recibir los Wettin el electorado; las superficies cambian con particiones, compras y conflictos. No incluye Wurzen, Erfurt, Magdeburgo o Lusacia por vecindad."
+        },
+        {
+          "name": "Osterland",
+          "note": "Ámbito de Osterland en las particiones Wettin; sus límites feudales no coinciden exactamente con cuatro celdas. Desde 1407 se reúne con Meißen."
+        }
+      ],
+      "governments": [
+        {
+          "personId": "ERNSTSAX",
+          "personName": "Ernesto de Sajonia",
+          "government": {
+            "territory": "Meißen",
+            "title": "Margrave",
+            "from": 1464,
+            "through": 1485,
+            "class": "margraviato",
+            "condition": "efectivo"
+          },
+          "auditFrom": 1464,
+          "auditThrough": 1485,
+          "yearsWithGeometry": 21,
+          "yearsWithoutGeometry": 1,
+          "locations": 13,
+          "missingGeometryIntervals": [
+            {
+              "from": 1485,
+              "through": 1485
+            }
+          ]
+        },
+        {
+          "personId": "DIETRICHMEISSEN",
+          "personName": "Dietrich de Meißen",
+          "government": {
+            "territory": "Meißen",
+            "title": "Margrave",
+            "from": 1198,
+            "through": 1221,
+            "class": "margraviato",
+            "condition": "efectivo"
+          },
+          "auditFrom": 1200,
+          "auditThrough": 1221,
+          "yearsWithGeometry": 22,
+          "yearsWithoutGeometry": 0,
+          "locations": 12,
+          "missingGeometryIntervals": []
+        },
+        {
+          "personId": "HEINRICH3MEISSEN",
+          "personName": "Enrique III de Meißen",
+          "government": {
+            "territory": "Meißen",
+            "title": "Margrave",
+            "from": 1221,
+            "through": 1288,
+            "class": "margraviato",
+            "condition": "efectivo"
+          },
+          "auditFrom": 1221,
+          "auditThrough": 1288,
+          "yearsWithGeometry": 68,
+          "yearsWithoutGeometry": 0,
+          "locations": 12,
+          "missingGeometryIntervals": []
+        },
+        {
+          "personId": "FRED1MEISSEN",
+          "personName": "Federico I de Meißen",
+          "government": {
+            "territory": "Meißen",
+            "title": "Margrave",
+            "from": 1307,
+            "through": 1323,
+            "class": "margraviato",
+            "condition": "efectivo"
+          },
+          "auditFrom": 1307,
+          "auditThrough": 1323,
+          "yearsWithGeometry": 17,
+          "yearsWithoutGeometry": 0,
+          "locations": 12,
+          "missingGeometryIntervals": []
+        },
+        {
+          "personId": "FRED1MEISSEN",
+          "personName": "Federico I de Meißen",
+          "government": {
+            "territory": "Meißen",
+            "title": "Margrave",
+            "from": 1291,
+            "through": 1306,
+            "class": "margraviato",
+            "condition": "efectivo"
+          },
+          "auditFrom": 1291,
+          "auditThrough": 1306,
+          "yearsWithGeometry": 4,
+          "yearsWithoutGeometry": 12,
+          "locations": 8,
+          "missingGeometryIntervals": [
+            {
+              "from": 1294,
+              "through": 1297
+            },
+            {
+              "from": 1299,
+              "through": 1306
+            }
+          ]
+        },
+        {
+          "personId": "FRED2MEISSEN",
+          "personName": "Federico II de Meißen",
+          "government": {
+            "territory": "Meißen",
+            "title": "Margrave",
+            "from": 1323,
+            "through": 1349,
+            "class": "margraviato",
+            "condition": "efectivo"
+          },
+          "auditFrom": 1323,
+          "auditThrough": 1349,
+          "yearsWithGeometry": 27,
+          "yearsWithoutGeometry": 0,
+          "locations": 12,
+          "missingGeometryIntervals": []
+        },
+        {
+          "personId": "FRED3MEISSEN",
+          "personName": "Federico III de Meißen",
+          "government": {
+            "territory": "Meißen",
+            "title": "Margrave",
+            "from": 1349,
+            "through": 1381,
+            "class": "margraviato",
+            "condition": "efectivo"
+          },
+          "auditFrom": 1349,
+          "auditThrough": 1381,
+          "yearsWithGeometry": 33,
+          "yearsWithoutGeometry": 0,
+          "locations": 12,
+          "missingGeometryIntervals": []
+        },
+        {
+          "personId": "FRED1SAX",
+          "personName": "Federico I de Sajonia",
+          "government": {
+            "territory": "Meißen",
+            "title": "Margrave",
+            "from": 1407,
+            "through": 1428,
+            "class": "margraviato",
+            "condition": "efectivo"
+          },
+          "auditFrom": 1407,
+          "auditThrough": 1428,
+          "yearsWithGeometry": 22,
+          "yearsWithoutGeometry": 0,
+          "locations": 13,
+          "missingGeometryIntervals": []
+        },
+        {
+          "personId": "FRED1SAX",
+          "personName": "Federico I de Sajonia",
+          "government": {
+            "territory": "Meißen",
+            "title": "Margrave",
+            "from": 1381,
+            "through": 1406,
+            "class": "margraviato",
+            "condition": "efectivo",
+            "scope": "Osterland desde1382"
+          },
+          "auditFrom": 1381,
+          "auditThrough": 1406,
+          "yearsWithGeometry": 26,
+          "yearsWithoutGeometry": 0,
+          "locations": 12,
+          "missingGeometryIntervals": []
+        },
+        {
+          "personId": "FRED2SAX",
+          "personName": "Federico II de Sajonia",
+          "government": {
+            "territory": "Meißen",
+            "title": "Margrave",
+            "from": 1428,
+            "through": 1464,
+            "class": "margraviato",
+            "condition": "efectivo"
+          },
+          "auditFrom": 1428,
+          "auditThrough": 1464,
+          "yearsWithGeometry": 37,
+          "yearsWithoutGeometry": 0,
+          "locations": 13,
+          "missingGeometryIntervals": []
+        },
+        {
+          "personId": "FREDTUTTAMEISSEN",
+          "personName": "Federico Tuta de Meißen",
+          "government": {
+            "territory": "Meißen",
+            "title": "Margrave",
+            "from": 1288,
+            "through": 1291,
+            "class": "margraviato",
+            "condition": "efectivo"
+          },
+          "auditFrom": 1288,
+          "auditThrough": 1291,
+          "yearsWithGeometry": 4,
+          "yearsWithoutGeometry": 0,
+          "locations": 8,
+          "missingGeometryIntervals": []
+        },
+        {
+          "personId": "WILHELM1MEISSEN",
+          "personName": "Guillermo I de Meißen",
+          "government": {
+            "territory": "Meißen",
+            "title": "Margrave",
+            "from": 1349,
+            "through": 1407,
+            "class": "margraviato",
+            "condition": "corregente"
+          },
+          "auditFrom": 1349,
+          "auditThrough": 1407,
+          "yearsWithGeometry": 59,
+          "yearsWithoutGeometry": 0,
+          "locations": 13,
+          "missingGeometryIntervals": []
+        },
+        {
+          "personId": "WILHELM2MEISSEN",
+          "personName": "Guillermo II de Meißen",
+          "government": {
+            "territory": "Meißen",
+            "title": "Margrave",
+            "from": 1382,
+            "through": 1425,
+            "class": "margraviato",
+            "condition": "efectivo"
+          },
+          "auditFrom": 1382,
+          "auditThrough": 1425,
+          "yearsWithGeometry": 44,
+          "yearsWithoutGeometry": 0,
+          "locations": 13,
+          "missingGeometryIntervals": []
+        }
+      ],
+      "nonpaintingGovernments": [],
+      "outsidePeriodGovernments": []
+    },
+    {
       "territory": "Milán",
       "status": "represented",
       "counts": {
@@ -24125,6 +23687,530 @@
       ]
     },
     {
+      "territory": "Nassau",
+      "status": "represented",
+      "counts": {
+        "effectiveMandatesAllTime": 25,
+        "effectiveMandatesInScope": 25,
+        "nonpaintingMandatesInScope": 0,
+        "locations": 6,
+        "yearsWithGovernment": 597,
+        "yearsWithGeometry": 597,
+        "yearsWithoutGeometry": 0,
+        "mandatesWithSomeMissingGeometry": 1,
+        "mandatesEntirelyWithoutGeometry": 0
+      },
+      "hasMandateGeometryGaps": true,
+      "hasEntireTerritoryYearGaps": false,
+      "limitedCore": false,
+      "missingGeometryIntervals": [],
+      "layers": [
+        {
+          "name": "Condado de Nassau",
+          "note": "Jurisdicción regional conjunta; no equivale a toda la provincia de Nassau del siglo XIX."
+        },
+        {
+          "name": "Nassau · rama otoniana",
+          "note": "Gobierno otoniano antes de la partición de 1303; no incluye Nassau-Wiesbaden."
+        },
+        {
+          "name": "Nassau · rama walramiana",
+          "note": "Gobierno walramiano, seguido por la partición de Weilburg e Idstein. La celda Usingen no sustituye a Weilburg."
+        },
+        {
+          "name": "Nassau-Dietz",
+          "note": "Nassau-Dietz/Diez; la celda medieval mezcla derechos de Nassau y otros señores. Desde1654 principado, y desde1743 territorios otonianos reunidos; nunca todos los territorios walramianos."
+        },
+        {
+          "name": "Nassau-Dillenburg",
+          "note": "El título de Nassau-Dillenburg no colorea automáticamente las ramas de Hadamar o Dietz después de1607."
+        },
+        {
+          "name": "Nassau-Hadamar",
+          "note": "Celda regional de Hadamar; la distribución parcial después de1394 y1711 exige mayor resolución que este SVG."
+        },
+        {
+          "name": "Nassau-Siegen",
+          "note": "Territorio de Siegen; desde1607 se limita a su celda, no a la totalidad del patrimonio otoniano."
+        }
+      ],
+      "governments": [
+        {
+          "personId": "ADOLFN",
+          "personName": "Adolfo de Nassau",
+          "government": {
+            "territory": "Nassau",
+            "title": "Conde",
+            "from": 1276,
+            "through": 1298,
+            "class": "condado",
+            "condition": "rama",
+            "scope": "Rama walramiana"
+          },
+          "auditFrom": 1276,
+          "auditThrough": 1298,
+          "yearsWithGeometry": 23,
+          "yearsWithoutGeometry": 0,
+          "locations": 2,
+          "missingGeometryIntervals": []
+        },
+        {
+          "personId": "WALRAM2",
+          "personName": "Walram II de Nassau",
+          "government": {
+            "territory": "Nassau",
+            "title": "Conde",
+            "from": 1251,
+            "through": 1276,
+            "class": "condado",
+            "condition": "rama",
+            "scope": "Rama walramiana"
+          },
+          "auditFrom": 1251,
+          "auditThrough": 1276,
+          "yearsWithGeometry": 26,
+          "yearsWithoutGeometry": 0,
+          "locations": 5,
+          "missingGeometryIntervals": []
+        },
+        {
+          "personId": "HENRY2NASSAU",
+          "personName": "Enrique II de Nassau",
+          "government": {
+            "territory": "Nassau",
+            "title": "Conde",
+            "from": 1198,
+            "through": 1251,
+            "class": "condado",
+            "condition": "efectivo"
+          },
+          "auditFrom": 1200,
+          "auditThrough": 1251,
+          "yearsWithGeometry": 52,
+          "yearsWithoutGeometry": 0,
+          "locations": 5,
+          "missingGeometryIntervals": []
+        },
+        {
+          "personId": "OTTO1NASSAU",
+          "personName": "Otón I de Nassau",
+          "government": {
+            "territory": "Nassau",
+            "title": "Conde",
+            "from": 1251,
+            "through": 1290,
+            "class": "condado",
+            "condition": "rama",
+            "scope": "Rama otoniana"
+          },
+          "auditFrom": 1251,
+          "auditThrough": 1290,
+          "yearsWithGeometry": 40,
+          "yearsWithoutGeometry": 0,
+          "locations": 5,
+          "missingGeometryIntervals": []
+        },
+        {
+          "personId": "HENRY1SIEGEN",
+          "personName": "Enrique I de Nassau-Siegen",
+          "government": {
+            "territory": "Nassau",
+            "title": "Conde",
+            "from": 1303,
+            "through": 1343,
+            "class": "condado",
+            "condition": "efectivo"
+          },
+          "auditFrom": 1303,
+          "auditThrough": 1343,
+          "yearsWithGeometry": 41,
+          "yearsWithoutGeometry": 0,
+          "locations": 2,
+          "missingGeometryIntervals": []
+        },
+        {
+          "personId": "OTTO2SIEGEN",
+          "personName": "Otón II de Nassau-Siegen",
+          "government": {
+            "territory": "Nassau",
+            "title": "Conde",
+            "from": 1343,
+            "through": 1351,
+            "class": "condado",
+            "condition": "efectivo"
+          },
+          "auditFrom": 1343,
+          "auditThrough": 1351,
+          "yearsWithGeometry": 9,
+          "yearsWithoutGeometry": 0,
+          "locations": 2,
+          "missingGeometryIntervals": []
+        },
+        {
+          "personId": "JOHN1NASSAU",
+          "personName": "Juan I de Nassau-Siegen",
+          "government": {
+            "territory": "Nassau",
+            "title": "Conde",
+            "from": 1351,
+            "through": 1416,
+            "class": "condado",
+            "condition": "efectivo"
+          },
+          "auditFrom": 1351,
+          "auditThrough": 1416,
+          "yearsWithGeometry": 66,
+          "yearsWithoutGeometry": 0,
+          "locations": 3,
+          "missingGeometryIntervals": []
+        },
+        {
+          "personId": "ENGELBERT1NASSAU",
+          "personName": "Engelberto I de Nassau",
+          "government": {
+            "territory": "Nassau",
+            "title": "Conde",
+            "from": 1416,
+            "through": 1442,
+            "class": "condado",
+            "condition": "efectivo"
+          },
+          "auditFrom": 1416,
+          "auditThrough": 1442,
+          "yearsWithGeometry": 27,
+          "yearsWithoutGeometry": 0,
+          "locations": 3,
+          "missingGeometryIntervals": []
+        },
+        {
+          "personId": "JOHN4NASSAU",
+          "personName": "Juan IV de Nassau-Breda",
+          "government": {
+            "territory": "Nassau",
+            "title": "Conde",
+            "from": 1442,
+            "through": 1475,
+            "class": "condado",
+            "condition": "efectivo"
+          },
+          "auditFrom": 1442,
+          "auditThrough": 1475,
+          "yearsWithGeometry": 34,
+          "yearsWithoutGeometry": 0,
+          "locations": 3,
+          "missingGeometryIntervals": []
+        },
+        {
+          "personId": "JOHN5NASSAU",
+          "personName": "Juan V de Nassau-Siegen",
+          "government": {
+            "territory": "Nassau",
+            "title": "Conde",
+            "from": 1475,
+            "through": 1516,
+            "class": "condado",
+            "condition": "efectivo"
+          },
+          "auditFrom": 1475,
+          "auditThrough": 1516,
+          "yearsWithGeometry": 42,
+          "yearsWithoutGeometry": 0,
+          "locations": 3,
+          "missingGeometryIntervals": []
+        },
+        {
+          "personId": "WILLIAMRICHNASSAU",
+          "personName": "Guillermo I de Nassau-Dillenburg",
+          "government": {
+            "territory": "Nassau",
+            "title": "Conde",
+            "from": 1516,
+            "through": 1559,
+            "class": "condado",
+            "condition": "efectivo"
+          },
+          "auditFrom": 1516,
+          "auditThrough": 1559,
+          "yearsWithGeometry": 44,
+          "yearsWithoutGeometry": 0,
+          "locations": 3,
+          "missingGeometryIntervals": []
+        },
+        {
+          "personId": "JOHN6NASSAU",
+          "personName": "Juan VI de Nassau-Dillenburg",
+          "government": {
+            "territory": "Nassau",
+            "title": "Conde",
+            "from": 1559,
+            "through": 1606,
+            "class": "condado",
+            "condition": "efectivo"
+          },
+          "auditFrom": 1559,
+          "auditThrough": 1606,
+          "yearsWithGeometry": 48,
+          "yearsWithoutGeometry": 0,
+          "locations": 3,
+          "missingGeometryIntervals": []
+        },
+        {
+          "personId": "ERNSTCASIMIRNASSAU",
+          "personName": "Ernesto Casimiro de Nassau-Dietz",
+          "government": {
+            "territory": "Nassau",
+            "title": "Conde",
+            "from": 1606,
+            "through": 1632,
+            "class": "condado",
+            "condition": "rama",
+            "scope": "Nassau-Dietz"
+          },
+          "auditFrom": 1606,
+          "auditThrough": 1632,
+          "yearsWithGeometry": 27,
+          "yearsWithoutGeometry": 0,
+          "locations": 1,
+          "missingGeometryIntervals": []
+        },
+        {
+          "personId": "WILLIAMFREDNASSAU",
+          "personName": "Guillermo Federico de Nassau-Dietz",
+          "government": {
+            "territory": "Nassau",
+            "title": "Conde",
+            "from": 1640,
+            "through": 1653,
+            "class": "condado",
+            "condition": "rama",
+            "scope": "Nassau-Dietz"
+          },
+          "auditFrom": 1640,
+          "auditThrough": 1653,
+          "yearsWithGeometry": 14,
+          "yearsWithoutGeometry": 0,
+          "locations": 1,
+          "missingGeometryIntervals": []
+        },
+        {
+          "personId": "WILLIAMFREDNASSAU",
+          "personName": "Guillermo Federico de Nassau-Dietz",
+          "government": {
+            "territory": "Nassau",
+            "title": "Príncipe",
+            "from": 1654,
+            "through": 1664,
+            "class": "principado",
+            "condition": "rama",
+            "scope": "Nassau-Dietz"
+          },
+          "auditFrom": 1654,
+          "auditThrough": 1664,
+          "yearsWithGeometry": 11,
+          "yearsWithoutGeometry": 0,
+          "locations": 1,
+          "missingGeometryIntervals": []
+        },
+        {
+          "personId": "HENRYCASIMIR2",
+          "personName": "Enrique Casimiro II de Nassau-Dietz",
+          "government": {
+            "territory": "Nassau",
+            "title": "Príncipe",
+            "from": 1664,
+            "through": 1696,
+            "class": "principado",
+            "condition": "rama",
+            "scope": "Nassau-Dietz"
+          },
+          "auditFrom": 1664,
+          "auditThrough": 1696,
+          "yearsWithGeometry": 33,
+          "yearsWithoutGeometry": 0,
+          "locations": 1,
+          "missingGeometryIntervals": []
+        },
+        {
+          "personId": "JOHNWILLIAMFRISO",
+          "personName": "Juan Guillermo Friso de Orange-Nassau",
+          "government": {
+            "territory": "Nassau",
+            "title": "Príncipe",
+            "from": 1696,
+            "through": 1711,
+            "class": "principado",
+            "condition": "rama",
+            "scope": "Nassau-Dietz"
+          },
+          "auditFrom": 1696,
+          "auditThrough": 1711,
+          "yearsWithGeometry": 16,
+          "yearsWithoutGeometry": 0,
+          "locations": 1,
+          "missingGeometryIntervals": []
+        },
+        {
+          "personId": "WILLIAM4ORANGE",
+          "personName": "Guillermo IV de Orange-Nassau",
+          "government": {
+            "territory": "Nassau",
+            "title": "Príncipe",
+            "from": 1711,
+            "through": 1751,
+            "class": "principado",
+            "condition": "rama",
+            "scope": "Nassau-Dietz"
+          },
+          "auditFrom": 1711,
+          "auditThrough": 1751,
+          "yearsWithGeometry": 41,
+          "yearsWithoutGeometry": 0,
+          "locations": 4,
+          "missingGeometryIntervals": []
+        },
+        {
+          "personId": "WILLIAM5ORANGE",
+          "personName": "Guillermo V de Orange-Nassau",
+          "government": {
+            "territory": "Nassau",
+            "title": "Príncipe",
+            "from": 1751,
+            "through": 1806,
+            "class": "principado",
+            "condition": "rama",
+            "scope": "Nassau-Dietz"
+          },
+          "auditFrom": 1751,
+          "auditThrough": 1800,
+          "yearsWithGeometry": 50,
+          "yearsWithoutGeometry": 0,
+          "locations": 4,
+          "missingGeometryIntervals": []
+        },
+        {
+          "personId": "HENRYCASIMIR1",
+          "personName": "Enrique Casimiro I de Nassau-Dietz",
+          "government": {
+            "territory": "Nassau",
+            "title": "Conde",
+            "from": 1632,
+            "through": 1640,
+            "class": "condado",
+            "condition": "rama",
+            "scope": "Nassau-Dietz"
+          },
+          "auditFrom": 1632,
+          "auditThrough": 1640,
+          "yearsWithGeometry": 9,
+          "yearsWithoutGeometry": 0,
+          "locations": 1,
+          "missingGeometryIntervals": []
+        },
+        {
+          "personId": "JOHN1DILL",
+          "personName": "Juan I de Nassau-Dillenburg",
+          "government": {
+            "territory": "Nassau",
+            "title": "Conde",
+            "from": 1303,
+            "through": 1328,
+            "class": "condado",
+            "condition": "rama",
+            "scope": "Nassau-Dillenburg"
+          },
+          "auditFrom": 1303,
+          "auditThrough": 1328,
+          "yearsWithGeometry": 25,
+          "yearsWithoutGeometry": 1,
+          "locations": 1,
+          "missingGeometryIntervals": [
+            {
+              "from": 1328,
+              "through": 1328
+            }
+          ]
+        },
+        {
+          "personId": "JOHN7SIEGEN",
+          "personName": "Juan VII de Nassau-Siegen",
+          "government": {
+            "territory": "Nassau",
+            "title": "Conde",
+            "from": 1607,
+            "through": 1623,
+            "class": "condado",
+            "condition": "rama",
+            "scope": "Nassau-Siegen"
+          },
+          "auditFrom": 1607,
+          "auditThrough": 1623,
+          "yearsWithGeometry": 17,
+          "yearsWithoutGeometry": 0,
+          "locations": 1,
+          "missingGeometryIntervals": []
+        },
+        {
+          "personId": "GEORGDILL",
+          "personName": "Jorge de Nassau-Dillenburg",
+          "government": {
+            "territory": "Nassau",
+            "title": "Conde",
+            "from": 1607,
+            "through": 1623,
+            "class": "condado",
+            "condition": "rama",
+            "scope": "Nassau-Dillenburg"
+          },
+          "auditFrom": 1607,
+          "auditThrough": 1623,
+          "yearsWithGeometry": 17,
+          "yearsWithoutGeometry": 0,
+          "locations": 1,
+          "missingGeometryIntervals": []
+        },
+        {
+          "personId": "JOHNLUDWIGHAD",
+          "personName": "Juan Luis de Nassau-Hadamar",
+          "government": {
+            "territory": "Nassau",
+            "title": "Conde",
+            "from": 1607,
+            "through": 1649,
+            "class": "condado",
+            "condition": "rama",
+            "scope": "Nassau-Hadamar"
+          },
+          "auditFrom": 1607,
+          "auditThrough": 1649,
+          "yearsWithGeometry": 43,
+          "yearsWithoutGeometry": 0,
+          "locations": 1,
+          "missingGeometryIntervals": []
+        },
+        {
+          "personId": "JOHNLUDWIGHAD",
+          "personName": "Juan Luis de Nassau-Hadamar",
+          "government": {
+            "territory": "Nassau",
+            "title": "Príncipe",
+            "from": 1650,
+            "through": 1653,
+            "class": "principado",
+            "condition": "rama",
+            "scope": "Nassau-Hadamar"
+          },
+          "auditFrom": 1650,
+          "auditThrough": 1653,
+          "yearsWithGeometry": 4,
+          "yearsWithoutGeometry": 0,
+          "locations": 1,
+          "missingGeometryIntervals": []
+        }
+      ],
+      "nonpaintingGovernments": [],
+      "outsidePeriodGovernments": []
+    },
+    {
       "territory": "Navarra",
       "status": "represented",
       "counts": {
@@ -25440,15 +25526,15 @@
       "territory": "Países Bajos",
       "status": "represented",
       "counts": {
-        "effectiveMandatesAllTime": 16,
-        "effectiveMandatesInScope": 15,
+        "effectiveMandatesAllTime": 17,
+        "effectiveMandatesInScope": 16,
         "nonpaintingMandatesInScope": 0,
         "locations": 86,
         "yearsWithGovernment": 198,
         "yearsWithGeometry": 119,
         "yearsWithoutGeometry": 79,
-        "mandatesWithSomeMissingGeometry": 9,
-        "mandatesEntirelyWithoutGeometry": 8
+        "mandatesWithSomeMissingGeometry": 10,
+        "mandatesEntirelyWithoutGeometry": 9
       },
       "hasMandateGeometryGaps": true,
       "hasEntireTerritoryYearGaps": true,
@@ -25852,6 +25938,30 @@
           "yearsWithoutGeometry": 0,
           "locations": 13,
           "missingGeometryIntervals": []
+        },
+        {
+          "personId": "HENRYCASIMIR1",
+          "personName": "Enrique Casimiro I de Nassau-Dietz",
+          "government": {
+            "territory": "Países Bajos",
+            "title": "Estatúder",
+            "from": 1632,
+            "through": 1640,
+            "class": "estatuderato",
+            "condition": "rama",
+            "scope": "Frisia, Groningen y Drenthe"
+          },
+          "auditFrom": 1632,
+          "auditThrough": 1640,
+          "yearsWithGeometry": 0,
+          "yearsWithoutGeometry": 9,
+          "locations": 0,
+          "missingGeometryIntervals": [
+            {
+              "from": 1632,
+              "through": 1640
+            }
+          ]
         }
       ],
       "nonpaintingGovernments": [],
@@ -28459,30 +28569,25 @@
         "effectiveMandatesAllTime": 23,
         "effectiveMandatesInScope": 23,
         "nonpaintingMandatesInScope": 0,
-        "locations": 5,
+        "locations": 13,
         "yearsWithGovernment": 378,
-        "yearsWithGeometry": 228,
-        "yearsWithoutGeometry": 150,
-        "mandatesWithSomeMissingGeometry": 9,
-        "mandatesEntirelyWithoutGeometry": 8
+        "yearsWithGeometry": 378,
+        "yearsWithoutGeometry": 0,
+        "mandatesWithSomeMissingGeometry": 0,
+        "mandatesEntirelyWithoutGeometry": 0
       },
-      "hasMandateGeometryGaps": true,
-      "hasEntireTerritoryYearGaps": true,
+      "hasMandateGeometryGaps": false,
+      "hasEntireTerritoryYearGaps": false,
       "limitedCore": true,
-      "missingGeometryIntervals": [
-        {
-          "from": 1651,
-          "through": 1800
-        }
-      ],
+      "missingGeometryIntervals": [],
       "layers": [
         {
           "name": "Sajonia albertina",
-          "note": "Núcleos ducales albertinos entre la partición de 1485 y la transferencia electoral de 1547; se mantienen separados de Wittenberg y Torgau. Los contornos regionales son aproximados."
+          "note": "Núcleos ducales albertinos entre la partición de 1485 y la transferencia electoral de 1547; se mantienen separados de Wittenberg y Torgau. Los contornos regionales son aproximados. Completar el ámbito meißniano sin incorporar Turingia ernestina ni Wurzen episcopal. Completar el ámbito meißniano sin incorporar Turingia ernestina ni Wurzen episcopal. Completar el ámbito meißniano sin incorporar Turingia ernestina ni Wurzen episcopal. Completar el ámbito meißniano sin incorporar Turingia ernestina ni Wurzen episcopal. Completar el ámbito meißniano sin incorporar Turingia ernestina ni Wurzen episcopal."
         },
         {
           "name": "Sajonia electoral",
-          "note": "Núcleos de la Sajonia de los Wettin. La partición de Leipzig (1485) separa las ramas; desde 1547 la dignidad electoral y Wittenberg pasan a los albertinos. Solo se representan estas celdas, sin reconstruir toda Turingia ni sumar posesiones eclesiásticas."
+          "note": "Núcleos de la Sajonia de los Wettin. La partición de Leipzig (1485) separa las ramas; desde 1547 la dignidad electoral y Wittenberg pasan a los albertinos. Solo se representan estas celdas, sin reconstruir toda Turingia ni sumar posesiones eclesiásticas. Completar el ámbito meißniano sin incorporar Turingia ernestina ni Wurzen episcopal. Completar el ámbito meißniano sin incorporar Turingia ernestina ni Wurzen episcopal. Completar el ámbito meißniano sin incorporar Turingia ernestina ni Wurzen episcopal. Completar el ámbito meißniano sin incorporar Turingia ernestina ni Wurzen episcopal. Completar el ámbito meißniano sin incorporar Turingia ernestina ni Wurzen episcopal."
         }
       ],
       "governments": [
@@ -28555,7 +28660,7 @@
           "auditThrough": 1547,
           "yearsWithGeometry": 16,
           "yearsWithoutGeometry": 0,
-          "locations": 5,
+          "locations": 13,
           "missingGeometryIntervals": []
         },
         {
@@ -28610,7 +28715,7 @@
           "auditThrough": 1500,
           "yearsWithGeometry": 16,
           "yearsWithoutGeometry": 0,
-          "locations": 3,
+          "locations": 11,
           "missingGeometryIntervals": []
         },
         {
@@ -28629,7 +28734,7 @@
           "auditThrough": 1539,
           "yearsWithGeometry": 40,
           "yearsWithoutGeometry": 0,
-          "locations": 3,
+          "locations": 11,
           "missingGeometryIntervals": []
         },
         {
@@ -28648,7 +28753,7 @@
           "auditThrough": 1541,
           "yearsWithGeometry": 3,
           "yearsWithoutGeometry": 0,
-          "locations": 3,
+          "locations": 11,
           "missingGeometryIntervals": []
         },
         {
@@ -28666,7 +28771,7 @@
           "auditThrough": 1546,
           "yearsWithGeometry": 6,
           "yearsWithoutGeometry": 0,
-          "locations": 3,
+          "locations": 11,
           "missingGeometryIntervals": []
         },
         {
@@ -28684,7 +28789,7 @@
           "auditThrough": 1553,
           "yearsWithGeometry": 7,
           "yearsWithoutGeometry": 0,
-          "locations": 5,
+          "locations": 13,
           "missingGeometryIntervals": []
         },
         {
@@ -28702,7 +28807,7 @@
           "auditThrough": 1586,
           "yearsWithGeometry": 34,
           "yearsWithoutGeometry": 0,
-          "locations": 5,
+          "locations": 13,
           "missingGeometryIntervals": []
         },
         {
@@ -28720,7 +28825,7 @@
           "auditThrough": 1591,
           "yearsWithGeometry": 6,
           "yearsWithoutGeometry": 0,
-          "locations": 5,
+          "locations": 13,
           "missingGeometryIntervals": []
         },
         {
@@ -28738,7 +28843,7 @@
           "auditThrough": 1611,
           "yearsWithGeometry": 21,
           "yearsWithoutGeometry": 0,
-          "locations": 5,
+          "locations": 13,
           "missingGeometryIntervals": []
         },
         {
@@ -28754,15 +28859,10 @@
           },
           "auditFrom": 1611,
           "auditThrough": 1656,
-          "yearsWithGeometry": 40,
-          "yearsWithoutGeometry": 6,
-          "locations": 5,
-          "missingGeometryIntervals": [
-            {
-              "from": 1651,
-              "through": 1656
-            }
-          ]
+          "yearsWithGeometry": 46,
+          "yearsWithoutGeometry": 0,
+          "locations": 13,
+          "missingGeometryIntervals": []
         },
         {
           "personId": "JOHANNGEORG2SAX",
@@ -28777,15 +28877,10 @@
           },
           "auditFrom": 1656,
           "auditThrough": 1680,
-          "yearsWithGeometry": 0,
-          "yearsWithoutGeometry": 25,
-          "locations": 0,
-          "missingGeometryIntervals": [
-            {
-              "from": 1656,
-              "through": 1680
-            }
-          ]
+          "yearsWithGeometry": 25,
+          "yearsWithoutGeometry": 0,
+          "locations": 13,
+          "missingGeometryIntervals": []
         },
         {
           "personId": "JOHANNGEORG3SAX",
@@ -28800,15 +28895,10 @@
           },
           "auditFrom": 1680,
           "auditThrough": 1691,
-          "yearsWithGeometry": 0,
-          "yearsWithoutGeometry": 12,
-          "locations": 0,
-          "missingGeometryIntervals": [
-            {
-              "from": 1680,
-              "through": 1691
-            }
-          ]
+          "yearsWithGeometry": 12,
+          "yearsWithoutGeometry": 0,
+          "locations": 13,
+          "missingGeometryIntervals": []
         },
         {
           "personId": "JOHANNGEORG4SAX",
@@ -28823,15 +28913,10 @@
           },
           "auditFrom": 1691,
           "auditThrough": 1694,
-          "yearsWithGeometry": 0,
-          "yearsWithoutGeometry": 4,
-          "locations": 0,
-          "missingGeometryIntervals": [
-            {
-              "from": 1691,
-              "through": 1694
-            }
-          ]
+          "yearsWithGeometry": 4,
+          "yearsWithoutGeometry": 0,
+          "locations": 13,
+          "missingGeometryIntervals": []
         },
         {
           "personId": "AUGUST2SAXPOL",
@@ -28846,15 +28931,10 @@
           },
           "auditFrom": 1694,
           "auditThrough": 1733,
-          "yearsWithGeometry": 0,
-          "yearsWithoutGeometry": 40,
-          "locations": 0,
-          "missingGeometryIntervals": [
-            {
-              "from": 1694,
-              "through": 1733
-            }
-          ]
+          "yearsWithGeometry": 40,
+          "yearsWithoutGeometry": 0,
+          "locations": 13,
+          "missingGeometryIntervals": []
         },
         {
           "personId": "AUGUST3SAXPOL",
@@ -28869,15 +28949,10 @@
           },
           "auditFrom": 1733,
           "auditThrough": 1763,
-          "yearsWithGeometry": 0,
-          "yearsWithoutGeometry": 31,
-          "locations": 0,
-          "missingGeometryIntervals": [
-            {
-              "from": 1733,
-              "through": 1763
-            }
-          ]
+          "yearsWithGeometry": 31,
+          "yearsWithoutGeometry": 0,
+          "locations": 13,
+          "missingGeometryIntervals": []
         },
         {
           "personId": "FREDCHRISTIANSAX",
@@ -28892,15 +28967,10 @@
           },
           "auditFrom": 1763,
           "auditThrough": 1763,
-          "yearsWithGeometry": 0,
-          "yearsWithoutGeometry": 1,
-          "locations": 0,
-          "missingGeometryIntervals": [
-            {
-              "from": 1763,
-              "through": 1763
-            }
-          ]
+          "yearsWithGeometry": 1,
+          "yearsWithoutGeometry": 0,
+          "locations": 13,
+          "missingGeometryIntervals": []
         },
         {
           "personId": "XAVERSAX",
@@ -28915,15 +28985,10 @@
           },
           "auditFrom": 1763,
           "auditThrough": 1768,
-          "yearsWithGeometry": 0,
-          "yearsWithoutGeometry": 6,
-          "locations": 0,
-          "missingGeometryIntervals": [
-            {
-              "from": 1763,
-              "through": 1768
-            }
-          ]
+          "yearsWithGeometry": 6,
+          "yearsWithoutGeometry": 0,
+          "locations": 13,
+          "missingGeometryIntervals": []
         },
         {
           "personId": "FREDAUGUST3SAX",
@@ -28938,13 +29003,149 @@
           },
           "auditFrom": 1763,
           "auditThrough": 1800,
-          "yearsWithGeometry": 0,
-          "yearsWithoutGeometry": 38,
-          "locations": 0,
+          "yearsWithGeometry": 38,
+          "yearsWithoutGeometry": 0,
+          "locations": 13,
+          "missingGeometryIntervals": []
+        }
+      ],
+      "nonpaintingGovernments": [],
+      "outsidePeriodGovernments": []
+    },
+    {
+      "territory": "Sajonia-Coburgo",
+      "status": "represented",
+      "counts": {
+        "effectiveMandatesAllTime": 1,
+        "effectiveMandatesInScope": 1,
+        "nonpaintingMandatesInScope": 0,
+        "locations": 2,
+        "yearsWithGovernment": 38,
+        "yearsWithGeometry": 37,
+        "yearsWithoutGeometry": 1,
+        "mandatesWithSomeMissingGeometry": 1,
+        "mandatesEntirelyWithoutGeometry": 0
+      },
+      "hasMandateGeometryGaps": true,
+      "hasEntireTerritoryYearGaps": true,
+      "limitedCore": false,
+      "missingGeometryIntervals": [
+        {
+          "from": 1633,
+          "through": 1633
+        }
+      ],
+      "layers": [
+        {
+          "name": "Ducado de Sajonia-Coburgo",
+          "note": "Ámbitos de Gotha/Ohrdruf de la rama de Coburgo, no todo el territorio de Turingia; extinción1633."
+        }
+      ],
+      "governments": [
+        {
+          "personId": "JOHNCASCOB",
+          "personName": "Juan Casimiro de Sajonia-Coburgo",
+          "government": {
+            "territory": "Sajonia-Coburgo",
+            "title": "Duque",
+            "from": 1596,
+            "through": 1633,
+            "class": "ducado",
+            "condition": "efectivo"
+          },
+          "auditFrom": 1596,
+          "auditThrough": 1633,
+          "yearsWithGeometry": 37,
+          "yearsWithoutGeometry": 1,
+          "locations": 2,
           "missingGeometryIntervals": [
             {
-              "from": 1763,
-              "through": 1800
+              "from": 1633,
+              "through": 1633
+            }
+          ]
+        }
+      ],
+      "nonpaintingGovernments": [],
+      "outsidePeriodGovernments": []
+    },
+    {
+      "territory": "Sajonia-Eisenach",
+      "status": "represented",
+      "counts": {
+        "effectiveMandatesAllTime": 2,
+        "effectiveMandatesInScope": 2,
+        "nonpaintingMandatesInScope": 0,
+        "locations": 3,
+        "yearsWithGovernment": 48,
+        "yearsWithGeometry": 46,
+        "yearsWithoutGeometry": 2,
+        "mandatesWithSomeMissingGeometry": 2,
+        "mandatesEntirelyWithoutGeometry": 0
+      },
+      "hasMandateGeometryGaps": true,
+      "hasEntireTerritoryYearGaps": true,
+      "limitedCore": false,
+      "missingGeometryIntervals": [
+        {
+          "from": 1638,
+          "through": 1638
+        },
+        {
+          "from": 1644,
+          "through": 1644
+        }
+      ],
+      "layers": [
+        {
+          "name": "Ducado de Sajonia-Eisenach",
+          "note": "Ducado territorial distinto de Weimar antes de su unión personal de 1741."
+        }
+      ],
+      "governments": [
+        {
+          "personId": "JOHNERNEISOLD",
+          "personName": "Juan Ernesto de Sajonia-Eisenach",
+          "government": {
+            "territory": "Sajonia-Eisenach",
+            "title": "Duque",
+            "from": 1596,
+            "through": 1638,
+            "class": "ducado",
+            "condition": "efectivo"
+          },
+          "auditFrom": 1596,
+          "auditThrough": 1638,
+          "yearsWithGeometry": 42,
+          "yearsWithoutGeometry": 1,
+          "locations": 3,
+          "missingGeometryIntervals": [
+            {
+              "from": 1638,
+              "through": 1638
+            }
+          ]
+        },
+        {
+          "personId": "ALBRECHTEIS",
+          "personName": "Alberto de Sajonia-Eisenach",
+          "government": {
+            "territory": "Sajonia-Eisenach",
+            "title": "Duque",
+            "from": 1640,
+            "through": 1644,
+            "class": "ducado",
+            "condition": "efectivo"
+          },
+          "auditFrom": 1640,
+          "auditThrough": 1644,
+          "yearsWithGeometry": 4,
+          "yearsWithoutGeometry": 1,
+          "locations": 1,
+          "missingGeometryIntervals": [
+            {
+              "from": 1644,
+              "through": 1644
             }
           ]
         }
@@ -31050,18 +31251,475 @@
       "outsidePeriodGovernments": []
     },
     {
+      "territory": "Turingia",
+      "status": "represented",
+      "counts": {
+        "effectiveMandatesAllTime": 23,
+        "effectiveMandatesInScope": 23,
+        "nonpaintingMandatesInScope": 0,
+        "locations": 9,
+        "yearsWithGovernment": 373,
+        "yearsWithGeometry": 372,
+        "yearsWithoutGeometry": 1,
+        "mandatesWithSomeMissingGeometry": 1,
+        "mandatesEntirelyWithoutGeometry": 0
+      },
+      "hasMandateGeometryGaps": true,
+      "hasEntireTerritoryYearGaps": true,
+      "limitedCore": false,
+      "missingGeometryIntervals": [
+        {
+          "from": 1572,
+          "through": 1572
+        }
+      ],
+      "layers": [
+        {
+          "name": "Landgraviato de Turingia",
+          "note": "Landgraviato de Turingia; los cambios de dinastía no lo convierten en territorio + persona. Hesse, Erfurt y los señoríos independientes no se incorporan por un nombre regional."
+        },
+        {
+          "name": "Turingia ernestina",
+          "note": "Ámbito territorial de los duques ernestinos de Sajonia, con jurisdicciones compartidas; la pérdida de la dignidad electoral no vacía Turingia."
+        }
+      ],
+      "governments": [
+        {
+          "personId": "ENRIQUERASPE",
+          "personName": "Enrique Raspe",
+          "government": {
+            "territory": "Turingia",
+            "title": "Landgrave",
+            "from": 1241,
+            "through": 1247,
+            "class": "landgraviato",
+            "condition": "efectivo"
+          },
+          "auditFrom": 1241,
+          "auditThrough": 1247,
+          "yearsWithGeometry": 7,
+          "yearsWithoutGeometry": 0,
+          "locations": 4,
+          "missingGeometryIntervals": []
+        },
+        {
+          "personId": "ENRIQUERASPE",
+          "personName": "Enrique Raspe",
+          "government": {
+            "territory": "Turingia",
+            "title": "Regente",
+            "from": 1227,
+            "through": 1238,
+            "class": "regencia",
+            "condition": "efectivo"
+          },
+          "auditFrom": 1227,
+          "auditThrough": 1238,
+          "yearsWithGeometry": 12,
+          "yearsWithoutGeometry": 0,
+          "locations": 4,
+          "missingGeometryIntervals": []
+        },
+        {
+          "personId": "ENRIQUERASPE",
+          "personName": "Enrique Raspe",
+          "government": {
+            "territory": "Turingia",
+            "title": "Landgrave",
+            "from": 1238,
+            "through": 1241,
+            "class": "landgraviato",
+            "condition": "corregente"
+          },
+          "auditFrom": 1238,
+          "auditThrough": 1241,
+          "yearsWithGeometry": 4,
+          "yearsWithoutGeometry": 0,
+          "locations": 4,
+          "missingGeometryIntervals": []
+        },
+        {
+          "personId": "ERNSTSAX",
+          "personName": "Ernesto de Sajonia",
+          "government": {
+            "territory": "Turingia",
+            "title": "Landgrave",
+            "from": 1482,
+            "through": 1486,
+            "class": "landgraviato",
+            "condition": "efectivo"
+          },
+          "auditFrom": 1482,
+          "auditThrough": 1486,
+          "yearsWithGeometry": 5,
+          "yearsWithoutGeometry": 0,
+          "locations": 9,
+          "missingGeometryIntervals": []
+        },
+        {
+          "personId": "FRED3SAX",
+          "personName": "Federico III de Sajonia",
+          "government": {
+            "territory": "Turingia",
+            "title": "Landgrave",
+            "from": 1486,
+            "through": 1525,
+            "class": "landgraviato",
+            "condition": "efectivo"
+          },
+          "auditFrom": 1486,
+          "auditThrough": 1525,
+          "yearsWithGeometry": 40,
+          "yearsWithoutGeometry": 0,
+          "locations": 9,
+          "missingGeometryIntervals": []
+        },
+        {
+          "personId": "JUANSAX",
+          "personName": "Juan de Sajonia",
+          "government": {
+            "territory": "Turingia",
+            "title": "Landgrave",
+            "from": 1525,
+            "through": 1532,
+            "class": "landgraviato",
+            "condition": "efectivo"
+          },
+          "auditFrom": 1525,
+          "auditThrough": 1532,
+          "yearsWithGeometry": 8,
+          "yearsWithoutGeometry": 0,
+          "locations": 9,
+          "missingGeometryIntervals": []
+        },
+        {
+          "personId": "JUANFED1SAX",
+          "personName": "Juan Federico I de Sajonia",
+          "government": {
+            "territory": "Turingia",
+            "title": "Landgrave",
+            "from": 1532,
+            "through": 1554,
+            "class": "landgraviato",
+            "condition": "efectivo"
+          },
+          "auditFrom": 1532,
+          "auditThrough": 1554,
+          "yearsWithGeometry": 23,
+          "yearsWithoutGeometry": 0,
+          "locations": 9,
+          "missingGeometryIntervals": []
+        },
+        {
+          "personId": "HERMANN1THUR",
+          "personName": "Hermann I de Turingia",
+          "government": {
+            "territory": "Turingia",
+            "title": "Landgrave",
+            "from": 1190,
+            "through": 1217,
+            "class": "landgraviato",
+            "condition": "efectivo"
+          },
+          "auditFrom": 1200,
+          "auditThrough": 1217,
+          "yearsWithGeometry": 18,
+          "yearsWithoutGeometry": 0,
+          "locations": 4,
+          "missingGeometryIntervals": []
+        },
+        {
+          "personId": "HEINRICH3MEISSEN",
+          "personName": "Enrique III de Meißen",
+          "government": {
+            "territory": "Turingia",
+            "title": "Landgrave",
+            "from": 1247,
+            "through": 1265,
+            "class": "landgraviato",
+            "condition": "efectivo"
+          },
+          "auditFrom": 1247,
+          "auditThrough": 1265,
+          "yearsWithGeometry": 19,
+          "yearsWithoutGeometry": 0,
+          "locations": 4,
+          "missingGeometryIntervals": []
+        },
+        {
+          "personId": "ALB2MEISSEN",
+          "personName": "Alberto II de Meißen",
+          "government": {
+            "territory": "Turingia",
+            "title": "Landgrave",
+            "from": 1265,
+            "through": 1307,
+            "class": "landgraviato",
+            "condition": "efectivo"
+          },
+          "auditFrom": 1265,
+          "auditThrough": 1307,
+          "yearsWithGeometry": 43,
+          "yearsWithoutGeometry": 0,
+          "locations": 4,
+          "missingGeometryIntervals": []
+        },
+        {
+          "personId": "FRED1MEISSEN",
+          "personName": "Federico I de Meißen",
+          "government": {
+            "territory": "Turingia",
+            "title": "Landgrave",
+            "from": 1307,
+            "through": 1323,
+            "class": "landgraviato",
+            "condition": "efectivo"
+          },
+          "auditFrom": 1307,
+          "auditThrough": 1323,
+          "yearsWithGeometry": 17,
+          "yearsWithoutGeometry": 0,
+          "locations": 4,
+          "missingGeometryIntervals": []
+        },
+        {
+          "personId": "FRED2MEISSEN",
+          "personName": "Federico II de Meißen",
+          "government": {
+            "territory": "Turingia",
+            "title": "Landgrave",
+            "from": 1323,
+            "through": 1349,
+            "class": "landgraviato",
+            "condition": "efectivo"
+          },
+          "auditFrom": 1323,
+          "auditThrough": 1349,
+          "yearsWithGeometry": 27,
+          "yearsWithoutGeometry": 0,
+          "locations": 7,
+          "missingGeometryIntervals": []
+        },
+        {
+          "personId": "FRED3MEISSEN",
+          "personName": "Federico III de Meißen",
+          "government": {
+            "territory": "Turingia",
+            "title": "Landgrave",
+            "from": 1349,
+            "through": 1381,
+            "class": "landgraviato",
+            "condition": "efectivo"
+          },
+          "auditFrom": 1349,
+          "auditThrough": 1381,
+          "yearsWithGeometry": 33,
+          "yearsWithoutGeometry": 0,
+          "locations": 7,
+          "missingGeometryIntervals": []
+        },
+        {
+          "personId": "FRED2SAX",
+          "personName": "Federico II de Sajonia",
+          "government": {
+            "territory": "Turingia",
+            "title": "Landgrave",
+            "from": 1440,
+            "through": 1445,
+            "class": "landgraviato",
+            "condition": "efectivo"
+          },
+          "auditFrom": 1440,
+          "auditThrough": 1445,
+          "yearsWithGeometry": 6,
+          "yearsWithoutGeometry": 0,
+          "locations": 8,
+          "missingGeometryIntervals": []
+        },
+        {
+          "personId": "LUDWIG4THUR",
+          "personName": "Luis IV de Turingia",
+          "government": {
+            "territory": "Turingia",
+            "title": "Landgrave",
+            "from": 1217,
+            "through": 1227,
+            "class": "landgraviato",
+            "condition": "efectivo"
+          },
+          "auditFrom": 1217,
+          "auditThrough": 1227,
+          "yearsWithGeometry": 11,
+          "yearsWithoutGeometry": 0,
+          "locations": 4,
+          "missingGeometryIntervals": []
+        },
+        {
+          "personId": "HERMANN2THUR",
+          "personName": "Hermann II de Turingia",
+          "government": {
+            "territory": "Turingia",
+            "title": "Landgrave",
+            "from": 1227,
+            "through": 1241,
+            "class": "landgraviato",
+            "condition": "efectivo"
+          },
+          "auditFrom": 1227,
+          "auditThrough": 1241,
+          "yearsWithGeometry": 15,
+          "yearsWithoutGeometry": 0,
+          "locations": 4,
+          "missingGeometryIntervals": []
+        },
+        {
+          "personId": "BALTHASARTHUR",
+          "personName": "Baltasar de Turingia",
+          "government": {
+            "territory": "Turingia",
+            "title": "Landgrave",
+            "from": 1382,
+            "through": 1406,
+            "class": "landgraviato",
+            "condition": "efectivo"
+          },
+          "auditFrom": 1382,
+          "auditThrough": 1406,
+          "yearsWithGeometry": 25,
+          "yearsWithoutGeometry": 0,
+          "locations": 7,
+          "missingGeometryIntervals": []
+        },
+        {
+          "personId": "BALTHASARTHUR",
+          "personName": "Baltasar de Turingia",
+          "government": {
+            "territory": "Turingia",
+            "title": "Landgrave",
+            "from": 1349,
+            "through": 1381,
+            "class": "landgraviato",
+            "condition": "corregente"
+          },
+          "auditFrom": 1349,
+          "auditThrough": 1381,
+          "yearsWithGeometry": 33,
+          "yearsWithoutGeometry": 0,
+          "locations": 7,
+          "missingGeometryIntervals": []
+        },
+        {
+          "personId": "FRED4THUR",
+          "personName": "Federico IV de Turingia",
+          "government": {
+            "territory": "Turingia",
+            "title": "Landgrave",
+            "from": 1406,
+            "through": 1440,
+            "class": "landgraviato",
+            "condition": "efectivo"
+          },
+          "auditFrom": 1406,
+          "auditThrough": 1440,
+          "yearsWithGeometry": 35,
+          "yearsWithoutGeometry": 0,
+          "locations": 7,
+          "missingGeometryIntervals": []
+        },
+        {
+          "personId": "WILHELM3THUR",
+          "personName": "Guillermo III de Sajonia",
+          "government": {
+            "territory": "Turingia",
+            "title": "Landgrave",
+            "from": 1445,
+            "through": 1482,
+            "class": "landgraviato",
+            "condition": "efectivo"
+          },
+          "auditFrom": 1445,
+          "auditThrough": 1482,
+          "yearsWithGeometry": 38,
+          "yearsWithoutGeometry": 0,
+          "locations": 8,
+          "missingGeometryIntervals": []
+        },
+        {
+          "personId": "JOHNFRED2ERN",
+          "personName": "Juan Federico II de Sajonia",
+          "government": {
+            "territory": "Turingia",
+            "title": "Landgrave",
+            "from": 1554,
+            "through": 1566,
+            "class": "landgraviato",
+            "condition": "corregente"
+          },
+          "auditFrom": 1554,
+          "auditThrough": 1566,
+          "yearsWithGeometry": 13,
+          "yearsWithoutGeometry": 0,
+          "locations": 9,
+          "missingGeometryIntervals": []
+        },
+        {
+          "personId": "JOHNWILWEIM",
+          "personName": "Juan Guillermo de Sajonia-Weimar",
+          "government": {
+            "territory": "Turingia",
+            "title": "Landgrave",
+            "from": 1554,
+            "through": 1566,
+            "class": "landgraviato",
+            "condition": "corregente"
+          },
+          "auditFrom": 1554,
+          "auditThrough": 1566,
+          "yearsWithGeometry": 13,
+          "yearsWithoutGeometry": 0,
+          "locations": 9,
+          "missingGeometryIntervals": []
+        },
+        {
+          "personId": "JOHNWILWEIM",
+          "personName": "Juan Guillermo de Sajonia-Weimar",
+          "government": {
+            "territory": "Turingia",
+            "title": "Landgrave",
+            "from": 1567,
+            "through": 1572,
+            "class": "landgraviato",
+            "condition": "efectivo"
+          },
+          "auditFrom": 1567,
+          "auditThrough": 1572,
+          "yearsWithGeometry": 5,
+          "yearsWithoutGeometry": 1,
+          "locations": 9,
+          "missingGeometryIntervals": [
+            {
+              "from": 1572,
+              "through": 1572
+            }
+          ]
+        }
+      ],
+      "nonpaintingGovernments": [],
+      "outsidePeriodGovernments": []
+    },
+    {
       "territory": "Valaquia",
       "status": "represented",
       "counts": {
         "effectiveMandatesAllTime": 65,
         "effectiveMandatesInScope": 65,
         "nonpaintingMandatesInScope": 0,
-        "locations": 40,
+        "locations": 48,
         "yearsWithGovernment": 344,
-        "yearsWithGeometry": 255,
-        "yearsWithoutGeometry": 89,
+        "yearsWithGeometry": 261,
+        "yearsWithoutGeometry": 83,
         "mandatesWithSomeMissingGeometry": 7,
-        "mandatesEntirelyWithoutGeometry": 6
+        "mandatesEntirelyWithoutGeometry": 5
       },
       "hasMandateGeometryGaps": true,
       "hasEntireTerritoryYearGaps": true,
@@ -31069,6 +31727,10 @@
       "missingGeometryIntervals": [
         {
           "from": 1310,
+          "through": 1388
+        },
+        {
+          "from": 1395,
           "through": 1395
         },
         {
@@ -31078,8 +31740,8 @@
       ],
       "layers": [
         {
-          "name": "Núcleos de Dobruja bajo Mircea",
-          "note": "Drastar, Constanța, Karvuna y Kaliakra bajo Mircea. Revisión visual: Constanta corresponde al puerto del Mar Negro; Constantia_Bul está en Tracia y no se incluye. La escala anual incorpora los cambios de 1402 y 1418."
+          "name": "Dobruja · dominios de Valaquia",
+          "note": "Dominio valaco en Dobruja, distinto del principado costero. Fechas y contornos regionales inciertos; no incluye Varna automáticamente."
         },
         {
           "name": "Principado de Valaquia",
@@ -31215,12 +31877,16 @@
           },
           "auditFrom": 1386,
           "auditThrough": 1395,
-          "yearsWithGeometry": 0,
-          "yearsWithoutGeometry": 10,
-          "locations": 0,
+          "yearsWithGeometry": 6,
+          "yearsWithoutGeometry": 4,
+          "locations": 12,
           "missingGeometryIntervals": [
             {
               "from": 1386,
+              "through": 1388
+            },
+            {
+              "from": 1395,
               "through": 1395
             }
           ]
@@ -31240,7 +31906,7 @@
           "auditThrough": 1418,
           "yearsWithGeometry": 19,
           "yearsWithoutGeometry": 3,
-          "locations": 40,
+          "locations": 48,
           "missingGeometryIntervals": [
             {
               "from": 1397,
@@ -32303,7 +32969,7 @@
         "effectiveMandatesAllTime": 30,
         "effectiveMandatesInScope": 30,
         "nonpaintingMandatesInScope": 0,
-        "locations": 77,
+        "locations": 79,
         "yearsWithGovernment": 238,
         "yearsWithGeometry": 238,
         "yearsWithoutGeometry": 0,
@@ -32315,6 +32981,10 @@
       "limitedCore": true,
       "missingGeometryIntervals": [],
       "layers": [
+        {
+          "name": "Dalmacia veneciana",
+          "note": "Dominio veneciano costero fechado por ciudad e isla: Brač desde 1278, Šibenik desde 1322, Split desde 1327, con retiradas y reconquistas separadas. No ocupa Dubrovnik, Senj o Vinodol; las interrupciones menores aún requieren investigación."
+        },
         {
           "name": "Morea veneciana · superficie regional",
           "note": "Superficie del Peloponeso, incluidos sus relieves; las seis ciudades de la primera revisión dejan de sustituir a toda la provincia."
@@ -32340,7 +33010,7 @@
           "auditThrough": 1800,
           "yearsWithGeometry": 3,
           "yearsWithoutGeometry": 0,
-          "locations": 47,
+          "locations": 43,
           "missingGeometryIntervals": []
         },
         {
@@ -32358,7 +33028,7 @@
           "auditThrough": 1578,
           "yearsWithGeometry": 2,
           "yearsWithoutGeometry": 0,
-          "locations": 62,
+          "locations": 63,
           "missingGeometryIntervals": []
         },
         {
@@ -32376,7 +33046,7 @@
           "auditThrough": 1413,
           "yearsWithGeometry": 14,
           "yearsWithoutGeometry": 0,
-          "locations": 38,
+          "locations": 40,
           "missingGeometryIntervals": []
         },
         {
@@ -32394,7 +33064,7 @@
           "auditThrough": 1462,
           "yearsWithGeometry": 6,
           "yearsWithoutGeometry": 0,
-          "locations": 60,
+          "locations": 62,
           "missingGeometryIntervals": []
         },
         {
@@ -32412,7 +33082,7 @@
           "auditThrough": 1471,
           "yearsWithGeometry": 10,
           "yearsWithoutGeometry": 0,
-          "locations": 61,
+          "locations": 63,
           "missingGeometryIntervals": []
         },
         {
@@ -32430,7 +33100,7 @@
           "auditThrough": 1473,
           "yearsWithGeometry": 3,
           "yearsWithoutGeometry": 0,
-          "locations": 60,
+          "locations": 62,
           "missingGeometryIntervals": []
         },
         {
@@ -32448,7 +33118,7 @@
           "auditThrough": 1474,
           "yearsWithGeometry": 2,
           "yearsWithoutGeometry": 0,
-          "locations": 60,
+          "locations": 62,
           "missingGeometryIntervals": []
         },
         {
@@ -32466,7 +33136,7 @@
           "auditThrough": 1476,
           "yearsWithGeometry": 3,
           "yearsWithoutGeometry": 0,
-          "locations": 60,
+          "locations": 62,
           "missingGeometryIntervals": []
         },
         {
@@ -32484,7 +33154,7 @@
           "auditThrough": 1478,
           "yearsWithGeometry": 3,
           "yearsWithoutGeometry": 0,
-          "locations": 60,
+          "locations": 62,
           "missingGeometryIntervals": []
         },
         {
@@ -32502,7 +33172,7 @@
           "auditThrough": 1485,
           "yearsWithGeometry": 8,
           "yearsWithoutGeometry": 0,
-          "locations": 62,
+          "locations": 64,
           "missingGeometryIntervals": []
         },
         {
@@ -32520,7 +33190,7 @@
           "auditThrough": 1486,
           "yearsWithGeometry": 2,
           "yearsWithoutGeometry": 0,
-          "locations": 62,
+          "locations": 64,
           "missingGeometryIntervals": []
         },
         {
@@ -32538,7 +33208,7 @@
           "auditThrough": 1523,
           "yearsWithGeometry": 3,
           "yearsWithoutGeometry": 0,
-          "locations": 72,
+          "locations": 73,
           "missingGeometryIntervals": []
         },
         {
@@ -32556,7 +33226,7 @@
           "auditThrough": 1545,
           "yearsWithGeometry": 7,
           "yearsWithoutGeometry": 0,
-          "locations": 71,
+          "locations": 72,
           "missingGeometryIntervals": []
         },
         {
@@ -32574,7 +33244,7 @@
           "auditThrough": 1553,
           "yearsWithGeometry": 9,
           "yearsWithoutGeometry": 0,
-          "locations": 69,
+          "locations": 70,
           "missingGeometryIntervals": []
         },
         {
@@ -32592,7 +33262,7 @@
           "auditThrough": 1554,
           "yearsWithGeometry": 2,
           "yearsWithoutGeometry": 0,
-          "locations": 69,
+          "locations": 70,
           "missingGeometryIntervals": []
         },
         {
@@ -32610,7 +33280,7 @@
           "auditThrough": 1556,
           "yearsWithGeometry": 3,
           "yearsWithoutGeometry": 0,
-          "locations": 69,
+          "locations": 70,
           "missingGeometryIntervals": []
         },
         {
@@ -32628,7 +33298,7 @@
           "auditThrough": 1559,
           "yearsWithGeometry": 4,
           "yearsWithoutGeometry": 0,
-          "locations": 69,
+          "locations": 70,
           "missingGeometryIntervals": []
         },
         {
@@ -32646,7 +33316,7 @@
           "auditThrough": 1567,
           "yearsWithGeometry": 9,
           "yearsWithoutGeometry": 0,
-          "locations": 69,
+          "locations": 70,
           "missingGeometryIntervals": []
         },
         {
@@ -32664,7 +33334,7 @@
           "auditThrough": 1570,
           "yearsWithGeometry": 4,
           "yearsWithoutGeometry": 0,
-          "locations": 69,
+          "locations": 70,
           "missingGeometryIntervals": []
         },
         {
@@ -32682,7 +33352,7 @@
           "auditThrough": 1577,
           "yearsWithGeometry": 8,
           "yearsWithoutGeometry": 0,
-          "locations": 69,
+          "locations": 71,
           "missingGeometryIntervals": []
         },
         {
@@ -32700,7 +33370,7 @@
           "auditThrough": 1585,
           "yearsWithGeometry": 8,
           "yearsWithoutGeometry": 0,
-          "locations": 62,
+          "locations": 63,
           "missingGeometryIntervals": []
         },
         {
@@ -32718,7 +33388,7 @@
           "auditThrough": 1595,
           "yearsWithGeometry": 11,
           "yearsWithoutGeometry": 0,
-          "locations": 62,
+          "locations": 63,
           "missingGeometryIntervals": []
         },
         {
@@ -32736,7 +33406,7 @@
           "auditThrough": 1423,
           "yearsWithGeometry": 10,
           "yearsWithoutGeometry": 0,
-          "locations": 49,
+          "locations": 50,
           "missingGeometryIntervals": []
         },
         {
@@ -32754,7 +33424,7 @@
           "auditThrough": 1457,
           "yearsWithGeometry": 35,
           "yearsWithoutGeometry": 0,
-          "locations": 60,
+          "locations": 62,
           "missingGeometryIntervals": []
         },
         {
@@ -32772,7 +33442,7 @@
           "auditThrough": 1501,
           "yearsWithGeometry": 16,
           "yearsWithoutGeometry": 0,
-          "locations": 74,
+          "locations": 76,
           "missingGeometryIntervals": []
         },
         {
@@ -32790,7 +33460,7 @@
           "auditThrough": 1521,
           "yearsWithGeometry": 21,
           "yearsWithoutGeometry": 0,
-          "locations": 76,
+          "locations": 77,
           "missingGeometryIntervals": []
         },
         {
@@ -32808,7 +33478,7 @@
           "auditThrough": 1538,
           "yearsWithGeometry": 16,
           "yearsWithoutGeometry": 0,
-          "locations": 72,
+          "locations": 73,
           "missingGeometryIntervals": []
         },
         {
@@ -32826,7 +33496,7 @@
           "auditThrough": 1605,
           "yearsWithGeometry": 11,
           "yearsWithoutGeometry": 0,
-          "locations": 62,
+          "locations": 63,
           "missingGeometryIntervals": []
         },
         {
@@ -32844,7 +33514,7 @@
           "auditThrough": 1205,
           "yearsWithGeometry": 6,
           "yearsWithoutGeometry": 0,
-          "locations": 2,
+          "locations": 4,
           "missingGeometryIntervals": []
         },
         {
@@ -32862,7 +33532,7 @@
           "auditThrough": 1311,
           "yearsWithGeometry": 23,
           "yearsWithoutGeometry": 0,
-          "locations": 3,
+          "locations": 6,
           "missingGeometryIntervals": []
         }
       ],
@@ -37707,11 +38377,11 @@
     "source": "audit-map-continuity-report.json → locations",
     "units": "Capas cartográficas y locations; no entidades únicas del catálogo del Atlas.",
     "counts": {
-      "layersWithAuthorityGaps": 124,
-      "locationIntervalsWithoutAuthority": 5256,
-      "uniqueLocationsWithAuthorityGaps": 3123,
-      "locationYearsWithoutAuthority": 159784,
-      "groupedReviewTasks": 249
+      "layersWithAuthorityGaps": 149,
+      "locationIntervalsWithoutAuthority": 5261,
+      "uniqueLocationsWithAuthorityGaps": 3149,
+      "locationYearsWithoutAuthority": 163564,
+      "groupedReviewTasks": 290
     },
     "layers": [
       {
@@ -37936,7 +38606,7 @@
           {
             "from": 1688,
             "through": 1800,
-            "locations": 221,
+            "locations": 209,
             "sharedWith": []
           },
           {
@@ -38005,7 +38675,7 @@
           {
             "from": 1688,
             "through": 1698,
-            "locations": 3,
+            "locations": 2,
             "sharedWith": []
           }
         ]
@@ -38022,23 +38692,23 @@
         ]
       },
       {
+        "name": "Brač · gobierno dinástico disputado",
+        "intervals": [
+          {
+            "from": 1390,
+            "through": 1416,
+            "locations": 1,
+            "sharedWith": []
+          }
+        ]
+      },
+      {
         "name": "Bretaña",
         "intervals": [
           {
             "from": 1525,
             "through": 1531,
             "locations": 27,
-            "sharedWith": []
-          }
-        ]
-      },
-      {
-        "name": "Bulgaria",
-        "intervals": [
-          {
-            "from": 1293,
-            "through": 1299,
-            "locations": 62,
             "sharedWith": []
           }
         ]
@@ -38177,6 +38847,17 @@
         ]
       },
       {
+        "name": "Condado de Diez",
+        "intervals": [
+          {
+            "from": 1200,
+            "through": 1385,
+            "locations": 1,
+            "sharedWith": []
+          }
+        ]
+      },
+      {
         "name": "Condado de Foix",
         "intervals": [
           {
@@ -38195,6 +38876,17 @@
             "from": 1200,
             "through": 1208,
             "locations": 1,
+            "sharedWith": []
+          }
+        ]
+      },
+      {
+        "name": "Condado de Nassau-Wiesbaden-Idstein",
+        "intervals": [
+          {
+            "from": 1361,
+            "through": 1604,
+            "locations": 2,
             "sharedWith": []
           }
         ]
@@ -38264,29 +38956,110 @@
           {
             "from": 1306,
             "through": 1307,
+            "locations": 9,
+            "sharedWith": []
+          }
+        ]
+      },
+      {
+        "name": "Dalmacia austríaca",
+        "intervals": [
+          {
+            "from": 1797,
+            "through": 1800,
             "locations": 7,
             "sharedWith": []
           }
         ]
       },
       {
-        "name": "Despotado de Dobruja",
+        "name": "Dalmacia bajo la Corona croata",
         "intervals": [
           {
-            "from": 1359,
-            "through": 1388,
+            "from": 1306,
+            "through": 1307,
+            "locations": 4,
+            "sharedWith": []
+          }
+        ]
+      },
+      {
+        "name": "Dalmacia veneciana",
+        "intervals": [
+          {
+            "from": 1606,
+            "through": 1650,
             "locations": 6,
             "sharedWith": []
           },
           {
-            "from": 1346,
-            "through": 1388,
-            "locations": 4,
+            "from": 1312,
+            "through": 1357,
+            "locations": 2,
             "sharedWith": []
           },
           {
-            "from": 1369,
-            "through": 1388,
+            "from": 1206,
+            "through": 1241,
+            "locations": 1,
+            "sharedWith": []
+          },
+          {
+            "from": 1206,
+            "through": 1288,
+            "locations": 1,
+            "sharedWith": []
+          },
+          {
+            "from": 1244,
+            "through": 1288,
+            "locations": 1,
+            "sharedWith": []
+          },
+          {
+            "from": 1278,
+            "through": 1288,
+            "locations": 1,
+            "sharedWith": []
+          },
+          {
+            "from": 1314,
+            "through": 1344,
+            "locations": 1,
+            "sharedWith": []
+          },
+          {
+            "from": 1322,
+            "through": 1357,
+            "locations": 1,
+            "sharedWith": []
+          },
+          {
+            "from": 1327,
+            "through": 1357,
+            "locations": 1,
+            "sharedWith": []
+          },
+          {
+            "from": 1347,
+            "through": 1357,
+            "locations": 1,
+            "sharedWith": []
+          }
+        ]
+      },
+      {
+        "name": "Dobruja otomana",
+        "intervals": [
+          {
+            "from": 1688,
+            "through": 1800,
+            "locations": 13,
+            "sharedWith": []
+          },
+          {
+            "from": 1403,
+            "through": 1412,
             "locations": 1,
             "sharedWith": []
           }
@@ -38398,6 +39171,101 @@
             "from": 1601,
             "through": 1602,
             "locations": 18,
+            "sharedWith": []
+          }
+        ]
+      },
+      {
+        "name": "Ducado de Sajonia-Altenburg",
+        "intervals": [
+          {
+            "from": 1603,
+            "through": 1671,
+            "locations": 3,
+            "sharedWith": []
+          }
+        ]
+      },
+      {
+        "name": "Ducado de Sajonia-Coburgo-Saalfeld",
+        "intervals": [
+          {
+            "from": 1745,
+            "through": 1800,
+            "locations": 1,
+            "sharedWith": []
+          }
+        ]
+      },
+      {
+        "name": "Ducado de Sajonia-Eisenach",
+        "intervals": [
+          {
+            "from": 1662,
+            "through": 1740,
+            "locations": 1,
+            "sharedWith": []
+          }
+        ]
+      },
+      {
+        "name": "Ducado de Sajonia-Eisenberg",
+        "intervals": [
+          {
+            "from": 1680,
+            "through": 1706,
+            "locations": 1,
+            "sharedWith": []
+          }
+        ]
+      },
+      {
+        "name": "Ducado de Sajonia-Gotha",
+        "intervals": [
+          {
+            "from": 1676,
+            "through": 1800,
+            "locations": 3,
+            "sharedWith": []
+          },
+          {
+            "from": 1676,
+            "through": 1679,
+            "locations": 2,
+            "sharedWith": []
+          },
+          {
+            "from": 1707,
+            "through": 1800,
+            "locations": 1,
+            "sharedWith": []
+          }
+        ]
+      },
+      {
+        "name": "Ducado de Sajonia-Saalfeld",
+        "intervals": [
+          {
+            "from": 1680,
+            "through": 1744,
+            "locations": 1,
+            "sharedWith": []
+          }
+        ]
+      },
+      {
+        "name": "Ducado de Sajonia-Weimar",
+        "intervals": [
+          {
+            "from": 1663,
+            "through": 1800,
+            "locations": 3,
+            "sharedWith": []
+          },
+          {
+            "from": 1741,
+            "through": 1800,
+            "locations": 1,
             "sharedWith": []
           }
         ]
@@ -38857,6 +39725,17 @@
         ]
       },
       {
+        "name": "Lika otomana",
+        "intervals": [
+          {
+            "from": 1688,
+            "through": 1688,
+            "locations": 3,
+            "sharedWith": []
+          }
+        ]
+      },
+      {
         "name": "Livonia del Commonwealth",
         "intervals": [
           {
@@ -38885,6 +39764,17 @@
           {
             "from": 1712,
             "through": 1746,
+            "locations": 1,
+            "sharedWith": []
+          }
+        ]
+      },
+      {
+        "name": "Makarska bajo Bosnia y Hum",
+        "intervals": [
+          {
+            "from": 1324,
+            "through": 1451,
             "locations": 1,
             "sharedWith": []
           }
@@ -38966,6 +39856,23 @@
             "from": 1629,
             "through": 1630,
             "locations": 8,
+            "sharedWith": []
+          }
+        ]
+      },
+      {
+        "name": "Meißen · administración regia",
+        "intervals": [
+          {
+            "from": 1294,
+            "through": 1297,
+            "locations": 2,
+            "sharedWith": []
+          },
+          {
+            "from": 1299,
+            "through": 1306,
+            "locations": 2,
             "sharedWith": []
           }
         ]
@@ -39115,6 +40022,89 @@
         ]
       },
       {
+        "name": "Nassau · rama otoniana",
+        "intervals": [
+          {
+            "from": 1291,
+            "through": 1302,
+            "locations": 3,
+            "sharedWith": []
+          }
+        ]
+      },
+      {
+        "name": "Nassau · rama walramiana",
+        "intervals": [
+          {
+            "from": 1299,
+            "through": 1360,
+            "locations": 2,
+            "sharedWith": []
+          }
+        ]
+      },
+      {
+        "name": "Nassau-Dillenburg",
+        "intervals": [
+          {
+            "from": 1624,
+            "through": 1738,
+            "locations": 1,
+            "sharedWith": []
+          }
+        ]
+      },
+      {
+        "name": "Nassau-Hadamar",
+        "intervals": [
+          {
+            "from": 1303,
+            "through": 1393,
+            "locations": 1,
+            "sharedWith": []
+          },
+          {
+            "from": 1654,
+            "through": 1710,
+            "locations": 1,
+            "sharedWith": []
+          }
+        ]
+      },
+      {
+        "name": "Nassau-Idstein y Nassau-Usingen",
+        "intervals": [
+          {
+            "from": 1629,
+            "through": 1800,
+            "locations": 2,
+            "sharedWith": []
+          }
+        ]
+      },
+      {
+        "name": "Nassau-Siegen",
+        "intervals": [
+          {
+            "from": 1624,
+            "through": 1742,
+            "locations": 1,
+            "sharedWith": []
+          }
+        ]
+      },
+      {
+        "name": "Nassau-Weilburg · herencia de Idstein",
+        "intervals": [
+          {
+            "from": 1605,
+            "through": 1628,
+            "locations": 2,
+            "sharedWith": []
+          }
+        ]
+      },
+      {
         "name": "Núcleo de Baden-Baden",
         "intervals": [
           {
@@ -39241,6 +40231,17 @@
             "from": 1650,
             "through": 1650,
             "locations": 2,
+            "sharedWith": []
+          }
+        ]
+      },
+      {
+        "name": "Osterland",
+        "intervals": [
+          {
+            "from": 1285,
+            "through": 1293,
+            "locations": 4,
             "sharedWith": []
           }
         ]
@@ -39580,6 +40581,35 @@
         ]
       },
       {
+        "name": "República de Ragusa",
+        "intervals": [
+          {
+            "from": 1651,
+            "through": 1800,
+            "locations": 3,
+            "sharedWith": []
+          },
+          {
+            "from": 1200,
+            "through": 1399,
+            "locations": 1,
+            "sharedWith": []
+          },
+          {
+            "from": 1272,
+            "through": 1399,
+            "locations": 1,
+            "sharedWith": []
+          },
+          {
+            "from": 1399,
+            "through": 1399,
+            "locations": 1,
+            "sharedWith": []
+          }
+        ]
+      },
+      {
         "name": "Riga bajo la Mancomunidad",
         "intervals": [
           {
@@ -39695,6 +40725,17 @@
             "from": 1464,
             "through": 1468,
             "locations": 2,
+            "sharedWith": []
+          }
+        ]
+      },
+      {
+        "name": "Split · control dinástico disputado",
+        "intervals": [
+          {
+            "from": 1390,
+            "through": 1412,
+            "locations": 1,
             "sharedWith": []
           }
         ]
@@ -39855,7 +40896,7 @@
           {
             "from": 1606,
             "through": 1650,
-            "locations": 61,
+            "locations": 56,
             "sharedWith": []
           },
           {

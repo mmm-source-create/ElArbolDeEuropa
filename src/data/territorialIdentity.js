@@ -47,6 +47,13 @@ const ALIASES = Object.freeze({
   'Condado de Armagnac': 'Armagnac',
   'Condado de Champaña': 'Champaña',
   'Electorado de Hannover': 'Hannover',
+  'Margraviato de Meißen': 'Meißen',
+  'Meißen · administración regia': 'Meißen',
+  'Landgraviato de Turingia': 'Turingia',
+  'Bulgaria · Chaka en Tarnovo': 'Bulgaria',
+  'Condado de Nassau': 'Nassau',
+  'Ducado de Suabia': 'Suabia',
+  'Despotado de Dobruja': 'Dobruja',
 });
 
 export const territorialIdentity = name => ALIASES[name] || name;
@@ -75,6 +82,11 @@ export function territorialLabel(name, year) {
     Foix: 'Condado de Foix', Bearne: 'Vizcondado de Bearne',
     Armagnac: 'Condado de Armagnac', Champaña: 'Condado de Champaña',
     Hannover: 'Electorado de Brunswick-Lüneburg (Hannover)',
+    'Meißen':'Margraviato de Meißen',Turingia:'Landgraviato de Turingia',Suabia:'Ducado de Suabia',Nassau:'Condado de Nassau',
+    Dobruja:year<1370?'Principado de Karvuna':'Despotado de Dobruja',
+    'Turingia ernestina':year<1547?'Sajonia ernestina · tierras de Turingia':'Ducado de Sajonia · tierras ernestinas',
+    'Nassau-Dietz':year<1654?'Condado de Nassau-Dietz':year<1743?'Principado de Nassau-Dietz':'Principado de Nassau-Orange',
+    'Ducado de Sajonia-Gotha':year<1672?'Ducado de Sajonia-Gotha':'Ducado de Sajonia-Gotha-Altenburg',
     'Hungría otomana': year < 1541 ? 'Conquistas otomanas en Hungría' : 'Eyalatos otomanos de Hungría',
   };
   return labels[identity] || identity;
