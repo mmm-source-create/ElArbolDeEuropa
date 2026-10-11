@@ -47,14 +47,40 @@ test('tipos, campos y vocabulario nuevos no se convierten silenciosamente', () =
 test('las excepciones heredadas son exactas y no admiten nuevos casos', () => {
   const data = fixtures();
   data.people[0].conyuge = 'B'; delete data.people[0].conyuges;
-  data.people[0].gobiernos[0].controlDisputado = {desde: 1305, hasta: 1306};
+  data.people[0].madreAprox = true;
   record(data);
   assert.deepEqual(codes(data), []);
   data.people[1].conyuge = 'A';
   assert(codes(data).includes('NEW_LEGACY_FORMAT'));
   delete data.people[1].conyuge;
-  data.people[0].gobiernos[0].controlDisputado.hasta = 1307;
+  data.people[0].madreAprox = false;
   assert(codes(data).includes('NEW_LEGACY_FORMAT'));
+});
+
+test('las disputas individuales se rechazan en la fuente incluso con una excepción antigua', () => {
+  const data = fixtures();
+  data.people[0].gobiernos[0].controlDisputado = {desde: 1305, hasta: 1306};
+  assert(codes(data).includes('TYPE'));
+  assert(codes(data).includes('NEW_LEGACY_FORMAT'));
+  record(data);
+  const issues = validateContracts(data);
+  assert(issues.some(issue => issue.code === 'TYPE' && issue.path.endsWith('.controlDisputado')));
+  assert(!issues.some(issue => issue.code === 'NEW_LEGACY_FORMAT'));
+});
+
+test('varias disputas conservan su orden y se validan todos sus límites', () => {
+  const data = fixtures();
+  const periods = [{desde: 1315, hasta: 1316}, {desde: 1305, hasta: 1306}];
+  data.people[0].gobiernos[0].controlDisputado = periods;
+  const before = structuredClone(data.people);
+  assert.deepEqual(codes(data), []);
+  assert.deepEqual(data.people, before);
+  periods[1].hasta = 1321;
+  assert(codes(data).includes('DISPUTE_OUTSIDE_GOVERNMENT'));
+  periods[1].hasta = 1304;
+  assert(codes(data).includes('REVERSED_INTERVAL'));
+  periods[1].hasta = '1306';
+  assert(codes(data).includes('TYPE'));
 });
 
 test('retirar formatos antiguos conserva la validez sin exigir más excepciones', () => {

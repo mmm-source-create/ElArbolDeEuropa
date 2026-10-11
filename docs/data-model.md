@@ -1,6 +1,6 @@
 # Contrato de datos · V5
 
-Este documento describe la fuente publicada y el contrato ejecutable de `scripts/schema/data-contract.mjs`. V5.0 añade validación y protección del comportamiento; no modifica personas, mandatos, fronteras ni consumidores. La compatibilidad existente se retirará en entregas posteriores de la serie V5.
+Este documento describe la fuente publicada y el contrato ejecutable de `scripts/schema/data-contract.mjs`. V5.0 introdujo validación y protección del comportamiento; V5.1 comparte la lectura entre consumidores y V5.2 exige listas para las disputas en la fuente. La compatibilidad restante se retirará en entregas posteriores de la serie V5.
 
 ## Fuentes y derivados
 
@@ -78,7 +78,7 @@ Formato canónico de disputa:
 controlDisputado: [{ desde: 1619, hasta: 1620 }]
 ```
 
-Cada intervalo debe ser válido y quedar dentro del mandato. Los 33 objetos individuales ya publicados se admiten únicamente con sus valores exactos en el registro de compatibilidad. Las nuevas entradas deben usar un array.
+Cada intervalo debe ser válido y quedar dentro del mandato. Desde V5.2, la fuente exige un array incluso cuando hay un único intervalo: los 33 objetos individuales publicados se migraron mecánicamente y sus excepciones se retiraron. Un objeto individual falla la validación estructural incluso si figura en un registro de compatibilidad antiguo. La lista conserva el orden documental y no se ordena ni se fusiona al validar.
 
 `reinados` se añade actualmente como alias de `gobiernos` al cargar `PERSONAS`. No es una fuente independiente y no se escribe dentro del literal. El auditor lee el literal antes de esa operación. Su retirada pertenece a la migración de consumidores posterior.
 
@@ -91,7 +91,7 @@ Los consumidores de personas utilizan [`src/data/personAccessors.js`](../src/dat
 | `conyugesDe(persona)` | IDs únicos en orden de registro, combinando `conyuge`, `conyuge2` y `conyuges`. También entiende tarjetas públicas con `id`. Si una ficha pública contiene `conyugesIds` no vacío, usa esos IDs declarados en lugar de sus relaciones expandidas. |
 | `gobiernosDe(persona)` | La lista original de `gobiernos`; solo usa `reinados` si aquella falta. Una lista canónica vacía prevalece sobre el alias. No clona ni filtra mandatos, ni inventa intervalos. |
 | `territoriosDe(persona)` | La lista original de asociaciones `reinos`, sin convertirla en gobiernos ni añadir territorios de otros campos. |
-| `intervalosDisputadosDe(gobierno)` | Lista de intervalos; envuelve el objeto heredado y conserva los mismos objetos de período, sus notas y su orden. |
+| `intervalosDisputadosDe(gobierno)` | Lista de intervalos; conserva los mismos objetos de período y su orden. Mantiene la lectura de objetos heredados para datos públicos anteriores; desde V5.2 esos objetos se rechazan en la fuente. |
 
 Los arrays opcionales ausentes producen `[]` como comodidad de lectura; no escriben un campo nuevo ni afirman que una ausencia documental sea una negativa histórica. Los contenedores mal tipados producen un error. El contrato comprueba además los valores y límites de sus elementos: un accesor no sustituye la validación ni acredita un hecho.
 
@@ -138,7 +138,7 @@ La secuencia heredada de Croacia contiene cinco versiones de 1689. V5.0 registra
 
 ## Compatibilidad y validación
 
-`tests/baselines/v5-legacy-formats.json` contiene casos concretos y motivos: formatos conyugales, disputas individuales, indicadores parentales, versiones repetidas y capas sin fuente propia. No es una lista de errores históricos aceptados. No hay un comando que añada automáticamente nuevas excepciones. Al migrar un caso, se retira su entrada; las entradas ya retiradas del dato no bloquean la validación.
+`tests/baselines/v5-legacy-formats.json` contiene casos concretos y motivos: formatos conyugales, indicadores parentales, versiones repetidas y capas sin fuente propia. El grupo de disputas individuales queda vacío desde V5.2. No es una lista de errores históricos aceptados. No hay un comando que añada automáticamente nuevas excepciones. Al migrar un caso, se retira su entrada; las entradas ya retiradas del dato no bloquean la validación. La compatibilidad de lectura no amplía los formatos admitidos por el contrato de fuente.
 
 `npm run audit:data-contract` comprueba estas reglas antes de la generación. Se ejecuta también al principio de CI. Las auditorías previas siguen comprobando cronología, continuidad, superficies, sucesiones y páginas.
 

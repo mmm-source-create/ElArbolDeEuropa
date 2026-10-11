@@ -27,7 +27,7 @@ export const GOVERNMENT_SCHEMA = object({
   territorio: text, desde: year, hasta: year, titulo: text,
   clase: enumeration(GOVERNMENT_CLASSES), condicion: enumeration(GOVERNMENT_CONDITIONS),
   nota: optional(prose), ambito: optional(text), soberano: optional(text),
-  controlDisputado: optional({anyOf: [array(years), years]}),
+  controlDisputado: optional(array(years)),
 });
 export const PERSON_SCHEMA = object({
   id: text, nombre: text, titulo: text, reinos: array(text),
@@ -152,7 +152,7 @@ export function validateContracts({people, territories, mapData, locationIds, le
       if (!own(territories, government.territorio)) add('MISSING_TERRITORY', key, `Entidad inexistente: ${government.territorio}`);
       if (!person.reinos?.includes(government.territorio)) add('GOVERNMENT_ASSOCIATION', key, 'El gobierno no figura entre los territorios asociados');
       if (government.soberano && !ids.has(government.soberano)) add('MISSING_PERSON', `${key}.soberano`, 'Soberano inexistente');
-      for (const period of [].concat(government.controlDisputado || [])) {
+      for (const period of government.controlDisputado || []) {
         interval(period, 'desde', 'hasta', `${key}.controlDisputado`);
         if (period.desde < government.desde || period.hasta > government.hasta) add('DISPUTE_OUTSIDE_GOVERNMENT', key, 'La disputa excede el mandato');
       }

@@ -18,6 +18,7 @@ Los informes describen el estado validado de cada entrega. Sus cifras y listas d
 
 | Versión | Contenido |
 | --- | --- |
+| [5.2](V5.2.md) | Migración de las 33 disputas individuales a listas y retirada de sus excepciones, conservando el resultado del Atlas |
 | [5.1](V5.1.md) | Lectura compartida de relaciones, mandatos, asociaciones y disputas, conservando evidencia y resultados |
 | [5.0](V5.0.md) | Contratos de datos, compatibilidad concreta y protección anual de mapas, relaciones y rutas |
 | [4.12](V4.12.md) | Dobruja, costa croata, sucesiones búlgaras, particiones Wettin/Staufen/Nassau e inventario de IDs nunca coloreados |

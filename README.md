@@ -2,8 +2,10 @@
 
 Atlas histórico y genealógico para explorar personas, dinastías, territorios y sus conexiones familiares.
 
-- [Web](https://www.treeofeurope.eu/es/) · Versión del repositorio: **V5.1**
-- [Cambios de V5.1](docs/V5.1.md) · [Documentación e historial](docs/README.md) · [Próximos pasos cartográficos](docs/V4.8_PROPUESTAS.md) · [Seguridad](SECURITY.md)
+- [Web](https://www.treeofeurope.eu/es/) · Versión del repositorio: **V5.2**
+- [Cambios de V5.2](docs/V5.2.md) · [Documentación e historial](docs/README.md) · [Próximos pasos cartográficos](docs/V4.8_PROPUESTAS.md) · [Seguridad](SECURITY.md)
+
+La V5.2 convierte las 33 disputas individuales al formato de lista. Todos los mandatos con `controlDisputado` usan ahora arrays; se conservan sus intervalos, títulos, notas y fuentes. El contrato rechaza nuevos objetos individuales y retira sus excepciones. La base de comportamiento de V5.0 sigue protegiendo los resultados del Atlas.
 
 La V5.1 comparte la lectura de cónyuges, mandatos, territorios asociados y disputas entre el árbol, las fichas, los mapas, el desafío, los generadores y las auditorías cartográficas. Conserva los formatos de la fuente y las referencias que enlazan gobiernos y evidencia. La [guía de lectura](docs/data-model.md#lectura-compartida-desde-v51) explica la compatibilidad y los límites de cada accesor.
 
