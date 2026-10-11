@@ -2,8 +2,10 @@
 
 Atlas histórico y genealógico para explorar personas, dinastías, territorios y sus conexiones familiares.
 
-- [Web](https://www.treeofeurope.eu/es/) · Versión del repositorio: **V4.12**
-- [Cambios de V4.12](docs/V4.12.md) · [Documentación e historial](docs/README.md) · [Próximos pasos cartográficos](docs/V4.8_PROPUESTAS.md) · [Seguridad](SECURITY.md)
+- [Web](https://www.treeofeurope.eu/es/) · Versión del repositorio: **V5.0**
+- [Cambios de V5.0](docs/V5.0.md) · [Documentación e historial](docs/README.md) · [Próximos pasos cartográficos](docs/V4.8_PROPUESTAS.md) · [Seguridad](SECURITY.md)
+
+La V5.0 establece un [contrato verificable de datos](docs/data-model.md) y protege el comportamiento publicado mediante una [base de regresión](docs/v5-regression.md). Comprueba personas, mandatos, evidencia, rutas y fichas generadas, y compara los mapas completos y personales en cada año de 1200–1800. Los formatos heredados se registran por caso concreto para retirarlos gradualmente; los nuevos usos fallan en CI. La primera entrega conserva el contenido y las superficies del Atlas.
 
 La V4.12 revisa Dobruja, la costa croata, las crisis sucesorias búlgaras y las particiones de Meißen, Turingia, Suabia y Nassau. Añade 31 personas y un inventario de todos los IDs visibles que nunca reciben color en 1200–1800: el laboratorio permite buscar esas celdas, revisar sus candidatos y descargar la lista. Las pistas geométricas permanecen sin verificar hasta contar con una atribución fechada y documentada. El [informe de la entrega](docs/V4.12.md) detalla las correcciones y los límites pendientes.
 
@@ -42,7 +44,7 @@ npm run audit:security
 npm run build
 ```
 
-El build audita los datos, regenera los catálogos y sitemaps, compila con Vite y produce las fichas HTML. El resultado publicable queda en `dist/`. No edites los derivados para cambiar contenido: `src/generated/`, los metadatos públicos y ambos sitemaps se regeneran desde las fuentes.
+El build valida los contratos, audita los datos, regenera los catálogos y sitemaps, compila con Vite y produce las fichas HTML. Después compara los datos, los mapas anuales y las páginas con la base revisada de V5. El resultado publicable queda en `dist/`. No edites los derivados para cambiar contenido: `src/generated/`, los metadatos públicos y ambos sitemaps se regeneran desde las fuentes. Los cambios históricos intencionados siguen el [procedimiento de actualización de la base](docs/v5-regression.md#cambios-intencionados).
 
 Para trabajar en la interfaz, `npm run dev` prepara los datos automáticamente antes de iniciar Vite. `npm run preview` sirve una compilación ya creada. Las comprobaciones automáticas no inician un servidor.
 

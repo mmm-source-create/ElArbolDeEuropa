@@ -23,6 +23,8 @@ jobs:
           node-version-file: .nvmrc
           cache: npm
       - run: npm ci
+      - name: Validar contratos de personas y cartografía
+        run: npm run audit:data-contract
       - run: npm run audit:security
       - run: npm test
       - run: npm run build
