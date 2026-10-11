@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import {JSDOM} from 'jsdom';
 import {printDocument,educationalDocuments,embedCode,exportFilename} from '../src/connections/printExport.js';
 import {embedSelection} from '../src/embed/EmbedPage.jsx';
-import {MAIN_FRAME_SOURCE,EMBED_CSP,CONTENT_SECURITY_POLICY} from '../scripts/security-policy.mjs';
+import {MAIN_FRAME_SOURCE,EMBED_CSP,CONTENT_SECURITY_POLICY} from '../scripts/lib/security-policy.mjs';
 import {resolverRuta} from '../src/routing.js';
 const people=[{id:'A',nombre:'Persona <A>',slug:'persona-a',nac:1500,muer:1550},{id:'B',nombre:'Persona B',slug:'persona-b',nac:1525,muer:1590,padres:[{id:'A'}]}];
 test('el material separa actividad y respuestas, conserva fuentes y escapa contenido',()=>{

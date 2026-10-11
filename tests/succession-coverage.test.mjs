@@ -6,7 +6,7 @@ import {SUCCESSION_REVIEWS} from '../src/evidence/successionReviewData.js';
 import {personClaims} from '../src/evidence/claims.js';
 import {mapAuthoritiesForPerson} from '../src/data/mapAuthorities.js';
 import {reviewedMapLayers,reviewedLayerLocations,pilotLocationsFor} from '../src/data/locationMapPilot.js';
-import {auditLocationCoverage} from '../audit-uncolored-locations.mjs';
+import {auditLocationCoverage} from '../scripts/audits/audit-uncolored-locations.mjs';
 import {territorialLabel} from '../src/data/territorialIdentity.js';
 const data=JSON.parse(fs.readFileSync(new URL('../prototypes/euv-locations/corridor-locations.json',import.meta.url)));
 const inventory=JSON.parse(fs.readFileSync(new URL('../prototypes/euv-locations/location-inventory.json',import.meta.url)));

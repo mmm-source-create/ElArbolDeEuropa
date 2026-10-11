@@ -10,4 +10,4 @@ Las variables `VITE_*` son públicas. No deben contener secretos. Los desafíos 
 
 Speed Insights se inicia una vez en la compilación de producción. Se eliminan los parámetros de consulta y fragmentos de las URL antes de enviar métricas. No se añaden búsquedas, semillas de desafíos ni progreso local a esos eventos.
 
-La CSP permite el script local, el hash del aviso móvil y Vercel Live para las vistas previas; conserva los estilos en línea y las imágenes HTTPS/blob necesarias. Si cambia el aviso, actualiza el hash en `vercel.json` a partir de `scripts/security-policy.mjs`. La auditoría bloquea un hash desactualizado. La incrustación por otras webs requerirá una política específica cuando se implemente esa función.
+La CSP permite el script local, el hash del aviso móvil y Vercel Live para las vistas previas; conserva los estilos en línea y las imágenes HTTPS/blob necesarias. Si cambia el aviso, actualiza el hash en `vercel.json` a partir de `scripts/lib/security-policy.mjs`. La auditoría bloquea un hash desactualizado. La incrustación por otras webs requerirá una política específica cuando se implemente esa función.

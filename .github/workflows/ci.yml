@@ -28,10 +28,23 @@ jobs:
       - run: npm run audit:security
       - run: npm test
       - run: npm run build
+      - uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1 # v6
+        with:
+          python-version-file: .python-version
+          cache: pip
+          cache-dependency-path: scripts/cartography/requirements.lock
+      - name: Instalar y comprobar el entorno cartográfico aislado
+        run: |
+          python -m venv .venv-cartography
+          .venv-cartography/bin/python -m pip install --require-hashes --only-binary=:all: -r scripts/cartography/requirements.lock
+          .venv-cartography/bin/python -m pip check
+          npm run cartography:check
+      - name: Conservar fuentes, mapas y resultados revisados
+        run: git diff --exit-code -- prototypes/euv-locations docs/reports/reviewed docs/atlas-continuity-audit.json docs/atlas-continuity-audit.md tests/baselines
       - run: npm run ssg:sample
       - name: Hidratar una muestra de fichas reales
         run: node --import ./tests/jsx-loader.mjs --test tests/hydration.test.mjs
         env:
           EADE_SSG_SAMPLE: .ssg-sample
       - name: Comprobar los datos regenerados
-        run: node audit-personas.mjs --fail-on-errors
+        run: node scripts/audits/audit-personas.mjs --fail-on-errors

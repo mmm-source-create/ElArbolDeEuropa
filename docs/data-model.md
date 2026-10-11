@@ -9,7 +9,7 @@ Este documento describe la fuente publicada y el contrato ejecutable de `scripts
 | Personas, relaciones y mandatos | `src/personas.jsx`, array `PERSONAS` |
 | Registro territorial, naturaleza y etapas | `src/data/territorios.js`, `TERRITORIOS` |
 | Afirmaciones y evidencia individual | `src/evidence/claims.js`, `reviewRecords.js` y revisiones asociadas |
-| Superficies, versiones y fuentes del mapa | Revisiones en `prototypes/euv-locations/`; ensamblado mediante `merge-map-expansions.mjs` |
+| Superficies, versiones y fuentes del mapa | Revisiones en `prototypes/euv-locations/`; ensamblado mediante `scripts/cartography/merge-map-expansions.mjs` |
 | Dato cartográfico consumido por la aplicación | `prototypes/euv-locations/corridor-locations.json` |
 | Identidades y etiquetas territoriales | `src/data/territorialIdentity.js` |
 | Correspondencia entre mandatos y capas | `src/data/locationMapPilot.js` y sus rutas fechadas |

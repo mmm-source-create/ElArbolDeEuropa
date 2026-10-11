@@ -6,7 +6,7 @@ import {personClaims} from '../src/evidence/claims.js';
 import {mapAuthoritiesForPerson} from '../src/data/mapAuthorities.js';
 import {pilotLocationsFor, reviewedMapLayers, reviewedLayerLocations} from '../src/data/locationMapPilot.js';
 import {politicalMosaicAt} from '../prototypes/euv-locations/location-mosaic.js';
-import {applyRegionalExtents} from '../prototypes/euv-locations/apply-regional-extents.mjs';
+import {applyRegionalExtents} from '../scripts/cartography/apply-regional-extents.mjs';
 import {REGIONAL_EXTENT_REVIEWS} from '../src/evidence/regionalExtentReviewData.js';
 
 const read = path => JSON.parse(fs.readFileSync(new URL(path, import.meta.url), 'utf8'));

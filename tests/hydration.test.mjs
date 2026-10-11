@@ -7,7 +7,7 @@ import {JSDOM} from 'jsdom';
 import {act} from 'react';
 import {build} from 'vite';
 import {person,dynasty,territory} from './fixtures/static-pages.mjs';
-import {makeStaticDocument} from '../scripts/ssg-utils.mjs';
+import {makeStaticDocument} from '../scripts/lib/ssg-utils.mjs';
 const root=fileURLToPath(new URL('../',import.meta.url));
 const dom=new JSDOM('<!doctype html><html><head></head><body></body></html>',{url:'https://www.treeofeurope.eu/es/'});
 for(const name of ['window','document','navigator','HTMLElement','HTMLInputElement','Event','MouseEvent'])Object.defineProperty(globalThis,name,{value:name==='window'?dom.window:dom.window[name],configurable:true,writable:true});

@@ -33,10 +33,10 @@ La siguiente prioridad es completar **Dobruja y la sucesión búlgara**, las **r
 ## Reproducción y validación
 
 ```sh
-python3 prototypes/euv-locations/frontier-source.py
-node prototypes/euv-locations/merge-map-expansions.mjs
+.venv-cartography/bin/python scripts/cartography/frontier-source.py
+node scripts/cartography/merge-map-expansions.mjs
 # Entorno geométrico existente con Shapely y svgpathtools
-python prototypes/euv-locations/build-regional-extent-cells.py
+.venv-cartography/bin/python scripts/cartography/build-regional-extent-cells.py
 npm test
 npm run build
 npm run audit:security

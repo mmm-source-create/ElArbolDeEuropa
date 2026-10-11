@@ -3,6 +3,9 @@
 - [Uso del Atlas y desafíos](ATLAS.md)
 - [Contrato de personas y cartografía](data-model.md)
 - [Validación y actualización de la base V5](v5-regression.md)
+- [Herramientas y comandos actuales](../scripts/README.md)
+- [Entorno Python reproducible para cartografía](python-cartography.md)
+- [Clasificación de fuentes y resultados](artifacts.md)
 - [Guía documental de los Capetos](CAPETOS.md)
 - [Criterios de cartografía de Irlanda](CARTOGRAFIA_IRLANDA.md)
 - [Borgoña: sucesión y límites del mapa](CARTOGRAFIA_BORGONA.md)
@@ -18,6 +21,7 @@ Los informes describen el estado validado de cada entrega. Sus cifras y listas d
 
 | Versión | Contenido |
 | --- | --- |
+| [5.6](V5.6.md) | Scripts organizados, Python reproducible y separación de fuentes, resultados revisados y temporales |
 | [5.5](V5.5.md) | Gobernaciones neerlandesas documentadas y retirada de las cuatro excepciones de autoridad |
 | [5.4](V5.4.md) | Identidades sin nombre, fechas justificadas y filiación probable o discutida con evidencia individual |
 | [5.3](V5.3.md) | Relaciones conyugales en listas, retirada de 1.432 excepciones y conservación de conexiones y evidencia |
