@@ -176,9 +176,6 @@ export const SUCESIONES_V27 = {
   "JUAN3PORT": {
     "resumen": "Su reinado consolidó la presencia portuguesa en Brasil y en las rutas asiáticas. La introducción de la Inquisición transformó profundamente la vida religiosa y social del reino."
   },
-  "ALEJFARNESIO": {
-    "resumen": "Fue uno de los principales comandantes de Felipe II en los Países Bajos. Recuperó importantes ciudades para la monarquía, entre ellas Amberes, mientras conservaba sus derechos sobre Parma."
-  },
   "OCTFARNESIO": {
     "resumen": "Aseguró la continuidad del ducado de Parma para los Farnesio entre las presiones del papado, Francia y los Habsburgo. Su matrimonio con Margarita de Austria reforzó esas conexiones dinásticas."
   },

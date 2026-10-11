@@ -1,3 +1,4 @@
+import {netherlandsGovernorScope} from './netherlandsGovernorScopes.js';
 // These dates extend a reviewed person's attribution, not the lifetime of
 // every layer in the Burgundian laboratory. Geometry alone proves no control.
 export const NETHERLANDS_TERRITORIES = Object.freeze(['Flandes', 'Brabante', 'Limburgo',
@@ -15,6 +16,10 @@ export const REVOLT_SOURCE = Object.freeze({
 
 export function authorityExtensionFor(name, year, personId = null) {
   if (year < 1556 || year > 1598 || !NETHERLANDS_TERRITORIES.includes(name)) return null;
+  const governor = netherlandsGovernorScope(personId, 'Países Bajos', year);
+  if (governor) return governor.jurisdictions.includes(name)
+    ? {referenceYear:1555,source:governor.source,note:'Geometría provincial de referencia de 1555, limitada por la revisión del gobernador; no acredita control uniforme.'}
+    : null;
   if (personId && !['FEL2ESP', 'MARGPARMA'].includes(personId)) return null;
   return {referenceYear: 1555, source: PHILIP_SUCCESSION_SOURCE,
     note: 'Se reutiliza la aproximación regional de 1555 para el mandato registrado. La revuelta y los títulos posteriores se distinguen de la posesión efectiva.'};

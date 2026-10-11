@@ -199,3 +199,23 @@ test('un nombre desconocido admite fechas justificadas, pero rechaza años sin e
   delete person.identidadDesconocida;
   assert.deepEqual(codes(data), []);
 });
+
+test('el indicador gobernante retirado no puede reintroducir autoridad sin mandato',()=>{
+  for(const value of [true,false]){
+    const data=fixtures();data.people[0].gobernante=value;
+    assert(validateContracts(data).some(issue=>issue.code==='UNKNOWN_FIELD'&&issue.path==='person:A.gobernante'));
+  }
+});
+
+test('fechas de vida y relaciones no pueden apuntar a la misma persona',()=>{
+  const reversed=fixtures();reversed.people[0].nac=1320;reversed.people[0].muer=1300;
+  assert(codes(reversed).includes('REVERSED_INTERVAL'));
+  const partial=fixtures();partial.people[0].nac=1320;
+  assert.deepEqual(codes(partial),[],'una fecha ausente no se inventa');
+  for(const field of ['padre','madre','conyuges','amantes']){
+    const data=fixtures();data.people[0][field]=['conyuges','amantes'].includes(field)?['A']:'A';
+    assert(codes(data).includes('SELF_RELATIONSHIP'),field);
+  }
+  const data=fixtures();data.people[0].gobiernos[0].soberano='A';
+  assert(codes(data).includes('SELF_SOVEREIGN'));
+});
