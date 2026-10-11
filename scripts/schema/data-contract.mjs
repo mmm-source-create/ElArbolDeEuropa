@@ -33,7 +33,7 @@ export const PERSON_SCHEMA = object({
   id: text, nombre: text, titulo: text, reinos: array(text),
   ...fields(['sobrenombre', 'dinastia', 'padre', 'madre', 'slug'], text),
   ...fields(['nac', 'muer'], year),
-  ...fields(['nacAprox', 'muerAprox', 'madreAprox', 'padreAprox', 'gobernante', 'identidadDesconocida'], boolean),
+  ...fields(['nacAprox', 'muerAprox', 'gobernante', 'identidadDesconocida'], boolean),
   ...fields(['conyuges', 'amantes', 'aliases'], array(text)),
   gobiernos: optional(array(GOVERNMENT_SCHEMA)),
   documentacion: optional(object({
@@ -121,7 +121,7 @@ export function legacyMapEvidence(mapData) {
     .filter(layer => !layer.sources?.length).map(layer => [layer.name, {layerSha256: digest(layer)}]));
 }
 
-export function validateContracts({people, territories, mapData, locationIds, legacy}) {
+export function validateContracts({people, territories, mapData, locationIds, legacy, claimReviews = {}}) {
   const issues = [];
   const add = (code, path, message) => issues.push({code, path, message});
   const interval = (entry, from, through, path) => {
@@ -139,6 +139,20 @@ export function validateContracts({people, territories, mapData, locationIds, le
     const shapeIssues = validateShape(person, PERSON_SCHEMA, path);
     issues.push(...shapeIssues);
     if (shapeIssues.length) continue;
+    // Unknown name and unknown chronology are independent. A recorded year for
+    // an unnamed person needs evidence on that date, not on a nearby relative.
+    if (person.identidadDesconocida) for (const [field, suffix] of [['nac', 'birth'], ['muer', 'death']]) {
+      if (!own(person, field)) continue;
+      const review = claimReviews[`person:${person.id}:${suffix}`];
+      const located = review?.sources?.some(source => {
+        try {return (source.title || source.label)?.trim() && source.locator?.trim()
+          && ['https:', 'http:'].includes(new URL(source.url).protocol);}
+        catch {return false;}
+      });
+      if (!located || !review.note?.trim() || !['documented', 'approximate', 'disputed', 'inferred'].includes(review.certainty)) {
+        add('UNKNOWN_IDENTITY_DATE', `${path}.${field}`, 'Una persona sin nombre identificado necesita justificación y fuente localizada de esta fecha');
+      }
+    }
     for (const field of ['padre', 'madre']) if (person[field] && !ids.has(person[field])) add('MISSING_PERSON', `${path}.${field}`, `Persona inexistente: ${person[field]}`);
     for (const field of ['conyuges', 'amantes']) if (Array.isArray(person[field])) for (const id of person[field]) if (!ids.has(id)) add('MISSING_PERSON', `${path}.${field}`, `Persona inexistente: ${id}`);
     for (const field of ['reinos', 'conyuges', 'amantes', 'aliases']) uniqueStrings(person[field], `${path}.${field}`);

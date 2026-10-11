@@ -2,10 +2,10 @@
 
 Atlas histórico y genealógico para explorar personas, dinastías, territorios y sus conexiones familiares.
 
-- [Web](https://www.treeofeurope.eu/es/) · Versión del repositorio: **V5.3**
-- [Cambios de V5.3](docs/V5.3.md) · [Documentación e historial](docs/README.md) · [Próximos pasos cartográficos](docs/V4.8_PROPUESTAS.md) · [Seguridad](SECURITY.md)
+- [Web](https://www.treeofeurope.eu/es/) · Versión del repositorio: **V5.4**
+- [Cambios de V5.4](docs/V5.4.md) · [Documentación e historial](docs/README.md) · [Próximos pasos cartográficos](docs/V4.8_PROPUESTAS.md) · [Seguridad](SECURITY.md)
 
-La V5.3 unifica las relaciones conyugales en `conyuges[]`: migra las 1.432 fichas con el campo singular y retira sus excepciones. Conserva las 1.840 referencias declaradas, su orden y su evidencia; las listas ya existentes y las ausencias documentales mantienen su significado. El contrato rechaza los campos retirados y los lectores siguen entendiendo datos públicos anteriores.
+La V5.4 revisa tres identidades sin nombre y tres filiaciones inciertas. Retira seis fechas sin respaldo, documenta las maternidades probables de los Piccinino y distingue el reconocimiento de Matthew O’Neill de su paternidad biológica; su nacimiento se corrige a hacia 1510. Conserva los IDs y enlaces familiares y retira los tres indicadores parentales heredados.
 
 La V5.2 convierte las 33 disputas individuales al formato de lista. Todos los mandatos con `controlDisputado` usan ahora arrays; se conservan sus intervalos, títulos, notas y fuentes. El contrato rechaza nuevos objetos individuales y retira sus excepciones. La base de comportamiento de V5.0 sigue protegiendo los resultados del Atlas.
 

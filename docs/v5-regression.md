@@ -1,6 +1,6 @@
 # Protección de comportamiento · V5
 
-La base `tests/baselines/v5-regression.json` registra el resultado publicado tras la revisión de Islandia, Istria y Moldavia (`ef6b5cf`). Contiene 2.531 personas, 2.505 gobiernos, 270 entidades del registro y 3.526 fichas estáticas. Es una referencia de comportamiento, no una afirmación de que toda la historia esté resuelta.
+La base `tests/baselines/v5-regression.json` se creó con el resultado publicado tras la revisión de Islandia, Istria y Moldavia (`ef6b5cf`). V5.4 la actualiza tras la [revisión documentada de seis fichas](V5.4.md): seis huellas personales y 23 páginas cambian de forma intencionada. Los 601 años de mapas, IDs, rutas, recuentos, geometría y disposición del árbol permanecen iguales. El campo `origin` conserva el punto de partida y `reason` explica la revisión vigente. Contiene 2.531 personas, 2.505 gobiernos, 270 entidades del registro y 3.526 fichas estáticas. Es una referencia de comportamiento, no una afirmación de que toda la historia esté resuelta.
 
 ## Qué se compara
 

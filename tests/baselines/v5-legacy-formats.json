@@ -12,18 +12,8 @@
       "entries": {}
     },
     "uncertainParents": {
-      "reason": "Marcadores de filiación probable ya publicados. Integrar con la evidencia de la relación tras revisión documental.",
-      "entries": {
-        "FRANCPICC": {
-          "madreAprox": true
-        },
-        "JACOPICC": {
-          "madreAprox": true
-        },
-        "MATTHEWONEILL": {
-          "padreAprox": true
-        }
-      }
+      "reason": "V5.4 integra los tres indicadores parentales en las afirmaciones existentes, con certeza y pasaje documental. Los campos madreAprox y padreAprox quedan retirados de la fuente.",
+      "entries": {}
     },
     "mapVersionOrder": {
       "reason": "Croacia habsbúrgica repite versiones de 1689 en el ensamblado heredado. Conservar únicamente esta secuencia exacta hasta revisar su regeneración; cualquier cambio exige orden estricto.",
