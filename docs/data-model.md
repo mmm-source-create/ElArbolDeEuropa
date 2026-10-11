@@ -1,6 +1,6 @@
 # Contrato de datos · V5
 
-Este documento describe la fuente publicada y el contrato ejecutable de `scripts/schema/data-contract.mjs`. V5.0 introdujo validación y protección del comportamiento; V5.1 comparte la lectura entre consumidores y V5.2 exige listas para las disputas en la fuente. La compatibilidad restante se retirará en entregas posteriores de la serie V5.
+Este documento describe la fuente publicada y el contrato ejecutable de `scripts/schema/data-contract.mjs`. V5.0 introdujo validación y protección del comportamiento; V5.1 comparte la lectura entre consumidores, V5.2 exige listas para las disputas y V5.3 para los cónyuges en la fuente. La compatibilidad restante se retirará en entregas posteriores de la serie V5.
 
 ## Fuentes y derivados
 
@@ -29,6 +29,8 @@ Campos opcionales:
 - Identidad: `identidadDesconocida`, cuando se haya revisado un caso concreto.
 
 Las referencias familiares y el soberano de un mandato deben existir. Las auditorías genealógicas vigentes comprueban además ciclos, autorreferencias y contradicciones cronológicas. La reciprocidad conyugal se revisa; no se inventa un parentesco para satisfacer una comprobación.
+
+Desde V5.3, cada ficha con cónyuges declarados utiliza `conyuges[]`, incluso si solo hay uno. Las 1.432 fichas con `conyuge` se migraron conservando cada referencia y el orden de lectura. Las 263 listas ya existentes permanecen iguales; las fichas sin relación registrada no reciben una lista nueva. `conyuge` y `conyuge2` se rechazan como campos de fuente incluso con una excepción antigua. Cada ID de la lista debe existir y ser único. La migración no añade reciprocidad, no transforma amantes en cónyuges ni cambia certeza, fechas o fuentes.
 
 `reinos` significa **territorios asociados a la persona**: puede incluir vínculos familiares, consortes y títulos. No prueba gobierno ni posesión. `gobiernos` registra mandatos fechados. En el contrato actual, el territorio de cada mandato debe estar también asociado en `reinos` y existir en `TERRITORIOS`; no se fusionan ambos campos.
 
@@ -88,7 +90,7 @@ Los consumidores de personas utilizan [`src/data/personAccessors.js`](../src/dat
 
 | Accesor | Resultado y compatibilidad |
 | --- | --- |
-| `conyugesDe(persona)` | IDs únicos en orden de registro, combinando `conyuge`, `conyuge2` y `conyuges`. También entiende tarjetas públicas con `id`. Si una ficha pública contiene `conyugesIds` no vacío, usa esos IDs declarados en lugar de sus relaciones expandidas. |
+| `conyugesDe(persona)` | IDs únicos en orden de registro. Mantiene la lectura de `conyuge` y `conyuge2` para datos anteriores; desde V5.3 la fuente usa `conyuges[]`. También entiende tarjetas públicas con `id`. Si una ficha pública contiene `conyugesIds` no vacío, usa esos IDs declarados en lugar de sus relaciones expandidas. |
 | `gobiernosDe(persona)` | La lista original de `gobiernos`; solo usa `reinados` si aquella falta. Una lista canónica vacía prevalece sobre el alias. No clona ni filtra mandatos, ni inventa intervalos. |
 | `territoriosDe(persona)` | La lista original de asociaciones `reinos`, sin convertirla en gobiernos ni añadir territorios de otros campos. |
 | `intervalosDisputadosDe(gobierno)` | Lista de intervalos; conserva los mismos objetos de período y su orden. Mantiene la lectura de objetos heredados para datos públicos anteriores; desde V5.2 esos objetos se rechazan en la fuente. |
@@ -97,7 +99,9 @@ Los arrays opcionales ausentes producen `[]` como comodidad de lectura; no escri
 
 Los arrays devueltos de gobiernos, asociaciones y disputas son de **solo lectura por convenio**. Si un consumidor necesita ordenarlos o ampliarlos, debe copiar el array primero. Las conexiones del mapa y sus afirmaciones siguen usando el mismo objeto de gobierno, por lo que no debe clonarse para una lectura interna. La serialización de fichas puede copiarlo al construir el documento público.
 
-La reciprocidad conyugal se resuelve en los índices familiares; el accesor no busca parejas en otras fichas ni mezcla amantes. Las tarjetas de la ficha pública conservan su forma enriquecida y sus enlaces. Se mantiene el fallback publicado de `personClaims()` cuando `conyugesIds` está vacío, sin introducir en esta PR una revisión de certeza o reciprocidad. Esas políticas se revisarán al migrar las relaciones originales.
+La reciprocidad conyugal se resuelve en los índices familiares; el accesor no busca parejas en otras fichas ni mezcla amantes. Las tarjetas de la ficha pública conservan su forma enriquecida y sus enlaces. Se mantiene el fallback publicado de `personClaims()` cuando `conyugesIds` está vacío. V5.3 migra el formato original conservando estas políticas y la evidencia declarada; las revisiones de certeza o reciprocidad requieren su propia revisión documental.
+
+El modelo de ficha pública conserva temporalmente `conyuge` como alias cuando hay exactamente un ID declarado en `conyugesIds`; si hay varios o ninguno, usa `null`. Desde V5.3 el generador calcula ambos desde el lector común; no lee un campo singular de la fuente. Un alias nulo no implica ausencia de cónyuges: siempre se consulta la lista completa. El alias no añade reciprocidad y no sustituye `conyugesIds` ni las tarjetas enriquecidas. La fuente canónica continúa rechazándolo.
 
 Los adaptadores de `reinado: [desde, hasta]` siguen en `listaReinados()` y en el serializador histórico. No hay registros actuales de ese formato y no se admite en nuevas fuentes. Los lectores de campos parentales, fechas documentales y slugs conservan sus funciones existentes; sus criterios no cambian en esta entrega.
 
@@ -138,7 +142,7 @@ La secuencia heredada de Croacia contiene cinco versiones de 1689. V5.0 registra
 
 ## Compatibilidad y validación
 
-`tests/baselines/v5-legacy-formats.json` contiene casos concretos y motivos: formatos conyugales, indicadores parentales, versiones repetidas y capas sin fuente propia. El grupo de disputas individuales queda vacío desde V5.2. No es una lista de errores históricos aceptados. No hay un comando que añada automáticamente nuevas excepciones. Al migrar un caso, se retira su entrada; las entradas ya retiradas del dato no bloquean la validación. La compatibilidad de lectura no amplía los formatos admitidos por el contrato de fuente.
+`tests/baselines/v5-legacy-formats.json` contiene casos concretos y motivos: indicadores parentales, versiones repetidas y capas sin fuente propia. El grupo de disputas individuales queda vacío desde V5.2 y el conyugal desde V5.3. No es una lista de errores históricos aceptados. No hay un comando que añada automáticamente nuevas excepciones. Al migrar un caso, se retira su entrada; las entradas ya retiradas del dato no bloquean la validación. La compatibilidad de lectura no amplía los formatos admitidos por el contrato de fuente.
 
 `npm run audit:data-contract` comprueba estas reglas antes de la generación. Se ejecuta también al principio de CI. Las auditorías previas siguen comprobando cronología, continuidad, superficies, sucesiones y páginas.
 

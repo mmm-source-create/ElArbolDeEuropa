@@ -31,7 +31,7 @@ export const GOVERNMENT_SCHEMA = object({
 });
 export const PERSON_SCHEMA = object({
   id: text, nombre: text, titulo: text, reinos: array(text),
-  ...fields(['sobrenombre', 'dinastia', 'padre', 'madre', 'slug', 'conyuge', 'conyuge2'], text),
+  ...fields(['sobrenombre', 'dinastia', 'padre', 'madre', 'slug'], text),
   ...fields(['nac', 'muer'], year),
   ...fields(['nacAprox', 'muerAprox', 'madreAprox', 'padreAprox', 'gobernante', 'identidadDesconocida'], boolean),
   ...fields(['conyuges', 'amantes', 'aliases'], array(text)),
@@ -139,7 +139,7 @@ export function validateContracts({people, territories, mapData, locationIds, le
     const shapeIssues = validateShape(person, PERSON_SCHEMA, path);
     issues.push(...shapeIssues);
     if (shapeIssues.length) continue;
-    for (const field of ['padre', 'madre', 'conyuge', 'conyuge2']) if (person[field] && !ids.has(person[field])) add('MISSING_PERSON', `${path}.${field}`, `Persona inexistente: ${person[field]}`);
+    for (const field of ['padre', 'madre']) if (person[field] && !ids.has(person[field])) add('MISSING_PERSON', `${path}.${field}`, `Persona inexistente: ${person[field]}`);
     for (const field of ['conyuges', 'amantes']) if (Array.isArray(person[field])) for (const id of person[field]) if (!ids.has(id)) add('MISSING_PERSON', `${path}.${field}`, `Persona inexistente: ${id}`);
     for (const field of ['reinos', 'conyuges', 'amantes', 'aliases']) uniqueStrings(person[field], `${path}.${field}`);
     for (const territory of person.reinos || []) if (!own(territories, territory)) add('MISSING_TERRITORY', `${path}.reinos`, `Entidad inexistente: ${territory}`);

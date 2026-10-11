@@ -16,6 +16,13 @@ import BioDiscovery from '../src/components/BioDiscovery.jsx';
 
 const source = readPersonLiteral(readFileSync(new URL('../src/personas.jsx', import.meta.url), 'utf8'));
 
+function legacySpouses(person) {
+  if (!person.conyuges?.length) return {...person};
+  const {conyuges, ...fields} = person;
+  const [conyuge, ...rest] = conyuges;
+  return {...fields, conyuge, ...(rest.length ? {conyuges: rest} : {})};
+}
+
 test('las lecturas opcionales no añaden campos ni convierten ausencia en un dato histórico', () => {
   const person = Object.freeze({id: 'A', documentacion: {ausencias: {padres: 'unknown'}}});
   for (const input of [undefined, null, person]) {
@@ -114,14 +121,22 @@ test('toda la fuente literal mantiene cónyuges, asociaciones y objetos de manda
   assert.equal(JSON.stringify(source), before);
 });
 
-test('una futura migración conyugal conserva todas las familias y parentescos registrados', () => {
-  const canonical = source.map(person => {
-    const {conyuge, conyuge2, ...fields} = person;
-    return {...fields, conyuges: conyugesDe(person)};
-  });
-  const originalIndex = familyIndex(source), canonicalIndex = familyIndex(canonical);
+test('los formatos canónico y heredado conservan todas las familias y parentescos registrados', () => {
+  const legacy = source.map(legacySpouses);
+  const originalIndex = familyIndex(legacy), canonicalIndex = familyIndex(source);
   for (const person of source) assert.deepEqual(familyIds(canonicalIndex, person.id), familyIds(originalIndex, person.id), person.id);
-  assert.deepEqual(parentescoRegistrado('CARLOS5', 'ISABPORTEMP', canonical), {texto: 'Cónyuges', via: ['CARLOS5', 'ISABPORTEMP']});
+  for (const people of [source, legacy]) assert.deepEqual(parentescoRegistrado('CARLOS5', 'ISABPORTEMP', people), {texto: 'Cónyuges', via: ['CARLOS5', 'ISABPORTEMP']});
+});
+
+test('las afirmaciones conyugales conservan IDs, orden y toda su evidencia al retirar los campos antiguos', () => {
+  let cited = 0;
+  for (const person of source) {
+    const claims = personClaims(person).filter(c => c.field === 'Matrimonio o vínculo conyugal');
+    const legacyClaims = personClaims(legacySpouses(person)).filter(c => c.field === 'Matrimonio o vínculo conyugal');
+    assert.deepEqual(claims, legacyClaims, person.id);
+    cited += claims.filter(c => c.sources.length > 0).length;
+  }
+  assert(cited > 0, 'la comparación debe incluir afirmaciones con fuentes reales');
 });
 
 test('el mapa y el desafío consumen gobiernos canónicos y públicos con la misma evidencia', () => {

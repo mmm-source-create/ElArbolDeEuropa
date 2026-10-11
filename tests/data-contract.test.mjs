@@ -46,15 +46,40 @@ test('tipos, campos y vocabulario nuevos no se convierten silenciosamente', () =
 
 test('las excepciones heredadas son exactas y no admiten nuevos casos', () => {
   const data = fixtures();
-  data.people[0].conyuge = 'B'; delete data.people[0].conyuges;
   data.people[0].madreAprox = true;
   record(data);
   assert.deepEqual(codes(data), []);
-  data.people[1].conyuge = 'A';
+  data.people[1].padreAprox = true;
   assert(codes(data).includes('NEW_LEGACY_FORMAT'));
-  delete data.people[1].conyuge;
+  delete data.people[1].padreAprox;
   data.people[0].madreAprox = false;
   assert(codes(data).includes('NEW_LEGACY_FORMAT'));
+});
+
+test('los campos conyugales retirados se rechazan incluso con una excepción antigua', () => {
+  for (const field of ['conyuge', 'conyuge2']) {
+    const data = fixtures(); data.people[0][field] = 'B';
+    assert(codes(data).includes('NEW_LEGACY_FORMAT'));
+    record(data);
+    const issues = validateContracts(data);
+    assert(issues.some(issue => issue.code === 'UNKNOWN_FIELD' && issue.path.endsWith('.' + field)));
+    assert(!issues.some(issue => issue.code === 'NEW_LEGACY_FORMAT'));
+  }
+});
+
+test('las listas conyugales exigen referencias únicas existentes sin ampliar relaciones', () => {
+  const data = fixtures();
+  delete data.people[1].conyuges;
+  data.people[0].amantes = ['B'];
+  const before = structuredClone(data.people);
+  assert.deepEqual(codes(data), []);
+  assert.deepEqual(data.people, before, 'validar no añade reciprocidad ni mezcla amantes');
+  data.people[0].conyuges.push('B');
+  assert(codes(data).includes('DUPLICATE'));
+  data.people[0].conyuges[1] = 'AUSENTE';
+  assert(codes(data).includes('MISSING_PERSON'));
+  data.people[0].conyuges = 'B';
+  assert(codes(data).includes('TYPE'));
 });
 
 test('las disputas individuales se rechazan en la fuente incluso con una excepción antigua', () => {
@@ -84,8 +109,8 @@ test('varias disputas conservan su orden y se validan todos sus límites', () =>
 });
 
 test('retirar formatos antiguos conserva la validez sin exigir más excepciones', () => {
-  const data = fixtures(); data.people[0].conyuge = 'B'; record(data);
-  delete data.people[0].conyuge;
+  const data = fixtures(); data.people[0].madreAprox = true; record(data);
+  delete data.people[0].madreAprox;
   assert.deepEqual(codes(data), []);
 });
 
