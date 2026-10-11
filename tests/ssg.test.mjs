@@ -2,7 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs/promises';
 import {JSDOM} from 'jsdom';
-import {staticRoute,validatePage,initialPageForLocation,readInitialPage,serializePage} from '../src/public/staticData.js';
+import {STATIC_SCHEMA,staticRoute,validatePage,initialPageForLocation,readInitialPage,serializePage} from '../src/public/staticData.js';
 import {entityMeta,publicMeta} from '../src/public/publicMeta.js';
 import {routesFromSitemap,assetGraph,assetsForStaticPage,makeStaticDocument} from '../scripts/lib/ssg-utils.mjs';
 import {auditDocument} from '../scripts/audits/audit-ssg.mjs';
@@ -26,7 +26,7 @@ test('SSG admite solo fichas públicas y conserva el escape hacia el Atlas',()=>
   assert.equal(initialPageForLocation(page,'/es/persona/otra'),null);
  }
  for(const url of ['/es/','/es/desafio','/es/personas','/en/persona/a','/es/persona/../../a'])assert.equal(staticRoute(url),null);
- for(const broken of [null,{}, {...person,schema:2},{...person,data:{...person.data,reinados:null}},{...person,slug:'otra'}])assert.equal(validatePage(broken),false);
+ for(const broken of [null,{}, {...person,schema:1},{...person,data:{...person.data,gobiernos:null}},{...person,slug:'otra'}])assert.equal(validatePage(broken),false);
 });
 test('el sitemap determina el alcance y rechaza duplicados y URLs ajenas',()=>{
  assert.equal(routesFromSitemap(sitemap([person.path,'/es/historia/a','/es/desafio',dynasty.path]),'https://www.treeofeurope.eu').length,3);
@@ -79,7 +79,7 @@ test('la página 404 estática conserva su contenido, idioma y no incluye datos 
 });
 test('el auditor detecta contenido de carga, CSS ausente, canonical falso y divergencia del JSON',()=>{
  const html=htmlFor(person);assert.deepEqual(auditDocument(html,person,assets),[]);
- for(const bad of [html.replace('<h1>Persona 1</h1>','Preparando ficha histórica…'),html.replace('/assets/ficha.css','/otro.css'),html.replace('rel="canonical"','rel="otro"'),html.replace('"schema":1','"schema":2')])assert.ok(auditDocument(bad,person,assets).length>0);
+ for(const bad of [html.replace('<h1>Persona 1</h1>','Preparando ficha histórica…'),html.replace('/assets/ficha.css','/otro.css'),html.replace('rel="canonical"','rel="otro"'),html.replace(`"schema":${STATIC_SCHEMA}`,`"schema":${STATIC_SCHEMA+1}`)])assert.ok(auditDocument(bad,person,assets).length>0);
 });
 test('las reglas de alojamiento priorizan atlas=1 y preservan las rutas de historias y catálogos',async()=>{
  const {rewrites}=JSON.parse(await fs.readFile(new URL('../vercel.json',import.meta.url)));

@@ -2,38 +2,21 @@
 
 Atlas histórico y genealógico para explorar personas, dinastías, territorios y sus conexiones familiares.
 
-- [Web](https://www.treeofeurope.eu/es/) · Versión del repositorio: **V5.6**
-- [Cambios de V5.6](docs/V5.6.md) · [Documentación e historial](docs/README.md) · [Próximos pasos cartográficos](docs/V4.8_PROPUESTAS.md) · [Seguridad](SECURITY.md)
+- [Web](https://www.treeofeurope.eu/es/) · Versión del repositorio: **V5.7**
+- [Cambios de V5.7](docs/V5.7.md) · [Documentación e historial](docs/README.md) · [Próximos pasos cartográficos](docs/V4.8_PROPUESTAS.md) · [Seguridad](SECURITY.md)
 
-La V5.6 organiza las herramientas en auditorías, generación y cartografía, fija un entorno Python reproducible y separa las fuentes, los resultados revisados y los diagnósticos temporales. Conserva las superficies, mandatos, relaciones y rutas del Atlas; la base V5 sigue comparando los 601 años completos.
+V5.7 unifica fuente y fichas públicas en `gobiernos[]`, retira los adaptadores
+heredados y evita la copia automática a `reinados`. Completa el índice
+documental, la guía de nuevas personas y las publicaciones de la serie V5.
+Las relaciones, mandatos, evidencia, superficies y rutas se conservan mediante
+la comparación de los 601 años completos y las fichas renderizadas.
 
-La V5.5 documenta las gobernaciones de Alba, Requesens, don Juan de Austria y Farnesio en los Países Bajos, distinguiendo delegación y control disputado. Añade a Luis de Requesens y retira las cuatro excepciones `gobernante`; la autoridad del Atlas depende de mandatos fechados.
-
-La V5.2 convierte las 33 disputas individuales al formato de lista. Todos los mandatos con `controlDisputado` usan ahora arrays; se conservan sus intervalos, títulos, notas y fuentes. El contrato rechaza nuevos objetos individuales y retira sus excepciones. La base de comportamiento de V5.0 sigue protegiendo los resultados del Atlas.
-
-La V5.1 comparte la lectura de cónyuges, mandatos, territorios asociados y disputas entre el árbol, las fichas, los mapas, el desafío, los generadores y las auditorías cartográficas. Conserva los formatos de la fuente y las referencias que enlazan gobiernos y evidencia. La [guía de lectura](docs/data-model.md#lectura-compartida-desde-v51) explica la compatibilidad y los límites de cada accesor.
-
-La V5.0 establece un [contrato verificable de datos](docs/data-model.md) y protege el comportamiento publicado mediante una [base de regresión](docs/v5-regression.md). Comprueba personas, mandatos, evidencia, rutas y fichas generadas, y compara los mapas completos y personales en cada año de 1200–1800. Los formatos heredados se registran por caso concreto para retirarlos gradualmente; los nuevos usos fallan en CI. La primera entrega conserva el contenido y las superficies del Atlas.
-
-La V4.12 revisa Dobruja, la costa croata, las crisis sucesorias búlgaras y las particiones de Meißen, Turingia, Suabia y Nassau. Añade 31 personas y un inventario de todos los IDs visibles que nunca reciben color en 1200–1800: el laboratorio permite buscar esas celdas, revisar sus candidatos y descargar la lista. Las pistas geométricas permanecen sin verificar hasta contar con una atribución fechada y documentada. El [informe de la entrega](docs/V4.12.md) detalla las correcciones y los límites pendientes.
-
-El Atlas usa **EU V Locations**, recortado a Europa–Urales, norte de África y Oriente Próximo. Una correspondencia geométrica enlaza sus locations con los **710 IDs regionales** de los gobiernos históricos; las 114 jurisdicciones con revisión fechada prevalecen sobre esa equivalencia general. Sus fuentes y correcciones están disponibles al inspeccionar el mapa, y las aproximaciones se identifican como tales. El [laboratorio cartográfico](prototypes/euv-locations/README.md) muestra por año todos los gobiernos territoriales registrados que tienen geometría: las capas revisadas y las equivalencias aproximadas se distinguen, y cada territorio recibe un color propio. La vista individual conserva las 81 capas regionales, 24 señoríos borgoñones y **13 capas de Hungría y los Balcanes**, con 47 grupos fechados y enlazados a fuentes. La revisión amplía el núcleo otomano de **29 a 172 celdas de mapa en 1500**, incorpora áreas contiguas en vez de marcar únicamente ciudades y distingue el Despotado serbio, el reino de Bosnia, Valaquia y Moldavia. Estas dos últimas aparecen como principados tributarios, no como provincias otomanas; Chilia y Cetatea Albă cambian en 1484 y Tighina en 1538. Incluye además un [ensayo fechado de los dominios de Carlos V](prototypes/euv-locations/carlos-v.html) y una [cronología de la sucesión borgoñona, 1419–1555](prototypes/euv-locations/burgundian-succession.html). Para probar el laboratorio localmente, inicia `./node_modules/.bin/vite` y visita `http://localhost:5173/prototypes/euv-locations/territorial-corridors.html`; usa el puerto que Vite indique si cambia.
-
-La V4.8 revisa Baviera y sus particiones, completa la secuencia del Palatinado electoral y separa Pfalz-Neuburg. La herencia Jülich–Cléveris–Berg–Mark–Ravensberg muestra la unión de 1511/1521 y el reparto de 1614; el mapa usa solo los polígonos que puede atribuir prudentemente. Francia deja de absorber Artois y Flandes antes de tiempo. La [revisión y sus límites](docs/V4.8.md) explican por qué Mark, Ravensberg y varios tramos de Flandes no se colorean como si el SVG contuviera fronteras feudales exactas.
-
-La V4.9 limita el alejamiento al contorno real del mapa recortado: el diseño conserva la proporción y usa espacio de margen cuando el panel tiene otra forma, sin mostrar área fuera del mapa. Al cambiar entre diseños, redimensionar la ventana o mostrar/ocultar paneles, mantiene el nivel de zoom y el centro mientras sigan dentro de los límites. Las fichas públicas cargan solo el módulo de su tipo y ya no incluyen el registro completo de personas para calcular citas. El ajuste de movimiento reducido sigue la preferencia del sistema y los ajustes visuales se aplican antes del primer dibujo.
-
-La V4.7 completa la sucesión de Tirol entre 1595 y 1665 separando autoridad familiar, gobierno delegado, regencia y titularidad. Pulsar una región del mapa abre un inspector con la entidad, su gobernante registrado para el año, el título, la fuente individual y el límite de precisión cartográfica. La nueva auditoría señala años sin autoridad, solapamientos inexplicados y gobiernos que colorean regiones sin fuente específica; [su informe](docs/V4.7.md) delimita el alcance de los hallazgos. Los filtros explican por qué territorio imperial, círculo imperial y gobierno Habsburgo son relaciones distintas.
-
-La V4.6 abre el mapa directamente sobre Europa, compacta el filtro de evidencia y la biografía, y separa Austria danubiana, Austria Interior y Tirol con gobiernos fechados. Cuando se consulta a un emperador entre 1512 y 1792, un marco gris identifica una aproximación al ámbito jurídico del Sacro Imperio sin confundirlo con sus posesiones personales. El cambio de 1648 distingue los Países Bajos meridionales de la República neerlandesa y retira Suiza. La [revisión cartográfica del Imperio](docs/CARTOGRAFIA_SACRO_IMPERIO.md) documenta fuentes, exclusiones y zonas aún pendientes.
-
-La V4.5 convirtió las pestañas de biografía en un índice de secciones siempre visibles, acercó personas coetáneas en el árbol y mejoró el borrado de filtros. Completó la secuencia de dogos venecianos entre 1400 y 1605, amplió dos ramas Pignatelli y añadió auditorías de cartografía y dogado. Su documentación de las [reformas de 1749](docs/V4.5.md) sigue vigente; los botones de encuadre mundial introducidos entonces se retiraron en V4.6.
-
-La V4.4 revisa la coherencia territorial de Iberia e Italia: separa los reinos y condados de las coronas compuestas, fecha conquistas y cambios de posesión, y completa la sucesión italiana de 1700 a 1759. Esta revisión amplía las regiones documentadas de Venecia, Milán, Saboya, Piamonte y los Estados Pontificios, añade una muestra de dogos venecianos y hace que el color responda al conjunto político y al año, no a todos los títulos de un soberano. Los filtros muestran la jerarquía España → coronas → reinos, reúnen la herencia borgoñona y las incorporaciones neerlandesas del siglo XVI, y corrigen su contraste en oscuro. Prusia utiliza el azul de los Hohenzollern también en su filtro. La [auditoría de España, Portugal e Italia](docs/CARTOGRAFIA_IBERIA_ITALIA.md) explica las decisiones y los límites del mapa regional. La [secuencia de la herencia borgoñona](docs/CARTOGRAFIA_BORGONA.md) de V4.3 conserva sus delimitaciones y su color propio bajo Carlos V y Felipe II.
-
-La [revisión cartográfica anterior](docs/REVISION_BORGONA.md) corrigió el error de `Zealand`: ese identificador pertenece a la isla danesa cercana a Copenhague, no a Zelanda neerlandesa. La nueva auditoría contrasta las cien etiquetas regionales propuestas; Utrecht, Zelanda y varias ciudades y enclaves permanecen sin color porque el SVG no los delimita. Las [fronteras irlandesas](docs/CARTOGRAFIA_IRLANDA.md) también siguen siendo aproximaciones regionales.
-
-La V4.11 corrige los carruseles de la portada y revisa Bulgaria medieval, Sirmia, Hungría, Francia y los dominios ingleses/británicos. Las [fuentes y limitaciones](docs/atlas-frontier-review.md) explican las 9 series sustituidas y las 27 capas añadidas; el [inventario territorial](docs/atlas-unrepresented-inventory.md) separa las ausencias personales de las fronteras todavía parciales.
+El mapa utiliza EU V Locations con superficies fechadas y fuentes consultables
+en el inspector. Distingue soberanía, gobierno delegado, titularidad y control
+disputado. Las correspondencias geométricas aproximadas y los huecos pendientes
+conservan sus límites documentales. El [laboratorio cartográfico](prototypes/euv-locations/README.md)
+permite revisar todas las entidades registradas por año. La investigación
+histórica continúa; cerrar la migración de V5 no certifica todas las fronteras.
 
 ## Recorrer el proyecto
 
@@ -85,6 +68,10 @@ Las variables opcionales se documentan en `env.example`. `VITE_SITE_URL` debe se
 Los [criterios de contenido](docs/README.md#criterios-de-contenido) explican títulos, agrupaciones, incertidumbre y fuentes. Mantén estables los identificadores, slugs y claves de almacenamiento de los visitantes.
 
 ## Publicación
+
+El [índice cronológico y procedimiento de Releases](docs/releases.md) enlaza
+las entregas V5 y explica cómo fijar cada publicación a su commit validado.
+
 
 Cada actualización se prepara en una rama y se entrega mediante **pull request hacia `main`**. La rama exige el check **Tests y build**, sin requerir un revisor adicional para el mantenimiento individual. GitHub Actions ejecuta auditoría de seguridad, pruebas, build e hidratación de una muestra de fichas. Los avisos de dependencias y la protección de secretos se gestionan también en GitHub.
 

@@ -1,3 +1,4 @@
+import {STATIC_SCHEMA} from '../src/public/staticData.js';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { resolverRuta } from '../src/routing.js';
@@ -11,7 +12,7 @@ test('entrada, capítulo y exploración son rutas distintas y los enlaces antigu
  assert.equal(resolverRuta('/es/historia/test/capitulo/2').chapter,2);
  assert.equal(resolverRuta('/es/historia/test','?atlas=1').view,'explorer');
  assert.equal(storyPath('test',2),'/es/historia/test/capitulo/2');
- const page={schema:1,...staticRoute('/es/historia/test'),data:story};assert.ok(validatePage(page));
+ const page={schema:STATIC_SCHEMA,...staticRoute('/es/historia/test'),data:story};assert.ok(validatePage(page));
  assert.equal(initialPageForLocation(page,page.path,'?atlas=1'),null);
  assert.equal(validatePage({...page,chapter:3}),false);
 });

@@ -4,7 +4,7 @@ import { computeTreeLayout, routeFamilyConnectors, TREE_PAD_TOP, TREE_ROW_GAP } 
 import { computeParentGroups } from '../src/explorer/relationshipGraph.js';
 
 const people = [
-  { id: 'P', nombre: 'Parent', conyuge: 'Q' }, { id: 'Q', nombre: 'Partner', conyuge: 'P' },
+  { id: 'P', nombre: 'Parent', conyuges: ['Q'] }, { id: 'Q', nombre: 'Partner', conyuges: ['P'] },
   { id: 'E', nombre: 'Older child', padre: 'P', madre: 'Q' },
   { id: 'C', nombre: 'Child', padre: 'P', madre: 'Q' }, { id: 'S', nombre: 'Sibling', padre: 'P', madre: 'Q' },
   { id: 'G', nombre: 'Grandchild', padre: 'C' },

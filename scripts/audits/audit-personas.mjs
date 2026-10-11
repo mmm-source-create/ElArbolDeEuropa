@@ -42,7 +42,7 @@ const add = (severity, code, subject, message, extra = {}) => {
 
 const values = (v) => Array.isArray(v) ? v : v == null ? [] : [v];
 const uniq = (arr) => [...new Set(arr.filter(Boolean))];
-const spouses = (p) => uniq([p?.conyuge, p?.conyuge2, ...values(p?.conyuges)]);
+const spouses = (p) => uniq(values(p?.conyuges));
 const lovers = (p) => uniq(values(p?.amantes));
 const allRefs = (p) => ({
   padre: values(p?.padre),
@@ -72,7 +72,7 @@ for (const p of PERSONAS) {
   if (!p?.nombre || typeof p.nombre !== "string") add("ERROR", "NAME_MISSING", id, "La ficha no tiene nombre válido");
 
   for (const [field, refs] of Object.entries(allRefs(p))) {
-    const raw = field === "conyuge" ? [p?.conyuge, p?.conyuge2, ...values(p?.conyuges)] : field === "amante" ? values(p?.amantes) : values(p?.[field]);
+    const raw = field === "conyuge" ? values(p?.conyuges) : field === "amante" ? values(p?.amantes) : values(p?.[field]);
     const cleaned = raw.filter(Boolean);
     if (new Set(cleaned).size !== cleaned.length) add("WARNING", "REL_DUPLICATE", id, `${field}: contiene referencias duplicadas`);
     for (const ref of refs) {
@@ -230,7 +230,7 @@ const byCode = issues.reduce((acc, issue) => {
 }, {});
 const importance = (p) => {
   const title = String(p?.titulo || "").toLowerCase();
-  let score = (Array.isArray(p?.reinados) ? p.reinados.length * 5 : 0);
+  let score = (Array.isArray(p?.gobiernos) ? p.gobiernos.length * 5 : 0);
   if (/emperador|emperatriz|rey|reina|zar|zarina|soberan/.test(title)) score += 12;
   else if (/príncipe|princesa|duque|duquesa|elector|gran duque/.test(title)) score += 7;
   else if (/conde|condesa|margrave/.test(title)) score += 3;

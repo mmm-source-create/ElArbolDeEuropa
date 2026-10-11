@@ -1,3 +1,4 @@
+import {STATIC_SCHEMA} from '../src/public/staticData.js';
 import test,{before,after} from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs/promises';
@@ -135,7 +136,7 @@ if(process.env.EADE_SSG_SAMPLE) {
 
 
 test('el capítulo conserva el HTML inicial y permite consultar una persona sin abandonar la lectura',async()=>{
- const page={schema:1,kind:'historia',slug:'historia-prueba',chapter:1,path:'/es/historia/historia-prueba/capitulo/1',data:{id:'story-test',slug:'historia-prueba',chapter:1,nombre:'Un primer capítulo',storyTitle:'Historia de prueba',descripcion:'Premisa',pasos:[{anio:1500,titulo:'Un primer capítulo',texto:'Texto del capítulo',personas:['A']}],protagonists:[{id:'A',nombre:'Persona A',slug:'persona-a',resumen:'Una ficha breve'}],fuentes:[]}};
+ const page={schema:STATIC_SCHEMA,kind:'historia',slug:'historia-prueba',chapter:1,path:'/es/historia/historia-prueba/capitulo/1',data:{id:'story-test',slug:'historia-prueba',chapter:1,nombre:'Un primer capítulo',storyTitle:'Historia de prueba',descripcion:'Premisa',pasos:[{anio:1500,titulo:'Un primer capítulo',texto:'Texto del capítulo',personas:['A']}],protagonists:[{id:'A',nombre:'Persona A',slug:'persona-a',resumen:'Una ficha breve'}],fuentes:[]}};
  await hydrated(page,async node=>{
   assert.match(node.textContent,/Texto del capítulo/);
   const summary=node.querySelector('.story-people summary');
@@ -151,7 +152,7 @@ test('el capítulo conserva el HTML inicial y permite consultar una persona sin 
 
 test('el capítulo inglés se hidrata y conserva idioma, progreso y regreso equivalente',async()=>{
  const path='/en/story/burgundy-the-kingdom-that-never-was/chapter/1',esPath='/es/historia/borgona-el-reino-que-no-fue/capitulo/1';
- const page={schema:1,kind:'english',slug:'story-burgundy-the-kingdom-that-never-was',chapter:1,path,data:{id:'english-test',slug:'story-burgundy-the-kingdom-that-never-was',chapter:1,path,esPath,type:'story',storyPath:'/en/story/burgundy-the-kingdom-that-never-was',nombre:'First chapter',title:'Burgundy',description:'A story',period:'1363–1506',pasos:[{anio:1363,titulo:'First chapter',texto:'Chapter text',personas:['A']}],protagonists:[{id:'A',nombre:'Person A',slug:'person-a',summary:null}],fuentes:[]}};
+ const page={schema:STATIC_SCHEMA,kind:'english',slug:'story-burgundy-the-kingdom-that-never-was',chapter:1,path,data:{id:'english-test',slug:'story-burgundy-the-kingdom-that-never-was',chapter:1,path,esPath,type:'story',storyPath:'/en/story/burgundy-the-kingdom-that-never-was',nombre:'First chapter',title:'Burgundy',description:'A story',period:'1363–1506',pasos:[{anio:1363,titulo:'First chapter',texto:'Chapter text',personas:['A']}],protagonists:[{id:'A',nombre:'Person A',slug:'person-a',summary:null}],fuentes:[]}};
  await hydrated(page,node=>{
   assert.equal(document.documentElement.lang,'en');
   assert.equal(node.querySelector('.site-language a').getAttribute('href'),esPath);
@@ -163,7 +164,7 @@ test('el capítulo inglés se hidrata y conserva idioma, progreso y regreso equi
 
 test('la ficha inglesa comparte el retrato, cabecera y relaciones de la española sin presentar notas originales como traducciones',async()=>{
  const path='/en/person/isabella-i-of-castile';
- const page={schema:1,kind:'english',slug:'person-isabella-i-of-castile',chapter:null,path,data:{...structuredClone(person.data),chapter:null,id:'ISAB1CAST',slug:'person-isabella-i-of-castile',path,esPath:'/es/persona/isabel-i-de-castilla',type:'person',nombre:'Isabella I of Castile',role:'Queen of Castile',summary:'A translated short profile.',description:'A translated short profile.',padres:[{id:'P2',nombre:'A documented parent',slug:'persona-2'}]}};
+ const page={schema:STATIC_SCHEMA,kind:'english',slug:'person-isabella-i-of-castile',chapter:null,path,data:{...structuredClone(person.data),chapter:null,id:'ISAB1CAST',slug:'person-isabella-i-of-castile',path,esPath:'/es/persona/isabel-i-de-castilla',type:'person',nombre:'Isabella I of Castile',role:'Queen of Castile',summary:'A translated short profile.',description:'A translated short profile.',padres:[{id:'P2',nombre:'A documented parent',slug:'persona-2'}]}};
  await hydrated(page,node=>{
   assert.equal(document.documentElement.lang,'en');
   assert.ok(node.querySelector('.public-person-hero .public-portrait img'));

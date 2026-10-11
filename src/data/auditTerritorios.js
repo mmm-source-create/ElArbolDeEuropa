@@ -11,7 +11,6 @@ export function auditarTerritorios(personas, catalogo=TERRITORIOS) {
  for(const p of personas) {
   for(const t of p.reinos||[]) if(!catalogo[t])add('ERROR','TERRITORY_UNKNOWN',p.id,t);
   const seen=new Set();
-  if(p.reinados?.length&&!p.gobiernos)add('ERROR','GOVERNMENTS_NOT_MIGRATED',p.id,'Usar gobiernos como fuente autoritativa');
   for(const [i,g] of (p.gobiernos||[]).entries()) {
    const key=`${p.id}#${i+1}`;gobiernos.push({p,g,key});
    for(const field of ['territorio','titulo','clase','condicion'])if(!g[field])add('ERROR',`GOV_${field.toUpperCase()}_MISSING`,key,`Falta ${field}`);

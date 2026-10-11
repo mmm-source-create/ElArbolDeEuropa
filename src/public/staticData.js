@@ -1,6 +1,6 @@
 import {englishRoute} from '../english/routes.js';
 // Sin dependencias del DOM: también se utiliza para validar el HTML generado.
-export const STATIC_SCHEMA = 1;
+export const STATIC_SCHEMA = 2;
 export const STATIC_DATA_ID = 'eade-initial-page';
 export const STATIC_FOLDERS = {persona:'personas-meta',dinastia:'dinastias-meta',territorio:'territorios-meta',historia:'historias-meta',english:'english-meta'};
 export function staticRoute(pathname) {
@@ -17,7 +17,7 @@ export function validatePage(page) {
  if(page.kind!=='dinastia'&&page.data.slug!==page.slug)return false;
  if(page.kind==='english')return page.data.path===route.path&&page.chapter===route.chapter&&page.data.chapter===route.chapter&&['home','about','stories','people','methodology','person','story'].includes(page.data.type)&&(page.data.type!=='story'||Array.isArray(page.data.pasos)&&page.data.pasos.length>0&&(!page.chapter||page.chapter<=page.data.pasos.length)&&Array.isArray(page.data.protagonists));
  if(page.kind==='historia')return page.chapter===route.chapter&&page.data.chapter===route.chapter&&Array.isArray(page.data.pasos)&&page.data.pasos.length>0&&(!page.chapter||page.chapter<=page.data.pasos.length)&&['protagonists','fuentes'].every(k=>Array.isArray(page.data[k]));
- if(page.kind==='persona')return typeof page.data.id==='string'&&Array.isArray(page.data.reinados)&&Array.isArray(page.data.fuentes);
+ if(page.kind==='persona')return typeof page.data.id==='string'&&Array.isArray(page.data.gobiernos)&&Array.isArray(page.data.fuentes)&&!['reinados','reinado','conyuge','conyuge2'].some(field=>Object.hasOwn(page.data,field));
  if(page.kind==='dinastia')return ['miembros','ramas','gobiernos','fuentes','territorios','protagonistas'].every(k=>Array.isArray(page.data[k]));
  return ['gobiernos','personas','fuentes','dinastias','historias','eventos','relacionados','componentes'].every(k=>Array.isArray(page.data[k]));
 }

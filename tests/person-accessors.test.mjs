@@ -2,7 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
 import {conyugesDe, gobiernosDe, territoriosDe, intervalosDisputadosDe} from '../src/data/personAccessors.js';
-import {gobiernosDe as gobiernosDeCoronas} from '../src/data/crowns.js';
+import {PERSONAS} from '../src/personas.jsx';
 import {readPersonLiteral} from '../scripts/schema/read-contract-data.mjs';
 import {personClaims} from '../src/evidence/claims.js';
 import {authorityKind, mapAuthoritiesForPerson} from '../src/data/mapAuthorities.js';
@@ -15,13 +15,6 @@ import {renderToStaticMarkup} from 'react-dom/server';
 import BioDiscovery from '../src/components/BioDiscovery.jsx';
 
 const source = readPersonLiteral(readFileSync(new URL('../src/personas.jsx', import.meta.url), 'utf8'));
-
-function legacySpouses(person) {
-  if (!person.conyuges?.length) return {...person};
-  const {conyuges, ...fields} = person;
-  const [conyuge, ...rest] = conyuges;
-  return {...fields, conyuge, ...(rest.length ? {conyuges: rest} : {})};
-}
 
 test('las lecturas opcionales no añaden campos ni convierten ausencia en un dato histórico', () => {
   const person = Object.freeze({id: 'A', documentacion: {ausencias: {padres: 'unknown'}}});
@@ -36,14 +29,14 @@ test('las lecturas opcionales no añaden campos ni convierten ausencia en un dat
   assert.equal(person.documentacion.ausencias.padres, 'unknown');
 });
 
-test('los tres formatos conyugales se leen como IDs únicos en el orden registrado', () => {
-  const person = Object.freeze({conyuge: 'B', conyuge2: 'C', conyuges: Object.freeze(['B', 'D', 'C'])});
-  assert.deepEqual(conyugesDe(person), ['B', 'C', 'D']);
+test('las listas conyugales se leen como IDs únicos en el orden registrado', () => {
+  const person = Object.freeze({conyuges: Object.freeze(['B', 'D', 'C'])});
+  assert.deepEqual(conyugesDe(person), ['B', 'D', 'C']);
   assert.deepEqual(person.conyuges, ['B', 'D', 'C']);
 });
 
 test('las fichas públicas priorizan los IDs declarados sobre las tarjetas expandidas', () => {
-  const publicPerson = {conyuge: 'B', conyugesIds: ['C', 'B', 'C'], conyuges: [{id: 'B'}, {id: 'D'}]};
+  const publicPerson = {conyugesIds: ['C', 'B', 'C'], conyuges: [{id: 'B'}, {id: 'D'}]};
   assert.deepEqual(conyugesDe(publicPerson), ['C', 'B']);
   // Preserve V5.0's fallback for public cards with no explicit spouse IDs.
   assert.deepEqual(conyugesDe({...publicPerson, conyugesIds: []}), ['B', 'D']);
@@ -57,13 +50,14 @@ test('los vínculos inversos pertenecen al índice familiar y los amantes no se 
   assert.deepEqual(familyIds(familyIndex(people), 'C'), ['C']);
 });
 
-test('los mandatos conservan referencias y la lista canónica vacía vence al alias', () => {
+test('los mandatos conservan referencias sin recurrir al alias retirado', () => {
   const government = Object.freeze({territorio: 'Austria', desde: 1500, hasta: 1510});
   const governments = Object.freeze([government]);
   assert.strictEqual(gobiernosDe({gobiernos: governments}), governments);
-  assert.strictEqual(gobiernosDe({reinados: governments})[0], government);
+  assert.deepEqual(gobiernosDe({reinados: governments}), []);
+  assert.deepEqual(listaReinados({reinado: [1500, 1510], reinos: ['Austria']}), []);
+  assert.deepEqual(conyugesDe({conyuge: 'B', conyuge2: 'C'}), []);
   assert.deepEqual(gobiernosDe({gobiernos: [], reinados: governments}), []);
-  assert.strictEqual(gobiernosDeCoronas, gobiernosDe);
 });
 
 test('territorios asociados no producen mandatos, ni los mandatos amplían asociaciones', () => {
@@ -74,13 +68,12 @@ test('territorios asociados no producen mandatos, ni los mandatos amplían asoci
   assert.deepEqual(territoriosDe({gobiernos: [{territorio: 'Austria'}]}), []);
 });
 
-test('la disputa individual y múltiple conserva notas, orden y objetos originales', () => {
+test('las listas de disputa conservan notas, orden y objetos originales', () => {
   const first = Object.freeze({desde: 1619, hasta: 1620, nota: 'Disputa documentada'});
   const second = Object.freeze({desde: 1625, hasta: 1626});
   const periods = Object.freeze([second, first]);
-  assert.strictEqual(intervalosDisputadosDe({controlDisputado: first})[0], first);
   assert.strictEqual(intervalosDisputadosDe({controlDisputado: periods}), periods);
-  assert.equal(intervalosDisputadosDe({controlDisputado: first})[0].nota, first.nota);
+  assert.equal(intervalosDisputadosDe({controlDisputado: periods})[1].nota, first.nota);
 });
 
 test('los contenedores mal tipados no se aceptan como listas vacías', () => {
@@ -91,15 +84,15 @@ test('los contenedores mal tipados no se aceptan como listas vacías', () => {
     () => conyugesDe({conyugesIds: 'A'}),
     () => conyugesDe({conyuges: [{}]}),
     () => intervalosDisputadosDe({controlDisputado: '1619'}),
+    () => intervalosDisputadosDe({controlDisputado: {desde: 1619, hasta: 1620}}),
   ]) assert.throws(invoke, TypeError);
 });
 
 test('la autoridad conserva los límites inclusivos y la diferencia entre soberanía y disputa', () => {
   const period = {desde: 1619, hasta: 1620};
-  const government = {controlDisputado: period, condicion: 'efectivo', titulo: 'Rey'};
+  const government = {controlDisputado: [period], condicion: 'efectivo', titulo: 'Rey'};
   for (const [year, expected] of [[1618, 'sovereign'], [1619, 'disputed'], [1620, 'disputed'], [1621, 'sovereign']]) {
     assert.equal(authorityKind(government, year), expected);
-    assert.equal(authorityKind({...government, controlDisputado: [period]}, year), expected);
   }
   assert.equal(authorityKind({...government, condicion: 'titular'}, 1619), 'titular');
   assert.equal(authorityKind({condicion: 'gobierno delegado', titulo: 'Gobernadora'}, 1619), 'delegated');
@@ -109,8 +102,7 @@ test('toda la fuente literal mantiene cónyuges, asociaciones y objetos de manda
   const before = JSON.stringify(source);
   for (const person of source) {
     assert.equal(Object.hasOwn(person, 'reinados'), false);
-    const legacySpouses = [...new Set([person.conyuge, person.conyuge2, ...(person.conyuges || [])].filter(Boolean))];
-    assert.deepEqual(conyugesDe(person), legacySpouses, person.id);
+    assert.deepEqual(conyugesDe(person), person.conyuges || [], person.id);
     assert.deepEqual(territoriosDe(person), person.reinos || [], person.id);
     assert.deepEqual(gobiernosDe(person), person.gobiernos || [], person.id);
     for (const government of gobiernosDe(person)) {
@@ -121,28 +113,17 @@ test('toda la fuente literal mantiene cónyuges, asociaciones y objetos de manda
   assert.equal(JSON.stringify(source), before);
 });
 
-test('los formatos canónico y heredado conservan todas las familias y parentescos registrados', () => {
-  const legacy = source.map(legacySpouses);
-  const originalIndex = familyIndex(legacy), canonicalIndex = familyIndex(source);
-  for (const person of source) assert.deepEqual(familyIds(canonicalIndex, person.id), familyIds(originalIndex, person.id), person.id);
-  for (const people of [source, legacy]) assert.deepEqual(parentescoRegistrado('CARLOS5', 'ISABPORTEMP', people), {texto: 'Cónyuges', via: ['CARLOS5', 'ISABPORTEMP']});
-});
-
-test('las afirmaciones conyugales conservan IDs, orden y toda su evidencia al retirar los campos antiguos', () => {
-  let cited = 0;
-  for (const person of source) {
-    const claims = personClaims(person).filter(c => c.field === 'Matrimonio o vínculo conyugal');
-    const legacyClaims = personClaims(legacySpouses(person)).filter(c => c.field === 'Matrimonio o vínculo conyugal');
-    assert.deepEqual(claims, legacyClaims, person.id);
-    cited += claims.filter(c => c.sources.length > 0).length;
+test('el módulo publicado es idéntico al literal y no añade propiedades heredadas', () => {
+  assert.deepEqual(PERSONAS, source);
+  for (const person of PERSONAS) for (const field of ['reinados', 'reinado', 'conyuge', 'conyuge2']) {
+    assert.equal(Object.hasOwn(person, field), false, `${person.id}.${field}`);
   }
-  assert(cited > 0, 'la comparación debe incluir afirmaciones con fuentes reales');
+  assert.deepEqual(parentescoRegistrado('CARLOS5', 'ISABPORTEMP', PERSONAS), {texto: 'Cónyuges', via: ['CARLOS5', 'ISABPORTEMP']});
 });
 
 test('el mapa y el desafío consumen gobiernos canónicos y públicos con la misma evidencia', () => {
   const person = source.find(p => p.id === 'MARGPARMA');
-  const {gobiernos, ...fields} = person;
-  const publicPerson = {...fields, reinados: gobiernos};
+  const publicPerson = JSON.parse(JSON.stringify(person));
   const canonicalMap = mapAuthoritiesForPerson(person, 1560);
   const publicMap = mapAuthoritiesForPerson(publicPerson, 1560);
   assert(canonicalMap.length > 0);
@@ -150,7 +131,7 @@ test('el mapa y el desafío consumen gobiernos canónicos y públicos con la mis
   for (const entry of publicMap) {
     assert.equal(entry.kind, 'delegated');
     assert.strictEqual(entry.claim.value, entry.government);
-    assert(gobiernos.includes(entry.government));
+    assert(publicPerson.gobiernos.includes(entry.government));
     assert(entry.claim.sources.length > 0);
   }
   assert.deepEqual(reinadosEfectivos(publicPerson), reinadosEfectivos(person));

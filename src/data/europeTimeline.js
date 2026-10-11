@@ -1,4 +1,4 @@
-import {gobiernosDe} from './crowns.js';
+import {gobiernosDe} from './personAccessors.js';
 export function nextRecordedYear(year,{personas=[],eventos=[],min=1200,max=1800}={}) {
  const years=[...eventos.flatMap(e=>[e.anio,e.desde,e.hasta]),...personas.flatMap(p=>gobiernosDe(p).flatMap(g=>[g.desde,g.hasta]))].filter(y=>Number.isInteger(y)&&y>year&&y>=min&&y<=max);
  return years.length?Math.min(...years):null;

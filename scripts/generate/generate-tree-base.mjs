@@ -50,7 +50,7 @@ const HIJOS_POR_ID = PERSONAS.reduce((acc, persona) => {
 }, {});
 
 // Normaliza las relaciones sin alterar el formato de la base de datos.
-// `conyuge` se conserva para una sola unión y `conyuges` para varias.
+// Las relaciones declaradas e inversas se reúnen sin cambiar la fuente.
 function listaConyuges(persona) {
   if (!persona) return [];
   return [...new Set([
@@ -913,14 +913,6 @@ function computeTreeLayout(rows, byId, childrenById) {
   };
 }
 
-function reinadosLigero(persona) {
-  if (persona?.gobiernos != null || persona?.reinados != null) return gobiernosDe(persona).map((r) => ({ ...r }));
-  if (Array.isArray(persona?.reinado) && persona.reinado.length >= 2) {
-    return [{ territorio: territoriosDe(persona)[0] || null, desde: persona.reinado[0], hasta: persona.reinado[1] }];
-  }
-  return [];
-}
-
 const PERSONA_SLUG_BASE_COUNT = PERSONAS.reduce((acc, persona) => {
   const base = slugBasePersona(persona, "es");
   acc[base] = (acc[base] || 0) + 1;
@@ -963,7 +955,7 @@ function relevanciaPublica(persona) {
   else if (/rey|reina|soberan/.test(titulo)) score += 13;
   else if (/duque|duquesa|elector|regente|papa/.test(titulo)) score += 8;
   else if (/conde|condesa|marqu|príncipe|principe|princesa/.test(titulo)) score += 5;
-  score += Math.min(10, reinadosLigero(persona).length * 2);
+  score += Math.min(10, gobiernosDe(persona).length * 2);
   score += Math.min(8, (HIJOS_POR_ID[persona.id] || []).length);
   if (tieneContenidoEditorial(persona)) {
     const editorial = contenidoEditorialPersona(persona);
@@ -1105,14 +1097,13 @@ async function generarPortadasPersona() {
       muerAprox: Boolean(persona.muerAprox),
       padre: persona.padre || null,
       madre: persona.madre || null,
-      conyuge: conyugesIds.length === 1 ? conyugesIds[0] : null,
       conyugesIds,
       evidenceNames: Object.fromEntries([...new Set([
         persona.padre, persona.madre, ...conyugesIds,
         ...RELEVOS.filter(item => item.sucesor?.persona === persona.id).flatMap(item => [item.predecesor?.persona, item.sucesor?.persona]),
       ].filter(Boolean))].map(id => [id, BY_ID[id]?.nombre]).filter(([, name]) => name)),
       reinos: territoriosDe(persona),
-      reinados: reinadosLigero(persona),
+      gobiernos: gobiernosDe(persona).map((gobierno) => ({ ...gobierno })),
       accesosCoronas: accesosDe(persona,ACCESOS_CORONAS,RELEVOS),
       biografia: biografiaPublicaPersona(persona),
       fuentes: sourcesForPerson(persona.id),

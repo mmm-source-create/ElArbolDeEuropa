@@ -1,5 +1,6 @@
 import React,{useMemo,useState} from 'react';
-import {etapasCoronas,coronasEn,claveMandato,gobiernosDe,agruparAccesos} from '../data/crowns.js';
+import {etapasCoronas,coronasEn,claveMandato,agruparAccesos} from '../data/crowns.js';
+import {gobiernosDe} from '../data/personAccessors.js';
 import {slugPublico} from '../utils/personLabels.js';
 import './crowns.css';
 

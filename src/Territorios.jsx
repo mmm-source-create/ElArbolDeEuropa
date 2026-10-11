@@ -915,33 +915,16 @@ export function territorioCoincideConFiltro(territorio, filtro) {
 // La autoridad depende de mandatos fechados y de su condición. El título
 // resumido y las asociaciones dinásticas no acreditan gobierno territorial.
 
-const TIPOS_REINADO_NO_EFECTIVOS = new Set(["titular", "pretensión"]);
-
-// Modelo de gobierno. La fuente usa `gobiernos`, con un
-// intervalo independiente por territorio. Se conserva la lectura del antiguo
-// `reinado:[desde,hasta]` para que un dato todavía no migrado no rompa nada.
+// Cada mandato canónico conserva su intervalo independiente por territorio.
 export function listaReinados(persona) {
-  if (!persona) return [];
-  if (persona.gobiernos != null || persona.reinados != null) {
-    return gobiernosDe(persona).filter((r) =>
+  return gobiernosDe(persona).filter((r) =>
       r && typeof r.territorio === "string"
       && Number.isFinite(r.desde) && Number.isFinite(r.hasta)
     );
-  }
-  if (Array.isArray(persona.reinado) && persona.reinado.length === 2) {
-    const [desde, hasta] = persona.reinado;
-    if (Number.isFinite(desde) && Number.isFinite(hasta)) {
-      return [{ territorio: territoriosDe(persona)[0] || "Gobierno", desde, hasta }];
-    }
-  }
-  return [];
 }
 
 export function reinadoEsEfectivo(reinado) {
-  if (!reinado) return false;
-  if (reinado.condicion) return gobiernoEfectivo(reinado);
-  if (typeof reinado.efectivo === "boolean") return reinado.efectivo;
-  return !TIPOS_REINADO_NO_EFECTIVOS.has(String(reinado.tipo || "").toLowerCase());
+  return Boolean(reinado) && gobiernoEfectivo(reinado);
 }
 
 // Los años del dataset son inclusivos. Esto permite representar también

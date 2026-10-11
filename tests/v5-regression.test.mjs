@@ -20,10 +20,10 @@ test('la base cubre todos los años y protege rutas y fichas publicadas', async 
 
 test('ordenar propiedades y migrar disputas no provoca un cambio histórico', () => {
   assert.equal(digest({a: 1, b: 2}), digest({b: 2, a: 1}));
-  const person = {id: 'A', nombre: 'Ana', conyuge: 'B', reinos: ['Reino'], gobiernos: [
+  const person = {id: 'A', nombre: 'Ana', conyuges: ['B'], reinos: ['Reino'], gobiernos: [
     {territorio: 'Reino', desde: 1300, hasta: 1320, titulo: 'Reina', controlDisputado: {desde: 1305, hasta: 1306}},
   ]};
-  const migrated = structuredClone(person); migrated.conyuges = ['B']; delete migrated.conyuge;
+  const migrated = structuredClone(person);
   migrated.gobiernos[0].controlDisputado = [migrated.gobiernos[0].controlDisputado];
   assert.equal(personSnapshot(person), personSnapshot(migrated));
   migrated.gobiernos[0].controlDisputado[0].hasta++;
