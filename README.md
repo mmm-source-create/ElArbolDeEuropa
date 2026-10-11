@@ -2,8 +2,10 @@
 
 Atlas histórico y genealógico para explorar personas, dinastías, territorios y sus conexiones familiares.
 
-- [Web](https://www.treeofeurope.eu/es/) · Versión del repositorio: **V5.5**
-- [Cambios de V5.5](docs/V5.5.md) · [Documentación e historial](docs/README.md) · [Próximos pasos cartográficos](docs/V4.8_PROPUESTAS.md) · [Seguridad](SECURITY.md)
+- [Web](https://www.treeofeurope.eu/es/) · Versión del repositorio: **V5.6**
+- [Cambios de V5.6](docs/V5.6.md) · [Documentación e historial](docs/README.md) · [Próximos pasos cartográficos](docs/V4.8_PROPUESTAS.md) · [Seguridad](SECURITY.md)
+
+La V5.6 organiza las herramientas en auditorías, generación y cartografía, fija un entorno Python reproducible y separa las fuentes, los resultados revisados y los diagnósticos temporales. Conserva las superficies, mandatos, relaciones y rutas del Atlas; la base V5 sigue comparando los 601 años completos.
 
 La V5.5 documenta las gobernaciones de Alba, Requesens, don Juan de Austria y Farnesio en los Países Bajos, distinguiendo delegación y control disputado. Añade a Luis de Requesens y retira las cuatro excepciones `gobernante`; la autoridad del Atlas depende de mandatos fechados.
 
@@ -54,6 +56,8 @@ El build valida los contratos, audita los datos, regenera los catálogos y sitem
 
 Para trabajar en la interfaz, `npm run dev` prepara los datos automáticamente antes de iniciar Vite. `npm run preview` sirve una compilación ya creada. Las comprobaciones automáticas no inician un servidor.
 
+La [guía de herramientas](scripts/README.md) recoge las rutas y comandos actuales. Python se usa únicamente para regenerar cartografía: su [entorno aislado](docs/python-cartography.md) fija versión, dependencias y hashes y compara inventarios sin sobrescribir el mapa. La [clasificación de archivos](docs/artifacts.md) indica cuáles son fuentes, resultados aceptados o temporales; los informes nuevos se guardan en `.cache/audits/`.
+
 Las variables opcionales se documentan en `env.example`. `VITE_SITE_URL` debe ser un origen HTTP(S), sin ruta ni parámetros; si está vacío se usa `https://www.treeofeurope.eu`. Las variables `VITE_*` se publican en el navegador y nunca deben contener secretos.
 
 ## Estructura
@@ -73,8 +77,10 @@ Las variables opcionales se documentan en `env.example`. `VITE_SITE_URL` debe se
 | Atlas, conexiones y exportación | `src/explorer/`, `src/connections/` |
 | Desafíos | `src/desafio/` |
 | Medición de rendimiento | `src/monitoring.js`, inicializada desde `src/main.jsx` |
-| Generación y auditoría del HTML | `scripts/prerender-ssg.mjs`, `scripts/audit-ssg.mjs` |
-| Seguridad y pruebas | `scripts/audit-security.mjs`, `tests/` |
+| Generación y auditoría del HTML | `scripts/generate/prerender-ssg.mjs`, `scripts/audits/audit-ssg.mjs` |
+| Seguridad y pruebas | `scripts/audits/audit-security.mjs`, `tests/` |
+| Herramientas e instalación cartográfica | `scripts/`, `.python-version`, `scripts/cartography/requirements.lock` |
+| Clasificación y resultados revisados | `docs/artifacts.md`, `docs/artifact-catalog.json`, `docs/reports/reviewed/` |
 
 Los [criterios de contenido](docs/README.md#criterios-de-contenido) explican títulos, agrupaciones, incertidumbre y fuentes. Mantén estables los identificadores, slugs y claves de almacenamiento de los visitantes.
 

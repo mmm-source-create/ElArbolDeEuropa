@@ -16,6 +16,8 @@ en esta base para este año», no ausencia de gobierno.
 
 ![Encuadre del prototipo](preview.png)
 
+Las herramientas están en [`scripts/cartography/`](../../scripts/README.md). Sigue la [instalación Python reproducible](../../docs/python-cartography.md) antes de regenerar geometría. Las [fuentes y resultados aceptados](../../docs/artifacts.md) se conservan aquí; los diagnósticos de cada ejecución van a `.cache/audits/`.
+
 ## Probarlo
 
 **Celdas nunca coloreadas** abre el inventario de todas las áreas visibles que no reciben color en ningún año de 1200 a 1800. Incluye relieve e islas; permite buscar, filtrar y centrar una celda, consultar candidatos sin verificar y descargar CSV/JSON. Los candidatos no pintan el mapa. La [revisión V4.12](../../docs/V4.12.md) documenta el método, las sucesiones y los límites de esta entrega. `npm run audit:uncolored` regenera la lista desde los mosaicos anuales reales.
@@ -89,7 +91,7 @@ jurisdicción documentada: su nombre físico no obliga a dejarla vacía ni
 demuestra por sí solo a quién atribuirla. Las celdas que cruzan fronteras o
 carecen de evidencia suficiente siguen pendientes.
 
-`audit-map-spatial.mjs` mide también la tierra visible **independientemente de
+`scripts/audits/audit-map-spatial.mjs` mide también la tierra visible **independientemente de
 los nombres ya vinculados**. Sus ventanas de Hungría y sureste europeo
 incluyen fragmentos vecinos de Anatolia y Ucrania. Los resultados cuentan
 celdas y área SVG, nunca países ni kilómetros cuadrados. Se mantienen además
@@ -102,8 +104,8 @@ las auditorías de gobiernos, geometría y continuidad para todos los años de
 El SVG recortado se reconstruye con:
 
 ```sh
-python3 prototypes/euv-locations/crop_svg.py /ruta/a/MapChart_Map.svg
-node --import ./tests/jsx-loader.mjs prototypes/euv-locations/audit-crosswalk.mjs
+.venv-cartography/bin/python scripts/cartography/crop_svg.py /ruta/a/MapChart_Map.svg
+node --import ./tests/jsx-loader.mjs scripts/cartography/audit-crosswalk.mjs
 ```
 
 Para regenerar la capa de Carlos V, primero se extraen de la base sus
@@ -112,14 +114,14 @@ requiere `shapely` y `svgpathtools` en el entorno de trabajo; son herramientas
 de generación, no dependencias del sitio:
 
 ```sh
-node --import ./tests/jsx-loader.mjs prototypes/euv-locations/carlos-v-source.mjs
-python3 prototypes/euv-locations/build-carlos-v-map.py --tags '/ruta/a/Texto pegado.txt'
-python3 prototypes/euv-locations/render-carlos-v-svg.py 1548 /tmp/carlos-v-1548.svg
-node --import ./tests/jsx-loader.mjs prototypes/euv-locations/burgundian-source.mjs
-python3 prototypes/euv-locations/build-burgundian-map.py
-node --import ./tests/jsx-loader.mjs prototypes/euv-locations/corridor-source.mjs
-node prototypes/euv-locations/hungary-balkans-source.mjs
-python3 prototypes/euv-locations/build-corridor-map.py
+node --import ./tests/jsx-loader.mjs scripts/cartography/carlos-v-source.mjs
+.venv-cartography/bin/python scripts/cartography/build-carlos-v-map.py --tags '/ruta/a/Texto pegado.txt'
+.venv-cartography/bin/python scripts/cartography/render-carlos-v-svg.py 1548 /tmp/carlos-v-1548.svg
+node --import ./tests/jsx-loader.mjs scripts/cartography/burgundian-source.mjs
+.venv-cartography/bin/python scripts/cartography/build-burgundian-map.py
+node --import ./tests/jsx-loader.mjs scripts/cartography/corridor-source.mjs
+node scripts/cartography/hungary-balkans-source.mjs
+.venv-cartography/bin/python scripts/cartography/build-corridor-map.py
 ```
 
 La exportación original no se incluye: el SVG adjunto por el usuario está en
@@ -645,8 +647,8 @@ Para regenerar las 13 capas balcánicas y sus 50 grupos documentados sin
 recalcular las equivalencias geométricas:
 
 ```sh
-node prototypes/euv-locations/hungary-balkans-source.mjs
-node prototypes/euv-locations/sync-balkan-map.mjs
+node scripts/cartography/hungary-balkans-source.mjs
+node scripts/cartography/sync-balkan-map.mjs
 ```
 
 La auditoría de continuidad de 1400–1650 reduce las combinaciones región/año
@@ -671,7 +673,7 @@ el límite. La versión del mapa para modo oscuro queda para otra entrega.
 
 `npm run audit:atlas-coverage` comprueba cada año de cada mandato efectivo de
 1200–1800 mediante el mismo alcance que usa el Atlas. El reporte
-`audit-atlas-coverage-report.json` separa entidades totalmente sin relleno,
+`docs/reports/reviewed/audit-atlas-coverage-report.json` separa entidades totalmente sin relleno,
 mandatos o años sin geometría y núcleos explícitamente parciales. Un núcleo
 no acredita una frontera completa. Excluye del relleno personal los cargos
 imperiales y mantiene aparte títulos nominales y mandatos de otros siglos.

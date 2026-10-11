@@ -43,14 +43,14 @@ Se inspeccionaron imágenes de los mapas históricos y el SVG con sus celdas eti
 Reproducción:
 
 ```sh
-python3 prototypes/euv-locations/regional-extent-source.py
-node prototypes/euv-locations/merge-map-expansions.mjs
-# Con Shapely y svgpathtools, las dependencias del auditor geométrico existente:
-python prototypes/euv-locations/build-regional-extent-cells.py
+.venv-cartography/bin/python scripts/cartography/regional-extent-source.py
+node scripts/cartography/merge-map-expansions.mjs
+# Con el entorno fijado en docs/python-cartography.md:
+.venv-cartography/bin/python scripts/cartography/build-regional-extent-cells.py
 npm run audit:regional-extents
 ```
 
-La auditoría registra el área, los límites y el centroide de cada celda aceptada; los eventos y fuentes se conservan en las series. Las pruebas verifican continuidad de superficie, fuentes, geometrías reales, reglas de gobierno personal y cesiones fechadas. `audit-regional-extents-report.json` se regenera durante la compilación.
+La auditoría registra el área, los límites y el centroide de cada celda aceptada; los eventos y fuentes se conservan en las series. Las pruebas verifican continuidad de superficie, fuentes, geometrías reales, reglas de gobierno personal y cesiones fechadas. La compilación escribe el informe actual en `.cache/audits/audit-regional-extents-report.json`; la instantánea aceptada se conserva en `docs/reports/reviewed/`.
 
 ## Qué sigue incompleto
 

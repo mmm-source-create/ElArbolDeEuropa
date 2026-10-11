@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {auditAtlasCoverage, summarizeContinuityLayers} from '../audit-atlas-coverage.mjs';
+import {auditAtlasCoverage, summarizeContinuityLayers} from '../scripts/audits/audit-atlas-coverage.mjs';
 import {mapAuthoritiesForPerson} from '../src/data/mapAuthorities.js';
 
 const government = (territory, from, through, condition = 'efectivo', extra = {}) => ({

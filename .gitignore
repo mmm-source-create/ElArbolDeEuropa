@@ -37,3 +37,9 @@ public/english-meta/
 outputs/
 audit-uncolored-locations-report.json
 public/map-audit/
+
+# Python cartography and disposable audit/regeneration work.
+.venv-cartography/
+.cache/
+__pycache__/
+*.py[cod]

@@ -5,7 +5,7 @@ import {personClaims} from '../../src/evidence/claims.js';
 import {mapAuthoritiesForPerson} from '../../src/data/mapAuthorities.js';
 import {atlasMosaicPalette, atlasPoliticalMosaicAt} from '../../prototypes/euv-locations/atlas-mosaic.js';
 import {STATIC_FOLDERS} from '../../src/public/staticData.js';
-import {routesFromSitemap} from '../ssg-utils.mjs';
+import {routesFromSitemap} from '../lib/ssg-utils.mjs';
 
 const sorted = values => [...values].sort((a, b) => canonicalJson(a) < canonicalJson(b) ? -1 : canonicalJson(a) > canonicalJson(b) ? 1 : 0);
 const unique = values => [...new Set(values.filter(Boolean))].sort();

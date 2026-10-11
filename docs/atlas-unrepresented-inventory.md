@@ -62,4 +62,4 @@ Bulgaria, Sirmia, Aquitania, Anjou, Champaña, Foix, Bearne, Armagnac y Hannover
 | Vendôme | 1372–1562; 1598–1665 |
 | York | 1385–1460 |
 
-Fuente reproducible: [informe completo](../audit-atlas-coverage-report.json), generado con `npm run audit:atlas-coverage`. La [auditoría de continuidad](atlas-continuity-audit.md) comprueba aparte los cortes temporales y las autoridades personales de las quince identidades revisadas.
+Instantánea revisada: [informe completo](reports/reviewed/audit-atlas-coverage-report.json). `npm run audit:atlas-coverage` genera el diagnóstico actual en `.cache/audits/audit-atlas-coverage-report.json`, sin sobrescribir esta revisión. La [auditoría de continuidad](atlas-continuity-audit.md) comprueba aparte los cortes temporales y las autoridades personales de las quince identidades revisadas.

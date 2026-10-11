@@ -1,0 +1,212 @@
+{
+  "schema": 1,
+  "scope": "All retained EU V map assets and laboratories, reviewed audit snapshots and legacy geometry. Runtime generators are catalogued in scripts/README.md.",
+  "kinds": [
+    "accepted-cartography",
+    "accepted-inventory",
+    "documentation",
+    "geometry-reference",
+    "historical-selection",
+    "lab",
+    "mandate-export",
+    "reviewed-audit",
+    "visual-reference"
+  ],
+  "files": [
+    {
+      "path": "prototypes/euv-locations/README.md",
+      "kind": "documentation"
+    },
+    {
+      "path": "prototypes/euv-locations/atlas-mosaic.js",
+      "kind": "lab"
+    },
+    {
+      "path": "prototypes/euv-locations/balkan-expansion-locations.json",
+      "kind": "accepted-cartography",
+      "producer": "scripts/cartography/balkan-expansion-source.mjs"
+    },
+    {
+      "path": "prototypes/euv-locations/balkan-spatial-cells.json",
+      "kind": "accepted-inventory",
+      "producer": "scripts/cartography/balkan-spatial-source.py"
+    },
+    {
+      "path": "prototypes/euv-locations/burgundian-locations.json",
+      "kind": "accepted-cartography",
+      "producer": "scripts/cartography/build-burgundian-map.py"
+    },
+    {
+      "path": "prototypes/euv-locations/burgundian-source.json",
+      "kind": "mandate-export",
+      "producer": "scripts/cartography/burgundian-source.mjs"
+    },
+    {
+      "path": "prototypes/euv-locations/burgundian-succession.html",
+      "kind": "lab"
+    },
+    {
+      "path": "prototypes/euv-locations/carlos-v-1520.png",
+      "kind": "visual-reference"
+    },
+    {
+      "path": "prototypes/euv-locations/carlos-v-1548.png",
+      "kind": "visual-reference"
+    },
+    {
+      "path": "prototypes/euv-locations/carlos-v-locations.json",
+      "kind": "accepted-cartography",
+      "producer": "scripts/cartography/build-carlos-v-map.py"
+    },
+    {
+      "path": "prototypes/euv-locations/carlos-v-overrides.json",
+      "kind": "historical-selection",
+      "maintenance": "Reviewed selection maintained explicitly; no standalone generator recorded."
+    },
+    {
+      "path": "prototypes/euv-locations/carlos-v-source.json",
+      "kind": "mandate-export",
+      "producer": "scripts/cartography/carlos-v-source.mjs"
+    },
+    {
+      "path": "prototypes/euv-locations/carlos-v.html",
+      "kind": "lab"
+    },
+    {
+      "path": "prototypes/euv-locations/central-expansion-locations.json",
+      "kind": "accepted-cartography",
+      "producer": "scripts/cartography/central-expansion-source.py"
+    },
+    {
+      "path": "prototypes/euv-locations/continuity-anchors.json",
+      "kind": "historical-selection",
+      "maintenance": "Reviewed selection maintained explicitly; no standalone generator recorded."
+    },
+    {
+      "path": "prototypes/euv-locations/continuity-review.json",
+      "kind": "accepted-cartography",
+      "producer": "scripts/cartography/continuity-source.py"
+    },
+    {
+      "path": "prototypes/euv-locations/corridor-locations.json",
+      "kind": "accepted-cartography",
+      "producer": "scripts/cartography/build-corridor-map.py"
+    },
+    {
+      "path": "prototypes/euv-locations/corridor-overrides.json",
+      "kind": "historical-selection",
+      "maintenance": "Reviewed selection maintained explicitly; no standalone generator recorded."
+    },
+    {
+      "path": "prototypes/euv-locations/corridor-source.json",
+      "kind": "mandate-export",
+      "producer": "scripts/cartography/corridor-source.mjs"
+    },
+    {
+      "path": "prototypes/euv-locations/euv-locations-crop.svg",
+      "kind": "accepted-cartography",
+      "producer": "scripts/cartography/crop_svg.py"
+    },
+    {
+      "path": "prototypes/euv-locations/extended-corridors-locations.json",
+      "kind": "accepted-cartography",
+      "producer": "scripts/cartography/extended-corridors-source.py"
+    },
+    {
+      "path": "prototypes/euv-locations/frontier-anchors.json",
+      "kind": "historical-selection",
+      "maintenance": "Reviewed selection maintained explicitly; no standalone generator recorded."
+    },
+    {
+      "path": "prototypes/euv-locations/frontier-review.json",
+      "kind": "accepted-cartography",
+      "producer": "scripts/cartography/frontier-source.py"
+    },
+    {
+      "path": "prototypes/euv-locations/hungary-balkans-locations.json",
+      "kind": "accepted-cartography",
+      "producer": "scripts/cartography/hungary-balkans-source.mjs"
+    },
+    {
+      "path": "prototypes/euv-locations/imperial-core-locations.json",
+      "kind": "accepted-cartography",
+      "maintenance": "Reviewed selection maintained explicitly; no standalone generator recorded."
+    },
+    {
+      "path": "prototypes/euv-locations/index.html",
+      "kind": "lab"
+    },
+    {
+      "path": "prototypes/euv-locations/location-inventory.json",
+      "kind": "accepted-inventory",
+      "producer": "scripts/cartography/build-location-inventory.py"
+    },
+    {
+      "path": "prototypes/euv-locations/location-mosaic.js",
+      "kind": "lab"
+    },
+    {
+      "path": "prototypes/euv-locations/preview.png",
+      "kind": "visual-reference"
+    },
+    {
+      "path": "prototypes/euv-locations/priority-territories-locations.json",
+      "kind": "accepted-cartography",
+      "maintenance": "Reviewed selection maintained explicitly; no standalone generator recorded."
+    },
+    {
+      "path": "prototypes/euv-locations/reference-gap-review.json",
+      "kind": "historical-selection",
+      "maintenance": "Reviewed selection maintained explicitly; no standalone generator recorded."
+    },
+    {
+      "path": "prototypes/euv-locations/regional-extent-cells.json",
+      "kind": "accepted-inventory",
+      "producer": "scripts/cartography/build-regional-extent-cells.py"
+    },
+    {
+      "path": "prototypes/euv-locations/regional-extent-review.json",
+      "kind": "accepted-cartography",
+      "producer": "scripts/cartography/regional-extent-source.py"
+    },
+    {
+      "path": "prototypes/euv-locations/succession-review.json",
+      "kind": "accepted-cartography",
+      "producer": "scripts/cartography/succession-source.py"
+    },
+    {
+      "path": "prototypes/euv-locations/territorial-corridors.html",
+      "kind": "lab"
+    },
+    {
+      "path": "docs/reports/reviewed/audit-atlas-coverage-report.json",
+      "kind": "reviewed-audit",
+      "maintenance": "Preserved snapshot; current execution is written to .cache/audits/."
+    },
+    {
+      "path": "docs/reports/reviewed/audit-regional-extents-report.json",
+      "kind": "reviewed-audit",
+      "maintenance": "Preserved snapshot; current execution is written to .cache/audits/."
+    },
+    {
+      "path": "docs/reports/reviewed/crosswalk-report.json",
+      "kind": "reviewed-audit",
+      "maintenance": "Preserved snapshot; current execution is written to .cache/audits/."
+    },
+    {
+      "path": "docs/atlas-continuity-audit.json",
+      "kind": "reviewed-audit",
+      "maintenance": "Preserved snapshot; current execution is written to .cache/audits/."
+    },
+    {
+      "path": "docs/atlas-continuity-audit.md",
+      "kind": "reviewed-audit",
+      "maintenance": "Preserved snapshot; current execution is written to .cache/audits/."
+    },
+    {
+      "path": "src/MapChart_Map.svg",
+      "kind": "geometry-reference",
+      "maintenance": "Earlier MapChart province edition; geometry reference, not proof of historical jurisdiction."
+    }
+  ]
+}
