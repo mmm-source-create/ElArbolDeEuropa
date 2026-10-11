@@ -9,6 +9,7 @@ import {regionalExtentJurisdictions, supersededRegionalLayers} from './regionalE
 import {continuityJurisdictions, territorialLabel} from './territorialIdentity.js';
 import {frontierJurisdictions} from './frontierRoutes.js';
 import {successionJurisdictions} from './successionRoutes.js';
+import {referenceGapJurisdictions} from './referenceGapRoutes.js';
 
 const layerIndexes = new WeakMap();
 export function reviewedMapLayers(data) {
@@ -33,7 +34,7 @@ function layerIndex(data) {
 export function pilotJurisdictionsFor(territory, year, personId = null) {
   const chronological=chronologyJurisdictionsFor(territory,year,personId);
   const frontier=frontierJurisdictions(continuityJurisdictions(regionalExtentJurisdictions(appendChronologyJurisdictions(chronological ?? basePilotJurisdictionsFor(territory,year,personId),territory,personId),territory,year,personId),territory,year,personId),territory,year,personId);
-  return successionJurisdictions(frontier,territory,year,personId);
+  return referenceGapJurisdictions(successionJurisdictions(frontier,territory,year,personId),territory);
 }
 
 function basePilotJurisdictionsFor(territory, year, personId) {

@@ -1,0 +1,195 @@
+{
+  "reviewedAt": "2026-10-11",
+  "replacements": [],
+  "territories": [
+    {
+      "name": "Islandia bajo la Corona noruega",
+      "corridor": "Revisión de huecos por contraste cartográfico",
+      "coverage": {
+        "through": 1800,
+        "from": 1264
+      },
+      "versions": [
+        {
+          "ids": [
+            "Akureyri",
+            "Blonduos",
+            "Borgarnes",
+            "Egilsstadir",
+            "Eyjafjallajokull",
+            "Hofsjokull",
+            "Holar",
+            "Holmur",
+            "Husavik",
+            "Hvamstangi",
+            "Hvolsvollur",
+            "Icelandic_Highlands",
+            "Isafjordur",
+            "Keflavik",
+            "Kirkjubaejar",
+            "Langjokull",
+            "Olavsvik",
+            "Reikjavik",
+            "Reydarfjordur",
+            "Selfoss",
+            "Seydisfjordur",
+            "Skalholt",
+            "Thingvellir",
+            "Torshofn",
+            "Vattnajokull",
+            "Vopnafjordur"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Superficie completa desde el final del proceso de incorporación de 1262–1264.",
+          "from": 1264
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": false,
+      "note": "Superficie de la isla, incluidas tierras altas y glaciares. La incorporación fue gradual en 1262–1264; 1264 es el corte convencional para representarla completa, no una conquista simultánea; la armonización jurídica prosigue hasta Jónsbók en 1281. La sucesión de 1380 reúne las coronas danesa y noruega sin crear otra entidad islandesa. El Althing conserva funciones propias hasta su abolición en 1800. El período de la comunidad islandesa anterior a 1264 queda pendiente; no se atribuye a Noruega.",
+      "sources": [
+        {
+          "title": "Alþingi · The Icelandic Parliament",
+          "url": "https://www.althingi.is/pdf/enska.pdf",
+          "locator": "p.7 impresa, sección The monarchy until 1800: incorporación de 1262–1264, sucesión danesa, absolutismo de 1662 y continuidad del Althing hasta 1800."
+        },
+        {
+          "title": "Sverrir Jakobsson · All the King’s men (2021)",
+          "url": "https://iris.hi.is/en/publications/all-the-kings-men-the-incorporation-of-iceland-into-the-norwegian/",
+          "locator": "Scandinavian Journal of History 46(5), pp.571–592; resumen: incorporación gradual, autoridad regia anterior a 1262 y armonización jurídica mediante Jónsbók en 1281."
+        },
+        {
+          "title": "Alþingi · Alþjóðamálastofnun (2007)",
+          "url": "https://www.althingi.is/altext/erindi/137/137-654.pdf",
+          "locator": "Political Structure and External Relations: unión noruega, sucesión de 1380 y relación con la monarquía danesa."
+        }
+      ],
+      "color": "#a62b36"
+    },
+    {
+      "name": "Istria veneciana",
+      "corridor": "Revisión de huecos por contraste cartográfico",
+      "coverage": {
+        "through": 1796,
+        "from": 1421
+      },
+      "versions": [
+        {
+          "ids": [
+            "Buzet"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Buzet bajo administración veneciana desde 1421.",
+          "from": 1421
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": false,
+      "note": "Celda septentrional de Buzet, comprobada sobre el SVG; no incluye Pazin, del ámbito habsbúrgico, ni el polígono dálmata de Novigrad. Buzet pasa de Aquileia a Venecia en 1421. Las incursiones otomanas y la guerra de los uscoques no se convierten en anexiones. Se detiene la atribución veneciana antes de la disolución de la república en 1797; su relevo austríaco se representa desde 1797 en una capa propia, sin superponer soberanías.",
+      "sources": [
+        {
+          "title": "Hrvatska enciklopedija · Buzet",
+          "url": "https://enciklopedija.hr/clanak/buzet",
+          "locator": "Administración veneciana desde 1421, sede del capitán de Raspor desde 1511; incursiones otomanas y guerra de los uscoques."
+        },
+        {
+          "title": "Istarska enciklopedija · Buzet, Leksikografski zavod Miroslav Krleža",
+          "url": "https://istra.lzmk.hr/clanak/buzet",
+          "locator": "Aquileia hasta 1421 y posterior dominio veneciano; las incursiones no toman la ciudad."
+        },
+        {
+          "title": "Hrvatska enciklopedija · Istra",
+          "url": "https://www.enciklopedija.hr/clanak/istra-poluotok",
+          "locator": "Expansión veneciana de 1420–1421 frente al condado de Pazin habsbúrgico; reparto de 1797."
+        }
+      ],
+      "color": "#8f2caf"
+    },
+    {
+      "name": "Moldavia · comarcas meridionales",
+      "corridor": "Revisión de huecos por contraste cartográfico",
+      "coverage": {
+        "through": 1800,
+        "from": 1457
+      },
+      "versions": [
+        {
+          "ids": [
+            "Adjud",
+            "Barlad",
+            "Targu_Trotus",
+            "Tutova"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Comarcas meridionales bajo la autoridad principesca moldava; no son nuevas fundaciones ni provincias otomanas.",
+          "from": 1457
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": false,
+      "note": "Complemento regional del Principado de Moldavia: valle de Trotuș–Adjud y comarca de Bârlad–Tutova. Los documentos respaldan su adscripción moldava, pero los polígonos modernos son aproximaciones de superficie, no límites municipales medievales. Tutova se interpreta como comarca, no como una aldea moderna. Se incorpora desde el reinado unificado de 1457; la partición meridional de 1435 y los cortes anteriores necesitan un ámbito específico antes de ampliarse. Tributación otomana no implica administración otomana directa. Estas celdas interiores no incluyen los puertos cedidos en 1484, Tighina en 1538 ni Bucovina en 1775.",
+      "sources": [
+        {
+          "title": "Primăria Bârlad · Istoria orașului",
+          "url": "https://primariabarlad.ro/barlad/cultura/istoria-orasului/",
+          "locator": "Documentos comerciales de Alexandru cel Bun (1401 y 1408); Bârlad como sede de la administración de la Moldavia meridional."
+        },
+        {
+          "title": "Primăria Adjud · Monografia localității",
+          "url": "https://www.adjud.ro/municipiul-adjud/despre-adjud/monografia-localitatii/",
+          "locator": "Privilegio de Iliaș de 9 de abril de 1433: aduana moldava en Adjudu Vechi."
+        },
+        {
+          "title": "Primăria Târgu Trotuș · Memoriu general",
+          "url": "https://primariatgtrotus.ro/wp-content/uploads/2023/08/Memoriu-Targu-Trotus.pdf",
+          "locator": "Historia: aduana en el privilegio de 6 de octubre de 1408; documentos de 1435 y 1460 sobre el corredor comercial."
+        },
+        {
+          "title": "Acta Moldaviae Meridionalis XLI (2020)",
+          "url": "https://www.biblioteca-digitala.ro/reviste/Acta-Moldaviae-Meridionalis/41_Acta-Moldaviae-Meridionalis_XLI_2020.pdf",
+          "locator": "p.44: documento de 1 de septiembre de 1435 sobre Tutova y Bârlad en la partición meridional; evolución administrativa y distrito Bârlad–Tutova en el siglo XVI."
+        }
+      ],
+      "color": "#aa882c"
+    },
+    {
+      "name": "Istria bajo administración austríaca",
+      "corridor": "Revisión de huecos por contraste cartográfico",
+      "coverage": {
+        "from": 1797,
+        "through": 1800
+      },
+      "versions": [
+        {
+          "from": 1797,
+          "ids": [
+            "Buzet"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Transferencia de Istria a Austria en los acuerdos de Leoben y Campo Formio de 1797."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": false,
+      "note": "Relevo de Buzet tras la disolución de Venecia. La celda se añade al gobierno de Austria, no a una república veneciana superviviente. El año 1797 representa el estado posterior al acuerdo de octubre; la escala anual no distingue los meses de transición.",
+      "sources": [
+        {
+          "title": "Hrvatska enciklopedija · Istra",
+          "url": "https://www.enciklopedija.hr/clanak/istra-poluotok",
+          "locator": "Expansión veneciana de 1420–1421 frente al condado de Pazin habsbúrgico; reparto de 1797."
+        }
+      ],
+      "color": "#cb6525"
+    }
+  ],
+  "overrides": [],
+  "limitations": [
+    "El HTML de referencia sirve para detectar huecos, no como prueba de soberanía ni de fronteras. No se ejecuta su código ni se importan automáticamente sus máscaras.",
+    "Primera revisión: 31 celdas. Los demás candidatos mantienen su estado de investigación sin verificar.",
+    "Los límites interiores proceden del SVG actual y no representan demarcaciones históricas exactas; las fechas de la primera mención urbana no se usan como fechas de nacimiento territorial."
+  ]
+}

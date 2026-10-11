@@ -21000,7 +21000,7 @@
         "effectiveMandatesAllTime": 61,
         "effectiveMandatesInScope": 61,
         "nonpaintingMandatesInScope": 0,
-        "locations": 25,
+        "locations": 29,
         "yearsWithGovernment": 290,
         "yearsWithGeometry": 254,
         "yearsWithoutGeometry": 36,
@@ -21017,6 +21017,10 @@
         }
       ],
       "layers": [
+        {
+          "name": "Moldavia · comarcas meridionales",
+          "note": "Complemento regional del Principado de Moldavia: valle de Trotuș–Adjud y comarca de Bârlad–Tutova. Los documentos respaldan su adscripción moldava, pero los polígonos modernos son aproximaciones de superficie, no límites municipales medievales. Tutova se interpreta como comarca, no como una aldea moderna. Se incorpora desde el reinado unificado de 1457; la partición meridional de 1435 y los cortes anteriores necesitan un ámbito específico antes de ampliarse. Tributación otomana no implica administración otomana directa. Estas celdas interiores no incluyen los puertos cedidos en 1484, Tighina en 1538 ni Bucovina en 1775."
+        },
         {
           "name": "Principado de Moldavia",
           "note": "Principado con voivodas e instituciones propias, sometido a tributo y soberanía otomana desde mediados del siglo XV. La subordinación no equivale a anexión. Chilia y Cetatea Albă pasan al gobierno otomano directo en 1484; Tighina en 1538."
@@ -21166,7 +21170,7 @@
           "auditThrough": 1504,
           "yearsWithGeometry": 48,
           "yearsWithoutGeometry": 0,
-          "locations": 25,
+          "locations": 29,
           "missingGeometryIntervals": []
         },
         {
@@ -21184,7 +21188,7 @@
           "auditThrough": 1517,
           "yearsWithGeometry": 14,
           "yearsWithoutGeometry": 0,
-          "locations": 23,
+          "locations": 27,
           "missingGeometryIntervals": []
         },
         {
@@ -21202,7 +21206,7 @@
           "auditThrough": 1538,
           "yearsWithGeometry": 12,
           "yearsWithoutGeometry": 0,
-          "locations": 23,
+          "locations": 27,
           "missingGeometryIntervals": []
         },
         {
@@ -21220,7 +21224,7 @@
           "auditThrough": 1546,
           "yearsWithGeometry": 6,
           "yearsWithoutGeometry": 0,
-          "locations": 22,
+          "locations": 26,
           "missingGeometryIntervals": []
         },
         {
@@ -21238,7 +21242,7 @@
           "auditThrough": 1600,
           "yearsWithGeometry": 1,
           "yearsWithoutGeometry": 0,
-          "locations": 22,
+          "locations": 26,
           "missingGeometryIntervals": []
         },
         {
@@ -21256,7 +21260,7 @@
           "auditThrough": 1552,
           "yearsWithGeometry": 2,
           "yearsWithoutGeometry": 0,
-          "locations": 22,
+          "locations": 26,
           "missingGeometryIntervals": []
         },
         {
@@ -21274,7 +21278,7 @@
           "auditThrough": 1570,
           "yearsWithGeometry": 3,
           "yearsWithoutGeometry": 0,
-          "locations": 22,
+          "locations": 26,
           "missingGeometryIntervals": []
         },
         {
@@ -21292,7 +21296,7 @@
           "auditThrough": 1561,
           "yearsWithGeometry": 10,
           "yearsWithoutGeometry": 0,
-          "locations": 22,
+          "locations": 26,
           "missingGeometryIntervals": []
         },
         {
@@ -21310,7 +21314,7 @@
           "auditThrough": 1568,
           "yearsWithGeometry": 5,
           "yearsWithoutGeometry": 0,
-          "locations": 22,
+          "locations": 26,
           "missingGeometryIntervals": []
         },
         {
@@ -21328,7 +21332,7 @@
           "auditThrough": 1572,
           "yearsWithGeometry": 5,
           "yearsWithoutGeometry": 0,
-          "locations": 22,
+          "locations": 26,
           "missingGeometryIntervals": []
         },
         {
@@ -21346,7 +21350,7 @@
           "auditThrough": 1619,
           "yearsWithGeometry": 4,
           "yearsWithoutGeometry": 0,
-          "locations": 22,
+          "locations": 26,
           "missingGeometryIntervals": []
         },
         {
@@ -21364,7 +21368,7 @@
           "auditThrough": 1626,
           "yearsWithGeometry": 4,
           "yearsWithoutGeometry": 0,
-          "locations": 22,
+          "locations": 26,
           "missingGeometryIntervals": []
         },
         {
@@ -21382,7 +21386,7 @@
           "auditThrough": 1607,
           "yearsWithGeometry": 2,
           "yearsWithoutGeometry": 0,
-          "locations": 22,
+          "locations": 26,
           "missingGeometryIntervals": []
         },
         {
@@ -21400,7 +21404,7 @@
           "auditThrough": 1621,
           "yearsWithGeometry": 2,
           "yearsWithoutGeometry": 0,
-          "locations": 22,
+          "locations": 26,
           "missingGeometryIntervals": []
         },
         {
@@ -21418,7 +21422,7 @@
           "auditThrough": 1633,
           "yearsWithGeometry": 3,
           "yearsWithoutGeometry": 0,
-          "locations": 22,
+          "locations": 26,
           "missingGeometryIntervals": []
         },
         {
@@ -21436,7 +21440,7 @@
           "auditThrough": 1630,
           "yearsWithGeometry": 2,
           "yearsWithoutGeometry": 0,
-          "locations": 22,
+          "locations": 26,
           "missingGeometryIntervals": []
         },
         {
@@ -21454,7 +21458,7 @@
           "auditThrough": 1653,
           "yearsWithGeometry": 20,
           "yearsWithoutGeometry": 0,
-          "locations": 22,
+          "locations": 26,
           "missingGeometryIntervals": []
         },
         {
@@ -21472,7 +21476,7 @@
           "auditThrough": 1600,
           "yearsWithGeometry": 6,
           "yearsWithoutGeometry": 0,
-          "locations": 22,
+          "locations": 26,
           "missingGeometryIntervals": []
         },
         {
@@ -21490,7 +21494,7 @@
           "auditThrough": 1606,
           "yearsWithGeometry": 7,
           "yearsWithoutGeometry": 0,
-          "locations": 22,
+          "locations": 26,
           "missingGeometryIntervals": []
         },
         {
@@ -21508,7 +21512,7 @@
           "auditThrough": 1629,
           "yearsWithGeometry": 4,
           "yearsWithoutGeometry": 0,
-          "locations": 22,
+          "locations": 26,
           "missingGeometryIntervals": []
         },
         {
@@ -21526,7 +21530,7 @@
           "auditThrough": 1633,
           "yearsWithGeometry": 1,
           "yearsWithoutGeometry": 0,
-          "locations": 22,
+          "locations": 26,
           "missingGeometryIntervals": []
         },
         {
@@ -21544,7 +21548,7 @@
           "auditThrough": 1611,
           "yearsWithGeometry": 5,
           "yearsWithoutGeometry": 0,
-          "locations": 22,
+          "locations": 26,
           "missingGeometryIntervals": []
         },
         {
@@ -21562,7 +21566,7 @@
           "auditThrough": 1615,
           "yearsWithGeometry": 5,
           "yearsWithoutGeometry": 0,
-          "locations": 22,
+          "locations": 26,
           "missingGeometryIntervals": []
         },
         {
@@ -21580,7 +21584,7 @@
           "auditThrough": 1623,
           "yearsWithGeometry": 3,
           "yearsWithoutGeometry": 0,
-          "locations": 22,
+          "locations": 26,
           "missingGeometryIntervals": []
         },
         {
@@ -21598,7 +21602,7 @@
           "auditThrough": 1631,
           "yearsWithGeometry": 2,
           "yearsWithoutGeometry": 0,
-          "locations": 22,
+          "locations": 26,
           "missingGeometryIntervals": []
         },
         {
@@ -21616,7 +21620,7 @@
           "auditThrough": 1634,
           "yearsWithGeometry": 2,
           "yearsWithoutGeometry": 0,
-          "locations": 22,
+          "locations": 26,
           "missingGeometryIntervals": []
         },
         {
@@ -21634,7 +21638,7 @@
           "auditThrough": 1616,
           "yearsWithGeometry": 2,
           "yearsWithoutGeometry": 0,
-          "locations": 22,
+          "locations": 26,
           "missingGeometryIntervals": []
         },
         {
@@ -21652,7 +21656,7 @@
           "auditThrough": 1574,
           "yearsWithGeometry": 3,
           "yearsWithoutGeometry": 0,
-          "locations": 22,
+          "locations": 26,
           "missingGeometryIntervals": []
         },
         {
@@ -21670,7 +21674,7 @@
           "auditThrough": 1577,
           "yearsWithGeometry": 4,
           "yearsWithoutGeometry": 0,
-          "locations": 22,
+          "locations": 26,
           "missingGeometryIntervals": []
         },
         {
@@ -21688,7 +21692,7 @@
           "auditThrough": 1579,
           "yearsWithGeometry": 2,
           "yearsWithoutGeometry": 0,
-          "locations": 22,
+          "locations": 26,
           "missingGeometryIntervals": []
         },
         {
@@ -21706,7 +21710,7 @@
           "auditThrough": 1591,
           "yearsWithGeometry": 10,
           "yearsWithoutGeometry": 0,
-          "locations": 22,
+          "locations": 26,
           "missingGeometryIntervals": []
         },
         {
@@ -21994,7 +21998,7 @@
           "auditThrough": 1457,
           "yearsWithGeometry": 3,
           "yearsWithoutGeometry": 0,
-          "locations": 25,
+          "locations": 29,
           "missingGeometryIntervals": []
         },
         {
@@ -22012,7 +22016,7 @@
           "auditThrough": 1527,
           "yearsWithGeometry": 11,
           "yearsWithoutGeometry": 0,
-          "locations": 23,
+          "locations": 27,
           "missingGeometryIntervals": []
         },
         {
@@ -22030,7 +22034,7 @@
           "auditThrough": 1540,
           "yearsWithGeometry": 3,
           "yearsWithoutGeometry": 0,
-          "locations": 22,
+          "locations": 26,
           "missingGeometryIntervals": []
         },
         {
@@ -22048,7 +22052,7 @@
           "auditThrough": 1551,
           "yearsWithGeometry": 6,
           "yearsWithoutGeometry": 0,
-          "locations": 22,
+          "locations": 26,
           "missingGeometryIntervals": []
         },
         {
@@ -22066,7 +22070,7 @@
           "auditThrough": 1563,
           "yearsWithGeometry": 3,
           "yearsWithoutGeometry": 0,
-          "locations": 22,
+          "locations": 26,
           "missingGeometryIntervals": []
         },
         {
@@ -22084,7 +22088,7 @@
           "auditThrough": 1564,
           "yearsWithGeometry": 2,
           "yearsWithoutGeometry": 0,
-          "locations": 22,
+          "locations": 26,
           "missingGeometryIntervals": []
         },
         {
@@ -22102,7 +22106,7 @@
           "auditThrough": 1582,
           "yearsWithGeometry": 4,
           "yearsWithoutGeometry": 0,
-          "locations": 22,
+          "locations": 26,
           "missingGeometryIntervals": []
         },
         {
@@ -22120,7 +22124,7 @@
           "auditThrough": 1592,
           "yearsWithGeometry": 2,
           "yearsWithoutGeometry": 0,
-          "locations": 22,
+          "locations": 26,
           "missingGeometryIntervals": []
         },
         {
@@ -22138,7 +22142,7 @@
           "auditThrough": 1595,
           "yearsWithGeometry": 4,
           "yearsWithoutGeometry": 0,
-          "locations": 22,
+          "locations": 26,
           "missingGeometryIntervals": []
         }
       ],
@@ -25016,7 +25020,7 @@
         "effectiveMandatesAllTime": 28,
         "effectiveMandatesInScope": 24,
         "nonpaintingMandatesInScope": 1,
-        "locations": 137,
+        "locations": 163,
         "yearsWithGovernment": 579,
         "yearsWithGeometry": 579,
         "yearsWithoutGeometry": 0,
@@ -25028,6 +25032,10 @@
       "limitedCore": true,
       "missingGeometryIntervals": [],
       "layers": [
+        {
+          "name": "Islandia bajo la Corona noruega",
+          "note": "Superficie de la isla, incluidas tierras altas y glaciares. La incorporación fue gradual en 1262–1264; 1264 es el corte convencional para representarla completa, no una conquista simultánea; la armonización jurídica prosigue hasta Jónsbók en 1281. La sucesión de 1380 reúne las coronas danesa y noruega sin crear otra entidad islandesa. El Althing conserva funciones propias hasta su abolición en 1800. El período de la comunidad islandesa anterior a 1264 queda pendiente; no se atribuye a Noruega."
+        },
         {
           "name": "Islas Feroe bajo la Corona noruega",
           "note": "Islas Feroe: dependencia de la Corona noruega y, desde 1380, de la monarquía danesa-noruega. Los Gabel administran las islas entre 1655 y 1709; desde 1709 la administración es danesa directa. Estos cambios de administración no crean un territorio nuevo. Tórshavn es un punto de referencia: todavía no se representa el perímetro del archipiélago."
@@ -25053,7 +25061,7 @@
           "auditThrough": 1523,
           "yearsWithGeometry": 11,
           "yearsWithoutGeometry": 0,
-          "locations": 131,
+          "locations": 157,
           "missingGeometryIntervals": []
         },
         {
@@ -25071,7 +25079,7 @@
           "auditThrough": 1355,
           "yearsWithGeometry": 37,
           "yearsWithoutGeometry": 0,
-          "locations": 133,
+          "locations": 159,
           "missingGeometryIntervals": []
         },
         {
@@ -25089,7 +25097,7 @@
           "auditThrough": 1380,
           "yearsWithGeometry": 26,
           "yearsWithoutGeometry": 0,
-          "locations": 133,
+          "locations": 159,
           "missingGeometryIntervals": []
         },
         {
@@ -25107,7 +25115,7 @@
           "auditThrough": 1387,
           "yearsWithGeometry": 8,
           "yearsWithoutGeometry": 0,
-          "locations": 133,
+          "locations": 159,
           "missingGeometryIntervals": []
         },
         {
@@ -25125,7 +25133,7 @@
           "auditThrough": 1412,
           "yearsWithGeometry": 25,
           "yearsWithoutGeometry": 0,
-          "locations": 133,
+          "locations": 159,
           "missingGeometryIntervals": []
         },
         {
@@ -25143,7 +25151,7 @@
           "auditThrough": 1442,
           "yearsWithGeometry": 54,
           "yearsWithoutGeometry": 0,
-          "locations": 133,
+          "locations": 159,
           "missingGeometryIntervals": []
         },
         {
@@ -25161,7 +25169,7 @@
           "auditThrough": 1448,
           "yearsWithGeometry": 7,
           "yearsWithoutGeometry": 0,
-          "locations": 133,
+          "locations": 159,
           "missingGeometryIntervals": []
         },
         {
@@ -25179,7 +25187,7 @@
           "auditThrough": 1481,
           "yearsWithGeometry": 32,
           "yearsWithoutGeometry": 0,
-          "locations": 133,
+          "locations": 159,
           "missingGeometryIntervals": []
         },
         {
@@ -25197,7 +25205,7 @@
           "auditThrough": 1513,
           "yearsWithGeometry": 31,
           "yearsWithoutGeometry": 0,
-          "locations": 131,
+          "locations": 157,
           "missingGeometryIntervals": []
         },
         {
@@ -25215,7 +25223,7 @@
           "auditThrough": 1533,
           "yearsWithGeometry": 11,
           "yearsWithoutGeometry": 0,
-          "locations": 131,
+          "locations": 157,
           "missingGeometryIntervals": []
         },
         {
@@ -25233,7 +25241,7 @@
           "auditThrough": 1559,
           "yearsWithGeometry": 23,
           "yearsWithoutGeometry": 0,
-          "locations": 131,
+          "locations": 157,
           "missingGeometryIntervals": []
         },
         {
@@ -25251,7 +25259,7 @@
           "auditThrough": 1588,
           "yearsWithGeometry": 30,
           "yearsWithoutGeometry": 0,
-          "locations": 131,
+          "locations": 157,
           "missingGeometryIntervals": []
         },
         {
@@ -25269,7 +25277,7 @@
           "auditThrough": 1648,
           "yearsWithGeometry": 61,
           "yearsWithoutGeometry": 0,
-          "locations": 131,
+          "locations": 157,
           "missingGeometryIntervals": []
         },
         {
@@ -25287,7 +25295,7 @@
           "auditThrough": 1670,
           "yearsWithGeometry": 23,
           "yearsWithoutGeometry": 0,
-          "locations": 121,
+          "locations": 147,
           "missingGeometryIntervals": []
         },
         {
@@ -25305,7 +25313,7 @@
           "auditThrough": 1699,
           "yearsWithGeometry": 30,
           "yearsWithoutGeometry": 0,
-          "locations": 117,
+          "locations": 143,
           "missingGeometryIntervals": []
         },
         {
@@ -25323,7 +25331,7 @@
           "auditThrough": 1730,
           "yearsWithGeometry": 32,
           "yearsWithoutGeometry": 0,
-          "locations": 117,
+          "locations": 143,
           "missingGeometryIntervals": []
         },
         {
@@ -25341,7 +25349,7 @@
           "auditThrough": 1746,
           "yearsWithGeometry": 17,
           "yearsWithoutGeometry": 0,
-          "locations": 117,
+          "locations": 143,
           "missingGeometryIntervals": []
         },
         {
@@ -25359,7 +25367,7 @@
           "auditThrough": 1766,
           "yearsWithGeometry": 21,
           "yearsWithoutGeometry": 0,
-          "locations": 117,
+          "locations": 143,
           "missingGeometryIntervals": []
         },
         {
@@ -25377,7 +25385,7 @@
           "auditThrough": 1800,
           "yearsWithGeometry": 35,
           "yearsWithoutGeometry": 0,
-          "locations": 117,
+          "locations": 143,
           "missingGeometryIntervals": []
         },
         {
@@ -25395,7 +25403,7 @@
           "auditThrough": 1299,
           "yearsWithGeometry": 20,
           "yearsWithoutGeometry": 0,
-          "locations": 133,
+          "locations": 159,
           "missingGeometryIntervals": []
         },
         {
@@ -25431,7 +25439,7 @@
           "auditThrough": 1280,
           "yearsWithGeometry": 18,
           "yearsWithoutGeometry": 0,
-          "locations": 137,
+          "locations": 163,
           "missingGeometryIntervals": []
         },
         {
@@ -25449,7 +25457,7 @@
           "auditThrough": 1319,
           "yearsWithGeometry": 21,
           "yearsWithoutGeometry": 0,
-          "locations": 133,
+          "locations": 159,
           "missingGeometryIntervals": []
         },
         {
@@ -25467,7 +25475,7 @@
           "auditThrough": 1387,
           "yearsWithGeometry": 8,
           "yearsWithoutGeometry": 0,
-          "locations": 133,
+          "locations": 159,
           "missingGeometryIntervals": []
         }
       ],
@@ -32969,7 +32977,7 @@
         "effectiveMandatesAllTime": 30,
         "effectiveMandatesInScope": 30,
         "nonpaintingMandatesInScope": 0,
-        "locations": 79,
+        "locations": 80,
         "yearsWithGovernment": 238,
         "yearsWithGeometry": 238,
         "yearsWithoutGeometry": 0,
@@ -32984,6 +32992,10 @@
         {
           "name": "Dalmacia veneciana",
           "note": "Dominio veneciano costero fechado por ciudad e isla: Brač desde 1278, Šibenik desde 1322, Split desde 1327, con retiradas y reconquistas separadas. No ocupa Dubrovnik, Senj o Vinodol; las interrupciones menores aún requieren investigación."
+        },
+        {
+          "name": "Istria veneciana",
+          "note": "Celda septentrional de Buzet, comprobada sobre el SVG; no incluye Pazin, del ámbito habsbúrgico, ni el polígono dálmata de Novigrad. Buzet pasa de Aquileia a Venecia en 1421. Las incursiones otomanas y la guerra de los uscoques no se convierten en anexiones. Se detiene la atribución veneciana antes de la disolución de la república en 1797; su relevo austríaco se representa desde 1797 en una capa propia, sin superponer soberanías."
         },
         {
           "name": "Morea veneciana · superficie regional",
@@ -33028,7 +33040,7 @@
           "auditThrough": 1578,
           "yearsWithGeometry": 2,
           "yearsWithoutGeometry": 0,
-          "locations": 63,
+          "locations": 64,
           "missingGeometryIntervals": []
         },
         {
@@ -33064,7 +33076,7 @@
           "auditThrough": 1462,
           "yearsWithGeometry": 6,
           "yearsWithoutGeometry": 0,
-          "locations": 62,
+          "locations": 63,
           "missingGeometryIntervals": []
         },
         {
@@ -33082,7 +33094,7 @@
           "auditThrough": 1471,
           "yearsWithGeometry": 10,
           "yearsWithoutGeometry": 0,
-          "locations": 63,
+          "locations": 64,
           "missingGeometryIntervals": []
         },
         {
@@ -33100,7 +33112,7 @@
           "auditThrough": 1473,
           "yearsWithGeometry": 3,
           "yearsWithoutGeometry": 0,
-          "locations": 62,
+          "locations": 63,
           "missingGeometryIntervals": []
         },
         {
@@ -33118,7 +33130,7 @@
           "auditThrough": 1474,
           "yearsWithGeometry": 2,
           "yearsWithoutGeometry": 0,
-          "locations": 62,
+          "locations": 63,
           "missingGeometryIntervals": []
         },
         {
@@ -33136,7 +33148,7 @@
           "auditThrough": 1476,
           "yearsWithGeometry": 3,
           "yearsWithoutGeometry": 0,
-          "locations": 62,
+          "locations": 63,
           "missingGeometryIntervals": []
         },
         {
@@ -33154,7 +33166,7 @@
           "auditThrough": 1478,
           "yearsWithGeometry": 3,
           "yearsWithoutGeometry": 0,
-          "locations": 62,
+          "locations": 63,
           "missingGeometryIntervals": []
         },
         {
@@ -33172,7 +33184,7 @@
           "auditThrough": 1485,
           "yearsWithGeometry": 8,
           "yearsWithoutGeometry": 0,
-          "locations": 64,
+          "locations": 65,
           "missingGeometryIntervals": []
         },
         {
@@ -33190,7 +33202,7 @@
           "auditThrough": 1486,
           "yearsWithGeometry": 2,
           "yearsWithoutGeometry": 0,
-          "locations": 64,
+          "locations": 65,
           "missingGeometryIntervals": []
         },
         {
@@ -33208,7 +33220,7 @@
           "auditThrough": 1523,
           "yearsWithGeometry": 3,
           "yearsWithoutGeometry": 0,
-          "locations": 73,
+          "locations": 74,
           "missingGeometryIntervals": []
         },
         {
@@ -33226,7 +33238,7 @@
           "auditThrough": 1545,
           "yearsWithGeometry": 7,
           "yearsWithoutGeometry": 0,
-          "locations": 72,
+          "locations": 73,
           "missingGeometryIntervals": []
         },
         {
@@ -33244,7 +33256,7 @@
           "auditThrough": 1553,
           "yearsWithGeometry": 9,
           "yearsWithoutGeometry": 0,
-          "locations": 70,
+          "locations": 71,
           "missingGeometryIntervals": []
         },
         {
@@ -33262,7 +33274,7 @@
           "auditThrough": 1554,
           "yearsWithGeometry": 2,
           "yearsWithoutGeometry": 0,
-          "locations": 70,
+          "locations": 71,
           "missingGeometryIntervals": []
         },
         {
@@ -33280,7 +33292,7 @@
           "auditThrough": 1556,
           "yearsWithGeometry": 3,
           "yearsWithoutGeometry": 0,
-          "locations": 70,
+          "locations": 71,
           "missingGeometryIntervals": []
         },
         {
@@ -33298,7 +33310,7 @@
           "auditThrough": 1559,
           "yearsWithGeometry": 4,
           "yearsWithoutGeometry": 0,
-          "locations": 70,
+          "locations": 71,
           "missingGeometryIntervals": []
         },
         {
@@ -33316,7 +33328,7 @@
           "auditThrough": 1567,
           "yearsWithGeometry": 9,
           "yearsWithoutGeometry": 0,
-          "locations": 70,
+          "locations": 71,
           "missingGeometryIntervals": []
         },
         {
@@ -33334,7 +33346,7 @@
           "auditThrough": 1570,
           "yearsWithGeometry": 4,
           "yearsWithoutGeometry": 0,
-          "locations": 70,
+          "locations": 71,
           "missingGeometryIntervals": []
         },
         {
@@ -33352,7 +33364,7 @@
           "auditThrough": 1577,
           "yearsWithGeometry": 8,
           "yearsWithoutGeometry": 0,
-          "locations": 71,
+          "locations": 72,
           "missingGeometryIntervals": []
         },
         {
@@ -33370,7 +33382,7 @@
           "auditThrough": 1585,
           "yearsWithGeometry": 8,
           "yearsWithoutGeometry": 0,
-          "locations": 63,
+          "locations": 64,
           "missingGeometryIntervals": []
         },
         {
@@ -33388,7 +33400,7 @@
           "auditThrough": 1595,
           "yearsWithGeometry": 11,
           "yearsWithoutGeometry": 0,
-          "locations": 63,
+          "locations": 64,
           "missingGeometryIntervals": []
         },
         {
@@ -33406,7 +33418,7 @@
           "auditThrough": 1423,
           "yearsWithGeometry": 10,
           "yearsWithoutGeometry": 0,
-          "locations": 50,
+          "locations": 51,
           "missingGeometryIntervals": []
         },
         {
@@ -33424,7 +33436,7 @@
           "auditThrough": 1457,
           "yearsWithGeometry": 35,
           "yearsWithoutGeometry": 0,
-          "locations": 62,
+          "locations": 63,
           "missingGeometryIntervals": []
         },
         {
@@ -33442,7 +33454,7 @@
           "auditThrough": 1501,
           "yearsWithGeometry": 16,
           "yearsWithoutGeometry": 0,
-          "locations": 76,
+          "locations": 77,
           "missingGeometryIntervals": []
         },
         {
@@ -33460,7 +33472,7 @@
           "auditThrough": 1521,
           "yearsWithGeometry": 21,
           "yearsWithoutGeometry": 0,
-          "locations": 77,
+          "locations": 78,
           "missingGeometryIntervals": []
         },
         {
@@ -33478,7 +33490,7 @@
           "auditThrough": 1538,
           "yearsWithGeometry": 16,
           "yearsWithoutGeometry": 0,
-          "locations": 73,
+          "locations": 74,
           "missingGeometryIntervals": []
         },
         {
@@ -33496,7 +33508,7 @@
           "auditThrough": 1605,
           "yearsWithGeometry": 11,
           "yearsWithoutGeometry": 0,
-          "locations": 63,
+          "locations": 64,
           "missingGeometryIntervals": []
         },
         {
@@ -38377,11 +38389,11 @@
     "source": "audit-map-continuity-report.json → locations",
     "units": "Capas cartográficas y locations; no entidades únicas del catálogo del Atlas.",
     "counts": {
-      "layersWithAuthorityGaps": 149,
-      "locationIntervalsWithoutAuthority": 5261,
-      "uniqueLocationsWithAuthorityGaps": 3149,
-      "locationYearsWithoutAuthority": 163564,
-      "groupedReviewTasks": 290
+      "layersWithAuthorityGaps": 152,
+      "locationIntervalsWithoutAuthority": 5344,
+      "uniqueLocationsWithAuthorityGaps": 3180,
+      "locationYearsWithoutAuthority": 164327,
+      "groupedReviewTasks": 295
     },
     "layers": [
       {
@@ -39663,6 +39675,29 @@
         ]
       },
       {
+        "name": "Islandia bajo la Corona noruega",
+        "intervals": [
+          {
+            "from": 1449,
+            "through": 1449,
+            "locations": 26,
+            "sharedWith": []
+          },
+          {
+            "from": 1482,
+            "through": 1482,
+            "locations": 26,
+            "sharedWith": []
+          },
+          {
+            "from": 1534,
+            "through": 1536,
+            "locations": 26,
+            "sharedWith": []
+          }
+        ]
+      },
+      {
         "name": "Islas egeas otomanas",
         "intervals": [
           {
@@ -39697,6 +39732,17 @@
           {
             "from": 1534,
             "through": 1536,
+            "locations": 1,
+            "sharedWith": []
+          }
+        ]
+      },
+      {
+        "name": "Istria veneciana",
+        "intervals": [
+          {
+            "from": 1606,
+            "through": 1650,
             "locations": 1,
             "sharedWith": []
           }
@@ -39943,6 +39989,17 @@
             "from": 1511,
             "through": 1526,
             "locations": 5,
+            "sharedWith": []
+          }
+        ]
+      },
+      {
+        "name": "Moldavia · comarcas meridionales",
+        "intervals": [
+          {
+            "from": 1654,
+            "through": 1800,
+            "locations": 4,
             "sharedWith": []
           }
         ]
