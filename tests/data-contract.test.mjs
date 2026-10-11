@@ -1,6 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {legacyFormats, legacyMapFormats, legacyMapEvidence, validateContracts} from '../scripts/schema/data-contract.mjs';
+import {CLAIM_REVIEWS} from '../src/evidence/reviewRecords.js';
 import {readContractData, readJson, readPersonLiteral} from '../scripts/schema/read-contract-data.mjs';
 
 const fixtures = () => ({
@@ -28,7 +29,7 @@ test('el contrato valida la fuente publicada antes del alias reinados, sin modif
   const before = JSON.stringify(data.people);
   assert(data.people.length > 0);
   assert(data.people.every(person => !Object.hasOwn(person, 'reinados')));
-  assert.deepEqual(validateContracts(data), []);
+  assert.deepEqual(validateContracts({...data, claimReviews: CLAIM_REVIEWS}), []);
   assert.equal(JSON.stringify(data.people), before);
 });
 
@@ -44,16 +45,13 @@ test('tipos, campos y vocabulario nuevos no se convierten silenciosamente', () =
   assert(codes(data).includes('TYPE'));
 });
 
-test('las excepciones heredadas son exactas y no admiten nuevos casos', () => {
-  const data = fixtures();
-  data.people[0].madreAprox = true;
-  record(data);
-  assert.deepEqual(codes(data), []);
-  data.people[1].padreAprox = true;
-  assert(codes(data).includes('NEW_LEGACY_FORMAT'));
-  delete data.people[1].padreAprox;
-  data.people[0].madreAprox = false;
-  assert(codes(data).includes('NEW_LEGACY_FORMAT'));
+test('los indicadores parentales retirados se rechazan incluso con una excepción antigua', () => {
+  for (const field of ['madreAprox', 'padreAprox']) {
+    const data = fixtures(); data.people[0][field] = true;
+    assert(codes(data).includes('NEW_LEGACY_FORMAT'));
+    record(data);
+    assert(validateContracts(data).some(issue => issue.code === 'UNKNOWN_FIELD' && issue.path.endsWith('.' + field)));
+  }
 });
 
 test('los campos conyugales retirados se rechazan incluso con una excepción antigua', () => {
@@ -109,8 +107,8 @@ test('varias disputas conservan su orden y se validan todos sus límites', () =>
 });
 
 test('retirar formatos antiguos conserva la validez sin exigir más excepciones', () => {
-  const data = fixtures(); data.people[0].madreAprox = true; record(data);
-  delete data.people[0].madreAprox;
+  const data = fixtures(); delete data.mapData.territories[0].sources; record(data);
+  data.mapData.territories[0].sources = [{title: 'Archivo', url: 'https://example.org/documento', locator: 'Página 3'}];
   assert.deepEqual(codes(data), []);
 });
 
@@ -178,4 +176,26 @@ test('la lectura literal rechaza una fuente mal formada y no ejecuta código adj
   assert.throws(() => readPersonLiteral('export const PERSONAS = crearPersonas();'));
   assert.throws(() => readPersonLiteral('export const PERSONAS = [\n {id: "A"},\n];'));
   assert.deepEqual(readPersonLiteral('export const PERSONAS = [\n {"id":"A"},\n];\nthrow new Error("No ejecutar");'), [{id: 'A'}]);
+});
+
+test('un nombre desconocido admite fechas justificadas, pero rechaza años sin evidencia propia', () => {
+  const data = fixtures(); const person = data.people[0];
+  person.identidadDesconocida = true;
+  person.nac = 1250; person.muer = 1325;
+  person.nacAprox = true;
+  person.documentacion = {fechas: {nac: {tipo: 'aproximada', valor: 1250, nota: 'Estimación'}}};
+  assert.equal(codes(data).filter(code => code === 'UNKNOWN_IDENTITY_DATE').length, 2);
+  const source = {title: 'Archivo', url: 'https://example.org/documento', locator: 'Folio 3'};
+  data.claimReviews = {
+    'person:A:birth': {certainty: 'approximate', note: 'Nacimiento estimado por el testimonio', sources: [source]},
+    'person:A:death': {certainty: 'documented', note: 'Año registrado en el obituario', sources: [source]},
+  };
+  assert.deepEqual(codes(data), []);
+  data.claimReviews['person:A:death'].certainty = 'pending';
+  assert(codes(data).includes('UNKNOWN_IDENTITY_DATE'));
+  data.claimReviews['person:A:death'].certainty = 'documented';
+  data.claimReviews['person:A:death'].sources[0] = {...source, locator: ''};
+  assert(codes(data).includes('UNKNOWN_IDENTITY_DATE'));
+  delete person.identidadDesconocida;
+  assert.deepEqual(codes(data), []);
 });

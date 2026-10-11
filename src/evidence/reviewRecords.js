@@ -188,7 +188,37 @@ const tyrolReviews = {
   'person:LEOP1HRE:government:Austria:1657:1705:Archiduque': tyrolReview({title:'Die Welt der Habsburger · Leopold I',url:'https://www.habsburger.net/en/persons/habsburg-emperor/leopold-i',locator:'Cabecera: gobierno de la monarquía desde 1657 hasta 1705'},'El desglose de Austria como territorio propio procede de su gobierno de la monarquía compuesta.', 'inferred'),
 };
 
+const francescoPiccininoFamily = {
+  title: 'Treccani · Serena Ferente, Francesco Piccinino (2015)',
+  url: 'https://www.treccani.it/enciclopedia/francesco-piccinino_(Dizionario-Biografico)/',
+  locator: 'Primer párrafo: nacimiento alrededor de 1407 y maternidad posible de Gabriella di Bartolomeo Sestio',
+};
+const jacopoPiccininoFamily = {
+  title: 'Treccani · Serena Ferente, Jacopo Piccinino (2015)',
+  url: 'https://www.treccani.it/enciclopedia/jacopo-piccinino_(Dizionario-Biografico)/',
+  locator: 'Primer párrafo: Niccolò como padre y Gabriella di Bartolomeo Sestio como madre probable',
+};
+const matthewOneillFamily = {
+  title: 'Dictionary of Irish Biography · Emmett O’Byrne, Matthew O’Neill (2009)',
+  url: 'https://www.dib.ie/biography/oneill-o-neill-matthew-feardorcha-a6954',
+  locator: 'Primer y último párrafos: c.1510, reconocimiento por Conn y dudas sobre la paternidad biológica',
+};
+const identityReview = (certainty, source, note, extra = {}) => ({
+  certainty, sources: [source], note, reviewedAt: '2026-10-11', editor: 'El Árbol de Europa', ...extra,
+});
+
 export const CLAIM_REVIEWS = Object.freeze({
+  'person:FRANCPICC:mother': identityReview('inferred', francescoPiccininoFamily,
+    'La maternidad de Gabriella se presenta como posible. Se conserva el vínculo como inferido; la fuente no permite tratarlo como seguro.'),
+  'person:FRANCPICC:birth': identityReview('approximate', francescoPiccininoFamily,
+    'Nacimiento alrededor de 1407; se conserva el año orientativo y se explicita su aproximación.', {precision: 'circa', timeLabel: 'c. 1407'}),
+  'person:JACOPICC:mother': identityReview('inferred', jacopoPiccininoFamily,
+    'La fuente atribuye la maternidad a Gabriella de manera probable. Se conserva esta filiación como inferida, sin confirmar una alternativa.'),
+  'person:MATTHEWONEILL:father': identityReview('disputed', matthewOneillFamily,
+    'Conn reconoció a Matthew como hijo y heredero. El reconocimiento no resuelve la filiación biológica, que el repertorio mantiene discutida.',
+    {alternatives: ['Conn Bacach O’Neill · padre reconocido, paternidad biológica discutida', 'John Kelly · alternativa asociada al matrimonio de Alison Kelly, sin confirmación biológica']}),
+  'person:MATTHEWONEILL:birth': identityReview('approximate', matthewOneillFamily,
+    'El repertorio fecha el nacimiento hacia 1510. Se sustituye la anterior estimación de 1520 y se conserva el carácter aproximado.', {precision: 'circa', timeLabel: 'c. 1510'}),
   ...ATLAS_CHRONOLOGY_REVIEWS,
   ...REGIONAL_EXTENT_REVIEWS,
   ...TERRITORIAL_CONTINUITY_REVIEWS,
@@ -351,6 +381,13 @@ export const CLAIM_REVIEWS = Object.freeze({
 });
 
 export const EDITORIAL_HISTORY = Object.freeze([
+  {"id":"v54-identity-mujerx1","scope":"MUJERX1","date":"2026-10-11","editor":"El Árbol de Europa","change":"Se marca la identidad no identificada y se retiran dos años de vida sin respaldo en el registro.","reason":"Se mantienen el ID y la relación declarada. La ausencia de nombre no justifica inventar fechas; el vínculo continúa pendiente de revisión documental.","changeEn":"The unidentified identity is marked and two unsupported life dates are removed.","reasonEn":"The ID and declared relationship are preserved. An unknown name does not justify invented dates; the relationship still needs documentary review."},
+  {"id":"v54-identity-mujerx2","scope":"MUJERX2","date":"2026-10-11","editor":"El Árbol de Europa","change":"Se marca la identidad no identificada y se retiran dos años de vida sin respaldo en el registro.","reason":"Se mantienen el ID y la relación declarada. La ausencia de nombre no justifica inventar fechas; el vínculo continúa pendiente de revisión documental.","changeEn":"The unidentified identity is marked and two unsupported life dates are removed.","reasonEn":"The ID and declared relationship are preserved. An unknown name does not justify invented dates; the relationship still needs documentary review."},
+  {"id":"v54-identity-mujerx3","scope":"MUJERX3","date":"2026-10-11","editor":"El Árbol de Europa","change":"Se marca la identidad no identificada y se retiran dos años de vida sin respaldo en el registro.","reason":"Se mantienen el ID y la relación declarada. La ausencia de nombre no justifica inventar fechas; el vínculo continúa pendiente de revisión documental.","changeEn":"The unidentified identity is marked and two unsupported life dates are removed.","reasonEn":"The ID and declared relationship are preserved. An unknown name does not justify invented dates; the relationship still needs documentary review."},
+  {"id":"v54-parentage-francpicc","scope":"FRANCPICC","date":"2026-10-11","editor":"El Árbol de Europa","change":"La maternidad probable pasa del indicador madreAprox a su afirmación con fuente y certeza inferida. El nacimiento se marca como aproximado.","reason":"La entrada individual de Treccani atribuye la maternidad a Gabriella con reserva.","changeEn":"Probable maternity moves from the madreAprox flag to its sourced, inferred claim. Birth is marked approximate.","reasonEn":"The individual Treccani entry qualifies the attribution of maternity to Gabriella."},
+  {"id":"v54-parentage-jacopicc","scope":"JACOPICC","date":"2026-10-11","editor":"El Árbol de Europa","change":"La maternidad probable pasa del indicador madreAprox a su afirmación con fuente y certeza inferida.","reason":"La entrada individual de Treccani atribuye la maternidad a Gabriella con reserva.","changeEn":"Probable maternity moves from the madreAprox flag to its sourced, inferred claim.","reasonEn":"The individual Treccani entry qualifies the attribution of maternity to Gabriella."},
+  {"id":"v54-parentage-matthewoneill","scope":"MATTHEWONEILL","date":"2026-10-11","editor":"El Árbol de Europa","change":"La paternidad reconocida se mantiene como discutida, con alternativa explícita; el nacimiento pasa de c.1520 a c.1510.","reason":"El Dictionary of Irish Biography distingue el reconocimiento por Conn de la incertidumbre biológica y fecha el nacimiento hacia 1510.","changeEn":"Acknowledged paternity remains disputed with an explicit alternative; birth changes from c.1520 to c.1510.","reasonEn":"The Dictionary of Irish Biography distinguishes acknowledgement by Conn from uncertain biological parentage and dates birth to c.1510."},
+
   {id:'v412-location-succession',scope:'all',date:'2026-10-08',editor:'El Árbol de Europa',change:'Dobruja, costa croata, Lika y Lastovo se fechan por separado; Meißen/Turingia, Suabia y las ramas de Nassau reciben superficies revisadas y mandatos sucesorios propios. Se inventarían todas las celdas nunca coloreadas, incluidas cordilleras.',reason:'La ausencia de color puede indicar una laguna de modelado. El relieve no excluye autoridad política y compartir título o dinastía no justifica sumar superficies incompatibles.'},
   {id:'v48-bavaria-palatinate-rhineland',scope:'all',date:'2026-10-04',editor:'El Árbol de Europa',change:'Baviera deja de colorear Franconia y Suabia; las ramas de 1392 se representan con núcleos prudentes. El Palatinado electoral se separa de Pfalz-Neuburg y se completa su sucesión. Jülich, Berg y Cléveris adquieren geometría diferenciada; Mark y Ravensberg quedan sin polígono propio.',reason:'La misma región podía atribuirse a gobernantes incompatibles o a un título distinto. Los límites del SVG no permiten convertir Mark en Sauerland ni Ravensberg en Lippe.'},
   {id:'v47-tyrol-continuity',scope:'all',date:'2026-10-04',editor:'El Árbol de Europa',change:'Se registra la administración colectiva tras 1595, el gobierno delegado de Maximiliano III y Leopoldo V, la regencia de Claudia de Médici y la reunión bajo Leopoldo I en 1665.',reason:'La sucesión anterior dejaba Tirol sin responsables identificados durante buena parte de 1595–1665 y confundía autoridad familiar, gobierno delegado y titularidad.'},

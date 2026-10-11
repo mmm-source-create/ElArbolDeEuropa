@@ -51,7 +51,9 @@ Ausencia de fechas o relaciones significa que no están registradas. Una lista v
 
 Las notas explican el testimonio y su límite; una última constancia no se transforma automáticamente en fecha de muerte. Los intervalos no pueden estar invertidos. `documentacion.notas[]` tiene `campo`, `estado` y `texto`; los estados actuales son `variantes`, `aclaracion` y `discutida`.
 
-`madreAprox` y `padreAprox` son compatibilidad pendiente en tres personas. Su futura migración debe integrar la certeza y fuentes de la relación en el sistema existente de afirmaciones. No se crea una segunda base de evidencia ni se sustituye una filiación sin revisión documental.
+Desde V5.4, `madreAprox` y `padreAprox` se rechazan como campos de fuente, incluso con una excepción antigua. Los tres casos revisados utilizan las afirmaciones existentes `person:ID:mother` o `person:ID:father`: maternidad probable como `inferred`, paternidad biológica discutida como `disputed`, con pasaje y nota individual. Los IDs y relaciones declaradas permanecen estables.
+
+Una persona con `identidadDesconocida: true` puede conservar fechas conocidas. Cada año registrado en `nac` o `muer` requiere una revisión de su propia afirmación de nacimiento o muerte, con certeza revisada, nota y al menos una fuente HTTP(S) con título y localizador. Una nota genérica, una aproximación sin fuente o la biografía de un pariente no cumplen esa regla. El auditor consulta `CLAIM_REVIEWS`, el mismo registro que utiliza la ficha; no existe otra base de evidencia. Las tres madres sin nombre revisadas conservan los vínculos pendientes y explican por qué se retiran sus años sin respaldo.
 
 ### Slugs y excepciones
 
