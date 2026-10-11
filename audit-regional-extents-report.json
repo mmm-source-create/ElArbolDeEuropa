@@ -1,7 +1,7 @@
 {
   "reviewedAt": "2026-10-07",
   "units": "SVG coordinate units squared",
-  "measuredCells": 2432,
+  "measuredCells": 2463,
   "series": [
     {
       "name": "Castilla",
@@ -5572,5 +5572,139 @@
     "Selecciones regionales aproximadas; el SVG no permite separar todos los enclaves, señoríos ni derechos compartidos.",
     "Las transiciones de Dobruja de 1388–1391 y 1417–1419 no tienen una fecha de conquista indiscutida.",
     "Weilburg, Idstein y Beilstein no tienen celdas separables: no se sustituyen por ciudades vecinas. Las sucesiones ernestinas menores y las dos ramas de Siegen requieren aún desagregación."
+  ],
+  "referenceGapLayers": [
+    {
+      "name": "Islandia bajo la Corona noruega",
+      "coverage": {
+        "through": 1800,
+        "from": 1264
+      },
+      "sources": [
+        {
+          "title": "Alþingi · The Icelandic Parliament",
+          "url": "https://www.althingi.is/pdf/enska.pdf",
+          "locator": "p.7 impresa, sección The monarchy until 1800: incorporación de 1262–1264, sucesión danesa, absolutismo de 1662 y continuidad del Althing hasta 1800."
+        },
+        {
+          "title": "Sverrir Jakobsson · All the King’s men (2021)",
+          "url": "https://iris.hi.is/en/publications/all-the-kings-men-the-incorporation-of-iceland-into-the-norwegian/",
+          "locator": "Scandinavian Journal of History 46(5), pp.571–592; resumen: incorporación gradual, autoridad regia anterior a 1262 y armonización jurídica mediante Jónsbók en 1281."
+        },
+        {
+          "title": "Alþingi · Alþjóðamálastofnun (2007)",
+          "url": "https://www.althingi.is/altext/erindi/137/137-654.pdf",
+          "locator": "Political Structure and External Relations: unión noruega, sucesión de 1380 y relación con la monarquía danesa."
+        }
+      ],
+      "cuts": [
+        {
+          "year": 1264,
+          "cells": 26,
+          "svgArea": 372.19741,
+          "unmeasured": [],
+          "event": "Superficie completa desde el final del proceso de incorporación de 1262–1264."
+        }
+      ]
+    },
+    {
+      "name": "Istria veneciana",
+      "coverage": {
+        "through": 1796,
+        "from": 1421
+      },
+      "sources": [
+        {
+          "title": "Hrvatska enciklopedija · Buzet",
+          "url": "https://enciklopedija.hr/clanak/buzet",
+          "locator": "Administración veneciana desde 1421, sede del capitán de Raspor desde 1511; incursiones otomanas y guerra de los uscoques."
+        },
+        {
+          "title": "Istarska enciklopedija · Buzet, Leksikografski zavod Miroslav Krleža",
+          "url": "https://istra.lzmk.hr/clanak/buzet",
+          "locator": "Aquileia hasta 1421 y posterior dominio veneciano; las incursiones no toman la ciudad."
+        },
+        {
+          "title": "Hrvatska enciklopedija · Istra",
+          "url": "https://www.enciklopedija.hr/clanak/istra-poluotok",
+          "locator": "Expansión veneciana de 1420–1421 frente al condado de Pazin habsbúrgico; reparto de 1797."
+        }
+      ],
+      "cuts": [
+        {
+          "year": 1421,
+          "cells": 1,
+          "svgArea": 0.9494,
+          "unmeasured": [],
+          "event": "Buzet bajo administración veneciana desde 1421."
+        }
+      ]
+    },
+    {
+      "name": "Moldavia · comarcas meridionales",
+      "coverage": {
+        "through": 1800,
+        "from": 1457
+      },
+      "sources": [
+        {
+          "title": "Primăria Bârlad · Istoria orașului",
+          "url": "https://primariabarlad.ro/barlad/cultura/istoria-orasului/",
+          "locator": "Documentos comerciales de Alexandru cel Bun (1401 y 1408); Bârlad como sede de la administración de la Moldavia meridional."
+        },
+        {
+          "title": "Primăria Adjud · Monografia localității",
+          "url": "https://www.adjud.ro/municipiul-adjud/despre-adjud/monografia-localitatii/",
+          "locator": "Privilegio de Iliaș de 9 de abril de 1433: aduana moldava en Adjudu Vechi."
+        },
+        {
+          "title": "Primăria Târgu Trotuș · Memoriu general",
+          "url": "https://primariatgtrotus.ro/wp-content/uploads/2023/08/Memoriu-Targu-Trotus.pdf",
+          "locator": "Historia: aduana en el privilegio de 6 de octubre de 1408; documentos de 1435 y 1460 sobre el corredor comercial."
+        },
+        {
+          "title": "Acta Moldaviae Meridionalis XLI (2020)",
+          "url": "https://www.biblioteca-digitala.ro/reviste/Acta-Moldaviae-Meridionalis/41_Acta-Moldaviae-Meridionalis_XLI_2020.pdf",
+          "locator": "p.44: documento de 1 de septiembre de 1435 sobre Tutova y Bârlad en la partición meridional; evolución administrativa y distrito Bârlad–Tutova en el siglo XVI."
+        }
+      ],
+      "cuts": [
+        {
+          "year": 1457,
+          "cells": 4,
+          "svgArea": 10.97246,
+          "unmeasured": [],
+          "event": "Comarcas meridionales bajo la autoridad principesca moldava; no son nuevas fundaciones ni provincias otomanas."
+        }
+      ]
+    },
+    {
+      "name": "Istria bajo administración austríaca",
+      "coverage": {
+        "from": 1797,
+        "through": 1800
+      },
+      "sources": [
+        {
+          "title": "Hrvatska enciklopedija · Istra",
+          "url": "https://www.enciklopedija.hr/clanak/istra-poluotok",
+          "locator": "Expansión veneciana de 1420–1421 frente al condado de Pazin habsbúrgico; reparto de 1797."
+        }
+      ],
+      "cuts": [
+        {
+          "year": 1797,
+          "cells": 1,
+          "svgArea": 0.9494,
+          "unmeasured": [],
+          "event": "Transferencia de Istria a Austria en los acuerdos de Leoben y Campo Formio de 1797."
+        }
+      ]
+    }
+  ],
+  "referenceGapLimitations": [
+    "El HTML de referencia sirve para detectar huecos, no como prueba de soberanía ni de fronteras. No se ejecuta su código ni se importan automáticamente sus máscaras.",
+    "Primera revisión: 31 celdas. Los demás candidatos mantienen su estado de investigación sin verificar.",
+    "Los límites interiores proceden del SVG actual y no representan demarcaciones históricas exactas; las fechas de la primera mención urbana no se usan como fechas de nacimiento territorial."
   ]
 }

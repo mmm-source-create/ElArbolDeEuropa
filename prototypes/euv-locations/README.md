@@ -704,6 +704,13 @@ Los dos primeros pasos requieren respectivamente Python y el entorno geométrico
 existente con Shapely/svgpathtools. No se ejecuta ni se importan las máscaras del
 HTML facilitado como ejemplo. La cobertura 1200–1800 sigue siendo parcial.
 
+La [revisión del 11 de octubre](../../docs/atlas-referencia-huecos-2026-10-11.md)
+contrasta el ejemplo `.claude.14.html` con las celdas nunca coloreadas. Su
+primera tanda añade 31 polígonos documentados de Islandia, Buzet y Moldavia,
+sin importar automáticamente los colores ni las atribuciones del ejemplo.
+La fuente editable es `reference-gap-review.json`; se integra con
+`merge-map-expansions.mjs` y se mide con `build-regional-extent-cells.py`.
+
 ## Fronteras y dominios europeos · 8 de octubre de 2026
 
 `frontier-source.py` genera 9 series sustitutivas y 27 capas fechadas a partir de

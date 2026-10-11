@@ -59,9 +59,19 @@ export function mergeMapExpansions(data) {
     ...succession.overrides.map(item => ({...item, supplement:'succession-review'}))];
   data.overrides = [...data.overrides.filter(item => item.supplement !== 'frontier-review'),
     ...frontier.overrides.map(item => ({...item, supplement:'frontier-review'}))];
+  const referenceGaps = read('reference-gap-review.json');
+  applyContinuityReview(data, referenceGaps);
+  data.referenceGapReview = data.continuityReview;
+  data.continuityReview = continuity;
   layers = [...data.territories, ...data.additionalTerritories];
   const svg = fs.readFileSync(new URL('euv-locations-crop.svg',import.meta.url),'utf8');
   const ids = new Set([...svg.matchAll(/<path\b[^>]*\bid="([^"]+)"/g)].map(match => match[1]));
+  for (const layer of referenceGaps.territories) {
+    if (!layer.sources?.length || layer.sources.some(source => !source.url?.startsWith('https://') || !source.locator)
+      || !layer.coverage || layer.coverage.from < data.from || layer.coverage.through > data.through
+      || layer.coverage.from > layer.coverage.through || layer.versions[0]?.from !== layer.coverage.from)
+      throw new Error(`Invalid reference-gap evidence or period: ${layer.name}`);
+  }
   for (const layer of layers) {
     const series = [layer,...(layer.temporalExtensions || [])];
     for (const entry of series) for (const version of entry.versions) {
