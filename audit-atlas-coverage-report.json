@@ -25534,13 +25534,13 @@
       "territory": "Países Bajos",
       "status": "represented",
       "counts": {
-        "effectiveMandatesAllTime": 17,
-        "effectiveMandatesInScope": 16,
+        "effectiveMandatesAllTime": 21,
+        "effectiveMandatesInScope": 20,
         "nonpaintingMandatesInScope": 0,
         "locations": 86,
-        "yearsWithGovernment": 198,
-        "yearsWithGeometry": 119,
-        "yearsWithoutGeometry": 79,
+        "yearsWithGovernment": 202,
+        "yearsWithGeometry": 144,
+        "yearsWithoutGeometry": 58,
         "mandatesWithSomeMissingGeometry": 10,
         "mandatesEntirelyWithoutGeometry": 9
       },
@@ -25549,7 +25549,7 @@
       "limitedCore": true,
       "missingGeometryIntervals": [
         {
-          "from": 1572,
+          "from": 1593,
           "through": 1650
         }
       ],
@@ -25620,6 +25620,24 @@
         }
       ],
       "governments": [
+        {
+          "personId": "ALEJFARNESIO",
+          "personName": "Alejandro Farnesio",
+          "government": {
+            "territory": "Países Bajos",
+            "title": "Gobernador",
+            "from": 1578,
+            "through": 1592,
+            "class": "gobierno",
+            "condition": "gobierno delegado"
+          },
+          "auditFrom": 1578,
+          "auditThrough": 1592,
+          "yearsWithGeometry": 15,
+          "yearsWithoutGeometry": 0,
+          "locations": 46,
+          "missingGeometryIntervals": []
+        },
         {
           "personId": "MARGPARMA",
           "personName": "Margarita de Parma",
@@ -25707,6 +25725,60 @@
               "through": 1633
             }
           ]
+        },
+        {
+          "personId": "FERN2ALBA",
+          "personName": "Fernando Álvarez de Toledo y Pimentel",
+          "government": {
+            "territory": "Países Bajos",
+            "title": "Gobernador",
+            "from": 1567,
+            "through": 1573,
+            "class": "gobierno",
+            "condition": "gobierno delegado"
+          },
+          "auditFrom": 1567,
+          "auditThrough": 1573,
+          "yearsWithGeometry": 7,
+          "yearsWithoutGeometry": 0,
+          "locations": 85,
+          "missingGeometryIntervals": []
+        },
+        {
+          "personId": "DONJUANAUST",
+          "personName": "Don Juan de Austria",
+          "government": {
+            "territory": "Países Bajos",
+            "title": "Gobernador",
+            "from": 1576,
+            "through": 1578,
+            "class": "gobierno",
+            "condition": "gobierno delegado"
+          },
+          "auditFrom": 1576,
+          "auditThrough": 1578,
+          "yearsWithGeometry": 3,
+          "yearsWithoutGeometry": 0,
+          "locations": 11,
+          "missingGeometryIntervals": []
+        },
+        {
+          "personId": "LUISREQUESENS",
+          "personName": "Luis de Requesens y Zúñiga",
+          "government": {
+            "territory": "Países Bajos",
+            "title": "Gobernador",
+            "from": 1573,
+            "through": 1576,
+            "class": "gobierno",
+            "condition": "gobierno delegado"
+          },
+          "auditFrom": 1573,
+          "auditThrough": 1576,
+          "yearsWithGeometry": 4,
+          "yearsWithoutGeometry": 0,
+          "locations": 76,
+          "missingGeometryIntervals": []
         },
         {
           "personId": "WILLIAMSILENT",
@@ -38392,7 +38464,7 @@
       "layersWithAuthorityGaps": 152,
       "locationIntervalsWithoutAuthority": 5344,
       "uniqueLocationsWithAuthorityGaps": 3180,
-      "locationYearsWithoutAuthority": 164327,
+      "locationYearsWithoutAuthority": 164084,
       "groupedReviewTasks": 295
     },
     "layers": [
@@ -39087,7 +39159,7 @@
             "sharedWith": []
           },
           {
-            "from": 1568,
+            "from": 1577,
             "through": 1598,
             "locations": 3,
             "sharedWith": []
@@ -39465,7 +39537,7 @@
             "sharedWith": []
           },
           {
-            "from": 1568,
+            "from": 1577,
             "through": 1598,
             "locations": 5,
             "sharedWith": []
@@ -39551,7 +39623,7 @@
             "sharedWith": []
           },
           {
-            "from": 1568,
+            "from": 1577,
             "through": 1598,
             "locations": 3,
             "sharedWith": []
@@ -39568,7 +39640,7 @@
             "sharedWith": []
           },
           {
-            "from": 1568,
+            "from": 1577,
             "through": 1598,
             "locations": 9,
             "sharedWith": []
@@ -40313,7 +40385,7 @@
             "sharedWith": []
           },
           {
-            "from": 1568,
+            "from": 1577,
             "through": 1598,
             "locations": 4,
             "sharedWith": []
@@ -40726,7 +40798,7 @@
             "sharedWith": []
           },
           {
-            "from": 1568,
+            "from": 1577,
             "through": 1598,
             "locations": 1,
             "sharedWith": []
@@ -40929,7 +41001,7 @@
             "sharedWith": []
           },
           {
-            "from": 1568,
+            "from": 1577,
             "through": 1598,
             "locations": 2,
             "sharedWith": []

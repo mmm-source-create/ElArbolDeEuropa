@@ -2,10 +2,10 @@
 
 Atlas histórico y genealógico para explorar personas, dinastías, territorios y sus conexiones familiares.
 
-- [Web](https://www.treeofeurope.eu/es/) · Versión del repositorio: **V5.4**
-- [Cambios de V5.4](docs/V5.4.md) · [Documentación e historial](docs/README.md) · [Próximos pasos cartográficos](docs/V4.8_PROPUESTAS.md) · [Seguridad](SECURITY.md)
+- [Web](https://www.treeofeurope.eu/es/) · Versión del repositorio: **V5.5**
+- [Cambios de V5.5](docs/V5.5.md) · [Documentación e historial](docs/README.md) · [Próximos pasos cartográficos](docs/V4.8_PROPUESTAS.md) · [Seguridad](SECURITY.md)
 
-La V5.4 revisa tres identidades sin nombre y tres filiaciones inciertas. Retira seis fechas sin respaldo, documenta las maternidades probables de los Piccinino y distingue el reconocimiento de Matthew O’Neill de su paternidad biológica; su nacimiento se corrige a hacia 1510. Conserva los IDs y enlaces familiares y retira los tres indicadores parentales heredados.
+La V5.5 documenta las gobernaciones de Alba, Requesens, don Juan de Austria y Farnesio en los Países Bajos, distinguiendo delegación y control disputado. Añade a Luis de Requesens y retira las cuatro excepciones `gobernante`; la autoridad del Atlas depende de mandatos fechados.
 
 La V5.2 convierte las 33 disputas individuales al formato de lista. Todos los mandatos con `controlDisputado` usan ahora arrays; se conservan sus intervalos, títulos, notas y fuentes. El contrato rechaza nuevos objetos individuales y retira sus excepciones. La base de comportamiento de V5.0 sigue protegiendo los resultados del Atlas.
 

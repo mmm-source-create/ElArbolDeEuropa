@@ -33,7 +33,7 @@ export const PERSON_SCHEMA = object({
   id: text, nombre: text, titulo: text, reinos: array(text),
   ...fields(['sobrenombre', 'dinastia', 'padre', 'madre', 'slug'], text),
   ...fields(['nac', 'muer'], year),
-  ...fields(['nacAprox', 'muerAprox', 'gobernante', 'identidadDesconocida'], boolean),
+  ...fields(['nacAprox', 'muerAprox', 'identidadDesconocida'], boolean),
   ...fields(['conyuges', 'amantes', 'aliases'], array(text)),
   gobiernos: optional(array(GOVERNMENT_SCHEMA)),
   documentacion: optional(object({
@@ -139,6 +139,11 @@ export function validateContracts({people, territories, mapData, locationIds, le
     const shapeIssues = validateShape(person, PERSON_SCHEMA, path);
     issues.push(...shapeIssues);
     if (shapeIssues.length) continue;
+    interval(person, 'nac', 'muer', path);
+    for (const field of ['padre', 'madre']) if (person[field] === person.id)
+      add('SELF_RELATIONSHIP', `${path}.${field}`, 'Una persona no puede ser su propio progenitor');
+    for (const field of ['conyuges', 'amantes']) if (person[field]?.includes(person.id))
+      add('SELF_RELATIONSHIP', `${path}.${field}`, 'Una relación no puede apuntar a la misma persona');
     // Unknown name and unknown chronology are independent. A recorded year for
     // an unnamed person needs evidence on that date, not on a nearby relative.
     if (person.identidadDesconocida) for (const [field, suffix] of [['nac', 'birth'], ['muer', 'death']]) {
@@ -166,6 +171,7 @@ export function validateContracts({people, territories, mapData, locationIds, le
       if (!own(territories, government.territorio)) add('MISSING_TERRITORY', key, `Entidad inexistente: ${government.territorio}`);
       if (!person.reinos?.includes(government.territorio)) add('GOVERNMENT_ASSOCIATION', key, 'El gobierno no figura entre los territorios asociados');
       if (government.soberano && !ids.has(government.soberano)) add('MISSING_PERSON', `${key}.soberano`, 'Soberano inexistente');
+      if (government.soberano === person.id) add('SELF_SOVEREIGN', `${key}.soberano`, 'Un mandato delegado no puede referirse a sí mismo como soberano');
       for (const period of government.controlDisputado || []) {
         interval(period, 'desde', 'hasta', `${key}.controlDisputado`);
         if (period.desde < government.desde || period.hasta > government.hasta) add('DISPUTE_OUTSIDE_GOVERNMENT', key, 'La disputa excede el mandato');

@@ -39,9 +39,8 @@ for (const p of PERSONAS) {
     if (r?.territorio && !realmSet.has(r.territorio)) {
       add("WARNING", "GOV_REALM_NOT_LISTED", key, `${p.nombre}: gobierna ${r.territorio}, pero el territorio no figura en reinos[]`);
     }
-    if (isEffective(r) && p.gobernante !== true && /^(consorte|noble)\b/i.test(title(p)) && r.clase !== "regencia" && !["jure uxoris"].includes(String(r.condicion || "").toLowerCase())) {
-      add("INFO", "CONSORT_EFFECTIVE_GOVERNMENT", key, `${p.nombre}: ficha de ${title(p)} con gobierno efectivo en ${r.territorio}; revisar si es intencional`);
-    }
+    // La clase y condición del mandato acreditan autoridad. El título
+    // resumido puede incluir otros papeles (consorte, general, noble).
   }
 
   if (likelyRulerTitle(p) && !(p.reinos || []).length) {

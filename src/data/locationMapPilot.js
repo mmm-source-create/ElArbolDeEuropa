@@ -32,6 +32,8 @@ function layerIndex(data) {
 }
 
 export function pilotJurisdictionsFor(territory, year, personId = null) {
+  const scope = authorityMapScope(personId, territory, year);
+  if (scope?.jurisdictions) return scope.jurisdictions;
   const chronological=chronologyJurisdictionsFor(territory,year,personId);
   const frontier=frontierJurisdictions(continuityJurisdictions(regionalExtentJurisdictions(appendChronologyJurisdictions(chronological ?? basePilotJurisdictionsFor(territory,year,personId),territory,personId),territory,year,personId),territory,year,personId),territory,year,personId);
   return referenceGapJurisdictions(successionJurisdictions(frontier,territory,year,personId),territory);
@@ -212,6 +214,9 @@ export function reviewedAuthorityConditions(data, territory, year, personId = nu
   for (const name of names) {
     const entry = layerIndex(data).get(name);
     const ids = new Set(reviewedLayerLocations(data, entry, year, personId));
+    const scope = authorityMapScope(personId, territory, year);
+    if (scope?.disputedJurisdictions?.includes(name)) for (const id of ids)
+      conditions.set(id,{condition:'control disputado',note:scope.note,sources:[scope.source,...(scope.additionalSources || [])]});
     if (entry?.authorityCondition) for (const id of ids)
       conditions.set(id,{condition:entry.authorityCondition,note:entry.note,sources:reviewedLayerEvidence(entry,year).sources});
     for (const correction of layerIndexes.get(data)?.corrections.get(name) || []) {
@@ -237,7 +242,8 @@ export function mapLocationsForGovernment(data, government, year, personId = nul
   if (layers.some(entry => reviewedLayerCovered(data, entry, year))) {
     const scope = authorityMapScope(personId, government.territorio, year);
     const ids = [...new Set(layers.flatMap(entry => reviewedLayerLocations(data, entry, year, personId)))];
-    return applyMapBorderCorrections(scope ? ids.filter(id => scope.ids.includes(id)) : ids, government.territorio, year);
+    const scoped = scope?.ids ? ids.filter(id => scope.ids.includes(id)) : ids;
+    return applyMapBorderCorrections(scoped.filter(id => !scope?.excludedIds?.includes(id)), government.territorio, year);
   }
   const crosswalk = data.locationCrosswalk?.newIdsByOldId || {};
   return applyMapBorderCorrections([...new Set(legacyIds.flatMap(id => crosswalk[id]?.ids || []))], government.territorio, year);

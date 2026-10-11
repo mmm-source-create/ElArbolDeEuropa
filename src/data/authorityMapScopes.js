@@ -1,3 +1,4 @@
+import {netherlandsGovernorScope} from './netherlandsGovernorScopes.js';
 // Dated regional scopes shared by painting, inspection and the coverage audit.
 // Each ID remains an approximate map cell; sources document authority and named sites.
 export const AUTHORITY_MAP_SCOPES = Object.freeze([
@@ -364,6 +365,8 @@ export const AUTHORITY_MAP_SCOPES = Object.freeze([
 ]);
 
 export function authorityMapScope(personId, territory, year) {
+  const governor = netherlandsGovernorScope(personId, territory, year);
+  if (governor) return governor;
   if (personId === 'VLADHENMOR' && territory === 'Moravia' && year >= 1197 && year <= 1211)
     return {ids:['Brno','Hodonin','Pernstejn','Vyskov','Bitov','Dacice','Jihlava','Znojmo'],
       source:{title:'Moravské zemské muzeum · Stříbrný poklad ze Střelic',

@@ -912,13 +912,8 @@ export function territorioCoincideConFiltro(territorio, filtro) {
 // iluminar el mapa; el resto sigue apareciendo en el filtro de territorios
 // y en su biografía con normalidad, simplemente no pinta nada en el mapa.
 //
-// Por defecto se infiere del campo `titulo` con la lista de abajo. Como el
-// título por sí solo no siempre basta (un "Duque" puede ser el titular
-// reinante o un segundón sin poder real), cualquier persona en PERSONAS
-// puede llevar un campo explícito `gobernante: true` o `gobernante: false`
-// que sobreescribe la heurística para ese caso puntual — no hace falta
-// tocar el resto del dataset.
-export const TITULOS_GOBERNANTES = ["Papa", "Emperador", "Emperatriz", "Rey", "Reina", "Duque", "Gran Duque", "Archiduque", "Conde", "Condesa", "Marqués", "Señor", "Señora", "Soberano", "Soberana"];
+// La autoridad depende de mandatos fechados y de su condición. El título
+// resumido y las asociaciones dinásticas no acreditan gobierno territorial.
 
 const TIPOS_REINADO_NO_EFECTIVOS = new Set(["titular", "pretensión"]);
 
@@ -969,14 +964,12 @@ export function territoriosGobernadosEnAño(persona, año) {
   }
   // Sin un intervalo de gobierno no inferimos dominio territorial a partir
   // de `reinos`: ese campo también expresa procedencia, matrimonio o vínculo
-  // dinástico. Solo se permite el fallback cuando la ficha ha sido certificada
-  // manualmente con `gobernante: true`.
+  // dinástico.
   return [];
 }
 
 export function esGobernante(persona) {
   if (!persona) return false;
-  if (typeof persona.gobernante === "boolean") return persona.gobernante;
   const reinadosDetallados = listaReinados(persona);
   if (reinadosDetallados.length) return reinadosDetallados.some(reinadoEsEfectivo);
   return false;

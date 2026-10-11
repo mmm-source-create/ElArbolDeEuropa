@@ -275,17 +275,9 @@ export function MapaEuropa({ seleccion, anioGlobal = null, onSelectTerritorio, o
         }
       } else if (seleccion) {
         const reinadosDetallados = listaReinados(seleccion).filter(reinadoEsEfectivo);
-        const entradas = reinadosDetallados.length
-          ? (Number.isFinite(anioGlobal)
-              ? reinadosActivos(seleccion, anioGlobal, { soloEfectivos: true })
-              : reinadosDetallados)
-          : (seleccion.gobernante === true
-              ? territoriosDe(seleccion).map((territorio) => ({
-                  territorio,
-                  desde: añoReferenciaTerritorial(seleccion, territorio),
-                  hasta: añoReferenciaTerritorial(seleccion, territorio),
-                }))
-              : []);
+        const entradas = Number.isFinite(anioGlobal)
+          ? reinadosActivos(seleccion, anioGlobal, { soloEfectivos: true })
+          : reinadosDetallados;
 
         const porTerritorio = new Map();
         entradas.forEach((entrada) => {

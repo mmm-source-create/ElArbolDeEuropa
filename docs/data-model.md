@@ -1,6 +1,6 @@
 # Contrato de datos · V5
 
-Este documento describe la fuente publicada y el contrato ejecutable de `scripts/schema/data-contract.mjs`. V5.0 introdujo validación y protección del comportamiento; V5.1 comparte la lectura entre consumidores, V5.2 exige listas para las disputas y V5.3 para los cónyuges en la fuente. La compatibilidad restante se retirará en entregas posteriores de la serie V5.
+Este documento describe la fuente publicada y el contrato ejecutable de `scripts/schema/data-contract.mjs`. V5.0 introdujo validación y protección del comportamiento; V5.1 comparte la lectura entre consumidores, V5.2 exige listas para las disputas y V5.3 para los cónyuges en la fuente. V5.4 traslada la incertidumbre parental a las afirmaciones documentadas; V5.5 retira `gobernante` y exige intervalos de vida coherentes y referencias sin autorrelaciones. La compatibilidad restante se retirará en entregas posteriores de la serie V5.
 
 ## Fuentes y derivados
 
@@ -25,7 +25,7 @@ Campos opcionales:
 - Presentación: `sobrenombre`, `dinastia`, `aliases[]`, `slug`.
 - Cronología: `nac`, `muer`, `nacAprox`, `muerAprox`, `documentacion`.
 - Familia: `padre`, `madre`, `conyuges[]`, `amantes[]`.
-- Autoridad: `gobiernos[]`, `gobernante`.
+- Autoridad: `gobiernos[]`, con intervalo, clase y condición propios.
 - Identidad: `identidadDesconocida`, cuando se haya revisado un caso concreto.
 
 Las referencias familiares y el soberano de un mandato deben existir. Las auditorías genealógicas vigentes comprueban además ciclos, autorreferencias y contradicciones cronológicas. La reciprocidad conyugal se revisa; no se inventa un parentesco para satisfacer una comprobación.
@@ -59,7 +59,7 @@ Una persona con `identidadDesconocida: true` puede conservar fechas conocidas. C
 
 `slug` es un override opcional. La política pública se implementa en `src/utils/personLabels.js`; los generadores resuelven colisiones con el ID. El contrato de regresión comprueba las rutas realmente generadas, también las inglesas y los capítulos.
 
-`gobernante` conserva cuatro excepciones explícitas del filtro de gobernantes. No concede por sí mismo un mandato ni un polígono. No se elimina porque tenga pocos usos.
+Desde V5.5, el filtro de gobernantes depende de mandatos efectivos y fechados. Las cuatro excepciones `gobernante` se retiraron después de comprobar que su selección era idéntica sin ellas. El contrato rechaza el campo retirado. El título resumido y `reinos[]` no acreditan autoridad ni conceden polígonos. Un gobernador conserva su mandato delegado y referencia al soberano; el mapa puede representar solo una parte de su jurisdicción y señalar control disputado.
 
 ## Mandatos
 

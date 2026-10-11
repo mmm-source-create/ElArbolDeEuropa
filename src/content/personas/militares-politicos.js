@@ -42,9 +42,6 @@ export const MILITARES_POLITICOS = Object.freeze({
   "ALVAROBAZAN": {
     "resumen": "Almirante español y marqués de Santa Cruz, uno de los grandes comandantes navales del siglo XVI. Participó en la estrategia mediterránea de Felipe II y en la conquista de Portugal."
   },
-  "DONJUANAUST": {
-    "resumen": "Hijo natural de Carlos V y comandante de la Liga Santa en Lepanto. Su victoria naval de 1571 lo convirtió en una de las figuras militares más célebres de la Europa de Felipe II."
-  },
   "CATASFOR": {
     "resumen": "Noble italiana, señora de Imola y Forlì y una de las figuras más célebres de la política de la Romaña. Defendió enérgicamente sus dominios hasta ser derrotada por César Borja."
   },
