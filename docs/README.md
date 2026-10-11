@@ -1,79 +1,69 @@
 # Documentación
 
-- [Uso del Atlas y desafíos](ATLAS.md)
-- [Contrato de personas y cartografía](data-model.md)
-- [Validación y actualización de la base V5](v5-regression.md)
-- [Herramientas y comandos actuales](../scripts/README.md)
-- [Entorno Python reproducible para cartografía](python-cartography.md)
-- [Clasificación de fuentes y resultados](artifacts.md)
-- [Guía documental de los Capetos](CAPETOS.md)
-- [Criterios de cartografía de Irlanda](CARTOGRAFIA_IRLANDA.md)
-- [Borgoña: sucesión y límites del mapa](CARTOGRAFIA_BORGONA.md)
-- [Iberia e Italia: gobiernos y límites del mapa](CARTOGRAFIA_IBERIA_ITALIA.md)
-- [Sacro Imperio y tierras austríacas: marco y límites del mapa](CARTOGRAFIA_SACRO_IMPERIO.md)
-- [Criterios de contenido](#criterios-de-contenido)
-- [Política de seguridad](../SECURITY.md)
-- [Fuentes y metodología](https://www.treeofeurope.eu/es/fuentes)
+La guía vigente está separada de las notas históricas. Para instalar y
+compilar, empieza por el [README del proyecto](../README.md).
+
+## Uso y mantenimiento
+
+- [Uso del Atlas, historias y desafíos](ATLAS.md).
+- [Contrato de personas, mandatos y cartografía](data-model.md).
+- [Añadir o corregir una persona](contributing-people.md).
+- [Comprobar regresiones y revisar cambios intencionados](v5-regression.md).
+- [Herramientas y comandos actuales](../scripts/README.md).
+- [Entorno Python reproducible](python-cartography.md).
+- [Política de seguridad](../SECURITY.md).
+
+## Metodología y procedencia
+
+- [Fuentes, evidencia y límites](https://www.treeofeurope.eu/es/fuentes).
+- Bibliografía compartida: [`src/content/sources.js`](../src/content/sources.js).
+  Revisiones por afirmación: [`src/evidence/`](../src/evidence/).
+- [Clasificación de fuentes, resultados revisados y temporales](artifacts.md)
+  y [catálogo de archivos](artifact-catalog.json).
+- [Laboratorio cartográfico y procedencia de sus capas](../prototypes/euv-locations/README.md).
+- [Capetos](CAPETOS.md), [Irlanda](CARTOGRAFIA_IRLANDA.md),
+  [Borgoña](CARTOGRAFIA_BORGONA.md), [Iberia e Italia](CARTOGRAFIA_IBERIA_ITALIA.md)
+  y [Sacro Imperio y tierras austríacas](CARTOGRAFIA_SACRO_IMPERIO.md).
+
+## Resultados de revisión
+
+Los [informes aceptados](reports/README.md) son instantáneas de una revisión,
+no auditorías ejecutadas hoy. Los nuevos diagnósticos se guardan en
+`.cache/audits/`. La [continuidad](atlas-continuity-audit.md),
+las [fronteras](atlas-frontier-review.md) y el [inventario territorial](atlas-unrepresented-inventory.md)
+conservan el contexto y los límites de sus entregas. Sus cifras deben
+interpretarse con la fecha y versión del documento.
 
 ## Versiones
 
-Los informes describen el estado validado de cada entrega. Sus cifras y listas de archivos son históricas; la instalación vigente está en el [README](../README.md).
+- [Índice cronológico completo y GitHub Releases](releases.md).
+- [V5.7: modelo canónico y cierre documental](V5.7.md).
+- [V5.6: herramientas reproducibles](V5.6.md).
+- [V5.5: gobernaciones documentadas](V5.5.md).
+- [Manifiestos de antiguos ZIP](archive/manifests/README.md).
 
-| Versión | Contenido |
-| --- | --- |
-| [5.6](V5.6.md) | Scripts organizados, Python reproducible y separación de fuentes, resultados revisados y temporales |
-| [5.5](V5.5.md) | Gobernaciones neerlandesas documentadas y retirada de las cuatro excepciones de autoridad |
-| [5.4](V5.4.md) | Identidades sin nombre, fechas justificadas y filiación probable o discutida con evidencia individual |
-| [5.3](V5.3.md) | Relaciones conyugales en listas, retirada de 1.432 excepciones y conservación de conexiones y evidencia |
-| [5.2](V5.2.md) | Migración de las 33 disputas individuales a listas y retirada de sus excepciones, conservando el resultado del Atlas |
-| [5.1](V5.1.md) | Lectura compartida de relaciones, mandatos, asociaciones y disputas, conservando evidencia y resultados |
-| [5.0](V5.0.md) | Contratos de datos, compatibilidad concreta y protección anual de mapas, relaciones y rutas |
-| [4.12](V4.12.md) | Dobruja, costa croata, sucesiones búlgaras, particiones Wettin/Staufen/Nassau e inventario de IDs nunca coloreados |
-| [4.11](V4.11.md) | Carruseles circulares, Bulgaria medieval/Sirmia, Hungría y feudos franceses, dominios ingleses/británicos |
-| [4.8](V4.8.md) | Particiones bávaras, Palatinado electoral y herencia renana; límites explícitos de Flandes/Artois |
-| [4.7](V4.7.md) | Continuidad de Tirol, inspector territorial y auditoría de fuentes del mapa |
-| [4.6](V4.6.md) | Encuadre europeo, biografía compacta y separación entre Austria e Imperio |
-| [4.5](V4.5.md) | Biografía continua, dogos venecianos, Pignatelli y auditoría cartográfica |
-| [4.4](V4.4.md) | Revisión de España, Portugal e Italia; coronas separadas y sucesión italiana |
-| [4.3](V4.3.md) | Sucesión borgoñona por feudo, corrección cromática y auditoría de cien regiones |
-| [4.2](V4.2.md) | Capetos, herencia borgoñona, mapa de Irlanda y documentación actualizada |
-| [4.1](V4.1.md) | Corredor histórico, filtro de evidencia, revisión de los Austrias y tareas editoriales |
-| [4.0](V4.0.md) | Modelo de afirmaciones, cobertura y simplificación del Atlas |
-| [3.3](V3.3.md) | Edición inglesa, retratos del Desafío y contraste oscuro |
-| [3.2](V3.2.md) | Ajustes de visualización, privacidad y navegación uniforme |
-| [3.1](V3.1.md) | Pulido de lectura, loaders y página 404 propia |
-| [3.0](V3.0.md) | Coherencia visual, historias y exploración sencilla |
-| [2.20](V2.20.md) | Portada con familias, historias y años |
-| [2.19](V2.19.md) | Exportación, impresión, material educativo e inserciones |
-| [2.18](V2.18.md) | Europa completa, comparación temporal y reproducción |
-| [2.17](V2.17.md) | Atlas gradual, búsqueda global y expansión reversible |
-| [2.16](V2.16.md) | Historias con entrada propia, capítulos y progreso |
-| [2.15.2](V2.15.2.md) | Seguridad, validación y limpieza |
-| [2.15](V2.15.md) | Aprender con el Atlas |
-| [2.14](V2.14.md) | Del Adriático al mar Negro |
-| [2.13](V2.13.md) | Conexiones familiares y casas alpinas |
-| [2.12.2](V2.12.2.md) | Fichas estáticas e hidratación |
-| [2.12](V2.12.md) | Coronas y uniones |
-| [2.11](V2.11.md) | Sucesiones explicadas |
+Los documentos `V*.md` se conservan como historial. Las decisiones metodológicas
+vigentes están en las guías anteriores; las notas de cada versión describen
+el estado que se verificó entonces.
 
 ## Criterios de contenido
 
-Desde V5.0, el [contrato de datos](data-model.md) documenta y valida la fuente. La [protección de regresiones](v5-regression.md) explica cómo revisar cambios de comportamiento y actualizar su base de forma intencionada. Las siguientes entregas de esta serie utilizarán versiones 5.x.
+`personas.jsx` y `historiaData.jsx` son datos sin imports. Conserva IDs y slugs
+estables. `persona.titulo` resume la ficha; cada mandato de `gobiernos[]`
+tiene su territorio, título real, clase, condición e intervalo. Desde V5.7
+ni la fuente ni las fichas públicas crean `reinados` como segunda propiedad.
 
-`personas.jsx` y `historiaData.jsx` son módulos de datos sin imports: los generadores los leen directamente con Node. Mantén sus identificadores estables. `persona.titulo` es un resumen; cada entrada de `gobiernos` debe indicar `territorio`, `titulo`, `clase`, `condicion`, `desde` y `hasta`. `reinados` conserva compatibilidad de lectura y no es otra base independiente.
+Una asociación geográfica no acredita soberanía. Una boda no demuestra
+transferencia territorial ni origen de una rama masculina. Nombramiento,
+toma de posesión y control efectivo pueden tener fechas distintas. Las
+sucesiones se documentan mediante mandatos concretos, no ordenando nombres.
 
-Las alianzas matrimoniales tienen una categoría propia: una boda no demuestra transferencia de territorio ni origen de una rama masculina. El nombramiento de un cargo y la toma de posesión pueden llevar fechas distintas.
+Una referencia contextual no verifica toda una ficha. Cada dato citado necesita
+su afirmación y pasaje propios; la incertidumbre no se elimina al validar
+estructuras. La bibliografía se registra una sola vez y conserva las asociaciones
+con personas y territorios. Los retratos nuevos los aporta el responsable del
+proyecto: no se descargan ni sustituyen automáticamente.
 
-Una agrupación geográfica no es una soberanía. Una pretensión no equivale a gobierno efectivo. Los relevos explicados identifican mandatos concretos; nunca se generan simplemente ordenando nombres por fecha. Cada crisis documenta las reclamaciones y las filiaciones usadas para explicarlas.
-
-Las publicaciones se incorporan una sola vez a la bibliografía general. Sus asociaciones con personajes y territorios se mantienen en el mismo registro. Una referencia contextual no prueba todos los datos de una ficha. Los retratos nuevos los aporta el responsable del proyecto: no se descargan ni sustituyen automáticamente.
-
-## Próximas mejoras implementadas
-
-[Seguimiento de next updates](NEXT_UPDATES.md) · [V2.21](V2.21.md)
-
-La [cartografía comparada y subregional](V4.8_PROPUESTAS.md) sigue como trabajo pendiente después de la revisión de corredores de V4.8.
-
-## V3
-
-[V3.3: edición inglesa y ajustes visuales](V3.3.md) · [V3.2: ajustes, privacidad y navegación](V3.2.md) · [V3.1: pulido de lectura, loaders y página 404 propia](V3.1.md) · [V3.0: coherencia visual, historias y exploración sencilla](V3.0.md).
+La [cartografía subregional propuesta](V4.8_PROPUESTAS.md) y la investigación
+de huecos e identidades siguen como trabajo histórico independiente del
+cierre de la serie V5.

@@ -1,6 +1,6 @@
 # Contrato de datos · V5
 
-Este documento describe la fuente publicada y el contrato ejecutable de `scripts/schema/data-contract.mjs`. V5.0 introdujo validación y protección del comportamiento; V5.1 comparte la lectura entre consumidores, V5.2 exige listas para las disputas y V5.3 para los cónyuges en la fuente. V5.4 traslada la incertidumbre parental a las afirmaciones documentadas; V5.5 retira `gobernante` y exige intervalos de vida coherentes y referencias sin autorrelaciones. La compatibilidad restante se retirará en entregas posteriores de la serie V5.
+Este documento describe la fuente publicada y el contrato ejecutable de `scripts/schema/data-contract.mjs`. V5.0 introdujo validación y protección del comportamiento; V5.1 comparte la lectura entre consumidores, V5.2 exige listas para las disputas y V5.3 para los cónyuges en la fuente. V5.4 traslada la incertidumbre parental a las afirmaciones documentadas; V5.5 retira `gobernante` y exige intervalos de vida coherentes y referencias sin autorrelaciones. V5.7 retira la copia automática y las lecturas redundantes de formatos antiguos, y publica gobiernos canónicos también en las fichas.
 
 ## Fuentes y derivados
 
@@ -84,18 +84,20 @@ controlDisputado: [{ desde: 1619, hasta: 1620 }]
 
 Cada intervalo debe ser válido y quedar dentro del mandato. Desde V5.2, la fuente exige un array incluso cuando hay un único intervalo: los 33 objetos individuales publicados se migraron mecánicamente y sus excepciones se retiraron. Un objeto individual falla la validación estructural incluso si figura en un registro de compatibilidad antiguo. La lista conserva el orden documental y no se ordena ni se fusiona al validar.
 
-`reinados` se añade actualmente como alias de `gobiernos` al cargar `PERSONAS`. No es una fuente independiente y no se escribe dentro del literal. El auditor lee el literal antes de esa operación. Su retirada pertenece a la migración de consumidores posterior.
+Desde V5.7, `gobiernos[]` es el único campo de mandato tanto en la fuente
+como en las fichas públicas. El módulo no muta las personas al importarlas:
+no añade `reinados` y no interpreta el antiguo `reinado: [desde, hasta]`.
 
 ## Lectura compartida desde V5.1
 
 Los consumidores de personas utilizan [`src/data/personAccessors.js`](../src/data/personAccessors.js), un módulo puro sin dependencias de React, del dataset ni del navegador. La normalización se realiza al leer cada relación; no se crea una segunda colección de personas o mandatos. Los campos, tipos, fechas, booleanos y referencias de la fuente siguen validándose antes con el contrato.
 
-| Accesor | Resultado y compatibilidad |
+| Accesor | Resultado vigente desde V5.7 |
 | --- | --- |
-| `conyugesDe(persona)` | IDs únicos en orden de registro. Mantiene la lectura de `conyuge` y `conyuge2` para datos anteriores; desde V5.3 la fuente usa `conyuges[]`. También entiende tarjetas públicas con `id`. Si una ficha pública contiene `conyugesIds` no vacío, usa esos IDs declarados en lugar de sus relaciones expandidas. |
-| `gobiernosDe(persona)` | La lista original de `gobiernos`; solo usa `reinados` si aquella falta. Una lista canónica vacía prevalece sobre el alias. No clona ni filtra mandatos, ni inventa intervalos. |
+| `conyugesDe(persona)` | IDs únicos en orden de registro. La fuente usa `conyuges[]`; no lee `conyuge` ni `conyuge2`. También entiende tarjetas públicas con `id`. Si una ficha pública contiene `conyugesIds` no vacío, usa esos IDs declarados en lugar de sus relaciones expandidas. |
+| `gobiernosDe(persona)` | La lista original de `gobiernos`, sin alias. No clona ni filtra mandatos, ni inventa intervalos. |
 | `territoriosDe(persona)` | La lista original de asociaciones `reinos`, sin convertirla en gobiernos ni añadir territorios de otros campos. |
-| `intervalosDisputadosDe(gobierno)` | Lista de intervalos; conserva los mismos objetos de período y su orden. Mantiene la lectura de objetos heredados para datos públicos anteriores; desde V5.2 esos objetos se rechazan en la fuente. |
+| `intervalosDisputadosDe(gobierno)` | Lista de intervalos; conserva los mismos objetos de período y su orden. Exige arrays; los objetos individuales se rechazan también en lectura. |
 
 Los arrays opcionales ausentes producen `[]` como comodidad de lectura; no escriben un campo nuevo ni afirman que una ausencia documental sea una negativa histórica. Los contenedores mal tipados producen un error. El contrato comprueba además los valores y límites de sus elementos: un accesor no sustituye la validación ni acredita un hecho.
 
@@ -105,9 +107,9 @@ La reciprocidad conyugal se resuelve en los índices familiares; el accesor no b
 
 El modelo de ficha pública conserva temporalmente `conyuge` como alias cuando hay exactamente un ID declarado en `conyugesIds`; si hay varios o ninguno, usa `null`. Desde V5.3 el generador calcula ambos desde el lector común; no lee un campo singular de la fuente. Un alias nulo no implica ausencia de cónyuges: siempre se consulta la lista completa. El alias no añade reciprocidad y no sustituye `conyugesIds` ni las tarjetas enriquecidas. La fuente canónica continúa rechazándolo.
 
-Los adaptadores de `reinado: [desde, hasta]` siguen en `listaReinados()` y en el serializador histórico. No hay registros actuales de ese formato y no se admite en nuevas fuentes. Los lectores de campos parentales, fechas documentales y slugs conservan sus funciones existentes; sus criterios no cambian en esta entrega.
+V5.7 retira los adaptadores de `reinado: [desde, hasta]` de `listaReinados()` y del serializador: no hay registros actuales de ese formato. Los lectores de campos parentales, fechas documentales y slugs conservan sus funciones existentes; sus criterios no cambian en esta entrega.
 
-Las comprobaciones estructurales leen deliberadamente el literal original y sus campos heredados. Así pueden detectar un formato indebido antes de que el acceso compatible lo oculte. En cambio, los cálculos de cobertura y continuidad cartográfica consumen los mismos lectores que el mapa. Los arrays de gobiernos de una ficha territorial, una dinastía o un resultado anual son modelos derivados distintos, y no se pasan a un accesor de personas.
+Las comprobaciones estructurales leen deliberadamente el literal original y sus campos heredados. Así pueden detectar un formato indebido sin ejecutar el módulo ni adaptar la entrada. En cambio, los cálculos de cobertura y continuidad cartográfica consumen los mismos lectores que el mapa. Los arrays de gobiernos de una ficha territorial, una dinastía o un resultado anual son modelos derivados distintos, y no se pasan a un accesor de personas.
 
 ## Evidencia
 
@@ -144,8 +146,25 @@ La secuencia heredada de Croacia contiene cinco versiones de 1689. V5.0 registra
 
 ## Compatibilidad y validación
 
-`tests/baselines/v5-legacy-formats.json` contiene casos concretos y motivos: indicadores parentales, versiones repetidas y capas sin fuente propia. El grupo de disputas individuales queda vacío desde V5.2 y el conyugal desde V5.3. No es una lista de errores históricos aceptados. No hay un comando que añada automáticamente nuevas excepciones. Al migrar un caso, se retira su entrada; las entradas ya retiradas del dato no bloquean la validación. La compatibilidad de lectura no amplía los formatos admitidos por el contrato de fuente.
+`tests/baselines/v5-legacy-formats.json` conserva grupos históricos y motivos concretos. Las excepciones personales ya están retiradas: disputas desde V5.2, cónyuges desde V5.3, filiación e identidad desde V5.4 y autoridad desde V5.5. Quedan las versiones cartográficas repetidas y las capas originales sin fuente propia. No es una lista de errores históricos aceptados. No hay un comando que añada automáticamente nuevas excepciones. Al migrar un caso, se retira su entrada; las entradas ya retiradas del dato no bloquean la validación. La compatibilidad de lectura no amplía los formatos admitidos por el contrato de fuente.
 
 `npm run audit:data-contract` comprueba estas reglas antes de la generación. Se ejecuta también al principio de CI. Las auditorías previas siguen comprobando cronología, continuidad, superficies, sucesiones y páginas.
 
 La protección de comportamiento y el procedimiento de actualización se describen en [v5-regression.md](v5-regression.md).
+
+
+## Contrato de fichas públicas
+
+`STATIC_SCHEMA = 2` identifica el HTML inicial de V5.7. Las fichas personales
+exportan `gobiernos[]`, `conyugesIds[]` y tarjetas `conyuges[]`; no incluyen
+`reinados`, `reinado`, `conyuge` ni `conyuge2`. La fuente y la representación
+pública difieren en el enriquecimiento de tarjetas y fuentes, no en el nombre
+del campo de mandatos. El lector conserva el fallback a tarjetas expandidas
+cuando no hay IDs conyugales explícitos, necesario para relaciones recíprocas.
+
+Los generadores, el prerender, la auditoría y el navegador comparten la misma
+constante de esquema. Un HTML inicial de esquema 1 se rechaza como ficha
+inicial; la navegación carga los datos del despliegue vigente por su ruta
+normal. No se convierte el formato antiguo silenciosamente. El build genera
+HTML, JSON y módulos juntos. La [V5.7](V5.7.md) explica la revisión explícita de
+la base pública necesaria para cambiar el nombre del campo.

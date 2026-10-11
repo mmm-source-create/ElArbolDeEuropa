@@ -2534,6 +2534,3 @@ export const PERSONAS = [
   {"id":"ERNST1GOTHA","nombre":"Ernesto I de Sajonia-Gotha","dinastia":"Wettin","titulo":"Duque","reinos":["Sajonia-Gotha"],"gobiernos":[{"territorio":"Sajonia-Gotha","desde":1640,"hasta":1675,"titulo":"Duque","clase":"ducado","condicion":"efectivo","nota":"Mandato de la rama ernestina; los repartos territoriales se fechan en series independientes."}],"padre":"JOHN2WEIM"},
 
 ];
-
-// Compatibilidad con los consumidores del modelo anterior.
-for (const persona of PERSONAS) if (persona.gobiernos) persona.reinados = persona.gobiernos;

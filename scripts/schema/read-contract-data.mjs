@@ -5,7 +5,7 @@ import {TERRITORIOS} from '../../src/data/territorios.js';
 export const projectRoot = fileURLToPath(new URL('../../', import.meta.url));
 export const readJson = async relative => JSON.parse(await fs.readFile(new URL(relative, new URL('../../', import.meta.url)), 'utf8'));
 
-// Inspect the literal source, before the compatibility alias adds `reinados`.
+// Inspect the literal source without executing imports or source code.
 // PERSONAS remains a JSON-compatible array; no source code is evaluated here.
 export function readPersonLiteral(source) {
   const start = source.indexOf('export const PERSONAS = [');

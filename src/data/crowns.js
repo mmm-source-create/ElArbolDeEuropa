@@ -1,7 +1,6 @@
 import {gobiernosDe} from './personAccessors.js';
 import {gobiernoEfectivo} from './territorios.js';
 import {coincideMandato,MOTIVOS_SUCESION} from './successionHistory.js';
-export {gobiernosDe} from './personAccessors.js';
 export const mandatoEn = (g, anio) => Number.isInteger(anio) && Number.isInteger(g.desde) && Number.isInteger(g.hasta) && g.desde <= anio && anio <= g.hasta;
 export const claveMandato = g => `${g.territorio}|${g.desde}|${g.clase}`;
 

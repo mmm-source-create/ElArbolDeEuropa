@@ -1,6 +1,7 @@
 import {territoriosDe} from './personAccessors.js';
 import {documentaryBounds,documentaryDate} from '../utils/documentaryDates.js';
-import {gobiernosDe,mandatoEn} from './crowns.js';
+import {gobiernosDe} from './personAccessors.js';
+import {mandatoEn} from './crowns.js';
 import {gobiernoEfectivo} from './territorios.js';
 
 export function vidaEnAnio(p,anio) {

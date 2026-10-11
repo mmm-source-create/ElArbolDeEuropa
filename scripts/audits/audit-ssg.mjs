@@ -3,7 +3,7 @@ import fs from 'node:fs/promises';
 import path from 'node:path';
 import {pathToFileURL} from 'node:url';
 import {loadEnv} from 'vite';
-import {STATIC_DATA_ID,STATIC_FOLDERS,validatePage} from '../../src/public/staticData.js';
+import {STATIC_SCHEMA,STATIC_DATA_ID,STATIC_FOLDERS,validatePage} from '../../src/public/staticData.js';
 import {DEFAULT_SITE_URL,entityMeta,publicMeta} from '../../src/public/publicMeta.js';
 import {canonicalDynastySlug} from '../../src/data/dynastyAliases.js';
 import {routesFromSitemap,assetsForStaticPage,escapeHtml} from '../lib/ssg-utils.mjs';
@@ -53,7 +53,7 @@ export async function auditBuild(root=process.cwd()) {
    const assets=assetsForStaticPage(manifest,route.kind);
    for(const asset of [...assets.css,...assets.js])await fs.access(path.join(dist,asset));
    const data=JSON.parse(await fs.readFile(path.join(dist,STATIC_FOLDERS[route.kind],`${route.slug}${route.chapter?`/capitulo/${route.chapter}`:""}.json`),'utf8'));
-   const page={schema:1,...route,data};
+   const page={schema:STATIC_SCHEMA,...route,data};
    if(!validatePage(page))throw new Error('JSON fuente incompleto');
    if(route.kind==='dinastia'&&canonicalDynastySlug(route.slug)!==data.slug)throw new Error('Alias no registrado');
    const html=await fs.readFile(path.join(dist,route.path.slice(1),'index.html'),'utf8');

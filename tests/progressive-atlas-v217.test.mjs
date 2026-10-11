@@ -2,7 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import { familyIndex, familyIds, atlasIdsFromLocation, writeAtlasIds, isolatedPopes, groupIsolatedPopes } from '../src/explorer/progressiveAtlas.js';
 import { sanitizeSession, shouldResumeAtlas } from '../src/explorer/atlasSession.js';
-const people=[{id:'A',nombre:'A',padre:'P',conyuge:'B'},{id:'B',nombre:'B'},{id:'P',nombre:'P'},{id:'S',nombre:'S',padre:'P'},{id:'C',nombre:'C',madre:'A'},{id:'D',nombre:'D',madre:'C'},{id:'Z',nombre:'Z',titulo:'Papa'},{id:'Q',nombre:'Q',titulo:'Papa',padre:'P'}],index=familyIndex(people);
+const people=[{id:'A',nombre:'A',padre:'P',conyuges:['B']},{id:'B',nombre:'B'},{id:'P',nombre:'P'},{id:'S',nombre:'S',padre:'P'},{id:'C',nombre:'C',madre:'A'},{id:'D',nombre:'D',madre:'C'},{id:'Z',nombre:'Z',titulo:'Papa'},{id:'Q',nombre:'Q',titulo:'Papa',padre:'P'}],index=familyIndex(people);
 test('familia inmediata incluye relaciones inversas, hermanos y solo una generación descendiente',()=>{
  assert.deepEqual(new Set(familyIds(index,'A')),new Set(['A','P','B','C','S','Q']));
  assert.deepEqual(familyIds(index,'A','children'),['C']);assert.deepEqual(familyIds(index,'B'),['B','A']);

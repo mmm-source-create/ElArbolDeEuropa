@@ -23,7 +23,7 @@ const record = data => {
     .map(([group, entries]) => [group, {entries: structuredClone(entries)}]));
 };
 
-test('el contrato valida la fuente publicada antes del alias reinados, sin modificarla', async () => {
+test('el contrato valida la fuente publicada sin aliases ni mutación, sin modificarla', async () => {
   const data = await readContractData();
   data.legacy = await readJson('tests/baselines/v5-legacy-formats.json');
   const before = JSON.stringify(data.people);
@@ -218,4 +218,12 @@ test('fechas de vida y relaciones no pueden apuntar a la misma persona',()=>{
   }
   const data=fixtures();data.people[0].gobiernos[0].soberano='A';
   assert(codes(data).includes('SELF_SOVEREIGN'));
+});
+
+
+test('los aliases de mandato retirados se rechazan incluso junto a gobiernos canónicos', () => {
+  for (const [field, value] of [['reinados', fixtures().people[0].gobiernos], ['reinado', [1300, 1320]]]) {
+    const data = fixtures(); data.people[0][field] = value;
+    assert(validateContracts(data).some(issue => issue.code === 'UNKNOWN_FIELD' && issue.path.endsWith('.' + field)));
+  }
 });

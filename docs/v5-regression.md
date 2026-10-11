@@ -2,6 +2,14 @@
 
 La base `tests/baselines/v5-regression.json` se creó con el resultado publicado tras la revisión de Islandia, Istria y Moldavia (`ef6b5cf`). V5.5 la actualiza tras la [revisión de autoridad y gobernaciones](V5.5.md): siete fichas fuente anteriores modificadas, una persona nueva, cuatro mandatos y dos rutas nuevas. Los mapas completos de los 601 años permanecen iguales; los personales cambian únicamente entre 1567 y 1592. Se revisan 80 páginas existentes y dos nuevas; la generación del árbol incorpora a Requesens. Los IDs, relaciones y mandatos anteriores, el registro territorial y la geometría se conservan. El campo `origin` mantiene el punto de partida y `reason` explica la revisión vigente. Contiene 2.532 personas, 2.509 gobiernos, 270 entidades del registro y 3.528 fichas estáticas. Es una referencia de comportamiento, no una afirmación de que toda la historia esté resuelta.
 
+V5.7 actualiza únicamente el formato público: `reinados` pasa a `gobiernos`
+y se retira el `conyuge` duplicado de las fichas. Cambian 2.537 huellas JSON
+(2.532 personas españolas y cinco inglesas). Los 3.528 cuerpos HTML y los
+3.549 metadatos, comparados tras esa transformación precisa, permanecen
+idénticos. Los datos, mapas de los 601 años, rutas, disposición del árbol y
+recuentos no cambian. Se conserva el comparador y se documenta el motivo en
+la base; el esquema del HTML inicial pasa a 2 por separado.
+
 ## Qué se compara
 
 - Cada persona: datos, relaciones declaradas, mandatos y afirmaciones con sus fuentes y certeza.

@@ -1,10 +1,10 @@
+import {STATIC_SCHEMA} from '../../src/public/staticData.js';
 const member=n=>({id:`P${n}`,slug:`persona-${n}`,nombre:`Persona ${n}`,titulo:'Rey',dinastia:'Casa de prueba',nac:1200,muer:1270});
 const government=(territorio,desde,hasta,condicion='efectivo')=>({territorio,titulo:'Rey',clase:'reinado',condicion,desde,hasta});
-const payload=(kind,slug,data)=>({schema:1,kind,slug,path:`/es/${kind}/${slug}`,data:{slug,...data}});
+const payload=(kind,slug,data)=>({schema:STATIC_SCHEMA,kind,slug,path:`/es/${kind}/${slug}`,data:{slug,...data}});
 export const person=payload('persona','persona-1',{
  ...member(1),biografia:'Una biografía de prueba con vínculos y fechas.',
  gobiernos:[government('Castilla',1217,1252),government('León',1230,1252)],
- reinados:[government('Castilla',1217,1252),government('León',1230,1252)],
  fuentes:[{titulo:'Fuente de prueba',url:'https://example.org/source'}],padres:[member(2)],
 });
 export const dynasty=payload('dinastia','casa-de-prueba',{
