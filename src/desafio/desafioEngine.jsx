@@ -1,3 +1,4 @@
+import {conyugesDe as conyugesRegistradosDe, territoriosDe} from '../data/personAccessors.js';
 import {reinadosEfectivos, sucesionesDirectas} from "./desafioGovernments.js";
 const DINASTIAS_GENERICAS = new Set(["", "Sin casa identificada", "Desconocida", "Familias menores"]);
 const PALABRAS_VACIAS = new Set(["de", "del", "la", "las", "el", "los", "y", "e", "casa", "dinastia", "dinastía"]);
@@ -106,7 +107,7 @@ function construirIndice(personas) {
       marcarSexo(persona.madre, "F");
       (hijosPorId[persona.madre] ||= new Set()).add(persona.id);
     }
-    const parejas = [persona.conyuge, persona.conyuge2, ...(persona.conyuges || [])].filter(Boolean);
+    const parejas = conyugesRegistradosDe(persona);
     parejas.forEach((id) => {
       if (byId[id]) (conyugesInversos[id] ||= new Set()).add(persona.id);
     });
@@ -118,9 +119,7 @@ function construirIndice(personas) {
 function conyugesDe(persona, indice) {
   if (!persona?.id) return [];
   return unico([
-    persona.conyuge,
-    persona.conyuge2,
-    ...(persona.conyuges || []),
+    ...conyugesRegistradosDe(persona),
     ...[...(indice.conyugesInversos[persona.id] || [])],
   ]).filter((id) => indice.byId[id]);
 }
@@ -141,8 +140,8 @@ function distanciaHistorica(a, b) {
 }
 
 function comparteTerritorio(a, b) {
-  const ta = new Set([...(a?.reinos || []), ...reinadosEfectivos(a).map((r) => r.territorio)]);
-  return unico([...(b?.reinos || []), ...reinadosEfectivos(b).map((r) => r.territorio)])
+  const ta = new Set([...territoriosDe(a), ...reinadosEfectivos(a).map((r) => r.territorio)]);
+  return unico([...territoriosDe(b), ...reinadosEfectivos(b).map((r) => r.territorio)])
     .some((territorio) => ta.has(territorio));
 }
 
@@ -158,7 +157,7 @@ function relevancia(persona) {
   score += Math.min(4, reinados.length * 2);
   if (persona?.biografia) score += 2;
   if (persona?.padre || persona?.madre) score += 1;
-  if (persona?.conyuge || persona?.conyuges?.length) score += 1;
+  if (conyugesRegistradosDe(persona).length) score += 1;
   return score;
 }
 

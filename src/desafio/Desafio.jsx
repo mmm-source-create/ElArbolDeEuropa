@@ -1,3 +1,4 @@
+import {gobiernosDe, territoriosDe} from '../data/personAccessors.js';
 import React, { useCallback, useId, useMemo, useRef, useState } from "react";
 import {
   ArrowLeft,
@@ -147,8 +148,8 @@ function relevanciaRetrato(persona) {
   const titulo = normalizarBusqueda(persona?.titulo);
   let puntos = 0;
   if (/emperador|emperatriz|rey|reina|papa|sultan|zar|principe|duque/.test(titulo)) puntos += 8;
-  puntos += Math.min(12, (persona?.reinados?.length || 0) * 3);
-  puntos += Math.min(5, persona?.reinos?.length || 0);
+  puntos += Math.min(12, (gobiernosDe(persona).length) * 3);
+  puntos += Math.min(5, territoriosDe(persona).length);
   if (tieneContenidoEditorial(persona)) puntos += 3;
   if (persona?.sobrenombre) puntos += 2;
   if (persona?.padre || persona?.madre) puntos += 1;

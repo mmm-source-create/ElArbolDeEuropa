@@ -1,6 +1,8 @@
 # Documentación
 
 - [Uso del Atlas y desafíos](ATLAS.md)
+- [Contrato de personas y cartografía](data-model.md)
+- [Validación y actualización de la base V5](v5-regression.md)
 - [Guía documental de los Capetos](CAPETOS.md)
 - [Criterios de cartografía de Irlanda](CARTOGRAFIA_IRLANDA.md)
 - [Borgoña: sucesión y límites del mapa](CARTOGRAFIA_BORGONA.md)
@@ -16,6 +18,8 @@ Los informes describen el estado validado de cada entrega. Sus cifras y listas d
 
 | Versión | Contenido |
 | --- | --- |
+| [5.1](V5.1.md) | Lectura compartida de relaciones, mandatos, asociaciones y disputas, conservando evidencia y resultados |
+| [5.0](V5.0.md) | Contratos de datos, compatibilidad concreta y protección anual de mapas, relaciones y rutas |
 | [4.12](V4.12.md) | Dobruja, costa croata, sucesiones búlgaras, particiones Wettin/Staufen/Nassau e inventario de IDs nunca coloreados |
 | [4.11](V4.11.md) | Carruseles circulares, Bulgaria medieval/Sirmia, Hungría y feudos franceses, dominios ingleses/británicos |
 | [4.8](V4.8.md) | Particiones bávaras, Palatinado electoral y herencia renana; límites explícitos de Flandes/Artois |
@@ -45,6 +49,8 @@ Los informes describen el estado validado de cada entrega. Sus cifras y listas d
 | [2.11](V2.11.md) | Sucesiones explicadas |
 
 ## Criterios de contenido
+
+Desde V5.0, el [contrato de datos](data-model.md) documenta y valida la fuente. La [protección de regresiones](v5-regression.md) explica cómo revisar cambios de comportamiento y actualizar su base de forma intencionada. Las siguientes entregas de esta serie utilizarán versiones 5.x.
 
 `personas.jsx` y `historiaData.jsx` son módulos de datos sin imports: los generadores los leen directamente con Node. Mantén sus identificadores estables. `persona.titulo` es un resumen; cada entrada de `gobiernos` debe indicar `territorio`, `titulo`, `clase`, `condicion`, `desde` y `hasta`. `reinados` conserva compatibilidad de lectura y no es otra base independiente.
 

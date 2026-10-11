@@ -1,3 +1,4 @@
+import {territoriosDe} from '../data/personAccessors.js';
 import { SOURCE_GROUPS, SOURCE_METHOD } from "../content/sources.js";
 import React, { useState } from "react";
 import { ArrowRight, BookOpen, ChevronDown, ChevronRight, ExternalLink, Flag, Heart, Mail, Scale, X } from "lucide-react";
@@ -23,7 +24,7 @@ export const PersonBox = React.memo(function PersonBox({
   p, cls, accent, style, setRef, onEnter, onLeave, onClick,
   hasDescendants = false, descendantsCollapsed = false, onToggleDescendants, showDates = false,
 }) {
-  const roleText = `${p.titulo} · ${(p.reinos || []).join(" · ")}`;
+  const roleText = `${p.titulo} · ${territoriosDe(p).join(" · ")}`;
   const navigateCard = (event) => {
     const directions = { ArrowLeft: [-1, 0], ArrowRight: [1, 0], ArrowUp: [0, -1], ArrowDown: [0, 1] };
     const direction = directions[event.key];
@@ -92,7 +93,7 @@ export function calcularEstadisticas(personas) {
     return acc;
   }, {})).sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0], "es"));
   const dinastias = contar(lista.map((persona) => persona.dinastia));
-  const territorios = contar(lista.flatMap((persona) => persona.reinos || []));
+  const territorios = contar(lista.flatMap((persona) => territoriosDe(persona)));
   const gobernantes = lista.filter((persona) => listaReinados(persona).some(reinadoEsEfectivo)).length;
   const reinados = lista.flatMap((persona) => listaReinados(persona)
     .filter((reinado) => reinadoEsEfectivo(reinado) && Number.isFinite(reinado.desde) && Number.isFinite(reinado.hasta))

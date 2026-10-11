@@ -1,0 +1,4800 @@
+{
+  "schema": 1,
+  "origin": "ef6b5cf47ed6d9bd4fa7c3653fac0be7dc0ad3c6",
+  "policy": "Solo estos valores fuente exactos pueden conservar formatos heredados. Retirar entradas cuando se migren; no añadir nuevos casos.",
+  "groups": {
+    "spouses": {
+      "reason": "Variantes conyuge/conyuge2 ya publicadas. Migrar a conyuges sin modificar las relaciones históricas.",
+      "entries": {
+        "WEN1": {
+          "conyuge": "CUNS"
+        },
+        "CUNS": {
+          "conyuge": "WEN1"
+        },
+        "BELA4": {
+          "conyuge": "MARIAL"
+        },
+        "MARIAL": {
+          "conyuge": "BELA4"
+        },
+        "ESTEBP": {
+          "conyuge": "TOMOR"
+        },
+        "TOMOR": {
+          "conyuge": "ESTEBP"
+        },
+        "PREM2": {
+          "conyuge": "RIQS"
+        },
+        "RIQS": {
+          "conyuge": "PREM2"
+        },
+        "CARLOSM": {
+          "conyuge": "CLEMH"
+        },
+        "CLEMH": {
+          "conyuge": "CARLOSM"
+        },
+        "OTAK2": {
+          "conyuge": "CUNH"
+        },
+        "CUNH": {
+          "conyuge": "OTAK2"
+        },
+        "ROSTM": {
+          "conyuge": "ANAROST"
+        },
+        "ANAROST": {
+          "conyuge": "ROSTM"
+        },
+        "ANDRES3": {
+          "conyuge": "INESH"
+        },
+        "INESH": {
+          "conyuge": "ANDRES3"
+        },
+        "ISABELH": {
+          "conyuge": "ENRIQUE13"
+        },
+        "ENRIQUE13": {
+          "conyuge": "ISABELH"
+        },
+        "ESTEBV": {
+          "conyuge": "ISABELC"
+        },
+        "ISABELC": {
+          "conyuge": "ESTEBV"
+        },
+        "VIOLP": {
+          "conyuge": "BOLESL"
+        },
+        "BOLESL": {
+          "conyuge": "VIOLP"
+        },
+        "ISABPI": {
+          "conyuge": "CARLOS1"
+        },
+        "BEATLUX": {
+          "conyuge": "CARLOS1"
+        },
+        "JUDH": {
+          "conyuge": "WEN2"
+        },
+        "EDUVK": {
+          "conyuge": "LADI1"
+        },
+        "LADI1": {
+          "conyuge": "EDUVK"
+        },
+        "LADI4": {
+          "conyuge": "ISABANJ"
+        },
+        "ISABANJ": {
+          "conyuge": "LADI4"
+        },
+        "ANAESTV": {
+          "conyuge": "ANDRO2"
+        },
+        "EDUV1": {
+          "conyuge": "LADI2"
+        },
+        "SOFIAH": {
+          "conyuge": "LADI2"
+        },
+        "CASI4": {
+          "conyuge": "ISABELHAB"
+        },
+        "ISABELHAB": {
+          "conyuge": "CASI4"
+        },
+        "MARIA1H": {
+          "conyuge": "SEGIS1"
+        },
+        "CATHAB": {
+          "conyuge": "OTON3"
+        },
+        "ADOLFN": {
+          "conyuge": "IMAGISEN"
+        },
+        "ISAB1B": {
+          "conyuge": "JUAN1B"
+        },
+        "BEATBOR": {
+          "conyuge": "JUAN1B"
+        },
+        "ENRIQ7": {
+          "conyuge": "MARGABR"
+        },
+        "MARGABR": {
+          "conyuge": "ENRIQ7"
+        },
+        "MARGFLA": {
+          "conyuge": "JUAN1BR"
+        },
+        "WEN1LUX": {
+          "conyuge": "JUANABR"
+        },
+        "EDUVKYB": {
+          "conyuge": "ALB4HAB"
+        },
+        "ALB4HAB": {
+          "conyuge": "EDUVKYB"
+        },
+        "GERTHOH": {
+          "conyuge": "ROD1HAB"
+        },
+        "ANASTPIR": {
+          "conyuge": "TEOBVISC"
+        },
+        "TEOBVISC": {
+          "conyuge": "ANASTPIR"
+        },
+        "BONABORR": {
+          "conyuge": "MAT1VISC"
+        },
+        "MAT1VISC": {
+          "conyuge": "BONABORR"
+        },
+        "VALDOR": {
+          "conyuge": "STEFVISC"
+        },
+        "STEFVISC": {
+          "conyuge": "VALDOR"
+        },
+        "MATHAB": {
+          "conyuge": "LUIS2BAV"
+        },
+        "MARIABRABBAV": {
+          "conyuge": "LUIS2BAV"
+        },
+        "INESBO": {
+          "conyuge": "ROD2HAB"
+        },
+        "ROD2HAB": {
+          "conyuge": "INESBO"
+        },
+        "MARG2HEN": {
+          "conyuge": "LUIS4"
+        },
+        "BEATSIL": {
+          "conyuge": "LUIS4"
+        },
+        "BLANSAB": {
+          "conyuge": "GAL2VISC"
+        },
+        "GAL2VISC": {
+          "conyuge": "BLANSAB"
+        },
+        "BERNVISC": {
+          "conyuge": "BEATSCALA"
+        },
+        "BEATSCALA": {
+          "conyuge": "BERNVISC"
+        },
+        "LUIS9": {
+          "conyuge": "MARGPROV"
+        },
+        "MARGPROV": {
+          "conyuge": "LUIS9"
+        },
+        "BALD2COUR": {
+          "conyuge": "MARIABRI"
+        },
+        "MARIABRI": {
+          "conyuge": "BALD2COUR"
+        },
+        "FELCOUR": {
+          "conyuge": "BEATSIC"
+        },
+        "BEATSIC": {
+          "conyuge": "FELCOUR"
+        },
+        "BEATPROV": {
+          "conyuge": "CARLOS1ANJ"
+        },
+        "MARGBORG": {
+          "conyuge": "CARLOS1ANJ"
+        },
+        "MANFSIC": {
+          "conyuge": "BEATSAB"
+        },
+        "JAIME1AR": {
+          "conyuge": "VIOLHUN"
+        },
+        "VIOLHUN": {
+          "conyuge": "JAIME1AR"
+        },
+        "BEATCONST": {
+          "conyuge": "PEDRO3AR"
+        },
+        "PEDRO3AR": {
+          "conyuge": "BEATCONST"
+        },
+        "BLANCANJ": {
+          "conyuge": "JAIME2AR"
+        },
+        "MARIABRAB": {
+          "conyuge": "FEL3FRA"
+        },
+        "ISABARAG": {
+          "conyuge": "FEL3FRA"
+        },
+        "MAYMEN": {
+          "conyuge": "ALFMOL"
+        },
+        "ALFMOL": {
+          "conyuge": "MAYMEN"
+        },
+        "BEATSUAB": {
+          "conyuge": "FERN3"
+        },
+        "ALF10": {
+          "conyuge": "VIOLARAG"
+        },
+        "VIOLARAG": {
+          "conyuge": "ALF10"
+        },
+        "SANCHO4": {
+          "conyuge": "MARIAMOL"
+        },
+        "MARIAMOL": {
+          "conyuge": "SANCHO4"
+        },
+        "BEATCAST": {
+          "conyuge": "ALF3POR"
+        },
+        "ALF3POR": {
+          "conyuge": "BEATCAST"
+        },
+        "ISABPORT": {
+          "conyuge": "DION1"
+        },
+        "DION1": {
+          "conyuge": "ISABPORT"
+        },
+        "ALFPORT": {
+          "conyuge": "VIOLMAN"
+        },
+        "VIOLMAN": {
+          "conyuge": "ALFPORT"
+        },
+        "BEATCAST2": {
+          "conyuge": "ALF4POR"
+        },
+        "ALF4POR": {
+          "conyuge": "BEATCAST2"
+        },
+        "FERN4": {
+          "conyuge": "CONSTPORT"
+        },
+        "CONSTPORT": {
+          "conyuge": "FERN4"
+        },
+        "ALF11": {
+          "conyuge": "MARIAPORT"
+        },
+        "MARIAPORT": {
+          "conyuge": "ALF11"
+        },
+        "VIOLARAGSIC": {
+          "conyuge": "ROB1NAP"
+        },
+        "SANCHAMALL": {
+          "conyuge": "ROB1NAP"
+        },
+        "ADELBORG": {
+          "conyuge": "ENRIQ3BR"
+        },
+        "ENRIQ3BR": {
+          "conyuge": "ADELBORG"
+        },
+        "ENRIQ2BR": {
+          "conyuge": "MARIASUAB"
+        },
+        "MARIASUAB": {
+          "conyuge": "ENRIQ2BR"
+        },
+        "MATIBRAB": {
+          "conyuge": "ROB1ART"
+        },
+        "ROB1ART": {
+          "conyuge": "MATIBRAB"
+        },
+        "FEL4FRA": {
+          "conyuge": "JUANA1NAV"
+        },
+        "CONSTARAG": {
+          "conyuge": "MANUELCAST"
+        },
+        "BEATSABPROV": {
+          "conyuge": "RAMONBERENGUER4PROV"
+        },
+        "CARLOSCAL": {
+          "conyuge": "MARIAVALOISCAL"
+        },
+        "MARIAPI": {
+          "conyuge": "CARLOS1"
+        },
+        "CATANJ": {
+          "conyuge": "ENRIQ2SWI"
+        },
+        "ENRIQ2SWI": {
+          "conyuge": "CATANJ"
+        },
+        "ANABAV": {
+          "conyuge": "CARLOS4"
+        },
+        "ANASWI": {
+          "conyuge": "CARLOS4"
+        },
+        "BLANVAL": {
+          "conyuge": "CARLOS4"
+        },
+        "ISABPOM": {
+          "conyuge": "CARLOS4"
+        },
+        "ALB1HAB": {
+          "conyuge": "ISABTIR"
+        },
+        "ISABTIR": {
+          "conyuge": "ALB1HAB"
+        },
+        "ALB2AUS": {
+          "conyuge": "JOHANNAPFIRT"
+        },
+        "LEOP3AUS": {
+          "conyuge": "VIRIDISV"
+        },
+        "VIRIDISV": {
+          "conyuge": "LEOP3AUS"
+        },
+        "MARGANJ": {
+          "conyuge": "CARLOSVAL"
+        },
+        "CATHCOUR": {
+          "conyuge": "CARLOSVAL"
+        },
+        "MATICHAT": {
+          "conyuge": "CARLOSVAL"
+        },
+        "ERNEST1": {
+          "conyuge": "CIMBURGISMAZ"
+        },
+        "FED3HAB": {
+          "conyuge": "LEONORPOR"
+        },
+        "LEONORPOR": {
+          "conyuge": "FED3HAB"
+        },
+        "MARIABORG": {
+          "conyuge": "MAXIM1"
+        },
+        "BLANCASFO": {
+          "conyuge": "MAXIM1"
+        },
+        "MARGLUX": {
+          "conyuge": "LUIS1"
+        },
+        "ISABBOS": {
+          "conyuge": "LUIS1"
+        },
+        "ISABVAL": {
+          "conyuge": "GIANGAL1"
+        },
+        "CATAVISC": {
+          "conyuge": "GIANGAL1"
+        },
+        "VALVISC": {
+          "conyuge": "LUISORLEANS"
+        },
+        "BLANMARVISC": {
+          "conyuge": "FRAN1SFOR"
+        },
+        "MUZIOSFOR": {
+          "conyuge": "ANTSALIM"
+        },
+        "ANTSALIM": {
+          "conyuge": "MUZIOSFOR"
+        },
+        "ALESSFOR": {
+          "conyuge": "COSTANZAVARANO"
+        },
+        "FRAN1SFOR": {
+          "conyuge": "BLANMARVISC"
+        },
+        "HIPMARSFOR": {
+          "conyuge": "ALFONSO2NAP"
+        },
+        "GALMARSFOR": {
+          "conyuge": "BONASABOYA"
+        },
+        "GIANGALSFOR": {
+          "conyuge": "ISABNAP"
+        },
+        "ISABNAP": {
+          "conyuge": "GIANGALSFOR"
+        },
+        "LUDOVSFOR": {
+          "conyuge": "BEATEST"
+        },
+        "BEATEST": {
+          "conyuge": "LUDOVSFOR"
+        },
+        "BIANSFOR": {
+          "conyuge": "GALSANSEV"
+        },
+        "GALSANSEV": {
+          "conyuge": "BIANSFOR"
+        },
+        "VIOLDREUX": {
+          "conyuge": "HUG4BORG"
+        },
+        "BEATCHAMP": {
+          "conyuge": "HUG4BORG"
+        },
+        "MARGBORB": {
+          "conyuge": "TEOB1NAV"
+        },
+        "INESBEAU": {
+          "conyuge": "TEOB1NAV"
+        },
+        "BLANCHAMP": {
+          "conyuge": "JUAN1BRET"
+        },
+        "JUAN1BRET": {
+          "conyuge": "BLANCHAMP"
+        },
+        "MATI2BORB": {
+          "conyuge": "ODONBORG"
+        },
+        "ODONBORG": {
+          "conyuge": "MATI2BORB"
+        },
+        "VIOLSANCH": {
+          "conyuge": "FERRODCAST"
+        },
+        "FERRODCAST": {
+          "conyuge": "VIOLSANCH"
+        },
+        "LORENVAL": {
+          "conyuge": "SANCCHAC"
+        },
+        "SANCCHAC": {
+          "conyuge": "LORENVAL"
+        },
+        "JUANAFCAST": {
+          "conyuge": "ALFVAL"
+        },
+        "TEREHARO": {
+          "conyuge": "ALFVAL"
+        },
+        "ALFTELMEN": {
+          "conyuge": "BERENGVAL"
+        },
+        "BERENGVAL": {
+          "conyuge": "ALFTELMEN"
+        },
+        "PED1PORT": {
+          "conyuge": "CONSTANMAN"
+        },
+        "CONSTANMAN": {
+          "conyuge": "PED1PORT"
+        },
+        "ALDVASC": {
+          "conyuge": "MARTTELMEN"
+        },
+        "MARTTELMEN": {
+          "conyuge": "ALDVASC"
+        },
+        "FERN1PORT": {
+          "conyuge": "LEONTELMEN"
+        },
+        "LEONTELMEN": {
+          "conyuge": "FERN1PORT"
+        },
+        "BEATSOB": {
+          "conyuge": "MANUELCAST"
+        },
+        "CONSTANARAGANJ": {
+          "conyuge": "DONJUANMAN"
+        },
+        "JAIME2MAL": {
+          "conyuge": "ESCLARFOIX"
+        },
+        "ESCLARFOIX": {
+          "conyuge": "JAIME2MAL"
+        },
+        "ISABMAL": {
+          "conyuge": "JUAN2MONFERRATO"
+        },
+        "BLANLARA": {
+          "conyuge": "DONJUANMAN"
+        },
+        "BLANART": {
+          "conyuge": "ENRIQ1NAV"
+        },
+        "ENRIQ1NAV": {
+          "conyuge": "BLANART"
+        },
+        "TEOB2NAV": {
+          "conyuge": "ISABFRA"
+        },
+        "ISABFRA": {
+          "conyuge": "TEOB2NAV"
+        },
+        "JUANA1NAV": {
+          "conyuge": "FEL4FRA"
+        },
+        "ROB2ART": {
+          "conyuge": "AMICOUR"
+        },
+        "AMICOUR": {
+          "conyuge": "ROB2ART"
+        },
+        "FELART": {
+          "conyuge": "BLANBRET"
+        },
+        "BLANBRET": {
+          "conyuge": "FELART"
+        },
+        "MATIART": {
+          "conyuge": "OTON4BORG"
+        },
+        "OTON4BORG": {
+          "conyuge": "MATIART"
+        },
+        "JUANA2BORG": {
+          "conyuge": "FEL5FRA"
+        },
+        "FEL5FRA": {
+          "conyuge": "JUANA2BORG"
+        },
+        "JUANACBORG": {
+          "conyuge": "FEL6FRA"
+        },
+        "INESFRA": {
+          "conyuge": "ROB2BORG"
+        },
+        "ROB2BORG": {
+          "conyuge": "INESFRA"
+        },
+        "JUANBORG": {
+          "conyuge": "INESDAMP"
+        },
+        "AGNESGLO": {
+          "conyuge": "OTON3"
+        },
+        "ENRIQ15": {
+          "conyuge": "ANAAUS"
+        },
+        "ANAAUS": {
+          "conyuge": "ENRIQ15"
+        },
+        "FED1HERM": {
+          "conyuge": "ISABARAGHAB"
+        },
+        "ISABARAGHAB": {
+          "conyuge": "FED1HERM"
+        },
+        "ISABMAL1": {
+          "conyuge": "DONJUANMAN"
+        },
+        "ENRIQ2CAST": {
+          "conyuge": "JUANAMAN"
+        },
+        "JUANAMAN": {
+          "conyuge": "ENRIQ2CAST"
+        },
+        "CONSTENRIQ": {
+          "conyuge": "JUANPORT"
+        },
+        "JUAN1CAST": {
+          "conyuge": "LEONORARAGCAST"
+        },
+        "ENRIQ3CAST": {
+          "conyuge": "CATALANC"
+        },
+        "MARIATELMEN": {
+          "conyuge": "JUANPORT"
+        },
+        "ALFCAST": {
+          "conyuge": "ISABPORT2"
+        },
+        "ISABPORT2": {
+          "conyuge": "ALFCAST"
+        },
+        "SANCHOCAST": {
+          "conyuge": "BEATPORT"
+        },
+        "BEATPORT": {
+          "conyuge": "SANCHOCAST"
+        },
+        "LEONCAST": {
+          "conyuge": "PEDROMAN"
+        },
+        "PEDROMAN": {
+          "conyuge": "LEONCAST"
+        },
+        "RODMAN": {
+          "conyuge": "MENCFIG"
+        },
+        "MENCFIG": {
+          "conyuge": "RODMAN"
+        },
+        "INESDAMP": {
+          "conyuge": "JUANBORG"
+        },
+        "BEATBORG": {
+          "conyuge": "ROB1CLER"
+        },
+        "ROB1CLER": {
+          "conyuge": "BEATBORG"
+        },
+        "LUIS1BOR": {
+          "conyuge": "MARIAAVES"
+        },
+        "MARIAAVES": {
+          "conyuge": "LUIS1BOR"
+        },
+        "PEDRO1BOR": {
+          "conyuge": "ISABVAL2"
+        },
+        "ISABVAL2": {
+          "conyuge": "PEDRO1BOR"
+        },
+        "JUANACHAT": {
+          "conyuge": "JAIME1MARCH"
+        },
+        "JAIME1MARCH": {
+          "conyuge": "JUANACHAT"
+        },
+        "JUANABOR": {
+          "conyuge": "CARLOS5FRA"
+        },
+        "BONALUX": {
+          "conyuge": "JUAN2FRA"
+        },
+        "CARLOS5FRA": {
+          "conyuge": "JUANABOR"
+        },
+        "FERN1ARAG": {
+          "conyuge": "LEONALB"
+        },
+        "LEONALB": {
+          "conyuge": "FERN1ARAG"
+        },
+        "ALF5ARAG": {
+          "conyuge": "MARIACAST"
+        },
+        "CATALANC": {
+          "conyuge": "ENRIQ3CAST"
+        },
+        "MARIACAST": {
+          "conyuge": "ALF5ARAG"
+        },
+        "JUANAENR": {
+          "conyuge": "JUAN2ARAG"
+        },
+        "MARIAARAG": {
+          "conyuge": "JUAN2CAST"
+        },
+        "JUANPORT2": {
+          "conyuge": "ISABBARC"
+        },
+        "ISABBARC": {
+          "conyuge": "JUANPORT2"
+        },
+        "ISABPORT3": {
+          "conyuge": "JUAN2CAST"
+        },
+        "ISAB1CAST": {
+          "conyuge": "FERN2ARAG"
+        },
+        "FEL2BORG": {
+          "conyuge": "MARGFLAN"
+        },
+        "MARGFLAN": {
+          "conyuge": "FEL2BORG"
+        },
+        "JUAN1BORG": {
+          "conyuge": "MARGBAV"
+        },
+        "MARGBAV": {
+          "conyuge": "JUAN1BORG"
+        },
+        "MICVAL": {
+          "conyuge": "FEL3BORG"
+        },
+        "JUAN1PORT": {
+          "conyuge": "FELIPLANC"
+        },
+        "FELIPLANC": {
+          "conyuge": "JUAN1PORT"
+        },
+        "ISABPORTBORG": {
+          "conyuge": "FEL3BORG"
+        },
+        "CATVAL": {
+          "conyuge": "CAR1BORG"
+        },
+        "ISABBORB": {
+          "conyuge": "CAR1BORG"
+        },
+        "MARGYORK": {
+          "conyuge": "CAR1BORG"
+        },
+        "BEATPER": {
+          "conyuge": "ALF1BRAG"
+        },
+        "CONSTNOR": {
+          "conyuge": "ALF1BRAG"
+        },
+        "JUANA1CAST": {
+          "conyuge": "FEL1CAST"
+        },
+        "FEL1CAST": {
+          "conyuge": "JUANA1CAST"
+        },
+        "EDU1PORT": {
+          "conyuge": "LEONARAGPORT"
+        },
+        "LEONARAGPORT": {
+          "conyuge": "EDU1PORT"
+        },
+        "PEDROPORTCOIM": {
+          "conyuge": "ISABURG"
+        },
+        "ISABURG": {
+          "conyuge": "PEDROPORTCOIM"
+        },
+        "ISABCOIM": {
+          "conyuge": "ALF5PORT"
+        },
+        "ALF5PORT": {
+          "conyuge": "ISABCOIM"
+        },
+        "FERNPORTVISEU": {
+          "conyuge": "BEATPORTVISEU"
+        },
+        "BEATPORTVISEU": {
+          "conyuge": "FERNPORTVISEU"
+        },
+        "ENRIQ4CAST": {
+          "conyuge": "JUANAPORTCAST"
+        },
+        "JUANAPORTCAST": {
+          "conyuge": "ENRIQ4CAST"
+        },
+        "JUAN2PORT": {
+          "conyuge": "LEONVISEU"
+        },
+        "LEONVISEU": {
+          "conyuge": "JUAN2PORT"
+        },
+        "ALFPORTINF": {
+          "conyuge": "ISABARAGINF"
+        },
+        "MARIAARAGINF": {
+          "conyuge": "MAN1PORT"
+        },
+        "JUAN3PORT": {
+          "conyuge": "CATAUST"
+        },
+        "CATAUST": {
+          "conyuge": "JUAN3PORT"
+        },
+        "CARLOS5": {
+          "conyuge": "ISABPORTEMP"
+        },
+        "FERN1EMP": {
+          "conyuge": "ANABOHUN"
+        },
+        "ANABOHUN": {
+          "conyuge": "FERN1EMP"
+        },
+        "MARIAAUSTESP": {
+          "conyuge": "MAXIM2"
+        },
+        "ISABAUSTRIAPOL": {
+          "conyuge": "SEGIS2JAG"
+        },
+        "ANAAUSTRIABAV": {
+          "conyuge": "ALB5BAV"
+        },
+        "ALB5BAV": {
+          "conyuge": "ANAAUSTRIABAV"
+        },
+        "CATAUSTRIAPOL": {
+          "conyuge": "SEGIS2JAG"
+        },
+        "BARBAUSTRIA": {
+          "conyuge": "ALFONSO2ESTE"
+        },
+        "ISABPORTEMP": {
+          "conyuge": "CARLOS5"
+        },
+        "ISABTAR": {
+          "conyuge": "FERN1NAP"
+        },
+        "JAIME1BRAG": {
+          "conyuge": "LEONORDEMENDONCABRAG"
+        },
+        "ISABBRAG": {
+          "conyuge": "EDUPORT"
+        },
+        "ISABVISEO": {
+          "conyuge": "FERN2BRAG"
+        },
+        "FERN2BRAG": {
+          "conyuge": "ISABVISEO"
+        },
+        "FERN1BRAG": {
+          "conyuge": "JOANADECASTROBRAG"
+        },
+        "TEOD1BRAG": {
+          "conyuge": "ISABELDELENCASTREBRAG"
+        },
+        "JUAN1BRAG": {
+          "conyuge": "CATAPORT"
+        },
+        "CATAPORT": {
+          "conyuge": "JUAN1BRAG"
+        },
+        "TEOD2BRAG": {
+          "conyuge": "ANAVELASCO"
+        },
+        "ALEJFARNESIO": {
+          "conyuge": "MARIAPORTFARN"
+        },
+        "OCTFARNESIO": {
+          "conyuge": "MARGPARMA"
+        },
+        "MARGPARMA": {
+          "conyuge": "OCTFARNESIO"
+        },
+        "JUAN4PORT": {
+          "conyuge": "LUISAGUZMAN"
+        },
+        "ANAVELASCO": {
+          "conyuge": "TEOD2BRAG"
+        },
+        "LUISAGUZMAN": {
+          "conyuge": "JUAN4PORT"
+        },
+        "PEDRO2PORT": {
+          "conyuge": "MARIASOFNEU"
+        },
+        "MARIASOFNEU": {
+          "conyuge": "PEDRO2PORT"
+        },
+        "JUAN5PORT": {
+          "conyuge": "MARIAANAPORT"
+        },
+        "MARIAANAPORT": {
+          "conyuge": "JUAN5PORT"
+        },
+        "JOSE1PORT": {
+          "conyuge": "MARIANAVICT"
+        },
+        "MARIANAVICT": {
+          "conyuge": "JOSE1PORT"
+        },
+        "PEDRO3PORT": {
+          "conyuge": "MARIA1PORT"
+        },
+        "MARIA1PORT": {
+          "conyuge": "PEDRO3PORT"
+        },
+        "JUAN6PORT": {
+          "conyuge": "CARLOTAJOAQ"
+        },
+        "CARLOTAJOAQ": {
+          "conyuge": "JUAN6PORT"
+        },
+        "PEDRO4PORT": {
+          "conyuge": "MARIALEOPOLDINA"
+        },
+        "MARIALEOPOLDINA": {
+          "conyuge": "PEDRO4PORT"
+        },
+        "LEONORCASTRO": {
+          "conyuge": "SANFRANBORJA"
+        },
+        "FRANLERMA": {
+          "conyuge": "CATACERDA"
+        },
+        "SANFRANBORJA": {
+          "conyuge": "LEONORCASTRO"
+        },
+        "ISABBORJACAST": {
+          "conyuge": "FRANSANDZUN"
+        },
+        "FRANSANDZUN": {
+          "conyuge": "ISABBORJACAST"
+        },
+        "CATACERDA": {
+          "conyuge": "FRANLERMA"
+        },
+        "JUANASANDLERMA": {
+          "conyuge": "MANUEL8MEDINA"
+        },
+        "MANUEL8MEDINA": {
+          "conyuge": "JUANASANDLERMA"
+        },
+        "JUANARAGURREA": {
+          "conyuge": "JUANBORJAENR"
+        },
+        "JOFREBORJAESC": {
+          "conyuge": "ISABBORJA"
+        },
+        "ISABBORJA": {
+          "conyuge": "JOFREBORJAESC"
+        },
+        "CESARBORJA": {
+          "conyuge": "CARLOTAALBRET"
+        },
+        "JUANBORJAENR": {
+          "conyuge": "JUANARAGURREA"
+        },
+        "JUANBORJACATT": {
+          "conyuge": "MARIAENRIQUEZ"
+        },
+        "MARIAENRIQUEZ": {
+          "conyuge": "JUANBORJACATT"
+        },
+        "BLANLANCASTER": {
+          "conyuge": "JUANGASTE"
+        },
+        "MARGAUST": {
+          "conyuge": "FILIBERTO2SAB"
+        },
+        "ARTUROGALES": {
+          "conyuge": "CATARAG"
+        },
+        "MARIAMANUELA": {
+          "conyuge": "FEL2ESP"
+        },
+        "JUANAAUST": {
+          "conyuge": "JUANPORTINF"
+        },
+        "ISABAUST": {
+          "conyuge": "CRISTIAN2DIN"
+        },
+        "CRISTIAN2DIN": {
+          "conyuge": "ISABAUST"
+        },
+        "MARIAAUST": {
+          "conyuge": "LUIS2HUN"
+        },
+        "LEONORSIC": {
+          "conyuge": "PEDRO4ARAG"
+        },
+        "CARLOS3NAVAR": {
+          "conyuge": "LEONORTRAST"
+        },
+        "LEONORTRAST": {
+          "conyuge": "CARLOS3NAVAR"
+        },
+        "JAIME3MALL": {
+          "conyuge": "CONSTANZAARAGMAL"
+        },
+        "TERESAENTENZA": {
+          "conyuge": "ALF4ARAG"
+        },
+        "HERC1ESTE": {
+          "conyuge": "LEONORNAP"
+        },
+        "GASTON4FOIX": {
+          "conyuge": "LEONOR1NAV"
+        },
+        "LEONORNAP": {
+          "conyuge": "HERC1ESTE"
+        },
+        "BEATRIZNAP": {
+          "conyuge": "MATIAS1HUN"
+        },
+        "MATIAS1HUN": {
+          "conyuge": "BEATRIZNAP"
+        },
+        "JUANAARAG": {
+          "conyuge": "FERN1NAP"
+        },
+        "ALFONSO2NAP": {
+          "conyuge": "HIPMARSFOR"
+        },
+        "FELIPEVREUX": {
+          "conyuge": "JUANA2NAV"
+        },
+        "MARIANAVARRA": {
+          "conyuge": "PEDRO4ARAG"
+        },
+        "MARTIN1ARAG": {
+          "conyuge": "MARIALUNA"
+        },
+        "DOMINGOBORJA": {
+          "conyuge": "FRANCISCACAVANILLES"
+        },
+        "ISABELSABRAN": {
+          "conyuge": "FERNMALL"
+        },
+        "FERNMALL": {
+          "conyuge": "ISABELSABRAN"
+        },
+        "LEONORPROVENZA": {
+          "conyuge": "ENRIQ3ING"
+        },
+        "EDUARDO2ING": {
+          "conyuge": "ISABFRAING"
+        },
+        "CLEMHUNGRIA": {
+          "conyuge": "LUIS10FRA"
+        },
+        "MARGARITAFRA": {
+          "conyuge": "EDUARDO1ING"
+        },
+        "LUISEVREUX": {
+          "conyuge": "MARGARTOIS"
+        },
+        "JUANAEVREUX": {
+          "conyuge": "CARLOS4FRA"
+        },
+        "BEATINGLATERRA": {
+          "conyuge": "JUAN2BRET"
+        },
+        "JUAN2BRET": {
+          "conyuge": "BEATINGLATERRA"
+        },
+        "MARGARTOIS": {
+          "conyuge": "LUISEVREUX"
+        },
+        "ANAFOIX": {
+          "conyuge": "LADISLAO7HUN"
+        },
+        "LADISLAO7HUN": {
+          "conyuge": "ANAFOIX"
+        },
+        "ISABLANCASTER": {
+          "conyuge": "JOHNHOLLAND1"
+        },
+        "JOHNHOLLAND1": {
+          "conyuge": "ISABLANCASTER"
+        },
+        "GERMANAFOIX": {
+          "conyuge": "FERN2ARAG"
+        },
+        "MARIALUNA": {
+          "conyuge": "MARTIN1ARAG"
+        },
+        "MARGMONFERRATO": {
+          "conyuge": "PEDRO2URGEL"
+        },
+        "PEDRO2URGEL": {
+          "conyuge": "MARGMONFERRATO"
+        },
+        "JUAN2MONFERRATO": {
+          "conyuge": "ISABMAL"
+        },
+        "SIBILAFORTIA": {
+          "conyuge": "PEDRO4ARAG"
+        },
+        "RICARDOCORNUALLES": {
+          "conyuge": "SANCHAPROVENZA"
+        },
+        "SANCHAPROVENZA": {
+          "conyuge": "RICARDOCORNUALLES"
+        },
+        "FELIPETARENTO": {
+          "conyuge": "CATVALCOUR"
+        },
+        "ALB3AUST": {
+          "conyuge": "BEATRIXNUREMBERG"
+        },
+        "ALB4AUST": {
+          "conyuge": "JOHANNASOPHIABAV"
+        },
+        "ALB2HABS": {
+          "conyuge": "ISABLUX"
+        },
+        "RICARDO2ING": {
+          "conyuge": "ISABELVALOIS1389"
+        },
+        "ISABLUX": {
+          "conyuge": "ALB2HABS"
+        },
+        "CARLOS7FRA": {
+          "conyuge": "MARIAANJOU"
+        },
+        "ISABBAVIERA": {
+          "conyuge": "CARLOS6FRA"
+        },
+        "LUISORLEANS": {
+          "conyuge": "VALVISC"
+        },
+        "MARIAANJOU": {
+          "conyuge": "CARLOS7FRA"
+        },
+        "JUAN6BRET": {
+          "conyuge": "JUANAFRABRET"
+        },
+        "BONASABOYA": {
+          "conyuge": "GALMARSFOR"
+        },
+        "BONASFORZA": {
+          "conyuge": "SEGIS1JAG"
+        },
+        "BARBARAZAPOLYA": {
+          "conyuge": "SEGIS1JAG"
+        },
+        "MAXIM2": {
+          "conyuge": "MARIAAUSTESP"
+        },
+        "CATAMEDICI": {
+          "conyuge": "ENRIQ2FRA"
+        },
+        "ENRIQENRIQUEZ": {
+          "conyuge": "MARIALUNAAYALA"
+        },
+        "MARIALUNAAYALA": {
+          "conyuge": "ENRIQENRIQUEZ"
+        },
+        "TERESAQUIÑONES": {
+          "conyuge": "FADRIQUEENRIQUEZ"
+        },
+        "ALB7AUST": {
+          "conyuge": "ISABCLARAEUG"
+        },
+        "ISABCLARAEUG": {
+          "conyuge": "ALB7AUST"
+        },
+        "CARLOS9FRA": {
+          "conyuge": "ISABELAUSTFRA"
+        },
+        "MATIAS1EMP": {
+          "conyuge": "ANATIROL"
+        },
+        "FERN2TIROL": {
+          "conyuge": "ANACATGONZAGA"
+        },
+        "LEOP5TIROL": {
+          "conyuge": "CLAUDIA_MEDICI"
+        },
+        "CLAUDIA_MEDICI": {
+          "conyuge": "LEOP5TIROL"
+        },
+        "ANATIROL": {
+          "conyuge": "MATIAS1EMP"
+        },
+        "ANACATGONZAGA": {
+          "conyuge": "FERN2TIROL"
+        },
+        "LEONORHABS": {
+          "conyuge": "GUILLERMOGONZAGA"
+        },
+        "MARGANGONZAGA": {
+          "conyuge": "ALFONSO2ESTE"
+        },
+        "GUILLERMOGONZAGA": {
+          "conyuge": "LEONORHABS"
+        },
+        "VICENTE1GONZAGA": {
+          "conyuge": "LEONORMEDICI"
+        },
+        "LEONORMEDICI": {
+          "conyuge": "VICENTE1GONZAGA"
+        },
+        "JUANAHABS": {
+          "conyuge": "FRANCISCO1TOSC"
+        },
+        "FRANCISCO1TOSC": {
+          "conyuge": "JUANAHABS"
+        },
+        "LEONORGONZAGA": {
+          "conyuge": "FERN2EMP"
+        },
+        "CARLOS2ESTIRIA": {
+          "conyuge": "MARIAANABAVIERA"
+        },
+        "MARIAANABAVIERA": {
+          "conyuge": "CARLOS2ESTIRIA"
+        },
+        "ALEJANDRO1POL": {
+          "conyuge": "HELENAMOSCU"
+        },
+        "HELENAMOSCU": {
+          "conyuge": "ALEJANDRO1POL"
+        },
+        "TADEAVISCONTI": {
+          "conyuge": "ESTEBAN3BAV"
+        },
+        "ESTEBAN3BAV": {
+          "conyuge": "TADEAVISCONTI"
+        },
+        "ESTEBAN2BAV": {
+          "conyuge": "ISABELSICILIA"
+        },
+        "ISABELSICILIA": {
+          "conyuge": "ESTEBAN2BAV"
+        },
+        "ANDRES1ANJOU": {
+          "conyuge": "JUANA1NAP"
+        },
+        "MARIALUXEMBURGO": {
+          "conyuge": "CARLOS4FRA"
+        },
+        "GUILLERMO3HENAO": {
+          "conyuge": "JUANAVALOIS"
+        },
+        "JUANORLEANS": {
+          "conyuge": "MARGROHAN"
+        },
+        "MARIAENRIQUEZTOLEDO": {
+          "conyuge": "GARCIAALVAREZ"
+        },
+        "GARCIAALVAREZ": {
+          "conyuge": "MARIAENRIQUEZTOLEDO"
+        },
+        "ISABZUNIGA": {
+          "conyuge": "FADRIQUEALVAREZ"
+        },
+        "FADRIQUEALVAREZ": {
+          "conyuge": "ISABZUNIGA"
+        },
+        "FRAN1GUISA": {
+          "conyuge": "ANNAESTEGUISE"
+        },
+        "ROBERTO2TAR": {
+          "conyuge": "MARIABORBON"
+        },
+        "MARIABORBON": {
+          "conyuge": "ROBERTO2TAR"
+        },
+        "FELIPE2TAR": {
+          "conyuge": "MARIACALABRIA"
+        },
+        "ANTONIABAUX": {
+          "conyuge": "FEDERICO3SIC"
+        },
+        "FRANCISCOBAUX": {
+          "conyuge": "MARGBAUX"
+        },
+        "ISABHAI": {
+          "conyuge": "FEL2FRA"
+        },
+        "INGEBORGDIN": {
+          "conyuge": "FEL2FRA"
+        },
+        "AGNESMER": {
+          "conyuge": "FEL2FRA"
+        },
+        "LUIS8FRA": {
+          "conyuge": "BLANCACAST"
+        },
+        "BLANCACAST": {
+          "conyuge": "LUIS8FRA"
+        },
+        "MARGABORG1290": {
+          "conyuge": "LUIS10FRA"
+        },
+        "JUANA2NAV": {
+          "conyuge": "FELIPEVREUX"
+        },
+        "BLANCABORG1296": {
+          "conyuge": "CARLOS4FRA"
+        },
+        "BLANCANAV": {
+          "conyuge": "FEL6FRA"
+        },
+        "JUANAAUVERNIA": {
+          "conyuge": "JUAN2FRA"
+        },
+        "LUIS1ANJOU": {
+          "conyuge": "MARIEBLOIS"
+        },
+        "MARIEBLOIS": {
+          "conyuge": "LUIS1ANJOU"
+        },
+        "JUANAVALNAV": {
+          "conyuge": "CARLOS2NAV"
+        },
+        "LUIS2ANJOU": {
+          "conyuge": "YOLANDAARAG"
+        },
+        "YOLANDAARAG": {
+          "conyuge": "LUIS2ANJOU"
+        },
+        "RENATOANJOU": {
+          "conyuge": "ISABLORENA"
+        },
+        "ISABLORENA": {
+          "conyuge": "RENATOANJOU"
+        },
+        "CARLOS6FRA": {
+          "conyuge": "ISABBAVIERA"
+        },
+        "JUANAFRABRET": {
+          "conyuge": "JUAN6BRET"
+        },
+        "ENRIQ5ING": {
+          "conyuge": "CATALINAVAL"
+        },
+        "OWENTUDOR": {
+          "conyuge": "CATALINAVAL"
+        },
+        "ENRIQ6ING": {
+          "conyuge": "MARGANJOUING"
+        },
+        "EDMUNDTUDOR": {
+          "conyuge": "MARGARETBEAUFORT"
+        },
+        "MARGARETBEAUFORT": {
+          "conyuge": "EDMUNDTUDOR"
+        },
+        "ENRIQ7ING": {
+          "conyuge": "ISABELYORK"
+        },
+        "ISABELYORK": {
+          "conyuge": "ENRIQ7ING"
+        },
+        "MARGESCOCIA": {
+          "conyuge": "LUIS11FRA"
+        },
+        "CARLOTASAB": {
+          "conyuge": "LUIS11FRA"
+        },
+        "ANAFRA": {
+          "conyuge": "PEDRO2BORBON"
+        },
+        "PEDRO2BORBON": {
+          "conyuge": "ANAFRA"
+        },
+        "JUANAFRA1464": {
+          "conyuge": "LUIS12FRA"
+        },
+        "CARLOS8FRA": {
+          "conyuge": "ANABRET"
+        },
+        "BONARMAGNAC": {
+          "conyuge": "CARLOS1ORLEANS"
+        },
+        "MARIACLEVES": {
+          "conyuge": "CARLOS1ORLEANS"
+        },
+        "CLAUDEFRA": {
+          "conyuge": "FRAN1FRA"
+        },
+        "RENEAFRA": {
+          "conyuge": "HERC2ESTE"
+        },
+        "ALFONSO1ESTE": {
+          "conyuge": "LUCRECIABORJA"
+        },
+        "HERC2ESTE": {
+          "conyuge": "RENEAFRA"
+        },
+        "MARGROHAN": {
+          "conyuge": "JUANORLEANS"
+        },
+        "CARLOSANG": {
+          "conyuge": "LUISASAB"
+        },
+        "LUISASAB": {
+          "conyuge": "CARLOSANG"
+        },
+        "MARGANGULEMA": {
+          "conyuge": "ENRIQ2NAV"
+        },
+        "ENRIQ2FRA": {
+          "conyuge": "CATAMEDICI"
+        },
+        "FRANC2FRA": {
+          "conyuge": "MARIAESTUARDO"
+        },
+        "ISABELVALOISESP": {
+          "conyuge": "FEL2ESP"
+        },
+        "CLAUDEFRALOR": {
+          "conyuge": "CARLOS3LOR"
+        },
+        "CARLOS3LOR": {
+          "conyuge": "CLAUDEFRALOR"
+        },
+        "CRISTINALORENA": {
+          "conyuge": "FERN1TOSC"
+        },
+        "COSIMO1TOSC": {
+          "conyuge": "LEONORTOLEDO"
+        },
+        "LEONORTOLEDO": {
+          "conyuge": "COSIMO1TOSC"
+        },
+        "FERN1TOSC": {
+          "conyuge": "CRISTINALORENA"
+        },
+        "ENRIQ3FRA": {
+          "conyuge": "LUISALORENA"
+        },
+        "LUISALORENA": {
+          "conyuge": "ENRIQ3FRA"
+        },
+        "MARGVALOIS": {
+          "conyuge": "ENRIQ4FRA"
+        },
+        "ISABELAUSTFRA": {
+          "conyuge": "CARLOS9FRA"
+        },
+        "MAGDALENAFRA": {
+          "conyuge": "GASTONVIANA"
+        },
+        "LEONOR1NAV": {
+          "conyuge": "GASTON4FOIX"
+        },
+        "GASTONVIANA": {
+          "conyuge": "MAGDALENAFRA"
+        },
+        "CATALINA1NAV": {
+          "conyuge": "JUAN3ALBRET"
+        },
+        "JUAN3ALBRET": {
+          "conyuge": "CATALINA1NAV"
+        },
+        "ENRIQ2NAV": {
+          "conyuge": "MARGANGULEMA"
+        },
+        "JUANA3NAV": {
+          "conyuge": "ANTONIOBORBON"
+        },
+        "JUAN1MARCH": {
+          "conyuge": "CATALINAVENDOME"
+        },
+        "CATALINAVENDOME": {
+          "conyuge": "JUAN1MARCH"
+        },
+        "LUIS1VENDOME": {
+          "conyuge": "JUANALAVAL"
+        },
+        "JUANALAVAL": {
+          "conyuge": "LUIS1VENDOME"
+        },
+        "JUAN8VENDOME": {
+          "conyuge": "ISABELBEAUVAU"
+        },
+        "ISABELBEAUVAU": {
+          "conyuge": "JUAN8VENDOME"
+        },
+        "FRANCISCOVENDOME": {
+          "conyuge": "MARIALUXSTPOL"
+        },
+        "MARIALUXSTPOL": {
+          "conyuge": "FRANCISCOVENDOME"
+        },
+        "CARLOSVENDOME": {
+          "conyuge": "FRANCISCAALENCON"
+        },
+        "FRANCISCAALENCON": {
+          "conyuge": "CARLOSVENDOME"
+        },
+        "ANTONIOBORBON": {
+          "conyuge": "JUANA3NAV"
+        },
+        "MARIADEMEDICI": {
+          "conyuge": "ENRIQ4FRA"
+        },
+        "CESARVENDOME": {
+          "conyuge": "FRANCISALORENA"
+        },
+        "FRANCISALORENA": {
+          "conyuge": "CESARVENDOME"
+        },
+        "LUIS13FRA": {
+          "conyuge": "ANAAUSTRIAFRA"
+        },
+        "ISABELBORBON": {
+          "conyuge": "FEL4ESP"
+        },
+        "CRISTINAFRA": {
+          "conyuge": "VICTORAMADEO1SAB"
+        },
+        "VICTORAMADEO1SAB": {
+          "conyuge": "CRISTINAFRA"
+        },
+        "GASTONORLEANS": {
+          "conyuge": "MARGLORENA"
+        },
+        "MARGLORENA": {
+          "conyuge": "GASTONORLEANS"
+        },
+        "ENRIQUETAMARIA": {
+          "conyuge": "CARLOS1ING"
+        },
+        "CARLOS1ING": {
+          "conyuge": "ENRIQUETAMARIA"
+        },
+        "JACOBO2ING": {
+          "conyuge": "ANNEHYDE"
+        },
+        "LUIS14FRA": {
+          "conyuge": "MARIATERESAESP"
+        },
+        "ANAAUSTESP": {
+          "conyuge": "FEL2ESP"
+        },
+        "MARIA1ING": {
+          "conyuge": "FEL2ESP"
+        },
+        "FEL3ESP": {
+          "conyuge": "MARGAUSTESTIRIA"
+        },
+        "MARGAUSTESTIRIA": {
+          "conyuge": "FEL3ESP"
+        },
+        "ANAAUSTRIAFRA": {
+          "conyuge": "LUIS13FRA"
+        },
+        "MARIATERESAESP": {
+          "conyuge": "LUIS14FRA"
+        },
+        "ISABFRAING": {
+          "conyuge": "EDUARDO2ING"
+        },
+        "EDUARDO3ING": {
+          "conyuge": "FELIPAHENAO"
+        },
+        "FELIPAHENAO": {
+          "conyuge": "EDUARDO3ING"
+        },
+        "EDUNEGRO": {
+          "conyuge": "JUANAKENT"
+        },
+        "JUANAKENT": {
+          "conyuge": "EDUNEGRO"
+        },
+        "CONSTCAST": {
+          "conyuge": "JUANGASTE"
+        },
+        "MARGFRAFLA": {
+          "conyuge": "LUIS1FLA"
+        },
+        "LUIS1FLA": {
+          "conyuge": "MARGFRAFLA"
+        },
+        "LUIS2FLA": {
+          "conyuge": "MARGABRAB1323"
+        },
+        "MARGABRAB1323": {
+          "conyuge": "LUIS2FLA"
+        },
+        "CARLOS2NAV": {
+          "conyuge": "JUANAVALNAV"
+        },
+        "ALF2AR": {
+          "conyuge": "SANCHACASTAR"
+        },
+        "SANCHACASTAR": {
+          "conyuge": "ALF2AR"
+        },
+        "PEDRO2AR": {
+          "conyuge": "MARIAMONT"
+        },
+        "MARIAMONT": {
+          "conyuge": "PEDRO2AR"
+        },
+        "LEONORCASTARAG": {
+          "conyuge": "ALF4ARAG"
+        },
+        "CONSTANZAARAGMAL": {
+          "conyuge": "JAIME3MALL"
+        },
+        "MATAARMAGNAC": {
+          "conyuge": "JUAN1ARAG"
+        },
+        "VIOLANTEBAR": {
+          "conyuge": "JUAN1ARAG"
+        },
+        "LEONORARAGCAST": {
+          "conyuge": "JUAN1CAST"
+        },
+        "ALF8CAST": {
+          "conyuge": "LEONORINGCAST"
+        },
+        "LEONORINGCAST": {
+          "conyuge": "ALF8CAST"
+        },
+        "BERENGCAST": {
+          "conyuge": "ALF9LEON"
+        },
+        "ALF9LEON": {
+          "conyuge": "BERENGCAST"
+        },
+        "JUANAPONTHIEU": {
+          "conyuge": "FERN3"
+        },
+        "LEONORCASTING": {
+          "conyuge": "EDUARDO1ING"
+        },
+        "SANCHO6NAV": {
+          "conyuge": "SANCHACASTNAV"
+        },
+        "SANCHACASTNAV": {
+          "conyuge": "SANCHO6NAV"
+        },
+        "BLANCANAVCHAMP": {
+          "conyuge": "TEOB3CHAMP"
+        },
+        "TEOB3CHAMP": {
+          "conyuge": "BLANCANAVCHAMP"
+        },
+        "HENRY2ING": {
+          "conyuge": "ELEANORAQUIT"
+        },
+        "ELEANORAQUIT": {
+          "conyuge": "HENRY2ING"
+        },
+        "JUANSINTIERRA": {
+          "conyuge": "ISABELANG"
+        },
+        "ISABELANG": {
+          "conyuge": "JUANSINTIERRA"
+        },
+        "ENRIQ3ING": {
+          "conyuge": "LEONORPROVENZA"
+        },
+        "MARIABOHUN": {
+          "conyuge": "ENRIQ4ING"
+        },
+        "MARGANJOUING": {
+          "conyuge": "ENRIQ6ING"
+        },
+        "EDMUNDLANGLEY": {
+          "conyuge": "ISABELCASTYORK"
+        },
+        "ISABELCASTYORK": {
+          "conyuge": "EDMUNDLANGLEY"
+        },
+        "RICARDOCONISBURGH": {
+          "conyuge": "ANAMORTIMER"
+        },
+        "ANAMORTIMER": {
+          "conyuge": "RICARDOCONISBURGH"
+        },
+        "RICARDOYORK": {
+          "conyuge": "CECILIANEVILLE"
+        },
+        "CECILIANEVILLE": {
+          "conyuge": "RICARDOYORK"
+        },
+        "EDUARDO4ING": {
+          "conyuge": "ISABELWOODVILLE"
+        },
+        "ISABELWOODVILLE": {
+          "conyuge": "EDUARDO4ING"
+        },
+        "RICARDO3ING": {
+          "conyuge": "ANANEVILLE"
+        },
+        "ANANEVILLE": {
+          "conyuge": "RICARDO3ING"
+        },
+        "ANABOLENA": {
+          "conyuge": "ENRIQ8ING"
+        },
+        "JUANASEYMOUR": {
+          "conyuge": "ENRIQ8ING"
+        },
+        "CARLOSBRANDON": {
+          "conyuge": "MARIATUDOR"
+        },
+        "FRANCESCABRANDON": {
+          "conyuge": "ENRIQGREY"
+        },
+        "ENRIQGREY": {
+          "conyuge": "FRANCESCABRANDON"
+        },
+        "JACOBO4ESCOCIA": {
+          "conyuge": "MARGARETTUDOR"
+        },
+        "JACOBO5ESCOCIA": {
+          "conyuge": "MARIAGUISA"
+        },
+        "CLAUDIOGUISA": {
+          "conyuge": "ANTONIETABORBON"
+        },
+        "ANTONIETABORBON": {
+          "conyuge": "CLAUDIOGUISA"
+        },
+        "MARIAGUISA": {
+          "conyuge": "JACOBO5ESCOCIA"
+        },
+        "ARCHIBALDDOUGLAS": {
+          "conyuge": "MARGARETTUDOR"
+        },
+        "MARGARETDOUGLAS": {
+          "conyuge": "MATEOESTUARDO"
+        },
+        "MATEOESTUARDO": {
+          "conyuge": "MARGARETDOUGLAS"
+        },
+        "ENRIQUEDARNLEY": {
+          "conyuge": "MARIAESTUARDO"
+        },
+        "JACOBO1ING": {
+          "conyuge": "ANADINAMARCA"
+        },
+        "ANADINAMARCA": {
+          "conyuge": "JACOBO1ING"
+        },
+        "FELIPESUABIA": {
+          "conyuge": "IRENEANGELINA"
+        },
+        "IRENEANGELINA": {
+          "conyuge": "FELIPESUABIA"
+        },
+        "ENRIQLEON": {
+          "conyuge": "MATILDAING"
+        },
+        "MATILDAING": {
+          "conyuge": "ENRIQLEON"
+        },
+        "ISABELINGHOH": {
+          "conyuge": "FED2HOH"
+        },
+        "CONRADO4HOH": {
+          "conyuge": "ISABELBAVCAR"
+        },
+        "ENRIQUERASPE": {
+          "conyuge": "BEATRIZBRABRASPE"
+        },
+        "BEATRIZBRABRASPE": {
+          "conyuge": "ENRIQUERASPE"
+        },
+        "ENRIQ1BR": {
+          "conyuge": "MATILDEBOUL"
+        },
+        "MATILDEBOUL": {
+          "conyuge": "ENRIQ1BR"
+        },
+        "MATILDEBRABHOLL": {
+          "conyuge": "FLORIS4HOL"
+        },
+        "FLORIS4HOL": {
+          "conyuge": "MATILDEBRABHOLL"
+        },
+        "FEDERICO2SIC": {
+          "conyuge": "LEONORANJOU"
+        },
+        "LEONORANJOU": {
+          "conyuge": "FEDERICO2SIC"
+        },
+        "PEDRO2SIC": {
+          "conyuge": "ISABELCARINTIA"
+        },
+        "ISABELCARINTIA": {
+          "conyuge": "PEDRO2SIC"
+        },
+        "BEATRIZSICILIAPAL": {
+          "conyuge": "RUPERTO2PAL"
+        },
+        "RUPERTO2PAL": {
+          "conyuge": "BEATRIZSICILIAPAL"
+        },
+        "ISABELNUR": {
+          "conyuge": "RUPERTOHRE"
+        },
+        "RUPERTOHRE": {
+          "conyuge": "ISABELNUR"
+        },
+        "JUANENRIQUEMOR": {
+          "conyuge": "MARGOPAVA"
+        },
+        "MARGOPAVA": {
+          "conyuge": "JUANENRIQUEMOR"
+        },
+        "WALRAM2": {
+          "conyuge": "ADELKATZ"
+        },
+        "ADELKATZ": {
+          "conyuge": "WALRAM2"
+        },
+        "IMAGISEN": {
+          "conyuge": "ADOLFN"
+        },
+        "MATILDENASSAU": {
+          "conyuge": "ROD1BAV"
+        },
+        "ROD1BAV": {
+          "conyuge": "MATILDENASSAU"
+        },
+        "GUILLERMO5BAV": {
+          "conyuge": "RENATALORENA"
+        },
+        "RENATALORENA": {
+          "conyuge": "GUILLERMO5BAV"
+        },
+        "MARIAANABAVFERN2": {
+          "conyuge": "FERN2EMP"
+        },
+        "ANAJAG": {
+          "conyuge": "ESTEBANBATHORY"
+        },
+        "ESTEBANBATHORY": {
+          "conyuge": "ANAJAG"
+        },
+        "CATALINAJAG": {
+          "conyuge": "JUAN3SUECIA"
+        },
+        "JUAN3SUECIA": {
+          "conyuge": "CATALINAJAG"
+        },
+        "ANAAUSTRIAVASA": {
+          "conyuge": "SEGIS3VASA"
+        },
+        "BELA3HUN": {
+          "conyuge": "INESANTIOQUIA"
+        },
+        "INESANTIOQUIA": {
+          "conyuge": "BELA3HUN"
+        },
+        "EMERICOHUN": {
+          "conyuge": "CONSTANZAARAGHUN"
+        },
+        "GERTRUDISMERANIA": {
+          "conyuge": "ANDRES2HUN"
+        },
+        "LUIS2HUN": {
+          "conyuge": "MARIAAUST"
+        },
+        "ISABELJAGHUN": {
+          "conyuge": "JUAN1ZAPOLYA"
+        },
+        "JUAN1ZAPOLYA": {
+          "conyuge": "ISABELJAGHUN"
+        },
+        "JUANDURAZZO": {
+          "conyuge": "INESPERIGORD"
+        },
+        "INESPERIGORD": {
+          "conyuge": "JUANDURAZZO"
+        },
+        "LUISDURAZZO": {
+          "conyuge": "MARGSANSEVERINO"
+        },
+        "MARGSANSEVERINO": {
+          "conyuge": "LUISDURAZZO"
+        },
+        "CARLOS3NAP": {
+          "conyuge": "MARGDUR"
+        },
+        "CARLOS2NAP": {
+          "conyuge": "MARIAHUNNAP"
+        },
+        "MARIAHUNNAP": {
+          "conyuge": "CARLOS2NAP"
+        },
+        "FERN2NAP": {
+          "conyuge": "JUANANAP2"
+        },
+        "JUANANAP2": {
+          "conyuge": "FERN2NAP"
+        },
+        "CATVALCOUR": {
+          "conyuge": "FELIPETARENTO"
+        },
+        "MARGBAUX": {
+          "conyuge": "FRANCISCOBAUX"
+        },
+        "FEDERICO3SIC": {
+          "conyuge": "ANTONIABAUX"
+        },
+        "GARCIAALBA": {
+          "conyuge": "BEATPRIEGO"
+        },
+        "BEATPRIEGO": {
+          "conyuge": "GARCIAALBA"
+        },
+        "MARIANACORDOBA": {
+          "conyuge": "FADRIQUEENRIQUEZ"
+        },
+        "OTAK1": {
+          "conyuge": "CONSTHUNBOH"
+        },
+        "ROD3HAB": {
+          "conyuge": "ISABRP"
+        },
+        "JORGEPODE": {
+          "conyuge": "JOANAROZ"
+        },
+        "MARGDUR": {
+          "conyuge": "CARLOS3NAP"
+        },
+        "CONSTHUNBOH": {
+          "conyuge": "OTAK1"
+        },
+        "MEINHARD2GOR": {
+          "conyuge": "ISABELBAVCAR"
+        },
+        "ANABOHCAR": {
+          "conyuge": "ENRIQCAR"
+        },
+        "ADELAIDEBRUN": {
+          "conyuge": "ENRIQCAR"
+        },
+        "JOANAROZ": {
+          "conyuge": "JORGEPODE"
+        },
+        "ISABELSTUARTPAL": {
+          "conyuge": "FED5PALBOH"
+        },
+        "FED5PALBOH": {
+          "conyuge": "ISABELSTUARTPAL"
+        },
+        "MARIAANAESPFERN3": {
+          "conyuge": "FERN3HRE"
+        },
+        "FERN3HRE": {
+          "conyuge": "MARIAANAESPFERN3"
+        },
+        "MARIANAAUSTESP": {
+          "conyuge": "FEL4ESP"
+        },
+        "MARGTERESAAUT": {
+          "conyuge": "LEOP1HRE"
+        },
+        "MARIAANTONIAAUT": {
+          "conyuge": "MAX2EMANBAV"
+        },
+        "OTTO1BAV": {
+          "conyuge": "AGNESLOON"
+        },
+        "AGNESLOON": {
+          "conyuge": "OTTO1BAV"
+        },
+        "LUIS1BAV": {
+          "conyuge": "LUDMILABOHBAV"
+        },
+        "LUDMILABOHBAV": {
+          "conyuge": "LUIS1BAV"
+        },
+        "OTTO2BAV": {
+          "conyuge": "AGNESPALBAV"
+        },
+        "AGNESPALBAV": {
+          "conyuge": "OTTO2BAV"
+        },
+        "JUDITASWIBAV": {
+          "conyuge": "ESTEBAN1BAV"
+        },
+        "ESTEBAN1BAV": {
+          "conyuge": "JUDITASWIBAV"
+        },
+        "MARGBOHBAV": {
+          "conyuge": "ENRIQ14BAV"
+        },
+        "ENRIQ14BAV": {
+          "conyuge": "MARGBOHBAV"
+        },
+        "ANNABAVUP": {
+          "conyuge": "JUAN1BAV"
+        },
+        "JUAN1BAV": {
+          "conyuge": "ANNABAVUP"
+        },
+        "MARGTYROL": {
+          "conyuge": "LUIS5BAV"
+        },
+        "LUIS5BAV": {
+          "conyuge": "MARGTYROL"
+        },
+        "CATBOHOTTO": {
+          "conyuge": "OTTO7BAV"
+        },
+        "OTTO7BAV": {
+          "conyuge": "CATBOHOTTO"
+        },
+        "MATILDLANCBAV": {
+          "conyuge": "GUILLERMO1BAV"
+        },
+        "GUILLERMO1BAV": {
+          "conyuge": "MATILDLANCBAV"
+        },
+        "MARGBRIEGBAV": {
+          "conyuge": "ALB1BAV"
+        },
+        "ALB1BAV": {
+          "conyuge": "MARGBRIEGBAV"
+        },
+        "MAGDVISBAV": {
+          "conyuge": "FED1BAV"
+        },
+        "FED1BAV": {
+          "conyuge": "MAGDVISBAV"
+        },
+        "CATGORBAV": {
+          "conyuge": "JUAN2BAV"
+        },
+        "JUAN2BAV": {
+          "conyuge": "CATGORBAV"
+        },
+        "MARGAUTLAND": {
+          "conyuge": "ENRIQ16BAV"
+        },
+        "ENRIQ16BAV": {
+          "conyuge": "MARGAUTLAND"
+        },
+        "ELISVISBAV": {
+          "conyuge": "ERNESTBAV"
+        },
+        "ERNESTBAV": {
+          "conyuge": "ELISVISBAV"
+        },
+        "MARGCLEVESBAV": {
+          "conyuge": "GUILLERMO3BAV"
+        },
+        "GUILLERMO3BAV": {
+          "conyuge": "MARGCLEVESBAV"
+        },
+        "MARGBORGBAV": {
+          "conyuge": "GUILLERMO2BAV"
+        },
+        "GUILLERMO2BAV": {
+          "conyuge": "MARGBORGBAV"
+        },
+        "ANABORBMARCH": {
+          "conyuge": "LUIS7BAV"
+        },
+        "LUIS7BAV": {
+          "conyuge": "ANABORBMARCH"
+        },
+        "ISABELGORLITZ": {
+          "conyuge": "JUAN3BAV"
+        },
+        "JUAN3BAV": {
+          "conyuge": "ISABELGORLITZ"
+        },
+        "ANNABRUNBAV": {
+          "conyuge": "ALB3BAV"
+        },
+        "ALB3BAV": {
+          "conyuge": "ANNABRUNBAV"
+        },
+        "AMALIASAXBAV": {
+          "conyuge": "LUIS9BAV"
+        },
+        "LUIS9BAV": {
+          "conyuge": "AMALIASAXBAV"
+        },
+        "EDUVIGJAGBAV": {
+          "conyuge": "JORGE1BAV"
+        },
+        "JORGE1BAV": {
+          "conyuge": "EDUVIGJAGBAV"
+        },
+        "CUNIGAUSTRIABAV": {
+          "conyuge": "ALB4BAV"
+        },
+        "ALB4BAV": {
+          "conyuge": "CUNIGAUSTRIABAV"
+        },
+        "JACOBEABADEN": {
+          "conyuge": "GUILLERMO4BAV"
+        },
+        "GUILLERMO4BAV": {
+          "conyuge": "JACOBEABADEN"
+        },
+        "MARIAANAAUTMAXBAV": {
+          "conyuge": "MAX1BAV"
+        },
+        "MAX1BAV": {
+          "conyuge": "MARIAANAAUTMAXBAV"
+        },
+        "MECHTLEUCH": {
+          "conyuge": "ALB6BAV"
+        },
+        "ALB6BAV": {
+          "conyuge": "MECHTLEUCH"
+        },
+        "HENRIETASAB": {
+          "conyuge": "FERDMARIABAV"
+        },
+        "FERDMARIABAV": {
+          "conyuge": "HENRIETASAB"
+        },
+        "TERESASOBBAV": {
+          "conyuge": "MAX2EMANBAV"
+        },
+        "NICCPICC": {
+          "conyuge": "GABRIELLASESTIO"
+        },
+        "ISOTTAATTI": {
+          "conyuge": "SIGISMALAT"
+        },
+        "SIGISMALAT": {
+          "conyuge": "ISOTTAATTI"
+        },
+        "GUIDANTMONTE": {
+          "conyuge": "CATERINACOLONNAMONTE"
+        },
+        "BATTISTASFORZA": {
+          "conyuge": "FEDMONTE"
+        },
+        "FEDMONTE": {
+          "conyuge": "BATTISTASFORZA"
+        },
+        "FABRCOLONNA": {
+          "conyuge": "AGNESEMONTEFELTRO"
+        },
+        "VITTORIACOL": {
+          "conyuge": "FERRANDAVALOS"
+        },
+        "FERRANDAVALOS": {
+          "conyuge": "VITTORIACOL"
+        },
+        "GIOVPOPOLANO": {
+          "conyuge": "CATASFOR"
+        },
+        "GIOVBANDENERE": {
+          "conyuge": "MARIASALVIATI"
+        },
+        "ISABELLAESTE": {
+          "conyuge": "FRAN2GONZAGA"
+        },
+        "FRAN2GONZAGA": {
+          "conyuge": "ISABELLAESTE"
+        },
+        "MARGPALEO": {
+          "conyuge": "FED2GONZAGA"
+        },
+        "FED2GONZAGA": {
+          "conyuge": "MARGPALEO"
+        },
+        "LUISDELFIN1661": {
+          "conyuge": "MARIAANABAV1660"
+        },
+        "MARIAANABAV1660": {
+          "conyuge": "LUISDELFIN1661"
+        },
+        "VICTORAMADEO2SAB": {
+          "conyuge": "ANAMARIAORL"
+        },
+        "ANAMARIAORL": {
+          "conyuge": "VICTORAMADEO2SAB"
+        },
+        "MARIAADELSAB": {
+          "conyuge": "LUISBORGONAFRA"
+        },
+        "LUISBORGONAFRA": {
+          "conyuge": "MARIAADELSAB"
+        },
+        "LUIS15FRA": {
+          "conyuge": "MARIALESZCZ"
+        },
+        "MARIALESZCZ": {
+          "conyuge": "LUIS15FRA"
+        },
+        "MARIATERESARAFAELA": {
+          "conyuge": "LUISDELFIN1729"
+        },
+        "MARIAJOSEFASAJ": {
+          "conyuge": "LUISDELFIN1729"
+        },
+        "LUIS16FRA": {
+          "conyuge": "MARIAANTONIETA"
+        },
+        "MARIAANTONIETA": {
+          "conyuge": "LUIS16FRA"
+        },
+        "MARIALUISASABESP": {
+          "conyuge": "FEL5ESP"
+        },
+        "ISABELFARNESIO": {
+          "conyuge": "FEL5ESP"
+        },
+        "LUISAISABELORL": {
+          "conyuge": "LUIS1ESP"
+        },
+        "LUIS1ESP": {
+          "conyuge": "LUISAISABELORL"
+        },
+        "BARBARAPORTESP": {
+          "conyuge": "FERN6ESP"
+        },
+        "FERN6ESP": {
+          "conyuge": "BARBARAPORTESP"
+        },
+        "MARIAAMALIASAJ": {
+          "conyuge": "CARLOS3ESP"
+        },
+        "CARLOS3ESP": {
+          "conyuge": "MARIAAMALIASAJ"
+        },
+        "MARIALUISAPARMA": {
+          "conyuge": "CARLOS4ESP"
+        },
+        "CARLOS4ESP": {
+          "conyuge": "MARIALUISAPARMA"
+        },
+        "FRANCESCO_PIGN_SPINAZZOLA": {
+          "conyuge": "PORZIA_CARAFA"
+        },
+        "PORZIA_CARAFA": {
+          "conyuge": "FRANCESCO_PIGN_SPINAZZOLA"
+        },
+        "GIULIO_PIGN_CERCHIARA": {
+          "conyuge": "BEATRICE_CARAFA_NOJA"
+        },
+        "BEATRICE_CARAFA_NOJA": {
+          "conyuge": "GIULIO_PIGN_CERCHIARA"
+        },
+        "LISAGHERARDINI": {
+          "conyuge": "FRANCESCOGIOCONDO"
+        },
+        "FRANCESCOGIOCONDO": {
+          "conyuge": "LISAGHERARDINI"
+        },
+        "LORENZOMEDICI": {
+          "conyuge": "CLARICEORSINI"
+        },
+        "CLARICEORSINI": {
+          "conyuge": "LORENZOMEDICI"
+        },
+        "BARBCEL": {
+          "conyuge": "SEGIS1"
+        },
+        "MARGFRAN": {
+          "conyuge": "JUAN1BR"
+        },
+        "JUANABR": {
+          "conyuge": "WEN1LUX"
+        },
+        "PEDRNEU": {
+          "conyuge": "ISABBORG"
+        },
+        "EDUPORT": {
+          "conyuge": "ISABBRAG"
+        },
+        "JUANAVALOIS": {
+          "conyuge": "GUILLERMO3HENAO"
+        },
+        "FRANCISCACAVANILLES": {
+          "conyuge": "DOMINGOBORJA"
+        },
+        "ALAINALBRET": {
+          "conyuge": "FRANCOISECHATILLON"
+        },
+        "FRANCOISECHATILLON": {
+          "conyuge": "ALAINALBRET"
+        },
+        "CARLOTAALBRET": {
+          "conyuge": "CESARBORJA"
+        },
+        "GOFFREDOBORJA": {
+          "conyuge": "SANCIABORGIA"
+        },
+        "SANCIABORGIA": {
+          "conyuge": "GOFFREDOBORJA"
+        },
+        "GIOVSFORZAPESARO": {
+          "conyuge": "LUCRECIABORJA"
+        },
+        "ALFONSOBISCEGLIE": {
+          "conyuge": "LUCRECIABORJA"
+        },
+        "ENRIQUEGROSMONT": {
+          "conyuge": "ISABELBEAUMONTLAN"
+        },
+        "ISABELBEAUMONTLAN": {
+          "conyuge": "ENRIQUEGROSMONT"
+        },
+        "JUANBEDFORD": {
+          "conyuge": "ANABORGBEDFORD"
+        },
+        "ANABORGBEDFORD": {
+          "conyuge": "JUANBEDFORD"
+        },
+        "GABRIELLASESTIO": {
+          "conyuge": "NICCPICC"
+        },
+        "CLAUDIAFELICITAS": {
+          "conyuge": "LEOP1HRE"
+        },
+        "ELEONORMAGNEU": {
+          "conyuge": "LEOP1HRE"
+        },
+        "JOSE1HRE": {
+          "conyuge": "WILHELMINEAMALIA"
+        },
+        "WILHELMINEAMALIA": {
+          "conyuge": "JOSE1HRE"
+        },
+        "CARLOS6HRE": {
+          "conyuge": "ELISABCHRISTINE"
+        },
+        "ELISABCHRISTINE": {
+          "conyuge": "CARLOS6HRE"
+        },
+        "MARIAAMALIAHAB1701": {
+          "conyuge": "CARLOS7HRE"
+        },
+        "CARLOS7HRE": {
+          "conyuge": "MARIAAMALIAHAB1701"
+        },
+        "HENRIETAANAING": {
+          "conyuge": "FELIPE1ORLEANS"
+        },
+        "ISABELCARLOTAPAL": {
+          "conyuge": "FELIPE1ORLEANS"
+        },
+        "ISABELCARLOTAORL": {
+          "conyuge": "LEOPOLDLORENA"
+        },
+        "LEOPOLDLORENA": {
+          "conyuge": "ISABELCARLOTAORL"
+        },
+        "FRAN1HRE": {
+          "conyuge": "MARIATERESAHAB"
+        },
+        "MARIATERESAHAB": {
+          "conyuge": "FRAN1HRE"
+        },
+        "MARIALUISAESP1745": {
+          "conyuge": "LEOP2HRE"
+        },
+        "LEOP2HRE": {
+          "conyuge": "MARIALUISAESP1745"
+        },
+        "ERNSTSAX": {
+          "conyuge": "ELISBAVSAX"
+        },
+        "ELISBAVSAX": {
+          "conyuge": "ERNSTSAX"
+        },
+        "JUANSAX": {
+          "conyuge": "SOPHIEMECK"
+        },
+        "SOPHIEMECK": {
+          "conyuge": "JUANSAX"
+        },
+        "FELIPEHESSE": {
+          "conyuge": "CRISTINASAXHESSE"
+        },
+        "SILVIOPICCOLOMINI": {
+          "conyuge": "VITTORIAFORTEGUERRI"
+        },
+        "LEONARDODELLAROVERE_SR": {
+          "conyuge": "LUCHINAMONLEONE"
+        },
+        "RAFFAELLODELLAROVERE": {
+          "conyuge": "TEODORAMANEROLA"
+        },
+        "SILVESTROALDOBRANDINI": {
+          "conyuge": "LISADETI"
+        },
+        "FLAVIOCHIGI_SR": {
+          "conyuge": "LAURAMARSILI"
+        },
+        "MARIOCHIGI": {
+          "conyuge": "BERENICEDELLACIAIA"
+        },
+        "LIVIOODESCALCHI_SR": {
+          "conyuge": "LIVIACASTELLI"
+        },
+        "PIEROLORENZOMEDICI": {
+          "conyuge": "ALFONSINAORSINI"
+        },
+        "ALFONSINAORSINI": {
+          "conyuge": "PIEROLORENZOMEDICI"
+        },
+        "LORENZO2MEDICI": {
+          "conyuge": "MADELEINEAUV"
+        },
+        "MADELEINEAUV": {
+          "conyuge": "LORENZO2MEDICI"
+        },
+        "JUTTATHUR": {
+          "conyuge": "DIETRICHMEISSEN"
+        },
+        "DIETRICHMEISSEN": {
+          "conyuge": "JUTTATHUR"
+        },
+        "HEINRICH3MEISSEN": {
+          "conyuge": "CONSTANZAAUSMEISSEN"
+        },
+        "CONSTANZAAUSMEISSEN": {
+          "conyuge": "HEINRICH3MEISSEN"
+        },
+        "ALB2MEISSEN": {
+          "conyuge": "MARGHOHMEISSEN"
+        },
+        "MARGHOHMEISSEN": {
+          "conyuge": "ALB2MEISSEN"
+        },
+        "FRED1MEISSEN": {
+          "conyuge": "ELISARNSHAUGK"
+        },
+        "ELISARNSHAUGK": {
+          "conyuge": "FRED1MEISSEN"
+        },
+        "FRED2MEISSEN": {
+          "conyuge": "MATILDEBAVMEISSEN"
+        },
+        "MATILDEBAVMEISSEN": {
+          "conyuge": "FRED2MEISSEN"
+        },
+        "FRED3MEISSEN": {
+          "conyuge": "CATHHENNEBERG"
+        },
+        "CATHHENNEBERG": {
+          "conyuge": "FRED3MEISSEN"
+        },
+        "FRED1SAX": {
+          "conyuge": "CATHBRUNSAX"
+        },
+        "CATHBRUNSAX": {
+          "conyuge": "FRED1SAX"
+        },
+        "FRED2SAX": {
+          "conyuge": "MARGAUSTSAX"
+        },
+        "CIMBURGISMAZ": {
+          "conyuge": "ERNEST1"
+        },
+        "MARGAUSTSAX": {
+          "conyuge": "FRED2SAX"
+        },
+        "ALBERTSAX": {
+          "conyuge": "SIDONIEBOH"
+        },
+        "SIDONIEBOH": {
+          "conyuge": "ALBERTSAX"
+        },
+        "GEORGESAX": {
+          "conyuge": "BARBJAGSAX"
+        },
+        "BARBJAGSAX": {
+          "conyuge": "GEORGESAX"
+        },
+        "CRISTINASAXHESSE": {
+          "conyuge": "FELIPEHESSE"
+        },
+        "HENRYPIOUSSAX": {
+          "conyuge": "CATHMECKSAX"
+        },
+        "CATHMECKSAX": {
+          "conyuge": "HENRYPIOUSSAX"
+        },
+        "MORITZSAX": {
+          "conyuge": "AGNESSHESSE"
+        },
+        "AGNESSHESSE": {
+          "conyuge": "MORITZSAX"
+        },
+        "AUGUSTSAX": {
+          "conyuge": "ANNADENMARKSAX"
+        },
+        "ANNADENMARKSAX": {
+          "conyuge": "AUGUSTSAX"
+        },
+        "CHRISTIAN1SAX": {
+          "conyuge": "SOPHIEBRANDSAX"
+        },
+        "SOPHIEBRANDSAX": {
+          "conyuge": "CHRISTIAN1SAX"
+        },
+        "JOHANNGEORG1SAX": {
+          "conyuge": "MAGDSIBPRUSSAX"
+        },
+        "MAGDSIBPRUSSAX": {
+          "conyuge": "JOHANNGEORG1SAX"
+        },
+        "JOHANNGEORG2SAX": {
+          "conyuge": "MAGDSIBBAYSAX"
+        },
+        "MAGDSIBBAYSAX": {
+          "conyuge": "JOHANNGEORG2SAX"
+        },
+        "JOHANNGEORG3SAX": {
+          "conyuge": "ANNASOPHIEDENSAX"
+        },
+        "ANNASOPHIEDENSAX": {
+          "conyuge": "JOHANNGEORG3SAX"
+        },
+        "AUGUST2SAXPOL": {
+          "conyuge": "CHRISTIANEEBERHARDINE"
+        },
+        "CHRISTIANEEBERHARDINE": {
+          "conyuge": "AUGUST2SAXPOL"
+        },
+        "AUGUST3SAXPOL": {
+          "conyuge": "MARIAJOSEPHAAUSTRIASAX"
+        },
+        "MARIAJOSEPHAAUSTRIASAX": {
+          "conyuge": "AUGUST3SAXPOL"
+        },
+        "FREDCHRISTIANSAX": {
+          "conyuge": "MARIAANTONIABAVSAX"
+        },
+        "MARIAANTONIABAVSAX": {
+          "conyuge": "FREDCHRISTIANSAX"
+        },
+        "ENRIQUE5PALWELF": {
+          "conyuge": "AGNESHOHENPAL"
+        },
+        "AGNESHOHENPAL": {
+          "conyuge": "ENRIQUE5PALWELF"
+        },
+        "TOMAS1SAB": {
+          "conyuge": "MARGGINEBRASAB"
+        },
+        "MARGGINEBRASAB": {
+          "conyuge": "TOMAS1SAB"
+        },
+        "MARGARITABORGSAB": {
+          "conyuge": "AMEDEO4SAB"
+        },
+        "CECILIABAUX": {
+          "conyuge": "AMEDEO4SAB"
+        },
+        "TOMAS2SAB": {
+          "conyuge": "BEATRICEFIESCHI"
+        },
+        "BEATRICEFIESCHI": {
+          "conyuge": "TOMAS2SAB"
+        },
+        "SIBILLABAGE": {
+          "conyuge": "AMEDEO5SAB"
+        },
+        "AIMONSAB": {
+          "conyuge": "YOLANDAMONFERRATOSAB"
+        },
+        "YOLANDAMONFERRATOSAB": {
+          "conyuge": "AIMONSAB"
+        },
+        "AMEDEO6SAB": {
+          "conyuge": "BONABORBONSAB"
+        },
+        "BONABORBONSAB": {
+          "conyuge": "AMEDEO6SAB"
+        },
+        "AMEDEO7SAB": {
+          "conyuge": "BONABERRYSAB"
+        },
+        "BONABERRYSAB": {
+          "conyuge": "AMEDEO7SAB"
+        },
+        "AMEDEO8SAB": {
+          "conyuge": "MARIABORGSAB"
+        },
+        "MARIABORGSAB": {
+          "conyuge": "AMEDEO8SAB"
+        },
+        "LUISSAB": {
+          "conyuge": "ANACIPROSAB"
+        },
+        "ANACIPROSAB": {
+          "conyuge": "LUISSAB"
+        },
+        "AMEDEO9SAB": {
+          "conyuge": "YOLANDAVALOISSAB"
+        },
+        "YOLANDAVALOISSAB": {
+          "conyuge": "AMEDEO9SAB"
+        },
+        "CARLOS1SAB": {
+          "conyuge": "BIANCAMONSAB"
+        },
+        "MARGARITABORBONSAB": {
+          "conyuge": "FELIPE2SAB"
+        },
+        "CLAUDINEBROSSE": {
+          "conyuge": "FELIPE2SAB"
+        },
+        "FILIBERTO2SAB": {
+          "conyuge": "MARGAUST"
+        },
+        "CARLOS3SAB": {
+          "conyuge": "BEATRIZPORTSAB"
+        },
+        "BEATRIZPORTSAB": {
+          "conyuge": "CARLOS3SAB"
+        },
+        "EMANUELFILIBERTOSAB": {
+          "conyuge": "MARGARITAFRANCIASAB"
+        },
+        "MARGARITAFRANCIASAB": {
+          "conyuge": "EMANUELFILIBERTOSAB"
+        },
+        "CARLOSEMANUEL1SAB": {
+          "conyuge": "CATALINAMICAELAESP"
+        },
+        "CATALINAMICAELAESP": {
+          "conyuge": "CARLOSEMANUEL1SAB"
+        },
+        "TOMASFRANCISCOSAB": {
+          "conyuge": "MARIABORBONSOISSONS"
+        },
+        "MARIABORBONSOISSONS": {
+          "conyuge": "TOMASFRANCISCOSAB"
+        },
+        "CARLOSEMANUEL2SAB": {
+          "conyuge": "MARIAJUANANEMOURS"
+        },
+        "MARIAJUANANEMOURS": {
+          "conyuge": "CARLOSEMANUEL2SAB"
+        },
+        "CARLOSEMANUEL3SAB": {
+          "conyuge": "POLIXENAHESSE"
+        },
+        "POLIXENAHESSE": {
+          "conyuge": "CARLOSEMANUEL3SAB"
+        },
+        "VICTORAMADEO3SAB": {
+          "conyuge": "MARIAANTONIAESP_SAB"
+        },
+        "MARIAANTONIAESP_SAB": {
+          "conyuge": "VICTORAMADEO3SAB"
+        },
+        "CARLOSEMANUEL4SAB": {
+          "conyuge": "CLOTILDEFRASAB"
+        },
+        "CLOTILDEFRASAB": {
+          "conyuge": "CARLOSEMANUEL4SAB"
+        },
+        "EMANUELFILIBERTOCAR": {
+          "conyuge": "ANGELACATERINAESTE"
+        },
+        "ANGELACATERINAESTE": {
+          "conyuge": "EMANUELFILIBERTOCAR"
+        },
+        "VICTORAMADEO1CAR": {
+          "conyuge": "MARIAVITTORIAFRANCESCASAB"
+        },
+        "MARIAVITTORIAFRANCESCASAB": {
+          "conyuge": "VICTORAMADEO1CAR"
+        },
+        "LUISVICTORCAR": {
+          "conyuge": "CRISTINAHESSECAR"
+        },
+        "CRISTINAHESSECAR": {
+          "conyuge": "LUISVICTORCAR"
+        },
+        "VICTORAMADEO2CAR": {
+          "conyuge": "JOSEFINALORENACAR"
+        },
+        "JOSEFINALORENACAR": {
+          "conyuge": "VICTORAMADEO2CAR"
+        },
+        "CARLOSEMANUELCAR": {
+          "conyuge": "MARIACRISTINASAJCAR"
+        },
+        "CHARLESSAXCOURLAND": {
+          "conyuge": "FRANCISZKAKRASINSKA"
+        },
+        "FRANCISZKAKRASINSKA": {
+          "conyuge": "CHARLESSAXCOURLAND"
+        },
+        "MARIACRISTINASAJCAR": {
+          "conyuge": "CARLOSEMANUELCAR"
+        },
+        "RAMONBERENGUER4PROV": {
+          "conyuge": "BEATSABPROV"
+        },
+        "SVERKER2SUE": {
+          "conyuge": "INGEGERDBIRGERSUE"
+        },
+        "INGEGERDBIRGERSUE": {
+          "conyuge": "SVERKER2SUE"
+        },
+        "ERIK10SUE": {
+          "conyuge": "RICHEZADIN"
+        },
+        "RICHEZADIN": {
+          "conyuge": "ERIK10SUE"
+        },
+        "INGEBORGERIKSUE": {
+          "conyuge": "BIRGERJARL"
+        },
+        "BIRGERJARL": {
+          "conyuge": "INGEBORGERIKSUE"
+        },
+        "VALDEMARSUE": {
+          "conyuge": "SOFIADINVALDEMAR"
+        },
+        "MAGNUS3SUE": {
+          "conyuge": "HELVIGHOLSTEIN"
+        },
+        "HELVIGHOLSTEIN": {
+          "conyuge": "MAGNUS3SUE"
+        },
+        "ERICMAGNUSSONSUE": {
+          "conyuge": "INGEBORGNORUEGA"
+        },
+        "INGEBORGNORUEGA": {
+          "conyuge": "ERICMAGNUSSONSUE"
+        },
+        "MAGNUS4SUE": {
+          "conyuge": "BLANCANAMUR"
+        },
+        "BLANCANAMUR": {
+          "conyuge": "MAGNUS4SUE"
+        },
+        "HAAKON6NOR": {
+          "conyuge": "MARGARITA1NORD"
+        },
+        "EUPHEMIASUE": {
+          "conyuge": "ALBERTO2MECK"
+        },
+        "ALBERTO2MECK": {
+          "conyuge": "EUPHEMIASUE"
+        },
+        "VALDEMAR4DIN": {
+          "conyuge": "HEDVIGSCHLESWIG"
+        },
+        "HEDVIGSCHLESWIG": {
+          "conyuge": "VALDEMAR4DIN"
+        },
+        "MARGARITA1NORD": {
+          "conyuge": "HAAKON6NOR"
+        },
+        "ERICOPOMERANIA": {
+          "conyuge": "PHILIPPAENGLAND"
+        },
+        "CRISTOBALBAVSUE": {
+          "conyuge": "DOROTHEABRAND"
+        },
+        "CRISTIAN1NORD": {
+          "conyuge": "DOROTHEABRAND"
+        },
+        "JUAN2NORD": {
+          "conyuge": "CRISTINASAJDIN"
+        },
+        "CRISTINASAJDIN": {
+          "conyuge": "JUAN2NORD"
+        },
+        "SVANTENILSSON": {
+          "conyuge": "INGEBORGTOTTSTURE"
+        },
+        "ESTENSTUREJOVEN": {
+          "conyuge": "CHRISTINAGYLLEN"
+        },
+        "CATALINASAJLAU": {
+          "conyuge": "GUSTAV1VASA"
+        },
+        "MARGARITALEIJON": {
+          "conyuge": "GUSTAV1VASA"
+        },
+        "CRISTINAHOLSTEINGOTTORP": {
+          "conyuge": "CARLOS9SUE"
+        },
+        "GUSTAV2ADOLFO": {
+          "conyuge": "MARIAELEONORABRAND"
+        },
+        "MARIAELEONORABRAND": {
+          "conyuge": "GUSTAV2ADOLFO"
+        },
+        "CATALINASUEVASA": {
+          "conyuge": "JUANCASIMIROPALZWEI"
+        },
+        "JUANCASIMIROPALZWEI": {
+          "conyuge": "CATALINASUEVASA"
+        },
+        "CARLOS10GUSTAVO": {
+          "conyuge": "EDUVIGELEONORA"
+        },
+        "EDUVIGELEONORA": {
+          "conyuge": "CARLOS10GUSTAVO"
+        },
+        "CARLOS11SUE": {
+          "conyuge": "ULRICALEONORADIN"
+        },
+        "ULRICALEONORADIN": {
+          "conyuge": "CARLOS11SUE"
+        },
+        "ULRICALEONORASUE": {
+          "conyuge": "FEDERICO1SUE"
+        },
+        "FEDERICO1SUE": {
+          "conyuge": "ULRICALEONORASUE"
+        },
+        "ADOLFOFEDERICOSUE": {
+          "conyuge": "LUISAULRICAPRUSIA"
+        },
+        "LUISAULRICAPRUSIA": {
+          "conyuge": "ADOLFOFEDERICOSUE"
+        },
+        "GUSTAV3SUE": {
+          "conyuge": "SOFIAMAGDALENADIN"
+        },
+        "SOFIAMAGDALENADIN": {
+          "conyuge": "GUSTAV3SUE"
+        },
+        "CARLOS14JUAN": {
+          "conyuge": "DESIREECLARY"
+        },
+        "DESIREECLARY": {
+          "conyuge": "CARLOS14JUAN"
+        },
+        "GIOVANNIDIBICCI": {
+          "conyuge": "PICCARDBUERI"
+        },
+        "PICCARDBUERI": {
+          "conyuge": "GIOVANNIDIBICCI"
+        },
+        "COSIMOILVECCHIO": {
+          "conyuge": "CONTESSINABARDI"
+        },
+        "CONTESSINABARDI": {
+          "conyuge": "COSIMOILVECCHIO"
+        },
+        "LORENZOILVECCHIO": {
+          "conyuge": "GINEVRACAVALCANTI"
+        },
+        "GINEVRACAVALCANTI": {
+          "conyuge": "LORENZOILVECCHIO"
+        },
+        "PIERFRANCESCOVECCHIO": {
+          "conyuge": "LAUDOMIAACCIAIUOLI"
+        },
+        "LAUDOMIAACCIAIUOLI": {
+          "conyuge": "PIERFRANCESCOVECCHIO"
+        },
+        "LUCREZIAMEDICISALVIATI": {
+          "conyuge": "JACOPOSALVIATI"
+        },
+        "JACOPOSALVIATI": {
+          "conyuge": "LUCREZIAMEDICISALVIATI"
+        },
+        "MARIASALVIATI": {
+          "conyuge": "GIOVBANDENERE"
+        },
+        "COSIMO2TOSC": {
+          "conyuge": "MARIAMAGDALENAAUSTMED"
+        },
+        "MARIAMAGDALENAAUSTMED": {
+          "conyuge": "COSIMO2TOSC"
+        },
+        "FERDINANDO2TOSC": {
+          "conyuge": "VITTORIADELLAROVERE"
+        },
+        "VITTORIADELLAROVERE": {
+          "conyuge": "FERDINANDO2TOSC"
+        },
+        "COSIMO3TOSC": {
+          "conyuge": "MARGARITALUISAORL"
+        },
+        "MARGARITALUISAORL": {
+          "conyuge": "COSIMO3TOSC"
+        },
+        "ANNAMARIALUISAMEDICI": {
+          "conyuge": "JUANGUILLERMOPAL"
+        },
+        "JUANGUILLERMOPAL": {
+          "conyuge": "ANNAMARIALUISAMEDICI"
+        },
+        "MARIAPALATINADOSUE": {
+          "conyuge": "CARLOS9SUE"
+        },
+        "SOFIADINVALDEMAR": {
+          "conyuge": "VALDEMARSUE"
+        },
+        "ALONSOENRIQUEZ": {
+          "conyuge": "JUANADEMENDOZA"
+        },
+        "JUANADEMENDOZA": {
+          "conyuge": "ALONSOENRIQUEZ"
+        },
+        "FRED1BRAND": {
+          "conyuge": "ELISABAVLAND"
+        },
+        "ELISABAVLAND": {
+          "conyuge": "FRED1BRAND"
+        },
+        "MARGARETBADEN": {
+          "conyuge": "ALBRECHTACHILLES"
+        },
+        "ANNASAXALBERT": {
+          "conyuge": "ALBRECHTACHILLES"
+        },
+        "JOHNALCHEMIST": {
+          "conyuge": "BARBARASAXWITTENBERG"
+        },
+        "JOHNCICEROBRAND": {
+          "conyuge": "MARGTHURBRAND"
+        },
+        "MARGTHURBRAND": {
+          "conyuge": "JOHNCICEROBRAND"
+        },
+        "JOACHIM1BRAND": {
+          "conyuge": "ELISADENBRAND"
+        },
+        "ELISADENBRAND": {
+          "conyuge": "JOACHIM1BRAND"
+        },
+        "JOACHIM2BRAND": {
+          "conyuge": "MAGDSAXBRAND"
+        },
+        "MAGDSAXBRAND": {
+          "conyuge": "JOACHIM2BRAND"
+        },
+        "JUANGEORGEBRAND": {
+          "conyuge": "SOPHIELEGNICA"
+        },
+        "SOPHIELEGNICA": {
+          "conyuge": "JUANGEORGEBRAND"
+        },
+        "JOACHIMFREDBRAND": {
+          "conyuge": "KATHBRANDK"
+        },
+        "KATHBRANDK": {
+          "conyuge": "JOACHIMFREDBRAND"
+        },
+        "FREDANSBACH": {
+          "conyuge": "SOPHIAJAGANSB"
+        },
+        "SOPHIAJAGANSB": {
+          "conyuge": "FREDANSBACH"
+        },
+        "ALBERTPRUSSIA": {
+          "conyuge": "ANNAMARIABRUNSPRUSSIA"
+        },
+        "ALBFREDPRUSSIA": {
+          "conyuge": "MARIEELEONORECLEVES"
+        },
+        "MARIEELEONORECLEVES": {
+          "conyuge": "ALBFREDPRUSSIA"
+        },
+        "ANNAPRUSSIA": {
+          "conyuge": "JOHNSIGBRAND"
+        },
+        "JOHNSIGBRAND": {
+          "conyuge": "ANNAPRUSSIA"
+        },
+        "LOUISEJULIANANASSAU": {
+          "conyuge": "FRED4PAL"
+        },
+        "FRED4PAL": {
+          "conyuge": "LOUISEJULIANANASSAU"
+        },
+        "ELISCHARLOTTAPAL": {
+          "conyuge": "GEORGEWILLIAMBRAND"
+        },
+        "GEORGEWILLIAMBRAND": {
+          "conyuge": "ELISCHARLOTTAPAL"
+        },
+        "FREDWILGREAT": {
+          "conyuge": "LOUISEHENRIETTEORANGE"
+        },
+        "LOUISEHENRIETTEORANGE": {
+          "conyuge": "FREDWILGREAT"
+        },
+        "FRED1PRUSSIA": {
+          "conyuge": "SOPHCHARLOTTEHAN"
+        },
+        "SOPHCHARLOTTEHAN": {
+          "conyuge": "FRED1PRUSSIA"
+        },
+        "FREDWIL1PRU": {
+          "conyuge": "SOPHIADOROTHEAHAN"
+        },
+        "AUGUSTWILPRU": {
+          "conyuge": "LUISEAMALIEBRUN"
+        },
+        "LUISEAMALIEBRUN": {
+          "conyuge": "AUGUSTWILPRU"
+        },
+        "FREDWIL2PRU": {
+          "conyuge": "FREDERICAHESSEDARM"
+        },
+        "FREDERICAHESSEDARM": {
+          "conyuge": "FREDWIL2PRU"
+        },
+        "FREDWIL3PRU": {
+          "conyuge": "LOUISEMECKSTRELITZ"
+        },
+        "LOUISEMECKSTRELITZ": {
+          "conyuge": "FREDWIL3PRU"
+        },
+        "ERNSTAUGUSTHAN": {
+          "conyuge": "SOPHIAPALHAN"
+        },
+        "SOPHIAPALHAN": {
+          "conyuge": "ERNSTAUGUSTHAN"
+        },
+        "GEORGE1GB": {
+          "conyuge": "SOPHIADOROTHEACELLE"
+        },
+        "SOPHIADOROTHEACELLE": {
+          "conyuge": "GEORGE1GB"
+        },
+        "SOPHIADOROTHEAHAN": {
+          "conyuge": "FREDWIL1PRU"
+        },
+        "GEORGE2GB": {
+          "conyuge": "CAROLINEANSB"
+        },
+        "CAROLINEANSB": {
+          "conyuge": "GEORGE2GB"
+        },
+        "FREDWALESHAN": {
+          "conyuge": "AUGUSTASAXGOTHA"
+        },
+        "AUGUSTASAXGOTHA": {
+          "conyuge": "FREDWALESHAN"
+        },
+        "LOUISEGBDEN": {
+          "conyuge": "FRED5DEN"
+        },
+        "CAROLINEMATILDA": {
+          "conyuge": "CHRISTIAN7DEN"
+        },
+        "ANNEGBORANGE": {
+          "conyuge": "WILLIAM4ORANGE"
+        },
+        "HENRY2NASSAU": {
+          "conyuge": "MATILDAGUERNASSAU"
+        },
+        "MATILDAGUERNASSAU": {
+          "conyuge": "HENRY2NASSAU"
+        },
+        "OTTO1NASSAU": {
+          "conyuge": "AGNESLEININGEN"
+        },
+        "HENRY1SIEGEN": {
+          "conyuge": "ADELHEIDHEINSBERG"
+        },
+        "OTTO2SIEGEN": {
+          "conyuge": "ADELHEIDVIANDEN"
+        },
+        "JOHN1NASSAU": {
+          "conyuge": "MARGARETHAMARK"
+        },
+        "ENGELBERT1NASSAU": {
+          "conyuge": "JOHANNAPOLANEN"
+        },
+        "JOHANNAPOLANEN": {
+          "conyuge": "ENGELBERT1NASSAU"
+        },
+        "JOHN4NASSAU": {
+          "conyuge": "MARIALOONHEINSBERG"
+        },
+        "JOHN5NASSAU": {
+          "conyuge": "ELISAHESSEMARBURG"
+        },
+        "ELISAHESSEMARBURG": {
+          "conyuge": "JOHN5NASSAU"
+        },
+        "WILLIAMRICHNASSAU": {
+          "conyuge": "JULIANASTOLBERG"
+        },
+        "JULIANASTOLBERG": {
+          "conyuge": "WILLIAMRICHNASSAU"
+        },
+        "ANNAEGMONT": {
+          "conyuge": "WILLIAMSILENT"
+        },
+        "ANNASAXORANGE": {
+          "conyuge": "WILLIAMSILENT"
+        },
+        "CHARLOTTEBOURBONORANGE": {
+          "conyuge": "WILLIAMSILENT"
+        },
+        "LOUISECOLIGNY": {
+          "conyuge": "WILLIAMSILENT"
+        },
+        "FREDERICKHENRYORANGE": {
+          "conyuge": "AMALIASOLMS"
+        },
+        "AMALIASOLMS": {
+          "conyuge": "FREDERICKHENRYORANGE"
+        },
+        "WILLIAM2ORANGE": {
+          "conyuge": "MARYSTUARTORANGE"
+        },
+        "MARYSTUARTORANGE": {
+          "conyuge": "WILLIAM2ORANGE"
+        },
+        "ANNEHYDE": {
+          "conyuge": "JACOBO2ING"
+        },
+        "MARY2ING": {
+          "conyuge": "WILLIAM3ORANGE"
+        },
+        "WILLIAM3ORANGE": {
+          "conyuge": "MARY2ING"
+        },
+        "JOHN6NASSAU": {
+          "conyuge": "ELISABETHLEUCHTENBERG"
+        },
+        "ERNSTCASIMIRNASSAU": {
+          "conyuge": "SOPHIAHEDWIGBRUNSWICK"
+        },
+        "WILLIAMFREDNASSAU": {
+          "conyuge": "ALBERTINEAGNESORANGE"
+        },
+        "ALBERTINEAGNESORANGE": {
+          "conyuge": "WILLIAMFREDNASSAU"
+        },
+        "HENRYCASIMIR2": {
+          "conyuge": "HENRIETTEAMALIAANHALT"
+        },
+        "HENRIETTEAMALIAANHALT": {
+          "conyuge": "HENRYCASIMIR2"
+        },
+        "JOHNWILLIAMFRISO": {
+          "conyuge": "MARIELOUISEHESSE"
+        },
+        "MARIELOUISEHESSE": {
+          "conyuge": "JOHNWILLIAMFRISO"
+        },
+        "WILLIAM4ORANGE": {
+          "conyuge": "ANNEGBORANGE"
+        },
+        "WILHELMINAPRUORANGE": {
+          "conyuge": "WILLIAM5ORANGE"
+        },
+        "WILLIAM5ORANGE": {
+          "conyuge": "WILHELMINAPRUORANGE"
+        },
+        "DIETRICHOLD": {
+          "conyuge": "HELVIGSCHAU"
+        },
+        "HELVIGSCHAU": {
+          "conyuge": "DIETRICHOLD"
+        },
+        "ANNABRANDDEN": {
+          "conyuge": "FRED1DEN"
+        },
+        "SOPHIEPOMDEN": {
+          "conyuge": "FRED1DEN"
+        },
+        "CHRISTIAN3DEN": {
+          "conyuge": "DOROTHEALAUDEN"
+        },
+        "DOROTHEALAUDEN": {
+          "conyuge": "CHRISTIAN3DEN"
+        },
+        "FRED2DEN": {
+          "conyuge": "SOPHIEMECKDEN"
+        },
+        "SOPHIEMECKDEN": {
+          "conyuge": "FRED2DEN"
+        },
+        "CHRISTIAN4DEN": {
+          "conyuge": "ANNECATHBRANDDEN"
+        },
+        "ANNECATHBRANDDEN": {
+          "conyuge": "CHRISTIAN4DEN"
+        },
+        "FRED3DEN": {
+          "conyuge": "SOPHIEAMALIEBRUN"
+        },
+        "SOPHIEAMALIEBRUN": {
+          "conyuge": "FRED3DEN"
+        },
+        "CHRISTIAN5DEN": {
+          "conyuge": "CHARLOTTEAMALIEHESSE"
+        },
+        "CHARLOTTEAMALIEHESSE": {
+          "conyuge": "CHRISTIAN5DEN"
+        },
+        "FRED4DEN": {
+          "conyuge": "LOUISEMECKDEN"
+        },
+        "LOUISEMECKDEN": {
+          "conyuge": "FRED4DEN"
+        },
+        "CHRISTIAN6DEN": {
+          "conyuge": "SOPHIEMAGDKULM"
+        },
+        "SOPHIEMAGDKULM": {
+          "conyuge": "CHRISTIAN6DEN"
+        },
+        "FRED5DEN": {
+          "conyuge": "LOUISEGBDEN"
+        },
+        "CHRISTIAN7DEN": {
+          "conyuge": "CAROLINEMATILDA"
+        },
+        "ADOLFHOLGOTT": {
+          "conyuge": "CHRISTINEHESSEHG"
+        },
+        "CHRISTINEHESSEHG": {
+          "conyuge": "ADOLFHOLGOTT"
+        },
+        "JOHNADOLFGOTT": {
+          "conyuge": "AUGUSTADENHG"
+        },
+        "AUGUSTADENHG": {
+          "conyuge": "JOHNADOLFGOTT"
+        },
+        "FRED3HOLGOTT": {
+          "conyuge": "MARIAELISASAXHG"
+        },
+        "MARIAELISASAXHG": {
+          "conyuge": "FRED3HOLGOTT"
+        },
+        "CHRISTIANALBERTHG": {
+          "conyuge": "FREDERICAAMALIADEN"
+        },
+        "FREDERICAAMALIADEN": {
+          "conyuge": "CHRISTIANALBERTHG"
+        },
+        "FRED4HOLGOTT": {
+          "conyuge": "HEDVIGSOPHIASUE"
+        },
+        "HEDVIGSOPHIASUE": {
+          "conyuge": "FRED4HOLGOTT"
+        },
+        "CHARLESFREDHG": {
+          "conyuge": "ANNAPETROVNA"
+        },
+        "CHRISTIANAUGUSTEUTIN": {
+          "conyuge": "ALBERTINABADEN"
+        },
+        "ALBERTINABADEN": {
+          "conyuge": "CHRISTIANAUGUSTEUTIN"
+        },
+        "JOHANNAELISAHOLST": {
+          "conyuge": "CHRISTIANANHALTZERBST"
+        },
+        "MICHAEL9PALA": {
+          "conyuge": "RITAARMENIA"
+        },
+        "ANDRO3PALA": {
+          "conyuge": "ANNASAVOYBYZ"
+        },
+        "JOHN5PALA": {
+          "conyuge": "HELENAKANTAKOUZENE"
+        },
+        "MANUEL2PALA": {
+          "conyuge": "HELENADRAGAS"
+        },
+        "THOMASPALA": {
+          "conyuge": "CATHERINEZACCARIA"
+        },
+        "YAROSLAV2VLAD": {
+          "conyuge": "FEODOSIAMSTISLAVNA"
+        },
+        "ALEXNEVSKY": {
+          "conyuge": "ALEXANDRAPOLOTSK"
+        },
+        "DANIELMOSC": {
+          "conyuge": "MARIAGLEBOVNA"
+        },
+        "IVAN1KALITA": {
+          "conyuge": "ELENAKALITA"
+        },
+        "IVAN2MOSC": {
+          "conyuge": "ALEXANDRAVELYAMINOVA"
+        },
+        "DMITRIDON": {
+          "conyuge": "EUDOXIANIZHNY"
+        },
+        "VYTAUTASLIT": {
+          "conyuge": "ANNALITHUANIA"
+        },
+        "SOFIALITMOSC": {
+          "conyuge": "VASILY1MOSC"
+        },
+        "VASILY1MOSC": {
+          "conyuge": "SOFIALITMOSC"
+        },
+        "VASILY2MOSC": {
+          "conyuge": "MARIABOROVSK"
+        },
+        "IVAN3MOSC": {
+          "conyuge": "SOPHIAPALMOSC"
+        },
+        "SOPHIAPALMOSC": {
+          "conyuge": "IVAN3MOSC"
+        },
+        "VASILY3MOSC": {
+          "conyuge": "ELENAGLINSKAYA"
+        },
+        "ELENAGLINSKAYA": {
+          "conyuge": "VASILY3MOSC"
+        },
+        "ROMANYURIEVICH": {
+          "conyuge": "ULIANAFEODOROVNA"
+        },
+        "ANASTASIAROM": {
+          "conyuge": "IVAN4RUS"
+        },
+        "IVAN4RUS": {
+          "conyuge": "ANASTASIAROM"
+        },
+        "FILARETROM": {
+          "conyuge": "KSENIASH"
+        },
+        "KSENIASH": {
+          "conyuge": "FILARETROM"
+        },
+        "MIKHAIL1RUS": {
+          "conyuge": "EUDOXIASTRESH"
+        },
+        "EUDOXIASTRESH": {
+          "conyuge": "MIKHAIL1RUS"
+        },
+        "MARIAMILOSLAV": {
+          "conyuge": "ALEXIS1RUS"
+        },
+        "NATALYANARYSH": {
+          "conyuge": "ALEXIS1RUS"
+        },
+        "PRASKOVIASALTYK": {
+          "conyuge": "IVAN5RUS"
+        },
+        "IVAN5RUS": {
+          "conyuge": "PRASKOVIASALTYK"
+        },
+        "EUDOXIALOP": {
+          "conyuge": "PETER1RUS"
+        },
+        "CATHERINE1RUS": {
+          "conyuge": "PETER1RUS"
+        },
+        "ALEXEIPETROVICH": {
+          "conyuge": "CHARLOTTEBRUNRUS"
+        },
+        "CHARLOTTEBRUNRUS": {
+          "conyuge": "ALEXEIPETROVICH"
+        },
+        "CATHERINEIVANOVNA": {
+          "conyuge": "CHARLESLEOPOLDMECK"
+        },
+        "CHARLESLEOPOLDMECK": {
+          "conyuge": "CATHERINEIVANOVNA"
+        },
+        "ANNALEOPOLDOVNA": {
+          "conyuge": "ANTHONYULRICHBRUN"
+        },
+        "ANTHONYULRICHBRUN": {
+          "conyuge": "ANNALEOPOLDOVNA"
+        },
+        "ANNAPETROVNA": {
+          "conyuge": "CHARLESFREDHG"
+        },
+        "CHRISTIANANHALTZERBST": {
+          "conyuge": "JOHANNAELISAHOLST"
+        },
+        "PETER3RUS": {
+          "conyuge": "CATHERINE2RUS"
+        },
+        "CATHERINE2RUS": {
+          "conyuge": "PETER3RUS"
+        },
+        "SOPHIADOROTHEAWURTT": {
+          "conyuge": "PAUL1RUS"
+        },
+        "PAUL1RUS": {
+          "conyuge": "SOPHIADOROTHEAWURTT"
+        },
+        "CONSTANCEAUVASA": {
+          "conyuge": "SEGIS3VASA"
+        },
+        "WLAD4VASA": {
+          "conyuge": "LUISAMARIAGONZAGA"
+        },
+        "JUAN2CASIVASA": {
+          "conyuge": "LUISAMARIAGONZAGA"
+        },
+        "JEREMIWISE": {
+          "conyuge": "GRYZELDAZAM"
+        },
+        "GRYZELDAZAM": {
+          "conyuge": "JEREMIWISE"
+        },
+        "JAKUBSOB": {
+          "conyuge": "ZOFIADAN"
+        },
+        "ZOFIADAN": {
+          "conyuge": "JAKUBSOB"
+        },
+        "MARIAKAZIMIERA": {
+          "conyuge": "JUAN3SOBIESKI"
+        },
+        "JUAN3SOBIESKI": {
+          "conyuge": "MARIAKAZIMIERA"
+        },
+        "RAFALESZ": {
+          "conyuge": "ANNAJABL"
+        },
+        "ANNAJABL": {
+          "conyuge": "RAFALESZ"
+        },
+        "KATARZYNAOPAL": {
+          "conyuge": "STAN1LESZ"
+        },
+        "STAN1LESZ": {
+          "conyuge": "KATARZYNAOPAL"
+        },
+        "STANPONFATHER": {
+          "conyuge": "KONSTCZART"
+        },
+        "KONSTCZART": {
+          "conyuge": "STANPONFATHER"
+        },
+        "ENRIQ6LUX": {
+          "conyuge": "BEATAVES"
+        },
+        "BEATAVES": {
+          "conyuge": "ENRIQ6LUX"
+        },
+        "GUIDOFLA": {
+          "conyuge": "MATIBETH"
+        },
+        "MATIBETH": {
+          "conyuge": "GUIDOFLA"
+        },
+        "ULRICH3KYB": {
+          "conyuge": "ANNAZAHR"
+        },
+        "ANNAZAHR": {
+          "conyuge": "ULRICH3KYB"
+        },
+        "BURC5HOH": {
+          "conyuge": "MECTTUB"
+        },
+        "MECTTUB": {
+          "conyuge": "BURC5HOH"
+        },
+        "BERNDOR": {
+          "conyuge": "ELEONORAFIESCHI"
+        },
+        "YOLCOURHUN": {
+          "conyuge": "ANDRES2HUN"
+        },
+        "JUANPORTINF": {
+          "conyuge": "JUANAAUST"
+        },
+        "MARIAVALOISCAL": {
+          "conyuge": "CARLOSCAL"
+        },
+        "CARLODURAZZO": {
+          "conyuge": "MARIACALABRIA"
+        },
+        "ROBERTODELBAUX": {
+          "conyuge": "MARIACALABRIA"
+        },
+        "JOHANNAPFIRT": {
+          "conyuge": "ALB2AUS"
+        },
+        "FRED5NUREMBERG": {
+          "conyuge": "ELISABMEISSEN"
+        },
+        "ELISABMEISSEN": {
+          "conyuge": "FRED5NUREMBERG"
+        },
+        "BEATRIXNUREMBERG": {
+          "conyuge": "ALB3AUST"
+        },
+        "JOHANNASOPHIABAV": {
+          "conyuge": "ALB4AUST"
+        },
+        "COSTANZAVARANO": {
+          "conyuge": "ALESSFOR"
+        },
+        "AGNESEMONTEFELTRO": {
+          "conyuge": "FABRCOLONNA"
+        },
+        "CATERINACOLONNAMONTE": {
+          "conyuge": "GUIDANTMONTE"
+        },
+        "MARIAPORTFARN": {
+          "conyuge": "ALEJFARNESIO"
+        },
+        "LEONORDEMENDONCABRAG": {
+          "conyuge": "JAIME1BRAG"
+        },
+        "JOANADECASTROBRAG": {
+          "conyuge": "FERN1BRAG"
+        },
+        "ISABELDELENCASTREBRAG": {
+          "conyuge": "TEOD1BRAG"
+        },
+        "BARBARASAXWITTENBERG": {
+          "conyuge": "JOHNALCHEMIST"
+        },
+        "ANNAMARIABRUNSPRUSSIA": {
+          "conyuge": "ALBERTPRUSSIA"
+        },
+        "AGNESLEININGEN": {
+          "conyuge": "OTTO1NASSAU"
+        },
+        "ADELHEIDHEINSBERG": {
+          "conyuge": "HENRY1SIEGEN"
+        },
+        "ADELHEIDVIANDEN": {
+          "conyuge": "OTTO2SIEGEN"
+        },
+        "MARGARETHAMARK": {
+          "conyuge": "JOHN1NASSAU"
+        },
+        "MARIALOONHEINSBERG": {
+          "conyuge": "JOHN4NASSAU"
+        },
+        "ELISABETHLEUCHTENBERG": {
+          "conyuge": "JOHN6NASSAU"
+        },
+        "SOPHIAHEDWIGBRUNSWICK": {
+          "conyuge": "ERNSTCASIMIRNASSAU"
+        },
+        "RITAARMENIA": {
+          "conyuge": "MICHAEL9PALA"
+        },
+        "MARIABRABANTSAVOY": {
+          "conyuge": "AMEDEO5SAB"
+        },
+        "ANNASAVOYBYZ": {
+          "conyuge": "ANDRO3PALA"
+        },
+        "HELENAKANTAKOUZENE": {
+          "conyuge": "JOHN5PALA"
+        },
+        "HELENADRAGAS": {
+          "conyuge": "MANUEL2PALA"
+        },
+        "CATHERINEZACCARIA": {
+          "conyuge": "THOMASPALA"
+        },
+        "ALEXANDRAVELYAMINOVA": {
+          "conyuge": "IVAN2MOSC"
+        },
+        "EUDOXIANIZHNY": {
+          "conyuge": "DMITRIDON"
+        },
+        "ANNALITHUANIA": {
+          "conyuge": "VYTAUTASLIT"
+        },
+        "MARIABOROVSK": {
+          "conyuge": "VASILY2MOSC"
+        },
+        "ULIANAFEODOROVNA": {
+          "conyuge": "ROMANYURIEVICH"
+        },
+        "VARVARAKHOVRINA": {
+          "conyuge": "NIKITAROM"
+        },
+        "EVDOKIASHUISKAYA": {
+          "conyuge": "NIKITAROM"
+        },
+        "ELEONORAFIESCHI": {
+          "conyuge": "BERNDOR"
+        },
+        "BERNARDINOMEDICIMILAN": {
+          "conyuge": "CECILIASERBELLONI"
+        },
+        "CECILIASERBELLONI": {
+          "conyuge": "BERNARDINOMEDICIMILAN"
+        },
+        "FRANCESCASALVIATI": {
+          "conyuge": "OTTAVIANOMEDICI"
+        },
+        "OTTAVIANOMEDICI": {
+          "conyuge": "FRANCESCASALVIATI"
+        },
+        "VITTORIAFORTEGUERRI": {
+          "conyuge": "SILVIOPICCOLOMINI"
+        },
+        "LUCHINAMONLEONE": {
+          "conyuge": "LEONARDODELLAROVERE_SR"
+        },
+        "TEODORAMANEROLA": {
+          "conyuge": "RAFFAELLODELLAROVERE"
+        },
+        "LAURAMARSILI": {
+          "conyuge": "FLAVIOCHIGI_SR"
+        },
+        "BERENICEDELLACIAIA": {
+          "conyuge": "MARIOCHIGI"
+        },
+        "LISADETI": {
+          "conyuge": "SILVESTROALDOBRANDINI"
+        },
+        "LIVIACASTELLI": {
+          "conyuge": "LIVIOODESCALCHI_SR"
+        },
+        "SOPHIASOMMERSCHENBURG": {
+          "conyuge": "HERMANN1THUR"
+        },
+        "SOPHIAWITTELSBACHTHUR": {
+          "conyuge": "HERMANN1THUR"
+        },
+        "FEODOSIAMSTISLAVNA": {
+          "conyuge": "YAROSLAV2VLAD"
+        },
+        "ALEXANDRAPOLOTSK": {
+          "conyuge": "ALEXNEVSKY"
+        },
+        "MARIAGLEBOVNA": {
+          "conyuge": "DANIELMOSC"
+        },
+        "ELENAKALITA": {
+          "conyuge": "IVAN1KALITA"
+        },
+        "GASPARD2COLIGNY": {
+          "conyuge": "CHARLOTTELAVAL"
+        },
+        "CHARLOTTELAVAL": {
+          "conyuge": "GASPARD2COLIGNY"
+        },
+        "ANNAESTEGUISE": {
+          "conyuge": "FRAN1GUISA"
+        },
+        "ASCANIOCOLONNA": {
+          "conyuge": "GIOVANNAARAGCOL"
+        },
+        "GIOVANNAARAGCOL": {
+          "conyuge": "ASCANIOCOLONNA"
+        },
+        "CHARLES5LOR": {
+          "conyuge": "ELEONOREMARIAAUT"
+        },
+        "ELEONOREMARIAAUT": {
+          "conyuge": "CHARLES5LOR"
+        },
+        "HENRYSCOT": {
+          "conyuge": "ADAWARENNE"
+        },
+        "ADAWARENNE": {
+          "conyuge": "HENRYSCOT"
+        },
+        "WILLIAM1SCOT": {
+          "conyuge": "ERMENGARDESCOT"
+        },
+        "ERMENGARDESCOT": {
+          "conyuge": "WILLIAM1SCOT"
+        },
+        "DAVIDHUNTINGDON": {
+          "conyuge": "MATILDACHESTER"
+        },
+        "MATILDACHESTER": {
+          "conyuge": "DAVIDHUNTINGDON"
+        },
+        "JOANENGLANDSCOT": {
+          "conyuge": "ALEXANDER2SCOT"
+        },
+        "MARIECOUCY": {
+          "conyuge": "ALEXANDER2SCOT"
+        },
+        "MARGARETENGLANDSCOT": {
+          "conyuge": "ALEXANDER3SCOT"
+        },
+        "MARGARETSCOTNOR": {
+          "conyuge": "ERIK2NORWAY"
+        },
+        "ERIK2NORWAY": {
+          "conyuge": "MARGARETSCOTNOR"
+        },
+        "MARGARETHUNTINGDON": {
+          "conyuge": "ALANGALLOWAY"
+        },
+        "ALANGALLOWAY": {
+          "conyuge": "MARGARETHUNTINGDON"
+        },
+        "DERVORGUILLA": {
+          "conyuge": "JOHNBALLIOLFATHER"
+        },
+        "JOHNBALLIOLFATHER": {
+          "conyuge": "DERVORGUILLA"
+        },
+        "JOHN1BALLIOL": {
+          "conyuge": "ISABELWARENNEBALLIOL"
+        },
+        "ISABELWARENNEBALLIOL": {
+          "conyuge": "JOHN1BALLIOL"
+        },
+        "ISOBELHUNTINGDON": {
+          "conyuge": "ROBERTBRUS4"
+        },
+        "ROBERTBRUS4": {
+          "conyuge": "ISOBELHUNTINGDON"
+        },
+        "ROBERTBRUS5COMP": {
+          "conyuge": "ISABELLACLAREBRUS"
+        },
+        "ISABELLACLAREBRUS": {
+          "conyuge": "ROBERTBRUS5COMP"
+        },
+        "ROBERTBRUS6": {
+          "conyuge": "MARJORIECARRICK"
+        },
+        "MARJORIECARRICK": {
+          "conyuge": "ROBERTBRUS6"
+        },
+        "ISABELMARSCO": {
+          "conyuge": "ROBERT1BRUCE"
+        },
+        "ELIZABETHBURGHSCOT": {
+          "conyuge": "ROBERT1BRUCE"
+        },
+        "MARJORIEBRUCE": {
+          "conyuge": "WALTERSTEWART6"
+        },
+        "WALTERSTEWART6": {
+          "conyuge": "MARJORIEBRUCE"
+        },
+        "DAVID2SCOT": {
+          "conyuge": "JOANTOWERSCOT"
+        },
+        "JOANTOWERSCOT": {
+          "conyuge": "DAVID2SCOT"
+        },
+        "ROBERT2SCOT": {
+          "conyuge": "ELIZABETHMURE"
+        },
+        "ELIZABETHMURE": {
+          "conyuge": "ROBERT2SCOT"
+        },
+        "ROBERT3SCOT": {
+          "conyuge": "ANNABELLADRUMMOND"
+        },
+        "ANNABELLADRUMMOND": {
+          "conyuge": "ROBERT3SCOT"
+        },
+        "JAMES1SCOT": {
+          "conyuge": "JOANBEAUFORTSCOT"
+        },
+        "JOANBEAUFORTSCOT": {
+          "conyuge": "JAMES1SCOT"
+        },
+        "JAMES2SCOT": {
+          "conyuge": "MARYGUELDERS"
+        },
+        "MARYGUELDERS": {
+          "conyuge": "JAMES2SCOT"
+        },
+        "JAMES3SCOT": {
+          "conyuge": "MARGDINESCOCIA"
+        },
+        "MARGDINESCOCIA": {
+          "conyuge": "JAMES3SCOT"
+        },
+        "FULK5JER": {
+          "conyuge": "MELISENDEJER"
+        },
+        "MELISENDEJER": {
+          "conyuge": "FULK5JER"
+        },
+        "AGNESCOURJER": {
+          "conyuge": "AMALRIC1JER"
+        },
+        "WILLIAMMONTJER": {
+          "conyuge": "SIBYLLAJER"
+        },
+        "GUYLUSIGNANJER": {
+          "conyuge": "SIBYLLAJER"
+        },
+        "HUMPHREY4TORON": {
+          "conyuge": "ISABELLA1JER"
+        },
+        "CONRADMONTJER": {
+          "conyuge": "ISABELLA1JER"
+        },
+        "HENRY2CHAMPJER": {
+          "conyuge": "ISABELLA1JER"
+        },
+        "ESCHIVAIBELIN": {
+          "conyuge": "AIMERYLUSIGNANJER"
+        },
+        "MARIAMONTJER": {
+          "conyuge": "JOHNBRIENNEJER"
+        },
+        "ISABELLA2JER": {
+          "conyuge": "FED2HOH"
+        },
+        "BERENGLEONBRI": {
+          "conyuge": "JOHNBRIENNEJER"
+        },
+        "ALICECHAMPJER": {
+          "conyuge": "HUGH1CYPRUS"
+        },
+        "HUGH1CYPRUS": {
+          "conyuge": "ALICECHAMPJER"
+        },
+        "ISABELLACYPRUS": {
+          "conyuge": "HENRYANTIOCH"
+        },
+        "HENRYANTIOCH": {
+          "conyuge": "ISABELLACYPRUS"
+        },
+        "HUGH3CYPRUS": {
+          "conyuge": "ISABELIBELINCYP"
+        },
+        "ISABELIBELINCYP": {
+          "conyuge": "HUGH3CYPRUS"
+        },
+        "BALIANIBELIN": {
+          "conyuge": "MARIAKOMNENEJER"
+        },
+        "REYNALDCHATILLON": {
+          "conyuge": "CONSTANCEANT"
+        },
+        "GASTON3FEBUS": {
+          "conyuge": "AGNESNAVFOIX"
+        },
+        "JOHN1FOIX": {
+          "conyuge": "JEANNEALBRETFOIX"
+        },
+        "TAMARGEO": {
+          "conyuge": "DAVIDSOSLAN"
+        },
+        "DAVIDSOSLAN": {
+          "conyuge": "TAMARGEO"
+        },
+        "DEMETRIO2GEO": {
+          "conyuge": "NATELAJAKELI"
+        },
+        "NATELAJAKELI": {
+          "conyuge": "DEMETRIO2GEO"
+        },
+        "EUDOKIAPALEOTREB": {
+          "conyuge": "JOHN2TREB"
+        },
+        "JOHN2TREB": {
+          "conyuge": "EUDOKIAPALEOTREB"
+        },
+        "ALEXIOS2TREB": {
+          "conyuge": "DJIADJAKJAKELI"
+        },
+        "DJIADJAKJAKELI": {
+          "conyuge": "ALEXIOS2TREB"
+        },
+        "TAMARKARTLI": {
+          "conyuge": "TEIMURAZ2GEO"
+        },
+        "TEIMURAZ2GEO": {
+          "conyuge": "TAMARKARTLI"
+        },
+        "AOIFELEIN": {
+          "conyuge": "STRONGBOWLEIN"
+        },
+        "STRONGBOWLEIN": {
+          "conyuge": "AOIFELEIN"
+        },
+        "ISABELCLAREMAR": {
+          "conyuge": "WILLIAMMARSHAL"
+        },
+        "WILLIAMMARSHAL": {
+          "conyuge": "ISABELCLAREMAR"
+        },
+        "ISABELMARSHAL": {
+          "conyuge": "GILBERTCLARE1180"
+        },
+        "GILBERTCLARE1180": {
+          "conyuge": "ISABELMARSHAL"
+        },
+        "HUGHMACMANUS": {
+          "conyuge": "INIONDUBH"
+        },
+        "INIONDUBH": {
+          "conyuge": "HUGHMACMANUS"
+        },
+        "RAYMONDPOITIERS": {
+          "conyuge": "CONSTANCEANT"
+        },
+        "BOHEMOND6ANT": {
+          "conyuge": "SIBYLLAARM"
+        },
+        "HETHUM1ARM": {
+          "conyuge": "ISABELLAARMQUEEN"
+        },
+        "SIBYLLAARM": {
+          "conyuge": "BOHEMOND6ANT"
+        },
+        "HENRY1CYPRUS": {
+          "conyuge": "PLAISANCEANT"
+        },
+        "PLAISANCEANT": {
+          "conyuge": "HENRY1CYPRUS"
+        },
+        "MARIA1SIC": {
+          "conyuge": "MARTINJOVENSIC"
+        },
+        "LUISTARANTONAP": {
+          "conyuge": "JUANA1NAP"
+        },
+        "GABRIELBETHLEN": {
+          "conyuge": "CATHERINEBRANDTRANS"
+        },
+        "CATHERINEBRANDTRANS": {
+          "conyuge": "GABRIELBETHLEN"
+        },
+        "LUARSAB1KARTLI": {
+          "conyuge": "TAMARIMERKART"
+        },
+        "TAMARIMERKART": {
+          "conyuge": "LUARSAB1KARTLI"
+        },
+        "SIMON1KARTLI": {
+          "conyuge": "NESTANKAKH"
+        },
+        "NESTANKAKH": {
+          "conyuge": "SIMON1KARTLI"
+        },
+        "DAVID1KAKH": {
+          "conyuge": "KETEVANMARTYR"
+        },
+        "KETEVANMARTYR": {
+          "conyuge": "DAVID1KAKH"
+        },
+        "TEIMURAZ1KAKH": {
+          "conyuge": "KHORASHANKAKH"
+        },
+        "KHORASHANKAKH": {
+          "conyuge": "TEIMURAZ1KAKH"
+        },
+        "ALEX3IMER": {
+          "conyuge": "DAREJANIMER"
+        },
+        "DAREJANIMER": {
+          "conyuge": "ALEX3IMER"
+        },
+        "ARCHILPRINCEIMER": {
+          "conyuge": "HELENAEREKLE"
+        },
+        "HELENAEREKLE": {
+          "conyuge": "ARCHILPRINCEIMER"
+        },
+        "GUYCONSTCYP": {
+          "conyuge": "ESCHIVABEIRUT"
+        },
+        "ESCHIVABEIRUT": {
+          "conyuge": "GUYCONSTCYP"
+        },
+        "HUGH4CYPRUS": {
+          "conyuge": "ALICEIBELINHUGH4"
+        },
+        "ALICEIBELINHUGH4": {
+          "conyuge": "HUGH4CYPRUS"
+        },
+        "PETER1CYPRUS": {
+          "conyuge": "LEONORARAGCYP"
+        },
+        "LEONORARAGCYP": {
+          "conyuge": "PETER1CYPRUS"
+        },
+        "PETER2CYPRUS": {
+          "conyuge": "VALENTINAVISCONTCYP"
+        },
+        "VALENTINAVISCONTCYP": {
+          "conyuge": "PETER2CYPRUS"
+        },
+        "JAMES1CYPRUS": {
+          "conyuge": "HELVISBRUNSCYP"
+        },
+        "HELVISBRUNSCYP": {
+          "conyuge": "JAMES1CYPRUS"
+        },
+        "JANUSCYPRUS": {
+          "conyuge": "CHARLOTTEBOURBONCYP"
+        },
+        "CHARLOTTEBOURBONCYP": {
+          "conyuge": "JANUSCYPRUS"
+        },
+        "JOHN2CYPRUS": {
+          "conyuge": "HELENAPALACYP"
+        },
+        "HELENAPALACYP": {
+          "conyuge": "JOHN2CYPRUS"
+        },
+        "CHARLOTTECYPRUS": {
+          "conyuge": "LOUISSAVOYCYP"
+        },
+        "LOUISSAVOYCYP": {
+          "conyuge": "CHARLOTTECYPRUS"
+        },
+        "JAMES2CYPRUS": {
+          "conyuge": "CATERINACORNARO"
+        },
+        "CATERINACORNARO": {
+          "conyuge": "JAMES2CYPRUS"
+        },
+        "AMALRICTYRE": {
+          "conyuge": "ISABELLALUSARM"
+        },
+        "LEO1CILICIA": {
+          "conyuge": "SIBYLLALUSARM"
+        },
+        "SIBYLLALUSARM": {
+          "conyuge": "LEO1CILICIA"
+        },
+        "PHILIPANTARM": {
+          "conyuge": "ISABELLAARMQUEEN"
+        },
+        "LEO2CILICIA": {
+          "conyuge": "KERANARM"
+        },
+        "KERANARM": {
+          "conyuge": "LEO2CILICIA"
+        },
+        "THOROS3ARM": {
+          "conyuge": "MARGARETCYPARM"
+        },
+        "MARGARETCYPARM": {
+          "conyuge": "THOROS3ARM"
+        },
+        "ISABELLALUSARM": {
+          "conyuge": "AMALRICTYRE"
+        },
+        "ELLENMACCARTHY": {
+          "conyuge": "FLORENCEMACCARTHY"
+        },
+        "FLORENCEMACCARTHY": {
+          "conyuge": "ELLENMACCARTHY"
+        },
+        "GERALD15DESMOND": {
+          "conyuge": "JOANFITZDESMOND"
+        },
+        "JAMES9ORMOND": {
+          "conyuge": "JOANFITZDESMOND"
+        },
+        "JAMES1DUKEORMOND": {
+          "conyuge": "ELIZABETHPRESTON"
+        },
+        "ELIZABETHPRESTON": {
+          "conyuge": "JAMES1DUKEORMOND"
+        },
+        "GRACEOMALLEY": {
+          "conyuge": "RICHARDIRONBOURKE"
+        },
+        "RICHARDIRONBOURKE": {
+          "conyuge": "GRACEOMALLEY"
+        },
+        "PATRICKSARSFIELD": {
+          "conyuge": "HONORABURKE"
+        },
+        "HONORABURKE": {
+          "conyuge": "PATRICKSARSFIELD"
+        },
+        "PIERRE1BRET": {
+          "conyuge": "ALIXTHOUARS"
+        },
+        "ALIXTHOUARS": {
+          "conyuge": "PIERRE1BRET"
+        },
+        "MARIELIMOGES": {
+          "conyuge": "ARTHUR2BRET"
+        },
+        "JOHN3BRET": {
+          "conyuge": "ISABCAST"
+        },
+        "GUYPENTHIEVRE": {
+          "conyuge": "JEANNEAVAUGOUR"
+        },
+        "JEANNEAVAUGOUR": {
+          "conyuge": "GUYPENTHIEVRE"
+        },
+        "JEANNEPENTHIEVRE": {
+          "conyuge": "CHARLESBLOIS"
+        },
+        "CHARLESBLOIS": {
+          "conyuge": "JEANNEPENTHIEVRE"
+        },
+        "JOHNMONTPRET": {
+          "conyuge": "JEANNEFLANDERSBRET"
+        },
+        "JEANNEFLANDERSBRET": {
+          "conyuge": "JOHNMONTPRET"
+        },
+        "JOHN4BRET": {
+          "conyuge": "JOANNAVBRET"
+        },
+        "RICHARDETAMPES": {
+          "conyuge": "MARGORLEANSBRET"
+        },
+        "MARGORLEANSBRET": {
+          "conyuge": "RICHARDETAMPES"
+        },
+        "FRANCOIS2BRET": {
+          "conyuge": "MARGFOIXBRET"
+        },
+        "MARGFOIXBRET": {
+          "conyuge": "FRANCOIS2BRET"
+        },
+        "ROGERBERNARD3FOIX": {
+          "conyuge": "MARGUERITEBEARN"
+        },
+        "MARGUERITEBEARN": {
+          "conyuge": "ROGERBERNARD3FOIX"
+        },
+        "GASTON2FOIX": {
+          "conyuge": "ALIENORCOMMINGES"
+        },
+        "ALIENORCOMMINGES": {
+          "conyuge": "GASTON2FOIX"
+        },
+        "AGNESNAVFOIX": {
+          "conyuge": "GASTON3FEBUS"
+        },
+        "ISABELLEFOIX": {
+          "conyuge": "ARCHAMBAUDGRAILLY"
+        },
+        "ARCHAMBAUDGRAILLY": {
+          "conyuge": "ISABELLEFOIX"
+        },
+        "JEANNEALBRETFOIX": {
+          "conyuge": "JOHN1FOIX"
+        },
+        "ARNAUDALBRET": {
+          "conyuge": "MARGBOURBONALBRET"
+        },
+        "MARGBOURBONALBRET": {
+          "conyuge": "ARNAUDALBRET"
+        },
+        "JEANFOIXETAMPES": {
+          "conyuge": "MARIEORLEANSFOIX"
+        },
+        "MARIEORLEANSFOIX": {
+          "conyuge": "JEANFOIXETAMPES"
+        },
+        "BOUCHARDAVES": {
+          "conyuge": "MARG2FLANDES"
+        },
+        "GUIL2DAMP": {
+          "conyuge": "MARG2FLANDES"
+        },
+        "JOHN1AVES": {
+          "conyuge": "ADELAHOLAVES"
+        },
+        "ADELAHOLAVES": {
+          "conyuge": "JOHN1AVES"
+        },
+        "JOHN2AVES": {
+          "conyuge": "PHILIPPALUXAVES"
+        },
+        "PHILIPPALUXAVES": {
+          "conyuge": "JOHN2AVES"
+        },
+        "FLORIS5HOL": {
+          "conyuge": "BEATFLAHOL"
+        },
+        "BEATFLAHOL": {
+          "conyuge": "FLORIS5HOL"
+        },
+        "JUAN2BRAB": {
+          "conyuge": "MARGENGBRAB"
+        },
+        "MARGENGBRAB": {
+          "conyuge": "JUAN2BRAB"
+        },
+        "JUAN3BRAB": {
+          "conyuge": "MARIEEVREUXBRAB"
+        },
+        "MARIEEVREUXBRAB": {
+          "conyuge": "JUAN3BRAB"
+        },
+        "ANTONBRAB": {
+          "conyuge": "JEANNELUXBRAB"
+        },
+        "JEANNELUXBRAB": {
+          "conyuge": "ANTONBRAB"
+        },
+        "JOHN4BRAB": {
+          "conyuge": "JACOBA"
+        },
+        "JACOBA": {
+          "conyuge": "JOHN4BRAB"
+        },
+        "MARIAGUELDJUL": {
+          "conyuge": "WILHELM2JUL"
+        },
+        "WILHELM2JUL": {
+          "conyuge": "MARIAGUELDJUL"
+        },
+        "ARNOLDEGMOND": {
+          "conyuge": "CATHCLEVEGUELD"
+        },
+        "ADOLF1CLEV": {
+          "conyuge": "MARIABORGCLEV"
+        },
+        "MARIABORGCLEV": {
+          "conyuge": "ADOLF1CLEV"
+        },
+        "CATHCLEVEGUELD": {
+          "conyuge": "ARNOLDEGMOND"
+        },
+        "HAAKON4NOR": {
+          "conyuge": "MARGRETESKULE"
+        },
+        "MARGRETESKULE": {
+          "conyuge": "HAAKON4NOR"
+        },
+        "MAGNUS6NOR": {
+          "conyuge": "INGEBORGERIKNOR"
+        },
+        "INGEBORGERIKNOR": {
+          "conyuge": "MAGNUS6NOR"
+        },
+        "HAAKON5NOR": {
+          "conyuge": "EUFEMIARUGENNOR"
+        },
+        "EUFEMIARUGENNOR": {
+          "conyuge": "HAAKON5NOR"
+        },
+        "INGEBORGVALDEMAR": {
+          "conyuge": "HENRY3MECK"
+        },
+        "HENRY3MECK": {
+          "conyuge": "INGEBORGVALDEMAR"
+        },
+        "MARIAMECKPOM": {
+          "conyuge": "WARTISLAW7POM"
+        },
+        "WARTISLAW7POM": {
+          "conyuge": "MARIAMECKPOM"
+        },
+        "CATHPOMNEUMARK": {
+          "conyuge": "JOHNPALNEUMARK"
+        },
+        "JOHNPALNEUMARK": {
+          "conyuge": "CATHPOMNEUMARK"
+        },
+        "PHILIPPAENGLAND": {
+          "conyuge": "ERICOPOMERANIA"
+        },
+        "ERIKJOHVASA": {
+          "conyuge": "CECILIAMANSDOTTER"
+        },
+        "CECILIAMANSDOTTER": {
+          "conyuge": "ERIKJOHVASA"
+        },
+        "INGEBORGTOTTSTURE": {
+          "conyuge": "SVANTENILSSON"
+        },
+        "CHRISTINAGYLLEN": {
+          "conyuge": "ESTENSTUREJOVEN"
+        },
+        "MANF3SAL": {
+          "conyuge": "BEATSAB"
+        },
+        "LUDOVICO1SAL": {
+          "conyuge": "ISABELMONSAL"
+        },
+        "ISABELMONSAL": {
+          "conyuge": "LUDOVICO1SAL"
+        },
+        "LUDOVICO2SAL": {
+          "conyuge": "MARGFOIXSAL"
+        },
+        "MARGFOIXSAL": {
+          "conyuge": "LUDOVICO2SAL"
+        },
+        "BIANCAMONSAB": {
+          "conyuge": "CARLOS1SAB"
+        },
+        "GIANGIACOMOMON": {
+          "conyuge": "GIOVANNASABMON"
+        },
+        "GIOVANNASABMON": {
+          "conyuge": "GIANGIACOMOMON"
+        },
+        "VIOLANTEMONBYZ": {
+          "conyuge": "ANDRO2"
+        },
+        "GUGL9MON": {
+          "conyuge": "ANNAALENCONMON"
+        },
+        "ANNAALENCONMON": {
+          "conyuge": "GUGL9MON"
+        },
+        "JOHN2CLEVES": {
+          "conyuge": "MATHILDEHESSECLEVES"
+        },
+        "MATHILDEHESSECLEVES": {
+          "conyuge": "JOHN2CLEVES"
+        }
+      }
+    },
+    "disputedIntervals": {
+      "reason": "Intervalos individuales ya publicados. Migrar a un array conservando cada inicio y final.",
+      "entries": {
+        "person:FERN2EMP:government:Moravia:1619:1619:Margrave": {
+          "desde": 1619,
+          "hasta": 1619
+        },
+        "person:FERN2EMP:government:Silesia:1619:1619:Soberano": {
+          "desde": 1619,
+          "hasta": 1619
+        },
+        "person:JORGEPODE:government:Silesia:1460:1463:Soberano": {
+          "desde": 1460,
+          "hasta": 1463
+        },
+        "person:FED5PALBOH:government:Moravia:1619:1620:Margrave": {
+          "desde": 1619,
+          "hasta": 1620
+        },
+        "person:FED5PALBOH:government:Silesia:1619:1620:Soberano": {
+          "desde": 1619,
+          "hasta": 1620
+        },
+        "person:HEINRICH3MEISSEN:government:Turingia:1247:1265:Landgrave": {
+          "desde": 1247,
+          "hasta": 1264
+        },
+        "person:FRED1MEISSEN:government:Meißen:1291:1306:Margrave": {
+          "desde": 1294,
+          "hasta": 1306
+        },
+        "person:STJEPANOSTOJICBOS:government:Bosnia:1418:1421:Rey": {
+          "desde": 1420,
+          "hasta": 1421
+        },
+        "person:VLADISLAV2WAL:government:Valaquia:1447:1456:Voivoda": {
+          "desde": 1448,
+          "hasta": 1448
+        },
+        "person:BASARABLAIOTA:government:Valaquia:1473:1473:Voivoda": {
+          "desde": 1473,
+          "hasta": 1473
+        },
+        "person:BASARABLAIOTA:government:Valaquia:1477:1477:Voivoda": {
+          "desde": 1477,
+          "hasta": 1477
+        },
+        "person:BASARABTEPELUS:government:Valaquia:1481:1482:Voivoda": {
+          "desde": 1481,
+          "hasta": 1482
+        },
+        "person:ALEXANDRU2MIRCEA:government:Valaquia:1568:1577:Voivoda": {
+          "desde": 1574,
+          "hasta": 1574
+        },
+        "person:MIHNEATURCITUL:government:Valaquia:1585:1591:Voivoda": {
+          "desde": 1589,
+          "hasta": 1589
+        },
+        "person:DAN2WAL:government:Valaquia:1422:1426:Voivoda": {
+          "desde": 1422,
+          "hasta": 1426
+        },
+        "person:RADU2PRASNAGLAVA:government:Valaquia:1420:1422:Voivoda": {
+          "desde": 1420,
+          "hasta": 1422
+        },
+        "person:RADU2PRASNAGLAVA:government:Valaquia:1426:1427:Voivoda": {
+          "desde": 1426,
+          "hasta": 1427
+        },
+        "person:RADUAFUMATI:government:Valaquia:1522:1523:Voivoda": {
+          "desde": 1522,
+          "hasta": 1523
+        },
+        "person:RADUAFUMATI:government:Valaquia:1524:1529:Voivoda": {
+          "desde": 1524,
+          "hasta": 1525
+        },
+        "person:VLADVINTILA:government:Valaquia:1532:1535:Voivoda": {
+          "desde": 1534,
+          "hasta": 1534
+        },
+        "person:ENGELBREKT:government:Suecia:1435:1435:Regente": {
+          "desde": 1435,
+          "hasta": 1435
+        },
+        "person:ENGELBREKT:government:Suecia:1436:1436:Regente": {
+          "desde": 1436,
+          "hasta": 1436
+        },
+        "person:SULEYMANCELEBI:government:Imperio otomano:1402:1411:Emir": {
+          "desde": 1402,
+          "hasta": 1411
+        },
+        "person:MUSACELEBI:government:Imperio otomano:1410:1410:Emir": {
+          "desde": 1410,
+          "hasta": 1410
+        },
+        "person:MUSACELEBI:government:Imperio otomano:1411:1413:Emir": {
+          "desde": 1411,
+          "hasta": 1413
+        },
+        "person:GIORGIOBASTA:government:Transilvania:1602:1604:Gobernador": {
+          "desde": 1602,
+          "hasta": 1603
+        },
+        "person:MOSESSZEKELY:government:Transilvania:1603:1603:Príncipe": {
+          "desde": 1603,
+          "hasta": 1603
+        },
+        "person:CHRIST2DEN:government:Dinamarca:1329:1332:Rey": {
+          "desde": 1329,
+          "hasta": 1332
+        },
+        "person:IVAYLOBUL:government:Bulgaria:1277:1280:Zar": {
+          "desde": 1277,
+          "hasta": 1280
+        },
+        "person:IVANASEN3BUL:government:Bulgaria:1279:1280:Zar": {
+          "desde": 1279,
+          "hasta": 1280
+        },
+        "person:KALIMAN2BUL:government:Bulgaria:1256:1256:Zar": {
+          "desde": 1256,
+          "hasta": 1256
+        },
+        "person:MITSOASENBUL:government:Bulgaria:1256:1257:Zar": {
+          "desde": 1256,
+          "hasta": 1257
+        },
+        "person:CHAKABUL:government:Bulgaria:1299:1300:Zar": {
+          "desde": 1299,
+          "hasta": 1300
+        }
+      }
+    },
+    "uncertainParents": {
+      "reason": "Marcadores de filiación probable ya publicados. Integrar con la evidencia de la relación tras revisión documental.",
+      "entries": {
+        "FRANCPICC": {
+          "madreAprox": true
+        },
+        "JACOPICC": {
+          "madreAprox": true
+        },
+        "MATTHEWONEILL": {
+          "padreAprox": true
+        }
+      }
+    },
+    "mapVersionOrder": {
+      "reason": "Croacia habsbúrgica repite versiones de 1689 en el ensamblado heredado. Conservar únicamente esta secuencia exacta hasta revisar su regeneración; cualquier cambio exige orden estricto.",
+      "entries": {
+        "Croacia habsbúrgica": {
+          "starts": [
+            1527,
+            1579,
+            1592,
+            1689,
+            1689,
+            1689,
+            1689,
+            1689
+          ],
+          "versionsSha256": "f4922d3804f479ca1d4d4aa6bdb8440420eeab0493420d74d63cc5e200973b5b"
+        }
+      }
+    },
+    "mapEvidence": {
+      "reason": "Capas geométricas heredadas sin fuentes propias. Son aproximaciones existentes, no una certificación histórica; cualquier ampliación o capa nueva necesita atribución territorial citada.",
+      "entries": {
+        "Castilla": {
+          "layerSha256": "72ac4b0c9b6f586d4c4726cbde2298b4621e5ca2b0ed086ed291828f7d2bca1f"
+        },
+        "León": {
+          "layerSha256": "64ec8b9f125f10f91a2e84355f1514c22d3335059ca57680080ca536537b4543"
+        },
+        "Navarra": {
+          "layerSha256": "02b5a44258791d31b4d813f5025234e52af13b661dca238c89a5de9d9f389110"
+        },
+        "Granada": {
+          "layerSha256": "d6c87da32e7aea83a12bff10dfd0875c0046d2190328931f5043acbdb52ca153"
+        },
+        "Portugal": {
+          "layerSha256": "b786cca22fec2ba9e644a330a88686be2876a21b76ac11d036b9118b5e9bff69"
+        },
+        "Aragón": {
+          "layerSha256": "a4831b41cd23dd04631d4bac9274fdf365d990aab7929f51c8aec46efe03eb92"
+        },
+        "Condado de Barcelona": {
+          "layerSha256": "6d3cc115059414ace869f6512599f77bcdbc64aec53c15c05cbff359cf065d82"
+        },
+        "Valencia": {
+          "layerSha256": "7122543b98922275473338be4778b3a646e95c91594f3f21fce418aa68bf3a08"
+        },
+        "Mallorca": {
+          "layerSha256": "5049445f252c1fbf05ee7d4468b207fc8ca338928cba7d07d84cb1c894b851b0"
+        },
+        "Cerdeña": {
+          "layerSha256": "523b676dd308db76fcc42d4084fe50d397b23a98f3170f88205c536a0e84de3a"
+        },
+        "Trinacria": {
+          "layerSha256": "ca04a543418a386abc13404dff45ad980ec9bf56288f26d2d370a78796b7fd6f"
+        },
+        "Nápoles": {
+          "layerSha256": "b73b05b4bd883145e68588bd16e7d842ddb1f11c50a2d0a2ee2e8142d580e4a4"
+        },
+        "Milán": {
+          "layerSha256": "878572fd6d2a899c72b3528dd2806927bcb55b95a5ec8464267a4b2ef154db7c"
+        },
+        "Venecia": {
+          "layerSha256": "1b6bf09a6c40ec69d18fc9df89cc40820148167ce3683b27c127308217fd1485"
+        },
+        "Saboya": {
+          "layerSha256": "ff47894783f0fdd66cca4b1d4f3333fef4c54a4fc0968b7faaa5c00fcb0554ff"
+        },
+        "Piamonte": {
+          "layerSha256": "ea7788efea3713624d3949ba821bae8c17a3a473479bde778c17d6ef7b7515db"
+        },
+        "Estados Pontificios": {
+          "layerSha256": "ea5d3809cec11cef547a0aad0524260d752cd7065244bd4a5ab5c43d448e171f"
+        },
+        "Florencia": {
+          "layerSha256": "853f0384d401d6b7630229512a91c5997d1aa476f6f3db8aad2f3b792ea44cd4"
+        },
+        "Toscana": {
+          "layerSha256": "7f86013d0b929cda6ac0f59b1c4ee57144c9e7834e37a8ab133caa30ade5e7a5"
+        },
+        "Mantua": {
+          "layerSha256": "199e314d7b0d50f652b6d1d64dc2e94531e0c02877f48432d3db6989310ef713"
+        },
+        "Módena": {
+          "layerSha256": "ff17a651459e93ee2cca038ec981a0b77bc715a1e1ca4485f88b54d6e1fd8be3"
+        },
+        "Ferrara": {
+          "layerSha256": "bbc927ab262609dda599cad90bb429dfac272e56916f775a1562c72136ab6e50"
+        },
+        "Urbino": {
+          "layerSha256": "a339a29d35a4caf3860a72bfd843621c9459a4a1518c79328386191aef67fc68"
+        },
+        "Parma": {
+          "layerSha256": "1e15b7213af803c9f3aa4ff03e28ee57ddd6a41750aa5834cd9ac28ec1b4dccb"
+        },
+        "Monferrato": {
+          "layerSha256": "d1c9c994c205ce0f513250617f1ccddc1672633624daf2509fa3013dc16e6a05"
+        },
+        "Saluzzo": {
+          "layerSha256": "c53c968732763f485a593f1767bdbc8de20d05df09cc88372f04d516ac15d6df"
+        },
+        "Austria": {
+          "layerSha256": "16b3a3f05e706b4b0423ca6076af91976896b56d4fbc30e4a1b5f3abb301ae94"
+        },
+        "Austria Interior": {
+          "layerSha256": "909f56693f0e700a6dd6eeb992af9ee540fe03ea3584704e5354088f540f4199"
+        },
+        "Tirol": {
+          "layerSha256": "2b076352a284f73c2ca051a0d85475063c006d18795038a671f72ea149c048c8"
+        },
+        "Baviera": {
+          "layerSha256": "c10afc46ae3889686a92d3ab73246ea379db1844d07d3ce5a0699e650f92956f"
+        },
+        "Palatinado": {
+          "layerSha256": "f5e94b3bbf0a3acec79e8914e87cde209ecabe9f241eddf5664164359410435c"
+        },
+        "Principado episcopal de Brixen": {
+          "layerSha256": "2fbd2c9f401b7cee4e31e47f5882d0b2a168b0dd4eb82da4e80fff49956ca1bd"
+        },
+        "Principado episcopal de Trento": {
+          "layerSha256": "91a6a04da461649d9b7faafb2feaaabe099bb890d666cd90a0dac1e90e33455a"
+        },
+        "Arzobispado principesco de Salzburgo": {
+          "layerSha256": "30e21386ab927d6d449f0d2d409cf3d3fe662b29c252a26d472cfb67657a4c39"
+        },
+        "Ducado de Mazovia": {
+          "layerSha256": "50f467f8ef02cfb69446272b020c73aae090a954c9c6eea0e358655ca52af92e"
+        },
+        "Prusia Real": {
+          "layerSha256": "267eb63fc2a78a9436230f966ab7bd1ceacc95dc8190235490adebfba563ace8"
+        },
+        "Prusia de la Orden": {
+          "layerSha256": "ac55095b49fe04612a5afe4b14659b045190d67dd894f2dbac8b761f70981a0d"
+        },
+        "Prusia ducal": {
+          "layerSha256": "eb2e8708e2e18c22527bef194dff97fac553123f7a33163e0b94c94f3bf0358d"
+        },
+        "Principado episcopal de Warmia": {
+          "layerSha256": "2b3e9fe281234cbd535c7d077206faefb50c5ced4617359fdf8e532ddfad74ee"
+        },
+        "Livonia del Commonwealth": {
+          "layerSha256": "89f15424d33d2fcf1f8a08fa5bcb39046c858666466fe407d2af58cf8ee04bbe"
+        },
+        "Livonia sueca": {
+          "layerSha256": "d3ad2ad684ed9b255f551587cbfb432f46ffe4886c3a540dc6dd09f48d35bd8e"
+        },
+        "Estonia sueca": {
+          "layerSha256": "b548c2ec9fa379479960d1c0ce7781b5dad7a6f5739b63aec9937c42234f0975"
+        },
+        "Ducado de Curlandia": {
+          "layerSha256": "da9f6ce896614ab263692bbb22e2d39834a7c29b3555d5b059c97358ccec6d79"
+        },
+        "Riga libre": {
+          "layerSha256": "110d259c02539098271a7376c4cba3d59b8b2725243259a99d62df2fe0c7b9ad"
+        },
+        "Riga bajo la Mancomunidad": {
+          "layerSha256": "8cc608040ee9969386113747957b25ea5cdf875fe4908aee884b4f581f6395f5"
+        },
+        "Riga bajo Suecia": {
+          "layerSha256": "cf776ffe4c258d67c064ebcae69dfc86c31a11d64448c77e29e09858fae200dc"
+        },
+        "Ducado de Schleswig": {
+          "layerSha256": "6bc015f49117a3e674eb5ef3f938391c25e34a0dc712f6234075c0020545f3cc"
+        },
+        "Ducado de Holstein": {
+          "layerSha256": "527b77dfd8264cb2b4e8a52aae6b9f5a29c649425e6ff48fc176d02a683f091c"
+        },
+        "Mecklemburgo": {
+          "layerSha256": "2613e546e758b56e9a1eb8a359876631f1ecbef4e8f5b4ef26da68cdbcfa9b92"
+        },
+        "Ducado de Pomerania": {
+          "layerSha256": "6e37e819a2e521506a22f2cd1d5f4143f06da5222896c5a991d4321b7c97e406"
+        },
+        "Pomerania bajo ocupación sueca": {
+          "layerSha256": "3ea4606291526f994e28db054083719fe596421fa1b1660ecefdf41b9e424655"
+        },
+        "Pomerania sueca": {
+          "layerSha256": "3df7fc17f701e2bdb43d23e2fb363a574de01a8c19efdae309a34989643d6a6e"
+        },
+        "Pomerania de Brandeburgo": {
+          "layerSha256": "e0ff2f9511efb8549c7ee4ab9744ea98d4ec3beb21625ac7f9a45c92b8fe0b57"
+        },
+        "Señorío sueco de Wismar": {
+          "layerSha256": "ab205e51cd00f6a3f246bd7e12c8e98714754d932ae03e47bd14384dc6f84533"
+        },
+        "Ösel bajo Dinamarca": {
+          "layerSha256": "362ec28155ed6e8706da8bbf27b530334e9788df63403f00a665daaa65d6dbf7"
+        },
+        "Ösel bajo Suecia": {
+          "layerSha256": "15fe5876b91b65692e234b44a0a348ff13225e72158041cdebcbb446139e216b"
+        },
+        "Moscovia y Zarato de Rusia": {
+          "layerSha256": "a188c8f5b0fdccf83ac59eeea875d5682cd6de5240cb1ed3d0e99e82626e4ef7"
+        },
+        "República de Nóvgorod": {
+          "layerSha256": "13b79c65e9967828c45a4152e2f391b2a23b89ae16393e37f8aca42bf196bf18"
+        },
+        "República de Pskov": {
+          "layerSha256": "ea7668d13b620f5b9d59d3e1aa69d26890e2e17bf2ec400fc9cf87299b8eabae"
+        },
+        "Principado de Tver": {
+          "layerSha256": "e78e7db1298534b50f7bf3713701fe4f15729513b08fda89784a2c17836d683c"
+        },
+        "Principado de Riazán": {
+          "layerSha256": "61409061fbc797707648376884b8d2ceaf91282d9c85952181e9f7620158a31f"
+        },
+        "Kanato de Kazán": {
+          "layerSha256": "a50693a3462905831f27ae35b1a8ee4f294fec72fa360c21f86745afaa1fb503"
+        },
+        "Bretaña": {
+          "layerSha256": "5918b1ffff358105d3023c885cce967b7b04a30749d6c3e9ddf3edf60f3696a4"
+        },
+        "Provenza": {
+          "layerSha256": "4f039fb84a95b59d89b8d47994fa568369221d71195329f6499bbc1b272e07a0"
+        },
+        "Plazas inglesas de Guyena": {
+          "layerSha256": "da04750089bd281d3b37bfe64d7cb1de110bd3b5ba2a39c546cf8f50a130a8ef"
+        },
+        "Señorío de Man": {
+          "layerSha256": "8db3627c1a4fbac951ac4d15dcf971fdddf4f674711aecc757677e5ecff8ec3d"
+        },
+        "Bailiazgo de Jersey": {
+          "layerSha256": "54596e36733d8d93c2491f8663da59d3d79ea16dc952427a5746781b9ebf98b9"
+        },
+        "Marco jurídico del Sacro Imperio": {
+          "layerSha256": "bde66bbe1c039843260563820f62753f2bee63dac27957a56068b36c4bb6e8af"
+        },
+        "Banato húngaro de Jajce": {
+          "layerSha256": "8882d4fb0749aa6ac2469124fcbe301866561679e13cd8e9587ee299069347ff"
+        },
+        "Artois": {
+          "layerSha256": "498812cb2c709574643c03f6a7ef4db563f0daa27b6886833869acde3fc904bf"
+        },
+        "Auxerre": {
+          "layerSha256": "452a73b16e7e07a57dc8691d24bf63ebd072db1e59e85041d792f483975ccf4f"
+        },
+        "Borgoña": {
+          "layerSha256": "ab66109d780795ec4c1184198884ebad6b815b5a8ae5e1db1b49c9aa8fcb0605"
+        },
+        "Brabante": {
+          "layerSha256": "87913bd10265a48e40005d2f8441bb7ebdbdf6e842cfd60d7e43fd302575979d"
+        },
+        "Condado de Borgoña": {
+          "layerSha256": "868b6d4d5f030b0e8e370d187e063bf8e6e904311bed6504f959eeb02ff8abe7"
+        },
+        "Condado de Charolais": {
+          "layerSha256": "8261e00240f6c801e8888d3275e552bc75ec4179347f403c3ac936af470117a1"
+        },
+        "Condado de Mâcon": {
+          "layerSha256": "89df953423f30ea043c7bf857137e0938842dc10383c10abca05bb5b5b5d0746"
+        },
+        "Drente": {
+          "layerSha256": "6aa1f49307cebd0b88732f3a749868dfd0942e7cb89ef41cbaeca64e7f6284e0"
+        },
+        "Flandes": {
+          "layerSha256": "d8bef0ca3a38f14b171f86bd5ac66874d925985e4ea4e06b788df220dea00e4a"
+        },
+        "Frisia": {
+          "layerSha256": "a1471b6dfac9f9f0ac992829e6a34999b1073d2db4e61a2a5d210a1eef9b12b9"
+        },
+        "Groninga": {
+          "layerSha256": "96b9b983bde0fa83214e13588b323baa66682dd6f93d5e8db1fd71ba4d0ae685"
+        },
+        "Güeldres": {
+          "layerSha256": "16135054ab8c3b6d6c98d61aaabec1fe24bd3c6f8a513cf306a156b46aebc68f"
+        },
+        "Henao": {
+          "layerSha256": "ccb6460c5fcd6f8d73ed70e4514e2aefb5657e1eeac1888ea60ec2392bcf36a6"
+        },
+        "Holanda": {
+          "layerSha256": "77d3bca68088bf3e652d3a08882e98ae24762ff14801bd7c91ce3b49c6966f5f"
+        },
+        "Limburgo": {
+          "layerSha256": "1e81dfed38b2eca56e0e3e3efd467402659532f9ed35a1c0738129e6b6c0eb5f"
+        },
+        "Luxemburgo": {
+          "layerSha256": "9402024c96d88927397a2b3f49c6c652ef5acaa66e4671af2c6e02e2457c6c61"
+        },
+        "Namur": {
+          "layerSha256": "98ff76d131485b7204cd8f29df9be5851690d36ccdb5effc11ae613a8e4b8f79"
+        },
+        "Overijssel": {
+          "layerSha256": "484b19cf9793f87768a3e7026f95505565f17af548b2090447dc56b7da9ea96d"
+        },
+        "Ponthieu": {
+          "layerSha256": "089820af1a97caf98f1fea03d271a8ce4fe75dd44d35497336181979ad2fbd68"
+        },
+        "Señorío de Cuijk": {
+          "layerSha256": "cfde36a242d6a8fb562d50e5cafa3fdf7eb2ea86f5ed975928f4ec552120abc5"
+        },
+        "Señorío de Malinas": {
+          "layerSha256": "5325adbdf3fde446b233e5c0cba563812420e99e371b93aaa2b725ffe143f813"
+        },
+        "Tournaisis": {
+          "layerSha256": "d308c28d1b39828e015e6ef8dcf4958782d18d1c73072a09e43baf88b9c10dcb"
+        },
+        "Utrecht": {
+          "layerSha256": "80bacd95ee2cce5008a8e7d839776040d151434e3dffe54af721b22179d5022e"
+        },
+        "Zelanda": {
+          "layerSha256": "f9d8a6e9f1798c6a30f2c945a81a85e8b94540f6f13b25d266e937689bb83415"
+        },
+        "Bosnia y Herzegovina otomanas": {
+          "layerSha256": "8e55da00235247f921573e9331d7a12ca94ea9b63a3cf27a11b7d5ece65706e9"
+        },
+        "Balcanes meridionales otomanos": {
+          "layerSha256": "29f3d17996c1580569097b57c28f064b82a3b9d64413f00af6973255d09c43af"
+        },
+        "Despotado de Serbia": {
+          "layerSha256": "006dc3e312edee05cfbcb7b4f62842a2764dd5b15466870fe51c7a93e167af8f"
+        },
+        "Reino de Bosnia": {
+          "layerSha256": "9e38eb2d63abb3951ded60c959dae8696c0448fd078b5db2a39e40bbcd4257c6"
+        },
+        "Principado de Valaquia": {
+          "layerSha256": "36e4bbef302ace8b70f09fd9dbd333596dfc11389aefe788f4b17e78392b4af1"
+        },
+        "Principado de Moldavia": {
+          "layerSha256": "42111d92aa71f6d6d0f92b5b366aea896b975ed0e9fe29b365affd26305bfc2f"
+        },
+        "Núcleo de Brandeburgo": {
+          "layerSha256": "fdc2f687aeef9ca3f7e56651c8dc7c200d3c7dff4343adeea9680b76a62f4019"
+        },
+        "Núcleo de Württemberg": {
+          "layerSha256": "2dbf5eff52b57129dd74043a5b438f2203a33487738196492222e0497f7c5f2e"
+        },
+        "Württemberg-Urach": {
+          "layerSha256": "8864f6c62a08801714f5fce774b0d04f2c1aa2b80866bb8114d2855a12ef47b2"
+        },
+        "Württemberg-Stuttgart": {
+          "layerSha256": "f91c2959c83c41a3cfd3652e17eea2fa673d0271a60a2c1e00440335f1739e54"
+        },
+        "Núcleo de Hesse": {
+          "layerSha256": "cad4b2a9a58d92a4d4a667bb1c3515e150c5aad61296aea6c2104411fe56c18b"
+        },
+        "Núcleo de Hesse-Kassel": {
+          "layerSha256": "952d113fd45161783c4ebf91c9c958863f0d1dfc9b9449fe5c280c12831df7f7"
+        },
+        "Núcleo de Hesse-Darmstadt": {
+          "layerSha256": "f4de661e455e6f917af5ab9b32f3727108d97505420ae8e67b9bc902a87d21bc"
+        }
+      }
+    }
+  }
+}

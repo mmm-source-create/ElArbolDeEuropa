@@ -1,3 +1,4 @@
+import {territoriosDe} from './data/personAccessors.js';
 import React, { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import {
   ArrowDown,
@@ -279,7 +280,7 @@ export function MapaEuropa({ seleccion, anioGlobal = null, onSelectTerritorio, o
               ? reinadosActivos(seleccion, anioGlobal, { soloEfectivos: true })
               : reinadosDetallados)
           : (seleccion.gobernante === true
-              ? (seleccion.reinos || []).map((territorio) => ({
+              ? territoriosDe(seleccion).map((territorio) => ({
                   territorio,
                   desde: añoReferenciaTerritorial(seleccion, territorio),
                   hasta: añoReferenciaTerritorial(seleccion, territorio),

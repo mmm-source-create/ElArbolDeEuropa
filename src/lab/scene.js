@@ -1,3 +1,4 @@
+import {conyugesDe} from '../data/personAccessors.js';
 import { computeTreeLayout, routeFamilyConnectors, splitPartnerComponents } from '../explorer/treeLayout.js';
 import { computeParentGroups } from '../explorer/relationshipGraph.js';
 
@@ -9,7 +10,7 @@ export function relatedIds(people, count) {
   const byId = Object.fromEntries(people.map(person => [person.id, person]));
   const neighbors = Object.fromEntries(people.map(person => [person.id, new Set()]));
   for (const person of people) {
-    for (const id of [person.padre, person.madre, person.conyuge, person.conyuge2, ...(person.conyuges || [])]) {
+    for (const id of [person.padre, person.madre, ...conyugesDe(person)]) {
       if (id && byId[id]) { neighbors[person.id].add(id); neighbors[id].add(person.id); }
     }
   }

@@ -1,3 +1,4 @@
+import {gobiernosDe} from './personAccessors.js';
 import {idsDeReinoEnAño} from '../Territorios.jsx';
 import {imperialFrameIds} from './imperialFrame.js';
 import {mapLocationsForGovernment, pilotImperialFrameFor} from './locationMapPilot.js';
@@ -35,7 +36,7 @@ export function buildPoliticalMapIndex(personas, year, mapData = null, options =
     regions.get(id).push(entry);
   };
   for (const person of personas) {
-    if (!(person.gobiernos || []).some(g => g.desde <= year && year <= g.hasta)) continue;
+    if (!gobiernosDe(person).some(g => g.desde <= year && year <= g.hasta)) continue;
     for (const entry of mapAuthoritiesForPerson(person, year, mapData, options)) {
       for (const id of entry.ids) push(id, entry);
     }

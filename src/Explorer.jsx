@@ -1,3 +1,4 @@
+import {territoriosDe} from './data/personAccessors.js';
 import {translatedEquivalent} from './english/routes.js';
 import { familyIndex, familyIds, atlasIdsFromLocation, writeAtlasIds, isolatedPopes, groupIsolatedPopes } from './explorer/progressiveAtlas.js';
 import { safeStoryReturn, storyPeopleIds, saveStoryProgress } from './stories/storyModel.js';
@@ -513,7 +514,7 @@ export default function Explorer({ initialPanel = null, treeBase: TREE_BASE }) {
     );
     ramasPorPrincipal[OTRAS_DINASTIAS] = otrasDinastias;
 
-    const territoriosEnDatos = uniq(PERSONAS.flatMap((persona) => persona.reinos || [])).sort(alfabetico);
+    const territoriosEnDatos = uniq(PERSONAS.flatMap((persona) => territoriosDe(persona))).sort(alfabetico);
     const territorioTieneDatos = (principal) => {
       const pendientes = [principal];
       const visitados = new Set();
@@ -813,7 +814,7 @@ export default function Explorer({ initialPanel = null, treeBase: TREE_BASE }) {
     if (soloFavoritos && !favoritosSet.has(persona.id)) return false;
 
     if (territorios.length) {
-      const coincideTerritorio = (persona.reinos || []).some((territorio) =>
+      const coincideTerritorio = territoriosDe(persona).some((territorio) =>
         territorios.some((filtro) => territorioCoincideConFiltro(territorio, filtro))
       );
       if (!coincideTerritorio) return false;

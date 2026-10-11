@@ -1,3 +1,4 @@
+import {conyugesDe, gobiernosDe, territoriosDe} from './src/data/personAccessors.js';
 import {ACCESOS_CORONAS} from './src/content/coronas/index.js';
 import {RELEVOS} from './src/content/sucesiones/index.js';
 import {accesosDe} from './src/data/crowns.js';
@@ -33,7 +34,7 @@ if (!Array.isArray(HISTORIAS)) throw new Error("No se ha podido cargar HISTORIAS
 const BY_ID = Object.fromEntries(PERSONAS.map((p) => [p.id, p]));
 
 const CONYUGES_INVERSOS = PERSONAS.reduce((acc, persona) => {
-  const declarados = [persona?.conyuge, persona?.conyuge2, ...(persona?.conyuges || [])].filter(Boolean);
+  const declarados = conyugesDe(persona);
   declarados.forEach((id) => {
     if (!BY_ID[id]) return;
     (acc[id] ||= new Set()).add(persona.id);
@@ -53,7 +54,7 @@ const HIJOS_POR_ID = PERSONAS.reduce((acc, persona) => {
 function listaConyuges(persona) {
   if (!persona) return [];
   return [...new Set([
-    persona?.conyuge, persona?.conyuge2, ...(persona?.conyuges || []),
+    ...conyugesDe(persona),
     ...[...(CONYUGES_INVERSOS[persona.id] || [])],
   ].filter(Boolean))];
 }
@@ -913,9 +914,9 @@ function computeTreeLayout(rows, byId, childrenById) {
 }
 
 function reinadosLigero(persona) {
-  if (Array.isArray(persona?.reinados)) return persona.reinados.map((r) => ({ ...r }));
+  if (persona?.gobiernos != null || persona?.reinados != null) return gobiernosDe(persona).map((r) => ({ ...r }));
   if (Array.isArray(persona?.reinado) && persona.reinado.length >= 2) {
-    return [{ territorio: (persona.reinos || [])[0] || null, desde: persona.reinado[0], hasta: persona.reinado[1] }];
+    return [{ territorio: territoriosDe(persona)[0] || null, desde: persona.reinado[0], hasta: persona.reinado[1] }];
   }
   return [];
 }
@@ -949,7 +950,7 @@ function referenciaPersona(id) {
     muer: Number.isFinite(persona.muer) ? persona.muer : null,
     nacAprox: Boolean(persona.nacAprox),
     muerAprox: Boolean(persona.muerAprox),
-    reinos: Array.isArray(persona.reinos) ? persona.reinos : [],
+    reinos: territoriosDe(persona),
   };
 }
 
@@ -1019,8 +1020,8 @@ function solapanVida(a, b) {
 }
 
 function territoriosCompartidos(a, b) {
-  const set = new Set(a?.reinos || []);
-  return (b?.reinos || []).filter((r) => set.has(r)).length;
+  const set = new Set(territoriosDe(a));
+  return territoriosDe(b).filter((r) => set.has(r)).length;
 }
 
 function relacionadosDinastia(persona, limite = 6) {
@@ -1102,12 +1103,12 @@ async function generarPortadasPersona() {
       padre: persona.padre || null,
       madre: persona.madre || null,
       conyuge: persona.conyuge || null,
-      conyugesIds: [persona.conyuge, persona.conyuge2, ...(persona.conyuges || [])].filter(Boolean),
+      conyugesIds: conyugesDe(persona),
       evidenceNames: Object.fromEntries([...new Set([
-        persona.padre, persona.madre, persona.conyuge, persona.conyuge2, ...(persona.conyuges || []),
+        persona.padre, persona.madre, ...conyugesDe(persona),
         ...RELEVOS.filter(item => item.sucesor?.persona === persona.id).flatMap(item => [item.predecesor?.persona, item.sucesor?.persona]),
       ].filter(Boolean))].map(id => [id, BY_ID[id]?.nombre]).filter(([, name]) => name)),
-      reinos: Array.isArray(persona.reinos) ? persona.reinos : [],
+      reinos: territoriosDe(persona),
       reinados: reinadosLigero(persona),
       accesosCoronas: accesosDe(persona,ACCESOS_CORONAS,RELEVOS),
       biografia: biografiaPublicaPersona(persona),
@@ -1131,7 +1132,7 @@ async function generarCatalogosPublicos() {
   const personas = catalogoPersonas();
   const dinastias = catalogoAgrupado(PERSONAS.map((p) => p.dinastia), (p, nombre) => p.dinastia === nombre).map(d=>({...d,editorial:Boolean(HISTORIA_DINASTIAS[d.nombre]),resumen:HISTORIA_DINASTIAS[d.nombre]?.resumen||""}));
   const territoriosValores = Object.keys(TERRITORIOS);
-  const territorios = catalogoAgrupado(territoriosValores, (p, nombre) => (p.reinos || []).some(t => [nombre, ...componentesDe(nombre)].includes(t)));
+  const territorios = catalogoAgrupado(territoriosValores, (p, nombre) => territoriosDe(p).some(t => [nombre, ...componentesDe(nombre)].includes(t)));
   const historias = HISTORIAS.map((historia) => ({
     id: historia.id,
     titulo: historia.titulo,
