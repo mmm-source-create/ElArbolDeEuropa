@@ -1,3 +1,4 @@
+import {conyugesDe} from '../data/personAccessors.js';
 export {setMetaContent, ensureCanonical, setHreflangAlternates} from "../public/headMetadata.js";
 import { PERSONAS } from "../personas.jsx";
 import { listaReinados } from "../Territorios.jsx";
@@ -255,7 +256,7 @@ export const FILTROS_RELACION = [
 export const BY_ID = Object.fromEntries(PERSONAS.map((p) => [p.id, p]));
 
 export const CONYUGES_INVERSOS = PERSONAS.reduce((acc, persona) => {
-  const declarados = [persona?.conyuge, persona?.conyuge2, ...(persona?.conyuges || [])].filter(Boolean);
+  const declarados = conyugesDe(persona);
   declarados.forEach((id) => {
     if (!BY_ID[id]) return;
     (acc[id] ||= new Set()).add(persona.id);
@@ -334,7 +335,7 @@ export const TIMELINE_FIXED_COLUMN = 212;
 export function listaConyuges(persona) {
   if (!persona) return [];
   return [...new Set([
-    persona?.conyuge, persona?.conyuge2, ...(persona?.conyuges || []),
+    ...conyugesDe(persona),
     ...[...(CONYUGES_INVERSOS[persona.id] || [])],
   ].filter(Boolean))];
 }

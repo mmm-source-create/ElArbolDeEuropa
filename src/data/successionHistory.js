@@ -1,3 +1,4 @@
+import {conyugesDe, gobiernosDe} from './personAccessors.js';
 export const MOTIVOS_SUCESION = ['nombramiento','herencia','elección','conquista','matrimonio','abdicación','deposición','acuerdo','regencia','restauración','disputa'];
 export const TIPOS_FECHA = {acceso:'Acceso al título',coronación:'Coronación',gobierno:'Gobierno efectivo',inauguración:'Toma de posesión'};
 export const coincideMandato = (g, referencia, territorio) => g.territorio === territorio && g.desde === referencia.desde && (!referencia.clase || g.clase === referencia.clase);
@@ -23,8 +24,7 @@ export function parentescoRegistrado(anterior, siguiente, personas) {
   if(b.has(anterior)) {const via=b.get(anterior).slice().reverse(); return {texto:via.length===2?'Hijo o hija de su predecesor':`Descendiente de su predecesor (${via.length-1} generaciones)`,via};}
   if(a.has(siguiente)) {const via=a.get(siguiente); return {texto:via.length===2?'Padre o madre de su predecesor':`Ascendiente de su predecesor (${via.length-1} generaciones)`,via};}
   const p=byId.get(anterior), q=byId.get(siguiente);
-  const spouses = x => [x?.conyuge,x?.conyuge2,...x?.conyuges||[]];
-  if(spouses(p).includes(siguiente)||spouses(q).includes(anterior)) return {texto:'Cónyuges',via:[anterior,siguiente]};
+  if(conyugesDe(p).includes(siguiente)||conyugesDe(q).includes(anterior)) return {texto:'Cónyuges',via:[anterior,siguiente]};
   const shared=[...a.keys()].filter(id=>b.has(id)).sort((x,y)=>a.get(x).length+b.get(x).length-a.get(y).length-b.get(y).length || x.localeCompare(y));
   if(!shared.length)return {texto:'Sin parentesco identificado en las filiaciones registradas',via:[]};
   const common=shared[0], da=a.get(common).length-1, db=b.get(common).length-1;
@@ -59,7 +59,7 @@ export function auditarSucesiones(personas, relevos, crisis, territorios, source
     if(territorios[r.territorio]?.naturaleza!=='entidad')add('SUCCESSION_TERRITORY',r.id,'El relevo debe pertenecer a una entidad histórica.');
     for(const key of ['predecesor','sucesor']) {
       const term=r[key], p=byId.get(term?.persona);
-      const matches=(p?.gobiernos||[]).filter(g=>coincideMandato(g,term,r.territorio));
+      const matches=gobiernosDe(p).filter(g=>coincideMandato(g,term,r.territorio));
       if(matches.length!==1)add('SUCCESSION_TERM',r.id,`${key}: debe identificar exactamente un mandato existente.`);
     }
     if(!r.motivos?.length||r.motivos.some(m=>!MOTIVOS_SUCESION.includes(m)))add('SUCCESSION_REASON',r.id,'Motivo desconocido o ausente.');

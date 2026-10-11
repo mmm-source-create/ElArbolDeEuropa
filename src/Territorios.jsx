@@ -1,3 +1,4 @@
+import {gobiernosDe, territoriosDe} from './data/personAccessors.js';
 import { gobiernoEfectivo } from "./data/territorios.js";
 
 // Tabla de correspondencias: nombre de "reino" tal y como aparece en
@@ -921,13 +922,13 @@ export const TITULOS_GOBERNANTES = ["Papa", "Emperador", "Emperatriz", "Rey", "R
 
 const TIPOS_REINADO_NO_EFECTIVOS = new Set(["titular", "pretensión"]);
 
-// Modelo normalizado de gobierno. La base nueva usa `reinados`, con un
+// Modelo de gobierno. La fuente usa `gobiernos`, con un
 // intervalo independiente por territorio. Se conserva la lectura del antiguo
 // `reinado:[desde,hasta]` para que un dato todavía no migrado no rompa nada.
 export function listaReinados(persona) {
   if (!persona) return [];
-  if (Array.isArray(persona.gobiernos || persona.reinados)) {
-    return (persona.gobiernos || persona.reinados).filter((r) =>
+  if (persona.gobiernos != null || persona.reinados != null) {
+    return gobiernosDe(persona).filter((r) =>
       r && typeof r.territorio === "string"
       && Number.isFinite(r.desde) && Number.isFinite(r.hasta)
     );
@@ -935,7 +936,7 @@ export function listaReinados(persona) {
   if (Array.isArray(persona.reinado) && persona.reinado.length === 2) {
     const [desde, hasta] = persona.reinado;
     if (Number.isFinite(desde) && Number.isFinite(hasta)) {
-      return [{ territorio: (persona.reinos || [])[0] || "Gobierno", desde, hasta }];
+      return [{ territorio: territoriosDe(persona)[0] || "Gobierno", desde, hasta }];
     }
   }
   return [];

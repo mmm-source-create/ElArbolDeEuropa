@@ -1,9 +1,10 @@
+import {conyugesDe} from '../data/personAccessors.js';
 // These indexes contain only recorded relationships; missing parents never imply siblings.
 export function familyIndex(people) {
  const byId=Object.fromEntries(people.map(p=>[p.id,p])),children={},partners={};
  for(const p of people) {
   for(const id of [p.padre,p.madre].filter(id=>byId[id]))(children[id]??=[]).push(p.id);
-  for(const id of [p.conyuge,p.conyuge2,...p.conyuges||[]].filter(id=>byId[id])) {
+  for(const id of conyugesDe(p).filter(id=>byId[id])) {
    (partners[p.id]??=new Set()).add(id);(partners[id]??=new Set()).add(p.id);
   }
  }

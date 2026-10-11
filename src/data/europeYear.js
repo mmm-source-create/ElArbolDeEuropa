@@ -1,3 +1,4 @@
+import {territoriosDe} from './personAccessors.js';
 import {documentaryBounds,documentaryDate} from '../utils/documentaryDates.js';
 import {gobiernosDe,mandatoEn} from './crowns.js';
 import {gobiernoEfectivo} from './territorios.js';
@@ -22,7 +23,7 @@ const intervaloEn=(x,anio)=>Number.isInteger(x.desde)&&x.desde<=anio&&(x.hasta==
 export function europaEnAnio({personas,anio,eventos=[],crisis=[],uniones=[],territorioIncluido=()=>true,alcanceCompleto=true}) {
  if(!Number.isInteger(anio))return {gobiernos:[],nominales:[],vivas:[],eventos:[],crisis:[],uniones:[]};
  const ids=new Set(personas.map(p=>p.id)),territorios=new Set();
- for(const p of personas)for(const t of [...p.reinos||[],...gobiernosDe(p).map(g=>g.territorio)])if(territorioIncluido(t))territorios.add(t);
+ for(const p of personas)for(const t of [...territoriosDe(p),...gobiernosDe(p).map(g=>g.territorio)])if(territorioIncluido(t))territorios.add(t);
  const mandatos=personas.flatMap(p=>gobiernosDe(p).filter(g=>territorioIncluido(g.territorio)&&mandatoEn(g,anio)).map(g=>({...g,persona:p})));
  const vinculado=x=>alcanceCompleto||(x.personas||[]).some(id=>ids.has(id))||(x.territorios||[]).some(t=>territorios.has(t));
  return {

@@ -1,3 +1,4 @@
+import {territoriosDe} from '../data/personAccessors.js';
 import { ACCENTS, getCategoriaDinastía } from '../explorer/model.js';
 
 const pathCache = new Map();
@@ -68,7 +69,7 @@ export function drawScene(canvas, scene, camera, state) {
     ctx.fillText(person.nombre, x + 14, y + 24, w - 22);
     ctx.fillStyle = color.muted;
     ctx.font = '10px system-ui, sans-serif';
-    ctx.fillText(`${person.titulo || ''} · ${(person.reinos || []).slice(0, 2).join(' · ')}`, x + 14, y + 43, w - 22);
+    ctx.fillText(`${person.titulo || ''} · ${territoriosDe(person).slice(0, 2).join(' · ')}`, x + 14, y + 43, w - 22);
     ctx.restore();
     ctx.setTransform(dpr * camera.zoom, 0, 0, dpr * camera.zoom, -camera.x * dpr * camera.zoom, -camera.y * dpr * camera.zoom);
   }

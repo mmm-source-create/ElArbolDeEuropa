@@ -1,3 +1,4 @@
+import {gobiernosDe, intervalosDisputadosDe} from './personAccessors.js';
 import {idsDeGobiernoEnAño} from '../Territorios.jsx';
 import {gobiernoEfectivo} from './territorios.js';
 import {personClaims} from '../evidence/claims.js';
@@ -24,7 +25,7 @@ function claimsFor(person) {
 
 export function authorityKind(government, year = null) {
   if (['titular', 'pretensión'].includes(government?.condicion) || government?.efectivo === false) return 'titular';
-  const disputes = [].concat(government?.controlDisputado || []);
+  const disputes = intervalosDisputadosDe(government);
   if (disputes.some(period => period.desde <= year && year <= period.hasta)) return 'disputed';
   if (['rival', 'disputado', 'ocupación'].includes(government?.condicion)) return 'disputed';
   if (['regencia', 'gobierno delegado'].includes(government?.condicion)
@@ -38,7 +39,7 @@ export function mapAuthoritiesForPerson(person, year, mapData = null, {includeCl
   if (!person || !Number.isInteger(year)) return [];
   const claims = claimsFor(person);
   const entries = [];
-  for (const government of person.gobiernos || []) {
+  for (const government of gobiernosDe(person)) {
     if (government.desde > year || government.hasta < year) continue;
     const effective = gobiernoEfectivo(government);
     if (!effective && !includeClaims) continue;
@@ -104,7 +105,7 @@ export function mapAuthoritiesForPerson(person, year, mapData = null, {includeCl
         note: 'Atribución regional del ensayo documentado; no equivale a una frontera exacta.'}});
   }
   for (const disputed of pilotDisputedHungarianClaimsFor(mapData, person.id, year)) {
-    const government = (person.gobiernos || []).find(g => g.territorio === 'Hungría'
+    const government = gobiernosDe(person).find(g => g.territorio === 'Hungría'
       && g.desde <= year && year <= g.hasta);
     if (!government) continue;
     // Only the reviewed eastern core is painted, never the whole claimed kingdom.
@@ -114,7 +115,7 @@ export function mapAuthoritiesForPerson(person, year, mapData = null, {includeCl
       color: disputed.color, ids: disputed.ids});
   }
   // The Swedish military occupation precedes its legally distinct 1648 fief.
-  if ((person.gobiernos || []).some(g => g.territorio === 'Suecia' && gobiernoEfectivo(g)
+  if (gobiernosDe(person).some(g => g.territorio === 'Suecia' && gobiernoEfectivo(g)
       && g.desde <= year && year <= g.hasta) && year >= 1630 && year <= 1647) {
     const occupation = pilotLocationsFor(mapData, 'Pomerania', year).filter(id =>
       pilotLocationsFor(mapData, 'Suecia', year).includes(id));

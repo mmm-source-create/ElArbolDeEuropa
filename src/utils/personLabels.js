@@ -1,3 +1,4 @@
+import {territoriosDe} from '../data/personAccessors.js';
 const LATIN_EXTENDED_FOLD = Object.freeze({
   "ß": "ss", "ẞ": "SS",
   "ł": "l", "Ł": "L",
@@ -59,7 +60,7 @@ export function textoBusquedaPersona(persona) {
     persona.sobrenombre,
     persona.titulo,
     persona.dinastia,
-    ...(Array.isArray(persona.reinos) ? persona.reinos : []),
+    ...territoriosDe(persona),
   ].filter(Boolean).join(" ");
 }
 

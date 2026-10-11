@@ -1,7 +1,8 @@
+import {gobiernosDe} from '../data/personAccessors.js';
 import {gobiernoEfectivo} from '../data/territorios.js';
 
 export function reinadosEfectivos(persona) {
-  const governments=persona?.gobiernos ?? persona?.reinados ?? [];
+  const governments=gobiernosDe(persona);
   return governments.filter(g=>g && typeof g.territorio==='string' && Number.isFinite(g.desde) && Number.isFinite(g.hasta) && g.desde<=g.hasta && gobiernoEfectivo(g) && !['titular','pretensión','pretension'].includes(g.tipo));
 }
 
@@ -9,7 +10,7 @@ export function reinadosEfectivos(persona) {
 // Los conflictos y regencias requieren una explicación editorial, no una respuesta única.
 export function sucesionesDirectas(personas) {
   const porTerritorio=new Map();
-  for(const persona of personas) for(const reinado of persona.gobiernos ?? persona.reinados ?? []) {
+  for(const persona of personas) for(const reinado of gobiernosDe(persona)) {
     if(!reinado || !Number.isFinite(reinado.desde) || !Number.isFinite(reinado.hasta))continue;
     if(!porTerritorio.has(reinado.territorio))porTerritorio.set(reinado.territorio,[]);
     porTerritorio.get(reinado.territorio).push({persona,reinado});

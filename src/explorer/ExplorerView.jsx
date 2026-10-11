@@ -1,3 +1,4 @@
+import {gobiernosDe, territoriosDe} from '../data/personAccessors.js';
 import AtlasGrowth from './AtlasGrowth.jsx';
 import StoryAtlasGuide from './StoryAtlasGuide.jsx';
 import '../stories/stories.css';
@@ -97,7 +98,7 @@ function BioSection({ title, open, onToggle, children }) {
   );
 }
 
-const DOGES_IN_ORDER = PERSONAS.flatMap(persona => (persona.gobiernos || [])
+const DOGES_IN_ORDER = PERSONAS.flatMap(persona => gobiernosDe(persona)
   .filter(gobierno => gobierno.territorio === 'Venecia' && gobierno.titulo === 'Dogo' && gobierno.condicion === 'efectivo')
   .map(gobierno => ({ persona, gobierno })))
   .sort((a, b) => a.gobierno.desde - b.gobierno.desde || a.gobierno.hasta - b.gobierno.hasta);
@@ -904,7 +905,7 @@ export default function ExplorerView({ vm }) {
                   : (Number.isFinite(anioGlobal)
                       ? `Año ${anioGlobal}: haz clic sobre una persona para ver qué territorios gobernaba entonces.`
                       : "Haz clic sobre una persona para ver los territorios que gobernó.")}
-                {seleccion?.gobiernos?.some(gobierno => IRISH_MAP_TERRITORIES.has(gobierno.territorio)) && <span> Irlanda: contornos regionales aproximados; los señoríos y condados no coincidían necesariamente con estas divisiones.</span>}
+                {gobiernosDe(seleccion).some(gobierno => IRISH_MAP_TERRITORIES.has(gobierno.territorio)) && <span> Irlanda: contornos regionales aproximados; los señoríos y condados no coincidían necesariamente con estas divisiones.</span>}
               </div>
             </section>
           )}
@@ -1097,7 +1098,7 @@ export default function ExplorerView({ vm }) {
                   >
                     <dl>
                       <dt>ID</dt><dd><code className="bio-id">{personaBio.id}</code></dd>
-                      <dt>Territorio(s)</dt><dd>{(personaBio.reinos || []).join(", ") || "No indicado"}</dd>
+                      <dt>Territorio(s)</dt><dd>{territoriosDe(personaBio).join(", ") || "No indicado"}</dd>
                       {sobrenombreDePersona(personaBio) && <><dt>Sobrenombre</dt><dd>{sobrenombreDePersona(personaBio)}</dd></>}
                       {!!personaBio.aliases?.length && <><dt>Otros nombres</dt><dd>{personaBio.aliases.join(", ")}</dd></>}
                       <dt>Título</dt><dd>{personaBio.titulo}</dd>
@@ -1299,7 +1300,7 @@ export default function ExplorerView({ vm }) {
                               >
                                 <div className="tl-sticky-col">
                                   <div className="name">{persona.nombre}</div>
-                                  <div className="meta">{persona.titulo} · {(persona.reinos || []).join(" · ")} · {persona.dinastia}</div>
+                                  <div className="meta">{persona.titulo} · {territoriosDe(persona).join(" · ")} · {persona.dinastia}</div>
                                 </div>
                                 <div className="tl-track" style={{ height: trackHeight }}>
                                   {tieneFecha ? (

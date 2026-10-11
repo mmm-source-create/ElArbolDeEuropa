@@ -1,3 +1,4 @@
+import {gobiernosDe} from '../data/personAccessors.js';
 // Distinct IDs stop identical words from implying identical historical concepts.
 export const ENTITY_KINDS = Object.freeze(['person','dynasty','territory','politicalEntity','crown','title','office','government','event']);
 export const entityId = (kind, id) => `${kind}:${id}`;
@@ -18,7 +19,7 @@ export function buildEntityIndex(people, territories, events = []) {
     add('person',person.id,person.nombre);
     add('dynasty',person.dinastia,person.dinastia);
     add('title',person.titulo,person.titulo);
-    for (const government of person.gobiernos || person.reinados || []) {
+    for (const government of gobiernosDe(person)) {
       const id = `${person.id}:${government.territorio}:${government.desde}:${government.titulo}`;
       add('government',id,`${person.nombre} · ${government.territorio}`,{
         person:entityId('person',person.id), territory:entityId('territory',government.territorio),

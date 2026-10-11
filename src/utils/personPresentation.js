@@ -1,3 +1,4 @@
+import {gobiernosDe, territoriosDe} from '../data/personAccessors.js';
 import { gobiernoEfectivo } from "../data/territorios.js";
 import { contenidoPersona, tieneContenidoEditorial } from "../content/personas/index.js";
 
@@ -15,7 +16,7 @@ function resumenBiografiaAtlas(texto) {
 }
 
 function primerReinadoUtil(persona) {
-  const reinados = persona?.gobiernos || persona?.reinados || [];
+  const reinados = gobiernosDe(persona);
   return reinados.find((r) => r && Number.isFinite(r.desde) && Number.isFinite(r.hasta) && gobiernoEfectivo(r))
     || reinados.find((r) => r && Number.isFinite(r.desde) && Number.isFinite(r.hasta))
     || null;
@@ -29,7 +30,7 @@ export function resumenCortoPersona(persona) {
 
   const titulo = String(persona.titulo || "Figura histórica").split("/")[0].trim();
   const dinastia = String(persona.dinastia || "").trim();
-  const reinos = Array.isArray(persona.reinos) ? persona.reinos.filter(Boolean) : [];
+  const reinos = territoriosDe(persona).filter(Boolean);
   const reinado = primerReinadoUtil(persona);
   if (titulo === 'Dogo' && reinado?.territorio === 'Venecia') {
     return `Dogo electo de la República de Venecia, ${reinado.desde}–${reinado.hasta}. La magistratura no era hereditaria; los territorios del mapa pertenecían a la República.`;

@@ -1,3 +1,4 @@
+import {territoriosDe} from '../data/personAccessors.js';
 import React, { useMemo } from "react";
 
 export default function BioDiscovery({
@@ -42,7 +43,7 @@ export default function BioDiscovery({
 
     const inicio = Number.isFinite(persona.nac) ? persona.nac : Number.isFinite(persona.muer) ? persona.muer - 60 : null;
     const fin = Number.isFinite(persona.muer) ? persona.muer : Number.isFinite(persona.nac) ? persona.nac + 65 : null;
-    const territoriosPersona = new Set(persona.reinos || []);
+    const territoriosPersona = new Set(territoriosDe(persona));
     const epoca = Number.isFinite(inicio) && Number.isFinite(fin)
       ? personas.filter((p) => {
           if (familia.has(p.id)) return false;
@@ -50,8 +51,8 @@ export default function BioDiscovery({
           const pFin = Number.isFinite(p.muer) ? p.muer : Number.isFinite(p.nac) ? p.nac + 65 : null;
           return Number.isFinite(pInicio) && Number.isFinite(pFin) && inicio <= pFin && pInicio <= fin;
         }).sort((a, b) => {
-          const comunesA = (a.reinos || []).filter((r) => territoriosPersona.has(r)).length;
-          const comunesB = (b.reinos || []).filter((r) => territoriosPersona.has(r)).length;
+          const comunesA = territoriosDe(a).filter((r) => territoriosPersona.has(r)).length;
+          const comunesB = territoriosDe(b).filter((r) => territoriosPersona.has(r)).length;
           return comunesB - comunesA || relevancia(b) - relevancia(a) || distancia(a) - distancia(b) || a.nombre.localeCompare(b.nombre, "es");
         }).slice(0, 3)
       : [];

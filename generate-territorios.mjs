@@ -1,3 +1,4 @@
+import {gobiernosDe, territoriosDe} from './src/data/personAccessors.js';
 import {UNIONES_CORONAS} from './src/content/coronas/index.js';
 import {prepararUniones} from './src/data/crowns.js';
 import {RELEVOS,CRISIS} from './src/content/sucesiones/index.js';
@@ -18,9 +19,9 @@ const uniones=prepararUniones(UNIONES_CORONAS,id=>{const p=PERSONAS.find(p=>p.id
 const out='./public/territorios-meta';await fs.mkdir(out,{recursive:true});
 for(const [nombre,entidad] of Object.entries(TERRITORIOS)) {
  const nombres=[nombre,...componentesDe(nombre)];
- const personas=PERSONAS.filter(p=>(p.reinos||[]).some(t=>nombres.includes(t)));
+ const personas=PERSONAS.filter(p=>territoriosDe(p).some(t=>nombres.includes(t)));
  const ids=new Set(personas.map(p=>p.id));
- const gobiernos=personas.flatMap(p=>(p.gobiernos||[]).filter(g=>nombres.includes(g.territorio) && (entidad.naturaleza!=="compuesta" || !Number.isFinite(entidad.desde) || g.hasta>=entidad.desde)).map(g=>({...g,persona:ref(p)}))).sort((a,b)=>a.desde-b.desde||a.hasta-b.hasta);
+ const gobiernos=personas.flatMap(p=>gobiernosDe(p).filter(g=>nombres.includes(g.territorio) && (entidad.naturaleza!=="compuesta" || !Number.isFinite(entidad.desde) || g.hasta>=entidad.desde)).map(g=>({...g,persona:ref(p)}))).sort((a,b)=>a.desde-b.desde||a.hasta-b.hasta);
  const dinastias=[...new Set(gobiernos.map(g=>g.persona.dinastia).filter(Boolean))];
  const historia=HISTORIA_TERRITORIOS[nombre]||{};
  const relacionados=Object.entries(TERRITORIOS).filter(([n,t])=>n!==nombre&&(t.componentes.includes(nombre)||entidad.componentes.includes(n))).map(([n,t])=>({nombre:n,clase:t.clase,slug:slugPublico(n)}));

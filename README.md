@@ -2,8 +2,10 @@
 
 Atlas histórico y genealógico para explorar personas, dinastías, territorios y sus conexiones familiares.
 
-- [Web](https://www.treeofeurope.eu/es/) · Versión del repositorio: **V5.0**
-- [Cambios de V5.0](docs/V5.0.md) · [Documentación e historial](docs/README.md) · [Próximos pasos cartográficos](docs/V4.8_PROPUESTAS.md) · [Seguridad](SECURITY.md)
+- [Web](https://www.treeofeurope.eu/es/) · Versión del repositorio: **V5.1**
+- [Cambios de V5.1](docs/V5.1.md) · [Documentación e historial](docs/README.md) · [Próximos pasos cartográficos](docs/V4.8_PROPUESTAS.md) · [Seguridad](SECURITY.md)
+
+La V5.1 comparte la lectura de cónyuges, mandatos, territorios asociados y disputas entre el árbol, las fichas, los mapas, el desafío, los generadores y las auditorías cartográficas. Conserva los formatos de la fuente y las referencias que enlazan gobiernos y evidencia. La [guía de lectura](docs/data-model.md#lectura-compartida-desde-v51) explica la compatibilidad y los límites de cada accesor.
 
 La V5.0 establece un [contrato verificable de datos](docs/data-model.md) y protege el comportamiento publicado mediante una [base de regresión](docs/v5-regression.md). Comprueba personas, mandatos, evidencia, rutas y fichas generadas, y compara los mapas completos y personales en cada año de 1200–1800. Los formatos heredados se registran por caso concreto para retirarlos gradualmente; los nuevos usos fallan en CI. La primera entrega conserva el contenido y las superficies del Atlas.
 

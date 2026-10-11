@@ -82,6 +82,27 @@ Cada intervalo debe ser válido y quedar dentro del mandato. Los 33 objetos indi
 
 `reinados` se añade actualmente como alias de `gobiernos` al cargar `PERSONAS`. No es una fuente independiente y no se escribe dentro del literal. El auditor lee el literal antes de esa operación. Su retirada pertenece a la migración de consumidores posterior.
 
+## Lectura compartida desde V5.1
+
+Los consumidores de personas utilizan [`src/data/personAccessors.js`](../src/data/personAccessors.js), un módulo puro sin dependencias de React, del dataset ni del navegador. La normalización se realiza al leer cada relación; no se crea una segunda colección de personas o mandatos. Los campos, tipos, fechas, booleanos y referencias de la fuente siguen validándose antes con el contrato.
+
+| Accesor | Resultado y compatibilidad |
+| --- | --- |
+| `conyugesDe(persona)` | IDs únicos en orden de registro, combinando `conyuge`, `conyuge2` y `conyuges`. También entiende tarjetas públicas con `id`. Si una ficha pública contiene `conyugesIds` no vacío, usa esos IDs declarados en lugar de sus relaciones expandidas. |
+| `gobiernosDe(persona)` | La lista original de `gobiernos`; solo usa `reinados` si aquella falta. Una lista canónica vacía prevalece sobre el alias. No clona ni filtra mandatos, ni inventa intervalos. |
+| `territoriosDe(persona)` | La lista original de asociaciones `reinos`, sin convertirla en gobiernos ni añadir territorios de otros campos. |
+| `intervalosDisputadosDe(gobierno)` | Lista de intervalos; envuelve el objeto heredado y conserva los mismos objetos de período, sus notas y su orden. |
+
+Los arrays opcionales ausentes producen `[]` como comodidad de lectura; no escriben un campo nuevo ni afirman que una ausencia documental sea una negativa histórica. Los contenedores mal tipados producen un error. El contrato comprueba además los valores y límites de sus elementos: un accesor no sustituye la validación ni acredita un hecho.
+
+Los arrays devueltos de gobiernos, asociaciones y disputas son de **solo lectura por convenio**. Si un consumidor necesita ordenarlos o ampliarlos, debe copiar el array primero. Las conexiones del mapa y sus afirmaciones siguen usando el mismo objeto de gobierno, por lo que no debe clonarse para una lectura interna. La serialización de fichas puede copiarlo al construir el documento público.
+
+La reciprocidad conyugal se resuelve en los índices familiares; el accesor no busca parejas en otras fichas ni mezcla amantes. Las tarjetas de la ficha pública conservan su forma enriquecida y sus enlaces. Se mantiene el fallback publicado de `personClaims()` cuando `conyugesIds` está vacío, sin introducir en esta PR una revisión de certeza o reciprocidad. Esas políticas se revisarán al migrar las relaciones originales.
+
+Los adaptadores de `reinado: [desde, hasta]` siguen en `listaReinados()` y en el serializador histórico. No hay registros actuales de ese formato y no se admite en nuevas fuentes. Los lectores de campos parentales, fechas documentales y slugs conservan sus funciones existentes; sus criterios no cambian en esta entrega.
+
+Las comprobaciones estructurales leen deliberadamente el literal original y sus campos heredados. Así pueden detectar un formato indebido antes de que el acceso compatible lo oculte. En cambio, los cálculos de cobertura y continuidad cartográfica consumen los mismos lectores que el mapa. Los arrays de gobiernos de una ficha territorial, una dinastía o un resultado anual son modelos derivados distintos, y no se pasan a un accesor de personas.
+
 ## Evidencia
 
 Una fuente contextual de una biografía no verifica todos sus datos. `personClaims()` identifica por separado nacimiento, fallecimiento, parentesco, matrimonio, gobierno y sucesión. La identidad de un mandato tiene la forma:

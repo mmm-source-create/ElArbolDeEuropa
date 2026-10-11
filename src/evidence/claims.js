@@ -1,3 +1,4 @@
+import {conyugesDe, gobiernosDe} from '../data/personAccessors.js';
 // A source attached to a biography is contextual. It does not verify every fact
 // on that biography; claim-level sources must be entered explicitly below.
 import {RELEVOS} from '../content/sucesiones/index.js';
@@ -37,11 +38,8 @@ export function personClaims(person, reviews = CLAIM_REVIEWS) {
   if (year(person.muer) !== null) add('death','Fallecimiento',person.muer,interval(person.muer),person.documentacion?.fechas?.muer?.nota);
   if (person.padre || person.padres?.[0]?.id) add('father','Padre',person.padre || person.padres[0].id);
   if (person.madre || person.padres?.[1]?.id) add('mother','Madre',person.madre || person.padres[1].id);
-  const spouseIds = Array.isArray(person.conyugesIds) && person.conyugesIds.length
-    ? person.conyugesIds
-    : [person.conyuge,...(person.conyuges || [])].map(value => typeof value === 'string' ? value : value?.id);
-  for (const id of [...new Set(spouseIds.filter(Boolean))]) add(`spouse:${id}`,'Matrimonio o vínculo conyugal',id);
-  for (const government of person.gobiernos || person.reinados || []) {
+  for (const id of conyugesDe(person)) add(`spouse:${id}`,'Matrimonio o vínculo conyugal',id);
+  for (const government of gobiernosDe(person)) {
     const key = [government.territorio, government.desde, government.hasta, government.titulo].join(':');
     add(`government:${key}`,'Gobierno',government,interval(government.desde,government.hasta));
   }
@@ -83,7 +81,7 @@ export function coverageReport(people, territories = {}, stories = []) {
     })
   ).length;
   const byTerritory = new Map();
-  for (const person of people) for (const government of person.gobiernos || []) {
+  for (const person of people) for (const government of gobiernosDe(person)) {
     if (Number.isInteger(government.desde) && Number.isInteger(government.hasta)) {
       const list=byTerritory.get(government.territorio) || [];
       list.push(government);byTerritory.set(government.territorio,list);
@@ -147,7 +145,7 @@ export function coverageTasks(people, limit = 60, territories = {}) {
       tasks.push({id:`chronology:${person.id}`,personId:person.id,personName:person.nombre,kind:'chronology',status:'possible_error',priority:-1});
   }
   const byTerritory=new Map();
-  for (const person of people) for (const government of person.gobiernos || []) {
+  for (const person of people) for (const government of gobiernosDe(person)) {
     if (!Number.isInteger(government.desde)||!Number.isInteger(government.hasta)) continue;
     const list=byTerritory.get(government.territorio)||[];
     list.push(government);byTerritory.set(government.territorio,list);

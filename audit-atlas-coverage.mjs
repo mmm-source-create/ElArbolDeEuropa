@@ -1,3 +1,4 @@
+import {gobiernosDe, territoriosDe} from './src/data/personAccessors.js';
 // Run with: node --import ./tests/jsx-loader.mjs audit-atlas-coverage.mjs
 // Territories, governments and locations are deliberately counted separately.
 import fs from 'node:fs/promises';
@@ -37,10 +38,10 @@ function governmentRecord(person, government, from, through) {
 export function auditAtlasCoverage(personas, data, locationIds, catalogue = TERRITORIOS) {
   const from = data.from, through = data.through;
   const layers = reviewedMapLayers(data);
-  const governmentRows = personas.flatMap(person => (person.gobiernos || [])
+  const governmentRows = personas.flatMap(person => gobiernosDe(person)
     .map(government => ({person, government})));
   const names = [...new Set([...Object.keys(catalogue),
-    ...personas.flatMap(person => person.reinos || []),
+    ...personas.flatMap(person => territoriosDe(person)),
     ...governmentRows.map(row => row.government.territorio)])].sort(sortNames);
   const authorityCache = new Map();
   const entriesFor = (person, year) => {

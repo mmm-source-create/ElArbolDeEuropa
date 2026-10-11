@@ -1,3 +1,4 @@
+import {gobiernosDe} from './personAccessors.js';
 import {buildPoliticalMapIndex, COLLECTIVE_AUTHORITIES} from './politicalMapIndex.js';
 import {gobiernoEfectivo} from './territorios.js';
 
@@ -5,7 +6,7 @@ export const HISTORICAL_CUTS = Object.freeze([1522,1564,1619,1648,1665]);
 export const TYROL_REVIEW_RANGE = Object.freeze({from:1490,to:1705});
 
 export function auditMapContinuity(personas, {cuts=HISTORICAL_CUTS, focusTerritory='Tirol', range=TYROL_REVIEW_RANGE}={}) {
-  const governments = personas.flatMap(person => (person.gobiernos || []).filter(gobiernoEfectivo)
+  const governments = personas.flatMap(person => gobiernosDe(person).filter(gobiernoEfectivo)
     .map(government => ({personId:person.id,personName:person.nombre,...government})));
   const focus = governments.filter(g => g.territorio === focusTerritory);
   const collective = COLLECTIVE_AUTHORITIES.filter(a => a.territorio === focusTerritory);
