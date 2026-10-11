@@ -1083,6 +1083,7 @@ async function generarPortadasPersona() {
   await fs.writeFile(path.join(personaDir, "index.json"), JSON.stringify(PERSONA_SLUG_POR_ID), "utf8");
 
   await Promise.all(PERSONAS.map(async (persona) => {
+    const conyugesIds = conyugesDe(persona);
     const padres = [persona.padre, persona.madre].filter(Boolean).map(referenciaPersona).filter(Boolean);
     const conyuges = listaConyuges(persona).map(referenciaPersona).filter(Boolean);
     const hijos = (HIJOS_POR_ID[persona.id] || []).map(referenciaPersona).filter(Boolean);
@@ -1102,10 +1103,10 @@ async function generarPortadasPersona() {
       muerAprox: Boolean(persona.muerAprox),
       padre: persona.padre || null,
       madre: persona.madre || null,
-      conyuge: persona.conyuge || null,
-      conyugesIds: conyugesDe(persona),
+      conyuge: conyugesIds.length === 1 ? conyugesIds[0] : null,
+      conyugesIds,
       evidenceNames: Object.fromEntries([...new Set([
-        persona.padre, persona.madre, ...conyugesDe(persona),
+        persona.padre, persona.madre, ...conyugesIds,
         ...RELEVOS.filter(item => item.sucesor?.persona === persona.id).flatMap(item => [item.predecesor?.persona, item.sucesor?.persona]),
       ].filter(Boolean))].map(id => [id, BY_ID[id]?.nombre]).filter(([, name]) => name)),
       reinos: territoriosDe(persona),
