@@ -1,3 +1,4 @@
+import {locationLabel} from './data/locationLabels.js';
 import {territoriosDe} from './data/personAccessors.js';
 import React, { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import {
@@ -480,8 +481,8 @@ export function MapaEuropa({ seleccion, anioGlobal = null, onSelectTerritorio, o
         tabIndex={0}
         aria-label="Mapa histórico de Europa. Flechas para mover, más y menos para zoom, Inicio para volver a Europa"
       />
-      {selectedRegionId && <aside className="mapa-region-inspector" aria-label={`Información histórica de ${selectedRegionId.replaceAll('_',' ')}`}>
-        <div className="mapa-region-inspector-head"><div><small>Región del mapa · {Number.isInteger(anioGlobal) ? anioGlobal : 'sin año'}</small><h3>{selectedRegionId.replaceAll('_',' ')}</h3></div><button type="button" onClick={() => setSelectedRegionId(null)} aria-label="Cerrar información de la región"><X size={16}/></button></div>
+      {selectedRegionId && <aside className="mapa-region-inspector" aria-label={`Información histórica de ${locationLabel(selectedRegionId)}`}>
+        <div className="mapa-region-inspector-head"><div><small>Región del mapa · {Number.isInteger(anioGlobal) ? anioGlobal : 'sin año'}</small><h3>{locationLabel(selectedRegionId)}</h3></div><button type="button" onClick={() => setSelectedRegionId(null)} aria-label="Cerrar información de la región"><X size={16}/></button></div>
         <p className="mapa-region-precision">{inspectedRegion?.precision || 'Las regiones de esta cartografía aproximan jurisdicciones históricas; no prueban por sí solas una frontera.'}</p>
         {!Number.isInteger(anioGlobal) ? <p>Elige un año para consultar quién gobernaba esta región y revisar las fuentes.</p> : <>
           {inspectedRegion?.entries.length > 0 && <ul>{inspectedRegion.entries.map((entry, index) => <li key={`${entry.territory}-${entry.person?.id || 'collective'}-${index}`}>

@@ -1,0 +1,119 @@
+{
+  "schema": 1,
+  "reviewedAt": "2026-10-13",
+  "precision": "regional_approximation",
+  "sources": [
+    {
+      "title": "Hrvatska enciklopedija · Pelješac",
+      "url": "https://enciklopedija.hr/clanak/peljesac",
+      "locator": "Istmo de Ston y adquisición documentada de la península."
+    },
+    {
+      "title": "Spahić / Vego · mapa de la Bosnia medieval",
+      "url": "https://geoubih.ba/Izdanja/Actavol4br8/3.%20Spahic%20-%20Granice%20BiH.pdf",
+      "locator": "Acta geographica BiH 8 (2017), p.10, fig.1: contraste visual de islas, península de Pelješac y litoral de Dubrovnik. No acredita costuras medievales exactas."
+    }
+  ],
+  "subdivisions": [
+    {
+      "id": "Slano",
+      "originalD": "m619.65 172.06-.08.2c.24.05.46.19.7.13a4 4 0 0 0 .66.27l.19.25q.39.12.76.27.12.18.31.28c.04-.16-.16-.15-.14-.3l.28.06a.4.4 0 0 1 .1-.2l.23.04a.7.7 0 0 0-.44-.44l-.05-.17-.18-.05q-.15-.04-.3-.05l-.02.21q.19-.03.17.15l-.24-.07c.09.16.3.2.38.37-.28-.02-.44-.4-.74-.32-.1.04-.12-.12-.17-.17-.3-.15-.6-.34-.95-.37-.1-.04-.22.05-.32.02l-.15-.1m-1.22.2h-.04l.04.1c.07.09-.07.16-.03.26s.13.06.2.03q.23.09.46.1c.16.05.26-.14.42-.12.15-.11.6.26.66-.06-.15-.12-.34-.16-.52-.22-.22-.03-.43.16-.66.08-.2 0-.34-.17-.53-.17m2.42.91h-.03c-.08.06-.25 0-.24.12.5.1.96.33 1.47.37l-.02-.06q-.5-.2-1-.32c-.1.03-.12-.11-.2-.1",
+      "parts": [
+        {
+          "id": "Slano",
+          "label": "Primorje de Slano",
+          "runs": [
+            {
+              "loop": 0,
+              "start": 7,
+              "stop": 18
+            }
+          ]
+        },
+        {
+          "id": "Slano_Peljesac",
+          "label": "Pelješac y Ston",
+          "runs": [
+            {
+              "loop": 0,
+              "start": 18,
+              "stop": 24
+            },
+            {
+              "loop": 0,
+              "start": 0,
+              "stop": 7
+            }
+          ]
+        },
+        {
+          "id": "Slano_Korcula",
+          "label": "Korčula",
+          "runs": [
+            {
+              "loop": 1,
+              "start": 0,
+              "stop": 11
+            }
+          ]
+        },
+        {
+          "id": "Slano_Mljet",
+          "label": "Mljet",
+          "runs": [
+            {
+              "loop": 2,
+              "start": 0,
+              "stop": 7
+            }
+          ]
+        }
+      ],
+      "seam": "Ston: conexión interna entre los vértices originales (622.05,173.16) y (621.98,173.01); aproximación del istmo. Islas separadas por subtrazados existentes.",
+      "sha256": "ac66ab7da33a6c8612ddf7065a8554fb1471a5013e10298a7174a8b0bc503776"
+    },
+    {
+      "id": "Dubrovnik",
+      "originalD": "M622.43 173a.4.4 0 0 0-.1.22c.1.05.24 0 .24.15.11.14.3.3.49.32l.03.2c.19.06.36.15.56.16l-.04.19c.28.31.66.5 1 .75v-.22c-.1-.15.07-.25.13-.38l-.07-.2c-.25-.11-.51.04-.77-.1-.23-.1-.39-.3-.57-.45l-.04-.11c-.06-.22-.3-.15-.49-.17l-.14-.3-.23-.04m-.07.36-.09.13q.19.06.37.16l-.01-.13c-.12-.01-.18-.13-.28-.15m.36.3c-.1.14.2.2.2.07a.4.4 0 0 0-.2-.08",
+      "parts": [
+        {
+          "id": "Dubrovnik",
+          "label": "Astarea de Dubrovnik y Elafiti",
+          "runs": [
+            {
+              "loop": 0,
+              "start": 11,
+              "stop": 17
+            },
+            {
+              "loop": 0,
+              "start": 0,
+              "stop": 5
+            }
+          ],
+          "extraLoops": [
+            1,
+            2
+          ]
+        },
+        {
+          "id": "Dubrovnik_Konavle",
+          "label": "Konavle",
+          "runs": [
+            {
+              "loop": 0,
+              "start": 5,
+              "stop": 11
+            }
+          ]
+        }
+      ],
+      "seam": "Corte aproximado de Cavtat/Župa a la divisoria interior: (623.65,174.05)–(623.9,174.09). Los dos subtrazados insulares permanecen en Astarea.",
+      "sha256": "811f2a41ea30c4f70dfc11359d8908fd21e111feb6e31c47d9c9532916facb4d"
+    }
+  ],
+  "limitations": [
+    "Las costuras internas son aproximaciones explícitas sobre una cartografía simplificada. No representan catastros medievales.",
+    "No se alteran costas, islas ni superficies exteriores; se conservan originales y comprobación reproducible."
+  ]
+}

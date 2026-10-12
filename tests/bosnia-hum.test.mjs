@@ -8,7 +8,7 @@ import {auditarTerritorios} from '../src/data/auditTerritorios.js';
 import {atlasPoliticalMosaicAt} from '../prototypes/euv-locations/atlas-mosaic.js';
 import {auditRegionalContinuity} from '../scripts/audits/audit-regional-continuity.mjs';
 import {mergeMapExpansions} from '../scripts/cartography/merge-map-expansions.mjs';
-import {applyBosniaHum} from '../scripts/cartography/apply-bosnia-hum.mjs';
+import {applyRegionalReview} from '../scripts/cartography/apply-regional-review.mjs';
 
 const read = name => JSON.parse(fs.readFileSync(new URL(name, import.meta.url), 'utf8'));
 const data = read('../prototypes/euv-locations/corridor-locations.json');
@@ -137,8 +137,8 @@ test('regional precedence is reproducible and rejects missing evidence or a fore
   assert.deepEqual(mergeMapExpansions(structuredClone(data)), data);
   const invalid = structuredClone(review);
   invalid.assignments[0].ids.push('Foca');
-  assert.throws(() => applyBosniaHum(structuredClone(data), invalid), /Invalid regional phase/);
+  assert.throws(() => applyRegionalReview(structuredClone(data), invalid, 'bosniaHumReview', 'Bosnia y Hum · revisión regional'), /Invalid regional phase/);
   const absent = structuredClone(review);
   delete absent.sources.mostar;
-  assert.throws(() => applyBosniaHum(structuredClone(data), absent), /Missing regional evidence/);
+  assert.throws(() => applyRegionalReview(structuredClone(data), absent, 'bosniaHumReview', 'Bosnia y Hum · revisión regional'), /Missing regional evidence/);
 });

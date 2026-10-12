@@ -37,7 +37,7 @@ test('coastal polygons and mountain cells follow their dated authorities, not mo
  assert(!layer('Croacia habsbúrgica',1560).includes('Dinaric_Alps9'));
  assert(layer('Lika otomana',1560).includes('Dinaric_Alps9'));
  assert(layer('Croacia habsbúrgica',1690).includes('Dinaric_Alps9'));
- assert(layer('República de Ragusa',1300).includes('Lastovo_Island_Wasteland'));
+ assert(pilotLocationsFor(data,'República de Ragusa',1300).includes('Lastovo_Island_Wasteland'));
  for(const [year,venetian] of [[1277,false],[1278,true],[1360,false],[1420,true]])assert.equal(layer('Dalmacia veneciana',year).includes('Brac'),venetian,year);
  assert(!layer('Dalmacia veneciana',1326).includes('Split'));
  assert(layer('Dalmacia veneciana',1327).includes('Split'));
@@ -89,7 +89,7 @@ test('the annual audit honours exclusions and supersession, and includes physica
 });
 test('all actual visible SVG areas get coverage or an explicitly unverified research target',()=>{
  const report=auditLocationCoverage(data,inventory);
- assert.equal(report.summary.paths,7672);assert.equal(report.summary.visible,7641);
+ assert.equal(report.summary.paths,7676);assert.equal(report.summary.visible,7645); // Four preserved coastal subdivisions in V5.10.
  assert.equal(report.summary.untriaged,0);
  assert(report.cells.filter(c=>c.visible&&!c.colored).every(c=>c.research.certainty==='unverified'&&c.research.targets.length));
  assert.equal(report.queues.reduce((n,q)=>n+q.cells,0),report.summary.neverColored);

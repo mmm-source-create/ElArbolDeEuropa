@@ -7,7 +7,7 @@ import path from 'node:path';
 import {applyRegionalExtents} from './apply-regional-extents.mjs';
 import {applyContinuityReview} from './apply-continuity-review.mjs';
 import {applyMedievalBalkans} from './apply-medieval-balkans.mjs';
-import {applyBosniaHum} from './apply-bosnia-hum.mjs';
+import {applyRegionalReview} from './apply-regional-review.mjs';
 const read = name => JSON.parse(fs.readFileSync(mapDataFile(name), 'utf8'));
 const correctionKey = item => [item.territory,item.id,item.action,item.from,item.through].join('|');
 
@@ -67,7 +67,8 @@ export function mergeMapExpansions(data) {
   data.referenceGapReview = data.continuityReview;
   data.continuityReview = continuity;
   applyMedievalBalkans(data, read('medieval-balkans-review.json'));
-  applyBosniaHum(data, read('bosnia-hum-review.json'));
+  applyRegionalReview(data, read('bosnia-hum-review.json'), 'bosniaHumReview', 'Bosnia y Hum · revisión regional');
+  applyRegionalReview(data, read('posavina-ragusa-review.json'), 'posavinaRagusaReview', 'Kozara–Glaž y costa ragusea · revisión regional');
   layers = [...data.territories, ...data.additionalTerritories];
   const svg = fs.readFileSync(mapDataFile('euv-locations-crop.svg'),'utf8');
   const ids = new Set([...svg.matchAll(/<path\b[^>]*\bid="([^"]+)"/g)].map(match => match[1]));

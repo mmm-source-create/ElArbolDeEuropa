@@ -34,13 +34,23 @@ usa sus comandos npm o las rutas actuales de esta guía.
 ## Continuidad de una zona revisada
 
 `npm run audit:regional-continuity` comprueba cada ID del ámbito de
-`prototypes/euv-locations/bosnia-hum-review.json` en cada año de 1200 a 1800.
+`prototypes/euv-locations/bosnia-hum-review.json` y `posavina-ragusa-review.json` en cada año de 1200 a 1800.
 Usa el mosaico real, verifica las fuentes de la celda y exige una explicación
 para cada atribución múltiple. Forma parte de `audit:build` y escribe su
-diagnóstico en `.cache/audits/audit-regional-continuity-report.json`.
+diagnóstico en `.cache/audits/audit-regional-continuity-report.json` y
+`audit-posavina-ragusa-report.json`.
 
 `audit:uncolored` detecta celdas sin color en ningún año; por sí solo no detecta
 una región que desaparece durante algunos años. Las dos comprobaciones se
 complementan. La fuente regional se ensambla mediante
 `scripts/cartography/merge-map-expansions.mjs`; los informes históricos
 aceptados se guardan aparte en `docs/reports/reviewed/`.
+
+
+`apply-regional-review.mjs` ensambla ambas revisiones, sin duplicar el
+validador. La última revisión activa prevalece en cada celda, también donde
+los ámbitos se cruzan. `apply-coastal-subdivisions.py` reconstruye las cuatro
+nuevas celdas a partir del archivo de originales `coastal-subdivisions.json`;
+`--check` compara la geometría aceptada y exige contorno exterior equivalente
+y ausencia de superficies duplicadas. La comprobación Python de CI lo ejecuta
+en la copia temporal antes de regenerar los inventarios.
