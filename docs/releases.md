@@ -16,12 +16,14 @@ indica que ese código sea el que está desplegado actualmente en producción.
 | [V5.4](https://github.com/mmm-source-create/ElArbolDeEuropa/releases/tag/v5.4.0) | [#50](https://github.com/mmm-source-create/ElArbolDeEuropa/pull/50) | [`f0f46d5`](https://github.com/mmm-source-create/ElArbolDeEuropa/commit/f0f46d51489d5480309fb7dbe3541513ce867d84) |
 | [V5.5](https://github.com/mmm-source-create/ElArbolDeEuropa/releases/tag/v5.5.0) | [#51](https://github.com/mmm-source-create/ElArbolDeEuropa/pull/51) | [`320d8df`](https://github.com/mmm-source-create/ElArbolDeEuropa/commit/320d8dfb6bf0071fd65d3306b8e7e9fb3f3d431f) |
 | [V5.6](https://github.com/mmm-source-create/ElArbolDeEuropa/releases/tag/v5.6.0) | [#52](https://github.com/mmm-source-create/ElArbolDeEuropa/pull/52) | [`14b3cbf`](https://github.com/mmm-source-create/ElArbolDeEuropa/commit/14b3cbf1b387d07cc7f3d4fed0ce4530c89926c2) |
+| [V5.7](https://github.com/mmm-source-create/ElArbolDeEuropa/releases/tag/v5.7.0) | [#53](https://github.com/mmm-source-create/ElArbolDeEuropa/pull/53) | [`4fadac9`](https://github.com/mmm-source-create/ElArbolDeEuropa/commit/4fadac96c921bb363fb5319223ee69678bb2b98c) |
+| [V5.8](https://github.com/mmm-source-create/ElArbolDeEuropa/releases/tag/v5.8.0) | [#54](https://github.com/mmm-source-create/ElArbolDeEuropa/pull/54) | [`e4762a4`](https://github.com/mmm-source-create/ElArbolDeEuropa/commit/e4762a4be9b0a47d870b9723c175b22860253979) |
 
 [V5.7](V5.7.md) cierra la documentación y retira la compatibilidad ya
-innecesaria. Su Release se prepara como borrador mientras la PR está en
-revisión. Se publica después de la fusión y de la validación del commit final.
+innecesaria. [V5.8](V5.8.md) incorpora la revisión medieval balcánica. Ambas
+Releases están publicadas desde los commits comprobados de sus entregas.
 
-[V5.8](V5.8.md) incorpora la revisión medieval balcánica. Su Release se mantiene
+[V5.9](V5.9.md) revisa Bosnia y Hum por región y año. Su Release se prepara
 como borrador hasta la fusión y validación del commit final.
 
 ## Índice cronológico de documentos
@@ -79,6 +81,7 @@ permanecen explicados en [archive/manifests](archive/manifests/README.md).
 | [5.6](V5.6.md) | V5.6 · Herramientas reproducibles y archivos clasificados |
 | [5.7](V5.7.md) | V5.7 · Modelo canónico y documentación de entregas |
 | [5.8](V5.8.md) | V5.8 · Continuidad balcánica medieval |
+| [5.9](V5.9.md) | V5.9 · Bosnia, Hum y continuidad regional |
 
 ## Publicar una entrega
 

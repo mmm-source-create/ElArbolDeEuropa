@@ -257,9 +257,11 @@ test('Balkan layers fill regional areas while keeping tributary principalities d
   assert.ok(!layerIds('Balcanes meridionales otomanos', 1500).has('Dinaric_Alps2'));
   assert.ok(layerIds('Balcanes meridionales otomanos', 1500).has('Pindus_Mountains1'));
 
-  assert.ok(layerIds('Reino de Bosnia', 1462).has('Vrhbosna'));
+  assert.ok(!layerIds('Reino de Bosnia', 1462).has('Vrhbosna'));
+  assert.ok(pilotLocationsFor(data, 'Bosnia', 1434).includes('Vrhbosna'));
+  assert.ok(pilotLocationsFor(data, 'Imperio otomano', 1435).includes('Vrhbosna'));
   assert.equal(layerIds('Reino de Bosnia', 1463).size, 0);
-  assert.ok(layerIds('Bosnia y Herzegovina otomanas', 1463).has('Vrhbosna'));
+  assert.ok(pilotLocationsFor(data, 'Imperio otomano', 1463).includes('Vrhbosna'));
   assert.ok(layerIds('Despotado de Serbia', 1426).has('Belgrad'));
   assert.ok(!layerIds('Despotado de Serbia', 1427).has('Belgrad'));
   assert.ok(!layerIds('Balcanes meridionales otomanos', 1520).has('Belgrad'));

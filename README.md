@@ -2,14 +2,14 @@
 
 Atlas histórico y genealógico para explorar personas, dinastías, territorios y sus conexiones familiares.
 
-- [Web](https://www.treeofeurope.eu/es/) · Versión del repositorio: **V5.8**
-- [Cambios de V5.8](docs/V5.8.md) · [Documentación e historial](docs/README.md) · [Próximos pasos cartográficos](docs/V4.8_PROPUESTAS.md) · [Seguridad](SECURITY.md)
+- [Web](https://www.treeofeurope.eu/es/) · Versión del repositorio: **V5.9**
+- [Cambios de V5.9](docs/V5.9.md) · [Documentación e historial](docs/README.md) · [Próximos pasos cartográficos](docs/V4.8_PROPUESTAS.md) · [Seguridad](SECURITY.md)
 
-V5.8 amplía la continuidad medieval de Bosnia, Valaquia y Moldavia con
-series anteriores a 1400, siete gobernantes documentados y superficies
-interiores revisadas sobre el SVG real. Distingue los cargos y su control
-disputado, mantiene los colores por entidad y hace explícitas las regiones
-que todavía requieren investigación.
+V5.9 revisa 31 superficies de Bosnia, Hum, Usora/Soli y Polimlje en cada año
+de 1200 a 1800, resolviendo 5.998 combinaciones región/año sin color. Añade
+seis gobernantes documentados, separa gobiernos delegados, exilio y conquistas,
+y comprueba las fuentes locales de cada celda. Las fronteras mixtas y las
+zonas vecinas pendientes permanecen explicadas.
 
 El mapa utiliza EU V Locations con superficies fechadas y fuentes consultables
 en el inspector. Distingue soberanía, gobierno delegado, titularidad y control

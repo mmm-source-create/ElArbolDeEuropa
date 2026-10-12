@@ -1,4 +1,5 @@
 import {medievalBalkanJurisdictions} from './medievalBalkanRoutes.js';
+import {bosniaHumJurisdictions} from './bosniaHumRoutes.js';
 // These aliases connect the Atlas government records to reviewed new-map
 // jurisdictions, without treating every title held by one ruler as one state.
 import {imperialFrameIds} from './imperialFrame.js';
@@ -22,7 +23,10 @@ export function reviewedMapLayers(data) {
       if (!corrections.has(correction.territory)) corrections.set(correction.territory, []);
       corrections.get(correction.territory).push(correction);
     }
-    layerIndexes.set(data, {entries, byName: new Map(entries.map(entry => [entry.name, entry])), corrections});
+    const regional = data.bosniaHumReview;
+    layerIndexes.set(data, {entries, byName: new Map(entries.map(entry => [entry.name, entry])), corrections,
+      regional: regional ? {from: regional.scope.from, through: regional.scope.through,
+        ids: new Set(regional.scope.ids), names: new Set(regional.layerNames)} : null});
   }
   return layerIndexes.get(data).entries;
 }
@@ -37,7 +41,7 @@ export function pilotJurisdictionsFor(territory, year, personId = null) {
   if (scope?.jurisdictions) return scope.jurisdictions;
   const chronological=chronologyJurisdictionsFor(territory,year,personId);
   const frontier=frontierJurisdictions(continuityJurisdictions(regionalExtentJurisdictions(appendChronologyJurisdictions(chronological ?? basePilotJurisdictionsFor(territory,year,personId),territory,personId),territory,year,personId),territory,year,personId),territory,year,personId);
-  return medievalBalkanJurisdictions(referenceGapJurisdictions(successionJurisdictions(frontier,territory,year,personId),territory),territory);
+  return bosniaHumJurisdictions(medievalBalkanJurisdictions(referenceGapJurisdictions(successionJurisdictions(frontier,territory,year,personId),territory),territory),territory,year,personId);
 }
 
 function basePilotJurisdictionsFor(territory, year, personId) {
@@ -76,7 +80,7 @@ function basePilotJurisdictionsFor(territory, year, personId) {
   }
   if (territory === 'Transilvania') return ['Transilvania'];
   if (territory === 'Serbia' && year >= 1402 && year <= 1458) return ['Despotado de Serbia'];
-  if (territory === 'Bosnia') return year <= 1462 ? ['Reino de Bosnia'] : ['Bosnia y Herzegovina otomanas'];
+  if (territory === 'Bosnia') return ['Reino de Bosnia'];
   if (territory === 'Valaquia') return ['Principado de Valaquia',
     ...(personId === 'MIRCEA1WAL' && year >= 1402 && year <= 1418 ? ['Núcleos de Dobruja bajo Mircea'] : [])];
   if (territory === 'Moldavia') return ['Principado de Moldavia'];
@@ -195,6 +199,9 @@ function applyLayerCorrections(data, entry, ids, year) {
   // order the canonical corrections and source groups were merged in.
   active.filter(c => c.action === 'add').forEach(c => corrected.add(c.id));
   active.filter(c => c.action === 'remove').forEach(c => corrected.delete(c.id));
+  const regional = layerIndexes.get(data)?.regional;
+  if (regional && regional.from <= year && year <= regional.through && !regional.names.has(entry.name))
+    for (const id of regional.ids) corrected.delete(id);
   return [...corrected];
 }
 
@@ -247,7 +254,10 @@ export function mapLocationsForGovernment(data, government, year, personId = nul
     return applyMapBorderCorrections(scoped.filter(id => !scope?.excludedIds?.includes(id)), government.territorio, year);
   }
   const crosswalk = data.locationCrosswalk?.newIdsByOldId || {};
-  return applyMapBorderCorrections([...new Set(legacyIds.flatMap(id => crosswalk[id]?.ids || []))], government.territorio, year);
+  const regional = layerIndexes.get(data)?.regional;
+  const ids = [...new Set(legacyIds.flatMap(id => crosswalk[id]?.ids || []))]
+    .filter(id => !regional || year < regional.from || year > regional.through || !regional.ids.has(id));
+  return applyMapBorderCorrections(ids, government.territorio, year);
 }
 
 export function pilotDisputedHungarianClaimsFor(data, personId, year) {

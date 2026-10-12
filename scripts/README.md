@@ -30,3 +30,17 @@ fuentes, resultados aceptados y diagnósticos desechables.
 Los informes de versiones anteriores y los manifiestos archivados conservan
 los nombres que existían cuando se entregaron. Para ejecutar una herramienta
 usa sus comandos npm o las rutas actuales de esta guía.
+
+## Continuidad de una zona revisada
+
+`npm run audit:regional-continuity` comprueba cada ID del ámbito de
+`prototypes/euv-locations/bosnia-hum-review.json` en cada año de 1200 a 1800.
+Usa el mosaico real, verifica las fuentes de la celda y exige una explicación
+para cada atribución múltiple. Forma parte de `audit:build` y escribe su
+diagnóstico en `.cache/audits/audit-regional-continuity-report.json`.
+
+`audit:uncolored` detecta celdas sin color en ningún año; por sí solo no detecta
+una región que desaparece durante algunos años. Las dos comprobaciones se
+complementan. La fuente regional se ensambla mediante
+`scripts/cartography/merge-map-expansions.mjs`; los informes históricos
+aceptados se guardan aparte en `docs/reports/reviewed/`.

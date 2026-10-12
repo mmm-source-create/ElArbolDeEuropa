@@ -36,7 +36,7 @@ export function auditarTerritorios(personas, catalogo=TERRITORIOS) {
      && ['Gobernador','Gobernadora'].includes(g.titulo)&&g.soberano&&g.soberano!==p.id;
    const provincialBan=g.territorio==='Eslavonia'&&g.clase==='banato'&&g.titulo==='Ban';
    const documentedMoravianPrince=g.territorio==='Moravia'&&p.id==='OTAK1'&&g.desde===1223&&g.hasta===1223&&g.titulo==='Príncipe'&&g.clase==='principado';
-   if(t&& !delegatedOffice && !provincialBan && !documentedMoravianPrince && !(g.clase==='gobierno'&&g.condicion==='regencia') && !['regencia','estatuderato'].includes(g.clase)&& !territorial.map(normalize).concat(permitidas[g.territorio]||[]).includes(g.clase))add('ERROR','TERRITORY_CLASS_MISMATCH',key,`${g.territorio}: ${g.clase} no concuerda con su rango documentado`);
+   if(t&& !provincialSovereign && !delegatedOffice && !provincialBan && !documentedMoravianPrince && !(g.clase==='gobierno'&&g.condicion==='regencia') && !['regencia','estatuderato'].includes(g.clase)&& !territorial.map(normalize).concat(permitidas[g.territorio]||[]).includes(g.clase))add('ERROR','TERRITORY_CLASS_MISMATCH',key,`${g.territorio}: ${g.clase} no concuerda con su rango documentado`);
   }
  }
  for(let i=0;i<gobiernos.length;i++)for(let j=i+1;j<gobiernos.length;j++){

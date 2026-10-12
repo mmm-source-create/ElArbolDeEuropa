@@ -301,18 +301,19 @@ export const ADRIATICO_SOURCES = [
     ]
   },
   {
-    "titulo": "Hrvatska enciklopedija · Esteban Vukčić Kosača",
-    "url": "https://www.enciklopedija.hr/clanak/kosaca-stjepan-vukcic",
-    "grupo": "Artículos de repertorios",
-    "personas": [
-      "STJEPANVUKKOS",
-      "KATARINAKOSACABOS"
-    ],
-    "territorios": [
-      "Bosnia",
-      "Herzegovina"
-    ]
-  },
+  "titulo": "Hrvatska enciklopedija · Esteban Vukčić Kosača",
+  "url": "https://www.enciklopedija.hr/clanak/kosaca-stjepan-vukcic",
+  "grupo": "Artículos de repertorios",
+  "personas": [
+    "STJEPANVUKKOS",
+    "KATARINAKOSACABOS"
+  ],
+  "territorios": [
+    "Bosnia",
+    "Herzegovina",
+    "Hum"
+  ]
+},
   {
     "titulo": "Hrvatska enciklopedija · Kosača",
     "url": "https://www.enciklopedija.hr/clanak/kosace",

@@ -1,4 +1,8 @@
 export const TERRITORIOS = Object.freeze({
+  "Hum": {"clase":"señorío","naturaleza":"entidad","componentes":[],"nota":"Hum/Zahumlje: principado medieval y señorío con poderes locales y superioridades distintas. El cambio de señor no crea un territorio nuevo; los mandatos señoriales y las superficies se fechan por separado."},
+  "Usora y Soli": {"clase":"banato","naturaleza":"entidad","componentes":[],"nota":"Banato fronterizo bajo superioridad húngara desde 1253, con cesión a Dragutin y retorno a la Corona. No se confunde con toda Bosnia ni con administración real directa de cada punto."},
+  "Srebrenik": {"clase":"banato","naturaleza":"entidad","componentes":[],"desde":1463,"hasta":1512,"nota":"Banato defensivo húngaro de Usora/Soli. Distinto de la ciudad minera de Srebrenica; su conquista de 1512 no fecha las conquistas de todas las plazas bosnias."},
+  "Travunia": {"clase":"señorío","naturaleza":"entidad","componentes":[],"nota":"Ámbito de Trebinje: superioridad regional de los Balšić y señoríos de los Pavlović antes de los Kosača. Los cortes del mapa no prueban una administración uniforme ni una sucesión personal exhaustiva."},
   "Sajonia-Weimar": {"clase": "ducado", "naturaleza": "entidad", "componentes": [], "nota": "Jurisdicción ernestina, con particiones y extinciones documentadas; no un nuevo nombre para todo el territorio de Turingia."},
   "Sajonia-Coburgo-Eisenach": {"clase": "ducado", "naturaleza": "entidad", "componentes": [], "nota": "Jurisdicción ernestina, con particiones y extinciones documentadas; no un nuevo nombre para todo el territorio de Turingia."},
   "Sajonia-Coburgo": {"clase": "ducado", "naturaleza": "entidad", "componentes": [], "nota": "Jurisdicción ernestina, con particiones y extinciones documentadas; no un nuevo nombre para todo el territorio de Turingia."},
@@ -1066,6 +1070,7 @@ export const TERRITORIOS = Object.freeze({
     "componentes": []
   },
   "Bosnia": {
+    "titulosDeGobierno": ["Señor"],
     "clase": "reino",
     "naturaleza": "entidad",
     "componentes": [],

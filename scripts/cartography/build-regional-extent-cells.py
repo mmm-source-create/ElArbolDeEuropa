@@ -28,6 +28,8 @@ used.update(cell for layer in reference_gaps['territories']
 medieval = json.loads((HERE / 'medieval-balkans-review.json').read_text())
 used.update(cell for layer in medieval['temporalExtensions'] + medieval['territories']
             for version in layer['versions'] for cell in version['ids'])
+bosnia_hum = json.loads((HERE / 'bosnia-hum-review.json').read_text())
+used.update(bosnia_hum['scope']['ids'])
 # Older dated corrections can add a cell absent from the replacement anchor.
 data = json.loads((HERE / 'corridor-locations.json').read_text())
 used.update(item['id'] for item in data['overrides'])

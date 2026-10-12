@@ -15,20 +15,23 @@ const data = read('../prototypes/euv-locations/corridor-locations.json');
 const review = read('../prototypes/euv-locations/medieval-balkans-review.json');
 const people = new Map(PERSONAS.map(person => [person.id, person]));
 const layers = new Map(reviewedMapLayers(data).map(layer => [layer.name, layer]));
-const cells = (name, year) => new Set(reviewedLayerLocations(data, layers.get(name), year));
+const cells = (name, year) => name === 'Reino de Bosnia'
+  ? new Set(atlasPoliticalMosaicAt(data, year).layers.find(layer => layer.entityId === name)?.ids || [])
+  : new Set(reviewedLayerLocations(data, layers.get(name), year));
 const authority = (id, year, territory) => mapAuthoritiesForPerson(people.get(id), year, data)
   .find(entry => entry.territory === territory);
 
 test('every recorded medieval Balkan mandate has personal geometry matching its dated laboratory layer', () => {
   let checked = 0;
   for (const person of PERSONAS) for (const government of person.gobiernos || []) {
-    if (!['Bosnia', 'Valaquia', 'Moldavia'].includes(government.territorio) || government.desde >= 1400) continue;
+    if (!['Bosnia', 'Valaquia', 'Moldavia'].includes(government.territorio) || government.desde >= 1400 || ['titular', 'pretensión'].includes(government.condicion)) continue;
     const claim = personClaims(person).find(entry => entry.value === government);
     for (let year = Math.max(1200, government.desde); year <= Math.min(1399, government.hasta); year++) {
       const entry = mapAuthoritiesForPerson(person, year, data).find(entry => entry.government === government);
       assert(entry?.paint && entry.ids.length, `${person.id}, ${year}`);
       const lab = new Set(reviewedMapLayers(data)
-        .filter(layer => territorialIdentity(layer.name) === territorialIdentity(government.territorio))
+        .filter(layer => territorialIdentity(layer.name) === territorialIdentity(government.territorio)
+          || government.territorio === 'Bosnia' && territorialIdentity(layer.name) === 'Hum')
         .flatMap(layer => reviewedLayerLocations(data, layer, year)));
       assert(entry.ids.every(id => lab.has(id)), `${person.id}, ${year}`);
       assert(entry.mapSources.length, `${person.id}, ${year}: map evidence`);
@@ -42,17 +45,19 @@ test('every recorded medieval Balkan mandate has personal geometry matching its 
 
 test('Bosnian expansion does not backdate Usora, Soli, Livno or the Drina acquisitions', () => {
   assert(cells('Reino de Bosnia', 1200).has('Vrhbosna'));
-  for (const id of ['Doboj', 'Soli', 'Srebrenik', 'Teocak', 'Livno', 'Glamoc']) {
+  for (const id of ['Doboj', 'Soli', 'Srebrenik', 'Teocak', 'Glamoc']) {
     assert(!cells('Reino de Bosnia', 1254).has(id), id);
     assert(!cells('Reino de Bosnia', 1323).has(id), id);
     assert(cells('Reino de Bosnia', 1324).has(id), id);
   }
+  assert(!cells('Reino de Bosnia', 1325).has('Livno'));
+  assert(cells('Reino de Bosnia', 1326).has('Livno'));
   for (const id of ['Ustikolina', 'Visegrad']) {
     assert(!cells('Reino de Bosnia', 1372).has(id), id);
     assert(cells('Reino de Bosnia', 1373).has(id), id);
   }
   for (const year of [1200, 1254, 1324, 1373, 1399])
-    for (const id of ['Foca', 'Ravno', 'Dubrovnik', 'Kotor', 'Pljevlja'])
+    for (const id of ['Foca', 'Ravno', 'Dubrovnik', 'Kotor'])
       assert(!cells('Reino de Bosnia', year).has(id), `${id}, ${year}`);
   assert.equal(territorialLabel('Reino de Bosnia', 1376), 'Banato de Bosnia');
   assert.equal(territorialLabel('Reino de Bosnia', 1377), 'Reino de Bosnia');

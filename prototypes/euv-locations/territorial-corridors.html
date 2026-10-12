@@ -88,7 +88,7 @@
         <section id="mosaic-panel">
           <h2 id="mosaic-title">Mosaico político</h2>
           <p id="mosaic-summary"></p>
-          <p>El rayado marca más de una atribución cartográfica en la misma location; no prueba por sí solo una frontera disputada. Las capas aproximadas proceden de la correspondencia geométrica del Atlas, no de límites feudales reconstruidos. Las zonas grises no tienen atribución disponible para ese año.</p>
+          <p>El rayado claro señala control disputado, ocupación o gobierno delegado documentados. El rayado con varios colores señala distintas atribuciones dentro de una misma superficie; puede tratarse de una celda que cruza una frontera. Consulta el inspector para distinguir los casos. Las zonas grises no tienen atribución disponible para ese año.</p>
           <label for="mosaic-filter">Buscar jurisdicción
             <input id="mosaic-filter" type="search" placeholder="Borgoña, Suecia…" autocomplete="off">
           </label>
@@ -155,7 +155,7 @@
           name.textContent=layer.displayName||layer.name;meta.className='mosaic-meta';meta.textContent=layer.corridor;item.append(name,meta);
           if(layer.approximate){const holders=document.createElement('span');holders.className='mosaic-meta';holders.textContent=`Gobiernos registrados: ${layer.holders.join('; ')}`;item.append(holders)}
           const localScopes=(layer.scopes||[]).filter(scope=>scope.ids.includes(id));
-          if(localScopes.length){for(const scope of localScopes){const note=document.createElement('span');note.className='mosaic-meta';note.textContent=`${scope.label}: ${scope.note||'Consultar las fuentes del ámbito.'}`;item.append(note)}}
+          if(localScopes.length){for(const scope of localScopes){const note=document.createElement('span');note.className='mosaic-meta';note.textContent=`${scope.label}${scope.condition?' · '+scope.condition:''}: ${scope.note||'Consultar las fuentes del ámbito.'}`;item.append(note)}}
           else if(layer.note){const note=document.createElement('span');note.className='mosaic-meta';note.textContent=layer.note;item.append(note)}
           if(layer.active?.reason){const note=document.createElement('span');note.className='mosaic-meta';note.textContent=layer.active.reason;item.append(note)}
           const sources=[...(localScopes.length?localScopes.flatMap(scope=>scope.sources):layer.sources||[]),...state.data.overrides.filter(o=>(layer.memberNames||[layer.name]).includes(o.territory)&&o.id===id&&o.from<=Number($('year').value)&&o.through>=Number($('year').value)).flatMap(o=>[{url:o.source,title:'Fuente de la corrección'},...(o.supportingSources||[]).map(mapSourceReference)])].filter(Boolean);
@@ -176,7 +176,7 @@
         const item=document.createElement('li'),swatch=document.createElement('span'),body=document.createElement('span'),name=document.createElement('strong'),meta=document.createElement('span');
         swatch.className='mosaic-swatch';swatch.style.backgroundColor=layer.mosaicColor;name.textContent=layer.displayName||layer.name;
         meta.className=`mosaic-meta${layer.ids.length?'':' mosaic-empty'}`;
-        meta.textContent=layer.ids.length?`${layer.approximate?'Aproximación':layer.precision==='documented_core'||layer.limitedCore?'Núcleos documentados':'Capa revisada'} · ${layer.ids.length} locations${layer.holders?.length?` · ${layer.holders.length} titulares registrados`:''}`:`${layer.corridor} · sin geometría en este año`;
+        meta.textContent=layer.ids.length?`${layer.approximate?'Proyección geométrica':layer.precision==='regional_approximation'?'Superficie regional aproximada':layer.precision==='documented_core'||layer.limitedCore?'Núcleos documentados':'Capa revisada'} · ${layer.ids.length} locations${layer.holders?.length?` · ${layer.holders.length} titulares registrados`:''}`:`${layer.corridor} · sin geometría en este año`;
         body.append(name,meta);const sources=[...(layer.sources||[]),layer.active?.source?{url:layer.active.source,title:'Fuente de la capa'}:null,...state.data.overrides.filter(item=>item.territory===layer.name&&item.from<=state.mosaic.year&&item.through>=state.mosaic.year).flatMap(item=>[{url:item.source,title:'Fuente de la corrección'},...(item.supportingSources||[]).map(mapSourceReference)])].filter(Boolean);
         for(const source of [...new Map(sources.filter(item=>item?.url).map(item=>[item.url,item])).values()]){const link=document.createElement('a');link.href=source.url;link.target='_blank';link.rel='noopener noreferrer';link.textContent=layer.approximate?'Fuente de la afirmación (no del polígono)':source.title||source.label||'Fuente territorial';body.append(link)}
         item.append(swatch,body);list.append(item)
@@ -190,14 +190,24 @@
       if(layers.length>2){const second=doc.createElementNS('http://www.w3.org/2000/svg','path');second.setAttribute('d','M 2 0 V 8');second.setAttribute('stroke',layers[2].mosaicColor);second.setAttribute('stroke-width','1.4');pattern.append(second)}
       defs.append(pattern);return `url(#${pattern.id})`
     }
+    function controlPattern(defs,index,color){
+      const doc=state.svg.ownerDocument,ns='http://www.w3.org/2000/svg',pattern=doc.createElementNS(ns,'pattern');
+      pattern.id=`atlas-control-${index}`;pattern.dataset.mosaicPattern='true';pattern.setAttribute('patternUnits','userSpaceOnUse');pattern.setAttribute('width','1');pattern.setAttribute('height','1');pattern.setAttribute('patternTransform','rotate(45)');
+      const background=doc.createElementNS(ns,'rect');background.setAttribute('width','1');background.setAttribute('height','1');background.setAttribute('fill',color);pattern.append(background);
+      const stripe=doc.createElementNS(ns,'path');stripe.setAttribute('d','M 0 0 V 1');stripe.setAttribute('stroke','#f4efe4');stripe.setAttribute('stroke-width','.25');pattern.append(stripe);defs.append(pattern);return `url(#${pattern.id})`;
+    }
+    function patternDefs(){
+      let defs=state.svg.querySelector('defs');if(!defs){defs=state.svg.ownerDocument.createElementNS('http://www.w3.org/2000/svg','defs');state.svg.insertBefore(defs,state.svg.firstChild)}
+      defs.querySelectorAll('[data-mosaic-pattern]').forEach(pattern=>pattern.remove());return defs;
+    }
     function renderMosaic(){
       const year=Number($('year').value);state.mosaic=atlasPoliticalMosaicAt(state.data,year,state.palette);
       $('year-output').value=String(year);
       for(const id of state.painted){const path=state.paths.get(id);if(path){path.style.fill=BASE;path.style.stroke=BASE}}
-      state.painted.clear();let defs=state.svg.querySelector('defs');if(!defs){defs=state.svg.ownerDocument.createElementNS('http://www.w3.org/2000/svg','defs');state.svg.insertBefore(defs,state.svg.firstChild)}
-      defs.querySelectorAll('[data-mosaic-pattern]').forEach(pattern=>pattern.remove());let patternIndex=0;
+      state.painted.clear();const defs=patternDefs();let patternIndex=0;
       for(const [id,layers] of state.mosaic.byLocation){const path=state.paths.get(id);if(!path)continue;
-        const fill=layers.length===1?layers[0].mosaicColor:overlapPattern(defs,patternIndex++,layers);
+        const condition=layers.some(layer=>(layer.scopes||[]).some(scope=>scope.ids.includes(id)&&['control disputado','ocupación','gobierno delegado'].includes(scope.condition)));
+        const fill=layers.length>1?overlapPattern(defs,patternIndex++,layers):condition?controlPattern(defs,patternIndex++,layers[0].mosaicColor):layers[0].mosaicColor;
         path.style.fill=fill;path.style.stroke=layers.length===1?layers[0].mosaicColor:'#4a3d34';state.painted.add(id)
       }
       const paintedLocations=[...state.mosaic.byLocation.keys()].filter(id=>state.paths.has(id)).length;
@@ -223,7 +233,8 @@
       const year=Number($('year').value),baseVersion=activeVersion(territory,year),version={...baseVersion,ids:reviewedLayerLocations(state.data,territory,year)};$('year-output').value=String(year);
       for(const id of state.painted){const path=state.paths.get(id);if(path){path.style.fill=BASE;path.style.stroke=BASE}}
       state.painted.clear();
-      for(const id of version.ids){const path=state.paths.get(id);if(!path)continue;path.style.fill=territorialColor(territory.name);path.style.stroke=territorialColor(territory.name);state.painted.add(id)}
+      const defs=patternDefs(),color=territorialColor(territory.name),fill=['control disputado','ocupación','gobierno delegado'].includes(territory.authorityCondition)?controlPattern(defs,0,color):color;
+      for(const id of version.ids){const path=state.paths.get(id);if(!path)continue;path.style.fill=fill;path.style.stroke=color;state.painted.add(id)}
       $('territory-name').textContent=territorialLabel(territory.name,year);
       const active=territory.active,isActive=reviewedLayerActive(state.data,territory,year);
       const evidence=reviewedLayerEvidence(territory,year);

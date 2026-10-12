@@ -217,6 +217,16 @@
       "path": "docs/reports/reviewed/v5.8-medieval-balkans.json",
       "kind": "reviewed-audit",
       "maintenance": "Instantánea revisada de V5.8; informes actuales en .cache/audits/."
+    },
+    {
+      "path": "prototypes/euv-locations/bosnia-hum-review.json",
+      "kind": "historical-selection",
+      "maintenance": "Reviewed regional phases and authority scopes; maintained explicitly with cited source passages."
+    },
+    {
+      "path": "docs/reports/reviewed/v5.9-bosnia-hum.json",
+      "kind": "reviewed-audit",
+      "maintenance": "Instantánea revisada de V5.9; auditorías actuales en .cache/audits/."
     }
   ]
 }

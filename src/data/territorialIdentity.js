@@ -1,5 +1,11 @@
 // A survey label, an owner and a control episode are not territorial identity.
+import {BOSNIA_HUM_IDENTITIES} from './bosniaHumRoutes.js';
 const ALIASES = Object.freeze({
+  ...BOSNIA_HUM_IDENTITIES,
+  'Núcleo de Herzegovina': 'Herzegovina',
+  'Banato de Usora y Soli': 'Usora y Soli',
+  'Banato de Srebrenik': 'Srebrenik',
+  'Señorío de Travunia': 'Travunia',
   'Carintia habsbúrgica antes de Neuberg': 'Carintia',
   'Ducado de Estiria': 'Estiria',
   'Carniola habsbúrgica antes de Neuberg': 'Carniola',
@@ -66,7 +72,10 @@ const ALIASES = Object.freeze({
   'Despotado de Dobruja': 'Dobruja',
 });
 
-export const territorialIdentity = name => ALIASES[name] || name;
+export const territorialIdentity = name => {
+  const target = ALIASES[name] || name;
+  return ALIASES[target] || target;
+};
 
 export function territorialLabel(name, year) {
   const identity = territorialIdentity(name);
@@ -95,6 +104,8 @@ export function territorialLabel(name, year) {
     Hannover: 'Electorado de Brunswick-Lüneburg (Hannover)',
     'Meißen':'Margraviato de Meißen',Turingia:'Landgraviato de Turingia',Suabia:'Ducado de Suabia',Nassau:'Condado de Nassau',
     'Reino de Bosnia': year < 1377 ? 'Banato de Bosnia' : 'Reino de Bosnia',
+    Hum: 'Señorío de Hum', Travunia: 'Señorío de Travunia',
+    'Usora y Soli': 'Banato de Usora y Soli', Srebrenik: 'Banato de Srebrenik', Herzegovina: 'Ducado de San Sava (Herzegovina)',
     Dobruja:year<1370?'Principado de Karvuna':'Despotado de Dobruja',
     'Turingia ernestina':year<1547?'Sajonia ernestina · tierras de Turingia':'Ducado de Sajonia · tierras ernestinas',
     'Nassau-Dietz':year<1654?'Condado de Nassau-Dietz':year<1743?'Principado de Nassau-Dietz':'Principado de Nassau-Orange',
