@@ -12,6 +12,17 @@ const DOGES_1400_1605 = [
 // Bibliography shared by the public site, Atlas and generated entity pages.
 // A territorial reference supplies context; only explicit person IDs assign a biography.
 export const SOURCES = [
+  {"titulo": "Hrvatska enciklopedija · Hum", "url": "https://www.enciklopedija.hr/clanak/hum-podrucje", "grupo": "Archivos e instituciones", "personas": [], "territorios": ["Hum"]},
+  {"titulo": "Hrvatska enciklopedija · Sandalj Hranić Kosača", "url": "https://www.enciklopedija.hr/clanak/kosaca-sandalj-hranic", "grupo": "Archivos e instituciones", "personas": ["SANDALJKOS"], "territorios": ["Hum"]},
+  {"titulo": "Hrvatska enciklopedija · Pavao I Bribirski", "url": "https://enciklopedija.hr/clanak/bribirski-pavao-i", "grupo": "Archivos e instituciones", "personas": ["PAVAO1SUBIC"], "territorios": ["Hum"]},
+  {"titulo": "Hrvatski biografski leksikon · Bribirski knezovi", "url": "https://hbl.lzmk.hr/Clanak/bribirski-knezovi?handler=ButtonSnimi", "grupo": "Archivos e instituciones", "personas": ["MLADEN1SUBIC", "MLADEN2SUBIC"], "territorios": ["Hum"]},
+  {"titulo": "Ante Milošević · Stupac iz Donje Zgošće (2021)", "url": "https://hrcak.srce.hr/en/file/381365", "grupo": "Archivos e instituciones", "personas": ["PRIJEZDA2BOS"], "territorios": []},
+  {"titulo": "Hrvatska enciklopedija · Drijeva", "url": "https://www.enciklopedija.hr/clanak/drijeva", "grupo": "Archivos e instituciones", "personas": ["HRVOJEHUM"], "territorios": ["Hum"]},
+  {"titulo": "Hrvatska enciklopedija · Usora", "url": "https://www.enciklopedija.hr/clanak/usora-podrucje", "grupo": "Archivos e instituciones", "personas": [], "territorios": ["Usora y Soli"]},
+  {"titulo": "Hrvatska enciklopedija · Soli", "url": "https://www.enciklopedija.hr/clanak/soli-podrucje", "grupo": "Archivos e instituciones", "personas": [], "territorios": ["Usora y Soli"]},
+  {"titulo": "Hrvatska enciklopedija · Srebrenička banovina", "url": "https://www.enciklopedija.hr/clanak/srebrenicka-banovina", "grupo": "Archivos e instituciones", "personas": [], "territorios": ["Srebrenik"]},
+  {"titulo": "Hrvatska enciklopedija · Trebinje", "url": "https://www.enciklopedija.hr/clanak/trebinje", "grupo": "Archivos e instituciones", "personas": [], "territorios": ["Travunia"]},
+
   {"titulo":"Proleksis · Kulin","url":"https://proleksis.lzmk.hr/33125/","grupo":"Archivos e instituciones","personas":["KULINBOS"],"territorios":["Bosnia"]},
   {"titulo":"Institutul de Istorie Nicolae Iorga · Ctitorii Mușatine (1976)","url":"https://biblioteca-digitala.ro/reviste/carte/iini/Adam_Ctitorii-Musatine_1976.pdf","grupo":"Archivos e instituciones","personas":["IUGAMOLD"],"territorios":["Moldavia"]},
   {"titulo":"Muzeul Național de Istorie a României · Lucia Bieltz, MOLDER-LANT (1996)","url":"https://cercetarinumismatice.ro/?articol=61997-molder-lant-o-legenda-inedita-pe-monedele-emise-de-stefan-i-1394-1399-molder-lant-a-new-legend-on-the-coins-issued-by-stephen-i-prince-of-moldavia-1389-1399","grupo":"Archivos e instituciones","personas":["STEFAN1MOLD"],"territorios":["Moldavia"]},

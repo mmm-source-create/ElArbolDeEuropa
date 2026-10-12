@@ -39,8 +39,11 @@ test('western Atlas aliases preserve the separate kingdoms and dated French anne
 test('Balkan country views follow each polity and do not absorb tributary principalities', () => {
   assert(pilotLocationsFor(data, 'Serbia', 1426).includes('Belgrad'));
   assert(!pilotLocationsFor(data, 'Serbia', 1427).includes('Belgrad'));
-  assert(pilotLocationsFor(data, 'Bosnia', 1462).includes('Vrhbosna'));
-  assert(pilotLocationsFor(data, 'Bosnia', 1463).includes('Vrhbosna'));
+  assert(pilotLocationsFor(data, 'Bosnia', 1434).includes('Vrhbosna'));
+  assert(!pilotLocationsFor(data, 'Bosnia', 1435).includes('Vrhbosna'));
+  assert(pilotLocationsFor(data, 'Bosnia', 1463).includes('Olovo'));
+  assert(!pilotLocationsFor(data, 'Bosnia', 1463).includes('Vrhbosna'));
+  assert(!pilotLocationsFor(data, 'Bosnia', 1464).length);
   assert(pilotLocationsFor(data, 'Valaquia', 1500).includes('Bucharest'));
   assert(pilotLocationsFor(data, 'Moldavia', 1500).includes('Suceava'));
   assert(!pilotLocationsFor(data, 'Imperio otomano', 1500).includes('Bucharest'));

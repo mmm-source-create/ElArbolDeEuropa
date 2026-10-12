@@ -56921,6 +56921,30 @@
           "borderline": []
         }
       ],
+      "sources": [
+        {
+          "title": "Princeton Medieval Black Sea Project · Fortress of Severin",
+          "url": "https://medievalblackseaproject.princeton.edu/severin-fortress-of-severin-elena-ene-draghici-vasilescu/",
+          "locator": "Basarab I, Posada (1330), Nicolae Alexandru y Vlaicu; Severin en 1357–1364 y 1364–1376, separado de la geometría general."
+        },
+        {
+          "title": "István Vásáry · Cumans and Tatars (Cambridge, 2005)",
+          "url": "https://www.cambridge.org/core/books/abs/cumans-and-tatars/emergence-of-two-romanian-principalities-in-cumania-1330-1364/519C32D5762BE191FE71AFFE7594FC04",
+          "locator": "Capítulo 8, resumen: Oltenia y Muntenia, límites del Danubio, los Cárpatos y el Olt; proceso de formación de ambos principados."
+        },
+        {
+          "title": "Atatürk Research Center · Türkiye Cumhuriyeti Tarihi I",
+          "url": "https://atam.gov.tr/wp-content/uploads/2023/10/TURKIYE-CUMHURIYETI-TARIHI-1a.pdf",
+          "locator": "Harita 1 y 2 (pp. PDF 1489–1490): expansión 1299–1683, territorios directos, tributarios y pérdidas. Las incursiones no se consideran anexiones."
+        },
+        {
+          "title": "TDV İslâm Ansiklopedisi · Pasarofça Antlaşması",
+          "url": "https://islamansiklopedisi.org.tr/pasarofca-antlasmasi",
+          "locator": "Tratado de 21 julio 1718: Banato, Belgrado/norte de Serbia y Oltenia; Morea otomana."
+        }
+      ],
+      "precision": "documented_core",
+      "limitedCore": true,
       "temporalExtensions": [
         {
           "name": "Principado de Valaquia",
@@ -57137,31 +57161,7 @@
           ],
           "note": "Ámbito regional aproximado entre los Cárpatos y el Danubio. Las celdas representan superficies, no la fecha de fundación de sus ciudades. Severin, Făgăraș, los puertos danubianos y Râmnicu Sărat no se añaden por extensión automática. Dobruja conserva su serie independiente y sus interrupciones."
         }
-      ],
-      "sources": [
-        {
-          "title": "Princeton Medieval Black Sea Project · Fortress of Severin",
-          "url": "https://medievalblackseaproject.princeton.edu/severin-fortress-of-severin-elena-ene-draghici-vasilescu/",
-          "locator": "Basarab I, Posada (1330), Nicolae Alexandru y Vlaicu; Severin en 1357–1364 y 1364–1376, separado de la geometría general."
-        },
-        {
-          "title": "István Vásáry · Cumans and Tatars (Cambridge, 2005)",
-          "url": "https://www.cambridge.org/core/books/abs/cumans-and-tatars/emergence-of-two-romanian-principalities-in-cumania-1330-1364/519C32D5762BE191FE71AFFE7594FC04",
-          "locator": "Capítulo 8, resumen: Oltenia y Muntenia, límites del Danubio, los Cárpatos y el Olt; proceso de formación de ambos principados."
-        },
-        {
-          "title": "Atatürk Research Center · Türkiye Cumhuriyeti Tarihi I",
-          "url": "https://atam.gov.tr/wp-content/uploads/2023/10/TURKIYE-CUMHURIYETI-TARIHI-1a.pdf",
-          "locator": "Harita 1 y 2 (pp. PDF 1489–1490): expansión 1299–1683, territorios directos, tributarios y pérdidas. Las incursiones no se consideran anexiones."
-        },
-        {
-          "title": "TDV İslâm Ansiklopedisi · Pasarofça Antlaşması",
-          "url": "https://islamansiklopedisi.org.tr/pasarofca-antlasmasi",
-          "locator": "Tratado de 21 julio 1718: Banato, Belgrado/norte de Serbia y Oltenia; Morea otomana."
-        }
-      ],
-      "precision": "documented_core",
-      "limitedCore": true
+      ]
     },
     {
       "corridor": "Hungría y Balcanes",
@@ -57267,6 +57267,30 @@
           "borderline": []
         }
       ],
+      "sources": [
+        {
+          "title": "Academia de Ciencias de Moldavia · Cronologia istorică a Moldovei",
+          "url": "https://moldova650.asm.md/node/25",
+          "locator": "Bogdan: cronologías alternativas 1359–1365 / 1363–1367; unificación territorial bajo Petru I hacia el Dniéster y el mar en 1386–1387; título de Roman I de 30 de marzo de 1392."
+        },
+        {
+          "title": "Academia de Ciencias de Moldavia · Petru I",
+          "url": "https://moldova650.asm.md/node/33",
+          "locator": "Gobierno de c.1375–1391 y unificación de las tierras moldavas. El homenaje polaco no convierte el principado en una provincia de Polonia."
+        },
+        {
+          "title": "Atatürk Research Center · Türkiye Cumhuriyeti Tarihi I",
+          "url": "https://atam.gov.tr/wp-content/uploads/2023/10/TURKIYE-CUMHURIYETI-TARIHI-1a.pdf",
+          "locator": "Harita 1 y 2 (pp. PDF 1489–1490): expansión 1299–1683, territorios directos, tributarios y pérdidas. Las incursiones no se consideran anexiones."
+        },
+        {
+          "title": "German Historical Institute · Growth of the Habsburg Empire, 1282–1918",
+          "url": "https://germanhistorydocs.org/en/the-holy-roman-empire-1648-1815/the-growth-of-the-habsburg-empire",
+          "locator": "Mapa de adquisiciones: Austria y Estiria 1282, Carintia 1335, Tirol 1363, Bohemia y Silesia 1526, Hungría 1699 y Banato 1718. El cargo imperial no equivale al dominio de todos sus estados."
+        }
+      ],
+      "precision": "documented_core",
+      "limitedCore": true,
       "temporalExtensions": [
         {
           "name": "Principado de Moldavia",
@@ -57450,31 +57474,7 @@
           ],
           "note": "La expansión se representa con núcleos fechados y no con la proyección retrospectiva de 1400. Los puertos Chilia/Cetatea Albă, Hotin y la frontera Focșani–Tecuci se mantienen fuera de esta ampliación medieval por requerir revisión propia. Las referencias al mar no prueban por sí solas posesión de cada fortaleza. Crasna es la celda de Sălaj al oeste de Transilvania, no una localidad moldava; queda excluida en todas las fases."
         }
-      ],
-      "sources": [
-        {
-          "title": "Academia de Ciencias de Moldavia · Cronologia istorică a Moldovei",
-          "url": "https://moldova650.asm.md/node/25",
-          "locator": "Bogdan: cronologías alternativas 1359–1365 / 1363–1367; unificación territorial bajo Petru I hacia el Dniéster y el mar en 1386–1387; título de Roman I de 30 de marzo de 1392."
-        },
-        {
-          "title": "Academia de Ciencias de Moldavia · Petru I",
-          "url": "https://moldova650.asm.md/node/33",
-          "locator": "Gobierno de c.1375–1391 y unificación de las tierras moldavas. El homenaje polaco no convierte el principado en una provincia de Polonia."
-        },
-        {
-          "title": "Atatürk Research Center · Türkiye Cumhuriyeti Tarihi I",
-          "url": "https://atam.gov.tr/wp-content/uploads/2023/10/TURKIYE-CUMHURIYETI-TARIHI-1a.pdf",
-          "locator": "Harita 1 y 2 (pp. PDF 1489–1490): expansión 1299–1683, territorios directos, tributarios y pérdidas. Las incursiones no se consideran anexiones."
-        },
-        {
-          "title": "German Historical Institute · Growth of the Habsburg Empire, 1282–1918",
-          "url": "https://germanhistorydocs.org/en/the-holy-roman-empire-1648-1815/the-growth-of-the-habsburg-empire",
-          "locator": "Mapa de adquisiciones: Austria y Estiria 1282, Carintia 1335, Tirol 1363, Bohemia y Silesia 1526, Hungría 1699 y Banato 1718. El cargo imperial no equivale al dominio de todos sus estados."
-        }
-      ],
-      "precision": "documented_core",
-      "limitedCore": true
+      ]
     },
     {
       "corridor": "Borgoña e Imperio",
@@ -69772,6 +69772,3756 @@
       "precision": "regional_approximation",
       "limitedCore": true,
       "color": "#86715d"
+    },
+    {
+      "name": "Bosnia · valle central",
+      "corridor": "Bosnia y Hum · revisión regional",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1200,
+        "through": 1462
+      },
+      "versions": [
+        {
+          "from": 1200,
+          "ids": [
+            "Borac",
+            "Olovo",
+            "Zenica",
+            "Dinaric_Alps3"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Valle y relieve de Bosnia central. Superficies regionales aproximadas, no límites de la propiedad personal del ban. La fragmentación señorial se documenta por separado."
+        }
+      ],
+      "note": "Valle y relieve de Bosnia central. Superficies regionales aproximadas, no límites de la propiedad personal del ban. La fragmentación señorial se documenta por separado.",
+      "sources": [
+        {
+          "title": "Hrvatska enciklopedija · Bosna i Hercegovina",
+          "url": "https://www.enciklopedija.hr/clanak/bosna-i-hercegovina",
+          "locator": "Historia medieval: Kulin, límites entre Drina y Grmeč; división de 1253; Usora/Soli en 1324; Vrhbosna/Hodidjed bajo los otomanos en 1435; conquista de 1463. La síntesis regional y la entrada Usora difieren sobre la incorporación c.1204."
+        },
+        {
+          "title": "Hrvatski biografski leksikon · Kotromanići",
+          "url": "https://hbl.lzmk.hr/Clanak/kotromanici?handler=ButtonSnimi",
+          "locator": "Prijezda y Esteban I: carta de 23 julio 1290 y resistencia frente a los Šubić; Esteban II: exilio desde 1314, retorno antes del verano de 1319; Tvrtko: partición de 1373, Trebinje en 1377 y recuperación de Hum en 1382."
+        },
+        {
+          "title": "Hrvatski povijesni muzej · Marko Vego, mapa medieval de Bosnia (1957)",
+          "url": "https://kartevgi.hismus.hr/karte/povijesna-karta-srednjovjekovne-bosne/",
+          "locator": "HPM 104339, dos hojas: contraste de comarcas, cuencas y cordilleras. Combina épocas y posesiones temporales; las fechas se verifican en las entradas escritas, no por el color de la carta."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": true
+    },
+    {
+      "name": "Bosnia · Vrhbosna",
+      "corridor": "Bosnia y Hum · revisión regional",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1200,
+        "through": 1434
+      },
+      "versions": [
+        {
+          "from": 1200,
+          "ids": [
+            "Vrhbosna"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Núcleo bosnio hasta el establecimiento otomano de Vrhbosna/Hodidjed en 1435; no se prolonga hasta la conquista general de 1463."
+        }
+      ],
+      "note": "Núcleo bosnio hasta el establecimiento otomano de Vrhbosna/Hodidjed en 1435; no se prolonga hasta la conquista general de 1463.",
+      "sources": [
+        {
+          "title": "Hrvatska enciklopedija · Bosna i Hercegovina",
+          "url": "https://www.enciklopedija.hr/clanak/bosna-i-hercegovina",
+          "locator": "Historia medieval: Kulin, límites entre Drina y Grmeč; división de 1253; Usora/Soli en 1324; Vrhbosna/Hodidjed bajo los otomanos en 1435; conquista de 1463. La síntesis regional y la entrada Usora difieren sobre la incorporación c.1204."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": true
+    },
+    {
+      "name": "Bosnia · Donji Kraji",
+      "corridor": "Bosnia y Hum · revisión regional",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1200,
+        "through": 1462
+      },
+      "versions": [
+        {
+          "from": 1200,
+          "ids": [
+            "Jajce",
+            "Kljuc",
+            "Dinaric_Alps2"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "La síntesis histórica incluye Donji Kraji en el ámbito de Kulin; 1244 es primera constancia de la región, no creación. Señoríos internos y cambios de superioridad no eliminan su pertenencia regional."
+        }
+      ],
+      "note": "La síntesis histórica incluye Donji Kraji en el ámbito de Kulin; 1244 es primera constancia de la región, no creación. Señoríos internos y cambios de superioridad no eliminan su pertenencia regional.",
+      "sources": [
+        {
+          "title": "Hrvatska enciklopedija · Bosna i Hercegovina",
+          "url": "https://www.enciklopedija.hr/clanak/bosna-i-hercegovina",
+          "locator": "Historia medieval: Kulin, límites entre Drina y Grmeč; división de 1253; Usora/Soli en 1324; Vrhbosna/Hodidjed bajo los otomanos en 1435; conquista de 1463. La síntesis regional y la entrada Usora difieren sobre la incorporación c.1204."
+        },
+        {
+          "title": "Hrvatska enciklopedija · Donji kraji",
+          "url": "https://www.enciklopedija.hr/clanak/donji-kraji",
+          "locator": "Banica/Ključ, Vrbanja y Zemljanik; documento de 1244, Prijezda y señores locales; conquista y recuperación húngara de 1463. La mención documental no equivale al comienzo de la región."
+        },
+        {
+          "title": "Hrvatski povijesni muzej · Marko Vego, mapa medieval de Bosnia (1957)",
+          "url": "https://kartevgi.hismus.hr/karte/povijesna-karta-srednjovjekovne-bosne/",
+          "locator": "HPM 104339, dos hojas: contraste de comarcas, cuencas y cordilleras. Combina épocas y posesiones temporales; las fechas se verifican en las entradas escritas, no por el color de la carta."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": true
+    },
+    {
+      "name": "Bosnia · Neretva septentrional",
+      "corridor": "Bosnia y Hum · revisión regional",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1200,
+        "through": 1462
+      },
+      "versions": [
+        {
+          "from": 1200,
+          "ids": [
+            "Konjic"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Župa bosnia de Neretva. El polígono incluye Konjic y Biograd: desde el XV, sus orillas pertenecían respectivamente a los reyes y a los Kosača. No se atribuye la celda entera como patrimonio exclusivo del rey."
+        }
+      ],
+      "note": "Župa bosnia de Neretva. El polígono incluye Konjic y Biograd: desde el XV, sus orillas pertenecían respectivamente a los reyes y a los Kosača. No se atribuye la celda entera como patrimonio exclusivo del rey.",
+      "sources": [
+        {
+          "title": "Hrvatska enciklopedija · Konjic",
+          "url": "https://www.enciklopedija.hr/clanak/konjic",
+          "locator": "Župa bosnia de Neretva; Biograd en la orilla izquierda bajo los Kosača, Konjic en la derecha bajo los reyes; conquista otomana entre 1463 y 1469. La celda completa es mixta y no propiedad exclusiva del duque."
+        },
+        {
+          "title": "Hrvatska enciklopedija · Bosna i Hercegovina",
+          "url": "https://www.enciklopedija.hr/clanak/bosna-i-hercegovina",
+          "locator": "Historia medieval: Kulin, límites entre Drina y Grmeč; división de 1253; Usora/Soli en 1324; Vrhbosna/Hodidjed bajo los otomanos en 1435; conquista de 1463. La síntesis regional y la entrada Usora difieren sobre la incorporación c.1204."
+        },
+        {
+          "title": "Hrvatski povijesni muzej · Marko Vego, mapa medieval de Bosnia (1957)",
+          "url": "https://kartevgi.hismus.hr/karte/povijesna-karta-srednjovjekovne-bosne/",
+          "locator": "HPM 104339, dos hojas: contraste de comarcas, cuencas y cordilleras. Combina épocas y posesiones temporales; las fechas se verifican en las entradas escritas, no por el color de la carta."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": true
+    },
+    {
+      "name": "Croacia · relieve de las tierras occidentales",
+      "corridor": "Bosnia y Hum · revisión regional",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1200,
+        "through": 1323
+      },
+      "versions": [
+        {
+          "from": 1200,
+          "ids": [
+            "Dinaric_Alps4",
+            "Glamoc"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Comarcas occidentales y su relieve, al oeste del núcleo bosnio; el corte de 1324 es aproximado y las conquistas individuales no están fechadas con exactitud."
+        }
+      ],
+      "note": "Comarcas occidentales y su relieve, al oeste del núcleo bosnio; el corte de 1324 es aproximado y las conquistas individuales no están fechadas con exactitud.",
+      "sources": [
+        {
+          "title": "Hrvatska enciklopedija · Bosna i Hercegovina",
+          "url": "https://www.enciklopedija.hr/clanak/bosna-i-hercegovina",
+          "locator": "Historia medieval: Kulin, límites entre Drina y Grmeč; división de 1253; Usora/Soli en 1324; Vrhbosna/Hodidjed bajo los otomanos en 1435; conquista de 1463. La síntesis regional y la entrada Usora difieren sobre la incorporación c.1204."
+        },
+        {
+          "title": "Hrvatska enciklopedija · Livno",
+          "url": "https://www.enciklopedija.hr/clanak/livno",
+          "locator": "Territorio croata hasta 1326, incorporación permanente a Bosnia desde 1387; conquista inicial de 1463 y dominio otomano consolidado desde 1485. Cortes regionales con fases de control alterno."
+        },
+        {
+          "title": "Hrvatski povijesni muzej · Marko Vego, mapa medieval de Bosnia (1957)",
+          "url": "https://kartevgi.hismus.hr/karte/povijesna-karta-srednjovjekovne-bosne/",
+          "locator": "HPM 104339, dos hojas: contraste de comarcas, cuencas y cordilleras. Combina épocas y posesiones temporales; las fechas se verifican en las entradas escritas, no por el color de la carta."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": true
+    },
+    {
+      "name": "Croacia · Livno anterior a la incorporación bosnia",
+      "corridor": "Bosnia y Hum · revisión regional",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1200,
+        "through": 1325
+      },
+      "versions": [
+        {
+          "from": 1200,
+          "ids": [
+            "Livno"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "La superficie sigue el territorio de la comarca, no la primera mención de la ciudad. Se adopta aquí la entrada específica Livno (1326), frente al corte regional general de 1324."
+        }
+      ],
+      "note": "La superficie sigue el territorio de la comarca, no la primera mención de la ciudad. Se adopta aquí la entrada específica Livno (1326), frente al corte regional general de 1324.",
+      "sources": [
+        {
+          "title": "Hrvatska enciklopedija · Livno",
+          "url": "https://www.enciklopedija.hr/clanak/livno",
+          "locator": "Territorio croata hasta 1326, incorporación permanente a Bosnia desde 1387; conquista inicial de 1463 y dominio otomano consolidado desde 1485. Cortes regionales con fases de control alterno."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": true
+    },
+    {
+      "name": "Bosnia · tierras occidentales",
+      "corridor": "Bosnia y Hum · revisión regional",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1324,
+        "through": 1462
+      },
+      "versions": [
+        {
+          "from": 1324,
+          "ids": [
+            "Glamoc",
+            "Dinaric_Alps4"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Integración regional en la expansión de Esteban II; las fechas del relieve son aproximadas y no acreditan un deslinde moderno."
+        }
+      ],
+      "note": "Integración regional en la expansión de Esteban II; las fechas del relieve son aproximadas y no acreditan un deslinde moderno.",
+      "sources": [
+        {
+          "title": "Hrvatska enciklopedija · Bosna i Hercegovina",
+          "url": "https://www.enciklopedija.hr/clanak/bosna-i-hercegovina",
+          "locator": "Historia medieval: Kulin, límites entre Drina y Grmeč; división de 1253; Usora/Soli en 1324; Vrhbosna/Hodidjed bajo los otomanos en 1435; conquista de 1463. La síntesis regional y la entrada Usora difieren sobre la incorporación c.1204."
+        },
+        {
+          "title": "Hrvatski biografski leksikon · Kotromanići",
+          "url": "https://hbl.lzmk.hr/Clanak/kotromanici?handler=ButtonSnimi",
+          "locator": "Prijezda y Esteban I: carta de 23 julio 1290 y resistencia frente a los Šubić; Esteban II: exilio desde 1314, retorno antes del verano de 1319; Tvrtko: partición de 1373, Trebinje en 1377 y recuperación de Hum en 1382."
+        },
+        {
+          "title": "Hrvatski povijesni muzej · Marko Vego, mapa medieval de Bosnia (1957)",
+          "url": "https://kartevgi.hismus.hr/karte/povijesna-karta-srednjovjekovne-bosne/",
+          "locator": "HPM 104339, dos hojas: contraste de comarcas, cuencas y cordilleras. Combina épocas y posesiones temporales; las fechas se verifican en las entradas escritas, no por el color de la carta."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": true
+    },
+    {
+      "name": "Bosnia · primera incorporación de Livno",
+      "corridor": "Bosnia y Hum · revisión regional",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1326,
+        "through": 1356
+      },
+      "versions": [
+        {
+          "from": 1326,
+          "ids": [
+            "Livno"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Primera incorporación bosnia. No se afirma una continuidad irreversible: la comarca vuelve al ámbito croata-húngaro antes de la recuperación bajo Tvrtko."
+        }
+      ],
+      "note": "Primera incorporación bosnia. No se afirma una continuidad irreversible: la comarca vuelve al ámbito croata-húngaro antes de la recuperación bajo Tvrtko.",
+      "sources": [
+        {
+          "title": "Hrvatska enciklopedija · Livno",
+          "url": "https://www.enciklopedija.hr/clanak/livno",
+          "locator": "Territorio croata hasta 1326, incorporación permanente a Bosnia desde 1387; conquista inicial de 1463 y dominio otomano consolidado desde 1485. Cortes regionales con fases de control alterno."
+        },
+        {
+          "title": "Hrvatski biografski leksikon · Kotromanići",
+          "url": "https://hbl.lzmk.hr/Clanak/kotromanici?handler=ButtonSnimi",
+          "locator": "Prijezda y Esteban I: carta de 23 julio 1290 y resistencia frente a los Šubić; Esteban II: exilio desde 1314, retorno antes del verano de 1319; Tvrtko: partición de 1373, Trebinje en 1377 y recuperación de Hum en 1382."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": true
+    },
+    {
+      "name": "Croacia · Livno bajo la Corona húngara",
+      "corridor": "Bosnia y Hum · revisión regional",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1357,
+        "through": 1386
+      },
+      "versions": [
+        {
+          "from": 1357,
+          "ids": [
+            "Livno"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Corte anual aproximado de la recuperación croata-húngara en las tierras occidentales; la entrada Livno sitúa su incorporación permanente a Bosnia en 1387. No es una fecha exacta de conquista de cada punto."
+        }
+      ],
+      "note": "Corte anual aproximado de la recuperación croata-húngara en las tierras occidentales; la entrada Livno sitúa su incorporación permanente a Bosnia en 1387. No es una fecha exacta de conquista de cada punto.",
+      "sources": [
+        {
+          "title": "Hrvatska enciklopedija · Livno",
+          "url": "https://www.enciklopedija.hr/clanak/livno",
+          "locator": "Territorio croata hasta 1326, incorporación permanente a Bosnia desde 1387; conquista inicial de 1463 y dominio otomano consolidado desde 1485. Cortes regionales con fases de control alterno."
+        },
+        {
+          "title": "Hrvatski biografski leksikon · Kotromanići",
+          "url": "https://hbl.lzmk.hr/Clanak/kotromanici?handler=ButtonSnimi",
+          "locator": "Prijezda y Esteban I: carta de 23 julio 1290 y resistencia frente a los Šubić; Esteban II: exilio desde 1314, retorno antes del verano de 1319; Tvrtko: partición de 1373, Trebinje en 1377 y recuperación de Hum en 1382."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": true
+    },
+    {
+      "name": "Bosnia · Livno desde Tvrtko",
+      "corridor": "Bosnia y Hum · revisión regional",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1387,
+        "through": 1462
+      },
+      "versions": [
+        {
+          "from": 1387,
+          "ids": [
+            "Livno"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Incorporación permanente al reino en 1387 hasta la campaña de 1463."
+        }
+      ],
+      "note": "Incorporación permanente al reino en 1387 hasta la campaña de 1463.",
+      "sources": [
+        {
+          "title": "Hrvatska enciklopedija · Livno",
+          "url": "https://www.enciklopedija.hr/clanak/livno",
+          "locator": "Territorio croata hasta 1326, incorporación permanente a Bosnia desde 1387; conquista inicial de 1463 y dominio otomano consolidado desde 1485. Cortes regionales con fases de control alterno."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": true
+    },
+    {
+      "name": "Bosnia · Usora y Soli medievales",
+      "corridor": "Bosnia y Hum · revisión regional",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1200,
+        "through": 1252
+      },
+      "versions": [
+        {
+          "from": 1200,
+          "ids": [
+            "Doboj",
+            "Soli",
+            "Srebrenik",
+            "Teocak"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "La síntesis del reinado de Kulin incluye Usora/Soli; las entradas locales sitúan la integración c.1204. El inicio de 1200 es un corte aproximado del ámbito regional, no una anexión fechada ni una frontera exacta."
+        }
+      ],
+      "note": "La síntesis del reinado de Kulin incluye Usora/Soli; las entradas locales sitúan la integración c.1204. El inicio de 1200 es un corte aproximado del ámbito regional, no una anexión fechada ni una frontera exacta.",
+      "sources": [
+        {
+          "title": "Hrvatska enciklopedija · Bosna i Hercegovina",
+          "url": "https://www.enciklopedija.hr/clanak/bosna-i-hercegovina",
+          "locator": "Historia medieval: Kulin, límites entre Drina y Grmeč; división de 1253; Usora/Soli en 1324; Vrhbosna/Hodidjed bajo los otomanos en 1435; conquista de 1463. La síntesis regional y la entrada Usora difieren sobre la incorporación c.1204."
+        },
+        {
+          "title": "Hrvatska enciklopedija · Usora",
+          "url": "https://www.enciklopedija.hr/clanak/usora-podrucje",
+          "locator": "Incorporación c.1204; banato separado en 1253; Dragutin 1284–1316; retorno húngaro hasta 1324; conflicto y control serbio en 1432, recuperación bajo Tomás, banato de Srebrenik después de 1463."
+        },
+        {
+          "title": "Hrvatska enciklopedija · Soli",
+          "url": "https://www.enciklopedija.hr/clanak/soli-podrucje",
+          "locator": "Incorporación c.1204, separación húngara de Usora/Soli y posterior integración bosnia. El nombre del polígono no fecha la fundación de Tuzla."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": true
+    },
+    {
+      "name": "Usora y Soli · banato 1253",
+      "corridor": "Bosnia y Hum · revisión regional",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1253,
+        "through": 1283
+      },
+      "versions": [
+        {
+          "from": 1253,
+          "ids": [
+            "Doboj",
+            "Soli",
+            "Srebrenik",
+            "Teocak"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Banato fronterizo bajo superioridad húngara; la autoridad del rey no se confunde con un gobierno territorial directo y uniforme."
+        }
+      ],
+      "note": "Banato fronterizo bajo superioridad húngara; la autoridad del rey no se confunde con un gobierno territorial directo y uniforme.",
+      "sources": [
+        {
+          "title": "Hrvatska enciklopedija · Usora",
+          "url": "https://www.enciklopedija.hr/clanak/usora-podrucje",
+          "locator": "Incorporación c.1204; banato separado en 1253; Dragutin 1284–1316; retorno húngaro hasta 1324; conflicto y control serbio en 1432, recuperación bajo Tomás, banato de Srebrenik después de 1463."
+        },
+        {
+          "title": "Hrvatska enciklopedija · Soli",
+          "url": "https://www.enciklopedija.hr/clanak/soli-podrucje",
+          "locator": "Incorporación c.1204, separación húngara de Usora/Soli y posterior integración bosnia. El nombre del polígono no fecha la fundación de Tuzla."
+        },
+        {
+          "title": "Hrvatska enciklopedija · Bosna i Hercegovina",
+          "url": "https://www.enciklopedija.hr/clanak/bosna-i-hercegovina",
+          "locator": "Historia medieval: Kulin, límites entre Drina y Grmeč; división de 1253; Usora/Soli en 1324; Vrhbosna/Hodidjed bajo los otomanos en 1435; conquista de 1463. La síntesis regional y la entrada Usora difieren sobre la incorporación c.1204."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": true
+    },
+    {
+      "name": "Usora y Soli · banato 1317",
+      "corridor": "Bosnia y Hum · revisión regional",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1317,
+        "through": 1323
+      },
+      "versions": [
+        {
+          "from": 1317,
+          "ids": [
+            "Doboj",
+            "Soli",
+            "Srebrenik",
+            "Teocak"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Banato fronterizo bajo superioridad húngara; la autoridad del rey no se confunde con un gobierno territorial directo y uniforme."
+        }
+      ],
+      "note": "Banato fronterizo bajo superioridad húngara; la autoridad del rey no se confunde con un gobierno territorial directo y uniforme.",
+      "sources": [
+        {
+          "title": "Hrvatska enciklopedija · Usora",
+          "url": "https://www.enciklopedija.hr/clanak/usora-podrucje",
+          "locator": "Incorporación c.1204; banato separado en 1253; Dragutin 1284–1316; retorno húngaro hasta 1324; conflicto y control serbio en 1432, recuperación bajo Tomás, banato de Srebrenik después de 1463."
+        },
+        {
+          "title": "Hrvatska enciklopedija · Soli",
+          "url": "https://www.enciklopedija.hr/clanak/soli-podrucje",
+          "locator": "Incorporación c.1204, separación húngara de Usora/Soli y posterior integración bosnia. El nombre del polígono no fecha la fundación de Tuzla."
+        },
+        {
+          "title": "Hrvatska enciklopedija · Bosna i Hercegovina",
+          "url": "https://www.enciklopedija.hr/clanak/bosna-i-hercegovina",
+          "locator": "Historia medieval: Kulin, límites entre Drina y Grmeč; división de 1253; Usora/Soli en 1324; Vrhbosna/Hodidjed bajo los otomanos en 1435; conquista de 1463. La síntesis regional y la entrada Usora difieren sobre la incorporación c.1204."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": true
+    },
+    {
+      "name": "Sirmia · Usora y Soli de Dragutin",
+      "corridor": "Bosnia y Hum · revisión regional",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1284,
+        "through": 1316
+      },
+      "versions": [
+        {
+          "from": 1284,
+          "ids": [
+            "Doboj",
+            "Soli",
+            "Srebrenik",
+            "Teocak"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Territorios cedidos a Dragutin, distintos de la Sirmia al norte del Sava; su muerte no deja un vacío político."
+        }
+      ],
+      "note": "Territorios cedidos a Dragutin, distintos de la Sirmia al norte del Sava; su muerte no deja un vacío político.",
+      "sources": [
+        {
+          "title": "Hrvatska enciklopedija · Usora",
+          "url": "https://www.enciklopedija.hr/clanak/usora-podrucje",
+          "locator": "Incorporación c.1204; banato separado en 1253; Dragutin 1284–1316; retorno húngaro hasta 1324; conflicto y control serbio en 1432, recuperación bajo Tomás, banato de Srebrenik después de 1463."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": true
+    },
+    {
+      "name": "Bosnia · Usora y Soli 1324",
+      "corridor": "Bosnia y Hum · revisión regional",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1324,
+        "through": 1431
+      },
+      "versions": [
+        {
+          "from": 1324,
+          "ids": [
+            "Doboj",
+            "Soli",
+            "Srebrenik",
+            "Teocak"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Ámbito bosnio de Usora/Soli, con señores locales y acciones húngaras en su periferia. No equivale a control directo de cada castillo por el rey."
+        }
+      ],
+      "note": "Ámbito bosnio de Usora/Soli, con señores locales y acciones húngaras en su periferia. No equivale a control directo de cada castillo por el rey.",
+      "sources": [
+        {
+          "title": "Hrvatska enciklopedija · Usora",
+          "url": "https://www.enciklopedija.hr/clanak/usora-podrucje",
+          "locator": "Incorporación c.1204; banato separado en 1253; Dragutin 1284–1316; retorno húngaro hasta 1324; conflicto y control serbio en 1432, recuperación bajo Tomás, banato de Srebrenik después de 1463."
+        },
+        {
+          "title": "Hrvatska enciklopedija · Bosna i Hercegovina",
+          "url": "https://www.enciklopedija.hr/clanak/bosna-i-hercegovina",
+          "locator": "Historia medieval: Kulin, límites entre Drina y Grmeč; división de 1253; Usora/Soli en 1324; Vrhbosna/Hodidjed bajo los otomanos en 1435; conquista de 1463. La síntesis regional y la entrada Usora difieren sobre la incorporación c.1204."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": true
+    },
+    {
+      "name": "Bosnia · Usora y Soli 1443",
+      "corridor": "Bosnia y Hum · revisión regional",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1443,
+        "through": 1462
+      },
+      "versions": [
+        {
+          "from": 1443,
+          "ids": [
+            "Doboj",
+            "Soli",
+            "Srebrenik",
+            "Teocak"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Ámbito bosnio de Usora/Soli, con señores locales y acciones húngaras en su periferia. No equivale a control directo de cada castillo por el rey."
+        }
+      ],
+      "note": "Ámbito bosnio de Usora/Soli, con señores locales y acciones húngaras en su periferia. No equivale a control directo de cada castillo por el rey.",
+      "sources": [
+        {
+          "title": "Hrvatska enciklopedija · Usora",
+          "url": "https://www.enciklopedija.hr/clanak/usora-podrucje",
+          "locator": "Incorporación c.1204; banato separado en 1253; Dragutin 1284–1316; retorno húngaro hasta 1324; conflicto y control serbio en 1432, recuperación bajo Tomás, banato de Srebrenik después de 1463."
+        },
+        {
+          "title": "Hrvatska enciklopedija · Bosna i Hercegovina",
+          "url": "https://www.enciklopedija.hr/clanak/bosna-i-hercegovina",
+          "locator": "Historia medieval: Kulin, límites entre Drina y Grmeč; división de 1253; Usora/Soli en 1324; Vrhbosna/Hodidjed bajo los otomanos en 1435; conquista de 1463. La síntesis regional y la entrada Usora difieren sobre la incorporación c.1204."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": true
+    },
+    {
+      "name": "Serbia · Usora disputada",
+      "corridor": "Bosnia y Hum · revisión regional",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1432,
+        "through": 1438
+      },
+      "versions": [
+        {
+          "from": 1432,
+          "ids": [
+            "Doboj",
+            "Soli",
+            "Srebrenik",
+            "Teocak"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Avance del déspota Đurađ en 1432 y disputa con Tvrtko. Ámbito regional aproximado hasta la primera caída del despotado; no se atribuye al déspota un gobierno efectivo en la zona durante el exilio de 1439–1444."
+        }
+      ],
+      "note": "Avance del déspota Đurađ en 1432 y disputa con Tvrtko. Ámbito regional aproximado hasta la primera caída del despotado; no se atribuye al déspota un gobierno efectivo en la zona durante el exilio de 1439–1444.",
+      "sources": [
+        {
+          "title": "Hrvatska enciklopedija · Usora",
+          "url": "https://www.enciklopedija.hr/clanak/usora-podrucje",
+          "locator": "Incorporación c.1204; banato separado en 1253; Dragutin 1284–1316; retorno húngaro hasta 1324; conflicto y control serbio en 1432, recuperación bajo Tomás, banato de Srebrenik después de 1463."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": true,
+      "authorityCondition": "control disputado"
+    },
+    {
+      "name": "Srebrenik · banato defensivo",
+      "corridor": "Bosnia y Hum · revisión regional",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1463,
+        "through": 1511
+      },
+      "versions": [
+        {
+          "from": 1463,
+          "ids": [
+            "Soli",
+            "Srebrenik",
+            "Teocak"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Banato defensivo húngaro de Usora/Soli tras la campaña de 1463. Srebrenik y Srebrenica son localidades y jurisdicciones diferentes."
+        }
+      ],
+      "note": "Banato defensivo húngaro de Usora/Soli tras la campaña de 1463. Srebrenik y Srebrenica son localidades y jurisdicciones diferentes.",
+      "sources": [
+        {
+          "title": "Hrvatska enciklopedija · Srebrenička banovina",
+          "url": "https://www.enciklopedija.hr/clanak/srebrenicka-banovina",
+          "locator": "Banato defensivo húngaro de 1463–1512 entre Bosnia, Drina y Sava; conquista de Srebrenik en 1512. No es la ciudad minera de Srebrenica."
+        },
+        {
+          "title": "Hrvatska enciklopedija · Usora",
+          "url": "https://www.enciklopedija.hr/clanak/usora-podrucje",
+          "locator": "Incorporación c.1204; banato separado en 1253; Dragutin 1284–1316; retorno húngaro hasta 1324; conflicto y control serbio en 1432, recuperación bajo Tomás, banato de Srebrenik después de 1463."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": true
+    },
+    {
+      "name": "Srebrenik · frente de Doboj",
+      "corridor": "Bosnia y Hum · revisión regional",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1463,
+        "through": 1502
+      },
+      "versions": [
+        {
+          "from": 1463,
+          "ids": [
+            "Doboj"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Sector fronterizo de Doboj. Su paso a los otomanos se documenta antes de 1503; este intervalo resume la confrontación regional y no acredita una guarnición húngara continua."
+        }
+      ],
+      "note": "Sector fronterizo de Doboj. Su paso a los otomanos se documenta antes de 1503; este intervalo resume la confrontación regional y no acredita una guarnición húngara continua.",
+      "sources": [
+        {
+          "title": "Hrvatska enciklopedija · Srebrenička banovina",
+          "url": "https://www.enciklopedija.hr/clanak/srebrenicka-banovina",
+          "locator": "Banato defensivo húngaro de 1463–1512 entre Bosnia, Drina y Sava; conquista de Srebrenik en 1512. No es la ciudad minera de Srebrenica."
+        },
+        {
+          "title": "Hrvatska enciklopedija · Doboj",
+          "url": "https://www.enciklopedija.hr/clanak/doboj",
+          "locator": "Fortaleza de Usora, batalla de 1415; posesión otomana anterior a 1503 y ocupaciones austríacas de 1697 y en la guerra de 1716–1718. Son campañas militares, no cesiones permanentes."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": true,
+      "authorityCondition": "control disputado"
+    },
+    {
+      "name": "Jajce · núcleo defensivo",
+      "corridor": "Bosnia y Hum · revisión regional",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1463,
+        "through": 1526
+      },
+      "versions": [
+        {
+          "from": 1463,
+          "ids": [
+            "Jajce"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Recuperación húngara en diciembre de 1463; caída de la fortaleza en diciembre de 1527. Los años de cambio reúnen sucesos de ambos bandos."
+        }
+      ],
+      "note": "Recuperación húngara en diciembre de 1463; caída de la fortaleza en diciembre de 1527. Los años de cambio reúnen sucesos de ambos bandos.",
+      "sources": [
+        {
+          "title": "Hrvatska enciklopedija · Jajačka banovina",
+          "url": "https://www.enciklopedija.hr/clanak/jajacka-banovina",
+          "locator": "Banato defensivo de 1463–1527; Ključ y otras fortalezas, pérdida progresiva después de 1490, posiciones otomanas consolidadas en 1503 y caída de Jajce en diciembre de 1527. La celda del relieve cruza el frente; no se equipara al recinto de la fortaleza."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": true
+    },
+    {
+      "name": "Jajce · frente de Donji Kraji",
+      "corridor": "Bosnia y Hum · revisión regional",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1463,
+        "through": 1502
+      },
+      "versions": [
+        {
+          "from": 1463,
+          "ids": [
+            "Kljuc",
+            "Dinaric_Alps2"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Recuperación y defensa húngaras, con pérdidas progresivas y posiciones otomanas consolidadas en 1503. El polígono del relieve atraviesa el frente."
+        }
+      ],
+      "note": "Recuperación y defensa húngaras, con pérdidas progresivas y posiciones otomanas consolidadas en 1503. El polígono del relieve atraviesa el frente.",
+      "sources": [
+        {
+          "title": "Hrvatska enciklopedija · Jajačka banovina",
+          "url": "https://www.enciklopedija.hr/clanak/jajacka-banovina",
+          "locator": "Banato defensivo de 1463–1527; Ključ y otras fortalezas, pérdida progresiva después de 1490, posiciones otomanas consolidadas en 1503 y caída de Jajce en diciembre de 1527. La celda del relieve cruza el frente; no se equipara al recinto de la fortaleza."
+        },
+        {
+          "title": "Hrvatska enciklopedija · Donji kraji",
+          "url": "https://www.enciklopedija.hr/clanak/donji-kraji",
+          "locator": "Banica/Ključ, Vrbanja y Zemljanik; documento de 1244, Prijezda y señores locales; conquista y recuperación húngara de 1463. La mención documental no equivale al comienzo de la región."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": true,
+      "authorityCondition": "control disputado"
+    },
+    {
+      "name": "Croacia · Livno durante las conquistas",
+      "corridor": "Bosnia y Hum · revisión regional",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1463,
+        "through": 1484
+      },
+      "versions": [
+        {
+          "from": 1463,
+          "ids": [
+            "Livno"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Conquista otomana inicial, expulsión temporal y dominio definitivo desde 1485. Se conserva visible la disputa; no se asigna una continuidad húngara exclusiva durante estos años."
+        }
+      ],
+      "note": "Conquista otomana inicial, expulsión temporal y dominio definitivo desde 1485. Se conserva visible la disputa; no se asigna una continuidad húngara exclusiva durante estos años.",
+      "sources": [
+        {
+          "title": "Hrvatska enciklopedija · Livno",
+          "url": "https://www.enciklopedija.hr/clanak/livno",
+          "locator": "Territorio croata hasta 1326, incorporación permanente a Bosnia desde 1387; conquista inicial de 1463 y dominio otomano consolidado desde 1485. Cortes regionales con fases de control alterno."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": true,
+      "authorityCondition": "control disputado"
+    },
+    {
+      "name": "Serbia · Drina y tierras orientales",
+      "corridor": "Bosnia y Hum · revisión regional",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1200,
+        "through": 1372
+      },
+      "versions": [
+        {
+          "from": 1200,
+          "ids": [
+            "Ustikolina",
+            "Visegrad",
+            "Gacko",
+            "Dinaric_Alps5",
+            "Soko_Grad"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Marco regional serbio anterior al reparto de las tierras de Altomanović en 1373; la autoridad local de los Vojinović y Altomanović no convierte estos ámbitos en patrimonio directo uniforme de los reyes."
+        }
+      ],
+      "note": "Marco regional serbio anterior al reparto de las tierras de Altomanović en 1373; la autoridad local de los Vojinović y Altomanović no convierte estos ámbitos en patrimonio directo uniforme de los reyes.",
+      "sources": [
+        {
+          "title": "Hrvatski biografski leksikon · Kotromanići",
+          "url": "https://hbl.lzmk.hr/Clanak/kotromanici?handler=ButtonSnimi",
+          "locator": "Prijezda y Esteban I: carta de 23 julio 1290 y resistencia frente a los Šubić; Esteban II: exilio desde 1314, retorno antes del verano de 1319; Tvrtko: partición de 1373, Trebinje en 1377 y recuperación de Hum en 1382."
+        },
+        {
+          "title": "Hrvatski povijesni muzej · Marko Vego, mapa medieval de Bosnia (1957)",
+          "url": "https://kartevgi.hismus.hr/karte/povijesna-karta-srednjovjekovne-bosne/",
+          "locator": "HPM 104339, dos hojas: contraste de comarcas, cuencas y cordilleras. Combina épocas y posesiones temporales; las fechas se verifican en las entradas escritas, no por el color de la carta."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": true
+    },
+    {
+      "name": "Bosnia · adquisición oriental de 1373",
+      "corridor": "Bosnia y Hum · revisión regional",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1373,
+        "through": 1391
+      },
+      "versions": [
+        {
+          "from": 1373,
+          "ids": [
+            "Ustikolina",
+            "Visegrad",
+            "Gacko",
+            "Dinaric_Alps5",
+            "Soko_Grad"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Ámbitos orientales incorporados con el reparto de 1373; no se colorea Foca, el homónimo de Anatolia. El relieve se revisa por su posición y extensión completas."
+        }
+      ],
+      "note": "Ámbitos orientales incorporados con el reparto de 1373; no se colorea Foca, el homónimo de Anatolia. El relieve se revisa por su posición y extensión completas.",
+      "sources": [
+        {
+          "title": "Hrvatski biografski leksikon · Kotromanići",
+          "url": "https://hbl.lzmk.hr/Clanak/kotromanici?handler=ButtonSnimi",
+          "locator": "Prijezda y Esteban I: carta de 23 julio 1290 y resistencia frente a los Šubić; Esteban II: exilio desde 1314, retorno antes del verano de 1319; Tvrtko: partición de 1373, Trebinje en 1377 y recuperación de Hum en 1382."
+        },
+        {
+          "title": "Hrvatski povijesni muzej · Marko Vego, mapa medieval de Bosnia (1957)",
+          "url": "https://kartevgi.hismus.hr/karte/povijesna-karta-srednjovjekovne-bosne/",
+          "locator": "HPM 104339, dos hojas: contraste de comarcas, cuencas y cordilleras. Combina épocas y posesiones temporales; las fechas se verifican en las entradas escritas, no por el color de la carta."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": true
+    },
+    {
+      "name": "Bosnia · Višegrad posterior a Tvrtko",
+      "corridor": "Bosnia y Hum · revisión regional",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1392,
+        "through": 1462
+      },
+      "versions": [
+        {
+          "from": 1392,
+          "ids": [
+            "Visegrad"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Ámbito bosnio oriental, con señoríos de los Pavlović; no se transfiere por proximidad a los Kosača de Hum."
+        }
+      ],
+      "note": "Ámbito bosnio oriental, con señoríos de los Pavlović; no se transfiere por proximidad a los Kosača de Hum.",
+      "sources": [
+        {
+          "title": "Hrvatska enciklopedija · Bosna i Hercegovina",
+          "url": "https://www.enciklopedija.hr/clanak/bosna-i-hercegovina",
+          "locator": "Historia medieval: Kulin, límites entre Drina y Grmeč; división de 1253; Usora/Soli en 1324; Vrhbosna/Hodidjed bajo los otomanos en 1435; conquista de 1463. La síntesis regional y la entrada Usora difieren sobre la incorporación c.1204."
+        },
+        {
+          "title": "Hrvatski biografski leksikon · Kotromanići",
+          "url": "https://hbl.lzmk.hr/Clanak/kotromanici?handler=ButtonSnimi",
+          "locator": "Prijezda y Esteban I: carta de 23 julio 1290 y resistencia frente a los Šubić; Esteban II: exilio desde 1314, retorno antes del verano de 1319; Tvrtko: partición de 1373, Trebinje en 1377 y recuperación de Hum en 1382."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": true
+    },
+    {
+      "name": "Hum · herencia oriental Kosača",
+      "corridor": "Bosnia y Hum · revisión regional",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1392,
+        "through": 1447
+      },
+      "versions": [
+        {
+          "from": 1392,
+          "ids": [
+            "Ustikolina",
+            "Gacko",
+            "Dinaric_Alps5",
+            "Soko_Grad"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Herencia oriental de Vlatko Vuković y Sandalj; los cambios entre los señores locales y sus relaciones con la corona no se equiparan a desaparición del territorio."
+        }
+      ],
+      "note": "Herencia oriental de Vlatko Vuković y Sandalj; los cambios entre los señores locales y sus relaciones con la corona no se equiparan a desaparición del territorio.",
+      "sources": [
+        {
+          "title": "Hrvatska enciklopedija · Sandalj Hranić Kosača",
+          "url": "https://www.enciklopedija.hr/clanak/kosaca-sandalj-hranic",
+          "locator": "Herencia de Vlatko Vuković desde 1392; dominio entre Cetina, Drijeva, Lim y Boka documentado hacia 1410; territorio fuera de la administración del rey bosnio. No se retrotrae a 1392 toda la extensión de 1410."
+        },
+        {
+          "title": "Hrvatska enciklopedija · Stjepan Vukčić Kosača",
+          "url": "https://www.enciklopedija.hr/clanak/kosaca-stjepan-vukcic",
+          "locator": "Sucesión de 1435, título de duque de San Sava en 1448; autonomía territorial; conquista gradual de Hum y Podrinje desde 1465 y presencia veneciana en Neretva. El término de su gobierno no prueba que conservara todo el interior."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": true
+    },
+    {
+      "name": "Herzegovina · dominio oriental",
+      "corridor": "Bosnia y Hum · revisión regional",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1448,
+        "through": 1464
+      },
+      "versions": [
+        {
+          "from": 1448,
+          "ids": [
+            "Ustikolina",
+            "Gacko",
+            "Dinaric_Alps5"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Dominios vinculados al título de duque de San Sava hasta las conquistas de Hum/Podrinje desde 1465; límites regionales aproximados."
+        }
+      ],
+      "note": "Dominios vinculados al título de duque de San Sava hasta las conquistas de Hum/Podrinje desde 1465; límites regionales aproximados.",
+      "sources": [
+        {
+          "title": "Hrvatska enciklopedija · Stjepan Vukčić Kosača",
+          "url": "https://www.enciklopedija.hr/clanak/kosaca-stjepan-vukcic",
+          "locator": "Sucesión de 1435, título de duque de San Sava en 1448; autonomía territorial; conquista gradual de Hum y Podrinje desde 1465 y presencia veneciana en Neretva. El término de su gobierno no prueba que conservara todo el interior."
+        },
+        {
+          "title": "Nenad Moačanin · TDV · Foça",
+          "url": "https://islamansiklopedisi.org.tr/foca",
+          "locator": "Foča de Bosnia: dominio otomano desde 1465 y sede del sanjacado en 1470. Se aplica al ámbito regional de Ustikolina, no al ID Foca, situado en Anatolia."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": true
+    },
+    {
+      "name": "Herzegovina · Sokol anterior a la ocupación",
+      "corridor": "Bosnia y Hum · revisión regional",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1448,
+        "through": 1465
+      },
+      "versions": [
+        {
+          "from": 1448,
+          "ids": [
+            "Soko_Grad"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Sokol del entorno de Piva/Tara, no el Sokol de Pliva ni la fortaleza serbia del mismo nombre. La fecha regional de conquista es aproximada."
+        }
+      ],
+      "note": "Sokol del entorno de Piva/Tara, no el Sokol de Pliva ni la fortaleza serbia del mismo nombre. La fecha regional de conquista es aproximada.",
+      "sources": [
+        {
+          "title": "Hrvatska enciklopedija · Stjepan Vukčić Kosača",
+          "url": "https://www.enciklopedija.hr/clanak/kosaca-stjepan-vukcic",
+          "locator": "Sucesión de 1435, título de duque de San Sava en 1448; autonomía territorial; conquista gradual de Hum y Podrinje desde 1465 y presencia veneciana en Neretva. El término de su gobierno no prueba que conservara todo el interior."
+        },
+        {
+          "title": "Hrvatska enciklopedija · Hercegovački sandžak",
+          "url": "https://www.enciklopedija.hr/clanak/hercegovacki-sandzak",
+          "locator": "Conquista de las tierras Kosača y Blagaj en 1466; sanjacado desde 1470, con distritos de Foča, Prijepolje, Pljevlja, Mostar, Nevesinje, Imotski y Gabela. La creación administrativa no fecha todas las conquistas."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": true
+    },
+    {
+      "name": "Herzegovina · transición de Sokol",
+      "corridor": "Bosnia y Hum · revisión regional",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1466,
+        "through": 1467
+      },
+      "versions": [
+        {
+          "from": 1466,
+          "ids": [
+            "Soko_Grad"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Conquista gradual del interior; el cambio se produce durante la disolución de los dominios Kosača. No se sostiene una posesión uniforme del duque después de su muerte."
+        }
+      ],
+      "note": "Conquista gradual del interior; el cambio se produce durante la disolución de los dominios Kosača. No se sostiene una posesión uniforme del duque después de su muerte.",
+      "sources": [
+        {
+          "title": "Hrvatska enciklopedija · Stjepan Vukčić Kosača",
+          "url": "https://www.enciklopedija.hr/clanak/kosaca-stjepan-vukcic",
+          "locator": "Sucesión de 1435, título de duque de San Sava en 1448; autonomía territorial; conquista gradual de Hum y Podrinje desde 1465 y presencia veneciana en Neretva. El término de su gobierno no prueba que conservara todo el interior."
+        },
+        {
+          "title": "Hrvatska enciklopedija · Hercegovački sandžak",
+          "url": "https://www.enciklopedija.hr/clanak/hercegovacki-sandzak",
+          "locator": "Conquista de las tierras Kosača y Blagaj en 1466; sanjacado desde 1470, con distritos de Foča, Prijepolje, Pljevlja, Mostar, Nevesinje, Imotski y Gabela. La creación administrativa no fecha todas las conquistas."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": true,
+      "authorityCondition": "control disputado"
+    },
+    {
+      "name": "Hum · principado medieval",
+      "corridor": "Bosnia y Hum · revisión regional",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1200,
+        "through": 1304
+      },
+      "versions": [
+        {
+          "from": 1200,
+          "ids": [
+            "Mostar",
+            "Nevesinje",
+            "Drijeva",
+            "Metkovic"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Hum/Zahumlje con príncipes locales, superiores serbios o húngaros y expansión de los Šubić a comienzos del XIV. El corte de 1305 procede de su titulatura documentada, no de una fecha segura de conquista de todas las celdas."
+        }
+      ],
+      "note": "Hum/Zahumlje con príncipes locales, superiores serbios o húngaros y expansión de los Šubić a comienzos del XIV. El corte de 1305 procede de su titulatura documentada, no de una fecha segura de conquista de todas las celdas.",
+      "sources": [
+        {
+          "title": "Hrvatska enciklopedija · Hum",
+          "url": "https://www.enciklopedija.hr/clanak/hum-podrucje",
+          "locator": "Principado local del siglo XIII; señorío de los Šubić a comienzos del XIV; conquista bosnia de 1326, cesión a Luis I en 1357, recuperación tras 1382 y señoríos Kosača. No acredita un deslinde uniforme de toda la región."
+        },
+        {
+          "title": "Hrvatska enciklopedija · Drijeva",
+          "url": "https://www.enciklopedija.hr/clanak/drijeva",
+          "locator": "Zahumlje en el XIII; Bosnia 1326–1357 y desde 1382; Hrvoje desde 1404, Sandalj desde 1410, Stjepan desde 1435 y episodio real de 1444; destrucción de 1448, presencia veneciana desde 1452, conquista otomana a más tardar en 1493."
+        },
+        {
+          "title": "Hrvatski povijesni muzej · Marko Vego, mapa medieval de Bosnia (1957)",
+          "url": "https://kartevgi.hismus.hr/karte/povijesna-karta-srednjovjekovne-bosne/",
+          "locator": "HPM 104339, dos hojas: contraste de comarcas, cuencas y cordilleras. Combina épocas y posesiones temporales; las fechas se verifican en las entradas escritas, no por el color de la carta."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": true
+    },
+    {
+      "name": "Hum · señorío bajo los Šubić",
+      "corridor": "Bosnia y Hum · revisión regional",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1305,
+        "through": 1322
+      },
+      "versions": [
+        {
+          "from": 1305,
+          "ids": [
+            "Mostar",
+            "Nevesinje",
+            "Drijeva",
+            "Metkovic"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Mladen II se titula señor superior de Hum; la cesión a sus vasallos y la coexistencia de poderes locales no implica administración directa uniforme."
+        }
+      ],
+      "note": "Mladen II se titula señor superior de Hum; la cesión a sus vasallos y la coexistencia de poderes locales no implica administración directa uniforme.",
+      "sources": [
+        {
+          "title": "Hrvatska enciklopedija · Hum",
+          "url": "https://www.enciklopedija.hr/clanak/hum-podrucje",
+          "locator": "Principado local del siglo XIII; señorío de los Šubić a comienzos del XIV; conquista bosnia de 1326, cesión a Luis I en 1357, recuperación tras 1382 y señoríos Kosača. No acredita un deslinde uniforme de toda la región."
+        },
+        {
+          "title": "Hrvatski biografski leksikon · Bribirski knezovi",
+          "url": "https://hbl.lzmk.hr/Clanak/bribirski-knezovi?handler=ButtonSnimi",
+          "locator": "Mladen I: concesión del banato en 1302, carta comercial y muerte en 1304; predominio de la familia y derrota de Mladen II en 1322."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": true
+    },
+    {
+      "name": "Hum · posterior a los Šubić",
+      "corridor": "Bosnia y Hum · revisión regional",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1323,
+        "through": 1325
+      },
+      "versions": [
+        {
+          "from": 1323,
+          "ids": [
+            "Mostar",
+            "Nevesinje",
+            "Drijeva",
+            "Metkovic"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Debilitamiento de los Šubić y dominio de los Branivojević en Hum, antes de la campaña bosnia de 1326. La entidad continúa; no se inventa un príncipe individual para cada año."
+        }
+      ],
+      "note": "Debilitamiento de los Šubić y dominio de los Branivojević en Hum, antes de la campaña bosnia de 1326. La entidad continúa; no se inventa un príncipe individual para cada año.",
+      "sources": [
+        {
+          "title": "Hrvatska enciklopedija · Hum",
+          "url": "https://www.enciklopedija.hr/clanak/hum-podrucje",
+          "locator": "Principado local del siglo XIII; señorío de los Šubić a comienzos del XIV; conquista bosnia de 1326, cesión a Luis I en 1357, recuperación tras 1382 y señoríos Kosača. No acredita un deslinde uniforme de toda la región."
+        },
+        {
+          "title": "Hrvatski biografski leksikon · Kotromanići",
+          "url": "https://hbl.lzmk.hr/Clanak/kotromanici?handler=ButtonSnimi",
+          "locator": "Prijezda y Esteban I: carta de 23 julio 1290 y resistencia frente a los Šubić; Esteban II: exilio desde 1314, retorno antes del verano de 1319; Tvrtko: partición de 1373, Trebinje en 1377 y recuperación de Hum en 1382."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": true
+    },
+    {
+      "name": "Hum · soberanía bosnia medieval",
+      "corridor": "Bosnia y Hum · revisión regional",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1326,
+        "through": 1356
+      },
+      "versions": [
+        {
+          "from": 1326,
+          "ids": [
+            "Mostar",
+            "Nevesinje",
+            "Drijeva",
+            "Metkovic"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Señorío de Hum bajo Esteban II y los primeros años de Tvrtko. La disputa con Dušan no elimina el gobierno bosnio efectivo."
+        }
+      ],
+      "note": "Señorío de Hum bajo Esteban II y los primeros años de Tvrtko. La disputa con Dušan no elimina el gobierno bosnio efectivo.",
+      "sources": [
+        {
+          "title": "Hrvatska enciklopedija · Hum",
+          "url": "https://www.enciklopedija.hr/clanak/hum-podrucje",
+          "locator": "Principado local del siglo XIII; señorío de los Šubić a comienzos del XIV; conquista bosnia de 1326, cesión a Luis I en 1357, recuperación tras 1382 y señoríos Kosača. No acredita un deslinde uniforme de toda la región."
+        },
+        {
+          "title": "Hrvatska enciklopedija · Drijeva",
+          "url": "https://www.enciklopedija.hr/clanak/drijeva",
+          "locator": "Zahumlje en el XIII; Bosnia 1326–1357 y desde 1382; Hrvoje desde 1404, Sandalj desde 1410, Stjepan desde 1435 y episodio real de 1444; destrucción de 1448, presencia veneciana desde 1452, conquista otomana a más tardar en 1493."
+        },
+        {
+          "title": "Hrvatski biografski leksikon · Kotromanići",
+          "url": "https://hbl.lzmk.hr/Clanak/kotromanici?handler=ButtonSnimi",
+          "locator": "Prijezda y Esteban I: carta de 23 julio 1290 y resistencia frente a los Šubić; Esteban II: exilio desde 1314, retorno antes del verano de 1319; Tvrtko: partición de 1373, Trebinje en 1377 y recuperación de Hum en 1382."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": true
+    },
+    {
+      "name": "Hum · partes occidentales bajo Hungría",
+      "corridor": "Bosnia y Hum · revisión regional",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1357,
+        "through": 1381
+      },
+      "versions": [
+        {
+          "from": 1357,
+          "ids": [
+            "Mostar",
+            "Drijeva",
+            "Metkovic"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Cesión a Luis I en 1357; recuperación por Tvrtko en 1382. No se aplica este curso occidental a todas las tierras orientales de los Kosača."
+        }
+      ],
+      "note": "Cesión a Luis I en 1357; recuperación por Tvrtko en 1382. No se aplica este curso occidental a todas las tierras orientales de los Kosača.",
+      "sources": [
+        {
+          "title": "Hrvatska enciklopedija · Hum",
+          "url": "https://www.enciklopedija.hr/clanak/hum-podrucje",
+          "locator": "Principado local del siglo XIII; señorío de los Šubić a comienzos del XIV; conquista bosnia de 1326, cesión a Luis I en 1357, recuperación tras 1382 y señoríos Kosača. No acredita un deslinde uniforme de toda la región."
+        },
+        {
+          "title": "Hrvatska enciklopedija · Drijeva",
+          "url": "https://www.enciklopedija.hr/clanak/drijeva",
+          "locator": "Zahumlje en el XIII; Bosnia 1326–1357 y desde 1382; Hrvoje desde 1404, Sandalj desde 1410, Stjepan desde 1435 y episodio real de 1444; destrucción de 1448, presencia veneciana desde 1452, conquista otomana a más tardar en 1493."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": true
+    },
+    {
+      "name": "Hum · Nevesinje bajo Hungría",
+      "corridor": "Bosnia y Hum · revisión regional",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1357,
+        "through": 1372
+      },
+      "versions": [
+        {
+          "from": 1357,
+          "ids": [
+            "Nevesinje"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Atribución regional aproximada antes de los dominios Kosača documentados desde 1373; no se confunde superioridad territorial con propiedad señorial exclusiva."
+        }
+      ],
+      "note": "Atribución regional aproximada antes de los dominios Kosača documentados desde 1373; no se confunde superioridad territorial con propiedad señorial exclusiva.",
+      "sources": [
+        {
+          "title": "Hrvatska enciklopedija · Hum",
+          "url": "https://www.enciklopedija.hr/clanak/hum-podrucje",
+          "locator": "Principado local del siglo XIII; señorío de los Šubić a comienzos del XIV; conquista bosnia de 1326, cesión a Luis I en 1357, recuperación tras 1382 y señoríos Kosača. No acredita un deslinde uniforme de toda la región."
+        },
+        {
+          "title": "Hrvatska enciklopedija · Nevesinje",
+          "url": "https://www.enciklopedija.hr/clanak/nevesinje",
+          "locator": "Posesiones de los Kosača desde 1373; no se extiende automáticamente a todo Hum la cesión de sus partes occidentales a Hungría."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": true
+    },
+    {
+      "name": "Hum · Nevesinje de los Kosača",
+      "corridor": "Bosnia y Hum · revisión regional",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1373,
+        "through": 1391
+      },
+      "versions": [
+        {
+          "from": 1373,
+          "ids": [
+            "Nevesinje"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Posesiones Kosača desde 1373; se mantiene la identidad de Hum, con los titulares y ámbitos personales documentados por separado."
+        }
+      ],
+      "note": "Posesiones Kosača desde 1373; se mantiene la identidad de Hum, con los titulares y ámbitos personales documentados por separado.",
+      "sources": [
+        {
+          "title": "Hrvatska enciklopedija · Nevesinje",
+          "url": "https://www.enciklopedija.hr/clanak/nevesinje",
+          "locator": "Posesiones de los Kosača desde 1373; no se extiende automáticamente a todo Hum la cesión de sus partes occidentales a Hungría."
+        },
+        {
+          "title": "Hrvatska enciklopedija · Sandalj Hranić Kosača",
+          "url": "https://www.enciklopedija.hr/clanak/kosaca-sandalj-hranic",
+          "locator": "Herencia de Vlatko Vuković desde 1392; dominio entre Cetina, Drijeva, Lim y Boka documentado hacia 1410; territorio fuera de la administración del rey bosnio. No se retrotrae a 1392 toda la extensión de 1410."
+        },
+        {
+          "title": "Hrvatska enciklopedija · Stjepan Vukčić Kosača",
+          "url": "https://www.enciklopedija.hr/clanak/kosaca-stjepan-vukcic",
+          "locator": "Sucesión de 1435, título de duque de San Sava en 1448; autonomía territorial; conquista gradual de Hum y Podrinje desde 1465 y presencia veneciana en Neretva. El término de su gobierno no prueba que conservara todo el interior."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": true
+    },
+    {
+      "name": "Hum · recuperación occidental bosnia",
+      "corridor": "Bosnia y Hum · revisión regional",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1382,
+        "through": 1409
+      },
+      "versions": [
+        {
+          "from": 1382,
+          "ids": [
+            "Mostar"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Recuperación de Hum por Tvrtko tras la muerte de Luis I; señoríos locales y consolidación del dominio de Sandalj hacia 1410. No se retrotrae a 1392 todo su ámbito posterior."
+        }
+      ],
+      "note": "Recuperación de Hum por Tvrtko tras la muerte de Luis I; señoríos locales y consolidación del dominio de Sandalj hacia 1410. No se retrotrae a 1392 todo su ámbito posterior.",
+      "sources": [
+        {
+          "title": "Hrvatski biografski leksikon · Kotromanići",
+          "url": "https://hbl.lzmk.hr/Clanak/kotromanici?handler=ButtonSnimi",
+          "locator": "Prijezda y Esteban I: carta de 23 julio 1290 y resistencia frente a los Šubić; Esteban II: exilio desde 1314, retorno antes del verano de 1319; Tvrtko: partición de 1373, Trebinje en 1377 y recuperación de Hum en 1382."
+        },
+        {
+          "title": "Hrvatska enciklopedija · Hum",
+          "url": "https://www.enciklopedija.hr/clanak/hum-podrucje",
+          "locator": "Principado local del siglo XIII; señorío de los Šubić a comienzos del XIV; conquista bosnia de 1326, cesión a Luis I en 1357, recuperación tras 1382 y señoríos Kosača. No acredita un deslinde uniforme de toda la región."
+        },
+        {
+          "title": "Hrvatska enciklopedija · Sandalj Hranić Kosača",
+          "url": "https://www.enciklopedija.hr/clanak/kosaca-sandalj-hranic",
+          "locator": "Herencia de Vlatko Vuković desde 1392; dominio entre Cetina, Drijeva, Lim y Boka documentado hacia 1410; territorio fuera de la administración del rey bosnio. No se retrotrae a 1392 toda la extensión de 1410."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": true
+    },
+    {
+      "name": "Hum · Neretva bajo los reyes bosnios",
+      "corridor": "Bosnia y Hum · revisión regional",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1382,
+        "through": 1403
+      },
+      "versions": [
+        {
+          "from": 1382,
+          "ids": [
+            "Drijeva",
+            "Metkovic"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Mercado y cuenca baja recuperados por Tvrtko en 1382; no implica dominio sobre Dubrovnik, Pelješac ni las islas agrupadas en Slano."
+        }
+      ],
+      "note": "Mercado y cuenca baja recuperados por Tvrtko en 1382; no implica dominio sobre Dubrovnik, Pelješac ni las islas agrupadas en Slano.",
+      "sources": [
+        {
+          "title": "Hrvatska enciklopedija · Drijeva",
+          "url": "https://www.enciklopedija.hr/clanak/drijeva",
+          "locator": "Zahumlje en el XIII; Bosnia 1326–1357 y desde 1382; Hrvoje desde 1404, Sandalj desde 1410, Stjepan desde 1435 y episodio real de 1444; destrucción de 1448, presencia veneciana desde 1452, conquista otomana a más tardar en 1493."
+        },
+        {
+          "title": "Hrvatski biografski leksikon · Kotromanići",
+          "url": "https://hbl.lzmk.hr/Clanak/kotromanici?handler=ButtonSnimi",
+          "locator": "Prijezda y Esteban I: carta de 23 julio 1290 y resistencia frente a los Šubić; Esteban II: exilio desde 1314, retorno antes del verano de 1319; Tvrtko: partición de 1373, Trebinje en 1377 y recuperación de Hum en 1382."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": true
+    },
+    {
+      "name": "Hum · Neretva bajo Hrvoje",
+      "corridor": "Bosnia y Hum · revisión regional",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1404,
+        "through": 1409
+      },
+      "versions": [
+        {
+          "from": 1404,
+          "ids": [
+            "Drijeva",
+            "Metkovic"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Drijeva bajo Hrvoje desde 1404. La celda comprende también Imotski, donde Hrvatinić, Radivojević y Kosača se relevan: no un territorio nuevo con el nombre del individuo."
+        }
+      ],
+      "note": "Drijeva bajo Hrvoje desde 1404. La celda comprende también Imotski, donde Hrvatinić, Radivojević y Kosača se relevan: no un territorio nuevo con el nombre del individuo.",
+      "sources": [
+        {
+          "title": "Hrvatska enciklopedija · Drijeva",
+          "url": "https://www.enciklopedija.hr/clanak/drijeva",
+          "locator": "Zahumlje en el XIII; Bosnia 1326–1357 y desde 1382; Hrvoje desde 1404, Sandalj desde 1410, Stjepan desde 1435 y episodio real de 1444; destrucción de 1448, presencia veneciana desde 1452, conquista otomana a más tardar en 1493."
+        },
+        {
+          "title": "Hrvatska enciklopedija · Imotski",
+          "url": "https://www.enciklopedija.hr/clanak/imotski",
+          "locator": "Corona croata con señoríos locales; episodio bosnio 1382–1391, Kosača 1408–1465; protección veneciana 1465–1493, dominio otomano 1493–1717 y veneciano desde 1717, austríaco desde 1797."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": true
+    },
+    {
+      "name": "Hum · consolidación del señorío occidental",
+      "corridor": "Bosnia y Hum · revisión regional",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1410,
+        "through": 1447
+      },
+      "versions": [
+        {
+          "from": 1410,
+          "ids": [
+            "Mostar",
+            "Drijeva",
+            "Metkovic"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Sandalj y después Stjepan Vukčić. Episodio del rey Tomás en Drijeva en 1444; el reino y los dominios autónomos del señor no son equivalentes."
+        }
+      ],
+      "note": "Sandalj y después Stjepan Vukčić. Episodio del rey Tomás en Drijeva en 1444; el reino y los dominios autónomos del señor no son equivalentes.",
+      "sources": [
+        {
+          "title": "Hrvatska enciklopedija · Sandalj Hranić Kosača",
+          "url": "https://www.enciklopedija.hr/clanak/kosaca-sandalj-hranic",
+          "locator": "Herencia de Vlatko Vuković desde 1392; dominio entre Cetina, Drijeva, Lim y Boka documentado hacia 1410; territorio fuera de la administración del rey bosnio. No se retrotrae a 1392 toda la extensión de 1410."
+        },
+        {
+          "title": "Hrvatska enciklopedija · Drijeva",
+          "url": "https://www.enciklopedija.hr/clanak/drijeva",
+          "locator": "Zahumlje en el XIII; Bosnia 1326–1357 y desde 1382; Hrvoje desde 1404, Sandalj desde 1410, Stjepan desde 1435 y episodio real de 1444; destrucción de 1448, presencia veneciana desde 1452, conquista otomana a más tardar en 1493."
+        },
+        {
+          "title": "Hrvatska enciklopedija · Stjepan Vukčić Kosača",
+          "url": "https://www.enciklopedija.hr/clanak/kosaca-stjepan-vukcic",
+          "locator": "Sucesión de 1435, título de duque de San Sava en 1448; autonomía territorial; conquista gradual de Hum y Podrinje desde 1465 y presencia veneciana en Neretva. El término de su gobierno no prueba que conservara todo el interior."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": true
+    },
+    {
+      "name": "Herzegovina · Neretva anterior a las conquistas",
+      "corridor": "Bosnia y Hum · revisión regional",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1448,
+        "through": 1464
+      },
+      "versions": [
+        {
+          "from": 1448,
+          "ids": [
+            "Mostar",
+            "Nevesinje",
+            "Drijeva",
+            "Metkovic"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Dominios del duque de San Sava; Drijeva comprende también Imotski y cambia internamente después. Los derechos señoriales no prueban ocupación exclusiva de cada punto."
+        }
+      ],
+      "note": "Dominios del duque de San Sava; Drijeva comprende también Imotski y cambia internamente después. Los derechos señoriales no prueban ocupación exclusiva de cada punto.",
+      "sources": [
+        {
+          "title": "Hrvatska enciklopedija · Stjepan Vukčić Kosača",
+          "url": "https://www.enciklopedija.hr/clanak/kosaca-stjepan-vukcic",
+          "locator": "Sucesión de 1435, título de duque de San Sava en 1448; autonomía territorial; conquista gradual de Hum y Podrinje desde 1465 y presencia veneciana en Neretva. El término de su gobierno no prueba que conservara todo el interior."
+        },
+        {
+          "title": "Hrvatska enciklopedija · Mostar",
+          "url": "https://www.enciklopedija.hr/clanak/mostar",
+          "locator": "Posesiones Kosača en torno al puente, primera mención de las torres en 1454, conquista otomana de 1466. El nacimiento de la ciudad no constituye la fecha inicial de su superficie."
+        },
+        {
+          "title": "Hrvatska enciklopedija · Drijeva",
+          "url": "https://www.enciklopedija.hr/clanak/drijeva",
+          "locator": "Zahumlje en el XIII; Bosnia 1326–1357 y desde 1382; Hrvoje desde 1404, Sandalj desde 1410, Stjepan desde 1435 y episodio real de 1444; destrucción de 1448, presencia veneciana desde 1452, conquista otomana a más tardar en 1493."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": true
+    },
+    {
+      "name": "Herzegovina · Mostar en 1465",
+      "corridor": "Bosnia y Hum · revisión regional",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1465,
+        "through": 1465
+      },
+      "versions": [
+        {
+          "from": 1465,
+          "ids": [
+            "Mostar"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "La entrada específica de Mostar fecha su conquista en 1466; no desaparece en 1465 porque ese sea el inicio de las campañas generales."
+        }
+      ],
+      "note": "La entrada específica de Mostar fecha su conquista en 1466; no desaparece en 1465 porque ese sea el inicio de las campañas generales.",
+      "sources": [
+        {
+          "title": "Hrvatska enciklopedija · Mostar",
+          "url": "https://www.enciklopedija.hr/clanak/mostar",
+          "locator": "Posesiones Kosača en torno al puente, primera mención de las torres en 1454, conquista otomana de 1466. El nacimiento de la ciudad no constituye la fecha inicial de su superficie."
+        },
+        {
+          "title": "Hrvatska enciklopedija · Stjepan Vukčić Kosača",
+          "url": "https://www.enciklopedija.hr/clanak/kosaca-stjepan-vukcic",
+          "locator": "Sucesión de 1435, título de duque de San Sava en 1448; autonomía territorial; conquista gradual de Hum y Podrinje desde 1465 y presencia veneciana en Neretva. El término de su gobierno no prueba que conservara todo el interior."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": true
+    },
+    {
+      "name": "Herzegovina · Nevesinje en transición",
+      "corridor": "Bosnia y Hum · revisión regional",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1465,
+        "through": 1465
+      },
+      "versions": [
+        {
+          "from": 1465,
+          "ids": [
+            "Nevesinje"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Conquista progresiva desde 1465, completada antes del establecimiento del sanjacado; año de transición territorial."
+        }
+      ],
+      "note": "Conquista progresiva desde 1465, completada antes del establecimiento del sanjacado; año de transición territorial.",
+      "sources": [
+        {
+          "title": "Hrvatska enciklopedija · Stjepan Vukčić Kosača",
+          "url": "https://www.enciklopedija.hr/clanak/kosaca-stjepan-vukcic",
+          "locator": "Sucesión de 1435, título de duque de San Sava en 1448; autonomía territorial; conquista gradual de Hum y Podrinje desde 1465 y presencia veneciana en Neretva. El término de su gobierno no prueba que conservara todo el interior."
+        },
+        {
+          "title": "Hrvatska enciklopedija · Hercegovački sandžak",
+          "url": "https://www.enciklopedija.hr/clanak/hercegovacki-sandzak",
+          "locator": "Conquista de las tierras Kosača y Blagaj en 1466; sanjacado desde 1470, con distritos de Foča, Prijepolje, Pljevlja, Mostar, Nevesinje, Imotski y Gabela. La creación administrativa no fecha todas las conquistas."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": true,
+      "authorityCondition": "control disputado"
+    },
+    {
+      "name": "Hum · señoríos occidentales bajo protección veneciana",
+      "corridor": "Bosnia y Hum · revisión regional",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1465,
+        "through": 1492
+      },
+      "versions": [
+        {
+          "from": 1465,
+          "ids": [
+            "Drijeva"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Imotski y las posesiones de los Vlatković bajo protección veneciana; conquista otomana de Gabela a más tardar en 1493. La protección no prueba administración veneciana directa de toda la celda."
+        }
+      ],
+      "note": "Imotski y las posesiones de los Vlatković bajo protección veneciana; conquista otomana de Gabela a más tardar en 1493. La protección no prueba administración veneciana directa de toda la celda.",
+      "sources": [
+        {
+          "title": "Hrvatska enciklopedija · Imotski",
+          "url": "https://www.enciklopedija.hr/clanak/imotski",
+          "locator": "Corona croata con señoríos locales; episodio bosnio 1382–1391, Kosača 1408–1465; protección veneciana 1465–1493, dominio otomano 1493–1717 y veneciano desde 1717, austríaco desde 1797."
+        },
+        {
+          "title": "Hrvatska enciklopedija · Vlatkovići",
+          "url": "https://www.enciklopedija.hr/clanak/vlatkovici",
+          "locator": "Posesiones al oeste de Neretva y Vratar; vasallos de Kosača, restitución de 1466 y protección veneciana de 1465. La protección no convierte todos los señoríos en administración veneciana directa."
+        },
+        {
+          "title": "Hrvatska enciklopedija · Gabela",
+          "url": "https://www.enciklopedija.hr/clanak/gabela",
+          "locator": "Dominio otomano a más tardar en 1493; ocupación veneciana de 1693, derribo en 1715 y retorno otomano desde 1718. La celda Drijeva también incluye Imotski y no sigue una única historia urbana."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": true,
+      "authorityCondition": "autonomía tributaria"
+    },
+    {
+      "name": "Hum · señoríos de Neretva anteriores a 1499",
+      "corridor": "Bosnia y Hum · revisión regional",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1465,
+        "through": 1498
+      },
+      "versions": [
+        {
+          "from": 1465,
+          "ids": [
+            "Metkovic"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Señoríos de la cuenca baja y protección veneciana de los Vlatković; la entrada de Metković fecha el dominio otomano de la comarca en 1499. No se rellena como territorio del duque fallecido."
+        }
+      ],
+      "note": "Señoríos de la cuenca baja y protección veneciana de los Vlatković; la entrada de Metković fecha el dominio otomano de la comarca en 1499. No se rellena como territorio del duque fallecido.",
+      "sources": [
+        {
+          "title": "Hrvatska enciklopedija · Vlatkovići",
+          "url": "https://www.enciklopedija.hr/clanak/vlatkovici",
+          "locator": "Posesiones al oeste de Neretva y Vratar; vasallos de Kosača, restitución de 1466 y protección veneciana de 1465. La protección no convierte todos los señoríos en administración veneciana directa."
+        },
+        {
+          "title": "Hrvatska enciklopedija · Metković",
+          "url": "https://www.enciklopedija.hr/clanak/metkovic",
+          "locator": "Primera mención de 1422, dominio otomano de la Neretvanska krajina desde 1499, ocupación veneciana de 1694; la superficie incluye el delta y localidades con otros cambios de control."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": true
+    },
+    {
+      "name": "Serbia · Travunia medieval",
+      "corridor": "Bosnia y Hum · revisión regional",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1200,
+        "through": 1372
+      },
+      "versions": [
+        {
+          "from": 1200,
+          "ids": [
+            "Trebinje"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Nemanjić y Vojinović. El ámbito local no es una conquista uniforme de todos los titulares de Serbia."
+        }
+      ],
+      "note": "Nemanjić y Vojinović. El ámbito local no es una conquista uniforme de todos los titulares de Serbia.",
+      "sources": [
+        {
+          "title": "Hrvatska enciklopedija · Trebinje",
+          "url": "https://www.enciklopedija.hr/clanak/trebinje",
+          "locator": "Nemanjić y Vojinović; incorporación bosnia 1378 (HBL: 1377); Pavlović, Kosača 1438–1466, nahija otomana a más tardar en 1467; ocupación veneciana 1694–1699."
+        },
+        {
+          "title": "Hrvatski biografski leksikon · Kotromanići",
+          "url": "https://hbl.lzmk.hr/Clanak/kotromanici?handler=ButtonSnimi",
+          "locator": "Prijezda y Esteban I: carta de 23 julio 1290 y resistencia frente a los Šubić; Esteban II: exilio desde 1314, retorno antes del verano de 1319; Tvrtko: partición de 1373, Trebinje en 1377 y recuperación de Hum en 1382."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": true
+    },
+    {
+      "name": "Travunia · señorío de los Balšić",
+      "corridor": "Bosnia y Hum · revisión regional",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1373,
+        "through": 1376
+      },
+      "versions": [
+        {
+          "from": 1373,
+          "ids": [
+            "Trebinje"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Dominio de los Balšić tras el reparto oriental; Tvrtko promueve una rebelión y ocupa Trebinje en 1377. No se prolonga artificialmente la soberanía de un imperio serbio extinguido."
+        }
+      ],
+      "note": "Dominio de los Balšić tras el reparto oriental; Tvrtko promueve una rebelión y ocupa Trebinje en 1377. No se prolonga artificialmente la soberanía de un imperio serbio extinguido.",
+      "sources": [
+        {
+          "title": "Hrvatski biografski leksikon · Kotromanići",
+          "url": "https://hbl.lzmk.hr/Clanak/kotromanici?handler=ButtonSnimi",
+          "locator": "Prijezda y Esteban I: carta de 23 julio 1290 y resistencia frente a los Šubić; Esteban II: exilio desde 1314, retorno antes del verano de 1319; Tvrtko: partición de 1373, Trebinje en 1377 y recuperación de Hum en 1382."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": true
+    },
+    {
+      "name": "Bosnia · Trebinje desde Tvrtko",
+      "corridor": "Bosnia y Hum · revisión regional",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1377,
+        "through": 1391
+      },
+      "versions": [
+        {
+          "from": 1377,
+          "ids": [
+            "Trebinje"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Se adopta el corte de 1377 del repertorio biográfico, con alternativa 1378 en la entrada local. Fecha aproximada anual, sin mover Dubrovnik ni Kotor."
+        }
+      ],
+      "note": "Se adopta el corte de 1377 del repertorio biográfico, con alternativa 1378 en la entrada local. Fecha aproximada anual, sin mover Dubrovnik ni Kotor.",
+      "sources": [
+        {
+          "title": "Hrvatski biografski leksikon · Kotromanići",
+          "url": "https://hbl.lzmk.hr/Clanak/kotromanici?handler=ButtonSnimi",
+          "locator": "Prijezda y Esteban I: carta de 23 julio 1290 y resistencia frente a los Šubić; Esteban II: exilio desde 1314, retorno antes del verano de 1319; Tvrtko: partición de 1373, Trebinje en 1377 y recuperación de Hum en 1382."
+        },
+        {
+          "title": "Hrvatska enciklopedija · Trebinje",
+          "url": "https://www.enciklopedija.hr/clanak/trebinje",
+          "locator": "Nemanjić y Vojinović; incorporación bosnia 1378 (HBL: 1377); Pavlović, Kosača 1438–1466, nahija otomana a más tardar en 1467; ocupación veneciana 1694–1699."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": true
+    },
+    {
+      "name": "Travunia · señorío de los Pavlović",
+      "corridor": "Bosnia y Hum · revisión regional",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1392,
+        "through": 1437
+      },
+      "versions": [
+        {
+          "from": 1392,
+          "ids": [
+            "Trebinje"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Señoríos de los Pavlović en época bosnia; el comienzo de 1392 es un corte convencional posterior a Tvrtko, no una adquisición precisamente fechada."
+        }
+      ],
+      "note": "Señoríos de los Pavlović en época bosnia; el comienzo de 1392 es un corte convencional posterior a Tvrtko, no una adquisición precisamente fechada.",
+      "sources": [
+        {
+          "title": "Hrvatska enciklopedija · Trebinje",
+          "url": "https://www.enciklopedija.hr/clanak/trebinje",
+          "locator": "Nemanjić y Vojinović; incorporación bosnia 1378 (HBL: 1377); Pavlović, Kosača 1438–1466, nahija otomana a más tardar en 1467; ocupación veneciana 1694–1699."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": true
+    },
+    {
+      "name": "Hum · Trebinje bajo los Kosača",
+      "corridor": "Bosnia y Hum · revisión regional",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1438,
+        "through": 1447
+      },
+      "versions": [
+        {
+          "from": 1438,
+          "ids": [
+            "Trebinje"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Dominio Kosača documentado en Trebinje desde 1438; no se incorpora antes por proximidad a Mostar."
+        }
+      ],
+      "note": "Dominio Kosača documentado en Trebinje desde 1438; no se incorpora antes por proximidad a Mostar.",
+      "sources": [
+        {
+          "title": "Hrvatska enciklopedija · Trebinje",
+          "url": "https://www.enciklopedija.hr/clanak/trebinje",
+          "locator": "Nemanjić y Vojinović; incorporación bosnia 1378 (HBL: 1377); Pavlović, Kosača 1438–1466, nahija otomana a más tardar en 1467; ocupación veneciana 1694–1699."
+        },
+        {
+          "title": "Hrvatska enciklopedija · Stjepan Vukčić Kosača",
+          "url": "https://www.enciklopedija.hr/clanak/kosaca-stjepan-vukcic",
+          "locator": "Sucesión de 1435, título de duque de San Sava en 1448; autonomía territorial; conquista gradual de Hum y Podrinje desde 1465 y presencia veneciana en Neretva. El término de su gobierno no prueba que conservara todo el interior."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": true
+    },
+    {
+      "name": "Herzegovina · Trebinje",
+      "corridor": "Bosnia y Hum · revisión regional",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1448,
+        "through": 1466
+      },
+      "versions": [
+        {
+          "from": 1448,
+          "ids": [
+            "Trebinje"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Continuidad del dominio ducal; nahija otomana a más tardar en 1467."
+        }
+      ],
+      "note": "Continuidad del dominio ducal; nahija otomana a más tardar en 1467.",
+      "sources": [
+        {
+          "title": "Hrvatska enciklopedija · Trebinje",
+          "url": "https://www.enciklopedija.hr/clanak/trebinje",
+          "locator": "Nemanjić y Vojinović; incorporación bosnia 1378 (HBL: 1377); Pavlović, Kosača 1438–1466, nahija otomana a más tardar en 1467; ocupación veneciana 1694–1699."
+        },
+        {
+          "title": "Hrvatska enciklopedija · Stjepan Vukčić Kosača",
+          "url": "https://www.enciklopedija.hr/clanak/kosaca-stjepan-vukcic",
+          "locator": "Sucesión de 1435, título de duque de San Sava en 1448; autonomía territorial; conquista gradual de Hum y Podrinje desde 1465 y presencia veneciana en Neretva. El término de su gobierno no prueba que conservara todo el interior."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": true
+    },
+    {
+      "name": "Bosnia · comarca minera oriental",
+      "corridor": "Bosnia y Hum · revisión regional",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1200,
+        "through": 1409
+      },
+      "versions": [
+        {
+          "from": 1200,
+          "ids": [
+            "Srebrenica"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Celda del valle minero y del Drina, no la fecha de fundación de Srebrenica. Atribución medieval regional aproximada; los señores y minas particulares no son posesión real directa uniforme."
+        }
+      ],
+      "note": "Celda del valle minero y del Drina, no la fecha de fundación de Srebrenica. Atribución medieval regional aproximada; los señores y minas particulares no son posesión real directa uniforme.",
+      "sources": [
+        {
+          "title": "Hrvatska enciklopedija · Bosna i Hercegovina",
+          "url": "https://www.enciklopedija.hr/clanak/bosna-i-hercegovina",
+          "locator": "Historia medieval: Kulin, límites entre Drina y Grmeč; división de 1253; Usora/Soli en 1324; Vrhbosna/Hodidjed bajo los otomanos en 1435; conquista de 1463. La síntesis regional y la entrada Usora difieren sobre la incorporación c.1204."
+        },
+        {
+          "title": "Hrvatska enciklopedija · Srebrenica",
+          "url": "https://www.enciklopedija.hr/clanak/srebrenica",
+          "locator": "Bosnia hasta la entrega a Sigismundo en 1410, concesión al déspota en 1411, ocupación otomana durante 1439–1444 y dominio definitivo desde 1463; no el banato de Srebrenik."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": true
+    },
+    {
+      "name": "Hungría · Srebrenica de 1410",
+      "corridor": "Bosnia y Hum · revisión regional",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1410,
+        "through": 1410
+      },
+      "versions": [
+        {
+          "from": 1410,
+          "ids": [
+            "Srebrenica"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Entrega de la plaza y de otras fortalezas de Usora a Sigismundo; cesión al déspota en el año siguiente."
+        }
+      ],
+      "note": "Entrega de la plaza y de otras fortalezas de Usora a Sigismundo; cesión al déspota en el año siguiente.",
+      "sources": [
+        {
+          "title": "Hrvatska enciklopedija · Srebrenica",
+          "url": "https://www.enciklopedija.hr/clanak/srebrenica",
+          "locator": "Bosnia hasta la entrega a Sigismundo en 1410, concesión al déspota en 1411, ocupación otomana durante 1439–1444 y dominio definitivo desde 1463; no el banato de Srebrenik."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": true
+    },
+    {
+      "name": "Serbia · Srebrenica 1411",
+      "corridor": "Bosnia y Hum · revisión regional",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1411,
+        "through": 1438
+      },
+      "versions": [
+        {
+          "from": 1411,
+          "ids": [
+            "Srebrenica"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Dominio de los déspotas y pugna con los reyes bosnios, con recuperaciones breves; núcleo a escala anual, no posesión exclusiva constante."
+        }
+      ],
+      "note": "Dominio de los déspotas y pugna con los reyes bosnios, con recuperaciones breves; núcleo a escala anual, no posesión exclusiva constante.",
+      "sources": [
+        {
+          "title": "Hrvatska enciklopedija · Srebrenica",
+          "url": "https://www.enciklopedija.hr/clanak/srebrenica",
+          "locator": "Bosnia hasta la entrega a Sigismundo en 1410, concesión al déspota en 1411, ocupación otomana durante 1439–1444 y dominio definitivo desde 1463; no el banato de Srebrenik."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": true
+    },
+    {
+      "name": "Serbia · Srebrenica 1444",
+      "corridor": "Bosnia y Hum · revisión regional",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1444,
+        "through": 1458
+      },
+      "versions": [
+        {
+          "from": 1444,
+          "ids": [
+            "Srebrenica"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Dominio de los déspotas y pugna con los reyes bosnios, con recuperaciones breves; núcleo a escala anual, no posesión exclusiva constante."
+        }
+      ],
+      "note": "Dominio de los déspotas y pugna con los reyes bosnios, con recuperaciones breves; núcleo a escala anual, no posesión exclusiva constante.",
+      "sources": [
+        {
+          "title": "Hrvatska enciklopedija · Srebrenica",
+          "url": "https://www.enciklopedija.hr/clanak/srebrenica",
+          "locator": "Bosnia hasta la entrega a Sigismundo en 1410, concesión al déspota en 1411, ocupación otomana durante 1439–1444 y dominio definitivo desde 1463; no el banato de Srebrenik."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": true,
+      "authorityCondition": "control disputado"
+    },
+    {
+      "name": "Bosnia · Srebrenica tras la caída del despotado",
+      "corridor": "Bosnia y Hum · revisión regional",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1459,
+        "through": 1462
+      },
+      "versions": [
+        {
+          "from": 1459,
+          "ids": [
+            "Srebrenica"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Ámbito bosnio después de la caída del despotado en 1459 y antes de la conquista definitiva de 1463; frente de disputa."
+        }
+      ],
+      "note": "Ámbito bosnio después de la caída del despotado en 1459 y antes de la conquista definitiva de 1463; frente de disputa.",
+      "sources": [
+        {
+          "title": "Hrvatska enciklopedija · Srebrenica",
+          "url": "https://www.enciklopedija.hr/clanak/srebrenica",
+          "locator": "Bosnia hasta la entrega a Sigismundo en 1410, concesión al déspota en 1411, ocupación otomana durante 1439–1444 y dominio definitivo desde 1463; no el banato de Srebrenik."
+        },
+        {
+          "title": "Hrvatska enciklopedija · Bosna i Hercegovina",
+          "url": "https://www.enciklopedija.hr/clanak/bosna-i-hercegovina",
+          "locator": "Historia medieval: Kulin, límites entre Drina y Grmeč; división de 1253; Usora/Soli en 1324; Vrhbosna/Hodidjed bajo los otomanos en 1435; conquista de 1463. La síntesis regional y la entrada Usora difieren sobre la incorporación c.1204."
+        },
+        {
+          "title": "Ana Zadro y Goran Mijočević · Srednjovjekovni motivi (Hercegovina 8, 2022)",
+          "url": "https://hrcak.srce.hr/en/file/410640",
+          "locator": "Sección Srebrenica: dominio de los déspotas tras 1410–1411 y breve retorno bosnio después de la caída del despotado en 1459; frente a la conquista definitiva otomana de 1463 recogida en la entrada local."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": true,
+      "authorityCondition": "control disputado"
+    },
+    {
+      "name": "Bosnia otomana · Vrhbosna 1435",
+      "corridor": "Bosnia y Hum · revisión regional",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1435,
+        "through": 1800
+      },
+      "versions": [
+        {
+          "from": 1435,
+          "ids": [
+            "Vrhbosna"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Curso territorial otomano documentado para este ámbito. Los cortes anuales aproximan las campañas y no trasladan la fecha de una ciudad a todas las tierras de la provincia."
+        }
+      ],
+      "note": "Curso territorial otomano documentado para este ámbito. Los cortes anuales aproximan las campañas y no trasladan la fecha de una ciudad a todas las tierras de la provincia.",
+      "sources": [
+        {
+          "title": "Hrvatska enciklopedija · Bosna i Hercegovina",
+          "url": "https://www.enciklopedija.hr/clanak/bosna-i-hercegovina",
+          "locator": "Historia medieval: Kulin, límites entre Drina y Grmeč; división de 1253; Usora/Soli en 1324; Vrhbosna/Hodidjed bajo los otomanos en 1435; conquista de 1463. La síntesis regional y la entrada Usora difieren sobre la incorporación c.1204."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": true
+    },
+    {
+      "name": "Bosnia otomana · primera ocupación de Srebrenica",
+      "corridor": "Bosnia y Hum · revisión regional",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1439,
+        "through": 1443
+      },
+      "versions": [
+        {
+          "from": 1439,
+          "ids": [
+            "Srebrenica"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Ocupación durante la primera caída del despotado; la restauración de 1444 interrumpe esta fase."
+        }
+      ],
+      "note": "Ocupación durante la primera caída del despotado; la restauración de 1444 interrumpe esta fase.",
+      "sources": [
+        {
+          "title": "Hrvatska enciklopedija · Srebrenica",
+          "url": "https://www.enciklopedija.hr/clanak/srebrenica",
+          "locator": "Bosnia hasta la entrega a Sigismundo en 1410, concesión al déspota en 1411, ocupación otomana durante 1439–1444 y dominio definitivo desde 1463; no el banato de Srebrenik."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": true
+    },
+    {
+      "name": "Bosnia otomana · Borac 1463",
+      "corridor": "Bosnia y Hum · revisión regional",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1463,
+        "through": 1800
+      },
+      "versions": [
+        {
+          "from": 1463,
+          "ids": [
+            "Borac"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Curso territorial otomano documentado para este ámbito. Los cortes anuales aproximan las campañas y no trasladan la fecha de una ciudad a todas las tierras de la provincia."
+        }
+      ],
+      "note": "Curso territorial otomano documentado para este ámbito. Los cortes anuales aproximan las campañas y no trasladan la fecha de una ciudad a todas las tierras de la provincia.",
+      "sources": [
+        {
+          "title": "Hrvatska enciklopedija · Bosna i Hercegovina",
+          "url": "https://www.enciklopedija.hr/clanak/bosna-i-hercegovina",
+          "locator": "Historia medieval: Kulin, límites entre Drina y Grmeč; división de 1253; Usora/Soli en 1324; Vrhbosna/Hodidjed bajo los otomanos en 1435; conquista de 1463. La síntesis regional y la entrada Usora difieren sobre la incorporación c.1204."
+        },
+        {
+          "title": "Hrvatski povijesni muzej · Marko Vego, mapa medieval de Bosnia (1957)",
+          "url": "https://kartevgi.hismus.hr/karte/povijesna-karta-srednjovjekovne-bosne/",
+          "locator": "HPM 104339, dos hojas: contraste de comarcas, cuencas y cordilleras. Combina épocas y posesiones temporales; las fechas se verifican en las entradas escritas, no por el color de la carta."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": true
+    },
+    {
+      "name": "Bosnia otomana · Olovo 1463",
+      "corridor": "Bosnia y Hum · revisión regional",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1463,
+        "through": 1800
+      },
+      "versions": [
+        {
+          "from": 1463,
+          "ids": [
+            "Olovo"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Curso territorial otomano documentado para este ámbito. Los cortes anuales aproximan las campañas y no trasladan la fecha de una ciudad a todas las tierras de la provincia."
+        }
+      ],
+      "note": "Curso territorial otomano documentado para este ámbito. Los cortes anuales aproximan las campañas y no trasladan la fecha de una ciudad a todas las tierras de la provincia.",
+      "sources": [
+        {
+          "title": "Hrvatska enciklopedija · Bosna i Hercegovina",
+          "url": "https://www.enciklopedija.hr/clanak/bosna-i-hercegovina",
+          "locator": "Historia medieval: Kulin, límites entre Drina y Grmeč; división de 1253; Usora/Soli en 1324; Vrhbosna/Hodidjed bajo los otomanos en 1435; conquista de 1463. La síntesis regional y la entrada Usora difieren sobre la incorporación c.1204."
+        },
+        {
+          "title": "Hrvatski povijesni muzej · Marko Vego, mapa medieval de Bosnia (1957)",
+          "url": "https://kartevgi.hismus.hr/karte/povijesna-karta-srednjovjekovne-bosne/",
+          "locator": "HPM 104339, dos hojas: contraste de comarcas, cuencas y cordilleras. Combina épocas y posesiones temporales; las fechas se verifican en las entradas escritas, no por el color de la carta."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": true
+    },
+    {
+      "name": "Bosnia otomana · Zenica 1463",
+      "corridor": "Bosnia y Hum · revisión regional",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1463,
+        "through": 1800
+      },
+      "versions": [
+        {
+          "from": 1463,
+          "ids": [
+            "Zenica"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Curso territorial otomano documentado para este ámbito. Los cortes anuales aproximan las campañas y no trasladan la fecha de una ciudad a todas las tierras de la provincia."
+        }
+      ],
+      "note": "Curso territorial otomano documentado para este ámbito. Los cortes anuales aproximan las campañas y no trasladan la fecha de una ciudad a todas las tierras de la provincia.",
+      "sources": [
+        {
+          "title": "Hrvatska enciklopedija · Bosna i Hercegovina",
+          "url": "https://www.enciklopedija.hr/clanak/bosna-i-hercegovina",
+          "locator": "Historia medieval: Kulin, límites entre Drina y Grmeč; división de 1253; Usora/Soli en 1324; Vrhbosna/Hodidjed bajo los otomanos en 1435; conquista de 1463. La síntesis regional y la entrada Usora difieren sobre la incorporación c.1204."
+        },
+        {
+          "title": "Hrvatski povijesni muzej · Marko Vego, mapa medieval de Bosnia (1957)",
+          "url": "https://kartevgi.hismus.hr/karte/povijesna-karta-srednjovjekovne-bosne/",
+          "locator": "HPM 104339, dos hojas: contraste de comarcas, cuencas y cordilleras. Combina épocas y posesiones temporales; las fechas se verifican en las entradas escritas, no por el color de la carta."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": true
+    },
+    {
+      "name": "Bosnia otomana · Dinaric_Alps 3 1463",
+      "corridor": "Bosnia y Hum · revisión regional",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1463,
+        "through": 1800
+      },
+      "versions": [
+        {
+          "from": 1463,
+          "ids": [
+            "Dinaric_Alps3"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Curso territorial otomano documentado para este ámbito. Los cortes anuales aproximan las campañas y no trasladan la fecha de una ciudad a todas las tierras de la provincia."
+        }
+      ],
+      "note": "Curso territorial otomano documentado para este ámbito. Los cortes anuales aproximan las campañas y no trasladan la fecha de una ciudad a todas las tierras de la provincia.",
+      "sources": [
+        {
+          "title": "Hrvatska enciklopedija · Bosna i Hercegovina",
+          "url": "https://www.enciklopedija.hr/clanak/bosna-i-hercegovina",
+          "locator": "Historia medieval: Kulin, límites entre Drina y Grmeč; división de 1253; Usora/Soli en 1324; Vrhbosna/Hodidjed bajo los otomanos en 1435; conquista de 1463. La síntesis regional y la entrada Usora difieren sobre la incorporación c.1204."
+        },
+        {
+          "title": "Hrvatski povijesni muzej · Marko Vego, mapa medieval de Bosnia (1957)",
+          "url": "https://kartevgi.hismus.hr/karte/povijesna-karta-srednjovjekovne-bosne/",
+          "locator": "HPM 104339, dos hojas: contraste de comarcas, cuencas y cordilleras. Combina épocas y posesiones temporales; las fechas se verifican en las entradas escritas, no por el color de la carta."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": true
+    },
+    {
+      "name": "Bosnia otomana · Visegrad 1463",
+      "corridor": "Bosnia y Hum · revisión regional",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1463,
+        "through": 1800
+      },
+      "versions": [
+        {
+          "from": 1463,
+          "ids": [
+            "Visegrad"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Curso territorial otomano documentado para este ámbito. Los cortes anuales aproximan las campañas y no trasladan la fecha de una ciudad a todas las tierras de la provincia."
+        }
+      ],
+      "note": "Curso territorial otomano documentado para este ámbito. Los cortes anuales aproximan las campañas y no trasladan la fecha de una ciudad a todas las tierras de la provincia.",
+      "sources": [
+        {
+          "title": "Hrvatska enciklopedija · Bosna i Hercegovina",
+          "url": "https://www.enciklopedija.hr/clanak/bosna-i-hercegovina",
+          "locator": "Historia medieval: Kulin, límites entre Drina y Grmeč; división de 1253; Usora/Soli en 1324; Vrhbosna/Hodidjed bajo los otomanos en 1435; conquista de 1463. La síntesis regional y la entrada Usora difieren sobre la incorporación c.1204."
+        },
+        {
+          "title": "Hrvatski povijesni muzej · Marko Vego, mapa medieval de Bosnia (1957)",
+          "url": "https://kartevgi.hismus.hr/karte/povijesna-karta-srednjovjekovne-bosne/",
+          "locator": "HPM 104339, dos hojas: contraste de comarcas, cuencas y cordilleras. Combina épocas y posesiones temporales; las fechas se verifican en las entradas escritas, no por el color de la carta."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": true
+    },
+    {
+      "name": "Bosnia otomana · Dinaric_Alps 4 1463",
+      "corridor": "Bosnia y Hum · revisión regional",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1463,
+        "through": 1800
+      },
+      "versions": [
+        {
+          "from": 1463,
+          "ids": [
+            "Dinaric_Alps4"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Curso territorial otomano documentado para este ámbito. Los cortes anuales aproximan las campañas y no trasladan la fecha de una ciudad a todas las tierras de la provincia."
+        }
+      ],
+      "note": "Curso territorial otomano documentado para este ámbito. Los cortes anuales aproximan las campañas y no trasladan la fecha de una ciudad a todas las tierras de la provincia.",
+      "sources": [
+        {
+          "title": "Hrvatska enciklopedija · Bosna i Hercegovina",
+          "url": "https://www.enciklopedija.hr/clanak/bosna-i-hercegovina",
+          "locator": "Historia medieval: Kulin, límites entre Drina y Grmeč; división de 1253; Usora/Soli en 1324; Vrhbosna/Hodidjed bajo los otomanos en 1435; conquista de 1463. La síntesis regional y la entrada Usora difieren sobre la incorporación c.1204."
+        },
+        {
+          "title": "Hrvatski povijesni muzej · Marko Vego, mapa medieval de Bosnia (1957)",
+          "url": "https://kartevgi.hismus.hr/karte/povijesna-karta-srednjovjekovne-bosne/",
+          "locator": "HPM 104339, dos hojas: contraste de comarcas, cuencas y cordilleras. Combina épocas y posesiones temporales; las fechas se verifican en las entradas escritas, no por el color de la carta."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": true
+    },
+    {
+      "name": "Bosnia otomana · Glamoc 1463",
+      "corridor": "Bosnia y Hum · revisión regional",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1463,
+        "through": 1800
+      },
+      "versions": [
+        {
+          "from": 1463,
+          "ids": [
+            "Glamoc"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Curso territorial otomano documentado para este ámbito. Los cortes anuales aproximan las campañas y no trasladan la fecha de una ciudad a todas las tierras de la provincia."
+        }
+      ],
+      "note": "Curso territorial otomano documentado para este ámbito. Los cortes anuales aproximan las campañas y no trasladan la fecha de una ciudad a todas las tierras de la provincia.",
+      "sources": [
+        {
+          "title": "Hrvatska enciklopedija · Bosna i Hercegovina",
+          "url": "https://www.enciklopedija.hr/clanak/bosna-i-hercegovina",
+          "locator": "Historia medieval: Kulin, límites entre Drina y Grmeč; división de 1253; Usora/Soli en 1324; Vrhbosna/Hodidjed bajo los otomanos en 1435; conquista de 1463. La síntesis regional y la entrada Usora difieren sobre la incorporación c.1204."
+        },
+        {
+          "title": "Hrvatski povijesni muzej · Marko Vego, mapa medieval de Bosnia (1957)",
+          "url": "https://kartevgi.hismus.hr/karte/povijesna-karta-srednjovjekovne-bosne/",
+          "locator": "HPM 104339, dos hojas: contraste de comarcas, cuencas y cordilleras. Combina épocas y posesiones temporales; las fechas se verifican en las entradas escritas, no por el color de la carta."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": true
+    },
+    {
+      "name": "Bosnia otomana · Ustikolina 1465",
+      "corridor": "Bosnia y Hum · revisión regional",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1465,
+        "through": 1800
+      },
+      "versions": [
+        {
+          "from": 1465,
+          "ids": [
+            "Ustikolina"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Curso territorial otomano documentado para este ámbito. Los cortes anuales aproximan las campañas y no trasladan la fecha de una ciudad a todas las tierras de la provincia."
+        }
+      ],
+      "note": "Curso territorial otomano documentado para este ámbito. Los cortes anuales aproximan las campañas y no trasladan la fecha de una ciudad a todas las tierras de la provincia.",
+      "sources": [
+        {
+          "title": "Hrvatska enciklopedija · Stjepan Vukčić Kosača",
+          "url": "https://www.enciklopedija.hr/clanak/kosaca-stjepan-vukcic",
+          "locator": "Sucesión de 1435, título de duque de San Sava en 1448; autonomía territorial; conquista gradual de Hum y Podrinje desde 1465 y presencia veneciana en Neretva. El término de su gobierno no prueba que conservara todo el interior."
+        },
+        {
+          "title": "Nenad Moačanin · TDV · Foça",
+          "url": "https://islamansiklopedisi.org.tr/foca",
+          "locator": "Foča de Bosnia: dominio otomano desde 1465 y sede del sanjacado en 1470. Se aplica al ámbito regional de Ustikolina, no al ID Foca, situado en Anatolia."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": true
+    },
+    {
+      "name": "Bosnia otomana · Gacko 1465",
+      "corridor": "Bosnia y Hum · revisión regional",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1465,
+        "through": 1800
+      },
+      "versions": [
+        {
+          "from": 1465,
+          "ids": [
+            "Gacko"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Curso territorial otomano documentado para este ámbito. Los cortes anuales aproximan las campañas y no trasladan la fecha de una ciudad a todas las tierras de la provincia."
+        }
+      ],
+      "note": "Curso territorial otomano documentado para este ámbito. Los cortes anuales aproximan las campañas y no trasladan la fecha de una ciudad a todas las tierras de la provincia.",
+      "sources": [
+        {
+          "title": "Hrvatska enciklopedija · Stjepan Vukčić Kosača",
+          "url": "https://www.enciklopedija.hr/clanak/kosaca-stjepan-vukcic",
+          "locator": "Sucesión de 1435, título de duque de San Sava en 1448; autonomía territorial; conquista gradual de Hum y Podrinje desde 1465 y presencia veneciana en Neretva. El término de su gobierno no prueba que conservara todo el interior."
+        },
+        {
+          "title": "Nenad Moačanin · TDV · Foça",
+          "url": "https://islamansiklopedisi.org.tr/foca",
+          "locator": "Foča de Bosnia: dominio otomano desde 1465 y sede del sanjacado en 1470. Se aplica al ámbito regional de Ustikolina, no al ID Foca, situado en Anatolia."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": true
+    },
+    {
+      "name": "Bosnia otomana · Dinaric_Alps 5 1465",
+      "corridor": "Bosnia y Hum · revisión regional",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1465,
+        "through": 1800
+      },
+      "versions": [
+        {
+          "from": 1465,
+          "ids": [
+            "Dinaric_Alps5"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Curso territorial otomano documentado para este ámbito. Los cortes anuales aproximan las campañas y no trasladan la fecha de una ciudad a todas las tierras de la provincia."
+        }
+      ],
+      "note": "Curso territorial otomano documentado para este ámbito. Los cortes anuales aproximan las campañas y no trasladan la fecha de una ciudad a todas las tierras de la provincia.",
+      "sources": [
+        {
+          "title": "Hrvatska enciklopedija · Stjepan Vukčić Kosača",
+          "url": "https://www.enciklopedija.hr/clanak/kosaca-stjepan-vukcic",
+          "locator": "Sucesión de 1435, título de duque de San Sava en 1448; autonomía territorial; conquista gradual de Hum y Podrinje desde 1465 y presencia veneciana en Neretva. El término de su gobierno no prueba que conservara todo el interior."
+        },
+        {
+          "title": "Nenad Moačanin · TDV · Foça",
+          "url": "https://islamansiklopedisi.org.tr/foca",
+          "locator": "Foča de Bosnia: dominio otomano desde 1465 y sede del sanjacado en 1470. Se aplica al ámbito regional de Ustikolina, no al ID Foca, situado en Anatolia."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": true
+    },
+    {
+      "name": "Bosnia otomana · Mostar 1466",
+      "corridor": "Bosnia y Hum · revisión regional",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1466,
+        "through": 1800
+      },
+      "versions": [
+        {
+          "from": 1466,
+          "ids": [
+            "Mostar"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Curso territorial otomano documentado para este ámbito. Los cortes anuales aproximan las campañas y no trasladan la fecha de una ciudad a todas las tierras de la provincia."
+        }
+      ],
+      "note": "Curso territorial otomano documentado para este ámbito. Los cortes anuales aproximan las campañas y no trasladan la fecha de una ciudad a todas las tierras de la provincia.",
+      "sources": [
+        {
+          "title": "Hrvatska enciklopedija · Mostar",
+          "url": "https://www.enciklopedija.hr/clanak/mostar",
+          "locator": "Posesiones Kosača en torno al puente, primera mención de las torres en 1454, conquista otomana de 1466. El nacimiento de la ciudad no constituye la fecha inicial de su superficie."
+        },
+        {
+          "title": "Hrvatska enciklopedija · Hercegovački sandžak",
+          "url": "https://www.enciklopedija.hr/clanak/hercegovacki-sandzak",
+          "locator": "Conquista de las tierras Kosača y Blagaj en 1466; sanjacado desde 1470, con distritos de Foča, Prijepolje, Pljevlja, Mostar, Nevesinje, Imotski y Gabela. La creación administrativa no fecha todas las conquistas."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": true
+    },
+    {
+      "name": "Bosnia otomana · Nevesinje 1466",
+      "corridor": "Bosnia y Hum · revisión regional",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1466,
+        "through": 1800
+      },
+      "versions": [
+        {
+          "from": 1466,
+          "ids": [
+            "Nevesinje"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Curso territorial otomano documentado para este ámbito. Los cortes anuales aproximan las campañas y no trasladan la fecha de una ciudad a todas las tierras de la provincia."
+        }
+      ],
+      "note": "Curso territorial otomano documentado para este ámbito. Los cortes anuales aproximan las campañas y no trasladan la fecha de una ciudad a todas las tierras de la provincia.",
+      "sources": [
+        {
+          "title": "Hrvatska enciklopedija · Mostar",
+          "url": "https://www.enciklopedija.hr/clanak/mostar",
+          "locator": "Posesiones Kosača en torno al puente, primera mención de las torres en 1454, conquista otomana de 1466. El nacimiento de la ciudad no constituye la fecha inicial de su superficie."
+        },
+        {
+          "title": "Hrvatska enciklopedija · Hercegovački sandžak",
+          "url": "https://www.enciklopedija.hr/clanak/hercegovacki-sandzak",
+          "locator": "Conquista de las tierras Kosača y Blagaj en 1466; sanjacado desde 1470, con distritos de Foča, Prijepolje, Pljevlja, Mostar, Nevesinje, Imotski y Gabela. La creación administrativa no fecha todas las conquistas."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": true
+    },
+    {
+      "name": "Bosnia otomana · Trebinje 1467",
+      "corridor": "Bosnia y Hum · revisión regional",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1467,
+        "through": 1693
+      },
+      "versions": [
+        {
+          "from": 1467,
+          "ids": [
+            "Trebinje"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Curso territorial otomano documentado para este ámbito. Los cortes anuales aproximan las campañas y no trasladan la fecha de una ciudad a todas las tierras de la provincia."
+        }
+      ],
+      "note": "Curso territorial otomano documentado para este ámbito. Los cortes anuales aproximan las campañas y no trasladan la fecha de una ciudad a todas las tierras de la provincia.",
+      "sources": [
+        {
+          "title": "Hrvatska enciklopedija · Trebinje",
+          "url": "https://www.enciklopedija.hr/clanak/trebinje",
+          "locator": "Nemanjić y Vojinović; incorporación bosnia 1378 (HBL: 1377); Pavlović, Kosača 1438–1466, nahija otomana a más tardar en 1467; ocupación veneciana 1694–1699."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": true
+    },
+    {
+      "name": "Bosnia otomana · Trebinje 1699",
+      "corridor": "Bosnia y Hum · revisión regional",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1699,
+        "through": 1800
+      },
+      "versions": [
+        {
+          "from": 1699,
+          "ids": [
+            "Trebinje"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Curso territorial otomano documentado para este ámbito. Los cortes anuales aproximan las campañas y no trasladan la fecha de una ciudad a todas las tierras de la provincia."
+        }
+      ],
+      "note": "Curso territorial otomano documentado para este ámbito. Los cortes anuales aproximan las campañas y no trasladan la fecha de una ciudad a todas las tierras de la provincia.",
+      "sources": [
+        {
+          "title": "Hrvatska enciklopedija · Trebinje",
+          "url": "https://www.enciklopedija.hr/clanak/trebinje",
+          "locator": "Nemanjić y Vojinović; incorporación bosnia 1378 (HBL: 1377); Pavlović, Kosača 1438–1466, nahija otomana a más tardar en 1467; ocupación veneciana 1694–1699."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": true
+    },
+    {
+      "name": "Bosnia otomana · Soko_Grad 1468",
+      "corridor": "Bosnia y Hum · revisión regional",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1468,
+        "through": 1800
+      },
+      "versions": [
+        {
+          "from": 1468,
+          "ids": [
+            "Soko_Grad"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Curso territorial otomano documentado para este ámbito. Los cortes anuales aproximan las campañas y no trasladan la fecha de una ciudad a todas las tierras de la provincia."
+        }
+      ],
+      "note": "Curso territorial otomano documentado para este ámbito. Los cortes anuales aproximan las campañas y no trasladan la fecha de una ciudad a todas las tierras de la provincia.",
+      "sources": [
+        {
+          "title": "Hrvatska enciklopedija · Stjepan Vukčić Kosača",
+          "url": "https://www.enciklopedija.hr/clanak/kosaca-stjepan-vukcic",
+          "locator": "Sucesión de 1435, título de duque de San Sava en 1448; autonomía territorial; conquista gradual de Hum y Podrinje desde 1465 y presencia veneciana en Neretva. El término de su gobierno no prueba que conservara todo el interior."
+        },
+        {
+          "title": "Hrvatska enciklopedija · Hercegovački sandžak",
+          "url": "https://www.enciklopedija.hr/clanak/hercegovacki-sandzak",
+          "locator": "Conquista de las tierras Kosača y Blagaj en 1466; sanjacado desde 1470, con distritos de Foča, Prijepolje, Pljevlja, Mostar, Nevesinje, Imotski y Gabela. La creación administrativa no fecha todas las conquistas."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": true
+    },
+    {
+      "name": "Bosnia otomana · Konjic 1469",
+      "corridor": "Bosnia y Hum · revisión regional",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1469,
+        "through": 1800
+      },
+      "versions": [
+        {
+          "from": 1469,
+          "ids": [
+            "Konjic"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Curso territorial otomano documentado para este ámbito. Los cortes anuales aproximan las campañas y no trasladan la fecha de una ciudad a todas las tierras de la provincia."
+        }
+      ],
+      "note": "Curso territorial otomano documentado para este ámbito. Los cortes anuales aproximan las campañas y no trasladan la fecha de una ciudad a todas las tierras de la provincia.",
+      "sources": [
+        {
+          "title": "Hrvatska enciklopedija · Konjic",
+          "url": "https://www.enciklopedija.hr/clanak/konjic",
+          "locator": "Župa bosnia de Neretva; Biograd en la orilla izquierda bajo los Kosača, Konjic en la derecha bajo los reyes; conquista otomana entre 1463 y 1469. La celda completa es mixta y no propiedad exclusiva del duque."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": true
+    },
+    {
+      "name": "Bosnia otomana · Livno 1485",
+      "corridor": "Bosnia y Hum · revisión regional",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1485,
+        "through": 1800
+      },
+      "versions": [
+        {
+          "from": 1485,
+          "ids": [
+            "Livno"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Curso territorial otomano documentado para este ámbito. Los cortes anuales aproximan las campañas y no trasladan la fecha de una ciudad a todas las tierras de la provincia."
+        }
+      ],
+      "note": "Curso territorial otomano documentado para este ámbito. Los cortes anuales aproximan las campañas y no trasladan la fecha de una ciudad a todas las tierras de la provincia.",
+      "sources": [
+        {
+          "title": "Hrvatska enciklopedija · Livno",
+          "url": "https://www.enciklopedija.hr/clanak/livno",
+          "locator": "Territorio croata hasta 1326, incorporación permanente a Bosnia desde 1387; conquista inicial de 1463 y dominio otomano consolidado desde 1485. Cortes regionales con fases de control alterno."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": true
+    },
+    {
+      "name": "Bosnia otomana · Neretva y Gabela desde 1481",
+      "corridor": "Bosnia y Hum · revisión regional",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1481,
+        "through": 1692
+      },
+      "versions": [
+        {
+          "from": 1481,
+          "ids": [
+            "Drijeva"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Dominio regional otomano del valle de Neretva desde 1481; Gabela se documenta como otomana a más tardar en 1493. La porción de Imotski conserva protección veneciana hasta 1493 dentro de la misma celda; no se afirma una frontera urbana exacta."
+        }
+      ],
+      "note": "Dominio regional otomano del valle de Neretva desde 1481; Gabela se documenta como otomana a más tardar en 1493. La porción de Imotski conserva protección veneciana hasta 1493 dentro de la misma celda; no se afirma una frontera urbana exacta.",
+      "sources": [
+        {
+          "title": "Hrvatska enciklopedija · Gabela",
+          "url": "https://www.enciklopedija.hr/clanak/gabela",
+          "locator": "Dominio otomano a más tardar en 1493; ocupación veneciana de 1693, derribo en 1715 y retorno otomano desde 1718. La celda Drijeva también incluye Imotski y no sigue una única historia urbana."
+        },
+        {
+          "title": "Hrvatska enciklopedija · Imotski",
+          "url": "https://www.enciklopedija.hr/clanak/imotski",
+          "locator": "Corona croata con señoríos locales; episodio bosnio 1382–1391, Kosača 1408–1465; protección veneciana 1465–1493, dominio otomano 1493–1717 y veneciano desde 1717, austríaco desde 1797."
+        },
+        {
+          "title": "Hrvatska enciklopedija · Hercegovački sandžak",
+          "url": "https://www.enciklopedija.hr/clanak/hercegovacki-sandzak",
+          "locator": "Conquista de las tierras Kosača y Blagaj en 1466; sanjacado desde 1470, con distritos de Foča, Prijepolje, Pljevlja, Mostar, Nevesinje, Imotski y Gabela. La creación administrativa no fecha todas las conquistas."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": true
+    },
+    {
+      "name": "Bosnia otomana · Drijeva 1718",
+      "corridor": "Bosnia y Hum · revisión regional",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1718,
+        "through": 1800
+      },
+      "versions": [
+        {
+          "from": 1718,
+          "ids": [
+            "Drijeva"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Curso territorial otomano documentado para este ámbito. Los cortes anuales aproximan las campañas y no trasladan la fecha de una ciudad a todas las tierras de la provincia."
+        }
+      ],
+      "note": "Curso territorial otomano documentado para este ámbito. Los cortes anuales aproximan las campañas y no trasladan la fecha de una ciudad a todas las tierras de la provincia.",
+      "sources": [
+        {
+          "title": "Hrvatska enciklopedija · Gabela",
+          "url": "https://www.enciklopedija.hr/clanak/gabela",
+          "locator": "Dominio otomano a más tardar en 1493; ocupación veneciana de 1693, derribo en 1715 y retorno otomano desde 1718. La celda Drijeva también incluye Imotski y no sigue una única historia urbana."
+        },
+        {
+          "title": "Hrvatska enciklopedija · Imotski",
+          "url": "https://www.enciklopedija.hr/clanak/imotski",
+          "locator": "Corona croata con señoríos locales; episodio bosnio 1382–1391, Kosača 1408–1465; protección veneciana 1465–1493, dominio otomano 1493–1717 y veneciano desde 1717, austríaco desde 1797."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": true
+    },
+    {
+      "name": "Bosnia otomana · Metkovic 1499",
+      "corridor": "Bosnia y Hum · revisión regional",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1499,
+        "through": 1693
+      },
+      "versions": [
+        {
+          "from": 1499,
+          "ids": [
+            "Metkovic"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Curso territorial otomano documentado para este ámbito. Los cortes anuales aproximan las campañas y no trasladan la fecha de una ciudad a todas las tierras de la provincia."
+        }
+      ],
+      "note": "Curso territorial otomano documentado para este ámbito. Los cortes anuales aproximan las campañas y no trasladan la fecha de una ciudad a todas las tierras de la provincia.",
+      "sources": [
+        {
+          "title": "Hrvatska enciklopedija · Metković",
+          "url": "https://www.enciklopedija.hr/clanak/metkovic",
+          "locator": "Primera mención de 1422, dominio otomano de la Neretvanska krajina desde 1499, ocupación veneciana de 1694; la superficie incluye el delta y localidades con otros cambios de control."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": true
+    },
+    {
+      "name": "Bosnia otomana · Kljuc 1503",
+      "corridor": "Bosnia y Hum · revisión regional",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1503,
+        "through": 1800
+      },
+      "versions": [
+        {
+          "from": 1503,
+          "ids": [
+            "Kljuc"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Curso territorial otomano documentado para este ámbito. Los cortes anuales aproximan las campañas y no trasladan la fecha de una ciudad a todas las tierras de la provincia."
+        }
+      ],
+      "note": "Curso territorial otomano documentado para este ámbito. Los cortes anuales aproximan las campañas y no trasladan la fecha de una ciudad a todas las tierras de la provincia.",
+      "sources": [
+        {
+          "title": "Hrvatska enciklopedija · Jajačka banovina",
+          "url": "https://www.enciklopedija.hr/clanak/jajacka-banovina",
+          "locator": "Banato defensivo de 1463–1527; Ključ y otras fortalezas, pérdida progresiva después de 1490, posiciones otomanas consolidadas en 1503 y caída de Jajce en diciembre de 1527. La celda del relieve cruza el frente; no se equipara al recinto de la fortaleza."
+        },
+        {
+          "title": "Hrvatska enciklopedija · Doboj",
+          "url": "https://www.enciklopedija.hr/clanak/doboj",
+          "locator": "Fortaleza de Usora, batalla de 1415; posesión otomana anterior a 1503 y ocupaciones austríacas de 1697 y en la guerra de 1716–1718. Son campañas militares, no cesiones permanentes."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": true
+    },
+    {
+      "name": "Bosnia otomana · Dinaric_Alps 2 1503",
+      "corridor": "Bosnia y Hum · revisión regional",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1503,
+        "through": 1800
+      },
+      "versions": [
+        {
+          "from": 1503,
+          "ids": [
+            "Dinaric_Alps2"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Curso territorial otomano documentado para este ámbito. Los cortes anuales aproximan las campañas y no trasladan la fecha de una ciudad a todas las tierras de la provincia."
+        }
+      ],
+      "note": "Curso territorial otomano documentado para este ámbito. Los cortes anuales aproximan las campañas y no trasladan la fecha de una ciudad a todas las tierras de la provincia.",
+      "sources": [
+        {
+          "title": "Hrvatska enciklopedija · Jajačka banovina",
+          "url": "https://www.enciklopedija.hr/clanak/jajacka-banovina",
+          "locator": "Banato defensivo de 1463–1527; Ključ y otras fortalezas, pérdida progresiva después de 1490, posiciones otomanas consolidadas en 1503 y caída de Jajce en diciembre de 1527. La celda del relieve cruza el frente; no se equipara al recinto de la fortaleza."
+        },
+        {
+          "title": "Hrvatska enciklopedija · Doboj",
+          "url": "https://www.enciklopedija.hr/clanak/doboj",
+          "locator": "Fortaleza de Usora, batalla de 1415; posesión otomana anterior a 1503 y ocupaciones austríacas de 1697 y en la guerra de 1716–1718. Son campañas militares, no cesiones permanentes."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": true
+    },
+    {
+      "name": "Bosnia otomana · Doboj 1503",
+      "corridor": "Bosnia y Hum · revisión regional",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1503,
+        "through": 1800
+      },
+      "versions": [
+        {
+          "from": 1503,
+          "ids": [
+            "Doboj"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Curso territorial otomano documentado para este ámbito. Los cortes anuales aproximan las campañas y no trasladan la fecha de una ciudad a todas las tierras de la provincia."
+        }
+      ],
+      "note": "Curso territorial otomano documentado para este ámbito. Los cortes anuales aproximan las campañas y no trasladan la fecha de una ciudad a todas las tierras de la provincia.",
+      "sources": [
+        {
+          "title": "Hrvatska enciklopedija · Jajačka banovina",
+          "url": "https://www.enciklopedija.hr/clanak/jajacka-banovina",
+          "locator": "Banato defensivo de 1463–1527; Ključ y otras fortalezas, pérdida progresiva después de 1490, posiciones otomanas consolidadas en 1503 y caída de Jajce en diciembre de 1527. La celda del relieve cruza el frente; no se equipara al recinto de la fortaleza."
+        },
+        {
+          "title": "Hrvatska enciklopedija · Doboj",
+          "url": "https://www.enciklopedija.hr/clanak/doboj",
+          "locator": "Fortaleza de Usora, batalla de 1415; posesión otomana anterior a 1503 y ocupaciones austríacas de 1697 y en la guerra de 1716–1718. Son campañas militares, no cesiones permanentes."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": true
+    },
+    {
+      "name": "Bosnia otomana · Soli 1512",
+      "corridor": "Bosnia y Hum · revisión regional",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1512,
+        "through": 1800
+      },
+      "versions": [
+        {
+          "from": 1512,
+          "ids": [
+            "Soli"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Curso territorial otomano documentado para este ámbito. Los cortes anuales aproximan las campañas y no trasladan la fecha de una ciudad a todas las tierras de la provincia."
+        }
+      ],
+      "note": "Curso territorial otomano documentado para este ámbito. Los cortes anuales aproximan las campañas y no trasladan la fecha de una ciudad a todas las tierras de la provincia.",
+      "sources": [
+        {
+          "title": "Hrvatska enciklopedija · Srebrenička banovina",
+          "url": "https://www.enciklopedija.hr/clanak/srebrenicka-banovina",
+          "locator": "Banato defensivo húngaro de 1463–1512 entre Bosnia, Drina y Sava; conquista de Srebrenik en 1512. No es la ciudad minera de Srebrenica."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": true
+    },
+    {
+      "name": "Bosnia otomana · Srebrenik 1512",
+      "corridor": "Bosnia y Hum · revisión regional",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1512,
+        "through": 1800
+      },
+      "versions": [
+        {
+          "from": 1512,
+          "ids": [
+            "Srebrenik"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Curso territorial otomano documentado para este ámbito. Los cortes anuales aproximan las campañas y no trasladan la fecha de una ciudad a todas las tierras de la provincia."
+        }
+      ],
+      "note": "Curso territorial otomano documentado para este ámbito. Los cortes anuales aproximan las campañas y no trasladan la fecha de una ciudad a todas las tierras de la provincia.",
+      "sources": [
+        {
+          "title": "Hrvatska enciklopedija · Srebrenička banovina",
+          "url": "https://www.enciklopedija.hr/clanak/srebrenicka-banovina",
+          "locator": "Banato defensivo húngaro de 1463–1512 entre Bosnia, Drina y Sava; conquista de Srebrenik en 1512. No es la ciudad minera de Srebrenica."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": true
+    },
+    {
+      "name": "Bosnia otomana · Teocak 1512",
+      "corridor": "Bosnia y Hum · revisión regional",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1512,
+        "through": 1800
+      },
+      "versions": [
+        {
+          "from": 1512,
+          "ids": [
+            "Teocak"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Curso territorial otomano documentado para este ámbito. Los cortes anuales aproximan las campañas y no trasladan la fecha de una ciudad a todas las tierras de la provincia."
+        }
+      ],
+      "note": "Curso territorial otomano documentado para este ámbito. Los cortes anuales aproximan las campañas y no trasladan la fecha de una ciudad a todas las tierras de la provincia.",
+      "sources": [
+        {
+          "title": "Hrvatska enciklopedija · Srebrenička banovina",
+          "url": "https://www.enciklopedija.hr/clanak/srebrenicka-banovina",
+          "locator": "Banato defensivo húngaro de 1463–1512 entre Bosnia, Drina y Sava; conquista de Srebrenik en 1512. No es la ciudad minera de Srebrenica."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": true
+    },
+    {
+      "name": "Bosnia otomana · Jajce 1527",
+      "corridor": "Bosnia y Hum · revisión regional",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1527,
+        "through": 1800
+      },
+      "versions": [
+        {
+          "from": 1527,
+          "ids": [
+            "Jajce"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Curso territorial otomano documentado para este ámbito. Los cortes anuales aproximan las campañas y no trasladan la fecha de una ciudad a todas las tierras de la provincia."
+        }
+      ],
+      "note": "Curso territorial otomano documentado para este ámbito. Los cortes anuales aproximan las campañas y no trasladan la fecha de una ciudad a todas las tierras de la provincia.",
+      "sources": [
+        {
+          "title": "Hrvatska enciklopedija · Jajačka banovina",
+          "url": "https://www.enciklopedija.hr/clanak/jajacka-banovina",
+          "locator": "Banato defensivo de 1463–1527; Ključ y otras fortalezas, pérdida progresiva después de 1490, posiciones otomanas consolidadas en 1503 y caída de Jajce en diciembre de 1527. La celda del relieve cruza el frente; no se equipara al recinto de la fortaleza."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": true
+    },
+    {
+      "name": "Neretva · transición otomana",
+      "corridor": "Bosnia y Hum · revisión regional",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1463,
+        "through": 1468
+      },
+      "versions": [
+        {
+          "from": 1463,
+          "ids": [
+            "Konjic"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Conquista documentada dentro del intervalo 1463–1469. La trama significa transición de control; no fecha toda la superficie por el primer año."
+        }
+      ],
+      "note": "Conquista documentada dentro del intervalo 1463–1469. La trama significa transición de control; no fecha toda la superficie por el primer año.",
+      "sources": [
+        {
+          "title": "Hrvatska enciklopedija · Konjic",
+          "url": "https://www.enciklopedija.hr/clanak/konjic",
+          "locator": "Župa bosnia de Neretva; Biograd en la orilla izquierda bajo los Kosača, Konjic en la derecha bajo los reyes; conquista otomana entre 1463 y 1469. La celda completa es mixta y no propiedad exclusiva del duque."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": true,
+      "authorityCondition": "control disputado"
+    },
+    {
+      "name": "Bosnia otomana · Srebrenica desde 1463",
+      "corridor": "Bosnia y Hum · revisión regional",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1463,
+        "through": 1800
+      },
+      "versions": [
+        {
+          "from": 1463,
+          "ids": [
+            "Srebrenica"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Conquista definitiva en 1463; no se posterga hasta 1512 por confusión con Srebrenik."
+        }
+      ],
+      "note": "Conquista definitiva en 1463; no se posterga hasta 1512 por confusión con Srebrenik.",
+      "sources": [
+        {
+          "title": "Hrvatska enciklopedija · Srebrenica",
+          "url": "https://www.enciklopedija.hr/clanak/srebrenica",
+          "locator": "Bosnia hasta la entrega a Sigismundo en 1410, concesión al déspota en 1411, ocupación otomana durante 1439–1444 y dominio definitivo desde 1463; no el banato de Srebrenik."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": true
+    },
+    {
+      "name": "Dalmacia veneciana · Gabela ocupada",
+      "corridor": "Bosnia y Hum · revisión regional",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1693,
+        "through": 1717
+      },
+      "versions": [
+        {
+          "from": 1693,
+          "ids": [
+            "Drijeva"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Gabela ocupada en 1693, Imotski desde 1717. La celda comprende ambas comarcas: no representa una frontera uniforme en este intervalo."
+        }
+      ],
+      "note": "Gabela ocupada en 1693, Imotski desde 1717. La celda comprende ambas comarcas: no representa una frontera uniforme en este intervalo.",
+      "sources": [
+        {
+          "title": "Hrvatska enciklopedija · Gabela",
+          "url": "https://www.enciklopedija.hr/clanak/gabela",
+          "locator": "Dominio otomano a más tardar en 1493; ocupación veneciana de 1693, derribo en 1715 y retorno otomano desde 1718. La celda Drijeva también incluye Imotski y no sigue una única historia urbana."
+        },
+        {
+          "title": "Hrvatska enciklopedija · Imotski",
+          "url": "https://www.enciklopedija.hr/clanak/imotski",
+          "locator": "Corona croata con señoríos locales; episodio bosnio 1382–1391, Kosača 1408–1465; protección veneciana 1465–1493, dominio otomano 1493–1717 y veneciano desde 1717, austríaco desde 1797."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": true,
+      "authorityCondition": "ocupación"
+    },
+    {
+      "name": "Dalmacia veneciana · Imotski después de 1717",
+      "corridor": "Bosnia y Hum · revisión regional",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1718,
+        "through": 1796
+      },
+      "versions": [
+        {
+          "from": 1718,
+          "ids": [
+            "Drijeva"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Imotski veneciano y Gabela otomana desde 1718 coexisten dentro del polígono original. Las franjas de dos entidades señalan una superficie mixta, no una soberanía compartida de cada punto."
+        }
+      ],
+      "note": "Imotski veneciano y Gabela otomana desde 1718 coexisten dentro del polígono original. Las franjas de dos entidades señalan una superficie mixta, no una soberanía compartida de cada punto.",
+      "sources": [
+        {
+          "title": "Hrvatska enciklopedija · Imotski",
+          "url": "https://www.enciklopedija.hr/clanak/imotski",
+          "locator": "Corona croata con señoríos locales; episodio bosnio 1382–1391, Kosača 1408–1465; protección veneciana 1465–1493, dominio otomano 1493–1717 y veneciano desde 1717, austríaco desde 1797."
+        },
+        {
+          "title": "Hrvatska enciklopedija · Gabela",
+          "url": "https://www.enciklopedija.hr/clanak/gabela",
+          "locator": "Dominio otomano a más tardar en 1493; ocupación veneciana de 1693, derribo en 1715 y retorno otomano desde 1718. La celda Drijeva también incluye Imotski y no sigue una única historia urbana."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": true
+    },
+    {
+      "name": "Dalmacia austríaca · Imotski",
+      "corridor": "Bosnia y Hum · revisión regional",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1797,
+        "through": 1800
+      },
+      "versions": [
+        {
+          "from": 1797,
+          "ids": [
+            "Drijeva"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Imotski austríaco y Gabela otomana; la celda original atraviesa la frontera de 1718. Requiere una futura subdivisión geométrica, no adjudicarla entera a un lado."
+        }
+      ],
+      "note": "Imotski austríaco y Gabela otomana; la celda original atraviesa la frontera de 1718. Requiere una futura subdivisión geométrica, no adjudicarla entera a un lado.",
+      "sources": [
+        {
+          "title": "Hrvatska enciklopedija · Imotski",
+          "url": "https://www.enciklopedija.hr/clanak/imotski",
+          "locator": "Corona croata con señoríos locales; episodio bosnio 1382–1391, Kosača 1408–1465; protección veneciana 1465–1493, dominio otomano 1493–1717 y veneciano desde 1717, austríaco desde 1797."
+        },
+        {
+          "title": "Hrvatska enciklopedija · Gabela",
+          "url": "https://www.enciklopedija.hr/clanak/gabela",
+          "locator": "Dominio otomano a más tardar en 1493; ocupación veneciana de 1693, derribo en 1715 y retorno otomano desde 1718. La celda Drijeva también incluye Imotski y no sigue una única historia urbana."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": true
+    },
+    {
+      "name": "Dalmacia veneciana · Metković",
+      "corridor": "Bosnia y Hum · revisión regional",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1694,
+        "through": 1796
+      },
+      "versions": [
+        {
+          "from": 1694,
+          "ids": [
+            "Metkovic"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Ocupación de Metković desde 1694, dentro de la comarca del delta de Neretva; superficie regional aproximada con cambios locales anteriores."
+        }
+      ],
+      "note": "Ocupación de Metković desde 1694, dentro de la comarca del delta de Neretva; superficie regional aproximada con cambios locales anteriores.",
+      "sources": [
+        {
+          "title": "Hrvatska enciklopedija · Metković",
+          "url": "https://www.enciklopedija.hr/clanak/metkovic",
+          "locator": "Primera mención de 1422, dominio otomano de la Neretvanska krajina desde 1499, ocupación veneciana de 1694; la superficie incluye el delta y localidades con otros cambios de control."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": true
+    },
+    {
+      "name": "Dalmacia austríaca · Metković",
+      "corridor": "Bosnia y Hum · revisión regional",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1797,
+        "through": 1800
+      },
+      "versions": [
+        {
+          "from": 1797,
+          "ids": [
+            "Metkovic"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Dominio austríaco después del fin de la República de Venecia; no se extiende a Gabela ni al interior otomano."
+        }
+      ],
+      "note": "Dominio austríaco después del fin de la República de Venecia; no se extiende a Gabela ni al interior otomano.",
+      "sources": [
+        {
+          "title": "Hrvatska enciklopedija · Metković",
+          "url": "https://www.enciklopedija.hr/clanak/metkovic",
+          "locator": "Primera mención de 1422, dominio otomano de la Neretvanska krajina desde 1499, ocupación veneciana de 1694; la superficie incluye el delta y localidades con otros cambios de control."
+        },
+        {
+          "title": "Hrvatska enciklopedija · Imotski",
+          "url": "https://www.enciklopedija.hr/clanak/imotski",
+          "locator": "Corona croata con señoríos locales; episodio bosnio 1382–1391, Kosača 1408–1465; protección veneciana 1465–1493, dominio otomano 1493–1717 y veneciano desde 1717, austríaco desde 1797."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": true
+    },
+    {
+      "name": "Dalmacia veneciana · ocupación de Trebinje",
+      "corridor": "Bosnia y Hum · revisión regional",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1694,
+        "through": 1698
+      },
+      "versions": [
+        {
+          "from": 1694,
+          "ids": [
+            "Trebinje"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Ocupación temporal 1694–1699, no incorporación permanente de toda Herzegovina. El retorno se representa desde 1699."
+        }
+      ],
+      "note": "Ocupación temporal 1694–1699, no incorporación permanente de toda Herzegovina. El retorno se representa desde 1699.",
+      "sources": [
+        {
+          "title": "Hrvatska enciklopedija · Trebinje",
+          "url": "https://www.enciklopedija.hr/clanak/trebinje",
+          "locator": "Nemanjić y Vojinović; incorporación bosnia 1378 (HBL: 1377); Pavlović, Kosača 1438–1466, nahija otomana a más tardar en 1467; ocupación veneciana 1694–1699."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": true,
+      "authorityCondition": "ocupación"
+    },
+    {
+      "name": "Croacia · Imotski dentro de Drijeva",
+      "corridor": "Bosnia y Hum · revisión regional",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1200,
+        "through": 1381
+      },
+      "versions": [
+        {
+          "from": 1200,
+          "ids": [
+            "Drijeva"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "La celda original incluye Imotski, de la Corona croata-húngara, y el mercado de Gabela en Hum. Las franjas indican dos jurisdicciones en distintas partes de una superficie mixta, no soberanía conjunta de cada punto. Los príncipes de Hum que poseyeron Imotski no eliminan su marco jurídico croata."
+        }
+      ],
+      "note": "La celda original incluye Imotski, de la Corona croata-húngara, y el mercado de Gabela en Hum. Las franjas indican dos jurisdicciones en distintas partes de una superficie mixta, no soberanía conjunta de cada punto. Los príncipes de Hum que poseyeron Imotski no eliminan su marco jurídico croata.",
+      "sources": [
+        {
+          "title": "Hrvatska enciklopedija · Imotski",
+          "url": "https://www.enciklopedija.hr/clanak/imotski",
+          "locator": "Corona croata con señoríos locales; episodio bosnio 1382–1391, Kosača 1408–1465; protección veneciana 1465–1493, dominio otomano 1493–1717 y veneciano desde 1717, austríaco desde 1797."
+        },
+        {
+          "title": "Hrvatska enciklopedija · Hum",
+          "url": "https://www.enciklopedija.hr/clanak/hum-podrucje",
+          "locator": "Principado local del siglo XIII; señorío de los Šubić a comienzos del XIV; conquista bosnia de 1326, cesión a Luis I en 1357, recuperación tras 1382 y señoríos Kosača. No acredita un deslinde uniforme de toda la región."
+        },
+        {
+          "title": "Hrvatska enciklopedija · Drijeva",
+          "url": "https://www.enciklopedija.hr/clanak/drijeva",
+          "locator": "Zahumlje en el XIII; Bosnia 1326–1357 y desde 1382; Hrvoje desde 1404, Sandalj desde 1410, Stjepan desde 1435 y episodio real de 1444; destrucción de 1448, presencia veneciana desde 1452, conquista otomana a más tardar en 1493."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": true
+    },
+    {
+      "name": "Croacia · Imotski después de Tvrtko",
+      "corridor": "Bosnia y Hum · revisión regional",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1392,
+        "through": 1464
+      },
+      "versions": [
+        {
+          "from": 1392,
+          "ids": [
+            "Drijeva"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Imotski vuelve al marco croata-húngaro tras el episodio de Tvrtko, mientras Gabela continúa en los dominios bosnios y de Hum. Dos jurisdicciones en el mismo polígono, no una frontera definida por el nombre Drijeva."
+        }
+      ],
+      "note": "Imotski vuelve al marco croata-húngaro tras el episodio de Tvrtko, mientras Gabela continúa en los dominios bosnios y de Hum. Dos jurisdicciones en el mismo polígono, no una frontera definida por el nombre Drijeva.",
+      "sources": [
+        {
+          "title": "Hrvatska enciklopedija · Imotski",
+          "url": "https://www.enciklopedija.hr/clanak/imotski",
+          "locator": "Corona croata con señoríos locales; episodio bosnio 1382–1391, Kosača 1408–1465; protección veneciana 1465–1493, dominio otomano 1493–1717 y veneciano desde 1717, austríaco desde 1797."
+        },
+        {
+          "title": "Hrvatska enciklopedija · Drijeva",
+          "url": "https://www.enciklopedija.hr/clanak/drijeva",
+          "locator": "Zahumlje en el XIII; Bosnia 1326–1357 y desde 1382; Hrvoje desde 1404, Sandalj desde 1410, Stjepan desde 1435 y episodio real de 1444; destrucción de 1448, presencia veneciana desde 1452, conquista otomana a más tardar en 1493."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": true
+    },
+    {
+      "name": "Hum · Nevesinje después de Tvrtko",
+      "corridor": "Bosnia y Hum · revisión regional",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1392,
+        "through": 1447
+      },
+      "versions": [
+        {
+          "from": 1392,
+          "ids": [
+            "Nevesinje"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Posesiones Kosača desde 1373; se mantiene la identidad de Hum, con los titulares y ámbitos personales documentados por separado."
+        }
+      ],
+      "note": "Posesiones Kosača desde 1373; se mantiene la identidad de Hum, con los titulares y ámbitos personales documentados por separado.",
+      "sources": [
+        {
+          "title": "Hrvatska enciklopedija · Nevesinje",
+          "url": "https://www.enciklopedija.hr/clanak/nevesinje",
+          "locator": "Posesiones de los Kosača desde 1373; no se extiende automáticamente a todo Hum la cesión de sus partes occidentales a Hungría."
+        },
+        {
+          "title": "Hrvatska enciklopedija · Sandalj Hranić Kosača",
+          "url": "https://www.enciklopedija.hr/clanak/kosaca-sandalj-hranic",
+          "locator": "Herencia de Vlatko Vuković desde 1392; dominio entre Cetina, Drijeva, Lim y Boka documentado hacia 1410; territorio fuera de la administración del rey bosnio. No se retrotrae a 1392 toda la extensión de 1410."
+        },
+        {
+          "title": "Hrvatska enciklopedija · Stjepan Vukčić Kosača",
+          "url": "https://www.enciklopedija.hr/clanak/kosaca-stjepan-vukcic",
+          "locator": "Sucesión de 1435, título de duque de San Sava en 1448; autonomía territorial; conquista gradual de Hum y Podrinje desde 1465 y presencia veneciana en Neretva. El término de su gobierno no prueba que conservara todo el interior."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": true
+    },
+    {
+      "name": "Serbia · Polimlje y Piva-Tara",
+      "corridor": "Bosnia y Hum · revisión regional",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1200,
+        "through": 1372
+      },
+      "versions": [
+        {
+          "from": 1200,
+          "ids": [
+            "Pljevlja",
+            "Prijepolje",
+            "Onogost",
+            "Dinaric_Alps6"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Ámbito regional serbio anterior al reparto de las tierras de Altomanović en 1373; la superficie de la cordillera se revisa por su posición completa, no por el nombre."
+        }
+      ],
+      "note": "Ámbito regional serbio anterior al reparto de las tierras de Altomanović en 1373; la superficie de la cordillera se revisa por su posición completa, no por el nombre.",
+      "sources": [
+        {
+          "title": "Hrvatski biografski leksikon · Kotromanići",
+          "url": "https://hbl.lzmk.hr/Clanak/kotromanici?handler=ButtonSnimi",
+          "locator": "Prijezda y Esteban I: carta de 23 julio 1290 y resistencia frente a los Šubić; Esteban II: exilio desde 1314, retorno antes del verano de 1319; Tvrtko: partición de 1373, Trebinje en 1377 y recuperación de Hum en 1382."
+        },
+        {
+          "title": "Hrvatski povijesni muzej · Marko Vego, mapa medieval de Bosnia (1957)",
+          "url": "https://kartevgi.hismus.hr/karte/povijesna-karta-srednjovjekovne-bosne/",
+          "locator": "HPM 104339, dos hojas: contraste de comarcas, cuencas y cordilleras. Combina épocas y posesiones temporales; las fechas se verifican en las entradas escritas, no por el color de la carta."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": true
+    },
+    {
+      "name": "Bosnia · Polimlje de Tvrtko",
+      "corridor": "Bosnia y Hum · revisión regional",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1373,
+        "through": 1391
+      },
+      "versions": [
+        {
+          "from": 1373,
+          "ids": [
+            "Pljevlja",
+            "Prijepolje",
+            "Onogost",
+            "Dinaric_Alps6"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "El reparto de 1373 incorpora Prijepolje, Pljevlja, Onogošt y ámbitos de Piva/Tara a Tvrtko. No quedan huecos entre los valles y su cordillera."
+        }
+      ],
+      "note": "El reparto de 1373 incorpora Prijepolje, Pljevlja, Onogošt y ámbitos de Piva/Tara a Tvrtko. No quedan huecos entre los valles y su cordillera.",
+      "sources": [
+        {
+          "title": "Hrvatski biografski leksikon · Kotromanići",
+          "url": "https://hbl.lzmk.hr/Clanak/kotromanici?handler=ButtonSnimi",
+          "locator": "Prijezda y Esteban I: carta de 23 julio 1290 y resistencia frente a los Šubić; Esteban II: exilio desde 1314, retorno antes del verano de 1319; Tvrtko: partición de 1373, Trebinje en 1377 y recuperación de Hum en 1382."
+        },
+        {
+          "title": "Hrvatski povijesni muzej · Marko Vego, mapa medieval de Bosnia (1957)",
+          "url": "https://kartevgi.hismus.hr/karte/povijesna-karta-srednjovjekovne-bosne/",
+          "locator": "HPM 104339, dos hojas: contraste de comarcas, cuencas y cordilleras. Combina épocas y posesiones temporales; las fechas se verifican en las entradas escritas, no por el color de la carta."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": true
+    },
+    {
+      "name": "Hum · Polimlje de los Kosača",
+      "corridor": "Bosnia y Hum · revisión regional",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1392,
+        "through": 1447
+      },
+      "versions": [
+        {
+          "from": 1392,
+          "ids": [
+            "Pljevlja",
+            "Prijepolje",
+            "Onogost",
+            "Dinaric_Alps6"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Herencia de Vlatko Vuković y posteriores dominios Kosača hasta el Lim; es un corte regional aproximado de la herencia, no una conquista exactamente fechada de cada superficie."
+        }
+      ],
+      "note": "Herencia de Vlatko Vuković y posteriores dominios Kosača hasta el Lim; es un corte regional aproximado de la herencia, no una conquista exactamente fechada de cada superficie.",
+      "sources": [
+        {
+          "title": "Hrvatska enciklopedija · Sandalj Hranić Kosača",
+          "url": "https://www.enciklopedija.hr/clanak/kosaca-sandalj-hranic",
+          "locator": "Herencia de Vlatko Vuković desde 1392; dominio entre Cetina, Drijeva, Lim y Boka documentado hacia 1410; territorio fuera de la administración del rey bosnio. No se retrotrae a 1392 toda la extensión de 1410."
+        },
+        {
+          "title": "Hrvatska enciklopedija · Stjepan Vukčić Kosača",
+          "url": "https://www.enciklopedija.hr/clanak/kosaca-stjepan-vukcic",
+          "locator": "Sucesión de 1435, título de duque de San Sava en 1448; autonomía territorial; conquista gradual de Hum y Podrinje desde 1465 y presencia veneciana en Neretva. El término de su gobierno no prueba que conservara todo el interior."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": true
+    },
+    {
+      "name": "Herzegovina · Polimlje y Piva-Tara",
+      "corridor": "Bosnia y Hum · revisión regional",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1448,
+        "through": 1464
+      },
+      "versions": [
+        {
+          "from": 1448,
+          "ids": [
+            "Pljevlja",
+            "Prijepolje",
+            "Onogost",
+            "Dinaric_Alps6"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Dominios interiores del duque de San Sava, cuyo ámbito llegaba al Lim; independientes de las posteriores jurisdicciones otomanas."
+        }
+      ],
+      "note": "Dominios interiores del duque de San Sava, cuyo ámbito llegaba al Lim; independientes de las posteriores jurisdicciones otomanas.",
+      "sources": [
+        {
+          "title": "Hrvatska enciklopedija · Stjepan Vukčić Kosača",
+          "url": "https://www.enciklopedija.hr/clanak/kosaca-stjepan-vukcic",
+          "locator": "Sucesión de 1435, título de duque de San Sava en 1448; autonomía territorial; conquista gradual de Hum y Podrinje desde 1465 y presencia veneciana en Neretva. El término de su gobierno no prueba que conservara todo el interior."
+        },
+        {
+          "title": "Hrvatska enciklopedija · Hercegovački sandžak",
+          "url": "https://www.enciklopedija.hr/clanak/hercegovacki-sandzak",
+          "locator": "Conquista de las tierras Kosača y Blagaj en 1466; sanjacado desde 1470, con distritos de Foča, Prijepolje, Pljevlja, Mostar, Nevesinje, Imotski y Gabela. La creación administrativa no fecha todas las conquistas."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": true
+    },
+    {
+      "name": "Bosnia otomana · Pljevlja desde 1465",
+      "corridor": "Bosnia y Hum · revisión regional",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1465,
+        "through": 1800
+      },
+      "versions": [
+        {
+          "from": 1465,
+          "ids": [
+            "Pljevlja"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Conquista regional de 1465 y registro de 1468; no se espera hasta 1482 para representar el ámbito de Kukanj/Pljevlja."
+        }
+      ],
+      "note": "Conquista regional de 1465 y registro de 1468; no se espera hasta 1482 para representar el ámbito de Kukanj/Pljevlja.",
+      "sources": [
+        {
+          "title": "Machiel Kiel · TDV · Taşlıca (Pljevlja)",
+          "url": "https://islamansiklopedisi.org.tr/taslica",
+          "locator": "Conquista de la región en 1465; registro de 1468 (BA, TD, nr.5), ligado al ámbito de Kukanj; traslado de la sede del sanjacado desde Foča a Pljevlja en 1572. No fecha por sí solo la conquista de Prijepolje ni Onogošt."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": true
+    },
+    {
+      "name": "Bosnia otomana · transición de Polimlje",
+      "corridor": "Bosnia y Hum · revisión regional",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1465,
+        "through": 1469
+      },
+      "versions": [
+        {
+          "from": 1465,
+          "ids": [
+            "Prijepolje",
+            "Onogost",
+            "Dinaric_Alps6"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Conquista progresiva del interior entre las campañas de 1465 y la organización del sanjacado hacia 1470. Corte aproximado con transición visible, no una conquista uniforme en 1465."
+        }
+      ],
+      "note": "Conquista progresiva del interior entre las campañas de 1465 y la organización del sanjacado hacia 1470. Corte aproximado con transición visible, no una conquista uniforme en 1465.",
+      "sources": [
+        {
+          "title": "Hrvatska enciklopedija · Stjepan Vukčić Kosača",
+          "url": "https://www.enciklopedija.hr/clanak/kosaca-stjepan-vukcic",
+          "locator": "Sucesión de 1435, título de duque de San Sava en 1448; autonomía territorial; conquista gradual de Hum y Podrinje desde 1465 y presencia veneciana en Neretva. El término de su gobierno no prueba que conservara todo el interior."
+        },
+        {
+          "title": "Hrvatska enciklopedija · Hercegovački sandžak",
+          "url": "https://www.enciklopedija.hr/clanak/hercegovacki-sandzak",
+          "locator": "Conquista de las tierras Kosača y Blagaj en 1466; sanjacado desde 1470, con distritos de Foča, Prijepolje, Pljevlja, Mostar, Nevesinje, Imotski y Gabela. La creación administrativa no fecha todas las conquistas."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": true,
+      "authorityCondition": "control disputado"
+    },
+    {
+      "name": "Bosnia otomana · Polimlje desde 1470",
+      "corridor": "Bosnia y Hum · revisión regional",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1470,
+        "through": 1800
+      },
+      "versions": [
+        {
+          "from": 1470,
+          "ids": [
+            "Prijepolje",
+            "Onogost",
+            "Dinaric_Alps6"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Ámbitos interiores del sanjacado y de sus distritos orientales, incluido Prijepolje. El corte de 1470 es administrativo y conservador, distinto del comienzo de las conquistas."
+        }
+      ],
+      "note": "Ámbitos interiores del sanjacado y de sus distritos orientales, incluido Prijepolje. El corte de 1470 es administrativo y conservador, distinto del comienzo de las conquistas.",
+      "sources": [
+        {
+          "title": "Hrvatska enciklopedija · Hercegovački sandžak",
+          "url": "https://www.enciklopedija.hr/clanak/hercegovacki-sandzak",
+          "locator": "Conquista de las tierras Kosača y Blagaj en 1466; sanjacado desde 1470, con distritos de Foča, Prijepolje, Pljevlja, Mostar, Nevesinje, Imotski y Gabela. La creación administrativa no fecha todas las conquistas."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": true
+    },
+    {
+      "name": "Bosnia · reino durante la conquista de 1463",
+      "corridor": "Bosnia y Hum · revisión regional",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1463,
+        "through": 1463
+      },
+      "versions": [
+        {
+          "from": 1463,
+          "ids": [
+            "Borac",
+            "Olovo",
+            "Zenica",
+            "Dinaric_Alps3",
+            "Jajce",
+            "Kljuc",
+            "Dinaric_Alps2",
+            "Konjic",
+            "Glamoc",
+            "Dinaric_Alps4",
+            "Livno",
+            "Doboj",
+            "Soli",
+            "Srebrenik",
+            "Teocak",
+            "Visegrad",
+            "Srebrenica"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Reino de Esteban Tomašević en el primer tramo de 1463, antes de la campaña otomana y de su ejecución. Se conserva la selección regional anterior a la conquista, con control disputado. El resumen anual superpone cambios ocurridos en distintos meses; no prueba posesión simultánea del rey, del sultán o de los banatos húngaros durante todo el año. Vrhbosna, otomana desde 1435, queda fuera."
+        }
+      ],
+      "note": "Reino de Esteban Tomašević en el primer tramo de 1463, antes de la campaña otomana y de su ejecución. Se conserva la selección regional anterior a la conquista, con control disputado. El resumen anual superpone cambios ocurridos en distintos meses; no prueba posesión simultánea del rey, del sultán o de los banatos húngaros durante todo el año. Vrhbosna, otomana desde 1435, queda fuera.",
+      "sources": [
+        {
+          "title": "Hrvatska enciklopedija · Bosna i Hercegovina",
+          "url": "https://www.enciklopedija.hr/clanak/bosna-i-hercegovina",
+          "locator": "Historia medieval: Kulin, límites entre Drina y Grmeč; división de 1253; Usora/Soli en 1324; Vrhbosna/Hodidjed bajo los otomanos en 1435; conquista de 1463. La síntesis regional y la entrada Usora difieren sobre la incorporación c.1204."
+        },
+        {
+          "title": "Hrvatski biografski leksikon · Kotromanići",
+          "url": "https://hbl.lzmk.hr/Clanak/kotromanici?handler=ButtonSnimi",
+          "locator": "Prijezda y Esteban I: carta de 23 julio 1290 y resistencia frente a los Šubić; Esteban II: exilio desde 1314, retorno antes del verano de 1319; Tvrtko: partición de 1373, Trebinje en 1377 y recuperación de Hum en 1382."
+        },
+        {
+          "title": "Hrvatska enciklopedija · Jajačka banovina",
+          "url": "https://www.enciklopedija.hr/clanak/jajacka-banovina",
+          "locator": "Banato defensivo de 1463–1527; Ključ y otras fortalezas, pérdida progresiva después de 1490, posiciones otomanas consolidadas en 1503 y caída de Jajce en diciembre de 1527. La celda del relieve cruza el frente; no se equipara al recinto de la fortaleza."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": true,
+      "authorityCondition": "control disputado"
+    },
+    {
+      "name": "Bosnia otomana · frente de Usora en 1439–1442",
+      "corridor": "Bosnia y Hum · revisión regional",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1439,
+        "through": 1442
+      },
+      "versions": [
+        {
+          "from": 1439,
+          "ids": [
+            "Doboj",
+            "Soli",
+            "Srebrenik",
+            "Teocak"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Primera caída del despotado y presión militar otomana en Bosnia desde 1439, antes de la recuperación de Usora bajo Tomás. Se representa un frente de control disputado a escala regional, sin fechar la toma de cada castillo ni afirmar anexión uniforme. El déspota exiliado no recibe color por conservar el título."
+        }
+      ],
+      "note": "Primera caída del despotado y presión militar otomana en Bosnia desde 1439, antes de la recuperación de Usora bajo Tomás. Se representa un frente de control disputado a escala regional, sin fechar la toma de cada castillo ni afirmar anexión uniforme. El déspota exiliado no recibe color por conservar el título.",
+      "sources": [
+        {
+          "title": "Hrvatska enciklopedija · Usora",
+          "url": "https://www.enciklopedija.hr/clanak/usora-podrucje",
+          "locator": "Incorporación c.1204; banato separado en 1253; Dragutin 1284–1316; retorno húngaro hasta 1324; conflicto y control serbio en 1432, recuperación bajo Tomás, banato de Srebrenik después de 1463."
+        },
+        {
+          "title": "Hrvatska enciklopedija · Srebrenica",
+          "url": "https://www.enciklopedija.hr/clanak/srebrenica",
+          "locator": "Bosnia hasta la entrega a Sigismundo en 1410, concesión al déspota en 1411, ocupación otomana durante 1439–1444 y dominio definitivo desde 1463; no el banato de Srebrenik."
+        },
+        {
+          "title": "Hrvatski biografski leksikon · Kotromanići",
+          "url": "https://hbl.lzmk.hr/Clanak/kotromanici?handler=ButtonSnimi",
+          "locator": "Prijezda y Esteban I: carta de 23 julio 1290 y resistencia frente a los Šubić; Esteban II: exilio desde 1314, retorno antes del verano de 1319; Tvrtko: partición de 1373, Trebinje en 1377 y recuperación de Hum en 1382."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": true,
+      "authorityCondition": "control disputado"
     }
   ],
   "overrides": [
@@ -80723,6 +84473,160 @@
       "Bosnia · relieve interior",
       "Valaquia · comarcas interiores",
       "Moldavia · valles interiores orientales"
+    ]
+  },
+  "bosniaHumReview": {
+    "reviewedAt": "2026-10-12",
+    "scope": {
+      "name": "Bosnia central, Usora/Soli y Hum–Polimlje",
+      "from": 1200,
+      "through": 1800,
+      "ids": [
+        "Borac",
+        "Dinaric_Alps2",
+        "Dinaric_Alps3",
+        "Dinaric_Alps4",
+        "Dinaric_Alps5",
+        "Dinaric_Alps6",
+        "Doboj",
+        "Drijeva",
+        "Gacko",
+        "Glamoc",
+        "Jajce",
+        "Kljuc",
+        "Konjic",
+        "Livno",
+        "Metkovic",
+        "Mostar",
+        "Nevesinje",
+        "Olovo",
+        "Onogost",
+        "Pljevlja",
+        "Prijepolje",
+        "Soko_Grad",
+        "Soli",
+        "Srebrenica",
+        "Srebrenik",
+        "Teocak",
+        "Trebinje",
+        "Ustikolina",
+        "Visegrad",
+        "Vrhbosna",
+        "Zenica"
+      ],
+      "note": "Polígonos continentales completos entre Donji Kraji, el valle de Bosnia, Usora/Soli, Drina, las cuencas interiores de Hum y Polimlje/Piva-Tara. No es el perímetro de la Bosnia moderna ni de toda la expansión dálmata. Costa ragusea/islas, Posavina occidental y Kotor quedan identificados como ámbitos vecinos distintos, no se incorporan por proximidad."
+    },
+    "layerNames": [
+      "Bosnia · valle central",
+      "Bosnia · Vrhbosna",
+      "Bosnia · Donji Kraji",
+      "Bosnia · Neretva septentrional",
+      "Croacia · relieve de las tierras occidentales",
+      "Croacia · Livno anterior a la incorporación bosnia",
+      "Bosnia · tierras occidentales",
+      "Bosnia · primera incorporación de Livno",
+      "Croacia · Livno bajo la Corona húngara",
+      "Bosnia · Livno desde Tvrtko",
+      "Bosnia · Usora y Soli medievales",
+      "Usora y Soli · banato 1253",
+      "Usora y Soli · banato 1317",
+      "Sirmia · Usora y Soli de Dragutin",
+      "Bosnia · Usora y Soli 1324",
+      "Bosnia · Usora y Soli 1443",
+      "Serbia · Usora disputada",
+      "Srebrenik · banato defensivo",
+      "Srebrenik · frente de Doboj",
+      "Jajce · núcleo defensivo",
+      "Jajce · frente de Donji Kraji",
+      "Croacia · Livno durante las conquistas",
+      "Serbia · Drina y tierras orientales",
+      "Bosnia · adquisición oriental de 1373",
+      "Bosnia · Višegrad posterior a Tvrtko",
+      "Hum · herencia oriental Kosača",
+      "Herzegovina · dominio oriental",
+      "Herzegovina · Sokol anterior a la ocupación",
+      "Herzegovina · transición de Sokol",
+      "Hum · principado medieval",
+      "Hum · señorío bajo los Šubić",
+      "Hum · posterior a los Šubić",
+      "Hum · soberanía bosnia medieval",
+      "Hum · partes occidentales bajo Hungría",
+      "Hum · Nevesinje bajo Hungría",
+      "Hum · Nevesinje de los Kosača",
+      "Hum · recuperación occidental bosnia",
+      "Hum · Neretva bajo los reyes bosnios",
+      "Hum · Neretva bajo Hrvoje",
+      "Hum · consolidación del señorío occidental",
+      "Herzegovina · Neretva anterior a las conquistas",
+      "Herzegovina · Mostar en 1465",
+      "Herzegovina · Nevesinje en transición",
+      "Hum · señoríos occidentales bajo protección veneciana",
+      "Hum · señoríos de Neretva anteriores a 1499",
+      "Serbia · Travunia medieval",
+      "Travunia · señorío de los Balšić",
+      "Bosnia · Trebinje desde Tvrtko",
+      "Travunia · señorío de los Pavlović",
+      "Hum · Trebinje bajo los Kosača",
+      "Herzegovina · Trebinje",
+      "Bosnia · comarca minera oriental",
+      "Hungría · Srebrenica de 1410",
+      "Serbia · Srebrenica 1411",
+      "Serbia · Srebrenica 1444",
+      "Bosnia · Srebrenica tras la caída del despotado",
+      "Bosnia otomana · Vrhbosna 1435",
+      "Bosnia otomana · primera ocupación de Srebrenica",
+      "Bosnia otomana · Borac 1463",
+      "Bosnia otomana · Olovo 1463",
+      "Bosnia otomana · Zenica 1463",
+      "Bosnia otomana · Dinaric_Alps 3 1463",
+      "Bosnia otomana · Visegrad 1463",
+      "Bosnia otomana · Dinaric_Alps 4 1463",
+      "Bosnia otomana · Glamoc 1463",
+      "Bosnia otomana · Ustikolina 1465",
+      "Bosnia otomana · Gacko 1465",
+      "Bosnia otomana · Dinaric_Alps 5 1465",
+      "Bosnia otomana · Mostar 1466",
+      "Bosnia otomana · Nevesinje 1466",
+      "Bosnia otomana · Trebinje 1467",
+      "Bosnia otomana · Trebinje 1699",
+      "Bosnia otomana · Soko_Grad 1468",
+      "Bosnia otomana · Konjic 1469",
+      "Bosnia otomana · Livno 1485",
+      "Bosnia otomana · Neretva y Gabela desde 1481",
+      "Bosnia otomana · Drijeva 1718",
+      "Bosnia otomana · Metkovic 1499",
+      "Bosnia otomana · Kljuc 1503",
+      "Bosnia otomana · Dinaric_Alps 2 1503",
+      "Bosnia otomana · Doboj 1503",
+      "Bosnia otomana · Soli 1512",
+      "Bosnia otomana · Srebrenik 1512",
+      "Bosnia otomana · Teocak 1512",
+      "Bosnia otomana · Jajce 1527",
+      "Neretva · transición otomana",
+      "Bosnia otomana · Srebrenica desde 1463",
+      "Dalmacia veneciana · Gabela ocupada",
+      "Dalmacia veneciana · Imotski después de 1717",
+      "Dalmacia austríaca · Imotski",
+      "Dalmacia veneciana · Metković",
+      "Dalmacia austríaca · Metković",
+      "Dalmacia veneciana · ocupación de Trebinje",
+      "Croacia · Imotski dentro de Drijeva",
+      "Croacia · Imotski después de Tvrtko",
+      "Hum · Nevesinje después de Tvrtko",
+      "Serbia · Polimlje y Piva-Tara",
+      "Bosnia · Polimlje de Tvrtko",
+      "Hum · Polimlje de los Kosača",
+      "Herzegovina · Polimlje y Piva-Tara",
+      "Bosnia otomana · Pljevlja desde 1465",
+      "Bosnia otomana · transición de Polimlje",
+      "Bosnia otomana · Polimlje desde 1470",
+      "Bosnia · reino durante la conquista de 1463",
+      "Bosnia otomana · frente de Usora en 1439–1442"
+    ],
+    "limitations": [
+      "Las 31 superficies reciben una atribución territorial cada año; esto no acredita fronteras exactas ni una lista exhaustiva de gobernantes.",
+      "Las zonas de transición y los polígonos mixtos conservan notas y fuentes específicas; no se transforma la incertidumbre en una fecha exacta.",
+      "El inspector y el Atlas usan los mismos intervalos y las mismas superficies; los ámbitos personales de los bans rivales y subordinados se restringen por separado."
     ]
   }
 }

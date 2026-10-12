@@ -37,6 +37,7 @@ interpretarse con la fecha y versión del documento.
 ## Versiones
 
 - [Índice cronológico completo y GitHub Releases](releases.md).
+- [V5.9: Bosnia, Hum y continuidad regional](V5.9.md).
 - [V5.8: continuidad balcánica medieval](V5.8.md).
 - [V5.7: modelo canónico y cierre documental](V5.7.md).
 - [V5.6: herramientas reproducibles](V5.6.md).

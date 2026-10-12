@@ -1,0 +1,2079 @@
+{
+  "version": "5.9.0",
+  "reviewedAt": "2026-10-12",
+  "baseCommit": "e4762a4be9b0a47d870b9723c175b22860253979",
+  "method": "Independent comparison against V5.8 for every annual cell and existing personal selection; annual continuity audit uses the actual laboratory mosaic and cell-local source passages. Manual historical review is declared separately from automated completeness.",
+  "scope": {
+    "name": "Bosnia central, Usora/Soli y Hum–Polimlje",
+    "from": 1200,
+    "through": 1800,
+    "ids": [
+      "Borac",
+      "Dinaric_Alps2",
+      "Dinaric_Alps3",
+      "Dinaric_Alps4",
+      "Dinaric_Alps5",
+      "Dinaric_Alps6",
+      "Doboj",
+      "Drijeva",
+      "Gacko",
+      "Glamoc",
+      "Jajce",
+      "Kljuc",
+      "Konjic",
+      "Livno",
+      "Metkovic",
+      "Mostar",
+      "Nevesinje",
+      "Olovo",
+      "Onogost",
+      "Pljevlja",
+      "Prijepolje",
+      "Soko_Grad",
+      "Soli",
+      "Srebrenica",
+      "Srebrenik",
+      "Teocak",
+      "Trebinje",
+      "Ustikolina",
+      "Visegrad",
+      "Vrhbosna",
+      "Zenica"
+    ],
+    "note": "Polígonos continentales completos entre Donji Kraji, el valle de Bosnia, Usora/Soli, Drina, las cuencas interiores de Hum y Polimlje/Piva-Tara. No es el perímetro de la Bosnia moderna ni de toda la expansión dálmata. Costa ragusea/islas, Posavina occidental y Kotor quedan identificados como ámbitos vecinos distintos, no se incorporan por proximidad."
+  },
+  "counts": {
+    "people": 2545,
+    "governments": 2532,
+    "territories": 274,
+    "newPeople": 6,
+    "newGovernments": 16,
+    "changedExistingPeople": 4,
+    "newTerritories": 4,
+    "reviewedClaims": 25,
+    "regionalPhases": 105,
+    "regionalSources": 30
+  },
+  "regionalBeforeAfter": {
+    "blankCellYearsBefore": 5998,
+    "blankCellYearsAfter": 0
+  },
+  "neverColored": {
+    "before": 3698,
+    "after": 3697,
+    "newlyColoredIds": [
+      "Metkovic"
+    ]
+  },
+  "regionalContinuity": {
+    "reviewedAt": "2026-10-12",
+    "scope": {
+      "name": "Bosnia central, Usora/Soli y Hum–Polimlje",
+      "from": 1200,
+      "through": 1800,
+      "ids": [
+        "Borac",
+        "Dinaric_Alps2",
+        "Dinaric_Alps3",
+        "Dinaric_Alps4",
+        "Dinaric_Alps5",
+        "Dinaric_Alps6",
+        "Doboj",
+        "Drijeva",
+        "Gacko",
+        "Glamoc",
+        "Jajce",
+        "Kljuc",
+        "Konjic",
+        "Livno",
+        "Metkovic",
+        "Mostar",
+        "Nevesinje",
+        "Olovo",
+        "Onogost",
+        "Pljevlja",
+        "Prijepolje",
+        "Soko_Grad",
+        "Soli",
+        "Srebrenica",
+        "Srebrenik",
+        "Teocak",
+        "Trebinje",
+        "Ustikolina",
+        "Visegrad",
+        "Vrhbosna",
+        "Zenica"
+      ],
+      "note": "Polígonos continentales completos entre Donji Kraji, el valle de Bosnia, Usora/Soli, Drina, las cuencas interiores de Hum y Polimlje/Piva-Tara. No es el perímetro de la Bosnia moderna ni de toda la expansión dálmata. Costa ragusea/islas, Posavina occidental y Kotor quedan identificados como ámbitos vecinos distintos, no se incorporan por proximidad."
+    },
+    "method": "Every scoped SVG cell in every annual laboratory mosaic, after dated exclusions, regional precedence and identity coalescing; local evidence and explicitly documented mixed cells checked separately.",
+    "summary": {
+      "cells": 31,
+      "years": 601,
+      "cellYears": 18631,
+      "missingCellYears": 0,
+      "unexplainedCellYears": 0,
+      "missingEvidenceYears": 0,
+      "missingGeometry": []
+    },
+    "cells": [
+      {
+        "id": "Borac",
+        "coloredYears": 601,
+        "gaps": [],
+        "mixedYears": 1,
+        "unexplainedOverlaps": [],
+        "missingEvidence": [],
+        "changes": [
+          {
+            "from": 1200,
+            "identities": [
+              "Reino de Bosnia"
+            ]
+          },
+          {
+            "from": 1463,
+            "identities": [
+              "Bosnia y Herzegovina otomanas",
+              "Reino de Bosnia"
+            ]
+          },
+          {
+            "from": 1464,
+            "identities": [
+              "Bosnia y Herzegovina otomanas"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Dinaric_Alps2",
+        "coloredYears": 601,
+        "gaps": [],
+        "mixedYears": 1,
+        "unexplainedOverlaps": [],
+        "missingEvidence": [],
+        "changes": [
+          {
+            "from": 1200,
+            "identities": [
+              "Reino de Bosnia"
+            ]
+          },
+          {
+            "from": 1463,
+            "identities": [
+              "Banato húngaro de Jajce",
+              "Reino de Bosnia"
+            ]
+          },
+          {
+            "from": 1464,
+            "identities": [
+              "Banato húngaro de Jajce"
+            ]
+          },
+          {
+            "from": 1503,
+            "identities": [
+              "Bosnia y Herzegovina otomanas"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Dinaric_Alps3",
+        "coloredYears": 601,
+        "gaps": [],
+        "mixedYears": 1,
+        "unexplainedOverlaps": [],
+        "missingEvidence": [],
+        "changes": [
+          {
+            "from": 1200,
+            "identities": [
+              "Reino de Bosnia"
+            ]
+          },
+          {
+            "from": 1463,
+            "identities": [
+              "Bosnia y Herzegovina otomanas",
+              "Reino de Bosnia"
+            ]
+          },
+          {
+            "from": 1464,
+            "identities": [
+              "Bosnia y Herzegovina otomanas"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Dinaric_Alps4",
+        "coloredYears": 601,
+        "gaps": [],
+        "mixedYears": 1,
+        "unexplainedOverlaps": [],
+        "missingEvidence": [],
+        "changes": [
+          {
+            "from": 1200,
+            "identities": [
+              "Croacia"
+            ]
+          },
+          {
+            "from": 1324,
+            "identities": [
+              "Reino de Bosnia"
+            ]
+          },
+          {
+            "from": 1463,
+            "identities": [
+              "Bosnia y Herzegovina otomanas",
+              "Reino de Bosnia"
+            ]
+          },
+          {
+            "from": 1464,
+            "identities": [
+              "Bosnia y Herzegovina otomanas"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Dinaric_Alps5",
+        "coloredYears": 601,
+        "gaps": [],
+        "mixedYears": 0,
+        "unexplainedOverlaps": [],
+        "missingEvidence": [],
+        "changes": [
+          {
+            "from": 1200,
+            "identities": [
+              "Serbia"
+            ]
+          },
+          {
+            "from": 1373,
+            "identities": [
+              "Reino de Bosnia"
+            ]
+          },
+          {
+            "from": 1392,
+            "identities": [
+              "Hum"
+            ]
+          },
+          {
+            "from": 1448,
+            "identities": [
+              "Herzegovina"
+            ]
+          },
+          {
+            "from": 1465,
+            "identities": [
+              "Bosnia y Herzegovina otomanas"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Dinaric_Alps6",
+        "coloredYears": 601,
+        "gaps": [],
+        "mixedYears": 0,
+        "unexplainedOverlaps": [],
+        "missingEvidence": [],
+        "changes": [
+          {
+            "from": 1200,
+            "identities": [
+              "Serbia"
+            ]
+          },
+          {
+            "from": 1373,
+            "identities": [
+              "Reino de Bosnia"
+            ]
+          },
+          {
+            "from": 1392,
+            "identities": [
+              "Hum"
+            ]
+          },
+          {
+            "from": 1448,
+            "identities": [
+              "Herzegovina"
+            ]
+          },
+          {
+            "from": 1465,
+            "identities": [
+              "Bosnia y Herzegovina otomanas"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Doboj",
+        "coloredYears": 601,
+        "gaps": [],
+        "mixedYears": 1,
+        "unexplainedOverlaps": [],
+        "missingEvidence": [],
+        "changes": [
+          {
+            "from": 1200,
+            "identities": [
+              "Reino de Bosnia"
+            ]
+          },
+          {
+            "from": 1253,
+            "identities": [
+              "Usora y Soli"
+            ]
+          },
+          {
+            "from": 1284,
+            "identities": [
+              "Sirmia"
+            ]
+          },
+          {
+            "from": 1317,
+            "identities": [
+              "Usora y Soli"
+            ]
+          },
+          {
+            "from": 1324,
+            "identities": [
+              "Reino de Bosnia"
+            ]
+          },
+          {
+            "from": 1432,
+            "identities": [
+              "Despotado de Serbia"
+            ]
+          },
+          {
+            "from": 1439,
+            "identities": [
+              "Bosnia y Herzegovina otomanas"
+            ]
+          },
+          {
+            "from": 1443,
+            "identities": [
+              "Reino de Bosnia"
+            ]
+          },
+          {
+            "from": 1463,
+            "identities": [
+              "Reino de Bosnia",
+              "Srebrenik"
+            ]
+          },
+          {
+            "from": 1464,
+            "identities": [
+              "Srebrenik"
+            ]
+          },
+          {
+            "from": 1503,
+            "identities": [
+              "Bosnia y Herzegovina otomanas"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Drijeva",
+        "coloredYears": 601,
+        "gaps": [],
+        "mixedYears": 350,
+        "unexplainedOverlaps": [],
+        "missingEvidence": [],
+        "changes": [
+          {
+            "from": 1200,
+            "identities": [
+              "Croacia",
+              "Hum"
+            ]
+          },
+          {
+            "from": 1382,
+            "identities": [
+              "Hum"
+            ]
+          },
+          {
+            "from": 1392,
+            "identities": [
+              "Croacia",
+              "Hum"
+            ]
+          },
+          {
+            "from": 1448,
+            "identities": [
+              "Croacia",
+              "Herzegovina"
+            ]
+          },
+          {
+            "from": 1465,
+            "identities": [
+              "Hum"
+            ]
+          },
+          {
+            "from": 1481,
+            "identities": [
+              "Bosnia y Herzegovina otomanas",
+              "Hum"
+            ]
+          },
+          {
+            "from": 1493,
+            "identities": [
+              "Bosnia y Herzegovina otomanas"
+            ]
+          },
+          {
+            "from": 1693,
+            "identities": [
+              "Dalmacia veneciana"
+            ]
+          },
+          {
+            "from": 1718,
+            "identities": [
+              "Bosnia y Herzegovina otomanas",
+              "Dalmacia veneciana"
+            ]
+          },
+          {
+            "from": 1797,
+            "identities": [
+              "Bosnia y Herzegovina otomanas",
+              "Dalmacia austríaca"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Gacko",
+        "coloredYears": 601,
+        "gaps": [],
+        "mixedYears": 0,
+        "unexplainedOverlaps": [],
+        "missingEvidence": [],
+        "changes": [
+          {
+            "from": 1200,
+            "identities": [
+              "Serbia"
+            ]
+          },
+          {
+            "from": 1373,
+            "identities": [
+              "Reino de Bosnia"
+            ]
+          },
+          {
+            "from": 1392,
+            "identities": [
+              "Hum"
+            ]
+          },
+          {
+            "from": 1448,
+            "identities": [
+              "Herzegovina"
+            ]
+          },
+          {
+            "from": 1465,
+            "identities": [
+              "Bosnia y Herzegovina otomanas"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Glamoc",
+        "coloredYears": 601,
+        "gaps": [],
+        "mixedYears": 1,
+        "unexplainedOverlaps": [],
+        "missingEvidence": [],
+        "changes": [
+          {
+            "from": 1200,
+            "identities": [
+              "Croacia"
+            ]
+          },
+          {
+            "from": 1324,
+            "identities": [
+              "Reino de Bosnia"
+            ]
+          },
+          {
+            "from": 1463,
+            "identities": [
+              "Bosnia y Herzegovina otomanas",
+              "Reino de Bosnia"
+            ]
+          },
+          {
+            "from": 1464,
+            "identities": [
+              "Bosnia y Herzegovina otomanas"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Jajce",
+        "coloredYears": 601,
+        "gaps": [],
+        "mixedYears": 1,
+        "unexplainedOverlaps": [],
+        "missingEvidence": [],
+        "changes": [
+          {
+            "from": 1200,
+            "identities": [
+              "Reino de Bosnia"
+            ]
+          },
+          {
+            "from": 1463,
+            "identities": [
+              "Banato húngaro de Jajce",
+              "Reino de Bosnia"
+            ]
+          },
+          {
+            "from": 1464,
+            "identities": [
+              "Banato húngaro de Jajce"
+            ]
+          },
+          {
+            "from": 1527,
+            "identities": [
+              "Bosnia y Herzegovina otomanas"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Kljuc",
+        "coloredYears": 601,
+        "gaps": [],
+        "mixedYears": 1,
+        "unexplainedOverlaps": [],
+        "missingEvidence": [],
+        "changes": [
+          {
+            "from": 1200,
+            "identities": [
+              "Reino de Bosnia"
+            ]
+          },
+          {
+            "from": 1463,
+            "identities": [
+              "Banato húngaro de Jajce",
+              "Reino de Bosnia"
+            ]
+          },
+          {
+            "from": 1464,
+            "identities": [
+              "Banato húngaro de Jajce"
+            ]
+          },
+          {
+            "from": 1503,
+            "identities": [
+              "Bosnia y Herzegovina otomanas"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Konjic",
+        "coloredYears": 601,
+        "gaps": [],
+        "mixedYears": 1,
+        "unexplainedOverlaps": [],
+        "missingEvidence": [],
+        "changes": [
+          {
+            "from": 1200,
+            "identities": [
+              "Reino de Bosnia"
+            ]
+          },
+          {
+            "from": 1463,
+            "identities": [
+              "Bosnia y Herzegovina otomanas",
+              "Reino de Bosnia"
+            ]
+          },
+          {
+            "from": 1464,
+            "identities": [
+              "Bosnia y Herzegovina otomanas"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Livno",
+        "coloredYears": 601,
+        "gaps": [],
+        "mixedYears": 1,
+        "unexplainedOverlaps": [],
+        "missingEvidence": [],
+        "changes": [
+          {
+            "from": 1200,
+            "identities": [
+              "Croacia"
+            ]
+          },
+          {
+            "from": 1326,
+            "identities": [
+              "Reino de Bosnia"
+            ]
+          },
+          {
+            "from": 1357,
+            "identities": [
+              "Croacia"
+            ]
+          },
+          {
+            "from": 1387,
+            "identities": [
+              "Reino de Bosnia"
+            ]
+          },
+          {
+            "from": 1463,
+            "identities": [
+              "Croacia",
+              "Reino de Bosnia"
+            ]
+          },
+          {
+            "from": 1464,
+            "identities": [
+              "Croacia"
+            ]
+          },
+          {
+            "from": 1485,
+            "identities": [
+              "Bosnia y Herzegovina otomanas"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Metkovic",
+        "coloredYears": 601,
+        "gaps": [],
+        "mixedYears": 0,
+        "unexplainedOverlaps": [],
+        "missingEvidence": [],
+        "changes": [
+          {
+            "from": 1200,
+            "identities": [
+              "Hum"
+            ]
+          },
+          {
+            "from": 1448,
+            "identities": [
+              "Herzegovina"
+            ]
+          },
+          {
+            "from": 1465,
+            "identities": [
+              "Hum"
+            ]
+          },
+          {
+            "from": 1499,
+            "identities": [
+              "Bosnia y Herzegovina otomanas"
+            ]
+          },
+          {
+            "from": 1694,
+            "identities": [
+              "Dalmacia veneciana"
+            ]
+          },
+          {
+            "from": 1797,
+            "identities": [
+              "Dalmacia austríaca"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Mostar",
+        "coloredYears": 601,
+        "gaps": [],
+        "mixedYears": 0,
+        "unexplainedOverlaps": [],
+        "missingEvidence": [],
+        "changes": [
+          {
+            "from": 1200,
+            "identities": [
+              "Hum"
+            ]
+          },
+          {
+            "from": 1448,
+            "identities": [
+              "Herzegovina"
+            ]
+          },
+          {
+            "from": 1466,
+            "identities": [
+              "Bosnia y Herzegovina otomanas"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Nevesinje",
+        "coloredYears": 601,
+        "gaps": [],
+        "mixedYears": 0,
+        "unexplainedOverlaps": [],
+        "missingEvidence": [],
+        "changes": [
+          {
+            "from": 1200,
+            "identities": [
+              "Hum"
+            ]
+          },
+          {
+            "from": 1448,
+            "identities": [
+              "Herzegovina"
+            ]
+          },
+          {
+            "from": 1466,
+            "identities": [
+              "Bosnia y Herzegovina otomanas"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Olovo",
+        "coloredYears": 601,
+        "gaps": [],
+        "mixedYears": 1,
+        "unexplainedOverlaps": [],
+        "missingEvidence": [],
+        "changes": [
+          {
+            "from": 1200,
+            "identities": [
+              "Reino de Bosnia"
+            ]
+          },
+          {
+            "from": 1463,
+            "identities": [
+              "Bosnia y Herzegovina otomanas",
+              "Reino de Bosnia"
+            ]
+          },
+          {
+            "from": 1464,
+            "identities": [
+              "Bosnia y Herzegovina otomanas"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Onogost",
+        "coloredYears": 601,
+        "gaps": [],
+        "mixedYears": 0,
+        "unexplainedOverlaps": [],
+        "missingEvidence": [],
+        "changes": [
+          {
+            "from": 1200,
+            "identities": [
+              "Serbia"
+            ]
+          },
+          {
+            "from": 1373,
+            "identities": [
+              "Reino de Bosnia"
+            ]
+          },
+          {
+            "from": 1392,
+            "identities": [
+              "Hum"
+            ]
+          },
+          {
+            "from": 1448,
+            "identities": [
+              "Herzegovina"
+            ]
+          },
+          {
+            "from": 1465,
+            "identities": [
+              "Bosnia y Herzegovina otomanas"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Pljevlja",
+        "coloredYears": 601,
+        "gaps": [],
+        "mixedYears": 0,
+        "unexplainedOverlaps": [],
+        "missingEvidence": [],
+        "changes": [
+          {
+            "from": 1200,
+            "identities": [
+              "Serbia"
+            ]
+          },
+          {
+            "from": 1373,
+            "identities": [
+              "Reino de Bosnia"
+            ]
+          },
+          {
+            "from": 1392,
+            "identities": [
+              "Hum"
+            ]
+          },
+          {
+            "from": 1448,
+            "identities": [
+              "Herzegovina"
+            ]
+          },
+          {
+            "from": 1465,
+            "identities": [
+              "Bosnia y Herzegovina otomanas"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Prijepolje",
+        "coloredYears": 601,
+        "gaps": [],
+        "mixedYears": 0,
+        "unexplainedOverlaps": [],
+        "missingEvidence": [],
+        "changes": [
+          {
+            "from": 1200,
+            "identities": [
+              "Serbia"
+            ]
+          },
+          {
+            "from": 1373,
+            "identities": [
+              "Reino de Bosnia"
+            ]
+          },
+          {
+            "from": 1392,
+            "identities": [
+              "Hum"
+            ]
+          },
+          {
+            "from": 1448,
+            "identities": [
+              "Herzegovina"
+            ]
+          },
+          {
+            "from": 1465,
+            "identities": [
+              "Bosnia y Herzegovina otomanas"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Soko_Grad",
+        "coloredYears": 601,
+        "gaps": [],
+        "mixedYears": 0,
+        "unexplainedOverlaps": [],
+        "missingEvidence": [],
+        "changes": [
+          {
+            "from": 1200,
+            "identities": [
+              "Serbia"
+            ]
+          },
+          {
+            "from": 1373,
+            "identities": [
+              "Reino de Bosnia"
+            ]
+          },
+          {
+            "from": 1392,
+            "identities": [
+              "Hum"
+            ]
+          },
+          {
+            "from": 1448,
+            "identities": [
+              "Herzegovina"
+            ]
+          },
+          {
+            "from": 1468,
+            "identities": [
+              "Bosnia y Herzegovina otomanas"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Soli",
+        "coloredYears": 601,
+        "gaps": [],
+        "mixedYears": 1,
+        "unexplainedOverlaps": [],
+        "missingEvidence": [],
+        "changes": [
+          {
+            "from": 1200,
+            "identities": [
+              "Reino de Bosnia"
+            ]
+          },
+          {
+            "from": 1253,
+            "identities": [
+              "Usora y Soli"
+            ]
+          },
+          {
+            "from": 1284,
+            "identities": [
+              "Sirmia"
+            ]
+          },
+          {
+            "from": 1317,
+            "identities": [
+              "Usora y Soli"
+            ]
+          },
+          {
+            "from": 1324,
+            "identities": [
+              "Reino de Bosnia"
+            ]
+          },
+          {
+            "from": 1432,
+            "identities": [
+              "Despotado de Serbia"
+            ]
+          },
+          {
+            "from": 1439,
+            "identities": [
+              "Bosnia y Herzegovina otomanas"
+            ]
+          },
+          {
+            "from": 1443,
+            "identities": [
+              "Reino de Bosnia"
+            ]
+          },
+          {
+            "from": 1463,
+            "identities": [
+              "Reino de Bosnia",
+              "Srebrenik"
+            ]
+          },
+          {
+            "from": 1464,
+            "identities": [
+              "Srebrenik"
+            ]
+          },
+          {
+            "from": 1512,
+            "identities": [
+              "Bosnia y Herzegovina otomanas"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Srebrenica",
+        "coloredYears": 601,
+        "gaps": [],
+        "mixedYears": 1,
+        "unexplainedOverlaps": [],
+        "missingEvidence": [],
+        "changes": [
+          {
+            "from": 1200,
+            "identities": [
+              "Reino de Bosnia"
+            ]
+          },
+          {
+            "from": 1410,
+            "identities": [
+              "Hungría"
+            ]
+          },
+          {
+            "from": 1411,
+            "identities": [
+              "Despotado de Serbia"
+            ]
+          },
+          {
+            "from": 1439,
+            "identities": [
+              "Bosnia y Herzegovina otomanas"
+            ]
+          },
+          {
+            "from": 1444,
+            "identities": [
+              "Despotado de Serbia"
+            ]
+          },
+          {
+            "from": 1459,
+            "identities": [
+              "Reino de Bosnia"
+            ]
+          },
+          {
+            "from": 1463,
+            "identities": [
+              "Bosnia y Herzegovina otomanas",
+              "Reino de Bosnia"
+            ]
+          },
+          {
+            "from": 1464,
+            "identities": [
+              "Bosnia y Herzegovina otomanas"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Srebrenik",
+        "coloredYears": 601,
+        "gaps": [],
+        "mixedYears": 1,
+        "unexplainedOverlaps": [],
+        "missingEvidence": [],
+        "changes": [
+          {
+            "from": 1200,
+            "identities": [
+              "Reino de Bosnia"
+            ]
+          },
+          {
+            "from": 1253,
+            "identities": [
+              "Usora y Soli"
+            ]
+          },
+          {
+            "from": 1284,
+            "identities": [
+              "Sirmia"
+            ]
+          },
+          {
+            "from": 1317,
+            "identities": [
+              "Usora y Soli"
+            ]
+          },
+          {
+            "from": 1324,
+            "identities": [
+              "Reino de Bosnia"
+            ]
+          },
+          {
+            "from": 1432,
+            "identities": [
+              "Despotado de Serbia"
+            ]
+          },
+          {
+            "from": 1439,
+            "identities": [
+              "Bosnia y Herzegovina otomanas"
+            ]
+          },
+          {
+            "from": 1443,
+            "identities": [
+              "Reino de Bosnia"
+            ]
+          },
+          {
+            "from": 1463,
+            "identities": [
+              "Reino de Bosnia",
+              "Srebrenik"
+            ]
+          },
+          {
+            "from": 1464,
+            "identities": [
+              "Srebrenik"
+            ]
+          },
+          {
+            "from": 1512,
+            "identities": [
+              "Bosnia y Herzegovina otomanas"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Teocak",
+        "coloredYears": 601,
+        "gaps": [],
+        "mixedYears": 1,
+        "unexplainedOverlaps": [],
+        "missingEvidence": [],
+        "changes": [
+          {
+            "from": 1200,
+            "identities": [
+              "Reino de Bosnia"
+            ]
+          },
+          {
+            "from": 1253,
+            "identities": [
+              "Usora y Soli"
+            ]
+          },
+          {
+            "from": 1284,
+            "identities": [
+              "Sirmia"
+            ]
+          },
+          {
+            "from": 1317,
+            "identities": [
+              "Usora y Soli"
+            ]
+          },
+          {
+            "from": 1324,
+            "identities": [
+              "Reino de Bosnia"
+            ]
+          },
+          {
+            "from": 1432,
+            "identities": [
+              "Despotado de Serbia"
+            ]
+          },
+          {
+            "from": 1439,
+            "identities": [
+              "Bosnia y Herzegovina otomanas"
+            ]
+          },
+          {
+            "from": 1443,
+            "identities": [
+              "Reino de Bosnia"
+            ]
+          },
+          {
+            "from": 1463,
+            "identities": [
+              "Reino de Bosnia",
+              "Srebrenik"
+            ]
+          },
+          {
+            "from": 1464,
+            "identities": [
+              "Srebrenik"
+            ]
+          },
+          {
+            "from": 1512,
+            "identities": [
+              "Bosnia y Herzegovina otomanas"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Trebinje",
+        "coloredYears": 601,
+        "gaps": [],
+        "mixedYears": 0,
+        "unexplainedOverlaps": [],
+        "missingEvidence": [],
+        "changes": [
+          {
+            "from": 1200,
+            "identities": [
+              "Serbia"
+            ]
+          },
+          {
+            "from": 1373,
+            "identities": [
+              "Travunia"
+            ]
+          },
+          {
+            "from": 1377,
+            "identities": [
+              "Reino de Bosnia"
+            ]
+          },
+          {
+            "from": 1392,
+            "identities": [
+              "Travunia"
+            ]
+          },
+          {
+            "from": 1438,
+            "identities": [
+              "Hum"
+            ]
+          },
+          {
+            "from": 1448,
+            "identities": [
+              "Herzegovina"
+            ]
+          },
+          {
+            "from": 1467,
+            "identities": [
+              "Bosnia y Herzegovina otomanas"
+            ]
+          },
+          {
+            "from": 1694,
+            "identities": [
+              "Dalmacia veneciana"
+            ]
+          },
+          {
+            "from": 1699,
+            "identities": [
+              "Bosnia y Herzegovina otomanas"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Ustikolina",
+        "coloredYears": 601,
+        "gaps": [],
+        "mixedYears": 0,
+        "unexplainedOverlaps": [],
+        "missingEvidence": [],
+        "changes": [
+          {
+            "from": 1200,
+            "identities": [
+              "Serbia"
+            ]
+          },
+          {
+            "from": 1373,
+            "identities": [
+              "Reino de Bosnia"
+            ]
+          },
+          {
+            "from": 1392,
+            "identities": [
+              "Hum"
+            ]
+          },
+          {
+            "from": 1448,
+            "identities": [
+              "Herzegovina"
+            ]
+          },
+          {
+            "from": 1465,
+            "identities": [
+              "Bosnia y Herzegovina otomanas"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Visegrad",
+        "coloredYears": 601,
+        "gaps": [],
+        "mixedYears": 1,
+        "unexplainedOverlaps": [],
+        "missingEvidence": [],
+        "changes": [
+          {
+            "from": 1200,
+            "identities": [
+              "Serbia"
+            ]
+          },
+          {
+            "from": 1373,
+            "identities": [
+              "Reino de Bosnia"
+            ]
+          },
+          {
+            "from": 1463,
+            "identities": [
+              "Bosnia y Herzegovina otomanas",
+              "Reino de Bosnia"
+            ]
+          },
+          {
+            "from": 1464,
+            "identities": [
+              "Bosnia y Herzegovina otomanas"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Vrhbosna",
+        "coloredYears": 601,
+        "gaps": [],
+        "mixedYears": 0,
+        "unexplainedOverlaps": [],
+        "missingEvidence": [],
+        "changes": [
+          {
+            "from": 1200,
+            "identities": [
+              "Reino de Bosnia"
+            ]
+          },
+          {
+            "from": 1435,
+            "identities": [
+              "Bosnia y Herzegovina otomanas"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Zenica",
+        "coloredYears": 601,
+        "gaps": [],
+        "mixedYears": 1,
+        "unexplainedOverlaps": [],
+        "missingEvidence": [],
+        "changes": [
+          {
+            "from": 1200,
+            "identities": [
+              "Reino de Bosnia"
+            ]
+          },
+          {
+            "from": 1463,
+            "identities": [
+              "Bosnia y Herzegovina otomanas",
+              "Reino de Bosnia"
+            ]
+          },
+          {
+            "from": 1464,
+            "identities": [
+              "Bosnia y Herzegovina otomanas"
+            ]
+          }
+        ]
+      }
+    ],
+    "neighborFindings": [
+      {
+        "ids": [
+          "Slano"
+        ],
+        "issue": "La geometría agrupa la costa ragusea, Pelješac y al menos dos islas; las fechas 1333/1399 y los cursos insulares no deben aplicarse juntos. Requiere subdivisión antes de nuevas atribuciones."
+      },
+      {
+        "ids": [
+          "Glaz",
+          "Kozara"
+        ],
+        "issue": "Periferia de Posavina/Donji Kraji septentrionales: señoríos y banatos defensivos requieren una revisión propia."
+      },
+      {
+        "ids": [
+          "Kotor",
+          "Makarska",
+          "Dinaric_Alps1"
+        ],
+        "issue": "Bahía de Kotor y frontera dálmata/croata: se conservan sus selecciones propias; no se agregan a Bosnia por el título de un señor."
+      }
+    ],
+    "limitations": [
+      "Las 31 superficies reciben una atribución territorial cada año; esto no acredita fronteras exactas ni una lista exhaustiva de gobernantes.",
+      "Las zonas de transición y los polígonos mixtos conservan notas y fuentes específicas; no se transforma la incertidumbre en una fecha exacta.",
+      "El inspector y el Atlas usan los mismos intervalos y las mismas superficies; los ámbitos personales de los bans rivales y subordinados se restringen por separado."
+    ]
+  },
+  "annualComparison": {
+    "base": "e4762a4be9b0a47d870b9723c175b22860253979",
+    "comparedYears": 601,
+    "scopeCells": 31,
+    "blankCellYearsBefore": 5998,
+    "nonTargetDifferences": [],
+    "changedPaintingYears": 601,
+    "newPeople": [
+      "PRIJEZDA2BOS",
+      "PAVAO1SUBIC",
+      "MLADEN1SUBIC",
+      "MLADEN2SUBIC",
+      "SANDALJKOS",
+      "HRVOJEHUM"
+    ],
+    "changedPeople": [
+      "STEPHEN2BOS",
+      "STEPHENTOMASEVICBOS",
+      "STJEPAN1BOS",
+      "STJEPANVUKKOS"
+    ]
+  },
+  "geographicScopeCheck": {
+    "method": "Actual SVG polygons sampled by map_geometry.geometry; identify visible cells wholly enclosed by interior rings of the scoped union. Not a proof of historical borders.",
+    "scopeCells": 31,
+    "missingCachedGeometry": [],
+    "enclosedOmittedIds": []
+  },
+  "bosniaAuthorityContinuity": {
+    "identity": "Reino de Bosnia",
+    "title": "Banato de Bosnia",
+    "from": 1200,
+    "through": 1462,
+    "lab": {
+      "missingYears": 0,
+      "missingIntervals": [],
+      "minCells": 10,
+      "maxCells": 27,
+      "limitedCoreIntervals": [
+        {
+          "from": 1200,
+          "through": 1462
+        }
+      ]
+    },
+    "personal": {
+      "recordedMandates": 24,
+      "yearsWithNoRecordedEffectiveMandate": 30,
+      "noMandateIntervals": [
+        {
+          "from": 1205,
+          "through": 1231
+        },
+        {
+          "from": 1251,
+          "through": 1253
+        }
+      ],
+      "yearsWithMandatesButNoGeometry": 0,
+      "missingGeometryIntervals": []
+    }
+  },
+  "globalCoverageCounts": {
+    "unrepresentedEntities": 40,
+    "representedEntities": 152,
+    "partialMandateGeometry": 54,
+    "partialEntireTerritoryYears": 51,
+    "explicitLimitedCores": 53,
+    "partiallyRepresentedUnique": 77,
+    "imperialLegalFrameExclusions": 2,
+    "governmentsOnlyOutsidePeriod": 4,
+    "titlesOnlyInsidePeriod": 1,
+    "territoriesWithSomeNonpaintingTitle": 54,
+    "nonpaintingMandatesInsidePeriod": 131
+  },
+  "unrepresentedEntities": [
+    {
+      "territory": "Albret",
+      "missingGeometryIntervals": [
+        {
+          "from": 1401,
+          "through": 1522
+        }
+      ]
+    },
+    {
+      "territory": "Alençon",
+      "missingGeometryIntervals": [
+        {
+          "from": 1404,
+          "through": 1474
+        },
+        {
+          "from": 1478,
+          "through": 1525
+        }
+      ]
+    },
+    {
+      "territory": "Angulema",
+      "missingGeometryIntervals": [
+        {
+          "from": 1407,
+          "through": 1496
+        }
+      ]
+    },
+    {
+      "territory": "Annandale",
+      "missingGeometryIntervals": [
+        {
+          "from": 1215,
+          "through": 1304
+        }
+      ]
+    },
+    {
+      "territory": "Ansbach",
+      "missingGeometryIntervals": [
+        {
+          "from": 1486,
+          "through": 1515
+        }
+      ]
+    },
+    {
+      "territory": "Antioquía",
+      "missingGeometryIntervals": [
+        {
+          "from": 1200,
+          "through": 1216
+        },
+        {
+          "from": 1219,
+          "through": 1268
+        }
+      ]
+    },
+    {
+      "territory": "Armenia cilicia",
+      "missingGeometryIntervals": [
+        {
+          "from": 1200,
+          "through": 1375
+        }
+      ]
+    },
+    {
+      "territory": "Berry",
+      "missingGeometryIntervals": [
+        {
+          "from": 1360,
+          "through": 1416
+        }
+      ]
+    },
+    {
+      "territory": "Borbón",
+      "missingGeometryIntervals": [
+        {
+          "from": 1262,
+          "through": 1310
+        },
+        {
+          "from": 1327,
+          "through": 1356
+        },
+        {
+          "from": 1488,
+          "through": 1503
+        }
+      ]
+    },
+    {
+      "territory": "Castellbó",
+      "missingGeometryIntervals": [
+        {
+          "from": 1315,
+          "through": 1381
+        }
+      ]
+    },
+    {
+      "territory": "Clermont",
+      "missingGeometryIntervals": [
+        {
+          "from": 1269,
+          "through": 1317
+        }
+      ]
+    },
+    {
+      "territory": "Curlandia",
+      "missingGeometryIntervals": [
+        {
+          "from": 1758,
+          "through": 1763
+        }
+      ]
+    },
+    {
+      "territory": "Dreux",
+      "missingGeometryIntervals": [
+        {
+          "from": 1200,
+          "through": 1218
+        }
+      ]
+    },
+    {
+      "territory": "Évreux",
+      "missingGeometryIntervals": [
+        {
+          "from": 1298,
+          "through": 1319
+        }
+      ]
+    },
+    {
+      "territory": "Forlì",
+      "missingGeometryIntervals": [
+        {
+          "from": 1488,
+          "through": 1500
+        }
+      ]
+    },
+    {
+      "territory": "Gandía",
+      "missingGeometryIntervals": [
+        {
+          "from": 1488,
+          "through": 1551
+        }
+      ]
+    },
+    {
+      "territory": "Georgia",
+      "missingGeometryIntervals": [
+        {
+          "from": 1200,
+          "through": 1289
+        },
+        {
+          "from": 1318,
+          "through": 1490
+        }
+      ]
+    },
+    {
+      "territory": "Guisa",
+      "missingGeometryIntervals": [
+        {
+          "from": 1528,
+          "through": 1588
+        }
+      ]
+    },
+    {
+      "territory": "Imericia",
+      "missingGeometryIntervals": [
+        {
+          "from": 1259,
+          "through": 1293
+        },
+        {
+          "from": 1463,
+          "through": 1478
+        },
+        {
+          "from": 1484,
+          "through": 1681
+        },
+        {
+          "from": 1683,
+          "through": 1696
+        },
+        {
+          "from": 1698,
+          "through": 1701
+        },
+        {
+          "from": 1707,
+          "through": 1716
+        },
+        {
+          "from": 1719,
+          "through": 1800
+        }
+      ]
+    },
+    {
+      "territory": "Imola",
+      "missingGeometryIntervals": [
+        {
+          "from": 1488,
+          "through": 1499
+        }
+      ]
+    },
+    {
+      "territory": "Jerusalén",
+      "missingGeometryIntervals": [
+        {
+          "from": 1200,
+          "through": 1228
+        },
+        {
+          "from": 1243,
+          "through": 1246
+        },
+        {
+          "from": 1269,
+          "through": 1291
+        }
+      ]
+    },
+    {
+      "territory": "Kajetia",
+      "missingGeometryIntervals": [
+        {
+          "from": 1466,
+          "through": 1616
+        },
+        {
+          "from": 1625,
+          "through": 1656
+        },
+        {
+          "from": 1664,
+          "through": 1676
+        },
+        {
+          "from": 1703,
+          "through": 1762
+        }
+      ]
+    },
+    {
+      "territory": "Kartli",
+      "missingGeometryIntervals": [
+        {
+          "from": 1490,
+          "through": 1703
+        },
+        {
+          "from": 1714,
+          "through": 1716
+        },
+        {
+          "from": 1719,
+          "through": 1727
+        },
+        {
+          "from": 1744,
+          "through": 1762
+        }
+      ]
+    },
+    {
+      "territory": "Kartli-Kajetia",
+      "missingGeometryIntervals": [
+        {
+          "from": 1762,
+          "through": 1800
+        }
+      ]
+    },
+    {
+      "territory": "Kulmbach",
+      "missingGeometryIntervals": [
+        {
+          "from": 1440,
+          "through": 1457
+        },
+        {
+          "from": 1495,
+          "through": 1515
+        }
+      ]
+    },
+    {
+      "territory": "La Marche",
+      "missingGeometryIntervals": [
+        {
+          "from": 1342,
+          "through": 1393
+        }
+      ]
+    },
+    {
+      "territory": "Mark",
+      "missingGeometryIntervals": [
+        {
+          "from": 1461,
+          "through": 1609
+        },
+        {
+          "from": 1614,
+          "through": 1713
+        }
+      ]
+    },
+    {
+      "territory": "Oldemburgo",
+      "missingGeometryIntervals": [
+        {
+          "from": 1423,
+          "through": 1440
+        }
+      ]
+    },
+    {
+      "territory": "Orleans",
+      "missingGeometryIntervals": [
+        {
+          "from": 1392,
+          "through": 1465
+        },
+        {
+          "from": 1626,
+          "through": 1701
+        }
+      ]
+    },
+    {
+      "territory": "Penthièvre",
+      "missingGeometryIntervals": [
+        {
+          "from": 1317,
+          "through": 1384
+        }
+      ]
+    },
+    {
+      "territory": "Pesaro",
+      "missingGeometryIntervals": [
+        {
+          "from": 1445,
+          "through": 1473
+        },
+        {
+          "from": 1483,
+          "through": 1500
+        },
+        {
+          "from": 1503,
+          "through": 1510
+        }
+      ]
+    },
+    {
+      "territory": "Ravensberg",
+      "missingGeometryIntervals": [
+        {
+          "from": 1475,
+          "through": 1609
+        },
+        {
+          "from": 1614,
+          "through": 1713
+        }
+      ]
+    },
+    {
+      "territory": "Richmond",
+      "missingGeometryIntervals": [
+        {
+          "from": 1452,
+          "through": 1456
+        }
+      ]
+    },
+    {
+      "territory": "Romaña",
+      "missingGeometryIntervals": [
+        {
+          "from": 1501,
+          "through": 1503
+        }
+      ]
+    },
+    {
+      "territory": "Samtsje",
+      "missingGeometryIntervals": [
+        {
+          "from": 1285,
+          "through": 1306
+        }
+      ]
+    },
+    {
+      "territory": "Tarento",
+      "missingGeometryIntervals": [
+        {
+          "from": 1463,
+          "through": 1465
+        }
+      ]
+    },
+    {
+      "territory": "Trípoli",
+      "missingGeometryIntervals": [
+        {
+          "from": 1200,
+          "through": 1289
+        }
+      ]
+    },
+    {
+      "territory": "Valois",
+      "missingGeometryIntervals": [
+        {
+          "from": 1286,
+          "through": 1325
+        }
+      ]
+    },
+    {
+      "territory": "Vendôme",
+      "missingGeometryIntervals": [
+        {
+          "from": 1372,
+          "through": 1562
+        },
+        {
+          "from": 1598,
+          "through": 1665
+        }
+      ]
+    },
+    {
+      "territory": "York",
+      "missingGeometryIntervals": [
+        {
+          "from": 1385,
+          "through": 1460
+        }
+      ]
+    }
+  ],
+  "validation": {
+    "unitTests": 427,
+    "hydrationTests": 29,
+    "staticPages": 3546,
+    "sitemapUrls": 3556,
+    "newPublicRoutes": 11,
+    "changedExistingPages": 24,
+    "removedPublicRoutes": 0,
+    "annualRegressionYears": 601,
+    "python": "3.12.14",
+    "verifiedSvgPaths": 7672,
+    "verifiedRegionalCells": 2469,
+    "repositorySecurityIssues": 0,
+    "npmVulnerabilities": 0,
+    "productionModuleGraph": {
+      "nativeMinifiedClientImport": "passed",
+      "profileHydrationAndControls": "passed",
+      "negativeControlWithoutStrictExecutionOrder": "TypeError: D is not a function"
+    }
+  },
+  "limitations": [
+    "Las 31 superficies reciben una atribución territorial cada año; esto no acredita fronteras exactas ni una lista exhaustiva de gobernantes.",
+    "Las zonas de transición y los polígonos mixtos conservan notas y fuentes específicas; no se transforma la incertidumbre en una fecha exacta.",
+    "El inspector y el Atlas usan los mismos intervalos y las mismas superficies; los ámbitos personales de los bans rivales y subordinados se restringen por separado.",
+    "Scope is inland Bosnia/Hum, Usora/Soli and Polimlje, not the entire Balkans. Neighboring Posavina, Croatian and Ragusan coast review remains separately identified.",
+    "A source passage attached to each regional phase does not certify exact original SVG borders. Drijeva still groups places with divergent jurisdictions.",
+    "Thirty medieval Bosnia years lack an individually recorded effective authority; continuity of the country must not be interpreted as an exhaustive governor succession.",
+    "White condition hatching makes already-recorded disputes, occupations and delegations visible also outside the reviewed data scope. Outside-scope ownership and geometry are unchanged."
+  ]
+}

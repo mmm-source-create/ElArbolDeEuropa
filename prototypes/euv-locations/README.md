@@ -735,3 +735,17 @@ fuentes y lo que queda pendiente. La auditoría anual pasa de 15 a 18 entidades
 y distingue ausencia de mandatos, ausencia de geometría y cobertura parcial.
 Bosnia se presenta como banato antes de 1377 y como reino después. Los cargos
 de Vuk y Vlad I están documentados por separado de su control disputado.
+
+## V5.9 · Bosnia y Hum, revisión por celda y año
+
+`bosnia-hum-review.json` contiene 105 fases, 30 referencias con pasajes y los
+ámbitos limitados de las autoridades revisadas. Se ensambla después de
+`medieval-balkans-review.json`; las fases regionales tienen prioridad solo
+dentro de sus 31 IDs explícitos. No sustituye el resto de la cartografía.
+
+`npm run audit:regional-continuity` verifica esas superficies en los 601 años,
+incluidas las cordilleras y las celdas que ya tenían color en otros períodos.
+El inspector distingue superficies aproximadas, condiciones de autoridad y
+atribuciones múltiples: Drijeva agrupa Gabela e Imotski y requiere una futura
+subdivisión para dibujar su frontera interior. El [informe de V5.9](../../docs/V5.9.md)
+explica el resultado y delimita la revisión costera y de Posavina pendiente.
