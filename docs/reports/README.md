@@ -15,3 +15,7 @@ indicadores de la última ejecución. Las auditorías actuales escriben en
 Para adoptar una instantánea nueva, compara el informe temporal, documenta
 su fecha y alcance en la PR y copia el resultado explícitamente. No renombres
 una ejecución sin revisar como «revisada».
+
+La [instantánea de V5.8](reviewed/v5.8-medieval-balkans.json) conserva las
+comprobaciones medievales de Bosnia, Valaquia y Moldavia y las 40 entidades
+aún sin representación efectiva. Los informes anteriores no se sobrescriben.

@@ -11,12 +11,14 @@ import {mapAuthoritiesForPerson} from '../../src/data/mapAuthorities.js';
 
 const data=JSON.parse(fs.readFileSync('prototypes/euv-locations/corridor-locations.json'));
 const review=JSON.parse(fs.readFileSync('prototypes/euv-locations/continuity-review.json'));
+const medieval=JSON.parse(fs.readFileSync('prototypes/euv-locations/medieval-balkans-review.json'));
 const entries=[...data.territories,...data.additionalTerritories];
 const expected=new Map([
   ['Francia',[1200,1800]],['Bohemia',[1200,1800]],['Moravia',[1200,1800]],
   ['Dinamarca',[1200,1800]],['Noruega',[1200,1800]],['Suecia',[1200,1800]],
   ['Inglaterra',[1200,1706]],['Escocia',[1200,1706]],['Irlanda',[1200,1800]],
   ['Gran Bretaña',[1707,1800]],['Polonia',[1320,1794]],['Lituania',[1253,1794]],
+  ['Reino de Bosnia',[1200,1462]],['Principado de Valaquia',[1310,1800]],['Principado de Moldavia',[1359,1800]],
   ['Carintia',[1200,1800]],['Carniola',[1200,1800]],['Estiria',[1200,1800]],
 ]);
 const intervals=years=>years.reduce((rows,year)=>{if(rows.at(-1)?.through===year-1)rows.at(-1).through=year;else rows.push({from:year,through:year});return rows;},[]);
@@ -46,10 +48,10 @@ for(const [identity,[from,through]] of expected){
     personal:{recordedMandates:mandates.length,yearsWithNoRecordedEffectiveMandate:noMandate.length,noMandateIntervals:intervals(noMandate),yearsWithMandatesButNoGeometry:personalMissing.length,missingGeometryIntervals:intervals(personalMissing)}});
 }
 const errors=rows.filter(row=>row.lab.missingYears);
-const report={from:1200,through:1800,reviewedAt:review.reviewedAt,
-  method:'Cada año de las 15 identidades prioritarias. El laboratorio y los mandatos personales se comprueban por separado. Se reconocen los gobiernos de Austria Interior que incluyen sus provincias, sin inventarles mandatos individuales. Un año sin gobernante documentado no prueba la extinción del territorio; tener alguna geometría no acredita cobertura completa.',
+const report={from:1200,through:1800,reviewedAt:medieval.reviewedAt,
+  method:'Cada año de las 18 identidades prioritarias. El laboratorio y los mandatos personales se comprueban por separado. Se reconocen los gobiernos de Austria Interior que incluyen sus provincias, sin inventarles mandatos individuales. Un año sin gobernante documentado no prueba la extinción del territorio; tener alguna geometría no acredita cobertura completa.',
   counts:{identities:rows.length,labContinuityErrors:errors.length,identitiesWithMissingPersonalGeometry:rows.filter(r=>r.personal.yearsWithMandatesButNoGeometry).length,identitiesWithUnrecordedMandateYears:rows.filter(r=>r.personal.yearsWithNoRecordedEffectiveMandate).length},
-  territories:rows,limitations:review.limitations};
+  territories:rows,limitations:[...review.limitations,...medieval.limitations]};
 fs.writeFileSync(auditReportPath('atlas-continuity-audit.json'),JSON.stringify(report,null,2)+'\n');
 const range=xs=>xs.map(x=>x.from===x.through?x.from:x.from+'–'+x.through).join(', ')||'—';
 fs.writeFileSync(auditReportPath('atlas-continuity-audit.md'),[
@@ -58,7 +60,7 @@ fs.writeFileSync(auditReportPath('atlas-continuity-audit.md'),[
   '|---|---|---|---|---|',
   ...rows.map(r=>'| '+[r.identity,r.from+'–'+r.through,range(r.lab.missingIntervals),range(r.personal.missingGeometryIntervals),range(r.personal.noMandateIntervals)].join(' | ')+' |'),
   '', 'Las ausencias de mandatos y de geometría son tareas de documentación; no se rellenan atribuyéndolas al vecino. Polonia anterior a 1320 requiere ducados separados; Lituania anterior a 1253 queda fuera de esta prueba. Gran Bretaña comienza en 1707 por una unión real, mientras Irlanda conserva su identidad.',
-  '',...review.limitations.map(x=>'- '+x),'',
+  '',...report.limitations.map(x=>'- '+x),'',
 ].join('\n'));
 console.log(JSON.stringify(report.counts));
 if(process.argv.includes('--fail-on-errors')&&errors.length)process.exitCode=1;

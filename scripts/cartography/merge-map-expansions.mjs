@@ -6,6 +6,7 @@ import {fileURLToPath} from 'node:url';
 import path from 'node:path';
 import {applyRegionalExtents} from './apply-regional-extents.mjs';
 import {applyContinuityReview} from './apply-continuity-review.mjs';
+import {applyMedievalBalkans} from './apply-medieval-balkans.mjs';
 const read = name => JSON.parse(fs.readFileSync(mapDataFile(name), 'utf8'));
 const correctionKey = item => [item.territory,item.id,item.action,item.from,item.through].join('|');
 
@@ -64,6 +65,7 @@ export function mergeMapExpansions(data) {
   applyContinuityReview(data, referenceGaps);
   data.referenceGapReview = data.continuityReview;
   data.continuityReview = continuity;
+  applyMedievalBalkans(data, read('medieval-balkans-review.json'));
   layers = [...data.territories, ...data.additionalTerritories];
   const svg = fs.readFileSync(mapDataFile('euv-locations-crop.svg'),'utf8');
   const ids = new Set([...svg.matchAll(/<path\b[^>]*\bid="([^"]+)"/g)].map(match => match[1]));

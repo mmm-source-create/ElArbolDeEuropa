@@ -21,6 +21,9 @@ indica que ese código sea el que está desplegado actualmente en producción.
 innecesaria. Su Release se prepara como borrador mientras la PR está en
 revisión. Se publica después de la fusión y de la validación del commit final.
 
+[V5.8](V5.8.md) incorpora la revisión medieval balcánica. Su Release se mantiene
+como borrador hasta la fusión y validación del commit final.
+
 ## Índice cronológico de documentos
 
 Ordenados por número de versión, de la primera a la última. Los documentos
@@ -75,6 +78,7 @@ permanecen explicados en [archive/manifests](archive/manifests/README.md).
 | [5.5](V5.5.md) | V5.5 · Gobernaciones y autoridad documentada |
 | [5.6](V5.6.md) | V5.6 · Herramientas reproducibles y archivos clasificados |
 | [5.7](V5.7.md) | V5.7 · Modelo canónico y documentación de entregas |
+| [5.8](V5.8.md) | V5.8 · Continuidad balcánica medieval |
 
 ## Publicar una entrega
 
