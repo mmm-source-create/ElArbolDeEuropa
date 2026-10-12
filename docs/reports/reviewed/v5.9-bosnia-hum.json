@@ -2048,7 +2048,7 @@
     }
   ],
   "validation": {
-    "unitTests": 426,
+    "unitTests": 427,
     "hydrationTests": 29,
     "staticPages": 3546,
     "sitemapUrls": 3556,
@@ -2060,7 +2060,12 @@
     "verifiedSvgPaths": 7672,
     "verifiedRegionalCells": 2469,
     "repositorySecurityIssues": 0,
-    "npmVulnerabilities": 0
+    "npmVulnerabilities": 0,
+    "productionModuleGraph": {
+      "nativeMinifiedClientImport": "passed",
+      "profileHydrationAndControls": "passed",
+      "negativeControlWithoutStrictExecutionOrder": "TypeError: D is not a function"
+    }
   },
   "limitations": [
     "Las 31 superficies reciben una atribución territorial cada año; esto no acredita fronteras exactas ni una lista exhaustiva de gobernantes.",
