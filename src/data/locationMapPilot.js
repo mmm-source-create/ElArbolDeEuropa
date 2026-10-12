@@ -1,3 +1,4 @@
+import {medievalBalkanJurisdictions} from './medievalBalkanRoutes.js';
 // These aliases connect the Atlas government records to reviewed new-map
 // jurisdictions, without treating every title held by one ruler as one state.
 import {imperialFrameIds} from './imperialFrame.js';
@@ -36,7 +37,7 @@ export function pilotJurisdictionsFor(territory, year, personId = null) {
   if (scope?.jurisdictions) return scope.jurisdictions;
   const chronological=chronologyJurisdictionsFor(territory,year,personId);
   const frontier=frontierJurisdictions(continuityJurisdictions(regionalExtentJurisdictions(appendChronologyJurisdictions(chronological ?? basePilotJurisdictionsFor(territory,year,personId),territory,personId),territory,year,personId),territory,year,personId),territory,year,personId);
-  return referenceGapJurisdictions(successionJurisdictions(frontier,territory,year,personId),territory);
+  return medievalBalkanJurisdictions(referenceGapJurisdictions(successionJurisdictions(frontier,territory,year,personId),territory),territory);
 }
 
 function basePilotJurisdictionsFor(territory, year, personId) {

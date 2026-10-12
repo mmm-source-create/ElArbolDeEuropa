@@ -207,6 +207,16 @@
       "path": "src/MapChart_Map.svg",
       "kind": "geometry-reference",
       "maintenance": "Earlier MapChart province edition; geometry reference, not proof of historical jurisdiction."
+    },
+    {
+      "path": "prototypes/euv-locations/medieval-balkans-review.json",
+      "kind": "historical-selection",
+      "maintenance": "Selecciones medievales y superficies interiores revisadas explícitamente; ensambladas por scripts/cartography/merge-map-expansions.mjs."
+    },
+    {
+      "path": "docs/reports/reviewed/v5.8-medieval-balkans.json",
+      "kind": "reviewed-audit",
+      "maintenance": "Instantánea revisada de V5.8; informes actuales en .cache/audits/."
     }
   ]
 }

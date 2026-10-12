@@ -56748,6 +56748,124 @@
           "ids": [],
           "borderline": []
         }
+      ],
+      "sources": [
+        {
+          "title": "Hrvatska enciklopedija · Bosna i Hercegovina",
+          "url": "https://www.enciklopedija.hr/clanak/bosna-i-hercegovina",
+          "locator": "Historia medieval: núcleo del valle de Bosnia; separación de Usora/Soli en 1253; expansión de 1324; adquisición entre Drina y Lim en 1373."
+        },
+        {
+          "title": "Hrvatski biografski leksikon · Kotromanići",
+          "url": "https://hbl.lzmk.hr/Clanak/kotromanici?handler=ButtonSnimi",
+          "locator": "Prijezda I: Bosnia y Donji Kraji; Stjepan II: expansión de 1324; Tvrtko I: crisis de 1366–1369 y reparto de 1373."
+        }
+      ],
+      "precision": "documented_core",
+      "limitedCore": true,
+      "temporalExtensions": [
+        {
+          "name": "Reino de Bosnia",
+          "periods": [
+            {
+              "through": 1399,
+              "from": 1200
+            }
+          ],
+          "precision": "documented_core",
+          "limitedCore": true,
+          "versions": [
+            {
+              "ids": [
+                "Borac",
+                "Olovo",
+                "Vrhbosna",
+                "Zenica"
+              ],
+              "oldIds": [],
+              "borderline": [],
+              "event": "Núcleo del banato en el valle de Bosnia; no las fronteras del reino posterior.",
+              "from": 1200
+            },
+            {
+              "ids": [
+                "Borac",
+                "Jajce",
+                "Kljuc",
+                "Konjic",
+                "Olovo",
+                "Vrhbosna",
+                "Zenica"
+              ],
+              "oldIds": [],
+              "borderline": [],
+              "event": "Bosnia y Donji Kraji bajo Prijezda I; Usora y Soli quedan fuera.",
+              "from": 1254
+            },
+            {
+              "ids": [
+                "Borac",
+                "Doboj",
+                "Glamoc",
+                "Jajce",
+                "Kljuc",
+                "Konjic",
+                "Livno",
+                "Olovo",
+                "Soli",
+                "Srebrenik",
+                "Teocak",
+                "Vrhbosna",
+                "Zenica"
+              ],
+              "oldIds": [],
+              "borderline": [],
+              "event": "Expansión de Esteban II: Usora/Soli y Livno/Glamoč.",
+              "from": 1324
+            },
+            {
+              "ids": [
+                "Borac",
+                "Doboj",
+                "Glamoc",
+                "Jajce",
+                "Kljuc",
+                "Konjic",
+                "Livno",
+                "Olovo",
+                "Soli",
+                "Srebrenik",
+                "Teocak",
+                "Ustikolina",
+                "Visegrad",
+                "Vrhbosna",
+                "Zenica"
+              ],
+              "oldIds": [],
+              "borderline": [],
+              "event": "Adquisición de los ámbitos de Višegrad y Ustikolina en el reparto de las tierras de Altomanović.",
+              "from": 1373
+            }
+          ],
+          "sources": [
+            {
+              "title": "Hrvatska enciklopedija · Bosna i Hercegovina",
+              "url": "https://www.enciklopedija.hr/clanak/bosna-i-hercegovina",
+              "locator": "Historia medieval: núcleo del valle de Bosnia; separación de Usora/Soli en 1253; expansión de 1324; adquisición entre Drina y Lim en 1373."
+            },
+            {
+              "title": "Hrvatski biografski leksikon · Kotromanići",
+              "url": "https://hbl.lzmk.hr/Clanak/kotromanici?handler=ButtonSnimi",
+              "locator": "Prijezda I: Bosnia y Donji Kraji; Stjepan II: expansión de 1324; Tvrtko I: crisis de 1366–1369 y reparto de 1373."
+            },
+            {
+              "title": "Hrvatski povijesni muzej · Marko Vego, Povijesna karta srednjovjekovne Bosne (1957)",
+              "url": "https://kartevgi.hismus.hr/karte/povijesna-karta-srednjovjekovne-bosne/",
+              "locator": "HPM 104339, hojas 1 y 2: contraste visual de valles, relieve y regiones. La carta combina épocas y posesiones temporales; las fechas proceden de las fuentes escritas."
+            }
+          ],
+          "note": "Selección medieval propia, limitada al núcleo interior del banato y reino. No se retrotraen las fronteras de 1400. La crisis de 1366–1367 se distingue en los mandatos y en el ámbito de Vuk. Hum, la costa dálmata y el conjunto de Polimlje requieren capas señoriales separadas; no se afirma una frontera exhaustiva."
+        }
       ]
     },
     {
@@ -56949,8 +57067,101 @@
               "locator": "Tratado de 21 julio 1718: Banato, Belgrado/norte de Serbia y Oltenia; Morea otomana."
             }
           ]
+        },
+        {
+          "name": "Principado de Valaquia",
+          "periods": [
+            {
+              "through": 1399,
+              "from": 1310
+            }
+          ],
+          "precision": "documented_core",
+          "limitedCore": true,
+          "versions": [
+            {
+              "ids": [
+                "Arges",
+                "Bucharest",
+                "Bukov",
+                "Buzau",
+                "Calafat",
+                "Campulung_Muscel",
+                "Caracal",
+                "Cegani",
+                "Comana",
+                "Cozia",
+                "Craiova",
+                "Dragasani",
+                "Gaiseni",
+                "Glavacioc",
+                "Gratia",
+                "Lichiresti",
+                "Meteleu",
+                "Orasul_de_Floci",
+                "Parscov",
+                "Pitesti",
+                "Plenita",
+                "Ploesti",
+                "Poenari",
+                "Ramnicu_Valcea",
+                "Rusii_de_Vede",
+                "Slanic",
+                "Slatina",
+                "Slobozia",
+                "Stramba",
+                "Strehaia",
+                "Targoviste",
+                "Targu_Bengai",
+                "Targu_Jiu",
+                "Valenii_de_Munte",
+                "Viziru"
+              ],
+              "oldIds": [],
+              "borderline": [],
+              "event": "Núcleo regional de Oltenia y Muntenia; 1310 es un inicio convencional, no una fecha de conquista de cada celda.",
+              "from": 1310
+            }
+          ],
+          "sources": [
+            {
+              "title": "Princeton Medieval Black Sea Project · Fortress of Severin",
+              "url": "https://medievalblackseaproject.princeton.edu/severin-fortress-of-severin-elena-ene-draghici-vasilescu/",
+              "locator": "Basarab I, Posada (1330), Nicolae Alexandru y Vlaicu; Severin en 1357–1364 y 1364–1376, separado de la geometría general."
+            },
+            {
+              "title": "István Vásáry · Cumans and Tatars (Cambridge, 2005)",
+              "url": "https://www.cambridge.org/core/books/abs/cumans-and-tatars/emergence-of-two-romanian-principalities-in-cumania-1330-1364/519C32D5762BE191FE71AFFE7594FC04",
+              "locator": "Capítulo 8, resumen: Oltenia y Muntenia, límites del Danubio, los Cárpatos y el Olt; proceso de formación de ambos principados."
+            }
+          ],
+          "note": "Ámbito regional aproximado entre los Cárpatos y el Danubio. Las celdas representan superficies, no la fecha de fundación de sus ciudades. Severin, Făgăraș, los puertos danubianos y Râmnicu Sărat no se añaden por extensión automática. Dobruja conserva su serie independiente y sus interrupciones."
         }
-      ]
+      ],
+      "sources": [
+        {
+          "title": "Princeton Medieval Black Sea Project · Fortress of Severin",
+          "url": "https://medievalblackseaproject.princeton.edu/severin-fortress-of-severin-elena-ene-draghici-vasilescu/",
+          "locator": "Basarab I, Posada (1330), Nicolae Alexandru y Vlaicu; Severin en 1357–1364 y 1364–1376, separado de la geometría general."
+        },
+        {
+          "title": "István Vásáry · Cumans and Tatars (Cambridge, 2005)",
+          "url": "https://www.cambridge.org/core/books/abs/cumans-and-tatars/emergence-of-two-romanian-principalities-in-cumania-1330-1364/519C32D5762BE191FE71AFFE7594FC04",
+          "locator": "Capítulo 8, resumen: Oltenia y Muntenia, límites del Danubio, los Cárpatos y el Olt; proceso de formación de ambos principados."
+        },
+        {
+          "title": "Atatürk Research Center · Türkiye Cumhuriyeti Tarihi I",
+          "url": "https://atam.gov.tr/wp-content/uploads/2023/10/TURKIYE-CUMHURIYETI-TARIHI-1a.pdf",
+          "locator": "Harita 1 y 2 (pp. PDF 1489–1490): expansión 1299–1683, territorios directos, tributarios y pérdidas. Las incursiones no se consideran anexiones."
+        },
+        {
+          "title": "TDV İslâm Ansiklopedisi · Pasarofça Antlaşması",
+          "url": "https://islamansiklopedisi.org.tr/pasarofca-antlasmasi",
+          "locator": "Tratado de 21 julio 1718: Banato, Belgrado/norte de Serbia y Oltenia; Morea otomana."
+        }
+      ],
+      "precision": "documented_core",
+      "limitedCore": true
     },
     {
       "corridor": "Hungría y Balcanes",
@@ -57140,8 +57351,130 @@
               "locator": "Mapa de adquisiciones: Austria y Estiria 1282, Carintia 1335, Tirol 1363, Bohemia y Silesia 1526, Hungría 1699 y Banato 1718. El cargo imperial no equivale al dominio de todos sus estados."
             }
           ]
+        },
+        {
+          "name": "Principado de Moldavia",
+          "periods": [
+            {
+              "through": 1399,
+              "from": 1359
+            }
+          ],
+          "precision": "documented_core",
+          "limitedCore": true,
+          "versions": [
+            {
+              "ids": [
+                "Campulung_Moldovenesc",
+                "Cotnari",
+                "Dorohoi",
+                "Harlau",
+                "Piatra_Lui_Craciun",
+                "Putna",
+                "Siret",
+                "Suceava",
+                "Targu_Neamt"
+              ],
+              "oldIds": [],
+              "borderline": [],
+              "event": "Núcleo septentrional del voivodato; fecha inicial convencional y disputada en la historiografía.",
+              "from": 1359
+            },
+            {
+              "ids": [
+                "Bacau",
+                "Campulung_Moldovenesc",
+                "Cotnari",
+                "Dorohoi",
+                "Harlau",
+                "Husi",
+                "Iasi",
+                "Piatra_Lui_Craciun",
+                "Putna",
+                "Roman",
+                "Siret",
+                "Suceava",
+                "Targu_Neamt",
+                "Vaslui"
+              ],
+              "oldIds": [],
+              "borderline": [],
+              "event": "Consolidación interior bajo Petru I; las fechas son cortes aproximados, no deslindes exactos.",
+              "from": 1375
+            },
+            {
+              "ids": [
+                "Bacau",
+                "Balti",
+                "Campulung_Moldovenesc",
+                "Chisinau",
+                "Cotnari",
+                "Dorohoi",
+                "Harlau",
+                "Husi",
+                "Iasi",
+                "Orhei",
+                "Piatra_Lui_Craciun",
+                "Putna",
+                "Roman",
+                "Siret",
+                "Soroca",
+                "Stefanesti",
+                "Suceava",
+                "Targu_Neamt",
+                "Tighina",
+                "Vaslui"
+              ],
+              "oldIds": [],
+              "borderline": [],
+              "event": "Corte conservador tras la unificación de 1386–1387 hacia el Dniéster. No atribuye automáticamente fortalezas portuarias ni la frontera meridional.",
+              "from": 1387
+            }
+          ],
+          "sources": [
+            {
+              "title": "Academia de Ciencias de Moldavia · Cronologia istorică a Moldovei",
+              "url": "https://moldova650.asm.md/node/25",
+              "locator": "Bogdan: cronologías alternativas 1359–1365 / 1363–1367; unificación territorial bajo Petru I hacia el Dniéster y el mar en 1386–1387; título de Roman I de 30 de marzo de 1392."
+            },
+            {
+              "title": "Academia de Ciencias de Moldavia · Petru I",
+              "url": "https://moldova650.asm.md/node/33",
+              "locator": "Gobierno de c.1375–1391 y unificación de las tierras moldavas. El homenaje polaco no convierte el principado en una provincia de Polonia."
+            },
+            {
+              "title": "István Vásáry · Cumans and Tatars (Cambridge, 2005)",
+              "url": "https://www.cambridge.org/core/books/abs/cumans-and-tatars/emergence-of-two-romanian-principalities-in-cumania-1330-1364/519C32D5762BE191FE71AFFE7594FC04",
+              "locator": "Capítulo 8, resumen: Oltenia y Muntenia, límites del Danubio, los Cárpatos y el Olt; proceso de formación de ambos principados."
+            }
+          ],
+          "note": "La expansión se representa con núcleos fechados y no con la proyección retrospectiva de 1400. Los puertos Chilia/Cetatea Albă, Hotin y la frontera Focșani–Tecuci se mantienen fuera de esta ampliación medieval por requerir revisión propia. Las referencias al mar no prueban por sí solas posesión de cada fortaleza. Crasna es la celda de Sălaj al oeste de Transilvania, no una localidad moldava; queda excluida en todas las fases."
         }
-      ]
+      ],
+      "sources": [
+        {
+          "title": "Academia de Ciencias de Moldavia · Cronologia istorică a Moldovei",
+          "url": "https://moldova650.asm.md/node/25",
+          "locator": "Bogdan: cronologías alternativas 1359–1365 / 1363–1367; unificación territorial bajo Petru I hacia el Dniéster y el mar en 1386–1387; título de Roman I de 30 de marzo de 1392."
+        },
+        {
+          "title": "Academia de Ciencias de Moldavia · Petru I",
+          "url": "https://moldova650.asm.md/node/33",
+          "locator": "Gobierno de c.1375–1391 y unificación de las tierras moldavas. El homenaje polaco no convierte el principado en una provincia de Polonia."
+        },
+        {
+          "title": "Atatürk Research Center · Türkiye Cumhuriyeti Tarihi I",
+          "url": "https://atam.gov.tr/wp-content/uploads/2023/10/TURKIYE-CUMHURIYETI-TARIHI-1a.pdf",
+          "locator": "Harita 1 y 2 (pp. PDF 1489–1490): expansión 1299–1683, territorios directos, tributarios y pérdidas. Las incursiones no se consideran anexiones."
+        },
+        {
+          "title": "German Historical Institute · Growth of the Habsburg Empire, 1282–1918",
+          "url": "https://germanhistorydocs.org/en/the-holy-roman-empire-1648-1815/the-growth-of-the-habsburg-empire",
+          "locator": "Mapa de adquisiciones: Austria y Estiria 1282, Carintia 1335, Tirol 1363, Bohemia y Silesia 1526, Hungría 1699 y Banato 1718. El cargo imperial no equivale al dominio de todos sus estados."
+        }
+      ],
+      "precision": "documented_core",
+      "limitedCore": true
     },
     {
       "corridor": "Borgoña e Imperio",
@@ -69320,6 +69653,125 @@
         }
       ],
       "color": "#cb6525"
+    },
+    {
+      "name": "Bosnia · relieve interior",
+      "corridor": "Continuidad balcánica medieval",
+      "coverage": {
+        "from": 1254,
+        "through": 1462
+      },
+      "versions": [
+        {
+          "ids": [
+            "Dinaric_Alps2",
+            "Dinaric_Alps3"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Superficies interiores revisadas; la ampliación continúa al atravesar 1400.",
+          "from": 1254
+        }
+      ],
+      "sources": [
+        {
+          "title": "Hrvatska enciklopedija · Bosna i Hercegovina",
+          "url": "https://www.enciklopedija.hr/clanak/bosna-i-hercegovina",
+          "locator": "Historia medieval: núcleo del valle de Bosnia; separación de Usora/Soli en 1253; expansión de 1324; adquisición entre Drina y Lim en 1373."
+        },
+        {
+          "title": "Hrvatski biografski leksikon · Kotromanići",
+          "url": "https://hbl.lzmk.hr/Clanak/kotromanici?handler=ButtonSnimi",
+          "locator": "Prijezda I: Bosnia y Donji Kraji; Stjepan II: expansión de 1324; Tvrtko I: crisis de 1366–1369 y reparto de 1373."
+        },
+        {
+          "title": "Hrvatski povijesni muzej · Marko Vego, Povijesna karta srednjovjekovne Bosne (1957)",
+          "url": "https://kartevgi.hismus.hr/karte/povijesna-karta-srednjovjekovne-bosne/",
+          "locator": "HPM 104339, hojas 1 y 2: contraste visual de valles, relieve y regiones. La carta combina épocas y posesiones temporales; las fechas proceden de las fuentes escritas."
+        }
+      ],
+      "note": "Dos polígonos completos del relieve interior en torno a Donji Kraji y Bosnia central, inspeccionados en el SVG. No se colorea toda la cordillera dinárica ni las celdas de Lika, Albania o Serbia. La subordinación señorial no equivale a administración directa del ban o rey.",
+      "precision": "regional_approximation",
+      "limitedCore": true,
+      "color": "#86715d"
+    },
+    {
+      "name": "Valaquia · comarcas interiores",
+      "corridor": "Continuidad balcánica medieval",
+      "coverage": {
+        "from": 1310,
+        "through": 1800
+      },
+      "versions": [
+        {
+          "ids": [
+            "Cetateni",
+            "Radovanu"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Superficies interiores revisadas; la ampliación continúa al atravesar 1400.",
+          "from": 1310
+        }
+      ],
+      "sources": [
+        {
+          "title": "Princeton Medieval Black Sea Project · Fortress of Severin",
+          "url": "https://medievalblackseaproject.princeton.edu/severin-fortress-of-severin-elena-ene-draghici-vasilescu/",
+          "locator": "Basarab I, Posada (1330), Nicolae Alexandru y Vlaicu; Severin en 1357–1364 y 1364–1376, separado de la geometría general."
+        },
+        {
+          "title": "István Vásáry · Cumans and Tatars (Cambridge, 2005)",
+          "url": "https://www.cambridge.org/core/books/abs/cumans-and-tatars/emergence-of-two-romanian-principalities-in-cumania-1330-1364/519C32D5762BE191FE71AFFE7594FC04",
+          "locator": "Capítulo 8, resumen: Oltenia y Muntenia, límites del Danubio, los Cárpatos y el Olt; proceso de formación de ambos principados."
+        }
+      ],
+      "note": "Dos superficies interiores al sur de los Cárpatos y al norte del Danubio, contrastadas con el contorno del principado. Su nombre cartográfico no exige que la localidad existiera con ese nombre desde 1310. No incluyen puertos otomanos ni Oltenia occidental; no cambian de manos con la cesión de Oltenia de 1718.",
+      "precision": "regional_approximation",
+      "limitedCore": true,
+      "color": "#86715d"
+    },
+    {
+      "name": "Moldavia · valles interiores orientales",
+      "corridor": "Continuidad balcánica medieval",
+      "coverage": {
+        "from": 1387,
+        "through": 1800
+      },
+      "versions": [
+        {
+          "ids": [
+            "Targu_Lapusnei",
+            "Tuzara",
+            "Ungheni"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Superficies interiores revisadas; la ampliación continúa al atravesar 1400.",
+          "from": 1387
+        }
+      ],
+      "sources": [
+        {
+          "title": "Academia de Ciencias de Moldavia · Cronologia istorică a Moldovei",
+          "url": "https://moldova650.asm.md/node/25",
+          "locator": "Bogdan: cronologías alternativas 1359–1365 / 1363–1367; unificación territorial bajo Petru I hacia el Dniéster y el mar en 1386–1387; título de Roman I de 30 de marzo de 1392."
+        },
+        {
+          "title": "Academia de Ciencias de Moldavia · Petru I",
+          "url": "https://moldova650.asm.md/node/33",
+          "locator": "Gobierno de c.1375–1391 y unificación de las tierras moldavas. El homenaje polaco no convierte el principado en una provincia de Polonia."
+        },
+        {
+          "title": "Atatürk Research Center · Türkiye Cumhuriyeti Tarihi I",
+          "url": "https://atam.gov.tr/wp-content/uploads/2023/10/TURKIYE-CUMHURIYETI-TARIHI-1a.pdf",
+          "locator": "Harita 1 y 2 (pp. PDF 1489–1490): expansión 1299–1683, territorios directos, tributarios y pérdidas. Las incursiones no se consideran anexiones."
+        }
+      ],
+      "note": "Superficies interiores entre el Prut y el Dniéster, revisadas visualmente y separadas de Chilia, Cetatea Albă, Tighina y Hotin. La selección regional tiene límites aproximados: no es un deslinde municipal medieval. Se mantiene la autoridad principesca en la etapa tributaria; la conquista de los puertos no se extiende a todo el principado.",
+      "precision": "regional_approximation",
+      "limitedCore": true,
+      "color": "#86715d"
     }
   ],
   "overrides": [
@@ -80252,6 +80704,25 @@
       "El HTML de referencia sirve para detectar huecos, no como prueba de soberanía ni de fronteras. No se ejecuta su código ni se importan automáticamente sus máscaras.",
       "Primera revisión: 31 celdas. Los demás candidatos mantienen su estado de investigación sin verificar.",
       "Los límites interiores proceden del SVG actual y no representan demarcaciones históricas exactas; las fechas de la primera mención urbana no se usan como fechas de nacimiento territorial."
+    ]
+  },
+  "medievalBalkanReview": {
+    "reviewedAt": "2026-10-12",
+    "limitations": [
+      "Los cortes de 1200, 1254, 1310, 1359 y 1387 son representaciones anuales convencionales o conservadoras; no datan la anexión de cada polígono.",
+      "La superficie revisada se declara parcial. Hum y los señoríos de Polimlje, los puertos danubianos, Severin, la frontera meridional moldava y las celdas mixtas de los Cárpatos siguen pendientes de ámbitos específicos.",
+      "Vuk y Vlad I aparecen con control disputado. La geometría de Vuk se limita al entorno de Bobovac, no a todo el banato.",
+      "La cronología del cargo y la evidencia de superficie se revisan por separado; no se inventan nacimientos, muertes ni parentescos para cerrar huecos."
+    ],
+    "series": [
+      "Reino de Bosnia",
+      "Principado de Valaquia",
+      "Principado de Moldavia"
+    ],
+    "layerNames": [
+      "Bosnia · relieve interior",
+      "Valaquia · comarcas interiores",
+      "Moldavia · valles interiores orientales"
     ]
   }
 }

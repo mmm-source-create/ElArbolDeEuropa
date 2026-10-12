@@ -12,6 +12,12 @@ const DOGES_1400_1605 = [
 // Bibliography shared by the public site, Atlas and generated entity pages.
 // A territorial reference supplies context; only explicit person IDs assign a biography.
 export const SOURCES = [
+  {"titulo":"Proleksis · Kulin","url":"https://proleksis.lzmk.hr/33125/","grupo":"Archivos e instituciones","personas":["KULINBOS"],"territorios":["Bosnia"]},
+  {"titulo":"Institutul de Istorie Nicolae Iorga · Ctitorii Mușatine (1976)","url":"https://biblioteca-digitala.ro/reviste/carte/iini/Adam_Ctitorii-Musatine_1976.pdf","grupo":"Archivos e instituciones","personas":["IUGAMOLD"],"territorios":["Moldavia"]},
+  {"titulo":"Muzeul Național de Istorie a României · Lucia Bieltz, MOLDER-LANT (1996)","url":"https://cercetarinumismatice.ro/?articol=61997-molder-lant-o-legenda-inedita-pe-monedele-emise-de-stefan-i-1394-1399-molder-lant-a-new-legend-on-the-coins-issued-by-stephen-i-prince-of-moldavia-1389-1399","grupo":"Archivos e instituciones","personas":["STEFAN1MOLD"],"territorios":["Moldavia"]},
+  {"titulo":"Hrvatski biografski leksikon · Kotromanići","url":"https://hbl.lzmk.hr/Clanak/kotromanici?handler=ButtonSnimi","grupo":"Archivos e instituciones","personas":["NINOSLAVBOS","PRIJEZDA1BOS","VUKBOS","TVRTKO1BOS","STEPHEN2BOS"],"territorios":["Bosnia"]},
+  {"titulo":"Institutul Național al Patrimoniului · Monede medievale şi moderne","url":"https://www.patrimoniu.ro/ro/profiles/monede-medievale-si-moderne","grupo":"Archivos e instituciones","personas":["VLAD1WAL","VLADISLAV1WAL","RADU1WAL","DAN1WAL","MIRCEA1WAL"],"territorios":["Valaquia","Moldavia"]},
+
   {titulo:'Historisches Lexikon Bayerns · Pfalz-Neuburg: historia política',url:'https://www.historisches-lexikon-bayerns.de/Lexikon/Artikel_45317',grupo:'Archivos e instituciones',territorios:['Palatinado-Neoburgo'],personas:['CARLOS5']},
   {titulo:"Die Welt der Habsburger · Cesión de las tierras austríacas a Fernando I",url:"https://www.habsburger.net/en/chapter/ferdinand-i-overshadowed-his-elder-brother",grupo:"Archivos e instituciones",territorios:["Austria","Austria Interior","Tirol"],personas:["CARLOS5","FERN1EMP"]},
   {titulo:"Die Welt der Habsburger · Partición de 1564",url:"https://www.habsburger.net/en/chapter/tripartite-division-austrian-inheritance",grupo:"Archivos e instituciones",territorios:["Austria","Austria Interior","Tirol"],personas:["MAXIM2","FERN2TIROL","CARLOS2ESTIRIA","FERN2EMP"]},

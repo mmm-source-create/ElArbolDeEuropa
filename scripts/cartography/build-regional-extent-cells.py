@@ -25,6 +25,9 @@ used.update(item['id'] for item in succession['overrides'])
 reference_gaps = json.loads((HERE / 'reference-gap-review.json').read_text())
 used.update(cell for layer in reference_gaps['territories']
             for version in layer['versions'] for cell in version['ids'])
+medieval = json.loads((HERE / 'medieval-balkans-review.json').read_text())
+used.update(cell for layer in medieval['temporalExtensions'] + medieval['territories']
+            for version in layer['versions'] for cell in version['ids'])
 # Older dated corrections can add a cell absent from the replacement anchor.
 data = json.loads((HERE / 'corridor-locations.json').read_text())
 used.update(item['id'] for item in data['overrides'])

@@ -1,0 +1,806 @@
+{
+  "version": "5.8.0",
+  "reviewedAt": "2026-10-12",
+  "baseCommit": "9538c15ba4266122490357980b6960bc1d34ace6",
+  "method": "Instantánea revisada de las auditorías anuales; representación significa alguna geometría, no frontera exhaustiva. Las fuentes y cortes están en medieval-balkans-review.json y las revisiones por afirmación.",
+  "scope": {
+    "from": 1200,
+    "through": 1800,
+    "catalogueTerritories": 270,
+    "svgLocations": 7672
+  },
+  "counts": {
+    "unrepresentedEntities": 40,
+    "representedEntities": 151,
+    "partialMandateGeometry": 55,
+    "partialEntireTerritoryYears": 52,
+    "explicitLimitedCores": 47,
+    "partiallyRepresentedUnique": 72,
+    "imperialLegalFrameExclusions": 2,
+    "governmentsOnlyOutsidePeriod": 4,
+    "titlesOnlyInsidePeriod": 1,
+    "territoriesWithSomeNonpaintingTitle": 53,
+    "nonpaintingMandatesInsidePeriod": 130
+  },
+  "neverColored": {
+    "paths": 7672,
+    "visible": 7641,
+    "everColored": 3943,
+    "neverColored": 3698,
+    "neverColoredPhysical": 171,
+    "outsideFrame": 31,
+    "untriaged": 0
+  },
+  "priorityTerritories": [
+    {
+      "territory": "Bosnia",
+      "counts": {
+        "effectiveMandatesAllTime": 17,
+        "effectiveMandatesInScope": 17,
+        "nonpaintingMandatesInScope": 0,
+        "locations": 17,
+        "yearsWithGovernment": 200,
+        "yearsWithGeometry": 200,
+        "yearsWithoutGeometry": 0,
+        "mandatesWithSomeMissingGeometry": 0,
+        "mandatesEntirelyWithoutGeometry": 0
+      },
+      "missingGeometryIntervals": [],
+      "limitedCore": true
+    },
+    {
+      "territory": "Moldavia",
+      "counts": {
+        "effectiveMandatesAllTime": 63,
+        "effectiveMandatesInScope": 63,
+        "nonpaintingMandatesInScope": 0,
+        "locations": 32,
+        "yearsWithGovernment": 295,
+        "yearsWithGeometry": 295,
+        "yearsWithoutGeometry": 0,
+        "mandatesWithSomeMissingGeometry": 0,
+        "mandatesEntirelyWithoutGeometry": 0
+      },
+      "missingGeometryIntervals": [],
+      "limitedCore": true
+    },
+    {
+      "territory": "Valaquia",
+      "counts": {
+        "effectiveMandatesAllTime": 66,
+        "effectiveMandatesInScope": 66,
+        "nonpaintingMandatesInScope": 0,
+        "locations": 50,
+        "yearsWithGovernment": 345,
+        "yearsWithGeometry": 345,
+        "yearsWithoutGeometry": 0,
+        "mandatesWithSomeMissingGeometry": 0,
+        "mandatesEntirelyWithoutGeometry": 0
+      },
+      "missingGeometryIntervals": [],
+      "limitedCore": true
+    }
+  ],
+  "continuity": {
+    "counts": {
+      "identities": 18,
+      "labContinuityErrors": 0,
+      "identitiesWithMissingPersonalGeometry": 0,
+      "identitiesWithUnrecordedMandateYears": 16
+    },
+    "territories": [
+      {
+        "identity": "Reino de Bosnia",
+        "title": "Banato de Bosnia",
+        "from": 1200,
+        "through": 1462,
+        "lab": {
+          "missingYears": 0,
+          "missingIntervals": [],
+          "minCells": 4,
+          "maxCells": 17,
+          "limitedCoreIntervals": [
+            {
+              "from": 1200,
+              "through": 1462
+            }
+          ]
+        },
+        "personal": {
+          "recordedMandates": 17,
+          "yearsWithNoRecordedEffectiveMandate": 64,
+          "noMandateIntervals": [
+            {
+              "from": 1205,
+              "through": 1231
+            },
+            {
+              "from": 1251,
+              "through": 1253
+            },
+            {
+              "from": 1288,
+              "through": 1321
+            }
+          ],
+          "yearsWithMandatesButNoGeometry": 0,
+          "missingGeometryIntervals": []
+        }
+      },
+      {
+        "identity": "Principado de Valaquia",
+        "title": "Principado de Valaquia",
+        "from": 1310,
+        "through": 1800,
+        "lab": {
+          "missingYears": 0,
+          "missingIntervals": [],
+          "minCells": 26,
+          "maxCells": 38,
+          "limitedCoreIntervals": [
+            {
+              "from": 1310,
+              "through": 1800
+            }
+          ]
+        },
+        "personal": {
+          "recordedMandates": 66,
+          "yearsWithNoRecordedEffectiveMandate": 146,
+          "noMandateIntervals": [
+            {
+              "from": 1655,
+              "through": 1800
+            }
+          ],
+          "yearsWithMandatesButNoGeometry": 0,
+          "missingGeometryIntervals": []
+        }
+      },
+      {
+        "identity": "Principado de Moldavia",
+        "title": "Principado de Moldavia",
+        "from": 1359,
+        "through": 1800,
+        "lab": {
+          "missingYears": 0,
+          "missingIntervals": [],
+          "minCells": 9,
+          "maxCells": 32,
+          "limitedCoreIntervals": [
+            {
+              "from": 1359,
+              "through": 1800
+            }
+          ]
+        },
+        "personal": {
+          "recordedMandates": 63,
+          "yearsWithNoRecordedEffectiveMandate": 147,
+          "noMandateIntervals": [
+            {
+              "from": 1654,
+              "through": 1800
+            }
+          ],
+          "yearsWithMandatesButNoGeometry": 0,
+          "missingGeometryIntervals": []
+        }
+      }
+    ]
+  },
+  "annualComparison": {
+    "years": 601,
+    "nonTargetDifferences": 0,
+    "changedMosaicYears": 601,
+    "changedPersonalYears": 403
+  },
+  "unrepresentedEntities": [
+    {
+      "territory": "Albret",
+      "status": "unrepresented_effective",
+      "counts": {
+        "effectiveMandatesAllTime": 3,
+        "effectiveMandatesInScope": 3,
+        "nonpaintingMandatesInScope": 0,
+        "locations": 0,
+        "yearsWithGovernment": 122,
+        "yearsWithGeometry": 0,
+        "yearsWithoutGeometry": 122,
+        "mandatesWithSomeMissingGeometry": 3,
+        "mandatesEntirelyWithoutGeometry": 3
+      }
+    },
+    {
+      "territory": "Alençon",
+      "status": "unrepresented_effective",
+      "counts": {
+        "effectiveMandatesAllTime": 4,
+        "effectiveMandatesInScope": 4,
+        "nonpaintingMandatesInScope": 0,
+        "locations": 0,
+        "yearsWithGovernment": 119,
+        "yearsWithGeometry": 0,
+        "yearsWithoutGeometry": 119,
+        "mandatesWithSomeMissingGeometry": 4,
+        "mandatesEntirelyWithoutGeometry": 4
+      }
+    },
+    {
+      "territory": "Angulema",
+      "status": "unrepresented_effective",
+      "counts": {
+        "effectiveMandatesAllTime": 2,
+        "effectiveMandatesInScope": 2,
+        "nonpaintingMandatesInScope": 0,
+        "locations": 0,
+        "yearsWithGovernment": 90,
+        "yearsWithGeometry": 0,
+        "yearsWithoutGeometry": 90,
+        "mandatesWithSomeMissingGeometry": 2,
+        "mandatesEntirelyWithoutGeometry": 2
+      }
+    },
+    {
+      "territory": "Annandale",
+      "status": "unrepresented_effective",
+      "counts": {
+        "effectiveMandatesAllTime": 3,
+        "effectiveMandatesInScope": 3,
+        "nonpaintingMandatesInScope": 0,
+        "locations": 0,
+        "yearsWithGovernment": 90,
+        "yearsWithGeometry": 0,
+        "yearsWithoutGeometry": 90,
+        "mandatesWithSomeMissingGeometry": 3,
+        "mandatesEntirelyWithoutGeometry": 3
+      }
+    },
+    {
+      "territory": "Ansbach",
+      "status": "unrepresented_effective",
+      "counts": {
+        "effectiveMandatesAllTime": 1,
+        "effectiveMandatesInScope": 1,
+        "nonpaintingMandatesInScope": 0,
+        "locations": 0,
+        "yearsWithGovernment": 30,
+        "yearsWithGeometry": 0,
+        "yearsWithoutGeometry": 30,
+        "mandatesWithSomeMissingGeometry": 1,
+        "mandatesEntirelyWithoutGeometry": 1
+      }
+    },
+    {
+      "territory": "Antioquía",
+      "status": "unrepresented_effective",
+      "counts": {
+        "effectiveMandatesAllTime": 8,
+        "effectiveMandatesInScope": 5,
+        "nonpaintingMandatesInScope": 3,
+        "locations": 0,
+        "yearsWithGovernment": 67,
+        "yearsWithGeometry": 0,
+        "yearsWithoutGeometry": 67,
+        "mandatesWithSomeMissingGeometry": 5,
+        "mandatesEntirelyWithoutGeometry": 5
+      }
+    },
+    {
+      "territory": "Armenia cilicia",
+      "status": "unrepresented_effective",
+      "counts": {
+        "effectiveMandatesAllTime": 23,
+        "effectiveMandatesInScope": 22,
+        "nonpaintingMandatesInScope": 5,
+        "locations": 0,
+        "yearsWithGovernment": 176,
+        "yearsWithGeometry": 0,
+        "yearsWithoutGeometry": 176,
+        "mandatesWithSomeMissingGeometry": 22,
+        "mandatesEntirelyWithoutGeometry": 22
+      }
+    },
+    {
+      "territory": "Berry",
+      "status": "unrepresented_effective",
+      "counts": {
+        "effectiveMandatesAllTime": 1,
+        "effectiveMandatesInScope": 1,
+        "nonpaintingMandatesInScope": 0,
+        "locations": 0,
+        "yearsWithGovernment": 57,
+        "yearsWithGeometry": 0,
+        "yearsWithoutGeometry": 57,
+        "mandatesWithSomeMissingGeometry": 1,
+        "mandatesEntirelyWithoutGeometry": 1
+      }
+    },
+    {
+      "territory": "Borbón",
+      "status": "unrepresented_effective",
+      "counts": {
+        "effectiveMandatesAllTime": 5,
+        "effectiveMandatesInScope": 5,
+        "nonpaintingMandatesInScope": 0,
+        "locations": 0,
+        "yearsWithGovernment": 95,
+        "yearsWithGeometry": 0,
+        "yearsWithoutGeometry": 95,
+        "mandatesWithSomeMissingGeometry": 5,
+        "mandatesEntirelyWithoutGeometry": 5
+      }
+    },
+    {
+      "territory": "Castellbó",
+      "status": "unrepresented_effective",
+      "counts": {
+        "effectiveMandatesAllTime": 2,
+        "effectiveMandatesInScope": 2,
+        "nonpaintingMandatesInScope": 0,
+        "locations": 0,
+        "yearsWithGovernment": 67,
+        "yearsWithGeometry": 0,
+        "yearsWithoutGeometry": 67,
+        "mandatesWithSomeMissingGeometry": 2,
+        "mandatesEntirelyWithoutGeometry": 2
+      }
+    },
+    {
+      "territory": "Clermont",
+      "status": "unrepresented_effective",
+      "counts": {
+        "effectiveMandatesAllTime": 1,
+        "effectiveMandatesInScope": 1,
+        "nonpaintingMandatesInScope": 0,
+        "locations": 0,
+        "yearsWithGovernment": 49,
+        "yearsWithGeometry": 0,
+        "yearsWithoutGeometry": 49,
+        "mandatesWithSomeMissingGeometry": 1,
+        "mandatesEntirelyWithoutGeometry": 1
+      }
+    },
+    {
+      "territory": "Curlandia",
+      "status": "unrepresented_effective",
+      "counts": {
+        "effectiveMandatesAllTime": 1,
+        "effectiveMandatesInScope": 1,
+        "nonpaintingMandatesInScope": 0,
+        "locations": 0,
+        "yearsWithGovernment": 6,
+        "yearsWithGeometry": 0,
+        "yearsWithoutGeometry": 6,
+        "mandatesWithSomeMissingGeometry": 1,
+        "mandatesEntirelyWithoutGeometry": 1
+      }
+    },
+    {
+      "territory": "Dreux",
+      "status": "unrepresented_effective",
+      "counts": {
+        "effectiveMandatesAllTime": 2,
+        "effectiveMandatesInScope": 1,
+        "nonpaintingMandatesInScope": 0,
+        "locations": 0,
+        "yearsWithGovernment": 19,
+        "yearsWithGeometry": 0,
+        "yearsWithoutGeometry": 19,
+        "mandatesWithSomeMissingGeometry": 1,
+        "mandatesEntirelyWithoutGeometry": 1
+      }
+    },
+    {
+      "territory": "Évreux",
+      "status": "unrepresented_effective",
+      "counts": {
+        "effectiveMandatesAllTime": 1,
+        "effectiveMandatesInScope": 1,
+        "nonpaintingMandatesInScope": 0,
+        "locations": 0,
+        "yearsWithGovernment": 22,
+        "yearsWithGeometry": 0,
+        "yearsWithoutGeometry": 22,
+        "mandatesWithSomeMissingGeometry": 1,
+        "mandatesEntirelyWithoutGeometry": 1
+      }
+    },
+    {
+      "territory": "Forlì",
+      "status": "unrepresented_effective",
+      "counts": {
+        "effectiveMandatesAllTime": 1,
+        "effectiveMandatesInScope": 1,
+        "nonpaintingMandatesInScope": 0,
+        "locations": 0,
+        "yearsWithGovernment": 13,
+        "yearsWithGeometry": 0,
+        "yearsWithoutGeometry": 13,
+        "mandatesWithSomeMissingGeometry": 1,
+        "mandatesEntirelyWithoutGeometry": 1
+      }
+    },
+    {
+      "territory": "Gandía",
+      "status": "unrepresented_effective",
+      "counts": {
+        "effectiveMandatesAllTime": 3,
+        "effectiveMandatesInScope": 3,
+        "nonpaintingMandatesInScope": 0,
+        "locations": 0,
+        "yearsWithGovernment": 64,
+        "yearsWithGeometry": 0,
+        "yearsWithoutGeometry": 64,
+        "mandatesWithSomeMissingGeometry": 3,
+        "mandatesEntirelyWithoutGeometry": 3
+      }
+    },
+    {
+      "territory": "Georgia",
+      "status": "unrepresented_effective",
+      "counts": {
+        "effectiveMandatesAllTime": 22,
+        "effectiveMandatesInScope": 20,
+        "nonpaintingMandatesInScope": 1,
+        "locations": 0,
+        "yearsWithGovernment": 263,
+        "yearsWithGeometry": 0,
+        "yearsWithoutGeometry": 263,
+        "mandatesWithSomeMissingGeometry": 20,
+        "mandatesEntirelyWithoutGeometry": 20
+      }
+    },
+    {
+      "territory": "Guisa",
+      "status": "unrepresented_effective",
+      "counts": {
+        "effectiveMandatesAllTime": 3,
+        "effectiveMandatesInScope": 3,
+        "nonpaintingMandatesInScope": 0,
+        "locations": 0,
+        "yearsWithGovernment": 61,
+        "yearsWithGeometry": 0,
+        "yearsWithoutGeometry": 61,
+        "mandatesWithSomeMissingGeometry": 3,
+        "mandatesEntirelyWithoutGeometry": 3
+      }
+    },
+    {
+      "territory": "Imericia",
+      "status": "unrepresented_effective",
+      "counts": {
+        "effectiveMandatesAllTime": 39,
+        "effectiveMandatesInScope": 39,
+        "nonpaintingMandatesInScope": 0,
+        "locations": 0,
+        "yearsWithGovernment": 359,
+        "yearsWithGeometry": 0,
+        "yearsWithoutGeometry": 359,
+        "mandatesWithSomeMissingGeometry": 39,
+        "mandatesEntirelyWithoutGeometry": 39
+      }
+    },
+    {
+      "territory": "Imola",
+      "status": "unrepresented_effective",
+      "counts": {
+        "effectiveMandatesAllTime": 1,
+        "effectiveMandatesInScope": 1,
+        "nonpaintingMandatesInScope": 0,
+        "locations": 0,
+        "yearsWithGovernment": 12,
+        "yearsWithGeometry": 0,
+        "yearsWithoutGeometry": 12,
+        "mandatesWithSomeMissingGeometry": 1,
+        "mandatesEntirelyWithoutGeometry": 1
+      }
+    },
+    {
+      "territory": "Jerusalén",
+      "status": "unrepresented_effective",
+      "counts": {
+        "effectiveMandatesAllTime": 20,
+        "effectiveMandatesInScope": 10,
+        "nonpaintingMandatesInScope": 11,
+        "locations": 0,
+        "yearsWithGovernment": 56,
+        "yearsWithGeometry": 0,
+        "yearsWithoutGeometry": 56,
+        "mandatesWithSomeMissingGeometry": 10,
+        "mandatesEntirelyWithoutGeometry": 10
+      }
+    },
+    {
+      "territory": "Kajetia",
+      "status": "unrepresented_effective",
+      "counts": {
+        "effectiveMandatesAllTime": 21,
+        "effectiveMandatesInScope": 21,
+        "nonpaintingMandatesInScope": 1,
+        "locations": 0,
+        "yearsWithGovernment": 256,
+        "yearsWithGeometry": 0,
+        "yearsWithoutGeometry": 256,
+        "mandatesWithSomeMissingGeometry": 21,
+        "mandatesEntirelyWithoutGeometry": 21
+      }
+    },
+    {
+      "territory": "Kartli",
+      "status": "unrepresented_effective",
+      "counts": {
+        "effectiveMandatesAllTime": 21,
+        "effectiveMandatesInScope": 21,
+        "nonpaintingMandatesInScope": 6,
+        "locations": 0,
+        "yearsWithGovernment": 245,
+        "yearsWithGeometry": 0,
+        "yearsWithoutGeometry": 245,
+        "mandatesWithSomeMissingGeometry": 21,
+        "mandatesEntirelyWithoutGeometry": 21
+      }
+    },
+    {
+      "territory": "Kartli-Kajetia",
+      "status": "unrepresented_effective",
+      "counts": {
+        "effectiveMandatesAllTime": 2,
+        "effectiveMandatesInScope": 2,
+        "nonpaintingMandatesInScope": 0,
+        "locations": 0,
+        "yearsWithGovernment": 39,
+        "yearsWithGeometry": 0,
+        "yearsWithoutGeometry": 39,
+        "mandatesWithSomeMissingGeometry": 2,
+        "mandatesEntirelyWithoutGeometry": 2
+      }
+    },
+    {
+      "territory": "Kulmbach",
+      "status": "unrepresented_effective",
+      "counts": {
+        "effectiveMandatesAllTime": 2,
+        "effectiveMandatesInScope": 2,
+        "nonpaintingMandatesInScope": 0,
+        "locations": 0,
+        "yearsWithGovernment": 39,
+        "yearsWithGeometry": 0,
+        "yearsWithoutGeometry": 39,
+        "mandatesWithSomeMissingGeometry": 2,
+        "mandatesEntirelyWithoutGeometry": 2
+      }
+    },
+    {
+      "territory": "La Marche",
+      "status": "unrepresented_effective",
+      "counts": {
+        "effectiveMandatesAllTime": 2,
+        "effectiveMandatesInScope": 2,
+        "nonpaintingMandatesInScope": 0,
+        "locations": 0,
+        "yearsWithGovernment": 52,
+        "yearsWithGeometry": 0,
+        "yearsWithoutGeometry": 52,
+        "mandatesWithSomeMissingGeometry": 2,
+        "mandatesEntirelyWithoutGeometry": 2
+      }
+    },
+    {
+      "territory": "Mark",
+      "status": "unrepresented_effective",
+      "counts": {
+        "effectiveMandatesAllTime": 9,
+        "effectiveMandatesInScope": 9,
+        "nonpaintingMandatesInScope": 0,
+        "locations": 0,
+        "yearsWithGovernment": 249,
+        "yearsWithGeometry": 0,
+        "yearsWithoutGeometry": 249,
+        "mandatesWithSomeMissingGeometry": 9,
+        "mandatesEntirelyWithoutGeometry": 9
+      }
+    },
+    {
+      "territory": "Oldemburgo",
+      "status": "unrepresented_effective",
+      "counts": {
+        "effectiveMandatesAllTime": 1,
+        "effectiveMandatesInScope": 1,
+        "nonpaintingMandatesInScope": 0,
+        "locations": 0,
+        "yearsWithGovernment": 18,
+        "yearsWithGeometry": 0,
+        "yearsWithoutGeometry": 18,
+        "mandatesWithSomeMissingGeometry": 1,
+        "mandatesEntirelyWithoutGeometry": 1
+      }
+    },
+    {
+      "territory": "Orleans",
+      "status": "unrepresented_effective",
+      "counts": {
+        "effectiveMandatesAllTime": 4,
+        "effectiveMandatesInScope": 4,
+        "nonpaintingMandatesInScope": 0,
+        "locations": 0,
+        "yearsWithGovernment": 150,
+        "yearsWithGeometry": 0,
+        "yearsWithoutGeometry": 150,
+        "mandatesWithSomeMissingGeometry": 4,
+        "mandatesEntirelyWithoutGeometry": 4
+      }
+    },
+    {
+      "territory": "Penthièvre",
+      "status": "unrepresented_effective",
+      "counts": {
+        "effectiveMandatesAllTime": 2,
+        "effectiveMandatesInScope": 2,
+        "nonpaintingMandatesInScope": 0,
+        "locations": 0,
+        "yearsWithGovernment": 68,
+        "yearsWithGeometry": 0,
+        "yearsWithoutGeometry": 68,
+        "mandatesWithSomeMissingGeometry": 2,
+        "mandatesEntirelyWithoutGeometry": 2
+      }
+    },
+    {
+      "territory": "Pesaro",
+      "status": "unrepresented_effective",
+      "counts": {
+        "effectiveMandatesAllTime": 3,
+        "effectiveMandatesInScope": 3,
+        "nonpaintingMandatesInScope": 0,
+        "locations": 0,
+        "yearsWithGovernment": 55,
+        "yearsWithGeometry": 0,
+        "yearsWithoutGeometry": 55,
+        "mandatesWithSomeMissingGeometry": 3,
+        "mandatesEntirelyWithoutGeometry": 3
+      }
+    },
+    {
+      "territory": "Ravensberg",
+      "status": "unrepresented_effective",
+      "counts": {
+        "effectiveMandatesAllTime": 8,
+        "effectiveMandatesInScope": 8,
+        "nonpaintingMandatesInScope": 0,
+        "locations": 0,
+        "yearsWithGovernment": 235,
+        "yearsWithGeometry": 0,
+        "yearsWithoutGeometry": 235,
+        "mandatesWithSomeMissingGeometry": 8,
+        "mandatesEntirelyWithoutGeometry": 8
+      }
+    },
+    {
+      "territory": "Richmond",
+      "status": "unrepresented_effective",
+      "counts": {
+        "effectiveMandatesAllTime": 1,
+        "effectiveMandatesInScope": 1,
+        "nonpaintingMandatesInScope": 0,
+        "locations": 0,
+        "yearsWithGovernment": 5,
+        "yearsWithGeometry": 0,
+        "yearsWithoutGeometry": 5,
+        "mandatesWithSomeMissingGeometry": 1,
+        "mandatesEntirelyWithoutGeometry": 1
+      }
+    },
+    {
+      "territory": "Romaña",
+      "status": "unrepresented_effective",
+      "counts": {
+        "effectiveMandatesAllTime": 1,
+        "effectiveMandatesInScope": 1,
+        "nonpaintingMandatesInScope": 0,
+        "locations": 0,
+        "yearsWithGovernment": 3,
+        "yearsWithGeometry": 0,
+        "yearsWithoutGeometry": 3,
+        "mandatesWithSomeMissingGeometry": 1,
+        "mandatesEntirelyWithoutGeometry": 1
+      }
+    },
+    {
+      "territory": "Samtsje",
+      "status": "unrepresented_effective",
+      "counts": {
+        "effectiveMandatesAllTime": 1,
+        "effectiveMandatesInScope": 1,
+        "nonpaintingMandatesInScope": 0,
+        "locations": 0,
+        "yearsWithGovernment": 22,
+        "yearsWithGeometry": 0,
+        "yearsWithoutGeometry": 22,
+        "mandatesWithSomeMissingGeometry": 1,
+        "mandatesEntirelyWithoutGeometry": 1
+      }
+    },
+    {
+      "territory": "Tarento",
+      "status": "unrepresented_effective",
+      "counts": {
+        "effectiveMandatesAllTime": 1,
+        "effectiveMandatesInScope": 1,
+        "nonpaintingMandatesInScope": 0,
+        "locations": 0,
+        "yearsWithGovernment": 3,
+        "yearsWithGeometry": 0,
+        "yearsWithoutGeometry": 3,
+        "mandatesWithSomeMissingGeometry": 1,
+        "mandatesEntirelyWithoutGeometry": 1
+      }
+    },
+    {
+      "territory": "Trípoli",
+      "status": "unrepresented_effective",
+      "counts": {
+        "effectiveMandatesAllTime": 6,
+        "effectiveMandatesInScope": 5,
+        "nonpaintingMandatesInScope": 0,
+        "locations": 0,
+        "yearsWithGovernment": 90,
+        "yearsWithGeometry": 0,
+        "yearsWithoutGeometry": 90,
+        "mandatesWithSomeMissingGeometry": 5,
+        "mandatesEntirelyWithoutGeometry": 5
+      }
+    },
+    {
+      "territory": "Valois",
+      "status": "unrepresented_effective",
+      "counts": {
+        "effectiveMandatesAllTime": 1,
+        "effectiveMandatesInScope": 1,
+        "nonpaintingMandatesInScope": 0,
+        "locations": 0,
+        "yearsWithGovernment": 40,
+        "yearsWithGeometry": 0,
+        "yearsWithoutGeometry": 40,
+        "mandatesWithSomeMissingGeometry": 1,
+        "mandatesEntirelyWithoutGeometry": 1
+      }
+    },
+    {
+      "territory": "Vendôme",
+      "status": "unrepresented_effective",
+      "counts": {
+        "effectiveMandatesAllTime": 9,
+        "effectiveMandatesInScope": 9,
+        "nonpaintingMandatesInScope": 0,
+        "locations": 0,
+        "yearsWithGovernment": 259,
+        "yearsWithGeometry": 0,
+        "yearsWithoutGeometry": 259,
+        "mandatesWithSomeMissingGeometry": 9,
+        "mandatesEntirelyWithoutGeometry": 9
+      }
+    },
+    {
+      "territory": "York",
+      "status": "unrepresented_effective",
+      "counts": {
+        "effectiveMandatesAllTime": 3,
+        "effectiveMandatesInScope": 3,
+        "nonpaintingMandatesInScope": 0,
+        "locations": 0,
+        "yearsWithGovernment": 76,
+        "yearsWithGeometry": 0,
+        "yearsWithoutGeometry": 76,
+        "mandatesWithSomeMissingGeometry": 3,
+        "mandatesEntirelyWithoutGeometry": 3
+      }
+    }
+  ],
+  "limitations": [
+    "Los cortes de 1200, 1254, 1310, 1359 y 1387 son representaciones anuales convencionales o conservadoras; no datan la anexión de cada polígono.",
+    "La superficie revisada se declara parcial. Hum y los señoríos de Polimlje, los puertos danubianos, Severin, la frontera meridional moldava y las celdas mixtas de los Cárpatos siguen pendientes de ámbitos específicos.",
+    "Vuk y Vlad I aparecen con control disputado. La geometría de Vuk se limita al entorno de Bobovac, no a todo el banato.",
+    "La cronología del cargo y la evidencia de superficie se revisan por separado; no se inventan nacimientos, muertes ni parentescos para cerrar huecos."
+  ]
+}

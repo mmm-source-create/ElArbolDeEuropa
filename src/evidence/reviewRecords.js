@@ -1,3 +1,4 @@
+import {MEDIEVAL_BALKAN_REVIEWS} from './medievalBalkanReviews.js';
 import { REGIONAL_EXTENT_REVIEWS } from './regionalExtentReviewData.js';
 import { FRONTIER_REVIEWS } from './frontierReviewData.js';
 import { SUCCESSION_REVIEWS } from './successionReviewData.js';
@@ -232,6 +233,7 @@ export const CLAIM_REVIEWS = Object.freeze({
   ...AUTHORITY_GAPS_REVIEWS,
   ...ROMANIAN_AUTHORITY_REVIEWS,
   ...NORTHERN_AUTHORITY_REVIEWS,
+  ...MEDIEVAL_BALKAN_REVIEWS,
   ...dogeReviews,
   ...pignatelliReviews,
   ...tyrolReviews,
@@ -383,6 +385,7 @@ export const CLAIM_REVIEWS = Object.freeze({
 });
 
 export const EDITORIAL_HISTORY = Object.freeze([
+  {id:'v58-medieval-balkans',scope:'all',date:'2026-10-12',editor:'El Árbol de Europa',change:'Bosnia, Valaquia y Moldavia reciben series medievales independientes y superficies interiores revisadas; se incorporan siete gobernantes con fuentes por mandato.',reason:'Se distingue la ausencia de geometría de la ausencia de autoridad. Las sucesiones disputadas no dan dominio uniforme y los cortes anteriores a 1400 no heredan automáticamente las fronteras posteriores.'},
   {"id":"v55-governor-fern2alba","scope":"FERN2ALBA","date":"2026-10-11","editor":"El Árbol de Europa","change":"Se documenta la gobernación general de los Países Bajos bajo Felipe II y se limita su representación cartográfica.","reason":"Se distingue el nombramiento de gobernador del control provincial durante la revuelta. Las fechas del cargo y las fuentes del mapa se revisan por separado.","changeEn":"The Netherlands governorship under Philip II is documented with a bounded map representation.","reasonEn":"The office is distinguished from provincial control during the revolt. Office dates and map evidence are reviewed separately."},
   {"id":"v55-governor-luisrequesens","scope":"LUISREQUESENS","date":"2026-10-11","editor":"El Árbol de Europa","change":"Se documenta la gobernación general de los Países Bajos bajo Felipe II y se limita su representación cartográfica.","reason":"Se distingue el nombramiento de gobernador del control provincial durante la revuelta. Las fechas del cargo y las fuentes del mapa se revisan por separado.","changeEn":"The Netherlands governorship under Philip II is documented with a bounded map representation.","reasonEn":"The office is distinguished from provincial control during the revolt. Office dates and map evidence are reviewed separately."},
   {"id":"v55-governor-donjuanaust","scope":"DONJUANAUST","date":"2026-10-11","editor":"El Árbol de Europa","change":"Se documenta la gobernación general de los Países Bajos bajo Felipe II y se limita su representación cartográfica.","reason":"Se distingue el nombramiento de gobernador del control provincial durante la revuelta. Las fechas del cargo y las fuentes del mapa se revisan por separado.","changeEn":"The Netherlands governorship under Philip II is documented with a bounded map representation.","reasonEn":"The office is distinguished from provincial control during the revolt. Office dates and map evidence are reviewed separately."},

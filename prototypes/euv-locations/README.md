@@ -721,3 +721,17 @@ selecciones regionales explícitas. Después se ejecuta `merge-map-expansions.mj
 Las mismas rutas abastecen los mapas personales y el laboratorio.
 La [revisión documentada](../../docs/atlas-frontier-review.md) explica Bulgaria,
 Sirmia, Hungría, Francia, Aquitania y los dominios británicos, con sus límites.
+
+## V5.8 · Continuidad balcánica medieval
+
+`medieval-balkans-review.json` contiene tres series independientes anteriores a
+1400 y tres complementos interiores que conservan las identidades y colores
+existentes. Se ensambla al final de `merge-map-expansions.mjs`, después de las
+revisiones anteriores; no retrotrae las superficies de 1650. Las celdas completas
+se incorporan a `regional-extent-cells.json` y al entorno reproducible de Python.
+
+El [informe de V5.8](../../docs/V5.8.md) detalla los cortes convencionales, las
+fuentes y lo que queda pendiente. La auditoría anual pasa de 15 a 18 entidades
+y distingue ausencia de mandatos, ausencia de geometría y cobertura parcial.
+Bosnia se presenta como banato antes de 1377 y como reino después. Los cargos
+de Vuk y Vlad I están documentados por separado de su control disputado.
