@@ -10,6 +10,19 @@ import {person} from './fixtures/static-pages.mjs';
 import {makeStaticDocument} from '../scripts/lib/ssg-utils.mjs';
 
 const execute = promisify(execFile);
+// npm test also runs before generation in a fresh checkout. Provide only
+// generated data inputs; all routes, components and dependencies remain real.
+const generatedInputs = () => ({
+  name: 'production-client-generated-inputs', enforce: 'pre',
+  resolveId(id) {
+    if (/generated\/(home|siteMeta)\.json$/.test(id)) return '\0client-data:' + id + '.js';
+    if (/generated\/treeBase\.json\?url$/.test(id)) return '\0client-tree-url';
+  },
+  load(id) {
+    if (id.startsWith('\0client-data:')) return 'export default {buildVersion:"client-test"};';
+    if (id === '\0client-tree-url') return 'export default "data:application/json,{}";';
+  },
+});
 
 test('the minified browser entry hydrates a profile and activates its controls without chunk initialization errors', async () => {
   const root = process.cwd();
@@ -18,8 +31,8 @@ test('the minified browser entry hydrates a profile and activates its controls w
   try {
     // Use the actual two-entry configuration and client splitting, with no
     // substitutes for routes, icons or shared application modules.
-    await build({root, publicDir: false, logLevel: 'error', build: {outDir: temp, manifest: true}});
-    await build({root, configFile: false, publicDir: false, logLevel: 'error',
+    await build({root, publicDir: false, logLevel: 'error', plugins: [generatedInputs()], build: {outDir: temp, manifest: true}});
+    await build({root, configFile: false, publicDir: false, logLevel: 'error', plugins: [generatedInputs()],
       build: {ssr: 'src/public/ssg-entry.jsx', outDir: path.join(temp, 'ssr'),
         rolldownOptions: {output: {entryFileNames: 'entry.mjs'}}}});
     const {renderPage} = await import(pathToFileURL(path.join(temp, 'ssr/entry.mjs')));
