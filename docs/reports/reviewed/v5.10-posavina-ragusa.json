@@ -33,7 +33,7 @@
       "id": "Glaz",
       "coloredYears": 601,
       "gaps": [],
-      "mixedYears": 54,
+      "mixedYears": 58,
       "unexplainedOverlaps": [],
       "missingEvidence": [],
       "changes": [
@@ -44,7 +44,7 @@
           ]
         },
         {
-          "from": 1384,
+          "from": 1380,
           "identities": [
             "Eslavonia",
             "Reino de Bosnia"
@@ -96,7 +96,7 @@
       "id": "Kozara",
       "coloredYears": 601,
       "gaps": [],
-      "mixedYears": 54,
+      "mixedYears": 58,
       "unexplainedOverlaps": [],
       "missingEvidence": [],
       "changes": [
@@ -107,7 +107,7 @@
           ]
         },
         {
-          "from": 1384,
+          "from": 1380,
           "identities": [
             "Eslavonia",
             "Reino de Bosnia"
@@ -458,7 +458,7 @@
       "outsideChanges": 0,
       "missingBefore": 1743,
       "missingAfter": 0,
-      "changes": 2528
+      "changes": 2532
     },
     "cells": {
       "Glaz": {
@@ -1947,6 +1947,10 @@
           1800
         ],
         "changedYears": [
+          1380,
+          1381,
+          1382,
+          1383,
           1384,
           1385,
           1386,

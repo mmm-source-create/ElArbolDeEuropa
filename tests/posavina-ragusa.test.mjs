@@ -66,6 +66,8 @@ test('a dated countship maps its own fief, with evidence and no invented death y
 
 test('the relief and mobile northern frontier stay visible without a fictitious conquest date', () => {
   for (const id of ['Glaz', 'Kozara']) {
+    assert.deepEqual(owners(id, 1379), ['Eslavonia']);
+    assert.deepEqual(owners(id, 1380), ['Eslavonia', 'Reino de Bosnia']);
     assert.deepEqual(owners(id, 1400), ['Reino de Bosnia']);
     assert.deepEqual(owners(id, 1500), ['Banato húngaro de Jajce', 'Bosnia y Herzegovina otomanas']);
     assert.deepEqual(owners(id, 1530), ['Bosnia y Herzegovina otomanas', 'Croacia']);

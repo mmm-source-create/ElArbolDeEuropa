@@ -73681,7 +73681,7 @@
       "color": "#86715d",
       "coverage": {
         "from": 1200,
-        "through": 1383
+        "through": 1379
       },
       "versions": [
         {
@@ -73720,12 +73720,12 @@
       "corridor": "Kozara–Glaž y costa ragusea · revisión regional",
       "color": "#86715d",
       "coverage": {
-        "from": 1384,
+        "from": 1380,
         "through": 1390
       },
       "versions": [
         {
-          "from": 1384,
+          "from": 1380,
           "ids": [
             "Kozara"
           ],
@@ -73755,12 +73755,12 @@
       "corridor": "Kozara–Glaž y costa ragusea · revisión regional",
       "color": "#86715d",
       "coverage": {
-        "from": 1384,
+        "from": 1380,
         "through": 1390
       },
       "versions": [
         {
-          "from": 1384,
+          "from": 1380,
           "ids": [
             "Kozara"
           ],
@@ -74114,7 +74114,7 @@
       "color": "#86715d",
       "coverage": {
         "from": 1200,
-        "through": 1383
+        "through": 1379
       },
       "versions": [
         {
@@ -74153,12 +74153,12 @@
       "corridor": "Kozara–Glaž y costa ragusea · revisión regional",
       "color": "#86715d",
       "coverage": {
-        "from": 1384,
+        "from": 1380,
         "through": 1390
       },
       "versions": [
         {
-          "from": 1384,
+          "from": 1380,
           "ids": [
             "Glaz"
           ],
@@ -74188,12 +74188,12 @@
       "corridor": "Kozara–Glaž y costa ragusea · revisión regional",
       "color": "#86715d",
       "coverage": {
-        "from": 1384,
+        "from": 1380,
         "through": 1390
       },
       "versions": [
         {
-          "from": 1384,
+          "from": 1380,
           "ids": [
             "Glaz"
           ],

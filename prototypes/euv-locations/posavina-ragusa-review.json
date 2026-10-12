@@ -226,7 +226,7 @@
     {
       "name": "Kozara · marco eslavón",
       "identity": "Eslavonia",
-      "through": 1383,
+      "through": 1379,
       "ids": [
         "Kozara"
       ],
@@ -262,7 +262,7 @@
         "Croacia",
         "Hungría"
       ],
-      "from": 1384
+      "from": 1380
     },
     {
       "name": "Kozara · expansión de los años 1380 · Reino de Bosnia",
@@ -280,7 +280,7 @@
       "governmentTerritories": [
         "Bosnia"
       ],
-      "from": 1384
+      "from": 1380
     },
     {
       "name": "Kozara · señoríos del reino bosnio",
@@ -455,7 +455,7 @@
     {
       "name": "Glaz · marco eslavón",
       "identity": "Eslavonia",
-      "through": 1383,
+      "through": 1379,
       "ids": [
         "Glaz"
       ],
@@ -491,7 +491,7 @@
         "Croacia",
         "Hungría"
       ],
-      "from": 1384
+      "from": 1380
     },
     {
       "name": "Glaz · expansión de los años 1380 · Reino de Bosnia",
@@ -509,7 +509,7 @@
       "governmentTerritories": [
         "Bosnia"
       ],
-      "from": 1384
+      "from": 1380
     },
     {
       "name": "Glaz · señoríos del reino bosnio",
@@ -1376,7 +1376,7 @@
   "allowedMixedCells": [
     {
       "id": "Kozara",
-      "from": 1384,
+      "from": 1380,
       "through": 1390,
       "identities": [
         "Eslavonia",
@@ -1433,7 +1433,7 @@
     },
     {
       "id": "Glaz",
-      "from": 1384,
+      "from": 1380,
       "through": 1390,
       "identities": [
         "Eslavonia",

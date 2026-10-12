@@ -4287,33 +4287,33 @@
         "authorities": 66,
         "layers": 78,
         "locations": 2424,
-        "mosaic": "3b759c6354b3e8b4a987220c2b0f1871de0c089739b6a4a0f438c8f283ba0db8",
-        "overlaps": 59,
-        "personal": "58aed7d351a63f27c7132e2f37a78c447f75b38d4dc8f71f91b18b70f2356871"
+        "mosaic": "b08affe61c285343613da0c71c1ca679e9b333a039425cff5b6c47ff222650a7",
+        "overlaps": 61,
+        "personal": "f158349198b581b400942ff651d1c8213acefcea569e81431ff09210107c1452"
       },
       "1381": {
         "authorities": 66,
         "layers": 79,
         "locations": 2427,
-        "mosaic": "3f5dd65acaf75ce55ac76e5fd9d7ef3bbaa149dbdc7a7f8d25e683a03ad7c6f5",
-        "overlaps": 59,
-        "personal": "504ecb1df663ae1e39556d486f4d752c2e17153e262077934506a042292d75ce"
+        "mosaic": "9ff54910a99a843d7d0b49f7d515aa4cb79b619c7c10da654303f1c8012ae17f",
+        "overlaps": 61,
+        "personal": "85be323c682b06a6abe4793a1b947602c9ca5d58209a1879d8e59456162b3bee"
       },
       "1382": {
         "authorities": 71,
         "layers": 81,
         "locations": 2429,
-        "mosaic": "cb4f563d13db7c45c848e13d5d1399336b1b4a21b25f69c79e1bd6839348d679",
-        "overlaps": 58,
-        "personal": "b394bae0c88202b3650e80865da80d925b3b527e176d6812858d0617daed6f33"
+        "mosaic": "3a7a5ce00a5c9c34034397cb807c1ca7c08e202fd04d6c51098f351819997c27",
+        "overlaps": 60,
+        "personal": "3e7e7e1ac88708fab75842c2749b249479d562ae3c63ceb1446091c7f5532dab"
       },
       "1383": {
         "authorities": 68,
         "layers": 81,
         "locations": 2429,
-        "mosaic": "cb4f563d13db7c45c848e13d5d1399336b1b4a21b25f69c79e1bd6839348d679",
-        "overlaps": 58,
-        "personal": "664774c21a834c9d613c66c1bbe655c252930a1d5887352b9ce40d9698f4dcc5"
+        "mosaic": "3a7a5ce00a5c9c34034397cb807c1ca7c08e202fd04d6c51098f351819997c27",
+        "overlaps": 60,
+        "personal": "fb6e958ebf78b1598cd6459d305efd8f71e3913d8824ae4ee1d93e884ab52510"
       },
       "1384": {
         "authorities": 75,
@@ -14788,6 +14788,6 @@
     ],
     "tree": "ea4badb84b1d0ab28b76e61ea00fe8524fec3e5515da2807f783e9a6c6f0684d"
   },
-  "reason": "V5.10: diez superficies de Kozara–Glaž/Donji Kraji y Ragusa, cuatro subdivisiones que conservan el contorno, 66 fases documentadas y cero cambios de identidad fuera del ámbito; tres personas nuevas, un mandato y filiación revisados, autoridades comunales y HTML del botón Ko-fi. Se conservan el comparador y los criterios; comparación independiente con V5.9 en el informe revisado.",
+  "reason": "V5.10: diez superficies de Kozara–Glaž/Donji Kraji y Ragusa, cuatro subdivisiones que conservan el contorno, 66 fases documentadas; ventana incierta de expansión de toda la década de 1380. Cero cambios de identidad fuera del ámbito; tres personas nuevas, autoridades comunales y HTML del botón Ko-fi. Comparador y criterios conservados; contraste independiente con V5.9 en el informe revisado.",
   "schema": 1
 }
