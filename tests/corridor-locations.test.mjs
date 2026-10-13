@@ -19,8 +19,8 @@ function rawIds(name, year) {
 }
 
 
-const westernGovernments = new Set(JSON.parse(fs.readFileSync(path.join(lab, 'iberia-italy-full-review.json'))).assignments.flatMap(phase => phase.governmentTerritories));
-const ids = (name, year) => westernGovernments.has(name) ? new Set(pilotLocationsFor(data, name, year)) : rawIds(name, year);
+const westernGovernments = new Set(['iberia-italy-full-review.json','france-low-countries-full-review.json'].flatMap(file=>JSON.parse(fs.readFileSync(path.join(lab,file))).assignments.flatMap(phase=>phase.governmentTerritories)));
+const ids = (name, year) => name==='Plazas inglesas de Guyena' ? new Set(pilotLocationsFor(data,'Aquitania',year)) : name==='Bailiazgo de Jersey' ? stateCells('Bailías de Jersey y Guernsey',year) : name==='Plaza inglesa de Calais' ? stateCells('Calais',year) : westernGovernments.has(name) ? new Set(pilotLocationsFor(data, name, year)) : rawIds(name, year);
 
 const stateCells=(identity,year)=>new Set(atlasPoliticalMosaicAt(data,year).layers.filter(l=>l.entityId===identity).flatMap(l=>l.ids));
 test('territorial crosswalk uses only SVG IDs and never assigns one ID twice within a corridor', () => {
@@ -45,7 +45,7 @@ test('territorial crosswalk uses only SVG IDs and never assigns one ID twice wit
 
 test('Burgundian jurisdictions stay distinct while their ownership changes', () => {
   assert(ids('Borgoña', 1476).has('Dijon'));
-  assert(!ids('Borgoña', 1477).has('Dijon'));
+  assert(stateCells('Borgoña',1477).has('Dijon'), "the duchy identity survives its French incorporation; Habsburg titles do not paint it");
   assert(ids('Francia', 1477).has('Dijon'));
   assert(ids('Condado de Borgoña', 1476).has('Dole'));
   assert(!ids('Condado de Borgoña', 1477).has('Dole'));
@@ -93,17 +93,18 @@ test('western corridor respects French incorporations and English continental wi
   assert(ids('Bretaña', 1531).has('Rennes'));
   assert(!ids('Francia', 1531).has('Rennes'));
   assert(ids('Francia', 1532).has('Rennes'));
-  assert.equal(ids('Bretaña', 1532).size, 0);
+  assert(stateCells('Bretaña',1532).has('Rennes'), 'the ducal title and institutions survive union');
   assert(ids('Provenza', 1485).has('Aix_En_Provence'));
   assert(ids('Francia', 1486).has('Aix_En_Provence'));
-  assert(!ids('Provenza', 1486).has('Aix_En_Provence'));
+  assert(stateCells('Provenza',1486).has('Aix_En_Provence'), 'province and title survive under the crown');
   for (const name of ['Francia', 'Provenza']) assert(!ids(name, 1500).has('Barcelonnette'));
   assert(ids('Saboya', 1500).has('Barcelonnette'));
   assert(ids('Bailiazgo de Jersey', 1460).has('Jersey'));
   assert(ids('Francia', 1461).has('Jersey'));
-  assert(!ids('Bailiazgo de Jersey', 1461).has('Jersey'));
+  assert(ids('Bailiazgo de Jersey',1461).has('Jersey'), 'the same SVG cell contains unoccupied Channel Islands');
   assert(ids('Bailiazgo de Jersey', 1468).has('Jersey'));
-  assert(!ids('Francia', 1468).has('Jersey'));
+  assert(ids('Francia',1468).has('Jersey'), 'Jersey restored in November within this year');
+  assert(!ids('Francia',1469).has('Jersey'));
   assert(ids('Plaza inglesa de Calais', 1557).has('Calais'));
   assert(!ids('Francia', 1557).has('Calais'));
   assert(ids('Francia', 1558).has('Calais'));

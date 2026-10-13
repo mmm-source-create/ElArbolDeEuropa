@@ -1,3 +1,4 @@
+import {franceLowCountriesScope} from './franceLowCountriesRoutes.js';
 import {iberiaItalyScope} from './iberiaItalyRoutes.js';
 import {medievalBalkanScope} from './medievalBalkanRoutes.js';
 import {bosniaHumScope} from './bosniaHumRoutes.js';
@@ -370,6 +371,8 @@ export const AUTHORITY_MAP_SCOPES = Object.freeze([
 ]);
 
 export function authorityMapScope(personId, territory, year) {
+  const french = franceLowCountriesScope(personId, territory, year);
+  if (french) return french;
   const western = iberiaItalyScope(personId, territory, year);
   if (western) return western;
   const fullRegion = balkansFullScope(personId, territory, year);

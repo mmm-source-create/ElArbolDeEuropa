@@ -14,6 +14,7 @@ export function applyRegionalReview(data, review, key, corridor) {
     if (!scope.personId || !scope.territory || !scope.note
       || !Number.isInteger(scope.from) || !Number.isInteger(scope.through)
       || scope.from < review.scope.from || scope.through > review.scope.through || scope.from > scope.through
+      || (scope.disputedIds || []).some(id => !scope.ids.includes(id))
       || !scope.ids.length || new Set(scope.ids).size !== scope.ids.length || !scope.sourceKeys.length
       || scope.sourceKeys.some(key => !review.sources[key]?.url?.startsWith('https://') || !review.sources[key]?.locator))
       throw new Error(`Invalid regional authority scope: ${scope.personId}`);

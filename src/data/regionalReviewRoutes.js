@@ -17,7 +17,7 @@ export function regionalReviewRoutes(review) {
     const selected = (review.authorityScopes || []).find(scope => scope.personId === personId
       && scope.territory === territory && scope.from <= year && year <= scope.through);
     if (!selected) return null;
-    return {ids: selected.ids, source: review.sources[selected.sourceKeys[0]],
+    return {ids: selected.ids, ...(selected.disputedIds ? {disputedIds: selected.disputedIds} : {}), source: review.sources[selected.sourceKeys[0]],
       additionalSources: selected.sourceKeys.slice(1).map(key => review.sources[key]), note: selected.note};
   }
 

@@ -71,6 +71,7 @@ export function mergeMapExpansions(data) {
   applyRegionalReview(data, read('posavina-ragusa-review.json'), 'posavinaRagusaReview', 'Kozara–Glaž y costa ragusea · revisión regional');
   applyRegionalReview(data, read('balkans-full-review.json'), 'balkansFullReview', 'Balcanes y Egeo · continuidad geográfica completa');
   applyRegionalReview(data, read('iberia-italy-full-review.json'), 'iberiaItalyReview', 'Iberia e Italia · continuidad geográfica completa');
+  applyRegionalReview(data, read('france-low-countries-full-review.json'), 'franceLowCountriesReview', 'Francia y Países Bajos · continuidad geográfica completa');
   layers = [...data.territories, ...data.additionalTerritories];
   const svg = fs.readFileSync(mapDataFile('euv-locations-crop.svg'),'utf8');
   const ids = new Set([...svg.matchAll(/<path\b[^>]*\bid="([^"]+)"/g)].map(match => match[1]));

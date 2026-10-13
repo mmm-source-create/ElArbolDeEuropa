@@ -773,3 +773,11 @@ Los polígonos de cordilleras y sus subtrazados se revisan como superficies.
 `npm run audit:balkans-continuity` exige continuidad anual, evidencia local
 y explicación de cada atribución múltiple. Su alcance y límites están en
 [la entrega V5.11](../../docs/V5.11.md).
+
+## Francia, Borgoña y Países Bajos · V5.13
+
+`france-low-countries-geography.json` define las ventanas independientes y
+`france-low-countries-geographic-cells.json` enumera sus 640 celdas completas.
+`france-low-countries-full-review.json` es la fuente histórica curada de fases,
+notas, citas y ámbitos personales; el ensamblador la aplica después de las
+revisiones anteriores. La auditoría anual está documentada en [V5.13](../../docs/V5.13.md).
