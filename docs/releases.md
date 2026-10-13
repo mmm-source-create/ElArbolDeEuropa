@@ -33,6 +33,10 @@ como borrador hasta la fusión y validación del commit final.
 anatolio adyacente. La publicación de su Release requiere integrar y validar
 el commit final; preparar la PR no publica ni despliega en producción.
 
+[V5.12](V5.12.md) prepara la revisión anual de Iberia e Italia y las relaciones
+tributarias en los mapas personales. La PR y la vista previa permiten revisar
+el commit exacto; la Release se conserva como borrador hasta su aprobación.
+
 ## Índice cronológico de documentos
 
 Ordenados por número de versión, de la primera a la última. Los documentos
@@ -91,6 +95,7 @@ permanecen explicados en [archive/manifests](archive/manifests/README.md).
 | [5.9](V5.9.md) | V5.9 · Bosnia, Hum y continuidad regional |
 | [5.10](V5.10.md) | V5.10 · Kozara–Glaž, costa ragusea y apoyo al proyecto |
 | [5.11](V5.11.md) | V5.11 · Balcanes y continuidad otomana |
+| [5.12](V5.12.md) | V5.12 · Iberia, Italia y estados tributarios |
 
 ## Publicar una entrega
 

@@ -1,3 +1,4 @@
+import {iberiaItalyScope} from './iberiaItalyRoutes.js';
 import {medievalBalkanScope} from './medievalBalkanRoutes.js';
 import {bosniaHumScope} from './bosniaHumRoutes.js';
 import {posavinaRagusaScope} from './posavinaRagusaRoutes.js';
@@ -369,6 +370,8 @@ export const AUTHORITY_MAP_SCOPES = Object.freeze([
 ]);
 
 export function authorityMapScope(personId, territory, year) {
+  const western = iberiaItalyScope(personId, territory, year);
+  if (western) return western;
   const fullRegion = balkansFullScope(personId, territory, year);
   if (fullRegion) return fullRegion;
   const medieval = medievalBalkanScope(personId, territory, year);

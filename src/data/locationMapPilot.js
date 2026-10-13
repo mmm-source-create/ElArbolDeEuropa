@@ -1,3 +1,4 @@
+import {iberiaItalyJurisdictions} from './iberiaItalyRoutes.js';
 import {medievalBalkanJurisdictions} from './medievalBalkanRoutes.js';
 import {bosniaHumJurisdictions} from './bosniaHumRoutes.js';
 import {posavinaRagusaJurisdictions} from './posavinaRagusaRoutes.js';
@@ -25,7 +26,7 @@ export function reviewedMapLayers(data) {
       if (!corrections.has(correction.territory)) corrections.set(correction.territory, []);
       corrections.get(correction.territory).push(correction);
     }
-    const regional = [data.bosniaHumReview, data.posavinaRagusaReview, data.balkansFullReview].filter(Boolean);
+    const regional = [data.bosniaHumReview, data.posavinaRagusaReview, data.balkansFullReview, data.iberiaItalyReview].filter(Boolean);
     layerIndexes.set(data, {entries, byName: new Map(entries.map(entry => [entry.name, entry])), corrections,
       regional: regional.map(review => ({from: review.scope.from, through: review.scope.through,
         ids: new Set(review.precedenceIds || review.scope.ids), names: new Set(review.layerNames)}))});
@@ -43,7 +44,7 @@ export function pilotJurisdictionsFor(territory, year, personId = null) {
   if (scope?.jurisdictions) return scope.jurisdictions;
   const chronological=chronologyJurisdictionsFor(territory,year,personId);
   const frontier=frontierJurisdictions(continuityJurisdictions(regionalExtentJurisdictions(appendChronologyJurisdictions(chronological ?? basePilotJurisdictionsFor(territory,year,personId),territory,personId),territory,year,personId),territory,year,personId),territory,year,personId);
-  return balkansFullJurisdictions(posavinaRagusaJurisdictions(bosniaHumJurisdictions(medievalBalkanJurisdictions(referenceGapJurisdictions(successionJurisdictions(frontier,territory,year,personId),territory),territory),territory,year,personId),territory,year,personId),territory,year,personId);
+  return iberiaItalyJurisdictions(balkansFullJurisdictions(posavinaRagusaJurisdictions(bosniaHumJurisdictions(medievalBalkanJurisdictions(referenceGapJurisdictions(successionJurisdictions(frontier,territory,year,personId),territory),territory),territory,year,personId),territory,year,personId),territory,year,personId),territory,year,personId);
 }
 
 function basePilotJurisdictionsFor(territory, year, personId) {
@@ -203,6 +204,9 @@ function applyLayerCorrections(data, entry, ids, year) {
   // order the canonical corrections and source groups were merged in.
   active.filter(c => c.action === 'add').forEach(c => corrected.add(c.id));
   active.filter(c => c.action === 'remove').forEach(c => corrected.delete(c.id));
+  // A legal framework is an independent reference, not an earlier owner.
+  // Regional political precedence must not erase it from the inspector.
+  if (entry.name === 'Marco jurídico del Sacro Imperio') return [...corrected];
   const regional = layerIndexes.get(data)?.regional;
   for (const id of corrected) {
     const owner = regional?.findLast(review => review.from <= year && year <= review.through && review.ids.has(id));

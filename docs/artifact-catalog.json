@@ -264,6 +264,27 @@
       "path": "docs/reports/reviewed/v5.11-balkans.json",
       "kind": "reviewed-audit",
       "maintenance": "Instantánea anual 1200–1800 adoptada expresamente en V5.11, con evidencia local y comparación anterior."
+    },
+    {
+      "path": "prototypes/euv-locations/iberia-italy-full-review.json",
+      "kind": "accepted-cartography",
+      "maintenance": "Fases, citas locales, composiciones y ámbitos personales adoptados expresamente para Iberia e Italia; no se asigna soberanía por el nombre de una ciudad."
+    },
+    {
+      "path": "prototypes/euv-locations/iberia-italy-geography.json",
+      "kind": "historical-selection",
+      "maintenance": "Ventanas geográficas independientes del color y de los gobiernos; no son fronteras políticas."
+    },
+    {
+      "path": "prototypes/euv-locations/iberia-italy-geographic-cells.json",
+      "kind": "accepted-inventory",
+      "producer": "scripts/cartography/build-geographic-inventory.py",
+      "maintenance": "Todas las superficies SVG que cruzan las ventanas, incluyendo cada subtrazado insular. Comando y entorno bloqueado en scripts/README.md."
+    },
+    {
+      "path": "docs/reports/reviewed/v5.12-iberia-italy.json",
+      "kind": "reviewed-audit",
+      "maintenance": "Instantánea anual adoptada expresamente con evidencia local, comparación contra main 025f8a1 y huellas de las fuentes."
     }
   ]
 }

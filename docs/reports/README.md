@@ -24,3 +24,8 @@ La [instantánea de V5.11](reviewed/v5.11-balkans.json) conserva 675.524
 combinaciones de superficie/año, evidencia local, atribuciones múltiples
 explicadas y comparación con el árbol anterior. Incluye el inventario
 geográfico completo; no certifica fronteras municipales exactas.
+
+La [instantánea de V5.12](reviewed/v5.12-iberia-italy.json) recoge la comprobación
+de las 931 superficies de Iberia e Italia, sus 559.531 combinaciones anuales y
+la comparación contra `main` 025f8a1. Los diagnósticos nuevos se escriben en
+`.cache/audits/`; no se sustituyen automáticamente las instantáneas aceptadas.
