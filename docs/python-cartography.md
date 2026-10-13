@@ -97,3 +97,7 @@ perímetro exterior y cero solapamiento de área. Esto evita comparar como si
 fuera geometría exacta el muestreo antiguo que omitía el último extremo de
 algunos trazados abiertos. Los inventarios siguen declarando su muestreo
 aproximado; sus áreas no son kilómetros cuadrados ni fronteras históricas.
+
+Desde V5.13, la reproducción incluye también `france-low-countries-geography.json`
+y las 640 celdas completas de su inventario independiente. La selección mide
+geometría; la revisión histórica separada decide atribuciones y fechas.

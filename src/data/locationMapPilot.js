@@ -1,3 +1,4 @@
+import {franceLowCountriesJurisdictions} from './franceLowCountriesRoutes.js';
 import {iberiaItalyJurisdictions} from './iberiaItalyRoutes.js';
 import {medievalBalkanJurisdictions} from './medievalBalkanRoutes.js';
 import {bosniaHumJurisdictions} from './bosniaHumRoutes.js';
@@ -26,7 +27,7 @@ export function reviewedMapLayers(data) {
       if (!corrections.has(correction.territory)) corrections.set(correction.territory, []);
       corrections.get(correction.territory).push(correction);
     }
-    const regional = [data.bosniaHumReview, data.posavinaRagusaReview, data.balkansFullReview, data.iberiaItalyReview].filter(Boolean);
+    const regional = [data.bosniaHumReview, data.posavinaRagusaReview, data.balkansFullReview, data.iberiaItalyReview, data.franceLowCountriesReview].filter(Boolean);
     layerIndexes.set(data, {entries, byName: new Map(entries.map(entry => [entry.name, entry])), corrections,
       regional: regional.map(review => ({from: review.scope.from, through: review.scope.through,
         ids: new Set(review.precedenceIds || review.scope.ids), names: new Set(review.layerNames)}))});
@@ -44,7 +45,7 @@ export function pilotJurisdictionsFor(territory, year, personId = null) {
   if (scope?.jurisdictions) return scope.jurisdictions;
   const chronological=chronologyJurisdictionsFor(territory,year,personId);
   const frontier=frontierJurisdictions(continuityJurisdictions(regionalExtentJurisdictions(appendChronologyJurisdictions(chronological ?? basePilotJurisdictionsFor(territory,year,personId),territory,personId),territory,year,personId),territory,year,personId),territory,year,personId);
-  return iberiaItalyJurisdictions(balkansFullJurisdictions(posavinaRagusaJurisdictions(bosniaHumJurisdictions(medievalBalkanJurisdictions(referenceGapJurisdictions(successionJurisdictions(frontier,territory,year,personId),territory),territory),territory,year,personId),territory,year,personId),territory,year,personId),territory,year,personId);
+  return franceLowCountriesJurisdictions(iberiaItalyJurisdictions(balkansFullJurisdictions(posavinaRagusaJurisdictions(bosniaHumJurisdictions(medievalBalkanJurisdictions(referenceGapJurisdictions(successionJurisdictions(frontier,territory,year,personId),territory),territory),territory,year,personId),territory,year,personId),territory,year,personId),territory,year,personId),territory,year,personId);
 }
 
 function basePilotJurisdictionsFor(territory, year, personId) {
@@ -243,6 +244,9 @@ export function reviewedAuthorityConditions(data, territory, year, personId = nu
         sources:[{url:correction.source,title:'Fuente del control regional',locator:correction.reason}]});
     }
   }
+  const scope = authorityMapScope(personId, territory, year);
+  for (const id of scope?.disputedIds || [])
+    conditions.set(id, {condition:'control disputado',note:scope.note,sources:[scope.source,...(scope.additionalSources || [])]});
   return conditions;
 }
 

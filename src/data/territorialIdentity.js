@@ -1,3 +1,4 @@
+import {FRANCE_LOW_COUNTRIES_IDENTITIES} from './franceLowCountriesRoutes.js';
 import {IBERIA_ITALY_IDENTITIES} from './iberiaItalyRoutes.js';
 // A survey label, an owner and a control episode are not territorial identity.
 import {BOSNIA_HUM_IDENTITIES} from './bosniaHumRoutes.js';
@@ -8,6 +9,7 @@ const ALIASES = Object.freeze({
   ...POSAVINA_RAGUSA_IDENTITIES,
   ...BALKANS_FULL_IDENTITIES,
   ...IBERIA_ITALY_IDENTITIES,
+  ...FRANCE_LOW_COUNTRIES_IDENTITIES,
   // Direct Ottoman provinces are scopes of one state, not new sovereign
   // entities. Their names and evidence remain in scopes and in title records.
   'Hungría otomana': 'Imperio otomano',

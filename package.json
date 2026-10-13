@@ -1,7 +1,7 @@
 {
   "name": "el-arbol-de-europa",
   "private": true,
-  "version": "5.12.0",
+  "version": "5.13.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -30,13 +30,14 @@
     "audit:regression": "node --import ./tests/jsx-loader.mjs scripts/audits/audit-v5-regression.mjs",
     "audit:regression:public": "node --import ./tests/jsx-loader.mjs scripts/audits/audit-v5-regression.mjs --public",
     "baseline:regression": "npm run prebuild && npm run build:artifacts && node --import ./tests/jsx-loader.mjs scripts/audits/audit-v5-regression.mjs --write",
-    "audit:build": "npm run audit:artifacts && npm run audit:data-contract && node scripts/audits/audit-personas.mjs --fail-on-errors && node scripts/audits/audit-territorios.mjs --fail-on-errors && node --import ./tests/jsx-loader.mjs scripts/audits/audit-political-map.mjs --fail-on-errors && node --import ./tests/jsx-loader.mjs scripts/audits/audit-map-continuity.mjs --fail-on-errors && node --import ./tests/jsx-loader.mjs scripts/audits/audit-territorial-continuity.mjs --fail-on-errors && node --import ./tests/jsx-loader.mjs scripts/audits/audit-map-spatial.mjs && node --import ./tests/jsx-loader.mjs scripts/audits/audit-regional-extents.mjs && node --import ./tests/jsx-loader.mjs scripts/audits/audit-atlas-coverage.mjs && npm run audit:regional-continuity && npm run audit:balkans-continuity && npm run audit:iberia-italy-continuity && npm run audit:uncolored && node scripts/audits/audit-dinastias.mjs && node scripts/audits/audit-sucesiones.mjs && node scripts/audits/audit-coronas.mjs",
+    "audit:build": "npm run audit:artifacts && npm run audit:data-contract && node scripts/audits/audit-personas.mjs --fail-on-errors && node scripts/audits/audit-territorios.mjs --fail-on-errors && node --import ./tests/jsx-loader.mjs scripts/audits/audit-political-map.mjs --fail-on-errors && node --import ./tests/jsx-loader.mjs scripts/audits/audit-map-continuity.mjs --fail-on-errors && node --import ./tests/jsx-loader.mjs scripts/audits/audit-territorial-continuity.mjs --fail-on-errors && node --import ./tests/jsx-loader.mjs scripts/audits/audit-map-spatial.mjs && node --import ./tests/jsx-loader.mjs scripts/audits/audit-regional-extents.mjs && node --import ./tests/jsx-loader.mjs scripts/audits/audit-atlas-coverage.mjs && npm run audit:regional-continuity && npm run audit:balkans-continuity && npm run audit:iberia-italy-continuity && npm run audit:france-low-countries-continuity && npm run audit:uncolored && node scripts/audits/audit-dinastias.mjs && node scripts/audits/audit-sucesiones.mjs && node scripts/audits/audit-coronas.mjs",
     "generate": "node scripts/generate/generate-sitemap.mjs && node scripts/generate/generate-tree-base.mjs && node scripts/generate/generate-territorios.mjs && node scripts/generate/generate-dinastias.mjs && node scripts/generate/generate-historias.mjs && node scripts/generate/generate-english.mjs",
     "cartography:check": ".venv-cartography/bin/python scripts/cartography/check-environment.py",
     "audit:artifacts": "node scripts/audits/audit-artifacts.mjs",
     "audit:regional-continuity": "node --import ./tests/jsx-loader.mjs scripts/audits/audit-regional-continuity.mjs",
     "audit:balkans-continuity": "node --import ./tests/jsx-loader.mjs scripts/audits/audit-balkans-continuity.mjs",
-    "audit:iberia-italy-continuity": "node --import ./tests/jsx-loader.mjs scripts/audits/audit-iberia-italy-continuity.mjs"
+    "audit:iberia-italy-continuity": "node --import ./tests/jsx-loader.mjs scripts/audits/audit-iberia-italy-continuity.mjs",
+    "audit:france-low-countries-continuity": "node --import ./tests/jsx-loader.mjs scripts/audits/audit-france-low-countries-continuity.mjs"
   },
   "dependencies": {
     "@vercel/speed-insights": "2.0.0",

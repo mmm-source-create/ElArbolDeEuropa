@@ -29,3 +29,7 @@ La [instantánea de V5.12](reviewed/v5.12-iberia-italy.json) recoge la comprobac
 de las 931 superficies de Iberia e Italia, sus 559.531 combinaciones anuales y
 la comparación contra `main` 025f8a1. Los diagnósticos nuevos se escriben en
 `.cache/audits/`; no se sustituyen automáticamente las instantáneas aceptadas.
+
+La [instantánea de V5.13](reviewed/v5.13-france-low-countries.json) conserva las
+640 superficies de Francia y Países Bajos, sus intervalos anteriores sin color,
+la comprobación anual final y las huellas de las fuentes aceptadas.

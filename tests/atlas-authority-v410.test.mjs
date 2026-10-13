@@ -30,7 +30,9 @@ test('titular Burgundy and abjured Holland are inspectable without painting Phil
   assert(inspect('Amsterdam', 1582).claims.some(e => e.person?.id === 'FEL2ESP'));
   assert(!mapAuthoritiesForPerson(people.get('FEL2ESP'), 1582, data)
     .some(e => e.paint && e.ids.includes('Amsterdam')));
-  assert(inspect('Brussels', 1582).entries.some(e => e.person?.id === 'FEL2ESP'));
+  // Brussels is under the rebel States until the conquest of 1585.
+  assert(!inspect('Brussels', 1582).entries.some(e => e.person?.id === 'FEL2ESP'));
+  assert(inspect('Brussels', 1586).entries.some(e => e.person?.id === 'FEL2ESP'));
 });
 
 test('the inspector includes each painted Burgundian supplement and dated Hungarian core', () => {

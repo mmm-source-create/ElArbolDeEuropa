@@ -81,7 +81,7 @@ test('French annexations and English Aquitaine preserve dates and neighbouring i
  assert(cells('Francia',1312).includes('Lyon'));
  assert(!cells('Francia',1365).includes('Poitiers'));
  assert(cells('Aquitania',1365).includes('Poitiers'));
- assert(cells('Francia',1373).includes('Poitiers'));
+ assert(cells('Poitou',1373,'JUAN1BERRY').includes('Poitiers'), 'documented apanage recovered from England, not direct royal domain');
  assert(!cells('Aquitania',1373).includes('Poitiers'));
  assert(!cells('Francia',1600).includes('Bourg_En_Bresse'));
  assert(cells('Francia',1601).includes('Bourg_En_Bresse'));

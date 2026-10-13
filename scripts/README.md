@@ -99,3 +99,21 @@ compactas del cliente se comparan con su fuente en las pruebas.
 Esas relaciones no se convierten en gobiernos personales ni alteran la
 identidad del mosaico conjunto. La precedencia regional no borra el marco
 legal imperial, que permanece separado de los dominios pintados.
+
+## Francia y Países Bajos, 1200–1800
+
+`npm run audit:france-low-countries-continuity` comprueba las 640 celdas de la
+selección geográfica independiente en los 601 años, con evidencia local.
+Forma parte de `audit:build`; resultados actuales en `.cache/audits/`,
+instantánea aceptada en `docs/reports/reviewed/v5.13-france-low-countries.json`.
+
+```sh
+.venv-cartography/bin/python scripts/cartography/build-geographic-inventory.py france-low-countries-geography.json france-low-countries-geographic-cells.json
+node scripts/cartography/build-france-low-countries-routes.mjs
+node --import ./tests/jsx-loader.mjs scripts/cartography/merge-map-expansions.mjs
+```
+
+La revisión histórica es una fuente curada, no un resultado inferido por nombres.
+El constructor sólo compila rutas; el ensamblador exige sustitución completa.
+Los ámbitos delegados conservan sus celdas disputadas y citas. Las superficies
+compartidas con Iberia/Italia siguen sujetas a ambas auditorías.

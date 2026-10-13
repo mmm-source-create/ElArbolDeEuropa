@@ -46,6 +46,10 @@ export function auditarTerritorios(personas, catalogo=TERRITORIOS) {
   if(Math.max(a.g.desde,b.g.desde)>=Math.min(a.g.hasta,b.g.hasta))continue;
   if([a.g,b.g].some(g=>['corregente','jure uxoris'].includes(g.condicion)))continue;
   if(a.g.soberano===b.p.id||b.g.soberano===a.p.id)continue;
+  // Distinct provincial stadholder commissions are delegated offices, not
+  // rival successions to a single sovereign throne. Their dated map scopes
+  // are checked separately by the regional authority tests.
+  if([a.g,b.g].every(g=>g.clase==='estatuderato'&&g.condicion==='gobierno delegado'&&g.ambito)&&a.g.ambito!==b.g.ambito)continue;
   if([a.g,b.g].some(g=>g.condicion==='rama') && a.g.ambito!==b.g.ambito)continue;
   add('WARNING','SUCCESSION_OVERLAP',`${a.key}/${b.key}`,`${a.g.territorio}: ${a.p.nombre} (${a.g.desde}–${a.g.hasta}) / ${b.p.nombre} (${b.g.desde}–${b.g.hasta})`);
  }

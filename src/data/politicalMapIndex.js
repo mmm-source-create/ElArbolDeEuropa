@@ -12,6 +12,27 @@ import {CHRONOLOGY_COLLECTIVE_AUTHORITIES} from './atlasChronologyCollectives.js
 export const COLLECTIVE_AUTHORITIES = Object.freeze([
   ...CHRONOLOGY_COLLECTIVE_AUTHORITIES,
   {
+    territorio:'Provincias Unidas', desde:1588, hasta:1794,
+    nombre:'Estados Generales y Estados provinciales', cargo:'Gobierno federal y provincial',
+    condicion:'colectiva', certeza:'documentado',
+    nota:'República federal de siete provincias y territorios de la Generalidad. El cargo de estatúder no sustituye la soberanía de sus Estados ni convierte las provincias meridionales en su dominio.',
+    fuente:{title:'Nationaal Archief · Resoluties Staten-Generaal',url:'https://www.nationaalarchief.nl/onderzoeken/zoekhulpen/resoluties-van-de-staten-generaal-1576-1796',locator:'República 1588–1795: gobierno de los Estados Generales y competencias de los Estados de las siete provincias.'},
+  },
+  {
+    territorio:'República Bátava', desde:1795, hasta:1800,
+    nombre:'Instituciones de la República Bátava', cargo:'Gobierno republicano',
+    condicion:'colectiva', certeza:'documentado',
+    nota:'Revolución de 1795; estructura provincial hasta 1797 y centralización constitucional desde 1798. No se inventa un rey ni se limita la República a Holanda.',
+    fuente:{title:'Canon van Nederland · Van republiek naar eenheidsstaat',url:'https://www.canonvannederland.nl/nl/page/385528/van-republiek-naar-eenheidsstaat---fan-republyk-nei-ienheidssteat',locator:'Revolución de 1795 y transición a Estado unitario en 1798.'},
+  },
+  {
+    territorio:'Estados Belgas Unidos', desde:1790, hasta:1790,
+    nombre:'Congreso de los Estados Belgas Unidos', cargo:'Gobierno federal revolucionario',
+    condicion:'colectiva', certeza:'documentado',
+    nota:'Federación revolucionaria de 1790, con restauración austríaca dentro del mismo año. Luxemburgo queda excluido.',
+    fuente:{title:'Service public de Wallonie · États belgiques unis',url:'https://connaitrelawallonie.wallonie.be/histoire-et-symboles/histoire/atlas-historique/la-republique-des-etats-belgiques-unis-1790',locator:'Mapa de las nueve provincias insurgentes y excepción de Luxemburgo; restauración de finales de 1790.'},
+  },
+  {
     territorio: 'Comuna de Mljet', desde: 1345, hasta: 1409,
     nombre: 'Comuna de Mljet', cargo: 'Gobierno comunal',
     condicion: 'colectiva', certeza: 'documentado',
@@ -71,7 +92,7 @@ export function buildPoliticalMapIndex(personas, year, mapData = null, options =
   // Regional evidence can establish a jurisdiction before an individual
   // mandate has been researched. Keep that evidence visible without
   // inventing a bishop, judge or six-century collective government.
-  const westernLayers = new Set(mapData?.iberiaItalyReview?.layerNames || []);
+  const westernLayers = new Set([...(mapData?.iberiaItalyReview?.layerNames || []), ...(mapData?.franceLowCountriesReview?.layerNames || [])]);
   for (const layer of reviewedMapLayers(mapData).filter(layer => westernLayers.has(layer.name))) {
     const evidence = reviewedLayerEvidence(layer, year);
     for (const id of reviewedLayerLocations(mapData, layer, year)) {

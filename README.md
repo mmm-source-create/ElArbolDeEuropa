@@ -2,15 +2,13 @@
 
 Atlas histórico y genealógico para explorar personas, dinastías, territorios y sus conexiones familiares.
 
-- [Web](https://www.treeofeurope.eu/es/) · Versión del repositorio: **V5.12**
-- [Cambios de V5.12](docs/V5.12.md) · [Documentación e historial](docs/README.md) · [Próximos pasos cartográficos](docs/V4.8_PROPUESTAS.md) · [Seguridad](SECURITY.md)
+- [Web](https://www.treeofeurope.eu/es/) · Versión del repositorio: **V5.13**
+- [Cambios de V5.13](docs/V5.13.md) · [Documentación e historial](docs/README.md) · [Próximos pasos cartográficos](docs/V4.8_PROPUESTAS.md) · [Seguridad](SECURITY.md)
 
-V5.12 revisa Iberia e Italia entre 1200 y 1800: 931 superficies y 559.531
-combinaciones de región y año, sin huecos ni atribuciones múltiples sin
-explicación. Añade relaciones tributarias fechadas a los mapas personales y
-27 personas con mandatos documentados. Conserva las identidades, los títulos,
-las instituciones locales y la revisión balcánica de V5.11. La continuidad
-acredita representación y fuentes; las fronteras siguen siendo aproximaciones.
+V5.13 completa Francia y sus apanages, Borgoña, Alsacia, Lorena y los Países Bajos
+entre 1200 y 1800: 640 superficies y 384.640 comprobaciones anuales, sin huecos
+dentro de la selección geográfica. Conserva títulos, jurisdicciones y fuentes
+locales, y distingue gobernadores, estatúderes, ocupaciones y sucesiones del sur.
 
 El mapa utiliza EU V Locations con superficies fechadas y fuentes consultables
 en el inspector. Distingue soberanía, gobierno delegado, titularidad y control

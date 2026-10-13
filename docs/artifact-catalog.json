@@ -285,6 +285,23 @@
       "path": "docs/reports/reviewed/v5.12-iberia-italy.json",
       "kind": "reviewed-audit",
       "maintenance": "Instantánea anual adoptada expresamente con evidencia local, comparación contra main 025f8a1 y huellas de las fuentes."
+    },
+    {
+      "path": "prototypes/euv-locations/france-low-countries-geography.json",
+      "kind": "historical-selection"
+    },
+    {
+      "path": "prototypes/euv-locations/france-low-countries-geographic-cells.json",
+      "kind": "accepted-inventory",
+      "producer": "scripts/cartography/build-geographic-inventory.py"
+    },
+    {
+      "path": "prototypes/euv-locations/france-low-countries-full-review.json",
+      "kind": "accepted-cartography"
+    },
+    {
+      "path": "docs/reports/reviewed/v5.13-france-low-countries.json",
+      "kind": "reviewed-audit"
     }
   ]
 }
