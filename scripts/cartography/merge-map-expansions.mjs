@@ -69,6 +69,7 @@ export function mergeMapExpansions(data) {
   applyMedievalBalkans(data, read('medieval-balkans-review.json'));
   applyRegionalReview(data, read('bosnia-hum-review.json'), 'bosniaHumReview', 'Bosnia y Hum · revisión regional');
   applyRegionalReview(data, read('posavina-ragusa-review.json'), 'posavinaRagusaReview', 'Kozara–Glaž y costa ragusea · revisión regional');
+  applyRegionalReview(data, read('balkans-full-review.json'), 'balkansFullReview', 'Balcanes y Egeo · continuidad geográfica completa');
   layers = [...data.territories, ...data.additionalTerritories];
   const svg = fs.readFileSync(mapDataFile('euv-locations-crop.svg'),'utf8');
   const ids = new Set([...svg.matchAll(/<path\b[^>]*\bid="([^"]+)"/g)].map(match => match[1]));

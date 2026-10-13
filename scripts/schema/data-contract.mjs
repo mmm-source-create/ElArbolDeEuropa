@@ -60,10 +60,11 @@ export const MAP_LAYER_SCHEMA = object({
   active: optional(nullable(object({from: optional(year), through: optional(year), reason: optional(text), source: optional(text)}))),
   coverage: optional(mapPeriod), sources: optional(array(source)),
   precision: optional(text), limitedCore: optional(boolean),
+  scopeLabel: optional(text),
   limitedCorePeriods: optional(array(mapPeriod)), periods: optional(array(mapPeriod)),
   supersedes: optional(array(text)), borderlineIds: optional(array(text)),
   temporalExtensions: optional(array(extension)),
-  authorityCondition: optional(enumeration(['control disputado', 'ocupación', 'gobierno delegado', 'autonomía tributaria'])),
+  authorityCondition: optional(enumeration(['control disputado', 'ocupación', 'gobierno delegado', 'autonomía tributaria', 'composición geográfica'])),
 });
 
 const isObject = value => value !== null && typeof value === 'object' && !Array.isArray(value);

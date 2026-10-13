@@ -40,15 +40,15 @@ test('Usora survives Dragutin and Srebrenik differs from the mining city Srebren
   assert.deepEqual(owners('Srebrenik', 1317), ['Usora y Soli']);
   assert.deepEqual(owners('Srebrenik', 1324), ['Reino de Bosnia']);
   assert.deepEqual(owners('Srebrenik', 1500), ['Srebrenik']);
-  assert.deepEqual(owners('Srebrenik', 1512), ['Bosnia y Herzegovina otomanas']);
-  assert.deepEqual(owners('Teocak', 1438), ['Despotado de Serbia']);
-  assert.deepEqual(owners('Teocak', 1439), ['Bosnia y Herzegovina otomanas']);
+  assert.deepEqual(owners('Srebrenik', 1512), ['Imperio otomano']);
+  assert.deepEqual(owners('Teocak', 1438), ['Serbia']);
+  assert.deepEqual(owners('Teocak', 1439), ['Imperio otomano']);
   assert.deepEqual(owners('Teocak', 1443), ['Reino de Bosnia']);
   assert.deepEqual(owners('Srebrenica', 1410), ['Hungría']);
-  assert.deepEqual(owners('Srebrenica', 1411), ['Despotado de Serbia']);
-  assert.deepEqual(owners('Srebrenica', 1439), ['Bosnia y Herzegovina otomanas']);
-  assert.deepEqual(owners('Srebrenica', 1444), ['Despotado de Serbia']);
-  assert.deepEqual(owners('Srebrenica', 1500), ['Bosnia y Herzegovina otomanas']);
+  assert.deepEqual(owners('Srebrenica', 1411), ['Serbia']);
+  assert.deepEqual(owners('Srebrenica', 1439), ['Imperio otomano']);
+  assert.deepEqual(owners('Srebrenica', 1444), ['Serbia']);
+  assert.deepEqual(owners('Srebrenica', 1500), ['Imperio otomano']);
 });
 
 test('local conquest dates and recoveries supersede generic Ottoman anchors', () => {
@@ -58,23 +58,23 @@ test('local conquest dates and recoveries supersede generic Ottoman anchors', ()
   assert(!king.ids.includes('Vrhbosna') && !king.ids.includes('Mostar'));
   assert.equal(authority('STEPHENTOMASEVICBOS', 1464, 'Bosnia'), undefined);
   assert.deepEqual(owners('Vrhbosna', 1434), ['Reino de Bosnia']);
-  assert.deepEqual(owners('Vrhbosna', 1435), ['Bosnia y Herzegovina otomanas']);
+  assert.deepEqual(owners('Vrhbosna', 1435), ['Imperio otomano']);
   assert.deepEqual(owners('Mostar', 1465), ['Herzegovina']);
-  assert.deepEqual(owners('Mostar', 1466), ['Bosnia y Herzegovina otomanas']);
+  assert.deepEqual(owners('Mostar', 1466), ['Imperio otomano']);
   assert.deepEqual(owners('Jajce', 1526), ['Banato húngaro de Jajce']);
-  assert.deepEqual(owners('Jajce', 1527), ['Bosnia y Herzegovina otomanas']);
+  assert.deepEqual(owners('Jajce', 1527), ['Imperio otomano']);
   assert.deepEqual(owners('Trebinje', 1694), ['Dalmacia veneciana']);
-  assert.deepEqual(owners('Trebinje', 1699), ['Bosnia y Herzegovina otomanas']);
+  assert.deepEqual(owners('Trebinje', 1699), ['Imperio otomano']);
   assert.deepEqual(owners('Pljevlja', 1372), ['Serbia']);
   assert.deepEqual(owners('Pljevlja', 1373), ['Reino de Bosnia']);
-  assert.deepEqual(owners('Pljevlja', 1465), ['Bosnia y Herzegovina otomanas']);
+  assert.deepEqual(owners('Pljevlja', 1465), ['Imperio otomano']);
 });
 
 test('whole ridges follow the regional pass and the mixed Imotski/Gabela cell is explicit', () => {
   for (const id of ['Dinaric_Alps2', 'Dinaric_Alps3', 'Dinaric_Alps4', 'Dinaric_Alps5', 'Dinaric_Alps6'])
     for (const year of [1200, 1290, 1400, 1465, 1500, 1800]) assert(owners(id, year).length, `${id}, ${year}`);
   assert.deepEqual(owners('Drijeva', 1700), ['Dalmacia veneciana']);
-  assert.deepEqual(owners('Drijeva', 1750), ['Bosnia y Herzegovina otomanas', 'Dalmacia veneciana']);
+  assert.deepEqual(owners('Drijeva', 1750), ['Dalmacia veneciana', 'Imperio otomano']);
   assert.deepEqual(owners('Metkovic', 1700), ['Dalmacia veneciana']);
   assert.deepEqual(owners('Metkovic', 1800), ['Dalmacia austríaca']);
   assert(review.allowedMixedCells.some(row => row.id === 'Drijeva' && row.sourceKeys.includes('imotski')));

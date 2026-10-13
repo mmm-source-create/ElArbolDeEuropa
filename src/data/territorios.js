@@ -1,4 +1,6 @@
+import {BALKANS_FULL_TERRITORIES} from './balkansFullTerritories.js';
 export const TERRITORIOS = Object.freeze({
+  ...BALKANS_FULL_TERRITORIES,
   "Comuna de Mljet": {"clase":"gobierno","naturaleza":"entidad","componentes":[],"desde":1345,"hasta":1409,"nota":"Comuna autónoma bajo señorío benedictino; estatuto de 1345 e incorporación definitiva a Ragusa en 1410. Gobierno colectivo, sin inventar una sucesión de abades o rectores."},
   "Donji Kraji": {"clase":"señorío","naturaleza":"entidad","componentes":[],"titulosDeGobierno":["Conde"],"nota":"Señorío regional de los Hrvatinić dentro de Bosnia, con la dignidad documentada de comes/knez. El mapa personal se limita a posesiones fechadas."},
   "Glaž": {"clase":"condado","naturaleza":"entidad","componentes":[],"nota":"Condado señorial de los Hrvatinić bajo el reino bosnio. La ubicación de la fortaleza es discutida y el polígono del mapa es una aproximación regional."},

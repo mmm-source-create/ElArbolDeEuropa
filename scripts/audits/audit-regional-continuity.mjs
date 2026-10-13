@@ -3,6 +3,7 @@ import path from 'node:path';
 import {fileURLToPath} from 'node:url';
 import {atlasPoliticalMosaicAt, atlasMosaicPalette} from '../../prototypes/euv-locations/atlas-mosaic.js';
 import {auditReportPath} from '../lib/project-paths.mjs';
+import {territorialIdentity} from '../../src/data/territorialIdentity.js';
 
 // A region needs coverage for every cell in every year, including cells that
 // receive color elsewhere in time. The global never-colored list cannot prove it.
@@ -28,7 +29,7 @@ export function auditRegionalContinuity(data, inventory, review) {
         row.mixedYears++;
         const explanation = review.allowedMixedCells.find(item => item.id === id
           && item.from <= year && year <= item.through
-          && identities.every(identity => item.identities.includes(identity))
+          && identities.every(identity => item.identities.map(territorialIdentity).includes(identity))
           && item.note && item.sourceKeys.every(key => review.sources[key]?.locator));
         if (!explanation) {row.unexplainedOverlaps.push(year); unexplainedCellYears++;}
       }

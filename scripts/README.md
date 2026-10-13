@@ -54,3 +54,22 @@ nuevas celdas a partir del archivo de originales `coastal-subdivisions.json`;
 `--check` compara la geometría aceptada y exige contorno exterior equivalente
 y ausencia de superficies duplicadas. La comprobación Python de CI lo ejecuta
 en la copia temporal antes de regenerar los inventarios.
+
+## Inventario completo de los Balcanes y su frontera
+
+`npm run audit:balkans-continuity` comprueba 1.124 celdas durante los 601 años
+de 1200–1800. El inventario procede de las ventanas geográficas de
+`balkans-geography.json`, medidas mediante `build-balkans-geography.py`;
+731 celdas intersectan el núcleo balcánico. No se seleccionan a partir de
+los nombres de los titulares ni de la lista de celdas nunca coloreadas.
+Se incluyen las celdas completas que atraviesan las ventanas.
+
+`balkans-full-review.json` es la fuente de fases, notas, citas y ámbitos
+personales. El ensamblador compartido comprueba que la precedencia proporciona
+una sustitución completa en cada celda. `build-balkans-routes.mjs` produce
+`src/data/balkansFullRouteData.json`, con los datos necesarios para las rutas
+del cliente; el inspector conserva la evidencia completa en el mapa.
+
+El informe actual se escribe en `.cache/audits/audit-balkans-continuity-report.json`.
+La [instantánea revisada de V5.11](../docs/reports/reviewed/v5.11-balkans.json)
+conserva el resultado anual y los límites del método.

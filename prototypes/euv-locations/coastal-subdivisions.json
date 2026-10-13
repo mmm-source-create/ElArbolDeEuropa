@@ -12,6 +12,11 @@
       "title": "Spahić / Vego · mapa de la Bosnia medieval",
       "url": "https://geoubih.ba/Izdanja/Actavol4br8/3.%20Spahic%20-%20Granice%20BiH.pdf",
       "locator": "Acta geographica BiH 8 (2017), p.10, fig.1: contraste visual de islas, península de Pelješac y litoral de Dubrovnik. No acredita costuras medievales exactas."
+    },
+    {
+      "title": "Cámara de las Cícladas · Tinos",
+      "url": "https://www.e-kyklades.gr/travel/tourism/tinos_history?lang=en&regionCd=TINOS",
+      "locator": "Tinos veneciana hasta1715, Mykonos otomana desde1537. La carta egea y el SVG identifican Tinos al noroeste de Mykonos; se separan subtrazados insulares existentes, sin una frontera nueva dentro de tierra."
     }
   ],
   "subdivisions": [
@@ -110,6 +115,37 @@
       ],
       "seam": "Corte aproximado de Cavtat/Župa a la divisoria interior: (623.65,174.05)–(623.9,174.09). Los dos subtrazados insulares permanecen en Astarea.",
       "sha256": "811f2a41ea30c4f70dfc11359d8908fd21e111feb6e31c47d9c9532916facb4d"
+    },
+    {
+      "id": "Mykonos",
+      "originalD": "M646.36 196.53c-.07 0-.14.06-.22.07.06.19.26.26.37.4.05.05.07.16.16.13.12 0 .1.19.22.2.22.03.26-.28.29-.45a3 3 0 0 1-.77-.33l-.05-.02m.88.87.06.22-.07.22c.2-.05.34-.16.52-.24.05-.14-.11-.14-.2-.2l-.02.14h-.06l-.02-.14Zm-.31.28h-.05q.06.15.08.3c.1-.05.25-.06.22-.22l-.15.08q.01-.16-.1-.16",
+      "sha256": "3081ba3c257e86bff18ff36a69b63354cc3d638eb3b95daf426221b3eb5ebea2",
+      "parts": [
+        {
+          "id": "Tinos",
+          "runs": [
+            {
+              "loop": 0,
+              "start": 0,
+              "stop": 7
+            }
+          ]
+        },
+        {
+          "id": "Mykonos",
+          "runs": [
+            {
+              "loop": 1,
+              "start": 0,
+              "stop": 8
+            }
+          ],
+          "extraLoops": [
+            2
+          ]
+        }
+      ],
+      "note": "Tinos es el primer subtrazado; Mykonos y Delos son los restantes. Separación de islas desconectadas: no se añade ninguna costura ni se altera la costa. Conserva autoridades distintas1537–1714."
     }
   ],
   "limitations": [

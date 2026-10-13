@@ -243,6 +243,27 @@
       "path": "docs/reports/reviewed/v5.10-posavina-ragusa.json",
       "kind": "reviewed-audit",
       "maintenance": "Instantánea V5.10 con auditoría anual, contraste con V5.9 y equivalencia de contornos; diagnósticos actuales en .cache/audits/."
+    },
+    {
+      "path": "prototypes/euv-locations/balkans-full-review.json",
+      "kind": "accepted-cartography",
+      "maintenance": "Revisión explícita y documentada; el inventario geográfico no asigna soberanía."
+    },
+    {
+      "path": "prototypes/euv-locations/balkans-geography.json",
+      "kind": "historical-selection",
+      "maintenance": "Revisión explícita y documentada; el inventario geográfico no asigna soberanía."
+    },
+    {
+      "path": "prototypes/euv-locations/balkans-geographic-cells.json",
+      "kind": "accepted-inventory",
+      "producer": "scripts/cartography/build-balkans-geography.py",
+      "maintenance": "Revisión explícita y documentada; el inventario geográfico no asigna soberanía."
+    },
+    {
+      "path": "docs/reports/reviewed/v5.11-balkans.json",
+      "kind": "reviewed-audit",
+      "maintenance": "Instantánea anual 1200–1800 adoptada expresamente en V5.11, con evidencia local y comparación anterior."
     }
   ]
 }

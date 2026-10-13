@@ -1,6 +1,6 @@
 // Sources for dated governments and regional authority.
 export const ATLAS_CHRONOLOGY_REVIEWS = Object.freeze({
-  "person:ESAUBUONDELMONTI:government:Señorío de Ioannina:1400:1411:Señor": {
+  "person:ESAUBUONDELMONTI:government:Despotado de Ioannina:1385:1411:Déspota": {
     "certainty": "documented",
     "sources": [
       {

@@ -1,3 +1,4 @@
+import {atlasPoliticalMosaicAt} from '../prototypes/euv-locations/atlas-mosaic.js';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import path from 'node:path';
@@ -17,6 +18,8 @@ function ids(name, year) {
   return new Set(reviewedLayerLocations(data, territory, year));
 }
 
+
+const stateCells=(identity,year)=>new Set(atlasPoliticalMosaicAt(data,year).layers.filter(l=>l.entityId===identity).flatMap(l=>l.ids));
 test('territorial crosswalk uses only SVG IDs and never assigns one ID twice within a corridor', () => {
   assert.equal(data.territories.length, 106);
   for (let year = data.from; year <= data.through; year++) {
@@ -207,9 +210,9 @@ test('northern and eastern jurisdictions change at documented dates without swal
 });
 
 test('Central European jurisdictions respect dated transfers and separate imperial estates', () => {
-  assert(ids('Austria Interior', 1400).has('Trieste'));
-  assert(!ids('Austria Interior', 1465).has('Rijeka'));
-  assert(ids('Austria Interior', 1466).has('Rijeka'));
+  assert(pilotLocationsFor(data,'Austria Interior',1400).includes('Trieste'));
+  assert(!pilotLocationsFor(data,'Austria Interior',1465).includes('Rijeka'));
+  assert(pilotLocationsFor(data,'Austria Interior',1466).includes('Rijeka'));
   assert(!ids('Austria Interior', 1499).has('Lienz'));
   assert(!ids('Tirol', 1499).has('Lienz'));
   assert(ids('Tirol', 1500).has('Lienz'));
@@ -250,31 +253,31 @@ test('Balkan layers fill regional areas while keeping tributary principalities d
     'Núcleo de Herzegovina', 'Núcleo de Mistra', 'Núcleos de Dobruja bajo Mircea'];
   for(const name of expected) assert(layers.some(item=>item.name===name),name);
 
-  assert.ok(layerIds('Balcanes meridionales otomanos', 1500).size >= 150,
+  assert.ok(stateCells('Imperio otomano', 1500).size >= 150,
     'the Ottoman map should fill regional locations instead of showing only 29 scattered sites');
-  assert.ok(layerIds('Balcanes meridionales otomanos', 1500).has('Cherven'));
-  assert.ok(layerIds('Balcanes meridionales otomanos', 1500).has('Tripolitsa'));
-  assert.ok(!layerIds('Balcanes meridionales otomanos', 1500).has('Dinaric_Alps2'));
-  assert.ok(layerIds('Balcanes meridionales otomanos', 1500).has('Pindus_Mountains1'));
+  assert.ok(stateCells('Imperio otomano', 1500).has('Cherven'));
+  assert.ok(stateCells('Imperio otomano', 1500).has('Tripolitsa'));
+  assert.ok(!stateCells('Imperio otomano', 1500).has('Dinaric_Alps2'));
+  assert.ok(stateCells('Imperio otomano', 1500).has('Pindus_Mountains1'));
 
   assert.ok(!layerIds('Reino de Bosnia', 1462).has('Vrhbosna'));
   assert.ok(pilotLocationsFor(data, 'Bosnia', 1434).includes('Vrhbosna'));
   assert.ok(pilotLocationsFor(data, 'Imperio otomano', 1435).includes('Vrhbosna'));
   assert.equal(layerIds('Reino de Bosnia', 1463).size, 0);
   assert.ok(pilotLocationsFor(data, 'Imperio otomano', 1463).includes('Vrhbosna'));
-  assert.ok(layerIds('Despotado de Serbia', 1426).has('Belgrad'));
-  assert.ok(!layerIds('Despotado de Serbia', 1427).has('Belgrad'));
-  assert.ok(!layerIds('Balcanes meridionales otomanos', 1520).has('Belgrad'));
-  assert.ok(layerIds('Balcanes meridionales otomanos', 1521).has('Belgrad'));
+  assert.ok(stateCells('Serbia', 1426).has('Belgrad'));
+  assert.ok(!stateCells('Serbia', 1427).has('Belgrad'));
+  assert.ok(!stateCells('Imperio otomano', 1520).has('Belgrad'));
+  assert.ok(stateCells('Imperio otomano', 1521).has('Belgrad'));
 
-  assert.ok(layerIds('Principado de Valaquia', 1500).has('Bucharest'));
-  assert.ok(!layerIds('Balcanes meridionales otomanos', 1500).has('Bucharest'));
-  assert.ok(layerIds('Principado de Moldavia', 1483).has('Chilia'));
-  assert.ok(!layerIds('Principado de Moldavia', 1484).has('Chilia'));
-  assert.ok(layerIds('Balcanes meridionales otomanos', 1484).has('Chilia'));
-  assert.ok(layerIds('Principado de Moldavia', 1537).has('Tighina'));
-  assert.ok(!layerIds('Principado de Moldavia', 1538).has('Tighina'));
-  assert.ok(layerIds('Balcanes meridionales otomanos', 1538).has('Tighina'));
+  assert.ok(stateCells('Principado de Valaquia', 1500).has('Bucharest'));
+  assert.ok(!stateCells('Imperio otomano', 1500).has('Bucharest'));
+  assert.ok(stateCells('Principado de Moldavia', 1483).has('Chilia'));
+  assert.ok(!stateCells('Principado de Moldavia', 1484).has('Chilia'));
+  assert.ok(stateCells('Imperio otomano', 1484).has('Chilia'));
+  assert.ok(stateCells('Principado de Moldavia', 1537).has('Tighina'));
+  assert.ok(!stateCells('Principado de Moldavia', 1538).has('Tighina'));
+  assert.ok(stateCells('Imperio otomano', 1538).has('Tighina'));
 
   for (let year = data.from; year <= data.through; year++) {
     const owner = new Map();
@@ -329,7 +332,7 @@ test('Italian enclaves, transfers and successor states remain separate', () => {
   assert(ids('Ferrara', 1510).has('Rovigo'));
   assert(ids('Venecia', 1516).has('Rovigo'));
   assert(!ids('Estados Pontificios', 1598).has('Rovigo'));
-  for (const id of ['Pola', 'Rovinj']) assert(ids('Venecia', 1400).has(id));
+  for (const id of ['Pola','Rovinj']) assert(pilotLocationsFor(data,'Venecia',1400).includes(id));
   assert(!ids('Dalmacia veneciana', 1408).has('Zadar'));
   assert(ids('Dalmacia veneciana', 1409).has('Zadar'));
   assert(!ids('Dalmacia veneciana', 1411).has('Sibenik'));
@@ -339,7 +342,7 @@ test('Italian enclaves, transfers and successor states remain separate', () => {
     assert(ids('Dalmacia veneciana', 1420).has(id));
   }
   assert(!ids('Venecia', 1419).has('Kotor'));
-  assert(ids('Venecia', 1420).has('Kotor'));
+  assert(pilotLocationsFor(data,'Venecia',1420).includes('Kotor'));
   assert(!ids('Venecia', 1500).has('Zara'), 'Zara is a different EU V location');
   assert(!ids('Venecia', 1500).has('Dubrovnik'), 'The Republic of Ragusa was not Venice');
   assert(!ids('Parma', 1544).has('Parma'));

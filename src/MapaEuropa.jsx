@@ -36,7 +36,7 @@ const MAP_PAN_STEP = 0.12;
 const MAP_DRAG_THRESHOLD = 4;
 
 function authorityFill(svg, color, kind) {
-  if (!['delegated', 'disputed'].includes(kind)) return color;
+  if (!['delegated', 'disputed', 'mixed'].includes(kind)) return color;
   const namespace = 'http://www.w3.org/2000/svg';
   const id = `atlas-${kind}-${color.replace(/[^a-z0-9]/gi, '')}`;
   if (!svg.getElementById(id)) {
@@ -49,7 +49,7 @@ function authorityFill(svg, color, kind) {
     const rect = document.createElementNS(namespace, 'rect');
     rect.setAttribute('width', '0.9'); rect.setAttribute('height', '0.9'); rect.setAttribute('fill', color);
     const line = document.createElementNS(namespace, 'path');
-    line.setAttribute('d', kind === 'delegated' ? 'M0 0 L.9 .9' : 'M0 0 L.9 .9 M0 .9 L.9 0');
+    line.setAttribute('d', kind === 'mixed' ? 'M0 .45 L.9 .45' : kind === 'delegated' ? 'M0 0 L.9 .9' : 'M0 0 L.9 .9 M0 .9 L.9 0');
     line.setAttribute('stroke', '#fff'); line.setAttribute('stroke-opacity', '.5'); line.setAttribute('stroke-width', '.16');
     pattern.append(rect, line); defs?.append(pattern);
   }
@@ -460,6 +460,7 @@ export function MapaEuropa({ seleccion, anioGlobal = null, onSelectTerritorio, o
           <span><i className="mapa-key-solid" aria-hidden="true"/>Autoridad territorial</span>
           <span><i className="mapa-key-delegated" aria-hidden="true"/>Gobierno delegado</span>
           <span><i className="mapa-key-disputed" aria-hidden="true"/>Control disputado / ocupación</span>
+          <span><i className="mapa-key-mixed" aria-hidden="true"/>Varias jurisdicciones en una celda</span>
         </div>
         <p>Los títulos sin control acreditado se consultan en el inspector y no colorean dominios.</p>
         <p>El mapa detallado destaca los gobiernos de la persona seleccionada. El gris no significa ausencia de gobierno: indica que esa región no tiene una atribución revisada para la persona y el año elegidos. Las regiones de esta cartografía aproximan territorios históricos y no prueban por sí solas una frontera.</p>

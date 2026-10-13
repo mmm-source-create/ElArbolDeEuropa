@@ -2,14 +2,15 @@
 
 Atlas histórico y genealógico para explorar personas, dinastías, territorios y sus conexiones familiares.
 
-- [Web](https://www.treeofeurope.eu/es/) · Versión del repositorio: **V5.10**
-- [Cambios de V5.10](docs/V5.10.md) · [Documentación e historial](docs/README.md) · [Próximos pasos cartográficos](docs/V4.8_PROPUESTAS.md) · [Seguridad](SECURITY.md)
+- [Web](https://www.treeofeurope.eu/es/) · Versión del repositorio: **V5.11**
+- [Cambios de V5.11](docs/V5.11.md) · [Documentación e historial](docs/README.md) · [Próximos pasos cartográficos](docs/V4.8_PROPUESTAS.md) · [Seguridad](SECURITY.md)
 
-V5.10 revisa Kozara–Glaž/Donji Kraji y la costa ragusea con sus islas en los
-601 años de 1200–1800: resuelve 1.743 combinaciones región/año sin color y
-separa Korčula, Mljet, Pelješac y Konavle conservando las costas originales.
-Añade tres miembros documentados de los Hrvatinić y sus ámbitos personales.
-Ko-fi se integra en el pie con una respuesta suave y movimiento reducido.
+V5.11 revisa los Balcanes, el Egeo y la continuidad anatolia entre 1200 y
+1800. El inventario geográfico independiente contiene 1.124 superficies,
+incluidas montañas e islas: ninguna queda sin atribución en los 601 años.
+Las superficies compuestas conservan sus jurisdicciones y fuentes locales;
+los títulos personales mantienen ámbitos fechados, sin extender el dominio
+de un hermano, un rival o un tributario al territorio entero.
 
 El mapa utiliza EU V Locations con superficies fechadas y fuentes consultables
 en el inspector. Distingue soberanía, gobierno delegado, titularidad y control

@@ -30,7 +30,7 @@ test('Iceland follows Norwegian royal authority from the conventional 1264 cut, 
 });
 
 test('Buzet changes authority in 1797 without colouring Pazin as Venetian or creating a gap', () => {
-  assert.equal(owners('Buzet', 1420).length, 0);
+  assert.deepEqual(owners('Buzet', 1420).map(l=>l.entityId), ['Patriarcado de Aquileia']);
   assert(authority('TOMMOCENIGODOGE', 1421, 'Venecia').ids.includes('Buzet'));
   assert(!authority('ANDGRITTIDOGE', 1530, 'Venecia').ids.includes('Pazin'));
   for (const year of [1796, 1797, 1798, 1800]) {
@@ -40,13 +40,13 @@ test('Buzet changes authority in 1797 without colouring Pazin as Venetian or cre
   }
   const austrian = authority('FRAN2HRE', 1797, 'Austria');
   assert(austrian.ids.includes('Buzet'));
-  assert(austrian.mapSources.some(source => source.url.endsWith('/istra-poluotok')));
+  assert(austrian.mapSources.some(source => source.url.endsWith('/clanak/istra')));
 });
 
 test('southern Moldavian areas remain princely and do not swallow the ports or Bucovina', () => {
   const ids = ['Adjud', 'Barlad', 'Targu_Trotus', 'Tutova'];
   for (const id of ids) {
-    assert.equal(owners(id, 1456).length, 0);
+    assert.deepEqual(owners(id,1456).map(l=>l.entityId), ['Principado de Moldavia']);
     assert(authority('STEPHEN3MOLD', 1458, 'Moldavia').ids.includes(id));
     assert(authority('PETRURARESMOLD', 1530, 'Moldavia').ids.includes(id));
     for (const year of [1458, 1530, 1776, 1800]) {
@@ -58,7 +58,7 @@ test('southern Moldavian areas remain princely and do not swallow the ports or B
   assert(!moldavia.ids.includes('Suceava'));
   assert(!moldavia.ids.includes('Chilia'));
   assert(!moldavia.ids.includes('Tighina'));
-  assert(moldavia.scopes.some(scope => scope.name === 'Moldavia · comarcas meridionales' && scope.sources.length));
+  assert(moldavia.scopes.some(scope => scope.ids.includes('Tutova') && scope.sources.some(source=>source.url==='https://moldova650.asm.md/node/25' && source.locator)));
 });
 
 test('the additions are reproducible, measured SVG surfaces with independent dated evidence', () => {

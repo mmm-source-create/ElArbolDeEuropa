@@ -106,7 +106,7 @@ test('the western Transylvanian Crasna is not assigned to Moldavia by its ambigu
   const owners = politicalMosaicAt(integrated,1530).byLocation.get('Crasna');
   assert.deepEqual(owners.map(owner => owner.entityId),['Hungría']);
   assert.deepEqual(owners[0].scopes.filter(scope=>scope.ids.includes('Crasna')).map(scope=>scope.name),
-    ['Núcleo oriental de Zápolya']);
+    ['Partium septentrional y Maramureș · 1200–1540 · Hungría']);
 });
 
 test('Venetian Dalmatia and the delegated Bihar core are not duplicated as different mosaic domains', () => {
@@ -114,6 +114,7 @@ test('Venetian Dalmatia and the delegated Bihar core are not duplicated as diffe
     const owners = politicalMosaicAt(integrated,year).byLocation.get(id) || [];
     assert.equal(owners.length,1,`${id} in ${year}: ${owners.map(owner => owner.name).join(', ')}`);
   }
-  assert.equal(politicalMosaicAt(integrated,1530).byLocation.get('Oradea')[0].name,
-    'Gobierno de Bihar de Imre Czibak');
+  assert.equal(politicalMosaicAt(integrated,1530).byLocation.get('Oradea')[0].entityId, 'Hungría');
+  const governor = {id:'IMRECZIBAK',nombre:'Imre Czibak',gobiernos:[{territorio:'Condado de Bihar',desde:1529,hasta:1534,titulo:'Gobernador',clase:'gobierno',condicion:'gobierno delegado',soberano:'JUAN1ZAPOLYA'}]};
+  assert(mapAuthoritiesForPerson(governor,1530,integrated).some(e => e.kind === 'delegated' && e.ids.includes('Oradea')));
 });

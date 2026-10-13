@@ -1,6 +1,7 @@
 import {medievalBalkanScope} from './medievalBalkanRoutes.js';
 import {bosniaHumScope} from './bosniaHumRoutes.js';
 import {posavinaRagusaScope} from './posavinaRagusaRoutes.js';
+import {balkansFullScope} from './balkansFullRoutes.js';
 import {netherlandsGovernorScope} from './netherlandsGovernorScopes.js';
 // Dated regional scopes shared by painting, inspection and the coverage audit.
 // Each ID remains an approximate map cell; sources document authority and named sites.
@@ -368,6 +369,8 @@ export const AUTHORITY_MAP_SCOPES = Object.freeze([
 ]);
 
 export function authorityMapScope(personId, territory, year) {
+  const fullRegion = balkansFullScope(personId, territory, year);
+  if (fullRegion) return fullRegion;
   const medieval = medievalBalkanScope(personId, territory, year);
   if (medieval) return medieval;
   const regional = posavinaRagusaScope(personId, territory, year) || bosniaHumScope(personId, territory, year);
