@@ -1,3 +1,4 @@
+import {tributaryEntriesFor} from './tributaryRelations.js';
 import {gobiernosDe, intervalosDisputadosDe} from './personAccessors.js';
 import {idsDeGobiernoEnAño} from '../Territorios.jsx';
 import {gobiernoEfectivo} from './territorios.js';
@@ -13,8 +14,9 @@ import {chronologyReferenceJurisdictionsFor} from './atlasChronologyRoutes.js';
 export const AUTHORITY_LABELS = Object.freeze({
   sovereign: 'Autoridad territorial', delegated: 'Gobierno delegado',
   titular: 'Título o pretensión sin control acreditado', disputed: 'Control disputado u ocupación',
-  collective: 'Autoridad colectiva',
+  collective: 'Autoridad colectiva', tributary: 'Estado tributario · gobierno propio',
   mixed: 'Celda con varias jurisdicciones',
+  regional: 'Jurisdicción territorial documentada', physical: 'Sin autoridad política documentada',
 });
 
 const governmentClaims = new WeakMap();
@@ -36,7 +38,7 @@ export function authorityKind(government, year = null) {
 
 // Painting, inspection and continuity audits consume these same dated entries.
 // A title can be inspected without acquiring a territorial fill.
-export function mapAuthoritiesForPerson(person, year, mapData = null, {includeClaims = false} = {}) {
+export function mapAuthoritiesForPerson(person, year, mapData = null, {includeClaims = false, includeDependencies = false} = {}) {
   if (!person || !Number.isInteger(year)) return [];
   const claims = claimsFor(person);
   const entries = [];
@@ -58,11 +60,14 @@ export function mapAuthoritiesForPerson(person, year, mapData = null, {includeCl
         ...(year >= 1619 ? pilotLocationsFor(mapData, 'Austria', year, person.id) : [])];
     }
     const scope = mapData && authorityMapScope(person.id, government.territorio, year);
-    const layerEvidence = mapData ? pilotJurisdictionsFor(government.territorio, year, person.id)
+    const datedLayers = mapData ? pilotJurisdictionsFor(government.territorio, year, person.id)
       .map(name => reviewedMapLayers(mapData).find(layer => layer.name === name))
       .filter(layer => layer && reviewedLayerActive(mapData, layer, year)
         && reviewedLayerLocations(mapData, layer, year, person.id).some(id => ids.includes(id)))
-      .map(layer => reviewedLayerEvidence(layer, year)) : [];
+      : [];
+    const layerEvidence = datedLayers.map(layer => reviewedLayerEvidence(layer, year));
+    const mapScopes = datedLayers.map(layer => ({ids: reviewedLayerLocations(mapData, layer, year, person.id).filter(id => ids.includes(id)), ...reviewedLayerEvidence(layer, year)}));
+    if (scope) mapScopes.push({ids: scope.ids || ids, note: scope.note, sources: [scope.source, ...(scope.additionalSources || [])].filter(Boolean)});
     const extension = mapData && authorityExtensionFor(government.territorio, year, person.id);
     const border = mapData && cerdanyaBorderCorrection(government.territorio, year);
     const southernBorder = mapData && southernPyreneesCorrection(government.territorio, year);
@@ -80,12 +85,12 @@ export function mapAuthoritiesForPerson(person, year, mapData = null, {includeCl
     const mixed = ids.filter(id => regional.get(id)?.condition === 'composición geográfica');
     const baseEntry = {person, government, claim: claims.get(government) || null,
       territory: government.territorio, kind: revolt ? 'disputed' : authorityKind(government, year),
-      paint: effective, ids, mapSources: [...layerEvidence.flatMap(evidence => evidence.sources), ...(scope ? [scope.source, ...(scope.additionalSources || []), ...(scope.evidenceGroups || []).map(group => group.source)].filter(Boolean) : []), ...(extension ? [extension.source] : []), ...(revolt ? [REVOLT_SOURCE] : []), ...(border?.action === 'add' && !border.occupation ? [border.source] : []), ...(southernBorder?.action === 'add' ? [southernBorder.source] : [])],
+      paint: effective, ids, mapScopes, mapSources: [...layerEvidence.flatMap(evidence => evidence.sources), ...(scope ? [scope.source, ...(scope.additionalSources || []), ...(scope.evidenceGroups || []).map(group => group.source)].filter(Boolean) : []), ...(extension ? [extension.source] : []), ...(revolt ? [REVOLT_SOURCE] : []), ...(border?.action === 'add' && !border.occupation ? [border.source] : []), ...(southernBorder?.action === 'add' ? [southernBorder.source] : [])],
       mapNote: revolt ? 'Soberanía y control disputados durante la revuelta. La trama no afirma posesión uniforme de toda la provincia.' : [...new Set([scope?.note, extension?.note, ...layerEvidence.map(evidence => evidence.note), border?.action === 'add' ? border.note : null, southernBorder?.action === 'add' ? southernBorder.note : null].filter(Boolean))].join(' ') || null};
     if (contested.length || mixed.length) {
       entries.push({...baseEntry,ids:ids.filter(id=>!contested.includes(id) && !mixed.includes(id))});
       for (const [cells, kind] of [[contested, 'disputed'], [mixed, 'mixed']]) if (cells.length)
-        entries.push({...baseEntry,ids:cells,kind,
+        entries.push({...baseEntry,ids:cells,kind: kind === 'mixed' && baseEntry.kind === 'delegated' ? 'delegated' : kind,
           mapNote:[...new Set(cells.map(id=>regional.get(id).note).filter(Boolean))].join(' '),
           mapSources:[...baseEntry.mapSources,...cells.flatMap(id=>regional.get(id).sources)]});
     } else entries.push(baseEntry);
@@ -130,5 +135,5 @@ export function mapAuthoritiesForPerson(person, year, mapData = null, {includeCl
         ids: occupation, claim: null});
     }
   }
-  return entries.filter(entry => entry.ids.length);
+  return [...entries, ...(includeDependencies ? tributaryEntriesFor(person, year, mapData, entries) : [])].filter(entry => entry.ids.length);
 }

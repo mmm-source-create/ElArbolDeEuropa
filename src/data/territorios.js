@@ -1,6 +1,8 @@
 import {BALKANS_FULL_TERRITORIES} from './balkansFullTerritories.js';
+import {IBERIA_ITALY_TERRITORIES} from './iberiaItalyTerritories.js';
 export const TERRITORIOS = Object.freeze({
   ...BALKANS_FULL_TERRITORIES,
+  ...IBERIA_ITALY_TERRITORIES,
   "Comuna de Mljet": {"clase":"gobierno","naturaleza":"entidad","componentes":[],"desde":1345,"hasta":1409,"nota":"Comuna autónoma bajo señorío benedictino; estatuto de 1345 e incorporación definitiva a Ragusa en 1410. Gobierno colectivo, sin inventar una sucesión de abades o rectores."},
   "Donji Kraji": {"clase":"señorío","naturaleza":"entidad","componentes":[],"titulosDeGobierno":["Conde"],"nota":"Señorío regional de los Hrvatinić dentro de Bosnia, con la dignidad documentada de comes/knez. El mapa personal se limita a posesiones fechadas."},
   "Glaž": {"clase":"condado","naturaleza":"entidad","componentes":[],"nota":"Condado señorial de los Hrvatinić bajo el reino bosnio. La ubicación de la fortaleza es discutida y el polígono del mapa es una aproximación regional."},
@@ -1666,7 +1668,7 @@ export const TERRITORIOS = Object.freeze({
   }
 });
 
-export const TITULOS_POR_CLASE = {"reinado": ["Rey", "Rey de Romanos", "Alto rey", "Reina"], "imperio": ["Emperatriz", "Emperador"], "ducado": ["Duquesa", "Duque"], "archiducado": ["Archiduque", "Archiduquesa"], "condado": ["Conde", "Conde palatino", "Condesa"], "electorado": ["Elector"], "principado": ["Princesa", "Gran župan", "Príncipe"], "gran_ducado": ["Gran duque", "Gran duquesa"], "gran_principado": ["Gran príncipe"], "zarato": ["Zarina", "Zar"], "margraviato": ["Margrave"], "marquesado": ["Marqués"], "landgraviato": ["Landgrave"], "señorío": ["Señor", "Señora"], "regencia": ["Regente"], "estatuderato": ["Estatúder"], "emirato": ["Emir"], "sultanato": ["Sultán"], "despotado": ["Déspota"], "banato": ["Ban"], "voivodato": ["Voivoda"], "pontificado": ["Papa"], "gobierno": ["Gobernante", "Soberano", "Soberana", "Gobernador", "Gobernadora", "Dogo", "Capitán del pueblo", "Señor y vicario imperial"], "vizcondado": ["Vizconde", "Vizcondesa"]};
+export const TITULOS_POR_CLASE = {"califato": ["Califa"], "judicado": ["Juez", "Jueza"], "reinado": ["Rey", "Rey de Romanos", "Alto rey", "Reina"], "imperio": ["Emperatriz", "Emperador"], "ducado": ["Duquesa", "Duque"], "archiducado": ["Archiduque", "Archiduquesa"], "condado": ["Conde", "Conde palatino", "Condesa"], "electorado": ["Elector"], "principado": ["Princesa", "Gran župan", "Príncipe"], "gran_ducado": ["Gran duque", "Gran duquesa"], "gran_principado": ["Gran príncipe"], "zarato": ["Zarina", "Zar"], "margraviato": ["Margrave"], "marquesado": ["Marqués"], "landgraviato": ["Landgrave"], "señorío": ["Señor", "Señora"], "regencia": ["Regente"], "estatuderato": ["Estatúder"], "emirato": ["Emir"], "sultanato": ["Sultán"], "despotado": ["Déspota"], "banato": ["Ban"], "voivodato": ["Voivoda"], "pontificado": ["Papa"], "gobierno": ["Gobernante", "Soberano", "Soberana", "Gobernador", "Gobernadora", "Dogo", "Capitán del pueblo", "Señor y vicario imperial", "Almojarife", "Gran maestre"], "vizcondado": ["Vizconde", "Vizcondesa"]};
 export const CONDICIONES = ["efectivo","jure uxoris","corregente","regencia","gobierno delegado","ocupación","pretensión","titular","rival","disputado","rama"];
 export function componentesDe(nombre, vistos = new Set()) {
  if(vistos.has(nombre)) return []; vistos.add(nombre);

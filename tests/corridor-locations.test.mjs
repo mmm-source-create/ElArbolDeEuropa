@@ -12,12 +12,15 @@ const burgundy = JSON.parse(fs.readFileSync(path.join(lab, 'burgundian-locations
 const svg = fs.readFileSync(path.join(lab, 'euv-locations-crop.svg'), 'utf8');
 const pathIds = new Set([...svg.matchAll(/<path\b[^>]*\bid="([^"]+)"/g)].map(match => match[1]));
 
-function ids(name, year) {
+function rawIds(name, year) {
   const territory = [...data.territories,...data.additionalTerritories].find(item => item.name === name);
   assert(territory, `Unknown jurisdiction ${name}`);
   return new Set(reviewedLayerLocations(data, territory, year));
 }
 
+
+const westernGovernments = new Set(JSON.parse(fs.readFileSync(path.join(lab, 'iberia-italy-full-review.json'))).assignments.flatMap(phase => phase.governmentTerritories));
+const ids = (name, year) => westernGovernments.has(name) ? new Set(pilotLocationsFor(data, name, year)) : rawIds(name, year);
 
 const stateCells=(identity,year)=>new Set(atlasPoliticalMosaicAt(data,year).layers.filter(l=>l.entityId===identity).flatMap(l=>l.ids));
 test('territorial crosswalk uses only SVG IDs and never assigns one ID twice within a corridor', () => {
@@ -26,7 +29,7 @@ test('territorial crosswalk uses only SVG IDs and never assigns one ID twice wit
     for (const corridor of ['Iberia', 'Italia', 'Centroeuropa', 'Europa septentrional y oriental', 'Francia e islas británicas']) {
       const owner = new Map();
       for (const territory of data.territories.filter(item => item.corridor === corridor)) {
-        for (const id of ids(territory.name, year)) {
+        for (const id of rawIds(territory.name, year)) {
           assert(pathIds.has(id), `${id} is absent from the cropped map`);
           const prior = owner.get(id);
           const documentedOccupation = prior === 'Ducado de Pomerania'
@@ -55,7 +58,7 @@ test('Burgundian jurisdictions stay distinct while their ownership changes', () 
     const owner = new Map();
     for (const territory of data.territories.filter(item => item.corridor === 'Borgoña e Imperio'
       && item.name !== 'Marco jurídico del Sacro Imperio')) {
-      for (const id of ids(territory.name, year)) {
+      for (const id of rawIds(territory.name, year)) {
         assert(pathIds.has(id));
         assert(!owner.has(id), `${id} overlaps ${owner.get(id)} and ${territory.name} in ${year}`);
         owner.set(id, territory.name);
@@ -347,7 +350,14 @@ test('Italian enclaves, transfers and successor states remain separate', () => {
   assert(!ids('Venecia', 1500).has('Dubrovnik'), 'The Republic of Ragusa was not Venice');
   assert(!ids('Parma', 1544).has('Parma'));
   assert(ids('Parma', 1545).has('Parma'));
-  for (const year of [1569, 1650]) assert(!ids('Toscana', year).has('Piombino'));
+  for (const year of [1569, 1650]) {
+    // This SVG cell includes Elba: the Medici enclave at Portoferraio is
+    // separate from the Appiani principality and, later, Porto Longone.
+    const scopes = atlasPoliticalMosaicAt(data, year).byLocation.get('Piombino');
+    assert(scopes.some(layer => layer.entityId === 'Piombino'));
+    assert(scopes.some(layer => layer.entityId === 'Toscana'));
+    assert(scopes.every(layer => layer.scopes.some(scope => scope.ids.includes('Piombino') && scope.condition === 'composición geográfica')));
+  }
   for (const id of ['Mirandola', 'Guastalla']) assert(!ids('Módena', 1500).has(id));
 });
 

@@ -36,7 +36,7 @@ const MAP_PAN_STEP = 0.12;
 const MAP_DRAG_THRESHOLD = 4;
 
 function authorityFill(svg, color, kind) {
-  if (!['delegated', 'disputed', 'mixed'].includes(kind)) return color;
+  if (!['delegated', 'disputed', 'mixed', 'tributary'].includes(kind)) return color;
   const namespace = 'http://www.w3.org/2000/svg';
   const id = `atlas-${kind}-${color.replace(/[^a-z0-9]/gi, '')}`;
   if (!svg.getElementById(id)) {
@@ -51,7 +51,15 @@ function authorityFill(svg, color, kind) {
     const line = document.createElementNS(namespace, 'path');
     line.setAttribute('d', kind === 'mixed' ? 'M0 .45 L.9 .45' : kind === 'delegated' ? 'M0 0 L.9 .9' : 'M0 0 L.9 .9 M0 .9 L.9 0');
     line.setAttribute('stroke', '#fff'); line.setAttribute('stroke-opacity', '.5'); line.setAttribute('stroke-width', '.16');
-    pattern.append(rect, line); defs?.append(pattern);
+    if (kind === 'tributary') {
+      const veil = document.createElementNS(namespace, 'rect');
+      veil.setAttribute('width', '.9'); veil.setAttribute('height', '.9');
+      veil.setAttribute('fill', '#fff'); veil.setAttribute('fill-opacity', '.66');
+      const dot = document.createElementNS(namespace, 'circle');
+      dot.setAttribute('cx', '.45'); dot.setAttribute('cy', '.45'); dot.setAttribute('r', '.13');
+      dot.setAttribute('fill', color); pattern.append(rect, veil, dot);
+    } else pattern.append(rect, line);
+    defs?.append(pattern);
   }
   return `url(#${id})`;
 }
@@ -91,6 +99,7 @@ export function MapaEuropa({ seleccion, anioGlobal = null, onSelectTerritorio, o
   const [viewBox, setViewBox] = useState(null);
   const [originalMapFrame, setOriginalMapFrame] = useState(null);
   const [mapReady, setMapReady] = useState(false);
+  const [showDependencies, setShowDependencies] = useState(true);
   const [mapError, setMapError] = useState(false);
   const [mapAttempt, setMapAttempt] = useState(0);
   const [selectedRegionId, setSelectedRegionId] = useState(null);
@@ -98,7 +107,7 @@ export function MapaEuropa({ seleccion, anioGlobal = null, onSelectTerritorio, o
   const controlLimits = mapControlLimits(viewBox, originalMapFrame, viewportRef.current, MAP_MIN_ZOOM);
   const mapAssetUrl = locationsSvgUrl;
   const politicalIndex = useMemo(() => selectedRegionId && Number.isInteger(anioGlobal)
-    ? buildPoliticalMapIndex(PERSONAS, anioGlobal, pilotData, {includeClaims: true}) : new Map(), [selectedRegionId, anioGlobal, pilotData]);
+    ? buildPoliticalMapIndex(PERSONAS, anioGlobal, pilotData, {includeClaims: true, includeDependencies: true}) : new Map(), [selectedRegionId, anioGlobal, pilotData]);
   const inspectedRegion = selectedRegionId && Number.isInteger(anioGlobal)
     ? inspectMapRegion(selectedRegionId, anioGlobal, politicalIndex, pilotData) : null;
   const pilotContext = selectedRegionId && Number.isInteger(anioGlobal)
@@ -261,10 +270,10 @@ export function MapaEuropa({ seleccion, anioGlobal = null, onSelectTerritorio, o
       }
 
       if (seleccion && Number.isInteger(anioGlobal)) {
-        for (const entry of mapAuthoritiesForPerson(seleccion, anioGlobal, pilotData)) {
+        for (const entry of mapAuthoritiesForPerson(seleccion, anioGlobal, pilotData, {includeDependencies: showDependencies})) {
           if (!entry.paint) continue;
           const color = entry.color || (entry.kind === 'delegated' ? '#907085'
-            : colorTerritorioEnMapa(seleccion, entry.territory, anioGlobal));
+            : colorTerritorioEnMapa(seleccion, entry.colorTerritory || entry.territory, anioGlobal));
           const fill = authorityFill(svg, color, entry.kind);
           for (const id of entry.ids) {
             const target = buscarElemento(id);
@@ -311,7 +320,7 @@ export function MapaEuropa({ seleccion, anioGlobal = null, onSelectTerritorio, o
     } catch (error) {
       console.error("[MapaEuropa] Error al renderizar:", error);
     }
-  }, [seleccion, anioGlobal, mapReady, imperialReferenceActive, pilotData]);
+  }, [seleccion, anioGlobal, mapReady, imperialReferenceActive, pilotData, showDependencies]);
 
   const updateViewBox = useCallback((producer) => {
     setViewBox((current) => {
@@ -460,8 +469,11 @@ export function MapaEuropa({ seleccion, anioGlobal = null, onSelectTerritorio, o
           <span><i className="mapa-key-solid" aria-hidden="true"/>Autoridad territorial</span>
           <span><i className="mapa-key-delegated" aria-hidden="true"/>Gobierno delegado</span>
           <span><i className="mapa-key-disputed" aria-hidden="true"/>Control disputado / ocupación</span>
+          <span><i className="mapa-key-tributary" aria-hidden="true"/>Estado tributario · gobierno propio</span>
           <span><i className="mapa-key-mixed" aria-hidden="true"/>Varias jurisdicciones en una celda</span>
         </div>
+        <label className="mapa-dependency-toggle"><input type="checkbox" checked={showDependencies} onChange={event => setShowDependencies(event.target.checked)}/> Mostrar estados tributarios</label>
+        <p>Los puntos relacionan un Estado tributario con el soberano seleccionado. Conserva su título y gobierno; las superficies de administración directa tienen color sólido.</p>
         <p>Los títulos sin control acreditado se consultan en el inspector y no colorean dominios.</p>
         <p>El mapa detallado destaca los gobiernos de la persona seleccionada. El gris no significa ausencia de gobierno: indica que esa región no tiene una atribución revisada para la persona y el año elegidos. Las regiones de esta cartografía aproximan territorios históricos y no prueban por sí solas una frontera.</p>
         {imperialReferenceActive && <p>El gris medio señala una aproximación al ámbito jurídico del Sacro Imperio, no tierras gobernadas directamente por el emperador ni todos los círculos imperiales. <a href="https://germanhistorydocs.org/en/from-the-reformations-to-the-thirty-years-war-1500-1648/ghdi:map-2809" target="_blank" rel="noreferrer">Fuente cartográfica</a>.</p>}
@@ -489,15 +501,17 @@ export function MapaEuropa({ seleccion, anioGlobal = null, onSelectTerritorio, o
           {inspectedRegion?.entries.length > 0 && <ul>{inspectedRegion.entries.map((entry, index) => <li key={`${entry.territory}-${entry.person?.id || 'collective'}-${index}`}>
             <span className={`mapa-authority-badge mapa-authority-${entry.kind}`}>{AUTHORITY_LABELS[entry.kind]}</span>
             <strong>{entry.territory}</strong>
-            <div>{entry.person ? <button type="button" className="mapa-region-person" onClick={() => onSelectPersona?.(entry.person.id)}>{entry.person.nombre}</button> : entry.collective?.nombre}</div>
-            {entry.government?.soberano && <p>En nombre de {PERSONAS.find(p => p.id === entry.government.soberano)?.nombre || entry.government.soberano}. La soberanía se conserva en su ficha.</p>}
+            {entry.relationship && <p>{entry.relationship.subjectLabel} · vínculo tributario con {entry.relationship.overlord}, {entry.relationship.from}–{entry.relationship.through}.</p>}
+            <div>{entry.relationship ? 'Soberano al que se debe el tributo: ' : null}{entry.person ? <button type="button" className="mapa-region-person" onClick={() => onSelectPersona?.(entry.person.id)}>{entry.person.nombre}</button> : entry.collective?.nombre}</div>
+            {entry.government?.soberano && <p>En nombre de {PERSONAS.find(p => p.id === entry.government.soberano)?.nombre || entry.government.soberano}. El gobierno superior se consulta en su ficha.</p>}
+            {entry.kind === 'regional' && <small>La jurisdicción tiene fuentes territoriales; el mandato de su gobernante en este año sigue pendiente de documentar.</small>}
             {entry.government?.nota && <p>{entry.government.nota}</p>}
             {entry.mapNote && <p>{entry.mapNote}</p>}
-            {entry.mapSources?.map(mapSourceReference).map(source => <a key={source.url} href={source.url} target="_blank" rel="noreferrer">{source.title || source.label || 'Fuente territorial'}</a>)}
+            {[...new Map((entry.mapSources || []).map(mapSourceReference).map(source => [source.url, source])).values()].map(source => <a key={source.url} href={source.url} target="_blank" rel="noreferrer">{source.title || source.label || 'Fuente territorial'}{source.locator ? ` · ${source.locator}` : ''}</a>)}
             {entry.collective && <p>{entry.collective.nota}</p>}
             {entry.collective?.fuente && <a href={entry.collective.fuente.url} target="_blank" rel="noreferrer">{entry.collective.fuente.title}</a>}
             {entry.government && <small>{entry.government.titulo} · {entry.government.condicion} · {entry.government.desde}–{entry.government.hasta}</small>}
-            {entry.claim?.sources?.length ? entry.claim.sources.map(source => <a key={source.url} href={source.url} target="_blank" rel="noreferrer">{source.title}{source.locator ? ` · ${source.locator}` : ''}</a>) : <small className="mapa-region-unsourced">Sin fuente específica para esta afirmación.</small>}
+            {entry.claim?.sources?.length ? entry.claim.sources.map(source => <a key={source.url} href={source.url} target="_blank" rel="noreferrer">{source.title}{source.locator ? ` · ${source.locator}` : ''}</a>) : entry.relationship?.sources.length || entry.regionalEvidence ? null : <small className="mapa-region-unsourced">Sin fuente específica para esta afirmación.</small>}
           </li>)}</ul>}
           {inspectedRegion?.claims.length > 0 && <details className="mapa-title-claims"><summary>Títulos y pretensiones · sin color de dominio</summary><ul>{inspectedRegion.claims.map((entry, i) => <li key={`${entry.person.id}-${entry.territory}-${i}`}>
             <span className="mapa-authority-badge mapa-authority-titular">{AUTHORITY_LABELS[entry.kind]}</span>

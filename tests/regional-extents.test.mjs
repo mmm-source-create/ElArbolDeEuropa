@@ -16,7 +16,8 @@ const review = read('../prototypes/euv-locations/regional-extent-review.json');
 const inventory = read('../prototypes/euv-locations/regional-extent-cells.json');
 const layers = new Map(reviewedMapLayers(data).map(layer => [layer.name, layer]));
 const people = new Map(PERSONAS.map(person => [person.id, person]));
-const cells = (name, year) => reviewedLayerLocations(data, layers.get(name), year);
+const westernGovernments = new Set(read('../prototypes/euv-locations/iberia-italy-full-review.json').assignments.flatMap(phase => phase.governmentTerritories));
+const cells = (name, year) => westernGovernments.has(name) ? pilotLocationsFor(data, name, year) : reviewedLayerLocations(data, layers.get(name), year);
 const authority = (person, year) => mapAuthoritiesForPerson(people.get(person), year, data).filter(entry => entry.paint);
 const personal = (person, year) => new Set(authority(person, year).flatMap(entry => entry.ids));
 const areaById = new Map(inventory.cells.map(cell => [cell.id, cell.area]));
@@ -115,12 +116,19 @@ test('Iberian borders distinguish conquest, loss, and the 1659 Catalan partition
 
 test('Milanese cessions appear in Piedmont rather than disappearing or being painted twice', () => {
   for (const [year, ids] of [[1713, ['Alessandria', 'Novi', 'Lomello', 'Varallo']],
-    [1738, ['Novara', 'Tortona']], [1743, ['Voghera', 'Rovegno', 'Arona', 'Domodossola']]]) {
+    [1738, ['Novara', 'Tortona']], [1743, ['Voghera', 'Arona', 'Domodossola']]]) {
     for (const id of ids) {
       assert(!cells('Milán', year).includes(id), `${id} ${year}`);
       assert(cells('Piamonte', year).includes(id), `${id} ${year}`);
     }
   }
+  // The whole Val Trebbia cell includes Genoese jurisdictions and imperial
+  // feuds; Bobbio's cession does not give Saboya all of Rovegno.
+  const rovegno = atlasPoliticalMosaicAt(data, 1743).byLocation.get('Rovegno');
+  assert(rovegno.some(layer => layer.entityId === 'Génova'));
+  assert(!cells('Milán', 1743).includes('Rovegno'));
+  assert(cells('Piamonte', 1743).includes('Rovegno'));
+  assert(rovegno.every(layer => layer.scopes.some(scope => scope.ids.includes('Rovegno') && scope.condition === 'composición geográfica')));
 });
 
 test('Ottoman geography respects the interregnum and the eastern campaign chronology', () => {

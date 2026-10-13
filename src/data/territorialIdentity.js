@@ -1,3 +1,4 @@
+import {IBERIA_ITALY_IDENTITIES} from './iberiaItalyRoutes.js';
 // A survey label, an owner and a control episode are not territorial identity.
 import {BOSNIA_HUM_IDENTITIES} from './bosniaHumRoutes.js';
 import {POSAVINA_RAGUSA_IDENTITIES} from './posavinaRagusaRoutes.js';
@@ -6,6 +7,7 @@ const ALIASES = Object.freeze({
   ...BOSNIA_HUM_IDENTITIES,
   ...POSAVINA_RAGUSA_IDENTITIES,
   ...BALKANS_FULL_IDENTITIES,
+  ...IBERIA_ITALY_IDENTITIES,
   // Direct Ottoman provinces are scopes of one state, not new sovereign
   // entities. Their names and evidence remain in scopes and in title records.
   'Hungría otomana': 'Imperio otomano',
@@ -158,6 +160,7 @@ export function territorialLabel(name, year) {
 // The color depends on identity alone, not on alphabetic position, survey
 // corridor or the number of other entities newly added to the atlas.
 export function territorialColor(name) {
+  if (territorialIdentity(name) === 'Islas sin autoridad política documentada') return '#8d9da0';
   let hash = 2166136261;
   for (const char of territorialIdentity(name)) hash = Math.imul(hash ^ char.codePointAt(0), 16777619) >>> 0;
   return `hsl(${(hash % 36000 / 100).toFixed(2)} ${58 + hash % 17}% ${40 + (hash >>> 8) % 10}%)`;

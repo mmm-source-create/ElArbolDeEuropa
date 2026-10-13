@@ -37,6 +37,7 @@ interpretarse con la fecha y versión del documento.
 ## Versiones
 
 - [V5.11: Balcanes y continuidad otomana](V5.11.md).
+- [V5.12: Iberia, Italia y estados tributarios](V5.12.md).
 - [Índice cronológico completo y GitHub Releases](releases.md).
 - [V5.10: Kozara–Glaž, costa ragusea y Ko-fi](V5.10.md).
 - [V5.9: Bosnia, Hum y continuidad regional](V5.9.md).

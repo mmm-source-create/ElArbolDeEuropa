@@ -73,3 +73,29 @@ del cliente; el inspector conserva la evidencia completa en el mapa.
 El informe actual se escribe en `.cache/audits/audit-balkans-continuity-report.json`.
 La [instantánea revisada de V5.11](../docs/reports/reviewed/v5.11-balkans.json)
 conserva el resultado anual y los límites del método.
+
+## Iberia e Italia, 1200–1800
+
+`npm run audit:iberia-italy-continuity` comprueba las 931 celdas de la selección
+geográfica independiente durante los 601 años. Se ejecuta durante `audit:build`
+y escribe `.cache/audits/audit-iberia-italy-continuity-report.json`. La instantánea
+aceptada, con comparación anterior y huellas de las fuentes, se conserva en
+`docs/reports/reviewed/v5.12-iberia-italy.json`.
+
+La reproducción geométrica se ejecuta en el entorno Python bloqueado:
+
+```sh
+.venv-cartography/bin/python scripts/cartography/build-geographic-inventory.py iberia-italy-geography.json iberia-italy-geographic-cells.json
+node scripts/cartography/build-iberia-italy-routes.mjs
+node --import ./tests/jsx-loader.mjs scripts/cartography/merge-map-expansions.mjs
+```
+
+Las ventanas seleccionan superficies completas, incluidos todos sus subtrazados
+insulares. `iberia-italy-full-review.json` contiene la atribución histórica,
+sus citas y las composiciones; el inventario no decide soberanía. Las rutas
+compactas del cliente se comparan con su fuente en las pruebas.
+
+`src/data/tributaryRelations.js` conserva las relaciones tributarias fechadas.
+Esas relaciones no se convierten en gobiernos personales ni alteran la
+identidad del mosaico conjunto. La precedencia regional no borra el marco
+legal imperial, que permanece separado de los dominios pintados.

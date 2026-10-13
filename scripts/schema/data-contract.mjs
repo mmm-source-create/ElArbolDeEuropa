@@ -1,7 +1,7 @@
 // V5 source contract. This validates data; it never repairs or normalizes it.
 import {canonicalJson, digest} from './canonical.mjs';
 export const GOVERNMENT_CONDITIONS = ['efectivo', 'rama', 'corregente', 'rival', 'jure uxoris', 'titular', 'disputado', 'pretensión', 'regencia', 'ocupación', 'gobierno delegado'];
-export const GOVERNMENT_CLASSES = ['ducado', 'señorío', 'condado', 'reinado', 'margraviato', 'imperio', 'gran_ducado', 'gobierno', 'pontificado', 'archiducado', 'regencia', 'principado', 'vizcondado', 'marquesado', 'landgraviato', 'electorado', 'voivodato', 'estatuderato', 'despotado', 'gran_principado', 'zarato', 'sultanato', 'banato', 'emirato'];
+export const GOVERNMENT_CLASSES = ['ducado', 'señorío', 'condado', 'reinado', 'margraviato', 'imperio', 'gran_ducado', 'gobierno', 'pontificado', 'archiducado', 'regencia', 'principado', 'vizcondado', 'marquesado', 'landgraviato', 'electorado', 'voivodato', 'estatuderato', 'despotado', 'gran_principado', 'zarato', 'sultanato', 'banato', 'emirato', 'califato', 'judicado'];
 export const TERRITORY_CLASSES = [...GOVERNMENT_CLASSES, 'reino', 'grupo_historico', 'territorio_compuesto', 'republica', 'ciudad', 'grupo_geografico', 'burgraviato', 'estado_pontificio', 'corona_compuesta', 'union_compuesta'];
 
 const optional = rule => ({...rule, optional: true});
@@ -64,7 +64,7 @@ export const MAP_LAYER_SCHEMA = object({
   limitedCorePeriods: optional(array(mapPeriod)), periods: optional(array(mapPeriod)),
   supersedes: optional(array(text)), borderlineIds: optional(array(text)),
   temporalExtensions: optional(array(extension)),
-  authorityCondition: optional(enumeration(['control disputado', 'ocupación', 'gobierno delegado', 'autonomía tributaria', 'composición geográfica'])),
+  authorityCondition: optional(enumeration(['control disputado', 'ocupación', 'gobierno delegado', 'autonomía tributaria', 'composición geográfica', 'sin poblamiento documentado'])),
 });
 
 const isObject = value => value !== null && typeof value === 'object' && !Array.isArray(value);

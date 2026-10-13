@@ -1,7 +1,8 @@
 import {gobiernosDe} from './personAccessors.js';
 import {idsDeReinoEnAño} from '../Territorios.jsx';
 import {imperialFrameIds} from './imperialFrame.js';
-import {mapLocationsForGovernment, pilotImperialFrameFor} from './locationMapPilot.js';
+import {mapLocationsForGovernment, pilotImperialFrameFor, reviewedMapLayers, reviewedLayerLocations, reviewedLayerEvidence} from './locationMapPilot.js';
+import {territorialIdentity} from './territorialIdentity.js';
 import {mapAuthoritiesForPerson} from './mapAuthorities.js';
 import {CHRONOLOGY_COLLECTIVE_AUTHORITIES} from './atlasChronologyCollectives.js';
 
@@ -67,12 +68,34 @@ export function buildPoliticalMapIndex(personas, year, mapData = null, options =
         collective:authority,kind:authority.kind || 'collective',paint:true});
     }
   }
+  // Regional evidence can establish a jurisdiction before an individual
+  // mandate has been researched. Keep that evidence visible without
+  // inventing a bishop, judge or six-century collective government.
+  const westernLayers = new Set(mapData?.iberiaItalyReview?.layerNames || []);
+  for (const layer of reviewedMapLayers(mapData).filter(layer => westernLayers.has(layer.name))) {
+    const evidence = reviewedLayerEvidence(layer, year);
+    for (const id of reviewedLayerLocations(mapData, layer, year)) {
+      if ((regions.get(id) || []).some(entry => entry.paint && !['regional', 'physical', 'tributary'].includes(entry.kind))) continue;
+      const identity = territorialIdentity(layer.name);
+      if ((regions.get(id) || []).some(entry => entry.regionalEvidence && entry.territory === identity)) continue;
+      push(id, {person:null,government:null,claim:null,territory:identity,
+        kind: layer.authorityCondition === 'sin poblamiento documentado' ? 'physical' : 'regional',
+        paint:true, ids:[id], mapNote:evidence.note, mapSources:evidence.sources,
+        regionalEvidence:true});
+    }
+  }
   return regions;
 }
 
 export function inspectMapRegion(regionId, year, index, mapData = null) {
   if (!regionId || !Number.isInteger(year)) return null;
-  const allEntries = (index.get(regionId) || []).slice().sort((a,b) =>
+  const allEntries = (index.get(regionId) || []).map(entry => {
+    const local = entry.mapScopes?.filter(scope => scope.ids.includes(regionId)) || [];
+    if (!local.length) return entry;
+    const sources = [...(entry.relationship?.sources || []), ...local.flatMap(scope => scope.sources || [])];
+    return {...entry, mapSources: [...new Map(sources.map(source => [source.url, source])).values()],
+      mapNote: [...new Set([entry.relationship?.note, ...local.map(scope => scope.note)].filter(Boolean))].join(' ')};
+  }).sort((a,b) =>
     Number(Boolean(b.claim?.sources.length)) - Number(Boolean(a.claim?.sources.length)) ||
     a.territory.localeCompare(b.territory, 'es'));
   return {

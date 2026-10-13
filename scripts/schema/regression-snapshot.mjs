@@ -45,7 +45,7 @@ export function personalSnapshot(entries) {
     kind: entry.kind, paint: entry.paint, ids: unique(entry.ids),
     color: entry.color, claim: entry.claim ? semanticValue(entry.claim) : null,
     sources: sorted(entry.mapSources || []), note: entry.mapNote,
-    supplement: entry.cartographicSupplement,
+    supplement: entry.cartographicSupplement, dependency: semanticValue(entry.relationship),
   }))));
 }
 
@@ -55,7 +55,7 @@ export async function dataSnapshot({people, territories, mapData, root, onProgre
   for (let year = 1200; year <= 1800; year++) {
     const mosaic = atlasPoliticalMosaicAt(mapData, year, palette, people);
     const entries = people.filter(person => person.gobiernos?.some(government => government.desde <= year && year <= government.hasta))
-      .flatMap(person => mapAuthoritiesForPerson(person, year, mapData, {includeClaims: true}));
+      .flatMap(person => mapAuthoritiesForPerson(person, year, mapData, {includeClaims: true, includeDependencies: true}));
     years[year] = {mosaic: mosaicSnapshot(mosaic), personal: personalSnapshot(entries),
       locations: mosaic.byLocation.size, layers: mosaic.layers.length,
       overlaps: mosaic.overlapCount, authorities: entries.length};

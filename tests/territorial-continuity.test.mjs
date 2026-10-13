@@ -4,14 +4,15 @@ import fs from 'node:fs';
 import {PERSONAS} from '../src/personas.jsx';
 import {TERRITORIOS} from '../src/data/territorios.js';
 import {mapAuthoritiesForPerson} from '../src/data/mapAuthorities.js';
-import {reviewedLayerLocations, reviewedLayerEvidence} from '../src/data/locationMapPilot.js';
+import {reviewedLayerLocations, reviewedLayerEvidence, pilotLocationsFor} from '../src/data/locationMapPilot.js';
 import {territorialIdentity, territorialLabel, territorialColor} from '../src/data/territorialIdentity.js';
 import {politicalMosaicAt} from '../prototypes/euv-locations/location-mosaic.js';
 import {applyContinuityReview} from '../scripts/cartography/apply-continuity-review.mjs';
 
 const data=JSON.parse(fs.readFileSync(new URL('../prototypes/euv-locations/corridor-locations.json',import.meta.url)));
 const entries=[...data.territories,...data.additionalTerritories];
-const ids=(name,year)=>new Set(reviewedLayerLocations(data,entries.find(e=>e.name===name),year));
+const westernGovernments = new Set(JSON.parse(fs.readFileSync(new URL('../prototypes/euv-locations/iberia-italy-full-review.json', import.meta.url))).assignments.flatMap(phase => phase.governmentTerritories));
+const ids=(name,year)=>new Set(westernGovernments.has(name) ? pilotLocationsFor(data,name,year) : reviewedLayerLocations(data,entries.find(e=>e.name===name),year));
 const person=id=>PERSONAS.find(p=>p.id===id);
 
 test('Scandinavian kingdoms retain geometry and identity across both old survey cutoffs',()=>{
