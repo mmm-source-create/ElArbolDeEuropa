@@ -66,6 +66,7 @@ def main():
         for script, artifact in [
             ("build-location-inventory.py", "location-inventory.json"),
             ("build-regional-extent-cells.py", "regional-extent-cells.json"),
+            ("build-balkans-geography.py", "balkans-geographic-cells.json"),
         ]:
             # A different cwd catches accidental relative filesystem access.
             subprocess.run([sys.executable, str(TOOLS / script)],

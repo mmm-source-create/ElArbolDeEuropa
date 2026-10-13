@@ -7,6 +7,9 @@ export function applyRegionalReview(data, review, key, corridor) {
       || new Set(scope.ids).size !== scope.ids.length) throw new Error('Invalid regional scope');
   const names = new Set();
   const cells = new Set(scope.ids);
+  const precedence = review.precedenceIds || scope.ids;
+  if (new Set(precedence).size !== precedence.length || precedence.some(id => !cells.has(id)))
+    throw new Error('Invalid regional precedence');
   for (const scope of review.authorityScopes || []) {
     if (!scope.personId || !scope.territory || !scope.note
       || !Number.isInteger(scope.from) || !Number.isInteger(scope.through)
@@ -22,7 +25,8 @@ export function applyRegionalReview(data, review, key, corridor) {
         || phase.from < scope.from || phase.through > scope.through || phase.from > phase.through
         || !phase.ids.length || phase.ids.some(id => !cells.has(id))
         || new Set(phase.ids).size !== phase.ids.length || !phase.note || !phase.identity
-        || !phase.sourceKeys.length) throw new Error(`Invalid regional phase: ${phase.name}`);
+        || !phase.sourceKeys.length || !Array.isArray(phase.governmentTerritories))
+      throw new Error(`Invalid regional phase: ${phase.name}`);
     const sources = phase.sourceKeys.map(key => {
       const source = review.sources[key];
       if (!source?.url?.startsWith('https://') || !source.locator || !source.title)
@@ -32,14 +36,28 @@ export function applyRegionalReview(data, review, key, corridor) {
     return {name: phase.name, corridor, color: '#86715d',
       coverage: {from: phase.from, through: phase.through},
       versions: [{from: phase.from, ids: [...phase.ids], oldIds: [], borderline: [], event: phase.note}],
-      note: phase.note, sources, precision: phase.precision, limitedCore: true,
+      note: phase.note, sources, precision: phase.precision, limitedCore: phase.limitedCore ?? review.limitedCore ?? true,
+      ...(phase.scopeLabel ? {scopeLabel: phase.scopeLabel} : {}),
       ...(phase.authorityCondition ? {authorityCondition: phase.authorityCondition} : {})};
   });
+  // A precedence cell suppresses earlier surveys. It must provide a complete
+  // replacement, including one-year transitions, rather than silently erase it.
+  for (const id of precedence) {
+    const intervals = review.assignments.filter(phase => phase.ids.includes(id))
+      .map(phase => [phase.from, phase.through]).sort((a, b) => a[0] - b[0]);
+    let next = scope.from;
+    for (const [from, through] of intervals) {
+      if (from > next) throw new Error(`Regional replacement gap: ${id}/${next}`);
+      next = Math.max(next, through + 1);
+    }
+    if (next <= scope.through) throw new Error(`Regional replacement gap: ${id}/${next}`);
+  }
   const previousNames = new Set(data[key]?.layerNames || []);
   data.additionalTerritories = data.additionalTerritories
     .filter(layer => !previousNames.has(layer.name) && !names.has(layer.name));
   data.additionalTerritories.push(...layers);
   data[key] = {reviewedAt: review.reviewedAt, scope: structuredClone(scope),
+    ...(review.precedenceIds ? {precedenceIds: [...review.precedenceIds]} : {}),
     layerNames: [...names], limitations: [...review.limitations]};
   return data;
 }

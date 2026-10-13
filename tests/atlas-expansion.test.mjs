@@ -45,7 +45,8 @@ test('Dobruja and Niš follow their own city chronology and checked geometry',()
 
 test('imperial branches and eastern territories use cores within the documented dates',()=>{
  assert(ids('THEODORE2MOREA',1443).includes('Mystras'));
- assert.equal(ids('THOMASPALA',1450).length,0);
+ assert(ids('THOMASPALA',1450).includes('Kyparissia'));
+ assert(!ids('THOMASPALA',1450).includes('Mystras'));
  assert(ids('GEORGEBRUNSCAL',1640).includes('Hanover'));
  assert(!ids('GEORGEBRUNSCAL',1640).includes('Celle'));
  assert(!ids('GEORGEBRUNSCAL',1635).includes('Hanover'));
@@ -55,7 +56,8 @@ test('imperial branches and eastern territories use cores within the documented 
  assert.deepEqual(reviewedLayerLocations(data,herz,1465),[]);
  const cyprus=data.additionalTerritories.find(t=>t.name==='Núcleo del reino de Chipre');
  assert.equal(reviewedLayerLocations(data,cyprus,1462).length,0);
- assert.equal(reviewedLayerLocations(data,cyprus,1464).length,5);
+ assert.equal(ids('JAMES2CYPRUS',1464).filter(id=>['Morphou','Paphos','Limassol','Nicosia_Cyp','Larnaca'].includes(id)).length,5);
+ assert.equal(ids('CHARLOTTECYPRUS',1462).length,0);
 });
 
 test('the mosaic and the selected map share dated exclusions despite merged source order',()=>{

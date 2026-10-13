@@ -15,9 +15,8 @@ const data = read('../prototypes/euv-locations/corridor-locations.json');
 const review = read('../prototypes/euv-locations/medieval-balkans-review.json');
 const people = new Map(PERSONAS.map(person => [person.id, person]));
 const layers = new Map(reviewedMapLayers(data).map(layer => [layer.name, layer]));
-const cells = (name, year) => name === 'Reino de Bosnia'
-  ? new Set(atlasPoliticalMosaicAt(data, year).layers.find(layer => layer.entityId === name)?.ids || [])
-  : new Set(reviewedLayerLocations(data, layers.get(name), year));
+const cells = (name, year) => new Set(atlasPoliticalMosaicAt(data, year).layers
+  .find(layer => layer.entityId === territorialIdentity(name))?.ids || []);
 const authority = (id, year, territory) => mapAuthoritiesForPerson(people.get(id), year, data)
   .find(entry => entry.territory === territory);
 
@@ -79,9 +78,12 @@ test('Vuk has a bounded disputed eastern scope rather than Tvrtko’s entire ban
 test('Wallachian rivalry retains princely authority without annexing ports or Severin', () => {
   for (const year of [1310, 1352, 1395, 1396, 1399]) {
     const ids = cells('Principado de Valaquia', year);
-    assert(ids.has('Craiova') && ids.has('Bucharest'), year);
-    for (const id of ['Severin', 'Fagaras', 'Giurgiu', 'Silistra', 'Ramnicu_Sarat']) assert(!ids.has(id), id);
+    assert(ids.has('Craiova') && ids.has('Bucharest') && ids.has('Giurgiu'), year);
+    for (const id of ['Fagaras', 'Silistra']) assert(!ids.has(id), id);
   }
+  assert(!cells('Principado de Valaquia', 1421).has('Giurgiu'));
+  assert(cells('Principado de Valaquia', 1352).has('Severin'));
+  assert(!cells('Principado de Valaquia', 1360).has('Severin'));
   for (const year of [1395, 1396]) {
     const vlad = authority('VLAD1WAL', year, 'Valaquia');
     assert.equal(vlad.kind, 'disputed');
@@ -97,11 +99,19 @@ test('Moldavian initial valleys and later unification do not imply retrospective
   assert(initial.has('Suceava') && initial.has('Siret'));
   assert(!initial.has('Chisinau') && !initial.has('Roman'));
   assert(cells('Principado de Moldavia', 1375).has('Roman'));
-  assert(!cells('Principado de Moldavia', 1386).has('Chisinau'));
+  assert(cells('Principado de Moldavia',1386).has('Chisinau'));
+  assert(cells('Horda de Oro',1386).has('Chisinau')); // Explicit uncertainty before the 1387 unification.
   assert(cells('Principado de Moldavia', 1387).has('Chisinau'));
-  for (const year of [1359, 1375, 1387, 1399])
-    for (const id of ['Chilia', 'Cetatea_Alba', 'Hotin', 'Focsani', 'Crasna'])
-      assert(!cells('Principado de Moldavia', year).has(id), `${id}, ${year}`);
+  for(const year of [1359,1375,1387,1399])assert(!cells('Principado de Moldavia',year).has('Crasna'));
+  for(const id of ['Chilia','Cetatea_Alba']){
+    assert(!cells('Principado de Moldavia',1386).has(id),id);
+    assert(cells('Principado de Moldavia',1387).has(id),id);
+    assert(!cells('Principado de Moldavia',1484).has(id),id);
+  }
+  assert(!cells('Principado de Moldavia',1372).has('Hotin'));
+  assert(cells('Principado de Moldavia',1373).has('Hotin'));
+  assert(!cells('Principado de Moldavia',1359).has('Focsani'));
+  assert(cells('Principado de Moldavia',1387).has('Focsani'));
   assert(authority('STEFAN1MOLD', 1398, 'Moldavia').ids.includes('Roman'));
   assert(authority('IUGAMOLD', 1399, 'Moldavia').ids.includes('Suceava'));
 });

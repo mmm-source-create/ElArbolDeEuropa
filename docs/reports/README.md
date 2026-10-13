@@ -19,3 +19,8 @@ una ejecución sin revisar como «revisada».
 La [instantánea de V5.8](reviewed/v5.8-medieval-balkans.json) conserva las
 comprobaciones medievales de Bosnia, Valaquia y Moldavia y las 40 entidades
 aún sin representación efectiva. Los informes anteriores no se sobrescriben.
+
+La [instantánea de V5.11](reviewed/v5.11-balkans.json) conserva 675.524
+combinaciones de superficie/año, evidencia local, atribuciones múltiples
+explicadas y comparación con el árbol anterior. Incluye el inventario
+geográfico completo; no certifica fronteras municipales exactas.

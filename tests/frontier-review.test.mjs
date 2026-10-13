@@ -1,3 +1,4 @@
+import {atlasPoliticalMosaicAt} from '../prototypes/euv-locations/atlas-mosaic.js';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
@@ -15,6 +16,8 @@ const cells=(territory,year,personId)=>pilotLocationsFor(data,territory,year,per
 const layer=(name,year)=>reviewedLayerLocations(data,reviewedMapLayers(data).find(e=>e.name===name),year);
 const authority=(personId,year)=>mapAuthoritiesForPerson(people.get(personId),year,data);
 
+
+const stateCells=(identity,year)=>new Set(atlasPoliticalMosaicAt(data,year).layers.filter(l=>l.entityId===identity).flatMap(l=>l.ids));
 test('medieval Bulgaria includes mountain contours while vassal neighbours remain separate',()=>{
  const early=cells('Bulgaria',1200,'KALOYANBUL');
  assert(early.includes('Tarnovo')&&early.includes('Balkan_Mountains3'));
@@ -33,7 +36,7 @@ test('Vidin occupation and coastal secession do not create two sovereign Bulgari
  assert.deepEqual(cells('Bulgaria',1367,'IVANSTRATSIMIRBUL'),[]);
  assert(cells('Bulgaria',1369,'IVANSTRATSIMIRBUL').includes('Vidin'));
  assert(!cells('Bulgaria',1360,'IVANALEXBUL').includes('Tulcea'));
- assert(layer('Despotado de Dobruja',1360).includes('Tulcea'));
+ assert(stateCells('Dobruja',1360).has('Tulcea'));
  assert(cells('Bulgaria',1360,'IVANALEXBUL').includes('Varna'));
  assert(!cells('Bulgaria',1369,'IVANALEXBUL').includes('Varna'));
  assert.deepEqual(cells('Bulgaria',1394,'IVANSHISHMANBUL'),['Nikopol']);
@@ -49,26 +52,26 @@ test('Dragutin’s Sirmia is not the modern province north of the Sava',()=>{
 });
 
 test('Hungarian partition dates Buda, Gyula, Temes and the northern provinces independently',()=>{
- assert(!layer('Hungría otomana',1537).includes('Buda'));
- assert(layer('Hungría otomana',1541).includes('Buda'));
- assert(!layer('Hungría real',1527).includes('Petrovaradin'));
- assert(!layer('Hungría real',1537).includes('Pozega'));
+ assert(!stateCells('Imperio otomano',1537).has('Buda'));
+ assert(stateCells('Imperio otomano',1541).has('Buda'));
+ assert(!stateCells('Hungría',1527).has('Petrovaradin'));
+ assert(!stateCells('Hungría',1537).has('Pozega'));
  for(const id of ['Eastern_Carpathians1','Western_Carpathians2','Rakhiv','Miskolc'])
-   assert(layer('Hungría real',1552).includes(id),id);
- assert(layer('Hungría real',1552).includes('Bekes'));
- assert(!layer('Hungría otomana',1552).includes('Bekes'));
- assert(layer('Hungría otomana',1566).includes('Bekes'));
+   assert(stateCells('Hungría',1552).has(id),id);
+ assert(stateCells('Hungría',1552).has('Bekes'));
+ assert(!stateCells('Imperio otomano',1552).has('Bekes'));
+ assert(stateCells('Imperio otomano',1566).has('Bekes'));
  assert(!cells('Hungría',1566,'FERN1EMP').includes('Timisoara'));
- assert(layer('Hungría otomana',1691).includes('Oradea'));
- assert(!layer('Hungría otomana',1692).includes('Oradea'));
- assert(layer('Hungría real',1692).includes('Oradea'));
- assert(layer('Hungría otomana',1694).includes('Bekes'));
- assert(layer('Hungría real',1695).includes('Bekes'));
- assert(layer('Hungría otomana',1699).includes('Timisoara'));
- assert(!layer('Hungría real',1699).includes('Timisoara'));
- assert(layer('Banato de Temes',1720).includes('Timisoara'));
- assert(!layer('Hungría real',1720).includes('Timisoara'));
- assert(layer('Hungría real',1779).includes('Timisoara'));
+ assert(stateCells('Imperio otomano',1691).has('Oradea'));
+ assert(!stateCells('Imperio otomano',1692).has('Oradea'));
+ assert(stateCells('Hungría',1692).has('Oradea'));
+ assert(stateCells('Imperio otomano',1694).has('Bekes'));
+ assert(stateCells('Hungría',1695).has('Bekes'));
+ assert(stateCells('Imperio otomano',1699).has('Timisoara'));
+ assert(!stateCells('Hungría',1699).has('Timisoara'));
+ assert(stateCells('Banato de Temes',1720).has('Timisoara'));
+ assert(!stateCells('Hungría',1720).has('Timisoara'));
+ assert(stateCells('Hungría',1779).has('Timisoara'));
  assert.equal(territorialIdentity('Núcleo oriental de Zápolya'),'Hungría');
  assert.equal(territorialLabel('Hungría real',1530),'Reino de Hungría');
 });

@@ -1,3 +1,4 @@
+import {atlasPoliticalMosaicAt} from '../prototypes/euv-locations/atlas-mosaic.js';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
@@ -14,6 +15,8 @@ const people=new Map(PERSONAS.map(p=>[p.id,p]));
 const layer=(name,year)=>reviewedLayerLocations(data,reviewedMapLayers(data).find(e=>e.name===name),year);
 const authority=(id,year)=>mapAuthoritiesForPerson(people.get(id),year,data).flatMap(a=>a.ids);
 
+
+const stateCells=(identity,year)=>new Set(atlasPoliticalMosaicAt(data,year).layers.filter(l=>l.entityId===identity).flatMap(l=>l.ids));
 test('Bulgarian accession crises have sourced mandates and Chaka has only a capital scope',()=>{
  for(const [id,year] of [['KALIMAN2BUL',1256],['MITSOASENBUL',1257],['SMILETSBUL',1295],['IVAN2SMILETSBUL',1298]])assert(authority(id,year).includes('Tarnovo'),id);
  assert.deepEqual([...new Set(authority('CHAKABUL',1299))].sort(),['Lyaskovets','Tarnovo']);
@@ -27,9 +30,9 @@ test('Dobruja separates the coastal despot, Wallachian recovery and final Ottoma
  assert.equal(SUCCESSION_REVIEWS['person:DOBROTITSA:government:Dobruja:1347:1385:Déspota'].certainty,'approximate');
  assert(authority('DOBROTITSA',1360).includes('Constanta'));
  assert(!authority('IVANKODOB',1389).includes('Tulcea'));
- assert(layer('Dobruja · dominios de Valaquia',1405).includes('Tulcea'));
- assert(!layer('Dobruja otomana',1405).includes('Tulcea'));
- assert(layer('Dobruja otomana',1419).includes('Tulcea'));
+ assert(stateCells('Principado de Valaquia',1405).has('Tulcea'));
+ assert(!stateCells('Imperio otomano',1405).has('Tulcea'));
+ assert(stateCells('Imperio otomano',1420).has('Tulcea'));
  assert(layer('Dobruja · dominios de Valaquia',1395).length===0);
 });
 test('coastal polygons and mountain cells follow their dated authorities, not modern Croatia',()=>{
@@ -43,7 +46,7 @@ test('coastal polygons and mountain cells follow their dated authorities, not mo
  assert(layer('Dalmacia veneciana',1327).includes('Split'));
  assert(!layer('Dalmacia veneciana',1479).includes('Krk'));
  assert(layer('Dalmacia veneciana',1480).includes('Krk'));
- for(const [year,venetian] of [[1572,true],[1573,false],[1646,true],[1671,false],[1684,true]])assert.equal(layer('Dalmacia veneciana',year).includes('Makarska'),venetian,year);
+ for(const [year,venetian] of [[1572,true],[1573,false],[1646,true],[1671,false],[1684,true]])assert.equal(stateCells('Venecia',year).has('Makarska'),venetian,year);
 });
 test('Meissen and Thuringia do not swallow bishoprics or the other Wettin branch',()=>{
  assert(authority('HEINRICH3MEISSEN',1250).includes('Eisenach'));
@@ -89,7 +92,7 @@ test('the annual audit honours exclusions and supersession, and includes physica
 });
 test('all actual visible SVG areas get coverage or an explicitly unverified research target',()=>{
  const report=auditLocationCoverage(data,inventory);
- assert.equal(report.summary.paths,7676);assert.equal(report.summary.visible,7645); // Four preserved coastal subdivisions in V5.10.
+ assert.equal(report.summary.paths,7677);assert.equal(report.summary.visible,7646); // Preserved coastal subdivisions and the independently dated Tinos island.
  assert.equal(report.summary.untriaged,0);
  assert(report.cells.filter(c=>c.visible&&!c.colored).every(c=>c.research.certainty==='unverified'&&c.research.targets.length));
  assert.equal(report.queues.reduce((n,q)=>n+q.cells,0),report.summary.neverColored);

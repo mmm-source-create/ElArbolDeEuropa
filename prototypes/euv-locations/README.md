@@ -760,3 +760,16 @@ ambas orillas del Sava/Una permanecen como ámbito vecino identificado.
 aproximadas de Slano y Dubrovnik. La geometría insular se separa sin alterar
 las costas. El [informe V5.10](../../docs/V5.10.md) explica cambios, límites,
 comparación anual y próximos pasos.
+
+## Revisión completa V5.11
+
+El ámbito geográfico independiente de `balkans-geography.json` y su inventario
+medido `balkans-geographic-cells.json` incluyen el núcleo balcánico, el Egeo,
+Anatolia y Chipre. `balkans-full-review.json` conserva los intervalos, las
+fuentes localizadas, las celdas compuestas y las particiones personales.
+La revisión no asigna autoridad mediante el nombre de una ciudad vecina.
+Los polígonos de cordilleras y sus subtrazados se revisan como superficies.
+
+`npm run audit:balkans-continuity` exige continuidad anual, evidencia local
+y explicación de cada atribución múltiple. Su alcance y límites están en
+[la entrega V5.11](../../docs/V5.11.md).

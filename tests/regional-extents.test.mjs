@@ -1,3 +1,4 @@
+import {atlasPoliticalMosaicAt} from '../prototypes/euv-locations/atlas-mosaic.js';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
@@ -123,19 +124,20 @@ test('Milanese cessions appear in Piedmont rather than disappearing or being pai
 });
 
 test('Ottoman geography respects the interregnum and the eastern campaign chronology', () => {
-  const west = 'Anatolia otomana · Bitinia y expansión occidental';
-  assert(cells(west, 1391).includes('Manisa'));
-  assert(!cells(west, 1402).includes('Manisa'));
-  assert(cells(west, 1416).includes('Manisa'));
-  assert(!cells('Islas egeas otomanas', 1362).includes('Mitilene'));
-  assert(cells('Islas egeas otomanas', 1462).includes('Mitilene'));
-  assert(!cells('Anatolia otomana · provincias orientales', 1481).includes('Erzurum'));
-  assert(!cells('Anatolia otomana · Van', 1536).includes('Van'));
-  assert(cells('Anatolia otomana · Van', 1548).includes('Van'));
-  assert(!cells('Anatolia otomana · Van', 1552).includes('Ercis'));
-  assert(cells('Anatolia otomana · Van', 1555).includes('Ercis'));
-  assert(!cells('Anatolia otomana · frontera de Kars', 1565).includes('Kars'));
-  assert(cells('Anatolia otomana · frontera de Kars', 1578).includes('Kars'));
+  const west = 'Imperio otomano';
+  const direct=(year)=>pilotLocationsFor(data,west,year);
+  assert(direct(1391).includes('Manisa'));
+  assert(!direct(1402).includes('Manisa'));
+  assert(direct(1427).includes('Manisa'));
+  assert(!direct(1362).includes('Mitilene'));
+  assert(direct(1462).includes('Mitilene'));
+  assert(!direct(1481).includes('Erzurum'));
+  assert(!direct(1536).includes('Van'));
+  assert(direct(1548).includes('Van'));
+  assert(!direct(1552).includes('Ercis'));
+  assert(direct(1555).includes('Ercis'));
+  assert(!direct(1565).includes('Kars'));
+  assert(direct(1578).includes('Kars'));
   const soliman = personal('SULEIMAN1OSM', 1555);
   for (const id of ['Manisa', 'Konya', 'Erzurum', 'Van', 'Trebizond']) assert(soliman.has(id), id);
   for (const id of ['Yerevan', 'Maku', 'Khoy', 'Bucharest', 'Suceava']) assert(!soliman.has(id), id);

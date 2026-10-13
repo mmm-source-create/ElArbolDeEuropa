@@ -29,6 +29,10 @@ el commit integrado de `main`, cuyo árbol coincide con la entrega comprobada.
 [V5.10](V5.10.md) revisa Kozara–Glaž y la costa ragusea; su Release permanece
 como borrador hasta la fusión y validación del commit final.
 
+[V5.11](V5.11.md) prepara la revisión completa de los Balcanes y el inventario
+anatolio adyacente. La publicación de su Release requiere integrar y validar
+el commit final; preparar la PR no publica ni despliega en producción.
+
 ## Índice cronológico de documentos
 
 Ordenados por número de versión, de la primera a la última. Los documentos
@@ -86,6 +90,7 @@ permanecen explicados en [archive/manifests](archive/manifests/README.md).
 | [5.8](V5.8.md) | V5.8 · Continuidad balcánica medieval |
 | [5.9](V5.9.md) | V5.9 · Bosnia, Hum y continuidad regional |
 | [5.10](V5.10.md) | V5.10 · Kozara–Glaž, costa ragusea y apoyo al proyecto |
+| [5.11](V5.11.md) | V5.11 · Balcanes y continuidad otomana |
 
 ## Publicar una entrega
 

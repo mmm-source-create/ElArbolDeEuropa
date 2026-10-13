@@ -14,6 +14,7 @@ export const AUTHORITY_LABELS = Object.freeze({
   sovereign: 'Autoridad territorial', delegated: 'Gobierno delegado',
   titular: 'Título o pretensión sin control acreditado', disputed: 'Control disputado u ocupación',
   collective: 'Autoridad colectiva',
+  mixed: 'Celda con varias jurisdicciones',
 });
 
 const governmentClaims = new WeakMap();
@@ -76,15 +77,17 @@ export function mapAuthoritiesForPerson(person, year, mapData = null, {includeCl
         || ['Flandes','Brabante'].includes(government.territorio) && year >= 1576);
     const regional = mapData ? reviewedAuthorityConditions(mapData,government.territorio,year,person.id) : new Map();
     const contested = ids.filter(id=>['control disputado','ocupación'].includes(regional.get(id)?.condition));
+    const mixed = ids.filter(id => regional.get(id)?.condition === 'composición geográfica');
     const baseEntry = {person, government, claim: claims.get(government) || null,
       territory: government.territorio, kind: revolt ? 'disputed' : authorityKind(government, year),
       paint: effective, ids, mapSources: [...layerEvidence.flatMap(evidence => evidence.sources), ...(scope ? [scope.source, ...(scope.additionalSources || []), ...(scope.evidenceGroups || []).map(group => group.source)].filter(Boolean) : []), ...(extension ? [extension.source] : []), ...(revolt ? [REVOLT_SOURCE] : []), ...(border?.action === 'add' && !border.occupation ? [border.source] : []), ...(southernBorder?.action === 'add' ? [southernBorder.source] : [])],
       mapNote: revolt ? 'Soberanía y control disputados durante la revuelta. La trama no afirma posesión uniforme de toda la provincia.' : [...new Set([scope?.note, extension?.note, ...layerEvidence.map(evidence => evidence.note), border?.action === 'add' ? border.note : null, southernBorder?.action === 'add' ? southernBorder.note : null].filter(Boolean))].join(' ') || null};
-    if (contested.length) {
-      entries.push({...baseEntry,ids:ids.filter(id=>!contested.includes(id))});
-      entries.push({...baseEntry,ids:contested,kind:'disputed',
-        mapNote:[...new Set(contested.map(id=>regional.get(id).note).filter(Boolean))].join(' '),
-        mapSources:[...baseEntry.mapSources,...contested.flatMap(id=>regional.get(id).sources)]});
+    if (contested.length || mixed.length) {
+      entries.push({...baseEntry,ids:ids.filter(id=>!contested.includes(id) && !mixed.includes(id))});
+      for (const [cells, kind] of [[contested, 'disputed'], [mixed, 'mixed']]) if (cells.length)
+        entries.push({...baseEntry,ids:cells,kind,
+          mapNote:[...new Set(cells.map(id=>regional.get(id).note).filter(Boolean))].join(' '),
+          mapSources:[...baseEntry.mapSources,...cells.flatMap(id=>regional.get(id).sources)]});
     } else entries.push(baseEntry);
   }
   if (!mapData) return entries;

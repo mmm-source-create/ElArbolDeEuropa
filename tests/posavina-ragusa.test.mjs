@@ -69,8 +69,8 @@ test('the relief and mobile northern frontier stay visible without a fictitious 
     assert.deepEqual(owners(id, 1379), ['Eslavonia']);
     assert.deepEqual(owners(id, 1380), ['Eslavonia', 'Reino de Bosnia']);
     assert.deepEqual(owners(id, 1400), ['Reino de Bosnia']);
-    assert.deepEqual(owners(id, 1500), ['Banato húngaro de Jajce', 'Bosnia y Herzegovina otomanas']);
-    assert.deepEqual(owners(id, 1530), ['Bosnia y Herzegovina otomanas', 'Croacia']);
-    assert.deepEqual(owners(id, 1536), ['Bosnia y Herzegovina otomanas']);
+    assert.deepEqual(owners(id, 1500), ['Banato húngaro de Jajce', 'Imperio otomano']);
+    assert.deepEqual(owners(id, 1530), ['Croacia', 'Imperio otomano']);
+    assert.deepEqual(owners(id, 1536), ['Imperio otomano']);
   }
 });

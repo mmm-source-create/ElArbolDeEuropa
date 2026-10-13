@@ -1,0 +1,10 @@
+{
+  "schema": 1,
+  "scope": "Balcanes, frontera cárpática, Egeo y Anatolia",
+  "note": "Ventanas geográficas independientes de los titulares y de las capas políticas. Una celda que cruza el borde se revisa completa; el contorno de la ventana no es una frontera histórica. Incluye expresamente las islas adriáticas, jónicas y egeas, Creta, Chipre y el relieve.",
+  "outlines": {
+    "balkans": [[607.5,153],[616,153],[625,153.8],[631,157],[635,148],[646,140],[661,145],[663,166],[662,181],[657,187],[653,201],[654,212],[645,213],[630,211],[629,193],[625,182],[621,176],[612.5,177],[611.5,170],[608.5,164],[606.8,162]],
+    "anatolia": [[659,182],[666,179],[675,175.5],[690,177.5],[700,179.5],[706,179],[710,184.7],[713,194.5],[708,198.5],[698,199.5],[690,198.8],[687,204.5],[682,204.8],[679,203],[665,204.5],[651,203],[651,191],[657,183]],
+    "cyprus": [[662,208],[674,208],[674,214],[662,214]]
+  }
+}

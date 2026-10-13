@@ -1883,6 +1883,7 @@ html, body {
 .mapa-authority-key i { width: 18px; height: 13px; border: 1px solid #65594b; border-radius: 2px; background: #876641; }
 .mapa-authority-key .mapa-key-delegated { background: repeating-linear-gradient(45deg, #907085 0 3px, #e1d8df 3px 5px); }
 .mapa-authority-key .mapa-key-disputed { background: repeating-linear-gradient(-45deg, #756598 0 3px, #ddd7e7 3px 5px); }
+.mapa-authority-key .mapa-key-mixed { background: repeating-linear-gradient(0deg, #86715d 0 3px, #eee5d9 3px 5px); }
 .mapa-region-inspector .mapa-authority-badge { display: inline-block; margin: 0 0 5px; padding: 2px 6px; border: 1px solid var(--eade-border); border-radius: 4px; font-size: 10px; font-weight: 700; }
 .mapa-authority-delegated { border-left: 3px solid #907085 !important; }
 .mapa-authority-disputed { border-left: 3px solid #756598 !important; }

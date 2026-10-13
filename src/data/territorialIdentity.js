@@ -1,9 +1,26 @@
 // A survey label, an owner and a control episode are not territorial identity.
 import {BOSNIA_HUM_IDENTITIES} from './bosniaHumRoutes.js';
 import {POSAVINA_RAGUSA_IDENTITIES} from './posavinaRagusaRoutes.js';
+import {BALKANS_FULL_IDENTITIES} from './balkansFullRoutes.js';
 const ALIASES = Object.freeze({
   ...BOSNIA_HUM_IDENTITIES,
   ...POSAVINA_RAGUSA_IDENTITIES,
+  ...BALKANS_FULL_IDENTITIES,
+  // Direct Ottoman provinces are scopes of one state, not new sovereign
+  // entities. Their names and evidence remain in scopes and in title records.
+  'Hungría otomana': 'Imperio otomano',
+  'Bosnia y Herzegovina otomanas': 'Imperio otomano',
+  'Balcanes meridionales otomanos': 'Imperio otomano',
+  'Dobruja otomana': 'Imperio otomano',
+  'Lika otomana': 'Imperio otomano',
+  'Makarska otomana': 'Imperio otomano',
+  'Anatolia otomana · Bitinia y expansión occidental': 'Imperio otomano',
+  'Anatolia otomana · Candar y costa póntica': 'Imperio otomano',
+  'Anatolia otomana · Karaman': 'Imperio otomano',
+  'Anatolia otomana · provincias orientales': 'Imperio otomano',
+  'Anatolia otomana · Van': 'Imperio otomano',
+  'Anatolia otomana · frontera de Kars': 'Imperio otomano',
+  'Islas egeas otomanas': 'Imperio otomano',
   'Donji Kraji': 'Reino de Bosnia',
   'Glaž': 'Reino de Bosnia',
   'Núcleo de Herzegovina': 'Herzegovina',
@@ -74,6 +91,18 @@ const ALIASES = Object.freeze({
   'Condado de Nassau': 'Nassau',
   'Ducado de Suabia': 'Suabia',
   'Despotado de Dobruja': 'Dobruja',
+  'Epiro de los Tocco': 'Epiro',
+  'Despotado de Serbia': 'Serbia',
+  Tarnovo: 'Zarato de Tarnovo',
+  'Reino de Sicilia': 'Sicilia',
+  'Reino de Sicilia antes de 1282': 'Sicilia',
+  'Señorío de Ioannina': 'Despotado de Ioannina',
+  'Señorío genovés de Lesbos': 'Señorío de Lesbos',
+  'República napolitana': 'República Partenopea',
+  'Monarquía de los Habsburgo': 'Austria',
+  'Imperio ruso': 'Rusia',
+  'Armenia de Cilicia': 'Armenia cilicia',
+  'Imperio safávida': 'Persia',
 });
 
 export const territorialIdentity = name => {
@@ -98,9 +127,17 @@ export function territorialLabel(name, year) {
     'Gran Bretaña': 'Reino de Gran Bretaña',
     Dinamarca: 'Reino de Dinamarca', Noruega: 'Reino de Noruega', Suecia: 'Reino de Suecia',
     Islandia: year < 1380 ? 'Islandia bajo la Corona noruega' : 'Islandia bajo la monarquía danesa y noruega',
-    Transilvania: year < 1570 ? 'Voivodato de Transilvania' : 'Principado de Transilvania', Morea: 'Morea',
+    Transilvania: year >= 1765 ? 'Gran Principado de Transilvania' : year < 1570 ? 'Voivodato de Transilvania' : 'Principado de Transilvania', Morea: 'Despotado de Morea',
+    Rusia: year >= 1721 ? 'Imperio ruso' : year >= 1547 ? 'Zarato de Rusia' : 'Gran Principado de Moscú',
     Hungría: 'Reino de Hungría', Croacia: 'Reino de Croacia',
     Bulgaria: 'Segundo Imperio búlgaro', Sirmia: 'Reino de Sirmia',
+    Serbia: year < 1217 ? 'Gran principado de Serbia' : year < 1346 ? 'Reino de Serbia'
+      : year <= 1371 ? 'Imperio de los serbios y griegos' : year < 1402 ? 'Principado de Serbia' : 'Despotado de Serbia',
+    Prilep: 'Reino de Prilep', Kosovo: 'Señorío de los Branković',
+    Atenas: year < 1260 ? 'Señorío de Atenas' : 'Ducado de Atenas',
+    Acaya: 'Principado de Acaya', Epiro: 'Estado epirota',
+    Tesalia: 'Señorío de Tesalia', Zeta: 'Señorío de Zeta',
+    Montenegro: 'Montenegro · gobierno local', Salzburg: 'Arzobispado de Salzburgo',
     Anjou: year < 1360 ? 'Condado de Anjou' : 'Ducado de Anjou',
     Touraine: 'Condado de Touraine',
     Foix: 'Condado de Foix', Bearne: 'Vizcondado de Bearne',
@@ -114,7 +151,6 @@ export function territorialLabel(name, year) {
     'Turingia ernestina':year<1547?'Sajonia ernestina · tierras de Turingia':'Ducado de Sajonia · tierras ernestinas',
     'Nassau-Dietz':year<1654?'Condado de Nassau-Dietz':year<1743?'Principado de Nassau-Dietz':'Principado de Nassau-Orange',
     'Ducado de Sajonia-Gotha':year<1672?'Ducado de Sajonia-Gotha':'Ducado de Sajonia-Gotha-Altenburg',
-    'Hungría otomana': year < 1541 ? 'Conquistas otomanas en Hungría' : 'Eyalatos otomanos de Hungría',
   };
   return labels[identity] || identity;
 }
@@ -150,10 +186,10 @@ export function coalesceTerritorialLayers(layers, year) {
     const identity = territorialIdentity(layer.name);
     const scope = {name: layer.name, ids: [...layer.ids], note: layer.note,
       condition: layer.authorityCondition, sources: layer.sources || [],
-      label: layer.name === 'Hungría real' ? 'Gobierno real occidental y septentrional'
+      label: layer.scopeLabel || (layer.name === 'Hungría real' ? 'Gobierno real occidental y septentrional'
         : layer.name === 'Núcleo oriental de Zápolya' ? 'Gobierno rival del reino oriental'
         : layer.name.includes('·') ? layer.name.split('·').slice(1).join('·').trim()
-        : layer.authorityCondition || (layer.approximate ? 'Gobierno registrado' : 'Ámbito territorial revisado')};
+        : layer.authorityCondition || (layer.approximate ? 'Gobierno registrado' : 'Ámbito territorial revisado'))};
     const existing = groups.get(identity);
     if (!existing) {
       groups.set(identity, {...layer, entityId: identity, displayName: territorialLabel(layer.name, year),

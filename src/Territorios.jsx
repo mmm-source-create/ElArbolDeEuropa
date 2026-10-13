@@ -199,6 +199,16 @@ export const REINO_COLOR = {
   Polonia: '#da63cc',
   Prusia: '#303C59',
   Austria: '#8E293C',
+  Prilep: '#82639B',
+  Kosovo: '#A77748',
+  'Despotado de Serres': '#967256',
+  'Despotado de Ioannina': '#AE7F43',
+  Zeta: '#67865D',
+  Albania: '#718F58',
+  Atenas: '#426F9C',
+  Acaya: '#567E99',
+  'Ducado del Archipiélago': '#947047',
+  'Condado palatino de Cefalonia y Zacinto': '#A57549',
   "Austria Interior": '#A64D5A',
   'Ducado de Estiria': '#B28964',
   'Carintia': '#AB785C',
@@ -342,12 +352,30 @@ const MONARQUIA_HISPANICA = new Set([
   'Mallorca', 'Cerdeña', 'Nápoles', 'Trinacria', 'Milán', 'Navarra',
 ]);
 const ESTADOS_SABOYANOS = new Set(['Saboya', 'Piamonte', 'Cerdeña']);
-const TIERRAS_AUSTRIACAS = new Set(['Austria', 'Austria Interior', 'Tirol', 'Carintia']);
+const TIERRAS_AUSTRIACAS = new Set(['Austria', 'Austria Interior', 'Tirol', 'Carintia', 'Carniola', 'Ducado de Estiria',
+  'Norte de Serbia habsbúrgico', 'Oltenia habsbúrgica', 'Banato de Temes', 'Reino de Galicia y Lodomeria']);
 const ADMINISTRACION_AUSTRO_BOHEMIA = new Set(['Austria', 'Austria Interior', 'Tirol', 'Carintia', 'Bohemia']);
 
 // La pertenencia a un conjunto se evalúa por territorio y fecha; compartir
 // dinastía o soberano nunca basta para colorear todos sus títulos por igual.
 const AGRUPACIONES_POLITICAS = [
+  {
+    id: 'tocco', nombre: 'Dominios de los Tocco',
+    territorios: new Set(['Epiro de los Tocco', 'Condado palatino de Cefalonia y Zacinto']),
+    color: '#A57549', desde: 1411,
+    aplica: activos => activos.has('Epiro de los Tocco') && activos.has('Condado palatino de Cefalonia y Zacinto'),
+    nota: 'Dominios insulares y continentales reunidos bajo un mismo gobernante. El condado palatino y el despotado conservan títulos y superficies fechadas propios.',
+    fuente: 'https://castleroute.culture.gov.gr/en/castle-of-st-george/',
+  },
+  {
+    id: 'corona-san-esteban', nombre: 'Corona de San Esteban',
+    territorios: new Set(['Hungría', 'Croacia', 'Eslavonia']),
+    territoriosPorFecha: año => new Set(['Hungría', 'Croacia', 'Eslavonia', ...(año <= 1540 ? ['Transilvania'] : [])]),
+    color: REINO_COLOR.Hungría, desde: 1200,
+    aplica: activos => activos.has('Hungría'),
+    nota: 'Reinos de la Corona húngara y, antes de la separación oriental, su voivodato de Transilvania. Cada título conserva su identidad; un príncipe transilvano independiente o un tributario otomano no se integra por compartir soberano o vecindad.',
+    fuente: 'https://mek.oszk.hu/02000/02086/02086.htm',
+  },
   {
     id: 'monarquia-hispanica', nombre: 'Monarquía Hispánica', territorios: MONARQUIA_HISPANICA,
     color: REINO_COLOR.España, desde: 1516,
@@ -379,7 +407,7 @@ const AGRUPACIONES_POLITICAS = [
     id: 'tierras-austriacas', nombre: 'Tierras austríacas reunidas', territorios: TIERRAS_AUSTRIACAS,
     color: REINO_COLOR.Austria, desde: -Infinity,
     aplica: (activos) => [...TIERRAS_AUSTRIACAS].filter(territorio => activos.has(territorio)).length > 1,
-    nota: 'El tono común solo agrupa las tierras austríacas que esta persona gobernó a la vez; no incluye automáticamente Bohemia, Hungría ni los demás estados del Imperio.',
+    nota: 'El tono común reúne las tierras austríacas y provincias administradas directamente que esta persona gobernó a la vez. Sus títulos e identidades territoriales se conservan; Bohemia y Hungría requieren sus propias agrupaciones documentadas.',
     fuente: 'https://www.habsburger.net/en/chapter/tripartite-division-austrian-inheritance',
   },
   {
@@ -399,7 +427,8 @@ const AGRUPACIONES_POLITICAS = [
 export function agrupacionesPoliticasEnMapa(persona, año) {
   const activos = new Set(reinadosActivos(persona, año, { soloEfectivos: true }).map(r => r.territorio));
   const cubiertos = new Set();
-  return AGRUPACIONES_POLITICAS.filter(grupo => {
+  return AGRUPACIONES_POLITICAS.map(grupo => grupo.territoriosPorFecha
+    ? {...grupo, territorios: grupo.territoriosPorFecha(año)} : grupo).filter(grupo => {
     if (año < grupo.desde || !grupo.aplica(activos, persona)) return false;
     const propios = [...grupo.territorios].filter(territorio => activos.has(territorio) && !cubiertos.has(territorio));
     propios.forEach(territorio => cubiertos.add(territorio));
