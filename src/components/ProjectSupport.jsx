@@ -1,5 +1,5 @@
 import React from 'react';
-import {ExternalLink, Heart} from 'lucide-react';
+import {ArrowUpRight, Coffee} from 'lucide-react';
 import {SUPPORT_URL} from '../siteConfig.js';
 import './project-support.css';
 
@@ -28,9 +28,10 @@ export function ProjectSupportLink({locale = 'es', prominent = false}) {
   return <a className={`project-support-link${prominent ? ' is-prominent' : ''}`}
     href={SUPPORT_URL} target="_blank" rel="noopener noreferrer"
     aria-label={`${label} — ${copy.external}`}>
-    <Heart size={14} aria-hidden="true" />
-    <span>{label}</span>
-    <ExternalLink size={12} aria-hidden="true" />
+    <span className="project-support-mark" aria-hidden="true"><Coffee size={18}/></span>
+    <span className="project-support-label">{label}</span>
+    {!prominent && <span className="project-support-brand" aria-hidden="true">Ko-fi</span>}
+    <ArrowUpRight className="project-support-arrow" size={14} aria-hidden="true" />
   </a>;
 }
 

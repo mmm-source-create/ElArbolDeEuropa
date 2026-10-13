@@ -11,11 +11,25 @@ import {CHRONOLOGY_COLLECTIVE_AUTHORITIES} from './atlasChronologyCollectives.js
 export const COLLECTIVE_AUTHORITIES = Object.freeze([
   ...CHRONOLOGY_COLLECTIVE_AUTHORITIES,
   {
-    territorio: 'República de Ragusa', desde: 1400, hasta: 1650,
+    territorio: 'Comuna de Mljet', desde: 1345, hasta: 1409,
+    nombre: 'Comuna de Mljet', cargo: 'Gobierno comunal',
+    condicion: 'colectiva', certeza: 'documentado',
+    nota: 'Autonomía estatutaria desde 1345 bajo el señorío monástico. La influencia de Ragusa no fija por sí sola el comienzo de su administración definitiva, fechado en 1410 por la entrada insular.',
+    fuente: {title: 'Hrvatska enciklopedija · Mljet', url: 'https://enciklopedija.hr/clanak/mljet', locator: 'Estatuto y redención de prestaciones en 1345; incorporación definitiva en 1410.'},
+  },
+  {
+    territorio: 'República de Ragusa', desde: 1200, hasta: 1357,
+    nombre: 'Conde y consejo de la comuna de Ragusa', cargo: 'Gobierno comunal',
+    condicion: 'colectiva', certeza: 'documentado',
+    nota: 'Comuna bajo superioridad bizantina hasta 1205 y veneciana desde 1205; el conde veneciano no es un rey hereditario.',
+    fuente: {title: 'Hrvatska enciklopedija · Dubrovačka Republika', url: 'https://enciklopedija.hr/clanak/dubrovacka-republika', locator: 'Gobierno comunal; conde y consejos; superioridad veneciana 1205–1358.'},
+  },
+  {
+    territorio: 'República de Ragusa', desde: 1358, hasta: 1800,
     nombre: 'Rector y consejos de la República de Ragusa', cargo: 'Gobierno republicano',
     condicion: 'colectiva', certeza: 'documentado',
     nota: 'El rector presidía los consejos con un mandato mensual. El tributo al sultán, desde 1458, no eliminó el gobierno republicano ni hizo de Ragusa una provincia otomana.',
-    fuente: {title: 'Hrvatska enciklopedija · Dubrovačka Republika', url: 'https://enciklopedija.hr/clanak/dubrovacka-republika'},
+    fuente: {title: 'Hrvatska enciklopedija · Dubrovačka Republika', url: 'https://enciklopedija.hr/clanak/dubrovacka-republika', locator: 'Rector mensual, consejos republicanos, superioridad húngara y tributo otomano desde 1458.'},
   },
   {
     territorio: 'Tirol', desde: 1595, hasta: 1601,

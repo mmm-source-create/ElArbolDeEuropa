@@ -227,6 +227,22 @@
       "path": "docs/reports/reviewed/v5.9-bosnia-hum.json",
       "kind": "reviewed-audit",
       "maintenance": "Instantánea revisada de V5.9; auditorías actuales en .cache/audits/."
+    },
+    {
+      "path": "prototypes/euv-locations/posavina-ragusa-review.json",
+      "kind": "historical-selection",
+      "maintenance": "Fases, ámbitos personales y celdas mixtas documentadas; revisión anual de 1200–1800."
+    },
+    {
+      "path": "prototypes/euv-locations/coastal-subdivisions.json",
+      "kind": "geometry-reference",
+      "maintenance": "Originales archivados y divisiones internas costeras con costuras aproximadas; verificación de contorno y no solapamiento.",
+      "producer": "scripts/cartography/apply-coastal-subdivisions.py"
+    },
+    {
+      "path": "docs/reports/reviewed/v5.10-posavina-ragusa.json",
+      "kind": "reviewed-audit",
+      "maintenance": "Instantánea V5.10 con auditoría anual, contraste con V5.9 y equivalencia de contornos; diagnósticos actuales en .cache/audits/."
     }
   ]
 }

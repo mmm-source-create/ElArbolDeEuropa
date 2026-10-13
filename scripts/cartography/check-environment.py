@@ -61,6 +61,8 @@ def main():
             if path.suffix in (".json", ".svg"):
                 shutil.copyfile(path, scratch / path.name)
         environment = {**os.environ, "EADE_MAP_DATA_DIR": str(scratch)}
+        subprocess.run([sys.executable, str(TOOLS / 'apply-coastal-subdivisions.py'), '--check'],
+            cwd=scratch, env=environment, check=True)
         for script, artifact in [
             ("build-location-inventory.py", "location-inventory.json"),
             ("build-regional-extent-cells.py", "regional-extent-cells.json"),

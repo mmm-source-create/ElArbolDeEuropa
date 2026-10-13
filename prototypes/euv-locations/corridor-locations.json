@@ -73522,6 +73522,2245 @@
       "precision": "regional_approximation",
       "limitedCore": true,
       "authorityCondition": "control disputado"
+    },
+    {
+      "name": "Donji Kraji · Bosnia · Donji Kraji",
+      "corridor": "Kozara–Glaž y costa ragusea · revisión regional",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1200,
+        "through": 1462
+      },
+      "versions": [
+        {
+          "from": 1200,
+          "ids": [
+            "Kljuc"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "La síntesis histórica incluye Donji Kraji en el ámbito de Kulin; 1244 es primera constancia de la región, no creación. Señoríos internos y cambios de superioridad no eliminan su pertenencia regional."
+        }
+      ],
+      "note": "La síntesis histórica incluye Donji Kraji en el ámbito de Kulin; 1244 es primera constancia de la región, no creación. Señoríos internos y cambios de superioridad no eliminan su pertenencia regional.",
+      "sources": [
+        {
+          "title": "Hrvatska enciklopedija · Bosna i Hercegovina",
+          "url": "https://www.enciklopedija.hr/clanak/bosna-i-hercegovina",
+          "locator": "Historia medieval: Kulin, límites entre Drina y Grmeč; división de 1253; Usora/Soli en 1324; Vrhbosna/Hodidjed bajo los otomanos en 1435; conquista de 1463. La síntesis regional y la entrada Usora difieren sobre la incorporación c.1204."
+        },
+        {
+          "title": "Hrvatska enciklopedija · Donji kraji",
+          "url": "https://enciklopedija.hr/clanak/donji-kraji",
+          "locator": "Banica/Ključ, Vrbanja y Zemljanik; carta de 1244, señoríos locales y banato de Jajce. Kotor es Kotor Varoš, no la bahía adriática."
+        },
+        {
+          "title": "Hrvatski povijesni muzej · Marko Vego, mapa medieval de Bosnia (1957)",
+          "url": "https://kartevgi.hismus.hr/karte/povijesna-karta-srednjovjekovne-bosne/",
+          "locator": "HPM 104339, dos hojas: contraste de comarcas, cuencas y cordilleras. Combina épocas y posesiones temporales; las fechas se verifican en las entradas escritas, no por el color de la carta."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": true
+    },
+    {
+      "name": "Donji Kraji · Jajce · frente de Donji Kraji",
+      "corridor": "Kozara–Glaž y costa ragusea · revisión regional",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1463,
+        "through": 1502
+      },
+      "versions": [
+        {
+          "from": 1463,
+          "ids": [
+            "Kljuc"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Recuperación y defensa húngaras, con pérdidas progresivas y posiciones otomanas consolidadas en 1503. El polígono del relieve atraviesa el frente."
+        }
+      ],
+      "note": "Recuperación y defensa húngaras, con pérdidas progresivas y posiciones otomanas consolidadas en 1503. El polígono del relieve atraviesa el frente.",
+      "sources": [
+        {
+          "title": "Hrvatska enciklopedija · Jajačka banovina",
+          "url": "https://enciklopedija.hr/clanak/jajacka-banovina",
+          "locator": "Banato de 1463–1527, Kozarac/Livač y repliegue gradual del frente; en 1518 quedaban Jajce y Banja Luka como posiciones principales."
+        },
+        {
+          "title": "Hrvatska enciklopedija · Donji kraji",
+          "url": "https://enciklopedija.hr/clanak/donji-kraji",
+          "locator": "Banica/Ključ, Vrbanja y Zemljanik; carta de 1244, señoríos locales y banato de Jajce. Kotor es Kotor Varoš, no la bahía adriática."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": true,
+      "authorityCondition": "control disputado"
+    },
+    {
+      "name": "Donji Kraji · Bosnia otomana · Kljuc 1503",
+      "corridor": "Kozara–Glaž y costa ragusea · revisión regional",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1503,
+        "through": 1800
+      },
+      "versions": [
+        {
+          "from": 1503,
+          "ids": [
+            "Kljuc"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Curso territorial otomano documentado para este ámbito. Los cortes anuales aproximan las campañas y no trasladan la fecha de una ciudad a todas las tierras de la provincia."
+        }
+      ],
+      "note": "Curso territorial otomano documentado para este ámbito. Los cortes anuales aproximan las campañas y no trasladan la fecha de una ciudad a todas las tierras de la provincia.",
+      "sources": [
+        {
+          "title": "Hrvatska enciklopedija · Jajačka banovina",
+          "url": "https://enciklopedija.hr/clanak/jajacka-banovina",
+          "locator": "Banato de 1463–1527, Kozarac/Livač y repliegue gradual del frente; en 1518 quedaban Jajce y Banja Luka como posiciones principales."
+        },
+        {
+          "title": "Hrvatska enciklopedija · Doboj",
+          "url": "https://www.enciklopedija.hr/clanak/doboj",
+          "locator": "Fortaleza de Usora, batalla de 1415; posesión otomana anterior a 1503 y ocupaciones austríacas de 1697 y en la guerra de 1716–1718. Son campañas militares, no cesiones permanentes."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": true
+    },
+    {
+      "name": "Donji Kraji · Bosnia · reino durante la conquista de 1463",
+      "corridor": "Kozara–Glaž y costa ragusea · revisión regional",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1463,
+        "through": 1463
+      },
+      "versions": [
+        {
+          "from": 1463,
+          "ids": [
+            "Kljuc"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Reino de Esteban Tomašević en el primer tramo de 1463, antes de la campaña otomana y de su ejecución. Se conserva la selección regional anterior a la conquista, con control disputado. El resumen anual superpone cambios ocurridos en distintos meses; no prueba posesión simultánea del rey, del sultán o de los banatos húngaros durante todo el año. Vrhbosna, otomana desde 1435, queda fuera."
+        }
+      ],
+      "note": "Reino de Esteban Tomašević en el primer tramo de 1463, antes de la campaña otomana y de su ejecución. Se conserva la selección regional anterior a la conquista, con control disputado. El resumen anual superpone cambios ocurridos en distintos meses; no prueba posesión simultánea del rey, del sultán o de los banatos húngaros durante todo el año. Vrhbosna, otomana desde 1435, queda fuera.",
+      "sources": [
+        {
+          "title": "Hrvatska enciklopedija · Bosna i Hercegovina",
+          "url": "https://www.enciklopedija.hr/clanak/bosna-i-hercegovina",
+          "locator": "Historia medieval: Kulin, límites entre Drina y Grmeč; división de 1253; Usora/Soli en 1324; Vrhbosna/Hodidjed bajo los otomanos en 1435; conquista de 1463. La síntesis regional y la entrada Usora difieren sobre la incorporación c.1204."
+        },
+        {
+          "title": "Hrvatski biografski leksikon · Kotromanići",
+          "url": "https://hbl.lzmk.hr/Clanak/kotromanici?handler=ButtonSnimi",
+          "locator": "Prijezda y Esteban I: carta de 23 julio 1290 y resistencia frente a los Šubić; Esteban II: exilio desde 1314, retorno antes del verano de 1319; Tvrtko: partición de 1373, Trebinje en 1377 y recuperación de Hum en 1382."
+        },
+        {
+          "title": "Hrvatska enciklopedija · Jajačka banovina",
+          "url": "https://enciklopedija.hr/clanak/jajacka-banovina",
+          "locator": "Banato de 1463–1527, Kozarac/Livač y repliegue gradual del frente; en 1518 quedaban Jajce y Banja Luka como posiciones principales."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": true,
+      "authorityCondition": "control disputado"
+    },
+    {
+      "name": "Kozara · marco eslavón",
+      "corridor": "Kozara–Glaž y costa ragusea · revisión regional",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1200,
+        "through": 1379
+      },
+      "versions": [
+        {
+          "from": 1200,
+          "ids": [
+            "Kozara"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Marco croata-húngaro al norte de Donji Kraji. Se mantiene la región anterior a la expansión bosnia; no se deduce soberanía de una diócesis."
+        }
+      ],
+      "note": "Marco croata-húngaro al norte de Donji Kraji. Se mantiene la región anterior a la expansión bosnia; no se deduce soberanía de una diócesis.",
+      "sources": [
+        {
+          "title": "Museo del Reino de Bosnia · Glaž",
+          "url": "https://muzejbosanskogkraljevstva.ba/en/glaz-2/",
+          "locator": "Expansión de los Hrvatinić en la década de 1380; concesión de Glaž documentada en 1391. No identifica el polígono del SVG con el recinto de una fortaleza."
+        },
+        {
+          "title": "Spahić · Neki problemi granica Bosne i Hercegovine",
+          "url": "https://geoubih.ba/Izdanja/Actavol4br8/3.%20Spahic%20-%20Granice%20BiH.pdf",
+          "locator": "Acta geographica BiH 8 (2017), p.10, fig.1: mapa de Vego de la Bosnia medieval. Contraste visual de Kozara, Vrbas, Glaž y los vecinos, no traslado de toda la expansión de Tvrtko a un año."
+        },
+        {
+          "title": "Hrvatska enciklopedija · Glaž",
+          "url": "https://www.enciklopedija.hr/Clanak/glaz?handler=ButtonSnimi",
+          "locator": "Ubicación discutida, ámbito de Ukrina; Dragiša en 1391 y confirmación de Tomás a sus descendientes en 1446. La última mención de 1469 no fecha la conquista."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": true
+    },
+    {
+      "name": "Kozara · expansión de los años 1380 · Eslavonia",
+      "corridor": "Kozara–Glaž y costa ragusea · revisión regional",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1380,
+        "through": 1390
+      },
+      "versions": [
+        {
+          "from": 1380,
+          "ids": [
+            "Kozara"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Ventana aproximada de expansión: las fuentes indican la década, no un año de conquista. La celda representa el frente regional, no dos gobiernos uniformes."
+        }
+      ],
+      "note": "Ventana aproximada de expansión: las fuentes indican la década, no un año de conquista. La celda representa el frente regional, no dos gobiernos uniformes.",
+      "sources": [
+        {
+          "title": "Museo del Reino de Bosnia · Glaž",
+          "url": "https://muzejbosanskogkraljevstva.ba/en/glaz-2/",
+          "locator": "Expansión de los Hrvatinić en la década de 1380; concesión de Glaž documentada en 1391. No identifica el polígono del SVG con el recinto de una fortaleza."
+        },
+        {
+          "title": "Spahić · Neki problemi granica Bosne i Hercegovine",
+          "url": "https://geoubih.ba/Izdanja/Actavol4br8/3.%20Spahic%20-%20Granice%20BiH.pdf",
+          "locator": "Acta geographica BiH 8 (2017), p.10, fig.1: mapa de Vego de la Bosnia medieval. Contraste visual de Kozara, Vrbas, Glaž y los vecinos, no traslado de toda la expansión de Tvrtko a un año."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": true
+    },
+    {
+      "name": "Kozara · expansión de los años 1380 · Reino de Bosnia",
+      "corridor": "Kozara–Glaž y costa ragusea · revisión regional",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1380,
+        "through": 1390
+      },
+      "versions": [
+        {
+          "from": 1380,
+          "ids": [
+            "Kozara"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Ventana aproximada de expansión: las fuentes indican la década, no un año de conquista. La celda representa el frente regional, no dos gobiernos uniformes."
+        }
+      ],
+      "note": "Ventana aproximada de expansión: las fuentes indican la década, no un año de conquista. La celda representa el frente regional, no dos gobiernos uniformes.",
+      "sources": [
+        {
+          "title": "Museo del Reino de Bosnia · Glaž",
+          "url": "https://muzejbosanskogkraljevstva.ba/en/glaz-2/",
+          "locator": "Expansión de los Hrvatinić en la década de 1380; concesión de Glaž documentada en 1391. No identifica el polígono del SVG con el recinto de una fortaleza."
+        },
+        {
+          "title": "Spahić · Neki problemi granica Bosne i Hercegovine",
+          "url": "https://geoubih.ba/Izdanja/Actavol4br8/3.%20Spahic%20-%20Granice%20BiH.pdf",
+          "locator": "Acta geographica BiH 8 (2017), p.10, fig.1: mapa de Vego de la Bosnia medieval. Contraste visual de Kozara, Vrbas, Glaž y los vecinos, no traslado de toda la expansión de Tvrtko a un año."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": true
+    },
+    {
+      "name": "Kozara · señoríos del reino bosnio",
+      "corridor": "Kozara–Glaž y costa ragusea · revisión regional",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1391,
+        "through": 1462
+      },
+      "versions": [
+        {
+          "from": 1391,
+          "ids": [
+            "Kozara"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Dominio bosnio con señoríos locales. El contorno del SVG es regional y la ubicación precisa de la fortaleza de Glaž sigue discutida."
+        }
+      ],
+      "note": "Dominio bosnio con señoríos locales. El contorno del SVG es regional y la ubicación precisa de la fortaleza de Glaž sigue discutida.",
+      "sources": [
+        {
+          "title": "Hrvatska enciklopedija · Glaž",
+          "url": "https://www.enciklopedija.hr/Clanak/glaz?handler=ButtonSnimi",
+          "locator": "Ubicación discutida, ámbito de Ukrina; Dragiša en 1391 y confirmación de Tomás a sus descendientes en 1446. La última mención de 1469 no fecha la conquista."
+        },
+        {
+          "title": "Museo del Reino de Bosnia · Glaž",
+          "url": "https://muzejbosanskogkraljevstva.ba/en/glaz-2/",
+          "locator": "Expansión de los Hrvatinić en la década de 1380; concesión de Glaž documentada en 1391. No identifica el polígono del SVG con el recinto de una fortaleza."
+        },
+        {
+          "title": "Spahić · Neki problemi granica Bosne i Hercegovine",
+          "url": "https://geoubih.ba/Izdanja/Actavol4br8/3.%20Spahic%20-%20Granice%20BiH.pdf",
+          "locator": "Acta geographica BiH 8 (2017), p.10, fig.1: mapa de Vego de la Bosnia medieval. Contraste visual de Kozara, Vrbas, Glaž y los vecinos, no traslado de toda la expansión de Tvrtko a un año."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": true
+    },
+    {
+      "name": "Kozara · campaña de 1463 · Reino de Bosnia",
+      "corridor": "Kozara–Glaž y costa ragusea · revisión regional",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1463,
+        "through": 1463
+      },
+      "versions": [
+        {
+          "from": 1463,
+          "ids": [
+            "Kozara"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Resumen anual de la conquista y recuperación de posiciones; no control simultáneo uniforme de todo el relieve."
+        }
+      ],
+      "note": "Resumen anual de la conquista y recuperación de posiciones; no control simultáneo uniforme de todo el relieve.",
+      "sources": [
+        {
+          "title": "Hrvatska enciklopedija · Jajačka banovina",
+          "url": "https://enciklopedija.hr/clanak/jajacka-banovina",
+          "locator": "Banato de 1463–1527, Kozarac/Livač y repliegue gradual del frente; en 1518 quedaban Jajce y Banja Luka como posiciones principales."
+        },
+        {
+          "title": "Hrvatska enciklopedija · Bosna i Hercegovina",
+          "url": "https://www.enciklopedija.hr/clanak/bosna-i-hercegovina",
+          "locator": "Historia medieval: Kulin, límites entre Drina y Grmeč; división de 1253; Usora/Soli en 1324; Vrhbosna/Hodidjed bajo los otomanos en 1435; conquista de 1463. La síntesis regional y la entrada Usora difieren sobre la incorporación c.1204."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": true,
+      "authorityCondition": "control disputado"
+    },
+    {
+      "name": "Kozara · campaña de 1463 · Bosnia y Herzegovina otomanas",
+      "corridor": "Kozara–Glaž y costa ragusea · revisión regional",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1463,
+        "through": 1463
+      },
+      "versions": [
+        {
+          "from": 1463,
+          "ids": [
+            "Kozara"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Resumen anual de la conquista y recuperación de posiciones; no control simultáneo uniforme de todo el relieve."
+        }
+      ],
+      "note": "Resumen anual de la conquista y recuperación de posiciones; no control simultáneo uniforme de todo el relieve.",
+      "sources": [
+        {
+          "title": "Hrvatska enciklopedija · Jajačka banovina",
+          "url": "https://enciklopedija.hr/clanak/jajacka-banovina",
+          "locator": "Banato de 1463–1527, Kozarac/Livač y repliegue gradual del frente; en 1518 quedaban Jajce y Banja Luka como posiciones principales."
+        },
+        {
+          "title": "Hrvatska enciklopedija · Bosna i Hercegovina",
+          "url": "https://www.enciklopedija.hr/clanak/bosna-i-hercegovina",
+          "locator": "Historia medieval: Kulin, límites entre Drina y Grmeč; división de 1253; Usora/Soli en 1324; Vrhbosna/Hodidjed bajo los otomanos en 1435; conquista de 1463. La síntesis regional y la entrada Usora difieren sobre la incorporación c.1204."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": true,
+      "authorityCondition": "control disputado"
+    },
+    {
+      "name": "Kozara · campaña de 1463 · Banato húngaro de Jajce",
+      "corridor": "Kozara–Glaž y costa ragusea · revisión regional",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1463,
+        "through": 1463
+      },
+      "versions": [
+        {
+          "from": 1463,
+          "ids": [
+            "Kozara"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Resumen anual de la conquista y recuperación de posiciones; no control simultáneo uniforme de todo el relieve."
+        }
+      ],
+      "note": "Resumen anual de la conquista y recuperación de posiciones; no control simultáneo uniforme de todo el relieve.",
+      "sources": [
+        {
+          "title": "Hrvatska enciklopedija · Jajačka banovina",
+          "url": "https://enciklopedija.hr/clanak/jajacka-banovina",
+          "locator": "Banato de 1463–1527, Kozarac/Livač y repliegue gradual del frente; en 1518 quedaban Jajce y Banja Luka como posiciones principales."
+        },
+        {
+          "title": "Hrvatska enciklopedija · Bosna i Hercegovina",
+          "url": "https://www.enciklopedija.hr/clanak/bosna-i-hercegovina",
+          "locator": "Historia medieval: Kulin, límites entre Drina y Grmeč; división de 1253; Usora/Soli en 1324; Vrhbosna/Hodidjed bajo los otomanos en 1435; conquista de 1463. La síntesis regional y la entrada Usora difieren sobre la incorporación c.1204."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": true,
+      "authorityCondition": "control disputado"
+    },
+    {
+      "name": "Kozara · frontera del banato · Banato húngaro de Jajce",
+      "corridor": "Kozara–Glaž y costa ragusea · revisión regional",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1490,
+        "through": 1527
+      },
+      "versions": [
+        {
+          "from": 1490,
+          "ids": [
+            "Kozara"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Celda fronteriza mixta: posiciones defensivas y penetración otomana, con repliegue progresivo. No afirma que Glaž siguiera intacta hasta 1527."
+        }
+      ],
+      "note": "Celda fronteriza mixta: posiciones defensivas y penetración otomana, con repliegue progresivo. No afirma que Glaž siguiera intacta hasta 1527.",
+      "sources": [
+        {
+          "title": "Hrvatska enciklopedija · Jajačka banovina",
+          "url": "https://enciklopedija.hr/clanak/jajacka-banovina",
+          "locator": "Banato de 1463–1527, Kozarac/Livač y repliegue gradual del frente; en 1518 quedaban Jajce y Banja Luka como posiciones principales."
+        },
+        {
+          "title": "Universidad de Zagreb · Bulwark of Europe",
+          "url": "https://vojnakrajina.ffzg.unizg.hr/en/sazeti-prikaz-osmanskih-osvajanja-hrvatskog-prostora-u-16-stoljecu/",
+          "locator": "Conquistas diferenciadas: Jajce/Banja Luka en 1528, Gradiška/Brod en 1536 y Dubica en 1538. Las campañas no prueban una frontera anual exacta en todo el relieve."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": true
+    },
+    {
+      "name": "Kozara · frontera del banato · Bosnia y Herzegovina otomanas",
+      "corridor": "Kozara–Glaž y costa ragusea · revisión regional",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1490,
+        "through": 1527
+      },
+      "versions": [
+        {
+          "from": 1490,
+          "ids": [
+            "Kozara"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Celda fronteriza mixta: posiciones defensivas y penetración otomana, con repliegue progresivo. No afirma que Glaž siguiera intacta hasta 1527."
+        }
+      ],
+      "note": "Celda fronteriza mixta: posiciones defensivas y penetración otomana, con repliegue progresivo. No afirma que Glaž siguiera intacta hasta 1527.",
+      "sources": [
+        {
+          "title": "Hrvatska enciklopedija · Jajačka banovina",
+          "url": "https://enciklopedija.hr/clanak/jajacka-banovina",
+          "locator": "Banato de 1463–1527, Kozarac/Livač y repliegue gradual del frente; en 1518 quedaban Jajce y Banja Luka como posiciones principales."
+        },
+        {
+          "title": "Universidad de Zagreb · Bulwark of Europe",
+          "url": "https://vojnakrajina.ffzg.unizg.hr/en/sazeti-prikaz-osmanskih-osvajanja-hrvatskog-prostora-u-16-stoljecu/",
+          "locator": "Conquistas diferenciadas: Jajce/Banja Luka en 1528, Gradiška/Brod en 1536 y Dubica en 1538. Las campañas no prueban una frontera anual exacta en todo el relieve."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": true
+    },
+    {
+      "name": "Kozara · avance hacia el Sava · Croacia",
+      "corridor": "Kozara–Glaž y costa ragusea · revisión regional",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1528,
+        "through": 1535
+      },
+      "versions": [
+        {
+          "from": 1528,
+          "ids": [
+            "Kozara"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Transición regional tras la caída de Banja Luka y antes de Gradiška. La datación exacta de la conquista de cada subárea no está probada; se conserva explícita esa incertidumbre."
+        }
+      ],
+      "note": "Transición regional tras la caída de Banja Luka y antes de Gradiška. La datación exacta de la conquista de cada subárea no está probada; se conserva explícita esa incertidumbre.",
+      "sources": [
+        {
+          "title": "Universidad de Zagreb · Bulwark of Europe",
+          "url": "https://vojnakrajina.ffzg.unizg.hr/en/sazeti-prikaz-osmanskih-osvajanja-hrvatskog-prostora-u-16-stoljecu/",
+          "locator": "Conquistas diferenciadas: Jajce/Banja Luka en 1528, Gradiška/Brod en 1536 y Dubica en 1538. Las campañas no prueban una frontera anual exacta en todo el relieve."
+        },
+        {
+          "title": "Hrvatska enciklopedija · Jajačka banovina",
+          "url": "https://enciklopedija.hr/clanak/jajacka-banovina",
+          "locator": "Banato de 1463–1527, Kozarac/Livač y repliegue gradual del frente; en 1518 quedaban Jajce y Banja Luka como posiciones principales."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": true
+    },
+    {
+      "name": "Kozara · avance hacia el Sava · Bosnia y Herzegovina otomanas",
+      "corridor": "Kozara–Glaž y costa ragusea · revisión regional",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1528,
+        "through": 1535
+      },
+      "versions": [
+        {
+          "from": 1528,
+          "ids": [
+            "Kozara"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Transición regional tras la caída de Banja Luka y antes de Gradiška. La datación exacta de la conquista de cada subárea no está probada; se conserva explícita esa incertidumbre."
+        }
+      ],
+      "note": "Transición regional tras la caída de Banja Luka y antes de Gradiška. La datación exacta de la conquista de cada subárea no está probada; se conserva explícita esa incertidumbre.",
+      "sources": [
+        {
+          "title": "Universidad de Zagreb · Bulwark of Europe",
+          "url": "https://vojnakrajina.ffzg.unizg.hr/en/sazeti-prikaz-osmanskih-osvajanja-hrvatskog-prostora-u-16-stoljecu/",
+          "locator": "Conquistas diferenciadas: Jajce/Banja Luka en 1528, Gradiška/Brod en 1536 y Dubica en 1538. Las campañas no prueban una frontera anual exacta en todo el relieve."
+        },
+        {
+          "title": "Hrvatska enciklopedija · Jajačka banovina",
+          "url": "https://enciklopedija.hr/clanak/jajacka-banovina",
+          "locator": "Banato de 1463–1527, Kozarac/Livač y repliegue gradual del frente; en 1518 quedaban Jajce y Banja Luka como posiciones principales."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": true
+    },
+    {
+      "name": "Kozara · provincia otomana",
+      "corridor": "Kozara–Glaž y costa ragusea · revisión regional",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1536,
+        "through": 1800
+      },
+      "versions": [
+        {
+          "from": 1536,
+          "ids": [
+            "Kozara"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Dominio otomano del interior al sur del Sava, consolidado antes de la conquista de Dubica. No comprende la franja fluvial imperial de 1718–1739."
+        }
+      ],
+      "note": "Dominio otomano del interior al sur del Sava, consolidado antes de la conquista de Dubica. No comprende la franja fluvial imperial de 1718–1739.",
+      "sources": [
+        {
+          "title": "Universidad de Zagreb · Bulwark of Europe",
+          "url": "https://vojnakrajina.ffzg.unizg.hr/en/sazeti-prikaz-osmanskih-osvajanja-hrvatskog-prostora-u-16-stoljecu/",
+          "locator": "Conquistas diferenciadas: Jajce/Banja Luka en 1528, Gradiška/Brod en 1536 y Dubica en 1538. Las campañas no prueban una frontera anual exacta en todo el relieve."
+        },
+        {
+          "title": "Spahić · Neki problemi granica Bosne i Hercegovine",
+          "url": "https://geoubih.ba/Izdanja/Actavol4br8/3.%20Spahic%20-%20Granice%20BiH.pdf",
+          "locator": "Acta geographica BiH 8 (2017), p.10, fig.1: mapa de Vego de la Bosnia medieval. Contraste visual de Kozara, Vrbas, Glaž y los vecinos, no traslado de toda la expansión de Tvrtko a un año."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": true
+    },
+    {
+      "name": "Glaz · marco eslavón",
+      "corridor": "Kozara–Glaž y costa ragusea · revisión regional",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1200,
+        "through": 1379
+      },
+      "versions": [
+        {
+          "from": 1200,
+          "ids": [
+            "Glaz"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Marco croata-húngaro al norte de Donji Kraji. Se mantiene la región anterior a la expansión bosnia; no se deduce soberanía de una diócesis."
+        }
+      ],
+      "note": "Marco croata-húngaro al norte de Donji Kraji. Se mantiene la región anterior a la expansión bosnia; no se deduce soberanía de una diócesis.",
+      "sources": [
+        {
+          "title": "Museo del Reino de Bosnia · Glaž",
+          "url": "https://muzejbosanskogkraljevstva.ba/en/glaz-2/",
+          "locator": "Expansión de los Hrvatinić en la década de 1380; concesión de Glaž documentada en 1391. No identifica el polígono del SVG con el recinto de una fortaleza."
+        },
+        {
+          "title": "Spahić · Neki problemi granica Bosne i Hercegovine",
+          "url": "https://geoubih.ba/Izdanja/Actavol4br8/3.%20Spahic%20-%20Granice%20BiH.pdf",
+          "locator": "Acta geographica BiH 8 (2017), p.10, fig.1: mapa de Vego de la Bosnia medieval. Contraste visual de Kozara, Vrbas, Glaž y los vecinos, no traslado de toda la expansión de Tvrtko a un año."
+        },
+        {
+          "title": "Hrvatska enciklopedija · Glaž",
+          "url": "https://www.enciklopedija.hr/Clanak/glaz?handler=ButtonSnimi",
+          "locator": "Ubicación discutida, ámbito de Ukrina; Dragiša en 1391 y confirmación de Tomás a sus descendientes en 1446. La última mención de 1469 no fecha la conquista."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": true
+    },
+    {
+      "name": "Glaz · expansión de los años 1380 · Eslavonia",
+      "corridor": "Kozara–Glaž y costa ragusea · revisión regional",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1380,
+        "through": 1390
+      },
+      "versions": [
+        {
+          "from": 1380,
+          "ids": [
+            "Glaz"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Ventana aproximada de expansión: las fuentes indican la década, no un año de conquista. La celda representa el frente regional, no dos gobiernos uniformes."
+        }
+      ],
+      "note": "Ventana aproximada de expansión: las fuentes indican la década, no un año de conquista. La celda representa el frente regional, no dos gobiernos uniformes.",
+      "sources": [
+        {
+          "title": "Museo del Reino de Bosnia · Glaž",
+          "url": "https://muzejbosanskogkraljevstva.ba/en/glaz-2/",
+          "locator": "Expansión de los Hrvatinić en la década de 1380; concesión de Glaž documentada en 1391. No identifica el polígono del SVG con el recinto de una fortaleza."
+        },
+        {
+          "title": "Spahić · Neki problemi granica Bosne i Hercegovine",
+          "url": "https://geoubih.ba/Izdanja/Actavol4br8/3.%20Spahic%20-%20Granice%20BiH.pdf",
+          "locator": "Acta geographica BiH 8 (2017), p.10, fig.1: mapa de Vego de la Bosnia medieval. Contraste visual de Kozara, Vrbas, Glaž y los vecinos, no traslado de toda la expansión de Tvrtko a un año."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": true
+    },
+    {
+      "name": "Glaz · expansión de los años 1380 · Reino de Bosnia",
+      "corridor": "Kozara–Glaž y costa ragusea · revisión regional",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1380,
+        "through": 1390
+      },
+      "versions": [
+        {
+          "from": 1380,
+          "ids": [
+            "Glaz"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Ventana aproximada de expansión: las fuentes indican la década, no un año de conquista. La celda representa el frente regional, no dos gobiernos uniformes."
+        }
+      ],
+      "note": "Ventana aproximada de expansión: las fuentes indican la década, no un año de conquista. La celda representa el frente regional, no dos gobiernos uniformes.",
+      "sources": [
+        {
+          "title": "Museo del Reino de Bosnia · Glaž",
+          "url": "https://muzejbosanskogkraljevstva.ba/en/glaz-2/",
+          "locator": "Expansión de los Hrvatinić en la década de 1380; concesión de Glaž documentada en 1391. No identifica el polígono del SVG con el recinto de una fortaleza."
+        },
+        {
+          "title": "Spahić · Neki problemi granica Bosne i Hercegovine",
+          "url": "https://geoubih.ba/Izdanja/Actavol4br8/3.%20Spahic%20-%20Granice%20BiH.pdf",
+          "locator": "Acta geographica BiH 8 (2017), p.10, fig.1: mapa de Vego de la Bosnia medieval. Contraste visual de Kozara, Vrbas, Glaž y los vecinos, no traslado de toda la expansión de Tvrtko a un año."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": true
+    },
+    {
+      "name": "Glaz · señoríos del reino bosnio",
+      "corridor": "Kozara–Glaž y costa ragusea · revisión regional",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1391,
+        "through": 1462
+      },
+      "versions": [
+        {
+          "from": 1391,
+          "ids": [
+            "Glaz"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Dominio bosnio con señoríos locales. El contorno del SVG es regional y la ubicación precisa de la fortaleza de Glaž sigue discutida."
+        }
+      ],
+      "note": "Dominio bosnio con señoríos locales. El contorno del SVG es regional y la ubicación precisa de la fortaleza de Glaž sigue discutida.",
+      "sources": [
+        {
+          "title": "Hrvatska enciklopedija · Glaž",
+          "url": "https://www.enciklopedija.hr/Clanak/glaz?handler=ButtonSnimi",
+          "locator": "Ubicación discutida, ámbito de Ukrina; Dragiša en 1391 y confirmación de Tomás a sus descendientes en 1446. La última mención de 1469 no fecha la conquista."
+        },
+        {
+          "title": "Museo del Reino de Bosnia · Glaž",
+          "url": "https://muzejbosanskogkraljevstva.ba/en/glaz-2/",
+          "locator": "Expansión de los Hrvatinić en la década de 1380; concesión de Glaž documentada en 1391. No identifica el polígono del SVG con el recinto de una fortaleza."
+        },
+        {
+          "title": "Spahić · Neki problemi granica Bosne i Hercegovine",
+          "url": "https://geoubih.ba/Izdanja/Actavol4br8/3.%20Spahic%20-%20Granice%20BiH.pdf",
+          "locator": "Acta geographica BiH 8 (2017), p.10, fig.1: mapa de Vego de la Bosnia medieval. Contraste visual de Kozara, Vrbas, Glaž y los vecinos, no traslado de toda la expansión de Tvrtko a un año."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": true
+    },
+    {
+      "name": "Glaz · campaña de 1463 · Reino de Bosnia",
+      "corridor": "Kozara–Glaž y costa ragusea · revisión regional",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1463,
+        "through": 1463
+      },
+      "versions": [
+        {
+          "from": 1463,
+          "ids": [
+            "Glaz"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Resumen anual de la conquista y recuperación de posiciones; no control simultáneo uniforme de todo el relieve."
+        }
+      ],
+      "note": "Resumen anual de la conquista y recuperación de posiciones; no control simultáneo uniforme de todo el relieve.",
+      "sources": [
+        {
+          "title": "Hrvatska enciklopedija · Jajačka banovina",
+          "url": "https://enciklopedija.hr/clanak/jajacka-banovina",
+          "locator": "Banato de 1463–1527, Kozarac/Livač y repliegue gradual del frente; en 1518 quedaban Jajce y Banja Luka como posiciones principales."
+        },
+        {
+          "title": "Hrvatska enciklopedija · Bosna i Hercegovina",
+          "url": "https://www.enciklopedija.hr/clanak/bosna-i-hercegovina",
+          "locator": "Historia medieval: Kulin, límites entre Drina y Grmeč; división de 1253; Usora/Soli en 1324; Vrhbosna/Hodidjed bajo los otomanos en 1435; conquista de 1463. La síntesis regional y la entrada Usora difieren sobre la incorporación c.1204."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": true,
+      "authorityCondition": "control disputado"
+    },
+    {
+      "name": "Glaz · campaña de 1463 · Bosnia y Herzegovina otomanas",
+      "corridor": "Kozara–Glaž y costa ragusea · revisión regional",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1463,
+        "through": 1463
+      },
+      "versions": [
+        {
+          "from": 1463,
+          "ids": [
+            "Glaz"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Resumen anual de la conquista y recuperación de posiciones; no control simultáneo uniforme de todo el relieve."
+        }
+      ],
+      "note": "Resumen anual de la conquista y recuperación de posiciones; no control simultáneo uniforme de todo el relieve.",
+      "sources": [
+        {
+          "title": "Hrvatska enciklopedija · Jajačka banovina",
+          "url": "https://enciklopedija.hr/clanak/jajacka-banovina",
+          "locator": "Banato de 1463–1527, Kozarac/Livač y repliegue gradual del frente; en 1518 quedaban Jajce y Banja Luka como posiciones principales."
+        },
+        {
+          "title": "Hrvatska enciklopedija · Bosna i Hercegovina",
+          "url": "https://www.enciklopedija.hr/clanak/bosna-i-hercegovina",
+          "locator": "Historia medieval: Kulin, límites entre Drina y Grmeč; división de 1253; Usora/Soli en 1324; Vrhbosna/Hodidjed bajo los otomanos en 1435; conquista de 1463. La síntesis regional y la entrada Usora difieren sobre la incorporación c.1204."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": true,
+      "authorityCondition": "control disputado"
+    },
+    {
+      "name": "Glaz · campaña de 1463 · Banato húngaro de Jajce",
+      "corridor": "Kozara–Glaž y costa ragusea · revisión regional",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1463,
+        "through": 1463
+      },
+      "versions": [
+        {
+          "from": 1463,
+          "ids": [
+            "Glaz"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Resumen anual de la conquista y recuperación de posiciones; no control simultáneo uniforme de todo el relieve."
+        }
+      ],
+      "note": "Resumen anual de la conquista y recuperación de posiciones; no control simultáneo uniforme de todo el relieve.",
+      "sources": [
+        {
+          "title": "Hrvatska enciklopedija · Jajačka banovina",
+          "url": "https://enciklopedija.hr/clanak/jajacka-banovina",
+          "locator": "Banato de 1463–1527, Kozarac/Livač y repliegue gradual del frente; en 1518 quedaban Jajce y Banja Luka como posiciones principales."
+        },
+        {
+          "title": "Hrvatska enciklopedija · Bosna i Hercegovina",
+          "url": "https://www.enciklopedija.hr/clanak/bosna-i-hercegovina",
+          "locator": "Historia medieval: Kulin, límites entre Drina y Grmeč; división de 1253; Usora/Soli en 1324; Vrhbosna/Hodidjed bajo los otomanos en 1435; conquista de 1463. La síntesis regional y la entrada Usora difieren sobre la incorporación c.1204."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": true,
+      "authorityCondition": "control disputado"
+    },
+    {
+      "name": "Glaz · frontera del banato · Banato húngaro de Jajce",
+      "corridor": "Kozara–Glaž y costa ragusea · revisión regional",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1490,
+        "through": 1527
+      },
+      "versions": [
+        {
+          "from": 1490,
+          "ids": [
+            "Glaz"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Celda fronteriza mixta: posiciones defensivas y penetración otomana, con repliegue progresivo. No afirma que Glaž siguiera intacta hasta 1527."
+        }
+      ],
+      "note": "Celda fronteriza mixta: posiciones defensivas y penetración otomana, con repliegue progresivo. No afirma que Glaž siguiera intacta hasta 1527.",
+      "sources": [
+        {
+          "title": "Hrvatska enciklopedija · Jajačka banovina",
+          "url": "https://enciklopedija.hr/clanak/jajacka-banovina",
+          "locator": "Banato de 1463–1527, Kozarac/Livač y repliegue gradual del frente; en 1518 quedaban Jajce y Banja Luka como posiciones principales."
+        },
+        {
+          "title": "Universidad de Zagreb · Bulwark of Europe",
+          "url": "https://vojnakrajina.ffzg.unizg.hr/en/sazeti-prikaz-osmanskih-osvajanja-hrvatskog-prostora-u-16-stoljecu/",
+          "locator": "Conquistas diferenciadas: Jajce/Banja Luka en 1528, Gradiška/Brod en 1536 y Dubica en 1538. Las campañas no prueban una frontera anual exacta en todo el relieve."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": true
+    },
+    {
+      "name": "Glaz · frontera del banato · Bosnia y Herzegovina otomanas",
+      "corridor": "Kozara–Glaž y costa ragusea · revisión regional",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1490,
+        "through": 1527
+      },
+      "versions": [
+        {
+          "from": 1490,
+          "ids": [
+            "Glaz"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Celda fronteriza mixta: posiciones defensivas y penetración otomana, con repliegue progresivo. No afirma que Glaž siguiera intacta hasta 1527."
+        }
+      ],
+      "note": "Celda fronteriza mixta: posiciones defensivas y penetración otomana, con repliegue progresivo. No afirma que Glaž siguiera intacta hasta 1527.",
+      "sources": [
+        {
+          "title": "Hrvatska enciklopedija · Jajačka banovina",
+          "url": "https://enciklopedija.hr/clanak/jajacka-banovina",
+          "locator": "Banato de 1463–1527, Kozarac/Livač y repliegue gradual del frente; en 1518 quedaban Jajce y Banja Luka como posiciones principales."
+        },
+        {
+          "title": "Universidad de Zagreb · Bulwark of Europe",
+          "url": "https://vojnakrajina.ffzg.unizg.hr/en/sazeti-prikaz-osmanskih-osvajanja-hrvatskog-prostora-u-16-stoljecu/",
+          "locator": "Conquistas diferenciadas: Jajce/Banja Luka en 1528, Gradiška/Brod en 1536 y Dubica en 1538. Las campañas no prueban una frontera anual exacta en todo el relieve."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": true
+    },
+    {
+      "name": "Glaz · avance hacia el Sava · Croacia",
+      "corridor": "Kozara–Glaž y costa ragusea · revisión regional",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1528,
+        "through": 1535
+      },
+      "versions": [
+        {
+          "from": 1528,
+          "ids": [
+            "Glaz"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Transición regional tras la caída de Banja Luka y antes de Gradiška. La datación exacta de la conquista de cada subárea no está probada; se conserva explícita esa incertidumbre."
+        }
+      ],
+      "note": "Transición regional tras la caída de Banja Luka y antes de Gradiška. La datación exacta de la conquista de cada subárea no está probada; se conserva explícita esa incertidumbre.",
+      "sources": [
+        {
+          "title": "Universidad de Zagreb · Bulwark of Europe",
+          "url": "https://vojnakrajina.ffzg.unizg.hr/en/sazeti-prikaz-osmanskih-osvajanja-hrvatskog-prostora-u-16-stoljecu/",
+          "locator": "Conquistas diferenciadas: Jajce/Banja Luka en 1528, Gradiška/Brod en 1536 y Dubica en 1538. Las campañas no prueban una frontera anual exacta en todo el relieve."
+        },
+        {
+          "title": "Hrvatska enciklopedija · Jajačka banovina",
+          "url": "https://enciklopedija.hr/clanak/jajacka-banovina",
+          "locator": "Banato de 1463–1527, Kozarac/Livač y repliegue gradual del frente; en 1518 quedaban Jajce y Banja Luka como posiciones principales."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": true
+    },
+    {
+      "name": "Glaz · avance hacia el Sava · Bosnia y Herzegovina otomanas",
+      "corridor": "Kozara–Glaž y costa ragusea · revisión regional",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1528,
+        "through": 1535
+      },
+      "versions": [
+        {
+          "from": 1528,
+          "ids": [
+            "Glaz"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Transición regional tras la caída de Banja Luka y antes de Gradiška. La datación exacta de la conquista de cada subárea no está probada; se conserva explícita esa incertidumbre."
+        }
+      ],
+      "note": "Transición regional tras la caída de Banja Luka y antes de Gradiška. La datación exacta de la conquista de cada subárea no está probada; se conserva explícita esa incertidumbre.",
+      "sources": [
+        {
+          "title": "Universidad de Zagreb · Bulwark of Europe",
+          "url": "https://vojnakrajina.ffzg.unizg.hr/en/sazeti-prikaz-osmanskih-osvajanja-hrvatskog-prostora-u-16-stoljecu/",
+          "locator": "Conquistas diferenciadas: Jajce/Banja Luka en 1528, Gradiška/Brod en 1536 y Dubica en 1538. Las campañas no prueban una frontera anual exacta en todo el relieve."
+        },
+        {
+          "title": "Hrvatska enciklopedija · Jajačka banovina",
+          "url": "https://enciklopedija.hr/clanak/jajacka-banovina",
+          "locator": "Banato de 1463–1527, Kozarac/Livač y repliegue gradual del frente; en 1518 quedaban Jajce y Banja Luka como posiciones principales."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": true
+    },
+    {
+      "name": "Glaz · provincia otomana",
+      "corridor": "Kozara–Glaž y costa ragusea · revisión regional",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1536,
+        "through": 1800
+      },
+      "versions": [
+        {
+          "from": 1536,
+          "ids": [
+            "Glaz"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Dominio otomano del interior al sur del Sava, consolidado antes de la conquista de Dubica. No comprende la franja fluvial imperial de 1718–1739."
+        }
+      ],
+      "note": "Dominio otomano del interior al sur del Sava, consolidado antes de la conquista de Dubica. No comprende la franja fluvial imperial de 1718–1739.",
+      "sources": [
+        {
+          "title": "Universidad de Zagreb · Bulwark of Europe",
+          "url": "https://vojnakrajina.ffzg.unizg.hr/en/sazeti-prikaz-osmanskih-osvajanja-hrvatskog-prostora-u-16-stoljecu/",
+          "locator": "Conquistas diferenciadas: Jajce/Banja Luka en 1528, Gradiška/Brod en 1536 y Dubica en 1538. Las campañas no prueban una frontera anual exacta en todo el relieve."
+        },
+        {
+          "title": "Spahić · Neki problemi granica Bosne i Hercegovine",
+          "url": "https://geoubih.ba/Izdanja/Actavol4br8/3.%20Spahic%20-%20Granice%20BiH.pdf",
+          "locator": "Acta geographica BiH 8 (2017), p.10, fig.1: mapa de Vego de la Bosnia medieval. Contraste visual de Kozara, Vrbas, Glaž y los vecinos, no traslado de toda la expansión de Tvrtko a un año."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": true
+    },
+    {
+      "name": "Primorje · Hum",
+      "corridor": "Kozara–Glaž y costa ragusea · revisión regional",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1200,
+        "through": 1325
+      },
+      "versions": [
+        {
+          "from": 1200,
+          "ids": [
+            "Slano"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Costa continental de Hum; las islas y Pelješac se calculan por separado."
+        }
+      ],
+      "note": "Costa continental de Hum; las islas y Pelješac se calculan por separado.",
+      "sources": [
+        {
+          "title": "Hrvatska enciklopedija · Hum",
+          "url": "https://www.enciklopedija.hr/clanak/hum-podrucje",
+          "locator": "Principado local del siglo XIII; señorío de los Šubić a comienzos del XIV; conquista bosnia de 1326, cesión a Luis I en 1357, recuperación tras 1382 y señoríos Kosača. No acredita un deslinde uniforme de toda la región."
+        },
+        {
+          "title": "Sociedad de Amigos de las Murallas de Dubrovnik · Slano",
+          "url": "https://citywallsdubrovnik.hr/rectors-palace-slano/",
+          "locator": "Adquisición de Primorje en 1399, distinta de Ston/Pelješac en 1333; sede del conde en Slano."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": true
+    },
+    {
+      "name": "Primorje · Bosnia",
+      "corridor": "Kozara–Glaž y costa ragusea · revisión regional",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1326,
+        "through": 1398
+      },
+      "versions": [
+        {
+          "from": 1326,
+          "ids": [
+            "Slano"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Costa bajo Bosnia antes de la adquisición ragusea de 1399."
+        }
+      ],
+      "note": "Costa bajo Bosnia antes de la adquisición ragusea de 1399.",
+      "sources": [
+        {
+          "title": "Hrvatska enciklopedija · Hum",
+          "url": "https://www.enciklopedija.hr/clanak/hum-podrucje",
+          "locator": "Principado local del siglo XIII; señorío de los Šubić a comienzos del XIV; conquista bosnia de 1326, cesión a Luis I en 1357, recuperación tras 1382 y señoríos Kosača. No acredita un deslinde uniforme de toda la región."
+        },
+        {
+          "title": "Sociedad de Amigos de las Murallas de Dubrovnik · Slano",
+          "url": "https://citywallsdubrovnik.hr/rectors-palace-slano/",
+          "locator": "Adquisición de Primorje en 1399, distinta de Ston/Pelješac en 1333; sede del conde en Slano."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": true
+    },
+    {
+      "name": "Primorje · adquisición ragusea",
+      "corridor": "Kozara–Glaž y costa ragusea · revisión regional",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1399,
+        "through": 1800
+      },
+      "versions": [
+        {
+          "from": 1399,
+          "ids": [
+            "Slano"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Primorje adquirido a Ostoja en 1399. No arrastra a Korčula, Mljet o Pelješac."
+        }
+      ],
+      "note": "Primorje adquirido a Ostoja en 1399. No arrastra a Korčula, Mljet o Pelješac.",
+      "sources": [
+        {
+          "title": "Sociedad de Amigos de las Murallas de Dubrovnik · Slano",
+          "url": "https://citywallsdubrovnik.hr/rectors-palace-slano/",
+          "locator": "Adquisición de Primorje en 1399, distinta de Ston/Pelješac en 1333; sede del conde en Slano."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": true
+    },
+    {
+      "name": "Pelješac · Hum",
+      "corridor": "Kozara–Glaž y costa ragusea · revisión regional",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1200,
+        "through": 1325
+      },
+      "versions": [
+        {
+          "from": 1200,
+          "ids": [
+            "Slano_Peljesac"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Península y Ston antes de su ocupación ragusea."
+        }
+      ],
+      "note": "Península y Ston antes de su ocupación ragusea.",
+      "sources": [
+        {
+          "title": "Hrvatska enciklopedija · Pelješac",
+          "url": "https://enciklopedija.hr/clanak/peljesac",
+          "locator": "Istmo de Ston; Hum medieval, dominio raguseo de hecho en 1326 y reconocimiento mediante la compra y acuerdos de 1333."
+        },
+        {
+          "title": "Hrvatska enciklopedija · Hum",
+          "url": "https://www.enciklopedija.hr/clanak/hum-podrucje",
+          "locator": "Principado local del siglo XIII; señorío de los Šubić a comienzos del XIV; conquista bosnia de 1326, cesión a Luis I en 1357, recuperación tras 1382 y señoríos Kosača. No acredita un deslinde uniforme de toda la región."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": true
+    },
+    {
+      "name": "Pelješac · posesión ragusea",
+      "corridor": "Kozara–Glaž y costa ragusea · revisión regional",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1326,
+        "through": 1332
+      },
+      "versions": [
+        {
+          "from": 1326,
+          "ids": [
+            "Slano_Peljesac"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Posesión de hecho tras la caída de los Branivojević; el reconocimiento contractual llega en 1333."
+        }
+      ],
+      "note": "Posesión de hecho tras la caída de los Branivojević; el reconocimiento contractual llega en 1333.",
+      "sources": [
+        {
+          "title": "Hrvatska enciklopedija · Pelješac",
+          "url": "https://enciklopedija.hr/clanak/peljesac",
+          "locator": "Istmo de Ston; Hum medieval, dominio raguseo de hecho en 1326 y reconocimiento mediante la compra y acuerdos de 1333."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": true
+    },
+    {
+      "name": "Pelješac · adquisición reconocida",
+      "corridor": "Kozara–Glaž y costa ragusea · revisión regional",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1333,
+        "through": 1800
+      },
+      "versions": [
+        {
+          "from": 1333,
+          "ids": [
+            "Slano_Peljesac"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Compra y acuerdos de 1333; el tributo no convierte la península en provincia otomana."
+        }
+      ],
+      "note": "Compra y acuerdos de 1333; el tributo no convierte la península en provincia otomana.",
+      "sources": [
+        {
+          "title": "Hrvatska enciklopedija · Pelješac",
+          "url": "https://enciklopedija.hr/clanak/peljesac",
+          "locator": "Istmo de Ston; Hum medieval, dominio raguseo de hecho en 1326 y reconocimiento mediante la compra y acuerdos de 1333."
+        },
+        {
+          "title": "Sociedad de Amigos de las Murallas de Dubrovnik · Slano",
+          "url": "https://citywallsdubrovnik.hr/rectors-palace-slano/",
+          "locator": "Adquisición de Primorje en 1399, distinta de Ston/Pelješac en 1333; sede del conde en Slano."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": true
+    },
+    {
+      "name": "Mljet · señorío monástico",
+      "corridor": "Kozara–Glaž y costa ragusea · revisión regional",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1200,
+        "through": 1344
+      },
+      "versions": [
+        {
+          "from": 1200,
+          "ids": [
+            "Slano_Mljet"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Señorío benedictino bajo superioridad regional de Rascia/Hum; no dominio real directo de cada aldea."
+        }
+      ],
+      "note": "Señorío benedictino bajo superioridad regional de Rascia/Hum; no dominio real directo de cada aldea.",
+      "sources": [
+        {
+          "title": "Hrvatska enciklopedija · Mljet",
+          "url": "https://enciklopedija.hr/clanak/mljet",
+          "locator": "Señorío benedictino bajo los gobernantes de Rascia; estatuto y redención de prestaciones en 1345; incorporación definitiva a Ragusa en 1410, no en 1399."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": true
+    },
+    {
+      "name": "Mljet · comuna estatutaria",
+      "corridor": "Kozara–Glaž y costa ragusea · revisión regional",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1345,
+        "through": 1409
+      },
+      "versions": [
+        {
+          "from": 1345,
+          "ids": [
+            "Slano_Mljet"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Comuna autónoma con prestaciones redimidas y obligación anual ante el monasterio desde 1345. No se prolonga la soberanía serbia hasta 1409 por una propiedad monástica."
+        }
+      ],
+      "note": "Comuna autónoma con prestaciones redimidas y obligación anual ante el monasterio desde 1345. No se prolonga la soberanía serbia hasta 1409 por una propiedad monástica.",
+      "sources": [
+        {
+          "title": "Hrvatska enciklopedija · Mljet",
+          "url": "https://enciklopedija.hr/clanak/mljet",
+          "locator": "Señorío benedictino bajo los gobernantes de Rascia; estatuto y redención de prestaciones en 1345; incorporación definitiva a Ragusa en 1410, no en 1399."
+        },
+        {
+          "title": "Hrvatska enciklopedija · Dubrovačka Republika",
+          "url": "https://www.enciklopedija.hr/clanak/dubrovacka-republika",
+          "locator": "Superioridad bizantina hasta 1205, veneciana hasta 1358 y húngara desde 1358; tributo otomano desde 1458 sin anexión. Konavle se adquiere por partes en 1419 y 1426; autonomía republicana preservada."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": true
+    },
+    {
+      "name": "Mljet · transición estatutaria · República de Ragusa",
+      "corridor": "Kozara–Glaž y costa ragusea · revisión regional",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1345,
+        "through": 1409
+      },
+      "versions": [
+        {
+          "from": 1345,
+          "ids": [
+            "Slano_Mljet"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Autonomía estatutaria e influencia ragusea desde 1345; la entrada insular fecha la incorporación definitiva en 1410, mientras la síntesis republicana usa 1345."
+        }
+      ],
+      "note": "Autonomía estatutaria e influencia ragusea desde 1345; la entrada insular fecha la incorporación definitiva en 1410, mientras la síntesis republicana usa 1345.",
+      "sources": [
+        {
+          "title": "Hrvatska enciklopedija · Mljet",
+          "url": "https://enciklopedija.hr/clanak/mljet",
+          "locator": "Señorío benedictino bajo los gobernantes de Rascia; estatuto y redención de prestaciones en 1345; incorporación definitiva a Ragusa en 1410, no en 1399."
+        },
+        {
+          "title": "Hrvatska enciklopedija · Dubrovačka Republika",
+          "url": "https://www.enciklopedija.hr/clanak/dubrovacka-republika",
+          "locator": "Superioridad bizantina hasta 1205, veneciana hasta 1358 y húngara desde 1358; tributo otomano desde 1458 sin anexión. Konavle se adquiere por partes en 1419 y 1426; autonomía republicana preservada."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": true
+    },
+    {
+      "name": "Mljet · incorporación definitiva",
+      "corridor": "Kozara–Glaž y costa ragusea · revisión regional",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1410,
+        "through": 1800
+      },
+      "versions": [
+        {
+          "from": 1410,
+          "ids": [
+            "Slano_Mljet"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Incorporación definitiva de 1410 según la entrada insular. Saqueos no equivalen a anexión."
+        }
+      ],
+      "note": "Incorporación definitiva de 1410 según la entrada insular. Saqueos no equivalen a anexión.",
+      "sources": [
+        {
+          "title": "Hrvatska enciklopedija · Mljet",
+          "url": "https://enciklopedija.hr/clanak/mljet",
+          "locator": "Señorío benedictino bajo los gobernantes de Rascia; estatuto y redención de prestaciones en 1345; incorporación definitiva a Ragusa en 1410, no en 1399."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": true
+    },
+    {
+      "name": "Slano_Korcula · Corona croata-húngara",
+      "corridor": "Kozara–Glaž y costa ragusea · revisión regional",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1200,
+        "through": 1221
+      },
+      "versions": [
+        {
+          "from": 1200,
+          "ids": [
+            "Slano_Korcula"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Tenencia de los condes de Krk documentada en 1221 dentro del marco croata-húngaro."
+        }
+      ],
+      "note": "Tenencia de los condes de Krk documentada en 1221 dentro del marco croata-húngaro.",
+      "sources": [
+        {
+          "title": "Pomorska enciklopedija · Korčula",
+          "url": "https://pomorska.lzmk.hr/Natuknica?id=3503",
+          "locator": "Historia, siglos XIII–XV: tenencia de los condes de Krk documentada en 1221, posterior Hum sin año exacto; Venecia 1254–1358, Croacia, Bosnia 1390–1393; administración ragusea 1413–1416 bajo la Corona; Venecia desde 1420."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": true
+    },
+    {
+      "name": "Slano_Korcula · sucesión temprana · Croacia",
+      "corridor": "Kozara–Glaž y costa ragusea · revisión regional",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1222,
+        "through": 1253
+      },
+      "versions": [
+        {
+          "from": 1222,
+          "ids": [
+            "Slano_Korcula"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "La fuente sitúa el posterior paso a Hum sin año exacto. Ventana de datación incierta; no se inventa un cambio de soberano en 1222."
+        }
+      ],
+      "note": "La fuente sitúa el posterior paso a Hum sin año exacto. Ventana de datación incierta; no se inventa un cambio de soberano en 1222.",
+      "sources": [
+        {
+          "title": "Pomorska enciklopedija · Korčula",
+          "url": "https://pomorska.lzmk.hr/Natuknica?id=3503",
+          "locator": "Historia, siglos XIII–XV: tenencia de los condes de Krk documentada en 1221, posterior Hum sin año exacto; Venecia 1254–1358, Croacia, Bosnia 1390–1393; administración ragusea 1413–1416 bajo la Corona; Venecia desde 1420."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": true
+    },
+    {
+      "name": "Slano_Korcula · sucesión temprana · Hum",
+      "corridor": "Kozara–Glaž y costa ragusea · revisión regional",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1222,
+        "through": 1253
+      },
+      "versions": [
+        {
+          "from": 1222,
+          "ids": [
+            "Slano_Korcula"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "La fuente sitúa el posterior paso a Hum sin año exacto. Ventana de datación incierta; no se inventa un cambio de soberano en 1222."
+        }
+      ],
+      "note": "La fuente sitúa el posterior paso a Hum sin año exacto. Ventana de datación incierta; no se inventa un cambio de soberano en 1222.",
+      "sources": [
+        {
+          "title": "Pomorska enciklopedija · Korčula",
+          "url": "https://pomorska.lzmk.hr/Natuknica?id=3503",
+          "locator": "Historia, siglos XIII–XV: tenencia de los condes de Krk documentada en 1221, posterior Hum sin año exacto; Venecia 1254–1358, Croacia, Bosnia 1390–1393; administración ragusea 1413–1416 bajo la Corona; Venecia desde 1420."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": true
+    },
+    {
+      "name": "Lastovo_Island_Wasteland · Corona croata-húngara",
+      "corridor": "Kozara–Glaž y costa ragusea · revisión regional",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1200,
+        "through": 1221
+      },
+      "versions": [
+        {
+          "from": 1200,
+          "ids": [
+            "Lastovo_Island_Wasteland"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Tenencia de los condes de Krk documentada en 1221 dentro del marco croata-húngaro."
+        }
+      ],
+      "note": "Tenencia de los condes de Krk documentada en 1221 dentro del marco croata-húngaro.",
+      "sources": [
+        {
+          "title": "Pomorska enciklopedija · Lastovo",
+          "url": "https://test.lzmk.hr/clanak/lastovo",
+          "locator": "Dependencia croata-húngara y tenencia de los condes de Krk documentada en 1221; posterior Hum bajo los Nemanjić sin fecha exacta. Adhesión ragusea de 1252."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": true
+    },
+    {
+      "name": "Lastovo_Island_Wasteland · sucesión temprana · Croacia",
+      "corridor": "Kozara–Glaž y costa ragusea · revisión regional",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1222,
+        "through": 1251
+      },
+      "versions": [
+        {
+          "from": 1222,
+          "ids": [
+            "Lastovo_Island_Wasteland"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "La fuente sitúa el posterior paso a Hum sin año exacto. Ventana de datación incierta; no se inventa un cambio de soberano en 1222."
+        }
+      ],
+      "note": "La fuente sitúa el posterior paso a Hum sin año exacto. Ventana de datación incierta; no se inventa un cambio de soberano en 1222.",
+      "sources": [
+        {
+          "title": "Pomorska enciklopedija · Lastovo",
+          "url": "https://test.lzmk.hr/clanak/lastovo",
+          "locator": "Dependencia croata-húngara y tenencia de los condes de Krk documentada en 1221; posterior Hum bajo los Nemanjić sin fecha exacta. Adhesión ragusea de 1252."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": true
+    },
+    {
+      "name": "Lastovo_Island_Wasteland · sucesión temprana · Hum",
+      "corridor": "Kozara–Glaž y costa ragusea · revisión regional",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1222,
+        "through": 1251
+      },
+      "versions": [
+        {
+          "from": 1222,
+          "ids": [
+            "Lastovo_Island_Wasteland"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "La fuente sitúa el posterior paso a Hum sin año exacto. Ventana de datación incierta; no se inventa un cambio de soberano en 1222."
+        }
+      ],
+      "note": "La fuente sitúa el posterior paso a Hum sin año exacto. Ventana de datación incierta; no se inventa un cambio de soberano en 1222.",
+      "sources": [
+        {
+          "title": "Pomorska enciklopedija · Lastovo",
+          "url": "https://test.lzmk.hr/clanak/lastovo",
+          "locator": "Dependencia croata-húngara y tenencia de los condes de Krk documentada en 1221; posterior Hum bajo los Nemanjić sin fecha exacta. Adhesión ragusea de 1252."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": true
+    },
+    {
+      "name": "Korčula · primera administración veneciana",
+      "corridor": "Kozara–Glaž y costa ragusea · revisión regional",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1254,
+        "through": 1357
+      },
+      "versions": [
+        {
+          "from": 1254,
+          "ids": [
+            "Slano_Korcula"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Comuna con derechos limitados de los Zorzi, bajo Venecia."
+        }
+      ],
+      "note": "Comuna con derechos limitados de los Zorzi, bajo Venecia.",
+      "sources": [
+        {
+          "title": "Pomorska enciklopedija · Korčula",
+          "url": "https://pomorska.lzmk.hr/Natuknica?id=3503",
+          "locator": "Historia, siglos XIII–XV: tenencia de los condes de Krk documentada en 1221, posterior Hum sin año exacto; Venecia 1254–1358, Croacia, Bosnia 1390–1393; administración ragusea 1413–1416 bajo la Corona; Venecia desde 1420."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": true
+    },
+    {
+      "name": "Korčula · Corona croata",
+      "corridor": "Kozara–Glaž y costa ragusea · revisión regional",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1358,
+        "through": 1389
+      },
+      "versions": [
+        {
+          "from": 1358,
+          "ids": [
+            "Slano_Korcula"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Paz de Zadar y Corona croata-húngara; autonomía comunal preservada."
+        }
+      ],
+      "note": "Paz de Zadar y Corona croata-húngara; autonomía comunal preservada.",
+      "sources": [
+        {
+          "title": "Pomorska enciklopedija · Korčula",
+          "url": "https://pomorska.lzmk.hr/Natuknica?id=3503",
+          "locator": "Historia, siglos XIII–XV: tenencia de los condes de Krk documentada en 1221, posterior Hum sin año exacto; Venecia 1254–1358, Croacia, Bosnia 1390–1393; administración ragusea 1413–1416 bajo la Corona; Venecia desde 1420."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": true
+    },
+    {
+      "name": "Korčula · expansión de Tvrtko",
+      "corridor": "Kozara–Glaž y costa ragusea · revisión regional",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1390,
+        "through": 1393
+      },
+      "versions": [
+        {
+          "from": 1390,
+          "ids": [
+            "Slano_Korcula"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Superioridad bosnia según la síntesis marítima. No convierte la isla en Ragusa."
+        }
+      ],
+      "note": "Superioridad bosnia según la síntesis marítima. No convierte la isla en Ragusa.",
+      "sources": [
+        {
+          "title": "Pomorska enciklopedija · Korčula",
+          "url": "https://pomorska.lzmk.hr/Natuknica?id=3503",
+          "locator": "Historia, siglos XIII–XV: tenencia de los condes de Krk documentada en 1221, posterior Hum sin año exacto; Venecia 1254–1358, Croacia, Bosnia 1390–1393; administración ragusea 1413–1416 bajo la Corona; Venecia desde 1420."
+        },
+        {
+          "title": "Spahić · Neki problemi granica Bosne i Hercegovine",
+          "url": "https://geoubih.ba/Izdanja/Actavol4br8/3.%20Spahic%20-%20Granice%20BiH.pdf",
+          "locator": "Acta geographica BiH 8 (2017), p.10, fig.1: mapa de Vego de la Bosnia medieval. Contraste visual de Kozara, Vrbas, Glaž y los vecinos, no traslado de toda la expansión de Tvrtko a un año."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": true
+    },
+    {
+      "name": "Korčula · Corona y señorío ducal",
+      "corridor": "Kozara–Glaž y costa ragusea · revisión regional",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1394,
+        "through": 1412
+      },
+      "versions": [
+        {
+          "from": 1394,
+          "ids": [
+            "Slano_Korcula"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Restitución de la Corona; concesión de Ladislao a Hrvoje en 1403 y cambio de obediencia en 1408. La administración local no equivale a incorporación territorial a Ragusa."
+        }
+      ],
+      "note": "Restitución de la Corona; concesión de Ladislao a Hrvoje en 1403 y cambio de obediencia en 1408. La administración local no equivale a incorporación territorial a Ragusa.",
+      "sources": [
+        {
+          "title": "Pomorska enciklopedija · Korčula",
+          "url": "https://pomorska.lzmk.hr/Natuknica?id=3503",
+          "locator": "Historia, siglos XIII–XV: tenencia de los condes de Krk documentada en 1221, posterior Hum sin año exacto; Venecia 1254–1358, Croacia, Bosnia 1390–1393; administración ragusea 1413–1416 bajo la Corona; Venecia desde 1420."
+        },
+        {
+          "title": "Hrvatska enciklopedija · Hrvoje Vukčić Hrvatinić",
+          "url": "https://www.enciklopedija.hr/clanak/hrvatinic-hrvoje-vukcic",
+          "locator": "Gran duque en 1380; duque de Split y señor de Brač, Hvar y Korčula desde 1403; cambio de obediencia en 1408, pérdida de islas y muerte en 1416."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": true
+    },
+    {
+      "name": "Korčula · administración ragusea delegada",
+      "corridor": "Kozara–Glaž y costa ragusea · revisión regional",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1413,
+        "through": 1416
+      },
+      "versions": [
+        {
+          "from": 1413,
+          "ids": [
+            "Slano_Korcula"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Sigismundo confía la administración a Ragusa; conserva la superioridad croata-húngara."
+        }
+      ],
+      "note": "Sigismundo confía la administración a Ragusa; conserva la superioridad croata-húngara.",
+      "sources": [
+        {
+          "title": "Pomorska enciklopedija · Korčula",
+          "url": "https://pomorska.lzmk.hr/Natuknica?id=3503",
+          "locator": "Historia, siglos XIII–XV: tenencia de los condes de Krk documentada en 1221, posterior Hum sin año exacto; Venecia 1254–1358, Croacia, Bosnia 1390–1393; administración ragusea 1413–1416 bajo la Corona; Venecia desde 1420."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": true
+    },
+    {
+      "name": "Korčula · fin de la delegación",
+      "corridor": "Kozara–Glaž y costa ragusea · revisión regional",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1417,
+        "through": 1419
+      },
+      "versions": [
+        {
+          "from": 1417,
+          "ids": [
+            "Slano_Korcula"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Revocación de la administración ragusea en 1417."
+        }
+      ],
+      "note": "Revocación de la administración ragusea en 1417.",
+      "sources": [
+        {
+          "title": "Pomorska enciklopedija · Korčula",
+          "url": "https://pomorska.lzmk.hr/Natuknica?id=3503",
+          "locator": "Historia, siglos XIII–XV: tenencia de los condes de Krk documentada en 1221, posterior Hum sin año exacto; Venecia 1254–1358, Croacia, Bosnia 1390–1393; administración ragusea 1413–1416 bajo la Corona; Venecia desde 1420."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": true
+    },
+    {
+      "name": "Korčula · dominio veneciano",
+      "corridor": "Kozara–Glaž y costa ragusea · revisión regional",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1420,
+        "through": 1796
+      },
+      "versions": [
+        {
+          "from": 1420,
+          "ids": [
+            "Slano_Korcula"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Venecia hasta la caída de la República; invasiones navales no son anexiones."
+        }
+      ],
+      "note": "Venecia hasta la caída de la República; invasiones navales no son anexiones.",
+      "sources": [
+        {
+          "title": "Municipio de Korčula · Povijesni pregled",
+          "url": "https://www.korcula.hr/o-korculi/povijesni-pregled/",
+          "locator": "Venecia 1420–1797, administración austríaca 1797–1805. Ataques navales no equivalen a anexión permanente."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": true
+    },
+    {
+      "name": "Korčula · administración austríaca",
+      "corridor": "Kozara–Glaž y costa ragusea · revisión regional",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1797,
+        "through": 1800
+      },
+      "versions": [
+        {
+          "from": 1797,
+          "ids": [
+            "Slano_Korcula"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Administración austríaca desde 1797."
+        }
+      ],
+      "note": "Administración austríaca desde 1797.",
+      "sources": [
+        {
+          "title": "Municipio de Korčula · Povijesni pregled",
+          "url": "https://www.korcula.hr/o-korculi/povijesni-pregled/",
+          "locator": "Venecia 1420–1797, administración austríaca 1797–1805. Ataques navales no equivalen a anexión permanente."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": true
+    },
+    {
+      "name": "Astarea · 1200",
+      "corridor": "Kozara–Glaž y costa ragusea · revisión regional",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1200,
+        "through": 1204
+      },
+      "versions": [
+        {
+          "from": 1200,
+          "ids": [
+            "Dubrovnik"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Comuna bajo superioridad bizantina."
+        }
+      ],
+      "note": "Comuna bajo superioridad bizantina.",
+      "sources": [
+        {
+          "title": "Hrvatska enciklopedija · Dubrovačka Republika",
+          "url": "https://www.enciklopedija.hr/clanak/dubrovacka-republika",
+          "locator": "Superioridad bizantina hasta 1205, veneciana hasta 1358 y húngara desde 1358; tributo otomano desde 1458 sin anexión. Konavle se adquiere por partes en 1419 y 1426; autonomía republicana preservada."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": true
+    },
+    {
+      "name": "Astarea · 1205",
+      "corridor": "Kozara–Glaž y costa ragusea · revisión regional",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1205,
+        "through": 1357
+      },
+      "versions": [
+        {
+          "from": 1205,
+          "ids": [
+            "Dubrovnik"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Comuna bajo superioridad veneciana, con condes nombrados por Venecia."
+        }
+      ],
+      "note": "Comuna bajo superioridad veneciana, con condes nombrados por Venecia.",
+      "sources": [
+        {
+          "title": "Hrvatska enciklopedija · Dubrovačka Republika",
+          "url": "https://www.enciklopedija.hr/clanak/dubrovacka-republika",
+          "locator": "Superioridad bizantina hasta 1205, veneciana hasta 1358 y húngara desde 1358; tributo otomano desde 1458 sin anexión. Konavle se adquiere por partes en 1419 y 1426; autonomía republicana preservada."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": true
+    },
+    {
+      "name": "Astarea · 1358",
+      "corridor": "Kozara–Glaž y costa ragusea · revisión regional",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1358,
+        "through": 1457
+      },
+      "versions": [
+        {
+          "from": 1358,
+          "ids": [
+            "Dubrovnik"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Autogobierno republicano bajo superioridad de la Corona húngara."
+        }
+      ],
+      "note": "Autogobierno republicano bajo superioridad de la Corona húngara.",
+      "sources": [
+        {
+          "title": "Hrvatska enciklopedija · Dubrovačka Republika",
+          "url": "https://www.enciklopedija.hr/clanak/dubrovacka-republika",
+          "locator": "Superioridad bizantina hasta 1205, veneciana hasta 1358 y húngara desde 1358; tributo otomano desde 1458 sin anexión. Konavle se adquiere por partes en 1419 y 1426; autonomía republicana preservada."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": true
+    },
+    {
+      "name": "Astarea · 1458",
+      "corridor": "Kozara–Glaž y costa ragusea · revisión regional",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1458,
+        "through": 1800
+      },
+      "versions": [
+        {
+          "from": 1458,
+          "ids": [
+            "Dubrovnik"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "República tributaria del sultán con gobierno propio; el tributo no es anexión."
+        }
+      ],
+      "note": "República tributaria del sultán con gobierno propio; el tributo no es anexión.",
+      "sources": [
+        {
+          "title": "Hrvatska enciklopedija · Dubrovačka Republika",
+          "url": "https://www.enciklopedija.hr/clanak/dubrovacka-republika",
+          "locator": "Superioridad bizantina hasta 1205, veneciana hasta 1358 y húngara desde 1358; tributo otomano desde 1458 sin anexión. Konavle se adquiere por partes en 1419 y 1426; autonomía republicana preservada."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": true
+    },
+    {
+      "name": "Konavle · Hum",
+      "corridor": "Kozara–Glaž y costa ragusea · revisión regional",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1200,
+        "through": 1376
+      },
+      "versions": [
+        {
+          "from": 1200,
+          "ids": [
+            "Dubrovnik_Konavle"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Ámbito continental de Hum antes de la expansión bosnia. La costura hacia Astarea es aproximada."
+        }
+      ],
+      "note": "Ámbito continental de Hum antes de la expansión bosnia. La costura hacia Astarea es aproximada.",
+      "sources": [
+        {
+          "title": "Hrvatska enciklopedija · Hum",
+          "url": "https://www.enciklopedija.hr/clanak/hum-podrucje",
+          "locator": "Principado local del siglo XIII; señorío de los Šubić a comienzos del XIV; conquista bosnia de 1326, cesión a Luis I en 1357, recuperación tras 1382 y señoríos Kosača. No acredita un deslinde uniforme de toda la región."
+        },
+        {
+          "title": "Hrvatski biografski leksikon · Kotromanići",
+          "url": "https://hbl.lzmk.hr/Clanak/kotromanici?handler=ButtonSnimi",
+          "locator": "Prijezda y Esteban I: carta de 23 julio 1290 y resistencia frente a los Šubić; Esteban II: exilio desde 1314, retorno antes del verano de 1319; Tvrtko: partición de 1373, Trebinje en 1377 y recuperación de Hum en 1382."
+        },
+        {
+          "title": "Hrvatska enciklopedija · Dubrovačka Republika",
+          "url": "https://www.enciklopedija.hr/clanak/dubrovacka-republika",
+          "locator": "Superioridad bizantina hasta 1205, veneciana hasta 1358 y húngara desde 1358; tributo otomano desde 1458 sin anexión. Konavle se adquiere por partes en 1419 y 1426; autonomía republicana preservada."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": true
+    },
+    {
+      "name": "Konavle · señoríos bosnios",
+      "corridor": "Kozara–Glaž y costa ragusea · revisión regional",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1377,
+        "through": 1418
+      },
+      "versions": [
+        {
+          "from": 1377,
+          "ids": [
+            "Dubrovnik_Konavle"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Expansión de Tvrtko y posteriores señoríos Kosača/Pavlović; no toda Konavle pertenece al mismo linaje."
+        }
+      ],
+      "note": "Expansión de Tvrtko y posteriores señoríos Kosača/Pavlović; no toda Konavle pertenece al mismo linaje.",
+      "sources": [
+        {
+          "title": "Hrvatski biografski leksikon · Kotromanići",
+          "url": "https://hbl.lzmk.hr/Clanak/kotromanici?handler=ButtonSnimi",
+          "locator": "Prijezda y Esteban I: carta de 23 julio 1290 y resistencia frente a los Šubić; Esteban II: exilio desde 1314, retorno antes del verano de 1319; Tvrtko: partición de 1373, Trebinje en 1377 y recuperación de Hum en 1382."
+        },
+        {
+          "title": "Hrvatska enciklopedija · Dubrovačka Republika",
+          "url": "https://www.enciklopedija.hr/clanak/dubrovacka-republika",
+          "locator": "Superioridad bizantina hasta 1205, veneciana hasta 1358 y húngara desde 1358; tributo otomano desde 1458 sin anexión. Konavle se adquiere por partes en 1419 y 1426; autonomía republicana preservada."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": true
+    },
+    {
+      "name": "Konavle · adquisiciones parciales · Reino de Bosnia",
+      "corridor": "Kozara–Glaž y costa ragusea · revisión regional",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1419,
+        "through": 1425
+      },
+      "versions": [
+        {
+          "from": 1419,
+          "ids": [
+            "Dubrovnik_Konavle"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Compra de la parte de Sandalj en 1419; la parte de los Pavlović se adquiere en 1426. La celda cruza ambas porciones."
+        }
+      ],
+      "note": "Compra de la parte de Sandalj en 1419; la parte de los Pavlović se adquiere en 1426. La celda cruza ambas porciones.",
+      "sources": [
+        {
+          "title": "Hrvatska enciklopedija · Dubrovačka Republika",
+          "url": "https://www.enciklopedija.hr/clanak/dubrovacka-republika",
+          "locator": "Superioridad bizantina hasta 1205, veneciana hasta 1358 y húngara desde 1358; tributo otomano desde 1458 sin anexión. Konavle se adquiere por partes en 1419 y 1426; autonomía republicana preservada."
+        },
+        {
+          "title": "Instituto de planificación de Dubrovnik-Neretva · historia territorial",
+          "url": "https://www.zzpudnz.hr/Portals/0/1_DNZ/_10_POVIJESNI_PRIKAZ.pdf?ver=LmpUPdcwYdBqWYOCEXNP3w%3D%3D",
+          "locator": "Ámbitos de Ston/Pelješac, Primorje, Astarea y Konavle. Contraste de superficie y cronología; la costura del SVG es aproximada."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": true
+    },
+    {
+      "name": "Konavle · adquisiciones parciales · República de Ragusa",
+      "corridor": "Kozara–Glaž y costa ragusea · revisión regional",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1419,
+        "through": 1425
+      },
+      "versions": [
+        {
+          "from": 1419,
+          "ids": [
+            "Dubrovnik_Konavle"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Compra de la parte de Sandalj en 1419; la parte de los Pavlović se adquiere en 1426. La celda cruza ambas porciones."
+        }
+      ],
+      "note": "Compra de la parte de Sandalj en 1419; la parte de los Pavlović se adquiere en 1426. La celda cruza ambas porciones.",
+      "sources": [
+        {
+          "title": "Hrvatska enciklopedija · Dubrovačka Republika",
+          "url": "https://www.enciklopedija.hr/clanak/dubrovacka-republika",
+          "locator": "Superioridad bizantina hasta 1205, veneciana hasta 1358 y húngara desde 1358; tributo otomano desde 1458 sin anexión. Konavle se adquiere por partes en 1419 y 1426; autonomía republicana preservada."
+        },
+        {
+          "title": "Instituto de planificación de Dubrovnik-Neretva · historia territorial",
+          "url": "https://www.zzpudnz.hr/Portals/0/1_DNZ/_10_POVIJESNI_PRIKAZ.pdf?ver=LmpUPdcwYdBqWYOCEXNP3w%3D%3D",
+          "locator": "Ámbitos de Ston/Pelješac, Primorje, Astarea y Konavle. Contraste de superficie y cronología; la costura del SVG es aproximada."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": true
+    },
+    {
+      "name": "Konavle · adquisición completada",
+      "corridor": "Kozara–Glaž y costa ragusea · revisión regional",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1426,
+        "through": 1800
+      },
+      "versions": [
+        {
+          "from": 1426,
+          "ids": [
+            "Dubrovnik_Konavle"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Adquisición completada en 1426; no anticipada a 1200."
+        }
+      ],
+      "note": "Adquisición completada en 1426; no anticipada a 1200.",
+      "sources": [
+        {
+          "title": "Hrvatska enciklopedija · Dubrovačka Republika",
+          "url": "https://www.enciklopedija.hr/clanak/dubrovacka-republika",
+          "locator": "Superioridad bizantina hasta 1205, veneciana hasta 1358 y húngara desde 1358; tributo otomano desde 1458 sin anexión. Konavle se adquiere por partes en 1419 y 1426; autonomía republicana preservada."
+        },
+        {
+          "title": "Instituto de planificación de Dubrovnik-Neretva · historia territorial",
+          "url": "https://www.zzpudnz.hr/Portals/0/1_DNZ/_10_POVIJESNI_PRIKAZ.pdf?ver=LmpUPdcwYdBqWYOCEXNP3w%3D%3D",
+          "locator": "Ámbitos de Ston/Pelješac, Primorje, Astarea y Konavle. Contraste de superficie y cronología; la costura del SVG es aproximada."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": true
+    },
+    {
+      "name": "Lastovo · autonomía ragusea",
+      "corridor": "Kozara–Glaž y costa ragusea · revisión regional",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1252,
+        "through": 1602
+      },
+      "versions": [
+        {
+          "from": 1252,
+          "ids": [
+            "Lastovo_Island_Wasteland"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Adhesión de 1252 con autonomía, estatuto de 1310 y rebelión de 1602. Incluye los islotes del subtrazado, no un terreno políticamente vacío."
+        }
+      ],
+      "note": "Adhesión de 1252 con autonomía, estatuto de 1310 y rebelión de 1602. Incluye los islotes del subtrazado, no un terreno políticamente vacío.",
+      "sources": [
+        {
+          "title": "Municipio de Lastovo · Povijest Lastova",
+          "url": "https://lastovo.hr/opcina-lastovo/povijest-lastova/",
+          "locator": "Adhesión de 1252 y autonomía reconocida; rebelión en 1602, ocupación veneciana de 1603 y devolución en 1606."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": true
+    },
+    {
+      "name": "Lastovo · ocupación veneciana",
+      "corridor": "Kozara–Glaž y costa ragusea · revisión regional",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1603,
+        "through": 1605
+      },
+      "versions": [
+        {
+          "from": 1603,
+          "ids": [
+            "Lastovo_Island_Wasteland"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Ocupación a petición de los rebeldes; devolución en 1606."
+        }
+      ],
+      "note": "Ocupación a petición de los rebeldes; devolución en 1606.",
+      "sources": [
+        {
+          "title": "Municipio de Lastovo · Povijest Lastova",
+          "url": "https://lastovo.hr/opcina-lastovo/povijest-lastova/",
+          "locator": "Adhesión de 1252 y autonomía reconocida; rebelión en 1602, ocupación veneciana de 1603 y devolución en 1606."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": true,
+      "authorityCondition": "control disputado"
+    },
+    {
+      "name": "Lastovo · restitución a Ragusa",
+      "corridor": "Kozara–Glaž y costa ragusea · revisión regional",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1606,
+        "through": 1800
+      },
+      "versions": [
+        {
+          "from": 1606,
+          "ids": [
+            "Lastovo_Island_Wasteland"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Devolución de 1606 y autonomía dentro de Ragusa."
+        }
+      ],
+      "note": "Devolución de 1606 y autonomía dentro de Ragusa.",
+      "sources": [
+        {
+          "title": "Municipio de Lastovo · Povijest Lastova",
+          "url": "https://lastovo.hr/opcina-lastovo/povijest-lastova/",
+          "locator": "Adhesión de 1252 y autonomía reconocida; rebelión en 1602, ocupación veneciana de 1603 y devolución en 1606."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": true
+    },
+    {
+      "name": "Kozara · banato defensivo",
+      "corridor": "Kozara–Glaž y costa ragusea · revisión regional",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1464,
+        "through": 1489
+      },
+      "versions": [
+        {
+          "from": 1464,
+          "ids": [
+            "Kozara"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Marco defensivo húngaro del banato, con Kozarac/Livač y los territorios al sur del Sava. La ampliación regional no fija la ubicación del castillo de Glaž."
+        }
+      ],
+      "note": "Marco defensivo húngaro del banato, con Kozarac/Livač y los territorios al sur del Sava. La ampliación regional no fija la ubicación del castillo de Glaž.",
+      "sources": [
+        {
+          "title": "Hrvatska enciklopedija · Jajačka banovina",
+          "url": "https://enciklopedija.hr/clanak/jajacka-banovina",
+          "locator": "Banato de 1463–1527, Kozarac/Livač y repliegue gradual del frente; en 1518 quedaban Jajce y Banja Luka como posiciones principales."
+        },
+        {
+          "title": "Universidad de Zagreb · Bulwark of Europe",
+          "url": "https://vojnakrajina.ffzg.unizg.hr/en/sazeti-prikaz-osmanskih-osvajanja-hrvatskog-prostora-u-16-stoljecu/",
+          "locator": "Conquistas diferenciadas: Jajce/Banja Luka en 1528, Gradiška/Brod en 1536 y Dubica en 1538. Las campañas no prueban una frontera anual exacta en todo el relieve."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": true
+    },
+    {
+      "name": "Glaz · banato defensivo",
+      "corridor": "Kozara–Glaž y costa ragusea · revisión regional",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1464,
+        "through": 1489
+      },
+      "versions": [
+        {
+          "from": 1464,
+          "ids": [
+            "Glaz"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Marco defensivo húngaro del banato, con Kozarac/Livač y los territorios al sur del Sava. La ampliación regional no fija la ubicación del castillo de Glaž."
+        }
+      ],
+      "note": "Marco defensivo húngaro del banato, con Kozarac/Livač y los territorios al sur del Sava. La ampliación regional no fija la ubicación del castillo de Glaž.",
+      "sources": [
+        {
+          "title": "Hrvatska enciklopedija · Jajačka banovina",
+          "url": "https://enciklopedija.hr/clanak/jajacka-banovina",
+          "locator": "Banato de 1463–1527, Kozarac/Livač y repliegue gradual del frente; en 1518 quedaban Jajce y Banja Luka como posiciones principales."
+        },
+        {
+          "title": "Universidad de Zagreb · Bulwark of Europe",
+          "url": "https://vojnakrajina.ffzg.unizg.hr/en/sazeti-prikaz-osmanskih-osvajanja-hrvatskog-prostora-u-16-stoljecu/",
+          "locator": "Conquistas diferenciadas: Jajce/Banja Luka en 1528, Gradiška/Brod en 1536 y Dubica en 1538. Las campañas no prueban una frontera anual exacta en todo el relieve."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": true
     }
   ],
   "overrides": [
@@ -84627,6 +86866,100 @@
       "Las 31 superficies reciben una atribución territorial cada año; esto no acredita fronteras exactas ni una lista exhaustiva de gobernantes.",
       "Las zonas de transición y los polígonos mixtos conservan notas y fuentes específicas; no se transforma la incertidumbre en una fecha exacta.",
       "El inspector y el Atlas usan los mismos intervalos y las mismas superficies; los ámbitos personales de los bans rivales y subordinados se restringen por separado."
+    ]
+  },
+  "posavinaRagusaReview": {
+    "reviewedAt": "2026-10-13",
+    "scope": {
+      "name": "Kozara–Glaž/Donji Kraji y costa ragusea con islas",
+      "from": 1200,
+      "through": 1800,
+      "ids": [
+        "Glaz",
+        "Kozara",
+        "Kljuc",
+        "Slano",
+        "Slano_Peljesac",
+        "Slano_Korcula",
+        "Slano_Mljet",
+        "Dubrovnik",
+        "Dubrovnik_Konavle",
+        "Lastovo_Island_Wasteland"
+      ],
+      "note": "Ámbito interior al sur del Sava: Kozara, Glaž y la continuidad de Ključ; costa de Primorje, Astarea/Konavle, Pelješac, Korčula, Mljet y Lastovo/Sušac. Se revisan polígonos completos, incluidas superficies insulares y relieve. Dubica y Gradiški Brod son celdas fluviales de ambas orillas y requieren una división propia; no se incluyen por el título de un señor de Donji Kraji."
+    },
+    "layerNames": [
+      "Donji Kraji · Bosnia · Donji Kraji",
+      "Donji Kraji · Jajce · frente de Donji Kraji",
+      "Donji Kraji · Bosnia otomana · Kljuc 1503",
+      "Donji Kraji · Bosnia · reino durante la conquista de 1463",
+      "Kozara · marco eslavón",
+      "Kozara · expansión de los años 1380 · Eslavonia",
+      "Kozara · expansión de los años 1380 · Reino de Bosnia",
+      "Kozara · señoríos del reino bosnio",
+      "Kozara · campaña de 1463 · Reino de Bosnia",
+      "Kozara · campaña de 1463 · Bosnia y Herzegovina otomanas",
+      "Kozara · campaña de 1463 · Banato húngaro de Jajce",
+      "Kozara · frontera del banato · Banato húngaro de Jajce",
+      "Kozara · frontera del banato · Bosnia y Herzegovina otomanas",
+      "Kozara · avance hacia el Sava · Croacia",
+      "Kozara · avance hacia el Sava · Bosnia y Herzegovina otomanas",
+      "Kozara · provincia otomana",
+      "Glaz · marco eslavón",
+      "Glaz · expansión de los años 1380 · Eslavonia",
+      "Glaz · expansión de los años 1380 · Reino de Bosnia",
+      "Glaz · señoríos del reino bosnio",
+      "Glaz · campaña de 1463 · Reino de Bosnia",
+      "Glaz · campaña de 1463 · Bosnia y Herzegovina otomanas",
+      "Glaz · campaña de 1463 · Banato húngaro de Jajce",
+      "Glaz · frontera del banato · Banato húngaro de Jajce",
+      "Glaz · frontera del banato · Bosnia y Herzegovina otomanas",
+      "Glaz · avance hacia el Sava · Croacia",
+      "Glaz · avance hacia el Sava · Bosnia y Herzegovina otomanas",
+      "Glaz · provincia otomana",
+      "Primorje · Hum",
+      "Primorje · Bosnia",
+      "Primorje · adquisición ragusea",
+      "Pelješac · Hum",
+      "Pelješac · posesión ragusea",
+      "Pelješac · adquisición reconocida",
+      "Mljet · señorío monástico",
+      "Mljet · comuna estatutaria",
+      "Mljet · transición estatutaria · República de Ragusa",
+      "Mljet · incorporación definitiva",
+      "Slano_Korcula · Corona croata-húngara",
+      "Slano_Korcula · sucesión temprana · Croacia",
+      "Slano_Korcula · sucesión temprana · Hum",
+      "Lastovo_Island_Wasteland · Corona croata-húngara",
+      "Lastovo_Island_Wasteland · sucesión temprana · Croacia",
+      "Lastovo_Island_Wasteland · sucesión temprana · Hum",
+      "Korčula · primera administración veneciana",
+      "Korčula · Corona croata",
+      "Korčula · expansión de Tvrtko",
+      "Korčula · Corona y señorío ducal",
+      "Korčula · administración ragusea delegada",
+      "Korčula · fin de la delegación",
+      "Korčula · dominio veneciano",
+      "Korčula · administración austríaca",
+      "Astarea · 1200",
+      "Astarea · 1205",
+      "Astarea · 1358",
+      "Astarea · 1458",
+      "Konavle · Hum",
+      "Konavle · señoríos bosnios",
+      "Konavle · adquisiciones parciales · Reino de Bosnia",
+      "Konavle · adquisiciones parciales · República de Ragusa",
+      "Konavle · adquisición completada",
+      "Lastovo · autonomía ragusea",
+      "Lastovo · ocupación veneciana",
+      "Lastovo · restitución a Ragusa",
+      "Kozara · banato defensivo",
+      "Glaz · banato defensivo"
+    ],
+    "limitations": [
+      "Cobertura anual no significa fronteras exactas ni sucesiones personales exhaustivas. Las ventanas inciertas se indican como celdas mixtas y no se convierten en años de conquista inventados.",
+      "La ubicación de Glaž sigue discutida. Se representa la región del SVG, contrastada con mapas y ámbitos políticos, sin afirmar que la fortaleza estuviera en su centroide.",
+      "Las nuevas costuras costeras preservan el perímetro original y son aproximaciones internas. Konavle 1419–1425 cruza las dos adquisiciones; Mljet distingue influencia de administración definitiva."
     ]
   }
 }

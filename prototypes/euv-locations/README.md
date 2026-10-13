@@ -749,3 +749,14 @@ El inspector distingue superficies aproximadas, condiciones de autoridad y
 atribuciones múltiples: Drijeva agrupa Gabela e Imotski y requiere una futura
 subdivisión para dibujar su frontera interior. El [informe de V5.9](../../docs/V5.9.md)
 explica el resultado y delimita la revisión costera y de Posavina pendiente.
+
+
+## V5.10 · Kozara–Glaž y costa ragusea
+
+`posavina-ragusa-review.json` contiene 66 fases y 24 fuentes localizadas. Su
+ámbito explícito tiene diez celdas, revisadas en los 601 años; las celdas de
+ambas orillas del Sava/Una permanecen como ámbito vecino identificado.
+`coastal-subdivisions.json` conserva los trazados originales y las costuras
+aproximadas de Slano y Dubrovnik. La geometría insular se separa sin alterar
+las costas. El [informe V5.10](../../docs/V5.10.md) explica cambios, límites,
+comparación anual y próximos pasos.

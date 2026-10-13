@@ -18,12 +18,15 @@ indica que ese código sea el que está desplegado actualmente en producción.
 | [V5.6](https://github.com/mmm-source-create/ElArbolDeEuropa/releases/tag/v5.6.0) | [#52](https://github.com/mmm-source-create/ElArbolDeEuropa/pull/52) | [`14b3cbf`](https://github.com/mmm-source-create/ElArbolDeEuropa/commit/14b3cbf1b387d07cc7f3d4fed0ce4530c89926c2) |
 | [V5.7](https://github.com/mmm-source-create/ElArbolDeEuropa/releases/tag/v5.7.0) | [#53](https://github.com/mmm-source-create/ElArbolDeEuropa/pull/53) | [`4fadac9`](https://github.com/mmm-source-create/ElArbolDeEuropa/commit/4fadac96c921bb363fb5319223ee69678bb2b98c) |
 | [V5.8](https://github.com/mmm-source-create/ElArbolDeEuropa/releases/tag/v5.8.0) | [#54](https://github.com/mmm-source-create/ElArbolDeEuropa/pull/54) | [`e4762a4`](https://github.com/mmm-source-create/ElArbolDeEuropa/commit/e4762a4be9b0a47d870b9723c175b22860253979) |
+| [V5.9](https://github.com/mmm-source-create/ElArbolDeEuropa/releases/tag/v5.9.0) | [#55](https://github.com/mmm-source-create/ElArbolDeEuropa/pull/55) | [`c60eb41`](https://github.com/mmm-source-create/ElArbolDeEuropa/commit/c60eb41d9e2d4810bd81a435b8f37d86eb5d3967) |
 
 [V5.7](V5.7.md) cierra la documentación y retira la compatibilidad ya
 innecesaria. [V5.8](V5.8.md) incorpora la revisión medieval balcánica. Ambas
 Releases están publicadas desde los commits comprobados de sus entregas.
 
-[V5.9](V5.9.md) revisa Bosnia y Hum por región y año. Su Release se prepara
+[V5.9](V5.9.md) revisa Bosnia y Hum por región y año. Se publicó tras validar
+el commit integrado de `main`, cuyo árbol coincide con la entrega comprobada.
+[V5.10](V5.10.md) revisa Kozara–Glaž y la costa ragusea; su Release permanece
 como borrador hasta la fusión y validación del commit final.
 
 ## Índice cronológico de documentos
@@ -82,6 +85,7 @@ permanecen explicados en [archive/manifests](archive/manifests/README.md).
 | [5.7](V5.7.md) | V5.7 · Modelo canónico y documentación de entregas |
 | [5.8](V5.8.md) | V5.8 · Continuidad balcánica medieval |
 | [5.9](V5.9.md) | V5.9 · Bosnia, Hum y continuidad regional |
+| [5.10](V5.10.md) | V5.10 · Kozara–Glaž, costa ragusea y apoyo al proyecto |
 
 ## Publicar una entrega
 

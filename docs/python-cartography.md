@@ -88,3 +88,12 @@ y hashes de PyPI, y repite la comprobación geométrica y las regresiones V5.
 No actualices automáticamente la base para ocultar una diferencia. Las
 dependencias de este lock corresponden a ruedas probadas en macOS ARM64 y
 Linux x86_64 mediante CI; otras plataformas requieren su propia validación.
+
+
+Desde V5.10, `check-environment.py` también comprueba las subdivisiones
+costeras contra `coastal-subdivisions.json`: conserva las curvas originales,
+hace explícito el cierre implícito del relleno SVG y exige equivalencia del
+perímetro exterior y cero solapamiento de área. Esto evita comparar como si
+fuera geometría exacta el muestreo antiguo que omitía el último extremo de
+algunos trazados abiertos. Los inventarios siguen declarando su muestreo
+aproximado; sus áreas no son kilómetros cuadrados ni fronteras históricas.

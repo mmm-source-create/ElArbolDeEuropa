@@ -2,14 +2,14 @@
 
 Atlas histórico y genealógico para explorar personas, dinastías, territorios y sus conexiones familiares.
 
-- [Web](https://www.treeofeurope.eu/es/) · Versión del repositorio: **V5.9**
-- [Cambios de V5.9](docs/V5.9.md) · [Documentación e historial](docs/README.md) · [Próximos pasos cartográficos](docs/V4.8_PROPUESTAS.md) · [Seguridad](SECURITY.md)
+- [Web](https://www.treeofeurope.eu/es/) · Versión del repositorio: **V5.10**
+- [Cambios de V5.10](docs/V5.10.md) · [Documentación e historial](docs/README.md) · [Próximos pasos cartográficos](docs/V4.8_PROPUESTAS.md) · [Seguridad](SECURITY.md)
 
-V5.9 revisa 31 superficies de Bosnia, Hum, Usora/Soli y Polimlje en cada año
-de 1200 a 1800, resolviendo 5.998 combinaciones región/año sin color. Añade
-seis gobernantes documentados, separa gobiernos delegados, exilio y conquistas,
-y comprueba las fuentes locales de cada celda. Las fronteras mixtas y las
-zonas vecinas pendientes permanecen explicadas.
+V5.10 revisa Kozara–Glaž/Donji Kraji y la costa ragusea con sus islas en los
+601 años de 1200–1800: resuelve 1.743 combinaciones región/año sin color y
+separa Korčula, Mljet, Pelješac y Konavle conservando las costas originales.
+Añade tres miembros documentados de los Hrvatinić y sus ámbitos personales.
+Ko-fi se integra en el pie con una respuesta suave y movimiento reducido.
 
 El mapa utiliza EU V Locations con superficies fechadas y fuentes consultables
 en el inspector. Distingue soberanía, gobierno delegado, titularidad y control

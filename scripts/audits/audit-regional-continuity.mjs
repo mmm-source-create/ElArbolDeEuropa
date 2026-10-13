@@ -52,11 +52,16 @@ export function auditRegionalContinuity(data, inventory, review) {
 
 if (process.argv[1] && path.resolve(process.argv[1]) === fileURLToPath(import.meta.url)) {
   const read = name => JSON.parse(fs.readFileSync(new URL(name, import.meta.url), 'utf8'));
-  const report = auditRegionalContinuity(read('../../prototypes/euv-locations/corridor-locations.json'),
-    read('../../prototypes/euv-locations/location-inventory.json'), read('../../prototypes/euv-locations/bosnia-hum-review.json'));
-  fs.writeFileSync(auditReportPath('audit-regional-continuity-report.json'), JSON.stringify(report, null, 2) + '\n');
-  console.log('Continuidad regional: ' + JSON.stringify(report.summary));
-  if (report.summary.missingCellYears || report.summary.unexplainedCellYears
-    || report.summary.missingEvidenceYears || report.summary.missingGeometry.length)
-    throw new Error('Incomplete regional continuity or undocumented attribution');
+  for (const [reviewFile, output] of [
+    ['bosnia-hum-review.json', 'audit-regional-continuity-report.json'],
+    ['posavina-ragusa-review.json', 'audit-posavina-ragusa-report.json'],
+  ]) {
+    const report = auditRegionalContinuity(read('../../prototypes/euv-locations/corridor-locations.json'),
+      read('../../prototypes/euv-locations/location-inventory.json'), read('../../prototypes/euv-locations/' + reviewFile));
+    fs.writeFileSync(auditReportPath(output), JSON.stringify(report, null, 2) + '\n');
+    console.log(report.scope.name + ': ' + JSON.stringify(report.summary));
+    if (report.summary.missingCellYears || report.summary.unexplainedCellYears
+      || report.summary.missingEvidenceYears || report.summary.missingGeometry.length)
+      throw new Error('Incomplete regional continuity or undocumented attribution');
+  }
 }

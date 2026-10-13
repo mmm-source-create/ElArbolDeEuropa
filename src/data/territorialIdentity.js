@@ -1,7 +1,11 @@
 // A survey label, an owner and a control episode are not territorial identity.
 import {BOSNIA_HUM_IDENTITIES} from './bosniaHumRoutes.js';
+import {POSAVINA_RAGUSA_IDENTITIES} from './posavinaRagusaRoutes.js';
 const ALIASES = Object.freeze({
   ...BOSNIA_HUM_IDENTITIES,
+  ...POSAVINA_RAGUSA_IDENTITIES,
+  'Donji Kraji': 'Reino de Bosnia',
+  'Glaž': 'Reino de Bosnia',
   'Núcleo de Herzegovina': 'Herzegovina',
   'Banato de Usora y Soli': 'Usora y Soli',
   'Banato de Srebrenik': 'Srebrenik',

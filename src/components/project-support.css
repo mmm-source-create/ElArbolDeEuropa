@@ -1,27 +1,89 @@
-.project-support-link {
+.project-support-link,
+.public-info-card .project-support-link,
+.site-footer .project-support-link {
+  --support-spring: cubic-bezier(.22, 1.35, .36, 1);
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 6px;
-  text-decoration: none;
-}
-.project-support-link > svg { flex-shrink: 0; }
-.site-footer .project-support-link {
-  min-height: 32px;
-  padding: 4px 9px;
-  border: 1px solid var(--eade-border-strong);
-  border-radius: var(--eade-radius-sm);
-  color: var(--eade-wine);
-}
-.project-support-card .project-support-link.is-prominent {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  gap: 8px;
+  width: fit-content;
+  max-width: 100%;
   min-height: 44px;
-  padding: 10px 14px;
-  border: 1px solid var(--eade-wine);
-  border-radius: var(--eade-radius-sm);
-  background: var(--eade-paper-soft);
-  color: var(--eade-wine);
-  font: 700 12px/1.4 var(--eade-sans);
+  box-sizing: border-box;
+  padding: 7px 13px 7px 8px;
+  border: 1px solid #6d2828;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #8d3737, #722b2b);
+  color: #fff8eb;
+  font: 700 11px/1.3 var(--eade-sans);
+  text-decoration: none;
+  box-shadow: 0 2px 5px #4a23131a;
+  transition: transform .35s var(--support-spring), box-shadow .25s, border-color .25s;
 }
-.project-support-link:hover { text-decoration: underline; text-underline-offset: 3px; }
-.project-support-link:focus-visible { outline: 2px solid var(--eade-wine); outline-offset: 3px; }
+.project-support-link::before {
+  content: "";
+  position: absolute;
+  inset: -60% -30%;
+  z-index: -1;
+  background: linear-gradient(110deg, transparent 35%, #ffffff20 50%, transparent 65%);
+  transform: translateX(-90%);
+  transition: transform .65s cubic-bezier(.16, 1, .3, 1);
+  pointer-events: none;
+}
+.project-support-mark {
+  display: grid;
+  place-items: center;
+  width: 28px;
+  height: 28px;
+  flex: none;
+  border-radius: 50%;
+  background: #fff8eb18;
+  transition: transform .45s var(--support-spring), background .25s;
+}
+.project-support-label { min-width: 0; }
+.project-support-brand {
+  flex: none;
+  padding-left: 8px;
+  border-left: 1px solid #fff8eb45;
+  font-size: 10px;
+  font-weight: 650;
+  opacity: .9;
+}
+.project-support-arrow { flex: none; transition: transform .35s var(--support-spring); }
+.site-footer-support { margin-top: 5px; }
+.site-footer .project-support-link:is(:hover, :focus-visible),
+.project-support-link:is(:hover, :focus-visible) {
+  color: #fff8eb;
+  text-decoration: none;
+  border-color: #a7584b;
+  box-shadow: 0 5px 13px #4a23132a;
+}
+.project-support-link:is(:hover, :focus-visible)::before { transform: translateX(90%); }
+.project-support-link:focus-visible { outline: 2px solid var(--eade-wine); outline-offset: 4px; }
+@media (hover: hover) and (pointer: fine) {
+  .project-support-link:hover { transform: translateY(-2px); }
+  .project-support-link:hover .project-support-mark { transform: rotate(-9deg); background: #fff8eb26; }
+  .project-support-link:hover .project-support-arrow { transform: translate(2px, -2px); }
+}
+.project-support-link:active { transform: translateY(1px) scale(.98); transition-duration: .08s; }
+.project-support-link.is-prominent { padding-right: 16px; font-size: 12px; }
 .project-support-card p.project-support-note { margin-bottom: 0; font-size: 11px; }
+html[data-eade-theme="dark"] .site-footer .project-support-link {
+  color: #fff8eb;
+  border-color: #b27668;
+  background: linear-gradient(135deg, #9c4b42, #77372f);
+}
+html[data-eade-motion="reduce"] .project-support-link,
+html[data-eade-motion="reduce"] .project-support-link *,
+html[data-eade-motion="reduce"] .project-support-link::before {
+  transition: none;
+  transform: none;
+}
+html[data-eade-motion="reduce"] .project-support-link::before { display: none; }
+@media (prefers-reduced-motion: reduce) {
+  .project-support-link, .project-support-link *, .project-support-link::before { transition: none; transform: none !important; }
+  .project-support-link::before { display: none; }
+}

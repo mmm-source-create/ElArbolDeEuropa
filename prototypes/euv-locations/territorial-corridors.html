@@ -88,7 +88,7 @@
         <section id="mosaic-panel">
           <h2 id="mosaic-title">Mosaico político</h2>
           <p id="mosaic-summary"></p>
-          <p>El rayado claro señala control disputado, ocupación o gobierno delegado documentados. El rayado con varios colores señala distintas atribuciones dentro de una misma superficie; puede tratarse de una celda que cruza una frontera. Consulta el inspector para distinguir los casos. Las zonas grises no tienen atribución disponible para ese año.</p>
+          <p>El rayado claro señala control disputado, ocupación o gobierno delegado documentados. El rayado con varios colores señala distintas atribuciones dentro de una misma superficie; puede tratarse de una celda que cruza una frontera o de una datación incierta documentada. Consulta el inspector para distinguir los casos. Las zonas grises no tienen atribución disponible para ese año.</p>
           <label for="mosaic-filter">Buscar jurisdicción
             <input id="mosaic-filter" type="search" placeholder="Borgoña, Suecia…" autocomplete="off">
           </label>
@@ -111,6 +111,7 @@
   <footer>Geometría: <a href="https://www.mapchart.net/eu-v-locations.html">MapChart</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>.</footer>
   <script type="module">
     import {atlasMosaicPalette,atlasPoliticalMosaicAt} from './atlas-mosaic.js';
+    import {locationLabel} from '../../src/data/locationLabels.js';
     import mapUrl from './euv-locations-crop.svg?url';
     import dataUrl from './corridor-locations.json?url';
     import {reviewedLayerLocations,reviewedLayerVersion,reviewedLayerActive,reviewedLayerEvidence,mapSourceReference} from '../../src/data/locationMapPilot.js';
@@ -139,7 +140,7 @@
       const info=$('info');if(!id){info.textContent=state.viewMode==='mosaic'?'Mosaico de gobiernos territoriales: elige un año o pulsa una location para ver las atribuciones disponibles.':'Pulsa una location para consultar la correspondencia.';return}
       if(state.viewMode==='audit') {
         info.replaceChildren();const row=state.audit.cells.find(c=>c.id===id);
-        const title=document.createElement('strong');title.textContent=id;info.append(title);
+        const title=document.createElement('strong');title.textContent=locationLabel(id);info.append(title);
         if(!row){info.append(document.createTextNode(' · Esta celda recibe color al menos un año o queda fuera del encuadre auditado.'));return}
         const description=document.createElement('p');description.textContent=`Nunca coloreada en 1200–1800 · ${row.physicalFeature?'relieve o isla física · ':''}${row.research.queue}. ${row.research.note}`;info.append(description);
         const targets=document.createElement('p');targets.textContent='Investigar: '+row.research.targets.map(t=>`${t.name} (${t.state==='existing_layer'?'capa existente':t.state==='existing_entity'?'entidad del Atlas':'entidad por incorporar'})`).join('; ');info.append(targets);return;
@@ -147,7 +148,7 @@
       if(!state.paths.has(id)){info.textContent=`${id}: fuera del recorte.`;return}
       if(state.viewMode==='mosaic'){
         const layers=state.mosaic?.byLocation.get(id)||[];info.replaceChildren();
-        const strong=document.createElement('strong');strong.textContent=id;info.append(strong);
+        const strong=document.createElement('strong');strong.textContent=locationLabel(id);info.append(strong);
         if(!layers.length){info.append(document.createTextNode(' · Sin gobierno atribuido en las capas cartográficas de este año.'));return}
         info.append(document.createTextNode(` · ${layers.length} ${layers.length===1?'capa activa':'capas activas'} en ${$('year').value}.`));
         const list=document.createElement('ul');for(const layer of layers){
@@ -166,7 +167,7 @@
       const territory=selectedTerritory(),year=Number($('year').value),version=activeVersion(territory,year);
       const override=state.data.overrides.find(o=>o.territory===territory.name&&o.id===id&&o.from<=year&&year<=o.through);
       const verdict=override?.action==='add'?'Incluida por asignación documentada.':override?.action==='remove'?'Excluida por corrección documentada.':version.ids.includes(id)?'Candidata por solapamiento; revisar límite local.':version.borderline.includes(id)?'Solapamiento parcial; excluida para revisión.':'No atribuida a esta jurisdicción.';
-      info.replaceChildren();const strong=document.createElement('strong');strong.textContent=id;info.append(strong,document.createTextNode(` · ${verdict}`));
+      info.replaceChildren();const strong=document.createElement('strong');strong.textContent=locationLabel(id);info.append(strong,document.createTextNode(` · ${verdict}`));
       if(override){info.append(document.createTextNode(` ${override.reason} `));const link=document.createElement('a');link.href=override.source;link.target='_blank';link.rel='noopener noreferrer';link.textContent='Fuente';info.append(link)}
     }
     function updateMosaicLegend(){
