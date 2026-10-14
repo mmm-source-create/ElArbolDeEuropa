@@ -1,3 +1,4 @@
+import {AtlasLoadError} from './AtlasSkeleton.jsx';
 import {gobiernosDe, territoriosDe} from '../data/personAccessors.js';
 import AtlasGrowth from './AtlasGrowth.jsx';
 import StoryAtlasGuide from './StoryAtlasGuide.jsx';
@@ -120,7 +121,7 @@ function VenetianOfficeSequence({ persona, onSelect }) {
   );
 }
 
-export default function ExplorerView({ vm }) {
+export default function ExplorerView({ vm, loading = false, loadError = false, onRetry, ready = true }) {
   const [searchOpen,setSearchOpen] = React.useState(false);
   const [mobileToolsOpen,setMobileToolsOpen] = React.useState(false);
   const [guideOpen,setGuideOpen] = React.useState(false);
@@ -240,13 +241,15 @@ export default function ExplorerView({ vm }) {
     return () => document.removeEventListener('keydown', onEscape);
   }, [compareMenuOpen, favoritosOpen, compareMenuRef, favoritosMenuRef, setCompareMenuOpen, setFavoritosOpen]);
   return (
-    <>
+    <div className={`atlas-loading ${loading ? "loading" : ready ? "loaded" : ""}`} aria-busy={loading}>
+      {loading && <span className="atlas-loading-status" role="status">Cargando el atlas…</span>}
+      {loadError && <AtlasLoadError onRetry={onRetry}/>}
       {!modoTrabajo && <SiteHeader variant="atlas" locale={locale} onLanguageChange={cambiarIdioma} />}
-    <div className={`wrap${modoTrabajo ? " atlas-work-mode" : ""}`}>
+    <div className={`wrap${modoTrabajo ? " atlas-work-mode" : ""}`} inert={!ready}>
       <div className={`workspace-topbar${modoTrabajo ? " is-work-mode" : ""}`}>
         <section className="workspace-topbar-section workspace-toolbar-search" onBlur={e=>{if(!e.currentTarget.contains(e.relatedTarget))setSearchOpen(false);}}>
-          <div className="toolbar-label">Búsqueda</div>
-          <div className="search-box toolbar-search-box">
+          <div className="toolbar-label sk" style={{"--sk-index":0}}>Búsqueda</div>
+          <div className="search-box toolbar-search-box sk" style={{"--sk-index":1}}>
             <Search size={13} aria-hidden="true" />
             <input
               placeholder="Buscar personas, casas, lugares, historias…"
@@ -292,7 +295,7 @@ export default function ExplorerView({ vm }) {
 
         <section className="workspace-topbar-section workspace-toolbar-year">
           <div className="global-year-heading-row">
-            <div className="toolbar-label">Año global</div>
+            <div className="toolbar-label sk" style={{"--sk-index":0}}>Año global</div>
             <button type="button" className="global-year-europe" onClick={()=>{setReproduciendoHistoria(false);setInfoProyecto("europa");}}>Europa en este año →</button>
             {Number.isFinite(anioGlobal) && (
               <span className="global-year-header-summary">
@@ -593,8 +596,8 @@ export default function ExplorerView({ vm }) {
         <aside className="workspace-sidebar">
           <section className="panel workspace-fixed-panel workspace-filter-panel">
             <div className="panel-head panel-head-static">
-              <span className="panel-title">Filtros</span>
-              <span className="panel-count">
+              <span className="panel-title sk" style={{"--sk-index":3}}>Filtros</span>
+              <span className="panel-count sk" style={{"--sk-index":4}}>
                 {visiblePeople.length !== PERSONAS.length ? `${visiblePeople.length} / ${PERSONAS.length} visibles` : `${PERSONAS.length} personas`}
               </span>
             </div>
@@ -769,9 +772,9 @@ export default function ExplorerView({ vm }) {
           } : undefined}
         >
           {mostrarArbol && (
-            <section className={`workspace-stage workspace-tree-stage${mostrarMapa ? " tree-with-map" : ""}${historiaActiva ? " story-tree-stage" : ""}${treeListOpen ? " showing-list" : ""}`} aria-label="Árbol genealógico">
+            <section className={`workspace-stage sk dim workspace-tree-stage${mostrarMapa ? " tree-with-map" : ""}${historiaActiva ? " story-tree-stage" : ""}${treeListOpen ? " showing-list" : ""}`} aria-label="Árbol genealógico">
               <div className="tree-toolbar" aria-label="Controles del árbol">
-                <span className="tree-scope-label">{visiblePeople.length} personas</span>
+                <span className="tree-scope-label sk" style={{"--sk-index":2}}>{visiblePeople.length} personas</span>
                 {modoTrabajo && <TreeExport getSelection={getExportSelection} />}
                 <button type="button" className="nav-btn tree-list-toggle" aria-label={treeListOpen ? 'Mostrar árbol gráfico' : 'Mostrar personas como lista accesible'} title={treeListOpen ? 'Árbol gráfico' : 'Lista accesible'} aria-pressed={treeListOpen} onClick={() => setTreeListOpen(open => !open)}><List size={14} aria-hidden="true" /></button>
                 <button type="button" className="nav-btn" onClick={() => cambiarZoomArbol(zoom - 0.1)} title="Alejar árbol" aria-label="Alejar árbol"><ZoomOut size={13} /></button>
@@ -893,7 +896,7 @@ export default function ExplorerView({ vm }) {
                 anioGlobal={anioGlobal}
                 onSelectPersona={seleccionarPersonaPorId}
               />
-              <div className="territory-hint workspace-map-hint">
+              <div className="territory-hint workspace-map-hint sk" style={{"--sk-index":5}}>
                 {seleccion
                   ? (esGobernante(seleccion)
                       ? (Number.isFinite(anioGlobal)
@@ -933,8 +936,8 @@ export default function ExplorerView({ vm }) {
           {personaBio && <button type="button" className="bio-mobile-toggle" aria-expanded={bioMobileOpen} aria-controls="atlas-biography-panel" onClick={()=>setBioMobileOpen(open=>!open)}>{bioMobileOpen ? 'Ocultar ficha' : `Ver ficha de ${personaBio.nombre}`} <ChevronDown size={15}/></button>}
           <section id="atlas-biography-panel" className="panel workspace-fixed-panel workspace-bio-panel">
             <div className="panel-head panel-head-static">
-              <span className="panel-title">Biografía</span>
-              <span className="panel-count">{personaBio ? "1 personaje" : "ninguno"}</span>
+              <span className="panel-title sk" style={{"--sk-index":3}}>Biografía</span>
+              <span className="panel-count sk" style={{"--sk-index":4}}>{personaBio ? "1 personaje" : "ninguno"}</span>
             </div>
             {personaBio && <nav className="bio-tabs" aria-label={`Apartados de ${personaBio.nombre}`}>
               <SegmentedControl current="location" label="Apartados de la biografía" options={BIO_OPTIONS} value={bioSection} onChange={scrollToBioSection}/>
@@ -969,7 +972,7 @@ export default function ExplorerView({ vm }) {
                   )}
                   <div className="bio-head">
                     <div>
-                      <h3 className="bio-nombre">{nombrePrincipal(personaBio)}</h3>
+                      <h3 className="bio-nombre sk" style={{"--sk-index":2}}>{nombrePrincipal(personaBio)}</h3>
                       {sobrenombreDePersona(personaBio) && <div className="bio-sobrenombre">«{sobrenombreDePersona(personaBio)}»</div>}
                       <span
                         className="badge"
@@ -1165,8 +1168,8 @@ export default function ExplorerView({ vm }) {
           <section className="panel timeline-panel">
             <div className="panel-head panel-head-static timeline-panel-head">
               <div className="timeline-title-group">
-                <span className="panel-title">Línea temporal</span>
-                <span className="panel-count">
+                <span className="panel-title sk" style={{"--sk-index":3}}>Línea temporal</span>
+                <span className="panel-count sk" style={{"--sk-index":4}}>
                   {timelineMode === "eventos" ? `${totalEventosTimeline} eventos` : `${visiblePeople.length} personas${timelineMode === "ambos" ? ` · ${totalEventosTimeline} eventos` : ""}`}
                 </span>
               </div>
@@ -1348,6 +1351,6 @@ export default function ExplorerView({ vm }) {
         <EuropeYearDialog anio={anioGlobal} onYearChange={actualizarAnioDesdeRango} onClose={()=>setInfoProyecto(null)} onSelect={id=>{setInfoProyecto(null);seleccionarPersonaPorId(id);}} personas={queryTrim?visiblePeople.filter(p=>searchMatchSet.has(p.id)):visiblePeople} territorios={territorios} filtros={filtrosActivosCompactos} alcanceCompleto={!queryTrim&&!territorios.length&&visiblePeople.length===PERSONAS.length} min={TL_MIN} max={TL_MAX}/>
       </React.Suspense> : infoProyecto !== 'cobertura' && <ModalProyecto seccion={infoProyecto} onClose={() => setInfoProyecto(null)} persona={seleccion} personasVista={visiblePeople} onStartHistoria={iniciarHistoria} />}
     </div>
-    </>
+    </div>
   );
 }

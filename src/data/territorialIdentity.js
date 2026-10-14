@@ -1,3 +1,5 @@
+import {franceLowCountriesPoliticalKeys} from './franceLowCountriesRoutes.js';
+import {ORANGE_NASSAU, FRENCH_CROWN_COLOR, BURGUNDIAN_COLOR} from './mapColors.js';
 import {FRANCE_LOW_COUNTRIES_IDENTITIES} from './franceLowCountriesRoutes.js';
 import {IBERIA_ITALY_IDENTITIES} from './iberiaItalyRoutes.js';
 // A survey label, an owner and a control episode are not territorial identity.
@@ -162,6 +164,7 @@ export function territorialLabel(name, year) {
 // The color depends on identity alone, not on alphabetic position, survey
 // corridor or the number of other entities newly added to the atlas.
 export function territorialColor(name) {
+  if (['Holanda', 'Provincias Unidas', 'República Bátava'].includes(territorialIdentity(name))) return ORANGE_NASSAU;
   if (territorialIdentity(name) === 'Islas sin autoridad política documentada') return '#8d9da0';
   let hash = 2166136261;
   for (const char of territorialIdentity(name)) hash = Math.imul(hash ^ char.codePointAt(0), 16777619) >>> 0;
@@ -185,21 +188,33 @@ export function continuityJurisdictions(names, territory, year, personId) {
   return names;
 }
 
+// Color integration follows dated political attribution, never proximity or a dynasty name.
+export function politicalColorGroup(name, year) {
+  const keys = franceLowCountriesPoliticalKeys(name, year);
+  if (keys.includes('Provincias Unidas')) return {id:'republica-neerlandesa', color:ORANGE_NASSAU};
+  if (keys.includes('República Bátava')) return {id:'republica-batava', color:ORANGE_NASSAU};
+  if (keys.includes('Francia')) return {id:'corona-francesa', color:FRENCH_CROWN_COLOR};
+  if (year >= 1549 && keys.includes('Países Bajos')) return {id:'paises-bajos-habsburgicos', color:BURGUNDIAN_COLOR};
+  return null;
+}
+
 export function coalesceTerritorialLayers(layers, year) {
   const groups = new Map();
   for (const layer of layers) {
     const identity = territorialIdentity(layer.name);
+    const polity = politicalColorGroup(layer.name, year);
+    const groupKey = `${identity}\u0000${polity?.id || ''}`;
     const scope = {name: layer.name, ids: [...layer.ids], note: layer.note,
       condition: layer.authorityCondition, sources: layer.sources || [],
       label: layer.scopeLabel || (layer.name === 'Hungría real' ? 'Gobierno real occidental y septentrional'
         : layer.name === 'Núcleo oriental de Zápolya' ? 'Gobierno rival del reino oriental'
         : layer.name.includes('·') ? layer.name.split('·').slice(1).join('·').trim()
         : layer.authorityCondition || (layer.approximate ? 'Gobierno registrado' : 'Ámbito territorial revisado'))};
-    const existing = groups.get(identity);
+    const existing = groups.get(groupKey);
     if (!existing) {
-      groups.set(identity, {...layer, entityId: identity, displayName: territorialLabel(layer.name, year),
+      groups.set(groupKey, {...layer, entityId: identity, displayName: territorialLabel(layer.name, year),
         ids: [...layer.ids], memberNames: [layer.name], scopes: [scope],
-        mosaicColor: territorialColor(identity)});
+        mosaicColor: polity?.color || territorialColor(identity), politicalColorGroup: polity?.id || null});
     } else {
       existing.ids = [...new Set([...existing.ids, ...layer.ids])];
       existing.memberNames.push(layer.name);

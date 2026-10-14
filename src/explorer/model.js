@@ -1,3 +1,4 @@
+import {ORANGE_NASSAU} from '../data/mapColors.js';
 import {conyugesDe} from '../data/personAccessors.js';
 export {setMetaContent, ensureCanonical, setHreflangAlternates} from "../public/headMetadata.js";
 import { PERSONAS } from "../personas.jsx";
@@ -289,7 +290,7 @@ export const ACCENTS = {
 
   // Casas británicas, germánicas, orientales y escandinavas.
   "Tudor":"#8A5C45","Estuardo":"#6C567F","Rurikida":"#526F8D",
-  "Hohenzollern":"#303C59","Nassau":"#C08A38","Welf":"#A65C43","Oldemburgo":"#486D75",
+  "Hohenzollern":"#303C59","Nassau":ORANGE_NASSAU,"Welf":"#A65C43","Oldemburgo":"#486D75",
   "Romanov":"#6F527A","Holstein-Gottorp":"#47727A","Hannover":"#6B5C91",
   "Mecklemburgo":"#4F8075","Hesse":"#6E7B45","Ascania":"#8D7A45","Estridsen":"#8FB9C9",
   "Nemanjić":"#76504A","Branković":"#8A6656","Lazarević":"#6E5E79",

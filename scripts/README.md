@@ -117,3 +117,5 @@ La revisión histórica es una fuente curada, no un resultado inferido por nombr
 El constructor sólo compila rutas; el ensamblador exige sustitución completa.
 Los ámbitos delegados conservan sus celdas disputadas y citas. Las superficies
 compartidas con Iberia/Italia siguen sujetas a ambas auditorías.
+
+`audit-personal-atlas.mjs` verifica Navarra durante todos los mandatos habsbúrgicos españoles y registra diez casos personales; `--publish` actualiza la instantánea revisada V5.14.

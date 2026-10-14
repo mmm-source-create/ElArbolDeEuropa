@@ -3,10 +3,12 @@ import {projectRoot} from '../lib/project-paths.mjs';
 import path from 'node:path';
 
 // The source review and compiled map retain full geographic evidence. The
-// client only needs route names, dates and explicitly dated personal scopes.
+// client needs dated routes, personal scopes and the survey footprint so a
+// later review cannot erase documented holdings outside its geographic area.
 export function compactBalkanRoutes(review) {
   const keys = new Set((review.authorityScopes || []).flatMap(scope => scope.sourceKeys));
-  return {assignments: review.assignments.map(({name, from, through, identity, governmentTerritories, authorityPeople}) =>
+  return {coverageIds: review.precedenceIds || review.scope.ids,
+    assignments: review.assignments.map(({name, from, through, identity, governmentTerritories, authorityPeople}) =>
     ({name, from, through, identity, governmentTerritories, ...(authorityPeople ? {authorityPeople} : {})})),
     authorityScopes: review.authorityScopes || [],
     sources: Object.fromEntries([...keys].map(key => [key, review.sources[key]]))};

@@ -370,16 +370,39 @@ export const AUTHORITY_MAP_SCOPES = Object.freeze([
   }
 ]);
 
+export function composeRegionalAuthorityScopes(scopes) {
+  const selected = scopes.filter(Boolean);
+  if (!selected.length) return null;
+  const first = selected[0];
+  // A later geographic survey replaces authority only inside its footprint.
+  // An explicit exclusion there must win; outside it, earlier evidence survives.
+  if (!first.coverageIds || selected.length === 1) return first;
+  const covered = new Set(first.coverageIds), ids = new Set(first.ids);
+  const disputed = new Set(first.disputedIds || []), sources = [...(first.additionalSources || [])];
+  const notes = new Set([first.note]);
+  for (const scope of selected.slice(1)) {
+    const retained = scope.ids.filter(id => !covered.has(id));
+    if (retained.length) {
+      retained.forEach(id => ids.add(id));
+      (scope.disputedIds || []).filter(id => retained.includes(id)).forEach(id => disputed.add(id));
+      sources.push(scope.source, ...(scope.additionalSources || []));
+      notes.add(scope.note);
+    }
+    // A scope without a geographic footprint is a full replacement, as before.
+    (scope.coverageIds || scope.ids).forEach(id => covered.add(id));
+  }
+  if (ids.size === first.ids.length) return first;
+  return {...first, ids:[...ids], disputedIds:[...disputed],
+    additionalSources:[...new Map(sources.filter(Boolean).map(s => [s.url+'|'+s.locator,s])).values()],
+    note:[...notes].filter(Boolean).join(' ')};
+}
+
 export function authorityMapScope(personId, territory, year) {
-  const french = franceLowCountriesScope(personId, territory, year);
-  if (french) return french;
-  const western = iberiaItalyScope(personId, territory, year);
-  if (western) return western;
-  const fullRegion = balkansFullScope(personId, territory, year);
-  if (fullRegion) return fullRegion;
-  const medieval = medievalBalkanScope(personId, territory, year);
-  if (medieval) return medieval;
-  const regional = posavinaRagusaScope(personId, territory, year) || bosniaHumScope(personId, territory, year);
+  const regional = composeRegionalAuthorityScopes([
+    franceLowCountriesScope(personId, territory, year), iberiaItalyScope(personId, territory, year),
+    balkansFullScope(personId, territory, year), medievalBalkanScope(personId, territory, year),
+    posavinaRagusaScope(personId, territory, year), bosniaHumScope(personId, territory, year),
+  ]);
   if (regional) return regional;
   const governor = netherlandsGovernorScope(personId, territory, year);
   if (governor) return governor;

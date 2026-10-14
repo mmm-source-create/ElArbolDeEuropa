@@ -1,3 +1,5 @@
+import './explorer/atlas-skeleton.css';
+import {authorityColor} from './data/mapColors.js';
 import {locationLabel} from './data/locationLabels.js';
 import {territoriosDe} from './data/personAccessors.js';
 import React, { useCallback, useEffect, useMemo, useRef, useState } from "react";
@@ -16,17 +18,13 @@ import locationsDataUrl from "../prototypes/euv-locations/corridor-locations.jso
 import burgundianDataUrl from "../prototypes/euv-locations/burgundian-locations.json?url";
 import { loadTextAsset, loadJsonAsset, forgetTextAsset } from "./utils/loadAsset.js";
 import { clampMapViewBox, clipMapToBounds, fittedMapViewBox, mapControlLimits, resizeMapViewBox, zoomMapViewBox } from "./mapViewport.js";
-import { mapLocationsForGovernment, pilotImperialFrameFor, pilotLocationContext, pilotLocationsFor, mapSourceReference } from "./data/locationMapPilot.js";
+import { pilotImperialFrameFor, pilotLocationContext, mapSourceReference } from "./data/locationMapPilot.js";
 import { buildPoliticalMapIndex, inspectMapRegion } from "./data/politicalMapIndex.js";
-import { AUTHORITY_LABELS, mapAuthoritiesForPerson } from "./data/mapAuthorities.js";
+import { AUTHORITY_LABELS, mapAuthoritiesForPerson, mapAuthoritiesAcrossLife } from "./data/mapAuthorities.js";
 import { PERSONAS } from "./personas.jsx";
 import {
   agrupacionesPoliticasEnMapa,
   colorTerritorioEnMapa,
-  idsDeGobiernoEnAño,
-  añoReferenciaTerritorial,
-  listaReinados,
-  reinadoEsEfectivo,
   reinadosActivos,
 } from "./Territorios";
 
@@ -99,6 +97,7 @@ export function MapaEuropa({ seleccion, anioGlobal = null, onSelectTerritorio, o
   const [viewBox, setViewBox] = useState(null);
   const [originalMapFrame, setOriginalMapFrame] = useState(null);
   const [mapReady, setMapReady] = useState(false);
+  const [paintingLife, setPaintingLife] = useState(false);
   const [showDependencies, setShowDependencies] = useState(true);
   const [mapError, setMapError] = useState(false);
   const [mapAttempt, setMapAttempt] = useState(0);
@@ -249,6 +248,9 @@ export function MapaEuropa({ seleccion, anioGlobal = null, onSelectTerritorio, o
       }
     };
 
+    let cancelled = false;
+    const controller = new AbortController();
+    setPaintingLife(false);
     try {
       pintadosRef.current.forEach((id) => {
         const target = buscarElemento(id);
@@ -272,8 +274,7 @@ export function MapaEuropa({ seleccion, anioGlobal = null, onSelectTerritorio, o
       if (seleccion && Number.isInteger(anioGlobal)) {
         for (const entry of mapAuthoritiesForPerson(seleccion, anioGlobal, pilotData, {includeDependencies: showDependencies})) {
           if (!entry.paint) continue;
-          const color = entry.color || (entry.kind === 'delegated' ? '#907085'
-            : colorTerritorioEnMapa(seleccion, entry.colorTerritory || entry.territory, anioGlobal));
+          const color = authorityColor(entry, colorTerritorioEnMapa(seleccion, entry.colorTerritory || entry.territory, anioGlobal));
           const fill = authorityFill(svg, color, entry.kind);
           for (const id of entry.ids) {
             const target = buscarElemento(id);
@@ -284,42 +285,32 @@ export function MapaEuropa({ seleccion, anioGlobal = null, onSelectTerritorio, o
           }
         }
       } else if (seleccion) {
-        const reinadosDetallados = listaReinados(seleccion).filter(reinadoEsEfectivo);
-        const entradas = Number.isFinite(anioGlobal)
-          ? reinadosActivos(seleccion, anioGlobal, { soloEfectivos: true })
-          : reinadosDetallados;
-
-        const porTerritorio = new Map();
-        entradas.forEach((entrada) => {
-          if (!entrada?.territorio) return;
-          const anterior = porTerritorio.get(entrada.territorio);
-          if (!anterior || entrada.hasta >= anterior.hasta) porTerritorio.set(entrada.territorio, entrada);
-        });
-
-        porTerritorio.forEach((entrada, reino) => {
-          const año = Number.isFinite(anioGlobal)
-            ? anioGlobal
-            : añoReferenciaTerritorial(seleccion, reino);
-          const color = colorTerritorioEnMapa(seleccion, reino, año);
-          // Una ficha con ámbito de rama no colorea todo el archiducado.
-          const legacyIds = idsDeGobiernoEnAño(entrada, año, seleccion.id);
-          const ids = reino === 'Austria' && entrada.ambito?.includes('Austria Interior')
-            ? [...pilotLocationsFor(pilotData, 'Austria Interior', año, seleccion.id),
-              ...(año >= 1619 ? pilotLocationsFor(pilotData, 'Austria', año, seleccion.id) : [])]
-            : mapLocationsForGovernment(pilotData, entrada, año, seleccion.id, legacyIds);
-          ids.forEach((id) => {
-            const target = buscarElemento(id);
-            if (!target) return;
-            target.style.setProperty("fill", color, "important");
-            target.style.setProperty("stroke", color, "important");
-            pintadosRef.current.add(id);
+        setPaintingLife(true);
+        mapAuthoritiesAcrossLife(seleccion, pilotData, {includeDependencies:showDependencies, signal:controller.signal})
+          .then(entries => {
+            if (cancelled) return;
+            for (const entry of entries) {
+              const fill = authorityFill(svg, entry.color, entry.kind);
+              for (const id of entry.ids) {
+                const target = buscarElemento(id);
+                if (!target) continue;
+                target.style.setProperty('fill', fill, 'important');
+                target.style.setProperty('stroke', entry.color, 'important');
+                pintadosRef.current.add(id);
+              }
+            }
+            setPaintingLife(false);
+          }).catch(error => {
+            if (cancelled || error.name === 'AbortError') return;
+            setPaintingLife(false);
+            console.error('[MapaEuropa] Error al reunir ámbitos:', error);
           });
-        });
-
       }
+
     } catch (error) {
       console.error("[MapaEuropa] Error al renderizar:", error);
     }
+    return () => { cancelled = true; controller.abort(); };
   }, [seleccion, anioGlobal, mapReady, imperialReferenceActive, pilotData, showDependencies]);
 
   const updateViewBox = useCallback((producer) => {
@@ -448,11 +439,12 @@ export function MapaEuropa({ seleccion, anioGlobal = null, onSelectTerritorio, o
   }, [selectedRegionId, mapReady]);
 
   return (
-    <div className="mapa-stage">
-      {!mapReady && <div role={mapError ? "alert" : "status"} style={{ position: "absolute", inset: "50% 0 auto", textAlign: "center", zIndex: 2 }}>
-        {mapError ? <>No se ha podido cargar el mapa. <button className="nav-btn" onClick={() => setMapAttempt(n => n + 1)}>Reintentar</button></> : "Cargando mapa…"}
+    <div className={`mapa-stage atlas-loading ${(!mapReady || paintingLife) && !mapError ? "loading" : "loaded"}`} aria-busy={(!mapReady || paintingLife) && !mapError}>
+      {(!mapReady || paintingLife) && !mapError && <span className="atlas-loading-bar" aria-hidden="true"/>}
+      {(!mapReady || paintingLife) && <div role={mapError ? "alert" : "status"} style={{ position: "absolute", inset: "50% 0 auto", textAlign: "center", zIndex: 2 }}>
+        {mapError ? <>No se ha podido cargar el mapa. <button className="nav-btn" onClick={() => setMapAttempt(n => n + 1)}>Reintentar</button></> : paintingLife ? "Reuniendo los territorios de esta vida…" : "Cargando mapa…"}
       </div>}
-      <div className="mapa-toolbar" aria-label="Controles del mapa">
+      <div className="mapa-toolbar" inert={!mapReady || paintingLife} aria-label="Controles del mapa">
         <button type="button" className="nav-btn" disabled={!controlLimits.zoomOut} onClick={() => zoomBy(1 / MAP_ZOOM_FACTOR)} title={controlLimits.zoomOut ? 'Alejar mapa' : 'Límite del mapa de Europa'} aria-label="Alejar mapa"><ZoomOut size={13} /></button>
         <button type="button" className="nav-btn" onClick={resetView} title="Volver a Europa" aria-label="Volver a Europa"><RotateCcw size={12} /></button>
         <button type="button" className="nav-btn" disabled={!controlLimits.zoomIn} onClick={() => zoomBy(MAP_ZOOM_FACTOR)} title="Acercar mapa" aria-label="Acercar mapa"><ZoomIn size={13} /></button>
@@ -462,7 +454,7 @@ export function MapaEuropa({ seleccion, anioGlobal = null, onSelectTerritorio, o
         <button type="button" className="nav-btn" disabled={!controlLimits.down} onClick={() => panBy(0, MAP_PAN_STEP)} title="Mover mapa hacia abajo" aria-label="Mover mapa hacia abajo"><ArrowDown size={13} /></button>
         <button type="button" className="nav-btn" disabled={!controlLimits.right} onClick={() => panBy(MAP_PAN_STEP, 0)} title="Mover mapa a la derecha" aria-label="Mover mapa a la derecha"><ArrowRight size={13} /></button>
       </div>
-      {seleccion && <details className="mapa-color-legend">
+      {seleccion && <details className="mapa-color-legend" inert={!mapReady || paintingLife}>
         <summary>¿Por qué estos colores?</summary>
         <p><a href="/es/mapa-completo" target="_blank" rel="noopener noreferrer">Probar el mapa conjunto · 1200–1800</a></p>
         <div className="mapa-authority-key">
@@ -470,7 +462,7 @@ export function MapaEuropa({ seleccion, anioGlobal = null, onSelectTerritorio, o
           <span><i className="mapa-key-delegated" aria-hidden="true"/>Gobierno delegado</span>
           <span><i className="mapa-key-disputed" aria-hidden="true"/>Control disputado / ocupación</span>
           <span><i className="mapa-key-tributary" aria-hidden="true"/>Estado tributario · gobierno propio</span>
-          <span><i className="mapa-key-mixed" aria-hidden="true"/>Varias jurisdicciones en una celda</span>
+          <span><i className="mapa-key-mixed" aria-hidden="true"/>{Number.isInteger(anioGlobal) ? "Varias jurisdicciones en una celda" : "Varias jurisdicciones o condiciones a lo largo de la vida"}</span>
         </div>
         <label className="mapa-dependency-toggle"><input type="checkbox" checked={showDependencies} onChange={event => setShowDependencies(event.target.checked)}/> Mostrar estados tributarios</label>
         <p>Los puntos relacionan un Estado tributario con el soberano seleccionado. Conserva su título y gobierno; las superficies de administración directa tienen color sólido.</p>
@@ -483,12 +475,13 @@ export function MapaEuropa({ seleccion, anioGlobal = null, onSelectTerritorio, o
             <span className="mapa-color-swatch" style={{ backgroundColor: grupo.color }} aria-hidden="true" />
             <div><strong>{grupo.nombre}</strong><p>{grupo.nota} {grupo.fuente && <a href={grupo.fuente} target="_blank" rel="noreferrer">Fuente</a>}</p></div>
           </div>) : <p>Los colores corresponden a los territorios gobernados por esta persona en {anioGlobal}; no indican que todos formasen un único Estado.</p>
-        ) : <p>Elige un año para distinguir los conjuntos políticos de cada etapa. Sin año, el mapa reúne los gobiernos de toda la vida de esta persona.</p>}
+        ) : <p>Elige un año para distinguir los conjuntos políticos de cada etapa. Sin año, el mapa reúne las superficies de distintas etapas de esta vida, que no coexistieron necesariamente. El color sigue la última agrupación registrada de cada título.</p>}
       </details>}
 
       <div
         ref={containerRef}
-        className="mapa-wrapper"
+        className="mapa-wrapper sk dim"
+        inert={!mapReady || paintingLife}
         onKeyDown={handleMapKeyDown}
         role="region"
         tabIndex={0}

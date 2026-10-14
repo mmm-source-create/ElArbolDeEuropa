@@ -1,3 +1,4 @@
+import {PERSONAL_ATLAS_REVIEWS} from './personalAtlasReviews.js';
 import {FRANCE_LOW_COUNTRIES_REVIEWS} from './franceLowCountriesReviews.js';
 import {BALKANS_FULL_REVIEWS} from './balkansFullReviews.js';
 import {IBERIA_ITALY_REVIEWS} from './iberiaItalyReviews.js';
@@ -244,6 +245,7 @@ export const CLAIM_REVIEWS = Object.freeze({
   ...BALKANS_FULL_REVIEWS,
   ...IBERIA_ITALY_REVIEWS,
   ...FRANCE_LOW_COUNTRIES_REVIEWS,
+  ...PERSONAL_ATLAS_REVIEWS,
   ...dogeReviews,
   ...pignatelliReviews,
   ...tyrolReviews,

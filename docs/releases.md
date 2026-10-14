@@ -96,6 +96,7 @@ permanecen explicados en [archive/manifests](archive/manifests/README.md).
 | [5.10](V5.10.md) | V5.10 · Kozara–Glaž, costa ragusea y apoyo al proyecto |
 | [5.11](V5.11.md) | V5.11 · Balcanes y continuidad otomana |
 | [5.12](V5.12.md) | V5.12 · Iberia, Italia y estados tributarios |
+| [5.14](V5.14.md) | V5.14 · Mapas personales e identidad política |
 | [5.13](V5.13.md) | V5.13 · Francia, Borgoña y Países Bajos |
 
 ## Publicar una entrega
@@ -121,5 +122,5 @@ adjuntan `node_modules`, temporales ni un `dist` de otra compilación. Si hace
 falta un artefacto adicional, debe proceder del mismo commit validado y
 explicar su contenido; los ZIP parciales antiguos no son instalaciones actuales.
 
-V5.13 mantiene la PR y la Release en borrador hasta la revisión de la vista previa.
+V5.14 mantiene la PR y la Release en borrador hasta la revisión de la vista previa.
 El destino de la Release debe ser el commit exacto validado; no una rama mutable.

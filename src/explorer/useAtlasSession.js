@@ -7,6 +7,7 @@ export function useAtlasSession(state, scrollRef, timelineRef, captureExtra) {
   useLayoutEffect(() => { latest.current = { state, captureExtra }; });
   const save = () => {
     const { state: current, captureExtra: extra } = latest.current;
+    if (current.ready === false) return;
     const tree = scrollRef.current, timeline = timelineRef.current;
     try {
       lastPositions.current = {

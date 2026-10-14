@@ -8,13 +8,22 @@ const data = JSON.parse(fs.readFileSync(new URL('../prototypes/euv-locations/cor
 const palette = mosaicPalette(data);
 const layer = (snapshot, name) => snapshot.layers.find(entry => entry.name === name);
 
-test('the full-year mosaic gives every active jurisdiction its own stable color', () => {
+function assertColorsHaveAnIdentity(layers) {
+  const groups = new Map();
+  for (const layer of layers) {
+    const key = layer.politicalColorGroup || layer.entityId || layer.name;
+    if (groups.has(layer.mosaicColor)) assert.equal(groups.get(layer.mosaicColor),key);
+    else groups.set(layer.mosaicColor,key);
+  }
+}
+test('the full-year mosaic gives identities stable colors and integrates documented political groups', () => {
   const at1500 = politicalMosaicAt(data, 1500, palette);
   const at1600 = politicalMosaicAt(data, 1600, palette);
   const colors = new Set(at1500.layers.map(entry => entry.mosaicColor));
 
   assert.ok(at1500.layers.length > 60);
-  assert.equal(colors.size, at1500.layers.length);
+  assert(colors.size > 60);
+  assertColorsHaveAnIdentity(at1500.layers);
   assert.equal(layer(at1500, 'Marco jurídico del Sacro Imperio'), undefined);
   assert.equal(layer(at1500, 'Ducado de Pomerania').mosaicColor, layer(at1600, 'Ducado de Pomerania').mosaicColor);
   assert.ok(at1500.byLocation.size > 500);
@@ -47,7 +56,7 @@ test('the Atlas mosaic adds every mappable active government with a distinct app
 
   assert.ok(approximate.length > 0);
   assert.ok(complete.layers.length > direct.layers.length);
-  assert.equal(new Set(complete.layers.map(entry => entry.mosaicColor)).size, complete.layers.length);
+  assertColorsHaveAnIdentity(complete.layers);
   assert.equal(complete.reviewedLayerCount, direct.layers.length);
   assert.equal(complete.approximateLayerCount, approximate.length);
   assert.ok(approximate.every(layer => layer.ids.length && layer.note.includes('No prueba')));
