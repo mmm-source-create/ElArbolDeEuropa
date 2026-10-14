@@ -1,3 +1,4 @@
+import {ORANGE_NASSAU} from './data/mapColors.js';
 import {gobiernosDe, territoriosDe} from './data/personAccessors.js';
 import { gobiernoEfectivo } from "./data/territorios.js";
 
@@ -249,13 +250,19 @@ export const REINO_COLOR = {
   Bretaña: '#298E36',
   Artois: '#8E6329',
   Henao: '#29708E',
-  Holanda: '#8E5029',
+  Holanda: ORANGE_NASSAU,
+  'Provincias Unidas': ORANGE_NASSAU,
+  'República Bátava': ORANGE_NASSAU,
   "Estados Pontificios": '#8E3C29',
   "Imperio Latino": '#62298e',
   Provenza: '#298E49',
   Alemania: '#8E7729',
   "Sacro Imperio": '#2F8E29',
   Borgoña: '#8E295C',
+  'Señorío de Malinas': '#8E295C',
+  Tournai: '#8E295C',
+  'Condado de Charolais': '#8E295C',
+  'Señorío de Cuijk': '#8E295C',
   "Condado de Borgoña": '#8E295C',
   Nevers: '#8E295C',
   Rethel: '#8E295C',
@@ -341,7 +348,7 @@ const FEUDOS_HERENCIA_BORGONONA = new Set([
   'Borgoña', 'Condado de Borgoña', 'Artois', 'Flandes', 'Nevers', 'Rethel',
   'Auxerre', 'Ponthieu', 'Namur', 'Brabante', 'Limburgo', 'Henao', 'Holanda',
   'Zelanda', 'Luxemburgo', 'Güeldres', 'Frisia', 'Utrecht', 'Overijssel',
-  'Drente', 'Groninga',
+  'Drente', 'Groninga', 'Señorío de Malinas', 'Tournai', 'Tournaisis', 'Condado de Charolais', 'Señorío de Cuijk',
 ]);
 const CORONA_ARAGONESA = new Set([
   'Aragón', 'Condado de Barcelona', 'Valencia', 'Mallorca', 'Cerdeña',
@@ -354,7 +361,7 @@ const MONARQUIA_HISPANICA = new Set([
 const ESTADOS_SABOYANOS = new Set(['Saboya', 'Piamonte', 'Cerdeña']);
 const TIERRAS_AUSTRIACAS = new Set(['Austria', 'Austria Interior', 'Tirol', 'Carintia', 'Carniola', 'Ducado de Estiria',
   'Norte de Serbia habsbúrgico', 'Oltenia habsbúrgica', 'Banato de Temes', 'Reino de Galicia y Lodomeria']);
-const ADMINISTRACION_AUSTRO_BOHEMIA = new Set(['Austria', 'Austria Interior', 'Tirol', 'Carintia', 'Bohemia']);
+const ADMINISTRACION_AUSTRO_BOHEMIA = new Set(['Austria', 'Austria Interior', 'Tirol', 'Carintia', 'Carniola', 'Ducado de Estiria', 'Bohemia', 'Moravia', 'Silesia']);
 
 // La pertenencia a un conjunto se evalúa por territorio y fecha; compartir
 // dinastía o soberano nunca basta para colorear todos sus títulos por igual.
@@ -404,6 +411,13 @@ const AGRUPACIONES_POLITICAS = [
     fuente: 'https://www.habsburger.net/de/kapitel/die-maria-theresianischen-reformen',
   },
   {
+    id: 'corona-bohemia', nombre: 'Corona de Bohemia',
+    territorios: new Set(['Bohemia', 'Moravia', 'Silesia']), color: REINO_COLOR.Bohemia, desde: 1526,
+    aplica: activos => activos.has('Bohemia'),
+    nota: 'Reino de Bohemia, margraviato de Moravia y los ducados silesios que esta persona gobierna efectivamente. Los títulos provinciales se conservan; la Silesia prusiana no se incorpora a un monarca habsbúrgico.',
+    fuente: 'https://www.psp.cz/eknih/snemy/v010/1527/t016200.htm',
+  },
+  {
     id: 'tierras-austriacas', nombre: 'Tierras austríacas reunidas', territorios: TIERRAS_AUSTRIACAS,
     color: REINO_COLOR.Austria, desde: -Infinity,
     aplica: (activos) => [...TIERRAS_AUSTRIACAS].filter(territorio => activos.has(territorio)).length > 1,
@@ -415,6 +429,13 @@ const AGRUPACIONES_POLITICAS = [
     color: REINO_COLOR.Saboya, desde: -Infinity,
     aplica: (activos) => activos.has('Saboya') || activos.has('Piamonte'),
     nota: 'Conjunto de territorios gobernados por la casa de Saboya, solo cuando su gobierno está fechado y activo.',
+  },
+  {
+    id: 'paises-bajos', nombre: 'Países Bajos habsbúrgicos', territorios: FEUDOS_HERENCIA_BORGONONA,
+    color: REINO_COLOR.Borgoña, desde: 1549,
+    aplica: activos => ['Brabante', 'Flandes', 'Luxemburgo', 'Señorío de Malinas'].filter(t => activos.has(t)).length > 1,
+    nota: 'Sucesión común de las provincias desde la Pragmática Sanción de 1549. Cada título conserva su identidad y solo su superficie bajo control en el año elegido. No incluye las provincias rebeldes por una pretensión del soberano.',
+    fuente: 'https://en.wikisource.org/wiki/Translation:Pragmatic_Sanction_of_1549',
   },
   {
     id: 'herencia-borgonona', nombre: 'Estados borgoñones', territorios: FEUDOS_HERENCIA_BORGONONA,

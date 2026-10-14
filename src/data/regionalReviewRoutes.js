@@ -1,6 +1,14 @@
 // Shared dated routes; each review retains its own explicit scopes.
 export function regionalReviewRoutes(review) {
   const routes = new Map();
+  const scopes = new WeakMap();
+  const phases = new Map(review.assignments.map(phase => [phase.name, phase]));
+  const personalScopes = new Map();
+  for (const scope of review.authorityScopes || []) {
+    const key = scope.personId+'\u0000'+scope.territory;
+    if (!personalScopes.has(key)) personalScopes.set(key, []);
+    personalScopes.get(key).push(scope);
+  }
   for (const phase of review.assignments) for (const territory of phase.governmentTerritories) {
     if (!routes.has(territory)) routes.set(territory, []);
     routes.get(territory).push(phase);
@@ -14,12 +22,19 @@ export function regionalReviewRoutes(review) {
   }
 
   function scope(personId, territory, year) {
-    const selected = (review.authorityScopes || []).find(scope => scope.personId === personId
-      && scope.territory === territory && scope.from <= year && year <= scope.through);
+    const selected = (personalScopes.get(personId+'\u0000'+territory) || [])
+      .find(scope => scope.from <= year && year <= scope.through);
     if (!selected) return null;
-    return {ids: selected.ids, ...(selected.disputedIds ? {disputedIds: selected.disputedIds} : {}), source: review.sources[selected.sourceKeys[0]],
-      additionalSources: selected.sourceKeys.slice(1).map(key => review.sources[key]), note: selected.note};
+    if (!scopes.has(selected)) scopes.set(selected, {ids: selected.ids,
+      coverageIds: review.coverageIds || null,
+      ...(selected.disputedIds ? {disputedIds: selected.disputedIds} : {}), source: review.sources[selected.sourceKeys[0]],
+      additionalSources: selected.sourceKeys.slice(1).map(key => review.sources[key]), note: selected.note});
+    return scopes.get(selected);
   }
 
-  return {identities: Object.freeze(Object.fromEntries(review.assignments.map(phase => [phase.name, phase.identity]))), jurisdictions, scope};
+  function politicalKeys(name, year) {
+    const phase = phases.get(name);
+    return phase && phase.from <= year && year <= phase.through ? phase.governmentTerritories : [];
+  }
+  return {identities: Object.freeze(Object.fromEntries(review.assignments.map(phase => [phase.name, phase.identity]))), jurisdictions, scope, politicalKeys};
 }

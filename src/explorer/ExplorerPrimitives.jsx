@@ -15,7 +15,7 @@ export function Chip({ label, active, onClick, color, small = false }) {
   return (
     <button type="button" onClick={onClick} className={`chip${small ? " chip-sm" : ""}`}
       style={{ borderColor: color, background: active ? color : "transparent", color: active ? (lightInk ? "#fff9ee" : "#25211d") : "var(--eade-ink, #3A342A)" }}>
-      {label}
+      <span className="sk" style={{"--sk-index":4}}>{label}</span>
     </button>
   );
 }

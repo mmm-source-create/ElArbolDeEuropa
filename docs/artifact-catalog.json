@@ -302,6 +302,11 @@
     {
       "path": "docs/reports/reviewed/v5.13-france-low-countries.json",
       "kind": "reviewed-audit"
+    },
+    {
+      "path": "docs/reports/reviewed/v5.14-personal-atlas.json",
+      "kind": "reviewed-audit",
+      "producer": "scripts/audits/audit-personal-atlas.mjs"
     }
   ]
 }

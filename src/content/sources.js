@@ -12,6 +12,7 @@ const DOGES_1400_1605 = [
 // Bibliography shared by the public site, Atlas and generated entity pages.
 // A territorial reference supplies context; only explicit person IDs assign a biography.
 export const SOURCES = [
+  {titulo:'Service public de Wallonie · Tournai y Tournaisis',url:'https://connaitrelawallonie.wallonie.be/histoire-et-symboles/histoire/atlas-historique/tournai-et-le-tournaisis-sous-influence-anglaise',grupo:'Archivos e instituciones',territorios:['Tournai'],personas:['CARLOS5','FEL2ESP']},
   {"titulo": "Hrvatska enciklopedija · Hum", "url": "https://www.enciklopedija.hr/clanak/hum-podrucje", "grupo": "Archivos e instituciones", "personas": [], "territorios": ["Hum"]},
   {"titulo": "Hrvatska enciklopedija · Sandalj Hranić Kosača", "url": "https://www.enciklopedija.hr/clanak/kosaca-sandalj-hranic", "grupo": "Archivos e instituciones", "personas": ["SANDALJKOS"], "territorios": ["Hum"]},
   {"titulo": "Hrvatska enciklopedija · Pavao I Bribirski", "url": "https://enciklopedija.hr/clanak/bribirski-pavao-i", "grupo": "Archivos e instituciones", "personas": ["PAVAO1SUBIC"], "territorios": ["Hum"]},

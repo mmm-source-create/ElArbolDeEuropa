@@ -2,13 +2,13 @@
 
 Atlas histórico y genealógico para explorar personas, dinastías, territorios y sus conexiones familiares.
 
-- [Web](https://www.treeofeurope.eu/es/) · Versión del repositorio: **V5.13**
-- [Cambios de V5.13](docs/V5.13.md) · [Documentación e historial](docs/README.md) · [Próximos pasos cartográficos](docs/V4.8_PROPUESTAS.md) · [Seguridad](SECURITY.md)
+- [Web](https://www.treeofeurope.eu/es/) · Versión del repositorio: **V5.14**
+- [Cambios de V5.14](docs/V5.14.md) · [Documentación e historial](docs/README.md) · [Próximos pasos cartográficos](docs/V4.8_PROPUESTAS.md) · [Seguridad](SECURITY.md)
 
-V5.13 completa Francia y sus apanages, Borgoña, Alsacia, Lorena y los Países Bajos
-entre 1200 y 1800: 640 superficies y 384.640 comprobaciones anuales, sin huecos
-dentro de la selección geográfica. Conserva títulos, jurisdicciones y fuentes
-locales, y distingue gobernadores, estatúderes, ocupaciones y sucesiones del sur.
+V5.14 recupera ámbitos y títulos de los mapas personales habsbúrgicos: Navarra,
+Bohemia/Moravia y las provincias de los Países Bajos. Unifica colores de conjuntos
+políticos documentados, conserva sus identidades y añade un esqueleto sobre los
+elementos reales del Atlas, con reintento y movimiento reducido.
 
 El mapa utiliza EU V Locations con superficies fechadas y fuentes consultables
 en el inspector. Distingue soberanía, gobierno delegado, titularidad y control

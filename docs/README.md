@@ -73,4 +73,5 @@ La [cartografía subregional propuesta](V4.8_PROPUESTAS.md) y la investigación
 de huecos e identidades siguen como trabajo histórico independiente del
 cierre de la serie V5.
 
+- [V5.14: mapas personales, identidad política y carga del Atlas](V5.14.md).
 - [V5.13: Francia, Borgoña y Países Bajos](V5.13.md).

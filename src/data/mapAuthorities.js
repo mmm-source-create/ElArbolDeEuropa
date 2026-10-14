@@ -1,6 +1,7 @@
 import {tributaryEntriesFor} from './tributaryRelations.js';
 import {gobiernosDe, intervalosDisputadosDe} from './personAccessors.js';
-import {idsDeGobiernoEnAño} from '../Territorios.jsx';
+import {idsDeGobiernoEnAño, colorTerritorioEnMapa} from '../Territorios.jsx';
+import {authorityColor} from './mapColors.js';
 import {gobiernoEfectivo} from './territorios.js';
 import {personClaims} from '../evidence/claims.js';
 import {mapLocationsForGovernment, pilotBurgundianGovernmentsFor,
@@ -98,6 +99,9 @@ export function mapAuthoritiesForPerson(person, year, mapData = null, {includeCl
   if (!mapData) return entries;
 
   for (const supplement of pilotBurgundianGovernmentsFor(mapData, person.id, year)) {
+    // Tournai/Tournaisis are one jurisdiction in this cell. A canonical,
+    // sourced seigneurial mandate supersedes the old laboratory supplement.
+    if (supplement.territory === 'Tournaisis' && entries.some(e => e.territory === 'Tournai' && e.paint)) continue;
     const existing = entries.find(e => e.territory === supplement.territory && e.paint);
     if (existing) {
       existing.ids = [...new Set([...existing.ids, ...supplement.ids])];
@@ -136,4 +140,59 @@ export function mapAuthoritiesForPerson(person, year, mapData = null, {includeCl
     }
   }
   return [...entries, ...(includeDependencies ? tributaryEntriesFor(person, year, mapData, entries) : [])].filter(entry => entry.ids.length);
+}
+
+// A lifetime view is a temporal union, not a projection of one reference year.
+// Yield between years so selection and year controls can cancel the work.
+const lifetimeMaps = new WeakMap(), legacyLifetimeKey = {};
+const nextMapTask = () => new Promise(resolve => {
+  const channel = new MessageChannel();
+  channel.port1.onmessage = () => { channel.port1.close(); channel.port2.close(); resolve(); };
+  channel.port2.postMessage(null);
+});
+export async function mapAuthoritiesAcrossLife(person, mapData = null, {includeDependencies=false, signal} = {}) {
+  const abort = () => { if (signal?.aborted) throw new DOMException('Cancelled', 'AbortError'); };
+  abort();
+  if (!person) return [];
+  const dataKey = mapData || legacyLifetimeKey;
+  if (!lifetimeMaps.has(dataKey)) lifetimeMaps.set(dataKey, new WeakMap());
+  const people = lifetimeMaps.get(dataKey);
+  if (!people.has(person)) people.set(person, new Map());
+  const cache = people.get(person);
+  if (cache.has(includeDependencies)) return cache.get(includeDependencies);
+  const governments = gobiernosDe(person).filter(g => gobiernoEfectivo(g)
+    && Number.isInteger(g.desde) && Number.isInteger(g.hasta) && g.desde <= g.hasta);
+  if (!governments.length) return [];
+  const from = Math.min(...governments.map(g => g.desde)), through = Math.max(...governments.map(g => g.hasta));
+  const territories = new Map();
+  for (let year=from; year<=through; year++) {
+    await nextMapTask();
+    abort();
+    for (const entry of mapAuthoritiesForPerson(person, year, mapData, {includeDependencies})) {
+      if (!entry.paint || !entry.ids.length) continue;
+      const key = entry.territory+'\u0000'+(entry.colorTerritory || '');
+      if (!territories.has(key)) territories.set(key, {entry, cells:new Map()});
+      const territory = territories.get(key);
+      territory.entry = {...entry, color:authorityColor(entry,
+        colorTerritorioEnMapa(person, entry.colorTerritory || entry.territory, year))};
+      for (const id of entry.ids) {
+        if (!territory.cells.has(id)) territory.cells.set(id, new Set());
+        territory.cells.get(id).add(entry.kind);
+      }
+    }
+  }
+  abort();
+  const result = [];
+  for (const {entry, cells} of territories.values()) {
+    const kinds = new Map();
+    for (const [id, conditions] of cells) {
+      const kind = conditions.size > 1 ? 'mixed' : [...conditions][0];
+      if (!kinds.has(kind)) kinds.set(kind, []);
+      kinds.get(kind).push(id);
+    }
+    for (const [kind, ids] of kinds) result.push({...entry, kind, ids,
+      lifetimeUnion:true, mapNote:'Superficies de distintas etapas de esta vida; no necesariamente simultáneas. El color sigue la última agrupación registrada del título. Elige un año para consultar sus ámbitos y fuentes por fecha.'});
+  }
+  cache.set(includeDependencies, result);
+  return result;
 }

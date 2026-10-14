@@ -80,7 +80,7 @@ function leerLayoutAtlas() {
   }
 }
 
-export default function Explorer({ initialPanel = null, treeBase: TREE_BASE }) {
+export default function Explorer({ initialPanel = null, treeBase: TREE_BASE, loading = false, loadError = false, onRetry, ready = true }) {
   const familyData = useMemo(() => familyIndex(PERSONAS), []);
   const isolatedPopeIds = useMemo(() => isolatedPopes(familyData), [familyData]);
   const [savedSession] = useState(() => {
@@ -111,7 +111,8 @@ export default function Explorer({ initialPanel = null, treeBase: TREE_BASE }) {
   const [siglos, setSiglos] = useState(savedSession?.siglos ?? []);
   const [relaciones, setRelaciones] = useState(savedSession?.relaciones ?? []);
   const [hovered, setHovered] = useState(null);
-  const [seleccion, setSeleccion] = useState(() => BY_ID[savedSession?.selectedId] || null);
+  const [seleccion, setSeleccion] = useState(() => BY_ID[savedSession?.selectedId]
+    || BY_ID[new URLSearchParams(window.location.search).get('persona')] || null);
   const [currentSearchIndex, setCurrentSearchIndex] = useState(savedSession?.currentSearchIndex ?? -1);
   const [zoom, setZoom] = useState(savedSession?.zoom ?? 0.8);
   const [mode, setMode] = useState(savedSession?.mode ?? "view");
@@ -125,8 +126,13 @@ export default function Explorer({ initialPanel = null, treeBase: TREE_BASE }) {
   const [focoMenuOpen, setFocoMenuOpen] = useState(false);
   const [focoId, setFocoId] = useState(savedSession?.focoId ?? null);
   const [focoAlcance, setFocoAlcance] = useState(savedSession?.focoAlcance ?? "cercana");
-  const [anioGlobal, setAnioGlobal] = useState(savedSession?.anioGlobal ?? null);
-  const [anioInput, setAnioInput] = useState(savedSession?.anioGlobal != null ? String(savedSession.anioGlobal) : "");
+  const [anioGlobal, setAnioGlobal] = useState(() => {
+    if (savedSession?.anioGlobal != null) return savedSession.anioGlobal;
+    const value = new URLSearchParams(window.location.search).get('anio');
+    const year = value ? Number(value) : null;
+    return Number.isInteger(year) && year >= 0 && year <= 3000 ? year : null;
+  });
+  const [anioInput, setAnioInput] = useState(anioGlobal != null ? String(anioGlobal) : "");
   const [reproduciendoHistoria, setReproduciendoHistoria] = useState(false);
 
   const [shareStatus, setShareStatus] = useState("");
@@ -873,7 +879,7 @@ export default function Explorer({ initialPanel = null, treeBase: TREE_BASE }) {
     if (connectionSet) return selectionLayout(connectionResult.ids, gen, BY_ID);
     const layout = visiblePeople.length === PERSONAS.length ? TREE_BASE.layout : computeTreeLayout(visibleRows, BY_ID, HIJOS_POR_ID);
     return groupIsolatedPopes(layout, [...isolatedPopeIds], BY_ID);
-  }, [visibleRows, visiblePeople.length, connectionSet, connectionResult, gen]);
+  }, [visibleRows, visiblePeople.length, connectionSet, connectionResult, gen, TREE_BASE.layout]);
   const positions = treeLayout.positions;
   const treeViewport = useTreeViewport(scrollRef, zoom, mostrarArbol);
   const renderedTreeUnits = useMemo(() => treeLayout.units.filter(unit => intersectsViewport(unit, treeViewport)), [treeLayout.units, treeViewport]);
@@ -912,7 +918,7 @@ export default function Explorer({ initialPanel = null, treeBase: TREE_BASE }) {
 
 
   useAtlasSession({
-    ...savedSession, atlasIds, query, territorios, dinastias, titulos, siglos, relaciones, collapsedIds,
+    ...savedSession, ready, atlasIds, query, territorios, dinastias, titulos, siglos, relaciones, collapsedIds,
     dinastiasExpandidas, territoriosExpandidos, selectedId: seleccion?.id || null,
     currentSearchIndex, zoom, mode, connectionIds, connectionCriterion, origen, destino, modoComparacion, focoId, focoAlcance,
     anioGlobal, vistasActivas, panelesVisibles, personHistory, timelineScaleIndex, timelineMode,
@@ -923,10 +929,10 @@ export default function Explorer({ initialPanel = null, treeBase: TREE_BASE }) {
     return { mapViewport: mapViewportRef.current, ...(anchor ? { timelineAnchor: { key: anchor.key, offset: top - anchor.start } } : {}) };
   });
   useLayoutEffect(() => {
-    if (!restoringSession.current || !savedSession) return;
+    if (!ready || !restoringSession.current || !savedSession) return;
     restoringSession.current = false;
     queueViewport({ treeCenter: savedSession.treeCenter, timelineScroll: savedSession.timelineScroll, timelineAnchor: savedSession.timelineAnchor });
-  }, [savedSession, queueViewport]);
+  }, [savedSession, queueViewport, ready]);
 
   // Coincidencias del buscador: solo entre las personas que ya son visibles
   // según los filtros de chips (si una persona está oculta por un filtro,
@@ -1509,7 +1515,7 @@ export default function Explorer({ initialPanel = null, treeBase: TREE_BASE }) {
   }, [construirEnlaceCompartido, seleccion, mostrarEstadoCompartir, mode]);
 
   useEffect(() => {
-    if (urlStateLoadedRef.current || typeof window === "undefined") return;
+    if (!ready || urlStateLoadedRef.current || typeof window === "undefined") return;
     urlStateLoadedRef.current = true;
     const params = new URLSearchParams(window.location.search);
     const connection = connectionFromSearch(params, BY_ID);
@@ -1597,7 +1603,7 @@ export default function Explorer({ initialPanel = null, treeBase: TREE_BASE }) {
       centerOn(personaId);
       centerOnTimeline(personaId);
     }
-  }, [opciones, ajustarAnio]);
+  }, [opciones, ajustarAnio, ready]);
 
   const previousConnectionMode = useRef(false);
   useEffect(() => {
@@ -1818,5 +1824,5 @@ export default function Explorer({ initialPanel = null, treeBase: TREE_BASE }) {
     construirEnlaceCompartido, compartirPersona, handleBoxClick, getBoxHandlers, renderPersonBox, miniW, miniScaleX, miniScaleY,
     onMinimapClick, filtrosActivosCompactos, cambiarIdioma,
   };
-  return <ExplorerView vm={viewModel} />;
+  return <ExplorerView vm={viewModel} loading={loading} loadError={loadError} onRetry={onRetry} ready={ready} />;
 }
