@@ -1,9 +1,10 @@
+import {governmentSummary} from '../data/governmentPresentation.js';
 import React from 'react';
 import { normalizaTexto } from './model.js';
 
 const PAGE_SIZE = 40;
 
-export default function TreeAccessibleList({ people, selectedId, onSelect }) {
+export default function TreeAccessibleList({ people, selectedId, onSelect, year = null }) {
   const [query, setQuery] = React.useState('');
   const [page, setPage] = React.useState(0);
   const filtered = React.useMemo(() => {
@@ -21,7 +22,7 @@ export default function TreeAccessibleList({ people, selectedId, onSelect }) {
       <p role="status">{filtered.length} persona{filtered.length === 1 ? '' : 's'} encontrada{filtered.length === 1 ? '' : 's'}</p>
       <ul>{filtered.slice(current * PAGE_SIZE, (current + 1) * PAGE_SIZE).map(person => <li key={person.id}>
         <button type="button" aria-current={selectedId === person.id ? 'true' : undefined} onClick={() => onSelect(person.id)}>
-          <strong>{person.nombre}</strong><span>{person.titulo} · {person.dinastia}</span>
+          <strong>{person.nombre}</strong><span>{person.titulo} · {governmentSummary(person,year).join(" · ") || person.dinastia}</span>
         </button>
       </li>)}</ul>
       {pages > 1 && <div className="tree-list-pages">

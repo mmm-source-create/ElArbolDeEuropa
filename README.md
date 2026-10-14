@@ -2,13 +2,13 @@
 
 Atlas histórico y genealógico para explorar personas, dinastías, territorios y sus conexiones familiares.
 
-- [Web](https://www.treeofeurope.eu/es/) · Versión del repositorio: **V5.14**
-- [Cambios de V5.14](docs/V5.14.md) · [Documentación e historial](docs/README.md) · [Próximos pasos cartográficos](docs/V4.8_PROPUESTAS.md) · [Seguridad](SECURITY.md)
+- [Web](https://www.treeofeurope.eu/es/) · Versión del repositorio: **V5.15**
+- [Cambios de V5.15](docs/V5.15.md) · [Documentación e historial](docs/README.md) · [Próximos pasos cartográficos](docs/V4.8_PROPUESTAS.md) · [Seguridad](SECURITY.md)
 
-V5.14 recupera ámbitos y títulos de los mapas personales habsbúrgicos: Navarra,
-Bohemia/Moravia y las provincias de los Países Bajos. Unifica colores de conjuntos
-políticos documentados, conserva sus identidades y añade un esqueleto sobre los
-elementos reales del Atlas, con reintento y movimiento reducido.
+V5.15 integra «Europa en este año» como una vista del Atlas: mapa político,
+cronología, protagonistas y gobiernos agrupados por entidad. Renueva la línea
+temporal con carriles regionales, vida y gobierno diferenciados, categorías,
+zoom y selección de año. Los títulos documentados se conservan desplegables.
 
 El mapa utiliza EU V Locations con superficies fechadas y fuentes consultables
 en el inspector. Distingue soberanía, gobierno delegado, titularidad y control

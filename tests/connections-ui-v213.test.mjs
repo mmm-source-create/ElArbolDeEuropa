@@ -83,3 +83,43 @@ test('una persona encontrada amplía el árbol en un clic y cada ampliación se 
  await click(document.querySelector('.atlas-scope button:last-child'));
  assert.equal(document.querySelector('.tree-scope-label').textContent.trim(),'0 personas');
 });
+
+test('Europa es una vista del Atlas: agrupa títulos, abre una persona y restaura año y selección al volver',async()=>{
+ if(app){await act(async()=>app.unmount());app=null;}
+ document.getElementById('root').innerHTML='';
+ const initial='/es/?atlas=1&escena=europa&anio=1530&persona=CARLOS5&seleccion=CARLOS5';
+ window.history.replaceState(null,'',initial);window.sessionStorage.clear();window.localStorage.clear();window.scrollTo=()=>{};
+ const errors=[],originalError=console.error;console.error=(...args)=>errors.push(args.join(' '));
+ try {
+  await act(async()=>{app=runtime.mountAtlas(document.getElementById('root'),treeBase);await new Promise(r=>setTimeout(r,100));});
+  assert.equal(document.querySelector('.europe-heading h1')?.textContent,'Europa en 1530');
+  assert.equal(document.querySelector('.atlas-traditional').hidden,true);
+  assert.match(document.querySelector('.atlas-timeline-heading').textContent,/2608 personas/);
+  assert.equal(document.querySelector('[aria-modal="true"]'),null);
+  const search=document.querySelector('.europe-governments input');
+  await act(async()=>{Object.getOwnPropertyDescriptor(window.HTMLInputElement.prototype,'value').set.call(search,'Carlos V');search.dispatchEvent(new window.Event('input',{bubbles:true}));});
+  assert.deepEqual([...document.querySelectorAll('.europe-ruler-grid h3')].map(n=>n.textContent),['España','Estados borgoñones','Sacro Imperio (Alemania)']);
+  await click(document.querySelector('.europe-ruler-grid .europe-ruler>button'));
+  assert.equal(document.querySelector('.europe-heading'),null);assert.equal(document.querySelector('.atlas-traditional').hidden,false);
+  assert.equal(new URLSearchParams(window.location.search).has('escena'),false);
+  assert.match(document.querySelector('.atlas-visually-hidden[role="status"]').textContent,/Carlos V/);
+  await act(async()=>{window.history.replaceState(null,'',initial);window.dispatchEvent(new window.PopStateEvent('popstate'));await new Promise(r=>setTimeout(r,40));});
+  assert.equal(document.querySelector('.europe-heading h1')?.textContent,'Europa en 1530');
+  assert.match(document.querySelector('.atlas-visually-hidden[role="status"]').textContent,/Carlos V/);
+  const axis=document.querySelector('.atlas-timeline-axis');
+  await act(async()=>{axis.dispatchEvent(new window.KeyboardEvent('keydown',{key:'ArrowRight',bubbles:true}));});
+  assert.equal(document.querySelector('.europe-heading h1').textContent,'Europa en 1531');
+  assert.equal(new URLSearchParams(window.location.search).get('anio'),'1531');assert.match(document.title,/Europa en 1531/);
+  const timeline=document.querySelector('.atlas-timeline-scroll');
+  await act(async()=>{
+   timeline.dispatchEvent(new window.MouseEvent('pointerdown',{button:0,buttons:1,clientX:200,bubbles:true}));
+   timeline.dispatchEvent(new window.MouseEvent('pointermove',{buttons:1,clientX:170,bubbles:true}));
+   timeline.dispatchEvent(new window.MouseEvent('pointerup',{button:0,buttons:0,clientX:170,bubbles:true}));
+  });
+  const afterDrag=timeline.scrollLeft;
+  await act(async()=>{timeline.dispatchEvent(new window.MouseEvent('pointermove',{buttons:0,clientX:130,bubbles:true}));});
+  assert.equal(timeline.scrollLeft,afterDrag,'soltar el gesto impide que el hover siga arrastrando');
+
+  assert.deepEqual(errors.filter(e=>!e.includes('not wrapped in act')),[]);
+ } finally {console.error=originalError;}
+});

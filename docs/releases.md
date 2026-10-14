@@ -124,3 +124,6 @@ explicar su contenido; los ZIP parciales antiguos no son instalaciones actuales.
 
 V5.14 mantiene la PR y la Release en borrador hasta la revisión de la vista previa.
 El destino de la Release debe ser el commit exacto validado; no una rama mutable.
+
+[V5.15](V5.15.md) integra el panorama anual y renueva la línea temporal. Su PR y
+Release se preparan en borrador sobre la entrega validada.

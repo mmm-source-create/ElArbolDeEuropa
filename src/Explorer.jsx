@@ -1,3 +1,4 @@
+import {buildTimelineRows} from './explorer/timelineLayout.js';
 import {territoriosDe} from './data/personAccessors.js';
 import {translatedEquivalent} from './english/routes.js';
 import { familyIndex, familyIds, atlasIdsFromLocation, writeAtlasIds, isolatedPopes, groupIsolatedPopes } from './explorer/progressiveAtlas.js';
@@ -130,7 +131,7 @@ export default function Explorer({ initialPanel = null, treeBase: TREE_BASE, loa
     if (savedSession?.anioGlobal != null) return savedSession.anioGlobal;
     const value = new URLSearchParams(window.location.search).get('anio');
     const year = value ? Number(value) : null;
-    return Number.isInteger(year) && year >= 0 && year <= 3000 ? year : null;
+    return Number.isInteger(year) && year >= 0 && year <= 3000 ? year : (initialPanel === "europa" || new URLSearchParams(window.location.search).get("escena") === "europa" ? 1500 : null);
   });
   const [anioInput, setAnioInput] = useState(anioGlobal != null ? String(anioGlobal) : "");
   const [reproduciendoHistoria, setReproduciendoHistoria] = useState(false);
@@ -183,9 +184,10 @@ export default function Explorer({ initialPanel = null, treeBase: TREE_BASE, loa
   });
   const [personHistory, setPersonHistory] = useState(savedSession?.personHistory ?? { ids: [], index: -1 });
   const [modoTrabajo, setModoTrabajo] = useState(false);
-  const [infoProyecto, setInfoProyecto] = useState(initialPanel);
+  const [infoProyecto, setInfoProyecto] = useState(initialPanel === "europa" ? null : initialPanel);
+  const [atlasScene,setAtlasScene] = useState(()=>new URLSearchParams(window.location.search).get("escena") === "europa" || initialPanel === "europa" ? "europa" : savedSession?.atlasScene || "atlas");
   const [timelineScaleIndex, setTimelineScaleIndex] = useState(Math.min(TIMELINE_SCALES.length - 1, savedSession?.timelineScaleIndex ?? 1));
-  const [timelineMode, setTimelineMode] = useState(savedSession?.timelineMode ?? "personas");
+  const [timelineMode, setTimelineMode] = useState(savedSession?.timelineMode ?? "ambos");
   const [eventoSeleccionadoId, setEventoSeleccionadoId] = useState(savedSession?.eventoSeleccionadoId ?? null);
   const [favoritos, setFavoritos] = useState(() => {
     if (typeof window === "undefined") return [];
@@ -251,14 +253,6 @@ export default function Explorer({ initialPanel = null, treeBase: TREE_BASE, loa
   const favoritosSet = useMemo(() => new Set(favoritos), [favoritos]);
   const timelinePxPerYear = TIMELINE_SCALES[timelineScaleIndex];
   const timelineTrackWidth = Math.max(1180, Math.round((TL_MAX - TL_MIN) * timelinePxPerYear));
-  const timelineContentWidth = TIMELINE_FIXED_COLUMN + timelineTrackWidth;
-  const timelineTickStep = timelinePxPerYear >= 6 ? 10 : timelinePxPerYear >= 4 ? 20 : 25;
-  const timelineTicks = useMemo(() => {
-    const primero = Math.ceil(TL_MIN / timelineTickStep) * timelineTickStep;
-    const valores = [];
-    for (let valor = primero; valor <= TL_MAX; valor += timelineTickStep) valores.push(valor);
-    return valores;
-  }, [timelineTickStep]);
   const eventosOrdenadosTodos = useMemo(() => EVENTOS_HISTORICOS.slice().sort((a, b) => inicioEvento(a) - inicioEvento(b) || a.titulo.localeCompare(b.titulo, "es")), []);
   // Los hitos puramente narrativos de una Historia no forman parte de la cronología
   // general. Reaparecen automáticamente cuando ese paso de Historia está activo.
@@ -268,46 +262,6 @@ export default function Explorer({ initialPanel = null, treeBase: TREE_BASE, loa
     return nivel !== "historia" || evento.id === eventoSeleccionadoId;
   }), [eventosOrdenadosTodos, eventoSeleccionadoId]);
 
-  // En "Ambos" los eventos tienen densidad progresiva:
-  // - principal: conserva siempre su etiqueta;
-  // - secundario: punto/barra compacta en zoom normal y etiqueta en el zoom máximo;
-  // - historia: oculto salvo si es el evento seleccionado por el paso de Historia activo.
-  // Esto evita que cada hito narrativo abra un carril nuevo y convierta la cronología
-  // en una pared de cajas cuando personas y eventos se muestran simultáneamente.
-  const timelineCombinedEvents = useMemo(() => {
-    const laneGap = 5;
-    const laneHeight = 18;
-    const laneEnds = [];
-    const mostrarSecundariosConTitulo = timelineScaleIndex === TIMELINE_SCALES.length - 1;
-    const items = eventosOrdenados.map((evento) => {
-      const inicio = inicioEvento(evento);
-      const fin = finEvento(evento);
-      const nivel = nivelTimelineEvento(evento);
-      const esPeriodo = Number.isFinite(evento.desde) && Number.isFinite(evento.hasta) && evento.hasta > evento.desde;
-      const leftPx = Math.max(0, ((inicio - TL_MIN) / (TL_MAX - TL_MIN)) * timelineTrackWidth);
-      const durationPx = esPeriodo
-        ? Math.max(5, ((fin - inicio) / (TL_MAX - TL_MIN)) * timelineTrackWidth)
-        : 0;
-      const mostrarTitulo = nivel === "principal"
-        || evento.id === eventoSeleccionadoId
-        || (nivel === "secundario" && mostrarSecundariosConTitulo);
-      const compacto = !mostrarTitulo;
-      const labelWidth = mostrarTitulo ? Math.min(160, Math.max(76, 18 + evento.titulo.length * 4.3)) : 12;
-      const minimumWidth = esPeriodo ? Math.max(12, durationPx) : 12;
-      const available = Math.max(12, timelineTrackWidth - leftPx);
-      const visualWidth = Math.min(available, Math.max(labelWidth, minimumWidth));
-      let lane = laneEnds.findIndex((endPx) => endPx + laneGap <= leftPx);
-      if (lane < 0) lane = laneEnds.length;
-      laneEnds[lane] = leftPx + visualWidth;
-      return { evento, inicio, fin, nivel, esPeriodo, leftPx, durationPx, visualWidth, lane, mostrarTitulo, compacto };
-    });
-    return {
-      items,
-      laneHeight,
-      laneCount: Math.max(1, laneEnds.length),
-      height: Math.max(44, laneEnds.length * laneHeight + 8),
-    };
-  }, [eventosOrdenados, timelineTrackWidth, timelineScaleIndex, eventoSeleccionadoId]);
   const eventoSeleccionado = eventosOrdenadosTodos.find((evento) => evento.id === eventoSeleccionadoId) || null;
   const historiaActiva = HISTORIAS.find((historia) => historia.id === historiaActivaId) || null;
   const historiaPasoActual = historiaActiva?.pasos?.[historiaPasoIndex] || null;
@@ -325,6 +279,8 @@ export default function Explorer({ initialPanel = null, treeBase: TREE_BASE, loa
 
     const pageTitle = isEnglish
       ? "The Tree of Europe | Interactive historical and genealogical atlas"
+      : atlasScene === "europa"
+        ? `Europa en ${anioGlobal ?? 1500} — ${SITE.name}`
       : personaNombre
         ? t("share.personTitle", { name: personaNombre })
         : historiaActiva?.titulo
@@ -337,6 +293,8 @@ export default function Explorer({ initialPanel = null, treeBase: TREE_BASE, loa
 
     const description = isEnglish
       ? "Explore the families, dynasties, reigns and political connections that shaped Europe between 1200 and 1800."
+      : atlasScene === "europa"
+        ? `Mapa político, acontecimientos, protagonistas y gobiernos de Europa en ${anioGlobal ?? 1500}.`
       : personaNombre
         ? `Explora a ${personaNombre}: parentescos, cronología, reinados y territorios en ${SITE.name}.`
         : historiaActiva?.descripcion
@@ -357,6 +315,7 @@ export default function Explorer({ initialPanel = null, treeBase: TREE_BASE, loa
               ? rutaEntidadLocalizada("es", "territorio", slugPublico(territorioUnico))
               : "/es/";
     }
+    if(atlasScene === "europa"&&!isEnglish)canonicalPath=`/es/?atlas=1&escena=europa&anio=${anioGlobal ?? 1500}`;
     const canonicalUrl = new URL(canonicalPath, canonicalBase).toString();
 
     document.title = pageTitle;
@@ -372,10 +331,10 @@ export default function Explorer({ initialPanel = null, treeBase: TREE_BASE, loa
     setMetaContent('meta[name="twitter:description"]', { name: "twitter:description" }, description);
     ensureCanonical(canonicalUrl);
 
-    const esPath = seleccion
+    const esPath = atlasScene === "europa" ? canonicalPath : seleccion
       ? rutaEntidadLocalizada("es", "persona", slugPersonaPorLocale(seleccion, "es"))
       : "/es/";
-    const enPersonSlug = seleccion ? slugPersonaPorLocale(seleccion, "en") : null;
+    const enPersonSlug = atlasScene !== "europa" && seleccion ? slugPersonaPorLocale(seleccion, "en") : null;
     const alternates = [
       { hreflang: "es", href: new URL(esPath, canonicalBase).toString() },
       { hreflang: "x-default", href: new URL(esPath, canonicalBase).toString() },
@@ -386,7 +345,7 @@ export default function Explorer({ initialPanel = null, treeBase: TREE_BASE, loa
       alternates.push({ hreflang: "en", href: new URL(rutaEntidadLocalizada("en", "persona", enPersonSlug), canonicalBase).toString() });
     }
     setHreflangAlternates(alternates);
-  }, [locale, seleccion, historiaActiva, dinastias, territorios]);
+  }, [locale, seleccion, historiaActiva, dinastias, territorios, atlasScene, anioGlobal]);
 
   useEffect(() => {
     if (typeof window === "undefined") return undefined;
@@ -855,12 +814,11 @@ export default function Explorer({ initialPanel = null, treeBase: TREE_BASE, loa
   const documentedPeopleSet = useMemo(() => soloDocumentados
     ? new Set(PERSONAS.filter(hasDocumentedClaim).map(person => person.id)) : null, [soloDocumentados]);
   const visiblePeople = useMemo(() => PERSONAS.filter(matches), [atlasSet, connectionSet, hiddenByCollapse, focoSet, soloFavoritos, favoritosSet, soloDocumentados, documentedPeopleSet, territorios, dinastias, titulos, siglos, relaciones, opciones.otrasDinastias]);
-  const timelineRows = useMemo(() => timelineMode === "eventos"
-    ? eventosOrdenados.map(item => ({ key: `event:${item.id}`, item, estimatedSize: 54 }))
-    : visiblePeople.slice().sort((a, b) => (anioInicioPersona(a) ?? Infinity) - (anioInicioPersona(b) ?? Infinity) || a.nombre.localeCompare(b.nombre, "es"))
-      .map(item => ({ key: `person:${item.id}`, item, estimatedSize: Math.max(48, 19 + listaReinados(item).length * 4) })),
-  [visiblePeople, eventosOrdenados, timelineMode]);
+  const timelinePeople=atlasScene==='europa'?PERSONAS:visiblePeople;
+  const timelineRows = useMemo(()=>timelineMode === 'eventos' ? [] : buildTimelineRows(timelinePeople,timelinePxPerYear),[timelinePeople,timelinePxPerYear,timelineMode]);
   const timelineVirtual = useVirtualRows(timelineRows, tlScrollRef, timelineListRef, mostrarCronologia);
+  // A packed lane can contain several people; all retain their own navigation anchor.
+  for(const row of timelineVirtual.items) for(const entry of row.people || []) timelineVirtual.byKey.set(`person:${entry.person.id}`,row);
   const visibleIds = visiblePeople.map((persona) => persona.id);
   const visibleSignature = visibleIds.join("|");
   const visibleRows = useMemo(() => {
@@ -921,7 +879,7 @@ export default function Explorer({ initialPanel = null, treeBase: TREE_BASE, loa
     ...savedSession, ready, atlasIds, query, territorios, dinastias, titulos, siglos, relaciones, collapsedIds,
     dinastiasExpandidas, territoriosExpandidos, selectedId: seleccion?.id || null,
     currentSearchIndex, zoom, mode, connectionIds, connectionCriterion, origen, destino, modoComparacion, focoId, focoAlcance,
-    anioGlobal, vistasActivas, panelesVisibles, personHistory, timelineScaleIndex, timelineMode,
+    anioGlobal, atlasScene, vistasActivas, panelesVisibles, personHistory, timelineScaleIndex, timelineMode,
     eventoSeleccionadoId, soloFavoritos, soloDocumentados, historiaActivaId, historiaPasoIndex, storyReturn, historiaSnapshot: historiaSnapshotRef.current,
   }, scrollRef, tlScrollRef, () => {
     const top = tlScrollRef.current && timelineListRef.current ? tlScrollRef.current.scrollTop - timelineListRef.current.offsetTop : null;
@@ -1136,13 +1094,14 @@ export default function Explorer({ initialPanel = null, treeBase: TREE_BASE, loa
     });
   };
 
-  const actualizarUrlPersonaSeleccionada = (persona, { reemplazar = false } = {}) => {
+  const actualizarUrlPersonaSeleccionada = (persona, { reemplazar = false, quitarPanorama = false } = {}) => {
     if (!persona || typeof window === "undefined" || historyPopRef.current) return;
     const slug = slugPersonaPorLocale(persona, "es");
     if (!slug) return;
     const url = new URL(window.location.href);
     if (historiaActiva) url.searchParams.set("persona", persona.id);
-    else url.pathname = rutaEntidadLocalizada("es", "persona", slug);
+    else {url.pathname = rutaEntidadLocalizada("es", "persona", slug);url.searchParams.delete("persona");}
+    if(quitarPanorama){url.searchParams.delete("escena");if(url.searchParams.get("panel")==="europa")url.searchParams.delete("panel");}
     url.searchParams.set("atlas", "1");
     writeAtlasIds(url, atlasIds);
     const destino = `${url.pathname}${url.search}${url.hash}`;
@@ -1152,13 +1111,14 @@ export default function Explorer({ initialPanel = null, treeBase: TREE_BASE, loa
     window.history[metodo]({ eade: "persona", id: persona.id }, "", destino);
   };
 
-  const seleccionarPersonaPorId = (id, { registrar = true, reemplazarUrl = false, centrar = true } = {}) => {
+  const seleccionarPersonaPorId = (id, { registrar = true, reemplazarUrl = false, centrar = true, abrirAtlas = false } = {}) => {
     const persona = BY_ID[id];
     if (!persona) return;
     setHovered(null);
     setSeleccion(persona);
+    if(abrirAtlas){setAtlasScene("atlas");setReproduciendoHistoria(false);requestAnimationFrame(()=>{window.scrollTo({top:0,behavior:'instant'});document.querySelector('[aria-label="Modo de exploración"] button[aria-pressed="true"]')?.focus({preventScroll:true});});}
     if (registrar) registrarHistorialPersona(id);
-    actualizarUrlPersonaSeleccionada(persona, { reemplazar: reemplazarUrl });
+    actualizarUrlPersonaSeleccionada(persona, { reemplazar: reemplazarUrl, quitarPanorama: abrirAtlas });
     if (centrar) {
       centerOn(id);
       centerOnTimeline(id);
@@ -1198,12 +1158,19 @@ export default function Explorer({ initialPanel = null, treeBase: TREE_BASE, loa
       historyPopRef.current = true;
       const incomingStory = resolveStoryNavigation(window.location.pathname, window.location.search, HISTORIAS);
       if (incomingStory) {
+        setAtlasScene("atlas");
         storyActionsRef.current.start(incomingStory.story.id, incomingStory.index, {returnPath:incomingStory.returnPath});
         const selectedId = new URLSearchParams(window.location.search).get('persona');
         if (BY_ID[selectedId]) {setSeleccion(BY_ID[selectedId]);centerOn(selectedId);}
         historyPopRef.current = false;
         return;
       }
+      const sceneParams=new URLSearchParams(window.location.search);
+      const incomingScene=sceneParams.get('escena')==='europa'||sceneParams.get('panel')==='europa'?'europa':'atlas';
+      setAtlasScene(incomingScene);
+      const yearValue=sceneParams.get('anio');
+      const incomingYear=yearValue?Number(yearValue):incomingScene==='europa'?1500:null;
+      if(incomingYear===null||Number.isInteger(incomingYear)){setAnioGlobal(incomingYear);setAnioInput(incomingYear===null?'':String(incomingYear));}
       setStoryReturn(null);
       setAtlasIds(atlasIdsFromLocation(window.location.pathname, window.location.search, familyData));
       setAtlasUndo([]);
@@ -1214,7 +1181,7 @@ export default function Explorer({ initialPanel = null, treeBase: TREE_BASE, loa
         centerOn(incomingConnection.ids[0]);historyPopRef.current = false;return;
       }
       const ruta = rutaPublicaDesdePath(window.location.pathname);
-      const personaId = personaIdDesdeRuta(window.location.pathname);
+      const personaId = personaIdDesdeRuta(window.location.pathname) || BY_ID[sceneParams.get("persona")]?.id;
 
       // Al volver atrás desde una Historia, recupera también el estado del Atlas
       // que existía antes de iniciar el recorrido, no solo la URL.
@@ -1229,6 +1196,7 @@ export default function Explorer({ initialPanel = null, treeBase: TREE_BASE, loa
         setRelaciones(anteriorHistoria.relaciones);
         setSoloFavoritos(anteriorHistoria.soloFavoritos);
         setSoloDocumentados(anteriorHistoria.soloDocumentados ?? false);
+        setAtlasScene(anteriorHistoria.atlasScene || "atlas");
         setAnioGlobal(anteriorHistoria.anioGlobal);
         setAnioInput(Number.isFinite(anteriorHistoria.anioGlobal) ? String(anteriorHistoria.anioGlobal) : "");
         setVistasActivas(anteriorHistoria.vistasActivas);
@@ -1366,7 +1334,7 @@ export default function Explorer({ initialPanel = null, treeBase: TREE_BASE, loa
     if (!historiaSnapshotRef.current) {
       const historiaAbiertaDesdeEnlace = Boolean(resolveStoryNavigation(window.location.pathname, window.location.search, HISTORIAS));
       historiaSnapshotRef.current = {
-        atlasIds, query, territorios, dinastias, titulos, siglos, relaciones, soloFavoritos, soloDocumentados, anioGlobal,
+        atlasIds, query, territorios, dinastias, titulos, siglos, relaciones, soloFavoritos, soloDocumentados, anioGlobal, atlasScene,
         vistasActivas, seleccionId: seleccion?.id || null, timelineMode, eventoSeleccionadoId,
         mode, connectionIds, connectionCriterion, origen, destino, focoId, focoAlcance, collapsedIds, compareRouteIndex,
         rutaAnterior: typeof window !== "undefined"
@@ -1679,6 +1647,7 @@ export default function Explorer({ initialPanel = null, treeBase: TREE_BASE, loa
       <PersonBox
         key={id}
         p={p}
+        year={anioGlobal}
         cls={cls}
         accent={ACCENTS[p.dinastia] || ACCENTS[getCategoriaDinastía(p.dinastia)] || "#71717A"}
         style={boxLayout ? {
@@ -1710,6 +1679,23 @@ export default function Explorer({ initialPanel = null, treeBase: TREE_BASE, loa
     if (!scrollEl) return;
     scrollEl.scrollTo({ left: relX * zoom - scrollEl.clientWidth / 2, top: relY * zoom - scrollEl.clientHeight / 2, behavior: "smooth" });
   };
+
+  const changeAtlasScene = useCallback(scene=>{
+    setReproduciendoHistoria(false);
+    setAtlasScene(scene);
+    requestAnimationFrame(()=>window.scrollTo({top:0,behavior:"instant"}));
+    if(scene==='europa'&&!Number.isInteger(anioGlobal)){setAnioGlobal(1500);setAnioInput('1500');}
+    const url=new URL(window.location.href);
+    if(url.searchParams.get('panel')==='europa')url.searchParams.delete('panel');
+    if(scene==='europa')url.searchParams.set('escena','europa');else url.searchParams.delete('escena');
+    if(Number.isInteger(anioGlobal))url.searchParams.set('anio',String(anioGlobal));else if(scene==='europa')url.searchParams.set('anio','1500');
+    window.history.pushState({eade:'atlas'},'',url.pathname+url.search+url.hash);
+  },[anioGlobal]);
+  useEffect(()=>{
+    if(!ready||atlasScene!=='europa'||!Number.isInteger(anioGlobal))return;
+    const url=new URL(window.location.href);url.searchParams.set('escena','europa');url.searchParams.set('anio',String(anioGlobal));if(url.searchParams.get('panel')==='europa')url.searchParams.delete('panel');
+    window.history.replaceState({eade:'atlas'},'',url.pathname+url.search+url.hash);
+  },[atlasScene,anioGlobal,ready]);
 
   const filtrosActivosCompactos = useMemo(() => {
     const lista = [];
@@ -1804,14 +1790,14 @@ export default function Explorer({ initialPanel = null, treeBase: TREE_BASE, loa
     compareRouteIndex, setCompareRouteIndex, focoMenuOpen, setFocoMenuOpen, focoId, setFocoId, focoAlcance, setFocoAlcance,
     anioGlobal, setAnioGlobal, anioInput, setAnioInput, reproduciendoHistoria, setReproduciendoHistoria,
     shareStatus, setShareStatus, collapsedIds, setCollapsedIds, vistasActivas, setVistasActivas, panelesVisibles, setPanelesVisibles,
-    infoProyecto, setInfoProyecto, timelineScaleIndex, setTimelineScaleIndex, timelineMode, setTimelineMode, eventoSeleccionadoId, setEventoSeleccionadoId,
+    atlasScene, changeAtlasScene, infoProyecto, setInfoProyecto, timelineScaleIndex, setTimelineScaleIndex, timelineMode, setTimelineMode, eventoSeleccionadoId, setEventoSeleccionadoId,
     favoritos, setFavoritos, favoritosOpen, setFavoritosOpen, soloFavoritos, setSoloFavoritos, soloDocumentados, setSoloDocumentados, historiaActivaId, setHistoriaActivaId,
     historiaPasoIndex, setHistoriaPasoIndex, compareMenuRef, focoMenuRef, favoritosMenuRef, historiaSnapshotRef, shareStatusTimerRef, urlStateLoadedRef,
     historyPopRef, dragState, workspaceGridRef, workspaceMainRef, panelWidths, setPanelWidths, treeMapSplit, setTreeMapSplit, filterSectionsOpen, setFilterSectionsOpen,
     bioSectionsOpen, setBioSectionsOpen, personHistory, modoTrabajo, setModoTrabajo,
     alternarSeccionFiltro, alternarSeccionBio, ajustarAnchoPanel, restablecerAnchoPanel, comenzarResizeLateral, comenzarResizeArbolMapa,
-    gen, rows, graph, favoritosSet, timelinePxPerYear, timelineTrackWidth,
-    timelineContentWidth, timelineTickStep, timelineTicks, eventosOrdenadosTodos, totalEventosTimeline, eventosOrdenados, timelineCombinedEvents, eventoSeleccionado,
+    gen, rows, graph, favoritosSet, timelinePeople, timelinePxPerYear, timelineTrackWidth,
+    eventosOrdenadosTodos, totalEventosTimeline, eventosOrdenados, eventoSeleccionado,
     historiaActiva, historiaPasoActual, historiaPersonasSet, opciones, personaBio, toggle, focoSet, collapsedSet,
     hiddenByCollapse, toggleDescendants, ajustarAnio, actualizarAnioDesdeRango, confirmarAnioEscrito, restablecerAnio, moverAnioHistoria, alternarReproduccionHistoria,
     mostrarArbol, mostrarMapa, mostrarFiltros, mostrarBiografia, mostrarCronologia, vistaPrincipal, layoutLaterales, alternarVista,

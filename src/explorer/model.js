@@ -326,8 +326,8 @@ export const CORREOS_CORRECCIONES = SITE.contactEmail ? [SITE.contactEmail] : []
 
 export const FAVORITOS_STORAGE_KEY = "arbol-europa-favoritos-v1";
 export const PANELES_STORAGE_KEY = "arbol-europa-paneles-v1";
-export const TIMELINE_SCALES = [3.2, 4.8, 6.4];
-export const TIMELINE_FIXED_COLUMN = 212;
+export const TIMELINE_SCALES = [1.6, 3.2, 4.8, 6.4, 9.6, 14];
+export const TIMELINE_FIXED_COLUMN = 0;
 
 
 

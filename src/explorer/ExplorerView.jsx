@@ -1,3 +1,6 @@
+import AtlasTimeline from './AtlasTimeline.jsx';
+import {governmentSummary} from '../data/governmentPresentation.js';
+import './europe-panorama.css';
 import {AtlasLoadError} from './AtlasSkeleton.jsx';
 import {gobiernosDe, territoriosDe} from '../data/personAccessors.js';
 import AtlasGrowth from './AtlasGrowth.jsx';
@@ -44,7 +47,8 @@ const SEARCH_DYNASTIES = [...new Set(PERSONAS.map(persona => persona.dinastia).f
 const SEARCH_TERRITORIES = Object.keys(TERRITORIOS);
 const IRISH_MAP_TERRITORIES = new Set(['Irlanda','Connacht','Leinster','Tír Eoghain','Tír Chonaill','Condado de Tyrone','Condado de Tyrconnell','Thomond','Condado de Thomond','Desmond','Condado de Desmond','Condado de Clancare','Condado de Ulster','Kildare','Ormond','Clanricarde','Vizcondado de Mayo']);
 
-const EuropeYearDialog = React.lazy(() => import('./EuropeYearDialog.jsx'));
+const EuropeYearView = React.lazy(() => import('./EuropeYearView.jsx'));
+const SCENES=[{value:'atlas',label:'Atlas'},{value:'europa',label:'Europa en este año'}];
 const AtlasCrowns = React.lazy(() => import('./AtlasCrowns.jsx'));
 
 function FilterSection({ title, open, onToggle, activeCount = 0, children }) {
@@ -171,14 +175,14 @@ export default function ExplorerView({ vm, loading = false, loadError = false, o
     compareRouteIndex, setCompareRouteIndex, focoMenuOpen, setFocoMenuOpen, focoId, setFocoId, focoAlcance, setFocoAlcance,
     anioGlobal, setAnioGlobal, anioInput, setAnioInput, reproduciendoHistoria, setReproduciendoHistoria,
     shareStatus, setShareStatus, collapsedIds, setCollapsedIds, vistasActivas, setVistasActivas, panelesVisibles, setPanelesVisibles,
-    infoProyecto, setInfoProyecto, timelineScaleIndex, setTimelineScaleIndex, timelineMode, setTimelineMode, eventoSeleccionadoId, setEventoSeleccionadoId,
+    atlasScene, changeAtlasScene, infoProyecto, setInfoProyecto, timelineScaleIndex, setTimelineScaleIndex, timelineMode, setTimelineMode, eventoSeleccionadoId, setEventoSeleccionadoId,
     favoritos, setFavoritos, favoritosOpen, setFavoritosOpen, soloFavoritos, setSoloFavoritos, soloDocumentados, setSoloDocumentados, historiaActivaId, setHistoriaActivaId,
     historiaPasoIndex, setHistoriaPasoIndex, compareMenuRef, focoMenuRef, favoritosMenuRef, historiaSnapshotRef, shareStatusTimerRef, urlStateLoadedRef,
     historyPopRef, dragState, workspaceGridRef, workspaceMainRef, panelWidths, setPanelWidths, treeMapSplit, setTreeMapSplit, filterSectionsOpen, setFilterSectionsOpen,
     bioSectionsOpen, setBioSectionsOpen, personHistory, modoTrabajo, setModoTrabajo,
     alternarSeccionFiltro, alternarSeccionBio, ajustarAnchoPanel, restablecerAnchoPanel, comenzarResizeLateral, comenzarResizeArbolMapa,
     gen, rows, graph, favoritosSet, timelinePxPerYear, timelineTrackWidth,
-    timelineContentWidth, timelineTickStep, timelineTicks, eventosOrdenadosTodos, totalEventosTimeline, eventosOrdenados, timelineCombinedEvents, eventoSeleccionado,
+    eventosOrdenadosTodos, totalEventosTimeline, eventosOrdenados, eventoSeleccionado,
     historiaActiva, historiaPasoActual, historiaPersonasSet, opciones, personaBio, toggle, focoSet, collapsedSet,
     hiddenByCollapse, toggleDescendants, ajustarAnio, actualizarAnioDesdeRango, confirmarAnioEscrito, restablecerAnio, moverAnioHistoria, alternarReproduccionHistoria,
     mostrarArbol, mostrarMapa, mostrarFiltros, mostrarBiografia, mostrarCronologia, vistaPrincipal, layoutLaterales, alternarVista,
@@ -245,7 +249,8 @@ export default function ExplorerView({ vm, loading = false, loadError = false, o
       {loading && <span className="atlas-loading-status" role="status">Cargando el atlas…</span>}
       {loadError && <AtlasLoadError onRetry={onRetry}/>}
       {!modoTrabajo && <SiteHeader variant="atlas" locale={locale} onLanguageChange={cambiarIdioma} />}
-    <div className={`wrap${modoTrabajo ? " atlas-work-mode" : ""}`} inert={!ready}>
+    <div className={`wrap atlas-scene-${atlasScene}${modoTrabajo ? " atlas-work-mode" : ""}`} inert={!ready}>
+      <div className="atlas-scene-switch"><span>Explorar</span><SegmentedControl options={SCENES} value={atlasScene} onChange={changeAtlasScene} label="Modo de exploración"/></div>
       <div className={`workspace-topbar${modoTrabajo ? " is-work-mode" : ""}`}>
         <section className="workspace-topbar-section workspace-toolbar-search" onBlur={e=>{if(!e.currentTarget.contains(e.relatedTarget))setSearchOpen(false);}}>
           <div className="toolbar-label sk" style={{"--sk-index":0}}>Búsqueda</div>
@@ -285,7 +290,7 @@ export default function ExplorerView({ vm, loading = false, loadError = false, o
           </div>
           {searchOpen && queryTrim && <div id="atlas-search-results" className="atlas-search-results" aria-label="Resultados de toda la base">
             <span role="status">{searchResults.total ? `${searchResults.total} coincidencias en el Atlas` : 'No hay coincidencias'}</span>
-            {searchResults.people.length > 0 && <section aria-label="Personas"><strong>Personas</strong>{searchResults.people.map(p=><button type="button" key={p.id} onClick={()=>{vm.growth.onSelect(p.id);setSearchOpen(false);}}><span>{p.nombre}</span><small>{positions[p.id]?'Ver en el árbol':'Ver ficha y familia'}</small></button>)}</section>}
+            {searchResults.people.length > 0 && <section aria-label="Personas"><strong>Personas</strong>{searchResults.people.map(p=><button type="button" key={p.id} onClick={()=>{if(atlasScene === "europa")seleccionarPersonaPorId(p.id,{abrirAtlas:true});vm.growth.onSelect(p.id);setSearchOpen(false);}}><span>{p.nombre}</span><small>{positions[p.id]?'Ver en el árbol':'Ver ficha y familia'}</small></button>)}</section>}
             {searchResults.dynasties.length > 0 && <section aria-label="Dinastías"><strong>Dinastías</strong>{searchResults.dynasties.map(name=><a key={name} href={rutaEntidadLocalizada('es','dinastia',slugPublico(name))}><span>{name}</span><small>Abrir casa</small></a>)}</section>}
             {searchResults.territories.length > 0 && <section aria-label="Territorios"><strong>Territorios</strong>{searchResults.territories.map(name=><a key={name} href={rutaEntidadLocalizada('es','territorio',slugPublico(name))}><span>{name}</span><small>Abrir territorio</small></a>)}</section>}
             {searchResults.stories.length > 0 && <section aria-label="Historias"><strong>Historias</strong>{searchResults.stories.map(story=><a key={story.id} href={rutaEntidadLocalizada('es','historia',slugPublico(story.titulo))}><span>{story.titulo}</span><small>Leer historia</small></a>)}</section>}
@@ -296,7 +301,7 @@ export default function ExplorerView({ vm, loading = false, loadError = false, o
         <section className="workspace-topbar-section workspace-toolbar-year">
           <div className="global-year-heading-row">
             <div className="toolbar-label sk" style={{"--sk-index":0}}>Año global</div>
-            <button type="button" className="global-year-europe" onClick={()=>{setReproduciendoHistoria(false);setInfoProyecto("europa");}}>Europa en este año →</button>
+
             {Number.isFinite(anioGlobal) && (
               <span className="global-year-header-summary">
                 {personasVivasEnAnio.length} vivas · {gobernantesActivosEnAnio.length} gobernando
@@ -345,6 +350,7 @@ export default function ExplorerView({ vm, loading = false, loadError = false, o
               <button
                 type="button"
                 className="global-year-reset"
+                disabled={atlasScene === "europa"}
                 onClick={restablecerAnio}
                 title="Mostrar todos los años"
                 aria-label="Mostrar todos los años"
@@ -384,8 +390,8 @@ export default function ExplorerView({ vm, loading = false, loadError = false, o
           </div>
         </section>
 
-        {!modoTrabajo && <button type="button" className="atlas-tools-toggle" aria-expanded={mobileToolsOpen} aria-controls="atlas-secondary-tools" onClick={()=>setMobileToolsOpen(open=>!open)}>Vistas y herramientas <ChevronDown size={12}/></button>}
-        {!modoTrabajo && (
+        {!modoTrabajo && atlasScene === "atlas" && <button type="button" className="atlas-tools-toggle" aria-expanded={mobileToolsOpen} aria-controls="atlas-secondary-tools" onClick={()=>setMobileToolsOpen(open=>!open)}>Vistas y herramientas <ChevronDown size={12}/></button>}
+        {!modoTrabajo && atlasScene === "atlas" && (
         <div id="atlas-secondary-tools" className={`workspace-topbar-secondary${mobileToolsOpen?' is-expanded':''}`}>
           <section className="workspace-topbar-section workspace-toolbar-view workspace-toolbar-panels">
             <SegmentedControl className="atlas-view-pills" label="Vista principal" options={VIEW_OPTIONS} value={mostrarArbol && mostrarMapa ? 'ambos' : mostrarMapa ? 'mapa' : 'arbol'} onChange={value=>setVistasActivas({arbol:value!=='mapa',mapa:value!=='arbol'})}/>
@@ -584,9 +590,11 @@ export default function ExplorerView({ vm, loading = false, loadError = false, o
 
       {historiaActiva && <StoryAtlasGuide story={historiaActiva} index={historiaPasoIndex} returnPath={vm.storyReturn} count={vm.growth.ids?.length || 0} onStep={cambiarPasoHistoria} onCenter={()=>aplicarPasoHistoria(historiaActiva,historiaPasoIndex,{replace:true})} onExit={salirHistoria}/>}
 
+      {atlasScene === 'europa' && <React.Suspense fallback={<p role="status">Preparando Europa en este año…</p>}><EuropeYearView year={anioGlobal ?? 1500} onYearChange={actualizarAnioDesdeRango} onSelect={id=>seleccionarPersonaPorId(id,{abrirAtlas:true})} onEvent={seleccionarEvento} timeline={mostrarCronologia?<AtlasTimeline vm={vm}/>:null}/></React.Suspense>}
+      <div className="atlas-traditional" hidden={atlasScene !== 'atlas'}>
       <div
         ref={workspaceGridRef}
-        className={`workspace-grid ${layoutLaterales}${mostrarCronologia ? "" : " workspace-no-timeline"}`}
+        className={`workspace-grid ${layoutLaterales} workspace-no-timeline`}
         style={{
           "--workspace-left-width": `${panelWidths.filtros}px`,
           "--workspace-right-width": `${panelWidths.biografia}px`,
@@ -866,7 +874,7 @@ export default function ExplorerView({ vm, loading = false, loadError = false, o
                   </div>
                 </div>
               </div>
-              {treeListOpen && <TreeAccessibleList people={visiblePeople} selectedId={seleccion?.id} onSelect={seleccionarPersonaPorId}/>}
+              {treeListOpen && <TreeAccessibleList year={anioGlobal} people={visiblePeople} selectedId={seleccion?.id} onSelect={seleccionarPersonaPorId}/>}
             </section>
           )}
 
@@ -887,7 +895,7 @@ export default function ExplorerView({ vm, loading = false, loadError = false, o
             ><span /></div>
           )}
 
-          {mostrarMapa && (
+          {mostrarMapa && atlasScene === 'atlas' && (
             <section className="workspace-stage workspace-map-stage" aria-label="Mapa de territorios">
               <MapaEuropa
                 initialViewport={initialMapViewport}
@@ -901,7 +909,7 @@ export default function ExplorerView({ vm, loading = false, loadError = false, o
                   ? (esGobernante(seleccion)
                       ? (Number.isFinite(anioGlobal)
                           ? (territoriosGobernadosEnAño(seleccion, anioGlobal).length
-                              ? `En ${anioGlobal}, ${seleccion.nombre} gobernaba: ${territoriosGobernadosEnAño(seleccion, anioGlobal).join(", ")}.`
+                              ? `En ${anioGlobal}, ${seleccion.nombre} gobernaba: ${governmentSummary(seleccion, anioGlobal).join(", ")}.`
                               : `${seleccion.nombre} no gobernaba ningún territorio registrado en ${anioGlobal}.`)
                           : `Se destacan los territorios que gobernó ${seleccion.nombre}; elige un año para ver solo los vigentes entonces.`)
                       : `${seleccion.nombre} no ostentó un título de gobierno, así que no se ilumina ningún territorio en el mapa (puedes ver su vinculación territorial en la biografía).`)
@@ -1101,7 +1109,7 @@ export default function ExplorerView({ vm, loading = false, loadError = false, o
                   >
                     <dl>
                       <dt>ID</dt><dd><code className="bio-id">{personaBio.id}</code></dd>
-                      <dt>Territorio(s)</dt><dd>{territoriosDe(personaBio).join(", ") || "No indicado"}</dd>
+                      <dt>Territorio(s)</dt><dd>{(governmentSummary(personaBio, anioGlobal).length ? governmentSummary(personaBio, anioGlobal) : territoriosDe(personaBio)).join(", ") || "No indicado"}</dd>
                       {sobrenombreDePersona(personaBio) && <><dt>Sobrenombre</dt><dd>{sobrenombreDePersona(personaBio)}</dd></>}
                       {!!personaBio.aliases?.length && <><dt>Otros nombres</dt><dd>{personaBio.aliases.join(", ")}</dd></>}
                       <dt>Título</dt><dd>{personaBio.titulo}</dd>
@@ -1163,174 +1171,9 @@ export default function ExplorerView({ vm, loading = false, loadError = false, o
         </aside>
         )}
 
-        {mostrarCronologia && (
-        <section className="workspace-bottom">
-          <section className="panel timeline-panel">
-            <div className="panel-head panel-head-static timeline-panel-head">
-              <div className="timeline-title-group">
-                <span className="panel-title sk" style={{"--sk-index":3}}>Línea temporal</span>
-                <span className="panel-count sk" style={{"--sk-index":4}}>
-                  {timelineMode === "eventos" ? `${totalEventosTimeline} eventos` : `${visiblePeople.length} personas${timelineMode === "ambos" ? ` · ${totalEventosTimeline} eventos` : ""}`}
-                </span>
-              </div>
-              <div className="timeline-head-tools">
-                <div className="timeline-mode-toggle" role="group" aria-label="Contenido de la línea temporal">
-                  <button type="button" className={timelineMode === "personas" ? "active" : ""} onClick={() => setTimelineMode("personas")}>Personas</button>
-                  <button type="button" className={timelineMode === "eventos" ? "active" : ""} onClick={() => setTimelineMode("eventos")}>Eventos</button>
-                  <button type="button" className={timelineMode === "ambos" ? "active" : ""} onClick={() => setTimelineMode("ambos")}>Ambos</button>
-                </div>
-                <div className="timeline-zoom-controls" aria-label="Escala temporal">
-                  <button type="button" disabled={timelineScaleIndex === 0} onClick={() => setTimelineScaleIndex((valor) => Math.max(0, valor - 1))} title="Reducir escala temporal"><ZoomOut size={12} /></button>
-                  <span aria-hidden="true" className="timeline-zoom-divider" />
-                  <button type="button" disabled={timelineScaleIndex === TIMELINE_SCALES.length - 1} onClick={() => setTimelineScaleIndex((valor) => Math.min(TIMELINE_SCALES.length - 1, valor + 1))} title="Ampliar escala temporal"><ZoomIn size={12} /></button>
-                </div>
-              </div>
-            </div>
-            <div className="panel-body timeline-panel-body">
-              {eventoSeleccionado && (
-                <div className="timeline-event-detail">
-                  <div>
-                    <span>{etiquetaFechaEvento(eventoSeleccionado)} · {eventoSeleccionado.categoria}</span>
-                    <strong>{eventoSeleccionado.titulo}</strong>
-                    <p>{eventoSeleccionado.descripcion}</p>
-                    {!!eventoSeleccionado.personas?.length && (
-                      <div className="timeline-event-people">
-                        {eventoSeleccionado.personas.filter((id) => BY_ID[id]).map((id) => (
-                          <a key={id} href={rutaEntidadLocalizada("es", "persona", slugPersonaPorLocale(BY_ID[id], "es"))} onClick={(event) => { event.preventDefault(); seleccionarPersonaPorId(id); }}>{BY_ID[id].nombre}</a>
-                        ))}
-                      </div>
-                    )}
-                  </div>
-                  <button type="button" className="timeline-event-close" onClick={() => setEventoSeleccionadoId(null)} aria-label="Cerrar detalle del evento"><X size={13} /></button>
-                </div>
-              )}
-              <div className="timeline-resizable">
-                <div className="tl-scroll-container" ref={tlScrollRef}>
-                  <div className="tl-content" style={{ minWidth: timelineContentWidth, width: timelineContentWidth }}>
-                    <div className="tl-header">
-                      <div className="tl-corner">{timelineMode === "eventos" ? "Acontecimiento" : "Personaje"}</div>
-                      <div className="tl-axis">
-                        {timelineTicks.map((valor) => (
-                          <span key={valor} className="tl-tick" style={{ left: `${pct(valor)}%` }}>{valor}</span>
-                        ))}
-                        {Number.isFinite(anioGlobal) && (
-                          <span className="tl-year-cursor tl-year-cursor-axis" style={{ left: `${pct(anioGlobal)}%` }}><span>{anioGlobal}</span></span>
-                        )}
-                      </div>
-                    </div>
-
-                    {timelineMode === "ambos" && (
-                      <div className="tl-events-band" style={{ minHeight: timelineCombinedEvents.height }}>
-                        <div className="tl-events-band-label" style={{ minHeight: timelineCombinedEvents.height }}>Eventos</div>
-                        <div className="tl-events-band-track" style={{ minHeight: timelineCombinedEvents.height }}>
-                          {timelineCombinedEvents.items.map(({ evento, nivel, esPeriodo, leftPx, durationPx, visualWidth, lane, mostrarTitulo, compacto }) => (
-                            <button
-                              type="button"
-                              key={evento.id}
-                              className={`tl-event-marker level-${nivel}${compacto ? " is-compact" : ""} cat-${evento.categoria}${eventoSeleccionadoId === evento.id ? " active" : ""}${esPeriodo ? " is-range" : " is-point"}`}
-                              style={{
-                                left: leftPx,
-                                width: visualWidth,
-                                top: 4 + lane * timelineCombinedEvents.laneHeight,
-                              }}
-                              onClick={() => seleccionarEvento(evento)}
-                              title={`${etiquetaFechaEvento(evento)} · ${evento.titulo}`}
-                              aria-label={`${etiquetaFechaEvento(evento)} · ${evento.titulo}`}
-                            >
-                              {mostrarTitulo && <span className="tl-event-marker-title">{evento.titulo}</span>}
-                              {esPeriodo && (
-                                <span
-                                  className="tl-event-marker-duration"
-                                  style={{ width: Math.min(durationPx, visualWidth) }}
-                                  aria-hidden="true"
-                                />
-                              )}
-                            </button>
-                          ))}
-                          {Number.isFinite(anioGlobal) && <span className="tl-year-cursor" style={{ left: `${pct(anioGlobal)}%` }} aria-hidden="true" />}
-                        </div>
-                      </div>
-                    )}
-
-                    {timelineMode === "eventos" ? (
-                      <div className="tl-list tl-event-list" ref={timelineListRef} style={{ position: "relative", height: timelineVirtual.total }}>
-                        {timelineVirtual.visible.map((row) => {
-                          const evento = row.item;
-                          const inicio = inicioEvento(evento);
-                          const fin = finEvento(evento);
-                          const esPeriodo = Number.isFinite(evento.desde) && Number.isFinite(evento.hasta) && evento.hasta > evento.desde;
-                          const activoEnAnio = Number.isFinite(anioGlobal) && anioGlobal >= inicio && anioGlobal <= fin;
-                          return (
-                            <div key={evento.id} ref={timelineVirtual.rowRef(row.key)} data-timeline-key={row.key} style={{ position: "absolute", top: row.start, left: 0, width: "100%" }} className={`tl-row tl-event-row${eventoSeleccionadoId === evento.id ? " selected" : ""}${activoEnAnio ? " year-active" : ""}`} onClick={() => seleccionarEvento(evento)} role="button" tabIndex={0} onKeyDown={(event) => { if (event.key === "Enter" || event.key === " ") { event.preventDefault(); seleccionarEvento(evento); } }}>
-                              <div className="tl-sticky-col">
-                                <div className="name">{evento.titulo}</div>
-                                <div className="meta">{etiquetaFechaEvento(evento)} · {evento.categoria}</div>
-                              </div>
-                              <div className="tl-track tl-event-track">
-                                <span
-                                  className={`tl-event-bar cat-${evento.categoria}${esPeriodo ? " is-range" : " is-point"}`}
-                                  style={{ left: `${pct(inicio)}%`, width: esPeriodo ? `${Math.max((pct(fin) ?? 0) - (pct(inicio) ?? 0), 0.6)}%` : undefined }}
-                                />
-                                {Number.isFinite(anioGlobal) && <span className="tl-year-cursor" style={{ left: `${pct(anioGlobal)}%` }} aria-hidden="true" />}
-                              </div>
-                            </div>
-                          );
-                        })}
-                      </div>
-                    ) : (
-                      <div className="tl-list" ref={timelineListRef} style={{ position: "relative", height: timelineVirtual.total }}>
-                        {timelineVirtual.visible.map((row) => {
-                            const persona = row.item;
-                            const inicio = anioInicioPersona(persona);
-                            const fin = anioFinPersona(persona);
-                            const tieneFecha = Number.isFinite(inicio) && Number.isFinite(fin);
-                            const reinadosPersona = listaReinados(persona);
-                            const trackHeight = Math.max(12, 12 + Math.max(0, reinadosPersona.length - 1) * 4);
-                            const estadoAnio = Number.isFinite(anioGlobal) ? (estaVivaEn(persona, anioGlobal) ? " year-active" : " year-inactive") : "";
-                            return (
-                              <div
-                                key={persona.id}
-                                ref={timelineVirtual.rowRef(row.key)}
-                                data-timeline-key={row.key}
-                                style={{ position: "absolute", top: row.start, left: 0, width: "100%" }}
-                                className={`tl-row ${seleccion?.id === persona.id ? "selected " : ""}${hovered === persona.id ? "hovered" : ""}${estadoAnio}${historiaPersonasSet.has(persona.id) ? " story-related" : ""}`}
-                                onMouseEnter={() => setHovered(persona.id)}
-                                onMouseLeave={() => setHovered(null)}
-                                onClick={() => seleccionarPersonaPorId(persona.id)}
-                                role="button"
-                                tabIndex={0}
-                                onKeyDown={(event) => { if (event.key === "Enter" || event.key === " ") { event.preventDefault(); seleccionarPersonaPorId(persona.id); } }}
-                              >
-                                <div className="tl-sticky-col">
-                                  <div className="name">{persona.nombre}</div>
-                                  <div className="meta">{persona.titulo} · {territoriosDe(persona).join(" · ")} · {persona.dinastia}</div>
-                                </div>
-                                <div className="tl-track" style={{ height: trackHeight }}>
-                                  {tieneFecha ? (
-                                    <div className="tl-bar" style={{ left: `${pct(inicio)}%`, width: `${Math.max((pct(fin) ?? 0) - (pct(inicio) ?? 0), 0.35)}%`, backgroundColor: ACCENTS[persona.dinastia] || ACCENTS[getCategoriaDinastía(persona.dinastia)] || "#71717A" }} title={`${formatoFechas(persona)} (vida)`} />
-                                  ) : <span className="tl-unknown">Fechas no precisadas</span>}
-                                  {Number.isFinite(anioGlobal) && <span className="tl-year-cursor" style={{ left: `${pct(anioGlobal)}%` }} aria-hidden="true" />}
-                                  {reinadosPersona.map((reinado, index) => {
-                                    const tipo = etiquetaTipoReinado(reinado.condicion);
-                                    const efectivo = reinadoEsEfectivo(reinado);
-                                    return (
-                                      <div key={`${reinado.territorio}-${reinado.desde}-${reinado.hasta}-${index}`} className={`tl-bar-reinado${efectivo ? "" : " is-non-effective"}`} style={{ left: `${pct(reinado.desde)}%`, width: `${Math.max((pct(reinado.hasta) ?? 0) - (pct(reinado.desde) ?? 0), 0.35)}%`, top: 2 + index * 4, backgroundColor: REINO_COLOR[reinado.territorio] || ACCENTS[persona.dinastia] || ACCENTS[getCategoriaDinastía(persona.dinastia)] || "#71717A" }} title={`${reinado.territorio}: ${reinado.desde}–${reinado.hasta}${tipo ? ` (${tipo})` : ""}`} />
-                                    );
-                                  })}
-                                </div>
-                              </div>
-                            );
-                          })}
-                      </div>
-                    )}
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
-        </section>
-        )}
       </div>
+      </div>
+      {mostrarCronologia && atlasScene === 'atlas' && <AtlasTimeline vm={vm}/>}
 
       {!modoTrabajo && (
         <SiteFooter
@@ -1347,9 +1190,8 @@ export default function ExplorerView({ vm, loading = false, loadError = false, o
       ]}/>}
       {guideOpen && <AtlasGuide locale={locale} onClose={closeGuide} onSelect={() => vm.growth.onSelect('CARLOS5')} onExpand={() => vm.growth.onExpand('family')} onYear={() => actualizarAnioDesdeRango(1500)} selectedId={seleccion?.id} canExpand={canAddFamily} />}
       {infoProyecto === 'cobertura' && <CoverageDialog onClose={() => setInfoProyecto(null)} />}
-      {infoProyecto === 'europa' ? <React.Suspense fallback={<div className="project-modal-backdrop"><div className="project-modal"><div className="project-modal-body" role="status">Preparando Europa en este año… <button type="button" onClick={()=>setInfoProyecto(null)}>Cerrar</button></div></div></div>}>
-        <EuropeYearDialog anio={anioGlobal} onYearChange={actualizarAnioDesdeRango} onClose={()=>setInfoProyecto(null)} onSelect={id=>{setInfoProyecto(null);seleccionarPersonaPorId(id);}} personas={queryTrim?visiblePeople.filter(p=>searchMatchSet.has(p.id)):visiblePeople} territorios={territorios} filtros={filtrosActivosCompactos} alcanceCompleto={!queryTrim&&!territorios.length&&visiblePeople.length===PERSONAS.length} min={TL_MIN} max={TL_MAX}/>
-      </React.Suspense> : infoProyecto !== 'cobertura' && <ModalProyecto seccion={infoProyecto} onClose={() => setInfoProyecto(null)} persona={seleccion} personasVista={visiblePeople} onStartHistoria={iniciarHistoria} />}
+      {infoProyecto !== 'cobertura' && <ModalProyecto seccion={infoProyecto} onClose={() => setInfoProyecto(null)} persona={seleccion} personasVista={visiblePeople} onStartHistoria={iniciarHistoria} />}
+
     </div>
     </div>
   );
