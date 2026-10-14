@@ -52,3 +52,10 @@
 .atlas-timeline-group{color:color-mix(in srgb,var(--group-color) 55%,var(--eade-ink))}
 
 .atlas-timeline-life.is-incomplete{background:repeating-linear-gradient(90deg,var(--person-color) 0 4px,transparent 4px 7px)}
+@media(max-width:600px){
+ .atlas-timeline-tools{flex-wrap:wrap;gap:8px}
+ .atlas-timeline-tools .ui-segments{max-width:100%}
+ .atlas-timeline-tools .ui-segments button{padding:8px 10px;font-size:11px}
+ .atlas-timeline-zoom{margin-left:auto}
+ .atlas-timeline-zoom button{padding:7px 8px}
+}
