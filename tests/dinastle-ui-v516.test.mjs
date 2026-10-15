@@ -1,0 +1,43 @@
+import test,{before,after} from 'node:test';
+import assert from 'node:assert/strict';
+import fs from 'node:fs/promises';
+import path from 'node:path';
+import {fileURLToPath,pathToFileURL} from 'node:url';
+import {JSDOM} from 'jsdom';
+import {act} from 'react';
+import {build} from 'vite';
+import {PERSONAS} from '../src/personas.jsx';
+import {HISTORIAS,EVENTOS_HISTORICOS} from '../src/historiaData.jsx';
+import {buildDinastleModel,dailyDinastle,dinastleDay} from '../src/desafio/dinastleEngine.js';
+const root=fileURLToPath(new URL('../',import.meta.url));
+const dom=new JSDOM('<div id="root"></div>',{url:'https://treeofeurope.eu/es/desafio?juego=dinastle',pretendToBeVisual:true});
+for(const name of ['window','document','navigator','HTMLElement','HTMLInputElement','Event','MouseEvent'])Object.defineProperty(globalThis,name,{value:name==='window'?dom.window:dom.window[name],configurable:true,writable:true});
+globalThis.IS_REACT_ACT_ENVIRONMENT=true;
+let runtime,temp,app;
+before(async()=>{const env=process.env.NODE_ENV;temp=await fs.mkdtemp(path.join(root,'.dinastle-test-'));await build({root,configFile:false,publicDir:false,logLevel:'error',build:{ssr:'tests/fixtures/dinastle-entry.jsx',outDir:temp,emptyOutDir:false,minify:false,rolldownOptions:{output:{entryFileNames:'entry.mjs'}}}});if(env===undefined)delete process.env.NODE_ENV;else process.env.NODE_ENV=env;runtime=await import(pathToFileURL(path.join(temp,'entry.mjs')).href);});
+after(async()=>{if(app)await act(async()=>app.unmount());dom.window.close();if(temp)await fs.rm(temp,{recursive:true,force:true});});
+const click=async el=>{assert(el);await act(async()=>{el.click();});};
+const button=text=>[...document.querySelectorAll('button')].find(b=>b.textContent.includes(text));
+const type=async text=>{await act(async()=>{const el=document.querySelector('[role=combobox]');assert(el);Object.getOwnPropertyDescriptor(window.HTMLInputElement.prototype,'value').set.call(el,text);el.dispatchEvent(new window.Event('input',{bubbles:true}));});};
+test('real Dinastle supports keyboard guessing, resume, result without spoilers and independent free play',async()=>{
+ window.localStorage.clear();const errors=[],old=console.error;console.error=(...args)=>errors.push(args.join(' '));
+ try{
+  await act(async()=>{app=runtime.mount(document.getElementById('root'));});
+  assert.equal(document.querySelector('#dinastle-title').textContent,'Dinastle');
+  const model=buildDinastleModel(PERSONAS,HISTORIAS,EVENTOS_HISTORICOS),secret=dailyDinastle(model,dinastleDay());
+  const wrong=PERSONAS.find(p=>p.id!==secret.id&&p.nombre==='Carlos V');await type(wrong.nombre);
+  assert.equal(document.querySelector('[role=combobox]').getAttribute('aria-expanded'),'true');
+  await act(async()=>document.querySelector('[role=combobox]').dispatchEvent(new window.KeyboardEvent('keydown',{key:'Enter',bubbles:true})));
+  assert.equal(document.querySelectorAll('.dinastle-person').length,1);
+  const territories=document.querySelector('.dinastle-territories');assert(territories);assert(!territories.open);assert(territories.querySelectorAll('li').length>3);
+  await click(territories.querySelector('summary'));assert(territories.open);
+  await act(async()=>app.unmount());await act(async()=>{app=runtime.mount(document.getElementById('root'));});assert.equal(document.querySelectorAll('.dinastle-person').length,1);
+  await type(secret.person.nombre);await click([...document.querySelectorAll('[role=option] button')].find(b=>b.querySelector('strong').textContent===secret.person.nombre));
+  assert.match(document.querySelector('.dinastle-result h2').textContent,new RegExp(secret.person.nombre));assert.equal(document.querySelector('[role=combobox]'),null);
+  await click(button('Copiar resultado'));const copied=document.querySelector('textarea');assert(copied);assert(!copied.value.includes(secret.person.nombre));
+  const saved=JSON.parse(window.localStorage.getItem('eade.dinastle.v1'));assert.equal(saved.stats.won,1);assert.equal(saved.stats.played,1);
+  await click(button('Partida libre'));assert(document.querySelector('[role=combobox]'));await type('Carlos');assert(document.querySelectorAll('[role=option]').length>0);
+  await click(button('El de hoy'));assert.equal(document.querySelector('[role=combobox]'),null);assert.equal(JSON.parse(window.localStorage.getItem('eade.dinastle.v1')).stats.played,1);
+  assert.deepEqual(errors,[]);
+ }finally{console.error=old;}
+});

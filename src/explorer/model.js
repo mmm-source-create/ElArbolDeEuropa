@@ -17,7 +17,7 @@ export const SIN_FECHA = "sin-fecha";
 export const GRUPOS_DINASTICOS_GENEALOGICOS = {
   Capeto: [
     "Capeto", "Anjou", "Anjou-Durazzo", "Anjou-Hungría", "Anjou-Tarento",
-    "Artois", "Borbón", "Borbón-Orleans", "Borgoña", "Capeto-Évreux",
+    "Artois", "Borbón", "Borbón-Condé", "Borbón-Parma", "Borbón-Orleans", "Borgoña", "Capeto-Évreux",
     "Clermont", "Courtenay", "Dreux", "Évreux", "Valois",
     "Valois-Alençon", "Valois-Angulema", "Valois-Borgoña", "Valois-Orleans",
   ],
@@ -25,7 +25,7 @@ export const GRUPOS_DINASTICOS_GENEALOGICOS = {
   Ivrea: ["Ivrea", "Ivrea-Borgoña", "La Cerda", "Trastámara"],
   Barcelona: ["Barcelona", "Casa de Aragón", "Barcelona-Sicilia", "Barcelona-Urgel", "Aragón-Urgel"],
   Plantagenet: ["Plantagenet", "Plantagenet-Lancaster", "Plantagenet-York", "Lancaster", "York"],
-  Tudor: ["Tudor", "Tudor-Brandon", "Douglas-Tudor"],
+  Tudor: ["Tudor"],
   Avís: ["Avís", "Avís-Beja", "Avís-Coímbra"],
   Paleólogo: ["Paleólogo", "Paleólogo-Monferrato"],
   Přemysl: ["Přemysl", "Přemysl-Opava"],
@@ -60,7 +60,7 @@ export const GRUPOS_DINASTICOS_REGIONALES = {
     "Avesnes", "Casa de Flandes", "Gerulfinga",
   ],
   "Casas británicas": [
-    "Bohun", "Bolena", "Brandon", "Douglas", "Grey", "Holland", "Mortimer",
+    "Bohun", "Bolena", "Brandon", "Douglas", "Tudor-Brandon", "Douglas-Tudor", "Grey", "Holland", "Mortimer",
     "Neville", "Seymour", "Woodville", "Clare", "Marshal", "MacDonald",
   ],
   "Casas irlandesas": ["Ua Conchobair", "Mac Murchada", "O’Neill", "O’Donnell", "O’Brien", "MacCarthy", "Burgh", "Bourke", "FitzGerald", "Butler", "O’Malley", "Preston", "Talbot", "Sarsfield"],
@@ -75,6 +75,9 @@ export const GRUPOS_DINASTICOS_REGIONALES = {
 
 export const GRUPOS_DINASTICOS = {
   ...GRUPOS_DINASTICOS_GENEALOGICOS,
+  Borbón:["Borbón","Borbón-Condé","Borbón-Orleans","Borbón-Parma"],
+  Valois:["Valois","Valois-Alençon","Valois-Angulema","Valois-Borgoña","Valois-Orleans"],
+  Anjou:["Anjou","Anjou-Durazzo","Anjou-Hungría","Anjou-Tarento"],
   ...GRUPOS_DINASTICOS_REGIONALES,
 };
 

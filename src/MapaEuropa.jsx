@@ -35,7 +35,7 @@ const MAP_PAN_STEP = 0.12;
 const MAP_DRAG_THRESHOLD = 4;
 
 function authorityFill(svg, color, kind) {
-  if (!['delegated', 'disputed', 'mixed', 'tributary'].includes(kind)) return color;
+  if (!['delegated', 'disputed', 'mixed', 'tributary','apanage','feudal'].includes(kind)) return color;
   const namespace = 'http://www.w3.org/2000/svg';
   const id = `atlas-${kind}-${color.replace(/[^a-z0-9]/gi, '')}`;
   if (!svg.getElementById(id)) {
@@ -48,7 +48,7 @@ function authorityFill(svg, color, kind) {
     const rect = document.createElementNS(namespace, 'rect');
     rect.setAttribute('width', '0.9'); rect.setAttribute('height', '0.9'); rect.setAttribute('fill', color);
     const line = document.createElementNS(namespace, 'path');
-    line.setAttribute('d', kind === 'mixed' ? 'M0 .45 L.9 .45' : kind === 'delegated' ? 'M0 0 L.9 .9' : 'M0 0 L.9 .9 M0 .9 L.9 0');
+    line.setAttribute('d', kind === 'mixed' ? 'M0 .45 L.9 .45' : ['apanage','feudal'].includes(kind)?'M.45 0 L.45 .9':kind === 'delegated' ? 'M0 0 L.9 .9' : 'M0 0 L.9 .9 M0 .9 L.9 0');
     line.setAttribute('stroke', '#fff'); line.setAttribute('stroke-opacity', '.5'); line.setAttribute('stroke-width', '.16');
     if (kind === 'tributary') {
       const veil = document.createElementNS(namespace, 'rect');
@@ -280,7 +280,7 @@ export function MapaEuropa({ seleccion, anioGlobal = null, onSelectTerritorio, o
           const colors=[...new Set(layers.map(layer=>layer.mosaicColor))];
           const scopes=layers.flatMap(layer=>(layer.scopes||[]).filter(scope=>scope.ids.includes(id)));
           const disputed=scopes.some(s=>/disput|ocupaci/i.test(s.condition||''));
-          let fill=authorityFill(svg,colors[0],disputed?'disputed':'sovereign');
+          let fill=authorityFill(svg,colors[0],disputed?'disputed':layers.some(l=>l.crownRelation)?'apanage':'sovereign');
           if(colors.length>1) {
             const namespace='http://www.w3.org/2000/svg';
             const patternId='europe-mosaic-'+colors.join('-').replace(/[^a-z0-9]/gi,'');
@@ -492,10 +492,12 @@ export function MapaEuropa({ seleccion, anioGlobal = null, onSelectTerritorio, o
           <span><i className="mapa-key-solid" aria-hidden="true"/>Autoridad territorial</span>
           <span><i className="mapa-key-delegated" aria-hidden="true"/>Gobierno delegado</span>
           <span><i className="mapa-key-disputed" aria-hidden="true"/>Control disputado / ocupación</span>
+          <span><i className="mapa-key-apanage" aria-hidden="true"/>Apanage o feudo dentro de Francia</span>
           <span><i className="mapa-key-tributary" aria-hidden="true"/>Estado tributario · gobierno propio</span>
           <span><i className="mapa-key-mixed" aria-hidden="true"/>{Number.isInteger(anioGlobal) ? "Varias jurisdicciones en una celda" : "Varias jurisdicciones o condiciones a lo largo de la vida"}</span>
         </div>
         <label className="mapa-dependency-toggle"><input type="checkbox" checked={showDependencies} onChange={event => setShowDependencies(event.target.checked)}/> Mostrar estados tributarios</label>
+        <p>Las líneas verticales del color francés muestran apanages y feudos dentro del reino, con gobierno local propio. No son Estados tributarios.</p>
         <p>Los puntos relacionan un Estado tributario con el soberano seleccionado. Conserva su título y gobierno; las superficies de administración directa tienen color sólido.</p>
         <p>Los títulos sin control acreditado se consultan en el inspector y no colorean dominios.</p>
         <p>El mapa detallado destaca los gobiernos de la persona seleccionada. El gris no significa ausencia de gobierno: indica que esa región no tiene una atribución revisada para la persona y el año elegidos. Las regiones de esta cartografía aproximan territorios históricos y no prueban por sí solas una frontera.</p>
@@ -525,8 +527,9 @@ export function MapaEuropa({ seleccion, anioGlobal = null, onSelectTerritorio, o
           {inspectedRegion?.entries.length > 0 && <ul>{inspectedRegion.entries.map((entry, index) => <li key={`${entry.territory}-${entry.person?.id || 'collective'}-${index}`}>
             <span className={`mapa-authority-badge mapa-authority-${entry.kind}`}>{AUTHORITY_LABELS[entry.kind]}</span>
             <strong>{entry.territory}</strong>
+            {entry.crownRelation&&<p>{entry.crownRelation.type==='feudo'?'Feudo':'Apanage'} dentro del reino · autoridad superior de Francia · {entry.crownRelation.from}–{entry.crownRelation.through}.</p>}
             {entry.relationship && <p>{entry.relationship.subjectLabel} · vínculo tributario con {entry.relationship.overlord}, {entry.relationship.from}–{entry.relationship.through}.</p>}
-            <div>{entry.relationship ? 'Soberano al que se debe el tributo: ' : null}{entry.person ? <button type="button" className="mapa-region-person" onClick={() => onSelectPersona?.(entry.person.id)}>{entry.person.nombre}</button> : entry.collective?.nombre}</div>
+            <div>{entry.relationship ? 'Soberano al que se debe el tributo: ' : entry.crownRelation?'Autoridad superior: ':null}{entry.person ? <button type="button" className="mapa-region-person" onClick={() => onSelectPersona?.(entry.person.id)}>{entry.person.nombre}</button> : entry.collective?.nombre}</div>
             {entry.government?.soberano && <p>En nombre de {PERSONAS.find(p => p.id === entry.government.soberano)?.nombre || entry.government.soberano}. El gobierno superior se consulta en su ficha.</p>}
             {entry.kind === 'regional' && <small>La jurisdicción tiene fuentes territoriales; el mandato de su gobernante en este año sigue pendiente de documentar.</small>}
             {entry.government?.nota && <p>{entry.government.nota}</p>}
@@ -535,7 +538,7 @@ export function MapaEuropa({ seleccion, anioGlobal = null, onSelectTerritorio, o
             {entry.collective && <p>{entry.collective.nota}</p>}
             {entry.collective?.fuente && <a href={entry.collective.fuente.url} target="_blank" rel="noreferrer">{entry.collective.fuente.title}</a>}
             {entry.government && <small>{entry.government.titulo} · {entry.government.condicion} · {entry.government.desde}–{entry.government.hasta}</small>}
-            {entry.claim?.sources?.length ? entry.claim.sources.map(source => <a key={source.url} href={source.url} target="_blank" rel="noreferrer">{source.title}{source.locator ? ` · ${source.locator}` : ''}</a>) : entry.relationship?.sources.length || entry.regionalEvidence ? null : <small className="mapa-region-unsourced">Sin fuente específica para esta afirmación.</small>}
+            {entry.claim?.sources?.length ? entry.claim.sources.map(source => <a key={source.url} href={source.url} target="_blank" rel="noreferrer">{source.title}{source.locator ? ` · ${source.locator}` : ''}</a>) : entry.relationship?.sources.length || entry.crownRelation || entry.regionalEvidence ? null : <small className="mapa-region-unsourced">Sin fuente específica para esta afirmación.</small>}
           </li>)}</ul>}
           {inspectedRegion?.claims.length > 0 && <details className="mapa-title-claims"><summary>Títulos y pretensiones · sin color de dominio</summary><ul>{inspectedRegion.claims.map((entry, i) => <li key={`${entry.person.id}-${entry.territory}-${i}`}>
             <span className="mapa-authority-badge mapa-authority-titular">{AUTHORITY_LABELS[entry.kind]}</span>

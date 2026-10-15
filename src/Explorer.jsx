@@ -1,5 +1,5 @@
+import {atlasFilterOptions,personMatchesTerritory} from './data/atlasFilters.js';
 import {buildTimelineRows} from './explorer/timelineLayout.js';
-import {territoriosDe} from './data/personAccessors.js';
 import {translatedEquivalent} from './english/routes.js';
 import { familyIndex, familyIds, atlasIdsFromLocation, writeAtlasIds, isolatedPopes, groupIsolatedPopes } from './explorer/progressiveAtlas.js';
 import { safeStoryReturn, storyPeopleIds, saveStoryProgress } from './stories/storyModel.js';
@@ -8,9 +8,6 @@ import EnglishLanding from "./public/EnglishLanding.jsx";
 import "./App.css";
 import React, { useState, useRef, useEffect, useLayoutEffect, useCallback, useMemo } from "react";
 import {
-  TERRITORIOS_SUB,
-  TERRITORIOS_DESTACADOS,
-  territorioCoincideConFiltro,
   reinadosActivos, listaReinados,
 } from "./Territorios";
 import { PERSONAS } from "./personas.jsx";
@@ -18,7 +15,7 @@ import { EVENTOS_HISTORICOS, HISTORIAS } from "./historiaData.jsx";
 import { DEFAULT_LOCALE, SITE, t } from "./i18n.jsx";
 import { textoBusquedaPersona } from "./utils/personPresentation.js";
 import {
-  OTRAS_DINASTIAS, SIN_FECHA, GRUPOS_DINASTICOS, DINASTIAS_DESTACADAS, getCategoriaDinastía,
+  OTRAS_DINASTIAS, SIN_FECHA, GRUPOS_DINASTICOS, getCategoriaDinastía,
   normalizaTexto, slugPublico, localeDesdePath, rutaEntidadLocalizada, slugPersonaPorLocale,
   rutaPublicaDesdePath, personaIdDesdeRuta, valorPorSlug, setMetaContent, ensureCanonical,
   setHreflangAlternates, CATEGORIAS_TITULO, FILTROS_RELACION, BY_ID, HIJOS_POR_ID, ACCENTS,
@@ -104,6 +101,7 @@ export default function Explorer({ initialPanel = null, treeBase: TREE_BASE, loa
     return localeDesdePath(window.location.pathname);
   });
   const [query, setQuery] = useState(savedSession?.query ?? "");
+  const [territorialFilterMode,setTerritorialFilterMode]=useState(savedSession?.territorialFilterMode||'associated');
   const [territorios, setTerritorios] = useState(savedSession?.territorios ?? []);
   const [dinastias, setDinastias] = useState(savedSession?.dinastias ?? []);
   const [dinastiasExpandidas, setDinastiasExpandidas] = useState(savedSession?.dinastiasExpandidas ?? []);
@@ -441,86 +439,13 @@ export default function Explorer({ initialPanel = null, treeBase: TREE_BASE, loa
   }, [infoProyecto]);
 
   const opciones = useMemo(() => {
-    const alfabetico = (a, b) => String(a).localeCompare(String(b), "es", { sensitivity: "base" });
-    const uniq = (arr) => [...new Set(arr)];
-
-    const dinastiasEnDatos = new Set(PERSONAS.map((persona) => persona.dinastia).filter(Boolean));
-    const conteoDinastias = PERSONAS.reduce((acc, persona) => {
-      acc[persona.dinastia] = (acc[persona.dinastia] || 0) + 1;
-      return acc;
-    }, {});
-
-    const principalesConfiguradas = DINASTIAS_DESTACADAS.filter((principal) => {
-      const miembros = GRUPOS_DINASTICOS[principal] || [principal];
-      return miembros.some((dinastia) => dinastiasEnDatos.has(dinastia));
-    });
-
-    const cubiertasPorGrupos = new Set(
-      principalesConfiguradas.flatMap((principal) => GRUPOS_DINASTICOS[principal] || [principal])
-    );
-
-    const casasFrecuentes = [...dinastiasEnDatos]
-      .filter((dinastia) => !["Familias menores", "Desconocida"].includes(dinastia) && !cubiertasPorGrupos.has(dinastia) && (conteoDinastias[dinastia] || 0) >= 5)
-      .sort(alfabetico);
-
-    const dinastiasPrincipales = uniq([...principalesConfiguradas, ...casasFrecuentes]);
-    const representadas = new Set(
-      dinastiasPrincipales.flatMap((principal) => GRUPOS_DINASTICOS[principal] || [principal])
-    );
-    const otrasDinastias = [...dinastiasEnDatos].filter((dinastia) => !representadas.has(dinastia)).sort(alfabetico);
-
-    const ramasPorPrincipal = Object.fromEntries(
-      dinastiasPrincipales.map((principal) => [
-        principal,
-        (GRUPOS_DINASTICOS[principal] || [])
-          .filter((rama) => rama !== principal && dinastiasEnDatos.has(rama))
-          .sort(alfabetico),
-      ])
-    );
-    ramasPorPrincipal[OTRAS_DINASTIAS] = otrasDinastias;
-
-    const territoriosEnDatos = uniq(PERSONAS.flatMap((persona) => territoriosDe(persona))).sort(alfabetico);
-    const territorioTieneDatos = (principal) => {
-      const pendientes = [principal];
-      const visitados = new Set();
-      while (pendientes.length) {
-        const actual = pendientes.shift();
-        if (visitados.has(actual)) continue;
-        visitados.add(actual);
-        if (territoriosEnDatos.includes(actual)) return true;
-        (TERRITORIOS_SUB[actual] || []).forEach((hijo) => pendientes.push(hijo));
-      }
-      return false;
-    };
-    const territoriosPadreOrdenados = TERRITORIOS_DESTACADOS.filter(territorioTieneDatos);
-    const todosLosSubterritorios = new Set(Object.values(TERRITORIOS_SUB).flat());
-    const territoriosPadreAdicionales = Object.keys(TERRITORIOS_SUB)
-      .filter((principal) => !territoriosPadreOrdenados.includes(principal) && !todosLosSubterritorios.has(principal) && territorioTieneDatos(principal))
-      .sort(alfabetico);
-    const territoriosIndependientes = territoriosEnDatos
-      .filter((territorio) => !todosLosSubterritorios.has(territorio) && !territoriosPadreOrdenados.includes(territorio))
-      .sort(alfabetico);
-    const territoriosPrincipales = uniq([
-      ...territoriosPadreOrdenados,
-      ...territoriosPadreAdicionales,
-      ...territoriosIndependientes,
-    ]);
-    const subsPorTerritorio = Object.fromEntries(
-      Object.entries(TERRITORIOS_SUB).map(([principal, hijos]) => [
-        principal,
-        hijos.filter((hijo) => territorioTieneDatos(hijo)).sort(alfabetico),
-      ])
-    );
-
+    const filterHierarchy=atlasFilterOptions(PERSONAS);
+    const uniq=arr=>[...new Set(arr)];
     const siglosDisponibles = uniq(PERSONAS.flatMap(siglosDePersona)).sort((a, b) => a - b);
     const hayPersonasSinFecha = PERSONAS.some(fechasIncompletas);
 
     return {
-      territorios: territoriosPrincipales,
-      subsPorTerritorio,
-      dinastias: [...dinastiasPrincipales, ...(otrasDinastias.length ? [OTRAS_DINASTIAS] : [])],
-      ramasPorPrincipal,
-      otrasDinastias: new Set(otrasDinastias),
+      ...filterHierarchy,
       titulos: CATEGORIAS_TITULO.filter((categoria) => PERSONAS.some((persona) => categoria.test(normalizaTexto(persona.titulo)))),
       siglos: siglosDisponibles,
       hayPersonasSinFecha,
@@ -779,9 +704,7 @@ export default function Explorer({ initialPanel = null, treeBase: TREE_BASE, loa
     if (soloFavoritos && !favoritosSet.has(persona.id)) return false;
 
     if (territorios.length) {
-      const coincideTerritorio = territoriosDe(persona).some((territorio) =>
-        territorios.some((filtro) => territorioCoincideConFiltro(territorio, filtro))
-      );
+      const coincideTerritorio = territorios.some(filtro=>personMatchesTerritory(persona,filtro,anioGlobal,territorialFilterMode==='government'));
       if (!coincideTerritorio) return false;
     }
 
@@ -813,7 +736,7 @@ export default function Explorer({ initialPanel = null, treeBase: TREE_BASE, loa
 
   const documentedPeopleSet = useMemo(() => soloDocumentados
     ? new Set(PERSONAS.filter(hasDocumentedClaim).map(person => person.id)) : null, [soloDocumentados]);
-  const visiblePeople = useMemo(() => PERSONAS.filter(matches), [atlasSet, connectionSet, hiddenByCollapse, focoSet, soloFavoritos, favoritosSet, soloDocumentados, documentedPeopleSet, territorios, dinastias, titulos, siglos, relaciones, opciones.otrasDinastias]);
+  const visiblePeople = useMemo(() => PERSONAS.filter(matches), [atlasSet, connectionSet, hiddenByCollapse, focoSet, soloFavoritos, favoritosSet, soloDocumentados, documentedPeopleSet, territorios, dinastias, titulos, siglos, relaciones, opciones.otrasDinastias,anioGlobal,territorialFilterMode]);
   const timelinePeople=atlasScene==='europa'?PERSONAS:visiblePeople;
   const timelineRows = useMemo(()=>timelineMode === 'eventos' ? [] : buildTimelineRows(timelinePeople,timelinePxPerYear),[timelinePeople,timelinePxPerYear,timelineMode]);
   const timelineVirtual = useVirtualRows(timelineRows, tlScrollRef, timelineListRef, mostrarCronologia);
@@ -876,7 +799,7 @@ export default function Explorer({ initialPanel = null, treeBase: TREE_BASE, loa
 
 
   useAtlasSession({
-    ...savedSession, ready, atlasIds, query, territorios, dinastias, titulos, siglos, relaciones, collapsedIds,
+    ...savedSession, ready, atlasIds, query, territorios, territorialFilterMode, dinastias, titulos, siglos, relaciones, collapsedIds,
     dinastiasExpandidas, territoriosExpandidos, selectedId: seleccion?.id || null,
     currentSearchIndex, zoom, mode, connectionIds, connectionCriterion, origen, destino, modoComparacion, focoId, focoAlcance,
     anioGlobal, atlasScene, vistasActivas, panelesVisibles, personHistory, timelineScaleIndex, timelineMode,
@@ -1166,6 +1089,7 @@ export default function Explorer({ initialPanel = null, treeBase: TREE_BASE, loa
         return;
       }
       const sceneParams=new URLSearchParams(window.location.search);
+      setTerritorialFilterMode(sceneParams.get('criterio')==='gobierno'?'government':'associated');
       const incomingScene=sceneParams.get('escena')==='europa'||sceneParams.get('panel')==='europa'?'europa':'atlas';
       setAtlasScene(incomingScene);
       const yearValue=sceneParams.get('anio');
@@ -1190,6 +1114,7 @@ export default function Explorer({ initialPanel = null, treeBase: TREE_BASE, loa
         setAtlasIds(anteriorHistoria.atlasIds ?? null);
         setQuery(anteriorHistoria.query);
         setTerritorios(anteriorHistoria.territorios);
+        setTerritorialFilterMode(anteriorHistoria.territorialFilterMode||'associated');
         setDinastias(anteriorHistoria.dinastias);
         setTitulos(anteriorHistoria.titulos);
         setSiglos(anteriorHistoria.siglos);
@@ -1334,7 +1259,7 @@ export default function Explorer({ initialPanel = null, treeBase: TREE_BASE, loa
     if (!historiaSnapshotRef.current) {
       const historiaAbiertaDesdeEnlace = Boolean(resolveStoryNavigation(window.location.pathname, window.location.search, HISTORIAS));
       historiaSnapshotRef.current = {
-        atlasIds, query, territorios, dinastias, titulos, siglos, relaciones, soloFavoritos, soloDocumentados, anioGlobal, atlasScene,
+        atlasIds, query, territorios, territorialFilterMode, dinastias, titulos, siglos, relaciones, soloFavoritos, soloDocumentados, anioGlobal, atlasScene,
         vistasActivas, seleccionId: seleccion?.id || null, timelineMode, eventoSeleccionadoId,
         mode, connectionIds, connectionCriterion, origen, destino, focoId, focoAlcance, collapsedIds, compareRouteIndex,
         rutaAnterior: typeof window !== "undefined"
@@ -1381,6 +1306,7 @@ export default function Explorer({ initialPanel = null, treeBase: TREE_BASE, loa
     setAtlasIds(anterior.atlasIds ?? null);
     setQuery(anterior.query);
     setTerritorios(anterior.territorios);
+    setTerritorialFilterMode(anterior.territorialFilterMode||'associated');
     setDinastias(anterior.dinastias);
     setTitulos(anterior.titulos);
     setSiglos(anterior.siglos);
@@ -1441,13 +1367,14 @@ export default function Explorer({ initialPanel = null, treeBase: TREE_BASE, loa
     url.searchParams.set("vista", vistaPrincipal);
     if (query.trim()) url.searchParams.set("q", query.trim());
     territorios.forEach((valor) => url.searchParams.append("territorio", valor));
+    if(territorialFilterMode==='government')url.searchParams.set('criterio','gobierno');
     dinastias.forEach((valor) => url.searchParams.append("dinastia", valor));
     titulos.forEach((valor) => url.searchParams.append("funcion", valor));
     siglos.forEach((valor) => url.searchParams.append("siglo", String(valor)));
     relaciones.forEach((valor) => url.searchParams.append("relacion", valor));
     if (soloDocumentados) url.searchParams.set("evidencia", "1");
     return url.toString();
-  }, [historiaActiva, historiaPasoIndex, storyReturn, focoSet, visibleIds, atlasIds, seleccion, mode, connectionIds, connectionCriterion, anioGlobal, vistaPrincipal, query, territorios, dinastias, titulos, siglos, relaciones, soloDocumentados]);
+  }, [historiaActiva, historiaPasoIndex, storyReturn, focoSet, visibleIds, atlasIds, seleccion, mode, connectionIds, connectionCriterion, anioGlobal, vistaPrincipal, query, territorios, dinastias, titulos, siglos, relaciones, soloDocumentados,territorialFilterMode]);
 
   const compartirPersona = useCallback(async () => {
     const enlace = construirEnlaceCompartido();
@@ -1526,6 +1453,7 @@ export default function Explorer({ initialPanel = null, treeBase: TREE_BASE, loa
 
     const q = params.get("q");
     if (q) setQuery(q);
+    setTerritorialFilterMode(params.get('criterio')==='gobierno'?'government':'associated');
     setTerritorios(params.getAll("territorio").filter((valor) => todosTerritorios.has(valor)));
     setDinastias(params.getAll("dinastia").filter((valor) => todasDinastias.has(valor)));
     setTitulos(params.getAll("funcion").filter((valor) => funcionesValidas.has(valor)));
@@ -1793,7 +1721,7 @@ export default function Explorer({ initialPanel = null, treeBase: TREE_BASE, loa
     atlasScene, changeAtlasScene, infoProyecto, setInfoProyecto, timelineScaleIndex, setTimelineScaleIndex, timelineMode, setTimelineMode, eventoSeleccionadoId, setEventoSeleccionadoId,
     favoritos, setFavoritos, favoritosOpen, setFavoritosOpen, soloFavoritos, setSoloFavoritos, soloDocumentados, setSoloDocumentados, historiaActivaId, setHistoriaActivaId,
     historiaPasoIndex, setHistoriaPasoIndex, compareMenuRef, focoMenuRef, favoritosMenuRef, historiaSnapshotRef, shareStatusTimerRef, urlStateLoadedRef,
-    historyPopRef, dragState, workspaceGridRef, workspaceMainRef, panelWidths, setPanelWidths, treeMapSplit, setTreeMapSplit, filterSectionsOpen, setFilterSectionsOpen,
+    territorialFilterMode,setTerritorialFilterMode,historyPopRef, dragState, workspaceGridRef, workspaceMainRef, panelWidths, setPanelWidths, treeMapSplit, setTreeMapSplit, filterSectionsOpen, setFilterSectionsOpen,
     bioSectionsOpen, setBioSectionsOpen, personHistory, modoTrabajo, setModoTrabajo,
     alternarSeccionFiltro, alternarSeccionBio, ajustarAnchoPanel, restablecerAnchoPanel, comenzarResizeLateral, comenzarResizeArbolMapa,
     gen, rows, graph, favoritosSet, timelinePeople, timelinePxPerYear, timelineTrackWidth,

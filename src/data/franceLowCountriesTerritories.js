@@ -608,7 +608,7 @@ export const FRANCE_LOW_COUNTRIES_TERRITORIES = Object.freeze({
     "clase": "gobierno",
     "naturaleza": "entidad",
     "componentes": [],
-    "nota": "República federal de siete provincias, gobernada por sus Estados y los Estados Generales. El estatúder es un cargo provincial, no el soberano hereditario de toda la República; los territorios de la Generalidad tienen régimen distinto.",
+    "nota": "República confederal de siete provincias, gobernada por sus Estados y los Estados Generales. El estatúder es un cargo provincial, no el soberano hereditario de toda la República; los territorios de la Generalidad tienen régimen distinto.",
     "desde": 1588,
     "hasta": 1795
   },

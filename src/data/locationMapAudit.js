@@ -59,7 +59,7 @@ export function auditLocationMap(personas, data, svgIds, {from = data.from, thro
         transitions.get(key).regions.push(id);
       }
       for (const entry of entries) {
-        if (!entry.person || entry.claim?.sources?.length) continue;
+        if (!entry.person || !entry.government || entry.claim?.sources?.length) continue;
         const key = `${entry.person.id}:${entry.territory}:${entry.government.desde}:${entry.government.hasta}`;
         if (!unsourced.has(key)) unsourced.set(key, {personId: entry.person.id, territory: entry.territory,
           from: entry.government.desde, through: entry.government.hasta, firstObserved: year, regions: new Set()});

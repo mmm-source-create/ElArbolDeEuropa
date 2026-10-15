@@ -13,9 +13,9 @@ export const COLLECTIVE_AUTHORITIES = Object.freeze([
   ...CHRONOLOGY_COLLECTIVE_AUTHORITIES,
   {
     territorio:'Provincias Unidas', desde:1588, hasta:1794,
-    nombre:'Estados Generales y Estados provinciales', cargo:'Gobierno federal y provincial',
+    nombre:'Estados Generales y Estados provinciales', cargo:'Gobierno confederal y provincial',
     condicion:'colectiva', certeza:'documentado',
-    nota:'República federal de siete provincias y territorios de la Generalidad. El cargo de estatúder no sustituye la soberanía de sus Estados ni convierte las provincias meridionales en su dominio.',
+    nota:'República confederal de siete provincias y territorios de la Generalidad. El cargo de estatúder no sustituye la soberanía de sus Estados ni convierte las provincias meridionales en su dominio.',
     fuente:{title:'Nationaal Archief · Resoluties Staten-Generaal',url:'https://www.nationaalarchief.nl/onderzoeken/zoekhulpen/resoluties-van-de-staten-generaal-1576-1796',locator:'República 1588–1795: gobierno de los Estados Generales y competencias de los Estados de las siete provincias.'},
   },
   {
@@ -113,9 +113,9 @@ export function inspectMapRegion(regionId, year, index, mapData = null) {
   const allEntries = (index.get(regionId) || []).map(entry => {
     const local = entry.mapScopes?.filter(scope => scope.ids.includes(regionId)) || [];
     if (!local.length) return entry;
-    const sources = [...(entry.relationship?.sources || []), ...local.flatMap(scope => scope.sources || [])];
+    const sources = [...(entry.relationship?.sources || []),...(entry.crownRelation?entry.mapSources||[]:[]), ...local.flatMap(scope => scope.sources || [])];
     return {...entry, mapSources: [...new Map(sources.map(source => [source.url, source])).values()],
-      mapNote: [...new Set([entry.relationship?.note, ...local.map(scope => scope.note)].filter(Boolean))].join(' ')};
+      mapNote: [...new Set([entry.relationship?.note,entry.crownRelation?.note, ...local.map(scope => scope.note)].filter(Boolean))].join(' ')};
   }).sort((a,b) =>
     Number(Boolean(b.claim?.sources.length)) - Number(Boolean(a.claim?.sources.length)) ||
     a.territory.localeCompare(b.territory, 'es'));

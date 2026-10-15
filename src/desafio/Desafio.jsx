@@ -1,5 +1,5 @@
 import {gobiernosDe, territoriosDe} from '../data/personAccessors.js';
-import React, { useCallback, useId, useMemo, useRef, useState } from "react";
+import React, { lazy,Suspense,useCallback, useId, useMemo, useRef, useState } from "react";
 import {
   ArrowLeft,
   CalendarDays,
@@ -35,6 +35,8 @@ import './desafio-interactions.css';
 import {successionBank, createChallenge, challengeUrl, readChallenge, readReview, reviewQuestions, updateReview, saveReview} from './learning.js';
 import {resumenCortoPersona} from '../utils/personPresentation.js';
 import "./desafio.css";
+
+const Dinastle=lazy(()=>import('./Dinastle.jsx'));
 
 const STORAGE_KEY = "arbol-europa-desafio-v2";
 const LEGACY_STORAGE_KEY = "arbol-europa-desafio-v1";
@@ -251,7 +253,7 @@ export default function Desafio({ personas = [] }) {
   const [review, setReview] = useState(() => readReview(storage(), byId, bank));
   const [reviewWarning, setReviewWarning] = useState('');
   const [lesson, setLesson] = useState(() => shared?.preguntas ? {questions:shared.preguntas, url:challengeUrl(bank,shared.seed)} : null);
-  const [modo, setModo] = useState(shared?.preguntas ? 'compartido' : null);
+  const [modo, setModo] = useState(shared?.preguntas ? 'compartido' : (typeof window!=='undefined'&&new URLSearchParams(window.location.search).get('juego')==='dinastle'?'dinastle':null));
   const [error, setError] = useState(shared?.error || "");
   const retratoInputRef = useRef(null);
 
@@ -722,6 +724,7 @@ export default function Desafio({ personas = [] }) {
   const volverAModos = () => {
     setModo(null);
     const url = new URL(window.location.href);
+    if(url.searchParams.has('juego')){url.searchParams.delete('juego');window.history.replaceState(null,'',url);}
     if(url.searchParams.has('reto')) { url.searchParams.delete('reto'); url.searchParams.delete('banco'); window.history.replaceState(null,'',url); }
     setError("");
     setCamino(null);
@@ -740,6 +743,7 @@ export default function Desafio({ personas = [] }) {
   // ---------------------------------------------------------------------------
   // MENU
   // ---------------------------------------------------------------------------
+  if(modo==='dinastle')return <Suspense fallback={<p role="status">Preparando Dinastle…</p>}><Dinastle people={personas} onBack={volverAModos}/></Suspense>;
   if (lesson && ['repaso','sucesiones','compartido'].includes(modo)) return <LearningSession key={modo} mode={modo} questions={lesson.questions} sharedUrl={lesson.url} warning={reviewWarning} byId={byId} onBack={volverAModos} onAtlas={abrirAtlas} onAnswer={(question,correct)=>remember(question,correct)}/>;
   if (!modo) {
     const precision = estadisticas.precisionPreguntas
@@ -759,6 +763,7 @@ export default function Desafio({ personas = [] }) {
 
         <SegmentedControl id={hubId} tabs label="Modos del desafío" options={HUB_TABS} value={hubTab} onChange={setHubTab}/>
         <div id={`${hubId}-panel-jugar`} role="tabpanel" aria-labelledby={`${hubId}-tab-jugar`} hidden={hubTab!=='jugar'} className="desafio-mode-grid desafio-mode-grid-v2">
+          <button type="button" className="desafio-mode-card is-daily" onClick={()=>{setModo('dinastle');const url=new URL(window.location.href);url.searchParams.set('juego','dinastle');window.history.replaceState(null,'',url);}}><span className="desafio-mode-icon"><Search size={21}/></span><em>Un personaje al día</em><strong>Dinastle</strong><span>8 intentos · pistas con cada propuesta</span><small>Casa, territorios, función, época y vínculos. Descubre al personaje de hoy o juega una partida libre.</small></button>
           <button type="button" className="desafio-mode-card is-path" onClick={iniciarCamino}>
             <span className="desafio-mode-icon"><Sparkles size={21} /></span>
             <em>Modo principal</em>

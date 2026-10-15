@@ -77,3 +77,5 @@ cierre de la serie V5.
 - [V5.13: Francia, Borgoña y Países Bajos](V5.13.md).
 
 - [V5.15 · Europa en este año y nueva línea temporal](V5.15.md).
+
+- [V5.16 · Dinastle, filtros y pertenencia política](V5.16.md).
