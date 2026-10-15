@@ -1,3 +1,6 @@
+import {isRepublicanOffice} from './atlasFilters.js';
+import {territorialIdentity,territorialLabel} from './territorialIdentity.js';
+import {ORANGE_NASSAU} from './mapColors.js';
 import {gobiernosDe} from './personAccessors.js';
 import {gobiernoEfectivo} from './territorios.js';
 import {agrupacionesPoliticasEnMapa, REINO_COLOR, REINO_COLOR_DEFAULT} from '../Territorios.jsx';
@@ -20,11 +23,14 @@ export function governmentGroupsAt(person, year) {
   const group = kind==='sovereign' || kind==='disputed'
    ? groups.find(g=>g.territorios.has(mandate.territorio)) : null;
   const imperial = ['Alemania','Sacro Imperio'].includes(mandate.territorio);
-  const id = group?.id || (imperial?'sacro-imperio':mandate.territorio);
+  const republican=isRepublicanOffice(person,mandate,year);
+  const identity=territorialIdentity(mandate.territorio);
+  const inner=year<1619&&mandate.territorio==='Austria'&&mandate.ambito?.includes('Austria Interior');
+  const id = inner?'austria-interior':republican?'provincias-unidas':group?.id || (imperial?'sacro-imperio':identity);
   const key = `${id}|${kind}|${mandate.soberano||''}`;
   if (!result.has(key)) result.set(key,{id,key,person,kind,
-   label:labels[id] || group?.nombre || (imperial?'Sacro Imperio (Alemania)':mandate.territorio),
-   color:group?.color || REINO_COLOR[mandate.territorio] || REINO_COLOR_DEFAULT,
+   label:inner?'Austria Interior':republican?'Provincias Unidas':labels[id] || group?.nombre || (imperial?'Sacro Imperio (Alemania)':identity==='Transilvania'?territorialLabel(identity,year):mandate.territorio),
+   color:inner?REINO_COLOR['Austria Interior']:republican?ORANGE_NASSAU:group?.color || REINO_COLOR[mandate.territorio] || REINO_COLOR_DEFAULT,
    note:group?.nota || '',source:group?.fuente || null,mandates:[]});
   result.get(key).mandates.push(mandate);
  }
@@ -49,9 +55,11 @@ export function governmentSummary(person, year=null) {
 
 export function groupedGovernmentIntervals(person) {
  const mandates=gobiernosDe(person).filter(g=>Number.isInteger(g.desde)&&Number.isInteger(g.hasta)&&gobiernoEfectivo(g));
- const cuts=[...new Set(mandates.flatMap(g=>[g.desde,g.hasta+1]))].sort((a,b)=>a-b), result=[];
+ const from=Math.min(...mandates.map(g=>g.desde)),through=Math.max(...mandates.map(g=>g.hasta));
+ const changes=[1230,1516,1526,1541,1549,1588,1619,1749,1765].filter(y=>from<y&&y<=through);
+ const cuts=[...new Set([...mandates.flatMap(g=>[g.desde,g.hasta+1]),...changes])].sort((a,b)=>a-b), result=[];
  for(let i=0;i<cuts.length-1;i++) for(const group of governmentGroupsAt(person,cuts[i])) {
-  const previous=result.findLast(g=>g.key===group.key&&g.through===cuts[i]-1);
+  const previous=result.findLast(g=>g.key===group.key&&g.label===group.label&&g.color===group.color&&g.through===cuts[i]-1);
   if(previous) previous.through=cuts[i+1]-1;
   else result.push({...group,from:cuts[i],through:cuts[i+1]-1});
  }

@@ -1,3 +1,6 @@
+import {frenchCrownRelation} from './frenchCrownRelations.js';
+import {ORANGE_NASSAU,FRENCH_CROWN_COLOR} from './mapColors.js';
+import {franceLowCountriesPoliticalKeys} from './franceLowCountriesRoutes.js';
 import {governmentGroupsAt} from './governmentPresentation.js';
 import {vidaEnAnio} from './europeYear.js';
 import {atlasPoliticalMosaicAt,atlasMosaicPalette} from '../../prototypes/euv-locations/atlas-mosaic.js';
@@ -16,8 +19,8 @@ export function governmentTableAt(people,year,collectives=[]) {
  }
  for(const collective of collectives.filter(c=>c.desde<=year&&year<=c.hasta)) {
   const row=[...rows.values()].find(r=>r.governments.some(g=>g.mandates.some(m=>m.territorio===collective.territorio)));
-  const key=row?.id||collective.territorio;
-  if(!rows.has(key))rows.set(key,{id:key,label:collective.territorio,color:REINO_COLOR[collective.territorio]||'#907085',governments:[]});
+  const key=row?.id||(collective.territorio==='Provincias Unidas'?'provincias-unidas':collective.territorio);
+  if(!rows.has(key))rows.set(key,{id:key,label:collective.territorio,color:collective.territorio==='Provincias Unidas'?ORANGE_NASSAU:REINO_COLOR[collective.territorio]||'#907085',governments:[]});
   (rows.get(key).collectives||= []).push(collective);
  }
  return [...rows.values()].sort((a,b)=>a.label.localeCompare(b.label,'es'));
@@ -72,16 +75,18 @@ export function europeMosaicAt(data,year,people) {
   const candidates=(layer.memberNames||[layer.name]).flatMap(n=>routes.get(n)||[]);
   const unique=[...new Map(candidates.map(g=>[g.id,g])).values()];
   const shared=unique.length===1?unique[0]:null;
+  const crownRelation=(layer.memberNames||[layer.name]).map(n=>frenchCrownRelation(n,year)).find(Boolean);
   const identity=territorialIdentity(layer.name);
+  const republic=(layer.memberNames||[layer.name]).some(n=>franceLowCountriesPoliticalKeys(n,year).includes('Provincias Unidas'));
   const baseColor=REINO_COLOR[identity] || layer.mosaicColor;
   return {...layer,mosaicColor:shared?.color || REINO_COLOR[identity] || layer.mosaicColor,
-   politicalLabel:shared?.label || layer.displayName || layer.name,candidates,baseColor};
+   crownRelation,republic,politicalLabel:shared?.label || layer.displayName || layer.name,candidates,baseColor};
  });
  const byLocation=new Map();
  for(const layer of layers)for(const id of layer.ids){
   if(!byLocation.has(id))byLocation.set(id,[]);
   const applicable=[...new Map(layer.candidates.filter(g=>g.ids.has(id)).map(g=>[g.id,g])).values()];
-  const color=applicable.length===1?applicable[0].color:layer.baseColor;
+  const color=layer.republic?ORANGE_NASSAU:layer.crownRelation?FRENCH_CROWN_COLOR:applicable.length===1?applicable[0].color:layer.baseColor;
   byLocation.get(id).push({...layer,mosaicColor:color,politicalLabel:applicable.length===1?applicable[0].label:layer.displayName||layer.name});
  }
  return {...mosaic,layers,byLocation};

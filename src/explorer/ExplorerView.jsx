@@ -1,3 +1,4 @@
+import {TERRITORIAL_FOLDER_LABELS} from '../data/atlasFilters.js';
 import AtlasTimeline from './AtlasTimeline.jsx';
 import {governmentSummary} from '../data/governmentPresentation.js';
 import './europe-panorama.css';
@@ -75,7 +76,7 @@ function TerritoryFilterNode({ name, options, selected, expanded, onToggleTerrit
   return (
     <div className={`dinastia-block territory-filter-node${depth ? ' is-nested' : ''}`}>
       <span className="dinastia-chip-row">
-        <Chip label={name} small={depth > 0} active={selected.includes(name)} color={color} onClick={() => onToggleTerritory(name)} />
+        <Chip label={TERRITORIAL_FOLDER_LABELS.has(name)?`${name} · región`:name} small={depth > 0} active={selected.includes(name)} color={color} onClick={() => onToggleTerritory(name)} />
         {hasChildren && <button type="button" className="dinastia-expand-btn"
           onClick={() => onToggleExpanded(name)} aria-expanded={isExpanded}
           aria-label={`${isExpanded ? 'Ocultar' : 'Mostrar'} territorios de ${name}`}>
@@ -89,6 +90,12 @@ function TerritoryFilterNode({ name, options, selected, expanded, onToggleTerrit
       </div>}
     </div>
   );
+}
+
+function DynastyFilterNode({name,options,selected,expanded,onToggle,onExpand,folder=false,path=[]}) {
+ if(path.includes(name))return null;
+ const children=options[name]||[],open=expanded.includes(name);
+ return <div className="dinastia-block"><span className="dinastia-chip-row"><Chip label={name} small={path.length>0} active={selected.includes(name)} color={ACCENTS[name]||'#71717A'} onClick={()=>onToggle(name)}/>{children.length>0&&<button type="button" className="dinastia-expand-btn" aria-expanded={open} aria-label={`${open?'Ocultar':'Mostrar'} ${folder?'casas':'ramas'} de ${name}`} onClick={()=>onExpand(name)}>{open?<ChevronDown size={11}/>:<ChevronRight size={11}/>}</button>}</span>{open&&<div className="territory-filter-children">{children.map(child=><DynastyFilterNode key={child} name={child} options={options} selected={selected} expanded={expanded} onToggle={onToggle} onExpand={onExpand} path={[...path,name]}/>)}</div>}</div>;
 }
 
 function BioSection({ title, open, onToggle, children }) {
@@ -178,7 +185,7 @@ export default function ExplorerView({ vm, loading = false, loadError = false, o
     atlasScene, changeAtlasScene, infoProyecto, setInfoProyecto, timelineScaleIndex, setTimelineScaleIndex, timelineMode, setTimelineMode, eventoSeleccionadoId, setEventoSeleccionadoId,
     favoritos, setFavoritos, favoritosOpen, setFavoritosOpen, soloFavoritos, setSoloFavoritos, soloDocumentados, setSoloDocumentados, historiaActivaId, setHistoriaActivaId,
     historiaPasoIndex, setHistoriaPasoIndex, compareMenuRef, focoMenuRef, favoritosMenuRef, historiaSnapshotRef, shareStatusTimerRef, urlStateLoadedRef,
-    historyPopRef, dragState, workspaceGridRef, workspaceMainRef, panelWidths, setPanelWidths, treeMapSplit, setTreeMapSplit, filterSectionsOpen, setFilterSectionsOpen,
+    territorialFilterMode,setTerritorialFilterMode,historyPopRef, dragState, workspaceGridRef, workspaceMainRef, panelWidths, setPanelWidths, treeMapSplit, setTreeMapSplit, filterSectionsOpen, setFilterSectionsOpen,
     bioSectionsOpen, setBioSectionsOpen, personHistory, modoTrabajo, setModoTrabajo,
     alternarSeccionFiltro, alternarSeccionBio, ajustarAnchoPanel, restablecerAnchoPanel, comenzarResizeLateral, comenzarResizeArbolMapa,
     gen, rows, graph, favoritosSet, timelinePxPerYear, timelineTrackWidth,
@@ -628,6 +635,8 @@ export default function ExplorerView({ vm, loading = false, loadError = false, o
                   onToggle={() => alternarSeccionFiltro("territorios")}
                   activeCount={territorios.length}
                 >
+                  <label className="atlas-filter-mode">Buscar por<select aria-label="Criterio del filtro territorial" value={territorialFilterMode} onChange={e=>setTerritorialFilterMode(e.target.value)}><option value="associated">Vinculación registrada</option><option value="government">Gobierno efectivo en el año</option></select></label>
+                  <p className="atlas-filter-explanation">Las carpetas de región reúnen fichas. La pertenencia política y el control se consultan por año en el mapa. {territorialFilterMode==='government'&&anioGlobal==null?'Sin año se incluyen todos los mandatos efectivos; elige uno para acotar.':''}</p>
                   <details className="territory-filter-method"><summary>Qué significa cada relación política</summary>
                     <p><strong>Territorio del Imperio:</strong> vínculo jurídico que cambió con el tiempo. Este grupo sirve para navegar fichas; no certifica la pertenencia de cada feudo en el año elegido.</p>
                     <p><strong>Círculo imperial:</strong> distrito de administración imperial. No todos los territorios del Imperio pertenecían a uno.</p>
@@ -648,38 +657,8 @@ export default function ExplorerView({ vm, loading = false, loadError = false, o
                   onToggle={() => alternarSeccionFiltro("dinastias")}
                   activeCount={dinastias.length}
                 >
-                  <div className="filter-group filter-group-dinastias">
-                    {opciones.dinastias.map((dinastia) => {
-                      const ramas = opciones.ramasPorPrincipal[dinastia] || [];
-                      const tieneRamas = ramas.length > 0;
-                      const expandida = dinastiasExpandidas.includes(dinastia);
-                      return (
-                        <div key={dinastia} className="dinastia-block">
-                          <span className="dinastia-chip-row">
-                            <Chip label={dinastia} active={dinastias.includes(dinastia)} color={ACCENTS[dinastia] || "#71717A"} onClick={() => toggle(setDinastias, dinastias, dinastia)} />
-                            {tieneRamas && (
-                              <button
-                                type="button"
-                                className="dinastia-expand-btn"
-                                onClick={() => toggle(setDinastiasExpandidas, dinastiasExpandidas, dinastia)}
-                                title={expandida ? "Ocultar ramas menores" : `Ver ramas menores de ${dinastia}`}
-                                aria-label={expandida ? `Ocultar ramas de ${dinastia}` : `Mostrar ramas de ${dinastia}`}
-                              >
-                                {expandida ? <ChevronDown size={11} /> : <ChevronRight size={11} />}
-                              </button>
-                            )}
-                          </span>
-                          {tieneRamas && expandida && (
-                            <div className="dinastia-ramas">
-                              {ramas.map((rama) => (
-                                <Chip key={rama} small label={rama} active={dinastias.includes(rama)} color={ACCENTS[rama] || ACCENTS[dinastia] || "#71717A"} onClick={() => toggle(setDinastias, dinastias, rama)} />
-                              ))}
-                            </div>
-                          )}
-                        </div>
-                      );
-                    })}
-                  </div>
+                  <p className="atlas-filter-explanation">Las casas y sus ramas expresan filiación dinástica. Las carpetas geográficas solo ayudan a explorar.</p>
+                  {[['Casas y ramas',opciones.dynastyFamilies],['Agrupaciones geográficas',opciones.dynastyFolders]].map(([title,names])=><div key={title}><h4 className="atlas-filter-heading">{title}</h4><div className="filter-group filter-group-dinastias">{names.map(name=><DynastyFilterNode key={name} name={name} options={opciones.ramasPorPrincipal} selected={dinastias} expanded={dinastiasExpandidas} onToggle={n=>toggle(setDinastias,dinastias,n)} onExpand={n=>toggle(setDinastiasExpandidas,dinastiasExpandidas,n)} folder={title==='Agrupaciones geográficas'}/>)}</div></div>)}
                 </FilterSection>
 
                 <FilterSection

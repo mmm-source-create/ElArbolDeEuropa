@@ -359,7 +359,7 @@ const MONARQUIA_HISPANICA = new Set([
   'Mallorca', 'Cerdeña', 'Nápoles', 'Trinacria', 'Milán', 'Navarra',
 ]);
 const ESTADOS_SABOYANOS = new Set(['Saboya', 'Piamonte', 'Cerdeña']);
-const TIERRAS_AUSTRIACAS = new Set(['Austria', 'Austria Interior', 'Tirol', 'Carintia', 'Carniola', 'Ducado de Estiria',
+const TIERRAS_AUSTRIACAS = new Set(['Austria', 'Austria Interior', 'Austria Anterior', 'Tirol', 'Carintia', 'Carniola', 'Ducado de Estiria',
   'Norte de Serbia habsbúrgico', 'Oltenia habsbúrgica', 'Banato de Temes', 'Reino de Galicia y Lodomeria']);
 const ADMINISTRACION_AUSTRO_BOHEMIA = new Set(['Austria', 'Austria Interior', 'Tirol', 'Carintia', 'Carniola', 'Ducado de Estiria', 'Bohemia', 'Moravia', 'Silesia']);
 
@@ -846,6 +846,8 @@ export function idsDeGobiernoEnAño(gobierno, año, personaId = '') {
 // mostrando como chip normal de primer nivel.
 export const TERRITORIOS_DESTACADOS = [
   "Francia",
+  "Austria",
+  "Provincias Unidas",
   "Inglaterra",
   "Escocia",
   "Irlanda",
@@ -872,7 +874,7 @@ export const TERRITORIOS_SUB = {
     "Albret", "Dreux", "Alençon", "Angulema", "Anjou", "Aquitania", "Artois", "Auxerre", "Auvernia",
     "Berry", "Borgoña", "Borbón", "Boulogne", "Bretaña", "Champaña",
     "Clermont", "Évreux", "Foix", "Armagnac", "Guisa", "La Marche", "Montpellier", "Nevers",
-    "Orleans", "Ponthieu", "Provenza", "Rethel", "Saint-Pol", "Valois", "Vendôme", "Bearne",
+    "Orleans", "Poitou", "Toulouse", "Maine", "Normandía", "Ducado de Auvernia", "Ponthieu", "Provenza", "Rethel", "Saint-Pol", "Valois", "Vendôme", "Bearne",
   ],
 
   Bretaña: ["Penthièvre"],
@@ -901,7 +903,9 @@ export const TERRITORIOS_SUB = {
     "Hannover", "Hesse", "Hohenberg", "Holstein", "Kyburg", "Meißen",
     "Montbéliard", "Namur", "Núremberg", "Pfirt", "Sajonia-Lauenburgo",
   ],
-  Austria: ["Austria Interior", "Carintia", "Habsburgo", "Tirol"],
+  Austria: ["Austria Interior", "Carintia", "Carniola", "Ducado de Estiria", "Austria Anterior", "Habsburgo", "Tirol"],
+  "Austria Interior": ["Ducado de Estiria", "Carintia", "Carniola"],
+  "Provincias Unidas": ["Estados de Holanda", "Holanda", "Zelanda", "Frisia", "Utrecht", "Overijssel", "Drente", "Groninga", "Güeldres", "Brabante de los Estados", "Flandes de los Estados"],
   Bohemia: ["Moravia", "Silesia"],
   Baviera: [],
 
@@ -921,14 +925,14 @@ export const TERRITORIOS_SUB = {
     "Liguria", "Perugia", "Roma", "Rímini", "Siena", "Squillace",
   ],
 
-  Hungría: ["Transilvania", "Croacia", "Sirmia"],
+  Hungría: ["Transilvania", "Transilvania habsbúrgica", "Banato de Temes", "Croacia", "Eslavonia", "Sirmia", "Condado de Temes", "Condado de Bihar"],
   "Polonia-Lituania": ["Lituania", "Polonia", "Silesia", "Curlandia", "Mazovia"],
   "Bizancio y Oriente latino": [
     "Bizancio", "Durazzo", "Imperio Latino", "Antioquía", "Armenia", "Chipre",
     "Edesa", "Epiro", "Ibelin", "Jerusalén", "Morea", "Nablus", "Torón",
     "Transjordania", "Trípoli", "Trebisonda",
   ],
-  Balcanes: ["Bulgaria", "Serbia", "Bosnia", "Herzegovina", "Valaquia", "Moldavia", "Croacia", "Sirmia", "Epiro"],
+  Balcanes: ["Imperio otomano", "Albania", "Dobruja", "Eslavonia", "Zeta", "Kosovo", "Prilep", "Bulgaria", "Serbia", "Bosnia", "Herzegovina", "Valaquia", "Moldavia", "Croacia", "Sirmia", "Epiro"],
   Escandinavia: ["Dinamarca", "Noruega", "Suecia", "Holstein", "Schleswig"],
   Rusia: ["Beloózero", "Moscú", "Pólotsk", "Rus de Kiev", "Vladímir"],
 };

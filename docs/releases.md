@@ -127,3 +127,7 @@ El destino de la Release debe ser el commit exacto validado; no una rama mutable
 
 [V5.15](V5.15.md) integra el panorama anual y renueva la línea temporal. Su PR y
 Release se preparan en borrador sobre la entrega validada.
+
+## V5.16 · Dinastle y pertenencia política
+
+[Detalle de la entrega](V5.16.md): siete puntos acordados, fuentes y alcance de la comparación de regresión. PR y Release se preparan en borrador sobre el commit validado.

@@ -23,6 +23,7 @@ export function sanitizeSession(value, nested = false) {
   out.currentSearchIndex = Math.floor(finite(value.currentSearchIndex, 0, -1, 3000));
   for (const [key, options, fallback] of [
     ['atlasScene', ['atlas','europa'], 'atlas'],
+    ['territorialFilterMode',['associated','government'],'associated'],
     ['mode', ['view','compare','foco','conexion'], 'view'], ['timelineMode', ['personas','eventos','ambos'], 'personas'],
     ['modoComparacion', ['corto','sangre','matrimonio','rutas'], 'corto'], ['focoAlcance', ['cercana','ascendencia','descendencia'], 'cercana'],
   ]) out[key] = options.includes(value[key]) ? value[key] : fallback;
@@ -55,7 +56,7 @@ export function sanitizeSession(value, nested = false) {
 export function shouldResumeAtlas(href) {
   const url = new URL(href, DEFAULT_SITE_URL);
   return /^\/es\/?$/.test(url.pathname) && url.searchParams.get('continuar') === '1'
-    && !['seleccion','familia','arbol','conectar','vinculos','persona','territorio','territorios','dinastia','dinastias','titulo','titulos','siglo','siglos','relaciones','vista','escena','q','anio','historia','evidencia'].some(k => url.searchParams.has(k));
+    && !['seleccion','familia','arbol','conectar','vinculos','persona','territorio','territorios','dinastia','dinastias','titulo','titulos','siglo','siglos','relaciones','vista','escena','q','anio','historia','evidencia','criterio'].some(k => url.searchParams.has(k));
 }
 
 export function readAtlasSession(storage) {

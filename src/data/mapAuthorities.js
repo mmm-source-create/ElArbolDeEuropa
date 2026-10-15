@@ -1,3 +1,4 @@
+import {frenchCrownEntries} from './frenchCrownRelations.js';
 import {tributaryEntriesFor} from './tributaryRelations.js';
 import {gobiernosDe, intervalosDisputadosDe} from './personAccessors.js';
 import {idsDeGobiernoEnAño, colorTerritorioEnMapa} from '../Territorios.jsx';
@@ -15,6 +16,7 @@ import {chronologyReferenceJurisdictionsFor} from './atlasChronologyRoutes.js';
 export const AUTHORITY_LABELS = Object.freeze({
   sovereign: 'Autoridad territorial', delegated: 'Gobierno delegado',
   titular: 'Título o pretensión sin control acreditado', disputed: 'Control disputado u ocupación',
+  apanage:'Apanage de la Corona francesa',feudal:'Feudo de la Corona francesa',
   collective: 'Autoridad colectiva', tributary: 'Estado tributario · gobierno propio',
   mixed: 'Celda con varias jurisdicciones',
   regional: 'Jurisdicción territorial documentada', physical: 'Sin autoridad política documentada',
@@ -84,7 +86,8 @@ export function mapAuthoritiesForPerson(person, year, mapData = null, {includeCl
     const regional = mapData ? reviewedAuthorityConditions(mapData,government.territorio,year,person.id) : new Map();
     const contested = ids.filter(id=>['control disputado','ocupación'].includes(regional.get(id)?.condition));
     const mixed = ids.filter(id => regional.get(id)?.condition === 'composición geográfica');
-    const baseEntry = {person, government, claim: claims.get(government) || null,
+    const innerColor=year<1619&&government.territorio==='Austria'&&government.ambito?.includes('Austria Interior');
+    const baseEntry = {...(innerColor?{color:colorTerritorioEnMapa(person,'Austria Interior',year)}:{}),person, government, claim: claims.get(government) || null,
       territory: government.territorio, kind: revolt ? 'disputed' : authorityKind(government, year),
       paint: effective, ids, mapScopes, mapSources: [...layerEvidence.flatMap(evidence => evidence.sources), ...(scope ? [scope.source, ...(scope.additionalSources || []), ...(scope.evidenceGroups || []).map(group => group.source)].filter(Boolean) : []), ...(extension ? [extension.source] : []), ...(revolt ? [REVOLT_SOURCE] : []), ...(border?.action === 'add' && !border.occupation ? [border.source] : []), ...(southernBorder?.action === 'add' ? [southernBorder.source] : [])],
       mapNote: revolt ? 'Soberanía y control disputados durante la revuelta. La trama no afirma posesión uniforme de toda la provincia.' : [...new Set([scope?.note, extension?.note, ...layerEvidence.map(evidence => evidence.note), border?.action === 'add' ? border.note : null, southernBorder?.action === 'add' ? southernBorder.note : null].filter(Boolean))].join(' ') || null};
@@ -139,7 +142,7 @@ export function mapAuthoritiesForPerson(person, year, mapData = null, {includeCl
         ids: occupation, claim: null});
     }
   }
-  return [...entries, ...(includeDependencies ? tributaryEntriesFor(person, year, mapData, entries) : [])].filter(entry => entry.ids.length);
+  return [...entries,...frenchCrownEntries(person,year,mapData,entries), ...(includeDependencies ? tributaryEntriesFor(person, year, mapData, entries) : [])].filter(entry => entry.ids.length);
 }
 
 // A lifetime view is a temporal union, not a projection of one reference year.

@@ -2,13 +2,14 @@
 
 Atlas histórico y genealógico para explorar personas, dinastías, territorios y sus conexiones familiares.
 
-- [Web](https://www.treeofeurope.eu/es/) · Versión del repositorio: **V5.15**
-- [Cambios de V5.15](docs/V5.15.md) · [Documentación e historial](docs/README.md) · [Próximos pasos cartográficos](docs/V4.8_PROPUESTAS.md) · [Seguridad](SECURITY.md)
+- [Web](https://www.treeofeurope.eu/es/) · Versión del repositorio: **V5.16**
+- [Cambios de V5.16](docs/V5.16.md) · [Documentación e historial](docs/README.md) · [Próximos pasos cartográficos](docs/V4.8_PROPUESTAS.md) · [Seguridad](SECURITY.md)
 
-V5.15 integra «Europa en este año» como una vista del Atlas: mapa político,
-cronología, protagonistas y gobiernos agrupados por entidad. Renueva la línea
-temporal con carriles regionales, vida y gobierno diferenciados, categorías,
-zoom y selección de año. Los títulos documentados se conservan desplegables.
+V5.16 incorpora Dinastle al Desafío: un personaje diario, ocho intentos y pistas
+calculadas con la base histórica. Ordena y diferencia los filtros de casas,
+ramas y regiones, y permite filtrar gobiernos por año. Los apanages franceses,
+las Provincias Unidas y los conjuntos austríacos conservan sus autoridades,
+identidades y títulos en mapas y listados.
 
 El mapa utiliza EU V Locations con superficies fechadas y fuentes consultables
 en el inspector. Distingue soberanía, gobierno delegado, titularidad y control
