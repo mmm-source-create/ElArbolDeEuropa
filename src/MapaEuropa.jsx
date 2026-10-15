@@ -22,6 +22,7 @@ import { pilotImperialFrameFor, pilotLocationContext, mapSourceReference } from 
 import { buildPoliticalMapIndex, inspectMapRegion } from "./data/politicalMapIndex.js";
 import { AUTHORITY_LABELS, mapAuthoritiesForPerson, mapAuthoritiesAcrossLife } from "./data/mapAuthorities.js";
 import { PERSONAS } from "./personas.jsx";
+import {europeMosaicAt} from './data/europePanorama.js';
 import {
   agrupacionesPoliticasEnMapa,
   colorTerritorioEnMapa,
@@ -83,7 +84,7 @@ function viewBoxString(box) {
 // El mapa solo reacciona al CLIC (a `seleccion`), no al hover. El movimiento
 // y el zoom alteran únicamente el viewBox del SVG: no interfieren con el
 // coloreado imperativo de los territorios.
-export function MapaEuropa({ seleccion, anioGlobal = null, onSelectTerritorio, onSelectPersona, initialViewport = null, onViewportChange }) {
+export function MapaEuropa({ seleccion, anioGlobal = null, onSelectTerritorio, onSelectPersona, initialViewport = null, onViewportChange, panorama = false }) {
   // EU V Locations is the Atlas map. The old Provinces SVG remains only as
   // the geometric source for the migration crosswalk.
   const containerRef = useRef(null);
@@ -103,6 +104,8 @@ export function MapaEuropa({ seleccion, anioGlobal = null, onSelectTerritorio, o
   const [mapAttempt, setMapAttempt] = useState(0);
   const [selectedRegionId, setSelectedRegionId] = useState(null);
   const [pilotData, setPilotData] = useState(null);
+  const mosaic = useMemo(()=>panorama && pilotData && Number.isInteger(anioGlobal)
+    ? europeMosaicAt(pilotData,anioGlobal,PERSONAS) : null,[panorama,pilotData,anioGlobal]);
   const controlLimits = mapControlLimits(viewBox, originalMapFrame, viewportRef.current, MAP_MIN_ZOOM);
   const mapAssetUrl = locationsSvgUrl;
   const politicalIndex = useMemo(() => selectedRegionId && Number.isInteger(anioGlobal)
@@ -271,7 +274,29 @@ export function MapaEuropa({ seleccion, anioGlobal = null, onSelectTerritorio, o
         });
       }
 
-      if (seleccion && Number.isInteger(anioGlobal)) {
+      if (panorama && mosaic) {
+        for(const [id,layers] of mosaic.byLocation) {
+          const target=buscarElemento(id);if(!target)continue;
+          const colors=[...new Set(layers.map(layer=>layer.mosaicColor))];
+          const scopes=layers.flatMap(layer=>(layer.scopes||[]).filter(scope=>scope.ids.includes(id)));
+          const disputed=scopes.some(s=>/disput|ocupaci/i.test(s.condition||''));
+          let fill=authorityFill(svg,colors[0],disputed?'disputed':'sovereign');
+          if(colors.length>1) {
+            const namespace='http://www.w3.org/2000/svg';
+            const patternId='europe-mosaic-'+colors.join('-').replace(/[^a-z0-9]/gi,'');
+            if(!svg.getElementById(patternId)) {
+              const pattern=document.createElementNS(namespace,'pattern');
+              pattern.setAttribute('id',patternId);pattern.setAttribute('patternUnits','userSpaceOnUse');
+              pattern.setAttribute('width','1.2');pattern.setAttribute('height','1.2');pattern.setAttribute('patternTransform','rotate(45)');
+              colors.forEach((color,i)=>{const rect=document.createElementNS(namespace,'rect');rect.setAttribute('x',String(i*1.2/colors.length));rect.setAttribute('width',String(1.2/colors.length+.005));rect.setAttribute('height','1.2');rect.setAttribute('fill',color);pattern.append(rect);});
+              svg.querySelector('defs')?.append(pattern);
+            }
+            fill=`url(#${patternId})`;
+          }
+          target.style.setProperty('fill',fill,'important');target.style.setProperty('stroke',colors[0],'important');
+          pintadosRef.current.add(id);
+        }
+      } else if (seleccion && Number.isInteger(anioGlobal)) {
         for (const entry of mapAuthoritiesForPerson(seleccion, anioGlobal, pilotData, {includeDependencies: showDependencies})) {
           if (!entry.paint) continue;
           const color = authorityColor(entry, colorTerritorioEnMapa(seleccion, entry.colorTerritory || entry.territory, anioGlobal));
@@ -311,7 +336,7 @@ export function MapaEuropa({ seleccion, anioGlobal = null, onSelectTerritorio, o
       console.error("[MapaEuropa] Error al renderizar:", error);
     }
     return () => { cancelled = true; controller.abort(); };
-  }, [seleccion, anioGlobal, mapReady, imperialReferenceActive, pilotData, showDependencies]);
+  }, [seleccion, anioGlobal, mapReady, imperialReferenceActive, pilotData, showDependencies,panorama,mosaic]);
 
   const updateViewBox = useCallback((producer) => {
     setViewBox((current) => {
@@ -454,7 +479,13 @@ export function MapaEuropa({ seleccion, anioGlobal = null, onSelectTerritorio, o
         <button type="button" className="nav-btn" disabled={!controlLimits.down} onClick={() => panBy(0, MAP_PAN_STEP)} title="Mover mapa hacia abajo" aria-label="Mover mapa hacia abajo"><ArrowDown size={13} /></button>
         <button type="button" className="nav-btn" disabled={!controlLimits.right} onClick={() => panBy(MAP_PAN_STEP, 0)} title="Mover mapa a la derecha" aria-label="Mover mapa a la derecha"><ArrowRight size={13} /></button>
       </div>
-      {seleccion && <details className="mapa-color-legend" inert={!mapReady || paintingLife}>
+      {panorama && <details className="mapa-color-legend" inert={!mapReady}>
+        <summary>Colores y fuentes</summary>
+        <p>Los conjuntos políticos comparten el color de sus mapas personales. Cada título conserva su identidad. Los tributarios mantienen su gobierno y su color; no se incorporan al dominio directo.</p>
+        <p>El rayado claro indica disputa u ocupación. Varios colores señalan atribuciones diferentes en una misma celda. Pulsa una región para consultar autoridades y fuentes.</p>
+        <p>{mosaic?.reviewedLayerCount||0} jurisdicciones revisadas · {mosaic?.approximateLayerCount||0} equivalencias aproximadas. El gris indica que falta una atribución para este año.</p>
+      </details>}
+      {!panorama && seleccion && <details className="mapa-color-legend" inert={!mapReady || paintingLife}>
         <summary>¿Por qué estos colores?</summary>
         <p><a href="/es/mapa-completo" target="_blank" rel="noopener noreferrer">Probar el mapa conjunto · 1200–1800</a></p>
         <div className="mapa-authority-key">

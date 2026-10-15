@@ -1,3 +1,4 @@
+import {governmentSummary} from '../data/governmentPresentation.js';
 import {territoriosDe} from '../data/personAccessors.js';
 import { SOURCE_GROUPS, SOURCE_METHOD } from "../content/sources.js";
 import React, { useState } from "react";
@@ -22,9 +23,10 @@ export function Chip({ label, active, onClick, color, small = false }) {
 
 export const PersonBox = React.memo(function PersonBox({
   p, cls, accent, style, setRef, onEnter, onLeave, onClick,
-  hasDescendants = false, descendantsCollapsed = false, onToggleDescendants, showDates = false,
+  hasDescendants = false, descendantsCollapsed = false, onToggleDescendants, showDates = false, year = null,
 }) {
-  const roleText = `${p.titulo} · ${territoriosDe(p).join(" · ")}`;
+  const groups=governmentSummary(p,year);
+  const roleText = `${p.titulo} · ${(groups.length ? groups : territoriosDe(p)).join(" · ")}`;
   const navigateCard = (event) => {
     const directions = { ArrowLeft: [-1, 0], ArrowRight: [1, 0], ArrowUp: [0, -1], ArrowDown: [0, 1] };
     const direction = directions[event.key];

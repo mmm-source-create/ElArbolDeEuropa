@@ -11,7 +11,7 @@ import {etapasCoronas,coronasEn,accesosDe,auditarCoronas,prepararUniones,agrupar
 import {europaEnAnio,vidaEnAnio} from '../src/data/europeYear.js';
 import CrownTimeline from '../src/components/CrownTimeline.jsx';
 import HistoricalUnions from '../src/components/HistoricalUnions.jsx';
-import {EuropeYearContent} from '../src/explorer/EuropeYearDialog.jsx';
+import GovernmentsTable from '../src/explorer/EuropeGovernments.jsx';
 import {resolverRuta} from '../src/routing.js';
 import {ESCANDINAVIA_V212} from '../src/content/personas/escandinavia-v212.js';
 import {EVENTOS_HISTORICOS} from '../src/historiaData.jsx';
@@ -62,7 +62,7 @@ test('Europa usa el año exacto, incluye los relevos anuales y excluye acontecim
  const ps=[{id:'A',nombre:'Anterior',gobiernos:[g('Suecia',1200,1210)]},{id:'B',nombre:'Siguiente',gobiernos:[g('Suecia',1210,1220)]}];
  const r=europaEnAnio({personas:ps,anio:1210,alcanceCompleto:false,eventos:[{id:'a',anio:1210,personas:['A']},{id:'b',anio:1210,personas:['X']},{id:'c',anio:1209,personas:['A']},{id:'d',desde:1209,hasta:1211,territorios:['Suecia']},{id:'e',anio:1210}]});
  assert.equal(r.gobiernos.length,2);assert.deepEqual(r.eventos.map(e=>e.id),['a','d']);
- const html=renderToStaticMarkup(React.createElement(EuropeYearContent,{resultado:r}));assert.match(html,/relevo dentro del año/);
+ const html=renderToStaticMarkup(React.createElement(GovernmentsTable,{people:ps,year:1210}));assert.match(html,/relevo dentro del año/);
 });
 test('Kalmar conserva la autoridad de Margarita y la ruptura del gobierno sueco de Erik',()=>{
  const r=context([by.ERICOPOMERANIA,by.MARGARITA1NORD],1397);
