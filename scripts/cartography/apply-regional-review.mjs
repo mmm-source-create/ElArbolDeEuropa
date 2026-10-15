@@ -3,7 +3,8 @@
 // to fill an earlier gap. Each phase retains its own dates and source passages.
 export function applyRegionalReview(data, review, key, corridor) {
   const scope = review.scope;
-  if (review.schema !== 1 || scope.from !== 1200 || scope.through !== 1800
+  if (review.schema !== 1 || !Number.isInteger(scope.from) || !Number.isInteger(scope.through)
+      || scope.from < data.from || scope.through > data.through || scope.from > scope.through
       || new Set(scope.ids).size !== scope.ids.length) throw new Error('Invalid regional scope');
   const names = new Set();
   const cells = new Set(scope.ids);

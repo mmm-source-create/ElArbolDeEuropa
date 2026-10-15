@@ -7,7 +7,10 @@ import {atlasMosaicPalette, atlasPoliticalMosaicAt} from '../../prototypes/euv-l
 import {STATIC_FOLDERS} from '../../src/public/staticData.js';
 import {routesFromSitemap} from '../lib/ssg-utils.mjs';
 
-const sorted = values => [...values].sort((a, b) => canonicalJson(a) < canonicalJson(b) ? -1 : canonicalJson(a) > canonicalJson(b) ? 1 : 0);
+// Compute each canonical key once; comparing researched sources repeatedly
+// made the enlarged annual map audit spend most of its time serializing them.
+const sorted = values => values.map(value=>({value,key:canonicalJson(value)}))
+  .sort((a,b)=>a.key<b.key?-1:a.key>b.key?1:0).map(entry=>entry.value);
 const unique = values => [...new Set(values.filter(Boolean))].sort();
 
 // Test projection only. Production continues to read its existing source model.

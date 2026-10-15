@@ -58,10 +58,6 @@ export function mapAuthoritiesForPerson(person, year, mapData = null, {includeCl
       ids=[...new Set(reviewedMapLayers(mapData).filter(layer=>names.includes(layer.name))
         .flatMap(layer=>[...(layer.versions || [])].reverse().find(v=>v.from<=year&&v.ids.length)?.ids || []))];
     }
-    if (mapData && government.territorio === 'Austria' && government.ambito?.includes('Austria Interior')) {
-      ids = [...pilotLocationsFor(mapData, 'Austria Interior', year, person.id),
-        ...(year >= 1619 ? pilotLocationsFor(mapData, 'Austria', year, person.id) : [])];
-    }
     const scope = mapData && authorityMapScope(person.id, government.territorio, year);
     const datedLayers = mapData ? pilotJurisdictionsFor(government.territorio, year, person.id)
       .map(name => reviewedMapLayers(mapData).find(layer => layer.name === name))

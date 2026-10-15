@@ -1,3 +1,4 @@
+import {MAP_FROM,MAP_THROUGH} from '../data/mapCoverage.js';
 import GovernmentsTable from './EuropeGovernments.jsx';
 import {EVENT_CATEGORIES} from './timelineLayout.js';
 import React,{useMemo,useState} from 'react';
@@ -22,12 +23,12 @@ export default function EuropeYearView({year,onSelect,onEvent,onYearChange,timel
  const categories=[...new Set(result.eventos.map(e=>e.categoria||'otros'))];
  const currentCategory=categories.includes(eventCategory)?eventCategory:'all';
  const events=result.eventos.filter(e=>currentCategory==='all'||e.categoria===currentCategory).toSorted((a,b)=>(a.desde??a.anio)-(b.desde??b.anio)||a.titulo.localeCompare(b.titulo,'es'));
- const validMap=year>=1200&&year<=1800;
+ const validMap=year>=MAP_FROM&&year<=MAP_THROUGH;
  return <main className="europe-panorama" aria-labelledby="europe-panorama-title">
   <header className="europe-heading"><div><span>Una mirada al continente</span><h1 id="europe-panorama-title">Europa en <em>{year}</em></h1><p>Territorios, acontecimientos y personas en un mismo momento.</p></div><a href="#europe-governments-title">Ver gobernantes ↓</a></header>
   <div className="europe-overview">
    <section className="europe-map" aria-label={`Mapa político de Europa en ${year}`}>
-    {validMap?<MapaEuropa panorama anioGlobal={year} onSelectPersona={onSelect}/>:<div className="europe-map-unavailable"><h2>Mapa disponible de 1200 a 1800</h2><p>La cronología y las fichas siguen disponibles para {year}.</p><button type="button" onClick={()=>onYearChange(1500)}>Ver Europa en 1500</button></div>}
+    {validMap?<MapaEuropa panorama anioGlobal={year} onSelectPersona={onSelect}/>:<div className="europe-map-unavailable"><h2>Mapa disponible de {MAP_FROM} a {MAP_THROUGH}</h2><p>La cronología y las fichas siguen disponibles para {year}.</p><button type="button" onClick={()=>onYearChange(1500)}>Ver Europa en 1500</button></div>}
    </section>
    <section className="europe-events" aria-labelledby="europe-events-title"><div className="europe-section-heading"><div><span>La cronología del año</span><h2 id="europe-events-title">Qué ocurre en {year}</h2></div><b>{result.eventos.length}</b></div>
     <label className="europe-category">Tipo de acontecimiento<select value={currentCategory} onChange={e=>setEventCategory(e.target.value)}><option value="all">Todos</option>{categories.map(c=><option key={c} value={c}>{EVENT_CATEGORIES[c]?.[0]||c}</option>)}</select></label>

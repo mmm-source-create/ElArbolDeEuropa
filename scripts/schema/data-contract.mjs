@@ -64,7 +64,7 @@ export const MAP_LAYER_SCHEMA = object({
   limitedCorePeriods: optional(array(mapPeriod)), periods: optional(array(mapPeriod)),
   supersedes: optional(array(text)), borderlineIds: optional(array(text)),
   temporalExtensions: optional(array(extension)),
-  authorityCondition: optional(enumeration(['control disputado', 'ocupación', 'gobierno delegado', 'autonomía tributaria', 'composición geográfica', 'sin poblamiento documentado'])),
+  authorityCondition: optional(enumeration(['control disputado', 'ocupación', 'gobierno delegado', 'autonomía tributaria', 'composición geográfica', 'sin poblamiento documentado', 'autoridad regional'])),
 });
 
 const isObject = value => value !== null && typeof value === 'object' && !Array.isArray(value);

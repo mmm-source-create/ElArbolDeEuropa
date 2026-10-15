@@ -1,0 +1,650 @@
+{
+  "schema": 1,
+  "reviewedAt": "2026-10-15",
+  "scope": {
+    "from": 1200,
+    "through": 1800,
+    "ids": [
+      "Chernihiv",
+      "Czaplinek",
+      "Dorogobuzh",
+      "Hadiach",
+      "Ichnia",
+      "Krasny",
+      "Kyiv",
+      "Lubny",
+      "Nizhyn",
+      "Novhorod_Siverskyi",
+      "Oster",
+      "Pereiaslav",
+      "Poltava",
+      "Roslavl",
+      "Smolensk",
+      "Sosnytsia",
+      "Yelnya"
+    ]
+  },
+  "sources": {
+    "smolensk": {
+      "title": "VLE · Principado de Smolensk",
+      "url": "https://www.vle.lt/straipsnis/smolensko-kunigaikstyste/",
+      "locator": "Lituania desde 1404; Rusia 1514–1611; recuperación de la Mancomunidad y captura rusa de 1654, reconocida en Andrusovo 1667."
+    },
+    "chernihiv": {
+      "title": "Canadian Institute of Ukrainian Studies · Chernihiv region",
+      "url": "https://www.encyclopediaofukraine.com/display.asp?linkpath=pages5CC5CH5CChernihivregion.htm",
+      "locator": "Deulino 1618 transfiere la región a la Corona; desde 1648 forma parte del Hetmanato, conservando regimientos y administración propia."
+    },
+    "hetman": {
+      "title": "Canadian Institute of Ukrainian Studies · Hetman state",
+      "url": "https://www.encyclopediaofukraine.com/display.asp?linkpath=pages%5CH%5CE%5CHetmanstate.htm",
+      "locator": "Autonomía cosaca y subordinación creciente a Rusia; abolición del cargo de hetman en 1764. La subordinación no equivale a dominio provincial ruso uniforme desde 1654."
+    },
+    "andrusovo": {
+      "title": "ZPE · Cambios de frontera de la Mancomunidad en el XVII",
+      "url": "https://zpe.gov.pl/watek/LP59ZRXQZ2/3/a/zmiany-granic-rzeczypospolitej-w-xvii-wieku/D4VDRTBC9",
+      "locator": "Texto de las treguas de Andrusovo, 1667: Smolensk, tierras severianas y margen izquierda; Kyiv se retiene y su situación se confirma posteriormente."
+    },
+    "east": {
+      "title": "VLE · Evolución territorial de Lituania",
+      "url": "https://www.vle.lt/straipsnis/lietuvos-didzioji-kunigaikstyste/",
+      "locator": "Expansión de los siglos XIV–XV a Kyiv y Chernigov; Smolensk 1404. Los conjuntos regionales del SVG aproximan las comarcas del mapa histórico."
+    },
+    "drahim": {
+      "title": "Ayuntamiento de Czaplinek · Drahim",
+      "url": "https://www.czaplinek.pl/obiekt-katalogowy/ruiny-zamku-drahim-w-starym-drawsku",
+      "locator": "Starostía polaca hasta 1668, fecha de la ocupación de Brandeburgo; la prenda de 1657–1658 no se usa como fecha de control efectivo."
+    }
+  },
+  "assignments": [
+    {
+      "name": "Principado de Smolensk · 1200–1403 · frontera oriental 1",
+      "identity": "Principado de Smolensk",
+      "from": 1200,
+      "through": 1403,
+      "ids": [
+        "Dorogobuzh",
+        "Krasny",
+        "Roslavl",
+        "Smolensk",
+        "Yelnya"
+      ],
+      "governmentTerritories": [
+        "Principado de Smolensk"
+      ],
+      "sourceKeys": [
+        "east"
+      ],
+      "precision": "regional_reconstruction",
+      "limitedCore": true,
+      "note": "Región de Smolensk: principado, integración lituana, etapas moscovitas y recuperación temporal de la Mancomunidad. Límites comarcales aproximados; no se atribuye a un soberano por el nombre moderno de la localidad."
+    },
+    {
+      "name": "Lituania · 1404–1513 · frontera oriental 2",
+      "identity": "Lituania",
+      "from": 1404,
+      "through": 1513,
+      "ids": [
+        "Dorogobuzh",
+        "Krasny",
+        "Roslavl",
+        "Smolensk",
+        "Yelnya"
+      ],
+      "governmentTerritories": [
+        "Lituania"
+      ],
+      "sourceKeys": [
+        "smolensk"
+      ],
+      "precision": "regional_reconstruction",
+      "limitedCore": true,
+      "note": "Región de Smolensk: principado, integración lituana, etapas moscovitas y recuperación temporal de la Mancomunidad. Límites comarcales aproximados; no se atribuye a un soberano por el nombre moderno de la localidad."
+    },
+    {
+      "name": "Rusia · 1514–1610 · frontera oriental 3",
+      "identity": "Rusia",
+      "from": 1514,
+      "through": 1610,
+      "ids": [
+        "Dorogobuzh",
+        "Krasny",
+        "Roslavl",
+        "Smolensk",
+        "Yelnya"
+      ],
+      "governmentTerritories": [
+        "Rusia"
+      ],
+      "sourceKeys": [
+        "smolensk"
+      ],
+      "precision": "regional_reconstruction",
+      "limitedCore": true,
+      "note": "Región de Smolensk: principado, integración lituana, etapas moscovitas y recuperación temporal de la Mancomunidad. Límites comarcales aproximados; no se atribuye a un soberano por el nombre moderno de la localidad."
+    },
+    {
+      "name": "Lituania · 1611–1653 · frontera oriental 4",
+      "identity": "Lituania",
+      "from": 1611,
+      "through": 1653,
+      "ids": [
+        "Dorogobuzh",
+        "Krasny",
+        "Roslavl",
+        "Smolensk",
+        "Yelnya"
+      ],
+      "governmentTerritories": [
+        "Lituania"
+      ],
+      "sourceKeys": [
+        "smolensk"
+      ],
+      "precision": "regional_reconstruction",
+      "limitedCore": true,
+      "note": "Región de Smolensk: principado, integración lituana, etapas moscovitas y recuperación temporal de la Mancomunidad. Límites comarcales aproximados; no se atribuye a un soberano por el nombre moderno de la localidad."
+    },
+    {
+      "name": "Rusia · 1654–1666 · frontera oriental 5",
+      "identity": "Rusia",
+      "from": 1654,
+      "through": 1666,
+      "ids": [
+        "Dorogobuzh",
+        "Krasny",
+        "Roslavl",
+        "Smolensk",
+        "Yelnya"
+      ],
+      "governmentTerritories": [
+        "Rusia"
+      ],
+      "sourceKeys": [
+        "smolensk"
+      ],
+      "precision": "regional_reconstruction",
+      "limitedCore": true,
+      "note": "Región de Smolensk: principado, integración lituana, etapas moscovitas y recuperación temporal de la Mancomunidad. Límites comarcales aproximados; no se atribuye a un soberano por el nombre moderno de la localidad.",
+      "authorityCondition": "ocupación"
+    },
+    {
+      "name": "Rusia · 1667–1800 · frontera oriental 6",
+      "identity": "Rusia",
+      "from": 1667,
+      "through": 1800,
+      "ids": [
+        "Dorogobuzh",
+        "Krasny",
+        "Roslavl",
+        "Smolensk",
+        "Yelnya"
+      ],
+      "governmentTerritories": [
+        "Rusia"
+      ],
+      "sourceKeys": [
+        "andrusovo"
+      ],
+      "precision": "regional_reconstruction",
+      "limitedCore": true,
+      "note": "Región de Smolensk: principado, integración lituana, etapas moscovitas y recuperación temporal de la Mancomunidad. Límites comarcales aproximados; no se atribuye a un soberano por el nombre moderno de la localidad."
+    },
+    {
+      "name": "Principado de Chernigov · 1200–1355 · frontera oriental 7",
+      "identity": "Principado de Chernigov",
+      "from": 1200,
+      "through": 1355,
+      "ids": [
+        "Chernihiv",
+        "Ichnia",
+        "Nizhyn",
+        "Novhorod_Siverskyi",
+        "Sosnytsia"
+      ],
+      "governmentTerritories": [
+        "Principado de Chernigov"
+      ],
+      "sourceKeys": [
+        "east"
+      ],
+      "precision": "regional_reconstruction",
+      "limitedCore": true,
+      "note": "Chernigov-Severia conserva su trayectoria propia; la autonomía cosaca se distingue del dominio directo de la Corona y del gobierno ruso posterior. Límites comarcales aproximados; no se atribuye a un soberano por el nombre moderno de la localidad."
+    },
+    {
+      "name": "Lituania · 1356–1502 · frontera oriental 8",
+      "identity": "Lituania",
+      "from": 1356,
+      "through": 1502,
+      "ids": [
+        "Chernihiv",
+        "Ichnia",
+        "Nizhyn",
+        "Novhorod_Siverskyi",
+        "Sosnytsia"
+      ],
+      "governmentTerritories": [
+        "Lituania"
+      ],
+      "sourceKeys": [
+        "east"
+      ],
+      "precision": "regional_reconstruction",
+      "limitedCore": true,
+      "note": "Chernigov-Severia conserva su trayectoria propia; la autonomía cosaca se distingue del dominio directo de la Corona y del gobierno ruso posterior. Límites comarcales aproximados; no se atribuye a un soberano por el nombre moderno de la localidad."
+    },
+    {
+      "name": "Rusia · 1503–1617 · frontera oriental 9",
+      "identity": "Rusia",
+      "from": 1503,
+      "through": 1617,
+      "ids": [
+        "Chernihiv",
+        "Ichnia",
+        "Nizhyn",
+        "Novhorod_Siverskyi",
+        "Sosnytsia"
+      ],
+      "governmentTerritories": [
+        "Rusia"
+      ],
+      "sourceKeys": [
+        "chernihiv"
+      ],
+      "precision": "regional_reconstruction",
+      "limitedCore": true,
+      "note": "Chernigov-Severia conserva su trayectoria propia; la autonomía cosaca se distingue del dominio directo de la Corona y del gobierno ruso posterior. Límites comarcales aproximados; no se atribuye a un soberano por el nombre moderno de la localidad."
+    },
+    {
+      "name": "Polonia · 1618–1647 · frontera oriental 10",
+      "identity": "Polonia",
+      "from": 1618,
+      "through": 1647,
+      "ids": [
+        "Chernihiv",
+        "Ichnia",
+        "Nizhyn",
+        "Novhorod_Siverskyi",
+        "Sosnytsia"
+      ],
+      "governmentTerritories": [
+        "Polonia"
+      ],
+      "sourceKeys": [
+        "chernihiv"
+      ],
+      "precision": "regional_reconstruction",
+      "limitedCore": true,
+      "note": "Chernigov-Severia conserva su trayectoria propia; la autonomía cosaca se distingue del dominio directo de la Corona y del gobierno ruso posterior. Límites comarcales aproximados; no se atribuye a un soberano por el nombre moderno de la localidad."
+    },
+    {
+      "name": "Hetmanato cosaco · 1648–1653 · frontera oriental 11",
+      "identity": "Hetmanato cosaco",
+      "from": 1648,
+      "through": 1653,
+      "ids": [
+        "Chernihiv",
+        "Ichnia",
+        "Nizhyn",
+        "Novhorod_Siverskyi",
+        "Sosnytsia"
+      ],
+      "governmentTerritories": [
+        "Hetmanato cosaco"
+      ],
+      "sourceKeys": [
+        "hetman"
+      ],
+      "precision": "regional_reconstruction",
+      "limitedCore": true,
+      "note": "Chernigov-Severia conserva su trayectoria propia; la autonomía cosaca se distingue del dominio directo de la Corona y del gobierno ruso posterior. Límites comarcales aproximados; no se atribuye a un soberano por el nombre moderno de la localidad."
+    },
+    {
+      "name": "Rusia · 1764–1800 · frontera oriental 12",
+      "identity": "Rusia",
+      "from": 1764,
+      "through": 1800,
+      "ids": [
+        "Chernihiv",
+        "Ichnia",
+        "Nizhyn",
+        "Novhorod_Siverskyi",
+        "Sosnytsia"
+      ],
+      "governmentTerritories": [
+        "Rusia"
+      ],
+      "sourceKeys": [
+        "hetman"
+      ],
+      "precision": "regional_reconstruction",
+      "limitedCore": true,
+      "note": "Chernigov-Severia conserva su trayectoria propia; la autonomía cosaca se distingue del dominio directo de la Corona y del gobierno ruso posterior. Límites comarcales aproximados; no se atribuye a un soberano por el nombre moderno de la localidad."
+    },
+    {
+      "name": "Principado de Kyiv · 1200–1361 · frontera oriental 13",
+      "identity": "Principado de Kyiv",
+      "from": 1200,
+      "through": 1361,
+      "ids": [
+        "Hadiach",
+        "Lubny",
+        "Oster",
+        "Pereiaslav",
+        "Poltava"
+      ],
+      "governmentTerritories": [
+        "Principado de Kyiv"
+      ],
+      "sourceKeys": [
+        "east"
+      ],
+      "precision": "regional_reconstruction",
+      "limitedCore": true,
+      "note": "Margen izquierda del Dniéper: se conserva el Hetmanato antes de la abolición de su gobierno autónomo. Límites comarcales aproximados; no se atribuye a un soberano por el nombre moderno de la localidad."
+    },
+    {
+      "name": "Lituania · 1362–1568 · frontera oriental 14",
+      "identity": "Lituania",
+      "from": 1362,
+      "through": 1568,
+      "ids": [
+        "Hadiach",
+        "Lubny",
+        "Oster",
+        "Pereiaslav",
+        "Poltava"
+      ],
+      "governmentTerritories": [
+        "Lituania"
+      ],
+      "sourceKeys": [
+        "east"
+      ],
+      "precision": "regional_reconstruction",
+      "limitedCore": true,
+      "note": "Margen izquierda del Dniéper: se conserva el Hetmanato antes de la abolición de su gobierno autónomo. Límites comarcales aproximados; no se atribuye a un soberano por el nombre moderno de la localidad."
+    },
+    {
+      "name": "Polonia · 1569–1647 · frontera oriental 15",
+      "identity": "Polonia",
+      "from": 1569,
+      "through": 1647,
+      "ids": [
+        "Hadiach",
+        "Lubny",
+        "Oster",
+        "Pereiaslav",
+        "Poltava"
+      ],
+      "governmentTerritories": [
+        "Polonia"
+      ],
+      "sourceKeys": [
+        "east"
+      ],
+      "precision": "regional_reconstruction",
+      "limitedCore": true,
+      "note": "Margen izquierda del Dniéper: se conserva el Hetmanato antes de la abolición de su gobierno autónomo. Límites comarcales aproximados; no se atribuye a un soberano por el nombre moderno de la localidad."
+    },
+    {
+      "name": "Hetmanato cosaco · 1648–1653 · frontera oriental 16",
+      "identity": "Hetmanato cosaco",
+      "from": 1648,
+      "through": 1653,
+      "ids": [
+        "Hadiach",
+        "Lubny",
+        "Oster",
+        "Pereiaslav",
+        "Poltava"
+      ],
+      "governmentTerritories": [
+        "Hetmanato cosaco"
+      ],
+      "sourceKeys": [
+        "hetman"
+      ],
+      "precision": "regional_reconstruction",
+      "limitedCore": true,
+      "note": "Margen izquierda del Dniéper: se conserva el Hetmanato antes de la abolición de su gobierno autónomo. Límites comarcales aproximados; no se atribuye a un soberano por el nombre moderno de la localidad."
+    },
+    {
+      "name": "Rusia · 1764–1800 · frontera oriental 17",
+      "identity": "Rusia",
+      "from": 1764,
+      "through": 1800,
+      "ids": [
+        "Hadiach",
+        "Lubny",
+        "Oster",
+        "Pereiaslav",
+        "Poltava"
+      ],
+      "governmentTerritories": [
+        "Rusia"
+      ],
+      "sourceKeys": [
+        "hetman"
+      ],
+      "precision": "regional_reconstruction",
+      "limitedCore": true,
+      "note": "Margen izquierda del Dniéper: se conserva el Hetmanato antes de la abolición de su gobierno autónomo. Límites comarcales aproximados; no se atribuye a un soberano por el nombre moderno de la localidad."
+    },
+    {
+      "name": "Principado de Kyiv · 1200–1361 · frontera oriental 18",
+      "identity": "Principado de Kyiv",
+      "from": 1200,
+      "through": 1361,
+      "ids": [
+        "Kyiv"
+      ],
+      "governmentTerritories": [
+        "Principado de Kyiv"
+      ],
+      "sourceKeys": [
+        "east"
+      ],
+      "precision": "regional_reconstruction",
+      "limitedCore": true,
+      "note": "Kyiv no desaparece tras 1667: se sigue la posesión rusa, conservando aparte el marco de la tregua y las instituciones locales. Límites comarcales aproximados; no se atribuye a un soberano por el nombre moderno de la localidad."
+    },
+    {
+      "name": "Lituania · 1362–1568 · frontera oriental 19",
+      "identity": "Lituania",
+      "from": 1362,
+      "through": 1568,
+      "ids": [
+        "Kyiv"
+      ],
+      "governmentTerritories": [
+        "Lituania"
+      ],
+      "sourceKeys": [
+        "east"
+      ],
+      "precision": "regional_reconstruction",
+      "limitedCore": true,
+      "note": "Kyiv no desaparece tras 1667: se sigue la posesión rusa, conservando aparte el marco de la tregua y las instituciones locales. Límites comarcales aproximados; no se atribuye a un soberano por el nombre moderno de la localidad."
+    },
+    {
+      "name": "Polonia · 1569–1647 · frontera oriental 20",
+      "identity": "Polonia",
+      "from": 1569,
+      "through": 1647,
+      "ids": [
+        "Kyiv"
+      ],
+      "governmentTerritories": [
+        "Polonia"
+      ],
+      "sourceKeys": [
+        "east"
+      ],
+      "precision": "regional_reconstruction",
+      "limitedCore": true,
+      "note": "Kyiv no desaparece tras 1667: se sigue la posesión rusa, conservando aparte el marco de la tregua y las instituciones locales. Límites comarcales aproximados; no se atribuye a un soberano por el nombre moderno de la localidad."
+    },
+    {
+      "name": "Hetmanato cosaco · 1648–1666 · frontera oriental 21",
+      "identity": "Hetmanato cosaco",
+      "from": 1648,
+      "through": 1666,
+      "ids": [
+        "Kyiv"
+      ],
+      "governmentTerritories": [
+        "Hetmanato cosaco"
+      ],
+      "sourceKeys": [
+        "hetman"
+      ],
+      "precision": "regional_reconstruction",
+      "limitedCore": true,
+      "note": "Kyiv no desaparece tras 1667: se sigue la posesión rusa, conservando aparte el marco de la tregua y las instituciones locales. Límites comarcales aproximados; no se atribuye a un soberano por el nombre moderno de la localidad.",
+      "authorityCondition": "control disputado"
+    },
+    {
+      "name": "Rusia · 1667–1800 · frontera oriental 22",
+      "identity": "Rusia",
+      "from": 1667,
+      "through": 1800,
+      "ids": [
+        "Kyiv"
+      ],
+      "governmentTerritories": [
+        "Rusia"
+      ],
+      "sourceKeys": [
+        "andrusovo"
+      ],
+      "precision": "regional_reconstruction",
+      "limitedCore": true,
+      "note": "Kyiv no desaparece tras 1667: se sigue la posesión rusa, conservando aparte el marco de la tregua y las instituciones locales. Límites comarcales aproximados; no se atribuye a un soberano por el nombre moderno de la localidad."
+    },
+    {
+      "name": "Ducado de Pomerania · 1200–1285 · frontera oriental 23",
+      "identity": "Ducado de Pomerania",
+      "from": 1200,
+      "through": 1285,
+      "ids": [
+        "Czaplinek"
+      ],
+      "governmentTerritories": [
+        "Pomerania"
+      ],
+      "sourceKeys": [
+        "drahim"
+      ],
+      "precision": "regional_reconstruction",
+      "limitedCore": true,
+      "note": "Frontera de Drahim: retorno a Polonia en 1368 y ejecución de la prenda de Brandeburgo en 1668; no se retrasa esta pérdida hasta los repartos. Límites comarcales aproximados; no se atribuye a un soberano por el nombre moderno de la localidad."
+    },
+    {
+      "name": "Brandeburgo · 1286–1367 · frontera oriental 24",
+      "identity": "Brandeburgo",
+      "from": 1286,
+      "through": 1367,
+      "ids": [
+        "Czaplinek"
+      ],
+      "governmentTerritories": [
+        "Brandeburgo"
+      ],
+      "sourceKeys": [
+        "drahim"
+      ],
+      "precision": "regional_reconstruction",
+      "limitedCore": true,
+      "note": "Frontera de Drahim: retorno a Polonia en 1368 y ejecución de la prenda de Brandeburgo en 1668; no se retrasa esta pérdida hasta los repartos. Límites comarcales aproximados; no se atribuye a un soberano por el nombre moderno de la localidad."
+    },
+    {
+      "name": "Polonia · 1368–1667 · frontera oriental 25",
+      "identity": "Polonia",
+      "from": 1368,
+      "through": 1667,
+      "ids": [
+        "Czaplinek"
+      ],
+      "governmentTerritories": [
+        "Polonia"
+      ],
+      "sourceKeys": [
+        "drahim"
+      ],
+      "precision": "regional_reconstruction",
+      "limitedCore": true,
+      "note": "Frontera de Drahim: retorno a Polonia en 1368 y ejecución de la prenda de Brandeburgo en 1668; no se retrasa esta pérdida hasta los repartos. Límites comarcales aproximados; no se atribuye a un soberano por el nombre moderno de la localidad."
+    },
+    {
+      "name": "Brandeburgo · 1668–1800 · frontera oriental 26",
+      "identity": "Brandeburgo",
+      "from": 1668,
+      "through": 1800,
+      "ids": [
+        "Czaplinek"
+      ],
+      "governmentTerritories": [
+        "Brandeburgo"
+      ],
+      "sourceKeys": [
+        "drahim"
+      ],
+      "precision": "regional_reconstruction",
+      "limitedCore": true,
+      "note": "Frontera de Drahim: retorno a Polonia en 1368 y ejecución de la prenda de Brandeburgo en 1668; no se retrasa esta pérdida hasta los repartos. Límites comarcales aproximados; no se atribuye a un soberano por el nombre moderno de la localidad."
+    },
+    {
+      "name": "Hetmanato cosaco · 1654–1763 · frontera oriental 11",
+      "identity": "Hetmanato cosaco",
+      "from": 1654,
+      "through": 1763,
+      "ids": [
+        "Chernihiv",
+        "Ichnia",
+        "Nizhyn",
+        "Novhorod_Siverskyi",
+        "Sosnytsia"
+      ],
+      "governmentTerritories": [
+        "Hetmanato cosaco"
+      ],
+      "sourceKeys": [
+        "hetman"
+      ],
+      "precision": "regional_reconstruction",
+      "limitedCore": true,
+      "note": "Hetmanato cosaco autónomo bajo la creciente autoridad rusa desde el acuerdo de Pereiaslav (1654). El protectorado no equivale a administración provincial directa. La frontera y el estatuto evolucionaron durante las guerras posteriores.",
+      "authorityCondition": "autonomía tributaria"
+    },
+    {
+      "name": "Hetmanato cosaco · 1654–1763 · frontera oriental 16",
+      "identity": "Hetmanato cosaco",
+      "from": 1654,
+      "through": 1763,
+      "ids": [
+        "Hadiach",
+        "Lubny",
+        "Oster",
+        "Pereiaslav",
+        "Poltava"
+      ],
+      "governmentTerritories": [
+        "Hetmanato cosaco"
+      ],
+      "sourceKeys": [
+        "hetman"
+      ],
+      "precision": "regional_reconstruction",
+      "limitedCore": true,
+      "note": "Hetmanato cosaco autónomo bajo la creciente autoridad rusa desde el acuerdo de Pereiaslav (1654). El protectorado no equivale a administración provincial directa. La frontera y el estatuto evolucionaron durante las guerras posteriores.",
+      "authorityCondition": "autonomía tributaria"
+    }
+  ],
+  "limitations": [
+    "Selección regional de la frontera oriental y de Drahim, con transferencias independientes de los tres repartos del XVIII.",
+    "La autonomía cosaca se distingue del dominio ruso directo; se omiten las operaciones militares de escala menor que el año o la comarca.",
+    "Los límites geográficos son aproximaciones contrastadas con mapas regionales; no reproducen todos los términos municipales ni la totalidad de las provincias históricas."
+  ]
+}

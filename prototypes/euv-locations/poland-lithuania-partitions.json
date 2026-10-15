@@ -1,0 +1,4348 @@
+{
+  "schema": 1,
+  "reviewedAt": "2026-10-15",
+  "sources": {
+    "first": {
+      "title": "ZPE · mapa del primer reparto, 1772",
+      "url": "https://zpe.gov.pl/a/upadek-rzeczypospolitej-obojga-narodow/DrSK5HUTC",
+      "locator": "Mapa I rozbiór Rzeczypospolitej; límites de Prusia Real, Netze, Galicia y frontera del Dvina. Comparación visual del mapa, no solo topónimos."
+    },
+    "second": {
+      "title": "ZPE · II rozbiór Polski",
+      "url": "https://zpe.gov.pl/pdf/PkQYC4Kpa",
+      "locator": "Mapa y descripción de las adquisiciones prusianas y rusas de 1793; Austria no participó."
+    },
+    "third": {
+      "title": "Muzeum Historii Polski · III rozbiór Rzeczypospolitej",
+      "url": "https://muzhp.pl/kalendarium/iii-rozbior-rzeczypospolitej",
+      "locator": "Mapa del tercer reparto; tratado de 24 de octubre de 1795, demarcación posterior. Varsovia prusiana, Cracovia y Lublin austríacas, Vilna y Volinia rusas."
+    },
+    "lublin": {
+      "title": "ZPE · Droga do unii realnej",
+      "url": "https://zpe.gov.pl/a/droga-do-unii-realnej/DB6cUAxPR",
+      "locator": "Unión de Lublin, 1569: unión real, instituciones comunes y transferencia de Podlaquia, Volinia y Ucrania a la Corona."
+    },
+    "province": {
+      "title": "Library of Congress · Carte de la Pologne, 1772",
+      "url": "https://www.loc.gov/resource/gdcwdl.wdl_11294/",
+      "locator": "Rizzi-Zannoni: mapa provincial anterior al primer reparto; comparación de regiones completas y fronteras con cada celda del SVG."
+    },
+    "kwidzyn": {
+      "title": "Ayuntamiento de Kwidzyn · Historia de la ciudad",
+      "url": "https://kwidzyn.pl/historia-miasta-czesc-1-757/",
+      "locator": "La paz de 1466 deja Kwidzyn y el dominio episcopal en la parte prusiana de la Orden, más tarde ducal; no se registra como adquisición de 1772."
+    }
+  },
+  "cells": [
+    {
+      "id": "Alytus",
+      "identityBefore": "Lituania",
+      "annexedIn": 1795,
+      "annexedBy": "Rusia",
+      "province": "Lituania, Curlandia, Polesia y Volinia occidental"
+    },
+    {
+      "id": "Anyksciai",
+      "identityBefore": "Lituania",
+      "annexedIn": 1795,
+      "annexedBy": "Rusia",
+      "province": "Lituania, Curlandia, Polesia y Volinia occidental"
+    },
+    {
+      "id": "Ashmyany",
+      "identityBefore": "Lituania",
+      "annexedIn": 1795,
+      "annexedBy": "Rusia",
+      "province": "Lituania, Curlandia, Polesia y Volinia occidental"
+    },
+    {
+      "id": "Astrina",
+      "identityBefore": "Lituania",
+      "annexedIn": 1795,
+      "annexedBy": "Rusia",
+      "province": "Lituania, Curlandia, Polesia y Volinia occidental"
+    },
+    {
+      "id": "Asvieja",
+      "identityBefore": "Lituania",
+      "annexedIn": 1772,
+      "annexedBy": "Rusia",
+      "province": "Bielorrusia oriental y Latgalia"
+    },
+    {
+      "id": "Babimost",
+      "identityBefore": "Polonia",
+      "annexedIn": 1793,
+      "annexedBy": "Prusia",
+      "province": "Prusia Meridional y ciudades de Gdansk y Torun"
+    },
+    {
+      "id": "Babruysk",
+      "identityBefore": "Lituania",
+      "annexedIn": 1793,
+      "annexedBy": "Rusia",
+      "province": "Bielorrusia central, Podolia y Ucrania de la margen derecha"
+    },
+    {
+      "id": "Bakota",
+      "identityBefore": "Polonia",
+      "annexedIn": 1793,
+      "annexedBy": "Rusia",
+      "province": "Bielorrusia central, Podolia y Ucrania de la margen derecha"
+    },
+    {
+      "id": "Balta",
+      "identityBefore": "Polonia",
+      "annexedIn": 1793,
+      "annexedBy": "Rusia",
+      "province": "Bielorrusia central, Podolia y Ucrania de la margen derecha"
+    },
+    {
+      "id": "Barysaw",
+      "identityBefore": "Lituania",
+      "annexedIn": 1793,
+      "annexedBy": "Rusia",
+      "province": "Bielorrusia central, Podolia y Ucrania de la margen derecha"
+    },
+    {
+      "id": "Bauska",
+      "identityBefore": "Curlandia",
+      "annexedIn": 1795,
+      "annexedBy": "Rusia",
+      "province": "Lituania, Curlandia, Polesia y Volinia occidental"
+    },
+    {
+      "id": "Begoml",
+      "identityBefore": "Lituania",
+      "annexedIn": 1793,
+      "annexedBy": "Rusia",
+      "province": "Bielorrusia central, Podolia y Ucrania de la margen derecha"
+    },
+    {
+      "id": "Belaya_Soroka",
+      "identityBefore": "Polonia",
+      "annexedIn": 1793,
+      "annexedBy": "Rusia",
+      "province": "Bielorrusia central, Podolia y Ucrania de la margen derecha"
+    },
+    {
+      "id": "Belz",
+      "identityBefore": "Polonia",
+      "annexedIn": 1772,
+      "annexedBy": "Austria",
+      "province": "Galicia y Lodomeria"
+    },
+    {
+      "id": "Berdychiv",
+      "identityBefore": "Polonia",
+      "annexedIn": 1793,
+      "annexedBy": "Rusia",
+      "province": "Bielorrusia central, Podolia y Ucrania de la margen derecha"
+    },
+    {
+      "id": "Bereschany",
+      "identityBefore": "Polonia",
+      "annexedIn": 1772,
+      "annexedBy": "Austria",
+      "province": "Galicia y Lodomeria"
+    },
+    {
+      "id": "Bershad",
+      "identityBefore": "Polonia",
+      "annexedIn": 1793,
+      "annexedBy": "Rusia",
+      "province": "Bielorrusia central, Podolia y Ucrania de la margen derecha"
+    },
+    {
+      "id": "Bershty",
+      "identityBefore": "Lituania",
+      "annexedIn": 1795,
+      "annexedBy": "Rusia",
+      "province": "Lituania, Curlandia, Polesia y Volinia occidental"
+    },
+    {
+      "id": "Biala_Podlaska",
+      "identityBefore": "Lituania",
+      "annexedIn": 1795,
+      "annexedBy": "Austria",
+      "province": "Galicia Occidental"
+    },
+    {
+      "id": "Biala_Rawska",
+      "identityBefore": "Polonia",
+      "annexedIn": 1793,
+      "annexedBy": "Prusia",
+      "province": "Prusia Meridional y ciudades de Gdansk y Torun"
+    },
+    {
+      "id": "Biecz",
+      "identityBefore": "Polonia",
+      "annexedIn": 1772,
+      "annexedBy": "Austria",
+      "province": "Galicia y Lodomeria"
+    },
+    {
+      "id": "Bielsk_Podlaski",
+      "identityBefore": "Polonia",
+      "annexedIn": 1795,
+      "annexedBy": "Prusia",
+      "province": "Nueva Prusia Oriental y Nueva Silesia"
+    },
+    {
+      "id": "Bila_Tserkva",
+      "identityBefore": "Polonia",
+      "annexedIn": 1793,
+      "annexedBy": "Rusia",
+      "province": "Bielorrusia central, Podolia y Ucrania de la margen derecha"
+    },
+    {
+      "id": "Bilokorovychi",
+      "identityBefore": "Polonia",
+      "annexedIn": 1793,
+      "annexedBy": "Rusia",
+      "province": "Bielorrusia central, Podolia y Ucrania de la margen derecha"
+    },
+    {
+      "id": "Birzai",
+      "identityBefore": "Lituania",
+      "annexedIn": 1795,
+      "annexedBy": "Rusia",
+      "province": "Lituania, Curlandia, Polesia y Volinia occidental"
+    },
+    {
+      "id": "Bobr",
+      "identityBefore": "Lituania",
+      "annexedIn": 1793,
+      "annexedBy": "Rusia",
+      "province": "Bielorrusia central, Podolia y Ucrania de la margen derecha"
+    },
+    {
+      "id": "Bohorodchany",
+      "identityBefore": "Polonia",
+      "annexedIn": 1772,
+      "annexedBy": "Austria",
+      "province": "Galicia y Lodomeria"
+    },
+    {
+      "id": "Bohuslav",
+      "identityBefore": "Polonia",
+      "annexedIn": 1793,
+      "annexedBy": "Rusia",
+      "province": "Bielorrusia central, Podolia y Ucrania de la margen derecha"
+    },
+    {
+      "id": "Bolekhiv",
+      "identityBefore": "Polonia",
+      "annexedIn": 1772,
+      "annexedBy": "Austria",
+      "province": "Galicia y Lodomeria"
+    },
+    {
+      "id": "Bolshie_Krugovichi",
+      "identityBefore": "Lituania",
+      "annexedIn": 1793,
+      "annexedBy": "Rusia",
+      "province": "Bielorrusia central, Podolia y Ucrania de la margen derecha"
+    },
+    {
+      "id": "Brahin",
+      "identityBefore": "Polonia",
+      "annexedIn": 1793,
+      "annexedBy": "Rusia",
+      "province": "Bielorrusia central, Podolia y Ucrania de la margen derecha"
+    },
+    {
+      "id": "Braslaw",
+      "identityBefore": "Lituania",
+      "annexedIn": 1795,
+      "annexedBy": "Rusia",
+      "province": "Lituania, Curlandia, Polesia y Volinia occidental"
+    },
+    {
+      "id": "Bratslav",
+      "identityBefore": "Polonia",
+      "annexedIn": 1793,
+      "annexedBy": "Rusia",
+      "province": "Bielorrusia central, Podolia y Ucrania de la margen derecha"
+    },
+    {
+      "id": "Brest_Litowsk",
+      "identityBefore": "Lituania",
+      "annexedIn": 1795,
+      "annexedBy": "Rusia",
+      "province": "Lituania, Curlandia, Polesia y Volinia occidental"
+    },
+    {
+      "id": "Brodnica",
+      "identityBefore": "Prusia Real",
+      "annexedIn": 1772,
+      "annexedBy": "Prusia",
+      "province": "Prusia Occidental y distrito del Netze"
+    },
+    {
+      "id": "Brody",
+      "identityBefore": "Polonia",
+      "annexedIn": 1772,
+      "annexedBy": "Austria",
+      "province": "Galicia y Lodomeria"
+    },
+    {
+      "id": "Brzeznica",
+      "identityBefore": "Polonia",
+      "annexedIn": 1793,
+      "annexedBy": "Prusia",
+      "province": "Prusia Meridional y ciudades de Gdansk y Torun"
+    },
+    {
+      "id": "Buchach",
+      "identityBefore": "Polonia",
+      "annexedIn": 1772,
+      "annexedBy": "Austria",
+      "province": "Galicia y Lodomeria"
+    },
+    {
+      "id": "Buinovichi",
+      "identityBefore": "Lituania",
+      "annexedIn": 1793,
+      "annexedBy": "Rusia",
+      "province": "Bielorrusia central, Podolia y Ucrania de la margen derecha"
+    },
+    {
+      "id": "Buk",
+      "identityBefore": "Polonia",
+      "annexedIn": 1793,
+      "annexedBy": "Prusia",
+      "province": "Prusia Meridional y ciudades de Gdansk y Torun"
+    },
+    {
+      "id": "Busk",
+      "identityBefore": "Polonia",
+      "annexedIn": 1772,
+      "annexedBy": "Austria",
+      "province": "Galicia y Lodomeria"
+    },
+    {
+      "id": "Busko_Zdroj",
+      "identityBefore": "Polonia",
+      "annexedIn": 1793,
+      "annexedBy": "Rusia",
+      "province": "Bielorrusia central, Podolia y Ucrania de la margen derecha"
+    },
+    {
+      "id": "Buzhskyi",
+      "identityBefore": "Polonia",
+      "annexedIn": 1793,
+      "annexedBy": "Rusia",
+      "province": "Bielorrusia central, Podolia y Ucrania de la margen derecha"
+    },
+    {
+      "id": "Bydgoszcz",
+      "identityBefore": "Polonia",
+      "annexedIn": 1772,
+      "annexedBy": "Prusia",
+      "province": "Prusia Occidental y distrito del Netze"
+    },
+    {
+      "id": "Byerazino",
+      "identityBefore": "Lituania",
+      "annexedIn": 1793,
+      "annexedBy": "Rusia",
+      "province": "Bielorrusia central, Podolia y Ucrania de la margen derecha"
+    },
+    {
+      "id": "Bykhaw",
+      "identityBefore": "Lituania",
+      "annexedIn": 1772,
+      "annexedBy": "Rusia",
+      "province": "Bielorrusia oriental y Latgalia"
+    },
+    {
+      "id": "Chavusy",
+      "identityBefore": "Lituania",
+      "annexedIn": 1772,
+      "annexedBy": "Rusia",
+      "province": "Bielorrusia oriental y Latgalia"
+    },
+    {
+      "id": "Chelm",
+      "identityBefore": "Polonia",
+      "annexedIn": 1795,
+      "annexedBy": "Austria",
+      "province": "Galicia Occidental"
+    },
+    {
+      "id": "Chelmno",
+      "identityBefore": "Prusia Real",
+      "annexedIn": 1772,
+      "annexedBy": "Prusia",
+      "province": "Prusia Occidental y distrito del Netze"
+    },
+    {
+      "id": "Cherkasy",
+      "identityBefore": "Polonia",
+      "annexedIn": 1793,
+      "annexedBy": "Rusia",
+      "province": "Bielorrusia central, Podolia y Ucrania de la margen derecha"
+    },
+    {
+      "id": "Chernyany",
+      "identityBefore": "Lituania",
+      "annexedIn": 1795,
+      "annexedBy": "Rusia",
+      "province": "Lituania, Curlandia, Polesia y Volinia occidental"
+    },
+    {
+      "id": "Chervyen",
+      "identityBefore": "Lituania",
+      "annexedIn": 1793,
+      "annexedBy": "Rusia",
+      "province": "Bielorrusia central, Podolia y Ucrania de la margen derecha"
+    },
+    {
+      "id": "Chodziez",
+      "identityBefore": "Polonia",
+      "annexedIn": 1772,
+      "annexedBy": "Prusia",
+      "province": "Prusia Occidental y distrito del Netze"
+    },
+    {
+      "id": "Chornobyl",
+      "identityBefore": "Polonia",
+      "annexedIn": 1793,
+      "annexedBy": "Rusia",
+      "province": "Bielorrusia central, Podolia y Ucrania de la margen derecha"
+    },
+    {
+      "id": "Chortolisy",
+      "identityBefore": "Polonia",
+      "annexedIn": 1795,
+      "annexedBy": "Rusia",
+      "province": "Lituania, Curlandia, Polesia y Volinia occidental"
+    },
+    {
+      "id": "Chortoryisk",
+      "identityBefore": "Polonia",
+      "annexedIn": 1795,
+      "annexedBy": "Rusia",
+      "province": "Lituania, Curlandia, Polesia y Volinia occidental"
+    },
+    {
+      "id": "Chrzanow",
+      "identityBefore": "Polonia",
+      "annexedIn": 1795,
+      "annexedBy": "Austria",
+      "province": "Galicia Occidental"
+    },
+    {
+      "id": "Chudniv",
+      "identityBefore": "Polonia",
+      "annexedIn": 1793,
+      "annexedBy": "Rusia",
+      "province": "Bielorrusia central, Podolia y Ucrania de la margen derecha"
+    },
+    {
+      "id": "Chyhyryn",
+      "identityBefore": "Polonia",
+      "annexedIn": 1793,
+      "annexedBy": "Rusia",
+      "province": "Bielorrusia central, Podolia y Ucrania de la margen derecha"
+    },
+    {
+      "id": "Ciechanow",
+      "identityBefore": "Polonia",
+      "annexedIn": 1795,
+      "annexedBy": "Prusia",
+      "province": "Nueva Prusia Oriental y Nueva Silesia"
+    },
+    {
+      "id": "Czarnkow",
+      "identityBefore": "Polonia",
+      "annexedIn": 1793,
+      "annexedBy": "Prusia",
+      "province": "Prusia Meridional y ciudades de Gdansk y Torun"
+    },
+    {
+      "id": "Czchow",
+      "identityBefore": "Polonia",
+      "annexedIn": 1772,
+      "annexedBy": "Austria",
+      "province": "Galicia y Lodomeria"
+    },
+    {
+      "id": "Czersk",
+      "identityBefore": "Polonia",
+      "annexedIn": 1795,
+      "annexedBy": "Prusia",
+      "province": "Nueva Prusia Oriental y Nueva Silesia"
+    },
+    {
+      "id": "Czestochowa",
+      "identityBefore": "Polonia",
+      "annexedIn": 1793,
+      "annexedBy": "Prusia",
+      "province": "Prusia Meridional"
+    },
+    {
+      "id": "Czlopa",
+      "identityBefore": "Polonia",
+      "annexedIn": 1772,
+      "annexedBy": "Prusia",
+      "province": "Prusia Occidental y distrito del Netze"
+    },
+    {
+      "id": "Dabuchyn",
+      "identityBefore": "Lituania",
+      "annexedIn": 1795,
+      "annexedBy": "Rusia",
+      "province": "Lituania, Curlandia, Polesia y Volinia occidental"
+    },
+    {
+      "id": "Daugavpils",
+      "identityBefore": "Livonia polaca",
+      "annexedIn": 1772,
+      "annexedBy": "Rusia",
+      "province": "Bielorrusia oriental y Latgalia"
+    },
+    {
+      "id": "Davyd_Haradok",
+      "identityBefore": "Lituania",
+      "annexedIn": 1793,
+      "annexedBy": "Rusia",
+      "province": "Bielorrusia central, Podolia y Ucrania de la margen derecha"
+    },
+    {
+      "id": "Debica",
+      "identityBefore": "Polonia",
+      "annexedIn": 1772,
+      "annexedBy": "Austria",
+      "province": "Galicia y Lodomeria"
+    },
+    {
+      "id": "Desnyanskyi_Horodok",
+      "identityBefore": "Polonia",
+      "annexedIn": 1793,
+      "annexedBy": "Rusia",
+      "province": "Bielorrusia central, Podolia y Ucrania de la margen derecha"
+    },
+    {
+      "id": "Dobele",
+      "identityBefore": "Curlandia",
+      "annexedIn": 1795,
+      "annexedBy": "Rusia",
+      "province": "Lituania, Curlandia, Polesia y Volinia occidental"
+    },
+    {
+      "id": "Dobrzyn",
+      "identityBefore": "Polonia",
+      "annexedIn": 1793,
+      "annexedBy": "Prusia",
+      "province": "Prusia Meridional y ciudades de Gdansk y Torun"
+    },
+    {
+      "id": "Dokshytsy",
+      "identityBefore": "Lituania",
+      "annexedIn": 1795,
+      "annexedBy": "Rusia",
+      "province": "Lituania, Curlandia, Polesia y Volinia occidental"
+    },
+    {
+      "id": "Dolyna",
+      "identityBefore": "Polonia",
+      "annexedIn": 1772,
+      "annexedBy": "Austria",
+      "province": "Galicia y Lodomeria"
+    },
+    {
+      "id": "Drahichyn",
+      "identityBefore": "Lituania",
+      "annexedIn": 1793,
+      "annexedBy": "Rusia",
+      "province": "Bielorrusia central, Podolia y Ucrania de la margen derecha"
+    },
+    {
+      "id": "Drahushiv",
+      "identityBefore": "Polonia",
+      "annexedIn": 1793,
+      "annexedBy": "Rusia",
+      "province": "Bielorrusia central, Podolia y Ucrania de la margen derecha"
+    },
+    {
+      "id": "Drohiczyn",
+      "identityBefore": "Polonia",
+      "annexedIn": 1795,
+      "annexedBy": "Prusia",
+      "province": "Nueva Prusia Oriental y Nueva Silesia"
+    },
+    {
+      "id": "Drohobych",
+      "identityBefore": "Polonia",
+      "annexedIn": 1772,
+      "annexedBy": "Austria",
+      "province": "Galicia y Lodomeria"
+    },
+    {
+      "id": "Drutsk",
+      "identityBefore": "Lituania",
+      "annexedIn": 1772,
+      "annexedBy": "Rusia",
+      "province": "Bielorrusia oriental y Latgalia"
+    },
+    {
+      "id": "Drysvyaty",
+      "identityBefore": "Lituania",
+      "annexedIn": 1795,
+      "annexedBy": "Rusia",
+      "province": "Lituania, Curlandia, Polesia y Volinia occidental"
+    },
+    {
+      "id": "Dubno",
+      "identityBefore": "Polonia",
+      "annexedIn": 1795,
+      "annexedBy": "Rusia",
+      "province": "Lituania, Curlandia, Polesia y Volinia occidental"
+    },
+    {
+      "id": "Dubrovytsia",
+      "identityBefore": "Lituania",
+      "annexedIn": 1793,
+      "annexedBy": "Rusia",
+      "province": "Bielorrusia central, Podolia y Ucrania de la margen derecha"
+    },
+    {
+      "id": "Dundaga",
+      "identityBefore": "Curlandia",
+      "annexedIn": 1795,
+      "annexedBy": "Rusia",
+      "province": "Lituania, Curlandia, Polesia y Volinia occidental"
+    },
+    {
+      "id": "Durbe",
+      "identityBefore": "Curlandia",
+      "annexedIn": 1795,
+      "annexedBy": "Rusia",
+      "province": "Lituania, Curlandia, Polesia y Volinia occidental"
+    },
+    {
+      "id": "Dymer",
+      "identityBefore": "Polonia",
+      "annexedIn": 1793,
+      "annexedBy": "Rusia",
+      "province": "Bielorrusia central, Podolia y Ucrania de la margen derecha"
+    },
+    {
+      "id": "Dzierzgon",
+      "identityBefore": "Prusia Real",
+      "annexedIn": 1772,
+      "annexedBy": "Prusia",
+      "province": "Prusia Occidental y distrito del Netze"
+    },
+    {
+      "id": "Dzisna",
+      "identityBefore": "Lituania",
+      "annexedIn": 1795,
+      "annexedBy": "Rusia",
+      "province": "Lituania, Curlandia, Polesia y Volinia occidental"
+    },
+    {
+      "id": "Dzyatlava",
+      "identityBefore": "Lituania",
+      "annexedIn": 1795,
+      "annexedBy": "Rusia",
+      "province": "Lituania, Curlandia, Polesia y Volinia occidental"
+    },
+    {
+      "id": "Eisiskes",
+      "identityBefore": "Lituania",
+      "annexedIn": 1795,
+      "annexedBy": "Rusia",
+      "province": "Lituania, Curlandia, Polesia y Volinia occidental"
+    },
+    {
+      "id": "Elblag",
+      "identityBefore": "Prusia Real",
+      "annexedIn": 1772,
+      "annexedBy": "Prusia",
+      "province": "Prusia Occidental y distrito del Netze"
+    },
+    {
+      "id": "Ezerenai",
+      "identityBefore": "Lituania",
+      "annexedIn": 1795,
+      "annexedBy": "Rusia",
+      "province": "Lituania, Curlandia, Polesia y Volinia occidental"
+    },
+    {
+      "id": "Fastiv",
+      "identityBefore": "Polonia",
+      "annexedIn": 1793,
+      "annexedBy": "Rusia",
+      "province": "Bielorrusia central, Podolia y Ucrania de la margen derecha"
+    },
+    {
+      "id": "Frombork",
+      "identityBefore": "Principado episcopal de Warmia",
+      "annexedIn": 1772,
+      "annexedBy": "Prusia",
+      "province": "Prusia Occidental y distrito del Netze"
+    },
+    {
+      "id": "Gabin",
+      "identityBefore": "Polonia",
+      "annexedIn": 1793,
+      "annexedBy": "Prusia",
+      "province": "Prusia Meridional y ciudades de Gdansk y Torun"
+    },
+    {
+      "id": "Garwolin",
+      "identityBefore": "Polonia",
+      "annexedIn": 1795,
+      "annexedBy": "Austria",
+      "province": "Galicia Occidental"
+    },
+    {
+      "id": "Gdansk",
+      "identityBefore": "Prusia Real",
+      "annexedIn": 1793,
+      "annexedBy": "Prusia",
+      "province": "Prusia Meridional y ciudades de Gdansk y Torun"
+    },
+    {
+      "id": "Giedraiciai",
+      "identityBefore": "Lituania",
+      "annexedIn": 1795,
+      "annexedBy": "Rusia",
+      "province": "Lituania, Curlandia, Polesia y Volinia occidental"
+    },
+    {
+      "id": "Gniew",
+      "identityBefore": "Prusia Real",
+      "annexedIn": 1772,
+      "annexedBy": "Prusia",
+      "province": "Prusia Occidental y distrito del Netze"
+    },
+    {
+      "id": "Gniezno",
+      "identityBefore": "Polonia",
+      "annexedIn": 1793,
+      "annexedBy": "Prusia",
+      "province": "Prusia Meridional y ciudades de Gdansk y Torun"
+    },
+    {
+      "id": "Goniadz",
+      "identityBefore": "Polonia",
+      "annexedIn": 1795,
+      "annexedBy": "Prusia",
+      "province": "Nueva Prusia Oriental y Nueva Silesia"
+    },
+    {
+      "id": "Gostynin",
+      "identityBefore": "Polonia",
+      "annexedIn": 1793,
+      "annexedBy": "Prusia",
+      "province": "Prusia Meridional y ciudades de Gdansk y Torun"
+    },
+    {
+      "id": "Grabowiec",
+      "identityBefore": "Polonia",
+      "annexedIn": 1795,
+      "annexedBy": "Austria",
+      "province": "Galicia Occidental"
+    },
+    {
+      "id": "Grobina",
+      "identityBefore": "Curlandia",
+      "annexedIn": 1795,
+      "annexedBy": "Rusia",
+      "province": "Lituania, Curlandia, Polesia y Volinia occidental"
+    },
+    {
+      "id": "Grodek",
+      "identityBefore": "Lituania",
+      "annexedIn": 1795,
+      "annexedBy": "Rusia",
+      "province": "Lituania, Curlandia, Polesia y Volinia occidental"
+    },
+    {
+      "id": "Grodno",
+      "identityBefore": "Lituania",
+      "annexedIn": 1795,
+      "annexedBy": "Rusia",
+      "province": "Lituania, Curlandia, Polesia y Volinia occidental"
+    },
+    {
+      "id": "Grodzisk_Wielkopolski",
+      "identityBefore": "Polonia",
+      "annexedIn": 1793,
+      "annexedBy": "Prusia",
+      "province": "Prusia Meridional y ciudades de Gdansk y Torun"
+    },
+    {
+      "id": "Grojec",
+      "identityBefore": "Polonia",
+      "annexedIn": 1795,
+      "annexedBy": "Prusia",
+      "province": "Nueva Prusia Oriental y Nueva Silesia"
+    },
+    {
+      "id": "Grudziadz",
+      "identityBefore": "Prusia Real",
+      "annexedIn": 1772,
+      "annexedBy": "Prusia",
+      "province": "Prusia Occidental y distrito del Netze"
+    },
+    {
+      "id": "Hajnowka",
+      "identityBefore": "Lituania",
+      "annexedIn": 1795,
+      "annexedBy": "Prusia",
+      "province": "Nueva Prusia Oriental y Nueva Silesia"
+    },
+    {
+      "id": "Halshany",
+      "identityBefore": "Lituania",
+      "annexedIn": 1795,
+      "annexedBy": "Rusia",
+      "province": "Lituania, Curlandia, Polesia y Volinia occidental"
+    },
+    {
+      "id": "Halych",
+      "identityBefore": "Polonia",
+      "annexedIn": 1772,
+      "annexedBy": "Austria",
+      "province": "Galicia y Lodomeria"
+    },
+    {
+      "id": "Haradok",
+      "identityBefore": "Lituania",
+      "annexedIn": 1772,
+      "annexedBy": "Rusia",
+      "province": "Bielorrusia oriental y Latgalia"
+    },
+    {
+      "id": "Hieraniony",
+      "identityBefore": "Lituania",
+      "annexedIn": 1795,
+      "annexedBy": "Rusia",
+      "province": "Lituania, Curlandia, Polesia y Volinia occidental"
+    },
+    {
+      "id": "Hlusk",
+      "identityBefore": "Lituania",
+      "annexedIn": 1793,
+      "annexedBy": "Rusia",
+      "province": "Bielorrusia central, Podolia y Ucrania de la margen derecha"
+    },
+    {
+      "id": "Hlybokaye",
+      "identityBefore": "Lituania",
+      "annexedIn": 1795,
+      "annexedBy": "Rusia",
+      "province": "Lituania, Curlandia, Polesia y Volinia occidental"
+    },
+    {
+      "id": "Hlynne",
+      "identityBefore": "Lituania",
+      "annexedIn": 1793,
+      "annexedBy": "Rusia",
+      "province": "Bielorrusia central, Podolia y Ucrania de la margen derecha"
+    },
+    {
+      "id": "Horki",
+      "identityBefore": "Lituania",
+      "annexedIn": 1772,
+      "annexedBy": "Rusia",
+      "province": "Bielorrusia oriental y Latgalia"
+    },
+    {
+      "id": "Horodok",
+      "identityBefore": "Polonia",
+      "annexedIn": 1793,
+      "annexedBy": "Rusia",
+      "province": "Bielorrusia central, Podolia y Ucrania de la margen derecha"
+    },
+    {
+      "id": "Ilya",
+      "identityBefore": "Lituania",
+      "annexedIn": 1793,
+      "annexedBy": "Rusia",
+      "province": "Bielorrusia central, Podolia y Ucrania de la margen derecha"
+    },
+    {
+      "id": "Ilza",
+      "identityBefore": "Polonia",
+      "annexedIn": 1795,
+      "annexedBy": "Austria",
+      "province": "Galicia Occidental"
+    },
+    {
+      "id": "Inowroclaw",
+      "identityBefore": "Polonia",
+      "annexedIn": 1793,
+      "annexedBy": "Prusia",
+      "province": "Prusia Meridional y ciudades de Gdansk y Torun"
+    },
+    {
+      "id": "Iziaslav",
+      "identityBefore": "Polonia",
+      "annexedIn": 1795,
+      "annexedBy": "Rusia",
+      "province": "Lituania, Curlandia, Polesia y Volinia occidental"
+    },
+    {
+      "id": "Janow_Lubelski",
+      "identityBefore": "Polonia",
+      "annexedIn": 1795,
+      "annexedBy": "Austria",
+      "province": "Galicia Occidental"
+    },
+    {
+      "id": "Jaslo",
+      "identityBefore": "Polonia",
+      "annexedIn": 1772,
+      "annexedBy": "Austria",
+      "province": "Galicia y Lodomeria"
+    },
+    {
+      "id": "Jekabpils",
+      "identityBefore": "Curlandia",
+      "annexedIn": 1795,
+      "annexedBy": "Rusia",
+      "province": "Lituania, Curlandia, Polesia y Volinia occidental"
+    },
+    {
+      "id": "Jelgava",
+      "identityBefore": "Curlandia",
+      "annexedIn": 1795,
+      "annexedBy": "Rusia",
+      "province": "Lituania, Curlandia, Polesia y Volinia occidental"
+    },
+    {
+      "id": "Jeziarysca",
+      "identityBefore": "Lituania",
+      "annexedIn": 1772,
+      "annexedBy": "Rusia",
+      "province": "Bielorrusia oriental y Latgalia"
+    },
+    {
+      "id": "Jurbarkas",
+      "identityBefore": "Lituania",
+      "annexedIn": 1795,
+      "annexedBy": "Rusia",
+      "province": "Lituania, Curlandia, Polesia y Volinia occidental"
+    },
+    {
+      "id": "Kaharlyk",
+      "identityBefore": "Polonia",
+      "annexedIn": 1793,
+      "annexedBy": "Rusia",
+      "province": "Bielorrusia central, Podolia y Ucrania de la margen derecha"
+    },
+    {
+      "id": "Kalinkavichy",
+      "identityBefore": "Lituania",
+      "annexedIn": 1793,
+      "annexedBy": "Rusia",
+      "province": "Bielorrusia central, Podolia y Ucrania de la margen derecha"
+    },
+    {
+      "id": "Kalisz",
+      "identityBefore": "Polonia",
+      "annexedIn": 1793,
+      "annexedBy": "Prusia",
+      "province": "Prusia Meridional y ciudades de Gdansk y Torun"
+    },
+    {
+      "id": "Kamianets_Podilskyi",
+      "identityBefore": "Polonia",
+      "annexedIn": 1793,
+      "annexedBy": "Rusia",
+      "province": "Bielorrusia central, Podolia y Ucrania de la margen derecha"
+    },
+    {
+      "id": "Kamieniec",
+      "identityBefore": "Polonia",
+      "annexedIn": 1795,
+      "annexedBy": "Prusia",
+      "province": "Nueva Prusia Oriental y Nueva Silesia"
+    },
+    {
+      "id": "Kamin",
+      "identityBefore": "Polonia",
+      "annexedIn": 1795,
+      "annexedBy": "Rusia",
+      "province": "Lituania, Curlandia, Polesia y Volinia occidental"
+    },
+    {
+      "id": "Kamyenyets",
+      "identityBefore": "Lituania",
+      "annexedIn": 1795,
+      "annexedBy": "Rusia",
+      "province": "Lituania, Curlandia, Polesia y Volinia occidental"
+    },
+    {
+      "id": "Kandava",
+      "identityBefore": "Curlandia",
+      "annexedIn": 1795,
+      "annexedBy": "Rusia",
+      "province": "Lituania, Curlandia, Polesia y Volinia occidental"
+    },
+    {
+      "id": "Kaniv",
+      "identityBefore": "Polonia",
+      "annexedIn": 1793,
+      "annexedBy": "Rusia",
+      "province": "Bielorrusia central, Podolia y Ucrania de la margen derecha"
+    },
+    {
+      "id": "Kapyl",
+      "identityBefore": "Lituania",
+      "annexedIn": 1793,
+      "annexedBy": "Rusia",
+      "province": "Bielorrusia central, Podolia y Ucrania de la margen derecha"
+    },
+    {
+      "id": "Karabul",
+      "identityBefore": "Polonia",
+      "annexedIn": 1793,
+      "annexedBy": "Rusia",
+      "province": "Bielorrusia central, Podolia y Ucrania de la margen derecha"
+    },
+    {
+      "id": "Kastsyukovichy",
+      "identityBefore": "Lituania",
+      "annexedIn": 1772,
+      "annexedBy": "Rusia",
+      "province": "Bielorrusia oriental y Latgalia"
+    },
+    {
+      "id": "Kaunas",
+      "identityBefore": "Lituania",
+      "annexedIn": 1795,
+      "annexedBy": "Rusia",
+      "province": "Lituania, Curlandia, Polesia y Volinia occidental"
+    },
+    {
+      "id": "Kazimierz",
+      "identityBefore": "Polonia",
+      "annexedIn": 1795,
+      "annexedBy": "Austria",
+      "province": "Galicia Occidental"
+    },
+    {
+      "id": "Kedainiai",
+      "identityBefore": "Lituania",
+      "annexedIn": 1795,
+      "annexedBy": "Rusia",
+      "province": "Lituania, Curlandia, Polesia y Volinia occidental"
+    },
+    {
+      "id": "Kernave",
+      "identityBefore": "Lituania",
+      "annexedIn": 1795,
+      "annexedBy": "Rusia",
+      "province": "Lituania, Curlandia, Polesia y Volinia occidental"
+    },
+    {
+      "id": "Khmilnyk",
+      "identityBefore": "Polonia",
+      "annexedIn": 1793,
+      "annexedBy": "Rusia",
+      "province": "Bielorrusia central, Podolia y Ucrania de la margen derecha"
+    },
+    {
+      "id": "Khoiniki",
+      "identityBefore": "Polonia",
+      "annexedIn": 1793,
+      "annexedBy": "Rusia",
+      "province": "Bielorrusia central, Podolia y Ucrania de la margen derecha"
+    },
+    {
+      "id": "Kholmyech",
+      "identityBefore": "Polonia",
+      "annexedIn": 1793,
+      "annexedBy": "Rusia",
+      "province": "Bielorrusia central, Podolia y Ucrania de la margen derecha"
+    },
+    {
+      "id": "Khorostkiv",
+      "identityBefore": "Polonia",
+      "annexedIn": 1772,
+      "annexedBy": "Austria",
+      "province": "Galicia y Lodomeria"
+    },
+    {
+      "id": "Khotsimsk",
+      "identityBefore": "Lituania",
+      "annexedIn": 1772,
+      "annexedBy": "Rusia",
+      "province": "Bielorrusia oriental y Latgalia"
+    },
+    {
+      "id": "Kielce",
+      "identityBefore": "Polonia",
+      "annexedIn": 1795,
+      "annexedBy": "Austria",
+      "province": "Galicia Occidental"
+    },
+    {
+      "id": "Kletsk",
+      "identityBefore": "Lituania",
+      "annexedIn": 1793,
+      "annexedBy": "Rusia",
+      "province": "Bielorrusia central, Podolia y Ucrania de la margen derecha"
+    },
+    {
+      "id": "Klichaw",
+      "identityBefore": "Lituania",
+      "annexedIn": 1772,
+      "annexedBy": "Rusia",
+      "province": "Bielorrusia oriental y Latgalia"
+    },
+    {
+      "id": "Kobryn",
+      "identityBefore": "Lituania",
+      "annexedIn": 1795,
+      "annexedBy": "Rusia",
+      "province": "Lituania, Curlandia, Polesia y Volinia occidental"
+    },
+    {
+      "id": "Koidanova",
+      "identityBefore": "Lituania",
+      "annexedIn": 1793,
+      "annexedBy": "Rusia",
+      "province": "Bielorrusia central, Podolia y Ucrania de la margen derecha"
+    },
+    {
+      "id": "Kolno",
+      "identityBefore": "Polonia",
+      "annexedIn": 1795,
+      "annexedBy": "Prusia",
+      "province": "Nueva Prusia Oriental y Nueva Silesia"
+    },
+    {
+      "id": "Kolo",
+      "identityBefore": "Polonia",
+      "annexedIn": 1793,
+      "annexedBy": "Prusia",
+      "province": "Prusia Meridional y ciudades de Gdansk y Torun"
+    },
+    {
+      "id": "Kolomyia",
+      "identityBefore": "Polonia",
+      "annexedIn": 1772,
+      "annexedBy": "Austria",
+      "province": "Galicia y Lodomeria"
+    },
+    {
+      "id": "Konin",
+      "identityBefore": "Polonia",
+      "annexedIn": 1793,
+      "annexedBy": "Prusia",
+      "province": "Prusia Meridional y ciudades de Gdansk y Torun"
+    },
+    {
+      "id": "Kopys",
+      "identityBefore": "Lituania",
+      "annexedIn": 1772,
+      "annexedBy": "Rusia",
+      "province": "Bielorrusia oriental y Latgalia"
+    },
+    {
+      "id": "Kopyshche",
+      "identityBefore": "Polonia",
+      "annexedIn": 1793,
+      "annexedBy": "Rusia",
+      "province": "Bielorrusia central, Podolia y Ucrania de la margen derecha"
+    },
+    {
+      "id": "Korets",
+      "identityBefore": "Polonia",
+      "annexedIn": 1795,
+      "annexedBy": "Rusia",
+      "province": "Lituania, Curlandia, Polesia y Volinia occidental"
+    },
+    {
+      "id": "Korosten",
+      "identityBefore": "Polonia",
+      "annexedIn": 1793,
+      "annexedBy": "Rusia",
+      "province": "Bielorrusia central, Podolia y Ucrania de la margen derecha"
+    },
+    {
+      "id": "Korostyshiv",
+      "identityBefore": "Polonia",
+      "annexedIn": 1793,
+      "annexedBy": "Rusia",
+      "province": "Bielorrusia central, Podolia y Ucrania de la margen derecha"
+    },
+    {
+      "id": "Korsun",
+      "identityBefore": "Polonia",
+      "annexedIn": 1793,
+      "annexedBy": "Rusia",
+      "province": "Bielorrusia central, Podolia y Ucrania de la margen derecha"
+    },
+    {
+      "id": "Koscian",
+      "identityBefore": "Polonia",
+      "annexedIn": 1793,
+      "annexedBy": "Prusia",
+      "province": "Prusia Meridional y ciudades de Gdansk y Torun"
+    },
+    {
+      "id": "Koscierzyna",
+      "identityBefore": "Prusia Real",
+      "annexedIn": 1772,
+      "annexedBy": "Prusia",
+      "province": "Prusia Occidental y distrito del Netze"
+    },
+    {
+      "id": "Kosiv",
+      "identityBefore": "Polonia",
+      "annexedIn": 1772,
+      "annexedBy": "Austria",
+      "province": "Galicia y Lodomeria"
+    },
+    {
+      "id": "Kostopil",
+      "identityBefore": "Polonia",
+      "annexedIn": 1795,
+      "annexedBy": "Rusia",
+      "province": "Lituania, Curlandia, Polesia y Volinia occidental"
+    },
+    {
+      "id": "Kovel",
+      "identityBefore": "Polonia",
+      "annexedIn": 1795,
+      "annexedBy": "Rusia",
+      "province": "Lituania, Curlandia, Polesia y Volinia occidental"
+    },
+    {
+      "id": "Kowal",
+      "identityBefore": "Polonia",
+      "annexedIn": 1793,
+      "annexedBy": "Prusia",
+      "province": "Prusia Meridional y ciudades de Gdansk y Torun"
+    },
+    {
+      "id": "Kozmin",
+      "identityBefore": "Polonia",
+      "annexedIn": 1793,
+      "annexedBy": "Prusia",
+      "province": "Prusia Meridional y ciudades de Gdansk y Torun"
+    },
+    {
+      "id": "Krakow",
+      "identityBefore": "Polonia",
+      "annexedIn": 1795,
+      "annexedBy": "Austria",
+      "province": "Galicia Occidental"
+    },
+    {
+      "id": "Kraslava",
+      "identityBefore": "Livonia polaca",
+      "annexedIn": 1772,
+      "annexedBy": "Rusia",
+      "province": "Bielorrusia oriental y Latgalia"
+    },
+    {
+      "id": "Krasnoe",
+      "identityBefore": "Lituania",
+      "annexedIn": 1793,
+      "annexedBy": "Rusia",
+      "province": "Bielorrusia central, Podolia y Ucrania de la margen derecha"
+    },
+    {
+      "id": "Krasnystaw",
+      "identityBefore": "Polonia",
+      "annexedIn": 1795,
+      "annexedBy": "Austria",
+      "province": "Galicia Occidental"
+    },
+    {
+      "id": "Kraziai",
+      "identityBefore": "Lituania",
+      "annexedIn": 1795,
+      "annexedBy": "Rusia",
+      "province": "Lituania, Curlandia, Polesia y Volinia occidental"
+    },
+    {
+      "id": "Kremenets",
+      "identityBefore": "Polonia",
+      "annexedIn": 1795,
+      "annexedBy": "Rusia",
+      "province": "Lituania, Curlandia, Polesia y Volinia occidental"
+    },
+    {
+      "id": "Kreva",
+      "identityBefore": "Lituania",
+      "annexedIn": 1795,
+      "annexedBy": "Rusia",
+      "province": "Lituania, Curlandia, Polesia y Volinia occidental"
+    },
+    {
+      "id": "Krosno",
+      "identityBefore": "Polonia",
+      "annexedIn": 1772,
+      "annexedBy": "Austria",
+      "province": "Galicia y Lodomeria"
+    },
+    {
+      "id": "Krupki",
+      "identityBefore": "Lituania",
+      "annexedIn": 1793,
+      "annexedBy": "Rusia",
+      "province": "Bielorrusia central, Podolia y Ucrania de la margen derecha"
+    },
+    {
+      "id": "Krychaw",
+      "identityBefore": "Lituania",
+      "annexedIn": 1772,
+      "annexedBy": "Rusia",
+      "province": "Bielorrusia oriental y Latgalia"
+    },
+    {
+      "id": "Ksiaz_Wielki",
+      "identityBefore": "Polonia",
+      "annexedIn": 1795,
+      "annexedBy": "Austria",
+      "province": "Galicia Occidental"
+    },
+    {
+      "id": "Kuldiga",
+      "identityBefore": "Curlandia",
+      "annexedIn": 1795,
+      "annexedBy": "Rusia",
+      "province": "Lituania, Curlandia, Polesia y Volinia occidental"
+    },
+    {
+      "id": "Kunow",
+      "identityBefore": "Polonia",
+      "annexedIn": 1795,
+      "annexedBy": "Austria",
+      "province": "Galicia Occidental"
+    },
+    {
+      "id": "Lad_Konin",
+      "identityBefore": "Polonia",
+      "annexedIn": 1793,
+      "annexedBy": "Prusia",
+      "province": "Prusia Meridional y ciudades de Gdansk y Torun"
+    },
+    {
+      "id": "Lahoysk",
+      "identityBefore": "Lituania",
+      "annexedIn": 1793,
+      "annexedBy": "Rusia",
+      "province": "Bielorrusia central, Podolia y Ucrania de la margen derecha"
+    },
+    {
+      "id": "Lakhva",
+      "identityBefore": "Lituania",
+      "annexedIn": 1793,
+      "annexedBy": "Rusia",
+      "province": "Bielorrusia central, Podolia y Ucrania de la margen derecha"
+    },
+    {
+      "id": "Lazdijai",
+      "identityBefore": "Lituania",
+      "annexedIn": 1795,
+      "annexedBy": "Prusia",
+      "province": "Nueva Prusia Oriental y Nueva Silesia"
+    },
+    {
+      "id": "Lebedyn",
+      "identityBefore": "Polonia",
+      "annexedIn": 1793,
+      "annexedBy": "Rusia",
+      "province": "Bielorrusia central, Podolia y Ucrania de la margen derecha"
+    },
+    {
+      "id": "Leczyca",
+      "identityBefore": "Polonia",
+      "annexedIn": 1793,
+      "annexedBy": "Prusia",
+      "province": "Prusia Meridional y ciudades de Gdansk y Torun"
+    },
+    {
+      "id": "Lelchytsy",
+      "identityBefore": "Lituania",
+      "annexedIn": 1793,
+      "annexedBy": "Rusia",
+      "province": "Bielorrusia central, Podolia y Ucrania de la margen derecha"
+    },
+    {
+      "id": "Lelow",
+      "identityBefore": "Polonia",
+      "annexedIn": 1793,
+      "annexedBy": "Prusia",
+      "province": "Prusia Meridional"
+    },
+    {
+      "id": "Lesko",
+      "identityBefore": "Polonia",
+      "annexedIn": 1772,
+      "annexedBy": "Austria",
+      "province": "Galicia y Lodomeria"
+    },
+    {
+      "id": "Letychiv",
+      "identityBefore": "Polonia",
+      "annexedIn": 1793,
+      "annexedBy": "Rusia",
+      "province": "Bielorrusia central, Podolia y Ucrania de la margen derecha"
+    },
+    {
+      "id": "Lida",
+      "identityBefore": "Lituania",
+      "annexedIn": 1795,
+      "annexedBy": "Rusia",
+      "province": "Lituania, Curlandia, Polesia y Volinia occidental"
+    },
+    {
+      "id": "Lidzbark",
+      "identityBefore": "Principado episcopal de Warmia",
+      "annexedIn": 1772,
+      "annexedBy": "Prusia",
+      "province": "Prusia Occidental y distrito del Netze"
+    },
+    {
+      "id": "Linkava",
+      "identityBefore": "Lituania",
+      "annexedIn": 1795,
+      "annexedBy": "Rusia",
+      "province": "Lituania, Curlandia, Polesia y Volinia occidental"
+    },
+    {
+      "id": "Lipno",
+      "identityBefore": "Polonia",
+      "annexedIn": 1793,
+      "annexedBy": "Prusia",
+      "province": "Prusia Meridional y ciudades de Gdansk y Torun"
+    },
+    {
+      "id": "Lipsk",
+      "identityBefore": "Lituania",
+      "annexedIn": 1795,
+      "annexedBy": "Prusia",
+      "province": "Nueva Prusia Oriental y Nueva Silesia"
+    },
+    {
+      "id": "Liubar",
+      "identityBefore": "Polonia",
+      "annexedIn": 1793,
+      "annexedBy": "Rusia",
+      "province": "Bielorrusia central, Podolia y Ucrania de la margen derecha"
+    },
+    {
+      "id": "Liubeshiv",
+      "identityBefore": "Lituania",
+      "annexedIn": 1793,
+      "annexedBy": "Rusia",
+      "province": "Bielorrusia central, Podolia y Ucrania de la margen derecha"
+    },
+    {
+      "id": "Liuboml",
+      "identityBefore": "Polonia",
+      "annexedIn": 1795,
+      "annexedBy": "Rusia",
+      "province": "Lituania, Curlandia, Polesia y Volinia occidental"
+    },
+    {
+      "id": "Liw",
+      "identityBefore": "Polonia",
+      "annexedIn": 1795,
+      "annexedBy": "Austria",
+      "province": "Galicia Occidental"
+    },
+    {
+      "id": "Lodz",
+      "identityBefore": "Polonia",
+      "annexedIn": 1793,
+      "annexedBy": "Prusia",
+      "province": "Prusia Meridional y ciudades de Gdansk y Torun"
+    },
+    {
+      "id": "Lomza",
+      "identityBefore": "Polonia",
+      "annexedIn": 1795,
+      "annexedBy": "Prusia",
+      "province": "Nueva Prusia Oriental y Nueva Silesia"
+    },
+    {
+      "id": "Lubaczow",
+      "identityBefore": "Polonia",
+      "annexedIn": 1772,
+      "annexedBy": "Austria",
+      "province": "Galicia y Lodomeria"
+    },
+    {
+      "id": "Lubartow",
+      "identityBefore": "Polonia",
+      "annexedIn": 1795,
+      "annexedBy": "Austria",
+      "province": "Galicia Occidental"
+    },
+    {
+      "id": "Lubawa",
+      "identityBefore": "Prusia Real",
+      "annexedIn": 1772,
+      "annexedBy": "Prusia",
+      "province": "Prusia Occidental y distrito del Netze"
+    },
+    {
+      "id": "Lublin",
+      "identityBefore": "Polonia",
+      "annexedIn": 1795,
+      "annexedBy": "Austria",
+      "province": "Galicia Occidental"
+    },
+    {
+      "id": "Luchin",
+      "identityBefore": "Lituania",
+      "annexedIn": 1793,
+      "annexedBy": "Rusia",
+      "province": "Bielorrusia central, Podolia y Ucrania de la margen derecha"
+    },
+    {
+      "id": "Lukolm",
+      "identityBefore": "Lituania",
+      "annexedIn": 1793,
+      "annexedBy": "Rusia",
+      "province": "Bielorrusia central, Podolia y Ucrania de la margen derecha"
+    },
+    {
+      "id": "Lukow",
+      "identityBefore": "Polonia",
+      "annexedIn": 1795,
+      "annexedBy": "Austria",
+      "province": "Galicia Occidental"
+    },
+    {
+      "id": "Luninets",
+      "identityBefore": "Lituania",
+      "annexedIn": 1793,
+      "annexedBy": "Rusia",
+      "province": "Bielorrusia central, Podolia y Ucrania de la margen derecha"
+    },
+    {
+      "id": "Lutsk",
+      "identityBefore": "Polonia",
+      "annexedIn": 1795,
+      "annexedBy": "Rusia",
+      "province": "Lituania, Curlandia, Polesia y Volinia occidental"
+    },
+    {
+      "id": "Lviv",
+      "identityBefore": "Polonia",
+      "annexedIn": 1772,
+      "annexedBy": "Austria",
+      "province": "Galicia y Lodomeria"
+    },
+    {
+      "id": "Lyakhavichy",
+      "identityBefore": "Lituania",
+      "annexedIn": 1795,
+      "annexedBy": "Rusia",
+      "province": "Lituania, Curlandia, Polesia y Volinia occidental"
+    },
+    {
+      "id": "Lyubashany",
+      "identityBefore": "Lituania",
+      "annexedIn": 1793,
+      "annexedBy": "Rusia",
+      "province": "Bielorrusia central, Podolia y Ucrania de la margen derecha"
+    },
+    {
+      "id": "Lyubcha",
+      "identityBefore": "Lituania",
+      "annexedIn": 1795,
+      "annexedBy": "Rusia",
+      "province": "Lituania, Curlandia, Polesia y Volinia occidental"
+    },
+    {
+      "id": "Makonkalns",
+      "identityBefore": "Livonia polaca",
+      "annexedIn": 1772,
+      "annexedBy": "Rusia",
+      "province": "Bielorrusia oriental y Latgalia"
+    },
+    {
+      "id": "Malaryta",
+      "identityBefore": "Lituania",
+      "annexedIn": 1795,
+      "annexedBy": "Rusia",
+      "province": "Lituania, Curlandia, Polesia y Volinia occidental"
+    },
+    {
+      "id": "Malbork",
+      "identityBefore": "Prusia Real",
+      "annexedIn": 1772,
+      "annexedBy": "Prusia",
+      "province": "Prusia Occidental y distrito del Netze"
+    },
+    {
+      "id": "Maleisiai",
+      "identityBefore": "Lituania",
+      "annexedIn": 1795,
+      "annexedBy": "Rusia",
+      "province": "Lituania, Curlandia, Polesia y Volinia occidental"
+    },
+    {
+      "id": "Malyn",
+      "identityBefore": "Polonia",
+      "annexedIn": 1793,
+      "annexedBy": "Rusia",
+      "province": "Bielorrusia central, Podolia y Ucrania de la margen derecha"
+    },
+    {
+      "id": "Marjina_Horka",
+      "identityBefore": "Lituania",
+      "annexedIn": 1793,
+      "annexedBy": "Rusia",
+      "province": "Bielorrusia central, Podolia y Ucrania de la margen derecha"
+    },
+    {
+      "id": "Masty",
+      "identityBefore": "Lituania",
+      "annexedIn": 1795,
+      "annexedBy": "Rusia",
+      "province": "Lituania, Curlandia, Polesia y Volinia occidental"
+    },
+    {
+      "id": "Mazeikiai",
+      "identityBefore": "Lituania",
+      "annexedIn": 1795,
+      "annexedBy": "Rusia",
+      "province": "Lituania, Curlandia, Polesia y Volinia occidental"
+    },
+    {
+      "id": "Mazyr",
+      "identityBefore": "Lituania",
+      "annexedIn": 1793,
+      "annexedBy": "Rusia",
+      "province": "Bielorrusia central, Podolia y Ucrania de la margen derecha"
+    },
+    {
+      "id": "Medininkai",
+      "identityBefore": "Lituania",
+      "annexedIn": 1795,
+      "annexedBy": "Rusia",
+      "province": "Lituania, Curlandia, Polesia y Volinia occidental"
+    },
+    {
+      "id": "Medininkai_Vilna",
+      "identityBefore": "Lituania",
+      "annexedIn": 1795,
+      "annexedBy": "Rusia",
+      "province": "Lituania, Curlandia, Polesia y Volinia occidental"
+    },
+    {
+      "id": "Melnytsya",
+      "identityBefore": "Polonia",
+      "annexedIn": 1795,
+      "annexedBy": "Rusia",
+      "province": "Lituania, Curlandia, Polesia y Volinia occidental"
+    },
+    {
+      "id": "Merkine",
+      "identityBefore": "Lituania",
+      "annexedIn": 1795,
+      "annexedBy": "Rusia",
+      "province": "Lituania, Curlandia, Polesia y Volinia occidental"
+    },
+    {
+      "id": "Mezhybozhe",
+      "identityBefore": "Polonia",
+      "annexedIn": 1793,
+      "annexedBy": "Rusia",
+      "province": "Bielorrusia central, Podolia y Ucrania de la margen derecha"
+    },
+    {
+      "id": "Miedzyrzecz",
+      "identityBefore": "Polonia",
+      "annexedIn": 1793,
+      "annexedBy": "Prusia",
+      "province": "Prusia Meridional y ciudades de Gdansk y Torun"
+    },
+    {
+      "id": "Mielnik",
+      "identityBefore": "Polonia",
+      "annexedIn": 1795,
+      "annexedBy": "Austria",
+      "province": "Galicia Occidental"
+    },
+    {
+      "id": "Mikulino",
+      "identityBefore": "Lituania",
+      "annexedIn": 1772,
+      "annexedBy": "Rusia",
+      "province": "Bielorrusia oriental y Latgalia"
+    },
+    {
+      "id": "Minsk",
+      "identityBefore": "Lituania",
+      "annexedIn": 1793,
+      "annexedBy": "Rusia",
+      "province": "Bielorrusia central, Podolia y Ucrania de la margen derecha"
+    },
+    {
+      "id": "Miory",
+      "identityBefore": "Lituania",
+      "annexedIn": 1795,
+      "annexedBy": "Rusia",
+      "province": "Lituania, Curlandia, Polesia y Volinia occidental"
+    },
+    {
+      "id": "Mirochowo",
+      "identityBefore": "Prusia Real",
+      "annexedIn": 1772,
+      "annexedBy": "Prusia",
+      "province": "Prusia Occidental y distrito del Netze"
+    },
+    {
+      "id": "Mogilev",
+      "identityBefore": "Lituania",
+      "annexedIn": 1772,
+      "annexedBy": "Rusia",
+      "province": "Bielorrusia oriental y Latgalia"
+    },
+    {
+      "id": "Mogilno",
+      "identityBefore": "Polonia",
+      "annexedIn": 1793,
+      "annexedBy": "Prusia",
+      "province": "Prusia Meridional y ciudades de Gdansk y Torun"
+    },
+    {
+      "id": "Mohyliv_Podilskyi",
+      "identityBefore": "Polonia",
+      "annexedIn": 1793,
+      "annexedBy": "Rusia",
+      "province": "Bielorrusia central, Podolia y Ucrania de la margen derecha"
+    },
+    {
+      "id": "Monastyrshchina",
+      "identityBefore": "Lituania",
+      "annexedIn": 1772,
+      "annexedBy": "Rusia",
+      "province": "Bielorrusia oriental y Latgalia"
+    },
+    {
+      "id": "Motal",
+      "identityBefore": "Lituania",
+      "annexedIn": 1793,
+      "annexedBy": "Rusia",
+      "province": "Bielorrusia central, Podolia y Ucrania de la margen derecha"
+    },
+    {
+      "id": "Mstow",
+      "identityBefore": "Polonia",
+      "annexedIn": 1793,
+      "annexedBy": "Prusia",
+      "province": "Prusia Meridional"
+    },
+    {
+      "id": "Mstsislaw",
+      "identityBefore": "Lituania",
+      "annexedIn": 1772,
+      "annexedBy": "Rusia",
+      "province": "Bielorrusia oriental y Latgalia"
+    },
+    {
+      "id": "Myadzyel",
+      "identityBefore": "Lituania",
+      "annexedIn": 1795,
+      "annexedBy": "Rusia",
+      "province": "Lituania, Curlandia, Polesia y Volinia occidental"
+    },
+    {
+      "id": "Mychesk",
+      "identityBefore": "Polonia",
+      "annexedIn": 1793,
+      "annexedBy": "Rusia",
+      "province": "Bielorrusia central, Podolia y Ucrania de la margen derecha"
+    },
+    {
+      "id": "Myslenice",
+      "identityBefore": "Polonia",
+      "annexedIn": 1772,
+      "annexedBy": "Austria",
+      "province": "Galicia y Lodomeria"
+    },
+    {
+      "id": "Naklo",
+      "identityBefore": "Polonia",
+      "annexedIn": 1772,
+      "annexedBy": "Prusia",
+      "province": "Prusia Occidental y distrito del Netze"
+    },
+    {
+      "id": "Narodychi",
+      "identityBefore": "Polonia",
+      "annexedIn": 1793,
+      "annexedBy": "Rusia",
+      "province": "Bielorrusia central, Podolia y Ucrania de la margen derecha"
+    },
+    {
+      "id": "Nekloch",
+      "identityBefore": "Lituania",
+      "annexedIn": 1772,
+      "annexedBy": "Rusia",
+      "province": "Bielorrusia oriental y Latgalia"
+    },
+    {
+      "id": "Nevel",
+      "identityBefore": "Lituania",
+      "annexedIn": 1772,
+      "annexedBy": "Rusia",
+      "province": "Bielorrusia oriental y Latgalia"
+    },
+    {
+      "id": "Nobel",
+      "identityBefore": "Lituania",
+      "annexedIn": 1793,
+      "annexedBy": "Rusia",
+      "province": "Bielorrusia central, Podolia y Ucrania de la margen derecha"
+    },
+    {
+      "id": "Novogrudok",
+      "identityBefore": "Lituania",
+      "annexedIn": 1795,
+      "annexedBy": "Rusia",
+      "province": "Lituania, Curlandia, Polesia y Volinia occidental"
+    },
+    {
+      "id": "Novohrad_Volynskyi",
+      "identityBefore": "Polonia",
+      "annexedIn": 1793,
+      "annexedBy": "Rusia",
+      "province": "Bielorrusia central, Podolia y Ucrania de la margen derecha"
+    },
+    {
+      "id": "Novy_Bykhaw",
+      "identityBefore": "Lituania",
+      "annexedIn": 1772,
+      "annexedBy": "Rusia",
+      "province": "Bielorrusia oriental y Latgalia"
+    },
+    {
+      "id": "Nowy_Sacz",
+      "identityBefore": "Polonia",
+      "annexedIn": 1772,
+      "annexedBy": "Austria",
+      "province": "Galicia y Lodomeria"
+    },
+    {
+      "id": "Nowy_Targ",
+      "identityBefore": "Polonia",
+      "annexedIn": 1772,
+      "annexedBy": "Austria",
+      "province": "Galicia y Lodomeria"
+    },
+    {
+      "id": "Nur",
+      "identityBefore": "Polonia",
+      "annexedIn": 1795,
+      "annexedBy": "Prusia",
+      "province": "Nueva Prusia Oriental y Nueva Silesia"
+    },
+    {
+      "id": "Nyasvizh",
+      "identityBefore": "Lituania",
+      "annexedIn": 1795,
+      "annexedBy": "Rusia",
+      "province": "Lituania, Curlandia, Polesia y Volinia occidental"
+    },
+    {
+      "id": "Oborniki",
+      "identityBefore": "Polonia",
+      "annexedIn": 1793,
+      "annexedBy": "Prusia",
+      "province": "Prusia Meridional y ciudades de Gdansk y Torun"
+    },
+    {
+      "id": "Olevsk",
+      "identityBefore": "Polonia",
+      "annexedIn": 1793,
+      "annexedBy": "Rusia",
+      "province": "Bielorrusia central, Podolia y Ucrania de la margen derecha"
+    },
+    {
+      "id": "Olsztyn",
+      "identityBefore": "Principado episcopal de Warmia",
+      "annexedIn": 1772,
+      "annexedBy": "Prusia",
+      "province": "Prusia Occidental y distrito del Netze"
+    },
+    {
+      "id": "Onushkis",
+      "identityBefore": "Lituania",
+      "annexedIn": 1795,
+      "annexedBy": "Rusia",
+      "province": "Lituania, Curlandia, Polesia y Volinia occidental"
+    },
+    {
+      "id": "Opatow",
+      "identityBefore": "Polonia",
+      "annexedIn": 1795,
+      "annexedBy": "Austria",
+      "province": "Galicia Occidental"
+    },
+    {
+      "id": "Opoczno",
+      "identityBefore": "Polonia",
+      "annexedIn": 1795,
+      "annexedBy": "Austria",
+      "province": "Galicia Occidental"
+    },
+    {
+      "id": "Orlow",
+      "identityBefore": "Polonia",
+      "annexedIn": 1793,
+      "annexedBy": "Prusia",
+      "province": "Prusia Meridional y ciudades de Gdansk y Torun"
+    },
+    {
+      "id": "Orsha",
+      "identityBefore": "Lituania",
+      "annexedIn": 1772,
+      "annexedBy": "Rusia",
+      "province": "Bielorrusia oriental y Latgalia"
+    },
+    {
+      "id": "Ostroh",
+      "identityBefore": "Polonia",
+      "annexedIn": 1795,
+      "annexedBy": "Rusia",
+      "province": "Lituania, Curlandia, Polesia y Volinia occidental"
+    },
+    {
+      "id": "Ostroleka",
+      "identityBefore": "Polonia",
+      "annexedIn": 1795,
+      "annexedBy": "Prusia",
+      "province": "Nueva Prusia Oriental y Nueva Silesia"
+    },
+    {
+      "id": "Ostrow_Wielkopolski",
+      "identityBefore": "Polonia",
+      "annexedIn": 1793,
+      "annexedBy": "Prusia",
+      "province": "Prusia Meridional y ciudades de Gdansk y Torun"
+    },
+    {
+      "id": "Ostrzeszow",
+      "identityBefore": "Polonia",
+      "annexedIn": 1793,
+      "annexedBy": "Prusia",
+      "province": "Prusia Meridional y ciudades de Gdansk y Torun"
+    },
+    {
+      "id": "Oswiecim",
+      "identityBefore": "Polonia",
+      "annexedIn": 1772,
+      "annexedBy": "Austria",
+      "province": "Galicia y Lodomeria"
+    },
+    {
+      "id": "Ovruch",
+      "identityBefore": "Polonia",
+      "annexedIn": 1793,
+      "annexedBy": "Rusia",
+      "province": "Bielorrusia central, Podolia y Ucrania de la margen derecha"
+    },
+    {
+      "id": "Palanga",
+      "identityBefore": "Lituania",
+      "annexedIn": 1795,
+      "annexedBy": "Rusia",
+      "province": "Lituania, Curlandia, Polesia y Volinia occidental"
+    },
+    {
+      "id": "Panemune",
+      "identityBefore": "Lituania",
+      "annexedIn": 1795,
+      "annexedBy": "Rusia",
+      "province": "Lituania, Curlandia, Polesia y Volinia occidental"
+    },
+    {
+      "id": "Panevezys",
+      "identityBefore": "Lituania",
+      "annexedIn": 1795,
+      "annexedBy": "Rusia",
+      "province": "Lituania, Curlandia, Polesia y Volinia occidental"
+    },
+    {
+      "id": "Papile",
+      "identityBefore": "Lituania",
+      "annexedIn": 1795,
+      "annexedBy": "Rusia",
+      "province": "Lituania, Curlandia, Polesia y Volinia occidental"
+    },
+    {
+      "id": "Pasvalys",
+      "identityBefore": "Lituania",
+      "annexedIn": 1795,
+      "annexedBy": "Rusia",
+      "province": "Lituania, Curlandia, Polesia y Volinia occidental"
+    },
+    {
+      "id": "Peremyl",
+      "identityBefore": "Polonia",
+      "annexedIn": 1795,
+      "annexedBy": "Rusia",
+      "province": "Lituania, Curlandia, Polesia y Volinia occidental"
+    },
+    {
+      "id": "Peresopnytsya",
+      "identityBefore": "Polonia",
+      "annexedIn": 1795,
+      "annexedBy": "Rusia",
+      "province": "Lituania, Curlandia, Polesia y Volinia occidental"
+    },
+    {
+      "id": "Pietalava",
+      "identityBefore": "Livonia polaca",
+      "annexedIn": 1772,
+      "annexedBy": "Rusia",
+      "province": "Bielorrusia oriental y Latgalia"
+    },
+    {
+      "id": "Pietrykaw",
+      "identityBefore": "Lituania",
+      "annexedIn": 1793,
+      "annexedBy": "Rusia",
+      "province": "Bielorrusia central, Podolia y Ucrania de la margen derecha"
+    },
+    {
+      "id": "Piltene",
+      "identityBefore": "Curlandia",
+      "annexedIn": 1795,
+      "annexedBy": "Rusia",
+      "province": "Lituania, Curlandia, Polesia y Volinia occidental"
+    },
+    {
+      "id": "Pilzno",
+      "identityBefore": "Polonia",
+      "annexedIn": 1772,
+      "annexedBy": "Austria",
+      "province": "Galicia y Lodomeria"
+    },
+    {
+      "id": "Pinsk",
+      "identityBefore": "Lituania",
+      "annexedIn": 1793,
+      "annexedBy": "Rusia",
+      "province": "Bielorrusia central, Podolia y Ucrania de la margen derecha"
+    },
+    {
+      "id": "Piotrkow_Trybunalski",
+      "identityBefore": "Polonia",
+      "annexedIn": 1793,
+      "annexedBy": "Prusia",
+      "province": "Prusia Meridional y ciudades de Gdansk y Torun"
+    },
+    {
+      "id": "Piskorowice",
+      "identityBefore": "Polonia",
+      "annexedIn": 1772,
+      "annexedBy": "Austria",
+      "province": "Galicia y Lodomeria"
+    },
+    {
+      "id": "Pleszew",
+      "identityBefore": "Polonia",
+      "annexedIn": 1793,
+      "annexedBy": "Prusia",
+      "province": "Prusia Meridional y ciudades de Gdansk y Torun"
+    },
+    {
+      "id": "Plock",
+      "identityBefore": "Polonia",
+      "annexedIn": 1793,
+      "annexedBy": "Prusia",
+      "province": "Prusia Meridional y ciudades de Gdansk y Torun"
+    },
+    {
+      "id": "Plonsk",
+      "identityBefore": "Polonia",
+      "annexedIn": 1795,
+      "annexedBy": "Prusia",
+      "province": "Nueva Prusia Oriental y Nueva Silesia"
+    },
+    {
+      "id": "Pohrebyshche",
+      "identityBefore": "Polonia",
+      "annexedIn": 1793,
+      "annexedBy": "Rusia",
+      "province": "Bielorrusia central, Podolia y Ucrania de la margen derecha"
+    },
+    {
+      "id": "Polonne",
+      "identityBefore": "Polonia",
+      "annexedIn": 1793,
+      "annexedBy": "Rusia",
+      "province": "Bielorrusia central, Podolia y Ucrania de la margen derecha"
+    },
+    {
+      "id": "Polotsk",
+      "identityBefore": "Lituania",
+      "annexedIn": 1793,
+      "annexedBy": "Rusia",
+      "province": "Bielorrusia central, Podolia y Ucrania de la margen derecha"
+    },
+    {
+      "id": "Porazava",
+      "identityBefore": "Lituania",
+      "annexedIn": 1795,
+      "annexedBy": "Rusia",
+      "province": "Lituania, Curlandia, Polesia y Volinia occidental"
+    },
+    {
+      "id": "Poznan",
+      "identityBefore": "Polonia",
+      "annexedIn": 1793,
+      "annexedBy": "Prusia",
+      "province": "Prusia Meridional y ciudades de Gdansk y Torun"
+    },
+    {
+      "id": "Proszowice",
+      "identityBefore": "Polonia",
+      "annexedIn": 1795,
+      "annexedBy": "Austria",
+      "province": "Galicia Occidental"
+    },
+    {
+      "id": "Przasnysz",
+      "identityBefore": "Polonia",
+      "annexedIn": 1795,
+      "annexedBy": "Prusia",
+      "province": "Nueva Prusia Oriental y Nueva Silesia"
+    },
+    {
+      "id": "Przedborz",
+      "identityBefore": "Polonia",
+      "annexedIn": 1795,
+      "annexedBy": "Austria",
+      "province": "Galicia Occidental"
+    },
+    {
+      "id": "Przemysl",
+      "identityBefore": "Polonia",
+      "annexedIn": 1772,
+      "annexedBy": "Austria",
+      "province": "Galicia y Lodomeria"
+    },
+    {
+      "id": "Puck",
+      "identityBefore": "Prusia Real",
+      "annexedIn": 1772,
+      "annexedBy": "Prusia",
+      "province": "Prusia Occidental y distrito del Netze"
+    },
+    {
+      "id": "Punia",
+      "identityBefore": "Lituania",
+      "annexedIn": 1795,
+      "annexedBy": "Rusia",
+      "province": "Lituania, Curlandia, Polesia y Volinia occidental"
+    },
+    {
+      "id": "Pyzdry",
+      "identityBefore": "Polonia",
+      "annexedIn": 1793,
+      "annexedBy": "Prusia",
+      "province": "Prusia Meridional y ciudades de Gdansk y Torun"
+    },
+    {
+      "id": "Radom",
+      "identityBefore": "Polonia",
+      "annexedIn": 1795,
+      "annexedBy": "Austria",
+      "province": "Galicia Occidental"
+    },
+    {
+      "id": "Radomsko",
+      "identityBefore": "Polonia",
+      "annexedIn": 1793,
+      "annexedBy": "Prusia",
+      "province": "Prusia Meridional y ciudades de Gdansk y Torun"
+    },
+    {
+      "id": "Radziejow",
+      "identityBefore": "Polonia",
+      "annexedIn": 1793,
+      "annexedBy": "Prusia",
+      "province": "Prusia Meridional y ciudades de Gdansk y Torun"
+    },
+    {
+      "id": "Rahachow",
+      "identityBefore": "Lituania",
+      "annexedIn": 1793,
+      "annexedBy": "Rusia",
+      "province": "Bielorrusia central, Podolia y Ucrania de la margen derecha"
+    },
+    {
+      "id": "Rakau",
+      "identityBefore": "Lituania",
+      "annexedIn": 1793,
+      "annexedBy": "Rusia",
+      "province": "Bielorrusia central, Podolia y Ucrania de la margen derecha"
+    },
+    {
+      "id": "Raseiniai",
+      "identityBefore": "Lituania",
+      "annexedIn": 1795,
+      "annexedBy": "Rusia",
+      "province": "Lituania, Curlandia, Polesia y Volinia occidental"
+    },
+    {
+      "id": "Rasony",
+      "identityBefore": "Lituania",
+      "annexedIn": 1772,
+      "annexedBy": "Rusia",
+      "province": "Bielorrusia oriental y Latgalia"
+    },
+    {
+      "id": "Ratne",
+      "identityBefore": "Polonia",
+      "annexedIn": 1795,
+      "annexedBy": "Rusia",
+      "province": "Lituania, Curlandia, Polesia y Volinia occidental"
+    },
+    {
+      "id": "Rawa",
+      "identityBefore": "Polonia",
+      "annexedIn": 1793,
+      "annexedBy": "Prusia",
+      "province": "Prusia Meridional y ciudades de Gdansk y Torun"
+    },
+    {
+      "id": "Rawicz",
+      "identityBefore": "Polonia",
+      "annexedIn": 1793,
+      "annexedBy": "Prusia",
+      "province": "Prusia Meridional y ciudades de Gdansk y Torun"
+    },
+    {
+      "id": "Rechytsa",
+      "identityBefore": "Lituania",
+      "annexedIn": 1793,
+      "annexedBy": "Rusia",
+      "province": "Bielorrusia central, Podolia y Ucrania de la margen derecha"
+    },
+    {
+      "id": "Rezekne",
+      "identityBefore": "Livonia polaca",
+      "annexedIn": 1772,
+      "annexedBy": "Rusia",
+      "province": "Bielorrusia oriental y Latgalia"
+    },
+    {
+      "id": "Rietavas",
+      "identityBefore": "Lituania",
+      "annexedIn": 1795,
+      "annexedBy": "Rusia",
+      "province": "Lituania, Curlandia, Polesia y Volinia occidental"
+    },
+    {
+      "id": "Rivne",
+      "identityBefore": "Polonia",
+      "annexedIn": 1795,
+      "annexedBy": "Rusia",
+      "province": "Lituania, Curlandia, Polesia y Volinia occidental"
+    },
+    {
+      "id": "Rohatyn",
+      "identityBefore": "Polonia",
+      "annexedIn": 1772,
+      "annexedBy": "Austria",
+      "province": "Galicia y Lodomeria"
+    },
+    {
+      "id": "Rokiskis",
+      "identityBefore": "Lituania",
+      "annexedIn": 1795,
+      "annexedBy": "Rusia",
+      "province": "Lituania, Curlandia, Polesia y Volinia occidental"
+    },
+    {
+      "id": "Rov",
+      "identityBefore": "Polonia",
+      "annexedIn": 1793,
+      "annexedBy": "Rusia",
+      "province": "Bielorrusia central, Podolia y Ucrania de la margen derecha"
+    },
+    {
+      "id": "Rozan",
+      "identityBefore": "Polonia",
+      "annexedIn": 1795,
+      "annexedBy": "Prusia",
+      "province": "Nueva Prusia Oriental y Nueva Silesia"
+    },
+    {
+      "id": "Rozhyshche",
+      "identityBefore": "Polonia",
+      "annexedIn": 1795,
+      "annexedBy": "Rusia",
+      "province": "Lituania, Curlandia, Polesia y Volinia occidental"
+    },
+    {
+      "id": "Rozkishna",
+      "identityBefore": "Polonia",
+      "annexedIn": 1793,
+      "annexedBy": "Rusia",
+      "province": "Bielorrusia central, Podolia y Ucrania de la margen derecha"
+    },
+    {
+      "id": "Rudnik_Poland",
+      "identityBefore": "Polonia",
+      "annexedIn": 1795,
+      "annexedBy": "Austria",
+      "province": "Galicia Occidental"
+    },
+    {
+      "id": "Rudnya",
+      "identityBefore": "Lituania",
+      "annexedIn": 1772,
+      "annexedBy": "Rusia",
+      "province": "Bielorrusia oriental y Latgalia"
+    },
+    {
+      "id": "Rudobelka",
+      "identityBefore": "Lituania",
+      "annexedIn": 1793,
+      "annexedBy": "Rusia",
+      "province": "Bielorrusia central, Podolia y Ucrania de la margen derecha"
+    },
+    {
+      "id": "Rypin",
+      "identityBefore": "Polonia",
+      "annexedIn": 1793,
+      "annexedBy": "Prusia",
+      "province": "Prusia Meridional y ciudades de Gdansk y Torun"
+    },
+    {
+      "id": "Rzeszow",
+      "identityBefore": "Polonia",
+      "annexedIn": 1772,
+      "annexedBy": "Austria",
+      "province": "Galicia y Lodomeria"
+    },
+    {
+      "id": "Saldus",
+      "identityBefore": "Curlandia",
+      "annexedIn": 1795,
+      "annexedBy": "Rusia",
+      "province": "Lituania, Curlandia, Polesia y Volinia occidental"
+    },
+    {
+      "id": "Sambir",
+      "identityBefore": "Polonia",
+      "annexedIn": 1772,
+      "annexedBy": "Austria",
+      "province": "Galicia y Lodomeria"
+    },
+    {
+      "id": "Sandomierz",
+      "identityBefore": "Polonia",
+      "annexedIn": 1795,
+      "annexedBy": "Austria",
+      "province": "Galicia Occidental"
+    },
+    {
+      "id": "Sanok",
+      "identityBefore": "Polonia",
+      "annexedIn": 1772,
+      "annexedBy": "Austria",
+      "province": "Galicia y Lodomeria"
+    },
+    {
+      "id": "Savran",
+      "identityBefore": "Polonia",
+      "annexedIn": 1793,
+      "annexedBy": "Rusia",
+      "province": "Bielorrusia central, Podolia y Ucrania de la margen derecha"
+    },
+    {
+      "id": "Selpils",
+      "identityBefore": "Curlandia",
+      "annexedIn": 1795,
+      "annexedBy": "Rusia",
+      "province": "Lituania, Curlandia, Polesia y Volinia occidental"
+    },
+    {
+      "id": "Shatsk",
+      "identityBefore": "Polonia",
+      "annexedIn": 1795,
+      "annexedBy": "Rusia",
+      "province": "Lituania, Curlandia, Polesia y Volinia occidental"
+    },
+    {
+      "id": "Shchuchyn",
+      "identityBefore": "Lituania",
+      "annexedIn": 1795,
+      "annexedBy": "Rusia",
+      "province": "Lituania, Curlandia, Polesia y Volinia occidental"
+    },
+    {
+      "id": "Sherbiv",
+      "identityBefore": "Polonia",
+      "annexedIn": 1793,
+      "annexedBy": "Rusia",
+      "province": "Bielorrusia central, Podolia y Ucrania de la margen derecha"
+    },
+    {
+      "id": "Shumyachi",
+      "identityBefore": "Lituania",
+      "annexedIn": 1772,
+      "annexedBy": "Rusia",
+      "province": "Bielorrusia oriental y Latgalia"
+    },
+    {
+      "id": "Siauliai",
+      "identityBefore": "Lituania",
+      "annexedIn": 1795,
+      "annexedBy": "Rusia",
+      "province": "Lituania, Curlandia, Polesia y Volinia occidental"
+    },
+    {
+      "id": "Sieradz",
+      "identityBefore": "Polonia",
+      "annexedIn": 1793,
+      "annexedBy": "Prusia",
+      "province": "Prusia Meridional y ciudades de Gdansk y Torun"
+    },
+    {
+      "id": "Sierpc",
+      "identityBefore": "Polonia",
+      "annexedIn": 1793,
+      "annexedBy": "Prusia",
+      "province": "Prusia Meridional y ciudades de Gdansk y Torun"
+    },
+    {
+      "id": "Silale",
+      "identityBefore": "Lituania",
+      "annexedIn": 1795,
+      "annexedBy": "Rusia",
+      "province": "Lituania, Curlandia, Polesia y Volinia occidental"
+    },
+    {
+      "id": "Skuodas",
+      "identityBefore": "Lituania",
+      "annexedIn": 1795,
+      "annexedBy": "Rusia",
+      "province": "Lituania, Curlandia, Polesia y Volinia occidental"
+    },
+    {
+      "id": "Skvyra",
+      "identityBefore": "Polonia",
+      "annexedIn": 1793,
+      "annexedBy": "Rusia",
+      "province": "Bielorrusia central, Podolia y Ucrania de la margen derecha"
+    },
+    {
+      "id": "Skwierzyna",
+      "identityBefore": "Polonia",
+      "annexedIn": 1793,
+      "annexedBy": "Prusia",
+      "province": "Prusia Meridional y ciudades de Gdansk y Torun"
+    },
+    {
+      "id": "Slawharad",
+      "identityBefore": "Lituania",
+      "annexedIn": 1772,
+      "annexedBy": "Rusia",
+      "province": "Bielorrusia oriental y Latgalia"
+    },
+    {
+      "id": "Slonim",
+      "identityBefore": "Lituania",
+      "annexedIn": 1795,
+      "annexedBy": "Rusia",
+      "province": "Lituania, Curlandia, Polesia y Volinia occidental"
+    },
+    {
+      "id": "Slutsk",
+      "identityBefore": "Lituania",
+      "annexedIn": 1793,
+      "annexedBy": "Rusia",
+      "province": "Bielorrusia central, Podolia y Ucrania de la margen derecha"
+    },
+    {
+      "id": "Smalyavichy",
+      "identityBefore": "Lituania",
+      "annexedIn": 1793,
+      "annexedBy": "Rusia",
+      "province": "Bielorrusia central, Podolia y Ucrania de la margen derecha"
+    },
+    {
+      "id": "Smila",
+      "identityBefore": "Polonia",
+      "annexedIn": 1793,
+      "annexedBy": "Rusia",
+      "province": "Bielorrusia central, Podolia y Ucrania de la margen derecha"
+    },
+    {
+      "id": "Sniatyn",
+      "identityBefore": "Polonia",
+      "annexedIn": 1772,
+      "annexedBy": "Austria",
+      "province": "Galicia y Lodomeria"
+    },
+    {
+      "id": "Sochaczew",
+      "identityBefore": "Polonia",
+      "annexedIn": 1793,
+      "annexedBy": "Prusia",
+      "province": "Prusia Meridional y ciudades de Gdansk y Torun"
+    },
+    {
+      "id": "Sokal",
+      "identityBefore": "Polonia",
+      "annexedIn": 1772,
+      "annexedBy": "Austria",
+      "province": "Galicia y Lodomeria"
+    },
+    {
+      "id": "Sokilets",
+      "identityBefore": "Polonia",
+      "annexedIn": 1793,
+      "annexedBy": "Rusia",
+      "province": "Bielorrusia central, Podolia y Ucrania de la margen derecha"
+    },
+    {
+      "id": "Sokolka",
+      "identityBefore": "Lituania",
+      "annexedIn": 1795,
+      "annexedBy": "Prusia",
+      "province": "Nueva Prusia Oriental y Nueva Silesia"
+    },
+    {
+      "id": "Sokolow",
+      "identityBefore": "Polonia",
+      "annexedIn": 1795,
+      "annexedBy": "Austria",
+      "province": "Galicia Occidental"
+    },
+    {
+      "id": "Srem",
+      "identityBefore": "Polonia",
+      "annexedIn": 1793,
+      "annexedBy": "Prusia",
+      "province": "Prusia Meridional y ciudades de Gdansk y Torun"
+    },
+    {
+      "id": "Sroda_Wielkopolska",
+      "identityBefore": "Polonia",
+      "annexedIn": 1793,
+      "annexedBy": "Prusia",
+      "province": "Prusia Meridional y ciudades de Gdansk y Torun"
+    },
+    {
+      "id": "Starobin",
+      "identityBefore": "Lituania",
+      "annexedIn": 1793,
+      "annexedBy": "Rusia",
+      "province": "Bielorrusia central, Podolia y Ucrania de la margen derecha"
+    },
+    {
+      "id": "Staryya_Darohi",
+      "identityBefore": "Lituania",
+      "annexedIn": 1793,
+      "annexedBy": "Rusia",
+      "province": "Bielorrusia central, Podolia y Ucrania de la margen derecha"
+    },
+    {
+      "id": "Stepan",
+      "identityBefore": "Polonia",
+      "annexedIn": 1795,
+      "annexedBy": "Rusia",
+      "province": "Lituania, Curlandia, Polesia y Volinia occidental"
+    },
+    {
+      "id": "Stezyca",
+      "identityBefore": "Polonia",
+      "annexedIn": 1795,
+      "annexedBy": "Austria",
+      "province": "Galicia Occidental"
+    },
+    {
+      "id": "Stodolichi",
+      "identityBefore": "Polonia",
+      "annexedIn": 1793,
+      "annexedBy": "Rusia",
+      "province": "Bielorrusia central, Podolia y Ucrania de la margen derecha"
+    },
+    {
+      "id": "Stolin",
+      "identityBefore": "Lituania",
+      "annexedIn": 1793,
+      "annexedBy": "Rusia",
+      "province": "Bielorrusia central, Podolia y Ucrania de la margen derecha"
+    },
+    {
+      "id": "Stowbtsy",
+      "identityBefore": "Lituania",
+      "annexedIn": 1793,
+      "annexedBy": "Rusia",
+      "province": "Bielorrusia central, Podolia y Ucrania de la margen derecha"
+    },
+    {
+      "id": "Streshyn",
+      "identityBefore": "Lituania",
+      "annexedIn": 1793,
+      "annexedBy": "Rusia",
+      "province": "Bielorrusia central, Podolia y Ucrania de la margen derecha"
+    },
+    {
+      "id": "Stryi",
+      "identityBefore": "Polonia",
+      "annexedIn": 1772,
+      "annexedBy": "Austria",
+      "province": "Galicia y Lodomeria"
+    },
+    {
+      "id": "Suraz",
+      "identityBefore": "Polonia",
+      "annexedIn": 1795,
+      "annexedBy": "Prusia",
+      "province": "Nueva Prusia Oriental y Nueva Silesia"
+    },
+    {
+      "id": "Suwalki",
+      "identityBefore": "Lituania",
+      "annexedIn": 1795,
+      "annexedBy": "Prusia",
+      "province": "Nueva Prusia Oriental y Nueva Silesia"
+    },
+    {
+      "id": "Svencionys",
+      "identityBefore": "Lituania",
+      "annexedIn": 1795,
+      "annexedBy": "Rusia",
+      "province": "Lituania, Curlandia, Polesia y Volinia occidental"
+    },
+    {
+      "id": "Svietlahorsk",
+      "identityBefore": "Lituania",
+      "annexedIn": 1793,
+      "annexedBy": "Rusia",
+      "province": "Bielorrusia central, Podolia y Ucrania de la margen derecha"
+    },
+    {
+      "id": "Svir",
+      "identityBefore": "Lituania",
+      "annexedIn": 1795,
+      "annexedBy": "Rusia",
+      "province": "Lituania, Curlandia, Polesia y Volinia occidental"
+    },
+    {
+      "id": "Svislach",
+      "identityBefore": "Lituania",
+      "annexedIn": 1793,
+      "annexedBy": "Rusia",
+      "province": "Bielorrusia central, Podolia y Ucrania de la margen derecha"
+    },
+    {
+      "id": "Syanno",
+      "identityBefore": "Lituania",
+      "annexedIn": 1772,
+      "annexedBy": "Rusia",
+      "province": "Bielorrusia oriental y Latgalia"
+    },
+    {
+      "id": "Szadek",
+      "identityBefore": "Polonia",
+      "annexedIn": 1793,
+      "annexedBy": "Prusia",
+      "province": "Prusia Meridional y ciudades de Gdansk y Torun"
+    },
+    {
+      "id": "Szamotuly",
+      "identityBefore": "Polonia",
+      "annexedIn": 1793,
+      "annexedBy": "Prusia",
+      "province": "Prusia Meridional y ciudades de Gdansk y Torun"
+    },
+    {
+      "id": "Szrensk",
+      "identityBefore": "Polonia",
+      "annexedIn": 1793,
+      "annexedBy": "Prusia",
+      "province": "Prusia Meridional y ciudades de Gdansk y Torun"
+    },
+    {
+      "id": "Szubin",
+      "identityBefore": "Polonia",
+      "annexedIn": 1772,
+      "annexedBy": "Prusia",
+      "province": "Prusia Occidental y distrito del Netze"
+    },
+    {
+      "id": "Szydlowiec",
+      "identityBefore": "Polonia",
+      "annexedIn": 1795,
+      "annexedBy": "Austria",
+      "province": "Galicia Occidental"
+    },
+    {
+      "id": "Tarczyn",
+      "identityBefore": "Polonia",
+      "annexedIn": 1795,
+      "annexedBy": "Prusia",
+      "province": "Nueva Prusia Oriental y Nueva Silesia"
+    },
+    {
+      "id": "Tarnow",
+      "identityBefore": "Polonia",
+      "annexedIn": 1772,
+      "annexedBy": "Austria",
+      "province": "Galicia y Lodomeria"
+    },
+    {
+      "id": "Taurage",
+      "identityBefore": "Lituania",
+      "annexedIn": 1795,
+      "annexedBy": "Rusia",
+      "province": "Lituania, Curlandia, Polesia y Volinia occidental"
+    },
+    {
+      "id": "Tczew",
+      "identityBefore": "Prusia Real",
+      "annexedIn": 1772,
+      "annexedBy": "Prusia",
+      "province": "Prusia Occidental y distrito del Netze"
+    },
+    {
+      "id": "Tendziogala",
+      "identityBefore": "Lituania",
+      "annexedIn": 1795,
+      "annexedBy": "Rusia",
+      "province": "Lituania, Curlandia, Polesia y Volinia occidental"
+    },
+    {
+      "id": "Teplyk",
+      "identityBefore": "Polonia",
+      "annexedIn": 1793,
+      "annexedBy": "Rusia",
+      "province": "Bielorrusia central, Podolia y Ucrania de la margen derecha"
+    },
+    {
+      "id": "Terebovlia",
+      "identityBefore": "Polonia",
+      "annexedIn": 1772,
+      "annexedBy": "Austria",
+      "province": "Galicia y Lodomeria"
+    },
+    {
+      "id": "Ternopil",
+      "identityBefore": "Polonia",
+      "annexedIn": 1772,
+      "annexedBy": "Austria",
+      "province": "Galicia y Lodomeria"
+    },
+    {
+      "id": "Torhovytsia",
+      "identityBefore": "Polonia",
+      "annexedIn": 1793,
+      "annexedBy": "Rusia",
+      "province": "Bielorrusia central, Podolia y Ucrania de la margen derecha"
+    },
+    {
+      "id": "Torun",
+      "identityBefore": "Prusia Real",
+      "annexedIn": 1793,
+      "annexedBy": "Prusia",
+      "province": "Prusia Meridional y ciudades de Gdansk y Torun"
+    },
+    {
+      "id": "Trakai",
+      "identityBefore": "Lituania",
+      "annexedIn": 1795,
+      "annexedBy": "Rusia",
+      "province": "Lituania, Curlandia, Polesia y Volinia occidental"
+    },
+    {
+      "id": "Trzemeszno",
+      "identityBefore": "Polonia",
+      "annexedIn": 1793,
+      "annexedBy": "Prusia",
+      "province": "Prusia Meridional y ciudades de Gdansk y Torun"
+    },
+    {
+      "id": "Tsybuliv",
+      "identityBefore": "Polonia",
+      "annexedIn": 1793,
+      "annexedBy": "Rusia",
+      "province": "Bielorrusia central, Podolia y Ucrania de la margen derecha"
+    },
+    {
+      "id": "Tukums",
+      "identityBefore": "Curlandia",
+      "annexedIn": 1795,
+      "annexedBy": "Rusia",
+      "province": "Lituania, Curlandia, Polesia y Volinia occidental"
+    },
+    {
+      "id": "Turek",
+      "identityBefore": "Polonia",
+      "annexedIn": 1793,
+      "annexedBy": "Prusia",
+      "province": "Prusia Meridional y ciudades de Gdansk y Torun"
+    },
+    {
+      "id": "Turets",
+      "identityBefore": "Lituania",
+      "annexedIn": 1795,
+      "annexedBy": "Rusia",
+      "province": "Lituania, Curlandia, Polesia y Volinia occidental"
+    },
+    {
+      "id": "Turiisk",
+      "identityBefore": "Polonia",
+      "annexedIn": 1795,
+      "annexedBy": "Rusia",
+      "province": "Lituania, Curlandia, Polesia y Volinia occidental"
+    },
+    {
+      "id": "Turka",
+      "identityBefore": "Polonia",
+      "annexedIn": 1772,
+      "annexedBy": "Austria",
+      "province": "Galicia y Lodomeria"
+    },
+    {
+      "id": "Turov",
+      "identityBefore": "Lituania",
+      "annexedIn": 1793,
+      "annexedBy": "Rusia",
+      "province": "Bielorrusia central, Podolia y Ucrania de la margen derecha"
+    },
+    {
+      "id": "Tuszyn",
+      "identityBefore": "Polonia",
+      "annexedIn": 1793,
+      "annexedBy": "Prusia",
+      "province": "Prusia Meridional y ciudades de Gdansk y Torun"
+    },
+    {
+      "id": "Tyatseryn",
+      "identityBefore": "Lituania",
+      "annexedIn": 1772,
+      "annexedBy": "Rusia",
+      "province": "Bielorrusia oriental y Latgalia"
+    },
+    {
+      "id": "Tykhomel",
+      "identityBefore": "Polonia",
+      "annexedIn": 1795,
+      "annexedBy": "Rusia",
+      "province": "Lituania, Curlandia, Polesia y Volinia occidental"
+    },
+    {
+      "id": "Tykocin",
+      "identityBefore": "Polonia",
+      "annexedIn": 1795,
+      "annexedBy": "Prusia",
+      "province": "Nueva Prusia Oriental y Nueva Silesia"
+    },
+    {
+      "id": "Tysmenytsia",
+      "identityBefore": "Polonia",
+      "annexedIn": 1772,
+      "annexedBy": "Austria",
+      "province": "Galicia y Lodomeria"
+    },
+    {
+      "id": "Ugrovesk",
+      "identityBefore": "Polonia",
+      "annexedIn": 1795,
+      "annexedBy": "Rusia",
+      "province": "Lituania, Curlandia, Polesia y Volinia occidental"
+    },
+    {
+      "id": "Uman",
+      "identityBefore": "Polonia",
+      "annexedIn": 1793,
+      "annexedBy": "Rusia",
+      "province": "Bielorrusia central, Podolia y Ucrania de la margen derecha"
+    },
+    {
+      "id": "Uniejow",
+      "identityBefore": "Polonia",
+      "annexedIn": 1793,
+      "annexedBy": "Prusia",
+      "province": "Prusia Meridional y ciudades de Gdansk y Torun"
+    },
+    {
+      "id": "Upyte",
+      "identityBefore": "Lituania",
+      "annexedIn": 1795,
+      "annexedBy": "Rusia",
+      "province": "Lituania, Curlandia, Polesia y Volinia occidental"
+    },
+    {
+      "id": "Urzedow",
+      "identityBefore": "Polonia",
+      "annexedIn": 1795,
+      "annexedBy": "Austria",
+      "province": "Galicia Occidental"
+    },
+    {
+      "id": "Ushytsia",
+      "identityBefore": "Polonia",
+      "annexedIn": 1793,
+      "annexedBy": "Rusia",
+      "province": "Bielorrusia central, Podolia y Ucrania de la margen derecha"
+    },
+    {
+      "id": "Usvyaty",
+      "identityBefore": "Lituania",
+      "annexedIn": 1772,
+      "annexedBy": "Rusia",
+      "province": "Bielorrusia oriental y Latgalia"
+    },
+    {
+      "id": "Utena",
+      "identityBefore": "Lituania",
+      "annexedIn": 1795,
+      "annexedBy": "Rusia",
+      "province": "Lituania, Curlandia, Polesia y Volinia occidental"
+    },
+    {
+      "id": "Vawkavysk",
+      "identityBefore": "Lituania",
+      "annexedIn": 1795,
+      "annexedBy": "Rusia",
+      "province": "Lituania, Curlandia, Polesia y Volinia occidental"
+    },
+    {
+      "id": "Veisiejai",
+      "identityBefore": "Lituania",
+      "annexedIn": 1795,
+      "annexedBy": "Prusia",
+      "province": "Nueva Prusia Oriental y Nueva Silesia"
+    },
+    {
+      "id": "Velizh",
+      "identityBefore": "Lituania",
+      "annexedIn": 1772,
+      "annexedBy": "Rusia",
+      "province": "Bielorrusia oriental y Latgalia"
+    },
+    {
+      "id": "Ventspils",
+      "identityBefore": "Curlandia",
+      "annexedIn": 1795,
+      "annexedBy": "Rusia",
+      "province": "Lituania, Curlandia, Polesia y Volinia occidental"
+    },
+    {
+      "id": "Vilaka",
+      "identityBefore": "Livonia polaca",
+      "annexedIn": 1772,
+      "annexedBy": "Rusia",
+      "province": "Bielorrusia oriental y Latgalia"
+    },
+    {
+      "id": "Vileyka",
+      "identityBefore": "Lituania",
+      "annexedIn": 1795,
+      "annexedBy": "Rusia",
+      "province": "Lituania, Curlandia, Polesia y Volinia occidental"
+    },
+    {
+      "id": "Vilkaviskis",
+      "identityBefore": "Lituania",
+      "annexedIn": 1795,
+      "annexedBy": "Prusia",
+      "province": "Nueva Prusia Oriental y Nueva Silesia"
+    },
+    {
+      "id": "Vilkmerge",
+      "identityBefore": "Lituania",
+      "annexedIn": 1795,
+      "annexedBy": "Rusia",
+      "province": "Lituania, Curlandia, Polesia y Volinia occidental"
+    },
+    {
+      "id": "Vilnius",
+      "identityBefore": "Lituania",
+      "annexedIn": 1795,
+      "annexedBy": "Rusia",
+      "province": "Lituania, Curlandia, Polesia y Volinia occidental"
+    },
+    {
+      "id": "Vinnytsia",
+      "identityBefore": "Polonia",
+      "annexedIn": 1793,
+      "annexedBy": "Rusia",
+      "province": "Bielorrusia central, Podolia y Ucrania de la margen derecha"
+    },
+    {
+      "id": "Viry",
+      "identityBefore": "Polonia",
+      "annexedIn": 1793,
+      "annexedBy": "Rusia",
+      "province": "Bielorrusia central, Podolia y Ucrania de la margen derecha"
+    },
+    {
+      "id": "Vitebsk",
+      "identityBefore": "Lituania",
+      "annexedIn": 1772,
+      "annexedBy": "Rusia",
+      "province": "Bielorrusia oriental y Latgalia"
+    },
+    {
+      "id": "Volodymyr",
+      "identityBefore": "Polonia",
+      "annexedIn": 1795,
+      "annexedBy": "Rusia",
+      "province": "Lituania, Curlandia, Polesia y Volinia occidental"
+    },
+    {
+      "id": "Volodymyrets",
+      "identityBefore": "Polonia",
+      "annexedIn": 1795,
+      "annexedBy": "Rusia",
+      "province": "Lituania, Curlandia, Polesia y Volinia occidental"
+    },
+    {
+      "id": "Vowpa",
+      "identityBefore": "Lituania",
+      "annexedIn": 1795,
+      "annexedBy": "Rusia",
+      "province": "Lituania, Curlandia, Polesia y Volinia occidental"
+    },
+    {
+      "id": "Vyada",
+      "identityBefore": "Lituania",
+      "annexedIn": 1795,
+      "annexedBy": "Rusia",
+      "province": "Lituania, Curlandia, Polesia y Volinia occidental"
+    },
+    {
+      "id": "Vydreya",
+      "identityBefore": "Lituania",
+      "annexedIn": 1772,
+      "annexedBy": "Rusia",
+      "province": "Bielorrusia oriental y Latgalia"
+    },
+    {
+      "id": "Vydritsa",
+      "identityBefore": "Lituania",
+      "annexedIn": 1772,
+      "annexedBy": "Rusia",
+      "province": "Bielorrusia oriental y Latgalia"
+    },
+    {
+      "id": "Walcz",
+      "identityBefore": "Polonia",
+      "annexedIn": 1772,
+      "annexedBy": "Prusia",
+      "province": "Prusia Occidental y distrito del Netze"
+    },
+    {
+      "id": "Warsaw",
+      "identityBefore": "Polonia",
+      "annexedIn": 1795,
+      "annexedBy": "Prusia",
+      "province": "Nueva Prusia Oriental y Nueva Silesia"
+    },
+    {
+      "id": "Wielen",
+      "identityBefore": "Polonia",
+      "annexedIn": 1793,
+      "annexedBy": "Prusia",
+      "province": "Prusia Meridional y ciudades de Gdansk y Torun"
+    },
+    {
+      "id": "Wieliczka",
+      "identityBefore": "Polonia",
+      "annexedIn": 1772,
+      "annexedBy": "Austria",
+      "province": "Galicia y Lodomeria"
+    },
+    {
+      "id": "Wielun",
+      "identityBefore": "Polonia",
+      "annexedIn": 1793,
+      "annexedBy": "Prusia",
+      "province": "Prusia Meridional y ciudades de Gdansk y Torun"
+    },
+    {
+      "id": "Wieruszow",
+      "identityBefore": "Polonia",
+      "annexedIn": 1793,
+      "annexedBy": "Prusia",
+      "province": "Prusia Meridional y ciudades de Gdansk y Torun"
+    },
+    {
+      "id": "Wislica",
+      "identityBefore": "Polonia",
+      "annexedIn": 1793,
+      "annexedBy": "Rusia",
+      "province": "Bielorrusia central, Podolia y Ucrania de la margen derecha"
+    },
+    {
+      "id": "Wizna",
+      "identityBefore": "Polonia",
+      "annexedIn": 1795,
+      "annexedBy": "Prusia",
+      "province": "Nueva Prusia Oriental y Nueva Silesia"
+    },
+    {
+      "id": "Wloclawek",
+      "identityBefore": "Polonia",
+      "annexedIn": 1793,
+      "annexedBy": "Prusia",
+      "province": "Prusia Meridional y ciudades de Gdansk y Torun"
+    },
+    {
+      "id": "Wlodawa",
+      "identityBefore": "Lituania",
+      "annexedIn": 1795,
+      "annexedBy": "Austria",
+      "province": "Galicia Occidental"
+    },
+    {
+      "id": "Wschowa",
+      "identityBefore": "Polonia",
+      "annexedIn": 1793,
+      "annexedBy": "Prusia",
+      "province": "Prusia Meridional y ciudades de Gdansk y Torun"
+    },
+    {
+      "id": "Wyrzysk",
+      "identityBefore": "Polonia",
+      "annexedIn": 1772,
+      "annexedBy": "Prusia",
+      "province": "Prusia Occidental y distrito del Netze"
+    },
+    {
+      "id": "Yaroslav_Poland",
+      "identityBefore": "Polonia",
+      "annexedIn": 1772,
+      "annexedBy": "Austria",
+      "province": "Galicia y Lodomeria"
+    },
+    {
+      "id": "Yavoriv",
+      "identityBefore": "Polonia",
+      "annexedIn": 1772,
+      "annexedBy": "Austria",
+      "province": "Galicia y Lodomeria"
+    },
+    {
+      "id": "Yemilchyne",
+      "identityBefore": "Polonia",
+      "annexedIn": 1793,
+      "annexedBy": "Rusia",
+      "province": "Bielorrusia central, Podolia y Ucrania de la margen derecha"
+    },
+    {
+      "id": "Zagare",
+      "identityBefore": "Lituania",
+      "annexedIn": 1795,
+      "annexedBy": "Rusia",
+      "province": "Lituania, Curlandia, Polesia y Volinia occidental"
+    },
+    {
+      "id": "Zakroczym",
+      "identityBefore": "Polonia",
+      "annexedIn": 1795,
+      "annexedBy": "Prusia",
+      "province": "Nueva Prusia Oriental y Nueva Silesia"
+    },
+    {
+      "id": "Zalishchyky",
+      "identityBefore": "Polonia",
+      "annexedIn": 1793,
+      "annexedBy": "Rusia",
+      "province": "Bielorrusia central, Podolia y Ucrania de la margen derecha"
+    },
+    {
+      "id": "Zambrow",
+      "identityBefore": "Polonia",
+      "annexedIn": 1795,
+      "annexedBy": "Prusia",
+      "province": "Nueva Prusia Oriental y Nueva Silesia"
+    },
+    {
+      "id": "Zarnow",
+      "identityBefore": "Polonia",
+      "annexedIn": 1795,
+      "annexedBy": "Austria",
+      "province": "Galicia Occidental"
+    },
+    {
+      "id": "Zavallia",
+      "identityBefore": "Polonia",
+      "annexedIn": 1793,
+      "annexedBy": "Rusia",
+      "province": "Bielorrusia central, Podolia y Ucrania de la margen derecha"
+    },
+    {
+      "id": "Zbarazh",
+      "identityBefore": "Polonia",
+      "annexedIn": 1795,
+      "annexedBy": "Rusia",
+      "province": "Lituania, Curlandia, Polesia y Volinia occidental"
+    },
+    {
+      "id": "Zdvizhen",
+      "identityBefore": "Polonia",
+      "annexedIn": 1793,
+      "annexedBy": "Rusia",
+      "province": "Bielorrusia central, Podolia y Ucrania de la margen derecha"
+    },
+    {
+      "id": "Zdzitov",
+      "identityBefore": "Lituania",
+      "annexedIn": 1795,
+      "annexedBy": "Rusia",
+      "province": "Lituania, Curlandia, Polesia y Volinia occidental"
+    },
+    {
+      "id": "Zgierz",
+      "identityBefore": "Polonia",
+      "annexedIn": 1793,
+      "annexedBy": "Prusia",
+      "province": "Prusia Meridional y ciudades de Gdansk y Torun"
+    },
+    {
+      "id": "Zhovkva",
+      "identityBefore": "Polonia",
+      "annexedIn": 1772,
+      "annexedBy": "Austria",
+      "province": "Galicia y Lodomeria"
+    },
+    {
+      "id": "Zhydachiv",
+      "identityBefore": "Polonia",
+      "annexedIn": 1772,
+      "annexedBy": "Austria",
+      "province": "Galicia y Lodomeria"
+    },
+    {
+      "id": "Zhytkavichy",
+      "identityBefore": "Lituania",
+      "annexedIn": 1793,
+      "annexedBy": "Rusia",
+      "province": "Bielorrusia central, Podolia y Ucrania de la margen derecha"
+    },
+    {
+      "id": "Zhytomyr",
+      "identityBefore": "Polonia",
+      "annexedIn": 1793,
+      "annexedBy": "Rusia",
+      "province": "Bielorrusia central, Podolia y Ucrania de la margen derecha"
+    },
+    {
+      "id": "Zlotow",
+      "identityBefore": "Polonia",
+      "annexedIn": 1772,
+      "annexedBy": "Prusia",
+      "province": "Prusia Occidental y distrito del Netze"
+    },
+    {
+      "id": "Znin",
+      "identityBefore": "Polonia",
+      "annexedIn": 1772,
+      "annexedBy": "Prusia",
+      "province": "Prusia Occidental y distrito del Netze"
+    },
+    {
+      "id": "Zvenyhorod",
+      "identityBefore": "Polonia",
+      "annexedIn": 1772,
+      "annexedBy": "Austria",
+      "province": "Galicia y Lodomeria"
+    },
+    {
+      "id": "Zvenyhorodka",
+      "identityBefore": "Polonia",
+      "annexedIn": 1793,
+      "annexedBy": "Rusia",
+      "province": "Bielorrusia central, Podolia y Ucrania de la margen derecha"
+    },
+    {
+      "id": "Zwolen",
+      "identityBefore": "Polonia",
+      "annexedIn": 1795,
+      "annexedBy": "Austria",
+      "province": "Galicia Occidental"
+    },
+    {
+      "id": "Zywiec",
+      "identityBefore": "Polonia",
+      "annexedIn": 1772,
+      "annexedBy": "Austria",
+      "province": "Galicia y Lodomeria"
+    }
+  ],
+  "mixedCells": [
+    {
+      "id": "Polotsk",
+      "from": 1772,
+      "through": 1792,
+      "owners": [
+        "Polonia-Lituania",
+        "Rusia"
+      ],
+      "reason": "El polígono engloba ambas orillas del Dvina: mitad oriental rusa desde 1772, occidental incorporada en 1793. La celda se presenta como composición geográfica."
+    },
+    {
+      "id": "Alytus",
+      "from": 1795,
+      "through": 1800,
+      "owners": [
+        "Prusia",
+        "Rusia"
+      ],
+      "reason": "Celda que abarca ambas orillas del Niemen. La frontera de 1795 separa la orilla prusiana del ámbito ruso; no se atribuye todo el polígono por el nombre de la ciudad."
+    },
+    {
+      "id": "Kaunas",
+      "from": 1795,
+      "through": 1800,
+      "owners": [
+        "Prusia",
+        "Rusia"
+      ],
+      "reason": "Celda que abarca ambas orillas del Niemen. La frontera de 1795 separa la orilla prusiana del ámbito ruso; no se atribuye todo el polígono por el nombre de la ciudad."
+    }
+  ],
+  "limitations": [
+    "Escala anual: la fecha indica el año del reparto, sin pretender una instantánea diaria de ocupaciones militares o ratificaciones.",
+    "Las celdas del mapa son comarcas modernas de referencia; no constituyen fronteras históricas exactas. Las celdas atravesadas por un límite se explican como aproximaciones regionales.",
+    "La insurrección de 1794 no se representa como anexión legal ni como restauración uniforme del territorio.",
+    "Kwidzyn permanece en el ámbito prusiano tras 1466: se distingue de la Prusia Real adquirida en 1772."
+  ],
+  "continuitySeeds": [
+    {
+      "corridor": "Europa septentrional y oriental",
+      "name": "Prusia Real",
+      "color": "#da63cc",
+      "active": {
+        "from": 1466,
+        "through": 1650,
+        "reason": "Provincia autónoma dentro de la Corona polaca; conserva identidad regional sin convertirse en un Estado vecino.",
+        "source": "https://zpe.gov.pl/a/polskie-dynastie-jagiellonowie/D12LkQne7"
+      },
+      "note": "Provincia autónoma de la Corona desde 1466. Danzig y Chelmno se mantienen como regiones históricas, pero reciben el mismo color que la Corona polaca; Warmia queda en una capa episcopal propia.",
+      "versions": [
+        {
+          "from": 1400,
+          "oldIds": [],
+          "ids": [],
+          "borderline": []
+        },
+        {
+          "from": 1466,
+          "oldIds": [
+            "Danzig",
+            "Chelmno"
+          ],
+          "ids": [
+            "Brodnica",
+            "Chelmno",
+            "Dzierzgon",
+            "Elblag",
+            "Gdansk",
+            "Gniew",
+            "Grudziadz",
+            "Koscierzyna",
+            "Lubawa",
+            "Malbork",
+            "Mirochowo",
+            "Puck",
+            "Tczew",
+            "Torun",
+            "Tuchola"
+          ],
+          "borderline": []
+        },
+        {
+          "from": 1570,
+          "oldIds": [
+            "Danzig",
+            "Chelmno"
+          ],
+          "ids": [
+            "Brodnica",
+            "Chelmno",
+            "Gdansk",
+            "Gniew",
+            "Grudziadz",
+            "Koscierzyna",
+            "Lubawa",
+            "Mirochowo",
+            "Puck",
+            "Tczew",
+            "Torun"
+          ],
+          "borderline": []
+        }
+      ]
+    },
+    {
+      "corridor": "Europa septentrional y oriental",
+      "name": "Prusia de la Orden",
+      "color": "#495672",
+      "active": {
+        "through": 1524,
+        "reason": "El estado de la Orden Teutónica fue secularizado como Ducado de Prusia en 1525.",
+        "source": "https://zpe.gov.pl/a/prezentacja-multimedialna/DbYm1LK96"
+      },
+      "note": "Remanente de la Orden tras la Segunda Paz de Toruń; su sujeción feudal a Polonia no equivale a incorporación.",
+      "versions": [
+        {
+          "from": 1400,
+          "oldIds": [
+            "Lower_Prussia",
+            "Upper_Prussia",
+            "Masuria",
+            "Danzig",
+            "Chelmno",
+            "Warmia"
+          ],
+          "ids": [
+            "Balga",
+            "Barten",
+            "Brandenburg_Prussia",
+            "Brodnica",
+            "Chelmno",
+            "Dzierzgon",
+            "Elblag",
+            "Elk",
+            "Fischhausen",
+            "Frombork",
+            "Gdansk",
+            "Gerdauen",
+            "Gniew",
+            "Grudziadz",
+            "Insterburg",
+            "Konigsberg",
+            "Koscierzyna",
+            "Kwidzyn",
+            "Lidzbark",
+            "Lubawa",
+            "Malbork",
+            "Mirochowo",
+            "Morag",
+            "Nibork",
+            "Olsztyn",
+            "Ostroda",
+            "Puck",
+            "Ryn_Poland",
+            "Szczytno",
+            "Tczew",
+            "Torun",
+            "Tuchola",
+            "Wegorzewo",
+            "Wehlau"
+          ],
+          "borderline": []
+        },
+        {
+          "from": 1454,
+          "oldIds": [
+            "Lower_Prussia",
+            "Upper_Prussia",
+            "Masuria"
+          ],
+          "ids": [
+            "Balga",
+            "Barten",
+            "Brandenburg_Prussia",
+            "Elk",
+            "Fischhausen",
+            "Gerdauen",
+            "Insterburg",
+            "Konigsberg",
+            "Kwidzyn",
+            "Morag",
+            "Nibork",
+            "Ostroda",
+            "Ryn_Poland",
+            "Szczytno",
+            "Wegorzewo",
+            "Wehlau"
+          ],
+          "borderline": []
+        },
+        {
+          "from": 1525,
+          "oldIds": [],
+          "ids": [],
+          "borderline": []
+        }
+      ]
+    },
+    {
+      "corridor": "Europa septentrional y oriental",
+      "name": "Prusia ducal",
+      "color": "#303C59",
+      "active": {
+        "from": 1525,
+        "through": 1650,
+        "reason": "Ducado separado y feudo polaco desde 1525; la unión personal con Brandeburgo desde 1618 no lo incorporó a la Corona.",
+        "source": "https://zpe.gov.pl/a/prezentacja-multimedialna/DbYm1LK96"
+      },
+      "note": "Ducado secular desde 1525 y feudo polaco. La unión personal con Brandeburgo desde 1618 no supuso incorporación ni convierte sus tierras en territorio de Brandeburgo.",
+      "versions": [
+        {
+          "from": 1400,
+          "oldIds": [],
+          "ids": [],
+          "borderline": []
+        },
+        {
+          "from": 1525,
+          "oldIds": [
+            "Lower_Prussia",
+            "Upper_Prussia",
+            "Masuria"
+          ],
+          "ids": [
+            "Balga",
+            "Barten",
+            "Brandenburg_Prussia",
+            "Elk",
+            "Fischhausen",
+            "Gerdauen",
+            "Insterburg",
+            "Konigsberg",
+            "Kwidzyn",
+            "Morag",
+            "Nibork",
+            "Ostroda",
+            "Ryn_Poland",
+            "Szczytno",
+            "Wegorzewo",
+            "Wehlau"
+          ],
+          "borderline": []
+        },
+        {
+          "from": 1570,
+          "oldIds": [
+            "Lower_Prussia",
+            "Upper_Prussia",
+            "Masuria"
+          ],
+          "ids": [
+            "Balga",
+            "Barten",
+            "Brandenburg_Prussia",
+            "Dzierzgon",
+            "Elblag",
+            "Elk",
+            "Fischhausen",
+            "Gerdauen",
+            "Insterburg",
+            "Konigsberg",
+            "Kwidzyn",
+            "Malbork",
+            "Morag",
+            "Nibork",
+            "Ostroda",
+            "Ryn_Poland",
+            "Szczytno",
+            "Wegorzewo",
+            "Wehlau"
+          ],
+          "borderline": []
+        }
+      ]
+    },
+    {
+      "corridor": "Europa septentrional y oriental",
+      "name": "Principado episcopal de Warmia",
+      "color": "#947a55",
+      "active": {
+        "from": 1466,
+        "through": 1650,
+        "reason": "Warmia se muestra como principado episcopal diferenciado tras la Segunda Paz de Toruń; no se dibuja como parte de la administración ordinaria de la Corona.",
+        "source": "https://www.agad.gov.pl/mow/unia2C_eng.pdf"
+      },
+      "note": "Se muestra solo el polígono regional heredado de Warmia; el príncipe-obispo conservó una jurisdicción diferenciada bajo la protección y autoridad superior polaca.",
+      "versions": [
+        {
+          "from": 1400,
+          "oldIds": [],
+          "ids": [],
+          "borderline": []
+        },
+        {
+          "from": 1466,
+          "oldIds": [
+            "Warmia"
+          ],
+          "ids": [
+            "Frombork",
+            "Lidzbark",
+            "Olsztyn"
+          ],
+          "borderline": []
+        }
+      ]
+    },
+    {
+      "corridor": "Europa septentrional y oriental",
+      "name": "Ducado de Curlandia",
+      "color": "#71854f",
+      "active": {
+        "from": 1561,
+        "through": 1650,
+        "reason": "Ducado autónomo y feudo de la Mancomunidad desde 1561; se conserva separado de Polonia-Lituania.",
+        "source": "https://dspace.lu.lv/items/8812084a-b442-4c43-b827-e490e42aac55"
+      },
+      "note": "Ducado autónomo vasallo de la Mancomunidad, no provincia integrada de Polonia-Lituania. El polígono Courland es una aproximación al ducado y Semigalia.",
+      "versions": [
+        {
+          "from": 1400,
+          "oldIds": [],
+          "ids": [],
+          "borderline": []
+        },
+        {
+          "from": 1561,
+          "oldIds": [
+            "Courland"
+          ],
+          "ids": [
+            "Dundaga",
+            "Durbe",
+            "Grobina",
+            "Kandava",
+            "Kuldiga",
+            "Piltene",
+            "Saldus",
+            "Ventspils"
+          ],
+          "borderline": []
+        }
+      ]
+    },
+    {
+      "corridor": "Europa septentrional y oriental",
+      "name": "Moscovia y Zarato de Rusia",
+      "color": "#86694f",
+      "active": {
+        "from": 1400,
+        "through": 1650,
+        "reason": "La capa sigue adquisiciones fechadas de Moscovia y el Zarato; Nóvgorod, Pskov, Tver, Riazán y Kazán se separan hasta sus anexiones.",
+        "source": "https://www.cambridge.org/core/books/abs/cambridge-history-of-russia/growth-of-muscovy-14621533/BCBC6FD430448E9337252DFBCE9069EE"
+      },
+      "note": "Moscovia incorpora principados y repúblicas por fechas; el título de zar se adopta en 1547. Las ubicaciones de Novgorod, Pskov, Tver, Riazán y Kazán se asignan solo tras su anexión.",
+      "versions": [
+        {
+          "from": 1400,
+          "oldIds": [
+            "Moscow",
+            "Vladimir",
+            "Kostroma"
+          ],
+          "ids": [
+            "Bronnitsy",
+            "Kostroma",
+            "Moscow",
+            "Moshok",
+            "Muromtsevo_Murom",
+            "Nerekhta",
+            "Odintsovo",
+            "Osovets",
+            "Ostrovskoye",
+            "Pushkino",
+            "Rogozh",
+            "Sudislavl",
+            "Sudogda",
+            "Vladimir",
+            "Vlasovo",
+            "Vokhna",
+            "Yakovlevskoye_Bolshoye",
+            "Yaropolch",
+            "Zolotkovo"
+          ],
+          "borderline": []
+        },
+        {
+          "from": 1463,
+          "oldIds": [
+            "Moscow",
+            "Vladimir",
+            "Kostroma",
+            "Yaroslavl"
+          ],
+          "ids": [
+            "Bolshoye_Selo",
+            "Bronnitsy",
+            "Danilov",
+            "Kostroma",
+            "Kurba",
+            "Moscow",
+            "Moshok",
+            "Muromtsevo_Murom",
+            "Nerekhta",
+            "Odintsovo",
+            "Osovets",
+            "Ostrovskoye",
+            "Pushkino",
+            "Rogozh",
+            "Romanov",
+            "Sol_Velikaya",
+            "Sudislavl",
+            "Sudogda",
+            "Ust_Sheksna",
+            "Vladimir",
+            "Vlasovo",
+            "Vokhna",
+            "Yakovlevskoye_Bolshoye",
+            "Yaropolch",
+            "Yaroslavl",
+            "Zolotkovo"
+          ],
+          "borderline": []
+        },
+        {
+          "from": 1474,
+          "oldIds": [
+            "Moscow",
+            "Vladimir",
+            "Kostroma",
+            "Yaroslavl",
+            "Rostov"
+          ],
+          "ids": [
+            "Bolshoye_Selo",
+            "Borisogleb",
+            "Bronnitsy",
+            "Danilov",
+            "Kostroma",
+            "Kurba",
+            "Moscow",
+            "Moshok",
+            "Muromtsevo_Murom",
+            "Nerekhta",
+            "Odintsovo",
+            "Osovets",
+            "Ostrovskoye",
+            "Petrovsk_Rostov",
+            "Pushkino",
+            "Rogozh",
+            "Romanov",
+            "Rostov",
+            "Sol_Velikaya",
+            "Sudislavl",
+            "Sudogda",
+            "Ust_Sheksna",
+            "Vladimir",
+            "Vlasovo",
+            "Vokhna",
+            "Yakovlevskoye_Bolshoye",
+            "Yaropolch",
+            "Yaroslavl",
+            "Zolotkovo"
+          ],
+          "borderline": []
+        },
+        {
+          "from": 1478,
+          "oldIds": [
+            "Moscow",
+            "Vladimir",
+            "Kostroma",
+            "Yaroslavl",
+            "Rostov"
+          ],
+          "ids": [
+            "Bolshoye_Selo",
+            "Borisogleb",
+            "Bronnitsy",
+            "Danilov",
+            "Kostroma",
+            "Kurba",
+            "Moscow",
+            "Moshok",
+            "Muromtsevo_Murom",
+            "Nerekhta",
+            "Novgorod",
+            "Odintsovo",
+            "Osovets",
+            "Ostrovskoye",
+            "Petrovsk_Rostov",
+            "Pushkino",
+            "Rogozh",
+            "Romanov",
+            "Rostov",
+            "Sol_Velikaya",
+            "Sudislavl",
+            "Sudogda",
+            "Ust_Sheksna",
+            "Vladimir",
+            "Vlasovo",
+            "Vokhna",
+            "Yakovlevskoye_Bolshoye",
+            "Yaropolch",
+            "Yaroslavl",
+            "Zolotkovo"
+          ],
+          "borderline": []
+        },
+        {
+          "from": 1485,
+          "oldIds": [
+            "Moscow",
+            "Vladimir",
+            "Kostroma",
+            "Yaroslavl",
+            "Rostov",
+            "Tver",
+            "Tverskaya"
+          ],
+          "ids": [
+            "Bolshoye_Selo",
+            "Borisogleb",
+            "Brody_Tver",
+            "Bronnitsy",
+            "Danilov",
+            "Dubna",
+            "Klin",
+            "Kostroma",
+            "Kurba",
+            "Maksatikha",
+            "Mikshino",
+            "Moscow",
+            "Moshok",
+            "Muromtsevo_Murom",
+            "Nerekhta",
+            "Novgorod",
+            "Odintsovo",
+            "Osovets",
+            "Ostrovskoye",
+            "Petrovsk_Rostov",
+            "Pushkino",
+            "Rogozh",
+            "Romanov",
+            "Rostov",
+            "Smerdyn",
+            "Sol_Velikaya",
+            "Sudislavl",
+            "Sudogda",
+            "Tver",
+            "Udomlya",
+            "Ust_Sheksna",
+            "Vertyazin",
+            "Vladimir",
+            "Vlasovo",
+            "Vokhna",
+            "Vyshny_Volochyok",
+            "Yakovlevskoye_Bolshoye",
+            "Yaropolch",
+            "Yaroslavl",
+            "Zolotkovo"
+          ],
+          "borderline": []
+        },
+        {
+          "from": 1510,
+          "oldIds": [
+            "Moscow",
+            "Vladimir",
+            "Kostroma",
+            "Yaroslavl",
+            "Rostov",
+            "Tver",
+            "Tverskaya",
+            "North_Pskov",
+            "South_Pskov"
+          ],
+          "ids": [
+            "Bolshoye_Selo",
+            "Borisogleb",
+            "Brody_Tver",
+            "Bronnitsy",
+            "Danilov",
+            "Dubna",
+            "Gdov",
+            "Izborsk",
+            "Klin",
+            "Kobyle",
+            "Kostroma",
+            "Kurba",
+            "Maksatikha",
+            "Meletovo",
+            "Mikshino",
+            "Moscow",
+            "Moshok",
+            "Muromtsevo_Murom",
+            "Nerekhta",
+            "Novgorod",
+            "Odintsovo",
+            "Opochka",
+            "Osovets",
+            "Ostrov",
+            "Ostrovskoye",
+            "Petrovsk_Rostov",
+            "Prudy",
+            "Pskov",
+            "Pushkino",
+            "Rogozh",
+            "Romanov",
+            "Rostov",
+            "Sebech",
+            "Slavkovitchi",
+            "Smerdyn",
+            "Sol_Velikaya",
+            "Sudislavl",
+            "Sudogda",
+            "Tver",
+            "Udomlya",
+            "Ust_Sheksna",
+            "Vertyazin",
+            "Vladimir",
+            "Vlasovo",
+            "Vokhna",
+            "Volodimerets",
+            "Voronich",
+            "Vyshny_Volochyok",
+            "Yakovlevskoye_Bolshoye",
+            "Yaropolch",
+            "Yaroslavl",
+            "Zolotkovo"
+          ],
+          "borderline": []
+        },
+        {
+          "from": 1514,
+          "oldIds": [
+            "Moscow",
+            "Vladimir",
+            "Kostroma",
+            "Yaroslavl",
+            "Rostov",
+            "Tver",
+            "Tverskaya",
+            "North_Pskov",
+            "South_Pskov",
+            "Smolensk"
+          ],
+          "ids": [
+            "Belik",
+            "Berezhnyany",
+            "Bolshoye_Selo",
+            "Borisogleb",
+            "Brody_Tver",
+            "Bronnitsy",
+            "Danilov",
+            "Dubna",
+            "Dukhovshchina",
+            "Gdov",
+            "Izborsk",
+            "Klin",
+            "Kobyle",
+            "Kostroma",
+            "Krasny",
+            "Kurba",
+            "Maksatikha",
+            "Meletovo",
+            "Mikshino",
+            "Moscow",
+            "Moshok",
+            "Muromtsevo_Murom",
+            "Nerekhta",
+            "Novgorod",
+            "Odintsovo",
+            "Opochka",
+            "Osovets",
+            "Ostrov",
+            "Ostrovskoye",
+            "Petrovsk_Rostov",
+            "Prudy",
+            "Pskov",
+            "Pushkino",
+            "Rogozh",
+            "Romanov",
+            "Rostov",
+            "Sebech",
+            "Slavkovitchi",
+            "Smerdyn",
+            "Smolensk",
+            "Sol_Velikaya",
+            "Sudislavl",
+            "Sudogda",
+            "Tver",
+            "Udomlya",
+            "Ust_Sheksna",
+            "Vertyazin",
+            "Vladimir",
+            "Vlasovo",
+            "Vokhna",
+            "Volodimerets",
+            "Voronich",
+            "Vyshny_Volochyok",
+            "Yakovlevskoye_Bolshoye",
+            "Yaropolch",
+            "Yaroslavl",
+            "Yelnya",
+            "Zolotkovo"
+          ],
+          "borderline": []
+        },
+        {
+          "from": 1521,
+          "oldIds": [
+            "Moscow",
+            "Vladimir",
+            "Kostroma",
+            "Yaroslavl",
+            "Rostov",
+            "Tver",
+            "Tverskaya",
+            "North_Pskov",
+            "South_Pskov",
+            "Smolensk",
+            "Ryazan"
+          ],
+          "ids": [
+            "Belik",
+            "Berezhnyany",
+            "Bolshoye_Selo",
+            "Borisogleb",
+            "Brody_Tver",
+            "Bronnitsy",
+            "Danilov",
+            "Dubna",
+            "Dukhovshchina",
+            "Gdov",
+            "Izborsk",
+            "Kazari",
+            "Klin",
+            "Kobyle",
+            "Koponovo",
+            "Kostroma",
+            "Krasny",
+            "Kurba",
+            "Maksatikha",
+            "Meletovo",
+            "Mikshino",
+            "Moscow",
+            "Moshok",
+            "Muromtsevo_Murom",
+            "Nerekhta",
+            "Novgorod",
+            "Odintsovo",
+            "Opochka",
+            "Osovets",
+            "Ostrov",
+            "Ostrovskoye",
+            "Petrovsk_Rostov",
+            "Prudy",
+            "Pskov",
+            "Pushkino",
+            "Putyatino",
+            "Rogozh",
+            "Romanov",
+            "Rostov",
+            "Ryazan",
+            "Sebech",
+            "Shilovo",
+            "Slavkovitchi",
+            "Smerdyn",
+            "Smolensk",
+            "Sol_Velikaya",
+            "Staraya_Ryazan",
+            "Sudislavl",
+            "Sudogda",
+            "Tver",
+            "Udomlya",
+            "Ust_Sheksna",
+            "Vertyazin",
+            "Vladimir",
+            "Vlasovo",
+            "Vokhna",
+            "Volodimerets",
+            "Voronich",
+            "Vyshny_Volochyok",
+            "Yakovlevskoye_Bolshoye",
+            "Yaropolch",
+            "Yaroslavl",
+            "Yelnya",
+            "Zolotkovo"
+          ],
+          "borderline": []
+        },
+        {
+          "from": 1552,
+          "oldIds": [
+            "Moscow",
+            "Vladimir",
+            "Kostroma",
+            "Yaroslavl",
+            "Rostov",
+            "Tver",
+            "Tverskaya",
+            "North_Pskov",
+            "South_Pskov",
+            "Smolensk",
+            "Ryazan",
+            "Kazan"
+          ],
+          "ids": [
+            "Belik",
+            "Berezhnyany",
+            "Bogatye_Saby",
+            "Bolshoye_Selo",
+            "Borisogleb",
+            "Brody_Tver",
+            "Bronnitsy",
+            "Calli",
+            "Danilov",
+            "Dobyaz",
+            "Dubna",
+            "Dukhovshchina",
+            "Gdov",
+            "Izborsk",
+            "Kazan",
+            "Kazari",
+            "Klin",
+            "Kobyle",
+            "Koponovo",
+            "Kostroma",
+            "Krasny",
+            "Kurba",
+            "Laish",
+            "Maksatikha",
+            "Mamadysh",
+            "Meletovo",
+            "Mikshino",
+            "Moscow",
+            "Moshok",
+            "Muromtsevo_Murom",
+            "Nerekhta",
+            "Novgorod",
+            "Odintsovo",
+            "Oli_Baraza",
+            "Opochka",
+            "Osovets",
+            "Ostrov",
+            "Ostrovskoye",
+            "Petrovsk_Rostov",
+            "Prudy",
+            "Pskov",
+            "Pushkino",
+            "Putyatino",
+            "Rogozh",
+            "Romanov",
+            "Rostov",
+            "Ryazan",
+            "Sebech",
+            "Shilovo",
+            "Slavkovitchi",
+            "Smerdyn",
+            "Smolensk",
+            "Sol_Velikaya",
+            "Staraya_Ryazan",
+            "Sudislavl",
+            "Sudogda",
+            "Tver",
+            "Udomlya",
+            "Ust_Sheksna",
+            "Vertyazin",
+            "Vladimir",
+            "Vlasovo",
+            "Vokhna",
+            "Volodimerets",
+            "Voronich",
+            "Vyshny_Volochyok",
+            "Yakovlevskoye_Bolshoye",
+            "Yaropolch",
+            "Yaroslavl",
+            "Yelnya",
+            "Zolotkovo"
+          ],
+          "borderline": []
+        },
+        {
+          "from": 1611,
+          "oldIds": [
+            "Moscow",
+            "Vladimir",
+            "Kostroma",
+            "Yaroslavl",
+            "Rostov",
+            "Tver",
+            "Tverskaya",
+            "North_Pskov",
+            "South_Pskov",
+            "Ryazan",
+            "Kazan"
+          ],
+          "ids": [
+            "Bogatye_Saby",
+            "Bolshoye_Selo",
+            "Borisogleb",
+            "Brody_Tver",
+            "Bronnitsy",
+            "Calli",
+            "Danilov",
+            "Dobyaz",
+            "Dubna",
+            "Gdov",
+            "Izborsk",
+            "Kazan",
+            "Kazari",
+            "Klin",
+            "Kobyle",
+            "Koponovo",
+            "Kostroma",
+            "Kurba",
+            "Laish",
+            "Maksatikha",
+            "Mamadysh",
+            "Meletovo",
+            "Mikshino",
+            "Moscow",
+            "Moshok",
+            "Muromtsevo_Murom",
+            "Nerekhta",
+            "Novgorod",
+            "Odintsovo",
+            "Oli_Baraza",
+            "Opochka",
+            "Osovets",
+            "Ostrov",
+            "Ostrovskoye",
+            "Petrovsk_Rostov",
+            "Prudy",
+            "Pskov",
+            "Pushkino",
+            "Putyatino",
+            "Rogozh",
+            "Romanov",
+            "Rostov",
+            "Ryazan",
+            "Sebech",
+            "Shilovo",
+            "Slavkovitchi",
+            "Smerdyn",
+            "Sol_Velikaya",
+            "Staraya_Ryazan",
+            "Sudislavl",
+            "Sudogda",
+            "Tver",
+            "Udomlya",
+            "Ust_Sheksna",
+            "Vertyazin",
+            "Vladimir",
+            "Vlasovo",
+            "Vokhna",
+            "Volodimerets",
+            "Voronich",
+            "Vyshny_Volochyok",
+            "Yakovlevskoye_Bolshoye",
+            "Yaropolch",
+            "Yaroslavl",
+            "Zolotkovo"
+          ],
+          "borderline": []
+        },
+        {
+          "from": 1634,
+          "oldIds": [
+            "Moscow",
+            "Vladimir",
+            "Kostroma",
+            "Yaroslavl",
+            "Rostov",
+            "Tver",
+            "Tverskaya",
+            "North_Pskov",
+            "South_Pskov",
+            "Smolensk",
+            "Ryazan",
+            "Kazan"
+          ],
+          "ids": [
+            "Belik",
+            "Berezhnyany",
+            "Bogatye_Saby",
+            "Bolshoye_Selo",
+            "Borisogleb",
+            "Brody_Tver",
+            "Bronnitsy",
+            "Calli",
+            "Danilov",
+            "Dobyaz",
+            "Dubna",
+            "Dukhovshchina",
+            "Gdov",
+            "Izborsk",
+            "Kazan",
+            "Kazari",
+            "Klin",
+            "Kobyle",
+            "Koponovo",
+            "Kostroma",
+            "Krasny",
+            "Kurba",
+            "Laish",
+            "Maksatikha",
+            "Mamadysh",
+            "Meletovo",
+            "Mikshino",
+            "Moscow",
+            "Moshok",
+            "Muromtsevo_Murom",
+            "Nerekhta",
+            "Novgorod",
+            "Odintsovo",
+            "Oli_Baraza",
+            "Opochka",
+            "Osovets",
+            "Ostrov",
+            "Ostrovskoye",
+            "Petrovsk_Rostov",
+            "Prudy",
+            "Pskov",
+            "Pushkino",
+            "Putyatino",
+            "Rogozh",
+            "Romanov",
+            "Rostov",
+            "Ryazan",
+            "Sebech",
+            "Shilovo",
+            "Slavkovitchi",
+            "Smerdyn",
+            "Smolensk",
+            "Sol_Velikaya",
+            "Staraya_Ryazan",
+            "Sudislavl",
+            "Sudogda",
+            "Tver",
+            "Udomlya",
+            "Ust_Sheksna",
+            "Vertyazin",
+            "Vladimir",
+            "Vlasovo",
+            "Vokhna",
+            "Volodimerets",
+            "Voronich",
+            "Vyshny_Volochyok",
+            "Yakovlevskoye_Bolshoye",
+            "Yaropolch",
+            "Yaroslavl",
+            "Yelnya",
+            "Zolotkovo"
+          ],
+          "borderline": []
+        }
+      ]
+    }
+  ]
+}

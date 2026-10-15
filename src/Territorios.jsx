@@ -158,6 +158,23 @@ export const REINO_A_IDS = {
 // Puedes cambiar cualquier valor libremente (es solo un hex de toda la vida).
 
 export const REINO_COLOR = {
+  "Aquitania": "#217eaf",
+  "Normandía": "#613cb8",
+  "Anjou": "#cd2b28",
+  "Maine": "#2d7eaa",
+  "Turingia": "#6943b4",
+  "Nassau": "#b26b25",
+  "Armenia cilicia": "#a8bd1f",
+  "Dreux": "#4fbe27",
+  "Califato almohade": "#24d34c",
+  "Jerusalén": "#2fbe92",
+  "Transjordania": "#7dca2b",
+  "Antioquía": "#c74533",
+  "Trípoli": "#bd4f2e",
+  "Egipto": "#b51caa",
+  "Siria": "#61b323",
+  "Georgia": "#27b0a7",
+
   Suecia: '#4D7192',
   Dinamarca: '#9B514C',
   Noruega: '#547B70',
@@ -367,6 +384,21 @@ const ADMINISTRACION_AUSTRO_BOHEMIA = new Set(['Austria', 'Austria Interior', 'T
 // dinastía o soberano nunca basta para colorear todos sus títulos por igual.
 const AGRUPACIONES_POLITICAS = [
   {
+    id:'ayubi',nombre:'Sultanato ayubí',territorios:new Set(['Egipto','Siria']),
+    color:'#497F67',desde:1174,hasta:1193,
+    aplica:activos=>activos.has('Egipto')&&activos.has('Siria'),
+    nota:'Dominios egipcios y sirios reunidos por Saladino. La sucesión de 1193 no se representa automáticamente como un estado centralizado único.',
+    fuente:'https://www.metmuseum.org/es/toah/ht/07/wae.html',
+  },
+  {
+    id: 'polonia-lituania', nombre: 'Mancomunidad de Polonia-Lituania',
+    territorios: new Set(['Polonia', 'Lituania', 'Polonia-Lituania']),
+    color: REINO_COLOR['Polonia-Lituania'], desde: 1569, hasta: 1795,
+    aplica: activos => activos.has('Polonia') && activos.has('Lituania'),
+    nota: 'La Unión de Lublin de 1569 creó una mancomunidad con monarca y parlamento comunes. La Corona y el Gran Ducado conservan sus títulos e instituciones; Curlandia y la Prusia ducal no se convierten por ello en provincias de la Corona.',
+    fuente: 'https://zpe.gov.pl/a/droga-do-unii-realnej/DB6cUAxPR',
+  },
+  {
     id: 'tocco', nombre: 'Dominios de los Tocco',
     territorios: new Set(['Epiro de los Tocco', 'Condado palatino de Cefalonia y Zacinto']),
     color: '#A57549', desde: 1411,
@@ -405,9 +437,10 @@ const AGRUPACIONES_POLITICAS = [
   },
   {
     id: 'austro-bohemia', nombre: 'Administración austro-bohemia', territorios: ADMINISTRACION_AUSTRO_BOHEMIA,
+    territoriosPorFecha: año => new Set([...ADMINISTRACION_AUSTRO_BOHEMIA, ...(año>=1772?['Reino de Galicia y Lodomeria']:[]), ...(año>=1797?['Venecia']:[])]),
     color: REINO_COLOR.Austria, desde: 1749,
     aplica: (activos) => activos.has('Austria') && activos.has('Bohemia'),
-    nota: 'Las reformas de 1749 centralizaron la administración de las tierras austríacas y bohemias; Hungría quedó fuera de esa integración.',
+    nota: 'Las reformas de 1749 centralizaron la administración de las tierras austríacas y bohemias; Hungría quedó fuera de esa integración. El color incorpora además los dominios directos de Galicia desde 1772 y la Venecia anexionada desde 1797, manteniendo sus títulos y sus regímenes provinciales.',
     fuente: 'https://www.habsburger.net/de/kapitel/die-maria-theresianischen-reformen',
   },
   {
@@ -450,7 +483,7 @@ export function agrupacionesPoliticasEnMapa(persona, año) {
   const cubiertos = new Set();
   return AGRUPACIONES_POLITICAS.map(grupo => grupo.territoriosPorFecha
     ? {...grupo, territorios: grupo.territoriosPorFecha(año)} : grupo).filter(grupo => {
-    if (año < grupo.desde || !grupo.aplica(activos, persona)) return false;
+    if (año < grupo.desde || año > (grupo.hasta ?? Infinity) || !grupo.aplica(activos, persona)) return false;
     const propios = [...grupo.territorios].filter(territorio => activos.has(territorio) && !cubiertos.has(territorio));
     propios.forEach(territorio => cubiertos.add(territorio));
     return propios.length > 0;

@@ -119,3 +119,22 @@ Los ámbitos delegados conservan sus celdas disputadas y citas. Las superficies
 compartidas con Iberia/Italia siguen sujetas a ambas auditorías.
 
 `audit-personal-atlas.mjs` verifica Navarra durante todos los mandatos habsbúrgicos españoles y registra diez casos personales; `--publish` actualiza la instantánea revisada V5.14.
+
+## Polonia-Lituania y ampliación medieval (V5.17)
+
+`build-central-europe-review.mjs` ensambla el registro de los tres repartos,
+la continuidad del Báltico y las rutas de la frontera oriental. Las semillas
+anteriores a la revisión se conservan como datos de entrada, de modo que la
+regeneración no depende de una salida ya modificada. Las selecciones medieval
+y oriental conservan sus fases, fuentes y reservas en los JSON aceptados.
+`build-early-medieval-routes.mjs` compila las fases anteriores a 1200 y el
+límite temporal compartido con Europa en este año. Después se ejecuta
+`merge-map-expansions.mjs`.
+
+`audit:poland-lithuania` recorre 482 celdas en cada año de 1200–1800 y exige
+continuidad, evidencia y explicación de atribuciones múltiples.
+`audit:early-map` comprueba cada año de los gobiernos efectivos anteriores a
+1200. Ambos comandos escriben en `.cache/audits`; `--publish` se usa expresamente
+para actualizar el informe revisado y los CSV de consulta, tras revisar el
+resultado. La lista de personas conserva por separado mandatos anteriores,
+mandatos posteriores y vínculos familiares.
