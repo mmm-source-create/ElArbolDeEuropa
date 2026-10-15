@@ -56,7 +56,7 @@ export function governmentSummary(person, year=null) {
 export function groupedGovernmentIntervals(person) {
  const mandates=gobiernosDe(person).filter(g=>Number.isInteger(g.desde)&&Number.isInteger(g.hasta)&&gobiernoEfectivo(g));
  const from=Math.min(...mandates.map(g=>g.desde)),through=Math.max(...mandates.map(g=>g.hasta));
- const changes=[1230,1516,1526,1541,1549,1588,1619,1749,1765].filter(y=>from<y&&y<=through);
+ const changes=[1230,1516,1526,1541,1549,1569,1588,1619,1749,1765].filter(y=>from<y&&y<=through);
  const cuts=[...new Set([...mandates.flatMap(g=>[g.desde,g.hasta+1]),...changes])].sort((a,b)=>a-b), result=[];
  for(let i=0;i<cuts.length-1;i++) for(const group of governmentGroupsAt(person,cuts[i])) {
   const previous=result.findLast(g=>g.key===group.key&&g.label===group.label&&g.color===group.color&&g.through===cuts[i]-1);

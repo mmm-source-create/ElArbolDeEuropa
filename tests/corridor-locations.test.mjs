@@ -20,7 +20,7 @@ function rawIds(name, year) {
 
 
 const westernGovernments = new Set(['iberia-italy-full-review.json','france-low-countries-full-review.json'].flatMap(file=>JSON.parse(fs.readFileSync(path.join(lab,file))).assignments.flatMap(phase=>phase.governmentTerritories)));
-const ids = (name, year) => name==='Plazas inglesas de Guyena' ? new Set(pilotLocationsFor(data,'Aquitania',year)) : name==='Bailiazgo de Jersey' ? stateCells('Bailías de Jersey y Guernsey',year) : name==='Plaza inglesa de Calais' ? stateCells('Calais',year) : westernGovernments.has(name) ? new Set(pilotLocationsFor(data, name, year)) : rawIds(name, year);
+const ids = (name, year) => name==='Corona de Polonia'?stateCells('Polonia',year):name==='Gran Ducado de Lituania'?stateCells('Lituania',year):name==='Plazas inglesas de Guyena' ? new Set(pilotLocationsFor(data,'Aquitania',year)) : name==='Bailiazgo de Jersey' ? stateCells('Bailías de Jersey y Guernsey',year) : name==='Plaza inglesa de Calais' ? stateCells('Calais',year) : westernGovernments.has(name) ? new Set(pilotLocationsFor(data, name, year)) : rawIds(name, year);
 
 const stateCells=(identity,year)=>new Set(atlasPoliticalMosaicAt(data,year).layers.filter(l=>l.entityId===identity).flatMap(l=>l.ids));
 test('territorial crosswalk uses only SVG IDs and never assigns one ID twice within a corridor', () => {

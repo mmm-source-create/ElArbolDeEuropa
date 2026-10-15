@@ -1,3 +1,5 @@
+import {EARLY_MEDIEVAL_IDENTITIES} from './earlyMedievalRoutes.js';
+import {POLAND_LITHUANIA_IDENTITIES} from './polandLithuaniaRoutes.js';
 import {franceLowCountriesPoliticalKeys} from './franceLowCountriesRoutes.js';
 import {ORANGE_NASSAU, FRENCH_CROWN_COLOR, BURGUNDIAN_COLOR} from './mapColors.js';
 import {FRANCE_LOW_COUNTRIES_IDENTITIES} from './franceLowCountriesRoutes.js';
@@ -7,6 +9,14 @@ import {BOSNIA_HUM_IDENTITIES} from './bosniaHumRoutes.js';
 import {POSAVINA_RAGUSA_IDENTITIES} from './posavinaRagusaRoutes.js';
 import {BALKANS_FULL_IDENTITIES} from './balkansFullRoutes.js';
 const ALIASES = Object.freeze({
+  ...EARLY_MEDIEVAL_IDENTITIES,
+  ...POLAND_LITHUANIA_IDENTITIES,
+  'Livonia polaca · Latgalia': 'Livonia polaca',
+  'Lituania · voivodato de Polotsk': 'Lituania',
+  'Rusia · ocupación de Polotsk': 'Rusia',
+  'Prusia ducal': 'Prusia',
+  'Ducado de Curlandia': 'Curlandia',
+  'Ducado de Mazovia':'Mazovia',
   ...BOSNIA_HUM_IDENTITIES,
   ...POSAVINA_RAGUSA_IDENTITIES,
   ...BALKANS_FULL_IDENTITIES,
@@ -107,6 +117,7 @@ const ALIASES = Object.freeze({
   'República napolitana': 'República Partenopea',
   'Monarquía de los Habsburgo': 'Austria',
   'Imperio ruso': 'Rusia',
+  'Moscovia y Zarato de Rusia':'Rusia',
   'Armenia de Cilicia': 'Armenia cilicia',
   'Imperio safávida': 'Persia',
 });
@@ -125,7 +136,7 @@ export function territorialLabel(name, year) {
     Eslavonia: 'Reino de Eslavonia',
     'Condado de Bihar': 'Condado de Bihar', 'Condado de Temes': 'Condado de Temes',
     Silesia: 'Ducados de Silesia', Moravia: 'Margraviato de Moravia',
-    Bohemia: 'Reino de Bohemia', Polonia: 'Corona de Polonia',
+    Bohemia: 'Reino de Bohemia', Polonia: 'Corona de Polonia', Prusia:year>=1701?'Reino de Prusia':'Ducado de Prusia', Curlandia:'Ducado de Curlandia y Semigalia',
     Lituania: year >= 1253 && year <= 1263 ? 'Reino de Lituania' : 'Gran Ducado de Lituania',
     Inglaterra: 'Reino de Inglaterra', Escocia: 'Reino de Escocia',
     Irlanda: year < 1542 ? 'Señorío de Irlanda' : 'Reino de Irlanda',
@@ -190,6 +201,8 @@ export function continuityJurisdictions(names, territory, year, personId) {
 
 // Color integration follows dated political attribution, never proximity or a dynasty name.
 export function politicalColorGroup(name, year) {
+  if (year >= 1569 && year <= 1794 && ['Polonia', 'Lituania', 'Prusia Real', 'Livonia del Commonwealth', 'Livonia polaca', 'Principado episcopal de Warmia'].includes(territorialIdentity(name)))
+    return {id:'polonia-lituania', color:'#8B5AA5'};
   const keys = franceLowCountriesPoliticalKeys(name, year);
   if (keys.includes('Provincias Unidas')) return {id:'republica-neerlandesa', color:ORANGE_NASSAU};
   if (keys.includes('República Bátava')) return {id:'republica-batava', color:ORANGE_NASSAU};

@@ -1,3 +1,5 @@
+import {earlyMedievalJurisdictions} from './earlyMedievalRoutes.js';
+import {polandLithuaniaJurisdictions} from './polandLithuaniaRoutes.js';
 import {franceLowCountriesJurisdictions} from './franceLowCountriesRoutes.js';
 import {iberiaItalyJurisdictions} from './iberiaItalyRoutes.js';
 import {medievalBalkanJurisdictions} from './medievalBalkanRoutes.js';
@@ -27,7 +29,7 @@ export function reviewedMapLayers(data) {
       if (!corrections.has(correction.territory)) corrections.set(correction.territory, []);
       corrections.get(correction.territory).push(correction);
     }
-    const regional = [data.bosniaHumReview, data.posavinaRagusaReview, data.balkansFullReview, data.iberiaItalyReview, data.franceLowCountriesReview].filter(Boolean);
+    const regional = [data.bosniaHumReview, data.posavinaRagusaReview, data.balkansFullReview, data.iberiaItalyReview, data.franceLowCountriesReview, data.polandLithuaniaMedievalReview, data.polandLithuaniaReview, data.polandLithuaniaFrontierReview, data.earlyMedievalReview].filter(Boolean);
     layerIndexes.set(data, {entries, byName: new Map(entries.map(entry => [entry.name, entry])), corrections,
       regional: regional.map(review => ({from: review.scope.from, through: review.scope.through,
         ids: new Set(review.precedenceIds || review.scope.ids), names: new Set(review.layerNames)}))});
@@ -40,16 +42,32 @@ function layerIndex(data) {
   return layerIndexes.get(data)?.byName || new Map();
 }
 
-export function pilotJurisdictionsFor(territory, year, personId = null) {
+let jurisdictionYear=null;
+const jurisdictionCache=new Map();
+// Routes are immutable research data. Cache one year only: annual audits
+// and redraws reuse the same mandates without retaining the whole timeline.
+// Give callers a copy so a view cannot contaminate later selections.
+export function pilotJurisdictionsFor(territory,year,personId=null){
+  if(year!==jurisdictionYear){jurisdictionCache.clear();jurisdictionYear=year;}
+  const key=territory+'\u0000'+(personId||'');
+  if(!jurisdictionCache.has(key))jurisdictionCache.set(key,resolveJurisdictions(territory,year,personId));
+  return [...jurisdictionCache.get(key)];
+}
+function resolveJurisdictions(territory, year, personId = null) {
+  if(year<1200)return earlyMedievalJurisdictions(territory,year,personId);
   const scope = authorityMapScope(personId, territory, year);
   if (scope?.jurisdictions) return scope.jurisdictions;
   const chronological=chronologyJurisdictionsFor(territory,year,personId);
   const frontier=frontierJurisdictions(continuityJurisdictions(regionalExtentJurisdictions(appendChronologyJurisdictions(chronological ?? basePilotJurisdictionsFor(territory,year,personId),territory,personId),territory,year,personId),territory,year,personId),territory,year,personId);
-  return franceLowCountriesJurisdictions(iberiaItalyJurisdictions(balkansFullJurisdictions(posavinaRagusaJurisdictions(bosniaHumJurisdictions(medievalBalkanJurisdictions(referenceGapJurisdictions(successionJurisdictions(frontier,territory,year,personId),territory),territory),territory,year,personId),territory,year,personId),territory,year,personId),territory,year,personId),territory,year,personId);
+  const names=polandLithuaniaJurisdictions(franceLowCountriesJurisdictions(iberiaItalyJurisdictions(balkansFullJurisdictions(posavinaRagusaJurisdictions(bosniaHumJurisdictions(medievalBalkanJurisdictions(referenceGapJurisdictions(successionJurisdictions(frontier,territory,year,personId),territory),territory),territory,year,personId),territory,year,personId),territory,year,personId),territory,year,personId),territory,year,personId),territory,year,personId);
+  if(territory==='Austria Interior') for(const province of ['Carintia','Carniola','Ducado de Estiria'])
+    names.push(...pilotJurisdictionsFor(province,year,personId));
+  return [...new Set(names)];
 }
 
 function basePilotJurisdictionsFor(territory, year, personId) {
   if (territory === 'Sacro Imperio') return [];
+  if (territory === 'Austria Interior') return ['Austria Interior','Estiria','Carintia','Carniola'];
   if (territory === 'Herzegovina') return ['Núcleo de Herzegovina'];
   if (territory === 'Morea') return personId === 'THEODORE2MOREA' ? ['Núcleo de Mistra'] : [];
   if (territory === 'Lorena') return ['Núcleo de Lorena'];
@@ -255,6 +273,9 @@ export function reviewedAuthorityConditions(data, territory, year, personId = nu
 // the audited geometry crosswalk; unmappable/ambiguous regions stay unpainted.
 export function mapLocationsForGovernment(data, government, year, personId = null, legacyIds = []) {
   if (!data || !government?.territorio || !Number.isInteger(year)) return [];
+  if(government.territorio==='Austria'&&government.ambito?.includes('Austria Interior'))
+    return [...new Set([...pilotLocationsFor(data,'Austria Interior',year,personId),
+      ...(year>=1619?pilotLocationsFor(data,'Austria',year,personId):[])])];
   const chronological=chronologyJurisdictionsFor(government.territorio,year,personId);
   if(chronological?.length === 0 && !pilotJurisdictionsFor(government.territorio,year,personId).length)return [];
   const byName = layerIndex(data);

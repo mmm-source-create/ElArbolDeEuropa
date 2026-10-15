@@ -1,7 +1,7 @@
 import {gobiernosDe} from './personAccessors.js';
 import {idsDeReinoEnAño} from '../Territorios.jsx';
 import {imperialFrameIds} from './imperialFrame.js';
-import {mapLocationsForGovernment, pilotImperialFrameFor, reviewedMapLayers, reviewedLayerLocations, reviewedLayerEvidence} from './locationMapPilot.js';
+import {mapLocationsForGovernment, pilotImperialFrameFor, reviewedMapLayers, reviewedLayerLocations, reviewedLayerEvidence, reviewedLayerActive} from './locationMapPilot.js';
 import {territorialIdentity} from './territorialIdentity.js';
 import {mapAuthoritiesForPerson} from './mapAuthorities.js';
 import {CHRONOLOGY_COLLECTIVE_AUTHORITIES} from './atlasChronologyCollectives.js';
@@ -92,8 +92,8 @@ export function buildPoliticalMapIndex(personas, year, mapData = null, options =
   // Regional evidence can establish a jurisdiction before an individual
   // mandate has been researched. Keep that evidence visible without
   // inventing a bishop, judge or six-century collective government.
-  const westernLayers = new Set([...(mapData?.iberiaItalyReview?.layerNames || []), ...(mapData?.franceLowCountriesReview?.layerNames || [])]);
-  for (const layer of reviewedMapLayers(mapData).filter(layer => westernLayers.has(layer.name))) {
+  const regionalLayers = new Set([mapData?.iberiaItalyReview,mapData?.franceLowCountriesReview,mapData?.polandLithuaniaMedievalReview,mapData?.polandLithuaniaReview,mapData?.polandLithuaniaFrontierReview,mapData?.earlyMedievalReview].filter(Boolean).flatMap(review=>review.layerNames));
+  for (const layer of reviewedMapLayers(mapData).filter(layer => regionalLayers.has(layer.name)&&reviewedLayerActive(mapData,layer,year))) {
     const evidence = reviewedLayerEvidence(layer, year);
     for (const id of reviewedLayerLocations(mapData, layer, year)) {
       if ((regions.get(id) || []).some(entry => entry.paint && !['regional', 'physical', 'tributary'].includes(entry.kind))) continue;

@@ -131,3 +131,5 @@ Release se preparan en borrador sobre la entrega validada.
 ## V5.16 · Dinastle y pertenencia política
 
 [Detalle de la entrega](V5.16.md): siete puntos acordados, fuentes y alcance de la comparación de regresión. PR y Release se preparan en borrador sobre el commit validado.
+
+[V5.17](V5.17.md) revisa Austria en el panorama, Polonia-Lituania y sus repartos, y amplía los gobiernos cartografiados hasta 1106. La PR y la vista previa se revisan antes de publicar; la Release permanece en borrador.

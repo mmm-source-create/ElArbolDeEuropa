@@ -65,7 +65,10 @@ export function europeMosaicAt(data,year,people) {
   if(group.kind!=='sovereign'&&group.kind!=='disputed')continue;
   for(const mandate of group.mandates) {
    const candidate={...group,ids:new Set(mapLocationsForGovernment(data,mandate,year,person.id,idsDeGobiernoEnAño(mandate,year,person.id)))};
-   for(const name of pilotJurisdictionsFor(mandate.territorio,year,person.id)) {
+   const names=pilotJurisdictionsFor(mandate.territorio,year,person.id);
+   if(mandate.territorio==='Austria'&&mandate.ambito?.includes('Austria Interior'))
+    names.push(...pilotJurisdictionsFor('Austria Interior',year,person.id));
+   for(const name of names) {
    if(!routes.has(name))routes.set(name,[]);
    routes.get(name).push(candidate);
    }
@@ -78,7 +81,7 @@ export function europeMosaicAt(data,year,people) {
   const crownRelation=(layer.memberNames||[layer.name]).map(n=>frenchCrownRelation(n,year)).find(Boolean);
   const identity=territorialIdentity(layer.name);
   const republic=(layer.memberNames||[layer.name]).some(n=>franceLowCountriesPoliticalKeys(n,year).includes('Provincias Unidas'));
-  const baseColor=REINO_COLOR[identity] || layer.mosaicColor;
+  const baseColor=layer.politicalColorGroup==='polonia-lituania'?REINO_COLOR['Polonia-Lituania']:REINO_COLOR[identity] || layer.mosaicColor;
   return {...layer,mosaicColor:shared?.color || REINO_COLOR[identity] || layer.mosaicColor,
    crownRelation,republic,politicalLabel:shared?.label || layer.displayName || layer.name,candidates,baseColor};
  });
@@ -86,7 +89,8 @@ export function europeMosaicAt(data,year,people) {
  for(const layer of layers)for(const id of layer.ids){
   if(!byLocation.has(id))byLocation.set(id,[]);
   const applicable=[...new Map(layer.candidates.filter(g=>g.ids.has(id)).map(g=>[g.id,g])).values()];
-  const color=layer.republic?ORANGE_NASSAU:layer.crownRelation?FRENCH_CROWN_COLOR:applicable.length===1?applicable[0].color:layer.baseColor;
+  const unanimous=applicable.length>0&&new Set(applicable.map(g=>g.color)).size===1;
+  const color=layer.republic?ORANGE_NASSAU:layer.crownRelation?FRENCH_CROWN_COLOR:unanimous?applicable[0].color:layer.baseColor;
   byLocation.get(id).push({...layer,mosaicColor:color,politicalLabel:applicable.length===1?applicable[0].label:layer.displayName||layer.name});
  }
  return {...mosaic,layers,byLocation};
