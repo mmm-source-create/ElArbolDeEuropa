@@ -3669,8 +3669,6 @@ html, body {
 .favorites-filter-toggle input { accent-color: #7A2E2E; }
 
 .bio-head-actions { display: flex; align-items: center; gap: 5px; }
-.bio-favorite-btn { width: 28px; height: 28px; display: grid; place-items: center; border: 1px solid #D9CFB6; border-radius: 4px; background: #fff; color: #B7AC96; font-size: 15px; cursor: pointer; }
-.bio-favorite-btn:hover, .bio-favorite-btn.active { color: #B58A2E; background: #FFF8E4; border-color: #CDAA55; }
 
 .stats-scope-toggle { margin: 14px 0 8px; }
 .stats-summary-grid { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 8px; margin: 12px 0 18px; }
