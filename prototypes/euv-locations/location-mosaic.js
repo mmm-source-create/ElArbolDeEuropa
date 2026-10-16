@@ -2,6 +2,8 @@ import {reviewedLayerLocations, reviewedLayerActive, reviewedLayerEvidence} from
 import {supersededRegionalLayers} from '../../src/data/regionalExtentRoutes.js';
 import {territorialColor, coalesceTerritorialLayers} from '../../src/data/territorialIdentity.js';
 const FRAME_ONLY_LAYERS = new Set(['Marco jurídico del Sacro Imperio']);
+// Same order as localeCompare(b, 'es'), without building a collator per comparison.
+export const compareEs = new Intl.Collator('es').compare;
 
 function entriesFor(data) {
   return [...(data?.territories || []), ...(data?.additionalTerritories || [])];
@@ -19,7 +21,7 @@ export function mosaicPalette(data, approximateTerritories = []) {
   const keys = [...new Set([
     ...entriesFor(data).map(layerKey),
     ...approximateTerritories.map(name => `approximate\u0000${name}`),
-  ])].sort((a, b) => a.localeCompare(b, 'es'));
+  ])].sort(compareEs);
   return new Map(keys.map(key => [key, territorialColor(key.split('\u0000')[1])]));
 }
 
@@ -38,7 +40,7 @@ export function politicalMosaicAt(data, year, palette = mosaicPalette(data)) {
         key: layerKey(entry), mosaicColor: palette.get(layerKey(entry)), approximate: false,
         ids: idsFor(entry, data, year)};
     }).filter(layer => layer.ids.length)
-    .sort((a, b) => a.name.localeCompare(b.name, 'es') || a.corridor.localeCompare(b.corridor, 'es'));
+    .sort((a, b) => compareEs(a.name, b.name) || compareEs(a.corridor, b.corridor));
   // Preserve the provinces inside a government grouping. The grouping keeps
   // its additional coastal jurisdictions, without repainting the provinces.
   const provinces = new Set(rawLayers.filter(layer => ['Estiria', 'Carintia', 'Carniola'].includes(layer.name)).flatMap(layer => layer.ids));

@@ -17,6 +17,16 @@ for (const query of ['(prefers-color-scheme: dark)','(prefers-reduced-motion: re
 
 if (import.meta.env.PROD) startSpeedInsights();
 
+// A new deployment removes the hashed chunks an open tab still references.
+// Without a reload, the next lazy view fails and React leaves a blank page.
+// Reload once: a reloaded page already has the current HTML, so a failure
+// there is a real outage and must not loop.
+window.addEventListener('vite:preloadError', event => {
+  if (window.performance?.getEntriesByType?.('navigation')[0]?.type === 'reload') return;
+  event.preventDefault();
+  window.location.reload();
+});
+
 const root=document.getElementById("root");
 const page=readInitialPage(document,window.location);
 if(page) {

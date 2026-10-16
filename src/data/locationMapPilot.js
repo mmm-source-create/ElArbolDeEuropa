@@ -42,6 +42,11 @@ function layerIndex(data) {
   return layerIndexes.get(data)?.byName || new Map();
 }
 
+// Layer names are unique; annual redraws look them up thousands of times.
+export function reviewedLayerNamed(data, name) {
+  return layerIndex(data).get(name);
+}
+
 let jurisdictionYear=null;
 const jurisdictionCache=new Map();
 // Routes are immutable research data. Cache one year only: annual audits

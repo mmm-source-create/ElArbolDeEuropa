@@ -77,6 +77,21 @@ function parseViewBox(svg) {
   return { x: 0, y: 0, width, height };
 }
 
+// Index every addressable map element once. Repainting a year looks up
+// thousands of locations; a selector scan per id made each redraw O(n²).
+function indexMapElements(svg) {
+  const byId = new Map(), byTitle = new Map(), byName = new Map();
+  for (const element of svg.querySelectorAll("[id],[title],[data-name]")) {
+    for (const [index, attribute] of [[byId, "id"], [byTitle, "title"], [byName, "data-name"]]) {
+      const value = element.getAttribute(attribute);
+      if (value !== null && !index.has(value)) index.set(value, element);
+    }
+  }
+  return (id) => id
+    ? byId.get(id) || byId.get(id.toLowerCase()) || byTitle.get(id) || byName.get(id) || null
+    : null;
+}
+
 function viewBoxString(box) {
   return `${box.x} ${box.y} ${box.width} ${box.height}`;
 }
@@ -90,6 +105,7 @@ export function MapaEuropa({ seleccion, anioGlobal = null, onSelectTerritorio, o
   const containerRef = useRef(null);
   const svgInyectadoRef = useRef(false);
   const pintadosRef = useRef(new Set());
+  const buscarElementoRef = useRef(null);
   const originalViewBoxRef = useRef(null);
   const initialViewBoxRef = useRef(null);
   const viewportRef = useRef(null);
@@ -110,10 +126,13 @@ export function MapaEuropa({ seleccion, anioGlobal = null, onSelectTerritorio, o
   const mapAssetUrl = locationsSvgUrl;
   const politicalIndex = useMemo(() => selectedRegionId && Number.isInteger(anioGlobal)
     ? buildPoliticalMapIndex(PERSONAS, anioGlobal, pilotData, {includeClaims: true, includeDependencies: true}) : new Map(), [selectedRegionId, anioGlobal, pilotData]);
-  const inspectedRegion = selectedRegionId && Number.isInteger(anioGlobal)
-    ? inspectMapRegion(selectedRegionId, anioGlobal, politicalIndex, pilotData) : null;
-  const pilotContext = selectedRegionId && Number.isInteger(anioGlobal)
-    ? pilotLocationContext(pilotData, selectedRegionId, anioGlobal, seleccion?.id) : [];
+  const inspectedRegion = useMemo(() => selectedRegionId && Number.isInteger(anioGlobal)
+    ? inspectMapRegion(selectedRegionId, anioGlobal, politicalIndex, pilotData) : null,
+  [selectedRegionId, anioGlobal, politicalIndex, pilotData]);
+  // Dragging re-renders on every pointer move; keep the region context stable.
+  const pilotContext = useMemo(() => selectedRegionId && Number.isInteger(anioGlobal)
+    ? pilotLocationContext(pilotData, selectedRegionId, anioGlobal, seleccion?.id) : [],
+  [selectedRegionId, anioGlobal, pilotData, seleccion?.id]);
   const activeGroups = seleccion && Number.isFinite(anioGlobal)
     ? agrupacionesPoliticasEnMapa(seleccion, anioGlobal) : [];
   const hasImperialOffice = Boolean(seleccion && Number.isFinite(anioGlobal)
@@ -127,6 +146,7 @@ export function MapaEuropa({ seleccion, anioGlobal = null, onSelectTerritorio, o
 
     let cancelled = false;
     svgInyectadoRef.current = false;
+    buscarElementoRef.current = null;
     originalViewBoxRef.current = null;
     initialViewBoxRef.current = null;
     viewportRef.current = null;
@@ -148,6 +168,7 @@ export function MapaEuropa({ seleccion, anioGlobal = null, onSelectTerritorio, o
       forgetTextAsset(mapAssetUrl);
       throw new Error("Mapa no válido");
     }
+    buscarElementoRef.current = indexMapElements(svg);
 
     const original = parseViewBox(svg);
     // Reuse saved views only when their coordinates belong to the cropped map;
@@ -239,17 +260,7 @@ export function MapaEuropa({ seleccion, anioGlobal = null, onSelectTerritorio, o
     const svg = containerRef.current?.querySelector("svg");
     if (!svg || !pilotData) return;
 
-    const buscarElemento = (id) => {
-      if (!id) return null;
-      try {
-        return svg.querySelector(`[id="${CSS.escape(id)}"]`) ||
-               svg.querySelector(`[id="${id.toLowerCase()}"]`) ||
-               svg.querySelector(`[title="${id}"]`) ||
-               svg.querySelector(`[data-name="${id}"]`);
-      } catch {
-        return svg.getElementById(id);
-      }
-    };
+    const buscarElemento = buscarElementoRef.current || indexMapElements(svg);
 
     let cancelled = false;
     const controller = new AbortController();
