@@ -6,7 +6,7 @@ import {authorityColor} from './mapColors.js';
 import {gobiernoEfectivo} from './territorios.js';
 import {personClaims} from '../evidence/claims.js';
 import {mapLocationsForGovernment, pilotBurgundianGovernmentsFor,
-  pilotDisputedHungarianClaimsFor, pilotLocationsFor, reviewedMapLayers,
+  pilotDisputedHungarianClaimsFor, pilotLocationsFor, reviewedMapLayers, reviewedLayerNamed,
   pilotJurisdictionsFor, reviewedLayerEvidence, reviewedLayerActive, reviewedLayerLocations, reviewedAuthorityConditions} from './locationMapPilot.js';
 import {authorityExtensionFor, REVOLT_SOURCE} from './atlasAuthorityExtensions.js';
 import {authorityMapScope} from './authorityMapScopes.js';
@@ -59,13 +59,15 @@ export function mapAuthoritiesForPerson(person, year, mapData = null, {includeCl
         .flatMap(layer=>[...(layer.versions || [])].reverse().find(v=>v.from<=year&&v.ids.length)?.ids || []))];
     }
     const scope = mapData && authorityMapScope(person.id, government.territorio, year);
+    const governedIds = new Set(ids);
     const datedLayers = mapData ? pilotJurisdictionsFor(government.territorio, year, person.id)
-      .map(name => reviewedMapLayers(mapData).find(layer => layer.name === name))
-      .filter(layer => layer && reviewedLayerActive(mapData, layer, year)
-        && reviewedLayerLocations(mapData, layer, year, person.id).some(id => ids.includes(id)))
+      .map(name => reviewedLayerNamed(mapData, name))
+      .filter(layer => layer && reviewedLayerActive(mapData, layer, year))
+      .map(layer => ({layer, ids: reviewedLayerLocations(mapData, layer, year, person.id).filter(id => governedIds.has(id))}))
+      .filter(dated => dated.ids.length)
       : [];
-    const layerEvidence = datedLayers.map(layer => reviewedLayerEvidence(layer, year));
-    const mapScopes = datedLayers.map(layer => ({ids: reviewedLayerLocations(mapData, layer, year, person.id).filter(id => ids.includes(id)), ...reviewedLayerEvidence(layer, year)}));
+    const layerEvidence = datedLayers.map(({layer}) => reviewedLayerEvidence(layer, year));
+    const mapScopes = datedLayers.map(({layer, ids: layerIds}) => ({ids: layerIds, ...reviewedLayerEvidence(layer, year)}));
     if (scope) mapScopes.push({ids: scope.ids || ids, note: scope.note, sources: [scope.source, ...(scope.additionalSources || [])].filter(Boolean)});
     const extension = mapData && authorityExtensionFor(government.territorio, year, person.id);
     const border = mapData && cerdanyaBorderCorrection(government.territorio, year);

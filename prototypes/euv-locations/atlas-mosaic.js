@@ -2,14 +2,31 @@ import {PERSONAS} from '../../src/personas.jsx';
 import {idsDeGobiernoEnAño, listaReinados, reinadoEsEfectivo} from '../../src/Territorios.jsx';
 import {personClaims} from '../../src/evidence/claims.js';
 import {mapLocationsForGovernment, pilotJurisdictionsFor, reviewedLayerCovered} from '../../src/data/locationMapPilot.js';
-import {mosaicPalette, politicalMosaicAt} from './location-mosaic.js';
+import {compareEs, mosaicPalette, politicalMosaicAt} from './location-mosaic.js';
 import {territorialIdentity, territorialLabel} from '../../src/data/territorialIdentity.js';
 
 const entriesFor = data => [...(data?.territories || []), ...(data?.additionalTerritories || [])];
+const entriesByNameCache = new WeakMap();
+function entriesByNameFor(data) {
+  if (!data) return new Map();
+  if (!entriesByNameCache.has(data)) entriesByNameCache.set(data, new Map(entriesFor(data).map(entry => [entry.name, entry])));
+  return entriesByNameCache.get(data);
+}
 const evidenceByPerson = new Map(PERSONAS.map(person => [person.id, new Map(personClaims(person)
   .filter(claim => claim.field === 'Gobierno').map(claim => [claim.value, claim]))]));
 
+// The palette depends only on the map data and the people list. The annual
+// panorama asks for it on every redraw, so keep one per data/people pair.
+const paletteCache = new WeakMap();
 export function atlasMosaicPalette(data, people = PERSONAS) {
+  if (!data || !people) return buildAtlasMosaicPalette(data, people);
+  if (!paletteCache.has(data)) paletteCache.set(data, new WeakMap());
+  const byPeople = paletteCache.get(data);
+  if (!byPeople.has(people)) byPeople.set(people, buildAtlasMosaicPalette(data, people));
+  return byPeople.get(people);
+}
+
+function buildAtlasMosaicPalette(data, people) {
   const approximateTerritories = [...new Set(people.flatMap(person =>
     listaReinados(person).map(government => government.territorio).filter(Boolean)))];
   return mosaicPalette(data, approximateTerritories);
@@ -21,7 +38,7 @@ function sourceList(claim) {
 }
 
 function approximateGovernmentLayers(data, people, year, directByLocation, palette) {
-  const entriesByName = new Map(entriesFor(data).map(entry => [entry.name, entry]));
+  const entriesByName = entriesByNameFor(data);
   const layersByTerritory = new Map();
 
   for (const person of people) {
@@ -71,7 +88,7 @@ function approximateGovernmentLayers(data, people, year, directByLocation, palet
   return [...layersByTerritory.values()]
     .map(layer => ({...layer, ids: [...layer.ids], holders: [...layer.holders], sources: [...layer.sources.values()]}))
     .filter(layer => layer.ids.length)
-    .sort((a, b) => a.name.localeCompare(b.name, 'es'));
+    .sort((a, b) => compareEs(a.name, b.name));
 }
 
 export function atlasPoliticalMosaicAt(data, year, palette = atlasMosaicPalette(data), people = PERSONAS) {
