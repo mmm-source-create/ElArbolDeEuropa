@@ -3,6 +3,21 @@
 // figura (P4459, P1986, P1415, P7902, P1417) y sus formatos de URL (P1630).
 // Son biografías generales que cubren todas las etapas de cada vida.
 export const REFERENCIAS_BIOGRAFIAS = Object.freeze({
+ "MINDAUGASLIT":[{"titulo":"VLE · Mindaugas","url":"https://www.vle.lt/straipsnis/mindaugas/"}],
+ "TRENIOTALIT":[{"titulo":"VLE · Treniota","url":"https://www.vle.lt/straipsnis/treniota/"}],
+ "VAISELGALIT":[{"titulo":"VLE · Vaišelga","url":"https://www.vle.lt/straipsnis/vaiselga/"}],
+ "SVARNASLIT":[{"titulo":"VLE · Švarnas","url":"https://www.vle.lt/straipsnis/svarnas/"}],
+ "TRAIDENISLIT":[{"titulo":"VLE · Traidenis","url":"https://www.vle.lt/straipsnis/traidenis/"}],
+ "VYTENISLIT":[{"titulo":"VLE · Vytenis","url":"https://www.vle.lt/straipsnis/vytenis-2/"}],
+ "GEDIMINASLIT":[{"titulo":"VLE · Gediminas","url":"https://www.vle.lt/straipsnis/gediminas/"}],
+ "JAUNUTISLIT":[{"titulo":"VLE · Jaunutis","url":"https://www.vle.lt/straipsnis/jaunutis/"}],
+ "ALGIRDASLIT":[{"titulo":"VLE · Algirdas","url":"https://www.vle.lt/straipsnis/algirdas/"}],
+ "KESTUTISLIT":[{"titulo":"VLE · Kęstutis","url":"https://www.vle.lt/straipsnis/kestutis/"}],
+ "SKIRGAILALIT":[{"titulo":"VLE · Skirgaila","url":"https://www.vle.lt/straipsnis/skirgaila/"}],
+ "SVITRIGAILALIT":[{"titulo":"VLE · Švitrigaila","url":"https://www.vle.lt/straipsnis/svitrigaila/"}],
+ "ZYGIMANTASLIT":[{"titulo":"VLE · Segismundo Kęstutaitis","url":"https://www.vle.lt/straipsnis/zygimantas-kestutaitis/"}],
+ "DAUMANTASPSKOV":[{"titulo":"VLE · Daumantas de Pskov","url":"https://www.vle.lt/straipsnis/pskovo-istorija/"}],
+
  "CARLOS5": [
   {
    "titulo": "Real Academia de la Historia · Diccionario Biográfico español",

@@ -343,6 +343,33 @@
       "path": "src/MapChart_Map.svg",
       "kind": "geometry-reference",
       "maintenance": "Earlier MapChart province edition; geometry reference, not proof of historical jurisdiction."
+    },
+    {
+      "path": "prototypes/euv-locations/eastern-europe-geography.json",
+      "kind": "accepted-inventory",
+      "maintenance": "Revisión oriental V5.26: inventarios explícitos, fuentes locales y sucesiones fechadas; regenerar después de una revisión documental."
+    },
+    {
+      "path": "prototypes/euv-locations/eastern-europe-chronology.json",
+      "kind": "accepted-cartography",
+      "maintenance": "Revisión oriental V5.26: inventarios explícitos, fuentes locales y sucesiones fechadas; regenerar después de una revisión documental."
+    },
+    {
+      "path": "prototypes/euv-locations/eastern-europe-local-phases.json",
+      "kind": "accepted-cartography",
+      "maintenance": "Revisión oriental V5.26: inventarios explícitos, fuentes locales y sucesiones fechadas; regenerar después de una revisión documental."
+    },
+    {
+      "path": "prototypes/euv-locations/eastern-europe-full-review.json",
+      "kind": "accepted-cartography",
+      "maintenance": "Revisión oriental V5.26: inventarios explícitos, fuentes locales y sucesiones fechadas; regenerar después de una revisión documental.",
+      "producer": "scripts/cartography/build-eastern-europe-routes.mjs"
+    },
+    {
+      "path": "docs/reports/reviewed/V5.26_EUROPA_ORIENTAL.md",
+      "kind": "reviewed-audit",
+      "producer": "scripts/audits/audit-eastern-europe.mjs",
+      "maintenance": "Resultado revisado de 601 años; actualizar explícitamente con --publish tras comprobar las fuentes y superficies."
     }
   ]
 }

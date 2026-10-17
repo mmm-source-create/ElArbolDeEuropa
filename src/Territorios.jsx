@@ -1,3 +1,4 @@
+import {EASTERN_EUROPE_COLORS} from './data/easternEuropeColors.js';
 import {ORANGE_NASSAU} from './data/mapColors.js';
 import {gobiernosDe, territoriosDe} from './data/personAccessors.js';
 import { gobiernoEfectivo } from "./data/territorios.js";
@@ -158,6 +159,7 @@ export const REINO_A_IDS = {
 // Puedes cambiar cualquier valor libremente (es solo un hex de toda la vida).
 
 export const REINO_COLOR = {
+  ...EASTERN_EUROPE_COLORS,
   "Aquitania": "#217eaf",
   "Normandía": "#613cb8",
   "Anjou": "#cd2b28",

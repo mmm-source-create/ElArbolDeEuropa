@@ -1,3 +1,4 @@
+import {EASTERN_EUROPE_REVIEWS} from './easternEuropeReviews.js';
 import {PERSONAL_ATLAS_REVIEWS} from './personalAtlasReviews.js';
 import {AUTHORITY_REVIEWS} from './authorityReviews.js';
 import {GND_DISCREPANCY_REVIEWS} from './gndDiscrepancyReviews.js';
@@ -221,6 +222,7 @@ export const CLAIM_REVIEWS = Object.freeze({
   // Authority-record checks first: any specific review below takes precedence.
   ...AUTHORITY_REVIEWS,
   ...GND_DISCREPANCY_REVIEWS,
+  ...EASTERN_EUROPE_REVIEWS,
   ...NETHERLANDS_GOVERNOR_REVIEWS,
   'person:FRANCPICC:mother': identityReview('inferred', francescoPiccininoFamily,
     'La maternidad de Gabriella se presenta como posible. Se conserva el vínculo como inferido; la fuente no permite tratarlo como seguro.'),

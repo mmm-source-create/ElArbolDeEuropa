@@ -138,3 +138,7 @@ continuidad, evidencia y explicación de atribuciones múltiples.
 para actualizar el informe revisado y los CSV de consulta, tras revisar el
 resultado. La lista de personas conserva por separado mandatos anteriores,
 mandatos posteriores y vínculos familiares.
+
+### Europa oriental · V5.26
+
+`node scripts/cartography/build-eastern-europe-routes.mjs` compila los inventarios geográficos, la cronología y las excepciones locales aceptadas en `prototypes/euv-locations/eastern-europe-*.json`. Después se ejecuta `node scripts/cartography/merge-map-expansions.mjs`. `npm run audit:eastern-europe` comprueba cada celda en cada año de 1200–1800; `-- --publish` actualiza el resultado revisado. Los límites de la auditoría no son fronteras políticas y las fuentes HTML externas solo sirven para localizar candidatos.
