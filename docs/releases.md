@@ -133,3 +133,5 @@ Release se preparan en borrador sobre la entrega validada.
 [Detalle de la entrega](V5.16.md): siete puntos acordados, fuentes y alcance de la comparación de regresión. PR y Release se preparan en borrador sobre el commit validado.
 
 [V5.17](V5.17.md) revisa Austria en el panorama, Polonia-Lituania y sus repartos, y amplía los gobiernos cartografiados hasta 1106. La PR y la vista previa se revisan antes de publicar; la Release permanece en borrador.
+
+[V5.18](V5.18.md) centra el selector del Atlas, simplifica la barra y la ficha, anima la estrella de favoritos y añade biografías extensas, minibiografías y retratos.
