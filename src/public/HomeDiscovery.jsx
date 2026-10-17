@@ -1,5 +1,5 @@
 import React, {useEffect, useId, useRef, useState} from 'react';
-import {ArrowLeft, ArrowRight, BookOpen, Crown, Pause, Play} from 'lucide-react';
+import {ArrowLeft, ArrowRight, BookOpen, Crown} from 'lucide-react';
 import {IMAGENES_PERSONAS} from '../imagenesPersonas.js';
 import {responsiveImage} from '../utils/responsiveImage.js';
 import {documentaryLife} from '../utils/documentaryDates.js';
@@ -8,7 +8,7 @@ import useReducedMotion from '../ui/useReducedMotion.js';
 import './home-discovery.css';
 
 const STORY_PORTRAITS = {borgona: 'CAR1BORG', emperadores: 'CARLOS5', 'cien-anos': 'CARLOS7FRA', papales: 'PAPA_JULIO2', condotieros: 'FRAN1SFOR', gioconda: 'LEONARDODAVINCI'};
-const TABS_ES = [{value: 'people', label: 'Personajes'}, {value: 'stories', label: 'Historias'}];
+const TABS_ES = [{value: 'people', label: 'Personas'}, {value: 'stories', label: 'Historias'}];
 const TABS_EN = [{value: 'people', label: 'People'}, {value: 'stories', label: 'Stories'}];
 
 function Portrait({id, className = '', sizes = '300px'}) {
@@ -118,18 +118,9 @@ export default function HomeDiscovery({people = [], stories = [], locale = 'es',
   </a>;
   if (!people.length && !stories.length) return null;
   return <section className="home-discovery public-section" aria-labelledby={`${id}-heading`}>
-    <div className="home-discovery-heading"><div><span className="home-eyebrow">{en ? 'A point of departure' : 'Un punto de partida'}</span><h2 id={`${id}-heading`}>{en ? 'Open a door to history.' : 'Abre una puerta a la historia.'}</h2></div><a className="home-text-link" href={active === 'people' ? peoplePath : storiesPath}>{active === 'people' ? en ? 'All people' : 'Todos los personajes' : en ? 'All stories' : 'Todas las historias'}<ArrowRight size={15}/></a></div>
+    <div className="home-discovery-heading"><div><span className="home-eyebrow">{en ? 'A point of departure' : 'Un punto de partida'}</span><h2 id={`${id}-heading`}>{en ? 'Open a door to history.' : 'Abre una puerta a la historia.'}</h2></div><a className="home-text-link" href={active === 'people' ? peoplePath : storiesPath}>{active === 'people' ? en ? 'All people' : 'Todas las personas' : en ? 'All stories' : 'Todas las historias'}<ArrowRight size={15}/></a></div>
     <SegmentedControl id={id} tabs label={en ? 'Explore featured content' : 'Explorar contenido destacado'} options={en ? TABS_EN : TABS_ES} value={active} onChange={setActive}/>
-    <div id={`${id}-panel-people`} role="tabpanel" aria-labelledby={`${id}-tab-people`} hidden={active !== 'people'}><DiscoveryCarousel items={people} renderItem={peopleCard} label={en ? 'Featured people' : 'Personajes de puerta'} locale={locale}/></div>
+    <div id={`${id}-panel-people`} role="tabpanel" aria-labelledby={`${id}-tab-people`} hidden={active !== 'people'}><DiscoveryCarousel items={people} renderItem={peopleCard} label={en ? 'Featured people' : 'Personas destacadas'} locale={locale}/></div>
     <div id={`${id}-panel-stories`} role="tabpanel" aria-labelledby={`${id}-tab-stories`} hidden={active !== 'stories'}><DiscoveryCarousel items={stories} renderItem={storyCard} hint={en ? "Find a thread. Follow the story." : "Encuentra un hilo. Sigue la historia."} label={en ? 'Featured stories' : 'Historias de puerta'} locale={locale}/></div>
-  </section>;
-}
-
-export function DynastyMarquee({dynasties = [], locale = 'es'}) {
-  const [paused, setPaused] = useState(false), reduced = useReducedMotion();
-  if (!dynasties.length) return null;
-  return <section className={`home-marquee${paused || reduced ? ' is-paused' : ''}`} aria-label={locale === 'en' ? 'Discover dynasties' : 'Descubre dinastías'}>
-    <div className="home-marquee-window"><div className="home-marquee-track">{[0, 1].map(copy => <div className="home-marquee-group" key={copy} aria-hidden={copy === 1 ? true : undefined}>{dynasties.map(dynasty => <a key={dynasty.slug} href={`/es/dinastia/${encodeURIComponent(dynasty.slug)}`} tabIndex={copy === 1 ? -1 : undefined}>{dynasty.nombre}<span aria-hidden="true">✦</span></a>)}</div>)}</div></div>
-    <button type="button" aria-label={paused ? locale === 'en' ? 'Resume dynasty ribbon' : 'Reanudar cinta de dinastías' : locale === 'en' ? 'Pause dynasty ribbon' : 'Pausar cinta de dinastías'} aria-pressed={paused} onClick={() => setPaused(value => !value)} disabled={reduced}>{paused || reduced ? <Play size={14}/> : <Pause size={14}/>}</button>
   </section>;
 }

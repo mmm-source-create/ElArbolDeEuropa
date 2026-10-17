@@ -100,7 +100,7 @@ test('Europa es una vista del Atlas: agrupa títulos, abre una persona y restaur
   assert.equal(document.querySelector('[aria-modal="true"]'),null);
   const search=document.querySelector('.europe-governments input');
   await act(async()=>{Object.getOwnPropertyDescriptor(window.HTMLInputElement.prototype,'value').set.call(search,'Carlos V');search.dispatchEvent(new window.Event('input',{bubbles:true}));});
-  assert.deepEqual([...document.querySelectorAll('.europe-ruler-grid h3')].map(n=>n.textContent),['España','Estados borgoñones','Sacro Imperio (Alemania)']);
+  assert.deepEqual([...document.querySelectorAll('.europe-ruler-grid h4')].map(n=>n.textContent),['España','Estados borgoñones','Sacro Imperio (Alemania)']);
   await click(document.querySelector('.europe-ruler-grid .europe-ruler>button'));
   // The scenes slide for 650ms; the outgoing one is removed when it settles.
   await act(async()=>{await new Promise(r=>setTimeout(r,700));});

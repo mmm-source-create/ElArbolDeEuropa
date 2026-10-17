@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import React, {act} from 'react';
 import {renderToString} from 'react-dom/server';
 import {JSDOM} from 'jsdom';
-import HomeDiscovery, {DiscoveryCarousel, DynastyMarquee} from '../src/public/HomeDiscovery.jsx';
+import HomeDiscovery, {DiscoveryCarousel} from '../src/public/HomeDiscovery.jsx';
 import SegmentedControl from '../src/ui/SegmentedControl.jsx';
 import ActionDial from '../src/ui/ActionDial.jsx';
 import Odometer from '../src/ui/Odometer.jsx';
@@ -116,9 +116,5 @@ test('las cifras y el progreso anuncian sus valores reales, incluso sin movimien
   assert.ok(progress.classList.contains('lesson-progress'));
   assert.equal(progress.firstElementChild.style.transform,'scaleX(0.6)');
   await mount(React.createElement(Odometer,{value:undefined}));assert.equal(node.textContent,'—');
-  await mount(React.createElement(DynastyMarquee,{dynasties:[{nombre:'Habsburgo',slug:'habsburgo'}]}));
-  assert.ok(node.querySelector('.home-marquee').classList.contains('is-paused'));
-  assert.equal(node.querySelector('button').disabled,true);
-  assert.equal(node.querySelector('[aria-hidden=true] a').tabIndex,-1);
   await act(async()=>{delete document.documentElement.dataset.eadeMotion;});
 });

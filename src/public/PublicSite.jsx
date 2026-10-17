@@ -35,7 +35,7 @@ import { etiquetaClaseGobierno, slugPublico, textoBusquedaPersona, normalizarBus
 import HOME_DATA from "../generated/home.json";
 import { loadJsonAsset } from "../utils/loadAsset.js";
 import "./public.css";
-import HomeDiscovery, {DynastyMarquee} from "./HomeDiscovery.jsx";
+import HomeDiscovery from "./HomeDiscovery.jsx";
 import Odometer from "../ui/Odometer.jsx";
 import { responsiveImage } from "../utils/responsiveImage.js";
 import ReadingSkeleton from "../stories/ReadingSkeleton.jsx";
@@ -143,7 +143,7 @@ const HOME_COPY = {
     explore: "Explorar el atlas", stories: "Ver historias", year: "Europa en 1500",
     statsLabel: "Resumen del proyecto", stats: ["personas", "dinastías", "territorios", "historias disponibles"],
     doorsEyebrow: "Entradas rápidas", doorsTitle: "Elige cómo quieres empezar",
-    peopleEyebrow: "Personajes destacados", peopleTitle: "Puertas a la red", allPeople: "Ver todas las personas",
+    peopleEyebrow: "Personas destacadas", peopleTitle: "Puertas a la red", allPeople: "Ver todas las personas",
     storiesEyebrow: "Recorridos guiados", storiesTitle: "Historias para entrar en el atlas", allStories: "Todas las historias", chapters: "capítulos", start: "Comenzar recorrido",
     aboutEyebrow: "Un proyecto en crecimiento", aboutTitle: "Una base histórica para explorar, no una lista cerrada",
     about: "El proyecto combina genealogía, cronología y cartografía. La ausencia de una relación o personaje puede significar que todavía no se ha incorporado; las correcciones documentadas tienen prioridad sobre la mera coherencia visual.",
@@ -203,20 +203,19 @@ export function HomeContent({ data = HOME_DATA, locale = "es", title, onEnterAtl
           </div>
         </section>
 
-        <HomeDiscovery people={people} stories={stories} locale={locale} peoplePath={peoplePath} storiesPath={storiesPath}/>
-        <DynastyMarquee dynasties={data?.dinastiasDestacadas || HOME_DATA.dinastiasDestacadas} locale={locale}/>
-
         <section className="public-section home-quick-links" aria-label={copy.doorsTitle}>
           <div className="public-section-heading"><div><span>{copy.doorsEyebrow}</span><h2>{copy.doorsTitle}</h2></div></div>
           <div className="public-door-grid">
             {doors.map(({ href, Icon, title: doorTitle, description, spanish, panel }) => (
               <a key={href} href={href} className="public-door-card" onClick={panel ? (event) => navigateInApp(event, onOpenPanel, panel) : undefined}>
-                <Icon size={22} aria-hidden="true" /><strong>{doorTitle}</strong><span>{description}</span>
+                <Icon size={24} aria-hidden="true" /><strong>{doorTitle}</strong><span>{description}</span><ArrowRight className="public-door-arrow" size={16} aria-hidden="true" />
                 {english && spanish && <small className="public-home-language">In Spanish</small>}
               </a>
             ))}
           </div>
         </section>
+
+        <HomeDiscovery people={people} stories={stories} locale={locale} peoplePath={peoplePath} storiesPath={storiesPath}/>
 
         <section className="public-section public-about-strip">
           <div><span>{copy.aboutEyebrow}</span><h2>{copy.aboutTitle}</h2><p>{copy.about}</p></div>
