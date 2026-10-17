@@ -1,3 +1,4 @@
+import {REFERENCIAS_BIOGRAFIAS} from './referencias-biografias.js';
 // Biografías ampliadas para las figuras centrales del Atlas. Solo se publican
 // en la ficha individual; el Atlas conserva el resumen breve de cada persona.
 // Cada apartado es una etapa con título propio. Las fechas y cargos siguen los
@@ -245,7 +246,11 @@ export const BIOGRAFIAS_EXTENSAS = Object.freeze({
   ],
 });
 
+// Cada apartado cita las obras de referencia que documentan esa vida completa.
 export function biografiaExtensaPersona(personaOId) {
   const id = typeof personaOId === 'string' ? personaOId : personaOId?.id;
-  return (id && BIOGRAFIAS_EXTENSAS[id]) || null;
+  const apartados = (id && BIOGRAFIAS_EXTENSAS[id]) || null;
+  if (!apartados) return null;
+  const fuentes = REFERENCIAS_BIOGRAFIAS[id] || [];
+  return apartados.map(apartado => ({...apartado, fuentes}));
 }
