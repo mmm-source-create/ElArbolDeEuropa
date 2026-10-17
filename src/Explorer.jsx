@@ -757,7 +757,7 @@ export default function Explorer({ initialPanel = null, treeBase: TREE_BASE, loa
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [rows, visibleSignature]);
   const treeLayout = useMemo(() => {
-    if (connectionSet) return selectionLayout(connectionResult.ids, gen, BY_ID);
+    if (connectionSet) return selectionLayout(connectionResult.ids, gen, BY_ID, connectionResult.edges);
     const layout = visiblePeople.length === PERSONAS.length ? TREE_BASE.layout : computeTreeLayout(visibleRows, BY_ID, HIJOS_POR_ID);
     return groupIsolatedPopes(layout, [...isolatedPopeIds], BY_ID);
   }, [visibleRows, visiblePeople.length, connectionSet, connectionResult, gen, TREE_BASE.layout]);

@@ -9,7 +9,7 @@ export function wrapName(name,limit=25){
 }
 export function treeSvg({people,edges,gen={},terminals=[],title='Selección del árbol',url=`${DEFAULT_SITE_URL}/es/`,margin=12}){
  if(!people.length)throw new Error('Selecciona una persona, una comparación o una rama antes de exportar.');
- const byId=Object.fromEntries(people.map(p=>[p.id,p])),ids=people.map(p=>p.id),layout=selectionLayout(ids,gen,byId);
+ const byId=Object.fromEntries(people.map(p=>[p.id,p])),ids=people.map(p=>p.id),layout=selectionLayout(ids,gen,byId,edges);
  // Todas las filas reservan el alto del nombre más largo, también con fechas documentales.
  const text=Object.fromEntries(people.map(p=>[p.id,{name:wrapName(p.nombre),dates:wrapName(documentaryLife(p),29)}]));
  const height=Math.max(100,...people.map(p=>38+text[p.id].name.length*19+text[p.id].dates.length*16));

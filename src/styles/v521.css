@@ -22,3 +22,6 @@ html[data-eade-theme] .wrap.wrap .connection-controls :is(a,.clear-btn){color:va
 html[data-eade-theme] .wrap.wrap .atlas-filter-region+.atlas-filter-region{margin-top:12px}
 html[data-eade-theme] .wrap.wrap .atlas-filter-region>.atlas-filter-heading{display:flex;align-items:baseline;justify-content:space-between;margin:0 0 6px;color:var(--eade-muted);font:700 var(--fs-2xs)/1.2 var(--eade-sans);letter-spacing:.06em;text-transform:uppercase}
 html[data-eade-theme] .wrap.wrap .atlas-filter-region>.atlas-filter-heading small{font-weight:600;letter-spacing:0;color:var(--eade-muted-soft)}
+html[data-eade-theme] .wrap.wrap .connection-controls .connection-chip button{color:var(--eade-ink)}
+html[data-eade-theme] .wrap.wrap .connection-controls .connection-chip button[aria-label]{color:var(--eade-muted)}
+html[data-eade-theme] .wrap.wrap .connection-controls .connection-search :is(li button,li){color:var(--eade-ink)}
