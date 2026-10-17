@@ -7,10 +7,10 @@
 .tree-list-toggle[aria-pressed="true"] { border-color: var(--eade-wine); color: var(--eade-wine); }
 
 .bio-family-actions { gap: 9px; margin: 11px 0 14px; padding: 12px; border-radius: 7px; }
-.bio-family-actions > span { font: 700 10px/1.4 var(--eade-sans); letter-spacing: .045em; }
+.bio-family-actions > span { font: 700 var(--fs-2xs, 10px)/1.4 var(--eade-sans); letter-spacing: .045em; }
 .bio-family-actions > div { display: grid; grid-template-columns: repeat(auto-fit, minmax(125px,1fr)); gap: 7px; }
-.bio-family-actions > div button { display: flex; align-items: center; justify-content: space-between; gap: 5px; min-height: 36px; padding: 6px 9px; font: 600 11px var(--eade-sans); }
-.bio-family-actions > div button small { padding: 2px 4px; border-radius: 3px; background: var(--eade-paper-soft); color: var(--eade-wine); font: 700 10px var(--eade-sans); }
+.bio-family-actions > div button { display: flex; align-items: center; justify-content: space-between; gap: 5px; min-height: 36px; padding: 6px 9px; font: 600 var(--fs-xs, 11px) var(--eade-sans); }
+.bio-family-actions > div button small { padding: 2px 4px; border-radius: 3px; background: var(--eade-paper-soft); color: var(--eade-wine); font: 700 var(--fs-2xs, 10px) var(--eade-sans); }
 .bio-family-actions .bio-focus-link { padding: 3px 0; min-height: 28px; justify-self: start; }
 
 .workspace-filter-clear {
@@ -21,9 +21,9 @@
   padding: 7px 10px;
   border: 1px solid var(--eade-wine);
   border-radius: 5px;
-  background: var(--eade-wine);
+  background: var(--eade-wine-fill);
   color: var(--eade-paper-bright);
-  font: 700 12px var(--eade-sans);
+  font: 700 var(--fs-sm, 12px) var(--eade-sans);
   text-align: center;
   cursor: pointer;
 }

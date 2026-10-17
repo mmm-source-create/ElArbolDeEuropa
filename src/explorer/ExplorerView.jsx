@@ -12,7 +12,7 @@ import TreeExport from "../connections/TreeExport.jsx";
 import DocumentationNotes from "../components/DocumentationNotes.jsx";
 import { responsiveImage } from "../utils/responsiveImage.js";
 import React from "react";
-import { Search, ChevronDown, ChevronRight, ArrowLeft, ArrowRight, ZoomIn, ZoomOut, RotateCcw, GitCompare, Share2, Play, Pause, SkipBack, SkipForward, X, Info, Heart, BookOpen, BarChart3, Scale, Flag, Mail, ExternalLink, Crosshair, Maximize2, CircleHelp, SlidersHorizontal, List } from "lucide-react";
+import { Search, ChevronDown, ChevronRight, ArrowLeft, ArrowRight, ZoomIn, ZoomOut, RotateCcw, GitCompare, Share2, Play, Pause, SkipBack, SkipForward, X, Info, Heart, BookOpen, BarChart3, Scale, Flag, Mail, ExternalLink, Crosshair, Maximize2, CircleHelp, SlidersHorizontal, List, Star, PanelsTopLeft } from "lucide-react";
 import { MapaEuropa } from "../MapaEuropa";
 import { TERRITORIOS_SUB, TERRITORIOS_DESTACADOS, REINO_COLOR, REINO_COLOR_DEFAULT, listaReinados, territoriosGobernadosEnAño, reinadoEsEfectivo, reinadosActivos, idsDeGobiernoEnAño, añoReferenciaTerritorial, esGobernante } from "../Territorios";
 import { TERRITORIOS } from "../data/territorios.js";
@@ -23,6 +23,8 @@ import { t } from "../i18n.jsx";
 import BioRelations from "../components/BioRelations.jsx";
 import BioDiscovery from "../components/BioDiscovery.jsx";
 import FavoriteStar from "../ui/FavoriteStar.jsx";
+import HoldButton from "../ui/HoldButton.jsx";
+import YearCounter from "../ui/YearCounter.jsx";
 import SiteHeader from "../components/SiteHeader.jsx";
 import SiteFooter from "../components/SiteFooter.jsx";
 import { etiquetaClaseGobierno, resumenCortoPersona } from "../utils/personPresentation.js";
@@ -42,6 +44,7 @@ import SegmentedControl from "../ui/SegmentedControl.jsx";
 import ActionDial from "../ui/ActionDial.jsx";
 import "./atlas-interactions.css";
 import "../styles/v518.css";
+import "../styles/v519.css";
 
 const VIEW_OPTIONS = [{value:'arbol',label:'Árbol'},{value:'mapa',label:'Mapa'},{value:'ambos',label:'Árbol y mapa'}];
 const BIO_OPTIONS = ['resumen','familia','coronas','historias','fuentes'].map((value,index)=>({value,label:['Resumen','Familia','Coronas','Historias','Fuentes'][index],controls:`bio-section-${value}`}));
@@ -51,6 +54,7 @@ const SEARCH_TERRITORIES = Object.keys(TERRITORIOS);
 const IRISH_MAP_TERRITORIES = new Set(['Irlanda','Connacht','Leinster','Tír Eoghain','Tír Chonaill','Condado de Tyrone','Condado de Tyrconnell','Thomond','Condado de Thomond','Desmond','Condado de Desmond','Condado de Clancare','Condado de Ulster','Kildare','Ormond','Clanricarde','Vizcondado de Mayo']);
 
 const EuropeYearView = React.lazy(() => import('./EuropeYearView.jsx'));
+const TERRITORY_FILTER_MODES=[{value:'associated',label:'Vinculados'},{value:'government',label:'Gobernaban en el año'}];
 const SCENES=[{value:'atlas',label:'Atlas'},{value:'europa',label:'Europa en este año'}];
 const AtlasCrowns = React.lazy(() => import('./AtlasCrowns.jsx'));
 
@@ -259,7 +263,7 @@ export default function ExplorerView({ vm, loading = false, loadError = false, o
       {loadError && <AtlasLoadError onRetry={onRetry}/>}
       {!modoTrabajo && <SiteHeader variant="atlas" locale={locale} onLanguageChange={cambiarIdioma} />}
     <div className={`wrap atlas-scene-${atlasScene}${modoTrabajo ? " atlas-work-mode" : ""}`} inert={!ready}>
-      <div className="atlas-scene-switch"><SegmentedControl options={SCENES} value={atlasScene} onChange={changeAtlasScene} label="Modo de exploración"/></div>
+      <div className="atlas-scene-switch"><SegmentedControl rail options={SCENES} value={atlasScene} onChange={changeAtlasScene} label="Modo de exploración"/></div>
       <div className={`workspace-topbar${modoTrabajo ? " is-work-mode" : ""}`}>
         <section className="workspace-topbar-section workspace-toolbar-search" onBlur={e=>{if(!e.currentTarget.contains(e.relatedTarget))setSearchOpen(false);}}>
           <div className="toolbar-label sk" style={{"--sk-index":0}}>Búsqueda</div>
@@ -310,6 +314,7 @@ export default function ExplorerView({ vm, loading = false, loadError = false, o
         <section className="workspace-topbar-section workspace-toolbar-year">
           <div className="global-year-heading-row">
             <div className="toolbar-label sk" style={{"--sk-index":0}}>Año global</div>
+            <YearCounter year={anioGlobal}/>
 
             {Number.isFinite(anioGlobal) && (
               <span className="global-year-header-summary">
@@ -403,9 +408,9 @@ export default function ExplorerView({ vm, loading = false, loadError = false, o
         {!modoTrabajo && atlasScene === "atlas" && (
         <div id="atlas-secondary-tools" className={`workspace-topbar-secondary${mobileToolsOpen?' is-expanded':''}`}>
           <section className="workspace-topbar-section workspace-toolbar-view workspace-toolbar-panels">
-            <SegmentedControl className="atlas-view-pills" label="Vista principal" options={VIEW_OPTIONS} value={mostrarArbol && mostrarMapa ? 'ambos' : mostrarMapa ? 'mapa' : 'arbol'} onChange={value=>setVistasActivas({arbol:value!=='mapa',mapa:value!=='arbol'})}/>
+            <SegmentedControl rail className="atlas-view-pills" label="Vista principal" options={VIEW_OPTIONS} value={mostrarArbol && mostrarMapa ? 'ambos' : mostrarMapa ? 'mapa' : 'arbol'} onChange={value=>setVistasActivas({arbol:value!=='mapa',mapa:value!=='arbol'})}/>
             <details ref={panelsMenuRef} className="atlas-toolbar-menu atlas-panels-menu" onToggle={onToolbarMenuToggle}>
-              <summary>Paneles <ChevronDown size={12} aria-hidden="true" /></summary>
+              <summary className="ui-tip" data-tip="Paneles"><PanelsTopLeft size={14} aria-hidden="true" /><span className="ui-sr-only">Paneles</span></summary>
               <div className="atlas-toolbar-menu-panel" role="group" aria-label="Paneles visibles">
                 <button type="button" aria-pressed={mostrarFiltros} onClick={() => alternarPanelAuxiliar('filtros')}>Filtros</button>
                 <button type="button" aria-pressed={mostrarBiografia} onClick={() => alternarPanelAuxiliar('biografia')}>Biografía</button>
@@ -419,7 +424,8 @@ export default function ExplorerView({ vm, loading = false, loadError = false, o
               <div className="compare-split-control" ref={compareMenuRef}>
                 <button
                   type="button"
-                  className={`nav-btn nav-btn-wide compare-main-btn ${["compare","conexion"].includes(mode) ? "active" : ""}`}
+                  className={`nav-btn compare-main-btn ui-tip ${["compare","conexion"].includes(mode) ? "active" : ""}`}
+                  data-tip="Comparar o conectar personas"
                   onClick={() => {
                     const entrar = !["compare","conexion"].includes(mode);
                     setMode(entrar ? "compare" : "view");
@@ -428,7 +434,7 @@ export default function ExplorerView({ vm, loading = false, loadError = false, o
                     setFocoMenuOpen(false);
                   }}
                 >
-                  <GitCompare size={12} /> Comparar
+                  <GitCompare size={14} aria-hidden="true" /><span className="ui-sr-only">Comparar</span>
                 </button>
                 <button
                   type="button"
@@ -471,8 +477,8 @@ export default function ExplorerView({ vm, loading = false, loadError = false, o
                 )}
               </div>
               <div className="favorites-control" ref={favoritosMenuRef}>
-                <button type="button" className={`nav-btn nav-btn-wide${favoritosOpen || soloFavoritos ? " active" : ""}`} onClick={() => { closeOtherToolbarMenus(); setCompareMenuOpen(false); setFavoritosOpen((actual) => !actual); }} aria-expanded={favoritosOpen}>
-                  <span className="favorite-star-symbol" aria-hidden="true">★</span> Favoritos {favoritos.length ? <span key={favoritos.length} className="ui-count-bump">({favoritos.length})</span> : ""}
+                <button type="button" className={`nav-btn favorites-trigger ui-tip${favoritosOpen || soloFavoritos ? " active" : ""}`} data-tip="Favoritos" onClick={() => { closeOtherToolbarMenus(); setCompareMenuOpen(false); setFavoritosOpen((actual) => !actual); }} aria-expanded={favoritosOpen}>
+                  <Star size={14} aria-hidden="true" className="favorite-star-symbol"/><span className="ui-sr-only">Favoritos</span>{favoritos.length ? <span key={favoritos.length} className="favorites-count ui-count-bump" aria-label={`${favoritos.length} guardados`}>{favoritos.length}</span> : null}
                 </button>
                 {favoritosOpen && (
                   <div className="favorites-menu" role="group">
@@ -485,6 +491,7 @@ export default function ExplorerView({ vm, loading = false, loadError = false, o
                         </div>
                       )) : <div className="favorites-empty">Marca una ficha con ★ para guardarla aquí.</div>}
                     </div>
+                    {favoritos.length > 1 && <div className="favorites-clear"><HoldButton label="Mantén pulsado para borrar todos los favoritos" onConfirm={() => { setFavoritos([]); setSoloFavoritos(false); }}>Mantén para borrar todos</HoldButton></div>}
                     <label className={`favorites-filter-toggle${favoritos.length ? "" : " is-disabled"}`}>
                       <input type="checkbox" checked={soloFavoritos} disabled={!favoritos.length} onChange={(event) => setSoloFavoritos(event.target.checked)} />
                       <span>Mostrar solo favoritos</span>
@@ -492,9 +499,9 @@ export default function ExplorerView({ vm, loading = false, loadError = false, o
                   </div>
                 )}
               </div>
-              <button type="button" className="nav-btn nav-btn-wide" ref={guideButtonRef} onClick={() => { if (toolsMenuRef.current) toolsMenuRef.current.open = false; setGuideOpen(true); }}><CircleHelp size={13} /> Ayuda</button>
+              <button type="button" className="nav-btn ui-tip" data-tip="Ayuda y guía" ref={guideButtonRef} onClick={() => { if (toolsMenuRef.current) toolsMenuRef.current.open = false; setGuideOpen(true); }}><CircleHelp size={14} aria-hidden="true" /><span className="ui-sr-only">Ayuda</span></button>
               <details ref={toolsMenuRef} className="atlas-toolbar-menu atlas-tools-menu" onToggle={onToolbarMenuToggle}>
-                <summary><SlidersHorizontal size={13} aria-hidden="true" /> Herramientas <ChevronDown size={12} aria-hidden="true" /></summary>
+                <summary className="ui-tip" data-tip="Herramientas"><SlidersHorizontal size={14} aria-hidden="true" /><span className="ui-sr-only">Herramientas</span></summary>
                 <div className="atlas-toolbar-menu-panel" role="group" aria-label="Herramientas del Atlas">
                   <strong>Persona seleccionada</strong>
                   <button type="button" disabled={!seleccion} onClick={centrarSeleccion}><Crosshair size={13} /> Centrar persona</button>
@@ -626,7 +633,7 @@ export default function ExplorerView({ vm, loading = false, loadError = false, o
               Quitar {filterCount} {filterCount === 1 ? 'filtro' : 'filtros'}
             </button>}
             <div className="panel-body workspace-panel-scroll workspace-filter-scroll">
-              <div className="atlas-scope"><strong>{vm.growth.ids===null?'Base completa':`${vm.growth.ids.length} personas en tu selección`}</strong><span>Selecciona una persona y usa «Añadir familia» para ampliar el árbol.</span><div>{!historiaActiva&&<>{vm.growth.ids!==null&&<button onClick={vm.growth.onFull}>Ver todas</button>}<button onClick={vm.growth.onNew}>Nueva selección</button>{vm.growth.canUndo&&<button onClick={vm.growth.onUndo}>Deshacer</button>}</>}</div></div>
+              <div className="atlas-scope"><strong>{vm.growth.ids===null?'Base completa':`${vm.growth.ids.length} personas en tu selección`}</strong><span>Elige una persona y amplía su familia desde su ficha.</span><div>{!historiaActiva&&<>{vm.growth.ids!==null&&<button onClick={vm.growth.onFull}>Ver todas</button>}<button onClick={vm.growth.onNew}>Nueva selección</button>{vm.growth.canUndo&&<button onClick={vm.growth.onUndo}>Deshacer</button>}</>}</div></div>
               <div className="filters-row filters-row-vertical filters-always-open">
                 <FilterSection
                   title="Territorios"
@@ -634,13 +641,8 @@ export default function ExplorerView({ vm, loading = false, loadError = false, o
                   onToggle={() => alternarSeccionFiltro("territorios")}
                   activeCount={territorios.length}
                 >
-                  <label className="atlas-filter-mode">Buscar por<select aria-label="Criterio del filtro territorial" value={territorialFilterMode} onChange={e=>setTerritorialFilterMode(e.target.value)}><option value="associated">Vinculación registrada</option><option value="government">Gobierno efectivo en el año</option></select></label>
-                  <p className="atlas-filter-explanation">Las carpetas de región reúnen fichas. La pertenencia política y el control se consultan por año en el mapa. {territorialFilterMode==='government'&&anioGlobal==null?'Sin año se incluyen todos los mandatos efectivos; elige uno para acotar.':''}</p>
-                  <details className="territory-filter-method"><summary>Qué significa cada relación política</summary>
-                    <p><strong>Territorio del Imperio:</strong> vínculo jurídico que cambió con el tiempo. Este grupo sirve para navegar fichas; no certifica la pertenencia de cada feudo en el año elegido.</p>
-                    <p><strong>Círculo imperial:</strong> distrito de administración imperial. No todos los territorios del Imperio pertenecían a uno.</p>
-                    <p><strong>Gobierno Habsburgo:</strong> se consulta por persona y año en el mapa o mediante el filtro de la dinastía Habsburgo; no equivale a territorio imperial.</p>
-                  </details>
+                  <SegmentedControl className="atlas-filter-mode" label="Criterio del filtro territorial" value={territorialFilterMode} onChange={setTerritorialFilterMode} options={TERRITORY_FILTER_MODES}/>
+                  {territorialFilterMode==='government'&&anioGlobal==null&&<p className="atlas-filter-explanation">Elige un año para ver solo quién gobernaba entonces.</p>}
                   <div className="filter-group filter-group-dinastias">
                     {opciones.territorios.map((territorio) => <TerritoryFilterNode key={territorio}
                       name={territorio} options={opciones.subsPorTerritorio} selected={territorios}
@@ -656,7 +658,6 @@ export default function ExplorerView({ vm, loading = false, loadError = false, o
                   onToggle={() => alternarSeccionFiltro("dinastias")}
                   activeCount={dinastias.length}
                 >
-                  <p className="atlas-filter-explanation">Las casas y sus ramas expresan filiación dinástica. Las carpetas geográficas solo ayudan a explorar.</p>
                   {[['Casas y ramas',opciones.dynastyFamilies],['Agrupaciones geográficas',opciones.dynastyFolders]].map(([title,names])=><div key={title}><h4 className="atlas-filter-heading">{title}</h4><div className="filter-group filter-group-dinastias">{names.map(name=><DynastyFilterNode key={name} name={name} options={opciones.ramasPorPrincipal} selected={dinastias} expanded={dinastiasExpandidas} onToggle={n=>toggle(setDinastias,dinastias,n)} onExpand={n=>toggle(setDinastiasExpandidas,dinastiasExpandidas,n)} folder={title==='Agrupaciones geográficas'}/>)}</div></div>)}
                 </FilterSection>
 
