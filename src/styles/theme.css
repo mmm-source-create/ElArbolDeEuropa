@@ -24,8 +24,11 @@
   --fs-xl: 18px;
   --fs-2xl: 22px;
   --fs-3xl: 28px;
-  --eade-radius-sm: 4px;
-  --eade-radius-md: 7px;
+  /* Radios (V5.20): pequeño para controles, medio para tarjetas; las píldoras usan 999px. */
+  --r-sm: 6px;
+  --r-md: 10px;
+  --eade-radius-sm: var(--r-sm);
+  --eade-radius-md: var(--r-md);
   --eade-shadow-card: 0 8px 30px rgba(74, 59, 40, .08);
 }
 

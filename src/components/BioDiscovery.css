@@ -29,7 +29,7 @@
   min-width: 0;
   padding: 6px 9px;
   border: 1px solid var(--eade-border, #D8CEB7);
-  border-radius: 8px;
+  border-radius: var(--r-md, 10px);
   background: var(--eade-paper-bright, #FFFDF7);
   color: #5E5546;
   font: 500 var(--fs-md, 13px)/1.4 var(--eade-sans, system-ui, sans-serif);
