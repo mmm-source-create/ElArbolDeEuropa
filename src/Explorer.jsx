@@ -1090,8 +1090,10 @@ export default function Explorer({ initialPanel = null, treeBase: TREE_BASE, loa
       }
       const sceneParams=new URLSearchParams(window.location.search);
       setTerritorialFilterMode(sceneParams.get('criterio')==='gobierno'?'government':'associated');
+      // Only legacy links carry the scene; without it, history keeps the current scene.
+      const explicitScene=sceneParams.has('escena')||sceneParams.get('panel')==='europa';
       const incomingScene=sceneParams.get('escena')==='europa'||sceneParams.get('panel')==='europa'?'europa':'atlas';
-      setAtlasScene(incomingScene);
+      if(explicitScene)setAtlasScene(incomingScene);
       const yearValue=sceneParams.get('anio');
       const incomingYear=yearValue?Number(yearValue):incomingScene==='europa'?1500:null;
       if(incomingYear===null||Number.isInteger(incomingYear)){setAnioGlobal(incomingYear);setAnioInput(incomingYear===null?'':String(incomingYear));}
@@ -1611,17 +1613,18 @@ export default function Explorer({ initialPanel = null, treeBase: TREE_BASE, loa
   const changeAtlasScene = useCallback(scene=>{
     setReproduciendoHistoria(false);
     setAtlasScene(scene);
-    requestAnimationFrame(()=>window.scrollTo({top:0,behavior:"instant"}));
     if(scene==='europa'&&!Number.isInteger(anioGlobal)){setAnioGlobal(1500);setAnioInput('1500');}
     const url=new URL(window.location.href);
     if(url.searchParams.get('panel')==='europa')url.searchParams.delete('panel');
-    if(scene==='europa')url.searchParams.set('escena','europa');else url.searchParams.delete('escena');
+    // V5.20 · Atlas y Europa comparten URL: la escena vive en la sesión, no en la
+    // dirección. Los enlaces antiguos con ?escena=europa se siguen leyendo.
+    url.searchParams.delete('escena');
     if(Number.isInteger(anioGlobal))url.searchParams.set('anio',String(anioGlobal));else if(scene==='europa')url.searchParams.set('anio','1500');
-    window.history.pushState({eade:'atlas'},'',url.pathname+url.search+url.hash);
+    window.history.replaceState(window.history.state,'',url.pathname+url.search+url.hash);
   },[anioGlobal]);
   useEffect(()=>{
     if(!ready||atlasScene!=='europa'||!Number.isInteger(anioGlobal))return;
-    const url=new URL(window.location.href);url.searchParams.set('escena','europa');url.searchParams.set('anio',String(anioGlobal));if(url.searchParams.get('panel')==='europa')url.searchParams.delete('panel');
+    const url=new URL(window.location.href);url.searchParams.delete('escena');url.searchParams.set('anio',String(anioGlobal));if(url.searchParams.get('panel')==='europa')url.searchParams.delete('panel');
     window.history.replaceState({eade:'atlas'},'',url.pathname+url.search+url.hash);
   },[atlasScene,anioGlobal,ready]);
 
