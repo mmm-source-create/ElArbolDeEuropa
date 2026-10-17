@@ -40,7 +40,7 @@ test('Atlas real: enlace de rama, búsqueda, retirada, exportación y salida con
  await click(document.querySelector('.connection-search li button'));assert.equal(document.querySelectorAll('.connection-chip').length,4);
  await click(document.querySelector('[aria-label="Quitar Catalina Micaela de España"]'));assert.equal(document.querySelectorAll('.connection-chip').length,3);
  await click(document.querySelector('[aria-label="Exportar el árbol"]'));assert.ok(document.querySelector('dialog[open]'));await click(button('Descargar SVG'));assert.equal(downloads[0].type,'image/svg+xml;charset=utf-8');const svg=await downloads[0].text();assert.match(svg,/Tomás Francisco/);assert.match(svg,/El Árbol de Europa/);await click(document.querySelector('[aria-label="Cerrar exportación"]'));
- await click(button('Comparar'));assert.equal(document.querySelector('.connection-controls'),null);assert.equal(new URLSearchParams(window.location.search).has('conectar'),false);
+ await click(button('Conectar personas'));assert.equal(document.querySelector('.connection-controls'),null);assert.equal(new URLSearchParams(window.location.search).has('conectar'),false);
  await click(button('Ayuda'));assert.match(document.querySelector('.atlas-guide').textContent,/Primeros pasos/);
  await click(button('Mostrar a Carlos V'));assert.match(document.querySelector('.atlas-guide h3').textContent,/Añade su familia/);
  assert.equal(document.querySelectorAll('.atlas-guide [role="tab"]').length,3);

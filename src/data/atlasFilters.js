@@ -49,3 +49,56 @@ export function personMatchesTerritory(person,filter,year=null,governmentsOnly=f
  const values=governmentsOnly?gobiernosDe(person).filter(g=>gobiernoEfectivo(g)&&(year==null||g.desde<=year&&year<=g.hasta)).map(g=>g.territorio):territoriosDe(person);
  return values.some(n=>{if(governmentsOnly&&year!=null&&filter==='Hungría'&&(n==='Transilvania habsbúrgica'||n==='Transilvania'&&year>1540||n==='Banato de Temes'&&year<1779))return false;return n===filter||subterritoriosDeFiltro(filter).includes(n);});
 }
+
+// V5.21 · Territories and dynasties share one geographic ordering in the
+// filters. It only arranges the list; filter values and matching are unchanged.
+export const FILTER_REGIONS=['Península ibérica','Francia y Países Bajos','Islas Británicas','Sacro Imperio y Europa central','Italia y Mediterráneo','Escandinavia y Báltico','Europa oriental','Balcanes y Bizancio','Fuera de Europa','Otros'];
+const TERRITORY_REGION={
+ 'España':0,'Portugal':0,'Califato almohade':0,'Emirato de al-Ándalus':0,'Emirato de Menorca':0,
+ 'Francia':1,'Borgoña y Países Bajos':1,'Borgoña y Franco Condado':1,'Países Bajos y Flandes':1,'Provincias Unidas':1,'Señorío de Malinas':1,'Tournai':1,
+ 'Inglaterra':2,'Escocia':2,'Irlanda':2,'Gran Bretaña':2,
+ 'Sacro Imperio':3,'Austria':3,'Hungría':3,'Prusia':3,'Brzeg':3,'Glaž':3,'Incorporaciones del siglo XVI':3,'Sajonia-Coburgo':3,'Sajonia-Coburgo-Eisenach':3,'Sajonia-Eisenach':3,'Sajonia-Gotha':3,'Sajonia-Weimar':3,
+ 'Estados Italianos':4,'Verona':4,'Córcega':4,'Judicado de Arborea':4,'Judicado de Cagliari':4,'Judicado de Torres':4,'Marquesado de Oristano':4,
+ 'Escandinavia':5,
+ 'Polonia-Lituania':6,'Rusia':6,'Reino de Galicia y Lodomeria':6,
+ 'Balcanes':7,'Bizancio y Oriente latino':7,'Condado palatino de Cefalonia y Zacinto':7,'Despotado de Ioannina':7,'Despotado de Serres':7,'Donji Kraji':7,'Epiro de los Tocco':7,'Hum':7,'Norte de Serbia habsbúrgico':7,'Oltenia habsbúrgica':7,'Señorío de Dejanović':7,
+ 'Egipto':8,'Siria':8,'Georgia y Cáucaso':8,
+};
+// Reviewed exceptions: Imperial Italy and the Low Countries would otherwise vote
+// for the Empire, and Polish houses for Central Europe.
+const HOUSE_REGION={'Gonzaga':4,'Saboya':4,'Saboya-Carignano':4,'Saluzzo':4,'Sforza':4,'Visconti':4,'Aleramici':4,'Pignatelli':4,'Brabante':1,'Dampierre':1,'Baux':1,'Jagellón':6,'Piast':6,'Sin casa identificada':9,'Otras dinastías':9};
+const FOLDER_REGION={'Casas ibéricas':0,'Casas francesas':1,'Casas británicas':2,'Casas irlandesas':2,'Casas germánicas':3,'Casas italianas':4,'Casas escandinavas':5,'Casas orientales':7};
+let parentIndex=null;
+function rootTerritory(name){
+ if(!parentIndex){parentIndex=new Map();for(const [root,children] of Object.entries(TERRITORIOS_SUB))for(const child of children)if(!parentIndex.has(child))parentIndex.set(child,root);}
+ const seen=new Set();let current=name;
+ while(!Object.hasOwn(TERRITORY_REGION,current)&&parentIndex.has(current)&&!seen.has(current)){seen.add(current);current=parentIndex.get(current);}
+ return current;
+}
+export function territoryRegion(name){
+ const index=TERRITORY_REGION[rootTerritory(name)];
+ return FILTER_REGIONS[index ?? FILTER_REGIONS.length-1];
+}
+// A house belongs to the region where most of its members held or were linked to territories.
+export function dynastyRegions(people,houses){
+ const votes=new Map();
+ for(const person of people){
+  if(!person.dinastia)continue;
+  for(const name of territoriosDe(person)){const region=territoryRegion(name);if(region==='Otros')continue;
+   const tally=votes.get(person.dinastia)||new Map();tally.set(region,(tally.get(region)||0)+1);votes.set(person.dinastia,tally);}
+ }
+ const regionOfHouse=name=>{
+  if(Object.hasOwn(FOLDER_REGION,name))return FILTER_REGIONS[FOLDER_REGION[name]];
+  if(Object.hasOwn(HOUSE_REGION,name))return FILTER_REGIONS[HOUSE_REGION[name]];
+  const members=[name,...(GRUPOS_DINASTICOS[name]||[]),...(DYNASTY_CHILDREN[name]||[])];
+  const tally=new Map();for(const m of members)for(const [r,n] of votes.get(m)||[])tally.set(r,(tally.get(r)||0)+n);
+  const best=[...tally].sort((a,b)=>b[1]-a[1]||FILTER_REGIONS.indexOf(a[0])-FILTER_REGIONS.indexOf(b[0]))[0];
+  return best?.[0]||'Otros';
+ };
+ return Object.fromEntries(houses.map(name=>[name,regionOfHouse(name)]));
+}
+export function groupByRegion(names,regionOf){
+ const groups=new Map(FILTER_REGIONS.map(region=>[region,[]]));
+ for(const name of names)groups.get(regionOf(name)||'Otros').push(name);
+ return [...groups].filter(([,items])=>items.length).map(([region,items])=>({region,items:items.sort(alphabetical)}));
+}

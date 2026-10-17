@@ -1,4 +1,4 @@
-import {TERRITORIAL_FOLDER_LABELS} from '../data/atlasFilters.js';
+import {TERRITORIAL_FOLDER_LABELS,territoryRegion,dynastyRegions,groupByRegion} from '../data/atlasFilters.js';
 import AtlasTimeline from './AtlasTimeline.jsx';
 import {governmentSummary} from '../data/governmentPresentation.js';
 import './europe-panorama.css';
@@ -46,6 +46,7 @@ import "./atlas-interactions.css";
 import "../styles/v518.css";
 import "../styles/v519.css";
 import "../styles/v520.css";
+import "../styles/v521.css";
 
 const VIEW_OPTIONS = [{value:'arbol',label:'Árbol'},{value:'mapa',label:'Mapa'},{value:'ambos',label:'Árbol y mapa'}];
 const BIO_OPTIONS = ['resumen','familia','coronas','historias','fuentes'].map((value,index)=>({value,label:['Resumen','Familia','Coronas','Historias','Fuentes'][index],controls:`bio-section-${value}`}));
@@ -218,6 +219,8 @@ export default function ExplorerView({ vm, loading = false, loadError = false, o
     ? personHistory.ids[personHistory.index + 1]
     : null;
   const canAddFamily = Boolean(seleccion && !historiaActiva && vm.growth.ids !== null && vm.growth.additions.family.length);
+  const vistasAntesDeConectarRef = React.useRef(null);
+  const regionesDinasticas = React.useMemo(() => dynastyRegions(PERSONAS, opciones.dinastias), [opciones.dinastias]);
   // Changing scene slides the whole view; the inactive pane is hidden once it settles.
   const reducedMotion = useReducedMotion();
   // Warm the Europa scene once the Atlas is idle, so the slide reveals content.
@@ -301,12 +304,12 @@ export default function ExplorerView({ vm, loading = false, loadError = false, o
     <div className={`wrap atlas-scene-${atlasScene}${modoTrabajo ? " atlas-work-mode" : ""}`} inert={!ready}>
       {/* V5.20 · Cabecera fija: vistas y paneles, escena en el centro y acciones. */}
       <div className={`atlas-toolbar${atlasScene !== 'atlas' ? ' is-europa' : ''}`}>
-        <div className="atlas-scene-switch"><SegmentedControl rail options={SCENES} value={atlasScene} onChange={changeAtlasScene} label="Modo de exploración"/></div>
+        <div className="atlas-scene-switch"><SegmentedControl options={SCENES} value={atlasScene} onChange={changeAtlasScene} label="Modo de exploración"/></div>
         {!modoTrabajo && <button type="button" className="atlas-tools-toggle" aria-expanded={mobileToolsOpen} aria-controls="atlas-secondary-tools" onClick={()=>setMobileToolsOpen(open=>!open)}>Vistas y herramientas <ChevronDown size={12}/></button>}
         {!modoTrabajo && (
         <div id="atlas-secondary-tools" className={`workspace-topbar-secondary${mobileToolsOpen?' is-expanded':''}`} inert={atlasScene !== 'atlas' ? true : undefined}>
           <section className="workspace-topbar-section workspace-toolbar-view workspace-toolbar-panels">
-            <SegmentedControl rail className="atlas-view-pills" label="Vista principal" options={VIEW_OPTIONS} value={mostrarArbol && mostrarMapa ? 'ambos' : mostrarMapa ? 'mapa' : 'arbol'} onChange={value=>setVistasActivas({arbol:value!=='mapa',mapa:value!=='arbol'})}/>
+            <SegmentedControl className="atlas-view-pills" label="Vista principal" options={VIEW_OPTIONS} value={mostrarArbol && mostrarMapa ? 'ambos' : mostrarMapa ? 'mapa' : 'arbol'} onChange={value=>setVistasActivas({arbol:value!=='mapa',mapa:value!=='arbol'})}/>
             <details ref={panelsMenuRef} className="atlas-toolbar-menu atlas-panels-menu" onToggle={onToolbarMenuToggle}>
               <summary className="ui-tip" data-tip="Paneles"><PanelsTopLeft size={14} aria-hidden="true" /><span className="ui-sr-only">Paneles</span></summary>
               <div className="atlas-toolbar-menu-panel" role="group" aria-label="Paneles visibles">
@@ -320,59 +323,26 @@ export default function ExplorerView({ vm, loading = false, loadError = false, o
           <section className="workspace-topbar-section workspace-toolbar-actions">
             <div className="nav-controls topbar-mode-controls">
               <div className="compare-split-control" ref={compareMenuRef}>
+                {/* V5.21 · Comparar y Conectar son una sola herramienta: de dos a cinco personas. */}
                 <button
                   type="button"
-                  className={`nav-btn compare-main-btn ui-tip ${["compare","conexion"].includes(mode) ? "active" : ""}`}
-                  data-tip="Comparar o conectar personas"
+                  className={`nav-btn compare-main-btn ui-tip ${mode === "conexion" ? "active" : ""}`}
+                  data-tip="Conectar personas"
+                  aria-pressed={mode === "conexion"}
                   onClick={() => {
-                    const entrar = !["compare","conexion"].includes(mode);
-                    setMode(entrar ? "compare" : "view");
-                    if (entrar) { setOrigen(null); setDestino(null); setCompareRouteIndex(0); }
+                    const entrar = mode !== "conexion";
+                    setMode(entrar ? "conexion" : "view");
+                    if (entrar) {
+                      vistasAntesDeConectarRef.current = {arbol: mostrarArbol, mapa: mostrarMapa};
+                      setVistasActivas({arbol: true, mapa: false});
+                      if (!connectionIds.length && seleccion?.id) setConnectionIds([seleccion.id]);
+                    } else if (vistasAntesDeConectarRef.current) setVistasActivas(vistasAntesDeConectarRef.current);
                     setCompareMenuOpen(false);
                     setFocoMenuOpen(false);
                   }}
                 >
-                  <GitCompare size={14} aria-hidden="true" /><span className="ui-sr-only">Comparar</span>
+                  <GitCompare size={14} aria-hidden="true" /><span className="ui-sr-only">Conectar personas</span>
                 </button>
-                <button
-                  type="button"
-                  className={`nav-btn compare-menu-btn ${["compare","conexion"].includes(mode) ? "active" : ""}`}
-                  onClick={() => {
-                    closeOtherToolbarMenus();
-                    setFavoritosOpen(false);
-                    setCompareMenuOpen((actual) => !actual);
-                    setFocoMenuOpen(false);
-                  }}
-                  aria-haspopup="menu"
-                  aria-expanded={compareMenuOpen}
-                  title="Elegir tipo de comparación"
-                >
-                  <ChevronDown size={11} />
-                </button>
-                {compareMenuOpen && (
-                  <div className="compare-mode-menu" role="group">
-                    <button type="button" aria-pressed={mode === "conexion"} className={`compare-mode-option${mode === "conexion" ? " active" : ""}`} onClick={() => {setMode("conexion");setVistasActivas({arbol:true,mapa:false});setCompareMenuOpen(false);}}><strong>Conectar 3–5 personas</strong><span>Reunir varias personas con los vínculos necesarios.</span></button>
-                    {MODOS_COMPARACION.map((opcion) => (
-                      <button
-                        type="button"
-                        key={opcion.id}
-                        role="menuitemradio"
-                        aria-checked={mode === "compare" && modoComparacion === opcion.id}
-                        className={`compare-mode-option${mode === "compare" && modoComparacion === opcion.id ? " active" : ""}`}
-                        onClick={() => {
-                          if (mode !== "compare") { setOrigen(null); setDestino(null); }
-                          setModoComparacion(opcion.id);
-                          setMode("compare");
-                          setCompareRouteIndex(0);
-                          setCompareMenuOpen(false);
-                        }}
-                      >
-                        <strong>{opcion.label}</strong>
-                        <span>{opcion.descripcion}</span>
-                      </button>
-                    ))}
-                  </div>
-                )}
               </div>
               <div className="favorites-control" ref={favoritosMenuRef}>
                 <button type="button" className={`nav-btn favorites-trigger ui-tip${favoritosOpen || soloFavoritos ? " active" : ""}`} data-tip="Favoritos" onClick={() => { closeOtherToolbarMenus(); setCompareMenuOpen(false); setFavoritosOpen((actual) => !actual); }} aria-expanded={favoritosOpen}>
@@ -587,7 +557,7 @@ export default function ExplorerView({ vm, loading = false, loadError = false, o
         </button>
       )}
 
-      {mode === "conexion" && <ConnectionControls people={PERSONAS} ids={connectionIds} onChange={setConnectionIds} criterion={connectionCriterion} onCriterion={setConnectionCriterion} result={connectionResult} onSelect={seleccionarPersonaPorId}/>}
+      {mode === "conexion" && <ConnectionControls people={PERSONAS} graph={graph} ids={connectionIds} onChange={setConnectionIds} criterion={connectionCriterion} onCriterion={setConnectionCriterion} result={connectionResult} onSelect={seleccionarPersonaPorId}/>}
 
       {mode === "compare" && (
         <div className="compare-bar workspace-mode-bar">
@@ -690,13 +660,16 @@ export default function ExplorerView({ vm, loading = false, loadError = false, o
                 >
                   <SegmentedControl className="atlas-filter-mode" label="Criterio del filtro territorial" value={territorialFilterMode} onChange={setTerritorialFilterMode} options={TERRITORY_FILTER_MODES}/>
                   {territorialFilterMode==='government'&&anioGlobal==null&&<p className="atlas-filter-explanation">Elige un año para ver solo quién gobernaba entonces.</p>}
-                  <div className="filter-group filter-group-dinastias">
-                    {opciones.territorios.map((territorio) => <TerritoryFilterNode key={territorio}
-                      name={territorio} options={opciones.subsPorTerritorio} selected={territorios}
-                      expanded={territoriosExpandidos}
-                      onToggleTerritory={(name) => toggle(setTerritorios, territorios, name)}
-                      onToggleExpanded={(name) => toggle(setTerritoriosExpandidos, territoriosExpandidos, name)} />)}
-                  </div>
+                  {groupByRegion(opciones.territorios, territoryRegion).map(({region, items}) => <div key={region} className="atlas-filter-region">
+                    <h4 className="atlas-filter-heading">{region}<small>{items.length}</small></h4>
+                    <div className="filter-group filter-group-dinastias">
+                      {items.map((territorio) => <TerritoryFilterNode key={territorio}
+                        name={territorio} options={opciones.subsPorTerritorio} selected={territorios}
+                        expanded={territoriosExpandidos}
+                        onToggleTerritory={(name) => toggle(setTerritorios, territorios, name)}
+                        onToggleExpanded={(name) => toggle(setTerritoriosExpandidos, territoriosExpandidos, name)} />)}
+                    </div>
+                  </div>)}
                 </FilterSection>
 
                 <FilterSection
@@ -705,7 +678,11 @@ export default function ExplorerView({ vm, loading = false, loadError = false, o
                   onToggle={() => alternarSeccionFiltro("dinastias")}
                   activeCount={dinastias.length}
                 >
-                  {[['Casas y ramas',opciones.dynastyFamilies],['Agrupaciones geográficas',opciones.dynastyFolders]].map(([title,names])=><div key={title}><h4 className="atlas-filter-heading">{title}</h4><div className="filter-group filter-group-dinastias">{names.map(name=><DynastyFilterNode key={name} name={name} options={opciones.ramasPorPrincipal} selected={dinastias} expanded={dinastiasExpandidas} onToggle={n=>toggle(setDinastias,dinastias,n)} onExpand={n=>toggle(setDinastiasExpandidas,dinastiasExpandidas,n)} folder={title==='Agrupaciones geográficas'}/>)}</div></div>)}
+                  {/* Las mismas regiones que en Territorios; las carpetas reúnen casas menores de cada región. */}
+                  {groupByRegion([...opciones.dynastyFamilies, ...opciones.dynastyFolders], name => regionesDinasticas[name]).map(({region, items}) => <div key={region} className="atlas-filter-region">
+                    <h4 className="atlas-filter-heading">{region}<small>{items.length}</small></h4>
+                    <div className="filter-group filter-group-dinastias">{[...items.filter(n => !opciones.dynastyFolders.includes(n)), ...items.filter(n => opciones.dynastyFolders.includes(n))].map(name => <DynastyFilterNode key={name} name={name} options={opciones.ramasPorPrincipal} selected={dinastias} expanded={dinastiasExpandidas} onToggle={n=>toggle(setDinastias,dinastias,n)} onExpand={n=>toggle(setDinastiasExpandidas,dinastiasExpandidas,n)} folder={opciones.dynastyFolders.includes(name)}/>)}</div>
+                  </div>)}
                 </FilterSection>
 
                 <FilterSection

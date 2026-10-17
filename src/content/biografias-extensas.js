@@ -192,6 +192,57 @@ export const BIOGRAFIAS_EXTENSAS = Object.freeze({
     {titulo: 'Westfalia y la corte de Estocolmo', texto: 'Impulsó la paz de Westfalia (1648), que dio a Suecia Pomerania occidental, Bremen y Verden. Atrajo a Estocolmo a sabios y artistas, entre ellos René Descartes, que murió allí en 1650. Se negó a casarse y logró que el Riksdag reconociera heredero a su primo Carlos Gustavo.'},
     {titulo: 'Abdicación y Roma', texto: 'En 1654 abdicó en él y se convirtió en secreto al catolicismo, haciéndolo público en Innsbruck en 1655. Se instaló en Roma, donde protegió a músicos como Corelli y Alessandro Scarlatti y reunió colecciones notables. Intentó sin éxito obtener la corona de Nápoles y la de Polonia. Murió en Roma en 1689 y está enterrada en San Pedro.'},
   ],
+  ENRIQ4FRA: [
+    {titulo: 'Un príncipe hugonote', texto: 'Hijo de Antonio de Borbón y de Juana III de Albret, reina de Navarra, nació en Pau en 1553 y fue educado en la fe reformada. Rey de Navarra desde 1572, ese año se casó con Margarita de Valois, hermana de Carlos IX; la boda precedió por días a la matanza de San Bartolomé, de la que escapó abjurando y permaneciendo retenido en la corte.'},
+    {titulo: 'Heredero de Francia', texto: 'Huyó en 1576, volvió al protestantismo y se convirtió en jefe del partido hugonote. La muerte del hermano menor del rey en 1584 lo hizo heredero de Enrique III, lo que la Liga católica, apoyada por Felipe II, no aceptó. Tras el asesinato de Enrique III (1589) tuvo que conquistar su reino por las armas.'},
+    {titulo: 'París bien vale una misa', texto: 'En 1593 abjuró del protestantismo y en 1594 entró en París. El edicto de Nantes (1598) concedió a los hugonotes libertad de culto limitada y plazas de seguridad, y la paz de Vervins cerró la guerra con España. Con Sully reconstruyó la hacienda y el país tras décadas de guerra civil.'},
+    {titulo: 'El fin', texto: 'Anulado su primer matrimonio, se casó en 1600 con María de Médici, madre de Luis XIII. Cuando preparaba una campaña contra los Habsburgo fue asesinado en París por François Ravaillac en mayo de 1610. Su memoria popular lo convirtió en «el buen rey Enrique».'},
+  ],
+  MARIAESTUARDO: [
+    {titulo: 'Reina a los seis días', texto: 'Hija de Jacobo V de Escocia y de María de Guisa, nació en Linlithgow en 1542 y heredó el trono a los seis días de vida. Para alejarla de los planes ingleses fue enviada a Francia en 1548, donde se educó en la corte de Enrique II y se casó en 1558 con el delfín, que reinó como Francisco II.'},
+    {titulo: 'Escocia', texto: 'Viuda en 1560, regresó a una Escocia que acababa de adoptar la Reforma. Se casó con su primo lord Darnley, padre de su hijo Jacobo; Darnley fue asesinado en 1567 y su posterior boda con el conde de Bothwell, sospechoso del crimen, provocó la rebelión de los nobles, que la obligaron a abdicar en su hijo.'},
+    {titulo: 'Prisionera en Inglaterra', texto: 'En 1568 huyó a Inglaterra y pidió ayuda a su prima Isabel I, que la retuvo cerca de diecinueve años. Como católica con derechos al trono inglés, fue el centro de varias conspiraciones. Tras descubrirse la de Babington, fue juzgada y decapitada en Fotheringhay en 1587. Su hijo Jacobo heredó Inglaterra en 1603.'},
+  ],
+  CARLOS1ING: [
+    {titulo: 'El segundo Estuardo', texto: 'Hijo de Jacobo VI y I y de Ana de Dinamarca, nació en Dunfermline en 1600 y reinó en Inglaterra, Escocia e Irlanda desde 1625. Su matrimonio con la católica Enriqueta María de Francia y su confianza en el duque de Buckingham despertaron recelos.'},
+    {titulo: 'Gobierno sin Parlamento', texto: 'Tras la Petición de Derecho (1628) disolvió el Parlamento y gobernó sin convocarlo entre 1629 y 1640, recurriendo a impuestos discutidos como el ship money. Su intento de imponer una liturgia anglicana en Escocia provocó la guerra de los obispos y lo obligó a reunir de nuevo el Parlamento.'},
+    {titulo: 'Guerra civil y juicio', texto: 'El enfrentamiento con el Parlamento Largo desembocó en la guerra civil en 1642. Derrotado en Naseby (1645), negoció con escoceses y parlamentarios mientras alentaba una segunda guerra. El ejército de Cromwell lo llevó a juicio por traición y fue decapitado en Whitehall en enero de 1649; la monarquía fue abolida hasta 1660.'},
+  ],
+  WILLIAMSILENT: [
+    {titulo: 'Al servicio de Carlos V', texto: 'Nacido en Dillenburg en 1533, hijo del conde de Nassau, heredó en 1544 el principado de Orange y extensos bienes en los Países Bajos. Educado en la corte de Bruselas, fue hombre de confianza de Carlos V y estatúder de Holanda, Zelanda y Utrecht bajo Felipe II.'},
+    {titulo: 'De la oposición a la revuelta', texto: 'Se opuso a la política religiosa y al gobierno de Granvela. Ante la llegada del duque de Alba en 1567 se retiró a Alemania, y desde 1568 dirigió la resistencia armada. Las ciudades de Holanda y Zelanda lo reconocieron como estatúder en 1572, y en 1573 se adhirió públicamente al calvinismo.'},
+    {titulo: 'Padre de la patria', texto: 'Impulsó la Pacificación de Gante (1576) y, tras la Unión de Utrecht (1579), la ruptura formal con Felipe II mediante el Acta de Abjuración (1581). Felipe II lo había proscrito en 1580. Fue asesinado en Delft en 1584 por Balthasar Gérard. Su hijo Mauricio continuó la guerra.'},
+  ],
+  MARIAANTONIETA: [
+    {titulo: 'Una archiduquesa para Francia', texto: 'Hija menor de María Teresa y de Francisco I, nació en Viena en 1755. Su matrimonio en 1770 con el delfín Luis, futuro Luis XVI, selló la alianza entre Austria y Francia. Reina desde 1774, su gusto por la corte del Petit Trianon y sus gastos alimentaron una imagen pública cada vez más hostil.'},
+    {titulo: 'Escándalo y revolución', texto: 'El asunto del collar (1785), en el que no tuvo culpa, dañó su reputación. Tras 1789 la familia real fue llevada de Versalles a París. La huida frustrada a Varennes (1791) y la sospecha de que alentaba la intervención extranjera minaron la confianza en la monarquía, abolida en 1792.'},
+    {titulo: 'El final', texto: 'Luis XVI fue guillotinado en enero de 1793. María Antonieta, separada de sus hijos, fue juzgada por el Tribunal Revolucionario y ejecutada el 16 de octubre de 1793. Su hijo Luis Carlos murió en prisión en 1795; solo su hija María Teresa sobrevivió.'},
+  ],
+  CATAMEDICI: [
+    {titulo: 'Una heredera florentina', texto: 'Hija de Lorenzo II de Médici, duque de Urbino, y de Madeleine de La Tour d’Auvergne, nació en Florencia en 1519 y quedó huérfana a los pocos días. Su tío abuelo, el papa Clemente VII, negoció en 1533 su matrimonio con Enrique, segundo hijo de Francisco I de Francia.'},
+    {titulo: 'Reina y madre de reyes', texto: 'Enrique se convirtió en heredero y reinó como Enrique II desde 1547. Tras su muerte accidental en un torneo (1559) reinaron sucesivamente tres de sus hijos: Francisco II, Carlos IX y Enrique III. Catalina ejerció la regencia y una influencia decisiva, intentando primero conciliar a católicos y hugonotes.'},
+    {titulo: 'Las guerras de religión', texto: 'El edicto de Saint-Germain (1562) no evitó la guerra civil. La matanza de San Bartolomé (1572), tras la boda de su hija Margarita con Enrique de Navarra, ha pesado sobre su memoria, aunque su grado de responsabilidad se discute. Mecenas de las Tullerías, murió en Blois en 1589, meses antes que su último hijo rey.'},
+  ],
+  RODRIGOBORJA: [
+    {titulo: 'Un sobrino de papa', texto: 'Nació en Xàtiva hacia 1431. Su tío Alfonso de Borja, papa Calixto III, lo nombró cardenal en 1456 y vicecanciller de la Iglesia, cargo que ocupó durante treinta y cinco años y que le dio riqueza e influencia en la curia.'},
+    {titulo: 'Alejandro VI', texto: 'Elegido papa en 1492, en un cónclave sospechoso de compra de votos, hizo de los Estados Pontificios la base de poder de sus hijos, César, Juan, Lucrecia y Jofré, nacidos de Vannozza Cattanei. Sus bulas de 1493 trazaron el reparto de las navegaciones entre Castilla y Portugal que precisó el tratado de Tordesillas.'},
+    {titulo: 'Italia en guerra', texto: 'Su pontificado coincidió con la invasión de Carlos VIII de Francia (1494) y las guerras de Italia. Excomulgó y vio ejecutar a Savonarola en 1498. Apoyó la conquista de la Romaña por César. Murió en Roma en 1503, y la caída de los Borja siguió poco después.'},
+  ],
+  CESARBORJA: [
+    {titulo: 'Cardenal a los dieciocho años', texto: 'Hijo de Rodrigo Borja y Vannozza Cattanei, nació hacia 1475. Su padre lo hizo obispo de Pamplona, arzobispo de Valencia y, en 1493, cardenal. Tras la muerte de su hermano Juan en 1497 renunció al cardenalato, primer caso en la historia de la Iglesia.'},
+    {titulo: 'El duque Valentino', texto: 'Luis XII de Francia lo nombró duque de Valentinois y lo casó con Carlota de Albret. Con tropas francesas y pontificias conquistó entre 1499 y 1502 la Romaña, Urbino y Camerino. Maquiavelo, que lo trató como enviado florentino, lo tomó como modelo de príncipe nuevo en El príncipe.'},
+    {titulo: 'Caída y muerte en Navarra', texto: 'La muerte de su padre en 1503 y la elección de Julio II, enemigo de los Borja, deshicieron su estado. Detenido y enviado a España, se fugó del castillo de la Mota en 1506 y se refugió en la corte de su cuñado, el rey de Navarra. Murió en una emboscada ante Viana en 1507.'},
+  ],
+  LUTERO: [
+    {titulo: 'El fraile de Wittenberg', texto: 'Nacido en Eisleben en 1483, estudió derecho en Erfurt hasta que en 1505 ingresó en los agustinos. Doctor en teología, enseñó en la universidad de Wittenberg, donde la lectura de san Pablo lo llevó a la idea de la justificación por la fe.'},
+    {titulo: 'Las 95 tesis', texto: 'En 1517 difundió sus 95 tesis contra la predicación de las indulgencias. La polémica se amplió a la autoridad del papa y de los concilios. Excomulgado en 1521, se negó a retractarse ante Carlos V en la Dieta de Worms; el elector Federico de Sajonia lo protegió en el castillo de Wartburg, donde tradujo el Nuevo Testamento al alemán.'},
+    {titulo: 'Reformador', texto: 'Organizó una iglesia evangélica con liturgia en alemán, catecismos y pastores casados; él mismo se casó con Catalina de Bora en 1525. Condenó la revuelta campesina de ese año. Murió en Eisleben en 1546, poco antes de la guerra de Esmalcalda. Su Biblia alemana marcó la lengua escrita.'},
+  ],
+  NICCOLOMACHIAVELLI: [
+    {titulo: 'Secretario de la república', texto: 'Nacido en Florencia en 1469, fue nombrado en 1498, tras la caída de Savonarola, secretario de la segunda cancillería de la república. Durante catorce años despachó misiones ante Luis XII, el emperador Maximiliano, el papa Julio II y César Borja, y organizó una milicia florentina.'},
+    {titulo: 'Caída y exilio', texto: 'El regreso de los Médici en 1512 acabó con su carrera. Acusado de conspirar, fue encarcelado y torturado en 1513. Retirado en su finca de Sant’Andrea in Percussina, escribió El príncipe, dedicado a Lorenzo II de Médici, y los Discursos sobre la primera década de Tito Livio.'},
+    {titulo: 'La obra', texto: 'También escribió El arte de la guerra, la comedia La mandrágora y, por encargo del cardenal Julio de Médici, las Historias florentinas. Murió en Florencia en 1527, el año en que los Médici volvieron a ser expulsados. Su análisis del poder separado de la moral le dio fama perdurable.'},
+  ],
 });
 
 export function biografiaExtensaPersona(personaOId) {
