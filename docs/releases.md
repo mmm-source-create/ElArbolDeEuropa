@@ -135,3 +135,5 @@ Release se preparan en borrador sobre la entrega validada.
 [V5.17](V5.17.md) revisa Austria en el panorama, Polonia-Lituania y sus repartos, y amplía los gobiernos cartografiados hasta 1106. La PR y la vista previa se revisan antes de publicar; la Release permanece en borrador.
 
 [V5.18](V5.18.md) centra el selector del Atlas, simplifica la barra y la ficha, anima la estrella de favoritos y añade biografías extensas, minibiografías y retratos.
+
+[V5.19](V5.19.md) orienta el primer uso del Atlas, reduce su barra a búsqueda y año, unifica tipografía y contraste en ambos temas, ajusta los esqueletos y añade diez biografías extensas. Incluye una [propuesta de navegación](PROPUESTA_NAVEGACION_V5.19.md).
