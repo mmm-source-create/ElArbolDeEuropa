@@ -268,3 +268,35 @@ html .public-not-found>section>span{color:#7c5426}
 .public-long-bio section+section{margin-top:22px}
 .public-long-bio h3{margin:0 0 6px;color:var(--eade-ink);font:600 var(--fs-xl, 18px)/1.25 var(--eade-serif)}
 .public-long-bio p{margin:0;color:var(--eade-muted);font:400 var(--fs-lg, 15px)/1.72 var(--eade-serif);text-wrap:pretty}
+
+/* V5.23 · Índice de Personas: orden, facetas y abecedario. */
+.people-facets{display:grid;gap:12px;max-width:1080px;margin:0 auto 18px;padding:16px 18px;border:1px solid var(--eade-border);border-radius:var(--r-md,10px);background:var(--eade-paper-bright)}
+.people-facets-head{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+.people-order{display:inline-flex;padding:3px;border:1px solid var(--eade-border-strong);border-radius:999px;background:var(--eade-paper-soft)}
+.people-order button{padding:7px 16px;border:0;border-radius:999px;background:transparent;color:var(--eade-muted);font:600 var(--fs-xs,11px)/1.2 var(--eade-sans);cursor:pointer}
+.people-order button[aria-pressed="true"]{background:var(--eade-paper-bright);color:var(--eade-wine);box-shadow:0 1px 4px #0000001f}
+.people-facets-clear{border:0;background:none;color:var(--eade-wine);font:600 var(--fs-xs,11px)/1 var(--eade-sans);cursor:pointer}
+.people-facet{display:grid;grid-template-columns:72px minmax(0,1fr);gap:10px;align-items:start}
+.people-facet>span{padding-top:6px;color:var(--eade-muted);font:700 var(--fs-2xs,10px)/1 var(--eade-sans);letter-spacing:.08em;text-transform:uppercase}
+.people-facet>div,.people-alphabet{display:flex;flex-wrap:wrap;gap:6px}
+.people-facet button,.people-alphabet button{display:inline-flex;align-items:center;gap:6px;padding:5px 10px;border:1px solid var(--eade-border);border-radius:999px;background:transparent;color:var(--eade-ink);font:600 var(--fs-xs,11px)/1.2 var(--eade-sans);cursor:pointer;transition:background .2s,border-color .2s}
+.people-facet button small{color:var(--eade-muted);font-weight:500}
+.people-facet button:hover,.people-alphabet button:hover{border-color:var(--eade-border-strong)}
+.people-facet button[aria-pressed="true"],.people-alphabet button[aria-pressed="true"]{background:var(--eade-wine-fill,#7A2E2E);border-color:var(--eade-wine-fill,#7A2E2E);color:#fff8ef}
+.people-facet button[aria-pressed="true"] small{color:#fff8efcc}
+.people-alphabet button{min-width:30px;justify-content:center;padding:5px 0}
+.people-more{display:flex;margin:18px auto 0}
+@media(max-width:600px){.people-facet{grid-template-columns:1fr}.people-facet>span{padding-top:0}}
+
+/* V5.23 · Historias: disponibles primero, en preparación aparte. */
+.story-catalog-section+.story-catalog-section{margin-top:36px}
+.story-catalog-section>h2{display:flex;align-items:baseline;gap:8px;margin:0 0 14px;color:var(--eade-ink);font:600 var(--fs-xl,18px)/1.2 var(--eade-serif)}
+.story-catalog-section>h2 small{color:var(--eade-muted);font:600 var(--fs-xs,11px)/1 var(--eade-sans)}
+.story-card-progress{height:4px;margin:4px 0 10px;border-radius:999px;background:var(--eade-border);overflow:hidden}
+.story-card-progress i{display:block;height:100%;background:var(--eade-wine-fill,#7A2E2E);border-radius:inherit}
+.story-coming-list{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:8px 18px;margin:0;padding:0;list-style:none}
+.story-coming-list li{display:grid;gap:2px;padding:10px 0;border-top:1px solid var(--eade-border)}
+.story-coming-list strong{color:var(--eade-muted);font:600 var(--fs-md,13px)/1.3 var(--eade-serif)}
+.story-coming-list span{color:var(--eade-muted-soft);font:var(--fs-xs,11px)/1.4 var(--eade-sans)}
+.public-long-bio .public-long-bio-refs{margin-top:6px;color:var(--eade-muted-soft);font:var(--fs-xs,11px)/1.5 var(--eade-sans)}
+.public-long-bio .public-long-bio-refs a{color:var(--eade-wine)}

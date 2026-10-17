@@ -1,6 +1,8 @@
 import {TERRITORIOS_SUB,TERRITORIOS_DESTACADOS,subterritoriosDeFiltro} from '../Territorios.jsx';
 import {GRUPOS_DINASTICOS,GRUPOS_DINASTICOS_REGIONALES,DINASTIAS_DESTACADAS,OTRAS_DINASTIAS} from '../explorer/model.js';
 import {territoriosDe,gobiernosDe} from './personAccessors.js';
+import {FILTER_REGIONS,TERRITORY_REGION} from './filterRegions.js';
+export {FILTER_REGIONS};
 import {gobiernoEfectivo} from './territorios.js';
 
 export const alphabetical=(a,b)=>a.localeCompare(b,'es',{sensitivity:'base'});
@@ -52,18 +54,6 @@ export function personMatchesTerritory(person,filter,year=null,governmentsOnly=f
 
 // V5.21 · Territories and dynasties share one geographic ordering in the
 // filters. It only arranges the list; filter values and matching are unchanged.
-export const FILTER_REGIONS=['Península ibérica','Francia y Países Bajos','Islas Británicas','Sacro Imperio y Europa central','Italia y Mediterráneo','Escandinavia y Báltico','Europa oriental','Balcanes y Bizancio','Fuera de Europa','Otros'];
-const TERRITORY_REGION={
- 'España':0,'Portugal':0,'Califato almohade':0,'Emirato de al-Ándalus':0,'Emirato de Menorca':0,
- 'Francia':1,'Borgoña y Países Bajos':1,'Borgoña y Franco Condado':1,'Países Bajos y Flandes':1,'Provincias Unidas':1,'Señorío de Malinas':1,'Tournai':1,
- 'Inglaterra':2,'Escocia':2,'Irlanda':2,'Gran Bretaña':2,
- 'Sacro Imperio':3,'Austria':3,'Hungría':3,'Prusia':3,'Brzeg':3,'Glaž':3,'Incorporaciones del siglo XVI':3,'Sajonia-Coburgo':3,'Sajonia-Coburgo-Eisenach':3,'Sajonia-Eisenach':3,'Sajonia-Gotha':3,'Sajonia-Weimar':3,
- 'Estados Italianos':4,'Verona':4,'Córcega':4,'Judicado de Arborea':4,'Judicado de Cagliari':4,'Judicado de Torres':4,'Marquesado de Oristano':4,
- 'Escandinavia':5,
- 'Polonia-Lituania':6,'Rusia':6,'Reino de Galicia y Lodomeria':6,
- 'Balcanes':7,'Bizancio y Oriente latino':7,'Condado palatino de Cefalonia y Zacinto':7,'Despotado de Ioannina':7,'Despotado de Serres':7,'Donji Kraji':7,'Epiro de los Tocco':7,'Hum':7,'Norte de Serbia habsbúrgico':7,'Oltenia habsbúrgica':7,'Señorío de Dejanović':7,
- 'Egipto':8,'Siria':8,'Georgia y Cáucaso':8,
-};
 // Reviewed exceptions: Imperial Italy and the Low Countries would otherwise vote
 // for the Empire, and Polish houses for Central Europe.
 const HOUSE_REGION={'Gonzaga':4,'Saboya':4,'Saboya-Carignano':4,'Saluzzo':4,'Sforza':4,'Visconti':4,'Aleramici':4,'Pignatelli':4,'Brabante':1,'Dampierre':1,'Baux':1,'Jagellón':6,'Piast':6,'Sin casa identificada':9,'Otras dinastías':9};

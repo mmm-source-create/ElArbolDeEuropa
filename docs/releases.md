@@ -143,3 +143,5 @@ Release se preparan en borrador sobre la entrega validada.
 [V5.21](V5.21.md) integra Comparar en Conectar personas, corrige el diálogo de exportación, unifica los selectores de píldora, agrupa los filtros por regiones comunes y añade seis historias dinásticas, diez biografías extensas y diecinueve retratos.
 
 [V5.22](V5.22.md) corrige los árboles de Conectar y Exportar: generaciones reales, parejas en la misma fila, el mismo diseño en pantalla y en el SVG, y tests de geometría.
+
+[V5.23](V5.23.md) ordena y filtra el índice de Personas, separa las historias disponibles con duración y progreso, amplía el carrusel de portada, añade «Compartir esta vista» en Europa y suma diez historias dinásticas, referencias en las biografías, 19 retratos y 60 resúmenes.

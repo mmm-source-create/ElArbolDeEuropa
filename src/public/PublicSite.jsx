@@ -39,6 +39,7 @@ import HomeDiscovery, {DynastyMarquee} from "./HomeDiscovery.jsx";
 import Odometer from "../ui/Odometer.jsx";
 import { responsiveImage } from "../utils/responsiveImage.js";
 import ReadingSkeleton from "../stories/ReadingSkeleton.jsx";
+import {STORY_PROGRESS_KEY} from "../stories/storyModel.js";
 import { translatedEquivalent } from "../english/routes.js";
 import '../styles/theme.css';
 
@@ -328,6 +329,8 @@ const CATALOG_CONFIG = {
   historias: { title: "Historias", eyebrow: "Recorridos guiados", description: "Historias construidas con las personas, mapas, biografías y cronología de la propia aplicación.", icon: BookOpen },
 };
 
+const ROMANOS = {10: "X", 11: "XI", 12: "XII", 13: "XIII", 14: "XIV", 15: "XV", 16: "XVI", 17: "XVII", 18: "XVIII", 19: "XIX"};
+
 function textoCatalogoItem(item, tipo) {
   if (tipo === "personas") return textoBusquedaPersona(item);
   if (tipo === "historias") return [item.titulo, item.subtitulo, item.descripcion].filter(Boolean).join(" ");
@@ -340,12 +343,37 @@ export function CatalogPage({ tipo }) {
   const { data, loading, error } = useJson(`/catalogos/${tipo}.json`);
   const [query, setQuery] = useState("");
   const [soloHistoria, setSoloHistoria] = useState(false);
+  // V5.23 · Personas: orden por relevancia o alfabético, filtros y paginación.
+  const [orden, setOrden] = useState("destacadas");
+  const [filtrosPersona, setFiltrosPersona] = useState({siglo: null, papel: null, region: null, letra: null});
+  const [limite, setLimite] = useState(120);
   const items = Array.isArray(data?.items) ? data.items : [];
   const filtrados = useMemo(() => {
     const q = normalizarBusquedaPublica(query);
-    return items.filter(item => (!soloHistoria || tipo !== "dinastias" || item.editorial) && (!q || normalizarBusquedaPublica(textoCatalogoItem(item, tipo)).includes(q)));
-  }, [items, query, tipo, soloHistoria]);
-  const visibles = tipo === "personas" ? filtrados.slice(0, query.trim() ? 200 : 120) : filtrados;
+    const lista = items.filter(item => (!soloHistoria || tipo !== "dinastias" || item.editorial) && (!q || normalizarBusquedaPublica(textoCatalogoItem(item, tipo)).includes(q)));
+    if (tipo !== "personas") return lista;
+    const {siglo, papel, region, letra} = filtrosPersona;
+    const inicial = item => normalizarBusquedaPublica(item.nombre).charAt(0).toUpperCase();
+    const elegidos = lista.filter(item => (siglo === null || (siglo === "sin" ? item.siglo == null : item.siglo === siglo))
+      && (!papel || item.papel === papel) && (!region || item.region === region) && (!letra || inicial(item) === letra));
+    return orden === "destacadas" && !q ? elegidos.slice().sort((a, b) => (b.relevancia || 0) - (a.relevancia || 0) || a.nombre.localeCompare(b.nombre, "es")) : elegidos;
+  }, [items, query, tipo, soloHistoria, filtrosPersona, orden]);
+  useEffect(() => { setLimite(120); }, [query, filtrosPersona, orden]);
+  const visibles = tipo === "personas" ? filtrados.slice(0, limite) : filtrados;
+  const facetas = useMemo(() => {
+    if (tipo !== "personas") return null;
+    const contar = clave => { const m = new Map(); for (const item of items) if (item[clave] != null) m.set(item[clave], (m.get(item[clave]) || 0) + 1); return m; };
+    const letras = [...new Set(items.map(item => normalizarBusquedaPublica(item.nombre).charAt(0).toUpperCase()).filter(l => /[A-Z]/.test(l)))].sort();
+    return {siglos: [...contar("siglo")].sort((a, b) => a[0] - b[0]), papeles: [...contar("papel")].sort((a, b) => b[1] - a[1]), regiones: [...contar("region")].sort((a, b) => (a[0] === "Otros") - (b[0] === "Otros") || b[1] - a[1]), letras};
+  }, [items, tipo]);
+  // Progreso de lectura guardado en este navegador (solo se lee tras montar).
+  const [progresoHistorias, setProgresoHistorias] = useState({});
+  useEffect(() => {
+    if (tipo !== "historias") return;
+    try { setProgresoHistorias(JSON.parse(window.localStorage.getItem(STORY_PROGRESS_KEY)) || {}); } catch { setProgresoHistorias({}); }
+  }, [tipo]);
+  const alternarFiltro = (clave, valor) => setFiltrosPersona(actual => ({...actual, [clave]: actual[clave] === valor ? null : valor}));
+  const filtrosActivos = Object.values(filtrosPersona).filter(v => v !== null).length;
   usePublicMeta({
     title: `${config.title} — ${SITE_NAME}`,
     description: config.description,
@@ -365,10 +393,26 @@ export function CatalogPage({ tipo }) {
         {loading && <ReadingSkeleton kind="catalog-list" list={tipo === "personas" ? "people" : tipo === "historias" ? "stories" : "entities"}/>}
         {error && <div className="public-error">No se ha podido cargar este catálogo. Puedes seguir explorando el atlas.</div>}
 
+        {!loading && !error && tipo === "personas" && facetas && (
+          <section className="people-facets" aria-label="Ordenar y filtrar personas">
+            <div className="people-facets-head">
+              <div className="people-order" role="group" aria-label="Orden">
+                {[["destacadas", "Destacadas"], ["alfabetico", "A–Z"]].map(([valor, etiqueta]) => <button key={valor} type="button" aria-pressed={orden === valor} onClick={() => { setOrden(valor); if (valor === "destacadas") setFiltrosPersona(a => ({...a, letra: null})); }}>{etiqueta}</button>)}
+              </div>
+              {filtrosActivos > 0 && <button type="button" className="people-facets-clear" onClick={() => setFiltrosPersona({siglo: null, papel: null, region: null, letra: null})}>Quitar filtros ({filtrosActivos})</button>}
+            </div>
+            {orden === "alfabetico" && <nav className="people-alphabet" aria-label="Índice alfabético">{facetas.letras.map(letra => <button key={letra} type="button" aria-pressed={filtrosPersona.letra === letra} onClick={() => alternarFiltro("letra", letra)}>{letra}</button>)}</nav>}
+            <div className="people-facet"><span>Siglo</span><div>{facetas.siglos.map(([siglo, n]) => <button key={siglo} type="button" aria-pressed={filtrosPersona.siglo === siglo} onClick={() => alternarFiltro("siglo", siglo)}>s. {ROMANOS[siglo] || siglo}<small>{n}</small></button>)}</div></div>
+            <div className="people-facet"><span>Papel</span><div>{facetas.papeles.map(([papel, n]) => <button key={papel} type="button" aria-pressed={filtrosPersona.papel === papel} onClick={() => alternarFiltro("papel", papel)}>{papel}<small>{n}</small></button>)}</div></div>
+            <div className="people-facet"><span>Región</span><div>{facetas.regiones.map(([region, n]) => <button key={region} type="button" aria-pressed={filtrosPersona.region === region} onClick={() => alternarFiltro("region", region)}>{region === "Otros" ? "Sin territorio registrado" : region}<small>{n}</small></button>)}</div></div>
+          </section>
+        )}
         {!loading && !error && tipo === "personas" && (
           <>
-            {visibles.length < filtrados.length && <div className="public-catalog-note">Mostrando {visibles.length} de {filtrados.length}. Escribe un nombre, una dinastía, un título o un territorio para afinar la búsqueda.</div>}
+            <div className="public-catalog-note">{filtrados.length} {filtrados.length === 1 ? "persona" : "personas"}{orden === "destacadas" && !query.trim() ? " · las más relevantes primero: con retrato, biografía extensa y gobiernos registrados" : ""}</div>
             <div className="public-person-list">{visibles.map((persona) => <PersonaMiniCard key={persona.id} persona={persona} compact />)}</div>
+            {visibles.length < filtrados.length && <button type="button" className="public-secondary people-more" onClick={() => setLimite(n => n + 120)}>Ver más ({filtrados.length - visibles.length} restantes)</button>}
+            {!filtrados.length && <p className="public-muted">Ninguna persona coincide con estos filtros.</p>}
           </>
         )}
 
@@ -386,15 +430,28 @@ export function CatalogPage({ tipo }) {
         )}
 
         {!loading && !error && tipo === "historias" && (
-          <div className="public-story-grid public-story-catalog">
-            {filtrados.map((historia) => (
-              <article key={historia.id} className={`public-story-card${historia.disponible ? "" : " is-coming"}`}>
-                <span>{historia.disponible ? `${historia.pasos} pasos` : "Próximamente"}</span>
-                <h2>{historia.titulo}</h2><p>{historia.subtitulo || historia.descripcion}</p>
-                {historia.disponible ? <a href={rutaEntidad("historia", historia.slug)}>Comenzar recorrido <ArrowRight size={13} /></a> : <b>En preparación</b>}
-              </article>
-            ))}
-          </div>
+          <>
+            <section className="story-catalog-section" aria-labelledby="historias-disponibles">
+              <h2 id="historias-disponibles">Disponibles <small>{filtrados.filter(h => h.disponible).length}</small></h2>
+              <div className="public-story-grid public-story-catalog">
+                {filtrados.filter(h => h.disponible).map((historia) => {
+                  const progreso = progresoHistorias[historia.id], leidos = Math.min(progreso?.read?.length || 0, historia.pasos);
+                  return <article key={historia.id} className="public-story-card">
+                    <span>{historia.pasos} capítulos{historia.minutos ? ` · ${historia.minutos} min` : ""}</span>
+                    <h2>{historia.titulo}</h2><p>{historia.subtitulo || historia.descripcion}</p>
+                    {leidos > 0 && <div className="story-card-progress" aria-label={`${leidos} de ${historia.pasos} capítulos leídos`}><i style={{width: `${Math.round(leidos / historia.pasos * 100)}%`}}/></div>}
+                    <a href={leidos > 0 && leidos < historia.pasos ? `${rutaEntidad("historia", historia.slug)}/capitulo/${progreso.last}` : rutaEntidad("historia", historia.slug)}>
+                      {leidos >= historia.pasos ? "Volver a leer" : leidos > 0 ? `Continuar en el capítulo ${progreso.last}` : "Comenzar recorrido"} <ArrowRight size={13} />
+                    </a>
+                  </article>;
+                })}
+              </div>
+            </section>
+            {filtrados.some(h => !h.disponible) && <section className="story-catalog-section is-coming" aria-labelledby="historias-preparacion">
+              <h2 id="historias-preparacion">En preparación <small>{filtrados.filter(h => !h.disponible).length}</small></h2>
+              <ul className="story-coming-list">{filtrados.filter(h => !h.disponible).map(historia => <li key={historia.id}><strong>{historia.titulo}</strong><span>{historia.subtitulo || historia.descripcion}</span></li>)}</ul>
+            </section>}
+          </>
         )}
       </main>
     </PublicLayout>
@@ -483,7 +540,7 @@ export function PersonContent({ persona, locale = 'es', path, onExplore }) {
         </div>
         <Portrait persona={persona} locale={locale}/>
       </header>
-      {!en&&!!persona.biografiaExtensa?.length&&<section className="public-long-bio" aria-labelledby="public-long-bio-title"><span>Biografía</span><h2 id="public-long-bio-title">Vida de {persona.nombre}</h2>{persona.biografiaExtensa.map(part=><section key={part.titulo}><h3>{part.titulo}</h3><p>{part.texto}</p></section>)}</section>}
+      {!en&&!!persona.biografiaExtensa?.length&&<section className="public-long-bio" aria-labelledby="public-long-bio-title"><span>Biografía</span><h2 id="public-long-bio-title">Vida de {persona.nombre}</h2>{persona.biografiaExtensa.map(part=><section key={part.titulo}><h3>{part.titulo}</h3><p>{part.texto}</p>{!!part.fuentes?.length&&<p className="public-long-bio-refs">Referencias: {part.fuentes.map((f,i)=><React.Fragment key={f.url}>{i>0&&' · '}<a href={f.url} target="_blank" rel="noreferrer">{f.titulo}</a></React.Fragment>)}</p>}</section>)}</section>}
       {en&&<p className="public-translation-note">This profile is translated. Names of dynasties and territories, picture credits and original documentary records retain their source language. Links marked ES open the Spanish edition.</p>}
       <div className="public-person-columns">
         <section className="public-content-card"><span>{label('Perfil histórico','Historical profile')}</span><h2>{label('Datos principales','Key details')}</h2>{fact('Nacimiento')&&<p><strong>{label('Nacimiento:','Birth:')}</strong> {formatClaimDate(fact('Nacimiento'),locale)} <EvidenceMark claim={fact('Nacimiento')} locale={locale}/></p>}{fact('Fallecimiento')&&<p><strong>{label('Fallecimiento:','Death:')}</strong> {formatClaimDate(fact('Fallecimiento'),locale)} <EvidenceMark claim={fact('Fallecimiento')} locale={locale}/></p>}{(en?persona.role:persona.titulo)&&<p><strong>{label('Título:','Role:')}</strong> {en?persona.role:persona.titulo}</p>}{!!persona.aliases?.length&&<p><strong>{label('Otros nombres:','Other recorded names:')}</strong> {persona.aliases.join(' · ')}</p>}{persona.dinastia&&<p><strong>{label('Dinastía:','Dynasty:')}</strong> <a href={rutaEntidad('dinastia',slugPublico(persona.dinastia))}>{persona.dinastia}{en?' · ES':''}</a></p>}{!!territoriosDe(persona).length&&<p><strong>{label('Territorios:','Territories:')}</strong> {territoriosDe(persona).map((r,i)=><React.Fragment key={r}>{i>0&&' · '}<a href={rutaEntidad('territorio',slugPublico(r))}>{r}{en?' (ES)':''}</a></React.Fragment>)}</p>}{!en&&<RecordedGovernments persona={persona} claims={claims}/>}</section>
