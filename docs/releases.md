@@ -141,3 +141,5 @@ Release se preparan en borrador sobre la entrega validada.
 [V5.20](V5.20.md) fija la cabecera del Atlas con Atlas / Europa en el centro, lleva el año al tirador, desliza entre escenas con la misma URL, quita los paneles redimensionables y sus marcos, unifica radios y recupera los retratos de Europa en este año.
 
 [V5.21](V5.21.md) integra Comparar en Conectar personas, corrige el diálogo de exportación, unifica los selectores de píldora, agrupa los filtros por regiones comunes y añade seis historias dinásticas, diez biografías extensas y diecinueve retratos.
+
+[V5.22](V5.22.md) corrige los árboles de Conectar y Exportar: generaciones reales, parejas en la misma fila, el mismo diseño en pantalla y en el SVG, y tests de geometría.
