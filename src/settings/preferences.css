@@ -4,7 +4,7 @@ html[data-eade-motion="reduce"] *,html[data-eade-motion="reduce"] *::before,html
 html[data-eade-theme="dark"]{color-scheme:dark;--eade-paper:#24221f;--eade-paper-soft:#2e2a25;--eade-paper-bright:#38332c;--eade-ink:#f5eddf;--eade-muted:#d3c5ae;--eade-muted-soft:#bbae98;--eade-wine:#e5aaa2;--eade-wine-dark:#f2c6bd;--eade-wine-fill:#8c3b37;--eade-wine-fill-hover:#a04842;--eade-gold:#ddb67b;--eade-border:#62594d;--eade-border-strong:#8b7a66;--eade-shadow-card:0 8px 30px rgba(0,0,0,.2)}
 html[data-eade-theme="dark"] body{background:var(--eade-paper);color:var(--eade-ink)}
 html[data-eade-theme="dark"] .site-header{background:rgba(46,42,37,.97);color:var(--eade-ink)}
-html[data-eade-theme="dark"] .site-brand,html[data-eade-theme="dark"] .site-nav a,html[data-eade-theme="dark"] .site-language a,html[data-eade-theme="dark"] .site-language button{color:var(--eade-ink)}
+html[data-eade-theme="dark"] .site-brand,html[data-eade-theme="dark"] .site-nav a{color:var(--eade-ink)}
 html[data-eade-theme="dark"] .site-nav a:hover,html[data-eade-theme="dark"] .settings-trigger:hover{background:var(--eade-paper-bright)}
 html[data-eade-theme="dark"] .site-footer{background:#2b2722;color:var(--eade-muted)}
 html[data-eade-theme="dark"] .site-footer a,html[data-eade-theme="dark"] .site-footer button,html[data-eade-theme="dark"] .site-footer-group>strong{color:var(--eade-muted)}

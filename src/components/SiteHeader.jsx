@@ -28,17 +28,16 @@ export default function SiteHeader({
   const active = locale === "en" ? (/\/story(?:\/|$)|\/stories/.test(path) ? "historias" : /\/person(?:\/|$)|\/people/.test(path) ? "personas" : null) : isAtlas ? "atlas" : /\/persona(?:s|\/|$)/.test(path) ? "personas" : /\/dinastia(?:s|\/|$)/.test(path) ? "dinastias" : /\/territorio(?:s|\/|$)/.test(path) ? "territorios" : /\/historia(?:s|\/|$)/.test(path) ? "historias" : /\/desafio/.test(path) ? "desafio" : null;
   const equivalent = translatedEquivalent(path, locale === "en" ? "es" : "en");
   const links = locale === "en" ? [["atlas", "Atlas", "/es/?atlas=1&continuar=1", true], ["personas", "People", "/en/people"], ["dinastias", "Dynasties", "/es/dinastias", true], ["territorios", "Territories", "/es/territorios", true], ["historias", "Stories", "/en/stories"], ["desafio", "Challenge", "/es/desafio", true]] : [["atlas", "Atlas", "/es/?atlas=1&continuar=1"], ["personas", "Personas", "/es/personas"], ["dinastias", "Dinastías", "/es/dinastias"], ["territorios", "Territorios", "/es/territorios"], ["historias", "Historias", "/es/historias"], ["desafio", "Desafío", "/es/desafio"]];
-  const languageControl = onLanguageChange ? (
-    <div className="site-language" role="group" aria-label="Idioma / Language">
-      <button type="button" className={locale === "es" ? "active" : ""} aria-current={locale === "es" ? "page" : undefined} onClick={() => onLanguageChange("es")}>ES</button>
-      <span aria-hidden="true">|</span>
-      <button type="button" className={locale === "en" ? "active" : ""} aria-current={locale === "en" ? "page" : undefined} onClick={() => onLanguageChange("en")}>EN</button>
-    </div>
-  ) : (
-    <div className="site-language" role="group" aria-label="Idioma / Language">
-      {locale === "en" ? <><a href={equivalent || "/es/"}>ES</a><span aria-hidden="true">|</span><span className="active">EN</span></> : <><span className="active">ES</span><span aria-hidden="true">|</span><a href={equivalent || "/en/"} title={equivalent ? "Leer esta página en inglés" : "Sin traducción de esta página; abrir portada inglesa"}>EN</a></>}
-    </div>
-  );
+  // One control on every page: the atlas switches language in place, the public
+  // pages link to the equivalent page (or the other edition's home).
+  const languageOption = (code) => {
+    const label = code.toUpperCase();
+    if (locale === code) return <span key={code} className="site-language-option active" aria-current="page">{label}</span>;
+    if (onLanguageChange) return <button key={code} type="button" className="site-language-option" onClick={() => onLanguageChange(code)}>{label}</button>;
+    const title = code === "en" ? (equivalent ? "Leer esta página en inglés" : "Sin traducción de esta página; abrir portada inglesa") : (equivalent ? "Read this page in Spanish" : "Open the Spanish home page");
+    return <a key={code} className="site-language-option" href={equivalent || `/${code}/`} hrefLang={code} lang={code} title={title}>{label}</a>;
+  };
+  const languageControl = <div className="site-language" role="group" aria-label="Idioma / Language">{["es", "en"].map(languageOption)}</div>;
 
   return (
     <header className="site-header">

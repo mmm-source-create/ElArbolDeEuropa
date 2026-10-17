@@ -82,9 +82,7 @@
   align-items: center;
   gap: 5px;
 }
-.site-nav a,
-.site-language a,
-.site-language button {
+.site-nav a {
   border: 0;
   background: transparent;
   color: #665D4F;
@@ -95,33 +93,38 @@
 }
 .site-nav a { display: flex; align-items: center; justify-content: center; gap: 3px; padding: 7px 3px; border-radius: var(--eade-radius-sm); white-space: nowrap; }
 .site-nav-language { font-size: var(--fs-2xs, 10px); letter-spacing: .03em; color: var(--eade-muted); }
-.site-nav a:hover,
-.site-language a:hover,
-.site-language button:hover { color: var(--eade-wine); }
+.site-nav a:hover { color: var(--eade-wine); }
 .site-nav a:hover { background: #EEE5D3; }
 
 
 .site-language {
   justify-self: end;
-  display: flex;
+  display: inline-flex;
   align-items: center;
-  gap: 5px;
-  color: var(--eade-muted);
+  gap: 2px;
+  padding: 2px;
+  border: 1px solid var(--eade-border);
+  border-radius: 999px;
   font-family: var(--eade-sans);
-  font-size: var(--fs-2xs, 10px);
 }
-.site-language a,
-.site-language button {
-  appearance:none;
-  display:inline-flex;
-  align-items:center;
-  min-height:24px;
-  padding: 2px 3px;
-  line-height:1;
+.site-language .site-language-option {
+  appearance: none;
+  display: inline-grid;
+  place-items: center;
+  width: 30px;
+  height: 24px;
+  padding: 0;
+  border: 0;
+  border-radius: 999px;
+  background: transparent;
+  color: var(--eade-muted);
+  font: 700 var(--fs-xs, 11px)/1 var(--eade-sans);
+  letter-spacing: .04em;
+  text-decoration: none;
   cursor: pointer;
 }
-.site-language span{line-height:1}
-.site-language .active { color: var(--eade-wine); font-weight: 800; }
+.site-language .site-language-option:hover { color: var(--eade-wine); }
+.site-language .site-language-option.active { background: var(--eade-wine-fill); color: #fff8e8; cursor: default; }
 
 .site-footer {
   border-top: 1px solid var(--eade-border);
@@ -247,5 +250,5 @@
 html[data-eade-screen-notice="dismissed"] .site-screen-notice { display:none; }
 
 /* V5.19 · Escala común en cabecera y pie: ningún texto por debajo de 10px. */
-.site-nav a, .site-language :is(a, button) { font-size: var(--fs-xs); }
+.site-nav a { font-size: var(--fs-xs); }
 .site-footer-group > strong, .site-footer-meta, .site-footer-meta a, .site-footer small { font-size: var(--fs-2xs); }
