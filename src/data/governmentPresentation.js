@@ -7,7 +7,7 @@ import {agrupacionesPoliticasEnMapa, REINO_COLOR, REINO_COLOR_DEFAULT} from '../
 import {authorityKind} from './mapAuthorities.js';
 
 const labels = {'monarquia-hispanica':'España','castilla-leon':'Corona de Castilla',
- 'tierras-austriacas':'Austria','austro-bohemia':'Austria y Corona de Bohemia'};
+ 'tierras-austriacas':'Austria','austro-bohemia':'Austria y Corona de San Wenceslao'};
 const cache=new WeakMap();
 
 // This is a presentation of existing dated mandates, never a change of title,

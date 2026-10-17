@@ -7,13 +7,16 @@ import {gobiernosDe} from '../../src/data/personAccessors.js';
 import {gobiernoEfectivo} from '../../src/data/territorios.js';
 import {mapDataFile,projectRoot,auditReportPath} from '../lib/project-paths.mjs';
 const data=JSON.parse(fs.readFileSync(mapDataFile('corridor-locations.json')));
-const people=earlyPeopleInventory(PERSONAS),missing=[];let checked=0;
+// V5.25 titles that are documented but have no reviewed cartography before 1200. They are
+// not drawn in those years; the list keeps the gap visible instead of failing silently.
+const WITHOUT_EARLY_CARTOGRAPHY=new Set(['TEOB3CHAMP|Champaña','ENRIQLEON|Sajonia','ENRIQLEON|Baviera','HENRYSCOT|Northumbria','DAVIDHUNTINGDON|Huntingdon']);
+const people=earlyPeopleInventory(PERSONAS),missing=[],uncharted=[];let checked=0;
 for(const p of PERSONAS)for(const g of gobiernosDe(p).filter(g=>g.desde<1200&&gobiernoEfectivo(g)))for(let y=g.desde;y<=Math.min(g.hasta,1199);y++){
  checked++;
- if(!mapLocationsForGovernment(data,g,y,p.id,idsDeGobiernoEnAño(g,y,p.id)).length)missing.push({id:p.id,territory:g.territorio,year:y});
+ if(!mapLocationsForGovernment(data,g,y,p.id,idsDeGobiernoEnAño(g,y,p.id)).length)(WITHOUT_EARLY_CARTOGRAPHY.has(p.id+'|'+g.territorio)?uncharted:missing).push({id:p.id,territory:g.territorio,year:y});
 }
 const territories=[...new Set(people.flatMap(p=>p.governments.map(g=>g.territory)))].sort((a,b)=>a.localeCompare(b,'es'));
-const result={people:people.length,territories:territories.length,territorialSeries:52,from:data.from,through:data.through,governmentYearsChecked:checked,missing,peopleInventory:people};
+const result={people:people.length,territories:territories.length,territorialSeries:52,from:data.from,through:data.through,governmentYearsChecked:checked,missing,uncharted,peopleInventory:people};
 fs.writeFileSync(auditReportPath('early-map.json'),JSON.stringify(result,null,2)+'\n');
 if(process.argv.includes('--publish')){
  const rows=[['ID','Persona','Nacimiento','Fallecimiento','Gobiernos registrados anteriores a 1200','Gobiernos posteriores','Vínculos familiares (no prueban gobierno)'],...people.map(p=>[p.id,p.name,p.birth??'',p.death??'',p.governments.map(g=>`${g.territory}: ${g.from}–${g.through} (${g.condition})`).join('; '),p.laterTerritories.join('; '),p.familyAssociations.join('; ')])];
@@ -29,5 +32,5 @@ if(process.argv.includes('--publish')){
   '', 'Los contornos medievales son aproximaciones regionales: el recorte limita especialmente Georgia y el Mediterráneo oriental. Se distinguen conquistas fechadas, feudos y alta realeza irlandesa; no se retrocede automáticamente la frontera de 1200 a toda la vida de una persona.',''];
  fs.writeFileSync(projectRoot+'/docs/reports/reviewed/V5.17_PERSONAS_ANTES_DE_1200.md',lines.join('\n'));
 }
-console.log(`Atlas anterior a 1200: ${people.length} personas, ${territories.length} denominaciones, ${checked} gobiernos/año, ${missing.length} sin geometría.`);
+console.log(`Atlas anterior a 1200: ${people.length} personas, ${territories.length} denominaciones, ${checked} gobiernos/año, ${missing.length} sin geometría; ${uncharted.length} años de títulos registrados sin cartografía revisada.`);
 if(missing.length){console.error(missing.slice(0,10));process.exitCode=1;}

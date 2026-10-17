@@ -1944,7 +1944,7 @@ export const ATLAS_CHRONOLOGY_REVIEWS = Object.freeze({
     "reviewedAt": "2026-10-07",
     "editor": "El Árbol de Europa"
   },
-  "person:MATTEO1VISC:government:Milán:1287:1301:Capitán del pueblo": {
+  "person:MAT1VISC:government:Milán:1287:1301:Capitán del pueblo": {
     "certainty": "documented",
     "sources": [
       {
@@ -1962,7 +1962,7 @@ export const ATLAS_CHRONOLOGY_REVIEWS = Object.freeze({
     "reviewedAt": "2026-10-07",
     "editor": "El Árbol de Europa"
   },
-  "person:MATTEO1VISC:government:Milán:1310:1322:Señor y vicario imperial": {
+  "person:MAT1VISC:government:Milán:1310:1322:Señor y vicario imperial": {
     "certainty": "documented",
     "sources": [
       {
@@ -1980,7 +1980,7 @@ export const ATLAS_CHRONOLOGY_REVIEWS = Object.freeze({
     "reviewedAt": "2026-10-07",
     "editor": "El Árbol de Europa"
   },
-  "person:MATTEO1VISC:birth": {
+  "person:MAT1VISC:birth": {
     "certainty": "documented",
     "sources": [
       {
@@ -1998,7 +1998,7 @@ export const ATLAS_CHRONOLOGY_REVIEWS = Object.freeze({
     "reviewedAt": "2026-10-07",
     "editor": "El Árbol de Europa"
   },
-  "person:MATTEO1VISC:death": {
+  "person:MAT1VISC:death": {
     "certainty": "documented",
     "sources": [
       {

@@ -86,8 +86,8 @@ test('personal scopes exclude another branch while preserving delegated authorit
   assert(ids('ENRIQ2NAV', 1530).has('Saint_Jean_Pied_de_Port'));
   assert(!ids('ENRIQ2NAV', 1530).has('Pamplona'));
   assert(!ids('BERNVISC', 1360).has('Pavia'));
-  assert(ids('GALEAZZO2VISC', 1360).has('Pavia'));
-  assert(!ids('GALEAZZO2VISC', 1360).has('Brescia'));
+  assert(ids('GAL2VISC', 1360).has('Pavia'));
+  assert(!ids('GAL2VISC', 1360).has('Brescia'));
   const wali = entries('ABUYAHYAMALL', 1210);
   assert.equal(wali.flatMap(entry => entry.ids).length, 5);
   assert(wali.every(entry => entry.kind === 'delegated'));
@@ -147,7 +147,7 @@ test('islands without documented settlement are a geographic condition, and iden
 });
 
 test('new mandates have their own localized sources and the compact routes reproduce the review', () => {
-  for (const id of ['ALNASIRALMOH','ABUYAHYAMALL','ADELASIATORRES','MARIANO4ARBOREA','ELEONORAARBOREA','LEONARDOALAGON','SIMONEBOCCANE','GIOVANNIBOCCANE','GALEAZZO2VISC']) {
+  for (const id of ['ALNASIRALMOH','ABUYAHYAMALL','ADELASIATORRES','MARIANO4ARBOREA','ELEONORAARBOREA','LEONARDOALAGON','SIMONEBOCCANE','GIOVANNIBOCCANE','GAL2VISC']) {
     assert(people.has(id), id);
     assert(personClaims(people.get(id)).filter(claim => claim.field === 'Gobierno').every(claim => claim.sources.length && claim.sources.every(source => source.locator)), id);
   }

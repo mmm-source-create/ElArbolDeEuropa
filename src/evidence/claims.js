@@ -4,6 +4,10 @@ import {conyugesDe, gobiernosDe} from '../data/personAccessors.js';
 import {RELEVOS} from '../content/sucesiones/index.js';
 import {ACCESOS_CORONAS} from '../content/coronas/index.js';
 import {CLAIM_REVIEWS, EDITORIAL_HISTORY, PILOT_PERSON_IDS} from './reviewRecords.js';
+import {authorityParentReview} from './authorityReviews.js';
+import {SOURCES} from '../content/sources.js';
+const SOURCE_TITLES = new Map(SOURCES.map(source => [source.url, source.titulo]));
+const GENERAL_URLS = new Set(SOURCES.filter(source => source.general).map(source => source.url));
 export {CLAIM_REVIEWS, EDITORIAL_HISTORY, PILOT_PERSON_IDS};
 export const CERTAINTY = Object.freeze({
   documented: 'Documentado', approximate: 'Aproximado', disputed: 'Discutido',
@@ -14,13 +18,21 @@ export const CERTAINTY = Object.freeze({
 const year = value => Number.isInteger(value) ? value : null;
 const interval = (from, to = from) => ({from: year(from), to: year(to)});
 
+// An explained succession cites the article it was written from. A site's front page or a
+// general repertory is only orientation, so it does not make the succession documented.
+function successionReview(record) {
+  const specific = (record.fuentes || []).filter(url => { try { return new URL(url).pathname.length > 1 && !GENERAL_URLS.has(url); } catch { return false; } });
+  return specific.length ? {certainty: 'documented', note: record.explicacion,
+    sources: specific.map(url => ({title: SOURCE_TITLES.get(url) || new URL(url).hostname.replace(/^www\./, ''), url, locator: 'Fuente citada en la explicación de la sucesión'}))} : null;
+}
+
 export function personClaims(person, reviews = CLAIM_REVIEWS) {
   if (!person?.id) return [];
   const claims = [];
   const notes = person.documentacion?.notas || [];
-  const add = (suffix, field, value, time = interval(null), fallbackNote = '') => {
+  const add = (suffix, field, value, time = interval(null), fallbackNote = '', fallbackReview = null) => {
     const id = `person:${person.id}:${suffix}`;
-    const review = reviews[id] || {};
+    const review = reviews[id] || (reviews === CLAIM_REVIEWS && (suffix === 'father' || suffix === 'mother') && authorityParentReview(person, suffix)) || fallbackReview || {};
     const documentaryNote = notes.find(note => note.campo?.toLowerCase() === field.toLowerCase() || field === 'Gobierno' && note.campo?.toLowerCase() === 'gobiernos');
     const certainty = review.certainty && CERTAINTY[review.certainty]
       ? review.certainty : documentaryNote?.estado === 'discutida' ? 'disputed'
@@ -44,13 +56,13 @@ export function personClaims(person, reviews = CLAIM_REVIEWS) {
     add(`government:${key}`,'Gobierno',government,interval(government.desde,government.hasta));
   }
   for (const succession of RELEVOS.filter(item => item.sucesor?.persona === person.id)) {
-    add(`succession:${succession.id}`,'Sucesión',succession,interval(succession.sucesor.desde),succession.explicacion);
+    add(`succession:${succession.id}`,'Sucesión',succession,interval(succession.sucesor.desde),succession.explicacion,successionReview(succession));
   }
   for (const accession of ACCESOS_CORONAS.filter(item => item.persona === person.id && !claims.some(claim => claim.field === 'Sucesión' && claim.value.territorio === item.territorio && claim.interval.from === item.desde))) {
     add(`accession:${accession.territorio}:${accession.desde}`,'Sucesión',{
       territorio:accession.territorio,sucesor:{persona:person.id,desde:accession.desde},
       explicacion:accession.explicacion,motivos:accession.motivos,
-    },interval(accession.desde),accession.explicacion);
+    },interval(accession.desde),accession.explicacion,successionReview(accession));
   }
   return claims;
 }

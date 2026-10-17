@@ -53,7 +53,7 @@ test('the medieval inventory distinguishes birth, effective government, later ti
  const inv=earlyPeopleInventory(PERSONAS);assert.equal(inv.length,157);assert.equal(new Set(inv.map(p=>p.id)).size,157);
  assert.equal(inv[0].birth,1081);const louis=inv.find(p=>p.id==='LUIS6FRA');assert(louis.governments.some(g=>g.territory==='Francia'&&g.from===1108));
  const family=inv.find(p=>p.id==='EDUVKYB');assert.equal(family.governments.length,0);assert(family.familyAssociations.includes('Habsburgo'));
- assert.equal(new Set(inv.flatMap(p=>p.governments.map(g=>g.territory))).size,53);
+ assert.equal(new Set(inv.flatMap(p=>p.governments.map(g=>g.territory))).size,58);
  assert.equal(data.from,1106);assert.equal(data.through,1800);
 });
 test('pre-1200 maps distinguish dated conquests and the loss of Jerusalem, without future borders',()=>{

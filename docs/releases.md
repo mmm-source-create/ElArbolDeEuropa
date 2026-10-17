@@ -147,3 +147,5 @@ Release se preparan en borrador sobre la entrega validada.
 [V5.23](V5.23.md) ordena y filtra el índice de Personas, separa las historias disponibles con duración y progreso, amplía el carrusel de portada, añade «Compartir esta vista» en Europa y suma diez historias dinásticas, referencias en las biografías, 19 retratos y 60 resúmenes.
 
 [V5.24](V5.24.md) unifica el selector ES | EN, rehace la portada sin la cinta de dinastías y con entradas más visibles, ordena Europa en este año con píldoras y gobernantes por región, y suma 19 retratos, 12 biografías extensas y 66 resúmenes.
+
+[V5.25](V5.25.md) contrasta fechas, filiaciones, matrimonios y cargos con las fichas de autoridad GND (de 943 a 4.778 afirmaciones con fuente precisa), añade 47 títulos que faltaban, fusiona dos Visconti duplicados, incorpora a Eugenio de Saboya, completa a Juana de Évreux, aclara a Isabel la Católica en Aragón y crea la Corona de San Wenceslao.

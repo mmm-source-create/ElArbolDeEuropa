@@ -324,6 +324,7 @@ export const TERRITORIOS = Object.freeze({
   },
   "Cléveris": {
     "clase": "ducado",
+    "etapas": [{"desde":1150,"hasta":1416,"clase":"condado"}],
     "naturaleza": "entidad",
     "componentes": []
   },
@@ -477,6 +478,7 @@ export const TERRITORIOS = Object.freeze({
   },
   "Gravina": {
     "clase": "ducado",
+    "etapas": [{"desde":1150,"hasta":1416,"clase":"condado"}],
     "naturaleza": "entidad",
     "componentes": []
   },
@@ -911,6 +913,7 @@ export const TERRITORIOS = Object.freeze({
   },
   "Cesena": {
     "clase": "ciudad",
+    "etapas": [{"desde":1378,"hasta":1465,"clase":"señorío"}],
     "naturaleza": "entidad",
     "componentes": []
   },
@@ -931,6 +934,7 @@ export const TERRITORIOS = Object.freeze({
   },
   "Fano": {
     "clase": "ciudad",
+    "etapas": [{"desde":1356,"hasta":1463,"clase":"señorío"}],
     "naturaleza": "entidad",
     "componentes": []
   },
@@ -966,6 +970,7 @@ export const TERRITORIOS = Object.freeze({
   },
   "Rímini": {
     "clase": "ciudad",
+    "etapas": [{"desde":1295,"hasta":1528,"clase":"señorío"}],
     "naturaleza": "entidad",
     "componentes": []
   },
