@@ -6,21 +6,6 @@
 }
 .public-site *, .public-site *::before, .public-site *::after { box-sizing: border-box; }
 .public-site a { color: inherit; }
-.public-header {
-  position: sticky; top: 0; z-index: 30;
-  min-height: 66px; padding: 10px clamp(16px, 4vw, 52px);
-  display: grid; grid-template-columns: minmax(220px, 1fr) auto minmax(40px, 1fr); align-items: center; gap: 24px;
-  background: rgba(251, 247, 236, .96); border-bottom: 1px solid #d8ceb7; backdrop-filter: blur(10px);
-}
-.public-brand { display: inline-flex; align-items: center; gap: 10px; width: fit-content; text-decoration: none; color: #2c2620; }
-.public-brand > svg { color: var(--eade-wine); }
-.public-brand span { display: grid; gap: 1px; }
-.public-brand strong { font: 600 var(--fs-xl, 18px)/1.05 "Iowan Old Style", "Palatino Linotype", Georgia, serif; }
-.public-brand small { color: var(--eade-muted-soft); font-size: var(--fs-2xs, 10px); letter-spacing: .5px; text-transform: uppercase; }
-.public-nav { display: flex; align-items: center; justify-content: center; gap: 5px; }
-.public-nav a, .public-language { padding: 7px 9px; border-radius: var(--r-sm, 6px); color: #665d4f; text-decoration: none; font-size: var(--fs-xs, 11px); font-weight: 650; }
-.public-nav a:hover, .public-language:hover { background: #eee5d3; color: var(--eade-wine); }
-.public-language { justify-self: end; font-weight: 800; }
 .public-main { width: min(1180px, calc(100% - 32px)); margin: 0 auto; padding: 34px 0 58px; }
 .public-home { padding-top: 0; }
 .public-hero { padding: clamp(56px, 8vw, 96px) 0 56px; max-width: 950px; margin: 0 auto; text-align: center; }
@@ -131,16 +116,10 @@ button.public-door-card { width: 100%; font: inherit; }
 .public-follow-grid h3 { margin: 0 0 9px; display: flex; align-items: center; gap: 6px; color: var(--eade-muted); font-size: var(--fs-2xs, 10px); text-transform: uppercase; letter-spacing: .45px; }
 .public-follow-grid h3 svg { color: var(--eade-wine); }
 .public-follow-grid .public-person-card { margin-top: 6px; }
-.public-loading, .public-error, .public-inline-warning { max-width: 760px; margin: 40px auto; padding: 18px; border: 1px solid #d6cab2; border-radius: var(--r-sm, 6px); background: #fffdf7; color: #6c6253; text-align: center; font-size: var(--fs-sm, 12px); line-height: 1.6; }
+.public-loading, .public-error { max-width: 760px; margin: 40px auto; padding: 18px; border: 1px solid #d6cab2; border-radius: var(--r-sm, 6px); background: #fffdf7; color: #6c6253; text-align: center; font-size: var(--fs-sm, 12px); line-height: 1.6; }
 .public-error h1 { margin: 0 0 8px; font: 600 var(--fs-3xl, 28px)/1.1 "Iowan Old Style", "Palatino Linotype", Georgia, serif; }
 .public-muted { color: var(--eade-muted); }
-.public-footer { padding: 28px clamp(16px, 4vw, 52px) 34px; border-top: 1px solid #d8ceb7; background: #f2eadb; color: #7c705e; text-align: center; }
-.public-footer > div { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; }
-.public-footer a { color: #6c5e4a; font-size: var(--fs-2xs, 10px); text-decoration: none; }
-.public-footer p { margin: 8px auto 0; max-width: 900px; font-size: var(--fs-2xs, 10px); line-height: 1.45; }
 @media (max-width: 900px) {
-  .public-header { grid-template-columns: 1fr auto; }
-  .public-nav { grid-column: 1/-1; order: 3; flex-wrap: wrap; padding-top: 4px; border-top: 1px solid #e5dccb; }
   .public-door-grid, .public-person-grid, .public-story-grid, .public-entity-grid, .public-follow-grid { grid-template-columns: repeat(2, minmax(0,1fr)); }
   .public-person-hero { grid-template-columns: minmax(0,1fr) 200px; gap: 24px; }
 }
@@ -254,8 +233,6 @@ button.public-door-card { width: 100%; font: inherit; }
 .public-home-language { margin-top:auto; color:var(--eade-muted); font-size:var(--fs-2xs, 10px); }
 .public-home a:focus-visible { outline:2px solid #7a2e2e; outline-offset:4px; }
 @media (max-width:480px) { .public-home-year { flex-basis:100%; } }
-
-.site-translation-status{grid-column:1/-1;text-align:right;font-size:var(--fs-xs, 11px);color:var(--eade-muted);}.english-page section{margin:28px 0}.english-page .english-equivalent{margin-top:32px}
 
 html .public-not-found>section>span{color:#7c5426}
 

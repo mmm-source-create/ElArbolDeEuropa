@@ -1,0 +1,219 @@
+/* Capas de ajuste visual del Atlas, en el orden en que se entregaron
+   (V5.18–V5.21). Van después de app.css y de los temas: el orden importa. */
+
+/* V5.18 · Atlas más sereno: menos cajas dentro de cajas, controles que solo
+   muestran su borde cuando se usan y selectores de sección como una sola pieza.
+   Se carga tras los temas; `.wrap.wrap` iguala la especificidad de los
+   selectores :is() del tema oscuro para aplicarse igual en claro y oscuro. */
+
+/* Selector de escena centrado, sin la etiqueta redundante. */
+html[data-eade-theme] .wrap.wrap .atlas-scene-switch{justify-content:center;padding:18px 24px 6px}
+
+/* Barra superior: una sola superficie con divisiones finas, no tres tarjetas. */
+html[data-eade-theme] .wrap.wrap :is(.workspace-toolbar-search,.workspace-toolbar-year){border-color:transparent;background:transparent}
+html[data-eade-theme] .wrap.wrap .workspace-topbar-secondary{border-color:transparent;background:transparent;border-block:1px solid var(--eade-border);border-radius:0}
+
+/* Botones fantasma: sin borde ni relleno en reposo, una capa suave al pasar. */
+html[data-eade-theme] .wrap.wrap :is(.nav-btn,.atlas-toolbar-menu>summary){border-color:transparent;background:transparent;box-shadow:none;border-radius:999px;transition:background .2s,color .2s,border-color .2s}
+html[data-eade-theme] .wrap.wrap :is(.nav-btn,.atlas-toolbar-menu>summary):is(:hover,:focus-visible){background:var(--eade-paper-bright);border-color:var(--eade-border)}
+html[data-eade-theme] .wrap.wrap :is(.nav-btn.active,.atlas-toolbar-menu[open]>summary){background:var(--eade-paper-bright);border-color:var(--eade-border-strong);color:var(--eade-wine)}
+
+/* Biografía: el panel ya enmarca la ficha; dentro, solo jerarquía tipográfica. */
+html[data-eade-theme] .wrap.wrap .bio-panel{border-color:transparent;background:transparent;box-shadow:none}
+html[data-eade-theme] .wrap.wrap .bio-portrait-card{border-color:transparent;background:transparent;padding-inline:0}
+html[data-eade-theme] .wrap.wrap .bio-family-actions{border-width:1px 0 0;border-radius:0;background:transparent;padding-inline:0}
+html[data-eade-theme] .wrap.wrap .bio-section-heading{letter-spacing:.02em}
+
+/* Índice de la ficha: un selector de sección con un reborde común. */
+html[data-eade-theme] .wrap.wrap .bio-tabs{padding:10px 12px;border-bottom:1px solid var(--eade-border);background:transparent}
+html[data-eade-theme] .wrap.wrap .bio-tabs .ui-segments{border:1px solid var(--eade-border-strong);background:var(--eade-paper-soft);padding:3px}
+html[data-eade-theme] .wrap.wrap .bio-tabs .ui-segments>button{font-size:var(--fs-xs, 11px);padding:7px 6px}
+html[data-eade-theme] .wrap.wrap .bio-tabs .ui-segments>button[aria-current="location"]{color:var(--eade-wine)}
+html[data-eade-theme] .wrap.wrap .bio-tabs .ui-segments-indicator{top:3px;bottom:3px;background:var(--eade-paper-bright);box-shadow:0 1px 4px #0000001f}
+
+/* Cabecera de la ficha: la estrella respira junto al cierre. */
+html[data-eade-theme] .wrap.wrap .bio-head-actions{gap:2px}
+
+/* V5.19 · Coherencia del Atlas: una escala tipográfica, controles del árbol y
+   del mapa sin cajas, línea temporal con el mismo lenguaje que los paneles y
+   barra de iconos. `.wrap.wrap` iguala la especificidad del tema oscuro. */
+
+/* Barra: iconos con etiqueta flotante; solo búsqueda y año ocupan espacio. */
+html[data-eade-theme] .wrap.wrap :is(.compare-main-btn,.favorites-trigger,.atlas-tools-menu>summary,.atlas-panels-menu>summary,.workspace-toolbar-actions .nav-btn.ui-tip){width:34px;min-width:34px;height:34px;padding:0;display:inline-grid;place-items:center;justify-content:center;gap:0}
+html[data-eade-theme] .wrap.wrap .compare-split-control{display:inline-flex;align-items:center}
+html[data-eade-theme] .wrap.wrap .compare-menu-btn{width:20px;min-width:20px;height:34px;padding:0;border-radius:999px}
+html[data-eade-theme] .wrap.wrap .favorites-trigger{position:relative}
+html[data-eade-theme] .wrap.wrap .favorites-trigger .favorite-star-symbol{color:var(--eade-gold);fill:color-mix(in srgb,var(--eade-gold) 22%,transparent)}
+html[data-eade-theme] .wrap.wrap .favorites-count{position:absolute;top:2px;right:0;min-width:15px;height:15px;padding:0 4px;border-radius:999px;background:var(--eade-wine-fill);color:#fff8ef;font:700 var(--fs-2xs, 10px)/15px var(--eade-sans);text-align:center}
+html[data-eade-theme] .wrap.wrap .workspace-toolbar-actions .nav-controls{gap:2px}
+html[data-eade-theme] .wrap.wrap .favorites-clear{display:flex;justify-content:flex-end;padding:8px 4px 2px}
+
+/* Año global: cifra grande junto a la etiqueta. */
+html[data-eade-theme] .wrap.wrap .global-year-heading-row{display:flex;align-items:baseline;justify-content:flex-start;gap:10px}
+html[data-eade-theme] .wrap.wrap .global-year-heading-row .global-year-header-summary{order:2;margin-left:auto}
+
+/* Filtro territorial: dos opciones visibles en vez de un desplegable con notas. */
+html[data-eade-theme] .wrap.wrap .atlas-filter-mode{display:flex;width:100%;margin:2px 0 10px;padding:3px}
+html[data-eade-theme] .wrap.wrap .atlas-filter-mode>button{flex:1;padding:7px 8px;font-size:var(--fs-2xs)}
+html[data-eade-theme] .wrap.wrap .atlas-filter-mode .ui-segments-indicator{top:3px;bottom:3px}
+
+/* Controles del árbol y del mapa: sin caja; aparecen al acercarse al lienzo. */
+html[data-eade-theme] .wrap.wrap :is(.tree-toolbar,.mapa-toolbar){border-color:transparent;background:color-mix(in srgb,var(--eade-paper-bright) 82%,transparent);box-shadow:none;border-radius:999px;padding:3px 6px;transition:opacity .25s,background .2s}
+html[data-eade-theme] .wrap.wrap :is(.tree-toolbar,.mapa-toolbar) :is(button,.nav-btn){border-color:transparent;background:transparent;color:var(--eade-ink);box-shadow:none;border-radius:999px}
+html[data-eade-theme] .wrap.wrap :is(.tree-toolbar,.mapa-toolbar) :is(button,.nav-btn):is(:hover,:focus-visible){background:var(--eade-paper-soft)}
+html[data-eade-theme] .wrap.wrap :is(.tree-toolbar,.mapa-toolbar) :is(button,.nav-btn)[aria-pressed="true"]{color:var(--eade-wine)}
+html[data-eade-theme] .wrap.wrap :is(.tree-toolbar-separator,.mapa-toolbar-separator){background:var(--eade-border)}
+html[data-eade-theme] .wrap.wrap .tree-scope-label{color:var(--eade-muted);font-size:var(--fs-2xs)}
+html[data-eade-theme] .wrap.wrap .minimap{border-color:var(--eade-border);background:color-mix(in srgb,var(--eade-paper-soft) 80%,transparent);box-shadow:none;transition:opacity .25s}
+@media (hover:hover) and (pointer:fine){
+  html[data-eade-theme] .wrap.wrap :is(.tree-toolbar,.mapa-toolbar,.minimap){opacity:.5}
+  html[data-eade-theme] .wrap.wrap :is(.workspace-tree-stage,.mapa-wrapper,.workspace-stage):is(:hover,:focus-within) :is(.tree-toolbar,.mapa-toolbar,.minimap){opacity:1}
+}
+html[data-eade-theme] .wrap.wrap :is(.territory-hint,.workspace-map-hint){color:var(--eade-muted)}
+
+/* Botones Árbol / Mapa / Árbol y mapa: legibles en ambos temas. */
+html[data-eade-theme] .wrap.wrap .atlas-view-pills>button{color:var(--eade-muted);font-size:var(--fs-xs)}
+html[data-eade-theme] .wrap.wrap .atlas-view-pills>button.is-active{color:var(--eade-wine)}
+html[data-eade-theme] .wrap.wrap .atlas-view-pills .ui-segments-indicator{background:var(--eade-paper-bright);box-shadow:0 1px 4px #0000001f}
+
+/* Línea temporal con el lenguaje del resto del Atlas. */
+html[data-eade-theme] .wrap.wrap .atlas-timeline{margin:20px 24px;border-radius:var(--r-sm, 6px);background:var(--eade-paper-soft)}
+html[data-eade-theme] .wrap.wrap .atlas-timeline-heading h2{font:650 var(--fs-xs)/1 var(--eade-sans);letter-spacing:.08em;color:var(--eade-ink)}
+html[data-eade-theme] .wrap.wrap .atlas-timeline-heading span{font-size:var(--fs-xs)}
+html[data-eade-theme] .wrap.wrap .atlas-timeline-zoom{border:0;gap:2px}
+html[data-eade-theme] .wrap.wrap .atlas-timeline-zoom button{border-radius:999px;padding:7px}
+html[data-eade-theme] .wrap.wrap .atlas-timeline-zoom button:hover:not(:disabled){background:var(--eade-paper-bright)}
+html[data-eade-theme] .wrap.wrap .atlas-timeline-legend button{display:inline-flex;align-items:center;gap:6px;background:transparent;border-color:var(--eade-border);color:var(--eade-ink);font-size:var(--fs-xs)}
+html[data-eade-theme] .wrap.wrap .atlas-timeline-legend button::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--event-color)}
+html[data-eade-theme] .wrap.wrap .atlas-timeline-legend button span{margin-left:2px}
+html[data-eade-theme] .wrap.wrap :is(.atlas-timeline-axis,.atlas-timeline-events){background:var(--eade-paper-soft)}
+html[data-eade-theme] .wrap.wrap .atlas-timeline-event{border-color:color-mix(in srgb,var(--event-color) 55%,var(--eade-border));background:var(--eade-paper-bright);border-radius:999px;font-size:var(--fs-2xs)}
+html[data-eade-theme] .wrap.wrap .atlas-timeline-event::after{content:"";position:absolute;left:0;top:4px;bottom:4px;width:3px;border-radius:var(--r-sm, 6px);background:var(--event-color)}
+html[data-eade-theme] .wrap.wrap .atlas-timeline-event>i{display:none}
+html[data-eade-theme] .wrap.wrap .atlas-timeline-group{background:var(--eade-paper-soft);font-size:var(--fs-xs)}
+html[data-eade-theme] .wrap.wrap .atlas-timeline-life{opacity:.55}
+html[data-eade-theme] .wrap.wrap .atlas-timeline-period{opacity:.035}
+html[data-eade-theme] .wrap.wrap :is(.atlas-timeline-status,.atlas-timeline-footer){font-size:var(--fs-xs)}
+html[data-eade-theme] .wrap.wrap .atlas-timeline-status small{font-size:var(--fs-2xs)}
+
+/* Escala tipográfica: nada por debajo de 10px y saltos regulares. */
+html[data-eade-theme] .wrap.wrap :is(.bio-discover-links a,.bio-portrait-rights,.bio-portrait-rights a,.bio-collapsible-toggle span,.bio-portrait-caption span,.bio-history-position,.bio-discover-group>span,.box .role,.bio-panel small){font-size:var(--fs-2xs)}
+html[data-eade-theme] .wrap.wrap :is(.bio-panel dt,.bio-panel dd,.bio-sobrenombre,.bio-full-profile-link,.panel-title,.toolbar-label,.panel-count){font-size:var(--fs-xs)}
+html[data-eade-theme] .wrap.wrap .bio-texto{font-size:var(--fs-md);line-height:1.6}
+html[data-eade-theme] .wrap.wrap .ui-segments>button{font-size:var(--fs-xs)}
+html[data-eade-theme] .wrap.wrap .bio-tabs .ui-segments>button{font-size:var(--fs-2xs)}
+
+/* V5.20 · Cabecera del Atlas fija, año dentro del deslizador, transición entre
+   escenas, paneles sin marcos y radios coherentes. `.wrap.wrap` iguala la
+   especificidad del tema oscuro. */
+
+/* Radios: tres medidas para todo el Atlas. */
+html[data-eade-theme] .wrap.wrap{--r-sm:6px;--r-md:10px;--r-pill:999px}
+
+/* 1 · Cabecera fija: vistas y paneles · escena en el centro · acciones. */
+html[data-eade-theme] .wrap.wrap .atlas-toolbar{position:sticky;top:var(--atlas-header-offset,0px);z-index:40;display:grid;grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);align-items:center;gap:12px;padding:8px 0;background:color-mix(in srgb,var(--eade-paper) 90%,transparent);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid var(--eade-border)}
+html[data-eade-theme] .wrap.wrap .atlas-toolbar .atlas-scene-switch{grid-column:2;grid-row:1;padding:0;margin:0}
+html[data-eade-theme] .wrap.wrap .atlas-toolbar .workspace-topbar-secondary{border:0;background:transparent;padding:0;min-height:0}
+@media(min-width:701px){
+  html[data-eade-theme] .wrap.wrap .atlas-toolbar .workspace-topbar-secondary{display:contents!important}
+  html[data-eade-theme] .wrap.wrap .atlas-toolbar .workspace-toolbar-view{grid-column:1;grid-row:1;justify-self:start}
+  html[data-eade-theme] .wrap.wrap .atlas-toolbar .workspace-toolbar-actions{grid-column:3;grid-row:1;justify-self:end}
+}
+html[data-eade-theme] .wrap.wrap .atlas-toolbar.is-europa :is(.workspace-toolbar-view,.workspace-toolbar-actions){visibility:hidden}
+@media(max-width:700px){
+  html[data-eade-theme] .wrap.wrap .atlas-toolbar{grid-template-columns:1fr;padding:8px 12px;gap:8px}
+  html[data-eade-theme] .wrap.wrap .atlas-toolbar .atlas-scene-switch{grid-column:1;justify-content:center}
+  html[data-eade-theme] .wrap.wrap .atlas-toolbar.is-europa .atlas-tools-toggle{display:none}
+}
+
+/* 2 · Búsqueda y año debajo de la cabecera, en una sola franja. */
+html[data-eade-theme] .wrap.wrap .workspace-topbar{margin-top:14px}
+html[data-eade-theme] .wrap.wrap .toolbar-search-box>svg{flex:none;width:14px;height:14px}
+html[data-eade-theme] .wrap.wrap .atlas-search-results{padding:12px 14px;border-radius:var(--r-md)}
+html[data-eade-theme] .wrap.wrap .atlas-search-results :is(a,button){box-sizing:border-box;padding:8px 12px;border-radius:var(--r-sm)}
+html[data-eade-theme] .wrap.wrap .atlas-search-results small{flex:none;padding-left:12px}
+
+/* 3 · «Año global» a la izquierda de la barra y el año dentro del tirador. */
+html[data-eade-theme] .wrap.wrap .workspace-toolbar-year{display:grid!important;grid-template-columns:auto minmax(0,1fr);align-items:center;column-gap:16px}
+html[data-eade-theme] .wrap.wrap .workspace-toolbar-year .global-year-heading-row{grid-column:1;display:grid;gap:3px;justify-items:start;margin:0}
+html[data-eade-theme] .wrap.wrap .workspace-toolbar-year .global-year-header-summary{margin:0;font-size:var(--fs-2xs);color:var(--eade-muted)}
+html[data-eade-theme] .wrap.wrap .workspace-toolbar-year .global-year-control-inline{grid-column:2;grid-template-columns:minmax(220px,1fr) auto auto;grid-template-rows:auto}
+html[data-eade-theme] .wrap.wrap .global-year-slider{--thumb-w:52px;--thumb-h:24px;position:relative;grid-column:1;grid-row:1;min-width:160px;height:var(--thumb-h);display:flex;align-items:center}
+html[data-eade-theme] .wrap.wrap .global-year-slider .global-year-range{-webkit-appearance:none;appearance:none;width:100%;height:var(--thumb-h);margin:0;background:transparent;opacity:1;cursor:pointer}
+html[data-eade-theme] .wrap.wrap .global-year-slider .global-year-range::-webkit-slider-runnable-track{height:4px;border-radius:var(--r-pill);background:linear-gradient(90deg,var(--eade-wine-fill) calc(var(--p) * 100%),var(--eade-border) 0)}
+html[data-eade-theme] .wrap.wrap .global-year-slider .global-year-range::-moz-range-track{height:4px;border-radius:var(--r-pill);background:var(--eade-border)}
+html[data-eade-theme] .wrap.wrap .global-year-slider .global-year-range::-moz-range-progress{height:4px;border-radius:var(--r-pill);background:var(--eade-wine-fill)}
+html[data-eade-theme] .wrap.wrap .global-year-slider .global-year-range::-webkit-slider-thumb{-webkit-appearance:none;width:var(--thumb-w);height:var(--thumb-h);margin-top:calc((4px - var(--thumb-h)) / 2);border:0;border-radius:var(--r-pill);background:var(--eade-wine-fill);box-shadow:0 2px 6px #0000002e}
+html[data-eade-theme] .wrap.wrap .global-year-slider .global-year-range::-moz-range-thumb{width:var(--thumb-w);height:var(--thumb-h);border:0;border-radius:var(--r-pill);background:var(--eade-wine-fill);box-shadow:0 2px 6px #0000002e}
+html[data-eade-theme] .wrap.wrap .global-year-slider .global-year-range:focus-visible{outline:none}
+html[data-eade-theme] .wrap.wrap .global-year-slider .global-year-range:focus-visible::-webkit-slider-thumb{outline:2px solid var(--eade-gold);outline-offset:2px}
+html[data-eade-theme] .wrap.wrap .global-year-thumb{position:absolute;top:0;left:calc(var(--p) * (100% - var(--thumb-w)));width:var(--thumb-w);height:var(--thumb-h);display:grid;place-items:center;color:#fff8ef;font:650 var(--fs-sm)/1 var(--eade-sans);font-variant-numeric:tabular-nums;pointer-events:none}
+html[data-eade-theme] .wrap.wrap .global-year-slider.is-idle .global-year-range::-webkit-slider-thumb{background:var(--eade-paper-bright);box-shadow:inset 0 0 0 1px var(--eade-border-strong)}
+html[data-eade-theme] .wrap.wrap .global-year-slider.is-idle .global-year-range::-moz-range-thumb{background:var(--eade-paper-bright);box-shadow:inset 0 0 0 1px var(--eade-border-strong)}
+html[data-eade-theme] .wrap.wrap .global-year-slider.is-idle .global-year-range::-webkit-slider-runnable-track{background:var(--eade-border)}
+html[data-eade-theme] .wrap.wrap .global-year-slider.is-idle .global-year-thumb{color:var(--eade-muted);font-size:var(--fs-2xs)}
+@media(max-width:700px){html[data-eade-theme] .wrap.wrap .workspace-toolbar-year{grid-template-columns:1fr;row-gap:8px}html[data-eade-theme] .wrap.wrap .workspace-toolbar-year .global-year-control-inline{grid-column:1}}
+
+/* 4 · Atlas y Europa: dos paneles contiguos que se deslizan. */
+html[data-eade-theme] .wrap.wrap .atlas-scenes{overflow-x:clip}
+html[data-eade-theme] .wrap.wrap .atlas-scenes-track{display:grid;grid-template-columns:100% 100%;align-items:start;transform:translateX(0);transition:transform .62s cubic-bezier(.65,0,.35,1)}
+html[data-eade-theme] .wrap.wrap .atlas-scenes.is-europa .atlas-scenes-track{transform:translateX(-100%)}
+html[data-eade-theme] .wrap.wrap .atlas-scenes-track>.atlas-traditional{grid-column:1;grid-row:1;min-width:0}
+html[data-eade-theme] .wrap.wrap .atlas-scenes-track>.atlas-europe-pane{grid-column:2;grid-row:1;min-width:0}
+html[data-eade-theme] .wrap.wrap .atlas-scenes.is-sliding .atlas-scenes-track>*{max-height:100vh;overflow:hidden}
+@media(prefers-reduced-motion:reduce){html[data-eade-theme] .wrap.wrap .atlas-scenes-track{transition:none}}
+html[data-eade-motion="reduce"] .wrap.wrap .atlas-scenes-track{transition:none}
+
+/* 5 · Paneles sin marcos: la separación la dan el espacio y una línea fina. */
+html[data-eade-theme] .wrap.wrap .workspace-grid{--workspace-resizer-width:10px}
+html[data-eade-theme] .wrap.wrap :is(.workspace-sidebar,.workspace-inspector,.workspace-main){border-color:transparent;box-shadow:none;background:transparent}
+html[data-eade-theme] .wrap.wrap :is(.workspace-tree-stage,.workspace-map-stage){border-radius:var(--r-md)}
+html[data-eade-theme] .wrap.wrap :is(.workspace-sidebar,.workspace-inspector)>.panel{border-radius:var(--r-md)}
+
+/* 6 · La línea temporal ocupa el mismo ancho que la rejilla de arriba. */
+html[data-eade-theme] .wrap.wrap .atlas-traditional>.atlas-timeline{margin:16px 0 0;border-radius:var(--r-md)}
+html[data-eade-theme] .wrap.wrap .atlas-traditional{padding:0 0 24px;box-sizing:border-box}
+html[data-eade-theme] .wrap.wrap .atlas-traditional>.workspace-grid{margin-inline:0}
+
+/* 7 · Radios coherentes en las piezas más visibles. */
+html[data-eade-theme] .wrap.wrap :is(.search-box,.global-year-number,.global-year-reset,.history-playback-btn,.nav-btn:not(.ui-tip),.box,.bio-portrait-frame,.bio-family-actions button,.mapa-color-legend){border-radius:var(--r-sm)}
+html[data-eade-theme] .wrap.wrap :is(.atlas-toolbar-menu-panel,.favorites-menu,.compare-mode-menu,.atlas-timeline,.minimap,.mapa-wrapper,.tree-scroll,.panel,.europe-person-grid>article){border-radius:var(--r-md)}
+
+/* Sin divisor árbol/mapa: dos filas iguales separadas por espacio. */
+html[data-eade-theme] .wrap.wrap .workspace-main-ambos{grid-template-rows:minmax(0,1fr) minmax(0,1fr);row-gap:14px}
+
+/* Sin marcos: árbol, mapa, biografía y línea temporal se separan por fondo y espacio. */
+html[data-eade-theme] .wrap.wrap :is(.tree-scroll,.mapa-wrapper){border-color:transparent;box-shadow:none}
+html[data-eade-theme] .wrap.wrap .tree-scroll{background:var(--eade-paper-soft)}
+html[data-eade-theme] .wrap.wrap .workspace-bio-panel{border-color:transparent;border-left-color:var(--eade-border);border-radius:0;background:transparent;box-shadow:none}
+html[data-eade-theme] .wrap.wrap .bio-panel .evidence-panel{border-color:transparent;background:var(--eade-paper-soft);border-radius:var(--r-md)}
+html[data-eade-theme] .wrap.wrap .atlas-traditional>.atlas-timeline{border-color:transparent;background:var(--eade-paper-soft)}
+html[data-eade-theme] .wrap.wrap .workspace-sidebar .panel{border-color:transparent;border-right-color:var(--eade-border);border-radius:0;background:transparent;box-shadow:none}
+
+/* V5.21 · Selectores de píldora idénticos en todo el Atlas (escena, vista,
+   biografía y línea temporal) y herramienta Conectar legible en ambos temas. */
+
+html[data-eade-theme] .wrap.wrap .ui-segments{padding:3px;gap:0;border:1px solid var(--eade-border-strong);border-radius:999px;background:var(--eade-paper-soft)}
+html[data-eade-theme] .wrap.wrap .ui-segments>button{padding:7px 14px;border-radius:999px;color:var(--eade-muted);font:600 var(--fs-xs)/1.2 var(--eade-sans);background:transparent}
+html[data-eade-theme] .wrap.wrap .ui-segments>button:is(.is-active,[aria-current="location"],[aria-selected="true"]){color:var(--eade-wine);background:transparent}
+html[data-eade-theme] .wrap.wrap .ui-segments-indicator{top:3px;bottom:3px;border-radius:999px;background:var(--eade-paper-bright);box-shadow:0 1px 4px #0000001f;opacity:1;transition:left .34s cubic-bezier(.22,1,.36,1),width .34s cubic-bezier(.22,1,.36,1)}
+html[data-eade-theme] .wrap.wrap .ui-segments:not(:has(.ui-segments-indicator))>button.is-active{background:var(--eade-paper-bright)}
+html[data-eade-theme] .wrap.wrap .bio-tabs .ui-segments{display:flex;width:100%}
+html[data-eade-theme] .wrap.wrap .bio-tabs .ui-segments>button{flex:1;padding:7px 6px;font-size:var(--fs-xs)}
+
+/* Conectar personas: superficie del tema, no un recuadro claro fijo. */
+html[data-eade-theme] .wrap.wrap .connection-controls{background:var(--eade-paper-soft);color:var(--eade-ink);border:0;border-radius:var(--r-md,10px)}
+html[data-eade-theme] .wrap.wrap .connection-controls :is(.connection-heading span,.connection-heading label,.connection-search label,.connection-status,.connection-note){color:var(--eade-muted)}
+html[data-eade-theme] .wrap.wrap .connection-controls .connection-heading strong{color:var(--eade-ink)}
+html[data-eade-theme] .wrap.wrap .connection-controls :is(input,select){background:var(--eade-paper-bright);color:var(--eade-ink);border:1px solid var(--eade-border);border-radius:var(--r-sm,6px)}
+html[data-eade-theme] .wrap.wrap .connection-controls .connection-route{background:var(--eade-paper-bright)}
+html[data-eade-theme] .wrap.wrap .connection-controls .connection-chip{background:var(--eade-paper-bright);border-color:var(--eade-border);color:var(--eade-ink)}
+html[data-eade-theme] .wrap.wrap .connection-controls :is(a,.clear-btn){color:var(--eade-wine)}
+
+/* Filtros agrupados por región, iguales en Territorios y Dinastías. */
+html[data-eade-theme] .wrap.wrap .atlas-filter-region+.atlas-filter-region{margin-top:12px}
+html[data-eade-theme] .wrap.wrap .atlas-filter-region>.atlas-filter-heading{display:flex;align-items:baseline;justify-content:space-between;margin:0 0 6px;color:var(--eade-muted);font:700 var(--fs-2xs)/1.2 var(--eade-sans);letter-spacing:.06em;text-transform:uppercase}
+html[data-eade-theme] .wrap.wrap .atlas-filter-region>.atlas-filter-heading small{font-weight:600;letter-spacing:0;color:var(--eade-muted-soft)}
+html[data-eade-theme] .wrap.wrap .connection-controls .connection-chip button{color:var(--eade-ink)}
+html[data-eade-theme] .wrap.wrap .connection-controls .connection-chip button[aria-label]{color:var(--eade-muted)}
+html[data-eade-theme] .wrap.wrap .connection-controls .connection-search :is(li button,li){color:var(--eade-ink)}

@@ -1,3 +1,5 @@
+/* Búsqueda, controles y ficha del Atlas (V3.9), controles personales y vista
+   de lista (V4.0). Se carga después de app.css. */
 /* V3.9: one search, two levels of Atlas controls, and a readable record sheet. */
 .atlas-visually-hidden { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
 .workspace-toolbar-search { position: relative; z-index: 40; }
@@ -59,7 +61,6 @@ html[data-eade-theme="dark"] .wrap .desc-toggle { background: var(--eade-paper-b
 @media (max-width: 700px) {
   .wrap .workspace-topbar :is(button, summary, input) { min-height: 44px; }
   .atlas-search-results { width: 100%; max-height: 55vh; }
-  .workspace-grid > .workspace-resize-handle-right { display: none !important; }
   .workspace-grid > .workspace-inspector:not(.has-person) { display: none !important; }
   .workspace-grid > .workspace-inspector.has-person { position: fixed !important; top: auto !important; left: 8px; right: 8px; bottom: 8px; z-index: 75; width: auto; max-height: min(68vh, 650px); border: 1px solid var(--eade-border); border-radius: var(--r-md, 10px); background: var(--eade-paper-soft); box-shadow: 0 8px 35px rgba(0,0,0,.35); }
   .bio-mobile-toggle { display: flex; align-items: center; justify-content: space-between; width: 100%; min-height: 44px; padding: 9px 14px; border: 0; border-radius: var(--r-md, 10px); background: var(--eade-paper-soft); color: var(--eade-ink); text-align: left; font: 600 var(--fs-md, 13px) var(--eade-sans); }
@@ -82,3 +83,47 @@ html[data-eade-theme="dark"] .wrap .desc-toggle { background: var(--eade-paper-b
 .bio-office-sequence-links { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: .5rem; }
 .bio-office-sequence-links button { border: 1px solid currentColor; border-radius: .35rem; padding: .3rem .5rem; background: transparent; color: inherit; cursor: pointer; }
 .bio-office-sequence-links button:hover, .bio-office-sequence-links button:focus-visible { text-decoration: underline; }
+
+/* V4.0: personal controls, compact family actions and a full-height list view. */
+.workspace-tree-stage.showing-list .tree-outer { display: none; }
+.workspace-tree-stage.showing-list .tree-list-alternative { display: flex; flex-direction: column; flex: 1 1 auto; min-height: 0; overflow: hidden; }
+.workspace-tree-stage.showing-list .tree-list-content { display: flex; flex-direction: column; min-height: 0; flex: 1 1 auto; }
+.workspace-tree-stage.showing-list .tree-list-content ul { flex: 1 1 auto; min-height: 0; max-height: none; align-content: start; }
+.tree-list-alternative h2 { padding-right: 225px; }
+.tree-list-toggle[aria-pressed="true"] { border-color: var(--eade-wine); color: var(--eade-wine); }
+
+.bio-family-actions { gap: 9px; margin: 11px 0 14px; padding: 12px; border-radius: var(--r-sm, 6px); }
+.bio-family-actions > span { font: 700 var(--fs-2xs, 10px)/1.4 var(--eade-sans); letter-spacing: .045em; }
+.bio-family-actions > div { display: grid; grid-template-columns: repeat(auto-fit, minmax(125px,1fr)); gap: 7px; }
+.bio-family-actions > div button { display: flex; align-items: center; justify-content: space-between; gap: 5px; min-height: 36px; padding: 6px 9px; font: 600 var(--fs-xs, 11px) var(--eade-sans); }
+.bio-family-actions > div button small { padding: 2px 4px; border-radius: var(--r-sm, 6px); background: var(--eade-paper-soft); color: var(--eade-wine); font: 700 var(--fs-2xs, 10px) var(--eade-sans); }
+.bio-family-actions .bio-focus-link { padding: 3px 0; min-height: 28px; justify-self: start; }
+
+.workspace-filter-clear {
+  display: block;
+  width: calc(100% - 24px);
+  min-height: 38px;
+  margin: 9px 12px 4px;
+  padding: 7px 10px;
+  border: 1px solid var(--eade-wine);
+  border-radius: var(--r-sm, 6px);
+  background: var(--eade-wine-fill);
+  color: var(--eade-paper-bright);
+  font: 700 var(--fs-sm, 12px) var(--eade-sans);
+  text-align: center;
+  cursor: pointer;
+}
+.workspace-filter-clear:is(:hover,:focus-visible) {
+  outline: 2px solid var(--eade-gold);
+  outline-offset: 2px;
+}
+html[data-eade-theme="dark"] .workspace-filter-clear {
+  background: #a94b48;
+  border-color: #c76861;
+  color: #fffaf1;
+}
+
+@media(max-width:700px) {
+  .tree-list-alternative h2 { padding-right: 12px; padding-top: 65px; }
+  .workspace-tree-stage.showing-list .tree-list-content ul { grid-template-columns: 1fr; }
+}

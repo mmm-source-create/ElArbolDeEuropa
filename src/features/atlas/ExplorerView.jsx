@@ -44,15 +44,11 @@ import TreeAccessibleList from "./TreeAccessibleList.jsx";
 import EvidencePanel from '../../components/EvidencePanel.jsx';
 import CoverageDialog from '../../components/CoverageDialog.jsx';
 import {readPreferences} from '../settings/preferences.js';
-import "./v39.css";
-import "./v40.css";
+import "./atlas-controls.css";
 import SegmentedControl from "../../ui/SegmentedControl.jsx";
 import ActionDial from "../../ui/ActionDial.jsx";
 import "./atlas-interactions.css";
-import "../../styles/v518.css";
-import "../../styles/v519.css";
-import "../../styles/v520.css";
-import "../../styles/v521.css";
+import "./atlas-refinements.css";
 
 const VIEW_OPTIONS = [{value:'arbol',label:'Árbol'},{value:'mapa',label:'Mapa'},{value:'ambos',label:'Árbol y mapa'}];
 const BIO_OPTIONS = ['resumen','familia','coronas','historias','fuentes'].map((value,index)=>({value,label:['Resumen','Familia','Coronas','Historias','Fuentes'][index],controls:`bio-section-${value}`}));
