@@ -65,9 +65,11 @@ test('una persona encontrada amplía el árbol en un clic y cada ampliación se 
  await act(async()=>{Object.getOwnPropertyDescriptor(window.HTMLInputElement.prototype,'value').set.call(input,'Carlos V');input.dispatchEvent(new window.Event('input',{bubbles:true}));});
  const result=[...document.querySelectorAll('.atlas-search-results button')].find(item=>item.querySelector('span')?.textContent==='Carlos V');
  await click(result);
- assert.match(document.querySelector('.family-add-button').textContent,/Explorar familia \(\+\d+\)/);
  assert.equal(document.querySelector('.tree-scope-label').textContent.trim(),'0 personas');
- await click(document.querySelector('.family-add-button'));
+ // The close family is expanded from the biography; the toolbar no longer repeats it.
+ await click([...document.querySelectorAll('.bio-tabs button')].find(item=>item.textContent==='Familia'));
+ assert.match(document.querySelector('.bio-family-actions .family-add-button').textContent,/Familia cercana\s*\+\d+/);
+ await click(document.querySelector('.bio-family-actions .family-add-button'));
  const closeFamilyCount=Number(document.querySelector('.tree-scope-label').textContent.match(/\d+/)?.[0]);
  assert.ok(closeFamilyCount>1);
  assert.match(document.querySelector('.family-expansion-feedback').textContent,/Se añadieron/);

@@ -1,0 +1,32 @@
+/* V5.18 · Atlas más sereno: menos cajas dentro de cajas, controles que solo
+   muestran su borde cuando se usan y selectores de sección como una sola pieza.
+   Se carga tras los temas; `.wrap.wrap` iguala la especificidad de los
+   selectores :is() del tema oscuro para aplicarse igual en claro y oscuro. */
+
+/* Selector de escena centrado, sin la etiqueta redundante. */
+html[data-eade-theme] .wrap.wrap .atlas-scene-switch{justify-content:center;padding:18px 24px 6px}
+
+/* Barra superior: una sola superficie con divisiones finas, no tres tarjetas. */
+html[data-eade-theme] .wrap.wrap :is(.workspace-toolbar-search,.workspace-toolbar-year){border-color:transparent;background:transparent}
+html[data-eade-theme] .wrap.wrap .workspace-topbar-secondary{border-color:transparent;background:transparent;border-block:1px solid var(--eade-border);border-radius:0}
+
+/* Botones fantasma: sin borde ni relleno en reposo, una capa suave al pasar. */
+html[data-eade-theme] .wrap.wrap :is(.nav-btn,.atlas-toolbar-menu>summary){border-color:transparent;background:transparent;box-shadow:none;border-radius:999px;transition:background .2s,color .2s,border-color .2s}
+html[data-eade-theme] .wrap.wrap :is(.nav-btn,.atlas-toolbar-menu>summary):is(:hover,:focus-visible){background:var(--eade-paper-bright);border-color:var(--eade-border)}
+html[data-eade-theme] .wrap.wrap :is(.nav-btn.active,.atlas-toolbar-menu[open]>summary){background:var(--eade-paper-bright);border-color:var(--eade-border-strong);color:var(--eade-wine)}
+
+/* Biografía: el panel ya enmarca la ficha; dentro, solo jerarquía tipográfica. */
+html[data-eade-theme] .wrap.wrap .bio-panel{border-color:transparent;background:transparent;box-shadow:none}
+html[data-eade-theme] .wrap.wrap .bio-portrait-card{border-color:transparent;background:transparent;padding-inline:0}
+html[data-eade-theme] .wrap.wrap .bio-family-actions{border-width:1px 0 0;border-radius:0;background:transparent;padding-inline:0}
+html[data-eade-theme] .wrap.wrap .bio-section-heading{letter-spacing:.02em}
+
+/* Índice de la ficha: un selector de sección con un reborde común. */
+html[data-eade-theme] .wrap.wrap .bio-tabs{padding:10px 12px;border-bottom:1px solid var(--eade-border);background:transparent}
+html[data-eade-theme] .wrap.wrap .bio-tabs .ui-segments{border:1px solid var(--eade-border-strong);background:var(--eade-paper-soft);padding:3px}
+html[data-eade-theme] .wrap.wrap .bio-tabs .ui-segments>button{font-size:10.5px;padding:7px 6px}
+html[data-eade-theme] .wrap.wrap .bio-tabs .ui-segments>button[aria-current="location"]{color:var(--eade-wine)}
+html[data-eade-theme] .wrap.wrap .bio-tabs .ui-segments-indicator{top:3px;bottom:3px;background:var(--eade-paper-bright);box-shadow:0 1px 4px #0000001f}
+
+/* Cabecera de la ficha: la estrella respira junto al cierre. */
+html[data-eade-theme] .wrap.wrap .bio-head-actions{gap:2px}

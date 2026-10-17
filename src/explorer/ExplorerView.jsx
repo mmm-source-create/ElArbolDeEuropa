@@ -12,7 +12,7 @@ import TreeExport from "../connections/TreeExport.jsx";
 import DocumentationNotes from "../components/DocumentationNotes.jsx";
 import { responsiveImage } from "../utils/responsiveImage.js";
 import React from "react";
-import { Search, ChevronDown, ChevronRight, ArrowLeft, ArrowRight, ZoomIn, ZoomOut, RotateCcw, GitCompare, UserRoundPlus, Share2, Play, Pause, SkipBack, SkipForward, X, Info, Heart, BookOpen, BarChart3, Scale, Flag, Mail, ExternalLink, Crosshair, Maximize2, CircleHelp, SlidersHorizontal, List } from "lucide-react";
+import { Search, ChevronDown, ChevronRight, ArrowLeft, ArrowRight, ZoomIn, ZoomOut, RotateCcw, GitCompare, Share2, Play, Pause, SkipBack, SkipForward, X, Info, Heart, BookOpen, BarChart3, Scale, Flag, Mail, ExternalLink, Crosshair, Maximize2, CircleHelp, SlidersHorizontal, List } from "lucide-react";
 import { MapaEuropa } from "../MapaEuropa";
 import { TERRITORIOS_SUB, TERRITORIOS_DESTACADOS, REINO_COLOR, REINO_COLOR_DEFAULT, listaReinados, territoriosGobernadosEnAño, reinadoEsEfectivo, reinadosActivos, idsDeGobiernoEnAño, añoReferenciaTerritorial, esGobernante } from "../Territorios";
 import { TERRITORIOS } from "../data/territorios.js";
@@ -22,6 +22,7 @@ import { EVENTOS_HISTORICOS, HISTORIAS } from "../historiaData.jsx";
 import { t } from "../i18n.jsx";
 import BioRelations from "../components/BioRelations.jsx";
 import BioDiscovery from "../components/BioDiscovery.jsx";
+import FavoriteStar from "../ui/FavoriteStar.jsx";
 import SiteHeader from "../components/SiteHeader.jsx";
 import SiteFooter from "../components/SiteFooter.jsx";
 import { etiquetaClaseGobierno, resumenCortoPersona } from "../utils/personPresentation.js";
@@ -40,6 +41,7 @@ import "./v40.css";
 import SegmentedControl from "../ui/SegmentedControl.jsx";
 import ActionDial from "../ui/ActionDial.jsx";
 import "./atlas-interactions.css";
+import "../styles/v518.css";
 
 const VIEW_OPTIONS = [{value:'arbol',label:'Árbol'},{value:'mapa',label:'Mapa'},{value:'ambos',label:'Árbol y mapa'}];
 const BIO_OPTIONS = ['resumen','familia','coronas','historias','fuentes'].map((value,index)=>({value,label:['Resumen','Familia','Coronas','Historias','Fuentes'][index],controls:`bio-section-${value}`}));
@@ -257,7 +259,7 @@ export default function ExplorerView({ vm, loading = false, loadError = false, o
       {loadError && <AtlasLoadError onRetry={onRetry}/>}
       {!modoTrabajo && <SiteHeader variant="atlas" locale={locale} onLanguageChange={cambiarIdioma} />}
     <div className={`wrap atlas-scene-${atlasScene}${modoTrabajo ? " atlas-work-mode" : ""}`} inert={!ready}>
-      <div className="atlas-scene-switch"><span>Explorar</span><SegmentedControl options={SCENES} value={atlasScene} onChange={changeAtlasScene} label="Modo de exploración"/></div>
+      <div className="atlas-scene-switch"><SegmentedControl options={SCENES} value={atlasScene} onChange={changeAtlasScene} label="Modo de exploración"/></div>
       <div className={`workspace-topbar${modoTrabajo ? " is-work-mode" : ""}`}>
         <section className="workspace-topbar-section workspace-toolbar-search" onBlur={e=>{if(!e.currentTarget.contains(e.relatedTarget))setSearchOpen(false);}}>
           <div className="toolbar-label sk" style={{"--sk-index":0}}>Búsqueda</div>
@@ -468,12 +470,9 @@ export default function ExplorerView({ vm, loading = false, loadError = false, o
                   </div>
                 )}
               </div>
-              <button type="button" className="nav-btn nav-btn-wide family-add-button" aria-disabled={!canAddFamily} onClick={() => { if (canAddFamily) vm.growth.onExpand('family'); }} title={historiaActiva ? 'La selección del recorrido se conserva completa' : !seleccion ? 'Elige primero una persona' : vm.growth.ids === null ? 'Ya se muestra la base completa' : vm.growth.additions.family.length ? `Añadir familiares de ${seleccion.nombre} al árbol` : 'La familia cercana ya está en el árbol'}>
-                  <UserRoundPlus size={12} /> {vm.growth.ids?.length && !canAddFamily ? 'Familia visible' : 'Explorar familia'}{seleccion && vm.growth.additions.family.length ? ` (+${vm.growth.additions.family.length})` : ''}
-              </button>
               <div className="favorites-control" ref={favoritosMenuRef}>
                 <button type="button" className={`nav-btn nav-btn-wide${favoritosOpen || soloFavoritos ? " active" : ""}`} onClick={() => { closeOtherToolbarMenus(); setCompareMenuOpen(false); setFavoritosOpen((actual) => !actual); }} aria-expanded={favoritosOpen}>
-                  <span className="favorite-star-symbol" aria-hidden="true">★</span> Favoritos {favoritos.length ? `(${favoritos.length})` : ""}
+                  <span className="favorite-star-symbol" aria-hidden="true">★</span> Favoritos {favoritos.length ? <span key={favoritos.length} className="ui-count-bump">({favoritos.length})</span> : ""}
                 </button>
                 {favoritosOpen && (
                   <div className="favorites-menu" role="group">
@@ -969,13 +968,7 @@ export default function ExplorerView({ vm, loading = false, loadError = false, o
                       </span>
                     </div>
                     <div className="bio-head-actions">
-                      <button
-                        type="button"
-                        className={`bio-favorite-btn${favoritosSet.has(personaBio.id) ? " active" : ""}`}
-                        onClick={() => alternarFavorito(personaBio.id)}
-                        title={favoritosSet.has(personaBio.id) ? "Quitar de favoritos" : "Añadir a favoritos"}
-                        aria-label={favoritosSet.has(personaBio.id) ? `Quitar ${personaBio.nombre} de favoritos` : `Añadir ${personaBio.nombre} a favoritos`}
-                      >★</button>
+                      <FavoriteStar className="bio-favorite-btn" active={favoritosSet.has(personaBio.id)} onToggle={() => alternarFavorito(personaBio.id)} name={personaBio.nombre}/>
                       {!hovered && seleccion && (
                         <button type="button" className="close" aria-label="Cerrar biografía" onClick={cerrarSeleccion}><X size={14} /></button>
                       )}
@@ -1046,10 +1039,11 @@ export default function ExplorerView({ vm, loading = false, loadError = false, o
                     <h4 id="bio-heading-familia" className="bio-section-heading">Familia</h4>
                   {seleccion?.id === personaBio.id && !historiaActiva && (
                     <div className="bio-family-actions" aria-label="Ampliar la familia en el árbol">
-                      {vm.growth.ids !== null && (vm.growth.additions.ancestors.length > 0 || vm.growth.additions.descendants.length > 0) && (
+                      {vm.growth.ids !== null && (vm.growth.additions.family.length > 0 || vm.growth.additions.ancestors.length > 0 || vm.growth.additions.descendants.length > 0) && (
                         <>
                           <span>Ampliar ramas de {personaBio.nombre}</span>
                           <div>
+                            {vm.growth.additions.family.length > 0 && <button type="button" className="family-add-button" onClick={() => vm.growth.onExpand('family')}>Familia cercana <small>+{vm.growth.additions.family.length}</small></button>}
                             {vm.growth.additions.ancestors.length > 0 && <button type="button" onClick={() => vm.growth.onExpand('ancestors')}>Antepasados <small>+{vm.growth.additions.ancestors.length}</small></button>}
                             {vm.growth.additions.descendants.length > 0 && <button type="button" onClick={() => vm.growth.onExpand('descendants')}>Descendientes <small>+{vm.growth.additions.descendants.length}</small></button>}
                           </div>
