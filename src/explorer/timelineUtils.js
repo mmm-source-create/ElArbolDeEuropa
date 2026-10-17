@@ -3,7 +3,7 @@ import { listaReinados } from "../Territorios.jsx";
 import { documentaryLife } from "../utils/documentaryDates.js";
 
 export const siglo = (y) => Number.isFinite(y) ? Math.ceil(y / 100) : null;
-export const nRomano = { 12:"XII",13:"XIII",14:"XIV",15:"XV",16:"XVI",17:"XVII",18:"XVIII",19:"XIX",20:"XX" };
+export const nRomano = { 10:"X",11:"XI",12:"XII",13:"XIII",14:"XIV",15:"XV",16:"XVI",17:"XVII",18:"XVIII",19:"XIX",20:"XX" };
 
 export function anioInicioPersona(persona) {
   const candidatos = [

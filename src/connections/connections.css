@@ -32,3 +32,14 @@
 
 .tree-export-dialog{width:min(760px,calc(100vw - 32px));max-height:90vh;overflow:auto}.export-preview{margin:16px 0;padding:12px;border:1px solid #d5c7aa;border-radius:var(--r-sm, 6px);background:#fffdf7}.export-preview img{width:100%;height:auto;max-height:320px;object-fit:contain}.export-preview figcaption{font-size:var(--fs-sm, 12px);text-align:center;margin-top:8px}.export-print-options{display:flex;flex-wrap:wrap;gap:16px;margin:12px 0}.tree-export-dialog textarea{width:100%;min-height:100px;box-sizing:border-box;font:var(--fs-sm, 12px)/1.5 monospace}.tree-export-dialog h3{margin:24px 0 10px}.tree-export-dialog button{cursor:pointer}.tree-export-dialog button:disabled{cursor:default;opacity:.5}
 .tree-export-dialog .tree-export-actions button,.tree-export-dialog>button:not(.tree-export-close){width:auto;height:auto;min-height:38px;padding:9px 14px;font:600 var(--fs-sm, 12px)/1.5 var(--eade-sans, sans-serif);white-space:normal;flex-shrink:0;background:#fffdf7;color:var(--eade-wine);border:1px solid #d5c7aa;border-radius:var(--r-sm, 6px)}.tree-export-dialog .tree-export-actions{gap:10px}.tree-export-dialog button:focus-visible{outline:3px solid #7a2e2e;outline-offset:2px}
+
+/* V5.21 · Recorrido entre dos personas: una frase legible con sus alternativas. */
+.connection-route{display:grid;gap:8px;margin:10px 0 4px;padding:10px 12px;border-radius:var(--r-md,10px);background:var(--eade-paper-soft)}
+.connection-route ol{display:flex;flex-wrap:wrap;align-items:center;gap:6px 4px;margin:0;padding:0;list-style:none}
+.connection-route li{display:inline-flex;align-items:center;gap:4px}
+.connection-route button{padding:4px 9px;border:1px solid var(--eade-border);border-radius:999px;background:var(--eade-paper-bright);color:var(--eade-ink);font:600 var(--fs-xs,11px)/1.2 var(--eade-sans);cursor:pointer}
+.connection-route button:hover{border-color:var(--eade-border-strong);color:var(--eade-wine)}
+.connection-route-edge{color:var(--eade-muted);font:var(--fs-2xs,10px)/1 var(--eade-sans)}
+.connection-route-edge::before{content:"— "}.connection-route-edge::after{content:" →"}
+.connection-route-switch{display:flex;align-items:center;gap:8px;color:var(--eade-muted);font:var(--fs-2xs,10px)/1 var(--eade-sans)}
+.connection-route-switch button{display:grid;place-items:center;width:24px;height:24px;padding:0}

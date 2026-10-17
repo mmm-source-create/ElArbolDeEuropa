@@ -191,6 +191,13 @@ export function allShortestPaths(graph, start, end, tiposPermitidos, maxPaths = 
   return paths;
 }
 
+// Connecting exactly two people reads as a chain; offer the minimal alternatives
+// under the same criterion as the connection tree.
+export function rutasEntre(graph, start, end, criterion = "matrimonio") {
+  const tipos = TIPOS_GRAFO_POR_MODO[criterion === "sangre" ? "sangre" : "matrimonio"];
+  return start && end ? allShortestPaths(graph, start, end, tipos, 6) : [];
+}
+
 export function rutasDeComparacion(graph, start, end, modo) {
   const tipos = TIPOS_GRAFO_POR_MODO[modo] || TIPOS_GRAFO_POR_MODO.corto;
   if (modo === "rutas") return allShortestPaths(graph, start, end, tipos, 6);
