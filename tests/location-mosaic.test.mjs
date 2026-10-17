@@ -36,11 +36,12 @@ test('the mosaic follows dated transfers and marks corrections with sources', ()
 
   assert.ok(layer(at1569, 'Corona de Polonia').ids.includes('Kyiv'));
   assert.ok(!layer(at1569, 'Gran Ducado de Lituania').ids.includes('Kyiv'));
-  assert.ok(layer(at1569, 'Livonia del Commonwealth').ids.length > 0);
-  assert.equal(layer(at1629, 'Livonia del Commonwealth'), undefined);
-  assert.ok(layer(at1629, 'Livonia sueca').ids.length > 0);
+  assert(at1569.byLocation.get('Riga').some(l=>l.entityId==='Ciudad libre de Riga'));
+  assert(at1569.byLocation.get('Daugavpils').some(l=>l.entityId==='Livonia polaca'));
+  assert(at1629.byLocation.get('Riga').some(l=>l.entityId==='Suecia'));
+  assert(at1629.byLocation.get('Daugavpils').some(l=>l.entityId==='Livonia polaca'));
   assert.ok(layer(at1500, 'Islas Feroe bajo la Corona noruega').ids.includes('Torshavn'));
-  assert.match(layer(at1629, 'Livonia sueca').active.source, /^https:\/\//);
+  assert(at1629.byLocation.get('Riga').every(l=>l.scopes.some(s=>s.sources.some(v=>v.url.startsWith('https://')&&v.locator))));
 });
 
 test('out-of-range years produce an empty mosaic instead of projecting a future map', () => {

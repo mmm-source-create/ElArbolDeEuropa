@@ -95,7 +95,9 @@ test('personal scopes exclude another branch while preserving delegated authorit
 });
 
 test('tributary entries are dated relationships and never fabricated personal offices', () => {
-  assert.equal(TRIBUTARY_RELATIONS.length, 8);
+  assert.equal(new Set(TRIBUTARY_RELATIONS.map(r=>r.id)).size,TRIBUTARY_RELATIONS.length);
+  assert(TRIBUTARY_RELATIONS.some(r=>r.id==='crimea-ottoman'));
+  assert(TRIBUTARY_RELATIONS.some(r=>r.id==='granada-castile-jaen'));
   const person = people.get('SULEYMAN1') || PERSONAS.find(person => person.nombre.includes('Solimán') && person.gobiernos?.some(g => g.desde <= 1530 && g.hasta >= 1530));
   assert(person);
   const own = mapAuthoritiesForPerson(person, 1530, data);

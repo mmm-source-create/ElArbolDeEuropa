@@ -149,3 +149,5 @@ Release se preparan en borrador sobre la entrega validada.
 [V5.24](V5.24.md) unifica el selector ES | EN, rehace la portada sin la cinta de dinastías y con entradas más visibles, ordena Europa en este año con píldoras y gobernantes por región, y suma 19 retratos, 12 biografías extensas y 66 resúmenes.
 
 [V5.25](V5.25.md) contrasta fechas, filiaciones, matrimonios y cargos con las fichas de autoridad GND (de 943 a 4.778 afirmaciones con fuente precisa), añade 47 títulos que faltaban, fusiona dos Visconti duplicados, incorpora a Eugenio de Saboya, completa a Juana de Évreux, aclara a Isabel la Católica en Aragón y crea la Corona de San Wenceslao.
+
+[V5.26](V5.26.md) amplía Polonia-Lituania, Rusia y el Báltico entre 1200 y 1800, con 1.801 celdas auditadas, 498 fases, dependencias diferenciadas y 14 protagonistas lituanos con fuentes y ámbitos personales propios.

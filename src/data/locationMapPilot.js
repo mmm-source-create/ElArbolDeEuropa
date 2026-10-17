@@ -1,3 +1,4 @@
+import {easternEuropeJurisdictions} from './easternEuropeRoutes.js';
 import {earlyMedievalJurisdictions} from './earlyMedievalRoutes.js';
 import {polandLithuaniaJurisdictions} from './polandLithuaniaRoutes.js';
 import {franceLowCountriesJurisdictions} from './franceLowCountriesRoutes.js';
@@ -29,7 +30,7 @@ export function reviewedMapLayers(data) {
       if (!corrections.has(correction.territory)) corrections.set(correction.territory, []);
       corrections.get(correction.territory).push(correction);
     }
-    const regional = [data.bosniaHumReview, data.posavinaRagusaReview, data.balkansFullReview, data.iberiaItalyReview, data.franceLowCountriesReview, data.polandLithuaniaMedievalReview, data.polandLithuaniaReview, data.polandLithuaniaFrontierReview, data.earlyMedievalReview].filter(Boolean);
+    const regional = [data.bosniaHumReview, data.posavinaRagusaReview, data.balkansFullReview, data.iberiaItalyReview, data.franceLowCountriesReview, data.polandLithuaniaMedievalReview, data.polandLithuaniaReview, data.polandLithuaniaFrontierReview, data.earlyMedievalReview, data.easternEuropeReview].filter(Boolean);
     layerIndexes.set(data, {entries, byName: new Map(entries.map(entry => [entry.name, entry])), corrections,
       regional: regional.map(review => ({from: review.scope.from, through: review.scope.through,
         ids: new Set(review.precedenceIds || review.scope.ids), names: new Set(review.layerNames)}))});
@@ -60,6 +61,7 @@ export function pilotJurisdictionsFor(territory,year,personId=null){
 }
 function resolveJurisdictions(territory, year, personId = null) {
   if(year<1200)return earlyMedievalJurisdictions(territory,year,personId);
+  if(territory==='Principado de Trakai')return pilotJurisdictionsFor('Lituania',year,personId);
   const scope = authorityMapScope(personId, territory, year);
   if (scope?.jurisdictions) return scope.jurisdictions;
   const chronological=chronologyJurisdictionsFor(territory,year,personId);
@@ -67,7 +69,7 @@ function resolveJurisdictions(territory, year, personId = null) {
   const names=polandLithuaniaJurisdictions(franceLowCountriesJurisdictions(iberiaItalyJurisdictions(balkansFullJurisdictions(posavinaRagusaJurisdictions(bosniaHumJurisdictions(medievalBalkanJurisdictions(referenceGapJurisdictions(successionJurisdictions(frontier,territory,year,personId),territory),territory),territory,year,personId),territory,year,personId),territory,year,personId),territory,year,personId),territory,year,personId),territory,year,personId);
   if(territory==='Austria Interior') for(const province of ['Carintia','Carniola','Ducado de Estiria'])
     names.push(...pilotJurisdictionsFor(province,year,personId));
-  return [...new Set(names)];
+  return easternEuropeJurisdictions([...new Set(names)],territory,year,personId);
 }
 
 function basePilotJurisdictionsFor(territory, year, personId) {
@@ -203,8 +205,9 @@ export function reviewedLayerVersion(data, entry, year) {
 export function reviewedLayerEvidence(entry, year) {
   const extension = temporalExtensionFor(entry, year);
   const selected = extension || entry;
-  const raw = [...(selected?.sources || []), ...(selected?.source ? [selected.source] : []),
-    ...(selected?.active?.source ? [selected.active.source] : [])];
+  // Detailed citations win over legacy URL-only references to the same page.
+  const raw = [...(selected?.active?.source ? [selected.active.source] : []),
+    ...(selected?.source ? [selected.source] : []), ...(selected?.sources || [])];
   const sources = [...new Map(raw.map(source => typeof source === 'string'
     ? {url: source, label: 'Fuente de la capa territorial'} : source)
     .filter(source => source?.url).map(source => [source.url, source])).values()];

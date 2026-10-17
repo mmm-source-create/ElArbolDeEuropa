@@ -175,14 +175,14 @@ test('northern and eastern jurisdictions change at documented dates without swal
   assert.equal(data.territories.find(t => t.name === 'Corona de Polonia').color,
     data.territories.find(t => t.name === 'Prusia Real').color);
 
-  assert(ids('Estonia sueca', 1561).has('Tallinn'));
-  assert(ids('Livonia del Commonwealth', 1569).size > 0);
-  assert(!ids('Livonia del Commonwealth', 1629).size);
-  assert(ids('Livonia sueca', 1629).size > 0);
-  assert(ids('Riga libre', 1570).has('Riga'));
-  assert(ids('Riga bajo la Mancomunidad', 1581).has('Riga'));
-  assert(ids('Riga bajo Suecia', 1621).has('Riga'));
-  assert(!ids('Livonia del Commonwealth', 1581).has('Riga'));
+  const owns=(year,id,identity)=>(atlasPoliticalMosaicAt(data,year).byLocation.get(id)||[]).some(l=>l.entityId===identity);
+  assert(owns(1561,'Tallinn','Suecia'));
+  assert(owns(1569,'Daugavpils','Livonia polaca'));
+  assert(owns(1629,'Daugavpils','Livonia polaca'));
+  assert(owns(1629,'Tartu','Suecia'));
+  assert(owns(1570,'Riga','Ciudad libre de Riga'));
+  assert(owns(1581,'Riga','Livonia polaca'));
+  assert(owns(1621,'Riga','Suecia'));
 
   for (const island of ['Orkney', 'Shetland']) {
     assert(ids('Reino de Noruega', 1468).has(island));
@@ -195,21 +195,21 @@ test('northern and eastern jurisdictions change at documented dates without swal
   assert(ids('Reino de Suecia', 1645).has('Halmstad'));
   assert(ids('Reino de Suecia', 1645).has('Visby'));
   assert(!ids('Reino de Suecia', 1644).has('Halmstad'));
-  assert(ids('Ösel bajo Dinamarca', 1644).has('Kuressaare'));
-  assert(ids('Ösel bajo Suecia', 1645).has('Kuressaare'));
+  assert(owns(1644,'Kuressaare','Dinamarca'));
+  assert(owns(1645,'Kuressaare','Suecia'));
   assert(!ids('Mecklemburgo', 1648).has('Wismar'));
   assert(ids('Señorío sueco de Wismar', 1648).has('Wismar'));
 
-  assert(ids('República de Pskov', 1509).has('Pskov'));
-  assert(!ids('República de Pskov', 1510).size);
-  assert(ids('Moscovia y Zarato de Rusia', 1510).has('Pskov'));
-  assert(ids('Principado de Tver', 1484).has('Tver'));
-  assert(!ids('Principado de Tver', 1485).size);
-  assert(ids('Moscovia y Zarato de Rusia', 1485).has('Tver'));
-  assert(ids('Principado de Riazán', 1520).has('Ryazan'));
-  assert(ids('Moscovia y Zarato de Rusia', 1521).has('Ryazan'));
-  assert(ids('Kanato de Kazán', 1551).has('Kazan'));
-  assert(ids('Moscovia y Zarato de Rusia', 1552).has('Kazan'));
+  assert(owns(1509,'Pskov','República de Pskov'));
+  assert(!owns(1510,'Pskov','República de Pskov'));
+  assert(owns(1510,'Pskov','Rusia'));
+  assert(owns(1484,'Tver','Principado de Tver'));
+  assert(!owns(1485,'Tver','Principado de Tver'));
+  assert(owns(1485,'Tver','Rusia'));
+  assert(owns(1520,'Ryazan','Principado de Riazán'));
+  assert(owns(1521,'Ryazan','Rusia'));
+  assert(owns(1551,'Kazan','Kanato de Kazán'));
+  assert(owns(1552,'Kazan','Rusia'));
   assert(pilotLocationsFor(data, 'Noruega', 1468).includes('Torshavn'));
 });
 

@@ -1,3 +1,4 @@
+import {LITUANIA_V526} from './lituania-v526.js';
 import {ADRIATICO_V214} from "./adriatico-v214.js";
 import { ALPES_V213 } from "./alpes-v213.js";
 import { ESCANDINAVIA_V212 } from "./escandinavia-v212.js";
@@ -23,6 +24,7 @@ import { MINIBIOGRAFIAS_V524 } from './minibiografias-v524.js';
 import { PERSONAS_V525 } from './personas-v525.js';
 
 export const PERSONA_CONTENT = Object.freeze({
+  ...LITUANIA_V526,
   ...MONARCAS_MEDIEVALES,
   ...MONARCAS_MODERNOS,
   ...PAPAS_RELIGION,

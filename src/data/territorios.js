@@ -1,7 +1,9 @@
+import {EASTERN_EUROPE_TERRITORIES} from './easternEuropeTerritories.js';
 import {FRANCE_LOW_COUNTRIES_TERRITORIES} from './franceLowCountriesTerritories.js';
 import {BALKANS_FULL_TERRITORIES} from './balkansFullTerritories.js';
 import {IBERIA_ITALY_TERRITORIES} from './iberiaItalyTerritories.js';
 export const TERRITORIOS = Object.freeze({
+  ...EASTERN_EUROPE_TERRITORIES,
   ...BALKANS_FULL_TERRITORIES,
   ...IBERIA_ITALY_TERRITORIES,
   ...FRANCE_LOW_COUNTRIES_TERRITORIES,
@@ -1139,6 +1141,7 @@ export const TERRITORIOS = Object.freeze({
     "nota": "El emirato nazarí se representa mediante las regiones agregadas de Málaga, Almería y Granada. Málaga pasó a Castilla en 1487, Almería en 1489 y Granada en 1492; cada región del SVG contiene también zonas cuya trayectoria local fue más compleja."
   },
   "Lituania": {
+    "etapas":[{"clase":"reinado","desde":1253,"hasta":1263}],
     "clase": "gran_ducado",
     "naturaleza": "entidad",
     "componentes": []
@@ -1675,7 +1678,7 @@ export const TERRITORIOS = Object.freeze({
   }
 });
 
-export const TITULOS_POR_CLASE = {"califato": ["Califa"], "judicado": ["Juez", "Jueza"], "reinado": ["Rey", "Rey de Romanos", "Alto rey", "Reina"], "imperio": ["Emperatriz", "Emperador"], "ducado": ["Duquesa", "Duque"], "archiducado": ["Archiduque", "Archiduquesa"], "condado": ["Conde", "Conde palatino", "Condesa"], "electorado": ["Elector"], "principado": ["Princesa", "Gran župan", "Príncipe"], "gran_ducado": ["Gran duque", "Gran duquesa"], "gran_principado": ["Gran príncipe"], "zarato": ["Zarina", "Zar"], "margraviato": ["Margrave"], "marquesado": ["Marqués"], "landgraviato": ["Landgrave"], "señorío": ["Señor", "Señora"], "regencia": ["Regente"], "estatuderato": ["Estatúder"], "emirato": ["Emir"], "sultanato": ["Sultán"], "despotado": ["Déspota"], "banato": ["Ban"], "voivodato": ["Voivoda"], "pontificado": ["Papa"], "gobierno": ["Gobernante", "Soberano", "Soberana", "Gobernador", "Gobernadora", "Dogo", "Capitán del pueblo", "Señor y vicario imperial", "Almojarife", "Gran maestre"], "vizcondado": ["Vizconde", "Vizcondesa"]};
+export const TITULOS_POR_CLASE = {"califato": ["Califa"], "judicado": ["Juez", "Jueza"], "reinado": ["Rey", "Rey de Romanos", "Alto rey", "Reina"], "imperio": ["Emperatriz", "Emperador"], "ducado": ["Duquesa", "Duque"], "archiducado": ["Archiduque", "Archiduquesa"], "condado": ["Conde", "Conde palatino", "Condesa"], "electorado": ["Elector"], "principado": ["Princesa", "Gran župan", "Príncipe"], "gran_ducado": ["Gran duque", "Gran duquesa", "Gran duque supremo"], "gran_principado": ["Gran príncipe"], "zarato": ["Zarina", "Zar"], "margraviato": ["Margrave"], "marquesado": ["Marqués"], "landgraviato": ["Landgrave"], "señorío": ["Señor", "Señora"], "regencia": ["Regente"], "estatuderato": ["Estatúder"], "emirato": ["Emir"], "sultanato": ["Sultán"], "despotado": ["Déspota"], "banato": ["Ban"], "voivodato": ["Voivoda"], "pontificado": ["Papa"], "gobierno": ["Gobernante", "Soberano", "Soberana", "Gobernador", "Gobernadora", "Dogo", "Capitán del pueblo", "Señor y vicario imperial", "Almojarife", "Gran maestre"], "vizcondado": ["Vizconde", "Vizcondesa"]};
 export const CONDICIONES = ["efectivo","jure uxoris","corregente","regencia","gobierno delegado","ocupación","pretensión","titular","rival","disputado","rama"];
 export function componentesDe(nombre, vistos = new Set()) {
  if(vistos.has(nombre)) return []; vistos.add(nombre);

@@ -1,3 +1,4 @@
+import {EASTERN_EUROPE_DEPENDENCIES} from './easternEuropeDependencies.js';
 // Dependencies are relationships between existing polities, never fabricated
 // government records of the overlord. Regional geometry keeps its own identity.
 import {gobiernosDe} from './personAccessors.js';
@@ -19,6 +20,7 @@ const sources = {
 };
 
 export const TRIBUTARY_RELATIONS = Object.freeze([
+  ...EASTERN_EUROPE_DEPENDENCIES,
   {id: 'ragusa-ottoman', subject: 'República de Ragusa', overlord: 'Imperio otomano',
     periods: [[1458, 1683], [1695, 1800]], sources: [sources.ragusa],
     note: 'República tributaria con gobierno propio. El pago se interrumpe durante la guerra de la Liga Santa y se reanuda en 1695; no es una provincia del sultán.'},
