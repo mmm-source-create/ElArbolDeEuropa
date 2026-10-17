@@ -145,3 +145,5 @@ Release se preparan en borrador sobre la entrega validada.
 [V5.22](V5.22.md) corrige los árboles de Conectar y Exportar: generaciones reales, parejas en la misma fila, el mismo diseño en pantalla y en el SVG, y tests de geometría.
 
 [V5.23](V5.23.md) ordena y filtra el índice de Personas, separa las historias disponibles con duración y progreso, amplía el carrusel de portada, añade «Compartir esta vista» en Europa y suma diez historias dinásticas, referencias en las biografías, 19 retratos y 60 resúmenes.
+
+[V5.24](V5.24.md) unifica el selector ES | EN, rehace la portada sin la cinta de dinastías y con entradas más visibles, ordena Europa en este año con píldoras y gobernantes por región, y suma 19 retratos, 12 biografías extensas y 66 resúmenes.
