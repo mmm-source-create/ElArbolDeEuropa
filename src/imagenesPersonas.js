@@ -2194,6 +2194,35 @@ export const IMAGENES_PERSONAS = {
     derechos: "Dominio público · PD-Art / PDM 1.0",
     derechosUrl: "https://creativecommons.org/publicdomain/mark/1.0/",
   },
+
+  EUGENIOSABOYA: {
+    archivo: "/personas-img/EUGENIOSABOYA.webp",
+    encuadre: "50% 14%",
+    alt: "Retrato de Eugenio de Saboya",
+    tipo: "Retrato histórico",
+    obra: "El príncipe Eugenio de Saboya",
+    autor: "Godfrey Kneller",
+    fecha: "1712",
+    fuente: "Wikimedia Commons",
+    fuenteUrl: "https://commons.wikimedia.org/wiki/File:Godfrey_Kneller_Eugen_von_Savoyen_1712.jpg",
+    derechos: "Dominio público · PD-Art / PDM 1.0",
+    derechosUrl: "https://creativecommons.org/publicdomain/mark/1.0/",
+  },
+
+  OLIMPIAMANCINI: {
+    archivo: "/personas-img/OLIMPIAMANCINI.webp",
+    encuadre: "50% 14%",
+    alt: "Retrato de Olimpia Mancini",
+    tipo: "Retrato histórico",
+    obra: "Olimpia Mancini, condesa de Soissons",
+    autor: "Pierre Mignard",
+    fecha: "siglo XVII",
+    institucion: "Österreichische Galerie Belvedere, Viena",
+    fuente: "Wikimedia Commons",
+    fuenteUrl: "https://commons.wikimedia.org/wiki/File:Olympia_Mancini_by_Mignard.png",
+    derechos: "Dominio público · PD-Art / PDM 1.0",
+    derechosUrl: "https://creativecommons.org/publicdomain/mark/1.0/",
+  },
 };
 
 export default IMAGENES_PERSONAS;

@@ -96,7 +96,7 @@ test('Europa es una vista del Atlas: agrupa títulos, abre una persona y restaur
   await act(async()=>{app=runtime.mountAtlas(document.getElementById('root'),treeBase);await new Promise(r=>setTimeout(r,100));});
   assert.equal(document.querySelector('.europe-heading h1')?.textContent,'Europa en 1530');
   assert.equal(document.querySelector('.atlas-traditional').hidden,true);
-  assert.match(document.querySelector('.atlas-timeline-heading').textContent,/2608 personas/);
+  assert.match(document.querySelector('.atlas-timeline-heading').textContent,/2612 personas/);
   assert.equal(document.querySelector('[aria-modal="true"]'),null);
   const search=document.querySelector('.europe-governments input');
   await act(async()=>{Object.getOwnPropertyDescriptor(window.HTMLInputElement.prototype,'value').set.call(search,'Carlos V');search.dispatchEvent(new window.Event('input',{bubbles:true}));});

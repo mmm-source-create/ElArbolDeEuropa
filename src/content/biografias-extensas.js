@@ -316,6 +316,12 @@ export const BIOGRAFIAS_EXTENSAS = Object.freeze({
     {titulo: 'La guerra de los Siete Años', texto: 'La inversión de alianzas de 1756 unió a Francia con Austria. La guerra de los Siete Años terminó en 1763 con la pérdida de Canadá y de la mayor parte de la India francesa a favor de Gran Bretaña. En 1766 se incorporó definitivamente Lorena y en 1768 Córcega, cedida por Génova.'},
     {titulo: 'Crisis del final del reinado', texto: 'La influencia de madame de Pompadour y madame du Barry, el conflicto con los parlamentos y las dificultades fiscales desgastaron la imagen del rey. En 1771 el canciller Maupeou suprimió los parlamentos. Luis XV murió de viruela en Versalles en 1774; le sucedió su nieto Luis XVI.'},
   ],
+  EUGENIOSABOYA: [
+    {titulo: 'Un príncipe sin lugar en Versalles', texto: 'Nació en París en 1663, el menor de los cinco hijos varones de Eugenio Mauricio de Saboya-Carignano, conde de Soissons, y de Olimpia Mancini, sobrina de Mazarino. Su madre cayó en desgracia y huyó de Francia en 1680 tras el asunto de los venenos. Destinado a la Iglesia, Eugenio pidió un mando militar a Luis XIV, que se lo negó por su aspecto y su familia.'},
+    {titulo: 'Al servicio del emperador', texto: 'En 1683 marchó a Viena, sitiada por los otomanos, y entró en el ejército de Leopoldo I. Combatió en la reconquista de Buda (1686) y en las campañas de Hungría. En 1697 recibió el mando supremo y derrotó al ejército del sultán Mustafá II en Zenta, victoria que preparó la paz de Karlowitz (1699), por la que los Habsburgo obtuvieron casi toda Hungría y Transilvania.'},
+    {titulo: 'La guerra de Sucesión española', texto: 'Presidente del Consejo de Guerra imperial desde 1703, se unió al duque de Marlborough para vencer a franceses y bávaros en Blenheim (1704). En 1706 levantó el sitio de Turín, que expulsó a los franceses del norte de Italia, y gobernó después el Estado de Milán. Con Marlborough venció de nuevo en Oudenarde (1708) y Malplaquet (1709), y negoció con el mariscal Villars la paz de Rastatt (1714).'},
+    {titulo: 'Belgrado y el Belvedere', texto: 'En una nueva guerra con los otomanos venció en Petrovaradin (1716) y tomó Belgrado en 1717. Entre 1716 y 1724 fue gobernador general de los Países Bajos austríacos, que administró desde Viena. Apoyó la Pragmática Sanción de Carlos VI, reunió una gran biblioteca y colecciones de arte, y construyó el palacio del Belvedere. Murió en Viena en 1736 sin haberse casado.'},
+  ],
 });
 
 // Cada apartado cita las obras de referencia que documentan esa vida completa.

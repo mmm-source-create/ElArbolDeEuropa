@@ -1640,7 +1640,7 @@ export const CHRONOLOGY_ROUTES = Object.freeze([
     "precision": "documented_core"
   },
   {
-    "personId": "MATTEO1VISC",
+    "personId": "MAT1VISC",
     "territorio": "Milán",
     "desde": 1287,
     "hasta": 1301,
@@ -1650,7 +1650,7 @@ export const CHRONOLOGY_ROUTES = Object.freeze([
     "precision": "documented_core"
   },
   {
-    "personId": "MATTEO1VISC",
+    "personId": "MAT1VISC",
     "territorio": "Milán",
     "desde": 1310,
     "hasta": 1322,

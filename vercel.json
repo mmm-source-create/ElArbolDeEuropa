@@ -239,6 +239,9 @@
     }
   ],
   "redirects": [
+    {"source":"/es/persona/matteo-i-visconti","destination":"/es/persona/mateo-i-visconti","permanent":true},
+    {"source":"/es/persona/galeazzo-ii-visconti-gal2visc","destination":"/es/persona/galeazzo-ii-visconti","permanent":true},
+    {"source":"/es/persona/galeazzo-ii-visconti-galeazzo2visc","destination":"/es/persona/galeazzo-ii-visconti","permanent":true},
     {
       "source": "/es/historia/borgona",
       "destination": "/es/historia/borgona-el-reino-que-no-fue",

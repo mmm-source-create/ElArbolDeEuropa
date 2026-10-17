@@ -286,7 +286,7 @@ export const IBERIA_ITALY_REVIEWS = Object.freeze({
     "reviewedAt": "2026-10-13",
     "editor": "El Árbol de Europa"
   },
-  "person:GALEAZZO2VISC:government:Milán:1354:1378:Señor": {
+  "person:GAL2VISC:government:Milán:1354:1378:Señor": {
     "certainty": "documented",
     "sources": [
       {

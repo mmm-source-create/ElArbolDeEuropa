@@ -444,10 +444,10 @@ const AGRUPACIONES_POLITICAS = [
     fuente: 'https://www.habsburger.net/de/kapitel/die-maria-theresianischen-reformen',
   },
   {
-    id: 'corona-bohemia', nombre: 'Corona de Bohemia',
-    territorios: new Set(['Bohemia', 'Moravia', 'Silesia']), color: REINO_COLOR.Bohemia, desde: 1526,
+    id: 'corona-bohemia', nombre: 'Corona de San Wenceslao',
+    territorios: new Set(['Bohemia', 'Moravia', 'Silesia']), color: REINO_COLOR.Bohemia, desde: 1348,
     aplica: activos => activos.has('Bohemia'),
-    nota: 'Reino de Bohemia, margraviato de Moravia y los ducados silesios que esta persona gobierna efectivamente. Los títulos provinciales se conservan; la Silesia prusiana no se incorpora a un monarca habsbúrgico.',
+    nota: 'Las Tierras de la Corona de Bohemia (Corona regni Bohemiae), constituidas por Carlos IV en 1348 y puestas bajo el patronazgo de san Wenceslao: el reino de Bohemia, el margraviato de Moravia y los ducados silesios que esta persona gobierna efectivamente. Los títulos provinciales se conservan; la Silesia prusiana no se incorpora a un monarca habsbúrgico.',
     fuente: 'https://www.psp.cz/eknih/snemy/v010/1527/t016200.htm',
   },
   {
