@@ -139,3 +139,5 @@ Release se preparan en borrador sobre la entrega validada.
 [V5.19](V5.19.md) orienta el primer uso del Atlas, reduce su barra a búsqueda y año, unifica tipografía y contraste en ambos temas, ajusta los esqueletos y añade diez biografías extensas. Incluye una [propuesta de navegación](PROPUESTA_NAVEGACION_V5.19.md).
 
 [V5.20](V5.20.md) fija la cabecera del Atlas con Atlas / Europa en el centro, lleva el año al tirador, desliza entre escenas con la misma URL, quita los paneles redimensionables y sus marcos, unifica radios y recupera los retratos de Europa en este año.
+
+[V5.21](V5.21.md) integra Comparar en Conectar personas, corrige el diálogo de exportación, unifica los selectores de píldora, agrupa los filtros por regiones comunes y añade seis historias dinásticas, diez biografías extensas y diecinueve retratos.
