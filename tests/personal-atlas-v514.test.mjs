@@ -8,7 +8,7 @@ import {mapAuthoritiesForPerson, mapAuthoritiesAcrossLife} from '../src/data/map
 import {composeRegionalAuthorityScopes} from '../src/data/authorityMapScopes.js';
 import {colorTerritorioEnMapa, agrupacionesPoliticasEnMapa} from '../src/Territorios.jsx';
 import {ORANGE_NASSAU} from '../src/data/mapColors.js';
-import {atlasPoliticalMosaicAt} from '../prototypes/euv-locations/atlas-mosaic.js';
+import {atlasPoliticalMosaicAt} from '../src/data/atlasMosaic.js';
 const read = name => JSON.parse(fs.readFileSync(new URL('../prototypes/euv-locations/'+name,import.meta.url)));
 const data=read('corridor-locations.json');data.burgundy=read('burgundian-locations.json');
 const people=new Map(PERSONAS.map(p=>[p.id,p]));

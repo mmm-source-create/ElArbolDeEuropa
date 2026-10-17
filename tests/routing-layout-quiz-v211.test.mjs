@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import {resolverRuta} from '../src/routing.js';
 import {assignIntervalLanes,mergeIntervals,roundedPath,pointToward} from '../src/explorer/treeGeometry.js';
 import {reinadosEfectivos,sucesionesDirectas} from '../src/desafio/desafioGovernments.js';
-import {crearDesafioDiario,crearPartida} from '../src/desafio/desafioEngine.jsx';
+import {crearDesafioDiario,crearPartida} from '../src/desafio/desafioEngine.js';
 import {PERSONAS} from '../src/personas.jsx';
 
 test('rutas públicas, catálogos, inglés y desafío conservan su destino',()=>{

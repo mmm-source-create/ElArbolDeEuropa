@@ -1,8 +1,8 @@
 import {auditReportPath} from '../lib/project-paths.mjs';
 import fs from 'node:fs/promises';
 import {PERSONAS} from '../../src/personas.jsx';
-import {auditMapContinuity} from '../../src/data/mapContinuityAudit.js';
-import {auditLocationMap, atlasLocationIds} from '../../src/data/locationMapAudit.js';
+import {auditMapContinuity} from './lib/mapContinuityAudit.js';
+import {auditLocationMap, atlasLocationIds} from './lib/locationMapAudit.js';
 
 const data=JSON.parse(await fs.readFile(new URL('../../prototypes/euv-locations/corridor-locations.json',import.meta.url),'utf8'));
 data.burgundy=JSON.parse(await fs.readFile(new URL('../../prototypes/euv-locations/burgundian-locations.json',import.meta.url),'utf8'));

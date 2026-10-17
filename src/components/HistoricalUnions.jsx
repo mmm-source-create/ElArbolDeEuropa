@@ -1,4 +1,3 @@
-import React from 'react';
 import {slugPublico} from '../utils/personLabels.js';
 import './crowns.css';
 export default function HistoricalUnions({uniones=[]}) {

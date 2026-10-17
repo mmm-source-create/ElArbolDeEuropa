@@ -313,21 +313,3 @@ export function ModalProyecto({ seccion, onClose, persona, personasVista = PERSO
     </div>
   );
 }
-
-export function Collapsible({ title, count, children, defaultOpen = true, headExtra, persistentHeadExtra, overflowVisible = false }) {
-  const [open, setOpen] = useState(defaultOpen);
-  return (
-    <div className="panel" style={{ marginBottom: 18, overflow: overflowVisible ? "visible" : "hidden" }}>
-      <div className="panel-head">
-        <div style={{ display: "flex", alignItems: "center", gap: 8, cursor: "pointer", flex: 1, minWidth: 0 }} onClick={() => setOpen(!open)}>
-          {open ? <ChevronDown size={14} /> : <ChevronRight size={14} />}
-          <span className="panel-title">{title}</span>
-          {count != null && <span className="panel-count">{count}</span>}
-        </div>
-        {persistentHeadExtra}
-        {open && headExtra}
-      </div>
-      {open && <div className="panel-body">{children}</div>}
-    </div>
-  );
-}

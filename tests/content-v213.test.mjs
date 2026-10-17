@@ -5,7 +5,7 @@ import {PERSONAS} from '../src/personas.jsx';
 import {ALPES_V213} from '../src/content/personas/alpes-v213.js';
 import {SOURCES,SOURCE_PUBLICATIONS,sourcesForPerson} from '../src/content/sources.js';
 import {TERRITORIOS} from '../src/data/territorios.js';
-import {auditarTerritorios} from '../src/data/auditTerritorios.js';
+import {auditarTerritorios} from '../scripts/audits/lib/auditTerritorios.js';
 import {sucesionDe} from '../src/data/sucesion.js';
 import {RELEVOS_ALPES} from '../src/content/sucesiones/alpes-v213.js';
 const by=Object.fromEntries(PERSONAS.map(p=>[p.id,p]));

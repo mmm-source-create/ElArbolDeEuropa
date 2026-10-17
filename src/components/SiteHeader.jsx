@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 
 import {translatedEquivalent} from '../english/routes.js';
 import {SCREEN_NOTICE_KEY} from "../public/screenNotice.js";

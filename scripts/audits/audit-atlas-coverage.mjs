@@ -8,7 +8,7 @@ import {fileURLToPath} from 'node:url';
 import {PERSONAS} from '../../src/personas.jsx';
 import {TERRITORIOS, gobiernoEfectivo} from '../../src/data/territorios.js';
 import {mapAuthoritiesForPerson} from '../../src/data/mapAuthorities.js';
-import {atlasLocationIds} from '../../src/data/locationMapAudit.js';
+import {atlasLocationIds} from './lib/locationMapAudit.js';
 import {pilotJurisdictionsFor, reviewedMapLayers} from '../../src/data/locationMapPilot.js';
 
 const IMPERIAL_OFFICES = new Set(['Alemania', 'Sacro Imperio']);

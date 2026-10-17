@@ -1,4 +1,4 @@
-import {TERRITORIOS,TITULOS_POR_CLASE,CONDICIONES,gobiernoEfectivo} from './territorios.js';
+import {TERRITORIOS,TITULOS_POR_CLASE,CONDICIONES,gobiernoEfectivo} from '../../../src/data/territorios.js';
 export function auditarTerritorios(personas, catalogo=TERRITORIOS) {
  const issues=[]; const add=(severity,code,subject,message)=>issues.push({severity,code,subject,message});
  const gobiernos=[];

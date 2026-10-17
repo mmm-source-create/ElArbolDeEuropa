@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import {PERSONAS} from '../src/personas.jsx';
 import {mapAuthoritiesForPerson} from '../src/data/mapAuthorities.js';
-import {atlasPoliticalMosaicAt} from '../prototypes/euv-locations/atlas-mosaic.js';
+import {atlasPoliticalMosaicAt} from '../src/data/atlasMosaic.js';
 import {territorialColor} from '../src/data/territorialIdentity.js';
 import {mergeMapExpansions} from '../scripts/cartography/merge-map-expansions.mjs';
 

@@ -2,9 +2,9 @@ import {auditReportPath} from '../lib/project-paths.mjs';
 import fs from 'node:fs';
 import path from 'node:path';
 import {fileURLToPath} from 'node:url';
-import {atlasPoliticalMosaicAt, atlasMosaicPalette} from '../../prototypes/euv-locations/atlas-mosaic.js';
+import {atlasPoliticalMosaicAt, atlasMosaicPalette} from '../../src/data/atlasMosaic.js';
 import {PERSONAS} from '../../src/personas.jsx';
-import {locationResearchTargets} from '../../src/data/locationResearchTargets.js';
+import {locationResearchTargets} from './lib/locationResearchTargets.js';
 
 // Inspect the same annual mosaic shown in the laboratory. A raw version's
 // IDs alone are insufficient: dated removals and superseded layers can win.

@@ -6,7 +6,7 @@ import {PERSONAL_ATLAS_REVIEWS} from '../../src/evidence/personalAtlasReviews.js
 import {mapAuthoritiesForPerson} from '../../src/data/mapAuthorities.js';
 import {colorTerritorioEnMapa} from '../../src/Territorios.jsx';
 import {authorityColor} from '../../src/data/mapColors.js';
-import {atlasPoliticalMosaicAt} from '../../prototypes/euv-locations/atlas-mosaic.js';
+import {atlasPoliticalMosaicAt} from '../../src/data/atlasMosaic.js';
 const read=name=>JSON.parse(fs.readFileSync(path.join(projectRoot,'prototypes/euv-locations',name)));
 const data=read('corridor-locations.json');data.burgundy=read('burgundian-locations.json');
 const people=new Map(PERSONAS.map(p=>[p.id,p]));

@@ -2,8 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import {PERSONAS} from '../src/personas.jsx';
 import {TERRITORIOS} from '../src/data/territorios.js';
-import {EVENTOS_HISTORICOS,HISTORIAS} from '../src/historiaData.jsx';
-import {buildEntityIndex,entityId} from '../src/evidence/entities.js';
+import {HISTORIAS} from '../src/historiaData.jsx';
 import {CERTAINTY,CLAIM_REVIEWS,EDITORIAL_HISTORY,citationText,coverageReport,personClaims} from '../src/evidence/claims.js';
 
 test('cada dato personal registrado conserva una afirmación estable sin fuente atribuida por proximidad',()=>{
@@ -43,12 +42,7 @@ test('una fuente precisa solo respalda las afirmaciones revisadas y conserva el 
   assert.ok(EDITORIAL_HISTORY.some(entry=>entry.scope===gerald.id&&entry.reason));
 });
 
-test('entidades homónimas conservan identidad formal y la cobertura cuenta pendientes reales',()=>{
-  const index=buildEntityIndex(PERSONAS,TERRITORIOS,EVENTOS_HISTORICOS);
-  assert.ok(index.has(entityId('territory','Castilla')));
-  assert.ok(index.has(entityId('politicalEntity','Castilla')));
-  assert.ok(index.has(entityId('crown','Corona de Castilla')));
-  assert.notEqual(index.get(entityId('territory','Castilla')).id,index.get(entityId('politicalEntity','Castilla')).id);
+test('la cobertura documental cuenta pendientes reales',()=>{
   const report=coverageReport(PERSONAS,TERRITORIOS,HISTORIAS);
   assert.equal(report.total,Object.values(report.totals).reduce((sum,count)=>sum+count,0));
   assert.ok(report.governmentsWithoutSource>0);

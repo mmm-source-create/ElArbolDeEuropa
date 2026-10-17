@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import {PERSONAS} from '../src/personas.jsx';
 import {personClaims} from '../src/evidence/claims.js';
 import {buildPoliticalMapIndex,inspectMapRegion} from '../src/data/politicalMapIndex.js';
-import {auditMapContinuity,HISTORICAL_CUTS} from '../src/data/mapContinuityAudit.js';
+import {auditMapContinuity,HISTORICAL_CUTS} from '../scripts/audits/lib/mapContinuityAudit.js';
 import {imperialFrameIds} from '../src/data/imperialFrame.js';
 import {colorTerritorioEnMapa,REINO_COLOR} from '../src/Territorios.jsx';
 

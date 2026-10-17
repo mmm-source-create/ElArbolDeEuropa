@@ -3,7 +3,7 @@ import path from 'node:path';
 import {canonicalJson, digest} from './canonical.mjs';
 import {personClaims} from '../../src/evidence/claims.js';
 import {mapAuthoritiesForPerson} from '../../src/data/mapAuthorities.js';
-import {atlasMosaicPalette, atlasPoliticalMosaicAt} from '../../prototypes/euv-locations/atlas-mosaic.js';
+import {atlasMosaicPalette, atlasPoliticalMosaicAt} from '../../src/data/atlasMosaic.js';
 import {STATIC_FOLDERS} from '../../src/public/staticData.js';
 import {routesFromSitemap} from '../lib/ssg-utils.mjs';
 

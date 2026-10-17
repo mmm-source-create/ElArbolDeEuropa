@@ -1,4 +1,3 @@
-import React from 'react';
 import {Search, ArrowRight, UserRoundPlus} from 'lucide-react';
 import './atlas-growth.css';
 

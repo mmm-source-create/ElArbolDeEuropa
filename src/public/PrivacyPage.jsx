@@ -1,4 +1,3 @@
-import React from 'react';
 import {ShieldCheck} from 'lucide-react';
 import SiteHeader from '../components/SiteHeader.jsx';
 import SiteFooter from '../components/SiteFooter.jsx';

@@ -1,5 +1,5 @@
-import {gobiernosDe} from './personAccessors.js';
-import {gobiernoEfectivo} from './territorios.js';
+import {gobiernosDe} from '../../../src/data/personAccessors.js';
+import {gobiernoEfectivo} from '../../../src/data/territorios.js';
 
 export function earlyPeopleInventory(people,before=1200){
  return people.filter(p=>p.nac<before||p.muer<before||gobiernosDe(p).some(g=>g.desde<before))

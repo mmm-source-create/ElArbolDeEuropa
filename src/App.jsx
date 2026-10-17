@@ -1,11 +1,11 @@
 import {resolverRuta} from "./routing.js";
-import React, { lazy, Suspense, useCallback, useEffect, useMemo, useState } from "react";
+import { lazy, Suspense, useCallback, useEffect, useMemo, useState } from "react";
 import { CatalogPage, HomePage, InfoPage, PersonPage } from "./public/PublicSite.jsx";
 
 import AtlasSkeleton from "./explorer/AtlasSkeleton.jsx";
 import ReadingSkeleton from "./stories/ReadingSkeleton.jsx";
 import SiteHeader from "./components/SiteHeader.jsx";
-import EnglishLanding from "./public/EnglishLanding.jsx";
+import EnglishPage from "./english/EnglishPage.jsx";
 import NotFoundPage from "./public/NotFoundPage.jsx";
 import PrivacyPage from './public/PrivacyPage.jsx';
 import "./styles/theme.css";
@@ -16,7 +16,6 @@ const DynastyPage = lazy(() => import("./public/DynastyPage.jsx"));
 const TerritoryPage = lazy(() => import("./public/TerritoryPage.jsx").then(m => ({ default: m.TerritoryPage })));
 const Explorer = lazy(() => import("./explorer/AtlasLoader.jsx"));
 const DesafioPage = lazy(() => import("./desafio/DesafioPage.jsx"));
-const RendererLab = lazy(() => import("./lab/RendererLab.jsx"));
 
 function normalizaRutaLigera() {
   if (typeof window === "undefined") return;
@@ -51,15 +50,11 @@ export default function App() {
     setExplorerRequested(true);
   }, [initial.view]);
 
-  if (typeof window !== "undefined" && /^\/es\/laboratorio-render\/?$/.test(window.location.pathname)) {
-    return <Suspense fallback={<AtlasSkeleton/>}><RendererLab /></Suspense>;
-  }
-
   if (initial.view === "embed") return <Suspense fallback={<p role="status">Preparando ficha…</p>}><EmbedPage personId={initial.personId}/></Suspense>;
   if (!explorerRequested && initial.view === "story") return <Suspense fallback={<div className="public-site"><SiteHeader/><main className="public-main story-page"><ReadingSkeleton/></main></div>}><StoryPage slug={initial.storySlug} chapter={initial.chapter}/></Suspense>;
   if (!explorerRequested && initial.view === "dynasty") return <Suspense fallback={<p role="status">Cargando dinastía…</p>}><DynastyPage slug={initial.dynastySlug} /></Suspense>;
   if (!explorerRequested && initial.view === "territory") return <Suspense fallback={<p role="status">Cargando territorio…</p>}><TerritoryPage slug={initial.territorySlug} /></Suspense>;
-  if (initial.view === "english") return <EnglishLanding />;
+  if (initial.view === "english") return <EnglishPage />;
   if (initial.view === "not-found") return <NotFoundPage locale={initial.locale} />;
   if (initial.view === 'privacy') return <PrivacyPage locale={initial.locale}/>;
   if (initial.view === "desafio") {

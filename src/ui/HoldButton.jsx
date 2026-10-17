@@ -1,4 +1,4 @@
-import React, {useEffect, useRef, useState} from 'react';
+import {useEffect, useRef, useState} from 'react';
 import './motion.css';
 
 // Hold to Confirm: an irreversible action needs a deliberate press. The ring

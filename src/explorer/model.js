@@ -94,12 +94,6 @@ export const DINASTIAS_DESTACADAS = [
   "Casas orientales", "Sin casa identificada",
 ];
 
-export const RAMA_A_PRINCIPAL = Object.fromEntries(
-  Object.entries(GRUPOS_DINASTICOS).flatMap(([principal, ramas]) =>
-    ramas.filter((rama) => rama !== principal).map((rama) => [rama, principal])
-  )
-);
-
 export const RAMA_A_PRINCIPAL_COLOR = Object.fromEntries(
   Object.entries(GRUPOS_DINASTICOS_GENEALOGICOS).flatMap(([principal, ramas]) =>
     ramas.filter((rama) => rama !== principal).map((rama) => [rama, principal])
@@ -405,11 +399,6 @@ export function listaParejas(persona) {
 
 export function clavePareja(a, b) {
   return [a, b].filter(Boolean).sort().join("|");
-}
-
-export function sonAmantes(a, b) {
-  if (!a || !b) return false;
-  return listaAmantes(BY_ID[a]).includes(b) || listaAmantes(BY_ID[b]).includes(a);
 }
 
 export function mediana(valores) {

@@ -10,6 +10,7 @@ compilar, empieza por el [README del proyecto](../README.md).
 - [Añadir o corregir una persona](contributing-people.md).
 - [Comprobar regresiones y revisar cambios intencionados](v5-regression.md).
 - [Herramientas y comandos actuales](../scripts/README.md).
+- [Estructura del código, plan de migración y subagentes](V5.28-revision-codigo.md).
 - [Entorno Python reproducible](python-cartography.md).
 - [Política de seguridad](../SECURITY.md).
 

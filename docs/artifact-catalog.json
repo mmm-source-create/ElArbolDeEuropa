@@ -87,10 +87,6 @@
       "kind": "documentation"
     },
     {
-      "path": "prototypes/euv-locations/atlas-mosaic.js",
-      "kind": "lab"
-    },
-    {
       "path": "prototypes/euv-locations/balkan-expansion-locations.json",
       "kind": "accepted-cartography",
       "producer": "scripts/cartography/balkan-expansion-source.mjs"
@@ -269,10 +265,6 @@
       "path": "prototypes/euv-locations/location-inventory.json",
       "kind": "accepted-inventory",
       "producer": "scripts/cartography/build-location-inventory.py"
-    },
-    {
-      "path": "prototypes/euv-locations/location-mosaic.js",
-      "kind": "lab"
     },
     {
       "path": "prototypes/euv-locations/medieval-balkans-review.json",

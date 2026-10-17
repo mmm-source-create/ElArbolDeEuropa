@@ -6,7 +6,7 @@ para investigar o regenerar geometría.
 
 | Carpeta | Función |
 | --- | --- |
-| `audits/` | Contratos, personas, territorios, cartografía, regresiones, seguridad y HTML |
+| `audits/` | Contratos, personas, territorios, cartografía, regresiones, seguridad y HTML; `audits/lib/` guarda la lógica que solo usan las auditorías y sus tests |
 | `generate/` | Catálogos, árbol, sitemaps, traducciones y prerenderizado |
 | `cartography/` | Extracción de mandatos, selecciones documentadas, cruces y mediciones SVG |
 | `schema/` | Lectura y comparación de los contratos y bases V5 |

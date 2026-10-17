@@ -1,4 +1,3 @@
-import React from 'react';
 import EnglishPage from '../english/EnglishPage.jsx';
 import StoryPage from '../stories/StoryPage.jsx';
 import {PersonPage} from './PublicSite.jsx';

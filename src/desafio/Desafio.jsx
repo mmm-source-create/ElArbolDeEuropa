@@ -1,5 +1,5 @@
 import {gobiernosDe, territoriosDe} from '../data/personAccessors.js';
-import React, { lazy,Suspense,useCallback, useId, useMemo, useRef, useState } from "react";
+import { lazy,Suspense,useCallback, useId, useMemo, useRef, useState } from "react";
 import {
   ArrowLeft,
   CalendarDays,
@@ -26,7 +26,7 @@ import {
   crearPreguntaCamino,
   crearPreguntaRacha,
   describirDificultad,
-} from "./desafioEngine.jsx";
+} from "./desafioEngine.js";
 import {PreguntaOpciones, PreguntaOrden, Explicacion} from './Question.jsx';
 import LearningSession from './LearningSession.jsx';
 import Odometer from '../ui/Odometer.jsx';

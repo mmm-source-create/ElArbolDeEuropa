@@ -1,5 +1,5 @@
 import {territoriosDe} from '../data/personAccessors.js';
-import React, { useMemo } from "react";
+import { useMemo } from "react";
 
 export default function BioDiscovery({
   persona,

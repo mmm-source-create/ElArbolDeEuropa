@@ -3,7 +3,7 @@ import {ORANGE_NASSAU,FRENCH_CROWN_COLOR} from './mapColors.js';
 import {franceLowCountriesPoliticalKeys} from './franceLowCountriesRoutes.js';
 import {governmentGroupsAt} from './governmentPresentation.js';
 import {vidaEnAnio} from './europeYear.js';
-import {atlasPoliticalMosaicAt,atlasMosaicPalette} from '../../prototypes/euv-locations/atlas-mosaic.js';
+import {atlasPoliticalMosaicAt,atlasMosaicPalette} from './atlasMosaic.js';
 import {pilotJurisdictionsFor,mapLocationsForGovernment} from './locationMapPilot.js';
 import {REINO_COLOR,idsDeGobiernoEnAño} from '../Territorios.jsx';
 import {territorialIdentity} from './territorialIdentity.js';

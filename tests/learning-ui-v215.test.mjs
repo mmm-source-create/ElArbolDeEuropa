@@ -4,7 +4,7 @@ import {JSDOM} from 'jsdom';
 import React,{act} from 'react';
 import {PERSONAS} from '../src/personas.jsx';
 import {successionBank,challengeUrl,createChallenge,REVIEW_KEY} from '../src/desafio/learning.js';
-import {crearDesafioDiario} from '../src/desafio/desafioEngine.jsx';
+import {crearDesafioDiario} from '../src/desafio/desafioEngine.js';
 const dom=new JSDOM('<div id="root"></div>',{url:'https://treeofeurope.eu/es/desafio',pretendToBeVisual:true});
 for(const name of ['window','document','navigator','HTMLElement','Event','MouseEvent'])Object.defineProperty(globalThis,name,{value:name==='window'?dom.window:dom.window[name],configurable:true,writable:true});
 globalThis.IS_REACT_ACT_ENVIRONMENT=true;

@@ -1,7 +1,7 @@
 {
   "name": "el-arbol-de-europa",
   "private": true,
-  "version": "5.27.0",
+  "version": "5.28.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -45,7 +45,6 @@
   },
   "dependencies": {
     "@vercel/speed-insights": "2.0.0",
-    "@vitejs/plugin-react": "6.0.5",
     "lucide-react": "1.30.0",
     "react": "19.2.8",
     "react-dom": "19.2.8",

@@ -37,7 +37,6 @@ fs.writeFileSync('reviews.json',JSON.stringify(out));fs.writeFileSync('mismatche
 console.log(stat,'total',Object.keys(out).length,'mismatches',mism.length);
 // Governments: GND clause naming the same territory and the same span of years.
 const {KW}=await import(new URL('./govkw.mjs', import.meta.url));
-const {gobiernosDe}=await import('../../../src/data/personAccessors.js');
 let gov=0;
 for(const p of PERSONAS){const g=gndOf(p.id);if(!g)continue;const clauses=gnd[g].info.flatMap(s=>s.split(/[;|]/));
  for(const claim of personClaims(p)){if(claim.field!=='Gobierno'||manual(claim.id))continue;const m=claim.value;const kw=KW[m.territorio];if(!kw)continue;

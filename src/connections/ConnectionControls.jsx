@@ -1,4 +1,4 @@
-import React,{useMemo,useState} from 'react';
+import {useMemo,useState} from 'react';
 import {Users,X,ArrowLeft,ArrowRight} from 'lucide-react';
 import {rutasEntre,tipoRelacionEntre} from '../explorer/relationshipGraph.js';
 import {normalizarBusquedaPublica} from '../utils/personLabels.js';

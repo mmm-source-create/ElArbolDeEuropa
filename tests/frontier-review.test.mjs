@@ -1,9 +1,9 @@
-import {atlasPoliticalMosaicAt} from '../prototypes/euv-locations/atlas-mosaic.js';
+import {atlasPoliticalMosaicAt} from '../src/data/atlasMosaic.js';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import {PERSONAS} from '../src/personas.jsx';
-import {auditarTerritorios} from '../src/data/auditTerritorios.js';
+import {auditarTerritorios} from '../scripts/audits/lib/auditTerritorios.js';
 import {personClaims} from '../src/evidence/claims.js';
 import {FRONTIER_REVIEWS} from '../src/evidence/frontierReviewData.js';
 import {mapAuthoritiesForPerson} from '../src/data/mapAuthorities.js';
@@ -13,7 +13,6 @@ import {territorialIdentity, territorialLabel} from '../src/data/territorialIden
 const data=JSON.parse(fs.readFileSync(new URL('../prototypes/euv-locations/corridor-locations.json',import.meta.url)));
 const people=new Map(PERSONAS.map(person=>[person.id,person]));
 const cells=(territory,year,personId)=>pilotLocationsFor(data,territory,year,personId);
-const layer=(name,year)=>reviewedLayerLocations(data,reviewedMapLayers(data).find(e=>e.name===name),year);
 const authority=(personId,year)=>mapAuthoritiesForPerson(people.get(personId),year,data);
 
 

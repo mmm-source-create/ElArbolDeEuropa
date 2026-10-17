@@ -4,37 +4,7 @@ import {SITE_NAME, SITE_NAME_EN, resolveSiteUrl} from "./siteConfig.js";
 // preparado un punto único para una futura versión es/en.
 
 export const DEFAULT_LOCALE = "es";
-export const SUPPORTED_LOCALES = ["es", "en"];
 
-export const LOCALES = {
-  es: {
-    language: "es",
-    ogLocale: "es_ES",
-    label: "ES",
-  },
-
-  en: {
-    language: "en",
-    ogLocale: "en_GB",
-    label: "EN",
-  },
-};
-
-export const ROUTE_SEGMENTS = {
-  es: {
-    persona: "persona",
-    dinastia: "dinastia",
-    territorio: "territorio",
-    historia: "historia",
-  },
-
-  en: {
-    persona: "person",
-    dinastia: "dynasty",
-    territorio: "territory",
-    historia: "story",
-  },
-};
 export const SITE = Object.freeze({
   name: SITE_NAME,
   descriptor: "Atlas genealógico e histórico interactivo",

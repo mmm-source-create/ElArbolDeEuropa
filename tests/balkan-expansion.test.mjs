@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import {reviewedLayerLocations, reviewedAuthorityConditions} from '../src/data/locationMapPilot.js';
 import {mapAuthoritiesForPerson} from '../src/data/mapAuthorities.js';
-import {politicalMosaicAt} from '../prototypes/euv-locations/location-mosaic.js';
+import {politicalMosaicAt} from '../src/data/locationMosaic.js';
 
 const read = path => JSON.parse(fs.readFileSync(new URL(path, import.meta.url)));
 const patch = read('../prototypes/euv-locations/balkan-expansion-locations.json');

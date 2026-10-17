@@ -1,4 +1,3 @@
-import React from 'react';
 const Lines = ({count = 3}) => <div className="skeleton-lines">{Array.from({length:count}, (_, i) => <span key={i}/>)}</div>;
 const Cards = ({className, count = 6, lines = 3}) => <div className={className}>{Array.from({length:count}, (_, i) => <div className="skeleton-card" key={i}><Lines count={lines}/></div>)}</div>;
 // Catalog lists load under a real title and search box: only the list is a

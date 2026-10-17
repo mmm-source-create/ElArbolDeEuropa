@@ -1,7 +1,7 @@
 import {auditReportPath} from '../lib/project-paths.mjs';
 import fs from 'node:fs/promises';
-import {atlasMosaicPalette, atlasPoliticalMosaicAt} from '../../prototypes/euv-locations/atlas-mosaic.js';
-import {auditMapSpatial} from '../../src/data/mapSpatialAudit.js';
+import {atlasMosaicPalette, atlasPoliticalMosaicAt} from '../../src/data/atlasMosaic.js';
+import {auditMapSpatial} from './lib/mapSpatialAudit.js';
 
 const read = async name => JSON.parse(await fs.readFile(new URL(name,import.meta.url),'utf8'));
 const data = await read('../../prototypes/euv-locations/corridor-locations.json');

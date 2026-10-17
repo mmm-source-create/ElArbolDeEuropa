@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import {useState} from 'react';
 import {ArrowLeft,ArrowRight,BookOpen,Crosshair,X} from 'lucide-react';
 import {ENGLISH_STORIES} from '../english/content.js';
 import './story-atlas.css';

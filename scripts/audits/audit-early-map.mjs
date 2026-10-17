@@ -1,6 +1,6 @@
 import fs from 'node:fs';
 import {PERSONAS} from '../../src/personas.jsx';
-import {earlyPeopleInventory} from '../../src/data/earlyPeopleInventory.js';
+import {earlyPeopleInventory} from './lib/earlyPeopleInventory.js';
 import {mapLocationsForGovernment} from '../../src/data/locationMapPilot.js';
 import {idsDeGobiernoEnAño} from '../../src/Territorios.jsx';
 import {gobiernosDe} from '../../src/data/personAccessors.js';

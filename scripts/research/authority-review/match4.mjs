@@ -5,7 +5,7 @@ const {PERSONAS}=await import('../../../src/personas.jsx');
 const {conyugesDe}=await import('../../../src/data/personAccessors.js');
 const UA={'User-Agent':'ElArbolDeEuropa-review/1.0 (https://treeofeurope.eu; genealogical atlas bibliographic review)','Accept':'application/sparql-results+json'};
 const sleep=ms=>new Promise(r=>setTimeout(r,ms));
-const qids=JSON.parse(fs.readFileSync('qids.json')),ent=JSON.parse(fs.readFileSync('entities.json')),status=JSON.parse(fs.readFileSync('status.json'));
+const qids=JSON.parse(fs.readFileSync('qids.json')),status=JSON.parse(fs.readFileSync('status.json'));
 const okQ=id=>status[id]==='ok'?qids[id].qid:null;
 const esc=s=>s.replace(/\\/g,'\\\\').replace(/"/g,'\\"');
 const sparql=async q=>{for(let a=0;a<5;a++){try{const r=await fetch('https://query.wikidata.org/sparql?query='+encodeURIComponent(q),{headers:UA,signal:AbortSignal.timeout(60000)});if(r.status===429||r.status>=500){await sleep(10000*(a+1));continue}return (await r.json()).results.bindings}catch{await sleep(5000*(a+1))}}return []};

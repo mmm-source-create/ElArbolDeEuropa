@@ -10,7 +10,7 @@ import {ADRIATICO_SOURCES} from '../src/content/sources-adriatico-v214.js';
 import {SOURCES,SOURCE_PUBLICATIONS,sourcesForPerson,FUENTES_TERRITORIOS} from '../src/content/sources.js';
 import {RELEVOS_ADRIATICO} from '../src/content/sucesiones/adriatico-v214.js';
 import {TERRITORIOS} from '../src/data/territorios.js';
-import {auditarTerritorios} from '../src/data/auditTerritorios.js';
+import {auditarTerritorios} from '../scripts/audits/lib/auditTerritorios.js';
 import {auditDynasties,buildDynastyPages} from '../src/data/dynastyModel.js';
 import {auditarSucesiones,prepararSucesiones,coincideMandato} from '../src/data/successionHistory.js';
 import {sucesionDe} from '../src/data/sucesion.js';

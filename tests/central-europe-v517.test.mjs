@@ -6,7 +6,7 @@ import {europeMosaicAt,governmentTableAt} from '../src/data/europePanorama.js';
 import {governmentGroupsAt,groupedGovernmentIntervals} from '../src/data/governmentPresentation.js';
 import {mapAuthoritiesForPerson} from '../src/data/mapAuthorities.js';
 import {pilotLocationsFor,pilotJurisdictionsFor} from '../src/data/locationMapPilot.js';
-import {earlyPeopleInventory} from '../src/data/earlyPeopleInventory.js';
+import {earlyPeopleInventory} from '../scripts/audits/lib/earlyPeopleInventory.js';
 import {REINO_COLOR} from '../src/Territorios.jsx';
 const read=n=>JSON.parse(fs.readFileSync(new URL('../prototypes/euv-locations/'+n,import.meta.url)));
 const data=read('corridor-locations.json'),partition=read('poland-lithuania-partitions.json');

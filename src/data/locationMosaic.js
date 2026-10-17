@@ -1,6 +1,6 @@
-import {reviewedLayerLocations, reviewedLayerActive, reviewedLayerEvidence} from '../../src/data/locationMapPilot.js';
-import {supersededRegionalLayers} from '../../src/data/regionalExtentRoutes.js';
-import {territorialColor, coalesceTerritorialLayers} from '../../src/data/territorialIdentity.js';
+import {reviewedLayerLocations, reviewedLayerActive, reviewedLayerEvidence} from './locationMapPilot.js';
+import {supersededRegionalLayers} from './regionalExtentRoutes.js';
+import {territorialColor, coalesceTerritorialLayers} from './territorialIdentity.js';
 const FRAME_ONLY_LAYERS = new Set(['Marco jurídico del Sacro Imperio']);
 // Same order as localeCompare(b, 'es'), without building a collator per comparison.
 export const compareEs = new Intl.Collator('es').compare;

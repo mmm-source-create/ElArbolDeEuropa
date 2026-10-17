@@ -1,6 +1,6 @@
-import {gobiernosDe} from './personAccessors.js';
-import {buildPoliticalMapIndex, COLLECTIVE_AUTHORITIES} from './politicalMapIndex.js';
-import {gobiernoEfectivo} from './territorios.js';
+import {gobiernosDe} from '../../../src/data/personAccessors.js';
+import {buildPoliticalMapIndex, COLLECTIVE_AUTHORITIES} from '../../../src/data/politicalMapIndex.js';
+import {gobiernoEfectivo} from '../../../src/data/territorios.js';
 
 export const HISTORICAL_CUTS = Object.freeze([1522,1564,1619,1648,1665]);
 export const TYROL_REVIEW_RANGE = Object.freeze({from:1490,to:1705});

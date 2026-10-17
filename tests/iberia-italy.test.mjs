@@ -8,7 +8,7 @@ import {mapAuthoritiesForPerson} from '../src/data/mapAuthorities.js';
 import {buildPoliticalMapIndex, inspectMapRegion} from '../src/data/politicalMapIndex.js';
 import {TRIBUTARY_RELATIONS, tributaryEntriesFor} from '../src/data/tributaryRelations.js';
 import {territorialIdentity, territorialColor} from '../src/data/territorialIdentity.js';
-import {atlasPoliticalMosaicAt} from '../prototypes/euv-locations/atlas-mosaic.js';
+import {atlasPoliticalMosaicAt} from '../src/data/atlasMosaic.js';
 import {auditIberiaItalyContinuity, iberiaItalyGeographicReview} from '../scripts/audits/audit-iberia-italy-continuity.mjs';
 import {applyRegionalReview} from '../scripts/cartography/apply-regional-review.mjs';
 import {compactBalkanRoutes} from '../scripts/cartography/build-balkans-routes.mjs';

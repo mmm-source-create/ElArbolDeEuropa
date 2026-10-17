@@ -1,4 +1,3 @@
-import React from 'react';
 import {createRoot} from 'react-dom/client';
 import Explorer from '../../src/Explorer.jsx';
 export function mountAtlas(container,treeBase){const root=createRoot(container);root.render(<Explorer treeBase={treeBase}/>);return root;}

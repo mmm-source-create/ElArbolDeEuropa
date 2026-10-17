@@ -4,7 +4,7 @@ import {translatedEquivalent} from './english/routes.js';
 import { familyIndex, familyIds, atlasIdsFromLocation, writeAtlasIds, isolatedPopes, groupIsolatedPopes } from './explorer/progressiveAtlas.js';
 import { safeStoryReturn, storyPeopleIds, saveStoryProgress } from './stories/storyModel.js';
 import {resolveStoryNavigation, writeStoryNavigation} from './explorer/storyNavigation.js';
-import EnglishLanding from "./public/EnglishLanding.jsx";
+import EnglishPage from "./english/EnglishPage.jsx";
 import "./App.css";
 import React, { useState, useRef, useEffect, useLayoutEffect, useCallback, useMemo } from "react";
 import {
@@ -47,7 +47,6 @@ import { hasDocumentedClaim } from "./evidence/claims.js";
 const SEARCH_TEXT_BY_ID = Object.fromEntries(PERSONAS.map(persona => [persona.id, normalizaTexto([textoBusquedaPersona(persona), nombrePrincipal(persona)].join(" "))]));
 
 const ATLAS_LAYOUT_STORAGE_KEY = "eade.atlasLayout.v24";
-const DEFAULT_PANEL_WIDTHS = Object.freeze({ filtros: 280, biografia: 330 });
 const DEFAULT_FILTER_SECTIONS = Object.freeze({
   territorios: true,
   dinastias: true,
@@ -61,12 +60,6 @@ const DEFAULT_BIO_SECTIONS = Object.freeze({
   relaciones: true,
   contexto: false,
 });
-
-function limitarNumero(valor, min, max, fallback) {
-  const numero = Number(valor);
-  if (!Number.isFinite(numero)) return fallback;
-  return Math.max(min, Math.min(max, numero));
-}
 
 function leerLayoutAtlas() {
   if (typeof window === "undefined") return null;
@@ -119,7 +112,7 @@ export default function Explorer({ initialPanel = null, treeBase: TREE_BASE, loa
   const [connectionCriterion, setConnectionCriterion] = useState(savedSession?.connectionCriterion || "matrimonio");
   const [origen, setOrigen] = useState(savedSession?.origen ?? null);
   const [destino, setDestino] = useState(savedSession?.destino ?? null);
-  const [modoComparacion, setModoComparacion] = useState(savedSession?.modoComparacion ?? "corto");
+  const [modoComparacion] = useState(savedSession?.modoComparacion ?? "corto");
   const [compareMenuOpen, setCompareMenuOpen] = useState(false);
   const [compareRouteIndex, setCompareRouteIndex] = useState(0);
   const [focoMenuOpen, setFocoMenuOpen] = useState(false);
@@ -156,16 +149,6 @@ export default function Explorer({ initialPanel = null, treeBase: TREE_BASE, loa
     }
   });
   const [atlasExpansionFeedback, setAtlasExpansionFeedback] = useState(null);
-  const [panelWidths, setPanelWidths] = useState(() => {
-    const guardado = leerLayoutAtlas()?.panelWidths || {};
-    return {
-      filtros: limitarNumero(guardado.filtros, 210, 420, DEFAULT_PANEL_WIDTHS.filtros),
-      biografia: limitarNumero(guardado.biografia, 260, 520, DEFAULT_PANEL_WIDTHS.biografia),
-    };
-  });
-  const [treeMapSplit, setTreeMapSplit] = useState(() =>
-    limitarNumero(leerLayoutAtlas()?.treeMapSplit, 25, 75, 50)
-  );
   const [filterSectionsOpen, setFilterSectionsOpen] = useState(() => {
     const guardado = leerLayoutAtlas()?.filterSectionsOpen || {};
     return Object.fromEntries(Object.entries(DEFAULT_FILTER_SECTIONS).map(([key, value]) => [
@@ -210,22 +193,18 @@ export default function Explorer({ initialPanel = null, treeBase: TREE_BASE, loa
   const urlStateLoadedRef = useRef(Boolean(savedSession && !savedSession.historiaActivaId));
   const historyPopRef = useRef(false);
   const dragState = useRef(null);
-  const workspaceGridRef = useRef(null);
-  const workspaceMainRef = useRef(null);
 
   useEffect(() => {
     if (typeof window === "undefined") return;
     try {
       window.localStorage.setItem(ATLAS_LAYOUT_STORAGE_KEY, JSON.stringify({
-        panelWidths,
-        treeMapSplit,
         filterSectionsOpen,
         bioSectionsOpen,
       }));
     } catch {
       // El Atlas sigue funcionando aunque el navegador bloquee localStorage.
     }
-  }, [panelWidths, treeMapSplit, filterSectionsOpen, bioSectionsOpen]);
+  }, [filterSectionsOpen, bioSectionsOpen]);
 
 
   useEffect(() => {
@@ -254,7 +233,6 @@ export default function Explorer({ initialPanel = null, treeBase: TREE_BASE, loa
   const eventosOrdenadosTodos = useMemo(() => EVENTOS_HISTORICOS.slice().sort((a, b) => inicioEvento(a) - inicioEvento(b) || a.titulo.localeCompare(b.titulo, "es")), []);
   // Los hitos puramente narrativos de una Historia no forman parte de la cronología
   // general. Reaparecen automáticamente cuando ese paso de Historia está activo.
-  const totalEventosTimeline = useMemo(() => eventosOrdenadosTodos.filter((evento) => nivelTimelineEvento(evento) !== "historia").length, [eventosOrdenadosTodos]);
   const eventosOrdenados = useMemo(() => eventosOrdenadosTodos.filter((evento) => {
     const nivel = nivelTimelineEvento(evento);
     return nivel !== "historia" || evento.id === eventoSeleccionadoId;
@@ -581,16 +559,6 @@ export default function Explorer({ initialPanel = null, treeBase: TREE_BASE, loa
         ? "workspace-layout-right"
         : "workspace-layout-center";
 
-  const alternarVista = useCallback((vista) => {
-    setVistasActivas((actuales) => {
-      const otraVista = vista === "arbol" ? "mapa" : "arbol";
-      // La zona central nunca queda vacía: si solo hay una vista activa,
-      // pulsarla de nuevo la mantiene y obliga a activar la otra primero.
-      if (actuales[vista] && !actuales[otraVista]) return actuales;
-      return { ...actuales, [vista]: !actuales[vista] };
-    });
-  }, []);
-
   const alternarPanelAuxiliar = useCallback((panel) => {
     setPanelesVisibles((actuales) => ({ ...actuales, [panel]: !actuales[panel] }));
   }, []);
@@ -601,85 +569,6 @@ export default function Explorer({ initialPanel = null, treeBase: TREE_BASE, loa
 
   const alternarSeccionBio = useCallback((seccion) => {
     setBioSectionsOpen((actuales) => ({ ...actuales, [seccion]: !actuales[seccion] }));
-  }, []);
-
-  const ajustarAnchoPanel = useCallback((lado, delta) => {
-    const min = lado === "filtros" ? 210 : 260;
-    const max = lado === "filtros" ? 420 : 520;
-    setPanelWidths((actuales) => ({
-      ...actuales,
-      [lado]: limitarNumero(actuales[lado] + delta, min, max, actuales[lado]),
-    }));
-  }, []);
-
-  const restablecerAnchoPanel = useCallback((lado) => {
-    setPanelWidths((actuales) => ({ ...actuales, [lado]: DEFAULT_PANEL_WIDTHS[lado] }));
-  }, []);
-
-  const comenzarResizeLateral = useCallback((lado, event) => {
-    if (event?.button !== undefined && event.button !== 0) return;
-    const grid = workspaceGridRef.current;
-    if (!grid || typeof window === "undefined") return;
-    event.preventDefault();
-    const startX = event.clientX;
-    const rect = grid.getBoundingClientRect();
-    const otroVisible = lado === "filtros" ? mostrarBiografia : mostrarFiltros;
-    const min = lado === "filtros" ? 210 : 260;
-    const responsiveMax = window.innerWidth <= 1240
-      ? (lado === "filtros" ? 255 : 285)
-      : (lado === "filtros" ? 420 : 520);
-    const startWidth = Math.min(panelWidths[lado], responsiveMax);
-    const otroWidthBase = lado === "filtros" ? panelWidths.biografia : panelWidths.filtros;
-    const otroWidth = window.innerWidth <= 1240
-      ? Math.min(otroWidthBase, lado === "filtros" ? 285 : 255)
-      : otroWidthBase;
-    const hardMax = responsiveMax;
-    const espacioHandles = otroVisible ? 32 : 16;
-    const maxPorEspacio = rect.width - (otroVisible ? otroWidth : 0) - 420 - espacioHandles;
-    const max = Math.max(min, Math.min(hardMax, maxPorEspacio));
-
-    const onMove = (moveEvent) => {
-      const delta = lado === "filtros" ? moveEvent.clientX - startX : startX - moveEvent.clientX;
-      setPanelWidths((actuales) => ({
-        ...actuales,
-        [lado]: limitarNumero(startWidth + delta, min, max, startWidth),
-      }));
-    };
-    const onEnd = () => {
-      window.removeEventListener("pointermove", onMove);
-      window.removeEventListener("pointerup", onEnd);
-      window.removeEventListener("pointercancel", onEnd);
-      document.body.classList.remove("atlas-is-resizing");
-    };
-
-    document.body.classList.add("atlas-is-resizing");
-    window.addEventListener("pointermove", onMove);
-    window.addEventListener("pointerup", onEnd);
-    window.addEventListener("pointercancel", onEnd);
-  }, [panelWidths, mostrarBiografia, mostrarFiltros]);
-
-  const comenzarResizeArbolMapa = useCallback((event) => {
-    if (event?.button !== undefined && event.button !== 0) return;
-    const main = workspaceMainRef.current;
-    if (!main || typeof window === "undefined") return;
-    event.preventDefault();
-    const rect = main.getBoundingClientRect();
-    const actualizar = (clientY) => {
-      const porcentaje = ((clientY - rect.top) / Math.max(1, rect.height)) * 100;
-      setTreeMapSplit(limitarNumero(porcentaje, 25, 75, 50));
-    };
-    const onMove = (moveEvent) => actualizar(moveEvent.clientY);
-    const onEnd = () => {
-      window.removeEventListener("pointermove", onMove);
-      window.removeEventListener("pointerup", onEnd);
-      window.removeEventListener("pointercancel", onEnd);
-      document.body.classList.remove("atlas-is-resizing");
-    };
-    actualizar(event.clientY);
-    document.body.classList.add("atlas-is-resizing");
-    window.addEventListener("pointermove", onMove);
-    window.addEventListener("pointerup", onEnd);
-    window.addEventListener("pointercancel", onEnd);
   }, []);
 
   const personasVivasEnAnio = useMemo(() =>
@@ -849,7 +738,6 @@ export default function Explorer({ initialPanel = null, treeBase: TREE_BASE, loa
     seleccionarPersonaPorId(searchMatchIds[next], { centrar: Boolean(positions[searchMatchIds[next]]) });
   };
 
-  const hayFiltros = Boolean(query || territorios.length || dinastias.length || titulos.length || siglos.length || relaciones.length || soloFavoritos || soloDocumentados);
   const limpiarSoloFiltros = () => { setTerritorios([]); setDinastias([]); setTitulos([]); setSiglos([]); setRelaciones([]); setSoloFavoritos(false); setSoloDocumentados(false); };
   const limpiar = () => { setQuery(""); limpiarSoloFiltros(); };
 
@@ -1654,7 +1542,7 @@ export default function Explorer({ initialPanel = null, treeBase: TREE_BASE, loa
     window.location.assign(destino);
   }, [locale]);
 
-  if (locale === "en") return <EnglishLanding />;
+  if (locale === "en") return <EnglishPage />;
 
   const getExportSelection = (scope) => {
     let ids, edges, title;
@@ -1713,32 +1601,32 @@ export default function Explorer({ initialPanel = null, treeBase: TREE_BASE, loa
     growth,
     storyReturn,
     connectionIds, setConnectionIds, connectionCriterion, setConnectionCriterion, connectionResult, getExportSelection,
-    initialMapViewport: mapViewportRef.current, recordMapViewport, timelineVirtual, timelineListRef, scrollRef, tlScrollRef, locale, setLocale, query, setQuery,
+    initialMapViewport: mapViewportRef.current, recordMapViewport, timelineVirtual, timelineListRef, scrollRef, tlScrollRef, locale, query, setQuery,
     territorios, setTerritorios, dinastias, setDinastias, dinastiasExpandidas, setDinastiasExpandidas, territoriosExpandidos, setTerritoriosExpandidos,
-    titulos, setTitulos, siglos, setSiglos, relaciones, setRelaciones, hovered, setHovered,
-    seleccion, setSeleccion, currentSearchIndex, setCurrentSearchIndex, zoom, setZoom, mode, setMode,
-    origen, setOrigen, destino, setDestino, modoComparacion, setModoComparacion, compareMenuOpen, setCompareMenuOpen,
-    compareRouteIndex, setCompareRouteIndex, focoMenuOpen, setFocoMenuOpen, focoId, setFocoId, focoAlcance, setFocoAlcance,
-    anioGlobal, setAnioGlobal, anioInput, setAnioInput, reproduciendoHistoria, setReproduciendoHistoria,
-    shareStatus, setShareStatus, collapsedIds, setCollapsedIds, vistasActivas, setVistasActivas, panelesVisibles, setPanelesVisibles,
-    atlasScene, changeAtlasScene, infoProyecto, setInfoProyecto, timelineScaleIndex, setTimelineScaleIndex, timelineMode, setTimelineMode, eventoSeleccionadoId, setEventoSeleccionadoId,
-    favoritos, setFavoritos, favoritosOpen, setFavoritosOpen, soloFavoritos, setSoloFavoritos, soloDocumentados, setSoloDocumentados, historiaActivaId, setHistoriaActivaId,
-    historiaPasoIndex, setHistoriaPasoIndex, compareMenuRef, focoMenuRef, favoritosMenuRef, historiaSnapshotRef, shareStatusTimerRef, urlStateLoadedRef,
-    territorialFilterMode,setTerritorialFilterMode,historyPopRef, dragState, workspaceGridRef, workspaceMainRef, panelWidths, setPanelWidths, treeMapSplit, setTreeMapSplit, filterSectionsOpen, setFilterSectionsOpen,
-    bioSectionsOpen, setBioSectionsOpen, personHistory, modoTrabajo, setModoTrabajo,
-    alternarSeccionFiltro, alternarSeccionBio, ajustarAnchoPanel, restablecerAnchoPanel, comenzarResizeLateral, comenzarResizeArbolMapa,
-    gen, rows, graph, favoritosSet, timelinePeople, timelinePxPerYear, timelineTrackWidth,
-    eventosOrdenadosTodos, totalEventosTimeline, eventosOrdenados, eventoSeleccionado,
-    historiaActiva, historiaPasoActual, historiaPersonasSet, opciones, personaBio, toggle, focoSet, collapsedSet,
-    hiddenByCollapse, toggleDescendants, ajustarAnio, actualizarAnioDesdeRango, confirmarAnioEscrito, restablecerAnio, moverAnioHistoria, alternarReproduccionHistoria,
-    mostrarArbol, mostrarMapa, mostrarFiltros, mostrarBiografia, mostrarCronologia, vistaPrincipal, layoutLaterales, alternarVista,
-    alternarPanelAuxiliar, personasVivasEnAnio, gobernantesActivosEnAnio, matches, visiblePeople, visibleIds, visibleSignature, visibleRows,
-    treeLayout, renderedTreeUnits, positions, canvasSize, queryTrim, searchMatchIds, searchMatchSet, searchSignature, searchCurrentId,
-    irACoincidencia, hayFiltros, limpiar, limpiarSoloFiltros, lineage, comparePaths, comparePath, pathEdges, groupsByRow,
-    routing, relacionFocoId, amantesFoco, styleForFamilyLine, connectorLayerKey, connectors, scrollBy, onPointerDown,
-    onPointerMove, endDrag, centerOn, pendingZoomCenterRef, cambiarZoomArbol, centerOnTimeline, seleccionarPersonaPorId, navegarHistorialPersona, centrarSeleccion, cerrarSeleccion,
-    centerTimelineOnYear, alternarFavorito, seleccionarEvento, aplicarPasoHistoria, iniciarHistoria, cambiarPasoHistoria, salirHistoria, mostrarEstadoCompartir,
-    construirEnlaceCompartido, compartirPersona, handleBoxClick, getBoxHandlers, renderPersonBox, miniW, miniScaleX, miniScaleY,
+    titulos, setTitulos, siglos, setSiglos, relaciones, setRelaciones, hovered,
+    seleccion, currentSearchIndex, zoom, mode, setMode,
+    origen, setOrigen, destino, setDestino, modoComparacion, compareMenuOpen, setCompareMenuOpen,
+    compareRouteIndex, setCompareRouteIndex, setFocoMenuOpen, focoId, setFocoId, focoAlcance, setFocoAlcance,
+    anioGlobal, anioInput, setAnioInput, reproduciendoHistoria, setReproduciendoHistoria,
+    shareStatus, collapsedIds, setCollapsedIds, setVistasActivas,
+    atlasScene, changeAtlasScene, infoProyecto, setInfoProyecto, timelineScaleIndex, setTimelineScaleIndex, timelineMode, setTimelineMode, setEventoSeleccionadoId,
+    favoritos, setFavoritos, favoritosOpen, setFavoritosOpen, soloFavoritos, setSoloFavoritos, soloDocumentados, setSoloDocumentados,
+    historiaPasoIndex, compareMenuRef, favoritosMenuRef,
+    territorialFilterMode, setTerritorialFilterMode, filterSectionsOpen,
+    bioSectionsOpen, personHistory, modoTrabajo, setModoTrabajo,
+    alternarSeccionFiltro, alternarSeccionBio,
+    graph, favoritosSet, timelinePeople, timelinePxPerYear, timelineTrackWidth,
+    eventosOrdenados, eventoSeleccionado,
+    historiaActiva, opciones, personaBio, toggle, focoSet,
+    hiddenByCollapse, actualizarAnioDesdeRango, confirmarAnioEscrito, restablecerAnio, moverAnioHistoria, alternarReproduccionHistoria,
+    mostrarArbol, mostrarMapa, mostrarFiltros, mostrarBiografia, mostrarCronologia, vistaPrincipal, layoutLaterales,
+    alternarPanelAuxiliar, personasVivasEnAnio, gobernantesActivosEnAnio, visiblePeople,
+    renderedTreeUnits, positions, canvasSize, queryTrim, searchMatchIds,
+    irACoincidencia, limpiarSoloFiltros, comparePaths, comparePath,
+    connectorLayerKey, connectors, scrollBy, onPointerDown,
+    onPointerMove, endDrag, cambiarZoomArbol, seleccionarPersonaPorId, navegarHistorialPersona, centrarSeleccion, cerrarSeleccion,
+    centerTimelineOnYear, alternarFavorito, seleccionarEvento, aplicarPasoHistoria, iniciarHistoria, cambiarPasoHistoria, salirHistoria,
+    compartirPersona, renderPersonBox, miniScaleX, miniScaleY,
     onMinimapClick, filtrosActivosCompactos, cambiarIdioma,
   };
   return <ExplorerView vm={viewModel} loading={loading} loadError={loadError} onRetry={onRetry} ready={ready} />;

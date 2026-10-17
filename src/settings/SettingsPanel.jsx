@@ -1,4 +1,4 @@
-import React,{useEffect,useRef,useState} from 'react';
+import {useEffect,useRef,useState} from 'react';
 import {Settings2,X} from 'lucide-react';
 import {applyPreferences,clearLocalData,DEFAULT_PREFERENCES,readPreferences,savePreferences} from './preferences.js';
 import './settings.css';

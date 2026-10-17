@@ -1,4 +1,3 @@
-import React from 'react';
 import './motion.css';
 
 export default function ProgressMeter({value, max, label, id, className = ''}) {

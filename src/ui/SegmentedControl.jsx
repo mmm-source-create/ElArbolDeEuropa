@@ -1,4 +1,4 @@
-import React, {useEffect, useRef, useState} from 'react';
+import {useEffect, useRef, useState} from 'react';
 import './motion.css';
 
 // `rail` adds the Snap Rail behaviour: the pill previews the option under the

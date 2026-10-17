@@ -1,4 +1,4 @@
-import React,{useEffect,useId,useMemo,useRef,useState} from 'react';
+import {useEffect,useId,useMemo,useRef,useState} from 'react';
 import {ArrowLeft,ArrowRight,Copy,Shuffle,RotateCcw} from 'lucide-react';
 import {HISTORIAS,EVENTOS_HISTORICOS} from '../historiaData.jsx';
 import {normalizarBusquedaPublica} from '../utils/personLabels.js';

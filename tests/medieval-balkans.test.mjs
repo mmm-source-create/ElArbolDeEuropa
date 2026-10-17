@@ -6,7 +6,7 @@ import {personClaims} from '../src/evidence/claims.js';
 import {mapAuthoritiesForPerson} from '../src/data/mapAuthorities.js';
 import {reviewedMapLayers, reviewedLayerLocations} from '../src/data/locationMapPilot.js';
 import {territorialIdentity, territorialLabel, territorialColor} from '../src/data/territorialIdentity.js';
-import {atlasPoliticalMosaicAt} from '../prototypes/euv-locations/atlas-mosaic.js';
+import {atlasPoliticalMosaicAt} from '../src/data/atlasMosaic.js';
 import {mergeMapExpansions} from '../scripts/cartography/merge-map-expansions.mjs';
 import {applyMedievalBalkans} from '../scripts/cartography/apply-medieval-balkans.mjs';
 
@@ -14,7 +14,6 @@ const read = name => JSON.parse(fs.readFileSync(new URL(name, import.meta.url), 
 const data = read('../prototypes/euv-locations/corridor-locations.json');
 const review = read('../prototypes/euv-locations/medieval-balkans-review.json');
 const people = new Map(PERSONAS.map(person => [person.id, person]));
-const layers = new Map(reviewedMapLayers(data).map(layer => [layer.name, layer]));
 const cells = (name, year) => new Set(atlasPoliticalMosaicAt(data, year).layers
   .find(layer => layer.entityId === territorialIdentity(name))?.ids || []);
 const authority = (id, year, territory) => mapAuthoritiesForPerson(people.get(id), year, data)

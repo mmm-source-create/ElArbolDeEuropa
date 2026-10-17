@@ -1,4 +1,3 @@
-import React from 'react';
 import {ArrowUpRight, Coffee} from 'lucide-react';
 import {SUPPORT_URL} from '../siteConfig.js';
 import './project-support.css';

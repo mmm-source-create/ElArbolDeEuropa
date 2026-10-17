@@ -4,7 +4,7 @@ import fs from 'node:fs';
 import {PERSONAS} from '../src/personas.jsx';
 import {mapAuthoritiesForPerson} from '../src/data/mapAuthorities.js';
 import {buildPoliticalMapIndex, inspectMapRegion} from '../src/data/politicalMapIndex.js';
-import {auditLocationMap, atlasLocationIds} from '../src/data/locationMapAudit.js';
+import {auditLocationMap, atlasLocationIds} from '../scripts/audits/lib/locationMapAudit.js';
 import {pilotLocationContext, pilotLocationsFor} from '../src/data/locationMapPilot.js';
 
 const data = JSON.parse(fs.readFileSync(new URL('../prototypes/euv-locations/corridor-locations.json', import.meta.url)));
