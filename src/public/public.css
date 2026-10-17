@@ -268,3 +268,20 @@ html .public-not-found>section>span{color:#7c5426}
 .public-long-bio section+section{margin-top:22px}
 .public-long-bio h3{margin:0 0 6px;color:var(--eade-ink);font:600 var(--fs-xl, 18px)/1.25 var(--eade-serif)}
 .public-long-bio p{margin:0;color:var(--eade-muted);font:400 var(--fs-lg, 15px)/1.72 var(--eade-serif);text-wrap:pretty}
+
+/* V5.20 · Tres puertas de intención en la portada: un verbo, no una sección. */
+.home-intents{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;max-width:920px;margin:30px auto 8px;text-align:left}
+.home-intent{position:relative;display:grid;align-content:start;gap:8px;min-height:150px;padding:20px 20px 46px;border:1px solid var(--eade-border);border-radius:10px;background:var(--eade-paper-bright);color:var(--eade-ink);text-decoration:none;transition:transform .32s cubic-bezier(.34,1.56,.64,1),border-color .2s,box-shadow .25s}
+.home-intent>svg:first-child{color:var(--eade-wine)}
+.home-intent strong{font:600 var(--fs-xl,18px)/1.15 var(--eade-serif)}
+.home-intent span{color:var(--eade-muted);font:var(--fs-md,13px)/1.5 var(--eade-sans)}
+.home-intent-arrow{position:absolute;right:18px;bottom:18px;color:var(--eade-wine);transition:transform .32s cubic-bezier(.34,1.56,.64,1)}
+.home-intent:is(:hover,:focus-visible){transform:translateY(-3px);border-color:var(--eade-border-strong);box-shadow:0 12px 30px #0000001a}
+.home-intent:is(:hover,:focus-visible) .home-intent-arrow{transform:translateX(4px)}
+.home-intent:active{transform:translateY(-1px) scale(.99)}
+.home-intent:focus-visible{outline:2px solid var(--eade-wine);outline-offset:3px}
+.home-intent-familia{border-color:color-mix(in srgb,var(--eade-wine) 45%,var(--eade-border))}
+html[data-eade-theme="dark"] .public-site .home-intent{background:var(--eade-paper-bright);border-color:var(--eade-border);color:var(--eade-ink)}
+html[data-eade-theme="dark"] .public-site .home-intent-familia{border-color:color-mix(in srgb,var(--eade-wine) 45%,var(--eade-border))}
+@media(max-width:760px){.home-intents{grid-template-columns:1fr}.home-intent{min-height:0;padding-bottom:20px;padding-right:46px}.home-intent-arrow{top:50%;bottom:auto;transform:translateY(-50%)}.home-intent:is(:hover,:focus-visible) .home-intent-arrow{transform:translate(4px,-50%)}}
+@media(prefers-reduced-motion:reduce){.home-intent,.home-intent-arrow{transition:none}}

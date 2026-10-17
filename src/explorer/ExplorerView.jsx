@@ -46,7 +46,6 @@ import "./atlas-interactions.css";
 import "../styles/v518.css";
 import "../styles/v519.css";
 
-const VIEW_OPTIONS = [{value:'arbol',label:'Árbol'},{value:'mapa',label:'Mapa'},{value:'ambos',label:'Árbol y mapa'}];
 const BIO_OPTIONS = ['resumen','familia','coronas','historias','fuentes'].map((value,index)=>({value,label:['Resumen','Familia','Coronas','Historias','Fuentes'][index],controls:`bio-section-${value}`}));
 
 const SEARCH_DYNASTIES = [...new Set(PERSONAS.map(persona => persona.dinastia).filter(Boolean))];
@@ -55,7 +54,8 @@ const IRISH_MAP_TERRITORIES = new Set(['Irlanda','Connacht','Leinster','Tír Eog
 
 const EuropeYearView = React.lazy(() => import('./EuropeYearView.jsx'));
 const TERRITORY_FILTER_MODES=[{value:'associated',label:'Vinculados'},{value:'government',label:'Gobernaban en el año'}];
-const SCENES=[{value:'atlas',label:'Atlas'},{value:'europa',label:'Europa en este año'}];
+// V5.20 · Un único nivel de pestañas: escena y vista eran dos selectores apilados.
+const ATLAS_TABS=[{value:'familia',label:'Familia'},{value:'mapa',label:'Mapa'},{value:'europa',label:'Europa en un año'},{value:'cronologia',label:'Línea temporal'}];
 const AtlasCrowns = React.lazy(() => import('./AtlasCrowns.jsx'));
 
 function FilterSection({ title, open, onToggle, activeCount = 0, children }) {
@@ -188,7 +188,7 @@ export default function ExplorerView({ vm, loading = false, loadError = false, o
     compareRouteIndex, setCompareRouteIndex, focoMenuOpen, setFocoMenuOpen, focoId, setFocoId, focoAlcance, setFocoAlcance,
     anioGlobal, setAnioGlobal, anioInput, setAnioInput, reproduciendoHistoria, setReproduciendoHistoria,
     shareStatus, setShareStatus, collapsedIds, setCollapsedIds, vistasActivas, setVistasActivas, panelesVisibles, setPanelesVisibles,
-    atlasScene, changeAtlasScene, infoProyecto, setInfoProyecto, timelineScaleIndex, setTimelineScaleIndex, timelineMode, setTimelineMode, eventoSeleccionadoId, setEventoSeleccionadoId,
+    atlasScene, changeAtlasScene, timelineTab, setTimelineTab, infoProyecto, setInfoProyecto, timelineScaleIndex, setTimelineScaleIndex, timelineMode, setTimelineMode, eventoSeleccionadoId, setEventoSeleccionadoId,
     favoritos, setFavoritos, favoritosOpen, setFavoritosOpen, soloFavoritos, setSoloFavoritos, soloDocumentados, setSoloDocumentados, historiaActivaId, setHistoriaActivaId,
     historiaPasoIndex, setHistoriaPasoIndex, compareMenuRef, focoMenuRef, favoritosMenuRef, historiaSnapshotRef, shareStatusTimerRef, urlStateLoadedRef,
     territorialFilterMode,setTerritorialFilterMode,historyPopRef, dragState, workspaceGridRef, workspaceMainRef, panelWidths, setPanelWidths, treeMapSplit, setTreeMapSplit, filterSectionsOpen, setFilterSectionsOpen,
@@ -216,6 +216,34 @@ export default function ExplorerView({ vm, loading = false, loadError = false, o
     ? personHistory.ids[personHistory.index + 1]
     : null;
   const canAddFamily = Boolean(seleccion && !historiaActiva && vm.growth.ids !== null && vm.growth.additions.family.length);
+  // The companion map is a layout choice of the Familia tab; remember it while
+  // the Mapa or Línea temporal tabs are open.
+  const mapaJuntoRef = React.useRef(mostrarArbol ? mostrarMapa : true);
+  // «Explorar una familia» en la portada abre el Atlas con el buscador listo.
+  const searchInputRef = React.useRef(null);
+  React.useEffect(() => {
+    if (!ready || typeof window === 'undefined') return;
+    const url = new URL(window.location.href);
+    if (url.searchParams.get('buscar') !== '1') return;
+    url.searchParams.delete('buscar');
+    window.history.replaceState(window.history.state, '', url.pathname + url.search + url.hash);
+    searchInputRef.current?.focus({preventScroll: true});
+  }, [ready]);
+  const atlasTab = atlasScene === 'europa' ? 'europa' : timelineTab ? 'cronologia' : (!mostrarArbol && mostrarMapa) ? 'mapa' : 'familia';
+  const marcarVistaUrl = tab => {
+    const url = new URL(window.location.href);
+    if (tab === 'cronologia') url.searchParams.set('vista', 'cronologia'); else url.searchParams.delete('vista');
+    window.history.replaceState(window.history.state, '', url.pathname + url.search + url.hash);
+  };
+  const cambiarPestanaAtlas = tab => {
+    if (tab === 'europa') { if (atlasScene !== 'europa') changeAtlasScene('europa'); marcarVistaUrl(tab); return; }
+    if (atlasScene !== 'atlas') changeAtlasScene('atlas');
+    setTimelineTab(tab === 'cronologia');
+    if (tab === 'mapa') setVistasActivas({arbol: false, mapa: true});
+    if (tab === 'familia') setVistasActivas({arbol: true, mapa: mapaJuntoRef.current});
+    marcarVistaUrl(tab);
+  };
+  const alternarMapaJunto = () => { mapaJuntoRef.current = !mostrarMapa; setVistasActivas({arbol: true, mapa: !mostrarMapa}); };
   const searchResults = React.useMemo(() => atlasSearch(queryTrim, {
     people: PERSONAS, dynasties: SEARCH_DYNASTIES, territories: SEARCH_TERRITORIES,
     stories: HISTORIAS, events: EVENTOS_HISTORICOS, normalize: normalizaTexto,
@@ -263,13 +291,14 @@ export default function ExplorerView({ vm, loading = false, loadError = false, o
       {loadError && <AtlasLoadError onRetry={onRetry}/>}
       {!modoTrabajo && <SiteHeader variant="atlas" locale={locale} onLanguageChange={cambiarIdioma} />}
     <div className={`wrap atlas-scene-${atlasScene}${modoTrabajo ? " atlas-work-mode" : ""}`} inert={!ready}>
-      <div className="atlas-scene-switch"><SegmentedControl rail options={SCENES} value={atlasScene} onChange={changeAtlasScene} label="Modo de exploración"/></div>
+      <nav className="atlas-scene-switch" aria-label="Vistas del Atlas"><SegmentedControl rail options={ATLAS_TABS} value={atlasTab} onChange={cambiarPestanaAtlas} label="Vista del Atlas"/></nav>
       <div className={`workspace-topbar${modoTrabajo ? " is-work-mode" : ""}`}>
         <section className="workspace-topbar-section workspace-toolbar-search" onBlur={e=>{if(!e.currentTarget.contains(e.relatedTarget))setSearchOpen(false);}}>
           <div className="toolbar-label sk" style={{"--sk-index":0}}>Búsqueda</div>
           <div className="search-box toolbar-search-box sk" style={{"--sk-index":1}}>
             <Search size={13} aria-hidden="true" />
             <input
+              ref={searchInputRef}
               placeholder="Buscar personas, casas, lugares, historias…"
               aria-label="Buscar en todo el Atlas"
               aria-expanded={searchOpen && Boolean(queryTrim)}
@@ -404,17 +433,16 @@ export default function ExplorerView({ vm, loading = false, loadError = false, o
           </div>
         </section>
 
-        {!modoTrabajo && atlasScene === "atlas" && <button type="button" className="atlas-tools-toggle" aria-expanded={mobileToolsOpen} aria-controls="atlas-secondary-tools" onClick={()=>setMobileToolsOpen(open=>!open)}>Vistas y herramientas <ChevronDown size={12}/></button>}
+        {!modoTrabajo && atlasScene === "atlas" && <button type="button" className="atlas-tools-toggle" aria-expanded={mobileToolsOpen} aria-controls="atlas-secondary-tools" onClick={()=>setMobileToolsOpen(open=>!open)}>Paneles y herramientas <ChevronDown size={12}/></button>}
         {!modoTrabajo && atlasScene === "atlas" && (
         <div id="atlas-secondary-tools" className={`workspace-topbar-secondary${mobileToolsOpen?' is-expanded':''}`}>
           <section className="workspace-topbar-section workspace-toolbar-view workspace-toolbar-panels">
-            <SegmentedControl rail className="atlas-view-pills" label="Vista principal" options={VIEW_OPTIONS} value={mostrarArbol && mostrarMapa ? 'ambos' : mostrarMapa ? 'mapa' : 'arbol'} onChange={value=>setVistasActivas({arbol:value!=='mapa',mapa:value!=='arbol'})}/>
             <details ref={panelsMenuRef} className="atlas-toolbar-menu atlas-panels-menu" onToggle={onToolbarMenuToggle}>
               <summary className="ui-tip" data-tip="Paneles"><PanelsTopLeft size={14} aria-hidden="true" /><span className="ui-sr-only">Paneles</span></summary>
               <div className="atlas-toolbar-menu-panel" role="group" aria-label="Paneles visibles">
                 <button type="button" aria-pressed={mostrarFiltros} onClick={() => alternarPanelAuxiliar('filtros')}>Filtros</button>
                 <button type="button" aria-pressed={mostrarBiografia} onClick={() => alternarPanelAuxiliar('biografia')}>Biografía</button>
-                <button type="button" aria-pressed={mostrarCronologia} onClick={() => alternarPanelAuxiliar('cronologia')}>Cronología</button>
+                <button type="button" aria-pressed={atlasTab === 'familia' && mostrarMapa} disabled={atlasTab !== 'familia'} title={atlasTab === 'familia' ? undefined : 'Disponible en la pestaña Familia'} onClick={alternarMapaJunto}>Mapa junto al árbol</button>
               </div>
             </details>
           </section>
@@ -752,13 +780,14 @@ export default function ExplorerView({ vm, loading = false, loadError = false, o
 
         <main
           ref={workspaceMainRef}
-          className={`workspace-main workspace-main-${vistaPrincipal}`}
-          style={mostrarArbol && mostrarMapa ? {
+          className={`workspace-main workspace-main-${timelineTab ? 'cronologia' : vistaPrincipal}`}
+          style={mostrarArbol && mostrarMapa && !timelineTab ? {
             "--tree-pane-fr": `${treeMapSplit}fr`,
             "--map-pane-fr": `${100 - treeMapSplit}fr`,
           } : undefined}
         >
-          {mostrarArbol && (
+          {timelineTab && <AtlasTimeline vm={vm}/>}
+          {mostrarArbol && !timelineTab && (
             <section className={`workspace-stage sk dim workspace-tree-stage${mostrarMapa ? " tree-with-map" : ""}${historiaActiva ? " story-tree-stage" : ""}${treeListOpen ? " showing-list" : ""}`} aria-label="Árbol genealógico">
               <div className="tree-toolbar" aria-label="Controles del árbol">
                 <span className="tree-scope-label sk" style={{"--sk-index":2}}>{visiblePeople.length} personas</span>
@@ -874,7 +903,7 @@ export default function ExplorerView({ vm, loading = false, loadError = false, o
             ><span /></div>
           )}
 
-          {mostrarMapa && atlasScene === 'atlas' && (
+          {mostrarMapa && atlasScene === 'atlas' && !timelineTab && (
             <section className="workspace-stage workspace-map-stage" aria-label="Mapa de territorios">
               <MapaEuropa
                 initialViewport={initialMapViewport}
@@ -1147,7 +1176,6 @@ export default function ExplorerView({ vm, loading = false, loadError = false, o
 
       </div>
       </div>
-      {mostrarCronologia && atlasScene === 'atlas' && <AtlasTimeline vm={vm}/>}
 
       {!modoTrabajo && (
         <SiteFooter
@@ -1160,7 +1188,7 @@ export default function ExplorerView({ vm, loading = false, loadError = false, o
       {!modoTrabajo && !guideOpen && !infoProyecto && <ActionDial className="atlas-quick-actions" label="Acciones del Atlas" actions={[
         {id:'center',label:'Centrar persona',Icon:Crosshair,disabled:!seleccion,onClick:centrarSeleccion},
         {id:'filters',label:mostrarFiltros?'Ocultar filtros':'Mostrar filtros',Icon:SlidersHorizontal,onClick:()=>alternarPanelAuxiliar('filtros')},
-        {id:'timeline',label:mostrarCronologia?'Ocultar cronología':'Mostrar cronología',Icon:List,onClick:()=>alternarPanelAuxiliar('cronologia')},
+        {id:'timeline',label:timelineTab?'Volver a la familia':'Ver línea temporal',Icon:List,onClick:()=>cambiarPestanaAtlas(timelineTab?'familia':'cronologia')},
       ]}/>}
       {guideOpen && <AtlasGuide locale={locale} onClose={closeGuide} onSelect={() => vm.growth.onSelect('CARLOS5')} onExpand={() => vm.growth.onExpand('family')} onYear={() => actualizarAnioDesdeRango(1500)} selectedId={seleccion?.id} canExpand={canAddFamily} />}
       {infoProyecto === 'cobertura' && <CoverageDialog onClose={() => setInfoProyecto(null)} />}

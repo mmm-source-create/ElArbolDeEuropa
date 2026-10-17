@@ -183,6 +183,8 @@ export default function Explorer({ initialPanel = null, treeBase: TREE_BASE, loa
   const [personHistory, setPersonHistory] = useState(savedSession?.personHistory ?? { ids: [], index: -1 });
   const [modoTrabajo, setModoTrabajo] = useState(false);
   const [infoProyecto, setInfoProyecto] = useState(initialPanel === "europa" ? null : initialPanel);
+  // V5.20 · La línea temporal es una pestaña del Atlas, no un panel bajo el árbol.
+  const [timelineTab,setTimelineTab] = useState(()=>typeof window!=="undefined"&&new URLSearchParams(window.location.search).get("vista")==="cronologia");
   const [atlasScene,setAtlasScene] = useState(()=>new URLSearchParams(window.location.search).get("escena") === "europa" || initialPanel === "europa" ? "europa" : savedSession?.atlasScene || "atlas");
   const [timelineScaleIndex, setTimelineScaleIndex] = useState(Math.min(TIMELINE_SCALES.length - 1, savedSession?.timelineScaleIndex ?? 1));
   const [timelineMode, setTimelineMode] = useState(savedSession?.timelineMode ?? "ambos");
@@ -739,7 +741,7 @@ export default function Explorer({ initialPanel = null, treeBase: TREE_BASE, loa
   const visiblePeople = useMemo(() => PERSONAS.filter(matches), [atlasSet, connectionSet, hiddenByCollapse, focoSet, soloFavoritos, favoritosSet, soloDocumentados, documentedPeopleSet, territorios, dinastias, titulos, siglos, relaciones, opciones.otrasDinastias,anioGlobal,territorialFilterMode]);
   const timelinePeople=atlasScene==='europa'?PERSONAS:visiblePeople;
   const timelineRows = useMemo(()=>timelineMode === 'eventos' ? [] : buildTimelineRows(timelinePeople,timelinePxPerYear),[timelinePeople,timelinePxPerYear,timelineMode]);
-  const timelineVirtual = useVirtualRows(timelineRows, tlScrollRef, timelineListRef, mostrarCronologia);
+  const timelineVirtual = useVirtualRows(timelineRows, tlScrollRef, timelineListRef, mostrarCronologia || timelineTab);
   // A packed lane can contain several people; all retain their own navigation anchor.
   for(const row of timelineVirtual.items) for(const entry of row.people || []) timelineVirtual.byKey.set(`person:${entry.person.id}`,row);
   const visibleIds = visiblePeople.map((persona) => persona.id);
@@ -1611,6 +1613,7 @@ export default function Explorer({ initialPanel = null, treeBase: TREE_BASE, loa
   const changeAtlasScene = useCallback(scene=>{
     setReproduciendoHistoria(false);
     setAtlasScene(scene);
+    if(scene==='europa')setTimelineTab(false);
     requestAnimationFrame(()=>window.scrollTo({top:0,behavior:"instant"}));
     if(scene==='europa'&&!Number.isInteger(anioGlobal)){setAnioGlobal(1500);setAnioInput('1500');}
     const url=new URL(window.location.href);
@@ -1718,7 +1721,7 @@ export default function Explorer({ initialPanel = null, treeBase: TREE_BASE, loa
     compareRouteIndex, setCompareRouteIndex, focoMenuOpen, setFocoMenuOpen, focoId, setFocoId, focoAlcance, setFocoAlcance,
     anioGlobal, setAnioGlobal, anioInput, setAnioInput, reproduciendoHistoria, setReproduciendoHistoria,
     shareStatus, setShareStatus, collapsedIds, setCollapsedIds, vistasActivas, setVistasActivas, panelesVisibles, setPanelesVisibles,
-    atlasScene, changeAtlasScene, infoProyecto, setInfoProyecto, timelineScaleIndex, setTimelineScaleIndex, timelineMode, setTimelineMode, eventoSeleccionadoId, setEventoSeleccionadoId,
+    atlasScene, changeAtlasScene, timelineTab, setTimelineTab, infoProyecto, setInfoProyecto, timelineScaleIndex, setTimelineScaleIndex, timelineMode, setTimelineMode, eventoSeleccionadoId, setEventoSeleccionadoId,
     favoritos, setFavoritos, favoritosOpen, setFavoritosOpen, soloFavoritos, setSoloFavoritos, soloDocumentados, setSoloDocumentados, historiaActivaId, setHistoriaActivaId,
     historiaPasoIndex, setHistoriaPasoIndex, compareMenuRef, focoMenuRef, favoritosMenuRef, historiaSnapshotRef, shareStatusTimerRef, urlStateLoadedRef,
     territorialFilterMode,setTerritorialFilterMode,historyPopRef, dragState, workspaceGridRef, workspaceMainRef, panelWidths, setPanelWidths, treeMapSplit, setTreeMapSplit, filterSectionsOpen, setFilterSectionsOpen,

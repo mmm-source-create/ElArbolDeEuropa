@@ -139,7 +139,11 @@ const HOME_COPY = {
     title: "La historia de Europa, vista como una red",
     eyebrow: "Genealogía · política · territorio · 1200–1800",
     introduction: "Recorre familias, coronas, matrimonios, rivalidades y sucesiones en un atlas que une árbol genealógico, mapa, biografías, cronología e historias guiadas.",
-    explore: "Explorar el atlas", stories: "Ver historias", year: "Europa en 1500",
+    intents: [
+      {key: "familia", title: "Explorar una familia", body: "Elige una persona y descubre a sus padres, hijos, parejas y alianzas."},
+      {key: "europa", title: "Ver Europa en un año", body: "Elige un año y mira quién gobernaba cada territorio en el mapa."},
+      {key: "historia", title: "Leer una historia", body: "Recorridos guiados por guerras, dinastías y artistas, capítulo a capítulo."},
+    ], intentsLabel: "¿Por dónde quieres empezar?",
     statsLabel: "Resumen del proyecto", stats: ["personas", "dinastías", "territorios", "historias disponibles"],
     doorsEyebrow: "Entradas rápidas", doorsTitle: "Elige cómo quieres empezar",
     peopleEyebrow: "Personajes destacados", peopleTitle: "Puertas a la red", allPeople: "Ver todas las personas",
@@ -152,7 +156,11 @@ const HOME_COPY = {
     title: "The history of Europe, seen as a network",
     eyebrow: "Genealogy · politics · territory · 1200–1800",
     introduction: "Explore families, crowns, marriages, rivalries and successions in an Atlas that connects genealogy, maps, biographies, timelines and guided stories.",
-    explore: "Explore the Atlas (Spanish)", stories: "Read the stories", year: "Europe in 1500 (Spanish)",
+    intents: [
+      {key: "familia", title: "Explore a family", body: "Choose a person and discover their parents, children, partners and alliances. Atlas in Spanish."},
+      {key: "europa", title: "See Europe in one year", body: "Choose a year and see who ruled each territory on the map. Atlas in Spanish."},
+      {key: "historia", title: "Read a story", body: "Guided journeys through wars, dynasties and artists, chapter by chapter."},
+    ], intentsLabel: "Where would you like to begin?",
     statsLabel: "The complete Atlas", stats: ["people", "dynasties", "territories", "stories in the Atlas"],
     doorsEyebrow: "Ways into the Atlas", doorsTitle: "Choose where to begin",
     peopleEyebrow: "Featured people", peopleTitle: "Doors into the network", allPeople: "All English profiles",
@@ -191,11 +199,18 @@ export function HomeContent({ data = HOME_DATA, locale = "es", title, onEnterAtl
           <div className="public-hero-eyebrow">{copy.eyebrow}</div>
           <h1>{title || copy.title}</h1>
           <p>{copy.introduction}</p>
-          <div className="public-hero-actions">
-            <a className="public-primary" href="/es/?atlas=1" onClick={(event) => navigateInApp(event, onEnterAtlas, null)}>{copy.explore} <ArrowRight size={16} /></a>
-            <a className="public-secondary" href={storiesPath}><BookOpen size={15} /> {copy.stories}</a>
-          </div>
-          <a className="public-home-year" href="/es/?atlas=1&anio=1500&panel=europa"><Landmark size={14}/> {copy.year}</a>
+          <nav className="home-intents" aria-label={copy.intentsLabel}>
+            {copy.intents.map(({key, title: intentTitle, body}) => {
+              const door = {
+                familia: {href: "/es/?atlas=1&buscar=1", Icon: GitBranch, onClick: event => { if (typeof onEnterAtlas !== "function") return; const url = new URL(window.location.href); url.searchParams.set("buscar", "1"); window.history.replaceState(window.history.state, "", url.pathname + url.search); navigateInApp(event, onEnterAtlas, null); }},
+                europa: {href: "/es/?atlas=1&escena=europa&anio=1500", Icon: Landmark, onClick: event => navigateInApp(event, onOpenPanel, "europa")},
+                historia: {href: storiesPath, Icon: BookOpen},
+              }[key];
+              return <a key={key} className={`home-intent home-intent-${key}`} href={door.href} onClick={door.onClick}>
+                <door.Icon size={20} aria-hidden="true"/><strong>{intentTitle}</strong><span>{body}</span><ArrowRight className="home-intent-arrow" size={16} aria-hidden="true"/>
+              </a>;
+            })}
+          </nav>
           {english && <p className="public-home-edition">Selected profiles and stories are available in English. The interactive Atlas is in Spanish.</p>}
           <div className="public-hero-stats" aria-label={copy.statsLabel}>
             {["personas", "dinastias", "territorios", "historias"].map((key, index) => <span key={key}><strong><Odometer value={stats[key]} locale={locale}/></strong>{copy.stats[index]}</span>)}

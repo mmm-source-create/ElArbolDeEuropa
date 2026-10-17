@@ -68,3 +68,11 @@ html[data-eade-theme] .wrap.wrap :is(.bio-panel dt,.bio-panel dd,.bio-sobrenombr
 html[data-eade-theme] .wrap.wrap .bio-texto{font-size:var(--fs-md);line-height:1.6}
 html[data-eade-theme] .wrap.wrap .ui-segments>button{font-size:var(--fs-xs)}
 html[data-eade-theme] .wrap.wrap .bio-tabs .ui-segments>button{font-size:var(--fs-2xs)}
+
+/* V5.20 · Una sola barra de pestañas y la línea temporal como vista principal. */
+html[data-eade-theme] .wrap.wrap .atlas-scene-switch .ui-segments{max-width:100%;overflow-x:auto;scrollbar-width:none}
+html[data-eade-theme] .wrap.wrap .atlas-scene-switch .ui-segments>button{padding:10px 18px;font-size:var(--fs-sm)}
+html[data-eade-theme] .wrap.wrap .workspace-main-cronologia{display:block;min-width:0;overflow:visible}
+html[data-eade-theme] .wrap.wrap .workspace-main-cronologia .atlas-timeline{margin:0;height:100%}
+html[data-eade-theme] .wrap.wrap .workspace-main-cronologia .atlas-timeline-scroll{height:min(68vh,640px)}
+@media(max-width:600px){html[data-eade-theme] .wrap.wrap .atlas-scene-switch{padding-inline:8px}html[data-eade-theme] .wrap.wrap .atlas-scene-switch .ui-segments{gap:0;padding:3px}html[data-eade-theme] .wrap.wrap .atlas-scene-switch .ui-segments>button{padding:9px 8px;font-size:var(--fs-xs)}}
