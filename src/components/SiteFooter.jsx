@@ -1,5 +1,4 @@
 import {SITE_NAME} from "../siteConfig.js";
-import React from "react";
 import {ProjectSupportLink} from './ProjectSupport.jsx';
 
 export default function SiteFooter({ compact = false, onOpenStats, onReport, locale = "es" }) {

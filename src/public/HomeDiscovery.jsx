@@ -1,4 +1,4 @@
-import React, {useEffect, useId, useRef, useState} from 'react';
+import {useEffect, useId, useRef, useState} from 'react';
 import {ArrowLeft, ArrowRight, BookOpen, Crown} from 'lucide-react';
 import {IMAGENES_PERSONAS} from '../imagenesPersonas.js';
 import {responsiveImage} from '../utils/responsiveImage.js';

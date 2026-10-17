@@ -1,4 +1,3 @@
-import React from "react";
 
 export default function BioRelations({ etiqueta, ids, tipo = "familia", byId, hrefForId, onSelect }) {
   const unicos = [...new Set((ids || []).filter(Boolean))];

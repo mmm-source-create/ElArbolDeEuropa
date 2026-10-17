@@ -1,6 +1,6 @@
 import {CrisisSucesoria,RelevoExplicado,PersonLink} from './SuccessionContext.jsx';
 import {coincideMandato} from '../data/successionHistory.js';
-import React, {useMemo, useState} from 'react';
+import {useMemo, useState} from 'react';
 import {sucesionDe} from '../data/sucesion.js';
 
 // La ficha ya contiene los gobiernos y referencias de sus personajes.

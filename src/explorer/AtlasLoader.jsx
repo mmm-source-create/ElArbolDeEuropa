@@ -1,5 +1,5 @@
 import AtlasSkeleton from './AtlasSkeleton.jsx';
-import React, {useEffect, useState} from 'react';
+import {useEffect, useState} from 'react';
 import treeBaseUrl from '../generated/treeBase.json?url';
 import {loadJsonAsset} from '../utils/loadAsset.js';
 export const EMPTY_TREE_BASE = {gen:{}, rows:[], layout:{positions:{}, pairContacts:{},

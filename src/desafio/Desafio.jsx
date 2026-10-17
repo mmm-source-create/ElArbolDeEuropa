@@ -1,5 +1,5 @@
 import {gobiernosDe, territoriosDe} from '../data/personAccessors.js';
-import React, { lazy,Suspense,useCallback, useId, useMemo, useRef, useState } from "react";
+import { lazy,Suspense,useCallback, useId, useMemo, useRef, useState } from "react";
 import {
   ArrowLeft,
   CalendarDays,

@@ -1,7 +1,7 @@
 import {ensureCanonical} from "../public/headMetadata.js";
 import {resolveSiteUrl, SITE_NAME} from "../siteConfig.js";
 import "../App.css";
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import { PERSONAS } from "../personas.jsx";
 import SiteHeader from "../components/SiteHeader.jsx";
 import SiteFooter from "../components/SiteFooter.jsx";

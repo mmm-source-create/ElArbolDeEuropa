@@ -2,7 +2,7 @@ import './explorer/atlas-skeleton.css';
 import {authorityColor} from './data/mapColors.js';
 import {locationLabel} from './data/locationLabels.js';
 import {territoriosDe} from './data/personAccessors.js';
-import React, { useCallback, useEffect, useMemo, useRef, useState } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import {
   ArrowDown,
   ArrowLeft,

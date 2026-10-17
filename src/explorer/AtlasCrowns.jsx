@@ -1,4 +1,3 @@
-import React from 'react';
 import CrownTimeline from '../components/CrownTimeline.jsx';
 import {ACCESOS_CORONAS} from '../content/coronas/index.js';
 import {RELEVOS} from '../content/sucesiones/index.js';

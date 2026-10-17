@@ -1,5 +1,5 @@
 import {resolverRuta} from "./routing.js";
-import React, { lazy, Suspense, useCallback, useEffect, useMemo, useState } from "react";
+import { lazy, Suspense, useCallback, useEffect, useMemo, useState } from "react";
 import { CatalogPage, HomePage, InfoPage, PersonPage } from "./public/PublicSite.jsx";
 
 import AtlasSkeleton from "./explorer/AtlasSkeleton.jsx";

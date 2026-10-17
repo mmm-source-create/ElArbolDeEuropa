@@ -1,6 +1,6 @@
 import {connectionUrl} from '../connections/connectionTree.js';
 import {entityMeta} from "./publicMeta.js";
-import React,{useMemo,useState} from 'react';
+import {useMemo,useState} from 'react';
 import {ArrowRight,Search,Shield} from 'lucide-react';
 import SiteHeader from '../components/SiteHeader.jsx';
 import SiteFooter from '../components/SiteFooter.jsx';

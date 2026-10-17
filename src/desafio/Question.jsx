@@ -1,4 +1,3 @@
-import React from "react";
 import {Check, X, ArrowRight, ExternalLink} from "lucide-react";
 import {IMAGENES_PERSONAS} from "../imagenesPersonas.js";
 import {responsiveImage} from "../utils/responsiveImage.js";

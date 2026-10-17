@@ -1,4 +1,3 @@
-import React from 'react';
 import SiteHeader from '../components/SiteHeader.jsx';
 import './atlas-skeleton.css';
 export function AtlasLoadError({onRetry}) {

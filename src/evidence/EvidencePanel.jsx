@@ -1,4 +1,4 @@
-import React,{useState} from 'react';
+import {useState} from 'react';
 import {sourcesForPerson} from '../content/sources.js';
 import {CERTAINTY,EDITORIAL_HISTORY,PILOT_PERSON_IDS,citationText,formatClaimDate,personClaims} from './claims.js';
 import './evidence.css';

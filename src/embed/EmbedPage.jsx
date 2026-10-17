@@ -1,4 +1,4 @@
-import React,{useEffect,useState} from 'react';
+import {useEffect,useState} from 'react';
 import {loadJsonAsset} from '../utils/loadAsset.js';
 import {treeSvg} from '../connections/treeExport.js';
 import {documentaryLife} from '../utils/documentaryDates.js';

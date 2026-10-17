@@ -1,4 +1,4 @@
-import React,{useRef,useState,useEffect} from 'react';
+import {useRef,useState,useEffect} from 'react';
 // The dialog lives on <body>: opened from a menu, it must survive the menu closing.
 import {createPortal} from 'react-dom';
 import {Download,X} from 'lucide-react';

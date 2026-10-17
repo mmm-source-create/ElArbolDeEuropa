@@ -1,7 +1,7 @@
 import {MAP_FROM,MAP_THROUGH} from '../data/mapCoverage.js';
 import GovernmentsTable from './EuropeGovernments.jsx';
 import {EVENT_CATEGORIES} from './timelineLayout.js';
-import React,{useMemo,useState} from 'react';
+import {useMemo,useState} from 'react';
 import {CalendarDays, Crown, Share2, Users} from 'lucide-react';
 import {MapaEuropa} from '../MapaEuropa.jsx';
 import {PERSONAS} from '../personas.jsx';

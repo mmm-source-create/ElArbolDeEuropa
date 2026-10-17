@@ -1,4 +1,4 @@
-import React,{useEffect,useMemo,useRef,useState} from 'react';
+import {useEffect,useMemo,useRef,useState} from 'react';
 import {PERSONAS} from '../personas.jsx';
 import {TERRITORIOS} from '../data/territorios.js';
 import {HISTORIAS} from '../historiaData.jsx';

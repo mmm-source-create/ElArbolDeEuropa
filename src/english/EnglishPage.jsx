@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { ArrowRight, BookOpen, Search, Users, Info } from 'lucide-react';
 import SiteHeader from '../components/SiteHeader.jsx';
 import SiteFooter from '../components/SiteFooter.jsx';

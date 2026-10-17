@@ -1,4 +1,4 @@
-import React,{useEffect,useMemo,useRef,useState} from 'react';
+import {useEffect,useMemo,useRef,useState} from 'react';
 import {ZoomIn,ZoomOut,Crosshair,X} from 'lucide-react';
 import SegmentedControl from '../ui/SegmentedControl.jsx';
 import {EVENT_CATEGORIES,timelineX,timelineYearAt,layoutTimelineEvents,timelineGovernments} from './timelineLayout.js';
