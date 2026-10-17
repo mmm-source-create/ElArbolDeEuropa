@@ -43,7 +43,7 @@ y Desafío.
 
 Ordenadas por impacto estimado frente a esfuerzo.
 
-### 1. Tres puertas claras en la portada (alto impacto, esfuerzo bajo)
+### 1. Tres puertas claras en la portada · implementada en [V5.20](V5.20.md)
 
 Sustituir los dos botones del héroe por tres tarjetas de intención:
 
@@ -55,7 +55,7 @@ Sustituir los dos botones del héroe por tres tarjetas de intención:
 
 Cada puerta usa un verbo, no el nombre de una sección.
 
-### 2. Un único nivel de pestañas en el Atlas (alto, medio)
+### 2. Un único nivel de pestañas en el Atlas · implementada en [V5.20](V5.20.md)
 
 - Unificar escena y vista en un solo selector: **Familia · Mapa · Europa en un
   año · Línea temporal**. «Árbol y mapa» pasa a ser una opción de diseño en
