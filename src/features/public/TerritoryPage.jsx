@@ -3,7 +3,7 @@ import HistoricalUnions from "../../components/HistoricalUnions.jsx";
 import React,{useEffect} from 'react';
 import {ArrowRight,Landmark} from 'lucide-react';
 import Sucesion from '../atlas/Sucesion.jsx';
-import {useJson,usePublicMeta} from './PublicSite.jsx';
+import {useJson,usePublicMeta} from './publicShared.jsx';
 import SiteHeader from '../../components/SiteHeader.jsx';
 import SiteFooter from '../../components/SiteFooter.jsx';
 import {slugPublico} from '../../domain/people/personLabels.js';

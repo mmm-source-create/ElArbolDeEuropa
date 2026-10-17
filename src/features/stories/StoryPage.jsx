@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { ArrowLeft, ArrowRight, BookOpen, GitBranch } from 'lucide-react';
 import SiteHeader from '../../components/SiteHeader.jsx';
 import SiteFooter from '../../components/SiteFooter.jsx';
-import { useJson, usePublicMeta } from '../public/PublicSite.jsx';
+import { useJson, usePublicMeta } from '../public/publicShared.jsx';
 import { entityMeta } from '../public/publicMeta.js';
 import { storyChapterPath, storyAtlasUrl, readStoryProgress, saveStoryProgress, storyStepIds } from './storyModel.js';
 import './stories.css';

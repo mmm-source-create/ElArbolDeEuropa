@@ -1,21 +1,27 @@
 import {resolverRuta} from "./routing.js";
 import { lazy, Suspense, useCallback, useEffect, useMemo, useState } from "react";
-import { CatalogPage, HomePage, InfoPage, PersonPage } from "../features/public/PublicSite.jsx";
+import { HomePage } from "../features/public/HomePage.jsx";
 
 import AtlasSkeleton from "../features/atlas/AtlasSkeleton.jsx";
 import ReadingSkeleton from "../features/stories/ReadingSkeleton.jsx";
 import SiteHeader from "../components/SiteHeader.jsx";
-import EnglishPage from "../features/english/EnglishPage.jsx";
 import NotFoundPage from "../features/public/NotFoundPage.jsx";
 import PrivacyPage from '../features/public/PrivacyPage.jsx';
 import "../styles/theme.css";
 
 const EmbedPage = lazy(() => import("../features/embed/EmbedPage.jsx"));
+const EnglishPage = lazy(() => import("../features/english/EnglishPage.jsx"));
 const StoryPage = lazy(() => import("../features/stories/StoryPage.jsx"));
 const DynastyPage = lazy(() => import("../features/public/DynastyPage.jsx"));
 const TerritoryPage = lazy(() => import("../features/public/TerritoryPage.jsx").then(m => ({ default: m.TerritoryPage })));
 const Explorer = lazy(() => import("../features/atlas/AtlasLoader.jsx"));
 const DesafioPage = lazy(() => import("../features/desafio/DesafioPage.jsx"));
+// Fichas, índices y páginas informativas cargan su propio chunk: la portada no los necesita.
+const publicPage = name => lazy(() => import("../features/public/PublicSite.jsx").then(m => ({ default: m[name] })));
+const PersonPage = publicPage("PersonPage");
+const CatalogPage = publicPage("CatalogPage");
+const InfoPage = publicPage("InfoPage");
+const readingFallback = <div className="public-site"><SiteHeader/><main className="public-main"><ReadingSkeleton/></main></div>;
 
 function normalizaRutaLigera() {
   if (typeof window === "undefined") return;
@@ -54,7 +60,7 @@ export default function App() {
   if (!explorerRequested && initial.view === "story") return <Suspense fallback={<div className="public-site"><SiteHeader/><main className="public-main story-page"><ReadingSkeleton/></main></div>}><StoryPage slug={initial.storySlug} chapter={initial.chapter}/></Suspense>;
   if (!explorerRequested && initial.view === "dynasty") return <Suspense fallback={<p role="status">Cargando dinastía…</p>}><DynastyPage slug={initial.dynastySlug} /></Suspense>;
   if (!explorerRequested && initial.view === "territory") return <Suspense fallback={<p role="status">Cargando territorio…</p>}><TerritoryPage slug={initial.territorySlug} /></Suspense>;
-  if (initial.view === "english") return <EnglishPage />;
+  if (initial.view === "english") return <Suspense fallback={readingFallback}><EnglishPage /></Suspense>;
   if (initial.view === "not-found") return <NotFoundPage locale={initial.locale} />;
   if (initial.view === 'privacy') return <PrivacyPage locale={initial.locale}/>;
   if (initial.view === "desafio") {
@@ -64,9 +70,9 @@ export default function App() {
       </Suspense>
     );
   }
-  if (!explorerRequested && initial.view === "person") return <PersonPage slug={initial.personSlug} legacyId={initial.legacyPersonId} onExplore={() => entrarAtlas(null)} />;
-  if (!explorerRequested && initial.view === "catalog") return <CatalogPage tipo={initial.catalog} />;
-  if (!explorerRequested && initial.view === "info") return <InfoPage tipo={initial.info} />;
+  if (!explorerRequested && initial.view === "person") return <Suspense fallback={readingFallback}><PersonPage slug={initial.personSlug} legacyId={initial.legacyPersonId} onExplore={() => entrarAtlas(null)} /></Suspense>;
+  if (!explorerRequested && initial.view === "catalog") return <Suspense fallback={readingFallback}><CatalogPage tipo={initial.catalog} /></Suspense>;
+  if (!explorerRequested && initial.view === "info") return <Suspense fallback={readingFallback}><InfoPage tipo={initial.info} /></Suspense>;
   if (!explorerRequested && initial.view === "home") return <HomePage onEnterAtlas={entrarAtlas} onOpenPanel={entrarAtlas} />;
 
   return (

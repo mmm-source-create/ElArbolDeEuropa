@@ -4,7 +4,7 @@ import {useMemo,useState} from 'react';
 import {ArrowRight,Search,Shield} from 'lucide-react';
 import SiteHeader from '../../components/SiteHeader.jsx';
 import SiteFooter from '../../components/SiteFooter.jsx';
-import {useJson,usePublicMeta,PersonaMiniCard} from './PublicSite.jsx';
+import {useJson,usePublicMeta,PersonaMiniCard} from './publicShared.jsx';
 import {normalizarBusquedaPublica,slugPublico} from '../../domain/people/personLabels.js';
 import './dynasty.css';
 import '../../styles/theme.css';

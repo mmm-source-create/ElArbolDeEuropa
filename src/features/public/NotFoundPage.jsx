@@ -2,8 +2,9 @@ import {useEffect} from 'react';
 import {ArrowRight, BookOpen, Compass, Home} from 'lucide-react';
 import SiteHeader from '../../components/SiteHeader.jsx';
 import SiteFooter from '../../components/SiteFooter.jsx';
-import {usePublicMeta} from './PublicSite.jsx';
+import {usePublicMeta} from './publicShared.jsx';
 import './public.css';
+import '../../styles/theme.css';
 
 const COPY = {
   es: {

@@ -43,9 +43,9 @@ const homeLists = () => ({
 });
 
 test('portada: entradas antes del carrusel, sin cinta de dinastías y con «Personas»', () => {
-  // PublicSite.jsx needs the bundler (JSON imports), so the order is checked on its source.
-  const source = fs.readFileSync(new URL('../src/features/public/PublicSite.jsx', import.meta.url), 'utf8');
-  const home = source.slice(source.indexOf('export function HomeContent'), source.indexOf('const INFO_PAGES'));
+  // HomePage.jsx needs the bundler (JSON imports), so the order is checked on its source.
+  const source = fs.readFileSync(new URL('../src/features/public/HomePage.jsx', import.meta.url), 'utf8');
+  const home = source.slice(source.indexOf('export function HomeContent'));
   assert.ok(home.indexOf('home-quick-links') < home.indexOf('<HomeDiscovery '));
   assert.doesNotMatch(source, /DynastyMarquee/);
   assert.match(home, /public-door-arrow/);

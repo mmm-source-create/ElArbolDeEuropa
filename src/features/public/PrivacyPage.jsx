@@ -1,10 +1,11 @@
 import {ShieldCheck} from 'lucide-react';
 import SiteHeader from '../../components/SiteHeader.jsx';
 import SiteFooter from '../../components/SiteFooter.jsx';
-import {usePublicMeta} from './PublicSite.jsx';
+import {usePublicMeta} from './publicShared.jsx';
 import {SITE} from '../../app/i18n.js';
 import {SUPPORT_URL} from '../../app/siteConfig.js';
 import './public.css';
+import '../../styles/theme.css';
 
 export default function PrivacyPage({locale='es'}) {
  const en=locale==='en',path=en?'/en/privacy':'/es/privacidad';
