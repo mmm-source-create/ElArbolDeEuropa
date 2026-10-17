@@ -3,8 +3,8 @@
 | Clase | Ubicación | Tratamiento |
 | --- | --- | --- |
 | Fuentes históricas y editoriales | `src/data/personas.js`, `src/content/`, `src/evidence/`, `src/data/`, `src/Territorios.jsx` | Se editan y revisan con evidencia; los cambios históricos siguen el procedimiento V5 |
-| Fuentes cartográficas y selecciones | `scripts/cartography/`, anclas, overrides y revisiones en `prototypes/euv-locations/` | Contienen decisiones y citas; una herramienta geométrica no sustituye su revisión |
-| Cartografía e inventarios aceptados | JSON y SVG en `prototypes/euv-locations/`, `src/MapChart_Map.svg` | Versionados; el Atlas consume estas superficies. Regeneración en una copia y adopción explícita mediante PR |
+| Fuentes cartográficas y selecciones | `scripts/cartography/`, anclas, overrides y revisiones en `data/cartography/` | Contienen decisiones y citas; una herramienta geométrica no sustituye su revisión |
+| Cartografía e inventarios aceptados | JSON y SVG en `data/cartography/`, `data/cartography/MapChart_Map.svg` | Versionados; el Atlas consume estas superficies. Regeneración en una copia y adopción explícita mediante PR |
 | Bases de validación | `tests/baselines/`, `audit-baseline.json` | Expectativas revisadas; solo se actualizan con una justificación concreta |
 | Resultados de auditoría revisados | `docs/reports/reviewed/`, `docs/atlas-continuity-audit.json` y `.md` | Instantáneas conservadas; no se sobrescriben durante el build |
 | Diagnósticos de la ejecución actual | `.cache/audits/` | Regenerables e ignorados por Git; no son decisiones históricas aceptadas |
@@ -12,7 +12,7 @@
 | Entorno local | `.venv-cartography/`, `node_modules/`, `__pycache__/` | Regenerable e ignorado |
 | Catálogos y sitio compilado | `src/generated/`, metadatos y catálogos de `public/`, sitemaps, `public/map-audit/`, `dist/` | Derivados del build; no editar como fuente |
 | Evidencias visuales locales | `outputs/` | Revisión temporal; no se publica automáticamente |
-| Laboratorios y capturas documentales | HTML y PNG versionados en `prototypes/euv-locations/` | Material conservado: `territorial-corridors.html` se publica como `/es/mapa-completo`. Desde V5.28 los módulos del mosaico que también usa el Atlas están en `src/cartography/atlasMosaic.js` y `src/cartography/locationMosaic.js` |
+| Laboratorios y capturas documentales | HTML y PNG versionados en `data/cartography/` | Material conservado: `territorial-corridors.html` se publica como `/es/mapa-completo`. Desde V5.28 los módulos del mosaico que también usa el Atlas están en `src/cartography/atlasMosaic.js` y `src/cartography/locationMosaic.js` |
 | Historial | `docs/V*.md`, `docs/archive/manifests/` | Describe cada entrega; se conservan cifras, rutas antiguas y checksums históricos |
 
 El [catálogo cartográfico](artifact-catalog.json) clasifica individualmente

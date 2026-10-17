@@ -15,7 +15,7 @@ export function auditIberiaItalyContinuity(data, inventory, review, geography) {
   return auditRegionalContinuity(data, inventory, iberiaItalyGeographicReview(review, geography));
 }
 if (process.argv[1] && path.resolve(process.argv[1]) === import.meta.filename) {
-  const read = file => JSON.parse(fs.readFileSync(path.join(projectRoot, 'prototypes/euv-locations', file)));
+  const read = file => JSON.parse(fs.readFileSync(path.join(projectRoot, 'data/cartography', file)));
   const result = auditIberiaItalyContinuity(read('corridor-locations.json'), read('location-inventory.json'),
     read('iberia-italy-full-review.json'), read('iberia-italy-geographic-cells.json'));
   fs.writeFileSync(auditReportPath('audit-iberia-italy-continuity-report.json'), JSON.stringify(result, null, 2) + '\n');

@@ -22,7 +22,7 @@ del sitio. Consulta el [entorno Python y sus pasos](../docs/python-cartography.m
 Los ensambladores JavaScript aceptan `EADE_MAP_DATA_DIR`, igual que Python,
 para usar una copia de los datos en lugar del directorio aceptado.
 
-Los JSON, SVG y visores de `prototypes/euv-locations/` son datos revisados y
+Los JSON, SVG y visores de `data/cartography/` son datos revisados y
 laboratorios utilizados por el Atlas. El nombre histórico de esa carpeta no
 los convierte en temporales. Su [clasificación](../docs/artifacts.md) distingue
 fuentes, resultados aceptados y diagnósticos desechables.
@@ -34,7 +34,7 @@ usa sus comandos npm o las rutas actuales de esta guía.
 ## Continuidad de una zona revisada
 
 `npm run audit:regional-continuity` comprueba cada ID del ámbito de
-`prototypes/euv-locations/bosnia-hum-review.json` y `posavina-ragusa-review.json` en cada año de 1200 a 1800.
+`data/cartography/bosnia-hum-review.json` y `posavina-ragusa-review.json` en cada año de 1200 a 1800.
 Usa el mosaico real, verifica las fuentes de la celda y exige una explicación
 para cada atribución múltiple. Forma parte de `audit:build` y escribe su
 diagnóstico en `.cache/audits/audit-regional-continuity-report.json` y
@@ -141,4 +141,4 @@ mandatos posteriores y vínculos familiares.
 
 ### Europa oriental · V5.26
 
-`node scripts/cartography/build-eastern-europe-routes.mjs` compila los inventarios geográficos, la cronología y las excepciones locales aceptadas en `prototypes/euv-locations/eastern-europe-*.json`. Después se ejecuta `node scripts/cartography/merge-map-expansions.mjs`. `npm run audit:eastern-europe` comprueba cada celda en cada año de 1200–1800; `-- --publish` actualiza el resultado revisado. Los límites de la auditoría no son fronteras políticas y las fuentes HTML externas solo sirven para localizar candidatos.
+`node scripts/cartography/build-eastern-europe-routes.mjs` compila los inventarios geográficos, la cronología y las excepciones locales aceptadas en `data/cartography/eastern-europe-*.json`. Después se ejecuta `node scripts/cartography/merge-map-expansions.mjs`. `npm run audit:eastern-europe` comprueba cada celda en cada año de 1200–1800; `-- --publish` actualiza el resultado revisado. Los límites de la auditoría no son fronteras políticas y las fuentes HTML externas solo sirven para localizar candidatos.

@@ -8,7 +8,7 @@ import {AUTHORITY_GAPS_REVIEWS} from '../src/evidence/authorityGapsReviewData.js
 import {personClaims} from '../src/evidence/claims.js';
 import {auditarTerritorios} from '../scripts/audits/lib/auditTerritorios.js';
 import {politicalMosaicAt} from '../src/cartography/locationMosaic.js';
-const data=JSON.parse(fs.readFileSync(new URL('../prototypes/euv-locations/corridor-locations.json',import.meta.url)));
+const data=JSON.parse(fs.readFileSync(new URL('../data/cartography/corridor-locations.json',import.meta.url)));
 const people=new Map(PERSONAS.map(p=>[p.id,p]));
 const ids=(id,year)=>mapAuthoritiesForPerson(people.get(id),year,data).flatMap(e=>e.ids);
 

@@ -14,10 +14,10 @@ import {applyRegionalReview} from '../scripts/cartography/apply-regional-review.
 import {compactBalkanRoutes} from '../scripts/cartography/build-balkans-routes.mjs';
 
 const read = path => JSON.parse(fs.readFileSync(new URL(path, import.meta.url)));
-const data = read('../prototypes/euv-locations/corridor-locations.json');
-const review = read('../prototypes/euv-locations/iberia-italy-full-review.json');
-const geography = read('../prototypes/euv-locations/iberia-italy-geographic-cells.json');
-const inventory = read('../prototypes/euv-locations/location-inventory.json');
+const data = read('../data/cartography/corridor-locations.json');
+const review = read('../data/cartography/iberia-italy-full-review.json');
+const geography = read('../data/cartography/iberia-italy-geographic-cells.json');
+const inventory = read('../data/cartography/location-inventory.json');
 const people = new Map(PERSONAS.map(person => [person.id, person]));
 const years = new Map();
 const owners = (id, year) => {

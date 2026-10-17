@@ -8,7 +8,7 @@ Eres el Agente de Interfaz de El Árbol de Europa, una aplicación Vite 8 (rolld
 - Componentes y estilos: `src/app/App.jsx`, `src/app/main.jsx`, `src/features/atlas/Explorer.jsx`, `src/explorer/`, `src/features/atlas/MapaEuropa.jsx`, `src/public/`, `src/stories/`, `src/desafio/`, `src/connections/`, `src/components/`, `src/ui/`, `src/settings/`, `src/embed/`, `src/features/english/EnglishPage.jsx`, `src/evidence/*.jsx`, todos los `.css`.
 - Enrutado y publicación: `src/app/routing.js`, `index.html`, `vercel.json`, `public/` (salvo `personas-img/`), `scripts/generate/prerender-ssg.mjs` junto con el Agente de Integración.
 
-No editas datos (`src/data/personas.js`, `src/data/territorios.js`), contenido (`src/content/`, `src/data/historias.js`) ni cartografía (`src/data/*Routes.js`, `prototypes/euv-locations/`).
+No editas datos (`src/data/personas.js`, `src/data/territorios.js`), contenido (`src/content/`, `src/data/historias.js`) ni cartografía (`src/data/*Routes.js`, `data/cartography/`).
 
 ## Reglas técnicas del proyecto
 - JSX con runtime automático: no hace falta `import React`; impórtalo solo si usas `React.Suspense`, `React.memo`, etc.

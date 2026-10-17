@@ -9,7 +9,7 @@ import {composeRegionalAuthorityScopes} from '../src/cartography/authorityMapSco
 import {colorTerritorioEnMapa, agrupacionesPoliticasEnMapa} from '../src/cartography/kingdomMaps.js';
 import {ORANGE_NASSAU} from '../src/cartography/mapColors.js';
 import {atlasPoliticalMosaicAt} from '../src/cartography/atlasMosaic.js';
-const read = name => JSON.parse(fs.readFileSync(new URL('../prototypes/euv-locations/'+name,import.meta.url)));
+const read = name => JSON.parse(fs.readFileSync(new URL('../data/cartography/'+name,import.meta.url)));
 const data=read('corridor-locations.json');data.burgundy=read('burgundian-locations.json');
 const people=new Map(PERSONAS.map(p=>[p.id,p]));
 const entries=(p,y)=>mapAuthoritiesForPerson(people.get(p),y,data);

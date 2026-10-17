@@ -3,15 +3,15 @@ import fs from 'node:fs';
 import {reviewedLayerLocations, reviewedMapLayers} from '../../src/cartography/locationMapPilot.js';
 
 const read = path => JSON.parse(fs.readFileSync(new URL(path, import.meta.url), 'utf8'));
-const data = read('../../prototypes/euv-locations/corridor-locations.json');
-const review = read('../../prototypes/euv-locations/regional-extent-review.json');
-const frontier = read('../../prototypes/euv-locations/frontier-review.json');
-const succession = read('../../prototypes/euv-locations/succession-review.json');
-const referenceGaps = read('../../prototypes/euv-locations/reference-gap-review.json');
-const medieval = read('../../prototypes/euv-locations/medieval-balkans-review.json');
-const bosniaHum = read('../../prototypes/euv-locations/bosnia-hum-review.json');
-const inventory = read('../../prototypes/euv-locations/regional-extent-cells.json');
-const original = read('../../prototypes/euv-locations/extended-corridors-locations.json');
+const data = read('../../data/cartography/corridor-locations.json');
+const review = read('../../data/cartography/regional-extent-review.json');
+const frontier = read('../../data/cartography/frontier-review.json');
+const succession = read('../../data/cartography/succession-review.json');
+const referenceGaps = read('../../data/cartography/reference-gap-review.json');
+const medieval = read('../../data/cartography/medieval-balkans-review.json');
+const bosniaHum = read('../../data/cartography/bosnia-hum-review.json');
+const inventory = read('../../data/cartography/regional-extent-cells.json');
+const original = read('../../data/cartography/extended-corridors-locations.json');
 const areas = new Map(inventory.cells.map(cell => [cell.id, cell.area]));
 const layers = new Map(reviewedMapLayers(data).map(layer => [layer.name, layer]));
 const metrics = ids => ({cells: ids.length, svgArea: +ids.reduce((sum, id) => sum + (areas.get(id) || 0), 0).toFixed(5),

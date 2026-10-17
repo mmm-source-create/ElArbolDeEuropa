@@ -8,7 +8,7 @@ import {buildPoliticalMapIndex, inspectMapRegion} from '../src/cartography/polit
 import {mapAuthoritiesForPerson} from '../src/cartography/mapAuthorities.js';
 import {pilotLocationsFor, mapLocationsForGovernment} from '../src/cartography/locationMapPilot.js';
 import {idsDeGobiernoEnAño} from '../src/cartography/kingdomMaps.js';
-const data=JSON.parse(fs.readFileSync(new URL('../prototypes/euv-locations/corridor-locations.json',import.meta.url)));
+const data=JSON.parse(fs.readFileSync(new URL('../data/cartography/corridor-locations.json',import.meta.url)));
 const people=new Map(PERSONAS.map(p=>[p.id,p]));
 const inspect=(id,year)=>inspectMapRegion(id,year,buildPoliticalMapIndex(PERSONAS,year,data,{includeClaims:true}),data);
 

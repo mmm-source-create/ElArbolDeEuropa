@@ -77,7 +77,7 @@ def main():
     source = json.loads((HERE / "corridor-source.json").read_text())
     corrections = json.loads((HERE / "corridor-overrides.json").read_text())
     corrections.extend(source.get("corrections", []))
-    old_paths = paths(ROOT / "src/MapChart_Map.svg")
+    old_paths = paths(ROOT / "data/cartography/MapChart_Map.svg")
     new_paths = paths(HERE / "euv-locations-crop.svg")
     territories = {t["name"] for t in source["territories"]}
     territories.update(t["name"] for name in ["hungary-balkans-locations.json", "imperial-core-locations.json", "priority-territories-locations.json"]

@@ -7,13 +7,13 @@ import {PERSONAS} from '../src/data/personas.js';
 import {mapAuthoritiesForPerson} from '../src/cartography/mapAuthorities.js';
 import {CHRONOLOGY_ROUTES, chronologyJurisdictionsFor} from '../src/cartography/regions/atlasChronologyRoutes.js';
 
-const central = JSON.parse(fs.readFileSync(new URL('../prototypes/euv-locations/central-expansion-locations.json', import.meta.url)));
+const central = JSON.parse(fs.readFileSync(new URL('../data/cartography/central-expansion-locations.json', import.meta.url)));
 const data = {from: 1200, through: 1800, territories: central.territories, overrides: []};
 const layers = new Map(central.territories.map(layer => [layer.name, layer]));
 const ids = (name, year) => reviewedLayerLocations(data, layers.get(name), year);
-const svg = fs.readFileSync(new URL('../prototypes/euv-locations/euv-locations-crop.svg', import.meta.url), 'utf8');
+const svg = fs.readFileSync(new URL('../data/cartography/euv-locations-crop.svg', import.meta.url), 'utf8');
 const pathIds = new Set([...svg.matchAll(/<path\b[^>]*\bid="([^"]+)"/g)].map(match => match[1]));
-const runtimeData = JSON.parse(fs.readFileSync(new URL('../prototypes/euv-locations/corridor-locations.json', import.meta.url)));
+const runtimeData = JSON.parse(fs.readFileSync(new URL('../data/cartography/corridor-locations.json', import.meta.url)));
 const runtimeLayers = new Set(reviewedMapLayers(runtimeData).map(layer => layer.name));
 const people = new Map(PERSONAS.map(person => [person.id, person]));
 const authorities = (personId, year) => mapAuthoritiesForPerson(people.get(personId), year, runtimeData);

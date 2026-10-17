@@ -1,4 +1,4 @@
-import review from '../../../prototypes/euv-locations/bosnia-hum-review.json' with {type: 'json'};
+import review from '../../../data/cartography/bosnia-hum-review.json' with {type: 'json'};
 import {regionalReviewRoutes} from './regionalReviewRoutes.js';
 const routes = regionalReviewRoutes(review);
 export const BOSNIA_HUM_IDENTITIES = routes.identities;

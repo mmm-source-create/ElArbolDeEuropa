@@ -148,7 +148,7 @@
       target.addEventListener('pointercancel',()=>{drag=null;});
       viewBox();
     }
-    Promise.all([load('old','../../src/MapChart_Map.svg'),load('new','./euv-locations-crop.svg')]).then(()=>{
+    Promise.all([load('old','../../data/cartography/MapChart_Map.svg'),load('new','../../data/cartography/euv-locations-crop.svg')]).then(()=>{
       const exact=[...state.old.ids.keys()].filter(id=>state.new.ids.has(id)).length;
       $('metrics').textContent=`Provinces: ${fmt(state.old.ids.size)} polígonos · ${(state.old.bytes/1e6).toFixed(2)} MB. Locations recortado: ${fmt(state.new.ids.size)} polígonos · ${(state.new.bytes/1e6).toFixed(2)} MB. IDs idénticos en este encuadre: ${fmt(exact)} (candidatos, sin equivalencia histórica validada). Carga local orientativa: ${state.old.parseMs.toFixed(0)} / ${state.new.parseMs.toFixed(0)} ms.`;
       suggest($('location-search').value);

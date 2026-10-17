@@ -42,7 +42,7 @@
     <p class="eyebrow">Laboratorio cartográfico · mapa en evaluación</p>
     <h1>Corredores territoriales del Atlas</h1>
     <p>Elige un año para ver todos los gobiernos territoriales del Atlas que tienen geometría disponible en EU V Locations (1106–1800; ampliación medieval desde los primeros gobiernos registrados; revisión completa de Iberia, Italia, Balcanes, Francia, Borgoña y Países Bajos; otras regiones con cobertura parcial). Cada territorio conserva su color al cambiar de año. Las jurisdicciones revisadas usan capas fechadas y fuentes; el resto se proyecta mediante una correspondencia geométrica general, marcada como aproximada. Busca en la leyenda o pulsa una location para consultar autoridades y referencias. El marco gris del Sacro Imperio es referencia jurídica, no dominio personal del emperador.</p>
-    <p><a href="/es/?atlas=1">Volver al Atlas</a> · <a href="https://github.com/mmm-source-create/ElArbolDeEuropa/blob/main/prototypes/euv-locations/README.md" target="_blank" rel="noopener noreferrer">Método y fuentes</a></p>
+    <p><a href="/es/?atlas=1">Volver al Atlas</a> · <a href="https://github.com/mmm-source-create/ElArbolDeEuropa/blob/main/labs/cartography/README.md" target="_blank" rel="noopener noreferrer">Método y fuentes</a></p>
   </header>
   <main>
     <div class="controls">
@@ -105,15 +105,15 @@
     </div>
     <div class="note">
       <h2>Qué se ha trasladado</h2>
-      <p>El visor reúne las capas territoriales investigadas para comparar sus cambios año a año. El mapa del Atlas usa ya este recorte EU V Locations; el resto de sus gobiernos se proyecta mediante una correspondencia geométrica general hasta que cada capa se revise por separado. Una location nueva se asigna automáticamente cuando al menos el 55 % de su área cae dentro de una región antigua. Esa coincidencia es una ayuda cartográfica, no una frontera histórica probada. Las correcciones fechadas incluyen su fuente y las fichas del Atlas muestran las referencias disponibles para cada afirmación. <a href="https://github.com/mmm-source-create/ElArbolDeEuropa/blob/main/prototypes/euv-locations/README.md" target="_blank" rel="noopener noreferrer">Método, auditoría y fuentes</a>.</p>
+      <p>El visor reúne las capas territoriales investigadas para comparar sus cambios año a año. El mapa del Atlas usa ya este recorte EU V Locations; el resto de sus gobiernos se proyecta mediante una correspondencia geométrica general hasta que cada capa se revise por separado. Una location nueva se asigna automáticamente cuando al menos el 55 % de su área cae dentro de una región antigua. Esa coincidencia es una ayuda cartográfica, no una frontera histórica probada. Las correcciones fechadas incluyen su fuente y las fichas del Atlas muestran las referencias disponibles para cada afirmación. <a href="https://github.com/mmm-source-create/ElArbolDeEuropa/blob/main/labs/cartography/README.md" target="_blank" rel="noopener noreferrer">Método, auditoría y fuentes</a>.</p>
     </div>
   </main>
   <footer>Geometría: <a href="https://www.mapchart.net/eu-v-locations.html">MapChart</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>.</footer>
   <script type="module">
     import {atlasMosaicPalette,atlasPoliticalMosaicAt} from '../../src/cartography/atlasMosaic.js';
     import {locationLabel} from '../../src/cartography/locationLabels.js';
-    import mapUrl from './euv-locations-crop.svg?url';
-    import dataUrl from './corridor-locations.json?url';
+    import mapUrl from '../../data/cartography/euv-locations-crop.svg?url';
+    import dataUrl from '../../data/cartography/corridor-locations.json?url';
     import {reviewedLayerLocations,reviewedLayerVersion,reviewedLayerActive,reviewedLayerEvidence,mapSourceReference} from '../../src/cartography/locationMapPilot.js';
     import {clampMapViewBox,clipMapToBounds} from '../../src/features/atlas/mapViewport.js';
     import {territorialLabel,territorialColor} from '../../src/cartography/territorialIdentity.js';

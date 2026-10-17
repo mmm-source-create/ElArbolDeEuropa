@@ -57,8 +57,8 @@ if (process.argv[1] && path.resolve(process.argv[1]) === fileURLToPath(import.me
     ['bosnia-hum-review.json', 'audit-regional-continuity-report.json'],
     ['posavina-ragusa-review.json', 'audit-posavina-ragusa-report.json'],
   ]) {
-    const report = auditRegionalContinuity(read('../../prototypes/euv-locations/corridor-locations.json'),
-      read('../../prototypes/euv-locations/location-inventory.json'), read('../../prototypes/euv-locations/' + reviewFile));
+    const report = auditRegionalContinuity(read('../../data/cartography/corridor-locations.json'),
+      read('../../data/cartography/location-inventory.json'), read('../../data/cartography/' + reviewFile));
     fs.writeFileSync(auditReportPath(output), JSON.stringify(report, null, 2) + '\n');
     console.log(report.scope.name + ': ' + JSON.stringify(report.summary));
     if (report.summary.missingCellYears || report.summary.unexplainedCellYears

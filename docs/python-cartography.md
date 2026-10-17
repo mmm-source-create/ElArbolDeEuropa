@@ -37,7 +37,7 @@ la misma instalación y comprobación, además de las regresiones V5 del sitio.
 
 ```sh
 mkdir -p .cache/cartography/work
-cp prototypes/euv-locations/*.json prototypes/euv-locations/*.svg .cache/cartography/work/
+cp data/cartography/*.json data/cartography/*.svg .cache/cartography/work/
 export EADE_MAP_DATA_DIR="$PWD/.cache/cartography/work"
 .venv-cartography/bin/python scripts/cartography/build-location-inventory.py
 .venv-cartography/bin/python scripts/cartography/build-regional-extent-cells.py
@@ -47,7 +47,7 @@ unset EADE_MAP_DATA_DIR
 
 Python y JavaScript resuelven las entradas y salidas cartográficas respecto a
 `EADE_MAP_DATA_DIR`; las fuentes del Atlas siguen leyéndose del repositorio.
-Sin esa variable, los generadores escriben en `prototypes/euv-locations/`.
+Sin esa variable, los generadores escriben en `data/cartography/`.
 Por eso conviene utilizar siempre una copia durante una investigación. El
 cruce auditado produce su diagnóstico en `.cache/audits/`.
 

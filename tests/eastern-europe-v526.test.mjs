@@ -7,7 +7,7 @@ import {mapAuthoritiesForPerson} from '../src/cartography/mapAuthorities.js';
 import {personClaims} from '../src/evidence/claims.js';
 import {EASTERN_EUROPE_REVIEWS} from '../src/evidence/easternEuropeReviews.js';
 import {EASTERN_EUROPE_COLORS} from '../src/cartography/easternEuropeColors.js';
-const data=JSON.parse(fs.readFileSync(new URL('../prototypes/euv-locations/corridor-locations.json',import.meta.url)));
+const data=JSON.parse(fs.readFileSync(new URL('../data/cartography/corridor-locations.json',import.meta.url)));
 const by=new Map(PERSONAS.map(p=>[p.id,p]));
 const owner=(year,id)=>new Set((europeMosaicAt(data,year,PERSONAS).byLocation.get(id)||[]).map(l=>l.entityId));
 const ids=(id,year,options)=>new Set(mapAuthoritiesForPerson(by.get(id),year,data,options).flatMap(e=>e.ids));

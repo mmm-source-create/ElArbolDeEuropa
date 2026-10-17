@@ -182,9 +182,9 @@ export function summarizeContinuityLayers(continuity) {
 async function main() {
   const root = projectRoot;
   const readJson = async file => JSON.parse(await fs.readFile(path.join(root, file), 'utf8'));
-  const data = await readJson('prototypes/euv-locations/corridor-locations.json');
-  data.burgundy = await readJson('prototypes/euv-locations/burgundian-locations.json');
-  const svg = await fs.readFile(path.join(root, 'prototypes/euv-locations/euv-locations-crop.svg'), 'utf8');
+  const data = await readJson('data/cartography/corridor-locations.json');
+  data.burgundy = await readJson('data/cartography/burgundian-locations.json');
+  const svg = await fs.readFile(path.join(root, 'data/cartography/euv-locations-crop.svg'), 'utf8');
   const report = auditAtlasCoverage(PERSONAS, data, atlasLocationIds(svg));
   try {
     const continuity = JSON.parse(await fs.readFile(auditReportPath('audit-map-continuity-report.json'), 'utf8'));

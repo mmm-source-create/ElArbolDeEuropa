@@ -9,9 +9,9 @@ import {territorialIdentity, territorialLabel, territorialColor} from '../src/ca
 import {politicalMosaicAt} from '../src/cartography/locationMosaic.js';
 import {applyContinuityReview} from '../scripts/cartography/apply-continuity-review.mjs';
 
-const data=JSON.parse(fs.readFileSync(new URL('../prototypes/euv-locations/corridor-locations.json',import.meta.url)));
+const data=JSON.parse(fs.readFileSync(new URL('../data/cartography/corridor-locations.json',import.meta.url)));
 const entries=[...data.territories,...data.additionalTerritories];
-const westernGovernments = new Set(JSON.parse(fs.readFileSync(new URL('../prototypes/euv-locations/iberia-italy-full-review.json', import.meta.url))).assignments.flatMap(phase => phase.governmentTerritories));
+const westernGovernments = new Set(JSON.parse(fs.readFileSync(new URL('../data/cartography/iberia-italy-full-review.json', import.meta.url))).assignments.flatMap(phase => phase.governmentTerritories));
 const ids=(name,year)=>new Set(westernGovernments.has(name) ? pilotLocationsFor(data,name,year) : reviewedLayerLocations(data,entries.find(e=>e.name===name),year));
 const person=id=>PERSONAS.find(p=>p.id===id);
 
@@ -120,7 +120,7 @@ test('delegated offices retain actual county identity and partial reconstruction
 });
 
 test('regeneration replaces reviewed series without accumulating layers',()=>{
- const review=JSON.parse(fs.readFileSync(new URL('../prototypes/euv-locations/continuity-review.json',import.meta.url)));
+ const review=JSON.parse(fs.readFileSync(new URL('../data/cartography/continuity-review.json',import.meta.url)));
  const once=applyContinuityReview(structuredClone(data),review);
  assert.deepEqual(applyContinuityReview(structuredClone(once),review),once);
 });

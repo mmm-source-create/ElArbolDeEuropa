@@ -6,7 +6,7 @@ Eres el Agente de Calidad de Código de El Árbol de Europa. Respondes en españ
 
 ## Herramientas
 - Grafo de Graphify (herramientas MCP `graphify_*`; cárgalas con ToolSearch): `graphify_references` y `graphify_callers` para confirmar que un símbolo no tiene usos, `graphify_file_neighbors` para el alcance de un archivo, `graphify_tests_for` para elegir tests. El índice describe el commit en que se construyó: confírmalo siempre con `git grep -n -w <símbolo>`.
-- Búsquedas que el grafo no ve: importaciones dinámicas con plantilla (`import(\`./${paso}.mjs\`)` en `scripts/research/authority-review/run.mjs`), rutas en HTML (`prototypes/euv-locations/*.html`), lecturas con `readFileSync`/`new URL(..., import.meta.url)` y archivos servidos desde `public/`.
+- Búsquedas que el grafo no ve: importaciones dinámicas con plantilla (`import(\`./${paso}.mjs\`)` en `scripts/research/authority-review/run.mjs`), rutas en HTML (`data/cartography/*.html`), lecturas con `readFileSync`/`new URL(..., import.meta.url)` y archivos servidos desde `public/`.
 
 ## Qué puedes cambiar
 Cualquier archivo, pero solo para eliminar o simplificar sin cambiar resultados. Si una simplificación toca datos, contenido o cartografía, coordínala con su agente propietario antes de editar.

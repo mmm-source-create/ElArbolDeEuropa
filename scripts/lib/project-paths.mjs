@@ -4,7 +4,7 @@ import {fileURLToPath, pathToFileURL} from 'node:url';
 
 export const projectRoot = fileURLToPath(new URL('../../', import.meta.url));
 export const mapDataDirectory = path.resolve(projectRoot,
-  process.env.EADE_MAP_DATA_DIR || 'prototypes/euv-locations');
+  process.env.EADE_MAP_DATA_DIR || 'data/cartography');
 export const mapDataUrl = pathToFileURL(mapDataDirectory + path.sep);
 export const mapDataFile = name => path.join(mapDataDirectory, name);
 

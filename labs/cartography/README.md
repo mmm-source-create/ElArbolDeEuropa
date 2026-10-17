@@ -2,7 +2,7 @@
 
 El Atlas usa **EU V Locations**, recortado a Europa, los Urales, el norte de
 África y Oriente Próximo (`euv-locations-crop.svg`). **EU V Provinces**
-(`src/MapChart_Map.svg`) se conserva como referencia geométrica para construir
+(`data/cartography/MapChart_Map.svg`) se conserva como referencia geométrica para construir
 la correspondencia histórica. El mapa de locations es más detallado, pero su
 geometría no demuestra por sí sola las fronteras políticas de cada época.
 
@@ -33,7 +33,7 @@ El build compila el visor y sus assets; no depende de servir el código fuente.
 
 
 Desde la raíz del repositorio, ejecuta `./node_modules/.bin/vite` y abre
-`http://localhost:5173/prototypes/euv-locations/territorial-corridors.html`
+`http://localhost:5173/labs/cartography/territorial-corridors.html`
 (si Vite anuncia otro puerto, usa ese número). El laboratorio abre el mosaico
 en 1500 con todos los gobiernos territoriales activos que tienen geometría en
 el mapa. Las capas revisadas y las aproximadas usan colores propios; las

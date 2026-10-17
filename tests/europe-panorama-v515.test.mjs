@@ -12,8 +12,8 @@ import {buildTimelineRows,layoutTimelineEvents,timelineYearAt} from '../src/feat
 import {vidaEnAnio} from '../src/domain/time/europeYear.js';
 import {sanitizeSession,shouldResumeAtlas} from '../src/features/atlas/atlasSession.js';
 const by=new Map(PERSONAS.map(p=>[p.id,p]));
-const data=JSON.parse(fs.readFileSync(new URL('../prototypes/euv-locations/corridor-locations.json',import.meta.url)));
-data.burgundy=JSON.parse(fs.readFileSync(new URL('../prototypes/euv-locations/burgundian-locations.json',import.meta.url)));
+const data=JSON.parse(fs.readFileSync(new URL('../data/cartography/corridor-locations.json',import.meta.url)));
+data.burgundy=JSON.parse(fs.readFileSync(new URL('../data/cartography/burgundian-locations.json',import.meta.url)));
 
 test('Carlos V has one Spanish entity, retains external groups and every constituent mandate',()=>{
  const p=by.get('CARLOS5'),before=JSON.stringify(p);

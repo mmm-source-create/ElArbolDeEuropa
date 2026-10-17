@@ -9,9 +9,9 @@ import {territorialIdentity, territorialLabel} from '../../src/cartography/terri
 import {supersededRegionalLayers} from '../../src/cartography/regions/regionalExtentRoutes.js';
 import {mapAuthoritiesForPerson} from '../../src/cartography/mapAuthorities.js';
 
-const data=JSON.parse(fs.readFileSync('prototypes/euv-locations/corridor-locations.json'));
-const review=JSON.parse(fs.readFileSync('prototypes/euv-locations/continuity-review.json'));
-const medieval=JSON.parse(fs.readFileSync('prototypes/euv-locations/medieval-balkans-review.json'));
+const data=JSON.parse(fs.readFileSync('data/cartography/corridor-locations.json'));
+const review=JSON.parse(fs.readFileSync('data/cartography/continuity-review.json'));
+const medieval=JSON.parse(fs.readFileSync('data/cartography/medieval-balkans-review.json'));
 const entries=[...data.territories,...data.additionalTerritories];
 const expected=new Map([
   ['Francia',[1200,1800]],['Bohemia',[1200,1800]],['Moravia',[1200,1800]],

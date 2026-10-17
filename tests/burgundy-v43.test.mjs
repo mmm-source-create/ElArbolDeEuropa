@@ -66,7 +66,7 @@ test('Nevers y Rethel tienen una sucesión propia, separada de Carlos el Temerar
 });
 
 test('los topónimos aportados están en el SVG; el color borgoñón precede a la unión hispánica',()=>{
-  const svg=fs.readFileSync(new URL('../src/MapChart_Map.svg',import.meta.url),'utf8');
+  const svg=fs.readFileSync(new URL('../data/cartography/MapChart_Map.svg',import.meta.url),'utf8');
   const ids=new Set([...svg.matchAll(/\bid="([^"]+)"/g)].map(m=>m[1]));
   const requested=`West_Flanders Upper_Artois Lower_Artois Ponthieu Amienois Vermandois Caux Thierache Soissonais Remois Rethelois West_Luxembourg Verdunois Barrois Pays_Nancy Sarregueminois Lower_Alsace Upper_Alsace Rhine_Valley Schwarzwald Neckar Kraichgau Palatinate Hunsruck Pays_Messin East_Luxembourg Eifel Namur Liege Julich Koln_Bucht Limburg Niederrhein Gelderland Overijssel Drenthe Friesland Ommelanden North_Holland South_Holland Antwerp Kempenland East_Friesland Emsland Munsterland Ruhr Bergisches_Land Westerwald Taunus Untermain Odenwald Swabian_Alb Hegau Vosges Amont Millieu Aval Dijonnais Auxerrois Bassigny Perthois Senonais Champagne Brie_Champenois Beauvaisis Rouennais Hainaut Roman_Flanders East_Flanders Brabant Loon Neuchatel Vaud Bresse Autunnais Beaujolais Viennois Lyonnais Nevernais Orleanais Upper_Berry Gatinais Pays_France Chartrain Savoy Gresivaudan Dignois Avignonnais Dracenois Aquisextain Valentinois Vivarais Nimois Gevaudan Lower_Auvergne Bourbon Combraille Upper_Auvergne Turenne Nice`.split(' ');
   assert.equal(requested.length,100);

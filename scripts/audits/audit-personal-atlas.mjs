@@ -7,7 +7,7 @@ import {mapAuthoritiesForPerson} from '../../src/cartography/mapAuthorities.js';
 import {colorTerritorioEnMapa} from '../../src/cartography/kingdomMaps.js';
 import {authorityColor} from '../../src/cartography/mapColors.js';
 import {atlasPoliticalMosaicAt} from '../../src/cartography/atlasMosaic.js';
-const read=name=>JSON.parse(fs.readFileSync(path.join(projectRoot,'prototypes/euv-locations',name)));
+const read=name=>JSON.parse(fs.readFileSync(path.join(projectRoot,'data/cartography',name)));
 const data=read('corridor-locations.json');data.burgundy=read('burgundian-locations.json');
 const people=new Map(PERSONAS.map(p=>[p.id,p]));
 const cases=[['CARLOS5',1530],['CARLOS5',1550],['FEL2ESP',1560],['FEL3ESP',1610],

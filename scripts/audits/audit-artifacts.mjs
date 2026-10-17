@@ -14,7 +14,7 @@ for (const file of catalogue.files) {
   if (file.producer && !fs.existsSync(path.join(projectRoot, file.producer))) throw new Error(`Falta generador: ${file.producer}`);
 }
 const candidates = execFileSync('git', ['ls-files', '-z', '--cached', '--others', '--exclude-standard', '--',
-  'prototypes/euv-locations', 'docs/reports/reviewed'], {cwd: projectRoot, encoding: 'utf8'}).split('\0').filter(Boolean);
+  'data/cartography', 'labs/cartography', 'docs/reports/reviewed'], {cwd: projectRoot, encoding: 'utf8'}).split('\0').filter(Boolean);
 for (const file of new Set(candidates)) {
   // During a move, Git can still list the removed original until it is staged.
   if (!fs.existsSync(path.join(projectRoot, file))) continue;

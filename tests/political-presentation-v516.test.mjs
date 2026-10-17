@@ -10,7 +10,7 @@ import {mapAuthoritiesForPerson} from '../src/cartography/mapAuthorities.js';
 import {COLLECTIVE_AUTHORITIES,buildPoliticalMapIndex,inspectMapRegion} from '../src/cartography/politicalMapIndex.js';
 import {FRENCH_CROWN_COLOR,ORANGE_NASSAU,authorityColor} from '../src/cartography/mapColors.js';
 import {subterritoriosDeFiltro} from '../src/domain/filters/territoryFilters.js';
-const data=JSON.parse(fs.readFileSync(new URL('../prototypes/euv-locations/corridor-locations.json',import.meta.url))),by=new Map(PERSONAS.map(p=>[p.id,p]));
+const data=JSON.parse(fs.readFileSync(new URL('../data/cartography/corridor-locations.json',import.meta.url))),by=new Map(PERSONAS.map(p=>[p.id,p]));
 test('territorial and dynastic filters are alphabetic, reachable and distinguish genealogical houses from folders',()=>{
  const o=atlasFilterOptions(PERSONAS),sort=a=>a.toSorted((a,b)=>a.localeCompare(b,'es',{sensitivity:'base'}));
  assert.deepEqual(o.territorios,sort(o.territorios));assert.deepEqual(o.dynastyFamilies,sort(o.dynastyFamilies));assert.deepEqual(o.dynastyFolders.filter(n=>n!=='Otras dinastías'),sort(o.dynastyFolders.filter(n=>n!=='Otras dinastías')));

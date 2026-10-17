@@ -11,7 +11,7 @@ import {atlasPoliticalMosaicAt} from '../src/cartography/atlasMosaic.js';
 import {auditFranceLowCountriesContinuity, franceLowCountriesGeographicReview} from '../scripts/audits/audit-france-low-countries-continuity.mjs';
 import {applyRegionalReview} from '../scripts/cartography/apply-regional-review.mjs';
 
-const read = name => JSON.parse(fs.readFileSync(new URL('../prototypes/euv-locations/'+name, import.meta.url)));
+const read = name => JSON.parse(fs.readFileSync(new URL('../data/cartography/'+name, import.meta.url)));
 const data=read('corridor-locations.json'), review=read('france-low-countries-full-review.json');
 const geography=read('france-low-countries-geographic-cells.json'), inventory=read('location-inventory.json');
 const people=new Map(PERSONAS.map(p=>[p.id,p]));

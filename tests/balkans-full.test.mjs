@@ -13,10 +13,10 @@ import {auditBalkansContinuity, balkanGeographicReview} from '../scripts/audits/
 import {applyRegionalReview} from '../scripts/cartography/apply-regional-review.mjs';
 import {compactBalkanRoutes} from '../scripts/cartography/build-balkans-routes.mjs';
 const read = p => JSON.parse(fs.readFileSync(new URL(p, import.meta.url)));
-const review = read('../prototypes/euv-locations/balkans-full-review.json');
-const data = read('../prototypes/euv-locations/corridor-locations.json');
-const inventory = read('../prototypes/euv-locations/location-inventory.json');
-const geography = read('../prototypes/euv-locations/balkans-geographic-cells.json');
+const review = read('../data/cartography/balkans-full-review.json');
+const data = read('../data/cartography/corridor-locations.json');
+const inventory = read('../data/cartography/location-inventory.json');
+const geography = read('../data/cartography/balkans-geographic-cells.json');
 const people = new Map(PERSONAS.map(p => [p.id, p]));
 const owners = (id, year) => (atlasPoliticalMosaicAt(data, year).byLocation.get(id) || []).map(l => l.entityId).sort();
 const personal = (id, year) => mapAuthoritiesForPerson(people.get(id), year, data);

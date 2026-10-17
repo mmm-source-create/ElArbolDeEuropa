@@ -21,7 +21,7 @@ export function auditBalkansContinuity(data, inventory, review, geography) {
 }
 
 if (process.argv[1] && path.resolve(process.argv[1]) === import.meta.filename) {
-  const read = file => JSON.parse(fs.readFileSync(path.join(projectRoot, 'prototypes/euv-locations', file)));
+  const read = file => JSON.parse(fs.readFileSync(path.join(projectRoot, 'data/cartography', file)));
   const result = auditBalkansContinuity(read('corridor-locations.json'), read('location-inventory.json'),
     read('balkans-full-review.json'), read('balkans-geographic-cells.json'));
   fs.writeFileSync(auditReportPath('audit-balkans-continuity-report.json'), JSON.stringify(result, null, 2) + '\n');

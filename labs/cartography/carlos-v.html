@@ -147,7 +147,7 @@
       }
     }
     async function load(){
-      const [svgResponse,dataResponse]=await Promise.all([fetch('./euv-locations-crop.svg'),fetch('./carlos-v-locations.json')]);
+      const [svgResponse,dataResponse]=await Promise.all([fetch('../../data/cartography/euv-locations-crop.svg'),fetch('../../data/cartography/carlos-v-locations.json')]);
       if(!svgResponse.ok||!dataResponse.ok)throw new Error('No se pudo cargar el mapa o los datos');
       state.data=await dataResponse.json();
       const doc=new DOMParser().parseFromString(await svgResponse.text(),'image/svg+xml');

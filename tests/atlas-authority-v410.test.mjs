@@ -7,8 +7,8 @@ import {buildPoliticalMapIndex, inspectMapRegion} from '../src/cartography/polit
 import {auditLocationMap, atlasLocationIds} from '../scripts/audits/lib/locationMapAudit.js';
 import {pilotLocationContext, pilotLocationsFor} from '../src/cartography/locationMapPilot.js';
 
-const data = JSON.parse(fs.readFileSync(new URL('../prototypes/euv-locations/corridor-locations.json', import.meta.url)));
-data.burgundy = JSON.parse(fs.readFileSync(new URL('../prototypes/euv-locations/burgundian-locations.json', import.meta.url)));
+const data = JSON.parse(fs.readFileSync(new URL('../data/cartography/corridor-locations.json', import.meta.url)));
+data.burgundy = JSON.parse(fs.readFileSync(new URL('../data/cartography/burgundian-locations.json', import.meta.url)));
 const people = new Map(PERSONAS.map(p => [p.id, p]));
 const inspect = (id, year) => inspectMapRegion(id, year,
   buildPoliticalMapIndex(PERSONAS, year, data, {includeClaims: true}), data);
@@ -83,7 +83,7 @@ test('all-year audit detects internal gaps, transitions and missing geometry wit
 });
 
 test('the audit inventories the actual Locations SVG and sourced added cells', () => {
-  const ids = atlasLocationIds(fs.readFileSync(new URL('../prototypes/euv-locations/euv-locations-crop.svg', import.meta.url), 'utf8'));
+  const ids = atlasLocationIds(fs.readFileSync(new URL('../data/cartography/euv-locations-crop.svg', import.meta.url), 'utf8'));
   assert(ids.has('Lund') && ids.has('Jajce') && ids.has('Brussels'));
   assert(!ids.has('pattern0'));
   const report = auditLocationMap([], data, ids, {from: 1630, through: 1630});

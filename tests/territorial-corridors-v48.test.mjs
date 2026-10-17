@@ -77,7 +77,7 @@ test('Flandes y Artois dejan de duplicarse en Francia y señalan el intervalo mi
 });
 
 test('las nuevas correspondencias existen en el SVG y los gobiernos tienen citas',()=>{
-  const svg=fs.readFileSync(new URL('../src/MapChart_Map.svg',import.meta.url),'utf8');
+  const svg=fs.readFileSync(new URL('../data/cartography/MapChart_Map.svg',import.meta.url),'utf8');
   for(const territory of ['Baviera','Palatinado','Jülich','Berg','Cléveris','Francia','Artois','Flandes']) {
     for(const id of idsDeReinoEnAño(territory,1522)) assert.ok(svg.includes(`id="${id}"`),`${territory}: ${id}`);
   }

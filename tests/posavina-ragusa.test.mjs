@@ -8,9 +8,9 @@ import {atlasPoliticalMosaicAt} from '../src/cartography/atlasMosaic.js';
 import {auditRegionalContinuity} from '../scripts/audits/audit-regional-continuity.mjs';
 
 const read = name => JSON.parse(fs.readFileSync(new URL(name, import.meta.url), 'utf8'));
-const data = read('../prototypes/euv-locations/corridor-locations.json');
-const review = read('../prototypes/euv-locations/posavina-ragusa-review.json');
-const inventory = read('../prototypes/euv-locations/location-inventory.json');
+const data = read('../data/cartography/corridor-locations.json');
+const review = read('../data/cartography/posavina-ragusa-review.json');
+const inventory = read('../data/cartography/location-inventory.json');
 const owners = (id, year) => (atlasPoliticalMosaicAt(data, year).byLocation.get(id) || [])
   .map(layer => layer.entityId).sort();
 

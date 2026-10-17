@@ -68,8 +68,8 @@ export async function dataSnapshot({people, territories, mapData, root, onProgre
     counts: {people: people.length, governments: people.reduce((total, person) => total + (person.gobiernos?.length || 0), 0), territories: Object.keys(territories).length},
     people: Object.fromEntries(people.map(person => [person.id, personSnapshot(person)])),
     territories: Object.fromEntries(Object.entries(territories).map(([name, territory]) => [name, digest(territory)])),
-    geometry: {svg: digest(await fs.readFile(path.join(root, 'prototypes/euv-locations/euv-locations-crop.svg'), 'utf8')),
-      inventory: digest(JSON.parse(await fs.readFile(path.join(root, 'prototypes/euv-locations/location-inventory.json'), 'utf8'))),
+    geometry: {svg: digest(await fs.readFile(path.join(root, 'data/cartography/euv-locations-crop.svg'), 'utf8')),
+      inventory: digest(JSON.parse(await fs.readFile(path.join(root, 'data/cartography/location-inventory.json'), 'utf8'))),
       range: [mapData.from, mapData.through]},
     years,
   };

@@ -15,7 +15,7 @@ if (write && (!args.includes('--reason') || !reason?.trim() || reason.startsWith
 if (write && publicOnly) throw new Error('La actualización debe comprobar datos y páginas juntos');
 const actual = {};
 if (!publicOnly) actual.data = await dataSnapshot({people: PERSONAS, territories: TERRITORIOS,
-  mapData: await readJson('prototypes/euv-locations/corridor-locations.json'), root: projectRoot,
+  mapData: await readJson('data/cartography/corridor-locations.json'), root: projectRoot,
   onProgress: year => console.log(`Regresión V5: comprobado ${year}`)});
 if (publicOnly || write) actual.public = await publicSnapshot(projectRoot);
 if (write) {

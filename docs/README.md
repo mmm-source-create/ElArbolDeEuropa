@@ -21,7 +21,7 @@ compilar, empieza por el [README del proyecto](../README.md).
   Revisiones por afirmación: [`src/evidence/`](../src/evidence/).
 - [Clasificación de fuentes, resultados revisados y temporales](artifacts.md)
   y [catálogo de archivos](artifact-catalog.json).
-- [Laboratorio cartográfico y procedencia de sus capas](../prototypes/euv-locations/README.md).
+- [Laboratorio cartográfico y procedencia de sus capas](../labs/cartography/README.md).
 - [Capetos](CAPETOS.md), [Irlanda](CARTOGRAFIA_IRLANDA.md),
   [Borgoña](CARTOGRAFIA_BORGONA.md), [Iberia e Italia](CARTOGRAFIA_IBERIA_ITALIA.md)
   y [Sacro Imperio y tierras austríacas](CARTOGRAFIA_SACRO_IMPERIO.md).

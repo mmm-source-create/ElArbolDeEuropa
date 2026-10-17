@@ -32,7 +32,7 @@ def main():
     args = parser.parse_args()
     source = json.loads((HERE / "carlos-v-source.json").read_text())
     overrides = json.loads((HERE / "carlos-v-overrides.json").read_text())
-    old_paths = paths(ROOT / "src/MapChart_Map.svg")
+    old_paths = paths(ROOT / "data/cartography/MapChart_Map.svg")
     new_paths = paths(HERE / "euv-locations-crop.svg")
     known_territories = {reign["territory"] for reign in source["reigns"]}
     for item in overrides:

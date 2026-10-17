@@ -8,7 +8,7 @@ import {mapAuthoritiesForPerson} from '../src/cartography/mapAuthorities.js';
 import {pilotLocationsFor,pilotJurisdictionsFor} from '../src/cartography/locationMapPilot.js';
 import {earlyPeopleInventory} from '../scripts/audits/lib/earlyPeopleInventory.js';
 import {REINO_COLOR} from '../src/cartography/kingdomMaps.js';
-const read=n=>JSON.parse(fs.readFileSync(new URL('../prototypes/euv-locations/'+n,import.meta.url)));
+const read=n=>JSON.parse(fs.readFileSync(new URL('../data/cartography/'+n,import.meta.url)));
 const data=read('corridor-locations.json'),partition=read('poland-lithuania-partitions.json');
 const by=new Map(PERSONAS.map(p=>[p.id,p]));
 const owners=(m,id)=>new Set((m.byLocation.get(id)||[]).map(l=>l.entityId));

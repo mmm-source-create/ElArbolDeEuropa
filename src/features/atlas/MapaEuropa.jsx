@@ -13,9 +13,9 @@ import {
   ZoomOut,
   X,
 } from "lucide-react";
-import locationsSvgUrl from "../../../prototypes/euv-locations/euv-locations-crop.svg?url";
-import locationsDataUrl from "../../../prototypes/euv-locations/corridor-locations.json?url";
-import burgundianDataUrl from "../../../prototypes/euv-locations/burgundian-locations.json?url";
+import locationsSvgUrl from "../../../data/cartography/euv-locations-crop.svg?url";
+import locationsDataUrl from "../../../data/cartography/corridor-locations.json?url";
+import burgundianDataUrl from "../../../data/cartography/burgundian-locations.json?url";
 import { loadTextAsset, loadJsonAsset, forgetTextAsset } from "../../utils/loadAsset.js";
 import { clampMapViewBox, clipMapToBounds, fittedMapViewBox, mapControlLimits, resizeMapViewBox, zoomMapViewBox } from "./mapViewport.js";
 import { pilotImperialFrameFor, pilotLocationContext, mapSourceReference } from "../../cartography/locationMapPilot.js";

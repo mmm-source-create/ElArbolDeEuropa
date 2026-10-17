@@ -4,9 +4,9 @@ import {PERSONAS} from '../../src/data/personas.js';
 import {auditMapContinuity} from './lib/mapContinuityAudit.js';
 import {auditLocationMap, atlasLocationIds} from './lib/locationMapAudit.js';
 
-const data=JSON.parse(await fs.readFile(new URL('../../prototypes/euv-locations/corridor-locations.json',import.meta.url),'utf8'));
-data.burgundy=JSON.parse(await fs.readFile(new URL('../../prototypes/euv-locations/burgundian-locations.json',import.meta.url),'utf8'));
-const svg=await fs.readFile(new URL('../../prototypes/euv-locations/euv-locations-crop.svg',import.meta.url),'utf8');
+const data=JSON.parse(await fs.readFile(new URL('../../data/cartography/corridor-locations.json',import.meta.url),'utf8'));
+data.burgundy=JSON.parse(await fs.readFile(new URL('../../data/cartography/burgundian-locations.json',import.meta.url),'utf8'));
+const svg=await fs.readFile(new URL('../../data/cartography/euv-locations-crop.svg',import.meta.url),'utf8');
 const report={...auditMapContinuity(PERSONAS),locations:auditLocationMap(PERSONAS,data,atlasLocationIds(svg))};
 await fs.writeFile(auditReportPath('audit-map-continuity-report.json'),JSON.stringify(report,null,2)+'\n');
 console.log(`Continuidad de ${report.focusTerritory}: ${report.yearsWithoutAuthority.length} años sin autoridad registrada · ${report.unexplainedOverlaps.length} solapamientos sin explicación.`);

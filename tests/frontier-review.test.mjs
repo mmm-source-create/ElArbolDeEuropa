@@ -10,7 +10,7 @@ import {mapAuthoritiesForPerson} from '../src/cartography/mapAuthorities.js';
 import {pilotLocationsFor, reviewedMapLayers, reviewedLayerLocations} from '../src/cartography/locationMapPilot.js';
 import {territorialIdentity, territorialLabel} from '../src/cartography/territorialIdentity.js';
 
-const data=JSON.parse(fs.readFileSync(new URL('../prototypes/euv-locations/corridor-locations.json',import.meta.url)));
+const data=JSON.parse(fs.readFileSync(new URL('../data/cartography/corridor-locations.json',import.meta.url)));
 const people=new Map(PERSONAS.map(person=>[person.id,person]));
 const cells=(territory,year,personId)=>pilotLocationsFor(data,territory,year,personId);
 const authority=(personId,year)=>mapAuthoritiesForPerson(people.get(personId),year,data);
