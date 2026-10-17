@@ -88,3 +88,8 @@ html[data-eade-motion="reduce"] .home-marquee-window{mask-image:none;overflow:vi
 .home-marquee:has(a:focus-visible) .home-marquee-group[aria-hidden]{display:none}
 
 html[data-eade-theme="dark"] .public-home{--home-art:#3a342a}
+
+/* V5.23 · Carrusel de personajes con más presencia: veinte retratos y tarjetas más altas. */
+.home-feature-art{height:clamp(300px,30vw,380px)}
+.home-discovery-heading h2{font-size:clamp(30px,3.4vw,44px)}
+@media(min-width:1100px){.home-carousel-slide{flex-basis:calc((100% - 60px)/4)}}

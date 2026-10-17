@@ -9,6 +9,8 @@ import { TERRITORIOS, componentesDe } from "../../src/data/territorios.js";
 import fs from "node:fs/promises";
 import path from "node:path";
 import { biografiaExtensaPersona } from "../../src/content/biografias-extensas.js";
+import { IMAGENES_PERSONAS } from "../../src/imagenesPersonas.js";
+import { regionResolver } from "../../src/data/filterRegions.js";
 import { aliasesDePersona, biografiaPublicaPersona, contenidoEditorialPersona, resumenCortoPersona, slugBasePersona, slugPublico, tieneContenidoEditorial } from "../../src/utils/personPresentation.js";
 
 const ROOT = process.cwd();
@@ -1050,9 +1052,36 @@ function contemporaneos(persona, limite = 6) {
     .map(({ persona: p }) => referenciaPersona(p.id));
 }
 
+// V5.23 · El índice de Personas se ordena por relevancia y se filtra por siglo,
+// papel y región. Papel y región siguen las mismas reglas que los filtros del Atlas.
+const ROLE_RULES = [
+  ["monarquia", "Monarcas", /(^|\s|\/)(emperador|emperatriz|rey|reina|soberano|soberana|zar|sultan|califa|emir)(\s|$|\/)/],
+  ["papado", "Papas y clero", /(^|\s|\/)(papa|cardenal|arzobispo|obispo|abad|abadesa|santo|santa)(\s|$|\/)/],
+  ["consortes", "Consortes", /consorte/],
+  ["principes", "Príncipes e infantes", /(principe|princesa|infante|infanta|pretendiente|delfin)/],
+  ["nobleza", "Alta nobleza y señoríos", /(gran duque|archiduque|duque|duquesa|elector|conde|condesa|marques|senor|senora|landgrave|margrave|despota|ban)/],
+  ["gobierno", "Gobierno y milicia", /(gobernador|gobernadora|virrey|regente|dogo|general|valido|almirante|condestable|condotiero|estatuder|canciller)/],
+  ["cultura", "Cultura y pensamiento", /(teologo|poeta|artista|pintor|escultor|arquitecto|ingeniero|humanista|mecenas|escritor|filosofo|reformador|cientifico|astronomo)/],
+];
+const normalizarTitulo = (titulo) => String(titulo || "").toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+function papelPersona(persona) {
+  const titulo = normalizarTitulo(persona.titulo);
+  return ROLE_RULES.find(([, , test]) => test.test(titulo))?.[1] || "Otras figuras";
+}
+const { personRegion } = regionResolver(componentesDe);
+function sigloPersona(persona) {
+  const year = Number.isFinite(persona.nac) ? persona.nac : Number.isFinite(persona.muer) ? persona.muer - 30 : null;
+  return year === null ? null : Math.floor((year - 1) / 100) + 1;
+}
 function catalogoPersonas() {
   return PERSONAS
-    .map((p) => referenciaPersona(p.id))
+    .map((p) => ({
+      ...referenciaPersona(p.id),
+      relevancia: relevanciaPublica(p) + (IMAGENES_PERSONAS[p.id] ? 8 : 0) + (biografiaExtensaPersona(p) ? 8 : 0),
+      papel: papelPersona(p),
+      region: personRegion(territoriosDe(p)),
+      siglo: sigloPersona(p),
+    }))
     .sort((a, b) => a.nombre.localeCompare(b.nombre, "es", { sensitivity: "base" }));
 }
 
@@ -1137,11 +1166,16 @@ async function generarCatalogosPublicos() {
     slug: slugPublico(historia.titulo),
     disponible: Boolean(historia.disponible && Array.isArray(historia.pasos) && historia.pasos.length),
     pasos: Array.isArray(historia.pasos) ? historia.pasos.length : 0,
+    // Lectura a ~180 palabras por minuto más medio minuto por capítulo para mapa y fichas.
+    minutos: Array.isArray(historia.pasos) && historia.pasos.length
+      ? Math.max(2, Math.round(historia.pasos.map(paso => [paso.titulo, paso.texto].filter(Boolean).join(" ")).join(" ").split(/\s+/).filter(Boolean).length / 180 + historia.pasos.length * 0.5))
+      : 0,
   }));
 
   // Puertas de distintas épocas con imágenes y créditos ya disponibles en el Atlas.
-  const destacadosIds = ["FED2HOH", "JUANAARCO", "ISAB1CAST", "CARLOS5", "JUAN3SOBIESKI", "CARLOS3ESP"];
-  const personasDestacadas = destacadosIds.map(referenciaPersona).filter(Boolean);
+  // V5.23 · Veinte puertas en orden cronológico, todas con retrato.
+  const destacadosIds = ["FED2HOH", "JUANAARCO", "LORENZOMEDICI", "ISAB1CAST", "LEONARDODAVINCI", "CARLOS5", "ENRIQ8ING", "SULEIMAN1OSM", "FEL2ESP", "ISABEL1ING", "MARIAESTUARDO", "ENRIQ4FRA", "GUSTAV2ADOLFO", "LUIS14FRA", "JUAN3SOBIESKI", "PETER1RUS", "MARIATERESAHAB", "FRED2PRUSSIA", "CATHERINE2RUS", "MARIAANTONIETA"];
+  const personasDestacadas = destacadosIds.filter(id => IMAGENES_PERSONAS[id]).map(referenciaPersona).filter(Boolean);
   if (personasDestacadas.length < 6) {
     const existentes = new Set(personasDestacadas.map((p) => p.id));
     PERSONAS.slice().sort((a, b) => relevanciaPublica(b) - relevanciaPublica(a)).forEach((p) => {

@@ -2,6 +2,7 @@ import {MAP_FROM,MAP_THROUGH} from '../data/mapCoverage.js';
 import GovernmentsTable from './EuropeGovernments.jsx';
 import {EVENT_CATEGORIES} from './timelineLayout.js';
 import React,{useMemo,useState} from 'react';
+import {Share2} from 'lucide-react';
 import {MapaEuropa} from '../MapaEuropa.jsx';
 import {PERSONAS} from '../personas.jsx';
 import {EVENTOS_HISTORICOS,HISTORIAS} from '../historiaData.jsx';
@@ -16,6 +17,21 @@ import {slugPublico} from '../utils/personLabels.js';
 import './europe-panorama.css';
 
 
+// Atlas and Europa share one address; a shared link names the scene and year explicitly.
+function ShareView({year}) {
+  const [status, setStatus] = useState('');
+  const share = async () => {
+    const url = new URL('/es/', window.location.origin);
+    url.searchParams.set('atlas', '1'); url.searchParams.set('escena', 'europa'); url.searchParams.set('anio', String(year));
+    try {
+      if (navigator.share && window.matchMedia?.('(pointer: coarse)').matches) await navigator.share({title: `Europa en ${year} — El Árbol de Europa`, url: url.href});
+      else { await navigator.clipboard.writeText(url.href); setStatus('Enlace copiado'); }
+    } catch { setStatus(url.href); }
+    setTimeout(() => setStatus(''), 4000);
+  };
+  return <span className="europe-share"><button type="button" onClick={share}><Share2 size={13} aria-hidden="true"/> Compartir esta vista</button><span role="status">{status}</span></span>;
+}
+
 export default function EuropeYearView({year,onSelect,onEvent,onYearChange,timeline}) {
  const [peopleLimit,setPeopleLimit]=useState(8);
  const [eventCategory,setEventCategory]=useState('all');
@@ -26,7 +42,7 @@ export default function EuropeYearView({year,onSelect,onEvent,onYearChange,timel
  const events=result.eventos.filter(e=>currentCategory==='all'||e.categoria===currentCategory).toSorted((a,b)=>(a.desde??a.anio)-(b.desde??b.anio)||a.titulo.localeCompare(b.titulo,'es'));
  const validMap=year>=MAP_FROM&&year<=MAP_THROUGH;
  return <main className="europe-panorama" aria-labelledby="europe-panorama-title">
-  <header className="europe-heading"><div><span>Una mirada al continente</span><h1 id="europe-panorama-title">Europa en <em>{year}</em></h1><p>Territorios, acontecimientos y personas en un mismo momento.</p></div><a href="#europe-governments-title">Ver gobernantes ↓</a></header>
+  <header className="europe-heading"><div><span>Una mirada al continente</span><h1 id="europe-panorama-title">Europa en <em>{year}</em></h1><p>Territorios, acontecimientos y personas en un mismo momento.</p></div><div className="europe-heading-actions"><ShareView year={year}/><a href="#europe-governments-title">Ver gobernantes ↓</a></div></header>
   <div className="europe-overview">
    <section className="europe-map" aria-label={`Mapa político de Europa en ${year}`}>
     {validMap?<MapaEuropa panorama anioGlobal={year} onSelectPersona={onSelect}/>:<div className="europe-map-unavailable"><h2>Mapa disponible de {MAP_FROM} a {MAP_THROUGH}</h2><p>La cronología y las fichas siguen disponibles para {year}.</p><button type="button" onClick={()=>onYearChange(1500)}>Ver Europa en 1500</button></div>}
