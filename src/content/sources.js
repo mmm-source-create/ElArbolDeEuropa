@@ -1,3 +1,4 @@
+import {authorityReferences} from '../evidence/authorityReviews.js';
 import {ADRIATICO_SOURCES} from "./sources-adriatico-v214.js";
 import {ALPES_SOURCES} from './sources-alpes-v213.js';
 const DOGES_1400_1605 = [
@@ -281,6 +282,9 @@ export const SOURCES = [
     "nota": "Reconstrucciones genealógicas y referencias documentales, especialmente útiles para la Edad Media y las ramas dinásticas complejas.",
     "general": true
   },
+  {titulo:'Deutsche Nationalbibliothek · Fichas de autoridad (GND)',url:'https://www.dnb.de/gnd',grupo:'Repertorios principales',territorios:[],personas:[],nota:'Fichas normalizadas de personas con fechas vitales, relaciones familiares y cargos. Desde la V5.25 se usan para verificar afirmaciones concretas: solo se marca como documentado lo que la ficha registra igual.',general:true},
+  {titulo:'Real Academia de la Historia · Diccionario Biográfico español',url:'https://dbe.rah.es/',grupo:'Repertorios principales',territorios:[],personas:[],nota:'Biografías de referencia para el ámbito hispánico; cada ficha enlaza su artículo cuando existe.',general:true},
+  {titulo:'Oxford Dictionary of National Biography',url:'https://www.oxforddnb.com/',grupo:'Repertorios principales',territorios:[],personas:[],nota:'Biografías de referencia para las Islas Británicas; cada ficha enlaza su artículo cuando existe.',general:true},
   {
     "titulo": "Deutsche Biographie",
     "url": "https://www.deutsche-biographie.de/",
@@ -1393,6 +1397,7 @@ export const SOURCE_METHOD = [
   'Las fechas se expresan normalmente por año; «c.» identifica las fechas aproximadas registradas como tales.',
   'Cuando se conoce un intervalo o un límite, la ficha lo muestra como tal y añade una explicación documental. El filtro por año incluye los años compatibles con esos límites; las fechas aproximadas conservan su año convencional sin inventar un margen de error.',
   'Las fichas dinásticas distinguen las ramas cadetes de las transmisiones por matrimonio o herencia. La coincidencia del nombre de una casa no demuestra por sí sola una filiación entre todos sus miembros.',
+  'Desde la V5.25, fechas, filiaciones, matrimonios y algunos cargos se contrastan con las fichas de autoridad de la Deutsche Nationalbibliothek (GND). Wikidata solo sirve para localizar la ficha correcta y no se cita. Una afirmación pasa a «Documentado» únicamente si la ficha registra el mismo año, enlaza a la misma persona o fecha el mismo cargo y territorio con los mismos años; las discrepancias siguen pendientes de revisión.',
   'Wikipedia se utiliza como orientación bibliográfica auxiliar. Las filiaciones y cronologías discutidas requieren contraste con referencias especializadas.',
   'Los gobiernos distinguen territorio, título, clase y condición; una pretensión o un título nominal no equivale a gobierno efectivo.',
   'Las sucesiones explicadas son una selección editorial: una fila posterior no prueba por sí sola un relevo directo. Las crisis muestran reclamaciones históricas; el parentesco se limita a las filiaciones registradas. Acceso al título, coronación y gobierno efectivo se distinguen cuando existe información específica.',
@@ -1407,5 +1412,7 @@ export const FUENTES_TERRITORIOS = Object.fromEntries([...new Set(SOURCES.flatMa
   territorio, SOURCES.filter(source => source.territorios.includes(territorio)).map(({titulo, url}) => ({titulo, url})),
 ]));
 export function sourcesForPerson(id) {
-  return SOURCES.filter(source => source.personas.includes(id)).map(({titulo, url}) => ({titulo, url}));
+  const specific = SOURCES.filter(source => source.personas.includes(id)).map(({titulo, url}) => ({titulo, url}));
+  const urls = new Set(specific.map(source => source.url));
+  return [...specific, ...authorityReferences(id).filter(source => !urls.has(source.url))];
 }

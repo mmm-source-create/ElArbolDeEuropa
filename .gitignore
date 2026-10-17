@@ -43,3 +43,6 @@ public/map-audit/
 .cache/
 __pycache__/
 *.py[cod]
+
+# Caché de la revisión bibliográfica (scripts/research/authority-review).
+.cache/
