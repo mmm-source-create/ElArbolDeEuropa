@@ -8,13 +8,13 @@
 @keyframes ui-digit-roll{from{transform:translateY(calc((var(--digit) + 10) * -1em))}to{transform:translateY(calc(var(--digit) * -1em))}}
 .ui-segments{position:relative;display:inline-flex;align-items:center;gap:3px;padding:4px;border:1px solid var(--eade-border);border-radius:999px;background:var(--eade-paper-soft);isolation:isolate;max-width:100%}
 .ui-segments-indicator{position:absolute;top:4px;bottom:4px;border-radius:999px;background:var(--eade-paper-bright);box-shadow:0 2px 7px #2c262014;transition:left .34s cubic-bezier(.22,1,.36,1),width .34s cubic-bezier(.22,1,.36,1);pointer-events:none;z-index:-1}
-.ui-segments>button{position:relative;border:0;background:transparent;color:var(--eade-muted);padding:10px 17px;border-radius:999px;white-space:nowrap;font:600 12px/1.2 var(--eade-sans);cursor:pointer;transition:color .2s}
+.ui-segments>button{position:relative;border:0;background:transparent;color:var(--eade-muted);padding:10px 17px;border-radius:999px;white-space:nowrap;font:600 var(--fs-sm, 12px)/1.2 var(--eade-sans);cursor:pointer;transition:color .2s}
 .ui-segments>button.is-active{color:var(--eade-wine);background:var(--eade-paper-bright)}
 .ui-segments:has(.ui-segments-indicator)>button.is-active{background:transparent}
 .ui-segments>button:focus-visible{outline:2px solid var(--eade-wine);outline-offset:2px}
 .ui-progress{height:5px;border-radius:999px;background:var(--eade-border);overflow:hidden;width:100%}
 .ui-progress-fill{display:block;height:100%;width:100%;border-radius:inherit;background:var(--eade-wine);transform-origin:left center;transition:transform .65s cubic-bezier(.22,1,.36,1)}
-.ui-action-dial{position:fixed;right:max(20px,env(safe-area-inset-right));bottom:max(22px,env(safe-area-inset-bottom));z-index:45;font:600 12px/1.2 var(--eade-sans)}
+.ui-action-dial{position:fixed;right:max(20px,env(safe-area-inset-right));bottom:max(22px,env(safe-area-inset-bottom));z-index:45;font:600 var(--fs-sm, 12px)/1.2 var(--eade-sans)}
 .ui-action-dial-trigger{width:49px;height:49px;display:grid;place-items:center;margin-left:auto;border:1px solid var(--eade-border-strong);border-radius:50%;background:var(--eade-paper-bright);color:var(--eade-wine);box-shadow:0 5px 20px #2c262026;cursor:pointer;transition:transform .25s,background .25s}
 .ui-action-dial.is-open .ui-action-dial-trigger svg{transform:rotate(45deg)}
 .ui-action-dial-trigger svg{transition:transform .3s cubic-bezier(.22,1,.36,1)}
@@ -65,3 +65,37 @@ header .site-nav>a:is(:hover,:focus-visible){background-color:var(--eade-paper-s
 .mapa-toolbar .nav-btn:active:not(:disabled) { transform: translateY(1px) scale(.93); transition-duration: .07s; }
 html[data-eade-motion="reduce"] .mapa-toolbar .nav-btn { transform: none !important; transition: none; }
 @media(prefers-reduced-motion:reduce) { .mapa-toolbar .nav-btn { transform: none !important; transition: none; } }
+
+/* V5.19 · Snap Rail: el indicador previsualiza con resorte y vuelve a la opción elegida. */
+.ui-segments.is-rail .ui-segments-indicator{transition:left .42s cubic-bezier(.34,1.56,.64,1),width .42s cubic-bezier(.34,1.56,.64,1),opacity .2s}
+.ui-segments.is-rail.is-previewing .ui-segments-indicator{opacity:.62}
+.ui-segments.is-rail>button.is-active{transition:color .2s}
+.ui-segments.is-rail.is-previewing>button.is-active{color:var(--eade-muted)}
+@media(prefers-reduced-motion:reduce){.ui-segments.is-rail .ui-segments-indicator{transition:none}}
+html[data-eade-motion="reduce"] .ui-segments.is-rail .ui-segments-indicator{transition:none}
+
+/* Number Counter: cada cambio del año rebota con una ligera sobreoscilación. */
+.ui-year-counter{display:inline-flex;align-items:baseline;gap:6px;font:500 var(--fs-lg,15px)/1 var(--eade-serif);color:var(--eade-ink);font-variant-numeric:tabular-nums}
+.ui-year-counter>b{display:inline-block;font-weight:500;animation:ui-year-bump .44s cubic-bezier(.34,1.56,.64,1)}
+.ui-year-counter.is-idle{color:var(--eade-muted);font:500 var(--fs-xs,11px)/1 var(--eade-sans)}
+.ui-year-counter.is-idle>b{animation:none}
+@keyframes ui-year-bump{0%{transform:translateY(5px) scale(.82);opacity:.35}55%{transform:translateY(-2px) scale(1.14);opacity:1}100%{transform:none}}
+
+/* Hold to Confirm: un anillo se llena mientras se mantiene pulsado. */
+.ui-hold{--hold:0;position:relative;display:inline-flex;align-items:center;gap:8px;padding:6px 12px 6px 8px;border:1px solid var(--eade-border);border-radius:999px;background:transparent;color:var(--eade-muted);font:600 var(--fs-xs,11px)/1.2 var(--eade-sans);cursor:pointer;user-select:none;-webkit-user-select:none;touch-action:none}
+.ui-hold:hover{color:var(--eade-wine);border-color:var(--eade-border-strong)}
+.ui-hold:disabled{opacity:.45;cursor:default}
+.ui-hold svg{width:18px;height:18px;transform:rotate(-90deg)}
+.ui-hold circle{fill:none;stroke-width:2.4}
+.ui-hold .ui-hold-track{stroke:var(--eade-border)}
+.ui-hold .ui-hold-fill{stroke:var(--eade-wine);stroke-dasharray:50.3;stroke-dashoffset:calc(50.3 * (1 - var(--hold)));stroke-linecap:round}
+.ui-hold.is-holding{color:var(--eade-wine);border-color:var(--eade-wine)}
+.ui-hold.is-done{animation:ui-hold-done .4s cubic-bezier(.34,1.56,.64,1)}
+@keyframes ui-hold-done{40%{transform:scale(1.06)}100%{transform:none}}
+.ui-hold:focus-visible{outline:2px solid var(--eade-wine);outline-offset:2px}
+
+/* Botones de icono con etiqueta flotante. */
+.ui-tip{position:relative}
+.ui-tip::after{content:attr(data-tip);position:absolute;left:50%;top:calc(100% + 7px);z-index:60;padding:5px 8px;border-radius:6px;background:var(--eade-ink);color:var(--eade-paper-bright);font:600 var(--fs-2xs,10px)/1.2 var(--eade-sans);white-space:nowrap;letter-spacing:.01em;opacity:0;transform:translate(-50%,-3px);pointer-events:none;transition:opacity .16s,transform .2s cubic-bezier(.22,1,.36,1)}
+.ui-tip:is(:hover,:focus-visible)::after{opacity:1;transform:translate(-50%,0)}
+.ui-tip[aria-expanded="true"]::after,.ui-tip[open]::after{opacity:0}

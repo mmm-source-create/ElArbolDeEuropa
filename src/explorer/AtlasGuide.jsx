@@ -17,6 +17,9 @@ const copy = {
       ['Pretensión', 'Reclamación de un título; no acredita gobierno efectivo.'],
       ['Gobierno efectivo', 'Ejercicio documentado del poder.'],
       ['Fechas y relaciones', 'Pueden ser aproximadas o estar pendientes de documentación.'],
+      ['Territorio del Imperio', 'Vínculo jurídico que cambió con el tiempo. Agrupa fichas para navegar; no certifica la pertenencia de cada feudo en un año.'],
+      ['Círculo imperial', 'Distrito de administración imperial. No todos los territorios del Imperio pertenecían a uno.'],
+      ['Filtro por territorio', '«Vinculados» reúne a quien tuvo relación registrada con el lugar; «Gobernaban en el año» solo a quien ejercía el poder ese año.'],
     ],
   },
   en: {
