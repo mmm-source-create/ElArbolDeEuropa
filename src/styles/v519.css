@@ -14,8 +14,6 @@ html[data-eade-theme] .wrap.wrap .favorites-clear{display:flex;justify-content:f
 
 /* Año global: cifra grande junto a la etiqueta. */
 html[data-eade-theme] .wrap.wrap .global-year-heading-row{display:flex;align-items:baseline;justify-content:flex-start;gap:10px}
-html[data-eade-theme] .wrap.wrap .global-year-heading-row .ui-year-counter{order:1;font-size:var(--fs-xl)}
-html[data-eade-theme] .wrap.wrap .global-year-heading-row .ui-year-counter.is-idle{font-size:var(--fs-xs)}
 html[data-eade-theme] .wrap.wrap .global-year-heading-row .global-year-header-summary{order:2;margin-left:auto}
 
 /* Filtro territorial: dos opciones visibles en vez de un desplegable con notas. */
@@ -43,7 +41,7 @@ html[data-eade-theme] .wrap.wrap .atlas-view-pills>button.is-active{color:var(--
 html[data-eade-theme] .wrap.wrap .atlas-view-pills .ui-segments-indicator{background:var(--eade-paper-bright);box-shadow:0 1px 4px #0000001f}
 
 /* Línea temporal con el lenguaje del resto del Atlas. */
-html[data-eade-theme] .wrap.wrap .atlas-timeline{margin:20px 24px;border-radius:7px;background:var(--eade-paper-soft)}
+html[data-eade-theme] .wrap.wrap .atlas-timeline{margin:20px 24px;border-radius:var(--r-sm, 6px);background:var(--eade-paper-soft)}
 html[data-eade-theme] .wrap.wrap .atlas-timeline-heading h2{font:650 var(--fs-xs)/1 var(--eade-sans);letter-spacing:.08em;color:var(--eade-ink)}
 html[data-eade-theme] .wrap.wrap .atlas-timeline-heading span{font-size:var(--fs-xs)}
 html[data-eade-theme] .wrap.wrap .atlas-timeline-zoom{border:0;gap:2px}
@@ -54,7 +52,7 @@ html[data-eade-theme] .wrap.wrap .atlas-timeline-legend button::before{content:"
 html[data-eade-theme] .wrap.wrap .atlas-timeline-legend button span{margin-left:2px}
 html[data-eade-theme] .wrap.wrap :is(.atlas-timeline-axis,.atlas-timeline-events){background:var(--eade-paper-soft)}
 html[data-eade-theme] .wrap.wrap .atlas-timeline-event{border-color:color-mix(in srgb,var(--event-color) 55%,var(--eade-border));background:var(--eade-paper-bright);border-radius:999px;font-size:var(--fs-2xs)}
-html[data-eade-theme] .wrap.wrap .atlas-timeline-event::after{content:"";position:absolute;left:0;top:4px;bottom:4px;width:3px;border-radius:3px;background:var(--event-color)}
+html[data-eade-theme] .wrap.wrap .atlas-timeline-event::after{content:"";position:absolute;left:0;top:4px;bottom:4px;width:3px;border-radius:var(--r-sm, 6px);background:var(--event-color)}
 html[data-eade-theme] .wrap.wrap .atlas-timeline-event>i{display:none}
 html[data-eade-theme] .wrap.wrap .atlas-timeline-group{background:var(--eade-paper-soft);font-size:var(--fs-xs)}
 html[data-eade-theme] .wrap.wrap .atlas-timeline-life{opacity:.55}

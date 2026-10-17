@@ -102,10 +102,12 @@ test('Europa es una vista del Atlas: agrupa títulos, abre una persona y restaur
   await act(async()=>{Object.getOwnPropertyDescriptor(window.HTMLInputElement.prototype,'value').set.call(search,'Carlos V');search.dispatchEvent(new window.Event('input',{bubbles:true}));});
   assert.deepEqual([...document.querySelectorAll('.europe-ruler-grid h3')].map(n=>n.textContent),['España','Estados borgoñones','Sacro Imperio (Alemania)']);
   await click(document.querySelector('.europe-ruler-grid .europe-ruler>button'));
+  // The scenes slide for 650ms; the outgoing one is removed when it settles.
+  await act(async()=>{await new Promise(r=>setTimeout(r,700));});
   assert.equal(document.querySelector('.europe-heading'),null);assert.equal(document.querySelector('.atlas-traditional').hidden,false);
   assert.equal(new URLSearchParams(window.location.search).has('escena'),false);
   assert.match(document.querySelector('.atlas-visually-hidden[role="status"]').textContent,/Carlos V/);
-  await act(async()=>{window.history.replaceState(null,'',initial);window.dispatchEvent(new window.PopStateEvent('popstate'));await new Promise(r=>setTimeout(r,40));});
+  await act(async()=>{window.history.replaceState(null,'',initial);window.dispatchEvent(new window.PopStateEvent('popstate'));await new Promise(r=>setTimeout(r,700));});
   assert.equal(document.querySelector('.europe-heading h1')?.textContent,'Europa en 1530');
   assert.match(document.querySelector('.atlas-visually-hidden[role="status"]').textContent,/Carlos V/);
   const axis=document.querySelector('.atlas-timeline-axis');

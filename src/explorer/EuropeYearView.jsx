@@ -11,6 +11,7 @@ import {europaEnAnio} from '../data/europeYear.js';
 import {protagonistsAt} from '../data/europePanorama.js';
 import {governmentSummary} from '../data/governmentPresentation.js';
 import {IMAGENES_PERSONAS} from '../imagenesPersonas.js';
+import {responsiveImage} from '../utils/responsiveImage.js';
 import {slugPublico} from '../utils/personLabels.js';
 import './europe-panorama.css';
 
@@ -42,7 +43,7 @@ export default function EuropeYearView({year,onSelect,onEvent,onYearChange,timel
    {!protagonists.length&&<p>No hay protagonistas vinculados a historias o acontecimientos de este año. La tabla de gobernantes sigue disponible.</p>}
    <div className="europe-person-grid">{protagonists.slice(0,peopleLimit).map(({person,reasons,stories})=>{const image=IMAGENES_PERSONAS[person.id];return <article key={person.id}>
     <button className="europe-person-card" onClick={()=>onSelect(person.id)}>
-     {image?<img src={image.archivo} alt={image.alt||`Retrato de ${person.nombre}`} loading="lazy" style={{objectPosition:image.encuadre}}/>:<span className="europe-person-initial" aria-hidden="true">{person.nombre[0]}</span>}
+     {image?<img {...responsiveImage(image.archivo,'66px')} alt={image.alt||`Retrato de ${person.nombre}`} loading="lazy" style={{objectPosition:image.encuadre}}/>:<span className="europe-person-initial" aria-hidden="true">{person.nombre[0]}</span>}
      <span><strong>{person.nombre}</strong><small>{governmentSummary(person,year).join(' · ')||person.titulo}</small><span>{reasons[0]}</span></span>
     </button>
     <div className="europe-person-context">{stories.map(story=><a key={story.id} href={`/es/historia/${slugPublico(story.titulo)}`}>{story.titulo} →</a>)}{image&&<details><summary>Imagen y derechos</summary><p>{image.tipo} · {image.autor} · {image.fecha}</p><a href={image.fuenteUrl}>Fuente</a> · <a href={image.derechosUrl}>{image.derechos}</a></details>}</div>

@@ -21,10 +21,10 @@
 .home-discovery [hidden]{display:none!important}
 .home-carousel-track{position:relative;display:flex;gap:20px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;overscroll-behavior-x:contain;padding:4px 0 6px;scroll-padding-inline:0;touch-action:pan-x pan-y pinch-zoom}
 .home-carousel-track::-webkit-scrollbar{display:none}
-.home-carousel-track:focus-visible{outline:2px solid var(--eade-wine);outline-offset:4px;border-radius:8px}
+.home-carousel-track:focus-visible{outline:2px solid var(--eade-wine);outline-offset:4px;border-radius:var(--r-md, 10px)}
 .home-carousel-slide{flex:0 0 calc((100% - 60px)/4);min-width:0;scroll-snap-align:start}
 .home-feature-card{display:block;text-decoration:none!important;color:var(--eade-ink)!important}
-.home-feature-art{position:relative;height:270px;border-radius:9px;overflow:hidden;background:var(--home-art);isolation:isolate}
+.home-feature-art{position:relative;height:270px;border-radius:var(--r-md, 10px);overflow:hidden;background:var(--home-art);isolation:isolate}
 .home-portrait{display:grid;width:100%;height:100%;place-items:center;color:var(--eade-gold)}
 .home-portrait img{width:100%;height:100%;object-fit:cover;transition:transform .7s cubic-bezier(.22,1,.36,1)}
 .home-feature-person .home-feature-art::after{content:"";position:absolute;inset:0;background:linear-gradient(transparent 55%,#211b1466);pointer-events:none}
