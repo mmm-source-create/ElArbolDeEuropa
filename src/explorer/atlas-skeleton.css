@@ -20,3 +20,24 @@
 @keyframes atlas-sk-resolve{from{opacity:0;transform:translateY(5px)}to{opacity:1;transform:translateY(0)}}
 @keyframes atlas-sk-bar{from{transform:translateX(-100%)}to{transform:translateX(350%)}}
 @media(prefers-reduced-motion:reduce){.atlas-loading.loading .sk::after,.atlas-loading.loaded .sk:not(.dim),.atlas-loading-bar{animation:none!important}.atlas-loading.loading .sk::after{opacity:.58}.atlas-loading-bar{width:100%;opacity:.6}}
+
+/* V5.19 · Contorno real del Atlas mientras llega el código. */
+.atlas-bootstrap-surface{display:flex;flex-direction:column;gap:14px;min-height:calc(100vh - 120px);padding:4px 0}
+.atlas-bootstrap-surface .sk{display:block;border-radius:999px}
+.atlas-bs-scene{align-self:center;width:250px;height:40px}
+.atlas-bs-topbar{display:grid;grid-template-columns:minmax(220px,320px) 1fr;gap:24px;align-items:end}
+.atlas-bs-search{height:34px;border-radius:7px!important}
+.atlas-bs-year{display:grid;gap:10px}
+.atlas-bs-year i{width:110px;height:10px}
+.atlas-bs-year b{height:6px}
+.atlas-bs-row{display:flex;justify-content:space-between;align-items:center;padding:8px 0;border-block:1px solid var(--eade-border)}
+.atlas-bs-pills{width:200px;height:34px}
+.atlas-bs-icons{display:flex;gap:10px}
+.atlas-bs-icons i{width:26px;height:26px}
+.atlas-bs-grid{flex:1;display:grid;grid-template-columns:1fr 330px;gap:14px;min-height:420px}
+.atlas-bs-tree,.atlas-bs-panel{border-radius:7px!important}
+.atlas-bs-tree{display:grid;place-content:center;justify-items:center;gap:12px}
+.atlas-bs-tree>span{display:block;width:280px;height:12px;border-radius:4px;background:var(--eade-paper-bright);opacity:.5}
+.atlas-bs-tree>span:first-child{width:200px;height:22px}
+.atlas-bs-tree>span:last-child{width:220px}
+@media(max-width:900px){.atlas-bs-topbar,.atlas-bs-grid{grid-template-columns:1fr}.atlas-bs-panel{min-height:160px}}

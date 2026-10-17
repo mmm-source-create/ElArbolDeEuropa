@@ -24,7 +24,7 @@ html[data-eade-theme] .wrap.wrap .bio-section-heading{letter-spacing:.02em}
 /* Índice de la ficha: un selector de sección con un reborde común. */
 html[data-eade-theme] .wrap.wrap .bio-tabs{padding:10px 12px;border-bottom:1px solid var(--eade-border);background:transparent}
 html[data-eade-theme] .wrap.wrap .bio-tabs .ui-segments{border:1px solid var(--eade-border-strong);background:var(--eade-paper-soft);padding:3px}
-html[data-eade-theme] .wrap.wrap .bio-tabs .ui-segments>button{font-size:10.5px;padding:7px 6px}
+html[data-eade-theme] .wrap.wrap .bio-tabs .ui-segments>button{font-size:var(--fs-xs, 11px);padding:7px 6px}
 html[data-eade-theme] .wrap.wrap .bio-tabs .ui-segments>button[aria-current="location"]{color:var(--eade-wine)}
 html[data-eade-theme] .wrap.wrap .bio-tabs .ui-segments-indicator{top:3px;bottom:3px;background:var(--eade-paper-bright);box-shadow:0 1px 4px #0000001f}
 
