@@ -19,6 +19,7 @@ import { CORRIDORS_V48 } from './corridors-v48.js';
 import { GOBERNADORES_V55 } from './gobernadores-v55.js';
 import { MINIBIOGRAFIAS_V518 } from './minibiografias-v518.js';
 import { MINIBIOGRAFIAS_V523 } from './minibiografias-v523.js';
+import { MINIBIOGRAFIAS_V524 } from './minibiografias-v524.js';
 
 export const PERSONA_CONTENT = Object.freeze({
   ...MONARCAS_MEDIEVALES,
@@ -42,6 +43,7 @@ export const PERSONA_CONTENT = Object.freeze({
   ...GOBERNADORES_V55,
   ...MINIBIOGRAFIAS_V518,
   ...MINIBIOGRAFIAS_V523,
+  ...MINIBIOGRAFIAS_V524,
 });
 
 export function contenidoPersona(personaOId) {

@@ -564,5 +564,141 @@ export const REFERENCIAS_BIOGRAFIAS = Object.freeze({
    "titulo": "Encyclopaedia Britannica",
    "url": "https://www.britannica.com/biography/Niccolo-Machiavelli"
   }
+ ],
+ "ALF10": [
+  {
+   "titulo": "Real Academia de la Historia · Diccionario Biográfico español",
+   "url": "https://dbe.rah.es/biografias/6403/alfonso-x"
+  },
+  {
+   "titulo": "Deutsche Biographie",
+   "url": "https://www.deutsche-biographie.de/11864811X.html"
+  },
+  {
+   "titulo": "Encyclopaedia Britannica",
+   "url": "https://www.britannica.com/biography/Alfonso-X"
+  }
+ ],
+ "JAIME1AR": [
+  {
+   "titulo": "Real Academia de la Historia · Diccionario Biográfico español",
+   "url": "https://dbe.rah.es/biografias/13178/jaime-i"
+  },
+  {
+   "titulo": "Deutsche Biographie",
+   "url": "https://www.deutsche-biographie.de/118711512.html"
+  },
+  {
+   "titulo": "Encyclopaedia Britannica",
+   "url": "https://www.britannica.com/biography/James-I-king-of-Aragon"
+  }
+ ],
+ "CARLOS4": [
+  {
+   "titulo": "Deutsche Biographie",
+   "url": "https://www.deutsche-biographie.de/118560085.html"
+  },
+  {
+   "titulo": "Encyclopaedia Britannica",
+   "url": "https://www.britannica.com/biography/Charles-IV-Holy-Roman-emperor"
+  }
+ ],
+ "SEGIS1": [
+  {
+   "titulo": "Deutsche Biographie",
+   "url": "https://www.deutsche-biographie.de/118614185.html"
+  },
+  {
+   "titulo": "Encyclopaedia Britannica",
+   "url": "https://www.britannica.com/biography/Sigismund-Holy-Roman-emperor"
+  }
+ ],
+ "MATIAS1HUN": [
+  {
+   "titulo": "Deutsche Biographie",
+   "url": "https://www.deutsche-biographie.de/118579029.html"
+  },
+  {
+   "titulo": "Encyclopaedia Britannica",
+   "url": "https://www.britannica.com/biography/Matthias-I"
+  }
+ ],
+ "ALF5ARAG": [
+  {
+   "titulo": "Real Academia de la Historia · Diccionario Biográfico español",
+   "url": "https://dbe.rah.es/biografias/6367/alfonso-v"
+  },
+  {
+   "titulo": "Treccani · Dizionario Biografico degli Italiani",
+   "url": "https://www.treccani.it/enciclopedia/alfonso-v-d-aragona-re-di-sicilia-re-di-napoli_(Dizionario-Biografico)"
+  },
+  {
+   "titulo": "Deutsche Biographie",
+   "url": "https://www.deutsche-biographie.de/118648098.html"
+  },
+  {
+   "titulo": "Encyclopaedia Britannica",
+   "url": "https://www.britannica.com/biography/Alfonso-V-king-of-Aragon-and-Naples"
+  }
+ ],
+ "FED3HAB": [
+  {
+   "titulo": "Deutsche Biographie",
+   "url": "https://www.deutsche-biographie.de/118535773.html"
+  },
+  {
+   "titulo": "Encyclopaedia Britannica",
+   "url": "https://www.britannica.com/biography/Frederick-III-Holy-Roman-emperor"
+  }
+ ],
+ "LUIS11FRA": [
+  {
+   "titulo": "Deutsche Biographie",
+   "url": "https://www.deutsche-biographie.de/118574930.html"
+  },
+  {
+   "titulo": "Encyclopaedia Britannica",
+   "url": "https://www.britannica.com/biography/Louis-XI"
+  }
+ ],
+ "JUANAARCO": [
+  {
+   "titulo": "Deutsche Biographie",
+   "url": "https://www.deutsche-biographie.de/118557238.html"
+  },
+  {
+   "titulo": "Encyclopaedia Britannica",
+   "url": "https://www.britannica.com/biography/Saint-Joan-of-Arc"
+  }
+ ],
+ "MEHMED2OSM": [
+  {
+   "titulo": "Deutsche Biographie",
+   "url": "https://www.deutsche-biographie.de/118583166.html"
+  },
+  {
+   "titulo": "Encyclopaedia Britannica",
+   "url": "https://www.britannica.com/biography/Mehmed-II-Ottoman-sultan"
+  }
+ ],
+ "JUAN3SOBIESKI": [
+  {
+   "titulo": "Deutsche Biographie",
+   "url": "https://www.deutsche-biographie.de/118557769.html"
+  },
+  {
+   "titulo": "Encyclopaedia Britannica",
+   "url": "https://www.britannica.com/biography/John-III-Sobieski"
+  }
+ ],
+ "LUIS15FRA": [
+  {
+   "titulo": "Deutsche Biographie",
+   "url": "https://www.deutsche-biographie.de/118729438.html"
+  },
+  {
+   "titulo": "Encyclopaedia Britannica",
+   "url": "https://www.britannica.com/biography/Louis-XV"
+  }
  ]
 });
