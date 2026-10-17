@@ -53,12 +53,11 @@ const ALSACE_AND_METZ = [
 // en el tratado de Nimega de 1678; el ducado de Borgoña no se incluye.
 const COUNTY_OF_BURGUNDY = ['Amont','Millieu','Aval'];
 
-export const IMPERIAL_FRAME_SOURCES = Object.freeze([
-  'https://germanhistorydocs.org/en/from-the-reformations-to-the-thirty-years-war-1500-1648/ghdi:map-2809',
-  'https://germanhistorydocs.org/en/from-the-reformations-to-the-thirty-years-war-1500-1648/central-europe-1648',
-  'https://www.ieg-maps.uni-mainz.de/mapsp/mapp792d.htm',
-  'https://documentsdedroitinternational.fr/1678-17-septembre-traite-de-nimegue/',
-]);
+// Fuentes del marco imperial:
+// https://germanhistorydocs.org/en/from-the-reformations-to-the-thirty-years-war-1500-1648/ghdi:map-2809
+// https://germanhistorydocs.org/en/from-the-reformations-to-the-thirty-years-war-1500-1648/central-europe-1648
+// https://www.ieg-maps.uni-mainz.de/mapsp/mapp792d.htm
+// https://documentsdedroitinternational.fr/1678-17-septembre-traite-de-nimegue/
 
 // La capa es deliberadamente conservadora: omite lugares cuyo estatuto
 // imperial no puede inferirse del nombre de una región moderna del SVG.

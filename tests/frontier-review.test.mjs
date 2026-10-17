@@ -13,7 +13,6 @@ import {territorialIdentity, territorialLabel} from '../src/data/territorialIden
 const data=JSON.parse(fs.readFileSync(new URL('../prototypes/euv-locations/corridor-locations.json',import.meta.url)));
 const people=new Map(PERSONAS.map(person=>[person.id,person]));
 const cells=(territory,year,personId)=>pilotLocationsFor(data,territory,year,personId);
-const layer=(name,year)=>reviewedLayerLocations(data,reviewedMapLayers(data).find(e=>e.name===name),year);
 const authority=(personId,year)=>mapAuthoritiesForPerson(people.get(personId),year,data);
 
 

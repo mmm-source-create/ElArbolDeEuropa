@@ -1,5 +1,4 @@
 import { mergeIntervals, assignIntervalLanes, roundedPath } from "./treeGeometry.js";
-export { mergeIntervals, assignIntervalLanes, dedupePts, dist, pointToward, roundedPath } from "./treeGeometry.js";
 import { BY_ID, clavePareja, listaParejas, mediana } from "./model.js";
 
 export const TREE_BOX_W = 190;

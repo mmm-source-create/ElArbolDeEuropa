@@ -4,7 +4,6 @@ const {PERSONAS}=await import('../../../src/personas.jsx');
 const {conyugesDe}=await import('../../../src/data/personAccessors.js');
 const qids=JSON.parse(fs.readFileSync('qids.json')),ent=JSON.parse(fs.readFileSync('entities.json')),status=JSON.parse(fs.readFileSync('status.json')),gnd=JSON.parse(fs.readFileSync('gnd.json'));
 const reviews=JSON.parse(fs.readFileSync('reviews.json'));
-const byId=Object.fromEntries(PERSONAS.map(p=>[p.id,p]));
 const data={};
 for(const p of PERSONAS){if(status[p.id]!=='ok')continue;const e=ent[qids[p.id].qid];if(!e)continue;
  const g=(e.gnd||[]).find(x=>gnd[x]&&!gnd[x].missing);const entry={};

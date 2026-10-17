@@ -14,7 +14,6 @@ const read = name => JSON.parse(fs.readFileSync(new URL(name, import.meta.url), 
 const data = read('../prototypes/euv-locations/corridor-locations.json');
 const review = read('../prototypes/euv-locations/medieval-balkans-review.json');
 const people = new Map(PERSONAS.map(person => [person.id, person]));
-const layers = new Map(reviewedMapLayers(data).map(layer => [layer.name, layer]));
 const cells = (name, year) => new Set(atlasPoliticalMosaicAt(data, year).layers
   .find(layer => layer.entityId === territorialIdentity(name))?.ids || []);
 const authority = (id, year, territory) => mapAuthoritiesForPerson(people.get(id), year, data)

@@ -5,7 +5,7 @@ import { CatalogPage, HomePage, InfoPage, PersonPage } from "./public/PublicSite
 import AtlasSkeleton from "./explorer/AtlasSkeleton.jsx";
 import ReadingSkeleton from "./stories/ReadingSkeleton.jsx";
 import SiteHeader from "./components/SiteHeader.jsx";
-import EnglishLanding from "./public/EnglishLanding.jsx";
+import EnglishPage from "./english/EnglishPage.jsx";
 import NotFoundPage from "./public/NotFoundPage.jsx";
 import PrivacyPage from './public/PrivacyPage.jsx';
 import "./styles/theme.css";
@@ -54,7 +54,7 @@ export default function App() {
   if (!explorerRequested && initial.view === "story") return <Suspense fallback={<div className="public-site"><SiteHeader/><main className="public-main story-page"><ReadingSkeleton/></main></div>}><StoryPage slug={initial.storySlug} chapter={initial.chapter}/></Suspense>;
   if (!explorerRequested && initial.view === "dynasty") return <Suspense fallback={<p role="status">Cargando dinastía…</p>}><DynastyPage slug={initial.dynastySlug} /></Suspense>;
   if (!explorerRequested && initial.view === "territory") return <Suspense fallback={<p role="status">Cargando territorio…</p>}><TerritoryPage slug={initial.territorySlug} /></Suspense>;
-  if (initial.view === "english") return <EnglishLanding />;
+  if (initial.view === "english") return <EnglishPage />;
   if (initial.view === "not-found") return <NotFoundPage locale={initial.locale} />;
   if (initial.view === 'privacy') return <PrivacyPage locale={initial.locale}/>;
   if (initial.view === "desafio") {

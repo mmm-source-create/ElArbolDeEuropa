@@ -183,32 +183,31 @@ export default function ExplorerView({ vm, loading = false, loadError = false, o
   const closeGuide = () => { setGuideOpen(false); requestAnimationFrame(() => guideButtonRef.current?.focus()); };
   const {
     connectionIds, setConnectionIds, connectionCriterion, setConnectionCriterion, connectionResult, getExportSelection,
-    initialMapViewport, recordMapViewport, timelineVirtual, timelineListRef, scrollRef, tlScrollRef, locale, setLocale, query, setQuery,
+    initialMapViewport, recordMapViewport, scrollRef, locale, query, setQuery,
     territorios, setTerritorios, dinastias, setDinastias, dinastiasExpandidas, setDinastiasExpandidas, territoriosExpandidos, setTerritoriosExpandidos,
-    titulos, setTitulos, siglos, setSiglos, relaciones, setRelaciones, hovered, setHovered,
-    seleccion, setSeleccion, currentSearchIndex, setCurrentSearchIndex, zoom, setZoom, mode, setMode,
-    origen, setOrigen, destino, setDestino, modoComparacion, setModoComparacion, compareMenuOpen, setCompareMenuOpen,
-    compareRouteIndex, setCompareRouteIndex, focoMenuOpen, setFocoMenuOpen, focoId, setFocoId, focoAlcance, setFocoAlcance,
-    anioGlobal, setAnioGlobal, anioInput, setAnioInput, reproduciendoHistoria, setReproduciendoHistoria,
-    shareStatus, setShareStatus, collapsedIds, setCollapsedIds, vistasActivas, setVistasActivas, panelesVisibles, setPanelesVisibles,
-    atlasScene, changeAtlasScene, infoProyecto, setInfoProyecto, timelineScaleIndex, setTimelineScaleIndex, timelineMode, setTimelineMode, eventoSeleccionadoId, setEventoSeleccionadoId,
-    favoritos, setFavoritos, favoritosOpen, setFavoritosOpen, soloFavoritos, setSoloFavoritos, soloDocumentados, setSoloDocumentados, historiaActivaId, setHistoriaActivaId,
-    historiaPasoIndex, setHistoriaPasoIndex, compareMenuRef, focoMenuRef, favoritosMenuRef, historiaSnapshotRef, shareStatusTimerRef, urlStateLoadedRef,
-    territorialFilterMode,setTerritorialFilterMode,historyPopRef, dragState, workspaceGridRef, workspaceMainRef, panelWidths, setPanelWidths, treeMapSplit, setTreeMapSplit, filterSectionsOpen, setFilterSectionsOpen,
-    bioSectionsOpen, setBioSectionsOpen, personHistory, modoTrabajo, setModoTrabajo,
-    alternarSeccionFiltro, alternarSeccionBio, ajustarAnchoPanel, restablecerAnchoPanel, comenzarResizeLateral, comenzarResizeArbolMapa,
-    gen, rows, graph, favoritosSet, timelinePxPerYear, timelineTrackWidth,
-    eventosOrdenadosTodos, totalEventosTimeline, eventosOrdenados, eventoSeleccionado,
-    historiaActiva, historiaPasoActual, historiaPersonasSet, opciones, personaBio, toggle, focoSet, collapsedSet,
-    hiddenByCollapse, toggleDescendants, ajustarAnio, actualizarAnioDesdeRango, confirmarAnioEscrito, restablecerAnio, moverAnioHistoria, alternarReproduccionHistoria,
-    mostrarArbol, mostrarMapa, mostrarFiltros, mostrarBiografia, mostrarCronologia, vistaPrincipal, layoutLaterales, alternarVista,
-    alternarPanelAuxiliar, personasVivasEnAnio, gobernantesActivosEnAnio, matches, visiblePeople, visibleIds, visibleSignature, visibleRows,
-    treeLayout, renderedTreeUnits, positions, canvasSize, queryTrim, searchMatchIds, searchMatchSet, searchSignature, searchCurrentId,
-    irACoincidencia, hayFiltros, limpiar, limpiarSoloFiltros, lineage, comparePaths, comparePath, pathEdges, groupsByRow,
-    routing, relacionFocoId, amantesFoco, styleForFamilyLine, connectorLayerKey, connectors, scrollBy, onPointerDown,
-    onPointerMove, endDrag, centerOn, pendingZoomCenterRef, cambiarZoomArbol, centerOnTimeline, seleccionarPersonaPorId, navegarHistorialPersona, centrarSeleccion, cerrarSeleccion,
-    centerTimelineOnYear, alternarFavorito, seleccionarEvento, aplicarPasoHistoria, iniciarHistoria, cambiarPasoHistoria, salirHistoria, mostrarEstadoCompartir,
-    construirEnlaceCompartido, compartirPersona, handleBoxClick, getBoxHandlers, renderPersonBox, miniW, miniScaleX, miniScaleY,
+    titulos, setTitulos, siglos, setSiglos, relaciones, setRelaciones, hovered,
+    seleccion, currentSearchIndex, zoom, mode, setMode,
+    origen, setOrigen, destino, setDestino, modoComparacion, compareMenuOpen, setCompareMenuOpen,
+    compareRouteIndex, setCompareRouteIndex, setFocoMenuOpen, focoId, setFocoId, focoAlcance, setFocoAlcance,
+    anioGlobal, anioInput, setAnioInput, reproduciendoHistoria, setReproduciendoHistoria,
+    shareStatus, collapsedIds, setCollapsedIds, setVistasActivas,
+    atlasScene, changeAtlasScene, infoProyecto, setInfoProyecto,
+    favoritos, setFavoritos, favoritosOpen, setFavoritosOpen, soloFavoritos, setSoloFavoritos, soloDocumentados, setSoloDocumentados,
+    historiaPasoIndex, compareMenuRef, favoritosMenuRef,
+    territorialFilterMode, setTerritorialFilterMode, filterSectionsOpen,
+    bioSectionsOpen, personHistory, modoTrabajo, setModoTrabajo,
+    alternarSeccionFiltro, alternarSeccionBio,
+    graph, favoritosSet,
+    historiaActiva, opciones, personaBio, toggle, focoSet,
+    hiddenByCollapse, actualizarAnioDesdeRango, confirmarAnioEscrito, restablecerAnio, moverAnioHistoria, alternarReproduccionHistoria,
+    mostrarArbol, mostrarMapa, mostrarFiltros, mostrarBiografia, mostrarCronologia, vistaPrincipal, layoutLaterales,
+    alternarPanelAuxiliar, personasVivasEnAnio, gobernantesActivosEnAnio, visiblePeople,
+    renderedTreeUnits, positions, canvasSize, queryTrim, searchMatchIds,
+    irACoincidencia, limpiarSoloFiltros, comparePaths, comparePath,
+    connectorLayerKey, connectors, scrollBy, onPointerDown,
+    onPointerMove, endDrag, cambiarZoomArbol, seleccionarPersonaPorId, navegarHistorialPersona, centrarSeleccion, cerrarSeleccion,
+    alternarFavorito, seleccionarEvento, aplicarPasoHistoria, iniciarHistoria, cambiarPasoHistoria, salirHistoria,
+    compartirPersona, renderPersonBox, miniScaleX, miniScaleY,
     onMinimapClick, filtrosActivosCompactos, cambiarIdioma,
   } = vm;
   const filtrosCompactosVisibles = filtrosActivosCompactos.slice(0, 6);
@@ -622,7 +621,6 @@ export default function ExplorerView({ vm, loading = false, loadError = false, o
       <div className="atlas-scenes-track">
       <div className="atlas-traditional" hidden={atlasScene !== 'atlas' && !sceneSliding}>
       <div
-        ref={workspaceGridRef}
         className={`workspace-grid ${layoutLaterales} workspace-no-timeline`}
         style={{
           // V5.20 · Anchos fijos: sin redimensionar, sin saltos ni marcos de arrastre.
@@ -759,7 +757,6 @@ export default function ExplorerView({ vm, loading = false, loadError = false, o
 
 
         <main
-          ref={workspaceMainRef}
           className={`workspace-main workspace-main-${vistaPrincipal}`}
           style={mostrarArbol && mostrarMapa ? {
             "--tree-pane-fr": "1fr",

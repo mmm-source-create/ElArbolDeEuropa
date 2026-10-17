@@ -2,7 +2,6 @@ import {TERRITORIOS_SUB,TERRITORIOS_DESTACADOS,subterritoriosDeFiltro} from '../
 import {GRUPOS_DINASTICOS,GRUPOS_DINASTICOS_REGIONALES,DINASTIAS_DESTACADAS,OTRAS_DINASTIAS} from '../explorer/model.js';
 import {territoriosDe,gobiernosDe} from './personAccessors.js';
 import {FILTER_REGIONS,TERRITORY_REGION} from './filterRegions.js';
-export {FILTER_REGIONS};
 import {gobiernoEfectivo} from './territorios.js';
 
 export const alphabetical=(a,b)=>a.localeCompare(b,'es',{sensitivity:'base'});
