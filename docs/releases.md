@@ -151,3 +151,5 @@ Release se preparan en borrador sobre la entrega validada.
 [V5.25](V5.25.md) contrasta fechas, filiaciones, matrimonios y cargos con las fichas de autoridad GND (de 943 a 4.778 afirmaciones con fuente precisa), añade 47 títulos que faltaban, fusiona dos Visconti duplicados, incorpora a Eugenio de Saboya, completa a Juana de Évreux, aclara a Isabel la Católica en Aragón y crea la Corona de San Wenceslao.
 
 [V5.26](V5.26.md) amplía Polonia-Lituania, Rusia y el Báltico entre 1200 y 1800, con 1.801 celdas auditadas, 498 fases, dependencias diferenciadas y 14 protagonistas lituanos con fuentes y ámbitos personales propios.
+
+[V5.27](V5.27.md) resuelve las 147 fechas que discrepaban de la ficha GND: 63 confirmadas, 46 corregidas y 38 marcadas como discutidas, cada una con su fuente.
