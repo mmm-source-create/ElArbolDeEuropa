@@ -7,7 +7,7 @@ import {territorialIdentity} from '../src/data/territorialIdentity.js';
 import {personClaims} from '../src/evidence/claims.js';
 import {mapAuthoritiesForPerson} from '../src/data/mapAuthorities.js';
 import {colorTerritorioEnMapa} from '../src/Territorios.jsx';
-import {atlasPoliticalMosaicAt} from '../prototypes/euv-locations/atlas-mosaic.js';
+import {atlasPoliticalMosaicAt} from '../src/data/atlasMosaic.js';
 import {auditRegionalContinuity} from '../scripts/audits/audit-regional-continuity.mjs';
 import {auditBalkansContinuity, balkanGeographicReview} from '../scripts/audits/audit-balkans-continuity.mjs';
 import {applyRegionalReview} from '../scripts/cartography/apply-regional-review.mjs';

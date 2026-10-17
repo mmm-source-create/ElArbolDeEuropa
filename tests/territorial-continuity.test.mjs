@@ -6,7 +6,7 @@ import {TERRITORIOS} from '../src/data/territorios.js';
 import {mapAuthoritiesForPerson} from '../src/data/mapAuthorities.js';
 import {reviewedLayerLocations, reviewedLayerEvidence, pilotLocationsFor} from '../src/data/locationMapPilot.js';
 import {territorialIdentity, territorialLabel, territorialColor} from '../src/data/territorialIdentity.js';
-import {politicalMosaicAt} from '../prototypes/euv-locations/location-mosaic.js';
+import {politicalMosaicAt} from '../src/data/locationMosaic.js';
 import {applyContinuityReview} from '../scripts/cartography/apply-continuity-review.mjs';
 
 const data=JSON.parse(fs.readFileSync(new URL('../prototypes/euv-locations/corridor-locations.json',import.meta.url)));

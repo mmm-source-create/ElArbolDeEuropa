@@ -2,7 +2,7 @@ import assert from 'node:assert/strict';
 import test from 'node:test';
 import {reviewedLayerLocations, reviewedLayerActive, reviewedLayerEvidence,
   mapLocationsForGovernment} from '../src/data/locationMapPilot.js';
-import {politicalMosaicAt} from '../prototypes/euv-locations/location-mosaic.js';
+import {politicalMosaicAt} from '../src/data/locationMosaic.js';
 
 const oldLayer = {name:'Territorio',corridor:'Iberia',versions:[
   {from:1400,ids:['Old_core']},{from:1650,ids:['Last_border']}],temporalExtensions:[{

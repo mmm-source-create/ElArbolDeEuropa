@@ -2,7 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import {reviewedLayerLocations, reviewedMapLayers, mapSourceReference} from '../src/data/locationMapPilot.js';
-import {politicalMosaicAt} from '../prototypes/euv-locations/location-mosaic.js';
+import {politicalMosaicAt} from '../src/data/locationMosaic.js';
 import {PERSONAS} from '../src/personas.jsx';
 import {mapAuthoritiesForPerson} from '../src/data/mapAuthorities.js';
 import {CHRONOLOGY_ROUTES, chronologyJurisdictionsFor} from '../src/data/atlasChronologyRoutes.js';

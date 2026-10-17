@@ -26,7 +26,7 @@ import {
   crearPreguntaCamino,
   crearPreguntaRacha,
   describirDificultad,
-} from "./desafioEngine.jsx";
+} from "./desafioEngine.js";
 import {PreguntaOpciones, PreguntaOrden, Explicacion} from './Question.jsx';
 import LearningSession from './LearningSession.jsx';
 import Odometer from '../ui/Odometer.jsx';

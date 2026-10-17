@@ -2,7 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import {TERRITORIOS,componentesDe,gobiernoEfectivo} from '../src/data/territorios.js';
-import {auditarTerritorios} from '../src/data/auditTerritorios.js';
+import {auditarTerritorios} from '../scripts/audits/lib/auditTerritorios.js';
 import {sucesionDe} from '../src/data/sucesion.js';
 import {etiquetaClaseGobierno,slugPublico,textoBusquedaPersona,normalizarBusquedaPublica} from '../src/utils/personPresentation.js';
 import {PERSONA_CONTENT} from '../src/content/personas/index.js';

@@ -1,4 +1,4 @@
-import {atlasPoliticalMosaicAt} from '../prototypes/euv-locations/atlas-mosaic.js';
+import {atlasPoliticalMosaicAt} from '../src/data/atlasMosaic.js';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import path from 'node:path';

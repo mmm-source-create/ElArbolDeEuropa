@@ -1,9 +1,9 @@
-import {PERSONAS} from '../../src/personas.jsx';
-import {idsDeGobiernoEnAño, listaReinados, reinadoEsEfectivo} from '../../src/Territorios.jsx';
-import {personClaims} from '../../src/evidence/claims.js';
-import {mapLocationsForGovernment, pilotJurisdictionsFor, reviewedLayerCovered} from '../../src/data/locationMapPilot.js';
-import {compareEs, mosaicPalette, politicalMosaicAt} from './location-mosaic.js';
-import {territorialIdentity, territorialLabel} from '../../src/data/territorialIdentity.js';
+import {PERSONAS} from '../personas.jsx';
+import {idsDeGobiernoEnAño, listaReinados, reinadoEsEfectivo} from '../Territorios.jsx';
+import {personClaims} from '../evidence/claims.js';
+import {mapLocationsForGovernment, pilotJurisdictionsFor, reviewedLayerCovered} from './locationMapPilot.js';
+import {compareEs, mosaicPalette, politicalMosaicAt} from './locationMosaic.js';
+import {territorialIdentity, territorialLabel} from './territorialIdentity.js';
 
 const entriesFor = data => [...(data?.territories || []), ...(data?.additionalTerritories || [])];
 const entriesByNameCache = new WeakMap();

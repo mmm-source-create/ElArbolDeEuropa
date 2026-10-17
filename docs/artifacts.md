@@ -12,7 +12,7 @@
 | Entorno local | `.venv-cartography/`, `node_modules/`, `__pycache__/` | Regenerable e ignorado |
 | Catálogos y sitio compilado | `src/generated/`, metadatos y catálogos de `public/`, sitemaps, `public/map-audit/`, `dist/` | Derivados del build; no editar como fuente |
 | Evidencias visuales locales | `outputs/` | Revisión temporal; no se publica automáticamente |
-| Laboratorios y capturas documentales | HTML/JS y PNG versionados en `prototypes/euv-locations/` | Material conservado: los visores también intervienen en la publicación del mosaico |
+| Laboratorios y capturas documentales | HTML y PNG versionados en `prototypes/euv-locations/` | Material conservado: `territorial-corridors.html` se publica como `/es/mapa-completo`. Desde V5.28 los módulos del mosaico que también usa el Atlas están en `src/data/atlasMosaic.js` y `src/data/locationMosaic.js` |
 | Historial | `docs/V*.md`, `docs/archive/manifests/` | Describe cada entrega; se conservan cifras, rutas antiguas y checksums históricos |
 
 El [catálogo cartográfico](artifact-catalog.json) clasifica individualmente

@@ -7,7 +7,7 @@ import {personClaims} from '../src/evidence/claims.js';
 import {mapAuthoritiesForPerson} from '../src/data/mapAuthorities.js';
 import {buildPoliticalMapIndex, inspectMapRegion} from '../src/data/politicalMapIndex.js';
 import {territorialIdentity} from '../src/data/territorialIdentity.js';
-import {atlasPoliticalMosaicAt} from '../prototypes/euv-locations/atlas-mosaic.js';
+import {atlasPoliticalMosaicAt} from '../src/data/atlasMosaic.js';
 import {auditFranceLowCountriesContinuity, franceLowCountriesGeographicReview} from '../scripts/audits/audit-france-low-countries-continuity.mjs';
 import {applyRegionalReview} from '../scripts/cartography/apply-regional-review.mjs';
 

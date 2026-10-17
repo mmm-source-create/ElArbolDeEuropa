@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict';
 import test from 'node:test';
-import {auditMapSpatial} from '../src/data/mapSpatialAudit.js';
+import {auditMapSpatial} from '../scripts/audits/lib/mapSpatialAudit.js';
 
 const geometry={scope:'Test',bbox:[0,0,10,10],method:'Clipped geometry',cells:[
   {id:'Town',visibleArea:2},{id:'Pindus_Mountains1',visibleArea:6},

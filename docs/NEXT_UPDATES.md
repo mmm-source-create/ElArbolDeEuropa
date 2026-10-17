@@ -1,5 +1,6 @@
 # Entregas de «next updates»
 
+La propuesta original se conserva en [archive/next-updates-v2.md](archive/next-updates-v2.md).
 Implementadas sucesivamente en una rama de revisión:
 
 - [V4.0](V4.0.md): afirmaciones y cobertura documental, identidades históricas separadas y Atlas más despejado y accesible.

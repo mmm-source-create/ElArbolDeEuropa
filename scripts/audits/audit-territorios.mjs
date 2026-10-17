@@ -2,7 +2,7 @@ import {auditReportPath} from '../lib/project-paths.mjs';
 import { PERSONA_CONTENT } from "../../src/content/personas/index.js";
 import { HISTORIA_TERRITORIOS } from "../../src/content/territorios/index.js";
 import { TERRITORIOS, gobiernoEfectivo } from "../../src/data/territorios.js";
-import { auditarTerritorios } from "../../src/data/auditTerritorios.js";
+import { auditarTerritorios } from "./lib/auditTerritorios.js";
 import fs from "node:fs/promises";
 import path from "node:path";
 

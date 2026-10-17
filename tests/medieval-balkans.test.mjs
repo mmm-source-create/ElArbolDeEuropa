@@ -6,7 +6,7 @@ import {personClaims} from '../src/evidence/claims.js';
 import {mapAuthoritiesForPerson} from '../src/data/mapAuthorities.js';
 import {reviewedMapLayers, reviewedLayerLocations} from '../src/data/locationMapPilot.js';
 import {territorialIdentity, territorialLabel, territorialColor} from '../src/data/territorialIdentity.js';
-import {atlasPoliticalMosaicAt} from '../prototypes/euv-locations/atlas-mosaic.js';
+import {atlasPoliticalMosaicAt} from '../src/data/atlasMosaic.js';
 import {mergeMapExpansions} from '../scripts/cartography/merge-map-expansions.mjs';
 import {applyMedievalBalkans} from '../scripts/cartography/apply-medieval-balkans.mjs';
 

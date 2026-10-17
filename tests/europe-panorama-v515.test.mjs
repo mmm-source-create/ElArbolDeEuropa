@@ -5,7 +5,7 @@ import {PERSONAS} from '../src/personas.jsx';
 import {HISTORIAS,EVENTOS_HISTORICOS} from '../src/historiaData.jsx';
 import {governmentGroupsAt,governmentSummary,groupedGovernmentIntervals} from '../src/data/governmentPresentation.js';
 import {governmentTableAt,protagonistsAt,europeMosaicAt} from '../src/data/europePanorama.js';
-import {atlasPoliticalMosaicAt} from '../prototypes/euv-locations/atlas-mosaic.js';
+import {atlasPoliticalMosaicAt} from '../src/data/atlasMosaic.js';
 import {COLLECTIVE_AUTHORITIES} from '../src/data/politicalMapIndex.js';
 import {colorTerritorioEnMapa} from '../src/Territorios.jsx';
 import {buildTimelineRows,layoutTimelineEvents,timelineYearAt} from '../src/explorer/timelineLayout.js';

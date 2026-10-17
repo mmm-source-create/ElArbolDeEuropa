@@ -1,7 +1,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import {fileURLToPath} from 'node:url';
-import {atlasPoliticalMosaicAt, atlasMosaicPalette} from '../../prototypes/euv-locations/atlas-mosaic.js';
+import {atlasPoliticalMosaicAt, atlasMosaicPalette} from '../../src/data/atlasMosaic.js';
 import {auditReportPath} from '../lib/project-paths.mjs';
 import {territorialIdentity} from '../../src/data/territorialIdentity.js';
 
