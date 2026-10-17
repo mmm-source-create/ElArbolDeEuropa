@@ -8,7 +8,7 @@ import { buildCorridorReviews } from "../../src/evidence/corridorReviews.js";
 import { TERRITORIOS, componentesDe } from "../../src/data/territorios.js";
 import fs from "node:fs/promises";
 import path from "node:path";
-import { biografiaExtensaPersona } from "../../src/content/personas/biografias-extensas.js";
+import { biografiaExtensaPersona } from "../../src/content/biografias-extensas.js";
 import { aliasesDePersona, biografiaPublicaPersona, contenidoEditorialPersona, resumenCortoPersona, slugBasePersona, slugPublico, tieneContenidoEditorial } from "../../src/utils/personPresentation.js";
 
 const ROOT = process.cwd();
