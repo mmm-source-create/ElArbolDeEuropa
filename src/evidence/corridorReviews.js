@@ -1,4 +1,4 @@
-import {gobiernosDe} from '../data/personAccessors.js';
+import {gobiernosDe} from '../domain/genealogy/personAccessors.js';
 const bayern = {title:'Historisches Lexikon Bayerns · Bayerische Teilungen',url:'https://www.historisches-lexikon-bayerns.de/Lexikon/Bayerische_Teilungen',locator:'División de 1392 y sucesiones de Straubing, Ingolstadt y Landshut'};
 const bayernTerritory = {title:'Historisches Lexikon Bayerns · Territorialentwicklung in Altbayern',url:'https://www.historisches-lexikon-bayerns.de/Lexikon/Territorialentwicklung_in_Altbayern_%281180-1505%29',locator:'Particiones y reunión de 1505'};
 const kurpfalz = {title:'Historisches Lexikon Bayerns · Kurpfalz: Politische Geschichte',url:'https://www.historisches-lexikon-bayerns.de/Lexikon/Artikel_45783',locator:'Cronología de electores, pérdida de 1623 y restitución de 1648'};

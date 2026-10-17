@@ -1,8 +1,10 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
-import {PERSONAS} from '../src/personas.jsx';
-import {REINO_A_IDS, REINO_VERSIONES, REINO_COLOR, TERRITORIOS_DESTACADOS, TERRITORIOS_SUB, colorTerritorioEnMapa, idsDeReinoEnAño, reinadosActivos, subterritoriosDeFiltro, territorioCoincideConFiltro} from '../src/Territorios.jsx';
+import {PERSONAS} from '../src/data/personas.js';
+import {REINO_A_IDS, REINO_VERSIONES, REINO_COLOR, colorTerritorioEnMapa, idsDeReinoEnAño} from '../src/cartography/kingdomMaps.js';
+import {TERRITORIOS_DESTACADOS, TERRITORIOS_SUB, subterritoriosDeFiltro, territorioCoincideConFiltro} from '../src/domain/filters/territoryFilters.js';
+import {reinadosActivos} from '../src/domain/government/reigns.js';
 
 const person = id => PERSONAS.find(p => p.id === id);
 const painted = (id, year) => new Set(reinadosActivos(person(id), year, {soloEfectivos:true})

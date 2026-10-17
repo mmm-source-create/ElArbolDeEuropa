@@ -2,15 +2,15 @@ import test,{after, before} from 'node:test';
 import assert from 'node:assert/strict';
 import {JSDOM} from 'jsdom';
 import React,{act} from 'react';
-import {PERSONAS} from '../src/personas.jsx';
-import {successionBank,challengeUrl,createChallenge,REVIEW_KEY} from '../src/desafio/learning.js';
-import {crearDesafioDiario} from '../src/desafio/desafioEngine.js';
+import {PERSONAS} from '../src/data/personas.js';
+import {successionBank,challengeUrl,createChallenge,REVIEW_KEY} from '../src/features/desafio/learning.js';
+import {crearDesafioDiario} from '../src/features/desafio/desafioEngine.js';
 const dom=new JSDOM('<div id="root"></div>',{url:'https://treeofeurope.eu/es/desafio',pretendToBeVisual:true});
 for(const name of ['window','document','navigator','HTMLElement','Event','MouseEvent'])Object.defineProperty(globalThis,name,{value:name==='window'?dom.window:dom.window[name],configurable:true,writable:true});
 globalThis.IS_REACT_ACT_ENVIRONMENT=true;
 let createRoot,Desafio,app;const bank=successionBank(PERSONAS);let opens=[];
 window.open=(...args)=>opens.push(args);
-before(async()=>{({createRoot}=await import('react-dom/client'));({default:Desafio}=await import('../src/desafio/Desafio.jsx'));});
+before(async()=>{({createRoot}=await import('react-dom/client'));({default:Desafio}=await import('../src/features/desafio/Desafio.jsx'));});
 after(async()=>{if(app)await act(async()=>app.unmount());dom.window.close();});
 async function mount(search='') {if(app)await act(async()=>app.unmount());window.history.replaceState(null,'','/es/desafio'+search);await act(async()=>{app=createRoot(document.getElementById('root'));app.render(React.createElement(Desafio,{personas:PERSONAS}));});}
 async function click(el) {assert.ok(el,'control disponible');await act(async()=>{el.click();});}
@@ -79,7 +79,7 @@ test('repasar una ordenación conserva el orden elegido y corrige sin puntuar',a
  assert.equal(window.localStorage.getItem('arbol-europa-desafio-v2'),null);assert.deepEqual(JSON.parse(window.localStorage.getItem(REVIEW_KEY)),[]);
 });
 test('Retratos mantiene la explicación del acierto y espera a Continuar',async()=>{
- const {IMAGENES_PERSONAS}=await import('../src/imagenesPersonas.js');
+ const {IMAGENES_PERSONAS}=await import('../src/data/imagenesPersonas.js');
  const {responsiveImage}=await import('../src/utils/responsiveImage.js');
  window.localStorage.clear();await mount();await click(button('Retratos'));
  const source=document.querySelector('.desafio-portrait-stage img').getAttribute('src');

@@ -34,11 +34,11 @@ const assignments=[...buckets.values()].map((b,i)=>{
 });
 const review={schema:1,reviewedAt:source.reviewedAt,scope:{from:1772,through:1800,ids:scope},limitedCore:false,limitations:source.limitations,sources:source.sources,assignments};
 write('poland-lithuania-full-review.json',review);
-fs.writeFileSync(projectRoot+'/src/data/polandLithuaniaRouteData.json',JSON.stringify(compactBalkanRoutes(review))+'\n');
+fs.writeFileSync(projectRoot+'/src/cartography/regions/polandLithuaniaRouteData.json',JSON.stringify(compactBalkanRoutes(review))+'\n');
 const frontier=read('poland-lithuania-frontier-review.json');
-fs.writeFileSync(projectRoot+'/src/data/polandLithuaniaFrontierRouteData.json',JSON.stringify(compactBalkanRoutes(frontier))+'\n');
+fs.writeFileSync(projectRoot+'/src/cartography/regions/polandLithuaniaFrontierRouteData.json',JSON.stringify(compactBalkanRoutes(frontier))+'\n');
 const medieval=read('poland-lithuania-medieval-review.json');
-fs.writeFileSync(projectRoot+'/src/data/polandLithuaniaMedievalRouteData.json',JSON.stringify(compactBalkanRoutes(medieval))+'\n');
+fs.writeFileSync(projectRoot+'/src/cartography/regions/polandLithuaniaMedievalRouteData.json',JSON.stringify(compactBalkanRoutes(medieval))+'\n');
 const base=read('corridor-locations.json'),entries=new Map([...base.territories,...base.additionalTerritories].map(e=>[e.name,e]));
 // Rebuild from the original reviewed series, not from previously generated output.
 const original=read('continuity-review.json');

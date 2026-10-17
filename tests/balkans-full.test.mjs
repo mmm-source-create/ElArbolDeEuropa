@@ -1,13 +1,13 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
-import {PERSONAS} from '../src/personas.jsx';
+import {PERSONAS} from '../src/data/personas.js';
 import {TERRITORIOS} from '../src/data/territorios.js';
-import {territorialIdentity} from '../src/data/territorialIdentity.js';
+import {territorialIdentity} from '../src/cartography/territorialIdentity.js';
 import {personClaims} from '../src/evidence/claims.js';
-import {mapAuthoritiesForPerson} from '../src/data/mapAuthorities.js';
-import {colorTerritorioEnMapa} from '../src/Territorios.jsx';
-import {atlasPoliticalMosaicAt} from '../src/data/atlasMosaic.js';
+import {mapAuthoritiesForPerson} from '../src/cartography/mapAuthorities.js';
+import {colorTerritorioEnMapa} from '../src/cartography/kingdomMaps.js';
+import {atlasPoliticalMosaicAt} from '../src/cartography/atlasMosaic.js';
 import {auditRegionalContinuity} from '../scripts/audits/audit-regional-continuity.mjs';
 import {auditBalkansContinuity, balkanGeographicReview} from '../scripts/audits/audit-balkans-continuity.mjs';
 import {applyRegionalReview} from '../scripts/cartography/apply-regional-review.mjs';
@@ -117,7 +117,7 @@ test('new offices cite their own mandate, and rank changes keep the existing per
   }
   assert.equal(people.get('STEFANLAZAREVIC').gobiernos.find(g => g.desde === 1402).titulo, 'Déspota');
   assert.equal(people.get('STEFANDUSAN').gobiernos.filter(g => g.titulo === 'Emperador').length, 1);
-  const compact = read('../src/data/balkansFullRouteData.json');
+  const compact = read('../src/cartography/regions/balkansFullRouteData.json');
   assert.deepEqual(compact, compactBalkanRoutes(review));
   assert(compact.assignments.every(p => !p.ids && !p.note && !p.sourceKeys));
 });

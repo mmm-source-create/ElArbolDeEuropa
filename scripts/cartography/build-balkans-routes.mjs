@@ -15,6 +15,6 @@ export function compactBalkanRoutes(review) {
 }
 if (process.argv[1] && path.resolve(process.argv[1]) === import.meta.filename) {
   const review = JSON.parse(fs.readFileSync(path.join(projectRoot, 'prototypes/euv-locations/balkans-full-review.json')));
-  fs.writeFileSync(path.join(projectRoot, 'src/data/balkansFullRouteData.json'), JSON.stringify(compactBalkanRoutes(review)) + '\n');
+  fs.writeFileSync(path.join(projectRoot, 'src/cartography/regions/balkansFullRouteData.json'), JSON.stringify(compactBalkanRoutes(review)) + '\n');
   console.log(`Rutas balcánicas: ${review.assignments.length} fases; evidencia completa conservada en la revisión y el mapa.`);
 }

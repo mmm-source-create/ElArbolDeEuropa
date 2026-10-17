@@ -1,6 +1,6 @@
 // Step 1: Spanish Wikipedia titles → Wikidata items (batches of 50), then entity claims.
 import fs from 'node:fs';
-const {PERSONAS}=await import('../../../src/personas.jsx');
+const {PERSONAS}=await import('../../../src/data/personas.js');
 const UA={'User-Agent':'ElArbolDeEuropa-review/1.0 (genealogical atlas; bibliographic review)'};
 const sleep=ms=>new Promise(r=>setTimeout(r,ms));
 const getJSON=async url=>{for(let a=0;a<6;a++){try{const r=await fetch(url,{headers:UA});const t=await r.text();return JSON.parse(t)}catch{await sleep(3000+a*4000)}}throw Error(url)};

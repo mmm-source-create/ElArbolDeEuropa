@@ -1,11 +1,11 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
-import {PERSONAS} from '../src/personas.jsx';
-import {mapAuthoritiesForPerson} from '../src/data/mapAuthorities.js';
-import {buildPoliticalMapIndex, inspectMapRegion} from '../src/data/politicalMapIndex.js';
+import {PERSONAS} from '../src/data/personas.js';
+import {mapAuthoritiesForPerson} from '../src/cartography/mapAuthorities.js';
+import {buildPoliticalMapIndex, inspectMapRegion} from '../src/cartography/politicalMapIndex.js';
 import {auditLocationMap, atlasLocationIds} from '../scripts/audits/lib/locationMapAudit.js';
-import {pilotLocationContext, pilotLocationsFor} from '../src/data/locationMapPilot.js';
+import {pilotLocationContext, pilotLocationsFor} from '../src/cartography/locationMapPilot.js';
 
 const data = JSON.parse(fs.readFileSync(new URL('../prototypes/euv-locations/corridor-locations.json', import.meta.url)));
 data.burgundy = JSON.parse(fs.readFileSync(new URL('../prototypes/euv-locations/burgundian-locations.json', import.meta.url)));

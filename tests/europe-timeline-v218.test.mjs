@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {nextRecordedYear,changesBetween,sharedGovernments,governmentRegions} from '../src/data/europeTimeline.js';
-import {europaEnAnio} from '../src/data/europeYear.js';
+import {nextRecordedYear,changesBetween,sharedGovernments,governmentRegions} from '../src/domain/time/europeTimeline.js';
+import {europaEnAnio} from '../src/domain/time/europeYear.js';
 const personas=[{id:'A',nombre:'A',gobiernos:[{territorio:'Castilla',desde:1500,hasta:1505,condicion:'efectivo',titulo:'Rey'},{territorio:'Aragón',desde:1501,hasta:1508,condicion:'efectivo',titulo:'Rey'}]},{id:'B',nombre:'B',gobiernos:[{territorio:'Francia',desde:1490,hasta:1510,condicion:'efectivo',titulo:'Rey'}]}];
 test('la consulta completa permanece independiente de una selección familiar reducida',()=>{
  const all=europaEnAnio({personas,anio:1501}),subset=europaEnAnio({personas:personas.slice(0,1),anio:1501,alcanceCompleto:false});

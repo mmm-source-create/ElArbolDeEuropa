@@ -6,13 +6,13 @@ Este documento describe la fuente publicada y el contrato ejecutable de `scripts
 
 | Contenido | Fuente |
 | --- | --- |
-| Personas, relaciones y mandatos | `src/personas.jsx`, array `PERSONAS` |
+| Personas, relaciones y mandatos | `src/data/personas.js`, array `PERSONAS` |
 | Registro territorial, naturaleza y etapas | `src/data/territorios.js`, `TERRITORIOS` |
 | Afirmaciones y evidencia individual | `src/evidence/claims.js`, `reviewRecords.js` y revisiones asociadas |
 | Superficies, versiones y fuentes del mapa | Revisiones en `prototypes/euv-locations/`; ensamblado mediante `scripts/cartography/merge-map-expansions.mjs` |
 | Dato cartográfico consumido por la aplicación | `prototypes/euv-locations/corridor-locations.json` |
-| Identidades y etiquetas territoriales | `src/data/territorialIdentity.js` |
-| Correspondencia entre mandatos y capas | `src/data/locationMapPilot.js` y sus rutas fechadas |
+| Identidades y etiquetas territoriales | `src/cartography/territorialIdentity.js` |
+| Correspondencia entre mandatos y capas | `src/cartography/locationMapPilot.js` y sus rutas fechadas |
 
 Los generadores producen el árbol base, los catálogos, los metadatos públicos y los sitemaps. No se editan esos derivados para corregir historia. Algunas revisiones JSON y el SVG son entradas revisadas del producto y permanecen versionadas aunque procedan de herramientas de generación.
 
@@ -57,7 +57,7 @@ Una persona con `identidadDesconocida: true` puede conservar fechas conocidas. C
 
 ### Slugs y excepciones
 
-`slug` es un override opcional. La política pública se implementa en `src/utils/personLabels.js`; los generadores resuelven colisiones con el ID. El contrato de regresión comprueba las rutas realmente generadas, también las inglesas y los capítulos.
+`slug` es un override opcional. La política pública se implementa en `src/domain/people/personLabels.js`; los generadores resuelven colisiones con el ID. El contrato de regresión comprueba las rutas realmente generadas, también las inglesas y los capítulos.
 
 Desde V5.5, el filtro de gobernantes depende de mandatos efectivos y fechados. Las cuatro excepciones `gobernante` se retiraron después de comprobar que su selección era idéntica sin ellas. El contrato rechaza el campo retirado. El título resumido y `reinos[]` no acreditan autoridad ni conceden polígonos. Un gobernador conserva su mandato delegado y referencia al soberano; el mapa puede representar solo una parte de su jurisdicción y señalar control disputado.
 
@@ -90,7 +90,7 @@ no añade `reinados` y no interpreta el antiguo `reinado: [desde, hasta]`.
 
 ## Lectura compartida desde V5.1
 
-Los consumidores de personas utilizan [`src/data/personAccessors.js`](../src/data/personAccessors.js), un módulo puro sin dependencias de React, del dataset ni del navegador. La normalización se realiza al leer cada relación; no se crea una segunda colección de personas o mandatos. Los campos, tipos, fechas, booleanos y referencias de la fuente siguen validándose antes con el contrato.
+Los consumidores de personas utilizan [`src/domain/genealogy/personAccessors.js`](../src/domain/genealogy/personAccessors.js), un módulo puro sin dependencias de React, del dataset ni del navegador. La normalización se realiza al leer cada relación; no se crea una segunda colección de personas o mandatos. Los campos, tipos, fechas, booleanos y referencias de la fuente siguen validándose antes con el contrato.
 
 | Accesor | Resultado vigente desde V5.7 |
 | --- | --- |

@@ -1,6 +1,6 @@
 import {auditReportPath} from '../lib/project-paths.mjs';
 import fs from 'node:fs/promises';
-import {PERSONAS} from '../../src/personas.jsx';
+import {PERSONAS} from '../../src/data/personas.js';
 import {auditMapContinuity} from './lib/mapContinuityAudit.js';
 import {auditLocationMap, atlasLocationIds} from './lib/locationMapAudit.js';
 

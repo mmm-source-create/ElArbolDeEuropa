@@ -1,16 +1,15 @@
-import {gobiernosDe, territoriosDe} from '../../src/data/personAccessors.js';
+import {gobiernosDe, territoriosDe} from '../../src/domain/genealogy/personAccessors.js';
 import {UNIONES_CORONAS} from '../../src/content/coronas/index.js';
-import {prepararUniones} from '../../src/data/crowns.js';
+import {prepararUniones} from '../../src/domain/government/crowns.js';
 import {RELEVOS,CRISIS} from '../../src/content/sucesiones/index.js';
-import {prepararSucesiones} from '../../src/data/successionHistory.js';
+import {prepararSucesiones} from '../../src/domain/government/successionHistory.js';
 import {SOURCES} from '../../src/content/sources.js';
 import fs from 'node:fs/promises';
 import {TERRITORIOS,componentesDe} from '../../src/data/territorios.js';
 import {HISTORIA_TERRITORIOS,FUENTES_TERRITORIOS} from '../../src/content/territorios/index.js';
-import {slugPublico,slugBasePersona,resumenCortoPersona} from '../../src/utils/personPresentation.js';
-const read = async p => import('data:text/javascript;base64,'+Buffer.from(await fs.readFile(p)).toString('base64'));
-const {PERSONAS}=await read('src/personas.jsx');
-const {EVENTOS_HISTORICOS,HISTORIAS}=await read('src/historiaData.jsx');
+import {slugPublico,slugBasePersona,resumenCortoPersona} from '../../src/domain/people/personPresentation.js';
+import {PERSONAS} from '../../src/data/personas.js';
+import {EVENTOS_HISTORICOS,HISTORIAS} from '../../src/data/historias.js';
 const slugs = new Map();
 for(const p of PERSONAS) {const s=slugBasePersona(p);slugs.set(s,(slugs.get(s)||0)+1);}
 const ref=p=>({id:p.id,nombre:p.nombre,slug:slugBasePersona(p)+(slugs.get(slugBasePersona(p))>1?'-'+slugPublico(p.id):''),dinastia:p.dinastia,resumen:resumenCortoPersona(p)});

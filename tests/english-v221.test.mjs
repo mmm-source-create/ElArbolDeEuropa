@@ -1,10 +1,10 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {englishPaths,englishRoute,translatedEquivalent,TRANSLATED_STORIES} from '../src/english/routes.js';
-import {ENGLISH_STORIES} from '../src/english/content.js';
-import {publicMeta} from '../src/public/publicMeta.js';
-import {safeStoryReturn} from '../src/stories/storyModel.js';
-import {staticRoute} from '../src/public/staticData.js';
+import {englishPaths,englishRoute,translatedEquivalent,TRANSLATED_STORIES} from '../src/features/english/routes.js';
+import {ENGLISH_STORIES} from '../src/features/english/content.js';
+import {publicMeta} from '../src/features/public/publicMeta.js';
+import {safeStoryReturn} from '../src/features/stories/storyModel.js';
+import {staticRoute} from '../src/features/public/staticData.js';
 
 test('todas las rutas traducidas mantienen la equivalencia de página y capítulo',()=>{
  const paths=englishPaths();assert.equal(paths.length,34);assert.equal(new Set(paths).size,34);

@@ -1,8 +1,8 @@
 // Wikidata entity search (Spanish, then English) for the people still unmatched, one request
 // at a time; candidate claims fetched in batches. Same acceptance rules as the other passes.
 import fs from 'node:fs';
-const {PERSONAS}=await import('../../../src/personas.jsx');
-const {conyugesDe}=await import('../../../src/data/personAccessors.js');
+const {PERSONAS}=await import('../../../src/data/personas.js');
+const {conyugesDe}=await import('../../../src/domain/genealogy/personAccessors.js');
 const UA={'User-Agent':'ElArbolDeEuropa-review/1.0 (https://treeofeurope.eu; genealogical atlas bibliographic review)'};
 const sleep=ms=>new Promise(r=>setTimeout(r,ms));
 const getJSON=async url=>{for(let a=0;a<5;a++){try{const r=await fetch(url,{headers:UA,signal:AbortSignal.timeout(20000)});if(r.status===429){await sleep(15000*(a+1));continue}return await r.json()}catch{await sleep(3000*(a+1))}}return {}};

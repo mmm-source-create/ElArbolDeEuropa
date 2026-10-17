@@ -1,6 +1,6 @@
 // Step 2: fetch Wikidata entities for candidate QIDs and validate them against our dates.
 import fs from 'node:fs';
-const {PERSONAS}=await import('../../../src/personas.jsx');
+const {PERSONAS}=await import('../../../src/data/personas.js');
 const UA={'User-Agent':'ElArbolDeEuropa-review/1.0 (genealogical atlas; bibliographic review)'};
 const sleep=ms=>new Promise(r=>setTimeout(r,ms));
 const getJSON=async url=>{for(let a=0;a<6;a++){try{const r=await fetch(url,{headers:UA});return JSON.parse(await r.text())}catch{await sleep(3000+a*4000)}}throw Error(url)};

@@ -1,5 +1,5 @@
-import {gobiernosDe} from '../../../src/data/personAccessors.js';
-import {buildPoliticalMapIndex, COLLECTIVE_AUTHORITIES} from '../../../src/data/politicalMapIndex.js';
+import {gobiernosDe} from '../../../src/domain/genealogy/personAccessors.js';
+import {buildPoliticalMapIndex, COLLECTIVE_AUTHORITIES} from '../../../src/cartography/politicalMapIndex.js';
 import {gobiernoEfectivo} from '../../../src/data/territorios.js';
 
 export const HISTORICAL_CUTS = Object.freeze([1522,1564,1619,1648,1665]);

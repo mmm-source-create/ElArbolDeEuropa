@@ -1,8 +1,8 @@
 import {useMemo,useState} from 'react';
-import {etapasCoronas,coronasEn,claveMandato,agruparAccesos} from '../data/crowns.js';
-import {gobiernosDe} from '../data/personAccessors.js';
-import {slugPublico} from '../utils/personLabels.js';
-import {governmentGroupsAt} from '../data/governmentPresentation.js';
+import {etapasCoronas,coronasEn,claveMandato,agruparAccesos} from '../domain/government/crowns.js';
+import {gobiernosDe} from '../domain/genealogy/personAccessors.js';
+import {slugPublico} from '../domain/people/personLabels.js';
+import {governmentGroupsAt} from '../domain/government/governmentPresentation.js';
 import './crowns.css';
 
 export default function CrownTimeline({persona,accesos=[],fuentes=[],anio,onYearChange,compact=false}) {

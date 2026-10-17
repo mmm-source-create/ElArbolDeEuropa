@@ -2,7 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import {JSDOM} from 'jsdom';
-import {clampMapViewBox,clipMapToBounds,fittedMapViewBox,mapControlLimits,resizeMapViewBox,zoomMapViewBox} from '../src/mapViewport.js';
+import {clampMapViewBox,clipMapToBounds,fittedMapViewBox,mapControlLimits,resizeMapViewBox,zoomMapViewBox} from '../src/features/atlas/mapViewport.js';
 
 const original={x:0,y:0,width:1000,height:400};
 const close=(a,b)=>assert.ok(Math.abs(a-b)<1e-8,`${a} should equal ${b}`);

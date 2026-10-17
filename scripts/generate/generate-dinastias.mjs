@@ -1,9 +1,9 @@
 import fs from 'node:fs/promises';
-import {buildDynastyPages,auditDynasties} from '../../src/data/dynastyModel.js';
+import {buildDynastyPages,auditDynasties} from '../../src/domain/genealogy/dynastyModel.js';
 import {DINASTIA_ALIASES} from '../../src/content/dinastias/index.js';
-import {slugPublico} from '../../src/utils/personLabels.js';
+import {slugPublico} from '../../src/domain/people/personLabels.js';
 
-const {PERSONAS}=await import('data:text/javascript;base64,'+Buffer.from(await fs.readFile('src/personas.jsx')).toString('base64'));
+import {PERSONAS} from '../../src/data/personas.js';
 const errors=auditDynasties(PERSONAS);
 if(errors.length)throw new Error(JSON.stringify(errors));
 const pages=buildDynastyPages(PERSONAS);

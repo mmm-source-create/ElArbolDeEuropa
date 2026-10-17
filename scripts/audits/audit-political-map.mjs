@@ -1,9 +1,9 @@
 import {auditReportPath} from '../lib/project-paths.mjs';
 import fs from 'node:fs/promises';
-import { PERSONAS } from '../../src/personas.jsx';
+import { PERSONAS } from '../../src/data/personas.js';
 import { TERRITORIOS, gobiernoEfectivo } from '../../src/data/territorios.js';
 import {atlasLocationIds} from './lib/locationMapAudit.js';
-import {mapAuthoritiesForPerson} from '../../src/data/mapAuthorities.js';
+import {mapAuthoritiesForPerson} from '../../src/cartography/mapAuthorities.js';
 
 const svg = await fs.readFile(new URL('../../prototypes/euv-locations/euv-locations-crop.svg', import.meta.url), 'utf8');
 const pathIds = atlasLocationIds(svg);

@@ -1,10 +1,10 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
-import {PERSONAS} from '../src/personas.jsx';
+import {PERSONAS} from '../src/data/personas.js';
 import {TERRITORIOS} from '../src/data/territorios.js';
-import {idsDeGobiernoEnAño,idsDeReinoEnAño} from '../src/Territorios.jsx';
-import {buildPoliticalMapIndex,inspectMapRegion} from '../src/data/politicalMapIndex.js';
+import {idsDeGobiernoEnAño, idsDeReinoEnAño} from '../src/cartography/kingdomMaps.js';
+import {buildPoliticalMapIndex,inspectMapRegion} from '../src/cartography/politicalMapIndex.js';
 import {personClaims} from '../src/evidence/claims.js';
 
 const byId=Object.fromEntries(PERSONAS.map(person=>[person.id,person]));

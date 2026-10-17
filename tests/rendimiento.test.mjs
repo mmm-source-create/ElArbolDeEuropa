@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { treeViewport, intersectsViewport } from '../src/explorer/treeViewport.js';
+import { treeViewport, intersectsViewport } from '../src/features/atlas/treeViewport.js';
 import { loadTextAsset, loadJsonAsset } from '../src/utils/loadAsset.js';
 
 test('el árbol conserva los grupos que cruzan el borde al desplazarse y cambiar el zoom', () => {

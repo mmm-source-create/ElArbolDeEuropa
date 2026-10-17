@@ -1,8 +1,9 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
-import {PERSONAS} from '../src/personas.jsx';
-import {REINO_A_IDS,REINO_VERSIONES,idsDeReinoEnAño,reinadosActivos} from '../src/Territorios.jsx';
+import {PERSONAS} from '../src/data/personas.js';
+import {REINO_A_IDS, REINO_VERSIONES, idsDeReinoEnAño} from '../src/cartography/kingdomMaps.js';
+import {reinadosActivos} from '../src/domain/government/reigns.js';
 import {HISTORIA_DINASTIAS} from '../src/content/dinastias/index.js';
 import {personClaims} from '../src/evidence/claims.js';
 

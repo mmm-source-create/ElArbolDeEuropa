@@ -1,0 +1,77 @@
+import {resolverRuta} from "./routing.js";
+import { lazy, Suspense, useCallback, useEffect, useMemo, useState } from "react";
+import { CatalogPage, HomePage, InfoPage, PersonPage } from "../features/public/PublicSite.jsx";
+
+import AtlasSkeleton from "../features/atlas/AtlasSkeleton.jsx";
+import ReadingSkeleton from "../features/stories/ReadingSkeleton.jsx";
+import SiteHeader from "../components/SiteHeader.jsx";
+import EnglishPage from "../features/english/EnglishPage.jsx";
+import NotFoundPage from "../features/public/NotFoundPage.jsx";
+import PrivacyPage from '../features/public/PrivacyPage.jsx';
+import "../styles/theme.css";
+
+const EmbedPage = lazy(() => import("../features/embed/EmbedPage.jsx"));
+const StoryPage = lazy(() => import("../features/stories/StoryPage.jsx"));
+const DynastyPage = lazy(() => import("../features/public/DynastyPage.jsx"));
+const TerritoryPage = lazy(() => import("../features/public/TerritoryPage.jsx").then(m => ({ default: m.TerritoryPage })));
+const Explorer = lazy(() => import("../features/atlas/AtlasLoader.jsx"));
+const DesafioPage = lazy(() => import("../features/desafio/DesafioPage.jsx"));
+
+function normalizaRutaLigera() {
+  if (typeof window === "undefined") return;
+  const { pathname, search, hash } = window.location;
+  if (pathname === "/") {
+    window.history.replaceState(window.history.state, "", `/es/${search}${hash}`);
+    return;
+  }
+  if (/^\/(es|en)(?:\/|$)/.test(pathname)) return;
+  if (/^\/(persona|dinastia|territorio|historia)(?:\/|$)/.test(pathname)) {
+    window.history.replaceState(window.history.state, "", `/es${pathname}${search}${hash}`);
+  }
+}
+
+export default function App() {
+  const initial = useMemo(() => typeof window === "undefined" ? resolverRuta() : resolverRuta(window.location.pathname, window.location.search), []);
+
+  const [explorerRequested, setExplorerRequested] = useState(initial.view === "explorer");
+  const [initialPanel, setInitialPanel] = useState(initial.panel || null);
+
+  useEffect(() => {
+    normalizaRutaLigera();
+    if (typeof document !== "undefined" && initial.locale === "es") document.documentElement.lang = "es";
+  }, [initial.locale]);
+
+  const entrarAtlas = useCallback((panel = null) => {
+    const url = new URL(window.location.href);
+    url.searchParams.set("atlas", "1");
+    if (initial.view === "home") url.searchParams.set("continuar", "1");
+    window.history.replaceState({}, "", url.pathname + url.search + url.hash);
+    setInitialPanel(panel);
+    setExplorerRequested(true);
+  }, [initial.view]);
+
+  if (initial.view === "embed") return <Suspense fallback={<p role="status">Preparando ficha…</p>}><EmbedPage personId={initial.personId}/></Suspense>;
+  if (!explorerRequested && initial.view === "story") return <Suspense fallback={<div className="public-site"><SiteHeader/><main className="public-main story-page"><ReadingSkeleton/></main></div>}><StoryPage slug={initial.storySlug} chapter={initial.chapter}/></Suspense>;
+  if (!explorerRequested && initial.view === "dynasty") return <Suspense fallback={<p role="status">Cargando dinastía…</p>}><DynastyPage slug={initial.dynastySlug} /></Suspense>;
+  if (!explorerRequested && initial.view === "territory") return <Suspense fallback={<p role="status">Cargando territorio…</p>}><TerritoryPage slug={initial.territorySlug} /></Suspense>;
+  if (initial.view === "english") return <EnglishPage />;
+  if (initial.view === "not-found") return <NotFoundPage locale={initial.locale} />;
+  if (initial.view === 'privacy') return <PrivacyPage locale={initial.locale}/>;
+  if (initial.view === "desafio") {
+    return (
+      <Suspense fallback={null}>
+        <DesafioPage />
+      </Suspense>
+    );
+  }
+  if (!explorerRequested && initial.view === "person") return <PersonPage slug={initial.personSlug} legacyId={initial.legacyPersonId} onExplore={() => entrarAtlas(null)} />;
+  if (!explorerRequested && initial.view === "catalog") return <CatalogPage tipo={initial.catalog} />;
+  if (!explorerRequested && initial.view === "info") return <InfoPage tipo={initial.info} />;
+  if (!explorerRequested && initial.view === "home") return <HomePage onEnterAtlas={entrarAtlas} onOpenPanel={entrarAtlas} />;
+
+  return (
+    <Suspense fallback={<AtlasSkeleton/>}>
+      <Explorer initialPanel={initialPanel} />
+    </Suspense>
+  );
+}

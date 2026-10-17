@@ -1,11 +1,11 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
-import {reviewedLayerLocations, reviewedMapLayers, mapSourceReference} from '../src/data/locationMapPilot.js';
-import {politicalMosaicAt} from '../src/data/locationMosaic.js';
-import {PERSONAS} from '../src/personas.jsx';
-import {mapAuthoritiesForPerson} from '../src/data/mapAuthorities.js';
-import {CHRONOLOGY_ROUTES, chronologyJurisdictionsFor} from '../src/data/atlasChronologyRoutes.js';
+import {reviewedLayerLocations, reviewedMapLayers, mapSourceReference} from '../src/cartography/locationMapPilot.js';
+import {politicalMosaicAt} from '../src/cartography/locationMosaic.js';
+import {PERSONAS} from '../src/data/personas.js';
+import {mapAuthoritiesForPerson} from '../src/cartography/mapAuthorities.js';
+import {CHRONOLOGY_ROUTES, chronologyJurisdictionsFor} from '../src/cartography/regions/atlasChronologyRoutes.js';
 
 const central = JSON.parse(fs.readFileSync(new URL('../prototypes/euv-locations/central-expansion-locations.json', import.meta.url)));
 const data = {from: 1200, through: 1800, territories: central.territories, overrides: []};

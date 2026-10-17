@@ -1,9 +1,9 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { PERSONAS } from '../src/personas.jsx';
+import { PERSONAS } from '../src/data/personas.js';
 import { CLAIM_REVIEWS } from '../src/evidence/reviewRecords.js';
-import { REINO_COLOR, colorTerritorioEnMapa, agrupacionesPoliticasEnMapa } from '../src/Territorios.jsx';
-import { computeGenerations } from '../src/explorer/treeLayout.js';
+import { REINO_COLOR, colorTerritorioEnMapa, agrupacionesPoliticasEnMapa } from '../src/cartography/kingdomMaps.js';
+import { computeGenerations } from '../src/domain/genealogy/treeLayout.js';
 
 const byId = Object.fromEntries(PERSONAS.map(persona => [persona.id, persona]));
 

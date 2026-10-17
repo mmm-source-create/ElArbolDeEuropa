@@ -2,7 +2,7 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import path from 'node:path';
 import test from 'node:test';
-import { mapLocationsForGovernment, pilotBurgundianGovernmentsFor, pilotImperialFrameFor, pilotLocationContext, pilotLocationsFor } from '../src/data/locationMapPilot.js';
+import { mapLocationsForGovernment, pilotBurgundianGovernmentsFor, pilotImperialFrameFor, pilotLocationContext, pilotLocationsFor } from '../src/cartography/locationMapPilot.js';
 
 const data = JSON.parse(fs.readFileSync(path.resolve(import.meta.dirname,
   '../prototypes/euv-locations/corridor-locations.json'), 'utf8'));

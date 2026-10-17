@@ -3,8 +3,8 @@ import {mapDataFile} from '../lib/project-paths.mjs';
 // This keeps Castile, Aragon, Naples, Milan, etc. separate even when one
 // person governed several of them. Geometry is only a candidate crosswalk.
 import fs from 'node:fs';
-import { idsDeReinoEnAño, REINO_A_IDS, REINO_COLOR, REINO_VERSIONES } from '../../src/Territorios.jsx';
-import { imperialFrameIds } from '../../src/data/imperialFrame.js';
+import { idsDeReinoEnAño, REINO_A_IDS, REINO_COLOR, REINO_VERSIONES } from '../../src/cartography/kingdomMaps.js';
+import { imperialFrameIds } from '../../src/cartography/imperialFrame.js';
 
 const FROM = 1400;
 const THROUGH = 1650;

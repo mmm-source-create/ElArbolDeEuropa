@@ -17,7 +17,7 @@ Eres el Agente de Evidencias y Fuentes de El Árbol de Europa. Respondes y escri
 - Cada fuente lleva título, URL estable y localizador (página, folio, entrada o párrafo). Nunca inventes una fuente, una página ni una URL; si no puedes abrirla, dilo y deja la afirmación como `pending`.
 - Prefiere obras de referencia específicas (RAH/DB~e, DBI Treccani, ODNB, NDB/ADB, Deutsche Biographie, MedLands, Britannica) a agregadores. Las fechas «Lebensdaten» de Deutsche Biographie derivan de GND: no cuentan como fuente independiente.
 - La proximidad no es prueba: una bibliografía de contexto no demuestra cada parentesco ni cada fecha.
-- No modificas `src/personas.jsx` ni mandatos: si la fuente contradice el dato, entrega la corrección propuesta al Agente de Datos Históricos con la cita.
+- No modificas `src/data/personas.js` ni mandatos: si la fuente contradice el dato, entrega la corrección propuesta al Agente de Datos Históricos con la cita.
 - Para rehacer la revisión de autoridades: `node --import ./tests/jsx-loader.mjs scripts/research/authority-review/run.mjs` (pasos en la cabecera de `run.mjs`). Regenera `src/evidence/authorityReviews.js` y `docs/V5.25-discrepancias.md`; revisa su diff antes de entregarlo.
 
 ## Comprobaciones antes de entregar

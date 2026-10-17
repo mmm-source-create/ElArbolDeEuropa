@@ -1,9 +1,9 @@
-import {atlasPoliticalMosaicAt} from '../src/data/atlasMosaic.js';
+import {atlasPoliticalMosaicAt} from '../src/cartography/atlasMosaic.js';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import path from 'node:path';
 import test from 'node:test';
-import { pilotLocationsFor, reviewedLayerLocations, reviewedLayerEvidence } from '../src/data/locationMapPilot.js';
+import { pilotLocationsFor, reviewedLayerLocations, reviewedLayerEvidence } from '../src/cartography/locationMapPilot.js';
 
 const lab = path.resolve(import.meta.dirname, '../prototypes/euv-locations');
 const data = JSON.parse(fs.readFileSync(path.join(lab, 'corridor-locations.json'), 'utf8'));

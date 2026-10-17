@@ -1,0 +1,364 @@
+import {easternEuropeJurisdictions} from './regions/easternEuropeRoutes.js';
+import {earlyMedievalJurisdictions} from './regions/earlyMedievalRoutes.js';
+import {polandLithuaniaJurisdictions} from './regions/polandLithuaniaRoutes.js';
+import {franceLowCountriesJurisdictions} from './regions/franceLowCountriesRoutes.js';
+import {iberiaItalyJurisdictions} from './regions/iberiaItalyRoutes.js';
+import {medievalBalkanJurisdictions} from './regions/medievalBalkanRoutes.js';
+import {bosniaHumJurisdictions} from './regions/bosniaHumRoutes.js';
+import {posavinaRagusaJurisdictions} from './regions/posavinaRagusaRoutes.js';
+import {balkansFullJurisdictions} from './regions/balkansFullRoutes.js';
+// These aliases connect the Atlas government records to reviewed new-map
+// jurisdictions, without treating every title held by one ruler as one state.
+import {imperialFrameIds} from './imperialFrame.js';
+import {authorityExtensionFor} from './atlasAuthorityExtensions.js';
+import {applyMapBorderCorrections} from './mapBorderCorrections.js';
+import {authorityMapScope} from './authorityMapScopes.js';
+import {chronologyJurisdictionsFor, appendChronologyJurisdictions} from './regions/atlasChronologyRoutes.js';
+import {regionalExtentJurisdictions, supersededRegionalLayers} from './regions/regionalExtentRoutes.js';
+import {continuityJurisdictions, territorialLabel} from './territorialIdentity.js';
+import {frontierJurisdictions} from './regions/frontierRoutes.js';
+import {successionJurisdictions} from './regions/successionRoutes.js';
+import {referenceGapJurisdictions} from './regions/referenceGapRoutes.js';
+
+const layerIndexes = new WeakMap();
+export function reviewedMapLayers(data) {
+  if (!data) return [];
+  if (!layerIndexes.has(data)) {
+    const entries = [...(data.territories || []), ...(data.additionalTerritories || [])];
+    const corrections = new Map();
+    for (const correction of data.overrides || []) {
+      if (!corrections.has(correction.territory)) corrections.set(correction.territory, []);
+      corrections.get(correction.territory).push(correction);
+    }
+    const regional = [data.bosniaHumReview, data.posavinaRagusaReview, data.balkansFullReview, data.iberiaItalyReview, data.franceLowCountriesReview, data.polandLithuaniaMedievalReview, data.polandLithuaniaReview, data.polandLithuaniaFrontierReview, data.earlyMedievalReview, data.easternEuropeReview].filter(Boolean);
+    layerIndexes.set(data, {entries, byName: new Map(entries.map(entry => [entry.name, entry])), corrections,
+      regional: regional.map(review => ({from: review.scope.from, through: review.scope.through,
+        ids: new Set(review.precedenceIds || review.scope.ids), names: new Set(review.layerNames)}))});
+  }
+  return layerIndexes.get(data).entries;
+}
+
+function layerIndex(data) {
+  reviewedMapLayers(data);
+  return layerIndexes.get(data)?.byName || new Map();
+}
+
+// Layer names are unique; annual redraws look them up thousands of times.
+export function reviewedLayerNamed(data, name) {
+  return layerIndex(data).get(name);
+}
+
+let jurisdictionYear=null;
+const jurisdictionCache=new Map();
+// Routes are immutable research data. Cache one year only: annual audits
+// and redraws reuse the same mandates without retaining the whole timeline.
+// Give callers a copy so a view cannot contaminate later selections.
+export function pilotJurisdictionsFor(territory,year,personId=null){
+  if(year!==jurisdictionYear){jurisdictionCache.clear();jurisdictionYear=year;}
+  const key=territory+'\u0000'+(personId||'');
+  if(!jurisdictionCache.has(key))jurisdictionCache.set(key,resolveJurisdictions(territory,year,personId));
+  return [...jurisdictionCache.get(key)];
+}
+function resolveJurisdictions(territory, year, personId = null) {
+  if(year<1200)return earlyMedievalJurisdictions(territory,year,personId);
+  if(territory==='Principado de Trakai')return pilotJurisdictionsFor('Lituania',year,personId);
+  const scope = authorityMapScope(personId, territory, year);
+  if (scope?.jurisdictions) return scope.jurisdictions;
+  const chronological=chronologyJurisdictionsFor(territory,year,personId);
+  const frontier=frontierJurisdictions(continuityJurisdictions(regionalExtentJurisdictions(appendChronologyJurisdictions(chronological ?? basePilotJurisdictionsFor(territory,year,personId),territory,personId),territory,year,personId),territory,year,personId),territory,year,personId);
+  const names=polandLithuaniaJurisdictions(franceLowCountriesJurisdictions(iberiaItalyJurisdictions(balkansFullJurisdictions(posavinaRagusaJurisdictions(bosniaHumJurisdictions(medievalBalkanJurisdictions(referenceGapJurisdictions(successionJurisdictions(frontier,territory,year,personId),territory),territory),territory,year,personId),territory,year,personId),territory,year,personId),territory,year,personId),territory,year,personId),territory,year,personId);
+  if(territory==='Austria Interior') for(const province of ['Carintia','Carniola','Ducado de Estiria'])
+    names.push(...pilotJurisdictionsFor(province,year,personId));
+  return easternEuropeJurisdictions([...new Set(names)],territory,year,personId);
+}
+
+function basePilotJurisdictionsFor(territory, year, personId) {
+  if (territory === 'Sacro Imperio') return [];
+  if (territory === 'Austria Interior') return ['Austria Interior','Estiria','Carintia','Carniola'];
+  if (territory === 'Herzegovina') return ['Núcleo de Herzegovina'];
+  if (territory === 'Morea') return personId === 'THEODORE2MOREA' ? ['Núcleo de Mistra'] : [];
+  if (territory === 'Lorena') return ['Núcleo de Lorena'];
+  if (territory === 'Chipre') return ['Núcleo del reino de Chipre'];
+  if (territory === 'Brunswick') return personId === 'WILLIAMYOUNGERBRUN' ? ['Núcleo de Lüneburg-Celle']
+    : personId === 'GEORGEBRUNSCAL' ? ['Núcleo de Calenberg-Hannover'] : [];
+  if (territory === 'Baden') return personId === 'CHRISTOPH1BADEN' ? ['Núcleo de Baden']
+    : personId === 'BERNHARD3BADEN' ? ['Núcleo de Baden-Baden'] : ['Núcleo de Baden-Durlach'];
+  if (territory === 'Brandeburgo') return personId === 'JOHNALCHEMIST' ? [] : ['Núcleo de Brandeburgo'];
+  if (territory === 'Sajonia') return ['ALBERTSAX','GEORGESAX','HENRYPIOUSSAX'].includes(personId)
+    || personId === 'MORITZSAX' && year < 1547 ? ['Sajonia albertina'] : ['Sajonia electoral'];
+  if (territory === 'Württemberg') {
+    if (year >= 1442 && year < 1482) return personId === 'ULRICH5WURTT'
+      ? ['Württemberg-Stuttgart'] : ['Württemberg-Urach'];
+    return ['Núcleo de Württemberg'];
+  }
+  if (territory === 'Hesse') return ['Núcleo de Hesse'];
+  if (territory === 'Hesse-Kassel') return ['Núcleo de Hesse-Kassel'];
+  if (territory === 'Hesse-Darmstadt') return ['Núcleo de Hesse-Darmstadt'];
+  if (territory === 'Países Bajos') return ['Flandes', 'Brabante', 'Limburgo', 'Holanda',
+    'Henao', 'Zelanda', 'Artois', 'Namur', 'Luxemburgo', 'Frisia', 'Utrecht',
+    'Overijssel', 'Drente', 'Groninga', 'Güeldres', 'Señorío de Malinas'];
+  if (territory === 'Hungría') {
+    if (personId === 'JUAN1ZAPOLYA') return ['Núcleo oriental de Zápolya'];
+    if (personId === 'JUAN2SIGZAPOLYA') return year >= 1551 && year <= 1555 ? [] : ['Transilvania'];
+    if (year <= 1525) return ['Hungría', 'Banato húngaro de Jajce'];
+    return ['Hungría real', 'Banato húngaro de Jajce', ...(personId === 'FERN1EMP' && year >= 1551 && year <= 1555 ? ['Ocupación habsbúrgica de Transilvania'] : [])];
+  }
+  if (territory === 'Croacia') return year >= 1527 ? ['Croacia habsbúrgica'] : [];
+  if (territory === 'Transilvania' && personId === 'FERN1EMP' && year >= 1551 && year <= 1555) {
+    return ['Ocupación habsbúrgica de Transilvania'];
+  }
+  if (territory === 'Transilvania') return ['Transilvania'];
+  if (territory === 'Serbia' && year >= 1402 && year <= 1458) return ['Despotado de Serbia'];
+  if (territory === 'Bosnia') return ['Reino de Bosnia'];
+  if (territory === 'Valaquia') return ['Principado de Valaquia',
+    ...(personId === 'MIRCEA1WAL' && year >= 1402 && year <= 1418 ? ['Núcleos de Dobruja bajo Mircea'] : [])];
+  if (territory === 'Moldavia') return ['Principado de Moldavia'];
+  if (territory === 'Imperio otomano') return [
+    'Hungría otomana', 'Bosnia y Herzegovina otomanas', 'Balcanes meridionales otomanos',
+  ];
+  if (territory === 'Inglaterra') return ['Inglaterra', 'Plaza inglesa de Calais', 'Plazas inglesas de Guyena'];
+  if (territory === 'Irlanda') return ['Núcleo inglés en Irlanda'];
+  if (territory === 'Polonia') return ['Corona de Polonia', 'Prusia Real'];
+  if (territory === 'Lituania') return ['Gran Ducado de Lituania'];
+  if (territory === 'Polonia-Lituania') return year >= 1569
+    ? ['Corona de Polonia', 'Gran Ducado de Lituania', 'Prusia Real',
+      ...(year <= 1628 ? ['Livonia del Commonwealth'] : [])]
+    : [];
+  if (territory === 'Mazovia') return ['Ducado de Mazovia'];
+  if (territory === 'Prusia') return [year < 1525 ? 'Prusia de la Orden' : 'Prusia ducal'];
+  if (territory === 'Dinamarca') return ['Reino de Dinamarca', 'Ösel bajo Dinamarca'];
+  if (territory === 'Noruega') return ['Reino de Noruega', 'Islas Feroe bajo la Corona noruega'];
+  if (territory === 'Feroe' || territory === 'Islas Feroe') return ['Islas Feroe bajo la Corona noruega'];
+  if (territory === 'Suecia') return ['Reino de Suecia', 'Estonia sueca', 'Livonia sueca',
+    'Riga bajo Suecia', 'Ösel bajo Suecia', 'Pomerania bajo ocupación sueca',
+    'Pomerania sueca', 'Señorío sueco de Wismar'];
+  if (territory === 'Escandinavia') return ['Reino de Dinamarca', 'Reino de Noruega', 'Reino de Suecia'];
+  if (territory === 'Rusia') return ['Moscovia y Zarato de Rusia'];
+  if (territory === 'Curlandia') return ['Ducado de Curlandia'];
+  if (territory === 'Holstein') return ['Ducado de Holstein'];
+  if (territory === 'Schleswig') return ['Ducado de Schleswig'];
+  if (territory === 'Mecklemburgo') return ['Mecklemburgo'];
+  if (territory === 'Pomerania') {
+    if (year <= 1636) return ['Ducado de Pomerania'];
+    if (year <= 1647) return ['Pomerania bajo ocupación sueca'];
+    return ['Pomerania sueca', 'Pomerania de Brandeburgo'];
+  }
+  return [territory];
+}
+
+export function pilotImperialFrameFor(data, year) {
+  if (!Number.isInteger(year)) return [];
+  if (reviewedLayerCovered(data, layerIndex(data).get('Marco jurídico del Sacro Imperio'), year)) {
+    return pilotLocationsFor(data, 'Marco jurídico del Sacro Imperio', year);
+  }
+  return mapLocationsForGovernment(data, {territorio:'Sacro Imperio'}, year, null, imperialFrameIds(year));
+}
+
+export function pilotVersionFor(entry, year) {
+  if (!entry || !Number.isInteger(year)) return null;
+  return [...entry.versions].reverse().find(version => version.from <= year) || null;
+}
+
+export function pilotLocationsFor(data, territory, year, personId = null) {
+  if (!data || !Number.isInteger(year) || year < data.from || year > data.through) return [];
+  const byName = layerIndex(data);
+  const ids = [...new Set(pilotJurisdictionsFor(territory, year, personId).flatMap(name =>
+    reviewedLayerLocations(data, byName.get(name), year, personId)))];
+  const scope = authorityMapScope(personId, territory, year);
+  return ids.filter(id => (!scope?.ids || scope.ids.includes(id)) && !scope?.excludedIds?.includes(id));
+}
+
+function layerActiveInYear(entry, year, from = 1400, through = 1650) {
+  if (entry?.periods) return entry.periods.some(period => period.from <= year
+    && year <= (period.through ?? through));
+  return !entry?.active || (entry.active.from ?? from) <= year
+    && year <= (entry.active.through ?? through);
+}
+
+function temporalExtensionFor(entry, year) {
+  return (entry?.temporalExtensions || []).find(extension => extension.periods.some(period =>
+    period.from <= year && year <= period.through));
+}
+
+// Each layer has its own researched span. Expanding the timeline must never
+// carry a 1650 border into 1800 merely because it is the last stored version.
+export function reviewedLayerCovered(data, entry, year) {
+  if (!entry || !Number.isInteger(year) || year < data.from || year > data.through) return false;
+  if (temporalExtensionFor(entry, year)) return true;
+  const coverage = entry.coverage || data.basePeriod || {from: data.from, through: data.through};
+  return coverage.from <= year && year <= coverage.through;
+}
+
+export function reviewedLayerActive(data, entry, year) {
+  if (!reviewedLayerCovered(data, entry, year)) return false;
+  if (temporalExtensionFor(entry, year)) return true;
+  const coverage = entry.coverage || data.basePeriod || {from: data.from, through: data.through};
+  return layerActiveInYear(entry, year, coverage.from, coverage.through);
+}
+
+export function reviewedLayerVersion(data, entry, year) {
+  if (!reviewedLayerActive(data, entry, year)) return null;
+  const extension = temporalExtensionFor(entry, year);
+  return pilotVersionFor(extension || entry, year);
+}
+
+export function reviewedLayerEvidence(entry, year) {
+  const extension = temporalExtensionFor(entry, year);
+  const selected = extension || entry;
+  // Detailed citations win over legacy URL-only references to the same page.
+  const raw = [...(selected?.active?.source ? [selected.active.source] : []),
+    ...(selected?.source ? [selected.source] : []), ...(selected?.sources || [])];
+  const sources = [...new Map(raw.map(source => typeof source === 'string'
+    ? {url: source, label: 'Fuente de la capa territorial'} : source)
+    .filter(source => source?.url).map(source => [source.url, source])).values()];
+  return {note: selected?.note || null, sources,
+    precision:selected?.precision || entry?.precision || null,
+    limitedCore:(selected?.limitedCore ?? entry?.limitedCore ?? false)
+      || (selected?.limitedCorePeriods || []).some(period => period.from <= year && year <= period.through),
+    activeReason:selected?.active?.reason || (extension ? selected?.note : null)};
+}
+
+export function mapSourceReference(source) {
+  return typeof source === 'string' ? {url:source,title:'Fuente complementaria'} : source;
+}
+
+function applyLayerCorrections(data, entry, ids, year) {
+  const corrected = new Set(ids);
+  reviewedMapLayers(data);
+  const active = (layerIndexes.get(data)?.corrections.get(entry.name) || [])
+    .filter(correction => correction.from <= year && year <= correction.through);
+  // An explicit dated exclusion wins over a broad earlier inclusion, whatever
+  // order the canonical corrections and source groups were merged in.
+  active.filter(c => c.action === 'add').forEach(c => corrected.add(c.id));
+  active.filter(c => c.action === 'remove').forEach(c => corrected.delete(c.id));
+  // A legal framework is an independent reference, not an earlier owner.
+  // Regional political precedence must not erase it from the inspector.
+  if (entry.name === 'Marco jurídico del Sacro Imperio') return [...corrected];
+  const regional = layerIndexes.get(data)?.regional;
+  for (const id of corrected) {
+    const owner = regional?.findLast(review => review.from <= year && year <= review.through && review.ids.has(id));
+    if (owner && !owner.names.has(entry.name)) corrected.delete(id);
+  }
+  return [...corrected];
+}
+
+export function reviewedLayerLocations(data, entry, year, personId = null) {
+  if (!entry || !Number.isInteger(year) || year < data.from || year > data.through) return [];
+  const extension = authorityExtensionFor(entry.name, year, personId);
+  if (extension) return applyLayerCorrections(data, entry,
+    pilotVersionFor(entry, extension.referenceYear)?.ids || [], extension.referenceYear);
+  if (!reviewedLayerActive(data, entry, year)) return [];
+  return applyLayerCorrections(data, entry, reviewedLayerVersion(data, entry, year)?.ids || [], year);
+}
+
+// Political status can differ within one kingdom. Keep the dated regional
+// dispute on its own cells instead of hatching every possession of the ruler.
+export function reviewedAuthorityConditions(data, territory, year, personId = null) {
+  const conditions = new Map();
+  const names = pilotJurisdictionsFor(territory, year, personId);
+  for (const name of names) {
+    const entry = layerIndex(data).get(name);
+    const ids = new Set(reviewedLayerLocations(data, entry, year, personId));
+    const scope = authorityMapScope(personId, territory, year);
+    if (scope?.disputedJurisdictions?.includes(name)) for (const id of ids)
+      conditions.set(id,{condition:'control disputado',note:scope.note,sources:[scope.source,...(scope.additionalSources || [])]});
+    if (entry?.authorityCondition) for (const id of ids)
+      conditions.set(id,{condition:entry.authorityCondition,note:entry.note,sources:reviewedLayerEvidence(entry,year).sources});
+    for (const correction of layerIndexes.get(data)?.corrections.get(name) || []) {
+      if (!correction.authorityCondition || correction.from > year || correction.through < year || !ids.has(correction.id)) continue;
+      conditions.set(correction.id,{condition:correction.authorityCondition,note:correction.reason,
+        sources:[{url:correction.source,title:'Fuente del control regional',locator:correction.reason}]});
+    }
+  }
+  const scope = authorityMapScope(personId, territory, year);
+  for (const id of scope?.disputedIds || [])
+    conditions.set(id, {condition:'control disputado',note:scope.note,sources:[scope.source,...(scope.additionalSources || [])]});
+  return conditions;
+}
+
+// Prefer a dated, named jurisdiction when the research layer has one. For
+// territories not yet migrated, transform their legacy region IDs through
+// the audited geometry crosswalk; unmappable/ambiguous regions stay unpainted.
+export function mapLocationsForGovernment(data, government, year, personId = null, legacyIds = []) {
+  if (!data || !government?.territorio || !Number.isInteger(year)) return [];
+  if(government.territorio==='Austria'&&government.ambito?.includes('Austria Interior'))
+    return [...new Set([...pilotLocationsFor(data,'Austria Interior',year,personId),
+      ...(year>=1619?pilotLocationsFor(data,'Austria',year,personId):[])])];
+  const chronological=chronologyJurisdictionsFor(government.territorio,year,personId);
+  if(chronological?.length === 0 && !pilotJurisdictionsFor(government.territorio,year,personId).length)return [];
+  const byName = layerIndex(data);
+  const withinDatedLayerRange = year >= data.from && year <= data.through;
+  const layers = (withinDatedLayerRange ? pilotJurisdictionsFor(government.territorio, year, personId) : [])
+    .map(name => byName.get(name)).filter(Boolean);
+  if (layers.some(entry => reviewedLayerCovered(data, entry, year))) {
+    const scope = authorityMapScope(personId, government.territorio, year);
+    const ids = [...new Set(layers.flatMap(entry => reviewedLayerLocations(data, entry, year, personId)))];
+    const scoped = scope?.ids ? ids.filter(id => scope.ids.includes(id)) : ids;
+    return applyMapBorderCorrections(scoped.filter(id => !scope?.excludedIds?.includes(id)), government.territorio, year);
+  }
+  const crosswalk = data.locationCrosswalk?.newIdsByOldId || {};
+  const regional = layerIndexes.get(data)?.regional;
+  const ids = [...new Set(legacyIds.flatMap(id => crosswalk[id]?.ids || []))]
+    .filter(id => !regional?.some(review => review.from <= year && year <= review.through && review.ids.has(id)));
+  return applyMapBorderCorrections(ids, government.territorio, year);
+}
+
+export function pilotDisputedHungarianClaimsFor(data, personId, year) {
+  if (!Number.isInteger(year)) return [];
+  if (personId === 'JUAN1ZAPOLYA' && year >= 1526 && year <= 1540) {
+    return [{ territory: 'Hungría oriental de Zápolya', color: '#756598',
+      ids: pilotLocationsFor(data, 'Hungría', year, personId) }];
+  }
+  if (personId === 'JUAN2SIGZAPOLYA'
+      && ((year >= 1541 && year <= 1550) || (year >= 1556 && year <= 1569))) {
+    return [{ territory: 'Transilvania bajo Zápolya', color: '#756598',
+      ids: pilotLocationsFor(data, 'Transilvania', year) }];
+  }
+  return [];
+}
+
+export function pilotBurgundianGovernmentsFor(data, personId, year) {
+  if (!data?.burgundy || !personId || !Number.isInteger(year)) return [];
+  const person = data.burgundy.people.find(item => item.id === personId);
+  if (!person) return [];
+  return person.governments.flatMap(government => {
+    if (year < government.from || year > government.through) return [];
+    const version = pilotVersionFor(government, year);
+    return version?.ids.length ? [{ territory: government.territory,
+      condition: government.condition, from: government.from, through: government.through,
+      ids: version.ids }] : [];
+  });
+}
+
+export function pilotLocationContext(data, id, year, personId = null) {
+  if (!data || !id || !Number.isInteger(year) || year < data.from || year > data.through) return [];
+  const superseded = supersededRegionalLayers(data, year);
+  const entries = reviewedMapLayers(data).filter(entry => !superseded.has(entry.name));
+  const corridor = entries.flatMap(entry => {
+    if (!reviewedLayerLocations(data, entry, year).includes(id)) return [];
+    const extension = authorityExtensionFor(entry.name, year);
+    const evidence = reviewedLayerEvidence(entry, year);
+    return [{
+      name: territorialLabel(entry.name, year),
+      layerName: entry.name,
+      corridor: entry.corridor,
+      note: evidence.note,
+      source: extension?.source.url || evidence.sources[0]?.url || null,
+      activeReason: extension?.note || evidence.activeReason || null,
+      correction: (data.overrides || []).find(item => item.territory === entry.name && item.id === id
+        && item.from <= year && year <= item.through) || null,
+    }];
+  });
+  const burgundian = pilotBurgundianGovernmentsFor(data, personId, year)
+    .filter(government => government.ids.includes(id))
+    .filter(government => !corridor.some(entry => entry.name === government.territory))
+    .map(government => ({
+      name: government.territory,
+      corridor: 'Sucesión borgoñona',
+      note: 'Atribución del ensayo fechado para la persona seleccionada; los señoríos suplementarios todavía no figuran en su biografía del Atlas.',
+      correction: data.burgundy.overrides.find(item => item.territory === government.territory
+        && item.id === id && item.action === 'add'
+        && item.from <= year && year <= item.through) || null,
+    }));
+  return [...corridor, ...burgundian];
+}

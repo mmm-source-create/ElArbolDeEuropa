@@ -1,8 +1,9 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
-import {PERSONAS} from '../src/personas.jsx';
-import {REINO_A_IDS,colorTerritorioEnMapa,idsDeReinoEnAño,reinadosActivos} from '../src/Territorios.jsx';
+import {PERSONAS} from '../src/data/personas.js';
+import {REINO_A_IDS, colorTerritorioEnMapa, idsDeReinoEnAño} from '../src/cartography/kingdomMaps.js';
+import {reinadosActivos} from '../src/domain/government/reigns.js';
 import {UNIONES_CORONAS} from '../src/content/coronas/index.js';
 
 const person=id=>PERSONAS.find(p=>p.id===id);

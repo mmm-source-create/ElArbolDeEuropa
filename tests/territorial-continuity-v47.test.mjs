@@ -1,11 +1,11 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {PERSONAS} from '../src/personas.jsx';
+import {PERSONAS} from '../src/data/personas.js';
 import {personClaims} from '../src/evidence/claims.js';
-import {buildPoliticalMapIndex,inspectMapRegion} from '../src/data/politicalMapIndex.js';
+import {buildPoliticalMapIndex,inspectMapRegion} from '../src/cartography/politicalMapIndex.js';
 import {auditMapContinuity,HISTORICAL_CUTS} from '../scripts/audits/lib/mapContinuityAudit.js';
-import {imperialFrameIds} from '../src/data/imperialFrame.js';
-import {colorTerritorioEnMapa,REINO_COLOR} from '../src/Territorios.jsx';
+import {imperialFrameIds} from '../src/cartography/imperialFrame.js';
+import {colorTerritorioEnMapa, REINO_COLOR} from '../src/cartography/kingdomMaps.js';
 
 const people=Object.fromEntries(PERSONAS.map(p=>[p.id,p]));
 const inspect=(id,year)=>inspectMapRegion(id,year,buildPoliticalMapIndex(PERSONAS,year));

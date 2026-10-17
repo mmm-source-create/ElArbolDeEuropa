@@ -2,8 +2,8 @@ import {auditReportPath} from '../lib/project-paths.mjs';
 import fs from 'node:fs';
 import path from 'node:path';
 import {fileURLToPath} from 'node:url';
-import {atlasPoliticalMosaicAt, atlasMosaicPalette} from '../../src/data/atlasMosaic.js';
-import {PERSONAS} from '../../src/personas.jsx';
+import {atlasPoliticalMosaicAt, atlasMosaicPalette} from '../../src/cartography/atlasMosaic.js';
+import {PERSONAS} from '../../src/data/personas.js';
 import {locationResearchTargets} from './lib/locationResearchTargets.js';
 
 // Inspect the same annual mosaic shown in the laboratory. A raw version's

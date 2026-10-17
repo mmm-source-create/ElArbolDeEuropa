@@ -1,14 +1,14 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
-import {PERSONAS} from '../src/personas.jsx';
+import {PERSONAS} from '../src/data/personas.js';
 import {TERRITORIOS} from '../src/data/territorios.js';
 import {personClaims} from '../src/evidence/claims.js';
-import {mapAuthoritiesForPerson} from '../src/data/mapAuthorities.js';
-import {buildPoliticalMapIndex, inspectMapRegion} from '../src/data/politicalMapIndex.js';
-import {TRIBUTARY_RELATIONS, tributaryEntriesFor} from '../src/data/tributaryRelations.js';
-import {territorialIdentity, territorialColor} from '../src/data/territorialIdentity.js';
-import {atlasPoliticalMosaicAt} from '../src/data/atlasMosaic.js';
+import {mapAuthoritiesForPerson} from '../src/cartography/mapAuthorities.js';
+import {buildPoliticalMapIndex, inspectMapRegion} from '../src/cartography/politicalMapIndex.js';
+import {TRIBUTARY_RELATIONS, tributaryEntriesFor} from '../src/cartography/tributaryRelations.js';
+import {territorialIdentity, territorialColor} from '../src/cartography/territorialIdentity.js';
+import {atlasPoliticalMosaicAt} from '../src/cartography/atlasMosaic.js';
 import {auditIberiaItalyContinuity, iberiaItalyGeographicReview} from '../scripts/audits/audit-iberia-italy-continuity.mjs';
 import {applyRegionalReview} from '../scripts/cartography/apply-regional-review.mjs';
 import {compactBalkanRoutes} from '../scripts/cartography/build-balkans-routes.mjs';
@@ -153,5 +153,5 @@ test('new mandates have their own localized sources and the compact routes repro
     assert(people.has(id), id);
     assert(personClaims(people.get(id)).filter(claim => claim.field === 'Gobierno').every(claim => claim.sources.length && claim.sources.every(source => source.locator)), id);
   }
-  assert.deepEqual(read('../src/data/iberiaItalyRouteData.json'), compactBalkanRoutes(review));
+  assert.deepEqual(read('../src/cartography/regions/iberiaItalyRouteData.json'), compactBalkanRoutes(review));
 });

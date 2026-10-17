@@ -1,4 +1,4 @@
-import {STATIC_SCHEMA} from '../../src/public/staticData.js';
+import {STATIC_SCHEMA} from '../../src/features/public/staticData.js';
 const member=n=>({id:`P${n}`,slug:`persona-${n}`,nombre:`Persona ${n}`,titulo:'Rey',dinastia:'Casa de prueba',nac:1200,muer:1270});
 const government=(territorio,desde,hasta,condicion='efectivo')=>({territorio,titulo:'Rey',clase:'reinado',condicion,desde,hasta});
 const payload=(kind,slug,data)=>({schema:STATIC_SCHEMA,kind,slug,path:`/es/${kind}/${slug}`,data:{slug,...data}});

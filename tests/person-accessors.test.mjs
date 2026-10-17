@@ -1,20 +1,20 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
-import {conyugesDe, gobiernosDe, territoriosDe, intervalosDisputadosDe} from '../src/data/personAccessors.js';
-import {PERSONAS} from '../src/personas.jsx';
+import {conyugesDe, gobiernosDe, territoriosDe, intervalosDisputadosDe} from '../src/domain/genealogy/personAccessors.js';
+import {PERSONAS} from '../src/data/personas.js';
 import {readPersonLiteral} from '../scripts/schema/read-contract-data.mjs';
 import {personClaims} from '../src/evidence/claims.js';
-import {authorityKind, mapAuthoritiesForPerson} from '../src/data/mapAuthorities.js';
-import {familyIndex, familyIds} from '../src/explorer/progressiveAtlas.js';
-import {reinadosEfectivos} from '../src/desafio/desafioGovernments.js';
-import {parentescoRegistrado} from '../src/data/successionHistory.js';
-import {listaReinados} from '../src/Territorios.jsx';
+import {authorityKind, mapAuthoritiesForPerson} from '../src/cartography/mapAuthorities.js';
+import {familyIndex, familyIds} from '../src/features/atlas/progressiveAtlas.js';
+import {reinadosEfectivos} from '../src/features/desafio/desafioGovernments.js';
+import {parentescoRegistrado} from '../src/domain/government/successionHistory.js';
+import {listaReinados} from '../src/domain/government/reigns.js';
 import {createElement} from 'react';
 import {renderToStaticMarkup} from 'react-dom/server';
-import BioDiscovery from '../src/components/BioDiscovery.jsx';
+import BioDiscovery from '../src/features/atlas/BioDiscovery.jsx';
 
-const source = readPersonLiteral(readFileSync(new URL('../src/personas.jsx', import.meta.url), 'utf8'));
+const source = readPersonLiteral(readFileSync(new URL('../src/data/personas.js', import.meta.url), 'utf8'));
 
 test('las lecturas opcionales no añaden campos ni convierten ausencia en un dato histórico', () => {
   const person = Object.freeze({id: 'A', documentacion: {ausencias: {padres: 'unknown'}}});

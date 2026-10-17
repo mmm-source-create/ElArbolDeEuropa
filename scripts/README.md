@@ -67,7 +67,7 @@ Se incluyen las celdas completas que atraviesan las ventanas.
 `balkans-full-review.json` es la fuente de fases, notas, citas y ámbitos
 personales. El ensamblador compartido comprueba que la precedencia proporciona
 una sustitución completa en cada celda. `build-balkans-routes.mjs` produce
-`src/data/balkansFullRouteData.json`, con los datos necesarios para las rutas
+`src/cartography/regions/balkansFullRouteData.json`, con los datos necesarios para las rutas
 del cliente; el inspector conserva la evidencia completa en el mapa.
 
 El informe actual se escribe en `.cache/audits/audit-balkans-continuity-report.json`.
@@ -95,7 +95,7 @@ insulares. `iberia-italy-full-review.json` contiene la atribución histórica,
 sus citas y las composiciones; el inventario no decide soberanía. Las rutas
 compactas del cliente se comparan con su fuente en las pruebas.
 
-`src/data/tributaryRelations.js` conserva las relaciones tributarias fechadas.
+`src/cartography/tributaryRelations.js` conserva las relaciones tributarias fechadas.
 Esas relaciones no se convierten en gobiernos personales ni alteran la
 identidad del mosaico conjunto. La precedencia regional no borra el marco
 legal imperial, que permanece separado de los dominios pintados.

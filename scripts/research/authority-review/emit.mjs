@@ -1,7 +1,7 @@
 // Emit src/evidence/authorityReviews.js: one compact entry per person with a verified GND record.
 import fs from 'node:fs';
-const {PERSONAS}=await import('../../../src/personas.jsx');
-const {conyugesDe}=await import('../../../src/data/personAccessors.js');
+const {PERSONAS}=await import('../../../src/data/personas.js');
+const {conyugesDe}=await import('../../../src/domain/genealogy/personAccessors.js');
 const qids=JSON.parse(fs.readFileSync('qids.json')),ent=JSON.parse(fs.readFileSync('entities.json')),status=JSON.parse(fs.readFileSync('status.json')),gnd=JSON.parse(fs.readFileSync('gnd.json'));
 const reviews=JSON.parse(fs.readFileSync('reviews.json'));
 const data={};

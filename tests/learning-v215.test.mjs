@@ -1,8 +1,8 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {PERSONAS} from '../src/personas.jsx';
+import {PERSONAS} from '../src/data/personas.js';
 import {RELEVOS} from '../src/content/sucesiones/index.js';
-import {successionBank,bankVersion,createChallenge,challengeUrl,readChallenge,readReview,reviewQuestions,saveReview,updateReview,validReviewQuestion,REVIEW_KEY} from '../src/desafio/learning.js';
+import {successionBank,bankVersion,createChallenge,challengeUrl,readChallenge,readReview,reviewQuestions,saveReview,updateReview,validReviewQuestion,REVIEW_KEY} from '../src/features/desafio/learning.js';
 const bank=successionBank(PERSONAS), byId=Object.fromEntries(PERSONAS.map(p=>[p.id,p]));
 const store=initial=>{let value=initial;return {getItem:()=>value,setItem:(_,v)=>{value=v;}};};
 test('el banco usa exclusivamente relevos editoriales y conserva la explicación y sus fuentes',()=>{

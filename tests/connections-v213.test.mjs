@@ -1,15 +1,15 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {JSDOM} from 'jsdom';
-import {connectionTree,connectionUrl,connectionFromSearch} from '../src/connections/connectionTree.js';
-import {selectionLayout,selectionEdges,edgePath} from '../src/connections/selectionLayout.js';
-import {treeSvg,pngDimensions,wrapName} from '../src/connections/treeExport.js';
-import {sanitizeSession,shouldResumeAtlas} from '../src/explorer/atlasSession.js';
-import {resolverRuta} from '../src/routing.js';
-import {PERSONAS} from '../src/personas.jsx';
-import {buildGraph} from '../src/explorer/relationshipGraph.js';
+import {connectionTree,connectionUrl,connectionFromSearch} from '../src/features/connections/connectionTree.js';
+import {selectionLayout,selectionEdges,edgePath} from '../src/features/connections/selectionLayout.js';
+import {treeSvg,pngDimensions,wrapName} from '../src/features/connections/treeExport.js';
+import {sanitizeSession,shouldResumeAtlas} from '../src/features/atlas/atlasSession.js';
+import {resolverRuta} from '../src/app/routing.js';
+import {PERSONAS} from '../src/data/personas.js';
+import {buildGraph} from '../src/domain/genealogy/relationshipGraph.js';
 import {RAMAS_DINASTICAS} from '../src/content/dinastias/index.js';
-import {dynastyBranchSelection} from '../src/data/dynastyBranchSelection.js';
+import {dynastyBranchSelection} from '../src/domain/genealogy/dynastyBranchSelection.js';
 const graphOf=(ids,edges)=>Object.fromEntries(ids.map(id=>[id,edges.flatMap(([a,b,type='sangre'])=>id===a?[{id:b,tipos:[type]}]:id===b?[{id:a,tipos:[type]}]:[])]));
 const connected=(nodes,edges,terminals)=>{const seen=new Set([terminals[0]]);for(let changed=true;changed;){changed=false;for(const [a,b]of edges)if(seen.has(a)!==seen.has(b)){seen.add(a);seen.add(b);changed=true;}}return terminals.every(id=>seen.has(id));};
 function brute(edges,terminals){let best=Infinity;for(let mask=0;mask<1<<edges.length;mask++){const chosen=edges.filter((_,i)=>mask&(1<<i));if(chosen.length<best&&connected([],chosen,terminals))best=chosen.length;}return best;}

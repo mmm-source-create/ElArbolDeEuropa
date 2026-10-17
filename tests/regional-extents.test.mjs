@@ -1,12 +1,12 @@
-import {atlasPoliticalMosaicAt} from '../src/data/atlasMosaic.js';
+import {atlasPoliticalMosaicAt} from '../src/cartography/atlasMosaic.js';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
-import {PERSONAS} from '../src/personas.jsx';
+import {PERSONAS} from '../src/data/personas.js';
 import {personClaims} from '../src/evidence/claims.js';
-import {mapAuthoritiesForPerson} from '../src/data/mapAuthorities.js';
-import {pilotLocationsFor, reviewedMapLayers, reviewedLayerLocations} from '../src/data/locationMapPilot.js';
-import {politicalMosaicAt} from '../src/data/locationMosaic.js';
+import {mapAuthoritiesForPerson} from '../src/cartography/mapAuthorities.js';
+import {pilotLocationsFor, reviewedMapLayers, reviewedLayerLocations} from '../src/cartography/locationMapPilot.js';
+import {politicalMosaicAt} from '../src/cartography/locationMosaic.js';
 import {applyRegionalExtents} from '../scripts/cartography/apply-regional-extents.mjs';
 import {REGIONAL_EXTENT_REVIEWS} from '../src/evidence/regionalExtentReviewData.js';
 

@@ -1,7 +1,7 @@
 // Build claim reviews from GND authority records. A claim becomes "documented" only when
 // the GND record states the same year (dates) or links the same person (parents, spouses).
 import fs from 'node:fs';
-const {PERSONAS}=await import('../../../src/personas.jsx');
+const {PERSONAS}=await import('../../../src/data/personas.js');
 const {personClaims,CLAIM_REVIEWS}=await import('../../../src/evidence/claims.js');
 const qids=JSON.parse(fs.readFileSync('qids.json')),ent=JSON.parse(fs.readFileSync('entities.json')),status=JSON.parse(fs.readFileSync('status.json')),gnd=JSON.parse(fs.readFileSync('gnd.json'));
 const gndOf=id=>status[id]==='ok'?(ent[qids[id]?.qid]?.gnd||[]).find(g=>gnd[g]&&!gnd[g].missing):null;

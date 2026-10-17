@@ -1,12 +1,12 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
-import {PERSONAS} from '../src/personas.jsx';
+import {PERSONAS} from '../src/data/personas.js';
 import {ALPES_V213} from '../src/content/personas/alpes-v213.js';
 import {SOURCES,SOURCE_PUBLICATIONS,sourcesForPerson} from '../src/content/sources.js';
 import {TERRITORIOS} from '../src/data/territorios.js';
 import {auditarTerritorios} from '../scripts/audits/lib/auditTerritorios.js';
-import {sucesionDe} from '../src/data/sucesion.js';
+import {sucesionDe} from '../src/domain/government/sucesion.js';
 import {RELEVOS_ALPES} from '../src/content/sucesiones/alpes-v213.js';
 const by=Object.fromEntries(PERSONAS.map(p=>[p.id,p]));
 test('las cincuenta biografías alpinas tienen contenido y referencias individuales únicas',()=>{

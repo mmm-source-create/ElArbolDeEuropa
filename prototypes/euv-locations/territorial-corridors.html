@@ -110,14 +110,14 @@
   </main>
   <footer>Geometría: <a href="https://www.mapchart.net/eu-v-locations.html">MapChart</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>.</footer>
   <script type="module">
-    import {atlasMosaicPalette,atlasPoliticalMosaicAt} from '../../src/data/atlasMosaic.js';
-    import {locationLabel} from '../../src/data/locationLabels.js';
+    import {atlasMosaicPalette,atlasPoliticalMosaicAt} from '../../src/cartography/atlasMosaic.js';
+    import {locationLabel} from '../../src/cartography/locationLabels.js';
     import mapUrl from './euv-locations-crop.svg?url';
     import dataUrl from './corridor-locations.json?url';
-    import {reviewedLayerLocations,reviewedLayerVersion,reviewedLayerActive,reviewedLayerEvidence,mapSourceReference} from '../../src/data/locationMapPilot.js';
-    import {clampMapViewBox,clipMapToBounds} from '../../src/mapViewport.js';
-    import {territorialLabel,territorialColor} from '../../src/data/territorialIdentity.js';
-    import {supersededRegionalLayers} from '../../src/data/regionalExtentRoutes.js';
+    import {reviewedLayerLocations,reviewedLayerVersion,reviewedLayerActive,reviewedLayerEvidence,mapSourceReference} from '../../src/cartography/locationMapPilot.js';
+    import {clampMapViewBox,clipMapToBounds} from '../../src/features/atlas/mapViewport.js';
+    import {territorialLabel,territorialColor} from '../../src/cartography/territorialIdentity.js';
+    import {supersededRegionalLayers} from '../../src/cartography/regions/regionalExtentRoutes.js';
     const FRAMES={Iberia:{x:518,y:158,w:77,h:66},Italia:{x:575,y:143,w:64,h:68},Centroeuropa:{x:592,y:91,w:134,h:116},'Europa septentrional y oriental':{x:615,y:20,w:170,h:145},'Francia e islas británicas':{x:493,y:82,w:145,h:120},'Borgoña e Imperio':{x:522,y:85,w:170,h:105},'Hungría y Balcanes':{x:600,y:137,w:83,h:72},'Mediterráneo oriental':{x:640,y:185,w:100,h:60}};
     const FULL={x:475,y:15,w:315,h:240};
     const TERRITORY_FRAMES={'Cerdeña':{x:581,y:175,w:25,h:31},'Trinacria':{x:592,y:180,w:34,h:32},'Venecia':{x:588,y:143,w:100,h:76}};

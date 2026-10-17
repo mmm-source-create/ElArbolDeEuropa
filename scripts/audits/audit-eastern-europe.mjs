@@ -1,5 +1,5 @@
 import fs from 'node:fs';
-import {atlasPoliticalMosaicAt} from '../../src/data/atlasMosaic.js';
+import {atlasPoliticalMosaicAt} from '../../src/cartography/atlasMosaic.js';
 import {mapDataFile,projectRoot,auditReportPath} from '../lib/project-paths.mjs';
 
 const read=name=>JSON.parse(fs.readFileSync(mapDataFile(name)));

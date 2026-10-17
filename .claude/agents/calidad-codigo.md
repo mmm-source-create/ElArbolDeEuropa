@@ -17,7 +17,7 @@ Cualquier archivo, pero solo para eliminar o simplificar sin cambiar resultados.
 - Los nombres con tilde o eñe (`idsDeGobiernoEnAño`, `getCategoriaDinastía`) rompen las búsquedas con `\w`: usa clases Unicode.
 - No toques `tests/baselines/` ni ejecutes `baseline:regression`.
 - Respeta el estilo compacto del archivo. No reformatees archivos enteros, no cambies comillas y no reordenes imports ajenos al cambio.
-- Restricciones conocidas: el generador (`scripts/generate/`) importa `.jsx` con un truco de data-URL, así que los módulos que use no pueden importar `.jsx`; `src/i18n.jsx` usa `import.meta.env`, que el cargador de tests solo sustituye en archivos `.jsx`.
+- Restricciones conocidas: el generador (`scripts/generate/`) importa `.jsx` con un truco de data-URL, así que los módulos que use no pueden importar `.jsx`; `src/app/i18n.js` usa `import.meta.env`, que el cargador de tests solo sustituye en archivos `.jsx`.
 - Agrupa los borrados en commits pequeños y revertibles por tema.
 
 ## Comprobaciones antes de entregar

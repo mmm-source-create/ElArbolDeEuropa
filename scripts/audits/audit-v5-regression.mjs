@@ -1,6 +1,6 @@
 import fs from 'node:fs/promises';
 import path from 'node:path';
-import {PERSONAS} from '../../src/personas.jsx';
+import {PERSONAS} from '../../src/data/personas.js';
 import {TERRITORIOS} from '../../src/data/territorios.js';
 import {projectRoot, readJson} from '../schema/read-contract-data.mjs';
 import {canonical} from '../schema/canonical.mjs';

@@ -1,10 +1,10 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {resolverRuta} from '../src/routing.js';
-import {assignIntervalLanes,mergeIntervals,roundedPath,pointToward} from '../src/explorer/treeGeometry.js';
-import {reinadosEfectivos,sucesionesDirectas} from '../src/desafio/desafioGovernments.js';
-import {crearDesafioDiario,crearPartida} from '../src/desafio/desafioEngine.js';
-import {PERSONAS} from '../src/personas.jsx';
+import {resolverRuta} from '../src/app/routing.js';
+import {assignIntervalLanes,mergeIntervals,roundedPath,pointToward} from '../src/domain/genealogy/treeGeometry.js';
+import {reinadosEfectivos,sucesionesDirectas} from '../src/features/desafio/desafioGovernments.js';
+import {crearDesafioDiario,crearPartida} from '../src/features/desafio/desafioEngine.js';
+import {PERSONAS} from '../src/data/personas.js';
 
 test('rutas públicas, catálogos, inglés y desafío conservan su destino',()=>{
  for(const [path,view] of [['/','home'],['/es/','home'],['/en/','english'],['/persona/carlos-v','person'],['/es/personas','catalog'],['/es/territorios/','catalog'],['/es/fuentes','info'],['/es/desafio','desafio'],['/es/dinastia/bourbon','dynasty'],['/territorio/brabante','territory']])assert.equal(resolverRuta(path).view,view,path);

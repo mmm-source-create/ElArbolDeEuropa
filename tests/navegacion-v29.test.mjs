@@ -1,13 +1,13 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
-import { layoutRows, visibleRowRange, centeredScroll } from '../src/explorer/virtualRows.js';
-import { sanitizeSession, readAtlasSession, writeAtlasSession, shouldResumeAtlas, ATLAS_SESSION_KEY } from '../src/explorer/atlasSession.js';
+import { layoutRows, visibleRowRange, centeredScroll } from '../src/features/atlas/virtualRows.js';
+import { sanitizeSession, readAtlasSession, writeAtlasSession, shouldResumeAtlas, ATLAS_SESSION_KEY } from '../src/features/atlas/atlasSession.js';
 import { SOURCES, sourcesForPerson, FUENTES_TERRITORIOS } from '../src/content/sources.js';
 import { TERRITORIOS } from '../src/data/territorios.js';
 import { responsiveImage } from '../src/utils/responsiveImage.js';
 import { IMAGE_VARIANTS } from '../src/data/imageVariants.js';
-import { IMAGENES_PERSONAS } from '../src/imagenesPersonas.js';
+import { IMAGENES_PERSONAS } from '../src/data/imagenesPersonas.js';
 
 test('los retratos usan solo variantes realmente publicadas', () => {
   for (const image of Object.values(IMAGENES_PERSONAS)) {
@@ -61,7 +61,7 @@ test('una URL explícita manda sobre la sesión y se descarta almacenamiento inv
   assert.equal(state.zoom,.8);assert.deepEqual(state.territorios,['Georgia']);assert.equal(state.vistasActivas.arbol,true);assert.equal(state.treeCenter,undefined);
 });
 test('las fuentes son únicas y las asignaciones biográficas y territoriales existen', async () => {
-  const {PERSONAS}=await import('data:text/javascript;base64,'+fs.readFileSync(new URL('../src/personas.jsx',import.meta.url)).toString('base64'));
+  const {PERSONAS}=await import('../src/data/personas.js');
   const ids=new Set(PERSONAS.map(p=>p.id));assert.equal(new Set(SOURCES.map(s=>s.url)).size,SOURCES.length);
   for(const source of SOURCES){assert.equal(new URL(source.url).protocol,'https:');assert.ok(source.titulo);for(const id of source.personas)assert.ok(ids.has(id),id);for(const territory of source.territorios)assert.ok(TERRITORIOS[territory],territory);}
   assert.ok(sourcesForPerson('GRACEOMALLEY').some(s=>s.url.includes('a6886')));

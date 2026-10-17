@@ -1,12 +1,12 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
-import {PERSONAS} from '../src/personas.jsx';
+import {PERSONAS} from '../src/data/personas.js';
 import {TERRITORIOS} from '../src/data/territorios.js';
-import {mapAuthoritiesForPerson} from '../src/data/mapAuthorities.js';
-import {reviewedLayerLocations, reviewedLayerEvidence, pilotLocationsFor} from '../src/data/locationMapPilot.js';
-import {territorialIdentity, territorialLabel, territorialColor} from '../src/data/territorialIdentity.js';
-import {politicalMosaicAt} from '../src/data/locationMosaic.js';
+import {mapAuthoritiesForPerson} from '../src/cartography/mapAuthorities.js';
+import {reviewedLayerLocations, reviewedLayerEvidence, pilotLocationsFor} from '../src/cartography/locationMapPilot.js';
+import {territorialIdentity, territorialLabel, territorialColor} from '../src/cartography/territorialIdentity.js';
+import {politicalMosaicAt} from '../src/cartography/locationMosaic.js';
 import {applyContinuityReview} from '../scripts/cartography/apply-continuity-review.mjs';
 
 const data=JSON.parse(fs.readFileSync(new URL('../prototypes/euv-locations/corridor-locations.json',import.meta.url)));

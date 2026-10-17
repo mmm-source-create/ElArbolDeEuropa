@@ -2,7 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import React from 'react';
 import {renderToStaticMarkup} from 'react-dom/server';
-import {PERSONAS} from '../src/personas.jsx';
+import {PERSONAS} from '../src/data/personas.js';
 import {ADRIATICO_V214} from '../src/content/personas/adriatico-v214.js';
 import {CASAS_ADRIATICO,CONEXIONES_ADRIATICO} from '../src/content/dinastias/adriatico-v214.js';
 import {HISTORIA_TERRITORIOS} from '../src/content/territorios/index.js';
@@ -11,12 +11,13 @@ import {SOURCES,SOURCE_PUBLICATIONS,sourcesForPerson,FUENTES_TERRITORIOS} from '
 import {RELEVOS_ADRIATICO} from '../src/content/sucesiones/adriatico-v214.js';
 import {TERRITORIOS} from '../src/data/territorios.js';
 import {auditarTerritorios} from '../scripts/audits/lib/auditTerritorios.js';
-import {auditDynasties,buildDynastyPages} from '../src/data/dynastyModel.js';
-import {auditarSucesiones,prepararSucesiones,coincideMandato} from '../src/data/successionHistory.js';
-import {sucesionDe} from '../src/data/sucesion.js';
-import {RelevoExplicado} from '../src/explorer/SuccessionContext.jsx';
-import {auditDocumentation,documentaryBounds} from '../src/utils/documentaryDates.js';
-import {REINO_A_IDS,TERRITORIOS_SUB} from '../src/Territorios.jsx';
+import {auditDynasties,buildDynastyPages} from '../src/domain/genealogy/dynastyModel.js';
+import {auditarSucesiones,prepararSucesiones,coincideMandato} from '../src/domain/government/successionHistory.js';
+import {sucesionDe} from '../src/domain/government/sucesion.js';
+import {RelevoExplicado} from '../src/features/atlas/SuccessionContext.jsx';
+import {auditDocumentation,documentaryBounds} from '../src/domain/time/documentaryDates.js';
+import {REINO_A_IDS} from '../src/cartography/kingdomMaps.js';
+import {TERRITORIOS_SUB} from '../src/domain/filters/territoryFilters.js';
 const by=Object.fromEntries(PERSONAS.map(p=>[p.id,p]));
 
 test('la ampliación adriática aporta contenido referenciado sin duplicar publicaciones',()=>{

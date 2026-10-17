@@ -2,7 +2,7 @@
 
 ## Fuente y relaciones
 
-Edita el array JSON compatible `PERSONAS` en `src/personas.jsx`. El módulo no
+Edita el array JSON compatible `PERSONAS` en `src/data/personas.js`. El módulo no
 importa dependencias ni añade propiedades al cargarlo. Antes de crear un ID,
 busca nombre, aliases y parentescos para evitar duplicados. Mantén los IDs y
 slugs de las fichas existentes aunque corrijas su nombre.

@@ -1,9 +1,9 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import {fileURLToPath} from 'node:url';
-import {atlasPoliticalMosaicAt, atlasMosaicPalette} from '../../src/data/atlasMosaic.js';
+import {atlasPoliticalMosaicAt, atlasMosaicPalette} from '../../src/cartography/atlasMosaic.js';
 import {auditReportPath} from '../lib/project-paths.mjs';
-import {territorialIdentity} from '../../src/data/territorialIdentity.js';
+import {territorialIdentity} from '../../src/cartography/territorialIdentity.js';
 
 // A region needs coverage for every cell in every year, including cells that
 // receive color elsewhere in time. The global never-colored list cannot prove it.

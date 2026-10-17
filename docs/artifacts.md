@@ -2,7 +2,7 @@
 
 | Clase | Ubicación | Tratamiento |
 | --- | --- | --- |
-| Fuentes históricas y editoriales | `src/personas.jsx`, `src/content/`, `src/evidence/`, `src/data/`, `src/Territorios.jsx` | Se editan y revisan con evidencia; los cambios históricos siguen el procedimiento V5 |
+| Fuentes históricas y editoriales | `src/data/personas.js`, `src/content/`, `src/evidence/`, `src/data/`, `src/Territorios.jsx` | Se editan y revisan con evidencia; los cambios históricos siguen el procedimiento V5 |
 | Fuentes cartográficas y selecciones | `scripts/cartography/`, anclas, overrides y revisiones en `prototypes/euv-locations/` | Contienen decisiones y citas; una herramienta geométrica no sustituye su revisión |
 | Cartografía e inventarios aceptados | JSON y SVG en `prototypes/euv-locations/`, `src/MapChart_Map.svg` | Versionados; el Atlas consume estas superficies. Regeneración en una copia y adopción explícita mediante PR |
 | Bases de validación | `tests/baselines/`, `audit-baseline.json` | Expectativas revisadas; solo se actualizan con una justificación concreta |
@@ -12,7 +12,7 @@
 | Entorno local | `.venv-cartography/`, `node_modules/`, `__pycache__/` | Regenerable e ignorado |
 | Catálogos y sitio compilado | `src/generated/`, metadatos y catálogos de `public/`, sitemaps, `public/map-audit/`, `dist/` | Derivados del build; no editar como fuente |
 | Evidencias visuales locales | `outputs/` | Revisión temporal; no se publica automáticamente |
-| Laboratorios y capturas documentales | HTML y PNG versionados en `prototypes/euv-locations/` | Material conservado: `territorial-corridors.html` se publica como `/es/mapa-completo`. Desde V5.28 los módulos del mosaico que también usa el Atlas están en `src/data/atlasMosaic.js` y `src/data/locationMosaic.js` |
+| Laboratorios y capturas documentales | HTML y PNG versionados en `prototypes/euv-locations/` | Material conservado: `territorial-corridors.html` se publica como `/es/mapa-completo`. Desde V5.28 los módulos del mosaico que también usa el Atlas están en `src/cartography/atlasMosaic.js` y `src/cartography/locationMosaic.js` |
 | Historial | `docs/V*.md`, `docs/archive/manifests/` | Describe cada entrega; se conservan cifras, rutas antiguas y checksums históricos |
 
 El [catálogo cartográfico](artifact-catalog.json) clasifica individualmente

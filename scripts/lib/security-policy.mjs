@@ -1,5 +1,5 @@
 import {createHash} from 'node:crypto';
-import {SCREEN_NOTICE_SCRIPT} from '../../src/public/screenNotice.js';
+import {SCREEN_NOTICE_SCRIPT} from '../../src/features/public/screenNotice.js';
 
 export const NOTICE_HASH = `sha256-${createHash('sha256').update(SCREEN_NOTICE_SCRIPT).digest('base64')}`;
 export const CONTENT_SECURITY_POLICY = [

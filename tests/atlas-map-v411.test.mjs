@@ -1,13 +1,13 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
-import {PERSONAS} from '../src/personas.jsx';
+import {PERSONAS} from '../src/data/personas.js';
 import {personClaims} from '../src/evidence/claims.js';
 import {ROMANIAN_AUTHORITY_REVIEWS} from '../src/evidence/romanianReviewData.js';
 import {NORTHERN_AUTHORITY_REVIEWS} from '../src/evidence/northernReviewData.js';
-import {buildPoliticalMapIndex, inspectMapRegion} from '../src/data/politicalMapIndex.js';
-import {mapAuthoritiesForPerson} from '../src/data/mapAuthorities.js';
-import {mapLocationsForGovernment, pilotLocationsFor} from '../src/data/locationMapPilot.js';
+import {buildPoliticalMapIndex, inspectMapRegion} from '../src/cartography/politicalMapIndex.js';
+import {mapAuthoritiesForPerson} from '../src/cartography/mapAuthorities.js';
+import {mapLocationsForGovernment, pilotLocationsFor} from '../src/cartography/locationMapPilot.js';
 const data=JSON.parse(fs.readFileSync(new URL('../prototypes/euv-locations/corridor-locations.json',import.meta.url)));
 const people=new Map(PERSONAS.map(p=>[p.id,p]));
 const indexes=new Map();

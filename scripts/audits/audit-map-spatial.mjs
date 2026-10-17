@@ -1,6 +1,6 @@
 import {auditReportPath} from '../lib/project-paths.mjs';
 import fs from 'node:fs/promises';
-import {atlasMosaicPalette, atlasPoliticalMosaicAt} from '../../src/data/atlasMosaic.js';
+import {atlasMosaicPalette, atlasPoliticalMosaicAt} from '../../src/cartography/atlasMosaic.js';
 import {auditMapSpatial} from './lib/mapSpatialAudit.js';
 
 const read = async name => JSON.parse(await fs.readFile(new URL(name,import.meta.url),'utf8'));

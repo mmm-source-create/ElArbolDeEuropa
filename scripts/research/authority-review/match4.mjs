@@ -1,8 +1,8 @@
 // Batched SPARQL: items whose Spanish/English label or alias equals the person's name (or an
 // alias), with birth/death years and relatives. Same acceptance rules as the other passes.
 import fs from 'node:fs';
-const {PERSONAS}=await import('../../../src/personas.jsx');
-const {conyugesDe}=await import('../../../src/data/personAccessors.js');
+const {PERSONAS}=await import('../../../src/data/personas.js');
+const {conyugesDe}=await import('../../../src/domain/genealogy/personAccessors.js');
 const UA={'User-Agent':'ElArbolDeEuropa-review/1.0 (https://treeofeurope.eu; genealogical atlas bibliographic review)','Accept':'application/sparql-results+json'};
 const sleep=ms=>new Promise(r=>setTimeout(r,ms));
 const qids=JSON.parse(fs.readFileSync('qids.json')),status=JSON.parse(fs.readFileSync('status.json'));

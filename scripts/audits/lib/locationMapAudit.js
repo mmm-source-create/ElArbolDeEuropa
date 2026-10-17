@@ -1,5 +1,5 @@
-import {buildPoliticalMapIndex} from '../../../src/data/politicalMapIndex.js';
-import {reviewedMapLayers, reviewedLayerLocations} from '../../../src/data/locationMapPilot.js';
+import {buildPoliticalMapIndex} from '../../../src/cartography/politicalMapIndex.js';
+import {reviewedMapLayers, reviewedLayerLocations} from '../../../src/cartography/locationMapPilot.js';
 
 // The exported SVG retains world paths outside its European viewBox. Coverage
 // is assessed for mapped locations; other paths are inventoried, not assigned.

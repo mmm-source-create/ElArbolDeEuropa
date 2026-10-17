@@ -1,6 +1,6 @@
 import {auditReportPath} from '../lib/project-paths.mjs';
 import fs from 'node:fs';
-import {reviewedLayerLocations, reviewedMapLayers} from '../../src/data/locationMapPilot.js';
+import {reviewedLayerLocations, reviewedMapLayers} from '../../src/cartography/locationMapPilot.js';
 
 const read = path => JSON.parse(fs.readFileSync(new URL(path, import.meta.url), 'utf8'));
 const data = read('../../prototypes/euv-locations/corridor-locations.json');

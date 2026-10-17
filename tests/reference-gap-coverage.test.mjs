@@ -1,10 +1,10 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
-import {PERSONAS} from '../src/personas.jsx';
-import {mapAuthoritiesForPerson} from '../src/data/mapAuthorities.js';
-import {atlasPoliticalMosaicAt} from '../src/data/atlasMosaic.js';
-import {territorialColor} from '../src/data/territorialIdentity.js';
+import {PERSONAS} from '../src/data/personas.js';
+import {mapAuthoritiesForPerson} from '../src/cartography/mapAuthorities.js';
+import {atlasPoliticalMosaicAt} from '../src/cartography/atlasMosaic.js';
+import {territorialColor} from '../src/cartography/territorialIdentity.js';
 import {mergeMapExpansions} from '../scripts/cartography/merge-map-expansions.mjs';
 
 const read = name => JSON.parse(fs.readFileSync(new URL(name, import.meta.url), 'utf8'));

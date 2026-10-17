@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {PERSONAS} from '../src/personas.jsx';
+import {PERSONAS} from '../src/data/personas.js';
 import {personClaims, EDITORIAL_HISTORY} from '../src/evidence/claims.js';
 
 const byId = new Map(PERSONAS.map(person => [person.id, person]));

@@ -1,4 +1,4 @@
-import {slugPublico} from '../utils/personLabels.js';
+import {slugPublico} from '../domain/people/personLabels.js';
 
 export const DINASTIA_ALIASES = Object.freeze({'Capeto-Évreux':'Évreux'});
 export const canonicalDynasty = name => DINASTIA_ALIASES[name] || name;

@@ -33,7 +33,7 @@ test('the minified browser entry hydrates a profile and activates its controls w
     // substitutes for routes, icons or shared application modules.
     await build({root, publicDir: false, logLevel: 'error', plugins: [generatedInputs()], build: {outDir: temp, manifest: true}});
     await build({root, configFile: false, publicDir: false, logLevel: 'error', plugins: [generatedInputs()],
-      build: {ssr: 'src/public/ssg-entry.jsx', outDir: path.join(temp, 'ssr'),
+      build: {ssr: 'src/features/public/ssg-entry.jsx', outDir: path.join(temp, 'ssr'),
         rolldownOptions: {output: {entryFileNames: 'entry.mjs'}}}});
     const {renderPage} = await import(pathToFileURL(path.join(temp, 'ssr/entry.mjs')));
     const rendered = renderPage(person);

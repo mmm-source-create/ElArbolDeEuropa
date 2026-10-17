@@ -3,20 +3,12 @@ import { PERSONA_CONTENT } from "../../src/content/personas/index.js";
 import { HISTORIA_TERRITORIOS } from "../../src/content/territorios/index.js";
 import { TERRITORIOS, gobiernoEfectivo } from "../../src/data/territorios.js";
 import { auditarTerritorios } from "./lib/auditTerritorios.js";
+import { PERSONAS } from "../../src/data/personas.js";
 import fs from "node:fs/promises";
-import path from "node:path";
 
-const ROOT = process.cwd();
-const PERSONAS_FILE = path.join(ROOT, "src", "personas.jsx");
 const REPORT_FILE = auditReportPath('audit-territorios-report.json');
 const FAIL_ON_ERRORS = process.argv.includes("--fail-on-errors");
 
-async function importData(filePath) {
-  const source = await fs.readFile(filePath, "utf8");
-  return import(`data:text/javascript;base64,${Buffer.from(source, "utf8").toString("base64")}`);
-}
-
-const { PERSONAS = [] } = await importData(PERSONAS_FILE);
 const BY_ID = Object.fromEntries(PERSONAS.filter((p) => p?.id).map((p) => [p.id, p]));
 const issues = auditarTerritorios(PERSONAS);
 for (const id of Object.keys(PERSONA_CONTENT)) if (!BY_ID[id]) issues.push({severity:"ERROR",code:"BIO_UNKNOWN_PERSON",subject:id,message:"Biografía sin persona correspondiente"});

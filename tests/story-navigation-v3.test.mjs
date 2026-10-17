@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { resolveStoryNavigation, writeStoryNavigation } from '../src/explorer/storyNavigation.js';
-import { resolverRuta } from '../src/routing.js';
+import { resolveStoryNavigation, writeStoryNavigation } from '../src/features/atlas/storyNavigation.js';
+import { resolverRuta } from '../src/app/routing.js';
 
 const story = { id: 'borgona', titulo: 'Borgoña, el reino que no fue', disponible: true,
   pasos: [{ anio: 1400, personas: ['A', 'B'] }, { anio: 1410, personas: ['C', 'A'] }, { anio: 1420, persona: 'D' }] };

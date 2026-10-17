@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { computeTreeLayout, routeFamilyConnectors, TREE_PAD_TOP, TREE_ROW_GAP } from '../src/explorer/treeLayout.js';
-import { computeParentGroups } from '../src/explorer/relationshipGraph.js';
+import { computeTreeLayout, routeFamilyConnectors, TREE_PAD_TOP, TREE_ROW_GAP } from '../src/domain/genealogy/treeLayout.js';
+import { computeParentGroups } from '../src/domain/genealogy/relationshipGraph.js';
 
 const people = [
   { id: 'P', nombre: 'Parent', conyuges: ['Q'] }, { id: 'Q', nombre: 'Partner', conyuges: ['P'] },

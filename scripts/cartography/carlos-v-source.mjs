@@ -2,8 +2,8 @@ import {mapDataFile} from '../lib/project-paths.mjs';
 // Derive the dated jurisdictions from the Atlas rather than copying a static
 // list of Carlos V's titles into the cartographic experiment.
 import fs from 'node:fs';
-import { PERSONAS } from '../../src/personas.jsx';
-import { idsDeReinoEnAño } from '../../src/Territorios.jsx';
+import { PERSONAS } from '../../src/data/personas.js';
+import { idsDeReinoEnAño } from '../../src/cartography/kingdomMaps.js';
 
 const person = PERSONAS.find(({ id }) => id === 'CARLOS5');
 if (!person) throw new Error('CARLOS5 is absent from the Atlas');

@@ -3,7 +3,7 @@ import {mapDataUrl} from '../lib/project-paths.mjs';
 // Run from the repository root:
 // node --import ./tests/jsx-loader.mjs scripts/cartography/audit-crosswalk.mjs
 import { readFileSync, writeFileSync } from 'node:fs';
-import { REINO_A_IDS, REINO_VERSIONES } from '../../src/Territorios.jsx';
+import { REINO_A_IDS, REINO_VERSIONES } from '../../src/cartography/kingdomMaps.js';
 
 const here = mapDataUrl;
 const svg = readFileSync(new URL('euv-locations-crop.svg', here), 'utf8');

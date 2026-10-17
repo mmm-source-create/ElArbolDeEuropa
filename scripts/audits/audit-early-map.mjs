@@ -1,9 +1,9 @@
 import fs from 'node:fs';
-import {PERSONAS} from '../../src/personas.jsx';
+import {PERSONAS} from '../../src/data/personas.js';
 import {earlyPeopleInventory} from './lib/earlyPeopleInventory.js';
-import {mapLocationsForGovernment} from '../../src/data/locationMapPilot.js';
-import {idsDeGobiernoEnAño} from '../../src/Territorios.jsx';
-import {gobiernosDe} from '../../src/data/personAccessors.js';
+import {mapLocationsForGovernment} from '../../src/cartography/locationMapPilot.js';
+import {idsDeGobiernoEnAño} from '../../src/cartography/kingdomMaps.js';
+import {gobiernosDe} from '../../src/domain/genealogy/personAccessors.js';
 import {gobiernoEfectivo} from '../../src/data/territorios.js';
 import {mapDataFile,projectRoot,auditReportPath} from '../lib/project-paths.mjs';
 const data=JSON.parse(fs.readFileSync(mapDataFile('corridor-locations.json')));

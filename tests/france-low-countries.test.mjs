@@ -1,13 +1,13 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
-import {PERSONAS} from '../src/personas.jsx';
+import {PERSONAS} from '../src/data/personas.js';
 import {TERRITORIOS} from '../src/data/territorios.js';
 import {personClaims} from '../src/evidence/claims.js';
-import {mapAuthoritiesForPerson} from '../src/data/mapAuthorities.js';
-import {buildPoliticalMapIndex, inspectMapRegion} from '../src/data/politicalMapIndex.js';
-import {territorialIdentity} from '../src/data/territorialIdentity.js';
-import {atlasPoliticalMosaicAt} from '../src/data/atlasMosaic.js';
+import {mapAuthoritiesForPerson} from '../src/cartography/mapAuthorities.js';
+import {buildPoliticalMapIndex, inspectMapRegion} from '../src/cartography/politicalMapIndex.js';
+import {territorialIdentity} from '../src/cartography/territorialIdentity.js';
+import {atlasPoliticalMosaicAt} from '../src/cartography/atlasMosaic.js';
 import {auditFranceLowCountriesContinuity, franceLowCountriesGeographicReview} from '../scripts/audits/audit-france-low-countries-continuity.mjs';
 import {applyRegionalReview} from '../scripts/cartography/apply-regional-review.mjs';
 

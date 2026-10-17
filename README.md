@@ -47,19 +47,19 @@ Las variables opcionales se documentan en `env.example`. `VITE_SITE_URL` debe se
 
 | Contenido o función | Ubicación |
 | --- | --- |
-| Personas, filiaciones y gobiernos | `src/personas.jsx` |
+| Personas, filiaciones y gobiernos | `src/data/personas.js` |
 | Evidencia por afirmación y revisiones editoriales | `src/evidence/` |
 | Minibiografías | `src/content/personas/` |
 | Territorios y filtros | `src/data/territorios.js`, `src/Territorios.jsx` |
-| Mapa EU V Locations, correspondencias y capas territoriales fechadas | `prototypes/euv-locations/`, `src/data/locationMapPilot.js`, `src/Territorios.jsx`, `docs/CARTOGRAFIA_IBERIA_ITALIA.md`, `docs/CARTOGRAFIA_BORGONA.md`, `docs/CARTOGRAFIA_IRLANDA.md` |
+| Mapa EU V Locations, correspondencias y capas territoriales fechadas | `prototypes/euv-locations/`, `src/cartography/locationMapPilot.js`, `src/Territorios.jsx`, `docs/CARTOGRAFIA_IBERIA_ITALIA.md`, `docs/CARTOGRAFIA_BORGONA.md`, `docs/CARTOGRAFIA_IRLANDA.md` |
 | Historias de casas y territorios | `src/content/dinastias/`, `src/content/territorios/` |
 | Sucesiones y títulos explicados | `src/content/sucesiones/`, `src/content/coronas/` |
 | Bibliografía compartida | `src/content/sources.js` |
-| Nombre y dominio | `src/siteConfig.js` |
-| Fichas públicas y rutas | `src/public/`, `src/routing.js` |
+| Nombre y dominio | `src/app/siteConfig.js` |
+| Fichas públicas y rutas | `src/public/`, `src/app/routing.js` |
 | Atlas, conexiones y exportación | `src/explorer/`, `src/connections/` |
 | Desafíos | `src/desafio/` |
-| Medición de rendimiento | `src/monitoring.js`, inicializada desde `src/main.jsx` |
+| Medición de rendimiento | `src/app/monitoring.js`, inicializada desde `src/app/main.jsx` |
 | Generación y auditoría del HTML | `scripts/generate/prerender-ssg.mjs`, `scripts/audits/audit-ssg.mjs` |
 | Seguridad y pruebas | `scripts/audits/audit-security.mjs`, `tests/` |
 | Herramientas e instalación cartográfica | `scripts/`, `.python-version`, `scripts/cartography/requirements.lock` |

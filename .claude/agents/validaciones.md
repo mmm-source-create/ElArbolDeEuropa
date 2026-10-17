@@ -23,10 +23,10 @@ Para una comprobación rápida de un solo agente, ejecuta solo los tests que te 
 ## Cómo asignas cada fallo
 | Ruta o auditoría que falla | Responsable |
 | --- | --- |
-| `src/personas.jsx`, `audit-personas`, `audit-territorios`, contrato de datos, sucesiones, coronas | datos-historicos |
+| `src/data/personas.js`, `audit-personas`, `audit-territorios`, contrato de datos, sucesiones, coronas | datos-historicos |
 | `src/evidence/`, fuentes, certezas | evidencias-fuentes |
 | `prototypes/euv-locations/`, `src/data/*Routes*`, mosaico, auditorías de continuidad o celdas, `audit-artifacts` | cartografia |
-| `src/content/`, `src/historiaData.jsx`, retratos, `generate-historias`, `generate-english` | contenido-editorial |
+| `src/content/`, `src/data/historias.js`, retratos, `generate-historias`, `generate-english` | contenido-editorial |
 | Componentes, CSS, SSG, hidratación, chunks | interfaz |
 | Código muerto, duplicados, estilo | calidad-codigo |
 | Regresión con diferencias intencionadas, versión, documentación de entrega | integracion-entrega |
