@@ -36,10 +36,11 @@ test('el selector ES | EN tiene la misma forma en el Atlas y en las páginas pú
   assert.deepEqual(english, ['site-language-option:ES', 'site-language-option active:EN']);
 });
 
-const homeLists = () => {
-  const home = JSON.parse(fs.readFileSync(new URL('../src/generated/home.json', import.meta.url), 'utf8'));
-  return {people: home.personasDestacadas, stories: home.historiasDestacadas};
-};
+// src/generated is produced by the build and is not in the repository.
+const homeLists = () => ({
+  people: [{id: 'FED2HOH', nombre: 'Federico II Hohenstaufen', slug: 'federico-ii-hohenstaufen', sobrenombre: '', aliases: [], documentacion: null, resumen: 'Emperador.', dinastia: 'Hohenstaufen', titulo: 'Emperador', nac: 1194, muer: 1250, nacAprox: false, muerAprox: false, reinos: ['Sacro Imperio']}],
+  stories: [{id: 'borgona', titulo: 'Borgoña: el reino que no fue', subtitulo: '', descripcion: 'Un recorrido.', slug: 'borgona-el-reino-que-no-fue', disponible: true, pasos: 11, minutos: 8}],
+});
 
 test('portada: entradas antes del carrusel, sin cinta de dinastías y con «Personas»', () => {
   // PublicSite.jsx needs the bundler (JSON imports), so the order is checked on its source.
