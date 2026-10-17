@@ -6,10 +6,16 @@ import {europeMosaicAt} from '../src/data/europePanorama.js';
 import {mapAuthoritiesForPerson} from '../src/data/mapAuthorities.js';
 import {personClaims} from '../src/evidence/claims.js';
 import {EASTERN_EUROPE_REVIEWS} from '../src/evidence/easternEuropeReviews.js';
+import {EASTERN_EUROPE_COLORS} from '../src/data/easternEuropeColors.js';
 const data=JSON.parse(fs.readFileSync(new URL('../prototypes/euv-locations/corridor-locations.json',import.meta.url)));
 const by=new Map(PERSONAS.map(p=>[p.id,p]));
 const owner=(year,id)=>new Set((europeMosaicAt(data,year,PERSONAS).byLocation.get(id)||[]).map(l=>l.entityId));
 const ids=(id,year,options)=>new Set(mapAuthoritiesForPerson(by.get(id),year,data,options).flatMap(e=>e.ids));
+
+test('distinct new eastern identities have distinct swatches',()=>{
+  const colors=Object.values(EASTERN_EUROPE_COLORS);
+  assert.equal(new Set(colors).size,colors.length);
+});
 
 test('Russian consolidation retains neighbouring principalities until their own annexation',()=>{
   for(const [year,id,identity] of [
