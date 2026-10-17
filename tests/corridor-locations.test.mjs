@@ -195,21 +195,21 @@ test('northern and eastern jurisdictions change at documented dates without swal
   assert(ids('Reino de Suecia', 1645).has('Halmstad'));
   assert(ids('Reino de Suecia', 1645).has('Visby'));
   assert(!ids('Reino de Suecia', 1644).has('Halmstad'));
-  assert(ids('Ösel bajo Dinamarca', 1644).has('Kuressaare'));
-  assert(ids('Ösel bajo Suecia', 1645).has('Kuressaare'));
+  assert(owns(1644,'Kuressaare','Dinamarca'));
+  assert(owns(1645,'Kuressaare','Suecia'));
   assert(!ids('Mecklemburgo', 1648).has('Wismar'));
   assert(ids('Señorío sueco de Wismar', 1648).has('Wismar'));
 
-  assert(ids('República de Pskov', 1509).has('Pskov'));
-  assert(!ids('República de Pskov', 1510).size);
-  assert(ids('Moscovia y Zarato de Rusia', 1510).has('Pskov'));
-  assert(ids('Principado de Tver', 1484).has('Tver'));
-  assert(!ids('Principado de Tver', 1485).size);
-  assert(ids('Moscovia y Zarato de Rusia', 1485).has('Tver'));
-  assert(ids('Principado de Riazán', 1520).has('Ryazan'));
-  assert(ids('Moscovia y Zarato de Rusia', 1521).has('Ryazan'));
-  assert(ids('Kanato de Kazán', 1551).has('Kazan'));
-  assert(ids('Moscovia y Zarato de Rusia', 1552).has('Kazan'));
+  assert(owns(1509,'Pskov','República de Pskov'));
+  assert(!owns(1510,'Pskov','República de Pskov'));
+  assert(owns(1510,'Pskov','Rusia'));
+  assert(owns(1484,'Tver','Principado de Tver'));
+  assert(!owns(1485,'Tver','Principado de Tver'));
+  assert(owns(1485,'Tver','Rusia'));
+  assert(owns(1520,'Ryazan','Principado de Riazán'));
+  assert(owns(1521,'Ryazan','Rusia'));
+  assert(owns(1551,'Kazan','Kanato de Kazán'));
+  assert(owns(1552,'Kazan','Rusia'));
   assert(pilotLocationsFor(data, 'Noruega', 1468).includes('Torshavn'));
 });
 

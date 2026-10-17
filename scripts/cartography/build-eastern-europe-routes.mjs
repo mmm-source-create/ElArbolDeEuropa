@@ -59,13 +59,27 @@ for (const [personId,from,through] of [['YAROSLAV2VLAD',1238,1246],['ALEXNEVSKY'
   review.authorityScopes.push({personId,territory:'Rusia',from,through,ids:vl,sourceKeys:['rus'],note:'Gran principado de Vladímir-Súzdal y jurisdicciones del noreste; el título no transmite las repúblicas de Nóvgorod o Pskov ni las futuras conquistas rusas.'});
 const base=read('corridor-locations.json');
 const lit=base.territories.find(t=>t.name==='Gran Ducado de Lituania');
-const lit1400=lit.versions.findLast(v=>v.from<=1400).ids;
+// The legacy grand-duchy layer excludes separately reviewed provinces such
+// as Polotsk and Smolensk. Include those dated jurisdictions before splitting
+// the civil-war mandates, then let runtime routes enforce actual ownership.
+const polotsk=base.additionalTerritories.find(t=>t.name==='Lituania · voivodato de Polotsk');
+const lit1400=[...new Set([
+  ...lit.versions.findLast(v=>v.from<=1400).ids,
+  ...(polotsk?.versions.findLast(v=>v.from<=1432)?.ids || []),
+  ...[...assignments,...read('poland-lithuania-frontier-review.json').assignments]
+    .filter(p=>p.from<=1432 && p.through>=1432 && p.governmentTerritories.includes('Lituania'))
+    .flatMap(p=>p.ids),
+])];
 const coords=new Map(read('location-inventory.json').cells.map(c=>[c.id,c.centroid]));
 const addScope=(personId,territory,from,through,ids,sourceKeys,note,disputedIds)=>review.authorityScopes.push({personId,territory,from,through,ids,sourceKeys,note,...(disputedIds?{disputedIds}:{} )});
-const west=lit1400.filter(id=>coords.get(id)?.[0]<653);
-const east=lit1400.filter(id=>coords.get(id)?.[0]>=653);
-addScope('SVITRIGAILALIT','Lituania',1433,1438,east,['svitrigaila'],'Ámbito oriental del gobierno rival durante la guerra civil; pérdida gradual de provincias entre 1435 y 1438. No soberanía efectiva sobre Vilna.',east);
-addScope('ZYGIMANTASLIT','Lituania',1432,1437,west,['zygimantas'],'Gobierno occidental inicial, con Vilna y Trakai; las provincias orientales en manos de Švitrigaila se reservan por separado.');
+const isEast=id=>coords.get(id)?.[0]>=653 || coords.get(id)?.[1]>=125;
+const east=lit1400.filter(isEast),west=lit1400.filter(id=>!isEast(id));
+const south=lit1400.filter(id=>coords.get(id)?.[1]>=125);
+const recovered=lit1400.filter(id=>!south.includes(id));
+addScope('SVITRIGAILALIT','Lituania',1433,1436,east,['svitrigaila'],'Gobierno rival en las provincias rutenas orientales y meridionales, incluida Volinia. Las pérdidas posteriores a Pabaiskas se resumen por cortes anuales regionales.',east);
+addScope('SVITRIGAILALIT','Lituania',1437,1438,south,['svitrigaila'],'Tras perder Pólotsk, Vítebsk y Smolensk, conserva Kyiv y Volinia hasta la expulsión de finales de 1438. No se prolonga el dominio rival sobre todas las provincias orientales.',south);
+addScope('ZYGIMANTASLIT','Lituania',1432,1436,west,['zygimantas','svitrigaila'],'Gobierno occidental inicial, con Vilna y Trakai; las provincias rutenas de Švitrigaila se reservan por separado.');
+addScope('ZYGIMANTASLIT','Lituania',1437,1438,recovered,['zygimantas','svitrigaila'],'Recuperación de las provincias rutenas septentrionales para 1437; Kyiv y Volinia quedan fuera hasta el final de 1438.');
 for (const [personId,territory,from,through,key] of [
   ['KESTUTISLIT','Principado de Trakai',1337,1381,'trakai'],
   ['SVARNASLIT','Lituania',1267,1269,'svarnas'],

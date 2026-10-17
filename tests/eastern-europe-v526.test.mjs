@@ -52,6 +52,10 @@ test('medieval personal maps do not borrow future Russia or the rival Lithuanian
   assert(ids('KESTUTISLIT',1360).has('Trakai'));
   assert(!ids('KESTUTISLIT',1360).has('Vilnius'));
   assert(!ids('SVITRIGAILALIT',1434,{includeClaims:true}).has('Vilnius'));
+  assert(ids('SVITRIGAILALIT',1434,{includeClaims:true}).has('Lutsk'));
+  assert(!ids('ZYGIMANTASLIT',1434).has('Lutsk'));
+  assert(!ids('SVITRIGAILALIT',1437,{includeClaims:true}).has('Polotsk'));
+  assert(ids('ZYGIMANTASLIT',1437).has('Polotsk'));
   assert(ids('ZYGIMANTASLIT',1434).has('Vilnius'));
   const sk=mapAuthoritiesForPerson(by.get('SKIRGAILALIT'),1390,data);
   assert(sk.some(e=>e.kind==='delegated'&&e.ids.includes('Vilnius')));
@@ -63,4 +67,16 @@ test('the southern steppe and indigenous northern lands retain authority without
     [1774,'Vosporo','Rusia'],[1700,'Gomel','Lituania'],
     [1700,'Ulla','Lituania'],[1795,'Gomel','Rusia'],
   ])assert(owner(year,id).has(identity),`${year}/${id}/${identity}`);
+});
+
+test('a sultan keeps the Crimean ports as direct holdings and the khanate as a dated dependency',()=>{
+  const p=by.get('SULEIMAN1OSM');
+  const direct=mapAuthoritiesForPerson(p,1530,data);
+  assert(direct.some(e=>e.ids.includes('Kaffa')));
+  assert(!direct.some(e=>e.ids.includes('Qirq_Yer')));
+  const extended=mapAuthoritiesForPerson(p,1530,data,{includeDependencies:true});
+  const crimea=extended.find(e=>e.kind==='tributary'&&e.territory==='Kanato de Crimea');
+  assert(crimea?.ids.includes('Qirq_Yer'));
+  assert(!crimea.ids.includes('Kaffa'));
+  assert(crimea.mapSources.every(s=>s.locator));
 });
