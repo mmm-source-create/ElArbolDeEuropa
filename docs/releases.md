@@ -153,3 +153,5 @@ Release se preparan en borrador sobre la entrega validada.
 [V5.26](V5.26.md) amplía Polonia-Lituania, Rusia y el Báltico entre 1200 y 1800, con 1.801 celdas auditadas, 498 fases, dependencias diferenciadas y 14 protagonistas lituanos con fuentes y ámbitos personales propios.
 
 [V5.27](V5.27.md) resuelve las 147 fechas que discrepaban de la ficha GND: 63 confirmadas, 46 corregidas y 38 marcadas como discutidas, cada una con su fuente.
+
+[V5.28](V5.28.md) revisa el código con el grafo de Graphify: retira el laboratorio de renderizado, exports, estado y dependencias sin uso, saca el mosaico del mapa de `prototypes/`, propone una estructura por capas con plan de migración y define ocho subagentes en `.claude/agents/`.
