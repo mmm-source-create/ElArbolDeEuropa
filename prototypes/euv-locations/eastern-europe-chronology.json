@@ -1,0 +1,2335 @@
+{
+  "schema": 1,
+  "reviewedAt": "2026-10-17",
+  "sources": {
+    "atlas": {
+      "title": "William R. Shepherd · The Growth of Russia in Europe, 1300–1796",
+      "url": "https://commons.wikimedia.org/wiki/File:Shepherd-c-138-139.jpg",
+      "locator": "Historical Atlas (1911), pp.138–139, escala 1:15.000.000: comparación visual del núcleo moscovita, adquisiciones por reinados, Volga, norte, Urales y Báltico. Un contorno del atlas no prueba el control de cada comarca ni borra autonomías locales."
+    },
+    "rus": {
+      "title": "Biblioteca Nacional de Lituania · VLE, Rusijos istorija",
+      "url": "https://www.vle.lt/straipsnis/rusijos-istorija/",
+      "locator": "Secciones de fragmentación de la Rus, conquista mongola, Moscovia y expansión del zarato. Los principados tributarios conservaron sus gobiernos; se distinguen de las tierras de administración directa de la Horda."
+    },
+    "ivan3": {
+      "title": "VLE · Ivanas III",
+      "url": "https://www.vle.lt/straipsnis/ivanas-iii/",
+      "locator": "Yaroslavl 1463, Rostov 1474, Nóvgorod 1478, Tver 1485; fin del tributo 1480. La influencia sobre Pskov y Riazán no equivale a anexión."
+    },
+    "novgorod": {
+      "title": "VLE · Naugardo respublika",
+      "url": "https://www.vle.lt/straipsnis/naugardo-respublika/",
+      "locator": "República desde 1136, extensión septentrional y tributo a la Horda; Pskov y anexión por Iván III en 1478. El príncipe invitado ejercía funciones militares y judiciales, no soberanía patrimonial absoluta."
+    },
+    "pskov": {
+      "title": "VLE · Pskovo istorija",
+      "url": "https://www.vle.lt/straipsnis/pskovo-istorija/",
+      "locator": "Dependencia de Nóvgorod, autonomía desde el siglo XIII y anexión moscovita en 1510. Daumantas fue príncipe entre 1266 y 1299."
+    },
+    "tver": {
+      "title": "VLE · Tverės kunigaikštystė",
+      "url": "https://www.vle.lt/straipsnis/tveres-kunigaikstyste/",
+      "locator": "Principado surgido de Vladímir, rivalidad con Moscú y superioridad mongola; la independencia termina en 1485."
+    },
+    "beloozero": {
+      "title": "University of Cambridge · Tamga: a fiscal form in post-Mongol Moscow",
+      "url": "https://api.repository.cam.ac.uk/server/api/core/bitstreams/bd22b5c1-ef78-48ff-bfd4-124639c072e0/content",
+      "locator": "Discusión de cartas de exención de Beloózero y Vólogda, derechos de príncipes locales y anexión de 1486. La subordinación anterior no extingue todos los derechos provinciales."
+    },
+    "ryazan": {
+      "title": "Universidad Vytautas Magnus · Baltarusija–Lietuva: chrestomatija",
+      "url": "https://hmf.vdu.lt/wp-content/uploads/2023/10/2023-BALTARUSIJA-LIETUVA-INTERNRT_.pdf",
+      "locator": "Unificación de los principados: Pskov 1510 y Riazán 1521. No se adelanta esta última incorporación al reinado de Iván III."
+    },
+    "kazan": {
+      "title": "VLE · Kazanės chanatas",
+      "url": "https://www.vle.lt/straipsnis/kazanes-chanatas/",
+      "locator": "Kanato 1438–1552 en el Volga medio, con maríes, chuvasios y udmurtos; subordinación intermitente a Moscú anterior a la conquista no equivale a anexión."
+    },
+    "mordvin": {
+      "title": "VLE · Mordovijos istorija",
+      "url": "https://www.vle.lt/straipsnis/mordovijos-istorija/",
+      "locator": "Tierras mordvinas, superioridad de la Horda, vinculación con Kazán y conquista rusa de 1552."
+    },
+    "ivan4": {
+      "title": "VLE · Ivanas IV Rūstusis",
+      "url": "https://www.vle.lt/straipsnis/ivanas-iv-rustusis/",
+      "locator": "Conquistas de Kazán en 1552 y Astracán en 1556; relaciones de dependencia con Siberia y Nogái separadas del control directo."
+    },
+    "karelia": {
+      "title": "VLE · Karelijos istorija",
+      "url": "https://www.vle.lt/straipsnis/karelijos-istorija/",
+      "locator": "Carelia vinculada con Nóvgorod; Viborg desde 1293, partición de 1323, transferencia de 1617 y Nystad 1721. La ocupación de 1710 se distingue del reconocimiento por tratado."
+    },
+    "livonia": {
+      "title": "Enciclopedia Nacional de Letonia · Livonija",
+      "url": "https://enciklopedija.lv/skirklis/150531-Livonija",
+      "locator": "Estados territoriales de Livonia: Orden, arzobispado y obispados; no se identifica todo el país con el dominio directo del maestre."
+    },
+    "order": {
+      "title": "Enciclopedia Nacional de Letonia · Vācu ordenis Livonijā",
+      "url": "https://enciklopedija.lv/skirklis/178554-V%C4%81cu-ordenis-Livonij%C4%81",
+      "locator": "Rama livonia desde 1237, sucesora de los Hermanos de la Espada; conquistas y autonomía institucional."
+    },
+    "zemgale": {
+      "title": "Enciclopedia Nacional de Letonia · Zemgale",
+      "url": "https://enciklopedija.lv/skirklis/201592-Zemgale",
+      "locator": "División medieval de Semigalia; conquista gradual y ducado de Curlandia y Semigalia desde 1561/1562."
+    },
+    "courland": {
+      "title": "Enciclopedia Nacional de Letonia · Kurzemes un Zemgales hercogiste",
+      "url": "https://enciklopedija.lv/skirklis/20830-Kurzemes-un-",
+      "locator": "Ducado 1561/1562–1795, feudo con instituciones propias. La dependencia de Polonia-Lituania no lo convierte en provincia de administración directa."
+    },
+    "latvia": {
+      "title": "VLE · Latvijos istorija",
+      "url": "https://www.vle.lt/straipsnis/latvijos-istorija/",
+      "locator": "Obispados y Orden; secularización de Livonia, Riga, Latgalia, etapa sueca y conquista rusa."
+    },
+    "livwar": {
+      "title": "VLE · Livonijos karas",
+      "url": "https://www.vle.lt/straipsnis/livonijos-karas/",
+      "locator": "Narva y Tartu 1558, Viljandi y Alūksne 1560, Estonia sueca 1561, ocupaciones de 1572–1577, recuperación de 1578–1582 y tregua de 1583. No se colorea toda Livonia por una sola conquista."
+    },
+    "swedish": {
+      "title": "Enciclopedia Nacional de Letonia · zviedru laiks Vidzemē un Inflantija",
+      "url": "https://enciklopedija.lv/skirklis/22229-zviedru-laiks-Vidzem%C4%93-un-Inflantija",
+      "locator": "Riga conquistada en 1621, Livonia sueca consolidada en 1629 y capitulaciones de 1710; reconocimiento ruso en Nystad 1721. Latgalia no sigue a Riga."
+    },
+    "piltene": {
+      "title": "VLE · Piltenės sritis",
+      "url": "https://www.vle.lt/straipsnis/piltenes-sritis/",
+      "locator": "Venta a Dinamarca en 1560, compra por la Mancomunidad en 1585, autonomía y unión personal con Curlandia 1661–1717; incorporación rusa en 1795."
+    },
+    "pilteneCity": {
+      "title": "Enciclopedia Nacional de Letonia · Piltene",
+      "url": "https://enciklopedija.lv/skirklis/98902-Piltene",
+      "locator": "Obispado de Curlandia en 1234 y tierras episcopales divididas en 1253; la celda comarcal no acredita cada posesión del obispo."
+    },
+    "zaporizhia": {
+      "title": "Canadian Institute of Ukrainian Studies · Zaporizhia, The",
+      "url": "https://www.encyclopediaofukraine.com/display.asp?linkpath=pages%5CZ%5CA%5CZaporizhiaThe.htm",
+      "locator": "Ámbito de las Libertades del Ejército Zaporogo, fronteras por Boh, Tiasmyn, Orel y Donets; Sich desde mediados del XVI y supresión en 1775."
+    },
+    "sloboda": {
+      "title": "Canadian Institute of Ukrainian Studies · Land / Slobidska Ukraine",
+      "url": "https://www.encyclopediaofukraine.com/Land.asp",
+      "locator": "Regimientos de Sumy, Okhtyrka, Kharkiv, Izium y Ostrohozke; colonización desde los siglos XVI–XVII, separada del Hetmanato y del Kanato de Crimea."
+    },
+    "hetman": {
+      "title": "Canadian Institute of Ukrainian Studies · Cossack-Polish War",
+      "url": "https://www.encyclopediaofukraine.com/display.asp?linkpath=pages%5CC%5CO%5CCossack6PolishWar.htm",
+      "locator": "Rebelión de 1648, pactos y protectorado de 1654 con autonomía; no anexión uniforme de toda Ucrania."
+    },
+    "kalmyk": {
+      "title": "VLE · Kalmukijos istorija",
+      "url": "https://www.vle.lt/straipsnis/kalmukijos-istorija/",
+      "locator": "Estepas cumanas, Horda y Astracán; migración oirata en el XVII, kanato bajo protección rusa y supresión en 1771."
+    },
+    "samogitia": {
+      "title": "VLE · žemaičių sukilimai",
+      "url": "https://www.vle.lt/straipsnis/zemaiciu-sukilimai/",
+      "locator": "Cesión de 1398, establecimiento efectivo en 1400, rebelión de 1401, nueva cesión 1404 y restauración lituana de 1409; el litoral con Memel no siguió a Samogitia."
+    },
+    "vytautas": {
+      "title": "VLE · Vytautas Didysis",
+      "url": "https://www.vle.lt/straipsnis/vytautas-didysis/",
+      "locator": "Astrava 1392, gran ducado reconocido en 1401 y superioridad de Jogaila; anexión de Smolensk 1395, pérdida de 1401 y recuperación 1404; política póntica y límites del control territorial."
+    },
+    "svitrigaila": {
+      "title": "VLE · Švitrigaila",
+      "url": "https://www.vle.lt/straipsnis/svitrigaila/",
+      "locator": "Gran duque 1430–1432 y control rival de las provincias orientales durante la guerra civil; pérdidas 1435–1438 y Volinia hasta 1452."
+    },
+    "zygimantas": {
+      "title": "VLE · Žygimantas Kęstutaitis",
+      "url": "https://www.vle.lt/straipsnis/zygimantas-kestutaitis/",
+      "locator": "Gran duque 1432–1440, inicialmente Vilna y Trakai; guerra con Švitrigaila y reconocimiento de la superioridad de Jogaila."
+    },
+    "lithRus": {
+      "title": "VLE · Lietuvos Didžiosios Kunigaikštystės–Maskvos karas",
+      "url": "https://www.vle.lt/straipsnis/lietuvos-didziosios-kunigaikstystes-maskvos-karas/",
+      "locator": "Principados del alto Oká y expansión lituana; los ataques y alianzas no son anexiones de Moscovia ni de Nóvgorod."
+    },
+    "andrusovo": {
+      "title": "VLE · Rusijos santykiai su Lietuva",
+      "url": "https://www.vle.lt/straipsnis/rusijos-santykiai-su-lietuva/",
+      "locator": "Andrúsovo 1667: Smolensk, Severia y Kyiv; Polotsk y Vitebsk permanecen en la Mancomunidad."
+    },
+    "estonia": {
+      "title": "VLE · Livonija",
+      "url": "https://www.vle.lt/straipsnis/livonija-1/",
+      "locator": "Orden de Livonia, Estonia danesa y estados episcopales; la subordinación eclesiástica a Riga no implica dominio temporal del arzobispo."
+    },
+    "kefe": {
+      "title": "Yücel Öztürk · TDV, Kefe",
+      "url": "https://islamansiklopedisi.org.tr/kefe",
+      "locator": "Génova hacia 1266 bajo autorización de la Horda; conquista otomana de 1475 y franja costera administrada directamente, distinta del kanato tributario."
+    },
+    "parnu": {
+      "title": "Eesti Entsüklopeedia · Pärnu",
+      "url": "https://www.entsyklopeedia.ee/artikkel/p%C3%A4rnu3",
+      "locator": "Dominio sueco 1562–1565, ruso 1575–1582, polaco posterior, ocupaciones de 1600–1609 y establecimiento sueco en 1617."
+    },
+    "viljandi": {
+      "title": "Museo de Viljandi · Historia de la ciudad",
+      "url": "https://muuseum.viljandimaa.ee/vana/indexbf72.html?id=52&op=body",
+      "locator": "Conquista rusa en 1560, dominio polaco en 1582 y sueco desde 1620 hasta 1710."
+    },
+    "poltsamaa": {
+      "title": "Museo de Viljandi · Põltsamaa kihelkond",
+      "url": "https://muuseum.viljandimaa.ee/vana/aastaraamat/2006/pihlak.pdf",
+      "locator": "Põltsamaa fue capital del reino nominal de Magnus y permaneció en la Mancomunidad entre 1582 y 1621; no pertenece al obispado de Dorpat."
+    },
+    "azov": {
+      "title": "William R. Shepherd · The Growth of Russia, detalle de Azov",
+      "url": "https://commons.wikimedia.org/wiki/File:Shepherd-c-138-139.jpg",
+      "locator": "Frontera de Azov, reinados de Pedro I y Ana y expansión del XVIII. Las fases 1696–1711 y 1739 se separan de la incorporación general de los cosacos del Don."
+    },
+    "perm": {
+      "title": "P. A. Korchagin · Archivo Estatal de Historia Sociopolítica de Perm",
+      "url": "https://www.permgaspi.ru/deyatelnost/izdaniya/istoriya-mestnogo-upravleniya-i-samoupravleniya-v-permskom-krae/book-istoriya-mestnogo-upravleniya-i-samoupravleniya-v-permskom-krae/upravlenie-permskimi-zemlyami-do-vhozhdeniya-v-sostav-russkogo-gosudarstva-v-xv-veke-p-a-korchagin.html",
+      "locator": "Campaña de 1472 y persistencia de príncipes locales; la conquista no convierte toda la región moderna de Perm en una provincia uniforme."
+    },
+    "finland": {
+      "title": "VLE · Suomijos istorija",
+      "url": "https://www.vle.lt/straipsnis/suomijos-istorija/",
+      "locator": "Fronteras de Nöteborg 1323, Stolbovo 1617, Nystad 1721 y Åbo 1743; Finlandia occidental continúa sueca hasta 1809."
+    },
+    "crimea": {
+      "title": "Halil İnalcık · TDV, Kırım",
+      "url": "https://islamansiklopedisi.org.tr/kirim",
+      "locator": "Kanato giray, superioridad otomana, independencia de 1774 y anexión rusa de 1783. Las colonias y el eyalato costero no se confunden con el interior del kanato."
+    },
+    "don": {
+      "title": "VLE · Dono kazokai",
+      "url": "https://www.vle.lt/straipsnis/dono-kazokai/",
+      "locator": "Ejército del Don, relación con los zares y limitación del autogobierno tras Bulavin. No equivale al dominio otomano de Azov."
+    },
+    "steppe": {
+      "title": "Canadian Institute of Ukrainian Studies · Southern Ukraine",
+      "url": "https://www.encyclopediaofukraine.com/display.asp?linkpath=pages%5CS%5CO%5CSouthernUkraine.htm",
+      "locator": "Estepas del sur: fronteras del Kanato de Crimea, Libertades zaporogas y adquisiciones rusas de 1774, 1783 y 1792."
+    },
+    "perm1505": {
+      "title": "Perm University Herald · Присоединение Перми к Русскому государству",
+      "url": "https://press.psu.ru/index.php/history/article/view/10259",
+      "locator": "Distinción historiográfica entre campaña de 1472 y anexión administrativa de 1505, cuando desaparece la dinastía local."
+    },
+    "stroganov": {
+      "title": "Archivo de Komi-Perm · Actas, Kudymkar 2019",
+      "url": "https://www.komi-permarchiv.ru/uploads/sbornik.pdf",
+      "locator": "Carta de Iván IV a Grigori Stroganov, 4 abril 1558: tierras del Kama por debajo de Gran Perm, hasta Chusovaya, expresamente fuera de la Gran Perm medieval."
+    },
+    "nenets": {
+      "title": "Dartmouth College · Encyclopaedia Arctica, Yamalo-Nenets",
+      "url": "https://collections.dartmouth.edu/arctica-beta/html/EA10-22.html",
+      "locator": "Puestos y redes del bajo Obi; Obdorsk a fines del XVI y comunidades indígenas. No demuestra colonización integral de Yamal."
+    },
+    "murom": {
+      "title": "Lex · Murom",
+      "url": "https://lex.dk/Murom",
+      "locator": "Principado separado, incorporado a Moscú en 1392; no forma parte de Nizhni Nóvgorod desde 1341."
+    },
+    "matrega": {
+      "title": "S. G. Bocharov · Ancient Economic and Social Concepts in the Genoese Gasaria Region",
+      "url": "https://www.um.edu.mt/library/oar/bitstream/123456789/34589/1/Ancient_Economic_and_Social_Concepts_in_the_Genoese_Gasaria_Region_2017.pdf",
+      "locator": "p. 201: señorío de Simone Ghisolfi en Matrega desde 1419; enclave vinculado a Caffa, distinto de toda la península."
+    },
+    "trakai": {
+      "title": "VLE · Trakų kunigaikštystė",
+      "url": "https://www.vle.lt/straipsnis/traku-kunigaikstyste/",
+      "locator": "Trakai, Grodno, tierras yotvingias y Podlasia hasta Brest; influencia sobre Samogitia. Kęstutis hasta 1382; Skirgaila 1382–1392; reunión en el dominio del gran duque en 1392."
+    },
+    "svarnas": {
+      "title": "VLE · Švarnas",
+      "url": "https://www.vle.lt/straipsnis/svarnas/",
+      "locator": "1267–1269: título de gran duque; control efectivo probable del sur lituano y de la Rutenia Negra, sin fijar una frontera municipal."
+    }
+  },
+  "regions": {
+    "moscow": {
+      "label": "Moscú y su núcleo patrimonial",
+      "sourceKeys": [
+        "atlas",
+        "rus",
+        "ivan3"
+      ],
+      "note": "El gobierno efectivo documentado de Daniel se representa desde 1283; antes pertenece al ámbito de Vladímir. No se colorea todo el noreste como Moscovia.",
+      "phases": [
+        {
+          "from": 1200,
+          "identity": "Principado de Vladímir-Súzdal"
+        },
+        {
+          "from": 1283,
+          "identity": "Rusia"
+        }
+      ]
+    },
+    "pereyaslavl": {
+      "label": "Pereyáslavl-Zalesski",
+      "sourceKeys": [
+        "atlas",
+        "rus",
+        "ivan3"
+      ],
+      "note": "",
+      "phases": [
+        {
+          "from": 1200,
+          "identity": "Principado de Pereyáslavl-Zalesski"
+        },
+        {
+          "from": 1302,
+          "identity": "Rusia"
+        }
+      ]
+    },
+    "dmitrov": {
+      "label": "Dmitrov",
+      "sourceKeys": [
+        "atlas",
+        "rus",
+        "ivan3"
+      ],
+      "note": "",
+      "phases": [
+        {
+          "from": 1200,
+          "identity": "Principado de Vladímir-Súzdal"
+        },
+        {
+          "from": 1212,
+          "identity": "Principado de Dmitrov"
+        },
+        {
+          "from": 1364,
+          "identity": "Rusia"
+        }
+      ]
+    },
+    "mozhaysk": {
+      "label": "Mozhaisk y Vereya",
+      "sourceKeys": [
+        "atlas",
+        "rus",
+        "ivan3"
+      ],
+      "note": "",
+      "phases": [
+        {
+          "from": 1200,
+          "identity": "Principado de Smolensk"
+        },
+        {
+          "from": 1303,
+          "identity": "Rusia"
+        }
+      ]
+    },
+    "kolomna": {
+      "label": "Kolomna y la frontera del Oká",
+      "sourceKeys": [
+        "atlas",
+        "rus",
+        "ivan3"
+      ],
+      "note": "",
+      "phases": [
+        {
+          "from": 1200,
+          "identity": "Principado de Riazán"
+        },
+        {
+          "from": 1301,
+          "identity": "Rusia"
+        }
+      ]
+    },
+    "oka_moscow": {
+      "label": "Kaluga, Tarusa y el Oká septentrional",
+      "sourceKeys": [
+        "atlas",
+        "rus",
+        "ivan3"
+      ],
+      "note": "Contornos de señoríos fronterizos, no una monarquía unitaria del alto Oká. La integración fue gradual y algunos feudos conservaron autonomía.",
+      "phases": [
+        {
+          "from": 1200,
+          "identity": "Principados del alto Oká"
+        },
+        {
+          "from": 1392,
+          "identity": "Rusia"
+        }
+      ]
+    },
+    "rzev_volok": {
+      "label": "Rzhev y Volokolamsk",
+      "sourceKeys": [
+        "atlas",
+        "rus",
+        "ivan3"
+      ],
+      "note": "Celda regional de frontera entre Nóvgorod, Smolensk, Tver y Moscú: 1456 es un corte conservador para la integración del conjunto, no una fecha municipal común.",
+      "phases": [
+        {
+          "from": 1200,
+          "identity": "Principados de la cuenca alta del Volga"
+        },
+        {
+          "from": 1456,
+          "identity": "Rusia"
+        }
+      ]
+    },
+    "tver": {
+      "label": "Tver, Kashin y su ámbito",
+      "sourceKeys": [
+        "atlas",
+        "tver",
+        "ivan3"
+      ],
+      "note": "",
+      "phases": [
+        {
+          "from": 1200,
+          "identity": "Principado de Vladímir-Súzdal"
+        },
+        {
+          "from": 1247,
+          "identity": "Principado de Tver"
+        },
+        {
+          "from": 1485,
+          "identity": "Rusia"
+        }
+      ]
+    },
+    "ryazan": {
+      "label": "Riazán y cuenca media del Oká",
+      "sourceKeys": [
+        "atlas",
+        "ryazan"
+      ],
+      "note": "",
+      "phases": [
+        {
+          "from": 1200,
+          "identity": "Principado de Riazán"
+        },
+        {
+          "from": 1521,
+          "identity": "Rusia"
+        }
+      ]
+    },
+    "vladimir_suzdal": {
+      "label": "Vladímir y Súzdal",
+      "sourceKeys": [
+        "atlas",
+        "rus",
+        "ivan3"
+      ],
+      "note": "",
+      "phases": [
+        {
+          "from": 1200,
+          "identity": "Principado de Vladímir-Súzdal"
+        },
+        {
+          "from": 1389,
+          "identity": "Rusia"
+        }
+      ]
+    },
+    "nizhny_murom": {
+      "label": "Nizhni Nóvgorod, Súzdal oriental y Murom",
+      "sourceKeys": [
+        "atlas",
+        "rus",
+        "ivan3"
+      ],
+      "note": "",
+      "phases": [
+        {
+          "from": 1200,
+          "identity": "Principado de Vladímir-Súzdal"
+        },
+        {
+          "from": 1341,
+          "identity": "Principado de Nizhni Nóvgorod-Súzdal"
+        },
+        {
+          "from": 1392,
+          "identity": "Rusia"
+        }
+      ]
+    },
+    "rostov": {
+      "label": "Rostov",
+      "sourceKeys": [
+        "atlas",
+        "rus",
+        "ivan3"
+      ],
+      "note": "",
+      "phases": [
+        {
+          "from": 1200,
+          "identity": "Principado de Vladímir-Súzdal"
+        },
+        {
+          "from": 1207,
+          "identity": "Principado de Rostov"
+        },
+        {
+          "from": 1474,
+          "identity": "Rusia"
+        }
+      ]
+    },
+    "yaroslavl": {
+      "label": "Yaroslavl",
+      "sourceKeys": [
+        "atlas",
+        "rus",
+        "ivan3"
+      ],
+      "note": "",
+      "phases": [
+        {
+          "from": 1200,
+          "identity": "Principado de Vladímir-Súzdal"
+        },
+        {
+          "from": 1218,
+          "identity": "Principado de Yaroslavl"
+        },
+        {
+          "from": 1463,
+          "identity": "Rusia"
+        }
+      ]
+    },
+    "uglich": {
+      "label": "Úglich y Mologa",
+      "sourceKeys": [
+        "atlas",
+        "rus",
+        "ivan3"
+      ],
+      "note": "Compra atribuida tradicionalmente a Iván Kalitá; datación y extensión discutidas. Se muestra como integración regional, no extinción de cada apanage.",
+      "phases": [
+        {
+          "from": 1200,
+          "identity": "Principado de Vladímir-Súzdal"
+        },
+        {
+          "from": 1218,
+          "identity": "Principado de Úglich"
+        },
+        {
+          "from": 1328,
+          "identity": "Rusia"
+        }
+      ]
+    },
+    "beloozero": {
+      "label": "Beloózero y lago Beloie",
+      "sourceKeys": [
+        "atlas",
+        "rus",
+        "beloozero"
+      ],
+      "note": "Subordinación patrimonial desde 1389, con derechos principescos y provinciales documentados hasta la anexión formal de 1486.",
+      "phases": [
+        {
+          "from": 1200,
+          "identity": "Principado de Vladímir-Súzdal"
+        },
+        {
+          "from": 1238,
+          "identity": "Principado de Beloózero"
+        },
+        {
+          "from": 1389,
+          "identity": "Rusia"
+        }
+      ]
+    },
+    "galich_kostroma": {
+      "label": "Gálich y Kostromá",
+      "sourceKeys": [
+        "atlas",
+        "rus",
+        "ivan3"
+      ],
+      "note": "",
+      "phases": [
+        {
+          "from": 1200,
+          "identity": "Principado de Vladímir-Súzdal"
+        },
+        {
+          "from": 1247,
+          "identity": "Principado de Gálich-Merski"
+        },
+        {
+          "from": 1363,
+          "identity": "Rusia"
+        }
+      ]
+    },
+    "vologda": {
+      "label": "Vólogda y su contorno",
+      "sourceKeys": [
+        "atlas",
+        "novgorod",
+        "rus"
+      ],
+      "note": "Frontera de influencia disputada por Nóvgorod, Rostov y Moscú; la incorporación regional no se deduce sólo de la ubicación de Vólogda.",
+      "phases": [
+        {
+          "from": 1200,
+          "identity": "República de Nóvgorod"
+        },
+        {
+          "from": 1471,
+          "identity": "Rusia"
+        }
+      ]
+    },
+    "ustyug": {
+      "label": "Ustiug, Totma y cuenca de la Sújona",
+      "sourceKeys": [
+        "atlas",
+        "rus",
+        "beloozero"
+      ],
+      "note": "",
+      "phases": [
+        {
+          "from": 1200,
+          "identity": "Principado de Vladímir-Súzdal"
+        },
+        {
+          "from": 1389,
+          "identity": "Rusia"
+        }
+      ]
+    },
+    "novgorod_core": {
+      "label": "Tierras de Nóvgorod",
+      "sourceKeys": [
+        "atlas",
+        "novgorod",
+        "karelia"
+      ],
+      "note": "Ámbito regional de gobierno y tributación: en el norte coexistían comunidades locales; no representa una ocupación militar uniforme.",
+      "phases": [
+        {
+          "from": 1200,
+          "identity": "República de Nóvgorod"
+        },
+        {
+          "from": 1478,
+          "identity": "Rusia"
+        }
+      ]
+    },
+    "novgorod_north": {
+      "label": "Carelia oriental y tierras del norte de Nóvgorod",
+      "sourceKeys": [
+        "atlas",
+        "novgorod",
+        "karelia"
+      ],
+      "note": "Ámbito regional de gobierno y tributación: en el norte coexistían comunidades locales; no representa una ocupación militar uniforme.",
+      "phases": [
+        {
+          "from": 1200,
+          "identity": "República de Nóvgorod"
+        },
+        {
+          "from": 1478,
+          "identity": "Rusia"
+        }
+      ]
+    },
+    "dvina": {
+      "label": "Dvina y Pomorie",
+      "sourceKeys": [
+        "atlas",
+        "novgorod",
+        "karelia"
+      ],
+      "note": "Ámbito regional de gobierno y tributación: en el norte coexistían comunidades locales; no representa una ocupación militar uniforme.",
+      "phases": [
+        {
+          "from": 1200,
+          "identity": "República de Nóvgorod"
+        },
+        {
+          "from": 1478,
+          "identity": "Rusia"
+        }
+      ]
+    },
+    "pskov": {
+      "label": "Tierra de Pskov",
+      "sourceKeys": [
+        "atlas",
+        "novgorod",
+        "pskov"
+      ],
+      "note": "La autonomía fue gradual; 1266 fecha el gobierno de Daumantas y 1348 el reconocimiento formal de separación respecto de Nóvgorod.",
+      "phases": [
+        {
+          "from": 1200,
+          "identity": "República de Nóvgorod"
+        },
+        {
+          "from": 1266,
+          "identity": "República de Pskov"
+        },
+        {
+          "from": 1510,
+          "identity": "Rusia"
+        }
+      ]
+    },
+    "great_perm": {
+      "label": "Cuenca del Kama y Urales occidentales",
+      "sourceKeys": [
+        "atlas",
+        "rus",
+        "perm",
+        "perm1505",
+        "stroganov"
+      ],
+      "note": "La región moderna de Perm no equivale al pequeño principado medieval. El ámbito de concesiones de los Stroganov se fecha desde 1558 y conserva autoridades locales.",
+      "phases": [
+        {
+          "from": 1200,
+          "identity": "Tierras del Kama y los Urales",
+          "authorityCondition": "autoridad regional"
+        },
+        {
+          "from": 1558,
+          "identity": "Rusia",
+          "authorityCondition": "autoridad regional"
+        }
+      ]
+    },
+    "komi_pechora": {
+      "label": "Komi y Pechora",
+      "sourceKeys": [
+        "atlas",
+        "rus",
+        "novgorod",
+        "perm"
+      ],
+      "note": "Redes de tributo y comercio septentrionales, con continuidad de autoridades indígenas. El color no implica colonización integral ni una administración uniforme.",
+      "phases": [
+        {
+          "from": 1200,
+          "identity": "Tierras komi y del Pechora",
+          "authorityCondition": "autoridad regional"
+        },
+        {
+          "from": 1478,
+          "identity": "Rusia",
+          "authorityCondition": "autoridad regional"
+        }
+      ]
+    },
+    "vyatka": {
+      "label": "Tierras de Viatka",
+      "sourceKeys": [
+        "atlas",
+        "rus",
+        "ivan3"
+      ],
+      "note": "1489 fecha la conquista definitiva; se distingue de la dependencia intermitente y campañas anteriores.",
+      "phases": [
+        {
+          "from": 1200,
+          "identity": "Tierra de Viatka",
+          "authorityCondition": "autoridad regional"
+        },
+        {
+          "from": 1489,
+          "identity": "Rusia"
+        }
+      ]
+    },
+    "kazan": {
+      "label": "Volga medio y cuenca del Kama",
+      "sourceKeys": [
+        "atlas",
+        "kazan",
+        "ivan4"
+      ],
+      "note": "",
+      "phases": [
+        {
+          "from": 1200,
+          "identity": "Bulgaria del Volga"
+        },
+        {
+          "from": 1236,
+          "identity": "Horda de Oro"
+        },
+        {
+          "from": 1438,
+          "identity": "Kanato de Kazán"
+        },
+        {
+          "from": 1552,
+          "identity": "Rusia"
+        }
+      ]
+    },
+    "mordvin": {
+      "label": "Tierras mordvinas y Moksha-Sura",
+      "sourceKeys": [
+        "atlas",
+        "mordvin",
+        "kazan"
+      ],
+      "note": "",
+      "phases": [
+        {
+          "from": 1200,
+          "identity": "Tierras mordvinas",
+          "authorityCondition": "autoridad regional"
+        },
+        {
+          "from": 1237,
+          "identity": "Horda de Oro"
+        },
+        {
+          "from": 1438,
+          "identity": "Kanato de Kazán"
+        },
+        {
+          "from": 1552,
+          "identity": "Rusia"
+        }
+      ]
+    },
+    "bashkiria": {
+      "label": "Bashkiria y Urales meridionales",
+      "sourceKeys": [
+        "atlas",
+        "ivan4",
+        "rus"
+      ],
+      "note": "La aceptación de la superioridad rusa en 1554–1557 mantuvo derechos comunales; no supone la desaparición de las autoridades locales ni el final de las rebeliones.",
+      "phases": [
+        {
+          "from": 1200,
+          "identity": "Tierras bashkirias",
+          "authorityCondition": "autoridad regional"
+        },
+        {
+          "from": 1236,
+          "identity": "Horda de Oro"
+        },
+        {
+          "from": 1440,
+          "identity": "Horda de Nogái"
+        },
+        {
+          "from": 1557,
+          "identity": "Rusia",
+          "authorityCondition": "autoridad regional"
+        }
+      ]
+    },
+    "lower_volga": {
+      "label": "Volga inferior al norte de Astracán",
+      "sourceKeys": [
+        "atlas",
+        "ivan4",
+        "kalmyk"
+      ],
+      "note": "Superficie regional del corredor fluvial; la fundación posterior de fortalezas no se usa para adelantar el poblamiento.",
+      "phases": [
+        {
+          "from": 1200,
+          "identity": "Confederaciones cumanas",
+          "authorityCondition": "autoridad regional"
+        },
+        {
+          "from": 1240,
+          "identity": "Horda de Oro"
+        },
+        {
+          "from": 1466,
+          "identity": "Gran Horda"
+        },
+        {
+          "from": 1503,
+          "identity": "Horda de Nogái"
+        },
+        {
+          "from": 1556,
+          "identity": "Rusia"
+        }
+      ]
+    },
+    "astrakhan": {
+      "label": "Astracán y bajo Volga",
+      "sourceKeys": [
+        "atlas",
+        "ivan4",
+        "kalmyk"
+      ],
+      "note": "",
+      "phases": [
+        {
+          "from": 1200,
+          "identity": "Confederaciones cumanas",
+          "authorityCondition": "autoridad regional"
+        },
+        {
+          "from": 1240,
+          "identity": "Horda de Oro"
+        },
+        {
+          "from": 1466,
+          "identity": "Kanato de Astracán"
+        },
+        {
+          "from": 1556,
+          "identity": "Rusia"
+        }
+      ]
+    },
+    "nogai_kalmyk": {
+      "label": "Estepas del Caspio septentrional",
+      "sourceKeys": [
+        "atlas",
+        "kalmyk"
+      ],
+      "note": "Las migraciones y dependencias de los siglos XVI–XVII no se dibujan como anexión administrativa rusa inmediata.",
+      "phases": [
+        {
+          "from": 1200,
+          "identity": "Confederaciones cumanas",
+          "authorityCondition": "autoridad regional"
+        },
+        {
+          "from": 1240,
+          "identity": "Horda de Oro"
+        },
+        {
+          "from": 1440,
+          "identity": "Horda de Nogái"
+        },
+        {
+          "from": 1630,
+          "identity": "Kanato calmuco"
+        },
+        {
+          "from": 1771,
+          "identity": "Rusia"
+        }
+      ]
+    },
+    "yaik": {
+      "label": "Cuenca del Yaik y frontera de Oremburgo",
+      "sourceKeys": [
+        "atlas",
+        "rus",
+        "kalmyk"
+      ],
+      "note": "Frontera de colonización y autoridad compartida, no frontera lineal de los nómadas. Desde 1734 se representa el establecimiento de la administración de Oremburgo; no la anexión de todo Kazajistán.",
+      "phases": [
+        {
+          "from": 1200,
+          "identity": "Confederaciones cumanas",
+          "authorityCondition": "autoridad regional"
+        },
+        {
+          "from": 1240,
+          "identity": "Horda de Oro"
+        },
+        {
+          "from": 1440,
+          "identity": "Horda de Nogái"
+        },
+        {
+          "from": 1591,
+          "identity": "Ejército cosaco del Yaik"
+        },
+        {
+          "from": 1734,
+          "identity": "Rusia"
+        }
+      ]
+    },
+    "west_siberia": {
+      "label": "Vertiente oriental de los Urales y Siberia occidental",
+      "sourceKeys": [
+        "atlas",
+        "rus",
+        "ivan4"
+      ],
+      "note": "Las primeras fortalezas de 1586–1587 no prueban por sí solas el control de toda la región; 1598 es un corte conservador para la caída del kanato. El yasak conserva autoridades locales.",
+      "phases": [
+        {
+          "from": 1200,
+          "identity": "Tierras de los janty y mansi",
+          "authorityCondition": "autoridad regional"
+        },
+        {
+          "from": 1428,
+          "identity": "Kanato de Siberia"
+        },
+        {
+          "from": 1598,
+          "identity": "Rusia"
+        }
+      ]
+    },
+    "nenets": {
+      "label": "Bajo Obi y península de Yamal",
+      "sourceKeys": [
+        "atlas",
+        "rus",
+        "nenets"
+      ],
+      "note": "Ámbito de tributo y puestos septentrionales desde fines del XVI, con amplia autonomía indígena. No acredita poblamiento permanente ni soberanía moderna uniforme.",
+      "phases": [
+        {
+          "from": 1200,
+          "identity": "Tierras de los nenets y janty",
+          "authorityCondition": "autoridad regional"
+        },
+        {
+          "from": 1600,
+          "identity": "Rusia",
+          "authorityCondition": "autoridad regional"
+        }
+      ]
+    },
+    "novaya_zemlya": {
+      "label": "Nueva Zembla",
+      "sourceKeys": [
+        "atlas",
+        "atlas"
+      ],
+      "note": "Contexto físico sin asentamiento permanente documentado en este intervalo. No se atribuye retrospectivamente a los zares por las expediciones marítimas.",
+      "phases": [
+        {
+          "from": 1200,
+          "identity": "Nueva Zembla",
+          "authorityCondition": "sin poblamiento documentado"
+        }
+      ]
+    },
+    "tambov": {
+      "label": "Frontera de Tambov",
+      "sourceKeys": [
+        "atlas",
+        "rus",
+        "sloboda"
+      ],
+      "note": "Frontera entre la estepa y la colonización moscovita. El corte de mediados del XVI no fecha la fundación de las ciudades modernas ni elimina poderes locales.",
+      "phases": [
+        {
+          "from": 1200,
+          "identity": "Confederaciones cumanas",
+          "authorityCondition": "autoridad regional"
+        },
+        {
+          "from": 1240,
+          "identity": "Horda de Oro"
+        },
+        {
+          "from": 1441,
+          "identity": "Kanato de Crimea"
+        },
+        {
+          "from": 1556,
+          "identity": "Rusia",
+          "authorityCondition": "autoridad regional"
+        }
+      ]
+    },
+    "voronezh": {
+      "label": "Frontera de Vorónezh",
+      "sourceKeys": [
+        "atlas",
+        "rus",
+        "sloboda"
+      ],
+      "note": "Frontera entre la estepa y la colonización moscovita. El corte de mediados del XVI no fecha la fundación de las ciudades modernas ni elimina poderes locales.",
+      "phases": [
+        {
+          "from": 1200,
+          "identity": "Confederaciones cumanas",
+          "authorityCondition": "autoridad regional"
+        },
+        {
+          "from": 1240,
+          "identity": "Horda de Oro"
+        },
+        {
+          "from": 1441,
+          "identity": "Kanato de Crimea"
+        },
+        {
+          "from": 1556,
+          "identity": "Rusia",
+          "authorityCondition": "autoridad regional"
+        }
+      ]
+    },
+    "upper_oka": {
+      "label": "Principados del alto Oká",
+      "sourceKeys": [
+        "atlas",
+        "lithRus",
+        "rus"
+      ],
+      "note": "Las pequeñas jurisdicciones conservan su identidad; el cambio de superioridad de fines del XV se aproxima regionalmente, sin atribuirles un soberano común ficticio.",
+      "phases": [
+        {
+          "from": 1200,
+          "identity": "Principado de Chernígov"
+        },
+        {
+          "from": 1246,
+          "identity": "Principados del alto Oká"
+        },
+        {
+          "from": 1370,
+          "identity": "Lituania"
+        },
+        {
+          "from": 1494,
+          "identity": "Rusia"
+        }
+      ]
+    },
+    "smolensk_extended": {
+      "label": "Contorno de Smolensk",
+      "sourceKeys": [
+        "atlas",
+        "vytautas",
+        "andrusovo"
+      ],
+      "note": "",
+      "phases": [
+        {
+          "from": 1200,
+          "identity": "Principado de Smolensk"
+        },
+        {
+          "from": 1395,
+          "identity": "Lituania"
+        },
+        {
+          "from": 1401,
+          "identity": "Principado de Smolensk"
+        },
+        {
+          "from": 1404,
+          "identity": "Lituania"
+        },
+        {
+          "from": 1514,
+          "identity": "Rusia"
+        },
+        {
+          "from": 1611,
+          "identity": "Lituania"
+        },
+        {
+          "from": 1654,
+          "identity": "Rusia",
+          "authorityCondition": "ocupación"
+        },
+        {
+          "from": 1667,
+          "identity": "Rusia"
+        }
+      ]
+    },
+    "toropets": {
+      "label": "Torópets y alto Lóvat",
+      "sourceKeys": [
+        "atlas",
+        "lithRus",
+        "rus"
+      ],
+      "note": "",
+      "phases": [
+        {
+          "from": 1200,
+          "identity": "Principado de Torópets"
+        },
+        {
+          "from": 1355,
+          "identity": "Lituania"
+        },
+        {
+          "from": 1503,
+          "identity": "Rusia"
+        }
+      ]
+    },
+    "severia": {
+      "label": "Severia y contornos del Desná",
+      "sourceKeys": [
+        "atlas",
+        "lithRus",
+        "andrusovo",
+        "hetman"
+      ],
+      "note": "",
+      "phases": [
+        {
+          "from": 1200,
+          "identity": "Principado de Chernígov"
+        },
+        {
+          "from": 1240,
+          "identity": "Principados de Severia"
+        },
+        {
+          "from": 1356,
+          "identity": "Lituania"
+        },
+        {
+          "from": 1503,
+          "identity": "Rusia"
+        },
+        {
+          "from": 1618,
+          "identity": "Polonia"
+        },
+        {
+          "from": 1648,
+          "identity": "Hetmanato cosaco"
+        },
+        {
+          "from": 1764,
+          "identity": "Rusia"
+        }
+      ]
+    },
+    "severia_russian": {
+      "label": "Putyvl y frontera septentrional",
+      "sourceKeys": [
+        "atlas",
+        "lithRus",
+        "andrusovo"
+      ],
+      "note": "Putyvl no se incorpora a la cesión polaca de Chernígov en 1618.",
+      "phases": [
+        {
+          "from": 1200,
+          "identity": "Principado de Chernígov"
+        },
+        {
+          "from": 1240,
+          "identity": "Principados de Severia"
+        },
+        {
+          "from": 1356,
+          "identity": "Lituania"
+        },
+        {
+          "from": 1503,
+          "identity": "Rusia"
+        }
+      ]
+    },
+    "kursk": {
+      "label": "Kursk y frontera del Seim",
+      "sourceKeys": [
+        "atlas",
+        "lithRus",
+        "rus"
+      ],
+      "note": "No se proyecta el Hetmanato cosaco de 1648 sobre Kursk.",
+      "phases": [
+        {
+          "from": 1200,
+          "identity": "Principado de Kursk"
+        },
+        {
+          "from": 1240,
+          "identity": "Principado de Kursk",
+          "authorityCondition": "autoridad regional"
+        },
+        {
+          "from": 1360,
+          "identity": "Lituania"
+        },
+        {
+          "from": 1503,
+          "identity": "Rusia"
+        }
+      ]
+    },
+    "hetmanate": {
+      "label": "Ucrania de la margen izquierda · hetmanate",
+      "sourceKeys": [
+        "atlas",
+        "lithRus",
+        "hetman",
+        "andrusovo"
+      ],
+      "note": "",
+      "phases": [
+        {
+          "from": 1200,
+          "identity": "Principado de Pereyáslavl"
+        },
+        {
+          "from": 1240,
+          "identity": "Horda de Oro"
+        },
+        {
+          "from": 1362,
+          "identity": "Lituania"
+        },
+        {
+          "from": 1569,
+          "identity": "Polonia"
+        },
+        {
+          "from": 1648,
+          "identity": "Hetmanato cosaco"
+        },
+        {
+          "from": 1764,
+          "identity": "Rusia"
+        }
+      ]
+    },
+    "hetmanate_north": {
+      "label": "Ucrania de la margen izquierda · hetmanate_north",
+      "sourceKeys": [
+        "atlas",
+        "lithRus",
+        "hetman",
+        "andrusovo"
+      ],
+      "note": "",
+      "phases": [
+        {
+          "from": 1200,
+          "identity": "Principado de Pereyáslavl"
+        },
+        {
+          "from": 1240,
+          "identity": "Horda de Oro"
+        },
+        {
+          "from": 1362,
+          "identity": "Lituania"
+        },
+        {
+          "from": 1569,
+          "identity": "Polonia"
+        },
+        {
+          "from": 1648,
+          "identity": "Hetmanato cosaco"
+        },
+        {
+          "from": 1764,
+          "identity": "Rusia"
+        }
+      ]
+    },
+    "sloboda": {
+      "label": "Ucrania Slobidska",
+      "sourceKeys": [
+        "atlas",
+        "sloboda",
+        "rus"
+      ],
+      "note": "Los regimientos tuvieron administración cosaca bajo autoridad del zar; no pertenecían al Hetmanato ni se anexionan en la misma fecha.",
+      "phases": [
+        {
+          "from": 1200,
+          "identity": "Confederaciones cumanas",
+          "authorityCondition": "autoridad regional"
+        },
+        {
+          "from": 1240,
+          "identity": "Horda de Oro"
+        },
+        {
+          "from": 1441,
+          "identity": "Kanato de Crimea"
+        },
+        {
+          "from": 1650,
+          "identity": "Regimientos de Ucrania Slobidska"
+        },
+        {
+          "from": 1765,
+          "identity": "Rusia"
+        }
+      ]
+    },
+    "zaporizhia": {
+      "label": "Libertades del Ejército Zaporogo",
+      "sourceKeys": [
+        "atlas",
+        "zaporizhia",
+        "hetman",
+        "steppe"
+      ],
+      "note": "Ámbito regional entre Boh, Dniéper, Orel y Donets. Las zonas de frontera de las palankas no equivalen al perímetro de una única fortaleza.",
+      "phases": [
+        {
+          "from": 1200,
+          "identity": "Confederaciones cumanas",
+          "authorityCondition": "autoridad regional"
+        },
+        {
+          "from": 1240,
+          "identity": "Horda de Oro"
+        },
+        {
+          "from": 1441,
+          "identity": "Kanato de Crimea"
+        },
+        {
+          "from": 1552,
+          "identity": "Ejército Zaporogo"
+        },
+        {
+          "from": 1775,
+          "identity": "Rusia"
+        }
+      ]
+    },
+    "black_sea_west": {
+      "label": "Litoral entre Dniéster y Boh",
+      "sourceKeys": [
+        "atlas",
+        "atlas",
+        "vytautas",
+        "steppe"
+      ],
+      "note": "Frontera póntica de control discontinuo. La pérdida del hinterland lituano no se deduce de un cambio de nombre; la expansión rusa hasta el Dniéster corresponde a Jassy, 1792.",
+      "phases": [
+        {
+          "from": 1200,
+          "identity": "Confederaciones cumanas",
+          "authorityCondition": "autoridad regional"
+        },
+        {
+          "from": 1240,
+          "identity": "Horda de Oro"
+        },
+        {
+          "from": 1362,
+          "identity": "Lituania",
+          "authorityCondition": "autoridad regional"
+        },
+        {
+          "from": 1492,
+          "identity": "Imperio otomano"
+        },
+        {
+          "from": 1792,
+          "identity": "Rusia"
+        }
+      ]
+    },
+    "black_sea_east": {
+      "label": "Boh inferior y Dniéper",
+      "sourceKeys": [
+        "atlas",
+        "atlas",
+        "zaporizhia",
+        "steppe"
+      ],
+      "note": "Tratado de Küçük Kaynarca: franja del Boh al Dniéper; no adelanta la cesión de Yedisán de 1792.",
+      "phases": [
+        {
+          "from": 1200,
+          "identity": "Confederaciones cumanas",
+          "authorityCondition": "autoridad regional"
+        },
+        {
+          "from": 1240,
+          "identity": "Horda de Oro"
+        },
+        {
+          "from": 1441,
+          "identity": "Kanato de Crimea"
+        },
+        {
+          "from": 1774,
+          "identity": "Rusia"
+        }
+      ]
+    },
+    "crimea": {
+      "label": "Interior de Crimea",
+      "sourceKeys": [
+        "atlas",
+        "atlas",
+        "crimea"
+      ],
+      "note": "Kanato con gobierno propio bajo superioridad otomana desde 1475; independencia reconocida en 1774 y anexión rusa en 1783.",
+      "phases": [
+        {
+          "from": 1200,
+          "identity": "Confederaciones cumanas",
+          "authorityCondition": "autoridad regional"
+        },
+        {
+          "from": 1240,
+          "identity": "Horda de Oro"
+        },
+        {
+          "from": 1441,
+          "identity": "Kanato de Crimea"
+        },
+        {
+          "from": 1783,
+          "identity": "Rusia"
+        }
+      ]
+    },
+    "crimean_steppe": {
+      "label": "Estepas de Perekop y bajo Dniéper",
+      "sourceKeys": [
+        "atlas",
+        "atlas",
+        "crimea"
+      ],
+      "note": "Kanato con gobierno propio bajo superioridad otomana desde 1475; independencia reconocida en 1774 y anexión rusa en 1783.",
+      "phases": [
+        {
+          "from": 1200,
+          "identity": "Confederaciones cumanas",
+          "authorityCondition": "autoridad regional"
+        },
+        {
+          "from": 1240,
+          "identity": "Horda de Oro"
+        },
+        {
+          "from": 1441,
+          "identity": "Kanato de Crimea"
+        },
+        {
+          "from": 1783,
+          "identity": "Rusia"
+        }
+      ]
+    },
+    "genoese_crimea": {
+      "label": "Colonias genovesas de Crimea",
+      "sourceKeys": [
+        "atlas",
+        "atlas",
+        "kefe",
+        "crimea"
+      ],
+      "note": "Caffa, Soldaia y el litoral son una reconstrucción comarcal: las fechas de cada establecimiento genovés difieren y la cesión de 1475 es dominio otomano directo.",
+      "phases": [
+        {
+          "from": 1200,
+          "identity": "Imperio bizantino"
+        },
+        {
+          "from": 1204,
+          "identity": "Trebisonda"
+        },
+        {
+          "from": 1266,
+          "identity": "Génova"
+        },
+        {
+          "from": 1475,
+          "identity": "Imperio otomano"
+        },
+        {
+          "from": 1774,
+          "identity": "Kanato de Crimea"
+        },
+        {
+          "from": 1783,
+          "identity": "Rusia"
+        }
+      ]
+    },
+    "theodoro": {
+      "label": "Teodoro y Crimea sudoccidental",
+      "sourceKeys": [
+        "atlas",
+        "atlas",
+        "kefe",
+        "crimea"
+      ],
+      "note": "",
+      "phases": [
+        {
+          "from": 1200,
+          "identity": "Imperio bizantino"
+        },
+        {
+          "from": 1204,
+          "identity": "Principado de Teodoro"
+        },
+        {
+          "from": 1475,
+          "identity": "Imperio otomano"
+        },
+        {
+          "from": 1774,
+          "identity": "Kanato de Crimea"
+        },
+        {
+          "from": 1783,
+          "identity": "Rusia"
+        }
+      ]
+    },
+    "taman": {
+      "label": "Península de Tamán",
+      "sourceKeys": [
+        "atlas",
+        "atlas",
+        "kefe",
+        "crimea",
+        "matrega"
+      ],
+      "note": "Ámbito costero de Matrega: los Ghisolfi desde 1419, vinculados a las colonias genovesas. No administración genovesa de toda Taman desde 1266.",
+      "phases": [
+        {
+          "from": 1200,
+          "identity": "Principados circasianos",
+          "authorityCondition": "autoridad regional"
+        },
+        {
+          "from": 1419,
+          "identity": "Señorío de Matrega"
+        },
+        {
+          "from": 1475,
+          "identity": "Imperio otomano"
+        },
+        {
+          "from": 1783,
+          "identity": "Rusia"
+        }
+      ]
+    },
+    "kuban": {
+      "label": "Estepas al norte del Kubán",
+      "sourceKeys": [
+        "atlas",
+        "atlas",
+        "crimea"
+      ],
+      "note": "",
+      "phases": [
+        {
+          "from": 1200,
+          "identity": "Confederaciones cumanas",
+          "authorityCondition": "autoridad regional"
+        },
+        {
+          "from": 1240,
+          "identity": "Horda de Oro"
+        },
+        {
+          "from": 1441,
+          "identity": "Kanato de Crimea"
+        },
+        {
+          "from": 1783,
+          "identity": "Rusia"
+        }
+      ]
+    },
+    "circassia": {
+      "label": "Cáucaso noroccidental y piedemonte",
+      "sourceKeys": [
+        "atlas",
+        "atlas"
+      ],
+      "note": "Las cesiones reclamadas por imperios vecinos no prueban dominio efectivo de las comunidades circasianas. No se incorpora automáticamente el piedemonte al color ruso de 1783.",
+      "phases": [
+        {
+          "from": 1200,
+          "identity": "Principados y comunidades circasianas",
+          "authorityCondition": "autoridad regional"
+        }
+      ]
+    },
+    "don": {
+      "label": "Cuenca del Don",
+      "sourceKeys": [
+        "atlas",
+        "atlas",
+        "rus",
+        "don"
+      ],
+      "note": "La dependencia militar de los zares se distingue de la supresión de autonomía tras la rebelión de Bulavin. Azov y Tana tienen fases propias.",
+      "phases": [
+        {
+          "from": 1200,
+          "identity": "Confederaciones cumanas",
+          "authorityCondition": "autoridad regional"
+        },
+        {
+          "from": 1240,
+          "identity": "Horda de Oro"
+        },
+        {
+          "from": 1503,
+          "identity": "Comunidades cosacas del Don",
+          "authorityCondition": "autoridad regional"
+        },
+        {
+          "from": 1570,
+          "identity": "Ejército cosaco del Don"
+        },
+        {
+          "from": 1708,
+          "identity": "Rusia"
+        }
+      ]
+    },
+    "vyborg": {
+      "label": "Viborg y Carelia occidental",
+      "sourceKeys": [
+        "atlas",
+        "karelia"
+      ],
+      "note": "",
+      "phases": [
+        {
+          "from": 1200,
+          "identity": "República de Nóvgorod"
+        },
+        {
+          "from": 1293,
+          "identity": "Suecia"
+        },
+        {
+          "from": 1710,
+          "identity": "Rusia",
+          "authorityCondition": "ocupación"
+        },
+        {
+          "from": 1721,
+          "identity": "Rusia"
+        }
+      ]
+    },
+    "kexholm": {
+      "label": "Kexholm y Carelia del Ladoga",
+      "sourceKeys": [
+        "atlas",
+        "karelia",
+        "livwar"
+      ],
+      "note": "",
+      "phases": [
+        {
+          "from": 1200,
+          "identity": "República de Nóvgorod"
+        },
+        {
+          "from": 1478,
+          "identity": "Rusia"
+        },
+        {
+          "from": 1580,
+          "identity": "Suecia",
+          "authorityCondition": "ocupación"
+        },
+        {
+          "from": 1595,
+          "identity": "Rusia"
+        },
+        {
+          "from": 1611,
+          "identity": "Suecia",
+          "authorityCondition": "ocupación"
+        },
+        {
+          "from": 1617,
+          "identity": "Suecia"
+        },
+        {
+          "from": 1710,
+          "identity": "Rusia",
+          "authorityCondition": "ocupación"
+        },
+        {
+          "from": 1721,
+          "identity": "Rusia"
+        }
+      ]
+    },
+    "abo_finland": {
+      "label": "Finlandia sudoriental y frontera de Åbo",
+      "sourceKeys": [
+        "atlas",
+        "karelia",
+        "atlas",
+        "finland"
+      ],
+      "note": "La franja cedida en Åbo 1743 queda separada de las adquisiciones de Nystad 1721. En la Edad Media el contorno es regional, sin proyectar retrospectivamente una provincia sueca uniforme.",
+      "phases": [
+        {
+          "from": 1200,
+          "identity": "Comunidades finesas",
+          "authorityCondition": "autoridad regional"
+        },
+        {
+          "from": 1293,
+          "identity": "Suecia"
+        },
+        {
+          "from": 1743,
+          "identity": "Rusia"
+        }
+      ]
+    },
+    "ingria": {
+      "label": "Ingria y desembocadura del Neva",
+      "sourceKeys": [
+        "atlas",
+        "karelia",
+        "livwar"
+      ],
+      "note": "Las ocupaciones suecas de fines del XVI no son una cesión permanente; Tyávzino 1595 restituye y Stolbovo 1617 transfiere de nuevo. El reconocimiento de Nystad se separa de la conquista de Pedro I.",
+      "phases": [
+        {
+          "from": 1200,
+          "identity": "República de Nóvgorod"
+        },
+        {
+          "from": 1478,
+          "identity": "Rusia"
+        },
+        {
+          "from": 1583,
+          "identity": "Suecia"
+        },
+        {
+          "from": 1595,
+          "identity": "Rusia"
+        },
+        {
+          "from": 1617,
+          "identity": "Suecia"
+        },
+        {
+          "from": 1703,
+          "identity": "Rusia",
+          "authorityCondition": "ocupación"
+        },
+        {
+          "from": 1721,
+          "identity": "Rusia"
+        }
+      ]
+    },
+    "danish_estonia": {
+      "label": "Estonia septentrional",
+      "sourceKeys": [
+        "atlas",
+        "estonia",
+        "livwar"
+      ],
+      "note": "",
+      "phases": [
+        {
+          "from": 1200,
+          "identity": "Tierras estonias",
+          "authorityCondition": "autoridad regional"
+        },
+        {
+          "from": 1219,
+          "identity": "Estonia danesa"
+        },
+        {
+          "from": 1227,
+          "identity": "Hermanos de la Espada"
+        },
+        {
+          "from": 1237,
+          "identity": "Orden de Livonia"
+        },
+        {
+          "from": 1238,
+          "identity": "Estonia danesa"
+        },
+        {
+          "from": 1346,
+          "identity": "Orden de Livonia"
+        },
+        {
+          "from": 1561,
+          "identity": "Suecia"
+        },
+        {
+          "from": 1710,
+          "identity": "Rusia",
+          "authorityCondition": "ocupación"
+        },
+        {
+          "from": 1721,
+          "identity": "Rusia"
+        }
+      ]
+    },
+    "osel_wiek": {
+      "label": "Ösel-Wiek",
+      "sourceKeys": [
+        "atlas",
+        "estonia",
+        "livwar"
+      ],
+      "note": "La costa de Wiek y las islas se revisan por subgrupos: no toda la antigua diócesis siguió a Saaremaa durante la guerra livonia.",
+      "phases": [
+        {
+          "from": 1200,
+          "identity": "Tierras estonias",
+          "authorityCondition": "autoridad regional"
+        },
+        {
+          "from": 1228,
+          "identity": "Obispado de Ösel-Wiek"
+        },
+        {
+          "from": 1560,
+          "identity": "Dinamarca"
+        },
+        {
+          "from": 1645,
+          "identity": "Suecia"
+        },
+        {
+          "from": 1710,
+          "identity": "Rusia",
+          "authorityCondition": "ocupación"
+        },
+        {
+          "from": 1721,
+          "identity": "Rusia"
+        }
+      ]
+    },
+    "dorpat": {
+      "label": "Obispado de Dorpat",
+      "sourceKeys": [
+        "atlas",
+        "estonia",
+        "livwar",
+        "swedish"
+      ],
+      "note": "",
+      "phases": [
+        {
+          "from": 1200,
+          "identity": "Tierras estonias",
+          "authorityCondition": "autoridad regional"
+        },
+        {
+          "from": 1224,
+          "identity": "Obispado de Dorpat"
+        },
+        {
+          "from": 1558,
+          "identity": "Rusia",
+          "authorityCondition": "ocupación"
+        },
+        {
+          "from": 1582,
+          "identity": "Livonia polaca"
+        },
+        {
+          "from": 1625,
+          "identity": "Suecia",
+          "authorityCondition": "ocupación"
+        },
+        {
+          "from": 1629,
+          "identity": "Suecia"
+        },
+        {
+          "from": 1704,
+          "identity": "Rusia",
+          "authorityCondition": "ocupación"
+        },
+        {
+          "from": 1721,
+          "identity": "Rusia"
+        }
+      ]
+    },
+    "livonian_order": {
+      "label": "Tierras de la Orden en Livonia",
+      "sourceKeys": [
+        "atlas",
+        "livonia",
+        "order",
+        "livwar",
+        "swedish"
+      ],
+      "note": "",
+      "phases": [
+        {
+          "from": 1200,
+          "identity": "Tierras de livonios y letones",
+          "authorityCondition": "autoridad regional"
+        },
+        {
+          "from": 1207,
+          "identity": "Hermanos de la Espada"
+        },
+        {
+          "from": 1237,
+          "identity": "Orden de Livonia"
+        },
+        {
+          "from": 1561,
+          "identity": "Livonia polaca"
+        },
+        {
+          "from": 1577,
+          "identity": "Rusia",
+          "authorityCondition": "ocupación"
+        },
+        {
+          "from": 1578,
+          "identity": "Livonia polaca"
+        },
+        {
+          "from": 1625,
+          "identity": "Suecia",
+          "authorityCondition": "ocupación"
+        },
+        {
+          "from": 1629,
+          "identity": "Suecia"
+        },
+        {
+          "from": 1710,
+          "identity": "Rusia",
+          "authorityCondition": "ocupación"
+        },
+        {
+          "from": 1721,
+          "identity": "Rusia"
+        }
+      ]
+    },
+    "riga_archbishopric": {
+      "label": "Arzobispado de Riga",
+      "sourceKeys": [
+        "atlas",
+        "livonia",
+        "livwar",
+        "swedish"
+      ],
+      "note": "",
+      "phases": [
+        {
+          "from": 1200,
+          "identity": "Tierras de livonios y letones",
+          "authorityCondition": "autoridad regional"
+        },
+        {
+          "from": 1201,
+          "identity": "Obispado de Riga"
+        },
+        {
+          "from": 1255,
+          "identity": "Arzobispado de Riga"
+        },
+        {
+          "from": 1561,
+          "identity": "Livonia polaca"
+        },
+        {
+          "from": 1577,
+          "identity": "Rusia",
+          "authorityCondition": "ocupación"
+        },
+        {
+          "from": 1578,
+          "identity": "Livonia polaca"
+        },
+        {
+          "from": 1621,
+          "identity": "Suecia",
+          "authorityCondition": "ocupación"
+        },
+        {
+          "from": 1629,
+          "identity": "Suecia"
+        },
+        {
+          "from": 1710,
+          "identity": "Rusia",
+          "authorityCondition": "ocupación"
+        },
+        {
+          "from": 1721,
+          "identity": "Rusia"
+        }
+      ]
+    },
+    "riga": {
+      "label": "Ciudad de Riga",
+      "sourceKeys": [
+        "atlas",
+        "livonia",
+        "latvia",
+        "swedish"
+      ],
+      "note": "",
+      "phases": [
+        {
+          "from": 1200,
+          "identity": "Tierras de los livonios",
+          "authorityCondition": "autoridad regional"
+        },
+        {
+          "from": 1201,
+          "identity": "Obispado de Riga"
+        },
+        {
+          "from": 1255,
+          "identity": "Arzobispado de Riga"
+        },
+        {
+          "from": 1561,
+          "identity": "Ciudad libre de Riga"
+        },
+        {
+          "from": 1581,
+          "identity": "Livonia polaca"
+        },
+        {
+          "from": 1621,
+          "identity": "Suecia"
+        },
+        {
+          "from": 1710,
+          "identity": "Rusia",
+          "authorityCondition": "ocupación"
+        },
+        {
+          "from": 1721,
+          "identity": "Rusia"
+        }
+      ]
+    },
+    "courland_bishopric": {
+      "label": "Obispado de Curlandia y distrito de Piltene",
+      "sourceKeys": [
+        "atlas",
+        "pilteneCity",
+        "piltene"
+      ],
+      "note": "Piltene conserva instituciones propias; la unión personal de 1661 no borra su identidad ni lo convierte automáticamente en una posesión personal de todos los duques de Curlandia.",
+      "phases": [
+        {
+          "from": 1200,
+          "identity": "Tierras de los curonios",
+          "authorityCondition": "autoridad regional"
+        },
+        {
+          "from": 1234,
+          "identity": "Obispado de Curlandia"
+        },
+        {
+          "from": 1560,
+          "identity": "Dinamarca"
+        },
+        {
+          "from": 1585,
+          "identity": "Distrito de Piltene"
+        },
+        {
+          "from": 1661,
+          "identity": "Distrito de Piltene"
+        },
+        {
+          "from": 1717,
+          "identity": "Distrito de Piltene"
+        },
+        {
+          "from": 1795,
+          "identity": "Rusia"
+        }
+      ]
+    },
+    "courland": {
+      "label": "Curlandia y Semigalia",
+      "sourceKeys": [
+        "atlas",
+        "zemgale",
+        "courland"
+      ],
+      "note": "La conquista medieval se escalona por subregiones en las fases individuales; no se asignan las tierras interiores al año de fundación de Riga.",
+      "phases": [
+        {
+          "from": 1200,
+          "identity": "Tierras de curonios y semigalianos",
+          "authorityCondition": "autoridad regional"
+        },
+        {
+          "from": 1237,
+          "identity": "Orden de Livonia"
+        },
+        {
+          "from": 1561,
+          "identity": "Curlandia"
+        },
+        {
+          "from": 1795,
+          "identity": "Rusia"
+        }
+      ]
+    },
+    "latgale": {
+      "label": "Latgalia",
+      "sourceKeys": [
+        "atlas",
+        "livonia",
+        "latvia"
+      ],
+      "note": "Latgalia permanece en la Mancomunidad después de la pérdida de Riga y Livonia septentrional.",
+      "phases": [
+        {
+          "from": 1200,
+          "identity": "Principados de Latgalia",
+          "authorityCondition": "autoridad regional"
+        },
+        {
+          "from": 1237,
+          "identity": "Orden de Livonia"
+        },
+        {
+          "from": 1561,
+          "identity": "Livonia polaca"
+        },
+        {
+          "from": 1772,
+          "identity": "Rusia"
+        }
+      ]
+    },
+    "samogitia": {
+      "label": "Samogitia",
+      "sourceKeys": [
+        "atlas",
+        "samogitia",
+        "vytautas"
+      ],
+      "note": "Se distinguen cesiones jurídicas y establecimiento efectivo de la Orden, rebeliones de 1401 y 1409. Memel no sigue esta sucesión. Antes de 1261 se mantiene la identidad regional de los samogitios; las cesiones de Mindaugas no prueban ocupación uniforme de la Orden.",
+      "phases": [
+        {
+          "from": 1200,
+          "identity": "Tierras de Samogitia",
+          "authorityCondition": "autoridad regional"
+        },
+        {
+          "from": 1261,
+          "identity": "Lituania"
+        },
+        {
+          "from": 1398,
+          "identity": "Lituania",
+          "authorityCondition": "control disputado"
+        },
+        {
+          "from": 1400,
+          "identity": "Prusia de la Orden",
+          "authorityCondition": "ocupación"
+        },
+        {
+          "from": 1401,
+          "identity": "Lituania"
+        },
+        {
+          "from": 1404,
+          "identity": "Prusia de la Orden",
+          "authorityCondition": "control disputado"
+        },
+        {
+          "from": 1409,
+          "identity": "Lituania"
+        },
+        {
+          "from": 1795,
+          "identity": "Rusia"
+        }
+      ]
+    },
+    "memel": {
+      "label": "Memel y litoral prusiano",
+      "sourceKeys": [
+        "atlas",
+        "samogitia",
+        "order"
+      ],
+      "note": "",
+      "phases": [
+        {
+          "from": 1200,
+          "identity": "Tierras de los curonios",
+          "authorityCondition": "autoridad regional"
+        },
+        {
+          "from": 1252,
+          "identity": "Orden de Livonia"
+        },
+        {
+          "from": 1328,
+          "identity": "Prusia de la Orden"
+        },
+        {
+          "from": 1525,
+          "identity": "Prusia"
+        }
+      ]
+    }
+  },
+  "limitations": [
+    "Contornos comarcales aproximados, contrastados visualmente con atlas históricos y bibliografía regional; no deslinde municipal exacto.",
+    "Los ámbitos indígenas, nómadas y fronterizos no se convierten en estados unitarios ficticios; el inspector indica autoridad regional.",
+    "Las fases de ocupación se separan de las cesiones por tratado y de las relaciones tributarias.",
+    "Algunos ámbitos septentrionales reflejan redes de tributo con autoridades locales, no colonización o administración uniforme."
+  ],
+  "retainedLayerEvidence": {
+    "Ducado de Mazovia": {
+      "sources": [
+        {
+          "title": "AGAD · Mazowsze jako region historyczny I Rzeczypospolitej",
+          "url": "https://agad.gov.pl/?page_id=486",
+          "locator": "Exposición, sección Mazowsze jako region historyczny: Rawa y Gostynin 1462, Sochaczew 1476, Płock 1495, último ducado 1526–1529."
+        }
+      ]
+    }
+  }
+}

@@ -1,3 +1,4 @@
+import {easternEuropeScope} from './easternEuropeRoutes.js';
 import {franceLowCountriesScope} from './franceLowCountriesRoutes.js';
 import {iberiaItalyScope} from './iberiaItalyRoutes.js';
 import {medievalBalkanScope} from './medievalBalkanRoutes.js';
@@ -399,6 +400,7 @@ export function composeRegionalAuthorityScopes(scopes) {
 
 export function authorityMapScope(personId, territory, year) {
   const regional = composeRegionalAuthorityScopes([
+    easternEuropeScope(personId, territory, year),
     franceLowCountriesScope(personId, territory, year), iberiaItalyScope(personId, territory, year),
     balkansFullScope(personId, territory, year), medievalBalkanScope(personId, territory, year),
     posavinaRagusaScope(personId, territory, year), bosniaHumScope(personId, territory, year),

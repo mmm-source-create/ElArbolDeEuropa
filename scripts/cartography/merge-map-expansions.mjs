@@ -81,6 +81,12 @@ export function mergeMapExpansions(data) {
   applyRegionalReview(data,read('poland-lithuania-medieval-review.json'),'polandLithuaniaMedievalReview','Polonia-Lituania · principados y continuidad de las regiones orientales');
   applyRegionalReview(data,read('poland-lithuania-full-review.json'),'polandLithuaniaReview','Polonia-Lituania · tres repartos y continuidad de los estados receptores');
   applyRegionalReview(data,read('poland-lithuania-frontier-review.json'),'polandLithuaniaFrontierReview','Polonia-Lituania · Smolensk, Chernigov y margen izquierda');
+  applyRegionalReview(data,read('eastern-europe-full-review.json'),'easternEuropeReview','Polonia-Lituania, Rusia y Báltico · continuidad geográfica completa');
+  for(const [name,evidence] of Object.entries(read('eastern-europe-full-review.json').retainedLayerEvidence || {})){
+    const layer=[...data.territories,...data.additionalTerritories].find(t=>t.name===name);
+    if(!layer)throw Error('Missing retained eastern layer: '+name);
+    Object.assign(layer,evidence);
+  }
   layers = [...data.territories, ...data.additionalTerritories];
   const svg = fs.readFileSync(mapDataFile('euv-locations-crop.svg'),'utf8');
   const ids = new Set([...svg.matchAll(/<path\b[^>]*\bid="([^"]+)"/g)].map(match => match[1]));

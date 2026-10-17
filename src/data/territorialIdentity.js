@@ -1,3 +1,4 @@
+import {EASTERN_EUROPE_IDENTITIES} from './easternEuropeRoutes.js';
 import {EARLY_MEDIEVAL_IDENTITIES} from './earlyMedievalRoutes.js';
 import {POLAND_LITHUANIA_IDENTITIES} from './polandLithuaniaRoutes.js';
 import {franceLowCountriesPoliticalKeys} from './franceLowCountriesRoutes.js';
@@ -9,6 +10,7 @@ import {BOSNIA_HUM_IDENTITIES} from './bosniaHumRoutes.js';
 import {POSAVINA_RAGUSA_IDENTITIES} from './posavinaRagusaRoutes.js';
 import {BALKANS_FULL_IDENTITIES} from './balkansFullRoutes.js';
 const ALIASES = Object.freeze({
+  ...EASTERN_EUROPE_IDENTITIES,
   ...EARLY_MEDIEVAL_IDENTITIES,
   ...POLAND_LITHUANIA_IDENTITIES,
   'Livonia polaca · Latgalia': 'Livonia polaca',

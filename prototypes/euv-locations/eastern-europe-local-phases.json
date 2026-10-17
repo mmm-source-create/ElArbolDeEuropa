@@ -1,0 +1,1674 @@
+{
+  "schema": 1,
+  "reviewedAt": "2026-10-17",
+  "cells": {
+    "Narva": {
+      "region": "danish_estonia",
+      "sourceKeys": [
+        "livwar"
+      ],
+      "note": "",
+      "phases": [
+        {
+          "from": 1200,
+          "identity": "Tierras estonias",
+          "authorityCondition": "autoridad regional"
+        },
+        {
+          "from": 1219,
+          "identity": "Estonia danesa"
+        },
+        {
+          "from": 1346,
+          "identity": "Orden de Livonia"
+        },
+        {
+          "from": 1558,
+          "identity": "Rusia",
+          "authorityCondition": "ocupación"
+        },
+        {
+          "from": 1581,
+          "identity": "Suecia"
+        },
+        {
+          "from": 1704,
+          "identity": "Rusia",
+          "authorityCondition": "ocupación"
+        },
+        {
+          "from": 1721,
+          "identity": "Rusia"
+        }
+      ]
+    },
+    "Paide": {
+      "region": "danish_estonia",
+      "sourceKeys": [
+        "livwar"
+      ],
+      "note": "",
+      "phases": [
+        {
+          "from": 1200,
+          "identity": "Tierras estonias",
+          "authorityCondition": "autoridad regional"
+        },
+        {
+          "from": 1227,
+          "identity": "Hermanos de la Espada"
+        },
+        {
+          "from": 1237,
+          "identity": "Orden de Livonia"
+        },
+        {
+          "from": 1562,
+          "identity": "Suecia"
+        },
+        {
+          "from": 1573,
+          "identity": "Rusia",
+          "authorityCondition": "ocupación"
+        },
+        {
+          "from": 1581,
+          "identity": "Suecia"
+        },
+        {
+          "from": 1710,
+          "identity": "Rusia",
+          "authorityCondition": "ocupación"
+        },
+        {
+          "from": 1721,
+          "identity": "Rusia"
+        }
+      ]
+    },
+    "Hapsal": {
+      "region": "osel_wiek",
+      "sourceKeys": [
+        "livwar"
+      ],
+      "note": "Wiek continental no sigue la cesión insular de 1645. Frontera de 1563 regionalmente aproximada.",
+      "phases": [
+        {
+          "from": 1200,
+          "identity": "Tierras estonias",
+          "authorityCondition": "autoridad regional"
+        },
+        {
+          "from": 1228,
+          "identity": "Obispado de Ösel-Wiek"
+        },
+        {
+          "from": 1560,
+          "identity": "Dinamarca"
+        },
+        {
+          "from": 1563,
+          "identity": "Suecia"
+        },
+        {
+          "from": 1710,
+          "identity": "Rusia",
+          "authorityCondition": "ocupación"
+        },
+        {
+          "from": 1721,
+          "identity": "Rusia"
+        }
+      ]
+    },
+    "Lihula": {
+      "region": "osel_wiek",
+      "sourceKeys": [
+        "livwar"
+      ],
+      "note": "Wiek continental no sigue la cesión insular de 1645. Frontera de 1563 regionalmente aproximada.",
+      "phases": [
+        {
+          "from": 1200,
+          "identity": "Tierras estonias",
+          "authorityCondition": "autoridad regional"
+        },
+        {
+          "from": 1228,
+          "identity": "Obispado de Ösel-Wiek"
+        },
+        {
+          "from": 1560,
+          "identity": "Dinamarca"
+        },
+        {
+          "from": 1563,
+          "identity": "Suecia"
+        },
+        {
+          "from": 1710,
+          "identity": "Rusia",
+          "authorityCondition": "ocupación"
+        },
+        {
+          "from": 1721,
+          "identity": "Rusia"
+        }
+      ]
+    },
+    "St_Martin": {
+      "region": "osel_wiek",
+      "sourceKeys": [
+        "livwar"
+      ],
+      "note": "Wiek continental no sigue la cesión insular de 1645. Frontera de 1563 regionalmente aproximada.",
+      "phases": [
+        {
+          "from": 1200,
+          "identity": "Tierras estonias",
+          "authorityCondition": "autoridad regional"
+        },
+        {
+          "from": 1228,
+          "identity": "Obispado de Ösel-Wiek"
+        },
+        {
+          "from": 1560,
+          "identity": "Dinamarca"
+        },
+        {
+          "from": 1563,
+          "identity": "Suecia"
+        },
+        {
+          "from": 1710,
+          "identity": "Rusia",
+          "authorityCondition": "ocupación"
+        },
+        {
+          "from": 1721,
+          "identity": "Rusia"
+        }
+      ]
+    },
+    "Kaina": {
+      "region": "osel_wiek",
+      "sourceKeys": [
+        "livwar"
+      ],
+      "note": "Hiiumaa sigue su cronología propia; no permanece danesa hasta 1645.",
+      "phases": [
+        {
+          "from": 1200,
+          "identity": "Tierras estonias",
+          "authorityCondition": "autoridad regional"
+        },
+        {
+          "from": 1228,
+          "identity": "Obispado de Ösel-Wiek"
+        },
+        {
+          "from": 1560,
+          "identity": "Dinamarca"
+        },
+        {
+          "from": 1563,
+          "identity": "Suecia"
+        },
+        {
+          "from": 1710,
+          "identity": "Rusia",
+          "authorityCondition": "ocupación"
+        },
+        {
+          "from": 1721,
+          "identity": "Rusia"
+        }
+      ]
+    },
+    "Aluksne": {
+      "region": "livonian_order",
+      "sourceKeys": [
+        "livwar",
+        "viljandi"
+      ],
+      "note": "",
+      "phases": [
+        {
+          "from": 1200,
+          "identity": "Tierras de livonios y letones",
+          "authorityCondition": "autoridad regional"
+        },
+        {
+          "from": 1207,
+          "identity": "Hermanos de la Espada"
+        },
+        {
+          "from": 1237,
+          "identity": "Orden de Livonia"
+        },
+        {
+          "from": 1560,
+          "identity": "Rusia",
+          "authorityCondition": "ocupación"
+        },
+        {
+          "from": 1582,
+          "identity": "Livonia polaca"
+        },
+        {
+          "from": 1620,
+          "identity": "Suecia"
+        },
+        {
+          "from": 1710,
+          "identity": "Rusia",
+          "authorityCondition": "ocupación"
+        },
+        {
+          "from": 1721,
+          "identity": "Rusia"
+        }
+      ]
+    },
+    "Viljandi": {
+      "region": "livonian_order",
+      "sourceKeys": [
+        "livwar",
+        "viljandi"
+      ],
+      "note": "",
+      "phases": [
+        {
+          "from": 1200,
+          "identity": "Tierras de livonios y letones",
+          "authorityCondition": "autoridad regional"
+        },
+        {
+          "from": 1207,
+          "identity": "Hermanos de la Espada"
+        },
+        {
+          "from": 1237,
+          "identity": "Orden de Livonia"
+        },
+        {
+          "from": 1560,
+          "identity": "Rusia",
+          "authorityCondition": "ocupación"
+        },
+        {
+          "from": 1582,
+          "identity": "Livonia polaca"
+        },
+        {
+          "from": 1620,
+          "identity": "Suecia"
+        },
+        {
+          "from": 1710,
+          "identity": "Rusia",
+          "authorityCondition": "ocupación"
+        },
+        {
+          "from": 1721,
+          "identity": "Rusia"
+        }
+      ]
+    },
+    "Parnu": {
+      "region": "livonian_order",
+      "sourceKeys": [
+        "parnu"
+      ],
+      "note": "La celda reúne las dos riberas y los núcleos episcopal y de la Orden; simplificación regional explícita.",
+      "phases": [
+        {
+          "from": 1200,
+          "identity": "Tierras estonias",
+          "authorityCondition": "autoridad regional"
+        },
+        {
+          "from": 1251,
+          "identity": "Obispado de Ösel-Wiek"
+        },
+        {
+          "from": 1265,
+          "identity": "Orden de Livonia"
+        },
+        {
+          "from": 1561,
+          "identity": "Livonia polaca"
+        },
+        {
+          "from": 1562,
+          "identity": "Suecia"
+        },
+        {
+          "from": 1565,
+          "identity": "Livonia polaca"
+        },
+        {
+          "from": 1575,
+          "identity": "Rusia",
+          "authorityCondition": "ocupación"
+        },
+        {
+          "from": 1582,
+          "identity": "Livonia polaca"
+        },
+        {
+          "from": 1600,
+          "identity": "Suecia",
+          "authorityCondition": "ocupación"
+        },
+        {
+          "from": 1609,
+          "identity": "Livonia polaca"
+        },
+        {
+          "from": 1617,
+          "identity": "Suecia"
+        },
+        {
+          "from": 1710,
+          "identity": "Rusia",
+          "authorityCondition": "ocupación"
+        },
+        {
+          "from": 1721,
+          "identity": "Rusia"
+        }
+      ]
+    },
+    "Poltsamaa": {
+      "region": "dorpat",
+      "sourceKeys": [
+        "poltsamaa",
+        "livwar"
+      ],
+      "note": "Reino dependiente de Magnus: dominio territorial limitado, no toda Livonia ni soberanía efectiva sobre Tallinn o Riga.",
+      "phases": [
+        {
+          "from": 1200,
+          "identity": "Tierras estonias",
+          "authorityCondition": "autoridad regional"
+        },
+        {
+          "from": 1224,
+          "identity": "Hermanos de la Espada"
+        },
+        {
+          "from": 1237,
+          "identity": "Orden de Livonia"
+        },
+        {
+          "from": 1570,
+          "identity": "Reino de Livonia"
+        },
+        {
+          "from": 1578,
+          "identity": "Rusia",
+          "authorityCondition": "ocupación"
+        },
+        {
+          "from": 1582,
+          "identity": "Livonia polaca"
+        },
+        {
+          "from": 1621,
+          "identity": "Suecia"
+        },
+        {
+          "from": 1710,
+          "identity": "Rusia",
+          "authorityCondition": "ocupación"
+        },
+        {
+          "from": 1721,
+          "identity": "Rusia"
+        }
+      ]
+    },
+    "Dundaga": {
+      "region": "courland_bishopric",
+      "sourceKeys": [
+        "piltene"
+      ],
+      "note": "El distrito autónomo de Piltene no se atribuye al duque de Curlandia por simple vecindad.",
+      "phases": [
+        {
+          "from": 1200,
+          "identity": "Tierras de los curonios",
+          "authorityCondition": "autoridad regional"
+        },
+        {
+          "from": 1234,
+          "identity": "Obispado de Curlandia"
+        },
+        {
+          "from": 1560,
+          "identity": "Dinamarca"
+        },
+        {
+          "from": 1585,
+          "identity": "Distrito de Piltene"
+        },
+        {
+          "from": 1661,
+          "identity": "Distrito de Piltene"
+        },
+        {
+          "from": 1717,
+          "identity": "Distrito de Piltene"
+        },
+        {
+          "from": 1795,
+          "identity": "Rusia"
+        }
+      ]
+    },
+    "Piltene": {
+      "region": "courland_bishopric",
+      "sourceKeys": [
+        "piltene"
+      ],
+      "note": "El distrito autónomo de Piltene no se atribuye al duque de Curlandia por simple vecindad.",
+      "phases": [
+        {
+          "from": 1200,
+          "identity": "Tierras de los curonios",
+          "authorityCondition": "autoridad regional"
+        },
+        {
+          "from": 1234,
+          "identity": "Obispado de Curlandia"
+        },
+        {
+          "from": 1560,
+          "identity": "Dinamarca"
+        },
+        {
+          "from": 1585,
+          "identity": "Distrito de Piltene"
+        },
+        {
+          "from": 1661,
+          "identity": "Distrito de Piltene"
+        },
+        {
+          "from": 1717,
+          "identity": "Distrito de Piltene"
+        },
+        {
+          "from": 1795,
+          "identity": "Rusia"
+        }
+      ]
+    },
+    "Grobina": {
+      "region": "courland",
+      "sourceKeys": [
+        "order"
+      ],
+      "note": "Conquista curonia escalonada: no se adelanta a la fundación de la rama livonia de 1237.",
+      "phases": [
+        {
+          "from": 1200,
+          "identity": "Tierras de los curonios",
+          "authorityCondition": "autoridad regional"
+        },
+        {
+          "from": 1267,
+          "identity": "Orden de Livonia"
+        },
+        {
+          "from": 1561,
+          "identity": "Curlandia"
+        },
+        {
+          "from": 1795,
+          "identity": "Rusia"
+        }
+      ]
+    },
+    "Durbe": {
+      "region": "courland",
+      "sourceKeys": [
+        "order"
+      ],
+      "note": "Conquista curonia escalonada: no se adelanta a la fundación de la rama livonia de 1237.",
+      "phases": [
+        {
+          "from": 1200,
+          "identity": "Tierras de los curonios",
+          "authorityCondition": "autoridad regional"
+        },
+        {
+          "from": 1267,
+          "identity": "Orden de Livonia"
+        },
+        {
+          "from": 1561,
+          "identity": "Curlandia"
+        },
+        {
+          "from": 1795,
+          "identity": "Rusia"
+        }
+      ]
+    },
+    "Ventspils": {
+      "region": "courland",
+      "sourceKeys": [
+        "order"
+      ],
+      "note": "Conquista curonia escalonada: no se adelanta a la fundación de la rama livonia de 1237.",
+      "phases": [
+        {
+          "from": 1200,
+          "identity": "Tierras de los curonios",
+          "authorityCondition": "autoridad regional"
+        },
+        {
+          "from": 1267,
+          "identity": "Orden de Livonia"
+        },
+        {
+          "from": 1561,
+          "identity": "Curlandia"
+        },
+        {
+          "from": 1795,
+          "identity": "Rusia"
+        }
+      ]
+    },
+    "Kuldiga": {
+      "region": "courland",
+      "sourceKeys": [
+        "order"
+      ],
+      "note": "Conquista curonia escalonada: no se adelanta a la fundación de la rama livonia de 1237.",
+      "phases": [
+        {
+          "from": 1200,
+          "identity": "Tierras de los curonios",
+          "authorityCondition": "autoridad regional"
+        },
+        {
+          "from": 1267,
+          "identity": "Orden de Livonia"
+        },
+        {
+          "from": 1561,
+          "identity": "Curlandia"
+        },
+        {
+          "from": 1795,
+          "identity": "Rusia"
+        }
+      ]
+    },
+    "Kandava": {
+      "region": "courland",
+      "sourceKeys": [
+        "order"
+      ],
+      "note": "Conquista curonia escalonada: no se adelanta a la fundación de la rama livonia de 1237.",
+      "phases": [
+        {
+          "from": 1200,
+          "identity": "Tierras de los curonios",
+          "authorityCondition": "autoridad regional"
+        },
+        {
+          "from": 1267,
+          "identity": "Orden de Livonia"
+        },
+        {
+          "from": 1561,
+          "identity": "Curlandia"
+        },
+        {
+          "from": 1795,
+          "identity": "Rusia"
+        }
+      ]
+    },
+    "Tukums": {
+      "region": "courland",
+      "sourceKeys": [
+        "order"
+      ],
+      "note": "Conquista curonia escalonada: no se adelanta a la fundación de la rama livonia de 1237.",
+      "phases": [
+        {
+          "from": 1200,
+          "identity": "Tierras de los curonios",
+          "authorityCondition": "autoridad regional"
+        },
+        {
+          "from": 1267,
+          "identity": "Orden de Livonia"
+        },
+        {
+          "from": 1561,
+          "identity": "Curlandia"
+        },
+        {
+          "from": 1795,
+          "identity": "Rusia"
+        }
+      ]
+    },
+    "Saldus": {
+      "region": "courland",
+      "sourceKeys": [
+        "order"
+      ],
+      "note": "Conquista curonia escalonada: no se adelanta a la fundación de la rama livonia de 1237.",
+      "phases": [
+        {
+          "from": 1200,
+          "identity": "Tierras de los curonios",
+          "authorityCondition": "autoridad regional"
+        },
+        {
+          "from": 1267,
+          "identity": "Orden de Livonia"
+        },
+        {
+          "from": 1561,
+          "identity": "Curlandia"
+        },
+        {
+          "from": 1795,
+          "identity": "Rusia"
+        }
+      ]
+    },
+    "Dobele": {
+      "region": "courland",
+      "sourceKeys": [
+        "zemgale"
+      ],
+      "note": "",
+      "phases": [
+        {
+          "from": 1200,
+          "identity": "Tierras de los semigalianos",
+          "authorityCondition": "autoridad regional"
+        },
+        {
+          "from": 1290,
+          "identity": "Orden de Livonia"
+        },
+        {
+          "from": 1561,
+          "identity": "Curlandia"
+        },
+        {
+          "from": 1795,
+          "identity": "Rusia"
+        }
+      ]
+    },
+    "Jelgava": {
+      "region": "courland",
+      "sourceKeys": [
+        "zemgale"
+      ],
+      "note": "",
+      "phases": [
+        {
+          "from": 1200,
+          "identity": "Tierras de los semigalianos",
+          "authorityCondition": "autoridad regional"
+        },
+        {
+          "from": 1290,
+          "identity": "Orden de Livonia"
+        },
+        {
+          "from": 1561,
+          "identity": "Curlandia"
+        },
+        {
+          "from": 1795,
+          "identity": "Rusia"
+        }
+      ]
+    },
+    "Bauska": {
+      "region": "courland",
+      "sourceKeys": [
+        "zemgale"
+      ],
+      "note": "",
+      "phases": [
+        {
+          "from": 1200,
+          "identity": "Tierras de los semigalianos",
+          "authorityCondition": "autoridad regional"
+        },
+        {
+          "from": 1290,
+          "identity": "Orden de Livonia"
+        },
+        {
+          "from": 1561,
+          "identity": "Curlandia"
+        },
+        {
+          "from": 1795,
+          "identity": "Rusia"
+        }
+      ]
+    },
+    "Kaffa": {
+      "region": "genoese_crimea",
+      "sourceKeys": [
+        "kefe"
+      ],
+      "note": "",
+      "phases": [
+        {
+          "from": 1200,
+          "identity": "Imperio bizantino"
+        },
+        {
+          "from": 1239,
+          "identity": "Horda de Oro"
+        },
+        {
+          "from": 1266,
+          "identity": "Génova"
+        },
+        {
+          "from": 1475,
+          "identity": "Imperio otomano"
+        },
+        {
+          "from": 1774,
+          "identity": "Kanato de Crimea"
+        },
+        {
+          "from": 1783,
+          "identity": "Rusia"
+        }
+      ]
+    },
+    "Solkhat": {
+      "region": "genoese_crimea",
+      "sourceKeys": [
+        "crimea"
+      ],
+      "note": "Solkhat está en el interior y no se pinta genovesa por pertenecer al entorno de Caffa.",
+      "phases": [
+        {
+          "from": 1200,
+          "identity": "Confederaciones cumanas",
+          "authorityCondition": "autoridad regional"
+        },
+        {
+          "from": 1240,
+          "identity": "Horda de Oro"
+        },
+        {
+          "from": 1441,
+          "identity": "Kanato de Crimea"
+        },
+        {
+          "from": 1783,
+          "identity": "Rusia"
+        }
+      ]
+    },
+    "Soldaia": {
+      "region": "genoese_crimea",
+      "sourceKeys": [
+        "kefe"
+      ],
+      "note": "",
+      "phases": [
+        {
+          "from": 1200,
+          "identity": "Señoríos costeros de Crimea",
+          "authorityCondition": "autoridad regional"
+        },
+        {
+          "from": 1240,
+          "identity": "Horda de Oro"
+        },
+        {
+          "from": 1365,
+          "identity": "Génova"
+        },
+        {
+          "from": 1475,
+          "identity": "Imperio otomano"
+        },
+        {
+          "from": 1774,
+          "identity": "Kanato de Crimea"
+        },
+        {
+          "from": 1783,
+          "identity": "Rusia"
+        }
+      ]
+    },
+    "Vosporo": {
+      "region": "genoese_crimea",
+      "sourceKeys": [
+        "kefe"
+      ],
+      "note": " Kerch/Vosporo pasa directamente a Rusia en 1774; no al kanato independiente.",
+      "phases": [
+        {
+          "from": 1200,
+          "identity": "Señoríos costeros de Crimea",
+          "authorityCondition": "autoridad regional"
+        },
+        {
+          "from": 1240,
+          "identity": "Horda de Oro"
+        },
+        {
+          "from": 1318,
+          "identity": "Génova"
+        },
+        {
+          "from": 1475,
+          "identity": "Imperio otomano"
+        },
+        {
+          "from": 1774,
+          "identity": "Rusia"
+        }
+      ]
+    },
+    "Theodoro": {
+      "region": "theodoro",
+      "sourceKeys": [
+        "kefe"
+      ],
+      "note": "El título tardío de Teodoro no se retrotrae automáticamente a 1204.",
+      "phases": [
+        {
+          "from": 1200,
+          "identity": "Imperio bizantino"
+        },
+        {
+          "from": 1204,
+          "identity": "Señorío de Gothia",
+          "authorityCondition": "autoridad regional"
+        },
+        {
+          "from": 1361,
+          "identity": "Principado de Teodoro"
+        },
+        {
+          "from": 1475,
+          "identity": "Imperio otomano"
+        },
+        {
+          "from": 1774,
+          "identity": "Kanato de Crimea"
+        },
+        {
+          "from": 1783,
+          "identity": "Rusia"
+        }
+      ]
+    },
+    "Lusta": {
+      "region": "theodoro",
+      "sourceKeys": [
+        "kefe"
+      ],
+      "note": "El título tardío de Teodoro no se retrotrae automáticamente a 1204.",
+      "phases": [
+        {
+          "from": 1200,
+          "identity": "Imperio bizantino"
+        },
+        {
+          "from": 1204,
+          "identity": "Señorío de Gothia",
+          "authorityCondition": "autoridad regional"
+        },
+        {
+          "from": 1361,
+          "identity": "Principado de Teodoro"
+        },
+        {
+          "from": 1475,
+          "identity": "Imperio otomano"
+        },
+        {
+          "from": 1774,
+          "identity": "Kanato de Crimea"
+        },
+        {
+          "from": 1783,
+          "identity": "Rusia"
+        }
+      ]
+    },
+    "Azok": {
+      "region": "don",
+      "sourceKeys": [
+        "azov",
+        "kefe"
+      ],
+      "note": "Azov y Tana tienen control portuario propio, separado de los cosacos del Don; las dos locations se presentan como contorno regional de la desembocadura.",
+      "phases": [
+        {
+          "from": 1200,
+          "identity": "Confederaciones cumanas",
+          "authorityCondition": "autoridad regional"
+        },
+        {
+          "from": 1240,
+          "identity": "Horda de Oro"
+        },
+        {
+          "from": 1313,
+          "identity": "Colonias italianas de Tana"
+        },
+        {
+          "from": 1475,
+          "identity": "Imperio otomano"
+        },
+        {
+          "from": 1696,
+          "identity": "Rusia",
+          "authorityCondition": "ocupación"
+        },
+        {
+          "from": 1711,
+          "identity": "Imperio otomano"
+        },
+        {
+          "from": 1739,
+          "identity": "Rusia"
+        }
+      ]
+    },
+    "Tana": {
+      "region": "don",
+      "sourceKeys": [
+        "azov",
+        "kefe"
+      ],
+      "note": "Azov y Tana tienen control portuario propio, separado de los cosacos del Don; las dos locations se presentan como contorno regional de la desembocadura.",
+      "phases": [
+        {
+          "from": 1200,
+          "identity": "Confederaciones cumanas",
+          "authorityCondition": "autoridad regional"
+        },
+        {
+          "from": 1240,
+          "identity": "Horda de Oro"
+        },
+        {
+          "from": 1313,
+          "identity": "Colonias italianas de Tana"
+        },
+        {
+          "from": 1475,
+          "identity": "Imperio otomano"
+        },
+        {
+          "from": 1696,
+          "identity": "Rusia",
+          "authorityCondition": "ocupación"
+        },
+        {
+          "from": 1711,
+          "identity": "Imperio otomano"
+        },
+        {
+          "from": 1739,
+          "identity": "Rusia"
+        }
+      ]
+    },
+    "Moscow": {
+      "region": "moscow",
+      "sourceKeys": [
+        "rus"
+      ],
+      "note": "Ocupación de la capital durante el Tiempo de Disturbios; no soberanía polaca sobre todo el zarato.",
+      "phases": [
+        {
+          "from": 1200,
+          "identity": "Principado de Vladímir-Súzdal"
+        },
+        {
+          "from": 1283,
+          "identity": "Rusia"
+        },
+        {
+          "from": 1610,
+          "identity": "Polonia",
+          "authorityCondition": "ocupación"
+        },
+        {
+          "from": 1612,
+          "identity": "Rusia"
+        }
+      ]
+    },
+    "Stavropol": {
+      "region": "circassia",
+      "sourceKeys": [
+        "atlas"
+      ],
+      "note": "La línea fortificada rusa de 1777 se separa del piedemonte circasiano que conserva autonomía.",
+      "phases": [
+        {
+          "from": 1200,
+          "identity": "Confederaciones cumanas",
+          "authorityCondition": "autoridad regional"
+        },
+        {
+          "from": 1240,
+          "identity": "Horda de Oro"
+        },
+        {
+          "from": 1440,
+          "identity": "Horda de Nogái"
+        },
+        {
+          "from": 1777,
+          "identity": "Rusia"
+        }
+      ]
+    },
+    "Grigoropolisskaya": {
+      "region": "circassia",
+      "sourceKeys": [
+        "atlas"
+      ],
+      "note": "La línea fortificada rusa de 1777 se separa del piedemonte circasiano que conserva autonomía.",
+      "phases": [
+        {
+          "from": 1200,
+          "identity": "Confederaciones cumanas",
+          "authorityCondition": "autoridad regional"
+        },
+        {
+          "from": 1240,
+          "identity": "Horda de Oro"
+        },
+        {
+          "from": 1440,
+          "identity": "Horda de Nogái"
+        },
+        {
+          "from": 1777,
+          "identity": "Rusia"
+        }
+      ]
+    },
+    "Bezopasnoye": {
+      "region": "circassia",
+      "sourceKeys": [
+        "atlas"
+      ],
+      "note": "La línea fortificada rusa de 1777 se separa del piedemonte circasiano que conserva autonomía.",
+      "phases": [
+        {
+          "from": 1200,
+          "identity": "Confederaciones cumanas",
+          "authorityCondition": "autoridad regional"
+        },
+        {
+          "from": 1240,
+          "identity": "Horda de Oro"
+        },
+        {
+          "from": 1440,
+          "identity": "Horda de Nogái"
+        },
+        {
+          "from": 1777,
+          "identity": "Rusia"
+        }
+      ]
+    },
+    "Ipatovo": {
+      "region": "circassia",
+      "sourceKeys": [
+        "atlas"
+      ],
+      "note": "La línea fortificada rusa de 1777 se separa del piedemonte circasiano que conserva autonomía.",
+      "phases": [
+        {
+          "from": 1200,
+          "identity": "Confederaciones cumanas",
+          "authorityCondition": "autoridad regional"
+        },
+        {
+          "from": 1240,
+          "identity": "Horda de Oro"
+        },
+        {
+          "from": 1440,
+          "identity": "Horda de Nogái"
+        },
+        {
+          "from": 1777,
+          "identity": "Rusia"
+        }
+      ]
+    },
+    "Blagodarnoye": {
+      "region": "circassia",
+      "sourceKeys": [
+        "atlas"
+      ],
+      "note": "La línea fortificada rusa de 1777 se separa del piedemonte circasiano que conserva autonomía.",
+      "phases": [
+        {
+          "from": 1200,
+          "identity": "Confederaciones cumanas",
+          "authorityCondition": "autoridad regional"
+        },
+        {
+          "from": 1240,
+          "identity": "Horda de Oro"
+        },
+        {
+          "from": 1440,
+          "identity": "Horda de Nogái"
+        },
+        {
+          "from": 1777,
+          "identity": "Rusia"
+        }
+      ]
+    },
+    "Petrovskoye_Pontic": {
+      "region": "circassia",
+      "sourceKeys": [
+        "atlas"
+      ],
+      "note": "La línea fortificada rusa de 1777 se separa del piedemonte circasiano que conserva autonomía.",
+      "phases": [
+        {
+          "from": 1200,
+          "identity": "Confederaciones cumanas",
+          "authorityCondition": "autoridad regional"
+        },
+        {
+          "from": 1240,
+          "identity": "Horda de Oro"
+        },
+        {
+          "from": 1440,
+          "identity": "Horda de Nogái"
+        },
+        {
+          "from": 1777,
+          "identity": "Rusia"
+        }
+      ]
+    },
+    "Cherdyn": {
+      "region": "great_perm",
+      "sourceKeys": [
+        "perm",
+        "perm1505"
+      ],
+      "note": "Principado de Gran Perm; superioridad moscovita desde 1472, dinastía local hasta la reorganización de 1505.",
+      "phases": [
+        {
+          "from": 1200,
+          "identity": "Tierras de Perm",
+          "authorityCondition": "autoridad regional"
+        },
+        {
+          "from": 1451,
+          "identity": "Principado de Gran Perm"
+        },
+        {
+          "from": 1472,
+          "identity": "Principado de Gran Perm"
+        },
+        {
+          "from": 1505,
+          "identity": "Rusia"
+        }
+      ]
+    },
+    "Solikamsk": {
+      "region": "great_perm",
+      "sourceKeys": [
+        "perm",
+        "perm1505"
+      ],
+      "note": "Principado de Gran Perm; superioridad moscovita desde 1472, dinastía local hasta la reorganización de 1505.",
+      "phases": [
+        {
+          "from": 1200,
+          "identity": "Tierras de Perm",
+          "authorityCondition": "autoridad regional"
+        },
+        {
+          "from": 1451,
+          "identity": "Principado de Gran Perm"
+        },
+        {
+          "from": 1472,
+          "identity": "Principado de Gran Perm"
+        },
+        {
+          "from": 1505,
+          "identity": "Rusia"
+        }
+      ]
+    },
+    "Nyrob": {
+      "region": "great_perm",
+      "sourceKeys": [
+        "perm",
+        "perm1505"
+      ],
+      "note": "Principado de Gran Perm; superioridad moscovita desde 1472, dinastía local hasta la reorganización de 1505.",
+      "phases": [
+        {
+          "from": 1200,
+          "identity": "Tierras de Perm",
+          "authorityCondition": "autoridad regional"
+        },
+        {
+          "from": 1451,
+          "identity": "Principado de Gran Perm"
+        },
+        {
+          "from": 1472,
+          "identity": "Principado de Gran Perm"
+        },
+        {
+          "from": 1505,
+          "identity": "Rusia"
+        }
+      ]
+    },
+    "Usolye": {
+      "region": "great_perm",
+      "sourceKeys": [
+        "perm",
+        "perm1505"
+      ],
+      "note": "Principado de Gran Perm; superioridad moscovita desde 1472, dinastía local hasta la reorganización de 1505.",
+      "phases": [
+        {
+          "from": 1200,
+          "identity": "Tierras de Perm",
+          "authorityCondition": "autoridad regional"
+        },
+        {
+          "from": 1451,
+          "identity": "Principado de Gran Perm"
+        },
+        {
+          "from": 1472,
+          "identity": "Principado de Gran Perm"
+        },
+        {
+          "from": 1505,
+          "identity": "Rusia"
+        }
+      ]
+    },
+    "Murom": {
+      "sourceKeys": [
+        "murom"
+      ],
+      "note": "Principado de Múrom, separado del vecino Nizhni Nóvgorod-Súzdal.",
+      "phases": [
+        {
+          "from": 1200,
+          "identity": "Principado de Múrom"
+        },
+        {
+          "from": 1392,
+          "identity": "Rusia"
+        }
+      ]
+    },
+    "Muromtsevo_Murom": {
+      "sourceKeys": [
+        "murom"
+      ],
+      "note": "Principado de Múrom, separado del vecino Nizhni Nóvgorod-Súzdal.",
+      "phases": [
+        {
+          "from": 1200,
+          "identity": "Principado de Múrom"
+        },
+        {
+          "from": 1392,
+          "identity": "Rusia"
+        }
+      ]
+    },
+    "Melenki": {
+      "sourceKeys": [
+        "murom"
+      ],
+      "note": "Principado de Múrom, separado del vecino Nizhni Nóvgorod-Súzdal.",
+      "phases": [
+        {
+          "from": 1200,
+          "identity": "Principado de Múrom"
+        },
+        {
+          "from": 1392,
+          "identity": "Rusia"
+        }
+      ]
+    },
+    "Moshok": {
+      "sourceKeys": [
+        "murom"
+      ],
+      "note": "Principado de Múrom, separado del vecino Nizhni Nóvgorod-Súzdal.",
+      "phases": [
+        {
+          "from": 1200,
+          "identity": "Principado de Múrom"
+        },
+        {
+          "from": 1392,
+          "identity": "Rusia"
+        }
+      ]
+    },
+    "Oreshek": {
+      "sourceKeys": [
+        "livwar",
+        "karelia"
+      ],
+      "note": "La cesión de Yama y Koporye de 1583 no incluye automáticamente Oreshek y el curso oriental del Neva.",
+      "phases": [
+        {
+          "from": 1200,
+          "identity": "República de Nóvgorod"
+        },
+        {
+          "from": 1478,
+          "identity": "Rusia"
+        },
+        {
+          "from": 1617,
+          "identity": "Suecia"
+        },
+        {
+          "from": 1703,
+          "identity": "Rusia",
+          "authorityCondition": "ocupación"
+        },
+        {
+          "from": 1721,
+          "identity": "Rusia"
+        }
+      ]
+    },
+    "Neva": {
+      "sourceKeys": [
+        "livwar",
+        "karelia"
+      ],
+      "note": "La cesión de Yama y Koporye de 1583 no incluye automáticamente Oreshek y el curso oriental del Neva.",
+      "phases": [
+        {
+          "from": 1200,
+          "identity": "República de Nóvgorod"
+        },
+        {
+          "from": 1478,
+          "identity": "Rusia"
+        },
+        {
+          "from": 1617,
+          "identity": "Suecia"
+        },
+        {
+          "from": 1703,
+          "identity": "Rusia",
+          "authorityCondition": "ocupación"
+        },
+        {
+          "from": 1721,
+          "identity": "Rusia"
+        }
+      ]
+    },
+    "Toksovo": {
+      "sourceKeys": [
+        "livwar",
+        "karelia"
+      ],
+      "note": "La cesión de Yama y Koporye de 1583 no incluye automáticamente Oreshek y el curso oriental del Neva.",
+      "phases": [
+        {
+          "from": 1200,
+          "identity": "República de Nóvgorod"
+        },
+        {
+          "from": 1478,
+          "identity": "Rusia"
+        },
+        {
+          "from": 1617,
+          "identity": "Suecia"
+        },
+        {
+          "from": 1703,
+          "identity": "Rusia",
+          "authorityCondition": "ocupación"
+        },
+        {
+          "from": 1721,
+          "identity": "Rusia"
+        }
+      ]
+    },
+    "Lyepyel": {
+      "sourceKeys": [
+        "lithRus"
+      ],
+      "note": "Tierras del principado de Pólotsk y del Gran Ducado; no pertenecen a la república de Pskov.",
+      "phases": [
+        {
+          "from": 1200,
+          "identity": "Principado de Pólotsk"
+        },
+        {
+          "from": 1307,
+          "identity": "Lituania"
+        },
+        {
+          "from": 1772,
+          "identity": "Rusia"
+        }
+      ]
+    },
+    "Ulla": {
+      "sourceKeys": [
+        "lithRus"
+      ],
+      "note": "Tierras del principado de Pólotsk y del Gran Ducado; no pertenecen a la república de Pskov.",
+      "phases": [
+        {
+          "from": 1200,
+          "identity": "Principado de Pólotsk"
+        },
+        {
+          "from": 1307,
+          "identity": "Lituania"
+        },
+        {
+          "from": 1772,
+          "identity": "Rusia"
+        }
+      ]
+    },
+    "Ushachy": {
+      "sourceKeys": [
+        "lithRus"
+      ],
+      "note": "Tierras del principado de Pólotsk y del Gran Ducado; no pertenecen a la república de Pskov.",
+      "phases": [
+        {
+          "from": 1200,
+          "identity": "Principado de Pólotsk"
+        },
+        {
+          "from": 1307,
+          "identity": "Lituania"
+        },
+        {
+          "from": 1772,
+          "identity": "Rusia"
+        }
+      ]
+    },
+    "Gomel": {
+      "sourceKeys": [
+        "lithRus",
+        "andrusovo"
+      ],
+      "note": "Gómel recuperada por Lituania en 1535: no se incorpora al Hetmanato en 1648.",
+      "phases": [
+        {
+          "from": 1200,
+          "identity": "Principado de Chernígov"
+        },
+        {
+          "from": 1356,
+          "identity": "Lituania"
+        },
+        {
+          "from": 1503,
+          "identity": "Rusia"
+        },
+        {
+          "from": 1535,
+          "identity": "Lituania"
+        },
+        {
+          "from": 1772,
+          "identity": "Rusia"
+        }
+      ]
+    },
+    "Dobrush": {
+      "sourceKeys": [
+        "lithRus",
+        "andrusovo"
+      ],
+      "note": "Gómel recuperada por Lituania en 1535: no se incorpora al Hetmanato en 1648.",
+      "phases": [
+        {
+          "from": 1200,
+          "identity": "Principado de Chernígov"
+        },
+        {
+          "from": 1356,
+          "identity": "Lituania"
+        },
+        {
+          "from": 1503,
+          "identity": "Rusia"
+        },
+        {
+          "from": 1535,
+          "identity": "Lituania"
+        },
+        {
+          "from": 1772,
+          "identity": "Rusia"
+        }
+      ]
+    },
+    "Chachersk": {
+      "sourceKeys": [
+        "lithRus",
+        "andrusovo"
+      ],
+      "note": "Gómel recuperada por Lituania en 1535: no se incorpora al Hetmanato en 1648.",
+      "phases": [
+        {
+          "from": 1200,
+          "identity": "Principado de Chernígov"
+        },
+        {
+          "from": 1356,
+          "identity": "Lituania"
+        },
+        {
+          "from": 1503,
+          "identity": "Rusia"
+        },
+        {
+          "from": 1535,
+          "identity": "Lituania"
+        },
+        {
+          "from": 1772,
+          "identity": "Rusia"
+        }
+      ]
+    },
+    "Tereshkovichy": {
+      "sourceKeys": [
+        "lithRus",
+        "andrusovo"
+      ],
+      "note": "Gómel recuperada por Lituania en 1535: no se incorpora al Hetmanato en 1648.",
+      "phases": [
+        {
+          "from": 1200,
+          "identity": "Principado de Chernígov"
+        },
+        {
+          "from": 1356,
+          "identity": "Lituania"
+        },
+        {
+          "from": 1503,
+          "identity": "Rusia"
+        },
+        {
+          "from": 1535,
+          "identity": "Lituania"
+        },
+        {
+          "from": 1772,
+          "identity": "Rusia"
+        }
+      ]
+    },
+    "Kolguyev": {
+      "sourceKeys": [
+        "nenets"
+      ],
+      "note": "Isla y comunidades nenets: los contactos y reclamaciones rusas no acreditan una administración uniforme ni un príncipe local inventado.",
+      "phases": [
+        {
+          "from": 1200,
+          "identity": "Tierras de los nenets y janty",
+          "authorityCondition": "autoridad regional"
+        }
+      ]
+    }
+  }
+}

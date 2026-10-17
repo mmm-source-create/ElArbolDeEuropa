@@ -175,14 +175,14 @@ test('northern and eastern jurisdictions change at documented dates without swal
   assert.equal(data.territories.find(t => t.name === 'Corona de Polonia').color,
     data.territories.find(t => t.name === 'Prusia Real').color);
 
-  assert(ids('Estonia sueca', 1561).has('Tallinn'));
-  assert(ids('Livonia del Commonwealth', 1569).size > 0);
-  assert(!ids('Livonia del Commonwealth', 1629).size);
-  assert(ids('Livonia sueca', 1629).size > 0);
-  assert(ids('Riga libre', 1570).has('Riga'));
-  assert(ids('Riga bajo la Mancomunidad', 1581).has('Riga'));
-  assert(ids('Riga bajo Suecia', 1621).has('Riga'));
-  assert(!ids('Livonia del Commonwealth', 1581).has('Riga'));
+  const owns=(year,id,identity)=>(atlasPoliticalMosaicAt(data,year).byLocation.get(id)||[]).some(l=>l.entityId===identity);
+  assert(owns(1561,'Tallinn','Suecia'));
+  assert(owns(1569,'Daugavpils','Livonia polaca'));
+  assert(owns(1629,'Daugavpils','Livonia polaca'));
+  assert(owns(1629,'Tartu','Suecia'));
+  assert(owns(1570,'Riga','Ciudad libre de Riga'));
+  assert(owns(1581,'Riga','Livonia polaca'));
+  assert(owns(1621,'Riga','Suecia'));
 
   for (const island of ['Orkney', 'Shetland']) {
     assert(ids('Reino de Noruega', 1468).has(island));
