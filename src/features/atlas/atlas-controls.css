@@ -63,6 +63,9 @@ html[data-eade-theme="dark"] .wrap .desc-toggle { background: var(--eade-paper-b
   .atlas-search-results { width: 100%; max-height: 55vh; }
   .workspace-grid > .workspace-inspector:not(.has-person) { display: none !important; }
   .workspace-grid > .workspace-inspector.has-person { position: fixed !important; top: auto !important; left: 8px; right: 8px; bottom: 8px; z-index: 75; width: auto; max-height: min(68vh, 650px); border: 1px solid var(--eade-border); border-radius: var(--r-md, 10px); background: var(--eade-paper-soft); box-shadow: 0 8px 35px rgba(0,0,0,.35); }
+  /* The floating sheet needs its own surface: the desktop refinements make the
+     inspector transparent, which let the timeline and map show through. */
+  html[data-eade-theme] .wrap.wrap .workspace-grid > .workspace-inspector.has-person { border-color: var(--eade-border); background: var(--eade-paper-soft); box-shadow: 0 8px 35px rgba(0,0,0,.35); }
   .bio-mobile-toggle { display: flex; align-items: center; justify-content: space-between; width: 100%; min-height: 44px; padding: 9px 14px; border: 0; border-radius: var(--r-md, 10px); background: var(--eade-paper-soft); color: var(--eade-ink); text-align: left; font: 600 var(--fs-md, 13px) var(--eade-sans); }
   .workspace-inspector.mobile-collapsed .workspace-bio-panel { display: none; }
   .workspace-inspector.mobile-open .bio-mobile-toggle svg { transform: rotate(180deg); }
@@ -94,9 +97,11 @@ html[data-eade-theme="dark"] .wrap .desc-toggle { background: var(--eade-paper-b
 
 .bio-family-actions { gap: 9px; margin: 11px 0 14px; padding: 12px; border-radius: var(--r-sm, 6px); }
 .bio-family-actions > span { font: 700 var(--fs-2xs, 10px)/1.4 var(--eade-sans); letter-spacing: .045em; }
-.bio-family-actions > div { display: grid; grid-template-columns: repeat(auto-fit, minmax(125px,1fr)); gap: 7px; }
-.bio-family-actions > div button { display: flex; align-items: center; justify-content: space-between; gap: 5px; min-height: 36px; padding: 6px 9px; font: 600 var(--fs-xs, 11px) var(--eade-sans); }
-.bio-family-actions > div button small { padding: 2px 4px; border-radius: var(--r-sm, 6px); background: var(--eade-paper-soft); color: var(--eade-wine); font: 700 var(--fs-2xs, 10px) var(--eade-sans); }
+/* The minimum width follows the text size: with larger type a button takes a
+   row of its own instead of splitting words and counts. */
+.bio-family-actions > div { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 14em), 1fr)); gap: 7px; font-size: var(--fs-xs, 11px); }
+.bio-family-actions > div button { display: flex; align-items: center; justify-content: space-between; gap: 8px; min-height: 36px; padding: 6px 9px; font: 600 var(--fs-xs, 11px) var(--eade-sans); text-align: start; word-break: keep-all; overflow-wrap: normal; hyphens: none; }
+.bio-family-actions > div button small { flex: none; padding: 2px 5px; border-radius: var(--r-sm, 6px); background: var(--eade-paper-soft); color: var(--eade-wine); font: 700 var(--fs-2xs, 10px) var(--eade-sans); white-space: nowrap; font-variant-numeric: tabular-nums; }
 .bio-family-actions .bio-focus-link { padding: 3px 0; min-height: 28px; justify-self: start; }
 
 .workspace-filter-clear {

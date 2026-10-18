@@ -1,4 +1,5 @@
 import {easternEuropeJurisdictions} from './regions/easternEuropeRoutes.js';
+import {northAfricaLevantJurisdictions} from './regions/northAfricaLevantRoutes.js';
 import {earlyMedievalJurisdictions} from './regions/earlyMedievalRoutes.js';
 import {polandLithuaniaJurisdictions} from './regions/polandLithuaniaRoutes.js';
 import {franceLowCountriesJurisdictions} from './regions/franceLowCountriesRoutes.js';
@@ -30,7 +31,7 @@ export function reviewedMapLayers(data) {
       if (!corrections.has(correction.territory)) corrections.set(correction.territory, []);
       corrections.get(correction.territory).push(correction);
     }
-    const regional = [data.bosniaHumReview, data.posavinaRagusaReview, data.balkansFullReview, data.iberiaItalyReview, data.franceLowCountriesReview, data.polandLithuaniaMedievalReview, data.polandLithuaniaReview, data.polandLithuaniaFrontierReview, data.earlyMedievalReview, data.easternEuropeReview].filter(Boolean);
+    const regional = [data.bosniaHumReview, data.posavinaRagusaReview, data.balkansFullReview, data.iberiaItalyReview, data.franceLowCountriesReview, data.polandLithuaniaMedievalReview, data.polandLithuaniaReview, data.polandLithuaniaFrontierReview, data.earlyMedievalReview, data.easternEuropeReview, data.northAfricaLevantReview].filter(Boolean);
     layerIndexes.set(data, {entries, byName: new Map(entries.map(entry => [entry.name, entry])), corrections,
       regional: regional.map(review => ({from: review.scope.from, through: review.scope.through,
         ids: new Set(review.precedenceIds || review.scope.ids), names: new Set(review.layerNames)}))});
@@ -69,7 +70,7 @@ function resolveJurisdictions(territory, year, personId = null) {
   const names=polandLithuaniaJurisdictions(franceLowCountriesJurisdictions(iberiaItalyJurisdictions(balkansFullJurisdictions(posavinaRagusaJurisdictions(bosniaHumJurisdictions(medievalBalkanJurisdictions(referenceGapJurisdictions(successionJurisdictions(frontier,territory,year,personId),territory),territory),territory,year,personId),territory,year,personId),territory,year,personId),territory,year,personId),territory,year,personId),territory,year,personId);
   if(territory==='Austria Interior') for(const province of ['Carintia','Carniola','Ducado de Estiria'])
     names.push(...pilotJurisdictionsFor(province,year,personId));
-  return easternEuropeJurisdictions([...new Set(names)],territory,year,personId);
+  return northAfricaLevantJurisdictions(easternEuropeJurisdictions([...new Set(names)],territory,year,personId),territory,year,personId);
 }
 
 function basePilotJurisdictionsFor(territory, year, personId) {

@@ -11,7 +11,6 @@ const DYNASTY_CHILDREN={
  Valois:['Valois-Alençon','Valois-Angulema','Valois-Borgoña','Valois-Orleans'],
  Anjou:['Anjou-Durazzo','Anjou-Hungría','Anjou-Tarento'],
 };
-export const TERRITORIAL_FOLDER_LABELS=new Set(['Balcanes','Borgoña y Países Bajos','Borgoña y Franco Condado','Países Bajos y Flandes','Incorporaciones del siglo XVI','Estados Italianos','Escandinavia','Georgia y Cáucaso','Bizancio y Oriente latino','Polonia-Lituania']);
 
 export function atlasFilterOptions(people) {
  const used=new Set(people.flatMap(territoriosDe));

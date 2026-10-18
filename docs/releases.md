@@ -157,3 +157,5 @@ Release se preparan en borrador sobre la entrega validada.
 [V5.28](versiones/V5.28.md) revisa el código con el grafo de Graphify: retira código, estilos y dependencias sin uso, reorganiza `src/` por capas (`app`, `data`, `domain`, `cartography`, `features`), separa la cartografía en `data/` y `labs/`, divide la vista del Atlas, aligera la carga de la portada y las fichas y define ocho subagentes en `.claude/agents/`.
 
 [V5.29](versiones/V5.29.md) pinta la Francia inglesa con el color de Inglaterra y los ducados franceses como feudos del reino, rehace los mapas de la guerra de los Cien Años, incorpora a Ricardo Corazón de León y los dominios angevinos, separa los colores borgoñones hasta que comparten duque, da a Polonia-Lituania un color propio y añade escudos a 38 dinastías y 141 sobrenombres.
+
+[V5.30](versiones/V5.30.md) añade vistas previas con imagen al compartir enlaces, ordena los filtros por entidades políticas y regiones, pinta el norte de África, Tierra Santa y Chipre de 1200 a 1800 y corrige el destello de Desafío y la ficha móvil.
