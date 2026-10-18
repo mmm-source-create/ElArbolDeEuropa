@@ -1,6 +1,7 @@
 import {frenchCrownEntries} from './frenchCrownRelations.js';
 import {tributaryEntriesFor} from './tributaryRelations.js';
-import {gobiernosDe, intervalosDisputadosDe} from '../domain/genealogy/personAccessors.js';
+import {gobiernosDe} from '../domain/genealogy/personAccessors.js';
+import {authorityKind} from '../domain/government/authorityKind.js';
 import {idsDeGobiernoEnAño, colorTerritorioEnMapa} from './kingdomMaps.js';
 import {authorityColor} from './mapColors.js';
 import {gobiernoEfectivo} from '../data/territorios.js';
@@ -27,16 +28,6 @@ function claimsFor(person) {
   if (!governmentClaims.has(person)) governmentClaims.set(person,
     new Map(personClaims(person).filter(c => c.field === 'Gobierno').map(c => [c.value, c])));
   return governmentClaims.get(person);
-}
-
-export function authorityKind(government, year = null) {
-  if (['titular', 'pretensión'].includes(government?.condicion) || government?.efectivo === false) return 'titular';
-  const disputes = intervalosDisputadosDe(government);
-  if (disputes.some(period => period.desde <= year && year <= period.hasta)) return 'disputed';
-  if (['rival', 'disputado', 'ocupación'].includes(government?.condicion)) return 'disputed';
-  if (['regencia', 'gobierno delegado'].includes(government?.condicion)
-      || /gobernador|regente|virrey/i.test(government?.titulo || '')) return 'delegated';
-  return 'sovereign';
 }
 
 // Painting, inspection and continuity audits consume these same dated entries.

@@ -5,7 +5,8 @@ import {conyugesDe, gobiernosDe, territoriosDe, intervalosDisputadosDe} from '..
 import {PERSONAS} from '../src/data/personas.js';
 import {readPersonLiteral} from '../scripts/schema/read-contract-data.mjs';
 import {personClaims} from '../src/evidence/claims.js';
-import {authorityKind, mapAuthoritiesForPerson} from '../src/cartography/mapAuthorities.js';
+import {mapAuthoritiesForPerson} from '../src/cartography/mapAuthorities.js';
+import {authorityKind} from '../src/domain/government/authorityKind.js';
 import {familyIndex, familyIds} from '../src/features/atlas/progressiveAtlas.js';
 import {reinadosEfectivos} from '../src/features/desafio/desafioGovernments.js';
 import {parentescoRegistrado} from '../src/domain/government/successionHistory.js';

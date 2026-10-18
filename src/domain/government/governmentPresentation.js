@@ -1,10 +1,10 @@
 import {isRepublicanOffice} from '../filters/atlasFilters.js';
-import {territorialIdentity,territorialLabel} from '../../cartography/territorialIdentity.js';
+import {mandateIdentity,identityLabel} from '../../cartography/territorialNames.js';
 import {ORANGE_NASSAU} from '../../cartography/mapColors.js';
 import {gobiernosDe} from '../genealogy/personAccessors.js';
 import {gobiernoEfectivo} from '../../data/territorios.js';
 import {agrupacionesPoliticasEnMapa, REINO_COLOR, REINO_COLOR_DEFAULT} from '../../cartography/kingdomMaps.js';
-import {authorityKind} from '../../cartography/mapAuthorities.js';
+import {authorityKind} from './authorityKind.js';
 
 const labels = {'monarquia-hispanica':'España','castilla-leon':'Corona de Castilla',
  'tierras-austriacas':'Austria','austro-bohemia':'Austria y Corona de San Wenceslao'};
@@ -24,12 +24,12 @@ export function governmentGroupsAt(person, year) {
    ? groups.find(g=>g.territorios.has(mandate.territorio)) : null;
   const imperial = ['Alemania','Sacro Imperio'].includes(mandate.territorio);
   const republican=isRepublicanOffice(person,mandate,year);
-  const identity=territorialIdentity(mandate.territorio);
+  const identity=mandateIdentity(mandate.territorio);
   const inner=year<1619&&mandate.territorio==='Austria'&&mandate.ambito?.includes('Austria Interior');
   const id = inner?'austria-interior':republican?'provincias-unidas':group?.id || (imperial?'sacro-imperio':identity);
   const key = `${id}|${kind}|${mandate.soberano||''}`;
   if (!result.has(key)) result.set(key,{id,key,person,kind,
-   label:inner?'Austria Interior':republican?'Provincias Unidas':labels[id] || group?.nombre || (imperial?'Sacro Imperio (Alemania)':identity==='Transilvania'?territorialLabel(identity,year):mandate.territorio),
+   label:inner?'Austria Interior':republican?'Provincias Unidas':labels[id] || group?.nombre || (imperial?'Sacro Imperio (Alemania)':identity==='Transilvania'?identityLabel(mandateIdentity(identity),year):mandate.territorio),
    color:inner?REINO_COLOR['Austria Interior']:republican?ORANGE_NASSAU:group?.color || REINO_COLOR[mandate.territorio] || REINO_COLOR_DEFAULT,
    note:group?.nota || '',source:group?.fuente || null,mandates:[]});
   result.get(key).mandates.push(mandate);
