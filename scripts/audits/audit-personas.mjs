@@ -1,10 +1,10 @@
 import {auditReportPath} from '../lib/project-paths.mjs';
+import * as personasModule from "../../src/data/personas.js";
+import * as historiasModule from "../../src/data/historias.js";
 import fs from "node:fs/promises";
 import path from "node:path";
 
 const ROOT = process.cwd();
-const PERSONAS_FILE = path.join(ROOT, "src", "personas.jsx");
-const HISTORIAS_FILE = path.join(ROOT, "src", "historiaData.jsx");
 const META_FILE = path.join(ROOT, "src", "generated", "siteMeta.json");
 const TREE_FILE = path.join(ROOT, "src", "generated", "treeBase.json");
 const BASELINE_FILE = path.join(ROOT, "audit-baseline.json");
@@ -13,19 +13,11 @@ const REPORT_FILE = auditReportPath('audit-report.json');
 const FAIL_ON_ERRORS = process.argv.includes("--fail-on-errors");
 const WRITE_BASELINE = process.argv.includes("--write-baseline");
 
-async function importData(filePath) {
-  const source = await fs.readFile(filePath, "utf8");
-  const moduleUrl = `data:text/javascript;base64,${Buffer.from(source, "utf8").toString("base64")}`;
-  return import(moduleUrl);
-}
-
 async function readJsonIfExists(filePath, fallback = null) {
   try { return JSON.parse(await fs.readFile(filePath, "utf8")); }
   catch { return fallback; }
 }
 
-const personasModule = await importData(PERSONAS_FILE);
-const historiasModule = await importData(HISTORIAS_FILE);
 const PERSONAS = Array.isArray(personasModule.PERSONAS) ? personasModule.PERSONAS : [];
 const HISTORIAS = Array.isArray(historiasModule.HISTORIAS) ? historiasModule.HISTORIAS : [];
 const EVENTOS = Array.isArray(historiasModule.EVENTOS_HISTORICOS) ? historiasModule.EVENTOS_HISTORICOS : [];

@@ -1,8 +1,8 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {PERSONAS} from '../src/personas.jsx';
-import {HISTORIAS,EVENTOS_HISTORICOS} from '../src/historiaData.jsx';
-import {buildDinastleModel,dailyDinastle,dinastleDay,familyDistance,compareDinastle,restoreDinastle,submitDinastle,dinastleShare} from '../src/desafio/dinastleEngine.js';
+import {PERSONAS} from '../src/data/personas.js';
+import {HISTORIAS,EVENTOS_HISTORICOS} from '../src/data/historias.js';
+import {buildDinastleModel,dailyDinastle,dinastleDay,familyDistance,compareDinastle,restoreDinastle,submitDinastle,dinastleShare} from '../src/features/desafio/dinastleEngine.js';
 const model=buildDinastleModel(PERSONAS,HISTORIAS,EVENTOS_HISTORICOS);
 test('daily roster uses existing editorial people with comparable data and visits every candidate before repeating',()=>{
  assert(model.eligible.length>100&&model.eligible.length<PERSONAS.length/2);

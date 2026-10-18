@@ -1,16 +1,16 @@
-import {atlasPoliticalMosaicAt} from '../src/data/atlasMosaic.js';
+import {atlasPoliticalMosaicAt} from '../src/cartography/atlasMosaic.js';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
-import {PERSONAS} from '../src/personas.jsx';
+import {PERSONAS} from '../src/data/personas.js';
 import {auditarTerritorios} from '../scripts/audits/lib/auditTerritorios.js';
 import {personClaims} from '../src/evidence/claims.js';
 import {FRONTIER_REVIEWS} from '../src/evidence/frontierReviewData.js';
-import {mapAuthoritiesForPerson} from '../src/data/mapAuthorities.js';
-import {pilotLocationsFor, reviewedMapLayers, reviewedLayerLocations} from '../src/data/locationMapPilot.js';
-import {territorialIdentity, territorialLabel} from '../src/data/territorialIdentity.js';
+import {mapAuthoritiesForPerson} from '../src/cartography/mapAuthorities.js';
+import {pilotLocationsFor, reviewedMapLayers, reviewedLayerLocations} from '../src/cartography/locationMapPilot.js';
+import {territorialIdentity, territorialLabel} from '../src/cartography/territorialIdentity.js';
 
-const data=JSON.parse(fs.readFileSync(new URL('../prototypes/euv-locations/corridor-locations.json',import.meta.url)));
+const data=JSON.parse(fs.readFileSync(new URL('../data/cartography/corridor-locations.json',import.meta.url)));
 const people=new Map(PERSONAS.map(person=>[person.id,person]));
 const cells=(territory,year,personId)=>pilotLocationsFor(data,territory,year,personId);
 const authority=(personId,year)=>mapAuthoritiesForPerson(people.get(personId),year,data);

@@ -1,12 +1,12 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
-import { imperialFrameIds } from '../src/data/imperialFrame.js';
-import { idsDeReinoEnAño, colorTerritorioEnMapa, REINO_COLOR } from '../src/Territorios.jsx';
-import { PERSONAS } from '../src/personas.jsx';
+import { imperialFrameIds } from '../src/cartography/imperialFrame.js';
+import { idsDeReinoEnAño, colorTerritorioEnMapa, REINO_COLOR } from '../src/cartography/kingdomMaps.js';
+import { PERSONAS } from '../src/data/personas.js';
 
 const people = Object.fromEntries(PERSONAS.map(person => [person.id, person]));
-const svgIds = new Set([...readFileSync(new URL('../src/MapChart_Map.svg', import.meta.url), 'utf8')
+const svgIds = new Set([...readFileSync(new URL('../data/cartography/MapChart_Map.svg', import.meta.url), 'utf8')
   .matchAll(/\bid="([^"]+)"/g)].map(match => match[1]));
 
 test('el marco imperial tiene una geometría real y excluye coronas exteriores', () => {

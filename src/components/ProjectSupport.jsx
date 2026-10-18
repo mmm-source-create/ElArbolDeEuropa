@@ -1,5 +1,5 @@
 import {ArrowUpRight, Coffee} from 'lucide-react';
-import {SUPPORT_URL} from '../siteConfig.js';
+import {SUPPORT_URL} from '../app/siteConfig.js';
 import './project-support.css';
 
 const COPY = {

@@ -1,17 +1,17 @@
 import {auditReportPath} from '../lib/project-paths.mjs';
 // Annual comparison of the lab's territorial layers and personal Atlas mandates.
 import fs from 'node:fs';
-import {PERSONAS} from '../../src/personas.jsx';
+import {PERSONAS} from '../../src/data/personas.js';
 import {gobiernoEfectivo} from '../../src/data/territorios.js';
-import {idsDeGobiernoEnAño} from '../../src/Territorios.jsx';
-import {mapLocationsForGovernment, reviewedLayerLocations, reviewedLayerEvidence} from '../../src/data/locationMapPilot.js';
-import {territorialIdentity, territorialLabel} from '../../src/data/territorialIdentity.js';
-import {supersededRegionalLayers} from '../../src/data/regionalExtentRoutes.js';
-import {mapAuthoritiesForPerson} from '../../src/data/mapAuthorities.js';
+import {idsDeGobiernoEnAño} from '../../src/cartography/kingdomMaps.js';
+import {mapLocationsForGovernment, reviewedLayerLocations, reviewedLayerEvidence} from '../../src/cartography/locationMapPilot.js';
+import {territorialIdentity, territorialLabel} from '../../src/cartography/territorialIdentity.js';
+import {supersededRegionalLayers} from '../../src/cartography/regions/regionalExtentRoutes.js';
+import {mapAuthoritiesForPerson} from '../../src/cartography/mapAuthorities.js';
 
-const data=JSON.parse(fs.readFileSync('prototypes/euv-locations/corridor-locations.json'));
-const review=JSON.parse(fs.readFileSync('prototypes/euv-locations/continuity-review.json'));
-const medieval=JSON.parse(fs.readFileSync('prototypes/euv-locations/medieval-balkans-review.json'));
+const data=JSON.parse(fs.readFileSync('data/cartography/corridor-locations.json'));
+const review=JSON.parse(fs.readFileSync('data/cartography/continuity-review.json'));
+const medieval=JSON.parse(fs.readFileSync('data/cartography/medieval-balkans-review.json'));
 const entries=[...data.territories,...data.additionalTerritories];
 const expected=new Map([
   ['Francia',[1200,1800]],['Bohemia',[1200,1800]],['Moravia',[1200,1800]],

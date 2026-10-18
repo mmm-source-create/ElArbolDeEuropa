@@ -20,7 +20,7 @@ El título de archiduque fue impulsado mediante el *Privilegium maius* de Rodolf
 
 Tras la [partición de 1564](https://www.habsburger.net/en/chapter/tripartite-division-austrian-inheritance), Maximiliano II gobernó Austria danubiana, Fernando II de Tirol gobernó Tirol y Carlos II gobernó Austria Interior. La rama de Graz reunió Austria Interior con las tierras danubianas en 1619; Tirol siguió separado hasta 1665. El mapa agrupa en un mismo tono solo los gobiernos austríacos que **la persona consultada** ejercía simultáneamente. Bohemia y Hungría conservan sus propios colores; la administración austro-bohemia se identifica desde las reformas de 1749 y el título de emperador de Austria no aparece antes de 1804.
 
-La [revisión V4.7](V4.7.md) completa la secuencia de Tirol entre 1595 y 1665. El inspector del mapa separa titular, gobernador y regente; los solapamientos de esos cargos no significan que hubiera varios soberanos independientes. El grupo «Sacro Imperio» de los filtros es una ayuda de navegación, no una prueba de pertenencia jurídica fechada. Los círculos imperiales y las tierras gobernadas por los Habsburgo son relaciones distintas.
+La [revisión V4.7](versiones/V4.7.md) completa la secuencia de Tirol entre 1595 y 1665. El inspector del mapa separa titular, gobernador y regente; los solapamientos de esos cargos no significan que hubiera varios soberanos independientes. El grupo «Sacro Imperio» de los filtros es una ayuda de navegación, no una prueba de pertenencia jurídica fechada. Los círculos imperiales y las tierras gobernadas por los Habsburgo son relaciones distintas.
 
 ## Trabajo cartográfico pendiente
 

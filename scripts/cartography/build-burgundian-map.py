@@ -67,7 +67,7 @@ def overrides():
 def main():
     source = json.loads((HERE / "burgundian-source.json").read_text())
     corrections = overrides()
-    old_paths = paths(ROOT / "src/MapChart_Map.svg")
+    old_paths = paths(ROOT / "data/cartography/MapChart_Map.svg")
     new_paths = paths(HERE / "euv-locations-crop.svg")
     old_ids = {old_id for person in source["people"]
                for government in person["governments"]

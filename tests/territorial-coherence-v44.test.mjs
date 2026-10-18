@@ -1,8 +1,10 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
-import {PERSONAS} from '../src/personas.jsx';
-import {REINO_A_IDS, REINO_VERSIONES, REINO_COLOR, TERRITORIOS_DESTACADOS, TERRITORIOS_SUB, colorTerritorioEnMapa, idsDeReinoEnAño, reinadosActivos, subterritoriosDeFiltro, territorioCoincideConFiltro} from '../src/Territorios.jsx';
+import {PERSONAS} from '../src/data/personas.js';
+import {REINO_A_IDS, REINO_VERSIONES, REINO_COLOR, colorTerritorioEnMapa, idsDeReinoEnAño} from '../src/cartography/kingdomMaps.js';
+import {TERRITORIOS_DESTACADOS, TERRITORIOS_SUB, subterritoriosDeFiltro, territorioCoincideConFiltro} from '../src/domain/filters/territoryFilters.js';
+import {reinadosActivos} from '../src/domain/government/reigns.js';
 
 const person = id => PERSONAS.find(p => p.id === id);
 const painted = (id, year) => new Set(reinadosActivos(person(id), year, {soloEfectivos:true})
@@ -165,7 +167,7 @@ test('Prusia usa el azul de los Hohenzollern en filtro y núcleo cartográfico',
   assert.equal(REINO_COLOR.Prusia, '#303C59');
   assert.deepEqual(idsDeReinoEnAño('Prusia', 1550), ['Lower_Prussia', 'Upper_Prussia', 'Masuria']);
   assert.equal(colorTerritorioEnMapa(person('ALBERTPRUSSIA'), 'Prusia', 1550), REINO_COLOR.Prusia);
-  const svg=fs.readFileSync(new URL('../src/MapChart_Map.svg',import.meta.url),'utf8');
+  const svg=fs.readFileSync(new URL('../data/cartography/MapChart_Map.svg',import.meta.url),'utf8');
   for (const id of REINO_A_IDS.Prusia) assert.match(svg, new RegExp(`\\bid="${id}"`));
 });
 
@@ -195,7 +197,7 @@ test('la sucesión italiana de 1700–1759 cambia de monarca sin fusionar reinos
 });
 
 test('cada región añadida existe en el SVG cartográfico', () => {
-  const svg = fs.readFileSync(new URL('../src/MapChart_Map.svg', import.meta.url), 'utf8');
+  const svg = fs.readFileSync(new URL('../data/cartography/MapChart_Map.svg', import.meta.url), 'utf8');
   const svgIds = new Set([...svg.matchAll(/\bid="([^"]+)"/g)].map(match => match[1]));
   const supplied = `Tursan Bayonne Navarre Bearn_Bigorre Comminges Barbastro Huesca Urgell Rosello Girona Osona Barcelona New_Catalonia Razes Foix Armagnac Toulousain Coruna Lugo Ourense Tras_Os_Montes Beira_Alta Beira_Baixa Ribatejo Alto_Alentejo Baixo_Alentejo Algarve Estremadura Beira_Litoral Santiago Minho Huelva Sevilla Cadiz Malaga Canary_Islands Madeira Cordoba Jaen Granada Almeria Murcia Orihuela Jativa Castellon Alcaniz Teruel Alarcon Albacete Hellin Valencia Ocana West_Mancha Toledo Madrid East_Mancha Villanueva_de_la_Serena Merida Mallorca Logudoro Arborea Cagliari Gallura Pumonte Cismonte Mazara Girgenti Noto Demena Tunis Sahel_Tun Qabisa Kairouan Bizerte Medjerda Annaba Constantine Kabylia Mitidja Dahra Ouarsenis Oran Tlemcen Oujda Kert Errif Habat Azghar Fez Tamasna Dukkala Haha Sus Cuenca Guadalajara Calatayud Zaragoza Soria Segovia Avila Salamanca Zamora Valladolid Leon Palencia Lerma Burgos Alava Gipuzkoa Montana East_Asturias West_Asturias Astorga Benavente Ciudad_Rodrigo Plasencia Caceres Badajoz Trujillo Biscay Calabria_Citra Calabria_Ultra Otranto Basilicata Bari Principato_Citra Capitanata Abruzzo_Citra Molise Principato_Ultra Lavoro Abruzzo_Ultra Marche Istria Friuli Gorizia Venice Padua Ferrara Romagna Urbino Spoleto Campagna Marittima Perugia Arezzo Patrimonio Florence Bologna Siena Grosseto Pisa Lucca Modena Reggioem Levante Punente Mondovi Saluzzo Monferrato Torino Savoy Pavia Piacenza Parma Alessandria Novara Milano Monza Cremona Brescia Verona Vicenza Belluno South_Tirol Mantua Trentino Bergamo Valtellina Ticino Aosta Oberwallis Nice Dracenois Dignois Aquisextain Avignonnais Gresivaudan Valentinois Crete Rodos Argolis Arcadia Messenia Ilia Laconia Corinthia Achaea Ionian_Islands Aetolia South_Epirus North_Epirus Neopatras Attica Euboea Naxos Chios Cyprus Albania Illyria Zeta Hum South_Dalmatia North_Dalmatia Lika`.split(' ');
   for (const id of supplied) assert.ok(svgIds.has(id), `etiqueta aportada: ${id}`);

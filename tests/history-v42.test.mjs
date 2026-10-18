@@ -1,8 +1,9 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
-import {PERSONAS} from '../src/personas.jsx';
-import {REINO_A_IDS,REINO_VERSIONES,idsDeReinoEnAño,reinadosActivos} from '../src/Territorios.jsx';
+import {PERSONAS} from '../src/data/personas.js';
+import {REINO_A_IDS, REINO_VERSIONES, idsDeReinoEnAño} from '../src/cartography/kingdomMaps.js';
+import {reinadosActivos} from '../src/domain/government/reigns.js';
 import {HISTORIA_DINASTIAS} from '../src/content/dinastias/index.js';
 import {personClaims} from '../src/evidence/claims.js';
 
@@ -22,7 +23,7 @@ test('la herencia borgoñona no convierte el título ducal de Carlos V en posesi
 });
 
 test('Zelanda no apunta a la isla danesa y el mapa de Carlos V incluye sus provincias neerlandesas reales',()=>{
-  const svg=fs.readFileSync(new URL('../src/MapChart_Map.svg',import.meta.url),'utf8');
+  const svg=fs.readFileSync(new URL('../data/cartography/MapChart_Map.svg',import.meta.url),'utf8');
   const svgIds=new Set([...svg.matchAll(/\bid="([^"]+)"/g)].map(match=>match[1]));
   assert.ok(svgIds.has('Zealand'),'el SVG contiene la isla danesa que causó el error');
   assert.deepEqual(REINO_A_IDS.Zelanda,[],'no existe un polígono de Zelanda neerlandesa');
@@ -45,7 +46,7 @@ test('Zelanda no apunta a la isla danesa y el mapa de Carlos V incluye sus provi
 });
 
 test('Irlanda usa regiones presentes en el SVG y no pinta la isla entera en 1542',()=>{
-  const svg=fs.readFileSync(new URL('../src/MapChart_Map.svg',import.meta.url),'utf8');
+  const svg=fs.readFileSync(new URL('../data/cartography/MapChart_Map.svg',import.meta.url),'utf8');
   const svgIds=new Set([...svg.matchAll(/\bid="([^"]+)"/g)].map(match=>match[1]));
   const irish=['Connacht','Leinster','Tír Eoghain','Tír Chonaill','Condado de Tyrone','Condado de Tyrconnell','Thomond','Condado de Thomond','Desmond','Condado de Desmond','Condado de Clancare','Condado de Ulster','Kildare','Ormond','Clanricarde','Vizcondado de Mayo'];
   for(const name of irish){

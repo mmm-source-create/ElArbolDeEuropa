@@ -2,8 +2,8 @@ import fs from 'node:fs/promises';
 import path from 'node:path';
 import {pathToFileURL} from 'node:url';
 import {build,loadEnv} from 'vite';
-import {STATIC_SCHEMA,STATIC_FOLDERS,validatePage} from '../../src/public/staticData.js';
-import {resolveSiteUrl} from '../../src/siteConfig.js';
+import {STATIC_SCHEMA,STATIC_FOLDERS,validatePage} from '../../src/features/public/staticData.js';
+import {resolveSiteUrl} from '../../src/app/siteConfig.js';
 import {canonicalDynastySlug} from '../../src/data/dynastyAliases.js';
 import {routesFromSitemap,assetsForStaticPage,makeStaticDocument} from '../lib/ssg-utils.mjs';
 
@@ -28,7 +28,7 @@ const target=sample?path.join(root,'.ssg-sample'):dist;
 if(sample)await fs.rm(target,{recursive:true,force:true});
 const stats={version:JSON.parse(await fs.readFile('package.json','utf8')).version,mode:sample?'sample':'full',counts:{persona:0,dinastia:0,territorio:0,historia:0,english:0},pages:[],assets:{}};
 try {
- await build({configFile:false,root,publicDir:false,logLevel:'error',build:{ssr:'src/public/ssg-entry.jsx',outDir:path.join(temp,'renderer'),emptyOutDir:true,minify:false,rolldownOptions:{output:{entryFileNames:'entry.mjs'}}}});
+ await build({configFile:false,root,publicDir:false,logLevel:'error',build:{ssr:'src/features/public/ssg-entry.jsx',outDir:path.join(temp,'renderer'),emptyOutDir:true,minify:false,rolldownOptions:{output:{entryFileNames:'entry.mjs'}}}});
  const {renderPage,renderNotFound}=await import(pathToFileURL(path.join(temp,'renderer/entry.mjs')).href);
  for(const route of routes) {
   const assets=assetsForStaticPage(manifest,route.kind);

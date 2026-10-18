@@ -1,19 +1,19 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
-import {PERSONAS} from '../src/personas.jsx';
-import {mapAuthoritiesForPerson} from '../src/data/mapAuthorities.js';
+import {PERSONAS} from '../src/data/personas.js';
+import {mapAuthoritiesForPerson} from '../src/cartography/mapAuthorities.js';
 import {personClaims} from '../src/evidence/claims.js';
 import {auditarTerritorios} from '../scripts/audits/lib/auditTerritorios.js';
-import {atlasPoliticalMosaicAt} from '../src/data/atlasMosaic.js';
+import {atlasPoliticalMosaicAt} from '../src/cartography/atlasMosaic.js';
 import {auditRegionalContinuity} from '../scripts/audits/audit-regional-continuity.mjs';
 import {mergeMapExpansions} from '../scripts/cartography/merge-map-expansions.mjs';
 import {applyRegionalReview} from '../scripts/cartography/apply-regional-review.mjs';
 
 const read = name => JSON.parse(fs.readFileSync(new URL(name, import.meta.url), 'utf8'));
-const data = read('../prototypes/euv-locations/corridor-locations.json');
-const review = read('../prototypes/euv-locations/bosnia-hum-review.json');
-const inventory = read('../prototypes/euv-locations/location-inventory.json');
+const data = read('../data/cartography/corridor-locations.json');
+const review = read('../data/cartography/bosnia-hum-review.json');
+const inventory = read('../data/cartography/location-inventory.json');
 const people = new Map(PERSONAS.map(person => [person.id, person]));
 const owners = (id, year) => (atlasPoliticalMosaicAt(data, year).byLocation.get(id) || []).map(layer => layer.entityId).sort();
 const authority = (id, year, territory) => mapAuthoritiesForPerson(people.get(id), year, data, {includeClaims: true})

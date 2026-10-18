@@ -1,11 +1,11 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {PERSONAS} from '../src/personas.jsx';
-import {governmentTableAt} from '../src/data/europePanorama.js';
+import {PERSONAS} from '../src/data/personas.js';
+import {governmentTableAt} from '../src/cartography/europePanorama.js';
 import {personClaims, CLAIM_REVIEWS} from '../src/evidence/claims.js';
 import {AUTHORITY_REVIEWS, authorityReferences} from '../src/evidence/authorityReviews.js';
 import {sourcesForPerson} from '../src/content/sources.js';
-import {gobiernosDe} from '../src/data/personAccessors.js';
+import {gobiernosDe} from '../src/domain/genealogy/personAccessors.js';
 
 const by = Object.fromEntries(PERSONAS.map(person => [person.id, person]));
 

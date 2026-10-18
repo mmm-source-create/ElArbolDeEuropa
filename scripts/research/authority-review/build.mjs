@@ -1,7 +1,8 @@
 // Build claim reviews from GND authority records. A claim becomes "documented" only when
 // the GND record states the same year (dates) or links the same person (parents, spouses).
 import fs from 'node:fs';
-const {PERSONAS}=await import('../../../src/personas.jsx');
+import {KW} from './government-keywords.mjs';
+const {PERSONAS}=await import('../../../src/data/personas.js');
 const {personClaims,CLAIM_REVIEWS}=await import('../../../src/evidence/claims.js');
 const qids=JSON.parse(fs.readFileSync('qids.json')),ent=JSON.parse(fs.readFileSync('entities.json')),status=JSON.parse(fs.readFileSync('status.json')),gnd=JSON.parse(fs.readFileSync('gnd.json'));
 const gndOf=id=>status[id]==='ok'?(ent[qids[id]?.qid]?.gnd||[]).find(g=>gnd[g]&&!gnd[g].missing):null;
@@ -36,7 +37,6 @@ for(const p of PERSONAS){const g=gndOf(p.id);if(!g)continue;const r=gnd[g];
 fs.writeFileSync('reviews.json',JSON.stringify(out));fs.writeFileSync('mismatches.tsv',mism.join('\n'));
 console.log(stat,'total',Object.keys(out).length,'mismatches',mism.length);
 // Governments: GND clause naming the same territory and the same span of years.
-const {KW}=await import(new URL('./govkw.mjs', import.meta.url));
 let gov=0;
 for(const p of PERSONAS){const g=gndOf(p.id);if(!g)continue;const clauses=gnd[g].info.flatMap(s=>s.split(/[;|]/));
  for(const claim of personClaims(p)){if(claim.field!=='Gobierno'||manual(claim.id))continue;const m=claim.value;const kw=KW[m.territorio];if(!kw)continue;

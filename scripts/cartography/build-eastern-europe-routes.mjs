@@ -89,5 +89,5 @@ for (const [personId,territory,from,through,key] of [
 }
 const compact={...compactBalkanRoutes(review),personalCoverageIds:[...new Set([...geography.scopeIds,...lit1400])].sort()};
 fs.writeFileSync(mapDataFile('eastern-europe-full-review.json'),JSON.stringify(review,null,2)+'\n');
-fs.writeFileSync(projectRoot+'/src/data/easternEuropeRouteData.json',JSON.stringify(compact)+'\n');
+fs.writeFileSync(projectRoot+'/src/cartography/regions/easternEuropeRouteData.json',JSON.stringify(compact)+'\n');
 console.log(`Europa oriental: ${geography.scopeIds.length} celdas auditadas, ${used.size} sustituidas, ${assignments.length} fases y ${review.authorityScopes.length} límites personales.`);

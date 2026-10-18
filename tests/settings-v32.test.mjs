@@ -2,8 +2,8 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
 import {runInNewContext} from 'node:vm';
-import {resolverRuta} from '../src/routing.js';
-import {applyPreferences,clearLocalData,cleanPreferences,readPreferences,savePreferences,PREFERENCES_KEY,FAVORITES_KEY,STORY_PROGRESS_KEY,CHALLENGE_KEYS} from '../src/settings/preferences.js';
+import {resolverRuta} from '../src/app/routing.js';
+import {applyPreferences,clearLocalData,cleanPreferences,readPreferences,savePreferences,PREFERENCES_KEY,FAVORITES_KEY,STORY_PROGRESS_KEY,CHALLENGE_KEYS} from '../src/features/settings/preferences.js';
 
 function memoryStorage() {
  const values=new Map();

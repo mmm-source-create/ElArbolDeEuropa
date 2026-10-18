@@ -3,13 +3,13 @@ import assert from 'node:assert/strict';
 import React from 'react';
 import {renderToString} from 'react-dom/server';
 import {JSDOM} from 'jsdom';
-import {PERSONAS} from '../src/personas.jsx';
-import {governmentTableAt} from '../src/data/europePanorama.js';
-import {COLLECTIVE_AUTHORITIES} from '../src/data/politicalMapIndex.js';
-import {governmentRegion, governmentTier} from '../src/explorer/EuropeGovernments.jsx';
+import {PERSONAS} from '../src/data/personas.js';
+import {governmentTableAt} from '../src/cartography/europePanorama.js';
+import {COLLECTIVE_AUTHORITIES} from '../src/cartography/politicalMapIndex.js';
+import {governmentRegion, governmentTier} from '../src/features/atlas/EuropeGovernments.jsx';
 import SiteHeader from '../src/components/SiteHeader.jsx';
 import fs from 'node:fs';
-import HomeDiscovery from '../src/public/HomeDiscovery.jsx';
+import HomeDiscovery from '../src/features/public/HomeDiscovery.jsx';
 
 test('Europa: cada entidad de gobierno tiene región y las coronas encabezan su región', () => {
   for (let year = 1200; year <= 1800; year += 10) {
@@ -43,9 +43,9 @@ const homeLists = () => ({
 });
 
 test('portada: entradas antes del carrusel, sin cinta de dinastías y con «Personas»', () => {
-  // PublicSite.jsx needs the bundler (JSON imports), so the order is checked on its source.
-  const source = fs.readFileSync(new URL('../src/public/PublicSite.jsx', import.meta.url), 'utf8');
-  const home = source.slice(source.indexOf('export function HomeContent'), source.indexOf('const INFO_PAGES'));
+  // HomePage.jsx needs the bundler (JSON imports), so the order is checked on its source.
+  const source = fs.readFileSync(new URL('../src/features/public/HomePage.jsx', import.meta.url), 'utf8');
+  const home = source.slice(source.indexOf('export function HomeContent'));
   assert.ok(home.indexOf('home-quick-links') < home.indexOf('<HomeDiscovery '));
   assert.doesNotMatch(source, /DynastyMarquee/);
   assert.match(home, /public-door-arrow/);

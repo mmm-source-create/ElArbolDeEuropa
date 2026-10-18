@@ -1,4 +1,4 @@
-import {slugPublico} from '../utils/personLabels.js';
+import {slugPublico} from '../domain/people/personLabels.js';
 import './crowns.css';
 export default function HistoricalUnions({uniones=[]}) {
  if(!uniones.length)return null;

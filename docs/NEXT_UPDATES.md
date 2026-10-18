@@ -3,17 +3,17 @@
 La propuesta original se conserva en [archive/next-updates-v2.md](archive/next-updates-v2.md).
 Implementadas sucesivamente en una rama de revisión:
 
-- [V4.0](V4.0.md): afirmaciones y cobertura documental, identidades históricas separadas y Atlas más despejado y accesible.
-- [V3.3](V3.3.md): edición inglesa más completa, corrección de retratos y contraste del tema oscuro.
-- [V3.2](V3.2.md): ajustes de visualización, privacidad y navegación uniforme en fichas e historias.
-- [V3.1](V3.1.md): lectura más cómoda dentro del Atlas, jerarquías visuales ajustadas, esqueletos fieles y 404 bilingüe propia.
+- [V4.0](versiones/V4.0.md): afirmaciones y cobertura documental, identidades históricas separadas y Atlas más despejado y accesible.
+- [V3.3](versiones/V3.3.md): edición inglesa más completa, corrección de retratos y contraste del tema oscuro.
+- [V3.2](versiones/V3.2.md): ajustes de visualización, privacidad y navegación uniforme en fichas e historias.
+- [V3.1](versiones/V3.1.md): lectura más cómoda dentro del Atlas, jerarquías visuales ajustadas, esqueletos fieles y 404 bilingüe propia.
 
-- [V2.16](V2.16.md): entrada y capítulos propios de las 13 historias, progreso local, cronología y consulta de protagonistas; enlaces al Atlas y regreso.
-- [V2.17](V2.17.md): entrada gradual al Atlas, búsqueda global, expansión contada y reversible, selección compartible y agrupación de papas sin familia registrada.
-- [V2.18](V2.18.md): Europa completa o selección, regiones, comparación entre años, siguiente acontecimiento y separación de ritmo y salto anual.
-- [V2.19](V2.19.md): vista previa de exportación, selección/rama/encuadre, SVG y PNG, impresión con orientación y márgenes, actividades y respuestas separadas, fichas y selecciones insertables.
-- [V2.20](V2.20.md): portada con familia, historia y año como entradas, más recomendaciones editoriales.
-- [V2.21](V2.21.md): edición inglesa acotada, con dos historias completas, cinco fichas breves, metodología, rutas equivalentes y disponibilidad explícita.
+- [V2.16](versiones/V2.16.md): entrada y capítulos propios de las 13 historias, progreso local, cronología y consulta de protagonistas; enlaces al Atlas y regreso.
+- [V2.17](versiones/V2.17.md): entrada gradual al Atlas, búsqueda global, expansión contada y reversible, selección compartible y agrupación de papas sin familia registrada.
+- [V2.18](versiones/V2.18.md): Europa completa o selección, regiones, comparación entre años, siguiente acontecimiento y separación de ritmo y salto anual.
+- [V2.19](versiones/V2.19.md): vista previa de exportación, selección/rama/encuadre, SVG y PNG, impresión con orientación y márgenes, actividades y respuestas separadas, fichas y selecciones insertables.
+- [V2.20](versiones/V2.20.md): portada con familia, historia y año como entradas, más recomendaciones editoriales.
+- [V2.21](versiones/V2.21.md): edición inglesa acotada, con dos historias completas, cinco fichas breves, metodología, rutas equivalentes y disponibilidad explícita.
 
 ## Alcance y límites
 

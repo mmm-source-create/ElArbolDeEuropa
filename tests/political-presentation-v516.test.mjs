@@ -1,16 +1,16 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
-import {PERSONAS} from '../src/personas.jsx';
-import {atlasFilterOptions,personMatchesTerritory} from '../src/data/atlasFilters.js';
-import {GRUPOS_DINASTICOS} from '../src/explorer/model.js';
-import {governmentGroupsAt,groupedGovernmentIntervals} from '../src/data/governmentPresentation.js';
-import {governmentTableAt,europeMosaicAt} from '../src/data/europePanorama.js';
-import {mapAuthoritiesForPerson} from '../src/data/mapAuthorities.js';
-import {COLLECTIVE_AUTHORITIES,buildPoliticalMapIndex,inspectMapRegion} from '../src/data/politicalMapIndex.js';
-import {FRENCH_CROWN_COLOR,ORANGE_NASSAU,authorityColor} from '../src/data/mapColors.js';
-import {subterritoriosDeFiltro} from '../src/Territorios.jsx';
-const data=JSON.parse(fs.readFileSync(new URL('../prototypes/euv-locations/corridor-locations.json',import.meta.url))),by=new Map(PERSONAS.map(p=>[p.id,p]));
+import {PERSONAS} from '../src/data/personas.js';
+import {atlasFilterOptions,personMatchesTerritory} from '../src/domain/filters/atlasFilters.js';
+import {GRUPOS_DINASTICOS} from '../src/domain/genealogy/dynasties.js';
+import {governmentGroupsAt,groupedGovernmentIntervals} from '../src/domain/government/governmentPresentation.js';
+import {governmentTableAt,europeMosaicAt} from '../src/cartography/europePanorama.js';
+import {mapAuthoritiesForPerson} from '../src/cartography/mapAuthorities.js';
+import {COLLECTIVE_AUTHORITIES,buildPoliticalMapIndex,inspectMapRegion} from '../src/cartography/politicalMapIndex.js';
+import {FRENCH_CROWN_COLOR,ORANGE_NASSAU,authorityColor} from '../src/cartography/mapColors.js';
+import {subterritoriosDeFiltro} from '../src/domain/filters/territoryFilters.js';
+const data=JSON.parse(fs.readFileSync(new URL('../data/cartography/corridor-locations.json',import.meta.url))),by=new Map(PERSONAS.map(p=>[p.id,p]));
 test('territorial and dynastic filters are alphabetic, reachable and distinguish genealogical houses from folders',()=>{
  const o=atlasFilterOptions(PERSONAS),sort=a=>a.toSorted((a,b)=>a.localeCompare(b,'es',{sensitivity:'base'}));
  assert.deepEqual(o.territorios,sort(o.territorios));assert.deepEqual(o.dynastyFamilies,sort(o.dynastyFamilies));assert.deepEqual(o.dynastyFolders.filter(n=>n!=='Otras dinastías'),sort(o.dynastyFolders.filter(n=>n!=='Otras dinastías')));

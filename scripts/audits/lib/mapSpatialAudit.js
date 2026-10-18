@@ -1,6 +1,6 @@
 // Audit visible land, including SVG cells that have never entered a crosswalk.
 // The geometry file stores clipped area in SVG units, not square kilometres.
-export function auditSpatialSnapshot(geometry, snapshot) {
+function auditSpatialSnapshot(geometry, snapshot) {
   const cells = geometry.cells.filter(cell => cell.visibleArea > 0);
   const assigned = cells.filter(cell => snapshot.byLocation.has(cell.id));
   const unassigned = cells.filter(cell => !snapshot.byLocation.has(cell.id));

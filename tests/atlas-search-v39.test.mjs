@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { atlasSearch } from '../src/explorer/atlasSearch.js';
+import { atlasSearch } from '../src/features/atlas/atlasSearch.js';
 
 const normalize = value => String(value).normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
 const sources = {

@@ -2,8 +2,8 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs/promises';
 import {JSDOM} from 'jsdom';
-import {STATIC_SCHEMA,staticRoute,validatePage,initialPageForLocation,readInitialPage,serializePage} from '../src/public/staticData.js';
-import {entityMeta,publicMeta} from '../src/public/publicMeta.js';
+import {STATIC_SCHEMA,staticRoute,validatePage,initialPageForLocation,readInitialPage,serializePage} from '../src/features/public/staticData.js';
+import {entityMeta,publicMeta} from '../src/features/public/publicMeta.js';
 import {routesFromSitemap,assetGraph,assetsForStaticPage,makeStaticDocument} from '../scripts/lib/ssg-utils.mjs';
 import {auditDocument} from '../scripts/audits/audit-ssg.mjs';
 import {person,dynasty,territory} from './fixtures/static-pages.mjs';
@@ -39,11 +39,11 @@ test('los estilos y preloads recorren imports comunes, sin cargar el motor diná
 });
 test('cada tipo de ficha pública carga solo su módulo y las dependencias estáticas compartidas',()=>{
  const manifest={
-  'src/public/PublicSite.jsx':{file:'persona.js',name:'PublicSite',src:'src/public/PublicSite.jsx',isDynamicEntry:true,css:['persona.css'],imports:['shared']},
-  'src/public/DynastyPage.jsx':{file:'dynasty.js',name:'DynastyPage',src:'src/public/DynastyPage.jsx',isDynamicEntry:true,imports:['shared']},
+  'src/features/public/PublicSite.jsx':{file:'persona.js',name:'PublicSite',src:'src/features/public/PublicSite.jsx',isDynamicEntry:true,css:['persona.css'],imports:['shared']},
+  'src/features/public/DynastyPage.jsx':{file:'dynasty.js',name:'DynastyPage',src:'src/features/public/DynastyPage.jsx',isDynamicEntry:true,imports:['shared']},
   '_StoryPage-test.js':{file:'story.js',name:'StoryPage',imports:['shared']},
   shared:{file:'shared.js',css:['shared.css']},
-  'src/public/StaticPublicPage.jsx':{file:'all-pages.js'},
+  'src/features/public/StaticPublicPage.jsx':{file:'all-pages.js'},
  };
  assert.deepEqual(assetsForStaticPage(manifest,'persona'),{css:['persona.css','shared.css'],js:['persona.js','shared.js']});
  assert.deepEqual(assetsForStaticPage(manifest,'dinastia'),{css:['shared.css'],js:['dynasty.js','shared.js']});

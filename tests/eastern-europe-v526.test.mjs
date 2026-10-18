@@ -1,13 +1,13 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
-import {PERSONAS} from '../src/personas.jsx';
-import {europeMosaicAt} from '../src/data/europePanorama.js';
-import {mapAuthoritiesForPerson} from '../src/data/mapAuthorities.js';
+import {PERSONAS} from '../src/data/personas.js';
+import {europeMosaicAt} from '../src/cartography/europePanorama.js';
+import {mapAuthoritiesForPerson} from '../src/cartography/mapAuthorities.js';
 import {personClaims} from '../src/evidence/claims.js';
 import {EASTERN_EUROPE_REVIEWS} from '../src/evidence/easternEuropeReviews.js';
-import {EASTERN_EUROPE_COLORS} from '../src/data/easternEuropeColors.js';
-const data=JSON.parse(fs.readFileSync(new URL('../prototypes/euv-locations/corridor-locations.json',import.meta.url)));
+import {EASTERN_EUROPE_COLORS} from '../src/cartography/easternEuropeColors.js';
+const data=JSON.parse(fs.readFileSync(new URL('../data/cartography/corridor-locations.json',import.meta.url)));
 const by=new Map(PERSONAS.map(p=>[p.id,p]));
 const owner=(year,id)=>new Set((europeMosaicAt(data,year,PERSONAS).byLocation.get(id)||[]).map(l=>l.entityId));
 const ids=(id,year,options)=>new Set(mapAuthoritiesForPerson(by.get(id),year,data,options).flatMap(e=>e.ids));

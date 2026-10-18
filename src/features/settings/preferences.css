@@ -1,0 +1,112 @@
+html[data-eade-text-size="large"] #root{zoom:1.1}
+html[data-eade-text-size="larger"] #root{zoom:1.2}
+html[data-eade-motion="reduce"] *,html[data-eade-motion="reduce"] *::before,html[data-eade-motion="reduce"] *::after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important;transition-duration:.01ms!important}
+html[data-eade-theme="dark"]{color-scheme:dark;--eade-paper:#24221f;--eade-paper-soft:#2e2a25;--eade-paper-bright:#38332c;--eade-ink:#f5eddf;--eade-muted:#d3c5ae;--eade-muted-soft:#bbae98;--eade-wine:#e5aaa2;--eade-wine-dark:#f2c6bd;--eade-wine-fill:#8c3b37;--eade-wine-fill-hover:#a04842;--eade-gold:#ddb67b;--eade-border:#62594d;--eade-border-strong:#8b7a66;--eade-shadow-card:0 8px 30px rgba(0,0,0,.2)}
+html[data-eade-theme="dark"] body{background:var(--eade-paper);color:var(--eade-ink)}
+html[data-eade-theme="dark"] .site-header{background:rgba(46,42,37,.97);color:var(--eade-ink)}
+html[data-eade-theme="dark"] .site-brand,html[data-eade-theme="dark"] .site-nav a{color:var(--eade-ink)}
+html[data-eade-theme="dark"] .site-nav a:hover,html[data-eade-theme="dark"] .settings-trigger:hover{background:var(--eade-paper-bright)}
+html[data-eade-theme="dark"] .site-footer{background:#2b2722;color:var(--eade-muted)}
+html[data-eade-theme="dark"] .site-footer a,html[data-eade-theme="dark"] .site-footer button,html[data-eade-theme="dark"] .site-footer-group>strong{color:var(--eade-muted)}
+html[data-eade-theme="dark"] .public-site,html[data-eade-theme="dark"] .wrap{background:var(--eade-paper);color:var(--eade-ink)}
+html[data-eade-theme="dark"] .public-site :is(.public-hero>p,.public-page-title>p,.public-person-hero-copy>p,.public-content-card p,.public-story-card p,.public-about-strip p,.public-breadcrumbs,.public-person-copy small,.story-text,.story-chapters a,.story-reading-meta>span){color:var(--eade-muted)}
+html[data-eade-theme="dark"] .public-site :is(.public-door-card,.public-person-card,.public-story-card,.public-content-card,.public-entity-card,.public-search,.public-secondary,.public-info-card,.public-follow-grid>div,.public-loading,.public-error,.public-inline-warning){background:var(--eade-paper-bright);border-color:var(--eade-border);color:var(--eade-ink)}
+html[data-eade-theme="dark"] .public-site :is(.public-door-card strong,.public-person-copy strong,.public-story-card h2,.public-story-card h3,.public-search input,.public-page-title h1,.story-heading h1,.story-reading h2){color:var(--eade-ink)}
+html[data-eade-theme="dark"] .public-site :is(.public-page-icon,.public-person-badges span,.public-person-badges a,.public-entity-members a,.public-relation-row a,.public-reigns>div,.story-chapters .is-current a){background:var(--eade-paper-soft);color:var(--eade-ink);border-color:var(--eade-border)}
+html[data-eade-theme="dark"] .public-site :is(.public-section,.public-hero-stats,.public-person-hero,.territory-page section,.territory-page .territory-hero,.story-chapters li){border-color:var(--eade-border)}
+html[data-eade-theme="dark"] .public-site :is(.public-hero-eyebrow,.public-section-heading span,.public-page-title>span,.public-story-card>span,.story-eyebrow,.story-chapter-year){color:var(--eade-gold)}
+html[data-eade-theme="dark"] .public-site :is(.public-section-heading>a,.public-entity-action,.story-pagination a,.story-people a,.story-sources a){color:var(--eade-wine)}
+html[data-eade-theme="dark"] .public-site :is(.public-hero-stats strong,.public-door-card>svg,.public-person-card>svg,.public-story-card b,.public-story-card>a,.public-hero-stats span){color:var(--eade-wine)}
+html[data-eade-theme="dark"] .wrap :is(.filters-panel,.workspace-topbar,.tl-scroll-container,.tl-header,.tl-corner,.minimap,.bio-panel,.map-panel,.tree-panel,.atlas-panel,.search-box){background-color:var(--eade-paper-soft);color:var(--eade-ink);border-color:var(--eade-border)}
+html[data-eade-theme="dark"] .wrap :is(.workspace-topbar-secondary,.tree-scroll,.tl-axis,.tl-sticky-col,.timeline-resizable,.workspace-main,.workspace-inspector){background:var(--eade-paper-soft);color:var(--eade-ink);border-color:var(--eade-border)}
+html[data-eade-theme="dark"] .wrap :is(.panel-title,.toolbar-label,.global-year-summary,.tree-scope-label,.timeline-zoom-value,.search-count){color:var(--eade-muted)}
+html[data-eade-theme="dark"] .wrap :is(.atlas-start h2,.atlas-start p,.atlas-start>svg){color:var(--eade-ink)}
+html[data-eade-theme="dark"] .wrap :is(.tl-event-marker,.tl-event-row.selected .tl-sticky-col){background:var(--eade-paper-bright);color:var(--eade-ink)}
+html[data-eade-theme="dark"] .wrap :is(.header h1,.header .sub,.note,.filter-title,.tl-axis,.tl-corner,.search-count){color:var(--eade-ink)}
+html[data-eade-theme="dark"] .wrap :is(input,select,textarea,button){color-scheme:dark}
+html[data-eade-theme="dark"] .wrap .dinastia-expand-btn:hover{background:var(--eade-paper-bright);color:var(--eade-ink)}
+html[data-eade-theme="dark"] .reading-skeleton{--skeleton-fill:#5b5145;--skeleton-border:var(--eade-border)}
+
+/* Dark surfaces must change with their foreground: many Atlas and Challenge
+   panels use fixed light colours outside the shared theme tokens. */
+html[data-eade-theme="dark"] .public-site .public-info-links a{background:var(--eade-paper-soft);color:var(--eade-wine-dark);border:1px solid var(--eade-border)}
+html[data-eade-theme="dark"] .public-site .public-info-links a:hover{background:var(--eade-paper-bright);border-color:var(--eade-border-strong)}
+html[data-eade-theme="dark"] .public-site .public-info-card :is(h2,p){color:var(--eade-ink)}
+html[data-eade-theme="dark"] .public-site .public-info-card p{color:var(--eade-muted)}
+
+html[data-eade-theme="dark"] .desafio-page :is(.desafio-level-card,.desafio-mode-card,.desafio-question-card,.desafio-option,.desafio-order-card,.desafio-stat,.desafio-portrait-result,.desafio-name-suggestions){background:var(--eade-paper-bright);border-color:var(--eade-border);color:var(--eade-ink)}
+html[data-eade-theme="dark"] .desafio-page :is(.desafio-mode-card.is-path,.desafio-mode-card.is-streak,.desafio-mode-card.is-portrait,.desafio-mode-card.is-daily){background:linear-gradient(145deg,var(--eade-paper-bright),var(--eade-paper-soft))}
+html[data-eade-theme="dark"] .desafio-page :is(.desafio-hub h1,.desafio-final h2,.desafio-question-card h2,.desafio-mode-card strong,.desafio-option-copy strong,.desafio-order-card strong,.desafio-level-card b){color:var(--eade-ink)}
+html[data-eade-theme="dark"] .desafio-page :is(.desafio-intro,.desafio-mode-card>span:not(.desafio-mode-icon),.desafio-mode-card small,.desafio-level-card small,.desafio-option-copy small,.desafio-order-card small,.desafio-portrait-result span,.desafio-portrait-result small,.desafio-name-entry>small){color:var(--eade-muted)}
+html[data-eade-theme="dark"] .desafio-page :is(.desafio-level-card>span,.desafio-stat span,.desafio-fineprint,.desafio-question-topline small,.desafio-name-suggestions span){color:var(--eade-muted-soft)}
+html[data-eade-theme="dark"] .desafio-page :is(.desafio-option,.desafio-order-card,.desafio-mode-card):hover:not(:disabled){background:var(--eade-paper-soft);border-color:var(--eade-border-strong)}
+html[data-eade-theme="dark"] .desafio-page .desafio-option.is-correct{background:#29402e;border-color:#729b77;color:#eaf5e7}
+html[data-eade-theme="dark"] .desafio-page .desafio-option.is-wrong{background:#4a2d2b;border-color:#bb7b74;color:#f5dfd8}
+html[data-eade-theme="dark"] .desafio-page :is(.desafio-option-portrait,.desafio-option-monogram,.desafio-portrait-stage,.desafio-portrait-result-image){background:var(--eade-paper-soft);border-color:var(--eade-border)}
+html[data-eade-theme="dark"] .desafio-page :is(.desafio-name-input,.desafio-share-panel input){background:var(--eade-paper-soft);border-color:var(--eade-border);color:var(--eade-ink)}
+html[data-eade-theme="dark"] .desafio-page :is(.desafio-name-input input,.desafio-name-suggestions button){color:var(--eade-ink)}
+html[data-eade-theme="dark"] .desafio-page .desafio-name-entry>label{color:var(--eade-muted)}
+html[data-eade-theme="dark"] .desafio-page :is(.desafio-racha-rule,.desafio-discovered,.desafio-share-panel){background:var(--eade-paper-soft);border-color:var(--eade-border);color:var(--eade-muted)}
+html[data-eade-theme="dark"] .desafio-page :is(.desafio-secondary,.desafio-back,.desafio-lifelines button,.desafio-discovered button){background:var(--eade-paper-bright);border-color:var(--eade-border);color:var(--eade-ink)}
+html[data-eade-theme="dark"] .desafio-page :is(.desafio-streak-live,.desafio-record){background:var(--eade-paper-bright);color:var(--eade-gold)}
+html[data-eade-theme="dark"] .desafio-page :is(.desafio-hint,.desafio-clues>div,.desafio-racha-answer){background:var(--eade-paper-soft);border-color:var(--eade-border);color:var(--eade-ink)}
+html[data-eade-theme="dark"] .desafio-page .desafio-name-suggestions button:hover{background:var(--eade-paper-soft)}
+
+html[data-eade-theme="dark"] .wrap :is(.box,.box.selected,.tree-toolbar,.nav-btn,.search-nav-btn,.filter-active-overview,.bio-portrait-card){background:var(--eade-paper-bright);border-color:var(--eade-border);color:var(--eade-ink)}
+html[data-eade-theme="dark"] .wrap :is(.box .name,.bio-nombre,.bio-panel dd){color:var(--eade-ink)}
+html[data-eade-theme="dark"] .wrap :is(.box .role,.bio-texto,.bio-portrait-caption,.bio-portrait-caption strong,.bio-portrait-rights,.filter-active-overview-label,.filter-active-overview-values){color:var(--eade-muted)}
+html[data-eade-theme="dark"] .wrap .box.year-ruling:not(.hovered):not(.path-hl):not(.search-current){background:var(--eade-paper-bright);color:var(--eade-ink);outline-color:var(--eade-gold)}
+html[data-eade-theme="dark"] .wrap .box.story-related .name{color:var(--eade-ink)}
+html[data-eade-theme="dark"] .wrap .box.story-related .role{color:var(--eade-muted)}
+html[data-eade-theme="dark"] .tree-export-dialog{background:var(--eade-paper-soft);border-color:var(--eade-border);color:var(--eade-ink)}
+html[data-eade-theme="dark"] .tree-export-dialog :is(select,textarea,.tree-export-actions button,button:not(.tree-export-close)){background:var(--eade-paper-bright);border-color:var(--eade-border);color:var(--eade-ink)}
+html[data-eade-theme="dark"] .tree-export-dialog :is(p,figcaption){color:var(--eade-muted)}
+html[data-eade-theme="dark"] .tree-export-dialog .export-preview{background:var(--eade-paper-bright);border-color:var(--eade-border)}
+html[data-eade-theme="dark"] .wrap :is(.bio-full-profile-link,.bio-portrait-caption a,.filter-section-count,.atlas-scope button){color:var(--eade-wine-dark)}
+html[data-eade-theme="dark"] .wrap .bio-portrait-frame{background:var(--eade-paper-soft);border-color:var(--eade-border)}
+html[data-eade-theme="dark"] .wrap .nav-btn.active{background:#75332f;border-color:#a0635c;color:#fff5e8}
+html[data-eade-theme="dark"] .wrap :is(.nav-btn,.search-nav-btn):hover{background:var(--eade-paper-soft)}
+html[data-eade-theme="dark"] .wrap :is(.global-year-number,.history-playback-btn,.global-year-reset,.tree-toolbar button){background:var(--eade-paper-bright);border-color:var(--eade-border);color:var(--eade-ink)}
+html[data-eade-theme="dark"] .wrap :is(.history-playback-btn,.nav-btn).active{background:#75332f;border-color:#a0635c;color:#fff5e8}
+html[data-eade-theme="dark"] .wrap :is(.filter-section-title,.filter-section-meta,.filter-section-count,.panel-count,.bio-sobrenombre){color:var(--eade-muted)}
+
+/* Biography relationship and discovery labels share the Atlas dark palette. */
+html[data-eade-theme="dark"] .wrap :is(.bio-panel dt,.bio-relation-label,.bio-relations h4,.bio-discover-group>span,.bio-discover h4,.bio-relations-empty,.bio-empty,.bio-history-position){color:var(--eade-muted)}
+html[data-eade-theme="dark"] .wrap :is(.bio-collapsible-toggle,.bio-panel .close){color:var(--eade-muted)}
+html[data-eade-theme="dark"] .wrap .bio-collapsible-toggle:is(:hover,:focus-visible){color:var(--eade-ink)}
+html[data-eade-theme="dark"] .wrap :is(.bio-relations,.bio-collapsible,.bio-collapsible:last-of-type){border-color:var(--eade-border)}
+html[data-eade-theme="dark"] .wrap .bio-relation-link,
+html[data-eade-theme="dark"] .wrap .bio-discover-links a,
+html[data-eade-theme="dark"] .wrap .bio-discover-links a:visited{background:var(--eade-paper-bright);border-color:var(--eade-border-strong);color:var(--eade-ink)}
+html[data-eade-theme="dark"] .wrap .bio-relation-link.is-lover{background:#48303d;border-color:#a76b8a;color:#f5d6e7}
+html[data-eade-theme="dark"] .wrap .bio-relation-link:is(:hover,:focus-visible),
+html[data-eade-theme="dark"] .wrap .bio-discover-links a:is(:hover,:focus-visible){background:var(--eade-paper);border-color:var(--eade-gold);color:var(--eade-ink)}
+html[data-eade-theme="dark"] .wrap .bio-relation-link.is-disabled{opacity:.75;color:var(--eade-muted)}
+
+/* Favorites have their own popover, so its text and separators must follow the theme. */
+html[data-eade-theme="dark"] .wrap .favorites-menu :is(.favorites-menu-head,.favorite-menu-row>button:first-child,.favorites-filter-toggle){color:var(--eade-ink)}
+html[data-eade-theme="dark"] .wrap .favorites-menu :is(.favorites-menu-head span,.favorites-empty,.favorite-remove){color:var(--eade-muted)}
+html[data-eade-theme="dark"] .wrap .favorites-menu :is(.favorites-menu-list,.favorite-menu-row){border-color:var(--eade-border)}
+html[data-eade-theme="dark"] .wrap .favorites-menu .favorite-menu-row>button:first-child:hover{color:var(--eade-wine-dark)}
+html[data-eade-theme="dark"] .wrap .favorites-menu .favorites-filter-toggle input{accent-color:#a9655d}
+
+/* Atlas controls and chronology: keep the selected state and text legible on
+   the same dark surfaces as the rest of the workspace. */
+html[data-eade-theme="dark"] .wrap .favorites-menu{background:var(--eade-paper-bright);border-color:var(--eade-border);color:var(--eade-ink)}
+html[data-eade-theme="dark"] .wrap :is(.tl-header,.tl-corner,.tl-axis){background:var(--eade-paper-soft);border-color:var(--eade-border);color:var(--eade-muted)}
+html[data-eade-theme="dark"] .wrap :is(.tl-row,.tl-sticky-col){border-color:var(--eade-border)}
+
+/* Project dialogs open above the Atlas, outside .wrap. Theme their entire
+   surface rather than leaving a large light sheet over the dark workspace. */
+html[data-eade-theme="dark"] .project-modal{background:var(--eade-paper-soft);border-color:var(--eade-border);color:var(--eade-ink)}
+html[data-eade-theme="dark"] .project-modal-head{border-color:var(--eade-border)}
+html[data-eade-theme="dark"] .project-modal :is(h2,h3,.project-modal-body,.project-lead,.project-report-template strong){color:var(--eade-ink)}
+html[data-eade-theme="dark"] .project-modal :is(.project-modal-kicker,.project-muted,.project-stat-grid span,.stats-summary-grid span,.stats-curiosities span,.stats-curiosities small,.project-source-list li>span,.project-report-context span){color:var(--eade-muted)}
+html[data-eade-theme="dark"] .project-modal :is(.project-modal-close,.project-stat-grid>div,.stats-summary-grid>div,.project-source-list li,.project-report-context,.project-report-template,.stats-curiosities>div,.project-license-note,.project-modal-body code){background:var(--eade-paper-bright);border-color:var(--eade-border);color:var(--eade-ink)}
+html[data-eade-theme="dark"] .project-modal :is(.project-modal-close:hover,.stats-scope-toggle button:hover:not(.active)){background:var(--eade-paper-soft);color:var(--eade-ink)}
+html[data-eade-theme="dark"] .project-modal :is(.stats-scope-toggle button,.europe-year-action,.europe-year-scope select,.europe-year-compare input,.europe-year-form input,.europe-life-search input){background:var(--eade-paper-bright);border-color:var(--eade-border);color:var(--eade-ink)}
+html[data-eade-theme="dark"] .project-modal .stats-scope-toggle button.active{background:#75332f;border-color:#a0635c;color:#fff5e8}
+html[data-eade-theme="dark"] .project-modal :is(.stats-summary-grid strong,.stats-ranking strong,.europe-year-counts b){color:var(--eade-wine-dark)}
+html[data-eade-theme="dark"] .project-modal :is(.stats-ranking li,.europe-year-details,.europe-government-grid article){border-color:var(--eade-border)}
+html[data-eade-theme="dark"] .project-modal :is(.stats-curiosities strong,.europe-year-dialog h4){color:var(--eade-ink)}
+html[data-eade-theme="dark"] .project-modal :is(.europe-year-action,.europe-person-link,.europe-year-dialog a,.europe-year-details>summary){color:var(--eade-wine-dark)}

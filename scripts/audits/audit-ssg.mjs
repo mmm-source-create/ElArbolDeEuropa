@@ -3,8 +3,8 @@ import fs from 'node:fs/promises';
 import path from 'node:path';
 import {pathToFileURL} from 'node:url';
 import {loadEnv} from 'vite';
-import {STATIC_SCHEMA,STATIC_DATA_ID,STATIC_FOLDERS,validatePage} from '../../src/public/staticData.js';
-import {DEFAULT_SITE_URL,entityMeta,publicMeta} from '../../src/public/publicMeta.js';
+import {STATIC_SCHEMA,STATIC_DATA_ID,STATIC_FOLDERS,validatePage} from '../../src/features/public/staticData.js';
+import {DEFAULT_SITE_URL,entityMeta,publicMeta} from '../../src/features/public/publicMeta.js';
 import {canonicalDynastySlug} from '../../src/data/dynastyAliases.js';
 import {routesFromSitemap,assetsForStaticPage,escapeHtml} from '../lib/ssg-utils.mjs';
 
@@ -40,7 +40,7 @@ export function auditDocument(html,page,assets,siteUrl=DEFAULT_SITE_URL) {
  return errors;
 }
 
-export async function auditBuild(root=process.cwd()) {
+async function auditBuild(root=process.cwd()) {
  const dist=path.join(root,'dist');
  const siteUrl=loadEnv('production',root,'VITE_').VITE_SITE_URL||DEFAULT_SITE_URL;
  const routes=routesFromSitemap(await fs.readFile(path.join(dist,'sitemap-full.xml'),'utf8'),siteUrl);

@@ -1,9 +1,9 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import {fileURLToPath} from 'node:url';
-import {atlasPoliticalMosaicAt, atlasMosaicPalette} from '../../src/data/atlasMosaic.js';
+import {atlasPoliticalMosaicAt, atlasMosaicPalette} from '../../src/cartography/atlasMosaic.js';
 import {auditReportPath} from '../lib/project-paths.mjs';
-import {territorialIdentity} from '../../src/data/territorialIdentity.js';
+import {territorialIdentity} from '../../src/cartography/territorialIdentity.js';
 
 // A region needs coverage for every cell in every year, including cells that
 // receive color elsewhere in time. The global never-colored list cannot prove it.
@@ -57,8 +57,8 @@ if (process.argv[1] && path.resolve(process.argv[1]) === fileURLToPath(import.me
     ['bosnia-hum-review.json', 'audit-regional-continuity-report.json'],
     ['posavina-ragusa-review.json', 'audit-posavina-ragusa-report.json'],
   ]) {
-    const report = auditRegionalContinuity(read('../../prototypes/euv-locations/corridor-locations.json'),
-      read('../../prototypes/euv-locations/location-inventory.json'), read('../../prototypes/euv-locations/' + reviewFile));
+    const report = auditRegionalContinuity(read('../../data/cartography/corridor-locations.json'),
+      read('../../data/cartography/location-inventory.json'), read('../../data/cartography/' + reviewFile));
     fs.writeFileSync(auditReportPath(output), JSON.stringify(report, null, 2) + '\n');
     console.log(report.scope.name + ': ' + JSON.stringify(report.summary));
     if (report.summary.missingCellYears || report.summary.unexplainedCellYears

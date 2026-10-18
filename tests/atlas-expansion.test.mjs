@@ -1,14 +1,14 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
-import {PERSONAS} from '../src/personas.jsx';
-import {mapAuthoritiesForPerson} from '../src/data/mapAuthorities.js';
-import {pilotLocationsFor, reviewedLayerLocations} from '../src/data/locationMapPilot.js';
+import {PERSONAS} from '../src/data/personas.js';
+import {mapAuthoritiesForPerson} from '../src/cartography/mapAuthorities.js';
+import {pilotLocationsFor, reviewedLayerLocations} from '../src/cartography/locationMapPilot.js';
 import {AUTHORITY_GAPS_REVIEWS} from '../src/evidence/authorityGapsReviewData.js';
 import {personClaims} from '../src/evidence/claims.js';
 import {auditarTerritorios} from '../scripts/audits/lib/auditTerritorios.js';
-import {politicalMosaicAt} from '../src/data/locationMosaic.js';
-const data=JSON.parse(fs.readFileSync(new URL('../prototypes/euv-locations/corridor-locations.json',import.meta.url)));
+import {politicalMosaicAt} from '../src/cartography/locationMosaic.js';
+const data=JSON.parse(fs.readFileSync(new URL('../data/cartography/corridor-locations.json',import.meta.url)));
 const people=new Map(PERSONAS.map(p=>[p.id,p]));
 const ids=(id,year)=>mapAuthoritiesForPerson(people.get(id),year,data).flatMap(e=>e.ids);
 

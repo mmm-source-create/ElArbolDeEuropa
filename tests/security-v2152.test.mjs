@@ -2,13 +2,13 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import React from 'react';
 import {renderToStaticMarkup} from 'react-dom/server';
-import {readReview, sanitizeReviewQuestion} from '../src/desafio/learning.js';
-import LearningSession from '../src/desafio/LearningSession.jsx';
+import {readReview, sanitizeReviewQuestion} from '../src/features/desafio/learning.js';
+import LearningSession from '../src/features/desafio/LearningSession.jsx';
 import {secretFindings, activeSvgContent} from '../scripts/audits/audit-security.mjs';
 import {auditScriptPolicy} from '../scripts/lib/security-policy.mjs';
-import {SCREEN_NOTICE_SCRIPT} from '../src/public/screenNotice.js';
-import {metricWithoutParameters} from '../src/monitoring.js';
-import {resolveSiteUrl, DEFAULT_SITE_URL} from '../src/siteConfig.js';
+import {SCREEN_NOTICE_SCRIPT} from '../src/features/public/screenNotice.js';
+import {metricWithoutParameters} from '../src/app/monitoring.js';
+import {resolveSiteUrl, DEFAULT_SITE_URL} from '../src/app/siteConfig.js';
 
 const question = {firma: 'pregunta', pregunta: '¿Quién?', explicacion: 'Contexto', etiqueta: 'Repaso', formato: 'opciones', correctaId: 'A', opciones: [{id: 'A', label: 'A'}, {id: 'B', label: 'B'}]};
 const storage = data => ({getItem: () => JSON.stringify(data)});

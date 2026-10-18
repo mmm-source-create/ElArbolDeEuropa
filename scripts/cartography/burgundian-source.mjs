@@ -2,8 +2,8 @@ import {mapDataFile} from '../lib/project-paths.mjs';
 // Generate the dated succession from the Atlas, keeping the geographic
 // crosswalk separate from the historical claim that a person held a title.
 import fs from 'node:fs';
-import { PERSONAS } from '../../src/personas.jsx';
-import { idsDeReinoEnAño } from '../../src/Territorios.jsx';
+import { PERSONAS } from '../../src/data/personas.js';
+import { idsDeReinoEnAño } from '../../src/cartography/kingdomMaps.js';
 
 const succession = [
   { id: 'FEL3BORG', from: 1419, through: 1466 },

@@ -1,15 +1,15 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
-import {PERSONAS} from '../src/personas.jsx';
-import {mapAuthoritiesForPerson} from '../src/data/mapAuthorities.js';
-import {atlasPoliticalMosaicAt} from '../src/data/atlasMosaic.js';
-import {territorialColor} from '../src/data/territorialIdentity.js';
+import {PERSONAS} from '../src/data/personas.js';
+import {mapAuthoritiesForPerson} from '../src/cartography/mapAuthorities.js';
+import {atlasPoliticalMosaicAt} from '../src/cartography/atlasMosaic.js';
+import {territorialColor} from '../src/cartography/territorialIdentity.js';
 import {mergeMapExpansions} from '../scripts/cartography/merge-map-expansions.mjs';
 
 const read = name => JSON.parse(fs.readFileSync(new URL(name, import.meta.url), 'utf8'));
-const data = read('../prototypes/euv-locations/corridor-locations.json');
-const review = read('../prototypes/euv-locations/reference-gap-review.json');
+const data = read('../data/cartography/corridor-locations.json');
+const review = read('../data/cartography/reference-gap-review.json');
 const people = new Map(PERSONAS.map(person => [person.id, person]));
 const authority = (id, year, territory) => mapAuthoritiesForPerson(people.get(id), year, data)
   .find(entry => entry.territory === territory);
@@ -62,8 +62,8 @@ test('southern Moldavian areas remain princely and do not swallow the ports or B
 });
 
 test('the additions are reproducible, measured SVG surfaces with independent dated evidence', () => {
-  const inventory = read('../prototypes/euv-locations/location-inventory.json');
-  const measured = read('../prototypes/euv-locations/regional-extent-cells.json');
+  const inventory = read('../data/cartography/location-inventory.json');
+  const measured = read('../data/cartography/regional-extent-cells.json');
   const newIds = new Set(review.territories.flatMap(layer => layer.versions.flatMap(version => version.ids)));
   assert.equal(newIds.size, 31);
   for (const id of newIds) {

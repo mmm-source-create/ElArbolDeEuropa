@@ -1,9 +1,9 @@
-import {STATIC_SCHEMA} from '../src/public/staticData.js';
+import {STATIC_SCHEMA} from '../src/features/public/staticData.js';
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { resolverRuta } from '../src/routing.js';
-import { storyPath, storyAtlasUrl, safeStoryReturn, readStoryProgress, saveStoryProgress, STORY_PROGRESS_KEY } from '../src/stories/storyModel.js';
-import { staticRoute, validatePage, initialPageForLocation } from '../src/public/staticData.js';
+import { resolverRuta } from '../src/app/routing.js';
+import { storyPath, storyAtlasUrl, safeStoryReturn, readStoryProgress, saveStoryProgress, STORY_PROGRESS_KEY } from '../src/features/stories/storyModel.js';
+import { staticRoute, validatePage, initialPageForLocation } from '../src/features/public/staticData.js';
 const story = {id:'test',slug:'test',nombre:'Prueba',storyTitle:'Prueba',descripcion:'Una historia',chapter:null,pasos:[{anio:1250,titulo:'Inicio',texto:'Texto',personas:['A','B']},{anio:1260,titulo:'Final',texto:'Final',personas:['C']}],protagonists:[],fuentes:[]};
 const storage = () => { const m=new Map();return {getItem:k=>m.get(k),setItem:(k,v)=>m.set(k,v)}; };
 test('entrada, capítulo y exploración son rutas distintas y los enlaces antiguos siguen resolviendo',()=>{

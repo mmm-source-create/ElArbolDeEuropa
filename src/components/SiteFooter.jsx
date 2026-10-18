@@ -1,4 +1,4 @@
-import {SITE_NAME} from "../siteConfig.js";
+import {SITE_NAME} from "../app/siteConfig.js";
 import {ProjectSupportLink} from './ProjectSupport.jsx';
 
 export default function SiteFooter({ compact = false, onOpenStats, onReport, locale = "es" }) {

@@ -1,4 +1,4 @@
-import {gobiernosDe} from '../../../src/data/personAccessors.js';
+import {gobiernosDe} from '../../../src/domain/genealogy/personAccessors.js';
 import {gobiernoEfectivo} from '../../../src/data/territorios.js';
 
 export function earlyPeopleInventory(people,before=1200){

@@ -1,5 +1,5 @@
 import React from 'react';
-import {formatDocumentaryDate} from '../utils/documentaryDates.js';
+import {formatDocumentaryDate} from '../domain/time/documentaryDates.js';
 
 export default function DocumentationNotes({persona}) {
   const dates=Object.entries(persona?.documentacion?.fechas || {});

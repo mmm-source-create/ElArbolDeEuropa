@@ -1,13 +1,13 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import {projectRoot} from '../lib/project-paths.mjs';
-import {PERSONAS} from '../../src/personas.jsx';
+import {PERSONAS} from '../../src/data/personas.js';
 import {PERSONAL_ATLAS_REVIEWS} from '../../src/evidence/personalAtlasReviews.js';
-import {mapAuthoritiesForPerson} from '../../src/data/mapAuthorities.js';
-import {colorTerritorioEnMapa} from '../../src/Territorios.jsx';
-import {authorityColor} from '../../src/data/mapColors.js';
-import {atlasPoliticalMosaicAt} from '../../src/data/atlasMosaic.js';
-const read=name=>JSON.parse(fs.readFileSync(path.join(projectRoot,'prototypes/euv-locations',name)));
+import {mapAuthoritiesForPerson} from '../../src/cartography/mapAuthorities.js';
+import {colorTerritorioEnMapa} from '../../src/cartography/kingdomMaps.js';
+import {authorityColor} from '../../src/cartography/mapColors.js';
+import {atlasPoliticalMosaicAt} from '../../src/cartography/atlasMosaic.js';
+const read=name=>JSON.parse(fs.readFileSync(path.join(projectRoot,'data/cartography',name)));
 const data=read('corridor-locations.json');data.burgundy=read('burgundian-locations.json');
 const people=new Map(PERSONAS.map(p=>[p.id,p]));
 const cases=[['CARLOS5',1530],['CARLOS5',1550],['FEL2ESP',1560],['FEL3ESP',1610],

@@ -2,12 +2,12 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import path from 'node:path';
 import test from 'node:test';
-import { mapLocationsForGovernment, pilotBurgundianGovernmentsFor, pilotImperialFrameFor, pilotLocationContext, pilotLocationsFor } from '../src/data/locationMapPilot.js';
+import { mapLocationsForGovernment, pilotBurgundianGovernmentsFor, pilotImperialFrameFor, pilotLocationContext, pilotLocationsFor } from '../src/cartography/locationMapPilot.js';
 
 const data = JSON.parse(fs.readFileSync(path.resolve(import.meta.dirname,
-  '../prototypes/euv-locations/corridor-locations.json'), 'utf8'));
+  '../data/cartography/corridor-locations.json'), 'utf8'));
 data.burgundy = JSON.parse(fs.readFileSync(path.resolve(import.meta.dirname,
-  '../prototypes/euv-locations/burgundian-locations.json'), 'utf8'));
+  '../data/cartography/burgundian-locations.json'), 'utf8'));
 
 test('the Atlas trial paints only audited dated jurisdictions, not every possession of a person', () => {
   const crown = pilotLocationsFor(data, 'Polonia', 1500);

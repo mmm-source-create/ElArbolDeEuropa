@@ -3,7 +3,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import test from 'node:test';
 
-const lab = path.resolve(import.meta.dirname, '../prototypes/euv-locations');
+const lab = path.resolve(import.meta.dirname, '../data/cartography');
 const data = JSON.parse(fs.readFileSync(path.join(lab, 'burgundian-locations.json'), 'utf8'));
 const carlos = JSON.parse(fs.readFileSync(path.join(lab, 'carlos-v-locations.json'), 'utf8'));
 const svg = fs.readFileSync(path.join(lab, 'euv-locations-crop.svg'), 'utf8');

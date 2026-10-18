@@ -2,8 +2,8 @@ import {auditReportPath} from '../lib/project-paths.mjs';
 import fs from 'node:fs';
 import path from 'node:path';
 import {fileURLToPath} from 'node:url';
-import {atlasPoliticalMosaicAt, atlasMosaicPalette} from '../../src/data/atlasMosaic.js';
-import {PERSONAS} from '../../src/personas.jsx';
+import {atlasPoliticalMosaicAt, atlasMosaicPalette} from '../../src/cartography/atlasMosaic.js';
+import {PERSONAS} from '../../src/data/personas.js';
 import {locationResearchTargets} from './lib/locationResearchTargets.js';
 
 // Inspect the same annual mosaic shown in the laboratory. A raw version's
@@ -50,7 +50,7 @@ export function auditLocationCoverage(data, inventory, {from=data.from,through=d
 
 if(process.argv[1] && path.resolve(process.argv[1])===fileURLToPath(import.meta.url)) {
   const read=name=>JSON.parse(fs.readFileSync(new URL(name,import.meta.url),'utf8'));
-  const report=auditLocationCoverage(read('../../prototypes/euv-locations/corridor-locations.json'),read('../../prototypes/euv-locations/location-inventory.json'));
+  const report=auditLocationCoverage(read('../../data/cartography/corridor-locations.json'),read('../../data/cartography/location-inventory.json'));
   const destination=process.argv.includes('--output')?process.argv[process.argv.indexOf('--output')+1]:auditReportPath('audit-uncolored-locations-report.json');
   fs.writeFileSync(destination,JSON.stringify(report,null,2)+'\n');
   if(process.argv.includes('--publish')) {

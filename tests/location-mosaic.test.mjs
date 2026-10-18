@@ -1,10 +1,10 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
-import {mosaicPalette, politicalMosaicAt} from '../src/data/locationMosaic.js';
-import {atlasMosaicPalette, atlasPoliticalMosaicAt} from '../src/data/atlasMosaic.js';
+import {mosaicPalette, politicalMosaicAt} from '../src/cartography/locationMosaic.js';
+import {atlasMosaicPalette, atlasPoliticalMosaicAt} from '../src/cartography/atlasMosaic.js';
 
-const data = JSON.parse(fs.readFileSync(new URL('../prototypes/euv-locations/corridor-locations.json', import.meta.url)));
+const data = JSON.parse(fs.readFileSync(new URL('../data/cartography/corridor-locations.json', import.meta.url)));
 const palette = mosaicPalette(data);
 const layer = (snapshot, name) => snapshot.layers.find(entry => entry.name === name);
 

@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "scope": "All retained EU V map assets and laboratories, reviewed audit snapshots and legacy geometry. Runtime generators are catalogued in scripts/README.md.",
+  "scope": "All retained EU V map assets (data/cartography) and laboratories (labs/cartography), reviewed audit snapshots and legacy geometry. Runtime generators are catalogued in scripts/README.md.",
   "kinds": [
     "accepted-cartography",
     "accepted-inventory",
@@ -13,6 +13,253 @@
     "visual-reference"
   ],
   "files": [
+    {
+      "path": "data/cartography/MapChart_Map.svg",
+      "kind": "geometry-reference",
+      "maintenance": "Earlier MapChart province edition; geometry reference, not proof of historical jurisdiction."
+    },
+    {
+      "path": "data/cartography/README.md",
+      "kind": "documentation"
+    },
+    {
+      "path": "data/cartography/balkan-expansion-locations.json",
+      "kind": "accepted-cartography",
+      "producer": "scripts/cartography/balkan-expansion-source.mjs"
+    },
+    {
+      "path": "data/cartography/balkan-spatial-cells.json",
+      "kind": "accepted-inventory",
+      "producer": "scripts/cartography/balkan-spatial-source.py"
+    },
+    {
+      "path": "data/cartography/balkans-full-review.json",
+      "kind": "accepted-cartography",
+      "maintenance": "Revisión explícita y documentada; el inventario geográfico no asigna soberanía."
+    },
+    {
+      "path": "data/cartography/balkans-geographic-cells.json",
+      "kind": "accepted-inventory",
+      "producer": "scripts/cartography/build-balkans-geography.py",
+      "maintenance": "Revisión explícita y documentada; el inventario geográfico no asigna soberanía."
+    },
+    {
+      "path": "data/cartography/balkans-geography.json",
+      "kind": "historical-selection",
+      "maintenance": "Revisión explícita y documentada; el inventario geográfico no asigna soberanía."
+    },
+    {
+      "path": "data/cartography/bosnia-hum-review.json",
+      "kind": "historical-selection",
+      "maintenance": "Reviewed regional phases and authority scopes; maintained explicitly with cited source passages."
+    },
+    {
+      "path": "data/cartography/burgundian-locations.json",
+      "kind": "accepted-cartography",
+      "producer": "scripts/cartography/build-burgundian-map.py"
+    },
+    {
+      "path": "data/cartography/burgundian-source.json",
+      "kind": "mandate-export",
+      "producer": "scripts/cartography/burgundian-source.mjs"
+    },
+    {
+      "path": "data/cartography/carlos-v-locations.json",
+      "kind": "accepted-cartography",
+      "producer": "scripts/cartography/build-carlos-v-map.py"
+    },
+    {
+      "path": "data/cartography/carlos-v-overrides.json",
+      "kind": "historical-selection",
+      "maintenance": "Reviewed selection maintained explicitly; no standalone generator recorded."
+    },
+    {
+      "path": "data/cartography/carlos-v-source.json",
+      "kind": "mandate-export",
+      "producer": "scripts/cartography/carlos-v-source.mjs"
+    },
+    {
+      "path": "data/cartography/central-expansion-locations.json",
+      "kind": "accepted-cartography",
+      "producer": "scripts/cartography/central-expansion-source.py"
+    },
+    {
+      "path": "data/cartography/coastal-subdivisions.json",
+      "kind": "geometry-reference",
+      "maintenance": "Originales archivados y divisiones internas costeras con costuras aproximadas; verificación de contorno y no solapamiento.",
+      "producer": "scripts/cartography/apply-coastal-subdivisions.py"
+    },
+    {
+      "path": "data/cartography/continuity-anchors.json",
+      "kind": "historical-selection",
+      "maintenance": "Reviewed selection maintained explicitly; no standalone generator recorded."
+    },
+    {
+      "path": "data/cartography/continuity-review.json",
+      "kind": "accepted-cartography",
+      "producer": "scripts/cartography/continuity-source.py"
+    },
+    {
+      "path": "data/cartography/corridor-locations.json",
+      "kind": "accepted-cartography",
+      "producer": "scripts/cartography/build-corridor-map.py"
+    },
+    {
+      "path": "data/cartography/corridor-overrides.json",
+      "kind": "historical-selection",
+      "maintenance": "Reviewed selection maintained explicitly; no standalone generator recorded."
+    },
+    {
+      "path": "data/cartography/corridor-source.json",
+      "kind": "mandate-export",
+      "producer": "scripts/cartography/corridor-source.mjs"
+    },
+    {
+      "path": "data/cartography/early-medieval-review.json",
+      "kind": "historical-selection"
+    },
+    {
+      "path": "data/cartography/eastern-europe-chronology.json",
+      "kind": "accepted-cartography",
+      "maintenance": "Revisión oriental V5.26: inventarios explícitos, fuentes locales y sucesiones fechadas; regenerar después de una revisión documental."
+    },
+    {
+      "path": "data/cartography/eastern-europe-full-review.json",
+      "kind": "accepted-cartography",
+      "maintenance": "Revisión oriental V5.26: inventarios explícitos, fuentes locales y sucesiones fechadas; regenerar después de una revisión documental.",
+      "producer": "scripts/cartography/build-eastern-europe-routes.mjs"
+    },
+    {
+      "path": "data/cartography/eastern-europe-geography.json",
+      "kind": "accepted-inventory",
+      "maintenance": "Revisión oriental V5.26: inventarios explícitos, fuentes locales y sucesiones fechadas; regenerar después de una revisión documental."
+    },
+    {
+      "path": "data/cartography/eastern-europe-local-phases.json",
+      "kind": "accepted-cartography",
+      "maintenance": "Revisión oriental V5.26: inventarios explícitos, fuentes locales y sucesiones fechadas; regenerar después de una revisión documental."
+    },
+    {
+      "path": "data/cartography/euv-locations-crop.svg",
+      "kind": "accepted-cartography",
+      "producer": "scripts/cartography/crop_svg.py"
+    },
+    {
+      "path": "data/cartography/extended-corridors-locations.json",
+      "kind": "accepted-cartography",
+      "producer": "scripts/cartography/extended-corridors-source.py"
+    },
+    {
+      "path": "data/cartography/france-low-countries-full-review.json",
+      "kind": "accepted-cartography"
+    },
+    {
+      "path": "data/cartography/france-low-countries-geographic-cells.json",
+      "kind": "accepted-inventory",
+      "producer": "scripts/cartography/build-geographic-inventory.py"
+    },
+    {
+      "path": "data/cartography/france-low-countries-geography.json",
+      "kind": "historical-selection"
+    },
+    {
+      "path": "data/cartography/frontier-anchors.json",
+      "kind": "historical-selection",
+      "maintenance": "Reviewed selection maintained explicitly; no standalone generator recorded."
+    },
+    {
+      "path": "data/cartography/frontier-review.json",
+      "kind": "accepted-cartography",
+      "producer": "scripts/cartography/frontier-source.py"
+    },
+    {
+      "path": "data/cartography/hungary-balkans-locations.json",
+      "kind": "accepted-cartography",
+      "producer": "scripts/cartography/hungary-balkans-source.mjs"
+    },
+    {
+      "path": "data/cartography/iberia-italy-full-review.json",
+      "kind": "accepted-cartography",
+      "maintenance": "Fases, citas locales, composiciones y ámbitos personales adoptados expresamente para Iberia e Italia; no se asigna soberanía por el nombre de una ciudad."
+    },
+    {
+      "path": "data/cartography/iberia-italy-geographic-cells.json",
+      "kind": "accepted-inventory",
+      "producer": "scripts/cartography/build-geographic-inventory.py",
+      "maintenance": "Todas las superficies SVG que cruzan las ventanas, incluyendo cada subtrazado insular. Comando y entorno bloqueado en scripts/README.md."
+    },
+    {
+      "path": "data/cartography/iberia-italy-geography.json",
+      "kind": "historical-selection",
+      "maintenance": "Ventanas geográficas independientes del color y de los gobiernos; no son fronteras políticas."
+    },
+    {
+      "path": "data/cartography/imperial-core-locations.json",
+      "kind": "accepted-cartography",
+      "maintenance": "Reviewed selection maintained explicitly; no standalone generator recorded."
+    },
+    {
+      "path": "data/cartography/location-inventory.json",
+      "kind": "accepted-inventory",
+      "producer": "scripts/cartography/build-location-inventory.py"
+    },
+    {
+      "path": "data/cartography/medieval-balkans-review.json",
+      "kind": "historical-selection",
+      "maintenance": "Selecciones medievales y superficies interiores revisadas explícitamente; ensambladas por scripts/cartography/merge-map-expansions.mjs."
+    },
+    {
+      "path": "data/cartography/poland-lithuania-continuity-review.json",
+      "kind": "accepted-cartography",
+      "producer": "scripts/cartography/build-central-europe-review.mjs"
+    },
+    {
+      "path": "data/cartography/poland-lithuania-frontier-review.json",
+      "kind": "historical-selection"
+    },
+    {
+      "path": "data/cartography/poland-lithuania-full-review.json",
+      "kind": "accepted-cartography",
+      "producer": "scripts/cartography/build-central-europe-review.mjs"
+    },
+    {
+      "path": "data/cartography/poland-lithuania-medieval-review.json",
+      "kind": "historical-selection"
+    },
+    {
+      "path": "data/cartography/poland-lithuania-partitions.json",
+      "kind": "historical-selection"
+    },
+    {
+      "path": "data/cartography/posavina-ragusa-review.json",
+      "kind": "historical-selection",
+      "maintenance": "Fases, ámbitos personales y celdas mixtas documentadas; revisión anual de 1200–1800."
+    },
+    {
+      "path": "data/cartography/priority-territories-locations.json",
+      "kind": "accepted-cartography",
+      "maintenance": "Reviewed selection maintained explicitly; no standalone generator recorded."
+    },
+    {
+      "path": "data/cartography/reference-gap-review.json",
+      "kind": "historical-selection",
+      "maintenance": "Reviewed selection maintained explicitly; no standalone generator recorded."
+    },
+    {
+      "path": "data/cartography/regional-extent-cells.json",
+      "kind": "accepted-inventory",
+      "producer": "scripts/cartography/build-regional-extent-cells.py"
+    },
+    {
+      "path": "data/cartography/regional-extent-review.json",
+      "kind": "accepted-cartography",
+      "producer": "scripts/cartography/regional-extent-source.py"
+    },
+    {
+      "path": "data/cartography/succession-review.json",
+      "kind": "accepted-cartography",
+      "producer": "scripts/cartography/succession-source.py"
+    },
     {
       "path": "docs/atlas-continuity-audit.json",
       "kind": "reviewed-audit",
@@ -32,6 +279,12 @@
       "path": "docs/reports/reviewed/V5.17_POLONIA_LITUANIA.md",
       "kind": "reviewed-audit",
       "producer": "scripts/audits/audit-poland-lithuania.mjs"
+    },
+    {
+      "path": "docs/reports/reviewed/V5.26_EUROPA_ORIENTAL.md",
+      "kind": "reviewed-audit",
+      "producer": "scripts/audits/audit-eastern-europe.mjs",
+      "maintenance": "Resultado revisado de 601 años; actualizar explícitamente con --publish tras comprobar las fuentes y superficies."
     },
     {
       "path": "docs/reports/reviewed/audit-atlas-coverage-report.json",
@@ -83,285 +336,36 @@
       "maintenance": "Instantánea revisada de V5.9; auditorías actuales en .cache/audits/."
     },
     {
-      "path": "prototypes/euv-locations/README.md",
+      "path": "labs/cartography/README.md",
       "kind": "documentation"
     },
     {
-      "path": "prototypes/euv-locations/balkan-expansion-locations.json",
-      "kind": "accepted-cartography",
-      "producer": "scripts/cartography/balkan-expansion-source.mjs"
-    },
-    {
-      "path": "prototypes/euv-locations/balkan-spatial-cells.json",
-      "kind": "accepted-inventory",
-      "producer": "scripts/cartography/balkan-spatial-source.py"
-    },
-    {
-      "path": "prototypes/euv-locations/balkans-full-review.json",
-      "kind": "accepted-cartography",
-      "maintenance": "Revisión explícita y documentada; el inventario geográfico no asigna soberanía."
-    },
-    {
-      "path": "prototypes/euv-locations/balkans-geographic-cells.json",
-      "kind": "accepted-inventory",
-      "producer": "scripts/cartography/build-balkans-geography.py",
-      "maintenance": "Revisión explícita y documentada; el inventario geográfico no asigna soberanía."
-    },
-    {
-      "path": "prototypes/euv-locations/balkans-geography.json",
-      "kind": "historical-selection",
-      "maintenance": "Revisión explícita y documentada; el inventario geográfico no asigna soberanía."
-    },
-    {
-      "path": "prototypes/euv-locations/bosnia-hum-review.json",
-      "kind": "historical-selection",
-      "maintenance": "Reviewed regional phases and authority scopes; maintained explicitly with cited source passages."
-    },
-    {
-      "path": "prototypes/euv-locations/burgundian-locations.json",
-      "kind": "accepted-cartography",
-      "producer": "scripts/cartography/build-burgundian-map.py"
-    },
-    {
-      "path": "prototypes/euv-locations/burgundian-source.json",
-      "kind": "mandate-export",
-      "producer": "scripts/cartography/burgundian-source.mjs"
-    },
-    {
-      "path": "prototypes/euv-locations/burgundian-succession.html",
+      "path": "labs/cartography/burgundian-succession.html",
       "kind": "lab"
     },
     {
-      "path": "prototypes/euv-locations/carlos-v-1520.png",
+      "path": "labs/cartography/carlos-v-1520.png",
       "kind": "visual-reference"
     },
     {
-      "path": "prototypes/euv-locations/carlos-v-1548.png",
+      "path": "labs/cartography/carlos-v-1548.png",
       "kind": "visual-reference"
     },
     {
-      "path": "prototypes/euv-locations/carlos-v-locations.json",
-      "kind": "accepted-cartography",
-      "producer": "scripts/cartography/build-carlos-v-map.py"
-    },
-    {
-      "path": "prototypes/euv-locations/carlos-v-overrides.json",
-      "kind": "historical-selection",
-      "maintenance": "Reviewed selection maintained explicitly; no standalone generator recorded."
-    },
-    {
-      "path": "prototypes/euv-locations/carlos-v-source.json",
-      "kind": "mandate-export",
-      "producer": "scripts/cartography/carlos-v-source.mjs"
-    },
-    {
-      "path": "prototypes/euv-locations/carlos-v.html",
+      "path": "labs/cartography/carlos-v.html",
       "kind": "lab"
     },
     {
-      "path": "prototypes/euv-locations/central-expansion-locations.json",
-      "kind": "accepted-cartography",
-      "producer": "scripts/cartography/central-expansion-source.py"
-    },
-    {
-      "path": "prototypes/euv-locations/coastal-subdivisions.json",
-      "kind": "geometry-reference",
-      "maintenance": "Originales archivados y divisiones internas costeras con costuras aproximadas; verificación de contorno y no solapamiento.",
-      "producer": "scripts/cartography/apply-coastal-subdivisions.py"
-    },
-    {
-      "path": "prototypes/euv-locations/continuity-anchors.json",
-      "kind": "historical-selection",
-      "maintenance": "Reviewed selection maintained explicitly; no standalone generator recorded."
-    },
-    {
-      "path": "prototypes/euv-locations/continuity-review.json",
-      "kind": "accepted-cartography",
-      "producer": "scripts/cartography/continuity-source.py"
-    },
-    {
-      "path": "prototypes/euv-locations/corridor-locations.json",
-      "kind": "accepted-cartography",
-      "producer": "scripts/cartography/build-corridor-map.py"
-    },
-    {
-      "path": "prototypes/euv-locations/corridor-overrides.json",
-      "kind": "historical-selection",
-      "maintenance": "Reviewed selection maintained explicitly; no standalone generator recorded."
-    },
-    {
-      "path": "prototypes/euv-locations/corridor-source.json",
-      "kind": "mandate-export",
-      "producer": "scripts/cartography/corridor-source.mjs"
-    },
-    {
-      "path": "prototypes/euv-locations/early-medieval-review.json",
-      "kind": "historical-selection"
-    },
-    {
-      "path": "prototypes/euv-locations/euv-locations-crop.svg",
-      "kind": "accepted-cartography",
-      "producer": "scripts/cartography/crop_svg.py"
-    },
-    {
-      "path": "prototypes/euv-locations/extended-corridors-locations.json",
-      "kind": "accepted-cartography",
-      "producer": "scripts/cartography/extended-corridors-source.py"
-    },
-    {
-      "path": "prototypes/euv-locations/france-low-countries-full-review.json",
-      "kind": "accepted-cartography"
-    },
-    {
-      "path": "prototypes/euv-locations/france-low-countries-geographic-cells.json",
-      "kind": "accepted-inventory",
-      "producer": "scripts/cartography/build-geographic-inventory.py"
-    },
-    {
-      "path": "prototypes/euv-locations/france-low-countries-geography.json",
-      "kind": "historical-selection"
-    },
-    {
-      "path": "prototypes/euv-locations/frontier-anchors.json",
-      "kind": "historical-selection",
-      "maintenance": "Reviewed selection maintained explicitly; no standalone generator recorded."
-    },
-    {
-      "path": "prototypes/euv-locations/frontier-review.json",
-      "kind": "accepted-cartography",
-      "producer": "scripts/cartography/frontier-source.py"
-    },
-    {
-      "path": "prototypes/euv-locations/hungary-balkans-locations.json",
-      "kind": "accepted-cartography",
-      "producer": "scripts/cartography/hungary-balkans-source.mjs"
-    },
-    {
-      "path": "prototypes/euv-locations/iberia-italy-full-review.json",
-      "kind": "accepted-cartography",
-      "maintenance": "Fases, citas locales, composiciones y ámbitos personales adoptados expresamente para Iberia e Italia; no se asigna soberanía por el nombre de una ciudad."
-    },
-    {
-      "path": "prototypes/euv-locations/iberia-italy-geographic-cells.json",
-      "kind": "accepted-inventory",
-      "producer": "scripts/cartography/build-geographic-inventory.py",
-      "maintenance": "Todas las superficies SVG que cruzan las ventanas, incluyendo cada subtrazado insular. Comando y entorno bloqueado en scripts/README.md."
-    },
-    {
-      "path": "prototypes/euv-locations/iberia-italy-geography.json",
-      "kind": "historical-selection",
-      "maintenance": "Ventanas geográficas independientes del color y de los gobiernos; no son fronteras políticas."
-    },
-    {
-      "path": "prototypes/euv-locations/imperial-core-locations.json",
-      "kind": "accepted-cartography",
-      "maintenance": "Reviewed selection maintained explicitly; no standalone generator recorded."
-    },
-    {
-      "path": "prototypes/euv-locations/index.html",
+      "path": "labs/cartography/index.html",
       "kind": "lab"
     },
     {
-      "path": "prototypes/euv-locations/location-inventory.json",
-      "kind": "accepted-inventory",
-      "producer": "scripts/cartography/build-location-inventory.py"
-    },
-    {
-      "path": "prototypes/euv-locations/medieval-balkans-review.json",
-      "kind": "historical-selection",
-      "maintenance": "Selecciones medievales y superficies interiores revisadas explícitamente; ensambladas por scripts/cartography/merge-map-expansions.mjs."
-    },
-    {
-      "path": "prototypes/euv-locations/poland-lithuania-continuity-review.json",
-      "kind": "accepted-cartography",
-      "producer": "scripts/cartography/build-central-europe-review.mjs"
-    },
-    {
-      "path": "prototypes/euv-locations/poland-lithuania-frontier-review.json",
-      "kind": "historical-selection"
-    },
-    {
-      "path": "prototypes/euv-locations/poland-lithuania-full-review.json",
-      "kind": "accepted-cartography",
-      "producer": "scripts/cartography/build-central-europe-review.mjs"
-    },
-    {
-      "path": "prototypes/euv-locations/poland-lithuania-medieval-review.json",
-      "kind": "historical-selection"
-    },
-    {
-      "path": "prototypes/euv-locations/poland-lithuania-partitions.json",
-      "kind": "historical-selection"
-    },
-    {
-      "path": "prototypes/euv-locations/posavina-ragusa-review.json",
-      "kind": "historical-selection",
-      "maintenance": "Fases, ámbitos personales y celdas mixtas documentadas; revisión anual de 1200–1800."
-    },
-    {
-      "path": "prototypes/euv-locations/preview.png",
+      "path": "labs/cartography/preview.png",
       "kind": "visual-reference"
     },
     {
-      "path": "prototypes/euv-locations/priority-territories-locations.json",
-      "kind": "accepted-cartography",
-      "maintenance": "Reviewed selection maintained explicitly; no standalone generator recorded."
-    },
-    {
-      "path": "prototypes/euv-locations/reference-gap-review.json",
-      "kind": "historical-selection",
-      "maintenance": "Reviewed selection maintained explicitly; no standalone generator recorded."
-    },
-    {
-      "path": "prototypes/euv-locations/regional-extent-cells.json",
-      "kind": "accepted-inventory",
-      "producer": "scripts/cartography/build-regional-extent-cells.py"
-    },
-    {
-      "path": "prototypes/euv-locations/regional-extent-review.json",
-      "kind": "accepted-cartography",
-      "producer": "scripts/cartography/regional-extent-source.py"
-    },
-    {
-      "path": "prototypes/euv-locations/succession-review.json",
-      "kind": "accepted-cartography",
-      "producer": "scripts/cartography/succession-source.py"
-    },
-    {
-      "path": "prototypes/euv-locations/territorial-corridors.html",
+      "path": "labs/cartography/territorial-corridors.html",
       "kind": "lab"
-    },
-    {
-      "path": "src/MapChart_Map.svg",
-      "kind": "geometry-reference",
-      "maintenance": "Earlier MapChart province edition; geometry reference, not proof of historical jurisdiction."
-    },
-    {
-      "path": "prototypes/euv-locations/eastern-europe-geography.json",
-      "kind": "accepted-inventory",
-      "maintenance": "Revisión oriental V5.26: inventarios explícitos, fuentes locales y sucesiones fechadas; regenerar después de una revisión documental."
-    },
-    {
-      "path": "prototypes/euv-locations/eastern-europe-chronology.json",
-      "kind": "accepted-cartography",
-      "maintenance": "Revisión oriental V5.26: inventarios explícitos, fuentes locales y sucesiones fechadas; regenerar después de una revisión documental."
-    },
-    {
-      "path": "prototypes/euv-locations/eastern-europe-local-phases.json",
-      "kind": "accepted-cartography",
-      "maintenance": "Revisión oriental V5.26: inventarios explícitos, fuentes locales y sucesiones fechadas; regenerar después de una revisión documental."
-    },
-    {
-      "path": "prototypes/euv-locations/eastern-europe-full-review.json",
-      "kind": "accepted-cartography",
-      "maintenance": "Revisión oriental V5.26: inventarios explícitos, fuentes locales y sucesiones fechadas; regenerar después de una revisión documental.",
-      "producer": "scripts/cartography/build-eastern-europe-routes.mjs"
-    },
-    {
-      "path": "docs/reports/reviewed/V5.26_EUROPA_ORIENTAL.md",
-      "kind": "reviewed-audit",
-      "producer": "scripts/audits/audit-eastern-europe.mjs",
-      "maintenance": "Resultado revisado de 601 años; actualizar explícitamente con --publish tras comprobar las fuentes y superficies."
     }
   ]
 }

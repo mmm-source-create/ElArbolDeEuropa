@@ -1,5 +1,5 @@
 import fs from 'node:fs';
-import {atlasPoliticalMosaicAt} from '../../src/data/atlasMosaic.js';
+import {atlasPoliticalMosaicAt} from '../../src/cartography/atlasMosaic.js';
 import {mapDataFile,projectRoot,auditReportPath} from '../lib/project-paths.mjs';
 const read=n=>JSON.parse(fs.readFileSync(mapDataFile(n)));
 const data=read('corridor-locations.json'),partitions=read('poland-lithuania-partitions.json'),medieval=read('poland-lithuania-medieval-review.json'),frontier=read('poland-lithuania-frontier-review.json');

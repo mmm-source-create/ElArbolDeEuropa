@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import React, {act} from 'react';
 import {renderToString} from 'react-dom/server';
 import {JSDOM} from 'jsdom';
-import HomeDiscovery, {DiscoveryCarousel} from '../src/public/HomeDiscovery.jsx';
+import HomeDiscovery, {DiscoveryCarousel} from '../src/features/public/HomeDiscovery.jsx';
 import SegmentedControl from '../src/ui/SegmentedControl.jsx';
 import ActionDial from '../src/ui/ActionDial.jsx';
 import Odometer from '../src/ui/Odometer.jsx';

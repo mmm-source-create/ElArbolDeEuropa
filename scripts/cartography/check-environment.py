@@ -17,7 +17,7 @@ from pathlib import Path
 from project_paths import PROJECT_ROOT
 
 TOOLS = Path(__file__).resolve().parent
-ACCEPTED = PROJECT_ROOT / "prototypes/euv-locations"
+ACCEPTED = PROJECT_ROOT / "data/cartography"
 
 
 def compare(expected, actual, location="root"):

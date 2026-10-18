@@ -1,7 +1,7 @@
 import fs from 'node:fs/promises';
-import {ENGLISH_STORIES,ENGLISH_PEOPLE,ENGLISH_METHOD,ENGLISH_ABOUT} from '../../src/english/content.js';
+import {ENGLISH_STORIES,ENGLISH_PEOPLE,ENGLISH_METHOD,ENGLISH_ABOUT} from '../../src/features/english/content.js';
 import {SOURCE_GROUPS} from '../../src/content/sources.js';
-import {TRANSLATED_STORIES,TRANSLATED_PEOPLE,englishRoute,englishPaths,translatedEquivalent} from '../../src/english/routes.js';
+import {TRANSLATED_STORIES,TRANSLATED_PEOPLE,englishRoute,englishPaths,translatedEquivalent} from '../../src/features/english/routes.js';
 const people=[];
 for(const p of TRANSLATED_PEOPLE){const source=JSON.parse(await fs.readFile(`public/personas-meta/${p.es}.json`,'utf8')),translation=ENGLISH_PEOPLE[p.id];if(source.id!==p.id)throw Error(`Traducción enlazada a otra persona: ${p.id}`);const {biografiaExtensa,...base}=source;people.push({...base,...translation,nombre:translation.name,path:`/en/person/${p.en}`,esPath:`/es/persona/${p.es}`,summary:translation.summary,translated:true});}
 const linkedPerson=p=>{const translated=people.find(x=>x.id===p.id);return translated?{...p,nombre:translated.nombre,role:translated.role,path:translated.path}:{...p};};

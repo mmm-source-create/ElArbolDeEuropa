@@ -1,10 +1,10 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
-import {PERSONAS} from '../src/personas.jsx';
+import {PERSONAS} from '../src/data/personas.js';
 import {TERRITORIOS} from '../src/data/territorios.js';
-import {idsDeGobiernoEnAño,idsDeReinoEnAño} from '../src/Territorios.jsx';
-import {buildPoliticalMapIndex,inspectMapRegion} from '../src/data/politicalMapIndex.js';
+import {idsDeGobiernoEnAño, idsDeReinoEnAño} from '../src/cartography/kingdomMaps.js';
+import {buildPoliticalMapIndex,inspectMapRegion} from '../src/cartography/politicalMapIndex.js';
 import {personClaims} from '../src/evidence/claims.js';
 
 const byId=Object.fromEntries(PERSONAS.map(person=>[person.id,person]));
@@ -77,7 +77,7 @@ test('Flandes y Artois dejan de duplicarse en Francia y señalan el intervalo mi
 });
 
 test('las nuevas correspondencias existen en el SVG y los gobiernos tienen citas',()=>{
-  const svg=fs.readFileSync(new URL('../src/MapChart_Map.svg',import.meta.url),'utf8');
+  const svg=fs.readFileSync(new URL('../data/cartography/MapChart_Map.svg',import.meta.url),'utf8');
   for(const territory of ['Baviera','Palatinado','Jülich','Berg','Cléveris','Francia','Artois','Flandes']) {
     for(const id of idsDeReinoEnAño(territory,1522)) assert.ok(svg.includes(`id="${id}"`),`${territory}: ${id}`);
   }

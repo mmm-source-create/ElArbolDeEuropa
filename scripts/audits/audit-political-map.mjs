@@ -1,14 +1,14 @@
 import {auditReportPath} from '../lib/project-paths.mjs';
 import fs from 'node:fs/promises';
-import { PERSONAS } from '../../src/personas.jsx';
+import { PERSONAS } from '../../src/data/personas.js';
 import { TERRITORIOS, gobiernoEfectivo } from '../../src/data/territorios.js';
 import {atlasLocationIds} from './lib/locationMapAudit.js';
-import {mapAuthoritiesForPerson} from '../../src/data/mapAuthorities.js';
+import {mapAuthoritiesForPerson} from '../../src/cartography/mapAuthorities.js';
 
-const svg = await fs.readFile(new URL('../../prototypes/euv-locations/euv-locations-crop.svg', import.meta.url), 'utf8');
+const svg = await fs.readFile(new URL('../../data/cartography/euv-locations-crop.svg', import.meta.url), 'utf8');
 const pathIds = atlasLocationIds(svg);
-const mapData = JSON.parse(await fs.readFile(new URL('../../prototypes/euv-locations/corridor-locations.json', import.meta.url), 'utf8'));
-mapData.burgundy = JSON.parse(await fs.readFile(new URL('../../prototypes/euv-locations/burgundian-locations.json', import.meta.url), 'utf8'));
+const mapData = JSON.parse(await fs.readFile(new URL('../../data/cartography/corridor-locations.json', import.meta.url), 'utf8'));
+mapData.burgundy = JSON.parse(await fs.readFile(new URL('../../data/cartography/burgundian-locations.json', import.meta.url), 'utf8'));
 const usedTerritories = new Set(PERSONAS.flatMap(persona => (persona.gobiernos || [])
   .filter(gobiernoEfectivo).map(gobierno => gobierno.territorio)));
 const mappedTerritories = new Set();

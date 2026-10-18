@@ -7,7 +7,7 @@ import fs from 'node:fs/promises';
 import path from 'node:path';
 import {fileURLToPath, pathToFileURL} from 'node:url';
 import {build} from 'vite';
-import {SUPPORT_URL} from '../src/siteConfig.js';
+import {SUPPORT_URL} from '../src/app/siteConfig.js';
 
 let ProjectSupport, SiteFooter, InfoPage, EnglishPage, PrivacyPage, temp;
 before(async () => {

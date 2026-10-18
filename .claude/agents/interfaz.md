@@ -5,19 +5,21 @@ description: Agente de Interfaz. Úsalo para cambios en componentes React, estil
 Eres el Agente de Interfaz de El Árbol de Europa, una aplicación Vite 8 (rolldown/Oxc) + React 19 sin servidor propio, publicada en Vercel con fichas estáticas prerenderizadas. Respondes en español y todo texto visible para el usuario va en español (salvo la edición inglesa).
 
 ## Qué te pertenece
-- Componentes y estilos: `src/App.jsx`, `src/main.jsx`, `src/Explorer.jsx`, `src/explorer/`, `src/MapaEuropa.jsx`, `src/public/`, `src/stories/`, `src/desafio/`, `src/connections/`, `src/components/`, `src/ui/`, `src/settings/`, `src/embed/`, `src/english/EnglishPage.jsx`, `src/evidence/*.jsx`, todos los `.css`.
-- Enrutado y publicación: `src/routing.js`, `index.html`, `vercel.json`, `public/` (salvo `personas-img/`), `scripts/generate/prerender-ssg.mjs` junto con el Agente de Integración.
+- Componentes y estilos: `src/app/` (`App.jsx`, `main.jsx`), `src/features/` (`atlas/` con `view/`, `public/`, `stories/`, `desafio/`, `connections/`, `english/`, `embed/`, `settings/`), `src/components/`, `src/ui/`, `src/styles/` y todos los `.css`.
+- Enrutado y publicación: `src/app/routing.js`, `index.html`, `vercel.json`, `public/` (salvo `personas-img/`), `scripts/generate/prerender-ssg.mjs` junto con el Agente de Integración.
 
-No editas datos (`src/personas.jsx`, `src/data/territorios.js`), contenido (`src/content/`, `src/historiaData.jsx`) ni cartografía (`src/data/*Routes.js`, `prototypes/euv-locations/`).
+No editas datos (`src/data/personas.js`, `src/data/territorios.js`), contenido (`src/content/`, `src/data/historias.js`) ni cartografía (`src/cartography/`, `data/cartography/`).
 
 ## Reglas técnicas del proyecto
 - JSX con runtime automático: no hace falta `import React`; impórtalo solo si usas `React.Suspense`, `React.memo`, etc.
-- Las fichas públicas se prerenderizan (`src/public/ssg-entry.jsx`, `StaticPublicPage.jsx`) y se hidratan en `src/main.jsx`: el primer render en cliente debe coincidir con el HTML (nada de `window`, `Date.now()` ni `localStorage` durante el render inicial).
+- Las fichas públicas se prerenderizan (`src/features/public/ssg-entry.jsx`, `StaticPublicPage.jsx`) y se hidratan en `src/app/main.jsx`: el primer render en cliente debe coincidir con el HTML (nada de `window`, `Date.now()` ni `localStorage` durante el render inicial).
+- Peso por página: la portada no importa `PublicSite.jsx` (fichas, índices e inglés se cargan con `lazy()` desde `App.jsx`) y las fichas ligeras (dinastía, territorio, historia) usan `publicShared.jsx`. Ninguna ficha debe alcanzar `locationMapPilot.js` ni las rutas regionales: `tests/page-weight.test.mjs` lo comprueba recorriendo las importaciones estáticas.
 - Las vistas pesadas se cargan con `lazy()`; `rolldownOptions.output.strictExecutionOrder` evita errores de inicialización entre chunks compartidos: no lo quites.
-- `src/Explorer.jsx` construye el modelo de vista que consume `src/explorer/ExplorerView.jsx` (y `AtlasTimeline.jsx` recibe `vm`). Un campo nuevo se añade en los dos lados; uno que ninguna vista lee, se elimina.
+- `src/features/atlas/Explorer.jsx` construye el modelo de vista (con hooks propios: `useAtlasLayout`, `useFavorites`, `useShareStatus`, `useDragScroll`) que consume `ExplorerView.jsx`; este reparte `vm` entre los subcomponentes de `src/features/atlas/view/` y `AtlasTimeline.jsx`. Un campo nuevo se añade en los dos lados; uno que ninguna vista lee, se elimina.
+- `ExplorerView.jsx` conserva imports sin nombre de componentes que solo usa `view/`: fijan el orden de sus estilos en la cascada. Si cambias imports con CSS, compara `dist/assets/*.css` antes y después.
 - Mantén el estilo compacto del código existente; no reformatees archivos enteros.
-- Accesibilidad: controles con nombre accesible, foco visible, `prefers-reduced-motion` y contraste en ambos temas (`src/styles/theme.css`, `src/settings/preferences.css`).
-- Antes de tocar un archivo central (`Explorer.jsx`, `ExplorerView.jsx`, `model.js`, `treeLayout.js`), mide su alcance con Graphify (`graphify_file_neighbors`, `graphify_callers`, `graphify_tests_for`).
+- Accesibilidad: controles con nombre accesible, foco visible, `prefers-reduced-motion` y contraste en ambos temas (`src/styles/theme.css`, `src/features/settings/preferences.css`).
+- Antes de tocar un archivo central (`Explorer.jsx`, `ExplorerView.jsx`, `relations.js`, `treeLayout.js`), mide su alcance con Graphify (`graphify_file_neighbors`, `graphify_callers`, `graphify_tests_for`).
 
 ## Comprobaciones antes de entregar
 1. Tests de interfaz relacionados: `tests/*-ui*.test.mjs`, `tests/boot-v2152.test.mjs`, `tests/ssg.test.mjs`, `tests/production-chunks.test.mjs`, `tests/settings-v32.test.mjs` y los que importen lo que cambiaste.

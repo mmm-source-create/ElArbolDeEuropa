@@ -2,7 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import {JSDOM} from 'jsdom';
-import {clampMapViewBox,clipMapToBounds,fittedMapViewBox,mapControlLimits,resizeMapViewBox,zoomMapViewBox} from '../src/mapViewport.js';
+import {clampMapViewBox,clipMapToBounds,fittedMapViewBox,mapControlLimits,resizeMapViewBox,zoomMapViewBox} from '../src/features/atlas/mapViewport.js';
 
 const original={x:0,y:0,width:1000,height:400};
 const close=(a,b)=>assert.ok(Math.abs(a-b)<1e-8,`${a} should equal ${b}`);
@@ -59,7 +59,7 @@ test('zoom controls change scale and stop at the exact outer and inner bounds',(
 });
 
 test('the actual nested world SVG is clipped in the overview and after zooming',()=>{
- const dom=new JSDOM(fs.readFileSync(new URL('../prototypes/euv-locations/euv-locations-crop.svg',import.meta.url),'utf8'));
+ const dom=new JSDOM(fs.readFileSync(new URL('../data/cartography/euv-locations-crop.svg',import.meta.url),'utf8'));
  const svg=dom.window.document.querySelector('svg');
  const [x,y,width,height]=svg.getAttribute('viewBox').split(' ').map(Number);
  const frame={x,y,width,height};

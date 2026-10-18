@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
 
-import {translatedEquivalent} from '../english/routes.js';
-import {SCREEN_NOTICE_KEY} from "../public/screenNotice.js";
-import {SITE_NAME, SITE_NAME_EN} from "../siteConfig.js";
-import SettingsPanel from '../settings/SettingsPanel.jsx';
+import {translatedEquivalent} from '../features/english/routes.js';
+import {SCREEN_NOTICE_KEY} from "../features/public/screenNotice.js";
+import {SITE_NAME, SITE_NAME_EN} from "../app/siteConfig.js";
+import SettingsPanel from '../features/settings/SettingsPanel.jsx';
 
 function noticeWasDismissed() {
   try { return typeof window !== "undefined" && window.sessionStorage.getItem(SCREEN_NOTICE_KEY) === "1"; }

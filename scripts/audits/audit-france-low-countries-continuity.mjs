@@ -15,7 +15,7 @@ export function auditFranceLowCountriesContinuity(data, inventory, review, geogr
   return auditRegionalContinuity(data, inventory, franceLowCountriesGeographicReview(review, geography));
 }
 if (process.argv[1] && path.resolve(process.argv[1]) === import.meta.filename) {
-  const read = file => JSON.parse(fs.readFileSync(path.join(projectRoot, 'prototypes/euv-locations', file)));
+  const read = file => JSON.parse(fs.readFileSync(path.join(projectRoot, 'data/cartography', file)));
   const result = auditFranceLowCountriesContinuity(read('corridor-locations.json'), read('location-inventory.json'),
     read('france-low-countries-full-review.json'), read('france-low-countries-geographic-cells.json'));
   fs.writeFileSync(auditReportPath('audit-france-low-countries-continuity-report.json'), JSON.stringify(result, null, 2) + '\n');

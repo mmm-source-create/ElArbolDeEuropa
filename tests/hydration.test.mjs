@@ -1,4 +1,4 @@
-import {STATIC_SCHEMA} from '../src/public/staticData.js';
+import {STATIC_SCHEMA} from '../src/features/public/staticData.js';
 import test,{before,after} from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs/promises';
@@ -17,7 +17,7 @@ dom.window.HTMLElement.prototype.scrollIntoView=function(){this.dataset.scrolled
 let runtime,temp,publicCss,requests=[];
 const originalFetch=globalThis.fetch;
 before(async()=>{
- publicCss=await fs.readFile(path.join(root,'src/public/public.css'),'utf8');
+ publicCss=await fs.readFile(path.join(root,'src/features/public/public.css'),'utf8');
  const nodeEnv=process.env.NODE_ENV;
  temp=await fs.mkdtemp(path.join(root,'.ssg-build-test-'));
  await build({root,configFile:false,publicDir:false,logLevel:'error',plugins:[{

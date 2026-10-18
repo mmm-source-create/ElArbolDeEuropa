@@ -1,18 +1,18 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
-import {PERSONAS} from '../src/personas.jsx';
+import {PERSONAS} from '../src/data/personas.js';
 import {personClaims} from '../src/evidence/claims.js';
-import {mapAuthoritiesForPerson} from '../src/data/mapAuthorities.js';
-import {reviewedMapLayers, reviewedLayerLocations} from '../src/data/locationMapPilot.js';
-import {territorialIdentity, territorialLabel, territorialColor} from '../src/data/territorialIdentity.js';
-import {atlasPoliticalMosaicAt} from '../src/data/atlasMosaic.js';
+import {mapAuthoritiesForPerson} from '../src/cartography/mapAuthorities.js';
+import {reviewedMapLayers, reviewedLayerLocations} from '../src/cartography/locationMapPilot.js';
+import {territorialIdentity, territorialLabel, territorialColor} from '../src/cartography/territorialIdentity.js';
+import {atlasPoliticalMosaicAt} from '../src/cartography/atlasMosaic.js';
 import {mergeMapExpansions} from '../scripts/cartography/merge-map-expansions.mjs';
 import {applyMedievalBalkans} from '../scripts/cartography/apply-medieval-balkans.mjs';
 
 const read = name => JSON.parse(fs.readFileSync(new URL(name, import.meta.url), 'utf8'));
-const data = read('../prototypes/euv-locations/corridor-locations.json');
-const review = read('../prototypes/euv-locations/medieval-balkans-review.json');
+const data = read('../data/cartography/corridor-locations.json');
+const review = read('../data/cartography/medieval-balkans-review.json');
 const people = new Map(PERSONAS.map(person => [person.id, person]));
 const cells = (name, year) => new Set(atlasPoliticalMosaicAt(data, year).layers
   .find(layer => layer.entityId === territorialIdentity(name))?.ids || []);
@@ -154,7 +154,7 @@ test('new rulers have cited offices without invented life dates or uncertain gen
 
 test('medieval selections regenerate identically and reject overlap with the accepted modern survey', () => {
   assert.deepEqual(mergeMapExpansions(structuredClone(data)), data);
-  const measured = new Set(read('../prototypes/euv-locations/regional-extent-cells.json').cells.map(cell => cell.id));
+  const measured = new Set(read('../data/cartography/regional-extent-cells.json').cells.map(cell => cell.id));
   for (const layer of [...review.temporalExtensions, ...review.territories])
     for (const version of layer.versions) for (const id of version.ids) assert(measured.has(id), id);
   const invalid = structuredClone(review);

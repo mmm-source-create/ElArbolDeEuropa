@@ -19,7 +19,7 @@ export function secretFindings(text) {
 export function activeSvgContent(svg) {
   return /<\s*(?:script|foreignObject)\b|\bon\w+\s*=|javascript\s*:/i.test(svg);
 }
-export async function auditSecurity() {
+async function auditSecurity() {
   const issues = [];
   const config = JSON.parse(await fs.readFile('vercel.json', 'utf8'));
   const headers = [...(config.headers?.find(rule => rule.source === '/(.*)')?.headers || []), ...(config.headers?.find(rule => rule.source === MAIN_FRAME_SOURCE)?.headers || [])];
@@ -30,7 +30,7 @@ export async function auditSecurity() {
     const hs=config.headers?.find(rule=>rule.source===source)?.headers||[];
     if(!hs.some(h=>h.key==='Content-Security-Policy'&&h.value===EMBED_CSP)||hs.some(h=>h.key==='X-Frame-Options'))issues.push(`Política de inserción incorrecta: ${source}`);
   }
-  if (activeSvgContent(await fs.readFile('src/MapChart_Map.svg', 'utf8'))) issues.push('El SVG del mapa contiene contenido activo no permitido.');
+  if (activeSvgContent(await fs.readFile('data/cartography/MapChart_Map.svg', 'utf8'))) issues.push('El SVG del mapa contiene contenido activo no permitido.');
   const files = execFileSync('git', ['ls-files', '-z', '--cached', '--others', '--exclude-standard'], {encoding: 'utf8'}).split('\0').filter(Boolean);
   for (const file of new Set(files)) {
     if (/(^|\/)(\.env(?:\..*)?|id_rsa|id_ed25519)$|\.(pem|key)$/i.test(file)) issues.push(`Archivo sensible versionable: ${file}`);

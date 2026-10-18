@@ -3,7 +3,7 @@
 Atlas histórico y genealógico para explorar personas, dinastías, territorios y sus conexiones familiares.
 
 - [Web](https://www.treeofeurope.eu/es/) · Versión del repositorio: **V5.16**
-- [Cambios de V5.16](docs/V5.16.md) · [Documentación e historial](docs/README.md) · [Próximos pasos cartográficos](docs/V4.8_PROPUESTAS.md) · [Seguridad](SECURITY.md)
+- [Cambios de V5.16](docs/versiones/V5.16.md) · [Documentación e historial](docs/README.md) · [Próximos pasos cartográficos](docs/versiones/V4.8_PROPUESTAS.md) · [Seguridad](SECURITY.md)
 
 V5.16 incorpora Dinastle al Desafío: un personaje diario, ocho intentos y pistas
 calculadas con la base histórica. Ordena y diferencia los filtros de casas,
@@ -14,7 +14,7 @@ identidades y títulos en mapas y listados.
 El mapa utiliza EU V Locations con superficies fechadas y fuentes consultables
 en el inspector. Distingue soberanía, gobierno delegado, titularidad y control
 disputado. Las correspondencias geométricas aproximadas y los huecos pendientes
-conservan sus límites documentales. El [laboratorio cartográfico](prototypes/euv-locations/README.md)
+conservan sus límites documentales. El [laboratorio cartográfico](labs/cartography/README.md)
 permite revisar todas las entidades registradas por año. La investigación
 histórica continúa; cerrar la migración de V5 no certifica todas las fronteras.
 
@@ -47,19 +47,20 @@ Las variables opcionales se documentan en `env.example`. `VITE_SITE_URL` debe se
 
 | Contenido o función | Ubicación |
 | --- | --- |
-| Personas, filiaciones y gobiernos | `src/personas.jsx` |
+| Personas, filiaciones y gobiernos | `src/data/personas.js` |
 | Evidencia por afirmación y revisiones editoriales | `src/evidence/` |
 | Minibiografías | `src/content/personas/` |
-| Territorios y filtros | `src/data/territorios.js`, `src/Territorios.jsx` |
-| Mapa EU V Locations, correspondencias y capas territoriales fechadas | `prototypes/euv-locations/`, `src/data/locationMapPilot.js`, `src/Territorios.jsx`, `docs/CARTOGRAFIA_IBERIA_ITALIA.md`, `docs/CARTOGRAFIA_BORGONA.md`, `docs/CARTOGRAFIA_IRLANDA.md` |
+| Territorios y filtros | `src/data/territorios.js`, `src/domain/government/reigns.js`, `src/domain/filters/` |
+| Mapa EU V Locations, correspondencias y capas territoriales fechadas | `data/cartography/`, `src/cartography/` (`locationMapPilot.js`, `kingdomMaps.js`, `regions/`), `docs/CARTOGRAFIA_IBERIA_ITALIA.md`, `docs/CARTOGRAFIA_BORGONA.md`, `docs/CARTOGRAFIA_IRLANDA.md` |
 | Historias de casas y territorios | `src/content/dinastias/`, `src/content/territorios/` |
 | Sucesiones y títulos explicados | `src/content/sucesiones/`, `src/content/coronas/` |
 | Bibliografía compartida | `src/content/sources.js` |
-| Nombre y dominio | `src/siteConfig.js` |
-| Fichas públicas y rutas | `src/public/`, `src/routing.js` |
-| Atlas, conexiones y exportación | `src/explorer/`, `src/connections/` |
-| Desafíos | `src/desafio/` |
-| Medición de rendimiento | `src/monitoring.js`, inicializada desde `src/main.jsx` |
+| Nombre y dominio | `src/app/siteConfig.js` |
+| Lógica sin interfaz (genealogía, gobiernos, filtros, tiempo) | `src/domain/` |
+| Fichas públicas y rutas | `src/features/public/`, `src/app/routing.js` |
+| Atlas, conexiones y exportación | `src/features/atlas/` (vistas en `view/`), `src/features/connections/` |
+| Desafíos | `src/features/desafio/` |
+| Medición de rendimiento | `src/app/monitoring.js`, inicializada desde `src/app/main.jsx` |
 | Generación y auditoría del HTML | `scripts/generate/prerender-ssg.mjs`, `scripts/audits/audit-ssg.mjs` |
 | Seguridad y pruebas | `scripts/audits/audit-security.mjs`, `tests/` |
 | Herramientas e instalación cartográfica | `scripts/`, `.python-version`, `scripts/cartography/requirements.lock` |

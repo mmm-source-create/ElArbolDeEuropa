@@ -2,7 +2,7 @@
 
 ## Fuente y relaciones
 
-Edita el array JSON compatible `PERSONAS` en `src/personas.jsx`. El módulo no
+Edita el array JSON compatible `PERSONAS` en `src/data/personas.js`. El módulo no
 importa dependencias ni añade propiedades al cargarlo. Antes de crear un ID,
 busca nombre, aliases y parentescos para evitar duplicados. Mantén los IDs y
 slugs de las fichas existentes aunque corrijas su nombre.
@@ -42,7 +42,7 @@ La evidencia del cargo se asocia a la clave
 `person:LUISREQUESENS:government:Países Bajos:1573:1576:Gobernador`,
 registrada en `src/evidence/netherlandsGovernorReviews.js`. Sigue ese patrón:
 una fuente, URL y pasaje que respalden esa afirmación concreta, con certeza,
-precisión y límites explícitos. La [V5.5](V5.5.md) explica el alcance provincial
+precisión y límites explícitos. La [V5.5](versiones/V5.5.md) explica el alcance provincial
 y por qué el cargo no demuestra control de todas las celdas neerlandesas.
 
 Una persona nueva con mandato no exige una capa nueva si ya existe la entidad

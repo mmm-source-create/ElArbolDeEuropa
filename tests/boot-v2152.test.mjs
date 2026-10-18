@@ -7,8 +7,8 @@ import {build} from 'vite';
 import {JSDOM} from 'jsdom';
 import {act} from 'react';
 import {person} from './fixtures/static-pages.mjs';
-import {serializePage} from '../src/public/staticData.js';
-import {startSpeedInsights} from '../src/monitoring.js';
+import {serializePage} from '../src/features/public/staticData.js';
+import {startSpeedInsights} from '../src/app/monitoring.js';
 
 let temp;
 const dom = new JSDOM('<!doctype html><html><head></head><body></body></html>', {url: 'https://www.treeofeurope.eu/es/'});
@@ -19,21 +19,21 @@ before(async () => {
   temp = await fs.mkdtemp(path.resolve('.ssg-build-boot-'));
   const routeModules = new Map([
     ['./App.jsx', `import React from 'react';export default function Page(){return React.createElement('h1',null,'SPA');}`],
-    ['./public/PublicSite.jsx', `import React from 'react';export function PersonPage(){return React.createElement('h1',null,'SSG');}`],
-    ['./public/DynastyPage.jsx', `import React from 'react';export default function Page(){return React.createElement('h1',null,'DINASTÍA');}`],
-    ['./public/TerritoryPage.jsx', `import React from 'react';export function TerritoryPage(){return React.createElement('h1',null,'TERRITORIO');}`],
-    ['./english/EnglishPage.jsx', `import React from 'react';export default function Page(){return React.createElement('h1',null,'ENGLISH');}`],
-    ['./stories/StoryPage.jsx', `import React from 'react';export default function Page(){return React.createElement('h1',null,'HISTORIA');}`],
+    ['../features/public/PublicSite.jsx', `import React from 'react';export function PersonPage(){return React.createElement('h1',null,'SSG');}`],
+    ['../features/public/DynastyPage.jsx', `import React from 'react';export default function Page(){return React.createElement('h1',null,'DINASTÍA');}`],
+    ['../features/public/TerritoryPage.jsx', `import React from 'react';export function TerritoryPage(){return React.createElement('h1',null,'TERRITORIO');}`],
+    ['../features/english/EnglishPage.jsx', `import React from 'react';export default function Page(){return React.createElement('h1',null,'ENGLISH');}`],
+    ['../features/stories/StoryPage.jsx', `import React from 'react';export default function Page(){return React.createElement('h1',null,'HISTORIA');}`],
   ]);
   await build({configFile: false, publicDir: false, logLevel: 'error', plugins: [{
     name: 'boot-route-fixtures', enforce: 'pre',
     resolveId(id, importer) {
-      if (importer?.endsWith('/src/main.jsx') && routeModules.has(id)) return '\0boot:' + id;
+      if (importer?.endsWith('/src/app/main.jsx') && routeModules.has(id)) return '\0boot:' + id;
     },
     load(id) {
       if (id.startsWith('\0boot:')) return routeModules.get(id.slice('\0boot:'.length));
     },
-  }], build: {ssr: 'src/main.jsx', outDir: temp, minify: false, rolldownOptions: {output: {entryFileNames: 'entry.mjs'}}}});
+  }], build: {ssr: 'src/app/main.jsx', outDir: temp, minify: false, rolldownOptions: {output: {entryFileNames: 'entry.mjs'}}}});
   if (nodeEnv === undefined) delete process.env.NODE_ENV; else process.env.NODE_ENV = nodeEnv;
 });
 after(async () => {dom.window.close(); if (temp) await fs.rm(temp, {recursive: true, force: true});});

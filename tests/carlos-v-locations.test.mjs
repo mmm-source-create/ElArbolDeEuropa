@@ -4,7 +4,7 @@ import path from 'node:path';
 import test from 'node:test';
 
 const root = path.resolve(import.meta.dirname, '..');
-const lab = path.join(root, 'prototypes/euv-locations');
+const lab = path.join(root, 'data/cartography');
 const data = JSON.parse(fs.readFileSync(path.join(lab, 'carlos-v-locations.json'), 'utf8'));
 const svg = fs.readFileSync(path.join(lab, 'euv-locations-crop.svg'), 'utf8');
 const locations = new Set([...svg.matchAll(/<path\b[^>]*\bid="([^"]+)"/g)].map(match => match[1]));

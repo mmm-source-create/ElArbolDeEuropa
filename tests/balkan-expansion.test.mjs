@@ -1,13 +1,13 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
-import {reviewedLayerLocations, reviewedAuthorityConditions} from '../src/data/locationMapPilot.js';
-import {mapAuthoritiesForPerson} from '../src/data/mapAuthorities.js';
-import {politicalMosaicAt} from '../src/data/locationMosaic.js';
+import {reviewedLayerLocations, reviewedAuthorityConditions} from '../src/cartography/locationMapPilot.js';
+import {mapAuthoritiesForPerson} from '../src/cartography/mapAuthorities.js';
+import {politicalMosaicAt} from '../src/cartography/locationMosaic.js';
 
 const read = path => JSON.parse(fs.readFileSync(new URL(path, import.meta.url)));
-const patch = read('../prototypes/euv-locations/balkan-expansion-locations.json');
-const integrated = read('../prototypes/euv-locations/corridor-locations.json');
+const patch = read('../data/cartography/balkan-expansion-locations.json');
+const integrated = read('../data/cartography/corridor-locations.json');
 const data = {from:1200, through:1800, territories:patch.territories, overrides:[]};
 const layer = name => patch.territories.find(entry => entry.name === name);
 const ids = (name, year) => reviewedLayerLocations(data, layer(name), year);
@@ -91,7 +91,7 @@ test('Athos retains its distinct monastic administration and no invented persona
 });
 
 test('the western Transylvanian Crasna is not assigned to Moldavia by its ambiguous name', () => {
-  const geometry = read('../prototypes/euv-locations/balkan-spatial-cells.json');
+  const geometry = read('../data/cartography/balkan-spatial-cells.json');
   const crasna = geometry.cells.find(cell => cell.id === 'Crasna');
   const zalau = geometry.cells.find(cell => cell.id === 'Zalau');
   const huedin = geometry.cells.find(cell => cell.id === 'Huedin');

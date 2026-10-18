@@ -1,15 +1,15 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
-import {PERSONAS} from '../src/personas.jsx';
-import {esGobernante,territoriosGobernadosEnAño} from '../src/Territorios.jsx';
+import {PERSONAS} from '../src/data/personas.js';
+import {esGobernante, territoriosGobernadosEnAño} from '../src/domain/government/reigns.js';
 import {personClaims} from '../src/evidence/claims.js';
-import {mapAuthoritiesForPerson} from '../src/data/mapAuthorities.js';
-import {buildPoliticalMapIndex,inspectMapRegion} from '../src/data/politicalMapIndex.js';
+import {mapAuthoritiesForPerson} from '../src/cartography/mapAuthorities.js';
+import {buildPoliticalMapIndex,inspectMapRegion} from '../src/cartography/politicalMapIndex.js';
 
 const people=new Map(PERSONAS.map(person=>[person.id,person]));
-const data=JSON.parse(fs.readFileSync(new URL('../prototypes/euv-locations/corridor-locations.json',import.meta.url)));
-data.burgundy=JSON.parse(fs.readFileSync(new URL('../prototypes/euv-locations/burgundian-locations.json',import.meta.url)));
+const data=JSON.parse(fs.readFileSync(new URL('../data/cartography/corridor-locations.json',import.meta.url)));
+data.burgundy=JSON.parse(fs.readFileSync(new URL('../data/cartography/burgundian-locations.json',import.meta.url)));
 const mandates=[['FERN2ALBA',1567,1573],['LUISREQUESENS',1573,1576],['DONJUANAUST',1576,1578],['ALEJFARNESIO',1578,1592]];
 const entries=(id,year)=>mapAuthoritiesForPerson(people.get(id),year,data);
 

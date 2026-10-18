@@ -1,11 +1,11 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {JSDOM} from 'jsdom';
-import {PERSONAS} from '../src/personas.jsx';
-import {buildGraph} from '../src/explorer/relationshipGraph.js';
-import {connectionTree} from '../src/connections/connectionTree.js';
-import {selectionLayout} from '../src/connections/selectionLayout.js';
-import {treeSvg} from '../src/connections/treeExport.js';
+import {PERSONAS} from '../src/data/personas.js';
+import {buildGraph} from '../src/domain/genealogy/relationshipGraph.js';
+import {connectionTree} from '../src/features/connections/connectionTree.js';
+import {selectionLayout} from '../src/features/connections/selectionLayout.js';
+import {treeSvg} from '../src/features/connections/treeExport.js';
 
 // Geometry of the trees drawn by Conectar and by the export. The same layout
 // serves both, so the rules are checked on the layout and on the SVG output.

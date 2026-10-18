@@ -1,28 +1,20 @@
-import {englishPaths} from '../../src/english/routes.js';
+import {englishPaths} from '../../src/features/english/routes.js';
 import {loadEnv} from "vite";
-import {resolveSiteUrl} from "../../src/siteConfig.js";
+import {resolveSiteUrl} from "../../src/app/siteConfig.js";
 import { TERRITORIOS } from "../../src/data/territorios.js";
 import fs from "node:fs/promises";
 import path from "node:path";
 import { pathToFileURL } from "node:url";
-import { slugBasePersona, slugPublico } from "../../src/utils/personPresentation.js";
+import { slugBasePersona, slugPublico } from "../../src/domain/people/personPresentation.js";
+import { PERSONAS } from "../../src/data/personas.js";
+import { HISTORIAS } from "../../src/data/historias.js";
 
 const ROOT = process.cwd();
-const PERSONAS_FILE = path.join(ROOT, "src", "personas.jsx");
-const HISTORIAS_FILE = path.join(ROOT, "src", "historiaData.jsx");
 const OUTPUT_FILES = [
   path.join(ROOT, "public", "sitemap-full.xml"),
   path.join(ROOT, "public", "sitemap.xml"),
 ];
 const SITE_URL = resolveSiteUrl(loadEnv("production", ROOT, "VITE_").VITE_SITE_URL);
-
-async function importJsxData(filePath) {
-  const source = await fs.readFile(filePath, "utf8");
-  // Estos ficheros contienen únicamente datos JS (sin JSX). Importarlos como
-  // data: URL evita depender de que Node reconozca la extensión .jsx.
-  const moduleUrl = `data:text/javascript;base64,${Buffer.from(source, "utf8").toString("base64")}`;
-  return import(moduleUrl);
-}
 
 function xmlEscape(value) {
   return String(value)
@@ -32,11 +24,6 @@ function xmlEscape(value) {
     .replace(/"/g, "&quot;")
     .replace(/'/g, "&apos;");
 }
-
-const [{ PERSONAS }, { HISTORIAS }] = await Promise.all([
-  importJsxData(PERSONAS_FILE),
-  importJsxData(HISTORIAS_FILE),
-]);
 
 if (!Array.isArray(PERSONAS) || !Array.isArray(HISTORIAS)) {
   throw new Error("No se han podido cargar PERSONAS/HISTORIAS para generar el sitemap.");

@@ -19,9 +19,9 @@ export function readPersonLiteral(source) {
 
 export async function readContractData() {
   const [source, mapData, inventory] = await Promise.all([
-    fs.readFile(new URL('../../src/personas.jsx', import.meta.url), 'utf8'),
-    readJson('prototypes/euv-locations/corridor-locations.json'),
-    readJson('prototypes/euv-locations/location-inventory.json'),
+    fs.readFile(new URL('../../src/data/personas.js', import.meta.url), 'utf8'),
+    readJson('data/cartography/corridor-locations.json'),
+    readJson('data/cartography/location-inventory.json'),
   ]);
   return {people: readPersonLiteral(source), territories: TERRITORIOS, mapData,
     locationIds: new Set(inventory.cells.map(cell => cell.id))};

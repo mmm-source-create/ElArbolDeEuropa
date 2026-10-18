@@ -4,4 +4,4 @@ from pathlib import Path
 
 PROJECT_ROOT = Path(__file__).resolve().parents[2]
 DATA_DIR = (PROJECT_ROOT / os.environ.get(
-    "EADE_MAP_DATA_DIR", "prototypes/euv-locations")).resolve()
+    "EADE_MAP_DATA_DIR", "data/cartography")).resolve()

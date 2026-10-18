@@ -1,7 +1,7 @@
 // A work queue is not an authority claim. None of these suggestions paints
 // a cell. Only a dated, sourced map layer can graduate an ID from this audit.
 import {TERRITORIOS} from '../../../src/data/territorios.js';
-import {territorialIdentity} from '../../../src/data/territorialIdentity.js';
+import {territorialIdentity} from '../../../src/cartography/territorialIdentity.js';
 const MANUAL = Object.freeze({
   Erfurt:['Electorado de Maguncia','Jurisdicción de Erfurt'],
   Wurzen:['Principado episcopal de Meißen'],

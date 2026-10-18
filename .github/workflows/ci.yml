@@ -40,7 +40,7 @@ jobs:
           .venv-cartography/bin/python -m pip check
           npm run cartography:check
       - name: Conservar fuentes, mapas y resultados revisados
-        run: git diff --exit-code -- prototypes/euv-locations docs/reports/reviewed docs/atlas-continuity-audit.json docs/atlas-continuity-audit.md tests/baselines
+        run: git diff --exit-code -- data/cartography labs/cartography docs/reports/reviewed docs/atlas-continuity-audit.json docs/atlas-continuity-audit.md tests/baselines
       - run: npm run ssg:sample
       - name: Hidratar una muestra de fichas reales
         run: node --import ./tests/jsx-loader.mjs --test tests/hydration.test.mjs

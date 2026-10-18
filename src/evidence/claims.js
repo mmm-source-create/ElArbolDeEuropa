@@ -1,4 +1,4 @@
-import {conyugesDe, gobiernosDe} from '../data/personAccessors.js';
+import {conyugesDe, gobiernosDe} from '../domain/genealogy/personAccessors.js';
 // A source attached to a biography is contextual. It does not verify every fact
 // on that biography; claim-level sources must be entered explicitly below.
 import {RELEVOS} from '../content/sucesiones/index.js';

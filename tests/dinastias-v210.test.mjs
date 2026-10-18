@@ -1,17 +1,16 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import fs from 'node:fs';
-import {buildDynastyPages,auditDynasties} from '../src/data/dynastyModel.js';
+import {buildDynastyPages,auditDynasties} from '../src/domain/genealogy/dynastyModel.js';
 import {canonicalDynasty,canonicalDynastySlug} from '../src/data/dynastyAliases.js';
 import {HISTORIA_DINASTIAS,RAMAS_DINASTICAS} from '../src/content/dinastias/index.js';
 import {CASAS_V210} from '../src/content/personas/casas-v210.js';
 import {SOURCES,SOURCE_PUBLICATIONS,SOURCE_GROUPS,sourcesForPerson,FUENTES_TERRITORIOS} from '../src/content/sources.js';
 import {TERRITORIOS} from '../src/data/territorios.js';
-import {sucesionDe} from '../src/data/sucesion.js';
-import {auditDocumentation,documentaryLife,documentaryLifeBounds,formatDocumentaryDate} from '../src/utils/documentaryDates.js';
-import {slugBasePersona,slugPublico} from '../src/utils/personLabels.js';
+import {sucesionDe} from '../src/domain/government/sucesion.js';
+import {auditDocumentation,documentaryLife,documentaryLifeBounds,formatDocumentaryDate} from '../src/domain/time/documentaryDates.js';
+import {slugBasePersona,slugPublico} from '../src/domain/people/personLabels.js';
 
-const {PERSONAS}=await import('data:text/javascript;base64,'+fs.readFileSync(new URL('../src/personas.jsx',import.meta.url)).toString('base64'));
+const {PERSONAS}=await import('../src/data/personas.js');
 const by=Object.fromEntries(PERSONAS.map(p=>[p.id,p]));
 const pages=buildDynastyPages(PERSONAS);
 

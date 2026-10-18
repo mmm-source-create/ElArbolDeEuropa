@@ -3,11 +3,11 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import {TERRITORIOS,componentesDe,gobiernoEfectivo} from '../src/data/territorios.js';
 import {auditarTerritorios} from '../scripts/audits/lib/auditTerritorios.js';
-import {sucesionDe} from '../src/data/sucesion.js';
-import {etiquetaClaseGobierno,slugPublico,textoBusquedaPersona,normalizarBusquedaPublica} from '../src/utils/personPresentation.js';
+import {sucesionDe} from '../src/domain/government/sucesion.js';
+import {etiquetaClaseGobierno,slugPublico,textoBusquedaPersona,normalizarBusquedaPublica} from '../src/domain/people/personPresentation.js';
 import {PERSONA_CONTENT} from '../src/content/personas/index.js';
 import {FRONTERAS_V28} from '../src/content/personas/fronteras-v28.js';
-const {PERSONAS}=await import('data:text/javascript;base64,'+fs.readFileSync(new URL('../src/personas.jsx',import.meta.url)).toString('base64'));
+const {PERSONAS}=await import('../src/data/personas.js');
 const by=Object.fromEntries(PERSONAS.map(p=>[p.id,p]));
 const gov=(territorio='Castilla',extra={})=>({territorio,titulo:'Rey',clase:'reinado',condicion:'efectivo',desde:1200,hasta:1250,...extra});
 const sample=g=>[{id:'TEST',nombre:'Prueba',reinos:[g.territorio],gobiernos:[g]}];
@@ -98,7 +98,7 @@ test('voivodas, príncipes y gobernadores transilvanos no se confunden',()=>{
  assert.ok(!coexistencia.some(i=>i.code==='SUCCESSION_OVERLAP'));
 });
 test('las historias conservadas tienen referencias válidas y se retiran las cuatro rutas descartadas',async()=>{
- const {HISTORIAS,EVENTOS_HISTORICOS}=await import('data:text/javascript;base64,'+fs.readFileSync(new URL('../src/historiaData.jsx',import.meta.url)).toString('base64'));
+ const {HISTORIAS,EVENTOS_HISTORICOS}=await import('../src/data/historias.js');
  for(const list of [HISTORIAS,EVENTOS_HISTORICOS]){
   assert.ok(list.every(x=>x?.id));assert.equal(new Set(list.map(x=>x.id)).size,list.length);
  }

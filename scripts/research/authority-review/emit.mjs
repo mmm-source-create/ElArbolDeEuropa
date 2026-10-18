@@ -1,7 +1,7 @@
 // Emit src/evidence/authorityReviews.js: one compact entry per person with a verified GND record.
 import fs from 'node:fs';
-const {PERSONAS}=await import('../../../src/personas.jsx');
-const {conyugesDe}=await import('../../../src/data/personAccessors.js');
+const {PERSONAS}=await import('../../../src/data/personas.js');
+const {conyugesDe}=await import('../../../src/domain/genealogy/personAccessors.js');
 const qids=JSON.parse(fs.readFileSync('qids.json')),ent=JSON.parse(fs.readFileSync('entities.json')),status=JSON.parse(fs.readFileSync('status.json')),gnd=JSON.parse(fs.readFileSync('gnd.json'));
 const reviews=JSON.parse(fs.readFileSync('reviews.json'));
 const data={};
@@ -24,7 +24,7 @@ const header=`// V5.25 · Revisión bibliográfica con fichas de autoridad.
 // se marca como documentada únicamente si la ficha GND registra el mismo año (fechas),
 // enlaza a la misma persona como padre, madre o cónyuge, o fecha el mismo cargo y
 // territorio con los mismos años. Las discrepancias quedan pendientes y se listan en
-// docs/V5.25-discrepancias.md. «r» guarda identificadores de diccionarios biográficos.
+// docs/versiones/V5.25-discrepancias.md. «r» guarda identificadores de diccionarios biográficos.
 // Generado con scripts/research/authority-review/run.mjs; no editar a mano.
 `;
 const body=`const DATA = ${JSON.stringify(data)};
@@ -89,7 +89,7 @@ console.log('people',Object.keys(data).length,'with gnd',Object.values(data).fil
 const rows=fs.existsSync('mismatches.tsv')?fs.readFileSync('mismatches.tsv','utf8').trim().split('\n').filter(Boolean):[];
 const name=Object.fromEntries(PERSONAS.map(p=>[p.id,p.nombre]));
 const lines=rows.map(r=>{const [id,kind,ours,theirs,url]=r.split('\t');return `| ${name[id]||id} (\`${id}\`) | ${kind==='birth'?'Nacimiento':'Fallecimiento'} | ${ours.replace('Atlas ','')} | ${theirs.replace('GND ','')} | [ficha](${url}) |`;}).sort();
-fs.writeFileSync(new URL('../../../docs/V5.25-discrepancias.md', import.meta.url),`# V5.25 · Fechas que no coinciden con la ficha de autoridad
+fs.writeFileSync(new URL('../../../docs/versiones/V5.25-discrepancias.md', import.meta.url),`# V5.25 · Fechas que no coinciden con la ficha de autoridad
 
 La revisión con las fichas GND (Deutsche Nationalbibliothek) encontró ${rows.length} fechas en las que el
 Atlas y la ficha dan años distintos. No se han cambiado: siguen «Pendientes de revisión» hasta que una

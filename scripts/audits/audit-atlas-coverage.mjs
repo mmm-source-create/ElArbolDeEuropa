@@ -1,15 +1,15 @@
 import {auditReportPath, projectRoot} from '../lib/project-paths.mjs';
-import {gobiernosDe, territoriosDe} from '../../src/data/personAccessors.js';
+import {gobiernosDe, territoriosDe} from '../../src/domain/genealogy/personAccessors.js';
 // Run with: node --import ./tests/jsx-loader.mjs scripts/audits/audit-atlas-coverage.mjs
 // Territories, governments and locations are deliberately counted separately.
 import fs from 'node:fs/promises';
 import path from 'node:path';
 import {fileURLToPath} from 'node:url';
-import {PERSONAS} from '../../src/personas.jsx';
+import {PERSONAS} from '../../src/data/personas.js';
 import {TERRITORIOS, gobiernoEfectivo} from '../../src/data/territorios.js';
-import {mapAuthoritiesForPerson} from '../../src/data/mapAuthorities.js';
+import {mapAuthoritiesForPerson} from '../../src/cartography/mapAuthorities.js';
 import {atlasLocationIds} from './lib/locationMapAudit.js';
-import {pilotJurisdictionsFor, reviewedMapLayers} from '../../src/data/locationMapPilot.js';
+import {pilotJurisdictionsFor, reviewedMapLayers} from '../../src/cartography/locationMapPilot.js';
 
 const IMPERIAL_OFFICES = new Set(['Alemania', 'Sacro Imperio']);
 // These published layers expressly represent city cores, branches or the Pale.
@@ -182,9 +182,9 @@ export function summarizeContinuityLayers(continuity) {
 async function main() {
   const root = projectRoot;
   const readJson = async file => JSON.parse(await fs.readFile(path.join(root, file), 'utf8'));
-  const data = await readJson('prototypes/euv-locations/corridor-locations.json');
-  data.burgundy = await readJson('prototypes/euv-locations/burgundian-locations.json');
-  const svg = await fs.readFile(path.join(root, 'prototypes/euv-locations/euv-locations-crop.svg'), 'utf8');
+  const data = await readJson('data/cartography/corridor-locations.json');
+  data.burgundy = await readJson('data/cartography/burgundian-locations.json');
+  const svg = await fs.readFile(path.join(root, 'data/cartography/euv-locations-crop.svg'), 'utf8');
   const report = auditAtlasCoverage(PERSONAS, data, atlasLocationIds(svg));
   try {
     const continuity = JSON.parse(await fs.readFile(auditReportPath('audit-map-continuity-report.json'), 'utf8'));

@@ -1,8 +1,8 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {PERSONAS} from '../src/personas.jsx';
+import {PERSONAS} from '../src/data/personas.js';
 import {TERRITORIOS} from '../src/data/territorios.js';
-import {HISTORIAS} from '../src/historiaData.jsx';
+import {HISTORIAS} from '../src/data/historias.js';
 import {CERTAINTY,CLAIM_REVIEWS,EDITORIAL_HISTORY,citationText,coverageReport,personClaims} from '../src/evidence/claims.js';
 
 test('cada dato personal registrado conserva una afirmación estable sin fuente atribuida por proximidad',()=>{

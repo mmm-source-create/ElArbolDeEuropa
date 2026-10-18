@@ -1,11 +1,11 @@
-import {atlasPoliticalMosaicAt} from '../src/data/atlasMosaic.js';
+import {atlasPoliticalMosaicAt} from '../src/cartography/atlasMosaic.js';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import path from 'node:path';
 import test from 'node:test';
-import { pilotLocationsFor, reviewedLayerLocations, reviewedLayerEvidence } from '../src/data/locationMapPilot.js';
+import { pilotLocationsFor, reviewedLayerLocations, reviewedLayerEvidence } from '../src/cartography/locationMapPilot.js';
 
-const lab = path.resolve(import.meta.dirname, '../prototypes/euv-locations');
+const lab = path.resolve(import.meta.dirname, '../data/cartography');
 const data = JSON.parse(fs.readFileSync(path.join(lab, 'corridor-locations.json'), 'utf8'));
 const carlos = JSON.parse(fs.readFileSync(path.join(lab, 'carlos-v-locations.json'), 'utf8'));
 const burgundy = JSON.parse(fs.readFileSync(path.join(lab, 'burgundian-locations.json'), 'utf8'));

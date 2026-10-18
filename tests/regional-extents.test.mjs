@@ -1,22 +1,22 @@
-import {atlasPoliticalMosaicAt} from '../src/data/atlasMosaic.js';
+import {atlasPoliticalMosaicAt} from '../src/cartography/atlasMosaic.js';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
-import {PERSONAS} from '../src/personas.jsx';
+import {PERSONAS} from '../src/data/personas.js';
 import {personClaims} from '../src/evidence/claims.js';
-import {mapAuthoritiesForPerson} from '../src/data/mapAuthorities.js';
-import {pilotLocationsFor, reviewedMapLayers, reviewedLayerLocations} from '../src/data/locationMapPilot.js';
-import {politicalMosaicAt} from '../src/data/locationMosaic.js';
+import {mapAuthoritiesForPerson} from '../src/cartography/mapAuthorities.js';
+import {pilotLocationsFor, reviewedMapLayers, reviewedLayerLocations} from '../src/cartography/locationMapPilot.js';
+import {politicalMosaicAt} from '../src/cartography/locationMosaic.js';
 import {applyRegionalExtents} from '../scripts/cartography/apply-regional-extents.mjs';
 import {REGIONAL_EXTENT_REVIEWS} from '../src/evidence/regionalExtentReviewData.js';
 
 const read = path => JSON.parse(fs.readFileSync(new URL(path, import.meta.url), 'utf8'));
-const data = read('../prototypes/euv-locations/corridor-locations.json');
-const review = read('../prototypes/euv-locations/regional-extent-review.json');
-const inventory = read('../prototypes/euv-locations/regional-extent-cells.json');
+const data = read('../data/cartography/corridor-locations.json');
+const review = read('../data/cartography/regional-extent-review.json');
+const inventory = read('../data/cartography/regional-extent-cells.json');
 const layers = new Map(reviewedMapLayers(data).map(layer => [layer.name, layer]));
 const people = new Map(PERSONAS.map(person => [person.id, person]));
-const westernGovernments = new Set(read('../prototypes/euv-locations/iberia-italy-full-review.json').assignments.flatMap(phase => phase.governmentTerritories));
+const westernGovernments = new Set(read('../data/cartography/iberia-italy-full-review.json').assignments.flatMap(phase => phase.governmentTerritories));
 const cells = (name, year) => westernGovernments.has(name) ? pilotLocationsFor(data, name, year) : reviewedLayerLocations(data, layers.get(name), year);
 const authority = (person, year) => mapAuthoritiesForPerson(people.get(person), year, data).filter(entry => entry.paint);
 const personal = (person, year) => new Set(authority(person, year).flatMap(entry => entry.ids));
@@ -24,7 +24,7 @@ const areaById = new Map(inventory.cells.map(cell => [cell.id, cell.area]));
 const area = ids => ids.reduce((sum, id) => sum + (areaById.get(id) || 0), 0);
 
 test('regional selections reference measurable actual SVG surfaces and dated evidence', () => {
-  const svg = fs.readFileSync(new URL('../prototypes/euv-locations/euv-locations-crop.svg', import.meta.url), 'utf8');
+  const svg = fs.readFileSync(new URL('../data/cartography/euv-locations-crop.svg', import.meta.url), 'utf8');
   const pathIds = new Set([...svg.matchAll(/<path\b[^>]*\bid="([^"]+)"/g)].map(match => match[1]));
   for (const layer of [...review.replacements, ...review.territories]) {
     assert(layer.sources.length && layer.sources.every(source => source.locator && new URL(source.url).protocol === 'https:'), layer.name);

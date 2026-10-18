@@ -1,5 +1,5 @@
-import {SCREEN_NOTICE_SCRIPT} from '../../src/public/screenNotice.js';
-import {STATIC_DATA_ID,serializePage,staticRoute} from '../../src/public/staticData.js';
+import {SCREEN_NOTICE_SCRIPT} from '../../src/features/public/screenNotice.js';
+import {STATIC_DATA_ID,serializePage,staticRoute} from '../../src/features/public/staticData.js';
 export const escapeHtml = value => String(value).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;').replace(/'/g,'&#39;');
 const unescapeXml = value => value.replace(/&(?:amp|lt|gt|quot|apos);/g,x=>({'&amp;':'&','&lt;':'<','&gt;':'>','&quot;':'"','&apos;':"'"}[x]));
 export function routesFromSitemap(xml,siteUrl) {
@@ -27,12 +27,12 @@ export function assetGraph(manifest,entry) {
  visit(entry);
  return {css:[...css],js:[...js]};
 }
-export const STATIC_PAGE_ENTRIES=Object.freeze({
- english:'src/english/EnglishPage.jsx',
- historia:'src/stories/StoryPage.jsx',
- persona:'src/public/PublicSite.jsx',
- dinastia:'src/public/DynastyPage.jsx',
- territorio:'src/public/TerritoryPage.jsx',
+const STATIC_PAGE_ENTRIES=Object.freeze({
+ english:'src/features/english/EnglishPage.jsx',
+ historia:'src/features/stories/StoryPage.jsx',
+ persona:'src/features/public/PublicSite.jsx',
+ dinastia:'src/features/public/DynastyPage.jsx',
+ territorio:'src/features/public/TerritoryPage.jsx',
 });
 const STATIC_PAGE_NAMES=Object.freeze({english:'EnglishPage',historia:'StoryPage',persona:'PublicSite',dinastia:'DynastyPage',territorio:'TerritoryPage'});
 export function assetsForStaticPage(manifest,kind) {

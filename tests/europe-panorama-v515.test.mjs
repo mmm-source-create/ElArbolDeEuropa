@@ -1,19 +1,19 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
-import {PERSONAS} from '../src/personas.jsx';
-import {HISTORIAS,EVENTOS_HISTORICOS} from '../src/historiaData.jsx';
-import {governmentGroupsAt,governmentSummary,groupedGovernmentIntervals} from '../src/data/governmentPresentation.js';
-import {governmentTableAt,protagonistsAt,europeMosaicAt} from '../src/data/europePanorama.js';
-import {atlasPoliticalMosaicAt} from '../src/data/atlasMosaic.js';
-import {COLLECTIVE_AUTHORITIES} from '../src/data/politicalMapIndex.js';
-import {colorTerritorioEnMapa} from '../src/Territorios.jsx';
-import {buildTimelineRows,layoutTimelineEvents,timelineYearAt} from '../src/explorer/timelineLayout.js';
-import {vidaEnAnio} from '../src/data/europeYear.js';
-import {sanitizeSession,shouldResumeAtlas} from '../src/explorer/atlasSession.js';
+import {PERSONAS} from '../src/data/personas.js';
+import {HISTORIAS,EVENTOS_HISTORICOS} from '../src/data/historias.js';
+import {governmentGroupsAt,governmentSummary,groupedGovernmentIntervals} from '../src/domain/government/governmentPresentation.js';
+import {governmentTableAt,protagonistsAt,europeMosaicAt} from '../src/cartography/europePanorama.js';
+import {atlasPoliticalMosaicAt} from '../src/cartography/atlasMosaic.js';
+import {COLLECTIVE_AUTHORITIES} from '../src/cartography/politicalMapIndex.js';
+import {colorTerritorioEnMapa} from '../src/cartography/kingdomMaps.js';
+import {buildTimelineRows,layoutTimelineEvents,timelineYearAt} from '../src/features/atlas/timelineLayout.js';
+import {vidaEnAnio} from '../src/domain/time/europeYear.js';
+import {sanitizeSession,shouldResumeAtlas} from '../src/features/atlas/atlasSession.js';
 const by=new Map(PERSONAS.map(p=>[p.id,p]));
-const data=JSON.parse(fs.readFileSync(new URL('../prototypes/euv-locations/corridor-locations.json',import.meta.url)));
-data.burgundy=JSON.parse(fs.readFileSync(new URL('../prototypes/euv-locations/burgundian-locations.json',import.meta.url)));
+const data=JSON.parse(fs.readFileSync(new URL('../data/cartography/corridor-locations.json',import.meta.url)));
+data.burgundy=JSON.parse(fs.readFileSync(new URL('../data/cartography/burgundian-locations.json',import.meta.url)));
 
 test('Carlos V has one Spanish entity, retains external groups and every constituent mandate',()=>{
  const p=by.get('CARLOS5'),before=JSON.stringify(p);

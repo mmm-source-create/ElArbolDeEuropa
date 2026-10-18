@@ -1,14 +1,14 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
-import {PERSONAS} from '../src/personas.jsx';
+import {PERSONAS} from '../src/data/personas.js';
 import {personClaims} from '../src/evidence/claims.js';
 import {BALKAN_AUTHORITY_REVIEWS} from '../src/evidence/balkanReviewData.js';
-import {buildPoliticalMapIndex, inspectMapRegion} from '../src/data/politicalMapIndex.js';
-import {mapAuthoritiesForPerson} from '../src/data/mapAuthorities.js';
-import {pilotLocationsFor, mapLocationsForGovernment} from '../src/data/locationMapPilot.js';
-import {idsDeGobiernoEnAño} from '../src/Territorios.jsx';
-const data=JSON.parse(fs.readFileSync(new URL('../prototypes/euv-locations/corridor-locations.json',import.meta.url)));
+import {buildPoliticalMapIndex, inspectMapRegion} from '../src/cartography/politicalMapIndex.js';
+import {mapAuthoritiesForPerson} from '../src/cartography/mapAuthorities.js';
+import {pilotLocationsFor, mapLocationsForGovernment} from '../src/cartography/locationMapPilot.js';
+import {idsDeGobiernoEnAño} from '../src/cartography/kingdomMaps.js';
+const data=JSON.parse(fs.readFileSync(new URL('../data/cartography/corridor-locations.json',import.meta.url)));
 const people=new Map(PERSONAS.map(p=>[p.id,p]));
 const inspect=(id,year)=>inspectMapRegion(id,year,buildPoliticalMapIndex(PERSONAS,year,data,{includeClaims:true}),data);
 

@@ -1,9 +1,9 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {PERSONAS} from '../src/personas.jsx';
+import {PERSONAS} from '../src/data/personas.js';
 import {TERRITORIOS} from '../src/data/territorios.js';
 import {CLAIM_REVIEWS,PILOT_PERSON_IDS,citationText,coverageTasks,hasDocumentedClaim,personClaims} from '../src/evidence/claims.js';
-import {sanitizeSession,shouldResumeAtlas} from '../src/explorer/atlasSession.js';
+import {sanitizeSession,shouldResumeAtlas} from '../src/features/atlas/atlasSession.js';
 
 const byId=new Map(PERSONAS.map(person=>[person.id,person]));
 

@@ -1,7 +1,6 @@
 import fs from 'node:fs/promises';
-import { slugPublico } from '../../src/utils/personPresentation.js';
-const source = await fs.readFile('src/historiaData.jsx', 'utf8');
-const { HISTORIAS } = await import(`data:text/javascript;base64,${Buffer.from(source).toString('base64')}`);
+import { slugPublico } from '../../src/domain/people/personPresentation.js';
+import { HISTORIAS } from '../../src/data/historias.js';
 const files = await fs.readdir('public/personas-meta');
 const people = new Map();
 for (const file of files.filter(f => f.endsWith('.json') && f !== 'index.json')) {
