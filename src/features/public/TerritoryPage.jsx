@@ -4,6 +4,7 @@ import React,{useEffect} from 'react';
 import {ArrowRight,Landmark} from 'lucide-react';
 import Sucesion from '../atlas/Sucesion.jsx';
 import {useJson,usePublicMeta} from './publicShared.jsx';
+import ReadingSkeleton from '../stories/ReadingSkeleton.jsx';
 import SiteHeader from '../../components/SiteHeader.jsx';
 import SiteFooter from '../../components/SiteFooter.jsx';
 import {slugPublico} from '../../domain/people/personLabels.js';
@@ -27,7 +28,7 @@ export function TerritoryPage({slug,initialData=null}) {
  const atlas=`/es/territorio/${encodeURIComponent(slug)}?atlas=1`;
  return <div className="public-site"><SiteHeader locale="es" pathname={`/es/territorio/${slug}`} prerendered={Boolean(initialData)}/><main className="public-main territory-page">
  <nav className="public-breadcrumbs" aria-label="Migas de pan"><a href="/es/">Inicio</a><span aria-hidden="true">›</span><a href="/es/territorios">Territorios</a><span aria-hidden="true">›</span><span aria-current="page">{t?.nombre||'Ficha'}</span></nav>
- {loading&&<p role="status">Cargando historia…</p>}{error&&<p role="alert">No se ha podido cargar esta ficha. <a href="/es/territorios">Consultar el catálogo</a></p>}
+ {loading&&<ReadingSkeleton kind="entity-body"/>}{error&&<p role="alert">No se ha podido cargar esta ficha. <a href="/es/territorios">Consultar el catálogo</a></p>}
  {t&&<><header className="public-page-title territory-hero"><div className="public-page-icon"><Landmark size={22}/></div><span>{claseTexto(t.clase)} · {t.naturaleza==='agrupacion'?'Agrupación de exploración':t.naturaleza==='compuesta'?'Entidad compuesta':'Entidad histórica'}</span><h1>{t.nombre}</h1>
  <p>{t.resumen||`Esta ficha reúne los gobiernos y las conexiones documentadas en la base para ${t.nombre}. La serie puede ser incompleta: la ausencia de registros no implica que el territorio careciera de gobierno.`}</p>
  <div className="territory-actions"><a className="public-primary" href={atlas}>Abrir en el Atlas <ArrowRight size={15}/></a><a className="public-secondary" href="#sucesion">Explorar sucesión <ArrowRight size={15}/></a></div></header>

@@ -5,6 +5,7 @@ import {ArrowRight,Search,Shield} from 'lucide-react';
 import SiteHeader from '../../components/SiteHeader.jsx';
 import SiteFooter from '../../components/SiteFooter.jsx';
 import {useJson,usePublicMeta,PersonaMiniCard} from './publicShared.jsx';
+import ReadingSkeleton from '../stories/ReadingSkeleton.jsx';
 import {normalizarBusquedaPublica,slugPublico} from '../../domain/people/personLabels.js';
 import './dynasty.css';
 import '../../styles/theme.css';
@@ -18,7 +19,7 @@ export default function DynastyPage({slug,initialData=null}) {
   const atlas=`/es/dinastia/${d?.slug||slug}?atlas=1`;
   return <div className="public-site"><SiteHeader pathname={`/es/dinastia/${slug}`} prerendered={Boolean(initialData)}/><main className="public-main dynasty-page">
     <nav className="public-breadcrumbs" aria-label="Migas de pan"><a href="/es/">Inicio</a><span>›</span><a href="/es/dinastias">Dinastías</a><span>›</span><span aria-current="page">{d?.nombre||'Ficha'}</span></nav>
-    {loading?<p className="public-loading" role="status">Cargando ficha de la casa…</p>:error||!d?<section className="public-error"><h1>Ficha no disponible</h1><p>No se ha podido cargar esta casa.</p><a href="/es/dinastias">Volver al catálogo de dinastías</a></section>:<>
+    {loading?<ReadingSkeleton kind="entity-body"/>:error||!d?<section className="public-error"><h1>Ficha no disponible</h1><p>No se ha podido cargar esta casa.</p><a href="/es/dinastias">Volver al catálogo de dinastías</a></section>:<>
       <header className="public-page-title dynasty-hero">
         <div className="public-page-icon"><Shield size={22}/></div><span>Casas y linajes · {d.editorial?'Historia de la dinastía':'Personas del Atlas'}</span>
         <h1>{d.nombre}</h1><p>{d.resumen||'Explora los miembros de esta casa y los territorios vinculados a sus gobiernos registrados.'}</p>

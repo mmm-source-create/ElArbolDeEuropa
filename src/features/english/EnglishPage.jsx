@@ -7,7 +7,7 @@ import { PersonaMiniCard, useJson, usePublicMeta } from '../public/publicShared.
 import { HomeContent } from '../public/HomePage.jsx';
 import { PersonContent } from '../public/PublicSite.jsx';
 import { entityMeta } from '../public/publicMeta.js';
-import { englishRoute } from './routes.js';
+import { englishRoute, englishSkeletonKind } from './routes.js';
 import { StoryReader } from '../stories/StoryPage.jsx';
 import ReadingSkeleton from '../stories/ReadingSkeleton.jsx';
 import '../stories/stories.css';
@@ -17,7 +17,7 @@ export default function EnglishPage({ page = null, pathname }) {
   const route = page || englishRoute(pathname || (typeof window === 'undefined' ? '/en/' : window.location.pathname));
   const state = useJson(route ? `/english-meta/${route.slug}${route.chapter ? `/capitulo/${route.chapter}` : ''}.json` : '/english-meta/unavailable.json', page?.data || null);
   const data = state.data;
-  const skeletonKind = route?.slug?.startsWith('person-') ? 'person' : route?.slug === 'home' ? 'home' : ['people', 'stories'].includes(route?.slug) ? 'catalog' : ['methodology','about'].includes(route?.slug) ? 'methodology' : 'story';
+  const skeletonKind = englishSkeletonKind(route);
   usePublicMeta(entityMeta('english', data, route?.slug));
   if (!data) return <div className="public-site"><SiteHeader locale="en"/><main className={`public-main${skeletonKind === 'story' ? ' story-page' : ''}`} aria-busy={state.loading}>{state.loading ? <ReadingSkeleton locale="en" kind={skeletonKind}/> : <div className="public-error" role="alert"><h1>Translation not available</h1><p>This page has not been translated or could not be loaded.</p><button className="public-primary" onClick={() => window.location.reload()}>Try again</button> <a className="public-secondary" href="/en/">English home</a></div>}</main><SiteFooter locale="en"/></div>;
   const prerendered = Boolean(page);
