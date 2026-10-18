@@ -11,7 +11,8 @@ import {Info, Landmark, Scale, Heart, ExternalLink, Users, Shield, BookOpen, Sea
 import {IMAGENES_PERSONAS} from '../../data/imagenesPersonas.js';
 import {usePublicMeta, PublicLayout, Breadcrumbs, useJson, PersonaMiniCard, rutaEntidad, personaDates} from './publicShared.jsx';
 import ProjectSupport from '../../components/ProjectSupport.jsx';
-import DynastyArms from '../../components/DynastyArms.jsx';
+import DynastyArms, {ArmsCredit} from '../../components/DynastyArms.jsx';
+import {CREDITOS_ESCUDOS} from '../../content/dinastias/escudos.js';
 import {textoBusquedaPersona, normalizarBusquedaPublica, slugPublico, etiquetaClaseGobierno} from '../../domain/people/personLabels.js';
 import {responsiveImage} from '../../utils/responsiveImage.js';
 import ReadingSkeleton from '../stories/ReadingSkeleton.jsx';
@@ -64,6 +65,9 @@ const INFO_PAGES = {
         ["MapChart", "https://www.mapchart.net/"],
         ["CC BY-SA 4.0", "https://creativecommons.org/licenses/by-sa/4.0/"]
       ]},
+      { title: "Escudos de Wikimedia Commons", paragraphs: [
+        "Los escudos de las dinastías que no dibuja el propio proyecto proceden de Wikimedia Commons. Se reproducen sin cambios en el dibujo; solo se retiraron metadatos de edición. Cada ficha indica bajo el escudo su autor y su licencia, que también se recogen aquí."
+      ], links: CREDITOS_ESCUDOS.map(c => [`${c.dinastia} · ${c.autor} · ${c.licencia}`, c.fuente])},
     ],
   },
   agradecimientos: {
@@ -212,6 +216,7 @@ export function CatalogPage({ tipo }) {
                 <div className="public-entity-card-head"><div className="public-entity-heading">{tipo === "dinastias" && <DynastyArms dinastia={item.nombre} size={30}/>}<div><span>{tipo === "dinastias" ? (item.editorial ? "Historia de la dinastía" : "Dinastía") : "Territorio"}</span><h2>{item.nombre}</h2></div></div><strong aria-label={`${item.total} personas`}>{item.total}<small aria-hidden="true">{item.total === 1 ? "persona" : "personas"}</small></strong></div>
                 {tipo === "dinastias" && item.resumen && <p className="public-muted public-dynasty-summary">{item.resumen}</p>}
                 {!!item.miembros?.length && <div className="public-entity-members">{item.miembros.map((p) => <a key={p.id} href={rutaEntidad("persona", p.slug)}>{p.nombre}</a>)}</div>}
+                {tipo === "dinastias" && <ArmsCredit dinastia={item.nombre} className="public-entity-arms-credit"/>}
                 <a className="public-entity-action" href={rutaEntidad(tipo === "dinastias" ? "dinastia" : "territorio", item.slug)}>Ver ficha <ArrowRight size={13} /></a>
               </article>
             ))}

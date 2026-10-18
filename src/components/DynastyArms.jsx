@@ -100,10 +100,14 @@ function layer(capa, index, clip, quarter = false) {
   }
 }
 
-export default function DynastyArms({dinastia, size = 56, className = ''}) {
+// A reviewed Wikimedia Commons image takes precedence over the drawing; the
+// drawing remains for houses without one and where `drawn` asks for it.
+export default function DynastyArms({dinastia, size = 56, className = '', drawn = false}) {
   const id = useId().replace(/:/g, '');
   const escudo = escudoDe(dinastia);
   if (!escudo) return null;
+  if (escudo.imagen && !drawn) return <img className={`dynasty-arms dynasty-arms-image ${className}`.trim()} src={escudo.imagen.archivo}
+    width={size} height={Math.round(size * 1.2)} alt={`Armas: ${escudo.blason}`} loading="lazy" decoding="async"/>;
   const clip = `arms-${id}`;
   return <svg className={`dynasty-arms ${className}`.trim()} viewBox="0 0 100 120" width={size} height={size * 1.2}
     role="img" aria-label={`Armas: ${escudo.blason}`}>
@@ -115,4 +119,15 @@ export default function DynastyArms({dinastia, size = 56, className = ''}) {
     <g clipPath={`url(#${clip})`}>{escudo.capas.map((capa, i) => layer(capa, i, clip))}</g>
     <path d={SHIELD} fill="none" stroke={INK} strokeWidth={2.4}/>
   </svg>;
+}
+
+// Author, licence and file page of a Commons image, shown under the shield.
+export function ArmsCredit({dinastia, className = ''}) {
+  const imagen = escudoDe(dinastia)?.imagen;
+  if (!imagen) return null;
+  return <small className={`dynasty-arms-credit ${className}`.trim()}>
+    Escudo: <a href={imagen.fuente} target="_blank" rel="noreferrer">{imagen.autor}</a>
+    {' · '}{imagen.licenciaUrl ? <a href={imagen.licenciaUrl} target="_blank" rel="noreferrer license">{imagen.licencia}</a> : imagen.licencia}
+    {' · Wikimedia Commons'}
+  </small>;
 }

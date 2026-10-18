@@ -158,4 +158,4 @@ Release se preparan en borrador sobre la entrega validada.
 
 [V5.29](versiones/V5.29.md) pinta la Francia inglesa con el color de Inglaterra y los ducados franceses como feudos del reino, rehace los mapas de la guerra de los Cien Años, incorpora a Ricardo Corazón de León y los dominios angevinos, separa los colores borgoñones hasta que comparten duque, da a Polonia-Lituania un color propio y añade escudos a 38 dinastías y 141 sobrenombres.
 
-[V5.30](versiones/V5.30.md) añade vistas previas con imagen al compartir enlaces, ordena los filtros por entidades políticas y regiones, pinta el norte de África, Tierra Santa y Chipre de 1200 a 1800 y corrige el destello de Desafío y la ficha móvil.
+[V5.30](versiones/V5.30.md) añade vistas previas con imagen al compartir enlaces, ordena los filtros por entidades políticas y regiones, pinta el norte de África, Tierra Santa y Chipre de 1200 a 1800, muestra escudos de Wikimedia Commons con autor y licencia en 34 dinastías y corrige el destello de Desafío y la ficha móvil.

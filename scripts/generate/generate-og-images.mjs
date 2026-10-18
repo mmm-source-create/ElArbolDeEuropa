@@ -9,7 +9,7 @@ import {renderToStaticMarkup} from 'react-dom/server';
 import {PERSONAS} from '../../src/data/personas.js';
 import {IMAGENES_PERSONAS} from '../../src/data/imagenesPersonas.js';
 import {IMAGE_VARIANTS} from '../../src/data/imageVariants.js';
-import {ESCUDOS} from '../../src/content/dinastias/escudos.js';
+import {ESCUDOS, escudoDe} from '../../src/content/dinastias/escudos.js';
 import DynastyArms from '../../src/components/DynastyArms.jsx';
 import {PERSONA_SLUG_POR_ID} from '../../src/features/atlas/atlasRoutes.js';
 import {slugPublico} from '../../src/domain/people/personLabels.js';
@@ -44,10 +44,14 @@ async function portraitLayer(file, framing = '50% 25%') {
   return sharp(file).resize(sw, sh).extract({left, top, width: PANEL, height: H}).toBuffer();
 }
 
+// A share card cannot carry the credit that CC BY and CC BY-SA require, so it
+// uses a Commons image only when it is in the public domain or under CC0.
+const FREE = /^(Dominio público|CC0)/;
 async function armsLayer(dinastia) {
-  const svg = renderToStaticMarkup(React.createElement(DynastyArms, {dinastia, size: 360}))
-    .replace('<svg ', '<svg xmlns="http://www.w3.org/2000/svg" ');
-  const arms = await sharp(Buffer.from(svg), {density: 144}).resize({height: 470}).png().toBuffer();
+  const imagen = escudoDe(dinastia)?.imagen;
+  const source = imagen && FREE.test(imagen.licencia) ? publicFile(imagen.archivo) : Buffer.from(
+    renderToStaticMarkup(React.createElement(DynastyArms, {dinastia, size: 360, drawn: true})).replace('<svg ', '<svg xmlns="http://www.w3.org/2000/svg" '));
+  const arms = await sharp(source, {density: 144}).resize({height: 470, width: 560, fit: 'inside'}).png().toBuffer();
   const {width} = await sharp(arms).metadata();
   const frame = await sharp({create: {width: PANEL, height: H, channels: 3, background: PARCHMENT}})
     .composite([{input: arms, left: Math.round((PANEL - width) / 2), top: 80}]).png().toBuffer();

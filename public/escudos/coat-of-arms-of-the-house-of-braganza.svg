@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<svg width="86.119mm" height="101.28mm" version="1.1" viewBox="0 0 86.119 101.28" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+ <defs>
+  <clipPath id="clipPath11348">
+   <path d="m369.42 478.49v218.17a160.85 160.85 0 0 0 160.85 160.85 160.85 160.85 0 0 0 160.85-160.85v-218.17h-2.1551z" fill="#fff" stop-color="#000000" stroke="#4d4d4d" stroke-miterlimit="282" stroke-width="1.5598" style="-inkscape-stroke:none;font-variation-settings:normal;paint-order:fill markers stroke"/>
+  </clipPath>
+ </defs>
+ <g transform="translate(-97.241 -126.1)">
+  <g transform="matrix(.14255 0 0 .14255 137.81 -21.097)">
+   <g transform="matrix(4.0979 0 0 4.0979 -5.05 985.01)">
+    <path d="m-67.363 12.467v98.814a72.856 72.856 0 0 0 72.856 72.856 72.856 72.856 0 0 0 72.856-72.856v-98.814h-0.97612z" fill="#fff" stop-color="#000000" style="-inkscape-stroke:none;font-variation-settings:normal;paint-order:fill markers stroke"/>
+   </g>
+   <g transform="matrix(1.856 0 0 1.856 -966.74 148)" clip-path="url(#clipPath11348)" fill="#cb0022">
+    <path d="m391.03 460.15-43.223 36.686 145.28 171.17-145.28 171.17 43.223 36.688 139.24-164.05 139.24 164.05 43.223-36.688-145.29-171.17 145.29-171.17-43.223-36.686-139.24 164.05z" color="#000000" stroke-width="11.339" style="-inkscape-stroke:none;paint-order:fill markers stroke"/>
+    <path d="m391.68 452.16-4.3223 3.668-47.545 40.354 145.84 171.82-145.84 171.82 51.867 44.023 138.59-163.28 138.59 163.28 51.867-44.023-145.84-171.82 145.84-171.82-51.867-44.021-138.59 163.28zm-1.3086 15.98 139.9 164.82 139.9-164.82 34.578 29.35-144.73 170.51 144.73 170.51-34.578 29.352-139.9-164.82-139.9 164.82-34.578-29.352 144.73-170.51-144.73-170.51z" color="#000000" style="-inkscape-stroke:none;paint-order:fill markers stroke"/>
+   </g>
+   <g id="g12531" transform="matrix(-.95954 .81432 .81432 .95954 -419.67 983.18)">
+    <path d="m-91.62 254.13v50.558c0 18.807 15.246 34.053 34.053 34.053s34.053-15.246 34.053-34.053v-50.558z" fill="#003278" style="font-variation-settings:normal"/>
+    <circle cx="-57.567" cy="290.53" r="7" fill="#fff" fill-opacity=".99"/>
+    <circle cx="-75.567" cy="308.53" r="7" fill="#fff" fill-opacity=".99"/>
+    <circle transform="scale(-1,1)" cx="39.567" cy="308.53" r="7" fill="#fff" fill-opacity=".99"/>
+    <circle transform="scale(1,-1)" cx="-75.567" cy="-272.53" r="7" fill="#fff" fill-opacity=".99"/>
+    <circle transform="scale(-1)" cx="39.567" cy="-272.53" r="7" fill="#fff" fill-opacity=".99"/>
+   </g>
+   <use transform="matrix(-1 0 0 1 34.914 2.4502e-5)" width="100%" height="100%" xlink:href="#g12531"/>
+   <use transform="matrix(-1 0 0 1 -239.95 321.93)" width="100%" height="100%" xlink:href="#g12531"/>
+   <use transform="translate(274.87 321.93)" width="100%" height="100%" xlink:href="#g12531"/>
+   <g transform="matrix(-1.2585 2.4549e-8 2.4549e-8 1.2585 -54.991 1020.8)">
+    <path d="m-91.62 254.13v50.558c0 18.807 15.246 34.053 34.053 34.053s34.053-15.246 34.053-34.053v-50.558z" fill="#003278" style="font-variation-settings:normal"/>
+    <g fill="#fff" fill-opacity=".99">
+     <circle cx="-57.567" cy="290.53" r="7"/>
+     <circle cx="-75.567" cy="308.53" r="7"/>
+     <circle transform="scale(-1,1)" cx="39.567" cy="308.53" r="7"/>
+     <circle transform="scale(1,-1)" cx="-75.567" cy="-272.53" r="7"/>
+     <circle transform="scale(-1)" cx="39.567" cy="-272.53" r="7"/>
+    </g>
+   </g>
+   <path d="m-281.1 1036.1v404.93a298.55 298.55 0 0 0 298.55 298.55 298.55 298.55 0 0 0 298.55-298.55v-404.93h-4z" fill="none" stop-color="#000000" stroke="#563802" stroke-miterlimit="282" stroke-width="7.015" style="font-variation-settings:normal;paint-order:fill markers stroke"/>
+  </g>
+ </g>
+</svg>

@@ -8,6 +8,10 @@ import {atlasFilterOptions, territoryRegion} from '../src/domain/filters/atlasFi
 import {TERRITORIOS_SUB, subterritoriosDeFiltro} from '../src/domain/filters/territoryFilters.js';
 import {territoriosDe} from '../src/domain/genealogy/personAccessors.js';
 import {europeMosaicAt} from '../src/cartography/europePanorama.js';
+import React from 'react';
+import {renderToStaticMarkup} from 'react-dom/server';
+import DynastyArms, {ArmsCredit} from '../src/components/DynastyArms.jsx';
+import {ESCUDOS, escudoDe, CREDITOS_ESCUDOS} from '../src/content/dinastias/escudos.js';
 
 const read = path => fs.readFileSync(new URL(`../${path}`, import.meta.url), 'utf8');
 const meta = (m, key) => m.meta.find(([, k]) => k === key)?.[2];
@@ -68,4 +72,28 @@ test('el norte de África, Tierra Santa y Chipre tienen cartografía continua de
     [1230, 'Jerusalem', 'Jerusalén'], [1240, 'Jerusalem', 'Sultanato ayubí'], [1243, 'Jerusalem', 'Jerusalén'], [1290, 'Acre', 'Jerusalén'], [1291, 'Acre', 'Sultanato mameluco'],
     [1300, 'Cairo', 'Sultanato mameluco'], [1520, 'Cairo', 'Imperio otomano'], [1799, 'Cairo', 'Ocupación francesa de Egipto'], [1550, 'Famagusta', 'Venecia'],
   ]) assert.ok(owner(year, id).includes(identity), `${id} ${year}: ${owner(year, id)}`);
+});
+
+test('los escudos de Wikimedia Commons se muestran con autor y licencia, sin contenido activo', () => {
+  assert.ok(CREDITOS_ESCUDOS.length >= 30);
+  for (const credit of CREDITOS_ESCUDOS) {
+    assert.ok(ESCUDOS[credit.dinastia], credit.dinastia);
+    assert.ok(credit.autor && credit.licencia, credit.dinastia);
+    assert.match(credit.fuente, /^https:\/\/commons\.wikimedia\.org\/wiki\/File:/);
+    if (/^CC BY/.test(credit.licencia)) assert.match(credit.licenciaUrl, /^https:\/\/creativecommons\.org\/licenses\/by(-sa)?\/\d\.0\/$/);
+    const file = read(`public${credit.archivo}`);
+    if (credit.archivo.endsWith('.svg')) {
+      assert.match(file, /<svg\b[^>]*viewBox=/, credit.archivo);
+      assert.doesNotMatch(file, /<script|javascript:|<foreignObject|\son[a-z]+\s*=/i, credit.archivo);
+    }
+    const html = renderToStaticMarkup(React.createElement(DynastyArms, {dinastia: credit.dinastia, size: 40}));
+    assert.match(html, new RegExp(`^<img[^>]+src="${credit.archivo.replace(/[.()]/g, '\\$&')}"`), credit.dinastia);
+    const caption = renderToStaticMarkup(React.createElement(ArmsCredit, {dinastia: credit.dinastia}));
+    assert.ok(caption.includes(credit.licencia) && caption.includes('Wikimedia Commons'), credit.dinastia);
+  }
+  // Houses without a reviewed Commons file keep the drawing and no credit.
+  for (const house of ['Avís', 'Brabante', 'La Marck', 'Hohenstaufen']) {
+    assert.equal(escudoDe(house).imagen, undefined, house);
+    assert.match(renderToStaticMarkup(React.createElement(DynastyArms, {dinastia: house})), /^<svg/);
+  }
 });

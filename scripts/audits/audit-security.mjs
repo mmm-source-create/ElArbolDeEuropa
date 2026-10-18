@@ -31,6 +31,9 @@ async function auditSecurity() {
     if(!hs.some(h=>h.key==='Content-Security-Policy'&&h.value===EMBED_CSP)||hs.some(h=>h.key==='X-Frame-Options'))issues.push(`Política de inserción incorrecta: ${source}`);
   }
   if (activeSvgContent(await fs.readFile('data/cartography/MapChart_Map.svg', 'utf8'))) issues.push('El SVG del mapa contiene contenido activo no permitido.');
+  // Third-party arms from Wikimedia Commons are served from the site itself.
+  for (const file of (await fs.readdir('public/escudos')).filter(name => name.endsWith('.svg')))
+    if (activeSvgContent(await fs.readFile(`public/escudos/${file}`, 'utf8'))) issues.push(`El escudo ${file} contiene contenido activo no permitido.`);
   const files = execFileSync('git', ['ls-files', '-z', '--cached', '--others', '--exclude-standard'], {encoding: 'utf8'}).split('\0').filter(Boolean);
   for (const file of new Set(files)) {
     if (/(^|\/)(\.env(?:\..*)?|id_rsa|id_ed25519)$|\.(pem|key)$/i.test(file)) issues.push(`Archivo sensible versionable: ${file}`);

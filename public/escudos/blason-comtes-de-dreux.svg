@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg viewBox="0 0 600 660"
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://web.resource.org/cc/"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   height="660"
+   width="600"
+   version="1.0"
+   id="svg2"
+   sodipodi:version="0.32"
+   inkscape:version="0.45"
+   sodipodi:docname="Blason Comtes de Dreux.svg"
+   sodipodi:docbase="C:\Documents and Settings\Henry SALOME\Mes documents\Mes images\Blasons\SVG"
+   inkscape:export-filename="/Users/olivier/Desktop/Blason Rouge/Blason_Vide_3D.png"
+   inkscape:export-xdpi="144"
+   inkscape:export-ydpi="144"
+   inkscape:output_extension="org.inkscape.output.svg.inkscape"
+   sodipodi:modified="true">
+  
+  
+  <desc
+     id="desc4">Flag of Canton of Valais (Wallis)</desc>
+  <defs
+     id="defs6">
+    <linearGradient
+       id="linearGradient2893">
+      <stop
+         style="stop-color:white;stop-opacity:0.3137255;"
+         offset="0"
+         id="stop2895" />
+      <stop
+         id="stop2897"
+         offset="0.19"
+         style="stop-color:white;stop-opacity:0.25098041;" />
+      <stop
+         style="stop-color:#6b6b6b;stop-opacity:0.1254902;"
+         offset="0.60000002"
+         id="stop2901" />
+      <stop
+         style="stop-color:black;stop-opacity:0.1254902;"
+         offset="1"
+         id="stop2899" />
+    </linearGradient>
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient2893"
+       id="radialGradient3163"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(1.353218,0,0,1.348928,-77.62935,-85.74693)"
+       cx="221.44487"
+       cy="226.33101"
+       fx="221.44487"
+       fy="226.33101"
+       r="300" />
+  </defs>
+  <g
+     inkscape:groupmode="layer"
+     id="layer3"
+     inkscape:label="Fond écu"
+     style="opacity:1;display:inline"
+     sodipodi:insensitive="true">
+    <path
+       id="path2855"
+       style="fill:#e20909;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="M 300,658.5 C 300,658.5 598.50001,546.17969 598.50001,260.72817 C 598.50001,-24.723354 598.50001,2.1764765 598.50001,2.1764765 L 1.5,2.1764765 L 1.5,260.72817 C 1.5,546.17969 300,658.5 300,658.5 z "
+       sodipodi:nodetypes="cccccc" />
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer4"
+     inkscape:label="Meubles"
+     style="display:inline"
+     sodipodi:insensitive="true">
+    <g
+       id="g4548">
+      <path
+         inkscape:export-ydpi="144"
+         inkscape:export-xdpi="144"
+         id="path3390"
+         style="opacity:1;fill:#fcef3c;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         d="M 299.99998,552.3 C 299.99998,552.3 90,473.26544 90,272.40657 C 90,71.547719 90,90.475871 90,90.475871 L 509.99998,90.475871 L 509.99998,272.40657 C 509.99998,473.26544 299.99998,552.3 299.99998,552.3 z "
+         sodipodi:nodetypes="cccccc" />
+      <path
+         id="rect4447"
+         d="M 160,90.46875 L 160,157 L 230,157 L 230,90.46875 L 160,90.46875 z M 230,157 L 230,227 L 300,227 L 300,157 L 230,157 z M 300,157 L 370,157 L 370,90.46875 L 300,90.46875 L 300,157 z M 370,157 L 370,227 L 440,227 L 440,157 L 370,157 z M 440,157 L 510,157 L 510,90.46875 L 440,90.46875 L 440,157 z M 440,227 L 440,297 L 508.90625,297 C 509.61287,289.00776 510,280.82319 510,272.40625 L 510,227 L 440,227 z M 440,297 L 370,297 L 370,367 L 440,367 L 440,297 z M 440,367 L 440,437 L 453.4375,437 C 469.0627,416.667 482.85466,393.40868 492.90625,367 L 440,367 z M 440,437 L 370,437 L 370,507 L 380.40625,507 C 400.04309,492.77343 420.89336,474.97992 440,453.3125 L 440,437 z M 370,507 L 300,507 L 300,552.3125 C 300,552.3125 331.44341,540.43218 370,514.28125 L 370,507 z M 300,507 L 300,437 L 230,437 L 230,507 L 300,507 z M 230,507 L 219.59375,507 C 223.10587,509.54447 226.58262,511.96342 230,514.28125 L 230,507 z M 230,437 L 230,367 L 160,367 L 160,437 L 230,437 z M 160,437 L 146.5625,437 C 150.91502,442.66391 155.40421,448.10075 160,453.3125 L 160,437 z M 160,367 L 160,297 L 91.09375,297 C 93.341935,322.42823 99.000919,345.73759 107.09375,367 L 160,367 z M 160,297 L 230,297 L 230,227 L 160,227 L 160,297 z M 160,227 L 160,157 L 90,157 C 90,163.95562 90,186.20807 90,227 L 160,227 z M 230,297 L 230,367 L 300,367 L 300,297 L 230,297 z M 300,297 L 370,297 L 370,227 L 300,227 L 300,297 z M 300,367 L 300,437 L 370,437 L 370,367 L 300,367 z "
+         style="fill:#2b5df2;fill-opacity:1;stroke:#000000;stroke-width:3.00000048;stroke-miterlimit:4;stroke-opacity:1" />
+    </g>
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer2"
+     inkscape:label="Reflet final"
+     sodipodi:insensitive="true"
+     style="display:inline">
+    <path
+       sodipodi:nodetypes="cccccc"
+       d="M 300.00001,658.5 C 300.00001,658.5 598.50001,546.17969 598.50001,260.72817 C 598.50001,-24.723334 598.50001,2.1764865 598.50001,2.1764865 L 1.5,2.1764865 L 1.5,260.72817 C 1.5,546.17969 300.00001,658.5 300.00001,658.5 z "
+       style="opacity:1;fill:url(#radialGradient3163);fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       id="path2875"
+       inkscape:export-xdpi="144"
+       inkscape:export-ydpi="144" />
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer1"
+     inkscape:label="Contour final"
+     sodipodi:insensitive="true">
+    <path
+       sodipodi:nodetypes="cccccc"
+       d="M 299.99999,658.50028 C 299.99999,658.50028 1.5,546.17992 1.5,260.72828 C 1.5,-24.723336 1.5,2.1764957 1.5,2.1764957 L 598.49999,2.1764957 L 598.49999,260.72828 C 598.49999,546.17992 299.99999,658.50028 299.99999,658.50028 z "
+       style="opacity:1;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:3.00000048;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="path1411"
+       inkscape:export-xdpi="144"
+       inkscape:export-ydpi="144" />
+  </g>
+</svg>
