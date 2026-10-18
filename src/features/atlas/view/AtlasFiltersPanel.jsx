@@ -1,4 +1,4 @@
-import {TERRITORIAL_FOLDER_LABELS, groupByRegion, territoryRegion} from '../../../domain/filters/atlasFilters.js';
+import {groupByRegion, territoryRegion} from '../../../domain/filters/atlasFilters.js';
 import {ChevronDown, ChevronRight} from 'lucide-react';
 import {REINO_COLOR, REINO_COLOR_DEFAULT} from '../../../cartography/kingdomMaps.js';
 import {PERSONAS} from '../../../data/personas.js';
@@ -33,7 +33,7 @@ function TerritoryFilterNode({ name, options, selected, expanded, onToggleTerrit
   return (
     <div className={`dinastia-block territory-filter-node${depth ? ' is-nested' : ''}`}>
       <span className="dinastia-chip-row">
-        <Chip label={TERRITORIAL_FOLDER_LABELS.has(name)?`${name} · región`:name} small={depth > 0} active={selected.includes(name)} color={color} onClick={() => onToggleTerritory(name)} />
+        <Chip label={name} small={depth > 0} active={selected.includes(name)} color={color} onClick={() => onToggleTerritory(name)} />
         {hasChildren && <button type="button" className="dinastia-expand-btn"
           onClick={() => onToggleExpanded(name)} aria-expanded={isExpanded}
           aria-label={`${isExpanded ? 'Ocultar' : 'Mostrar'} territorios de ${name}`}>

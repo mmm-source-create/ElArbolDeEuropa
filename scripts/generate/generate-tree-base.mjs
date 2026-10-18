@@ -9,6 +9,7 @@ import fs from "node:fs/promises";
 import path from "node:path";
 import { biografiaExtensaPersona } from "../../src/content/biografias-extensas.js";
 import { IMAGENES_PERSONAS } from "../../src/data/imagenesPersonas.js";
+import { ogPersonaImage } from "../../src/features/public/ogImages.js";
 import { regionResolver } from "../../src/domain/filters/filterRegions.js";
 import { aliasesDePersona, biografiaPublicaPersona, contenidoEditorialPersona, resumenCortoPersona, slugBasePersona, slugPublico, tieneContenidoEditorial } from "../../src/domain/people/personPresentation.js";
 
@@ -517,6 +518,7 @@ async function generarPortadasPersona() {
       relacionadosDinastia: relacionadosDinastia(persona),
       contemporaneos: contemporaneos(persona),
       historias: HISTORIAS_POR_PERSONA[persona.id] || [],
+      ...(IMAGENES_PERSONAS[persona.id] ? {ogImage: ogPersonaImage(PERSONA_SLUG_POR_ID[persona.id])} : {}),
     };
     await fs.writeFile(path.join(personaDir, `${meta.slug}.json`), JSON.stringify(meta), "utf8");
   }));

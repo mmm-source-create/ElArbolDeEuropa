@@ -39,7 +39,7 @@ export const TERRITORIOS_SUB = {
     "Albret", "Dreux", "Alençon", "Angulema", "Anjou", "Aquitania", "Artois", "Auxerre", "Auvernia",
     "Berry", "Borgoña", "Borbón", "Boulogne", "Bretaña", "Champaña",
     "Clermont", "Évreux", "Foix", "Armagnac", "Guisa", "La Marche", "Montpellier", "Nevers",
-    "Orleans", "Poitou", "Toulouse", "Maine", "Normandía", "Ducado de Auvernia", "Ponthieu", "Provenza", "Rethel", "Saint-Pol", "Valois", "Vendôme", "Bearne",
+    "Orleans", "Poitou", "Toulouse", "Maine", "Normandía", "Ducado de Auvernia", "Ponthieu", "Provenza", "Rethel", "Saint-Pol", "Soissons", "Valois", "Vendôme", "Bearne",
   ],
 
   Bretaña: ["Penthièvre"],
@@ -51,34 +51,38 @@ export const TERRITORIOS_SUB = {
   "Georgia y Cáucaso": ["Georgia", "Imericia", "Samtsje", "Kartli", "Kajetia", "Kartli-Kajetia"],
 
   España: ["Corona de Castilla", "Corona de Aragón", "Navarra", "Granada"],
+  // Muslim powers of the Peninsula, apart from the Christian crowns.
+  "al-Ándalus": ["Califato almohade", "Emirato de al-Ándalus", "Emirato de Menorca", "Granada"],
   "Corona de Castilla": ["Castilla", "León"],
   "Corona de Aragón": ["Aragón", "Condado de Barcelona", "Valencia", "Mallorca", "Cerdeña", "Trinacria", "Nápoles", "Gandía", "Urgel"],
+  Cerdeña: ["Judicado de Arborea", "Judicado de Cagliari", "Judicado de Torres", "Marquesado de Oristano"],
   Portugal: ["Brasil"],
   Navarra: [],
 
   "Sacro Imperio": [
     "Alemania", "Austria", "Austria Interior", "Baviera", "Bohemia",
-    "Condado de Borgoña", "Brabante", "Carintia", "Cléveris", "Flandes", "Habsburgo",
-    "Henao", "Holanda", "Zelanda", "Limburgo", "Lorena", "Luxemburgo", "Milán",
-    "Monferrato", "Saluzzo", "Moravia", "Nassau", "Países Bajos", "Palatinado", "Palatinado-Neoburgo", "Ravensberg",
-    "Piamonte", "Saboya", "Sajonia", "Silesia", "Suabia", "Tirol",
+    "Carintia", "Cléveris", "Habsburgo", "Lorena",
+    "Moravia", "Nassau", "Palatinado", "Palatinado-Neoburgo", "Ravensberg",
+    "Sajonia", "Silesia", "Suabia", "Tirol",
     "Turingia", "Württemberg", "Pomerania", "Jülich", "Berg",
     "Hesse-Kassel", "Hesse-Darmstadt", "Baden", "Brunswick", "Mecklemburgo", "Oldemburgo", "Mark",
-    "Ansbach", "Kulmbach", "Anhalt", "Brandeburgo", "Ginebra", "Güeldres",
-    "Hannover", "Hesse", "Hohenberg", "Holstein", "Kyburg", "Meißen",
-    "Montbéliard", "Namur", "Núremberg", "Pfirt", "Sajonia-Lauenburgo",
+    "Ansbach", "Kulmbach", "Anhalt", "Brandeburgo", "Ginebra",
+    "Hannover", "Hesse", "Hohenberg", "Holstein", "Kyburg",
+    "Montbéliard", "Núremberg", "Pfirt", "Sajonia-Lauenburgo",
   ],
-  Austria: ["Austria Interior", "Carintia", "Carniola", "Ducado de Estiria", "Austria Anterior", "Habsburgo", "Tirol"],
+  Sajonia: ["Sajonia-Coburgo", "Sajonia-Coburgo-Eisenach", "Sajonia-Eisenach", "Sajonia-Gotha", "Sajonia-Weimar", "Meißen"],
+  Silesia: ["Brzeg"],
+  Austria: ["Austria Interior", "Carintia", "Carniola", "Ducado de Estiria", "Austria Anterior", "Habsburgo", "Tirol", "Reino de Galicia y Lodomeria"],
   "Austria Interior": ["Ducado de Estiria", "Carintia", "Carniola"],
   "Provincias Unidas": ["Estados de Holanda", "Holanda", "Zelanda", "Frisia", "Utrecht", "Overijssel", "Drente", "Groninga", "Güeldres", "Brabante de los Estados", "Flandes de los Estados"],
-  Bohemia: ["Moravia", "Silesia"],
+  Bohemia: ["Moravia", "Silesia", "Glaž"],
   Baviera: [],
 
   // Agrupación de navegación: no afirma que estos feudos formasen un Estado
   // unitario. Las incorporaciones de Carlos V se distinguen de la herencia.
   "Borgoña y Países Bajos": ["Borgoña y Franco Condado", "Países Bajos y Flandes", "Incorporaciones del siglo XVI"],
   "Borgoña y Franco Condado": ["Borgoña", "Condado de Borgoña", "Nevers", "Rethel", "Auxerre", "Ponthieu"],
-  "Países Bajos y Flandes": ["Países Bajos", "Artois", "Flandes", "Brabante", "Limburgo", "Henao", "Holanda", "Zelanda", "Luxemburgo", "Namur"],
+  "Países Bajos y Flandes": ["Países Bajos", "Artois", "Flandes", "Brabante", "Limburgo", "Henao", "Holanda", "Zelanda", "Luxemburgo", "Namur", "Señorío de Malinas", "Tournai"],
   "Incorporaciones del siglo XVI": ["Güeldres", "Frisia", "Utrecht", "Overijssel", "Drente", "Groninga"],
 
   "Estados Italianos": [
@@ -87,19 +91,24 @@ export const TERRITORIOS_SUB = {
     "Piamonte", "Romaña", "Saboya", "Sicilia", "Tarento", "Toscana",
     "Trinacria", "Anagni", "Bisceglie", "Brescia", "Camerino", "Cerdeña",
     "Cervia", "Cesena", "Como", "Fano", "Imola", "Ischia", "Lacio",
-    "Liguria", "Perugia", "Roma", "Rímini", "Siena", "Squillace",
+    "Liguria", "Perugia", "Roma", "Rímini", "Siena", "Squillace", "Córcega", "Verona",
   ],
 
   Hungría: ["Transilvania", "Transilvania habsbúrgica", "Banato de Temes", "Croacia", "Eslavonia", "Sirmia", "Condado de Temes", "Condado de Bihar"],
-  "Polonia-Lituania": ["Lituania", "Polonia", "Silesia", "Curlandia", "Mazovia"],
+  "Polonia-Lituania": ["Lituania", "Polonia", "Curlandia", "Mazovia"],
+  Lituania: ["Principado de Trakai"],
   "Bizancio y Oriente latino": [
     "Bizancio", "Durazzo", "Imperio Latino", "Antioquía", "Armenia", "Chipre",
     "Edesa", "Epiro", "Ibelin", "Jerusalén", "Morea", "Nablus", "Torón",
-    "Transjordania", "Trípoli", "Trebisonda",
+    "Transjordania", "Trípoli", "Trebisonda", "Acaya",
   ],
   Balcanes: ["Imperio otomano", "Albania", "Dobruja", "Eslavonia", "Zeta", "Kosovo", "Prilep", "Bulgaria", "Serbia", "Bosnia", "Herzegovina", "Valaquia", "Moldavia", "Croacia", "Sirmia", "Epiro"],
+  Serbia: ["Despotado de Serres", "Señorío de Dejanović", "Norte de Serbia habsbúrgico"],
+  Bosnia: ["Hum", "Donji Kraji"],
+  Epiro: ["Despotado de Ioannina", "Epiro de los Tocco", "Condado palatino de Cefalonia y Zacinto"],
+  Valaquia: ["Oltenia habsbúrgica"],
   Escandinavia: ["Dinamarca", "Noruega", "Suecia", "Holstein", "Schleswig"],
-  Rusia: ["Beloózero", "Moscú", "Pólotsk", "Rus de Kiev", "Vladímir"],
+  Rusia: ["Beloózero", "Moscú", "Pólotsk", "Rus de Kiev", "Vladímir", "República de Pskov", "República de Nóvgorod"],
 };
 
 const SUBTERRITORIOS_CACHE = new Map();

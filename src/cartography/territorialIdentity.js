@@ -1,4 +1,5 @@
 import {EASTERN_EUROPE_IDENTITIES} from './regions/easternEuropeRoutes.js';
+import {NORTH_AFRICA_LEVANT_IDENTITIES} from './regions/northAfricaLevantRoutes.js';
 import {EARLY_MEDIEVAL_IDENTITIES} from './regions/earlyMedievalRoutes.js';
 import {POLAND_LITHUANIA_IDENTITIES} from './regions/polandLithuaniaRoutes.js';
 import {franceLowCountriesPoliticalKeys} from './regions/franceLowCountriesRoutes.js';
@@ -14,6 +15,7 @@ import {EDITORIAL_ALIASES, identityIn, identityLabel} from './territorialNames.j
 // Las identidades de las rutas regionales solo afectan a celdas y ámbitos del mapa, nunca a territorios de mandato.
 const ALIASES = Object.freeze({
   ...EASTERN_EUROPE_IDENTITIES,
+  ...NORTH_AFRICA_LEVANT_IDENTITIES,
   ...EARLY_MEDIEVAL_IDENTITIES,
   ...POLAND_LITHUANIA_IDENTITIES,
   ...BOSNIA_HUM_IDENTITIES,

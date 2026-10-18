@@ -67,7 +67,7 @@ export default function App() {
   if (initial.view === 'privacy') return <PrivacyPage locale={initial.locale}/>;
   if (initial.view === "desafio") {
     return (
-      <Suspense fallback={null}>
+      <Suspense fallback={<SiteHeader />}>
         <DesafioPage />
       </Suspense>
     );

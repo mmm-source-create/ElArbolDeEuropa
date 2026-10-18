@@ -2,7 +2,10 @@ html[data-eade-text-size="large"] #root{zoom:1.1}
 html[data-eade-text-size="larger"] #root{zoom:1.2}
 html[data-eade-motion="reduce"] *,html[data-eade-motion="reduce"] *::before,html[data-eade-motion="reduce"] *::after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important;transition-duration:.01ms!important}
 html[data-eade-theme="dark"]{color-scheme:dark;--eade-paper:#24221f;--eade-paper-soft:#2e2a25;--eade-paper-bright:#38332c;--eade-ink:#f5eddf;--eade-muted:#d3c5ae;--eade-muted-soft:#bbae98;--eade-wine:#e5aaa2;--eade-wine-dark:#f2c6bd;--eade-wine-fill:#8c3b37;--eade-wine-fill-hover:#a04842;--eade-gold:#ddb67b;--eade-border:#62594d;--eade-border-strong:#8b7a66;--eade-shadow-card:0 8px 30px rgba(0,0,0,.2)}
-html[data-eade-theme="dark"] body{background:var(--eade-paper);color:var(--eade-ink)}
+/* The canvas follows the theme before any lazy stylesheet arrives: app.css
+   paints html in a light tone, which flashed under Desafío and the Atlas. */
+html[data-eade-theme="light"]{background:#F7F1E3}
+html[data-eade-theme="dark"],html[data-eade-theme="dark"] body{background:var(--eade-paper);color:var(--eade-ink)}
 html[data-eade-theme="dark"] .site-header{background:rgba(46,42,37,.97);color:var(--eade-ink)}
 html[data-eade-theme="dark"] .site-brand,html[data-eade-theme="dark"] .site-nav a{color:var(--eade-ink)}
 html[data-eade-theme="dark"] .site-nav a:hover,html[data-eade-theme="dark"] .settings-trigger:hover{background:var(--eade-paper-bright)}

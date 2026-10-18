@@ -152,3 +152,22 @@ mandatos posteriores y vínculos familiares.
 ### Europa oriental · V5.26
 
 `node scripts/cartography/build-eastern-europe-routes.mjs` compila los inventarios geográficos, la cronología y las excepciones locales aceptadas en `data/cartography/eastern-europe-*.json`. Después se ejecuta `node scripts/cartography/merge-map-expansions.mjs`. `npm run audit:eastern-europe` comprueba cada celda en cada año de 1200–1800; `-- --publish` actualiza el resultado revisado. Los límites de la auditoría no son fronteras políticas y las fuentes HTML externas solo sirven para localizar candidatos.
+
+### Norte de África, Levante y Chipre · V5.30
+
+`node scripts/cartography/build-north-africa-levant-review.mjs` agrupa las celdas del
+inventario por su centroide en zonas históricas (Marruecos, Magreb central,
+Ifriqiya, Tripolitania, Cirenaica, Fezzán, Sáhara, Egipto, plazas cruzadas,
+Siria, Palestina y desierto) y les da una cronología completa de 1200 a 1800,
+con las plazas portuguesas, españolas e inglesas como excepciones fechadas. Escribe
+`data/cartography/north-africa-levant-review.json` y las rutas del cliente;
+después se ejecuta `merge-map-expansions.mjs`. Las celdas que ya gobiernan otras
+revisiones (norte de Siria, Ceuta, Lampedusa) quedan fuera.
+
+### Vistas previas para compartir · V5.30
+
+`generate-og-images.mjs`, último paso de `npm run generate`, crea en `public/og/`
+las tarjetas Open Graph de 1200×630: retrato y marca para cada persona con
+retrato, escudo y marca para cada casa con armas, y una tarjeta general. No
+dibuja texto en el servidor; la marca procede de `public/brand/og-wordmark.png`.
+

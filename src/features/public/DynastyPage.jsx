@@ -7,7 +7,7 @@ import SiteFooter from '../../components/SiteFooter.jsx';
 import {useJson,usePublicMeta,PersonaMiniCard} from './publicShared.jsx';
 import ReadingSkeleton from '../stories/ReadingSkeleton.jsx';
 import {normalizarBusquedaPublica,slugPublico} from '../../domain/people/personLabels.js';
-import DynastyArms from '../../components/DynastyArms.jsx';
+import DynastyArms, {ArmsCredit} from '../../components/DynastyArms.jsx';
 import {escudoDe} from '../../content/dinastias/escudos.js';
 import './dynasty.css';
 import '../../styles/theme.css';
@@ -24,7 +24,7 @@ export default function DynastyPage({slug,initialData=null}) {
     <nav className="public-breadcrumbs" aria-label="Migas de pan"><a href="/es/">Inicio</a><span>›</span><a href="/es/dinastias">Dinastías</a><span>›</span><span aria-current="page">{d?.nombre||'Ficha'}</span></nav>
     {loading?<ReadingSkeleton kind="entity-body"/>:error||!d?<section className="public-error"><h1>Ficha no disponible</h1><p>No se ha podido cargar esta casa.</p><a href="/es/dinastias">Volver al catálogo de dinastías</a></section>:<>
       <header className="public-page-title dynasty-hero">
-        {escudo?<DynastyArms dinastia={d.nombre} size={68} className="dynasty-hero-arms"/>:<div className="public-page-icon"><Shield size={22}/></div>}<span>Casas y linajes · {d.editorial?'Historia de la dinastía':'Personas del Atlas'}</span>
+        {escudo?<figure className="dynasty-hero-figure"><DynastyArms dinastia={d.nombre} size={76} className="dynasty-hero-arms"/><ArmsCredit dinastia={d.nombre}/></figure>:<div className="public-page-icon"><Shield size={22}/></div>}<span>Casas y linajes · {d.editorial?'Historia de la dinastía':'Personas del Atlas'}</span>
         <h1>{d.nombre}</h1><p>{d.resumen||'Explora los miembros de esta casa y los territorios vinculados a sus gobiernos registrados.'}</p>
         {escudo&&<p className="dynasty-blazon"><b>Armas.</b> {escudo.blason}{escudo.nota&&<small> {escudo.nota}</small>}</p>}
         <div className="dynasty-counts"><span><b>{d.total}</b> personas registradas</span><span><b>{d.ramas.length}</b> ramas y conexiones descritas</span></div>

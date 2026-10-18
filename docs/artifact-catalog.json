@@ -130,6 +130,12 @@
       "producer": "scripts/cartography/build-eastern-europe-routes.mjs"
     },
     {
+      "path": "data/cartography/north-africa-levant-review.json",
+      "kind": "accepted-cartography",
+      "maintenance": "Revisión del norte de África, Levante y Chipre V5.30: zonas por centroide, cronología completa 1200–1800 y plazas europeas fechadas; regenerar después de una revisión documental.",
+      "producer": "scripts/cartography/build-north-africa-levant-review.mjs"
+    },
+    {
       "path": "data/cartography/eastern-europe-geography.json",
       "kind": "accepted-inventory",
       "maintenance": "Revisión oriental V5.26: inventarios explícitos, fuentes locales y sucesiones fechadas; regenerar después de una revisión documental."

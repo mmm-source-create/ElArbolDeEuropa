@@ -29,16 +29,16 @@ function textoFechas(persona) { return persona ? documentaryLife(persona) : "Fec
 export function personaDates(persona, locale) { return locale === 'en' ? textoFechas(persona).replaceAll('antes de ', 'before ').replaceAll('después de ', 'after ').replace('Fechas no documentadas', 'Dates not recorded') : textoFechas(persona); }
 
 
-export function usePublicMeta({ title, description, path }) {
+export function usePublicMeta({ title, description, path, image, imageAlt }) {
   useEffect(() => {
     if (typeof document === "undefined" || typeof window === "undefined") return;
-    const metadata=publicMeta({title,description,path},PUBLIC_SITE_URL);
+    const metadata=publicMeta({title,description,path,...(image?{image,imageAlt}:{})},PUBLIC_SITE_URL);
     document.documentElement.lang=metadata.lang;
     document.title=metadata.title;
     for(const [attribute,key,value] of metadata.meta)setMetaContent(`meta[${attribute}="${key}"]`,{[attribute]:key},value);
     ensureCanonical(metadata.canonical);
     setHreflangAlternates(metadata.alternates);
-  }, [title, description, path]);
+  }, [title, description, path, image, imageAlt]);
 }
 
 export function useJson(path, initialData = null) {

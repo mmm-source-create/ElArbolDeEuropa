@@ -82,6 +82,7 @@ export function mergeMapExpansions(data) {
   applyRegionalReview(data,read('poland-lithuania-full-review.json'),'polandLithuaniaReview','Polonia-Lituania · tres repartos y continuidad de los estados receptores');
   applyRegionalReview(data,read('poland-lithuania-frontier-review.json'),'polandLithuaniaFrontierReview','Polonia-Lituania · Smolensk, Chernigov y margen izquierda');
   applyRegionalReview(data,read('eastern-europe-full-review.json'),'easternEuropeReview','Polonia-Lituania, Rusia y Báltico · continuidad geográfica completa');
+  applyRegionalReview(data,read('north-africa-levant-review.json'),'northAfricaLevantReview','Norte de África, Levante y Chipre · continuidad geográfica completa');
   for(const [name,evidence] of Object.entries(read('eastern-europe-full-review.json').retainedLayerEvidence || {})){
     const layer=[...data.territories,...data.additionalTerritories].find(t=>t.name===name);
     if(!layer)throw Error('Missing retained eastern layer: '+name);
