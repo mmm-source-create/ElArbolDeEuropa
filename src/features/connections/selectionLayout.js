@@ -14,7 +14,7 @@ function relationDelta(edge, byId, gen) {
   return (gen[edge.from] ?? 0) <= (gen[edge.to] ?? 0) ? 1 : -1;
 }
 
-export function selectionGenerations(ids, gen = {}, byId = {}, edges = []) {
+function selectionGenerations(ids, gen = {}, byId = {}, edges = []) {
   const selected = new Set(ids), links = new Map(ids.map(id => [id, []]));
   for (const edge of edges) {
     if (!selected.has(edge.from) || !selected.has(edge.to) || edge.from === edge.to) continue;

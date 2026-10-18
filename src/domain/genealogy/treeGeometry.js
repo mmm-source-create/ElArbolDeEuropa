@@ -49,7 +49,7 @@ export function assignIntervalLanes(requests, margin = 10) {
   return { assignment, count: orderedLanes.length };
 }
 
-export function dedupePts(points) {
+function dedupePts(points) {
   if (!points.length) return [];
   const result = [points[0]];
   for (let index = 1; index < points.length; index += 1) {

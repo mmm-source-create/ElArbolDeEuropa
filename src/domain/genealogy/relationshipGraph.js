@@ -58,7 +58,7 @@ export function conjuntoFoco(id, alcance = "cercana") {
   return cercanos;
 }
 
-export const TIPOS_GRAFO_POR_MODO = {
+const TIPOS_GRAFO_POR_MODO = {
   corto: new Set(["sangre", "matrimonio", "amante"]),
   sangre: new Set(["sangre"]),
   matrimonio: new Set(["sangre", "matrimonio"]),
@@ -106,13 +106,13 @@ export function tipoRelacionEntre(origenId, destinoId) {
   return "familia";
 }
 
-export function vecinosPermitidos(graph, id, tiposPermitidos) {
+function vecinosPermitidos(graph, id, tiposPermitidos) {
   return (graph[id] || []).filter((vecino) =>
     vecino.tipos.some((tipo) => tiposPermitidos.has(tipo))
   );
 }
 
-export function bfsPath(graph, start, end, tiposPermitidos) {
+function bfsPath(graph, start, end, tiposPermitidos) {
   if (!start || !end) return null;
   if (start === end) return [start];
   const visited = new Set([start]);
@@ -140,7 +140,7 @@ export function bfsPath(graph, start, end, tiposPermitidos) {
   return null;
 }
 
-export function allShortestPaths(graph, start, end, tiposPermitidos, maxPaths = 6) {
+function allShortestPaths(graph, start, end, tiposPermitidos, maxPaths = 6) {
   if (!start || !end) return [];
   if (start === end) return [[start]];
 

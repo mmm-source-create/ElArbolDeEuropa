@@ -1791,7 +1791,7 @@ export function chronologyJurisdictionsFor(territory,year,personId){
  return null;
 }
 export function chronologyReferenceJurisdictionsFor(territory){return aliases[territory] || [territory];}
-export const CHRONOLOGY_ROUTE_ADDITIONS = Object.freeze([
+const CHRONOLOGY_ROUTE_ADDITIONS = Object.freeze([
   {
     "personId": "FERN1EMP",
     "governmentTerritory": "Croacia",

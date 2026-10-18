@@ -8,7 +8,7 @@ import {balkansFullScope} from './regions/balkansFullRoutes.js';
 import {netherlandsGovernorScope} from './netherlandsGovernorScopes.js';
 // Dated regional scopes shared by painting, inspection and the coverage audit.
 // Each ID remains an approximate map cell; sources document authority and named sites.
-export const AUTHORITY_MAP_SCOPES = Object.freeze([
+const AUTHORITY_MAP_SCOPES = Object.freeze([
   {
     "personId": "SULEYMANCELEBI",
     "territory": "Imperio otomano",

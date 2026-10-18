@@ -1,7 +1,7 @@
 // Árbol de Steiner exacto para un máximo de cinco terminales: cada vínculo cuenta uno.
 // Programación dinámica por subconjuntos + caminos mínimos; no infiere filiaciones.
 export const CONNECTION_LIMIT = 5;
-export const CONNECTION_TYPES = {sangre:['sangre'],matrimonio:['sangre','matrimonio']};
+const CONNECTION_TYPES = {sangre:['sangre'],matrimonio:['sangre','matrimonio']};
 const pairKey=(a,b)=>[a,b].sort().join('|');
 class Heap {
  constructor(){this.items=[];}

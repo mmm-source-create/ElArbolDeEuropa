@@ -1,5 +1,5 @@
 // Actualizar el head no altera los nodos que React hidrata.
-export function ensureMetaTag(selector, attributes) {
+function ensureMetaTag(selector, attributes) {
   if (typeof document === 'undefined') return null;
   let element = document.head.querySelector(selector);
   if (!element) {

@@ -19,7 +19,7 @@ export function secretFindings(text) {
 export function activeSvgContent(svg) {
   return /<\s*(?:script|foreignObject)\b|\bon\w+\s*=|javascript\s*:/i.test(svg);
 }
-export async function auditSecurity() {
+async function auditSecurity() {
   const issues = [];
   const config = JSON.parse(await fs.readFile('vercel.json', 'utf8'));
   const headers = [...(config.headers?.find(rule => rule.source === '/(.*)')?.headers || []), ...(config.headers?.find(rule => rule.source === MAIN_FRAME_SOURCE)?.headers || [])];

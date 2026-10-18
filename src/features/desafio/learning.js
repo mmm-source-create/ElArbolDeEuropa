@@ -1,18 +1,15 @@
 import {RELEVOS} from '../../content/sucesiones/index.js';
 import {slugPublico} from '../../domain/people/personLabels.js';
+import {fnv1a} from '../../utils/hash.js';
 
 export const REVIEW_KEY = 'arbol-europa-repaso-v1';
 const MAX_REVIEW = 100;
-const hash = text => {
-  let h = 2166136261;
-  for (const c of text) h = Math.imul(h ^ c.charCodeAt(0), 16777619);
-  return (h >>> 0).toString(36);
-};
+const hash = text => fnv1a(text).toString(36);
 function rng(seed) {
   let state = parseInt(hash(seed), 36);
   return () => { state += 0x6d2b79f5; let t = state; t = Math.imul(t ^ t >>> 15, t | 1); t ^= t + Math.imul(t ^ t >>> 7, t | 61); return ((t ^ t >>> 14) >>> 0) / 4294967296; };
 }
-export function shuffle(items, random = Math.random) {
+function shuffle(items, random = Math.random) {
   const result = [...items];
   for (let i = result.length - 1; i > 0; i--) { const j = Math.floor(random() * (i + 1)); [result[i], result[j]] = [result[j], result[i]]; }
   return result;

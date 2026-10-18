@@ -1,7 +1,6 @@
 // Fetch GND authority records (lobid.org JSON) for matched people; incremental.
 import fs from 'node:fs';
-const UA={'User-Agent':'ElArbolDeEuropa-review/1.0 (genealogical atlas; bibliographic review)'};
-const sleep=ms=>new Promise(r=>setTimeout(r,ms));
+import {UA,sleep} from './http.mjs';
 const qids=JSON.parse(fs.readFileSync('qids.json')),ent=JSON.parse(fs.readFileSync('entities.json')),status=JSON.parse(fs.readFileSync('status.json'));
 const gnd=fs.existsSync('gnd.json')?JSON.parse(fs.readFileSync('gnd.json')):{};
 const want=new Set();

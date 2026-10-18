@@ -3,7 +3,7 @@ import {buildPoliticalMapIndex, COLLECTIVE_AUTHORITIES} from '../../../src/carto
 import {gobiernoEfectivo} from '../../../src/data/territorios.js';
 
 export const HISTORICAL_CUTS = Object.freeze([1522,1564,1619,1648,1665]);
-export const TYROL_REVIEW_RANGE = Object.freeze({from:1490,to:1705});
+const TYROL_REVIEW_RANGE = Object.freeze({from:1490,to:1705});
 
 export function auditMapContinuity(personas, {cuts=HISTORICAL_CUTS, focusTerritory='Tirol', range=TYROL_REVIEW_RANGE}={}) {
   const governments = personas.flatMap(person => gobiernosDe(person).filter(gobiernoEfectivo)

@@ -8,7 +8,7 @@ export function PersonLink({persona}) {
 function References({fuentes}) {
   return <p className="succession-references">Referencias: {fuentes.map((s,i)=><React.Fragment key={s.url}>{i>0?' · ':''}<a href={s.url} target="_blank" rel="noreferrer">{s.titulo}</a></React.Fragment>)}</p>;
 }
-export function Lineage({personas,label='Línea familiar registrada',recorrido=false}) {
+function Lineage({personas,label='Línea familiar registrada',recorrido=false}) {
   return <div className="succession-lineage" data-relation={recorrido?'path':'descendencia'}><p>{label}</p><ol>{personas.map(p=><li key={p.id}><PersonLink persona={p}/></li>)}</ol></div>;
 }
 export function CrisisSucesoria({crisis}) {

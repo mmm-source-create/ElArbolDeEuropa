@@ -4,6 +4,12 @@ import {SITE_NAME, SITE_NAME_EN, resolveSiteUrl} from "./siteConfig.js";
 // preparado un punto único para una futura versión es/en.
 
 export const DEFAULT_LOCALE = "es";
+
+// Idioma de una ruta: /en/… es inglés; cualquier otra usa el idioma por defecto.
+export function localeDesdePath(pathname) {
+  const match = String(pathname || "").match(/^\/(es|en)(?:\/|$)/);
+  return match?.[1] || DEFAULT_LOCALE;
+}
 // Vite sustituye import.meta.env al compilar; en Node (tests y generadores) no existe.
 const ENV = import.meta.env || {};
 

@@ -1,11 +1,8 @@
 import {englishRoute} from '../features/english/routes.js';
+import {localeDesdePath} from './i18n.js';
 
 // Resolución inicial sin dependencias del DOM; los enlaces conservan el contrato público.
 function decodificarSlug(slug) { try { return decodeURIComponent(slug); } catch { return slug; } }
-
-function localeDesdePath(pathname) {
-  return /^\/en(?:\/|$)/.test(String(pathname || "")) ? "en" : "es";
-}
 
 function slugPersonaDesdePath(pathname) {
   const match = String(pathname || "/").match(/^\/(?:es\/)?persona\/([^/]+)\/?$/);

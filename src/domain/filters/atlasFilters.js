@@ -4,8 +4,8 @@ import {territoriosDe,gobiernosDe} from '../genealogy/personAccessors.js';
 import {FILTER_REGIONS,TERRITORY_REGION} from './filterRegions.js';
 import {gobiernoEfectivo} from '../../data/territorios.js';
 
-export const alphabetical=(a,b)=>a.localeCompare(b,'es',{sensitivity:'base'});
-export const DYNASTY_CHILDREN={
+const alphabetical=(a,b)=>a.localeCompare(b,'es',{sensitivity:'base'});
+const DYNASTY_CHILDREN={
  Capeto:['Borgoña','Anjou','Artois','Borbón','Clermont','Courtenay','Dreux','Évreux','Valois'],
  Borbón:['Borbón-Condé','Borbón-Orleans','Borbón-Parma'],
  Valois:['Valois-Alençon','Valois-Angulema','Valois-Borgoña','Valois-Orleans'],

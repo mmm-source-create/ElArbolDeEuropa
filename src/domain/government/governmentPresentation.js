@@ -40,7 +40,7 @@ export function governmentGroupsAt(person, year) {
 }
 
 const referenceYears = new WeakMap();
-export function governmentReferenceYear(person) {
+function governmentReferenceYear(person) {
  if (!person) return null;
  if (!referenceYears.has(person)) {
   const effective=gobiernosDe(person).filter(g=>gobiernoEfectivo(g)&&Number.isInteger(g.desde)&&Number.isInteger(g.hasta));

@@ -58,16 +58,3 @@ export function esGobernante(persona) {
 // territorio. Como REINO_VERSIONES usa rangos [desde,hasta), se emplea el
 // penúltimo límite anual en reinados de más de un año para no saltar a las
 // fronteras del sucesor en el mismo año de terminación.
-export function añoReferenciaTerritorial(persona, territorio = null) {
-  if (!persona) return null;
-  const reinados = listaReinados(persona)
-    .filter(reinadoEsEfectivo)
-    .filter((r) => !territorio || r.territorio === territorio)
-    .sort((a, b) => a.hasta - b.hasta || a.desde - b.desde);
-  if (reinados.length) {
-    const ultimo = reinados[reinados.length - 1];
-    return ultimo.hasta > ultimo.desde ? ultimo.hasta - 1 : ultimo.desde;
-  }
-  if (typeof persona.muer === "number") return persona.muer;
-  return typeof persona.nac === "number" ? persona.nac : null;
-}

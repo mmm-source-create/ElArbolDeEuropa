@@ -83,7 +83,7 @@ export const DINASTIAS_DESTACADAS = [
   "Casas orientales", "Sin casa identificada",
 ];
 
-export const RAMA_A_PRINCIPAL_COLOR = Object.fromEntries(
+const RAMA_A_PRINCIPAL_COLOR = Object.fromEntries(
   Object.entries(GRUPOS_DINASTICOS_GENEALOGICOS).flatMap(([principal, ramas]) =>
     ramas.filter((rama) => rama !== principal).map((rama) => [rama, principal])
   )

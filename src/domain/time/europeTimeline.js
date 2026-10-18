@@ -3,10 +3,10 @@ export function nextRecordedYear(year,{personas=[],eventos=[],min=1200,max=1800}
  const years=[...eventos.flatMap(e=>[e.anio,e.desde,e.hasta]),...personas.flatMap(p=>gobiernosDe(p).flatMap(g=>[g.desde,g.hasta]))].filter(y=>Number.isInteger(y)&&y>year&&y>=min&&y<=max);
  return years.length?Math.min(...years):null;
 }
-const governmentKey=g=>[g.persona.id,g.territorio,g.desde,g.hasta,g.titulo,g.condicion].join('|');
+const governmentIdentity=g=>[g.persona.id,g.territorio,g.desde,g.hasta,g.titulo,g.condicion].join('|');
 export function changesBetween(before,after) {
- const previous=new Set(before.gobiernos.map(governmentKey)),current=new Set(after.gobiernos.map(governmentKey));
- return {added:after.gobiernos.filter(g=>!previous.has(governmentKey(g))),removed:before.gobiernos.filter(g=>!current.has(governmentKey(g))),newEvents:after.eventos.filter(e=>!before.eventos.some(p=>p.id===e.id))};
+ const previous=new Set(before.gobiernos.map(governmentIdentity)),current=new Set(after.gobiernos.map(governmentIdentity));
+ return {added:after.gobiernos.filter(g=>!previous.has(governmentIdentity(g))),removed:before.gobiernos.filter(g=>!current.has(governmentIdentity(g))),newEvents:after.eventos.filter(e=>!before.eventos.some(p=>p.id===e.id))};
 }
 export function sharedGovernments(governments) {
  const groups=new Map();

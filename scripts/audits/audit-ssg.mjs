@@ -40,7 +40,7 @@ export function auditDocument(html,page,assets,siteUrl=DEFAULT_SITE_URL) {
  return errors;
 }
 
-export async function auditBuild(root=process.cwd()) {
+async function auditBuild(root=process.cwd()) {
  const dist=path.join(root,'dist');
  const siteUrl=loadEnv('production',root,'VITE_').VITE_SITE_URL||DEFAULT_SITE_URL;
  const routes=routesFromSitemap(await fs.readFile(path.join(dist,'sitemap-full.xml'),'utf8'),siteUrl);

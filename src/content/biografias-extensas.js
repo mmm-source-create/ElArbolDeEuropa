@@ -3,7 +3,7 @@ import {REFERENCIAS_BIOGRAFIAS} from './referencias-biografias.js';
 // en la ficha individual; el Atlas conserva el resumen breve de cada persona.
 // Cada apartado es una etapa con título propio. Las fechas y cargos siguen los
 // registros de la base; lo que la historiografía discute se presenta como tal.
-export const BIOGRAFIAS_EXTENSAS = Object.freeze({
+const BIOGRAFIAS_EXTENSAS = Object.freeze({
   CARLOS5: [
     {titulo: 'Una herencia acumulada', texto: 'Nació en Gante en 1500, hijo de Felipe el Hermoso y de Juana de Castilla. Por una sucesión de muertes y matrimonios reunió cuatro herencias que nadie había planeado juntas: los Países Bajos y el Franco Condado de la casa de Borgoña (1506), las coronas de Castilla y Aragón con sus dominios italianos y americanos (1516), los territorios patrimoniales de los Habsburgo y, en 1519, la elección como rey de romanos frente a Francisco I de Francia.'},
     {titulo: 'Gobernar una monarquía compuesta', texto: 'Su llegada a Castilla con consejeros flamencos alimentó la revuelta de las Comunidades (1520–1521), y en Valencia y Mallorca estallaron las Germanías. Tras vencerlas aprendió a gobernar cada reino según sus propias leyes, cortes y consejos. La monarquía no era un estado unitario: el emperador viajó sin descanso entre sus dominios y delegó en regentes como su esposa Isabel de Portugal, su tía Margarita de Austria o su hermana María de Hungría.'},

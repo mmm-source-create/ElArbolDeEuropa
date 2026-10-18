@@ -7,17 +7,15 @@ import {resolveStoryNavigation, writeStoryNavigation} from './storyNavigation.js
 import EnglishPage from "../english/EnglishPage.jsx";
 import "../../styles/app.css";
 import React, { useState, useRef, useEffect, useLayoutEffect, useCallback, useMemo } from "react";
-import {
-  reinadosActivos, listaReinados,
-} from "../../domain/government/reigns.js";
+import {reinadosActivos} from "../../domain/government/reigns.js";
 import { PERSONAS } from "../../data/personas.js";
 import { EVENTOS_HISTORICOS, HISTORIAS } from "../../data/historias.js";
-import { DEFAULT_LOCALE, SITE, t } from "../../app/i18n.js";
+import { DEFAULT_LOCALE, SITE, localeDesdePath, t } from "../../app/i18n.js";
 import { textoBusquedaPersona } from "../../domain/people/personPresentation.js";
 import { OTRAS_DINASTIAS, GRUPOS_DINASTICOS, getCategoriaDinastía } from "../../domain/genealogy/dynasties.js";
-import { SIN_FECHA, normalizaTexto, CATEGORIAS_TITULO, FILTROS_RELACION, ACCENTS, PATH_COLOR, FAVORITOS_STORAGE_KEY, PANELES_STORAGE_KEY, TIMELINE_SCALES, TIMELINE_FIXED_COLUMN, categoriasDeTitulo, cumpleFiltroRelacion } from "./atlasModel.js";
+import { SIN_FECHA, normalizaTexto, CATEGORIAS_TITULO, FILTROS_RELACION, ACCENTS, PATH_COLOR, TIMELINE_SCALES, TIMELINE_FIXED_COLUMN, categoriasDeTitulo, cumpleFiltroRelacion } from "./atlasModel.js";
 import { slugPublico } from "../../domain/people/personLabels.js";
-import { localeDesdePath, rutaEntidadLocalizada, slugPersonaPorLocale, rutaPublicaDesdePath, personaIdDesdeRuta, valorPorSlug } from "./atlasRoutes.js";
+import { rutaEntidadLocalizada, slugPersonaPorLocale, rutaPublicaDesdePath, personaIdDesdeRuta, valorPorSlug } from "./atlasRoutes.js";
 import { setMetaContent, ensureCanonical, setHreflangAlternates } from "../public/headMetadata.js";
 import { BY_ID, HIJOS_POR_ID, listaAmantes, siglosDePersona, fechasIncompletas, estaVivaEn, listaParejas } from "../../domain/genealogy/relations.js";
 import { splitPartnerComponents, computeTreeLayout, routeFamilyConnectors } from "../../domain/genealogy/treeLayout.js";
@@ -25,9 +23,7 @@ import {
   ancestorsOf, descendantsOf, conjuntoFoco, buildGraph,
   rutasDeComparacion, computeParentGroups,
 } from "../../domain/genealogy/relationshipGraph.js";
-import {
-  siglo, nRomano, nombrePrincipal, TL_MIN, TL_MAX, inicioEvento, finEvento, nivelTimelineEvento, anioInicioPersona, anioFinPersona,
-} from "./timelineUtils.js";
+import {nRomano, nombrePrincipal, TL_MIN, TL_MAX, inicioEvento, nivelTimelineEvento, anioInicioPersona, anioFinPersona} from "./timelineUtils.js";
 import { PersonBox } from "./ExplorerPrimitives.jsx";
 import {connectionTree,connectionFromSearch,connectionUrl} from "../connections/connectionTree.js";
 import {selectionLayout,selectionEdges,edgePath} from "../connections/selectionLayout.js";
@@ -39,34 +35,13 @@ import { useViewportTask } from "./useViewportTask.js";
 import { centeredScroll } from "./virtualRows.js";
 import { readAtlasSession, shouldResumeAtlas } from "./atlasSession.js";
 import { useAtlasSession } from "./useAtlasSession.js";
+import { useAtlasLayout } from "./useAtlasLayout.js";
+import { useFavorites } from "./useFavorites.js";
+import { useShareStatus } from "./useShareStatus.js";
+import { useDragScroll } from "./useDragScroll.js";
 import { hasDocumentedClaim } from "../../evidence/claims.js";
 
 const SEARCH_TEXT_BY_ID = Object.fromEntries(PERSONAS.map(persona => [persona.id, normalizaTexto([textoBusquedaPersona(persona), nombrePrincipal(persona)].join(" "))]));
-
-const ATLAS_LAYOUT_STORAGE_KEY = "eade.atlasLayout.v24";
-const DEFAULT_FILTER_SECTIONS = Object.freeze({
-  territorios: true,
-  dinastias: true,
-  titulos: true,
-  siglos: true,
-  relaciones: true,
-  evidencia: false,
-});
-const DEFAULT_BIO_SECTIONS = Object.freeze({
-  datos: true,
-  relaciones: true,
-  contexto: false,
-});
-
-function leerLayoutAtlas() {
-  if (typeof window === "undefined") return null;
-  try {
-    const parsed = JSON.parse(window.localStorage.getItem(ATLAS_LAYOUT_STORAGE_KEY) || "null");
-    return parsed && typeof parsed === "object" ? parsed : null;
-  } catch {
-    return null;
-  }
-}
 
 export default function Explorer({ initialPanel = null, treeBase: TREE_BASE, loading = false, loadError = false, onRetry, ready = true }) {
   const familyData = useMemo(() => familyIndex(PERSONAS), []);
@@ -124,42 +99,14 @@ export default function Explorer({ initialPanel = null, treeBase: TREE_BASE, loa
   const [anioInput, setAnioInput] = useState(anioGlobal != null ? String(anioGlobal) : "");
   const [reproduciendoHistoria, setReproduciendoHistoria] = useState(false);
 
-  const [shareStatus, setShareStatus] = useState("");
+  const [shareStatus, mostrarEstadoCompartir] = useShareStatus();
   const [collapsedIds, setCollapsedIds] = useState(savedSession?.collapsedIds ?? []);
   const [vistasActivas, setVistasActivas] = useState(() => savedSession?.vistasActivas ?? {
     arbol: true,
     mapa: typeof window !== 'undefined' && !window.matchMedia('(max-width: 700px)').matches,
   });
-  const [panelesVisibles, setPanelesVisibles] = useState(() => {
-    if (savedSession) return savedSession.panelesVisibles;
-    const base = { filtros: atlasIds === null, biografia: true, cronologia: true };
-    if (typeof window === "undefined") return base;
-    try {
-      const guardado = JSON.parse(window.localStorage.getItem(PANELES_STORAGE_KEY) || "null");
-      return {
-        filtros: typeof guardado?.filtros === "boolean" ? guardado.filtros : base.filtros,
-        biografia: typeof guardado?.biografia === "boolean" ? guardado.biografia : true,
-        cronologia: typeof guardado?.cronologia === "boolean" ? guardado.cronologia : true,
-      };
-    } catch {
-      return base;
-    }
-  });
+  const { panelesVisibles, filterSectionsOpen, bioSectionsOpen, alternarPanelAuxiliar, alternarSeccionFiltro, alternarSeccionBio } = useAtlasLayout(savedSession, atlasIds);
   const [atlasExpansionFeedback, setAtlasExpansionFeedback] = useState(null);
-  const [filterSectionsOpen, setFilterSectionsOpen] = useState(() => {
-    const guardado = leerLayoutAtlas()?.filterSectionsOpen || {};
-    return Object.fromEntries(Object.entries(DEFAULT_FILTER_SECTIONS).map(([key, value]) => [
-      key,
-      typeof guardado[key] === "boolean" ? guardado[key] : value,
-    ]));
-  });
-  const [bioSectionsOpen, setBioSectionsOpen] = useState(() => {
-    const guardado = leerLayoutAtlas()?.bioSectionsOpen || {};
-    return Object.fromEntries(Object.entries(DEFAULT_BIO_SECTIONS).map(([key, value]) => [
-      key,
-      typeof guardado[key] === "boolean" ? guardado[key] : value,
-    ]));
-  });
   const [personHistory, setPersonHistory] = useState(savedSession?.personHistory ?? { ids: [], index: -1 });
   const [modoTrabajo, setModoTrabajo] = useState(false);
   const [infoProyecto, setInfoProyecto] = useState(initialPanel === "europa" ? null : initialPanel);
@@ -167,15 +114,7 @@ export default function Explorer({ initialPanel = null, treeBase: TREE_BASE, loa
   const [timelineScaleIndex, setTimelineScaleIndex] = useState(Math.min(TIMELINE_SCALES.length - 1, savedSession?.timelineScaleIndex ?? 1));
   const [timelineMode, setTimelineMode] = useState(savedSession?.timelineMode ?? "ambos");
   const [eventoSeleccionadoId, setEventoSeleccionadoId] = useState(savedSession?.eventoSeleccionadoId ?? null);
-  const [favoritos, setFavoritos] = useState(() => {
-    if (typeof window === "undefined") return [];
-    try {
-      const guardados = JSON.parse(window.localStorage.getItem(FAVORITOS_STORAGE_KEY) || "[]");
-      return Array.isArray(guardados) ? guardados.filter((id) => BY_ID[id]) : [];
-    } catch {
-      return [];
-    }
-  });
+  const { favoritos, setFavoritos, favoritosSet, alternarFavorito } = useFavorites();
   const [favoritosOpen, setFavoritosOpen] = useState(false);
   const [soloFavoritos, setSoloFavoritos] = useState(savedSession?.soloFavoritos ?? false);
   const [soloDocumentados, setSoloDocumentados] = useState(savedSession?.soloDocumentados ?? false);
@@ -186,23 +125,8 @@ export default function Explorer({ initialPanel = null, treeBase: TREE_BASE, loa
   const focoMenuRef = useRef(null);
   const favoritosMenuRef = useRef(null);
   const historiaSnapshotRef = useRef(savedSession?.historiaSnapshot || null);
-  const shareStatusTimerRef = useRef(null);
   const urlStateLoadedRef = useRef(Boolean(savedSession && !savedSession.historiaActivaId));
   const historyPopRef = useRef(false);
-  const dragState = useRef(null);
-
-  useEffect(() => {
-    if (typeof window === "undefined") return;
-    try {
-      window.localStorage.setItem(ATLAS_LAYOUT_STORAGE_KEY, JSON.stringify({
-        filterSectionsOpen,
-        bioSectionsOpen,
-      }));
-    } catch {
-      // El Atlas sigue funcionando aunque el navegador bloquee localStorage.
-    }
-  }, [filterSectionsOpen, bioSectionsOpen]);
-
 
   useEffect(() => {
     if (!modoTrabajo || typeof document === "undefined") return undefined;
@@ -224,7 +148,6 @@ export default function Explorer({ initialPanel = null, treeBase: TREE_BASE, loa
   const graph = useMemo(() => buildGraph(PERSONAS), []);
   const connectionResult = useMemo(() => connectionTree(graph, connectionIds, connectionCriterion), [graph, connectionIds, connectionCriterion]);
   const connectionSet = useMemo(() => mode === "conexion" && connectionIds.length >= 2 ? new Set(connectionResult.ids) : null, [mode, connectionResult, connectionIds.length]);
-  const favoritosSet = useMemo(() => new Set(favoritos), [favoritos]);
   const timelinePxPerYear = TIMELINE_SCALES[timelineScaleIndex];
   const timelineTrackWidth = Math.max(1180, Math.round((TL_MAX - TL_MIN) * timelinePxPerYear));
   const eventosOrdenadosTodos = useMemo(() => EVENTOS_HISTORICOS.slice().sort((a, b) => inicioEvento(a) - inicioEvento(b) || a.titulo.localeCompare(b.titulo, "es")), []);
@@ -377,27 +300,8 @@ export default function Explorer({ initialPanel = null, treeBase: TREE_BASE, loa
   }, [favoritosOpen]);
 
   useEffect(() => {
-    if (typeof window === "undefined") return;
-    try {
-      window.localStorage.setItem(FAVORITOS_STORAGE_KEY, JSON.stringify(favoritos));
-    } catch {
-      // El almacenamiento local puede estar bloqueado por el navegador.
-    }
     if (!favoritos.length && soloFavoritos) setSoloFavoritos(false);
   }, [favoritos, soloFavoritos]);
-
-  useEffect(() => {
-    if (typeof window === "undefined") return;
-    try {
-      window.localStorage.setItem(PANELES_STORAGE_KEY, JSON.stringify(panelesVisibles));
-    } catch {
-      // La disposición puede seguir funcionando aunque localStorage esté bloqueado.
-    }
-  }, [panelesVisibles]);
-
-  useEffect(() => () => {
-    if (shareStatusTimerRef.current) window.clearTimeout(shareStatusTimerRef.current);
-  }, []);
 
   useEffect(() => {
     if (!infoProyecto || typeof document === "undefined") return undefined;
@@ -556,18 +460,6 @@ export default function Explorer({ initialPanel = null, treeBase: TREE_BASE, loa
         ? "workspace-layout-right"
         : "workspace-layout-center";
 
-  const alternarPanelAuxiliar = useCallback((panel) => {
-    setPanelesVisibles((actuales) => ({ ...actuales, [panel]: !actuales[panel] }));
-  }, []);
-
-  const alternarSeccionFiltro = useCallback((seccion) => {
-    setFilterSectionsOpen((actuales) => ({ ...actuales, [seccion]: !actuales[seccion] }));
-  }, []);
-
-  const alternarSeccionBio = useCallback((seccion) => {
-    setBioSectionsOpen((actuales) => ({ ...actuales, [seccion]: !actuales[seccion] }));
-  }, []);
-
   const personasVivasEnAnio = useMemo(() =>
     Number.isFinite(anioGlobal) ? PERSONAS.filter((persona) => estaVivaEn(persona, anioGlobal)) : [],
   [anioGlobal]);
@@ -682,7 +574,6 @@ export default function Explorer({ initialPanel = null, treeBase: TREE_BASE, loa
     timelinePxPerYear, timelineListRef.current?.offsetTop,
     ...[scrollRef, tlScrollRef].flatMap(ref => [ref.current?.clientWidth, ref.current?.clientHeight, ref.current?.scrollHeight]),
   ]), [scrollRef, tlScrollRef]);
-
 
   useAtlasSession({
     ...savedSession, ready, atlasIds, query, territorios, territorialFilterMode, dinastias, titulos, siglos, relaciones, collapsedIds,
@@ -841,13 +732,7 @@ export default function Explorer({ initialPanel = null, treeBase: TREE_BASE, loa
   });
 
   const scrollBy = (dx, dy) => scrollRef.current?.scrollBy({ left: dx, top: dy, behavior: "smooth" });
-  const onPointerDown = (e) => { dragState.current = { startX: e.clientX, startY: e.clientY, scrollLeft: scrollRef.current.scrollLeft, scrollTop: scrollRef.current.scrollTop }; };
-  const onPointerMove = (e) => {
-    if (!dragState.current) return;
-    scrollRef.current.scrollLeft = dragState.current.scrollLeft - (e.clientX - dragState.current.startX);
-    scrollRef.current.scrollTop = dragState.current.scrollTop - (e.clientY - dragState.current.startY);
-  };
-  const endDrag = () => (dragState.current = null);
+  const { onPointerDown, onPointerMove, endDrag } = useDragScroll(scrollRef);
 
   const centerOn = id => queueViewport({ treeId: id, treeCenter: null });
 
@@ -1082,11 +967,6 @@ export default function Explorer({ initialPanel = null, treeBase: TREE_BASE, loa
 
   const centerTimelineOnYear = anio => queueViewport({ timelineYear: anio, timelineId: null, timelineScroll: null });
 
-  const alternarFavorito = (id) => {
-    if (!BY_ID[id]) return;
-    setFavoritos((actuales) => actuales.includes(id) ? actuales.filter((valor) => valor !== id) : [...actuales, id]);
-  };
-
   const seleccionarEvento = (evento) => {
     if (!evento) return;
     const anio = inicioEvento(evento);
@@ -1230,12 +1110,6 @@ export default function Explorer({ initialPanel = null, treeBase: TREE_BASE, loa
   };
 
   storyActionsRef.current = {start:iniciarHistoria};
-
-  const mostrarEstadoCompartir = useCallback((mensaje) => {
-    setShareStatus(mensaje);
-    if (shareStatusTimerRef.current) window.clearTimeout(shareStatusTimerRef.current);
-    shareStatusTimerRef.current = window.setTimeout(() => setShareStatus(""), 2600);
-  }, []);
 
   const construirEnlaceCompartido = useCallback(() => {
     if (!seleccion || typeof window === "undefined") return "";

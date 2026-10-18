@@ -4,16 +4,16 @@ import {GRUPOS_DINASTICOS_GENEALOGICOS} from '../../domain/genealogy/dynasties.j
 import {canonicalDynasty} from '../../data/dynastyAliases.js';
 import {TERRITORIOS_SUB} from '../../domain/filters/territoryFilters.js';
 import {normalizarBusquedaPublica,slugBasePersona,slugPublico} from '../../domain/people/personLabels.js';
+import {fnv1a} from '../../utils/hash.js';
 
-export const DINASTLE_VERSION='v1';
+const DINASTLE_VERSION='v1';
 export const DINASTLE_MAX=8;
-export const DINASTLE_EPOCH='2026-10-15';
+const DINASTLE_EPOCH='2026-10-15';
 const GENERIC_HOUSES=new Set(['','Desconocida','Familias menores','Sin casa identificada','Sin casa']);
 const regions=['Francia','España','Inglaterra','Escocia','Irlanda','Estados Italianos','Sacro Imperio','Hungría','Polonia-Lituania','Balcanes','Escandinavia','Georgia y Cáucaso','Bizancio y Oriente latino'];
 const descendants=name=>{const seen=new Set(),walk=n=>{for(const c of TERRITORIOS_SUB[n]||[])if(!seen.has(c)){seen.add(c);walk(c);}};walk(name);return seen;};
 const regionalSets=regions.map(n=>new Set([n,...descendants(n)]));
 const familyOf=name=>Object.entries(GRUPOS_DINASTICOS_GENEALOGICOS).find(([,members])=>members.includes(name))?.[0]||name;
-const hash=text=>{let h=2166136261;for(const c of text)h=Math.imul(h^c.charCodeAt(0),16777619)>>>0;return h;};
 const unique=values=>[...new Set(values.filter(Boolean))];
 const intersects=(a,b)=>a.some(v=>b.includes(v));
 
@@ -22,7 +22,7 @@ export function dinastleDay(date=new Date()) {
  return ['year','month','day'].map(t=>parts.find(p=>p.type===t).value).join('-');
 }
 export const dayNumber=day=>Math.floor((Date.parse(day+'T12:00:00Z')-Date.parse(DINASTLE_EPOCH+'T12:00:00Z'))/86400000)+1;
-export function dinastleRoles(person) {
+function dinastleRoles(person) {
  const active=gobiernosDe(person).filter(gobiernoEfectivo);
  const roles=[];
  for(const g of active) {
@@ -66,7 +66,7 @@ export function dailyDinastle(model,day) {
  if(!model.eligible.length)return null;
  // A seeded permutation visits every candidate before repeating. The roster
  // is frozen per version by stored secret ID, never inferred from old guesses.
- const pool=model.eligible.map(e=>({e,rank:hash(DINASTLE_VERSION+':'+e.id)})).sort((a,b)=>a.rank-b.rank||a.e.id.localeCompare(b.e.id));
+ const pool=model.eligible.map(e=>({e,rank:fnv1a(DINASTLE_VERSION+':'+e.id)})).sort((a,b)=>a.rank-b.rank||a.e.id.localeCompare(b.e.id));
  return pool[((dayNumber(day)-1)%pool.length+pool.length)%pool.length].e;
 }
 export function familyDistance(model,a,b,max=4) {

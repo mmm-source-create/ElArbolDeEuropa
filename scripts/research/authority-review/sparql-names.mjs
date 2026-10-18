@@ -1,14 +1,13 @@
 // Batched SPARQL: items whose Spanish/English label or alias equals the person's name (or an
 // alias), with birth/death years and relatives. Same acceptance rules as the other passes.
 import fs from 'node:fs';
+import {UA,sleep} from './http.mjs';
 const {PERSONAS}=await import('../../../src/data/personas.js');
 const {conyugesDe}=await import('../../../src/domain/genealogy/personAccessors.js');
-const UA={'User-Agent':'ElArbolDeEuropa-review/1.0 (https://treeofeurope.eu; genealogical atlas bibliographic review)','Accept':'application/sparql-results+json'};
-const sleep=ms=>new Promise(r=>setTimeout(r,ms));
 const qids=JSON.parse(fs.readFileSync('qids.json')),status=JSON.parse(fs.readFileSync('status.json'));
 const okQ=id=>status[id]==='ok'?qids[id].qid:null;
 const esc=s=>s.replace(/\\/g,'\\\\').replace(/"/g,'\\"');
-const sparql=async q=>{for(let a=0;a<5;a++){try{const r=await fetch('https://query.wikidata.org/sparql?query='+encodeURIComponent(q),{headers:UA,signal:AbortSignal.timeout(60000)});if(r.status===429||r.status>=500){await sleep(10000*(a+1));continue}return (await r.json()).results.bindings}catch{await sleep(5000*(a+1))}}return []};
+const sparql=async q=>{for(let a=0;a<5;a++){try{const r=await fetch('https://query.wikidata.org/sparql?query='+encodeURIComponent(q),{headers:{...UA,'Accept':'application/sparql-results+json'},signal:AbortSignal.timeout(60000)});if(r.status===429||r.status>=500){await sleep(10000*(a+1));continue}return (await r.json()).results.bindings}catch{await sleep(5000*(a+1))}}return []};
 const pending=PERSONAS.filter(p=>status[p.id]!=='ok');console.log('pending',pending.length);
 const names=new Map();for(const p of pending)for(const n of new Set([p.nombre,...(p.aliases||[])]))if(n&&n.length<80){if(!names.has(n))names.set(n,[]);names.get(n).push(p.id)}
 const list=[...names.keys()];const cands=new Map();

@@ -1,7 +1,7 @@
 // Corrections that also apply outside the 1400–1650 research layer. A coarse
 // Roussillon crosswalk must not turn Spanish Cerdanya into a permanent French
 // possession after 1659. Documented occupations remain separate exceptions.
-export const CERDANYA_SOURCE = Object.freeze({
+const CERDANYA_SOURCE = Object.freeze({
   title: 'Turisme Cerdanya · Historia de la frontera y ocupaciones',
   url: 'https://cerdanya.org/fr/decouvrir/culture/histoire/',
   locator: 'Restitución de 1493; partición de 1659–1660; ocupaciones de 1708–1714 y 1812–1814',
@@ -18,7 +18,7 @@ export function cerdanyaBorderCorrection(territory, year) {
   };
 }
 
-export const SOUTHERN_PYRENEES_SOURCE = Object.freeze({
+const SOUTHERN_PYRENEES_SOURCE = Object.freeze({
   title: 'Generalitat de Catalunya · Pirineu Comtal',
   url: 'https://act.gencat.cat/wp-content/uploads/2012/06/RutaPirineuComtal.pdf',
   locator: 'Cerdanya, Berguedà y Ripollès; partición de la Cerdanya por el Tratado de los Pirineos',

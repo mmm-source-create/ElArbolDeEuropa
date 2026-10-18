@@ -1,8 +1,8 @@
 // V5 source contract. This validates data; it never repairs or normalizes it.
 import {canonicalJson, digest} from './canonical.mjs';
-export const GOVERNMENT_CONDITIONS = ['efectivo', 'rama', 'corregente', 'rival', 'jure uxoris', 'titular', 'disputado', 'pretensión', 'regencia', 'ocupación', 'gobierno delegado'];
-export const GOVERNMENT_CLASSES = ['ducado', 'señorío', 'condado', 'reinado', 'margraviato', 'imperio', 'gran_ducado', 'gobierno', 'pontificado', 'archiducado', 'regencia', 'principado', 'vizcondado', 'marquesado', 'landgraviato', 'electorado', 'voivodato', 'estatuderato', 'despotado', 'gran_principado', 'zarato', 'sultanato', 'banato', 'emirato', 'califato', 'judicado'];
-export const TERRITORY_CLASSES = [...GOVERNMENT_CLASSES, 'reino', 'grupo_historico', 'territorio_compuesto', 'republica', 'ciudad', 'grupo_geografico', 'burgraviato', 'estado_pontificio', 'corona_compuesta', 'union_compuesta'];
+const GOVERNMENT_CONDITIONS = ['efectivo', 'rama', 'corregente', 'rival', 'jure uxoris', 'titular', 'disputado', 'pretensión', 'regencia', 'ocupación', 'gobierno delegado'];
+const GOVERNMENT_CLASSES = ['ducado', 'señorío', 'condado', 'reinado', 'margraviato', 'imperio', 'gran_ducado', 'gobierno', 'pontificado', 'archiducado', 'regencia', 'principado', 'vizcondado', 'marquesado', 'landgraviato', 'electorado', 'voivodato', 'estatuderato', 'despotado', 'gran_principado', 'zarato', 'sultanato', 'banato', 'emirato', 'califato', 'judicado'];
+const TERRITORY_CLASSES = [...GOVERNMENT_CLASSES, 'reino', 'grupo_historico', 'territorio_compuesto', 'republica', 'ciudad', 'grupo_geografico', 'burgraviato', 'estado_pontificio', 'corona_compuesta', 'union_compuesta'];
 
 const optional = rule => ({...rule, optional: true});
 const nullable = rule => ({...rule, nullable: true});
@@ -23,13 +23,13 @@ const documentedDate = object({
   ...fields(['valor', 'desde', 'hasta'], year),
 });
 
-export const GOVERNMENT_SCHEMA = object({
+const GOVERNMENT_SCHEMA = object({
   territorio: text, desde: year, hasta: year, titulo: text,
   clase: enumeration(GOVERNMENT_CLASSES), condicion: enumeration(GOVERNMENT_CONDITIONS),
   nota: optional(prose), ambito: optional(text), soberano: optional(text),
   controlDisputado: optional(array(years)),
 });
-export const PERSON_SCHEMA = object({
+const PERSON_SCHEMA = object({
   id: text, nombre: text, titulo: text, reinos: array(text),
   ...fields(['sobrenombre', 'dinastia', 'padre', 'madre', 'slug'], text),
   ...fields(['nac', 'muer'], year),
@@ -41,7 +41,7 @@ export const PERSON_SCHEMA = object({
     fechas: optional(object({nac: optional(documentedDate), muer: optional(documentedDate)})),
   })),
 });
-export const TERRITORY_SCHEMA = object({
+const TERRITORY_SCHEMA = object({
   clase: enumeration(TERRITORY_CLASSES),
   naturaleza: enumeration(['entidad', 'agrupacion', 'compuesta']), componentes: array(text),
   ...fields(['nota'], text), ...fields(['desde', 'hasta'], year),
@@ -54,7 +54,7 @@ const extension = object({
   versions: array(version), note: text, sources: array(source),
   corridor: optional(text), coverage: optional(text),
 });
-export const MAP_LAYER_SCHEMA = object({
+const MAP_LAYER_SCHEMA = object({
   name: text, corridor: text, color: text, versions: array(version),
   note: optional(nullable(text)),
   active: optional(nullable(object({from: optional(year), through: optional(year), reason: optional(text), source: optional(text)}))),
@@ -70,7 +70,7 @@ export const MAP_LAYER_SCHEMA = object({
 const isObject = value => value !== null && typeof value === 'object' && !Array.isArray(value);
 const own = (value, key) => Object.hasOwn(value, key);
 
-export function validateShape(value, schema, path = '$') {
+function validateShape(value, schema, path = '$') {
   const issues = [];
   const add = (code, message) => issues.push({code, path, message});
   if (value === undefined && schema.optional || value === null && schema.nullable) return issues;
@@ -93,7 +93,7 @@ export function validateShape(value, schema, path = '$') {
   return issues;
 }
 
-export const governmentKey = (personId, government) => `person:${personId}:government:${[government.territorio, government.desde, government.hasta, government.titulo].join(':')}`;
+const governmentKey = (personId, government) => `person:${personId}:government:${[government.territorio, government.desde, government.hasta, government.titulo].join(':')}`;
 
 // The ledger records formats, not accepted historical facts. Removal is welcome.
 export function legacyFormats(people) {

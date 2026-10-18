@@ -62,7 +62,7 @@ export const COLLECTIVE_AUTHORITIES = Object.freeze([
   },
 ]);
 
-export const MAP_GEOMETRY_PRECISION = 'El mapa detallado usa celdas cartográficas como aproximaciones regionales; no reconstruye por sí solo la frontera exacta del feudo en este año.';
+const MAP_GEOMETRY_PRECISION = 'El mapa detallado usa celdas cartográficas como aproximaciones regionales; no reconstruye por sí solo la frontera exacta del feudo en este año.';
 
 export function buildPoliticalMapIndex(personas, year, mapData = null, options = {}) {
   const regions = new Map();

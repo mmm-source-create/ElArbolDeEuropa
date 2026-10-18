@@ -1,11 +1,11 @@
 import {netherlandsGovernorScope} from './netherlandsGovernorScopes.js';
 // These dates extend a reviewed person's attribution, not the lifetime of
 // every layer in the Burgundian laboratory. Geometry alone proves no control.
-export const NETHERLANDS_TERRITORIES = Object.freeze(['Flandes', 'Brabante', 'Limburgo',
+const NETHERLANDS_TERRITORIES = Object.freeze(['Flandes', 'Brabante', 'Limburgo',
   'Holanda', 'Henao', 'Zelanda', 'Artois', 'Namur', 'Luxemburgo', 'Frisia', 'Utrecht',
   'Overijssel', 'Drente', 'Groninga', 'Güeldres', 'Señorío de Malinas']);
 
-export const PHILIP_SUCCESSION_SOURCE = Object.freeze({
+const PHILIP_SUCCESSION_SOURCE = Object.freeze({
   title: 'Rijksmuseum · Carlos V entrega el gobierno de los Países Bajos a Felipe II, 1555',
   url: 'https://www.rijksmuseum.nl/nl/collectie/object/Keizer-Karel-V-draagt-het-bestuur-van-de-Nederlanden-over-aan-zijn-zoon-Filips-II-1555--6ab2467200c47e464e878015c6518766',
 });

@@ -49,14 +49,13 @@ export function nombrePrincipal(persona) {
   return nombre || String(persona.nombre || "").trim();
 }
 
-export const ANIOS_DATOS = PERSONAS.flatMap((persona) => [
+const ANIOS_DATOS = PERSONAS.flatMap((persona) => [
   persona.nac,
   persona.muer,
   ...listaReinados(persona).flatMap((r) => [r.desde, r.hasta]),
 ]).filter(Number.isFinite);
 export const TL_MIN = Math.floor((Math.min(...ANIOS_DATOS) - 1) / 25) * 25;
 export const TL_MAX = Math.ceil((Math.max(...ANIOS_DATOS) + 1) / 25) * 25;
-export const pct = (y) => Number.isFinite(y) ? Math.max(0, Math.min(100, ((y - TL_MIN) / (TL_MAX - TL_MIN)) * 100)) : null;
 export const inicioEvento = (evento) => Number.isFinite(evento?.desde) ? evento.desde : evento?.anio;
 export const finEvento = (evento) => Number.isFinite(evento?.hasta) ? evento.hasta : inicioEvento(evento);
 export const etiquetaFechaEvento = (evento) => Number.isFinite(evento?.desde) && Number.isFinite(evento?.hasta)

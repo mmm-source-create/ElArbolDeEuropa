@@ -10,7 +10,7 @@ export const TREE_PAD_X = 92;
 export const TREE_PAD_TOP = 38;
 export const TREE_PAD_BOTTOM = 64;
 export const TREE_ROW_STEP = TREE_BOX_H + TREE_ROW_GAP;
-export const TREE_COLUMN_STEP = 14;
+const TREE_COLUMN_STEP = 14;
 export const TREE_PARTNER_EXIT_BASE = 14;
 export const TREE_PARTNER_EXIT_STEP = 10;
 
@@ -880,7 +880,7 @@ export function computeTreeLayout(rows, byId, childrenById) {
   };
 }
 
-export function computeColumnCandidates(rowsData, positions, canvasWidth, rowStart, rowEnd) {
+function computeColumnCandidates(rowsData, positions, canvasWidth, rowStart, rowEnd) {
   const occupied = [];
   rowsData.forEach((row, rowIndex) => {
     if (rowIndex < rowStart || rowIndex > rowEnd) return;
@@ -916,7 +916,7 @@ export function computeColumnCandidates(rowsData, positions, canvasWidth, rowSta
   return [...new Set(candidates.map((value) => Math.round(value * 10) / 10))];
 }
 
-export function claimColumn(candidates, targetX, claims, yStart, yEnd, familyKey) {
+function claimColumn(candidates, targetX, claims, yStart, yEnd, familyKey) {
   const lo = Math.min(yStart, yEnd);
   const hi = Math.max(yStart, yEnd);
   const sorted = candidates.slice().sort((a, b) => Math.abs(a - targetX) - Math.abs(b - targetX));

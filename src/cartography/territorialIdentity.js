@@ -9,6 +9,7 @@ import {IBERIA_ITALY_IDENTITIES} from './regions/iberiaItalyRoutes.js';
 import {BOSNIA_HUM_IDENTITIES} from './regions/bosniaHumRoutes.js';
 import {POSAVINA_RAGUSA_IDENTITIES} from './regions/posavinaRagusaRoutes.js';
 import {BALKANS_FULL_IDENTITIES} from './regions/balkansFullRoutes.js';
+import {fnv1a} from '../utils/hash.js';
 const ALIASES = Object.freeze({
   ...EASTERN_EUROPE_IDENTITIES,
   ...EARLY_MEDIEVAL_IDENTITIES,
@@ -179,8 +180,7 @@ export function territorialLabel(name, year) {
 export function territorialColor(name) {
   if (['Holanda', 'Provincias Unidas', 'República Bátava'].includes(territorialIdentity(name))) return ORANGE_NASSAU;
   if (territorialIdentity(name) === 'Islas sin autoridad política documentada') return '#8d9da0';
-  let hash = 2166136261;
-  for (const char of territorialIdentity(name)) hash = Math.imul(hash ^ char.codePointAt(0), 16777619) >>> 0;
+  const hash = fnv1a(territorialIdentity(name));
   return `hsl(${(hash % 36000 / 100).toFixed(2)} ${58 + hash % 17}% ${40 + (hash >>> 8) % 10}%)`;
 }
 

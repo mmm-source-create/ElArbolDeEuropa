@@ -5,10 +5,10 @@ import {territorialIdentity} from './territorialIdentity.js';
 import {reviewedMapLayers,reviewedLayerLocations,reviewedLayerEvidence} from './locationMapPilot.js';
 import {FRENCH_CROWN_COLOR} from './mapColors.js';
 
-export const APPANAGE_SOURCE={title:'Larousse · Apanage',url:'https://www.larousse.fr/encyclopedie/divers/apanage/22040',locator:'Apanages de los hijos y hermanos del rey; reserva de derechos de soberanía, reversión y pérdida de poder político desde el siglo XVI.'};
+const APPANAGE_SOURCE={title:'Larousse · Apanage',url:'https://www.larousse.fr/encyclopedie/divers/apanage/22040',locator:'Apanages de los hijos y hermanos del rey; reserva de derechos de soberanía, reversión y pérdida de poder político desde el siglo XVI.'};
 // Annual bounds are intersected with the independently reviewed local control
 // phases. A royal grant is neither an Ottoman-style tribute nor direct rule.
-export const FRENCH_CROWN_RELATIONS=Object.freeze([
+const FRENCH_CROWN_RELATIONS=Object.freeze([
  ['Orleans',1344,1375],['Orleans',1392,1497],['Orleans',1533,1589],['Orleans',1626,1789],
  ['Berry',1360,1422],['Poitou',1241,1270],['Poitou',1372,1415],
  ['Anjou',1246,1327],['Anjou',1360,1480],['Maine',1246,1327],['Maine',1360,1480],

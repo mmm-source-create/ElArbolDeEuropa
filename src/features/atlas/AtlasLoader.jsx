@@ -2,7 +2,7 @@ import AtlasSkeleton from './AtlasSkeleton.jsx';
 import {useEffect, useState} from 'react';
 import treeBaseUrl from '../../generated/treeBase.json?url';
 import {loadJsonAsset} from '../../utils/loadAsset.js';
-export const EMPTY_TREE_BASE = {gen:{}, rows:[], layout:{positions:{}, pairContacts:{},
+const EMPTY_TREE_BASE = {gen:{}, rows:[], layout:{positions:{}, pairContacts:{},
   units:[], rowUnits:[], rowBands:[], rowHeights:[], width:1200, height:600}};
 let explorerRequest;
 function loadExplorer() {

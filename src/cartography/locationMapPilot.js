@@ -154,7 +154,7 @@ export function pilotImperialFrameFor(data, year) {
   return mapLocationsForGovernment(data, {territorio:'Sacro Imperio'}, year, null, imperialFrameIds(year));
 }
 
-export function pilotVersionFor(entry, year) {
+function pilotVersionFor(entry, year) {
   if (!entry || !Number.isInteger(year)) return null;
   return [...entry.versions].reverse().find(version => version.from <= year) || null;
 }

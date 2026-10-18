@@ -1,5 +1,6 @@
-import {conyugesDe as conyugesRegistradosDe, territoriosDe} from '../../domain/genealogy/personAccessors.js';
+import {conyugesDe, territoriosDe} from '../../domain/genealogy/personAccessors.js';
 import {reinadosEfectivos, sucesionesDirectas} from "./desafioGovernments.js";
+import {fnv1a} from '../../utils/hash.js';
 const DINASTIAS_GENERICAS = new Set(["", "Sin casa identificada", "Desconocida", "Familias menores"]);
 const PALABRAS_VACIAS = new Set(["de", "del", "la", "las", "el", "los", "y", "e", "casa", "dinastia", "dinastía"]);
 
@@ -32,18 +33,8 @@ function textoContieneRespuesta(texto, respuesta) {
   return tokens.length > 0 && tokens.some((token) => textoNorm.includes(` ${token} `));
 }
 
-function hashTexto(texto) {
-  let h = 2166136261;
-  const raw = String(texto || "");
-  for (let i = 0; i < raw.length; i += 1) {
-    h ^= raw.charCodeAt(i);
-    h = Math.imul(h, 16777619);
-  }
-  return h >>> 0;
-}
-
 function crearRngSemilla(texto) {
-  let state = hashTexto(texto) || 0x6d2b79f5;
+  let state = fnv1a(texto) || 0x6d2b79f5;
   return () => {
     state += 0x6d2b79f5;
     let t = state;
@@ -107,7 +98,7 @@ function construirIndice(personas) {
       marcarSexo(persona.madre, "F");
       (hijosPorId[persona.madre] ||= new Set()).add(persona.id);
     }
-    const parejas = conyugesRegistradosDe(persona);
+    const parejas = conyugesDe(persona);
     parejas.forEach((id) => {
       if (byId[id]) (conyugesInversos[id] ||= new Set()).add(persona.id);
     });
@@ -116,10 +107,10 @@ function construirIndice(personas) {
   return { byId, hijosPorId, conyugesInversos, sexo };
 }
 
-function conyugesDe(persona, indice) {
+function conyugesConInversos(persona, indice) {
   if (!persona?.id) return [];
   return unico([
-    ...conyugesRegistradosDe(persona),
+    ...conyugesDe(persona),
     ...[...(indice.conyugesInversos[persona.id] || [])],
   ]).filter((id) => indice.byId[id]);
 }
@@ -157,7 +148,7 @@ function relevancia(persona) {
   score += Math.min(4, reinados.length * 2);
   if (persona?.biografia) score += 2;
   if (persona?.padre || persona?.madre) score += 1;
-  if (conyugesRegistradosDe(persona).length) score += 1;
+  if (conyugesDe(persona).length) score += 1;
   return score;
 }
 
@@ -211,7 +202,7 @@ function completarPregunta(pregunta, dificultad, rng) {
     ...pregunta,
   };
   final.firma = firmaPregunta(final);
-  final.id = `q-${hashTexto(`${final.firma}|${rng()}`).toString(36)}`;
+  final.id = `q-${fnv1a(`${final.firma}|${rng()}`).toString(36)}`;
   return final;
 }
 
@@ -298,7 +289,7 @@ function construirRelaciones(personas, indice, incluirPareja = true) {
       relaciones.push({ sujeto: persona, correcta: indice.byId[persona.madre], etiqueta: "madre", sexo: "F" });
     }
     if (incluirPareja) {
-      conyugesDe(persona, indice).forEach((id) => {
+      conyugesConInversos(persona, indice).forEach((id) => {
         const correcta = indice.byId[id];
         if (correcta) relaciones.push({ sujeto: persona, correcta, etiqueta: "cónyuge", sexo: indice.sexo[id] || null });
       });
@@ -315,7 +306,7 @@ function generarParentesco(personas, indice, dificultad, rng) {
     const excluidos = new Set([
       relacion.sujeto.padre,
       relacion.sujeto.madre,
-      ...conyugesDe(relacion.sujeto, indice),
+      ...conyugesConInversos(relacion.sujeto, indice),
     ].filter(Boolean));
     excluidos.delete(relacion.correcta.id);
     const opciones = opcionesPersonas(relacion.correcta, relacion.sujeto, personas, indice, cantidad, rng, {
@@ -533,15 +524,15 @@ function generarSucesor(personas, indice, dificultad, rng) {
 }
 
 function generarPareja(personas, indice, dificultad, rng) {
-  const sujetos = barajar(personas.filter((p) => p?.id && p?.nombre && conyugesDe(p, indice).length && relevancia(p) >= 2), rng);
+  const sujetos = barajar(personas.filter((p) => p?.id && p?.nombre && conyugesConInversos(p, indice).length && relevancia(p) >= 2), rng);
   for (const sujeto of sujetos) {
-    const correctaId = elegir(conyugesDe(sujeto, indice), rng);
+    const correctaId = elegir(conyugesConInversos(sujeto, indice), rng);
     const correcta = indice.byId[correctaId];
     if (!correcta) continue;
     const cantidad = dificultad <= 2 ? 2 : 3;
     const opciones = opcionesPersonas(correcta, sujeto, personas, indice, cantidad, rng, {
       sexo: indice.sexo[correcta.id] || null,
-      excluidos: new Set(conyugesDe(sujeto, indice).filter((id) => id !== correcta.id)),
+      excluidos: new Set(conyugesConInversos(sujeto, indice).filter((id) => id !== correcta.id)),
     });
     if (!opciones) continue;
     return completarPregunta({
@@ -682,7 +673,7 @@ export function crearPreguntaRacha(personas, campeonId = null, { evitarFirmas = 
       const firma = `racha|${comparacion.id}|${[campeon.id, rival.id].sort().join("|")}`;
       if (recientes.has(firma)) continue;
       return {
-        id: `racha-${hashTexto(`${firma}|${rng()}`).toString(36)}`,
+        id: `racha-${fnv1a(`${firma}|${rng()}`).toString(36)}`,
         firma,
         tipo: "racha",
         formato: "opciones",

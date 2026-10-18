@@ -27,7 +27,7 @@ export function assetGraph(manifest,entry) {
  visit(entry);
  return {css:[...css],js:[...js]};
 }
-export const STATIC_PAGE_ENTRIES=Object.freeze({
+const STATIC_PAGE_ENTRIES=Object.freeze({
  english:'src/features/english/EnglishPage.jsx',
  historia:'src/features/stories/StoryPage.jsx',
  persona:'src/features/public/PublicSite.jsx',

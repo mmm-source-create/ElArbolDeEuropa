@@ -15,41 +15,36 @@ export const PERSONA_SLUG_POR_ID = Object.fromEntries(PERSONAS.map((persona) => 
   return [persona.id, slug];
 }));
 
-export const PERSONA_ID_POR_SLUG = Object.fromEntries(
+const PERSONA_ID_POR_SLUG = Object.fromEntries(
   Object.entries(PERSONA_SLUG_POR_ID).map(([id, slug]) => [slug, id])
 );
 
 // La versión inglesa solo crea páginas individuales cuando una ficha tiene un
 // nombre inglés explícito. Así evitamos publicar miles de URLs /en/ cuyo
 // contenido principal seguiría estando en español.
-export const PERSONA_ENGLISH = PERSONAS.filter((persona) => typeof persona.nombreEn === "string" && persona.nombreEn.trim());
-export const PERSONA_SLUG_EN_BASE_COUNT = PERSONA_ENGLISH.reduce((acc, persona) => {
+const PERSONA_ENGLISH = PERSONAS.filter((persona) => typeof persona.nombreEn === "string" && persona.nombreEn.trim());
+const PERSONA_SLUG_EN_BASE_COUNT = PERSONA_ENGLISH.reduce((acc, persona) => {
   const base = slugBasePersona(persona, "en");
   acc[base] = (acc[base] || 0) + 1;
   return acc;
 }, {});
-export const PERSONA_SLUG_EN_POR_ID = Object.fromEntries(PERSONA_ENGLISH.map((persona) => {
+const PERSONA_SLUG_EN_POR_ID = Object.fromEntries(PERSONA_ENGLISH.map((persona) => {
   const base = slugBasePersona(persona, "en");
   const slug = PERSONA_SLUG_EN_BASE_COUNT[base] > 1 ? `${base}-${slugPublico(persona.id)}` : base;
   return [persona.id, slug];
 }));
-export const PERSONA_ID_POR_SLUG_EN = Object.fromEntries(
+const PERSONA_ID_POR_SLUG_EN = Object.fromEntries(
   Object.entries(PERSONA_SLUG_EN_POR_ID).map(([id, slug]) => [slug, id])
 );
 
-export const ROUTE_SEGMENTS = Object.freeze({
+const ROUTE_SEGMENTS = Object.freeze({
   es: Object.freeze({ persona: "persona", dinastia: "dinastia", territorio: "territorio", historia: "historia" }),
   en: Object.freeze({ persona: "person", dinastia: "dynasty", territorio: "territory", historia: "story" }),
 });
-export const ROUTE_TYPE_BY_SEGMENT = Object.freeze({
+const ROUTE_TYPE_BY_SEGMENT = Object.freeze({
   es: Object.fromEntries(Object.entries(ROUTE_SEGMENTS.es).map(([tipo, segmento]) => [segmento, tipo])),
   en: Object.fromEntries(Object.entries(ROUTE_SEGMENTS.en).map(([tipo, segmento]) => [segmento, tipo])),
 });
-
-export function localeDesdePath(pathname) {
-  const match = String(pathname || "").match(/^\/(es|en)(?:\/|$)/);
-  return match?.[1] || DEFAULT_LOCALE;
-}
 
 export function rutaEntidadLocalizada(locale, tipo, slug) {
   const idioma = locale === "en" ? "en" : "es";

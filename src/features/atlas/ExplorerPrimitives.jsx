@@ -80,7 +80,7 @@ export const PersonBox = React.memo(function PersonBox({
 
 
 
-export function calcularEstadisticas(personas) {
+function calcularEstadisticas(personas) {
   const lista = (personas || []).filter(Boolean);
   const ids = new Set(lista.map((persona) => persona.id));
   const paresUnicos = (getRelaciones) => {
