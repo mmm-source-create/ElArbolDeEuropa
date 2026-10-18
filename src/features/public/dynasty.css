@@ -1,4 +1,8 @@
 .dynasty-page section[id], .dynasty-page article[id] { scroll-margin-top: 170px; }
+.dynasty-hero-arms { display: block; margin: 0 auto 12px; filter: drop-shadow(0 3px 6px rgb(42 29 20 / .22)); }
+.dynasty-blazon { max-width: 640px; margin: 10px auto 0; color: var(--eade-muted); font-size: var(--fs-sm, 12px); line-height: 1.6; }
+.dynasty-blazon b { color: var(--eade-ink); }
+.dynasty-blazon small { display: block; margin-top: 2px; font-size: inherit; opacity: .85; }
 .dynasty-hero .public-primary { margin-top: 20px; color: #fff8e8; }
 .dynasty-counts { display: flex; justify-content: center; flex-wrap: wrap; gap: 12px 24px; margin-top: 18px; color: var(--eade-muted); font-size: var(--fs-sm, 12px); }
 .dynasty-counts b { color: var(--eade-wine); font-size: var(--fs-lg, 15px); }

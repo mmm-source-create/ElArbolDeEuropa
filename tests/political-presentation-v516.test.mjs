@@ -8,7 +8,7 @@ import {governmentGroupsAt,groupedGovernmentIntervals} from '../src/domain/gover
 import {governmentTableAt,europeMosaicAt} from '../src/cartography/europePanorama.js';
 import {mapAuthoritiesForPerson} from '../src/cartography/mapAuthorities.js';
 import {COLLECTIVE_AUTHORITIES,buildPoliticalMapIndex,inspectMapRegion} from '../src/cartography/politicalMapIndex.js';
-import {FRENCH_CROWN_COLOR,ORANGE_NASSAU,authorityColor} from '../src/cartography/mapColors.js';
+import {ORANGE_NASSAU,authorityColor,frenchFiefColor} from '../src/cartography/mapColors.js';
 import {subterritoriosDeFiltro} from '../src/domain/filters/territoryFilters.js';
 const data=JSON.parse(fs.readFileSync(new URL('../data/cartography/corridor-locations.json',import.meta.url))),by=new Map(PERSONAS.map(p=>[p.id,p]));
 test('territorial and dynastic filters are alphabetic, reachable and distinguish genealogical houses from folders',()=>{
@@ -32,14 +32,14 @@ test('effective-year filtering excludes personal associations and separated Tran
 test('French king includes Orleans as an apanage while its duke retains actual government, with no Dijon/Dole confusion',()=>{
  const king=PERSONAS.find(p=>p.nombre==='Luis XIV de Francia');assert(king);
  const entries=mapAuthoritiesForPerson(king,1710,data);
- const orleans=entries.find(e=>e.kind==='apanage'&&e.ids.includes('Orleans'));assert(orleans);assert.equal(orleans.government,null);assert.equal(orleans.color,FRENCH_CROWN_COLOR);assert(orleans.mapSources.every(s=>s.url));
+ const orleans=entries.find(e=>e.kind==='apanage'&&e.ids.includes('Orleans'));assert(orleans);assert.equal(orleans.government,null);assert.equal(orleans.color,frenchFiefColor('Orleans'));assert(orleans.mapSources.every(s=>s.url));
  assert(!entries.some(e=>e.kind==='tributary'&&e.ids.includes('Orleans')));
  const inspection=inspectMapRegion('Orleans',1710,buildPoliticalMapIndex([king],1710,data),data);
  const relation=inspection.entries.find(e=>e.kind==='apanage');assert(relation);assert(relation.mapSources.some(s=>s.url.includes('larousse')));assert.equal(relation.mapNote.split('Ducado/apanage de Orléans').length,2);
  assert(mapAuthoritiesForPerson(by.get('FELIPE2ORLEANS'),1710,data).some(e=>e.kind==='sovereign'&&e.ids.includes('Orleans')));
  const medieval=PERSONAS.find(p=>p.nombre==='Carlos VI de Francia');assert(medieval);
  const old=mapAuthoritiesForPerson(medieval,1400,data);assert(old.some(e=>e.kind==='apanage'&&e.ids.includes('Dijon')));assert(!old.some(e=>e.kind==='apanage'&&e.ids.includes('Dole')));
- const m=europeMosaicAt(data,1710,PERSONAS);assert(m.byLocation.get('Orleans').every(e=>e.mosaicColor===FRENCH_CROWN_COLOR&&e.crownRelation));
+ const m=europeMosaicAt(data,1710,PERSONAS);assert(m.byLocation.get('Orleans').every(e=>e.mosaicColor===frenchFiefColor('Orleans')&&e.crownRelation));
 });
 test('Republic is one orange entity with its collective government and provincial delegated offices',()=>{
  const rows=governmentTableAt(PERSONAS,1755,COLLECTIVE_AUTHORITIES),republic=rows.filter(r=>r.id==='provincias-unidas');assert.equal(republic.length,1);assert.equal(republic[0].color,ORANGE_NASSAU);assert(republic[0].collectives.length);

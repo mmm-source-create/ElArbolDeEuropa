@@ -11,6 +11,7 @@ import {Info, Landmark, Scale, Heart, ExternalLink, Users, Shield, BookOpen, Sea
 import {IMAGENES_PERSONAS} from '../../data/imagenesPersonas.js';
 import {usePublicMeta, PublicLayout, Breadcrumbs, useJson, PersonaMiniCard, rutaEntidad, personaDates} from './publicShared.jsx';
 import ProjectSupport from '../../components/ProjectSupport.jsx';
+import DynastyArms from '../../components/DynastyArms.jsx';
 import {textoBusquedaPersona, normalizarBusquedaPublica, slugPublico, etiquetaClaseGobierno} from '../../domain/people/personLabels.js';
 import {responsiveImage} from '../../utils/responsiveImage.js';
 import ReadingSkeleton from '../stories/ReadingSkeleton.jsx';
@@ -208,7 +209,7 @@ export function CatalogPage({ tipo }) {
           <div className="public-entity-grid">
             {filtrados.map((item) => (
               <article key={item.slug} className="public-entity-card">
-                <div className="public-entity-card-head"><div><span>{tipo === "dinastias" ? (item.editorial ? "Historia de la dinastía" : "Dinastía") : "Territorio"}</span><h2>{item.nombre}</h2></div><strong aria-label={`${item.total} personas`}>{item.total}<small aria-hidden="true">{item.total === 1 ? "persona" : "personas"}</small></strong></div>
+                <div className="public-entity-card-head"><div className="public-entity-heading">{tipo === "dinastias" && <DynastyArms dinastia={item.nombre} size={30}/>}<div><span>{tipo === "dinastias" ? (item.editorial ? "Historia de la dinastía" : "Dinastía") : "Territorio"}</span><h2>{item.nombre}</h2></div></div><strong aria-label={`${item.total} personas`}>{item.total}<small aria-hidden="true">{item.total === 1 ? "persona" : "personas"}</small></strong></div>
                 {tipo === "dinastias" && item.resumen && <p className="public-muted public-dynasty-summary">{item.resumen}</p>}
                 {!!item.miembros?.length && <div className="public-entity-members">{item.miembros.map((p) => <a key={p.id} href={rutaEntidad("persona", p.slug)}>{p.nombre}</a>)}</div>}
                 <a className="public-entity-action" href={rutaEntidad(tipo === "dinastias" ? "dinastia" : "territorio", item.slug)}>Ver ficha <ArrowRight size={13} /></a>

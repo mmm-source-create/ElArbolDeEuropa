@@ -17,7 +17,7 @@ export const EASTERN_EUROPE_COLORS = Object.freeze({
   "Imperio bizantino": "#944638",
   "Kanato calmuco": "#389485",
   "Kanato de Astracán": "#3D9438",
-  "Kanato de Crimea": "#943849",
+  "Kanato de Crimea": "#A8823F",
   "Kanato de Kazán": "#8F3894",
   "Kanato de Siberia": "#713894",
   "Livonia polaca": "#948538",

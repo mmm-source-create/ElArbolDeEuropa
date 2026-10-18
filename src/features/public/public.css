@@ -76,6 +76,8 @@ button.public-door-card { width: 100%; font: inherit; }
 .public-entity-grid { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 11px; }
 .public-entity-card { min-height: 190px; padding: 17px; display: flex; flex-direction: column; border: 1px solid #d4c8ae; border-radius: var(--r-sm, 6px); background: #fffdf7; }
 .public-entity-card-head { display: flex; justify-content: space-between; gap: 12px; }
+.public-entity-heading { display: flex; align-items: flex-start; gap: 10px; min-width: 0; }
+.public-entity-heading > .dynasty-arms { flex: none; margin-top: 2px; }
 .public-entity-card-head span { color: var(--eade-gold); font-size: var(--fs-2xs, 10px); font-weight: 800; text-transform: uppercase; letter-spacing: .6px; }
 .public-entity-card-head h2 { margin: 4px 0 0; font: 600 var(--fs-2xl, 22px)/1.05 "Iowan Old Style", "Palatino Linotype", Georgia, serif; }
 .public-entity-card-head > strong { display: grid; justify-items: end; gap: 3px; color: var(--eade-wine); font: 600 var(--fs-2xl, 22px)/1 "Iowan Old Style", "Palatino Linotype", Georgia, serif; }
@@ -277,3 +279,6 @@ html .public-not-found>section>span{color:#7c5426}
 .story-coming-list span{color:var(--eade-muted-soft);font:var(--fs-xs,11px)/1.4 var(--eade-sans)}
 .public-long-bio .public-long-bio-refs{margin-top:6px;color:var(--eade-muted-soft);font:var(--fs-xs,11px)/1.5 var(--eade-sans)}
 .public-long-bio .public-long-bio-refs a{color:var(--eade-wine)}
+/* Heraldic tinctures are fixed; a faint halo keeps sable fields and the shield edge visible on dark cards. */
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .dynasty-arms { filter: drop-shadow(0 0 1px rgb(255 248 232 / .55)); } }
+:root[data-theme="dark"] .dynasty-arms { filter: drop-shadow(0 0 1px rgb(255 248 232 / .55)); }

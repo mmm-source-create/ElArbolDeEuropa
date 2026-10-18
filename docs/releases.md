@@ -155,3 +155,5 @@ Release se preparan en borrador sobre la entrega validada.
 [V5.27](versiones/V5.27.md) resuelve las 147 fechas que discrepaban de la ficha GND: 63 confirmadas, 46 corregidas y 38 marcadas como discutidas, cada una con su fuente.
 
 [V5.28](versiones/V5.28.md) revisa el código con el grafo de Graphify: retira código, estilos y dependencias sin uso, reorganiza `src/` por capas (`app`, `data`, `domain`, `cartography`, `features`), separa la cartografía en `data/` y `labs/`, divide la vista del Atlas, aligera la carga de la portada y las fichas y define ocho subagentes en `.claude/agents/`.
+
+[V5.29](versiones/V5.29.md) pinta la Francia inglesa con el color de Inglaterra y los ducados franceses como feudos del reino, rehace los mapas de la guerra de los Cien Años, incorpora a Ricardo Corazón de León y los dominios angevinos, separa los colores borgoñones hasta que comparten duque, da a Polonia-Lituania un color propio y añade escudos a 38 dinastías y 141 sobrenombres.

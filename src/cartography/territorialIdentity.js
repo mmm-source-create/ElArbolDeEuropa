@@ -2,7 +2,7 @@ import {EASTERN_EUROPE_IDENTITIES} from './regions/easternEuropeRoutes.js';
 import {EARLY_MEDIEVAL_IDENTITIES} from './regions/earlyMedievalRoutes.js';
 import {POLAND_LITHUANIA_IDENTITIES} from './regions/polandLithuaniaRoutes.js';
 import {franceLowCountriesPoliticalKeys} from './regions/franceLowCountriesRoutes.js';
-import {ORANGE_NASSAU, FRENCH_CROWN_COLOR, BURGUNDIAN_COLOR} from './mapColors.js';
+import {ORANGE_NASSAU, FRENCH_CROWN_COLOR, BURGUNDIAN_COLOR, POLAND_LITHUANIA_COLOR} from './mapColors.js';
 import {FRANCE_LOW_COUNTRIES_IDENTITIES} from './regions/franceLowCountriesRoutes.js';
 import {IBERIA_ITALY_IDENTITIES} from './regions/iberiaItalyRoutes.js';
 import {BOSNIA_HUM_IDENTITIES} from './regions/bosniaHumRoutes.js';
@@ -60,7 +60,7 @@ export function continuityJurisdictions(names, territory, year, personId) {
 // Color integration follows dated political attribution, never proximity or a dynasty name.
 export function politicalColorGroup(name, year) {
   if (year >= 1569 && year <= 1794 && ['Polonia', 'Lituania', 'Prusia Real', 'Livonia del Commonwealth', 'Livonia polaca', 'Principado episcopal de Warmia'].includes(territorialIdentity(name)))
-    return {id:'polonia-lituania', color:'#8B5AA5'};
+    return {id:'polonia-lituania', color:POLAND_LITHUANIA_COLOR};
   const keys = franceLowCountriesPoliticalKeys(name, year);
   if (keys.includes('Provincias Unidas')) return {id:'republica-neerlandesa', color:ORANGE_NASSAU};
   if (keys.includes('República Bátava')) return {id:'republica-batava', color:ORANGE_NASSAU};
