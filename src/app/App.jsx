@@ -4,6 +4,7 @@ import { HomePage } from "../features/public/HomePage.jsx";
 
 import AtlasSkeleton from "../features/atlas/AtlasSkeleton.jsx";
 import ReadingSkeleton from "../features/stories/ReadingSkeleton.jsx";
+import { englishRoute, englishSkeletonKind } from "../features/english/routes.js";
 import SiteHeader from "../components/SiteHeader.jsx";
 import NotFoundPage from "../features/public/NotFoundPage.jsx";
 import PrivacyPage from '../features/public/PrivacyPage.jsx';
@@ -21,7 +22,8 @@ const publicPage = name => lazy(() => import("../features/public/PublicSite.jsx"
 const PersonPage = publicPage("PersonPage");
 const CatalogPage = publicPage("CatalogPage");
 const InfoPage = publicPage("InfoPage");
-const readingFallback = <div className="public-site"><SiteHeader/><main className="public-main"><ReadingSkeleton/></main></div>;
+// Mientras llega el chunk, el esqueleto tiene la forma de la página que se abre.
+const readingFallback = (kind, locale = "es") => <div className="public-site"><SiteHeader locale={locale}/><main className={`public-main${kind === "story" ? " story-page" : ""}`}><ReadingSkeleton locale={locale} kind={kind}/></main></div>;
 
 function normalizaRutaLigera() {
   if (typeof window === "undefined") return;
@@ -58,9 +60,9 @@ export default function App() {
 
   if (initial.view === "embed") return <Suspense fallback={<p role="status">Preparando ficha…</p>}><EmbedPage personId={initial.personId}/></Suspense>;
   if (!explorerRequested && initial.view === "story") return <Suspense fallback={<div className="public-site"><SiteHeader/><main className="public-main story-page"><ReadingSkeleton/></main></div>}><StoryPage slug={initial.storySlug} chapter={initial.chapter}/></Suspense>;
-  if (!explorerRequested && initial.view === "dynasty") return <Suspense fallback={<p role="status">Cargando dinastía…</p>}><DynastyPage slug={initial.dynastySlug} /></Suspense>;
-  if (!explorerRequested && initial.view === "territory") return <Suspense fallback={<p role="status">Cargando territorio…</p>}><TerritoryPage slug={initial.territorySlug} /></Suspense>;
-  if (initial.view === "english") return <Suspense fallback={readingFallback}><EnglishPage /></Suspense>;
+  if (!explorerRequested && initial.view === "dynasty") return <Suspense fallback={readingFallback("entity")}><DynastyPage slug={initial.dynastySlug} /></Suspense>;
+  if (!explorerRequested && initial.view === "territory") return <Suspense fallback={readingFallback("entity")}><TerritoryPage slug={initial.territorySlug} /></Suspense>;
+  if (initial.view === "english") return <Suspense fallback={readingFallback(englishSkeletonKind(englishRoute(window.location.pathname)), "en")}><EnglishPage /></Suspense>;
   if (initial.view === "not-found") return <NotFoundPage locale={initial.locale} />;
   if (initial.view === 'privacy') return <PrivacyPage locale={initial.locale}/>;
   if (initial.view === "desafio") {
@@ -70,9 +72,9 @@ export default function App() {
       </Suspense>
     );
   }
-  if (!explorerRequested && initial.view === "person") return <Suspense fallback={readingFallback}><PersonPage slug={initial.personSlug} legacyId={initial.legacyPersonId} onExplore={() => entrarAtlas(null)} /></Suspense>;
-  if (!explorerRequested && initial.view === "catalog") return <Suspense fallback={readingFallback}><CatalogPage tipo={initial.catalog} /></Suspense>;
-  if (!explorerRequested && initial.view === "info") return <Suspense fallback={readingFallback}><InfoPage tipo={initial.info} /></Suspense>;
+  if (!explorerRequested && initial.view === "person") return <Suspense fallback={readingFallback("person")}><PersonPage slug={initial.personSlug} legacyId={initial.legacyPersonId} onExplore={() => entrarAtlas(null)} /></Suspense>;
+  if (!explorerRequested && initial.view === "catalog") return <Suspense fallback={readingFallback("catalog")}><CatalogPage tipo={initial.catalog} /></Suspense>;
+  if (!explorerRequested && initial.view === "info") return <Suspense fallback={readingFallback("methodology")}><InfoPage tipo={initial.info} /></Suspense>;
   if (!explorerRequested && initial.view === "home") return <HomePage onEnterAtlas={entrarAtlas} onOpenPanel={entrarAtlas} />;
 
   return (

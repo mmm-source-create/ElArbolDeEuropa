@@ -17,6 +17,9 @@ export function englishRoute(pathname) {
  if(!match||match[1]==='person'&&match[3])return null;
  return {kind:'english',slug:`${match[1]}-${match[2]}`,chapter:match[3]?Number(match[3]):null,path};
 }
+// Forma del esqueleto de carga para una ruta inglesa.
+export const englishSkeletonKind=route=>route?.slug?.startsWith('person-')?'person':route?.slug==='home'?'home':['people','stories'].includes(route?.slug)?'catalog':['methodology','about'].includes(route?.slug)?'methodology':'story';
+
 export function translatedEquivalent(pathname,locale) {
  const path=String(pathname).replace(/\/$/,'');
  for(const [es,en] of [['/es','/en/'],['/es/proyecto','/en/about'],['/es/fuentes','/en/methodology'],['/es/historias','/en/stories'],['/es/personas','/en/people'],['/es/privacidad','/en/privacy']]) {
