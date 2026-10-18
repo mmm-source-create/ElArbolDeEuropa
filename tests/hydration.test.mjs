@@ -52,7 +52,7 @@ async function hydrated(page,check,{dismissed=false,hash='',html}={}) {
   await act(async()=>{app=runtime.hydratePage(container,page,{onRecoverableError:error=>errors.push(error.message)});});
   assert.equal(container.firstElementChild,first,'React no debe sustituir la ficha');
   assert.equal(container.querySelector('h1'),heading,'Debe conservarse el H1 del servidor');
-  assert.equal(container.querySelector('.public-loading,[role="alert"]'),null);
+  assert.equal(container.querySelector('.public-loading,.reading-skeleton,[role="alert"]'),null);
   assert.equal(document.querySelectorAll('link[rel="canonical"]').length,1);
   assert.equal(document.title,rendered.meta.title);
   assert.ok(container.querySelector('a[href*="?atlas=1"]'));
