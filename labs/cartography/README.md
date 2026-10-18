@@ -20,7 +20,7 @@ Las herramientas están en [`scripts/cartography/`](../../scripts/README.md). Si
 
 ## Probarlo
 
-**Celdas nunca coloreadas** abre el inventario de todas las áreas visibles que no reciben color en ningún año de 1200 a 1800. Incluye relieve e islas; permite buscar, filtrar y centrar una celda, consultar candidatos sin verificar y descargar CSV/JSON. Los candidatos no pintan el mapa. La [revisión V4.12](../../docs/V4.12.md) documenta el método, las sucesiones y los límites de esta entrega. `npm run audit:uncolored` regenera la lista desde los mosaicos anuales reales.
+**Celdas nunca coloreadas** abre el inventario de todas las áreas visibles que no reciben color en ningún año de 1200 a 1800. Incluye relieve e islas; permite buscar, filtrar y centrar una celda, consultar candidatos sin verificar y descargar CSV/JSON. Los candidatos no pintan el mapa. La [revisión V4.12](../../docs/versiones/V4.12.md) documenta el método, las sucesiones y los límites de esta entrega. `npm run audit:uncolored` regenera la lista desde los mosaicos anuales reales.
 
 El mosaico se publica junto al Atlas en `/es/mapa-completo?year=1530`.
 El selector permite explorar **1200–1800**. La ampliación de Iberia, Italia,
@@ -730,7 +730,7 @@ existentes. Se ensambla al final de `merge-map-expansions.mjs`, después de las
 revisiones anteriores; no retrotrae las superficies de 1650. Las celdas completas
 se incorporan a `regional-extent-cells.json` y al entorno reproducible de Python.
 
-El [informe de V5.8](../../docs/V5.8.md) detalla los cortes convencionales, las
+El [informe de V5.8](../../docs/versiones/V5.8.md) detalla los cortes convencionales, las
 fuentes y lo que queda pendiente. La auditoría anual pasa de 15 a 18 entidades
 y distingue ausencia de mandatos, ausencia de geometría y cobertura parcial.
 Bosnia se presenta como banato antes de 1377 y como reino después. Los cargos
@@ -747,7 +747,7 @@ dentro de sus 31 IDs explícitos. No sustituye el resto de la cartografía.
 incluidas las cordilleras y las celdas que ya tenían color en otros períodos.
 El inspector distingue superficies aproximadas, condiciones de autoridad y
 atribuciones múltiples: Drijeva agrupa Gabela e Imotski y requiere una futura
-subdivisión para dibujar su frontera interior. El [informe de V5.9](../../docs/V5.9.md)
+subdivisión para dibujar su frontera interior. El [informe de V5.9](../../docs/versiones/V5.9.md)
 explica el resultado y delimita la revisión costera y de Posavina pendiente.
 
 
@@ -758,7 +758,7 @@ explica el resultado y delimita la revisión costera y de Posavina pendiente.
 ambas orillas del Sava/Una permanecen como ámbito vecino identificado.
 `coastal-subdivisions.json` conserva los trazados originales y las costuras
 aproximadas de Slano y Dubrovnik. La geometría insular se separa sin alterar
-las costas. El [informe V5.10](../../docs/V5.10.md) explica cambios, límites,
+las costas. El [informe V5.10](../../docs/versiones/V5.10.md) explica cambios, límites,
 comparación anual y próximos pasos.
 
 ## Revisión completa V5.11
@@ -772,7 +772,7 @@ Los polígonos de cordilleras y sus subtrazados se revisan como superficies.
 
 `npm run audit:balkans-continuity` exige continuidad anual, evidencia local
 y explicación de cada atribución múltiple. Su alcance y límites están en
-[la entrega V5.11](../../docs/V5.11.md).
+[la entrega V5.11](../../docs/versiones/V5.11.md).
 
 ## Francia, Borgoña y Países Bajos · V5.13
 
@@ -780,4 +780,4 @@ y explicación de cada atribución múltiple. Su alcance y límites están en
 `france-low-countries-geographic-cells.json` enumera sus 640 celdas completas.
 `france-low-countries-full-review.json` es la fuente histórica curada de fases,
 notas, citas y ámbitos personales; el ensamblador la aplica después de las
-revisiones anteriores. La auditoría anual está documentada en [V5.13](../../docs/V5.13.md).
+revisiones anteriores. La auditoría anual está documentada en [V5.13](../../docs/versiones/V5.13.md).

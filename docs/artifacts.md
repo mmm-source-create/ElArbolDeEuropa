@@ -2,7 +2,7 @@
 
 | Clase | Ubicación | Tratamiento |
 | --- | --- | --- |
-| Fuentes históricas y editoriales | `src/data/personas.js`, `src/content/`, `src/evidence/`, `src/data/`, `src/Territorios.jsx` | Se editan y revisan con evidencia; los cambios históricos siguen el procedimiento V5 |
+| Fuentes históricas y editoriales | `src/data/`, `src/content/`, `src/evidence/` | Se editan y revisan con evidencia; los cambios históricos siguen el procedimiento V5 |
 | Fuentes cartográficas y selecciones | `scripts/cartography/`, anclas, overrides y revisiones en `data/cartography/` | Contienen decisiones y citas; una herramienta geométrica no sustituye su revisión |
 | Cartografía e inventarios aceptados | JSON y SVG en `data/cartography/`, `data/cartography/MapChart_Map.svg` | Versionados; el Atlas consume estas superficies. Regeneración en una copia y adopción explícita mediante PR |
 | Bases de validación | `tests/baselines/`, `audit-baseline.json` | Expectativas revisadas; solo se actualizan con una justificación concreta |

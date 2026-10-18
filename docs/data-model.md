@@ -166,5 +166,5 @@ Los generadores, el prerender, la auditoría y el navegador comparten la misma
 constante de esquema. Un HTML inicial de esquema 1 se rechaza como ficha
 inicial; la navegación carga los datos del despliegue vigente por su ruta
 normal. No se convierte el formato antiguo silenciosamente. El build genera
-HTML, JSON y módulos juntos. La [V5.7](V5.7.md) explica la revisión explícita de
+HTML, JSON y módulos juntos. La [V5.7](versiones/V5.7.md) explica la revisión explícita de
 la base pública necesaria para cambiar el nombre del campo.

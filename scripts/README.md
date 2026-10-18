@@ -11,10 +11,16 @@ para investigar o regenerar geometría.
 | `cartography/` | Extracción de mandatos, selecciones documentadas, cruces y mediciones SVG |
 | `schema/` | Lectura y comparación de los contratos y bases V5 |
 | `lib/` | Utilidades compartidas de rutas, HTML y seguridad |
+| `research/` | Revisión bibliográfica con red (`authority-review/run.mjs`; pasos con nombre propio y utilidades HTTP en `http.mjs`) |
+| `assets/` | Variantes WebP de retratos (`portrait-variants.mjs`) y su registro en `src/data/imageVariants.js` |
 
 `npm run prebuild` ejecuta `audit:build` y después `generate`, en el orden
 original. `npm run build` añade compilación, HTML y comparaciones V5.
-`npm run generate` permite regenerar solo los catálogos. Los nombres de las
+`npm run generate` permite regenerar solo los catálogos. Uno de sus pasos,
+`generate-corridor-reviews.mjs`, actualiza el único archivo generado que se
+versiona (`src/evidence/corridorReviewData.js`, porque los tests lo leen antes
+del build); `tests/corridor-reviews.test.mjs` falla si no coincide con su
+fuente. Los nombres de las
 auditorías npm anteriores se conservan; sus entradas ahora están en `audits/`.
 
 Los scripts cartográficos se ejecutan expresamente y quedan fuera del build
@@ -22,10 +28,10 @@ del sitio. Consulta el [entorno Python y sus pasos](../docs/python-cartography.m
 Los ensambladores JavaScript aceptan `EADE_MAP_DATA_DIR`, igual que Python,
 para usar una copia de los datos en lugar del directorio aceptado.
 
-Los JSON, SVG y visores de `data/cartography/` son datos revisados y
-laboratorios utilizados por el Atlas. El nombre histórico de esa carpeta no
-los convierte en temporales. Su [clasificación](../docs/artifacts.md) distingue
-fuentes, resultados aceptados y diagnósticos desechables.
+Los JSON y SVG de `data/cartography/` son los datos revisados que usa el
+Atlas; los visores de revisión están en `labs/cartography/`. Su
+[clasificación](../docs/artifacts.md) distingue fuentes, resultados aceptados
+y diagnósticos desechables.
 
 Los informes de versiones anteriores y los manifiestos archivados conservan
 los nombres que existían cuando se entregaron. Para ejecutar una herramienta

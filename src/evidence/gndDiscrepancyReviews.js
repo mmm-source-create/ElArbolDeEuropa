@@ -1,5 +1,5 @@
 // V5.26 · Revisión de las fechas en las que el Atlas y la ficha GND discrepaban
-// (docs/V5.25-discrepancias.md). Cada fecha se contrasta con una obra de referencia
+// (docs/versiones/V5.25-discrepancias.md). Cada fecha se contrasta con una obra de referencia
 // concreta; la ficha GND queda como fuente secundaria y su año, si difiere, en «alternatives».
 export const GND_DISCREPANCY_REVIEWS = Object.freeze({
   "person:ADOLFN:birth": {

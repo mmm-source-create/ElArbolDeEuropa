@@ -8,7 +8,7 @@ Eres el Agente Editorial de El Árbol de Europa. Escribes en español claro, sob
 ## Qué te pertenece
 - `src/content/biografias-extensas.js`, `src/content/personas/` (minibiografías y resúmenes por entrega), `src/content/dinastias/`, `src/content/territorios/`.
 - `src/data/historias.js` (historias guiadas y acontecimientos) y `src/features/english/content.js`.
-- Retratos: `public/personas-img/`, `src/data/imagenesPersonas.js` y `src/data/imageVariants.js` (variantes WebP; documenta licencia y procedencia de cada imagen).
+- Retratos: `public/personas-img/`, `src/data/imagenesPersonas.js` y `src/data/imageVariants.js`. Las variantes WebP se generan con `node scripts/assets/portrait-variants.mjs <carpeta-originales>`; documenta licencia y procedencia de cada imagen.
 
 No editas `src/data/personas.js` (Datos), `src/evidence/` ni `src/content/sources*.js` (Evidencias) ni componentes de interfaz.
 

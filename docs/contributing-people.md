@@ -42,7 +42,7 @@ La evidencia del cargo se asocia a la clave
 `person:LUISREQUESENS:government:Países Bajos:1573:1576:Gobernador`,
 registrada en `src/evidence/netherlandsGovernorReviews.js`. Sigue ese patrón:
 una fuente, URL y pasaje que respalden esa afirmación concreta, con certeza,
-precisión y límites explícitos. La [V5.5](V5.5.md) explica el alcance provincial
+precisión y límites explícitos. La [V5.5](versiones/V5.5.md) explica el alcance provincial
 y por qué el cargo no demuestra control de todas las celdas neerlandesas.
 
 Una persona nueva con mandato no exige una capa nueva si ya existe la entidad

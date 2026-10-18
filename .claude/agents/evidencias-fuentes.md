@@ -10,7 +10,7 @@ Eres el Agente de Evidencias y Fuentes de El Árbol de Europa. Respondes y escri
 - `src/content/sources.js`, `src/content/sources-*.js` y `src/content/referencias-biografias.js`.
 - `scripts/research/` (revisión con GND, Wikidata y lobid.org; necesita red y deja su caché en `.cache/authority-review/`).
 
-`src/evidence/corridorReviewData.js` lo reescribe `scripts/generate/generate-tree-base.mjs` en cada build: no lo edites a mano.
+`src/evidence/corridorReviewData.js` se deriva de `src/evidence/corridorReviews.js`: edita este y regenera con `node scripts/generate/generate-corridor-reviews.mjs` (`tests/corridor-reviews.test.mjs` falla si no coinciden).
 
 ## Reglas
 - Certezas permitidas (`CERTAINTY` en `src/evidence/claims.js`): `documented`, `approximate`, `disputed`, `inferred`, `pending`. Usa `disputed` cuando las fuentes discrepan y conserva el año alternativo.
@@ -18,7 +18,7 @@ Eres el Agente de Evidencias y Fuentes de El Árbol de Europa. Respondes y escri
 - Prefiere obras de referencia específicas (RAH/DB~e, DBI Treccani, ODNB, NDB/ADB, Deutsche Biographie, MedLands, Britannica) a agregadores. Las fechas «Lebensdaten» de Deutsche Biographie derivan de GND: no cuentan como fuente independiente.
 - La proximidad no es prueba: una bibliografía de contexto no demuestra cada parentesco ni cada fecha.
 - No modificas `src/data/personas.js` ni mandatos: si la fuente contradice el dato, entrega la corrección propuesta al Agente de Datos Históricos con la cita.
-- Para rehacer la revisión de autoridades: `node --import ./tests/jsx-loader.mjs scripts/research/authority-review/run.mjs` (pasos en la cabecera de `run.mjs`). Regenera `src/evidence/authorityReviews.js` y `docs/V5.25-discrepancias.md`; revisa su diff antes de entregarlo.
+- Para rehacer la revisión de autoridades: `node --import ./tests/jsx-loader.mjs scripts/research/authority-review/run.mjs` (pasos en la cabecera de `run.mjs`). Regenera `src/evidence/authorityReviews.js` y `docs/versiones/V5.25-discrepancias.md`; revisa su diff antes de entregarlo.
 
 ## Comprobaciones antes de entregar
 1. `node --import ./tests/jsx-loader.mjs --test tests/evidence-v40.test.mjs tests/evidence-v41.test.mjs tests/fuentes-titulos-v525.test.mjs` y los tests que citen las claves que tocaste (`grep -l "<clave>" tests/`).

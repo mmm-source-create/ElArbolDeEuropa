@@ -10,7 +10,7 @@ compilar, empieza por el [README del proyecto](../README.md).
 - [Añadir o corregir una persona](contributing-people.md).
 - [Comprobar regresiones y revisar cambios intencionados](v5-regression.md).
 - [Herramientas y comandos actuales](../scripts/README.md).
-- [Estructura del código, plan de migración y subagentes](V5.28-revision-codigo.md).
+- [Estructura del código, plan de migración y subagentes](versiones/V5.28-revision-codigo.md).
 - [Entorno Python reproducible](python-cartography.md).
 - [Política de seguridad](../SECURITY.md).
 
@@ -37,24 +37,24 @@ interpretarse con la fecha y versión del documento.
 
 ## Versiones
 
-- [V5.11: Balcanes y continuidad otomana](V5.11.md).
-- [V5.12: Iberia, Italia y estados tributarios](V5.12.md).
+- [V5.11: Balcanes y continuidad otomana](versiones/V5.11.md).
+- [V5.12: Iberia, Italia y estados tributarios](versiones/V5.12.md).
 - [Índice cronológico completo y GitHub Releases](releases.md).
-- [V5.10: Kozara–Glaž, costa ragusea y Ko-fi](V5.10.md).
-- [V5.9: Bosnia, Hum y continuidad regional](V5.9.md).
-- [V5.8: continuidad balcánica medieval](V5.8.md).
-- [V5.7: modelo canónico y cierre documental](V5.7.md).
-- [V5.6: herramientas reproducibles](V5.6.md).
-- [V5.5: gobernaciones documentadas](V5.5.md).
+- [V5.10: Kozara–Glaž, costa ragusea y Ko-fi](versiones/V5.10.md).
+- [V5.9: Bosnia, Hum y continuidad regional](versiones/V5.9.md).
+- [V5.8: continuidad balcánica medieval](versiones/V5.8.md).
+- [V5.7: modelo canónico y cierre documental](versiones/V5.7.md).
+- [V5.6: herramientas reproducibles](versiones/V5.6.md).
+- [V5.5: gobernaciones documentadas](versiones/V5.5.md).
 - [Manifiestos de antiguos ZIP](archive/manifests/README.md).
 
-Los documentos `V*.md` se conservan como historial. Las decisiones metodológicas
+Los documentos de `versiones/` (`V*.md`) se conservan como historial. Las decisiones metodológicas
 vigentes están en las guías anteriores; las notas de cada versión describen
 el estado que se verificó entonces.
 
 ## Criterios de contenido
 
-`personas.jsx` y `historiaData.jsx` son datos sin imports. Conserva IDs y slugs
+`src/data/personas.js` y `src/data/historias.js` son datos sin imports. Conserva IDs y slugs
 estables. `persona.titulo` resume la ficha; cada mandato de `gobiernos[]`
 tiene su territorio, título real, clase, condición e intervalo. Desde V5.7
 ni la fuente ni las fichas públicas crean `reinados` como segunda propiedad.
@@ -70,13 +70,13 @@ estructuras. La bibliografía se registra una sola vez y conserva las asociacion
 con personas y territorios. Los retratos nuevos los aporta el responsable del
 proyecto: no se descargan ni sustituyen automáticamente.
 
-La [cartografía subregional propuesta](V4.8_PROPUESTAS.md) y la investigación
+La [cartografía subregional propuesta](versiones/V4.8_PROPUESTAS.md) y la investigación
 de huecos e identidades siguen como trabajo histórico independiente del
 cierre de la serie V5.
 
-- [V5.14: mapas personales, identidad política y carga del Atlas](V5.14.md).
-- [V5.13: Francia, Borgoña y Países Bajos](V5.13.md).
+- [V5.14: mapas personales, identidad política y carga del Atlas](versiones/V5.14.md).
+- [V5.13: Francia, Borgoña y Países Bajos](versiones/V5.13.md).
 
-- [V5.15 · Europa en este año y nueva línea temporal](V5.15.md).
+- [V5.15 · Europa en este año y nueva línea temporal](versiones/V5.15.md).
 
-- [V5.16 · Dinastle, filtros y pertenencia política](V5.16.md).
+- [V5.16 · Dinastle, filtros y pertenencia política](versiones/V5.16.md).

@@ -10,7 +10,7 @@ Eres el Agente de Datos Históricos de El Árbol de Europa (treeofeurope.eu), un
 - `src/data/territorios.js` (catálogo de territorios, clases y condiciones), `src/content/sucesiones/`, `src/content/coronas/`, `src/domain/government/crowns.js`, `src/domain/government/sucesion.js`, `src/data/dynastyAliases.js`.
 - Los tests de datos que tu cambio necesite en `tests/`.
 
-No editas `src/evidence/` (Evidencias), `src/content/personas|dinastias|territorios`, `src/content/biografias-extensas.js` ni `src/data/historias.js` (Editorial), `data/cartography/`, `src/data/*Routes.js` ni `src/Territorios.jsx` (Cartografía), ni componentes `.jsx` de interfaz.
+No editas `src/evidence/` (Evidencias), `src/content/personas|dinastias|territorios`, `src/content/biografias-extensas.js` ni `src/data/historias.js` (Editorial), `data/cartography/` ni `src/cartography/` (Cartografía), ni componentes `.jsx` de interfaz.
 
 ## Reglas del dominio
 - El contrato está en `scripts/schema/data-contract.mjs` y se explica en `docs/data-model.md` y `docs/contributing-people.md`. Léelos antes del primer cambio de la tarea.

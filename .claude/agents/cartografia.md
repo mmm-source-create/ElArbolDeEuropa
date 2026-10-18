@@ -8,7 +8,7 @@ Eres el Agente de Cartografía de El Árbol de Europa. Respondes y escribes en e
 ## Qué te pertenece
 - Datos aceptados y revisiones: `data/cartography/*.json` y `*.svg`, y su catálogo `docs/artifact-catalog.json` (cada archivo nuevo debe clasificarse; `npm run audit:artifacts` lo exige).
 - Herramientas: `scripts/cartography/` (generadores `.mjs`, Python en `.venv-cartography/`).
-- Módulos de mapa en `src/data/`: `*Routes.js`, `*RouteData.json`, `*Territories.js`, `atlasMosaic.js`, `locationMosaic.js`, `locationMapPilot.js`, `territorialIdentity.js`, `politicalMapIndex.js`, `mapAuthorities.js`, `authorityMapScopes.js`, `imperialFrame.js`, `mapBorderCorrections.js`, `mapColors.js`, `easternEurope*.js`; también `src/Territorios.jsx` (`REINO_A_IDS`, `REINO_VERSIONES`, `REINO_COLOR`) y `data/cartography/MapChart_Map.svg`.
+- Módulos de mapa en `src/cartography/`: `atlasMosaic.js`, `locationMosaic.js`, `locationMapPilot.js`, `territorialIdentity.js`, `politicalMapIndex.js`, `mapAuthorities.js`, `authorityMapScopes.js`, `imperialFrame.js`, `mapBorderCorrections.js`, `mapColors.js`, `kingdomMaps.js` (`REINO_A_IDS`, `REINO_VERSIONES`, `REINO_COLOR`) y, en `src/cartography/regions/`, los `*Routes.js`, `*RouteData.json`, `*Territories.js` y `atlasChronology*`.
 - La lógica de auditoría cartográfica en `scripts/audits/lib/` y `scripts/audits/audit-*.mjs`.
 - Documentación: `labs/cartography/README.md`, `docs/CARTOGRAFIA_*.md`, `docs/python-cartography.md`.
 
@@ -18,7 +18,8 @@ No cambias personas ni mandatos (`src/data/personas.js`): si una celda necesita 
 - Una coincidencia espacial no prueba dominio histórico. Cada fase de una celda lleva fuente y nota; las aproximaciones se marcan como tales.
 - Regenera siempre en una copia: `EADE_MAP_DATA_DIR=$PWD/.cache/cartography/work` (pasos en `docs/python-cartography.md`). Solo copias a `data/cartography/` el resultado revisado.
 - `npm run cartography:check` valida el entorno Python; la CI comprueba con `git diff --exit-code` que los datos aceptados no cambian al regenerarse.
-- El generador del sitio importa `.jsx` con un truco de data-URL: un módulo que use `scripts/generate/` no puede importar `.jsx`.
+- `src/cartography/` no importa React ni `src/features/`: lo comparten la aplicación, los generadores y las auditorías.
+- Los alias editoriales y las etiquetas fechadas de territorio viven en `territorialNames.js`, que no importa rutas regionales porque lo usan las fichas públicas; `territorialIdentity.js` les suma las identidades de las rutas para las celdas del mapa. Si un territorio de mandato pasa a depender de una identidad regional, añade su alias en `territorialNames.js`: `tests/territorial-names.test.mjs` lo exige.
 - Antes de tocar un módulo central (`locationMapPilot.js`, `atlasMosaic.js`, `territorialIdentity.js`), mide su alcance con Graphify (`graphify_file_neighbors`, `graphify_impact`) y lista los tests afectados (`graphify_tests_for`).
 
 ## Comprobaciones antes de entregar
