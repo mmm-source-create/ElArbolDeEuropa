@@ -13,7 +13,7 @@ import {ESCUDOS, escudoDe} from '../../src/content/dinastias/escudos.js';
 import DynastyArms from '../../src/components/DynastyArms.jsx';
 import {PERSONA_SLUG_POR_ID} from '../../src/features/atlas/atlasRoutes.js';
 import {slugPublico} from '../../src/domain/people/personLabels.js';
-import {OG_DEFAULT_IMAGE, OG_IMAGE_SIZE, ogDynastyImage, ogPersonaImage} from '../../src/features/public/ogImages.js';
+import {OG_DEFAULT_IMAGE, OG_IMAGE_SIZE, OG_FREE_LICENCE, ogArmsCreditFile, ogDynastyImage, ogPersonaImage} from '../../src/features/public/ogImages.js';
 
 const {width: W, height: H} = OG_IMAGE_SIZE;
 const PANEL = 640;
@@ -44,18 +44,23 @@ async function portraitLayer(file, framing = '50% 25%') {
   return sharp(file).resize(sw, sh).extract({left, top, width: PANEL, height: H}).toBuffer();
 }
 
-// A share card cannot carry the credit that CC BY and CC BY-SA require, so it
-// uses a Commons image only when it is in the public domain or under CC0.
-const FREE = /^(Dominio público|CC0)/;
+// Every house shows its Commons shield. CC BY and CC BY-SA shields carry their
+// credit as a pre-rendered line (build-og-arms-credits.mjs); a house without an
+// image falls back to the drawing.
 async function armsLayer(dinastia) {
   const imagen = escudoDe(dinastia)?.imagen;
-  const source = imagen && FREE.test(imagen.licencia) ? publicFile(imagen.archivo) : Buffer.from(
+  const source = imagen ? publicFile(imagen.archivo) : Buffer.from(
     renderToStaticMarkup(React.createElement(DynastyArms, {dinastia, size: 360, drawn: true})).replace('<svg ', '<svg xmlns="http://www.w3.org/2000/svg" '));
-  const arms = await sharp(source, {density: 144}).resize({height: 470, width: 560, fit: 'inside'}).png().toBuffer();
+  const arms = await sharp(source, {density: 144}).resize({height: 450, width: 560, fit: 'inside'}).png().toBuffer();
   const {width} = await sharp(arms).metadata();
-  const frame = await sharp({create: {width: PANEL, height: H, channels: 3, background: PARCHMENT}})
-    .composite([{input: arms, left: Math.round((PANEL - width) / 2), top: 80}]).png().toBuffer();
-  return frame;
+  const layers = [{input: arms, left: Math.round((PANEL - width) / 2), top: 70}];
+  if (imagen && !OG_FREE_LICENCE.test(imagen.licencia)) {
+    const file = ogArmsCreditFile(imagen.archivo);
+    const credit = await fs.readFile(file).catch(() => { throw new Error(`Falta el crédito pre-renderizado ${file}: ejecuta build-og-arms-credits.mjs`); });
+    const meta = await sharp(credit).metadata();
+    layers.push({input: credit, left: Math.round((PANEL - meta.width) / 2), top: H - 40 - meta.height});
+  }
+  return sharp({create: {width: PANEL, height: H, channels: 3, background: PARCHMENT}}).composite(layers).png().toBuffer();
 }
 
 async function writeCard(out, layers, background = WINE) {

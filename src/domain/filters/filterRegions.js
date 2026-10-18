@@ -82,9 +82,9 @@ export const TERRITORY_REGION={
  "Tierras mordvinas":6,
 
  'España':0,'Portugal':0,'al-Ándalus':0,'Califato almohade':0,'Emirato de al-Ándalus':0,'Emirato de Menorca':0,
- 'Francia':1,'Borgoña y Países Bajos':1,'Borgoña y Franco Condado':1,'Países Bajos y Flandes':1,'Provincias Unidas':1,'Señorío de Malinas':1,'Tournai':1,
+ 'Francia':1,'Borgoña y Países Bajos':1,'Las dos Borgoñas':1,'Países Bajos':1,'Países Bajos y Flandes':1,'Nevers':1,'Rethel':1,'Provincias Unidas':1,'Señorío de Malinas':1,'Tournai':1,
  'Inglaterra':2,'Escocia':2,'Irlanda':2,'Gran Bretaña':2,
- 'Sacro Imperio':3,'Austria':3,'Hungría':3,'Prusia':3,'Brzeg':3,'Glaž':3,'Incorporaciones del siglo XVI':3,'Sajonia-Coburgo':3,'Sajonia-Coburgo-Eisenach':3,'Sajonia-Eisenach':3,'Sajonia-Gotha':3,'Sajonia-Weimar':3,
+ 'Sacro Imperio':3,'Austria':3,'Hungría':3,'Prusia':3,'Brzeg':3,'Glaž':3,'Sajonia-Coburgo':3,'Sajonia-Coburgo-Eisenach':3,'Sajonia-Eisenach':3,'Sajonia-Gotha':3,'Sajonia-Weimar':3,
  'Estados Italianos':4,'Cerdeña':4,'Sicilia':4,'Nápoles':4,'Trinacria':4,'Verona':4,'Córcega':4,'Judicado de Arborea':4,'Judicado de Cagliari':4,'Judicado de Torres':4,'Marquesado de Oristano':4,
  'Escandinavia':5,
  'Polonia-Lituania':6,'Rusia':6,'Reino de Galicia y Lodomeria':6,

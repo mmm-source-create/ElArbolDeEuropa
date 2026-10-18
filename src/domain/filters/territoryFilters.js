@@ -79,11 +79,14 @@ export const TERRITORIOS_SUB = {
   Baviera: [],
 
   // Agrupación de navegación: no afirma que estos feudos formasen un Estado
-  // unitario. Las incorporaciones de Carlos V se distinguen de la herencia.
-  "Borgoña y Países Bajos": ["Borgoña y Franco Condado", "Países Bajos y Flandes", "Incorporaciones del siglo XVI"],
-  "Borgoña y Franco Condado": ["Borgoña", "Condado de Borgoña", "Nevers", "Rethel", "Auxerre", "Ponthieu"],
-  "Países Bajos y Flandes": ["Países Bajos", "Artois", "Flandes", "Brabante", "Limburgo", "Henao", "Holanda", "Zelanda", "Luxemburgo", "Namur", "Señorío de Malinas", "Tournai"],
-  "Incorporaciones del siglo XVI": ["Güeldres", "Frisia", "Utrecht", "Overijssel", "Drente", "Groninga"],
+  // unitario. Las dos Borgoñas y los Países Bajos son sus dos conjuntos
+  // geográficos; Nevers y Rethel, feudos franceses de ramas borgoñonas, cuelgan
+  // aparte. Ponthieu, inglés antes que borgoñón, queda solo en Francia.
+  "Borgoña y Países Bajos": ["Las dos Borgoñas", "Países Bajos", "Nevers", "Rethel"],
+  "Las dos Borgoñas": ["Borgoña", "Condado de Borgoña", "Auxerre", "Condado de Charolais"],
+  // Las diecisiete provincias, incluidas las incorporaciones de Carlos V.
+  "Países Bajos": ["Artois", "Flandes", "Brabante", "Limburgo", "Henao", "Holanda", "Zelanda", "Luxemburgo", "Namur", "Señorío de Malinas", "Tournai",
+    "Güeldres", "Frisia", "Utrecht", "Overijssel", "Drente", "Groninga"],
 
   "Estados Italianos": [
     "Estados Pontificios", "Venecia", "Génova", "Ferrara", "Florencia", "Forlì", "Gravina",

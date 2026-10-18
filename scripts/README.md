@@ -171,3 +171,12 @@ las tarjetas Open Graph de 1200×630: retrato y marca para cada persona con
 retrato, escudo y marca para cada casa con armas, y una tarjeta general. No
 dibuja texto en el servidor; la marca procede de `public/brand/og-wordmark.png`.
 
+### Créditos de escudos en las tarjetas · V5.31
+
+`build-og-arms-credits.mjs` pre-renderiza en `scripts/generate/og-credits/` la
+línea «Escudo: autor · licencia · Wikimedia Commons» de cada escudo CC BY o
+CC BY-SA, con las fuentes del equipo que lo ejecuta. `generate-og-images.mjs` la
+coloca bajo el escudo y falla si falta. Hay que volver a ejecutarlo
+(`node --import ./tests/jsx-loader.mjs scripts/generate/build-og-arms-credits.mjs`)
+cada vez que cambie `src/content/dinastias/escudosCommons.js`.
+

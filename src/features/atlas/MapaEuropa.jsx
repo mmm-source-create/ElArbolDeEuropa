@@ -35,7 +35,7 @@ const MAP_PAN_STEP = 0.12;
 const MAP_DRAG_THRESHOLD = 4;
 
 function authorityFill(svg, color, kind) {
-  if (!['delegated', 'disputed', 'mixed', 'tributary','apanage','feudal'].includes(kind)) return color;
+  if (!['delegated', 'disputed', 'mixed', 'tributary','apanage','feudal','vassal'].includes(kind)) return color;
   const namespace = 'http://www.w3.org/2000/svg';
   const id = `atlas-${kind}-${color.replace(/[^a-z0-9]/gi, '')}`;
   if (!svg.getElementById(id)) {
@@ -48,7 +48,7 @@ function authorityFill(svg, color, kind) {
     const rect = document.createElementNS(namespace, 'rect');
     rect.setAttribute('width', '0.9'); rect.setAttribute('height', '0.9'); rect.setAttribute('fill', color);
     const line = document.createElementNS(namespace, 'path');
-    line.setAttribute('d', kind === 'mixed' ? 'M0 .45 L.9 .45' : ['apanage','feudal'].includes(kind)?'M.45 0 L.45 .9':kind === 'delegated' ? 'M0 0 L.9 .9' : 'M0 0 L.9 .9 M0 .9 L.9 0');
+    line.setAttribute('d', kind === 'mixed' ? 'M0 .45 L.9 .45' : ['apanage','feudal','vassal'].includes(kind)?'M.45 0 L.45 .9':kind === 'delegated' ? 'M0 0 L.9 .9' : 'M0 0 L.9 .9 M0 .9 L.9 0');
     line.setAttribute('stroke', '#fff'); line.setAttribute('stroke-opacity', '.5'); line.setAttribute('stroke-width', '.16');
     if (kind === 'tributary') {
       const veil = document.createElementNS(namespace, 'rect');
@@ -539,7 +539,7 @@ export function MapaEuropa({ seleccion, anioGlobal = null, onSelectTerritorio, o
           {inspectedRegion?.entries.length > 0 && <ul>{inspectedRegion.entries.map((entry, index) => <li key={`${entry.territory}-${entry.person?.id || 'collective'}-${index}`}>
             <span className={`mapa-authority-badge mapa-authority-${entry.kind}`}>{AUTHORITY_LABELS[entry.kind]}</span>
             <strong>{entry.territory}</strong>
-            {entry.crownRelation&&<p>{entry.crownRelation.type==='feudo'?'Feudo':'Apanage'} dentro del reino · autoridad superior de Francia · {entry.crownRelation.from}–{entry.crownRelation.through}.</p>}
+            {entry.crownRelation&&<p>{entry.crownRelation.summary||`${entry.crownRelation.type==='feudo'?'Feudo':'Apanage'} dentro del reino · autoridad superior de Francia`} · {entry.crownRelation.from}–{entry.crownRelation.through}.</p>}
             {entry.relationship && <p>{entry.relationship.subjectLabel} · vínculo tributario con {entry.relationship.overlord}, {entry.relationship.from}–{entry.relationship.through}.</p>}
             <div>{entry.relationship ? 'Soberano al que se debe el tributo: ' : entry.crownRelation?'Autoridad superior: ':null}{entry.person ? <button type="button" className="mapa-region-person" onClick={() => onSelectPersona?.(entry.person.id)}>{entry.person.nombre}</button> : entry.collective?.nombre}</div>
             {entry.government?.soberano && <p>En nombre de {PERSONAS.find(p => p.id === entry.government.soberano)?.nombre || entry.government.soberano}. El gobierno superior se consulta en su ficha.</p>}

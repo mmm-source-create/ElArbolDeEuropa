@@ -340,8 +340,7 @@ export const REINO_COLOR = {
   "Corona de Aragón": '#ba3737',
   "Países Bajos y Flandes": '#8E295C',
   "Borgoña y Países Bajos": '#8E295C',
-  "Borgoña y Franco Condado": '#8E295C',
-  "Incorporaciones del siglo XVI": '#8E295C',
+  "Las dos Borgoñas": '#8E295C',
   "Estados Italianos": '#6F7652',
   "Polonia-Lituania": POLAND_LITHUANIA_COLOR,
   // Fief of the Commonwealth: a lighter tone of the same family.

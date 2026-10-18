@@ -91,9 +91,6 @@ test('los escudos de Wikimedia Commons se muestran con autor y licencia, sin con
     const caption = renderToStaticMarkup(React.createElement(ArmsCredit, {dinastia: credit.dinastia}));
     assert.ok(caption.includes(credit.licencia) && caption.includes('Wikimedia Commons'), credit.dinastia);
   }
-  // Houses without a reviewed Commons file keep the drawing and no credit.
-  for (const house of ['Avís', 'Brabante', 'La Marck', 'Hohenstaufen']) {
-    assert.equal(escudoDe(house).imagen, undefined, house);
-    assert.match(renderToStaticMarkup(React.createElement(DynastyArms, {dinastia: house})), /^<svg/);
-  }
+  // Since V5.31 every house shows a Commons file; the drawing is only a fallback.
+  for (const house of Object.keys(ESCUDOS)) assert.ok(escudoDe(house).imagen, house);
 });

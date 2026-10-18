@@ -24,7 +24,7 @@ export default function DynastyPage({slug,initialData=null}) {
     <nav className="public-breadcrumbs" aria-label="Migas de pan"><a href="/es/">Inicio</a><span>›</span><a href="/es/dinastias">Dinastías</a><span>›</span><span aria-current="page">{d?.nombre||'Ficha'}</span></nav>
     {loading?<ReadingSkeleton kind="entity-body"/>:error||!d?<section className="public-error"><h1>Ficha no disponible</h1><p>No se ha podido cargar esta casa.</p><a href="/es/dinastias">Volver al catálogo de dinastías</a></section>:<>
       <header className="public-page-title dynasty-hero">
-        {escudo?<figure className="dynasty-hero-figure"><DynastyArms dinastia={d.nombre} size={76} className="dynasty-hero-arms"/><ArmsCredit dinastia={d.nombre}/></figure>:<div className="public-page-icon"><Shield size={22}/></div>}<span>Casas y linajes · {d.editorial?'Historia de la dinastía':'Personas del Atlas'}</span>
+        {escudo?<figure className="dynasty-hero-figure"><DynastyArms dinastia={d.nombre} size={76} className="dynasty-hero-arms"/></figure>:<div className="public-page-icon"><Shield size={22}/></div>}<span>Casas y linajes · {d.editorial?'Historia de la dinastía':'Personas del Atlas'}</span>
         <h1>{d.nombre}</h1><p>{d.resumen||'Explora los miembros de esta casa y los territorios vinculados a sus gobiernos registrados.'}</p>
         {escudo&&<p className="dynasty-blazon"><b>Armas.</b> {escudo.blason}{escudo.nota&&<small> {escudo.nota}</small>}</p>}
         <div className="dynasty-counts"><span><b>{d.total}</b> personas registradas</span><span><b>{d.ramas.length}</b> ramas y conexiones descritas</span></div>
@@ -56,6 +56,7 @@ export default function DynastyPage({slug,initialData=null}) {
       </section>
       {!!d.gobiernos.length&&<details className="public-content-card dynasty-governments"><summary>Gobiernos registrados de miembros de la casa</summary><p>Incluye títulos nominales, regencias y disputas cuando constan. La condición de cada mandato aparece expresamente.</p><ul>{d.gobiernos.map((g,i)=><li key={`${g.persona.id}-${i}`}><a href={`/es/persona/${g.persona.slug}`}>{g.persona.nombre}</a><span>{g.titulo} · <a href={`/es/territorio/${slugPublico(g.territorio)}`}>{g.territorio}</a> · {g.desde}–{g.hasta} · {g.condicion}</span>{g.nota&&<small>{g.nota}</small>}</li>)}</ul></details>}
       {!!d.fuentes.length&&<section id="fuentes" className="public-content-card dynasty-sources"><span>Documentación</span><h2>Bibliografía de contexto</h2><p>Repertorios para consultar la historia de la casa. Una referencia general no verifica por sí sola cada filiación o fecha.</p><ul>{d.fuentes.map(f=><li key={f.url}><a href={f.url} target="_blank" rel="noreferrer">{f.titulo}</a></li>)}</ul><a href="/es/fuentes">Fuentes y metodología del proyecto</a></section>}
+      <ArmsCredit dinastia={d.nombre} className="dynasty-page-credit"/>
     </>}
   </main><SiteFooter/></div>;
 }
