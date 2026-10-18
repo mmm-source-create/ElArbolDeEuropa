@@ -81,13 +81,20 @@ test('repasar una ordenación conserva el orden elegido y corrige sin puntuar',a
 test('Retratos mantiene la explicación del acierto y espera a Continuar',async()=>{
  const {IMAGENES_PERSONAS}=await import('../src/data/imagenesPersonas.js');
  const {responsiveImage}=await import('../src/utils/responsiveImage.js');
- window.localStorage.clear();await mount();await click(button('Retratos'));
- const source=document.querySelector('.desafio-portrait-stage img').getAttribute('src');
- const person=PERSONAS.find(p=>responsiveImage(IMAGENES_PERSONAS[p.id]?.archivo).src===source);assert.ok(person);
- const input=document.querySelector('.desafio-name-input input');
- await act(async()=>{Object.getOwnPropertyDescriptor(window.HTMLInputElement.prototype,'value').set.call(input,person.nombre);input.dispatchEvent(new window.Event('input',{bubbles:true}));});
- await click([...document.querySelectorAll('.desafio-name-suggestions button')].find(b=>b.querySelector('strong').textContent===person.nombre));
- assert.ok(document.querySelector('.desafio-fast-feedback').textContent.includes(person.nombre));
- await act(async()=>{await new Promise(r=>setTimeout(r,800));});assert.equal(document.querySelector('.desafio-portrait-stage img').getAttribute('src'),source);
- await click(button('Continuar'));assert.notEqual(document.querySelector('.desafio-portrait-stage img').getAttribute('src'),source);
+ // Fix the random portrait: some sitters share name and subtitle with another person.
+ const random=Math.random;Math.random=()=>0;
+ try{
+  window.localStorage.clear();await mount();await click(button('Retratos'));
+  const source=document.querySelector('.desafio-portrait-stage img').getAttribute('src');
+  const person=PERSONAS.find(p=>responsiveImage(IMAGENES_PERSONAS[p.id]?.archivo).src===source);assert.ok(person);
+  const input=document.querySelector('.desafio-name-input input');
+  await act(async()=>{Object.getOwnPropertyDescriptor(window.HTMLInputElement.prototype,'value').set.call(input,person.nombre);input.dispatchEvent(new window.Event('input',{bubbles:true}));});
+  const subtitle=[person.titulo,person.dinastia].filter(Boolean).join(' · ')||'Personaje histórico';
+  const matches=[...document.querySelectorAll('.desafio-name-suggestions button')].filter(b=>b.querySelector('strong').textContent===person.nombre&&b.querySelector('span').textContent===subtitle);
+  assert.equal(matches.length,1,`una sola sugerencia para ${person.nombre}`);
+  await click(matches[0]);
+  assert.ok(document.querySelector('.desafio-fast-feedback').textContent.includes(person.nombre));
+  await act(async()=>{await new Promise(r=>setTimeout(r,800));});assert.equal(document.querySelector('.desafio-portrait-stage img').getAttribute('src'),source);
+  await click(button('Continuar'));assert.notEqual(document.querySelector('.desafio-portrait-stage img').getAttribute('src'),source);
+ }finally{Math.random=random;}
 });
