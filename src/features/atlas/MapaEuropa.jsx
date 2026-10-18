@@ -494,6 +494,7 @@ export function MapaEuropa({ seleccion, anioGlobal = null, onSelectTerritorio, o
         <summary>Colores y fuentes</summary>
         <p>Los conjuntos políticos comparten el color de sus mapas personales. Cada título conserva su identidad. Los tributarios mantienen su gobierno y su color; no se incorporan al dominio directo.</p>
         <p>El rayado claro indica disputa u ocupación. Varios colores señalan atribuciones diferentes en una misma celda. Pulsa una región para consultar autoridades y fuentes.</p>
+        <p>Las líneas verticales marcan feudos y apanages dentro del reino de Francia: tonos claros del azul real, granate borgoñón o color inglés según quién los tenga. Las tierras del rey de Inglaterra llevan su color; hasta 1336 se tenían en feudo del rey francés.</p>
         <p>{mosaic?.reviewedLayerCount||0} jurisdicciones revisadas · {mosaic?.approximateLayerCount||0} equivalencias aproximadas. El gris indica que falta una atribución para este año.</p>
       </details>}
       {!panorama && seleccion && <details className="mapa-color-legend" inert={!mapReady || paintingLife}>
@@ -508,7 +509,7 @@ export function MapaEuropa({ seleccion, anioGlobal = null, onSelectTerritorio, o
           <span><i className="mapa-key-mixed" aria-hidden="true"/>{Number.isInteger(anioGlobal) ? "Varias jurisdicciones en una celda" : "Varias jurisdicciones o condiciones a lo largo de la vida"}</span>
         </div>
         <label className="mapa-dependency-toggle"><input type="checkbox" checked={showDependencies} onChange={event => setShowDependencies(event.target.checked)}/> Mostrar estados tributarios</label>
-        <p>Las líneas verticales del color francés muestran apanages y feudos dentro del reino, con gobierno local propio. No son Estados tributarios.</p>
+        <p>Las líneas verticales, sobre tonos claros del azul real, muestran apanages y feudos dentro del reino, con gobierno local propio. No son Estados tributarios.</p>
         <p>Los puntos relacionan un Estado tributario con el soberano seleccionado. Conserva su título y gobierno; las superficies de administración directa tienen color sólido.</p>
         <p>Los títulos sin control acreditado se consultan en el inspector y no colorean dominios.</p>
         <p>El mapa detallado destaca los gobiernos de la persona seleccionada. El gris no significa ausencia de gobierno: indica que esa región no tiene una atribución revisada para la persona y el año elegidos. Las regiones de esta cartografía aproximan territorios históricos y no prueban por sí solas una frontera.</p>

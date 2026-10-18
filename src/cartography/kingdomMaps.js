@@ -1,5 +1,5 @@
 import {EASTERN_EUROPE_COLORS} from './easternEuropeColors.js';
-import {ORANGE_NASSAU} from './mapColors.js';
+import {ORANGE_NASSAU, POLAND_LITHUANIA_COLOR, BURGUNDIAN_COLOR, ENGLISH_CROWN_COLOR} from './mapColors.js';
 import {reinadosActivos} from '../domain/government/reigns.js';
 
 // Tabla de correspondencias: nombre de "reino" tal y como aparece en
@@ -277,23 +277,23 @@ export const REINO_COLOR = {
   Alemania: '#8E7729',
   "Sacro Imperio": '#2F8E29',
   Borgoña: '#8E295C',
-  'Señorío de Malinas': '#8E295C',
-  Tournai: '#8E295C',
-  'Condado de Charolais': '#8E295C',
-  'Señorío de Cuijk': '#8E295C',
-  "Condado de Borgoña": '#8E295C',
-  Nevers: '#8E295C',
-  Rethel: '#8E295C',
-  Auxerre: '#8E295C',
-  Flandes: '#8E295C',
-  Namur: '#8E295C',
-  "Güeldres": '#8E295C',
-  Frisia: '#8E295C',
-  Overijssel: '#8E295C',
-  Drente: '#8E295C',
-  Groninga: '#8E295C',
-  Zelanda: '#8E295C',
-  Utrecht: '#8E295C',
+  'Señorío de Malinas': '#7D6AA0',
+  Tournai: '#5F7F9A',
+  'Condado de Charolais': '#9C7B4E',
+  'Señorío de Cuijk': '#6E8B5E',
+  "Condado de Borgoña": '#C07A3E',
+  Nevers: '#7E8C4A',
+  Rethel: '#6F8F84',
+  Auxerre: '#9A6A8F',
+  Flandes: '#C9A23A',
+  Namur: '#A0533F',
+  "Güeldres": '#7A5B9A',
+  Frisia: '#5E9AA8',
+  Overijssel: '#A88A4A',
+  Drente: '#8A9A5B',
+  Groninga: '#6A7FB0',
+  Zelanda: '#3E8E9E',
+  Utrecht: '#A35D6A',
   Irlanda: '#45705D',
   Connacht: '#497B69',
   Leinster: '#4D7D72',
@@ -318,7 +318,9 @@ export const REINO_COLOR = {
   "Borgoña y Franco Condado": '#8E295C',
   "Incorporaciones del siglo XVI": '#8E295C',
   "Estados Italianos": '#6F7652',
-  "Polonia-Lituania": '#8B5AA5',
+  "Polonia-Lituania": POLAND_LITHUANIA_COLOR,
+  // Fief of the Commonwealth: a lighter tone of the same family.
+  Curlandia: '#D99AA8',
   "Bizancio y Oriente latino": '#6A8E29',
   Escandinavia: '#4F7393',
   Balcanes: '#6F5B7D',
@@ -359,7 +361,7 @@ export const REINO_COLOR_DEFAULT = '#5C5346';
 // Borgoña y sus herederos. Fuera de estas personas cada territorio conserva
 // su color propio; la pertenencia nunca se deduce del color.
 const PERSONAS_HERENCIA_BORGONONA = new Set([
-  'MARGFRAFLA', 'LUIS2FLA', 'MARGFLAN', 'FEL2BORG', 'JUAN1BORG',
+  'MARGFLAN', 'FEL2BORG', 'JUAN1BORG',
   'FEL3BORG', 'CAR1BORG', 'MARIABORG', 'FEL1CAST', 'CARLOS5', 'FEL2ESP',
 ]);
 const FEUDOS_HERENCIA_BORGONONA = new Set([
@@ -376,6 +378,8 @@ const MONARQUIA_HISPANICA = new Set([
   'Castilla', 'León', 'Aragón', 'Condado de Barcelona', 'Valencia',
   'Mallorca', 'Cerdeña', 'Nápoles', 'Trinacria', 'Milán', 'Navarra',
 ]);
+const DOMINIOS_INGLESES_EN_FRANCIA = new Set(['Normandía', 'Anjou', 'Maine', 'Turena', 'Poitou', 'Aquitania',
+  'Ducado de Aquitania', 'Gascuña', 'Ponthieu', 'Calais']);
 const ESTADOS_SABOYANOS = new Set(['Saboya', 'Piamonte', 'Cerdeña']);
 const TIERRAS_AUSTRIACAS = new Set(['Austria', 'Austria Interior', 'Austria Anterior', 'Tirol', 'Carintia', 'Carniola', 'Ducado de Estiria',
   'Norte de Serbia habsbúrgico', 'Oltenia habsbúrgica', 'Banato de Temes', 'Reino de Galicia y Lodomeria']);
@@ -390,6 +394,13 @@ const AGRUPACIONES_POLITICAS = [
     aplica:activos=>activos.has('Egipto')&&activos.has('Siria'),
     nota:'Dominios egipcios y sirios reunidos por Saladino. La sucesión de 1193 no se representa automáticamente como un estado centralizado único.',
     fuente:'https://www.metmuseum.org/es/toah/ht/07/wae.html',
+  },
+  {
+    id: 'corona-inglesa', nombre: 'Inglaterra y sus dominios en Francia',
+    territorios: new Set(['Inglaterra', ...DOMINIOS_INGLESES_EN_FRANCIA]), color: ENGLISH_CROWN_COLOR, desde: 1154, hasta: 1558,
+    aplica: activos => activos.has('Inglaterra') && [...DOMINIOS_INGLESES_EN_FRANCIA].some(t => activos.has(t)),
+    nota: 'Tierras francesas del rey de Inglaterra: los dominios angevinos desde 1154, Gascuña y Ponthieu, las cesiones de Brétigny y Calais. Hasta 1337 se tenían en feudo del rey de Francia; cada ducado o condado conserva su título.',
+    fuente: 'https://www.gasconrolls.org/fr/the-project/historical-introduction/index.html',
   },
   {
     id: 'polonia-lituania', nombre: 'Mancomunidad de Polonia-Lituania',
@@ -466,16 +477,18 @@ const AGRUPACIONES_POLITICAS = [
   },
   {
     id: 'paises-bajos', nombre: 'Países Bajos habsbúrgicos', territorios: FEUDOS_HERENCIA_BORGONONA,
-    color: REINO_COLOR.Borgoña, desde: 1549,
+    color: BURGUNDIAN_COLOR, desde: 1549,
     aplica: activos => ['Brabante', 'Flandes', 'Luxemburgo', 'Señorío de Malinas'].filter(t => activos.has(t)).length > 1,
     nota: 'Sucesión común de las provincias desde la Pragmática Sanción de 1549. Cada título conserva su identidad y solo su superficie bajo control en el año elegido. No incluye las provincias rebeldes por una pretensión del soberano.',
     fuente: 'https://en.wikisource.org/wiki/Translation:Pragmatic_Sanction_of_1549',
   },
   {
     id: 'herencia-borgonona', nombre: 'Estados borgoñones', territorios: FEUDOS_HERENCIA_BORGONONA,
-    color: REINO_COLOR.Borgoña, desde: -Infinity,
+    // Before 1384 Flanders, Artois, the county and the duchy had different
+    // rulers; Margaret III's lands join the duke's only from her accession.
+    color: BURGUNDIAN_COLOR, desde: 1384,
     aplica: (_activos, persona) => PERSONAS_HERENCIA_BORGONONA.has(persona?.id),
-    nota: 'Agrupación patrimonial de los feudos borgoñones; no incluye otros reinos del mismo soberano.',
+    nota: 'Feudos reunidos bajo los duques Valois de Borgoña desde 1384 y su herencia. Antes de compartir duque, cada condado conserva su color; la agrupación no incluye otros reinos del mismo soberano.',
   },
 ];
 
@@ -484,7 +497,7 @@ export function agrupacionesPoliticasEnMapa(persona, año) {
   const cubiertos = new Set();
   return AGRUPACIONES_POLITICAS.map(grupo => grupo.territoriosPorFecha
     ? {...grupo, territorios: grupo.territoriosPorFecha(año)} : grupo).filter(grupo => {
-    if (año < grupo.desde || año > (grupo.hasta ?? Infinity) || !grupo.aplica(activos, persona)) return false;
+    if (año < grupo.desde || año > (grupo.hasta ?? Infinity) || !grupo.aplica(activos, persona, año)) return false;
     const propios = [...grupo.territorios].filter(territorio => activos.has(territorio) && !cubiertos.has(territorio));
     propios.forEach(territorio => cubiertos.add(territorio));
     return propios.length > 0;

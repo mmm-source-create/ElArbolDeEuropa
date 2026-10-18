@@ -1,5 +1,5 @@
-import {frenchCrownRelation} from './frenchCrownRelations.js';
-import {ORANGE_NASSAU,FRENCH_CROWN_COLOR} from './mapColors.js';
+import {frenchCrownRelation,englishCrownLayer} from './frenchCrownRelations.js';
+import {ORANGE_NASSAU,ENGLISH_CROWN_COLOR,frenchFiefColor} from './mapColors.js';
 import {franceLowCountriesPoliticalKeys} from './regions/franceLowCountriesRoutes.js';
 import {governmentGroupsAt} from '../domain/government/governmentPresentation.js';
 import {vidaEnAnio} from '../domain/time/europeYear.js';
@@ -56,6 +56,8 @@ export function protagonistsAt(people,year,stories=[],events=[]) {
   .map(e=>({...e,reasons:[...e.reasons],stories:[...e.stories.values()]}));
 }
 
+const POLITY_GROUPS=new Set(['herencia-borgonona','paises-bajos']);
+
 // Keep the laboratory's researched geometry and precedence exactly intact.
 // Only a dated, matching mandate can give its political group a shared color.
 export function europeMosaicAt(data,year,people) {
@@ -78,20 +80,40 @@ export function europeMosaicAt(data,year,people) {
   const candidates=(layer.memberNames||[layer.name]).flatMap(n=>routes.get(n)||[]);
   const unique=[...new Map(candidates.map(g=>[g.id,g])).values()];
   const shared=unique.length===1?unique[0]:null;
-  const crownRelation=(layer.memberNames||[layer.name]).map(n=>frenchCrownRelation(n,year)).find(Boolean);
+  const names=layer.memberNames||[layer.name];
+  const english=new Set(names.filter(n=>englishCrownLayer(n,year)));
+  const crown=new Map(names.map(n=>[n,frenchCrownRelation(n,year)]).filter(([,relation])=>relation));
+  // A coalesced identity can mix royal domain, fiefs and Lancastrian phases:
+  // the relation is decided for each cell by the phases that contain it.
+  let phasesById=null;
+  if(english.size||crown.size){
+   phasesById=new Map();
+   for(const scope of layer.scopes||[{name:layer.name,ids:layer.ids}])for(const id of scope.ids){
+    if(!phasesById.has(id))phasesById.set(id,[]);
+    phasesById.get(id).push(scope.name);
+   }
+  }
   const identity=territorialIdentity(layer.name);
-  const republic=(layer.memberNames||[layer.name]).some(n=>franceLowCountriesPoliticalKeys(n,year).includes('Provincias Unidas'));
+  const republic=names.some(n=>franceLowCountriesPoliticalKeys(n,year).includes('Provincias Unidas'));
   const baseColor=layer.politicalColorGroup==='polonia-lituania'?REINO_COLOR['Polonia-Lituania']:REINO_COLOR[identity] || layer.mosaicColor;
   return {...layer,mosaicColor:shared?.color || REINO_COLOR[identity] || layer.mosaicColor,
-   crownRelation,republic,politicalLabel:shared?.label || layer.displayName || layer.name,candidates,baseColor};
+   crownRelation:crown.values().next().value||null,english,crown,phasesById,republic,politicalLabel:shared?.label || layer.displayName || layer.name,candidates,baseColor};
  });
  const byLocation=new Map();
  for(const layer of layers)for(const id of layer.ids){
   if(!byLocation.has(id))byLocation.set(id,[]);
   const applicable=[...new Map(layer.candidates.filter(g=>g.ids.has(id)).map(g=>[g.id,g])).values()];
   const unanimous=applicable.length>0&&new Set(applicable.map(g=>g.color)).size===1;
-  const color=layer.republic?ORANGE_NASSAU:layer.crownRelation?FRENCH_CROWN_COLOR:unanimous?applicable[0].color:layer.baseColor;
-  byLocation.get(id).push({...layer,mosaicColor:color,politicalLabel:applicable.length===1?applicable[0].label:layer.displayName||layer.name});
+  const phases=layer.phasesById?.get(id)||[];
+  const englishCrown=phases.some(n=>layer.english.has(n));
+  const crownRelation=phases.map(n=>layer.crown.get(n)).find(Boolean)||null;
+  // The Burgundian state and its Habsburg heirs keep their colour inside the
+  // kingdom too; the fief pattern still marks the French suzerainty.
+  const polity=unanimous&&POLITY_GROUPS.has(applicable[0].id)?applicable[0]:null;
+  const color=layer.republic?ORANGE_NASSAU:englishCrown?ENGLISH_CROWN_COLOR:polity?polity.color
+   :crownRelation?frenchFiefColor(layer.entityId||layer.name):unanimous?applicable[0].color:layer.baseColor;
+  const politicalLabel=englishCrown&&!applicable.length?'Inglaterra':applicable.length===1?applicable[0].label:layer.displayName||layer.name;
+  byLocation.get(id).push({...layer,crownRelation,englishCrown,mosaicColor:color,politicalLabel});
  }
  return {...mosaic,layers,byLocation};
 }

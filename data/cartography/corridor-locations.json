@@ -217554,42 +217554,6 @@
       "scopeLabel": "Francia · 1790–1800"
     },
     {
-      "name": "Valois · 1200–1497 · revisión Francia 102",
-      "corridor": "Francia y Países Bajos · continuidad geográfica completa",
-      "color": "#86715d",
-      "coverage": {
-        "from": 1200,
-        "through": 1497
-      },
-      "versions": [
-        {
-          "from": 1200,
-          "ids": [
-            "Crepy"
-          ],
-          "oldIds": [],
-          "borderline": [],
-          "event": "Condado de Valois: feudo apanagista; retorno regio de 1498 con el acceso de Luis XII. La celda no absorbe el Beauvaisis vecino."
-        }
-      ],
-      "note": "Condado de Valois: feudo apanagista; retorno regio de 1498 con el acceso de Luis XII. La celda no absorbe el Beauvaisis vecino.",
-      "sources": [
-        {
-          "title": "Archives nationales · Apanage d’Orléans",
-          "url": "https://francearchives.gouv.fr/fr/findingaid/7af59bc00f1204fc6a0a7b15b2ed22e11150340d",
-          "locator": "Notice historique: concesiones de 1344, 1392, 1533, 1540, 1550, 1559, 1560, 1573, 1626 y 1661; retornos a la Corona y lista de châtellenies. Blois y Vendôme no se equiparan al ducado de Orléans."
-        },
-        {
-          "title": "William R. Shepherd · France in 1328",
-          "url": "https://maps.lib.utexas.edu/maps/historical/shepherd/france_1328.jpg",
-          "locator": "Historical Atlas (1923), p. 76: dominio regio, apanages y otros feudos; comparación visual de sus contornos con las celdas SVG completas."
-        }
-      ],
-      "precision": "regional_approximation",
-      "limitedCore": false,
-      "scopeLabel": "Valois · 1200–1497"
-    },
-    {
       "name": "Valois · 1498–1789 · revisión Francia 103",
       "corridor": "Francia y Países Bajos · continuidad geográfica completa",
       "color": "#86715d",
@@ -217660,42 +217624,6 @@
       "precision": "regional_approximation",
       "limitedCore": false,
       "scopeLabel": "Francia · 1790–1800"
-    },
-    {
-      "name": "Clermont-en-Beauvaisis · 1200–1530 · revisión Francia 105",
-      "corridor": "Francia y Países Bajos · continuidad geográfica completa",
-      "color": "#86715d",
-      "coverage": {
-        "from": 1200,
-        "through": 1530
-      },
-      "versions": [
-        {
-          "from": 1200,
-          "ids": [
-            "Clermont_En_Beauvaisis"
-          ],
-          "oldIds": [],
-          "borderline": [],
-          "event": "Condado de Clermont, apanage capeto y posesión vinculada a los Borbones; el condado no equivale al Bourbonnais ni al obispado de Beauvais."
-        }
-      ],
-      "note": "Condado de Clermont, apanage capeto y posesión vinculada a los Borbones; el condado no equivale al Bourbonnais ni al obispado de Beauvais.",
-      "sources": [
-        {
-          "title": "Larousse · Bourbonnais",
-          "url": "https://www.larousse.fr/encyclopedie/autre-region/Bourbonnais/109769",
-          "locator": "Señorío, ducado en 1327, Forez en 1371, Beaujolais en 1400, Auvernia en 1416; retorno al dominio regio en 1531 y gobernador provincial desde 1532."
-        },
-        {
-          "title": "William R. Shepherd · France in 1328",
-          "url": "https://maps.lib.utexas.edu/maps/historical/shepherd/france_1328.jpg",
-          "locator": "Historical Atlas (1923), p. 76: dominio regio, apanages y otros feudos; comparación visual de sus contornos con las celdas SVG completas."
-        }
-      ],
-      "precision": "regional_approximation",
-      "limitedCore": false,
-      "scopeLabel": "Clermont-en-Beauvaisis · 1200–1530"
     },
     {
       "name": "Clermont-en-Beauvaisis · 1531–1789 · revisión Francia 106",
@@ -217908,38 +217836,6 @@
       "precision": "regional_approximation",
       "limitedCore": false,
       "scopeLabel": "Chartres · 1200–1285"
-    },
-    {
-      "name": "Chartres · 1286–1789 · revisión Francia 112",
-      "corridor": "Francia y Países Bajos · continuidad geográfica completa",
-      "color": "#86715d",
-      "coverage": {
-        "from": 1286,
-        "through": 1789
-      },
-      "versions": [
-        {
-          "from": 1286,
-          "ids": [
-            "Auneau",
-            "Chartres"
-          ],
-          "oldIds": [],
-          "borderline": [],
-          "event": "Condado de Chartres adquirido por la Corona en 1286; la jurisdicción temporal del obispo dentro de la celda no se presenta como un nuevo condado independiente."
-        }
-      ],
-      "note": "Condado de Chartres adquirido por la Corona en 1286; la jurisdicción temporal del obispo dentro de la celda no se presenta como un nuevo condado independiente.",
-      "sources": [
-        {
-          "title": "William R. Shepherd · France in 1328",
-          "url": "https://maps.lib.utexas.edu/maps/historical/shepherd/france_1328.jpg",
-          "locator": "Historical Atlas (1923), p. 76: dominio regio, apanages y otros feudos; comparación visual de sus contornos con las celdas SVG completas."
-        }
-      ],
-      "precision": "regional_approximation",
-      "limitedCore": false,
-      "scopeLabel": "Chartres · 1286–1789"
     },
     {
       "name": "Francia · 1790–1800 · revisión Francia 113",
@@ -225210,42 +225106,6 @@
       "precision": "regional_approximation",
       "limitedCore": false,
       "scopeLabel": "Francia · 1790–1800"
-    },
-    {
-      "name": "Soissons · 1200–1789 · revisión Francia 291",
-      "corridor": "Francia y Países Bajos · continuidad geográfica completa",
-      "color": "#86715d",
-      "coverage": {
-        "from": 1200,
-        "through": 1789
-      },
-      "versions": [
-        {
-          "from": 1200,
-          "ids": [
-            "Soissons"
-          ],
-          "oldIds": [],
-          "borderline": [],
-          "event": "Condado o señorío de Soissons dentro del reino, con título propio y tenencias sucesivas. No se inventa una nueva entidad para cada propietario ni una soberanía sobre las jurisdicciones vecinas."
-        }
-      ],
-      "note": "Condado o señorío de Soissons dentro del reino, con título propio y tenencias sucesivas. No se inventa una nueva entidad para cada propietario ni una soberanía sobre las jurisdicciones vecinas.",
-      "sources": [
-        {
-          "title": "William R. Shepherd · France in 1328",
-          "url": "https://maps.lib.utexas.edu/maps/historical/shepherd/france_1328.jpg",
-          "locator": "Historical Atlas (1923), p. 76: dominio regio, apanages y otros feudos; comparación visual de sus contornos con las celdas SVG completas."
-        },
-        {
-          "title": "William R. Shepherd · France in 1453",
-          "url": "https://maps.lib.utexas.edu/maps/historical/shepherd/france_1453_shepherd.jpg",
-          "locator": "Historical Atlas (1923), p. 81: dominio regio, apanages, feudos y Calais; ruta de 1415 y extensión de las posesiones inglesas en 1428."
-        }
-      ],
-      "precision": "regional_approximation",
-      "limitedCore": false,
-      "scopeLabel": "Soissons · 1200–1789"
     },
     {
       "name": "Francia · 1790–1800 · revisión Francia 292",
@@ -245366,48 +245226,6 @@
       "scopeLabel": "Ponthieu · 1360–1368"
     },
     {
-      "name": "Ponthieu · 1369–1434 · revisión Francia 801",
-      "corridor": "Francia y Países Bajos · continuidad geográfica completa",
-      "color": "#86715d",
-      "coverage": {
-        "from": 1369,
-        "through": 1434
-      },
-      "versions": [
-        {
-          "from": 1369,
-          "ids": [
-            "Abbeville",
-            "Montreuil"
-          ],
-          "oldIds": [],
-          "borderline": [],
-          "event": "Condado de Ponthieu, sucesión inglesa y confiscaciones; ciudades del Somme cedidas por Arras y recompra/reconquistas de Luis XI, sin cambiar de naturaleza por cada titular."
-        }
-      ],
-      "note": "Condado de Ponthieu, sucesión inglesa y confiscaciones; ciudades del Somme cedidas por Arras y recompra/reconquistas de Luis XI, sin cambiar de naturaleza por cada titular.",
-      "sources": [
-        {
-          "title": "William R. Shepherd · France in 1328",
-          "url": "https://maps.lib.utexas.edu/maps/historical/shepherd/france_1328.jpg",
-          "locator": "Historical Atlas (1923), p. 76: dominio regio, apanages y otros feudos; comparación visual de sus contornos con las celdas SVG completas."
-        },
-        {
-          "title": "William R. Shepherd · France in 1453",
-          "url": "https://maps.lib.utexas.edu/maps/historical/shepherd/france_1453_shepherd.jpg",
-          "locator": "Historical Atlas (1923), p. 81: dominio regio, apanages, feudos y Calais; ruta de 1415 y extensión de las posesiones inglesas en 1428."
-        },
-        {
-          "title": "The Gascon Rolls Project · Historical introduction",
-          "url": "https://www.gasconrolls.org/fr/the-project/historical-introduction/index.html",
-          "locator": "Traités de Paris (1259) et Brétigny (1360), extension puis contraction de l’Aquitaine anglaise; la souveraineté cédée ne garantit pas le maintien de chaque garnison."
-        }
-      ],
-      "precision": "regional_approximation",
-      "limitedCore": false,
-      "scopeLabel": "Ponthieu · 1369–1434"
-    },
-    {
       "name": "Ponthieu · 1435–1462 · revisión Francia 802",
       "corridor": "Francia y Países Bajos · continuidad geográfica completa",
       "color": "#86715d",
@@ -245629,15 +245447,6 @@
         {
           "from": 1200,
           "ids": [
-            "Beauvais",
-            "Breteuil",
-            "Chaumont_Vexin",
-            "Corbie",
-            "Laon",
-            "Nesle",
-            "Noyon",
-            "Saint_Quentin",
-            "Senlis",
             "Sens"
           ],
           "oldIds": [],
@@ -245661,43 +245470,6 @@
       "precision": "regional_approximation",
       "limitedCore": false,
       "scopeLabel": "Francia · 1200–1800"
-    },
-    {
-      "name": "Francia · 1200–1434 · revisión Francia 808",
-      "corridor": "Francia y Países Bajos · continuidad geográfica completa",
-      "color": "#86715d",
-      "coverage": {
-        "from": 1200,
-        "through": 1434
-      },
-      "versions": [
-        {
-          "from": 1200,
-          "ids": [
-            "Amiens",
-            "Peronne"
-          ],
-          "oldIds": [],
-          "borderline": [],
-          "event": "Dominio regio o administración efectiva de la Corona en esta superficie; los privilegios urbanos y las jurisdicciones interiores no constituyen una anexión de sus vecinos."
-        }
-      ],
-      "note": "Dominio regio o administración efectiva de la Corona en esta superficie; los privilegios urbanos y las jurisdicciones interiores no constituyen una anexión de sus vecinos.",
-      "sources": [
-        {
-          "title": "William R. Shepherd · France in 1328",
-          "url": "https://maps.lib.utexas.edu/maps/historical/shepherd/france_1328.jpg",
-          "locator": "Historical Atlas (1923), p. 76: dominio regio, apanages y otros feudos; comparación visual de sus contornos con las celdas SVG completas."
-        },
-        {
-          "title": "William R. Shepherd · France in 1453",
-          "url": "https://maps.lib.utexas.edu/maps/historical/shepherd/france_1453_shepherd.jpg",
-          "locator": "Historical Atlas (1923), p. 81: dominio regio, apanages, feudos y Calais; ruta de 1415 y extensión de las posesiones inglesas en 1428."
-        }
-      ],
-      "precision": "regional_approximation",
-      "limitedCore": false,
-      "scopeLabel": "Francia · 1200–1434"
     },
     {
       "name": "Francia · 1435–1462 · revisión Francia 809",
@@ -245851,25 +245623,10 @@
         {
           "from": 1284,
           "ids": [
-            "Bar_Sur_Aube",
-            "Bar_Sur_Seine",
-            "Brienne",
-            "Broyes",
-            "Chalons_Champagne",
-            "Chateau_Thierry",
             "Chaumont",
             "Choiseul",
-            "Epernay",
             "Joinville",
             "Menehould",
-            "Nogent_Sur_Seine",
-            "Provins",
-            "Reims",
-            "Rosnay",
-            "Saint_Florentin",
-            "Troyes",
-            "Vertus",
-            "Villemaur",
             "Vitry_En_Pertois"
           ],
           "oldIds": [],
@@ -256712,6 +256469,1006 @@
       "scopeLabel": "Berna · 1400–1797"
     },
     {
+      "name": "Champaña · 1420–1428 · revisión Francia 1074",
+      "corridor": "Francia y Países Bajos · continuidad geográfica completa",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1420,
+        "through": 1428
+      },
+      "versions": [
+        {
+          "from": 1420,
+          "ids": [
+            "Reims",
+            "Troyes",
+            "Chalons_Champagne",
+            "Epernay",
+            "Chateau_Thierry",
+            "Provins",
+            "Nogent_Sur_Seine",
+            "Vertus",
+            "Broyes",
+            "Villemaur",
+            "Saint_Florentin",
+            "Brienne",
+            "Rosnay",
+            "Bar_Sur_Seine",
+            "Bar_Sur_Aube"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Champaña bajo la doble monarquía del tratado de Troyes, con sus aliados borgoñones, hasta la campaña de la consagración de 1429. La marca oriental (Vitry, Joinville, Chaumont) queda como estaba: su obediencia fue disputada."
+        }
+      ],
+      "note": "Champaña bajo la doble monarquía del tratado de Troyes, con sus aliados borgoñones, hasta la campaña de la consagración de 1429. La marca oriental (Vitry, Joinville, Chaumont) queda como estaba: su obediencia fue disputada.",
+      "sources": [
+        {
+          "title": "Hérodote · La France humiliée par le traité de Troyes",
+          "url": "https://www.herodote.net/21_mai_1420-evenement-14200521.php",
+          "locator": "21 de mayo de 1420: Francia queda repartida entre las posesiones inglesas, con París, las borgoñonas y las provincias fieles al delfín."
+        },
+        {
+          "title": "Larousse · Sainte Jeanne d’Arc",
+          "url": "https://www.larousse.fr/encyclopedie/personnage/wd/125788",
+          "locator": "Campaña de la consagración: Troyes capitula el 10 de julio de 1429, siguen Châlons y Reims y Carlos VII es consagrado el 17 de julio."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": false,
+      "scopeLabel": "Champaña · 1420–1428"
+    },
+    {
+      "name": "Champaña · 1284–1419 · revisión Francia 1075",
+      "corridor": "Francia y Países Bajos · continuidad geográfica completa",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1284,
+        "through": 1419
+      },
+      "versions": [
+        {
+          "from": 1284,
+          "ids": [
+            "Reims",
+            "Troyes",
+            "Chalons_Champagne",
+            "Epernay",
+            "Chateau_Thierry",
+            "Provins",
+            "Nogent_Sur_Seine",
+            "Vertus",
+            "Broyes",
+            "Villemaur",
+            "Saint_Florentin",
+            "Brienne",
+            "Rosnay",
+            "Bar_Sur_Seine",
+            "Bar_Sur_Aube"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Condado de Champaña y Brie, unión dinástica de 1284 y consolidación del dominio regio hasta 1361. Obispados, señoríos de Joinville y derechos urbanos interiores se conservan; la fecha no supone su extinción."
+        }
+      ],
+      "note": "Condado de Champaña y Brie, unión dinástica de 1284 y consolidación del dominio regio hasta 1361. Obispados, señoríos de Joinville y derechos urbanos interiores se conservan; la fecha no supone su extinción.",
+      "sources": [
+        {
+          "title": "William R. Shepherd · France in 1328",
+          "url": "https://maps.lib.utexas.edu/maps/historical/shepherd/france_1328.jpg",
+          "locator": "Historical Atlas (1923), p. 76: dominio regio, apanages y otros feudos; comparación visual de sus contornos con las celdas SVG completas."
+        },
+        {
+          "title": "BnF · Longnon: royaume de France, 1270",
+          "url": "https://gallica.bnf.fr/ark:/12148/btv1b55010936b",
+          "locator": "Mapa histórico: dominio real, apanages y feudos diferenciados. El Delfinado queda fuera del reino francés."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": false,
+      "scopeLabel": "Champaña · 1284–1419"
+    },
+    {
+      "name": "Champaña · 1429–1789 · revisión Francia 1076",
+      "corridor": "Francia y Países Bajos · continuidad geográfica completa",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1429,
+        "through": 1789
+      },
+      "versions": [
+        {
+          "from": 1429,
+          "ids": [
+            "Reims",
+            "Troyes",
+            "Chalons_Champagne",
+            "Epernay",
+            "Chateau_Thierry",
+            "Provins",
+            "Nogent_Sur_Seine",
+            "Vertus",
+            "Broyes",
+            "Villemaur",
+            "Saint_Florentin",
+            "Brienne",
+            "Rosnay",
+            "Bar_Sur_Seine",
+            "Bar_Sur_Aube"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Condado de Champaña y Brie, unión dinástica de 1284 y consolidación del dominio regio hasta 1361. Obispados, señoríos de Joinville y derechos urbanos interiores se conservan; la fecha no supone su extinción."
+        }
+      ],
+      "note": "Condado de Champaña y Brie, unión dinástica de 1284 y consolidación del dominio regio hasta 1361. Obispados, señoríos de Joinville y derechos urbanos interiores se conservan; la fecha no supone su extinción.",
+      "sources": [
+        {
+          "title": "William R. Shepherd · France in 1328",
+          "url": "https://maps.lib.utexas.edu/maps/historical/shepherd/france_1328.jpg",
+          "locator": "Historical Atlas (1923), p. 76: dominio regio, apanages y otros feudos; comparación visual de sus contornos con las celdas SVG completas."
+        },
+        {
+          "title": "BnF · Longnon: royaume de France, 1270",
+          "url": "https://gallica.bnf.fr/ark:/12148/btv1b55010936b",
+          "locator": "Mapa histórico: dominio real, apanages y feudos diferenciados. El Delfinado queda fuera del reino francés."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": false,
+      "scopeLabel": "Champaña · 1429–1789"
+    },
+    {
+      "name": "Francia · 1420–1428 · revisión Francia 1077",
+      "corridor": "Francia y Países Bajos · continuidad geográfica completa",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1420,
+        "through": 1428
+      },
+      "versions": [
+        {
+          "from": 1420,
+          "ids": [
+            "Senlis",
+            "Beauvais",
+            "Laon",
+            "Soissons"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Ciudades de Île-de-France y del Valois bajo la doble monarquía, que se pasan a Carlos VII tras la consagración de 1429. Soissons y Compiègne volvieron a disputarse en 1430."
+        }
+      ],
+      "note": "Ciudades de Île-de-France y del Valois bajo la doble monarquía, que se pasan a Carlos VII tras la consagración de 1429. Soissons y Compiègne volvieron a disputarse en 1430.",
+      "sources": [
+        {
+          "title": "Hérodote · La France humiliée par le traité de Troyes",
+          "url": "https://www.herodote.net/21_mai_1420-evenement-14200521.php",
+          "locator": "21 de mayo de 1420: Francia queda repartida entre las posesiones inglesas, con París, las borgoñonas y las provincias fieles al delfín."
+        },
+        {
+          "title": "Larousse · Sainte Jeanne d’Arc",
+          "url": "https://www.larousse.fr/encyclopedie/personnage/wd/125788",
+          "locator": "Campaña de la consagración: Troyes capitula el 10 de julio de 1429, siguen Châlons y Reims y Carlos VII es consagrado el 17 de julio."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": false,
+      "scopeLabel": "Francia · 1420–1428"
+    },
+    {
+      "name": "Valois · 1420–1428 · revisión Francia 1078",
+      "corridor": "Francia y Países Bajos · continuidad geográfica completa",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1420,
+        "through": 1428
+      },
+      "versions": [
+        {
+          "from": 1420,
+          "ids": [
+            "Crepy"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Ciudades de Île-de-France y del Valois bajo la doble monarquía, que se pasan a Carlos VII tras la consagración de 1429. Soissons y Compiègne volvieron a disputarse en 1430."
+        }
+      ],
+      "note": "Ciudades de Île-de-France y del Valois bajo la doble monarquía, que se pasan a Carlos VII tras la consagración de 1429. Soissons y Compiègne volvieron a disputarse en 1430.",
+      "sources": [
+        {
+          "title": "Hérodote · La France humiliée par le traité de Troyes",
+          "url": "https://www.herodote.net/21_mai_1420-evenement-14200521.php",
+          "locator": "21 de mayo de 1420: Francia queda repartida entre las posesiones inglesas, con París, las borgoñonas y las provincias fieles al delfín."
+        },
+        {
+          "title": "Larousse · Sainte Jeanne d’Arc",
+          "url": "https://www.larousse.fr/encyclopedie/personnage/wd/125788",
+          "locator": "Campaña de la consagración: Troyes capitula el 10 de julio de 1429, siguen Châlons y Reims y Carlos VII es consagrado el 17 de julio."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": false,
+      "scopeLabel": "Valois · 1420–1428"
+    },
+    {
+      "name": "Clermont-en-Beauvaisis · 1420–1428 · revisión Francia 1079",
+      "corridor": "Francia y Países Bajos · continuidad geográfica completa",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1420,
+        "through": 1428
+      },
+      "versions": [
+        {
+          "from": 1420,
+          "ids": [
+            "Clermont_En_Beauvaisis"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Ciudades de Île-de-France y del Valois bajo la doble monarquía, que se pasan a Carlos VII tras la consagración de 1429. Soissons y Compiègne volvieron a disputarse en 1430."
+        }
+      ],
+      "note": "Ciudades de Île-de-France y del Valois bajo la doble monarquía, que se pasan a Carlos VII tras la consagración de 1429. Soissons y Compiègne volvieron a disputarse en 1430.",
+      "sources": [
+        {
+          "title": "Hérodote · La France humiliée par le traité de Troyes",
+          "url": "https://www.herodote.net/21_mai_1420-evenement-14200521.php",
+          "locator": "21 de mayo de 1420: Francia queda repartida entre las posesiones inglesas, con París, las borgoñonas y las provincias fieles al delfín."
+        },
+        {
+          "title": "Larousse · Sainte Jeanne d’Arc",
+          "url": "https://www.larousse.fr/encyclopedie/personnage/wd/125788",
+          "locator": "Campaña de la consagración: Troyes capitula el 10 de julio de 1429, siguen Châlons y Reims y Carlos VII es consagrado el 17 de julio."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": false,
+      "scopeLabel": "Clermont-en-Beauvaisis · 1420–1428"
+    },
+    {
+      "name": "Francia · 1200–1419 · revisión Francia 1080",
+      "corridor": "Francia y Países Bajos · continuidad geográfica completa",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1200,
+        "through": 1419
+      },
+      "versions": [
+        {
+          "from": 1200,
+          "ids": [
+            "Senlis",
+            "Beauvais",
+            "Laon"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Dominio regio o administración efectiva de la Corona en esta superficie; los privilegios urbanos y las jurisdicciones interiores no constituyen una anexión de sus vecinos."
+        }
+      ],
+      "note": "Dominio regio o administración efectiva de la Corona en esta superficie; los privilegios urbanos y las jurisdicciones interiores no constituyen una anexión de sus vecinos.",
+      "sources": [
+        {
+          "title": "William R. Shepherd · France in 1328",
+          "url": "https://maps.lib.utexas.edu/maps/historical/shepherd/france_1328.jpg",
+          "locator": "Historical Atlas (1923), p. 76: dominio regio, apanages y otros feudos; comparación visual de sus contornos con las celdas SVG completas."
+        },
+        {
+          "title": "William R. Shepherd · France in 1453",
+          "url": "https://maps.lib.utexas.edu/maps/historical/shepherd/france_1453_shepherd.jpg",
+          "locator": "Historical Atlas (1923), p. 81: dominio regio, apanages, feudos y Calais; ruta de 1415 y extensión de las posesiones inglesas en 1428."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": false,
+      "scopeLabel": "Francia · 1200–1419"
+    },
+    {
+      "name": "Francia · 1429–1800 · revisión Francia 1081",
+      "corridor": "Francia y Países Bajos · continuidad geográfica completa",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1429,
+        "through": 1800
+      },
+      "versions": [
+        {
+          "from": 1429,
+          "ids": [
+            "Senlis",
+            "Beauvais",
+            "Laon"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Dominio regio o administración efectiva de la Corona en esta superficie; los privilegios urbanos y las jurisdicciones interiores no constituyen una anexión de sus vecinos."
+        }
+      ],
+      "note": "Dominio regio o administración efectiva de la Corona en esta superficie; los privilegios urbanos y las jurisdicciones interiores no constituyen una anexión de sus vecinos.",
+      "sources": [
+        {
+          "title": "William R. Shepherd · France in 1328",
+          "url": "https://maps.lib.utexas.edu/maps/historical/shepherd/france_1328.jpg",
+          "locator": "Historical Atlas (1923), p. 76: dominio regio, apanages y otros feudos; comparación visual de sus contornos con las celdas SVG completas."
+        },
+        {
+          "title": "William R. Shepherd · France in 1453",
+          "url": "https://maps.lib.utexas.edu/maps/historical/shepherd/france_1453_shepherd.jpg",
+          "locator": "Historical Atlas (1923), p. 81: dominio regio, apanages, feudos y Calais; ruta de 1415 y extensión de las posesiones inglesas en 1428."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": false,
+      "scopeLabel": "Francia · 1429–1800"
+    },
+    {
+      "name": "Soissons · 1200–1419 · revisión Francia 1082",
+      "corridor": "Francia y Países Bajos · continuidad geográfica completa",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1200,
+        "through": 1419
+      },
+      "versions": [
+        {
+          "from": 1200,
+          "ids": [
+            "Soissons"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Condado o señorío de Soissons dentro del reino, con título propio y tenencias sucesivas. No se inventa una nueva entidad para cada propietario ni una soberanía sobre las jurisdicciones vecinas."
+        }
+      ],
+      "note": "Condado o señorío de Soissons dentro del reino, con título propio y tenencias sucesivas. No se inventa una nueva entidad para cada propietario ni una soberanía sobre las jurisdicciones vecinas.",
+      "sources": [
+        {
+          "title": "William R. Shepherd · France in 1328",
+          "url": "https://maps.lib.utexas.edu/maps/historical/shepherd/france_1328.jpg",
+          "locator": "Historical Atlas (1923), p. 76: dominio regio, apanages y otros feudos; comparación visual de sus contornos con las celdas SVG completas."
+        },
+        {
+          "title": "William R. Shepherd · France in 1453",
+          "url": "https://maps.lib.utexas.edu/maps/historical/shepherd/france_1453_shepherd.jpg",
+          "locator": "Historical Atlas (1923), p. 81: dominio regio, apanages, feudos y Calais; ruta de 1415 y extensión de las posesiones inglesas en 1428."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": false,
+      "scopeLabel": "Soissons · 1200–1419"
+    },
+    {
+      "name": "Soissons · 1429–1789 · revisión Francia 1083",
+      "corridor": "Francia y Países Bajos · continuidad geográfica completa",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1429,
+        "through": 1789
+      },
+      "versions": [
+        {
+          "from": 1429,
+          "ids": [
+            "Soissons"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Condado o señorío de Soissons dentro del reino, con título propio y tenencias sucesivas. No se inventa una nueva entidad para cada propietario ni una soberanía sobre las jurisdicciones vecinas."
+        }
+      ],
+      "note": "Condado o señorío de Soissons dentro del reino, con título propio y tenencias sucesivas. No se inventa una nueva entidad para cada propietario ni una soberanía sobre las jurisdicciones vecinas.",
+      "sources": [
+        {
+          "title": "William R. Shepherd · France in 1328",
+          "url": "https://maps.lib.utexas.edu/maps/historical/shepherd/france_1328.jpg",
+          "locator": "Historical Atlas (1923), p. 76: dominio regio, apanages y otros feudos; comparación visual de sus contornos con las celdas SVG completas."
+        },
+        {
+          "title": "William R. Shepherd · France in 1453",
+          "url": "https://maps.lib.utexas.edu/maps/historical/shepherd/france_1453_shepherd.jpg",
+          "locator": "Historical Atlas (1923), p. 81: dominio regio, apanages, feudos y Calais; ruta de 1415 y extensión de las posesiones inglesas en 1428."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": false,
+      "scopeLabel": "Soissons · 1429–1789"
+    },
+    {
+      "name": "Valois · 1200–1419 · revisión Francia 1084",
+      "corridor": "Francia y Países Bajos · continuidad geográfica completa",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1200,
+        "through": 1419
+      },
+      "versions": [
+        {
+          "from": 1200,
+          "ids": [
+            "Crepy"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Condado de Valois: feudo apanagista; retorno regio de 1498 con el acceso de Luis XII. La celda no absorbe el Beauvaisis vecino."
+        }
+      ],
+      "note": "Condado de Valois: feudo apanagista; retorno regio de 1498 con el acceso de Luis XII. La celda no absorbe el Beauvaisis vecino.",
+      "sources": [
+        {
+          "title": "Archives nationales · Apanage d’Orléans",
+          "url": "https://francearchives.gouv.fr/fr/findingaid/7af59bc00f1204fc6a0a7b15b2ed22e11150340d",
+          "locator": "Notice historique: concesiones de 1344, 1392, 1533, 1540, 1550, 1559, 1560, 1573, 1626 y 1661; retornos a la Corona y lista de châtellenies. Blois y Vendôme no se equiparan al ducado de Orléans."
+        },
+        {
+          "title": "William R. Shepherd · France in 1328",
+          "url": "https://maps.lib.utexas.edu/maps/historical/shepherd/france_1328.jpg",
+          "locator": "Historical Atlas (1923), p. 76: dominio regio, apanages y otros feudos; comparación visual de sus contornos con las celdas SVG completas."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": false,
+      "scopeLabel": "Valois · 1200–1419"
+    },
+    {
+      "name": "Valois · 1429–1497 · revisión Francia 1085",
+      "corridor": "Francia y Países Bajos · continuidad geográfica completa",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1429,
+        "through": 1497
+      },
+      "versions": [
+        {
+          "from": 1429,
+          "ids": [
+            "Crepy"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Condado de Valois: feudo apanagista; retorno regio de 1498 con el acceso de Luis XII. La celda no absorbe el Beauvaisis vecino."
+        }
+      ],
+      "note": "Condado de Valois: feudo apanagista; retorno regio de 1498 con el acceso de Luis XII. La celda no absorbe el Beauvaisis vecino.",
+      "sources": [
+        {
+          "title": "Archives nationales · Apanage d’Orléans",
+          "url": "https://francearchives.gouv.fr/fr/findingaid/7af59bc00f1204fc6a0a7b15b2ed22e11150340d",
+          "locator": "Notice historique: concesiones de 1344, 1392, 1533, 1540, 1550, 1559, 1560, 1573, 1626 y 1661; retornos a la Corona y lista de châtellenies. Blois y Vendôme no se equiparan al ducado de Orléans."
+        },
+        {
+          "title": "William R. Shepherd · France in 1328",
+          "url": "https://maps.lib.utexas.edu/maps/historical/shepherd/france_1328.jpg",
+          "locator": "Historical Atlas (1923), p. 76: dominio regio, apanages y otros feudos; comparación visual de sus contornos con las celdas SVG completas."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": false,
+      "scopeLabel": "Valois · 1429–1497"
+    },
+    {
+      "name": "Clermont-en-Beauvaisis · 1200–1419 · revisión Francia 1086",
+      "corridor": "Francia y Países Bajos · continuidad geográfica completa",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1200,
+        "through": 1419
+      },
+      "versions": [
+        {
+          "from": 1200,
+          "ids": [
+            "Clermont_En_Beauvaisis"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Condado de Clermont, apanage capeto y posesión vinculada a los Borbones; el condado no equivale al Bourbonnais ni al obispado de Beauvais."
+        }
+      ],
+      "note": "Condado de Clermont, apanage capeto y posesión vinculada a los Borbones; el condado no equivale al Bourbonnais ni al obispado de Beauvais.",
+      "sources": [
+        {
+          "title": "Larousse · Bourbonnais",
+          "url": "https://www.larousse.fr/encyclopedie/autre-region/Bourbonnais/109769",
+          "locator": "Señorío, ducado en 1327, Forez en 1371, Beaujolais en 1400, Auvernia en 1416; retorno al dominio regio en 1531 y gobernador provincial desde 1532."
+        },
+        {
+          "title": "William R. Shepherd · France in 1328",
+          "url": "https://maps.lib.utexas.edu/maps/historical/shepherd/france_1328.jpg",
+          "locator": "Historical Atlas (1923), p. 76: dominio regio, apanages y otros feudos; comparación visual de sus contornos con las celdas SVG completas."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": false,
+      "scopeLabel": "Clermont-en-Beauvaisis · 1200–1419"
+    },
+    {
+      "name": "Clermont-en-Beauvaisis · 1429–1530 · revisión Francia 1087",
+      "corridor": "Francia y Países Bajos · continuidad geográfica completa",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1429,
+        "through": 1530
+      },
+      "versions": [
+        {
+          "from": 1429,
+          "ids": [
+            "Clermont_En_Beauvaisis"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Condado de Clermont, apanage capeto y posesión vinculada a los Borbones; el condado no equivale al Bourbonnais ni al obispado de Beauvais."
+        }
+      ],
+      "note": "Condado de Clermont, apanage capeto y posesión vinculada a los Borbones; el condado no equivale al Bourbonnais ni al obispado de Beauvais.",
+      "sources": [
+        {
+          "title": "Larousse · Bourbonnais",
+          "url": "https://www.larousse.fr/encyclopedie/autre-region/Bourbonnais/109769",
+          "locator": "Señorío, ducado en 1327, Forez en 1371, Beaujolais en 1400, Auvernia en 1416; retorno al dominio regio en 1531 y gobernador provincial desde 1532."
+        },
+        {
+          "title": "William R. Shepherd · France in 1328",
+          "url": "https://maps.lib.utexas.edu/maps/historical/shepherd/france_1328.jpg",
+          "locator": "Historical Atlas (1923), p. 76: dominio regio, apanages y otros feudos; comparación visual de sus contornos con las celdas SVG completas."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": false,
+      "scopeLabel": "Clermont-en-Beauvaisis · 1429–1530"
+    },
+    {
+      "name": "Francia · 1420–1434 · revisión Francia 1088",
+      "corridor": "Francia y Países Bajos · continuidad geográfica completa",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1420,
+        "through": 1434
+      },
+      "versions": [
+        {
+          "from": 1420,
+          "ids": [
+            "Amiens",
+            "Peronne",
+            "Corbie",
+            "Saint_Quentin",
+            "Nesle",
+            "Noyon",
+            "Breteuil"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Picardía y Ponthieu bajo la alianza anglo-borgoñona hasta el tratado de Arrás de 1435, que deja las ciudades del Somme a Borgoña. La administración local era en buena parte borgoñona."
+        }
+      ],
+      "note": "Picardía y Ponthieu bajo la alianza anglo-borgoñona hasta el tratado de Arrás de 1435, que deja las ciudades del Somme a Borgoña. La administración local era en buena parte borgoñona.",
+      "sources": [
+        {
+          "title": "Hérodote · La France humiliée par le traité de Troyes",
+          "url": "https://www.herodote.net/21_mai_1420-evenement-14200521.php",
+          "locator": "21 de mayo de 1420: Francia queda repartida entre las posesiones inglesas, con París, las borgoñonas y las provincias fieles al delfín."
+        },
+        {
+          "title": "William R. Shepherd · France in 1453",
+          "url": "https://maps.lib.utexas.edu/maps/historical/shepherd/france_1453_shepherd.jpg",
+          "locator": "Historical Atlas (1923), p. 81: dominio regio, apanages, feudos y Calais; ruta de 1415 y extensión de las posesiones inglesas en 1428."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": false,
+      "scopeLabel": "Francia · 1420–1434"
+    },
+    {
+      "name": "Ponthieu · 1420–1434 · revisión Francia 1089",
+      "corridor": "Francia y Países Bajos · continuidad geográfica completa",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1420,
+        "through": 1434
+      },
+      "versions": [
+        {
+          "from": 1420,
+          "ids": [
+            "Abbeville",
+            "Montreuil"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Picardía y Ponthieu bajo la alianza anglo-borgoñona hasta el tratado de Arrás de 1435, que deja las ciudades del Somme a Borgoña. La administración local era en buena parte borgoñona."
+        }
+      ],
+      "note": "Picardía y Ponthieu bajo la alianza anglo-borgoñona hasta el tratado de Arrás de 1435, que deja las ciudades del Somme a Borgoña. La administración local era en buena parte borgoñona.",
+      "sources": [
+        {
+          "title": "Hérodote · La France humiliée par le traité de Troyes",
+          "url": "https://www.herodote.net/21_mai_1420-evenement-14200521.php",
+          "locator": "21 de mayo de 1420: Francia queda repartida entre las posesiones inglesas, con París, las borgoñonas y las provincias fieles al delfín."
+        },
+        {
+          "title": "William R. Shepherd · France in 1453",
+          "url": "https://maps.lib.utexas.edu/maps/historical/shepherd/france_1453_shepherd.jpg",
+          "locator": "Historical Atlas (1923), p. 81: dominio regio, apanages, feudos y Calais; ruta de 1415 y extensión de las posesiones inglesas en 1428."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": false,
+      "scopeLabel": "Ponthieu · 1420–1434"
+    },
+    {
+      "name": "Francia · 1200–1419 · revisión Francia 1090",
+      "corridor": "Francia y Países Bajos · continuidad geográfica completa",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1200,
+        "through": 1419
+      },
+      "versions": [
+        {
+          "from": 1200,
+          "ids": [
+            "Amiens",
+            "Peronne"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Dominio regio o administración efectiva de la Corona en esta superficie; los privilegios urbanos y las jurisdicciones interiores no constituyen una anexión de sus vecinos."
+        }
+      ],
+      "note": "Dominio regio o administración efectiva de la Corona en esta superficie; los privilegios urbanos y las jurisdicciones interiores no constituyen una anexión de sus vecinos.",
+      "sources": [
+        {
+          "title": "William R. Shepherd · France in 1328",
+          "url": "https://maps.lib.utexas.edu/maps/historical/shepherd/france_1328.jpg",
+          "locator": "Historical Atlas (1923), p. 76: dominio regio, apanages y otros feudos; comparación visual de sus contornos con las celdas SVG completas."
+        },
+        {
+          "title": "William R. Shepherd · France in 1453",
+          "url": "https://maps.lib.utexas.edu/maps/historical/shepherd/france_1453_shepherd.jpg",
+          "locator": "Historical Atlas (1923), p. 81: dominio regio, apanages, feudos y Calais; ruta de 1415 y extensión de las posesiones inglesas en 1428."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": false,
+      "scopeLabel": "Francia · 1200–1419"
+    },
+    {
+      "name": "Francia · 1200–1419 · revisión Francia 1091",
+      "corridor": "Francia y Países Bajos · continuidad geográfica completa",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1200,
+        "through": 1419
+      },
+      "versions": [
+        {
+          "from": 1200,
+          "ids": [
+            "Corbie",
+            "Saint_Quentin",
+            "Nesle",
+            "Noyon",
+            "Breteuil"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Dominio regio o administración efectiva de la Corona en esta superficie; los privilegios urbanos y las jurisdicciones interiores no constituyen una anexión de sus vecinos."
+        }
+      ],
+      "note": "Dominio regio o administración efectiva de la Corona en esta superficie; los privilegios urbanos y las jurisdicciones interiores no constituyen una anexión de sus vecinos.",
+      "sources": [
+        {
+          "title": "William R. Shepherd · France in 1328",
+          "url": "https://maps.lib.utexas.edu/maps/historical/shepherd/france_1328.jpg",
+          "locator": "Historical Atlas (1923), p. 76: dominio regio, apanages y otros feudos; comparación visual de sus contornos con las celdas SVG completas."
+        },
+        {
+          "title": "William R. Shepherd · France in 1453",
+          "url": "https://maps.lib.utexas.edu/maps/historical/shepherd/france_1453_shepherd.jpg",
+          "locator": "Historical Atlas (1923), p. 81: dominio regio, apanages, feudos y Calais; ruta de 1415 y extensión de las posesiones inglesas en 1428."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": false,
+      "scopeLabel": "Francia · 1200–1419"
+    },
+    {
+      "name": "Francia · 1435–1800 · revisión Francia 1092",
+      "corridor": "Francia y Países Bajos · continuidad geográfica completa",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1435,
+        "through": 1800
+      },
+      "versions": [
+        {
+          "from": 1435,
+          "ids": [
+            "Corbie",
+            "Saint_Quentin",
+            "Nesle",
+            "Noyon",
+            "Breteuil"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Dominio regio o administración efectiva de la Corona en esta superficie; los privilegios urbanos y las jurisdicciones interiores no constituyen una anexión de sus vecinos."
+        }
+      ],
+      "note": "Dominio regio o administración efectiva de la Corona en esta superficie; los privilegios urbanos y las jurisdicciones interiores no constituyen una anexión de sus vecinos.",
+      "sources": [
+        {
+          "title": "William R. Shepherd · France in 1328",
+          "url": "https://maps.lib.utexas.edu/maps/historical/shepherd/france_1328.jpg",
+          "locator": "Historical Atlas (1923), p. 76: dominio regio, apanages y otros feudos; comparación visual de sus contornos con las celdas SVG completas."
+        },
+        {
+          "title": "William R. Shepherd · France in 1453",
+          "url": "https://maps.lib.utexas.edu/maps/historical/shepherd/france_1453_shepherd.jpg",
+          "locator": "Historical Atlas (1923), p. 81: dominio regio, apanages, feudos y Calais; ruta de 1415 y extensión de las posesiones inglesas en 1428."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": false,
+      "scopeLabel": "Francia · 1435–1800"
+    },
+    {
+      "name": "Ponthieu · 1369–1419 · revisión Francia 1093",
+      "corridor": "Francia y Países Bajos · continuidad geográfica completa",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1369,
+        "through": 1419
+      },
+      "versions": [
+        {
+          "from": 1369,
+          "ids": [
+            "Abbeville",
+            "Montreuil"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Condado de Ponthieu, sucesión inglesa y confiscaciones; ciudades del Somme cedidas por Arras y recompra/reconquistas de Luis XI, sin cambiar de naturaleza por cada titular."
+        }
+      ],
+      "note": "Condado de Ponthieu, sucesión inglesa y confiscaciones; ciudades del Somme cedidas por Arras y recompra/reconquistas de Luis XI, sin cambiar de naturaleza por cada titular.",
+      "sources": [
+        {
+          "title": "William R. Shepherd · France in 1328",
+          "url": "https://maps.lib.utexas.edu/maps/historical/shepherd/france_1328.jpg",
+          "locator": "Historical Atlas (1923), p. 76: dominio regio, apanages y otros feudos; comparación visual de sus contornos con las celdas SVG completas."
+        },
+        {
+          "title": "William R. Shepherd · France in 1453",
+          "url": "https://maps.lib.utexas.edu/maps/historical/shepherd/france_1453_shepherd.jpg",
+          "locator": "Historical Atlas (1923), p. 81: dominio regio, apanages, feudos y Calais; ruta de 1415 y extensión de las posesiones inglesas en 1428."
+        },
+        {
+          "title": "The Gascon Rolls Project · Historical introduction",
+          "url": "https://www.gasconrolls.org/fr/the-project/historical-introduction/index.html",
+          "locator": "Traités de Paris (1259) et Brétigny (1360), extension puis contraction de l’Aquitaine anglaise; la souveraineté cédée ne garantit pas le maintien de chaque garnison."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": false,
+      "scopeLabel": "Ponthieu · 1369–1419"
+    },
+    {
+      "name": "Francia · 1420–1448 · revisión Francia 1094",
+      "corridor": "Francia y Países Bajos · continuidad geográfica completa",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1420,
+        "through": 1448
+      },
+      "versions": [
+        {
+          "from": 1420,
+          "ids": [
+            "Chaumont_Vexin"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Vexin francés, unido a la defensa de la Normandía lancasteriana hasta la reconquista de 1449."
+        }
+      ],
+      "note": "Vexin francés, unido a la defensa de la Normandía lancasteriana hasta la reconquista de 1449.",
+      "sources": [
+        {
+          "title": "Hérodote · La France humiliée par le traité de Troyes",
+          "url": "https://www.herodote.net/21_mai_1420-evenement-14200521.php",
+          "locator": "21 de mayo de 1420: Francia queda repartida entre las posesiones inglesas, con París, las borgoñonas y las provincias fieles al delfín."
+        },
+        {
+          "title": "William R. Shepherd · France in 1453",
+          "url": "https://maps.lib.utexas.edu/maps/historical/shepherd/france_1453_shepherd.jpg",
+          "locator": "Historical Atlas (1923), p. 81: dominio regio, apanages, feudos y Calais; ruta de 1415 y extensión de las posesiones inglesas en 1428."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": false,
+      "scopeLabel": "Francia · 1420–1448"
+    },
+    {
+      "name": "Francia · 1200–1419 · revisión Francia 1095",
+      "corridor": "Francia y Países Bajos · continuidad geográfica completa",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1200,
+        "through": 1419
+      },
+      "versions": [
+        {
+          "from": 1200,
+          "ids": [
+            "Chaumont_Vexin"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Dominio regio o administración efectiva de la Corona en esta superficie; los privilegios urbanos y las jurisdicciones interiores no constituyen una anexión de sus vecinos."
+        }
+      ],
+      "note": "Dominio regio o administración efectiva de la Corona en esta superficie; los privilegios urbanos y las jurisdicciones interiores no constituyen una anexión de sus vecinos.",
+      "sources": [
+        {
+          "title": "William R. Shepherd · France in 1328",
+          "url": "https://maps.lib.utexas.edu/maps/historical/shepherd/france_1328.jpg",
+          "locator": "Historical Atlas (1923), p. 76: dominio regio, apanages y otros feudos; comparación visual de sus contornos con las celdas SVG completas."
+        },
+        {
+          "title": "William R. Shepherd · France in 1453",
+          "url": "https://maps.lib.utexas.edu/maps/historical/shepherd/france_1453_shepherd.jpg",
+          "locator": "Historical Atlas (1923), p. 81: dominio regio, apanages, feudos y Calais; ruta de 1415 y extensión de las posesiones inglesas en 1428."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": false,
+      "scopeLabel": "Francia · 1200–1419"
+    },
+    {
+      "name": "Francia · 1449–1800 · revisión Francia 1096",
+      "corridor": "Francia y Países Bajos · continuidad geográfica completa",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1449,
+        "through": 1800
+      },
+      "versions": [
+        {
+          "from": 1449,
+          "ids": [
+            "Chaumont_Vexin"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Dominio regio o administración efectiva de la Corona en esta superficie; los privilegios urbanos y las jurisdicciones interiores no constituyen una anexión de sus vecinos."
+        }
+      ],
+      "note": "Dominio regio o administración efectiva de la Corona en esta superficie; los privilegios urbanos y las jurisdicciones interiores no constituyen una anexión de sus vecinos.",
+      "sources": [
+        {
+          "title": "William R. Shepherd · France in 1328",
+          "url": "https://maps.lib.utexas.edu/maps/historical/shepherd/france_1328.jpg",
+          "locator": "Historical Atlas (1923), p. 76: dominio regio, apanages y otros feudos; comparación visual de sus contornos con las celdas SVG completas."
+        },
+        {
+          "title": "William R. Shepherd · France in 1453",
+          "url": "https://maps.lib.utexas.edu/maps/historical/shepherd/france_1453_shepherd.jpg",
+          "locator": "Historical Atlas (1923), p. 81: dominio regio, apanages, feudos y Calais; ruta de 1415 y extensión de las posesiones inglesas en 1428."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": false,
+      "scopeLabel": "Francia · 1449–1800"
+    },
+    {
+      "name": "Chartres · 1420–1431 · revisión Francia 1097",
+      "corridor": "Francia y Países Bajos · continuidad geográfica completa",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1420,
+        "through": 1431
+      },
+      "versions": [
+        {
+          "from": 1420,
+          "ids": [
+            "Chartres",
+            "Auneau"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Chartres, en manos anglo-borgoñonas desde 1417, hasta que Dunois la recupera en 1432."
+        }
+      ],
+      "note": "Chartres, en manos anglo-borgoñonas desde 1417, hasta que Dunois la recupera en 1432.",
+      "sources": [
+        {
+          "title": "Hérodote · La France humiliée par le traité de Troyes",
+          "url": "https://www.herodote.net/21_mai_1420-evenement-14200521.php",
+          "locator": "21 de mayo de 1420: Francia queda repartida entre las posesiones inglesas, con París, las borgoñonas y las provincias fieles al delfín."
+        },
+        {
+          "title": "Britannica · Jean d’Orléans, comte de Dunois",
+          "url": "https://www.britannica.com/biography/Jean-dOrleans-comte-de-Dunois",
+          "locator": "Toma de Chartres y Lagny en 1432, tras la campaña de Juana de Arco."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": false,
+      "scopeLabel": "Chartres · 1420–1431"
+    },
+    {
+      "name": "Chartres · 1286–1419 · revisión Francia 1098",
+      "corridor": "Francia y Países Bajos · continuidad geográfica completa",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1286,
+        "through": 1419
+      },
+      "versions": [
+        {
+          "from": 1286,
+          "ids": [
+            "Chartres",
+            "Auneau"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Condado de Chartres adquirido por la Corona en 1286; la jurisdicción temporal del obispo dentro de la celda no se presenta como un nuevo condado independiente."
+        }
+      ],
+      "note": "Condado de Chartres adquirido por la Corona en 1286; la jurisdicción temporal del obispo dentro de la celda no se presenta como un nuevo condado independiente.",
+      "sources": [
+        {
+          "title": "William R. Shepherd · France in 1328",
+          "url": "https://maps.lib.utexas.edu/maps/historical/shepherd/france_1328.jpg",
+          "locator": "Historical Atlas (1923), p. 76: dominio regio, apanages y otros feudos; comparación visual de sus contornos con las celdas SVG completas."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": false,
+      "scopeLabel": "Chartres · 1286–1419"
+    },
+    {
+      "name": "Chartres · 1432–1789 · revisión Francia 1099",
+      "corridor": "Francia y Países Bajos · continuidad geográfica completa",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1432,
+        "through": 1789
+      },
+      "versions": [
+        {
+          "from": 1432,
+          "ids": [
+            "Chartres",
+            "Auneau"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Condado de Chartres adquirido por la Corona en 1286; la jurisdicción temporal del obispo dentro de la celda no se presenta como un nuevo condado independiente."
+        }
+      ],
+      "note": "Condado de Chartres adquirido por la Corona en 1286; la jurisdicción temporal del obispo dentro de la celda no se presenta como un nuevo condado independiente.",
+      "sources": [
+        {
+          "title": "William R. Shepherd · France in 1328",
+          "url": "https://maps.lib.utexas.edu/maps/historical/shepherd/france_1328.jpg",
+          "locator": "Historical Atlas (1923), p. 76: dominio regio, apanages y otros feudos; comparación visual de sus contornos con las celdas SVG completas."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": false,
+      "scopeLabel": "Chartres · 1432–1789"
+    },
+    {
       "name": "Sicilia · 1198–1199 · atlas medieval 1",
       "corridor": "Atlas medieval · gobiernos anteriores a 1200",
       "color": "#86715d",
@@ -256929,198 +257686,6 @@
           "title": "UT Austin · Shepherd, España 910–1492",
           "url": "https://maps.lib.utexas.edu/maps/historical/history_shepherd_1923.html",
           "locator": "Atlas, pp. 82–83: Iberia en 1150 y conquistas posteriores. Se excluyen Cuenca antes de 1177, Teruel antes de 1171 y los territorios vascos de Castilla anteriores a 1199; las fronteras son aproximaciones regionales."
-        }
-      ],
-      "precision": "documented_regional_approximation",
-      "limitedCore": true
-    },
-    {
-      "name": "Aquitania · 1137–1199 · atlas medieval 3",
-      "corridor": "Atlas medieval · gobiernos anteriores a 1200",
-      "color": "#86715d",
-      "coverage": {
-        "from": 1137,
-        "through": 1199
-      },
-      "versions": [
-        {
-          "from": 1137,
-          "ids": [
-            "Aire",
-            "Aulnay",
-            "Bayonne",
-            "Bazas",
-            "Beauvoir",
-            "Belin",
-            "Benauges",
-            "Bordeaux",
-            "Castelnau_de_Medoc",
-            "Chatellerault",
-            "Dax",
-            "Fontenay",
-            "Jonzac",
-            "La_Rochelle",
-            "La_Teste_de_Buch",
-            "Lesparre_Medoc",
-            "Libourne",
-            "Lusignan",
-            "Mauleon",
-            "Mauleon_Poitou",
-            "Mimizan",
-            "Montaigu",
-            "Montendre",
-            "Montmorillon",
-            "Niort",
-            "Oleron",
-            "Parthenay",
-            "Poitiers",
-            "Rochefort",
-            "Royan",
-            "Saintes",
-            "Sauveterre_de_Guyenne",
-            "St_Jean_Dangely",
-            "Talmont",
-            "Tosse"
-          ],
-          "oldIds": [],
-          "borderline": [],
-          "event": "Ámbito regional de Aquitania para los gobiernos anteriores a 1200.  Escala comarcal aproximada; se preservan los títulos y las fechas de gobierno de la ficha."
-        }
-      ],
-      "note": "Ámbito regional de Aquitania para los gobiernos anteriores a 1200.  Escala comarcal aproximada; se preservan los títulos y las fechas de gobierno de la ficha.",
-      "sources": [
-        {
-          "title": "University of South Florida · Francia, 1066–1154",
-          "url": "https://etc.usf.edu/maps/pages/1000/1078/1078.htm",
-          "locator": "Mapa del dominio y grandes feudos franceses; distinguir el dominio capeto, Aquitania y las posesiones angevinas. La selección de las primeras décadas es un núcleo, no la totalidad del reino."
-        }
-      ],
-      "precision": "documented_regional_approximation",
-      "limitedCore": true
-    },
-    {
-      "name": "Normandía · 1199–1199 · atlas medieval 4",
-      "corridor": "Atlas medieval · gobiernos anteriores a 1200",
-      "color": "#86715d",
-      "coverage": {
-        "from": 1199,
-        "through": 1199
-      },
-      "versions": [
-        {
-          "from": 1199,
-          "ids": [
-            "Alencon",
-            "Argentan",
-            "Arques",
-            "Avranches",
-            "Bayeux",
-            "Bernay",
-            "Caen",
-            "Cherbourg",
-            "Coutances",
-            "Domfront",
-            "Evreux",
-            "Falaise",
-            "Fecamp",
-            "Gisors",
-            "Harcourt",
-            "Laigle",
-            "Lisieux",
-            "Louviers",
-            "Mortain",
-            "Pont_Audemer",
-            "Pont_Douilly",
-            "Rouen",
-            "St_Sauveur",
-            "Tancarville",
-            "Vire"
-          ],
-          "oldIds": [],
-          "borderline": [],
-          "event": "Ámbito regional de Normandía para los gobiernos anteriores a 1200.  Escala comarcal aproximada; se preservan los títulos y las fechas de gobierno de la ficha."
-        }
-      ],
-      "note": "Ámbito regional de Normandía para los gobiernos anteriores a 1200.  Escala comarcal aproximada; se preservan los títulos y las fechas de gobierno de la ficha.",
-      "sources": [
-        {
-          "title": "University of South Florida · Francia, 1066–1154",
-          "url": "https://etc.usf.edu/maps/pages/1000/1078/1078.htm",
-          "locator": "Mapa del dominio y grandes feudos franceses; distinguir el dominio capeto, Aquitania y las posesiones angevinas. La selección de las primeras décadas es un núcleo, no la totalidad del reino."
-        }
-      ],
-      "precision": "documented_regional_approximation",
-      "limitedCore": true
-    },
-    {
-      "name": "Anjou · 1199–1199 · atlas medieval 5",
-      "corridor": "Atlas medieval · gobiernos anteriores a 1200",
-      "color": "#86715d",
-      "coverage": {
-        "from": 1199,
-        "through": 1199
-      },
-      "versions": [
-        {
-          "from": 1199,
-          "ids": [
-            "Angers",
-            "Bauge",
-            "Beaupreau",
-            "Chateau_Gontier",
-            "Le_Lude",
-            "Loudun",
-            "Passavant",
-            "Saumur"
-          ],
-          "oldIds": [],
-          "borderline": [],
-          "event": "Ámbito regional de Anjou para los gobiernos anteriores a 1200.  Escala comarcal aproximada; se preservan los títulos y las fechas de gobierno de la ficha."
-        }
-      ],
-      "note": "Ámbito regional de Anjou para los gobiernos anteriores a 1200.  Escala comarcal aproximada; se preservan los títulos y las fechas de gobierno de la ficha.",
-      "sources": [
-        {
-          "title": "University of South Florida · Francia, 1066–1154",
-          "url": "https://etc.usf.edu/maps/pages/1000/1078/1078.htm",
-          "locator": "Mapa del dominio y grandes feudos franceses; distinguir el dominio capeto, Aquitania y las posesiones angevinas. La selección de las primeras décadas es un núcleo, no la totalidad del reino."
-        }
-      ],
-      "precision": "documented_regional_approximation",
-      "limitedCore": true
-    },
-    {
-      "name": "Maine · 1199–1199 · atlas medieval 6",
-      "corridor": "Atlas medieval · gobiernos anteriores a 1200",
-      "color": "#86715d",
-      "coverage": {
-        "from": 1199,
-        "through": 1199
-      },
-      "versions": [
-        {
-          "from": 1199,
-          "ids": [
-            "Beaumont_Au_Maine",
-            "Chateau_du_Loir",
-            "Le_Mans",
-            "Mayenne",
-            "Sable",
-            "Sainte_Suzanne",
-            "St_Calais",
-            "Villaines"
-          ],
-          "oldIds": [],
-          "borderline": [],
-          "event": "Ámbito regional de Maine para los gobiernos anteriores a 1200.  Escala comarcal aproximada; se preservan los títulos y las fechas de gobierno de la ficha."
-        }
-      ],
-      "note": "Ámbito regional de Maine para los gobiernos anteriores a 1200.  Escala comarcal aproximada; se preservan los títulos y las fechas de gobierno de la ficha.",
-      "sources": [
-        {
-          "title": "University of South Florida · Francia, 1066–1154",
-          "url": "https://etc.usf.edu/maps/pages/1000/1078/1078.htm",
-          "locator": "Mapa del dominio y grandes feudos franceses; distinguir el dominio capeto, Aquitania y las posesiones angevinas. La selección de las primeras décadas es un núcleo, no la totalidad del reino."
         }
       ],
       "precision": "documented_regional_approximation",
@@ -261281,6 +261846,501 @@
           "title": "The Metropolitan Museum · Mediterráneo oriental, 1000–1400",
           "url": "https://www.metmuseum.org/es/toah/ht/07/wae.html",
           "locator": "Saladino recupera Jerusalén en 1187; Tercera Cruzada 1189–1192 y reino lusignano de Chipre. Se separan la Jerusalén anterior a Hattin, la costa superviviente y Transjordania."
+        }
+      ],
+      "precision": "documented_regional_approximation",
+      "limitedCore": true
+    },
+    {
+      "name": "Aquitania · 1137–1153 · atlas medieval 69",
+      "corridor": "Atlas medieval · gobiernos anteriores a 1200",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1137,
+        "through": 1153
+      },
+      "versions": [
+        {
+          "from": 1137,
+          "ids": [
+            "Aire",
+            "Aulnay",
+            "Bayonne",
+            "Bazas",
+            "Beauvoir",
+            "Belin",
+            "Benauges",
+            "Bordeaux",
+            "Castelnau_de_Medoc",
+            "Chatellerault",
+            "Dax",
+            "Fontenay",
+            "Jonzac",
+            "La_Rochelle",
+            "La_Teste_de_Buch",
+            "Lesparre_Medoc",
+            "Libourne",
+            "Lusignan",
+            "Mauleon",
+            "Mauleon_Poitou",
+            "Mimizan",
+            "Montaigu",
+            "Montendre",
+            "Montmorillon",
+            "Niort",
+            "Oleron",
+            "Parthenay",
+            "Poitiers",
+            "Rochefort",
+            "Royan",
+            "Saintes",
+            "Sauveterre_de_Guyenne",
+            "St_Jean_Dangely",
+            "Talmont",
+            "Tosse"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Ducado de Leonor de Aquitania, casada con Luis VII de Francia (1137–1152) y con Enrique de Anjou desde 1152. Escala comarcal aproximada; se preservan los títulos y las fechas de gobierno de la ficha."
+        }
+      ],
+      "note": "Ducado de Leonor de Aquitania, casada con Luis VII de Francia (1137–1152) y con Enrique de Anjou desde 1152. Escala comarcal aproximada; se preservan los títulos y las fechas de gobierno de la ficha.",
+      "sources": [
+        {
+          "title": "University of South Florida · Francia, 1066–1154",
+          "url": "https://etc.usf.edu/maps/pages/1000/1078/1078.htm",
+          "locator": "Mapa del dominio y grandes feudos franceses; distinguir el dominio capeto, Aquitania y las posesiones angevinas. La selección de las primeras décadas es un núcleo, no la totalidad del reino."
+        },
+        {
+          "title": "William R. Shepherd · France, 1154–1184",
+          "url": "https://sites.pitt.edu/~medart/image/france/france-l-to-z/mapsfrance/sf069fr2.jpg",
+          "locator": "Historical Atlas, p. 69: posesiones continentales de Enrique II frente al dominio real y los demás feudos; comparación regional, no frontera anual."
+        }
+      ],
+      "precision": "documented_regional_approximation",
+      "limitedCore": true
+    },
+    {
+      "name": "Aquitania · 1154–1199 · atlas medieval 70",
+      "corridor": "Atlas medieval · gobiernos anteriores a 1200",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1154,
+        "through": 1199
+      },
+      "versions": [
+        {
+          "from": 1154,
+          "ids": [
+            "Aire",
+            "Aulnay",
+            "Bayonne",
+            "Bazas",
+            "Beauvoir",
+            "Belin",
+            "Benauges",
+            "Bordeaux",
+            "Castelnau_de_Medoc",
+            "Chatellerault",
+            "Dax",
+            "Fontenay",
+            "Jonzac",
+            "La_Rochelle",
+            "La_Teste_de_Buch",
+            "Lesparre_Medoc",
+            "Libourne",
+            "Lusignan",
+            "Mauleon",
+            "Mauleon_Poitou",
+            "Mimizan",
+            "Montaigu",
+            "Montendre",
+            "Montmorillon",
+            "Niort",
+            "Oleron",
+            "Parthenay",
+            "Poitiers",
+            "Rochefort",
+            "Royan",
+            "Saintes",
+            "Sauveterre_de_Guyenne",
+            "St_Jean_Dangely",
+            "Talmont",
+            "Tosse"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Ducado de Leonor de Aquitania y de su hijo Ricardo. Desde la coronación de Enrique II en 1154 forma parte de los dominios del rey de Inglaterra, que rinde homenaje al rey de Francia por sus tierras continentales. Escala comarcal aproximada; se preservan los títulos y las fechas de gobierno de la ficha."
+        }
+      ],
+      "note": "Ducado de Leonor de Aquitania y de su hijo Ricardo. Desde la coronación de Enrique II en 1154 forma parte de los dominios del rey de Inglaterra, que rinde homenaje al rey de Francia por sus tierras continentales. Escala comarcal aproximada; se preservan los títulos y las fechas de gobierno de la ficha.",
+      "sources": [
+        {
+          "title": "University of South Florida · Francia, 1066–1154",
+          "url": "https://etc.usf.edu/maps/pages/1000/1078/1078.htm",
+          "locator": "Mapa del dominio y grandes feudos franceses; distinguir el dominio capeto, Aquitania y las posesiones angevinas. La selección de las primeras décadas es un núcleo, no la totalidad del reino."
+        },
+        {
+          "title": "William R. Shepherd · France, 1154–1184",
+          "url": "https://sites.pitt.edu/~medart/image/france/france-l-to-z/mapsfrance/sf069fr2.jpg",
+          "locator": "Historical Atlas, p. 69: posesiones continentales de Enrique II frente al dominio real y los demás feudos; comparación regional, no frontera anual."
+        }
+      ],
+      "precision": "documented_regional_approximation",
+      "limitedCore": true
+    },
+    {
+      "name": "Normandía · 1144–1153 · atlas medieval 71",
+      "corridor": "Atlas medieval · gobiernos anteriores a 1200",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1144,
+        "through": 1153
+      },
+      "versions": [
+        {
+          "from": 1144,
+          "ids": [
+            "Alencon",
+            "Argentan",
+            "Arques",
+            "Avranches",
+            "Bayeux",
+            "Bernay",
+            "Caen",
+            "Cherbourg",
+            "Coutances",
+            "Domfront",
+            "Evreux",
+            "Falaise",
+            "Fecamp",
+            "Gisors",
+            "Harcourt",
+            "Laigle",
+            "Lisieux",
+            "Louviers",
+            "Mortain",
+            "Pont_Audemer",
+            "Pont_Douilly",
+            "Rouen",
+            "St_Sauveur",
+            "Tancarville",
+            "Vire"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Ducado conquistado por Godofredo de Anjou en 1144 y cedido a su hijo Enrique en 1150. Escala comarcal aproximada; se preservan los títulos y las fechas de gobierno de la ficha."
+        }
+      ],
+      "note": "Ducado conquistado por Godofredo de Anjou en 1144 y cedido a su hijo Enrique en 1150. Escala comarcal aproximada; se preservan los títulos y las fechas de gobierno de la ficha.",
+      "sources": [
+        {
+          "title": "University of South Florida · Francia, 1066–1154",
+          "url": "https://etc.usf.edu/maps/pages/1000/1078/1078.htm",
+          "locator": "Mapa del dominio y grandes feudos franceses; distinguir el dominio capeto, Aquitania y las posesiones angevinas. La selección de las primeras décadas es un núcleo, no la totalidad del reino."
+        },
+        {
+          "title": "William R. Shepherd · France, 1154–1184",
+          "url": "https://sites.pitt.edu/~medart/image/france/france-l-to-z/mapsfrance/sf069fr2.jpg",
+          "locator": "Historical Atlas, p. 69: posesiones continentales de Enrique II frente al dominio real y los demás feudos; comparación regional, no frontera anual."
+        }
+      ],
+      "precision": "documented_regional_approximation",
+      "limitedCore": true
+    },
+    {
+      "name": "Normandía · 1154–1199 · atlas medieval 72",
+      "corridor": "Atlas medieval · gobiernos anteriores a 1200",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1154,
+        "through": 1199
+      },
+      "versions": [
+        {
+          "from": 1154,
+          "ids": [
+            "Alencon",
+            "Argentan",
+            "Arques",
+            "Avranches",
+            "Bayeux",
+            "Bernay",
+            "Caen",
+            "Cherbourg",
+            "Coutances",
+            "Domfront",
+            "Evreux",
+            "Falaise",
+            "Fecamp",
+            "Gisors",
+            "Harcourt",
+            "Laigle",
+            "Lisieux",
+            "Louviers",
+            "Mortain",
+            "Pont_Audemer",
+            "Pont_Douilly",
+            "Rouen",
+            "St_Sauveur",
+            "Tancarville",
+            "Vire"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Ducado de Enrique II y Ricardo I. Desde la coronación de Enrique II en 1154 forma parte de los dominios del rey de Inglaterra, que rinde homenaje al rey de Francia por sus tierras continentales. Escala comarcal aproximada; se preservan los títulos y las fechas de gobierno de la ficha."
+        }
+      ],
+      "note": "Ducado de Enrique II y Ricardo I. Desde la coronación de Enrique II en 1154 forma parte de los dominios del rey de Inglaterra, que rinde homenaje al rey de Francia por sus tierras continentales. Escala comarcal aproximada; se preservan los títulos y las fechas de gobierno de la ficha.",
+      "sources": [
+        {
+          "title": "University of South Florida · Francia, 1066–1154",
+          "url": "https://etc.usf.edu/maps/pages/1000/1078/1078.htm",
+          "locator": "Mapa del dominio y grandes feudos franceses; distinguir el dominio capeto, Aquitania y las posesiones angevinas. La selección de las primeras décadas es un núcleo, no la totalidad del reino."
+        },
+        {
+          "title": "William R. Shepherd · France, 1154–1184",
+          "url": "https://sites.pitt.edu/~medart/image/france/france-l-to-z/mapsfrance/sf069fr2.jpg",
+          "locator": "Historical Atlas, p. 69: posesiones continentales de Enrique II frente al dominio real y los demás feudos; comparación regional, no frontera anual."
+        }
+      ],
+      "precision": "documented_regional_approximation",
+      "limitedCore": true
+    },
+    {
+      "name": "Anjou · 1109–1153 · atlas medieval 73",
+      "corridor": "Atlas medieval · gobiernos anteriores a 1200",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1109,
+        "through": 1153
+      },
+      "versions": [
+        {
+          "from": 1109,
+          "ids": [
+            "Angers",
+            "Bauge",
+            "Beaupreau",
+            "Chateau_Gontier",
+            "Le_Lude",
+            "Loudun",
+            "Passavant",
+            "Saumur",
+            "Amboise",
+            "Chatillon_Sur_Indre",
+            "Chinon",
+            "Loches",
+            "Tours"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Condado de Anjou con Turena, en poder de los condes angevinos desde el siglo XI. Escala comarcal aproximada; se preservan los títulos y las fechas de gobierno de la ficha."
+        }
+      ],
+      "note": "Condado de Anjou con Turena, en poder de los condes angevinos desde el siglo XI. Escala comarcal aproximada; se preservan los títulos y las fechas de gobierno de la ficha.",
+      "sources": [
+        {
+          "title": "University of South Florida · Francia, 1066–1154",
+          "url": "https://etc.usf.edu/maps/pages/1000/1078/1078.htm",
+          "locator": "Mapa del dominio y grandes feudos franceses; distinguir el dominio capeto, Aquitania y las posesiones angevinas. La selección de las primeras décadas es un núcleo, no la totalidad del reino."
+        },
+        {
+          "title": "William R. Shepherd · France, 1154–1184",
+          "url": "https://sites.pitt.edu/~medart/image/france/france-l-to-z/mapsfrance/sf069fr2.jpg",
+          "locator": "Historical Atlas, p. 69: posesiones continentales de Enrique II frente al dominio real y los demás feudos; comparación regional, no frontera anual."
+        }
+      ],
+      "precision": "documented_regional_approximation",
+      "limitedCore": true
+    },
+    {
+      "name": "Anjou · 1154–1199 · atlas medieval 74",
+      "corridor": "Atlas medieval · gobiernos anteriores a 1200",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1154,
+        "through": 1199
+      },
+      "versions": [
+        {
+          "from": 1154,
+          "ids": [
+            "Angers",
+            "Bauge",
+            "Beaupreau",
+            "Chateau_Gontier",
+            "Le_Lude",
+            "Loudun",
+            "Passavant",
+            "Saumur",
+            "Amboise",
+            "Chatillon_Sur_Indre",
+            "Chinon",
+            "Loches",
+            "Tours"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Condado de Anjou con Turena. Desde la coronación de Enrique II en 1154 forma parte de los dominios del rey de Inglaterra, que rinde homenaje al rey de Francia por sus tierras continentales. Escala comarcal aproximada; se preservan los títulos y las fechas de gobierno de la ficha."
+        }
+      ],
+      "note": "Condado de Anjou con Turena. Desde la coronación de Enrique II en 1154 forma parte de los dominios del rey de Inglaterra, que rinde homenaje al rey de Francia por sus tierras continentales. Escala comarcal aproximada; se preservan los títulos y las fechas de gobierno de la ficha.",
+      "sources": [
+        {
+          "title": "University of South Florida · Francia, 1066–1154",
+          "url": "https://etc.usf.edu/maps/pages/1000/1078/1078.htm",
+          "locator": "Mapa del dominio y grandes feudos franceses; distinguir el dominio capeto, Aquitania y las posesiones angevinas. La selección de las primeras décadas es un núcleo, no la totalidad del reino."
+        },
+        {
+          "title": "William R. Shepherd · France, 1154–1184",
+          "url": "https://sites.pitt.edu/~medart/image/france/france-l-to-z/mapsfrance/sf069fr2.jpg",
+          "locator": "Historical Atlas, p. 69: posesiones continentales de Enrique II frente al dominio real y los demás feudos; comparación regional, no frontera anual."
+        }
+      ],
+      "precision": "documented_regional_approximation",
+      "limitedCore": true
+    },
+    {
+      "name": "Maine · 1110–1153 · atlas medieval 75",
+      "corridor": "Atlas medieval · gobiernos anteriores a 1200",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1110,
+        "through": 1153
+      },
+      "versions": [
+        {
+          "from": 1110,
+          "ids": [
+            "Beaumont_Au_Maine",
+            "Chateau_du_Loir",
+            "Le_Mans",
+            "Mayenne",
+            "Sable",
+            "Sainte_Suzanne",
+            "St_Calais",
+            "Villaines"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Condado unido a Anjou por el matrimonio de Fulco V con la heredera de Maine. Escala comarcal aproximada; se preservan los títulos y las fechas de gobierno de la ficha."
+        }
+      ],
+      "note": "Condado unido a Anjou por el matrimonio de Fulco V con la heredera de Maine. Escala comarcal aproximada; se preservan los títulos y las fechas de gobierno de la ficha.",
+      "sources": [
+        {
+          "title": "University of South Florida · Francia, 1066–1154",
+          "url": "https://etc.usf.edu/maps/pages/1000/1078/1078.htm",
+          "locator": "Mapa del dominio y grandes feudos franceses; distinguir el dominio capeto, Aquitania y las posesiones angevinas. La selección de las primeras décadas es un núcleo, no la totalidad del reino."
+        },
+        {
+          "title": "William R. Shepherd · France, 1154–1184",
+          "url": "https://sites.pitt.edu/~medart/image/france/france-l-to-z/mapsfrance/sf069fr2.jpg",
+          "locator": "Historical Atlas, p. 69: posesiones continentales de Enrique II frente al dominio real y los demás feudos; comparación regional, no frontera anual."
+        }
+      ],
+      "precision": "documented_regional_approximation",
+      "limitedCore": true
+    },
+    {
+      "name": "Maine · 1154–1199 · atlas medieval 76",
+      "corridor": "Atlas medieval · gobiernos anteriores a 1200",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1154,
+        "through": 1199
+      },
+      "versions": [
+        {
+          "from": 1154,
+          "ids": [
+            "Beaumont_Au_Maine",
+            "Chateau_du_Loir",
+            "Le_Mans",
+            "Mayenne",
+            "Sable",
+            "Sainte_Suzanne",
+            "St_Calais",
+            "Villaines"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Condado de Maine. Desde la coronación de Enrique II en 1154 forma parte de los dominios del rey de Inglaterra, que rinde homenaje al rey de Francia por sus tierras continentales. Escala comarcal aproximada; se preservan los títulos y las fechas de gobierno de la ficha."
+        }
+      ],
+      "note": "Condado de Maine. Desde la coronación de Enrique II en 1154 forma parte de los dominios del rey de Inglaterra, que rinde homenaje al rey de Francia por sus tierras continentales. Escala comarcal aproximada; se preservan los títulos y las fechas de gobierno de la ficha.",
+      "sources": [
+        {
+          "title": "University of South Florida · Francia, 1066–1154",
+          "url": "https://etc.usf.edu/maps/pages/1000/1078/1078.htm",
+          "locator": "Mapa del dominio y grandes feudos franceses; distinguir el dominio capeto, Aquitania y las posesiones angevinas. La selección de las primeras décadas es un núcleo, no la totalidad del reino."
+        },
+        {
+          "title": "William R. Shepherd · France, 1154–1184",
+          "url": "https://sites.pitt.edu/~medart/image/france/france-l-to-z/mapsfrance/sf069fr2.jpg",
+          "locator": "Historical Atlas, p. 69: posesiones continentales de Enrique II frente al dominio real y los demás feudos; comparación regional, no frontera anual."
+        }
+      ],
+      "precision": "documented_regional_approximation",
+      "limitedCore": true
+    },
+    {
+      "name": "Bretaña · 1166–1199 · atlas medieval 77",
+      "corridor": "Atlas medieval · gobiernos anteriores a 1200",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1166,
+        "through": 1199
+      },
+      "versions": [
+        {
+          "from": 1166,
+          "ids": [
+            "Blain",
+            "Brest",
+            "Carhaix",
+            "Chateaubriant",
+            "Chateaulin",
+            "Chatelaudren",
+            "Dol",
+            "Fougeres",
+            "Guerande",
+            "Hennebont",
+            "Josselin",
+            "Le_Faou",
+            "Machecoul",
+            "Monfort_Sur_Meu",
+            "Nantes",
+            "Ploermel",
+            "Quimper",
+            "Quimperle",
+            "Redon",
+            "Rennes",
+            "Rohan",
+            "Saint_Brieuc",
+            "Saint_Malo",
+            "St_Pol_de_Leon",
+            "Treguier",
+            "Vannes",
+            "Vitre"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Ducado de Constanza bajo la tutela de Enrique II (1166–1181) y gobierno de Godofredo II y de Constanza; Arturo, proclamado en 1196. Escala comarcal aproximada; se preservan los títulos y las fechas de gobierno de la ficha."
+        }
+      ],
+      "note": "Ducado de Constanza bajo la tutela de Enrique II (1166–1181) y gobierno de Godofredo II y de Constanza; Arturo, proclamado en 1196. Escala comarcal aproximada; se preservan los títulos y las fechas de gobierno de la ficha.",
+      "sources": [
+        {
+          "title": "University of South Florida · Francia, 1066–1154",
+          "url": "https://etc.usf.edu/maps/pages/1000/1078/1078.htm",
+          "locator": "Mapa del dominio y grandes feudos franceses; distinguir el dominio capeto, Aquitania y las posesiones angevinas. La selección de las primeras décadas es un núcleo, no la totalidad del reino."
+        },
+        {
+          "title": "William R. Shepherd · France, 1154–1184",
+          "url": "https://sites.pitt.edu/~medart/image/france/france-l-to-z/mapsfrance/sf069fr2.jpg",
+          "locator": "Historical Atlas, p. 69: posesiones continentales de Enrique II frente al dominio real y los demás feudos; comparación regional, no frontera anual."
         }
       ],
       "precision": "documented_regional_approximation",
@@ -314684,17 +315744,14 @@
       "Vendôme · 1200–1711 · revisión Francia 99",
       "Vendôme · 1712–1789 · revisión Francia 100",
       "Francia · 1790–1800 · revisión Francia 101",
-      "Valois · 1200–1497 · revisión Francia 102",
       "Valois · 1498–1789 · revisión Francia 103",
       "Francia · 1790–1800 · revisión Francia 104",
-      "Clermont-en-Beauvaisis · 1200–1530 · revisión Francia 105",
       "Clermont-en-Beauvaisis · 1531–1789 · revisión Francia 106",
       "Francia · 1790–1800 · revisión Francia 107",
       "Dreux · 1200–1376 · revisión Francia 108",
       "Dreux · 1377–1789 · revisión Francia 109",
       "Francia · 1790–1800 · revisión Francia 110",
       "Chartres · 1200–1285 · revisión Francia 111",
-      "Chartres · 1286–1789 · revisión Francia 112",
       "Francia · 1790–1800 · revisión Francia 113",
       "Étampes · 1200–1789 · revisión Francia 114",
       "Francia · 1790–1800 · revisión Francia 115",
@@ -314873,7 +315930,6 @@
       "Francia · 1790–1800 · revisión Francia 288",
       "Braine y Roucy · 1200–1789 · revisión Francia 289",
       "Francia · 1790–1800 · revisión Francia 290",
-      "Soissons · 1200–1789 · revisión Francia 291",
       "Francia · 1790–1800 · revisión Francia 292",
       "Coucy · 1200–1789 · revisión Francia 293",
       "Francia · 1790–1800 · revisión Francia 294",
@@ -315383,14 +316439,12 @@
       "Ponthieu · 1279–1336 · revisión Francia 798",
       "Ponthieu · 1337–1359 · revisión Francia 799",
       "Ponthieu · 1360–1368 · revisión Francia 800",
-      "Ponthieu · 1369–1434 · revisión Francia 801",
       "Ponthieu · 1435–1462 · revisión Francia 802",
       "Ponthieu · 1463–1464 · revisión Francia 803",
       "Ponthieu · 1465–1470 · revisión Francia 804",
       "Ponthieu · 1471–1789 · revisión Francia 805",
       "Francia · 1790–1800 · revisión Francia 806",
       "Francia · 1200–1800 · revisión Francia 807",
-      "Francia · 1200–1434 · revisión Francia 808",
       "Francia · 1435–1462 · revisión Francia 809",
       "Francia · 1463–1464 · revisión Francia 810",
       "Francia · 1471–1800 · revisión Francia 811",
@@ -315655,7 +316709,33 @@
       "Kyburg · 1218–1383 · revisión Francia 1070",
       "Berna · 1384–1797 · revisión Francia 1071",
       "Señoríos del valle de Kander · 1200–1399 · revisión Francia 1072",
-      "Berna · 1400–1797 · revisión Francia 1073"
+      "Berna · 1400–1797 · revisión Francia 1073",
+      "Champaña · 1420–1428 · revisión Francia 1074",
+      "Champaña · 1284–1419 · revisión Francia 1075",
+      "Champaña · 1429–1789 · revisión Francia 1076",
+      "Francia · 1420–1428 · revisión Francia 1077",
+      "Valois · 1420–1428 · revisión Francia 1078",
+      "Clermont-en-Beauvaisis · 1420–1428 · revisión Francia 1079",
+      "Francia · 1200–1419 · revisión Francia 1080",
+      "Francia · 1429–1800 · revisión Francia 1081",
+      "Soissons · 1200–1419 · revisión Francia 1082",
+      "Soissons · 1429–1789 · revisión Francia 1083",
+      "Valois · 1200–1419 · revisión Francia 1084",
+      "Valois · 1429–1497 · revisión Francia 1085",
+      "Clermont-en-Beauvaisis · 1200–1419 · revisión Francia 1086",
+      "Clermont-en-Beauvaisis · 1429–1530 · revisión Francia 1087",
+      "Francia · 1420–1434 · revisión Francia 1088",
+      "Ponthieu · 1420–1434 · revisión Francia 1089",
+      "Francia · 1200–1419 · revisión Francia 1090",
+      "Francia · 1200–1419 · revisión Francia 1091",
+      "Francia · 1435–1800 · revisión Francia 1092",
+      "Ponthieu · 1369–1419 · revisión Francia 1093",
+      "Francia · 1420–1448 · revisión Francia 1094",
+      "Francia · 1200–1419 · revisión Francia 1095",
+      "Francia · 1449–1800 · revisión Francia 1096",
+      "Chartres · 1420–1431 · revisión Francia 1097",
+      "Chartres · 1286–1419 · revisión Francia 1098",
+      "Chartres · 1432–1789 · revisión Francia 1099"
     ],
     "limitations": [
       "Las superficies proceden de celdas SVG completas, contrastadas con mapas históricos. Sus bordes no reproducen todos los enclaves, derechos señoriales ni fronteras de cada año; la precisión es regional, no catastral.",
@@ -316269,6 +317349,7 @@
         "Alvsby",
         "Amal",
         "Amasra",
+        "Amboise",
         "Amesbury",
         "Amiens",
         "Amman",
@@ -316480,6 +317561,7 @@
         "Bivona",
         "Bjelovar",
         "Blackburn",
+        "Blain",
         "Bodebyn",
         "Bodmin",
         "Bodonitsa",
@@ -316508,6 +317590,7 @@
         "Bratislava",
         "Breda",
         "Bregne",
+        "Brest",
         "Bridlington",
         "Brie_Comte_Robert",
         "Brihuega",
@@ -316570,6 +317653,7 @@
         "Carbery",
         "Cardona",
         "Carei",
+        "Carhaix",
         "Carinena",
         "Carlisle",
         "Carlow",
@@ -316619,7 +317703,11 @@
         "Chao_de_Couce",
         "Chateau_Gontier",
         "Chateau_du_Loir",
+        "Chateaubriant",
+        "Chateaulin",
+        "Chatelaudren",
         "Chatellerault",
+        "Chatillon_Sur_Indre",
         "Chatillon_Sur_Seine",
         "Chatillonaos",
         "Chaves",
@@ -316637,6 +317725,7 @@
         "Chieti",
         "Chinchilla",
         "Chinchon",
+        "Chinon",
         "Chioggia",
         "Chios",
         "Chippenham",
@@ -316752,6 +317841,7 @@
         "Dingwall",
         "Doboj",
         "Dobrolak",
+        "Dol",
         "Domanic",
         "Domazlice",
         "Domfront",
@@ -316890,6 +317980,7 @@
         "Foggia",
         "Fontenay",
         "Forfar",
+        "Fougeres",
         "Fraga",
         "Francavilla",
         "Francia_Mountains",
@@ -316972,6 +318063,7 @@
         "Guadalajara",
         "Guadalupe",
         "Guadix",
+        "Guerande",
         "Guildford",
         "Guimaraes",
         "Gumushane",
@@ -317012,6 +318104,7 @@
         "Helsingborg",
         "Helsingor",
         "Henley",
+        "Hennebont",
         "Hereford",
         "Herrera",
         "Hertford",
@@ -317097,6 +318190,7 @@
         "Jonzac",
         "Jorquera",
         "Josse",
+        "Josselin",
         "Judenburg",
         "Jumilla",
         "Kafartab",
@@ -317234,6 +318328,7 @@
         "Launceston",
         "Lavenham",
         "Lazkiye",
+        "Le_Faou",
         "Le_Lude",
         "Le_Mans",
         "Lebanon_Mountains",
@@ -317285,6 +318380,7 @@
         "Lliria",
         "Llucena",
         "Lochaber",
+        "Loches",
         "Lodose",
         "Logrono",
         "Loidoriki",
@@ -317319,6 +318415,7 @@
         "Macclesfield",
         "Macedo",
         "Macerata",
+        "Machecoul",
         "Madaba",
         "Madrid",
         "Madrona_Range",
@@ -317422,6 +318519,7 @@
         "Monemvasia",
         "Monesterio",
         "Monfort_Lamaury",
+        "Monfort_Sur_Meu",
         "Monforte_de_Lemos",
         "Monopoli",
         "Montaigu",
@@ -317483,6 +318581,7 @@
         "Nagykallo",
         "Nagykanizsa",
         "Najera",
+        "Nantes",
         "Nantwich",
         "Naples",
         "Narni",
@@ -317657,6 +318756,7 @@
         "Plenita",
         "Pleven",
         "Pljevlja",
+        "Ploermel",
         "Plovdiv",
         "Plymouth",
         "Plzen",
@@ -317710,6 +318810,8 @@
         "Qastal",
         "Qatya",
         "Qena",
+        "Quimper",
+        "Quimperle",
         "Qus",
         "Qusayr",
         "Qutayfah",
@@ -317727,10 +318829,12 @@
         "Razgrad",
         "Reading",
         "Recas",
+        "Redon",
         "Reggiocal",
         "Reghin",
         "Reigate",
         "Reinosa",
+        "Rennes",
         "Rentina",
         "Requena",
         "Retford",
@@ -317759,6 +318863,7 @@
         "Rochlitz",
         "Rodos",
         "Rodoscuk",
+        "Rohan",
         "Rohrbach",
         "Rome",
         "Roncesvalles",
@@ -317783,9 +318888,11 @@
         "Safed",
         "Sahagun",
         "Saint_Anthony",
+        "Saint_Brieuc",
         "Saint_Jean_Pied_de_Port",
         "Saint_Jean_de_Maurienne",
         "Saint_Katrine",
+        "Saint_Malo",
         "Saint_Paul_Anchorite",
         "Saint_Quentin",
         "Sainte_Suzanne",
@@ -317956,6 +319063,7 @@
         "St_Calais",
         "St_Georgen",
         "St_Jean_Dangely",
+        "St_Pol_de_Leon",
         "St_Polten",
         "St_Sauveur",
         "Stafford",
@@ -318069,12 +319177,14 @@
         "Torres_Vedras",
         "Tortosa",
         "Tosse",
+        "Tours",
         "Traianopolis",
         "Trancoso",
         "Trapani",
         "Trebinje",
         "Trebizond",
         "Trebon",
+        "Treguier",
         "Trencin",
         "Trgoviste_Ser",
         "Trikala",
@@ -318130,6 +319240,7 @@
         "Vallsjo",
         "Valmaseda",
         "Valverde",
+        "Vannes",
         "Varazdin",
         "Varberg",
         "Varda",
@@ -318190,6 +319301,7 @@
         "Viseu",
         "Viterbo",
         "Vitoria",
+        "Vitre",
         "Vitry_Aux_Loges",
         "Vivero",
         "Vize",
@@ -318273,10 +319385,6 @@
     "layerNames": [
       "Sicilia · 1198–1199 · atlas medieval 1",
       "León · 1188–1199 · atlas medieval 2",
-      "Aquitania · 1137–1199 · atlas medieval 3",
-      "Normandía · 1199–1199 · atlas medieval 4",
-      "Anjou · 1199–1199 · atlas medieval 5",
-      "Maine · 1199–1199 · atlas medieval 6",
       "Suabia · 1196–1199 · atlas medieval 7",
       "Brabante · 1183–1199 · atlas medieval 8",
       "Hungría · 1172–1199 · atlas medieval 9",
@@ -318339,7 +319447,16 @@
       "Austria · 1198–1199 · atlas medieval 66",
       "Bohemia · 1198–1199 · atlas medieval 67",
       "Bizancio · 1195–1199 · atlas medieval 68",
-      "Siria · 1187–1190 · conquistas de Hattin"
+      "Siria · 1187–1190 · conquistas de Hattin",
+      "Aquitania · 1137–1153 · atlas medieval 69",
+      "Aquitania · 1154–1199 · atlas medieval 70",
+      "Normandía · 1144–1153 · atlas medieval 71",
+      "Normandía · 1154–1199 · atlas medieval 72",
+      "Anjou · 1109–1153 · atlas medieval 73",
+      "Anjou · 1154–1199 · atlas medieval 74",
+      "Maine · 1110–1153 · atlas medieval 75",
+      "Maine · 1154–1199 · atlas medieval 76",
+      "Bretaña · 1166–1199 · atlas medieval 77"
     ],
     "limitations": [
       "Se amplían únicamente los territorios necesarios para gobiernos registrados antes de 1200, desde el primer mandato de 1106. Nacer antes no concede autoridad.",

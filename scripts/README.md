@@ -120,6 +120,10 @@ node --import ./tests/jsx-loader.mjs scripts/cartography/merge-map-expansions.mj
 ```
 
 La revisión histórica es una fuente curada, no un resultado inferido por nombres.
+Después, `node scripts/cartography/build-french-fief-tints.mjs` reparte los
+tonos claros del azul real entre los feudos del reino de modo que dos vecinos
+nunca compartan tono (V5.29); vuelve a ejecutarse si cambian las fases.
+
 El constructor sólo compila rutas; el ensamblador exige sustitución completa.
 Los ámbitos delegados conservan sus celdas disputadas y citas. Las superficies
 compartidas con Iberia/Italia siguen sujetas a ambas auditorías.
