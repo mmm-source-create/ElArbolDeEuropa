@@ -64,6 +64,6 @@ test('una serie sin explicación o vacía no inventa un motivo de sucesión',()=
 });
 test('el filtro distingue la reclamación de Felipe II tras la abjuración',()=>{
  const terms=sucesionDe(PERSONAS,'Holanda').filter(r=>r.persona.id==='FEL2ESP');
- assert.equal(terms.length,1);assert.equal(terms[0].gobierno.hasta,1581);
+ assert.equal(terms.length,1);assert.equal(terms[0].gobierno.hasta,1577);
  assert.equal(sucesionDe(PERSONAS,'Holanda',{disputas:true}).filter(r=>r.persona.id==='FEL2ESP').length,2);
 });

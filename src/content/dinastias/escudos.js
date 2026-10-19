@@ -142,6 +142,11 @@ export const ESCUDOS = Object.freeze({
     nota: 'Armas de la casa de Paulo V.'},
   'Borja': {blason: 'De oro, un buey de gules sobre una terraza de sinople; bordura de oro con ocho matas de sinople.', capas: [['campo', 'oro'], ['bordura', 'oro']],
     nota: 'Armas de la casa de Calixto III y Alejandro VI. Otras representaciones dan la bordura de gules con haces de oro.'},
+  // V5.34
+  'Gorizia': {blason: 'Tronchado: 1.º, de azur, un león de oro; 2.º, bandado de plata y gules.', capas: [['campo', 'azur'], ['figura', 'leon', 'oro']],
+    nota: 'Armas de los condes de Gorizia, la casa de los Meinhardinos, que gobernó también el Tirol y Carintia.'},
+  'Ludovingios': {blason: 'De azur, un león rampante burelado de plata y gules, coronado de oro.', capas: [['campo', 'azur'], ['figura', 'leon', 'plata']],
+    nota: 'El león listado de los landgraves de Turingia. Sofía, hija de Luis IV, lo llevó a Hesse, cuyos landgraves lo conservaron; la imagen es la de las armas de Hesse.'},
 });
 
 const conImagen = new Map(Object.entries(ESCUDOS).map(([dinastia, escudo]) =>

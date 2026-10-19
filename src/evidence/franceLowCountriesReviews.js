@@ -1016,7 +1016,7 @@ export const FRANCE_LOW_COUNTRIES_REVIEWS = Object.freeze({
     "reviewedAt": "2026-10-13",
     "editor": "El Árbol de Europa"
   },
-  "person:FEL2ESP:government:Overijssel:1555:1598:Señor": {
+  "person:FEL2ESP:government:Overijssel:1555:1596:Señor": {
     "certainty": "documented",
     "sources": [
       {

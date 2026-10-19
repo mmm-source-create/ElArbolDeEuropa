@@ -13,7 +13,7 @@ import {ESCUDOS, escudoDe} from '../../src/content/dinastias/escudos.js';
 import DynastyArms from '../../src/components/DynastyArms.jsx';
 import {PERSONA_SLUG_POR_ID} from '../../src/features/atlas/atlasRoutes.js';
 import {slugPublico} from '../../src/domain/people/personLabels.js';
-import {OG_DEFAULT_IMAGE, OG_IMAGE_SIZE, OG_FREE_LICENCE, ogArmsCreditFile, ogDynastyImage, ogPersonaImage} from '../../src/features/public/ogImages.js';
+import {OG_DEFAULT_IMAGE, OG_IMAGE_SIZE, OG_FREE_LICENCE, ogArmsCreditFile, ogDynastyImage, ogPersonaImage, ogPortraitAvailable} from '../../src/features/public/ogImages.js';
 
 const {width: W, height: H} = OG_IMAGE_SIZE;
 const PANEL = 640;
@@ -79,7 +79,7 @@ await writeCard(publicFile(OG_DEFAULT_IMAGE), [
 let people = 0;
 for (const person of PERSONAS) {
   const image = IMAGENES_PERSONAS[person.id];
-  if (!image) continue;
+  if (!ogPortraitAvailable(image)) continue;
   // Only the responsive variants are published; take the widest.
   const widest = IMAGE_VARIANTS[image.archivo]?.variants.at(-1)?.src;
   if (!widest) throw new Error(`Retrato sin variantes publicadas: ${person.id}`);

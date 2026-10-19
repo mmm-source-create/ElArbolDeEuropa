@@ -3,6 +3,7 @@ import {CASAS_ALPINAS,RAMAS_ALPINAS} from "./alpes-v213.js";
 import {CASAS_ESCANDINAVAS,CONEXIONES_ESCANDINAVAS} from "./escandinavia-v212.js";
 import {CASAS_V521} from "./grandes-casas-v521.js";
 import {CASAS_V523} from "./casas-v523.js";
+import {CASAS_V534} from "./casas-v534.js";
 const MEDLANDS='https://fmg.ac/Projects/MedLands/index.htm';
 const RAH='https://historia-hispanica.rah.es/';
 const BRITANNICA='https://www.britannica.com/';
@@ -14,6 +15,7 @@ export const HISTORIA_DINASTIAS = {
   ...CASAS_ADRIATICO,
   ...CASAS_V521,
   ...CASAS_V523,
+  ...CASAS_V534,
   'Capeto': {
     resumen:'De Hugo Capeto a Carlos IV, la línea real directa articuló la monarquía francesa; sus descendientes y ramas continuaron en Dreux, Évreux, Valois y Borbón. La ficha distingue parentesco, derecho sucesorio y gobierno territorial.',
     origen:'Hugo Capeto fue elegido rey de los francos en 987. La continuidad de padre a hijo de la línea directa se consolidó gradualmente, sin que ello significara dominio directo sobre todos los principados franceses. Luis VI y Luis VII pertenecen a esa etapa anterior al periodo central del Atlas. Roberto, hijo de Luis VI, abrió la rama de Dreux; la ascendencia capeta de una casa colateral no equivalía a reinar en Francia.',

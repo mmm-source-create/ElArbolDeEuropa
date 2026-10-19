@@ -428,6 +428,23 @@ const AGRUPACIONES_POLITICAS = [
     fuente: 'https://www.gasconrolls.org/fr/the-project/historical-introduction/index.html',
   },
   {
+    // V5.34: the Hohenzollern lands under one elector, and from 1701 one king.
+    id: 'brandeburgo-prusia', nombre: 'Brandeburgo-Prusia',
+    territorios: new Set(['Brandeburgo', 'Prusia', 'Cléveris', 'Mark', 'Ravensberg']),
+    color: REINO_COLOR.Brandeburgo, desde: 1618, hasta: 1700,
+    aplica: activos => activos.has('Brandeburgo') && activos.has('Prusia'),
+    nota: 'Desde 1618 los electores de Brandeburgo son también duques de Prusia, y desde 1614 tienen Cléveris, Mark y Ravensberg. Cada territorio conserva su título; la Prusia ducal fue feudo polaco hasta 1657.',
+    fuente: 'https://www.treccani.it/enciclopedia/brandeburgo_(Dizionario-di-Storia)/',
+  },
+  {
+    id: 'reino-de-prusia', nombre: 'Monarquía prusiana',
+    territorios: new Set(['Brandeburgo', 'Prusia', 'Cléveris', 'Mark', 'Ravensberg', 'Silesia']),
+    color: REINO_COLOR.Prusia, desde: 1701, hasta: 1800,
+    aplica: activos => activos.has('Prusia') && activos.has('Brandeburgo'),
+    nota: 'Desde 1701 los electores de Brandeburgo son reyes en Prusia; sus tierras comparten soberano y administración, también la Silesia conquistada en 1742. Cada territorio conserva su título.',
+    fuente: 'https://www.enciclopedia.cat/gran-enciclopedia-catalana/prussia',
+  },
+  {
     id: 'trinacria-atenas', nombre: 'Trinacria y los ducados de Atenas y Neopatria',
     territorios: new Set(['Trinacria', 'Atenas', 'Ducado de Neopatria']),
     color: REINO_COLOR.Trinacria, desde: 1355, hasta: 1377,
