@@ -10,8 +10,8 @@ import {aragonVassalColor} from './mapColors.js';
 
 const gec=(slug,title,locator)=>({title:`Gran Enciclopèdia Catalana · ${title}`,url:`https://www.enciclopedia.cat/${slug}`,locator});
 const SOURCES={
- athens:gec('gran-enciclopedia-catalana/ducat-datenes','Ducat d’Atenes','Conquista catalana de 1311, duques de la casa de Aragón de Sicilia y unión a la Corona por Pedro IV en 1379–1380; Nerio Acciaiuoli toma Atenas en 1388.'),
- neopatria:gec('gran-enciclopedia-catalana/ducat-de-neopatria','Ducat de Neopàtria','Ducado formado en 1319 por Alfonso Fadrique y unido al de Atenas; ocupado en 1390.'),
+ athens:gec('gran-enciclopedia-catalana/ducat-datenes','Ducat d’Atenes','Conquista catalana de 1311, duques de la casa de Aragón de Sicilia, Federico III de Sicilia duque desde 1355 y unión a la Corona por Pedro IV en 1380; Nerio Acciaiuoli toma Atenas en 1388.'),
+ neopatria:gec('gran-enciclopedia-catalana/ducat-de-neopatria','Ducat de Neopàtria','Ducado formado en 1319 por Alfonso Fadrique y unido al de Atenas; Pedro IV asume el título en 1377 y los florentinos lo ocupan en 1390.'),
  salona:gec('gran-enciclopedia-catalana/comtat-de-salona','Comtat de Salona','Castillo tomado por los catalanes en 1311 y condado de los Fadrique hasta la conquista turca de 1394.'),
  mallorca:gec('gran-enciclopedia-catalana/jaume-ii-de-mallorca','Jaume II de Mallorca','Declaración de vasallaje en Perpiñán (20 de enero de 1279) y restitución del reino con nuevo vasallaje tras Anagni (1295) y Argelers (1298).'),
  montpellier:gec('gran-enciclopedia-catalana/senyoria-de-montpeller','Senyoria de Montpeller','Unida al casal de Barcelona por el matrimonio de María con Pedro I en 1204; Jaime III la vende al rey de Francia el 13 de abril de 1349.'),
@@ -24,15 +24,19 @@ const SOURCES={
  provence:gec('gran-enciclopedia-catalana/regne-marquesat-i-comtat-de-provenca','Regne, marquesat i comtat de Provença','Condes de la casa de Barcelona entre 1112 y 1245; Alfonso I la recupera en 1166 para sus hermanos y su hijo.'),
 };
 // The overlord is the territory whose ruler holds the superior authority in the
-// year: the Catalan duchies depended on the Aragonese kings of Sicily until
-// Peter IV took them in 1379. A dynastic branch has no overlord and only tints
-// the panorama.
+// year: the Catalan duchies depended on the Aragonese kings of Sicily while
+// their dukes were princes of that house (1312–1354). When the king himself
+// was duke (Frederick III of Sicily from 1355, Peter IV from 1380, John I) the
+// duchies are his own government, painted like his other realms, and only
+// Salona remains a vassal. A dynastic branch or a disputed succession has no
+// overlord and only tints the panorama.
 const SUMMARIES={
  feudo:r=>r.overlord==='Trinacria'?'Vasallo de los reyes de Sicilia de la casa de Aragón':'Vasallo de la Corona de Aragón',
  fidelidad:()=> 'Juramento de fidelidad al rey de Aragón',
  ducado:r=>r.overlord==='Trinacria'?'Ducado catalán bajo los reyes de Sicilia de la casa de Aragón':'Ducado catalán unido a la Corona de Aragón',
  señorío:r=>r.holder==='Mallorca'?'Señorío de los reyes de Mallorca dentro del reino de Francia':'Señorío del rey de Aragón dentro del reino de Francia',
  tutela:()=> 'Gobernada por Pedro II de Aragón como tutor del conde',
+ sucesion:()=> 'Sucesión disputada de los ducados catalanes tras la muerte de Federico III de Sicilia',
  rama:()=> 'Rama provenzal del casal de Barcelona',
 };
 const NOTES={
@@ -41,12 +45,13 @@ const NOTES={
  ducado:'Los ducados conservaron gobierno propio, con vicarios generales y capitanes catalanes.',
  señorío:'El rey gobierna la ciudad como señor, dentro del reino de Francia y bajo su autoridad superior.',
  tutela:'Provenza siguió siendo un condado del Imperio con su propio conde.',
+ sucesion:'María de Sicilia heredaba los ducados por el testamento de su padre y Pedro IV asumió el título en 1377; la Compañía le ofreció la soberanía y la unión a la Corona se cumplió en 1380.',
  rama:'Feudo del Imperio gobernado por una rama del casal de Barcelona; no es tierra de la Corona de Aragón.',
 };
 export const ARAGON_CROWN_RELATIONS=Object.freeze([
- ['Atenas',1312,1378,'ducado','Trinacria','athens'],['Atenas',1379,1388,'ducado','Aragón','athens'],
- ['Ducado de Neopatria',1319,1378,'ducado','Trinacria','neopatria'],['Ducado de Neopatria',1379,1390,'ducado','Aragón','neopatria'],
- ['Condado de Salona',1312,1378,'feudo','Trinacria','salona'],['Condado de Salona',1379,1388,'feudo','Aragón','salona'],
+ ['Atenas',1312,1354,'ducado','Trinacria','athens'],['Atenas',1378,1379,'sucesion',null,'athens'],
+ ['Ducado de Neopatria',1319,1354,'ducado','Trinacria','neopatria'],['Ducado de Neopatria',1378,1379,'sucesion',null,'neopatria'],
+ ['Condado de Salona',1312,1377,'feudo','Trinacria','salona'],['Condado de Salona',1378,1379,'sucesion',null,'salona'],['Condado de Salona',1380,1388,'feudo','Aragón','salona'],
  // Confiscated by Peter III and Alfonso III between 1285 and 1298.
  ['Mallorca',1279,1285,'feudo','Aragón','mallorca'],['Mallorca',1298,1343,'feudo','Aragón','mallorca'],
  ['Montpellier',1204,1275,'señorío','Aragón','montpellier','Aragón'],['Montpellier',1276,1348,'señorío','Mallorca','montpellier','Mallorca'],

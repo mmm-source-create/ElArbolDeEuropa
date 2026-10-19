@@ -394,9 +394,10 @@ const FEUDOS_HERENCIA_BORGONONA = new Set([
   'Zelanda', 'Luxemburgo', 'Güeldres', 'Frisia', 'Utrecht', 'Overijssel',
   'Drente', 'Groninga', 'Señorío de Malinas', 'Tournai', 'Tournaisis', 'Condado de Charolais', 'Señorío de Cuijk',
 ]);
+// The Catalan duchies of Greece were united to the Crown by Peter IV in 1380.
 const CORONA_ARAGONESA = new Set([
   'Aragón', 'Condado de Barcelona', 'Valencia', 'Mallorca', 'Cerdeña',
-  'Nápoles', 'Sicilia', 'Trinacria',
+  'Nápoles', 'Sicilia', 'Trinacria', 'Atenas', 'Ducado de Neopatria',
 ]);
 const MONARQUIA_HISPANICA = new Set([
   'Castilla', 'León', 'Aragón', 'Condado de Barcelona', 'Valencia',
@@ -425,6 +426,14 @@ const AGRUPACIONES_POLITICAS = [
     aplica: activos => activos.has('Inglaterra') && [...DOMINIOS_INGLESES_EN_FRANCIA].some(t => activos.has(t)),
     nota: 'Tierras francesas del rey de Inglaterra: los dominios angevinos desde 1154, Gascuña y Ponthieu, las cesiones de Brétigny y Calais. Hasta 1337 se tenían en feudo del rey de Francia; cada ducado o condado conserva su título.',
     fuente: 'https://www.gasconrolls.org/fr/the-project/historical-introduction/index.html',
+  },
+  {
+    id: 'trinacria-atenas', nombre: 'Trinacria y los ducados de Atenas y Neopatria',
+    territorios: new Set(['Trinacria', 'Atenas', 'Ducado de Neopatria']),
+    color: REINO_COLOR.Trinacria, desde: 1355, hasta: 1377,
+    aplica: activos => activos.has('Trinacria') && activos.has('Atenas'),
+    nota: 'Federico III de Sicilia heredó en 1355 los ducados catalanes de Grecia y los gobernó como duque, con vicarios generales. Los ducados conservaron instituciones propias.',
+    fuente: 'https://www.enciclopedia.cat/gran-enciclopedia-catalana/ducat-datenes',
   },
   {
     id: 'polonia-lituania', nombre: 'Mancomunidad de Polonia-Lituania',

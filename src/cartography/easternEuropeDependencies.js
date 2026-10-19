@@ -26,6 +26,7 @@ export const EASTERN_EUROPE_DEPENDENCIES = Object.freeze([
   },
   {
     "id": "courland-lithuania",
+    "type": "feudo",
     "subject": "Curlandia",
     "overlord": "Lituania",
     "periods": [
@@ -45,6 +46,7 @@ export const EASTERN_EUROPE_DEPENDENCIES = Object.freeze([
   },
   {
     "id": "courland-commonwealth",
+    "type": "feudo",
     "subject": "Curlandia",
     "overlord": "Polonia",
     "periods": [

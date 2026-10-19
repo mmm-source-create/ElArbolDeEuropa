@@ -42,7 +42,9 @@ test('los vasallos de la Corona de Aragón llevan su tono rojo con trama en el p
     [1205, 'Carcassonne', 'Vizcondado de Carcasona', 'Aragón'], [1205, 'Pau', 'Bearne', 'Aragón'],
     [1213, 'Toulouse', 'Toulouse', 'Aragón'], [1213, 'Foix', 'Foix', 'Aragón'], [1210, 'Marseille', 'Provenza', 'Aragón'],
     [1300, 'Perpignan', 'Mallorca', 'Aragón'], [1330, 'Neopatras', 'Ducado de Neopatria', 'Trinacria'],
-    [1350, 'Athens', 'Atenas', 'Trinacria'], [1380, 'Athens', 'Atenas', 'Aragón'],
+    // Since V5.32 the duchies held by the kings themselves are their realms;
+    // Salona stays a vassal of the dukes.
+    [1350, 'Athens', 'Atenas', 'Trinacria'], [1385, 'Salona', 'Condado de Salona', 'Aragón'],
   ]) {
     const layer = layersAt(year, id).find(l => l.entityId === identity);
     assert.ok(layer, `${id} ${year}`);
@@ -64,8 +66,8 @@ test('los reyes ven a sus vasallos en su propio mapa', () => {
   // Montpellier is his own lordship since V5.31, painted as a government.
   assert.deepEqual(kinds('PEDRO2AR', 1213).sort(), ['Bearne', 'Condado de Bigorra', 'Foix', 'Provenza', 'Toulouse']);
   assert.ok(mapAuthoritiesForPerson(person('PEDRO2AR'), 1210, data).some(e => e.territory === 'Montpellier' && e.kind !== 'vassal'));
-  assert.ok(kinds('PEDRO4ARAG', 1380).includes('Atenas') && kinds('PEDRO4ARAG', 1380).includes('Ducado de Neopatria'));
-  assert.ok(kinds('FEDERICO3SIC', 1370).includes('Atenas'));
+  assert.ok(kinds('PEDRO4ARAG', 1385).includes('Condado de Salona') && !kinds('PEDRO4ARAG', 1385).includes('Atenas'));
+  assert.ok(kinds('FEDERICO3SIC', 1370).includes('Condado de Salona'));
   assert.ok(!kinds('PEDRO4ARAG', 1370).includes('Atenas'));
   assert.ok(kinds('ALF4ARAG', 1330).includes('Judicado de Arborea'));
   assert.deepEqual(kinds('JAIME2MAL', 1300), []);
@@ -76,7 +78,7 @@ test('todas las casas usan un escudo liso de Commons con crédito discreto', () 
   for (const house of Object.keys(ESCUDOS)) {
     const imagen = escudoDe(house).imagen;
     assert.ok(imagen, house);
-    assert.match(imagen.archivo, /^\/escudos\/[a-z0-9.-]+\.svg$/, house);
+    assert.match(imagen.archivo, /^\/escudos\/[a-z0-9.-]+\.(svg|png)$/, house);
     const html = renderToStaticMarkup(React.createElement(DynastyArms, {dinastia: house, size: 40}));
     assert.match(html, /title="Escudo: [^"]+ · Wikimedia Commons"/, house);
   }
