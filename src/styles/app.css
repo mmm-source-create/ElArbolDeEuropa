@@ -3441,5 +3441,5 @@ body.atlas-work-mode-active {
 .mapa-authority-tributary { border-style: dotted; }
 
 .atlas-filter-explanation{font-size:var(--fs-xs, 11px);line-height:1.6;color:var(--muted,#a9a195)}.atlas-filter-heading{font-size:var(--fs-2xs, 10px);text-transform:uppercase;letter-spacing:.08em;margin:18px 0 9px}.atlas-filter-mode{display:grid;gap:6px;font-size:var(--fs-xs, 11px)}.atlas-filter-mode select{max-width:100%;background:var(--eade-paper-soft);color:inherit;border:1px solid var(--eade-border);padding:8px;border-radius:var(--r-sm, 6px)}
-.mapa-authority-apanage{border:1px dashed var(--eade-border);}
+.mapa-authority-apanage,.mapa-authority-vassal{border:1px dashed var(--eade-border);}
 .mapa-key-apanage{background:repeating-linear-gradient(90deg,#295D8E 0 5px,#829db7 5px 6px);}

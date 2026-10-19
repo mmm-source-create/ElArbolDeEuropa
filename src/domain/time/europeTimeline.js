@@ -16,7 +16,7 @@ export function sharedGovernments(governments) {
 export const EUROPE_REGIONS=[
  ['Península ibérica',['España','Portugal','Navarra']],
  ['Islas británicas e Irlanda',['Inglaterra','Escocia','Irlanda']],
- ['Francia y Países Bajos',['Francia','Países Bajos y Flandes']],
+ ['Francia y Países Bajos',['Francia','Borgoña y Países Bajos']],
  ['Italia',['Estados Italianos']],
  ['Europa central',['Sacro Imperio','Hungría','Polonia-Lituania','Prusia']],
  ['Escandinavia',['Escandinavia']],

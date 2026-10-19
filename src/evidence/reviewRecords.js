@@ -20,6 +20,7 @@ import { ROMANIAN_AUTHORITY_REVIEWS } from './romanianReviewData.js';
 import { BALKAN_AUTHORITY_REVIEWS } from './balkanReviewData.js';
 import { AUTHORITY_GAPS_REVIEWS } from './authorityGapsReviewData.js';
 import { NETHERLANDS_GOVERNOR_REVIEWS } from './netherlandsGovernorReviews.js';
+import { ARAGON_VASSAL_REVIEWS } from './aragonVassalReviews.js';
 
 // The pilot follows three generations around the succession of Castile.
 // A source here supports only the claim and passage named in each review.
@@ -223,6 +224,7 @@ export const CLAIM_REVIEWS = Object.freeze({
   ...GND_DISCREPANCY_REVIEWS,
   ...EASTERN_EUROPE_REVIEWS,
   ...NETHERLANDS_GOVERNOR_REVIEWS,
+  ...ARAGON_VASSAL_REVIEWS,
   'person:FRANCPICC:mother': identityReview('inferred', francescoPiccininoFamily,
     'La maternidad de Gabriella se presenta como posible. Se conserva el vínculo como inferido; la fuente no permite tratarlo como seguro.'),
   'person:FRANCPICC:birth': identityReview('approximate', francescoPiccininoFamily,

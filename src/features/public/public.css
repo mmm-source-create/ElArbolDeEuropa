@@ -79,9 +79,11 @@ button.public-door-card { width: 100%; font: inherit; }
 .public-entity-heading { display: flex; align-items: flex-start; gap: 10px; min-width: 0; }
 .public-entity-heading > .dynasty-arms { flex: none; margin-top: 2px; }
 .dynasty-arms-image { object-fit: contain; }
-.dynasty-arms-credit { display: block; max-width: 420px; color: var(--eade-muted); font: var(--fs-2xs, 10px)/1.45 var(--eade-sans); text-align: center; }
-.dynasty-arms-credit a { color: inherit; text-decoration: underline; text-underline-offset: 2px; }
-.public-entity-arms-credit { margin: 4px 0 10px; text-align: start; }
+.dynasty-arms-credit { display: block; color: var(--eade-muted); font: var(--fs-2xs, 10px)/1.45 var(--eade-sans); opacity: .85; }
+.dynasty-arms-credit a { color: inherit; text-decoration: underline; text-decoration-color: color-mix(in srgb, currentColor 40%, transparent); text-underline-offset: 2px; }
+.dynasty-page-credit { margin: 28px 0 0; text-align: center; }
+.public-arms-note { margin-top: 14px; }
+.public-arms-note a { color: inherit; text-decoration: underline; text-underline-offset: 2px; }
 .public-entity-card-head span { color: var(--eade-gold); font-size: var(--fs-2xs, 10px); font-weight: 800; text-transform: uppercase; letter-spacing: .6px; }
 .public-entity-card-head h2 { margin: 4px 0 0; font: 600 var(--fs-2xl, 22px)/1.05 "Iowan Old Style", "Palatino Linotype", Georgia, serif; }
 .public-entity-card-head > strong { display: grid; justify-items: end; gap: 3px; color: var(--eade-wine); font: 600 var(--fs-2xl, 22px)/1 "Iowan Old Style", "Palatino Linotype", Georgia, serif; }

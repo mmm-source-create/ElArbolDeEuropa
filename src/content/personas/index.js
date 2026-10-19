@@ -23,6 +23,7 @@ import { MINIBIOGRAFIAS_V523 } from './minibiografias-v523.js';
 import { MINIBIOGRAFIAS_V524 } from './minibiografias-v524.js';
 import { PERSONAS_V525 } from './personas-v525.js';
 import { PERSONAS_V529 } from './personas-v529.js';
+import { PERSONAS_V531 } from './personas-v531.js';
 
 export const PERSONA_CONTENT = Object.freeze({
   ...LITUANIA_V526,
@@ -50,6 +51,7 @@ export const PERSONA_CONTENT = Object.freeze({
   ...MINIBIOGRAFIAS_V524,
   ...PERSONAS_V525,
   ...PERSONAS_V529,
+  ...PERSONAS_V531,
 });
 
 export function contenidoPersona(personaOId) {

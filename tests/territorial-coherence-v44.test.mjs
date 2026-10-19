@@ -160,7 +160,7 @@ test('los feudos borgoñones y las adquisiciones de Carlos V comparten una ruta 
     assert.ok(territorioCoincideConFiltro(realm, grupo), realm);
   }
   assert.ok(!territorioCoincideConFiltro('Cléveris', grupo));
-  assert.deepEqual(TERRITORIOS_SUB['Incorporaciones del siglo XVI'], ['Güeldres', 'Frisia', 'Utrecht', 'Overijssel', 'Drente', 'Groninga']);
+  for (const province of ['Güeldres', 'Frisia', 'Utrecht', 'Overijssel', 'Drente', 'Groninga']) assert.ok(TERRITORIOS_SUB['Países Bajos'].includes(province), province);
 });
 
 test('Prusia usa el azul de los Hohenzollern en filtro y núcleo cartográfico', () => {

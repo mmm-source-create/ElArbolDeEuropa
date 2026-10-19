@@ -1,8 +1,8 @@
 import {ESCUDOS_COMMONS} from './escudosCommons.js';
-// Arms of the principal houses. A Wikimedia Commons image is shown with its
-// credit when one was reviewed for the house; otherwise DynastyArms draws the
-// blazon from these layers. Arms changed over time and branches added
-// differences, which the note states when the image or drawing simplifies them.
+// Arms of the principal houses. Every house shows a reviewed Wikimedia Commons
+// image with its credit; the layers remain only as a fallback drawing for a
+// house added without one. Arms changed over time and branches added
+// differences, which the note states when the image simplifies them.
 const FRANCIA_ANTIGUA = [['campo', 'azur'], ['sembrado', 'lis', 'oro']];
 const FRANCIA_MODERNA = [['campo', 'azur'], ['figura', 'lis', 'oro', 'tres']];
 const INGLATERRA = [['campo', 'gules'], ['figura', 'leopardo', 'oro', 'tres-palo']];
@@ -22,8 +22,8 @@ export const ESCUDOS = Object.freeze({
   'Valois': {blason: 'De azur, tres flores de lis de oro.', capas: FRANCIA_MODERNA,
     nota: 'Francia «moderna»: Carlos V redujo el sembrado a tres lises.'},
   'Valois-Angulema': {blason: 'De azur, tres flores de lis de oro.', capas: FRANCIA_MODERNA},
-  'Borbón': {blason: 'De azur, tres flores de lis de oro, con una cotiza de gules en banda.', capas: [...FRANCIA_MODERNA, ['cotiza', 'gules']],
-    nota: 'Armas de los duques de Borbón. Desde Enrique IV, los reyes llevaron las de Francia y Navarra.'},
+  'Borbón': {blason: 'De azur, tres flores de lis de oro.', capas: FRANCIA_MODERNA,
+    nota: 'Las armas de Francia que llevaron los reyes Borbones, desde Enrique IV junto a las de Navarra. Antes de reinar, los duques de Borbón las diferenciaban con una cotiza de gules en banda.'},
   'Anjou': {blason: 'De azur, sembrado de flores de lis de oro, con un lambel de gules.', capas: [...FRANCIA_ANTIGUA, ['lambel', 'gules']],
     nota: 'Armas de Carlos I de Anjou, hermano de Luis IX. Las de Nápoles y Hungría combinaron después otros cuarteles.'},
   'Dreux': {blason: 'Jaquelado de oro y azur, bordura de gules.', capas: [['jaquelado', 'oro', 'azur'], ['bordura', 'gules']]},
@@ -40,21 +40,22 @@ export const ESCUDOS = Object.freeze({
   'Trastámara': CASTILLA_LEON,
   'Barcelona': {blason: 'De oro, cuatro palos de gules.', capas: [['palado', 'oro', 'gules', 9]]},
   'Foix': {blason: 'De oro, tres palos de gules.', capas: [['palado', 'oro', 'gules', 7]]},
-  'Avís': {blason: 'De plata, cinco escudetes de azur puestos en cruz, cargados de bezantes de plata; bordura de gules con castillos de oro.', capas: PORTUGAL},
+  'Avís': {blason: 'De plata, cinco escudetes de azur puestos en cruz, cargados de bezantes de plata; bordura de gules con castillos de oro y, brochantes, las puntas flordelisadas de sinople de la cruz de Avís.', capas: PORTUGAL,
+    nota: 'Las armas de Portugal desde Juan I (1385). Juan II retiró la cruz de Avís en 1485.'},
   'Braganza': {blason: 'De plata, un sotuer de gules cargado de cinco escudetes de Portugal.', capas: PORTUGAL,
     nota: 'Armas de los duques de Braganza. Como reyes, desde 1640, llevaron las armas de Portugal.'},
-  'Habsburgo': {blason: 'De oro, un león rampante de gules.', capas: [['campo', 'oro'], ['figura', 'leon', 'gules']],
-    nota: 'Armas originarias de la casa, con su cimera. Como archiduques usaron además la faja de plata sobre gules de Austria.'},
-  'Luxemburgo': {blason: 'Burelado de plata y azur, un león rampante de gules.', capas: [['fajado', 'plata', 'azur', 10], ['figura', 'leon', 'gules']]},
+  'Habsburgo': {blason: 'De oro, un león rampante de gules, coronado de azur.', capas: [['campo', 'oro'], ['figura', 'leon', 'gules']],
+    nota: 'Armas originarias de los condes de Habsburgo. Como archiduques usaron además la faja de plata sobre gules de Austria.'},
+  'Luxemburgo': {blason: 'Burelado de plata y azur, un león rampante de gules, coronado de oro.', capas: [['fajado', 'plata', 'azur', 10], ['figura', 'leon', 'gules']]},
   'Wittelsbach': {blason: 'Fusado en banda de plata y azur.', capas: [['fusado', 'plata', 'azur']],
-    nota: 'Los rombos de Baviera, con cimera. La rama palatina añadió el león de oro del Palatinado.'},
+    nota: 'Los rombos de Baviera. La rama palatina añadió el león de oro del Palatinado.'},
   'Hohenzollern': {blason: 'Cuartelado de plata y sable.', capas: [['cuartelado-liso', 'plata', 'sable']]},
   'Wettin': {blason: 'Burelado de sable y oro, con un crancelín de sinople en banda.', capas: [['fajado', 'sable', 'oro', 10], ['crancelin', 'sinople']]},
   'Hohenstaufen': {blason: 'De oro, tres leones pasantes de sable.', capas: [['campo', 'oro'], ['figura', 'leopardo', 'sable', 'tres-palo']],
     nota: 'Armas del ducado de Suabia asociadas a la casa.'},
   'Welf': {blason: 'De oro, un león rampante de azur.', capas: [['campo', 'oro'], ['figura', 'leon', 'azur']],
     nota: 'Armas antiguas de la casa. La rama de Brunswick llevó dos leopardos de oro sobre gules.'},
-  'Hesse': {blason: 'De azur, un león rampante burelado de plata y gules.', capas: [['campo', 'azur'], ['figura', 'leon', 'plata']]},
+  'Hesse': {blason: 'De azur, un león rampante burelado de plata y gules, coronado de oro.', capas: [['campo', 'azur'], ['figura', 'leon', 'plata']]},
   'Brabante': {blason: 'De sable, un león rampante de oro.', capas: [['campo', 'sable'], ['figura', 'leon', 'oro']]},
   'Dampierre': {blason: 'De oro, un león rampante de sable.', capas: [['campo', 'oro'], ['figura', 'leon', 'sable']],
     nota: 'Las armas de Flandes.'},

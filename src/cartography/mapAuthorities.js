@@ -1,4 +1,5 @@
 import {frenchCrownEntries} from './frenchCrownRelations.js';
+import {aragonCrownEntries} from './aragonCrownRelations.js';
 import {tributaryEntriesFor} from './tributaryRelations.js';
 import {gobiernosDe} from '../domain/genealogy/personAccessors.js';
 import {authorityKind} from '../domain/government/authorityKind.js';
@@ -17,7 +18,7 @@ import {chronologyReferenceJurisdictionsFor} from './regions/atlasChronologyRout
 export const AUTHORITY_LABELS = Object.freeze({
   sovereign: 'Autoridad territorial', delegated: 'Gobierno delegado',
   titular: 'Título o pretensión sin control acreditado', disputed: 'Control disputado u ocupación',
-  apanage:'Apanage de la Corona francesa',feudal:'Feudo de la Corona francesa',
+  apanage:'Apanage de la Corona francesa',feudal:'Feudo de la Corona francesa',vassal:'Dependencia de la Corona de Aragón',
   collective: 'Autoridad colectiva', tributary: 'Estado tributario · gobierno propio',
   mixed: 'Celda con varias jurisdicciones',
   regional: 'Jurisdicción territorial documentada', physical: 'Sin autoridad política documentada',
@@ -131,7 +132,7 @@ export function mapAuthoritiesForPerson(person, year, mapData = null, {includeCl
         ids: occupation, claim: null});
     }
   }
-  return [...entries,...frenchCrownEntries(person,year,mapData,entries), ...(includeDependencies ? tributaryEntriesFor(person, year, mapData, entries) : [])].filter(entry => entry.ids.length);
+  return [...entries,...frenchCrownEntries(person,year,mapData,entries),...aragonCrownEntries(person,year,mapData,entries), ...(includeDependencies ? tributaryEntriesFor(person, year, mapData, entries) : [])].filter(entry => entry.ids.length);
 }
 
 // A lifetime view is a temporal union, not a projection of one reference year.

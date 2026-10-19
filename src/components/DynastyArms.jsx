@@ -106,8 +106,11 @@ export default function DynastyArms({dinastia, size = 56, className = '', drawn 
   const id = useId().replace(/:/g, '');
   const escudo = escudoDe(dinastia);
   if (!escudo) return null;
+  // The credit travels with the image as a tooltip; pages show it in full at
+  // their foot or on the licences page.
   if (escudo.imagen && !drawn) return <img className={`dynasty-arms dynasty-arms-image ${className}`.trim()} src={escudo.imagen.archivo}
-    width={size} height={Math.round(size * 1.2)} alt={`Armas: ${escudo.blason}`} loading="lazy" decoding="async"/>;
+    width={size} height={Math.round(size * 1.2)} alt={`Armas: ${escudo.blason}`} title={`Escudo: ${escudo.imagen.autor} · ${escudo.imagen.licencia} · Wikimedia Commons`}
+    loading="lazy" decoding="async"/>;
   const clip = `arms-${id}`;
   return <svg className={`dynasty-arms ${className}`.trim()} viewBox="0 0 100 120" width={size} height={size * 1.2}
     role="img" aria-label={`Armas: ${escudo.blason}`}>

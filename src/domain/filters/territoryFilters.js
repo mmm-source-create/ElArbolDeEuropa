@@ -40,6 +40,7 @@ export const TERRITORIOS_SUB = {
     "Berry", "Borgoña", "Borbón", "Boulogne", "Bretaña", "Champaña",
     "Clermont", "Évreux", "Foix", "Armagnac", "Guisa", "La Marche", "Montpellier", "Nevers",
     "Orleans", "Poitou", "Toulouse", "Maine", "Normandía", "Ducado de Auvernia", "Ponthieu", "Provenza", "Rethel", "Saint-Pol", "Soissons", "Valois", "Vendôme", "Bearne",
+    "Condado de Bigorra", "Vizcondado de Carcasona",
   ],
 
   Bretaña: ["Penthièvre"],
@@ -54,7 +55,7 @@ export const TERRITORIOS_SUB = {
   // Muslim powers of the Peninsula, apart from the Christian crowns.
   "al-Ándalus": ["Califato almohade", "Emirato de al-Ándalus", "Emirato de Menorca", "Granada"],
   "Corona de Castilla": ["Castilla", "León"],
-  "Corona de Aragón": ["Aragón", "Condado de Barcelona", "Valencia", "Mallorca", "Cerdeña", "Trinacria", "Nápoles", "Gandía", "Urgel"],
+  "Corona de Aragón": ["Aragón", "Condado de Barcelona", "Valencia", "Mallorca", "Cerdeña", "Trinacria", "Nápoles", "Gandía", "Urgel", "Pallars Sobirà"],
   Cerdeña: ["Judicado de Arborea", "Judicado de Cagliari", "Judicado de Torres", "Marquesado de Oristano"],
   Portugal: ["Brasil"],
   Navarra: [],
@@ -79,11 +80,14 @@ export const TERRITORIOS_SUB = {
   Baviera: [],
 
   // Agrupación de navegación: no afirma que estos feudos formasen un Estado
-  // unitario. Las incorporaciones de Carlos V se distinguen de la herencia.
-  "Borgoña y Países Bajos": ["Borgoña y Franco Condado", "Países Bajos y Flandes", "Incorporaciones del siglo XVI"],
-  "Borgoña y Franco Condado": ["Borgoña", "Condado de Borgoña", "Nevers", "Rethel", "Auxerre", "Ponthieu"],
-  "Países Bajos y Flandes": ["Países Bajos", "Artois", "Flandes", "Brabante", "Limburgo", "Henao", "Holanda", "Zelanda", "Luxemburgo", "Namur", "Señorío de Malinas", "Tournai"],
-  "Incorporaciones del siglo XVI": ["Güeldres", "Frisia", "Utrecht", "Overijssel", "Drente", "Groninga"],
+  // unitario. Las dos Borgoñas y los Países Bajos son sus dos conjuntos
+  // geográficos; Nevers y Rethel, feudos franceses de ramas borgoñonas, cuelgan
+  // aparte. Ponthieu, inglés antes que borgoñón, queda solo en Francia.
+  "Borgoña y Países Bajos": ["Las dos Borgoñas", "Países Bajos", "Nevers", "Rethel"],
+  "Las dos Borgoñas": ["Borgoña", "Condado de Borgoña", "Auxerre", "Condado de Charolais"],
+  // Las diecisiete provincias, incluidas las incorporaciones de Carlos V.
+  "Países Bajos": ["Artois", "Flandes", "Brabante", "Limburgo", "Henao", "Holanda", "Zelanda", "Luxemburgo", "Namur", "Señorío de Malinas", "Tournai",
+    "Güeldres", "Frisia", "Utrecht", "Overijssel", "Drente", "Groninga"],
 
   "Estados Italianos": [
     "Estados Pontificios", "Venecia", "Génova", "Ferrara", "Florencia", "Forlì", "Gravina",
@@ -100,8 +104,10 @@ export const TERRITORIOS_SUB = {
   "Bizancio y Oriente latino": [
     "Bizancio", "Durazzo", "Imperio Latino", "Antioquía", "Armenia", "Chipre",
     "Edesa", "Epiro", "Ibelin", "Jerusalén", "Morea", "Nablus", "Torón",
-    "Transjordania", "Trípoli", "Trebisonda", "Acaya",
+    "Transjordania", "Trípoli", "Trebisonda", "Acaya", "Atenas",
   ],
+  // The Catalan duchies and their vassal county.
+  Atenas: ["Ducado de Neopatria", "Condado de Salona"],
   Balcanes: ["Imperio otomano", "Albania", "Dobruja", "Eslavonia", "Zeta", "Kosovo", "Prilep", "Bulgaria", "Serbia", "Bosnia", "Herzegovina", "Valaquia", "Moldavia", "Croacia", "Sirmia", "Epiro"],
   Serbia: ["Despotado de Serres", "Señorío de Dejanović", "Norte de Serbia habsbúrgico"],
   Bosnia: ["Hum", "Donji Kraji"],
