@@ -96,6 +96,7 @@ export function mergeMapExpansions(data) {
   applyRegionalReview(data,germanSwiss,'germanSwissReview','Alemania y Suiza · ampliación de núcleos documentados');
   data.overrides = [...data.overrides.filter(item => item.supplement !== 'german-swiss-review'),
     ...(germanSwiss.overrides || []).map(item => ({...item,supplement:'german-swiss-review'}))];
+  applyRegionalReview(data,read('germany-completion-review.json'),'germanyCompletionReview','Alemania · cobertura de intervalos vacíos 1200–1800');
   layers = [...data.territories, ...data.additionalTerritories];
   const svg = fs.readFileSync(mapDataFile('euv-locations-crop.svg'),'utf8');
   const ids = new Set([...svg.matchAll(/<path\b[^>]*\bid="([^"]+)"/g)].map(match => match[1]));

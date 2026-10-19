@@ -381,6 +381,27 @@
       "path": "data/cartography/german-swiss-expansion-review.json",
       "kind": "historical-selection",
       "maintenance": "Dated, sourced cores for Schleswig-Holstein, Potsdam and northern Switzerland; accepted source review, not exact feudal boundaries."
+    },
+    {
+      "path": "data/cartography/germany-completion-review.json",
+      "kind": "historical-selection",
+      "maintenance": "Bounded German completion, 1200–1800; annual vacancies and preservation checked independently of political color."
+    },
+    {
+      "path": "data/cartography/germany-completion-baseline.json",
+      "kind": "reviewed-audit",
+      "maintenance": "Bounded German completion, 1200–1800; annual vacancies and preservation checked independently of political color."
+    },
+    {
+      "path": "data/cartography/germany-completion-geography.json",
+      "kind": "geometry-reference",
+      "maintenance": "Bounded German completion, 1200–1800; annual vacancies and preservation checked independently of political color."
+    },
+    {
+      "path": "data/cartography/germany-completion-geographic-cells.json",
+      "kind": "accepted-inventory",
+      "maintenance": "Bounded German completion, 1200–1800; annual vacancies and preservation checked independently of political color.",
+      "producer": "scripts/cartography/build-geographic-inventory.py"
     }
   ]
 }

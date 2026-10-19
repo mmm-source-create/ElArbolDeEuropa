@@ -57,7 +57,7 @@ test('la continuidad de los ducados llega a 1800 y Gottorp no recibe las partes 
   assert.equal(layers.find(l => l.name.includes('Holstein · administración real')).coverage.from,1773);
 });
 test('Potsdam amplía Brandeburgo y Poznan conserva su traspaso de 1793', () => {
-  assert.ok(!identities(1414,'Potsdam').includes('Brandeburgo'));
+  assert.deepEqual(identities(1414,'Potsdam'),['Brandeburgo']);
   assert.deepEqual(identities(1415,'Potsdam'),['Brandeburgo']);
   assert.deepEqual(identities(1792,'Poznan'),['Polonia']);
   assert.deepEqual(identities(1793,'Poznan'),['Prusia']);
