@@ -40,6 +40,7 @@ export const TERRITORIOS_SUB = {
     "Berry", "Borgoña", "Borbón", "Boulogne", "Bretaña", "Champaña",
     "Clermont", "Évreux", "Foix", "Armagnac", "Guisa", "La Marche", "Montpellier", "Nevers",
     "Orleans", "Poitou", "Toulouse", "Maine", "Normandía", "Ducado de Auvernia", "Ponthieu", "Provenza", "Rethel", "Saint-Pol", "Soissons", "Valois", "Vendôme", "Bearne",
+    "Condado de Bigorra", "Vizcondado de Carcasona",
   ],
 
   Bretaña: ["Penthièvre"],
@@ -54,7 +55,7 @@ export const TERRITORIOS_SUB = {
   // Muslim powers of the Peninsula, apart from the Christian crowns.
   "al-Ándalus": ["Califato almohade", "Emirato de al-Ándalus", "Emirato de Menorca", "Granada"],
   "Corona de Castilla": ["Castilla", "León"],
-  "Corona de Aragón": ["Aragón", "Condado de Barcelona", "Valencia", "Mallorca", "Cerdeña", "Trinacria", "Nápoles", "Gandía", "Urgel"],
+  "Corona de Aragón": ["Aragón", "Condado de Barcelona", "Valencia", "Mallorca", "Cerdeña", "Trinacria", "Nápoles", "Gandía", "Urgel", "Pallars Sobirà"],
   Cerdeña: ["Judicado de Arborea", "Judicado de Cagliari", "Judicado de Torres", "Marquesado de Oristano"],
   Portugal: ["Brasil"],
   Navarra: [],
@@ -103,8 +104,10 @@ export const TERRITORIOS_SUB = {
   "Bizancio y Oriente latino": [
     "Bizancio", "Durazzo", "Imperio Latino", "Antioquía", "Armenia", "Chipre",
     "Edesa", "Epiro", "Ibelin", "Jerusalén", "Morea", "Nablus", "Torón",
-    "Transjordania", "Trípoli", "Trebisonda", "Acaya",
+    "Transjordania", "Trípoli", "Trebisonda", "Acaya", "Atenas",
   ],
+  // The Catalan duchies and their vassal county.
+  Atenas: ["Ducado de Neopatria", "Condado de Salona"],
   Balcanes: ["Imperio otomano", "Albania", "Dobruja", "Eslavonia", "Zeta", "Kosovo", "Prilep", "Bulgaria", "Serbia", "Bosnia", "Herzegovina", "Valaquia", "Moldavia", "Croacia", "Sirmia", "Epiro"],
   Serbia: ["Despotado de Serres", "Señorío de Dejanović", "Norte de Serbia habsbúrgico"],
   Bosnia: ["Hum", "Donji Kraji"],

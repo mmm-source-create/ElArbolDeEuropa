@@ -33,7 +33,7 @@ export function auditarTerritorios(personas, catalogo=TERRITORIOS) {
    // A delegated administrator's office does not turn a county into a new
    // "government" territory. Validate the office and sovereign separately.
    const delegatedOffice=g.clase==='gobierno'&&g.condicion==='gobierno delegado'
-     && ['Gobernador','Gobernadora'].includes(g.titulo)&&g.soberano&&g.soberano!==p.id;
+     && ['Gobernador','Gobernadora','Vicario general','Procurador'].includes(g.titulo)&&g.soberano&&g.soberano!==p.id;
    const provincialBan=g.territorio==='Eslavonia'&&g.clase==='banato'&&g.titulo==='Ban';
    const documentedMoravianPrince=g.territorio==='Moravia'&&p.id==='OTAK1'&&g.desde===1223&&g.hasta===1223&&g.titulo==='Príncipe'&&g.clase==='principado';
    if(t&& !provincialSovereign && !delegatedOffice && !provincialBan && !documentedMoravianPrince && !(g.clase==='gobierno'&&g.condicion==='regencia') && !['regencia','estatuderato'].includes(g.clase)&& !territorial.map(normalize).concat(permitidas[g.territorio]||[]).includes(g.clase))add('ERROR','TERRITORY_CLASS_MISMATCH',key,`${g.territorio}: ${g.clase} no concuerda con su rango documentado`);

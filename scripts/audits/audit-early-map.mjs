@@ -9,7 +9,10 @@ import {mapDataFile,projectRoot,auditReportPath} from '../lib/project-paths.mjs'
 const data=JSON.parse(fs.readFileSync(mapDataFile('corridor-locations.json')));
 // V5.25 titles that are documented but have no reviewed cartography before 1200. They are
 // not drawn in those years; the list keeps the gap visible instead of failing silently.
-const WITHOUT_EARLY_CARTOGRAPHY=new Set(['TEOB3CHAMP|Champaña','ENRIQLEON|Sajonia','ENRIQLEON|Baviera','HENRYSCOT|Northumbria','DAVIDHUNTINGDON|Huntingdon']);
+const WITHOUT_EARLY_CARTOGRAPHY=new Set(['TEOB3CHAMP|Champaña','ENRIQLEON|Sajonia','ENRIQLEON|Baviera','HENRYSCOT|Northumbria','DAVIDHUNTINGDON|Huntingdon',
+ // V5.31 · Aragonese vassals documented before the regional reviews start in 1200.
+ 'GUILLERMA1PALLARS|Pallars Sobirà','RAMON6TOLOSA|Toulouse','RAMONROGERFOIX|Foix','TRENCAVEL1|Vizcondado de Carcasona','ROGER2TRENCAVEL|Vizcondado de Carcasona',
+ 'RAMONROGERTRENCAVEL|Vizcondado de Carcasona','MARIABEARNE|Bearne','GASTON6BEARN|Bearne','GASTON6BEARN|Condado de Bigorra','PETRONILABIGORRA|Condado de Bigorra','GUILLERMO8MONTP|Montpellier']);
 const people=earlyPeopleInventory(PERSONAS),missing=[],uncharted=[];let checked=0;
 for(const p of PERSONAS)for(const g of gobiernosDe(p).filter(g=>g.desde<1200&&gobiernoEfectivo(g)))for(let y=g.desde;y<=Math.min(g.hasta,1199);y++){
  checked++;
