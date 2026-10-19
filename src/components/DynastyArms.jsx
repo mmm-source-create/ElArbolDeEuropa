@@ -132,5 +132,6 @@ export function ArmsCredit({dinastia, className = ''}) {
     Escudo: <a href={imagen.fuente} target="_blank" rel="noreferrer">{imagen.autor}</a>
     {' · '}{imagen.licenciaUrl ? <a href={imagen.licenciaUrl} target="_blank" rel="noreferrer license">{imagen.licencia}</a> : imagen.licencia}
     {' · Wikimedia Commons'}
+    {imagen.modificaciones && <span title={imagen.modificaciones}> · Adaptación al escudo</span>}
   </small>;
 }

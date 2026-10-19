@@ -147,6 +147,13 @@ export const ESCUDOS = Object.freeze({
     nota: 'Armas de los condes de Gorizia, la casa de los Meinhardinos, que gobernó también el Tirol y Carintia.'},
   'Ludovingios': {blason: 'De azur, un león rampante burelado de plata y gules, coronado de oro.', capas: [['campo', 'azur'], ['figura', 'leon', 'plata']],
     nota: 'El león listado de los landgraves de Turingia. Sofía, hija de Luis IV, lo llevó a Hesse, cuyos landgraves lo conservaron; la imagen es la de las armas de Hesse.'},
+  'Anjou-Durazzo': {blason: 'De azur, sembrado de flores de lis de oro, lambel de gules y bordura componada de plata y gules.', capas: [...FRANCIA_ANTIGUA, ['lambel', 'gules'], ['bordura-componada', 'plata', 'gules']], nota: 'Armas de Juan de Anjou, duque de Durazzo.'},
+  'Jagellón': {blason: 'De azur, una cruz patriarcal de oro.', capas: [['campo', 'azur']], nota: 'La doble cruz dinástica de los Jagellón.'},
+  'Hetúmida': {blason: 'De oro, un león rampante de gules.', capas: [['campo', 'oro'], ['figura', 'leon', 'gules']], nota: 'Representación simplificada del león de la Armenia cilicia: se reutiliza el dibujo de Habsburgo, que añade corona azul y no representa la cruz de algunas variantes armenias.'},
+  'Holstein-Gottorp': {blason: 'Armas compuestas de Noruega, Schleswig, Holstein, Stormarn y Dithmarschen, con escusón de Oldemburgo y Delmenhorst.', capas: [['campo', 'gules']], nota: 'Escudo compuesto de los duques de Holstein-Gottorp; las particiones ducales no equivalen a soberanía sobre todo Schleswig-Holstein.'},
+  'Vasa': {blason: 'De azur, plata y gules, una gavilla de oro brochante.', capas: [['campo', 'azur']], nota: 'La gavilla de la casa Vasa.'},
+  'Grifo': {blason: 'De plata, un grifo rampante de gules, armado de oro.', capas: [['campo', 'plata']], nota: 'Armas de la casa de Pomerania, conservadas en el escudo de Pomerania Occidental.'},
+  'Dunkeld': {blason: 'De oro, un león rampante de gules dentro de un doble trechor flordelisado y contraflordelisado de gules.', capas: [['campo', 'oro'], ['trechor', 'gules'], ['figura', 'leon', 'gules']], nota: 'Armas reales de Escocia, compartidas con los Estuardo.'},
 });
 
 const conImagen = new Map(Object.entries(ESCUDOS).map(([dinastia, escudo]) =>

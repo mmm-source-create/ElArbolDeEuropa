@@ -92,6 +92,10 @@ export function mergeMapExpansions(data) {
     if(!layer)throw Error('Missing retained eastern layer: '+name);
     Object.assign(layer,evidence);
   }
+  const germanSwiss = read('german-swiss-expansion-review.json');
+  applyRegionalReview(data,germanSwiss,'germanSwissReview','Alemania y Suiza · ampliación de núcleos documentados');
+  data.overrides = [...data.overrides.filter(item => item.supplement !== 'german-swiss-review'),
+    ...(germanSwiss.overrides || []).map(item => ({...item,supplement:'german-swiss-review'}))];
   layers = [...data.territories, ...data.additionalTerritories];
   const svg = fs.readFileSync(mapDataFile('euv-locations-crop.svg'),'utf8');
   const ids = new Set([...svg.matchAll(/<path\b[^>]*\bid="([^"]+)"/g)].map(match => match[1]));

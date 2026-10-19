@@ -376,6 +376,11 @@
     {
       "path": "labs/cartography/territorial-corridors.html",
       "kind": "lab"
+    },
+    {
+      "path": "data/cartography/german-swiss-expansion-review.json",
+      "kind": "historical-selection",
+      "maintenance": "Dated, sourced cores for Schleswig-Holstein, Potsdam and northern Switzerland; accepted source review, not exact feudal boundaries."
     }
   ]
 }

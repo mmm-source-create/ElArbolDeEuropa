@@ -1,3 +1,4 @@
+import {GERMAN_SWISS_IDENTITIES} from './regions/germanSwissRoutes.js';
 import {EASTERN_EUROPE_IDENTITIES} from './regions/easternEuropeRoutes.js';
 import {NORTH_AFRICA_LEVANT_IDENTITIES} from './regions/northAfricaLevantRoutes.js';
 import {EARLY_MEDIEVAL_IDENTITIES} from './regions/earlyMedievalRoutes.js';
@@ -24,6 +25,7 @@ const ALIASES = Object.freeze({
   ...IBERIA_ITALY_IDENTITIES,
   ...FRANCE_LOW_COUNTRIES_IDENTITIES,
   ...EDITORIAL_ALIASES,
+  ...GERMAN_SWISS_IDENTITIES,
 
 });
 

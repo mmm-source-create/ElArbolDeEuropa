@@ -1,3 +1,4 @@
+import germanSwiss from './german-swiss.js';
 import {TERRITORIOS_ADRIATICO,TRANSILVANIA_ADRIATICO} from "./adriatico-v214.js";
 import alpes from "./alpes-v213.js";
 import escandinavia from "./escandinavia-v212.js";
@@ -19,6 +20,12 @@ const ampliacionAdriatica = Object.fromEntries(Object.entries({...TERRITORIOS_AD
   for(const h of historia.evolucion) hitos.set(h.anio,h);
   return [nombre,{...historia,evolucion:[...hitos.values()].sort((a,b)=>a.anio-b.anio)}];
 }));
-export const HISTORIA_TERRITORIOS = Object.freeze({...historiaAnterior,...ampliacionAdriatica,...bosniaHum});
+const previous = {...historiaAnterior,...ampliacionAdriatica,...bosniaHum};
+const reviewedGermanSwiss = Object.fromEntries(Object.entries(germanSwiss).map(([name,entry]) => {
+  const events = new Map((previous[name]?.evolucion || []).map(event => [event.anio,event]));
+  for (const event of entry.evolucion) events.set(event.anio,event);
+  return [name,{...previous[name],...entry,evolucion:[...events.values()].sort((a,b) => a.anio-b.anio)}];
+}));
+export const HISTORIA_TERRITORIOS = Object.freeze({...previous,...reviewedGermanSwiss});
 
 export { FUENTES_TERRITORIOS } from "../sources.js";

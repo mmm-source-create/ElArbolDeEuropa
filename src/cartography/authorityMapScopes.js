@@ -1,3 +1,4 @@
+import {germanSwissScope} from './regions/germanSwissRoutes.js';
 import {easternEuropeScope} from './regions/easternEuropeRoutes.js';
 import {franceLowCountriesScope} from './regions/franceLowCountriesRoutes.js';
 import {iberiaItalyScope} from './regions/iberiaItalyRoutes.js';
@@ -399,6 +400,8 @@ export function composeRegionalAuthorityScopes(scopes) {
 }
 
 export function authorityMapScope(personId, territory, year) {
+  const germanSwiss = germanSwissScope(personId, territory, year);
+  if (germanSwiss) return germanSwiss;
   const regional = composeRegionalAuthorityScopes([
     easternEuropeScope(personId, territory, year),
     franceLowCountriesScope(personId, territory, year), iberiaItalyScope(personId, territory, year),
