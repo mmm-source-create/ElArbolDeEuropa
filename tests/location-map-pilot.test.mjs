@@ -84,12 +84,15 @@ test('the emperor receives a legal backdrop without claiming that he governs eac
 test('the Atlas uses reviewed layers first and the all-territory crosswalk for unmigrated jurisdictions', () => {
   const lithuania = mapLocationsForGovernment(data, {territorio:'Lituania'}, 1570, 'SIG3POL', ['Vilnius']);
   const lithuaniaAfterPilotRange = mapLocationsForGovernment(data, {territorio:'Lituania'}, 1700, 'AUG2POL', ['Vilnius']);
-  const unreviewed = mapLocationsForGovernment(data, {territorio:'Habsburgo'}, 1500, 'MAX1HAB', ['Aargau','Upper_Alsace']);
+  const migrated = mapLocationsForGovernment(data, {territorio:'Habsburgo'}, 1500, 'MAX1HAB', ['Aargau','Upper_Alsace']);
+  const legacyFixture = {...data,locationCrosswalk:{newIdsByOldId:{Legacy_region:{ids:['Unreviewed_core']}}}};
+  const unreviewed = mapLocationsForGovernment(legacyFixture, {territorio:'Unreviewed'}, 1500, null, ['Legacy_region']);
   const earlyFrance = mapLocationsForGovernment(data, {territorio:'Francia'}, 1400, 'CAR6FRA', ['Paris']);
 
   assert(lithuania.includes('Vilnius'));
   assert(lithuaniaAfterPilotRange.includes('Vilnius'), 'the Atlas keeps older dated coverage outside the pilot timeline');
-  assert(unreviewed.length > 0, 'legacy territories with no named corridor layer use the measured geometry bridge');
+  assert.deepEqual(migrated, [], 'reviewed Swiss and Alsatian cores cannot be resurrected by a legacy Habsburg footprint');
+  assert.deepEqual(unreviewed, ['Unreviewed_core'], 'legacy territories with no named corridor layer use the measured geometry bridge');
   assert(earlyFrance.includes('Paris'), 'the reviewed medieval series replaces the old 1453-only cutoff');
   assert(!earlyFrance.includes('Bordeaux'));
   assert(!earlyFrance.includes('Perpignan'));

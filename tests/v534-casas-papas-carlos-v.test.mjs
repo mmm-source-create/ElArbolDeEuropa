@@ -32,7 +32,7 @@ test('la cabecera de la dinastía centra título, resumen y blasón', () => {
 test('Gorizia y los Ludovingios tienen escudo, y las casas duplicadas se fusionan', () => {
   assert.equal(escudoDe('Gorizia').imagen.titulo, 'Arms of the house of Gorizia.svg');
   assert.equal(escudoDe('Ludovingios').imagen.archivo, escudoDe('Hesse').imagen.archivo);
-  assert.equal(Object.keys(ESCUDOS).length, 67);
+  assert.equal(Object.keys(ESCUDOS).length, 74);
   const houses = new Set(PERSONAS.map(p => p.dinastia));
   for (const old of ['Ivrea', 'Lancaster', 'York', 'Armañac', 'Egmont', 'Folkung', 'Folkunga', 'Piasta', 'Wurtemberg', 'D’Avalos', 'Kantakouzenos', 'Roger', 'Douglas-Tudor', 'Tudor-Brandon', 'Salviati-Médici', 'Aragón-Urgel'])
     assert.ok(!houses.has(old), old);

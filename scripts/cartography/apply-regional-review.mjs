@@ -54,12 +54,16 @@ export function applyRegionalReview(data, review, key, corridor) {
     }
     if (next <= scope.through) throw new Error(`Regional replacement gap: ${id}/${next}`);
   }
+  if (review.precedenceByAssignment && precedence.length)
+    throw new Error('Dated assignment precedence must not also replace a full-period footprint');
   const previousNames = new Set(data[key]?.layerNames || []);
   data.additionalTerritories = data.additionalTerritories
     .filter(layer => !previousNames.has(layer.name) && !names.has(layer.name));
   data.additionalTerritories.push(...layers);
   data[key] = {reviewedAt: review.reviewedAt, scope: structuredClone(scope),
     ...(review.precedenceIds ? {precedenceIds: [...review.precedenceIds]} : {}),
+    ...(review.precedenceByAssignment ? {datedScopes:review.assignments.map(phase =>
+      ({from:phase.from,through:phase.through,ids:[...phase.ids]}))} : {}),
     layerNames: [...names], limitations: [...review.limitations]};
   return data;
 }

@@ -1,0 +1,2519 @@
+{
+  "schema": 1,
+  "reviewedAt": "2026-10-19",
+  "scope": {
+    "from": 1200,
+    "through": 1800,
+    "ids": [
+      "Ansbach",
+      "Augsburg",
+      "Aurich",
+      "Baden_im_Aargau",
+      "Bamberg",
+      "Bayreuth",
+      "Bremen",
+      "Bremervorde",
+      "Dillingen",
+      "Eckernforde",
+      "Eichstatt",
+      "Ellwangen",
+      "Emden",
+      "Flensburg",
+      "Frankfurt",
+      "Frauenfeld",
+      "Freising",
+      "Halberstadt",
+      "Hamburg",
+      "Hildesheim",
+      "Husum",
+      "Kiel",
+      "Kulmbach",
+      "Kyburg",
+      "Lubeck",
+      "Lucerne",
+      "Magdeburg",
+      "Minden",
+      "Munster",
+      "Nuremberg",
+      "Oldenburg",
+      "Osnabruck",
+      "Paderborn",
+      "Passau",
+      "Pinneberg",
+      "Plon",
+      "Potsdam",
+      "Regensburg",
+      "Rendsburg",
+      "Schaffhausen",
+      "Schwyz",
+      "Segeberg",
+      "Slesvig",
+      "St_Gallen",
+      "Stade",
+      "Steinburg",
+      "Stormarn",
+      "Toggenburg",
+      "Ulm",
+      "Verden",
+      "Wurzburg",
+      "Zurich"
+    ]
+  },
+  "precedenceIds": [],
+  "limitedCore": true,
+  "assignments": [
+    {
+      "name": "Schleswig · partes reales y ducales · 1651–1712 · ampliación germano-suiza",
+      "identity": "Schleswig",
+      "from": 1651,
+      "through": 1712,
+      "ids": [
+        "Eckernforde",
+        "Flensburg",
+        "Husum",
+        "Slesvig"
+      ],
+      "governmentTerritories": [
+        "Schleswig"
+      ],
+      "sourceKeys": [
+        "schleswig"
+      ],
+      "precision": "documented_core",
+      "limitedCore": true,
+      "note": "Partes reales y de Gottorp, con administración compartida. Estas celdas no delimitan las posesiones de cada rama; no se atribuye todo el ducado a un gobernante personal."
+    },
+    {
+      "name": "Schleswig · administración real danesa · 1713–1800 · ampliación germano-suiza",
+      "identity": "Schleswig",
+      "from": 1713,
+      "through": 1800,
+      "ids": [
+        "Eckernforde",
+        "Flensburg",
+        "Husum",
+        "Slesvig"
+      ],
+      "governmentTerritories": [
+        "Schleswig"
+      ],
+      "sourceKeys": [
+        "schleswig",
+        "holstein"
+      ],
+      "precision": "documented_core",
+      "limitedCore": true,
+      "note": "Desde 1713 la Corona danesa ocupa la parte de Gottorp; incorporación jurídica en 1721. El corte anual muestra la administración efectiva, sin anticipar el acuerdo jurídico."
+    },
+    {
+      "name": "Holstein · partes reales y ducales · 1651–1772 · ampliación germano-suiza",
+      "identity": "Holstein",
+      "from": 1651,
+      "through": 1772,
+      "ids": [
+        "Kiel",
+        "Pinneberg",
+        "Plon",
+        "Rendsburg",
+        "Segeberg",
+        "Steinburg",
+        "Stormarn"
+      ],
+      "governmentTerritories": [
+        "Holstein"
+      ],
+      "sourceKeys": [
+        "holstein"
+      ],
+      "precision": "documented_core",
+      "limitedCore": true,
+      "note": "Partes reales, de Gottorp y líneas separadas, con asuntos comunes; no un ducado homogéneo propiedad de una sola persona. Heide/Dithmarschen queda fuera de esta prolongación por su régimen particular."
+    },
+    {
+      "name": "Holstein · administración real danesa · 1773–1800 · ampliación germano-suiza",
+      "identity": "Holstein",
+      "from": 1773,
+      "through": 1800,
+      "ids": [
+        "Kiel",
+        "Pinneberg",
+        "Plon",
+        "Rendsburg",
+        "Segeberg",
+        "Steinburg",
+        "Stormarn"
+      ],
+      "governmentTerritories": [
+        "Holstein"
+      ],
+      "sourceKeys": [
+        "holstein"
+      ],
+      "precision": "documented_core",
+      "limitedCore": true,
+      "note": "Reunión de la parte de Gottorp con la real en 1773; Holstein conserva su identidad ducal y su relación con el Imperio."
+    },
+    {
+      "name": "Potsdam · 1415–1800 · ampliación germano-suiza",
+      "identity": "Brandeburgo",
+      "from": 1415,
+      "through": 1800,
+      "ids": [
+        "Potsdam"
+      ],
+      "governmentTerritories": [
+        "Brandeburgo"
+      ],
+      "sourceKeys": [
+        "potsdam"
+      ],
+      "precision": "documented_core",
+      "limitedCore": true,
+      "note": "Núcleo cartográfico aproximado; la fuente documenta la autoridad y la fecha, no la frontera exacta de la celda."
+    },
+    {
+      "name": "Schwyz · 1291–1797 · ampliación germano-suiza",
+      "identity": "Comunidad de Schwyz",
+      "from": 1291,
+      "through": 1797,
+      "ids": [
+        "Schwyz"
+      ],
+      "governmentTerritories": [
+        "Comunidad de Schwyz"
+      ],
+      "sourceKeys": [
+        "schwyz"
+      ],
+      "precision": "documented_core",
+      "limitedCore": true,
+      "note": "Núcleo cartográfico aproximado; la fuente documenta la autoridad y la fecha, no la frontera exacta de la celda."
+    },
+    {
+      "name": "Lucerna · 1332–1797 · ampliación germano-suiza",
+      "identity": "Lucerna",
+      "from": 1332,
+      "through": 1797,
+      "ids": [
+        "Lucerne"
+      ],
+      "governmentTerritories": [
+        "Lucerna"
+      ],
+      "sourceKeys": [
+        "lucerna",
+        "lucerna1798"
+      ],
+      "precision": "documented_core",
+      "limitedCore": true,
+      "note": "Núcleo cartográfico aproximado; la fuente documenta la autoridad y la fecha, no la frontera exacta de la celda."
+    },
+    {
+      "name": "Zúrich · 1351–1797 · ampliación germano-suiza",
+      "identity": "Zúrich",
+      "from": 1351,
+      "through": 1797,
+      "ids": [
+        "Zurich"
+      ],
+      "governmentTerritories": [
+        "Zúrich"
+      ],
+      "sourceKeys": [
+        "zurich"
+      ],
+      "precision": "documented_core",
+      "limitedCore": true,
+      "note": "Núcleo cartográfico aproximado; la fuente documenta la autoridad y la fecha, no la frontera exacta de la celda."
+    },
+    {
+      "name": "Kyburg bajo Zúrich · 1452–1797 · ampliación germano-suiza",
+      "identity": "Zúrich",
+      "from": 1452,
+      "through": 1797,
+      "ids": [
+        "Kyburg"
+      ],
+      "governmentTerritories": [
+        "Zúrich"
+      ],
+      "sourceKeys": [
+        "kyburg"
+      ],
+      "precision": "documented_core",
+      "limitedCore": true,
+      "note": "Núcleo cartográfico aproximado; la fuente documenta la autoridad y la fecha, no la frontera exacta de la celda."
+    },
+    {
+      "name": "Schaffhausen · 1501–1797 · ampliación germano-suiza",
+      "identity": "Schaffhausen",
+      "from": 1501,
+      "through": 1797,
+      "ids": [
+        "Schaffhausen"
+      ],
+      "governmentTerritories": [
+        "Schaffhausen"
+      ],
+      "sourceKeys": [
+        "schaffhausen"
+      ],
+      "precision": "documented_core",
+      "limitedCore": true,
+      "note": "Núcleo cartográfico aproximado; la fuente documenta la autoridad y la fecha, no la frontera exacta de la celda."
+    },
+    {
+      "name": "Baden confederal · 1415–1797 · ampliación germano-suiza",
+      "identity": "Condado de Baden suizo",
+      "from": 1415,
+      "through": 1797,
+      "ids": [
+        "Baden_im_Aargau"
+      ],
+      "governmentTerritories": [
+        "Condado de Baden suizo"
+      ],
+      "sourceKeys": [
+        "baden"
+      ],
+      "precision": "documented_core",
+      "limitedCore": true,
+      "note": "Núcleo cartográfico aproximado; la fuente documenta la autoridad y la fecha, no la frontera exacta de la celda."
+    },
+    {
+      "name": "Turgovia confederal · 1460–1797 · ampliación germano-suiza",
+      "identity": "Turgovia",
+      "from": 1460,
+      "through": 1797,
+      "ids": [
+        "Frauenfeld"
+      ],
+      "governmentTerritories": [
+        "Turgovia"
+      ],
+      "sourceKeys": [
+        "frauenfeld"
+      ],
+      "precision": "documented_core",
+      "limitedCore": true,
+      "note": "Núcleo cartográfico aproximado; la fuente documenta la autoridad y la fecha, no la frontera exacta de la celda."
+    },
+    {
+      "name": "República Helvética · núcleos septentrionales · 1798–1800 · ampliación germano-suiza",
+      "identity": "República Helvética",
+      "from": 1798,
+      "through": 1800,
+      "ids": [
+        "Baden_im_Aargau",
+        "Frauenfeld",
+        "Kyburg",
+        "Lucerne",
+        "Schaffhausen",
+        "Schwyz",
+        "Zurich"
+      ],
+      "governmentTerritories": [
+        "República Helvética"
+      ],
+      "sourceKeys": [
+        "helvetic",
+        "frauenfeld",
+        "baden"
+      ],
+      "precision": "documented_core",
+      "limitedCore": true,
+      "note": "Gobierno institucional helvético desde 1798. Las campañas y ocupaciones de 1799 no equivalen a soberanía de un rey sobre toda Suiza; la capa representa su marco institucional, no un frente militar."
+    },
+    {
+      "name": "Lübeck · 1226–1800 · ampliación germano-suiza",
+      "identity": "Ciudad imperial de Lübeck",
+      "from": 1226,
+      "through": 1800,
+      "ids": [
+        "Lubeck"
+      ],
+      "governmentTerritories": [
+        "Ciudad imperial de Lübeck"
+      ],
+      "sourceKeys": [
+        "lubeck"
+      ],
+      "precision": "documented_core",
+      "limitedCore": true,
+      "note": "Lübeck conservó un gobierno urbano propio y un estatuto imperial desde la carta de Federico II de 1226. No formaba parte del ducado de Holstein ni del principado episcopal vecino. La celda aproxima el núcleo local; no equivale a toda la diócesis, provincia moderna o territorio de sus vecinos."
+    },
+    {
+      "name": "Hamburgo · 1618–1800 · ampliación germano-suiza",
+      "identity": "Ciudad de Hamburgo",
+      "from": 1618,
+      "through": 1800,
+      "ids": [
+        "Hamburg"
+      ],
+      "governmentTerritories": [
+        "Ciudad de Hamburgo"
+      ],
+      "sourceKeys": [
+        "hamburg"
+      ],
+      "precision": "documented_core",
+      "limitedCore": true,
+      "note": "Gobierno urbano efectivo; la superioridad reclamada por Dinamarca no se pinta como dominio danés sobre la ciudad. La celda aproxima el núcleo local; no equivale a toda la diócesis, provincia moderna o territorio de sus vecinos."
+    },
+    {
+      "name": "Bremen · autonomía urbana · 1200–1645 · ampliación germano-suiza",
+      "identity": "Ciudad de Bremen",
+      "from": 1200,
+      "through": 1645,
+      "ids": [
+        "Bremen"
+      ],
+      "governmentTerritories": [
+        "Ciudad de Bremen"
+      ],
+      "sourceKeys": [
+        "bremenCity"
+      ],
+      "precision": "documented_core",
+      "limitedCore": true,
+      "note": "Derecho urbano y autonomía en formación; el reconocimiento definitivo como ciudad imperial se fecha en 1646. La celda aproxima el núcleo local; no equivale a toda la diócesis, provincia moderna o territorio de sus vecinos."
+    },
+    {
+      "name": "Bremen · ciudad imperial · 1646–1800 · ampliación germano-suiza",
+      "identity": "Ciudad de Bremen",
+      "from": 1646,
+      "through": 1800,
+      "ids": [
+        "Bremen"
+      ],
+      "governmentTerritories": [
+        "Ciudad de Bremen"
+      ],
+      "sourceKeys": [
+        "bremenCity"
+      ],
+      "precision": "documented_core",
+      "limitedCore": true,
+      "note": "La ciudad de Bremen desarrolló derechos propios desde el privilegio de 1186. Su libertad imperial recibió reconocimiento definitivo en 1646. El arzobispado y los ducados de Bremen-Verden siguieron otra trayectoria. La celda aproxima el núcleo local; no equivale a toda la diócesis, provincia moderna o territorio de sus vecinos."
+    },
+    {
+      "name": "Núremberg · consejo y derechos burgraviales · 1219–1426 · ampliación germano-suiza",
+      "identity": "Ciudad imperial de Núremberg",
+      "from": 1219,
+      "through": 1426,
+      "ids": [
+        "Nuremberg"
+      ],
+      "governmentTerritories": [
+        "Ciudad imperial de Núremberg"
+      ],
+      "sourceKeys": [
+        "nuremberg"
+      ],
+      "precision": "documented_core",
+      "limitedCore": true,
+      "note": "Autogobierno urbano junto a derechos burgraviales sobre la fortaleza, expulsados progresivamente entre 1385 y 1427. La celda no acredita soberanía urbana exclusiva sobre todos los enclaves. La celda aproxima el núcleo local; no equivale a toda la diócesis, provincia moderna o territorio de sus vecinos."
+    },
+    {
+      "name": "Núremberg · república urbana · 1427–1800 · ampliación germano-suiza",
+      "identity": "Ciudad imperial de Núremberg",
+      "from": 1427,
+      "through": 1800,
+      "ids": [
+        "Nuremberg"
+      ],
+      "governmentTerritories": [
+        "Ciudad imperial de Núremberg"
+      ],
+      "sourceKeys": [
+        "nuremberg"
+      ],
+      "precision": "documented_core",
+      "limitedCore": true,
+      "note": "La comunidad urbana obtuvo un amplio privilegio en 1219 y consolidó su autogobierno durante el siglo XIII. La salida de los burgraves, completada en 1427, separa la ciudad de los principados de los Hohenzollern. La celda aproxima el núcleo local; no equivale a toda la diócesis, provincia moderna o territorio de sus vecinos."
+    },
+    {
+      "name": "Augsburgo · ciudad imperial · 1276–1800 · ampliación germano-suiza",
+      "identity": "Ciudad imperial de Augsburgo",
+      "from": 1276,
+      "through": 1800,
+      "ids": [
+        "Augsburg"
+      ],
+      "governmentTerritories": [
+        "Ciudad imperial de Augsburgo"
+      ],
+      "sourceKeys": [
+        "augsburg"
+      ],
+      "precision": "documented_core",
+      "limitedCore": true,
+      "note": "Los privilegios de 1276 y 1294 consolidaron la autonomía de Augsburgo. La ciudad imperial fue distinta del principado episcopal, cuyos obispos gobernaron desde Dillingen. Su incorporación a Baviera fue posterior a 1800. La celda aproxima el núcleo local; no equivale a toda la diócesis, provincia moderna o territorio de sus vecinos."
+    },
+    {
+      "name": "Dillingen episcopal · 1258–1800 · ampliación germano-suiza",
+      "identity": "Principado episcopal de Augsburgo",
+      "from": 1258,
+      "through": 1800,
+      "ids": [
+        "Dillingen"
+      ],
+      "governmentTerritories": [
+        "Principado episcopal de Augsburgo"
+      ],
+      "sourceKeys": [
+        "dillingen"
+      ],
+      "precision": "documented_core",
+      "limitedCore": true,
+      "note": "El territorio secular de los obispos de Augsburgo conservó una administración propia con centro en Dillingen. No comprendía por ello toda su diócesis ni absorbía la ciudad imperial de Augsburgo. La celda aproxima el núcleo local; no equivale a toda la diócesis, provincia moderna o territorio de sus vecinos."
+    },
+    {
+      "name": "Ratisbona · ciudad imperial · 1245–1485 · ampliación germano-suiza",
+      "identity": "Ciudad imperial de Ratisbona",
+      "from": 1245,
+      "through": 1485,
+      "ids": [
+        "Regensburg"
+      ],
+      "governmentTerritories": [
+        "Ciudad imperial de Ratisbona"
+      ],
+      "sourceKeys": [
+        "regensburg"
+      ],
+      "precision": "documented_core",
+      "limitedCore": true,
+      "note": "Ratisbona recibió en 1245 el derecho de elegir alcalde y consejo. Conservó el estatuto imperial salvo la sujeción a Baviera-Múnich de 1486–1492. La sede episcopal y los enclaves eclesiásticos urbanos no son un ducado bávaro continuo. La celda aproxima el núcleo local; no equivale a toda la diócesis, provincia moderna o territorio de sus vecinos."
+    },
+    {
+      "name": "Ratisbona · sujeción a Baviera-Múnich · 1486–1491 · ampliación germano-suiza",
+      "identity": "Baviera",
+      "from": 1486,
+      "through": 1491,
+      "ids": [
+        "Regensburg"
+      ],
+      "governmentTerritories": [
+        "Baviera"
+      ],
+      "sourceKeys": [
+        "regensburg"
+      ],
+      "precision": "documented_core",
+      "limitedCore": true,
+      "note": "Sujeción de la ciudad a Alberto IV de Baviera-Múnich; se interrumpe el autogobierno imperial independiente. No extiende este dominio a los obispados vecinos. La celda aproxima el núcleo local; no equivale a toda la diócesis, provincia moderna o territorio de sus vecinos."
+    },
+    {
+      "name": "Ratisbona · ciudad imperial restituida · 1492–1800 · ampliación germano-suiza",
+      "identity": "Ciudad imperial de Ratisbona",
+      "from": 1492,
+      "through": 1800,
+      "ids": [
+        "Regensburg"
+      ],
+      "governmentTerritories": [
+        "Ciudad imperial de Ratisbona"
+      ],
+      "sourceKeys": [
+        "regensburg"
+      ],
+      "precision": "documented_core",
+      "limitedCore": true,
+      "note": "Ratisbona recibió en 1245 el derecho de elegir alcalde y consejo. Conservó el estatuto imperial salvo la sujeción a Baviera-Múnich de 1486–1492. La sede episcopal y los enclaves eclesiásticos urbanos no son un ducado bávaro continuo. La celda aproxima el núcleo local; no equivale a toda la diócesis, provincia moderna o territorio de sus vecinos."
+    },
+    {
+      "name": "Ulm · gobierno urbano · 1255–1800 · ampliación germano-suiza",
+      "identity": "Ciudad imperial de Ulm",
+      "from": 1255,
+      "through": 1800,
+      "ids": [
+        "Ulm"
+      ],
+      "governmentTerritories": [
+        "Ciudad imperial de Ulm"
+      ],
+      "sourceKeys": [
+        "ulm",
+        "ulmEnd"
+      ],
+      "precision": "documented_core",
+      "limitedCore": true,
+      "note": "El contrato constitucional de 1255 documenta consejo, comunidad y autoridades imperiales en Ulm. La ciudad desarrolló un territorio propio y reformas de gobierno; el régimen imperial terminó en 1802. La celda aproxima el núcleo local; no equivale a toda la diócesis, provincia moderna o territorio de sus vecinos."
+    },
+    {
+      "name": "Fráncfort · ciudad imperial · 1372–1800 · ampliación germano-suiza",
+      "identity": "Ciudad imperial de Fráncfort",
+      "from": 1372,
+      "through": 1800,
+      "ids": [
+        "Frankfurt"
+      ],
+      "governmentTerritories": [
+        "Ciudad imperial de Fráncfort"
+      ],
+      "sourceKeys": [
+        "frankfurt"
+      ],
+      "precision": "documented_core",
+      "limitedCore": true,
+      "note": "Fráncfort adquirió en 1372 derechos imperiales y el bosque urbano, consolidando la condición de ciudad libre. Su consejo no era un gobierno hereditario de los príncipes vecinos. El estatuto continuó hasta 1806. La celda aproxima el núcleo local; no equivale a toda la diócesis, provincia moderna o territorio de sus vecinos."
+    },
+    {
+      "name": "Principado episcopal de Bamberg · 1200–1800 · ampliación germano-suiza",
+      "identity": "Principado episcopal de Bamberg",
+      "from": 1200,
+      "through": 1800,
+      "ids": [
+        "Bamberg"
+      ],
+      "governmentTerritories": [
+        "Principado episcopal de Bamberg"
+      ],
+      "sourceKeys": [
+        "bamberg"
+      ],
+      "precision": "documented_core",
+      "limitedCore": true,
+      "note": "Bamberg fue un territorio temporal de los obispos, con derechos y posesiones dispersos entre los dominios de otros poderes francones. Su diócesis espiritual y su principado secular no tenían la misma extensión. La celda aproxima el núcleo local; no equivale a toda la diócesis, provincia moderna o territorio de sus vecinos."
+    },
+    {
+      "name": "Principado episcopal de Würzburg · 1200–1800 · ampliación germano-suiza",
+      "identity": "Principado episcopal de Würzburg",
+      "from": 1200,
+      "through": 1800,
+      "ids": [
+        "Wurzburg"
+      ],
+      "governmentTerritories": [
+        "Principado episcopal de Würzburg"
+      ],
+      "sourceKeys": [
+        "wurzburg"
+      ],
+      "precision": "documented_core",
+      "limitedCore": true,
+      "note": "Los obispos de Würzburg reunieron dignidad ducal y señoríos temporales desde la Edad Media. Su territorio siguió fragmentado y representó solo parte de la diócesis espiritual. La celda aproxima el núcleo local; no equivale a toda la diócesis, provincia moderna o territorio de sus vecinos."
+    },
+    {
+      "name": "Principado episcopal de Eichstätt · 1200–1800 · ampliación germano-suiza",
+      "identity": "Principado episcopal de Eichstätt",
+      "from": 1200,
+      "through": 1800,
+      "ids": [
+        "Eichstatt"
+      ],
+      "governmentTerritories": [
+        "Principado episcopal de Eichstätt"
+      ],
+      "sourceKeys": [
+        "eichstatt"
+      ],
+      "precision": "documented_core",
+      "limitedCore": true,
+      "note": "El poder temporal de los obispos de Eichstätt se apoyó en regalías medievales. El territorio se consolidó especialmente desde el siglo XIV; el Oberstift y el Unterstift conservaron configuraciones diferentes. La celda aproxima el núcleo local; no equivale a toda la diócesis, provincia moderna o territorio de sus vecinos."
+    },
+    {
+      "name": "Principado episcopal de Freising · 1249–1800 · ampliación germano-suiza",
+      "identity": "Principado episcopal de Freising",
+      "from": 1249,
+      "through": 1800,
+      "ids": [
+        "Freising"
+      ],
+      "governmentTerritories": [
+        "Principado episcopal de Freising"
+      ],
+      "sourceKeys": [
+        "freising"
+      ],
+      "precision": "documented_core",
+      "limitedCore": true,
+      "note": "Freising conservó un señorío episcopal propio, separado de Baviera y confirmado en 1249. Sus adquisiciones alpinas y su diócesis espiritual no se agregan automáticamente al núcleo de la sede. La celda aproxima el núcleo local; no equivale a toda la diócesis, provincia moderna o territorio de sus vecinos."
+    },
+    {
+      "name": "Principado episcopal de Passau · 1220–1800 · ampliación germano-suiza",
+      "identity": "Principado episcopal de Passau",
+      "from": 1220,
+      "through": 1800,
+      "ids": [
+        "Passau"
+      ],
+      "governmentTerritories": [
+        "Principado episcopal de Passau"
+      ],
+      "sourceKeys": [
+        "passau"
+      ],
+      "precision": "documented_core",
+      "limitedCore": true,
+      "note": "El territorio temporal de los obispos de Passau se formó en los siglos XII y XIII. Los derechos condales de 1217–1220 consolidaron su núcleo, mientras Baviera avanzaba hasta sus murallas sin absorber la sede. La celda aproxima el núcleo local; no equivale a toda la diócesis, provincia moderna o territorio de sus vecinos."
+    },
+    {
+      "name": "Münster episcopal · 1200–1533 · ampliación germano-suiza",
+      "identity": "Principado episcopal de Münster",
+      "from": 1200,
+      "through": 1533,
+      "ids": [
+        "Munster"
+      ],
+      "governmentTerritories": [
+        "Principado episcopal de Münster"
+      ],
+      "sourceKeys": [
+        "munster"
+      ],
+      "precision": "documented_core",
+      "limitedCore": true,
+      "note": "Münster fue un estado eclesiástico con posesiones temporales distintas de toda la diócesis. La insurrección anabaptista de 1534–1535 rompió el control episcopal de la capital; después se restauró su gobierno. La celda aproxima el núcleo local; no equivale a toda la diócesis, provincia moderna o territorio de sus vecinos."
+    },
+    {
+      "name": "Münster · crisis anabaptista · 1534–1535 · ampliación germano-suiza",
+      "identity": "Principado episcopal de Münster",
+      "from": 1534,
+      "through": 1535,
+      "ids": [
+        "Munster"
+      ],
+      "governmentTerritories": [
+        "Principado episcopal de Münster"
+      ],
+      "sourceKeys": [
+        "munster",
+        "munsterRebel"
+      ],
+      "precision": "documented_core",
+      "limitedCore": true,
+      "note": "Capital bajo gobierno anabaptista y asedio episcopal; recuperación en junio de 1535. La resolución anual mantiene visible la disputa y no acredita control episcopal continuo de la ciudad. La celda aproxima el núcleo local; no equivale a toda la diócesis, provincia moderna o territorio de sus vecinos.",
+      "authorityCondition": "control disputado"
+    },
+    {
+      "name": "Münster episcopal restituido · 1536–1800 · ampliación germano-suiza",
+      "identity": "Principado episcopal de Münster",
+      "from": 1536,
+      "through": 1800,
+      "ids": [
+        "Munster"
+      ],
+      "governmentTerritories": [
+        "Principado episcopal de Münster"
+      ],
+      "sourceKeys": [
+        "munster",
+        "westphalia"
+      ],
+      "precision": "documented_core",
+      "limitedCore": true,
+      "note": "Münster fue un estado eclesiástico con posesiones temporales distintas de toda la diócesis. La insurrección anabaptista de 1534–1535 rompió el control episcopal de la capital; después se restauró su gobierno. La celda aproxima el núcleo local; no equivale a toda la diócesis, provincia moderna o territorio de sus vecinos."
+    },
+    {
+      "name": "Principado episcopal de Paderborn · 1648–1800 · ampliación germano-suiza",
+      "identity": "Principado episcopal de Paderborn",
+      "from": 1648,
+      "through": 1800,
+      "ids": [
+        "Paderborn"
+      ],
+      "governmentTerritories": [
+        "Principado episcopal de Paderborn"
+      ],
+      "sourceKeys": [
+        "paderborn",
+        "ghdi",
+        "ieg1792"
+      ],
+      "precision": "documented_core",
+      "limitedCore": true,
+      "note": "Paderborn conservó su carácter de territorio eclesiástico después de Westfalia. La ocupación prusiana y la secularización pertenecen a 1802–1803 y no se anticipan en el mapa de 1800. La celda aproxima el núcleo local; no equivale a toda la diócesis, provincia moderna o territorio de sus vecinos."
+    },
+    {
+      "name": "Principado episcopal de Osnabrück · 1648–1800 · ampliación germano-suiza",
+      "identity": "Principado episcopal de Osnabrück",
+      "from": 1648,
+      "through": 1800,
+      "ids": [
+        "Osnabruck"
+      ],
+      "governmentTerritories": [
+        "Principado episcopal de Osnabrück"
+      ],
+      "sourceKeys": [
+        "osnabruck",
+        "ghdi",
+        "ieg1792"
+      ],
+      "precision": "documented_core",
+      "limitedCore": true,
+      "note": "Osnabrück permaneció como principado episcopal. Desde Westfalia alternó obispos católicos con gobernantes protestantes de Brunswick-Luneburgo; esa alternancia no suprimió su identidad territorial. La celda aproxima el núcleo local; no equivale a toda la diócesis, provincia moderna o territorio de sus vecinos."
+    },
+    {
+      "name": "Principado episcopal de Hildesheim · 1648–1800 · ampliación germano-suiza",
+      "identity": "Principado episcopal de Hildesheim",
+      "from": 1648,
+      "through": 1800,
+      "ids": [
+        "Hildesheim"
+      ],
+      "governmentTerritories": [
+        "Principado episcopal de Hildesheim"
+      ],
+      "sourceKeys": [
+        "hildesheim",
+        "ghdi",
+        "ieg1792"
+      ],
+      "precision": "documented_core",
+      "limitedCore": true,
+      "note": "Hildesheim conservó un principado episcopal hasta la ocupación prusiana de 1802. El mapa representa la sede y no reincorpora los distritos perdidos por los obispos durante los conflictos del siglo XVI. La celda aproxima el núcleo local; no equivale a toda la diócesis, provincia moderna o territorio de sus vecinos."
+    },
+    {
+      "name": "Magdeburgo · arzobispado y administradores · 1200–1679 · ampliación germano-suiza",
+      "identity": "Arzobispado de Magdeburgo",
+      "from": 1200,
+      "through": 1679,
+      "ids": [
+        "Magdeburg"
+      ],
+      "governmentTerritories": [
+        "Arzobispado de Magdeburgo"
+      ],
+      "sourceKeys": [
+        "magdeburg"
+      ],
+      "precision": "documented_core",
+      "limitedCore": true,
+      "note": "El arzobispado y sus administradores ejercieron derechos temporales hasta 1680, con autonomía y conflictos urbanos. Después la jurisdicción se secularizó como ducado bajo Brandeburgo, ya representado por otra capa del atlas. La celda aproxima el núcleo local; no equivale a toda la diócesis, provincia moderna o territorio de sus vecinos."
+    },
+    {
+      "name": "Principado episcopal de Halberstadt · 1512–1647 · ampliación germano-suiza",
+      "identity": "Principado episcopal de Halberstadt",
+      "from": 1512,
+      "through": 1647,
+      "ids": [
+        "Halberstadt"
+      ],
+      "governmentTerritories": [
+        "Principado episcopal de Halberstadt"
+      ],
+      "sourceKeys": [
+        "ghdi",
+        "imperial1512",
+        "westphalia"
+      ],
+      "precision": "documented_core",
+      "limitedCore": true,
+      "note": "Núcleo de la jurisdicción episcopal anterior a Westfalia; no se anticipa la soberanía de Brandeburgo a 1648. La celda aproxima el núcleo local; no equivale a toda la diócesis, provincia moderna o territorio de sus vecinos."
+    },
+    {
+      "name": "Principado episcopal de Minden · 1512–1647 · ampliación germano-suiza",
+      "identity": "Principado episcopal de Minden",
+      "from": 1512,
+      "through": 1647,
+      "ids": [
+        "Minden"
+      ],
+      "governmentTerritories": [
+        "Principado episcopal de Minden"
+      ],
+      "sourceKeys": [
+        "ghdi",
+        "imperial1512",
+        "westphalia"
+      ],
+      "precision": "documented_core",
+      "limitedCore": true,
+      "note": "Núcleo de la jurisdicción episcopal anterior a Westfalia; no se anticipa la soberanía de Brandeburgo a 1648. La celda aproxima el núcleo local; no equivale a toda la diócesis, provincia moderna o territorio de sus vecinos."
+    },
+    {
+      "name": "Bremen · territorio arzobispal · 1512–1647 · ampliación germano-suiza",
+      "identity": "Arzobispado de Bremen",
+      "from": 1512,
+      "through": 1647,
+      "ids": [
+        "Bremervorde",
+        "Stade"
+      ],
+      "governmentTerritories": [
+        "Arzobispado de Bremen"
+      ],
+      "sourceKeys": [
+        "bremenDuchies",
+        "imperial1512"
+      ],
+      "precision": "documented_core",
+      "limitedCore": true,
+      "note": "El territorio secular del arzobispo de Bremen comprendía jurisdicciones del espacio Elba-Weser. No era idéntico a la ciudad libre de Bremen. Se secularizó en 1648 junto al principado episcopal de Verden. La celda aproxima el núcleo local; no equivale a toda la diócesis, provincia moderna o territorio de sus vecinos."
+    },
+    {
+      "name": "Verden · principado episcopal · 1512–1647 · ampliación germano-suiza",
+      "identity": "Principado episcopal de Verden",
+      "from": 1512,
+      "through": 1647,
+      "ids": [
+        "Verden"
+      ],
+      "governmentTerritories": [
+        "Principado episcopal de Verden"
+      ],
+      "sourceKeys": [
+        "bremenDuchies",
+        "imperial1512"
+      ],
+      "precision": "documented_core",
+      "limitedCore": true,
+      "note": "El territorio temporal del obispo de Verden se convirtió en ducado secular en Westfalia. Su trayectoria se distingue de la ciudad libre de Bremen y de la autoridad espiritual de ambos obispados. La celda aproxima el núcleo local; no equivale a toda la diócesis, provincia moderna o territorio de sus vecinos."
+    },
+    {
+      "name": "Bremen-Verden · gobierno sueco · 1648–1711 · ampliación germano-suiza",
+      "identity": "Ducados de Bremen-Verden",
+      "from": 1648,
+      "through": 1711,
+      "ids": [
+        "Bremervorde",
+        "Stade",
+        "Verden"
+      ],
+      "governmentTerritories": [
+        "Suecia"
+      ],
+      "sourceKeys": [
+        "bremenDuchies"
+      ],
+      "precision": "documented_core",
+      "limitedCore": true,
+      "note": "Bremen y Verden conservaron sus identidades ducales bajo una administración conjunta. Suecia los recibió en 1648; el cambio de gobierno a Hannover se hizo efectivo en 1715 y fue reconocido en 1719. La ciudad libre de Bremen queda excluida. La celda aproxima el núcleo local; no equivale a toda la diócesis, provincia moderna o territorio de sus vecinos."
+    },
+    {
+      "name": "Bremen-Verden · transición militar · 1712–1714 · ampliación germano-suiza",
+      "identity": "Ducados de Bremen-Verden",
+      "from": 1712,
+      "through": 1714,
+      "ids": [
+        "Bremervorde",
+        "Stade",
+        "Verden"
+      ],
+      "governmentTerritories": [
+        "Ducados de Bremen-Verden"
+      ],
+      "sourceKeys": [
+        "bremenDuchies",
+        "bremenHanover"
+      ],
+      "precision": "documented_core",
+      "limitedCore": true,
+      "note": "Transición militar tras el final del gobierno sueco; el control y los derechos se disputan antes de la administración hannoveriana de 1715. La celda aproxima el núcleo local; no equivale a toda la diócesis, provincia moderna o territorio de sus vecinos.",
+      "authorityCondition": "control disputado"
+    },
+    {
+      "name": "Bremen-Verden · administración de Hannover · 1715–1800 · ampliación germano-suiza",
+      "identity": "Ducados de Bremen-Verden",
+      "from": 1715,
+      "through": 1800,
+      "ids": [
+        "Bremervorde",
+        "Stade",
+        "Verden"
+      ],
+      "governmentTerritories": [
+        "Hannover"
+      ],
+      "sourceKeys": [
+        "bremenDuchies",
+        "bremenHanover"
+      ],
+      "precision": "documented_core",
+      "limitedCore": true,
+      "note": "Bremen y Verden conservaron sus identidades ducales bajo una administración conjunta. Suecia los recibió en 1648; el cambio de gobierno a Hannover se hizo efectivo en 1715 y fue reconocido en 1719. La ciudad libre de Bremen queda excluida. La celda aproxima el núcleo local; no equivale a toda la diócesis, provincia moderna o territorio de sus vecinos."
+    },
+    {
+      "name": "Ellwangen · prepositura · 1460–1800 · ampliación germano-suiza",
+      "identity": "Prepositura principesca de Ellwangen",
+      "from": 1460,
+      "through": 1800,
+      "ids": [
+        "Ellwangen"
+      ],
+      "governmentTerritories": [
+        "Prepositura principesca de Ellwangen"
+      ],
+      "sourceKeys": [
+        "ellwangen",
+        "ieg1792"
+      ],
+      "precision": "documented_core",
+      "limitedCore": true,
+      "note": "La transformación del monasterio en colegiata secular en 1460 dio lugar al gobierno de los príncipes prepósitos de Ellwangen. La prepositura fue un territorio eclesiástico propio del Imperio. La celda aproxima el núcleo local; no equivale a toda la diócesis, provincia moderna o territorio de sus vecinos."
+    },
+    {
+      "name": "Oldemburgo · gobierno condal · 1200–1666 · ampliación germano-suiza",
+      "identity": "Oldemburgo",
+      "from": 1200,
+      "through": 1666,
+      "ids": [
+        "Oldenburg"
+      ],
+      "governmentTerritories": [
+        "Oldemburgo"
+      ],
+      "sourceKeys": [
+        "oldenburg"
+      ],
+      "precision": "documented_core",
+      "limitedCore": true,
+      "note": "Oldemburgo conservó su identidad territorial bajo los condes, la Corona danesa desde 1667 y la nueva rama de Gottorp desde 1773. La unión de gobernante no lo convierte en una provincia idéntica a Schleswig o a Dinamarca. La celda aproxima el núcleo local; no equivale a toda la diócesis, provincia moderna o territorio de sus vecinos."
+    },
+    {
+      "name": "Oldemburgo · Corona danesa · 1667–1772 · ampliación germano-suiza",
+      "identity": "Oldemburgo",
+      "from": 1667,
+      "through": 1772,
+      "ids": [
+        "Oldenburg"
+      ],
+      "governmentTerritories": [
+        "Oldemburgo",
+        "Dinamarca"
+      ],
+      "sourceKeys": [
+        "oldenburg"
+      ],
+      "precision": "documented_core",
+      "limitedCore": true,
+      "note": "Oldemburgo conservó su identidad territorial bajo los condes, la Corona danesa desde 1667 y la nueva rama de Gottorp desde 1773. La unión de gobernante no lo convierte en una provincia idéntica a Schleswig o a Dinamarca. La celda aproxima el núcleo local; no equivale a toda la diócesis, provincia moderna o territorio de sus vecinos."
+    },
+    {
+      "name": "Oldemburgo · nueva rama de Gottorp · 1773–1800 · ampliación germano-suiza",
+      "identity": "Oldemburgo",
+      "from": 1773,
+      "through": 1800,
+      "ids": [
+        "Oldenburg"
+      ],
+      "governmentTerritories": [
+        "Oldemburgo"
+      ],
+      "sourceKeys": [
+        "oldenburg"
+      ],
+      "precision": "documented_core",
+      "limitedCore": true,
+      "note": "Oldemburgo conservó su identidad territorial bajo los condes, la Corona danesa desde 1667 y la nueva rama de Gottorp desde 1773. La unión de gobernante no lo convierte en una provincia idéntica a Schleswig o a Dinamarca. La celda aproxima el núcleo local; no equivale a toda la diócesis, provincia moderna o territorio de sus vecinos."
+    },
+    {
+      "name": "Frisia Oriental · Cirksena · 1464–1743 · ampliación germano-suiza",
+      "identity": "Frisia Oriental",
+      "from": 1464,
+      "through": 1743,
+      "ids": [
+        "Aurich"
+      ],
+      "governmentTerritories": [
+        "Frisia Oriental"
+      ],
+      "sourceKeys": [
+        "eastFrisia"
+      ],
+      "precision": "documented_core",
+      "limitedCore": true,
+      "note": "La casa Cirksena gobernó Frisia Oriental desde la elevación condal de 1464 hasta su extinción en 1744. Emden conservó libertades urbanas propias; después el territorio pasó a Prusia. La celda aproxima el núcleo local; no equivale a toda la diócesis, provincia moderna o territorio de sus vecinos."
+    },
+    {
+      "name": "Frisia Oriental · administración prusiana · 1744–1800 · ampliación germano-suiza",
+      "identity": "Frisia Oriental",
+      "from": 1744,
+      "through": 1800,
+      "ids": [
+        "Aurich",
+        "Emden"
+      ],
+      "governmentTerritories": [
+        "Prusia"
+      ],
+      "sourceKeys": [
+        "eastFrisia",
+        "eastPrussia"
+      ],
+      "precision": "documented_core",
+      "limitedCore": true,
+      "note": "La casa Cirksena gobernó Frisia Oriental desde la elevación condal de 1464 hasta su extinción en 1744. Emden conservó libertades urbanas propias; después el territorio pasó a Prusia. La celda aproxima el núcleo local; no equivale a toda la diócesis, provincia moderna o territorio de sus vecinos."
+    },
+    {
+      "name": "Ansbach · margraviato · 1398–1791 · ampliación germano-suiza",
+      "identity": "Ansbach",
+      "from": 1398,
+      "through": 1791,
+      "ids": [
+        "Ansbach"
+      ],
+      "governmentTerritories": [
+        "Ansbach"
+      ],
+      "sourceKeys": [
+        "ansbach",
+        "bayreuth"
+      ],
+      "precision": "documented_core",
+      "limitedCore": true,
+      "note": "Ansbach fue un territorio de los Hohenzollern de Franconia, distinto de la ciudad imperial de Núremberg y de Brandeburgo. La cesión de 1791 dio paso a la administración prusiana desde 1792. La celda aproxima el núcleo local; no equivale a toda la diócesis, provincia moderna o territorio de sus vecinos."
+    },
+    {
+      "name": "Ansbach · administración prusiana · 1792–1800 · ampliación germano-suiza",
+      "identity": "Ansbach",
+      "from": 1792,
+      "through": 1800,
+      "ids": [
+        "Ansbach"
+      ],
+      "governmentTerritories": [
+        "Prusia"
+      ],
+      "sourceKeys": [
+        "ansbach",
+        "bayreuth"
+      ],
+      "precision": "documented_core",
+      "limitedCore": true,
+      "note": "Ansbach fue un territorio de los Hohenzollern de Franconia, distinto de la ciudad imperial de Núremberg y de Brandeburgo. La cesión de 1791 dio paso a la administración prusiana desde 1792. La celda aproxima el núcleo local; no equivale a toda la diócesis, provincia moderna o territorio de sus vecinos."
+    },
+    {
+      "name": "Bayreuth-Kulmbach · margraviato · 1398–1791 · ampliación germano-suiza",
+      "identity": "Bayreuth-Kulmbach",
+      "from": 1398,
+      "through": 1791,
+      "ids": [
+        "Bayreuth",
+        "Kulmbach"
+      ],
+      "governmentTerritories": [
+        "Bayreuth-Kulmbach"
+      ],
+      "sourceKeys": [
+        "bayreuth"
+      ],
+      "precision": "documented_core",
+      "limitedCore": true,
+      "note": "El margraviato de Kulmbach-Bayreuth fue un estado franconio separado de Ansbach y de la ciudad imperial de Núremberg. Su cesión a Prusia en 1791–1792 no unificó retrospectivamente todos los territorios de la familia. La celda aproxima el núcleo local; no equivale a toda la diócesis, provincia moderna o territorio de sus vecinos."
+    },
+    {
+      "name": "Bayreuth-Kulmbach · administración prusiana · 1792–1800 · ampliación germano-suiza",
+      "identity": "Bayreuth-Kulmbach",
+      "from": 1792,
+      "through": 1800,
+      "ids": [
+        "Bayreuth",
+        "Kulmbach"
+      ],
+      "governmentTerritories": [
+        "Prusia"
+      ],
+      "sourceKeys": [
+        "bayreuth"
+      ],
+      "precision": "documented_core",
+      "limitedCore": true,
+      "note": "El margraviato de Kulmbach-Bayreuth fue un estado franconio separado de Ansbach y de la ciudad imperial de Núremberg. Su cesión a Prusia en 1791–1792 no unificó retrospectivamente todos los territorios de la familia. La celda aproxima el núcleo local; no equivale a toda la diócesis, provincia moderna o territorio de sus vecinos."
+    },
+    {
+      "name": "San Galo · ciudad y abadía · 1454–1797 · ampliación germano-suiza",
+      "identity": "San Galo · ciudad y abadía",
+      "from": 1454,
+      "through": 1797,
+      "ids": [
+        "St_Gallen"
+      ],
+      "governmentTerritories": [
+        "Ciudad de San Galo",
+        "Abadía principesca de San Galo"
+      ],
+      "sourceKeys": [
+        "stgallen",
+        "stgallenCity"
+      ],
+      "precision": "documented_core",
+      "limitedCore": true,
+      "note": "La celda de San Galo contiene la ciudad libre y el centro del principado abacial. Ambos se muestran como jurisdicciones compartidas en la escala del mapa, sin fundirlos en el cantón de San Galo, creado en 1803. La celda aproxima el núcleo local; no equivale a toda la diócesis, provincia moderna o territorio de sus vecinos."
+    },
+    {
+      "name": "Toggenburgo · señorío abacial · 1468–1797 · ampliación germano-suiza",
+      "identity": "Condado de Toggenburgo",
+      "from": 1468,
+      "through": 1797,
+      "ids": [
+        "Toggenburg"
+      ],
+      "governmentTerritories": [
+        "Condado de Toggenburgo",
+        "Abadía principesca de San Galo"
+      ],
+      "sourceKeys": [
+        "toggenburg"
+      ],
+      "precision": "documented_core",
+      "limitedCore": true,
+      "note": "Jurisdicción documentada. La celda aproxima el núcleo local; no equivale a toda la diócesis, provincia moderna o territorio de sus vecinos."
+    },
+    {
+      "name": "San Galo y Toggenburgo · marco helvético · 1798–1800 · ampliación germano-suiza",
+      "identity": "República Helvética",
+      "from": 1798,
+      "through": 1800,
+      "ids": [
+        "St_Gallen",
+        "Toggenburg"
+      ],
+      "governmentTerritories": [
+        "República Helvética"
+      ],
+      "sourceKeys": [
+        "helvetic",
+        "stgallen",
+        "toggenburg"
+      ],
+      "precision": "documented_core",
+      "limitedCore": true,
+      "note": "Jurisdicción documentada. La celda aproxima el núcleo local; no equivale a toda la diócesis, provincia moderna o territorio de sus vecinos."
+    }
+  ],
+  "sources": {
+    "schleswig": {
+      "title": "Gesellschaft für Schleswig-Holsteinische Geschichte · Gottorfer",
+      "url": "https://geschichte-s-h.de/sh-von-a-bis-z/g/gottorfer/",
+      "locator": "Partición de 1544; ocupación danesa del Schleswig de Gottorp en 1713 y reunión jurídica en 1721; residencia ducal trasladada a Kiel."
+    },
+    "holstein": {
+      "title": "Gesellschaft für Schleswig-Holsteinische Geschichte · Gesamtstaat",
+      "url": "https://geschichte-s-h.de/sh-von-a-bis-z/g/gesamtstaat/",
+      "locator": "Partes reales y ducales; ocupación de Schleswig en 1713 y tratado de Tsárskoye Seló de 1773: reunión de Holstein bajo la Corona danesa."
+    },
+    "potsdam": {
+      "title": "Landeshauptstadt Potsdam · Stadtgeschichte",
+      "url": "https://www.potsdam.de/system/files/documents/statistischerjahresbericht2015_online_0.pdf",
+      "locator": "Historia de la ciudad: en 1415 Potsdam pasa a los Hohenzollern y permanece bajo ellos hasta el final de la monarquía."
+    },
+    "schwyz": {
+      "title": "Historisches Lexikon der Schweiz · Schwyz (Kanton)",
+      "url": "https://hls-dhs-dss.ch/articles/007385",
+      "locator": "Comunidad de una de las Waldstätten; vínculos de 1291/1309 y pertenencia segura en 1315. En 1798 se incorpora a la República Helvética; no se anticipan las adquisiciones cantonales a la celda del núcleo."
+    },
+    "lucerna": {
+      "title": "Stadt Luzern · Luzern 1178 bis 1386",
+      "url": "https://www.stadtluzern.ch/_doc/342101",
+      "locator": "Alianza de Lucerna con las Waldstätten en 1332. Celda del núcleo urbano; no fronteras del cantón actual."
+    },
+    "lucerna1798": {
+      "title": "Stadt Luzern · Luzern 1521 bis 1798",
+      "url": "https://www.stadtluzern.ch/_doc/342109",
+      "locator": "1798: llegada de la Revolución francesa y final del antiguo régimen de Lucerna."
+    },
+    "zurich": {
+      "title": "Stadt Zürich · Meilensteine der Stadtentwicklung",
+      "url": "https://www.stadt-zuerich.ch/content/dam/web/de/bildung/volksschule/unterricht/gang-dur-zueri/zuerich-waechst-frueher-heute-morgen/d.8.1.-meilensteine-der-stadtentwicklung-lp.pdf",
+      "locator": "Alianza de 1351; constitución gremial de Rudolf Brun hasta 1798. Se representa el núcleo urbano, no el cantón moderno."
+    },
+    "kyburg": {
+      "title": "Historisches Lexikon der Schweiz · Illnau-Effretikon",
+      "url": "https://hls-dhs-dss.ch/de/articles/000119/2017-05-18/",
+      "locator": "Kyburg bajo Zúrich en 1424 y definitivamente desde 1452; bailía hasta 1798. Se adopta 1452 para la incorporación permanente."
+    },
+    "schaffhausen": {
+      "title": "Historisches Lexikon der Schweiz · Schaffhausen (Gemeinde)",
+      "url": "https://hls-dhs-dss.ch/de/articles/001281/2015-07-31/",
+      "locator": "Adhesión confederal en 1501; gobierno de los consejos urbanos hasta 1798."
+    },
+    "baden": {
+      "title": "Historisches Lexikon der Schweiz · Baden (Grafschaft, Bezirk)",
+      "url": "https://hls-dhs-dss.ch/articles/008296/2002-11-27/",
+      "locator": "Bailía habsbúrgica hasta 1415; señorío común de los cantones de 1415 a 1798; distrito helvético desde 1798."
+    },
+    "frauenfeld": {
+      "title": "Historisches Lexikon der Schweiz · Frauenfeld",
+      "url": "https://hls-dhs-dss.ch/articles/001898/2021-01-15/",
+      "locator": "Paso definitivo a los cantones confederados en 1460. La constitución de 1798 convierte Frauenfeld en capital del cantón helvético de Turgovia."
+    },
+    "helvetic": {
+      "title": "Historisches Lexikon der Schweiz · Eidgenossenschaft",
+      "url": "https://hls-dhs-dss.ch/de/articles/026413/2012-02-08/",
+      "locator": "La antigua Confederación fue reemplazada por la República Helvética centralizada en 1798–1803. Se distingue la institución de la ocupación y de los gobiernos cantonales anteriores."
+    },
+    "ghdi": {
+      "title": "German Historical Institute · Europa central en 1648",
+      "url": "https://germanhistorydocs.org/en/from-the-reformations-to-the-thirty-years-war-1500-1648/central-europe-1648",
+      "locator": "Mapa y explicación de la fragmentación imperial; obispados y ciudades separados de los grandes principados; Bremen-Verden, Magdeburgo y ganancias de Brandeburgo. Es una referencia de 1648, no prueba por sí sola una atribución medieval."
+    },
+    "ieg1792": {
+      "title": "IEG-MAPS · Alemania en 1792",
+      "url": "https://www.ieg-maps.uni-mainz.de/mapsp/mapp792d.htm",
+      "locator": "Mapa de los estados territoriales al 1 de enero de 1792; consolidación de Hannover, expansión prusiana, obispados y ciudades imperiales. No se anticipan las secularizaciones de 1802/1803."
+    },
+    "lubeck": {
+      "title": "Gesellschaft für Schleswig-Holsteinische Geschichte · Lübeck y su carta de libertad",
+      "url": "https://geschichte-s-h.de/aktuelles/luebeck-feiert-800-jahre-reichsfreiheitsbrief/",
+      "locator": "Federico II eleva Lübeck a ciudad imperial libre en 1226; su estatuto separado continúa durante todo el intervalo del atlas."
+    },
+    "hamburg": {
+      "title": "Geschichtsbuch Hamburg · Gobierno del consejo y estatuto imperial",
+      "url": "https://geschichtsbuch.hamburg.de/wp-content/uploads/sites/255/2018/11/AB-SEK-II-Macht-und-Herrschaft-1683-bis-1712-FINAL.pdf",
+      "locator": "Sentencia del Reichskammergericht de 1618: ciudad imperial libre; Dinamarca continúa disputando ese estatuto. No se equipara la pretensión ducal a gobierno efectivo del consejo."
+    },
+    "bremenCity": {
+      "title": "Staatsarchiv Bremen · Selbständigkeit",
+      "url": "https://www.staatsarchiv.bremen.de/entdecken/geschichten-aus-der-landesgeschichte/epochenuebergreifend/selbstaendigkeit-1750",
+      "locator": "Derecho urbano propio desde el privilegio de 1186; reconocimiento definitivo como ciudad imperial libre en el diploma de Linz de 1646. La ciudad se distingue del arzobispado y del ducado sueco."
+    },
+    "nuremberg": {
+      "title": "Historisches Lexikon Bayerns · Núremberg, historia política",
+      "url": "https://www.historisches-lexikon-bayerns.de/Lexikon/Artikel_45427",
+      "locator": "Privilegio de 1219; formación del autogobierno en el XIII; expulsión progresiva de los burgraves entre 1385 y 1427; ampliación territorial de 1505. No se atribuye la ciudad al margrave de Ansbach."
+    },
+    "augsburg": {
+      "title": "Historisches Lexikon Bayerns · Augsburgo, historia política",
+      "url": "https://www.historisches-lexikon-bayerns.de/Lexikon/Artikel_45414",
+      "locator": "Privilegios de 1276 y 1294 y evolución hacia autonomía imperial; ciudad distinta del principado episcopal; incorporación a Baviera posterior al límite de 1800."
+    },
+    "dillingen": {
+      "title": "Historisches Lexikon Bayerns · Principado episcopal de Augsburgo, administración",
+      "url": "https://www.historisches-lexikon-bayerns.de/Lexikon/Augsburg%2C_Hochstift%3A_Verwaltung",
+      "locator": "Administración del Hochstift con residencia en Dillingen; referencias a su gobierno episcopal de 1258–1802. No se identifica la ciudad libre de Augsburgo con el territorio secular del obispo."
+    },
+    "regensburg": {
+      "title": "Stadt Regensburg · Anuario estadístico, cronología histórica",
+      "url": "https://www.regensburg.de/fm/121/jahrbuch-2016.pdf",
+      "locator": "1245: privilegio de autogobierno y condición de ciudad imperial hasta 1803. Sujeción temporal a Baviera-Múnich en 1486–1492; retorno al Imperio tras el arbitraje de Augsburgo. La escala del mapa no separa todos los enclaves eclesiásticos urbanos."
+    },
+    "ulm": {
+      "title": "Historisches Lexikon Bayerns · Ulm, ciudad imperial",
+      "url": "https://www.historisches-lexikon-bayerns.de/Lexikon/Ulm%2C_Reichsstadt",
+      "locator": "Contrato constitucional de 1255 entre consejo, comunidad y autoridades imperiales. Complementa el archivo municipal, que fecha el final de la ciudad imperial en 1802."
+    },
+    "ulmEnd": {
+      "title": "Stadtarchiv Ulm · Constitución, administración y sociedad",
+      "url": "https://stadtarchiv.ulm.de/ulmer-geschichte-im-netz/verfassung-verwaltung-gesellschaft",
+      "locator": "Gobierno del consejo en época imperial, reforma constitucional de 1558 y final del régimen en 1802, fuera del período de este atlas."
+    },
+    "frankfurt": {
+      "title": "Stadt Frankfurt · 650 años del bosque urbano",
+      "url": "https://frankfurt.de/themen/umwelt-und-gruen/orte/wald/650-jahre-frankfurter-stadtwald",
+      "locator": "Adquisición de derechos imperiales y bosque en 1372; ciudad libre hasta 1806. No se presenta la residencia imperial como un principado patrimonial."
+    },
+    "munster": {
+      "title": "LWL, Westfälische Geschichte · Principado episcopal de Münster",
+      "url": "https://www.lwl.org/westfaelische-geschichte/portal/Internet/finde/langDatensatz.php?urlID=109&url_tabelle=tab_websegmente",
+      "locator": "Poder territorial episcopal desde la expansión posterior a 1180 y hasta la secularización de 1802; no corresponde a toda la extensión espiritual de la diócesis."
+    },
+    "munsterRebel": {
+      "title": "LWL, Westfälische Geschichte · Münster, 1534–1535",
+      "url": "https://www.lwl.org/westfaelische-geschichte/portal/Internet/finde/langDatensatz.php?urlID=890&url_tabelle=tab_chronologie",
+      "locator": "Predominio anabaptista desde comienzos de 1534; asedio episcopal y recuperación de la ciudad en junio de 1535. La versión anual de 1535 conserva la transición como disputa."
+    },
+    "westphalia": {
+      "title": "LWL, Westfälische Geschichte · Paz de Westfalia",
+      "url": "https://www.lwl.org/westfaelische-geschichte/portal/Internet/finde/langDatensatz.php?urlID=795&url_tabelle=tab_chronologie&url_zaehler_blaettern=36",
+      "locator": "Münster y Paderborn permanecen como territorios eclesiásticos en 1648; Minden se seculariza y pasa a Brandeburgo. No se atribuyen todos los obispados occidentales a Prusia."
+    },
+    "paderborn": {
+      "title": "LWL · Fondos del principado episcopal de Paderborn",
+      "url": "https://www.lwl.org/westfaelische-geschichte/portal/Internet/finde/langDatensatz.php?urlID=300&url_tabelle=tab_quelle",
+      "locator": "Documentación del Hochstift Paderborn y referencias institucionales hasta 1802; complementa su presencia como estado eclesiástico en los mapas de 1648 y 1792."
+    },
+    "osnabruck": {
+      "title": "Niedersächsisches Landesarchiv · Osnabrück, Rep 110",
+      "url": "https://www.arcinsys.niedersachsen.de/arcinsys/showFondsDetails.action?fondsId=3025",
+      "locator": "Alternancia episcopal y derechos de Brunswick-Luneburgo en Osnabrück entre 1648 y 1802. La alternancia confesional no convierte todo el principado en un dominio hereditario de Hannover."
+    },
+    "hildesheim": {
+      "title": "Niedersächsisches Landesarchiv · Hildesheim, Hild. Br. 10",
+      "url": "https://www.arcinsys.niedersachsen.de/arcinsys/showFondsDetails.action?fondsId=1167",
+      "locator": "Principado episcopal hasta la ocupación prusiana de 1802 y abolición de 1803; la celda limita el mapa a la sede, sin restituir a los obispos los territorios perdidos en 1519."
+    },
+    "magdeburg": {
+      "title": "Landesarchiv Sachsen-Anhalt · Fondos del arzobispado de Magdeburgo",
+      "url": "https://landesarchiv.sachsen-anhalt.de/fileadmin/Bibliothek/Politik_und_Verwaltung/MI/LHA/Bibliothek_LHA/01._Startseite/2020/2020-12-21_Archive_in_Sachsen-Anhalt_2020/magazin_201203.pdf",
+      "locator": "Arzobispado desde 968 hasta su secularización en 1680; después, ducado de Magdeburgo bajo Brandeburgo. La ciudad tuvo autonomía y conflictos con el arzobispo; el núcleo no acredita dominio uniforme de toda su diócesis."
+    },
+    "bremenDuchies": {
+      "title": "Niedersächsisches Landesarchiv · Archivo sueco de Bremen-Verden",
+      "url": "https://www.arcinsys.niedersachsen.de/arcinsys/showFondsDetails?fondsId=4192",
+      "locator": "Territorios eclesiásticos secularizados en 1648; gobierno sueco hasta 1712/1715 y cesión definitiva a Hannover en 1719. La ciudad libre de Bremen queda fuera del ducado."
+    },
+    "bremenHanover": {
+      "title": "Niedersächsisches Landesarchiv · Jurisdicción superior de Bremen-Verden",
+      "url": "https://www.arcinsys.niedersachsen.de/arcinsys/showFondsDetails.action?fondsId=4091&request_locale=de",
+      "locator": "Bremen y Verden se transfieren a Suecia en 1648; desde 1715 se emplea el tribunal de Celle para la región, ya hannoveriana. Se diferencia el cambio efectivo de 1715 del reconocimiento de 1719."
+    },
+    "bamberg": {
+      "title": "Historisches Lexikon Bayerns · Bamberg, territorio secular",
+      "url": "https://www.historisches-lexikon-bayerns.de/Lexikon/Artikel_45672",
+      "locator": "Formación medieval y fragmentación del Hochstift; derechos superpuestos con Núremberg, Brandeburgo-Kulmbach y caballería imperial. Secularización solo en 1802/1803."
+    },
+    "wurzburg": {
+      "title": "Historisches Lexikon Bayerns · Würzburg, territorio secular",
+      "url": "https://www.historisches-lexikon-bayerns.de/Lexikon/Artikel_45706",
+      "locator": "Poder temporal episcopal y dignidad ducal de 1168; posesiones distintas de toda la diócesis. Recuperación de la autoridad urbana en 1400; no se dibujan límites de un territorio homogéneo."
+    },
+    "eichstatt": {
+      "title": "Historisches Lexikon Bayerns · Eichstätt, territorio secular",
+      "url": "https://www.historisches-lexikon-bayerns.de/Lexikon/Artikel_45674",
+      "locator": "Poderes temporales desde la Edad Media; expansión continuada desde el XIV, Unterstift y Oberstift distintos; secularización de 1802 y particiones posteriores. La celda solo representa la sede."
+    },
+    "freising": {
+      "title": "Historisches Lexikon Bayerns · Freising, historia política medieval",
+      "url": "https://www.historisches-lexikon-bayerns.de/Lexikon/Freising%2C_Bistum%3A_Politische_Geschichte_%28Sp%C3%A4tmittelalter%29",
+      "locator": "La sede episcopal no era territorio ducal, confirmado en 1249; adquisiciones de Garmisch, Burgrain y Partenkirchen por separado. Freising se excluye de las superficies genéricas de Baviera desde 1249."
+    },
+    "passau": {
+      "title": "Historisches Lexikon Bayerns · Passau, territorio secular",
+      "url": "https://www.historisches-lexikon-bayerns.de/Lexikon/Artikel_45683",
+      "locator": "Formación del territorio temporal en los siglos XII–XIII y derechos condales de 1217/1220; expansión bávara hasta sus murallas en 1262. La sede no se confunde con toda Baviera ni con la diócesis espiritual de Passau."
+    },
+    "ellwangen": {
+      "title": "Landesarchiv Baden-Württemberg · Archivnachrichten 31",
+      "url": "https://www.landesarchiv-bw.de/sixcms/media.php/120/archivnachrichten_31.pdf",
+      "locator": "Transformación del monasterio de Ellwangen en colegiata secular en 1460. El núcleo se fecha desde esa transformación; no se proyecta hacia atrás el título de príncipe prepósito."
+    },
+    "oldenburg": {
+      "title": "Stadt Oldenburg · Historia del gobierno y los ayuntamientos",
+      "url": "https://www.oldenburg.de/startseite/kultur/stadtportrait/zeitgeschichte/oldenburger-rathaeuser.html",
+      "locator": "Gobierno de los condes; paso a la Corona danesa tras Antonio Gunter en 1667; independencia bajo Federico Augusto por el intercambio de 1773. Se conserva la identidad de Oldemburgo en las tres etapas."
+    },
+    "eastFrisia": {
+      "title": "Ostfriesische Landschaft · Cirksena",
+      "url": "https://bibliothek.ostfriesischelandschaft.de/ausstellungen/cirksena/",
+      "locator": "Elevación de Frisia Oriental a condado en 1464 y gobierno de los Cirksena hasta la extinción de 1744; cronología de sus gobernantes y regencias."
+    },
+    "eastPrussia": {
+      "title": "Ostfriesische Landschaft · Emden",
+      "url": "https://archaeologie.ostfriesischelandschaft.de/wp-content/uploads/sites/4/dateiarchiv/744/Emden_2017_%5BBK_fNZ%5D.pdf",
+      "locator": "Emden como residencia de los condes en 1464–1595; Frisia Oriental pasa a Prusia en 1744. Las libertades de la ciudad no equivalen a soberanía personal de un príncipe distinto sobre todo el condado."
+    },
+    "ansbach": {
+      "title": "Historisches Lexikon Bayerns · Ansbach, territorio y administración",
+      "url": "https://www.historisches-lexikon-bayerns.de/Lexikon/Artikel_45043",
+      "locator": "Estado territorial de los margraves de Ansbach, enclaves de Núremberg y otros poderes; transición a Prusia y reorganización por Hardenberg en 1792. El núcleo no absorbe todos los territorios de los Hohenzollern en Franconia."
+    },
+    "bayreuth": {
+      "title": "Historisches Lexikon Bayerns · Bayreuth-Kulmbach, territorio y administración",
+      "url": "https://www.historisches-lexikon-bayerns.de/Lexikon/Artikel_45125",
+      "locator": "Particiones de la herencia de los burgraves y organización documentada en 1398; margraviato de Kulmbach-Bayreuth hasta la cesión de 1791/1792 a la Corona prusiana."
+    },
+    "stgallen": {
+      "title": "Historisches Lexikon der Schweiz · San Galo, cantón histórico",
+      "url": "https://hls-dhs-dss.ch/de/articles/007390/2017-05-11/",
+      "locator": "Abadía y ciudad como asociados confederados desde 1451 y 1454, respectivamente; doce estados territoriales en la región en época moderna. No se proyecta el cantón creado en 1803 sobre toda esta zona."
+    },
+    "stgallenCity": {
+      "title": "Historisches Lexikon der Schweiz · San Galo, ciudad",
+      "url": "https://hls-dhs-dss.ch/de/articles/001321/2012-01-06/",
+      "locator": "Alianza de 1454; compra de derechos a la abadía en 1457 y conflictos de 1489–1490. La ciudad libre y el principado abacial permanecen distintos."
+    },
+    "toggenburg": {
+      "title": "Historisches Lexikon der Schweiz · Lichtensteig",
+      "url": "https://hls-dhs-dss.ch/de/articles/001384/2008-11-27/",
+      "locator": "Compra de Toggenburgo por la abadía de San Galo en 1468; Lichtensteig es sede de su bailío hasta 1798. Se mantiene la identidad del condado bajo el nuevo señor."
+    },
+    "imperial1512": {
+      "title": "German Historical Institute · Círculos imperiales hacia 1512",
+      "url": "https://germanhistorydocs.org/en/from-the-reformations-to-the-thirty-years-war-1500-1648/ghdi:map-2809",
+      "locator": "Referencia cartográfica de la organización imperial hacia 1512. Los obispados y principados conservan su integridad; los círculos no equivalen a una propiedad territorial del emperador."
+    }
+  },
+  "limitations": [
+    "Ampliación de fichas, instituciones y núcleos documentados: no equivale a una reconstrucción exhaustiva de todos los enclaves de Alemania o Suiza.",
+    "Schleswig-Holstein conserva sus identidades y las jurisdicciones compartidas. Los mapas personales de Gottorp se restringen al núcleo documentado de Kiel, sin adjudicarles las partes reales.",
+    "Las incorporaciones de Schwyz, Lucerna, Zúrich y Schaffhausen son anclas de cobertura, no fechas de fundación de las comunidades. Kyburg usa la adquisición permanente de 1452; no representa el empeño anterior.",
+    "Poznan ya está representada en las revisiones polacas: permanece polaca hasta 1792 y prusiana desde 1793; no se duplica su capa.",
+    "Las nuevas fichas de ciudades y principados eclesiásticos no inventan una lista de obispos o magistrados personales: el inspector muestra evidencia institucional regional.",
+    "Paderborn, Osnabrück e Hildesheim se cartografían desde el ancla de 1648; sus mapas medievales necesitan una revisión propia. Minden, Halberstadt y Bremen-Verden conservan anclas de revisión tempranomoderna separadas de los cambios de Westfalia.",
+    "Freising y Passau se excluyen del ducado genérico de Baviera desde sus anclas documentadas. Ratisbona conserva la excepción de su sujeción a Baviera-Múnich entre 1486 y 1491.",
+    "San Galo se representa como una celda de ciudad y abadía, con fichas distintas para ambas jurisdicciones. No se proyecta sobre ella el cantón creado en 1803.",
+    "La precedencia se limita al espacio y fechas de cada fase. Si una fase nueva todavía no existe o ya terminó, las revisiones anteriores siguen disponibles; no se borra toda una región durante seis siglos."
+  ],
+  "authorityScopes": [
+    {
+      "personId": "ADOLFHOLGOTT",
+      "territory": "Holstein",
+      "from": 1544,
+      "through": 1739,
+      "ids": [
+        "Kiel"
+      ],
+      "sourceKeys": [
+        "schleswig",
+        "holstein"
+      ],
+      "note": "Núcleo de Kiel de la rama de Gottorp; no incluye las partes reales ni todo Schleswig. El mandato individual limita sus propias fechas."
+    },
+    {
+      "personId": "JOHNADOLFGOTT",
+      "territory": "Holstein",
+      "from": 1544,
+      "through": 1739,
+      "ids": [
+        "Kiel"
+      ],
+      "sourceKeys": [
+        "schleswig",
+        "holstein"
+      ],
+      "note": "Núcleo de Kiel de la rama de Gottorp; no incluye las partes reales ni todo Schleswig. El mandato individual limita sus propias fechas."
+    },
+    {
+      "personId": "FRED3HOLGOTT",
+      "territory": "Holstein",
+      "from": 1544,
+      "through": 1739,
+      "ids": [
+        "Kiel"
+      ],
+      "sourceKeys": [
+        "schleswig",
+        "holstein"
+      ],
+      "note": "Núcleo de Kiel de la rama de Gottorp; no incluye las partes reales ni todo Schleswig. El mandato individual limita sus propias fechas."
+    },
+    {
+      "personId": "CHRISTIANALBERTHG",
+      "territory": "Holstein",
+      "from": 1544,
+      "through": 1739,
+      "ids": [
+        "Kiel"
+      ],
+      "sourceKeys": [
+        "schleswig",
+        "holstein"
+      ],
+      "note": "Núcleo de Kiel de la rama de Gottorp; no incluye las partes reales ni todo Schleswig. El mandato individual limita sus propias fechas."
+    },
+    {
+      "personId": "FRED4HOLGOTT",
+      "territory": "Holstein",
+      "from": 1544,
+      "through": 1739,
+      "ids": [
+        "Kiel"
+      ],
+      "sourceKeys": [
+        "schleswig",
+        "holstein"
+      ],
+      "note": "Núcleo de Kiel de la rama de Gottorp; no incluye las partes reales ni todo Schleswig. El mandato individual limita sus propias fechas."
+    },
+    {
+      "personId": "CHARLESFREDHG",
+      "territory": "Holstein",
+      "from": 1544,
+      "through": 1739,
+      "ids": [
+        "Kiel"
+      ],
+      "sourceKeys": [
+        "schleswig",
+        "holstein"
+      ],
+      "note": "Núcleo de Kiel de la rama de Gottorp; no incluye las partes reales ni todo Schleswig. El mandato individual limita sus propias fechas."
+    }
+  ],
+  "entities": {
+    "Ciudad imperial de Lübeck": {
+      "clase": "gobierno",
+      "naturaleza": "entidad",
+      "componentes": [],
+      "nota": "Lübeck conservó un gobierno urbano propio y un estatuto imperial desde la carta de Federico II de 1226. No formaba parte del ducado de Holstein ni del principado episcopal vecino.",
+      "resumen": "Lübeck conservó un gobierno urbano propio y un estatuto imperial desde la carta de Federico II de 1226. No formaba parte del ducado de Holstein ni del principado episcopal vecino.",
+      "sourceKeys": [
+        "lubeck"
+      ],
+      "evolucion": [
+        {
+          "anio": 1226,
+          "texto": "Carta de libertad imperial de Federico II."
+        }
+      ],
+      "existing": false,
+      "mapFrom": 1226,
+      "mapThrough": 1800
+    },
+    "Ciudad de Hamburgo": {
+      "clase": "gobierno",
+      "naturaleza": "entidad",
+      "componentes": [],
+      "nota": "El consejo de Hamburgo gobernaba una ciudad cuyo estatuto imperial fue confirmado en 1618 y siguió siendo disputado por los reyes de Dinamarca como duques de Holstein. El mapa conserva su gobierno urbano separado.",
+      "resumen": "El consejo de Hamburgo gobernaba una ciudad cuyo estatuto imperial fue confirmado en 1618 y siguió siendo disputado por los reyes de Dinamarca como duques de Holstein. El mapa conserva su gobierno urbano separado.",
+      "sourceKeys": [
+        "hamburg"
+      ],
+      "evolucion": [
+        {
+          "anio": 1618,
+          "texto": "Sentencia que confirma la condición de ciudad imperial libre."
+        }
+      ],
+      "existing": false,
+      "mapFrom": 1618,
+      "mapThrough": 1800
+    },
+    "Ciudad de Bremen": {
+      "clase": "gobierno",
+      "naturaleza": "entidad",
+      "componentes": [],
+      "nota": "La ciudad de Bremen desarrolló derechos propios desde el privilegio de 1186. Su libertad imperial recibió reconocimiento definitivo en 1646. El arzobispado y los ducados de Bremen-Verden siguieron otra trayectoria.",
+      "resumen": "La ciudad de Bremen desarrolló derechos propios desde el privilegio de 1186. Su libertad imperial recibió reconocimiento definitivo en 1646. El arzobispado y los ducados de Bremen-Verden siguieron otra trayectoria.",
+      "sourceKeys": [
+        "bremenCity"
+      ],
+      "evolucion": [
+        {
+          "anio": 1186,
+          "texto": "Privilegio de los ciudadanos y derecho urbano propio."
+        },
+        {
+          "anio": 1646,
+          "texto": "Diploma de Linz: reconocimiento de la libertad imperial."
+        }
+      ],
+      "existing": false,
+      "mapFrom": 1200,
+      "mapThrough": 1800
+    },
+    "Ciudad imperial de Núremberg": {
+      "clase": "gobierno",
+      "naturaleza": "entidad",
+      "componentes": [],
+      "nota": "La comunidad urbana obtuvo un amplio privilegio en 1219 y consolidó su autogobierno durante el siglo XIII. La salida de los burgraves, completada en 1427, separa la ciudad de los principados de los Hohenzollern.",
+      "resumen": "La comunidad urbana obtuvo un amplio privilegio en 1219 y consolidó su autogobierno durante el siglo XIII. La salida de los burgraves, completada en 1427, separa la ciudad de los principados de los Hohenzollern.",
+      "sourceKeys": [
+        "nuremberg"
+      ],
+      "evolucion": [
+        {
+          "anio": 1219,
+          "texto": "Privilegio urbano y desarrollo del autogobierno."
+        },
+        {
+          "anio": 1427,
+          "texto": "Culmina la salida de los burgraves de la ciudad."
+        },
+        {
+          "anio": 1505,
+          "texto": "Ampliación del territorio de la ciudad tras la guerra de sucesión bávara."
+        }
+      ],
+      "existing": false,
+      "mapFrom": 1219,
+      "mapThrough": 1800
+    },
+    "Ciudad imperial de Augsburgo": {
+      "clase": "gobierno",
+      "naturaleza": "entidad",
+      "componentes": [],
+      "nota": "Los privilegios de 1276 y 1294 consolidaron la autonomía de Augsburgo. La ciudad imperial fue distinta del principado episcopal, cuyos obispos gobernaron desde Dillingen. Su incorporación a Baviera fue posterior a 1800.",
+      "resumen": "Los privilegios de 1276 y 1294 consolidaron la autonomía de Augsburgo. La ciudad imperial fue distinta del principado episcopal, cuyos obispos gobernaron desde Dillingen. Su incorporación a Baviera fue posterior a 1800.",
+      "sourceKeys": [
+        "augsburg"
+      ],
+      "evolucion": [
+        {
+          "anio": 1276,
+          "texto": "Privilegio y libro de derecho urbano."
+        },
+        {
+          "anio": 1294,
+          "texto": "Ampliación de las garantías de autonomía."
+        }
+      ],
+      "existing": false,
+      "mapFrom": 1276,
+      "mapThrough": 1800
+    },
+    "Principado episcopal de Augsburgo": {
+      "clase": "principado",
+      "naturaleza": "entidad",
+      "componentes": [],
+      "nota": "El territorio secular de los obispos de Augsburgo conservó una administración propia con centro en Dillingen. No comprendía por ello toda su diócesis ni absorbía la ciudad imperial de Augsburgo.",
+      "resumen": "El territorio secular de los obispos de Augsburgo conservó una administración propia con centro en Dillingen. No comprendía por ello toda su diócesis ni absorbía la ciudad imperial de Augsburgo.",
+      "sourceKeys": [
+        "dillingen"
+      ],
+      "evolucion": [
+        {
+          "anio": 1258,
+          "texto": "Dillingen pasa al gobierno episcopal; núcleo conservado hasta 1802."
+        }
+      ],
+      "existing": false,
+      "mapFrom": 1258,
+      "mapThrough": 1800
+    },
+    "Ciudad imperial de Ratisbona": {
+      "clase": "gobierno",
+      "naturaleza": "entidad",
+      "componentes": [],
+      "nota": "Ratisbona recibió en 1245 el derecho de elegir alcalde y consejo. Conservó el estatuto imperial salvo la sujeción a Baviera-Múnich de 1486–1492. La sede episcopal y los enclaves eclesiásticos urbanos no son un ducado bávaro continuo.",
+      "resumen": "Ratisbona recibió en 1245 el derecho de elegir alcalde y consejo. Conservó el estatuto imperial salvo la sujeción a Baviera-Múnich de 1486–1492. La sede episcopal y los enclaves eclesiásticos urbanos no son un ducado bávaro continuo.",
+      "sourceKeys": [
+        "regensburg"
+      ],
+      "evolucion": [
+        {
+          "anio": 1245,
+          "texto": "Privilegio de autogobierno."
+        },
+        {
+          "anio": 1486,
+          "texto": "Sujeción temporal a Baviera-Múnich."
+        },
+        {
+          "anio": 1492,
+          "texto": "Retorno de la ciudad al Imperio."
+        }
+      ],
+      "existing": false,
+      "mapFrom": 1245,
+      "mapThrough": 1800
+    },
+    "Ciudad imperial de Ulm": {
+      "clase": "gobierno",
+      "naturaleza": "entidad",
+      "componentes": [],
+      "nota": "El contrato constitucional de 1255 documenta consejo, comunidad y autoridades imperiales en Ulm. La ciudad desarrolló un territorio propio y reformas de gobierno; el régimen imperial terminó en 1802.",
+      "resumen": "El contrato constitucional de 1255 documenta consejo, comunidad y autoridades imperiales en Ulm. La ciudad desarrolló un territorio propio y reformas de gobierno; el régimen imperial terminó en 1802.",
+      "sourceKeys": [
+        "ulm",
+        "ulmEnd"
+      ],
+      "evolucion": [
+        {
+          "anio": 1255,
+          "texto": "Primer documento constitucional conservado."
+        },
+        {
+          "anio": 1558,
+          "texto": "Reforma de la constitución urbana."
+        }
+      ],
+      "existing": false,
+      "mapFrom": 1255,
+      "mapThrough": 1800
+    },
+    "Ciudad imperial de Fráncfort": {
+      "clase": "gobierno",
+      "naturaleza": "entidad",
+      "componentes": [],
+      "nota": "Fráncfort adquirió en 1372 derechos imperiales y el bosque urbano, consolidando la condición de ciudad libre. Su consejo no era un gobierno hereditario de los príncipes vecinos. El estatuto continuó hasta 1806.",
+      "resumen": "Fráncfort adquirió en 1372 derechos imperiales y el bosque urbano, consolidando la condición de ciudad libre. Su consejo no era un gobierno hereditario de los príncipes vecinos. El estatuto continuó hasta 1806.",
+      "sourceKeys": [
+        "frankfurt"
+      ],
+      "evolucion": [
+        {
+          "anio": 1372,
+          "texto": "Adquisición de derechos imperiales y del bosque urbano."
+        }
+      ],
+      "existing": false,
+      "mapFrom": 1372,
+      "mapThrough": 1800
+    },
+    "Principado episcopal de Bamberg": {
+      "clase": "principado",
+      "naturaleza": "entidad",
+      "componentes": [],
+      "nota": "Bamberg fue un territorio temporal de los obispos, con derechos y posesiones dispersos entre los dominios de otros poderes francones. Su diócesis espiritual y su principado secular no tenían la misma extensión.",
+      "resumen": "Bamberg fue un territorio temporal de los obispos, con derechos y posesiones dispersos entre los dominios de otros poderes francones. Su diócesis espiritual y su principado secular no tenían la misma extensión.",
+      "sourceKeys": [
+        "bamberg"
+      ],
+      "evolucion": [
+        {
+          "anio": 1802,
+          "texto": "Comienza la secularización, posterior al límite cartográfico de 1800."
+        }
+      ],
+      "existing": false,
+      "mapFrom": 1200,
+      "mapThrough": 1800
+    },
+    "Principado episcopal de Würzburg": {
+      "clase": "principado",
+      "naturaleza": "entidad",
+      "componentes": [],
+      "nota": "Los obispos de Würzburg reunieron dignidad ducal y señoríos temporales desde la Edad Media. Su territorio siguió fragmentado y representó solo parte de la diócesis espiritual.",
+      "resumen": "Los obispos de Würzburg reunieron dignidad ducal y señoríos temporales desde la Edad Media. Su territorio siguió fragmentado y representó solo parte de la diócesis espiritual.",
+      "sourceKeys": [
+        "wurzburg"
+      ],
+      "evolucion": [
+        {
+          "anio": 1168,
+          "texto": "Concesión de la dignidad ducal."
+        },
+        {
+          "anio": 1400,
+          "texto": "Restablecimiento de la autoridad episcopal en la ciudad tras Bergtheim."
+        }
+      ],
+      "existing": false,
+      "mapFrom": 1200,
+      "mapThrough": 1800
+    },
+    "Principado episcopal de Eichstätt": {
+      "clase": "principado",
+      "naturaleza": "entidad",
+      "componentes": [],
+      "nota": "El poder temporal de los obispos de Eichstätt se apoyó en regalías medievales. El territorio se consolidó especialmente desde el siglo XIV; el Oberstift y el Unterstift conservaron configuraciones diferentes.",
+      "resumen": "El poder temporal de los obispos de Eichstätt se apoyó en regalías medievales. El territorio se consolidó especialmente desde el siglo XIV; el Oberstift y el Unterstift conservaron configuraciones diferentes.",
+      "sourceKeys": [
+        "eichstatt"
+      ],
+      "evolucion": [
+        {
+          "anio": 1802,
+          "texto": "Ocupación bávara y comienzo de la secularización, fuera del período del mapa."
+        }
+      ],
+      "existing": false,
+      "mapFrom": 1200,
+      "mapThrough": 1800
+    },
+    "Principado episcopal de Freising": {
+      "clase": "principado",
+      "naturaleza": "entidad",
+      "componentes": [],
+      "nota": "Freising conservó un señorío episcopal propio, separado de Baviera y confirmado en 1249. Sus adquisiciones alpinas y su diócesis espiritual no se agregan automáticamente al núcleo de la sede.",
+      "resumen": "Freising conservó un señorío episcopal propio, separado de Baviera y confirmado en 1249. Sus adquisiciones alpinas y su diócesis espiritual no se agregan automáticamente al núcleo de la sede.",
+      "sourceKeys": [
+        "freising"
+      ],
+      "evolucion": [
+        {
+          "anio": 1249,
+          "texto": "Confirmación de la independencia de la sede respecto al territorio ducal."
+        }
+      ],
+      "existing": false,
+      "mapFrom": 1249,
+      "mapThrough": 1800
+    },
+    "Principado episcopal de Passau": {
+      "clase": "principado",
+      "naturaleza": "entidad",
+      "componentes": [],
+      "nota": "El territorio temporal de los obispos de Passau se formó en los siglos XII y XIII. Los derechos condales de 1217–1220 consolidaron su núcleo, mientras Baviera avanzaba hasta sus murallas sin absorber la sede.",
+      "resumen": "El territorio temporal de los obispos de Passau se formó en los siglos XII y XIII. Los derechos condales de 1217–1220 consolidaron su núcleo, mientras Baviera avanzaba hasta sus murallas sin absorber la sede.",
+      "sourceKeys": [
+        "passau"
+      ],
+      "evolucion": [
+        {
+          "anio": 1220,
+          "texto": "Consolidación de derechos territoriales y condales."
+        },
+        {
+          "anio": 1262,
+          "texto": "La expansión bávara llega hasta las inmediaciones de las murallas."
+        }
+      ],
+      "existing": false,
+      "mapFrom": 1220,
+      "mapThrough": 1800
+    },
+    "Principado episcopal de Münster": {
+      "clase": "principado",
+      "naturaleza": "entidad",
+      "componentes": [],
+      "nota": "Münster fue un estado eclesiástico con posesiones temporales distintas de toda la diócesis. La insurrección anabaptista de 1534–1535 rompió el control episcopal de la capital; después se restauró su gobierno.",
+      "resumen": "Münster fue un estado eclesiástico con posesiones temporales distintas de toda la diócesis. La insurrección anabaptista de 1534–1535 rompió el control episcopal de la capital; después se restauró su gobierno.",
+      "sourceKeys": [
+        "munster",
+        "munsterRebel",
+        "westphalia"
+      ],
+      "evolucion": [
+        {
+          "anio": 1534,
+          "texto": "Gobierno anabaptista y asedio de la capital."
+        },
+        {
+          "anio": 1535,
+          "texto": "Recuperación de la ciudad en junio."
+        },
+        {
+          "anio": 1648,
+          "texto": "Westfalia mantiene el principado eclesiástico."
+        }
+      ],
+      "existing": true,
+      "mapFrom": 1200,
+      "mapThrough": 1800
+    },
+    "Principado episcopal de Paderborn": {
+      "clase": "principado",
+      "naturaleza": "entidad",
+      "componentes": [],
+      "nota": "Paderborn conservó su carácter de territorio eclesiástico después de Westfalia. La ocupación prusiana y la secularización pertenecen a 1802–1803 y no se anticipan en el mapa de 1800.",
+      "resumen": "Paderborn conservó su carácter de territorio eclesiástico después de Westfalia. La ocupación prusiana y la secularización pertenecen a 1802–1803 y no se anticipan en el mapa de 1800.",
+      "sourceKeys": [
+        "paderborn",
+        "ghdi",
+        "ieg1792"
+      ],
+      "evolucion": [
+        {
+          "anio": 1648,
+          "texto": "Continúa como principado eclesiástico después de Westfalia."
+        },
+        {
+          "anio": 1802,
+          "texto": "Fin del gobierno territorial eclesiástico, posterior al intervalo del atlas."
+        }
+      ],
+      "existing": false,
+      "mapFrom": 1648,
+      "mapThrough": 1800
+    },
+    "Principado episcopal de Osnabrück": {
+      "clase": "principado",
+      "naturaleza": "entidad",
+      "componentes": [],
+      "nota": "Osnabrück permaneció como principado episcopal. Desde Westfalia alternó obispos católicos con gobernantes protestantes de Brunswick-Luneburgo; esa alternancia no suprimió su identidad territorial.",
+      "resumen": "Osnabrück permaneció como principado episcopal. Desde Westfalia alternó obispos católicos con gobernantes protestantes de Brunswick-Luneburgo; esa alternancia no suprimió su identidad territorial.",
+      "sourceKeys": [
+        "osnabruck",
+        "ghdi",
+        "ieg1792"
+      ],
+      "evolucion": [
+        {
+          "anio": 1648,
+          "texto": "Continúa como principado eclesiástico después de Westfalia."
+        },
+        {
+          "anio": 1802,
+          "texto": "Fin del gobierno territorial eclesiástico, posterior al intervalo del atlas."
+        }
+      ],
+      "existing": false,
+      "mapFrom": 1648,
+      "mapThrough": 1800
+    },
+    "Principado episcopal de Hildesheim": {
+      "clase": "principado",
+      "naturaleza": "entidad",
+      "componentes": [],
+      "nota": "Hildesheim conservó un principado episcopal hasta la ocupación prusiana de 1802. El mapa representa la sede y no reincorpora los distritos perdidos por los obispos durante los conflictos del siglo XVI.",
+      "resumen": "Hildesheim conservó un principado episcopal hasta la ocupación prusiana de 1802. El mapa representa la sede y no reincorpora los distritos perdidos por los obispos durante los conflictos del siglo XVI.",
+      "sourceKeys": [
+        "hildesheim",
+        "ghdi",
+        "ieg1792"
+      ],
+      "evolucion": [
+        {
+          "anio": 1648,
+          "texto": "Continúa como principado eclesiástico después de Westfalia."
+        },
+        {
+          "anio": 1802,
+          "texto": "Fin del gobierno territorial eclesiástico, posterior al intervalo del atlas."
+        }
+      ],
+      "existing": false,
+      "mapFrom": 1648,
+      "mapThrough": 1800
+    },
+    "Arzobispado de Magdeburgo": {
+      "clase": "principado",
+      "naturaleza": "entidad",
+      "componentes": [],
+      "nota": "El arzobispado y sus administradores ejercieron derechos temporales hasta 1680, con autonomía y conflictos urbanos. Después la jurisdicción se secularizó como ducado bajo Brandeburgo, ya representado por otra capa del atlas.",
+      "resumen": "El arzobispado y sus administradores ejercieron derechos temporales hasta 1680, con autonomía y conflictos urbanos. Después la jurisdicción se secularizó como ducado bajo Brandeburgo, ya representado por otra capa del atlas.",
+      "sourceKeys": [
+        "magdeburg"
+      ],
+      "evolucion": [
+        {
+          "anio": 1680,
+          "texto": "Secularización e incorporación a Brandeburgo."
+        }
+      ],
+      "existing": false,
+      "mapFrom": 1200,
+      "mapThrough": 1679
+    },
+    "Principado episcopal de Halberstadt": {
+      "clase": "principado",
+      "naturaleza": "entidad",
+      "componentes": [],
+      "nota": "Territorio episcopal del Imperio, con gobierno secular diferenciado del ámbito espiritual de la diócesis. En Westfalia se seculariza y pasa a los electores de Brandeburgo.",
+      "resumen": "Territorio episcopal del Imperio, con gobierno secular diferenciado del ámbito espiritual de la diócesis. En Westfalia se seculariza y pasa a los electores de Brandeburgo.",
+      "sourceKeys": [
+        "ghdi",
+        "imperial1512",
+        "westphalia"
+      ],
+      "evolucion": [
+        {
+          "anio": 1648,
+          "texto": "Secularización y traspaso a Brandeburgo."
+        }
+      ],
+      "existing": false,
+      "mapFrom": 1512,
+      "mapThrough": 1647
+    },
+    "Principado episcopal de Minden": {
+      "clase": "principado",
+      "naturaleza": "entidad",
+      "componentes": [],
+      "nota": "Territorio episcopal del Imperio, con gobierno secular diferenciado del ámbito espiritual de la diócesis. En Westfalia se seculariza y pasa a los electores de Brandeburgo.",
+      "resumen": "Territorio episcopal del Imperio, con gobierno secular diferenciado del ámbito espiritual de la diócesis. En Westfalia se seculariza y pasa a los electores de Brandeburgo.",
+      "sourceKeys": [
+        "ghdi",
+        "imperial1512",
+        "westphalia"
+      ],
+      "evolucion": [
+        {
+          "anio": 1648,
+          "texto": "Secularización y traspaso a Brandeburgo."
+        }
+      ],
+      "existing": false,
+      "mapFrom": 1512,
+      "mapThrough": 1647
+    },
+    "Arzobispado de Bremen": {
+      "clase": "principado",
+      "naturaleza": "entidad",
+      "componentes": [],
+      "nota": "El territorio secular del arzobispo de Bremen comprendía jurisdicciones del espacio Elba-Weser. No era idéntico a la ciudad libre de Bremen. Se secularizó en 1648 junto al principado episcopal de Verden.",
+      "resumen": "El territorio secular del arzobispo de Bremen comprendía jurisdicciones del espacio Elba-Weser. No era idéntico a la ciudad libre de Bremen. Se secularizó en 1648 junto al principado episcopal de Verden.",
+      "sourceKeys": [
+        "bremenDuchies",
+        "imperial1512"
+      ],
+      "evolucion": [
+        {
+          "anio": 1648,
+          "texto": "Secularización como ducado y concesión a Suecia."
+        }
+      ],
+      "existing": false,
+      "mapFrom": 1512,
+      "mapThrough": 1647
+    },
+    "Principado episcopal de Verden": {
+      "clase": "principado",
+      "naturaleza": "entidad",
+      "componentes": [],
+      "nota": "El territorio temporal del obispo de Verden se convirtió en ducado secular en Westfalia. Su trayectoria se distingue de la ciudad libre de Bremen y de la autoridad espiritual de ambos obispados.",
+      "resumen": "El territorio temporal del obispo de Verden se convirtió en ducado secular en Westfalia. Su trayectoria se distingue de la ciudad libre de Bremen y de la autoridad espiritual de ambos obispados.",
+      "sourceKeys": [
+        "bremenDuchies",
+        "imperial1512"
+      ],
+      "evolucion": [
+        {
+          "anio": 1648,
+          "texto": "Secularización y concesión del ducado a Suecia."
+        }
+      ],
+      "existing": false,
+      "mapFrom": 1512,
+      "mapThrough": 1647
+    },
+    "Ducados de Bremen-Verden": {
+      "clase": "grupo_geografico",
+      "naturaleza": "agrupacion",
+      "componentes": [
+        "Ducado de Bremen",
+        "Ducado de Verden"
+      ],
+      "nota": "Bremen y Verden conservaron sus identidades ducales bajo una administración conjunta. Suecia los recibió en 1648; el cambio de gobierno a Hannover se hizo efectivo en 1715 y fue reconocido en 1719. La ciudad libre de Bremen queda excluida.",
+      "resumen": "Bremen y Verden conservaron sus identidades ducales bajo una administración conjunta. Suecia los recibió en 1648; el cambio de gobierno a Hannover se hizo efectivo en 1715 y fue reconocido en 1719. La ciudad libre de Bremen queda excluida.",
+      "sourceKeys": [
+        "bremenDuchies",
+        "bremenHanover"
+      ],
+      "evolucion": [
+        {
+          "anio": 1648,
+          "texto": "Concesión a Suecia."
+        },
+        {
+          "anio": 1715,
+          "texto": "Gobierno efectivo de Hannover."
+        },
+        {
+          "anio": 1719,
+          "texto": "Cesión reconocida por el tratado de Estocolmo."
+        }
+      ],
+      "existing": false,
+      "mapFrom": 1648,
+      "mapThrough": 1800
+    },
+    "Prepositura principesca de Ellwangen": {
+      "clase": "gobierno",
+      "naturaleza": "entidad",
+      "componentes": [],
+      "nota": "La transformación del monasterio en colegiata secular en 1460 dio lugar al gobierno de los príncipes prepósitos de Ellwangen. La prepositura fue un territorio eclesiástico propio del Imperio.",
+      "resumen": "La transformación del monasterio en colegiata secular en 1460 dio lugar al gobierno de los príncipes prepósitos de Ellwangen. La prepositura fue un territorio eclesiástico propio del Imperio.",
+      "sourceKeys": [
+        "ellwangen"
+      ],
+      "evolucion": [
+        {
+          "anio": 1460,
+          "texto": "Transformación del monasterio en colegiata secular."
+        }
+      ],
+      "existing": false,
+      "mapFrom": 1460,
+      "mapThrough": 1800
+    },
+    "Oldemburgo": {
+      "clase": "condado",
+      "naturaleza": "entidad",
+      "componentes": [],
+      "nota": "Oldemburgo conservó su identidad territorial bajo los condes, la Corona danesa desde 1667 y la nueva rama de Gottorp desde 1773. La unión de gobernante no lo convierte en una provincia idéntica a Schleswig o a Dinamarca.",
+      "resumen": "Oldemburgo conservó su identidad territorial bajo los condes, la Corona danesa desde 1667 y la nueva rama de Gottorp desde 1773. La unión de gobernante no lo convierte en una provincia idéntica a Schleswig o a Dinamarca.",
+      "sourceKeys": [
+        "oldenburg"
+      ],
+      "evolucion": [
+        {
+          "anio": 1667,
+          "texto": "El condado pasa a la Corona danesa."
+        },
+        {
+          "anio": 1773,
+          "texto": "Intercambio territorial e independencia bajo Federico Augusto."
+        }
+      ],
+      "existing": true,
+      "mapFrom": 1200,
+      "mapThrough": 1800
+    },
+    "Frisia Oriental": {
+      "clase": "condado",
+      "naturaleza": "entidad",
+      "componentes": [],
+      "nota": "La casa Cirksena gobernó Frisia Oriental desde la elevación condal de 1464 hasta su extinción en 1744. Emden conservó libertades urbanas propias; después el territorio pasó a Prusia.",
+      "resumen": "La casa Cirksena gobernó Frisia Oriental desde la elevación condal de 1464 hasta su extinción en 1744. Emden conservó libertades urbanas propias; después el territorio pasó a Prusia.",
+      "sourceKeys": [
+        "eastFrisia",
+        "eastPrussia"
+      ],
+      "evolucion": [
+        {
+          "anio": 1464,
+          "texto": "Elevación a condado."
+        },
+        {
+          "anio": 1595,
+          "texto": "Fin de Emden como residencia de los condes; autonomía urbana."
+        },
+        {
+          "anio": 1744,
+          "texto": "Incorporación a Prusia."
+        }
+      ],
+      "existing": true,
+      "mapFrom": 1464,
+      "mapThrough": 1800
+    },
+    "Ansbach": {
+      "clase": "margraviato",
+      "naturaleza": "entidad",
+      "componentes": [],
+      "nota": "Ansbach fue un territorio de los Hohenzollern de Franconia, distinto de la ciudad imperial de Núremberg y de Brandeburgo. La cesión de 1791 dio paso a la administración prusiana desde 1792.",
+      "resumen": "Ansbach fue un territorio de los Hohenzollern de Franconia, distinto de la ciudad imperial de Núremberg y de Brandeburgo. La cesión de 1791 dio paso a la administración prusiana desde 1792.",
+      "sourceKeys": [
+        "ansbach",
+        "bayreuth"
+      ],
+      "evolucion": [
+        {
+          "anio": 1398,
+          "texto": "Partición de la herencia territorial de los burgraves."
+        },
+        {
+          "anio": 1792,
+          "texto": "Administración de la Corona prusiana."
+        }
+      ],
+      "existing": true,
+      "mapFrom": 1398,
+      "mapThrough": 1800
+    },
+    "Bayreuth-Kulmbach": {
+      "clase": "margraviato",
+      "naturaleza": "entidad",
+      "componentes": [],
+      "nota": "El margraviato de Kulmbach-Bayreuth fue un estado franconio separado de Ansbach y de la ciudad imperial de Núremberg. Su cesión a Prusia en 1791–1792 no unificó retrospectivamente todos los territorios de la familia.",
+      "resumen": "El margraviato de Kulmbach-Bayreuth fue un estado franconio separado de Ansbach y de la ciudad imperial de Núremberg. Su cesión a Prusia en 1791–1792 no unificó retrospectivamente todos los territorios de la familia.",
+      "sourceKeys": [
+        "bayreuth"
+      ],
+      "evolucion": [
+        {
+          "anio": 1398,
+          "texto": "Organización territorial de la rama del Oberland."
+        },
+        {
+          "anio": 1792,
+          "texto": "Administración prusiana tras la cesión del margraviato."
+        }
+      ],
+      "existing": false,
+      "mapFrom": 1398,
+      "mapThrough": 1800
+    },
+    "Ciudad de San Galo": {
+      "clase": "gobierno",
+      "naturaleza": "entidad",
+      "componentes": [],
+      "nota": "La ciudad de San Galo se vinculó a los cantones confederados en 1454. Su gobierno urbano y la abadía principesca coexistieron como entidades distintas, con compras de derechos y conflictos en los siglos XV y XVI.",
+      "resumen": "La ciudad de San Galo se vinculó a los cantones confederados en 1454. Su gobierno urbano y la abadía principesca coexistieron como entidades distintas, con compras de derechos y conflictos en los siglos XV y XVI.",
+      "sourceKeys": [
+        "stgallen",
+        "stgallenCity"
+      ],
+      "evolucion": [
+        {
+          "anio": 1454,
+          "texto": "Alianza de la ciudad con los cantones confederados."
+        },
+        {
+          "anio": 1457,
+          "texto": "Compra de derechos a la abadía."
+        }
+      ],
+      "existing": false,
+      "mapFrom": 1454,
+      "mapThrough": 1797
+    },
+    "Abadía principesca de San Galo": {
+      "clase": "gobierno",
+      "naturaleza": "entidad",
+      "componentes": [],
+      "nota": "La abadía de San Galo fue un principado eclesiástico y un asociado de la Confederación desde 1451. Adquirió Toggenburgo en 1468 y siguió siendo distinta de la ciudad libre de San Galo.",
+      "resumen": "La abadía de San Galo fue un principado eclesiástico y un asociado de la Confederación desde 1451. Adquirió Toggenburgo en 1468 y siguió siendo distinta de la ciudad libre de San Galo.",
+      "sourceKeys": [
+        "stgallen",
+        "toggenburg"
+      ],
+      "evolucion": [
+        {
+          "anio": 1451,
+          "texto": "Alianza como asociado de la Confederación."
+        },
+        {
+          "anio": 1468,
+          "texto": "Compra de Toggenburgo."
+        }
+      ],
+      "existing": false,
+      "mapFrom": 1451,
+      "mapThrough": 1797
+    },
+    "San Galo · ciudad y abadía": {
+      "clase": "grupo_geografico",
+      "naturaleza": "agrupacion",
+      "componentes": [
+        "Ciudad de San Galo",
+        "Abadía principesca de San Galo"
+      ],
+      "nota": "La celda de San Galo contiene la ciudad libre y el centro del principado abacial. Ambos se muestran como jurisdicciones compartidas en la escala del mapa, sin fundirlos en el cantón de San Galo, creado en 1803.",
+      "resumen": "La celda de San Galo contiene la ciudad libre y el centro del principado abacial. Ambos se muestran como jurisdicciones compartidas en la escala del mapa, sin fundirlos en el cantón de San Galo, creado en 1803.",
+      "sourceKeys": [
+        "stgallen",
+        "stgallenCity"
+      ],
+      "evolucion": [
+        {
+          "anio": 1454,
+          "texto": "Ciudad y abadía mantienen vínculos confederales distintos."
+        }
+      ],
+      "existing": false,
+      "mapFrom": 1454,
+      "mapThrough": 1797
+    },
+    "Condado de Toggenburgo": {
+      "clase": "condado",
+      "naturaleza": "entidad",
+      "componentes": [],
+      "nota": "El condado de Toggenburgo pasó por compra a la abadía de San Galo en 1468. La bailía administrada desde Lichtensteig conservó el nombre y derechos propios del territorio hasta 1798.",
+      "resumen": "El condado de Toggenburgo pasó por compra a la abadía de San Galo en 1468. La bailía administrada desde Lichtensteig conservó el nombre y derechos propios del territorio hasta 1798.",
+      "sourceKeys": [
+        "toggenburg"
+      ],
+      "evolucion": [
+        {
+          "anio": 1468,
+          "texto": "Compra por la abadía de San Galo."
+        },
+        {
+          "anio": 1798,
+          "texto": "Fin del gobierno abacial y reorganización helvética."
+        }
+      ],
+      "existing": true,
+      "mapFrom": 1468,
+      "mapThrough": 1797
+    },
+    "Comunidad de Schwyz": {
+      "clase": "gobierno",
+      "naturaleza": "entidad",
+      "componentes": [],
+      "nota": "Schwyz fue una comunidad de las Waldstätten, con vínculos desde 1291 y pertenencia confederal segura desde 1315. Su núcleo se distingue de los señoríos adquiridos posteriormente y del estado federal moderno.",
+      "resumen": "Schwyz fue una comunidad de las Waldstätten, con vínculos desde 1291 y pertenencia confederal segura desde 1315. Su núcleo se distingue de los señoríos adquiridos posteriormente y del estado federal moderno.",
+      "sourceKeys": [
+        "schwyz"
+      ],
+      "evolucion": [
+        {
+          "anio": 1291,
+          "texto": "Alianza de las comunidades de las Waldstätten; la vinculación posterior está documentada con certeza en 1315."
+        },
+        {
+          "anio": 1798,
+          "texto": "Reorganización en la República Helvética."
+        }
+      ],
+      "existing": false,
+      "mapFrom": 1291,
+      "mapThrough": 1797
+    },
+    "Lucerna": {
+      "clase": "gobierno",
+      "naturaleza": "entidad",
+      "componentes": [],
+      "nota": "Lucerna se alió con las Waldstätten en 1332 y desarrolló un gobierno urbano y cantonal propio. Sus derechos locales y alianzas no equivalen a una soberanía unitaria sobre toda Suiza.",
+      "resumen": "Lucerna se alió con las Waldstätten en 1332 y desarrolló un gobierno urbano y cantonal propio. Sus derechos locales y alianzas no equivalen a una soberanía unitaria sobre toda Suiza.",
+      "sourceKeys": [
+        "lucerna",
+        "lucerna1798"
+      ],
+      "evolucion": [
+        {
+          "anio": 1332,
+          "texto": "Alianza de Lucerna con las Waldstätten."
+        },
+        {
+          "anio": 1798,
+          "texto": "Reorganización en la República Helvética."
+        }
+      ],
+      "existing": true,
+      "mapFrom": 1332,
+      "mapThrough": 1797
+    },
+    "Zúrich": {
+      "clase": "gobierno",
+      "naturaleza": "entidad",
+      "componentes": [],
+      "nota": "Zúrich se vinculó a la Confederación en 1351. Su gobierno gremial y sus adquisiciones territoriales siguieron cronologías propias; Kyburg se incorporó definitivamente en 1452.",
+      "resumen": "Zúrich se vinculó a la Confederación en 1351. Su gobierno gremial y sus adquisiciones territoriales siguieron cronologías propias; Kyburg se incorporó definitivamente en 1452.",
+      "sourceKeys": [
+        "kyburg",
+        "zurich"
+      ],
+      "evolucion": [
+        {
+          "anio": 1351,
+          "texto": "Zúrich se incorpora al sistema de alianzas confederadas."
+        },
+        {
+          "anio": 1798,
+          "texto": "Reorganización en la República Helvética."
+        }
+      ],
+      "existing": false,
+      "mapFrom": 1351,
+      "mapThrough": 1797
+    },
+    "Schaffhausen": {
+      "clase": "gobierno",
+      "naturaleza": "entidad",
+      "componentes": [],
+      "nota": "La ciudad de Schaffhausen se incorporó a la Confederación en 1501, conservando su consejo urbano y un territorio propio. Su historia anterior no se reduce a las fronteras del cantón actual.",
+      "resumen": "La ciudad de Schaffhausen se incorporó a la Confederación en 1501, conservando su consejo urbano y un territorio propio. Su historia anterior no se reduce a las fronteras del cantón actual.",
+      "sourceKeys": [
+        "schaffhausen"
+      ],
+      "evolucion": [
+        {
+          "anio": 1501,
+          "texto": "Ingreso de la ciudad en la Confederación."
+        },
+        {
+          "anio": 1798,
+          "texto": "Reorganización en la República Helvética."
+        }
+      ],
+      "existing": false,
+      "mapFrom": 1501,
+      "mapThrough": 1797
+    },
+    "Condado de Baden suizo": {
+      "clase": "condado",
+      "naturaleza": "entidad",
+      "componentes": [],
+      "nota": "El condado de Baden fue una bailía habsbúrgica hasta la conquista de 1415 y después un señorío común de los cantones confederados. No se confunde con el margraviato alemán de Baden.",
+      "resumen": "El condado de Baden fue una bailía habsbúrgica hasta la conquista de 1415 y después un señorío común de los cantones confederados. No se confunde con el margraviato alemán de Baden.",
+      "sourceKeys": [
+        "baden"
+      ],
+      "evolucion": [
+        {
+          "anio": 1415,
+          "texto": "Conquista confederal y administración como señorío común."
+        },
+        {
+          "anio": 1798,
+          "texto": "Reorganización en la República Helvética."
+        }
+      ],
+      "existing": false,
+      "mapFrom": 1415,
+      "mapThrough": 1797
+    },
+    "Turgovia": {
+      "clase": "gobierno",
+      "naturaleza": "entidad",
+      "componentes": [],
+      "nota": "Turgovia pasó definitivamente a los cantones confederados en 1460 y se administró como señorío común. Frauenfeld fue un centro de esa jurisdicción y se convirtió en capital del cantón helvético en 1798.",
+      "resumen": "Turgovia pasó definitivamente a los cantones confederados en 1460 y se administró como señorío común. Frauenfeld fue un centro de esa jurisdicción y se convirtió en capital del cantón helvético en 1798.",
+      "sourceKeys": [
+        "frauenfeld"
+      ],
+      "evolucion": [
+        {
+          "anio": 1460,
+          "texto": "Conquista por los cantones y establecimiento del señorío común."
+        },
+        {
+          "anio": 1798,
+          "texto": "Reorganización en la República Helvética."
+        }
+      ],
+      "existing": false,
+      "mapFrom": 1460,
+      "mapThrough": 1797
+    },
+    "Schleswig": {
+      "clase": "ducado",
+      "naturaleza": "entidad",
+      "componentes": [],
+      "nota": "El ducado de Schleswig conservó su identidad entre partes reales y ducales. La Corona danesa ocupó en 1713 las posesiones de Gottorp y obtuvo su incorporación jurídica en 1721. No se confunde con Holstein ni con el estado alemán actual.",
+      "resumen": "El ducado de Schleswig conservó su identidad entre partes reales y ducales. La Corona danesa ocupó en 1713 las posesiones de Gottorp y obtuvo su incorporación jurídica en 1721. No se confunde con Holstein ni con el estado alemán actual.",
+      "sourceKeys": [
+        "schleswig",
+        "holstein"
+      ],
+      "evolucion": [
+        {
+          "anio": 1544,
+          "texto": "Partición entre las ramas ducales y la Corona."
+        },
+        {
+          "anio": 1713,
+          "texto": "Ocupación de las posesiones de Gottorp."
+        },
+        {
+          "anio": 1721,
+          "texto": "Incorporación jurídica a la parte real danesa."
+        }
+      ],
+      "existing": true,
+      "mapFrom": 1400,
+      "mapThrough": 1800
+    },
+    "Holstein": {
+      "clase": "ducado",
+      "naturaleza": "entidad",
+      "componentes": [],
+      "nota": "Holstein fue un ducado del Imperio con partes reales, de Gottorp y de otras ramas. La reunión bajo el rey de Dinamarca en 1773 no borra esa identidad ni lo convierte retrospectivamente en la misma entidad que Schleswig.",
+      "resumen": "Holstein fue un ducado del Imperio con partes reales, de Gottorp y de otras ramas. La reunión bajo el rey de Dinamarca en 1773 no borra esa identidad ni lo convierte retrospectivamente en la misma entidad que Schleswig.",
+      "sourceKeys": [
+        "holstein",
+        "schleswig"
+      ],
+      "evolucion": [
+        {
+          "anio": 1544,
+          "texto": "Partición de los ducados."
+        },
+        {
+          "anio": 1773,
+          "texto": "Reunión de la parte de Gottorp con la parte real."
+        }
+      ],
+      "existing": true,
+      "mapFrom": 1400,
+      "mapThrough": 1800
+    },
+    "Ducado de Bremen": {
+      "clase": "ducado",
+      "naturaleza": "entidad",
+      "componentes": [],
+      "nota": "Ducado secular formado en Westfalia, administrado junto a su vecino en Bremen-Verden. La ciudad libre de Bremen queda fuera de esta jurisdicción.",
+      "resumen": "Ducado secular formado en 1648 desde el territorio episcopal y administrado junto a su vecino en Bremen-Verden. Pasó del gobierno sueco a Hannover en 1715, con reconocimiento de la cesión en 1719.",
+      "sourceKeys": [
+        "bremenDuchies",
+        "bremenHanover"
+      ],
+      "evolucion": [
+        {
+          "anio": 1648,
+          "texto": "Secularización y concesión a Suecia."
+        },
+        {
+          "anio": 1715,
+          "texto": "Administración de Hannover."
+        },
+        {
+          "anio": 1719,
+          "texto": "Reconocimiento de la cesión."
+        }
+      ],
+      "existing": false,
+      "mapFrom": 1648,
+      "mapThrough": 1800
+    },
+    "Ducado de Verden": {
+      "clase": "ducado",
+      "naturaleza": "entidad",
+      "componentes": [],
+      "nota": "Ducado secular formado en Westfalia, administrado junto a su vecino en Bremen-Verden. La ciudad libre de Bremen queda fuera de esta jurisdicción.",
+      "resumen": "Ducado secular formado en 1648 desde el territorio episcopal y administrado junto a su vecino en Bremen-Verden. Pasó del gobierno sueco a Hannover en 1715, con reconocimiento de la cesión en 1719.",
+      "sourceKeys": [
+        "bremenDuchies",
+        "bremenHanover"
+      ],
+      "evolucion": [
+        {
+          "anio": 1648,
+          "texto": "Secularización y concesión a Suecia."
+        },
+        {
+          "anio": 1715,
+          "texto": "Administración de Hannover."
+        },
+        {
+          "anio": 1719,
+          "texto": "Reconocimiento de la cesión."
+        }
+      ],
+      "existing": false,
+      "mapFrom": 1648,
+      "mapThrough": 1800
+    }
+  },
+  "overrides": [],
+  "precedenceByAssignment": true
+}

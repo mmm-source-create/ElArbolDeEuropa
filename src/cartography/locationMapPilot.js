@@ -1,3 +1,4 @@
+import {germanSwissJurisdictions} from './regions/germanSwissRoutes.js';
 import {easternEuropeJurisdictions} from './regions/easternEuropeRoutes.js';
 import {northAfricaLevantJurisdictions} from './regions/northAfricaLevantRoutes.js';
 import {earlyMedievalJurisdictions} from './regions/earlyMedievalRoutes.js';
@@ -31,10 +32,19 @@ export function reviewedMapLayers(data) {
       if (!corrections.has(correction.territory)) corrections.set(correction.territory, []);
       corrections.get(correction.territory).push(correction);
     }
-    const regional = [data.bosniaHumReview, data.posavinaRagusaReview, data.balkansFullReview, data.iberiaItalyReview, data.franceLowCountriesReview, data.polandLithuaniaMedievalReview, data.polandLithuaniaReview, data.polandLithuaniaFrontierReview, data.earlyMedievalReview, data.easternEuropeReview, data.northAfricaLevantReview].filter(Boolean);
-    layerIndexes.set(data, {entries, byName: new Map(entries.map(entry => [entry.name, entry])), corrections,
-      regional: regional.map(review => ({from: review.scope.from, through: review.scope.through,
-        ids: new Set(review.precedenceIds || review.scope.ids), names: new Set(review.layerNames)}))});
+    const regional = [data.bosniaHumReview, data.posavinaRagusaReview, data.balkansFullReview, data.iberiaItalyReview, data.franceLowCountriesReview, data.polandLithuaniaMedievalReview, data.polandLithuaniaReview, data.polandLithuaniaFrontierReview, data.earlyMedievalReview, data.easternEuropeReview, data.northAfricaLevantReview, data.germanSwissReview].filter(Boolean);
+    // Index precedence by cell once. Dated supplements do not make annual
+    // redraws scan every new phase for each location on the entire map.
+    const regionalById = new Map();
+    for (const review of regional) {
+      const names = new Set(review.layerNames);
+      const scopes = review.datedScopes || [{...review.scope,ids:review.precedenceIds || review.scope.ids}];
+      for (const scope of scopes) for (const id of scope.ids) {
+        if (!regionalById.has(id)) regionalById.set(id,[]);
+        regionalById.get(id).push({from:scope.from,through:scope.through,names});
+      }
+    }
+    layerIndexes.set(data, {entries, byName:new Map(entries.map(entry => [entry.name,entry])),corrections,regionalById});
   }
   return layerIndexes.get(data).entries;
 }
@@ -70,7 +80,7 @@ function resolveJurisdictions(territory, year, personId = null) {
   const names=polandLithuaniaJurisdictions(franceLowCountriesJurisdictions(iberiaItalyJurisdictions(balkansFullJurisdictions(posavinaRagusaJurisdictions(bosniaHumJurisdictions(medievalBalkanJurisdictions(referenceGapJurisdictions(successionJurisdictions(frontier,territory,year,personId),territory),territory),territory,year,personId),territory,year,personId),territory,year,personId),territory,year,personId),territory,year,personId),territory,year,personId);
   if(territory==='Austria Interior') for(const province of ['Carintia','Carniola','Ducado de Estiria'])
     names.push(...pilotJurisdictionsFor(province,year,personId));
-  return northAfricaLevantJurisdictions(easternEuropeJurisdictions([...new Set(names)],territory,year,personId),territory,year,personId);
+  return germanSwissJurisdictions(northAfricaLevantJurisdictions(easternEuropeJurisdictions([...new Set(names)],territory,year,personId),territory,year,personId),territory,year,personId);
 }
 
 function basePilotJurisdictionsFor(territory, year, personId) {
@@ -238,9 +248,9 @@ function applyLayerCorrections(data, entry, ids, year) {
   // A legal framework is an independent reference, not an earlier owner.
   // Regional political precedence must not erase it from the inspector.
   if (entry.name === 'Marco jurídico del Sacro Imperio') return [...corrected];
-  const regional = layerIndexes.get(data)?.regional;
+  const regionalById = layerIndexes.get(data)?.regionalById;
   for (const id of corrected) {
-    const owner = regional?.findLast(review => review.from <= year && year <= review.through && review.ids.has(id));
+    const owner = regionalById?.get(id)?.findLast(review => review.from <= year && year <= review.through);
     if (owner && !owner.names.has(entry.name)) corrected.delete(id);
   }
   return [...corrected];
@@ -301,9 +311,9 @@ export function mapLocationsForGovernment(data, government, year, personId = nul
     return applyMapBorderCorrections(scoped.filter(id => !scope?.excludedIds?.includes(id)), government.territorio, year);
   }
   const crosswalk = data.locationCrosswalk?.newIdsByOldId || {};
-  const regional = layerIndexes.get(data)?.regional;
+  const regionalById = layerIndexes.get(data)?.regionalById;
   const ids = [...new Set(legacyIds.flatMap(id => crosswalk[id]?.ids || []))]
-    .filter(id => !regional?.some(review => review.from <= year && year <= review.through && review.ids.has(id)));
+    .filter(id => !regionalById?.get(id)?.some(review => review.from <= year && year <= review.through));
   return applyMapBorderCorrections(ids, government.territorio, year);
 }
 

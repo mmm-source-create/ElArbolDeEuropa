@@ -1,8 +1,10 @@
+import {GERMAN_SWISS_TERRITORIES} from '../cartography/regions/germanSwissTerritories.js';
 import {EASTERN_EUROPE_TERRITORIES} from '../cartography/regions/easternEuropeTerritories.js';
 import {FRANCE_LOW_COUNTRIES_TERRITORIES} from '../cartography/regions/franceLowCountriesTerritories.js';
 import {BALKANS_FULL_TERRITORIES} from '../cartography/regions/balkansFullTerritories.js';
 import {IBERIA_ITALY_TERRITORIES} from '../cartography/regions/iberiaItalyTerritories.js';
 export const TERRITORIOS = Object.freeze({
+  ...GERMAN_SWISS_TERRITORIES,
   ...EASTERN_EUROPE_TERRITORIES,
   ...BALKANS_FULL_TERRITORIES,
   ...IBERIA_ITALY_TERRITORIES,

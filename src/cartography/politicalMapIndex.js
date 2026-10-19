@@ -92,7 +92,7 @@ export function buildPoliticalMapIndex(personas, year, mapData = null, options =
   // Regional evidence can establish a jurisdiction before an individual
   // mandate has been researched. Keep that evidence visible without
   // inventing a bishop, judge or six-century collective government.
-  const regionalLayers = new Set([mapData?.iberiaItalyReview,mapData?.franceLowCountriesReview,mapData?.polandLithuaniaMedievalReview,mapData?.polandLithuaniaReview,mapData?.polandLithuaniaFrontierReview,mapData?.earlyMedievalReview,mapData?.easternEuropeReview,mapData?.northAfricaLevantReview].filter(Boolean).flatMap(review=>review.layerNames));
+  const regionalLayers = new Set([mapData?.iberiaItalyReview,mapData?.franceLowCountriesReview,mapData?.polandLithuaniaMedievalReview,mapData?.polandLithuaniaReview,mapData?.polandLithuaniaFrontierReview,mapData?.earlyMedievalReview,mapData?.easternEuropeReview,mapData?.northAfricaLevantReview,mapData?.germanSwissReview].filter(Boolean).flatMap(review=>review.layerNames));
   for (const layer of reviewedMapLayers(mapData).filter(layer => regionalLayers.has(layer.name)&&reviewedLayerActive(mapData,layer,year))) {
     const evidence = reviewedLayerEvidence(layer, year);
     for (const id of reviewedLayerLocations(mapData, layer, year)) {

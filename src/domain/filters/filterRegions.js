@@ -1,7 +1,9 @@
+import review from '../../../data/cartography/german-swiss-expansion-review.json' with {type:'json'};
 // Shared geographic regions for filters and public indexes. Plain module (no
 // JSX imports) so the build generators can use it too.
 export const FILTER_REGIONS=['Península ibérica','Francia y Países Bajos','Islas Británicas','Sacro Imperio y Europa central','Italia y Mediterráneo','Escandinavia y Báltico','Europa oriental','Balcanes y Bizancio','Fuera de Europa','Otros'];
 export const TERRITORY_REGION={
+ ...Object.fromEntries(Object.keys(review.entities).map(name => [name,3])),
  "Arzobispado de Riga":5,
  "Bulgaria del Volga":6,
  "Ciudad libre de Riga":5,
