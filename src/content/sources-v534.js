@@ -1,0 +1,21 @@
+// V5.34 · Fuentes de las historias de casas añadidas en esta versión.
+export const V534_SOURCES = [
+  {titulo: 'Gran Enciclopèdia Catalana · Wettin', url: 'https://www.enciclopedia.cat/gran-enciclopedia-catalana/wettin-0', grupo: 'Artículos de repertorios',
+    territorios: ['Meißen', 'Turingia', 'Sajonia'], personas: ['FRED1SAX'], nota: 'Linaje que reinó en Misnia, Turingia y Sajonia de 1130 a 1918; Turingia en 1264 y el electorado de Sajonia en 1423.'},
+  {titulo: 'Treccani · Dizionario di Storia · Nassau', url: 'https://www.treccani.it/enciclopedia/nassau_(Dizionario-di-Storia)/', grupo: 'Artículos de repertorios',
+    territorios: ['Nassau', 'Orange', 'Países Bajos', 'Luxemburgo'], personas: ['WILLIAM1NETHERLANDS'], nota: 'Ramas walramiana y otoniana (1255), Nassau-Dillenburg en los Países Bajos, el principado de Orange y el trono de los Países Bajos (1813).'},
+  {titulo: 'Treccani · Enciclopedia Italiana · Lusignano', url: 'https://www.treccani.it/enciclopedia/lusignano_(Enciclopedia-Italiana)/', grupo: 'Chipre y Armenia cilicia',
+    territorios: ['Chipre', 'Jerusalén', 'Armenia cilicia'], personas: ['GUYLUSIGNANJER', 'AIMERYLUSIGNANJER', 'JAMES2CYPRUS'], nota: 'Condes de La Marche y Angulema, Guido rey de Jerusalén y señor de Chipre, Amalarico investido por Enrique VI, la rama armenia (1342–1374) y Caterina Cornaro.'},
+  {titulo: 'Treccani · Enciclopedia Italiana · Visconti', url: 'https://www.treccani.it/enciclopedia/visconti_(Enciclopedia-Italiana)/', grupo: 'Artículos de repertorios',
+    territorios: ['Milán'], personas: ['MAT1VISC', 'GIANGAL1', 'FELMARVISC', 'BLANMARVISC'], nota: 'Señoría de Ottone (1277) y Mateo I, ducado de Gian Galeazzo (1395) y fin de la línea con Felipe María y Blanca María.'},
+  {titulo: 'Treccani · Enciclopedia Italiana · Braganza', url: 'https://www.treccani.it/enciclopedia/braganza_(Enciclopedia-Italiana)/', grupo: 'Artículos de repertorios',
+    territorios: ['Portugal', 'Brasil'], personas: ['JUAN4PORT'], nota: 'Ducado creado por Alfonso V en 1442; el duque Juan, elegido rey de Portugal en 1640, funda la dinastía real que reinó en Portugal y Brasil.'},
+  {titulo: 'Gran Enciclopèdia Catalana · Árpád', url: 'https://www.enciclopedia.cat/gran-enciclopedia-catalana/arpad', grupo: 'Artículos de repertorios',
+    territorios: ['Hungría', 'Croacia'], personas: ['ANDRES3'], nota: 'Árpád, príncipe de los magiares (895–907), fundador de la dinastía nacional húngara, extinguida en 1301.'},
+  {titulo: 'Gran Enciclopèdia Catalana · Hongria', url: 'https://www.enciclopedia.cat/gran-enciclopedia-catalana/hongria', grupo: 'Artículos de repertorios',
+    territorios: ['Hungría', 'Croacia'], personas: [], nota: 'Esteban I (997–1038) y la confirmación de Silvestre II; extinción de los Árpád (1301) y llegada de Carlos Roberto de Anjou.'},
+  {titulo: 'Gran Enciclopèdia Catalana · Ramon de Borgonya', url: 'https://www.enciclopedia.cat/gran-enciclopedia-catalana/ramon-de-borgonya', grupo: 'Artículos de repertorios',
+    territorios: ['Castilla', 'León', 'Condado de Borgoña'], personas: [], nota: 'Hijo del conde Guillermo I de Borgoña, casado en 1090 con Urraca, hija de Alfonso VI.'},
+  {titulo: 'Gran Enciclopèdia Catalana · Regne de Castella', url: 'https://www.enciclopedia.cat/gran-enciclopedia-catalana/regne-de-castella', grupo: 'Artículos de repertorios',
+    territorios: ['Castilla', 'León'], personas: ['FERN3'], nota: 'Alfonso VII, hijo de Urraca y Raimundo de Borgoña, inicia en 1126 la dinastía borgoñona.'},
+];

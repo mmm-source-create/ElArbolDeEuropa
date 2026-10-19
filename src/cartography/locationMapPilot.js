@@ -84,7 +84,10 @@ function basePilotJurisdictionsFor(territory, year, personId) {
     : personId === 'GEORGEBRUNSCAL' ? ['Núcleo de Calenberg-Hannover'] : [];
   if (territory === 'Baden') return personId === 'CHRISTOPH1BADEN' ? ['Núcleo de Baden']
     : personId === 'BERNHARD3BADEN' ? ['Núcleo de Baden-Baden'] : ['Núcleo de Baden-Durlach'];
-  if (territory === 'Brandeburgo') return personId === 'JOHNALCHEMIST' ? [] : ['Núcleo de Brandeburgo'];
+  // The elector's lands outside the Mark are part of his government in the
+  // map: Pomerania, Magdeburg, Halberstadt, Minden, Mark and Ravensberg.
+  if (territory === 'Brandeburgo') return personId === 'JOHNALCHEMIST' ? [] : ['Núcleo de Brandeburgo',
+    'Pomerania de Brandeburgo', 'Magdeburgo brandeburgués', 'Halberstadt brandeburgués', 'Minden brandeburgués', 'Mark', 'Ravensberg'];
   if (territory === 'Sajonia') return ['ALBERTSAX','GEORGESAX','HENRYPIOUSSAX'].includes(personId)
     || personId === 'MORITZSAX' && year < 1547 ? ['Sajonia albertina'] : ['Sajonia electoral'];
   if (territory === 'Württemberg') {

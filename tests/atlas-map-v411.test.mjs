@@ -97,9 +97,10 @@ test('Brandenburg incorporation and Hesse inheritance do not swallow independent
 test('new imperial layers use existing SVG cells and match the canonical source',()=>{
  const canonical=JSON.parse(fs.readFileSync(new URL('../data/cartography/imperial-core-locations.json',import.meta.url)));
  const succession=JSON.parse(fs.readFileSync(new URL('../data/cartography/succession-review.json',import.meta.url)));
+ const germanCores=JSON.parse(fs.readFileSync(new URL('../data/cartography/german-cores-continuity-review.json',import.meta.url)));
  const svg=fs.readFileSync(new URL('../data/cartography/euv-locations-crop.svg',import.meta.url),'utf8');
  for(const layer of canonical.territories) {
-  const replacement=succession.replacements.find(t=>t.name===layer.name);
+  const replacement=germanCores.replacements.find(t=>t.name===layer.name)||succession.replacements.find(t=>t.name===layer.name);
   const expected={...layer,...replacement};
   if(replacement){delete expected.active;delete expected.periods;delete expected.temporalExtensions}
   assert.deepEqual(data.additionalTerritories.find(t=>t.name===layer.name),expected,layer.name);

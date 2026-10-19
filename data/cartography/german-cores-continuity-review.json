@@ -1,0 +1,544 @@
+{
+  "reviewedAt": "2026-10-19",
+  "replacements": [
+    {
+      "name": "Núcleo de Brandeburgo",
+      "coverage": {
+        "from": 1415,
+        "through": 1800
+      },
+      "versions": [
+        {
+          "from": 1415,
+          "ids": [
+            "Berlin",
+            "Brandenburg",
+            "Stendal",
+            "Wittenberge"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Kurmark de los Hohenzollern desde 1415."
+        },
+        {
+          "from": 1524,
+          "ids": [
+            "Berlin",
+            "Brandenburg",
+            "Ruppin",
+            "Stendal",
+            "Wittenberge"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Ruppin pasa al electorado tras la extinción de los condes de Lindow-Ruppin."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Núcleo de Brandeburgo · evidencia de la revisión anterior",
+          "url": "https://www.politische-bildung-brandenburg.de/themen/die-entstehung-der-mark",
+          "locator": "Núcleos de la Kurmark bajo los Hohenzollern desde 1415. Las celdas se han revisado por su posición y vecinos; aproximan los entornos de estas ciudades. No incluyen Neumark, Franconia, Prusia ni Pomerania, que tienen historias y jurisdicciones distintas. Ruppin se incorpora únicamente desde 1524, tras la extinción de los condes de Lindow-Ruppin."
+        },
+        {
+          "title": "Treccani · Dizionario di Storia · Brandeburgo",
+          "url": "https://www.treccani.it/enciclopedia/brandeburgo_(Dizionario-di-Storia)/",
+          "locator": "Dignidad electoral en 1415 y margraviato para Federico de Hohenzollern en 1417; unión con el ducado de Prusia (1618); desde el Gran Elector la historia de Brandeburgo es la de Prusia, de la que sigue siendo el solar de la dinastía; provincia prusiana desde 1816."
+        }
+      ],
+      "note": "Núcleos de la Kurmark bajo los Hohenzollern, electores de Brandeburgo y desde 1701 reyes en Prusia. Las celdas aproximan los entornos de Berlín, Brandeburgo, Stendal, Wittenberge y Ruppin; no incluyen la Neumark.",
+      "precision": "documented_core",
+      "limitedCore": true
+    },
+    {
+      "name": "Núcleo de Württemberg",
+      "coverage": {
+        "from": 1400,
+        "through": 1800
+      },
+      "versions": [
+        {
+          "from": 1400,
+          "ids": [
+            "Stuttgart",
+            "Tubingen",
+            "Urach"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Núcleo del condado y, desde 1495, del ducado de Württemberg."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Núcleo de Württemberg · evidencia de la revisión anterior",
+          "url": "https://www.leo-bw.de/media/kgl_atlas/current/delivered/pdf/HABW_6_2.pdf",
+          "locator": "Núcleos de Stuttgart, Tübingen y Urach, verificados visualmente. El mapa no colorea las ciudades imperiales vecinas ni todo el valle del Neckar. La partición de 1442–1482 se resuelve por rama; el condado se convierte en ducado en 1495."
+        },
+        {
+          "title": "Treccani · Dizionario di Storia · Württemberg",
+          "url": "https://www.treccani.it/enciclopedia/wurttemberg_(Dizionario-di-Storia)/",
+          "locator": "Ducado desde 1495; Carlos V lo compra a la Liga Suaba en 1519 y el duque Ulrico lo recupera en 1534; electorado en 1803 y corona real en 1805."
+        }
+      ],
+      "note": "Núcleo del ducado de Württemberg en Stuttgart, Tubinga y Urach. Las ramas de Urach y Stuttgart (1442–1481) se representan aparte.",
+      "precision": "documented_core",
+      "limitedCore": true
+    },
+    {
+      "name": "Núcleo de Hesse-Kassel",
+      "coverage": {
+        "from": 1567,
+        "through": 1800
+      },
+      "versions": [
+        {
+          "from": 1567,
+          "ids": [
+            "Kassel",
+            "Ziegenhain"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Landgraviato de Hesse-Kassel tras el reparto de 1567."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Núcleo de Hesse-Kassel · evidencia de la revisión anterior",
+          "url": "https://www.lagis-hessen.de/de/subjects/browse/current/26/ex/browse/sn/ga",
+          "locator": "Núcleos de Hesse-Kassel tras 1567; Marburg permanece fuera porque su herencia y control posterior requieren una capa específica. No se extiende este gobierno a toda Hesse."
+        },
+        {
+          "title": "Treccani · Dizionario di Storia · Assia",
+          "url": "https://www.treccani.it/enciclopedia/assia_(Dizionario-di-Storia)/",
+          "locator": "Reparto de 1567 a la muerte de Felipe el Magnánimo; Guillermo IX de Hesse-Kassel, príncipe elector en 1803; anexión al reino de Westfalia de 1806 a 1814."
+        }
+      ],
+      "note": "Núcleo del landgraviato de Hesse-Kassel en Kassel y Ziegenhain.",
+      "precision": "documented_core",
+      "limitedCore": true
+    },
+    {
+      "name": "Núcleo de Hesse-Darmstadt",
+      "coverage": {
+        "from": 1567,
+        "through": 1800
+      },
+      "versions": [
+        {
+          "from": 1567,
+          "ids": [
+            "Darmstadt"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Landgraviato de Hesse-Darmstadt tras el reparto de 1567."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Núcleo de Hesse-Darmstadt · evidencia de la revisión anterior",
+          "url": "https://www.lagis-hessen.de/de/subjects/browse/current/26/ex/browse/sn/ga",
+          "locator": "Núcleo de Hesse-Darmstadt tras 1567. La localización regional aproxima el entorno urbano y no incorpora las herencias disputadas de Marburg ni toda Hesse."
+        },
+        {
+          "title": "Treccani · Dizionario di Storia · Assia",
+          "url": "https://www.treccani.it/enciclopedia/assia_(Dizionario-di-Storia)/",
+          "locator": "Reparto de 1567; los landgraves de Hesse-Darmstadt continúan en los siglos XVII y XVIII aliados de Austria; el último gran duque es depuesto en 1918."
+        }
+      ],
+      "note": "Núcleo del landgraviato de Hesse-Darmstadt en Darmstadt.",
+      "precision": "documented_core",
+      "limitedCore": true
+    },
+    {
+      "name": "Núcleo de Baden-Durlach",
+      "coverage": {
+        "from": 1515,
+        "through": 1800
+      },
+      "versions": [
+        {
+          "from": 1515,
+          "ids": [
+            "Hachberg",
+            "Mullheim"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Hachberg y el Markgräflerland antes del reparto."
+        },
+        {
+          "from": 1535,
+          "ids": [
+            "Durlach",
+            "Hachberg",
+            "Mullheim"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Baden-Durlach tras el reparto de 1535."
+        },
+        {
+          "from": 1635,
+          "ids": [],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Ocupación durante la guerra de los Treinta Años."
+        },
+        {
+          "from": 1648,
+          "ids": [
+            "Durlach",
+            "Hachberg",
+            "Mullheim"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Restitución en la paz de Westfalia."
+        },
+        {
+          "from": 1651,
+          "ids": [
+            "Durlach"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Durlach, la residencia de los margraves; Hachberg y Müllheim siguen en las capas regionales de Baden y la Austria Anterior."
+        }
+      ],
+      "sources": [
+        {
+          "url": "https://www.leo-bw.de/media/kgl_atlas/current/delivered/pdf/HABW_6_1_1a.pdf",
+          "locator": "Joachim Fischer, Historischer Atlas, pp.4–6: herencia de Ernesto 1515/1535; Carlos II 1553–1577; ocupación 1635–1648 y restitución posterior.",
+          "title": "Núcleo de Baden-Durlach · alcance documentado"
+        },
+        {
+          "title": "Núcleo de Baden-Durlach · evidencia de la revisión anterior",
+          "url": "https://www.leo-bw.de/media/kgl_atlas/current/delivered/pdf/HABW_6_1_1a.pdf",
+          "locator": "Ernesto recibe Hachberg y Müllheim en 1515; Durlach se añade en 1535. La ocupación de 1635–1647 suspende esta capa hasta la restitución de 1648. No incluye Baden-Baden ni reconstruye enclaves dispersos."
+        },
+        {
+          "title": "Treccani · Dizionario di Storia · Baden",
+          "url": "https://www.treccani.it/enciclopedia/baden_(Dizionario-di-Storia)/",
+          "locator": "En 1771 se extingue la línea de Baden-Baden y sus posesiones pasan a Carlos Federico de Baden-Durlach; elector en 1803."
+        }
+      ],
+      "note": "Núcleo del margraviato de Baden-Durlach; desde 1651 solo Durlach, para no duplicar las capas regionales vecinas.",
+      "precision": "documented_core",
+      "limitedCore": true
+    },
+    {
+      "name": "Pomerania sueca",
+      "coverage": {
+        "from": 1648,
+        "through": 1800
+      },
+      "versions": [
+        {
+          "from": 1648,
+          "ids": [
+            "Goleniow",
+            "Kamien",
+            "Nowogard",
+            "Rugen",
+            "Stettin",
+            "Ueckermunde"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Reparto de Westfalia: Stettin, las bocas del Óder y Rugia para Suecia."
+        },
+        {
+          "from": 1720,
+          "ids": [
+            "Rugen"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Paz de Estocolmo: Stettin y la orilla sur del Peene pasan a Prusia; Suecia conserva Rugia y el norte del Peene."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Pomerania sueca · evidencia de la revisión anterior",
+          "url": "https://historiapomorza.pl/en/epoka/swedish-pomerania-1637-1815/",
+          "locator": "Westfalia asignó la parte occidental a Suecia; el deslinde local se fijó en 1653, por lo que Stettin y Rügen son proxies."
+        },
+        {
+          "title": "Gran Enciclopèdia Catalana · Pomerània",
+          "url": "https://www.enciclopedia.cat/gran-enciclopedia-catalana/pomerania",
+          "locator": "Westfalia (1648) da a Suecia las bocas del Óder y a Brandeburgo el resto; Brandeburgo-Prusia adquiere parte de la Pomerania sueca en la paz de Estocolmo (1720); el resto, en 1815."
+        }
+      ],
+      "note": "Solo la parte occidental asignada a Suecia en Westfalia: Stettin y Rügen se usan como proxies. El límite exacto con Brandeburgo se fijó en 1653. Prolongada hasta 1800 con el traspaso de 1720.",
+      "precision": "documented_core",
+      "limitedCore": true
+    },
+    {
+      "name": "Pomerania de Brandeburgo",
+      "coverage": {
+        "from": 1648,
+        "through": 1800
+      },
+      "versions": [
+        {
+          "from": 1648,
+          "ids": [
+            "Bialogard",
+            "Bobolice",
+            "Bytow",
+            "Gryfia_Gora",
+            "Kolobrzeg",
+            "Koszalin",
+            "Lebork",
+            "Miastko",
+            "Nowoszczecin",
+            "Resko",
+            "Slawno",
+            "Slupsk",
+            "Swidwin"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Pomerania Ulterior para Brandeburgo en el reparto de Westfalia."
+        },
+        {
+          "from": 1720,
+          "ids": [
+            "Bialogard",
+            "Bobolice",
+            "Bytow",
+            "Goleniow",
+            "Gryfia_Gora",
+            "Kamien",
+            "Kolobrzeg",
+            "Koszalin",
+            "Lebork",
+            "Miastko",
+            "Nowogard",
+            "Nowoszczecin",
+            "Resko",
+            "Slawno",
+            "Slupsk",
+            "Stettin",
+            "Swidwin",
+            "Ueckermunde"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Stettin, Gollnow, Usedom-Wollin y la orilla sur del Peene, por la paz de Estocolmo."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Pomerania de Brandeburgo · evidencia de la revisión anterior",
+          "url": "https://historiapomorza.pl/en/epoka/pomerania-in-the-brandenburg-period-1648-1653-1701-1713/",
+          "locator": "Westfalia reconoció la sucesión de Brandeburgo en la parte oriental; el deslinde local no quedó fijado hasta 1653."
+        },
+        {
+          "title": "Gran Enciclopèdia Catalana · Pomerània",
+          "url": "https://www.enciclopedia.cat/gran-enciclopedia-catalana/pomerania",
+          "locator": "Westfalia (1648) da a Suecia las bocas del Óder y a Brandeburgo el resto; Brandeburgo-Prusia adquiere parte de la Pomerania sueca en la paz de Estocolmo (1720); el resto, en 1815."
+        },
+        {
+          "title": "Treccani · Enciclopedia Italiana · Federico Guglielmo elettore di Brandeburgo",
+          "url": "https://www.treccani.it/enciclopedia/federico-guglielmo-elettore-di-brandeburgo_(Enciclopedia-Italiana)/",
+          "locator": "Obtiene en Westfalia la Pomerania oriental y los obispados de Kammin, Halberstadt y Minden con un derecho sobre Magdeburgo, que solo en 1680 se une definitivamente a Brandeburgo."
+        },
+        {
+          "title": "Gran Enciclopèdia Catalana · Prússia",
+          "url": "https://www.enciclopedia.cat/gran-enciclopedia-catalana/prussia",
+          "locator": "Adquisiciones en Pomerania (1648, 1720) y dominios de Brandeburgo-Prusia: Kleve, Minden, Magdeburgo, Pomerania."
+        }
+      ],
+      "note": "Parte oriental asignada a Brandeburgo en Westfalia; Stolp y Koslin son proxies regionales, no un deslinde exacto anterior al tratado de 1653. Prolongada hasta 1800; desde 1720 incluye Stettin y la orilla sur del Peene.",
+      "precision": "documented_core",
+      "limitedCore": true
+    }
+  ],
+  "territories": [
+    {
+      "name": "Magdeburgo brandeburgués",
+      "color": "#AD5C48",
+      "corridor": "Brandeburgo-Prusia · continuidad",
+      "coverage": {
+        "from": 1680,
+        "through": 1800
+      },
+      "versions": [
+        {
+          "from": 1680,
+          "ids": [
+            "Magdeburg"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Unión definitiva del arzobispado secularizado a Brandeburgo."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Treccani · Enciclopedia Italiana · Magdeburgo",
+          "url": "https://www.treccani.it/enciclopedia/magdeburgo_(Enciclopedia-Italiana)/",
+          "locator": "Tras la muerte del administrador Augusto de Sajonia-Weissenfels (1680), el arzobispado secularizado pasa a Brandeburgo según la paz de Westfalia."
+        },
+        {
+          "title": "Treccani · Enciclopedia Italiana · Federico Guglielmo elettore di Brandeburgo",
+          "url": "https://www.treccani.it/enciclopedia/federico-guglielmo-elettore-di-brandeburgo_(Enciclopedia-Italiana)/",
+          "locator": "Obtiene en Westfalia la Pomerania oriental y los obispados de Kammin, Halberstadt y Minden con un derecho sobre Magdeburgo, que solo en 1680 se une definitivamente a Brandeburgo."
+        }
+      ],
+      "note": "Ducado de Magdeburgo, territorio del elector de Brandeburgo y después del rey de Prusia. La celda aproxima el entorno de la ciudad.",
+      "precision": "documented_core",
+      "limitedCore": true
+    },
+    {
+      "name": "Halberstadt brandeburgués",
+      "color": "#AD5C48",
+      "corridor": "Brandeburgo-Prusia · continuidad",
+      "coverage": {
+        "from": 1648,
+        "through": 1800
+      },
+      "versions": [
+        {
+          "from": 1648,
+          "ids": [
+            "Halberstadt"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Principado secularizado concedido a Brandeburgo en Westfalia."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Treccani · Enciclopedia Italiana · Vestfalia",
+          "url": "https://www.treccani.it/enciclopedia/vestfalia_(Enciclopedia-Italiana)/",
+          "locator": "En 1648 el elector Federico Guillermo obtiene la Pomerania Ulterior y los obispados de Magdeburgo, Halberstadt, Minden y Kammin."
+        },
+        {
+          "title": "Treccani · Enciclopedia Italiana · Federico Guglielmo elettore di Brandeburgo",
+          "url": "https://www.treccani.it/enciclopedia/federico-guglielmo-elettore-di-brandeburgo_(Enciclopedia-Italiana)/",
+          "locator": "Obtiene en Westfalia la Pomerania oriental y los obispados de Kammin, Halberstadt y Minden con un derecho sobre Magdeburgo, que solo en 1680 se une definitivamente a Brandeburgo."
+        }
+      ],
+      "note": "Principado de Halberstadt bajo los Hohenzollern. La celda aproxima su entorno.",
+      "precision": "documented_core",
+      "limitedCore": true
+    },
+    {
+      "name": "Minden brandeburgués",
+      "color": "#AD5C48",
+      "corridor": "Brandeburgo-Prusia · continuidad",
+      "coverage": {
+        "from": 1648,
+        "through": 1800
+      },
+      "versions": [
+        {
+          "from": 1648,
+          "ids": [
+            "Minden"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Principado secularizado concedido a Brandeburgo en Westfalia."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Treccani · Enciclopedia Italiana · Vestfalia",
+          "url": "https://www.treccani.it/enciclopedia/vestfalia_(Enciclopedia-Italiana)/",
+          "locator": "En 1648 el elector Federico Guillermo obtiene la Pomerania Ulterior y los obispados de Magdeburgo, Halberstadt, Minden y Kammin."
+        },
+        {
+          "title": "Treccani · Enciclopedia Italiana · Federico Guglielmo elettore di Brandeburgo",
+          "url": "https://www.treccani.it/enciclopedia/federico-guglielmo-elettore-di-brandeburgo_(Enciclopedia-Italiana)/",
+          "locator": "Obtiene en Westfalia la Pomerania oriental y los obispados de Kammin, Halberstadt y Minden con un derecho sobre Magdeburgo, que solo en 1680 se une definitivamente a Brandeburgo."
+        }
+      ],
+      "note": "Principado de Minden bajo los Hohenzollern. La celda aproxima su entorno.",
+      "precision": "documented_core",
+      "limitedCore": true
+    },
+    {
+      "name": "Mark",
+      "color": "#AD5C48",
+      "corridor": "Brandeburgo-Prusia · continuidad",
+      "coverage": {
+        "from": 1614,
+        "through": 1800
+      },
+      "versions": [
+        {
+          "from": 1614,
+          "ids": [
+            "Hamm",
+            "Soest"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Reparto de la herencia de Jülich-Cléveris (1614)."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Treccani · Enciclopedia Italiana · Germania",
+          "url": "https://www.treccani.it/enciclopedia/germania_(Enciclopedia-Italiana)/",
+          "locator": "El acuerdo de 1614 reparte la herencia de Jülich-Cléveris: Cléveris y Mark para Brandeburgo, Jülich y Berg para el Palatinado-Neoburgo."
+        },
+        {
+          "title": "Treccani · Enciclopedia Italiana · Prussia",
+          "url": "https://www.treccani.it/enciclopedia/prussia_(Enciclopedia-Italiana)/",
+          "locator": "Ravensberg, Mark y Cléveris figuran entre los territorios de Brandeburgo-Prusia."
+        }
+      ],
+      "note": "Condado de la Mark, en manos de los electores de Brandeburgo desde el reparto de 1614, confirmado en 1666. Las celdas aproximan los entornos de Hamm y Soest.",
+      "precision": "documented_core",
+      "limitedCore": true
+    },
+    {
+      "name": "Ravensberg",
+      "color": "#AD5C48",
+      "corridor": "Brandeburgo-Prusia · continuidad",
+      "coverage": {
+        "from": 1614,
+        "through": 1800
+      },
+      "versions": [
+        {
+          "from": 1614,
+          "ids": [
+            "Bielefeld"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Reparto de la herencia de Jülich-Cléveris (1614)."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Treccani · Enciclopedia Italiana · Germania",
+          "url": "https://www.treccani.it/enciclopedia/germania_(Enciclopedia-Italiana)/",
+          "locator": "El acuerdo de 1614 reparte la herencia de Jülich-Cléveris: Cléveris y Mark para Brandeburgo, Jülich y Berg para el Palatinado-Neoburgo."
+        },
+        {
+          "title": "Treccani · Enciclopedia Italiana · Prussia",
+          "url": "https://www.treccani.it/enciclopedia/prussia_(Enciclopedia-Italiana)/",
+          "locator": "Ravensberg, Mark y Cléveris figuran entre los territorios de Brandeburgo-Prusia."
+        }
+      ],
+      "note": "Condado de Ravensberg, de los electores de Brandeburgo desde el reparto de 1614. La celda aproxima el entorno de Bielefeld.",
+      "precision": "documented_core",
+      "limitedCore": true
+    }
+  ],
+  "overrides": [],
+  "limitations": [
+    "Los núcleos del corredor inicial terminaban en 1650. Esta revisión prolonga solo los que siguieron bajo la misma dinastía hasta 1800, con su fuente; no reconstruye fronteras completas.",
+    "Las tierras de Brandeburgo-Prusia fuera de la Marca (Pomerania, Magdeburgo, Halberstadt, Minden, Mark y Ravensberg) se aproximan con una o pocas celdas por territorio. La Neumark sigue sin capa: no se ha encontrado una fuente de referencia para su recompra de 1455."
+  ]
+}

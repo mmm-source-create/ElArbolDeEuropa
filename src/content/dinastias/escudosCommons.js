@@ -1,7 +1,7 @@
 // Arms from Wikimedia Commons (V5.30, revised in V5.31–V5.33): plain shields without
 // background, helmets or crowns. The files in public/escudos keep their
 // drawing; only editor metadata was removed and a viewBox added (Trastámara
-// uses the 500 px PNG Commons renders from a 7 MB SVG). Each credit
+// and Gorizia use the 500 px PNG Commons renders from a heavy SVG). Each credit
 // names the author, the licence and the file page.
 export const ESCUDOS_COMMONS = Object.freeze({
   "Capeto": {"archivo":"/escudos/arms-of-the-kings-of-france-france-ancien-.svg","titulo":"Arms of the Kings of France (France Ancien).svg","autor":"Saltspan, con elementos de Sodacan","licencia":"CC BY-SA 4.0","licenciaUrl":"https://creativecommons.org/licenses/by-sa/4.0/","fuente":"https://commons.wikimedia.org/wiki/File:Arms_of_the_Kings_of_France_(France_Ancien).svg"},
@@ -69,4 +69,6 @@ export const ESCUDOS_COMMONS = Object.freeze({
   "Colonna": {"archivo":"/escudos/stemma-della-famiglia-colonna.svg","titulo":"Stemma della famiglia Colonna.svg","autor":"ZuppaDiCarlo y Heralder","licencia":"CC BY-SA 4.0","licenciaUrl":"https://creativecommons.org/licenses/by-sa/4.0/","fuente":"https://commons.wikimedia.org/wiki/File:Stemma_della_famiglia_Colonna.svg"},
   "Borghese": {"archivo":"/escudos/arms-of-the-house-of-borghese.svg","titulo":"Arms of the house of Borghese.svg","autor":"MostEpic","licencia":"CC BY-SA 4.0","licenciaUrl":"https://creativecommons.org/licenses/by-sa/4.0/","fuente":"https://commons.wikimedia.org/wiki/File:Arms_of_the_house_of_Borghese.svg"},
   "Borja": {"archivo":"/escudos/arms-of-the-house-of-borgia-1-.svg","titulo":"Arms of the house of Borgia (1).svg","autor":"MostEpic","licencia":"CC BY-SA 4.0","licenciaUrl":"https://creativecommons.org/licenses/by-sa/4.0/","fuente":"https://commons.wikimedia.org/wiki/File:Arms_of_the_house_of_Borgia_(1).svg"},
+  "Gorizia": {"archivo":"/escudos/arms-of-the-house-of-gorizia.png","titulo":"Arms of the house of Gorizia.svg","autor":"MostEpic","licencia":"CC BY-SA 4.0","licenciaUrl":"https://creativecommons.org/licenses/by-sa/4.0/","fuente":"https://commons.wikimedia.org/wiki/File:Arms_of_the_house_of_Gorizia.svg","formato":"PNG de 500 px generado por Commons a partir del SVG"},
+  "Ludovingios": {"archivo":"/escudos/arms-of-the-house-of-hesse-1200-1450-.svg","titulo":"Arms of the house of Hesse (1200-1450).svg","autor":"MostEpic","licencia":"CC BY-SA 4.0","licenciaUrl":"https://creativecommons.org/licenses/by-sa/4.0/","fuente":"https://commons.wikimedia.org/wiki/File:Arms_of_the_house_of_Hesse_(1200-1450).svg"},
 });

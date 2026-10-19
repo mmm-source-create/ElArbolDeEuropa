@@ -21,6 +21,9 @@ import { BALKAN_AUTHORITY_REVIEWS } from './balkanReviewData.js';
 import { AUTHORITY_GAPS_REVIEWS } from './authorityGapsReviewData.js';
 import { NETHERLANDS_GOVERNOR_REVIEWS } from './netherlandsGovernorReviews.js';
 import { ARAGON_VASSAL_REVIEWS } from './aragonVassalReviews.js';
+import { HABSBURG_ANCESTRY_REVIEWS } from './habsburgAncestryReviews.js';
+import { NAVARRE_LANDS_REVIEWS } from './navarreLandsReviews.js';
+import { BRANDENBURG_PRUSSIA_REVIEWS } from './brandenburgPrussiaReviews.js';
 
 // The pilot follows three generations around the succession of Castile.
 // A source here supports only the claim and passage named in each review.
@@ -303,7 +306,6 @@ export const CLAIM_REVIEWS = Object.freeze({
   'person:JUANA1CAST:government:Castilla:1504:1555:Reina': related(paresJuanaReign,'Título conservado; PARES señala que no ejerció poder efectivo desde 1506.'),
   'person:JUANA1CAST:government:Aragón:1516:1555:Reina': related(paresJuanaReign,'Título conservado; PARES distingue la titularidad del ejercicio efectivo.'),
   'person:JUANA1CAST:government:Navarra:1516:1555:Reina': dispute([paresJuanaHistory,paresJuanaReign],'El mismo registro de PARES dice «desde 1516» en la narración y «1515–1555» en la lista de reinados. El Atlas conserva provisionalmente 1516.',['1515–1555 · PARES, Fechas de reinado','1516–1555 · PARES, Historia']),
-  'person:JUANA1CAST:government:Nápoles:1516:1555:Reina': dispute([paresJuanaReign],'PARES termina este título en 1554; el Atlas registra 1555. Se necesita contrastar el final de la titularidad.',['1516–1554 · PARES, Fechas de reinado','1516–1555 · Atlas, pendiente']),
   'person:JUANA1CAST:government:Cerdeña:1516:1555:Reina': related(paresJuanaSardinia,'PARES registra el título compartido con Carlos I; no implica ejercicio personal del gobierno.'),
   'person:FEL1CAST:birth': dated(felipeHeader, '1478-06-22'),
   'person:FEL1CAST:death': dated(felipeHeader, '1506-09-25'),
@@ -402,6 +404,10 @@ export const CLAIM_REVIEWS = Object.freeze({
   'person:ISABPORTEMP:father': related(isabelEmpFamily),
   'person:ISABPORTEMP:mother': related(isabelEmpFamily),
   'person:ISABPORTEMP:spouse:CARLOS5': related(paresCarlosMarriage),
+  // V5.34: the Habsburg review upgrades earlier inferred records with new sources.
+  ...HABSBURG_ANCESTRY_REVIEWS,
+  ...NAVARRE_LANDS_REVIEWS,
+  ...BRANDENBURG_PRUSSIA_REVIEWS,
 });
 
 export const EDITORIAL_HISTORY = Object.freeze([

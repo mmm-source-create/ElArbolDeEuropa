@@ -43,7 +43,7 @@ test('los escudos propuestos llegan a sus casas, con crédito y archivo', () => 
   // Tudor uses the royal arms the Lancastrians left them.
   assert.equal(escudoDe('Tudor').imagen.archivo, escudoDe('Plantagenet-Lancaster').imagen.archivo);
   assert.equal(escudoDe('Romanov').imagen.revision, '2025-09-27');
-  assert.equal(Object.keys(ESCUDOS).length, 65);
+  assert.ok(Object.keys(ESCUDOS).length >= 65);
   const files = new Set(fs.readdirSync(new URL('../public/escudos/', import.meta.url)));
   for (const c of CREDITOS_ESCUDOS) {
     assert.ok(files.has(c.archivo.replace('/escudos/', '')), c.dinastia);

@@ -13,10 +13,12 @@ test('cada dato personal registrado conserva una afirmación estable sin fuente 
   assert.ok(claims.some(claim=>claim.field==='Sucesión'));
   assert.equal(new Set(claims.map(claim=>claim.id)).size,claims.length);
   assert.ok(claims.every(claim=>claim.certainty in CERTAINTY));
-  const unreviewed=claims.find(claim=>claim.field==='Gobierno'&&!claim.sources.length);
+  // V5.34 documentó todos los gobiernos de Carlos V; la cita sin fuente se comprueba con Felipe III.
+  const felipe=PERSONAS.find(person=>person.id==='FEL3ESP');
+  const unreviewed=personClaims(felipe).find(claim=>claim.field==='Gobierno'&&!claim.sources.length);
   assert.ok(unreviewed);
-  assert.match(citationText(unreviewed,carlos.nombre),/Sin fuente específica/);
-  assert.match(citationText(unreviewed,carlos.nombre,'en'),/No claim-specific source/);
+  assert.match(citationText(unreviewed,felipe.nombre),/Sin fuente específica/);
+  assert.match(citationText(unreviewed,felipe.nombre,'en'),/No claim-specific source/);
 });
 
 test('las fichas ligeras conservan las afirmaciones de parentesco sin cargar el registro completo',()=>{

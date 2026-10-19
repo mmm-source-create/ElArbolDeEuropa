@@ -215,6 +215,10 @@
       "maintenance": "Selecciones medievales y superficies interiores revisadas explícitamente; ensambladas por scripts/cartography/merge-map-expansions.mjs."
     },
     {
+      "path": "data/cartography/german-cores-continuity-review.json",
+      "kind": "accepted-cartography"
+    },
+    {
       "path": "data/cartography/poland-lithuania-continuity-review.json",
       "kind": "accepted-cartography",
       "producer": "scripts/cartography/build-central-europe-review.mjs"

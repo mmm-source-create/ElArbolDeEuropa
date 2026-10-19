@@ -87,7 +87,7 @@ export const ACCENTS = {
   "Württemberg":"#8A684C","Grifo":"#557486","Zähringen-Baden":"#7B5968","Jülich":"#756489",
 
   // Suecia: una familia visual de azules claros, manteniendo cada casa distinguible.
-  "Vasa":"#8EC5E8","Bjälbo":"#A8D8EE","Folkunga":"#9FCFE6","Erik":"#B4DDF0","Sverker":"#91BED6",
+  "Vasa":"#8EC5E8","Bjälbo":"#A8D8EE","Erik":"#B4DDF0","Sverker":"#91BED6",
   "Bonde":"#7FB5D2","Sture":"#6FA8C8","Bernadotte":"#5E9BC2",
 
   "Saboya":"#B65C78","Lorena":"#9A7A46","Champaña":"#A57C52","Foix":"#8F5E3E",

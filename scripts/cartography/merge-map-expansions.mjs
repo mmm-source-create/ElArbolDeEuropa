@@ -78,6 +78,10 @@ export function mergeMapExpansions(data) {
   applyContinuityReview(data,polishContinuity);
   data.polandLithuaniaContinuityReview=data.continuityReview;
   data.continuityReview=continuity;
+  // V5.34: German dynastic cores of the initial 1400–1650 survey continued to 1800.
+  applyContinuityReview(data,read('german-cores-continuity-review.json'));
+  data.germanCoresContinuityReview=data.continuityReview;
+  data.continuityReview=continuity;
   applyRegionalReview(data,read('poland-lithuania-medieval-review.json'),'polandLithuaniaMedievalReview','Polonia-Lituania · principados y continuidad de las regiones orientales');
   applyRegionalReview(data,read('poland-lithuania-full-review.json'),'polandLithuaniaReview','Polonia-Lituania · tres repartos y continuidad de los estados receptores');
   applyRegionalReview(data,read('poland-lithuania-frontier-review.json'),'polandLithuaniaFrontierReview','Polonia-Lituania · Smolensk, Chernigov y margen izquierda');
