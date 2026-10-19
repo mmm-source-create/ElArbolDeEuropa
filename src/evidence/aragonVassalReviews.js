@@ -1,4 +1,4 @@
-// V5.31 · Afirmaciones de los vasallos de la Corona de Aragón, cada una con su
+// V5.31–V5.32 · Afirmaciones de los vasallos de la Corona de Aragón, cada una con su
 // entrada de la Gran Enciclopèdia Catalana. Generado con la incorporación de
 // estas personas; los gobiernos de varios años conservan la resolución anual.
 const SOURCES = Object.freeze({
@@ -127,6 +127,21 @@ const SOURCES = Object.freeze({
   "url": "https://www.enciclopedia.cat/gran-enciclopedia-catalana/regne-marquesat-i-comtat-de-provenca",
   "locator": "Alfonso I pone en el gobierno a su hijo Alfonso II en 1185, que le sucede en 1196; matrimonio de 1193 con Garsenda de Sabran."
  },
+ "athensCrown": {
+  "title": "Gran Enciclopèdia Catalana · Ducat d’Atenes",
+  "url": "https://www.enciclopedia.cat/gran-enciclopedia-catalana/ducat-datenes",
+  "locator": "Los ducados pasan en 1355 a Federico III de Sicilia; Pedro el Ceremonioso acepta la soberanía ofrecida a Leonor de Sicilia y los une a la Corona en 1380; Nerio Acciaiuoli toma Atenas en 1388."
+ },
+ "neopatriaTitle": {
+  "title": "Gran Enciclopèdia Catalana · Ducat de Neopàtria",
+  "url": "https://www.enciclopedia.cat/gran-enciclopedia-catalana/ducat-de-neopatria",
+  "locator": "Pedro el Ceremonioso asume el título en 1377, cuando el ducado se reducía casi a su capital; Neopatria cae en manos de los florentinos en 1390."
+ },
+ "joan1": {
+  "title": "Gran Enciclopèdia Catalana · Joan I de Catalunya-Aragó",
+  "url": "https://www.enciclopedia.cat/gran-enciclopedia-catalana/joan-i-de-catalunya-arago",
+  "locator": "Rey desde 1387; durante su reinado se perdieron los ducados catalanes de Atenas y Neopatria (1387–1390)."
+ },
  "montpeller": {
   "title": "Gran Enciclopèdia Catalana · Senyoria de Montpeller",
   "url": "https://www.enciclopedia.cat/gran-enciclopedia-catalana/senyoria-de-montpeller",
@@ -213,4 +228,13 @@ export const ARAGON_VASSAL_REVIEWS = Object.freeze({
   "person:JAIME2URGEL:birth": review("jaume2", "La cabecera da 1378/80; se muestra 1380 como año aproximado.", {"precision":"circa","timeLabel":"c. 1378–1380"}),
   "person:JAIME2URGEL:death": review("jaume2", "Muerte en Xàtiva en 1433."),
   "person:ERMENGOL10URGEL:death": review("ermengol", "Muerte en 1314."),
+  // V5.32 · Los reyes que fueron duques de Atenas y Neopatria.
+  "person:FEDERICO3SIC:government:Atenas:1355:1377:Duque": review("athensCrown", "Heredó los ducados de su primo Federico I en 1355."),
+  "person:FEDERICO3SIC:government:Ducado de Neopatria:1355:1377:Duque": review("athensCrown", "Neopatria seguía unida al ducado de Atenas."),
+  "person:PEDRO4ARAG:government:Atenas:1377:1379:Duque": review("neopatriaTitle", "Asumió el título en 1377; la unión efectiva llegó en 1380."),
+  "person:PEDRO4ARAG:government:Ducado de Neopatria:1377:1379:Duque": review("neopatriaTitle", "Asumió el título en 1377."),
+  "person:PEDRO4ARAG:government:Atenas:1380:1387:Duque": review("athensCrown", "Unió los ducados a la Corona en 1380."),
+  "person:PEDRO4ARAG:government:Ducado de Neopatria:1380:1387:Duque": review("athensCrown", "Unido a la Corona con el ducado de Atenas en 1380."),
+  "person:JUAN1ARAG:government:Atenas:1387:1387:Duque": review("joan1", "Atenas se perdió en 1388: el gobierno se cuenta por años completos."),
+  "person:JUAN1ARAG:government:Ducado de Neopatria:1387:1389:Duque": review("joan1", "Neopatria se perdió en 1390: el gobierno se cuenta por años completos."),
 });

@@ -1,6 +1,7 @@
 import {frenchCrownRelation,englishCrownLayer} from './frenchCrownRelations.js';
 import {aragonCrownRelation} from './aragonCrownRelations.js';
-import {ORANGE_NASSAU,ENGLISH_CROWN_COLOR,frenchFiefColor,aragonVassalColor} from './mapColors.js';
+import {tributaryLayerRelation} from './tributaryRelations.js';
+import {ORANGE_NASSAU,ENGLISH_CROWN_COLOR,frenchFiefColor,aragonVassalColor,tributaryColor} from './mapColors.js';
 import {franceLowCountriesPoliticalKeys} from './regions/franceLowCountriesRoutes.js';
 import {governmentGroupsAt} from '../domain/government/governmentPresentation.js';
 import {vidaEnAnio} from '../domain/time/europeYear.js';
@@ -85,10 +86,11 @@ export function europeMosaicAt(data,year,people) {
   const english=new Set(names.filter(n=>englishCrownLayer(n,year)));
   const crown=new Map(names.map(n=>[n,frenchCrownRelation(n,year)]).filter(([,relation])=>relation));
   const aragon=new Map(names.map(n=>[n,aragonCrownRelation(n,year)]).filter(([,relation])=>relation));
+  const tributary=new Map(names.map(n=>[n,tributaryLayerRelation(n,year)]).filter(([,relation])=>relation));
   // A coalesced identity can mix royal domain, fiefs and Lancastrian phases:
   // the relation is decided for each cell by the phases that contain it.
   let phasesById=null;
-  if(english.size||crown.size||aragon.size){
+  if(english.size||crown.size||aragon.size||tributary.size){
    phasesById=new Map();
    for(const scope of layer.scopes||[{name:layer.name,ids:layer.ids}])for(const id of scope.ids){
     if(!phasesById.has(id))phasesById.set(id,[]);
@@ -99,7 +101,7 @@ export function europeMosaicAt(data,year,people) {
   const republic=names.some(n=>franceLowCountriesPoliticalKeys(n,year).includes('Provincias Unidas'));
   const baseColor=layer.politicalColorGroup==='polonia-lituania'?REINO_COLOR['Polonia-Lituania']:REINO_COLOR[identity] || layer.mosaicColor;
   return {...layer,mosaicColor:shared?.color || REINO_COLOR[identity] || layer.mosaicColor,
-   crownRelation:aragon.values().next().value||crown.values().next().value||null,english,crown,aragon,phasesById,republic,politicalLabel:shared?.label || layer.displayName || layer.name,candidates,baseColor};
+   crownRelation:aragon.values().next().value||crown.values().next().value||null,english,crown,aragon,tributary,phasesById,republic,politicalLabel:shared?.label || layer.displayName || layer.name,candidates,baseColor};
  });
  const byLocation=new Map();
  for(const layer of layers)for(const id of layer.ids){
@@ -112,14 +114,19 @@ export function europeMosaicAt(data,year,people) {
   // An Aragonese vassalage or lordship takes the Aragonese tint, also inside
   // the kingdom of France (Montpellier, the Occitan oaths of 1213).
   const aragonRelation=phases.map(n=>layer.aragon.get(n)).find(Boolean)||null;
+  // A tributary or a fief outside the French and Aragonese crowns (Ottoman
+  // principalities, Polish Prussia and Courland, Angevin Brittany) takes a
+  // tint of its overlord in the years its dependency is documented.
+  const tributaryRelation=phases.map(n=>layer.tributary.get(n)).find(Boolean)||null;
   const crownRelation=aragonRelation||frenchRelation;
   // The Burgundian state and its Habsburg heirs keep their colour inside the
   // kingdom too; the fief pattern still marks the French suzerainty.
   const polity=unanimous&&POLITY_GROUPS.has(applicable[0].id)?applicable[0]:null;
   const color=layer.republic?ORANGE_NASSAU:englishCrown?ENGLISH_CROWN_COLOR:polity?polity.color
-   :aragonRelation?aragonVassalColor(aragonRelation):frenchRelation?frenchFiefColor(layer.entityId||layer.name):unanimous?applicable[0].color:layer.baseColor;
+   :aragonRelation?aragonVassalColor(aragonRelation):tributaryRelation?tributaryColor(tributaryRelation,year)
+   :frenchRelation?frenchFiefColor(layer.entityId||layer.name):unanimous?applicable[0].color:layer.baseColor;
   const politicalLabel=englishCrown&&!applicable.length?'Inglaterra':applicable.length===1?applicable[0].label:layer.displayName||layer.name;
-  byLocation.get(id).push({...layer,crownRelation,englishCrown,mosaicColor:color,politicalLabel});
+  byLocation.get(id).push({...layer,crownRelation,tributaryRelation,englishCrown,mosaicColor:color,politicalLabel});
  }
  return {...mosaic,layers,byLocation};
 }

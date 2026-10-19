@@ -25,6 +25,21 @@ const ARAGON_VASSAL_TINTS = Object.freeze({
 });
 export const aragonVassalColor = relation => relation.holder === 'Aragón' ? ARAGON_CROWN_COLOR
   : ARAGON_VASSAL_TINTS[relation.holder || relation.subject] || '#C85C50';
+// Tints of each overlord's colour for its tributaries and fiefs, in the same
+// spirit: the dependency reads as the overlord's while neighbouring
+// dependencies keep different tones (Wallachia, Moldavia and Transylvania all
+// border each other and the Ottoman provinces). Poland's own magenta gives way
+// to the Commonwealth's rose in 1569.
+const TRIBUTARY_TINTS = Object.freeze({
+  'wallachia-ottoman': '#6FA59B', 'moldavia-ottoman': '#A5CCC2', 'transylvania-ottoman': '#4F9A80',
+  'crimea-ottoman': '#7DB3A6', 'serbia-ottoman': '#9CC9BC', 'ragusa-ottoman': '#86BBAE', 'archipelago-ottoman': '#86BBAE',
+  'courland-lithuania': '#7F6CB5', 'courland-commonwealth': '#DE9DAC',
+  'prussia-order-poland': '#E9A3E0', 'perm-moscow': '#93A97F', 'novgorod-moscow': '#8FA67C',
+  'granada-castile-jaen': '#F4EC94', 'murcia-castile-alcaraz': '#C9BE3E', 'menorca-mallorca-capdepera': '#C77A73',
+  'brittany-angevin': '#B08A72',
+});
+export const tributaryColor = (relation, year) => relation.id === 'prussia-poland'
+  ? (year >= 1569 ? '#E3A6B5' : '#E9A3E0') : TRIBUTARY_TINTS[relation.id] || '#9AA59A';
 export function authorityColor(entry, territorialColor) {
   if (entry.color) return entry.color;
   const government = entry.government;

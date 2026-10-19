@@ -35,7 +35,7 @@ const MAP_PAN_STEP = 0.12;
 const MAP_DRAG_THRESHOLD = 4;
 
 function authorityFill(svg, color, kind) {
-  if (!['delegated', 'disputed', 'mixed', 'tributary','apanage','feudal','vassal'].includes(kind)) return color;
+  if (!['delegated', 'disputed', 'mixed', 'tributary','apanage','feudal','vassal','fief'].includes(kind)) return color;
   const namespace = 'http://www.w3.org/2000/svg';
   const id = `atlas-${kind}-${color.replace(/[^a-z0-9]/gi, '')}`;
   if (!svg.getElementById(id)) {
@@ -48,7 +48,7 @@ function authorityFill(svg, color, kind) {
     const rect = document.createElementNS(namespace, 'rect');
     rect.setAttribute('width', '0.9'); rect.setAttribute('height', '0.9'); rect.setAttribute('fill', color);
     const line = document.createElementNS(namespace, 'path');
-    line.setAttribute('d', kind === 'mixed' ? 'M0 .45 L.9 .45' : ['apanage','feudal','vassal'].includes(kind)?'M.45 0 L.45 .9':kind === 'delegated' ? 'M0 0 L.9 .9' : 'M0 0 L.9 .9 M0 .9 L.9 0');
+    line.setAttribute('d', kind === 'mixed' ? 'M0 .45 L.9 .45' : ['apanage','feudal','vassal','fief'].includes(kind)?'M.45 0 L.45 .9':kind === 'delegated' ? 'M0 0 L.9 .9' : 'M0 0 L.9 .9 M0 .9 L.9 0');
     line.setAttribute('stroke', '#fff'); line.setAttribute('stroke-opacity', '.5'); line.setAttribute('stroke-width', '.16');
     if (kind === 'tributary') {
       const veil = document.createElementNS(namespace, 'rect');
@@ -291,7 +291,7 @@ export function MapaEuropa({ seleccion, anioGlobal = null, onSelectTerritorio, o
           const colors=[...new Set(layers.map(layer=>layer.mosaicColor))];
           const scopes=layers.flatMap(layer=>(layer.scopes||[]).filter(scope=>scope.ids.includes(id)));
           const disputed=scopes.some(s=>/disput|ocupaci/i.test(s.condition||''));
-          let fill=authorityFill(svg,colors[0],disputed?'disputed':layers.some(l=>l.crownRelation)?'apanage':'sovereign');
+          let fill=authorityFill(svg,colors[0],disputed?'disputed':layers.some(l=>l.crownRelation||l.tributaryRelation)?'apanage':'sovereign');
           if(colors.length>1) {
             const namespace='http://www.w3.org/2000/svg';
             const patternId='europe-mosaic-'+colors.join('-').replace(/[^a-z0-9]/gi,'');
@@ -492,9 +492,9 @@ export function MapaEuropa({ seleccion, anioGlobal = null, onSelectTerritorio, o
       </div>
       {panorama && <details className="mapa-color-legend" inert={!mapReady}>
         <summary>Colores y fuentes</summary>
-        <p>Los conjuntos políticos comparten el color de sus mapas personales. Cada título conserva su identidad. Los tributarios mantienen su gobierno y su color; no se incorporan al dominio directo.</p>
+        <p>Los conjuntos políticos comparten el color de sus mapas personales. Cada título conserva su identidad.</p>
         <p>El rayado claro indica disputa u ocupación. Varios colores señalan atribuciones diferentes en una misma celda. Pulsa una región para consultar autoridades y fuentes.</p>
-        <p>Las líneas verticales marcan feudos y apanages dentro del reino de Francia: tonos claros del azul real, granate borgoñón o color inglés según quién los tenga. Las tierras del rey de Inglaterra llevan su color; hasta 1336 se tenían en feudo del rey francés.</p>
+        <p>Las líneas verticales marcan dependencias con gobierno propio, en un tono del color de su soberano: feudos y apanages dentro de Francia (azul real, granate borgoñón o color inglés según quién los tenga), vasallos de la Corona de Aragón, tributarios otomanos como Valaquia, Moldavia o Transilvania y feudos como la Prusia ducal o Curlandia. Solo se marcan los años en que la dependencia está documentada. Las tierras del rey de Inglaterra llevan su color; hasta 1336 se tenían en feudo del rey francés.</p>
         <p>{mosaic?.reviewedLayerCount||0} jurisdicciones revisadas · {mosaic?.approximateLayerCount||0} equivalencias aproximadas. El gris indica que falta una atribución para este año.</p>
       </details>}
       {!panorama && seleccion && <details className="mapa-color-legend" inert={!mapReady || paintingLife}>
@@ -504,12 +504,12 @@ export function MapaEuropa({ seleccion, anioGlobal = null, onSelectTerritorio, o
           <span><i className="mapa-key-solid" aria-hidden="true"/>Autoridad territorial</span>
           <span><i className="mapa-key-delegated" aria-hidden="true"/>Gobierno delegado</span>
           <span><i className="mapa-key-disputed" aria-hidden="true"/>Control disputado / ocupación</span>
-          <span><i className="mapa-key-apanage" aria-hidden="true"/>Apanage o feudo dentro de Francia</span>
+          <span><i className="mapa-key-apanage" aria-hidden="true"/>Feudo, apanage o vasallo · gobierno propio</span>
           <span><i className="mapa-key-tributary" aria-hidden="true"/>Estado tributario · gobierno propio</span>
           <span><i className="mapa-key-mixed" aria-hidden="true"/>{Number.isInteger(anioGlobal) ? "Varias jurisdicciones en una celda" : "Varias jurisdicciones o condiciones a lo largo de la vida"}</span>
         </div>
-        <label className="mapa-dependency-toggle"><input type="checkbox" checked={showDependencies} onChange={event => setShowDependencies(event.target.checked)}/> Mostrar estados tributarios</label>
-        <p>Las líneas verticales, sobre tonos claros del azul real, muestran apanages y feudos dentro del reino, con gobierno local propio. No son Estados tributarios.</p>
+        <label className="mapa-dependency-toggle"><input type="checkbox" checked={showDependencies} onChange={event => setShowDependencies(event.target.checked)}/> Mostrar tributarios y feudos</label>
+        <p>Las líneas verticales muestran feudos, apanages y vasallos con gobierno propio, en tonos del color de su señor: el azul real en Francia, el rojo aragonés en la Corona de Aragón y el color de cada soberano en feudos como la Prusia ducal, Curlandia o la Bretaña angevina. No son Estados tributarios.</p>
         <p>Los puntos relacionan un Estado tributario con el soberano seleccionado. Conserva su título y gobierno; las superficies de administración directa tienen color sólido.</p>
         <p>Los títulos sin control acreditado se consultan en el inspector y no colorean dominios.</p>
         <p>El mapa detallado destaca los gobiernos de la persona seleccionada. El gris no significa ausencia de gobierno: indica que esa región no tiene una atribución revisada para la persona y el año elegidos. Las regiones de esta cartografía aproximan territorios históricos y no prueban por sí solas una frontera.</p>
@@ -540,8 +540,8 @@ export function MapaEuropa({ seleccion, anioGlobal = null, onSelectTerritorio, o
             <span className={`mapa-authority-badge mapa-authority-${entry.kind}`}>{AUTHORITY_LABELS[entry.kind]}</span>
             <strong>{entry.territory}</strong>
             {entry.crownRelation&&<p>{entry.crownRelation.summary||`${entry.crownRelation.type==='feudo'?'Feudo':'Apanage'} dentro del reino · autoridad superior de Francia`} · {entry.crownRelation.from}–{entry.crownRelation.through}.</p>}
-            {entry.relationship && <p>{entry.relationship.subjectLabel} · vínculo tributario con {entry.relationship.overlord}, {entry.relationship.from}–{entry.relationship.through}.</p>}
-            <div>{entry.relationship ? 'Soberano al que se debe el tributo: ' : entry.crownRelation?'Autoridad superior: ':null}{entry.person ? <button type="button" className="mapa-region-person" onClick={() => onSelectPersona?.(entry.person.id)}>{entry.person.nombre}</button> : entry.collective?.nombre}</div>
+            {entry.relationship && <p>{entry.relationship.subjectLabel} · vínculo {entry.relationship.type === 'feudo' ? 'feudal' : 'tributario'} con {entry.relationship.overlordLabel || entry.relationship.overlord}, {entry.relationship.from}–{entry.relationship.through}.</p>}
+            <div>{entry.relationship ? (entry.relationship.type === 'feudo' ? 'Soberano del que depende el feudo: ' : 'Soberano al que se debe el tributo: ') : entry.crownRelation?'Autoridad superior: ':null}{entry.person ? <button type="button" className="mapa-region-person" onClick={() => onSelectPersona?.(entry.person.id)}>{entry.person.nombre}</button> : entry.collective?.nombre}</div>
             {entry.government?.soberano && <p>En nombre de {PERSONAS.find(p => p.id === entry.government.soberano)?.nombre || entry.government.soberano}. El gobierno superior se consulta en su ficha.</p>}
             {entry.kind === 'regional' && <small>La jurisdicción tiene fuentes territoriales; el mandato de su gobernante en este año sigue pendiente de documentar.</small>}
             {entry.government?.nota && <p>{entry.government.nota}</p>}

@@ -19,7 +19,7 @@ export const AUTHORITY_LABELS = Object.freeze({
   sovereign: 'Autoridad territorial', delegated: 'Gobierno delegado',
   titular: 'Título o pretensión sin control acreditado', disputed: 'Control disputado u ocupación',
   apanage:'Apanage de la Corona francesa',feudal:'Feudo de la Corona francesa',vassal:'Dependencia de la Corona de Aragón',
-  collective: 'Autoridad colectiva', tributary: 'Estado tributario · gobierno propio',
+  collective: 'Autoridad colectiva', tributary: 'Estado tributario · gobierno propio', fief: 'Feudo vasallo · gobierno propio',
   mixed: 'Celda con varias jurisdicciones',
   regional: 'Jurisdicción territorial documentada', physical: 'Sin autoridad política documentada',
 });
