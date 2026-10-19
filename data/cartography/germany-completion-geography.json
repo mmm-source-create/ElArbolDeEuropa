@@ -1,0 +1,31 @@
+{
+  "schema": 1,
+  "scope": "Ventana Ragnit–Cochem y St Johann–Ribe",
+  "note": "Ventana espacial independiente de los colores. St_Johann es la celda de Pongau, al sur de Salzburgo, no Sankt Johann en Tirol. Se selecciona la celda completa que intersecta el rectángulo; este no representa una frontera política.",
+  "anchors": {
+    "west": "Cochem",
+    "east": "Ragnit",
+    "north": "Ribe",
+    "south": "St_Johann"
+  },
+  "outlines": {
+    "germany-study": [
+      [
+        586.02,
+        111.34
+      ],
+      [
+        639.18,
+        111.34
+      ],
+      [
+        639.18,
+        153.2296875
+      ],
+      [
+        586.02,
+        153.2296875
+      ]
+    ]
+  }
+}

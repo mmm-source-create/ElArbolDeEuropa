@@ -1,4 +1,5 @@
 import germanSwiss from './german-swiss.js';
+import germanyCompletion from './germany-completion.js';
 import {TERRITORIOS_ADRIATICO,TRANSILVANIA_ADRIATICO} from "./adriatico-v214.js";
 import alpes from "./alpes-v213.js";
 import escandinavia from "./escandinavia-v212.js";
@@ -26,6 +27,6 @@ const reviewedGermanSwiss = Object.fromEntries(Object.entries(germanSwiss).map((
   for (const event of entry.evolucion) events.set(event.anio,event);
   return [name,{...previous[name],...entry,evolucion:[...events.values()].sort((a,b) => a.anio-b.anio)}];
 }));
-export const HISTORIA_TERRITORIOS = Object.freeze({...previous,...reviewedGermanSwiss});
+export const HISTORIA_TERRITORIOS = Object.freeze({...previous,...reviewedGermanSwiss,...germanyCompletion});
 
 export { FUENTES_TERRITORIOS } from "../sources.js";

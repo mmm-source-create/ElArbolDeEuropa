@@ -1,3 +1,4 @@
+import {germanyCompletionJurisdictions} from './regions/germanyCompletionRoutes.js';
 import {germanSwissJurisdictions} from './regions/germanSwissRoutes.js';
 import {easternEuropeJurisdictions} from './regions/easternEuropeRoutes.js';
 import {northAfricaLevantJurisdictions} from './regions/northAfricaLevantRoutes.js';
@@ -32,7 +33,7 @@ export function reviewedMapLayers(data) {
       if (!corrections.has(correction.territory)) corrections.set(correction.territory, []);
       corrections.get(correction.territory).push(correction);
     }
-    const regional = [data.bosniaHumReview, data.posavinaRagusaReview, data.balkansFullReview, data.iberiaItalyReview, data.franceLowCountriesReview, data.polandLithuaniaMedievalReview, data.polandLithuaniaReview, data.polandLithuaniaFrontierReview, data.earlyMedievalReview, data.easternEuropeReview, data.northAfricaLevantReview, data.germanSwissReview].filter(Boolean);
+    const regional = [data.bosniaHumReview, data.posavinaRagusaReview, data.balkansFullReview, data.iberiaItalyReview, data.franceLowCountriesReview, data.polandLithuaniaMedievalReview, data.polandLithuaniaReview, data.polandLithuaniaFrontierReview, data.earlyMedievalReview, data.easternEuropeReview, data.northAfricaLevantReview, data.germanSwissReview, data.germanyCompletionReview].filter(Boolean);
     // Index precedence by cell once. Dated supplements do not make annual
     // redraws scan every new phase for each location on the entire map.
     const regionalById = new Map();
@@ -80,7 +81,7 @@ function resolveJurisdictions(territory, year, personId = null) {
   const names=polandLithuaniaJurisdictions(franceLowCountriesJurisdictions(iberiaItalyJurisdictions(balkansFullJurisdictions(posavinaRagusaJurisdictions(bosniaHumJurisdictions(medievalBalkanJurisdictions(referenceGapJurisdictions(successionJurisdictions(frontier,territory,year,personId),territory),territory),territory,year,personId),territory,year,personId),territory,year,personId),territory,year,personId),territory,year,personId),territory,year,personId);
   if(territory==='Austria Interior') for(const province of ['Carintia','Carniola','Ducado de Estiria'])
     names.push(...pilotJurisdictionsFor(province,year,personId));
-  return germanSwissJurisdictions(northAfricaLevantJurisdictions(easternEuropeJurisdictions([...new Set(names)],territory,year,personId),territory,year,personId),territory,year,personId);
+  return germanyCompletionJurisdictions(germanSwissJurisdictions(northAfricaLevantJurisdictions(easternEuropeJurisdictions([...new Set(names)],territory,year,personId),territory,year,personId),territory,year,personId),territory,year,personId);
 }
 
 function basePilotJurisdictionsFor(territory, year, personId) {

@@ -87,6 +87,12 @@ def main():
         expected = json.loads((ACCEPTED / artifact).read_text())
         compare(expected, json.loads((scratch / artifact).read_text()), artifact)
         print(f"{artifact}: {len(expected['cells'])} cells reproduced", flush=True)
+        artifact = 'germany-completion-geographic-cells.json'
+        subprocess.run([sys.executable, str(TOOLS / 'build-geographic-inventory.py'),
+            'germany-completion-geography.json', artifact], cwd=scratch, env=environment, check=True)
+        expected = json.loads((ACCEPTED / artifact).read_text())
+        compare(expected, json.loads((scratch / artifact).read_text()), artifact)
+        print(f"{artifact}: {len(expected['cells'])} cells reproduced", flush=True)
     print("Accepted geometry reproduced; source and reviewed files untouched.")
 
 

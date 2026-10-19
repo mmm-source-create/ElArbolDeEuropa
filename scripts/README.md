@@ -180,3 +180,6 @@ coloca bajo el escudo y falla si falta. Hay que volver a ejecutarlo
 (`node --import ./tests/jsx-loader.mjs scripts/generate/build-og-arms-credits.mjs`)
 cada vez que cambie `src/content/dinastias/escudosCommons.js`.
 
+### Alemania · cobertura de huecos 1200–1800
+
+`npm run audit:germany-completion` comprueba las 1.002 celdas de la ventana independiente Ragnit–Cochem y St Johann–Ribe en cada uno de los 601 años. Valida la igualdad entre las fases nuevas y los huecos del mapa base, la evidencia local y la conservación de las identidades mediante huellas de todo el mapa anterior. La selección aceptada `germany-completion-review.json` se incorpora con `merge-map-expansions.mjs`; véase `docs/cartography/germany-completion.md`. El inventario espacial se reproduce con `build-geographic-inventory.py`, sin consultar los colores.

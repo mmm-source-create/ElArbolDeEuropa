@@ -1,3 +1,4 @@
+import {GERMANY_COMPLETION_SOURCES} from './sources-germany-completion.js';
 import {GERMAN_SWISS_SOURCES} from './sources-german-swiss.js';
 import {authorityReferences} from '../evidence/authorityReviews.js';
 import {ADRIATICO_SOURCES} from "./sources-adriatico-v214.js";
@@ -1452,7 +1453,7 @@ export const SOURCES = [
 // General bibliography lists each publication once; entity pages retain the individual references.
 // Reuse a bibliography entry when its URL already exists, preserving its
 // person associations and adding only the newly reviewed territories.
-for (const source of GERMAN_SWISS_SOURCES) {
+for (const source of [...GERMAN_SWISS_SOURCES,...GERMANY_COMPLETION_SOURCES]) {
   const previous = SOURCES.find(entry => entry.url === source.url);
   if (previous) previous.territorios = [...new Set([...previous.territorios,...source.territorios])];
   else SOURCES.push(source);
