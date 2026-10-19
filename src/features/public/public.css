@@ -76,9 +76,11 @@ button.public-door-card { width: 100%; font: inherit; }
 .public-entity-grid { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 11px; }
 .public-entity-card { min-height: 190px; padding: 17px; display: flex; flex-direction: column; border: 1px solid #d4c8ae; border-radius: var(--r-sm, 6px); background: #fffdf7; }
 .public-entity-card-head { display: flex; justify-content: space-between; gap: 12px; }
-.public-entity-heading { display: flex; align-items: flex-start; gap: 10px; min-width: 0; }
-.public-entity-heading > .dynasty-arms { flex: none; margin-top: 2px; }
-.dynasty-arms-image { object-fit: contain; }
+/* The shield is centred on the label and name block, so every card lines up
+   whatever the proportions of its Commons drawing. */
+.public-entity-heading { display: flex; align-items: center; gap: 10px; min-width: 0; }
+.public-entity-heading > .dynasty-arms { flex: none; align-self: center; }
+.dynasty-arms-image { object-fit: contain; object-position: center; }
 .dynasty-arms-credit { display: block; color: var(--eade-muted); font: var(--fs-2xs, 10px)/1.45 var(--eade-sans); opacity: .85; }
 .dynasty-arms-credit a { color: inherit; text-decoration: underline; text-decoration-color: color-mix(in srgb, currentColor 40%, transparent); text-underline-offset: 2px; }
 .dynasty-page-credit { margin: 28px 0 0; text-align: center; }

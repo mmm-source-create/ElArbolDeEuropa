@@ -32,7 +32,8 @@ export const aragonVassalColor = relation => relation.holder === 'Aragón' ? ARA
 // to the Commonwealth's rose in 1569.
 const TRIBUTARY_TINTS = Object.freeze({
   'wallachia-ottoman': '#6FA59B', 'moldavia-ottoman': '#A5CCC2', 'transylvania-ottoman': '#4F9A80',
-  'crimea-ottoman': '#7DB3A6', 'serbia-ottoman': '#9CC9BC', 'ragusa-ottoman': '#86BBAE', 'archipelago-ottoman': '#86BBAE',
+  'crimea-ottoman': '#7DB3A6', 'serbia-ottoman': '#9CC9BC', 'byzantium-ottoman': '#A3CBC0', 'tarnovo-ottoman': '#5E9C8E',
+  'morea-ottoman': '#8DBFB2', 'trebizond-ottoman': '#94C3B7', 'ragusa-ottoman': '#86BBAE', 'archipelago-ottoman': '#86BBAE',
   'courland-lithuania': '#7F6CB5', 'courland-commonwealth': '#DE9DAC',
   'prussia-order-poland': '#E9A3E0', 'perm-moscow': '#93A97F', 'novgorod-moscow': '#8FA67C',
   'granada-castile-jaen': '#F4EC94', 'murcia-castile-alcaraz': '#C9BE3E', 'menorca-mallorca-capdepera': '#C77A73',

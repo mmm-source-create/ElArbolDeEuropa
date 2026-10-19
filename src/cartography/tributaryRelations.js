@@ -19,6 +19,11 @@ const sources = {
   murcia: source('José María Alcántara Valle · El régimen feudal en la frontera de Granada', 'https://dialnet.unirioja.es/descarga/articulo/7954788.pdf', 'e-Stratégica 3 (2019), p. 44 y nota 33: pacto de Alcaraz de 1243, privilegios de 1253 y final de la superioridad tributaria en primavera de 1264; no administración directa uniforme.'),
   menorca: source('Gran Enciclopèdia Catalana · Els musulmans a les Balears', 'https://www.enciclopedia.cat/historia.-politica-societat-i-cultura-dels-paisos-catalans/els-musulmans-a-les-balears', 'Tratado de vasallaje menorquín de 1231, monarquía mallorquina y conquista de Alfonso III en 1287; gobierno musulmán conservado hasta la conquista.'),
   serbia: source('Mehmet Hacısalihoğlu · TDV · Sırbistan (Tarih)', 'https://islamansiklopedisi.org.tr/sirbistan', 'Tras las derrotas de 1371 y de Kosovo (1389) los serbios aceptan pagar tributo y envían tropas auxiliares; Stefan Lazarević es el vasallo más fiel de Bayezid I; el despotado desaparece con la toma de Smederevo en 1459.'),
+  byzantium: source('Işın Demirkent · TDV · Bizans', 'https://islamansiklopedisi.org.tr/bizans', 'Tras Çirmen (1371) el Imperio bizantino y el zarato búlgaro reconocen la soberanía turca, pagan tributo y envían tropas; Juan V acompaña a Murad I como vasallo (1373); el tratado de 1403 con Süleyman Çelebi libra a Bizancio del tributo anual, que vuelve a aceptar tras el asedio de 1422.'),
+  murad2: source('Halil İnalcık · TDV · Murad II', 'https://islamansiklopedisi.org.tr/murad-ii', 'Tratado del 22 de febrero de 1424: el emperador paga un tributo anual de 300.000 akçes.'),
+  tarnovo: source('Yusuf Halaçoğlu · TDV · Bulgaristan (período otomano)', 'https://islamansiklopedisi.org.tr/bulgaristan', 'El zar queda sujeto a tributo; Süleyman Çelebi toma Tarnovo en 1393 y pone fin al reino búlgaro.'),
+  morea: source('Machiel Kiel y John Alexander · TDV · Mora', 'https://islamansiklopedisi.org.tr/mora', 'Tras la nueva destrucción del Hexamilion por Murad II (1446), los déspotas Constantino y Tomás firman la paz a cambio de devolver lo conquistado y pagar tributo; en 1458 Tomás lo rehúsa y Mehmed II ocupa el norte; conquista en 1460.'),
+  trebizond: source('Heath W. Lowry y Feridun Emecen · TDV · Trabzon', 'https://islamansiklopedisi.org.tr/trabzon', 'Tras la conquista de Estambul el emperador Juan IV de Trebisonda empieza a pagar tributo a Mehmed II; la ciudad se rinde en 1461.'),
   prussia: source('Gran Enciclopèdia Catalana · Prússia', 'https://www.enciclopedia.cat/gran-enciclopedia-catalana/prussia', 'Tras el segundo tratado de Toruń (1466) la Orden presta vasallaje al rey polaco por la Prusia oriental; el ducado laico de 1525 conserva el carácter de feudo polaco hasta el tratado de Wehlau (1657) y la paz de Oliva (1660).'),
   teutonicRefusal: source('Kurt Forstreuter · Neue Deutsche Biographie 5 (1961), p. 526 · Friedrich, Herzog von Sachsen', 'https://www.deutsche-biographie.de/sfz27778.html', 'Elegido gran maestre el 29 de septiembre de 1498, rehúsa reconocer la paz de Toruń de 1466.'),
   brittany: source('Larousse · Bretagne', 'https://www.larousse.fr/encyclopedie/autre-region/Bretagne/110138', 'Enrique II se convierte en guardián de Bretaña y casa a su hijo Godofredo con Constanza; afirma su autoridad tras la muerte de Godofredo (1186); Felipe Augusto libra a Bretaña de la tutela inglesa.'),
@@ -48,6 +53,21 @@ export const TRIBUTARY_RELATIONS = Object.freeze([
   {id: 'murcia-castile-alcaraz', subject: 'Emirato de Murcia', overlord: 'Castilla',
     periods: [[1243, 1263]], sources: [sources.murcia],
     note: 'Protectorado de Alcaraz con pago de rentas y presencia castellana en fortalezas, conservando las autoridades musulmanas. Se excluyen las plazas conquistadas directamente y la ruptura de 1264; la incorporación de 1266 sigue su propia cronología.'},
+  // V5.33 · Byzantine and Bulgarian tributaries of the fourteenth and fifteenth
+  // centuries, cut to complete years. The Morea's own agreement of 1446 comes
+  // first, so that the empire's relation covers the despotate only before it.
+  {id: 'morea-ottoman', subject: 'Morea', overlord: 'Imperio otomano',
+    periods: [[1447, 1457]], sources: [sources.morea],
+    note: 'Después de que Murad II forzara el Hexamilion (diciembre de 1446), los déspotas Constantino y Tomás Paleólogo pagan tributo. En 1458 Tomás lo rehúsa y Mehmed II ocupa el norte de la península; la conquista se completa en 1460.'},
+  {id: 'byzantium-ottoman', subject: 'Bizancio', aliases: ['Morea'], overlord: 'Imperio otomano',
+    periods: [[1372, 1402], [1424, 1452]], sources: [sources.byzantium, sources.murad2],
+    note: 'Desde la derrota serbia de Çirmen (1371) el emperador paga tributo y envía tropas al sultán. El tratado de 1403 con Süleyman Çelebi suprime el tributo; el de 1424 con Murad II lo restablece (300.000 akçes al año) hasta la caída de Constantinopla en 1453. El gobierno imperial se mantiene, también en el despotado de Morea hasta su propio acuerdo de 1446.'},
+  {id: 'tarnovo-ottoman', subject: 'Zarato de Tarnovo', aliases: ['Tarnovo'], overlord: 'Imperio otomano',
+    periods: [[1372, 1392]], sources: [sources.byzantium, sources.tarnovo],
+    note: 'Iván Šišman reconoce la soberanía otomana y paga tributo desde Çirmen (1371); tras la campaña de 1388 conserva el trono como tributario. Süleyman Çelebi toma Tarnovo en 1393. El zarato de Vidin no se marca, porque no se ha encontrado una cronología fechada de su dependencia.'},
+  {id: 'trebizond-ottoman', subject: 'Trebisonda', overlord: 'Imperio otomano',
+    periods: [[1454, 1460]], sources: [sources.trebizond],
+    note: 'Tras la conquista de Constantinopla, Juan IV de Trebisonda paga tributo a Mehmed II; el imperio de los Comnenos conserva su gobierno hasta la rendición de 1461.'},
   {id: 'serbia-ottoman', subject: 'Serbia', overlord: 'Imperio otomano',
     periods: [[1390, 1402]], sources: [sources.serbia],
     note: 'Desde Kosovo (1389) la princesa Milica y su hijo Stefan Lazarević pagan tributo y envían tropas al sultán, como en Nicópolis (1396) y Ankara (1402). Después de Ankara el despotado se apoya en Hungría; las fases posteriores de tributo no se marcan porque falta una cronología anual revisada.'},
@@ -70,10 +90,12 @@ export const TRIBUTARY_RELATIONS = Object.freeze([
 // The relation in force for a reviewed regional phase, decided by its
 // territorial identity. The panorama paints the subject in a tint of its
 // overlord with the dependency pattern.
+// A relation may name the subject's other regional identities as aliases.
+const coversSubject = (relation, identity) => relation.subject === identity || Boolean(relation.aliases?.includes(identity));
 export function tributaryLayerRelation(name, year, relations = TRIBUTARY_RELATIONS) {
   const subject = territorialIdentity(name);
   for (const relation of relations) {
-    if (relation.subject !== subject) continue;
+    if (!coversSubject(relation, subject)) continue;
     const period = relation.periods.find(([from, through]) => from <= year && year <= through);
     if (period) return {...relation, from: period[0], through: period[1]};
   }
@@ -91,7 +113,7 @@ export function tributaryEntriesFor(person, year, data, ownEntries = [], relatio
       && !['regencia', 'gobierno delegado', 'rival', 'disputado', 'ocupación'].includes(g.condicion)
       && !g.ambito && (relation.overlord !== 'Imperio otomano' || g.titulo === 'Sultán'));
     if (!office) return [];
-    const layers = reviewedMapLayers(data).filter(layer => territorialIdentity(layer.name) === relation.subject);
+    const layers = reviewedMapLayers(data).filter(layer => coversSubject(relation, territorialIdentity(layer.name)));
     const ids = [...new Set(layers.flatMap(layer => reviewedLayerLocations(data, layer, year)))].filter(id => !ownIds.has(id));
     if (!ids.length) return [];
     return [{person, government: null, claim: null, territory: relation.subject,

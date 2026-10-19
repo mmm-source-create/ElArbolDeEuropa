@@ -98,8 +98,9 @@ test('los escudos propuestos se usan con su crédito y sus archivos', () => {
     'Trastámara': 'Arms of the Catholic Monarchs (1474-1492).svg',
   };
   for (const [house, title] of Object.entries(expected)) assert.equal(escudoDe(house)?.imagen?.titulo, title, house);
-  assert.equal(Object.keys(ESCUDOS).length, 40);
-  assert.equal(CREDITOS_ESCUDOS.length, 40);
+  // V5.33 added more houses; every house keeps one credit.
+  assert.ok(Object.keys(ESCUDOS).length >= 40);
+  assert.equal(CREDITOS_ESCUDOS.length, Object.keys(ESCUDOS).length);
   assert.ok(escudoDe('Trastámara').imagen.archivo.endsWith('.png'));
   const files = new Set(fs.readdirSync(new URL('../public/escudos/', import.meta.url)));
   for (const c of CREDITOS_ESCUDOS) {
