@@ -90,7 +90,8 @@ test('Brandenburg incorporation and Hesse inheritance do not swallow independent
  assert(ids('FELIPEHESSE',1550).includes('Marburg'));
  assert(ids('WILLIAM4HESSE',1580).includes('Kassel'));assert(!ids('WILLIAM4HESSE',1580).includes('Darmstadt'));
  assert(ids('GEORGE1HESSEDARM',1580).includes('Darmstadt'));assert(!ids('GEORGE1HESSEDARM',1580).includes('Kassel'));
- assert(!ids('MAURICEHESSEKASS',1610).includes('Marburg'));
+ // Kassel held Marburg after the division of 1604, until the 1624 award to Darmstadt.
+ assert(ids('MAURICEHESSEKASS',1610).includes('Marburg'));assert(!ids('MAURICEHESSEKASS',1610).includes('Darmstadt'));
  assert(!ids('CARLOS5',1530).includes('Berlin'));
 });
 

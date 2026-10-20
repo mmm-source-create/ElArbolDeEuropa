@@ -400,6 +400,14 @@ export function composeRegionalAuthorityScopes(scopes) {
 }
 
 export function authorityMapScope(personId, territory, year) {
+  if(['ALB6BAV','MAXPHILBAV'].includes(personId)&&territory==='Baviera') {
+    // The cadet line held the landgraviate, not the electorate: as in the
+    // legacy map, its «Baviera» record must not duplicate the elector's cells.
+    return {ids:[],source:{title:'Historisches Lexikon Bayerns · Leuchtenberg',
+      url:'https://www.historisches-lexikon-bayerns.de/Lexikon/Leuchtenberg%2C_Herz%C3%B6ge_von',
+      locator:'La landgraviatura pasa a los Wittelsbach en 1646 y se concede a la rama de Alberto VI.'},
+      note:'Rama de Baviera-Leuchtenberg: su título no comprende el electorado de Baviera, que conserva su elector.'};
+  }
   if(personId==='FED3HAB'&&territory==='Austria'&&year>=1457&&year<=1493) {
     // A newly assigned legal title must not erase the partition with Albrecht
     // or turn occupied Vienna into Frederick's direct government.

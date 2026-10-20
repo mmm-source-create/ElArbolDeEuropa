@@ -28,3 +28,19 @@ Se contrastan las síntesis del IEG (1378, 1500, 1648 y 1792), los atlas histór
 - Pruebas: `tests/germany-completion.test.mjs`, además de la suite existente.
 
 La auditoría valida primero que la unión de las fases sea exactamente el conjunto de huecos registrado: rechaza huecos de un año, duplicados, ampliaciones de ámbito y sustituciones de datos existentes. Después comprueba el mosaico real del atlas para los 601 años, la evidencia local de cada relleno y la conservación de todo el mapa previo. Los resultados se escriben en el directorio de informes de auditoría de la caché, sin convertirlos en una fuente histórica.
+
+## Atribución a gobernantes documentados, 20 de octubre de 2026
+
+Las fases de esta revisión nombran su jurisdicción, pero no su gobernante (`governmentTerritories` vacío). Por eso, en años como 1789, celdas de la Prusia Occidental, Tecklenburg, Lingen, la Altmark, la Pomerania de Brandeburgo, Mark o Ribe mostraban «Jurisdicción territorial documentada · pendiente de documentar» aunque el Atlas registra al rey o al elector correspondiente. En el panorama, además, esas celdas tomaban el color propio de la identidad (Brandeburgo en rojo pardo) en lugar del de la monarquía prusiana.
+
+`germanyCompletionRoutes.js` enlaza ahora cada fase con el mandato que gobierna esa misma jurisdicción, sin tocar los datos aceptados:
+
+- Por identidad exacta: una fase «Prusia» va al mandato «Prusia»; «Brandeburgo», «Sajonia», «Dinamarca», «Polonia» o «Bohemia», igual.
+- Por una tabla fechada para las identidades que nombran a su titular: Pomerania de Brandeburgo, Cottbus y las Lusacias bajo Brandeburgo; Mark y Ravensberg con Brandeburgo solo desde 1609; Prusia de la Orden con el mandato «Prusia» hasta 1524; las Lusacias bajo Sajonia; Pomerania sueca, la ocupación sueca, Wismar y los ducados de Bremen-Verden (1648–1711) con Suecia; la administración danesa de Bremen-Verden y Rostock bajo Dinamarca; Prusia Real con Polonia.
+- Solo cuando gobierna una única línea soberana sin ámbito parcial. Las particiones (Baviera hasta 1503, Württemberg, Mecklemburgo, Sajonia albertina y ernestina, Austria en 1458–1492), las corregencias y las ramas con `ambito` no reciben estas celdas: siguen como jurisdicción pendiente, sin duplicarlas entre varios duques. En un año de relevo las reciben el saliente y el entrante, como en el resto del mapa.
+
+Las fases enlazadas son un complemento: si el gobierno todavía se dibuja con la equivalencia geométrica aproximada (Baviera en 1651–1745, Berg), la conservan y solo suman las celdas que la revisión rellenó. Una fase enlazada nunca convierte ese gobierno en «revisado» ni le retira celdas.
+
+Resultado: 36.814 celdas-año dejan de figurar como pendientes y pasan a su gobernante documentado, sin nuevos solapamientos entre soberanos salvo los años de cambio de los reyes rivales de Polonia (1704 y 1709). La auditoría de esta revisión no cambia (0 celdas-año alteradas): las fases, sus fechas y sus fuentes son las mismas.
+
+Siguen pendientes, por falta de mandatos en la base genealógica, entre otros: los electores de Baviera desde 1746 y del Palatinado desde 1717, los duques de Württemberg desde 1734, los landgraves de Hesse-Kassel desde 1731 y de Hesse-Darmstadt desde 1662, Mecklemburgo desde 1729, Baden desde 1739, Holstein-Gottorp desde 1740 y numerosos condados, ciudades y temporales eclesiásticos. Corregirlos exige añadir personas con fuente, no reasignar celdas.

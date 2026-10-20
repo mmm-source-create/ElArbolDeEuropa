@@ -54,8 +54,11 @@ test('ambiguous identifiers use their actual geography and institutional evidenc
  assert.deepEqual(names(1700,'Rotenburg'),['Hesse-Rotenburg']);
  assert.deepEqual(names(1700,'Gryfow'),['Pomerania de Brandeburgo']);
  const index=buildPoliticalMapIndex(PERSONAS,1700,data);
- for(const id of ['Cochem','Ragnit','Ribe','St_Johann','Marburg','Neuhaus'])
+ for(const id of ['Cochem','St_Johann'])
   assert.ok(index.get(id)?.some(entry=>entry.regionalEvidence&&entry.mapSources.length),id);
+ // A phase naming a documented ruler's jurisdiction goes to that ruler, with its evidence.
+ for(const [id,person] of [['Ragnit','FRED1PRUSSIA'],['Ribe','FRED4DEN'],['Marburg','CHARLESHESSEKASS'],['Neuhaus','CARLOS12SUE']])
+  assert.ok(index.get(id)?.some(entry=>entry.person?.id===person&&entry.kind==='sovereign'&&entry.mapSources.length),id);
 });
 test('every new public identity has a history and its own bibliography',()=>{
  for(const [name,entity] of Object.entries(review.entities)) {

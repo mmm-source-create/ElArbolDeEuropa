@@ -1,4 +1,4 @@
-import {germanyCompletionJurisdictions} from './regions/germanyCompletionRoutes.js';
+import {germanyCompletionJurisdictions, isCompletionSupplement} from './regions/germanyCompletionRoutes.js';
 import {germanSwissJurisdictions} from './regions/germanSwissRoutes.js';
 import {easternEuropeJurisdictions} from './regions/easternEuropeRoutes.js';
 import {northAfricaLevantJurisdictions} from './regions/northAfricaLevantRoutes.js';
@@ -305,17 +305,19 @@ export function mapLocationsForGovernment(data, government, year, personId = nul
   const withinDatedLayerRange = year >= data.from && year <= data.through;
   const layers = (withinDatedLayerRange ? pilotJurisdictionsFor(government.territorio, year, personId) : [])
     .map(name => byName.get(name)).filter(Boolean);
-  if (layers.some(entry => reviewedLayerCovered(data, entry, year))) {
-    const scope = authorityMapScope(personId, government.territorio, year);
+  const scope = authorityMapScope(personId, government.territorio, year);
+  const inScope = ids => ids.filter(id => (!scope?.ids || scope.ids.includes(id)) && !scope?.excludedIds?.includes(id));
+  if (layers.some(entry => !isCompletionSupplement(entry.name) && reviewedLayerCovered(data, entry, year))) {
     const ids = [...new Set(layers.flatMap(entry => reviewedLayerLocations(data, entry, year, personId)))];
-    const scoped = scope?.ids ? ids.filter(id => scope.ids.includes(id)) : ids;
-    return applyMapBorderCorrections(scoped.filter(id => !scope?.excludedIds?.includes(id)), government.territorio, year);
+    return applyMapBorderCorrections(inScope(ids), government.territorio, year);
   }
   const crosswalk = data.locationCrosswalk?.newIdsByOldId || {};
   const regionalById = layerIndexes.get(data)?.regionalById;
   const ids = [...new Set(legacyIds.flatMap(id => crosswalk[id]?.ids || []))]
     .filter(id => !regionalById?.get(id)?.some(review => review.from <= year && year <= review.through));
-  return applyMapBorderCorrections(ids, government.territorio, year);
+  const supplements = inScope(layers.filter(entry => isCompletionSupplement(entry.name))
+    .flatMap(entry => reviewedLayerLocations(data, entry, year, personId)));
+  return applyMapBorderCorrections([...new Set([...ids, ...supplements])], government.territorio, year);
 }
 
 export function pilotDisputedHungarianClaimsFor(data, personId, year) {

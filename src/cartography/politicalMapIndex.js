@@ -19,6 +19,27 @@ export const COLLECTIVE_AUTHORITIES = Object.freeze([
     fuente:{title:'Česká numismatická společnost · Pražské groše Ladislava Pohrobka (1453–1457)',url:'https://www.cnspg.cz/article/s22-135-prazske-grose-ladislava-pohrobka-1453-1457?action=showFull',locator:'Reconocimiento del derecho sucesorio en 1444, administración por landfrieds y coronación el 28 de octubre de 1453.'},
   },
   {
+    territorio:'Inglaterra',desde:1649,hasta:1660,
+    nombre:'Commonwealth y Protectorado',cargo:'Parlamento, Consejo de Estado y lores protectores',
+    condicion:'colectiva',certeza:'documentado',
+    nota:'El Parlamento abolió la realeza el 17 de marzo de 1649, tras la ejecución de Carlos I. Desde diciembre de 1653 gobernaron como lores protectores Oliver Cromwell y, en 1658–1659, Richard Cromwell; la monarquía se restauró en mayo de 1660. No se inventa un rey para estos años.',
+    fuente:{title:'British History Online · Acts and Ordinances of the Interregnum',url:'https://www.british-history.ac.uk/no-series/acts-ordinances-interregnum/pp18-20',locator:'Acto de 17 de marzo de 1649 que suprime la realeza en Inglaterra, Irlanda y sus dominios.'},
+  },
+  {
+    territorio:'Irlanda',desde:1649,hasta:1660,
+    nombre:'Gobierno del Commonwealth en Irlanda',cargo:'Parlamento inglés, lores diputados y comisionados',
+    condicion:'colectiva',certeza:'documentado',
+    nota:'El mismo acto de 1649 suprimió la realeza en Irlanda. La conquista parlamentaria de 1649–1653 se impuso a confederados y realistas; solo se señala el núcleo de gobierno inglés ya cartografiado, no todo el país desde 1649.',
+    fuente:{title:'British History Online · Acts and Ordinances of the Interregnum',url:'https://www.british-history.ac.uk/no-series/acts-ordinances-interregnum/pp18-20',locator:'Acto de 17 de marzo de 1649 que suprime la realeza en Inglaterra, Irlanda y sus dominios.'},
+  },
+  {
+    territorio:'Escocia',desde:1652,hasta:1660,
+    nombre:'Escocia en el Commonwealth',cargo:'Gobierno militar y comisionados ingleses',
+    condicion:'colectiva',certeza:'documentado',
+    nota:'Tras la derrota de Carlos II en 1651, Escocia quedó ocupada y fue declarada parte de un único Commonwealth con Inglaterra; la ordenanza de 12 de abril de 1654 lo formalizó. La restauración de 1660 devolvió el reino a Carlos II.',
+    fuente:{title:'British History Online · Acts and Ordinances of the Interregnum',url:'https://www.british-history.ac.uk/no-series/acts-ordinances-interregnum/pp871-875',locator:'Ordenanza de 12 de abril de 1654 para unir Escocia en un solo Commonwealth con Inglaterra.'},
+  },
+  {
     territorio:'Provincias Unidas', desde:1588, hasta:1794,
     nombre:'Estados Generales y Estados provinciales', cargo:'Gobierno confederal y provincial',
     condicion:'colectiva', certeza:'documentado',
