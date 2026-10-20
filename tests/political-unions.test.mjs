@@ -29,7 +29,10 @@ test('Iberian union and effective Spanish Netherlands join externally, leaving P
  assert.notDeepEqual(colors(1585,'Amsterdam'),colors(1585,'Brussels'));
  assert.notDeepEqual(colors(1610,'Brussels'),colors(1610,'Madrid'),'archducal government is not inherited by Philip III');
  const p=by.get('FEL2ESP');assert.notEqual(colorTerritorioEnMapa(p,'Portugal',1585),colorTerritorioEnMapa(p,'Castilla',1585));
- assert.notEqual(colorTerritorioEnMapa(p,'Aragón',1585),colorTerritorioEnMapa(p,'Valencia',1585));
+ assert.equal(colorTerritorioEnMapa(p,'Aragón',1585),colorTerritorioEnMapa(p,'Valencia',1585));
+ assert.equal(colorTerritorioEnMapa(p,'Nápoles',1585),colorTerritorioEnMapa(p,'Castilla',1585));
+ assert.notEqual(colorTerritorioEnMapa(p,'Flandes',1585),colorTerritorioEnMapa(p,'Castilla',1585));
+ assert.equal(colorTerritorioEnMapa(p,'Flandes',1585),colorTerritorioEnMapa(p,'Luxemburgo',1585));
  assert.equal(mosaic(1585).byLocation.get('Brussels')[0].entityId,'Brabante');
 });
 test('Austrian exterior unity respects partitions, junior co-kings, Ottoman control and Spanish branch',()=>{
@@ -41,17 +44,14 @@ test('Austrian exterior unity respects partitions, junior co-kings, Ottoman cont
  assert.notDeepEqual(colors(1585,'Vienna'),colors(1585,'Madrid'));
  assert(!groups('FERN1EMP',1540).flatMap(g=>[...g.territorios]).some(t=>['Alemania','Sacro Imperio'].includes(t)));
 });
-test('personal integration changes at its recorded date, preserves Navarra and Hungary and splits timeline intervals',()=>{
+test('personal maps keep each monarchy integrated before and after the Nueva Planta and split timeline intervals',()=>{
  const p=by.get('FEL5ESP');
- for(const [territory,year] of [['Aragón',1707],['Valencia',1707],['Mallorca',1715],['Condado de Barcelona',1716]]){
-  assert.notEqual(colorTerritorioEnMapa(p,territory,year-1),colorTerritorioEnMapa(p,'Castilla',year-1),territory);
-  assert.equal(colorTerritorioEnMapa(p,territory,year),colorTerritorioEnMapa(p,'Castilla',year),territory);
- }
- assert.notEqual(colorTerritorioEnMapa(p,'Navarra',1720),colorTerritorioEnMapa(p,'Castilla',1720));
+ for(const [territory,year] of [['Aragón',1707],['Valencia',1707],['Mallorca',1715],['Condado de Barcelona',1716],['Navarra',1720]])
+  for(const y of [year-1,year])assert.equal(colorTerritorioEnMapa(p,territory,y),colorTerritorioEnMapa(p,'Castilla',y),territory+'/'+y);
+ assert(governmentGroupsAt(p,1720).some(g=>g.label==='España'&&g.mandates.some(m=>m.territorio==='Navarra')));
  const mt=by.get('MARIATERESAHAB');
- assert.notEqual(colorTerritorioEnMapa(mt,'Bohemia',1748),colorTerritorioEnMapa(mt,'Austria',1748));
- assert.equal(colorTerritorioEnMapa(mt,'Bohemia',1749),colorTerritorioEnMapa(mt,'Austria',1749));
- assert.notEqual(colorTerritorioEnMapa(mt,'Hungría',1750),colorTerritorioEnMapa(mt,'Austria',1750));
+ for(const [territory,year] of [['Bohemia',1748],['Bohemia',1749],['Hungría',1750]])
+  assert.equal(colorTerritorioEnMapa(mt,territory,year),colorTerritorioEnMapa(mt,'Austria',year),territory+'/'+year);
  for(const y of [1706,1707,1714,1715,1716])assert.deepEqual(groupedGovernmentIntervals(p).filter(g=>g.from<=y&&y<=g.through).map(g=>g.key).sort(),governmentGroupsAt(p,y).map(g=>g.key).sort());
 });
 test('coinciding crowns, delegates and claims cannot fabricate union membership; dependencies keep their pattern',()=>{

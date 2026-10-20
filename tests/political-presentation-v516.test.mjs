@@ -10,6 +10,7 @@ import {mapAuthoritiesForPerson} from '../src/cartography/mapAuthorities.js';
 import {COLLECTIVE_AUTHORITIES,buildPoliticalMapIndex,inspectMapRegion} from '../src/cartography/politicalMapIndex.js';
 import {ORANGE_NASSAU,authorityColor,frenchFiefColor} from '../src/cartography/mapColors.js';
 import {subterritoriosDeFiltro} from '../src/domain/filters/territoryFilters.js';
+import {mandateIdentity,identityLabel} from '../src/cartography/territorialNames.js';
 const data=JSON.parse(fs.readFileSync(new URL('../data/cartography/corridor-locations.json',import.meta.url))),by=new Map(PERSONAS.map(p=>[p.id,p]));
 test('territorial and dynastic filters are alphabetic, reachable and distinguish genealogical houses from folders',()=>{
  const o=atlasFilterOptions(PERSONAS),sort=a=>a.toSorted((a,b)=>a.localeCompare(b,'es',{sensitivity:'base'}));
@@ -49,10 +50,12 @@ test('Republic is one orange entity with its collective government and provincia
  assert(personMatchesTerritory(by.get('MAURICEORANGE'),'Provincias Unidas',1600,true));assert(!personMatchesTerritory(by.get('MARGPARMA'),'Provincias Unidas',1560,true));
  const mosaic=europeMosaicAt(data,1705,PERSONAS);for(const id of ['Amsterdam','Groningen','Utrecht','Hertogenbosch'])assert(mosaic.byLocation.get(id).every(l=>l.mosaicColor===ORANGE_NASSAU),id);
 });
-test('Austria reunites only active lands and Transylvania retains a stable identity and its dated title',()=>{
- const leopold=governmentGroupsAt(by.get('LEOP1HRE'),1700);assert(leopold.some(g=>g.label==='Tirol'&&g.mandates.some(m=>m.territorio==='Tirol')));
- assert(leopold.some(g=>g.id==='Transilvania'&&g.label==='Principado de Transilvania'));assert(!leopold.find(g=>g.id==='corona-san-esteban')?.mandates.some(m=>m.territorio.includes('Transilvania')));
- const intervals=groupedGovernmentIntervals(by.get('MARIATERESAHAB')).filter(g=>g.id==='Transilvania');assert(intervals.some(g=>g.through===1764));assert(intervals.some(g=>g.from===1765&&g.label==='Gran Principado de Transilvania'));
- assert(governmentGroupsAt(by.get('MARIATERESAHAB'),1770).some(g=>g.id==='Transilvania'&&g.label==='Gran Principado de Transilvania'));
+test('Austria reunites only active lands, its personal colour includes Transylvania and the title keeps its dated name',()=>{
+ const leopold=governmentGroupsAt(by.get('LEOP1HRE'),1700),monarchy=leopold.find(g=>g.id==='monarquia-austriaca-exterior');
+ assert(monarchy.mandates.some(m=>m.territorio==='Tirol')&&monarchy.mandates.some(m=>m.territorio==='Transilvania habsbúrgica'));
+ assert(!leopold.some(g=>g.id==='corona-san-esteban'),'the monarchy group absorbs the Hungarian crown in the personal map');
+ assert.equal(identityLabel(mandateIdentity('Transilvania habsbúrgica'),1764),'Principado de Transilvania');
+ assert.equal(identityLabel(mandateIdentity('Transilvania habsbúrgica'),1765),'Gran Principado de Transilvania');
+ assert(governmentGroupsAt(by.get('MARIATERESAHAB'),1770).some(g=>g.id==='monarquia-austriaca-exterior'&&g.mandates.some(m=>m.territorio==='Transilvania habsbúrgica')));
  const temes=year=>europeMosaicAt(data,year,PERSONAS).byLocation.get('Timisoara');assert(temes(1750).some(l=>l.entityId==='Banato de Temes'));assert(temes(1790).some(l=>l.entityId==='Hungría'));
 });

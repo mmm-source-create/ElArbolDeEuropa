@@ -21,13 +21,15 @@ test('Matthias succeeds Rudolf in 1611 without deleting either last-year title o
  assert(mosaic(1611).byLocation.get('Wroclaw')[0].candidates.some(g=>g.personId==='RODOLFO2HRE'));
  assert.notDeepEqual(colors(1610,'Wroclaw'),colors(1610,'Vienna'));
 });
-test('dated medieval unions join in the common map, while personal governments retain their own identity',()=>{
+test('dated medieval unions join in the common map; transient personal unions keep their crowns apart in personal maps',()=>{
  for(const [year,ids] of [[1270,['Prague','Brno','Vienna']],[1375,['Krakow','Buda']],[1443,['Krakow','Buda']],[1447,['Vienna','Buda']],[1454,['Prague','Vienna','Buda']],[1480,['Buda','Brno','Wroclaw']],[1500,['Prague','Buda']]])
   for(const id of ids.slice(1))assert.deepEqual(colors(year,id),colors(year,ids[0]),`${year}/${id}`);
  assert.notDeepEqual(colors(1480,'Prague'),colors(1480,'Buda'),'Corvinus cannot acquire Prague through his rival royal title');
  assert.notDeepEqual(colors(1447,'Prague'),colors(1447,'Buda'),'Bohemia is still in its interregnum');
- for(const [person,territories,year] of [['OTAK2',['Bohemia','Moravia'],1270],['LUIS1',['Polonia','Hungría'],1375],['CARLOS3ESP',['Nápoles','Trinacria'],1750]])
+ for(const [person,territories,year] of [['OTAK2',['Bohemia','Moravia'],1270],['LUIS1',['Polonia','Hungría'],1375]])
   assert.notEqual(colorTerritorioEnMapa(by.get(person),territories[0],year),colorTerritorioEnMapa(by.get(person),territories[1],year));
+ // The Bourbon crowns, ruled together from Naples, share their personal colour too.
+ assert.equal(colorTerritorioEnMapa(by.get('CARLOS3ESP'),'Nápoles',1750),colorTerritorioEnMapa(by.get('CARLOS3ESP'),'Trinacria',1750));
 });
 test('Prussian blue never transfers Royal Prussia or Warmia to the Great Elector',()=>{
  assert.deepEqual(colors(1660,'Berlin'),[REINO_COLOR.Prusia]);

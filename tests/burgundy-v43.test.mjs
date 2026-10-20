@@ -77,7 +77,8 @@ test('los topónimos aportados están en el SVG; el color borgoñón precede a l
     }
   }
   const carlos=person('CARLOS5');
-  assert.notEqual(colorTerritorioEnMapa(carlos,'Artois',1510),colorTerritorioEnMapa(carlos,'Flandes',1510));
-  assert.notEqual(colorTerritorioEnMapa(carlos,'Flandes',1510),colorTerritorioEnMapa(carlos,'Luxemburgo',1510));
+  // The Burgundian inheritance is one personal unit, not one colour per province.
+  assert.equal(colorTerritorioEnMapa(carlos,'Artois',1510),colorTerritorioEnMapa(carlos,'Flandes',1510));
+  assert.equal(colorTerritorioEnMapa(carlos,'Flandes',1510),colorTerritorioEnMapa(carlos,'Luxemburgo',1510));
   assert.notEqual(colorTerritorioEnMapa(carlos,'Flandes',1540),colorTerritorioEnMapa(carlos,'Milán',1540));
 });

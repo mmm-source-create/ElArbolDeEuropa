@@ -2,6 +2,7 @@ import {EASTERN_EUROPE_COLORS} from './easternEuropeColors.js';
 import {ORANGE_NASSAU, POLAND_LITHUANIA_COLOR, BURGUNDIAN_COLOR, ENGLISH_CROWN_COLOR} from './mapColors.js';
 import {authorityKind} from '../domain/government/authorityKind.js';
 import {reinadosActivos} from '../domain/government/reigns.js';
+import {fnv1a} from '../utils/hash.js';
 
 // Tabla de correspondencias: nombre de "reino" tal y como aparece en
 // PERSONAS (App.jsx) -> lista de IDs reales de las <path> del SVG
@@ -290,6 +291,10 @@ export const REINO_COLOR = {
   Portugal: '#298e47',
   Francia: '#295D8E',
   Inglaterra: '#7A4F3B',
+  // The kingdom created in 1707 continues England's swatch; Hanover, held in
+  // personal union, keeps a tone of its own.
+  'Gran Bretaña': '#7A4F3B',
+  Hannover: '#B58A3C',
   Escocia: '#4B6C83',
   Bretaña: '#298E36',
   Artois: '#8E6329',
@@ -394,6 +399,7 @@ const FEUDOS_HERENCIA_BORGONONA = new Set([
   'Auxerre', 'Ponthieu', 'Namur', 'Brabante', 'Limburgo', 'Henao', 'Holanda',
   'Zelanda', 'Luxemburgo', 'Güeldres', 'Frisia', 'Utrecht', 'Overijssel',
   'Drente', 'Groninga', 'Señorío de Malinas', 'Tournai', 'Tournaisis', 'Condado de Charolais', 'Señorío de Cuijk',
+  'Condado de Mâcon',
 ]);
 // The Catalan duchies of Greece were united to the Crown by Peter IV in 1380.
 const CORONA_ARAGONESA = new Set([
@@ -402,7 +408,7 @@ const CORONA_ARAGONESA = new Set([
 ]);
 const MONARQUIA_HISPANICA = new Set([
   'Castilla', 'León', 'Aragón', 'Condado de Barcelona', 'Valencia',
-  'Mallorca', 'Cerdeña', 'Nápoles', 'Trinacria', 'Milán', 'Navarra',
+  'Mallorca', 'Cerdeña', 'Nápoles', 'Trinacria', 'Sicilia', 'Milán', 'Navarra',
 ]);
 const DOMINIOS_INGLESES_EN_FRANCIA = new Set(['Normandía', 'Anjou', 'Maine', 'Turena', 'Poitou', 'Aquitania',
   'Ducado de Aquitania', 'Gascuña', 'Ponthieu', 'Calais']);
@@ -554,27 +560,39 @@ const AGRUPACIONES_POLITICAS = [
   },
 ];
 
-// A political union in the panorama is not an administrative integration in
-// a personal map. Every existing grouping is classified explicitly here.
+// The personal map keeps each composite monarchy together, as the panorama
+// does. Its own exceptions are classified here: the Burgundian inheritance is
+// one unit of its own, Portugal keeps its crown, and transient personal
+// unions or French fiefs are not merged. Titles stay separate in the inspector.
 export const MAP_GROUP_REVIEW = Object.freeze({
-  'nueva-planta':{personal:true,reason:'Integración administrativa escalonada en 1707, 1715 y 1716; Navarra queda fuera.'},
+  'nueva-planta':{personal:true,reason:'Integración administrativa escalonada en 1707, 1715 y 1716; queda dentro de España en el mapa personal.'},
   'castilla-leon':{personal:true,reason:'Corona común desde 1230; se conservan los nombres de los reinos.'},
-  'austro-bohemia':{personal:true,reason:'Administración central conjunta desde 1749; Hungría queda fuera.'},
+  'austro-bohemia':{personal:true,reason:'Administración central conjunta desde 1749.'},
   'ayubi':{personal:false,reason:'Dominios reunidos por Saladino; no perpetuar la unidad tras su sucesión.'},
-  'corona-inglesa':{personal:false,reason:'Dominios continentales con títulos y estatutos propios; distinguir el feudo francés.'},
-  'brandeburgo-prusia':{personal:false,reason:'Dominios con instituciones propias; Prusia sigue siendo feudo polaco hasta 1657.'},
-  'reino-de-prusia':{personal:false,reason:'La monarquía común no extingue automáticamente los gobiernos provinciales.'},
-  'trinacria-atenas':{personal:false,reason:'Ducados griegos con instituciones y vicarios propios.'},
-  'polonia-lituania':{personal:false,reason:'Unión exterior y parlamento común; Corona y Gran Ducado conservan sus gobiernos.'},
-  'tocco':{personal:false,reason:'Condado y despotado conservan títulos y jurisdicciones propios.'},
-  'corona-san-esteban':{personal:false,reason:'Reinos y territorios de estatuto propio; separación transilvana fechada.'},
-  'monarquia-hispanica':{personal:false,reason:'Monarquía compuesta; la integración interna necesita otra regla fechada.'},
-  'corona-aragon':{personal:false,reason:'Reinos con leyes e instituciones propias.'},
-  'corona-bohemia':{personal:false,reason:'Corona común con dietas provinciales propias hasta la reforma administrativa.'},
-  'tierras-austriacas':{personal:false,reason:'Reunión de dominios con dietas y particiones dinásticas propias.'},
-  'saboya':{personal:false,reason:'Estados de un mismo príncipe con estatutos internos propios.'},
-  'paises-bajos':{personal:false,reason:'Sucesión común desde 1549; cada provincia conserva instituciones.'},
-  'herencia-borgonona':{personal:false,reason:'Unión de dominios; no absorción jurídica de los condados y ducados.'},
+  'corona-inglesa':{personal:false,reason:'Feudos continentales tenidos del rey de Francia; conservan su color y su trama.'},
+  'brandeburgo-prusia':{personal:true,reason:'Dominios de un mismo elector; la Prusia ducal conserva la trama de feudo polaco hasta 1657.'},
+  'reino-de-prusia':{personal:true,reason:'Monarquía prusiana con soberano y administración comunes; los títulos provinciales siguen en el inspector.'},
+  'trinacria-atenas':{personal:true,reason:'Ducados gobernados por el rey de Trinacria con vicarios; se reúnen mientras dura su gobierno.'},
+  'polonia-lituania':{personal:true,reason:'Mancomunidad con monarca y parlamento comunes desde 1569.'},
+  'tocco':{personal:true,reason:'Condado y despotado del mismo gobernante; los títulos siguen en el inspector.'},
+  'corona-san-esteban':{personal:true,reason:'Reinos de la Corona húngara; la separación transilvana sigue fechada.'},
+  'monarquia-hispanica':{personal:true,reason:'España: coronas de Castilla y Aragón, Navarra y sus dominios italianos. Portugal y los Países Bajos se muestran aparte.'},
+  'corona-aragon':{personal:true,reason:'Reinos de la Corona de Aragón gobernados por el mismo rey.'},
+  'corona-bohemia':{personal:true,reason:'Tierras de la Corona de Bohemia desde 1348.'},
+  'tierras-austriacas':{personal:true,reason:'Tierras austríacas reunidas por la misma persona; las particiones con otro gobernante no se funden.'},
+  'saboya':{personal:true,reason:'Estados de la casa de Saboya gobernados a la vez.'},
+  'paises-bajos':{personal:true,reason:'Sucesión común desde 1549: un solo conjunto, sin dividirlo en provincias.'},
+  'herencia-borgonona':{personal:true,reason:'Estados borgoñones: un solo conjunto, distinto de los demás reinos del soberano.'},
+  'monarquia-premislida-exterior':{personal:false,reason:'Unión personal deshecha en 1276; cada dominio conserva su color.'},
+  'union-polonia-hungria-exterior':{personal:false,reason:'Unión personal transitoria de dos coronas, como Portugal en 1580–1640.'},
+  'ladislao-postumo-exterior':{personal:false,reason:'Unión personal de un monarca menor, deshecha en 1457.'},
+  'matias-corvino-exterior':{personal:false,reason:'Conquistas reunidas por Matías y separadas en 1490.'},
+  'union-bohemia-hungria-exterior':{personal:false,reason:'Unión personal de dos coronas electivas; la integración comienza con la monarquía austríaca.'},
+  'napoles-sicilia-borbon-exterior':{personal:true,reason:'Dos coronas gobernadas desde Nápoles por el mismo rey; los títulos siguen separados.'},
+  'austria-interior-exterior':{personal:true,reason:'Rama de Austria Interior: reúne solo sus propios gobiernos.'},
+  'monarquia-hispanica-exterior':{personal:false,reason:'En el mapa personal se usa España; Portugal y los Países Bajos forman unidades propias.'},
+  'monarquia-austriaca-exterior':{personal:true,excluye:FEUDOS_HERENCIA_BORGONONA,reason:'Monarquía austríaca: tierras austríacas, Bohemia, Hungría y dominios italianos; los Países Bajos forman una unidad propia.'},
+  'dinamarca-noruega-exterior':{personal:true,reason:'Reinos unidos bajo dirección danesa desde 1537.'},
 });
 
 const EXTERIOR_UNIONS = [
@@ -655,34 +673,53 @@ const EXTERIOR_UNIONS = [
   },
 ];
 
+// Spain is evaluated before the Aragonese, Castilian and Nueva Planta
+// groups it contains, so a personal map shows one Spanish swatch.
+let personalGroups=null;
+const PERSONAL_GROUPS=()=>personalGroups??=[...EXTERIOR_UNIONS,
+  ...AGRUPACIONES_POLITICAS.filter(group=>group.id==='monarquia-hispanica'),
+  ...AGRUPACIONES_POLITICAS.filter(group=>group.id!=='monarquia-hispanica')]
+  .filter(group=>MAP_GROUP_REVIEW[group.id].personal);
+
 // Apply the rule to eligible mandates, not to a family name or a royal title.
 // Delegates and claimants cannot create a union or provide membership.
 export function agrupacionesPoliticasEnMapa(persona, año, {view = 'personal'} = {}) {
   const activos = new Set(reinadosActivos(persona, año, {soloEfectivos:true})
     .filter(m=>authorityKind(m,año)==='sovereign').map(m=>m.territorio));
   const cubiertos = new Set(), result=[];
-  const groups=view==='panorama' ? [...EXTERIOR_UNIONS,...AGRUPACIONES_POLITICAS]
-    : AGRUPACIONES_POLITICAS.filter(group=>MAP_GROUP_REVIEW[group.id].personal);
+  const groups=view==='panorama' ? [...EXTERIOR_UNIONS,...AGRUPACIONES_POLITICAS] : PERSONAL_GROUPS();
   for (const original of groups) {
     const grupo=original.territoriosPorFecha ? {...original,territorios:original.territoriosPorFecha(año)} : original;
     if (año < grupo.desde || año > (grupo.hasta ?? Infinity) || !grupo.aplica(activos,persona,año)) continue;
-    const propios=[...grupo.territorios].filter(t=>activos.has(t)&&!cubiertos.has(t));
+    const excluidos=view==='panorama' ? null : MAP_GROUP_REVIEW[grupo.id].excluye;
+    const propios=[...grupo.territorios].filter(t=>activos.has(t)&&!cubiertos.has(t)&&!excluidos?.has(t));
     if (!propios.length) continue;
     propios.forEach(t=>cubiertos.add(t));
-    result.push({...grupo,territorios:new Set(propios)});
+    result.push({...grupo,territorios:new Set(propios),
+      miembros:new Set([...grupo.territorios].filter(t=>!excluidos?.has(t)))});
   }
   return result;
 }
 
 // Distinct legal governments must not accidentally inherit identical swatches
 // from the old crown-wide palette. Integrated groups override these colours.
+// Without a palette entry, unrelated governments must not share one grey that
+// reads as a union (the Saxon duchies, Gran Bretaña and Hannover did): derive
+// a stable muted tone from the territory's name instead.
+const FALLBACK_TERRITORY_COLORS = ['#7D6B8A','#6F8A6B','#8A7A5C','#5E7F8C','#8C6464','#6A7C99',
+  '#90805A','#5F8A7A','#8B6E8E','#7B8F5B','#9A7266','#5D6F8F'];
+const fallbackTerritoryColor = territorio => FALLBACK_TERRITORY_COLORS[fnv1a(territorio) % FALLBACK_TERRITORY_COLORS.length];
 const PERSONAL_TERRITORY_COLORS = Object.freeze({
   León:'#B09B4A','Condado de Barcelona':'#A87539',Valencia:'#A45967',Cerdeña:'#577C62',
   Piamonte:'#758B4E',Ravensberg:'#648593',
 });
 export function colorTerritorioEnMapa(persona, territorio, año) {
-  const base=PERSONAL_TERRITORY_COLORS[territorio] || REINO_COLOR[territorio] || REINO_COLOR_DEFAULT;
-  const agrupacion=agrupacionesPoliticasEnMapa(persona,año).find(g=>g.territorios.has(territorio));
+  const base=PERSONAL_TERRITORY_COLORS[territorio] || REINO_COLOR[territorio] || fallbackTerritoryColor(territorio);
+  const grupos=agrupacionesPoliticasEnMapa(persona,año);
+  // A dated cartographic supplement without its own mandate (Charolais,
+  // Cuijk) follows the group it belongs to; a recorded title never does.
+  const agrupacion=grupos.find(g=>g.territorios.has(territorio))
+    || (!reinadosActivos(persona,año).some(m=>m.territorio===territorio) ? grupos.find(g=>g.miembros.has(territorio)) : null);
   return agrupacion?.color || base;
 }
 

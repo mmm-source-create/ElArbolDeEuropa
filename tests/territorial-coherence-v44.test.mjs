@@ -3,6 +3,7 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import {PERSONAS} from '../src/data/personas.js';
 import {REINO_A_IDS, REINO_VERSIONES, REINO_COLOR, colorTerritorioEnMapa, idsDeReinoEnAño} from '../src/cartography/kingdomMaps.js';
+import {BURGUNDIAN_COLOR} from '../src/cartography/mapColors.js';
 import {TERRITORIOS_DESTACADOS, TERRITORIOS_SUB, subterritoriosDeFiltro, territorioCoincideConFiltro} from '../src/domain/filters/territoryFilters.js';
 import {reinadosActivos} from '../src/domain/government/reigns.js';
 
@@ -120,30 +121,26 @@ test('Venecia, Milán y Saboya cambian de regiones cuando cambia el control', ()
   assert.ok(painted('VICTORAMADEO2SAB', 1725).has('Torino'));
 });
 
-test('el mapa personal distingue gobiernos jurídicos dentro de los conjuntos exteriores', () => {
+test('el mapa personal mantiene integradas las monarquías y separa Portugal y la herencia borgoñona', () => {
   const carlos = person('CARLOS5');
   for (const realm of ['Castilla', 'León', 'Aragón', 'Mallorca', 'Nápoles', 'Trinacria', 'Milán']) {
-    assert.equal(colorTerritorioEnMapa(carlos, realm, 1540), REINO_COLOR[realm], realm);
+    assert.equal(colorTerritorioEnMapa(carlos, realm, 1540), REINO_COLOR.España, realm);
   }
-  assert.equal(colorTerritorioEnMapa(carlos, 'Flandes', 1540), REINO_COLOR.Flandes);
-  assert.equal(colorTerritorioEnMapa(carlos, 'Condado de Borgoña', 1540), REINO_COLOR['Condado de Borgoña']);
-  assert.equal(colorTerritorioEnMapa(carlos, 'Flandes', 1510), REINO_COLOR.Flandes);
+  assert.equal(colorTerritorioEnMapa(carlos, 'Flandes', 1540), BURGUNDIAN_COLOR);
+  assert.equal(colorTerritorioEnMapa(carlos, 'Condado de Borgoña', 1540), BURGUNDIAN_COLOR);
+  assert.equal(colorTerritorioEnMapa(carlos, 'Flandes', 1510), BURGUNDIAN_COLOR);
   const felipe = person('FEL2ESP');
   assert.equal(colorTerritorioEnMapa(felipe, 'Inglaterra', 1556), REINO_COLOR.Inglaterra);
-  assert.equal(colorTerritorioEnMapa(felipe, 'Flandes', 1556), REINO_COLOR.Flandes);
+  assert.equal(colorTerritorioEnMapa(felipe, 'Flandes', 1556), BURGUNDIAN_COLOR);
   assert.equal(colorTerritorioEnMapa(felipe, 'Portugal', 1585), REINO_COLOR.Portugal);
   const fernando = person('FERN2ARAG');
-  assert.equal(colorTerritorioEnMapa(fernando, 'Nápoles', 1510), REINO_COLOR.Nápoles);
-  assert.equal(colorTerritorioEnMapa(fernando, 'Mallorca', 1510), REINO_COLOR.Mallorca);
+  for (const realm of ['Nápoles', 'Mallorca', 'Valencia']) assert.equal(colorTerritorioEnMapa(fernando, realm, 1510), REINO_COLOR.Aragón, realm);
   assert.equal(colorTerritorioEnMapa(fernando, 'Castilla', 1510), REINO_COLOR.Castilla);
   assert.notEqual(REINO_COLOR.Mallorca, REINO_COLOR.Aragón);
-  assert.notEqual(colorTerritorioEnMapa(person('VICTORAMADEO2SAB'), 'Piamonte', 1725), REINO_COLOR.Saboya);
-  assert.notEqual(colorTerritorioEnMapa(person('VICTORAMADEO2SAB'), 'Cerdeña', 1725), REINO_COLOR.Saboya);
+  assert.equal(colorTerritorioEnMapa(person('VICTORAMADEO2SAB'), 'Piamonte', 1725), REINO_COLOR.Saboya);
+  assert.equal(colorTerritorioEnMapa(person('VICTORAMADEO2SAB'), 'Cerdeña', 1725), REINO_COLOR.Saboya);
   const carlosVI = person('CARLOS6HRE');
-  assert.equal(colorTerritorioEnMapa(carlosVI, 'Austria', 1725), REINO_COLOR.Austria);
-  assert.equal(colorTerritorioEnMapa(carlosVI, 'Bohemia', 1725), REINO_COLOR.Bohemia);
-  assert.equal(colorTerritorioEnMapa(carlosVI, 'Hungría', 1725), REINO_COLOR.Hungría);
-  assert.equal(colorTerritorioEnMapa(carlosVI, 'Milán', 1725), REINO_COLOR.Milán);
+  for (const realm of ['Austria', 'Bohemia', 'Hungría', 'Milán']) assert.equal(colorTerritorioEnMapa(carlosVI, realm, 1725), REINO_COLOR.Austria, realm);
   const unionPersonal = {gobiernos: ['Polonia', 'Bohemia', 'Hungría'].map(territorio => ({territorio, desde: 1500, hasta: 1600, condicion: 'efectivo'}))};
   for (const realm of ['Polonia', 'Bohemia', 'Hungría']) {
     assert.equal(colorTerritorioEnMapa(unionPersonal, realm, 1550), REINO_COLOR[realm]);

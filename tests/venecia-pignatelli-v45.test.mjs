@@ -31,13 +31,13 @@ test('Pignatelli conserva las dos ramas documentadas sin sobrino inventado', () 
   assert.notEqual(byId.CARD_FRANCESCO_PIGN.padre, byId.PAPA_INOCENCIO12.padre);
 });
 
-test('la administración austro-bohemia empieza en 1749 y Hungría conserva su color', () => {
+test('la monarquía austríaca comparte color en el mapa personal; la administración austro-bohemia empieza en 1749', () => {
   const ruler = {id:'REGLA_AUSTRO_BOHEMIA',gobiernos:['Austria','Bohemia','Hungría']
     .map(territorio => ({territorio,desde:1740,hasta:1780,titulo:'Soberana',condicion:'efectivo'}))};
-  assert.equal(colorTerritorioEnMapa(ruler,'Bohemia',1748),REINO_COLOR.Bohemia);
-  assert.equal(colorTerritorioEnMapa(ruler,'Bohemia',1749),REINO_COLOR.Austria);
-  assert.equal(colorTerritorioEnMapa(ruler,'Hungría',1750),REINO_COLOR.Hungría);
-  assert.ok(agrupacionesPoliticasEnMapa(ruler,1750).some(g => g.id === 'austro-bohemia'));
+  for (const [realm,year] of [['Bohemia',1748],['Bohemia',1749],['Hungría',1750]]) assert.equal(colorTerritorioEnMapa(ruler,realm,year),REINO_COLOR.Austria);
+  const bohemian = {id:'REGLA_SOLO_AUSTRO_BOHEMIA',gobiernos:['Austria','Bohemia','Moravia'].map(territorio => ({territorio,desde:1740,hasta:1780,condicion:'efectivo'}))};
+  assert.deepEqual(agrupacionesPoliticasEnMapa(bohemian,1750,{view:'panorama'}).map(g => g.id), ['monarquia-austriaca-exterior']);
+  assert.deepEqual(agrupacionesPoliticasEnMapa(bohemian,1750).map(g => g.id), ['monarquia-austriaca-exterior']);
 });
 
 test('la leyenda omite agrupaciones absorbidas por otra de mayor prioridad', () => {

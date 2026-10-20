@@ -20,10 +20,10 @@ test('Carlos V has one Spanish entity, retains external groups and every constit
  const groups=governmentGroupsAt(p,1530,{view:"panorama"}),spain=groups.filter(g=>g.id==='monarquia-hispanica-exterior');
  assert.equal(spain.length,1);assert(spain[0].mandates.some(m=>m.territorio==='Navarra'));
  assert(spain[0].mandates.some(m=>m.territorio==='Castilla'));
- assert(governmentSummary(p,1530).includes('Corona de Castilla'));
+ assert(governmentSummary(p,1530).includes('España'));
  assert(groups.some(g=>g.label==='Sacro Imperio (Alemania)'));
  assert(spain[0].mandates.some(m=>m.territorio==='Brabante'));
- assert(governmentGroupsAt(p,1530).some(g=>g.mandates.some(m=>m.territorio==='Aragón')&&g.id==='Aragón'));
+ assert(governmentGroupsAt(p,1530).some(g=>g.mandates.some(m=>m.territorio==='Aragón')&&g.id==='monarquia-hispanica'&&g.label==='España'));
  assert.equal(JSON.stringify(p),before);
  const row=governmentTableAt(PERSONAS,1530).find(g=>g.id==='monarquia-hispanica-exterior');
  assert.equal(row.governments.filter(g=>g.person.id==='CARLOS5').length,1);
@@ -31,7 +31,7 @@ test('Carlos V has one Spanish entity, retains external groups and every constit
 test('dated grouping does not unify medieval crowns or turn a personal union into one state',()=>{
  assert(!governmentGroupsAt(by.get('CARLOS5'),1515).some(g=>g.label==='España'));
  const p=by.get('FEL2ESP');assert(governmentSummary(p,1590).includes('Portugal'));
- assert(governmentSummary(p,1590).includes('Aragón'));
+ assert(governmentSummary(p,1590).includes('España'));assert(!governmentSummary(p,1590).includes('Aragón'));
  const england=PERSONAS.find(p=>p.gobiernos?.some(g=>g.territorio==='Hannover'&&g.desde<=1720&&g.hasta>=1720)&&p.gobiernos.some(g=>g.territorio==='Gran Bretaña'));
  assert(england);const labels=governmentSummary(england,1720);assert(labels.includes('Hannover'));assert(labels.includes('Gran Bretaña'));
 });

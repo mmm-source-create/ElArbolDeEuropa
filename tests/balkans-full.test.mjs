@@ -97,14 +97,14 @@ test('the imperial title and tributary office do not give a regional ruler all S
   assert.deepEqual(personal('IVANSHISHMANBUL', 1394).flatMap(e => e.ids), ['Nikopol']);
 });
 
-test('compound dominions retain personal colours and separate documented offices', () => {
+test('compound dominions share one personal colour and keep separate documented offices', () => {
   const tocco = people.get('CARLO1TOCCO');
-  assert.notEqual(colorTerritorioEnMapa(tocco, 'Epiro de los Tocco', 1420), colorTerritorioEnMapa(tocco, 'Condado palatino de Cefalonia y Zacinto', 1420));
+  assert.equal(colorTerritorioEnMapa(tocco, 'Epiro de los Tocco', 1420), colorTerritorioEnMapa(tocco, 'Condado palatino de Cefalonia y Zacinto', 1420));
   assert(personal(tocco.id, 1420).some(e => e.government.titulo === 'Déspota'));
   assert(personal(tocco.id, 1420).some(e => e.government.titulo === 'Conde palatino'));
   const hab = people.get('CARLOS6HRE');
-  assert.notEqual(colorTerritorioEnMapa(hab, 'Austria', 1720), colorTerritorioEnMapa(hab, 'Norte de Serbia habsbúrgico', 1720));
-  assert.notEqual(colorTerritorioEnMapa(hab, 'Austria', 1720), colorTerritorioEnMapa(hab, 'Oltenia habsbúrgica', 1720));
+  assert.equal(colorTerritorioEnMapa(hab, 'Austria', 1720), colorTerritorioEnMapa(hab, 'Norte de Serbia habsbúrgico', 1720));
+  assert.equal(colorTerritorioEnMapa(hab, 'Austria', 1720), colorTerritorioEnMapa(hab, 'Oltenia habsbúrgica', 1720));
   assert(ids(hab.id, 1720).has('Belgrad'));
   assert(!ids(hab.id, 1740).has('Belgrad'));
 });

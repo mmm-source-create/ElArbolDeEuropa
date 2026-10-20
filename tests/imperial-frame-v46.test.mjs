@@ -62,6 +62,6 @@ test('la partición de 1564 y la reunión parcial de 1619 siguen gobiernos, no s
   assert.ok(people.CARLOS2ESTIRIA.gobiernos.some(g => g.territorio === 'Austria Interior' && g.desde === 1564));
   assert.ok(people.FERN2TIROL.gobiernos.some(g => g.territorio === 'Tirol' && g.desde === 1564));
   assert.ok(people.FERN2EMP.gobiernos.some(g => g.territorio === 'Austria' && g.desde === 1619));
-  assert.equal(colorTerritorioEnMapa(people.FERN1EMP, 'Austria Interior', 1540), REINO_COLOR['Austria Interior']);
+  assert.equal(colorTerritorioEnMapa(people.FERN1EMP, 'Austria Interior', 1540), REINO_COLOR.Austria);
   assert.equal(colorTerritorioEnMapa(people.CARLOS2ESTIRIA, 'Austria Interior', 1570), REINO_COLOR['Austria Interior']);
 });
