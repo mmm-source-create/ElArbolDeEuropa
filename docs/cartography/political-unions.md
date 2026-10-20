@@ -24,6 +24,7 @@ Las fechas son anuales e inclusivas. Una ruptura dentro del año puede conservar
 | Corona de Aragón | Miembros gobernados efectivamente | Reinos y principado separados hasta las integraciones fechadas |
 | Corona de Bohemia, desde 1348 | Tierras de la Corona, o monarquía austríaca cuando corresponda | Dietas y gobiernos provinciales separados hasta 1749 |
 | Corona de San Esteban | Gobiernos efectivos; separación transilvana fechada | Reinos y gobiernos separados |
+| Austria Interior, 1564–1618 | Rama con dirección propia durante la partición; no comparte color exterior con Viena o Tirol | Gobiernos territoriales separados |
 | Tierras austríacas | Tierras reunidas por el mismo gobernante | Identidades propias; no borrar las particiones dinásticas |
 | Brandeburgo-Prusia, 1618–1700 | Conjunto exterior; Prusia mantiene la trama de feudo polaco hasta 1657 | Gobiernos propios |
 | Monarquía prusiana, 1701–1800 | Dominios efectivos | Identidades provinciales; el título real no prueba integración de cada provincia |

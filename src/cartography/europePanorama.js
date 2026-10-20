@@ -58,7 +58,7 @@ export function protagonistsAt(people,year,stories=[],events=[]) {
   .map(e=>({...e,reasons:[...e.reasons],stories:[...e.stories.values()]}));
 }
 
-const POLITY_GROUPS=new Set(['herencia-borgonona','paises-bajos','monarquia-hispanica-exterior','monarquia-austriaca-exterior','dinamarca-noruega-exterior']);
+const POLITY_GROUPS=new Set(['herencia-borgonona','paises-bajos','monarquia-hispanica-exterior','monarquia-austriaca-exterior','dinamarca-noruega-exterior','austria-interior-exterior']);
 
 // Keep the laboratory's researched geometry and precedence exactly intact.
 // Only a dated, matching mandate can give its political group a shared color.
@@ -109,7 +109,9 @@ export function europeMosaicAt(data,year,people) {
   const matches=layer.candidates.filter(g=>g.ids.has(id));
   const governing=matches.some(g=>!g.collegial)?matches.filter(g=>!g.collegial):matches;
   const applicable=[...new Map(governing.map(g=>[`${g.id}|${g.personId}|${g.kind}`,g])).values()];
-  const unanimous=applicable.length>0&&new Set(applicable.map(g=>g.color)).size===1;
+  // Equal swatches alone cannot establish a common political unit.
+  const unanimous=applicable.length>0&&new Set(applicable.map(g=>g.id)).size===1
+    &&new Set(applicable.map(g=>g.color)).size===1;
   const phases=layer.phasesById?.get(id)||[];
   const englishCrown=phases.some(n=>layer.english.has(n));
   const frenchRelation=phases.map(n=>layer.crown.get(n)).find(Boolean)||null;

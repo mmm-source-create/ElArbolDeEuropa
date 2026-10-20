@@ -78,3 +78,14 @@ test('composite monarchies stay in their home region despite the number of provi
  const rows=governmentTableAt(PERSONAS,1720);
  for(const [id,index] of [['monarquia-hispanica-exterior',0],['monarquia-austriaca-exterior',3],['dinamarca-noruega-exterior',5]]) {const row=rows.find(r=>r.id===id);assert(row,id);assert.equal(governmentRegion(row),FILTER_REGIONS[index]);}
 });
+
+test('a separate Inner Austrian branch shares only its own exterior colour; a lone Savoyard title cannot create a union',()=>{
+ const inner=governmentGroupsAt(by.get('CARLOS2ESTIRIA'),1570,{view:'panorama'});
+ const branch=inner.find(g=>g.id==='austria-interior-exterior');assert(branch);
+ assert(branch.mandates.some(m=>m.territorio==='Austria Interior'));
+ assert(!branch.mandates.some(m=>m.territorio==='Tirol'));
+ const main=governmentGroupsAt(by.get('MAXIM2'),1570,{view:'panorama'}).find(g=>g.id==='monarquia-austriaca-exterior');
+ assert(main);assert.notEqual(main.color,branch.color);
+ const prince={gobiernos:[{territorio:'Piamonte',desde:1300,hasta:1400,condicion:'efectivo'}]};
+ assert(!agrupacionesPoliticasEnMapa(prince,1350,{view:'panorama'}).some(g=>g.id==='saboya'));
+});

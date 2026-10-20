@@ -532,7 +532,7 @@ const AGRUPACIONES_POLITICAS = [
   {
     id: 'saboya', nombre: 'Estados saboyanos', territorios: ESTADOS_SABOYANOS,
     color: REINO_COLOR.Saboya, desde: -Infinity,
-    aplica: (activos) => activos.has('Saboya') || activos.has('Piamonte'),
+    aplica: activos => [...ESTADOS_SABOYANOS].filter(t=>activos.has(t)).length>1,
     nota: 'Conjunto de territorios gobernados por la casa de Saboya, solo cuando su gobierno está fechado y activo.',
     fuente:'https://www.treccani.it/enciclopedia/savoia_(Dizionario-di-Storia)/',
   },
@@ -578,6 +578,15 @@ export const MAP_GROUP_REVIEW = Object.freeze({
 });
 
 const EXTERIOR_UNIONS = [
+  {
+    id:'austria-interior-exterior',nombre:'Austria Interior',desde:1564,hasta:1618,
+    territorios:new Set(['Austria','Austria Interior','Carintia','Carniola','Ducado de Estiria']),
+    color:REINO_COLOR['Austria Interior'],
+    aplica:(active,person,year)=>active.has('Austria Interior')
+      && !reinadosActivos(person,year,{soloEfectivos:true}).some(m=>m.territorio==='Austria'&&!m.ambito),
+    nota:'Rama de Austria Interior durante la partición de la herencia. Solo reúne sus gobiernos activos y no absorbe Viena, Tirol ni otros dominios por compartir dinastía.',
+    fuente:'https://www.habsburger.net/en/chapter/tripartite-division-austrian-inheritance',
+  },
   {
     id:'monarquia-hispanica-exterior',nombre:'Monarquía Hispánica',desde:1516,
     territoriosPorFecha: year => new Set([...MONARQUIA_HISPANICA, 'Sicilia', ...FEUDOS_HERENCIA_BORGONONA,
