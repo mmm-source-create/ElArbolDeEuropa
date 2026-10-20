@@ -19,7 +19,9 @@
 
 La capa dorada se coloca encima del mapa sin modificar sus colores, tramas, autoridades ni selección. Al apagarla desaparece exclusivamente la superposición. Representa pertenencia jurídica aproximada, no dominio personal del emperador.
 
-Se utiliza la cartografía institucional existente: **1512–1792**. Fuera de ese intervalo se explica que la reconstrucción no está disponible y se desactiva el control. No se extienden los círculos del siglo XVI a 1200 ni la referencia de 1792 a las guerras posteriores. Véase [la documentación del marco imperial](../CARTOGRAFIA_SACRO_IMPERIO.md).
+El marco cubre **todo el recorrido del mapa, 1106–1800** (`IMPERIAL_FRAME_RANGE` en `src/cartography/imperialFrame.js`); el interruptor solo se muestra en los años en que hay marco que dibujar. No se proyectan los círculos del siglo XVI hacia atrás: cada periodo tiene su referencia cartográfica (`imperialFrameReference`) y sus cortes fechados. Entre ellos están la investidura de Pomerania (1181), la cesión danesa de 1214–1226, Silesia (1335), el Delfinado (1349), Provenza (1481), la Terraferma veneciana y Westfalia (1648). Los cortes revolucionarios siguen anexiones formales: Saboya en 1793, los Países Bajos austríacos y Lieja en 1795 y la Cisalpina en 1797. La margen izquierda del Rin permanece hasta su cesión en Lunéville, en 1801.
+
+La ampliación también corrige el marco de 1651–1792. Hasta ahora se calculaba con la ruta genérica de gobiernos, que descartaba las celdas con revisión política regional: pasaba de 807 celdas en 1650 a 263 en 1651. Además, retira las provincias neerlandesas y las cesiones a Francia que la versión anterior conservaba. El inspector muestra el marco en todos los años, con la fuente del periodo. Véase [la documentación del marco imperial](../CARTOGRAFIA_SACRO_IMPERIO.md); las comprobaciones están en `tests/imperial-frame-range.test.mjs`.
 
 ## Sucesiones y títulos, 1200–1800
 

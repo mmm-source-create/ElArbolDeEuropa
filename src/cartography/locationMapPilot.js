@@ -12,7 +12,7 @@ import {posavinaRagusaJurisdictions} from './regions/posavinaRagusaRoutes.js';
 import {balkansFullJurisdictions} from './regions/balkansFullRoutes.js';
 // These aliases connect the Atlas government records to reviewed new-map
 // jurisdictions, without treating every title held by one ruler as one state.
-import {imperialFrameIds} from './imperialFrame.js';
+import {imperialFrameCellChanges, imperialFrameIds, imperialFrameReference} from './imperialFrame.js';
 import {authorityExtensionFor} from './atlasAuthorityExtensions.js';
 import {applyMapBorderCorrections} from './mapBorderCorrections.js';
 import {authorityMapScope} from './authorityMapScopes.js';
@@ -161,12 +161,30 @@ function basePilotJurisdictionsFor(territory, year, personId) {
   return [territory];
 }
 
+const IMPERIAL_FRAME_LAYER = 'Marco jurídico del Sacro Imperio';
+let imperialFrameCache = {data:null, year:null, ids:[]};
+// The legal frame is computed for every year from imperialFrame.js through the
+// geometric crosswalk. It ignores regional political precedence: a reviewed
+// owner of a cell does not take it out of the Empire's legal scope. The
+// corridor layer of the same name is only the accepted 1512/1648 snapshot.
 export function pilotImperialFrameFor(data, year) {
-  if (!Number.isInteger(year)) return [];
-  if (reviewedLayerCovered(data, layerIndex(data).get('Marco jurídico del Sacro Imperio'), year)) {
-    return pilotLocationsFor(data, 'Marco jurídico del Sacro Imperio', year);
+  if (!data || !Number.isInteger(year) || year < data.from || year > data.through) return [];
+  if (imperialFrameCache.data !== data || imperialFrameCache.year !== year) {
+    const crosswalk = data.locationCrosswalk?.newIdsByOldId || {};
+    const {add, remove} = imperialFrameCellChanges(year);
+    const removed = new Set(remove);
+    const ids = [...new Set([...imperialFrameIds(year).flatMap(id => crosswalk[id]?.ids || []), ...add])]
+      .filter(id => !removed.has(id));
+    imperialFrameCache = {data, year, ids};
   }
-  return mapLocationsForGovernment(data, {territorio:'Sacro Imperio'}, year, null, imperialFrameIds(year));
+  return [...imperialFrameCache.ids];
+}
+
+function imperialFrameContext(data, entry, id, year) {
+  if (!pilotImperialFrameFor(data, year).includes(id)) return [];
+  const reference = imperialFrameReference(year);
+  return [{name: territorialLabel(entry.name, year), layerName: entry.name, corridor: entry.corridor,
+    note: reference.note, source: reference.url, activeReason: reference.locator, correction: null}];
 }
 
 function pilotVersionFor(entry, year) {
@@ -352,6 +370,7 @@ export function pilotLocationContext(data, id, year, personId = null) {
   const superseded = supersededRegionalLayers(data, year);
   const entries = reviewedMapLayers(data).filter(entry => !superseded.has(entry.name));
   const corridor = entries.flatMap(entry => {
+    if (entry.name === IMPERIAL_FRAME_LAYER) return imperialFrameContext(data, entry, id, year);
     if (!reviewedLayerLocations(data, entry, year).includes(id)) return [];
     const extension = authorityExtensionFor(entry.name, year);
     const evidence = reviewedLayerEvidence(entry, year);

@@ -78,5 +78,8 @@ test('imperial overlay stays above original paint, leaves patterns and coordinat
  renderImperialOverlay(svg,[],()=>null);assert(!svg.querySelector('[data-imperial-overlay]'));assert.equal(original.outerHTML,before);
  assert(pilotImperialFrameFor(data,1582).includes('Vienna'));
  assert(!pilotImperialFrameFor(data,1582).includes('Konigsberg'));
- assert.equal(pilotImperialFrameFor(data,1447).length,0,'do not extrapolate modern circles backwards');
+ const frame1447=pilotImperialFrameFor(data,1447);
+ assert(frame1447.includes('Vienna')&&frame1447.includes('Aix_En_Provence'),'the medieval frame uses its own dated blocks');
+ assert(frame1447.includes('Wroclaw'),'Silesia belongs to the Bohemian crown since 1335');
+ assert(!frame1447.includes('Verona')&&!frame1447.includes('Buda'),'Venetian Terraferma and Hungary stay outside');
 });

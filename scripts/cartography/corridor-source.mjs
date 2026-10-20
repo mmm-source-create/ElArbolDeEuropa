@@ -4,7 +4,7 @@ import {mapDataFile} from '../lib/project-paths.mjs';
 // person governed several of them. Geometry is only a candidate crosswalk.
 import fs from 'node:fs';
 import { idsDeReinoEnAño, REINO_A_IDS, REINO_COLOR, REINO_VERSIONES } from '../../src/cartography/kingdomMaps.js';
-import { imperialFrameIds } from '../../src/cartography/imperialFrame.js';
+import { IMPERIAL_FRAME_BLOCKS } from '../../src/cartography/imperialFrame.js';
 
 const FROM = 1400;
 const THROUGH = 1650;
@@ -155,6 +155,19 @@ const datedCorrections = [
     source: 'https://www.cambridge.org/core/books/abs/cambridge-history-of-russia/growth-of-muscovy-14621533/BCBC6FD430448E9337252DFBCE9069EE' },
 ];
 
+// The corridor keeps its accepted inspector snapshot of the imperial frame
+// (1512 and 1648). The map draws imperialFrameIds, which covers 1106–1800
+// and corrects Gelderland and Kempenland after 1648; regenerating this layer
+// would require rebuilding corridor-locations.json.
+const corridorImperialFrame = year => {
+  if (year < 1512) return [];
+  const blocks = IMPERIAL_FRAME_BLOCKS;
+  return [...new Set([...blocks.germanCore, ...blocks.bohemianCrown, ...blocks.burgundianCircle,
+    ...blocks.imperialItaly, ...blocks.silesia,
+    ...(year < 1648 ? [...blocks.northernNetherlands, ...blocks.swissConfederation, ...blocks.alsaceAndMetz] : []),
+    ...blocks.countyOfBurgundy])];
+};
+
 const specialSeries = {
   Francia: year => [
     ...idsDeReinoEnAño('Francia', year).filter(id => !FRENCH_SEPARATE.has(id)),
@@ -171,7 +184,7 @@ const specialSeries = {
   'Núcleo inglés en Irlanda': () => [],
   'Señorío de Man': () => [],
   'Bailiazgo de Jersey': () => [],
-  'Marco jurídico del Sacro Imperio': year => imperialFrameIds(year),
+  'Marco jurídico del Sacro Imperio': corridorImperialFrame,
   // Only independently sourced locations are colored. The broader, often
   // overlapping ecclesiastical jurisdictions remain open for later audit.
   'Principado episcopal de Brixen': () => [],

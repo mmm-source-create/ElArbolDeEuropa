@@ -1,4 +1,5 @@
 import {renderImperialOverlay} from '../../cartography/imperialOverlay.js';
+import {IMPERIAL_FRAME_RANGE} from '../../cartography/imperialFrame.js';
 import {MAP_READING_GUIDE} from '../../content/mapReadingGuide.js';
 import './atlas-skeleton.css';
 import {authorityColor} from '../../cartography/mapColors.js';
@@ -501,11 +502,10 @@ export function MapaEuropa({ seleccion, anioGlobal = null, onSelectTerritorio, o
         <button type="button" className="nav-btn" disabled={!controlLimits.down} onClick={() => panBy(0, MAP_PAN_STEP)} title="Mover mapa hacia abajo" aria-label="Mover mapa hacia abajo"><ArrowDown size={13} /></button>
         <button type="button" className="nav-btn" disabled={!controlLimits.right} onClick={() => panBy(MAP_PAN_STEP, 0)} title="Mover mapa a la derecha" aria-label="Mover mapa a la derecha"><ArrowRight size={13} /></button>
       </div>
-      {panorama && <div className="mapa-imperial-control">
-        <label className="mapa-dependency-toggle"><input type="checkbox" checked={showEmpire && imperialOverlayIds.length>0}
-          disabled={!mapReady || !imperialOverlayIds.length} onChange={event=>setShowEmpire(event.target.checked)}/> Mostrar Sacro Imperio</label>
-        {!imperialOverlayIds.length && <small>Marco imperial sin reconstrucción disponible para este año.</small>}
-        {showEmpire && imperialOverlayIds.length>0 && <small>Superposición dorada: ámbito jurídico aproximado. Los gobiernos territoriales siguen debajo y se pueden consultar. <a href="https://germanhistorydocs.org/en/from-the-reformations-to-the-thirty-years-war-1500-1648/ghdi:map-2809" target="_blank" rel="noreferrer">Fuente</a></small>}
+      {panorama && imperialOverlayIds.length>0 && <div className="mapa-imperial-control">
+        <label className="mapa-dependency-toggle"><input type="checkbox" checked={showEmpire}
+          disabled={!mapReady} onChange={event=>setShowEmpire(event.target.checked)}/> Mostrar Sacro Imperio</label>
+        {showEmpire && <small>Superposición dorada: ámbito jurídico aproximado, reconstruido para {IMPERIAL_FRAME_RANGE.from}–{IMPERIAL_FRAME_RANGE.through}. Los gobiernos territoriales siguen debajo y se pueden consultar. <a href="https://www.ieg-maps.uni-mainz.de/mapsp/mapp792d.htm" target="_blank" rel="noreferrer">Fuente</a></small>}
       </div>}
       {panorama && <details className="mapa-color-legend" inert={!mapReady}>
         <summary>Cómo leer el mapa</summary>
@@ -541,7 +541,7 @@ export function MapaEuropa({ seleccion, anioGlobal = null, onSelectTerritorio, o
             <span className="mapa-color-swatch" style={{ backgroundColor: grupo.color }} aria-hidden="true" />
             <div><strong>{grupo.nombre}</strong><p>{grupo.nota} {grupo.fuente && <a href={grupo.fuente} target="_blank" rel="noreferrer">Fuente</a>}</p></div>
           </div>) : <p>Los colores corresponden a los territorios gobernados por esta persona en {anioGlobal}; no indican que todos formasen un único Estado.</p>
-        ) : <p>Elige un año para distinguir los conjuntos políticos de cada etapa. Sin año, el mapa reúne las superficies de distintas etapas de esta vida, que no coexistieron necesariamente. El color sigue la última integración administrativa registrada de cada título.</p>}
+        ) : <p>Elige un año para distinguir los conjuntos políticos de cada etapa. Sin año, el mapa reúne las superficies de distintas etapas de esta vida, que no coexistieron necesariamente. El color sigue el último conjunto político registrado de cada título.</p>}
       </details>}
 
       <div
