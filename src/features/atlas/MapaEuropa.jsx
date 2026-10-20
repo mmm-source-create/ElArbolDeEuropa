@@ -1,3 +1,4 @@
+import {MAP_READING_GUIDE} from '../../content/mapReadingGuide.js';
 import './atlas-skeleton.css';
 import {authorityColor} from '../../cartography/mapColors.js';
 import {locationLabel} from '../../cartography/locationLabels.js';
@@ -491,14 +492,18 @@ export function MapaEuropa({ seleccion, anioGlobal = null, onSelectTerritorio, o
         <button type="button" className="nav-btn" disabled={!controlLimits.right} onClick={() => panBy(MAP_PAN_STEP, 0)} title="Mover mapa a la derecha" aria-label="Mover mapa a la derecha"><ArrowRight size={13} /></button>
       </div>
       {panorama && <details className="mapa-color-legend" inert={!mapReady}>
-        <summary>Colores y fuentes</summary>
-        <p>Los conjuntos políticos comparten el color de sus mapas personales. Cada título conserva su identidad.</p>
+        <summary>Cómo leer el mapa</summary>
+        {MAP_READING_GUIDE.paragraphs.map(text=><p key={text}>{text}</p>)}
+        {MAP_READING_GUIDE.examples.map(text=><p key={text}>{text}</p>)}
+        <p><a href="/es/proyecto#como-leer-el-mapa">Criterios y referencias históricas</a></p>
         <p>El rayado claro indica disputa u ocupación. Varios colores señalan atribuciones diferentes en una misma celda. Pulsa una región para consultar autoridades y fuentes.</p>
         <p>Las líneas verticales marcan dependencias con gobierno propio, en un tono del color de su soberano: feudos y apanages dentro de Francia (azul real, granate borgoñón o color inglés según quién los tenga), vasallos de la Corona de Aragón, tributarios otomanos como Valaquia, Moldavia o Transilvania y feudos como la Prusia ducal o Curlandia. Solo se marcan los años en que la dependencia está documentada. Las tierras del rey de Inglaterra llevan su color; hasta 1336 se tenían en feudo del rey francés.</p>
         <p>{mosaic?.reviewedLayerCount||0} jurisdicciones revisadas · {mosaic?.approximateLayerCount||0} equivalencias aproximadas. El gris indica que falta una atribución para este año.</p>
       </details>}
       {!panorama && seleccion && <details className="mapa-color-legend" inert={!mapReady || paintingLife}>
-        <summary>¿Por qué estos colores?</summary>
+        <summary>Cómo leer el mapa personal</summary>
+        <p>{MAP_READING_GUIDE.paragraphs[1]}</p>
+        <p><a href="/es/proyecto#como-leer-el-mapa">Criterios comunes, fronteras y ejemplos históricos</a></p>
         <p><a href="/es/mapa-completo" target="_blank" rel="noopener noreferrer">Probar el mapa conjunto · 1106–1800</a></p>
         <div className="mapa-authority-key">
           <span><i className="mapa-key-solid" aria-hidden="true"/>Autoridad territorial</span>
@@ -520,7 +525,7 @@ export function MapaEuropa({ seleccion, anioGlobal = null, onSelectTerritorio, o
             <span className="mapa-color-swatch" style={{ backgroundColor: grupo.color }} aria-hidden="true" />
             <div><strong>{grupo.nombre}</strong><p>{grupo.nota} {grupo.fuente && <a href={grupo.fuente} target="_blank" rel="noreferrer">Fuente</a>}</p></div>
           </div>) : <p>Los colores corresponden a los territorios gobernados por esta persona en {anioGlobal}; no indican que todos formasen un único Estado.</p>
-        ) : <p>Elige un año para distinguir los conjuntos políticos de cada etapa. Sin año, el mapa reúne las superficies de distintas etapas de esta vida, que no coexistieron necesariamente. El color sigue la última agrupación registrada de cada título.</p>}
+        ) : <p>Elige un año para distinguir los conjuntos políticos de cada etapa. Sin año, el mapa reúne las superficies de distintas etapas de esta vida, que no coexistieron necesariamente. El color sigue la última integración administrativa registrada de cada título.</p>}
       </details>}
 
       <div

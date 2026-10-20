@@ -1,3 +1,4 @@
+import {MAP_READING_GUIDE} from '../../content/mapReadingGuide.js';
 import {territoriosDe, gobiernosDe} from '../../domain/genealogy/personAccessors.js';
 import {SITE_NAME} from '../../app/siteConfig.js';
 import {entityMeta} from './publicMeta.js';
@@ -35,6 +36,7 @@ const INFO_PAGES = {
         "La ausencia de una relación o de un personaje no implica que históricamente no existiera: puede significar simplemente que todavía no se ha incorporado a la base.",
         "Se priorizan figuras que conectan ramas, ejercen gobierno, fundan una línea relevante o aportan una conexión históricamente útil para la red. Las correcciones documentadas tienen prioridad sobre la mera coherencia visual."
       ]},
+      {...MAP_READING_GUIDE,paragraphs:[...MAP_READING_GUIDE.paragraphs,...MAP_READING_GUIDE.examples]},
       { title: "Ámbito principal", paragraphs: [
         "El periodo principal de trabajo es 1200–1800. El proyecto está en desarrollo y la base continúa ampliándose, corrigiéndose y documentándose.",
         "Lo mantiene Manuel Muriel Cagigal, estudiante de Estudios Europeos con especialización en Relaciones Internacionales."

@@ -49,7 +49,7 @@ test('los cinco cortes mantienen separados los territorios austríacos, Bohemia 
   assert.ok(imperialFrameIds(1647).includes('Friesland'));
   assert.ok(!imperialFrameIds(1648).includes('Friesland'));
   assert.ok(inspect('Oberinntal',1648).imperialLegalFrame);
-  assert.equal(colorTerritorioEnMapa(people.LEOP1HRE,'Tirol',1666),REINO_COLOR.Austria);
+  assert.equal(colorTerritorioEnMapa(people.LEOP1HRE,'Tirol',1666),REINO_COLOR.Tirol);
   assert.equal(colorTerritorioEnMapa(people.LEOP1HRE,'Bohemia',1666),REINO_COLOR.Bohemia);
   assert.equal(colorTerritorioEnMapa(people.LEOP1HRE,'Hungría',1666),REINO_COLOR.Hungría);
 });

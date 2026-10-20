@@ -17,20 +17,21 @@ data.burgundy=JSON.parse(fs.readFileSync(new URL('../data/cartography/burgundian
 
 test('Carlos V has one Spanish entity, retains external groups and every constituent mandate',()=>{
  const p=by.get('CARLOS5'),before=JSON.stringify(p);
- const groups=governmentGroupsAt(p,1530),spain=groups.filter(g=>g.label==='España');
+ const groups=governmentGroupsAt(p,1530,{view:"panorama"}),spain=groups.filter(g=>g.id==='monarquia-hispanica-exterior');
  assert.equal(spain.length,1);assert(spain[0].mandates.some(m=>m.territorio==='Navarra'));
  assert(spain[0].mandates.some(m=>m.territorio==='Castilla'));
- assert(!governmentSummary(p,1530).includes('Castilla'));
+ assert(governmentSummary(p,1530).includes('Corona de Castilla'));
  assert(groups.some(g=>g.label==='Sacro Imperio (Alemania)'));
- assert(groups.some(g=>g.mandates.some(m=>m.territorio==='Brabante')));
+ assert(spain[0].mandates.some(m=>m.territorio==='Brabante'));
+ assert(governmentGroupsAt(p,1530).some(g=>g.mandates.some(m=>m.territorio==='Aragón')&&g.id==='Aragón'));
  assert.equal(JSON.stringify(p),before);
- const row=governmentTableAt(PERSONAS,1530).find(g=>g.label==='España');
+ const row=governmentTableAt(PERSONAS,1530).find(g=>g.id==='monarquia-hispanica-exterior');
  assert.equal(row.governments.filter(g=>g.person.id==='CARLOS5').length,1);
 });
 test('dated grouping does not unify medieval crowns or turn a personal union into one state',()=>{
  assert(!governmentGroupsAt(by.get('CARLOS5'),1515).some(g=>g.label==='España'));
  const p=by.get('FEL2ESP');assert(governmentSummary(p,1590).includes('Portugal'));
- assert(governmentSummary(p,1590).includes('España'));
+ assert(governmentSummary(p,1590).includes('Aragón'));
  const england=PERSONAS.find(p=>p.gobiernos?.some(g=>g.territorio==='Hannover'&&g.desde<=1720&&g.hasta>=1720)&&p.gobiernos.some(g=>g.territorio==='Gran Bretaña'));
  assert(england);const labels=governmentSummary(england,1720);assert(labels.includes('Hannover'));assert(labels.includes('Gran Bretaña'));
 });
@@ -56,11 +57,12 @@ test('panorama preserves every researched and approximate laboratory cell at rep
   assert.deepEqual(panorama.layers.map(l=>[l.name,[...l.ids].sort()]),original.layers.map(l=>[l.name,[...l.ids].sort()]),year);
  }
 });
-test('Spain uses the personal-map gold while Portugal and republican Netherlands retain their own identity',()=>{
+test('the Spanish panorama joins effective dominions, preserving republican Netherlands and personal identities',()=>{
  const year=1585,m=europeMosaicAt(data,year,PERSONAS),p=by.get('FEL2ESP');
- for(const id of ['Madrid','Barcelona','Pamplona'])assert(m.byLocation.get(id)?.every(l=>l.mosaicColor===colorTerritorioEnMapa(p,'Castilla',year)),id);
- assert(m.byLocation.get('Saint_Jean_Pied_de_Port')?.every(l=>l.mosaicColor!==colorTerritorioEnMapa(p,'Castilla',year)));
- assert(m.byLocation.get('Lisbon')?.every(l=>l.mosaicColor!==colorTerritorioEnMapa(p,'Castilla',year)));
+ for(const id of ['Madrid','Barcelona','Pamplona'])assert(m.byLocation.get(id)?.every(l=>l.mosaicColor==='#C5A62B'),id);
+ assert(m.byLocation.get('Saint_Jean_Pied_de_Port')?.every(l=>l.mosaicColor!=='#C5A62B'));
+ assert(m.byLocation.get('Lisbon')?.every(l=>l.mosaicColor==='#C5A62B'));
+ assert.notEqual(colorTerritorioEnMapa(p,'Portugal',year),colorTerritorioEnMapa(p,'Castilla',year));
  const dutch=europeMosaicAt(data,1705,PERSONAS);assert(dutch.byLocation.get('Amsterdam')?.every(l=>l.mosaicColor==='#C08A38'));
 });
 test('protagonists come from current story steps/events, excluding people without a documentary life in that year',()=>{

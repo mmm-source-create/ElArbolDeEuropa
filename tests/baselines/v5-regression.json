@@ -8561,7 +8561,7 @@
     },
     "pages": {
       "/en/": "e92af10b8b9f32793829cc82d982b96e02877813acb4f3e1bf626f1080baf2c1",
-      "/en/about": "c8355f92b815b7895bf404244f4b9cd222807800ca1f3fcabf2af1f0a5ae52c3",
+      "/en/about": "5abd1aeb5f2fee8b248a77df1ce39a3b487bffb87e99157bf844accb59213143",
       "/en/methodology": "88542039f154c389778910bcc76143a77ebca4bac4e60a37599f057a086c2fb2",
       "/en/people": "160d465e830b812478e8e1066b5c2bb5af174b9628403f1a11ad0ffbf23a1b58",
       "/en/person/charles-v": "7f4fd5a896b469379af9be97a48b8bc9a5b222277d25bae80e58e37dc1351782",
@@ -17469,6 +17469,6 @@
     ],
     "tree": "1bd0424e1acbf32793cb496f81bc5988ac66467afeca713ce810aa23d2140fb1"
   },
-  "reason": "Completar exclusivamente los 226635 intervalos celda-año vacíos de la ventana Ragnit–Cochem y St Johann–Ribe en 1200–1800, conservando las atribuciones previas.",
+  "reason": "Añadir los criterios cartográficos a /en/about: cambia únicamente esa página pública; se mantienen los datos, las superficies y las atribuciones de los 601 años.",
   "schema": 1
 }
