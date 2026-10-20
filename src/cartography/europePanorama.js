@@ -12,7 +12,7 @@ import {territorialIdentity} from './territorialIdentity.js';
 
 export function governmentTableAt(people,year,collectives=[]) {
  const rows=new Map();
- for(const person of people) for(const group of governmentGroupsAt(person,year)) {
+ for(const person of people) for(const group of governmentGroupsAt(person,year,{view:'panorama'})) {
   const key=group.id;
   if(!rows.has(key)) rows.set(key,{id:key,label:group.label,color:group.color,governments:[]});
   const existing=rows.get(key).governments.find(g=>g.person.id===person.id);
@@ -49,7 +49,7 @@ export function protagonistsAt(people,year,stories=[],events=[]) {
  // Fill a sparse editorial year with named sovereigns already recorded in the
  // Atlas. The card states its government-based reason instead of a story link.
  if(candidates.size<8) {
-  const rulers=people.filter(p=>!candidates.has(p.id)&&vidaEnAnio(p,year)).map(person=>({person,groups:governmentGroupsAt(person,year).filter(g=>g.kind==='sovereign')}))
+  const rulers=people.filter(p=>!candidates.has(p.id)&&vidaEnAnio(p,year)).map(person=>({person,groups:governmentGroupsAt(person,year,{view:'panorama'}).filter(g=>g.kind==='sovereign')}))
    .filter(e=>e.groups.length&&/\b(rey|reina|emperador|emperatriz|sult[aá]n|zar|papa)\b/i.test(e.person.titulo||''))
    .sort((a,b)=>b.groups.length-a.groups.length||a.person.nombre.localeCompare(b.person.nombre,'es'));
   for(const {person,groups} of rulers.slice(0,8-candidates.size)){add(person.id,`Gobierno registrado: ${groups.map(g=>g.label).join(' · ')}`);candidates.get(person.id).score=0;}
@@ -58,17 +58,17 @@ export function protagonistsAt(people,year,stories=[],events=[]) {
   .map(e=>({...e,reasons:[...e.reasons],stories:[...e.stories.values()]}));
 }
 
-const POLITY_GROUPS=new Set(['herencia-borgonona','paises-bajos']);
+const POLITY_GROUPS=new Set(['herencia-borgonona','paises-bajos','monarquia-hispanica-exterior','monarquia-austriaca-exterior','dinamarca-noruega-exterior']);
 
 // Keep the laboratory's researched geometry and precedence exactly intact.
 // Only a dated, matching mandate can give its political group a shared color.
 export function europeMosaicAt(data,year,people) {
  const mosaic=atlasPoliticalMosaicAt(data,year,atlasMosaicPalette(data,people),people);
  const routes=new Map();
- for(const person of people) for(const group of governmentGroupsAt(person,year)) {
+ for(const person of people) for(const group of governmentGroupsAt(person,year,{view:'panorama'})) {
   if(group.kind!=='sovereign'&&group.kind!=='disputed')continue;
   for(const mandate of group.mandates) {
-   const candidate={...group,ids:new Set(mapLocationsForGovernment(data,mandate,year,person.id,idsDeGobiernoEnAño(mandate,year,person.id)))};
+   const candidate={...group,personId:person.id,collegial:mandate.condicion==='corregente',ids:new Set(mapLocationsForGovernment(data,mandate,year,person.id,idsDeGobiernoEnAño(mandate,year,person.id)))};
    const names=pilotJurisdictionsFor(mandate.territorio,year,person.id);
    if(mandate.territorio==='Austria'&&mandate.ambito?.includes('Austria Interior'))
     names.push(...pilotJurisdictionsFor('Austria Interior',year,person.id));
@@ -80,7 +80,7 @@ export function europeMosaicAt(data,year,people) {
  }
  const layers=mosaic.layers.map(layer=>{
   const candidates=(layer.memberNames||[layer.name]).flatMap(n=>routes.get(n)||[]);
-  const unique=[...new Map(candidates.map(g=>[g.id,g])).values()];
+  const unique=[...new Map(candidates.map(g=>[`${g.id}|${g.personId}|${g.kind}`,g])).values()];
   const shared=unique.length===1?unique[0]:null;
   const names=layer.memberNames||[layer.name];
   const english=new Set(names.filter(n=>englishCrownLayer(n,year)));
@@ -106,7 +106,9 @@ export function europeMosaicAt(data,year,people) {
  const byLocation=new Map();
  for(const layer of layers)for(const id of layer.ids){
   if(!byLocation.has(id))byLocation.set(id,[]);
-  const applicable=[...new Map(layer.candidates.filter(g=>g.ids.has(id)).map(g=>[g.id,g])).values()];
+  const matches=layer.candidates.filter(g=>g.ids.has(id));
+  const governing=matches.some(g=>!g.collegial)?matches.filter(g=>!g.collegial):matches;
+  const applicable=[...new Map(governing.map(g=>[`${g.id}|${g.personId}|${g.kind}`,g])).values()];
   const unanimous=applicable.length>0&&new Set(applicable.map(g=>g.color)).size===1;
   const phases=layer.phasesById?.get(id)||[];
   const englishCrown=phases.some(n=>layer.english.has(n));
@@ -121,12 +123,12 @@ export function europeMosaicAt(data,year,people) {
   const crownRelation=aragonRelation||frenchRelation;
   // The Burgundian state and its Habsburg heirs keep their colour inside the
   // kingdom too; the fief pattern still marks the French suzerainty.
-  const polity=unanimous&&POLITY_GROUPS.has(applicable[0].id)?applicable[0]:null;
-  const color=layer.republic?ORANGE_NASSAU:englishCrown?ENGLISH_CROWN_COLOR:polity?polity.color
-   :aragonRelation?aragonVassalColor(aragonRelation):tributaryRelation?tributaryColor(tributaryRelation,year)
-   :frenchRelation?frenchFiefColor(layer.entityId||layer.name):unanimous?applicable[0].color:layer.baseColor;
+  const polity=unanimous&&POLITY_GROUPS.has(applicable[0].id)&&applicable.every(g=>g.id===applicable[0].id)?applicable[0]:null;
+  const color=layer.republic?ORANGE_NASSAU:englishCrown?ENGLISH_CROWN_COLOR:aragonRelation?aragonVassalColor(aragonRelation):tributaryRelation?tributaryColor(tributaryRelation,year)
+   :polity&&['herencia-borgonona','paises-bajos'].includes(polity.id)?polity.color:frenchRelation?frenchFiefColor(layer.entityId||layer.name):polity?polity.color:unanimous?applicable[0].color:layer.baseColor;
+  const politicalGroup=layer.republic?'republica-neerlandesa':polity?.id || (unanimous?applicable[0].id:layer.politicalColorGroup || null);
   const politicalLabel=englishCrown&&!applicable.length?'Inglaterra':applicable.length===1?applicable[0].label:layer.displayName||layer.name;
-  byLocation.get(id).push({...layer,crownRelation,tributaryRelation,englishCrown,mosaicColor:color,politicalLabel});
+  byLocation.get(id).push({...layer,crownRelation,tributaryRelation,englishCrown,mosaicColor:color,politicalLabel,politicalGroup});
  }
  return {...mosaic,layers,byLocation};
 }

@@ -43,10 +43,10 @@ test('sourced provincial titles recover the southern Netherlands without transfe
   assert(review.sources.every(s=>s.url&&s.locator));
  }
 });
-test('Bohemian Crown shares color and preserves titles, with the 1749 administrative change and no Prussian Silesia',()=>{
+test('Bohemian legal governments remain distinct until 1749, preserving titles and excluding Prussian Silesia',()=>{
  for(const [p,y] of [['FERN1EMP',1560],['CARLOS6HRE',1730],['MARIATERESAHAB',1750]]){
   const person=people.get(p);
-  assert.equal(colorTerritorioEnMapa(person,'Moravia',y),colorTerritorioEnMapa(person,'Bohemia',y));
+  assert.equal(colorTerritorioEnMapa(person,'Moravia',y)===colorTerritorioEnMapa(person,'Bohemia',y),y>=1749);
   assert(ids(p,y,'Moravia').has('Brno'));assert(ids(p,y,'Bohemia').has('Prague'));
   assert(person.gobiernos.some(g=>g.territorio==='Moravia'&&g.titulo==='Margrave'));
   const mosaic=atlasPoliticalMosaicAt(data,y);

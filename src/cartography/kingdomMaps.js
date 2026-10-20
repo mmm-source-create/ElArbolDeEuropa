@@ -1,5 +1,6 @@
 import {EASTERN_EUROPE_COLORS} from './easternEuropeColors.js';
 import {ORANGE_NASSAU, POLAND_LITHUANIA_COLOR, BURGUNDIAN_COLOR, ENGLISH_CROWN_COLOR} from './mapColors.js';
+import {authorityKind} from '../domain/government/authorityKind.js';
 import {reinadosActivos} from '../domain/government/reigns.js';
 
 // Tabla de correspondencias: nombre de "reino" tal y como aparece en
@@ -414,6 +415,14 @@ const ADMINISTRACION_AUSTRO_BOHEMIA = new Set(['Austria', 'Austria Interior', 'T
 // dinastía o soberano nunca basta para colorear todos sus títulos por igual.
 const AGRUPACIONES_POLITICAS = [
   {
+    id:'nueva-planta',nombre:'Administración de Nueva Planta',desde:1707,
+    territoriosPorFecha:year=>new Set(['Castilla','León','Aragón','Valencia',
+      ...(year>=1715?['Mallorca']:[]),...(year>=1716?['Condado de Barcelona']:[])]),
+    color:REINO_COLOR.España,aplica:active=>active.has('Castilla') && active.has('Aragón'),
+    nota:'Integración administrativa de Aragón y Valencia desde 1707, Mallorca desde 1715 y Cataluña desde 1716. No supone uniformidad de todo el derecho privado ni incluye Navarra, Portugal o los dominios italianos.',
+    fuente:'https://www.cultura.gob.es/archivos-aca/gl/actividades/documentos-para-la-historia-de-europa/nueva-planta.html',
+  },
+  {
     id:'ayubi',nombre:'Sultanato ayubí',territorios:new Set(['Egipto','Siria']),
     color:'#497F67',desde:1174,hasta:1193,
     aplica:activos=>activos.has('Egipto')&&activos.has('Siria'),
@@ -495,7 +504,8 @@ const AGRUPACIONES_POLITICAS = [
     id: 'castilla-leon', nombre: 'Coronas de Castilla y León', territorios: new Set(['Castilla', 'León']),
     color: REINO_COLOR.Castilla, desde: 1230,
     aplica: (activos) => activos.has('Castilla') && activos.has('León'),
-    nota: 'Coronas reunidas bajo un soberano común; el mapa conserva las denominaciones históricas.',
+    nota: 'Corona de Castilla desde 1230; el mapa conserva las denominaciones de Castilla y León.',
+    fuente:'https://blog.congreso.es/leon-cuna-del-parlamentarismo-10-preguntas-con-sus-10-respuestas-sobre-los-decreta-de-la-curia-regia-de-1188/',
   },
   {
     id: 'austro-bohemia', nombre: 'Administración austro-bohemia', territorios: ADMINISTRACION_AUSTRO_BOHEMIA,
@@ -524,6 +534,7 @@ const AGRUPACIONES_POLITICAS = [
     color: REINO_COLOR.Saboya, desde: -Infinity,
     aplica: (activos) => activos.has('Saboya') || activos.has('Piamonte'),
     nota: 'Conjunto de territorios gobernados por la casa de Saboya, solo cuando su gobierno está fechado y activo.',
+    fuente:'https://www.treccani.it/enciclopedia/savoia_(Dizionario-di-Storia)/',
   },
   {
     id: 'paises-bajos', nombre: 'Países Bajos habsbúrgicos', territorios: FEUDOS_HERENCIA_BORGONONA,
@@ -539,29 +550,97 @@ const AGRUPACIONES_POLITICAS = [
     color: BURGUNDIAN_COLOR, desde: 1384,
     aplica: (_activos, persona) => PERSONAS_HERENCIA_BORGONONA.has(persona?.id),
     nota: 'Feudos reunidos bajo los duques Valois de Borgoña desde 1384 y su herencia. Antes de compartir duque, cada condado conserva su color; la agrupación no incluye otros reinos del mismo soberano.',
+    fuente:'https://www.rijksmuseum.nl/en/collection/publication/Magnanimous-dukes-and-rising-States-the-unification-of-the-Burgundian-Netherlands-1380-1480--874651fcd8faa6b464780b2cb0ac84d9',
   },
 ];
 
-export function agrupacionesPoliticasEnMapa(persona, año) {
-  const activos = new Set(reinadosActivos(persona, año, { soloEfectivos: true }).map(r => r.territorio));
-  const cubiertos = new Set();
-  return AGRUPACIONES_POLITICAS.map(grupo => grupo.territoriosPorFecha
-    ? {...grupo, territorios: grupo.territoriosPorFecha(año)} : grupo).filter(grupo => {
-    if (año < grupo.desde || año > (grupo.hasta ?? Infinity) || !grupo.aplica(activos, persona, año)) return false;
-    const propios = [...grupo.territorios].filter(territorio => activos.has(territorio) && !cubiertos.has(territorio));
-    propios.forEach(territorio => cubiertos.add(territorio));
-    return propios.length > 0;
-  });
+// A political union in the panorama is not an administrative integration in
+// a personal map. Every existing grouping is classified explicitly here.
+export const MAP_GROUP_REVIEW = Object.freeze({
+  'nueva-planta':{personal:true,reason:'Integración administrativa escalonada en 1707, 1715 y 1716; Navarra queda fuera.'},
+  'castilla-leon':{personal:true,reason:'Corona común desde 1230; se conservan los nombres de los reinos.'},
+  'austro-bohemia':{personal:true,reason:'Administración central conjunta desde 1749; Hungría queda fuera.'},
+  'ayubi':{personal:false,reason:'Dominios reunidos por Saladino; no perpetuar la unidad tras su sucesión.'},
+  'corona-inglesa':{personal:false,reason:'Dominios continentales con títulos y estatutos propios; distinguir el feudo francés.'},
+  'brandeburgo-prusia':{personal:false,reason:'Dominios con instituciones propias; Prusia sigue siendo feudo polaco hasta 1657.'},
+  'reino-de-prusia':{personal:false,reason:'La monarquía común no extingue automáticamente los gobiernos provinciales.'},
+  'trinacria-atenas':{personal:false,reason:'Ducados griegos con instituciones y vicarios propios.'},
+  'polonia-lituania':{personal:false,reason:'Unión exterior y parlamento común; Corona y Gran Ducado conservan sus gobiernos.'},
+  'tocco':{personal:false,reason:'Condado y despotado conservan títulos y jurisdicciones propios.'},
+  'corona-san-esteban':{personal:false,reason:'Reinos y territorios de estatuto propio; separación transilvana fechada.'},
+  'monarquia-hispanica':{personal:false,reason:'Monarquía compuesta; la integración interna necesita otra regla fechada.'},
+  'corona-aragon':{personal:false,reason:'Reinos con leyes e instituciones propias.'},
+  'corona-bohemia':{personal:false,reason:'Corona común con dietas provinciales propias hasta la reforma administrativa.'},
+  'tierras-austriacas':{personal:false,reason:'Reunión de dominios con dietas y particiones dinásticas propias.'},
+  'saboya':{personal:false,reason:'Estados de un mismo príncipe con estatutos internos propios.'},
+  'paises-bajos':{personal:false,reason:'Sucesión común desde 1549; cada provincia conserva instituciones.'},
+  'herencia-borgonona':{personal:false,reason:'Unión de dominios; no absorción jurídica de los condados y ducados.'},
+});
+
+const EXTERIOR_UNIONS = [
+  {
+    id:'monarquia-hispanica-exterior',nombre:'Monarquía Hispánica',desde:1516,
+    territoriosPorFecha: year => new Set([...MONARQUIA_HISPANICA, 'Sicilia', ...FEUDOS_HERENCIA_BORGONONA,
+      ...(year >= 1580 && year <= 1640 ? ['Portugal'] : [])]),
+    color:REINO_COLOR.España, aplica:active=>active.has('Castilla') && active.has('Aragón'),
+    nota:'Dirección monárquica común con reinos e instituciones propios. Portugal solo durante 1580–1640; cada provincia neerlandesa requiere gobierno efectivo y geometría fechada. No incluye Inglaterra ni el título imperial.',
+    fuente:'https://ensina.rtp.pt/artigo/a-uniao-iberica-apos-a-crise-dinastica-de-1580/',
+  },
+  {
+    id:'monarquia-austriaca-exterior',nombre:'Monarquía de los Habsburgo austríacos',desde:1526,
+    territoriosPorFecha:year=>new Set([...TIERRAS_AUSTRIACAS,...ADMINISTRACION_AUSTRO_BOHEMIA,
+      'Hungría','Croacia','Eslavonia','Transilvania habsbúrgica','Milán','Nápoles','Trinacria','Sicilia','Cerdeña',
+      ...FEUDOS_HERENCIA_BORGONONA,...(year>=1797?['Venecia']:[])]),
+    color:REINO_COLOR.Austria, aplica:active=>active.has('Austria') && (active.has('Bohemia') || active.has('Hungría')),
+    nota:'Dirección común de los dominios efectivamente gobernados por este soberano. Excluye el marco imperial, la Hungría otomana y los principados transilvanos independientes o tributarios. Las ramas austríacas con otro gobernante conservan su agrupación.',
+    fuente:'https://www.habsburger.net/en/chapter/ferdinand-i-founder-austrian-habsburg-monarchy',
+  },
+  {
+    id:'dinamarca-noruega-exterior',nombre:'Dinamarca-Noruega',desde:1537,hasta:1800,
+    territorios:new Set(['Dinamarca','Noruega']),color:REINO_COLOR.Dinamarca,
+    aplica:active=>active.has('Dinamarca') && active.has('Noruega'),
+    nota:'Dirección monárquica común desde la reorganización de 1536–1537. No absorbe Suecia, los ducados de Gottorp ni las uniones nórdicas anteriores por parentesco o pretensión.',
+    fuente:'https://www.norgeshistorie.no/kirkestat/1108-selvstendighetstap-og-foreningstid.html',
+  },
+];
+
+// Apply the rule to eligible mandates, not to a family name or a royal title.
+// Delegates and claimants cannot create a union or provide membership.
+export function agrupacionesPoliticasEnMapa(persona, año, {view = 'personal'} = {}) {
+  const activos = new Set(reinadosActivos(persona, año, {soloEfectivos:true})
+    .filter(m=>authorityKind(m,año)==='sovereign').map(m=>m.territorio));
+  const cubiertos = new Set(), result=[];
+  const groups=view==='panorama' ? [...EXTERIOR_UNIONS,...AGRUPACIONES_POLITICAS]
+    : AGRUPACIONES_POLITICAS.filter(group=>MAP_GROUP_REVIEW[group.id].personal);
+  for (const original of groups) {
+    const grupo=original.territoriosPorFecha ? {...original,territorios:original.territoriosPorFecha(año)} : original;
+    if (año < grupo.desde || año > (grupo.hasta ?? Infinity) || !grupo.aplica(activos,persona,año)) continue;
+    const propios=[...grupo.territorios].filter(t=>activos.has(t)&&!cubiertos.has(t));
+    if (!propios.length) continue;
+    propios.forEach(t=>cubiertos.add(t));
+    result.push({...grupo,territorios:new Set(propios)});
+  }
+  return result;
 }
+
+// Distinct legal governments must not accidentally inherit identical swatches
+// from the old crown-wide palette. Integrated groups override these colours.
+const PERSONAL_TERRITORY_COLORS = Object.freeze({
+  León:'#B09B4A','Condado de Barcelona':'#A87539',Valencia:'#A45967',Cerdeña:'#577C62',
+  Piamonte:'#758B4E',Ravensberg:'#648593',
+});
 export function colorTerritorioEnMapa(persona, territorio, año) {
-  // Una unión personal no convierte todos los títulos en un mismo estado.
-  // El color compartido se limita a los miembros explícitos de cada conjunto;
-  // Inglaterra, Borgoña, Hungría, Bohemia o Polonia conservan su identidad.
-  const activos = new Set(reinadosActivos(persona, año, { soloEfectivos: true }).map(r => r.territorio));
-  if (!activos.has(territorio)) return REINO_COLOR[territorio] || REINO_COLOR_DEFAULT;
-  const agrupacion = agrupacionesPoliticasEnMapa(persona, año).find(grupo => grupo.territorios.has(territorio));
-  if (agrupacion) return agrupacion.color;
-  return REINO_COLOR[territorio] || REINO_COLOR_DEFAULT;
+  const base=PERSONAL_TERRITORY_COLORS[territorio] || REINO_COLOR[territorio] || REINO_COLOR_DEFAULT;
+  const agrupacion=agrupacionesPoliticasEnMapa(persona,año).find(g=>g.territorios.has(territorio));
+  return agrupacion?.color || base;
+}
+
+export function politicalGroupingReview() {
+  return [...EXTERIOR_UNIONS,...AGRUPACIONES_POLITICAS].map(group=>({
+    id:group.id,label:group.nombre,from:group.desde,through:group.hasta??1800,
+    personal:MAP_GROUP_REVIEW[group.id]?.personal || false,
+    note:group.nota,source:group.fuente || null,reason:MAP_GROUP_REVIEW[group.id]?.reason || group.nota,
+  }));
 }
 
 // ---------------------------------------------------------------------------

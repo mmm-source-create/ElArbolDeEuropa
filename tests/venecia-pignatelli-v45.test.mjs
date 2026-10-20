@@ -43,7 +43,7 @@ test('la administración austro-bohemia empieza en 1749 y Hungría conserva su c
 test('la leyenda omite agrupaciones absorbidas por otra de mayor prioridad', () => {
   const ruler = {id:'REGLA_HISPANICA',gobiernos:['Castilla','León','Aragón','Mallorca','Portugal']
     .map(territorio => ({territorio,desde:1580,hasta:1590,titulo:'Rey',condicion:'efectivo'}))};
-  assert.deepEqual(agrupacionesPoliticasEnMapa(ruler,1585).map(g => g.id), ['monarquia-hispanica']);
+  assert.deepEqual(agrupacionesPoliticasEnMapa(ruler,1585,{view:'panorama'}).map(g => g.id), ['monarquia-hispanica-exterior']);
   assert.equal(colorTerritorioEnMapa(ruler,'Portugal',1585),REINO_COLOR.Portugal);
 });
 

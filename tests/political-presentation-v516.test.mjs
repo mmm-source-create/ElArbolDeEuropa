@@ -50,7 +50,7 @@ test('Republic is one orange entity with its collective government and provincia
  const mosaic=europeMosaicAt(data,1705,PERSONAS);for(const id of ['Amsterdam','Groningen','Utrecht','Hertogenbosch'])assert(mosaic.byLocation.get(id).every(l=>l.mosaicColor===ORANGE_NASSAU),id);
 });
 test('Austria reunites only active lands and Transylvania retains a stable identity and its dated title',()=>{
- const leopold=governmentGroupsAt(by.get('LEOP1HRE'),1700);assert(leopold.some(g=>g.label==='Austria'&&g.mandates.some(m=>m.territorio==='Tirol')));
+ const leopold=governmentGroupsAt(by.get('LEOP1HRE'),1700);assert(leopold.some(g=>g.label==='Tirol'&&g.mandates.some(m=>m.territorio==='Tirol')));
  assert(leopold.some(g=>g.id==='Transilvania'&&g.label==='Principado de Transilvania'));assert(!leopold.find(g=>g.id==='corona-san-esteban')?.mandates.some(m=>m.territorio.includes('Transilvania')));
  const intervals=groupedGovernmentIntervals(by.get('MARIATERESAHAB')).filter(g=>g.id==='Transilvania');assert(intervals.some(g=>g.through===1764));assert(intervals.some(g=>g.from===1765&&g.label==='Gran Principado de Transilvania'));
  assert(governmentGroupsAt(by.get('MARIATERESAHAB'),1770).some(g=>g.id==='Transilvania'&&g.label==='Gran Principado de Transilvania'));

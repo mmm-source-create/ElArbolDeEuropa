@@ -23,17 +23,17 @@ test('annual Austria integrates every Inner Austrian province in 1800, retaining
  for(const id of ['Graz','Ljubljana','Klagenfurt'])assert.deepEqual(color(early,id),[REINO_COLOR['Austria Interior']],id);
  assert.deepEqual(color(early,'Vienna'),[REINO_COLOR.Austria]);
 });
-test('Lublin joins the Crown and Grand Duchy in annual maps, personal maps and the ruler table',()=>{
+test('Lublin joins the panorama and ruler table, retaining the Crown and Grand Duchy in personal maps',()=>{
  const before=europeMosaicAt(data,1568,PERSONAS),after=europeMosaicAt(data,1569,PERSONAS);
  assert.notDeepEqual(color(before,'Warsaw'),color(before,'Vilnius'));
  for(const id of ['Warsaw','Vilnius','Gdansk'])assert.deepEqual(color(after,id),[REINO_COLOR['Polonia-Lituania']],id);
  assert.notDeepEqual(color(after,'Konigsberg'),color(after,'Warsaw'));
- const p=by.get('SEGIS2JAG');assert.equal(governmentGroupsAt(p,1569).filter(g=>g.id==='polonia-lituania').length,1);
+ const p=by.get('SEGIS2JAG');assert.equal(governmentGroupsAt(p,1569,{view:'panorama'}).filter(g=>g.id==='polonia-lituania').length,1);
  assert(governmentGroupsAt(p,1568).some(g=>g.id==='Lituania'));
  const rows=governmentTableAt(PERSONAS,1570);assert(rows.some(r=>r.id==='polonia-lituania'));
  assert(!rows.some(r=>r.id==='Lituania'||r.id==='Polonia'));
  const ids=mapAuthoritiesForPerson(p,1569,data).flatMap(e=>e.ids);assert(ids.includes('Warsaw')&&ids.includes('Vilnius'));
- const cuts=groupedGovernmentIntervals(p);assert(cuts.some(g=>g.id==='polonia-lituania'&&g.from===1569));
+ const cuts=groupedGovernmentIntervals(p);assert(!cuts.some(g=>g.id==='polonia-lituania'));assert(governmentGroupsAt(p,1569).some(g=>g.id==='Lituania'));
 });
 test('the three partitions assign the recipients without prematurely removing retained provinces',()=>{
  const expected={1772:{Lviv:'Reino de Galicia y Lodomeria',Krakow:'Polonia',Warsaw:'Polonia',Gdansk:'Prusia Real',Torun:'Prusia Real',Poznan:'Polonia',Kamianets_Podilskyi:'Polonia',Daugavpils:'Rusia',Jelgava:'Curlandia'},1793:{Poznan:'Prusia',Gdansk:'Prusia',Torun:'Prusia',Kamianets_Podilskyi:'Rusia',Bila_Tserkva:'Rusia',Warsaw:'Polonia',Krakow:'Polonia',Lutsk:'Polonia'},1795:{Warsaw:'Prusia',Suwalki:'Prusia',Vilnius:'Rusia',Jelgava:'Rusia',Lutsk:'Rusia',Krakow:'Reino de Galicia y Lodomeria',Lublin:'Reino de Galicia y Lodomeria'}};

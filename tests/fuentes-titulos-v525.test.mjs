@@ -10,12 +10,13 @@ import {gobiernosDe} from '../src/domain/genealogy/personAccessors.js';
 const by = Object.fromEntries(PERSONAS.map(person => [person.id, person]));
 
 test('la Corona de San Wenceslao agrupa Bohemia desde 1348, como la de San Esteban agrupa Hungría', () => {
-  for (const year of [1350, 1500, 1700]) {
+  for (const year of [1350, 1500]) {
     const labels = governmentTableAt(PERSONAS, year).map(row => row.label);
     assert.ok(labels.includes('Corona de San Wenceslao'), String(year));
     assert.ok(labels.includes('Corona de San Esteban'), String(year));
     assert.ok(!labels.includes('Corona de Bohemia'), String(year));
   }
+  assert.ok(governmentTableAt(PERSONAS,1700).some(row=>row.id==='monarquia-austriaca-exterior'&&row.governments.some(g=>g.mandates.some(m=>m.territorio==='Bohemia'))));
   assert.ok(!governmentTableAt(PERSONAS, 1340).some(row => row.label === 'Corona de San Wenceslao'));
 });
 
