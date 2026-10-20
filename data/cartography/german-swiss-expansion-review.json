@@ -1512,6 +1512,34 @@
         "holstein"
       ],
       "note": "Núcleo de Kiel de la rama de Gottorp; no incluye las partes reales ni todo Schleswig. El mandato individual limita sus propias fechas."
+    },
+    {
+      "personId": "PETER3RUS",
+      "territory": "Holstein",
+      "from": 1739,
+      "through": 1773,
+      "ids": [
+        "Kiel"
+      ],
+      "sourceKeys": [
+        "schleswig",
+        "holstein"
+      ],
+      "note": "Núcleo de Kiel de la rama de Gottorp; no incluye las partes reales ni todo Schleswig. El mandato individual limita sus propias fechas."
+    },
+    {
+      "personId": "PAUL1RUS",
+      "territory": "Holstein",
+      "from": 1739,
+      "through": 1773,
+      "ids": [
+        "Kiel"
+      ],
+      "sourceKeys": [
+        "schleswig",
+        "holstein"
+      ],
+      "note": "Núcleo de Kiel de la rama de Gottorp; no incluye las partes reales ni todo Schleswig. El mandato individual limita sus propias fechas."
     }
   ],
   "entities": {

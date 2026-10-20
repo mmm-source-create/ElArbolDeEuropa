@@ -120,9 +120,10 @@ export function computeGenerations(people) {
   // Las parejas y la filiación siguen siendo restricciones duras.
   hitGuard = relaxConstraints() || hitGuard;
 
-  // Evita filas vacías por encima de la primera cohorte visible.
+  // La primera cohorte visible ocupa la fila 0: sin filas vacías encima ni
+  // generaciones negativas cuando la cronología adelanta un componente.
   const minGeneration = Math.min(...Object.values(gen));
-  if (Number.isFinite(minGeneration) && minGeneration > 0) {
+  if (Number.isFinite(minGeneration) && minGeneration !== 0) {
     Object.keys(gen).forEach((id) => {
       gen[id] -= minGeneration;
     });
