@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
-import { imperialFrameIds } from '../src/cartography/imperialFrame.js';
+import { IMPERIAL_FRAME_RANGE, imperialFrameIds } from '../src/cartography/imperialFrame.js';
 import { idsDeReinoEnAño, colorTerritorioEnMapa, REINO_COLOR } from '../src/cartography/kingdomMaps.js';
 import { PERSONAS } from '../src/data/personas.js';
 
@@ -18,8 +18,12 @@ test('el marco imperial tiene una geometría real y excluye coronas exteriores',
       assert.ok(!ids.includes(id), `${id} no debe pintarse como feudo imperial`);
     }
   }
-  assert.deepEqual(imperialFrameIds(1450), []);
-  assert.deepEqual(imperialFrameIds(1800), []);
+  assert.deepEqual(imperialFrameIds(IMPERIAL_FRAME_RANGE.from - 1), []);
+  assert.deepEqual(imperialFrameIds(IMPERIAL_FRAME_RANGE.through + 1), []);
+  for (const year of [1106, 1250, 1450, 1795, 1800]) {
+    assert.ok(imperialFrameIds(year).includes('Prague'), `${year}`);
+    assert.ok(!imperialFrameIds(year).includes('Florence'), `${year}`);
+  }
 });
 
 test('1648 retira las provincias septentrionales y la Confederación suiza, no los Países Bajos meridionales', () => {
@@ -58,6 +62,6 @@ test('la partición de 1564 y la reunión parcial de 1619 siguen gobiernos, no s
   assert.ok(people.CARLOS2ESTIRIA.gobiernos.some(g => g.territorio === 'Austria Interior' && g.desde === 1564));
   assert.ok(people.FERN2TIROL.gobiernos.some(g => g.territorio === 'Tirol' && g.desde === 1564));
   assert.ok(people.FERN2EMP.gobiernos.some(g => g.territorio === 'Austria' && g.desde === 1619));
-  assert.equal(colorTerritorioEnMapa(people.FERN1EMP, 'Austria Interior', 1540), REINO_COLOR['Austria Interior']);
+  assert.equal(colorTerritorioEnMapa(people.FERN1EMP, 'Austria Interior', 1540), REINO_COLOR.Austria);
   assert.equal(colorTerritorioEnMapa(people.CARLOS2ESTIRIA, 'Austria Interior', 1570), REINO_COLOR['Austria Interior']);
 });

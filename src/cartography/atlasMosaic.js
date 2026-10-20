@@ -4,6 +4,7 @@ import {listaReinados, reinadoEsEfectivo} from '../domain/government/reigns.js';
 import {personClaims} from '../evidence/claims.js';
 import {mapLocationsForGovernment, pilotJurisdictionsFor, reviewedLayerCovered} from './locationMapPilot.js';
 import {compareEs, mosaicPalette, politicalMosaicAt} from './locationMosaic.js';
+import {isCompletionSupplement} from './regions/germanyCompletionRoutes.js';
 import {territorialIdentity, territorialLabel} from './territorialIdentity.js';
 
 const entriesFor = data => [...(data?.territories || []), ...(data?.additionalTerritories || [])];
@@ -54,7 +55,7 @@ function approximateGovernmentLayers(data, people, year, directByLocation, palet
       // an inactive layer stays empty instead of inheriting broad old geometry.
       const namedLayers = pilotJurisdictionsFor(government.territorio, year, person.id)
         .map(name => entriesByName.get(name)).filter(Boolean);
-      if (namedLayers.some(entry => reviewedLayerCovered(data, entry, year))) continue;
+      if (namedLayers.some(entry => !isCompletionSupplement(entry.name) && reviewedLayerCovered(data, entry, year))) continue;
 
       const oldIds = idsDeGobiernoEnAño(government, year, person.id);
       const mappedIds = mapLocationsForGovernment(data, government, year, person.id, oldIds)

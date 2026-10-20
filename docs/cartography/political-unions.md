@@ -5,7 +5,7 @@ Revisión sistemática de las reglas existentes, 1200–1800. No se cambian mand
 ## Dos preguntas distintas
 
 - **Europa en este año:** conjuntos de poder exterior documentados. Una monarquía compuesta puede compartir color y contorno sin convertirse en un Estado unitario.
-- **Mapa personal:** gobiernos jurídicos de la persona. Las identidades conservan su color; solo una integración administrativa documentada reúne también sus colores.
+- **Mapa personal:** gobiernos de la persona, con la misma integración política que el panorama. Una monarquía compuesta comparte color y sus reinos y provincias se consultan en el inspector. Forman unidades propias Portugal en 1580–1640 y la herencia borgoñona de los Países Bajos (sin dividirla en provincias). Las uniones personales pasajeras (Otakar II, Luis I, Ladislao el Póstumo, Matías Corvino, los Jagellón de Bohemia y Hungría) y los feudos franceses de los reyes de Inglaterra conservan su color.
 
 Una persona, dinastía, alianza o dignidad imperial no crea automáticamente una agrupación. La pertenencia exige una regla explícita, un mandato soberano efectivo y activo y una superficie compatible con ese mandato. Los gobernadores, regentes y pretendientes no aportan miembros a una unión. Las distintas ramas austríacas no se funden si tienen gobiernos diferentes.
 
@@ -15,30 +15,30 @@ Las fechas son anuales e inclusivas. Una ruptura dentro del año puede conservar
 
 | Regla | Panorama | Mapa personal |
 | --- | --- | --- |
-| Monarquía Hispánica, desde 1516 | Dominios efectivos; Portugal solo 1580–1640; provincias neerlandesas según sus gobiernos y control fechados | Castilla-León, Aragón, Portugal, Navarra y los demás gobiernos conservan su identidad |
-| Monarquía austríaca, desde 1526 | Dominios efectivos del mismo centro de gobierno, incluidos los Países Bajos austríacos cuando corresponda | Austria, Bohemia, Moravia, Hungría y demás gobiernos separados, salvo integración documentada |
-| Dinamarca-Noruega, desde 1537 | Dirección monárquica común tras la reorganización de 1536–1537 | Identidades de ambos reinos |
-| Castilla-León, desde 1230 | Corona común | Se conserva el conjunto integrado ya establecido; los títulos siguen separados |
-| Nueva Planta | Incluida en la monarquía, según el control documentado | Aragón y Valencia desde 1707, Mallorca desde 1715, Cataluña desde 1716; Navarra queda fuera |
-| Administración austro-bohemia, desde 1749 | Incluida en la monarquía austríaca | Integración administrativa existente; Hungría queda fuera |
-| Corona de Aragón | Miembros gobernados efectivamente | Reinos y principado separados hasta las integraciones fechadas |
-| Corona de Bohemia, desde 1348 | Tierras de la Corona, o monarquía austríaca cuando corresponda | Dietas y gobiernos provinciales separados hasta 1749 |
-| Corona de San Esteban | Gobiernos efectivos; separación transilvana fechada | Reinos y gobiernos separados |
-| Austria Interior, 1564–1618 | Rama con dirección propia durante la partición; no comparte color exterior con Viena o Tirol | Gobiernos territoriales separados |
-| Tierras austríacas | Tierras reunidas por el mismo gobernante | Identidades propias; no borrar las particiones dinásticas |
-| Brandeburgo-Prusia, 1618–1700 | Conjunto exterior; Prusia mantiene la trama de feudo polaco hasta 1657 | Gobiernos propios |
-| Monarquía prusiana, 1701–1800 | Dominios efectivos | Identidades provinciales; el título real no prueba integración de cada provincia |
-| Polonia-Lituania, desde 1569 | Mancomunidad; no absorber Curlandia o Prusia ducal | Corona y Gran Ducado separados |
+| Monarquía Hispánica, desde 1516 | Dominios efectivos; Portugal solo 1580–1640; provincias neerlandesas según sus gobiernos y control fechados | España: Castilla-León, Aragón, Valencia, Cataluña, Mallorca, Navarra y los reinos italianos en un color; Portugal y Borgoña-Países Bajos aparte |
+| Monarquía austríaca, desde 1526 | Dominios efectivos del mismo centro de gobierno, incluidos los Países Bajos austríacos cuando corresponda | Tierras austríacas, Corona de Bohemia, Corona húngara y dominios italianos en un color; Países Bajos austríacos aparte |
+| Dinamarca-Noruega, desde 1537 | Dirección monárquica común tras la reorganización de 1536–1537 | Un color |
+| Castilla-León, desde 1230 | Corona común | Un color; los títulos siguen separados en el inspector |
+| Nueva Planta | Incluida en la monarquía, según el control documentado | Queda dentro de España; las fechas de 1707, 1715 y 1716 siguen en la regla |
+| Administración austro-bohemia, desde 1749 | Incluida en la monarquía austríaca | Dentro de la monarquía austríaca |
+| Corona de Aragón | Miembros gobernados efectivamente | Un color para los reinos gobernados por el mismo rey |
+| Corona de Bohemia, desde 1348 | Tierras de la Corona, o monarquía austríaca cuando corresponda | Un color; las dietas provinciales se explican en el inspector |
+| Corona de San Esteban | Gobiernos efectivos; separación transilvana fechada | Un color; Transilvania solo hasta su separación |
+| Austria Interior, 1564–1618 | Rama con dirección propia durante la partición; no comparte color exterior con Viena o Tirol | Un color propio de la rama |
+| Tierras austríacas | Tierras reunidas por el mismo gobernante | Un color; las particiones con otro gobernante no se funden |
+| Brandeburgo-Prusia, 1618–1700 | Conjunto exterior; Prusia mantiene la trama de feudo polaco hasta 1657 | Un color, con la misma trama de feudo |
+| Monarquía prusiana, 1701–1800 | Dominios efectivos | Un color; Silesia, Cléveris y las provincias se consultan en el inspector |
+| Polonia-Lituania, desde 1569 | Mancomunidad; no absorber Curlandia o Prusia ducal | Un color; Curlandia y Prusia ducal siguen siendo feudos |
 | Provincias Unidas | Gobierno exterior colectivo, según las fases regionales existentes | No suprimir los gobiernos provinciales; el cargo delegado conserva su trama |
-| Estados borgoñones, desde 1384 | Dominios fechados, conservando las relaciones feudales | Ducados y condados separados |
-| Países Bajos, desde 1549 | Conjunto provincial, subordinado a una agrupación exterior mayor solo donde corresponda | Gobiernos provinciales separados |
-| Estados saboyanos | Dominios efectivos del príncipe | Gobiernos con estatuto propio |
-| Dominios de los Tocco | Conjunto exterior existente | Condado y despotado separados |
-| Trinacria-Atenas, 1355–1377 | Conjunto existente | Ducados y reino con instituciones propias |
-| Dominios ingleses en Francia | Color exterior inglés, con condición feudal cuando corresponde | Gobiernos territoriales y tramas existentes |
+| Estados borgoñones, desde 1384 | Dominios fechados, conservando las relaciones feudales | Un color, distinto del resto de reinos del soberano |
+| Países Bajos, desde 1549 | Conjunto provincial, subordinado a una agrupación exterior mayor solo donde corresponda | Un color para todas las provincias gobernadas |
+| Estados saboyanos | Dominios efectivos del príncipe | Un color |
+| Dominios de los Tocco | Conjunto exterior existente | Un color |
+| Trinacria-Atenas, 1355–1377 | Conjunto existente | Un color mientras dura el gobierno común |
+| Dominios ingleses en Francia | Color exterior inglés, con condición feudal cuando corresponde | Feudos franceses: conservan su color y su trama |
 | Sultanato ayubí | Regla de Saladino hasta 1193; no actúa durante 1200–1800 | No prolongar la unidad tras la sucesión |
 
-La antigua regla hispánica restringida a los reinos peninsulares e italianos queda subordinada a la agrupación exterior completa; ya no reúne los colores personales por sí sola. El inventario ejecutable expone cada regla y su fuente con `politicalGroupingReview()`.
+La regla hispánica de los reinos peninsulares e italianos es la que da color a España en el mapa personal; la agrupación exterior completa añade Portugal y los Países Bajos solo en el panorama. Las uniones de Otakar II, Polonia-Hungría, Ladislao el Póstumo, Matías Corvino y los Jagellón de Bohemia-Hungría reúnen color solo en el panorama, como Portugal. El inventario ejecutable expone cada regla y su fuente con `politicalGroupingReview()`.
 
 ## Casos que no se agrupan automáticamente
 
@@ -62,3 +62,14 @@ Las reglas antiguas conservan sus referencias. Las incorporaciones se apoyan en 
 `npm run audit:political-unions` recorre los 601 años y los mandatos activos de ambas vistas. Las pruebas de transiciones comparan las superficies con el mosaico territorial original y comprueban uniones, rupturas, ramas distintas, dependencias e integraciones internas. La regresión general existente sigue comprobando cada año las superficies y autoridades personales.
 
 La revisión de octubre añade las uniones fechadas de Otakar II, Polonia-Hungría, Ladislao el Póstumo, Matías Corvino, los Jagellón de Bohemia-Hungría y Nápoles-Sicilia borbónicas. Véanse las fechas, exclusiones y fuentes en [la revisión del mapa y las sucesiones](royal-map-review.md). En un relevo de la misma jurisdicción dentro del año, el color sigue al entrante; el inspector anual conserva ambos titulares. Las rivalidades y corregencias no se resuelven mediante esta convención.
+
+## Integración en el mapa personal, 20 de octubre de 2026
+
+El mapa personal dejaba de ser legible en las monarquías compuestas: Felipe II tenía en 1585 veinticinco colores (Valencia, Cataluña, Mallorca, cada provincia neerlandesa…). Desde esta revisión sigue la misma integración política que el panorama, con unidades propias explícitas en `MAP_GROUP_REVIEW`:
+
+- Felipe II en 1585: España (Castilla, Aragón, Navarra y los reinos italianos), Portugal y Borgoña-Países Bajos.
+- Leopoldo I o María Teresa: monarquía austríaca (tierras austríacas, Bohemia, Hungría, Transilvania habsbúrgica y dominios italianos) y Países Bajos austríacos aparte.
+- Monarquía prusiana, Dinamarca-Noruega, Polonia-Lituania desde 1569, Nápoles-Sicilia borbónicas, estados saboyanos y borgoñones: un color cada uno.
+- Siguen separados, como Portugal: Otakar II, Luis I de Polonia y Hungría, Ladislao el Póstumo, Matías Corvino y los Jagellón de Bohemia-Hungría; los feudos franceses de los reyes de Inglaterra; las uniones personales que el panorama tampoco reúne (Inglaterra-Escocia antes de 1707, Gran Bretaña-Hannover, Kalmar, Navarra-Bearne-Foix).
+
+Los señoríos borgoñones sin mandato propio (Charolais, Cuijk, Mâcon) toman el color de su conjunto. Gran Bretaña continúa el color de Inglaterra desde 1707 y Hannover tiene uno propio; los territorios sin color de paleta reciben un tono estable derivado de su nombre en lugar de un gris común que los hacía parecer un solo Estado.

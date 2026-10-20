@@ -49,9 +49,9 @@ test('los cinco cortes mantienen separados los territorios austríacos, Bohemia 
   assert.ok(imperialFrameIds(1647).includes('Friesland'));
   assert.ok(!imperialFrameIds(1648).includes('Friesland'));
   assert.ok(inspect('Oberinntal',1648).imperialLegalFrame);
-  assert.equal(colorTerritorioEnMapa(people.LEOP1HRE,'Tirol',1666),REINO_COLOR.Tirol);
-  assert.equal(colorTerritorioEnMapa(people.LEOP1HRE,'Bohemia',1666),REINO_COLOR.Bohemia);
-  assert.equal(colorTerritorioEnMapa(people.LEOP1HRE,'Hungría',1666),REINO_COLOR.Hungría);
+  // Personal maps join the reunited Austrian monarchy; the panorama and titles keep each land.
+  for(const realm of ['Tirol','Bohemia','Hungría'])assert.equal(colorTerritorioEnMapa(people.LEOP1HRE,realm,1666),REINO_COLOR.Austria,realm);
+  assert.equal(colorTerritorioEnMapa(people.FERN2TIROL,'Tirol',1580),REINO_COLOR.Tirol);
 });
 
 test('el auditor señala una región coloreada cuyo gobierno carece de fuente específica',()=>{

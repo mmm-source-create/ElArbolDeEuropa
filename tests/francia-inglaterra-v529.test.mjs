@@ -26,8 +26,9 @@ const fief = (year, id) => cell(year, id).some(layer => layer.crownRelation);
 test('los estados borgoñones solo comparten el granate cuando comparten duque', () => {
   assert.notEqual(colorTerritorioEnMapa(by.LUIS2FLA, 'Flandes', 1370), BURGUNDIAN_COLOR);
   assert.notEqual(colorTerritorioEnMapa(by.MARGFRAFLA, 'Artois', 1370), BURGUNDIAN_COLOR);
-  assert.notEqual(colorTerritorioEnMapa(by.MARGFLAN, 'Flandes', 1390), BURGUNDIAN_COLOR);
-  assert.notEqual(colorTerritorioEnMapa(by.FEL3BORG, 'Namur', 1440), BURGUNDIAN_COLOR);
+  // From 1384 Flanders shares the duke; Namur joins Philip the Good's lands.
+  assert.equal(colorTerritorioEnMapa(by.MARGFLAN, 'Flandes', 1390), BURGUNDIAN_COLOR);
+  assert.equal(colorTerritorioEnMapa(by.FEL3BORG, 'Namur', 1440), BURGUNDIAN_COLOR);
   for (const territory of ['Flandes', 'Nevers', 'Rethel', 'Güeldres', 'Namur', 'Condado de Borgoña', 'Frisia', 'Utrecht'])
     assert.notEqual(REINO_COLOR[territory], BURGUNDIAN_COLOR, territory);
   assert.ok(!colors(1360, 'Bruges').has(BURGUNDIAN_COLOR), 'Flandes de Luis de Male');

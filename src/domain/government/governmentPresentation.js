@@ -1,7 +1,7 @@
 import {isRepublicanOffice} from '../filters/atlasFilters.js';
 import {mandateIdentity,identityLabel} from '../../cartography/territorialNames.js';
 import {ORANGE_NASSAU} from '../../cartography/mapColors.js';
-import {gobiernosDe} from '../genealogy/personAccessors.js';
+import {gobiernosDe,intervalosDisputadosDe} from '../genealogy/personAccessors.js';
 import {gobiernoEfectivo} from '../../data/territorios.js';
 import {agrupacionesPoliticasEnMapa, colorTerritorioEnMapa, REINO_COLOR} from '../../cartography/kingdomMaps.js';
 import {authorityKind} from './authorityKind.js';
@@ -58,7 +58,9 @@ export function groupedGovernmentIntervals(person) {
  const mandates=gobiernosDe(person).filter(g=>Number.isInteger(g.desde)&&Number.isInteger(g.hasta)&&gobiernoEfectivo(g));
  const from=Math.min(...mandates.map(g=>g.desde)),through=Math.max(...mandates.map(g=>g.hasta));
  const changes=[1230,1516,1526,1541,1549,1569,1588,1619,1707,1715,1716,1749,1765].filter(y=>from<y&&y<=through);
- const cuts=[...new Set([...mandates.flatMap(g=>[g.desde,g.hasta+1]),...changes])].sort((a,b)=>a-b), result=[];
+ // A dated disputed-control interval changes the kind of authority too.
+ const disputes=mandates.flatMap(g=>intervalosDisputadosDe(g).flatMap(period=>[period.desde,period.hasta+1]));
+ const cuts=[...new Set([...mandates.flatMap(g=>[g.desde,g.hasta+1]),...disputes,...changes])].sort((a,b)=>a-b), result=[];
  for(let i=0;i<cuts.length-1;i++) for(const group of governmentGroupsAt(person,cuts[i])) {
   const previous=result.findLast(g=>g.key===group.key&&g.label===group.label&&g.color===group.color&&g.through===cuts[i]-1);
   if(previous) previous.through=cuts[i+1]-1;

@@ -67,9 +67,11 @@ test('the Atlas mosaic adds every mappable active government with a distinct app
 
 test('the full Atlas mosaic preserves source links for government claims without implying sourced borders', () => {
   const complete = atlasPoliticalMosaicAt(data, 1548, atlasMosaicPalette(data));
-  const cited = complete.layers.find(layer => layer.approximate && layer.sources.length);
-
-  assert.ok(cited, 'at least some approximate governments retain their claim sources');
-  assert.ok(cited.sources.every(source => /^https?:\/\//.test(source.url)));
-  assert.match(cited.note, /No prueba una frontera/);
+  // Berg, formerly an approximate claim, now follows its reviewed phase.
+  const berg = complete.layers.find(layer => layer.ids.includes('Dusseldorf'));
+  assert.ok(berg && !berg.approximate && berg.sources.length);
+  for (const layer of complete.layers.filter(layer => layer.approximate)) {
+    assert.ok(layer.sources.every(source => /^https?:\/\//.test(source.url)));
+    assert.match(layer.note, /No prueba una frontera/);
+  }
 });
