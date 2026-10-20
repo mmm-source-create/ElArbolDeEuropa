@@ -44,3 +44,24 @@ Las fases enlazadas son un complemento: si el gobierno todavía se dibuja con la
 Resultado: 36.814 celdas-año dejan de figurar como pendientes y pasan a su gobernante documentado, sin nuevos solapamientos entre soberanos salvo los años de cambio de los reyes rivales de Polonia (1704 y 1709). La auditoría de esta revisión no cambia (0 celdas-año alteradas): las fases, sus fechas y sus fuentes son las mismas.
 
 Siguen pendientes, por falta de mandatos en la base genealógica, entre otros: los electores de Baviera desde 1746 y del Palatinado desde 1717, los duques de Württemberg desde 1734, los landgraves de Hesse-Kassel desde 1731 y de Hesse-Darmstadt desde 1662, Mecklemburgo desde 1729, Baden desde 1739, Holstein-Gottorp desde 1740 y numerosos condados, ciudades y temporales eclesiásticos. Corregirlos exige añadir personas con fuente, no reasignar celdas.
+
+## Gobernantes del siglo XVIII añadidos, 20 de octubre de 2026
+
+Los mandatos que faltaban se añaden con fuente individual en `src/evidence/germanPrincesReviews.js` (Neue y Allgemeine Deutsche Biographie, Hessische Biografie, Dansk Biografisk Leksikon y Lex). Cada fecha, filiación y mandato nuevo tiene su revisión; la cobertura los enlaza sin cambiar fases ni celdas.
+
+- Baviera y Palatinado: Maximiliano III José (1745–1777), Carlos III Felipe (Palatinado, Jülich y Berg, 1716–1742), Carlos Teodoro (Palatinado, Jülich y Berg desde 1742, Baviera desde 1777) y Maximiliano IV José (desde 1799).
+- Württemberg: Carlos Alejandro (1733), Carlos Eugenio (1737, con las regencias hasta 1744), Luis Eugenio (1793), Federico Eugenio (1795) y Federico II, después rey Federico I (1797).
+- Hesse-Kassel: Federico I de Suecia como landgrave (1730–1751), con su hermano Guillermo VIII como lugarteniente y regente; Guillermo VIII (1751), Federico II (1760) y Guillermo IX (1785).
+- Hesse-Darmstadt: Luis VI (1661), Luis VII (abril–agosto de 1678), Ernesto Luis (1678, con regencia materna hasta 1688), Luis VIII (1739), Luis IX (1768) y Luis X (1790).
+- Mecklemburgo-Schwerin: Federico Guillermo (1692), la suspensión de Carlos Leopoldo en 1728 (conserva el título), Cristián Luis II como regente durante esa suspensión, administrador y comisario imperial (1728–1747), y duque (1747), Federico (1756) y Federico Francisco I (1785).
+- Baden: Carlos Federico (1738, bajo tutela hasta 1746; Baden-Baden desde 1771).
+- Holstein: Carlos Pedro Ulrico (Pedro III) y Pablo como duques de la parte gottorpiana (1739–1773), limitados al núcleo de Kiel como sus predecesores; Cristián VII de Dinamarca como duque de todo Holstein desde el canje de 1773.
+- Felipe V como duque, conde o señor de las ocho provincias de los Países Bajos españoles (1700–1711). Las fases del mapa ya marcan el control disputado desde la conquista aliada; Maximiliano II Manuel recibe la soberanía en junio de 1711.
+
+El enlace de la cobertura cambia en tres puntos, todos con el mismo criterio de una sola línea de gobierno:
+
+- La identidad «Mecklemburgo-Schwerin» se enlaza con los mandatos «Mecklemburgo», que la base usa para los duques de Schwerin.
+- Un regente o administrador recibe las celdas solo en los años sin ningún titular soberano (Mecklemburgo en 1729–1746).
+- Quien sucede y muere en el mismo año cuenta como un eslabón más del relevo, no como línea rival: Luis VII de Hesse-Darmstadt en 1678 y, con la misma regla, Federico Cristián de Sajonia en 1763 y los reyes de Bohemia de 1306.
+
+Siguen pendientes, entre otros: las partes reales y de Plön de Holstein antes de 1773 (la fase reúne celdas de varios titulares y no se atribuyen a la rama de Gottorp); los Países Bajos españoles en 1712–1713 (soberanía de Maximiliano II Manuel en Namur y Luxemburgo y condominio aliado en el resto); Mecklemburgo-Schwerin en 1629–1630 y 1659–1691, la sucesión de Güstrow (1695–1700) y Mecklemburgo-Strelitz; Hesse-Kassel en 1664–1669; Schleswig, y los condados, ciudades y temporales eclesiásticos.

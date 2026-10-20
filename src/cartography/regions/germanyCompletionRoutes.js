@@ -30,6 +30,8 @@ const HOLDER_TERRITORIES = Object.freeze({
   'Administración danesa de Bremen-Verden':[{territory:'Dinamarca'}],
   'Señorío de Rostock bajo Dinamarca':[{territory:'Dinamarca'}],
   'Prusia Real':[{territory:'Polonia'}],
+  // The genealogical base records the dukes of Schwerin under «Mecklemburgo».
+  'Mecklemburgo-Schwerin':[{territory:'Mecklemburgo'}],
 });
 const phasesByTerritory = new Map();
 for (const phase of review.assignments) if (!phase.governmentTerritories.length)
@@ -42,6 +44,8 @@ for (const phase of review.assignments) if (!phase.governmentTerritories.length)
 // Partitions and rival lines share a territory name: link only one sovereign
 // line without a partial «ambito» (the outgoing and incoming holders of a
 // succession year count as one line), never every duke of a divided duchy.
+// A regent or administrator governs the cells only in years without any
+// sovereign holder (Mecklenburg under imperial administration, 1729–1746).
 let holders = null;
 function linkedHolders(territory, year) {
   if (!holders) {
@@ -52,15 +56,20 @@ function linkedHolders(territory, year) {
       holders.get(government.territorio).push({personId:person.id, government});
     }
   }
-  const active = (holders.get(territory) || []).filter(({government}) => government.desde <= year
-    && year <= government.hasta && authorityKind(government, year) === 'sovereign'
+  const holding = kind => (holders.get(territory) || []).filter(({government}) => government.desde <= year
+    && year <= government.hasta && authorityKind(government, year) === kind
     && government.condicion !== 'corregente' && !government.ambito);
+  const sovereign = holding('sovereign');
+  const active = sovereign.length ? sovereign : holding('delegated');
   const incoming = new Set(active.filter(({government}) => government.desde === year).map(h => h.personId));
   const outgoing = new Set(active.filter(({government}) => government.hasta === year && government.desde < year).map(h => h.personId));
-  const lines = new Set(active.map(h => h.personId).filter(id => !outgoing.has(id) || incoming.has(id)));
+  // A holder who succeeds and dies within the same year is one more link of
+  // that succession (Louis VII of Hesse-Darmstadt in 1678), not a rival line.
+  const transient = new Set(active.filter(({government}) => government.desde === year && government.hasta === year).map(h => h.personId));
+  const lines = new Set(active.map(h => h.personId).filter(id => (!outgoing.has(id) || incoming.has(id)) && !transient.has(id)));
   if (lines.size > 1) return new Set();
-  if (!lines.size) return outgoing.size === 1 ? outgoing : new Set();
-  return new Set([...lines, ...(incoming.size ? outgoing : [])]);
+  if (!lines.size && !transient.size) return outgoing.size === 1 ? outgoing : new Set();
+  return new Set([...lines, ...transient, ...(incoming.size ? outgoing : [])]);
 }
 
 export function germanyCompletionJurisdictions(names, territory, year, personId) {

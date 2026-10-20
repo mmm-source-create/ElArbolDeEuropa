@@ -25,6 +25,7 @@ import { ARAGON_VASSAL_REVIEWS } from './aragonVassalReviews.js';
 import { HABSBURG_ANCESTRY_REVIEWS } from './habsburgAncestryReviews.js';
 import { NAVARRE_LANDS_REVIEWS } from './navarreLandsReviews.js';
 import { BRANDENBURG_PRUSSIA_REVIEWS } from './brandenburgPrussiaReviews.js';
+import { GERMAN_PRINCES_REVIEWS } from './germanPrincesReviews.js';
 
 // The pilot follows three generations around the succession of Castile.
 // A source here supports only the claim and passage named in each review.
@@ -409,6 +410,7 @@ export const CLAIM_REVIEWS = Object.freeze({
   ...HABSBURG_ANCESTRY_REVIEWS,
   ...NAVARRE_LANDS_REVIEWS,
   ...BRANDENBURG_PRUSSIA_REVIEWS,
+  ...GERMAN_PRINCES_REVIEWS,
   ...ROYAL_COVERAGE_REVIEWS,
 });
 
