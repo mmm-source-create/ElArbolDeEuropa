@@ -68,7 +68,7 @@ export function europeMosaicAt(data,year,people) {
  for(const person of people) for(const group of governmentGroupsAt(person,year,{view:'panorama'})) {
   if(group.kind!=='sovereign'&&group.kind!=='disputed')continue;
   for(const mandate of group.mandates) {
-   const candidate={...group,personId:person.id,collegial:mandate.condicion==='corregente',ids:new Set(mapLocationsForGovernment(data,mandate,year,person.id,idsDeGobiernoEnAño(mandate,year,person.id)))};
+   const candidate={...group,personId:person.id,collegial:mandate.condicion==='corregente',territory:mandate.territorio,from:mandate.desde,through:mandate.hasta,ids:new Set(mapLocationsForGovernment(data,mandate,year,person.id,idsDeGobiernoEnAño(mandate,year,person.id)))};
    const names=pilotJurisdictionsFor(mandate.territorio,year,person.id);
    if(mandate.territorio==='Austria'&&mandate.ambito?.includes('Austria Interior'))
     names.push(...pilotJurisdictionsFor('Austria Interior',year,person.id));
@@ -107,7 +107,13 @@ export function europeMosaicAt(data,year,people) {
  for(const layer of layers)for(const id of layer.ids){
   if(!byLocation.has(id))byLocation.set(id,[]);
   const matches=layer.candidates.filter(g=>g.ids.has(id));
-  const governing=matches.some(g=>!g.collegial)?matches.filter(g=>!g.collegial):matches;
+  const senior=matches.some(g=>!g.collegial)?matches.filter(g=>!g.collegial):matches;
+  // Inclusive annual dates retain both office holders for inspection. In a
+  // documented succession year the incoming sovereign supplies the swatch;
+  // rival claims, co-rule and simultaneous different jurisdictions stay mixed.
+  const governing=senior.filter(g=>!(g.kind==='sovereign'&&g.through===year&&g.from<year
+   &&senior.some(next=>next.kind==='sovereign'&&!next.collegial&&next.personId!==g.personId
+    &&next.territory===g.territory&&next.from===year)));
   const applicable=[...new Map(governing.map(g=>[`${g.id}|${g.personId}|${g.kind}`,g])).values()];
   // Equal swatches alone cannot establish a common political unit.
   const unanimous=applicable.length>0&&new Set(applicable.map(g=>g.id)).size===1

@@ -9,7 +9,10 @@ import {mapDataFile,projectRoot,auditReportPath} from '../lib/project-paths.mjs'
 const data=JSON.parse(fs.readFileSync(mapDataFile('corridor-locations.json')));
 // V5.25 titles that are documented but have no reviewed cartography before 1200. They are
 // not drawn in those years; the list keeps the gap visible instead of failing silently.
-const WITHOUT_EARLY_CARTOGRAPHY=new Set(['TEOB3CHAMP|Champaña','ENRIQLEON|Sajonia','ENRIQLEON|Baviera','HENRYSCOT|Northumbria','DAVIDHUNTINGDON|Huntingdon',
+// Royal coverage review: Sverre's title starts in 1177, but Norway's
+// researched regional geometry starts in 1200. Keep all 23 earlier years
+// explicitly uncharted rather than moving his accession to fit the map.
+const WITHOUT_EARLY_CARTOGRAPHY=new Set(['SVERRERENOR|Noruega','TEOB3CHAMP|Champaña','ENRIQLEON|Sajonia','ENRIQLEON|Baviera','HENRYSCOT|Northumbria','DAVIDHUNTINGDON|Huntingdon',
  // V5.31 · Aragonese vassals documented before the regional reviews start in 1200.
  'GUILLERMA1PALLARS|Pallars Sobirà','RAMON6TOLOSA|Toulouse','RAMONROGERFOIX|Foix','TRENCAVEL1|Vizcondado de Carcasona','ROGER2TRENCAVEL|Vizcondado de Carcasona',
  'RAMONROGERTRENCAVEL|Vizcondado de Carcasona','MARIABEARNE|Bearne','GASTON6BEARN|Bearne','GASTON6BEARN|Condado de Bigorra','PETRONILABIGORRA|Condado de Bigorra','GUILLERMO8MONTP|Montpellier']);
@@ -28,7 +31,7 @@ if(process.argv.includes('--publish')){
  const esc=v=>String(v??'—').replaceAll('|','\\|');
  const lines=['# Personas anteriores a 1200 y sus territorios','',`Revisión V5.17 · ${people.length} personas; ${territories.length} denominaciones de gobierno; 52 series territoriales cartografiadas desde ${data.from}.`,
   '', 'La selección incluye a quien nació, murió o empezó un gobierno antes de 1200. Las asociaciones familiares y los gobiernos posteriores se enumeran aparte: no otorgan posesión antes de su fecha. La dignidad de rey de Alemania es un marco político, no dominio territorial directo; no se colorea todo el Imperio como patrimonio de Felipe de Suabia u Otón IV.',
-  '',`Se comprueban ${checked} combinaciones de gobierno efectivo y año anteriores a 1200. Resultado: ${missing.length} sin geometría. Las celdas conservan las limitaciones y fuentes de [la revisión medieval](../../../data/cartography/early-medieval-review.json).`,
+  '',`Se comprueban ${checked} combinaciones de gobierno efectivo y año anteriores a 1200. Resultado: ${missing.length} ausencias de geometría inesperadas; ${uncharted.length} años de títulos registrados sin cartografía revisada. Las celdas conservan las limitaciones y fuentes de [la revisión medieval](../../../data/cartography/early-medieval-review.json).`,
   '', '## Territorios','',...territories.map(t=>`- ${t}${t==='Alemania'?' — dignidad regia, sin atribución patrimonial del Imperio':''}`),
   '', '## Lista completa','', '| Persona | Vida | Gobiernos que empiezan antes de 1200 | Gobiernos posteriores | Asociaciones familiares |', '|---|---|---|---|---|',
   ...people.map(p=>`| ${esc(p.name)} (${p.id}) | ${esc(p.birth)}–${esc(p.death)} | ${esc(p.governments.map(g=>`${g.territory} ${g.from}–${g.through} (${g.condition})`).join('; ')||'Sin gobierno anterior registrado')} | ${esc(p.laterTerritories.join('; ')||'—')} | ${esc(p.familyAssociations.join('; ')||'—')} |`),

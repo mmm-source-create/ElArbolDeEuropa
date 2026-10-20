@@ -12,7 +12,7 @@ const APPANAGE_SOURCE={title:'Larousse · Apanage',url:'https://www.larousse.fr/
 const FRENCH_CROWN_RELATIONS=Object.freeze([
  ['Orleans',1344,1375],['Orleans',1392,1497],['Orleans',1533,1589],['Orleans',1626,1789],
  ['Berry',1360,1422],['Poitou',1241,1270],['Poitou',1372,1415],
- ['Anjou',1246,1327],['Anjou',1360,1480],['Maine',1246,1327],['Maine',1360,1480],
+ ['Anjou',1576,1584],['Anjou',1246,1327],['Anjou',1360,1480],['Maine',1246,1327],['Maine',1360,1480],
  ['Alençon',1285,1549],['Alençon',1566,1584],['Valois',1284,1497],
  ['Ducado de Auvernia',1360,1530],['Borgoña',1200,1360],['Borgoña',1363,1476],
  ['Angulema',1407,1514],['Artois',1237,1525],
@@ -61,8 +61,12 @@ export const englishCrownLayer=(name,year)=>{
 };
 export function frenchCrownRelation(name,year) {
  const phase=phases.get(name);
- if(!phase||year<phase.from||year>phase.through||phase.governmentTerritories.includes('Francia'))return null;
- const span=r=>({...r,from:Math.max(r.from,phase.from),through:Math.min(r.through,phase.through)});
+ if(!phase||year<phase.from||year>phase.through)return null;
+ // The 1481 reunion did not prevent Henry III granting a new appanage to
+ // François in 1576. The coarse royal-domain phase must not erase that grant.
+ const renewedAnjou=phase.identity==='Anjou'&&year>=1576&&year<=1584;
+ if(phase.governmentTerritories.includes('Francia')&&!renewedAnjou)return null;
+ const span=r=>({...r,...(renewedAnjou?{source:{title:'Bibliothèque nationale de France · Paix de Monsieur (1576)',url:'https://catalogue.bnf.fr/ark%3A/12148/cb14603033f',locator:'François recibe Anjou, Touraine y Berry en apanage por la paz de 1576; no se separan del reino de Francia.'}}:{}),from:Math.max(r.from,phase.from),through:Math.min(r.through,phase.through)});
  if(phase.governmentTerritories.includes('Inglaterra'))
   return ENGLISH_FIEFS.has(phase.identity)&&year<=ENGLISH_HOMAGE_THROUGH
    ?span({subject:phase.identity,from:phase.from,through:ENGLISH_HOMAGE_THROUGH,type:'feudo',holder:'Inglaterra',source:ENGLISH_HOMAGE_SOURCE}):null;

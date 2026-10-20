@@ -90,7 +90,7 @@ test('Navarra recupera Foix, Bigorra, Albret y el Bearne de sus reyes', () => {
 test('Brandeburgo-Prusia se pinta completa y Silesia se integra en 1742', () => {
   for (const id of ['Berlin', 'Magdeburg', 'Halberstadt', 'Minden', 'Hamm', 'Bielefeld', 'Slupsk'])
     assert.ok(layer(1760, id), id);
-  assert.equal(layer(1700, 'Berlin').mosaicColor, REINO_COLOR.Brandeburgo);
+  assert.equal(layer(1700, 'Berlin').mosaicColor, REINO_COLOR.Prusia);
   assert.equal(layer(1700, 'Konigsberg').politicalLabel, 'Brandeburgo-Prusia');
   for (const id of ['Berlin', 'Konigsberg', 'Wroclaw', 'Stettin', 'Kleve'])
     assert.equal(layer(1760, id).mosaicColor, REINO_COLOR.Prusia, id);

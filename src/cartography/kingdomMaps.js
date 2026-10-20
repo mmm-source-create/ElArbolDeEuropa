@@ -273,7 +273,7 @@ export const REINO_COLOR = {
   Bizancio: '#6A8E29',
   Lituania: '#43298E',
   Milán: '#1a6684',
-  Venecia: '#278477',
+  Venecia: '#327FA8',
   Saboya: '#596e9b',
   Piamonte: '#596e9b',
   Habsburgo: '#298E70',
@@ -297,7 +297,7 @@ export const REINO_COLOR = {
   Holanda: ORANGE_NASSAU,
   'Provincias Unidas': ORANGE_NASSAU,
   'República Bátava': ORANGE_NASSAU,
-  "Estados Pontificios": '#8E3C29',
+  "Estados Pontificios": '#C9C6AE',
   "Imperio Latino": '#62298e',
   Provenza: '#298E49',
   Alemania: '#8E7729',
@@ -440,7 +440,7 @@ const AGRUPACIONES_POLITICAS = [
     // V5.34: the Hohenzollern lands under one elector, and from 1701 one king.
     id: 'brandeburgo-prusia', nombre: 'Brandeburgo-Prusia',
     territorios: new Set(['Brandeburgo', 'Prusia', 'Cléveris', 'Mark', 'Ravensberg']),
-    color: REINO_COLOR.Brandeburgo, desde: 1618, hasta: 1700,
+    color: REINO_COLOR.Prusia, desde: 1618, hasta: 1700,
     aplica: activos => activos.has('Brandeburgo') && activos.has('Prusia'),
     nota: 'Desde 1618 los electores de Brandeburgo son también duques de Prusia, y desde 1614 tienen Cléveris, Mark y Ravensberg. Cada territorio conserva su título; la Prusia ducal fue feudo polaco hasta 1657.',
     fuente: 'https://www.treccani.it/enciclopedia/brandeburgo_(Dizionario-di-Storia)/',
@@ -578,6 +578,48 @@ export const MAP_GROUP_REVIEW = Object.freeze({
 });
 
 const EXTERIOR_UNIONS = [
+  {
+    id:'monarquia-premislida-exterior',nombre:'Dominios de Otakar II',desde:1253,hasta:1278,
+    territorios:new Set(['Bohemia','Moravia','Austria','Ducado de Estiria','Carintia','Carniola']),
+    color:REINO_COLOR.Bohemia,aplica:(_active,person)=>person?.id==='OTAK2',
+    nota:'Dominios efectivamente reunidos por Otakar II, con títulos e instituciones distintos. Los ducados austríacos salen al terminar su gobierno en 1276. No anticipa la constitución de la Corona de Bohemia de 1348.',
+    fuente:'https://www.habsburger.net/de/kapitel/koenig-ottokars-glueck-und-ende',
+  },
+  {
+    id:'union-polonia-hungria-exterior',nombre:'Unión de Polonia y Hungría',desde:1370,hasta:1444,
+    territorios:new Set(['Polonia','Hungría','Croacia','Eslavonia']),color:REINO_COLOR.Hungría,
+    aplica:(active,person)=>['LUIS1','LADI3'].includes(person?.id)&&active.has('Polonia')&&active.has('Hungría'),
+    nota:'Coronas reunidas bajo Luis I (1370–1382) y Ladislao III (1440–1444), solo durante sus gobiernos simultáneos. Polonia y Hungría conservan leyes e instituciones propias; no se prolonga la unión durante los interregnos.',
+    fuente:'https://mek.oszk.hu/02000/02086/02086.htm',
+  },
+  {
+    id:'ladislao-postumo-exterior',nombre:'Dominios de Ladislao el Póstumo',desde:1445,hasta:1457,
+    territorios:new Set(['Austria','Hungría','Croacia','Eslavonia','Bohemia','Moravia','Silesia']),
+    color:REINO_COLOR.Austria,aplica:(_active,person)=>person?.id==='LADISLAOPOST',
+    nota:'Reinos y ducado del mismo monarca menor de edad, con regentes y gobiernos propios. Bohemia solo se incorpora desde su acceso de 1453; en 1447 continúa su interregno.',
+    fuente:'https://www.habsburger.net/en/chapter/ladislaus-posthumous-child-king',
+  },
+  {
+    id:'matias-corvino-exterior',nombre:'Dominios de Matías Corvino',desde:1458,hasta:1490,
+    territorios:new Set(['Hungría','Croacia','Eslavonia','Moravia','Silesia']),color:REINO_COLOR.Hungría,
+    aplica:(_active,person)=>person?.id==='MATIAS1HUN',
+    nota:'Reúne únicamente los gobiernos territoriales efectivos de Matías: Moravia y Silesia desde 1469. La pretensión al título de rey de Bohemia no le entrega Praga ni la Bohemia gobernada por Jorge y Ladislao.',
+    fuente:'https://mek.oszk.hu/00900/00940/html/doc/c300646.htm',
+  },
+  {
+    id:'union-bohemia-hungria-exterior',nombre:'Unión de Bohemia y Hungría',desde:1490,hasta:1526,
+    territorios:new Set(['Bohemia','Moravia','Silesia','Hungría','Croacia','Eslavonia']),color:REINO_COLOR.Hungría,
+    aplica:active=>active.has('Bohemia')&&active.has('Hungría'),
+    nota:'Unión bajo Ladislao II Jagellón y Luis II. Se conservan las coronas y las instituciones de cada reino; la unión solo comprende los gobiernos efectivos registrados.',
+    fuente:'https://mek.oszk.hu/02000/02086/02086.htm',
+  },
+  {
+    id:'napoles-sicilia-borbon-exterior',nombre:'Monarquía de Nápoles y Sicilia',desde:1734,hasta:1800,
+    territorios:new Set(['Nápoles','Trinacria','Sicilia']),color:REINO_COLOR.Nápoles,
+    aplica:(active,person)=>['CARLOS3ESP','FERN4NAP'].includes(person?.id)&&active.has('Nápoles')&&(active.has('Trinacria')||active.has('Sicilia')),
+    nota:'Coronas reunidas bajo Carlos de Borbón y su hijo Fernando. Los dos reinos conservan su identidad; no se anticipa el Reino de las Dos Sicilias creado en 1816. La república napolitana de 1799 conserva su propia atribución territorial.',
+    fuente:'https://acc-capodimonte.cultura.gov.it/la-storia/',
+  },
   {
     id:'austria-interior-exterior',nombre:'Austria Interior',desde:1564,hasta:1618,
     territorios:new Set(['Austria','Austria Interior','Carintia','Carniola','Ducado de Estiria']),

@@ -1,3 +1,4 @@
+import {ROYAL_COVERAGE_REVIEWS} from './royalCoverageReviews.js';
 import {EASTERN_EUROPE_REVIEWS} from './easternEuropeReviews.js';
 import {PERSONAL_ATLAS_REVIEWS} from './personalAtlasReviews.js';
 import {AUTHORITY_REVIEWS} from './authorityReviews.js';
@@ -408,6 +409,7 @@ export const CLAIM_REVIEWS = Object.freeze({
   ...HABSBURG_ANCESTRY_REVIEWS,
   ...NAVARRE_LANDS_REVIEWS,
   ...BRANDENBURG_PRUSSIA_REVIEWS,
+  ...ROYAL_COVERAGE_REVIEWS,
 });
 
 export const EDITORIAL_HISTORY = Object.freeze([
