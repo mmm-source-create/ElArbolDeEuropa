@@ -400,6 +400,22 @@ export function composeRegionalAuthorityScopes(scopes) {
 }
 
 export function authorityMapScope(personId, territory, year) {
+  if(personId==='FED3HAB'&&territory==='Austria'&&year>=1457&&year<=1493) {
+    // A newly assigned legal title must not erase the partition with Albrecht
+    // or turn occupied Vienna into Frederick's direct government.
+    const lower=['Ganserndorf','Hollabrunn','Korneuburg','Mistelbach','Horn','Krems',
+      'Waidhofen_an_der_Thaya','Zwettl','Amstetten','Lilienfeld','Melk','Scheibbs',
+      'St_Polten','Tulln','Waidhofen','Austria_Baden','Bruck_Leitha','Vienna'];
+    const upper=['Bad_Ischl','Gmunden','Kirchdorf','Steyr','Wels','Freistadt','Perg','Rohrbach'];
+    const ids=year<=1461?lower:year<=1463?[]:year>=1485&&year<=1490?upper:[...lower,...upper];
+    return {ids,source:{title:'Die Welt der Habsburger · Fraternal strife',
+      url:'https://www.habsburger.net/en/chapter/fraternal-strife-emperor-frederick-iii-versus-duke-albrecht-vi',
+      locator:'Partición con Alberto VI, pérdida de Viena en 1462 y reunión tras la muerte de Alberto en 1463.'},
+      additionalSources:[{title:'Die Welt der Habsburger · Frederick V: from deepest humiliation to late triumph',
+        url:'https://www.habsburger.net/en/chapter/frederick-v-deepest-humiliation-late-triumph',
+        locator:'Ocupación de Viena por Matías en 1485; residencia de Federico en Linz y muerte de Matías en 1490.'}],
+      note:'Ámbito conservador de gobierno efectivo: Austria bajo el Enns antes de 1462; sin superficie personal resuelta en 1462–1463; durante la ocupación húngara de 1485–1490 solo el núcleo conservador de Austria sobre el Enns. La atribución regional de la celda Linz no se fuerza desde el nombre de la ciudad. El título no acredita control de Viena ni absorbe Tirol o Austria Interior.'};
+  }
   const germanSwiss = germanSwissScope(personId, territory, year);
   if (germanSwiss) return germanSwiss;
   const regional = composeRegionalAuthorityScopes([

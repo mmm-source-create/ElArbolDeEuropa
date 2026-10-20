@@ -1,3 +1,4 @@
+import {ROYAL_COVERAGE_SOURCES} from './sources-royal-coverage.js';
 import {GERMANY_COMPLETION_SOURCES} from './sources-germany-completion.js';
 import {GERMAN_SWISS_SOURCES} from './sources-german-swiss.js';
 import {authorityReferences} from '../evidence/authorityReviews.js';
@@ -16,6 +17,7 @@ const DOGES_1400_1605 = [
 // Bibliography shared by the public site, Atlas and generated entity pages.
 // A territorial reference supplies context; only explicit person IDs assign a biography.
 export const SOURCES = [
+  ...ROYAL_COVERAGE_SOURCES,
   {"titulo":"William R. Shepherd · The Growth of Russia, detalle de Azov","url":"https://commons.wikimedia.org/wiki/File:Shepherd-c-138-139.jpg","grupo":"Europa oriental y Báltico","territorios":["Lituania","Rusia","Polonia-Lituania"],"personas":[],"nota":"Frontera de Azov, reinados de Pedro I y Ana y expansión del XVIII. Las fases 1696–1711 y 1739 se separan de la incorporación general de los cosacos del Don."},
   {"titulo":"Biblioteca Nacional de Lituania · VLE, Rusijos istorija","url":"https://www.vle.lt/straipsnis/rusijos-istorija/","grupo":"Europa oriental y Báltico","territorios":["Lituania","Rusia","Polonia-Lituania"],"personas":[],"nota":"Secciones de fragmentación de la Rus, conquista mongola, Moscovia y expansión del zarato. Los principados tributarios conservaron sus gobiernos; se distinguen de las tierras de administración directa de la Horda."},
   {"titulo":"VLE · Ivanas III","url":"https://www.vle.lt/straipsnis/ivanas-iii/","grupo":"Europa oriental y Báltico","territorios":["Lituania","Rusia","Polonia-Lituania"],"personas":[],"nota":"Yaroslavl 1463, Rostov 1474, Nóvgorod 1478, Tver 1485; fin del tributo 1480. La influencia sobre Pskov y Riazán no equivale a anexión."},

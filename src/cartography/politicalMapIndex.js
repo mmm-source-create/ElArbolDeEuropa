@@ -12,6 +12,13 @@ import {CHRONOLOGY_COLLECTIVE_AUTHORITIES} from './regions/atlasChronologyCollec
 export const COLLECTIVE_AUTHORITIES = Object.freeze([
   ...CHRONOLOGY_COLLECTIVE_AUTHORITIES,
   {
+    territorio:'Bohemia',desde:1440,hasta:1452,
+    nombre:'Interregno de Bohemia · dietas y landfrieds',cargo:'Gobiernos estamentales y regionales durante la vacancia',
+    condicion:'colectiva',certeza:'documentado',
+    nota:'Tras la muerte de Alberto en 1439, Bohemia no tiene un rey reinante hasta la coronación de Ladislao el Póstumo en 1453. Las ligas regionales o landfrieds ejercen el gobierno; Jorge de Poděbrady es elegido gobernador en 1452. No se atribuye todo el reino a un dirigente regional en 1447.',
+    fuente:{title:'Česká numismatická společnost · Pražské groše Ladislava Pohrobka (1453–1457)',url:'https://www.cnspg.cz/article/s22-135-prazske-grose-ladislava-pohrobka-1453-1457?action=showFull',locator:'Reconocimiento del derecho sucesorio en 1444, administración por landfrieds y coronación el 28 de octubre de 1453.'},
+  },
+  {
     territorio:'Provincias Unidas', desde:1588, hasta:1794,
     nombre:'Estados Generales y Estados provinciales', cargo:'Gobierno confederal y provincial',
     condicion:'colectiva', certeza:'documentado',

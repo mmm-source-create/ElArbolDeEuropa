@@ -1,3 +1,4 @@
+import {renderImperialOverlay} from '../../cartography/imperialOverlay.js';
 import {MAP_READING_GUIDE} from '../../content/mapReadingGuide.js';
 import './atlas-skeleton.css';
 import {authorityColor} from '../../cartography/mapColors.js';
@@ -117,6 +118,7 @@ export function MapaEuropa({ seleccion, anioGlobal = null, onSelectTerritorio, o
   const [mapReady, setMapReady] = useState(false);
   const [paintingLife, setPaintingLife] = useState(false);
   const [showDependencies, setShowDependencies] = useState(true);
+  const [showEmpire, setShowEmpire] = useState(false);
   const [mapError, setMapError] = useState(false);
   const [mapAttempt, setMapAttempt] = useState(0);
   const [selectedRegionId, setSelectedRegionId] = useState(null);
@@ -139,6 +141,8 @@ export function MapaEuropa({ seleccion, anioGlobal = null, onSelectTerritorio, o
   const hasImperialOffice = Boolean(seleccion && Number.isFinite(anioGlobal)
     && reinadosActivos(seleccion, anioGlobal, { soloEfectivos: true })
       .some((gobierno) => gobierno.territorio === 'Sacro Imperio'));
+  const imperialOverlayIds = useMemo(()=>panorama && pilotData && Number.isInteger(anioGlobal)
+    ? pilotImperialFrameFor(pilotData,anioGlobal) : [],[panorama,pilotData,anioGlobal]);
   const imperialReferenceActive = hasImperialOffice && Number.isInteger(anioGlobal)
     && pilotImperialFrameFor(pilotData, anioGlobal).length > 0;
 
@@ -350,6 +354,12 @@ export function MapaEuropa({ seleccion, anioGlobal = null, onSelectTerritorio, o
     return () => { cancelled = true; controller.abort(); };
   }, [seleccion, anioGlobal, mapReady, imperialReferenceActive, pilotData, showDependencies,panorama,mosaic]);
 
+  useEffect(()=>{
+    const svg=containerRef.current?.querySelector('svg');if(!svg)return;
+    renderImperialOverlay(svg,panorama&&showEmpire?imperialOverlayIds:[],buscarElementoRef.current||indexMapElements(svg));
+    return ()=>svg.querySelector('[data-imperial-overlay]')?.remove();
+  },[mapReady,panorama,showEmpire,imperialOverlayIds,mosaic]);
+
   const updateViewBox = useCallback((producer) => {
     setViewBox((current) => {
       if (!current || !originalViewBoxRef.current) return current;
@@ -491,6 +501,12 @@ export function MapaEuropa({ seleccion, anioGlobal = null, onSelectTerritorio, o
         <button type="button" className="nav-btn" disabled={!controlLimits.down} onClick={() => panBy(0, MAP_PAN_STEP)} title="Mover mapa hacia abajo" aria-label="Mover mapa hacia abajo"><ArrowDown size={13} /></button>
         <button type="button" className="nav-btn" disabled={!controlLimits.right} onClick={() => panBy(MAP_PAN_STEP, 0)} title="Mover mapa a la derecha" aria-label="Mover mapa a la derecha"><ArrowRight size={13} /></button>
       </div>
+      {panorama && <div className="mapa-imperial-control">
+        <label className="mapa-dependency-toggle"><input type="checkbox" checked={showEmpire && imperialOverlayIds.length>0}
+          disabled={!mapReady || !imperialOverlayIds.length} onChange={event=>setShowEmpire(event.target.checked)}/> Mostrar Sacro Imperio</label>
+        {!imperialOverlayIds.length && <small>Marco imperial sin reconstrucción disponible para este año.</small>}
+        {showEmpire && imperialOverlayIds.length>0 && <small>Superposición dorada: ámbito jurídico aproximado. Los gobiernos territoriales siguen debajo y se pueden consultar. <a href="https://germanhistorydocs.org/en/from-the-reformations-to-the-thirty-years-war-1500-1648/ghdi:map-2809" target="_blank" rel="noreferrer">Fuente</a></small>}
+      </div>}
       {panorama && <details className="mapa-color-legend" inert={!mapReady}>
         <summary>Cómo leer el mapa</summary>
         {MAP_READING_GUIDE.paragraphs.map(text=><p key={text}>{text}</p>)}

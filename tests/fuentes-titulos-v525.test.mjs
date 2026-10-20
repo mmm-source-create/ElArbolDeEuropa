@@ -12,8 +12,8 @@ const by = Object.fromEntries(PERSONAS.map(person => [person.id, person]));
 test('la Corona de San Wenceslao agrupa Bohemia desde 1348, como la de San Esteban agrupa Hungría', () => {
   for (const year of [1350, 1500]) {
     const labels = governmentTableAt(PERSONAS, year).map(row => row.label);
-    assert.ok(labels.includes('Corona de San Wenceslao'), String(year));
-    assert.ok(labels.includes('Corona de San Esteban'), String(year));
+    assert.ok(labels.includes(year===1500?'Unión de Bohemia y Hungría':'Corona de San Wenceslao'), String(year));
+    assert.ok(labels.includes(year===1500?'Unión de Bohemia y Hungría':'Corona de San Esteban'), String(year));
     assert.ok(!labels.includes('Corona de Bohemia'), String(year));
   }
   assert.ok(governmentTableAt(PERSONAS,1700).some(row=>row.id==='monarquia-austriaca-exterior'&&row.governments.some(g=>g.mandates.some(m=>m.territorio==='Bohemia'))));
