@@ -5,6 +5,7 @@ import {CASAS_V521} from "./grandes-casas-v521.js";
 import {CASAS_V523} from "./casas-v523.js";
 import {CASAS_V534} from "./casas-v534.js";
 import {ASCANIA_HISTORY} from './ascania.js';
+import {PORTUGAL_HOUSE_HISTORY,PORTUGAL_HOUSE_SOURCES,BRETON_HOUSE_SOURCE} from './heraldica-y-casas.js';
 const MEDLANDS='https://fmg.ac/Projects/MedLands/index.htm';
 const RAH='https://historia-hispanica.rah.es/';
 const BRITANNICA='https://www.britannica.com/';
@@ -12,6 +13,7 @@ const BRITANNICA='https://www.britannica.com/';
 // A house history is editorial context. Branches and matrimonial transfers are distinct relations.
 export const HISTORIA_DINASTIAS = {
   Ascania:ASCANIA_HISTORY,
+  'Borgoña-Portugal':PORTUGAL_HOUSE_HISTORY,
   ...CASAS_ESCANDINAVAS,
   ...CASAS_ALPINAS,
   ...CASAS_ADRIATICO,
@@ -74,12 +76,12 @@ export const HISTORIA_DINASTIAS = {
     legado:'La disputa de 1341 abrió una larga guerra. Los Montfort constituyeron una rama de los Dreux y terminaron conservando el ducado, mientras Juana de Penthièvre transmitió su patrimonio por su matrimonio con Carlos de Blois. Las dos líneas deben seguirse por separado.',
     territorios:['Dreux','Bretaña','Penthièvre'], protagonistas:['ROBERT1DREUX','ROBERT2DREUX','PIERRE1BRET','JUAN1BRET','ARTHUR2BRET','JEANNEPENTHIEVRE'], fuentes:[MEDLANDS,BRITANNICA],
   },
-  'Montfort': {
+  'Montfort-Bretaña': {
     resumen:'La rama bretona de los Montfort pasó de disputar el ducado a mantenerlo durante varias generaciones, hasta Ana de Bretaña.',
-    origen:'Juan de Montfort era hijo de Arturo II de Bretaña y de Yolanda de Dreux. Su línea era una rama de los duques de la casa de Dreux. La denominación Montfort utilizada en esta ficha se refiere a esa rama bretona; no identifica automáticamente a todos los linajes que compartieron el topónimo.',
+    origen:'Juan de Montfort era hijo de Arturo II de Bretaña y de Yolanda de Dreux. Su línea era una rama de los duques de la casa de Dreux, de ascendencia capeta. El nombre Montfort-Bretaña precisa la identidad de los miembros registrados en esta ficha. La antigua casa de Montfort-l’Amaury, de la que procedían los Simón de Montfort, tuvo una trayectoria distinta y no está representada por los miembros de esta ficha.',
     trayectoria:'Juan reclamó el ducado en 1341. Su esposa Juana de Flandes defendió su causa y la de su hijo. Tras la victoria de Juan IV, la continuidad pasó a sus hijos y nietos. Los matrimonios de Juana de Navarra, Margarita de Orleans y Margarita de Foix conectan esta rama con tres de los principales conjuntos familiares de la actualización.',
     legado:'Francisco II dejó como heredera a Ana. Sus matrimonios con Carlos VIII y Luis XII vincularon el ducado a la monarquía francesa, pero conservaron una historia jurídica propia. Claudia, hija de Ana, prolongó la transmisión. La unión de 1532 es un hecho posterior a la muerte de Ana y no debe adelantarse a su primer matrimonio.',
-    territorios:['Bretaña','Francia','Navarra'], protagonistas:['JOHNMONTPRET','JEANNEFLANDERSBRET','JOHN4BRET','JUAN6BRET','FRANCOIS2BRET','ANABRET'], fuentes:[MEDLANDS,BRITANNICA],
+    territorios:['Bretaña','Francia','Navarra'], protagonistas:['JOHNMONTPRET','JEANNEFLANDERSBRET','JOHN4BRET','JUAN6BRET','FRANCOIS2BRET','ANABRET'], fuentes:[MEDLANDS,BRETON_HOUSE_SOURCE],
   },
   'Châtillon': {
     resumen:'Una casa con varias ramas cuya conexión bretona se explica por el matrimonio de Carlos de Blois con Juana de Penthièvre.',
@@ -114,17 +116,18 @@ export const TIPOS_RAMAS = {
 };
 
 export const RAMAS_DINASTICAS = [
+  {id:'borgona-portugal-avis',origen:'Borgoña-Portugal',destino:'Avís',tipo:'rama_cadete',periodo:'1385',fundador:'JUAN1PORT',personas:['PED1PORT','JUAN1PORT','EDU1PORT'],texto:'Juan I de Avís era hijo natural de Pedro I de Portugal. Su elección en 1385 inauguró otra casa reinante dentro de la descendencia de la primera dinastía portuguesa.',fuentes:[PORTUGAL_HOUSE_SOURCES[3]]},
   ...CONEXIONES_ADRIATICO,
   {id:'dreux-capeta',origen:'Capeto',destino:'Dreux',tipo:'rama_cadete',periodo:'1137',fundador:'ROBERT1DREUX',personas:['LUIS6FRA','LUIS7FRA','ROBERT1DREUX','ROBERT2DREUX','PIERRE1BRET'],texto:'Roberto I, hijo menor de Luis VI, recibió Dreux. La casa conserva una ascendencia capeta aunque sus titulares no fueran reyes de Francia.'},
   {id:'evreux-capeta',origen:'Capeto',destino:'Évreux',tipo:'rama_cadete',periodo:'Finales del siglo XIII',fundador:'LUISEVREUX',personas:['LUISEVREUX','FELIPEVREUX','CARLOS2NAV','CARLOS3NAVAR'],texto:'Luis, hijo de Felipe III, inicia la rama de Évreux. El matrimonio de su hijo Felipe con Juana II incorpora la conexión regia navarra.'},
   {id:'valois-capeta',origen:'Capeto',destino:'Valois',tipo:'rama_cadete',periodo:'Siglos XIII–XIV',fundador:'CARLOSVAL',personas:['CARLOSVAL','FEL6FRA','JUAN2FRA'],texto:'Carlos de Valois, hermano de Felipe IV, dio nombre a la rama. Su hijo Felipe VI accedió al trono en 1328.'},
   {id:'borbon-capeta',origen:'Capeto',destino:'Borbón',tipo:'rama_cadete',periodo:'Siglos XIII–XIV',fundador:'ROB1CLER',personas:['ROB1CLER','LUIS1BOR','PEDRO1BOR'],texto:'Roberto de Clermont, hijo de Luis IX, se casó con Beatriz de Borbón. La rama capeta tomó el nombre del patrimonio de ella.'},
   {id:'dreux-bretana',origen:'Dreux',destino:'Dreux',tipo:'establecimiento',periodo:'1213',fundador:'PIERRE1BRET',personas:['PIERRE1BRET','ALIXTHOUARS','JUAN1BRET','JUAN2BRET','ARTHUR2BRET'],texto:'Pedro de Dreux se casó con Alix de Thouars. El derecho al ducado procedía de Alix; la nueva línea ducal conservó la ascendencia masculina de Dreux.'},
-  {id:'montfort-bretana',origen:'Dreux',destino:'Montfort',tipo:'rama_cadete',periodo:'Siglo XIV',fundador:'JOHNMONTPRET',personas:['JOHNMONTPRET','JOHN4BRET','JUAN6BRET','ARTURO3BRET','FRANCOIS2BRET','ANABRET'],texto:'Juan de Montfort fue hijo de Arturo II y de su segunda esposa, Yolanda de Dreux. Sus descendientes constituyeron la rama ducal de Montfort.'},
+  {id:'montfort-bretana',origen:'Dreux',destino:'Montfort-Bretaña',tipo:'rama_cadete',periodo:'Siglo XIV',fundador:'JOHNMONTPRET',personas:['JOHNMONTPRET','JOHN4BRET','JUAN6BRET','ARTURO3BRET','FRANCOIS2BRET','ANABRET'],texto:'Juan de Montfort fue hijo de Arturo II y de su segunda esposa, Yolanda de Dreux. Sus descendientes constituyeron la rama ducal de Montfort.'},
   {id:'chatillon-penthievre',origen:'Dreux',destino:'Châtillon',tipo:'continuidad_patrimonial',periodo:'1337',fundador:'CHARLESBLOIS',personas:['GUYPENTHIEVRE','JEANNEPENTHIEVRE','CHARLESBLOIS','MARIEBLOIS'],texto:'Juana, nieta de Arturo II por Guy de Penthièvre, se casó con Carlos de Blois. Los derechos bretones procedían de Juana; Carlos pertenecía a Châtillon.'},
   {id:'foix-castellbo',origen:'Foix',destino:'Foix',tipo:'rama_cadete',periodo:'Siglo XIV',fundador:'ROGERBERNARD1CASTEL',personas:['ROGERBERNARD1CASTEL','ROGERBERNARD2CASTEL','MATTHIEUFOIX','ISABELLEFOIX'],texto:'Roger Bernardo I de Castellbó, hijo de Gastón I, representa la línea colateral de la que procedían Mateo e Isabel. Esta rama heredó tras la muerte de Fébus.'},
   {id:'foix-grailly',origen:'Grailly',destino:'Foix',tipo:'continuidad_patrimonial',periodo:'1398',fundador:'ARCHAMBAUDGRAILLY',personas:['ISABELLEFOIX','ARCHAMBAUDGRAILLY','JOHN1FOIX','GASTON4FOIX'],texto:'Isabel de Foix-Castellbó heredó el patrimonio y lo transmitió a la descendencia de su matrimonio con Archambaud. Foix-Grailly describe esta continuidad; Grailly no se convierte por ello en una rama masculina de los antiguos Foix.'},
   {id:'foix-navarra',origen:'Foix',destino:'Foix',tipo:'acceso_corona',periodo:'1479',fundador:'FRANCISCOFEBONAV',personas:['GASTON4FOIX','LEONOR1NAV','GASTONVIANA','FRANCISCOFEBONAV','CATALINA1NAV'],texto:'El matrimonio de Gastón IV con Leonor de Navarra conectó ambas herencias. Francisco Febo sucedió a su abuela Leonor; su padre había muerto antes que ella.'},
   {id:'albret-navarra',origen:'Foix',destino:'Albret',tipo:'continuidad_patrimonial',periodo:'1484',fundador:'JUAN3ALBRET',personas:['CATALINA1NAV','JUAN3ALBRET','ENRIQ2NAV','JUANA3NAV'],texto:'Catalina era la heredera navarra y Juan pertenecía a Albret. Sus descendientes reunieron derechos de ambas familias, sin convertir Albret y Navarra en un único territorio.'},
   {id:'borbon-navarra',origen:'Albret',destino:'Borbón',tipo:'continuidad_patrimonial',periodo:'1548',fundador:'ANTONIOBORBON',personas:['JUANA3NAV','ANTONIOBORBON','ENRIQ4FRA'],texto:'El matrimonio de Juana de Albret con Antonio de Borbón explica la herencia navarra de Enrique IV. Sus derechos franceses procedían de su ascendencia capeta por otra vía.'},
-].map(rama=>({...rama,fuentes:[MEDLANDS]})).concat(CONEXIONES_ESCANDINAVAS,RAMAS_ALPINAS);
+].map(rama=>({...rama,fuentes:rama.fuentes||[MEDLANDS]})).concat(CONEXIONES_ESCANDINAVAS,RAMAS_ALPINAS);

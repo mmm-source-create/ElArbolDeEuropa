@@ -10,6 +10,8 @@ const DYNASTY_CHILDREN={
  Borbón:['Borbón-Condé','Borbón-Orleans','Borbón-Parma'],
  Valois:['Valois-Alençon','Valois-Angulema','Valois-Borgoña','Valois-Orleans'],
  Anjou:['Anjou-Durazzo','Anjou-Hungría','Anjou-Tarento'],
+ Dreux:['Montfort-Bretaña'],
+ 'Borgoña':['Borgoña-Portugal'],
 };
 
 export function atlasFilterOptions(people) {

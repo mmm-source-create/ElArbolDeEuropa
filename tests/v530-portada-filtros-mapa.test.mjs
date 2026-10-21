@@ -80,8 +80,9 @@ test('los escudos de Wikimedia Commons se muestran con autor y licencia, sin con
     assert.ok(ESCUDOS[credit.dinastia], credit.dinastia);
     assert.ok(credit.autor && credit.licencia, credit.dinastia);
     if(credit.procedencia==='Aportación del autor')assert.match(credit.fuente,/^https:\/\/heraldicon\.org\/arms\//);
+    else if(credit.procedencia==='WappenWiki')assert.match(credit.fuente,/^https:\/\/wappenwiki\.org\/index\.php\/File:/);
     else assert.match(credit.fuente, /^https:\/\/commons\.wikimedia\.org\/wiki\/File:/);
-    if (/^CC BY/.test(credit.licencia)) assert.match(credit.licenciaUrl, /^https:\/\/creativecommons\.org\/licenses\/by(-sa)?\/(?:[1-4]\.0|2\.5)\/$/);
+    if (/^CC BY/.test(credit.licencia)) assert.match(credit.licenciaUrl, /^https:\/\/creativecommons\.org\/licenses\/by(?:-nc)?(?:-sa)?\/(?:[1-4]\.0|2\.5)\/$/);
     const file = read(`public${credit.archivo}`);
     if (credit.archivo.endsWith('.svg')) {
       assert.match(file, /<svg\b[^>]*viewBox=/, credit.archivo);
