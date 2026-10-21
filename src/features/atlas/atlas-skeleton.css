@@ -42,6 +42,6 @@
 .atlas-bs-tree>span:last-child{width:220px}
 @media(max-width:900px){.atlas-bs-topbar,.atlas-bs-grid{grid-template-columns:1fr}.atlas-bs-panel{min-height:160px}}
 
-.mapa-imperial-control { padding-top:3rem !important; display:flex; flex-wrap:wrap; gap: .35rem 1rem; align-items:center; padding:.65rem .8rem; font-size:.8rem; }
-.mapa-imperial-control small { max-width:65ch; line-height:1.5; }
-.mapa-imperial-control a { color:inherit; text-decoration:underline; }
+.mapa-toolbar { max-width:calc(100% - 16px); flex-wrap:wrap; justify-content:flex-end; }
+.mapa-stage .mapa-toolbar { color:var(--eade-ink); background:var(--eade-paper-bright); border-color:var(--eade-border); }
+.mapa-toolbar .mapa-imperial-control { margin:0 8px 0 0; font-size:var(--fs-xs,11px); }

@@ -6,6 +6,16 @@
 // - así puedes centrar la cara sin recortar físicamente el archivo
 
 export const IMAGENES_PERSONAS = {
+  JAIME2AR: {
+    archivo:'/personas-img/JAIME2AR.webp',encuadre:'50% 28%',alt:'Jaime II de Aragón en una miniatura de los Usatges',tipo:'Representación contemporánea',
+    obra:'Usatici et Constitutiones Cataloniae · BnF, Latin 4670 A',autor:'Anónimo',fecha:'c. 1315–1325',institucion:'Bibliothèque nationale de France',
+    fuente:'Wikimedia Commons',fuenteUrl:"https://commons.wikimedia.org/wiki/File:Jacques_2_d%27aragon.png",derechos:'CC BY-SA 3.0',derechosUrl:'https://creativecommons.org/licenses/by-sa/3.0/',
+  },
+  CATALINAMICAELAESP: {
+    archivo:'/personas-img/CATALINAMICAELAESP.webp',encuadre:'50% 20%',alt:'Retrato de la infanta Catalina Micaela',tipo:'Retrato contemporáneo',
+    obra:'Portrait of the Infanta Catalina Micaela',autor:'Alonso Sánchez Coello',fecha:'1582–1585',institucion:'Museo del Hermitage, San Petersburgo',
+    fuente:'Wikimedia Commons',fuenteUrl:'https://commons.wikimedia.org/wiki/File:Alonso_S%C3%A1nchez_Coello_-_Portrait_of_the_Infanta_Catalina_Micaela_-_WGA20716.jpg',derechos:'Dominio público · PD-Art',derechosUrl:'https://creativecommons.org/publicdomain/mark/1.0/',
+  },
   CAR1BORG: {
     archivo: "/personas-img/CAR1BORG.webp",
     encuadre: "50% 24%",

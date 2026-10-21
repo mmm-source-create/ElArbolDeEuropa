@@ -5,6 +5,8 @@ export const ORANGE_NASSAU = '#C08A38';
 export const FRENCH_CROWN_COLOR = '#295D8E';
 export const BURGUNDIAN_COLOR = '#8E295C';
 export const ENGLISH_CROWN_COLOR = '#7A4F3B';
+export const GREAT_BRITAIN_COLOR = '#945C52';
+export const SAVOY_COLOR = '#8175A7';
 // The Commonwealth stays apart from the violet Bohemian crown, Moravia and
 // Transylvania that border it.
 export const POLAND_LITHUANIA_COLOR = '#C4627A';

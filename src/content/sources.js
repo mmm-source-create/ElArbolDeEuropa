@@ -1,4 +1,5 @@
 import {ROYAL_COVERAGE_SOURCES} from './sources-royal-coverage.js';
+import {DYNASTY_MAP_SOURCES} from './sources-dynasty-map.js';
 import {GERMAN_PRINCES_SOURCES} from './sources-german-princes.js';
 import {GERMANY_COMPLETION_SOURCES} from './sources-germany-completion.js';
 import {GERMAN_SWISS_SOURCES} from './sources-german-swiss.js';
@@ -18,6 +19,7 @@ const DOGES_1400_1605 = [
 // Bibliography shared by the public site, Atlas and generated entity pages.
 // A territorial reference supplies context; only explicit person IDs assign a biography.
 export const SOURCES = [
+  ...DYNASTY_MAP_SOURCES,
   ...ROYAL_COVERAGE_SOURCES,
   ...GERMAN_PRINCES_SOURCES,
   {"titulo":"William R. Shepherd · The Growth of Russia, detalle de Azov","url":"https://commons.wikimedia.org/wiki/File:Shepherd-c-138-139.jpg","grupo":"Europa oriental y Báltico","territorios":["Lituania","Rusia","Polonia-Lituania"],"personas":[],"nota":"Frontera de Azov, reinados de Pedro I y Ana y expansión del XVIII. Las fases 1696–1711 y 1739 se separan de la incorporación general de los cosacos del Don."},

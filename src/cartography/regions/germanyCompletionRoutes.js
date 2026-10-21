@@ -74,6 +74,12 @@ function linkedHolders(territory, year) {
 
 export function germanyCompletionJurisdictions(names, territory, year, personId) {
   const routed = routes.jurisdictions(names, territory, year, personId);
+  // Zerbst's dated core is inside a layer that also contains other Anhalt
+  // branches. Its explicit authority scope filters out Ballenstedt/Bernburg.
+  if(territory==='Anhalt-Zerbst'&&year>=1742&&year<=1793
+    &&['CHRISTIANANHALTZERBST','FRIEDRICHAUGUSTANHALT','JOHANNAELISAHOLST'].includes(personId))
+    routed.push(...review.assignments.filter(phase=>['Anhalt','Anhalt-Zerbst'].includes(phase.identity)
+      &&phase.from<=year&&year<=phase.through).map(phase=>phase.name));
   const linked = (phasesByTerritory.get(territory) || []).filter(link => link.from <= year && year <= link.through);
   if (linked.length && personId != null && linkedHolders(territory, year).has(personId))
     routed.push(...linked.map(link => link.phase.name));

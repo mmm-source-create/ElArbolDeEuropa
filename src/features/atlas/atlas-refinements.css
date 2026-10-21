@@ -66,7 +66,7 @@ html[data-eade-theme] .wrap.wrap :is(.tree-toolbar-separator,.mapa-toolbar-separ
 html[data-eade-theme] .wrap.wrap .tree-scope-label{color:var(--eade-muted);font-size:var(--fs-2xs)}
 html[data-eade-theme] .wrap.wrap .minimap{border-color:var(--eade-border);background:color-mix(in srgb,var(--eade-paper-soft) 80%,transparent);box-shadow:none;transition:opacity .25s}
 @media (hover:hover) and (pointer:fine){
-  html[data-eade-theme] .wrap.wrap :is(.tree-toolbar,.mapa-toolbar,.minimap){opacity:.5}
+  html[data-eade-theme] .wrap.wrap :is(.tree-toolbar,.minimap){opacity:.5}
   html[data-eade-theme] .wrap.wrap :is(.workspace-tree-stage,.mapa-wrapper,.workspace-stage):is(:hover,:focus-within) :is(.tree-toolbar,.mapa-toolbar,.minimap){opacity:1}
 }
 html[data-eade-theme] .wrap.wrap :is(.territory-hint,.workspace-map-hint){color:var(--eade-muted)}

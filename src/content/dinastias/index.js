@@ -4,12 +4,14 @@ import {CASAS_ESCANDINAVAS,CONEXIONES_ESCANDINAVAS} from "./escandinavia-v212.js
 import {CASAS_V521} from "./grandes-casas-v521.js";
 import {CASAS_V523} from "./casas-v523.js";
 import {CASAS_V534} from "./casas-v534.js";
+import {ASCANIA_HISTORY} from './ascania.js';
 const MEDLANDS='https://fmg.ac/Projects/MedLands/index.htm';
 const RAH='https://historia-hispanica.rah.es/';
 const BRITANNICA='https://www.britannica.com/';
 
 // A house history is editorial context. Branches and matrimonial transfers are distinct relations.
 export const HISTORIA_DINASTIAS = {
+  Ascania:ASCANIA_HISTORY,
   ...CASAS_ESCANDINAVAS,
   ...CASAS_ALPINAS,
   ...CASAS_ADRIATICO,

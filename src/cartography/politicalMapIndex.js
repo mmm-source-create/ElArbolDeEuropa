@@ -92,6 +92,34 @@ export const COLLECTIVE_AUTHORITIES = Object.freeze([
 
 const MAP_GEOMETRY_PRECISION = 'El mapa detallado usa celdas cartográficas como aproximaciones regionales; no reconstruye por sí solo la frontera exacta del feudo en este año.';
 
+export const mapAuthoritySources=entry=>[...new Map((entry.claims||[entry.claim]).filter(Boolean)
+  .flatMap(claim=>claim.sources||[]).map(source=>[source.url+'|'+(source.locator||''),source])).values()];
+
+// One annual authority can have several reigns after an abdication or
+// restoration. Keep every original mandate/claim without repeating the holder.
+export function mergeMapAuthorityEntries(entries){
+  const rows=new Map();
+  for(const entry of entries){
+    const relationship=entry.relationship,crown=entry.crownRelation;
+    const key=JSON.stringify([entry.person?.id||entry.collective?.nombre||null,territorialIdentity(entry.territory),entry.kind,
+      entry.government?.titulo||entry.collective?.cargo||null,entry.paint!==false,
+      relationship?[relationship.id,relationship.type,relationship.subject,relationship.overlord]:null,
+      crown?[crown.id,crown.type,crown.subject,crown.holder]:null]);
+    const previous=rows.get(key);
+    if(!previous){rows.set(key,entry);continue;}
+    const governments=[...new Map([...(previous.governments||[previous.government]),...(entry.governments||[entry.government])]
+      .filter(Boolean).map(g=>[JSON.stringify(g),g])).values()];
+    const claims=[...new Map([...(previous.claims||[previous.claim]),...(entry.claims||[entry.claim])]
+      .filter(Boolean).map(claim=>[claim.id,claim])).values()];
+    rows.set(key,{...previous,governments,claims,
+      ids:[...new Set([...(previous.ids||[]),...(entry.ids||[])])],
+      mapScopes:[...new Set([...(previous.mapScopes||[]),...(entry.mapScopes||[])])],
+      mapSources:[...new Map([...(previous.mapSources||[]),...(entry.mapSources||[])].map(source=>[source.url+'|'+(source.locator||''),source])).values()],
+      mapNote:[...new Set([previous.mapNote,entry.mapNote].filter(Boolean))].join(' ')});
+  }
+  return [...rows.values()];
+}
+
 export function buildPoliticalMapIndex(personas, year, mapData = null, options = {}) {
   const regions = new Map();
   if (!Number.isInteger(year)) return regions;
@@ -133,6 +161,7 @@ export function buildPoliticalMapIndex(personas, year, mapData = null, options =
         regionalEvidence:true});
     }
   }
+  for(const [id,entries] of regions)regions.set(id,mergeMapAuthorityEntries(entries));
   return regions;
 }
 
@@ -145,7 +174,7 @@ export function inspectMapRegion(regionId, year, index, mapData = null) {
     return {...entry, mapSources: [...new Map(sources.map(source => [source.url, source])).values()],
       mapNote: [...new Set([entry.relationship?.note,entry.crownRelation?.note, ...local.map(scope => scope.note)].filter(Boolean))].join(' ')};
   }).sort((a,b) =>
-    Number(Boolean(b.claim?.sources.length)) - Number(Boolean(a.claim?.sources.length)) ||
+    Number(Boolean(mapAuthoritySources(b).length)) - Number(Boolean(mapAuthoritySources(a).length)) ||
     a.territory.localeCompare(b.territory, 'es'));
   return {
     regionId, year, entries: allEntries.filter(e => e.paint !== false),

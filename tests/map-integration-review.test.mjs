@@ -46,7 +46,7 @@ test('linked completion phases respect partitions, cadet branches and dated acqu
 test('Great Britain and Hanover no longer share the fallback grey; the Commonwealth is inspectable',()=>{
  assert.notDeepEqual(colors(1720,'London'),colors(1720,'Hanover'));
  assert.deepEqual(colors(1720,'Edinburgh'),colors(1720,'London'));
- assert.equal(REINO_COLOR['Gran Bretaña'],REINO_COLOR.Inglaterra);
+ assert.notEqual(REINO_COLOR['Gran Bretaña'],REINO_COLOR.Inglaterra);
  const weimar=colorTerritorioEnMapa({gobiernos:[]},'Sajonia-Weimar',1650);
  assert.match(weimar,/^#[0-9A-F]{6}$/i);assert.notEqual(weimar,'#5C5346');
  for(const [id,year,territory] of [['London',1650,'Inglaterra'],['Dublin',1655,'Irlanda'],['Edinburgh',1655,'Escocia']]){
@@ -60,9 +60,9 @@ test('personal maps show composite monarchies whole, with Portugal and the Burgu
  assert.deepEqual(philip,new Set([REINO_COLOR.España,REINO_COLOR.Portugal,BURGUNDIAN_COLOR]));
  assert.equal(personalColors('LEOP1HRE',1690).size,1);
  assert.equal(personalColors('FREDWIL2PRU',1789).size,1);
- assert.equal(personalColors('CHRISTIAN7DEN',1772).size,1);
+ assert.deepEqual(personalColors('CHRISTIAN7DEN',1772),new Set([REINO_COLOR.Dinamarca,colorTerritorioEnMapa(by.get('CHRISTIAN7DEN'),'Schleswig',1772)]));
  // From 1773 Holstein is his as an imperial duchy outside the Denmark-Norway rule.
- assert.deepEqual(personalColors('CHRISTIAN7DEN',1789),new Set([REINO_COLOR.Dinamarca,colorTerritorioEnMapa(by.get('CHRISTIAN7DEN'),'Holstein',1789)]));
+ assert.deepEqual(personalColors('CHRISTIAN7DEN',1789),new Set([REINO_COLOR.Dinamarca,...['Schleswig','Holstein'].map(t=>colorTerritorioEnMapa(by.get('CHRISTIAN7DEN'),t,1789))]));
  assert.notEqual(colorTerritorioEnMapa(by.get('CHRISTIAN7DEN'),'Holstein',1789),REINO_COLOR.Dinamarca);
  assert.deepEqual(personalColors('MARIATERESAHAB',1750),new Set([REINO_COLOR.Austria,BURGUNDIAN_COLOR]));
  // Transient personal unions keep their crowns apart, as Portugal does.

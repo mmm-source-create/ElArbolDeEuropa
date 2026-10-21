@@ -1,5 +1,5 @@
 import {EASTERN_EUROPE_COLORS} from './easternEuropeColors.js';
-import {ORANGE_NASSAU, POLAND_LITHUANIA_COLOR, BURGUNDIAN_COLOR, ENGLISH_CROWN_COLOR} from './mapColors.js';
+import {ORANGE_NASSAU, POLAND_LITHUANIA_COLOR, BURGUNDIAN_COLOR, ENGLISH_CROWN_COLOR, GREAT_BRITAIN_COLOR, SAVOY_COLOR} from './mapColors.js';
 import {authorityKind} from '../domain/government/authorityKind.js';
 import {reinadosActivos} from '../domain/government/reigns.js';
 import {fnv1a} from '../utils/hash.js';
@@ -275,8 +275,8 @@ export const REINO_COLOR = {
   Lituania: '#43298E',
   Milán: '#1a6684',
   Venecia: '#327FA8',
-  Saboya: '#596e9b',
-  Piamonte: '#596e9b',
+  Saboya: SAVOY_COLOR,
+  Piamonte: SAVOY_COLOR,
   Habsburgo: '#298E70',
   Brabante: '#568E29',
   Limburgo: '#298E84',
@@ -291,9 +291,8 @@ export const REINO_COLOR = {
   Portugal: '#298e47',
   Francia: '#295D8E',
   Inglaterra: '#7A4F3B',
-  // The kingdom created in 1707 continues England's swatch; Hanover, held in
-  // personal union, keeps a tone of its own.
-  'Gran Bretaña': '#7A4F3B',
+  // A related but distinct swatch marks the kingdom created in 1707.
+  'Gran Bretaña': GREAT_BRITAIN_COLOR,
   Hannover: '#B58A3C',
   Escocia: '#4B6C83',
   Bretaña: '#298E36',
@@ -593,9 +592,17 @@ export const MAP_GROUP_REVIEW = Object.freeze({
   'monarquia-hispanica-exterior':{personal:false,reason:'En el mapa personal se usa España; Portugal y los Países Bajos forman unidades propias.'},
   'monarquia-austriaca-exterior':{personal:true,excluye:FEUDOS_HERENCIA_BORGONONA,reason:'Monarquía austríaca: tierras austríacas, Bohemia, Hungría y dominios italianos; los Países Bajos forman una unidad propia.'},
   'dinamarca-noruega-exterior':{personal:true,reason:'Reinos unidos bajo dirección danesa desde 1537.'},
+  'monarquia-danesa-ducados':{personal:false,reason:'Dirección exterior de la monarquía; los ducados conservan identidad jurídica y sus propios colores personales.'},
 });
 
 const EXTERIOR_UNIONS = [
+  {
+    id:'monarquia-danesa-ducados',nombre:'Monarquía danesa',desde:1721,hasta:1800,
+    territoriosPorFecha:year=>new Set(['Dinamarca','Noruega','Schleswig',...(year>=1773?['Holstein']:[])]),
+    color:REINO_COLOR.Dinamarca,aplica:active=>active.has('Dinamarca')&&active.has('Schleswig'),
+    nota:'Schleswig reunido bajo la Corona desde 1721 y Holstein desde 1773, solo con mandato efectivo y superficie fechada. Mantienen leyes y estatutos ducales. No incorpora retrospectivamente las partes de Gottorp ni pinta la ocupación de 1713 como integración jurídica.',
+    fuente:'https://lex.dk/Slesvig-Holstens_historie_siden_1721',
+  },
   {
     id:'monarquia-premislida-exterior',nombre:'Dominios de Otakar II',desde:1253,hasta:1278,
     territorios:new Set(['Bohemia','Moravia','Austria','Ducado de Estiria','Carintia','Carniola']),

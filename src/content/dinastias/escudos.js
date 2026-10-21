@@ -1,5 +1,5 @@
 import {ESCUDOS_COMMONS} from './escudosCommons.js';
-// Arms of the principal houses. Every house shows a reviewed Wikimedia Commons
+// Arms of the principal houses. Every house shows a reviewed Commons or supplied
 // image with its credit; the layers remain only as a fallback drawing for a
 // house added without one. Arms changed over time and branches added
 // differences, which the note states when the image simplifies them.
@@ -17,6 +17,13 @@ const CASTILLA_LEON = {blason: 'Cuartelado de Castilla y León: 1.º y 4.º, de 
   capas: [['cuartelado', [CASTILLA, LEON, LEON, CASTILLA]]]};
 
 export const ESCUDOS = Object.freeze({
+  'Saboya-Carignano': {blason:'Armas compuestas de Saboya-Carignano, con escusón de Saboya diferenciado por una bordura dentada de plata.',capas:[['campo','gules'],['cruz','plata']],nota:'Representación de la rama de Carignano; el escudo reúne cuarteles territoriales y no corresponde a cada miembro en todas las épocas.'},
+  'Pallars': {blason:'De oro, un águila bicéfala de sable, cargada de un escusón de gules con tres pajas de oro en banda.',capas:[['campo','oro'],['figura','aguila','sable']],nota:'Se conserva el escudo de los condes de Pallars y se retira únicamente la corona exterior de la imagen propuesta.'},
+  'Baux': {blason:'De gules, una estrella de dieciséis rayos de plata.',capas:[['campo','gules']]},
+  'Avesnes': {blason:'Bandado de oro y gules.',capas:[['bandado','oro','gules']],nota:'Dibujo propio de mmc, aportado por su autor para el Atlas.'},
+  'FitzGerald': {blason:'De plata, un sotuer de gules.',capas:[['campo','plata']],nota:'Escudo de la línea de Kildare, después duques de Leinster. La rama de Desmond usó un sotuer de armiños; no son armas idénticas de todas las ramas.'},
+  'Bruce': {blason:'De oro, un sotuer y un jefe de gules.',capas:[['campo','oro']],nota:'Armas familiares de Bruce, distintas del león real que llevaron como reyes de Escocia.'},
+  'Ascania': {blason:'Burelado de sable y oro de diez piezas.',capas:[['fajado','sable','oro',10]],nota:'Armas antiguas de Ballenstedt asociadas al linaje. Las ramas de Sajonia, Brandeburgo y Anhalt añadieron o combinaron otros emblemas; este escudo no se atribuye como armas personales idénticas a todos sus miembros.'},
   'Capeto': {blason: 'De azur, sembrado de flores de lis de oro.', capas: FRANCIA_ANTIGUA,
     nota: 'Las armas de Francia «antigua», usadas por los reyes hasta Carlos V.'},
   'Valois': {blason: 'De azur, tres flores de lis de oro.', capas: FRANCIA_MODERNA,

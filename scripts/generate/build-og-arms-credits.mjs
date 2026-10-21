@@ -12,10 +12,12 @@ import {OG_FREE_LICENCE, ogArmsCreditFile} from '../../src/features/public/ogIma
 const escape = text => text.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
 const credits = new Map(CREDITOS_ESCUDOS.filter(c => !OG_FREE_LICENCE.test(c.licencia)).map(c => [c.archivo, c]));
 const dir = path.dirname(ogArmsCreditFile('/x.svg'));
-await fs.rm(dir, {recursive: true, force: true});
+const onlyMissing=process.argv.includes('--missing');
+if(!onlyMissing)await fs.rm(dir, {recursive: true, force: true});
 await fs.mkdir(dir, {recursive: true});
 for (const [archivo, c] of credits) {
-  const text = `<span foreground="#6B5A48">Escudo: ${escape(c.autor)} · ${escape(c.licencia)} · Wikimedia Commons</span>`;
+  if(onlyMissing&&await fs.access(ogArmsCreditFile(archivo)).then(()=>true,()=>false))continue;
+  const text = `<span foreground="#6B5A48">Escudo: ${escape(c.autor)} · ${escape(c.licencia)} · ${escape(c.procedencia||'Wikimedia Commons')}</span>`;
   await sharp({text: {text, font: 'Georgia 17', width: 600, align: 'centre', rgba: true, dpi: 72}}).png().toFile(ogArmsCreditFile(archivo));
 }
 console.log(`Créditos para tarjetas: ${credits.size}`);

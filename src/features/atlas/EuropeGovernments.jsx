@@ -9,7 +9,8 @@ import {FILTER_REGIONS,regionResolver} from '../../domain/filters/filterRegions.
 const {personRegion}=regionResolver(componentesDe);
 // Entities of the government table that are not components of a mapped root.
 const ENTITY_REGION={
- 'Monarquía Hispánica':0,'Monarquía de los Habsburgo austríacos':3,'Dinamarca-Noruega':5,
+ 'Monarquía Hispánica':0,'Monarquía de los Habsburgo austríacos':3,'Dinamarca-Noruega':5,'Monarquía danesa':5,
+ 'Anhalt-Dessau':3,'Anhalt-Zerbst':3,'Sajonia-Lauenburgo':3,'Schleswig':5,
  'Urgel':0,'Castellbó':0,'Gandía':0,'Brasil':0,
  'Montbéliard':1,'Saint-Pol':1,'Soissons':1,'Albret':1,'Alençon':1,'Angulema':1,'Anjou':1,'Aquitania':1,'Armagnac':1,'Artois':1,'Bearne':1,'Berry':1,'Borbón':1,'Borgoña':1,'Bretaña':1,'Champaña':1,'Clermont':1,'Condado de Borgoña':1,'Dreux':1,'Ducado de Auvernia':1,'Estados Belgas Unidos':1,'Estados de Holanda':1,'Foix':1,'Guisa':1,'La Marche':1,'Luxemburgo':1,'Maine':1,'Namur':1,'Nevers':1,'Normandía':1,'Orleans':1,'Penthièvre':1,'Poitou':1,'Provenza':1,'República Bátava':1,'República francesa':1,'Rethel':1,'Toulouse':1,'Valois':1,'Vendôme':1,'Évreux':1,
  'Northumbria':2,'Huntingdon':2,'Galloway':2,'Carrick':2,'Annandale':2,'Clanricarde':2,'Condado de Clancare':2,'Condado de Desmond':2,'Condado de Thomond':2,'Condado de Tyrconnell':2,'Condado de Tyrone':2,'Condado de Ulster':2,'Connacht':2,'Desmond':2,'Kildare':2,'Leinster':2,'Ormond':2,'Richmond':2,'Thomond':2,'Tír Chonaill':2,'Tír Eoghain':2,'York':2,
