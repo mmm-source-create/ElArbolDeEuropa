@@ -192,7 +192,7 @@ export function ModalProyecto({ seccion, onClose, persona, personasVista = PERSO
               <h3>Cartografía</h3>
               <p>Gracias a <a href="https://www.mapchart.net/" target="_blank" rel="noreferrer">MapChart <ExternalLink size={12} /></a>, cuya base cartográfica se ha adaptado para representar territorios históricos dentro del proyecto.</p>
               <h3>Heráldica</h3>
-              <p>Gracias a <a href="https://heraldicon.org/" target="_blank" rel="noreferrer">Heráldico (Heraldicon) <ExternalLink size={12} /></a>, la herramienta con la que mmc ha creado los escudos de Avesnes, Saluzzo, Kosača, Carafa y Babenberg aportados al Atlas. Cada dibujo conserva su autoría y sus condiciones de uso en los créditos.</p>
+              <p>Gracias a <a href="https://heraldicon.org/" target="_blank" rel="noreferrer">Heraldicon <ExternalLink size={12} /></a>, la herramienta con la que mmc ha creado los escudos propios aportados al Atlas. Cada dibujo conserva su autoría y sus condiciones de uso en los créditos.</p>
               <h3>Correcciones y aportaciones</h3>
               {correos.length ? (
                 <p>Si encuentras un fallo, puedes escribir a {correos.map((correo, index) => <React.Fragment key={correo}>{index ? ", " : ""}<a href={`mailto:${correo}`}>{correo}</a></React.Fragment>)}.</p>

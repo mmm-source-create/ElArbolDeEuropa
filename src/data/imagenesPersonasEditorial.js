@@ -1,0 +1,107 @@
+// Selección con atribuciones y cronología de la obra, sin confundirlas con las fechas del personaje.
+export const IMAGENES_EDITORIAL = {
+  "ELEANORAQUIT": {
+    "encuadre": "50% 28%",
+    "alt": "Miniatura identificada como Leonor de Aquitania",
+    "tipo": "Miniatura de identificación tradicional",
+    "obra": "Leonor de Aquitania · miniatura reproducida en una publicación moderna",
+    "autor": "Autor de la miniatura no identificado; reproducción recogida por Guus Pikkemaat",
+    "archivo": "/personas-img/ELEANORAQUIT.webp",
+    "fuente": "Wikimedia Commons",
+    "fuenteUrl": "https://commons.wikimedia.org/wiki/File:Eleonora_van_Aquitani%C3%AB.jpg",
+    "derechos": "Dominio público · PDM 1.0",
+    "derechosUrl": "https://creativecommons.org/publicdomain/mark/1.0/"
+  },
+  "JAMES1DUKEORMOND": {
+    "encuadre": "50% 15%",
+    "alt": "Retrato de James Butler, primer duque de Ormond",
+    "tipo": "Retrato contemporáneo",
+    "obra": "James Butler con el manto de la Orden de la Jarretera",
+    "autor": "Anónimo, a la manera de Peter Lely",
+    "fecha": "1682",
+    "institucion": "National Trust · inv. 1171123",
+    "archivo": "/personas-img/JAMES1DUKEORMOND.webp",
+    "fuente": "Wikimedia Commons",
+    "fuenteUrl": "https://commons.wikimedia.org/wiki/File:Peter_Lely_(1618-1680)_(style_of)_-_James_Butler_(1611%E2%80%931688),_1st_Duke_of_Ormonde,_in_Garter_Robes_-_1171123_-_National_Trust.jpg",
+    "derechos": "Dominio público · PDM 1.0",
+    "derechosUrl": "https://creativecommons.org/publicdomain/mark/1.0/"
+  },
+  "FRANCESCOBARBERINI": {
+    "encuadre": "50% 12%",
+    "alt": "Retrato del cardenal Francesco Barberini",
+    "tipo": "Retrato contemporáneo",
+    "obra": "Retrato del cardenal Francesco Barberini",
+    "autor": "Ottavio Leoni",
+    "fecha": "1624",
+    "archivo": "/personas-img/FRANCESCOBARBERINI.webp",
+    "fuente": "Wikimedia Commons",
+    "fuenteUrl": "https://commons.wikimedia.org/wiki/File:Francesco_Barberini.jpg",
+    "derechos": "Dominio público · PDM 1.0",
+    "derechosUrl": "https://creativecommons.org/publicdomain/mark/1.0/"
+  },
+  "ANTONIOBARBERINI": {
+    "encuadre": "50% 20%",
+    "alt": "Retrato del cardenal Antonio Barberini, el joven",
+    "tipo": "Retrato contemporáneo",
+    "obra": "Retrato del cardenal Antonio Barberini, el joven",
+    "autor": "Simone Cantarini",
+    "fecha": "c. 1629–1631",
+    "archivo": "/personas-img/ANTONIOBARBERINI.webp",
+    "fuente": "Wikimedia Commons",
+    "fuenteUrl": "https://commons.wikimedia.org/wiki/File:Simone_Cantarini_-_Portrait_of_Cardinal_Antonio_Barberini_junior.jpg",
+    "derechos": "Dominio público · PDM 1.0",
+    "derechosUrl": "https://creativecommons.org/publicdomain/mark/1.0/"
+  },
+  "IGNACIOLOYOLA": {
+    "encuadre": "50% 20%",
+    "alt": "Representación de Ignacio de Loyola",
+    "tipo": "Representación histórica",
+    "obra": "Ignacio de Loyola",
+    "autor": "Anónimo",
+    "fecha": "siglo XVI",
+    "archivo": "/personas-img/IGNACIOLOYOLA.webp",
+    "fuente": "Wikimedia Commons",
+    "fuenteUrl": "https://commons.wikimedia.org/wiki/File:Ignatius_Loyola.jpg",
+    "derechos": "Dominio público · PDM 1.0",
+    "derechosUrl": "https://creativecommons.org/publicdomain/mark/1.0/"
+  },
+  "BARTCOLLEONI": {
+    "encuadre": "50% 22%",
+    "alt": "Retrato póstumo de Bartolomeo Colleoni",
+    "tipo": "Retrato póstumo",
+    "obra": "Bartolomeo Colleoni",
+    "autor": "Giovanni Battista Moroni",
+    "fecha": "1566–1569",
+    "archivo": "/personas-img/BARTCOLLEONI.webp",
+    "fuente": "Wikimedia Commons",
+    "fuenteUrl": "https://commons.wikimedia.org/wiki/File:BartholomaeusColleoni1566-69.png",
+    "derechos": "Dominio público · PDM 1.0",
+    "derechosUrl": "https://creativecommons.org/publicdomain/mark/1.0/"
+  },
+  "MAURICEORANGE": {
+    "encuadre": "50% 18%",
+    "alt": "Retrato de Mauricio de Orange",
+    "tipo": "Retrato contemporáneo",
+    "obra": "Mauricio, príncipe de Orange",
+    "autor": "Escuela de Michiel Jansz. van Mierevelt",
+    "fecha": "1607",
+    "archivo": "/personas-img/MAURICEORANGE.webp",
+    "fuente": "Wikimedia Commons",
+    "fuenteUrl": "https://commons.wikimedia.org/wiki/File:School_of_Michiel_Jansz._van_Mierevelt_001.jpg",
+    "derechos": "Dominio público · PDM 1.0",
+    "derechosUrl": "https://creativecommons.org/publicdomain/mark/1.0/"
+  },
+  "FREDERICKHENRYORANGE": {
+    "encuadre": "50% 18%",
+    "alt": "Retrato de Federico Enrique de Orange",
+    "tipo": "Retrato contemporáneo",
+    "obra": "Federico Enrique, príncipe de Orange",
+    "autor": "Anthony van Dyck",
+    "fecha": "c. 1629–1630",
+    "archivo": "/personas-img/FREDERICKHENRYORANGE.webp",
+    "fuente": "Wikimedia Commons",
+    "fuenteUrl": "https://commons.wikimedia.org/wiki/File:FrederickHenryPrinceOfOrange.jpg",
+    "derechos": "Dominio público · PDM 1.0",
+    "derechosUrl": "https://creativecommons.org/publicdomain/mark/1.0/"
+  }
+};
