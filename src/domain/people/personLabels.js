@@ -1,4 +1,5 @@
 import {territoriosDe} from '../genealogy/personAccessors.js';
+import {dynastyAliasesFor} from '../../data/dynastyNames.js';
 const LATIN_EXTENDED_FOLD = Object.freeze({
   "ß": "ss", "ẞ": "SS",
   "ł": "l", "Ł": "L",
@@ -60,6 +61,7 @@ export function textoBusquedaPersona(persona) {
     persona.sobrenombre,
     persona.titulo,
     persona.dinastia,
+    ...dynastyAliasesFor(persona.dinastia),
     ...territoriosDe(persona),
   ].filter(Boolean).join(" ");
 }

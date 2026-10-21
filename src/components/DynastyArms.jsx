@@ -133,5 +133,6 @@ export function ArmsCredit({dinastia, className = ''}) {
     {' · '}{imagen.licenciaUrl ? <a href={imagen.licenciaUrl} target="_blank" rel="noreferrer license">{imagen.licencia}</a> : imagen.licencia}
     {' · '}{imagen.procedencia||'Wikimedia Commons'}
     {imagen.modificaciones && <span> · {imagen.modificaciones}</span>}
+    {imagen.fuentesAdicionales?.map(f=><span key={f.fuente}> · <a href={f.fuente} target="_blank" rel="noreferrer">{f.titulo} · {f.autor}</a>{' · '}<a href={f.licenciaUrl} target="_blank" rel="noreferrer license">{f.licencia}</a></span>)}
   </small>;
 }

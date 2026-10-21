@@ -7,7 +7,7 @@ export const GRUPOS_DINASTICOS_GENEALOGICOS = {
   Capeto: [
     "Capeto", "Anjou", "Anjou-Durazzo", "Anjou-Hungría", "Anjou-Tarento",
     "Artois", "Borbón", "Borbón-Condé", "Borbón-Parma", "Borbón-Orleans", "Borgoña", "Capeto-Évreux",
-    "Clermont", "Courtenay", "Dreux", "Évreux", "Valois",
+    "Clermont", "Courtenay", "Dreux", "Montfort-Bretaña", "Borgoña-Portugal", "Évreux", "Valois",
     "Valois-Alençon", "Valois-Angulema", "Valois-Borgoña", "Valois-Orleans",
   ],
   Habsburgo: ["Habsburgo", "Habsburgo-Lorena"],
@@ -40,7 +40,7 @@ export const GRUPOS_DINASTICOS_REGIONALES = {
   "Casas francesas": [
     "Albret", "Amboise", "Armagnac", "Auvernia", "Bar", "Beauvau", "Chambly",
     "Avaugour", "Boulogne", "Brienne", "Châtillon", "Comminges", "Dammartín", "Estrées", "Gabarret",
-    "Grailly", "Guilhem", "Laval", "Montfort", "Montoire", "Poitiers",
+    "Grailly", "Guilhem", "Laval", "Montoire", "Poitiers",
     "Rohan", "Sabran", "Taillefer", "Talleyrand-Périgord", "Thouars", "Toulouse", "Trencavel",
   ],
   "Casas germánicas": [
@@ -67,12 +67,14 @@ export const GRUPOS_DINASTICOS = {
   Borbón:["Borbón","Borbón-Condé","Borbón-Orleans","Borbón-Parma"],
   Valois:["Valois","Valois-Alençon","Valois-Angulema","Valois-Borgoña","Valois-Orleans"],
   Anjou:["Anjou","Anjou-Durazzo","Anjou-Hungría","Anjou-Tarento"],
+  Dreux:["Dreux","Montfort-Bretaña"],
+  "Borgoña":["Borgoña","Borgoña-Portugal"],
   ...GRUPOS_DINASTICOS_REGIONALES,
 };
 
 export const DINASTIAS_DESTACADAS = [
   "Capeto", "Habsburgo", "Ivrea", "Barcelona", "Plantagenet", "Tudor", "Estuardo",
-  "Avís", "Braganza", "Alfonsina", "Árpád", "Piast", "Jagellón", "Vasa",
+  "Avís", "Braganza", "Borgoña-Portugal", "Árpád", "Piast", "Jagellón", "Vasa",
   "Bagrationi", "Rurikida", "Přemysl", "Hohenstaufen", "Wittelsbach", "Luxemburgo",
   "Hohenzollern", "Nassau", "Welf", "Wettin", "Oldemburgo", "Paleólogo", "Saboya",
   "Lorena", "Brabante", "Champaña", "Foix", "Dampierre", "Baux",

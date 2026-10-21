@@ -11,6 +11,7 @@ Object.assign(parents,{
   'Anjou-Durazzo':['Anjou'],'Anjou-Hungría':['Anjou'],'Anjou-Tarento':['Anjou'],
   'Saboya-Carignano':['Saboya'],'Saboya-Nemours':['Saboya'],
   'Hannover':['Welf'],'Holstein-Gottorp':['Oldemburgo'],
+  'Montfort-Bretaña':['Dreux'],'Borgoña-Portugal':['Borgoña'],
   // The double name records a marriage and descent from two houses.
   'Habsburgo-Lorena':['Habsburgo','Lorena'],
 });

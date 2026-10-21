@@ -13,6 +13,26 @@ import './dynasty.css';
 import DynastyCard from './DynastyCard.jsx';
 import '../../styles/theme.css';
 
+function DynastyConnection({branch:r,internal=false}) {
+  return <section id={r.id} className="dynasty-connection" aria-label={`${r.etiqueta} · ${r.periodo}`}>
+    <span className="dynasty-connection-label">{r.etiqueta} · {r.periodo}</span>
+    {internal&&<h3>{r.fundador.nombre}</h3>}
+    <p>{r.texto}</p>
+    <div className="public-entity-members">{r.personas.map(p=><a key={p.id} href={`/es/persona/${p.slug}`}>{p.nombre}</a>)}</div>
+    <a className="public-entity-action" href={r.arbol?.ids?.length>1?connectionUrl(r.arbol.ids,r.arbol.criterion):`/es/persona/${r.fundador.slug}?atlas=1`}>Ver la conexión en el árbol <ArrowRight size={12}/></a>
+  </section>;
+}
+
+function DynastyHouseGroup({title,items,relationship,branches}) {
+  if(!items?.length)return null;
+  return <div className="dynasty-house-group"><h3>{title}</h3><div className="public-entity-grid">{items.map(item=>{
+    const connections=branches.filter(r=>item.conexiones?item.conexiones.includes(r.id):r.origen===item.nombre||r.destino===item.nombre);
+    return <DynastyCard key={item.slug} item={item} headingLevel={3} relationship={relationship} showMembers={!connections.length}>
+      {!!connections.length&&connections.map(r=><DynastyConnection key={r.id} branch={r}/>)}
+    </DynastyCard>;
+  })}</div></div>;
+}
+
 export default function DynastyPage({slug,initialData=null}) {
   const {data:d,loading,error}=useJson(`/dinastias-meta/${encodeURIComponent(slug)}.json`,initialData);
   const [query,setQuery]=useState('');
@@ -21,6 +41,10 @@ export default function DynastyPage({slug,initialData=null}) {
   usePublicMeta(entityMeta('dinastia',d,slug));
   const atlas=`/es/dinastia/${d?.slug||slug}?atlas=1`;
   const escudo=escudoDe(d?.nombre);
+  const branches=d?.ramas||[];
+  const internalBranches=branches.filter(r=>r.origen===d.nombre&&r.destino===d.nombre);
+  const relationCount=(d?.casasOrigen?.length||0)+(d?.casasDerivadas?.length||0)+(d?.casasConectadas?.length||0)+internalBranches.length;
+  const hasConnections=relationCount>0||branches.length>0;
   return <div className="public-site"><SiteHeader pathname={`/es/dinastia/${slug}`} prerendered={Boolean(initialData)}/><main className="public-main dynasty-page">
     <nav className="public-breadcrumbs" aria-label="Migas de pan"><a href="/es/">Inicio</a><span>›</span><a href="/es/dinastias">Dinastías</a><span>›</span><span aria-current="page">{d?.nombre||'Ficha'}</span></nav>
     {loading?<ReadingSkeleton kind="entity-body"/>:error||!d?<section className="public-error"><h1>Ficha no disponible</h1><p>No se ha podido cargar esta casa.</p><a href="/es/dinastias">Volver al catálogo de dinastías</a></section>:<>
@@ -28,18 +52,21 @@ export default function DynastyPage({slug,initialData=null}) {
         {escudo?<figure className="dynasty-hero-figure"><DynastyArms dinastia={d.nombre} size={76} className="dynasty-hero-arms"/></figure>:<div className="public-page-icon"><Shield size={22}/></div>}<span>Casas y linajes · {d.editorial?'Historia de la dinastía':'Personas del Atlas'}</span>
         <h1>{d.nombre}</h1><p>{d.resumen||'Explora los miembros de esta casa y los territorios vinculados a sus gobiernos registrados.'}</p>
         {escudo&&<p className="dynasty-blazon"><b>Armas.</b> {escudo.blason}{escudo.nota&&<small> {escudo.nota}</small>}</p>}
-        <div className="dynasty-counts"><span><b>{d.total}</b> personas registradas</span><span><b>{d.ramas.length}</b> ramas y conexiones descritas</span></div>
+        <div className="dynasty-counts"><span><b>{d.total}</b> {d.total===1?'persona registrada':'personas registradas'}</span><span><b>{relationCount}</b> {relationCount===1?'rama o conexión':'ramas y conexiones'}</span></div>
         <a className="public-primary" href={atlas}>Explorar esta casa en el Atlas <ArrowRight size={15}/></a>
       </header>
       <nav className="dynasty-nav" aria-label="Secciones de la dinastía">
-        {!!(d.casasOrigen?.length||d.casasDerivadas?.length)&&<a href="#casas">Casas de origen y ramas</a>}
-        {d.editorial&&<a href="#historia">Historia de la casa</a>}{!!d.ramas.length&&<a href="#ramas">Ramas y conexiones</a>}<a href="#miembros">Personas</a>{!!d.fuentes.length&&<a href="#fuentes">Bibliografía</a>}
+        {hasConnections&&<a href="#casas">Casas de origen y ramas</a>}
+        {d.editorial&&<a href="#historia">Historia de la casa</a>}<a href="#miembros">Personas</a>{!!d.fuentes.length&&<a href="#fuentes">Bibliografía</a>}
       </nav>
-      {!!(d.casasOrigen?.length||d.casasDerivadas?.length)&&<section id="casas" className="public-section">
-        <div className="public-section-heading"><div><span>Una familia y sus distintas casas</span><h2>Casas de origen y ramas</h2></div></div>
-        <p className="dynasty-intro">Los vínculos siguen la rama familiar descrita. Algunas fichas, como Anjou, Borbón, Courtenay o Montfort, reúnen también linajes homónimos anteriores: la relación no se extiende a todos sus miembros.</p>
-        {!!d.casasOrigen?.length&&<><h3>Casa de origen</h3><div className="public-entity-grid">{d.casasOrigen.map(item=><DynastyCard key={item.slug} item={item} headingLevel={3} relationship="Casa de origen"/>)}</div></>}
-        {!!d.casasDerivadas?.length&&<><h3>Ramas de esta casa</h3><div className="public-entity-grid">{d.casasDerivadas.map(item=><DynastyCard key={item.slug} item={item} headingLevel={3} relationship="Rama de esta casa"/>)}</div></>}
+      {hasConnections&&<section id="casas" className="public-section">
+        <span id="ramas" className="dynasty-anchor" aria-hidden="true"/>
+        <div className="public-section-heading"><div><span>Genealogía, herencias y alianzas</span><h2>Casas de origen y ramas</h2></div></div>
+        <p className="dynasty-intro">El parentesco entre casas y las conexiones por matrimonio o herencia se reúnen aquí. Cada vínculo documentado explica su origen y permite seguir a sus protagonistas en el árbol.</p>
+        <DynastyHouseGroup title="Casa de origen" items={d.casasOrigen} relationship="Casa de origen" branches={branches}/>
+        <DynastyHouseGroup title="Ramas de esta casa" items={d.casasDerivadas} relationship="Rama de esta casa" branches={branches}/>
+        <DynastyHouseGroup title="Alianzas y transmisiones" items={d.casasConectadas} relationship="Casa conectada" branches={branches}/>
+        {!!internalBranches.length&&<div className="dynasty-house-group"><h3>Ramas y conexiones internas</h3><div className="dynasty-branches">{internalBranches.map(r=><article key={r.id} className="public-content-card dynasty-branch"><DynastyConnection branch={r} internal/></article>)}</div></div>}
       </section>}
       {d.editorial?<section id="historia" className="dynasty-history">
         <article className="public-content-card"><span>La formación de una casa</span><h2>Origen</h2><p>{d.origen}</p></article>
@@ -47,14 +74,6 @@ export default function DynastyPage({slug,initialData=null}) {
         <article className="public-content-card"><span>Continuidades y cambios</span><h2>Legado</h2><p>{d.legado}</p></article>
       </section>:<p className="public-catalog-note">Esta ficha reúne los datos registrados en el Atlas. La historia editorial de esta casa se incorporará en futuras ampliaciones.</p>}
       {!!d.protagonistas.length&&<section className="public-section"><div className="public-section-heading"><div><span>Personas que conectan la historia</span><h2>Protagonistas y enlaces</h2></div></div><div className="public-person-grid">{d.protagonistas.map(p=><PersonaMiniCard key={p.id} persona={p} compact/>)}</div></section>}
-      {!!d.ramas.length&&<section id="ramas" className="public-section"><div className="public-section-heading"><div><span>Genealogía y transmisión del patrimonio</span><h2>Ramas y conexiones</h2></div></div>
-        <p className="dynasty-intro">Cada vínculo indica si nace una rama de la casa o si un matrimonio transmite derechos a otra familia. Las personas enlazadas permiten seguir la conexión en el árbol.</p>
-        <div className="dynasty-branches">{d.ramas.map(r=><article id={r.id} key={r.id} className="public-content-card dynasty-branch">
-          <span>{r.etiqueta} · {r.periodo}</span><h3>{r.origen===r.destino?`${r.origen} · ${r.fundador.nombre}`:<><a href={`/es/dinastia/${r.origenSlug}`}>{r.origen}</a><span aria-hidden="true"> → </span><a href={`/es/dinastia/${r.destinoSlug}`}>{r.destino}</a></>}</h3>
-          <p>{r.texto}</p><div className="public-entity-members">{r.personas.map(p=><a key={p.id} href={`/es/persona/${p.slug}`}>{p.nombre}</a>)}</div>
-          <a className="public-entity-action" href={r.arbol?.ids?.length > 1 ? connectionUrl(r.arbol.ids,r.arbol.criterion) : `/es/persona/${r.fundador.slug}?atlas=1`}>Ver el origen de esta rama en el árbol <ArrowRight size={12}/></a>
-        </article>)}</div>
-      </section>}
       {!!d.territorios.length&&<section className="public-section"><div className="public-section-heading"><div><span>El contexto territorial</span><h2>Territorios vinculados</h2></div></div><div className="public-entity-members">{d.territorios.map(t=><a key={t} href={`/es/territorio/${slugPublico(t)}`}>{t}</a>)}</div></section>}
       <section id="miembros" className="public-section"><div className="public-section-heading"><div><span>Miembros registrados en esta casa</span><h2>Personas</h2></div></div>
         <label className="public-search"><Search size={16}/><input aria-label="Buscar personas de esta casa" placeholder="Buscar nombre, título o nombre alternativo…" value={query} onChange={e=>{setQuery(e.target.value);setLimit(36);}}/><span role="status">{members.length}</span></label>

@@ -64,7 +64,7 @@ export const ACCENTS = {
   "Přemysl":"#6b56a5","Árpád":"#d47e4c","Piast":"#b772a6","Habsburgo":"#c14c4c",
   "Anjou":"#474a8e","Paleólogo":"#9B3E6E","Wittelsbach":"#517b9d","Hohenstaufen":"#946B3D",
   "Luxemburgo":"#175180","Jagellón":"#2c6748","Familias menores":"#71717A","Capeto":"#1f1a99",
-  "Borgoña":"#8C5A2B","Barcelona":"#A13D3D","Brabante":"#3D7A5C","Visconti":"#6B7280","Alfonsina":"#B08628",
+  "Borgoña":"#8C5A2B","Barcelona":"#A13D3D","Brabante":"#3D7A5C","Visconti":"#6B7280","Borgoña-Portugal":"#B08628",
   "Borbón":"#3B4E9E","Courtenay":"#7A4E9E","Valois":"#5A7EA8","Ivrea":"#acb055","Trastámara":"#e1de3e","Avís":"#4ad0ac",
   "Plantagenet":"#7B4F32","Sforza":"#486B8A","Borja":"#7A375B","Braganza":"#3E7563",
   "Gonzaga":"#7D6840","Otras dinastías":"#71717A",

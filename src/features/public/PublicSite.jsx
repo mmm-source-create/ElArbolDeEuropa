@@ -69,8 +69,8 @@ const INFO_PAGES = {
         ["CC BY-SA 4.0", "https://creativecommons.org/licenses/by-sa/4.0/"]
       ]},
       { id: "escudos", title: "Escudos: autores y licencias", paragraphs: [
-        "Los escudos proceden de Wikimedia Commons, salvo Avesnes, obra propia de mmc aportada por su autor para su uso en el Atlas. Esta autorización no se presenta como una licencia libre. Cada ficha indica la procedencia, autor y licencia o autorización, y la imagen para compartir lleva su crédito escrito. Las adaptaciones, como la retirada de la corona exterior de Pallars y el encuadre del estandarte de los Přemysl, se indican en sus créditos."
-      ], links: CREDITOS_ESCUDOS.map(c => [`${c.dinastia} · ${c.autor} · ${c.licencia}`, c.fuente])},
+        "Los dibujos proceden de Wikimedia Commons, de WappenWiki y de las aportaciones de mmc realizadas con Heráldico. Cada imagen conserva su autoría, procedencia y licencia o autorización de uso. Las obras propias de mmc se utilizan con su autorización para el Atlas. Zrinski conserva la licencia CC BY-NC-SA 3.0 de WappenWiki. Las fichas describen las adaptaciones, como la retirada de coronas exteriores o la composición del león coronado de Nassau, y las imágenes para compartir incorporan sus créditos."
+      ], links: CREDITOS_ESCUDOS.flatMap(c => [[`${c.dinastia} · ${c.autor} · ${c.licencia}`, c.fuente],...(c.fuentesAdicionales||[]).map(f=>[`${c.dinastia} · ${f.titulo} · ${f.autor} · ${f.licencia}`,f.fuente])])},
     ],
   },
   agradecimientos: {
@@ -85,6 +85,9 @@ const INFO_PAGES = {
       { title: "Cartografía", paragraphs: [
         "La representación territorial utiliza como base cartográfica material de MapChart, adaptado para el proyecto bajo sus condiciones de atribución."
       ], links: [["MapChart", "https://www.mapchart.net/"]]},
+      { title: "Heráldica", paragraphs: [
+        "Gracias a Heráldico (Heraldicon), la herramienta con la que mmc ha creado y aportado los escudos de Avesnes, Saluzzo, Kosača, Carafa y Babenberg. La autoría y las condiciones de uso de cada dibujo se indican en sus créditos."
+      ], links: [["Heráldico · Heraldicon", "https://heraldicon.org/"]]},
     ],
   },
 };
@@ -130,7 +133,7 @@ const ROMANOS = {10: "X", 11: "XI", 12: "XII", 13: "XIII", 14: "XIV", 15: "XV", 
 function textoCatalogoItem(item, tipo) {
   if (tipo === "personas") return textoBusquedaPersona(item);
   if (tipo === "historias") return [item.titulo, item.subtitulo, item.descripcion].filter(Boolean).join(" ");
-  return [item.nombre, ...(item.miembros || []).map((p) => p.nombre)].filter(Boolean).join(" ");
+  return [item.nombre, ...(item.aliases||[]), ...(item.miembros || []).map((p) => p.nombre)].filter(Boolean).join(" ");
 }
 
 export function CatalogPage({ tipo }) {

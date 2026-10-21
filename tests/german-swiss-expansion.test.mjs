@@ -21,7 +21,9 @@ test('las casas solicitadas tienen archivo, crédito y comparten los escudos rep
   for (const h of ['Anjou-Durazzo','Jagellón','Hetúmida','Holstein-Gottorp','Vasa','Grifo','Piast','Přemysl','Dunkeld']) {
     const image = escudoDe(h)?.imagen;
     assert.ok(image?.autor && image.licencia && image.fuente,h);
-    assert.ok(read('public'+image.archivo).includes('<svg'),h);
+    const file=fs.readFileSync(new URL('../public'+image.archivo,import.meta.url));
+    if(image.archivo.endsWith('.svg'))assert.ok(file.toString('utf8').includes('<svg'),h);
+    else assert.equal(file.subarray(1,4).toString('ascii'),'PNG',h);
   }
   assert.equal(escudoDe('Hetúmida').imagen,escudoDe('Habsburgo').imagen);
   assert.equal(escudoDe('Dunkeld').imagen,escudoDe('Estuardo').imagen);

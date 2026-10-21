@@ -32,12 +32,12 @@ test('la cabecera de la dinastía centra título, resumen y blasón', () => {
 test('Gorizia y los Ludovingios tienen escudo, y las casas duplicadas se fusionan', () => {
   assert.equal(escudoDe('Gorizia').imagen.titulo, 'Arms of the house of Gorizia.svg');
   assert.equal(escudoDe('Ludovingios').imagen.archivo, escudoDe('Hesse').imagen.archivo);
-  assert.equal(Object.keys(ESCUDOS).length, 81);
+  assert.equal(Object.keys(ESCUDOS).length, 97);
   const houses = new Set(PERSONAS.map(p => p.dinastia));
   for (const old of ['Ivrea', 'Lancaster', 'York', 'Armañac', 'Egmont', 'Folkung', 'Folkunga', 'Piasta', 'Wurtemberg', 'D’Avalos', 'Kantakouzenos', 'Roger', 'Douglas-Tudor', 'Tudor-Brandon', 'Salviati-Médici', 'Aragón-Urgel'])
     assert.ok(!houses.has(old), old);
   for (const id of ['ODONBORG', 'ADELBORG', 'MARGBORG', 'ISABBORG']) assert.equal(person(id).dinastia, 'Borgoña', id);
-  for (const id of ['PED1PORT', 'FERN1PORT', 'JUANPORT', 'BEATPORT']) assert.equal(person(id).dinastia, 'Alfonsina', id);
+  for (const id of ['PED1PORT', 'FERN1PORT', 'JUANPORT', 'BEATPORT']) assert.equal(person(id).dinastia, 'Borgoña-Portugal', id);
   assert.equal(person('OTON4BORG').dinastia, 'Ivrea-Borgoña');
   assert.equal(person('KNUT2SUE').dinastia, 'Erik');
   const vercel = JSON.parse(read('vercel.json'));

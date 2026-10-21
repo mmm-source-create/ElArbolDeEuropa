@@ -1,4 +1,5 @@
 import {ESCUDOS_COMMONS} from './escudosCommons.js';
+import {canonicalDynasty} from '../../data/dynastyAliases.js';
 // Arms of the principal houses. Every house shows a reviewed Commons or supplied
 // image with its credit; the layers remain only as a fallback drawing for a
 // house added without one. Arms changed over time and branches added
@@ -17,6 +18,22 @@ const CASTILLA_LEON = {blason: 'Cuartelado de Castilla y León: 1.º y 4.º, de 
   capas: [['cuartelado', [CASTILLA, LEON, LEON, CASTILLA]]]};
 
 export const ESCUDOS = Object.freeze({
+  'Barberini': {blason:'De azur, tres abejas de oro, puestas dos y una.',capas:[['campo','azur']]},
+  'Loyola': {blason:'De plata, dos lobos de sable afrontados a una caldera de sable suspendida de una cadena.',capas:[['campo','plata']],nota:'Armas del solar de Loyola, sin el cuartel de Oñaz de otras variantes.'},
+  'Borgoña': {blason:'Bandado de oro y azur, con bordura de gules.',capas:[['bandado','oro','azur'],['bordura','gules']],nota:'Armas antiguas de la casa ducal capeta de Borgoña.'},
+  'Artois': {blason:'De azur, sembrado de flores de lis de oro; lambel de gules cargado de castillos de oro.',capas:[...FRANCIA_ANTIGUA,['lambel','gules']],nota:'Modelo de las armas de Roberto de Artois.'},
+  'Bjälbo': {blason:'De azur, un león de oro brochante sobre tres franjas diagonales de plata, con corazones de gules.',capas:[['campo','azur'],['figura','leon','oro']],nota:'Modelo atribuido a Birger jarl; las ramas reales emplearon otras variantes.'},
+  'Châtillon': {blason:'De gules, tres palos de veros y jefe de oro.',capas:[['campo','gules']],nota:'Armas de los Châtillon-sur-Marne; un topónimo compartido no prueba una filiación común.'},
+  'Grailly': {blason:'De oro, una cruz de sable cargada de cinco veneras de plata.',capas:[['campo','oro'],['cruz','sable']],nota:'Modelo de las armas de Juan III de Grailly.'},
+  'Piccolomini': {blason:'De plata, una cruz de azur cargada de cinco crecientes de oro.',capas:[['campo','plata'],['cruz','azur']]},
+  'Colleoni': {blason:'Cortado de gules y plata, tres testículos puestos dos y uno, del uno en el otro.',capas:[['fajado','gules','plata',2]],nota:'Armas parlantes de los Colleoni.'},
+  'Borgoña-Portugal': {blason:'De plata, cinco escudetes de azur puestos en cruz y cargados de besantes de plata; bordura de gules con castillos de oro.',capas:[['campo','plata'],['escusones-portugal'],['bordura','gules'],['castillos-bordura']],nota:'Variante del siglo XIII, identificada como 1247 en el archivo de origen; las armas de la primera dinastía variaron durante su historia.'},
+  'Montfort-Bretaña': {blason:'De armiño.',capas:[['campo','plata']],nota:'Armas ducales de Bretaña utilizadas por la rama de Dreux-Montfort, distintas de las del antiguo linaje de Montfort-l’Amaury.'},
+  'Zrinski': {blason:'De gules, dos alas de sable unidas.',capas:[['campo','gules']],nota:'Modelo de la casa de Zrinski de WappenWiki.'},
+  'Saluzzo': {blason:'De plata, jefe de azur.',capas:[['campo','plata'],['jefe','azur']],nota:'Dibujo de mmc creado con Heráldico y aportado por su autor.'},
+  'Kosača': {blason:'Bandado de plata y gules.',capas:[['bandado','plata','gules']],nota:'Dibujo de mmc creado con Heráldico y aportado por su autor.'},
+  'Carafa': {blason:'De gules, tres fajas de plata.',capas:[['fajado','gules','plata',7]],nota:'Dibujo de mmc creado con Heráldico y aportado por su autor.'},
+  'Babenberg': {blason:'De gules, una faja de plata.',capas:[['campo','gules'],['faja','plata']],nota:'El escudo de Austria, empleado bajo los últimos Babenberg. Dibujo de mmc creado con Heráldico.'},
   'Saboya-Carignano': {blason:'Armas compuestas de Saboya-Carignano, con escusón de Saboya diferenciado por una bordura dentada de plata.',capas:[['campo','gules'],['cruz','plata']],nota:'Representación de la rama de Carignano; el escudo reúne cuarteles territoriales y no corresponde a cada miembro en todas las épocas.'},
   'Pallars': {blason:'De oro, un águila bicéfala de sable, cargada de un escusón de gules con tres pajas de oro en banda.',capas:[['campo','oro'],['figura','aguila','sable']],nota:'Se conserva el escudo de los condes de Pallars y se retira únicamente la corona exterior de la imagen propuesta.'},
   'Baux': {blason:'De gules, una estrella de dieciséis rayos de plata.',capas:[['campo','gules']]},
@@ -71,7 +88,7 @@ export const ESCUDOS = Object.freeze({
   'Brabante': {blason: 'De sable, un león rampante de oro.', capas: [['campo', 'sable'], ['figura', 'leon', 'oro']]},
   'Dampierre': {blason: 'De oro, un león rampante de sable.', capas: [['campo', 'oro'], ['figura', 'leon', 'sable']],
     nota: 'Las armas de Flandes.'},
-  'Nassau': {blason: 'De azur, sembrado de billetes de oro, un león rampante de oro.', capas: [['campo', 'azur'], ['sembrado', 'billete', 'oro', .1, 14], ['figura', 'leon', 'oro']]},
+  'Nassau': {blason: 'De azur, sembrado de billetes de oro, un león rampante de oro coronado del mismo, armado y linguado de gules.', capas: [['campo', 'azur'], ['sembrado', 'billete', 'oro', .1, 14], ['figura', 'leon', 'oro']],nota:'Al león del modelo Wapen Nassauw se añade la corona del modelo de Nassau-Saarbrücken.'},
   'La Marck': {blason: 'De oro, una faja jaquelada de plata y gules.', capas: [['campo', 'oro'], ['faja-jaquelada', 'plata', 'gules']]},
   'Saboya': {blason: 'De gules, una cruz de plata.', capas: [['campo', 'gules'], ['cruz', 'plata']]},
   'Médici': {blason: 'De oro, cinco roeles de gules y, en jefe, uno mayor de azur cargado de tres flores de lis de oro.', capas: [['campo', 'oro'], ['medici']],
@@ -81,8 +98,8 @@ export const ESCUDOS = Object.freeze({
     nota: 'Las fajas de Hungría, las armas antiguas del reino bajo los Árpád.'},
   'Přemysl': {blason: 'De plata, un águila de sable con llamas de gules.', capas: [['campo', 'plata'], ['figura', 'aguila', 'sable']],
     nota: 'El águila flamígera de san Wenceslao, emblema de los Přemyslidas. El reino de Bohemia llevó después el león de plata sobre gules.'},
-  'Piast': {blason: 'De gules, un águila de plata.', capas: [['campo', 'gules'], ['figura', 'aguila', 'plata']],
-    nota: 'El águila blanca de Polonia, coronada de oro desde Przemysł II.'},
+  'Piast': {blason: 'De gules, un águila de plata coronada, picada y armada de oro.', capas: [['campo', 'gules'], ['figura', 'aguila', 'plata']],
+    nota: 'Se conserva el águila coronada del modelo polaco y se retira la gran corona exterior del escudo.'},
   'Lusignan': {blason: 'Burelado de plata y azur.', capas: [['fajado', 'plata', 'azur', 10]],
     nota: 'Armas de la casa en Poitou; los reyes de Chipre añadieron un león de gules.'},
   'Oldemburgo': {blason: 'De oro, dos fajas de gules.', capas: [['fajado', 'oro', 'gules', 5]],
@@ -165,6 +182,6 @@ export const ESCUDOS = Object.freeze({
 
 const conImagen = new Map(Object.entries(ESCUDOS).map(([dinastia, escudo]) =>
   [dinastia, ESCUDOS_COMMONS[dinastia] ? {...escudo, imagen: ESCUDOS_COMMONS[dinastia]} : escudo]));
-export const escudoDe = dinastia => conImagen.get(dinastia) || null;
+export const escudoDe = dinastia => conImagen.get(canonicalDynasty(dinastia)) || null;
 // Credits for the licences page, one per house.
 export const CREDITOS_ESCUDOS = Object.entries(ESCUDOS_COMMONS).map(([dinastia, imagen]) => ({dinastia, ...imagen}));
