@@ -13,6 +13,7 @@ import {IMAGENES_PERSONAS} from '../../data/imagenesPersonas.js';
 import {usePublicMeta, PublicLayout, Breadcrumbs, useJson, PersonaMiniCard, rutaEntidad, personaDates} from './publicShared.jsx';
 import ProjectSupport from '../../components/ProjectSupport.jsx';
 import DynastyArms from '../../components/DynastyArms.jsx';
+import DynastyCard from './DynastyCard.jsx';
 import {CREDITOS_ESCUDOS} from '../../content/dinastias/escudos.js';
 import {textoBusquedaPersona, normalizarBusquedaPublica, slugPublico, etiquetaClaseGobierno} from '../../domain/people/personLabels.js';
 import {responsiveImage} from '../../utils/responsiveImage.js';
@@ -67,8 +68,8 @@ const INFO_PAGES = {
         ["MapChart", "https://www.mapchart.net/"],
         ["CC BY-SA 4.0", "https://creativecommons.org/licenses/by-sa/4.0/"]
       ]},
-      { id: "escudos", title: "Escudos de Wikimedia Commons", paragraphs: [
-        "Los escudos de las dinastías proceden de Wikimedia Commons. Se reproducen sin cambios en el dibujo; solo se retiraron metadatos de edición. Cada ficha de dinastía indica al pie el autor y la licencia de su escudo, y la imagen para compartir la lleva escrita. Todos los créditos se recogen aquí."
+      { id: "escudos", title: "Escudos: autores y licencias", paragraphs: [
+        "Los escudos proceden de Wikimedia Commons, salvo Avesnes, obra propia de mmc aportada por su autor para su uso en el Atlas. Esta autorización no se presenta como una licencia libre. Cada ficha indica la procedencia, autor y licencia o autorización, y la imagen para compartir lleva su crédito escrito. Las adaptaciones, como la retirada de la corona exterior de Pallars y el encuadre del estandarte de los Přemysl, se indican en sus créditos."
       ], links: CREDITOS_ESCUDOS.map(c => [`${c.dinastia} · ${c.autor} · ${c.licencia}`, c.fuente])},
     ],
   },
@@ -213,7 +214,7 @@ export function CatalogPage({ tipo }) {
 
         {!loading && !error && (tipo === "dinastias" || tipo === "territorios") && (
           <div className="public-entity-grid">
-            {filtrados.map((item) => (
+            {filtrados.map((item) => tipo === 'dinastias' ? <DynastyCard key={item.slug} item={item}/> : (
               <article key={item.slug} className="public-entity-card">
                 <div className="public-entity-card-head"><div className="public-entity-heading">{tipo === "dinastias" && <DynastyArms dinastia={item.nombre} size={30}/>}<div><span>{tipo === "dinastias" ? (item.editorial ? "Historia de la dinastía" : "Dinastía") : "Territorio"}</span><h2>{item.nombre}</h2></div></div><strong aria-label={`${item.total} personas`}>{item.total}<small aria-hidden="true">{item.total === 1 ? "persona" : "personas"}</small></strong></div>
                 {tipo === "dinastias" && item.resumen && <p className="public-muted public-dynasty-summary">{item.resumen}</p>}
@@ -223,7 +224,7 @@ export function CatalogPage({ tipo }) {
             ))}
           </div>
         )}
-        {!loading && !error && tipo === "dinastias" && <p className="public-catalog-note public-arms-note">Escudos de Wikimedia Commons. Autores y licencias en <a href="/es/licencias#escudos">Licencias</a>.</p>}
+        {!loading && !error && tipo === "dinastias" && <p className="public-catalog-note public-arms-note">Escudos: autores, procedencia y licencias en <a href="/es/licencias#escudos">Licencias</a>.</p>}
 
         {!loading && !error && tipo === "historias" && (
           <>

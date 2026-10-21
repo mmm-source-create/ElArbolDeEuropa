@@ -425,6 +425,12 @@ export function authorityMapScope(personId, territory, year) {
       note:'Ámbito conservador de gobierno efectivo: Austria bajo el Enns antes de 1462; sin superficie personal resuelta en 1462–1463; durante la ocupación húngara de 1485–1490 solo el núcleo conservador de Austria sobre el Enns. La atribución regional de la celda Linz no se fuerza desde el nombre de la ciudad. El título no acredita control de Viena ni absorbe Tirol o Austria Interior.'};
   }
   const germanSwiss = germanSwissScope(personId, territory, year);
+  if(territory==='Anhalt-Zerbst'&&['CHRISTIANANHALTZERBST','FRIEDRICHAUGUSTANHALT','JOHANNAELISAHOLST'].includes(personId)
+    &&year>=1742&&year<=1793)return {ids:['Zerbst','Jever'],
+      source:{title:'Förderverein Schloss Zerbst · Geschichte',url:'https://www.schloss-zerbst.de/html/geschichte.htm'},
+      note:'Solo los núcleos de Zerbst y la herencia de Jever que tengan capa activa en este año; no todas las particiones de Anhalt. La celda de Zerbst es una aproximación local, no la frontera del principado.'};
+  if(territory==='Anhalt-Dessau')return {ids:[],source:{title:'Deutsche Biographie · Johann Georg II.',url:'https://www.deutsche-biographie.de/sfz53314.html'},
+    note:'El gobierno está documentado, pero la capa conjunta de Anhalt no separa Dessau de Bernburg y Zerbst. No se convierte esa capa conjunta en posesión exclusiva del príncipe de Dessau.'};
   if (germanSwiss) return germanSwiss;
   const regional = composeRegionalAuthorityScopes([
     easternEuropeScope(personId, territory, year),

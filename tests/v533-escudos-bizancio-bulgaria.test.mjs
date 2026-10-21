@@ -47,7 +47,7 @@ test('los escudos propuestos llegan a sus casas, con crédito y archivo', () => 
   const files = new Set(fs.readdirSync(new URL('../public/escudos/', import.meta.url)));
   for (const c of CREDITOS_ESCUDOS) {
     assert.ok(files.has(c.archivo.replace('/escudos/', '')), c.dinastia);
-    assert.ok(c.autor && c.fuente.startsWith('https://commons.wikimedia.org/wiki/File:'), c.dinastia);
+    assert.ok(c.autor && c.fuente.startsWith(c.procedencia==='Aportación del autor'?'https://heraldicon.org/arms/':'https://commons.wikimedia.org/wiki/File:'), c.dinastia);
     if (!OG_FREE_LICENCE.test(c.licencia)) assert.ok(fs.existsSync(new URL(`../${ogArmsCreditFile(c.archivo)}`, import.meta.url)), c.dinastia);
   }
   assert.equal(files.size, new Set(CREDITOS_ESCUDOS.map(c => c.archivo)).size);

@@ -18,6 +18,7 @@ Las fechas son anuales e inclusivas. Una ruptura dentro del año puede conservar
 | Monarquía Hispánica, desde 1516 | Dominios efectivos; Portugal solo 1580–1640; provincias neerlandesas según sus gobiernos y control fechados | España: Castilla-León, Aragón, Valencia, Cataluña, Mallorca, Navarra y los reinos italianos en un color; Portugal y Borgoña-Países Bajos aparte |
 | Monarquía austríaca, desde 1526 | Dominios efectivos del mismo centro de gobierno, incluidos los Países Bajos austríacos cuando corresponda | Tierras austríacas, Corona de Bohemia, Corona húngara y dominios italianos en un color; Países Bajos austríacos aparte |
 | Dinamarca-Noruega, desde 1537 | Dirección monárquica común tras la reorganización de 1536–1537 | Un color |
+| Monarquía danesa y ducados | Schleswig desde 1721; Holstein desde 1773, solo con gobierno efectivo documentado | Los ducados conservan color propio y estatuto distinto del reino |
 | Castilla-León, desde 1230 | Corona común | Un color; los títulos siguen separados en el inspector |
 | Nueva Planta | Incluida en la monarquía, según el control documentado | Queda dentro de España; las fechas de 1707, 1715 y 1716 siguen en la regla |
 | Administración austro-bohemia, desde 1749 | Incluida en la monarquía austríaca | Dentro de la monarquía austríaca |
@@ -72,4 +73,14 @@ El mapa personal dejaba de ser legible en las monarquías compuestas: Felipe II 
 - Monarquía prusiana, Dinamarca-Noruega, Polonia-Lituania desde 1569, Nápoles-Sicilia borbónicas, estados saboyanos y borgoñones: un color cada uno.
 - Siguen separados, como Portugal: Otakar II, Luis I de Polonia y Hungría, Ladislao el Póstumo, Matías Corvino y los Jagellón de Bohemia-Hungría; los feudos franceses de los reyes de Inglaterra; las uniones personales que el panorama tampoco reúne (Inglaterra-Escocia antes de 1707, Gran Bretaña-Hannover, Kalmar, Navarra-Bearne-Foix).
 
-Los señoríos borgoñones sin mandato propio (Charolais, Cuijk, Mâcon) toman el color de su conjunto. Gran Bretaña continúa el color de Inglaterra desde 1707 y Hannover tiene uno propio; los territorios sin color de paleta reciben un tono estable derivado de su nombre en lugar de un gris común que los hacía parecer un solo Estado.
+Los señoríos borgoñones sin mandato propio (Charolais, Cuijk, Mâcon) toman el color de su conjunto. Gran Bretaña recibe desde 1707 un tono emparentado con el inglés pero distinto, y Hannover mantiene uno propio; los territorios sin color de paleta reciben un tono estable derivado de su nombre en lugar de un gris común que los hacía parecer un solo Estado.
+
+## Revisión de Hannover, Polonia-Lituania y los ducados daneses, 21 de octubre de 2026
+
+La revisión aplica los criterios de este documento y de la guía pública. No presupone que todas las uniones personales tuvieran el mismo funcionamiento.
+
+- **Hannover–Gran Bretaña, 1714–1800:** se mantienen separados. La coordinación militar y los intereses del soberano no constituyen una dirección exterior única permanente. La convención de Klosterzeven de 1757 muestra una negociación específica del ejército continental mientras continuaba la guerra británica. Véanse [National Army Museum](https://www.nam.ac.uk/explore/seven-years-war) y el [registro del tratado en el archivo de Baja Sajonia](https://www.arcinsys.niedersachsen.de/arcinsys/showArchivalDescriptionDetails.action?archivalDescriptionId=3436399&request_locale=en). No se usa la mera falta de integración administrativa como argumento: el criterio del panorama sigue siendo la dirección exterior.
+- **Polonia-Lituania antes de 1569:** las uniones y pactos anteriores se reconocen como antecedentes; no acreditan una unidad exterior continua que permita adelantar automáticamente el color en todos esos años. Se conserva 1569 como inicio documentado de política exterior común, según la [edición del acta y estudios del Parlamento polaco](https://wydawnictwo.sejm.gov.pl/publikacja/union-of-lublin-1569/). La revisión conserva los mapas personales existentes.
+- **Schleswig desde 1721 y Holstein desde 1773:** se incorporan al conjunto exterior danés con mandatos fechados. [Lex](https://lex.dk/Slesvig-Holstens_historie_siden_1721) distingue la incorporación de la parte de Gottorp en Schleswig de la introducción de legislación o administración del reino, que no ocurrió, y fecha la reunión de Holstein en 1773. Esta regla no modifica las particiones anteriores ni el color personal de los ducados. La ocupación de 1713–1720 sigue siendo una fase distinta de la incorporación jurídica.
+
+Saboya y Piamonte conservan su regla política y reciben un violeta más claro para distinguirse del azul francés. El cambio de paleta no crea una unión ni una frontera histórica.

@@ -22,7 +22,7 @@ import burgundianDataUrl from "../../../data/cartography/burgundian-locations.js
 import { loadTextAsset, loadJsonAsset, forgetTextAsset } from "../../utils/loadAsset.js";
 import { clampMapViewBox, clipMapToBounds, fittedMapViewBox, mapControlLimits, resizeMapViewBox, zoomMapViewBox } from "./mapViewport.js";
 import { pilotImperialFrameFor, pilotLocationContext, mapSourceReference } from "../../cartography/locationMapPilot.js";
-import { buildPoliticalMapIndex, inspectMapRegion } from "../../cartography/politicalMapIndex.js";
+import { buildPoliticalMapIndex, inspectMapRegion, mapAuthoritySources } from "../../cartography/politicalMapIndex.js";
 import { AUTHORITY_LABELS, mapAuthoritiesForPerson, mapAuthoritiesAcrossLife } from "../../cartography/mapAuthorities.js";
 import { PERSONAS } from "../../data/personas.js";
 import {europeMosaicAt} from '../../cartography/europePanorama.js';
@@ -493,6 +493,8 @@ export function MapaEuropa({ seleccion, anioGlobal = null, onSelectTerritorio, o
         {mapError ? <>No se ha podido cargar el mapa. <button className="nav-btn" onClick={() => setMapAttempt(n => n + 1)}>Reintentar</button></> : paintingLife ? "Reuniendo los territorios de esta vida…" : "Cargando mapa…"}
       </div>}
       <div className="mapa-toolbar" inert={!mapReady || paintingLife} aria-label="Controles del mapa">
+        {panorama && imperialOverlayIds.length>0 && <label className="mapa-dependency-toggle mapa-imperial-control"><input type="checkbox" checked={showEmpire}
+          disabled={!mapReady} onChange={event=>setShowEmpire(event.target.checked)}/> Mostrar Sacro Imperio</label>}
         <button type="button" className="nav-btn" disabled={!controlLimits.zoomOut} onClick={() => zoomBy(1 / MAP_ZOOM_FACTOR)} title={controlLimits.zoomOut ? 'Alejar mapa' : 'Límite del mapa de Europa'} aria-label="Alejar mapa"><ZoomOut size={13} /></button>
         <button type="button" className="nav-btn" onClick={resetView} title="Volver a Europa" aria-label="Volver a Europa"><RotateCcw size={12} /></button>
         <button type="button" className="nav-btn" disabled={!controlLimits.zoomIn} onClick={() => zoomBy(MAP_ZOOM_FACTOR)} title="Acercar mapa" aria-label="Acercar mapa"><ZoomIn size={13} /></button>
@@ -502,13 +504,9 @@ export function MapaEuropa({ seleccion, anioGlobal = null, onSelectTerritorio, o
         <button type="button" className="nav-btn" disabled={!controlLimits.down} onClick={() => panBy(0, MAP_PAN_STEP)} title="Mover mapa hacia abajo" aria-label="Mover mapa hacia abajo"><ArrowDown size={13} /></button>
         <button type="button" className="nav-btn" disabled={!controlLimits.right} onClick={() => panBy(MAP_PAN_STEP, 0)} title="Mover mapa a la derecha" aria-label="Mover mapa a la derecha"><ArrowRight size={13} /></button>
       </div>
-      {panorama && imperialOverlayIds.length>0 && <div className="mapa-imperial-control">
-        <label className="mapa-dependency-toggle"><input type="checkbox" checked={showEmpire}
-          disabled={!mapReady} onChange={event=>setShowEmpire(event.target.checked)}/> Mostrar Sacro Imperio</label>
-        {showEmpire && <small>Superposición dorada: ámbito jurídico aproximado, reconstruido para {IMPERIAL_FRAME_RANGE.from}–{IMPERIAL_FRAME_RANGE.through}. Los gobiernos territoriales siguen debajo y se pueden consultar. <a href="https://www.ieg-maps.uni-mainz.de/mapsp/mapp792d.htm" target="_blank" rel="noreferrer">Fuente</a></small>}
-      </div>}
       {panorama && <details className="mapa-color-legend" inert={!mapReady}>
         <summary>Cómo leer el mapa</summary>
+        {showEmpire && <p>Superposición dorada: ámbito jurídico aproximado, reconstruido para {IMPERIAL_FRAME_RANGE.from}–{IMPERIAL_FRAME_RANGE.through}. Los gobiernos territoriales siguen debajo y se pueden consultar. <a href="https://www.ieg-maps.uni-mainz.de/mapsp/mapp792d.htm" target="_blank" rel="noreferrer">Fuente del Sacro Imperio</a></p>}
         {MAP_READING_GUIDE.paragraphs.map(text=><p key={text}>{text}</p>)}
         {MAP_READING_GUIDE.examples.map(text=><p key={text}>{text}</p>)}
         <p><a href="/es/proyecto#como-leer-el-mapa">Criterios y referencias históricas</a></p>
@@ -565,20 +563,19 @@ export function MapaEuropa({ seleccion, anioGlobal = null, onSelectTerritorio, o
             <div>{entry.relationship ? (entry.relationship.type === 'feudo' ? 'Soberano del que depende el feudo: ' : 'Soberano al que se debe el tributo: ') : entry.crownRelation?'Autoridad superior: ':null}{entry.person ? <button type="button" className="mapa-region-person" onClick={() => onSelectPersona?.(entry.person.id)}>{entry.person.nombre}</button> : entry.collective?.nombre}</div>
             {entry.government?.soberano && <p>En nombre de {PERSONAS.find(p => p.id === entry.government.soberano)?.nombre || entry.government.soberano}. El gobierno superior se consulta en su ficha.</p>}
             {entry.kind === 'regional' && <small>La jurisdicción tiene fuentes territoriales; el mandato de su gobernante en este año sigue pendiente de documentar.</small>}
-            {entry.government?.nota && <p>{entry.government.nota}</p>}
+            {[...new Set((entry.governments||[entry.government]).map(g=>g?.nota).filter(Boolean))].map(note=><p key={note}>{note}</p>)}
             {entry.mapNote && <p>{entry.mapNote}</p>}
             {[...new Map((entry.mapSources || []).map(mapSourceReference).map(source => [source.url, source])).values()].map(source => <a key={source.url} href={source.url} target="_blank" rel="noreferrer">{source.title || source.label || 'Fuente territorial'}{source.locator ? ` · ${source.locator}` : ''}</a>)}
             {entry.collective && <p>{entry.collective.nota}</p>}
             {entry.collective?.fuente && <a href={entry.collective.fuente.url} target="_blank" rel="noreferrer">{entry.collective.fuente.title}</a>}
-            {entry.government && <small>{entry.government.titulo} · {entry.government.condicion} · {entry.government.desde}–{entry.government.hasta}</small>}
-            {entry.claim?.sources?.length ? entry.claim.sources.map(source => <a key={source.url} href={source.url} target="_blank" rel="noreferrer">{source.title}{source.locator ? ` · ${source.locator}` : ''}</a>) : entry.relationship?.sources.length || entry.crownRelation || entry.regionalEvidence ? null : <small className="mapa-region-unsourced">Sin fuente específica para esta afirmación.</small>}
+            {(entry.governments||[entry.government]).filter(Boolean).map((government,i)=><small key={i}>{government.titulo} · {government.condicion} · {government.desde}–{government.hasta}</small>)}
+            {mapAuthoritySources(entry).length ? mapAuthoritySources(entry).map(source => <a key={source.url+'|'+source.locator} href={source.url} target="_blank" rel="noreferrer">{source.title}{source.locator ? ` · ${source.locator}` : ''}</a>) : entry.relationship?.sources.length || entry.crownRelation || entry.regionalEvidence ? null : <small className="mapa-region-unsourced">Sin fuente específica para esta afirmación.</small>}
           </li>)}</ul>}
           {inspectedRegion?.claims.length > 0 && <details className="mapa-title-claims"><summary>Títulos y pretensiones · sin color de dominio</summary><ul>{inspectedRegion.claims.map((entry, i) => <li key={`${entry.person.id}-${entry.territory}-${i}`}>
             <span className="mapa-authority-badge mapa-authority-titular">{AUTHORITY_LABELS[entry.kind]}</span>
             <strong>{entry.territory}</strong><button type="button" className="mapa-region-person" onClick={() => onSelectPersona?.(entry.person.id)}>{entry.person.nombre}</button>
-            <small>{entry.government.titulo} · {entry.government.desde}–{entry.government.hasta}</small>
-            <p>{entry.government.nota || 'Este registro no acredita control territorial para este año.'}</p>
-            {entry.claim?.sources.map(source => <a key={source.url} href={source.url} target="_blank" rel="noreferrer">{source.title}</a>)}
+            {(entry.governments||[entry.government]).map((government,i)=><div key={i}><small>{government.titulo} · {government.desde}–{government.hasta}</small><p>{government.nota || 'Este registro no acredita control territorial para este año.'}</p></div>)}
+            {mapAuthoritySources(entry).map(source => <a key={source.url+'|'+source.locator} href={source.url} target="_blank" rel="noreferrer">{source.title}{source.locator ? ` · ${source.locator}` : ''}</a>)}
           </li>)}</ul></details>}
           {pilotContext.length > 0 ? <ul>{pilotContext.map(entry => <li key={`${entry.name}-${entry.corridor}`}>
           <strong>{entry.name}</strong><div>{entry.corridor}</div>

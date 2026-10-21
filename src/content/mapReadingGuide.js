@@ -13,8 +13,13 @@ export const MAP_READING_GUIDE = Object.freeze({
     ['Monarquía austríaca · Die Welt der Habsburger','https://www.habsburger.net/en/chapter/ferdinand-i-founder-austrian-habsburg-monarchy'],
     ['Estados Generales · Instituto Huygens','https://www.huygens.knaw.nl/en/resources/goetgevonden/'],
     ['Nueva Planta · Archivo de la Corona de Aragón','https://www.cultura.gob.es/archivos-aca/gl/actividades/documentos-para-la-historia-de-europa/nueva-planta.html'],
+    ['Política exterior común desde Lublin · Wydawnictwo Sejmowe','https://wydawnictwo.sejm.gov.pl/publikacja/union-of-lublin-1569/'],
+    ['Schleswig y Holstein bajo la Corona danesa · Lex','https://lex.dk/Slesvig-Holstens_historie_siden_1721'],
+    ['Hannover en la Guerra de los Siete Años · National Army Museum','https://www.nam.ac.uk/explore/seven-years-war'],
   ],
   examples:[
+    'Gran Bretaña recibe un tono propio desde 1707; Hannover conserva otro durante la unión personal iniciada en 1714. La vinculación del monarca y la cooperación militar no prueban una dirección exterior única permanente. Polonia y Lituania comparten color desde la unión de Lublin de 1569, que establece una política exterior común; las uniones dinásticas anteriores no adelantan esa regla.',
+    'En el panorama, Schleswig comparte el color de la monarquía danesa desde su reunión jurídica bajo la Corona en 1721 y Holstein desde 1773. No se adelanta esa reunión a la ocupación de 1713 ni se absorben las partes ducales anteriores de Gottorp. Ambos conservan su identidad y su color en los mapas personales: no se introdujeron en Schleswig las leyes y la administración del reino y Holstein siguió siendo un ducado imperial.',
     'En un año de sucesión, el color común sigue al soberano entrante cuando se documenta el relevo de la misma jurisdicción; el inspector conserva a ambos titulares dentro de ese año. Las disputas y las corregencias no se convierten por ello en sucesiones pacíficas. Un interregno se explica como vacancia, con sus instituciones, sin inventar un rey.',
     'El interruptor del Sacro Imperio superpone en dorado su ámbito jurídico aproximado en todos los años del mapa, de 1106 a 1800, con cortes fechados como la investidura de Pomerania en 1181, Westfalia en 1648 o las anexiones francesas de 1793–1797. Esta pertenencia no convierte los reinos y principados en posesiones personales del emperador; las autoridades y los colores territoriales permanecen debajo.',
     'Brandeburgo y la Prusia ducal comparten azul prusiano desde 1618 en el panorama. La Prusia Real y Warmia continúan vinculadas a la Corona polaca: no se entregan al Gran Elector. Nápoles y Sicilia comparten color bajo los Borbones desde 1734 cuando coinciden sus gobiernos, pero siguen siendo dos reinos hasta 1816.',

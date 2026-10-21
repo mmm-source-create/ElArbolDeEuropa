@@ -25,14 +25,16 @@ test('real Dinastle supports keyboard guessing, resume, result without spoilers 
   await act(async()=>{app=runtime.mount(document.getElementById('root'));});
   assert.equal(document.querySelector('#dinastle-title').textContent,'Dinastle');
   const model=buildDinastleModel(PERSONAS,HISTORIAS,EVENTOS_HISTORICOS),secret=dailyDinastle(model,dinastleDay());
-  const wrong=PERSONAS.find(p=>p.id!==secret.id&&p.nombre==='Carlos V');await type(wrong.nombre);
+  const wrong=PERSONAS.find(p=>p.id!==secret.id&&['CARLOS5','FEL2ESP'].includes(p.id));await type(wrong.nombre);
   assert.equal(document.querySelector('[role=combobox]').getAttribute('aria-expanded'),'true');
   await act(async()=>document.querySelector('[role=combobox]').dispatchEvent(new window.KeyboardEvent('keydown',{key:'Enter',bubbles:true})));
   assert.equal(document.querySelectorAll('.dinastle-person').length,1);
   const territories=document.querySelector('.dinastle-territories');assert(territories);assert(!territories.open);assert(territories.querySelectorAll('li').length>3);
   await click(territories.querySelector('summary'));assert(territories.open);
   await act(async()=>app.unmount());await act(async()=>{app=runtime.mount(document.getElementById('root'));});assert.equal(document.querySelectorAll('.dinastle-person').length,1);
-  await type(secret.person.nombre);await click([...document.querySelectorAll('[role=option] button')].find(b=>b.querySelector('strong').textContent===secret.person.nombre));
+  // Homonyms (e.g. the two Matteo Rosso Orsini) are separate people. Choose
+  // the visible house and birth-year hint, not the first matching name.
+  await type(secret.person.nombre);await click([...document.querySelectorAll('[role=option] button')].find(b=>b.querySelector('strong').textContent===secret.person.nombre&&b.querySelector('small').textContent===`${secret.house} · ${secret.year??'?'}`));
   assert.match(document.querySelector('.dinastle-result h2').textContent,new RegExp(secret.person.nombre));assert.equal(document.querySelector('[role=combobox]'),null);
   await click(button('Copiar resultado'));const copied=document.querySelector('textarea');assert(copied);assert(!copied.value.includes(secret.person.nombre));
   const saved=JSON.parse(window.localStorage.getItem('eade.dinastle.v1'));assert.equal(saved.stats.won,1);assert.equal(saved.stats.played,1);

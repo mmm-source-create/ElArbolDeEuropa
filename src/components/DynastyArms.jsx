@@ -109,7 +109,7 @@ export default function DynastyArms({dinastia, size = 56, className = '', drawn 
   // The credit travels with the image as a tooltip; pages show it in full at
   // their foot or on the licences page.
   if (escudo.imagen && !drawn) return <img className={`dynasty-arms dynasty-arms-image ${className}`.trim()} src={escudo.imagen.archivo}
-    width={size} height={Math.round(size * 1.2)} alt={`Armas: ${escudo.blason}`} title={`Escudo: ${escudo.imagen.autor} · ${escudo.imagen.licencia} · Wikimedia Commons`}
+    width={size} height={Math.round(size * 1.2)} alt={`Armas: ${escudo.blason}`} title={`Escudo: ${escudo.imagen.autor} · ${escudo.imagen.licencia} · ${escudo.imagen.procedencia||'Wikimedia Commons'}`}
     loading="lazy" decoding="async"/>;
   const clip = `arms-${id}`;
   return <svg className={`dynasty-arms ${className}`.trim()} viewBox="0 0 100 120" width={size} height={size * 1.2}
@@ -131,7 +131,7 @@ export function ArmsCredit({dinastia, className = ''}) {
   return <small className={`dynasty-arms-credit ${className}`.trim()}>
     Escudo: <a href={imagen.fuente} target="_blank" rel="noreferrer">{imagen.autor}</a>
     {' · '}{imagen.licenciaUrl ? <a href={imagen.licenciaUrl} target="_blank" rel="noreferrer license">{imagen.licencia}</a> : imagen.licencia}
-    {' · Wikimedia Commons'}
-    {imagen.modificaciones && <span title={imagen.modificaciones}> · Adaptación al escudo</span>}
+    {' · '}{imagen.procedencia||'Wikimedia Commons'}
+    {imagen.modificaciones && <span> · {imagen.modificaciones}</span>}
   </small>;
 }

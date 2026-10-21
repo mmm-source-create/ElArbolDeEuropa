@@ -3,7 +3,7 @@
 .dynasty-hero-arms { display: block; margin: 0 auto; filter: drop-shadow(0 3px 6px rgb(42 29 20 / .22)); }
 /* The page-title rule resets paragraph margins; the hero's own selectors keep
    the summary and the blazon on the same centred measure as the title. */
-.dynasty-hero > p { max-width: 640px; margin-inline: auto; text-wrap: balance; }
+.dynasty-page .dynasty-hero > p { max-width: 640px; margin-inline: auto; text-align:center; text-wrap: balance; }
 .dynasty-hero > .dynasty-blazon { max-width: 640px; margin: 10px auto 0; color: var(--eade-muted); font-size: var(--fs-sm, 12px); line-height: 1.6; }
 .dynasty-blazon b { color: var(--eade-ink); }
 .dynasty-blazon small { display: block; margin-top: 2px; font-size: inherit; opacity: .85; }

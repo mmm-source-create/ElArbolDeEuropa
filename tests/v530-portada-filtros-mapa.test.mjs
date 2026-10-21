@@ -79,7 +79,8 @@ test('los escudos de Wikimedia Commons se muestran con autor y licencia, sin con
   for (const credit of CREDITOS_ESCUDOS) {
     assert.ok(ESCUDOS[credit.dinastia], credit.dinastia);
     assert.ok(credit.autor && credit.licencia, credit.dinastia);
-    assert.match(credit.fuente, /^https:\/\/commons\.wikimedia\.org\/wiki\/File:/);
+    if(credit.procedencia==='Aportación del autor')assert.match(credit.fuente,/^https:\/\/heraldicon\.org\/arms\//);
+    else assert.match(credit.fuente, /^https:\/\/commons\.wikimedia\.org\/wiki\/File:/);
     if (/^CC BY/.test(credit.licencia)) assert.match(credit.licenciaUrl, /^https:\/\/creativecommons\.org\/licenses\/by(-sa)?\/(?:[1-4]\.0|2\.5)\/$/);
     const file = read(`public${credit.archivo}`);
     if (credit.archivo.endsWith('.svg')) {
@@ -89,7 +90,7 @@ test('los escudos de Wikimedia Commons se muestran con autor y licencia, sin con
     const html = renderToStaticMarkup(React.createElement(DynastyArms, {dinastia: credit.dinastia, size: 40}));
     assert.match(html, new RegExp(`^<img[^>]+src="${credit.archivo.replace(/[.()]/g, '\\$&')}"`), credit.dinastia);
     const caption = renderToStaticMarkup(React.createElement(ArmsCredit, {dinastia: credit.dinastia}));
-    assert.ok(caption.includes(credit.licencia) && caption.includes('Wikimedia Commons'), credit.dinastia);
+    assert.ok(caption.includes(credit.licencia) && caption.includes(credit.procedencia||'Wikimedia Commons'), credit.dinastia);
   }
   // Since V5.31 every house shows a Commons file; the drawing is only a fallback.
   for (const house of Object.keys(ESCUDOS)) assert.ok(escudoDe(house).imagen, house);

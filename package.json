@@ -11,6 +11,7 @@
     "audit": "node scripts/audits/audit-personas.mjs",
     "audit:territorios": "node scripts/audits/audit-territorios.mjs",
     "audit:political-map": "node --import ./tests/jsx-loader.mjs scripts/audits/audit-political-map.mjs",
+    "audit:map-duplicates": "node --import ./tests/jsx-loader.mjs scripts/audits/audit-map-duplicates.mjs",
     "audit:atlas-coverage": "node --import ./tests/jsx-loader.mjs scripts/audits/audit-atlas-coverage.mjs",
     "audit:territorial-continuity": "node --import ./tests/jsx-loader.mjs scripts/audits/audit-territorial-continuity.mjs",
     "audit:continuity": "node --import ./tests/jsx-loader.mjs scripts/audits/audit-map-continuity.mjs",

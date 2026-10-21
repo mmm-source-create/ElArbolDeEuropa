@@ -1,10 +1,19 @@
-// Arms from Wikimedia Commons (V5.30, revised in V5.31–V5.33): plain shields without
+// Reviewed arms from Wikimedia Commons, plus Avesnes supplied by its author:
+// plain shields without
 // background, helmets or crowns. The files in public/escudos keep their
 // drawing; only editor metadata was removed and a viewBox added (Trastámara
 // and Gorizia use the 500 px PNG Commons renders from a heavy SVG). Each credit
 // names the author, the licence and the file page. The Přemyslid banner
 // is adapted proportionally to a shield; its credit records that change.
 const COMMONS = {
+  "Saboya-Carignano": {"archivo":"/escudos/savoy-carignano.png","titulo":"Savoy-Carignano.png","autor":"Alexanderturnerrrrr","licencia":"CC BY-SA 4.0","licenciaUrl":"https://creativecommons.org/licenses/by-sa/4.0/","fuente":"https://commons.wikimedia.org/wiki/File:Savoy-Carignano.png"},
+  "Pallars": {"archivo":"/escudos/pallars-sin-corona.svg","titulo":"Escut dels comtes de Pallars.svg","autor":"Xavi Garcia","licencia":"CC BY-SA 3.0","licenciaUrl":"https://creativecommons.org/licenses/by-sa/3.0/","fuente":"https://commons.wikimedia.org/wiki/File:Escut_dels_comtes_de_Pallars.svg","modificaciones":"Se retira la corona exterior y se ajusta el encuadre; se conserva el dibujo del escudo."},
+  "Baux": {"archivo":"/escudos/arms-of-the-lords-of-baux.svg","titulo":"Arms of the Lords of Baux.svg","autor":"Euryrel","licencia":"CC BY-SA 4.0","licenciaUrl":"https://creativecommons.org/licenses/by-sa/4.0/","fuente":"https://commons.wikimedia.org/wiki/File:Arms_of_the_Lords_of_Baux.svg"},
+  "FitzGerald": {"archivo":"/escudos/duke-of-leinster.png","titulo":"Duke of Leinster.svg","autor":"Tech King465","licencia":"CC BY-SA 4.0","licenciaUrl":"https://creativecommons.org/licenses/by-sa/4.0/","fuente":"https://commons.wikimedia.org/wiki/File:Duke_of_Leinster.svg","formato":"PNG de 500 px renderizado a partir del SVG, sin cambios en el dibujo."},
+  "Bruce": {"archivo":"/escudos/arms-of-bruce.svg","titulo":"Arms of Bruce.svg","autor":"Sodacan","licencia":"CC BY-SA 4.0","licenciaUrl":"https://creativecommons.org/licenses/by-sa/4.0/","fuente":"https://commons.wikimedia.org/wiki/File:Arms_of_Bruce.svg"},
+  "Ascania": {"archivo":"/escudos/arms-of-ascania-ancient.svg","titulo":"Arms of the house of Ascania (ancient).svg","autor":"MostEpic","licencia":"CC BY-SA 4.0","licenciaUrl":"https://creativecommons.org/licenses/by-sa/4.0/","fuente":"https://commons.wikimedia.org/wiki/File:Arms_of_the_house_of_Ascania_(ancient).svg"},
+  "Avesnes": {"archivo":"/escudos/avesnes.svg","titulo":"Avesnes","autor":"mmc","licencia":"Obra propia · uso autorizado en el Atlas","fuente":"https://heraldicon.org/arms/Z5dNEC/1","procedencia":"Aportación del autor"},
+
   "Capeto": {"archivo":"/escudos/arms-of-the-kings-of-france-france-ancien-.svg","titulo":"Arms of the Kings of France (France Ancien).svg","autor":"Saltspan, con elementos de Sodacan","licencia":"CC BY-SA 4.0","licenciaUrl":"https://creativecommons.org/licenses/by-sa/4.0/","fuente":"https://commons.wikimedia.org/wiki/File:Arms_of_the_Kings_of_France_(France_Ancien).svg"},
   "Valois": {"archivo":"/escudos/arms-of-france-france-moderne-.svg","titulo":"Arms of France (France Moderne).svg","autor":"Sodacan","licencia":"CC BY-SA 4.0","licenciaUrl":"https://creativecommons.org/licenses/by-sa/4.0/","fuente":"https://commons.wikimedia.org/wiki/File:Arms_of_France_(France_Moderne).svg"},
   "Valois-Angulema": {"archivo":"/escudos/arms-of-france-france-moderne-.svg","titulo":"Arms of France (France Moderne).svg","autor":"Sodacan","licencia":"CC BY-SA 4.0","licenciaUrl":"https://creativecommons.org/licenses/by-sa/4.0/","fuente":"https://commons.wikimedia.org/wiki/File:Arms_of_France_(France_Moderne).svg"},

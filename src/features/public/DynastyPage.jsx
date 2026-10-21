@@ -10,6 +10,7 @@ import {normalizarBusquedaPublica,slugPublico} from '../../domain/people/personL
 import DynastyArms, {ArmsCredit} from '../../components/DynastyArms.jsx';
 import {escudoDe} from '../../content/dinastias/escudos.js';
 import './dynasty.css';
+import DynastyCard from './DynastyCard.jsx';
 import '../../styles/theme.css';
 
 export default function DynastyPage({slug,initialData=null}) {
@@ -31,8 +32,15 @@ export default function DynastyPage({slug,initialData=null}) {
         <a className="public-primary" href={atlas}>Explorar esta casa en el Atlas <ArrowRight size={15}/></a>
       </header>
       <nav className="dynasty-nav" aria-label="Secciones de la dinastía">
+        {!!(d.casasOrigen?.length||d.casasDerivadas?.length)&&<a href="#casas">Casas de origen y ramas</a>}
         {d.editorial&&<a href="#historia">Historia de la casa</a>}{!!d.ramas.length&&<a href="#ramas">Ramas y conexiones</a>}<a href="#miembros">Personas</a>{!!d.fuentes.length&&<a href="#fuentes">Bibliografía</a>}
       </nav>
+      {!!(d.casasOrigen?.length||d.casasDerivadas?.length)&&<section id="casas" className="public-section">
+        <div className="public-section-heading"><div><span>Una familia y sus distintas casas</span><h2>Casas de origen y ramas</h2></div></div>
+        <p className="dynasty-intro">Los vínculos siguen la rama familiar descrita. Algunas fichas, como Anjou, Borbón, Courtenay o Montfort, reúnen también linajes homónimos anteriores: la relación no se extiende a todos sus miembros.</p>
+        {!!d.casasOrigen?.length&&<><h3>Casa de origen</h3><div className="public-entity-grid">{d.casasOrigen.map(item=><DynastyCard key={item.slug} item={item} headingLevel={3} relationship="Casa de origen"/>)}</div></>}
+        {!!d.casasDerivadas?.length&&<><h3>Ramas de esta casa</h3><div className="public-entity-grid">{d.casasDerivadas.map(item=><DynastyCard key={item.slug} item={item} headingLevel={3} relationship="Rama de esta casa"/>)}</div></>}
+      </section>}
       {d.editorial?<section id="historia" className="dynasty-history">
         <article className="public-content-card"><span>La formación de una casa</span><h2>Origen</h2><p>{d.origen}</p></article>
         <article className="public-content-card"><span>Herencias y alianzas</span><h2>Trayectoria</h2><p>{d.trayectoria}</p></article>

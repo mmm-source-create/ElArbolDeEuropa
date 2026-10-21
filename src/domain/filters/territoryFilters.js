@@ -35,6 +35,7 @@ export const TERRITORIOS_DESTACADOS = [
 // territorio concreto. Un territorio puede aparecer en varios grupos cuando
 // su historia política o geográfica lo justifica (Borgoña, Silesia, Saboya…).
 export const TERRITORIOS_SUB = {
+  'Anhalt':['Anhalt-Dessau','Anhalt-Zerbst'],
   Francia: [
     "Albret", "Dreux", "Alençon", "Angulema", "Anjou", "Aquitania", "Artois", "Auxerre", "Auvernia",
     "Berry", "Borgoña", "Borbón", "Boulogne", "Bretaña", "Champaña",

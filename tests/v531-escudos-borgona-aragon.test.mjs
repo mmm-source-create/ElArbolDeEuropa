@@ -80,7 +80,7 @@ test('todas las casas usan un escudo liso de Commons con crédito discreto', () 
     assert.ok(imagen, house);
     assert.match(imagen.archivo, /^\/escudos\/[a-z0-9.-]+\.(svg|png)$/, house);
     const html = renderToStaticMarkup(React.createElement(DynastyArms, {dinastia: house, size: 40}));
-    assert.match(html, /title="Escudo: [^"]+ · Wikimedia Commons"/, house);
+    assert.ok(html.includes(` · ${imagen.procedencia||'Wikimedia Commons'}"`),house);
   }
   const files = fs.readdirSync(new URL('../public/escudos/', import.meta.url));
   assert.deepEqual(files.sort(), [...new Set(CREDITOS_ESCUDOS.map(c => c.archivo.replace('/escudos/', '')))].sort());

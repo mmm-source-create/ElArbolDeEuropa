@@ -1,4 +1,5 @@
 import {LITUANIA_V526} from './lituania-v526.js';
+import {ASCANIA_CONTENT} from './ascania.js';
 import {ADRIATICO_V214} from "./adriatico-v214.js";
 import { ALPES_V213 } from "./alpes-v213.js";
 import { ESCANDINAVIA_V212 } from "./escandinavia-v212.js";
@@ -54,6 +55,7 @@ export const PERSONA_CONTENT = Object.freeze({
   ...PERSONAS_V525,
   ...PERSONAS_V529,
   ...PERSONAS_V531,
+  ...ASCANIA_CONTENT,
 });
 
 export function contenidoPersona(personaOId) {

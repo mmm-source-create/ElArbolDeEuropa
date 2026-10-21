@@ -4,6 +4,7 @@ import {HISTORIA_DINASTIAS,DINASTIA_ALIASES,RAMAS_DINASTICAS,TIPOS_RAMAS} from '
 import {SOURCES} from '../../content/sources.js';
 import {slugPublico,slugBasePersona} from '../people/personLabels.js';
 import {canonicalDynasty} from '../../data/dynastyAliases.js';
+import {HOUSE_PARENTS} from '../../content/dinastias/houseRelations.js';
 
 export function auditDynasties(personas) {
   const issues=[];
@@ -41,11 +42,21 @@ export function buildDynastyPages(personas) {
   const ref=id=>{const p=byId.get(id);return p?{id:p.id,nombre:p.nombre,dinastia:p.dinastia,titulo:p.titulo,aliases:p.aliases||[],nac:p.nac,muer:p.muer,nacAprox:p.nacAprox,muerAprox:p.muerAprox,documentacion:p.documentacion,slug:slugBasePersona(p)+(slugs.get(slugBasePersona(p))>1?'-'+slugPublico(p.id):'')}:null;};
   const source=url=>{const s=SOURCES.find(s=>s.url===url);return {titulo:s?.titulo||url,url};};
   const names=[...new Set(personas.map(p=>canonicalDynasty(p.dinastia)).filter(Boolean))];
+  const membersByHouse=new Map(names.map(name=>[name,personas.filter(p=>canonicalDynasty(p.dinastia)===name)
+    .sort((a,b)=>(a.nac??9999)-(b.nac??9999)||a.nombre.localeCompare(b.nombre,'es'))]));
+  const houseRef=name=>({nombre:name,slug:slugPublico(name),total:membersByHouse.get(name).length,
+    editorial:Boolean(HISTORIA_DINASTIAS[name]),resumen:HISTORIA_DINASTIAS[name]?.resumen||'',
+    miembros:membersByHouse.get(name).slice(0,6).map(p=>ref(p.id))});
+  const parentLinks=new Map(names.map(name=>[name,new Set((HOUSE_PARENTS[name]||[]).map(canonicalDynasty).filter(parent=>parent!==name&&membersByHouse.has(parent)))]));
+  for(const branch of RAMAS_DINASTICAS.filter(r=>r.tipo==='rama_cadete'&&r.origen!==r.destino))
+    parentLinks.get(branch.destino)?.add(branch.origen);
   return names.map(nombre=>{
     const h=HISTORIA_DINASTIAS[nombre];
-    const members=personas.filter(p=>canonicalDynasty(p.dinastia)===nombre).sort((a,b)=>(a.nac??9999)-(b.nac??9999)||a.nombre.localeCompare(b.nombre,'es'));
+    const members=membersByHouse.get(nombre);
     const governments=members.flatMap(p=>gobiernosDe(p).map(g=>({...g,persona:ref(p.id)}))).sort((a,b)=>a.desde-b.desde);
     const branches=RAMAS_DINASTICAS.filter(r=>r.origen===nombre||r.destino===nombre).map(r=>({...r,arbol:dynastyBranchSelection(r,personas),etiqueta:TIPOS_RAMAS[r.tipo],origenSlug:slugPublico(r.origen),destinoSlug:slugPublico(r.destino),fundador:ref(r.fundador),personas:r.personas.map(ref),fuentes:r.fuentes.map(source)}));
-    return {nombre,slug:slugPublico(nombre),editorial:Boolean(h),resumen:h?.resumen||'',origen:h?.origen||'',trayectoria:h?.trayectoria||'',legado:h?.legado||'',territorios:[...new Set([...(h?.territorios||[]),...governments.map(g=>g.territorio)])],protagonistas:(h?.protagonistas||members.slice(0,6).map(p=>p.id)).map(ref),miembros:members.map(p=>ref(p.id)),total:members.length,gobiernos:governments,ramas:branches,fuentes:(h?.fuentes||[]).map(source)};
+    return {nombre,slug:slugPublico(nombre),editorial:Boolean(h),resumen:h?.resumen||'',origen:h?.origen||'',trayectoria:h?.trayectoria||'',legado:h?.legado||'',territorios:[...new Set([...(h?.territorios||[]),...governments.map(g=>g.territorio)])],protagonistas:(h?.protagonistas||members.slice(0,6).map(p=>p.id)).map(ref),miembros:members.map(p=>ref(p.id)),total:members.length,gobiernos:governments,ramas:branches,fuentes:(h?.fuentes||[]).map(source),
+      casasOrigen:[...parentLinks.get(nombre)].map(houseRef),
+      casasDerivadas:names.filter(name=>parentLinks.get(name).has(nombre)).sort((a,b)=>a.localeCompare(b,'es')).map(houseRef)};
   });
 }
