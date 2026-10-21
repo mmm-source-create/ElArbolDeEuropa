@@ -18,6 +18,8 @@ const CASTILLA_LEON = {blason: 'Cuartelado de Castilla y León: 1.º y 4.º, de 
   capas: [['cuartelado', [CASTILLA, LEON, LEON, CASTILLA]]]};
 
 export const ESCUDOS = Object.freeze({
+  'Toulouse': {blason:'De gules, una cruz de Tolosa de oro, vacía y pometeada de doce piezas.',capas:[['campo','gules']],nota:'La cruz de los condes de Tolosa, empleada también como emblema del Languedoc.'},
+  'Butler': {blason:'De gules, tres copas cubiertas de oro, puestas dos y una.',capas:[['campo','gules']]},
   'Barberini': {blason:'De azur, tres abejas de oro, puestas dos y una.',capas:[['campo','azur']]},
   'Loyola': {blason:'De plata, dos lobos de sable afrontados a una caldera de sable suspendida de una cadena.',capas:[['campo','plata']],nota:'Armas del solar de Loyola, sin el cuartel de Oñaz de otras variantes.'},
   'Borgoña': {blason:'Bandado de oro y azur, con bordura de gules.',capas:[['bandado','oro','azur'],['bordura','gules']],nota:'Armas antiguas de la casa ducal capeta de Borgoña.'},
@@ -30,10 +32,10 @@ export const ESCUDOS = Object.freeze({
   'Borgoña-Portugal': {blason:'De plata, cinco escudetes de azur puestos en cruz y cargados de besantes de plata; bordura de gules con castillos de oro.',capas:[['campo','plata'],['escusones-portugal'],['bordura','gules'],['castillos-bordura']],nota:'Variante del siglo XIII, identificada como 1247 en el archivo de origen; las armas de la primera dinastía variaron durante su historia.'},
   'Montfort-Bretaña': {blason:'De armiño.',capas:[['campo','plata']],nota:'Armas ducales de Bretaña utilizadas por la rama de Dreux-Montfort, distintas de las del antiguo linaje de Montfort-l’Amaury.'},
   'Zrinski': {blason:'De gules, dos alas de sable unidas.',capas:[['campo','gules']],nota:'Modelo de la casa de Zrinski de WappenWiki.'},
-  'Saluzzo': {blason:'De plata, jefe de azur.',capas:[['campo','plata'],['jefe','azur']],nota:'Dibujo de mmc creado con Heráldico y aportado por su autor.'},
-  'Kosača': {blason:'Bandado de plata y gules.',capas:[['bandado','plata','gules']],nota:'Dibujo de mmc creado con Heráldico y aportado por su autor.'},
-  'Carafa': {blason:'De gules, tres fajas de plata.',capas:[['fajado','gules','plata',7]],nota:'Dibujo de mmc creado con Heráldico y aportado por su autor.'},
-  'Babenberg': {blason:'De gules, una faja de plata.',capas:[['campo','gules'],['faja','plata']],nota:'El escudo de Austria, empleado bajo los últimos Babenberg. Dibujo de mmc creado con Heráldico.'},
+  'Saluzzo': {blason:'De plata, jefe de azur.',capas:[['campo','plata'],['jefe','azur']],nota:'Dibujo de mmc creado con Heraldicon y aportado por su autor.'},
+  'Kosača': {blason:'Bandado de plata y gules.',capas:[['bandado','plata','gules']],nota:'Dibujo de mmc creado con Heraldicon y aportado por su autor.'},
+  'Carafa': {blason:'De gules, tres fajas de plata.',capas:[['fajado','gules','plata',7]],nota:'Dibujo de mmc creado con Heraldicon y aportado por su autor.'},
+  'Babenberg': {blason:'De gules, una faja de plata.',capas:[['campo','gules'],['faja','plata']],nota:'El escudo de Austria, empleado bajo los últimos Babenberg. Dibujo de mmc creado con Heraldicon.'},
   'Saboya-Carignano': {blason:'Armas compuestas de Saboya-Carignano, con escusón de Saboya diferenciado por una bordura dentada de plata.',capas:[['campo','gules'],['cruz','plata']],nota:'Representación de la rama de Carignano; el escudo reúne cuarteles territoriales y no corresponde a cada miembro en todas las épocas.'},
   'Pallars': {blason:'De oro, un águila bicéfala de sable, cargada de un escusón de gules con tres pajas de oro en banda.',capas:[['campo','oro'],['figura','aguila','sable']],nota:'Se conserva el escudo de los condes de Pallars y se retira únicamente la corona exterior de la imagen propuesta.'},
   'Baux': {blason:'De gules, una estrella de dieciséis rayos de plata.',capas:[['campo','gules']]},

@@ -5,6 +5,7 @@ import {CASAS_V521} from "./grandes-casas-v521.js";
 import {CASAS_V523} from "./casas-v523.js";
 import {CASAS_V534} from "./casas-v534.js";
 import {ASCANIA_HISTORY} from './ascania.js';
+import {CASAS_AMPLIACION_EDITORIAL} from './ampliacion-editorial.js';
 import {PORTUGAL_HOUSE_HISTORY,PORTUGAL_HOUSE_SOURCES,BRETON_HOUSE_SOURCE} from './heraldica-y-casas.js';
 const MEDLANDS='https://fmg.ac/Projects/MedLands/index.htm';
 const RAH='https://historia-hispanica.rah.es/';
@@ -12,6 +13,7 @@ const BRITANNICA='https://www.britannica.com/';
 
 // A house history is editorial context. Branches and matrimonial transfers are distinct relations.
 export const HISTORIA_DINASTIAS = {
+  ...CASAS_AMPLIACION_EDITORIAL,
   Ascania:ASCANIA_HISTORY,
   'Borgoña-Portugal':PORTUGAL_HOUSE_HISTORY,
   ...CASAS_ESCANDINAVAS,

@@ -1,3 +1,4 @@
+import {AMPLIACION_EDITORIAL_SOURCES} from './sources-ampliacion-editorial.js';
 import {ROYAL_COVERAGE_SOURCES} from './sources-royal-coverage.js';
 import {DYNASTY_MAP_SOURCES} from './sources-dynasty-map.js';
 import {HERALDRY_HOUSE_SOURCES} from './sources-heraldica-casas.js';
@@ -20,6 +21,7 @@ const DOGES_1400_1605 = [
 // Bibliography shared by the public site, Atlas and generated entity pages.
 // A territorial reference supplies context; only explicit person IDs assign a biography.
 export const SOURCES = [
+  ...AMPLIACION_EDITORIAL_SOURCES,
   ...HERALDRY_HOUSE_SOURCES,
   ...DYNASTY_MAP_SOURCES,
   ...ROYAL_COVERAGE_SOURCES,

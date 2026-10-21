@@ -1,3 +1,4 @@
+import {IMAGENES_EDITORIAL} from './imagenesPersonasEditorial.js';
 // Imágenes de fichas de biografía.
 // Ajuste manual del encuadre:
 // - edita la propiedad `encuadre` en formato CSS `"50% 20%"`
@@ -6,6 +7,7 @@
 // - así puedes centrar la cara sin recortar físicamente el archivo
 
 export const IMAGENES_PERSONAS = {
+  ...IMAGENES_EDITORIAL,
   JAIME2AR: {
     archivo:'/personas-img/JAIME2AR.webp',encuadre:'50% 28%',alt:'Jaime II de Aragón en una miniatura de los Usatges',tipo:'Representación contemporánea',
     obra:'Usatici et Constitutiones Cataloniae · BnF, Latin 4670 A',autor:'Anónimo',fecha:'c. 1315–1325',institucion:'Bibliothèque nationale de France',
