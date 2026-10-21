@@ -1,6 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
+import {registerHooks} from 'node:module';
 import React from 'react';
 import {renderToStaticMarkup} from 'react-dom/server';
 import {JSDOM} from 'jsdom';
@@ -9,8 +10,17 @@ import {canonicalDynasty,canonicalDynastySlug} from '../src/data/dynastyAliases.
 import {textoBusquedaPersona} from '../src/domain/people/personLabels.js';
 import {buildDynastyPages,auditDynasties} from '../src/domain/genealogy/dynastyModel.js';
 import {escudoDe} from '../src/content/dinastias/escudos.js';
-import DynastyPage from '../src/features/public/DynastyPage.jsx';
 import {ArmsCredit} from '../src/components/DynastyArms.jsx';
+
+// CI runs unit tests before site metadata is generated. Only the unrelated
+// cache version is a fixture; the dynasty data and page component remain real.
+registerHooks({resolve(specifier,context,nextResolve){
+  if(specifier.endsWith('/generated/siteMeta.json'))return {
+    url:'data:text/javascript,export default {buildVersion:"house-test"};',shortCircuit:true,
+  };
+  return nextResolve(specifier,context);
+}});
+const {default:DynastyPage}=await import('../src/features/public/DynastyPage.jsx');
 
 const by=new Map(PERSONAS.map(p=>[p.id,p]));
 const pages=buildDynastyPages(PERSONAS);
