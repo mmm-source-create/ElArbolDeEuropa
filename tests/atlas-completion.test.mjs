@@ -10,6 +10,7 @@ import {mapAuthoritiesForPerson,mapAuthoritiesAcrossLife} from '../src/cartograp
 import {authorityColor} from '../src/cartography/mapColors.js';
 import {colorTerritorioEnMapa} from '../src/cartography/kingdomMaps.js';
 import {ATLAS_TUTORIAL,tutorialProgress} from '../src/content/atlasTutorial.js';
+import {biografiaExtensaPersona} from '../src/content/biografias-extensas.js';
 import {personClaims} from '../src/evidence/claims.js';
 const people=new Map(PERSONAS.map(p=>[p.id,p]));
 const data=JSON.parse(fs.readFileSync(new URL('../data/cartography/corridor-locations.json',import.meta.url)));
@@ -69,6 +70,7 @@ test('Tyrol follows the predominant lifetime colour while dated Austrian transfe
 });
 test('Castiglione has documented family claims without fabricated territorial rule',()=>{
  const p=people.get('BALDASSARECASTIGLIONE');
+ const bio=biografiaExtensaPersona(p);assert.equal(bio.length,3);assert(bio.every(part=>part.fuentes.some(s=>s.url.includes('treccani.it'))));
  assert.equal(p.padre,'CRISTOFOROCASTIGLIONE');assert.equal(p.madre,'LUIGIAGONZAGACASTIGLIONE');
  assert.deepEqual(p.conyuges,['IPPOLITATORELLI']);assert.equal(p.gobiernos?.length||0,0);
  const claims=personClaims(p);for(const key of ['father','mother','spouse:IPPOLITATORELLI']){const claim=claims.find(c=>c.id==='person:BALDASSARECASTIGLIONE:'+key);assert(claim?.sources.length,key);}
