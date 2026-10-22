@@ -27,7 +27,7 @@ La capa conjunta de Anhalt no permite entregar todas sus particiones al príncip
 
 ## Imágenes y presentación
 
-Se añaden los retratos propuestos de Jaime II y Catalina Micaela y los escudos de Saboya-Carignano, Pallars, Baux, Avesnes, FitzGerald, Bruce y Ascania. Los archivos compartidos siguen reutilizándose. El SVG de Pallars conserva su dibujo y elimina solo la corona exterior; el crédito identifica la adaptación. Avesnes usa la variante vectorial de recortes aportada por mmc y se acredita como uso autorizado en el Atlas, sin inventar una licencia libre ni procedencia de Wikimedia.
+Se añaden los retratos propuestos de Jaime II y Catalina Micaela y los escudos de Saboya-Carignano, Pallars, Baux, Avesnes, FitzGerald, Bruce y Ascania. Los archivos compartidos siguen reutilizándose. El SVG de Pallars conserva su dibujo y elimina solo la corona exterior; el crédito identifica la adaptación. Avesnes usa la variante vectorial de recortes aportada por Manuel Muriel Cagigal y se acredita como uso autorizado en el Atlas, sin inventar una licencia libre ni procedencia de Wikimedia.
 
 El resumen de la cabecera dinástica se centra con una regla que prevalece sobre la hoja general. La nota de créditos del catálogo tiene un margen positivo y queda fuera de la última tarjeta también al filtrar a una sola casa.
 

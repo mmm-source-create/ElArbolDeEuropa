@@ -99,7 +99,7 @@ test('the requested drawings keep their authors, modifications and distinct lice
   for(const name of names){const image=escudoDe(name)?.imagen;assert(image?.autor&&image.licencia&&image.fuente,name);assert(fs.existsSync(`public${image.archivo}`),name);}
   for(const name of ['Avesnes','Saluzzo','Kosača','Carafa','Babenberg']){
     const image=escudoDe(name).imagen;
-    assert.equal(image.autor,'mmc');
+    assert.equal(image.autor,'Manuel Muriel Cagigal');
     assert.equal(image.procedencia,'Aportación del autor');
     assert(!image.licencia.startsWith('CC'));
     assert.match(image.fuente,/^https:\/\/heraldicon.org\/arms\//);

@@ -13,6 +13,7 @@ export default function AtlasTopbar({vm, searchOpen, searchResults, setSearchOpe
           <div className="search-box toolbar-search-box sk" style={{"--sk-index":1}}>
             <Search size={13} aria-hidden="true" />
             <input
+              id="atlas-person-search"
               placeholder="Buscar personas, casas, lugares, historias…"
               aria-label="Buscar en todo el Atlas"
               aria-expanded={searchOpen && Boolean(queryTrim)}

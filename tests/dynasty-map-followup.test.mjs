@@ -67,7 +67,7 @@ test('Ascania keeps a documented family umbrella and gains five family members a
 });
 test('the supplied Avesnes work is credited honestly and the Pallars derivative removes its outer crown',()=>{
   const credit=escudoDe('Avesnes').imagen;
-  assert.equal(credit.autor,'mmc');assert.equal(credit.procedencia,'Aportación del autor');assert(!credit.licencia.startsWith('CC'));
+  assert.equal(credit.autor,'Manuel Muriel Cagigal');assert.equal(credit.procedencia,'Aportación del autor');assert(!credit.licencia.startsWith('CC'));
   const html=renderToStaticMarkup(React.createElement(ArmsCredit,{dinastia:'Avesnes'}));
   assert.match(html,/Aportación del autor/);assert.doesNotMatch(html,/Wikimedia Commons/);
   assert(escudoDe('Pallars').imagen.modificaciones.includes('corona'));

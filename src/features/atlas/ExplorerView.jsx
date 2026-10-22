@@ -62,6 +62,7 @@ export default function ExplorerView({ vm, loading = false, loadError = false, o
     return () => window.removeEventListener('eade:preferences-changed', onPreferences);
   }, []);
   const guideButtonRef = React.useRef(null);
+  const guideOpenerRef = React.useRef(null);
   const viewMenuRef = React.useRef(null);
   const panelsMenuRef = React.useRef(null);
   const toolsMenuRef = React.useRef(null);
@@ -85,7 +86,8 @@ export default function ExplorerView({ vm, loading = false, loadError = false, o
     document.addEventListener('keydown', onKeyDown);
     return () => { document.removeEventListener('pointerdown', onPointerDown); document.removeEventListener('keydown', onKeyDown); };
   }, []);
-  const closeGuide = () => { setGuideOpen(false); requestAnimationFrame(() => guideButtonRef.current?.focus()); };
+  const openGuide = () => { guideOpenerRef.current = document.activeElement; setGuideOpen(true); };
+  const closeGuide = () => { setGuideOpen(false); requestAnimationFrame(() => (guideOpenerRef.current?.isConnected ? guideOpenerRef.current : guideButtonRef.current)?.focus()); };
   const {
     connectionIds, setConnectionIds, connectionCriterion, setConnectionCriterion, connectionResult, locale, territorios,
     dinastias, titulos, siglos, relaciones, seleccion, mode, compareMenuOpen, setCompareMenuOpen, anioGlobal, atlasScene,
@@ -104,6 +106,36 @@ export default function ExplorerView({ vm, loading = false, loadError = false, o
     ? personHistory.ids[personHistory.index + 1]
     : null;
   const canAddFamily = Boolean(seleccion && !historiaActiva && vm.growth.ids !== null && vm.growth.additions.family.length);
+  const prepareTutorialPerson = (id) => {
+    if (historiaActiva) salirHistoria();
+    vm.changeAtlasScene('atlas');
+    vm.setMode('view');
+    vm.setVistasActivas({arbol:true,mapa:mostrarMapa});
+    if (!mostrarBiografia) alternarPanelAuxiliar('biografia');
+    setBioMobileOpen(true);
+    seleccionarPersonaPorId(id);
+  };
+  const tutorialAction = (step) => {
+    if (!ready) return;
+    if (step.action === 'search') {
+      vm.changeAtlasScene('atlas');
+      vm.setQuery(locale === 'en' ? 'Charles V' : 'Carlos V');
+      setSearchOpen(true);
+      document.getElementById('atlas-person-search')?.focus();
+    } else if (['select','sources','relative'].includes(step.action)) {
+      prepareTutorialPerson(step.person);
+      if (step.action === 'sources' || step.action === 'relative') requestAnimationFrame(() => scrollToBioSection(step.action === 'sources' ? 'fuentes' : 'familia'));
+    } else if (step.action === 'family') {
+      vm.setVistasActivas({arbol:true,mapa:mostrarMapa});
+      vm.growth.onExpand('family');
+    } else if (step.action === 'year') actualizarAnioDesdeRango(step.year);
+    else if (step.action === 'timeline') { if (!mostrarCronologia) alternarPanelAuxiliar('cronologia'); }
+    else if (step.action === 'center') {
+      vm.changeAtlasScene('atlas');
+      vm.setVistasActivas({arbol:true,mapa:mostrarMapa});
+      centrarSeleccion();
+    }
+  };
   const vistasAntesDeConectarRef = React.useRef(null);
   const regionesDinasticas = React.useMemo(() => dynastyRegions(PERSONAS, opciones.dinastias), [opciones.dinastias]);
   // Changing scene slides the whole view; the inactive pane is hidden once it settles.
@@ -188,7 +220,7 @@ export default function ExplorerView({ vm, loading = false, loadError = false, o
       {!modoTrabajo && <SiteHeader variant="atlas" locale={locale} onLanguageChange={cambiarIdioma} />}
     <div className={`wrap atlas-scene-${atlasScene}${modoTrabajo ? " atlas-work-mode" : ""}`} inert={!ready}>
       {/* V5.20 · Cabecera fija: vistas y paneles, escena en el centro y acciones. */}
-      <AtlasToolbar vm={vm} closeOtherToolbarMenus={closeOtherToolbarMenus} guideButtonRef={guideButtonRef} mobileToolsOpen={mobileToolsOpen} onToolbarMenuToggle={onToolbarMenuToggle} panelsMenuRef={panelsMenuRef} setGuideOpen={setGuideOpen} setMobileToolsOpen={setMobileToolsOpen} toolsMenuRef={toolsMenuRef} vistasAntesDeConectarRef={vistasAntesDeConectarRef} />
+      <AtlasToolbar vm={vm} closeOtherToolbarMenus={closeOtherToolbarMenus} guideButtonRef={guideButtonRef} mobileToolsOpen={mobileToolsOpen} onToolbarMenuToggle={onToolbarMenuToggle} panelsMenuRef={panelsMenuRef} setGuideOpen={openGuide} setMobileToolsOpen={setMobileToolsOpen} toolsMenuRef={toolsMenuRef} vistasAntesDeConectarRef={vistasAntesDeConectarRef} />
       <AtlasTopbar vm={vm} searchOpen={searchOpen} searchResults={searchResults} setSearchOpen={setSearchOpen} />
 
       <p className="atlas-visually-hidden" role="status" aria-live="polite">
@@ -244,7 +276,7 @@ export default function ExplorerView({ vm, loading = false, loadError = false, o
             "--map-pane-fr": "1fr",
           } : undefined}
         >
-          {mostrarArbol && <AtlasTreeStage vm={vm} setGuideOpen={setGuideOpen} setTreeListOpen={setTreeListOpen} treeListOpen={treeListOpen} />}
+          {mostrarArbol && <AtlasTreeStage vm={vm} setGuideOpen={openGuide} setTreeListOpen={setTreeListOpen} treeListOpen={treeListOpen} />}
 
           {mostrarMapa && atlasScene === 'atlas' && <AtlasMapStage vm={vm} />}
         </main>
@@ -273,7 +305,7 @@ export default function ExplorerView({ vm, loading = false, loadError = false, o
         {id:'filters',label:mostrarFiltros?'Ocultar filtros':'Mostrar filtros',Icon:SlidersHorizontal,onClick:()=>alternarPanelAuxiliar('filtros')},
         {id:'timeline',label:mostrarCronologia?'Ocultar cronología':'Mostrar cronología',Icon:List,onClick:()=>alternarPanelAuxiliar('cronologia')},
       ]}/>}
-      {guideOpen && <AtlasGuide locale={locale} onClose={closeGuide} onSelect={() => vm.growth.onSelect('CARLOS5')} onExpand={() => vm.growth.onExpand('family')} onYear={() => actualizarAnioDesdeRango(1500)} selectedId={seleccion?.id} canExpand={canAddFamily} />}
+      {guideOpen && <AtlasGuide locale={locale} onClose={closeGuide} onAction={tutorialAction} selectedId={seleccion?.id} selectedInTree={Boolean(vm.positions[seleccion?.id])} canExpand={canAddFamily} exampleReady={!historiaActiva && mode === 'view' && atlasScene === 'atlas'} hasFilters={filterCount > 0} onClearFilters={vm.limpiarSoloFiltros} ready={ready} />}
       {infoProyecto === 'cobertura' && <CoverageDialog onClose={() => setInfoProyecto(null)} />}
       {infoProyecto !== 'cobertura' && <ModalProyecto seccion={infoProyecto} onClose={() => setInfoProyecto(null)} persona={seleccion} personasVista={visiblePeople} onStartHistoria={iniciarHistoria} />}
 

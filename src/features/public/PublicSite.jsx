@@ -69,7 +69,7 @@ const INFO_PAGES = {
         ["CC BY-SA 4.0", "https://creativecommons.org/licenses/by-sa/4.0/"]
       ]},
       { id: "escudos", title: "Escudos: autores y licencias", paragraphs: [
-        "Los dibujos proceden de Wikimedia Commons, de WappenWiki y de las aportaciones de mmc realizadas con Heraldicon. Cada imagen conserva su autoría, procedencia y licencia o autorización de uso. Las obras propias de mmc se utilizan con su autorización para el Atlas. Zrinski conserva la licencia CC BY-NC-SA 3.0 de WappenWiki. Las fichas describen las adaptaciones, como la retirada de coronas exteriores o la composición del león coronado de Nassau, y las imágenes para compartir incorporan sus créditos."
+        "Los dibujos proceden de Wikimedia Commons, de WappenWiki y de las aportaciones de Manuel Muriel Cagigal realizadas con Heraldicon. Cada imagen conserva su autoría, procedencia y licencia o autorización de uso. Las obras propias de Manuel Muriel Cagigal se utilizan con su autorización para el Atlas. Zrinski conserva la licencia CC BY-NC-SA 3.0 de WappenWiki. Las fichas describen las adaptaciones, como la retirada de coronas exteriores o la composición del león coronado de Nassau, y las imágenes para compartir incorporan sus créditos."
       ], links: CREDITOS_ESCUDOS.flatMap(c => [[`${c.dinastia} · ${c.autor} · ${c.licencia}`, c.fuente],...(c.fuentesAdicionales||[]).map(f=>[`${c.dinastia} · ${f.titulo} · ${f.autor} · ${f.licencia}`,f.fuente])])},
     ],
   },
@@ -86,7 +86,7 @@ const INFO_PAGES = {
         "La representación territorial utiliza como base cartográfica material de MapChart, adaptado para el proyecto bajo sus condiciones de atribución."
       ], links: [["MapChart", "https://www.mapchart.net/"]]},
       { title: "Heráldica", paragraphs: [
-        "Gracias a Heraldicon, la herramienta con la que mmc ha creado y aportado los escudos propios. La autoría y las condiciones de uso de cada dibujo se indican en sus créditos."
+        "Gracias a Heraldicon, la herramienta con la que Manuel Muriel Cagigal ha creado y aportado los escudos propios. La autoría y las condiciones de uso de cada dibujo se indican en sus créditos."
       ], links: [["Heraldicon", "https://heraldicon.org/"]]},
     ],
   },

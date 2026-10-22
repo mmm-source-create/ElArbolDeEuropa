@@ -37,7 +37,7 @@ Se revisan o incorporan 19 escudos, para un total de 97 casas con armas. Se reem
 - **Brabante:** se aísla el león de oro del primer cuartel del modelo Brabant–Limbourg y se coloca sobre sable en un escudo simple.
 - **Borgoña-Portugal:** se elige el archivo denominado 1247, con quinas y castillos. La nota explica que es una variante del siglo XIII y que las armas cambiaron durante la primera dinastía.
 
-Las versiones PNG de Commons conservan el dibujo original y se identifican como renderizados de sus SVG. Los SVG aportados de Saluzzo, Kosača, Carafa y Babenberg conservan la autoría de mmc y la autorización para el Atlas, igual que Avesnes. **Heraldicon** figura en los agradecimientos de la web y del Atlas.
+Las versiones PNG de Commons conservan el dibujo original y se identifican como renderizados de sus SVG. Los SVG aportados de Saluzzo, Kosača, Carafa y Babenberg conservan la autoría de Manuel Muriel Cagigal y la autorización para el Atlas, igual que Avesnes. **Heraldicon** figura en los agradecimientos de la web y del Atlas.
 
 El archivo Zrinski procede de JSpuller en WappenWiki y conserva la licencia **CC BY-NC-SA 3.0**, conforme a las [condiciones de WappenWiki](https://wappenwiki.org/index.php/MyWiki:General_disclaimer). No se le atribuye una licencia de Wikimedia Commons. Cada adaptación y fuente adicional figura en las fichas y en Licencias; las tarjetas para compartir incorporan el crédito correspondiente.
 
