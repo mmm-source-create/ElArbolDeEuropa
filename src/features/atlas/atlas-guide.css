@@ -18,7 +18,7 @@
 .atlas-guide-close { display: inline-grid; place-items: center; width: 27px; height: 27px; padding: 0; border: 1px solid var(--eade-border); border-radius: var(--r-sm, 6px); background: transparent; color: var(--eade-ink); cursor: pointer; }
 .atlas-guide-tabs { display: grid; grid-template-columns: repeat(3, 1fr); border-bottom: 1px solid var(--eade-border); gap: 3px; }
 .atlas-guide-tabs button { min-height: 34px; padding: 5px 2px; border: 0; border-bottom: 2px solid transparent; background: transparent; color: var(--eade-muted); font: 600 var(--fs-2xs, 10px)/1.2 var(--eade-sans); cursor: pointer; }
-.atlas-guide-tabs button[aria-selected="true"] { color: var(--eade-wine); border-bottom-color: var(--eade-wine); }
+.atlas-guide-tabs button[aria-pressed="true"] { color: var(--eade-wine); border-bottom-color: var(--eade-wine); }
 .atlas-guide-content { padding-top: 15px; }
 .atlas-guide-step-heading { display: flex; align-items: baseline; gap: 9px; }
 .atlas-guide-step-heading > span { color: var(--eade-gold); font-size: var(--fs-xs, 11px); font-weight: 750; white-space: nowrap; }
@@ -35,3 +35,43 @@
 .atlas-guide dt { margin-top: 11px; font-size: var(--fs-sm, 12px); font-weight: 700; }
 .atlas-guide dt:first-child { margin-top: 0; }
 .atlas-guide dd { margin: 3px 0 0; color: var(--eade-muted); font-size: var(--fs-xs, 11px); line-height: 1.45; }
+.atlas-guide { display:flex; flex-direction:column; overflow:hidden; width:min(390px, calc(100vw - 24px)); max-height:min(78dvh, 680px); }
+.atlas-guide-heading { flex-shrink:0; }
+#atlas-guide-body { min-height:0; overflow:auto; overscroll-behavior:contain; }
+.atlas-guide-window-actions { display:flex; gap:6px; }
+.atlas-guide button, .atlas-guide a { touch-action:manipulation; }
+.atlas-guide-close { min-width:36px; min-height:36px; }
+.atlas-guide p, .atlas-guide dd { font-size:13px; line-height:1.6; }
+.atlas-guide-tabs button { min-height:42px; font-size:12px; }
+.atlas-guide-action { min-height:40px; font-size:13px; }
+.atlas-guide-action:disabled { opacity:.55; cursor:default; }
+.atlas-guide-courses { list-style:none; padding:0; margin:0; display:grid; gap:12px; }
+.atlas-guide-courses li { padding:13px; border:1px solid var(--eade-border); border-radius:var(--r-sm,6px); }
+.atlas-guide-course-heading { display:flex; align-items:baseline; gap:8px; flex-wrap:wrap; }
+.atlas-guide-course-heading > span:first-child { color:var(--eade-gold); font-size:12px; font-weight:750; }
+.atlas-guide-course-heading h3 { font-size:19px; flex:1; }
+.atlas-guide-courses small { display:block; }
+.atlas-guide-complete { display:inline-flex; align-items:center; gap:4px; color:var(--eade-muted); font-size:11px; }
+.atlas-guide p.atlas-guide-note { font-size:11px; line-height:1.5; margin:14px 0 0; }
+.atlas-guide-back { background:transparent; border:0; padding:0; min-height:36px; color:var(--eade-wine); cursor:pointer; }
+.atlas-guide p.atlas-guide-course-name { margin:3px 0 8px; font-size:12px; }
+.atlas-guide-progress { height:3px; margin:0 0 15px; }
+.atlas-guide-result { padding:12px; border-left:2px solid var(--eade-gold); background:var(--eade-paper-soft); }
+.atlas-guide-result strong { display:block; color:var(--eade-ink); font-size:12px; }
+.atlas-guide-navigation { align-items:flex-start; }
+.atlas-guide-navigation button { min-height:40px; font-size:12px; max-width:70%; }
+.atlas-guide-context { padding:10px; margin-bottom:12px; border:1px solid var(--eade-border-strong); border-radius:6px; }
+.atlas-guide-context p, .atlas-guide-status p { margin:0 0 10px; }
+.atlas-guide-context button { background:transparent; color:var(--eade-wine); border:1px solid var(--eade-border-strong); border-radius:6px; padding:7px; min-height:40px; cursor:pointer; }
+.atlas-guide-reading nav { display:grid; gap:8px; margin:14px 0 20px; }
+.atlas-guide a { color:var(--eade-wine); text-underline-offset:3px; }
+.atlas-guide-reading h4 { font-family:var(--eade-serif,Georgia,serif); font-size:18px; margin:20px 0 8px; }
+.atlas-guide-reading section { scroll-margin:12px; }
+.atlas-guide.is-collapsed .atlas-guide-heading { margin-bottom:0; }
+.atlas-guide p.atlas-guide-collapsed-label { font-size:12px; margin:8px 0 0; }
+@media (max-width:700px) {
+  .atlas-guide { right:8px; bottom:8px; width:min(390px,calc(100vw - 16px)); max-height:68dvh; padding:14px; }
+  .atlas-guide-close, .atlas-guide-action, .atlas-guide-navigation button, .atlas-guide-context button, .atlas-guide-tabs button { min-height:44px; }
+  .atlas-guide-close { min-width:44px; }
+  .atlas-guide-reading nav a { padding:6px 0; }
+}

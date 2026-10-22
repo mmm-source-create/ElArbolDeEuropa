@@ -41,9 +41,14 @@ test('Atlas real: enlace de rama, búsqueda, retirada, exportación y salida con
  await click(document.querySelector('[aria-label="Quitar Catalina Micaela de España"]'));assert.equal(document.querySelectorAll('.connection-chip').length,3);
  await click(document.querySelector('[aria-label="Exportar el árbol"]'));assert.ok(document.querySelector('dialog[open]'));await click(button('Descargar SVG'));assert.equal(downloads[0].type,'image/svg+xml;charset=utf-8');const svg=await downloads[0].text();assert.match(svg,/Tomás Francisco/);assert.match(svg,/El Árbol de Europa/);await click(document.querySelector('[aria-label="Cerrar exportación"]'));
  await click(button('Conectar personas'));assert.equal(document.querySelector('.connection-controls'),null);assert.equal(new URLSearchParams(window.location.search).has('conectar'),false);
- await click(button('Ayuda'));assert.match(document.querySelector('.atlas-guide').textContent,/Primeros pasos/);
- await click(button('Mostrar a Carlos V'));assert.match(document.querySelector('.atlas-guide h3').textContent,/Añade su familia/);
- assert.equal(document.querySelectorAll('.atlas-guide [role="tab"]').length,3);
+ await click(button('Ayuda'));assert.equal(document.querySelectorAll('.atlas-guide-courses li').length,3);
+ await click(document.querySelector('.atlas-guide-courses li button'));
+ await click(button('Buscar a Carlos V'));assert.equal(document.getElementById('atlas-guide-body').hidden,true);
+ assert.equal(document.getElementById('atlas-person-search').value,'Carlos V');
+ await click(document.querySelector('[aria-label="Desplegar guía"]'));
+ await click(button('Siguiente →'));await click(button('Mostrar a Carlos V'));
+ assert.match(document.querySelector('.atlas-guide h3').textContent,/Abre su ficha/);
+ assert.equal(document.querySelectorAll('.atlas-guide-tabs button').length,3);
  await click(document.querySelector('[aria-label="Cerrar guía"]'));assert.equal(document.querySelector('.atlas-guide'),null);
  assert.equal(button('Siguiente hito'),undefined);
  assert.equal(document.querySelector('.atlas-panels-menu [aria-label="Paneles visibles"]')?.querySelectorAll('button').length,3);
@@ -53,6 +58,47 @@ test('Atlas real: enlace de rama, búsqueda, retirada, exportación y salida con
  assert.ok(document.querySelector('.tree-toolbar [aria-label="Exportar el árbol"]'));
  assert.deepEqual(errors.filter(e=>!e.includes('not wrapped in act')),[]);
  }finally{console.error=originalError;}
+});
+
+test('el tutorial practica, se pliega y reanuda sin repetir acciones ni perder el foco',async()=>{
+ if(app){await act(async()=>app.unmount());app=null;}
+ document.getElementById('root').innerHTML='';
+ window.history.replaceState(null,'','/es/?atlas=1&persona=CARLOS5&seleccion=&dinastia=Valois');
+ window.sessionStorage.clear();window.localStorage.clear();
+ window.localStorage.setItem('eade:atlas-tutorial:v1','corrupto');
+ await act(async()=>{app=runtime.mountAtlas(document.getElementById('root'),treeBase);await new Promise(r=>setTimeout(r,100));});
+ const help=button('Ayuda');help.focus();await click(help);
+ await click(document.querySelectorAll('.atlas-guide-courses li button')[1]);
+ await click(button('Mostrar a Carlos V'));
+ assert.match(document.querySelector('.atlas-guide h3').textContent,/Parte de una persona/,'practicar no avanza el paso');
+ await click(button('Siguiente →'));
+ assert.ok(button('Retirar filtros del ejemplo'),'el ejemplo detecta los filtros existentes');
+ await click(button('Retirar filtros del ejemplo'));assert.equal(document.querySelector('.atlas-guide-context'),null);
+ await click(button('Añadir familia de Carlos V'));
+ const count=Number(document.querySelector('.tree-scope-label').textContent.match(/\d+/)?.[0]);assert.ok(count>1);
+ assert.match(document.querySelector('.atlas-guide-status').textContent,/ya está en el árbol/);
+ await click(document.querySelector('[aria-label="Plegar guía"]'));
+ assert.equal(document.getElementById('atlas-guide-body').hidden,true);
+ await click(document.querySelector('[aria-label="Desplegar guía"]'));
+ await act(async()=>{document.querySelector('.atlas-guide').dispatchEvent(new window.KeyboardEvent('keydown',{key:'Escape',bubbles:true}));await new Promise(r=>setTimeout(r,40));});
+ assert.equal(document.querySelector('.atlas-guide'),null);assert.equal(document.activeElement,help);
+ await click(help);assert.match(document.querySelectorAll('.atlas-guide-courses li button')[1].textContent,/Reanudar/);
+ await click(document.querySelectorAll('.atlas-guide-courses li button')[1]);
+ assert.match(document.querySelector('.atlas-guide h3').textContent,/Añade la familia cercana/);
+ assert.equal(Number(document.querySelector('.tree-scope-label').textContent.match(/\d+/)?.[0]),count,'reanudar no vuelve a ampliar');
+ await click(button('Siguiente →'));await click(button('Mostrar a Felipe el Hermoso'));
+ assert.equal(window.history.state.id,'FEL1CAST');
+ await click(document.querySelector('[aria-label="Desplegar guía"]'));
+ await click(button('← Todos los recorridos'));await click(document.querySelectorAll('.atlas-guide-courses li button')[2]);
+ await click(button('Siguiente →'));
+ assert.ok(button('Primero mostrar a Carlos V'),'se adapta si cambió la persona');await click(button('Primero mostrar a Carlos V'));
+ await click(button('Ir al año 1500'));assert.equal(document.querySelector('.global-year-number').value,'1500');
+ await click(button('Siguiente →'));assert.equal(document.querySelector('.global-year-number').value,'1500','avanzar no cambia el año');
+ await click(button('Ir al año 1530'));assert.equal(document.querySelector('.global-year-number').value,'1530');
+ await click(button('Siguiente →'));await click(button('Mostrar cronología'));assert.ok(document.querySelector('.atlas-timeline'));
+ await click(button('Completar recorrido →'));assert.match(document.querySelectorAll('.atlas-guide-courses li')[2].textContent,/Completado/);
+ await click(button('Guía de lectura'));assert.ok(document.querySelector('#atlas-help-mapas'));assert.match(document.querySelector('#atlas-help-mapas').textContent,/conjuntos de poder exterior/);
+ await click(document.querySelector('[aria-label="Cerrar guía"]'));
 });
 
 test('una persona encontrada amplía el árbol en un clic y cada ampliación se puede deshacer',async()=>{
