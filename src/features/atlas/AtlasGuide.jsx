@@ -3,6 +3,7 @@ import {Check, ChevronDown, ChevronUp, X} from 'lucide-react';
 import {ATLAS_TUTORIAL, TUTORIAL_STORAGE_KEY, tutorialProgress} from '../../content/atlasTutorial.js';
 import {MAP_READING_GUIDE} from '../../content/mapReadingGuide.js';
 import ProgressMeter from '../../ui/ProgressMeter.jsx';
+import TreeExport from '../connections/TreeExport.jsx';
 import './atlas-guide.css';
 
 function readProgress() {
@@ -10,7 +11,7 @@ function readProgress() {
   catch { return tutorialProgress(null); }
 }
 
-export default function AtlasGuide({locale, onClose, onAction, selectedId, selectedInTree, canExpand, exampleReady, hasFilters, onClearFilters, ready = true}) {
+export default function AtlasGuide({locale, onClose, onAction, selectedId, selectedInTree, canExpand, exampleReady, hasFilters, onClearFilters, getExportSelection, favoriteSaved, shareStatus, ready = true}) {
   const en = locale === 'en';
   const c = ATLAS_TUTORIAL[en ? 'en' : 'es'];
   const [section, setSection] = React.useState(0);
@@ -42,18 +43,20 @@ export default function AtlasGuide({locale, onClose, onAction, selectedId, selec
     setProgress(previous => ({...previous,courses:{...previous.courses,[course.id]:{step:step.id,complete:true}}}));
     setCourseId(null);
   };
-  const needsPerson = ['family','year'].includes(step?.action) && (selectedId !== (step.person || 'CARLOS5') || !exampleReady);
+  const needsPerson = (step?.requiresPerson || ['family','year'].includes(step?.action)) && (selectedId !== (step.person || 'CARLOS5') || !exampleReady);
   const familyVisible = ready && step?.action === 'family' && !needsPerson && !canExpand;
   const cannotCenter = step?.action === 'center' && !selectedInTree;
   const actionLabel = needsPerson ? (en ? 'First show Charles V' : 'Primero mostrar a Carlos V') : step?.label;
   const chooseSection = index => { setSection(index); setCourseId(null); };
   const practise = () => {
     const action = needsPerson ? {...step,action:'select',person:step.person || 'CARLOS5'} : step;
-    if (['search','sources','relative'].includes(action.action)) setCollapsed(true);
+    if (['search','sources','relative','connection','connectionExit','personalMap','europe','atlas','filters','filterHouse','filterGovernment','favorites','collapse'].includes(action.action)) setCollapsed(true);
+    if (action.action === 'collapse') return;
     onAction(action);
   };
 
   return <aside className={`atlas-guide${collapsed ? ' is-collapsed' : ''}`} role="region" aria-labelledby="atlas-guide-title" onKeyDown={event => {
+    if (event.target.closest?.('dialog[open]')) return;
     if (event.key === 'Escape') { event.preventDefault(); event.stopPropagation(); onClose(); }
   }}>
     <div className="atlas-guide-heading">
@@ -92,8 +95,12 @@ export default function AtlasGuide({locale, onClose, onAction, selectedId, selec
           {needsPerson && <p>{en ? 'This example starts with Charles V in the Atlas.' : 'Este ejemplo parte de Carlos V en la vista del Atlas.'}</p>}
           {familyVisible && <p>{en ? 'His close family is already in the tree. You can continue or explore another generation.' : 'Su familia cercana ya está en el árbol. Puedes continuar o seguir otra generación.'}</p>}
           {cannotCenter && <p>{en ? 'The selected person is not in the tree yet. Add their family in the Family walkthrough.' : 'La persona seleccionada aún no está en el árbol. Añade su familia con el recorrido de familia.'}</p>}
+          {step.action === 'favorite' && favoriteSaved && <p>{en ? 'Charles V is saved in your favourites.' : 'Carlos V está guardado en tus favoritos.'}</p>}
+          {step.action === 'share' && shareStatus && <p>{shareStatus}</p>}
         </div>
-        {!familyVisible && <button type="button" className="atlas-guide-action" disabled={!ready || cannotCenter} onClick={practise}>{actionLabel}</button>}
+        {step.href ? <a className="atlas-guide-action" href={step.href} target="_blank" rel="noopener noreferrer">{step.label}<span className="ui-sr-only"> · {en ? 'opens in a new tab' : 'se abre en otra pestaña'}</span> ↗</a>
+          : step.action === 'export' && !needsPerson && ready ? <TreeExport getSelection={getExportSelection} label={step.label}/>
+          : !familyVisible && <button type="button" className="atlas-guide-action" disabled={!ready || cannotCenter} onClick={practise}>{actionLabel}</button>}
         <p className="atlas-guide-result"><strong>{en ? 'What to look for' : 'Qué debes observar'}</strong>{step.result}</p>
         <div className="atlas-guide-navigation"><button type="button" disabled={stepIndex === 0} onClick={() => goToStep(stepIndex - 1)}>{c.previous}</button><button type="button" onClick={next}>{stepIndex === course.steps.length - 1 ? c.finish : c.next} →</button></div>
         <p className="atlas-guide-note">{c.practice}</p>

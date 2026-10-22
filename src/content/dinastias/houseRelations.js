@@ -6,12 +6,14 @@ const parents={};
 for(const [root,houses] of Object.entries(GRUPOS_DINASTICOS_GENEALOGICOS))
   for(const house of houses)if(house!==root)parents[house]=[root==='Ivrea'?'Ivrea-Borgoña':root];
 Object.assign(parents,{
+  'Borbón-Orleans-Gastón':['Borbón'],
   'Borbón-Condé':['Borbón'],'Borbón-Orleans':['Borbón'],'Borbón-Parma':['Borbón'],
-  'Valois-Alençon':['Valois'],'Valois-Angulema':['Valois-Orleans'],'Valois-Borgoña':['Valois'],'Valois-Orleans':['Valois'],
+  'Valois-Alençon':['Valois'],'Valois-Anjou':['Valois'],'Valois-Angulema':['Valois-Orleans'],'Valois-Borgoña':['Valois'],'Valois-Orleans':['Valois'],
   'Anjou-Durazzo':['Anjou'],'Anjou-Hungría':['Anjou'],'Anjou-Tarento':['Anjou'],
   'Saboya-Carignano':['Saboya'],'Saboya-Nemours':['Saboya'],
   'Hannover':['Welf'],'Holstein-Gottorp':['Oldemburgo'],
   'Montfort-Bretaña':['Dreux'],'Borgoña-Portugal':['Borgoña'],
+  'Plantagenet':['Anjou-Gâtinais'],
   // The double name records a marriage and descent from two houses.
   'Habsburgo-Lorena':['Habsburgo','Lorena'],
 });

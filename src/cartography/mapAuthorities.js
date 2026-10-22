@@ -164,10 +164,15 @@ export async function mapAuthoritiesAcrossLife(person, mapData = null, {includeD
     for (const entry of mapAuthoritiesForPerson(person, year, mapData, {includeDependencies})) {
       if (!entry.paint || !entry.ids.length) continue;
       const key = entry.territory+'\u0000'+(entry.colorTerritory || '');
-      if (!territories.has(key)) territories.set(key, {entry, cells:new Map()});
+      if (!territories.has(key)) territories.set(key, {entry, cells:new Map(), colors:new Map()});
       const territory = territories.get(key);
-      territory.entry = {...entry, color:authorityColor(entry,
-        colorTerritorioEnMapa(person, entry.colorTerritory || entry.territory, year))};
+      const color=authorityColor(entry,colorTerritorioEnMapa(person, entry.colorTerritory || entry.territory, year));
+      // Count each dated colour once per territory/year, even when mixed cells
+      // split the authority into several entries. A last isolated year must
+      // not erase the integration that characterises most of this mandate.
+      if (!territory.colors.has(color)) territory.colors.set(color,new Set());
+      territory.colors.get(color).add(year);
+      territory.entry = {...entry};
       for (const id of entry.ids) {
         if (!territory.cells.has(id)) territory.cells.set(id, new Set());
         territory.cells.get(id).add(entry.kind);
@@ -176,15 +181,16 @@ export async function mapAuthoritiesAcrossLife(person, mapData = null, {includeD
   }
   abort();
   const result = [];
-  for (const {entry, cells} of territories.values()) {
+  for (const {entry, cells, colors} of territories.values()) {
+    const color=[...colors].sort((a,b)=>b[1].size-a[1].size || Math.max(...b[1])-Math.max(...a[1]))[0][0];
     const kinds = new Map();
     for (const [id, conditions] of cells) {
       const kind = conditions.size > 1 ? 'mixed' : [...conditions][0];
       if (!kinds.has(kind)) kinds.set(kind, []);
       kinds.get(kind).push(id);
     }
-    for (const [kind, ids] of kinds) result.push({...entry, kind, ids,
-      lifetimeUnion:true, mapNote:'Superficies de distintas etapas de esta vida; no necesariamente simultáneas. El color sigue la última agrupación registrada del título. Elige un año para consultar sus ámbitos y fuentes por fecha.'});
+    for (const [kind, ids] of kinds) result.push({...entry, color, kind, ids,
+      lifetimeUnion:true, mapNote:'Superficies de distintas etapas de esta vida; no necesariamente simultáneas. El color representa la agrupación documentada durante más años de este gobierno; en empate sigue la más reciente. Elige un año para consultar sus ámbitos y fuentes por fecha.'});
   }
   cache.set(includeDependencies, result);
   return result;

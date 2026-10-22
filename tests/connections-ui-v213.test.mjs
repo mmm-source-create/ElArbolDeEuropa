@@ -41,7 +41,7 @@ test('Atlas real: enlace de rama, búsqueda, retirada, exportación y salida con
  await click(document.querySelector('[aria-label="Quitar Catalina Micaela de España"]'));assert.equal(document.querySelectorAll('.connection-chip').length,3);
  await click(document.querySelector('[aria-label="Exportar el árbol"]'));assert.ok(document.querySelector('dialog[open]'));await click(button('Descargar SVG'));assert.equal(downloads[0].type,'image/svg+xml;charset=utf-8');const svg=await downloads[0].text();assert.match(svg,/Tomás Francisco/);assert.match(svg,/El Árbol de Europa/);await click(document.querySelector('[aria-label="Cerrar exportación"]'));
  await click(button('Conectar personas'));assert.equal(document.querySelector('.connection-controls'),null);assert.equal(new URLSearchParams(window.location.search).has('conectar'),false);
- await click(button('Ayuda'));assert.equal(document.querySelectorAll('.atlas-guide-courses li').length,3);
+ await click(button('Ayuda'));assert.equal(document.querySelectorAll('.atlas-guide-courses li').length,8);
  await click(document.querySelector('.atlas-guide-courses li button'));
  await click(button('Buscar a Carlos V'));assert.equal(document.getElementById('atlas-guide-body').hidden,true);
  assert.equal(document.getElementById('atlas-person-search').value,'Carlos V');
@@ -101,6 +101,40 @@ test('el tutorial practica, se pliega y reanuda sin repetir acciones ni perder e
  await click(document.querySelector('[aria-label="Cerrar guía"]'));
 });
 
+test('los recorridos avanzados usan conexiones, filtros, favoritos y la exportación existentes',async()=>{
+ if(app){await act(async()=>app.unmount());app=null;}
+ document.getElementById('root').innerHTML='';window.history.replaceState(null,'','/es/?atlas=1&persona=CARLOS5&seleccion=CARLOS5');
+ window.sessionStorage.clear();window.localStorage.clear();
+ const errors=[],originalError=console.error;console.error=(...args)=>errors.push(args.join(' '));
+ try{
+  await act(async()=>{app=runtime.mountAtlas(document.getElementById('root'),treeBase);await new Promise(r=>setTimeout(r,100));});
+  await click(button('Ayuda'));
+  await click(document.querySelectorAll('.atlas-guide-courses li button')[3]);await click(button('Conectar a Carlos V y Felipe II'));
+  assert.equal(document.getElementById('atlas-guide-body').hidden,true);
+  assert.match(window.location.search,/conectar=CARLOS5/);assert.match(window.location.search,/conectar=FEL2ESP/);
+  await click(document.querySelector('[aria-label="Desplegar guía"]'));await click(button('Siguiente →'));await click(button('Probar la conexión de sangre'));
+  assert.match(window.location.search,/vinculos=sangre/);
+  await click(document.querySelector('[aria-label="Desplegar guía"]'));await click(button('Siguiente →'));await click(button('Conectar tres generaciones'));
+  assert.match(window.location.search,/conectar=JUANA1CAST/);
+  await click(document.querySelector('[aria-label="Desplegar guía"]'));await click(button('Siguiente →'));await click(button('Salir de Conectar personas'));
+  assert.doesNotMatch(window.location.search,/conectar=/);
+  await click(document.querySelector('[aria-label="Desplegar guía"]'));await click(button('← Todos los recorridos'));
+  await click(document.querySelectorAll('.atlas-guide-courses li button')[5]);await click(button('Siguiente →'));await click(button('Primero mostrar a Carlos V'));await click(button('Filtrar por Habsburgo'));
+  await click(document.querySelector('[aria-label="Desplegar guía"]'));await click(button('Siguiente →'));await click(button('Ver Habsburgo que gobernaban Castilla en 1530'));
+  assert.equal(document.querySelector('.global-year-number').value,'1530');
+  assert.match(document.querySelector('.filter-active-overview-values').textContent,/Habsburgo/);assert.match(document.querySelector('.filter-active-overview-values').textContent,/Castilla/);
+  await click(document.querySelector('[aria-label="Desplegar guía"]'));await click(button('Siguiente →'));await click(button('Retirar filtros'));
+  assert.equal(document.querySelector('.filter-active-overview-values').textContent.trim(),'Ninguno');
+  await click(button('← Todos los recorridos'));await click(document.querySelectorAll('.atlas-guide-courses li button')[7]);await click(button('Guardar a Carlos V en favoritos'));await click(button('Guardar a Carlos V en favoritos'));
+  assert.match(document.querySelector('.atlas-guide-status').textContent,/guardado en tus favoritos/);
+  await click(button('Siguiente →'));await click(button('Siguiente →'));await click(button('Abrir Exportar árbol'));
+  assert.ok(document.querySelector('dialog[open]'));await click(button('Descargar SVG'));assert.match(await downloads.at(-1).text(),/Carlos V/);
+  await click(document.querySelector('[aria-label="Cerrar exportación"]'));assert.ok(document.querySelector('.atlas-guide'));
+  await click(button('Siguiente →'));await click(button('Abrir Mis favoritos'));assert.match(document.querySelector('.favorites-menu').textContent,/Carlos V/);
+ }finally{console.error=originalError;}
+ assert.deepEqual(errors,[]);
+});
+
 test('una persona encontrada amplía el árbol en un clic y cada ampliación se puede deshacer',async()=>{
  if(app){await act(async()=>app.unmount());app=null;}
  document.getElementById('root').innerHTML='';
@@ -142,7 +176,7 @@ test('Europa es una vista del Atlas: agrupa títulos, abre una persona y restaur
   await act(async()=>{app=runtime.mountAtlas(document.getElementById('root'),treeBase);await new Promise(r=>setTimeout(r,100));});
   assert.equal(document.querySelector('.europe-heading h1')?.textContent,'Europa en 1530');
   assert.equal(document.querySelector('.atlas-traditional').hidden,true);
-  assert.match(document.querySelector('.atlas-timeline-heading').textContent,/2719 personas/);
+  assert.match(document.querySelector('.atlas-timeline-heading').textContent,/2723 personas/);
   assert.equal(document.querySelector('[aria-modal="true"]'),null);
   const search=document.querySelector('.europe-governments input');
   await act(async()=>{Object.getOwnPropertyDescriptor(window.HTMLInputElement.prototype,'value').set.call(search,'Carlos V');search.dispatchEvent(new window.Event('input',{bubbles:true}));});

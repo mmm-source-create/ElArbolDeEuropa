@@ -1,12 +1,14 @@
 # Propuesta de tutorial y conversor de fechas
 
-Estado a 22 de octubre de 2026: la V1 del tutorial incorpora la guía de lectura y los recorridos de búsqueda, familia y tiempo descritos aquí. Los recorridos adicionales quedan para entregas posteriores. El conversor de calendario queda descartado por ahora; el análisis de este documento se conserva como referencia y no se ha implementado.
+Estado a 22 de octubre de 2026: el tutorial incorpora la guía de lectura y los ocho recorridos previstos (33 pasos): persona, familia, tiempo, conexiones, mapas, filtros, casas y conservación de una exploración. El conversor de calendario queda descartado por ahora; el análisis de este documento se conserva como referencia y no se ha implementado.
 
 ## V1 implementada
 
-Se entra desde Ayuda o desde «¿Primera visita? Abrir tutorial» cuando el árbol está vacío. Los tres recorridos tienen cuatro pasos cada uno. Anterior y Siguiente cambian la explicación; los botones de práctica utilizan la búsqueda, la selección de personas, la ampliación familiar, los apartados de la ficha, el año y la cronología existentes.
+Se entra desde Ayuda o desde «¿Primera visita? Abrir tutorial» cuando el árbol está vacío. Los tres recorridos iniciales mantienen sus cuatro pasos. Se añaden cinco recorridos que completan 33 pasos en español e inglés. Anterior y Siguiente cambian la explicación; los botones de práctica utilizan la búsqueda, la selección de personas, la ampliación familiar, los apartados de la ficha, el año y la cronología existentes.
 
 El avance se guarda por recorrido en este navegador. Cerrar y reabrir permite reanudar el mismo paso sin repetir una acción. Una familia que ya está añadida no se vuelve a ampliar; si cambia la persona, los pasos dependientes del ejemplo permiten volver a Carlos V. Los filtros se retiran solo al pulsar el botón correspondiente. La guía se puede plegar, y la búsqueda, las fuentes y el salto a otra generación la pliegan para dejar visible su contenido. La cabecera y el cierre siguen accesibles al desplazarse. Escape devuelve el foco al control desde el que se abrió.
+
+Los recorridos nuevos reutilizan las herramientas del Atlas: comparación de dos y tres generaciones, mapa personal, Europa, filtros por casa y gobierno, favoritos y exportación con vista previa. La inspección de regiones y el interruptor imperial son prácticas manuales con los controles reales. Las fichas de casas se abren en otra pestaña y conservan la exploración. El botón de filtros declara que retira los demás filtros; guardar un favorito es idempotente. La clave de guardado de V1 y sus identificadores se conservan para no perder el avance anterior.
 
 Guía de lectura ofrece un índice y comparte el texto de Cómo leer el mapa con la explicación existente del proyecto. Controles explica ratón, pantalla táctil y teclado. La ayuda funciona también cuando el navegador impide guardar preferencias.
 
@@ -14,9 +16,9 @@ La entrega incorpora además el escudo vectorial solicitado de Montfort-Bretaña
 
 Dos fichas de la colección no identifican al artista: Isabel de Luxemburgo y Carlos Martel conservan esa indicación. El archivo `Katharina of Bohemia.jpg` lleva la inscripción «Margareta Henrici … filia»; se utiliza para Margarita de Tirol, hija de Enrique de Bohemia, y el pie explica esta identificación por inscripción y la discrepancia del nombre del archivo. No se asigna a Catalina de Bohemia. Se descarta `Margaret of Austria Duchess of Bavaria (Landshut).jpg`, cuya inscripción comienza por Elisabeth, al no confirmar la identidad de Margarita de Austria. Estos archivos no se usan para alterar filiaciones, fechas o gobiernos del Atlas.
 
-## Propuesta original y siguientes entregas
+## Propuesta original (conservada como referencia)
 
-Antes de esta V1, el Atlas ofrecía una ayuda con tres acciones sobre Carlos V: seleccionarlo, añadir su familia y elegir el año 1500. También incluía controles básicos y definiciones. La propuesta que sigue se conserva como referencia para la V1 y las siguientes entregas.
+Antes de esta V1, el Atlas ofrecía una ayuda con tres acciones sobre Carlos V: seleccionarlo, añadir su familia y elegir el año 1500. También incluía controles básicos y definiciones. La propuesta que sigue se conserva como referencia del diseño completado.
 
 Habría dos formas de consultar el contenido: una guía completa con índice y ejemplos, y recorridos breves dentro del Atlas. Cada recorrido explicaría qué se quiere averiguar, propondría una acción y mostraría qué significa el resultado. El ejemplo común sería seguir las herencias de Carlos V; otros ejemplos permitirían practicar sin repetir siempre la misma ficha.
 

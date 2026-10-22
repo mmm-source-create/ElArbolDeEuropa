@@ -6,9 +6,9 @@ export const OTRAS_DINASTIAS = "Otras dinastías";
 export const GRUPOS_DINASTICOS_GENEALOGICOS = {
   Capeto: [
     "Capeto", "Anjou", "Anjou-Durazzo", "Anjou-Hungría", "Anjou-Tarento",
-    "Artois", "Borbón", "Borbón-Condé", "Borbón-Parma", "Borbón-Orleans", "Borgoña", "Capeto-Évreux",
-    "Clermont", "Courtenay", "Dreux", "Montfort-Bretaña", "Borgoña-Portugal", "Évreux", "Valois",
-    "Valois-Alençon", "Valois-Angulema", "Valois-Borgoña", "Valois-Orleans",
+    "Artois", "Borbón", "Borbón-Condé", "Borbón-Parma", "Borbón-Orleans", "Borbón-Orleans-Gastón", "Borgoña",
+    "Courtenay", "Dreux", "Montfort-Bretaña", "Borgoña-Portugal", "Évreux", "Valois",
+    "Valois-Alençon", "Valois-Anjou", "Valois-Angulema", "Valois-Borgoña", "Valois-Orleans",
   ],
   Habsburgo: ["Habsburgo", "Habsburgo-Lorena"],
   Ivrea: ["Ivrea-Borgoña", "La Cerda", "Trastámara"],
@@ -26,7 +26,7 @@ export const GRUPOS_DINASTICOS_GENEALOGICOS = {
 // inmanejable de más de cien apellidos menores.
 export const GRUPOS_DINASTICOS_REGIONALES = {
   "Casas italianas": [
-    "Aquino", "Borri", "Cattanei", "Cornaro", "Della Scala", "Doria",
+    "Aquino", "Borri", "Cattanei", "Castiglione-Mantua", "Cornaro", "Della Scala", "Doria", "Torelli",
     "Falangola", "Gazela", "Lancia", "Morosini", "Pirovano", "Sanseverino",
     "Da Vinci", "Del Giocondo", "Gherardini", "Melzi", "Orsini", "Soderini",
   ],
@@ -38,7 +38,7 @@ export const GRUPOS_DINASTICOS_REGIONALES = {
     "Pimentel", "Ponce de León", "Quiñones", "Sandoval", "Velasco", "Zúñiga",
   ],
   "Casas francesas": [
-    "Albret", "Amboise", "Armagnac", "Auvernia", "Bar", "Beauvau", "Chambly",
+    "Albret", "Amboise", "Anjou-Gâtinais", "Armagnac", "Auvernia", "Bar", "Beauvau", "Chambly", "Clermont", "Courtenay-Edesa",
     "Avaugour", "Boulogne", "Brienne", "Châtillon", "Comminges", "Dammartín", "Estrées", "Gabarret",
     "Grailly", "Guilhem", "Laval", "Montoire", "Poitiers",
     "Rohan", "Sabran", "Taillefer", "Talleyrand-Périgord", "Thouars", "Toulouse", "Trencavel",
@@ -64,8 +64,8 @@ export const GRUPOS_DINASTICOS_REGIONALES = {
 
 export const GRUPOS_DINASTICOS = {
   ...GRUPOS_DINASTICOS_GENEALOGICOS,
-  Borbón:["Borbón","Borbón-Condé","Borbón-Orleans","Borbón-Parma"],
-  Valois:["Valois","Valois-Alençon","Valois-Angulema","Valois-Borgoña","Valois-Orleans"],
+  Borbón:["Borbón","Borbón-Condé","Borbón-Orleans", "Borbón-Orleans-Gastón","Borbón-Parma"],
+  Valois:["Valois","Valois-Alençon","Valois-Anjou","Valois-Angulema","Valois-Borgoña","Valois-Orleans"],
   Anjou:["Anjou","Anjou-Durazzo","Anjou-Hungría","Anjou-Tarento"],
   Dreux:["Dreux","Montfort-Bretaña"],
   "Borgoña":["Borgoña","Borgoña-Portugal"],

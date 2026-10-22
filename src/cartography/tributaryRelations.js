@@ -1,3 +1,4 @@
+import {ANGEVIN_DEPENDENCIES} from './angevinDependencies.js';
 import {EASTERN_EUROPE_DEPENDENCIES} from './easternEuropeDependencies.js';
 // Dependencies are relationships between existing polities, never fabricated
 // government records of the overlord. Regional geometry keeps its own identity.
@@ -32,6 +33,7 @@ const sources = {
 
 export const TRIBUTARY_RELATIONS = Object.freeze([
   ...EASTERN_EUROPE_DEPENDENCIES,
+  ...ANGEVIN_DEPENDENCIES,
   {id: 'ragusa-ottoman', subject: 'República de Ragusa', overlord: 'Imperio otomano',
     periods: [[1458, 1683], [1695, 1800]], sources: [sources.ragusa],
     note: 'República tributaria con gobierno propio. El pago se interrumpe durante la guerra de la Liga Santa y se reanuda en 1695; no es una provincia del sultán.'},
@@ -108,7 +110,8 @@ export function tributaryEntriesFor(person, year, data, ownEntries = [], relatio
   return relations.flatMap(relation => {
     const period = relation.periods.find(([from, through]) => from <= year && year <= through);
     if (!period) return [];
-    const office = gobiernosDe(person).find(g => g.territorio === relation.overlord
+    const offices = relation.overlordOffices || [{territory:relation.overlord}];
+    const office = gobiernosDe(person).find(g => offices.some(o => o.territory === g.territorio && (!o.people || o.people.includes(person.id)))
       && gobiernoEfectivo(g) && g.desde <= year && year <= g.hasta
       && !['regencia', 'gobierno delegado', 'rival', 'disputado', 'ocupación'].includes(g.condicion)
       && !g.ambito && (relation.overlord !== 'Imperio otomano' || g.titulo === 'Sultán'));

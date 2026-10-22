@@ -65,6 +65,7 @@
 .atlas-guide-context button { background:transparent; color:var(--eade-wine); border:1px solid var(--eade-border-strong); border-radius:6px; padding:7px; min-height:40px; cursor:pointer; }
 .atlas-guide-reading nav { display:grid; gap:8px; margin:14px 0 20px; }
 .atlas-guide a { color:var(--eade-wine); text-underline-offset:3px; }
+.atlas-guide a.atlas-guide-action { display:inline-flex; align-items:center; color:var(--eade-paper); text-decoration:none; }
 .atlas-guide-reading h4 { font-family:var(--eade-serif,Georgia,serif); font-size:18px; margin:20px 0 8px; }
 .atlas-guide-reading section { scroll-margin:12px; }
 .atlas-guide.is-collapsed .atlas-guide-heading { margin-bottom:0; }
