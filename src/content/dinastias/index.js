@@ -4,6 +4,7 @@ import {CASAS_ESCANDINAVAS,CONEXIONES_ESCANDINAVAS} from "./escandinavia-v212.js
 import {CASAS_V521} from "./grandes-casas-v521.js";
 import {CASAS_V523} from "./casas-v523.js";
 import {CASAS_V534} from "./casas-v534.js";
+import {CASAS_REVISION_CAPETA,RAMAS_REVISION_CAPETA} from './revision-capeta.js';
 import {ASCANIA_HISTORY} from './ascania.js';
 import {CASAS_AMPLIACION_EDITORIAL} from './ampliacion-editorial.js';
 import {PORTUGAL_HOUSE_HISTORY,PORTUGAL_HOUSE_SOURCES,BRETON_HOUSE_SOURCE} from './heraldica-y-casas.js';
@@ -22,6 +23,7 @@ export const HISTORIA_DINASTIAS = {
   ...CASAS_V521,
   ...CASAS_V523,
   ...CASAS_V534,
+  ...CASAS_REVISION_CAPETA,
   'Capeto': {
     resumen:'De Hugo Capeto a Carlos IV, la línea real directa articuló la monarquía francesa; sus descendientes y ramas continuaron en Dreux, Évreux, Valois y Borbón. La ficha distingue parentesco, derecho sucesorio y gobierno territorial.',
     origen:'Hugo Capeto fue elegido rey de los francos en 987. La continuidad de padre a hijo de la línea directa se consolidó gradualmente, sin que ello significara dominio directo sobre todos los principados franceses. Luis VI y Luis VII pertenecen a esa etapa anterior al periodo central del Atlas. Roberto, hijo de Luis VI, abrió la rama de Dreux; la ascendencia capeta de una casa colateral no equivalía a reinar en Francia.',
@@ -118,6 +120,7 @@ export const TIPOS_RAMAS = {
 };
 
 export const RAMAS_DINASTICAS = [
+  ...RAMAS_REVISION_CAPETA,
   {id:'borgona-portugal-avis',origen:'Borgoña-Portugal',destino:'Avís',tipo:'rama_cadete',periodo:'1385',fundador:'JUAN1PORT',personas:['PED1PORT','JUAN1PORT','EDU1PORT'],texto:'Juan I de Avís era hijo natural de Pedro I de Portugal. Su elección en 1385 inauguró otra casa reinante dentro de la descendencia de la primera dinastía portuguesa.',fuentes:[PORTUGAL_HOUSE_SOURCES[3]]},
   ...CONEXIONES_ADRIATICO,
   {id:'dreux-capeta',origen:'Capeto',destino:'Dreux',tipo:'rama_cadete',periodo:'1137',fundador:'ROBERT1DREUX',personas:['LUIS6FRA','LUIS7FRA','ROBERT1DREUX','ROBERT2DREUX','PIERRE1BRET'],texto:'Roberto I, hijo menor de Luis VI, recibió Dreux. La casa conserva una ascendencia capeta aunque sus titulares no fueran reyes de Francia.'},

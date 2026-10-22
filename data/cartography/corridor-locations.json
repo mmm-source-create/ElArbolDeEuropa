@@ -262479,6 +262479,389 @@
       "limitedCore": true
     },
     {
+      "name": "Auvernia · 1154–1199 · revisión angevina",
+      "corridor": "Atlas medieval · gobiernos anteriores a 1200",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1154,
+        "through": 1199
+      },
+      "versions": [
+        {
+          "from": 1154,
+          "ids": [
+            "Riom",
+            "Thiers",
+            "Vic_le_Comte"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Jurisdicción local del ámbito aquitano angevino, con señor propio. El mapa usa celdas regionales, no límites catastrales. La trama y las fechas de la relación ducal se consultan separadamente; no se identifica el feudo con un dominio directo del rey inglés. Se limita al núcleo condal y delfinal; no incluye automáticamente todas las temporalidades episcopales ni las abadías de la Auvernia moderna."
+        }
+      ],
+      "note": "Jurisdicción local del ámbito aquitano angevino, con señor propio. El mapa usa celdas regionales, no límites catastrales. La trama y las fechas de la relación ducal se consultan separadamente; no se identifica el feudo con un dominio directo del rey inglés. Se limita al núcleo condal y delfinal; no incluye automáticamente todas las temporalidades episcopales ni las abadías de la Auvernia moderna.",
+      "sources": [
+        {
+          "title": "UT Austin · Shepherd, Europa y Mediterráneo hacia 1190",
+          "url": "https://maps.lib.utexas.edu/maps/historical/history_shepherd_1923.html",
+          "locator": "Atlas histórico, pp. 70–71: contornos políticos de 1190, contrastados con las superficies regionales del SVG; no las fronteras de los estados actuales."
+        },
+        {
+          "title": "Fanny Madeline · Les Plantagenêts et leur empire · Constructions territoriales et délimitation des frontières",
+          "url": "https://books.openedition.org/pur/50788",
+          "locator": "pp. 249–250: Auvernia, expediciones angevinas, ofensiva de Felipe Augusto de 1188 y cesión de los derechos ducales en Azay (1189), ratificada en Gaillon (1196); las fidelidades locales posteriores siguen divididas."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": false
+    },
+    {
+      "name": "La Marche · 1154–1199 · revisión angevina",
+      "corridor": "Atlas medieval · gobiernos anteriores a 1200",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1154,
+        "through": 1199
+      },
+      "versions": [
+        {
+          "from": 1154,
+          "ids": [
+            "Aubusson",
+            "Bellac",
+            "Bourganeuf",
+            "Brosse",
+            "Charroux",
+            "Gueret"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Jurisdicción local del ámbito aquitano angevino, con señor propio. El mapa usa celdas regionales, no límites catastrales. La trama y las fechas de la relación ducal se consultan separadamente; no se identifica el feudo con un dominio directo del rey inglés."
+        }
+      ],
+      "note": "Jurisdicción local del ámbito aquitano angevino, con señor propio. El mapa usa celdas regionales, no límites catastrales. La trama y las fechas de la relación ducal se consultan separadamente; no se identifica el feudo con un dominio directo del rey inglés.",
+      "sources": [
+        {
+          "title": "UT Austin · Shepherd, Europa y Mediterráneo hacia 1190",
+          "url": "https://maps.lib.utexas.edu/maps/historical/history_shepherd_1923.html",
+          "locator": "Atlas histórico, pp. 70–71: contornos políticos de 1190, contrastados con las superficies regionales del SVG; no las fronteras de los estados actuales."
+        },
+        {
+          "title": "Marie Hivergneaux · Aliénor d’Aquitaine : le pouvoir d’une femme à la lumière de ses chartes (1152–1204)",
+          "url": "https://www.persee.fr/doc/civme_1281-704x_2000_act_8_1_971",
+          "locator": "Estudio de los actos ducales y de los homenajes a Enrique II desde 1156; las autoridades condales y vizcondales conservan sus patrimonios y su capacidad de rebelión."
+        },
+        {
+          "title": "John Gillingham · Richard I · Oxford Dictionary of National Biography",
+          "url": "https://doi.org/10.1093/ref:odnb/23498",
+          "locator": "Gobierno ducal en Limousin, Angoumois y Gascuña; rebeliones, campañas de 1178–1181 y sometimiento de los rebeldes en 1183. Superioridad ducal, no administración uniforme."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": false
+    },
+    {
+      "name": "Angulema · 1154–1199 · revisión angevina",
+      "corridor": "Atlas medieval · gobiernos anteriores a 1200",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1154,
+        "through": 1199
+      },
+      "versions": [
+        {
+          "from": 1154,
+          "ids": [
+            "Angouleme",
+            "Chabanais",
+            "Cognac"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Jurisdicción local del ámbito aquitano angevino, con señor propio. El mapa usa celdas regionales, no límites catastrales. La trama y las fechas de la relación ducal se consultan separadamente; no se identifica el feudo con un dominio directo del rey inglés."
+        }
+      ],
+      "note": "Jurisdicción local del ámbito aquitano angevino, con señor propio. El mapa usa celdas regionales, no límites catastrales. La trama y las fechas de la relación ducal se consultan separadamente; no se identifica el feudo con un dominio directo del rey inglés.",
+      "sources": [
+        {
+          "title": "UT Austin · Shepherd, Europa y Mediterráneo hacia 1190",
+          "url": "https://maps.lib.utexas.edu/maps/historical/history_shepherd_1923.html",
+          "locator": "Atlas histórico, pp. 70–71: contornos políticos de 1190, contrastados con las superficies regionales del SVG; no las fronteras de los estados actuales."
+        },
+        {
+          "title": "Marie Hivergneaux · Aliénor d’Aquitaine : le pouvoir d’une femme à la lumière de ses chartes (1152–1204)",
+          "url": "https://www.persee.fr/doc/civme_1281-704x_2000_act_8_1_971",
+          "locator": "Estudio de los actos ducales y de los homenajes a Enrique II desde 1156; las autoridades condales y vizcondales conservan sus patrimonios y su capacidad de rebelión."
+        },
+        {
+          "title": "John Gillingham · Richard I · Oxford Dictionary of National Biography",
+          "url": "https://doi.org/10.1093/ref:odnb/23498",
+          "locator": "Gobierno ducal en Limousin, Angoumois y Gascuña; rebeliones, campañas de 1178–1181 y sometimiento de los rebeldes en 1183. Superioridad ducal, no administración uniforme."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": false
+    },
+    {
+      "name": "Vizcondado de Limoges · 1154–1199 · revisión angevina",
+      "corridor": "Atlas medieval · gobiernos anteriores a 1200",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1154,
+        "through": 1199
+      },
+      "versions": [
+        {
+          "from": 1154,
+          "ids": [
+            "Aixe",
+            "Limoges",
+            "Nontron",
+            "Rochechouart",
+            "Segur",
+            "St_Leonard",
+            "Thiviers"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Jurisdicción local del ámbito aquitano angevino, con señor propio. El mapa usa celdas regionales, no límites catastrales. La trama y las fechas de la relación ducal se consultan separadamente; no se identifica el feudo con un dominio directo del rey inglés."
+        }
+      ],
+      "note": "Jurisdicción local del ámbito aquitano angevino, con señor propio. El mapa usa celdas regionales, no límites catastrales. La trama y las fechas de la relación ducal se consultan separadamente; no se identifica el feudo con un dominio directo del rey inglés.",
+      "sources": [
+        {
+          "title": "UT Austin · Shepherd, Europa y Mediterráneo hacia 1190",
+          "url": "https://maps.lib.utexas.edu/maps/historical/history_shepherd_1923.html",
+          "locator": "Atlas histórico, pp. 70–71: contornos políticos de 1190, contrastados con las superficies regionales del SVG; no las fronteras de los estados actuales."
+        },
+        {
+          "title": "Marie Hivergneaux · Aliénor d’Aquitaine : le pouvoir d’une femme à la lumière de ses chartes (1152–1204)",
+          "url": "https://www.persee.fr/doc/civme_1281-704x_2000_act_8_1_971",
+          "locator": "Estudio de los actos ducales y de los homenajes a Enrique II desde 1156; las autoridades condales y vizcondales conservan sus patrimonios y su capacidad de rebelión."
+        },
+        {
+          "title": "John Gillingham · Richard I · Oxford Dictionary of National Biography",
+          "url": "https://doi.org/10.1093/ref:odnb/23498",
+          "locator": "Gobierno ducal en Limousin, Angoumois y Gascuña; rebeliones, campañas de 1178–1181 y sometimiento de los rebeldes en 1183. Superioridad ducal, no administración uniforme."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": false
+    },
+    {
+      "name": "Périgord · 1154–1199 · revisión angevina",
+      "corridor": "Atlas medieval · gobiernos anteriores a 1200",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1154,
+        "through": 1199
+      },
+      "versions": [
+        {
+          "from": 1154,
+          "ids": [
+            "Bergerac",
+            "Limeuil",
+            "Perigueux",
+            "Riberac",
+            "Sarlat"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Jurisdicción local del ámbito aquitano angevino, con señor propio. El mapa usa celdas regionales, no límites catastrales. La trama y las fechas de la relación ducal se consultan separadamente; no se identifica el feudo con un dominio directo del rey inglés."
+        }
+      ],
+      "note": "Jurisdicción local del ámbito aquitano angevino, con señor propio. El mapa usa celdas regionales, no límites catastrales. La trama y las fechas de la relación ducal se consultan separadamente; no se identifica el feudo con un dominio directo del rey inglés.",
+      "sources": [
+        {
+          "title": "UT Austin · Shepherd, Europa y Mediterráneo hacia 1190",
+          "url": "https://maps.lib.utexas.edu/maps/historical/history_shepherd_1923.html",
+          "locator": "Atlas histórico, pp. 70–71: contornos políticos de 1190, contrastados con las superficies regionales del SVG; no las fronteras de los estados actuales."
+        },
+        {
+          "title": "Marie Hivergneaux · Aliénor d’Aquitaine : le pouvoir d’une femme à la lumière de ses chartes (1152–1204)",
+          "url": "https://www.persee.fr/doc/civme_1281-704x_2000_act_8_1_971",
+          "locator": "Estudio de los actos ducales y de los homenajes a Enrique II desde 1156; las autoridades condales y vizcondales conservan sus patrimonios y su capacidad de rebelión."
+        },
+        {
+          "title": "John Gillingham · Richard I · Oxford Dictionary of National Biography",
+          "url": "https://doi.org/10.1093/ref:odnb/23498",
+          "locator": "Gobierno ducal en Limousin, Angoumois y Gascuña; rebeliones, campañas de 1178–1181 y sometimiento de los rebeldes en 1183. Superioridad ducal, no administración uniforme."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": false
+    },
+    {
+      "name": "Vizcondado de Turena · 1154–1199 · revisión angevina",
+      "corridor": "Atlas medieval · gobiernos anteriores a 1200",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1154,
+        "through": 1199
+      },
+      "versions": [
+        {
+          "from": 1154,
+          "ids": [
+            "Turenne"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Jurisdicción local del ámbito aquitano angevino, con señor propio. El mapa usa celdas regionales, no límites catastrales. La trama y las fechas de la relación ducal se consultan separadamente; no se identifica el feudo con un dominio directo del rey inglés."
+        }
+      ],
+      "note": "Jurisdicción local del ámbito aquitano angevino, con señor propio. El mapa usa celdas regionales, no límites catastrales. La trama y las fechas de la relación ducal se consultan separadamente; no se identifica el feudo con un dominio directo del rey inglés.",
+      "sources": [
+        {
+          "title": "UT Austin · Shepherd, Europa y Mediterráneo hacia 1190",
+          "url": "https://maps.lib.utexas.edu/maps/historical/history_shepherd_1923.html",
+          "locator": "Atlas histórico, pp. 70–71: contornos políticos de 1190, contrastados con las superficies regionales del SVG; no las fronteras de los estados actuales."
+        },
+        {
+          "title": "Marie Hivergneaux · Aliénor d’Aquitaine : le pouvoir d’une femme à la lumière de ses chartes (1152–1204)",
+          "url": "https://www.persee.fr/doc/civme_1281-704x_2000_act_8_1_971",
+          "locator": "Estudio de los actos ducales y de los homenajes a Enrique II desde 1156; las autoridades condales y vizcondales conservan sus patrimonios y su capacidad de rebelión."
+        },
+        {
+          "title": "John Gillingham · Richard I · Oxford Dictionary of National Biography",
+          "url": "https://doi.org/10.1093/ref:odnb/23498",
+          "locator": "Gobierno ducal en Limousin, Angoumois y Gascuña; rebeliones, campañas de 1178–1181 y sometimiento de los rebeldes en 1183. Superioridad ducal, no administración uniforme."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": false
+    },
+    {
+      "name": "Ventadour · 1154–1199 · revisión angevina",
+      "corridor": "Atlas medieval · gobiernos anteriores a 1200",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1154,
+        "through": 1199
+      },
+      "versions": [
+        {
+          "from": 1154,
+          "ids": [
+            "Ussel",
+            "Ventadour"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Jurisdicción local del ámbito aquitano angevino, con señor propio. El mapa usa celdas regionales, no límites catastrales. La trama y las fechas de la relación ducal se consultan separadamente; no se identifica el feudo con un dominio directo del rey inglés."
+        }
+      ],
+      "note": "Jurisdicción local del ámbito aquitano angevino, con señor propio. El mapa usa celdas regionales, no límites catastrales. La trama y las fechas de la relación ducal se consultan separadamente; no se identifica el feudo con un dominio directo del rey inglés.",
+      "sources": [
+        {
+          "title": "UT Austin · Shepherd, Europa y Mediterráneo hacia 1190",
+          "url": "https://maps.lib.utexas.edu/maps/historical/history_shepherd_1923.html",
+          "locator": "Atlas histórico, pp. 70–71: contornos políticos de 1190, contrastados con las superficies regionales del SVG; no las fronteras de los estados actuales."
+        },
+        {
+          "title": "Marie Hivergneaux · Aliénor d’Aquitaine : le pouvoir d’une femme à la lumière de ses chartes (1152–1204)",
+          "url": "https://www.persee.fr/doc/civme_1281-704x_2000_act_8_1_971",
+          "locator": "Estudio de los actos ducales y de los homenajes a Enrique II desde 1156; las autoridades condales y vizcondales conservan sus patrimonios y su capacidad de rebelión."
+        },
+        {
+          "title": "John Gillingham · Richard I · Oxford Dictionary of National Biography",
+          "url": "https://doi.org/10.1093/ref:odnb/23498",
+          "locator": "Gobierno ducal en Limousin, Angoumois y Gascuña; rebeliones, campañas de 1178–1181 y sometimiento de los rebeldes en 1183. Superioridad ducal, no administración uniforme."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": false
+    },
+    {
+      "name": "Albret · 1154–1199 · revisión angevina",
+      "corridor": "Atlas medieval · gobiernos anteriores a 1200",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1154,
+        "through": 1199
+      },
+      "versions": [
+        {
+          "from": 1154,
+          "ids": [
+            "Condom",
+            "Labrit",
+            "Mont_de_Marsan",
+            "Nerac",
+            "Tartas"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Jurisdicción local del ámbito aquitano angevino, con señor propio. El mapa usa celdas regionales, no límites catastrales. La trama y las fechas de la relación ducal se consultan separadamente; no se identifica el feudo con un dominio directo del rey inglés."
+        }
+      ],
+      "note": "Jurisdicción local del ámbito aquitano angevino, con señor propio. El mapa usa celdas regionales, no límites catastrales. La trama y las fechas de la relación ducal se consultan separadamente; no se identifica el feudo con un dominio directo del rey inglés.",
+      "sources": [
+        {
+          "title": "UT Austin · Shepherd, Europa y Mediterráneo hacia 1190",
+          "url": "https://maps.lib.utexas.edu/maps/historical/history_shepherd_1923.html",
+          "locator": "Atlas histórico, pp. 70–71: contornos políticos de 1190, contrastados con las superficies regionales del SVG; no las fronteras de los estados actuales."
+        },
+        {
+          "title": "Marie Hivergneaux · Aliénor d’Aquitaine : le pouvoir d’une femme à la lumière de ses chartes (1152–1204)",
+          "url": "https://www.persee.fr/doc/civme_1281-704x_2000_act_8_1_971",
+          "locator": "Estudio de los actos ducales y de los homenajes a Enrique II desde 1156; las autoridades condales y vizcondales conservan sus patrimonios y su capacidad de rebelión."
+        },
+        {
+          "title": "John Gillingham · Richard I · Oxford Dictionary of National Biography",
+          "url": "https://doi.org/10.1093/ref:odnb/23498",
+          "locator": "Gobierno ducal en Limousin, Angoumois y Gascuña; rebeliones, campañas de 1178–1181 y sometimiento de los rebeldes en 1183. Superioridad ducal, no administración uniforme."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": false
+    },
+    {
+      "name": "Armagnac · 1154–1199 · revisión angevina",
+      "corridor": "Atlas medieval · gobiernos anteriores a 1200",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1154,
+        "through": 1199
+      },
+      "versions": [
+        {
+          "from": 1154,
+          "ids": [
+            "Auch",
+            "Lectoure",
+            "Lisle_Jourdain",
+            "Mirande",
+            "Nogaro"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Jurisdicción local del ámbito aquitano angevino, con señor propio. El mapa usa celdas regionales, no límites catastrales. La trama y las fechas de la relación ducal se consultan separadamente; no se identifica el feudo con un dominio directo del rey inglés."
+        }
+      ],
+      "note": "Jurisdicción local del ámbito aquitano angevino, con señor propio. El mapa usa celdas regionales, no límites catastrales. La trama y las fechas de la relación ducal se consultan separadamente; no se identifica el feudo con un dominio directo del rey inglés.",
+      "sources": [
+        {
+          "title": "UT Austin · Shepherd, Europa y Mediterráneo hacia 1190",
+          "url": "https://maps.lib.utexas.edu/maps/historical/history_shepherd_1923.html",
+          "locator": "Atlas histórico, pp. 70–71: contornos políticos de 1190, contrastados con las superficies regionales del SVG; no las fronteras de los estados actuales."
+        },
+        {
+          "title": "Marie Hivergneaux · Aliénor d’Aquitaine : le pouvoir d’une femme à la lumière de ses chartes (1152–1204)",
+          "url": "https://www.persee.fr/doc/civme_1281-704x_2000_act_8_1_971",
+          "locator": "Estudio de los actos ducales y de los homenajes a Enrique II desde 1156; las autoridades condales y vizcondales conservan sus patrimonios y su capacidad de rebelión."
+        },
+        {
+          "title": "John Gillingham · Richard I · Oxford Dictionary of National Biography",
+          "url": "https://doi.org/10.1093/ref:odnb/23498",
+          "locator": "Gobierno ducal en Limousin, Angoumois y Gascuña; rebeliones, campañas de 1178–1181 y sometimiento de los rebeldes en 1183. Superioridad ducal, no administración uniforme."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": false
+    },
+    {
       "name": "Livonia polaca · Latgalia",
       "color": "#8B5AA5",
       "corridor": "Polonia-Lituania · continuidad báltica",
@@ -353810,7 +354193,7 @@
     ]
   },
   "earlyMedievalReview": {
-    "reviewedAt": "2026-10-15",
+    "reviewedAt": "2026-10-22",
     "scope": {
       "from": 1106,
       "through": 1199,
@@ -353838,6 +354221,7 @@
         "Ainsa",
         "Aire",
         "Aiud",
+        "Aixe",
         "Akcasehir",
         "Akhalkalaki",
         "Akhaltsikhe",
@@ -353909,6 +354293,7 @@
         "Andujar",
         "Angelokastron",
         "Angers",
+        "Angouleme",
         "Anhialo",
         "Ani",
         "Anso",
@@ -353967,6 +354352,8 @@
         "Athy",
         "Atpazari",
         "Atri",
+        "Aubusson",
+        "Auch",
         "Aulnay",
         "Austria_Baden",
         "Autun",
@@ -354062,6 +354449,7 @@
         "Belchite",
         "Belgrad",
         "Belin",
+        "Bellac",
         "Belley",
         "Belmonte",
         "Ben_Klibreck",
@@ -354077,6 +354465,7 @@
         "Berga",
         "Bergama",
         "Bergen_Zoom",
+        "Bergerac",
         "Berlanga",
         "Bernay",
         "Beroun",
@@ -354119,6 +354508,7 @@
         "Boston",
         "Bosworth",
         "Bourg_En_Bresse",
+        "Bourganeuf",
         "Bourges",
         "Bovino",
         "Boyabat",
@@ -354140,6 +354530,7 @@
         "Bristol",
         "Briviesca",
         "Brno",
+        "Brosse",
         "Brozas",
         "Brskovo",
         "Bruck_Leitha",
@@ -354239,10 +354630,12 @@
         "Cesme",
         "Cetatea_Balta",
         "Ceuta",
+        "Chabanais",
         "Chalandritsa",
         "Chalon_Sur_Saone",
         "Chania",
         "Chao_de_Couce",
+        "Charroux",
         "Chateau_Gontier",
         "Chateau_du_Loir",
         "Chateaubriant",
@@ -354285,10 +354678,12 @@
         "Cluj",
         "Cobeta",
         "Cockermouth",
+        "Cognac",
         "Coimbra",
         "Colchester",
         "Colmenar",
         "Comana_Cil",
+        "Condom",
         "Connector_Egypt10",
         "Connector_Egypt12",
         "Connector_Egypt14",
@@ -354606,6 +355001,7 @@
         "Guadalupe",
         "Guadix",
         "Guerande",
+        "Gueret",
         "Guildford",
         "Guimaraes",
         "Gumushane",
@@ -354845,6 +355241,7 @@
         "Kythnos",
         "La_Rochelle",
         "La_Teste_de_Buch",
+        "Labrit",
         "Lagonegro",
         "Lagos",
         "Laguardia",
@@ -354875,6 +355272,7 @@
         "Le_Mans",
         "Lebanon_Mountains",
         "Lecce",
+        "Lectoure",
         "Ledesma",
         "Leeds",
         "Leibnitz",
@@ -354901,6 +355299,8 @@
         "Liezen",
         "Lilienfeld",
         "Limassol",
+        "Limeuil",
+        "Limoges",
         "Lincoln",
         "Linde",
         "Linkoping",
@@ -354910,6 +355310,7 @@
         "Liptovsky_Mikulas",
         "Lisbon",
         "Lisieux",
+        "Lisle_Jourdain",
         "Litomerice",
         "Litomysl",
         "Livadeia",
@@ -355040,6 +355441,7 @@
         "Minya",
         "Miranda_de_Ebro",
         "Miranda_de_I_Douro",
+        "Mirande",
         "Mirandela",
         "Miskolc",
         "Mistelbach",
@@ -355064,6 +355466,7 @@
         "Monfort_Sur_Meu",
         "Monforte_de_Lemos",
         "Monopoli",
+        "Mont_de_Marsan",
         "Montaigu",
         "Montalban",
         "Montalegre",
@@ -355138,6 +355541,7 @@
         "Nekhel",
         "Nemecky_Brod",
         "Neopatras",
+        "Nerac",
         "Nesle",
         "Nevada_Range",
         "Nevrokop",
@@ -355153,8 +355557,10 @@
         "Nis",
         "Nitra",
         "Nivelles",
+        "Nogaro",
         "Nograd",
         "Nola",
+        "Nontron",
         "Nora",
         "Nordmark",
         "Norrkoping",
@@ -355263,6 +355669,7 @@
         "Pennines_06",
         "Penrith",
         "Perg",
+        "Perigueux",
         "Pernstejn",
         "Peronne",
         "Perperek",
@@ -355390,16 +355797,19 @@
         "Riano",
         "Ribadavia",
         "Ribemont",
+        "Riberac",
         "Richmond",
         "Riedlingen",
         "Rieti",
         "Rimavska_Sobota",
         "Ringkobing",
         "Ringsted",
+        "Riom",
         "Ripoll",
         "Ripon",
         "Riseberga",
         "Rize",
+        "Rochechouart",
         "Rochefort",
         "Rochester",
         "Rochlitz",
@@ -355474,6 +355884,7 @@
         "Santarem",
         "Santiago_Compostela",
         "Sarinena",
+        "Sarlat",
         "Sarria",
         "Satoraljaujhely",
         "Saulgau",
@@ -355491,6 +355902,7 @@
         "Sebes",
         "Segesd",
         "Segovia",
+        "Segur",
         "Segura_Range",
         "Segura_de_la_Sierra",
         "Seia",
@@ -355605,6 +356017,7 @@
         "St_Calais",
         "St_Georgen",
         "St_Jean_Dangely",
+        "St_Leonard",
         "St_Pol_de_Leon",
         "St_Polten",
         "St_Sauveur",
@@ -355667,6 +356080,7 @@
         "Tarrana",
         "Tarrega",
         "Tarsus",
+        "Tartas",
         "Tartus",
         "Tata",
         "Tauern_Range2",
@@ -355687,7 +356101,9 @@
         "Thebes",
         "Thessaloniki",
         "Thetford",
+        "Thiers",
         "Thisted",
+        "Thiviers",
         "Thoire",
         "Thurso",
         "Tidah",
@@ -355746,6 +356162,7 @@
         "Tulln",
         "Turciansky_Svaty_Martin",
         "Turda",
+        "Turenne",
         "Turna",
         "Turnhout",
         "Turnov",
@@ -355767,6 +356184,7 @@
         "Ushmum_Tannah",
         "Usingen",
         "Uskudar",
+        "Ussel",
         "Usti_Nad_Labem",
         "Ustikolina",
         "Ustra",
@@ -355807,6 +356225,7 @@
         "Velletri",
         "Venafro",
         "Venice",
+        "Ventadour",
         "Veria",
         "Veszprem",
         "Vetlanda",
@@ -355816,6 +356235,7 @@
         "Viannos",
         "Viborg",
         "Vic",
+        "Vic_le_Comte",
         "Vidin",
         "Vielha",
         "Vienna",
@@ -355998,13 +356418,23 @@
       "Anjou · 1154–1199 · atlas medieval 74",
       "Maine · 1110–1153 · atlas medieval 75",
       "Maine · 1154–1199 · atlas medieval 76",
-      "Bretaña · 1166–1199 · atlas medieval 77"
+      "Bretaña · 1166–1199 · atlas medieval 77",
+      "Auvernia · 1154–1199 · revisión angevina",
+      "La Marche · 1154–1199 · revisión angevina",
+      "Angulema · 1154–1199 · revisión angevina",
+      "Vizcondado de Limoges · 1154–1199 · revisión angevina",
+      "Périgord · 1154–1199 · revisión angevina",
+      "Vizcondado de Turena · 1154–1199 · revisión angevina",
+      "Ventadour · 1154–1199 · revisión angevina",
+      "Albret · 1154–1199 · revisión angevina",
+      "Armagnac · 1154–1199 · revisión angevina"
     ],
     "limitations": [
       "Se amplían únicamente los territorios necesarios para gobiernos registrados antes de 1200, desde el primer mandato de 1106. Nacer antes no concede autoridad.",
       "Las series se anclan en cambios documentados y conservan expresamente su alcance regional o de núcleo. No constituyen una reconstrucción exhaustiva de todos los estados medievales.",
       "Alemania es una dignidad regia e imperial, no un territorio de dominio directo: no se pinta el Imperio entero como patrimonio del titular.",
-      "El recorte del mapa no muestra toda Georgia ni los dominios ayubíes fuera de su marco. La alta realeza irlandesa tampoco se convierte en una posesión insular uniforme."
+      "El recorte del mapa no muestra toda Georgia ni los dominios ayubíes fuera de su marco. La alta realeza irlandesa tampoco se convierte en una posesión insular uniforme.",
+      "Revisión angevina: se recuperan las jurisdicciones interiores de Aquitania y Gascuña como ámbitos locales. La superioridad ducal lleva trama feudal y cortes conservadores en 1189/1199/1202/1204; no se colorean todas las pretensiones ni se prolongan automáticamente hasta 1259. Auvernia conserva sus jurisdicciones eclesiásticas y su transferencia jurídica de 1189."
     ]
   },
   "polandLithuaniaMedievalReview": {

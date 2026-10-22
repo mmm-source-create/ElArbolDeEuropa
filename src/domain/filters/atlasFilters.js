@@ -1,3 +1,4 @@
+import {HOUSE_PARENTS} from '../../content/dinastias/houseRelations.js';
 import {TERRITORIOS_SUB, TERRITORIOS_DESTACADOS, subterritoriosDeFiltro} from './territoryFilters.js';
 import {GRUPOS_DINASTICOS, GRUPOS_DINASTICOS_REGIONALES, DINASTIAS_DESTACADAS, OTRAS_DINASTIAS} from '../genealogy/dynasties.js';
 import {territoriosDe,gobiernosDe} from '../genealogy/personAccessors.js';
@@ -5,14 +6,12 @@ import {FILTER_REGIONS,TERRITORY_REGION} from './filterRegions.js';
 import {gobiernoEfectivo} from '../../data/territorios.js';
 
 const alphabetical=(a,b)=>a.localeCompare(b,'es',{sensitivity:'base'});
-const DYNASTY_CHILDREN={
- Capeto:['Borgoña','Anjou','Artois','Borbón','Clermont','Courtenay','Dreux','Évreux','Valois'],
- Borbón:['Borbón-Condé','Borbón-Orleans','Borbón-Parma'],
- Valois:['Valois-Alençon','Valois-Angulema','Valois-Borgoña','Valois-Orleans'],
- Anjou:['Anjou-Durazzo','Anjou-Hungría','Anjou-Tarento'],
- Dreux:['Montfort-Bretaña'],
- 'Borgoña':['Borgoña-Portugal'],
-};
+// Use the same immediate genealogy as house pages; regional folders remain separate.
+const DYNASTY_CHILDREN={};
+for(const [child,parents]of Object.entries(HOUSE_PARENTS))for(const parent of parents){
+ if(!DYNASTY_CHILDREN[parent])DYNASTY_CHILDREN[parent]=[];
+ DYNASTY_CHILDREN[parent].push(child);
+}
 
 export function atlasFilterOptions(people) {
  const used=new Set(people.flatMap(territoriosDe));

@@ -1,3 +1,4 @@
+import {CASTIGLIONE_CONTENT} from './castiglione.js';
 import {AMPLIACION_EDITORIAL} from './ampliacion-editorial.js';
 import {LITUANIA_V526} from './lituania-v526.js';
 import {ASCANIA_CONTENT} from './ascania.js';
@@ -58,6 +59,7 @@ export const PERSONA_CONTENT = Object.freeze({
   ...PERSONAS_V531,
   ...ASCANIA_CONTENT,
   ...AMPLIACION_EDITORIAL,
+  ...CASTIGLIONE_CONTENT,
 });
 
 export function contenidoPersona(personaOId) {

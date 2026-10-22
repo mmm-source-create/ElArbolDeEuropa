@@ -18,6 +18,17 @@ const CASTILLA_LEON = {blason: 'Cuartelado de Castilla y León: 1.º y 4.º, de 
   capas: [['cuartelado', [CASTILLA, LEON, LEON, CASTILLA]]]};
 
 export const ESCUDOS = Object.freeze({
+  "Zúñiga": {"blason": "De plata, una banda de sable; cadena de oro de ocho eslabones en orla.", "capas": [["campo", "azur"]], "nota": "Armas del linaje, sin la corona ducal exterior."},
+  "Bohun": {"blason": "De azur, una banda de plata acostada de dos cotizas de oro, entre seis leones de oro.", "capas": [["campo", "azur"]], "nota": "Armas de la casa de Bohun."},
+  "Anjou-Gâtinais": {"blason": "De azur, seis leones de oro, puestos tres, dos y uno.", "capas": [["campo", "azur"]], "nota": "Modelo asociado a Godofredo de Anjou. Identifica la primera casa angevina; no afirma que cada rey de Jerusalén empleara estas mismas armas personales."},
+  "Valois-Anjou": {"blason": "De azur, sembrado de flores de lis de oro, bordura de gules.", "capas": [["campo", "azur"]], "nota": "Armas antiguas de la rama de Luis I, hijo de Juan II de Francia. Se distinguen del lambel de los Anjou capetos y de los cuarteles de sus pretensiones napolitanas y jerosolimitanas."},
+  "Anjou-Hungría": {"blason": "Partido: fajado de gules y plata; de azur sembrado de flores de lis de oro, con lambel de gules.", "capas": [["campo", "azur"]], "nota": "Armas de Carlos Roberto que combinan Hungría y Anjou; sus sucesores emplearon otras combinaciones."},
+  "Valois-Alençon": {"blason": "De azur, sembrado de flores de lis de oro, bordura de gules cargada de ocho besantes de plata.", "capas": [["campo", "azur"]], "nota": "Modelo antiguo compartido por Pedro de Alençon y la posterior rama Valois-Alençon. Compartir dibujo no convierte ambas líneas en una sola rama; se mantuvo también una variante con tres flores de lis."},
+  "Valois-Orleans": {"blason": "De azur, tres flores de lis de oro, lambel de plata.", "capas": [["campo", "azur"]], "nota": "Armas ducales de Orleans. Se reutiliza el mismo dibujo que en las creaciones borbónicas; sus genealogías permanecen separadas."},
+  "Borbón-Orleans-Gastón": {"blason": "De azur, tres flores de lis de oro, lambel de plata.", "capas": [["campo", "azur"]], "nota": "Creación de Orleans para Gastón, hermano de Luis XIII. El mismo emblema se reutiliza en la casa de Felipe I, creada en 1661; esta no desciende de Gastón."},
+  "Borbón-Condé": {"blason": "De azur, tres flores de lis de oro; bastón de gules recortado en banda.", "capas": [["campo", "azur"]], "nota": "Modelo familiar de Condé, distinto de las armas plenas de los reyes Borbones. Las brisuras personales y de Soissons variaron."},
+  "Borbón-Parma": {"blason": "De azur, tres flores de lis de oro, bordura de gules.", "capas": [["campo", "azur"]], "nota": "Escudo dinástico de Borbón-Anjou empleado por la rama de Parma. Se evita proyectar las grandes armas compuestas de épocas posteriores sobre todos los miembros del siglo XVIII."},
+
   'Toulouse': {blason:'De gules, una cruz de Tolosa de oro, vacía y pometeada de doce piezas.',capas:[['campo','gules']],nota:'La cruz de los condes de Tolosa, empleada también como emblema del Languedoc.'},
   'Butler': {blason:'De gules, tres copas cubiertas de oro, puestas dos y una.',capas:[['campo','gules']]},
   'Barberini': {blason:'De azur, tres abejas de oro, puestas dos y una.',capas:[['campo','azur']]},
@@ -47,9 +58,8 @@ export const ESCUDOS = Object.freeze({
     nota: 'Las armas de Francia «antigua», usadas por los reyes hasta Carlos V.'},
   'Valois': {blason: 'De azur, tres flores de lis de oro.', capas: FRANCIA_MODERNA,
     nota: 'Francia «moderna»: Carlos V redujo el sembrado a tres lises.'},
-  'Valois-Angulema': {blason: 'De azur, tres flores de lis de oro.', capas: FRANCIA_MODERNA},
-  'Borbón': {blason: 'De azur, tres flores de lis de oro.', capas: FRANCIA_MODERNA,
-    nota: 'Las armas de Francia que llevaron los reyes Borbones, desde Enrique IV junto a las de Navarra. Antes de reinar, los duques de Borbón las diferenciaban con una cotiza de gules en banda.'},
+  'Valois-Angulema': {blason: 'De azur, tres flores de lis de oro.', capas: FRANCIA_MODERNA, nota:'Modelo real de la rama desde Francisco I. Los condes anteriores utilizaron diferencias y cuarteles propios; estas armas plenas no se atribuyen a cada miembro en todas las etapas de su vida.'},
+  'Borbón': {blason: 'De azur, sembrado de flores de lis de oro, una banda de gules.', capas: [...FRANCIA_ANTIGUA, ['banda','gules']], nota: 'Armas de Roberto de Clermont, origen capeto de la casa de Borbón. Los reyes de Francia llevaron después las armas reales sin esta diferencia; las ramas incorporaron sus propias brisuras.'},
   'Anjou': {blason: 'De azur, sembrado de flores de lis de oro, con un lambel de gules.', capas: [...FRANCIA_ANTIGUA, ['lambel', 'gules']],
     nota: 'Armas de Carlos I de Anjou, hermano de Luis IX. Las de Nápoles y Hungría combinaron después otros cuarteles.'},
   'Dreux': {blason: 'Jaquelado de oro y azur, bordura de gules.', capas: [['jaquelado', 'oro', 'azur'], ['bordura', 'gules']]},

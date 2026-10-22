@@ -1,4 +1,5 @@
-// V1: los identificadores se conservan al cambiar el texto para poder reanudar.
+import {ADVANCED_TUTORIAL_COURSES} from './atlasTutorialAdvanced.js';
+// Los identificadores y la clave de V1 se conservan al completar el tutorial.
 export const TUTORIAL_STORAGE_KEY = 'eade:atlas-tutorial:v1';
 export const ATLAS_TUTORIAL = {
   es: {
@@ -6,7 +7,7 @@ export const ATLAS_TUTORIAL = {
     sections:['Recorridos','Guía de lectura','Controles'], start:'Empezar', resume:'Reanudar', restart:'Volver a empezar', completed:'Completado',
     previous:'Anterior', next:'Siguiente', finish:'Completar recorrido', index:'Todos los recorridos', close:'Cerrar guía', collapse:'Plegar guía', expand:'Desplegar guía',
     saved:'El avance se guarda en este navegador. Cerrar la ayuda conserva el paso; reanudarlo no cambia la vista.',
-    practice:'Los botones de práctica cambian la selección o el año. Buscar, Fuentes y otra generación pliegan la ayuda para dejar ver el contenido; puedes desplegarla de nuevo. Anterior y Siguiente solo cambian la explicación.',
+    practice:'Los botones de práctica actúan sobre el Atlas: selección, año, mapas, conexiones o filtros. Algunos pliegan la ayuda para dejar ver el resultado; puedes desplegarla de nuevo. Anterior y Siguiente solo cambian la explicación.',
     ready:'El Atlas se está preparando. Puedes leer la guía; los ejemplos estarán disponibles al terminar.',
     courses:[
       {id:'persona',title:'Encontrar y leer una persona',description:'De la búsqueda a los gobiernos y las fuentes.',steps:[
@@ -42,7 +43,7 @@ export const ATLAS_TUTORIAL = {
 ATLAS_TUTORIAL.en = {
   ...ATLAS_TUTORIAL.es, title:'Atlas help',intro:'Explore a person, their family and their time. You can use the Atlas while reading.',
   sections:['Walkthroughs','Reading guide','Controls'],start:'Start',resume:'Resume',restart:'Start again',completed:'Completed',previous:'Back',next:'Next',finish:'Complete walkthrough',index:'All walkthroughs',close:'Close guide',collapse:'Collapse guide',expand:'Expand guide',
-  saved:'Progress is saved in this browser. Closing keeps your step; resuming does not change the view.',practice:'Practice buttons change the selection or year. Back and Next only change the explanation.',ready:'The Atlas is loading. You can read the guide while the examples become available.',
+  saved:'Progress is saved in this browser. Closing keeps your step; resuming does not change the view.',practice:'Practice buttons act on the Atlas: selection, year, maps, connections or filters. Some collapse the guide to reveal the result; you can reopen it. Back and Next only change the explanation.',ready:'The Atlas is loading. You can read the guide while the examples become available.',
   courses:[
     {id:'persona',title:'Find and read a person',description:'From search results to governments and sources.',steps:[
       {id:'buscar',title:'Search for a name',body:'Use the search at the top. Enter Charles V and check the person, house, territory or story in the results.',action:'search',label:'Search for Charles V',result:'Select a result or continue with the example.'},
@@ -71,6 +72,9 @@ ATLAS_TUTORIAL.en = {
   ],
   controls:[['Move','Drag the tree or focus it and use the arrow keys. On a card, arrows move between nearby cards.'],['Zoom','Use the visible + and − controls, including on a touch screen.'],['Select','Click, tap, or focus a card with Tab and press Enter.'],['Read and practise','The guide does not block the Atlas. Collapse it to leave more room.'],['Leave','Tab moves between controls. Escape closes the guide and returns focus to its opener.']],
 };
+
+ATLAS_TUTORIAL.es.courses.push(...ADVANCED_TUTORIAL_COURSES.es);
+ATLAS_TUTORIAL.en.courses.push(...ADVANCED_TUTORIAL_COURSES.en);
 
 export function tutorialProgress(value) {
   const progress = {};

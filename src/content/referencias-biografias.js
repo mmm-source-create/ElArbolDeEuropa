@@ -3,6 +3,10 @@
 // figura (P4459, P1986, P1415, P7902, P1417) y sus formatos de URL (P1630).
 // Son biografías generales que cubren todas las etapas de cada vida.
 export const REFERENCIAS_BIOGRAFIAS = Object.freeze({
+ "BALDASSARECASTIGLIONE":[{"titulo":"Treccani · Dizionario Biografico degli Italiani · Baldassarre Castiglione","url":"https://www.treccani.it/enciclopedia/baldassarre-castiglione_(Dizionario-Biografico)/"}],
+ "CRISTOFOROCASTIGLIONE":[{"titulo":"Treccani · Dizionario Biografico degli Italiani · Baldassarre Castiglione","url":"https://www.treccani.it/enciclopedia/baldassarre-castiglione_(Dizionario-Biografico)/"}],
+ "LUIGIAGONZAGACASTIGLIONE":[{"titulo":"Treccani · Dizionario Biografico degli Italiani · Baldassarre Castiglione","url":"https://www.treccani.it/enciclopedia/baldassarre-castiglione_(Dizionario-Biografico)/"}],
+ "IPPOLITATORELLI":[{"titulo":"Treccani · Dizionario Biografico degli Italiani · Baldassarre Castiglione","url":"https://www.treccani.it/enciclopedia/baldassarre-castiglione_(Dizionario-Biografico)/"}],
  "RICARDO1ING":[{"titulo":"Britannica · Richard I, king of England","url":"https://www.britannica.com/biography/Richard-I-king-of-England"},{"titulo":"Westminster Abbey · Richard I","url":"https://www.westminster-abbey.org/abbey-commemorations/royals/richard-i"}],
  "MINDAUGASLIT":[{"titulo":"VLE · Mindaugas","url":"https://www.vle.lt/straipsnis/mindaugas/"}],
  "TRENIOTALIT":[{"titulo":"VLE · Treniota","url":"https://www.vle.lt/straipsnis/treniota/"}],

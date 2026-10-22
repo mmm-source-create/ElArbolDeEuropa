@@ -130,6 +130,52 @@ export default function ExplorerView({ vm, loading = false, loadError = false, o
       vm.growth.onExpand('family');
     } else if (step.action === 'year') actualizarAnioDesdeRango(step.year);
     else if (step.action === 'timeline') { if (!mostrarCronologia) alternarPanelAuxiliar('cronologia'); }
+    else if (step.action === 'connection') {
+      if (mode !== 'conexion') vistasAntesDeConectarRef.current = {arbol:mostrarArbol,mapa:mostrarMapa};
+      prepareTutorialPerson(step.people[0]);
+      vm.setVistasActivas({arbol:true,mapa:false});
+      setConnectionIds(step.people);
+      setConnectionCriterion(step.criterion || 'matrimonio');
+      vm.setMode('conexion');
+    } else if (step.action === 'connectionExit') {
+      vm.setMode('view');
+      if (vistasAntesDeConectarRef.current) vm.setVistasActivas(vistasAntesDeConectarRef.current);
+    } else if (step.action === 'personalMap') {
+      prepareTutorialPerson(step.person);
+      actualizarAnioDesdeRango(step.year);
+      vm.setVistasActivas({arbol:false,mapa:true});
+    } else if (step.action === 'europe') {
+      vm.setMode('view');
+      if (historiaActiva) salirHistoria();
+      actualizarAnioDesdeRango(step.year);
+      vm.changeAtlasScene('europa');
+    } else if (step.action === 'atlas') {
+      vm.setMode('view');
+      vm.changeAtlasScene('atlas');
+      vm.setVistasActivas({arbol:true,mapa:true});
+    } else if (['filters','filterHouse','filterGovernment'].includes(step.action)) {
+      vm.changeAtlasScene('atlas');
+      if (!mostrarFiltros) alternarPanelAuxiliar('filtros');
+      if (step.action !== 'filters') {
+        vm.limpiarSoloFiltros();
+        vm.growth.onExpand('family');
+        vm.setDinastias(['Habsburgo']);
+        if (step.action === 'filterGovernment') {
+          vm.setTerritorios(['Castilla']);
+          vm.setTerritorialFilterMode('government');
+          actualizarAnioDesdeRango(step.year);
+        }
+      }
+    } else if (step.action === 'clearFilters') vm.limpiarSoloFiltros();
+    else if (step.action === 'favorite') {
+      prepareTutorialPerson(step.person);
+      vm.setFavoritos(previous => [...new Set([...previous,step.person])]);
+    } else if (step.action === 'share') vm.compartirPersona();
+    else if (step.action === 'favorites') {
+      vm.changeAtlasScene('atlas');
+      setMobileToolsOpen(true);
+      setFavoritosOpen(true);
+    }
     else if (step.action === 'center') {
       vm.changeAtlasScene('atlas');
       vm.setVistasActivas({arbol:true,mapa:mostrarMapa});
@@ -305,7 +351,7 @@ export default function ExplorerView({ vm, loading = false, loadError = false, o
         {id:'filters',label:mostrarFiltros?'Ocultar filtros':'Mostrar filtros',Icon:SlidersHorizontal,onClick:()=>alternarPanelAuxiliar('filtros')},
         {id:'timeline',label:mostrarCronologia?'Ocultar cronología':'Mostrar cronología',Icon:List,onClick:()=>alternarPanelAuxiliar('cronologia')},
       ]}/>}
-      {guideOpen && <AtlasGuide locale={locale} onClose={closeGuide} onAction={tutorialAction} selectedId={seleccion?.id} selectedInTree={Boolean(vm.positions[seleccion?.id])} canExpand={canAddFamily} exampleReady={!historiaActiva && mode === 'view' && atlasScene === 'atlas'} hasFilters={filterCount > 0} onClearFilters={vm.limpiarSoloFiltros} ready={ready} />}
+      {guideOpen && <AtlasGuide locale={locale} onClose={closeGuide} onAction={tutorialAction} selectedId={seleccion?.id} selectedInTree={Boolean(vm.positions[seleccion?.id])} canExpand={canAddFamily} exampleReady={!historiaActiva && mode === 'view' && atlasScene === 'atlas'} hasFilters={filterCount > 0} onClearFilters={vm.limpiarSoloFiltros} getExportSelection={vm.getExportSelection} favoriteSaved={vm.favoritos.includes('CARLOS5')} shareStatus={vm.shareStatus} ready={ready} />}
       {infoProyecto === 'cobertura' && <CoverageDialog onClose={() => setInfoProyecto(null)} />}
       {infoProyecto !== 'cobertura' && <ModalProyecto seccion={infoProyecto} onClose={() => setInfoProyecto(null)} persona={seleccion} personasVista={visiblePeople} onStartHistoria={iniciarHistoria} />}
 

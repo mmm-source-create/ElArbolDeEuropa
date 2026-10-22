@@ -1,3 +1,4 @@
+import {CASTIGLIONE_REVIEWS} from './castiglioneReviews.js';
 import {ROYAL_COVERAGE_REVIEWS} from './royalCoverageReviews.js';
 import {DYNASTY_MAP_REVIEWS} from './dynastyMapReviews.js';
 import {EASTERN_EUROPE_REVIEWS} from './easternEuropeReviews.js';
@@ -225,6 +226,7 @@ const identityReview = (certainty, source, note, extra = {}) => ({
 });
 
 export const CLAIM_REVIEWS = Object.freeze({
+  ...CASTIGLIONE_REVIEWS,
   ...DYNASTY_MAP_REVIEWS,
   // Authority-record checks first: any specific review below takes precedence.
   ...AUTHORITY_REVIEWS,
