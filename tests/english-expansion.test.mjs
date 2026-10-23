@@ -28,7 +28,8 @@ test('portrait matching accepts English nicknames and historical title variants;
  assert.equal(portraitSuggestions(pool,'Lionheart',7,'en')[0].id,'RICARDO1ING');
  assert.equal(portraitSuggestions(pool,'Charles II of Hungary',7,'en')[0].id,'CARLOS3NAP');
  assert.equal(portraitSuggestions(pool,'last knight',7,'en')[0].id,'MAXIM1');
- assert.equal(portraitSuggestions(pool,'the Catholic',7,'en')[0].id,'ISAB1CAST');
+ // Both Catholic Monarchs share the nickname since Ferdinand’s complete profile (V5.35).
+ assert.deepEqual(new Set(portraitSuggestions(pool,'the Catholic',7,'en').slice(0,2).map(p=>p.id)),new Set(['ISAB1CAST','FERN2ARAG']));
  const used=[];for(let i=0;i<pool.length;i++){const next=nextPortrait(pool,used,()=>0);assert(next);assert(!used.includes(next.id));used.push(next.id);}assert.equal(nextPortrait(pool,used),null);
 });
 
