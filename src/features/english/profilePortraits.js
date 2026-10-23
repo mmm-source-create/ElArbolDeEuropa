@@ -1,6 +1,8 @@
 import {IBERIAN_PORTRAITS} from './iberianPortraits.js';
+import {PORTUGAL_NAVARRE_PORTRAITS} from './portugalPortraits.js';
 // Artwork and licence URLs are inherited unchanged from the original credits.
 export const ENGLISH_PROFILE_PORTRAITS = {
+  ...PORTUGAL_NAVARRE_PORTRAITS,
   ...IBERIAN_PORTRAITS,
   JUANSINTIERRA:{tipo:'Posthumous miniature',obra:'John with Beaulieu Abbey · Historia Anglorum',autor:'Matthew Paris',fecha:'c. 1250–1259',institucion:'British Library · Royal MS 14 C VII, f. 9'},
   FEL6FRA:{tipo:'Posthumous miniature',obra:'Philip VI · Grandes Chroniques de France',autor:'Anonymous illuminator',fecha:'c. 1375–1380',institucion:'Bibliothèque nationale de France · Français 2813'},

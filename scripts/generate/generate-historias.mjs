@@ -16,7 +16,7 @@ for (const story of HISTORIAS.filter(h => h.disponible && h.pasos?.length)) {
     if (!p) throw new Error(`Protagonista desconocido: ${story.id} / ${id}`);
     return { id, slug:p.slug, nombre:p.nombre, resumen:p.resumen, biografia:p.biografia };
   });
-  const fuentes = [...new Map(ids.flatMap(id => people.get(id).fuentes || []).map(f => [JSON.stringify(f), f])).values()];
+  const fuentes = [...new Map([...(story.fuentes || []), ...ids.flatMap(id => people.get(id).fuentes || [])].map(f => [f.url || JSON.stringify(f), f])).values()];
   const years = story.pasos.map(p => p.anio).filter(Number.isFinite);
   const base = { ...story, slug, storyTitle:story.titulo, period:`${Math.min(...years)}–${Math.max(...years)}`, protagonists, fuentes };
   await fs.mkdir(`public/historias-meta/${slug}/capitulo`, {recursive:true});

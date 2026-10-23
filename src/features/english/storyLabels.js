@@ -1,0 +1,23 @@
+// Reviewed labels for related-story links; a label does not imply a translated narrative.
+export const ENGLISH_STORY_LABELS = {
+    'balduino-saladino':['Baldwin IV and Saladin: a kingdom under pressure','From Montgisard to Hattin: victories, truces and a fragile succession'],
+    'sebastian-marruecos':['Sebastian of Portugal: the Moroccan campaign','Alcácer Quibir, the Battle of the Three Kings and the crisis of 1580'],
+    'constantinopla-dos-conquistas':['Constantinople: two conquests, two worlds','1204 and 1453: from the Fourth Crusade to Mehmed II’s empire'],
+    'ricardo-felipe-cruzada':['Richard I and Philip II: allies on crusade','Acre, Arsuf and the rivalry that returned to France'],
+    'reino-de-los-cielos':['Kingdom of Heaven','The history transformed by the film: Baldwin, Sibylla and Jerusalem'],
+    'braveheart-detras-del-mito':['Braveheart: behind the myth','Wallace, Bruce and the wars for Scotland'],
+    'dracula-detras-de-la-leyenda':['Dracula: behind the legend','Vlad III, Wallachia and the distance between a prince and a vampire'],
+    'puertas-viena':['At the gates of Vienna','The alliance that turned an Ottoman siege into a European counteroffensive'],
+    'reino-partido-dos':['The kingdom divided in two','Hohenstaufen, Anjou and Aragon contend for Sicily and Naples'],
+    'favoritos-maquiavelo':['Machiavelli’s favourites','Models, counterexamples and lessons in power in The Prince'],
+    'papales':['The papal families','Orsini, Colonna, Borgia, Della Rovere, Medici and the Rome of the cardinal-nephews'],
+    'emperadores':['Emperors','From the Hohenstaufen to revolutionary Europe'],
+    'borgona':['Burgundy: the kingdom that never was','From a French appanage to a Habsburg inheritance'],
+    'gioconda':['In search of the Mona Lisa','A journey through Leonardo’s life and the women behind the enigma'],
+    'revolucion-protestante':['The Protestant Reformation','Humanism, the Reformation, imperial politics and the response of Trent'],
+    'lepanto-alianza':['Lepanto: the unlikely alliance','How Rome, Spain and Venice assembled a fleet against the Ottoman Empire'],
+    'corona-dos-credos':['A crown between two creeds','Catherine de’ Medici, the Huguenots and the Catholic League'],
+    'cien-anos':['The Hundred Years’ War','A dynastic dispute that transformed France and England'],
+    'republica-nobles':['The Republic of Nobles','How Poland turned a hereditary monarchy into an elective crown'],
+    'condotieros':['The condottieri','From mercenary companies to the Duchy of Milan'],
+  };

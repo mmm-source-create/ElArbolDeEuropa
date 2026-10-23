@@ -12,6 +12,7 @@ import {authorityReferences} from '../evidence/authorityReviews.js';
 import {ADRIATICO_SOURCES} from "./sources-adriatico-v214.js";
 import {ALPES_SOURCES} from './sources-alpes-v213.js';
 import {V534_SOURCES} from './sources-v534.js';
+import {V538_SOURCES} from './sources-v538.js';
 const DOGES_1400_1605 = [
   'MICHELE_STENO_DOGE','PASQUALE_MALIPIERO_DOGE','CRISTOFORO_MORO_DOGE',
   'NICOLO_TRON_DOGE','NICOLO_MARCELLO_DOGE','PIETRO_MOCENIGO_DOGE',
@@ -185,6 +186,7 @@ export const SOURCES = [
   ...ALPES_SOURCES,
   ...ADRIATICO_SOURCES,
   ...V534_SOURCES,
+  ...V538_SOURCES,
   {
     "titulo": "Foundation for Medieval Genealogy · MedLands",
     "url": "https://fmg.ac/Projects/MedLands/index.htm",

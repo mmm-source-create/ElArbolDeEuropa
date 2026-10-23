@@ -1,3 +1,5 @@
+import {HISTORIAS_TEMATICAS, CONTEXTO_HISTORIAS} from './historiasTematicas.js';
+import {storyThemeId} from '../features/stories/storyThemes.js';
 // Eventos generales y pasos de las historias conservadas.
 export const EVENTOS_HISTORICOS = [
   {
@@ -2251,7 +2253,7 @@ export const EVENTOS_HISTORICOS = [
   }
 ];
 
-export const HISTORIAS = [
+const HISTORIAS_EXISTENTES = [
   {
     "id": "borgona",
     "titulo": "Borgoña: el reino que no fue",
@@ -4600,3 +4602,7 @@ export const HISTORIAS = [
     "disponible": false
   }
 ];
+export const HISTORIAS = [
+  ...HISTORIAS_EXISTENTES.map(h => HISTORIAS_TEMATICAS.find(nueva => nueva.id === h.id) || h),
+  ...HISTORIAS_TEMATICAS.filter(h => !HISTORIAS_EXISTENTES.some(existente => existente.id === h.id)),
+].map(h => ({...h, ...CONTEXTO_HISTORIAS[h.id], tema:storyThemeId(h.id)}));

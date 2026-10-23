@@ -1,3 +1,4 @@
+import {ENGLISH_STORY_LABELS} from '../../src/features/english/storyLabels.js';
 import {COMPLETE_ENGLISH_PROFILES} from '../../src/features/english/fullProfiles.js';
 import {PROFILE_LABELS,ENGLISH_NAMES,translatedProfileText} from '../../src/features/english/profileVocabulary.js';
 import {ENGLISH_PROFILE_PORTRAITS} from '../../src/features/english/profilePortraits.js';
@@ -40,20 +41,7 @@ export function completeEnglishProfile(source, translatedNames={}) {
   });
   const image=IMAGENES_PERSONAS[source.id];
   if(image){const portrait=ENGLISH_PROFILE_PORTRAITS[source.id];if(!portrait)throw Error(`Missing portrait credit translation: ${source.id}`);result.portrait={...image,...portrait,alt:`Portrait of ${translation.name}`,derechos:image.derechos.replace('Dominio público','Public domain')};}
-  const stories={
-    'reino-partido-dos':['The kingdom divided in two','Hohenstaufen, Anjou and Aragon contend for Sicily and Naples'],
-    'favoritos-maquiavelo':['Machiavelli’s favourites','Models, counterexamples and lessons in power in The Prince'],
-    'papales':['The papal families','Orsini, Colonna, Borgia, Della Rovere, Medici and the Rome of the cardinal-nephews'],
-    'emperadores':['Emperors','From the Hohenstaufen to revolutionary Europe'],
-    'borgona':['Burgundy: the kingdom that never was','From a French appanage to a Habsburg inheritance'],
-    'gioconda':['In search of the Mona Lisa','A journey through Leonardo’s life and the women behind the enigma'],
-    'revolucion-protestante':['The Protestant Reformation','Humanism, the Reformation, imperial politics and the response of Trent'],
-    'lepanto-alianza':['Lepanto: the unlikely alliance','How Rome, Spain and Venice assembled a fleet against the Ottoman Empire'],
-    'corona-dos-credos':['A crown between two creeds','Catherine de’ Medici, the Huguenots and the Catholic League'],
-    'cien-anos':['The Hundred Years’ War','A dynastic dispute that transformed France and England'],
-    'republica-nobles':['The Republic of Nobles','How Poland turned a hereditary monarchy into an elective crown'],
-    'condotieros':['The condottieri','From mercenary companies to the Duchy of Milan'],
-  };
+  const stories=ENGLISH_STORY_LABELS;
   result.historias=source.historias.map(h=>{if(!stories[h.id])throw Error(`Missing related story translation: ${h.id}`);return {...h,titulo:stories[h.id][0],subtitulo:stories[h.id][1]};});
   for(const label of [source.dinastia,...(source.reinos||[]),...governments.flatMap(g=>[g.titulo,g.territorio,g.condicion,g.ambito,etiquetaClaseGobierno(source,g)].filter(Boolean))])if(!PROFILE_LABELS[label])throw Error(`Missing profile label: ${source.id}/${label}`);
   for(const claim of result.localizedClaims)if(claim.field==='Sucesión'&&!PROFILE_LABELS[claim.value.territorio])throw Error(`Missing succession territory label: ${source.id}/${claim.value.territorio}`);

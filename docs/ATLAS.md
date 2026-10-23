@@ -26,6 +26,12 @@ Las tarjetas agrupan España, la Corona de Castilla y los demás conjuntos segú
 sus reglas fechadas. Los títulos internos permanecen desplegables. Las uniones
 personales y los gobiernos delegados no se convierten en soberanía unitaria.
 
+## Historias por temas
+
+El catálogo de Historias organiza los recorridos en **Cruzadas**, **Cultura popular**, **Dinastías y poder** y **Renacimiento y reformas**. Puedes combinar la búsqueda con un tema; cada historia aparece una sola vez. Los recorridos en preparación se indican dentro de su grupo. El catálogo inglés muestra los recorridos que ya tienen traducción completa.
+
+Cada historia abre un índice con capítulos y cronología. El progreso se guarda en este navegador y permite continuar la lectura. Desde un capítulo, **Ver la historia en el Atlas** conserva el recorrido y destaca a sus protagonistas. Las fuentes particulares se pueden consultar en **Fuentes y límites de cobertura**. El tema Cruzadas distingue las expediciones medievales de campañas posteriores como Lepanto, Marruecos y Viena. Cultura popular contrasta la ficción y las interpretaciones con la evidencia histórica.
+
 ## Línea temporal
 
 **Personas**, **Eventos** y **Ambos** ofrecen un eje compartido. Los carriles

@@ -18,6 +18,9 @@ const CASTILLA_LEON = {blason: 'Cuartelado de Castilla y León: 1.º y 4.º, de 
   capas: [['cuartelado', [CASTILLA, LEON, LEON, CASTILLA]]]};
 
 export const ESCUDOS = Object.freeze({
+  'Barcelona-Urgel': {blason:'Partido: de oro, dos palos de gules; jaquelado de oro y sable.',capas:[['campo','oro']],nota:'Armas de Pedro II de Urgel según el Armorial de Gelre. Identifica la rama Barcelona-Urgel; las armas personales variaron.'},
+  'Della Scala': {blason:'De gules, una escalera de plata puesta en palo.',capas:[['campo','gules']],nota:'Armas parlantes de los señores de Verona, sin ornamentos exteriores.'},
+  'Paleólogo': {blason:'De gules, una cruz de oro acantonada de cuatro signos de oro en forma de B o eslabones, orientados hacia la cruz.',capas:[['campo','gules'],['cruz','oro']],nota:'Cruz tetragramática asociada a los Paleólogo. Se muestra solo el escudo, extraído del dibujo aportado: sin águila ni corona. El conjunto original está catalogado como reconstrucción errónea; no se reproduce como grandes armas oficiales del Imperio bizantino.'},
   "Nazarí": {blason:"De gules, una banda de plata cargada con la divisa árabe «No hay vencedor sino Dios», en sable.",capas:[["campo","gules"]],nota:"Variante de banda de plata del dibujo aportado; también existen representaciones con banda de oro. Armas atribuidas a la dinastía nazarí de Granada (1232–1492): la fecha 1013 del nombre del archivo no es el comienzo de la dinastía."},
   "Zúñiga": {"blason": "De plata, una banda de sable; cadena de oro de ocho eslabones en orla.", "capas": [["campo", "azur"]], "nota": "Armas del linaje, sin la corona ducal exterior."},
   "Bohun": {"blason": "De azur, una banda de plata acostada de dos cotizas de oro, entre seis leones de oro.", "capas": [["campo", "azur"]], "nota": "Armas de la casa de Bohun."},
