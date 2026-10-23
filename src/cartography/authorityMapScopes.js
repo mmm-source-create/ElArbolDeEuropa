@@ -11,6 +11,12 @@ import {netherlandsGovernorScope} from './netherlandsGovernorScopes.js';
 // Each ID remains an approximate map cell; sources document authority and named sites.
 const AUTHORITY_MAP_SCOPES = Object.freeze([
   {
+    personId:'CARLOS3NAP',territory:'Nápoles',from:1381,through:1381,
+    excludedIds:['Corfu'],
+    source:{title:'Spyros N. Asonitis · Mentalities and Behaviours of the Feudal Class of Corfu',url:'https://ojs.lib.uom.gr/index.php/BalkanStudies/article/download/3187/3211',locator:'pp. 206–208: guarniciones de Jacques de Baux en 1381, expulsadas por los partidarios de Carlos en 1382.'},
+    note:'La conquista de Nápoles en 1381 no adelanta el dominio de Corfú, recuperado en 1382.'
+  },
+  {
     "personId": "SULEYMANCELEBI",
     "territory": "Imperio otomano",
     "from": 1402,

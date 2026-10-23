@@ -91,7 +91,7 @@ export const TERRITORIOS_SUB = {
     "Güeldres", "Frisia", "Utrecht", "Overijssel", "Drente", "Groninga"],
 
   "Estados Italianos": [
-    "Estados Pontificios", "Venecia", "Génova", "Ferrara", "Florencia", "Forlì", "Gravina",
+    "Comuna de Arezzo", "Estados Pontificios", "Venecia", "Génova", "Ferrara", "Florencia", "Forlì", "Gravina",
     "Mantua", "Módena", "Milán", "Monferrato", "Saluzzo", "Nápoles", "Parma", "Pesaro", "Urbino",
     "Piamonte", "Romaña", "Saboya", "Sicilia", "Tarento", "Toscana",
     "Trinacria", "Anagni", "Bisceglie", "Brescia", "Camerino", "Cerdeña",

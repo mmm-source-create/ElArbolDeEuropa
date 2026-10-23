@@ -1,0 +1,44 @@
+import {COMPLETE_ENGLISH_PROFILES} from '../../src/features/english/fullProfiles.js';
+import {PROFILE_LABELS,ENGLISH_NAMES,translatedProfileText} from '../../src/features/english/profileVocabulary.js';
+import {ENGLISH_PROFILE_PORTRAITS} from '../../src/features/english/profilePortraits.js';
+import {IMAGENES_PERSONAS} from '../../src/data/imagenesPersonas.js';
+import {personClaims} from '../../src/evidence/claims.js';
+import {governmentGroupsAt} from '../../src/domain/government/governmentPresentation.js';
+
+const names={...ENGLISH_NAMES,...Object.fromEntries(Object.entries(COMPLETE_ENGLISH_PROFILES).map(([id,p])=>[id,p.name]))};
+export function completeEnglishProfile(source, translatedNames={}) {
+  const translation=COMPLETE_ENGLISH_PROFILES[source.id];
+  if(!translation)return null;
+  const knownNames={...names,...translatedNames};
+  const notes={...translation.governmentNotes};
+  const translate=text=>notes[text] ||= translatedProfileText(text,knownNames);
+  for(const g of source.gobiernos){if(g.nota)translate(g.nota);for(const group of governmentGroupsAt(source,g.desde))if(group.note)translate(group.note);}
+  for(const d of Object.values(source.documentacion?.fechas||{}))if(d.nota)translate(d.nota);
+  for(const n of source.documentacion?.notas||[])translate(n.texto);
+  const sections=source.biografiaExtensa||[];
+  if(sections.length!==(translation.sections||[]).length)throw Error(`Incomplete biography translation: ${source.id}`);
+  const result={...source,...translation,translationComplete:true,nombre:translation.name,sobrenombre:translation.nickname||'',aliases:translation.aliases||[],resumen:translation.summary,biografia:translation.summary,
+    englishLabels:PROFILE_LABELS,englishNotes:notes,
+    biografiaExtensa:sections.map((part,i)=>({...part,titulo:translation.sections[i][0],texto:translation.sections[i][1]})),
+    localizedClaims:personClaims(source).map(claim=>({...claim,
+      note:translatedProfileText(claim.note,knownNames,claim),
+      sources:claim.sources.map(s=>({...s,locator:translatedProfileText(s.locator,knownNames,claim)})),
+    })),
+    evidenceNames:Object.fromEntries(Object.entries(source.evidenceNames||{}).map(([id,name])=>{if(!knownNames[id])throw Error(`Missing evidence name ${id}: ${name}`);return[id,knownNames[id]];})),
+  };
+  for(const field of ['padres','conyuges','hijos','relacionadosDinastia','contemporaneos'])result[field]=source[field].map(p=>{
+    const name=knownNames[p.id];if(!name)throw Error(`Missing English name: ${p.id} (${p.nombre})`);
+    const role=p.id==='JUANA2NAP'?'Queen':PROFILE_LABELS[p.titulo];if(p.titulo&&!role)throw Error(`Missing related role: ${p.titulo}`);
+    return {...p,nombre:name,role};
+  });
+  const image=IMAGENES_PERSONAS[source.id];
+  if(image){const portrait=ENGLISH_PROFILE_PORTRAITS[source.id];if(!portrait)throw Error(`Missing portrait credit translation: ${source.id}`);result.portrait={...image,...portrait,alt:`Portrait of ${translation.name}`,derechos:image.derechos.replace('Dominio público','Public domain')};}
+  const stories={
+    'reino-partido-dos':['The kingdom divided in two','Hohenstaufen, Anjou and Aragon contend for Sicily and Naples'],
+    'revolucion-protestante':['The Protestant Reformation','Humanism, the Reformation, imperial politics and the response of Trent'],
+    'lepanto-alianza':['Lepanto: the unlikely alliance','How Rome, Spain and Venice assembled a fleet against the Ottoman Empire'],
+  };
+  result.historias=source.historias.map(h=>{if(!stories[h.id])throw Error(`Missing related story translation: ${h.id}`);return {...h,titulo:stories[h.id][0],subtitulo:stories[h.id][1]};});
+  for(const label of [source.dinastia,...source.reinos,...source.gobiernos.flatMap(g=>[g.titulo,g.territorio,g.condicion])])if(!PROFILE_LABELS[label])throw Error(`Missing profile label: ${source.id}/${label}`);
+  return result;
+}

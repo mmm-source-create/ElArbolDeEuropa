@@ -1,11 +1,12 @@
 import {useState} from 'react';
 import {sourcesForPerson} from '../content/sources.js';
-import {CERTAINTY,EDITORIAL_HISTORY,PILOT_PERSON_IDS,citationText,formatClaimDate,personClaims} from '../evidence/claims.js';
+import {CERTAINTY,EDITORIAL_HISTORY,PILOT_PERSON_IDS,citationText,formatClaimDate} from '../evidence/claims.js';
 import './evidence.css';
+import {profileClaims,profileLabel} from '../features/english/profilePresentation.js';
 
-function claimValue(claim,locale,nameById) {
+function claimValue(claim,locale,nameById,person) {
   if (claim.field === 'Padre' || claim.field === 'Madre' || claim.field === 'Matrimonio o vínculo conyugal') return nameById(claim.value) || claim.value;
-  if (claim.field === 'Gobierno') return `${claim.value.titulo} · ${claim.value.territorio} · ${claim.interval.from ?? '?'}–${claim.interval.to ?? '?'}`;
+  if (claim.field === 'Gobierno') return `${profileLabel(person,claim.value.titulo)} · ${profileLabel(person,claim.value.territorio)} · ${claim.interval.from ?? '?'}–${claim.interval.to ?? '?'}`;
   if (claim.field === 'Sucesión') return `${claim.value.territorio} · ${claim.value.predecesor ? `${nameById(claim.value.predecesor.persona) || 'Predecesor no registrado'} → ` : ''}${nameById(claim.value.sucesor?.persona) || 'Sucesor no registrado'} · ${claim.interval.from ?? '?'}`;
   return formatClaimDate(claim,locale);
 }
@@ -24,13 +25,14 @@ export default function EvidencePanel({person,personId=person?.id,personNameById
   const label=(es,english)=>en?english:es;
   const fieldEn={'Nacimiento':'Birth','Fallecimiento':'Death','Padre':'Father','Madre':'Mother','Matrimonio o vínculo conyugal':'Marriage or partnership','Gobierno':'Government','Sucesión':'Succession'};
   const certaintyEn={documented:'Documented',approximate:'Approximate',disputed:'Disputed',inferred:'Inferred',pending:'Pending review'};
-  const claims=personClaims(person);
+  const claims=profileClaims(person);
   const relatedNames=new Map([...(person.padres||[]),...(person.conyuges||[]),...(person.hijos||[])].filter(p=>p?.id&&p?.nombre).map(p=>[p.id,p.nombre]));
   const nameById=id=>personNameById?.(id)||person.evidenceNames?.[id]||relatedNames.get(id)||null;
   const contextual=sourcesForPerson(personId);
   const unsourced=claims.filter(claim=>!claim.sources.length).length;
   const copy=async(claim)=>{
-    try { await navigator.clipboard.writeText(citationText(claim,person.nombre,locale,nameById)); setCopyStatus(label(`Cita copiada: ${claim.field}.`,`Citation copied: ${fieldEn[claim.field]}.`)); }
+    const translated=person.translationComplete&&claim.field==='Gobierno'?{...claim,value:{...claim.value,titulo:profileLabel(person,claim.value.titulo),territorio:profileLabel(person,claim.value.territorio)}}:claim;
+    try { await navigator.clipboard.writeText(citationText(translated,person.nombre,locale,nameById)); setCopyStatus(label(`Cita copiada: ${claim.field}.`,`Citation copied: ${fieldEn[claim.field]}.`)); }
     catch { setCopyStatus(label('No se pudo copiar. Selecciona el texto de la ficha.','Could not copy. Select the text on the profile.')); }
   };
   const groups=[
@@ -46,8 +48,8 @@ export default function EvidencePanel({person,personId=person?.id,personNameById
       <summary>{label(group.es,group.english)} <small>({group.claims.filter(c=>c.sources.length).length}/{group.claims.length} {label('con fuente precisa','with a precise source')})</small></summary>
       <ul className="evidence-claim-list">{group.claims.map(claim=><li key={claim.id} id={`evidence-${claim.id}`}>
         <div><strong>{en?fieldEn[claim.field]:claim.field}</strong><span className={`evidence-status evidence-${claim.certainty}`}>{en?certaintyEn[claim.certainty]:CERTAINTY[claim.certainty]}</span></div>
-        <p>{claimValue(claim,locale,nameById)}</p>
-        {claim.note&&<small lang="es">{claim.note}</small>}
+        <p>{claimValue(claim,locale,nameById,person)}</p>
+        {claim.note&&<small lang={en&&person.translationComplete?'en':'es'}>{claim.note}</small>}
         {claim.alternatives.length>0&&<small>{label('Alternativas registradas:','Recorded alternatives:')} {claim.alternatives.join(' · ')}</small>}
         {claim.sources.length ? <div className="evidence-sources">{claim.sources.map(source=><a key={`${source.url}-${source.locator}`} href={source.url} target="_blank" rel="noreferrer">{source.title}{source.locator&&` · ${source.locator}`}</a>)}</div> : <small>{label('Fuente precisa pendiente de añadir.','A precise source has not yet been added.')}</small>}
         <div className="evidence-meta">{claim.reviewedAt ? label(`Revisado el ${claim.reviewedAt}${claim.editor ? ` por ${claim.editor}` : ''}`,`Reviewed on ${claim.reviewedAt}${claim.editor ? ` by ${claim.editor}` : ''}`) : label('Sin revisión individual registrada','No individual review recorded')} · <button type="button" onClick={()=>copy(claim)}>{label('Copiar cita','Copy citation')}</button></div>

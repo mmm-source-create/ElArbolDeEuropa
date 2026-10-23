@@ -3,6 +3,16 @@ export const TRANSLATED_STORIES = [
  {id:'gioconda',es:'en-busca-de-la-gioconda',en:'in-search-of-the-mona-lisa'},
 ];
 export const TRANSLATED_PEOPLE = [
+ {id:'CARLOS3NAP',es:'carlos-iii-de-napoles-y-ii-de-hungria',en:'charles-of-durazzo'},
+ {id:'LUIS1',es:'luis-i',en:'louis-i-of-hungary'},
+ {id:'MARIA1H',es:'maria-i-de-hungria',en:'mary-queen-of-hungary'},
+ {id:'EDUV1',es:'santa-eduviges-i',en:'jadwiga-of-poland'},
+ {id:'HENRY2ING',es:'enrique-ii-de-inglaterra',en:'henry-ii-of-england'},
+ {id:'ELEANORAQUIT',es:'leonor-de-aquitania',en:'eleanor-of-aquitaine'},
+ {id:'RICARDO1ING',es:'ricardo-i-de-inglaterra',en:'richard-i-of-england'},
+ {id:'ISABEL1ING',es:'isabel-i-de-inglaterra',en:'elizabeth-i-of-england'},
+ {id:'LUIS9',es:'san-luis-ix',en:'louis-ix-of-france'},
+ {id:'SULEIMAN1OSM',es:'soliman-i',en:'suleiman-the-magnificent'},
  {id:'ISAB1CAST',es:'isabel-i-de-castilla',en:'isabella-i-of-castile'},
  {id:'CARLOS5',es:'carlos-v',en:'charles-v'},
  {id:'LEONARDODAVINCI',es:'leonardo-da-vinci',en:'leonardo-da-vinci'},

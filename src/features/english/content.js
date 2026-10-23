@@ -1,3 +1,4 @@
+import {COMPLETE_ENGLISH_PROFILES} from './fullProfiles.js';
 // Translations of the existing editorial content; IDs, dates and relationships come from the Spanish records.
 export const ENGLISH_STORIES = {
  borgona:{title:'Burgundy: the kingdom that never was',subtitle:'From a French appanage to a Habsburg inheritance',description:'Four generations of Valois dukes, a divided inheritance and the marriage that carried much of Burgundy into the Habsburg dynasty.',chapters:[
@@ -28,6 +29,7 @@ export const ENGLISH_STORIES = {
  ]},
 };
 export const ENGLISH_PEOPLE = {
+ ...COMPLETE_ENGLISH_PROFILES,
  ISAB1CAST:{name:'Isabella I of Castile',role:'Queen of Castile',summary:'Queen of Castile whose marriage to Ferdinand of Aragon linked the two major Iberian crowns without immediately merging their institutions. Her reign shaped the dynastic inheritance later received by the Habsburgs.'},
  CARLOS5:{name:'Charles V',role:'Holy Roman Emperor',summary:'Holy Roman Emperor and ruler of a composite monarchy spanning the Iberian Peninsula, Italy, the Low Countries and the Americas. His reign was shaped by the Reformation, rivalry with France and Ottoman expansion.'},
  LEONARDODAVINCI:{name:'Leonardo da Vinci',role:'Artist and engineer',summary:'Painter, engineer and investigator of nature who worked in Florence, Milan, Rome and France. His service to the Sforza, Cesare Borgia, the Medici and Francis I connects his artistic work with the courts and political networks of his time.'},

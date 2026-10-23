@@ -1,3 +1,4 @@
+import {IMAGENES_DURAZZO} from './imagenesPersonasDurazzo.js';
 import {IMAGENES_COMPLETION} from './imagenesPersonasCompletion.js';
 import {IMAGENES_EDITORIAL} from './imagenesPersonasEditorial.js';
 import {IMAGENES_TUTORIAL} from './imagenesPersonasTutorial.js';
@@ -12,6 +13,7 @@ export const IMAGENES_PERSONAS = {
   ...IMAGENES_EDITORIAL,
   ...IMAGENES_TUTORIAL,
   ...IMAGENES_COMPLETION,
+  ...IMAGENES_DURAZZO,
   JAIME2AR: {
     archivo:'/personas-img/JAIME2AR.webp',encuadre:'50% 28%',alt:'Jaime II de Aragón en una miniatura de los Usatges',tipo:'Representación contemporánea',
     obra:'Usatici et Constitutiones Cataloniae · BnF, Latin 4670 A',autor:'Anónimo',fecha:'c. 1315–1325',institucion:'Bibliothèque nationale de France',

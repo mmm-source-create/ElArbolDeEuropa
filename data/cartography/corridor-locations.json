@@ -113194,12 +113194,12 @@
       "scopeLabel": "Butrinto y costa epirota septentrional"
     },
     {
-      "name": "Butrinto y costa epirota septentrional · 1356–1385 · Epiro",
+      "name": "Butrinto y costa epirota septentrional · 1356–1381 · Epiro",
       "corridor": "Balcanes y Egeo · continuidad geográfica completa",
       "color": "#86715d",
       "coverage": {
         "from": 1356,
-        "through": 1385
+        "through": 1381
       },
       "versions": [
         {
@@ -113233,6 +113233,42 @@
           "title": "Universidad de Texas · Shepherd, Bizancio y otomanos en 1355",
           "url": "https://maps.lib.utexas.edu/maps/historical/shepherd/byzantine_empire_ottoman_turks_1355_shepherd.jpg",
           "locator": "Historical Atlas, p.89: extensión serbia, remanente bizantino, principados latinos, posesiones venecianas/genovesas y beylicatos anatolios. Contraste visual de superficies; no deslinde exacto de una celda."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": false,
+      "scopeLabel": "Butrinto y costa epirota septentrional"
+    },
+    {
+      "name": "Butrinto y costa epirota septentrional · 1382–1385 · Nápoles",
+      "corridor": "Balcanes y Egeo · continuidad geográfica completa",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1382,
+        "through": 1385
+      },
+      "versions": [
+        {
+          "from": 1382,
+          "ids": [
+            "Butrint"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Butrinto recuperado por los partidarios de Carlos III en 1382. Las negociaciones venecianas de 1384 lo incluyen entre sus dependencias de Corfú; pasa a Venecia en 1386. La celda es una aproximación regional, no toda la costa epirota."
+        }
+      ],
+      "note": "Butrinto recuperado por los partidarios de Carlos III en 1382. Las negociaciones venecianas de 1384 lo incluyen entre sus dependencias de Corfú; pasa a Venecia en 1386. La celda es una aproximación regional, no toda la costa epirota.",
+      "sources": [
+        {
+          "title": "William Miller · The Latins in the Levant (1908)",
+          "url": "https://www.levantineheritage.com/pdf/Latins-in-the-Levant.pdf",
+          "locator": "Cap. XV, Corfú, pp. 522–526: expulsión de las guarniciones navarras de Corfú y Butrinto en 1382; rendición de Butrinto a Venecia en 1386."
+        },
+        {
+          "title": "Freddy Thiriet · Délibérations des assemblées vénitiennes concernant la Romanie, II",
+          "url": "https://www.persee.fr/doc/ehess_0070-6957_1971_edc_11_2",
+          "locator": "Regestos 868–869, 7 de noviembre de 1384: adquisición negociada con Carlos III de Corfú y sus dependencias, en especial Butrinto."
         }
       ],
       "precision": "regional_approximation",
@@ -347096,7 +347132,8 @@
       "Butrinto y costa epirota septentrional · 1337–1339 · Bizancio",
       "Butrinto y costa epirota septentrional · 1340–1347 · Bizancio",
       "Butrinto y costa epirota septentrional · 1348–1355 · Serbia",
-      "Butrinto y costa epirota septentrional · 1356–1385 · Epiro",
+      "Butrinto y costa epirota septentrional · 1356–1381 · Epiro",
+      "Butrinto y costa epirota septentrional · 1382–1385 · Nápoles",
       "Butrinto y costa epirota septentrional · 1386–1796 · Venecia",
       "Butrinto y costa epirota septentrional · 1797–1797 · República francesa",
       "Butrinto y costa epirota septentrional · 1798–1800 · Imperio otomano",
