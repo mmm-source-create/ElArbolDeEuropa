@@ -1,6 +1,6 @@
 import {frenchCrownRelation,englishCrownLayer} from './frenchCrownRelations.js';
 import {aragonCrownRelation} from './aragonCrownRelations.js';
-import {tributaryLayerRelation} from './tributaryRelations.js';
+import {tributaryLayerRelation,tributaryLayerRelations,relationCoversLocation} from './tributaryRelations.js';
 import {ORANGE_NASSAU,ENGLISH_CROWN_COLOR,frenchFiefColor,aragonVassalColor,tributaryColor} from './mapColors.js';
 import {franceLowCountriesPoliticalKeys} from './regions/franceLowCountriesRoutes.js';
 import {governmentGroupsAt} from '../domain/government/governmentPresentation.js';
@@ -86,6 +86,7 @@ export function europeMosaicAt(data,year,people) {
   const english=new Set(names.filter(n=>englishCrownLayer(n,year)));
   const crown=new Map(names.map(n=>[n,frenchCrownRelation(n,year)]).filter(([,relation])=>relation));
   const aragon=new Map(names.map(n=>[n,aragonCrownRelation(n,year)]).filter(([,relation])=>relation));
+  const tributaryCandidates=new Map(names.map(n=>[n,tributaryLayerRelations(n,year)]));
   const tributary=new Map(names.map(n=>[n,tributaryLayerRelation(n,year)]).filter(([,relation])=>relation));
   // A coalesced identity can mix royal domain, fiefs and Lancastrian phases:
   // the relation is decided for each cell by the phases that contain it.
@@ -101,7 +102,7 @@ export function europeMosaicAt(data,year,people) {
   const republic=names.some(n=>franceLowCountriesPoliticalKeys(n,year).includes('Provincias Unidas'));
   const baseColor=layer.politicalColorGroup==='polonia-lituania'?REINO_COLOR['Polonia-Lituania']:REINO_COLOR[identity] || layer.mosaicColor;
   return {...layer,mosaicColor:shared?.color || REINO_COLOR[identity] || layer.mosaicColor,
-   crownRelation:aragon.values().next().value||crown.values().next().value||null,english,crown,aragon,tributary,phasesById,republic,politicalLabel:shared?.label || layer.displayName || layer.name,candidates,baseColor};
+   crownRelation:aragon.values().next().value||crown.values().next().value||null,english,crown,aragon,tributary,tributaryCandidates,phasesById,republic,politicalLabel:shared?.label || layer.displayName || layer.name,candidates,baseColor};
  });
  const byLocation=new Map();
  for(const layer of layers)for(const id of layer.ids){
@@ -127,7 +128,7 @@ export function europeMosaicAt(data,year,people) {
   // A tributary or a fief outside the French and Aragonese crowns (Ottoman
   // principalities, Polish Prussia and Courland, Angevin Brittany) takes a
   // tint of its overlord in the years its dependency is documented.
-  const tributaryRelation=phases.map(n=>layer.tributary.get(n)).find(Boolean)||null;
+  const tributaryRelation=phases.flatMap(n=>layer.tributaryCandidates.get(n)||[]).find(relation=>relationCoversLocation(relation,id))||null;
   const crownRelation=aragonRelation||frenchRelation;
   // The Burgundian state and its Habsburg heirs keep their colour inside the
   // kingdom too; the fief pattern still marks the French suzerainty.
@@ -135,7 +136,7 @@ export function europeMosaicAt(data,year,people) {
   const color=layer.republic?ORANGE_NASSAU:englishCrown?ENGLISH_CROWN_COLOR:aragonRelation?aragonVassalColor(aragonRelation):tributaryRelation?tributaryColor(tributaryRelation,year)
    :polity&&['herencia-borgonona','paises-bajos'].includes(polity.id)?polity.color:frenchRelation?frenchFiefColor(layer.entityId||layer.name):polity?polity.color:unanimous?applicable[0].color:layer.baseColor;
   const politicalGroup=layer.republic?'republica-neerlandesa':polity?.id || (unanimous?applicable[0].id:layer.politicalColorGroup || null);
-  const politicalLabel=englishCrown&&!applicable.length?'Inglaterra':applicable.length===1?applicable[0].label:layer.displayName||layer.name;
+  const politicalLabel=tributaryRelation?.subjectLabel|| (englishCrown&&!applicable.length?'Inglaterra':applicable.length===1?applicable[0].label:layer.displayName||layer.name);
   byLocation.get(id).push({...layer,crownRelation,tributaryRelation,englishCrown,mosaicColor:color,politicalLabel,politicalGroup});
  }
  return {...mosaic,layers,byLocation};

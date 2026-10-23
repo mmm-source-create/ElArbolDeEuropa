@@ -59,10 +59,10 @@ export function HomeContent({ data = HOME_DATA, locale = "es", title, onEnterAtl
   const storiesPath = english ? "/en/stories" : "/es/historias";
   const doors = [
     { href: peoplePath, Icon: Users, title: english ? "People" : "Personas", description: english ? "Begin with a person, their family and their time." : "Busca una figura y entra por su familia, reinados y época." },
-    { href: "/es/dinastias", Icon: Shield, title: english ? "Dynasties" : "Dinastías", description: english ? "Capetians, Habsburgs, Trastámaras, Bourbons and many more." : "Capetos, Habsburgo, Trastámara, Borbones y muchas más.", spanish: true },
-    { href: "/es/territorios", Icon: Landmark, title: english ? "Territories" : "Territorios", description: english ? "Discover who ruled where and how the crowns connect." : "Explora quién gobernó dónde y cómo se conectan las coronas.", spanish: true },
+    { href: english?"/en/dynasties":"/es/dinastias", Icon: Shield, title: english ? "Dynasties" : "Dinastías", description: english ? "Begin with the history, members and connections of Anjou-Hungary." : "Capetos, Habsburgo, Trastámara, Borbones y muchas más.", spanish: !english },
+    { href: english?"/en/territories":"/es/territorios", Icon: Landmark, title: english ? "Territories" : "Territorios", description: english ? "Discover who ruled where and how the crowns connect." : "Explora quién gobernó dónde y cómo se conectan las coronas.", spanish: !english },
     { href: storiesPath, Icon: BookOpen, title: english ? "Stories" : "Historias", description: english ? "Read guided journeys through art, politics and dynastic history." : "Recorridos guiados por guerras, artistas, favoritos y dinastías." },
-    { href: "/es/desafio", Icon: Swords, title: english ? "Challenge" : "Desafío", description: english ? "Test your knowledge through connections, portraits and a daily challenge." : "El Camino, Racha, Retratos y un desafío diario con la propia base histórica.", spanish: true },
+    { href: english?"/en/challenge":"/es/desafio", Icon: Swords, title: english ? "Challenge" : "Desafío", description: english ? "Build a portrait streak and discover complete English profiles." : "El Camino, Racha, Retratos y un desafío diario con la propia base histórica.", spanish: !english },
     { href: "/es/?atlas=1&panel=estadisticas", Icon: Sparkles, title: english ? "Statistics" : "Estadísticas", description: english ? "Explore the houses, territories and people represented in the Atlas." : "Descubre qué casas, territorios y figuras dominan la base.", spanish: true, panel: "estadisticas" },
   ];
   const navigateInApp = (event, callback, value) => {
@@ -81,7 +81,7 @@ export function HomeContent({ data = HOME_DATA, locale = "es", title, onEnterAtl
             <a className="public-secondary" href={storiesPath}><BookOpen size={15} /> {copy.stories}</a>
           </div>
           <a className="public-home-year" href="/es/?atlas=1&anio=1500&panel=europa"><Landmark size={14}/> {copy.year}</a>
-          {english && <p className="public-home-edition">Selected profiles and stories are available in English. The interactive Atlas is in Spanish.</p>}
+          {english && <p className="public-home-edition">Explore complete profiles, dynasties, territories, stories and the Portraits challenge in English. The interactive Atlas is in Spanish.</p>}
           <div className="public-hero-stats" aria-label={copy.statsLabel}>
             {["personas", "dinastias", "territorios", "historias"].map((key, index) => <span key={key}><strong><Odometer value={stats[key]} locale={locale}/></strong>{copy.stats[index]}</span>)}
           </div>

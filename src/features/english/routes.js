@@ -1,8 +1,13 @@
+export const TRANSLATED_DYNASTIES=[{es:'anjou-hungria',en:'anjou-hungary'}];
+export const TRANSLATED_TERRITORIES=[{es:'normandia',en:'normandy'}];
 export const TRANSLATED_STORIES = [
  {id:'borgona',es:'borgona-el-reino-que-no-fue',en:'burgundy-the-kingdom-that-never-was'},
  {id:'gioconda',es:'en-busca-de-la-gioconda',en:'in-search-of-the-mona-lisa'},
 ];
 export const TRANSLATED_PEOPLE = [
+ {id:'JUANA1NAP',es:'juana-i-de-napoles',en:'joanna-i-of-naples'},
+ {id:'CARLOS1',es:'carlos-i',en:'charles-i-of-hungary'},
+ {id:'MATIAS1HUN',es:'matias-corvino',en:'matthias-corvinus'},
  {id:'CARLOS3NAP',es:'carlos-iii-de-napoles-y-ii-de-hungria',en:'charles-of-durazzo'},
  {id:'LUIS1',es:'luis-i',en:'louis-i-of-hungary'},
  {id:'MARIA1H',es:'maria-i-de-hungria',en:'mary-queen-of-hungary'},
@@ -21,18 +26,18 @@ export const TRANSLATED_PEOPLE = [
 ];
 export function englishRoute(pathname) {
  const path=String(pathname).replace(/\/$/,'');
- const simple={'/en':'home','/en/about':'about','/en/methodology':'methodology','/en/stories':'stories','/en/people':'people'};
+ const simple={'/en':'home','/en/about':'about','/en/methodology':'methodology','/en/stories':'stories','/en/people':'people','/en/dynasties':'dynasties','/en/territories':'territories','/en/challenge':'challenge'};
  if(simple[path])return {kind:'english',slug:simple[path],chapter:null,path:path==='/en'?'/en/':path};
- const match=path.match(/^\/en\/(story|person)\/([a-z0-9]+(?:-[a-z0-9]+)*)(?:\/chapter\/([1-9][0-9]*))?$/);
- if(!match||match[1]==='person'&&match[3])return null;
+ const match=path.match(/^\/en\/(story|person|dynasty|territory)\/([a-z0-9]+(?:-[a-z0-9]+)*)(?:\/chapter\/([1-9][0-9]*))?$/);
+ if(!match||match[1]!=='story'&&match[3])return null;
  return {kind:'english',slug:`${match[1]}-${match[2]}`,chapter:match[3]?Number(match[3]):null,path};
 }
 // Forma del esqueleto de carga para una ruta inglesa.
-export const englishSkeletonKind=route=>route?.slug?.startsWith('person-')?'person':route?.slug==='home'?'home':['people','stories'].includes(route?.slug)?'catalog':['methodology','about'].includes(route?.slug)?'methodology':'story';
+export const englishSkeletonKind=route=>route?.slug?.startsWith('person-')?'person':/^(dynasty|territory)-/.test(route?.slug||'')?'entity-body':route?.slug==='home'?'home':['people','stories','dynasties','territories','challenge'].includes(route?.slug)?'catalog':['methodology','about'].includes(route?.slug)?'methodology':'story';
 
 export function translatedEquivalent(pathname,locale) {
  const path=String(pathname).replace(/\/$/,'');
- for(const [es,en] of [['/es','/en/'],['/es/proyecto','/en/about'],['/es/fuentes','/en/methodology'],['/es/historias','/en/stories'],['/es/personas','/en/people'],['/es/privacidad','/en/privacy']]) {
+ for(const [es,en] of [['/es','/en/'],['/es/proyecto','/en/about'],['/es/fuentes','/en/methodology'],['/es/historias','/en/stories'],['/es/personas','/en/people'],['/es/privacidad','/en/privacy'],['/es/dinastias','/en/dynasties'],['/es/territorios','/en/territories'],['/es/desafio','/en/challenge']]) {
   if(locale==='en'&&path===es)return en;
   if(locale==='es'&&path===en.replace(/\/$/,''))return es==='\/es'?'/es/':es;
  }
@@ -42,9 +47,10 @@ export function translatedEquivalent(pathname,locale) {
   const prefix=from+(locale==='en'?'/capitulo/':'/chapter/');
   if(path.startsWith(prefix)&&/^[1-9][0-9]*$/.test(path.slice(prefix.length)))return to+(locale==='en'?'/chapter/':'/capitulo/')+path.slice(prefix.length);
  }
+ for(const [items,esKind,enKind] of [[TRANSLATED_DYNASTIES,'dinastia','dynasty'],[TRANSLATED_TERRITORIES,'territorio','territory']])for(const p of items){if(locale==='en'&&path===`/es/${esKind}/${p.es}`)return `/en/${enKind}/${p.en}`;if(locale==='es'&&path===`/en/${enKind}/${p.en}`)return `/es/${esKind}/${p.es}`;}
  for(const p of TRANSLATED_PEOPLE){if(locale==='en'&&path===`/es/persona/${p.es}`)return `/en/person/${p.en}`;if(locale==='es'&&path===`/en/person/${p.en}`)return `/es/persona/${p.es}`;}
  return null;
 }
 export function englishPaths() {
- return ['/en/','/en/about','/en/stories','/en/people','/en/methodology',...TRANSLATED_PEOPLE.map(p=>`/en/person/${p.en}`),...TRANSLATED_STORIES.flatMap(s=>[`/en/story/${s.en}`,...Array.from({length:11},(_,i)=>`/en/story/${s.en}/chapter/${i+1}`)])];
+ return ['/en/dynasties','/en/territories','/en/challenge',...TRANSLATED_DYNASTIES.map(p=>`/en/dynasty/${p.en}`),...TRANSLATED_TERRITORIES.map(p=>`/en/territory/${p.en}`),'/en/','/en/about','/en/stories','/en/people','/en/methodology',...TRANSLATED_PEOPLE.map(p=>`/en/person/${p.en}`),...TRANSLATED_STORIES.flatMap(s=>[`/en/story/${s.en}`,...Array.from({length:11},(_,i)=>`/en/story/${s.en}/chapter/${i+1}`)])];
 }

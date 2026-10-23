@@ -33,6 +33,7 @@ export const aragonVassalColor = relation => relation.holder === 'Aragón' ? ARA
 // border each other and the Ottoman provinces). Poland's own magenta gives way
 // to the Commonwealth's rose in 1569.
 const TRIBUTARY_TINTS = Object.freeze({
+  'bosnia-louis-hungary':'#D79D65','ragusa-louis-hungary':'#E6B78C','wallachia-louis-hungary':'#CCA578','wallachia-reconciliation-louis-hungary':'#CCA578','moldavia-peter-louis-hungary':'#E8C69F','podolia-louis-hungary':'#D8A056','serbia-lazar-louis-hungary':'#E0B176','serbia-rastislalic-louis-hungary':'#C58D57','vidin-louis-hungary':'#EDCCA7',
   'wallachia-ottoman': '#6FA59B', 'moldavia-ottoman': '#A5CCC2', 'transylvania-ottoman': '#4F9A80',
   'crimea-ottoman': '#7DB3A6', 'serbia-ottoman': '#9CC9BC', 'byzantium-ottoman': '#A3CBC0', 'tarnovo-ottoman': '#5E9C8E',
   'morea-ottoman': '#8DBFB2', 'trebizond-ottoman': '#94C3B7', 'ragusa-ottoman': '#86BBAE', 'archipelago-ottoman': '#86BBAE',

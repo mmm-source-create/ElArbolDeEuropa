@@ -91,7 +91,7 @@ export const TERRITORY_REGION={
  'Sacro Imperio':3,'Austria':3,'Hungría':3,'Prusia':3,'Brzeg':3,'Glaž':3,'Sajonia-Coburgo':3,'Sajonia-Coburgo-Eisenach':3,'Sajonia-Eisenach':3,'Sajonia-Gotha':3,'Sajonia-Weimar':3,
  'Comuna de Arezzo':4,'Estados Italianos':4,'Cerdeña':4,'Sicilia':4,'Nápoles':4,'Trinacria':4,'Verona':4,'Córcega':4,'Judicado de Arborea':4,'Judicado de Cagliari':4,'Judicado de Torres':4,'Marquesado de Oristano':4,
  'Escandinavia':5,
- 'Polonia-Lituania':6,'Rusia':6,'Reino de Galicia y Lodomeria':6,
+ 'Podolia':6,'Polonia-Lituania':6,'Rusia':6,'Reino de Galicia y Lodomeria':6,
  'Balcanes':7,'Bizancio y Oriente latino':7,'Atenas':7,'Ducado de Neopatria':7,'Condado de Salona':7,'Condado palatino de Cefalonia y Zacinto':7,'Despotado de Ioannina':7,'Despotado de Serres':7,'Donji Kraji':7,'Epiro de los Tocco':7,'Hum':7,'Norte de Serbia habsbúrgico':7,'Oltenia habsbúrgica':7,'Señorío de Dejanović':7,
  'Egipto':8,'Siria':8,'Georgia y Cáucaso':8,
 };

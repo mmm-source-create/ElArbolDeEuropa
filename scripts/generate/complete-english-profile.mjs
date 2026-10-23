@@ -10,11 +10,12 @@ export function completeEnglishProfile(source, translatedNames={}) {
   const translation=COMPLETE_ENGLISH_PROFILES[source.id];
   if(!translation)return null;
   const knownNames={...names,...translatedNames};
-  const notes={...translation.governmentNotes};
+  const notes={...translation.governmentNotes},governments=source.gobiernos||[];
   const translate=text=>notes[text] ||= translatedProfileText(text,knownNames);
-  for(const g of source.gobiernos){if(g.nota)translate(g.nota);for(const group of governmentGroupsAt(source,g.desde))if(group.note)translate(group.note);}
+  for(const g of governments){if(g.nota)translate(g.nota);for(const group of governmentGroupsAt(source,g.desde))if(group.note)translate(group.note);}
   for(const d of Object.values(source.documentacion?.fechas||{}))if(d.nota)translate(d.nota);
   for(const n of source.documentacion?.notas||[])translate(n.texto);
+  for(const a of source.accesosCoronas||[]){translate(a.explicacion);for(const m of a.motivos||[])if(!PROFILE_LABELS[m])throw Error(`Missing accession reason: ${m}`);}
   const sections=source.biografiaExtensa||[];
   if(sections.length!==(translation.sections||[]).length)throw Error(`Incomplete biography translation: ${source.id}`);
   const result={...source,...translation,translationComplete:true,nombre:translation.name,sobrenombre:translation.nickname||'',aliases:translation.aliases||[],resumen:translation.summary,biografia:translation.summary,
@@ -35,10 +36,15 @@ export function completeEnglishProfile(source, translatedNames={}) {
   if(image){const portrait=ENGLISH_PROFILE_PORTRAITS[source.id];if(!portrait)throw Error(`Missing portrait credit translation: ${source.id}`);result.portrait={...image,...portrait,alt:`Portrait of ${translation.name}`,derechos:image.derechos.replace('Dominio público','Public domain')};}
   const stories={
     'reino-partido-dos':['The kingdom divided in two','Hohenstaufen, Anjou and Aragon contend for Sicily and Naples'],
+    'favoritos-maquiavelo':['Machiavelli’s favourites','Models, counterexamples and lessons in power in The Prince'],
+    'papales':['The papal families','Orsini, Colonna, Borgia, Della Rovere, Medici and the Rome of the cardinal-nephews'],
+    'emperadores':['Emperors','From the Hohenstaufen to revolutionary Europe'],
+    'borgona':['Burgundy: the kingdom that never was','From a French appanage to a Habsburg inheritance'],
+    'gioconda':['In search of the Mona Lisa','A journey through Leonardo’s life and the women behind the enigma'],
     'revolucion-protestante':['The Protestant Reformation','Humanism, the Reformation, imperial politics and the response of Trent'],
     'lepanto-alianza':['Lepanto: the unlikely alliance','How Rome, Spain and Venice assembled a fleet against the Ottoman Empire'],
   };
   result.historias=source.historias.map(h=>{if(!stories[h.id])throw Error(`Missing related story translation: ${h.id}`);return {...h,titulo:stories[h.id][0],subtitulo:stories[h.id][1]};});
-  for(const label of [source.dinastia,...source.reinos,...source.gobiernos.flatMap(g=>[g.titulo,g.territorio,g.condicion])])if(!PROFILE_LABELS[label])throw Error(`Missing profile label: ${source.id}/${label}`);
+  for(const label of [source.dinastia,...(source.reinos||[]),...governments.flatMap(g=>[g.titulo,g.territorio,g.condicion])])if(!PROFILE_LABELS[label])throw Error(`Missing profile label: ${source.id}/${label}`);
   return result;
 }

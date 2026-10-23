@@ -1,4 +1,5 @@
 export const EASTERN_EUROPE_TERRITORIES = Object.freeze({
+  Podolia:{clase:"ducado",naturaleza:"entidad",componentes:[],nota:"Ámbito de los duques Koriatovich. El homenaje a Luis I de Hungría de 1377 se limita a las superficies podolias documentadas; no convierte Lituania en un feudo húngaro."},
   "Arzobispado de Riga": {
     "clase": "gobierno",
     "naturaleza": "entidad",

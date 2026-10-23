@@ -1,3 +1,5 @@
+import EnglishEntity from './EnglishEntity.jsx';
+import EnglishPortraitChallenge from './EnglishPortraitChallenge.jsx';
 import { useState } from 'react';
 import { ArrowRight, BookOpen, Search, Users, Info } from 'lucide-react';
 import SiteHeader from '../../components/SiteHeader.jsx';
@@ -23,7 +25,7 @@ export default function EnglishPage({ page = null, pathname }) {
   const prerendered = Boolean(page);
   if (data.type === 'story') return <StoryReader key={data.path} data={data} locale="en" prerendered={prerendered}/>;
   return <div className="public-site"><SiteHeader locale="en" pathname={data.path} prerendered={prerendered}/>
-    {data.type === 'home' ? <HomeContent data={data} locale="en" title={data.nombre} prerendered={prerendered}/> : data.type === 'person' ? <PersonContent persona={data} locale="en" path={data.path}/> : ['methodology','about'].includes(data.type) ? <EnglishInfo data={data}/> : <EnglishCatalog data={data}/>}
+    {data.type === 'home' ? <HomeContent data={data} locale="en" title={data.nombre} prerendered={prerendered}/> : ['dynasty','territory'].includes(data.type)?<EnglishEntity data={data}/>:data.type==='challenge'?<EnglishPortraitChallenge data={data}/>:data.type === 'person' ? <PersonContent persona={data} locale="en" path={data.path}/> : ['methodology','about'].includes(data.type) ? <EnglishInfo data={data}/> : <EnglishCatalog data={data}/>}
     <SiteFooter locale="en"/>
   </div>;
 }
@@ -33,12 +35,14 @@ function PageTitle({ data, Icon, eyebrow }) {
 }
 function EnglishCatalog({ data }) {
   const [query, setQuery] = useState('');
-  const people = data.type === 'people';
-  const items = (people ? data.people : data.stories).filter(p => [p.nombre, p.role, p.sobrenombre, ...(p.aliases||[]), p.summary, p.description].filter(Boolean).join(' ').toLocaleLowerCase('en').includes(query.trim().toLocaleLowerCase('en')));
-  return <main className="public-main public-catalog"><PageTitle data={data} Icon={people ? Users : BookOpen} eyebrow={people ? 'Atlas index' : 'Guided stories'}/><label className="public-search"><Search size={16}/><input value={query} onChange={e => setQuery(e.target.value)} placeholder={people ? 'Search translated profiles…' : 'Search translated stories…'} aria-label={people ? 'Search translated profiles' : 'Search translated stories'}/><span>{items.length}</span></label>
-    {people ? <div className="public-person-list">{items.map(p => <PersonaMiniCard key={p.id} persona={p} compact locale="en"/>)}</div> : <div className="public-story-grid public-story-catalog">{items.map(s => <article key={s.id} className="public-story-card"><span>{s.pasos} chapters · {s.period}</span><h2>{s.nombre}</h2><p>{s.description}</p><a href={s.path}>Start reading <ArrowRight size={13}/></a></article>)}</div>}
-    {!items.length&&<p className="public-catalog-note" role="status">No translated {people ? 'profiles' : 'stories'} match this search.</p>}
-    <p className="english-catalog-note">{people ? `${data.people.length} profiles` : `${data.stories.length} complete stories`} are translated so far. <a href={data.esPath}>Browse the full Spanish collection</a>, or <a href="/es/?atlas=1&continuar=1">open the Spanish Atlas</a>.</p>
+  const people = data.type === 'people',stories=data.type==='stories',entities=!people&&!stories;
+  const collection=people?data.people:stories?data.stories:data.type==='dynasties'?data.dynasties:data.territories;
+  const noun=people?'profiles':stories?'stories':data.type;
+  const items = collection.filter(p => [p.nombre, p.role, p.sobrenombre, ...(p.aliases||[]), p.summary, p.description].filter(Boolean).join(' ').toLocaleLowerCase('en').includes(query.trim().toLocaleLowerCase('en')));
+  return <main className="public-main public-catalog"><PageTitle data={data} Icon={people ? Users : BookOpen} eyebrow={stories?'Guided stories':'Atlas index'}/><label className="public-search"><Search size={16}/><input value={query} onChange={e => setQuery(e.target.value)} placeholder={`Search translated ${noun}…`} aria-label={`Search translated ${noun}`}/><span>{items.length}</span></label>
+    {entities?<div className="public-entity-grid">{items.map(item=><article key={item.path} className="public-entity-card">{item.arms&&<img src={item.arms.archivo} width="40" height="48" alt={`Arms of ${item.nombre}`}/>}<h2>{item.nombre}</h2><p>{item.description}</p>{item.total&&<p>{item.total} recorded people</p>}<a href={item.path}>Read the complete record <ArrowRight size={13}/></a></article>)}</div>:people ? <div className="public-person-list">{items.map(p => <PersonaMiniCard key={p.id} persona={p} compact locale="en"/>)}</div> : <div className="public-story-grid public-story-catalog">{items.map(s => <article key={s.id} className="public-story-card"><span>{s.pasos} chapters · {s.period}</span><h2>{s.nombre}</h2><p>{s.description}</p><a href={s.path}>Start reading <ArrowRight size={13}/></a></article>)}</div>}
+    {!items.length&&<p className="public-catalog-note" role="status">No translated {noun} match this search.</p>}
+    <p className="english-catalog-note">{collection.length} translated {collection.length===1?({profiles:'profile',stories:'story',dynasties:'dynasty',territories:'territory'}[noun]||noun):noun}. <a href={data.esPath}>Browse the full Spanish collection</a>, or <a href="/es/?atlas=1&continuar=1">open the Spanish Atlas</a>.</p>
   </main>;
 }
 function EnglishInfo({ data }) {

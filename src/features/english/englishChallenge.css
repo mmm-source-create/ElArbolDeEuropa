@@ -1,0 +1,12 @@
+.english-challenge .desafio-portrait-result { align-items: flex-start; }
+.english-challenge .desafio-portrait-result h3 { margin: 0 0 4px; font: 600 var(--fs-xl, 18px)/1.25 var(--eade-serif); }
+.english-challenge .desafio-portrait-result p { margin: 0 0 8px; line-height: 1.6; }
+.english-challenge .desafio-portrait-result small { line-height: 1.6; }
+.english-challenge .desafio-portrait-result a { color: inherit; }
+.english-challenge .desafio-name-suggestions [aria-selected="true"] { outline: 2px solid var(--eade-wine); outline-offset: -2px; }
+.english-challenge .desafio-fast-feedback-head { padding: 4px 0; }
+.english-challenge .desafio-progress-row { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+@media(max-width: 480px) {
+ .english-challenge .desafio-portrait-result { flex-direction: column; }
+ .english-challenge .desafio-progress-row { flex-wrap: wrap; }
+}

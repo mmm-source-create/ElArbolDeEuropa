@@ -18,7 +18,7 @@ export function publicMeta({title,description,path='/es/',image=OG_DEFAULT_IMAGE
  ],alternates};
 }
 export function entityMeta(kind,data,slug) {
- if(kind==='english')return {title:`${data?.nombre||'English edition'} — The Tree of Europe`,description:data?.description||'Explore European families and stories.',path:data?.path||'/en/',...(data?.ogImage?{image:data.ogImage,imageAlt:`Portrait of ${data.nombre}`}:{})};
+ if(kind==='english')return {title:`${data?.nombre||'English edition'} — The Tree of Europe`,description:data?.description||'Explore European families and stories.',path:data?.path||'/en/',...(data?.ogImage?{image:data.ogImage,imageAlt:`${data.type==='dynasty'?'Arms of':'Portrait of'} ${data.nombre}`}:{})};
  if(kind==='historia')return {title:`${data?.nombre || 'Historia'} — ${SITE_NAME}`,description:(data?.chapter?data.pasos[data.chapter-1].texto:data?.descripcion||'Historias de Europa, capítulo a capítulo.').slice(0,155),path:`/es/historia/${encodeURIComponent(data?.slug||slug)}${data?.chapter?`/capitulo/${data.chapter}`:''}`};
  if(kind==='persona')return {
   title:data?`${data.nombre} — ${SITE_NAME}`:`Persona — ${SITE_NAME}`,

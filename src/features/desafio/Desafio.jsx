@@ -1,3 +1,4 @@
+import {portraitSuggestions as sugerenciasPorNombre} from './portraitSearch.js';
 import {gobiernosDe, territoriosDe} from '../../domain/genealogy/personAccessors.js';
 import { lazy,Suspense,useCallback, useId, useMemo, useRef, useState } from "react";
 import {
@@ -170,31 +171,6 @@ function elegirPersonaRetrato(pool, usados = [], racha = 0) {
   return candidatas[Math.floor(Math.random() * candidatas.length)] || disponibles[0] || null;
 }
 
-function sugerenciasPorNombre(personas, consulta, limite = 7) {
-  const q = normalizarBusqueda(consulta);
-  if (!q) return [];
-  const tokens = q.split(" ").filter(Boolean);
-  return personas
-    .map((persona) => {
-      const nombreOriginal = String(persona.nombre || "");
-      const nombre = normalizarBusqueda(nombreOriginal);
-      const aliases = (Array.isArray(persona.aliases) ? persona.aliases : []).map(normalizarBusqueda).filter(Boolean);
-      const variantes = [nombre, ...aliases].filter(Boolean);
-      const alias = normalizarBusqueda([persona.nombre, ...(persona.aliases || []), persona.sobrenombre].filter(Boolean).join(" "));
-      let score = Number.POSITIVE_INFINITY;
-      if (variantes.some((variante) => variante === q)) score = 0;
-      else if (variantes.some((variante) => variante.startsWith(`${q} `))) score = 1;
-      else if (tokens.length > 1 && tokens.every((token) => alias.includes(token))) score = 2;
-      else if (variantes.some((variante) => variante.includes(q))) score = 3;
-      else if (alias.includes(q)) score = 4;
-      else if (tokens.every((token) => alias.split(" ").some((parte) => parte.startsWith(token)))) score = 5;
-      return { persona, score };
-    })
-    .filter((item) => Number.isFinite(item.score))
-    .sort((a, b) => a.score - b.score || String(a.persona.nombre).localeCompare(String(b.persona.nombre), "es"))
-    .slice(0, limite)
-    .map((item) => item.persona);
-}
 
 function multiplicador(combo) {
   if (combo >= 9) return 4;
