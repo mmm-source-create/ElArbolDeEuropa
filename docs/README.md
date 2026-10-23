@@ -29,6 +29,7 @@ compilar, empieza por el [README del proyecto](../README.md).
 ## Resultados de revisión
 
 - [Edición inglesa, retratos húngaros y dominios angevinos](versiones/V5.34-durazzo-ingles.md).
+- [Diez fichas inglesas completas y textos que se veían en español](versiones/V5.35.md).
 
 Los [informes aceptados](reports/README.md) son instantáneas de una revisión,
 no auditorías ejecutadas hoy. Los nuevos diagnósticos se guardan en
