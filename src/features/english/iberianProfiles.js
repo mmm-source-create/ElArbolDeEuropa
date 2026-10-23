@@ -704,7 +704,8 @@ export const IBERIAN_ENGLISH_PROFILES = {
     "name": "Charles II of Navarre",
     "nickname": "the Bad",
     "summary": "He intervened actively in the French monarchy’s crises during the Hundred Years’ War. His Navarrese and Norman domains enabled him to act on both sides of the Pyrenees.",
-    "role": "King of Navarre",
+    "role": "King of Navarre · Count of Évreux",
+    "governmentNotes": {"La confiscación francesa de 1378 pone fin al control efectivo del condado; se conserva la pretensión, no una posesión territorial.": "The French confiscation of 1378 ended effective control of the county; the claim is retained, without territorial possession."},
     "aliases": [
       "Charles the Bad"
     ]

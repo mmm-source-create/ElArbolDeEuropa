@@ -20,6 +20,7 @@ import {CREDITOS_ESCUDOS} from '../../content/dinastias/escudos.js';
 import {textoBusquedaPersona, normalizarBusquedaPublica, slugPublico, etiquetaClaseGobierno} from '../../domain/people/personLabels.js';
 import {responsiveImage} from '../../utils/responsiveImage.js';
 import ReadingSkeleton from '../stories/ReadingSkeleton.jsx';
+import StoryCatalog from '../stories/StoryCatalog.jsx';
 import {STORY_PROGRESS_KEY} from '../stories/storyModel.js';
 import {translatedEquivalent} from '../english/routes.js';
 import '../../styles/theme.css';
@@ -231,30 +232,7 @@ export function CatalogPage({ tipo }) {
         )}
         {!loading && !error && tipo === "dinastias" && <p className="public-catalog-note public-arms-note">Escudos: autores, procedencia y licencias en <a href="/es/licencias#escudos">Licencias</a>.</p>}
 
-        {!loading && !error && tipo === "historias" && (
-          <>
-            <section className="story-catalog-section" aria-labelledby="historias-disponibles">
-              <h2 id="historias-disponibles">Disponibles <small>{filtrados.filter(h => h.disponible).length}</small></h2>
-              <div className="public-story-grid public-story-catalog">
-                {filtrados.filter(h => h.disponible).map((historia) => {
-                  const progreso = progresoHistorias[historia.id], leidos = Math.min(progreso?.read?.length || 0, historia.pasos);
-                  return <article key={historia.id} className="public-story-card">
-                    <span>{historia.pasos} capítulos{historia.minutos ? ` · ${historia.minutos} min` : ""}</span>
-                    <h2>{historia.titulo}</h2><p>{historia.subtitulo || historia.descripcion}</p>
-                    {leidos > 0 && <div className="story-card-progress" aria-label={`${leidos} de ${historia.pasos} capítulos leídos`}><i style={{width: `${Math.round(leidos / historia.pasos * 100)}%`}}/></div>}
-                    <a href={leidos > 0 && leidos < historia.pasos ? `${rutaEntidad("historia", historia.slug)}/capitulo/${progreso.last}` : rutaEntidad("historia", historia.slug)}>
-                      {leidos >= historia.pasos ? "Volver a leer" : leidos > 0 ? `Continuar en el capítulo ${progreso.last}` : "Comenzar recorrido"} <ArrowRight size={13} />
-                    </a>
-                  </article>;
-                })}
-              </div>
-            </section>
-            {filtrados.some(h => !h.disponible) && <section className="story-catalog-section is-coming" aria-labelledby="historias-preparacion">
-              <h2 id="historias-preparacion">En preparación <small>{filtrados.filter(h => !h.disponible).length}</small></h2>
-              <ul className="story-coming-list">{filtrados.filter(h => !h.disponible).map(historia => <li key={historia.id}><strong>{historia.titulo}</strong><span>{historia.subtitulo || historia.descripcion}</span></li>)}</ul>
-            </section>}
-          </>
-        )}
+        {!loading && !error && tipo === "historias" && <StoryCatalog items={filtrados} progress={progresoHistorias}/>}
       </main>
     </PublicLayout>
   );

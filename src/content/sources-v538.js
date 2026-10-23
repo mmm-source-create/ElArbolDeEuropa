@@ -1,0 +1,4 @@
+export const V538_SOURCES = [
+  {titulo:'Archives départementales de l’Eure · Domaine d’Évreux',url:'https://archives.eure.fr/ark:/26335/wnq06d5pgrmv',grupo:'Archivos e instituciones',territorios:['Évreux','Navarra'],personas:['FELIPEVREUX','CARLOS2NAV'],nota:'Historia institucional del apanage: sucesión de Felipe de Évreux en 1319, muerte en 1343 y patrimonio normando de Carlos II. El condado es un feudo del reino de Francia.'},
+  {titulo:'Archivo Real y General de Navarra · Cartulario llamado de Carlos II',url:'https://www.navarra.es/NR/rdonlyres/D1850D13-B358-4EA8-87D3-799278041709/298590/cartulario_tomoI_web.pdf',grupo:'Archivos e instituciones',territorios:['Évreux','Navarra'],personas:['FELIPEVREUX','CARLOS2NAV'],nota:'Edición del cartulario familiar: Carlos II, conde de Évreux desde 1343 hasta la confiscación de 1378 y rey de Navarra desde 1349. Se distingue el título de la posesión efectiva.'},
+];

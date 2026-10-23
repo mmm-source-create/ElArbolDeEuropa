@@ -1,4 +1,5 @@
 import {IMAGENES_HUNGRIA} from './imagenesPersonasHungria.js';
+import {IMAGENES_PORTUGAL_NAVARRA} from './imagenesPersonasPortugal.js';
 import {IMAGENES_DURAZZO} from './imagenesPersonasDurazzo.js';
 import {IMAGENES_COMPLETION} from './imagenesPersonasCompletion.js';
 import {IMAGENES_EDITORIAL} from './imagenesPersonasEditorial.js';
@@ -11,6 +12,7 @@ import {IMAGENES_TUTORIAL} from './imagenesPersonasTutorial.js';
 // - así puedes centrar la cara sin recortar físicamente el archivo
 
 export const IMAGENES_PERSONAS = {
+  ...IMAGENES_PORTUGAL_NAVARRA,
   SEBAS1PORT: {
     archivo:'/personas-img/SEBAS1PORT.webp', encuadre:'50% 18%', alt:'Retrato de Sebastián I de Portugal por Cristóvão de Morais', tipo:'Retrato contemporáneo',
     obra:'Retrato do Rei D. Sebastião', autor:'Cristóvão de Morais', fecha:'c. 1571–1574', institucion:'Museu Nacional de Arte Antiga, Lisboa · inv. 1165 Pint',

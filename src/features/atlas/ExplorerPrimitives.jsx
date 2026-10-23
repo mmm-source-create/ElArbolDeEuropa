@@ -5,6 +5,7 @@ import React, { useState } from "react";
 import { ArrowRight, BookOpen, ChevronDown, ChevronRight, ExternalLink, Flag, Heart, Mail, Scale, X } from "lucide-react";
 import { PERSONAS } from "../../data/personas.js";
 import { HISTORIAS } from "../../data/historias.js";
+import {groupStories} from "../stories/storyThemes.js";
 import { listaReinados, reinadoEsEfectivo } from "../../domain/government/reigns.js";
 import { CORRECTORES, CORREOS_CORRECCIONES } from "./atlasModel.js";
 import { HIJOS_POR_ID, listaAmantes, listaConyuges } from "../../domain/genealogy/relations.js";
@@ -268,8 +269,8 @@ export function ModalProyecto({ seccion, onClose, persona, personasVista = PERSO
           {seccion === "historias" && (
             <>
               <p className="project-lead">Recorridos guiados que utilizan el árbol, el mapa, las biografías y la cronología de la propia aplicación. Puedes abandonar el recorrido en cualquier momento y volver a explorar libremente.</p>
-              <div className="stories-grid">
-                {HISTORIAS.map((historia) => (
+              {groupStories(HISTORIAS).map(group => <section className="story-catalog-section" key={group.id}><h2>{group.es}</h2><p className="story-theme-description">{group.descriptionEs}</p><div className="stories-grid">
+                {group.stories.map((historia) => (
                   <article key={historia.id} className={`story-catalog-card${historia.disponible ? " is-available" : " is-coming"}`}>
                     <div className="story-catalog-topline">
                       <span>{historia.disponible ? "Recorrido disponible" : "Próximamente"}</span>
@@ -284,7 +285,7 @@ export function ModalProyecto({ seccion, onClose, persona, personasVista = PERSO
                     )}
                   </article>
                 ))}
-              </div>
+              </div></section>)}
             </>
           )}
 

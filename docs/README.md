@@ -10,6 +10,7 @@ compilar, empieza por el [README del proyecto](../README.md).
 - [Añadir o corregir una persona](contributing-people.md).
 - [Nombres, títulos y sobrenombres en ambos idiomas](person-names.md).
 - [V5.36: formato compartido y veinte fichas inglesas](versiones/V5.36.md).
+- [V5.38: retratos portugueses e historias por temas](versiones/V5.38.md).
 - [Comprobar regresiones y revisar cambios intencionados](v5-regression.md).
 - [Herramientas y comandos actuales](../scripts/README.md).
 - [Estructura del código, plan de migración y subagentes](versiones/V5.28-revision-codigo.md).
@@ -59,7 +60,7 @@ el estado que se verificó entonces.
 
 ## Criterios de contenido
 
-`src/data/personas.js` y `src/data/historias.js` son datos sin imports. Conserva IDs y slugs
+`src/data/personas.js` conserva los registros canónicos; `src/data/historias.js` compone los recorridos existentes y los módulos temáticos. Conserva IDs y slugs
 estables. `persona.titulo` resume la ficha; cada mandato de `gobiernos[]`
 tiene su territorio, título real, clase, condición e intervalo. Desde V5.7
 ni la fuente ni las fichas públicas crean `reinados` como segunda propiedad.
