@@ -49,7 +49,7 @@ const EuropeYearView = React.lazy(loadEuropeYearView);
 export default function ExplorerView({ vm, loading = false, loadError = false, onRetry, ready = true }) {
   const [searchOpen,setSearchOpen] = React.useState(false);
   const [mobileToolsOpen,setMobileToolsOpen] = React.useState(false);
-  const [guideOpen,setGuideOpen] = React.useState(false);
+  const [guideOpen,setGuideOpen] = React.useState(() => typeof window !== "undefined" && new URLSearchParams(window.location.search).get("tutorial") === "1");
   const [bioSection,setBioSection] = React.useState('resumen');
   const bioScrollRef = React.useRef(null);
   const [bioMobileOpen,setBioMobileOpen] = React.useState(true);

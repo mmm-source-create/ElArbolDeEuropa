@@ -41,6 +41,7 @@ export function resolverRuta(rawPathname = "/", search = "") {
     const params = new URLSearchParams(search);
     const locale = localeDesdePath(pathname);
     if (/^\/en\/privacy\/?$/.test(pathname) || /^\/es\/privacidad\/?$/.test(pathname)) return {locale,view:'privacy'};
+    if (/^\/en\/?$/.test(pathname) && params.get("atlas") === "1" && params.get("tutorial") === "1") return {locale,view:"explorer",panel:params.get("panel") || null};
     if (locale === "en") return englishRoute(pathname)
       ? { locale, view: "english", personSlug: null, legacyPersonId: null, catalog: null, info: null, panel: null }
       : { locale, view: "not-found" };

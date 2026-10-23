@@ -61,6 +61,9 @@ export default function Explorer({ initialPanel = null, treeBase: TREE_BASE, loa
   const scrollRef = useRef(null);
   const tlScrollRef = useRef(null);
   const timelineListRef = useRef(null);
+  // The English homepage can launch the bilingual guide inside the Atlas.
+  // Keep this entry flag while practice actions update the URL.
+  const [tutorialEntry] = useState(() => typeof window !== "undefined" && new URLSearchParams(window.location.search).get("tutorial") === "1");
   const [locale, setLocale] = useState(() => {
     if (typeof window === "undefined") return DEFAULT_LOCALE;
     return localeDesdePath(window.location.pathname);
@@ -1413,7 +1416,7 @@ export default function Explorer({ initialPanel = null, treeBase: TREE_BASE, loa
     window.location.assign(destino);
   }, [locale]);
 
-  if (locale === "en") return <EnglishPage />;
+  if (locale === "en" && !tutorialEntry) return <EnglishPage />;
 
   const getExportSelection = (scope) => {
     let ids, edges, title;

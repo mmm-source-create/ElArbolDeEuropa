@@ -1,5 +1,7 @@
+import {IBERIAN_PORTRAITS} from './iberianPortraits.js';
 // Artwork and licence URLs are inherited unchanged from the original credits.
 export const ENGLISH_PROFILE_PORTRAITS = {
+  ...IBERIAN_PORTRAITS,
   JUANSINTIERRA:{tipo:'Posthumous miniature',obra:'John with Beaulieu Abbey · Historia Anglorum',autor:'Matthew Paris',fecha:'c. 1250–1259',institucion:'British Library · Royal MS 14 C VII, f. 9'},
   FEL6FRA:{tipo:'Posthumous miniature',obra:'Philip VI · Grandes Chroniques de France',autor:'Anonymous illuminator',fecha:'c. 1375–1380',institucion:'Bibliothèque nationale de France · Français 2813'},
   BALDWIN4JER:{tipo:'Posthumous miniature',obra:'Coronation of Baldwin IV · William of Tyre’s History of Outremer',autor:'Anonymous illuminator; text by William of Tyre',fecha:'Fourteenth century',institucion:'Bibliothèque nationale de France · Français 2634, f. 275'},

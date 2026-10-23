@@ -1,5 +1,7 @@
+import {IBERIAN_NAME_REVIEWS} from './iberianNameReviews.js';
 // V5.36 · Explicit editorial decisions; prior names remain searchable and URLs stay stable.
 export const PERSON_NAME_REVIEWS = [
+  ...IBERIAN_NAME_REVIEWS,
   {
     "id": "WEN1",
     "before": {

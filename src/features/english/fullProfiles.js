@@ -1,3 +1,4 @@
+import {IBERIAN_ENGLISH_PROFILES} from './iberianProfiles.js';
 import {EXPANDED_ENGLISH_PROFILES} from './expandedProfiles.js';
 import {V535_ENGLISH_PROFILES} from './v535Profiles.js';
 import {V536_ENGLISH_PROFILES} from './v536Profiles.js';
@@ -7,6 +8,7 @@ export const COMPLETE_ENGLISH_PROFILES = {
   ...EXPANDED_ENGLISH_PROFILES,
   ...V535_ENGLISH_PROFILES,
   ...V536_ENGLISH_PROFILES,
+  ...IBERIAN_ENGLISH_PROFILES,
   CARLOS3NAP: {
     name: 'Charles of Durazzo', role: 'Charles III of Naples and Charles II of Hungary', nickname: 'the Short',
     aliases: ['Charles III of Naples', 'Charles II of Hungary', 'Charles the Short'],
