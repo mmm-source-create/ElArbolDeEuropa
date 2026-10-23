@@ -102,19 +102,19 @@ function layer(capa, index, clip, quarter = false) {
 
 // A reviewed Wikimedia Commons image takes precedence over the drawing; the
 // drawing remains for houses without one and where `drawn` asks for it.
-export default function DynastyArms({dinastia, size = 56, className = '', drawn = false}) {
+export default function DynastyArms({dinastia, size = 56, className = '', drawn = false,locale='es',label}) {
   const id = useId().replace(/:/g, '');
   const escudo = escudoDe(dinastia);
   if (!escudo) return null;
   // The credit travels with the image as a tooltip; pages show it in full at
   // their foot or on the licences page.
   if (escudo.imagen && !drawn) return <img className={`dynasty-arms dynasty-arms-image ${className}`.trim()} src={escudo.imagen.archivo}
-    width={size} height={Math.round(size * 1.2)} alt={`Armas: ${escudo.blason}`} title={`Escudo: ${escudo.imagen.autor} · ${escudo.imagen.licencia} · ${escudo.imagen.procedencia||'Wikimedia Commons'}`}
+    width={size} height={Math.round(size * 1.2)} alt={label||`Armas: ${escudo.blason}`} title={`${locale==='en'?'Arms':'Escudo'}: ${escudo.imagen.autor} · ${escudo.imagen.licencia} · ${escudo.imagen.procedencia||'Wikimedia Commons'}`}
     loading="lazy" decoding="async"/>;
   const clip = `arms-${id}`;
   return <svg className={`dynasty-arms ${className}`.trim()} viewBox="0 0 100 120" width={size} height={size * 1.2}
-    role="img" aria-label={`Armas: ${escudo.blason}`}>
-    <title>{escudo.blason}</title>
+    role="img" aria-label={label||`Armas: ${escudo.blason}`}>
+    <title>{label||escudo.blason}</title>
     <defs>
       <clipPath id={clip}><path d={SHIELD}/></clipPath>
       {[0, 1, 2, 3].map(i => <clipPath key={i} id={`${clip}-q${i}`}><rect x={(i % 2) * 50} y={Math.floor(i / 2) * 60} width={50} height={60}/></clipPath>)}

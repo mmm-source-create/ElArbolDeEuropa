@@ -1,4 +1,5 @@
 import {profileLabel,profileNote,profileClaims,profileEntityPath} from '../english/profilePresentation.js';
+import {displayedNickname} from '../../domain/people/personNaming.js';
 import {MAP_READING_GUIDE} from '../../content/mapReadingGuide.js';
 import {territoriosDe, gobiernosDe} from '../../domain/genealogy/personAccessors.js';
 import {SITE_NAME} from '../../app/siteConfig.js';
@@ -334,7 +335,7 @@ export function PersonContent({ persona, locale = 'es', path, onExplore }) {
         <div className="public-person-hero-copy">
           <span>{label('El Árbol de Europa · Persona','The Tree of Europe · Person')}</span>
           <h1>{persona.nombre}</h1>
-          {(!en || persona.translationComplete) && persona.sobrenombre && <div className="public-person-nickname">«{persona.sobrenombre}»</div>}
+          {(!en || persona.translationComplete) && displayedNickname(persona) && <div className="public-person-nickname">«{displayedNickname(persona)}»</div>}
           <p>{en ? persona.summary : persona.biografia || persona.resumen || ''}</p>
           <div className="public-person-badges"><span>{personaDates(persona,locale)}</span>{(en?persona.role:persona.titulo)&&<span>{en?persona.role:persona.titulo}</span>}{persona.dinastia&&<a href={profileEntityPath('dinastia',persona.dinastia,locale)}>{profileLabel(persona,persona.dinastia)}{en&&profileEntityPath('dinastia',persona.dinastia,locale).startsWith('/es/')?' · ES':''}</a>}</div>
           <div className="public-person-actions"><a className="public-primary" href={atlasPath} onClick={onExplore?e=>{e.preventDefault();onExplore();}:undefined}>{label('Abrir en el atlas interactivo','Explore this family · Spanish Atlas')}<ArrowRight size={15}/></a><a className="public-secondary" href={peoplePath}><ArrowLeft size={14}/>{label('Volver a personas','Back to people')}</a></div>

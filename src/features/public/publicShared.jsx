@@ -13,6 +13,9 @@ import React, {useEffect, useState} from 'react';
 import './public.css';
 
 // Piezas comunes de las páginas públicas: metadatos, carga de JSON, maqueta y tarjetas.
+export function SectionHeading({eyebrow,children}) {
+  return <div className="public-section-heading"><div>{eyebrow&&<span>{eyebrow}</span>}<h2>{children}</h2></div></div>;
+}
 
 const PUBLIC_SITE_URL = resolveSiteUrl(import.meta.env.VITE_SITE_URL);
 const BUILD_VERSION = String(SITE_META.buildVersion || SITE_META.personCount || "v2");

@@ -22,13 +22,13 @@ const TEN = {
   JUANAARCO: ['Joan of Arc', 'joan-of-arc', 'juana-de-arco'],
   LORENZOMEDICI: ['Lorenzo de’ Medici', 'lorenzo-de-medici', 'lorenzo-de-medici-lorenzomedici'],
   MEHMED2OSM: ['Mehmed II', 'mehmed-ii', 'mehmed-ii'],
-  PETER1RUS: ['Peter the Great', 'peter-the-great', 'pedro-i-de-rusia'],
-  CATHERINE2RUS: ['Catherine the Great', 'catherine-the-great', 'catalina-ii-de-rusia'],
-  FRED2PRUSSIA: ['Frederick the Great', 'frederick-the-great', 'federico-ii-de-prusia'],
+  PETER1RUS: ['Peter I of Russia', 'peter-the-great', 'pedro-i-de-rusia'],
+  CATHERINE2RUS: ['Catherine II of Russia', 'catherine-the-great', 'catalina-ii-de-rusia'],
+  FRED2PRUSSIA: ['Frederick II of Prussia', 'frederick-the-great', 'federico-ii-de-prusia'],
 };
 
 test('ten further complete English profiles use English historiographical names and real routes', () => {
-  assert.equal(Object.keys(COMPLETE_ENGLISH_PROFILES).length, 28);
+  assert.equal(Object.keys(COMPLETE_ENGLISH_PROFILES).length, 48);
   for (const [id, [name, en, es]] of Object.entries(TEN)) {
     const translated = english(id);
     assert.equal(translated.nombre, name, id);
@@ -41,8 +41,8 @@ test('ten further complete English profiles use English historiographical names 
   }
   assert.equal(COMPLETE_ENGLISH_PROFILES.LUIS14FRA.nickname, 'the Sun King');
   assert.equal(COMPLETE_ENGLISH_PROFILES.MEHMED2OSM.nickname, 'the Conqueror');
-  // The epithet is part of the English name, so it is not repeated as a nickname.
-  for (const id of ['PETER1RUS', 'CATHERINE2RUS', 'FRED2PRUSSIA']) assert.equal(COMPLETE_ENGLISH_PROFILES[id].nickname, undefined);
+  // V5.36 separates the epithet from the regnal name, retaining the original routes.
+  for (const id of ['PETER1RUS', 'CATHERINE2RUS', 'FRED2PRUSSIA']) assert.equal(COMPLETE_ENGLISH_PROFILES[id].nickname, 'the Great');
 });
 
 test('English names, nicknames and regnal variants find the new portraits', () => {

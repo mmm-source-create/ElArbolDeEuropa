@@ -6,6 +6,8 @@ import SiteHeader from '../../components/SiteHeader.jsx';
 import SiteFooter from '../../components/SiteFooter.jsx';
 import ProjectSupport from '../../components/ProjectSupport.jsx';
 import { PersonaMiniCard, useJson, usePublicMeta } from '../public/publicShared.jsx';
+import DynastyCard from '../public/DynastyCard.jsx';
+import {normalizarBusquedaPublica} from '../../domain/people/personLabels.js';
 import { HomeContent } from '../public/HomePage.jsx';
 import { PersonContent } from '../public/PublicSite.jsx';
 import { entityMeta } from '../public/publicMeta.js';
@@ -38,9 +40,9 @@ function EnglishCatalog({ data }) {
   const people = data.type === 'people',stories=data.type==='stories',entities=!people&&!stories;
   const collection=people?data.people:stories?data.stories:data.type==='dynasties'?data.dynasties:data.territories;
   const noun=people?'profiles':stories?'stories':data.type;
-  const items = collection.filter(p => [p.nombre, p.role, p.sobrenombre, ...(p.aliases||[]), p.summary, p.description].filter(Boolean).join(' ').toLocaleLowerCase('en').includes(query.trim().toLocaleLowerCase('en')));
+  const items = collection.filter(p => normalizarBusquedaPublica([p.nombre, p.role, p.sobrenombre, ...(p.aliases||[]), p.summary, p.description].filter(Boolean).join(' ')).includes(normalizarBusquedaPublica(query)));
   return <main className="public-main public-catalog"><PageTitle data={data} Icon={people ? Users : BookOpen} eyebrow={stories?'Guided stories':'Atlas index'}/><label className="public-search"><Search size={16}/><input value={query} onChange={e => setQuery(e.target.value)} placeholder={`Search translated ${noun}…`} aria-label={`Search translated ${noun}`}/><span>{items.length}</span></label>
-    {entities?<div className="public-entity-grid">{items.map(item=><article key={item.path} className="public-entity-card">{item.arms&&<img src={item.arms.archivo} width="40" height="48" alt={`Arms of ${item.nombre}`}/>}<h2>{item.nombre}</h2><p>{item.description}</p>{item.total&&<p>{item.total} recorded people</p>}<a href={item.path}>Read the complete record <ArrowRight size={13}/></a></article>)}</div>:people ? <div className="public-person-list">{items.map(p => <PersonaMiniCard key={p.id} persona={p} compact locale="en"/>)}</div> : <div className="public-story-grid public-story-catalog">{items.map(s => <article key={s.id} className="public-story-card"><span>{s.pasos} chapters · {s.period}</span><h2>{s.nombre}</h2><p>{s.description}</p><a href={s.path}>Start reading <ArrowRight size={13}/></a></article>)}</div>}
+    {entities?<div className="public-entity-grid">{items.map(item=>data.type==='dynasties'?<DynastyCard key={item.path} item={{...item,resumen:item.description}} locale="en"/>:<article key={item.path} className="public-entity-card"><div className="public-entity-card-head"><h2>{item.nombre}</h2></div><p>{item.description}</p><a className="public-entity-action" href={item.path}>Read the complete record <ArrowRight size={13}/></a></article>)}</div>:people ? <div className="public-person-list">{items.map(p => <PersonaMiniCard key={p.id} persona={p} compact locale="en"/>)}</div> : <div className="public-story-grid public-story-catalog">{items.map(s => <article key={s.id} className="public-story-card"><span>{s.pasos} chapters · {s.period}</span><h2>{s.nombre}</h2><p>{s.description}</p><a href={s.path}>Start reading <ArrowRight size={13}/></a></article>)}</div>}
     {!items.length&&<p className="public-catalog-note" role="status">No translated {noun} match this search.</p>}
     <p className="english-catalog-note">{collection.length} translated {collection.length===1?({profiles:'profile',stories:'story',dynasties:'dynasty',territories:'territory'}[noun]||noun):noun}. <a href={data.esPath}>Browse the full Spanish collection</a>, or <a href="/es/?atlas=1&continuar=1">open the Spanish Atlas</a>.</p>
   </main>;

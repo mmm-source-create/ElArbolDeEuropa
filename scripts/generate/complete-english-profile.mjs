@@ -52,6 +52,7 @@ export function completeEnglishProfile(source, translatedNames={}) {
     'corona-dos-credos':['A crown between two creeds','Catherine de’ Medici, the Huguenots and the Catholic League'],
     'cien-anos':['The Hundred Years’ War','A dynastic dispute that transformed France and England'],
     'republica-nobles':['The Republic of Nobles','How Poland turned a hereditary monarchy into an elective crown'],
+    'condotieros':['The condottieri','From mercenary companies to the Duchy of Milan'],
   };
   result.historias=source.historias.map(h=>{if(!stories[h.id])throw Error(`Missing related story translation: ${h.id}`);return {...h,titulo:stories[h.id][0],subtitulo:stories[h.id][1]};});
   for(const label of [source.dinastia,...(source.reinos||[]),...governments.flatMap(g=>[g.titulo,g.territorio,g.condicion,g.ambito,etiquetaClaseGobierno(source,g)].filter(Boolean))])if(!PROFILE_LABELS[label])throw Error(`Missing profile label: ${source.id}/${label}`);

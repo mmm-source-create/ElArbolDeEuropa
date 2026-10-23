@@ -7,6 +7,11 @@ importa dependencias ni añade propiedades al cargarlo. Antes de crear un ID,
 busca nombre, aliases y parentescos para evitar duplicados. Mantén los IDs y
 slugs de las fichas existentes aunque corrijas su nombre.
 
+Sigue el [criterio de nombres en español e inglés](person-names.md): nombre
+historiográfico, ordinal y territorio cuando proceda, titulatura en los cargos
+y sobrenombre separado. Conserva el nombre anterior como alias y el enlace
+publicado. `npm run audit:names` comprueba estas reglas antes del build.
+
 Cada registro requiere `id`, `nombre`, `titulo` y `reinos[]`. Esta última lista
 contiene asociaciones territoriales de claves de `TERRITORIOS`; no otorga
 posesión ni pinta por sí sola el mapa. Si no hay asociación justificada, usa
