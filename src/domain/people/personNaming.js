@@ -3,6 +3,7 @@ import {normalizarBusquedaPublica} from './personLabels.js';
 // These are identifiers in their own right, not a licence to put any new
 // nickname in a heading. Additions require an editorial explanation here.
 export const HISTORICAL_NAME_EXCEPTIONS = Object.freeze({
+ FRANCISCOFEBONAV:'Francisco Febo / Francis Phoebus is the established identifying name; a numeral is not imposed on the heading.',
  CARLOS5:'The conventional imperial name; Charles I is retained among his offices and aliases.',
  MAXIM1:'The conventional imperial name; the role supplies the Holy Roman context.',
  MAXIM2:'The conventional imperial name, rather than selecting one of his several royal crowns.',

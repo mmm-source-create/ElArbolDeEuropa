@@ -1,4 +1,4 @@
-import {Users, Shield, Landmark, BookOpen, Swords, Sparkles, ArrowRight} from 'lucide-react';
+import {Users, Shield, Landmark, BookOpen, GraduationCap, Swords, Sparkles, ArrowRight} from 'lucide-react';
 import {usePublicMeta, PublicLayout} from './publicShared.jsx';
 import HOME_DATA from '../../generated/home.json';
 import HomeDiscovery from './HomeDiscovery.jsx';
@@ -24,7 +24,7 @@ const HOME_COPY = {
     title: "La historia de Europa, vista como una red",
     eyebrow: "Genealogía · política · territorio · 1200–1800",
     introduction: "Recorre familias, coronas, matrimonios, rivalidades y sucesiones en un atlas que une árbol genealógico, mapa, biografías, cronología e historias guiadas.",
-    explore: "Explorar el atlas", stories: "Ver historias", year: "Europa en 1500",
+    explore: "Explorar el atlas", tutorial: "Tutorial", year: "Europa en 1500",
     statsLabel: "Resumen del proyecto", stats: ["personas", "dinastías", "territorios", "historias disponibles"],
     doorsEyebrow: "Entradas rápidas", doorsTitle: "Elige cómo quieres empezar",
     peopleEyebrow: "Personas destacadas", peopleTitle: "Puertas a la red", allPeople: "Ver todas las personas",
@@ -37,7 +37,7 @@ const HOME_COPY = {
     title: "The history of Europe, seen as a network",
     eyebrow: "Genealogy · politics · territory · 1200–1800",
     introduction: "Explore families, crowns, marriages, rivalries and successions in an Atlas that connects genealogy, maps, biographies, timelines and guided stories.",
-    explore: "Explore the Atlas (Spanish)", stories: "Read the stories", year: "Europe in 1500 (Spanish)",
+    explore: "Explore the Atlas (Spanish)", tutorial: "Tutorial", year: "Europe in 1500 (Spanish)",
     statsLabel: "The complete Atlas", stats: ["people", "dynasties", "territories", "stories in the Atlas"],
     doorsEyebrow: "Ways into the Atlas", doorsTitle: "Choose where to begin",
     peopleEyebrow: "Featured people", peopleTitle: "Doors into the network", allPeople: "All English profiles",
@@ -78,7 +78,7 @@ export function HomeContent({ data = HOME_DATA, locale = "es", title, onEnterAtl
           <p>{copy.introduction}</p>
           <div className="public-hero-actions">
             <a className="public-primary" href="/es/?atlas=1" onClick={(event) => navigateInApp(event, onEnterAtlas, null)}>{copy.explore} <ArrowRight size={16} /></a>
-            <a className="public-secondary" href={storiesPath}><BookOpen size={15} /> {copy.stories}</a>
+            <a className="public-secondary" href={`/${english ? "en" : "es"}/?atlas=1&tutorial=1`}><GraduationCap size={16} /> {copy.tutorial}</a>
           </div>
           <a className="public-home-year" href="/es/?atlas=1&anio=1500&panel=europa"><Landmark size={14}/> {copy.year}</a>
           {english && <p className="public-home-edition">Explore complete profiles, dynasties, territories, stories and the Portraits challenge in English. The interactive Atlas is in Spanish.</p>}

@@ -1,4 +1,4 @@
-# Criterio editorial de nombres · V5.36
+# Criterio editorial de nombres · V5.37
 
 El nombre público es una forma historiográfica breve en el idioma de la página. La titulatura oficial va en los cargos, y los sobrenombres y variantes siguen siendo buscables. La regla se publica también en Fuentes y metodología, en español e inglés, desde `src/content/personNamingPolicy.js`.
 
@@ -25,8 +25,24 @@ La separación entre nombre, título y epíteto es una decisión editorial del A
 
 ## Revisión de la base y nuevas incorporaciones
 
-`npm run audit:names` examina los 2723 registros españoles y las 48 ediciones inglesas: nombres vacíos, tratamientos de santidad en el encabezado, nombres regios sin contexto, sobrenombres repetidos, rutas de traducción y conservación de variantes y slugs revisados. Se ejecuta también antes de compilar.
+`npm run audit:names` examina los 2723 registros españoles y las 155 ediciones inglesas: nombres vacíos, tratamientos de santidad en el encabezado, nombres regios sin contexto, sobrenombres repetidos, rutas de traducción y conservación de variantes y slugs revisados. Se ejecuta también antes de compilar.
 
 La V5.36 aplica 39 ajustes editoriales explícitos, recogidos en `src/data/personNameReviews.js` y [el informe de revisión](audits/V5.36-nombres.json). Son 38 denominaciones revisadas y el sobrenombre español de Juana de Arco. No cambia fechas, gobiernos, parentescos ni geometrías. El examen es estructural y editorial; no afirma haber vuelto a verificar bibliográficamente cada nombre individual de la base. Los epítetos identificativos y las formas imperiales se revisan con excepciones expresas, sin convertirlos automáticamente en nuevos ordinales.
 
 Al añadir una traducción, revisar también nombres de familiares, contemporáneos y evidencias; traducir títulos visibles y notas, conservar nombres de obras y sus enlaces, e incorporar las variantes famosas a la búsqueda. La generación rechaza texto editorial que carezca de traducción. El listado de personas en inglés y Retratos se alimentan de esas mismas fichas.
+
+## Revisión peninsular · V5.37
+
+Se han repasado los 116 registros de soberanos vinculados a gobiernos regios de Portugal, Castilla, León, Aragón, Valencia, Navarra, Mallorca, Granada y al-Ándalus presentes en la base, incluida la pretensión navarra de Blanca II. El examen incluye reyes por matrimonio y titulares; esa inclusión no los convierte en gobernantes efectivos. Las reinas consortes sin gobierno propio no se equiparan a reinas reinantes. La edición inglesa incorpora las 107 fichas que faltaban: las 116 personas del conjunto tienen ya una ficha completa en inglés, dentro de un total de 155.
+
+- En español se mantienen los exónimos asentados: Alfonso, Juan, Pedro, Eduardo y Sebastián de Portugal. En inglés se emplean Afonso, John y Peter; también Denis of Portugal, Edward of Portugal, Henry of Portugal y Sebastian of Portugal, sin imponerles un ordinal solo porque lo lleve su ficha española. Duarte, Dinis y los ordinales alternativos siguen como variantes buscables.
+- Felipe III de Navarra / Philip III of Navarre y Juan III de Navarra / John III of Navarre identifican el reino al que pertenece el ordinal. Évreux y Albret permanecen en la casa, las variantes y la explicación de su realeza por matrimonio.
+- Enrique IV de Francia / Henry IV of France conserva Enrique III / Henry III de Navarra como variante. Pedro I de Brasil / Pedro I of Brazil conserva Pedro IV de Portugal / Pedro IV of Portugal; el encabezado no concatena las dos numeraciones. Se mantienen los enlaces publicados.
+- Boabdil se muestra en el campo de sobrenombre de Muhammad XII de Granada. Muley Hacén y el Zagal siguen siendo buscables. Las numeraciones de los últimos nazaríes varían entre estudios: la ficha distingue expresamente las alternativas sin crear otra persona con el mismo soberano. Se conserva la numeración convencional utilizada por el Atlas.
+- María de Padilla sustituye el nombre confundido «Constanza María de Padilla», conservando la antigua URL. Isabel de Mallorca lleva «Reina» en su gobierno pretendido y mantiene la condición de pretensión.
+
+Los otros ordinales de las coronas compartidas permanecen buscables: Carlos I de España, Felipe I, II y III de Portugal, Fernando V de Castilla, Jaime I y Pedro I de Sicilia o Alfonso I de Nápoles. La búsqueda del atlas reconoce también Charles V, para que el ejemplo del tutorial inglés encuentre a Carlos V.
+
+Las traducciones conservan todos los gobiernos, fechas, parentescos, fuentes, controversias documentales y secciones extensas disponibles en la ficha española. `audit:names` comprueba también que ningún registro del conjunto peninsular carezca de traducción completa. Este examen editorial de los registros existentes no constituye un catálogo nuevo de todas las dinastías y sucesiones anteriores al período del Atlas.
+
+Referencias de las decisiones particulares: [coronación de Juana II y Felipe III, Gobierno de Navarra / Universidad Pública de Navarra](https://academica-e.unavarra.es/entities/publication/91d1a28d-7db8-4ece-9101-27fe95466a5e); [Sebastian y sus variantes, British Museum](https://www.britishmuseum.org/collection/term/BIOG114939); [María de Padilla y sus hijos, investigación publicada en Edad Media](https://revistas.uva.es/index.php/edadmedia/es/article/view/557/534); [Carlos IV y las abdicaciones de Aranjuez y Bayona, Banco de España](https://coleccion.bde.es/wca/es/secciones/coleccion/obras/carlos-iv-p_177.html); [discusión académica de las cronologías nazaríes](https://uvadoc.uva.es/bitstream/10324/76635/3/edadmedia_26_459-502.pdf).

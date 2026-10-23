@@ -217,7 +217,7 @@ export const MONARCAS_MEDIEVALES = Object.freeze({
     "resumen": "Rey de Aragón y de Navarra, figura central de los conflictos dinásticos de la península ibérica del siglo XV. Fue padre de Fernando el Católico y pieza clave en la expansión de los Trastámara."
   },
   "JUANA1CAST": {
-    "resumen": "Reina de Castilla y Aragón, hija de los Reyes Católicos y madre de Carlos V. Su incapacidad política efectiva permitió que el gobierno pasara sucesivamente a su padre, su esposo y su hijo."
+    "resumen": "Reina de Castilla y Aragón, hija de los Reyes Católicos y madre de Carlos V. Conservó sus coronas mientras Felipe, Fernando y Carlos ejercieron sucesivamente el gobierno."
   },
   "FEL1CAST": {
     "resumen": "Hijo de María de Borgoña y Maximiliano de Habsburgo, heredó los Países Bajos y, tras Senlis (1493), el Franco Condado y Artois. Conservó la dignidad de duque de Borgoña, aunque el ducado estaba bajo la Corona francesa. Su matrimonio con Juana I lo llevó a Castilla y transmitió patrimonios distintos a Carlos V."

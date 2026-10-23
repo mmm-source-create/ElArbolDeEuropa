@@ -1,4 +1,5 @@
 import fs from 'node:fs';
+import {iberianRoyalRecords} from '../../src/domain/people/iberianRulers.js';
 import {PERSONAS} from '../../src/data/personas.js';
 import {PERSON_NAME_REVIEWS} from '../../src/data/personNameReviews.js';
 import {nameReviewIssues,HISTORICAL_NAME_EXCEPTIONS} from '../../src/domain/people/personNaming.js';
@@ -16,9 +17,11 @@ for(const [id,p]of Object.entries(COMPLETE_ENGLISH_PROFILES)){
  if(/\bthe [A-Z]/.test(p.name)&&!HISTORICAL_NAME_EXCEPTIONS[id])issues.push(`${id}: epithet in English heading`);
  if(/^(?:King|Queen|Saint) /.test(p.name))issues.push(`${id}: title in English heading`);
 }
-const report={policy:'V5.36',reviewedSpanish:PERSONAS.length,reviewedEnglish:Object.keys(COMPLETE_ENGLISH_PROFILES).length,
+const iberian=iberianRoyalRecords(PERSONAS);
+for(const p of iberian)if(!COMPLETE_ENGLISH_PROFILES[p.id])issues.push(`${p.id}: Iberian royal record has no complete English edition`);
+const report={policy:'V5.37',iberian:iberian.map(p=>({id:p.id,es:p.nombre,en:COMPLETE_ENGLISH_PROFILES[p.id]?.name})),reviewedSpanish:PERSONAS.length,reviewedEnglish:Object.keys(COMPLETE_ENGLISH_PROFILES).length,
  decisions:PERSON_NAME_REVIEWS,exceptions:HISTORICAL_NAME_EXCEPTIONS,issues};
-if(process.argv.includes('--write')){fs.mkdirSync('docs/audits',{recursive:true});fs.writeFileSync('docs/audits/V5.36-nombres.json',JSON.stringify(report,null,2)+'\n');}
+if(process.argv.includes('--write')){fs.mkdirSync('docs/audits',{recursive:true});fs.writeFileSync('docs/audits/V5.37-nombres.json',JSON.stringify(report,null,2)+'\n');}
 console.log(`Nombres: ${report.reviewedSpanish} registros españoles, ${report.reviewedEnglish} ingleses, ${report.decisions.length} ajustes revisados; ${issues.length} incidencias.`);
 for(const issue of issues)console.error(issue);
 if(issues.length)process.exitCode=1;
