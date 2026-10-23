@@ -2,6 +2,10 @@ import React from "react";
 import {createRoot,hydrateRoot} from "react-dom/client";
 import {readInitialPage} from "../features/public/staticData.js";
 import "../styles/index.css";
+// Both editions need the same public layout on a fresh direct visit, before
+// any lazy route is loaded. Keep the shared theme ahead of preferences.
+import '../features/public/public.css';
+import '../styles/theme.css';
 import '../features/settings/preferences.css';
 import {startSpeedInsights} from "./monitoring.js";
 import {applyPreferences,readPreferences} from '../features/settings/preferences.js';

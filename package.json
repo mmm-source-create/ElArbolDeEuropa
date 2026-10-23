@@ -1,7 +1,7 @@
 {
   "name": "el-arbol-de-europa",
   "private": true,
-  "version": "5.35.0",
+  "version": "5.36.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -31,7 +31,7 @@
     "audit:regression": "node --import ./tests/jsx-loader.mjs scripts/audits/audit-v5-regression.mjs",
     "audit:regression:public": "node --import ./tests/jsx-loader.mjs scripts/audits/audit-v5-regression.mjs --public",
     "baseline:regression": "npm run prebuild && npm run build:artifacts && node --import ./tests/jsx-loader.mjs scripts/audits/audit-v5-regression.mjs --write",
-    "audit:build": "npm run audit:artifacts && npm run audit:data-contract && node scripts/audits/audit-personas.mjs --fail-on-errors && node scripts/audits/audit-territorios.mjs --fail-on-errors && node --import ./tests/jsx-loader.mjs scripts/audits/audit-political-map.mjs --fail-on-errors && node --import ./tests/jsx-loader.mjs scripts/audits/audit-map-continuity.mjs --fail-on-errors && node --import ./tests/jsx-loader.mjs scripts/audits/audit-territorial-continuity.mjs --fail-on-errors && node --import ./tests/jsx-loader.mjs scripts/audits/audit-map-spatial.mjs && node --import ./tests/jsx-loader.mjs scripts/audits/audit-regional-extents.mjs && node --import ./tests/jsx-loader.mjs scripts/audits/audit-atlas-coverage.mjs && npm run audit:regional-continuity && npm run audit:balkans-continuity && npm run audit:iberia-italy-continuity && npm run audit:france-low-countries-continuity && npm run audit:personal-atlas && npm run audit:early-map && npm run audit:poland-lithuania && npm run audit:eastern-europe && npm run audit:germany-completion && npm run audit:political-unions && npm run audit:uncolored && node scripts/audits/audit-dinastias.mjs && node scripts/audits/audit-sucesiones.mjs && node scripts/audits/audit-coronas.mjs && npm run audit:royal-successions",
+    "audit:build": "npm run audit:names && npm run audit:artifacts && npm run audit:data-contract && node scripts/audits/audit-personas.mjs --fail-on-errors && node scripts/audits/audit-territorios.mjs --fail-on-errors && node --import ./tests/jsx-loader.mjs scripts/audits/audit-political-map.mjs --fail-on-errors && node --import ./tests/jsx-loader.mjs scripts/audits/audit-map-continuity.mjs --fail-on-errors && node --import ./tests/jsx-loader.mjs scripts/audits/audit-territorial-continuity.mjs --fail-on-errors && node --import ./tests/jsx-loader.mjs scripts/audits/audit-map-spatial.mjs && node --import ./tests/jsx-loader.mjs scripts/audits/audit-regional-extents.mjs && node --import ./tests/jsx-loader.mjs scripts/audits/audit-atlas-coverage.mjs && npm run audit:regional-continuity && npm run audit:balkans-continuity && npm run audit:iberia-italy-continuity && npm run audit:france-low-countries-continuity && npm run audit:personal-atlas && npm run audit:early-map && npm run audit:poland-lithuania && npm run audit:eastern-europe && npm run audit:germany-completion && npm run audit:political-unions && npm run audit:uncolored && node scripts/audits/audit-dinastias.mjs && node scripts/audits/audit-sucesiones.mjs && node scripts/audits/audit-coronas.mjs && npm run audit:royal-successions",
     "generate": "node scripts/generate/generate-sitemap.mjs && node scripts/generate/generate-tree-base.mjs && node scripts/generate/generate-corridor-reviews.mjs && node scripts/generate/generate-territorios.mjs && node scripts/generate/generate-dinastias.mjs && node scripts/generate/generate-historias.mjs && node scripts/generate/generate-english.mjs && node --import ./tests/jsx-loader.mjs scripts/generate/generate-og-images.mjs",
     "cartography:check": ".venv-cartography/bin/python scripts/cartography/check-environment.py",
     "audit:artifacts": "node scripts/audits/audit-artifacts.mjs",
@@ -45,7 +45,8 @@
     "audit:eastern-europe": "node --import ./tests/jsx-loader.mjs scripts/audits/audit-eastern-europe.mjs",
     "audit:germany-completion": "node --import ./tests/jsx-loader.mjs scripts/audits/audit-germany-completion.mjs",
     "audit:political-unions": "node --import ./tests/jsx-loader.mjs scripts/audits/audit-political-unions.mjs",
-    "audit:royal-successions": "node scripts/audits/audit-royal-successions.mjs"
+    "audit:royal-successions": "node scripts/audits/audit-royal-successions.mjs",
+    "audit:names": "node scripts/audits/audit-person-names.mjs"
   },
   "dependencies": {
     "@vercel/speed-insights": "2.0.0",

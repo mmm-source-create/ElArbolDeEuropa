@@ -1,3 +1,4 @@
+import {PERSON_NAMING_POLICY} from './personNamingPolicy.js';
 import {LOUIS_HUNGARY_SOURCES} from './sources-louis-hungary.js';
 import {DURAZZO_SOURCES} from './sources-durazzo.js';
 import {AMPLIACION_EDITORIAL_SOURCES} from './sources-ampliacion-editorial.js';
@@ -1500,6 +1501,7 @@ export const SOURCE_METHOD = [
 export const SOURCE_SECTIONS = [
   ...SOURCE_GROUPS.map(group => ({title: group.title, links: group.sources.map(source => [source.titulo, source.url])})),
   { title: 'Criterios de trabajo', paragraphs: SOURCE_METHOD },
+  PERSON_NAMING_POLICY.es,
 ];
 export const FUENTES_TERRITORIOS = Object.fromEntries([...new Set(SOURCES.flatMap(source => source.territorios))].map(territorio => [
   territorio, SOURCES.filter(source => source.territorios.includes(territorio)).map(({titulo, url}) => ({titulo, url})),

@@ -8,6 +8,8 @@ compilar, empieza por el [README del proyecto](../README.md).
 - [Uso del Atlas, historias y desafíos](ATLAS.md).
 - [Contrato de personas, mandatos y cartografía](data-model.md).
 - [Añadir o corregir una persona](contributing-people.md).
+- [Nombres, títulos y sobrenombres en ambos idiomas](person-names.md).
+- [V5.36: formato compartido y veinte fichas inglesas](versiones/V5.36.md).
 - [Comprobar regresiones y revisar cambios intencionados](v5-regression.md).
 - [Herramientas y comandos actuales](../scripts/README.md).
 - [Estructura del código, plan de migración y subagentes](versiones/V5.28-revision-codigo.md).

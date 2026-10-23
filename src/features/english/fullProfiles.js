@@ -1,10 +1,12 @@
 import {EXPANDED_ENGLISH_PROFILES} from './expandedProfiles.js';
 import {V535_ENGLISH_PROFILES} from './v535Profiles.js';
+import {V536_ENGLISH_PROFILES} from './v536Profiles.js';
 // Editorial translations of complete Spanish profiles. Canonical IDs, dates,
 // relationships and territorial keys are supplied by the shared generator.
 export const COMPLETE_ENGLISH_PROFILES = {
   ...EXPANDED_ENGLISH_PROFILES,
   ...V535_ENGLISH_PROFILES,
+  ...V536_ENGLISH_PROFILES,
   CARLOS3NAP: {
     name: 'Charles of Durazzo', role: 'Charles III of Naples and Charles II of Hungary', nickname: 'the Short',
     aliases: ['Charles III of Naples', 'Charles II of Hungary', 'Charles the Short'],
@@ -15,7 +17,7 @@ export const COMPLETE_ENGLISH_PROFILES = {
     summary: 'His inheritance of the Polish crown added a personal union to his Hungarian monarchy. The succession of his daughters Mary and Jadwiga subsequently took the two kingdoms in separate directions.',
   },
   MARIA1H: {
-    name: 'Mary, Queen of Hungary', role: 'Queen of Hungary and Croatia',
+    name: 'Mary I of Hungary', role: 'Queen of Hungary and Croatia', aliases: ['Mary, Queen of Hungary'],
     summary: 'Her accession to the Hungarian throne triggered a crisis involving her mother, the magnates and Charles of Durazzo. Her marriage to Sigismund of Luxembourg linked him to the crown.',
   },
   EDUV1: {
@@ -65,7 +67,7 @@ export const COMPLETE_ENGLISH_PROFILES = {
     summary: 'King of France who became a model of medieval Christian kingship and was later canonised. He strengthened royal justice and led two crusades, dying during the expedition to Tunis.',
   },
   SULEIMAN1OSM: {
-    name: 'Suleiman the Magnificent', role: 'Ottoman sultan', nickname: 'the Lawgiver',
+    name: 'Suleiman I', role: 'Ottoman sultan', nickname: 'the Magnificent', aliases: ['Suleiman the Magnificent', 'Suleiman the Lawgiver', 'Kanuni', 'Süleyman I'],
     summary: 'Ottoman sultan during the empire’s great territorial and cultural expansion in the sixteenth century. His campaigns in Hungary and the Mediterranean made him the Habsburgs’ principal eastern rival.',
     sections: [
       ['A remarkable beginning', 'The only surviving son of Selim I, Suleiman was born at Trebizond in 1494 and governed provinces before succeeding his father in 1520. In the first years of his reign he captured Belgrade in 1521, a gateway to the Danube, and expelled the Knights Hospitaller from Rhodes in 1522.'],

@@ -1,6 +1,7 @@
 // Textos nuevos para fichas que carecían de resumen. Las referencias de cada
 // persona se asignan expresamente en sources-ampliacion-editorial.js.
 export const AMPLIACION_EDITORIAL = Object.freeze({
+  ANABOLENA:{resumen:'Reina consorte de Inglaterra y madre de Isabel I. Su matrimonio con Enrique VIII fue central en la ruptura con Roma; fue ejecutada en 1536.'},
   LEOP6BAB: {resumen:'Duque de Estiria y, desde 1198, también de Austria, Leopoldo VI de Babenberg combinó la expansión de su patrimonio con el apoyo a monasterios y ciudades. Participó en las cruzadas y medió entre Federico II y el papado. Murió en San Germano en 1230 y lo sucedió su hijo Federico.'},
   FRED2BAB: {resumen:'Federico II, llamado el Batallador, sucedió a Leopoldo VI en Austria y Estiria en 1230. Sus enfrentamientos con nobles, vecinos y el emperador marcaron su gobierno. Murió combatiendo contra los húngaros junto al Leitha en 1246, sin descendencia, y abrió una larga disputa por la herencia de los Babenberg.'},
   CONSTANZAAUSMEISSEN: {resumen:'Hija de Leopoldo VI de Babenberg y de Teodora, Constanza de Austria se casó en 1234 con Enrique III, margrave de Misnia. Su matrimonio vinculó a los Babenberg con los Wettin. Fue madre de Alberto y Dietrich; murió en 1243, antes de la crisis sucesoria austríaca de 1246.'},
