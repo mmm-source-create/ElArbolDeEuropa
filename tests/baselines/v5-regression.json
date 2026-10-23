@@ -1756,7 +1756,7 @@
       "LUIS11FRA": "7c2ce1a3d5b99f12c001630b59d6003571eafb4946f39cd86db9f6ec0c392860",
       "LUIS12FRA": "63c614b03f558cd9cc7410fa7627ac92c25a261c67e30cef4d5381f9440a3e1e",
       "LUIS13FRA": "de33d130046fccac5161ad0a7233ae1980869c1890c0730fd55c327113068a75",
-      "LUIS14FRA": "26a5c98f9f86d323c045b6aa099136b76eeaeb6d8df75ba8e10c337adf19e903",
+      "LUIS14FRA": "d82223d6aee0dc0a730d0f72eefab260fb24e94b984514a5563a7eeda6647319",
       "LUIS15FRA": "396e0f1288e560bed045deaddb29493b950647c96ed4c99558f51d7a007d5826",
       "LUIS16FRA": "2d20c6304f49b87a7897ec9ad8643482208a16ffe0491ca357d712d6ef3f96ef",
       "LUIS1ANJOU": "5c31a6ea2939d7b0fe6113253f8c38fed713cd5f83faa9a84ab80fa14047759f",
@@ -7332,7 +7332,7 @@
         "locations": 6323,
         "mosaic": "c78cd5bdcbcb7535ec49102801299d37cc95ddb595c520f886c47df34c928f94",
         "overlaps": 32,
-        "personal": "b47a9d051289827e1dbf26ec032c22c7da33cbbb47777e7c38ae846d6ed03197"
+        "personal": "a63ccfdea28c3d38de72c4639800bd8181df126292a520c6f8aa067d97ace91c"
       },
       "1644": {
         "authorities": 139,
@@ -7340,7 +7340,7 @@
         "locations": 6323,
         "mosaic": "64446a478899d5322da1ffd49ff911a004d6ab52f223552017bbbe2ada4f9c0d",
         "overlaps": 32,
-        "personal": "6e9ce493ed22e8e6da53a823bdfc6c60eae6524b95c47350e19cc5f0418d148b"
+        "personal": "d8ad6663fcb82ce3d429f06431ef577068c0534f7ec956553c1723ce87085271"
       },
       "1645": {
         "authorities": 139,
@@ -7348,7 +7348,7 @@
         "locations": 6323,
         "mosaic": "0881a69e0a2b43becf554565f5cefd9b9f70fd9f7f1da86d3f7be14576ed20d9",
         "overlaps": 33,
-        "personal": "3c644af517f70cda7f32348fd898ae392e1c904e6b6ce29399e2abe3424f80e3"
+        "personal": "f87606892763d881b167119cb00cbed46798ecc8c950c24d49d3b78784531f1e"
       },
       "1646": {
         "authorities": 141,
@@ -7356,7 +7356,7 @@
         "locations": 6323,
         "mosaic": "bb5d3f3f1601f7e52904ab187169a2e24436737321e7cfac9769d9a10cd94f3a",
         "overlaps": 33,
-        "personal": "fd633e9f7ee8f4715a789cfcd7628cde03a68f9aa8a9edb6c4599a52ea269e02"
+        "personal": "1e23cc433229b6f90e3cb3539c4dfe2c927371f62a60187b2a51fee7a1e10d55"
       },
       "1647": {
         "authorities": 140,
@@ -7364,7 +7364,7 @@
         "locations": 6323,
         "mosaic": "da8dda95c17bd34aff23d5d78b7332f856273bff16647884cdb0dd4cf4514c5c",
         "overlaps": 33,
-        "personal": "bdeb6f8a1db25986dce667967d63ca8331f8faad154f607279494db2a4bf3a97"
+        "personal": "35546494a2975f0d0de0d0731d7d4b046777cf04be4f6a7564cb3c6a411b3c6e"
       },
       "1648": {
         "authorities": 154,
@@ -7372,7 +7372,7 @@
         "locations": 6323,
         "mosaic": "06d0a8fbcb55b1bada6214579b4f42eecabad8510af61d92f0d14919b673f02b",
         "overlaps": 34,
-        "personal": "468e2a748f7f00bf281825ee7cd7c87161981174d66cc612a3a709e927a56830"
+        "personal": "01039a292fe2dcc2b9f520a631d998e95c8eed3b6f750115c5250b11dac34f20"
       },
       "1649": {
         "authorities": 140,
@@ -7380,7 +7380,7 @@
         "locations": 6323,
         "mosaic": "06d0a8fbcb55b1bada6214579b4f42eecabad8510af61d92f0d14919b673f02b",
         "overlaps": 34,
-        "personal": "f0a1d5acbb13fe28b21901416c70efc06534881e60d4ca4ae110fdeaab1fdb30"
+        "personal": "040b24d54d9a73f319bf9ca1192a40ad36c2ad694c65d0b8905d20ce7dd9cebf"
       },
       "1650": {
         "authorities": 137,
@@ -7388,7 +7388,7 @@
         "locations": 6323,
         "mosaic": "97400d406aeb19a13cb5f6595a3d35f1bca74e1bf6740e67f64ddc3b2d3abd8b",
         "overlaps": 34,
-        "personal": "20118b8acfeb9eff9032da6b3189293ea86ed08dff7ac89c4e6989563f598d0f"
+        "personal": "48f8e3be863db0fd3ff8b8a4ddd2396943083928076939416a08fd7eaf1ad99a"
       },
       "1651": {
         "authorities": 136,
@@ -7396,7 +7396,7 @@
         "locations": 6392,
         "mosaic": "15cbb8a47d708108f7990f7482641b9ce67b8322c21554182f9e0b2d821b4756",
         "overlaps": 34,
-        "personal": "3cf65f333b781580284ac1ccf65438d537f627d3f2524dc67ababe8abad7c127"
+        "personal": "5f5b61f717ad586087b7e8fc5d8f14d7f935a534dc076cc52fad6d7555578f2b"
       },
       "1652": {
         "authorities": 136,
@@ -7404,7 +7404,7 @@
         "locations": 6392,
         "mosaic": "8e35bf0e2a25b8cad15570cc2eac6749351de7ea3d8c4f253e228f0a35186044",
         "overlaps": 34,
-        "personal": "30cd59dff017629bbb0b6dd0fe364840f3cd0472e33c62fb5144749a39262098"
+        "personal": "f4135dee276f2df5021714f66897fbc1b4a7f63dedf58f1444e1b5371b443096"
       },
       "1653": {
         "authorities": 139,
@@ -7412,7 +7412,7 @@
         "locations": 6392,
         "mosaic": "533866d0122042f7a9e9254540728e853e2ad674d72bf44f37e8d01e161f49bc",
         "overlaps": 34,
-        "personal": "7df47ec6c1fb56d081d1bc5ee16f9904de6b696eaebf71dceaca0132e228f567"
+        "personal": "afddb4bfe69dbafd9e6aa8c635709a25ffaf34477500a46c349a3cbc90daa2c0"
       },
       "1654": {
         "authorities": 135,
@@ -7420,7 +7420,7 @@
         "locations": 6392,
         "mosaic": "0ca3e77e0e3c979a0197bee69ae162991167745b82626a8b2ac2b998b92da9b2",
         "overlaps": 34,
-        "personal": "5a42483b4a40e3834cb6190cd07534a3e162c5b8d21087a464b11ca8cf8ae39a"
+        "personal": "600157c7cda62828d7845e92bafb53f19468b0e9e7bcc82363ae50b3a2d14572"
       },
       "1655": {
         "authorities": 134,
@@ -7428,7 +7428,7 @@
         "locations": 6392,
         "mosaic": "0ca3e77e0e3c979a0197bee69ae162991167745b82626a8b2ac2b998b92da9b2",
         "overlaps": 34,
-        "personal": "8192d6a0f91837ea37d721241127be715a70d1942b8d1656d362be7064fb46a2"
+        "personal": "8d7460beaa30a895f6b090f80927f08a5db8a754b236cc1c992f0d9b2802c6d2"
       },
       "1656": {
         "authorities": 136,
@@ -7436,7 +7436,7 @@
         "locations": 6392,
         "mosaic": "0ca3e77e0e3c979a0197bee69ae162991167745b82626a8b2ac2b998b92da9b2",
         "overlaps": 34,
-        "personal": "99431c306fc77446fc8dbf0e80741ba34a19dcb1cfa07e1dfd40e745f2c4db07"
+        "personal": "4bb8e28940e40532d279d5394422a546cc566c14a217961cfef28770190b99ed"
       },
       "1657": {
         "authorities": 138,
@@ -7444,7 +7444,7 @@
         "locations": 6392,
         "mosaic": "067582e9ee8cf91e91227ca8ff12dac27d4da054891e51ac0411f236b2506abb",
         "overlaps": 34,
-        "personal": "496b808f037287425971ccd64d0cce2ba5d7a8bf0771b99904b5df0f661cf2e1"
+        "personal": "a084beb86bfeab598e42bef622d74335500af68da1e8d7c5b6df1fe572a434be"
       },
       "1658": {
         "authorities": 131,
@@ -7452,7 +7452,7 @@
         "locations": 6392,
         "mosaic": "47a528e6e1141e0a35e23aee135c8fdbc4bbd9c9e7cb765689cf85faa81e5a1f",
         "overlaps": 34,
-        "personal": "6f16128c4ecf83345162a56d1aa0abe8d6ff9b563f9f0479f8a1c5bc260f9135"
+        "personal": "9aa69efdce905bc923cbdc36f4394f1e8ad4eb7cd93a5bae2a5812a996e86c9f"
       },
       "1659": {
         "authorities": 129,
@@ -7460,7 +7460,7 @@
         "locations": 6392,
         "mosaic": "2328332f8741dfad99462dfcdef4df660a4c49160a7a833fbcd3a5d522a1b9d6",
         "overlaps": 33,
-        "personal": "72e0aac74360f7cb21c28f5a6279e2da7fd9b360e0a408a56d49b10843a220d0"
+        "personal": "ee0d23f5c4b36aa94915dfddc0b7f6d38aad589d836b0dcc87b917a1b1043257"
       },
       "1660": {
         "authorities": 131,
@@ -7468,7 +7468,7 @@
         "locations": 6392,
         "mosaic": "656e1abf0a71949578c72025f6c643fc0601ddff3ceac553807516e5ae04530d",
         "overlaps": 33,
-        "personal": "05db4f05453b39d79fcc176e0299bde2b5669a894ac8dbf80ccad4c8f39e24f5"
+        "personal": "547e295ed58ab7442dcb202fb206e97eabfb6074245fd986cc30820d267a798b"
       },
       "1661": {
         "authorities": 132,
@@ -7476,7 +7476,7 @@
         "locations": 6392,
         "mosaic": "1480529296ac4ca24827aa9533124ba48f88cfa1a1c09ad67f55bc84534f43af",
         "overlaps": 33,
-        "personal": "29666965c55313f74661918fdc52138f02cae55a04009d7f986d926030a55d8e"
+        "personal": "e984be334cb6759439a10398de939871858be702a45c8b55bff69bdcd34c9eeb"
       },
       "1662": {
         "authorities": 132,
@@ -7484,7 +7484,7 @@
         "locations": 6392,
         "mosaic": "da934858a22f88dd47ce0e05c8e558e961d6c41697c2e29005d64d8642c295f9",
         "overlaps": 33,
-        "personal": "ffcd1b288128cf054c2a1d3f5932da4f4b0fca363b7534ccf4fd4433db313ebb"
+        "personal": "14311d44e6863cf52cac439136faf0ed15926992ce59cac97f8f6972faf736ea"
       },
       "1663": {
         "authorities": 128,
@@ -7492,7 +7492,7 @@
         "locations": 6392,
         "mosaic": "da934858a22f88dd47ce0e05c8e558e961d6c41697c2e29005d64d8642c295f9",
         "overlaps": 33,
-        "personal": "f03e578d954c7e5f7d775dab635dffa953e4ae8994c51fea39c595bd49b8c1fe"
+        "personal": "1f5e5273b0826c4bae8448415c5d78e34e77b7e414ba62f75938c644f7deca53"
       },
       "1664": {
         "authorities": 129,
@@ -7500,7 +7500,7 @@
         "locations": 6392,
         "mosaic": "96afff6243f480147f053ad3079d8cc5963116a1475903d26117674e42b604ab",
         "overlaps": 33,
-        "personal": "75b9cdd916a5deda35d69180939c435b6596f4a43999b46614ab11142ea3195e"
+        "personal": "d15618b06c3b993851171f9862720a47205df23a7b6b1651de398f7d25484612"
       },
       "1665": {
         "authorities": 156,
@@ -7508,7 +7508,7 @@
         "locations": 6392,
         "mosaic": "96afff6243f480147f053ad3079d8cc5963116a1475903d26117674e42b604ab",
         "overlaps": 33,
-        "personal": "e12a986361c2841c9adb891493a24bfb4a31727f4cad8ce0f9b236c8b6ce865c"
+        "personal": "904d832a572e6ab1dd660a5d812c501285b54d652213028853aa6fa3ed27a784"
       },
       "1666": {
         "authorities": 127,
@@ -7516,7 +7516,7 @@
         "locations": 6392,
         "mosaic": "9d7eb9c0d82f614f08483587b063fc1e14d961106181ec49c91d2b9f39f4c978",
         "overlaps": 33,
-        "personal": "f6ec2b1000aeda2d259e9af6aee31a87441d6ca9fd654e80a0c754e7fa0b0b26"
+        "personal": "1f5ed149abd06ba942aeb011c14bf35ee3dedf381273b1e0b03d313cca87ef56"
       },
       "1667": {
         "authorities": 128,
@@ -7524,7 +7524,7 @@
         "locations": 6392,
         "mosaic": "971e2a3fc09bdeaf7816542efddf68317ae62b3efc78e3b0975de26e640525cc",
         "overlaps": 33,
-        "personal": "9e5a346e03db27e2546f53e5854ef00064ffc6e883be794f943a44341e45bdcd"
+        "personal": "92c2f8da229edcc2aeb7c6aa5f388441575ab24f7da007b07ac6ad8c37e7000d"
       },
       "1668": {
         "authorities": 126,
@@ -7532,7 +7532,7 @@
         "locations": 6392,
         "mosaic": "0ed22f186d7add27807752ace1bd44b68e71c258b12b15c62be3680428a4fcc6",
         "overlaps": 33,
-        "personal": "1549736b49603d2ff045641e332a77a1e4c35d949d3a37a1809f7445ab5b12b1"
+        "personal": "859b95c634ecf189f53af2840666b3d1961480bb02c6f445bdb5b471c910ea8b"
       },
       "1669": {
         "authorities": 126,
@@ -7540,7 +7540,7 @@
         "locations": 6392,
         "mosaic": "1efab9dde9d1eedf79468ed41737098d49a0b02bfcfe92f0783639b67a014827",
         "overlaps": 33,
-        "personal": "edfdcf267d313967bcdcc310a2c98459c65bd2ec70f8c6ac9737caed9486c544"
+        "personal": "23b240b86e0172bdeb7229bc727a5aa2b76ea63fc9ff673440be58796ad16beb"
       },
       "1670": {
         "authorities": 131,
@@ -7548,7 +7548,7 @@
         "locations": 6392,
         "mosaic": "c9cd54b9b4ec4b8c0a09b715ee6c9b7db1466b2c26038d89a7d94df7f7938fc6",
         "overlaps": 33,
-        "personal": "260b8203f09c3d2e6a95590106d552244f701553d4b42d0306d879921a0f0f49"
+        "personal": "6077b7cdfee90281cda5d247ee414c14b5dd9366d8ae9941d7bcd7d4ab194bd4"
       },
       "1671": {
         "authorities": 126,
@@ -7556,7 +7556,7 @@
         "locations": 6392,
         "mosaic": "618b54aa685b0b68381644f9fab086a6c2fab9c40c3d1a566dde41c7ddaaa364",
         "overlaps": 33,
-        "personal": "d7e6d8eec08c9c481ae045d7fb0fd8e3f21662af783df9d0af5411583d55c0f8"
+        "personal": "58cbd0319af35cfb47ff4e5291ccf0e32b1c72c81fc6606c46209869be2ac9c2"
       },
       "1672": {
         "authorities": 129,
@@ -7564,7 +7564,7 @@
         "locations": 6392,
         "mosaic": "ebe0a1defbd77e2542e18c24ec841ef2818ea5756f5b87cd0ebf79c91528453e",
         "overlaps": 44,
-        "personal": "1111134c302ff2424f1f4ca3c0e9f91c8ca5fd7bb740e5e4838e0e425f9a7c3d"
+        "personal": "fc758b568f689044fe2aa8f8c4e21c2fbe6862ea7bfa306b7bb38628fbedbbf6"
       },
       "1673": {
         "authorities": 129,
@@ -7572,7 +7572,7 @@
         "locations": 6392,
         "mosaic": "0791235a1c760de67075c321170848e1a90565aa30997f9e10a4e7d38404c132",
         "overlaps": 43,
-        "personal": "61cd3de1d584dd6353e2e832017fd2b8e67192a3620f3192d92bd1fa091044ac"
+        "personal": "6a06dc55523a48bfda69be2382cd4f695c31aec03b1a2b91e54e48955e45ee17"
       },
       "1674": {
         "authorities": 128,
@@ -7580,7 +7580,7 @@
         "locations": 6392,
         "mosaic": "bafb5b6292a1abb42fdf55ed89e6ebb84705e29024cd1e2f84c22722f3cc7b9f",
         "overlaps": 43,
-        "personal": "dda8c4cb6943c5633373bfc01cc824122e77104d0a29c20c25f46e456a1c06f6"
+        "personal": "bd8b22f5885a94997b4d05415b05434c4a6ff2884779f489237f961e336cf581"
       },
       "1675": {
         "authorities": 130,
@@ -7588,7 +7588,7 @@
         "locations": 6392,
         "mosaic": "c261c6ba6952b382082f7ddea196ecd5788514cac8b33e527fcb0e5b8d4b8fab",
         "overlaps": 43,
-        "personal": "9619377c5170bcbd9da11ae845cefba28328c4faae5ba7c2c28c34bace55fb4e"
+        "personal": "bfdfd96d2678e692e91becf958e27bbb65832f44ce4c606a3f15622a21551a7d"
       },
       "1676": {
         "authorities": 129,
@@ -7596,7 +7596,7 @@
         "locations": 6392,
         "mosaic": "c261c6ba6952b382082f7ddea196ecd5788514cac8b33e527fcb0e5b8d4b8fab",
         "overlaps": 43,
-        "personal": "184b368719531e5d2b988b1aa9240d99db9ee90d98d6dd465fb5ef8274417db3"
+        "personal": "f2d7d076649902a4bb9b00383e3a4ca555f38cc9f4f6233c1d003888ac8e516e"
       },
       "1677": {
         "authorities": 125,
@@ -7604,7 +7604,7 @@
         "locations": 6392,
         "mosaic": "8e7cce276d0bb0fa4b0dcfec4580ca531b30e71853e8f1b02f7a9e8f476a8657",
         "overlaps": 43,
-        "personal": "b7334b13b31dfa809c1a1d1701a2f4105f11d018b591bbfcaee6bbf9ce3541a6"
+        "personal": "f3adb1fae2a25b28745796e73678a50d0a0754d3a04b0b60f9bb29c5edd91965"
       },
       "1678": {
         "authorities": 125,
@@ -7612,7 +7612,7 @@
         "locations": 6392,
         "mosaic": "75a8e57c5d6ab99b54c64e2d4fcd8b55fcf195b9150e3436364207d640965ad5",
         "overlaps": 43,
-        "personal": "b4d10d6c667fdf19448586ca812528333cac1fc63bd4221cd0f3a50a08df7073"
+        "personal": "ddbcfb36fc7d2d0cfc64e0a4c646f56db0d47ca4d9e9875da7f55f4f39c8165d"
       },
       "1679": {
         "authorities": 124,
@@ -7620,7 +7620,7 @@
         "locations": 6392,
         "mosaic": "70e2a7ccdd22330c71766fd511450beb09e399e4d5c86e7b6f2c49ee1f651e5f",
         "overlaps": 44,
-        "personal": "0a5ff7c3f1bda14c08bd038317917a49cda378d24793b53f6088a52890bf5a59"
+        "personal": "de72f0f368ae862a0793bf36421296daed541979b131dc71b378c68038a4d6cf"
       },
       "1680": {
         "authorities": 125,
@@ -7628,7 +7628,7 @@
         "locations": 6392,
         "mosaic": "36bd41ab71495f95df207da5074af2ce41fd5bcd23060d80e11fe92851435d8a",
         "overlaps": 44,
-        "personal": "3c2fc1608778c35ca36ad2dedede15e36c96554d52259ea4a1dc074caa79d85c"
+        "personal": "6ebbc98a47e1be9a8a6412019218441e6f9a162562137ddcb308efe7c1b3da11"
       },
       "1681": {
         "authorities": 123,
@@ -7636,7 +7636,7 @@
         "locations": 6392,
         "mosaic": "2dd027bdbadfeac4b296e2bcd334370e2b98c88e3a568f30e9d4f5e6d8b670ff",
         "overlaps": 44,
-        "personal": "95975526b1fd6994f934949d4773efa4af5eca1092d39974c73768c316d94a2c"
+        "personal": "dca6ae2e50fe5d91d6fe2848bf96a101801da7bed720f2627e2e7e09a1633012"
       },
       "1682": {
         "authorities": 126,
@@ -7644,7 +7644,7 @@
         "locations": 6392,
         "mosaic": "05cdf9a17b40ebb70a9cc9bcbbcdb92d2496be3412b99e0412262a8267e8eb4f",
         "overlaps": 44,
-        "personal": "e5cbd518651f717c29ac22f23aefb623a55271856448571460f3dd9302aa99c6"
+        "personal": "13f6d6363cf8e6fdc85a72d0de5aba5b5f988ad60c11d195c11ae997f58c2664"
       },
       "1683": {
         "authorities": 125,
@@ -7652,7 +7652,7 @@
         "locations": 6392,
         "mosaic": "05cdf9a17b40ebb70a9cc9bcbbcdb92d2496be3412b99e0412262a8267e8eb4f",
         "overlaps": 44,
-        "personal": "31016dc850f467e275948195351ee2a304b012182edfdc48838052a667f41809"
+        "personal": "9d7c04a17a27ff7c2974fa42dbd1660a31a81b887cf716cd72292534e1f2989e"
       },
       "1684": {
         "authorities": 122,
@@ -7660,7 +7660,7 @@
         "locations": 6392,
         "mosaic": "483c736389e13d45b900a6fd0df066e25345e55dbc7c86c99d1db29cbdab0313",
         "overlaps": 44,
-        "personal": "7e97427c18c1b01e1f3944b9e577c62201bcb2a36fd685116a4511f66140da83"
+        "personal": "0154b088d21ee6f351ec9069311e67716a01d81cf507e731757abd04e28c4887"
       },
       "1685": {
         "authorities": 127,
@@ -7668,7 +7668,7 @@
         "locations": 6392,
         "mosaic": "483c736389e13d45b900a6fd0df066e25345e55dbc7c86c99d1db29cbdab0313",
         "overlaps": 44,
-        "personal": "9aca194c1eab5f5ef92bd5d7f1a7e8266cadecfafef88e5e51bbdb45a0c7e5bc"
+        "personal": "37ea73189abce7921cbd66842367d2d625e73c5165b9f7986f58044de9abe855"
       },
       "1686": {
         "authorities": 123,
@@ -7676,7 +7676,7 @@
         "locations": 6392,
         "mosaic": "d567f86dc20778f5dbc9fed42298d387c79bafb0e86aefc8fc41e30b994d6eb8",
         "overlaps": 44,
-        "personal": "ac9c36c7b6479549d2f4e0101559f95d0fdb31b150ec0a3d75b301ee3c5af2ed"
+        "personal": "2e00ddd7d107a0cc57a990b0778c9a9c1e6aaeafef0bad019c62a0bc9a4dc206"
       },
       "1687": {
         "authorities": 132,
@@ -7684,7 +7684,7 @@
         "locations": 6392,
         "mosaic": "7c3f3e414e99a324d92f806b34aab21c9bfd03e6b34b813b72de01d484555ba4",
         "overlaps": 48,
-        "personal": "e1c7ea3327aeaba183c8d07e6e2dc9275bc25a04ccfff3b734a668bea41e58fa"
+        "personal": "57316710645f6592e1581293e19974f3a4f69c11ce4ae0bfb21ef28d632084f7"
       },
       "1688": {
         "authorities": 131,
@@ -7692,7 +7692,7 @@
         "locations": 6392,
         "mosaic": "266ce6d7711d57c92eece9ac53993287cee4480aaa74fcc53e70f202d84520a7",
         "overlaps": 58,
-        "personal": "788e749ab955fee6de1d355b553b985d549e3a3c4a2715e4c7e3546344fbf6bb"
+        "personal": "1d2c71c2d3c2305695a1ed1d0ce21c36951e12484a76b7e8be04df38b764d5ff"
       },
       "1689": {
         "authorities": 131,
@@ -7700,7 +7700,7 @@
         "locations": 6392,
         "mosaic": "e31ef9474904e8eeb1fa3ad29f503c7b146e67c415833ac28c2f5525b198d4ec",
         "overlaps": 96,
-        "personal": "afc3c576a23042fb4aa7a4e70a4829c6ba7f2944585a36442b1909c24812bfda"
+        "personal": "010c6e2f27e51e585ee4b2beaab1eabaa66c345fc34d5602547663424de1e8de"
       },
       "1690": {
         "authorities": 132,
@@ -7708,7 +7708,7 @@
         "locations": 6392,
         "mosaic": "8f198411b803a9cf26c166ec1ca977d26e4378d20340caccb43f2573dbff1247",
         "overlaps": 48,
-        "personal": "4973d00d9f3220b3d23f0bef19e44765463f5ad5038d9f4a584a35fe55ea12fc"
+        "personal": "3878d046a68712006f01fc3e26aa0691ad14013e5bd1d768e6d6ea4f767eb8df"
       },
       "1691": {
         "authorities": 135,
@@ -7716,7 +7716,7 @@
         "locations": 6392,
         "mosaic": "d48fdfc920b3853899b15a2c59e727eec6c08c8e40d0ca3f4e52ba4b75f46352",
         "overlaps": 48,
-        "personal": "3ce8a3b2a23e7a45dc4d0b9bb763059c16db72eef655e706275b40d588cb658e"
+        "personal": "8a804c6e683a717e0ec79b7a5ccbb4e7bf8a01789958331b614278c8cd65e96e"
       },
       "1692": {
         "authorities": 125,
@@ -7724,7 +7724,7 @@
         "locations": 6392,
         "mosaic": "7e760024bd3e7d3edb22aed31d2eee8805142e21692c7331a6fa0a50197acd26",
         "overlaps": 44,
-        "personal": "4477d13acf3d0f09b15567fa12639db90976f9486bb768ed146b7097ce21e583"
+        "personal": "0eb67ebf5e9697f41f85e1443c499201eb40bb295946037b82bdb966f6ad489b"
       },
       "1693": {
         "authorities": 124,
@@ -7732,7 +7732,7 @@
         "locations": 6392,
         "mosaic": "49d965797a289b6b34899589d513f65d78faa555e94332feecb53e357ea4fec9",
         "overlaps": 44,
-        "personal": "ac42d97dc791c1e036ff57d9ff172c7a43ab4e5a2739bc937aa2fe8afd246be5"
+        "personal": "5ffd8034379147a37d7ae5f7f3fb49b099fcaec2a14836cb20763f8dce50c23d"
       },
       "1694": {
         "authorities": 125,
@@ -7740,7 +7740,7 @@
         "locations": 6392,
         "mosaic": "5af7a10601a449a0766d94e168c1a57ec43e6d97bdbd4328c74c0afeedd80895",
         "overlaps": 44,
-        "personal": "e75dd194d6026da26f5647860e3d7b47538a2fda2422796652deb7821d5adcc8"
+        "personal": "b2a27bc89c0e24666c8844e9cb7c827105dfb0b8ce3439ee77e71418e755e682"
       },
       "1695": {
         "authorities": 127,
@@ -7748,7 +7748,7 @@
         "locations": 6392,
         "mosaic": "0f004f1595926863f4c8c65faa18b006aa54ccb4178404ba6976f978ffa98d1a",
         "overlaps": 44,
-        "personal": "35964756613ec94fd9708fd7a1d77dbde57ee1d7c160841cacb0b64a5aa88f0a"
+        "personal": "c63c90f32bfec2f63ce5c76652ed8cb176ae336021ef512fb3dac6d826337c69"
       },
       "1696": {
         "authorities": 123,
@@ -7756,7 +7756,7 @@
         "locations": 6392,
         "mosaic": "331e3b537ae29d5fa9f96ef7997f7f866a147c37b6df73dc18b83b7c9a16c62d",
         "overlaps": 44,
-        "personal": "2b2b1c7321ff644be0027cf7976fe51ecd5680245f934a00a809a6f75374c2e3"
+        "personal": "0cba22142fee81041656af140207fb6d68f2ed6751f8b86d0c76b9fbb805ac2d"
       },
       "1697": {
         "authorities": 121,
@@ -7764,7 +7764,7 @@
         "locations": 6392,
         "mosaic": "1ab15b790b4a609350cd13088dff306229327661eeaf8de46a850854410c0740",
         "overlaps": 44,
-        "personal": "9260e6329d5149f23f8366537559a1d81ffe51b336162196581043d880be19a2"
+        "personal": "0bf69b295e2ad6925d778d96197c71470d164b2c151056997decf298fb12c127"
       },
       "1698": {
         "authorities": 121,
@@ -7772,7 +7772,7 @@
         "locations": 6392,
         "mosaic": "1ab15b790b4a609350cd13088dff306229327661eeaf8de46a850854410c0740",
         "overlaps": 44,
-        "personal": "d4f4eaf6f47360b9bd1ed1997a104ab6ccff642ed6372ab2099516e039b5fcd8"
+        "personal": "e44c76b5b442d12780b1f5c14e78363bdd43450fa194c868535d9e52ef7dd5ae"
       },
       "1699": {
         "authorities": 122,
@@ -7780,7 +7780,7 @@
         "locations": 6392,
         "mosaic": "983e4e87f51aed5e6de9a7df5078fe2935845bbb43165eb0da44d0a16ff7f96f",
         "overlaps": 34,
-        "personal": "82f3fd612dc45c93321820d6dd21011718abe74d210ac10712f8ec65d176b9a3"
+        "personal": "a172ad927d7e55555997f44ca461574ae8d53c8fd059e97f16f132f79c051758"
       },
       "1700": {
         "authorities": 146,
@@ -7788,7 +7788,7 @@
         "locations": 6392,
         "mosaic": "e9a8c93642faaa98d68635273236cb14726b8c34eeb85bbc6575000538414a51",
         "overlaps": 34,
-        "personal": "af7c62db37f00c670635434b34825fceb7c14850454b594c54ee1cc3c51dc2f1"
+        "personal": "a2ec0c64b7e6931a5c584f8f81705c5e388c214fcaae745304efbdb1abbf3270"
       },
       "1701": {
         "authorities": 120,
@@ -7796,7 +7796,7 @@
         "locations": 6392,
         "mosaic": "41735056dcc422a73679157eb25fd1d2f0458ddc34a1d43036de841ed58eb0b0",
         "overlaps": 33,
-        "personal": "307e930227f97b6841da957e412c766e227a8f484b4e29ec4769e2f12ed38f39"
+        "personal": "f95032847395cc294ee6e53568422203287def547d06f4f16f5441b59ca90c05"
       },
       "1702": {
         "authorities": 123,
@@ -7804,7 +7804,7 @@
         "locations": 6392,
         "mosaic": "a7b6ae2141e8204a0d9b7783700180ecac7c72ffc297ea4800cf0f2ddce4a68e",
         "overlaps": 33,
-        "personal": "b042e08eb65c23b6554f26f8d5ec67fa418e4ac11042f2a3236223d1ac1008e9"
+        "personal": "54bd840c4ee02b148a9880af4ebde73acee78534be852c141716474461d9b247"
       },
       "1703": {
         "authorities": 124,
@@ -7812,7 +7812,7 @@
         "locations": 6392,
         "mosaic": "6ff7aee26381d43d81a794077019b70b44c6e23a05083be4b51f75d8109bce1c",
         "overlaps": 33,
-        "personal": "0aa1338fef685de030ad76ec400b18585fb80a45891c784e578b378e91b2ff6e"
+        "personal": "34f9bf39dc7a4680bc1df0549a67783e205c556b0120f0b702445428995feeb8"
       },
       "1704": {
         "authorities": 124,
@@ -7820,7 +7820,7 @@
         "locations": 6392,
         "mosaic": "708ca1423d9fd722d06ff55377a4c086d9701f7669f4949abcb2866ca2b69bac",
         "overlaps": 33,
-        "personal": "1750beba05128157a63b9d2a0e4b0471b5a9fcee464f513bb63e283d8fd899f1"
+        "personal": "f80df5c9cd71e2856cc7c3f51aa8fda69cbfe804e49403febfc5e3b808ea5479"
       },
       "1705": {
         "authorities": 129,
@@ -7828,7 +7828,7 @@
         "locations": 6392,
         "mosaic": "6eaa6982e63ba69e1ecff36c2e6a9ea499d6e1a11718aaa1ae197fb5ce0ed094",
         "overlaps": 33,
-        "personal": "1d288d8f8f744383050d2ecd3d390be6c93e0d8d18fde92a330d5c923c36ae70"
+        "personal": "63fc9ae02700612a68692972fcb9592c110cfb356d796fd89e2d0774a4ac9897"
       },
       "1706": {
         "authorities": 124,
@@ -7836,7 +7836,7 @@
         "locations": 6392,
         "mosaic": "6eaa6982e63ba69e1ecff36c2e6a9ea499d6e1a11718aaa1ae197fb5ce0ed094",
         "overlaps": 33,
-        "personal": "800956a370ddc6a98ca565c839655271d32fdb17159e1b33154e934e5c3672bc"
+        "personal": "fc3b2456b247b6ff7e415597dbea357c92e36ed0aaed9050ae1a4dbd5832cb03"
       },
       "1707": {
         "authorities": 121,
@@ -7844,7 +7844,7 @@
         "locations": 6392,
         "mosaic": "2d3b9c3dd64c4f4648b4862dadae91d0411f4eeb21b2d8d71f9df87fdca801ab",
         "overlaps": 33,
-        "personal": "81e833891355dde1bb9f146c4918c98dc7e7da404b16c0837acd116012ebb5fe"
+        "personal": "84e83d4d297100163d67b8bdd47ccd3668aba8be379068338800d865cf241c4b"
       },
       "1708": {
         "authorities": 121,
@@ -7852,7 +7852,7 @@
         "locations": 6392,
         "mosaic": "719fcc912ef99072fdab128b59ad5bca2f872412b60cc07caa8730c2af50bb22",
         "overlaps": 33,
-        "personal": "6625c9fec6af8417236a9c10643579738226bc93183905b1e7011401b2ce8760"
+        "personal": "cf13ead58f176724343fb659ce4f626a673314a308aca7203147f4deb597b467"
       },
       "1709": {
         "authorities": 124,
@@ -7860,7 +7860,7 @@
         "locations": 6392,
         "mosaic": "5de5ac90bceb3055833a0313da8bd8341701dc7a0f55ba64e653f50800340aea",
         "overlaps": 33,
-        "personal": "31145eb472afe88572b300c0b58ee6cb337aa3a3e1aa7efb56533cbae487619a"
+        "personal": "c34de7bdcf9b0c544289df7d1e999856455c9f91156d1871beb359f5550efff1"
       },
       "1710": {
         "authorities": 120,
@@ -7868,7 +7868,7 @@
         "locations": 6392,
         "mosaic": "be2496c146a0ca9eec338f77a06076da482d1c7961962a0f75aebd0306a020cf",
         "overlaps": 33,
-        "personal": "d8572a4cd40823775d4917d40abf45159db6ed3974d5ca6164f1e986083c396e"
+        "personal": "b21ddbf9aa3ee74c4a65dbb83f198a8baee67504656a50e83b2a8de3da763656"
       },
       "1711": {
         "authorities": 131,
@@ -7876,7 +7876,7 @@
         "locations": 6392,
         "mosaic": "832d1cccf315c29c50e102580faac85c677316580e6b766822d8241cd72017ce",
         "overlaps": 33,
-        "personal": "f1e15ef360d3078cc6b2d58b8aaf3933540bd9886a20fa88a8d5be03bd77e54f"
+        "personal": "f297c2a1462c936da67c50b7e740540eba112088e8481574f1a3bc18aca47f97"
       },
       "1712": {
         "authorities": 108,
@@ -7884,7 +7884,7 @@
         "locations": 6392,
         "mosaic": "73f482e1f1aa3aadabeea97332d19ccad088b31e6bac6dc2302caf0c5ea16793",
         "overlaps": 33,
-        "personal": "5c056a745a84c70b52662e53a23c2a17f3d38f263894fa1a8f202d7c5d7a201c"
+        "personal": "c9e2363923d7bcba2599773fe344ff6fe5e1dc8246b2b5aa92e3858a56f213af"
       },
       "1713": {
         "authorities": 110,
@@ -7892,7 +7892,7 @@
         "locations": 6392,
         "mosaic": "8e6b45e95cd3b69a539e87ebde595455ad4f19dfdbcdcb429f6d879fc818f696",
         "overlaps": 33,
-        "personal": "8e61fe64b05e57949618b9bee02a9f9da857c1652e180a9464ba57016f5f49bb"
+        "personal": "a0df43eeed536240d9dc14c868fd95427babd3fa30675e37cc4c77ab97629493"
       },
       "1714": {
         "authorities": 114,
@@ -7900,7 +7900,7 @@
         "locations": 6392,
         "mosaic": "a113137d75a73254434425bf0d379bf03056c76e754b4f9a5a0e36989cd7c2f6",
         "overlaps": 33,
-        "personal": "c4b07cc01ad0757a94a0a7ebb4aabb73668eadd5edb62cc0d92226d021b44505"
+        "personal": "f7659886818e7f1a258f72387a20b3bb82c2eb0b5e749477199393bf6ff2f079"
       },
       "1715": {
         "authorities": 144,
@@ -7908,7 +7908,7 @@
         "locations": 6392,
         "mosaic": "f307e73d0b9d9dbd1cb20d6ed8a37e6976156d7053996fd6f68fbd9b77116e57",
         "overlaps": 31,
-        "personal": "bb27f06831dd0a908e796ccea311832e02e08d6a9f052fad3de0dd266d9042d7"
+        "personal": "d193fafb8562fb237a24a039875670c1c87b4101b9fd7a14326fe8408612554e"
       },
       "1716": {
         "authorities": 117,
@@ -8596,7 +8596,7 @@
   "public": {
     "counts": {
       "dinastia": 513,
-      "english": 52,
+      "english": 62,
       "historia": 191,
       "persona": 2723,
       "territorio": 1041
@@ -8608,32 +8608,42 @@
       "territoryCount": 1041
     },
     "pages": {
-      "/en/": "f5bb91b09e1dbe50d8c796534bbc1d40100d2ac778aaaa134d064f8257526296",
+      "/en/": "fa25209aae2767cb47987c866ab2a0d42a6a99600ef0689a12365339c1ece3c1",
       "/en/about": "f0f0c43fb37e52365c9606616a7c40a220fc674a5e937ac62ac09ecab6b067e0",
-      "/en/challenge": "37c515b822363c193ff4991cf5a76b51319338cbd2a2efccab5ac97388e501b8",
-      "/en/dynasties": "eaae6a9f60933e53faa604cfa7b62aa14394bd74e617b32974460d56872c156d",
+      "/en/challenge": "788ff5777fae5d4ca703db7f8df87ef748ef53a3d0a7ece9797f1464fee36f46",
+      "/en/dynasties": "e482ba65bee99df5de06fc779a54f0bff344feca354b77bf45508ba347a05b1b",
       "/en/dynasty/anjou-hungary": "4ec02a5f323be4313bfc2d047a4e8c7a96e4e6f54affed7eb3e4971a640b67d8",
       "/en/methodology": "88542039f154c389778910bcc76143a77ebca4bac4e60a37599f057a086c2fb2",
-      "/en/people": "e8bf0f9fd8831e20591e689cce789605b4283b59bc7646bf62a0838e862c2197",
-      "/en/person/charles-i-of-hungary": "3aa1f86774b20e346c48132e79147ed14dcf0640435e0ad90464b94ecefd8a9e",
-      "/en/person/charles-of-durazzo": "2a7030c763b95d92850f354600ed4a2ef87dc915b786e5dd8cfb825a006bc1db",
-      "/en/person/charles-v": "876323b773906a02856957518ee44767b897b3ecd0532faa029ade3a949016e8",
-      "/en/person/eleanor-of-aquitaine": "f3cfa081bb6adfe0049b7058c983c72b3c8e4ddda9eb9ccab939fcdfd6c0386f",
-      "/en/person/elizabeth-i-of-england": "a0cc292a6e9663b5f7c4ce784be7f6067aa17244b075bc11ebae97ffc9ed2a6b",
-      "/en/person/henry-ii-of-england": "9fd96d56a151562afae7371fdfbae6c7a5da11954521e26990b6a5aad1780574",
-      "/en/person/isabella-i-of-castile": "09ca32c5bf5bff0e80ef3587bf8449d17d481961da6dc707f22d979b0d0dd546",
-      "/en/person/jadwiga-of-poland": "836dab050166cefdc7bbfebb53ebcaf4cf44910b59418d6c72e3b333ed9a2e45",
-      "/en/person/joanna-i-of-naples": "a76ff6c2319e49c81b8083524f40644e73cb06fb8c390a066de1112e90d7f5aa",
-      "/en/person/leonardo-da-vinci": "8698897295a9073912362537a60eb84a19f3bf4a260f6aa12f7fc308f19f53cb",
-      "/en/person/louis-i-of-hungary": "86bee60371fe5e2e32edeff5647b49af299221bf29ff8faed31f225b7d909aab",
-      "/en/person/louis-ix-of-france": "52e26d217b7dea4a9b9b377a140bb514c6de82f3b7676d4680ba7ea0bc8fdd3a",
-      "/en/person/mary-of-burgundy": "d1ee360f3ede3651103db143765910c30e6b2e9515a0ee70cea1e73ae199141d",
-      "/en/person/mary-queen-of-hungary": "ccb1e2affb8aa039cbcc789b97224d874d17320ccabb3a627e07941ba9228123",
-      "/en/person/matthias-corvinus": "40e64bdf340afe2cc96034c90b24cdef9b9da749111387d9581bd8dd4e3c5a48",
-      "/en/person/maximilian-i": "1b0d70bdbd3638e573475f39e7c436f91307de1047e48a5c2edb08062463d4ef",
-      "/en/person/richard-i-of-england": "06b9d93e4438cdea1f0dafd2a2af52782d5c742eaf6f7600f610180760cdafe5",
-      "/en/person/suleiman-the-magnificent": "b5db5bf95a8e5d28e14746172e637e23a55c3ce62102f33024548235d9a460d0",
-      "/en/stories": "abd4a518e565d8169918ed95d2411b8266f1485980f8ff500999247d277042dc",
+      "/en/people": "f3b48192bb5fed77407ced34f139638ea0057aabb1b0a7b82c34890d7e5bcc3a",
+      "/en/person/catherine-the-great": "c3ce703e94b0a0193dd8072865185e4c2c3a6f2a82b7410ec5f5e5c6dab1fa97",
+      "/en/person/charles-i-of-hungary": "e00a431a9f692c3494c9a9e38b738de86864dda8a46b3c391a61aeac07b79bd8",
+      "/en/person/charles-of-durazzo": "ec9b8a62f4d4d6c71e8961d8b2222b76d08d0749a0f2ee4e40886f1d67d7dbe1",
+      "/en/person/charles-v": "29102b915493c156a4acdf5094201581d97b1f66a8680ef9c0737d7368b1e826",
+      "/en/person/eleanor-of-aquitaine": "7fd0e9298df03a6e797587c65586a86657e28c24b880728e75d3f8cd80c71272",
+      "/en/person/elizabeth-i-of-england": "d697718df9fbb7552ea72d1ecf858c6e05dd9f1908e9c24278bef451d25db054",
+      "/en/person/ferdinand-ii-of-aragon": "fae8ab288624dab2bf2e9ef41d1d3bffcd06b33386c312dbf6dc630782ff594d",
+      "/en/person/frederick-the-great": "993724d37613d47f97dad981fb8c28d15c431b2b8d1c2cff7383d397d3b765bf",
+      "/en/person/henry-ii-of-england": "268ab674b2403dbd35694e50bfc81c3af052741ff4e92e1d7c2795b8c22e2a95",
+      "/en/person/henry-viii-of-england": "c5c9e30dc3bcac96aadaa6c4d16af9192e721a48249dea087b21957787d743c7",
+      "/en/person/isabella-i-of-castile": "de1044a9df19f0a04ca252df760c8d9fcbf33f0329fb1c29088c1268e7657720",
+      "/en/person/jadwiga-of-poland": "f19126ddd359d4e58b93d0e09137762aad1b1508f87e7701182eea1cb3e9a1a7",
+      "/en/person/joan-of-arc": "ddcea5d80c6b97554127a880f486f748b74b896c1ad16d371590200ae96b0ee8",
+      "/en/person/joanna-i-of-naples": "51d4b48bcc157b01621bbe6457edf043d036e5a0bf9d55dd80a71096e59bcbe2",
+      "/en/person/leonardo-da-vinci": "c838d136d136312f33118ab6d568b4cded05e50dcd9a1075ebde6d93c5b1c402",
+      "/en/person/lorenzo-de-medici": "50940ae893a08dc8d23ad3f917905032fd3937db419d121ef06700d6e8160d96",
+      "/en/person/louis-i-of-hungary": "65522276440219cc5ba3e2ff2a752129d9cc7722e3941c192602e02c757ac597",
+      "/en/person/louis-ix-of-france": "23c76f316f05f4aab67c10ba8dd8103447853f1b3966c846a08ed0f2e00c2a9b",
+      "/en/person/louis-xiv-of-france": "af562342fdb5cff7d4b9aad64b81e1dea44cbc2270aaa92ae82e24bbda1b08b1",
+      "/en/person/mary-of-burgundy": "ab89836bc4bc6bee15fbdcf10c42c24c51b80f422284daa560503aae02f63434",
+      "/en/person/mary-queen-of-hungary": "29b031a11ca9f88d521bdf8e8277ad9001a8c41ea64200566588933cbf28adef",
+      "/en/person/matthias-corvinus": "50f3e3b7ce171fd706d138a750dbe1c17cdfc68a1d24ecfcd77f8b8948181036",
+      "/en/person/maximilian-i": "2b844a248c48482c845199a84ebce42a61eedfc9af1346e81f170f390175a953",
+      "/en/person/mehmed-ii": "9b8a1bbd25c0ff820e6cccd19b807da2ec48c04840ca6a8ab14405e15d5499f9",
+      "/en/person/peter-the-great": "dd465166ba2146f7c182be597d3d3240290b227113f01ef5fff53b8a032a1b8e",
+      "/en/person/philip-ii-of-spain": "36ee272c2bd393b1a376994d30f29768aaf4814c9655335690ebc82fa07594ee",
+      "/en/person/richard-i-of-england": "a5ef651933dba33da99745d6ae788c65bd278ad3a8c26dfb2356ad80a71107ce",
+      "/en/person/suleiman-the-magnificent": "f4ad3c73c238b6c73a954b9b55d3a2287595ad9bc48e7a5722873bfe2006584e",
+      "/en/stories": "e2783569e089233f38a189cc9540d83e829f70134f8de12fad3557484cda0618",
       "/en/story/burgundy-the-kingdom-that-never-was": "d54b19345e64a3c127b3ef463dd093e378fd716b8a434afd5fa74cad65d5c1b5",
       "/en/story/burgundy-the-kingdom-that-never-was/chapter/1": "2b52e86f9959d424ccc0a73c0b962a9a82115eeeeb770e74336f94d83f18794c",
       "/en/story/burgundy-the-kingdom-that-never-was/chapter/10": "fde49a1da0a81dc08a219d3661f3d96fd89e09010f4bec411cf78adf4812ff79",
@@ -8658,7 +8668,7 @@
       "/en/story/in-search-of-the-mona-lisa/chapter/7": "5be6dcdbf019390f0cada36c644a6307d9e9c4289dcc669024a4bba1b57ac005",
       "/en/story/in-search-of-the-mona-lisa/chapter/8": "1d5cd70cbbb416c899161e25ae9ca4ff0cc80d380b7b3ae94cbeb749eccd6093",
       "/en/story/in-search-of-the-mona-lisa/chapter/9": "8f9f45557e5ee6b7477fba7fe8177c02dffd20e5815e1a70ecc3b0a630eb0432",
-      "/en/territories": "30f0a19267055e1e549cadfeee780673a672f94a03127e19ed89fdbc0d998417",
+      "/en/territories": "fe6aec3463fdab8fe6f23875684e764c28f7c5794294382f0ce72fdf9f2a9689",
       "/en/territory/normandy": "d08714ae6d451e83695069381c7a39155770ce4edacdf92674657a2cbdffc472",
       "/es/dinastia/acciaiuoli": "96401fc5ad6ae0fffac6b29babc90b09e9bd598031513947545f93f255502205",
       "/es/dinastia/alagon": "87137780e614711d9233c5388eb23f0bea978e351b47b081790d22c03694c22e",
@@ -8733,7 +8743,7 @@
       "/es/dinastia/bolena": "5a7624f4863a2f80a848f49431df5890b06f02f3b20b333fd9311f7df5f0515a",
       "/es/dinastia/boncompagni": "f4d95709ed5b6c70e4dad646490cc8b1dc852cdff27844bb6d91489cf8c6a4b9",
       "/es/dinastia/bonde": "006359c0f2f2e027cdc8850896e0e54963124ca2993f076ad0b29db47c88d216",
-      "/es/dinastia/borbon": "c84edb66d80d6620d7c697287036e172bcd891db1d2410550ba65b8ec1b268eb",
+      "/es/dinastia/borbon": "c7f30c121e6862dd48270e1e72ce0984aa309af3c1b17491f32855d70e49ef8d",
       "/es/dinastia/borbon-conde": "09bb34577e8da30d1c7cb704afd425f6709676c386a687ab2f0b34244dd34893",
       "/es/dinastia/borbon-orleans": "97bbd4c43ff822d6ca14acf5ed4c8b10e935c8e1c07158e42e3a6e16b757b684",
       "/es/dinastia/borbon-orleans-gaston": "93cad09a62e0bd3f24fe2be2d8a6af8ca0557960472812a4bbf13b19a1d91c00",
@@ -9895,7 +9905,7 @@
       "/es/persona/catalina-de-vendome": "3778714f2a91ccf3c5893ac317ccf03469487acf4255ae5f1874a0e717677b07",
       "/es/persona/catalina-i-de-navarra": "3439d3bc790bc3f2bf373d3cb14a7241bba2ca6dcfe64743b3a9fb1bc2d32f21",
       "/es/persona/catalina-i-de-rusia": "843d99b12376158b53eb7f9225ea959879279efcb887d054c28f4ed68993a673",
-      "/es/persona/catalina-ii-de-rusia": "1054bc0e134679eb98c35103d0d571e69c5e5eaf4110a62a76a6e0df346c76e6",
+      "/es/persona/catalina-ii-de-rusia": "4a07909795faa4e4830828f97f56f8ccb34ca45876942a5d240e7fa53df4ad0b",
       "/es/persona/catalina-ii-de-valois-courtenay": "40b6bab9f02bf7827bd8fdade45ff2c2a57cee843bea9d1f169c2ac400c91d43",
       "/es/persona/catalina-ivanovna-de-rusia": "8d42d8723e2f6a840393c59eda0cd7ecf20830482cbe3d187eb40998c6e05721",
       "/es/persona/catalina-jagellon": "170850766ab5fbb91c97156f2c486dbedfe1942fa3c13412ecabf8f7959b2110",
@@ -11240,7 +11250,7 @@
       "/es/persona/luis-xi-de-francia": "58cc68021235f4d99c85b267f4497bc80221deb72afa04193290f6af4d63e117",
       "/es/persona/luis-xii-de-francia": "c475ab2c965591da86b7cc73bc7086eedc2ef1c5d0a1d45aef90e3b1adb7479d",
       "/es/persona/luis-xiii-de-francia": "007da38de7769491df3ccae761527e2afbcf6ae6f066a032879dbd053e7a13e4",
-      "/es/persona/luis-xiv-de-francia": "a47c20f6bbf53e1a5fe637afca2fa215d737524701036aaefefcf63512a1631d",
+      "/es/persona/luis-xiv-de-francia": "4dc8ffedea9a9f0ef14bd011fc7515c5c8d4efc7b28f453aa52abb6dcaa1e735",
       "/es/persona/luis-xv-de-francia": "c97c61077995b7c9c62c103f459dfd975dd0b85d1447f3d90326f6d14ef2b8ae",
       "/es/persona/luis-xvi-de-francia": "b6a41deb9c554d97a2818288174226366ec1b69b63c27ba3533880c7f2ac1870",
       "/es/persona/luisa-amalia-de-brunswick-wolfenbuttel": "eeae20a41a8c597e5616fbae1eb690cf3d51afda89ea2e96df88094518f10f58",
@@ -12489,7 +12499,7 @@
       "/es/territorio/escandinavia": "4f3de6ed195bad8238ba225a8d72579248efd894346e479eabf1511de5f40e05",
       "/es/territorio/escocia": "fc554bbe15bfacd9fd7fe3066c94385463aa6f6a60e2e21f45596be5cdd8d1ea",
       "/es/territorio/eslavonia": "192b64dfbb65ced2b4506d33704087eca05ed531507fc578d8433549551b8cd4",
-      "/es/territorio/espana": "8de32d6ca4b9790104279d483312855679c950ac4764b0164c46afd9e2f40997",
+      "/es/territorio/espana": "ac2ec275d8bd26e2b23fd7d25aaace60dd5651a708282ddeff2504ccd9c0c7c8",
       "/es/territorio/espira-y-worms-transicion-revolucionaria": "71af8218bfe65e629413ef21145067accd46eaeec1ae369d9a471d3ceec02678",
       "/es/territorio/estado-de-los-presidios": "b04a85ed9b5a14d788c16da59ed39c12381dd2c91f88fa601dfe2c7dc7caf038",
       "/es/territorio/estados-belgas-unidos": "eb911ac28beb1107503fe662828ca4bdcb25222d01c35ad233000d728464e128",
@@ -12697,7 +12707,7 @@
       "/es/territorio/nassau": "44f55d99f2fcbfde5052e86be4a86e8a85b996401b6a1cd2344c4bd6b8a6ec56",
       "/es/territorio/nassau-administracion-conjunta": "e9054a70ccb26e44d0847929e52e13e1a41b2880fa1a5ea23cae4bf2809bea56",
       "/es/territorio/nassau-dillenburg": "4b369fb3c6e4aab1bf7deeb34a91cb588565290f28cfb043ef1bc4ede88e1e0c",
-      "/es/territorio/navarra": "cd2807cb8177407aa0b8f2b86e77eb113c87423957e6962fe50ff594edc746ca",
+      "/es/territorio/navarra": "ce0e2eb3c008aedd93073cd447544572714e3c2d9b0a01aefb59f414eb260caa",
       "/es/territorio/nemours": "7f0470276db10befd0535191c4b2ce66671bd79b304ccd59de40ac20c46fb5dc",
       "/es/territorio/neuchatel": "929a0768606b459a3ce6c9988dcd4c7d874555752a40a1ab577a7ba3651f5901",
       "/es/territorio/nevers": "29b370ef6cf83d1e8bd3587a5b0fe21e34391d8867e14d4b5df503e3dd810711",
@@ -13137,22 +13147,32 @@
       "/en/dynasty/anjou-hungary",
       "/en/methodology",
       "/en/people",
+      "/en/person/catherine-the-great",
       "/en/person/charles-i-of-hungary",
       "/en/person/charles-of-durazzo",
       "/en/person/charles-v",
       "/en/person/eleanor-of-aquitaine",
       "/en/person/elizabeth-i-of-england",
+      "/en/person/ferdinand-ii-of-aragon",
+      "/en/person/frederick-the-great",
       "/en/person/henry-ii-of-england",
+      "/en/person/henry-viii-of-england",
       "/en/person/isabella-i-of-castile",
       "/en/person/jadwiga-of-poland",
+      "/en/person/joan-of-arc",
       "/en/person/joanna-i-of-naples",
       "/en/person/leonardo-da-vinci",
+      "/en/person/lorenzo-de-medici",
       "/en/person/louis-i-of-hungary",
       "/en/person/louis-ix-of-france",
+      "/en/person/louis-xiv-of-france",
       "/en/person/mary-of-burgundy",
       "/en/person/mary-queen-of-hungary",
       "/en/person/matthias-corvinus",
       "/en/person/maximilian-i",
+      "/en/person/mehmed-ii",
+      "/en/person/peter-the-great",
+      "/en/person/philip-ii-of-spain",
       "/en/person/richard-i-of-england",
       "/en/person/suleiman-the-magnificent",
       "/en/stories",
@@ -17663,6 +17683,6 @@
     ],
     "tree": "ab3aa12984b505d54f1152924992ed09e21d8e8ea02bda021d1c79a951ff1a1e"
   },
-  "reason": "Edición inglesa: 18 fichas completas, Anjou-Hungría, Normandía y Challenge de retratos con 52 rutas. Dieciséis retratos nuevos. Vasallajes fechados de Luis I, con ámbitos parciales de Serbia y Podolia y fases inferidas explícitas en Moldavia y Valaquia; tres notas documentales de Luis y ficha Podolia. No cambian parentescos, gobiernos, geometría ni las demás personas.",
+  "reason": "V5.35: diez fichas inglesas completas (Philip II of Spain, Ferdinand II of Aragon, Henry VIII of England, Louis XIV of France, Joan of Arc, Lorenzo de’ Medici, Mehmed II, Peter the Great, Catherine the Great y Frederick the Great), con 62 rutas inglesas; las 28 fichas inglesas traducen además ámbitos, agrupaciones y clases de gobierno, variantes en disputa y descripciones de fuentes redactadas por el Atlas; Luis XIV pasa de «Alta Navarra» a la Baja Navarra de los Albret-Borbón, lo que cambia su ficha y los mapas personales de 1643–1715 sin tocar el mosaico; biografía de Catalina II (reparto de 1793 solo con Prusia) y créditos de los retratos de Juana de Arco y Fernando el Católico.",
   "schema": 1
 }

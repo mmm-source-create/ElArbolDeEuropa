@@ -23,6 +23,16 @@ export const TRANSLATED_PEOPLE = [
  {id:'LEONARDODAVINCI',es:'leonardo-da-vinci',en:'leonardo-da-vinci'},
  {id:'MARIABORG',es:'maria-de-borgona-mariaborg',en:'mary-of-burgundy'},
  {id:'MAXIM1',es:'maximiliano-i',en:'maximilian-i'},
+ {id:'FEL2ESP',es:'felipe-ii-de-espana',en:'philip-ii-of-spain'},
+ {id:'FERN2ARAG',es:'fernando-ii-de-aragon',en:'ferdinand-ii-of-aragon'},
+ {id:'ENRIQ8ING',es:'enrique-viii',en:'henry-viii-of-england'},
+ {id:'LUIS14FRA',es:'luis-xiv-de-francia',en:'louis-xiv-of-france'},
+ {id:'JUANAARCO',es:'juana-de-arco',en:'joan-of-arc'},
+ {id:'LORENZOMEDICI',es:'lorenzo-de-medici-lorenzomedici',en:'lorenzo-de-medici'},
+ {id:'MEHMED2OSM',es:'mehmed-ii',en:'mehmed-ii'},
+ {id:'PETER1RUS',es:'pedro-i-de-rusia',en:'peter-the-great'},
+ {id:'CATHERINE2RUS',es:'catalina-ii-de-rusia',en:'catherine-the-great'},
+ {id:'FRED2PRUSSIA',es:'federico-ii-de-prusia',en:'frederick-the-great'},
 ];
 export function englishRoute(pathname) {
  const path=String(pathname).replace(/\/$/,'');

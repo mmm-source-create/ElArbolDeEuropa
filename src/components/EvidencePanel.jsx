@@ -7,7 +7,10 @@ import {profileClaims,profileLabel} from '../features/english/profilePresentatio
 function claimValue(claim,locale,nameById,person) {
   if (claim.field === 'Padre' || claim.field === 'Madre' || claim.field === 'Matrimonio o vínculo conyugal') return nameById(claim.value) || claim.value;
   if (claim.field === 'Gobierno') return `${profileLabel(person,claim.value.titulo)} · ${profileLabel(person,claim.value.territorio)} · ${claim.interval.from ?? '?'}–${claim.interval.to ?? '?'}`;
-  if (claim.field === 'Sucesión') return `${claim.value.territorio} · ${claim.value.predecesor ? `${nameById(claim.value.predecesor.persona) || 'Predecesor no registrado'} → ` : ''}${nameById(claim.value.sucesor?.persona) || 'Sucesor no registrado'} · ${claim.interval.from ?? '?'}`;
+  if (claim.field === 'Sucesión') {
+    const en=locale==='en';
+    return `${profileLabel(person,claim.value.territorio)} · ${claim.value.predecesor ? `${nameById(claim.value.predecesor.persona) || (en?'Unrecorded predecessor':'Predecesor no registrado')} → ` : ''}${nameById(claim.value.sucesor?.persona) || (en?'Unrecorded successor':'Sucesor no registrado')} · ${claim.interval.from ?? '?'}`;
+  }
   return formatClaimDate(claim,locale);
 }
 
@@ -56,7 +59,7 @@ export default function EvidencePanel({person,personId=person?.id,personNameById
       </li>)}</ul>
     </details>)}
     {!claims.length&&<p>{label('No hay afirmaciones estructuradas para esta ficha.','No structured claims are available for this profile.')}</p>}
-    {contextual.length>0&&<details><summary>{label('Referencias biográficas y de contexto','Biographical and contextual references')} ({contextual.length})</summary><ul className="evidence-context-links">{contextual.map(source=><li key={source.url}><a href={source.url} target="_blank" rel="noreferrer">{source.titulo}</a></li>)}</ul></details>}
+    {contextual.length>0&&<details><summary>{label('Referencias biográficas y de contexto','Biographical and contextual references')} ({contextual.length})</summary><ul className="evidence-context-links">{contextual.map(source=><li key={source.url}><a href={source.url} target="_blank" rel="noreferrer">{en&&person.englishSourceTitles?.[source.titulo]||source.titulo}</a></li>)}</ul></details>}
     <details><summary>{label('Historial editorial','Editorial history')}</summary><ul className="evidence-history">{EDITORIAL_HISTORY.filter(entry=>entry.scope==='all'||entry.scope===person.id||entry.scope==='pilot'&&PILOT_PERSON_IDS.includes(person.id)).map(entry=><li key={entry.id}><strong>{entry.date}</strong> · {en ? entry.changeEn ? `${entry.changeEn} ${entry.reasonEn}` : entry.id === 'v41-rah-pilot' ? 'Dates and parentage in the Isabella I–Joanna I–Charles V corridor were reviewed with passage-level references. Other claims remain pending.' : entry.id === 'v4-gerald-review' ? 'A specific source was linked to the birth, death and father claims. The birth date is approximate.' : 'Claim registry added; existing historical data kept. Specific sourcing remains to be reviewed.' : `${entry.change} ${entry.reason}`}</li>)}</ul></details>
     <p className="evidence-copy-status" role="status">{copyStatus}</p>
   </section>;
