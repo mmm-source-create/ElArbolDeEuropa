@@ -1,3 +1,4 @@
+import {IMAGENES_HUNGRIA} from './imagenesPersonasHungria.js';
 import {IMAGENES_DURAZZO} from './imagenesPersonasDurazzo.js';
 import {IMAGENES_COMPLETION} from './imagenesPersonasCompletion.js';
 import {IMAGENES_EDITORIAL} from './imagenesPersonasEditorial.js';
@@ -3103,6 +3104,7 @@ export const IMAGENES_PERSONAS = {
     derechos: "Dominio público · PDM 1.0",
     derechosUrl: "https://creativecommons.org/publicdomain/mark/1.0/",
   },
+  ...IMAGENES_HUNGRIA,
 };
 
 export default IMAGENES_PERSONAS;

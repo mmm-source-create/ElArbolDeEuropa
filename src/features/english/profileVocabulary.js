@@ -1,5 +1,8 @@
+import {EXPANDED_NOTES} from './expandedNotes.js';
+import {EXPANDED_NAMES,EXPANDED_LABELS} from './expandedVocabulary.js';
 // Display translations only: canonical dynasty and territory keys stay intact.
 export const PROFILE_LABELS = {
+  ...EXPANDED_LABELS,
   'Anjou-Hungría':'Anjou-Hungary', 'Anjou-Durazzo':'Anjou-Durazzo', 'Capeto':'Capet', 'Plantagenet':'Plantagenet', 'Poitiers':'Poitiers', 'Tudor':'Tudor', 'Osmanlí':'Ottoman',
   'Nápoles':'Naples', 'Hungría':'Hungary', 'Croacia':'Croatia', 'Acaya':'Achaea', 'Jerusalén':'Jerusalem', 'Comuna de Arezzo':'Commune of Arezzo', 'Polonia':'Poland', 'Inglaterra':'England', 'Irlanda':'Ireland', 'Francia':'France', 'Aquitania':'Aquitaine', 'Normandía':'Normandy', 'Anjou':'Anjou', 'Maine':'Maine', 'Imperio otomano':'Ottoman Empire', 'Corona de San Esteban':'Crown of Saint Stephen',
   'Rey':'King', 'Reina':'Queen', 'Duque':'Duke', 'Duquesa':'Duchess', 'Conde':'Count', 'Príncipe':'Prince', 'Señor':'Lord', 'Sultán':'Sultan', 'Emperador':'Emperor', 'Consorte':'Consort', 'Noble':'Noble', 'Duque / Rey titular':'Duke / Titular king', 'Consorte / Regente':'Consort / Regent', 'Consorte titular':'Titular consort', 'Príncipe consorte':'Prince consort', 'Consorte / Condesa':'Consort / Countess', 'Conde / Regente':'Earl / Regent', 'Conde / Rey':'Count / King', 'Duque consorte':'Duke consort', 'Rey / Conde':'King / Earl', 'Rey de Romanos':'King of the Romans',
@@ -9,6 +12,7 @@ export const PROFILE_LABELS = {
 };
 
 export const ENGLISH_NAMES = {
+  ...EXPANDED_NAMES,
   FELIPE2TAR:'Philip II of Taranto', ROBERTO2TAR:'Robert of Taranto', JAMES1CYPRUS:'James I of Cyprus', LUISDURAZZO:'Louis of Durazzo', MARGSANSEVERINO:'Margaret Sanseverino', MARGDUR:'Margaret of Durazzo', LADISLAONAP:'Ladislaus of Naples', INESDUR:'Agnes of Durazzo', CARLODURAZZO:'Charles, Duke of Durazzo', JUANA2NAP:'Joanna II of Naples', JUANDURAZZO:'John of Durazzo', SEGIS1:'Sigismund of Luxembourg', LUIS1:'Louis I of Hungary', MARIA1H:'Mary, Queen of Hungary', LUIS2ANJOU:'Louis II of Anjou', LUIS1ANJOU:'Louis I of Anjou', JUANA1NAP:'Joanna I of Naples', CARLOS1:'Charles I of Hungary', ISABPI:'Elizabeth of Poland', MARGLUX:'Margaret of Bohemia', ISABBOS:'Elizabeth of Bosnia', EDUV1:'Jadwiga of Poland', ANDRES1ANJOU:'Andrew, Duke of Calabria', CATANJ:'Catherine of Anjou', ISABESLAV:'Elizabeth of Slavonia', CLEMHUNGRIA:'Clementia of Hungary', CARLOSM:'Charles Martel of Anjou', CARLOS3NAP:'Charles of Durazzo', LADI2:'Władysław II Jagiełło', LADI1:'Władysław I of Poland', CASI3:'Casimir III of Poland', JELENASUBICBOS:'Jelena Šubić', BARBCEL:'Barbara of Cilli', CARLOS4:'Charles IV of Luxembourg', JUAN2ARAG:'John II of Aragon', FERN1ARAG:'Ferdinand I of Aragon', ENRIQ2CAST:'Henry II of Castile', PEDRO4ARAG:'Peter IV of Aragon',
   GODOFREDO5ANJ:'Geoffrey V of Anjou', MATILDEEMPERATRIZ:'Empress Matilda', ELEANORAQUIT:'Eleanor of Aquitaine', LEONORINGCAST:'Eleanor of England', ENRIQUEJOVEN:'Henry the Young King', RICARDO1ING:'Richard I of England', GODOFREDO2BRET:'Geoffrey II of Brittany', JUANAINGSIC:'Joan of England', JUANSINTIERRA:'John, King of England', MATILDAING:'Matilda of England', ARTURO1BRET:'Arthur I of Brittany', JOANENGLANDSCOT:'Joan of England', ISABELINGHOH:'Isabella of England', ENRIQ3ING:'Henry III of England', RICARDOCORNUALLES:'Richard of Cornwall', MARGARETENGLANDSCOT:'Margaret of England', FULK5JER:'Fulk V of Anjou', BERENGUELANAV:'Berengaria of Navarre', WILLIAMMARSHAL:'William Marshal', RAYMONDPOITIERS:'Raymond of Poitiers', ISABELANG:'Isabella of Angoulême', GILBERTCLARE1180:'Gilbert de Clare, Earl of Gloucester', LUIS7FRA:'Louis VII of France', HENRY2ING:'Henry II of England', LUIS8FRA:'Louis VIII of France', LUIS6FRA:'Louis VI of France', FEL2FRA:'Philip II of France', PIERRE1BRET:'Peter of Dreux',
   ENRIQ8ING:'Henry VIII of England', ANABOLENA:'Anne Boleyn', EDUARDO6ING:'Edward VI of England', MARIA1ING:'Mary I of England', MARGARETTUDOR:'Margaret Tudor', MARIATUDOR:'Mary Tudor', ARTUROGALES:'Arthur, Prince of Wales', ENRIQ7ING:'Henry VII of England', CARLOS1ING:'Charles I of England', JACOBO1ING:'James VI and I', FEL2ESP:'Philip II of Spain', MURROUGH1THOM:'Murrough O’Brien, Earl of Thomond',
@@ -17,6 +21,7 @@ export const ENGLISH_NAMES = {
 };
 
 export const PROFILE_NOTES = {
+  ...EXPANDED_NOTES,
   'Coronado en 1381, entró en Nápoles el 16 de julio; la resistencia de Juana I y Luis de Anjou impide interpretar ese año como doce meses de control exclusivo.':'Crowned in 1381, he entered Naples on 16 July. Resistance by Joanna I and Louis of Anjou means that the year cannot be treated as twelve months of exclusive control.',
   'Coronación el 31 de diciembre de 1385; atentado en Buda el 7 de febrero de 1386. El intervalo anual no acredita dos años completos de reinado.':'Coronation on 31 December 1385; assassination attempt in Buda on 7 February 1386. The annual interval does not represent two complete years of rule.',
   'Rey croata-húngaro desde su coronación de 1385, con oposición de los partidarios de María.':'King of Croatia and Hungary from his coronation in 1385, opposed by Mary’s supporters.',
@@ -48,13 +53,22 @@ export const PROFILE_NOTES = {
 export function translatedProfileText(text, names = ENGLISH_NAMES, claim) {
   if (!text) return text;
   if (PROFILE_NOTES[text]) return PROFILE_NOTES[text];
+  const fixed={'Cabecera biográfica':'Biographical heading','Biografía, párrafo 1':'Biography, paragraph 1','Historia → Fechas de reinado':'History → Reign dates','Filiación paterna confirmada en la fuente.':'Paternal relationship confirmed by the source.','Filiación materna confirmada en la fuente.':'Maternal relationship confirmed by the source.','Fuente citada en la explicación de la sucesión':'Source cited in the succession explanation','Sucesión contrastada con la fuente.':'Succession checked against the source.'};
+  if(fixed[text])return fixed[text];
+  const marriage=text.match(/^Historia → matrimonio de (\d+)$/);if(marriage)return `History → Marriage in ${marriage[1]}`;
+  const office=text.match(/^La ficha de autoridad fecha este cargo en (.+)\.$/);if(office)return `The authority record dates this office to ${office[1]}.`;
+  if(text==='Conde de Condado de Barcelona, 1516–1556, contrastado con la fuente.')return 'Count of Barcelona, 1516–1556, checked against the source.';
+  const checked=text.match(/^(.+) de (.+), (\d+–\d+), contrastado con la fuente\.$/);
+  if(checked&&PROFILE_LABELS[checked[1]]&&PROFILE_LABELS[checked[2]])return `${PROFILE_LABELS[checked[1]]} of ${PROFILE_LABELS[checked[2]]}, ${checked[3]}, checked against the source.`;
+  if(text==='Datos biográficos: «Königin v. Kastilien u. León v. 1474-1504 u. v. 1479-1504 als Gattin Ferdinands II. auch Königin v. Aragón, auch genannt Isabella die Katholische»')return 'Biographical data: Queen of Castile and León, 1474–1504, and Queen of Aragon as Ferdinand II’s consort, 1479–1504; also called Isabella the Catholic.';
+  if(text==='Datos biográficos: «Röm.-dt. Kaiser 1508-1519»')return 'Biographical data: Holy Roman Emperor, 1508–1519.';
   const vital=text.match(/^La ficha de autoridad registra el (nacimiento|fallecimiento) en (.+)\.$/);
   if(vital)return `The authority record gives the ${vital[1]==='nacimiento'?'birth':'death'} as ${vital[2]}.`;
-  const relation=text.match(/^La ficha de autoridad enlaza a .+ \(GND (\d+)\) como (cónyuge|padre|madre)\.$/);
+  const relation=text.match(/^La ficha de autoridad enlaza a .+ \(GND ([0-9X]+)\) como (cónyuge|padre|madre)\.$/);
   if(relation)return `The authority record identifies ${names[claim?.value] || 'the linked person'} (GND ${relation[1]}) as ${relation[2]==='cónyuge'?'spouse':relation[2]==='padre'?'father':'mother'}.`;
   if(text.startsWith('Datos vitales: fecha de nacimiento'))return text.replace('Datos vitales: fecha de nacimiento','Vital data: birth date');
   if(text==='Datos vitales: fecha de fallecimiento')return 'Vital data: death date';
-  const locator=text.match(/^Relaciones con personas: (cónyuge|padre|madre) → GND (\d+)$/);
+  const locator=text.match(/^Relaciones con personas: (cónyuge|padre|madre) → GND ([0-9X]+)$/);
   if(locator)return `Relationships: ${locator[1]==='cónyuge'?'spouse':locator[1]==='padre'?'father':'mother'} → GND ${locator[2]}`;
   throw new Error(`Missing complete-profile translation: ${text}`);
 }

@@ -1,7 +1,7 @@
 export const PREFERENCES_KEY = 'eade.preferences.v1';
 export const FAVORITES_KEY = 'arbol-europa-favoritos-v1';
 export const STORY_PROGRESS_KEY = 'eade.storyProgress.v1';
-export const CHALLENGE_KEYS = ['arbol-europa-desafio-v2', 'arbol-europa-desafio-v1','eade.dinastle.v1'];
+export const CHALLENGE_KEYS = ['arbol-europa-desafio-v2', 'arbol-europa-desafio-v1','eade.dinastle.v1','eade:portraits:en:v1'];
 
 export const DEFAULT_PREFERENCES = Object.freeze({theme:'system', textSize:'normal', motion:'system', treeView:'visual'});
 const choices = {theme:['system','light','dark'], textSize:['normal','large','larger'], motion:['system','reduce'], treeView:['visual','list']};

@@ -101,7 +101,7 @@ export const TERRITORIOS_SUB = {
 
   Hungría: ["Transilvania", "Transilvania habsbúrgica", "Banato de Temes", "Croacia", "Eslavonia", "Sirmia", "Condado de Temes", "Condado de Bihar"],
   "Polonia-Lituania": ["Lituania", "Polonia", "Curlandia", "Mazovia"],
-  Lituania: ["Principado de Trakai"],
+  Lituania: ["Principado de Trakai", "Podolia"],
   "Bizancio y Oriente latino": [
     "Bizancio", "Durazzo", "Imperio Latino", "Antioquía", "Armenia", "Chipre",
     "Edesa", "Epiro", "Ibelin", "Jerusalén", "Morea", "Nablus", "Torón",

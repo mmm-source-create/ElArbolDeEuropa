@@ -1,3 +1,4 @@
+import {LOUIS_HUNGARY_DEPENDENCIES} from './louisHungaryDependencies.js';
 import {ANGEVIN_DEPENDENCIES} from './angevinDependencies.js';
 import {EASTERN_EUROPE_DEPENDENCIES} from './easternEuropeDependencies.js';
 // Dependencies are relationships between existing polities, never fabricated
@@ -32,6 +33,7 @@ const sources = {
 };
 
 export const TRIBUTARY_RELATIONS = Object.freeze([
+  ...LOUIS_HUNGARY_DEPENDENCIES,
   ...EASTERN_EUROPE_DEPENDENCIES,
   ...ANGEVIN_DEPENDENCIES,
   {id: 'ragusa-ottoman', subject: 'República de Ragusa', overlord: 'Imperio otomano',
@@ -94,14 +96,13 @@ export const TRIBUTARY_RELATIONS = Object.freeze([
 // overlord with the dependency pattern.
 // A relation may name the subject's other regional identities as aliases.
 const coversSubject = (relation, identity) => relation.subject === identity || Boolean(relation.aliases?.includes(identity));
-export function tributaryLayerRelation(name, year, relations = TRIBUTARY_RELATIONS) {
-  const subject = territorialIdentity(name);
-  for (const relation of relations) {
-    if (!coversSubject(relation, subject)) continue;
-    const period = relation.periods.find(([from, through]) => from <= year && year <= through);
-    if (period) return {...relation, from: period[0], through: period[1]};
-  }
-  return null;
+export const relationCoversLocation=(relation,id)=>!relation.ids||relation.ids.includes(id);
+export function tributaryLayerRelations(name,year,relations=TRIBUTARY_RELATIONS){
+ const subject=territorialIdentity(name);
+ return relations.flatMap(relation=>{if(!coversSubject(relation,subject))return [];const period=relation.periods.find(([from,through])=>from<=year&&year<=through);return period?[{...relation,from:period[0],through:period[1]}]:[];});
+}
+export function tributaryLayerRelation(name,year,relations=TRIBUTARY_RELATIONS,locationId){
+ return tributaryLayerRelations(name,year,relations).find(r=>!locationId||relationCoversLocation(r,locationId))||null;
 }
 
 export function tributaryEntriesFor(person, year, data, ownEntries = [], relations = TRIBUTARY_RELATIONS) {
@@ -117,15 +118,15 @@ export function tributaryEntriesFor(person, year, data, ownEntries = [], relatio
       && !g.ambito && (relation.overlord !== 'Imperio otomano' || g.titulo === 'Sultán'));
     if (!office) return [];
     const layers = reviewedMapLayers(data).filter(layer => coversSubject(relation, territorialIdentity(layer.name)));
-    const ids = [...new Set(layers.flatMap(layer => reviewedLayerLocations(data, layer, year)))].filter(id => !ownIds.has(id));
+    const ids = [...new Set(layers.flatMap(layer => reviewedLayerLocations(data, layer, year)))].filter(id => !ownIds.has(id)&&relationCoversLocation(relation,id));
     if (!ids.length) return [];
     return [{person, government: null, claim: null, territory: relation.subject,
       colorTerritory: relation.overlord, kind: relation.type === 'feudo' ? 'fief' : 'tributary', paint: true, ids,
       // A fief takes the same tint of its overlord as in the panorama.
       ...(relation.type === 'feudo' ? {color: tributaryColor({...relation}, year)} : {}),
       relationship: {...relation, from: period[0], through: period[1],
-        subjectLabel: territorialLabel(relation.subject, year), overlordOffice: office},
+        subjectLabel: relation.subjectLabel||territorialLabel(relation.subject, year), overlordOffice: office},
       mapSources: relation.sources, mapNote: relation.note,
-      mapScopes: layers.map(layer => ({ids: reviewedLayerLocations(data, layer, year), ...reviewedLayerEvidence(layer, year)}))}];
+      mapScopes: layers.map(layer => ({ids: reviewedLayerLocations(data, layer, year).filter(id=>relationCoversLocation(relation,id)), ...reviewedLayerEvidence(layer, year)}))}];
   });
 }

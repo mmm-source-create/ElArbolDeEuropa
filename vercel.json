@@ -22,19 +22,19 @@
       "destination": "/en/story/:slug/chapter/:chapter/index.html"
     },
     {
-      "source": "/en/:kind(story|person)/:slug",
+      "source": "/en/:kind(story|person|dynasty|territory)/:slug",
       "destination": "/en/:kind/:slug/index.html"
     },
     {
-      "source": "/en/:kind(story|person)/:slug/",
+      "source": "/en/:kind(story|person|dynasty|territory)/:slug/",
       "destination": "/en/:kind/:slug/index.html"
     },
     {
-      "source": "/en/:section(stories|people|methodology)",
+      "source": "/en/:section(stories|people|methodology|dynasties|territories|challenge)",
       "destination": "/en/:section/index.html"
     },
     {
-      "source": "/en/:section(stories|people|methodology)/",
+      "source": "/en/:section(stories|people|methodology|dynasties|territories|challenge)/",
       "destination": "/en/:section/index.html"
     },
     {

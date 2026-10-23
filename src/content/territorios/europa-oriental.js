@@ -1,4 +1,5 @@
 export default {
+  Podolia:{resumen:"Los duques Koriatovich gobernaron Podolia dentro de las redes dinásticas lituanas y reconocieron a Luis I de Hungría en 1377. La relación feudal conserva el gobierno local y se distingue de la autoridad sobre toda Lituania.",evolucion:[{anio:1377,texto:"Homenaje de los duques a Luis I"}],fuentes:["https://www.annalesfsu.ro/sitero/Tome_XVIII_no.2/2Denis_Capraroiu.pdf"]},
   "Polonia-Lituania": {
     "resumen": "La Mancomunidad surgida de la Unión de Lublin reunió Polonia y Lituania en una estructura política común. Las uniones dinásticas anteriores se muestran en sus sucesiones respectivas y no deben confundirse con la unión de 1569.",
     "evolucion": [

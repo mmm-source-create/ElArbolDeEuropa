@@ -10,6 +10,9 @@ import {build} from 'vite';
 import {person,dynasty,territory} from './fixtures/static-pages.mjs';
 import {makeStaticDocument} from '../scripts/lib/ssg-utils.mjs';
 const root=fileURLToPath(new URL('../',import.meta.url));
+// Load the optional list before registering tests, so hooks cannot finish while it is still loading.
+const realSample=process.env.EADE_SSG_SAMPLE?path.resolve(process.env.EADE_SSG_SAMPLE):null;
+const realSamplePages=realSample?JSON.parse(await fs.readFile(path.join(realSample,'report.json'),'utf8')).pages:[];
 const dom=new JSDOM('<!doctype html><html><head></head><body></body></html>',{url:'https://www.treeofeurope.eu/es/'});
 for(const name of ['window','document','navigator','HTMLElement','HTMLInputElement','Event','MouseEvent'])Object.defineProperty(globalThis,name,{value:name==='window'?dom.window:dom.window[name],configurable:true,writable:true});
 globalThis.IS_REACT_ACT_ENVIRONMENT=true;
@@ -22,7 +25,8 @@ before(async()=>{
  temp=await fs.mkdtemp(path.join(root,'.ssg-build-test-'));
  await build({root,configFile:false,publicDir:false,logLevel:'error',plugins:[{
   name:'fixture-generated-home',enforce:'pre',
-  resolveId(id){if(/generated\/(home|siteMeta)\.json$/.test(id))return '\0ssg-fixture:'+id+'.js';},
+  // Real HTML must hydrate against the same generated home statistics as the build.
+  resolveId(id){if(!process.env.EADE_SSG_SAMPLE&&/generated\/(home|siteMeta)\.json$/.test(id))return '\0ssg-fixture:'+id+'.js';},
   load(id){if(id.startsWith('\0ssg-fixture:'))return 'export default {buildVersion:"test"};';},
  }],build:{ssr:'tests/fixtures/hydration-entry.jsx',outDir:temp,emptyOutDir:false,minify:false,rolldownOptions:{output:{entryFileNames:'entry.mjs'}}}});
  if(nodeEnv===undefined)delete process.env.NODE_ENV;else process.env.NODE_ENV=nodeEnv;
@@ -124,11 +128,9 @@ test('sin datos iniciales la ficha dinámica sigue descargando y mostrando el JS
  } finally {if(app)await act(async()=>app.unmount());}
 });
 // Opcional: mismo contrato sobre la muestra real, generada después de Vite.
-if(process.env.EADE_SSG_SAMPLE) {
- const sample=path.resolve(process.env.EADE_SSG_SAMPLE);
- const {pages}=JSON.parse(await fs.readFile(path.join(sample,'report.json'),'utf8'));
- for(const item of pages)test(`HTML real e hidratación: ${item.path}`,async()=>{
-  const html=await fs.readFile(path.join(sample,item.path.slice(1),'index.html'),'utf8');
+if(realSample) {
+ for(const item of realSamplePages)test(`HTML real e hidratación: ${item.path}`,async()=>{
+  const html=await fs.readFile(path.join(realSample,item.path.slice(1),'index.html'),'utf8');
   const document=new JSDOM(html);const page=JSON.parse(document.window.document.getElementById('eade-initial-page').textContent);document.window.close();
   await hydrated(page,undefined,{html});
  });

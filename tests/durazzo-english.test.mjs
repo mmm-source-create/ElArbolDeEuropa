@@ -34,8 +34,8 @@ test('Durazzo distinguishes delegated Croatian government, Naples, occupation an
   for(const claim of personClaims(charles).filter(c=>c.field==='Gobierno'))assert(claim.sources.length,claim.id);
 });
 
-test('ten complete English editions preserve canonical governments, biography sections and claim certainty',()=>{
-  assert.equal(Object.keys(COMPLETE_ENGLISH_PROFILES).length,10);
+test('complete English editions preserve canonical governments, biography sections and claim certainty',()=>{
+  assert.equal(Object.keys(COMPLETE_ENGLISH_PROFILES).length,18);
   for(const id of Object.keys(COMPLETE_ENGLISH_PROFILES)){
     const person=people.get(id);
     const source={...person,biografiaExtensa:biografiaExtensaPersona(person)||[],padres:[],conyuges:[],hijos:[],relacionadosDinastia:[],contemporaneos:[],historias:[]};

@@ -1,6 +1,8 @@
+import {EXPANDED_ENGLISH_PROFILES} from './expandedProfiles.js';
 // Editorial translations of complete Spanish profiles. Canonical IDs, dates,
 // relationships and territorial keys are supplied by the shared generator.
 export const COMPLETE_ENGLISH_PROFILES = {
+  ...EXPANDED_ENGLISH_PROFILES,
   CARLOS3NAP: {
     name: 'Charles of Durazzo', role: 'Charles III of Naples and Charles II of Hungary', nickname: 'the Short',
     aliases: ['Charles III of Naples', 'Charles II of Hungary', 'Charles the Short'],

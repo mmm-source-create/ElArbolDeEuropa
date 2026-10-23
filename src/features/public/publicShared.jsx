@@ -84,6 +84,7 @@ export function PersonaMiniCard({ persona, compact = false, locale = 'es' }) {
       )}
       <span className="public-person-copy">
         <strong>{persona.nombre}{locale==='en'&&persona.role&&(!persona.path||persona.path.startsWith('/es/'))?' · ES':''}</strong>
+        {locale==='en'&&persona.path?.startsWith('/en/')&&persona.sobrenombre&&<small>“{persona.sobrenombre}”</small>}
         <small>{locale === 'en' ? persona.role || 'Historical profile · ES' : [persona.titulo, persona.dinastia].filter(Boolean).join(" · ") || "Ficha histórica"}</small>
         {(Number.isFinite(persona.nac) || Number.isFinite(persona.muer)) && <span>{personaDates(persona, locale)}</span>}
       </span>
