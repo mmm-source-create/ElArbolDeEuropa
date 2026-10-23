@@ -4403,7 +4403,7 @@ const HISTORIAS_EXISTENTES = [
         ],
         "eventoId": "PAZ_VENECIA_1573",
         "titulo": "Lepanto vence una batalla, no conquista el Mediterráneo",
-        "texto": "Venecia termina negociando la paz y acepta la pérdida de Chipre. La Liga se disuelve y la armada otomana vuelve al mar. Lepanto conserva una enorme importancia militar, política y simbólica, pero su historia es más interesante precisamente cuando se evita el mito de que una sola batalla expulsó a los otomanos del Mediterráneo."
+        "texto": "Venecia termina negociando la paz y acepta la pérdida de Chipre. La Liga se disuelve y la armada otomana vuelve al mar."
       }
     ]
   },
