@@ -1,0 +1,12 @@
+import {DURAZZO_SOURCES} from '../content/sources-durazzo.js';
+const source=(index,locator)=>({title:DURAZZO_SOURCES[index].titulo,url:DURAZZO_SOURCES[index].url,locator});
+const reviewed=(note,sources,certainty='documented')=>({certainty,note,sources,reviewedAt:'2026-10-23',editor:'El Árbol de Europa'});
+export const DURAZZO_REVIEWS={
+  'person:CARLOS3NAP:government:Nápoles:1381:1386:Rey':reviewed('Coronado en 1381, entró en Nápoles el 16 de julio; la resistencia de Juana I y Luis de Anjou impide interpretar ese año como doce meses de control exclusivo.',[source(0,'Coronación papal, entrada del 16 de julio de 1381 y nueva coronación napolitana del 25 de noviembre de 1381.')]),
+  'person:CARLOS3NAP:government:Hungría:1385:1386:Rey':reviewed('Coronación el 31 de diciembre de 1385; atentado en Buda el 7 de febrero de 1386. El intervalo anual no acredita dos años completos de reinado.',[source(0,'Últimos párrafos: coronación húngara de 1385 y atentado de 1386.')]),
+  'person:CARLOS3NAP:government:Croacia:1385:1386:Rey':reviewed('Rey croata-húngaro desde su coronación de 1385, con oposición de los partidarios de María.',[source(1,'Biografía: coronación de 1385 como rey croata-húngaro.')]),
+  'person:CARLOS3NAP:government:Croacia:1369:1376:Duque':reviewed('Gobernó Croacia y Dalmacia como delegado de Luis I, no como soberano independiente.',[source(1,'Gobierno de Croacia y Dalmacia, 1369–1376.'),source(0,'Investidura por Luis I, residencia en Zara y partida de mayo de 1376.')]),
+  'person:CARLOS3NAP:government:Acaya:1383:1386:Príncipe':reviewed('Título nominal tras Jacques de Baux. La Compañía Navarra ejercía el poder local; no se colorea Acaya como dominio efectivo de Carlos.',[source(3,'Capítulo sobre la Compañía Navarra: representación nominal de Carlos y gobierno local de los capitanes.'),source(2,'Lista de príncipes de Acaya: Jacques de Baux 1381–1383 y Carlos 1381–1386; solapamiento de reclamaciones.')]),
+  'person:CARLOS3NAP:government:Jerusalén:1381:1386:Rey':reviewed('Título jerosolimitano asociado a la titulatura napolitana; sin posesión de Jerusalén.',[source(8,'«Leggende, imprese, notizie», pp. 15–16, titulatura monetaria de Carlos III.')]),
+  'person:CARLOS3NAP:government:Comuna de Arezzo:1380:1384:Señor':reviewed('Autoridad militar sobre Arezzo desde 1380, terminada por la conquista y adquisición florentina en 1384; no anexa toda Toscana a Nápoles.',[source(7,'Entrega a Carlos en 1380; toma de posesión florentina del 17 de noviembre de 1384.')]),
+};

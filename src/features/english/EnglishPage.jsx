@@ -34,11 +34,11 @@ function PageTitle({ data, Icon, eyebrow }) {
 function EnglishCatalog({ data }) {
   const [query, setQuery] = useState('');
   const people = data.type === 'people';
-  const items = (people ? data.people : data.stories).filter(p => [p.nombre, p.summary, p.description].filter(Boolean).join(' ').toLocaleLowerCase('en').includes(query.trim().toLocaleLowerCase('en')));
+  const items = (people ? data.people : data.stories).filter(p => [p.nombre, p.role, p.sobrenombre, ...(p.aliases||[]), p.summary, p.description].filter(Boolean).join(' ').toLocaleLowerCase('en').includes(query.trim().toLocaleLowerCase('en')));
   return <main className="public-main public-catalog"><PageTitle data={data} Icon={people ? Users : BookOpen} eyebrow={people ? 'Atlas index' : 'Guided stories'}/><label className="public-search"><Search size={16}/><input value={query} onChange={e => setQuery(e.target.value)} placeholder={people ? 'Search translated profiles…' : 'Search translated stories…'} aria-label={people ? 'Search translated profiles' : 'Search translated stories'}/><span>{items.length}</span></label>
     {people ? <div className="public-person-list">{items.map(p => <PersonaMiniCard key={p.id} persona={p} compact locale="en"/>)}</div> : <div className="public-story-grid public-story-catalog">{items.map(s => <article key={s.id} className="public-story-card"><span>{s.pasos} chapters · {s.period}</span><h2>{s.nombre}</h2><p>{s.description}</p><a href={s.path}>Start reading <ArrowRight size={13}/></a></article>)}</div>}
     {!items.length&&<p className="public-catalog-note" role="status">No translated {people ? 'profiles' : 'stories'} match this search.</p>}
-    <p className="english-catalog-note">{people ? 'Five short profiles' : 'Two complete stories'} are translated so far. <a href={data.esPath}>Browse the full Spanish collection</a>, or <a href="/es/?atlas=1&continuar=1">open the Spanish Atlas</a>.</p>
+    <p className="english-catalog-note">{people ? `${data.people.length} profiles` : `${data.stories.length} complete stories`} are translated so far. <a href={data.esPath}>Browse the full Spanish collection</a>, or <a href="/es/?atlas=1&continuar=1">open the Spanish Atlas</a>.</p>
   </main>;
 }
 function EnglishInfo({ data }) {

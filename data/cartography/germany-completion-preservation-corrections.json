@@ -1,0 +1,13 @@
+[
+  {
+    "id": "durazzo-butrint-1382",
+    "locationId": "Butrint",
+    "from": 1382,
+    "through": 1385,
+    "previous": ["Epiro"],
+    "expected": ["Nápoles"],
+    "reviewedAt": "2026-10-23",
+    "reason": "Corrección posterior, fuera del inventario alemán: Butrinto recuperado por los partidarios de Carlos III en 1382 y dependencia napolitana documentada en las negociaciones de 1384; Venecia desde 1386. Se conserva la huella original de referencia.",
+    "source": "https://www.persee.fr/doc/ehess_0070-6957_1971_edc_11_2"
+  }
+]

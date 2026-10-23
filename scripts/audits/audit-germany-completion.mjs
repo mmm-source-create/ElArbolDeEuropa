@@ -3,6 +3,7 @@ import path from 'node:path';
 import {createHash} from 'node:crypto';
 import {atlasPoliticalMosaicAt,atlasMosaicPalette} from '../../src/cartography/atlasMosaic.js';
 import {projectRoot,auditReportPath} from '../lib/project-paths.mjs';
+import preservationCorrections from '../../data/cartography/germany-completion-preservation-corrections.json' with {type:'json'};
 
 const sorted = values => [...values].sort();
 export function validateGermanyCompletion(review, geography, baseline) {
@@ -46,8 +47,25 @@ export function preservationHash(byLocation) {
     .sort(([a],[b])=>a.localeCompare(b,'en')))).digest('hex');
 }
 
+// The original global fingerprint predates subsequent reviews elsewhere in
+// Europe. Reverse only each explicitly reviewed cell/year change for this
+// comparison. Unexpected changes, including changes to that same cell, fail.
+export function originalPreservationMap(retained,year,corrections=preservationCorrections) {
+  const result=new Map(retained);
+  for(const correction of corrections.filter(c=>c.from<=year&&year<=c.through)) {
+    const actual=(result.get(correction.locationId)||[]).map(layer=>layer.entityId).sort();
+    if(JSON.stringify(actual)!==JSON.stringify([...correction.expected].sort()))
+      throw Error(`Unexpected preservation correction: ${correction.locationId}/${year}`);
+    result.set(correction.locationId,correction.previous.map(entityId=>({entityId})));
+  }
+  return result;
+}
+
 export function auditGermanyCompletion(data, review, geography, baseline) {
   const before = validateGermanyCompletion(review,geography,baseline);
+  for(const c of preservationCorrections)if(before.has(c.locationId)||!c.reason||!c.source?.startsWith('https://')
+    ||!Number.isInteger(c.from)||!Number.isInteger(c.through)||c.from<1200||c.through>1800||c.from>c.through
+    ||!c.previous?.length||!c.expected?.length)throw Error('Invalid later preservation correction');
   const palette = atlasMosaicPalette(data);
   const report = {scope:review.scope,baselineCommit:baseline.commit,
     summary:{cells:before.size,years:601,cellYears:before.size*601,filledCellYears:0,
@@ -75,7 +93,7 @@ export function auditGermanyCompletion(data, review, geography, baseline) {
         }
       }
     }
-    if(preservationHash(retained)!==baseline.annualPreservation[year]) {
+    if(preservationHash(originalPreservationMap(retained,year))!==baseline.annualPreservation[year]) {
       report.summary.changedAnnualMaps++;fail('global preservation',null,year);
     }
   }

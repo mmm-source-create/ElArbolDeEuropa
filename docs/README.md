@@ -28,6 +28,8 @@ compilar, empieza por el [README del proyecto](../README.md).
 
 ## Resultados de revisión
 
+- [Carlos de Durazzo y diez fichas completas en inglés](versiones/V5.34-durazzo-ingles.md).
+
 Los [informes aceptados](reports/README.md) son instantáneas de una revisión,
 no auditorías ejecutadas hoy. Los nuevos diagnósticos se guardan en
 `.cache/audits/`. La [continuidad](atlas-continuity-audit.md),

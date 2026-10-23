@@ -14,6 +14,11 @@
   ],
   "files": [
     {
+      "path": "data/cartography/germany-completion-preservation-corrections.json",
+      "kind": "historical-selection",
+      "maintenance": "Correcciones posteriores documentadas fuera del inventario alemán. Conservan la huella original y permiten revertir solo la celda, el intervalo y la identidad revisados al comprobar la preservación global."
+    },
+    {
       "path": "data/cartography/MapChart_Map.svg",
       "kind": "geometry-reference",
       "maintenance": "Earlier MapChart province edition; geometry reference, not proof of historical jurisdiction."

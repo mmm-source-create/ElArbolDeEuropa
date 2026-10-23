@@ -106,6 +106,7 @@ export const IBERIA_ITALY_TERRITORIES = Object.freeze({
   },
   "Comuna de Arezzo": {
     "clase": "gobierno",
+    "titulosDeGobierno": ["Señor"],
     "naturaleza": "entidad",
     "componentes": [],
     "nota": "Jurisdicción con fases fechadas y fuentes localizadas en la revisión de Iberia e Italia. Un cambio de gobernante, dependencia u ocupación no cambia por sí solo su identidad."

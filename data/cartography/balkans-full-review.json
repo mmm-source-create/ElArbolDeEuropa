@@ -3204,6 +3204,16 @@
       "title": "Yusuf Halaçoğlu · TDV, Besni",
       "url": "https://islamansiklopedisi.org.tr/besni",
       "locator": "Historia: Alepo ayubí, asedio fallido 1218, conquista mongola 1260, Cilicia 1261–1292, mamelucos 1293, ocupación otomana 1398 y timúrida 1400, gobierno de Dulkadır de fecha imprecisa y conquista otomana 1516."
+    },
+    "durazzo-butrin-miller": {
+      "title": "William Miller · The Latins in the Levant (1908)",
+      "url": "https://www.levantineheritage.com/pdf/Latins-in-the-Levant.pdf",
+      "locator": "Cap. XV, Corfú, pp. 522–526: expulsión de las guarniciones navarras de Corfú y Butrinto en 1382; rendición de Butrinto a Venecia en 1386."
+    },
+    "durazzo-butrin-thiriet": {
+      "title": "Freddy Thiriet · Délibérations des assemblées vénitiennes concernant la Romanie, II",
+      "url": "https://www.persee.fr/doc/ehess_0070-6957_1971_edc_11_2",
+      "locator": "Regestos 868–869, 7 de noviembre de 1384: adquisición negociada con Carlos III de Corfú y sus dependencias, en especial Butrinto."
     }
   },
   "assignments": [
@@ -22386,10 +22396,10 @@
       ]
     },
     {
-      "name": "Butrinto y costa epirota septentrional · 1356–1385 · Epiro",
+      "name": "Butrinto y costa epirota septentrional · 1356–1381 · Epiro",
       "scopeLabel": "Butrinto y costa epirota septentrional",
       "from": 1356,
-      "through": 1385,
+      "through": 1381,
       "identity": "Epiro",
       "ids": [
         "Butrint"
@@ -22405,6 +22415,25 @@
         "corfu",
         "epiroThess",
         "map1355"
+      ]
+    },
+    {
+      "name": "Butrinto y costa epirota septentrional · 1382–1385 · Nápoles",
+      "scopeLabel": "Butrinto y costa epirota septentrional",
+      "from": 1382,
+      "through": 1385,
+      "identity": "Nápoles",
+      "ids": [
+        "Butrint"
+      ],
+      "precision": "regional_approximation",
+      "governmentTerritories": [
+        "Nápoles"
+      ],
+      "note": "Butrinto recuperado por los partidarios de Carlos III en 1382. Las negociaciones venecianas de 1384 lo incluyen entre sus dependencias de Corfú; pasa a Venecia en 1386. La celda es una aproximación regional, no toda la costa epirota.",
+      "sourceKeys": [
+        "durazzo-butrin-miller",
+        "durazzo-butrin-thiriet"
       ]
     },
     {

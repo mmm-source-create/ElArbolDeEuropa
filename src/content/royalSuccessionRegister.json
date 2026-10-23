@@ -783,7 +783,7 @@
         {"personId":"ROB1NAP","territory":"Nápoles","from":1309,"through":1343,"title":"Rey"},
         {"personId":"JUANA1NAP","territory":"Nápoles","from":1343,"through":1382,"title":"Reina"},
         {"personId":"LUISTARANTONAP","territory":"Nápoles","from":1352,"through":1362,"title":"Rey"},
-        {"personId":"CARLOS3NAP","territory":"Nápoles","from":1382,"through":1386,"title":"Rey"},
+        {"personId":"CARLOS3NAP","territory":"Nápoles","from":1381,"through":1386,"title":"Rey"},
         {"personId":"LADISLAONAP","territory":"Nápoles","from":1386,"through":1390,"title":"Rey"},
         {"personId":"LUIS2ANJOU","territory":"Nápoles","from":1389,"through":1399,"title":"Rey"},
         {"personId":"LADISLAONAP","territory":"Nápoles","from":1390,"through":1399,"title":"Rey"},

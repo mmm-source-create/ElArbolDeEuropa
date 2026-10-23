@@ -1,3 +1,4 @@
+import {DURAZZO_SOURCES} from './sources-durazzo.js';
 import {AMPLIACION_EDITORIAL_SOURCES} from './sources-ampliacion-editorial.js';
 import {ROYAL_COVERAGE_SOURCES} from './sources-royal-coverage.js';
 import {DYNASTY_MAP_SOURCES} from './sources-dynasty-map.js';
@@ -21,6 +22,7 @@ const DOGES_1400_1605 = [
 // Bibliography shared by the public site, Atlas and generated entity pages.
 // A territorial reference supplies context; only explicit person IDs assign a biography.
 export const SOURCES = [
+  ...DURAZZO_SOURCES,
   {"titulo": "Larousse · Anjou", "url": "https://www.larousse.fr/encyclopedie/autre-region/Anjou/105538", "grupo": "Casas y filiaciones", "territorios": [], "personas": [], "nota": "Revisión de las casas, las ramas y sus conexiones: se distingue genealogía, continuidad patrimonial y ejercicio del gobierno."},
   {"titulo": "Medieval Lands · Jerusalem", "url": "https://fmg.ac/Projects/MedLands/JERUSALEM.htm", "grupo": "Casas y filiaciones", "territorios": [], "personas": [], "nota": "Revisión de las casas, las ramas y sus conexiones: se distingue genealogía, continuidad patrimonial y ejercicio del gobierno."},
   {"titulo": "Queens’ College · Record 2004", "url": "https://history.queens.cam.ac.uk/sites/default/files/downloads/record-2004.pdf", "grupo": "Casas y filiaciones", "territorios": [], "personas": [], "nota": "Revisión de las casas, las ramas y sus conexiones: se distingue genealogía, continuidad patrimonial y ejercicio del gobierno."},
