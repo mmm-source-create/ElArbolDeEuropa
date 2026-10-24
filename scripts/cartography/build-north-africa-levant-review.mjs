@@ -27,10 +27,23 @@ const sources = {
   tripolitania: {title: 'Treccani · Tripolitania', url: T('tripolitania'), locator: 'Interludio de Qaraqush (1185–1212), hegemonía hafsí, tribus independientes, conquista otomana de 1551 y soberanía nominal bajo los Caramanli.'},
   cirenaica: {title: 'Treccani · Cirenaica', url: T('cirenaica'), locator: 'Dominio turco en el siglo XVI, limitado a la costa; el interior quedó en gran parte a su suerte.'},
   fezzan: {title: 'Treccani · Fezzan', url: T('fezzan'), locator: 'Oasis del Uadi Sciati, el Uadi el-Agial y el Uadi Bergiug, con poblaciones sedentarias y nómadas tuareg y tubu.'},
-  orano: {title: 'Treccani · Orano', url: T('orano'), locator: 'Ocupación española en 1509, regreso a los árabes en 1709 y nueva posesión española en 1732–1791.'},
+  orano: {title: 'Treccani · Orano', url: T('orano'), locator: 'Conquista española en 1509 y recuperación en 1732; los cortes de pérdida (1708) y evacuación (1792) siguen la revisión del Instituto de Historia y Cultura Naval, fuente orano1708.'},
   melilla: {title: 'Treccani · Melilla', url: T('melilla'), locator: 'Puerto del reino de Tremecén, ocupado por España en 1497.'},
-  bejaia: {title: 'Treccani · Bejaïa', url: T('bejaia'), locator: 'Centro almohade, tomada por los españoles en 1509 y pasada a los turcos en 1555.'},
+  bejaia: {title: 'Treccani · Bejaïa', url: T('bejaia'), locator: 'Centro almohade y conquista otomana en 1555. La entrada española se fecha en 1510 siguiendo la Revista de Historia Naval 50, fuente presidios.'},
   tangier: {title: 'Ottoman History Podcast · The English in 17th-Century Tangier', url: 'https://www.ottomanhistorypodcast.com/2018/10/english-tangier.html', locator: 'Tánger portugués desde 1471, dote de Catalina de Braganza, ocupación inglesa desde 1662 y evacuación en 1684.'},
+  safi: {title:'HPIP · Safi',url:'https://hpip.org/pt/Contents/Place/376',locator:'Conquista efectiva de Safí en 1508 y abandono portugués en 1541; la factoría y el protectorado anteriores no equivalen a ocupación de la ciudad.'},
+  azemmour: {title:'HPIP · Azemmour',url:'https://hpip.org/pt/Contents/Place/561',locator:'Vasallaje desde 1486; conquista portuguesa en 1513 y evacuación en octubre de 1541.'},
+  agadir: {title:'HPIP · Agadir, arquitectura militar',url:'https://hpip.org/en/heritage/details/1930',locator:'Castillo de João Lopes de Sequeira fundado en 1505; plaza perdida ante los saadíes en 1541.'},
+  mogador: {title:'HPIP · Castelo Real de Mogador',url:'https://hpip.org/pt/heritage/details/1931',locator:'Construcción portuguesa desde julio de 1506; pérdida del Castelo Real antes del final de 1510.'},
+  aguz: {title:'Ministério da Defesa Nacional de Portugal · O corso e a pirataria no golfo luso-hispano-marroquino',url:'https://www.defesa.gov.pt/pt/defesa/organizacao/comissoes/cphm/rphm/edicoes/ano2/n22022/corso/',locator:'Fortalezas satélite portuguesas de Aguz desde 1508; véase HPIP para su abandono hacia 1524–1525.'},
+  aguzEnd: {title:'HPIP · Castelo de Aguz',url:'https://hpip.org/pt/heritage/details/922',locator:'Concesiones desde 1508, castillo de piedra construido a partir de 1519 y fin de la presencia hacia 1524–1525.'},
+  asilah: {title:'HPIP · Assilah',url:'https://hpip.org/pt/Contents/Place/357',locator:'Presencia portuguesa de 1471 a 1550; retorno de 1577 a 1589.'},
+  larache: {title:'Archivo General Militar de Madrid · Comandancia General de Larache',url:'https://ejercito.defensa.gob.es/unidades/Madrid/ihycm/Archivos/archivos-generales/agm-madrid-fondo1-5.html',locator:'Ocupación española en 1610 y recuperación marroquí en 1689.'},
+  mamora: {title:'Bulletin Hispanique · Chronique, 1946',url:'https://www.persee.fr/doc/hispa_0007-4640_1946_num_48_2_3049',locator:'Flota española ante La Mamora el 3 de agosto de 1614; permanencia hasta 1681.'},
+  presidios: {title:'Revista de Historia Naval 50 · Ignacio de Loyola y el mar',url:'https://armada.defensa.gob.es/archivo/mardigitalrevistas/rhn/1995/1995n50.pdf',locator:'Bugía conquistada el 5 de enero de 1510, tras Orán en mayo de 1509; Trípoli en julio de 1510.'},
+  orano1708: {title:'Instituto de Historia y Cultura Naval · Cuaderno monográfico 83',url:'https://armada.defensa.gob.es/archivo/mardigitalrevistas/cuadernosihcn/83cuaderno/cm83.pdf',locator:'Orán se pierde en 1708; recuperación de 1732 y evacuación definitiva de 1792.'},
+  tunis1569: {title:'Erudition and the Republic of Letters 9 (2024) · The Circulation of Arabic Books from Ifrīqiya',url:'https://brill.com/view/journals/erl/9/3/article-p281_002.pdf',locator:'Página 283: restauración hafsí bajo tributo a Carlos V y guarnición española en La Goleta; Túnez conquistada por gobernadores otomanos de Argel en 1569, recuperada por Juan de Austria en 1573 y conquistada definitivamente en 1574.'},
+  tunisiConquistas: {title:'Treccani · Tunisi',url:T('tunisi'),locator:'Conquista de Barbarroja en 1534; restauración hafsí por Carlos V en 1535 y guarnición en La Goleta; nueva toma otomana de 1569, ocupación española de 1573 y conquista otomana definitiva en 1574.'},
   mazagan: {title: 'UNESCO · Portuguese City of Mazagan (El Jadida)', url: 'https://whc.unesco.org/en/list/1058', locator: 'Fortaleza portuguesa construida desde 1514 y abandonada en 1769.'},
   ayyubiti: {title: 'Treccani · Ayyubiti', url: T('ayyubiti'), locator: 'Dominio de Egipto y Siria hasta mediados del siglo XIII; el ramo de Hama se prolonga en el XIV.'},
   mamelucchi: {title: 'Treccani · Mamelucchi', url: T('mamelucchi'), locator: 'Dominio directo en Egipto (1250–1517) y en Siria (1260–1516).'},
@@ -110,7 +123,7 @@ const CHRONOLOGY = {
   ],
   tunez: [
     P(1200, 1235, 'Califato almohade', ['Califato almohade'], ['almohadi', 'hafsidi'], 'Ifriqiya, gobernada por los hafsíes en nombre de los almohades.'),
-    P(1236, 1573, 'Sultanato hafsí', [], ['hafsidi', 'tunisi'], 'Sultanato hafsí de Túnez; protectorado español desde 1535 que el mapa no separa.'),
+    P(1236, 1573, 'Sultanato hafsí', [], ['hafsidi', 'tunisi'], 'Sultanato hafsí de Túnez; protectorado español desde 1535; la guarnición española se concentró en La Goleta, sin controlar de forma uniforme toda Ifriqiya.'),
     P(1574, THROUGH, 'Regencia de Túnez', OTTOMAN, ['tunisi', 'hafsidi'], 'Regencia otomana de Túnez; desde finales del siglo XVI el gobierno efectivo pasó a deyes y beyes.'),
   ],
   tripolitania: [
@@ -174,17 +187,27 @@ const CHRONOLOGY = {
   ],
 };
 // Coastal fortresses held by Portugal, Castile/Spain or England inside a zone.
-const CASTILE = ['Castilla'], SPAIN = ['España'], PORTUGAL = ['Portugal'];
+// The database records the Spanish monarchs under their effective Castilian office.
+// Using an absent «España» mandate would omit the outposts from their personal maps.
+const CASTILE = ['Castilla'], SPAIN = ['Castilla'], PORTUGAL = ['Portugal'];
 const PRESIDIOS = {
   Melilla: [[1497, 1515, 'Presidios españoles del Magreb', CASTILE, ['melilla']], [1516, THROUGH, 'Presidios españoles del Magreb', SPAIN, ['melilla']]],
-  Oran: [[1509, 1515, 'Presidios españoles del Magreb', CASTILE, ['orano']], [1516, 1708, 'Presidios españoles del Magreb', SPAIN, ['orano']],
+  Oran: [[1509, 1515, 'Presidios españoles del Magreb', CASTILE, ['orano']], [1516, 1707, 'Presidios españoles del Magreb', SPAIN, ['orano1708']],
     [1732, 1791, 'Presidios españoles del Magreb', SPAIN, ['orano']]],
-  Bejaia: [[1509, 1515, 'Presidios españoles del Magreb', CASTILE, ['bejaia']], [1516, 1554, 'Presidios españoles del Magreb', SPAIN, ['bejaia']]],
+  Bejaia: [[1510, 1515, 'Presidios españoles del Magreb', CASTILE, ['presidios']], [1516, 1554, 'Presidios españoles del Magreb', SPAIN, ['presidios', 'bejaia']]],
   Tripoli: [[1510, 1515, 'Presidios españoles del Magreb', CASTILE, ['tripoli']], [1516, 1529, 'Presidios españoles del Magreb', SPAIN, ['tripoli']],
     [1530, 1550, 'Trípoli de los caballeros de Malta', [], ['tripoli']]],
   Tangier: [[1471, 1661, 'Plazas portuguesas del Magreb', PORTUGAL, ['tangier']], [1662, 1683, 'Tánger inglés', ['Inglaterra'], ['tangier']]],
-  Asilah: [[1471, 1549, 'Plazas portuguesas del Magreb', PORTUGAL, ['marocco']]],
-  Mazaghan: [[1514, 1769, 'Plazas portuguesas del Magreb', PORTUGAL, ['mazagan']]],
+  Asilah: [[1471, 1549, 'Plazas portuguesas del Magreb', PORTUGAL, ['asilah']], [1577, 1588, 'Plazas portuguesas del Magreb', PORTUGAL, ['asilah']]],
+  Mazaghan: [[1514, 1768, 'Plazas portuguesas del Magreb', PORTUGAL, ['mazagan']]],
+  Asfi: [[1508, 1540, 'Plazas portuguesas del Magreb', PORTUGAL, ['safi']]],
+  Azemmour: [[1513, 1540, 'Plazas portuguesas del Magreb', PORTUGAL, ['azemmour']]],
+  Agadir: [[1505, 1540, 'Plazas portuguesas del Magreb', PORTUGAL, ['agadir', 'safi']]],
+  Mogador: [[1506, 1509, 'Plazas portuguesas del Magreb', PORTUGAL, ['mogador']]],
+  Aguz: [[1508, 1524, 'Plazas portuguesas del Magreb', PORTUGAL, ['aguz', 'aguzEnd']]],
+  Larache: [[1610, 1688, 'Presidios españoles del Magreb', SPAIN, ['larache']]],
+  La_Mamora: [[1614, 1680, 'Presidios españoles del Magreb', SPAIN, ['mamora']]],
+  Tunis: [[1534, 1534, 'Imperio otomano', OTTOMAN, ['tunisiConquistas']], [1569, 1572, 'Imperio otomano', OTTOMAN, ['tunis1569', 'tunisiConquistas']], [1573, 1573, 'Presidios españoles del Magreb', SPAIN, ['tunisiConquistas']]],
 };
 
 const cellsByZone = new Map();
@@ -206,7 +229,7 @@ const phase = (label, p, ids) => {
   serial += 1;
   assignments.push({name: `${label} · ${p.identity} · ${p.from}–${p.through} · revisión África y Levante ${serial}`,
     identity: p.identity, from: p.from, through: p.through, ids, governmentTerritories: p.governmentTerritories,
-    sourceKeys: p.sourceKeys, precision: 'regional_approximation', limitedCore: false, note: p.note,
+    sourceKeys: p.sourceKeys, precision: 'regional_approximation', limitedCore: p.limitedCore ?? false, note: p.note,
     scopeLabel: `${label} · ${p.from}–${p.through}`, ...(p.authorityCondition ? {authorityCondition: p.authorityCondition} : {})});
 };
 for (const [zone, ids] of [...cellsByZone].sort(([a], [b]) => a.localeCompare(b))) {
@@ -222,7 +245,7 @@ for (const [zone, ids] of [...cellsByZone].sort(([a], [b]) => a.localeCompare(b)
   // A fortress follows its zone outside the years of European possession.
   for (const id of ids.filter(id => PRESIDIOS[id]).sort()) {
     const held = PRESIDIOS[id].map(([from, through, identity, governmentTerritories, sourceKeys]) =>
-      P(from, through, identity, governmentTerritories, sourceKeys, `Plaza fuerte de ${id.replaceAll('_', ' ')}.`));
+      P(from, through, identity, governmentTerritories, sourceKeys, `Plaza de ${id.replaceAll('_', ' ')}. La celda aproxima su localización y no acredita dominio sobre todo el entorno rural. Corte anual por la situación al final del año; conquista o evacuación dentro del año se documentan en las fuentes.`, {limitedCore:true, ...(id === 'Tunis' ? {authorityCondition:'ocupación'} : {})}));
     const pieces = [];
     for (const p of chronology) {
       let cursor = p.from;
@@ -238,12 +261,13 @@ for (const [zone, ids] of [...cellsByZone].sort(([a], [b]) => a.localeCompare(b)
 
 const ids = [...cellsByZone.values()].flat().sort();
 const review = {
-  schema: 1, reviewedAt: '2026-10-18',
+  schema: 1, reviewedAt: '2026-10-24',
   scope: {name: 'Norte de África, Levante y Chipre', from: FROM, through: THROUGH, ids},
   precedenceIds: ids, limitedCore: false, assignments, sources,
   limitations: [
     'Las zonas agrupan celdas por su centroide: Marruecos, el Magreb central en tres franjas, Ifriqiya, Tripolitania, Cirenaica, el Fezzán, el Sáhara, Egipto y Levante.',
     'Los cortes anuales son convencionales. Las ocupaciones breves, los tributos y las fragmentaciones internas (zawiya de Dila, emires hintata, ramas hafsíes) se mencionan en las notas sin dibujar fronteras propias.',
+    'Las plazas europeas ocupan celdas de referencia, con alcance limitado al núcleo; sus superficies no reconstruyen el perímetro de las fortificaciones. Los años de transición siguen la situación al cierre del año. No hay celdas independientes para Alcácer Ceguer, Mazalquivir, La Goleta ni los peñones; no se les asigna toda una ciudad o provincia vecina.',
     'El desierto y las estepas se muestran como tierras de autoridad nómada: no prueban ausencia de vínculos con los Estados vecinos.',
   ],
 };

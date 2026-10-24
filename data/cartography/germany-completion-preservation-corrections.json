@@ -4,10 +4,299 @@
     "locationId": "Butrint",
     "from": 1382,
     "through": 1385,
-    "previous": ["Epiro"],
-    "expected": ["Nápoles"],
+    "previous": [
+      "Epiro"
+    ],
+    "expected": [
+      "Nápoles"
+    ],
     "reviewedAt": "2026-10-23",
     "reason": "Corrección posterior, fuera del inventario alemán: Butrinto recuperado por los partidarios de Carlos III en 1382 y dependencia napolitana documentada en las negociaciones de 1384; Venecia desde 1386. Se conserva la huella original de referencia.",
     "source": "https://www.persee.fr/doc/ehess_0070-6957_1971_edc_11_2"
+  },
+  {
+    "id": "africa-agadir-1505",
+    "locationId": "Agadir",
+    "from": 1505,
+    "through": 1523,
+    "previous": [
+      "Marruecos meridional · poderes locales"
+    ],
+    "expected": [
+      "Plazas portuguesas del Magreb"
+    ],
+    "reviewedAt": "2026-10-24",
+    "reason": "Revisión posterior de plazas norteafricanas, fuera del inventario alemán. Corrección de ocupación o evacuación documentada en docs/revision-plazas-africanas-2026-10-24.md; se conserva la huella de referencia original.",
+    "source": "https://hpip.org/en/heritage/details/1930"
+  },
+  {
+    "id": "africa-agadir-1524",
+    "locationId": "Agadir",
+    "from": 1524,
+    "through": 1540,
+    "previous": [
+      "Sultanato saadí"
+    ],
+    "expected": [
+      "Plazas portuguesas del Magreb"
+    ],
+    "reviewedAt": "2026-10-24",
+    "reason": "Revisión posterior de plazas norteafricanas, fuera del inventario alemán. Corrección de ocupación o evacuación documentada en docs/revision-plazas-africanas-2026-10-24.md; se conserva la huella de referencia original.",
+    "source": "https://hpip.org/en/heritage/details/1930"
+  },
+  {
+    "id": "africa-aguz-1508",
+    "locationId": "Aguz",
+    "from": 1508,
+    "through": 1523,
+    "previous": [
+      "Marruecos meridional · poderes locales"
+    ],
+    "expected": [
+      "Plazas portuguesas del Magreb"
+    ],
+    "reviewedAt": "2026-10-24",
+    "reason": "Revisión posterior de plazas norteafricanas, fuera del inventario alemán. Corrección de ocupación o evacuación documentada en docs/revision-plazas-africanas-2026-10-24.md; se conserva la huella de referencia original.",
+    "source": "https://hpip.org/pt/heritage/details/922"
+  },
+  {
+    "id": "africa-aguz-1524",
+    "locationId": "Aguz",
+    "from": 1524,
+    "through": 1524,
+    "previous": [
+      "Sultanato saadí"
+    ],
+    "expected": [
+      "Plazas portuguesas del Magreb"
+    ],
+    "reviewedAt": "2026-10-24",
+    "reason": "Revisión posterior de plazas norteafricanas, fuera del inventario alemán. Corrección de ocupación o evacuación documentada en docs/revision-plazas-africanas-2026-10-24.md; se conserva la huella de referencia original.",
+    "source": "https://hpip.org/pt/heritage/details/922"
+  },
+  {
+    "id": "africa-asfi-1508",
+    "locationId": "Asfi",
+    "from": 1508,
+    "through": 1523,
+    "previous": [
+      "Marruecos meridional · poderes locales"
+    ],
+    "expected": [
+      "Plazas portuguesas del Magreb"
+    ],
+    "reviewedAt": "2026-10-24",
+    "reason": "Revisión posterior de plazas norteafricanas, fuera del inventario alemán. Corrección de ocupación o evacuación documentada en docs/revision-plazas-africanas-2026-10-24.md; se conserva la huella de referencia original.",
+    "source": "https://hpip.org/pt/Contents/Place/376"
+  },
+  {
+    "id": "africa-asfi-1524",
+    "locationId": "Asfi",
+    "from": 1524,
+    "through": 1540,
+    "previous": [
+      "Sultanato saadí"
+    ],
+    "expected": [
+      "Plazas portuguesas del Magreb"
+    ],
+    "reviewedAt": "2026-10-24",
+    "reason": "Revisión posterior de plazas norteafricanas, fuera del inventario alemán. Corrección de ocupación o evacuación documentada en docs/revision-plazas-africanas-2026-10-24.md; se conserva la huella de referencia original.",
+    "source": "https://hpip.org/pt/Contents/Place/376"
+  },
+  {
+    "id": "africa-asilah-1577",
+    "locationId": "Asilah",
+    "from": 1577,
+    "through": 1588,
+    "previous": [
+      "Sultanato saadí"
+    ],
+    "expected": [
+      "Plazas portuguesas del Magreb"
+    ],
+    "reviewedAt": "2026-10-24",
+    "reason": "Revisión posterior de plazas norteafricanas, fuera del inventario alemán. Corrección de ocupación o evacuación documentada en docs/revision-plazas-africanas-2026-10-24.md; se conserva la huella de referencia original.",
+    "source": "https://hpip.org/pt/Contents/Place/357"
+  },
+  {
+    "id": "africa-azemmour-1513",
+    "locationId": "Azemmour",
+    "from": 1513,
+    "through": 1540,
+    "previous": [
+      "Sultanato wattasí"
+    ],
+    "expected": [
+      "Plazas portuguesas del Magreb"
+    ],
+    "reviewedAt": "2026-10-24",
+    "reason": "Revisión posterior de plazas norteafricanas, fuera del inventario alemán. Corrección de ocupación o evacuación documentada en docs/revision-plazas-africanas-2026-10-24.md; se conserva la huella de referencia original.",
+    "source": "https://hpip.org/pt/Contents/Place/561"
+  },
+  {
+    "id": "africa-bejaia-1509",
+    "locationId": "Bejaia",
+    "from": 1509,
+    "through": 1509,
+    "previous": [
+      "Presidios españoles del Magreb"
+    ],
+    "expected": [
+      "Sultanato hafsí"
+    ],
+    "reviewedAt": "2026-10-24",
+    "reason": "Revisión posterior de plazas norteafricanas, fuera del inventario alemán. Corrección de ocupación o evacuación documentada en docs/revision-plazas-africanas-2026-10-24.md; se conserva la huella de referencia original.",
+    "source": "https://armada.defensa.gob.es/archivo/mardigitalrevistas/rhn/1995/1995n50.pdf"
+  },
+  {
+    "id": "africa-la_mamora-1666",
+    "locationId": "La_Mamora",
+    "from": 1666,
+    "through": 1680,
+    "previous": [
+      "Sultanato alauí"
+    ],
+    "expected": [
+      "Presidios españoles del Magreb"
+    ],
+    "reviewedAt": "2026-10-24",
+    "reason": "Revisión posterior de plazas norteafricanas, fuera del inventario alemán. Corrección de ocupación o evacuación documentada en docs/revision-plazas-africanas-2026-10-24.md; se conserva la huella de referencia original.",
+    "source": "https://www.persee.fr/doc/hispa_0007-4640_1946_num_48_2_3049"
+  },
+  {
+    "id": "africa-la_mamora-1614",
+    "locationId": "La_Mamora",
+    "from": 1614,
+    "through": 1665,
+    "previous": [
+      "Sultanato saadí"
+    ],
+    "expected": [
+      "Presidios españoles del Magreb"
+    ],
+    "reviewedAt": "2026-10-24",
+    "reason": "Revisión posterior de plazas norteafricanas, fuera del inventario alemán. Corrección de ocupación o evacuación documentada en docs/revision-plazas-africanas-2026-10-24.md; se conserva la huella de referencia original.",
+    "source": "https://www.persee.fr/doc/hispa_0007-4640_1946_num_48_2_3049"
+  },
+  {
+    "id": "africa-larache-1666",
+    "locationId": "Larache",
+    "from": 1666,
+    "through": 1688,
+    "previous": [
+      "Sultanato alauí"
+    ],
+    "expected": [
+      "Presidios españoles del Magreb"
+    ],
+    "reviewedAt": "2026-10-24",
+    "reason": "Revisión posterior de plazas norteafricanas, fuera del inventario alemán. Corrección de ocupación o evacuación documentada en docs/revision-plazas-africanas-2026-10-24.md; se conserva la huella de referencia original.",
+    "source": "https://ejercito.defensa.gob.es/unidades/Madrid/ihycm/Archivos/archivos-generales/agm-madrid-fondo1-5.html"
+  },
+  {
+    "id": "africa-larache-1610",
+    "locationId": "Larache",
+    "from": 1610,
+    "through": 1665,
+    "previous": [
+      "Sultanato saadí"
+    ],
+    "expected": [
+      "Presidios españoles del Magreb"
+    ],
+    "reviewedAt": "2026-10-24",
+    "reason": "Revisión posterior de plazas norteafricanas, fuera del inventario alemán. Corrección de ocupación o evacuación documentada en docs/revision-plazas-africanas-2026-10-24.md; se conserva la huella de referencia original.",
+    "source": "https://ejercito.defensa.gob.es/unidades/Madrid/ihycm/Archivos/archivos-generales/agm-madrid-fondo1-5.html"
+  },
+  {
+    "id": "africa-mazaghan-1769",
+    "locationId": "Mazaghan",
+    "from": 1769,
+    "through": 1769,
+    "previous": [
+      "Plazas portuguesas del Magreb"
+    ],
+    "expected": [
+      "Sultanato alauí"
+    ],
+    "reviewedAt": "2026-10-24",
+    "reason": "Revisión posterior de plazas norteafricanas, fuera del inventario alemán. Corrección de ocupación o evacuación documentada en docs/revision-plazas-africanas-2026-10-24.md; se conserva la huella de referencia original.",
+    "source": "https://whc.unesco.org/en/list/1058"
+  },
+  {
+    "id": "africa-mogador-1506",
+    "locationId": "Mogador",
+    "from": 1506,
+    "through": 1509,
+    "previous": [
+      "Marruecos meridional · poderes locales"
+    ],
+    "expected": [
+      "Plazas portuguesas del Magreb"
+    ],
+    "reviewedAt": "2026-10-24",
+    "reason": "Revisión posterior de plazas norteafricanas, fuera del inventario alemán. Corrección de ocupación o evacuación documentada en docs/revision-plazas-africanas-2026-10-24.md; se conserva la huella de referencia original.",
+    "source": "https://hpip.org/pt/heritage/details/1931"
+  },
+  {
+    "id": "africa-oran-1708",
+    "locationId": "Oran",
+    "from": 1708,
+    "through": 1708,
+    "previous": [
+      "Presidios españoles del Magreb"
+    ],
+    "expected": [
+      "Regencia de Argel"
+    ],
+    "reviewedAt": "2026-10-24",
+    "reason": "Revisión posterior de plazas norteafricanas, fuera del inventario alemán. Corrección de ocupación o evacuación documentada en docs/revision-plazas-africanas-2026-10-24.md; se conserva la huella de referencia original.",
+    "source": "https://armada.defensa.gob.es/archivo/mardigitalrevistas/cuadernosihcn/83cuaderno/cm83.pdf"
+  },
+  {
+    "id": "africa-tunis-1534",
+    "locationId": "Tunis",
+    "from": 1534,
+    "through": 1534,
+    "previous": [
+      "Sultanato hafsí"
+    ],
+    "expected": [
+      "Imperio otomano"
+    ],
+    "reviewedAt": "2026-10-24",
+    "reason": "Revisión posterior de plazas norteafricanas, fuera del inventario alemán. Corrección de ocupación o evacuación documentada en docs/revision-plazas-africanas-2026-10-24.md; se conserva la huella de referencia original.",
+    "source": "https://www.treccani.it/enciclopedia/tunisi/"
+  },
+  {
+    "id": "africa-tunis-1569",
+    "locationId": "Tunis",
+    "from": 1569,
+    "through": 1572,
+    "previous": [
+      "Sultanato hafsí"
+    ],
+    "expected": [
+      "Imperio otomano"
+    ],
+    "reviewedAt": "2026-10-24",
+    "reason": "Revisión posterior de plazas norteafricanas, fuera del inventario alemán. Corrección de ocupación o evacuación documentada en docs/revision-plazas-africanas-2026-10-24.md; se conserva la huella de referencia original.",
+    "source": "https://brill.com/view/journals/erl/9/3/article-p281_002.pdf"
+  },
+  {
+    "id": "africa-tunis-1573",
+    "locationId": "Tunis",
+    "from": 1573,
+    "through": 1573,
+    "previous": [
+      "Sultanato hafsí"
+    ],
+    "expected": [
+      "Presidios españoles del Magreb"
+    ],
+    "reviewedAt": "2026-10-24",
+    "reason": "Revisión posterior de plazas norteafricanas, fuera del inventario alemán. Corrección de ocupación o evacuación documentada en docs/revision-plazas-africanas-2026-10-24.md; se conserva la huella de referencia original.",
+    "source": "https://brill.com/view/journals/erl/9/3/article-p281_002.pdf"
   }
 ]

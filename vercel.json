@@ -237,6 +237,11 @@
     }
   ],
   "redirects": [
+    {
+      "source": "/es/historia/lepanto-la-alianza-imposible/:rest*",
+      "destination": "/es/historia/lepanto-la-ultima-cruzada/:rest*",
+      "permanent": true
+    },
     {"source":"/es/historia/balduino-iv-y-saladino-un-reino-bajo-presion/:rest*","destination":"/es/historia/el-reino-de-los-cielos/:rest*","permanent":true},
     {"source":"/es/dinastia/montfort","destination":"/es/dinastia/montfort-bretana","permanent":true},
     {"source":"/es/dinastia/monfort","destination":"/es/dinastia/montfort-bretana","permanent":true},
@@ -364,12 +369,12 @@
     },
     {
       "source": "/es/historia/lepanto-alianza",
-      "destination": "/es/historia/lepanto-la-alianza-imposible",
+      "destination": "/es/historia/lepanto-la-ultima-cruzada",
       "permanent": true
     },
     {
       "source": "/historia/lepanto-alianza",
-      "destination": "/es/historia/lepanto-la-alianza-imposible",
+      "destination": "/es/historia/lepanto-la-ultima-cruzada",
       "permanent": true
     },
     {

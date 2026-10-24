@@ -4235,7 +4235,7 @@ const HISTORIAS_EXISTENTES = [
   },
   {
     "id": "lepanto-alianza",
-    "titulo": "Lepanto: la alianza imposible",
+    "titulo": "Lepanto: La última cruzada",
     "subtitulo": "Cómo Roma, España y Venecia reunieron una flota contra el Imperio otomano",
     "disponible": true,
     "descripcion": "La conquista otomana de Chipre obliga a potencias católicas con intereses rivales a coordinarse. Pío V construye la Liga Santa, Felipe II aporta el principal poder monárquico y don Juan de Austria recibe una flota en la que venecianos, pontificios, genoveses y españoles deben aprender a combatir juntos. La historia entra después en la propia batalla: las líneas, el choque de las capitanas, la lucha en las alas, Cervantes y la rápida recuperación naval otomana.",

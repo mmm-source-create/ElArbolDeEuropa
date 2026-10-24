@@ -6,7 +6,7 @@
 import fs from 'node:fs/promises';
 import path from 'node:path';
 import sharp from 'sharp';
-import {CREDITOS_ESCUDOS} from '../../src/content/dinastias/escudos.js';
+import {CREDITOS_ESCUDOS, nombreEmblema} from '../../src/content/dinastias/escudos.js';
 import {OG_FREE_LICENCE, ogArmsCreditFile} from '../../src/features/public/ogImages.js';
 
 const escape = text => text.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
@@ -17,7 +17,7 @@ if(!onlyMissing)await fs.rm(dir, {recursive: true, force: true});
 await fs.mkdir(dir, {recursive: true});
 for (const [archivo, c] of credits) {
   if(onlyMissing&&await fs.access(ogArmsCreditFile(archivo)).then(()=>true,()=>false))continue;
-  const text = `<span foreground="#6B5A48">${c.tipo === 'tughra' ? 'Tuğra' : 'Escudo'}: ${escape(c.autor)} · ${escape(c.licencia)} · ${escape(c.procedencia||'Wikimedia Commons')}</span>`;
+  const text = `<span foreground="#6B5A48">${nombreEmblema(c)}: ${escape(c.autor)} · ${escape(c.licencia)} · ${escape(c.procedencia||'Wikimedia Commons')}</span>`;
   await sharp({text: {text, font: 'Georgia 17', width: 600, align: 'centre', rgba: true, dpi: 72}}).png().toFile(ogArmsCreditFile(archivo));
 }
 console.log(`Créditos para tarjetas: ${credits.size}`);

@@ -297381,12 +297381,12 @@
       "scopeLabel": "Bejaia · 1200–1235"
     },
     {
-      "name": "Bejaia · Sultanato hafsí · 1236–1508 · revisión África y Levante 14",
+      "name": "Bejaia · Sultanato hafsí · 1236–1509 · revisión África y Levante 14",
       "corridor": "Norte de África, Levante y Chipre · continuidad geográfica completa",
       "color": "#86715d",
       "coverage": {
         "from": 1236,
-        "through": 1508
+        "through": 1509
       },
       "versions": [
         {
@@ -297409,38 +297409,38 @@
       ],
       "precision": "regional_approximation",
       "limitedCore": false,
-      "scopeLabel": "Bejaia · 1236–1508"
+      "scopeLabel": "Bejaia · 1236–1509"
     },
     {
-      "name": "Bejaia · Presidios españoles del Magreb · 1509–1515 · revisión África y Levante 15",
+      "name": "Bejaia · Presidios españoles del Magreb · 1510–1515 · revisión África y Levante 15",
       "corridor": "Norte de África, Levante y Chipre · continuidad geográfica completa",
       "color": "#86715d",
       "coverage": {
-        "from": 1509,
+        "from": 1510,
         "through": 1515
       },
       "versions": [
         {
-          "from": 1509,
+          "from": 1510,
           "ids": [
             "Bejaia"
           ],
           "oldIds": [],
           "borderline": [],
-          "event": "Plaza fuerte de Bejaia."
+          "event": "Plaza de Bejaia. La celda aproxima su localización y no acredita dominio sobre todo el entorno rural. Corte anual por la situación al final del año; conquista o evacuación dentro del año se documentan en las fuentes."
         }
       ],
-      "note": "Plaza fuerte de Bejaia.",
+      "note": "Plaza de Bejaia. La celda aproxima su localización y no acredita dominio sobre todo el entorno rural. Corte anual por la situación al final del año; conquista o evacuación dentro del año se documentan en las fuentes.",
       "sources": [
         {
-          "title": "Treccani · Bejaïa",
-          "url": "https://www.treccani.it/enciclopedia/bejaia/",
-          "locator": "Centro almohade, tomada por los españoles en 1509 y pasada a los turcos en 1555."
+          "title": "Revista de Historia Naval 50 · Ignacio de Loyola y el mar",
+          "url": "https://armada.defensa.gob.es/archivo/mardigitalrevistas/rhn/1995/1995n50.pdf",
+          "locator": "Bugía conquistada el 5 de enero de 1510, tras Orán en mayo de 1509; Trípoli en julio de 1510."
         }
       ],
       "precision": "regional_approximation",
-      "limitedCore": false,
-      "scopeLabel": "Bejaia · 1509–1515"
+      "limitedCore": true,
+      "scopeLabel": "Bejaia · 1510–1515"
     },
     {
       "name": "Bejaia · Presidios españoles del Magreb · 1516–1554 · revisión África y Levante 16",
@@ -297458,19 +297458,24 @@
           ],
           "oldIds": [],
           "borderline": [],
-          "event": "Plaza fuerte de Bejaia."
+          "event": "Plaza de Bejaia. La celda aproxima su localización y no acredita dominio sobre todo el entorno rural. Corte anual por la situación al final del año; conquista o evacuación dentro del año se documentan en las fuentes."
         }
       ],
-      "note": "Plaza fuerte de Bejaia.",
+      "note": "Plaza de Bejaia. La celda aproxima su localización y no acredita dominio sobre todo el entorno rural. Corte anual por la situación al final del año; conquista o evacuación dentro del año se documentan en las fuentes.",
       "sources": [
+        {
+          "title": "Revista de Historia Naval 50 · Ignacio de Loyola y el mar",
+          "url": "https://armada.defensa.gob.es/archivo/mardigitalrevistas/rhn/1995/1995n50.pdf",
+          "locator": "Bugía conquistada el 5 de enero de 1510, tras Orán en mayo de 1509; Trípoli en julio de 1510."
+        },
         {
           "title": "Treccani · Bejaïa",
           "url": "https://www.treccani.it/enciclopedia/bejaia/",
-          "locator": "Centro almohade, tomada por los españoles en 1509 y pasada a los turcos en 1555."
+          "locator": "Centro almohade y conquista otomana en 1555. La entrada española se fecha en 1510 siguiendo la Revista de Historia Naval 50, fuente presidios."
         }
       ],
       "precision": "regional_approximation",
-      "limitedCore": false,
+      "limitedCore": true,
       "scopeLabel": "Bejaia · 1516–1554"
     },
     {
@@ -298550,7 +298555,6 @@
             "Al_Mazamma",
             "Amergo",
             "Anfa",
-            "Azemmour",
             "Azrou",
             "Badis",
             "Baht",
@@ -298562,8 +298566,6 @@
             "Jarawah_Abu_Al_Aysh",
             "Jerada",
             "Ksar_el_Kebir",
-            "La_Mamora",
-            "Larache",
             "Lower_Rif",
             "Meknes",
             "Moulouya_Corridor1",
@@ -298626,7 +298628,6 @@
             "Al_Mazamma",
             "Amergo",
             "Anfa",
-            "Azemmour",
             "Azrou",
             "Badis",
             "Baht",
@@ -298638,8 +298639,6 @@
             "Jarawah_Abu_Al_Aysh",
             "Jerada",
             "Ksar_el_Kebir",
-            "La_Mamora",
-            "Larache",
             "Lower_Rif",
             "Meknes",
             "Moulouya_Corridor1",
@@ -298707,7 +298706,6 @@
             "Al_Mazamma",
             "Amergo",
             "Anfa",
-            "Azemmour",
             "Azrou",
             "Badis",
             "Baht",
@@ -298719,8 +298717,6 @@
             "Jarawah_Abu_Al_Aysh",
             "Jerada",
             "Ksar_el_Kebir",
-            "La_Mamora",
-            "Larache",
             "Lower_Rif",
             "Meknes",
             "Moulouya_Corridor1",
@@ -298788,7 +298784,6 @@
             "Al_Mazamma",
             "Amergo",
             "Anfa",
-            "Azemmour",
             "Azrou",
             "Badis",
             "Baht",
@@ -298800,8 +298795,6 @@
             "Jarawah_Abu_Al_Aysh",
             "Jerada",
             "Ksar_el_Kebir",
-            "La_Mamora",
-            "Larache",
             "Lower_Rif",
             "Meknes",
             "Moulouya_Corridor1",
@@ -298864,7 +298857,6 @@
             "Al_Mazamma",
             "Amergo",
             "Anfa",
-            "Azemmour",
             "Azrou",
             "Badis",
             "Baht",
@@ -298876,8 +298868,6 @@
             "Jarawah_Abu_Al_Aysh",
             "Jerada",
             "Ksar_el_Kebir",
-            "La_Mamora",
-            "Larache",
             "Lower_Rif",
             "Meknes",
             "Moulouya_Corridor1",
@@ -299043,28 +299033,28 @@
           ],
           "oldIds": [],
           "borderline": [],
-          "event": "Plaza fuerte de Asilah."
+          "event": "Plaza de Asilah. La celda aproxima su localización y no acredita dominio sobre todo el entorno rural. Corte anual por la situación al final del año; conquista o evacuación dentro del año se documentan en las fuentes."
         }
       ],
-      "note": "Plaza fuerte de Asilah.",
+      "note": "Plaza de Asilah. La celda aproxima su localización y no acredita dominio sobre todo el entorno rural. Corte anual por la situación al final del año; conquista o evacuación dentro del año se documentan en las fuentes.",
       "sources": [
         {
-          "title": "Treccani · Marocco",
-          "url": "https://www.treccani.it/enciclopedia/marocco/",
-          "locator": "Benimerines (siglos XIII–XV), wattasíes (XV–XVI) y las dinastías jerifianas saadí y filalí (alauí)."
+          "title": "HPIP · Assilah",
+          "url": "https://hpip.org/pt/Contents/Place/357",
+          "locator": "Presencia portuguesa de 1471 a 1550; retorno de 1577 a 1589."
         }
       ],
       "precision": "regional_approximation",
-      "limitedCore": false,
+      "limitedCore": true,
       "scopeLabel": "Asilah · 1471–1549"
     },
     {
-      "name": "Asilah · Sultanato saadí · 1550–1665 · revisión África y Levante 46",
+      "name": "Asilah · Sultanato saadí · 1550–1576 · revisión África y Levante 46",
       "corridor": "Norte de África, Levante y Chipre · continuidad geográfica completa",
       "color": "#86715d",
       "coverage": {
         "from": 1550,
-        "through": 1665
+        "through": 1576
       },
       "versions": [
         {
@@ -299087,10 +299077,72 @@
       ],
       "precision": "regional_approximation",
       "limitedCore": false,
-      "scopeLabel": "Asilah · 1550–1665"
+      "scopeLabel": "Asilah · 1550–1576"
     },
     {
-      "name": "Asilah · Sultanato alauí · 1666–1800 · revisión África y Levante 47",
+      "name": "Asilah · Plazas portuguesas del Magreb · 1577–1588 · revisión África y Levante 47",
+      "corridor": "Norte de África, Levante y Chipre · continuidad geográfica completa",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1577,
+        "through": 1588
+      },
+      "versions": [
+        {
+          "from": 1577,
+          "ids": [
+            "Asilah"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Plaza de Asilah. La celda aproxima su localización y no acredita dominio sobre todo el entorno rural. Corte anual por la situación al final del año; conquista o evacuación dentro del año se documentan en las fuentes."
+        }
+      ],
+      "note": "Plaza de Asilah. La celda aproxima su localización y no acredita dominio sobre todo el entorno rural. Corte anual por la situación al final del año; conquista o evacuación dentro del año se documentan en las fuentes.",
+      "sources": [
+        {
+          "title": "HPIP · Assilah",
+          "url": "https://hpip.org/pt/Contents/Place/357",
+          "locator": "Presencia portuguesa de 1471 a 1550; retorno de 1577 a 1589."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": true,
+      "scopeLabel": "Asilah · 1577–1588"
+    },
+    {
+      "name": "Asilah · Sultanato saadí · 1589–1665 · revisión África y Levante 48",
+      "corridor": "Norte de África, Levante y Chipre · continuidad geográfica completa",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1589,
+        "through": 1665
+      },
+      "versions": [
+        {
+          "from": 1589,
+          "ids": [
+            "Asilah"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Fez bajo los jerifes saadíes. A mediados del siglo XVII el poder se fragmentó entre la zawiya de Dila y otros poderes locales, que el mapa no separa."
+        }
+      ],
+      "note": "Fez bajo los jerifes saadíes. A mediados del siglo XVII el poder se fragmentó entre la zawiya de Dila y otros poderes locales, que el mapa no separa.",
+      "sources": [
+        {
+          "title": "Treccani · Marocco",
+          "url": "https://www.treccani.it/enciclopedia/marocco/",
+          "locator": "Benimerines (siglos XIII–XV), wattasíes (XV–XVI) y las dinastías jerifianas saadí y filalí (alauí)."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": false,
+      "scopeLabel": "Asilah · 1589–1665"
+    },
+    {
+      "name": "Asilah · Sultanato alauí · 1666–1800 · revisión África y Levante 49",
       "corridor": "Norte de África, Levante y Chipre · continuidad geográfica completa",
       "color": "#86715d",
       "coverage": {
@@ -299121,7 +299173,631 @@
       "scopeLabel": "Asilah · 1666–1800"
     },
     {
-      "name": "Mazaghan · Califato almohade · 1200–1247 · revisión África y Levante 48",
+      "name": "Azemmour · Califato almohade · 1200–1247 · revisión África y Levante 50",
+      "corridor": "Norte de África, Levante y Chipre · continuidad geográfica completa",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1200,
+        "through": 1247
+      },
+      "versions": [
+        {
+          "from": 1200,
+          "ids": [
+            "Azemmour"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Marruecos septentrional bajo el califato almohade."
+        }
+      ],
+      "note": "Marruecos septentrional bajo el califato almohade.",
+      "sources": [
+        {
+          "title": "Treccani · Almohadi",
+          "url": "https://www.treccani.it/enciclopedia/almohadi/",
+          "locator": "Fundación en 1147 y desaparición en 1269 con la toma de Marrakech por los benimerines."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": false,
+      "scopeLabel": "Azemmour · 1200–1247"
+    },
+    {
+      "name": "Azemmour · Sultanato benimerín · 1248–1464 · revisión África y Levante 51",
+      "corridor": "Norte de África, Levante y Chipre · continuidad geográfica completa",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1248,
+        "through": 1464
+      },
+      "versions": [
+        {
+          "from": 1248,
+          "ids": [
+            "Azemmour"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Fez, la capital benimerín, y el norte de Marruecos."
+        }
+      ],
+      "note": "Fez, la capital benimerín, y el norte de Marruecos.",
+      "sources": [
+        {
+          "title": "Treccani · Merìnidi",
+          "url": "https://www.treccani.it/enciclopedia/merinidi/",
+          "locator": "Sustituyen a los almohades (Marrakech, 1269); los suplantan después los wattasíes."
+        },
+        {
+          "title": "Treccani · Marocco",
+          "url": "https://www.treccani.it/enciclopedia/marocco/",
+          "locator": "Benimerines (siglos XIII–XV), wattasíes (XV–XVI) y las dinastías jerifianas saadí y filalí (alauí)."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": false,
+      "scopeLabel": "Azemmour · 1248–1464"
+    },
+    {
+      "name": "Azemmour · Sultanato wattasí · 1465–1512 · revisión África y Levante 52",
+      "corridor": "Norte de África, Levante y Chipre · continuidad geográfica completa",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1465,
+        "through": 1512
+      },
+      "versions": [
+        {
+          "from": 1465,
+          "ids": [
+            "Azemmour"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Los wattasíes suplantan a los benimerines; la revuelta jerifiana de Fez (1465–1471) no se separa."
+        }
+      ],
+      "note": "Los wattasíes suplantan a los benimerines; la revuelta jerifiana de Fez (1465–1471) no se separa.",
+      "sources": [
+        {
+          "title": "Treccani · Wattàsidi",
+          "url": "https://www.treccani.it/enciclopedia/wattasidi/",
+          "locator": "Rama colateral de los benimerines, en el poder desde mediados del siglo XV hasta la primera mitad del XVI."
+        },
+        {
+          "title": "Treccani · Marocco",
+          "url": "https://www.treccani.it/enciclopedia/marocco/",
+          "locator": "Benimerines (siglos XIII–XV), wattasíes (XV–XVI) y las dinastías jerifianas saadí y filalí (alauí)."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": false,
+      "scopeLabel": "Azemmour · 1465–1512"
+    },
+    {
+      "name": "Azemmour · Plazas portuguesas del Magreb · 1513–1540 · revisión África y Levante 53",
+      "corridor": "Norte de África, Levante y Chipre · continuidad geográfica completa",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1513,
+        "through": 1540
+      },
+      "versions": [
+        {
+          "from": 1513,
+          "ids": [
+            "Azemmour"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Plaza de Azemmour. La celda aproxima su localización y no acredita dominio sobre todo el entorno rural. Corte anual por la situación al final del año; conquista o evacuación dentro del año se documentan en las fuentes."
+        }
+      ],
+      "note": "Plaza de Azemmour. La celda aproxima su localización y no acredita dominio sobre todo el entorno rural. Corte anual por la situación al final del año; conquista o evacuación dentro del año se documentan en las fuentes.",
+      "sources": [
+        {
+          "title": "HPIP · Azemmour",
+          "url": "https://hpip.org/pt/Contents/Place/561",
+          "locator": "Vasallaje desde 1486; conquista portuguesa en 1513 y evacuación en octubre de 1541."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": true,
+      "scopeLabel": "Azemmour · 1513–1540"
+    },
+    {
+      "name": "Azemmour · Sultanato wattasí · 1541–1548 · revisión África y Levante 54",
+      "corridor": "Norte de África, Levante y Chipre · continuidad geográfica completa",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1541,
+        "through": 1548
+      },
+      "versions": [
+        {
+          "from": 1541,
+          "ids": [
+            "Azemmour"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Los wattasíes suplantan a los benimerines; la revuelta jerifiana de Fez (1465–1471) no se separa."
+        }
+      ],
+      "note": "Los wattasíes suplantan a los benimerines; la revuelta jerifiana de Fez (1465–1471) no se separa.",
+      "sources": [
+        {
+          "title": "Treccani · Wattàsidi",
+          "url": "https://www.treccani.it/enciclopedia/wattasidi/",
+          "locator": "Rama colateral de los benimerines, en el poder desde mediados del siglo XV hasta la primera mitad del XVI."
+        },
+        {
+          "title": "Treccani · Marocco",
+          "url": "https://www.treccani.it/enciclopedia/marocco/",
+          "locator": "Benimerines (siglos XIII–XV), wattasíes (XV–XVI) y las dinastías jerifianas saadí y filalí (alauí)."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": false,
+      "scopeLabel": "Azemmour · 1541–1548"
+    },
+    {
+      "name": "Azemmour · Sultanato saadí · 1549–1665 · revisión África y Levante 55",
+      "corridor": "Norte de África, Levante y Chipre · continuidad geográfica completa",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1549,
+        "through": 1665
+      },
+      "versions": [
+        {
+          "from": 1549,
+          "ids": [
+            "Azemmour"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Fez bajo los jerifes saadíes. A mediados del siglo XVII el poder se fragmentó entre la zawiya de Dila y otros poderes locales, que el mapa no separa."
+        }
+      ],
+      "note": "Fez bajo los jerifes saadíes. A mediados del siglo XVII el poder se fragmentó entre la zawiya de Dila y otros poderes locales, que el mapa no separa.",
+      "sources": [
+        {
+          "title": "Treccani · Marocco",
+          "url": "https://www.treccani.it/enciclopedia/marocco/",
+          "locator": "Benimerines (siglos XIII–XV), wattasíes (XV–XVI) y las dinastías jerifianas saadí y filalí (alauí)."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": false,
+      "scopeLabel": "Azemmour · 1549–1665"
+    },
+    {
+      "name": "Azemmour · Sultanato alauí · 1666–1800 · revisión África y Levante 56",
+      "corridor": "Norte de África, Levante y Chipre · continuidad geográfica completa",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1666,
+        "through": 1800
+      },
+      "versions": [
+        {
+          "from": 1666,
+          "ids": [
+            "Azemmour"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "La dinastía filalí o alauí, desde la toma de Fez."
+        }
+      ],
+      "note": "La dinastía filalí o alauí, desde la toma de Fez.",
+      "sources": [
+        {
+          "title": "Treccani · Marocco",
+          "url": "https://www.treccani.it/enciclopedia/marocco/",
+          "locator": "Benimerines (siglos XIII–XV), wattasíes (XV–XVI) y las dinastías jerifianas saadí y filalí (alauí)."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": false,
+      "scopeLabel": "Azemmour · 1666–1800"
+    },
+    {
+      "name": "La Mamora · Califato almohade · 1200–1247 · revisión África y Levante 57",
+      "corridor": "Norte de África, Levante y Chipre · continuidad geográfica completa",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1200,
+        "through": 1247
+      },
+      "versions": [
+        {
+          "from": 1200,
+          "ids": [
+            "La_Mamora"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Marruecos septentrional bajo el califato almohade."
+        }
+      ],
+      "note": "Marruecos septentrional bajo el califato almohade.",
+      "sources": [
+        {
+          "title": "Treccani · Almohadi",
+          "url": "https://www.treccani.it/enciclopedia/almohadi/",
+          "locator": "Fundación en 1147 y desaparición en 1269 con la toma de Marrakech por los benimerines."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": false,
+      "scopeLabel": "La Mamora · 1200–1247"
+    },
+    {
+      "name": "La Mamora · Sultanato benimerín · 1248–1464 · revisión África y Levante 58",
+      "corridor": "Norte de África, Levante y Chipre · continuidad geográfica completa",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1248,
+        "through": 1464
+      },
+      "versions": [
+        {
+          "from": 1248,
+          "ids": [
+            "La_Mamora"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Fez, la capital benimerín, y el norte de Marruecos."
+        }
+      ],
+      "note": "Fez, la capital benimerín, y el norte de Marruecos.",
+      "sources": [
+        {
+          "title": "Treccani · Merìnidi",
+          "url": "https://www.treccani.it/enciclopedia/merinidi/",
+          "locator": "Sustituyen a los almohades (Marrakech, 1269); los suplantan después los wattasíes."
+        },
+        {
+          "title": "Treccani · Marocco",
+          "url": "https://www.treccani.it/enciclopedia/marocco/",
+          "locator": "Benimerines (siglos XIII–XV), wattasíes (XV–XVI) y las dinastías jerifianas saadí y filalí (alauí)."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": false,
+      "scopeLabel": "La Mamora · 1248–1464"
+    },
+    {
+      "name": "La Mamora · Sultanato wattasí · 1465–1548 · revisión África y Levante 59",
+      "corridor": "Norte de África, Levante y Chipre · continuidad geográfica completa",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1465,
+        "through": 1548
+      },
+      "versions": [
+        {
+          "from": 1465,
+          "ids": [
+            "La_Mamora"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Los wattasíes suplantan a los benimerines; la revuelta jerifiana de Fez (1465–1471) no se separa."
+        }
+      ],
+      "note": "Los wattasíes suplantan a los benimerines; la revuelta jerifiana de Fez (1465–1471) no se separa.",
+      "sources": [
+        {
+          "title": "Treccani · Wattàsidi",
+          "url": "https://www.treccani.it/enciclopedia/wattasidi/",
+          "locator": "Rama colateral de los benimerines, en el poder desde mediados del siglo XV hasta la primera mitad del XVI."
+        },
+        {
+          "title": "Treccani · Marocco",
+          "url": "https://www.treccani.it/enciclopedia/marocco/",
+          "locator": "Benimerines (siglos XIII–XV), wattasíes (XV–XVI) y las dinastías jerifianas saadí y filalí (alauí)."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": false,
+      "scopeLabel": "La Mamora · 1465–1548"
+    },
+    {
+      "name": "La Mamora · Sultanato saadí · 1549–1613 · revisión África y Levante 60",
+      "corridor": "Norte de África, Levante y Chipre · continuidad geográfica completa",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1549,
+        "through": 1613
+      },
+      "versions": [
+        {
+          "from": 1549,
+          "ids": [
+            "La_Mamora"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Fez bajo los jerifes saadíes. A mediados del siglo XVII el poder se fragmentó entre la zawiya de Dila y otros poderes locales, que el mapa no separa."
+        }
+      ],
+      "note": "Fez bajo los jerifes saadíes. A mediados del siglo XVII el poder se fragmentó entre la zawiya de Dila y otros poderes locales, que el mapa no separa.",
+      "sources": [
+        {
+          "title": "Treccani · Marocco",
+          "url": "https://www.treccani.it/enciclopedia/marocco/",
+          "locator": "Benimerines (siglos XIII–XV), wattasíes (XV–XVI) y las dinastías jerifianas saadí y filalí (alauí)."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": false,
+      "scopeLabel": "La Mamora · 1549–1613"
+    },
+    {
+      "name": "La Mamora · Presidios españoles del Magreb · 1614–1680 · revisión África y Levante 61",
+      "corridor": "Norte de África, Levante y Chipre · continuidad geográfica completa",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1614,
+        "through": 1680
+      },
+      "versions": [
+        {
+          "from": 1614,
+          "ids": [
+            "La_Mamora"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Plaza de La Mamora. La celda aproxima su localización y no acredita dominio sobre todo el entorno rural. Corte anual por la situación al final del año; conquista o evacuación dentro del año se documentan en las fuentes."
+        }
+      ],
+      "note": "Plaza de La Mamora. La celda aproxima su localización y no acredita dominio sobre todo el entorno rural. Corte anual por la situación al final del año; conquista o evacuación dentro del año se documentan en las fuentes.",
+      "sources": [
+        {
+          "title": "Bulletin Hispanique · Chronique, 1946",
+          "url": "https://www.persee.fr/doc/hispa_0007-4640_1946_num_48_2_3049",
+          "locator": "Flota española ante La Mamora el 3 de agosto de 1614; permanencia hasta 1681."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": true,
+      "scopeLabel": "La Mamora · 1614–1680"
+    },
+    {
+      "name": "La Mamora · Sultanato alauí · 1681–1800 · revisión África y Levante 62",
+      "corridor": "Norte de África, Levante y Chipre · continuidad geográfica completa",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1681,
+        "through": 1800
+      },
+      "versions": [
+        {
+          "from": 1681,
+          "ids": [
+            "La_Mamora"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "La dinastía filalí o alauí, desde la toma de Fez."
+        }
+      ],
+      "note": "La dinastía filalí o alauí, desde la toma de Fez.",
+      "sources": [
+        {
+          "title": "Treccani · Marocco",
+          "url": "https://www.treccani.it/enciclopedia/marocco/",
+          "locator": "Benimerines (siglos XIII–XV), wattasíes (XV–XVI) y las dinastías jerifianas saadí y filalí (alauí)."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": false,
+      "scopeLabel": "La Mamora · 1681–1800"
+    },
+    {
+      "name": "Larache · Califato almohade · 1200–1247 · revisión África y Levante 63",
+      "corridor": "Norte de África, Levante y Chipre · continuidad geográfica completa",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1200,
+        "through": 1247
+      },
+      "versions": [
+        {
+          "from": 1200,
+          "ids": [
+            "Larache"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Marruecos septentrional bajo el califato almohade."
+        }
+      ],
+      "note": "Marruecos septentrional bajo el califato almohade.",
+      "sources": [
+        {
+          "title": "Treccani · Almohadi",
+          "url": "https://www.treccani.it/enciclopedia/almohadi/",
+          "locator": "Fundación en 1147 y desaparición en 1269 con la toma de Marrakech por los benimerines."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": false,
+      "scopeLabel": "Larache · 1200–1247"
+    },
+    {
+      "name": "Larache · Sultanato benimerín · 1248–1464 · revisión África y Levante 64",
+      "corridor": "Norte de África, Levante y Chipre · continuidad geográfica completa",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1248,
+        "through": 1464
+      },
+      "versions": [
+        {
+          "from": 1248,
+          "ids": [
+            "Larache"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Fez, la capital benimerín, y el norte de Marruecos."
+        }
+      ],
+      "note": "Fez, la capital benimerín, y el norte de Marruecos.",
+      "sources": [
+        {
+          "title": "Treccani · Merìnidi",
+          "url": "https://www.treccani.it/enciclopedia/merinidi/",
+          "locator": "Sustituyen a los almohades (Marrakech, 1269); los suplantan después los wattasíes."
+        },
+        {
+          "title": "Treccani · Marocco",
+          "url": "https://www.treccani.it/enciclopedia/marocco/",
+          "locator": "Benimerines (siglos XIII–XV), wattasíes (XV–XVI) y las dinastías jerifianas saadí y filalí (alauí)."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": false,
+      "scopeLabel": "Larache · 1248–1464"
+    },
+    {
+      "name": "Larache · Sultanato wattasí · 1465–1548 · revisión África y Levante 65",
+      "corridor": "Norte de África, Levante y Chipre · continuidad geográfica completa",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1465,
+        "through": 1548
+      },
+      "versions": [
+        {
+          "from": 1465,
+          "ids": [
+            "Larache"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Los wattasíes suplantan a los benimerines; la revuelta jerifiana de Fez (1465–1471) no se separa."
+        }
+      ],
+      "note": "Los wattasíes suplantan a los benimerines; la revuelta jerifiana de Fez (1465–1471) no se separa.",
+      "sources": [
+        {
+          "title": "Treccani · Wattàsidi",
+          "url": "https://www.treccani.it/enciclopedia/wattasidi/",
+          "locator": "Rama colateral de los benimerines, en el poder desde mediados del siglo XV hasta la primera mitad del XVI."
+        },
+        {
+          "title": "Treccani · Marocco",
+          "url": "https://www.treccani.it/enciclopedia/marocco/",
+          "locator": "Benimerines (siglos XIII–XV), wattasíes (XV–XVI) y las dinastías jerifianas saadí y filalí (alauí)."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": false,
+      "scopeLabel": "Larache · 1465–1548"
+    },
+    {
+      "name": "Larache · Sultanato saadí · 1549–1609 · revisión África y Levante 66",
+      "corridor": "Norte de África, Levante y Chipre · continuidad geográfica completa",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1549,
+        "through": 1609
+      },
+      "versions": [
+        {
+          "from": 1549,
+          "ids": [
+            "Larache"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Fez bajo los jerifes saadíes. A mediados del siglo XVII el poder se fragmentó entre la zawiya de Dila y otros poderes locales, que el mapa no separa."
+        }
+      ],
+      "note": "Fez bajo los jerifes saadíes. A mediados del siglo XVII el poder se fragmentó entre la zawiya de Dila y otros poderes locales, que el mapa no separa.",
+      "sources": [
+        {
+          "title": "Treccani · Marocco",
+          "url": "https://www.treccani.it/enciclopedia/marocco/",
+          "locator": "Benimerines (siglos XIII–XV), wattasíes (XV–XVI) y las dinastías jerifianas saadí y filalí (alauí)."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": false,
+      "scopeLabel": "Larache · 1549–1609"
+    },
+    {
+      "name": "Larache · Presidios españoles del Magreb · 1610–1688 · revisión África y Levante 67",
+      "corridor": "Norte de África, Levante y Chipre · continuidad geográfica completa",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1610,
+        "through": 1688
+      },
+      "versions": [
+        {
+          "from": 1610,
+          "ids": [
+            "Larache"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Plaza de Larache. La celda aproxima su localización y no acredita dominio sobre todo el entorno rural. Corte anual por la situación al final del año; conquista o evacuación dentro del año se documentan en las fuentes."
+        }
+      ],
+      "note": "Plaza de Larache. La celda aproxima su localización y no acredita dominio sobre todo el entorno rural. Corte anual por la situación al final del año; conquista o evacuación dentro del año se documentan en las fuentes.",
+      "sources": [
+        {
+          "title": "Archivo General Militar de Madrid · Comandancia General de Larache",
+          "url": "https://ejercito.defensa.gob.es/unidades/Madrid/ihycm/Archivos/archivos-generales/agm-madrid-fondo1-5.html",
+          "locator": "Ocupación española en 1610 y recuperación marroquí en 1689."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": true,
+      "scopeLabel": "Larache · 1610–1688"
+    },
+    {
+      "name": "Larache · Sultanato alauí · 1689–1800 · revisión África y Levante 68",
+      "corridor": "Norte de África, Levante y Chipre · continuidad geográfica completa",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1689,
+        "through": 1800
+      },
+      "versions": [
+        {
+          "from": 1689,
+          "ids": [
+            "Larache"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "La dinastía filalí o alauí, desde la toma de Fez."
+        }
+      ],
+      "note": "La dinastía filalí o alauí, desde la toma de Fez.",
+      "sources": [
+        {
+          "title": "Treccani · Marocco",
+          "url": "https://www.treccani.it/enciclopedia/marocco/",
+          "locator": "Benimerines (siglos XIII–XV), wattasíes (XV–XVI) y las dinastías jerifianas saadí y filalí (alauí)."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": false,
+      "scopeLabel": "Larache · 1689–1800"
+    },
+    {
+      "name": "Mazaghan · Califato almohade · 1200–1247 · revisión África y Levante 69",
       "corridor": "Norte de África, Levante y Chipre · continuidad geográfica completa",
       "color": "#86715d",
       "coverage": {
@@ -299152,7 +299828,7 @@
       "scopeLabel": "Mazaghan · 1200–1247"
     },
     {
-      "name": "Mazaghan · Sultanato benimerín · 1248–1464 · revisión África y Levante 49",
+      "name": "Mazaghan · Sultanato benimerín · 1248–1464 · revisión África y Levante 70",
       "corridor": "Norte de África, Levante y Chipre · continuidad geográfica completa",
       "color": "#86715d",
       "coverage": {
@@ -299188,7 +299864,7 @@
       "scopeLabel": "Mazaghan · 1248–1464"
     },
     {
-      "name": "Mazaghan · Sultanato wattasí · 1465–1513 · revisión África y Levante 50",
+      "name": "Mazaghan · Sultanato wattasí · 1465–1513 · revisión África y Levante 71",
       "corridor": "Norte de África, Levante y Chipre · continuidad geográfica completa",
       "color": "#86715d",
       "coverage": {
@@ -299224,12 +299900,12 @@
       "scopeLabel": "Mazaghan · 1465–1513"
     },
     {
-      "name": "Mazaghan · Plazas portuguesas del Magreb · 1514–1769 · revisión África y Levante 51",
+      "name": "Mazaghan · Plazas portuguesas del Magreb · 1514–1768 · revisión África y Levante 72",
       "corridor": "Norte de África, Levante y Chipre · continuidad geográfica completa",
       "color": "#86715d",
       "coverage": {
         "from": 1514,
-        "through": 1769
+        "through": 1768
       },
       "versions": [
         {
@@ -299239,10 +299915,10 @@
           ],
           "oldIds": [],
           "borderline": [],
-          "event": "Plaza fuerte de Mazaghan."
+          "event": "Plaza de Mazaghan. La celda aproxima su localización y no acredita dominio sobre todo el entorno rural. Corte anual por la situación al final del año; conquista o evacuación dentro del año se documentan en las fuentes."
         }
       ],
-      "note": "Plaza fuerte de Mazaghan.",
+      "note": "Plaza de Mazaghan. La celda aproxima su localización y no acredita dominio sobre todo el entorno rural. Corte anual por la situación al final del año; conquista o evacuación dentro del año se documentan en las fuentes.",
       "sources": [
         {
           "title": "UNESCO · Portuguese City of Mazagan (El Jadida)",
@@ -299251,20 +299927,20 @@
         }
       ],
       "precision": "regional_approximation",
-      "limitedCore": false,
-      "scopeLabel": "Mazaghan · 1514–1769"
+      "limitedCore": true,
+      "scopeLabel": "Mazaghan · 1514–1768"
     },
     {
-      "name": "Mazaghan · Sultanato alauí · 1770–1800 · revisión África y Levante 52",
+      "name": "Mazaghan · Sultanato alauí · 1769–1800 · revisión África y Levante 73",
       "corridor": "Norte de África, Levante y Chipre · continuidad geográfica completa",
       "color": "#86715d",
       "coverage": {
-        "from": 1770,
+        "from": 1769,
         "through": 1800
       },
       "versions": [
         {
-          "from": 1770,
+          "from": 1769,
           "ids": [
             "Mazaghan"
           ],
@@ -299283,10 +299959,10 @@
       ],
       "precision": "regional_approximation",
       "limitedCore": false,
-      "scopeLabel": "Mazaghan · 1770–1800"
+      "scopeLabel": "Mazaghan · 1769–1800"
     },
     {
-      "name": "Melilla · Califato almohade · 1200–1247 · revisión África y Levante 53",
+      "name": "Melilla · Califato almohade · 1200–1247 · revisión África y Levante 74",
       "corridor": "Norte de África, Levante y Chipre · continuidad geográfica completa",
       "color": "#86715d",
       "coverage": {
@@ -299317,7 +299993,7 @@
       "scopeLabel": "Melilla · 1200–1247"
     },
     {
-      "name": "Melilla · Sultanato benimerín · 1248–1464 · revisión África y Levante 54",
+      "name": "Melilla · Sultanato benimerín · 1248–1464 · revisión África y Levante 75",
       "corridor": "Norte de África, Levante y Chipre · continuidad geográfica completa",
       "color": "#86715d",
       "coverage": {
@@ -299353,7 +300029,7 @@
       "scopeLabel": "Melilla · 1248–1464"
     },
     {
-      "name": "Melilla · Sultanato wattasí · 1465–1496 · revisión África y Levante 55",
+      "name": "Melilla · Sultanato wattasí · 1465–1496 · revisión África y Levante 76",
       "corridor": "Norte de África, Levante y Chipre · continuidad geográfica completa",
       "color": "#86715d",
       "coverage": {
@@ -299389,7 +300065,7 @@
       "scopeLabel": "Melilla · 1465–1496"
     },
     {
-      "name": "Melilla · Presidios españoles del Magreb · 1497–1515 · revisión África y Levante 56",
+      "name": "Melilla · Presidios españoles del Magreb · 1497–1515 · revisión África y Levante 77",
       "corridor": "Norte de África, Levante y Chipre · continuidad geográfica completa",
       "color": "#86715d",
       "coverage": {
@@ -299404,10 +300080,10 @@
           ],
           "oldIds": [],
           "borderline": [],
-          "event": "Plaza fuerte de Melilla."
+          "event": "Plaza de Melilla. La celda aproxima su localización y no acredita dominio sobre todo el entorno rural. Corte anual por la situación al final del año; conquista o evacuación dentro del año se documentan en las fuentes."
         }
       ],
-      "note": "Plaza fuerte de Melilla.",
+      "note": "Plaza de Melilla. La celda aproxima su localización y no acredita dominio sobre todo el entorno rural. Corte anual por la situación al final del año; conquista o evacuación dentro del año se documentan en las fuentes.",
       "sources": [
         {
           "title": "Treccani · Melilla",
@@ -299416,11 +300092,11 @@
         }
       ],
       "precision": "regional_approximation",
-      "limitedCore": false,
+      "limitedCore": true,
       "scopeLabel": "Melilla · 1497–1515"
     },
     {
-      "name": "Melilla · Presidios españoles del Magreb · 1516–1800 · revisión África y Levante 57",
+      "name": "Melilla · Presidios españoles del Magreb · 1516–1800 · revisión África y Levante 78",
       "corridor": "Norte de África, Levante y Chipre · continuidad geográfica completa",
       "color": "#86715d",
       "coverage": {
@@ -299435,10 +300111,10 @@
           ],
           "oldIds": [],
           "borderline": [],
-          "event": "Plaza fuerte de Melilla."
+          "event": "Plaza de Melilla. La celda aproxima su localización y no acredita dominio sobre todo el entorno rural. Corte anual por la situación al final del año; conquista o evacuación dentro del año se documentan en las fuentes."
         }
       ],
-      "note": "Plaza fuerte de Melilla.",
+      "note": "Plaza de Melilla. La celda aproxima su localización y no acredita dominio sobre todo el entorno rural. Corte anual por la situación al final del año; conquista o evacuación dentro del año se documentan en las fuentes.",
       "sources": [
         {
           "title": "Treccani · Melilla",
@@ -299447,11 +300123,11 @@
         }
       ],
       "precision": "regional_approximation",
-      "limitedCore": false,
+      "limitedCore": true,
       "scopeLabel": "Melilla · 1516–1800"
     },
     {
-      "name": "Tangier · Califato almohade · 1200–1247 · revisión África y Levante 58",
+      "name": "Tangier · Califato almohade · 1200–1247 · revisión África y Levante 79",
       "corridor": "Norte de África, Levante y Chipre · continuidad geográfica completa",
       "color": "#86715d",
       "coverage": {
@@ -299482,7 +300158,7 @@
       "scopeLabel": "Tangier · 1200–1247"
     },
     {
-      "name": "Tangier · Sultanato benimerín · 1248–1464 · revisión África y Levante 59",
+      "name": "Tangier · Sultanato benimerín · 1248–1464 · revisión África y Levante 80",
       "corridor": "Norte de África, Levante y Chipre · continuidad geográfica completa",
       "color": "#86715d",
       "coverage": {
@@ -299518,7 +300194,7 @@
       "scopeLabel": "Tangier · 1248–1464"
     },
     {
-      "name": "Tangier · Sultanato wattasí · 1465–1470 · revisión África y Levante 60",
+      "name": "Tangier · Sultanato wattasí · 1465–1470 · revisión África y Levante 81",
       "corridor": "Norte de África, Levante y Chipre · continuidad geográfica completa",
       "color": "#86715d",
       "coverage": {
@@ -299554,7 +300230,7 @@
       "scopeLabel": "Tangier · 1465–1470"
     },
     {
-      "name": "Tangier · Plazas portuguesas del Magreb · 1471–1661 · revisión África y Levante 61",
+      "name": "Tangier · Plazas portuguesas del Magreb · 1471–1661 · revisión África y Levante 82",
       "corridor": "Norte de África, Levante y Chipre · continuidad geográfica completa",
       "color": "#86715d",
       "coverage": {
@@ -299569,10 +300245,10 @@
           ],
           "oldIds": [],
           "borderline": [],
-          "event": "Plaza fuerte de Tangier."
+          "event": "Plaza de Tangier. La celda aproxima su localización y no acredita dominio sobre todo el entorno rural. Corte anual por la situación al final del año; conquista o evacuación dentro del año se documentan en las fuentes."
         }
       ],
-      "note": "Plaza fuerte de Tangier.",
+      "note": "Plaza de Tangier. La celda aproxima su localización y no acredita dominio sobre todo el entorno rural. Corte anual por la situación al final del año; conquista o evacuación dentro del año se documentan en las fuentes.",
       "sources": [
         {
           "title": "Ottoman History Podcast · The English in 17th-Century Tangier",
@@ -299581,11 +300257,11 @@
         }
       ],
       "precision": "regional_approximation",
-      "limitedCore": false,
+      "limitedCore": true,
       "scopeLabel": "Tangier · 1471–1661"
     },
     {
-      "name": "Tangier · Tánger inglés · 1662–1683 · revisión África y Levante 62",
+      "name": "Tangier · Tánger inglés · 1662–1683 · revisión África y Levante 83",
       "corridor": "Norte de África, Levante y Chipre · continuidad geográfica completa",
       "color": "#86715d",
       "coverage": {
@@ -299600,10 +300276,10 @@
           ],
           "oldIds": [],
           "borderline": [],
-          "event": "Plaza fuerte de Tangier."
+          "event": "Plaza de Tangier. La celda aproxima su localización y no acredita dominio sobre todo el entorno rural. Corte anual por la situación al final del año; conquista o evacuación dentro del año se documentan en las fuentes."
         }
       ],
-      "note": "Plaza fuerte de Tangier.",
+      "note": "Plaza de Tangier. La celda aproxima su localización y no acredita dominio sobre todo el entorno rural. Corte anual por la situación al final del año; conquista o evacuación dentro del año se documentan en las fuentes.",
       "sources": [
         {
           "title": "Ottoman History Podcast · The English in 17th-Century Tangier",
@@ -299612,11 +300288,11 @@
         }
       ],
       "precision": "regional_approximation",
-      "limitedCore": false,
+      "limitedCore": true,
       "scopeLabel": "Tangier · 1662–1683"
     },
     {
-      "name": "Tangier · Sultanato alauí · 1684–1800 · revisión África y Levante 63",
+      "name": "Tangier · Sultanato alauí · 1684–1800 · revisión África y Levante 84",
       "corridor": "Norte de África, Levante y Chipre · continuidad geográfica completa",
       "color": "#86715d",
       "coverage": {
@@ -299647,7 +300323,7 @@
       "scopeLabel": "Tangier · 1684–1800"
     },
     {
-      "name": "Marruecos meridional · Califato almohade · 1200–1268 · revisión África y Levante 64",
+      "name": "Marruecos meridional · Califato almohade · 1200–1268 · revisión África y Levante 85",
       "corridor": "Norte de África, Levante y Chipre · continuidad geográfica completa",
       "color": "#86715d",
       "coverage": {
@@ -299658,16 +300334,13 @@
         {
           "from": 1200,
           "ids": [
-            "Agadir",
             "Agdez",
             "Aghmat",
-            "Aguz",
             "Ait_Benhaddou",
             "Ait_Daoud",
             "Ameskour",
             "Anti_Atlas1",
             "Anti_Atlas2",
-            "Asfi",
             "Azilal",
             "Bechar",
             "Bejaad",
@@ -299702,7 +300375,6 @@
             "Miatbir",
             "Middle_High_Atlas",
             "Midelt",
-            "Mogador",
             "Moulouya_Corridor2",
             "Mrirah",
             "Naffis",
@@ -299758,7 +300430,7 @@
       "scopeLabel": "Marruecos meridional · 1200–1268"
     },
     {
-      "name": "Marruecos meridional · Sultanato benimerín · 1269–1464 · revisión África y Levante 65",
+      "name": "Marruecos meridional · Sultanato benimerín · 1269–1464 · revisión África y Levante 86",
       "corridor": "Norte de África, Levante y Chipre · continuidad geográfica completa",
       "color": "#86715d",
       "coverage": {
@@ -299769,16 +300441,13 @@
         {
           "from": 1269,
           "ids": [
-            "Agadir",
             "Agdez",
             "Aghmat",
-            "Aguz",
             "Ait_Benhaddou",
             "Ait_Daoud",
             "Ameskour",
             "Anti_Atlas1",
             "Anti_Atlas2",
-            "Asfi",
             "Azilal",
             "Bechar",
             "Bejaad",
@@ -299813,7 +300482,6 @@
             "Miatbir",
             "Middle_High_Atlas",
             "Midelt",
-            "Mogador",
             "Moulouya_Corridor2",
             "Mrirah",
             "Naffis",
@@ -299874,7 +300542,7 @@
       "scopeLabel": "Marruecos meridional · 1269–1464"
     },
     {
-      "name": "Marruecos meridional · Marruecos meridional · poderes locales · 1465–1523 · revisión África y Levante 66",
+      "name": "Marruecos meridional · Marruecos meridional · poderes locales · 1465–1523 · revisión África y Levante 87",
       "corridor": "Norte de África, Levante y Chipre · continuidad geográfica completa",
       "color": "#86715d",
       "coverage": {
@@ -299885,16 +300553,13 @@
         {
           "from": 1465,
           "ids": [
-            "Agadir",
             "Agdez",
             "Aghmat",
-            "Aguz",
             "Ait_Benhaddou",
             "Ait_Daoud",
             "Ameskour",
             "Anti_Atlas1",
             "Anti_Atlas2",
-            "Asfi",
             "Azilal",
             "Bechar",
             "Bejaad",
@@ -299929,7 +300594,6 @@
             "Miatbir",
             "Middle_High_Atlas",
             "Midelt",
-            "Mogador",
             "Moulouya_Corridor2",
             "Mrirah",
             "Naffis",
@@ -299991,7 +300655,7 @@
       "authorityCondition": "control disputado"
     },
     {
-      "name": "Marruecos meridional · Sultanato saadí · 1524–1667 · revisión África y Levante 67",
+      "name": "Marruecos meridional · Sultanato saadí · 1524–1667 · revisión África y Levante 88",
       "corridor": "Norte de África, Levante y Chipre · continuidad geográfica completa",
       "color": "#86715d",
       "coverage": {
@@ -300002,16 +300666,13 @@
         {
           "from": 1524,
           "ids": [
-            "Agadir",
             "Agdez",
             "Aghmat",
-            "Aguz",
             "Ait_Benhaddou",
             "Ait_Daoud",
             "Ameskour",
             "Anti_Atlas1",
             "Anti_Atlas2",
-            "Asfi",
             "Azilal",
             "Bechar",
             "Bejaad",
@@ -300046,7 +300707,6 @@
             "Miatbir",
             "Middle_High_Atlas",
             "Midelt",
-            "Mogador",
             "Moulouya_Corridor2",
             "Mrirah",
             "Naffis",
@@ -300102,7 +300762,7 @@
       "scopeLabel": "Marruecos meridional · 1524–1667"
     },
     {
-      "name": "Marruecos meridional · Sultanato alauí · 1668–1800 · revisión África y Levante 68",
+      "name": "Marruecos meridional · Sultanato alauí · 1668–1800 · revisión África y Levante 89",
       "corridor": "Norte de África, Levante y Chipre · continuidad geográfica completa",
       "color": "#86715d",
       "coverage": {
@@ -300113,16 +300773,13 @@
         {
           "from": 1668,
           "ids": [
-            "Agadir",
             "Agdez",
             "Aghmat",
-            "Aguz",
             "Ait_Benhaddou",
             "Ait_Daoud",
             "Ameskour",
             "Anti_Atlas1",
             "Anti_Atlas2",
-            "Asfi",
             "Azilal",
             "Bechar",
             "Bejaad",
@@ -300157,7 +300814,6 @@
             "Miatbir",
             "Middle_High_Atlas",
             "Midelt",
-            "Mogador",
             "Moulouya_Corridor2",
             "Mrirah",
             "Naffis",
@@ -300213,7 +300869,842 @@
       "scopeLabel": "Marruecos meridional · 1668–1800"
     },
     {
-      "name": "Palestina interior y Transjordania · Sultanato ayubí · 1200–1259 · revisión África y Levante 69",
+      "name": "Agadir · Califato almohade · 1200–1268 · revisión África y Levante 90",
+      "corridor": "Norte de África, Levante y Chipre · continuidad geográfica completa",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1200,
+        "through": 1268
+      },
+      "versions": [
+        {
+          "from": 1200,
+          "ids": [
+            "Agadir"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Marrakech, capital almohade hasta 1269."
+        }
+      ],
+      "note": "Marrakech, capital almohade hasta 1269.",
+      "sources": [
+        {
+          "title": "Treccani · Almohadi",
+          "url": "https://www.treccani.it/enciclopedia/almohadi/",
+          "locator": "Fundación en 1147 y desaparición en 1269 con la toma de Marrakech por los benimerines."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": false,
+      "scopeLabel": "Agadir · 1200–1268"
+    },
+    {
+      "name": "Agadir · Sultanato benimerín · 1269–1464 · revisión África y Levante 91",
+      "corridor": "Norte de África, Levante y Chipre · continuidad geográfica completa",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1269,
+        "through": 1464
+      },
+      "versions": [
+        {
+          "from": 1269,
+          "ids": [
+            "Agadir"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Marrakech y el sur bajo los benimerines desde 1269."
+        }
+      ],
+      "note": "Marrakech y el sur bajo los benimerines desde 1269.",
+      "sources": [
+        {
+          "title": "Treccani · Merìnidi",
+          "url": "https://www.treccani.it/enciclopedia/merinidi/",
+          "locator": "Sustituyen a los almohades (Marrakech, 1269); los suplantan después los wattasíes."
+        },
+        {
+          "title": "Treccani · Almohadi",
+          "url": "https://www.treccani.it/enciclopedia/almohadi/",
+          "locator": "Fundación en 1147 y desaparición en 1269 con la toma de Marrakech por los benimerines."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": false,
+      "scopeLabel": "Agadir · 1269–1464"
+    },
+    {
+      "name": "Agadir · Marruecos meridional · poderes locales · 1465–1504 · revisión África y Levante 92",
+      "corridor": "Norte de África, Levante y Chipre · continuidad geográfica completa",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1465,
+        "through": 1504
+      },
+      "versions": [
+        {
+          "from": 1465,
+          "ids": [
+            "Agadir"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Tras la caída de los benimerines, Marrakech y el Sus quedaron en manos de emires y jerifes locales hasta la toma de Marrakech por los saadíes."
+        }
+      ],
+      "note": "Tras la caída de los benimerines, Marrakech y el Sus quedaron en manos de emires y jerifes locales hasta la toma de Marrakech por los saadíes.",
+      "sources": [
+        {
+          "title": "Treccani · Marocco",
+          "url": "https://www.treccani.it/enciclopedia/marocco/",
+          "locator": "Benimerines (siglos XIII–XV), wattasíes (XV–XVI) y las dinastías jerifianas saadí y filalí (alauí)."
+        },
+        {
+          "title": "Treccani · Wattàsidi",
+          "url": "https://www.treccani.it/enciclopedia/wattasidi/",
+          "locator": "Rama colateral de los benimerines, en el poder desde mediados del siglo XV hasta la primera mitad del XVI."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": false,
+      "scopeLabel": "Agadir · 1465–1504",
+      "authorityCondition": "control disputado"
+    },
+    {
+      "name": "Agadir · Plazas portuguesas del Magreb · 1505–1540 · revisión África y Levante 93",
+      "corridor": "Norte de África, Levante y Chipre · continuidad geográfica completa",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1505,
+        "through": 1540
+      },
+      "versions": [
+        {
+          "from": 1505,
+          "ids": [
+            "Agadir"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Plaza de Agadir. La celda aproxima su localización y no acredita dominio sobre todo el entorno rural. Corte anual por la situación al final del año; conquista o evacuación dentro del año se documentan en las fuentes."
+        }
+      ],
+      "note": "Plaza de Agadir. La celda aproxima su localización y no acredita dominio sobre todo el entorno rural. Corte anual por la situación al final del año; conquista o evacuación dentro del año se documentan en las fuentes.",
+      "sources": [
+        {
+          "title": "HPIP · Agadir, arquitectura militar",
+          "url": "https://hpip.org/en/heritage/details/1930",
+          "locator": "Castillo de João Lopes de Sequeira fundado en 1505; plaza perdida ante los saadíes en 1541."
+        },
+        {
+          "title": "HPIP · Safi",
+          "url": "https://hpip.org/pt/Contents/Place/376",
+          "locator": "Conquista efectiva de Safí en 1508 y abandono portugués en 1541; la factoría y el protectorado anteriores no equivalen a ocupación de la ciudad."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": true,
+      "scopeLabel": "Agadir · 1505–1540"
+    },
+    {
+      "name": "Agadir · Sultanato saadí · 1541–1667 · revisión África y Levante 94",
+      "corridor": "Norte de África, Levante y Chipre · continuidad geográfica completa",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1541,
+        "through": 1667
+      },
+      "versions": [
+        {
+          "from": 1541,
+          "ids": [
+            "Agadir"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Marrakech, capital saadí desde 1524/1525."
+        }
+      ],
+      "note": "Marrakech, capital saadí desde 1524/1525.",
+      "sources": [
+        {
+          "title": "Treccani · Marocco",
+          "url": "https://www.treccani.it/enciclopedia/marocco/",
+          "locator": "Benimerines (siglos XIII–XV), wattasíes (XV–XVI) y las dinastías jerifianas saadí y filalí (alauí)."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": false,
+      "scopeLabel": "Agadir · 1541–1667"
+    },
+    {
+      "name": "Agadir · Sultanato alauí · 1668–1800 · revisión África y Levante 95",
+      "corridor": "Norte de África, Levante y Chipre · continuidad geográfica completa",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1668,
+        "through": 1800
+      },
+      "versions": [
+        {
+          "from": 1668,
+          "ids": [
+            "Agadir"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Sultanato alauí desde la toma de Marrakech."
+        }
+      ],
+      "note": "Sultanato alauí desde la toma de Marrakech.",
+      "sources": [
+        {
+          "title": "Treccani · Marocco",
+          "url": "https://www.treccani.it/enciclopedia/marocco/",
+          "locator": "Benimerines (siglos XIII–XV), wattasíes (XV–XVI) y las dinastías jerifianas saadí y filalí (alauí)."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": false,
+      "scopeLabel": "Agadir · 1668–1800"
+    },
+    {
+      "name": "Aguz · Califato almohade · 1200–1268 · revisión África y Levante 96",
+      "corridor": "Norte de África, Levante y Chipre · continuidad geográfica completa",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1200,
+        "through": 1268
+      },
+      "versions": [
+        {
+          "from": 1200,
+          "ids": [
+            "Aguz"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Marrakech, capital almohade hasta 1269."
+        }
+      ],
+      "note": "Marrakech, capital almohade hasta 1269.",
+      "sources": [
+        {
+          "title": "Treccani · Almohadi",
+          "url": "https://www.treccani.it/enciclopedia/almohadi/",
+          "locator": "Fundación en 1147 y desaparición en 1269 con la toma de Marrakech por los benimerines."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": false,
+      "scopeLabel": "Aguz · 1200–1268"
+    },
+    {
+      "name": "Aguz · Sultanato benimerín · 1269–1464 · revisión África y Levante 97",
+      "corridor": "Norte de África, Levante y Chipre · continuidad geográfica completa",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1269,
+        "through": 1464
+      },
+      "versions": [
+        {
+          "from": 1269,
+          "ids": [
+            "Aguz"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Marrakech y el sur bajo los benimerines desde 1269."
+        }
+      ],
+      "note": "Marrakech y el sur bajo los benimerines desde 1269.",
+      "sources": [
+        {
+          "title": "Treccani · Merìnidi",
+          "url": "https://www.treccani.it/enciclopedia/merinidi/",
+          "locator": "Sustituyen a los almohades (Marrakech, 1269); los suplantan después los wattasíes."
+        },
+        {
+          "title": "Treccani · Almohadi",
+          "url": "https://www.treccani.it/enciclopedia/almohadi/",
+          "locator": "Fundación en 1147 y desaparición en 1269 con la toma de Marrakech por los benimerines."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": false,
+      "scopeLabel": "Aguz · 1269–1464"
+    },
+    {
+      "name": "Aguz · Marruecos meridional · poderes locales · 1465–1507 · revisión África y Levante 98",
+      "corridor": "Norte de África, Levante y Chipre · continuidad geográfica completa",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1465,
+        "through": 1507
+      },
+      "versions": [
+        {
+          "from": 1465,
+          "ids": [
+            "Aguz"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Tras la caída de los benimerines, Marrakech y el Sus quedaron en manos de emires y jerifes locales hasta la toma de Marrakech por los saadíes."
+        }
+      ],
+      "note": "Tras la caída de los benimerines, Marrakech y el Sus quedaron en manos de emires y jerifes locales hasta la toma de Marrakech por los saadíes.",
+      "sources": [
+        {
+          "title": "Treccani · Marocco",
+          "url": "https://www.treccani.it/enciclopedia/marocco/",
+          "locator": "Benimerines (siglos XIII–XV), wattasíes (XV–XVI) y las dinastías jerifianas saadí y filalí (alauí)."
+        },
+        {
+          "title": "Treccani · Wattàsidi",
+          "url": "https://www.treccani.it/enciclopedia/wattasidi/",
+          "locator": "Rama colateral de los benimerines, en el poder desde mediados del siglo XV hasta la primera mitad del XVI."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": false,
+      "scopeLabel": "Aguz · 1465–1507",
+      "authorityCondition": "control disputado"
+    },
+    {
+      "name": "Aguz · Plazas portuguesas del Magreb · 1508–1524 · revisión África y Levante 99",
+      "corridor": "Norte de África, Levante y Chipre · continuidad geográfica completa",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1508,
+        "through": 1524
+      },
+      "versions": [
+        {
+          "from": 1508,
+          "ids": [
+            "Aguz"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Plaza de Aguz. La celda aproxima su localización y no acredita dominio sobre todo el entorno rural. Corte anual por la situación al final del año; conquista o evacuación dentro del año se documentan en las fuentes."
+        }
+      ],
+      "note": "Plaza de Aguz. La celda aproxima su localización y no acredita dominio sobre todo el entorno rural. Corte anual por la situación al final del año; conquista o evacuación dentro del año se documentan en las fuentes.",
+      "sources": [
+        {
+          "title": "Ministério da Defesa Nacional de Portugal · O corso e a pirataria no golfo luso-hispano-marroquino",
+          "url": "https://www.defesa.gov.pt/pt/defesa/organizacao/comissoes/cphm/rphm/edicoes/ano2/n22022/corso/",
+          "locator": "Fortalezas satélite portuguesas de Aguz desde 1508; véase HPIP para su abandono hacia 1524–1525."
+        },
+        {
+          "title": "HPIP · Castelo de Aguz",
+          "url": "https://hpip.org/pt/heritage/details/922",
+          "locator": "Concesiones desde 1508, castillo de piedra construido a partir de 1519 y fin de la presencia hacia 1524–1525."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": true,
+      "scopeLabel": "Aguz · 1508–1524"
+    },
+    {
+      "name": "Aguz · Sultanato saadí · 1525–1667 · revisión África y Levante 100",
+      "corridor": "Norte de África, Levante y Chipre · continuidad geográfica completa",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1525,
+        "through": 1667
+      },
+      "versions": [
+        {
+          "from": 1525,
+          "ids": [
+            "Aguz"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Marrakech, capital saadí desde 1524/1525."
+        }
+      ],
+      "note": "Marrakech, capital saadí desde 1524/1525.",
+      "sources": [
+        {
+          "title": "Treccani · Marocco",
+          "url": "https://www.treccani.it/enciclopedia/marocco/",
+          "locator": "Benimerines (siglos XIII–XV), wattasíes (XV–XVI) y las dinastías jerifianas saadí y filalí (alauí)."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": false,
+      "scopeLabel": "Aguz · 1525–1667"
+    },
+    {
+      "name": "Aguz · Sultanato alauí · 1668–1800 · revisión África y Levante 101",
+      "corridor": "Norte de África, Levante y Chipre · continuidad geográfica completa",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1668,
+        "through": 1800
+      },
+      "versions": [
+        {
+          "from": 1668,
+          "ids": [
+            "Aguz"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Sultanato alauí desde la toma de Marrakech."
+        }
+      ],
+      "note": "Sultanato alauí desde la toma de Marrakech.",
+      "sources": [
+        {
+          "title": "Treccani · Marocco",
+          "url": "https://www.treccani.it/enciclopedia/marocco/",
+          "locator": "Benimerines (siglos XIII–XV), wattasíes (XV–XVI) y las dinastías jerifianas saadí y filalí (alauí)."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": false,
+      "scopeLabel": "Aguz · 1668–1800"
+    },
+    {
+      "name": "Asfi · Califato almohade · 1200–1268 · revisión África y Levante 102",
+      "corridor": "Norte de África, Levante y Chipre · continuidad geográfica completa",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1200,
+        "through": 1268
+      },
+      "versions": [
+        {
+          "from": 1200,
+          "ids": [
+            "Asfi"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Marrakech, capital almohade hasta 1269."
+        }
+      ],
+      "note": "Marrakech, capital almohade hasta 1269.",
+      "sources": [
+        {
+          "title": "Treccani · Almohadi",
+          "url": "https://www.treccani.it/enciclopedia/almohadi/",
+          "locator": "Fundación en 1147 y desaparición en 1269 con la toma de Marrakech por los benimerines."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": false,
+      "scopeLabel": "Asfi · 1200–1268"
+    },
+    {
+      "name": "Asfi · Sultanato benimerín · 1269–1464 · revisión África y Levante 103",
+      "corridor": "Norte de África, Levante y Chipre · continuidad geográfica completa",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1269,
+        "through": 1464
+      },
+      "versions": [
+        {
+          "from": 1269,
+          "ids": [
+            "Asfi"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Marrakech y el sur bajo los benimerines desde 1269."
+        }
+      ],
+      "note": "Marrakech y el sur bajo los benimerines desde 1269.",
+      "sources": [
+        {
+          "title": "Treccani · Merìnidi",
+          "url": "https://www.treccani.it/enciclopedia/merinidi/",
+          "locator": "Sustituyen a los almohades (Marrakech, 1269); los suplantan después los wattasíes."
+        },
+        {
+          "title": "Treccani · Almohadi",
+          "url": "https://www.treccani.it/enciclopedia/almohadi/",
+          "locator": "Fundación en 1147 y desaparición en 1269 con la toma de Marrakech por los benimerines."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": false,
+      "scopeLabel": "Asfi · 1269–1464"
+    },
+    {
+      "name": "Asfi · Marruecos meridional · poderes locales · 1465–1507 · revisión África y Levante 104",
+      "corridor": "Norte de África, Levante y Chipre · continuidad geográfica completa",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1465,
+        "through": 1507
+      },
+      "versions": [
+        {
+          "from": 1465,
+          "ids": [
+            "Asfi"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Tras la caída de los benimerines, Marrakech y el Sus quedaron en manos de emires y jerifes locales hasta la toma de Marrakech por los saadíes."
+        }
+      ],
+      "note": "Tras la caída de los benimerines, Marrakech y el Sus quedaron en manos de emires y jerifes locales hasta la toma de Marrakech por los saadíes.",
+      "sources": [
+        {
+          "title": "Treccani · Marocco",
+          "url": "https://www.treccani.it/enciclopedia/marocco/",
+          "locator": "Benimerines (siglos XIII–XV), wattasíes (XV–XVI) y las dinastías jerifianas saadí y filalí (alauí)."
+        },
+        {
+          "title": "Treccani · Wattàsidi",
+          "url": "https://www.treccani.it/enciclopedia/wattasidi/",
+          "locator": "Rama colateral de los benimerines, en el poder desde mediados del siglo XV hasta la primera mitad del XVI."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": false,
+      "scopeLabel": "Asfi · 1465–1507",
+      "authorityCondition": "control disputado"
+    },
+    {
+      "name": "Asfi · Plazas portuguesas del Magreb · 1508–1540 · revisión África y Levante 105",
+      "corridor": "Norte de África, Levante y Chipre · continuidad geográfica completa",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1508,
+        "through": 1540
+      },
+      "versions": [
+        {
+          "from": 1508,
+          "ids": [
+            "Asfi"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Plaza de Asfi. La celda aproxima su localización y no acredita dominio sobre todo el entorno rural. Corte anual por la situación al final del año; conquista o evacuación dentro del año se documentan en las fuentes."
+        }
+      ],
+      "note": "Plaza de Asfi. La celda aproxima su localización y no acredita dominio sobre todo el entorno rural. Corte anual por la situación al final del año; conquista o evacuación dentro del año se documentan en las fuentes.",
+      "sources": [
+        {
+          "title": "HPIP · Safi",
+          "url": "https://hpip.org/pt/Contents/Place/376",
+          "locator": "Conquista efectiva de Safí en 1508 y abandono portugués en 1541; la factoría y el protectorado anteriores no equivalen a ocupación de la ciudad."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": true,
+      "scopeLabel": "Asfi · 1508–1540"
+    },
+    {
+      "name": "Asfi · Sultanato saadí · 1541–1667 · revisión África y Levante 106",
+      "corridor": "Norte de África, Levante y Chipre · continuidad geográfica completa",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1541,
+        "through": 1667
+      },
+      "versions": [
+        {
+          "from": 1541,
+          "ids": [
+            "Asfi"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Marrakech, capital saadí desde 1524/1525."
+        }
+      ],
+      "note": "Marrakech, capital saadí desde 1524/1525.",
+      "sources": [
+        {
+          "title": "Treccani · Marocco",
+          "url": "https://www.treccani.it/enciclopedia/marocco/",
+          "locator": "Benimerines (siglos XIII–XV), wattasíes (XV–XVI) y las dinastías jerifianas saadí y filalí (alauí)."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": false,
+      "scopeLabel": "Asfi · 1541–1667"
+    },
+    {
+      "name": "Asfi · Sultanato alauí · 1668–1800 · revisión África y Levante 107",
+      "corridor": "Norte de África, Levante y Chipre · continuidad geográfica completa",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1668,
+        "through": 1800
+      },
+      "versions": [
+        {
+          "from": 1668,
+          "ids": [
+            "Asfi"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Sultanato alauí desde la toma de Marrakech."
+        }
+      ],
+      "note": "Sultanato alauí desde la toma de Marrakech.",
+      "sources": [
+        {
+          "title": "Treccani · Marocco",
+          "url": "https://www.treccani.it/enciclopedia/marocco/",
+          "locator": "Benimerines (siglos XIII–XV), wattasíes (XV–XVI) y las dinastías jerifianas saadí y filalí (alauí)."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": false,
+      "scopeLabel": "Asfi · 1668–1800"
+    },
+    {
+      "name": "Mogador · Califato almohade · 1200–1268 · revisión África y Levante 108",
+      "corridor": "Norte de África, Levante y Chipre · continuidad geográfica completa",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1200,
+        "through": 1268
+      },
+      "versions": [
+        {
+          "from": 1200,
+          "ids": [
+            "Mogador"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Marrakech, capital almohade hasta 1269."
+        }
+      ],
+      "note": "Marrakech, capital almohade hasta 1269.",
+      "sources": [
+        {
+          "title": "Treccani · Almohadi",
+          "url": "https://www.treccani.it/enciclopedia/almohadi/",
+          "locator": "Fundación en 1147 y desaparición en 1269 con la toma de Marrakech por los benimerines."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": false,
+      "scopeLabel": "Mogador · 1200–1268"
+    },
+    {
+      "name": "Mogador · Sultanato benimerín · 1269–1464 · revisión África y Levante 109",
+      "corridor": "Norte de África, Levante y Chipre · continuidad geográfica completa",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1269,
+        "through": 1464
+      },
+      "versions": [
+        {
+          "from": 1269,
+          "ids": [
+            "Mogador"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Marrakech y el sur bajo los benimerines desde 1269."
+        }
+      ],
+      "note": "Marrakech y el sur bajo los benimerines desde 1269.",
+      "sources": [
+        {
+          "title": "Treccani · Merìnidi",
+          "url": "https://www.treccani.it/enciclopedia/merinidi/",
+          "locator": "Sustituyen a los almohades (Marrakech, 1269); los suplantan después los wattasíes."
+        },
+        {
+          "title": "Treccani · Almohadi",
+          "url": "https://www.treccani.it/enciclopedia/almohadi/",
+          "locator": "Fundación en 1147 y desaparición en 1269 con la toma de Marrakech por los benimerines."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": false,
+      "scopeLabel": "Mogador · 1269–1464"
+    },
+    {
+      "name": "Mogador · Marruecos meridional · poderes locales · 1465–1505 · revisión África y Levante 110",
+      "corridor": "Norte de África, Levante y Chipre · continuidad geográfica completa",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1465,
+        "through": 1505
+      },
+      "versions": [
+        {
+          "from": 1465,
+          "ids": [
+            "Mogador"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Tras la caída de los benimerines, Marrakech y el Sus quedaron en manos de emires y jerifes locales hasta la toma de Marrakech por los saadíes."
+        }
+      ],
+      "note": "Tras la caída de los benimerines, Marrakech y el Sus quedaron en manos de emires y jerifes locales hasta la toma de Marrakech por los saadíes.",
+      "sources": [
+        {
+          "title": "Treccani · Marocco",
+          "url": "https://www.treccani.it/enciclopedia/marocco/",
+          "locator": "Benimerines (siglos XIII–XV), wattasíes (XV–XVI) y las dinastías jerifianas saadí y filalí (alauí)."
+        },
+        {
+          "title": "Treccani · Wattàsidi",
+          "url": "https://www.treccani.it/enciclopedia/wattasidi/",
+          "locator": "Rama colateral de los benimerines, en el poder desde mediados del siglo XV hasta la primera mitad del XVI."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": false,
+      "scopeLabel": "Mogador · 1465–1505",
+      "authorityCondition": "control disputado"
+    },
+    {
+      "name": "Mogador · Plazas portuguesas del Magreb · 1506–1509 · revisión África y Levante 111",
+      "corridor": "Norte de África, Levante y Chipre · continuidad geográfica completa",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1506,
+        "through": 1509
+      },
+      "versions": [
+        {
+          "from": 1506,
+          "ids": [
+            "Mogador"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Plaza de Mogador. La celda aproxima su localización y no acredita dominio sobre todo el entorno rural. Corte anual por la situación al final del año; conquista o evacuación dentro del año se documentan en las fuentes."
+        }
+      ],
+      "note": "Plaza de Mogador. La celda aproxima su localización y no acredita dominio sobre todo el entorno rural. Corte anual por la situación al final del año; conquista o evacuación dentro del año se documentan en las fuentes.",
+      "sources": [
+        {
+          "title": "HPIP · Castelo Real de Mogador",
+          "url": "https://hpip.org/pt/heritage/details/1931",
+          "locator": "Construcción portuguesa desde julio de 1506; pérdida del Castelo Real antes del final de 1510."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": true,
+      "scopeLabel": "Mogador · 1506–1509"
+    },
+    {
+      "name": "Mogador · Marruecos meridional · poderes locales · 1510–1523 · revisión África y Levante 112",
+      "corridor": "Norte de África, Levante y Chipre · continuidad geográfica completa",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1510,
+        "through": 1523
+      },
+      "versions": [
+        {
+          "from": 1510,
+          "ids": [
+            "Mogador"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Tras la caída de los benimerines, Marrakech y el Sus quedaron en manos de emires y jerifes locales hasta la toma de Marrakech por los saadíes."
+        }
+      ],
+      "note": "Tras la caída de los benimerines, Marrakech y el Sus quedaron en manos de emires y jerifes locales hasta la toma de Marrakech por los saadíes.",
+      "sources": [
+        {
+          "title": "Treccani · Marocco",
+          "url": "https://www.treccani.it/enciclopedia/marocco/",
+          "locator": "Benimerines (siglos XIII–XV), wattasíes (XV–XVI) y las dinastías jerifianas saadí y filalí (alauí)."
+        },
+        {
+          "title": "Treccani · Wattàsidi",
+          "url": "https://www.treccani.it/enciclopedia/wattasidi/",
+          "locator": "Rama colateral de los benimerines, en el poder desde mediados del siglo XV hasta la primera mitad del XVI."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": false,
+      "scopeLabel": "Mogador · 1510–1523",
+      "authorityCondition": "control disputado"
+    },
+    {
+      "name": "Mogador · Sultanato saadí · 1524–1667 · revisión África y Levante 113",
+      "corridor": "Norte de África, Levante y Chipre · continuidad geográfica completa",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1524,
+        "through": 1667
+      },
+      "versions": [
+        {
+          "from": 1524,
+          "ids": [
+            "Mogador"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Marrakech, capital saadí desde 1524/1525."
+        }
+      ],
+      "note": "Marrakech, capital saadí desde 1524/1525.",
+      "sources": [
+        {
+          "title": "Treccani · Marocco",
+          "url": "https://www.treccani.it/enciclopedia/marocco/",
+          "locator": "Benimerines (siglos XIII–XV), wattasíes (XV–XVI) y las dinastías jerifianas saadí y filalí (alauí)."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": false,
+      "scopeLabel": "Mogador · 1524–1667"
+    },
+    {
+      "name": "Mogador · Sultanato alauí · 1668–1800 · revisión África y Levante 114",
+      "corridor": "Norte de África, Levante y Chipre · continuidad geográfica completa",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1668,
+        "through": 1800
+      },
+      "versions": [
+        {
+          "from": 1668,
+          "ids": [
+            "Mogador"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Sultanato alauí desde la toma de Marrakech."
+        }
+      ],
+      "note": "Sultanato alauí desde la toma de Marrakech.",
+      "sources": [
+        {
+          "title": "Treccani · Marocco",
+          "url": "https://www.treccani.it/enciclopedia/marocco/",
+          "locator": "Benimerines (siglos XIII–XV), wattasíes (XV–XVI) y las dinastías jerifianas saadí y filalí (alauí)."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": false,
+      "scopeLabel": "Mogador · 1668–1800"
+    },
+    {
+      "name": "Palestina interior y Transjordania · Sultanato ayubí · 1200–1259 · revisión África y Levante 115",
       "corridor": "Norte de África, Levante y Chipre · continuidad geográfica completa",
       "color": "#86715d",
       "coverage": {
@@ -300271,7 +301762,7 @@
       "scopeLabel": "Palestina interior y Transjordania · 1200–1259"
     },
     {
-      "name": "Palestina interior y Transjordania · Sultanato mameluco · 1260–1516 · revisión África y Levante 70",
+      "name": "Palestina interior y Transjordania · Sultanato mameluco · 1260–1516 · revisión África y Levante 116",
       "corridor": "Norte de África, Levante y Chipre · continuidad geográfica completa",
       "color": "#86715d",
       "coverage": {
@@ -300329,7 +301820,7 @@
       "scopeLabel": "Palestina interior y Transjordania · 1260–1516"
     },
     {
-      "name": "Palestina interior y Transjordania · Imperio otomano · 1517–1800 · revisión África y Levante 71",
+      "name": "Palestina interior y Transjordania · Imperio otomano · 1517–1800 · revisión África y Levante 117",
       "corridor": "Norte de África, Levante y Chipre · continuidad geográfica completa",
       "color": "#86715d",
       "coverage": {
@@ -300392,7 +301883,7 @@
       "scopeLabel": "Palestina interior y Transjordania · 1517–1800"
     },
     {
-      "name": "Safed · Sultanato ayubí · 1200–1239 · revisión África y Levante 72",
+      "name": "Safed · Sultanato ayubí · 1200–1239 · revisión África y Levante 118",
       "corridor": "Norte de África, Levante y Chipre · continuidad geográfica completa",
       "color": "#86715d",
       "coverage": {
@@ -300423,7 +301914,7 @@
       "scopeLabel": "Safed · 1200–1239"
     },
     {
-      "name": "Safed · Jerusalén · 1240–1265 · revisión África y Levante 73",
+      "name": "Safed · Jerusalén · 1240–1265 · revisión África y Levante 119",
       "corridor": "Norte de África, Levante y Chipre · continuidad geográfica completa",
       "color": "#86715d",
       "coverage": {
@@ -300454,7 +301945,7 @@
       "scopeLabel": "Safed · 1240–1265"
     },
     {
-      "name": "Safed · Sultanato mameluco · 1266–1515 · revisión África y Levante 74",
+      "name": "Safed · Sultanato mameluco · 1266–1515 · revisión África y Levante 120",
       "corridor": "Norte de África, Levante y Chipre · continuidad geográfica completa",
       "color": "#86715d",
       "coverage": {
@@ -300485,7 +301976,7 @@
       "scopeLabel": "Safed · 1266–1515"
     },
     {
-      "name": "Safed · Imperio otomano · 1516–1800 · revisión África y Levante 75",
+      "name": "Safed · Imperio otomano · 1516–1800 · revisión África y Levante 121",
       "corridor": "Norte de África, Levante y Chipre · continuidad geográfica completa",
       "color": "#86715d",
       "coverage": {
@@ -300516,7 +302007,7 @@
       "scopeLabel": "Safed · 1516–1800"
     },
     {
-      "name": "Sáhara · Tierras saharianas · 1200–1800 · revisión África y Levante 76",
+      "name": "Sáhara · Tierras saharianas · 1200–1800 · revisión África y Levante 122",
       "corridor": "Norte de África, Levante y Chipre · continuidad geográfica completa",
       "color": "#86715d",
       "coverage": {
@@ -300640,7 +302131,7 @@
       "scopeLabel": "Sáhara · 1200–1800"
     },
     {
-      "name": "Siria central · Sultanato ayubí · 1200–1259 · revisión África y Levante 77",
+      "name": "Siria central · Sultanato ayubí · 1200–1259 · revisión África y Levante 123",
       "corridor": "Norte de África, Levante y Chipre · continuidad geográfica completa",
       "color": "#86715d",
       "coverage": {
@@ -300706,7 +302197,7 @@
       "scopeLabel": "Siria central · 1200–1259"
     },
     {
-      "name": "Siria central · Sultanato mameluco · 1260–1515 · revisión África y Levante 78",
+      "name": "Siria central · Sultanato mameluco · 1260–1515 · revisión África y Levante 124",
       "corridor": "Norte de África, Levante y Chipre · continuidad geográfica completa",
       "color": "#86715d",
       "coverage": {
@@ -300772,7 +302263,7 @@
       "scopeLabel": "Siria central · 1260–1515"
     },
     {
-      "name": "Siria central · Imperio otomano · 1516–1800 · revisión África y Levante 79",
+      "name": "Siria central · Imperio otomano · 1516–1800 · revisión África y Levante 125",
       "corridor": "Norte de África, Levante y Chipre · continuidad geográfica completa",
       "color": "#86715d",
       "coverage": {
@@ -300843,7 +302334,7 @@
       "scopeLabel": "Siria central · 1516–1800"
     },
     {
-      "name": "Magreb central occidental · Califato almohade · 1200–1234 · revisión África y Levante 80",
+      "name": "Magreb central occidental · Califato almohade · 1200–1234 · revisión África y Levante 126",
       "corridor": "Norte de África, Levante y Chipre · continuidad geográfica completa",
       "color": "#86715d",
       "coverage": {
@@ -300896,7 +302387,7 @@
       "scopeLabel": "Magreb central occidental · 1200–1234"
     },
     {
-      "name": "Magreb central occidental · Reino de Tremecén · 1235–1336 · revisión África y Levante 81",
+      "name": "Magreb central occidental · Reino de Tremecén · 1235–1336 · revisión África y Levante 127",
       "corridor": "Norte de África, Levante y Chipre · continuidad geográfica completa",
       "color": "#86715d",
       "coverage": {
@@ -300954,7 +302445,7 @@
       "scopeLabel": "Magreb central occidental · 1235–1336"
     },
     {
-      "name": "Magreb central occidental · Sultanato benimerín · 1337–1348 · revisión África y Levante 82",
+      "name": "Magreb central occidental · Sultanato benimerín · 1337–1348 · revisión África y Levante 128",
       "corridor": "Norte de África, Levante y Chipre · continuidad geográfica completa",
       "color": "#86715d",
       "coverage": {
@@ -301008,7 +302499,7 @@
       "authorityCondition": "ocupación"
     },
     {
-      "name": "Magreb central occidental · Reino de Tremecén · 1349–1351 · revisión África y Levante 83",
+      "name": "Magreb central occidental · Reino de Tremecén · 1349–1351 · revisión África y Levante 129",
       "corridor": "Norte de África, Levante y Chipre · continuidad geográfica completa",
       "color": "#86715d",
       "coverage": {
@@ -301061,7 +302552,7 @@
       "scopeLabel": "Magreb central occidental · 1349–1351"
     },
     {
-      "name": "Magreb central occidental · Sultanato benimerín · 1352–1359 · revisión África y Levante 84",
+      "name": "Magreb central occidental · Sultanato benimerín · 1352–1359 · revisión África y Levante 130",
       "corridor": "Norte de África, Levante y Chipre · continuidad geográfica completa",
       "color": "#86715d",
       "coverage": {
@@ -301115,7 +302606,7 @@
       "authorityCondition": "ocupación"
     },
     {
-      "name": "Magreb central occidental · Reino de Tremecén · 1360–1555 · revisión África y Levante 85",
+      "name": "Magreb central occidental · Reino de Tremecén · 1360–1555 · revisión África y Levante 131",
       "corridor": "Norte de África, Levante y Chipre · continuidad geográfica completa",
       "color": "#86715d",
       "coverage": {
@@ -301173,7 +302664,7 @@
       "scopeLabel": "Magreb central occidental · 1360–1555"
     },
     {
-      "name": "Magreb central occidental · Regencia de Argel · 1556–1800 · revisión África y Levante 86",
+      "name": "Magreb central occidental · Regencia de Argel · 1556–1800 · revisión África y Levante 132",
       "corridor": "Norte de África, Levante y Chipre · continuidad geográfica completa",
       "color": "#86715d",
       "coverage": {
@@ -301226,7 +302717,7 @@
       "scopeLabel": "Magreb central occidental · 1556–1800"
     },
     {
-      "name": "Oran · Califato almohade · 1200–1234 · revisión África y Levante 87",
+      "name": "Oran · Califato almohade · 1200–1234 · revisión África y Levante 133",
       "corridor": "Norte de África, Levante y Chipre · continuidad geográfica completa",
       "color": "#86715d",
       "coverage": {
@@ -301257,7 +302748,7 @@
       "scopeLabel": "Oran · 1200–1234"
     },
     {
-      "name": "Oran · Reino de Tremecén · 1235–1336 · revisión África y Levante 88",
+      "name": "Oran · Reino de Tremecén · 1235–1336 · revisión África y Levante 134",
       "corridor": "Norte de África, Levante y Chipre · continuidad geográfica completa",
       "color": "#86715d",
       "coverage": {
@@ -301293,7 +302784,7 @@
       "scopeLabel": "Oran · 1235–1336"
     },
     {
-      "name": "Oran · Sultanato benimerín · 1337–1348 · revisión África y Levante 89",
+      "name": "Oran · Sultanato benimerín · 1337–1348 · revisión África y Levante 135",
       "corridor": "Norte de África, Levante y Chipre · continuidad geográfica completa",
       "color": "#86715d",
       "coverage": {
@@ -301325,7 +302816,7 @@
       "authorityCondition": "ocupación"
     },
     {
-      "name": "Oran · Reino de Tremecén · 1349–1351 · revisión África y Levante 90",
+      "name": "Oran · Reino de Tremecén · 1349–1351 · revisión África y Levante 136",
       "corridor": "Norte de África, Levante y Chipre · continuidad geográfica completa",
       "color": "#86715d",
       "coverage": {
@@ -301356,7 +302847,7 @@
       "scopeLabel": "Oran · 1349–1351"
     },
     {
-      "name": "Oran · Sultanato benimerín · 1352–1359 · revisión África y Levante 91",
+      "name": "Oran · Sultanato benimerín · 1352–1359 · revisión África y Levante 137",
       "corridor": "Norte de África, Levante y Chipre · continuidad geográfica completa",
       "color": "#86715d",
       "coverage": {
@@ -301388,7 +302879,7 @@
       "authorityCondition": "ocupación"
     },
     {
-      "name": "Oran · Reino de Tremecén · 1360–1508 · revisión África y Levante 92",
+      "name": "Oran · Reino de Tremecén · 1360–1508 · revisión África y Levante 138",
       "corridor": "Norte de África, Levante y Chipre · continuidad geográfica completa",
       "color": "#86715d",
       "coverage": {
@@ -301424,7 +302915,7 @@
       "scopeLabel": "Oran · 1360–1508"
     },
     {
-      "name": "Oran · Presidios españoles del Magreb · 1509–1515 · revisión África y Levante 93",
+      "name": "Oran · Presidios españoles del Magreb · 1509–1515 · revisión África y Levante 139",
       "corridor": "Norte de África, Levante y Chipre · continuidad geográfica completa",
       "color": "#86715d",
       "coverage": {
@@ -301439,28 +302930,28 @@
           ],
           "oldIds": [],
           "borderline": [],
-          "event": "Plaza fuerte de Oran."
+          "event": "Plaza de Oran. La celda aproxima su localización y no acredita dominio sobre todo el entorno rural. Corte anual por la situación al final del año; conquista o evacuación dentro del año se documentan en las fuentes."
         }
       ],
-      "note": "Plaza fuerte de Oran.",
+      "note": "Plaza de Oran. La celda aproxima su localización y no acredita dominio sobre todo el entorno rural. Corte anual por la situación al final del año; conquista o evacuación dentro del año se documentan en las fuentes.",
       "sources": [
         {
           "title": "Treccani · Orano",
           "url": "https://www.treccani.it/enciclopedia/orano/",
-          "locator": "Ocupación española en 1509, regreso a los árabes en 1709 y nueva posesión española en 1732–1791."
+          "locator": "Conquista española en 1509 y recuperación en 1732; los cortes de pérdida (1708) y evacuación (1792) siguen la revisión del Instituto de Historia y Cultura Naval, fuente orano1708."
         }
       ],
       "precision": "regional_approximation",
-      "limitedCore": false,
+      "limitedCore": true,
       "scopeLabel": "Oran · 1509–1515"
     },
     {
-      "name": "Oran · Presidios españoles del Magreb · 1516–1708 · revisión África y Levante 94",
+      "name": "Oran · Presidios españoles del Magreb · 1516–1707 · revisión África y Levante 140",
       "corridor": "Norte de África, Levante y Chipre · continuidad geográfica completa",
       "color": "#86715d",
       "coverage": {
         "from": 1516,
-        "through": 1708
+        "through": 1707
       },
       "versions": [
         {
@@ -301470,32 +302961,32 @@
           ],
           "oldIds": [],
           "borderline": [],
-          "event": "Plaza fuerte de Oran."
+          "event": "Plaza de Oran. La celda aproxima su localización y no acredita dominio sobre todo el entorno rural. Corte anual por la situación al final del año; conquista o evacuación dentro del año se documentan en las fuentes."
         }
       ],
-      "note": "Plaza fuerte de Oran.",
+      "note": "Plaza de Oran. La celda aproxima su localización y no acredita dominio sobre todo el entorno rural. Corte anual por la situación al final del año; conquista o evacuación dentro del año se documentan en las fuentes.",
       "sources": [
         {
-          "title": "Treccani · Orano",
-          "url": "https://www.treccani.it/enciclopedia/orano/",
-          "locator": "Ocupación española en 1509, regreso a los árabes en 1709 y nueva posesión española en 1732–1791."
+          "title": "Instituto de Historia y Cultura Naval · Cuaderno monográfico 83",
+          "url": "https://armada.defensa.gob.es/archivo/mardigitalrevistas/cuadernosihcn/83cuaderno/cm83.pdf",
+          "locator": "Orán se pierde en 1708; recuperación de 1732 y evacuación definitiva de 1792."
         }
       ],
       "precision": "regional_approximation",
-      "limitedCore": false,
-      "scopeLabel": "Oran · 1516–1708"
+      "limitedCore": true,
+      "scopeLabel": "Oran · 1516–1707"
     },
     {
-      "name": "Oran · Regencia de Argel · 1709–1731 · revisión África y Levante 95",
+      "name": "Oran · Regencia de Argel · 1708–1731 · revisión África y Levante 141",
       "corridor": "Norte de África, Levante y Chipre · continuidad geográfica completa",
       "color": "#86715d",
       "coverage": {
-        "from": 1709,
+        "from": 1708,
         "through": 1731
       },
       "versions": [
         {
-          "from": 1709,
+          "from": 1708,
           "ids": [
             "Oran"
           ],
@@ -301514,10 +303005,10 @@
       ],
       "precision": "regional_approximation",
       "limitedCore": false,
-      "scopeLabel": "Oran · 1709–1731"
+      "scopeLabel": "Oran · 1708–1731"
     },
     {
-      "name": "Oran · Presidios españoles del Magreb · 1732–1791 · revisión África y Levante 96",
+      "name": "Oran · Presidios españoles del Magreb · 1732–1791 · revisión África y Levante 142",
       "corridor": "Norte de África, Levante y Chipre · continuidad geográfica completa",
       "color": "#86715d",
       "coverage": {
@@ -301532,23 +303023,23 @@
           ],
           "oldIds": [],
           "borderline": [],
-          "event": "Plaza fuerte de Oran."
+          "event": "Plaza de Oran. La celda aproxima su localización y no acredita dominio sobre todo el entorno rural. Corte anual por la situación al final del año; conquista o evacuación dentro del año se documentan en las fuentes."
         }
       ],
-      "note": "Plaza fuerte de Oran.",
+      "note": "Plaza de Oran. La celda aproxima su localización y no acredita dominio sobre todo el entorno rural. Corte anual por la situación al final del año; conquista o evacuación dentro del año se documentan en las fuentes.",
       "sources": [
         {
           "title": "Treccani · Orano",
           "url": "https://www.treccani.it/enciclopedia/orano/",
-          "locator": "Ocupación española en 1509, regreso a los árabes en 1709 y nueva posesión española en 1732–1791."
+          "locator": "Conquista española en 1509 y recuperación en 1732; los cortes de pérdida (1708) y evacuación (1792) siguen la revisión del Instituto de Historia y Cultura Naval, fuente orano1708."
         }
       ],
       "precision": "regional_approximation",
-      "limitedCore": false,
+      "limitedCore": true,
       "scopeLabel": "Oran · 1732–1791"
     },
     {
-      "name": "Oran · Regencia de Argel · 1792–1800 · revisión África y Levante 97",
+      "name": "Oran · Regencia de Argel · 1792–1800 · revisión África y Levante 143",
       "corridor": "Norte de África, Levante y Chipre · continuidad geográfica completa",
       "color": "#86715d",
       "coverage": {
@@ -301579,7 +303070,7 @@
       "scopeLabel": "Oran · 1792–1800"
     },
     {
-      "name": "Trípoli de Siria · Trípoli · 1200–1288 · revisión África y Levante 98",
+      "name": "Trípoli de Siria · Trípoli · 1200–1288 · revisión África y Levante 144",
       "corridor": "Norte de África, Levante y Chipre · continuidad geográfica completa",
       "color": "#86715d",
       "coverage": {
@@ -301612,7 +303103,7 @@
       "scopeLabel": "Trípoli de Siria · 1200–1288"
     },
     {
-      "name": "Trípoli de Siria · Sultanato mameluco · 1289–1515 · revisión África y Levante 99",
+      "name": "Trípoli de Siria · Sultanato mameluco · 1289–1515 · revisión África y Levante 145",
       "corridor": "Norte de África, Levante y Chipre · continuidad geográfica completa",
       "color": "#86715d",
       "coverage": {
@@ -301650,7 +303141,7 @@
       "scopeLabel": "Trípoli de Siria · 1289–1515"
     },
     {
-      "name": "Trípoli de Siria · Imperio otomano · 1516–1800 · revisión África y Levante 100",
+      "name": "Trípoli de Siria · Imperio otomano · 1516–1800 · revisión África y Levante 146",
       "corridor": "Norte de África, Levante y Chipre · continuidad geográfica completa",
       "color": "#86715d",
       "coverage": {
@@ -301683,7 +303174,7 @@
       "scopeLabel": "Trípoli de Siria · 1516–1800"
     },
     {
-      "name": "Tripolitania · Tripolitania de Qaraqush · 1200–1212 · revisión África y Levante 101",
+      "name": "Tripolitania · Tripolitania de Qaraqush · 1200–1212 · revisión África y Levante 147",
       "corridor": "Norte de África, Levante y Chipre · continuidad geográfica completa",
       "color": "#86715d",
       "coverage": {
@@ -301744,7 +303235,7 @@
       "authorityCondition": "control disputado"
     },
     {
-      "name": "Tripolitania · Califato almohade · 1213–1235 · revisión África y Levante 102",
+      "name": "Tripolitania · Califato almohade · 1213–1235 · revisión África y Levante 148",
       "corridor": "Norte de África, Levante y Chipre · continuidad geográfica completa",
       "color": "#86715d",
       "coverage": {
@@ -301809,7 +303300,7 @@
       "scopeLabel": "Tripolitania · 1213–1235"
     },
     {
-      "name": "Tripolitania · Sultanato hafsí · 1236–1509 · revisión África y Levante 103",
+      "name": "Tripolitania · Sultanato hafsí · 1236–1509 · revisión África y Levante 149",
       "corridor": "Norte de África, Levante y Chipre · continuidad geográfica completa",
       "color": "#86715d",
       "coverage": {
@@ -301874,7 +303365,7 @@
       "scopeLabel": "Tripolitania · 1236–1509"
     },
     {
-      "name": "Tripolitania · Tripolitania · tribus · 1510–1550 · revisión África y Levante 104",
+      "name": "Tripolitania · Tripolitania · tribus · 1510–1550 · revisión África y Levante 150",
       "corridor": "Norte de África, Levante y Chipre · continuidad geográfica completa",
       "color": "#86715d",
       "coverage": {
@@ -301934,7 +303425,7 @@
       "scopeLabel": "Tripolitania · 1510–1550"
     },
     {
-      "name": "Tripolitania · Regencia de Trípoli · 1551–1710 · revisión África y Levante 105",
+      "name": "Tripolitania · Regencia de Trípoli · 1551–1710 · revisión África y Levante 151",
       "corridor": "Norte de África, Levante y Chipre · continuidad geográfica completa",
       "color": "#86715d",
       "coverage": {
@@ -301999,7 +303490,7 @@
       "scopeLabel": "Tripolitania · 1551–1710"
     },
     {
-      "name": "Tripolitania · Regencia de Trípoli · 1711–1800 · revisión África y Levante 106",
+      "name": "Tripolitania · Regencia de Trípoli · 1711–1800 · revisión África y Levante 152",
       "corridor": "Norte de África, Levante y Chipre · continuidad geográfica completa",
       "color": "#86715d",
       "coverage": {
@@ -302060,7 +303551,7 @@
       "authorityCondition": "autonomía tributaria"
     },
     {
-      "name": "Tripoli · Tripolitania de Qaraqush · 1200–1212 · revisión África y Levante 107",
+      "name": "Tripoli · Tripolitania de Qaraqush · 1200–1212 · revisión África y Levante 153",
       "corridor": "Norte de África, Levante y Chipre · continuidad geográfica completa",
       "color": "#86715d",
       "coverage": {
@@ -302092,7 +303583,7 @@
       "authorityCondition": "control disputado"
     },
     {
-      "name": "Tripoli · Califato almohade · 1213–1235 · revisión África y Levante 108",
+      "name": "Tripoli · Califato almohade · 1213–1235 · revisión África y Levante 154",
       "corridor": "Norte de África, Levante y Chipre · continuidad geográfica completa",
       "color": "#86715d",
       "coverage": {
@@ -302128,7 +303619,7 @@
       "scopeLabel": "Tripoli · 1213–1235"
     },
     {
-      "name": "Tripoli · Sultanato hafsí · 1236–1509 · revisión África y Levante 109",
+      "name": "Tripoli · Sultanato hafsí · 1236–1509 · revisión África y Levante 155",
       "corridor": "Norte de África, Levante y Chipre · continuidad geográfica completa",
       "color": "#86715d",
       "coverage": {
@@ -302164,7 +303655,7 @@
       "scopeLabel": "Tripoli · 1236–1509"
     },
     {
-      "name": "Tripoli · Presidios españoles del Magreb · 1510–1515 · revisión África y Levante 110",
+      "name": "Tripoli · Presidios españoles del Magreb · 1510–1515 · revisión África y Levante 156",
       "corridor": "Norte de África, Levante y Chipre · continuidad geográfica completa",
       "color": "#86715d",
       "coverage": {
@@ -302179,10 +303670,10 @@
           ],
           "oldIds": [],
           "borderline": [],
-          "event": "Plaza fuerte de Tripoli."
+          "event": "Plaza de Tripoli. La celda aproxima su localización y no acredita dominio sobre todo el entorno rural. Corte anual por la situación al final del año; conquista o evacuación dentro del año se documentan en las fuentes."
         }
       ],
-      "note": "Plaza fuerte de Tripoli.",
+      "note": "Plaza de Tripoli. La celda aproxima su localización y no acredita dominio sobre todo el entorno rural. Corte anual por la situación al final del año; conquista o evacuación dentro del año se documentan en las fuentes.",
       "sources": [
         {
           "title": "Treccani · Tripoli",
@@ -302191,11 +303682,11 @@
         }
       ],
       "precision": "regional_approximation",
-      "limitedCore": false,
+      "limitedCore": true,
       "scopeLabel": "Tripoli · 1510–1515"
     },
     {
-      "name": "Tripoli · Presidios españoles del Magreb · 1516–1529 · revisión África y Levante 111",
+      "name": "Tripoli · Presidios españoles del Magreb · 1516–1529 · revisión África y Levante 157",
       "corridor": "Norte de África, Levante y Chipre · continuidad geográfica completa",
       "color": "#86715d",
       "coverage": {
@@ -302210,10 +303701,10 @@
           ],
           "oldIds": [],
           "borderline": [],
-          "event": "Plaza fuerte de Tripoli."
+          "event": "Plaza de Tripoli. La celda aproxima su localización y no acredita dominio sobre todo el entorno rural. Corte anual por la situación al final del año; conquista o evacuación dentro del año se documentan en las fuentes."
         }
       ],
-      "note": "Plaza fuerte de Tripoli.",
+      "note": "Plaza de Tripoli. La celda aproxima su localización y no acredita dominio sobre todo el entorno rural. Corte anual por la situación al final del año; conquista o evacuación dentro del año se documentan en las fuentes.",
       "sources": [
         {
           "title": "Treccani · Tripoli",
@@ -302222,11 +303713,11 @@
         }
       ],
       "precision": "regional_approximation",
-      "limitedCore": false,
+      "limitedCore": true,
       "scopeLabel": "Tripoli · 1516–1529"
     },
     {
-      "name": "Tripoli · Trípoli de los caballeros de Malta · 1530–1550 · revisión África y Levante 112",
+      "name": "Tripoli · Trípoli de los caballeros de Malta · 1530–1550 · revisión África y Levante 158",
       "corridor": "Norte de África, Levante y Chipre · continuidad geográfica completa",
       "color": "#86715d",
       "coverage": {
@@ -302241,10 +303732,10 @@
           ],
           "oldIds": [],
           "borderline": [],
-          "event": "Plaza fuerte de Tripoli."
+          "event": "Plaza de Tripoli. La celda aproxima su localización y no acredita dominio sobre todo el entorno rural. Corte anual por la situación al final del año; conquista o evacuación dentro del año se documentan en las fuentes."
         }
       ],
-      "note": "Plaza fuerte de Tripoli.",
+      "note": "Plaza de Tripoli. La celda aproxima su localización y no acredita dominio sobre todo el entorno rural. Corte anual por la situación al final del año; conquista o evacuación dentro del año se documentan en las fuentes.",
       "sources": [
         {
           "title": "Treccani · Tripoli",
@@ -302253,11 +303744,11 @@
         }
       ],
       "precision": "regional_approximation",
-      "limitedCore": false,
+      "limitedCore": true,
       "scopeLabel": "Tripoli · 1530–1550"
     },
     {
-      "name": "Tripoli · Regencia de Trípoli · 1551–1710 · revisión África y Levante 113",
+      "name": "Tripoli · Regencia de Trípoli · 1551–1710 · revisión África y Levante 159",
       "corridor": "Norte de África, Levante y Chipre · continuidad geográfica completa",
       "color": "#86715d",
       "coverage": {
@@ -302293,7 +303784,7 @@
       "scopeLabel": "Tripoli · 1551–1710"
     },
     {
-      "name": "Tripoli · Regencia de Trípoli · 1711–1800 · revisión África y Levante 114",
+      "name": "Tripoli · Regencia de Trípoli · 1711–1800 · revisión África y Levante 160",
       "corridor": "Norte de África, Levante y Chipre · continuidad geográfica completa",
       "color": "#86715d",
       "coverage": {
@@ -302325,7 +303816,7 @@
       "authorityCondition": "autonomía tributaria"
     },
     {
-      "name": "Ifriqiya · Califato almohade · 1200–1235 · revisión África y Levante 115",
+      "name": "Ifriqiya · Califato almohade · 1200–1235 · revisión África y Levante 161",
       "corridor": "Norte de África, Levante y Chipre · continuidad geográfica completa",
       "color": "#86715d",
       "coverage": {
@@ -302379,7 +303870,6 @@
             "Tebourba",
             "Thala",
             "Tozeur",
-            "Tunis",
             "Zaghouan"
           ],
           "oldIds": [],
@@ -302405,7 +303895,7 @@
       "scopeLabel": "Ifriqiya · 1200–1235"
     },
     {
-      "name": "Ifriqiya · Sultanato hafsí · 1236–1573 · revisión África y Levante 116",
+      "name": "Ifriqiya · Sultanato hafsí · 1236–1573 · revisión África y Levante 162",
       "corridor": "Norte de África, Levante y Chipre · continuidad geográfica completa",
       "color": "#86715d",
       "coverage": {
@@ -302459,15 +303949,14 @@
             "Tebourba",
             "Thala",
             "Tozeur",
-            "Tunis",
             "Zaghouan"
           ],
           "oldIds": [],
           "borderline": [],
-          "event": "Sultanato hafsí de Túnez; protectorado español desde 1535 que el mapa no separa."
+          "event": "Sultanato hafsí de Túnez; protectorado español desde 1535; la guarnición española se concentró en La Goleta, sin controlar de forma uniforme toda Ifriqiya."
         }
       ],
-      "note": "Sultanato hafsí de Túnez; protectorado español desde 1535 que el mapa no separa.",
+      "note": "Sultanato hafsí de Túnez; protectorado español desde 1535; la guarnición española se concentró en La Goleta, sin controlar de forma uniforme toda Ifriqiya.",
       "sources": [
         {
           "title": "Treccani · Hàfsidi",
@@ -302485,7 +303974,7 @@
       "scopeLabel": "Ifriqiya · 1236–1573"
     },
     {
-      "name": "Ifriqiya · Regencia de Túnez · 1574–1800 · revisión África y Levante 117",
+      "name": "Ifriqiya · Regencia de Túnez · 1574–1800 · revisión África y Levante 163",
       "corridor": "Norte de África, Levante y Chipre · continuidad geográfica completa",
       "color": "#86715d",
       "coverage": {
@@ -302539,7 +304028,6 @@
             "Tebourba",
             "Thala",
             "Tozeur",
-            "Tunis",
             "Zaghouan"
           ],
           "oldIds": [],
@@ -302563,6 +304051,251 @@
       "precision": "regional_approximation",
       "limitedCore": false,
       "scopeLabel": "Ifriqiya · 1574–1800"
+    },
+    {
+      "name": "Tunis · Califato almohade · 1200–1235 · revisión África y Levante 164",
+      "corridor": "Norte de África, Levante y Chipre · continuidad geográfica completa",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1200,
+        "through": 1235
+      },
+      "versions": [
+        {
+          "from": 1200,
+          "ids": [
+            "Tunis"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Ifriqiya, gobernada por los hafsíes en nombre de los almohades."
+        }
+      ],
+      "note": "Ifriqiya, gobernada por los hafsíes en nombre de los almohades.",
+      "sources": [
+        {
+          "title": "Treccani · Almohadi",
+          "url": "https://www.treccani.it/enciclopedia/almohadi/",
+          "locator": "Fundación en 1147 y desaparición en 1269 con la toma de Marrakech por los benimerines."
+        },
+        {
+          "title": "Treccani · Hàfsidi",
+          "url": "https://www.treccani.it/enciclopedia/hafsidi/",
+          "locator": "Independencia de los almohades en 1236, extensión a Argelia, ramas de Túnez y Bugía y fin en 1574 como provincia otomana."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": false,
+      "scopeLabel": "Tunis · 1200–1235"
+    },
+    {
+      "name": "Tunis · Sultanato hafsí · 1236–1533 · revisión África y Levante 165",
+      "corridor": "Norte de África, Levante y Chipre · continuidad geográfica completa",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1236,
+        "through": 1533
+      },
+      "versions": [
+        {
+          "from": 1236,
+          "ids": [
+            "Tunis"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Sultanato hafsí de Túnez; protectorado español desde 1535; la guarnición española se concentró en La Goleta, sin controlar de forma uniforme toda Ifriqiya."
+        }
+      ],
+      "note": "Sultanato hafsí de Túnez; protectorado español desde 1535; la guarnición española se concentró en La Goleta, sin controlar de forma uniforme toda Ifriqiya.",
+      "sources": [
+        {
+          "title": "Treccani · Hàfsidi",
+          "url": "https://www.treccani.it/enciclopedia/hafsidi/",
+          "locator": "Independencia de los almohades en 1236, extensión a Argelia, ramas de Túnez y Bugía y fin en 1574 como provincia otomana."
+        },
+        {
+          "title": "Treccani · Tunisi",
+          "url": "https://www.treccani.it/enciclopedia/tunisi/",
+          "locator": "Esplendor hafsí, protectorado español, reconquista otomana definitiva en 1574 y gobierno efectivo de deyes y beyes."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": false,
+      "scopeLabel": "Tunis · 1236–1533"
+    },
+    {
+      "name": "Tunis · Imperio otomano · 1534–1534 · revisión África y Levante 166",
+      "corridor": "Norte de África, Levante y Chipre · continuidad geográfica completa",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1534,
+        "through": 1534
+      },
+      "versions": [
+        {
+          "from": 1534,
+          "ids": [
+            "Tunis"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Plaza de Tunis. La celda aproxima su localización y no acredita dominio sobre todo el entorno rural. Corte anual por la situación al final del año; conquista o evacuación dentro del año se documentan en las fuentes."
+        }
+      ],
+      "note": "Plaza de Tunis. La celda aproxima su localización y no acredita dominio sobre todo el entorno rural. Corte anual por la situación al final del año; conquista o evacuación dentro del año se documentan en las fuentes.",
+      "sources": [
+        {
+          "title": "Treccani · Tunisi",
+          "url": "https://www.treccani.it/enciclopedia/tunisi/",
+          "locator": "Conquista de Barbarroja en 1534; restauración hafsí por Carlos V en 1535 y guarnición en La Goleta; nueva toma otomana de 1569, ocupación española de 1573 y conquista otomana definitiva en 1574."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": true,
+      "scopeLabel": "Tunis · 1534–1534",
+      "authorityCondition": "ocupación"
+    },
+    {
+      "name": "Tunis · Sultanato hafsí · 1535–1568 · revisión África y Levante 167",
+      "corridor": "Norte de África, Levante y Chipre · continuidad geográfica completa",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1535,
+        "through": 1568
+      },
+      "versions": [
+        {
+          "from": 1535,
+          "ids": [
+            "Tunis"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Sultanato hafsí de Túnez; protectorado español desde 1535; la guarnición española se concentró en La Goleta, sin controlar de forma uniforme toda Ifriqiya."
+        }
+      ],
+      "note": "Sultanato hafsí de Túnez; protectorado español desde 1535; la guarnición española se concentró en La Goleta, sin controlar de forma uniforme toda Ifriqiya.",
+      "sources": [
+        {
+          "title": "Treccani · Hàfsidi",
+          "url": "https://www.treccani.it/enciclopedia/hafsidi/",
+          "locator": "Independencia de los almohades en 1236, extensión a Argelia, ramas de Túnez y Bugía y fin en 1574 como provincia otomana."
+        },
+        {
+          "title": "Treccani · Tunisi",
+          "url": "https://www.treccani.it/enciclopedia/tunisi/",
+          "locator": "Esplendor hafsí, protectorado español, reconquista otomana definitiva en 1574 y gobierno efectivo de deyes y beyes."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": false,
+      "scopeLabel": "Tunis · 1535–1568"
+    },
+    {
+      "name": "Tunis · Imperio otomano · 1569–1572 · revisión África y Levante 168",
+      "corridor": "Norte de África, Levante y Chipre · continuidad geográfica completa",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1569,
+        "through": 1572
+      },
+      "versions": [
+        {
+          "from": 1569,
+          "ids": [
+            "Tunis"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Plaza de Tunis. La celda aproxima su localización y no acredita dominio sobre todo el entorno rural. Corte anual por la situación al final del año; conquista o evacuación dentro del año se documentan en las fuentes."
+        }
+      ],
+      "note": "Plaza de Tunis. La celda aproxima su localización y no acredita dominio sobre todo el entorno rural. Corte anual por la situación al final del año; conquista o evacuación dentro del año se documentan en las fuentes.",
+      "sources": [
+        {
+          "title": "Erudition and the Republic of Letters 9 (2024) · The Circulation of Arabic Books from Ifrīqiya",
+          "url": "https://brill.com/view/journals/erl/9/3/article-p281_002.pdf",
+          "locator": "Página 283: restauración hafsí bajo tributo a Carlos V y guarnición española en La Goleta; Túnez conquistada por gobernadores otomanos de Argel en 1569, recuperada por Juan de Austria en 1573 y conquistada definitivamente en 1574."
+        },
+        {
+          "title": "Treccani · Tunisi",
+          "url": "https://www.treccani.it/enciclopedia/tunisi/",
+          "locator": "Conquista de Barbarroja en 1534; restauración hafsí por Carlos V en 1535 y guarnición en La Goleta; nueva toma otomana de 1569, ocupación española de 1573 y conquista otomana definitiva en 1574."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": true,
+      "scopeLabel": "Tunis · 1569–1572",
+      "authorityCondition": "ocupación"
+    },
+    {
+      "name": "Tunis · Presidios españoles del Magreb · 1573–1573 · revisión África y Levante 169",
+      "corridor": "Norte de África, Levante y Chipre · continuidad geográfica completa",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1573,
+        "through": 1573
+      },
+      "versions": [
+        {
+          "from": 1573,
+          "ids": [
+            "Tunis"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Plaza de Tunis. La celda aproxima su localización y no acredita dominio sobre todo el entorno rural. Corte anual por la situación al final del año; conquista o evacuación dentro del año se documentan en las fuentes."
+        }
+      ],
+      "note": "Plaza de Tunis. La celda aproxima su localización y no acredita dominio sobre todo el entorno rural. Corte anual por la situación al final del año; conquista o evacuación dentro del año se documentan en las fuentes.",
+      "sources": [
+        {
+          "title": "Treccani · Tunisi",
+          "url": "https://www.treccani.it/enciclopedia/tunisi/",
+          "locator": "Conquista de Barbarroja en 1534; restauración hafsí por Carlos V en 1535 y guarnición en La Goleta; nueva toma otomana de 1569, ocupación española de 1573 y conquista otomana definitiva en 1574."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": true,
+      "scopeLabel": "Tunis · 1573–1573",
+      "authorityCondition": "ocupación"
+    },
+    {
+      "name": "Tunis · Regencia de Túnez · 1574–1800 · revisión África y Levante 170",
+      "corridor": "Norte de África, Levante y Chipre · continuidad geográfica completa",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1574,
+        "through": 1800
+      },
+      "versions": [
+        {
+          "from": 1574,
+          "ids": [
+            "Tunis"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Regencia otomana de Túnez; desde finales del siglo XVI el gobierno efectivo pasó a deyes y beyes."
+        }
+      ],
+      "note": "Regencia otomana de Túnez; desde finales del siglo XVI el gobierno efectivo pasó a deyes y beyes.",
+      "sources": [
+        {
+          "title": "Treccani · Tunisi",
+          "url": "https://www.treccani.it/enciclopedia/tunisi/",
+          "locator": "Esplendor hafsí, protectorado español, reconquista otomana definitiva en 1574 y gobierno efectivo de deyes y beyes."
+        },
+        {
+          "title": "Treccani · Hàfsidi",
+          "url": "https://www.treccani.it/enciclopedia/hafsidi/",
+          "locator": "Independencia de los almohades en 1236, extensión a Argelia, ramas de Túnez y Bugía y fin en 1574 como provincia otomana."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": false,
+      "scopeLabel": "Tunis · 1574–1800"
     },
     {
       "name": "Schleswig · partes reales y ducales · 1651–1712 · ampliación germano-suiza",
@@ -360776,7 +362509,7 @@
     ]
   },
   "northAfricaLevantReview": {
-    "reviewedAt": "2026-10-18",
+    "reviewedAt": "2026-10-24",
     "scope": {
       "name": "Norte de África, Levante y Chipre",
       "from": 1200,
@@ -362026,8 +363759,8 @@
       "Bugía y Constantina · Sultanato hafsí · 1236–1524 · revisión África y Levante 11",
       "Bugía y Constantina · Regencia de Argel · 1525–1800 · revisión África y Levante 12",
       "Bejaia · Califato almohade · 1200–1235 · revisión África y Levante 13",
-      "Bejaia · Sultanato hafsí · 1236–1508 · revisión África y Levante 14",
-      "Bejaia · Presidios españoles del Magreb · 1509–1515 · revisión África y Levante 15",
+      "Bejaia · Sultanato hafsí · 1236–1509 · revisión África y Levante 14",
+      "Bejaia · Presidios españoles del Magreb · 1510–1515 · revisión África y Levante 15",
       "Bejaia · Presidios españoles del Magreb · 1516–1554 · revisión África y Levante 16",
       "Bejaia · Regencia de Argel · 1555–1800 · revisión África y Levante 17",
       "Acre, Sidón y Beirut · Jerusalén · 1200–1290 · revisión África y Levante 18",
@@ -362058,82 +363791,136 @@
       "Asilah · Sultanato benimerín · 1248–1464 · revisión África y Levante 43",
       "Asilah · Sultanato wattasí · 1465–1470 · revisión África y Levante 44",
       "Asilah · Plazas portuguesas del Magreb · 1471–1549 · revisión África y Levante 45",
-      "Asilah · Sultanato saadí · 1550–1665 · revisión África y Levante 46",
-      "Asilah · Sultanato alauí · 1666–1800 · revisión África y Levante 47",
-      "Mazaghan · Califato almohade · 1200–1247 · revisión África y Levante 48",
-      "Mazaghan · Sultanato benimerín · 1248–1464 · revisión África y Levante 49",
-      "Mazaghan · Sultanato wattasí · 1465–1513 · revisión África y Levante 50",
-      "Mazaghan · Plazas portuguesas del Magreb · 1514–1769 · revisión África y Levante 51",
-      "Mazaghan · Sultanato alauí · 1770–1800 · revisión África y Levante 52",
-      "Melilla · Califato almohade · 1200–1247 · revisión África y Levante 53",
-      "Melilla · Sultanato benimerín · 1248–1464 · revisión África y Levante 54",
-      "Melilla · Sultanato wattasí · 1465–1496 · revisión África y Levante 55",
-      "Melilla · Presidios españoles del Magreb · 1497–1515 · revisión África y Levante 56",
-      "Melilla · Presidios españoles del Magreb · 1516–1800 · revisión África y Levante 57",
-      "Tangier · Califato almohade · 1200–1247 · revisión África y Levante 58",
-      "Tangier · Sultanato benimerín · 1248–1464 · revisión África y Levante 59",
-      "Tangier · Sultanato wattasí · 1465–1470 · revisión África y Levante 60",
-      "Tangier · Plazas portuguesas del Magreb · 1471–1661 · revisión África y Levante 61",
-      "Tangier · Tánger inglés · 1662–1683 · revisión África y Levante 62",
-      "Tangier · Sultanato alauí · 1684–1800 · revisión África y Levante 63",
-      "Marruecos meridional · Califato almohade · 1200–1268 · revisión África y Levante 64",
-      "Marruecos meridional · Sultanato benimerín · 1269–1464 · revisión África y Levante 65",
-      "Marruecos meridional · Marruecos meridional · poderes locales · 1465–1523 · revisión África y Levante 66",
-      "Marruecos meridional · Sultanato saadí · 1524–1667 · revisión África y Levante 67",
-      "Marruecos meridional · Sultanato alauí · 1668–1800 · revisión África y Levante 68",
-      "Palestina interior y Transjordania · Sultanato ayubí · 1200–1259 · revisión África y Levante 69",
-      "Palestina interior y Transjordania · Sultanato mameluco · 1260–1516 · revisión África y Levante 70",
-      "Palestina interior y Transjordania · Imperio otomano · 1517–1800 · revisión África y Levante 71",
-      "Safed · Sultanato ayubí · 1200–1239 · revisión África y Levante 72",
-      "Safed · Jerusalén · 1240–1265 · revisión África y Levante 73",
-      "Safed · Sultanato mameluco · 1266–1515 · revisión África y Levante 74",
-      "Safed · Imperio otomano · 1516–1800 · revisión África y Levante 75",
-      "Sáhara · Tierras saharianas · 1200–1800 · revisión África y Levante 76",
-      "Siria central · Sultanato ayubí · 1200–1259 · revisión África y Levante 77",
-      "Siria central · Sultanato mameluco · 1260–1515 · revisión África y Levante 78",
-      "Siria central · Imperio otomano · 1516–1800 · revisión África y Levante 79",
-      "Magreb central occidental · Califato almohade · 1200–1234 · revisión África y Levante 80",
-      "Magreb central occidental · Reino de Tremecén · 1235–1336 · revisión África y Levante 81",
-      "Magreb central occidental · Sultanato benimerín · 1337–1348 · revisión África y Levante 82",
-      "Magreb central occidental · Reino de Tremecén · 1349–1351 · revisión África y Levante 83",
-      "Magreb central occidental · Sultanato benimerín · 1352–1359 · revisión África y Levante 84",
-      "Magreb central occidental · Reino de Tremecén · 1360–1555 · revisión África y Levante 85",
-      "Magreb central occidental · Regencia de Argel · 1556–1800 · revisión África y Levante 86",
-      "Oran · Califato almohade · 1200–1234 · revisión África y Levante 87",
-      "Oran · Reino de Tremecén · 1235–1336 · revisión África y Levante 88",
-      "Oran · Sultanato benimerín · 1337–1348 · revisión África y Levante 89",
-      "Oran · Reino de Tremecén · 1349–1351 · revisión África y Levante 90",
-      "Oran · Sultanato benimerín · 1352–1359 · revisión África y Levante 91",
-      "Oran · Reino de Tremecén · 1360–1508 · revisión África y Levante 92",
-      "Oran · Presidios españoles del Magreb · 1509–1515 · revisión África y Levante 93",
-      "Oran · Presidios españoles del Magreb · 1516–1708 · revisión África y Levante 94",
-      "Oran · Regencia de Argel · 1709–1731 · revisión África y Levante 95",
-      "Oran · Presidios españoles del Magreb · 1732–1791 · revisión África y Levante 96",
-      "Oran · Regencia de Argel · 1792–1800 · revisión África y Levante 97",
-      "Trípoli de Siria · Trípoli · 1200–1288 · revisión África y Levante 98",
-      "Trípoli de Siria · Sultanato mameluco · 1289–1515 · revisión África y Levante 99",
-      "Trípoli de Siria · Imperio otomano · 1516–1800 · revisión África y Levante 100",
-      "Tripolitania · Tripolitania de Qaraqush · 1200–1212 · revisión África y Levante 101",
-      "Tripolitania · Califato almohade · 1213–1235 · revisión África y Levante 102",
-      "Tripolitania · Sultanato hafsí · 1236–1509 · revisión África y Levante 103",
-      "Tripolitania · Tripolitania · tribus · 1510–1550 · revisión África y Levante 104",
-      "Tripolitania · Regencia de Trípoli · 1551–1710 · revisión África y Levante 105",
-      "Tripolitania · Regencia de Trípoli · 1711–1800 · revisión África y Levante 106",
-      "Tripoli · Tripolitania de Qaraqush · 1200–1212 · revisión África y Levante 107",
-      "Tripoli · Califato almohade · 1213–1235 · revisión África y Levante 108",
-      "Tripoli · Sultanato hafsí · 1236–1509 · revisión África y Levante 109",
-      "Tripoli · Presidios españoles del Magreb · 1510–1515 · revisión África y Levante 110",
-      "Tripoli · Presidios españoles del Magreb · 1516–1529 · revisión África y Levante 111",
-      "Tripoli · Trípoli de los caballeros de Malta · 1530–1550 · revisión África y Levante 112",
-      "Tripoli · Regencia de Trípoli · 1551–1710 · revisión África y Levante 113",
-      "Tripoli · Regencia de Trípoli · 1711–1800 · revisión África y Levante 114",
-      "Ifriqiya · Califato almohade · 1200–1235 · revisión África y Levante 115",
-      "Ifriqiya · Sultanato hafsí · 1236–1573 · revisión África y Levante 116",
-      "Ifriqiya · Regencia de Túnez · 1574–1800 · revisión África y Levante 117"
+      "Asilah · Sultanato saadí · 1550–1576 · revisión África y Levante 46",
+      "Asilah · Plazas portuguesas del Magreb · 1577–1588 · revisión África y Levante 47",
+      "Asilah · Sultanato saadí · 1589–1665 · revisión África y Levante 48",
+      "Asilah · Sultanato alauí · 1666–1800 · revisión África y Levante 49",
+      "Azemmour · Califato almohade · 1200–1247 · revisión África y Levante 50",
+      "Azemmour · Sultanato benimerín · 1248–1464 · revisión África y Levante 51",
+      "Azemmour · Sultanato wattasí · 1465–1512 · revisión África y Levante 52",
+      "Azemmour · Plazas portuguesas del Magreb · 1513–1540 · revisión África y Levante 53",
+      "Azemmour · Sultanato wattasí · 1541–1548 · revisión África y Levante 54",
+      "Azemmour · Sultanato saadí · 1549–1665 · revisión África y Levante 55",
+      "Azemmour · Sultanato alauí · 1666–1800 · revisión África y Levante 56",
+      "La Mamora · Califato almohade · 1200–1247 · revisión África y Levante 57",
+      "La Mamora · Sultanato benimerín · 1248–1464 · revisión África y Levante 58",
+      "La Mamora · Sultanato wattasí · 1465–1548 · revisión África y Levante 59",
+      "La Mamora · Sultanato saadí · 1549–1613 · revisión África y Levante 60",
+      "La Mamora · Presidios españoles del Magreb · 1614–1680 · revisión África y Levante 61",
+      "La Mamora · Sultanato alauí · 1681–1800 · revisión África y Levante 62",
+      "Larache · Califato almohade · 1200–1247 · revisión África y Levante 63",
+      "Larache · Sultanato benimerín · 1248–1464 · revisión África y Levante 64",
+      "Larache · Sultanato wattasí · 1465–1548 · revisión África y Levante 65",
+      "Larache · Sultanato saadí · 1549–1609 · revisión África y Levante 66",
+      "Larache · Presidios españoles del Magreb · 1610–1688 · revisión África y Levante 67",
+      "Larache · Sultanato alauí · 1689–1800 · revisión África y Levante 68",
+      "Mazaghan · Califato almohade · 1200–1247 · revisión África y Levante 69",
+      "Mazaghan · Sultanato benimerín · 1248–1464 · revisión África y Levante 70",
+      "Mazaghan · Sultanato wattasí · 1465–1513 · revisión África y Levante 71",
+      "Mazaghan · Plazas portuguesas del Magreb · 1514–1768 · revisión África y Levante 72",
+      "Mazaghan · Sultanato alauí · 1769–1800 · revisión África y Levante 73",
+      "Melilla · Califato almohade · 1200–1247 · revisión África y Levante 74",
+      "Melilla · Sultanato benimerín · 1248–1464 · revisión África y Levante 75",
+      "Melilla · Sultanato wattasí · 1465–1496 · revisión África y Levante 76",
+      "Melilla · Presidios españoles del Magreb · 1497–1515 · revisión África y Levante 77",
+      "Melilla · Presidios españoles del Magreb · 1516–1800 · revisión África y Levante 78",
+      "Tangier · Califato almohade · 1200–1247 · revisión África y Levante 79",
+      "Tangier · Sultanato benimerín · 1248–1464 · revisión África y Levante 80",
+      "Tangier · Sultanato wattasí · 1465–1470 · revisión África y Levante 81",
+      "Tangier · Plazas portuguesas del Magreb · 1471–1661 · revisión África y Levante 82",
+      "Tangier · Tánger inglés · 1662–1683 · revisión África y Levante 83",
+      "Tangier · Sultanato alauí · 1684–1800 · revisión África y Levante 84",
+      "Marruecos meridional · Califato almohade · 1200–1268 · revisión África y Levante 85",
+      "Marruecos meridional · Sultanato benimerín · 1269–1464 · revisión África y Levante 86",
+      "Marruecos meridional · Marruecos meridional · poderes locales · 1465–1523 · revisión África y Levante 87",
+      "Marruecos meridional · Sultanato saadí · 1524–1667 · revisión África y Levante 88",
+      "Marruecos meridional · Sultanato alauí · 1668–1800 · revisión África y Levante 89",
+      "Agadir · Califato almohade · 1200–1268 · revisión África y Levante 90",
+      "Agadir · Sultanato benimerín · 1269–1464 · revisión África y Levante 91",
+      "Agadir · Marruecos meridional · poderes locales · 1465–1504 · revisión África y Levante 92",
+      "Agadir · Plazas portuguesas del Magreb · 1505–1540 · revisión África y Levante 93",
+      "Agadir · Sultanato saadí · 1541–1667 · revisión África y Levante 94",
+      "Agadir · Sultanato alauí · 1668–1800 · revisión África y Levante 95",
+      "Aguz · Califato almohade · 1200–1268 · revisión África y Levante 96",
+      "Aguz · Sultanato benimerín · 1269–1464 · revisión África y Levante 97",
+      "Aguz · Marruecos meridional · poderes locales · 1465–1507 · revisión África y Levante 98",
+      "Aguz · Plazas portuguesas del Magreb · 1508–1524 · revisión África y Levante 99",
+      "Aguz · Sultanato saadí · 1525–1667 · revisión África y Levante 100",
+      "Aguz · Sultanato alauí · 1668–1800 · revisión África y Levante 101",
+      "Asfi · Califato almohade · 1200–1268 · revisión África y Levante 102",
+      "Asfi · Sultanato benimerín · 1269–1464 · revisión África y Levante 103",
+      "Asfi · Marruecos meridional · poderes locales · 1465–1507 · revisión África y Levante 104",
+      "Asfi · Plazas portuguesas del Magreb · 1508–1540 · revisión África y Levante 105",
+      "Asfi · Sultanato saadí · 1541–1667 · revisión África y Levante 106",
+      "Asfi · Sultanato alauí · 1668–1800 · revisión África y Levante 107",
+      "Mogador · Califato almohade · 1200–1268 · revisión África y Levante 108",
+      "Mogador · Sultanato benimerín · 1269–1464 · revisión África y Levante 109",
+      "Mogador · Marruecos meridional · poderes locales · 1465–1505 · revisión África y Levante 110",
+      "Mogador · Plazas portuguesas del Magreb · 1506–1509 · revisión África y Levante 111",
+      "Mogador · Marruecos meridional · poderes locales · 1510–1523 · revisión África y Levante 112",
+      "Mogador · Sultanato saadí · 1524–1667 · revisión África y Levante 113",
+      "Mogador · Sultanato alauí · 1668–1800 · revisión África y Levante 114",
+      "Palestina interior y Transjordania · Sultanato ayubí · 1200–1259 · revisión África y Levante 115",
+      "Palestina interior y Transjordania · Sultanato mameluco · 1260–1516 · revisión África y Levante 116",
+      "Palestina interior y Transjordania · Imperio otomano · 1517–1800 · revisión África y Levante 117",
+      "Safed · Sultanato ayubí · 1200–1239 · revisión África y Levante 118",
+      "Safed · Jerusalén · 1240–1265 · revisión África y Levante 119",
+      "Safed · Sultanato mameluco · 1266–1515 · revisión África y Levante 120",
+      "Safed · Imperio otomano · 1516–1800 · revisión África y Levante 121",
+      "Sáhara · Tierras saharianas · 1200–1800 · revisión África y Levante 122",
+      "Siria central · Sultanato ayubí · 1200–1259 · revisión África y Levante 123",
+      "Siria central · Sultanato mameluco · 1260–1515 · revisión África y Levante 124",
+      "Siria central · Imperio otomano · 1516–1800 · revisión África y Levante 125",
+      "Magreb central occidental · Califato almohade · 1200–1234 · revisión África y Levante 126",
+      "Magreb central occidental · Reino de Tremecén · 1235–1336 · revisión África y Levante 127",
+      "Magreb central occidental · Sultanato benimerín · 1337–1348 · revisión África y Levante 128",
+      "Magreb central occidental · Reino de Tremecén · 1349–1351 · revisión África y Levante 129",
+      "Magreb central occidental · Sultanato benimerín · 1352–1359 · revisión África y Levante 130",
+      "Magreb central occidental · Reino de Tremecén · 1360–1555 · revisión África y Levante 131",
+      "Magreb central occidental · Regencia de Argel · 1556–1800 · revisión África y Levante 132",
+      "Oran · Califato almohade · 1200–1234 · revisión África y Levante 133",
+      "Oran · Reino de Tremecén · 1235–1336 · revisión África y Levante 134",
+      "Oran · Sultanato benimerín · 1337–1348 · revisión África y Levante 135",
+      "Oran · Reino de Tremecén · 1349–1351 · revisión África y Levante 136",
+      "Oran · Sultanato benimerín · 1352–1359 · revisión África y Levante 137",
+      "Oran · Reino de Tremecén · 1360–1508 · revisión África y Levante 138",
+      "Oran · Presidios españoles del Magreb · 1509–1515 · revisión África y Levante 139",
+      "Oran · Presidios españoles del Magreb · 1516–1707 · revisión África y Levante 140",
+      "Oran · Regencia de Argel · 1708–1731 · revisión África y Levante 141",
+      "Oran · Presidios españoles del Magreb · 1732–1791 · revisión África y Levante 142",
+      "Oran · Regencia de Argel · 1792–1800 · revisión África y Levante 143",
+      "Trípoli de Siria · Trípoli · 1200–1288 · revisión África y Levante 144",
+      "Trípoli de Siria · Sultanato mameluco · 1289–1515 · revisión África y Levante 145",
+      "Trípoli de Siria · Imperio otomano · 1516–1800 · revisión África y Levante 146",
+      "Tripolitania · Tripolitania de Qaraqush · 1200–1212 · revisión África y Levante 147",
+      "Tripolitania · Califato almohade · 1213–1235 · revisión África y Levante 148",
+      "Tripolitania · Sultanato hafsí · 1236–1509 · revisión África y Levante 149",
+      "Tripolitania · Tripolitania · tribus · 1510–1550 · revisión África y Levante 150",
+      "Tripolitania · Regencia de Trípoli · 1551–1710 · revisión África y Levante 151",
+      "Tripolitania · Regencia de Trípoli · 1711–1800 · revisión África y Levante 152",
+      "Tripoli · Tripolitania de Qaraqush · 1200–1212 · revisión África y Levante 153",
+      "Tripoli · Califato almohade · 1213–1235 · revisión África y Levante 154",
+      "Tripoli · Sultanato hafsí · 1236–1509 · revisión África y Levante 155",
+      "Tripoli · Presidios españoles del Magreb · 1510–1515 · revisión África y Levante 156",
+      "Tripoli · Presidios españoles del Magreb · 1516–1529 · revisión África y Levante 157",
+      "Tripoli · Trípoli de los caballeros de Malta · 1530–1550 · revisión África y Levante 158",
+      "Tripoli · Regencia de Trípoli · 1551–1710 · revisión África y Levante 159",
+      "Tripoli · Regencia de Trípoli · 1711–1800 · revisión África y Levante 160",
+      "Ifriqiya · Califato almohade · 1200–1235 · revisión África y Levante 161",
+      "Ifriqiya · Sultanato hafsí · 1236–1573 · revisión África y Levante 162",
+      "Ifriqiya · Regencia de Túnez · 1574–1800 · revisión África y Levante 163",
+      "Tunis · Califato almohade · 1200–1235 · revisión África y Levante 164",
+      "Tunis · Sultanato hafsí · 1236–1533 · revisión África y Levante 165",
+      "Tunis · Imperio otomano · 1534–1534 · revisión África y Levante 166",
+      "Tunis · Sultanato hafsí · 1535–1568 · revisión África y Levante 167",
+      "Tunis · Imperio otomano · 1569–1572 · revisión África y Levante 168",
+      "Tunis · Presidios españoles del Magreb · 1573–1573 · revisión África y Levante 169",
+      "Tunis · Regencia de Túnez · 1574–1800 · revisión África y Levante 170"
     ],
     "limitations": [
       "Las zonas agrupan celdas por su centroide: Marruecos, el Magreb central en tres franjas, Ifriqiya, Tripolitania, Cirenaica, el Fezzán, el Sáhara, Egipto y Levante.",
       "Los cortes anuales son convencionales. Las ocupaciones breves, los tributos y las fragmentaciones internas (zawiya de Dila, emires hintata, ramas hafsíes) se mencionan en las notas sin dibujar fronteras propias.",
+      "Las plazas europeas ocupan celdas de referencia, con alcance limitado al núcleo; sus superficies no reconstruyen el perímetro de las fortificaciones. Los años de transición siguen la situación al cierre del año. No hay celdas independientes para Alcácer Ceguer, Mazalquivir, La Goleta ni los peñones; no se les asigna toda una ciudad o provincia vecina.",
       "El desierto y las estepas se muestran como tierras de autoridad nómada: no prueban ausencia de vínculos con los Estados vecinos."
     ]
   },

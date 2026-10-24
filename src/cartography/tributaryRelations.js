@@ -33,6 +33,10 @@ const sources = {
 };
 
 export const TRIBUTARY_RELATIONS = Object.freeze([
+  {id:'tunis-hafsid-spain',subject:'Sultanato hafsí',subjectLabel:'Túnez hafsí · protectorado hispánico',overlord:'Castilla',overlordLabel:'la Monarquía Hispánica',
+    periods:[[1535,1568]],ids:['Tunis'],
+    sources:[source('Erudition and the Republic of Letters 9 (2024) · The Circulation of Arabic Books from Ifrīqiya','https://brill.com/view/journals/erl/9/3/article-p281_002.pdf','Página 283: Carlos V restaura al sultán hafsí como vasallo en 1535, con tributo anual y guarnición española en La Goleta; conquista otomana de Túnez en 1569.')],
+    note:'Protectorado establecido tras la expedición de Carlos V de 1535. El sultán conserva su gobierno y paga tributo; la guarnición española ocupa La Goleta. La trama se limita a la celda urbana de Túnez y termina con la conquista otomana de 1569.'},
   ...LOUIS_HUNGARY_DEPENDENCIES,
   ...EASTERN_EUROPE_DEPENDENCIES,
   ...ANGEVIN_DEPENDENCIES,

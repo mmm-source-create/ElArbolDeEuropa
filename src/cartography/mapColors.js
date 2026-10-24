@@ -40,7 +40,7 @@ const TRIBUTARY_TINTS = Object.freeze({
   'courland-lithuania': '#7F6CB5', 'courland-commonwealth': '#DE9DAC',
   'prussia-order-poland': '#E9A3E0', 'perm-moscow': '#93A97F', 'novgorod-moscow': '#8FA67C',
   'granada-castile-jaen': '#F4EC94', 'murcia-castile-alcaraz': '#C9BE3E', 'menorca-mallorca-capdepera': '#C77A73',
-  'brittany-angevin': '#B08A72',
+  'brittany-angevin': '#B08A72', 'tunis-hafsid-spain':'#DED174',
 });
 export const tributaryColor = (relation, year) => relation.id === 'prussia-poland'
   ? (year >= 1569 ? '#E3A6B5' : '#E9A3E0') : TRIBUTARY_TINTS[relation.id] || '#9AA59A';
