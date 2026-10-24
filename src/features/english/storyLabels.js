@@ -14,7 +14,7 @@ export const ENGLISH_STORY_LABELS = {
     'borgona':['Burgundy: the kingdom that never was','From a French appanage to a Habsburg inheritance'],
     'gioconda':['In search of the Mona Lisa','A journey through Leonardo’s life and the women behind the enigma'],
     'revolucion-protestante':['The Protestant Reformation','Humanism, the Reformation, imperial politics and the response of Trent'],
-    'lepanto-alianza':['Lepanto: the unlikely alliance','How Rome, Spain and Venice assembled a fleet against the Ottoman Empire'],
+    'lepanto-alianza':['Lepanto: The Last Crusade','How Rome, Spain and Venice assembled a fleet against the Ottoman Empire'],
     'corona-dos-credos':['A crown between two creeds','Catherine de’ Medici, the Huguenots and the Catholic League'],
     'cien-anos':['The Hundred Years’ War','A dynastic dispute that transformed France and England'],
     'republica-nobles':['The Republic of Nobles','How Poland turned a hereditary monarchy into an elective crown'],

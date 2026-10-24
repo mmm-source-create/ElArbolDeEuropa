@@ -94,6 +94,7 @@ test('los escudos de las grandes casas se dibujan y corresponden a dinastías de
     assert.match(escudo.blason, /^[A-ZÁÉÍÓÚ].+\.$/, name);
     const svg = renderToStaticMarkup(React.createElement(DynastyArms, {dinastia: name, size: 40, drawn: true}));
     if (escudo.tipo === 'tughra') {assert.match(svg,/^<img[^>]+alt="Tuğra de Orhan/);continue;}
+    if (escudo.tipo === 'signo') {assert.match(svg,/^<img[^>]+alt="Signo principesco de Sviatoslav/);continue;}
     assert.match(svg, /^<svg[^>]+role="img"/, name);
     assert.ok(svg.includes('<title>'), name);
   }

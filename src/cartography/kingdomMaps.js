@@ -199,6 +199,7 @@ export const REINO_COLOR = {
   "Sultanato mameluco": "#B98A47",
   "Ocupación francesa de Egipto": "#295D8E",
   "Presidios españoles del Magreb": "#C5A62B",
+  "Tabarca hispano-genovesa": "#C5A62B",
   "Plazas portuguesas del Magreb": "#298e47",
   "Tánger inglés": "#7A4F3B",
   "Trípoli de los caballeros de Malta": "#9B3A3A",
