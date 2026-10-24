@@ -287,7 +287,7 @@ html .public-not-found>section>span{color:#7c5426}
 .story-view-tabs button[aria-selected="true"]{background:var(--eade-wine-fill,#7A2E2E);color:#fff8ef}
 .story-view-tabs button:focus-visible,.story-collection-card button:focus-visible{outline:2px solid var(--eade-wine);outline-offset:3px}
 .story-collections{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px;align-items:start}
-.story-collection-card{display:block;padding:0;overflow:hidden}
+.story-collection-card{display:block;padding:0;overflow:hidden;background:var(--eade-paper-bright);border-color:var(--eade-border);color:var(--eade-ink)}
 .story-collection-card.is-open{grid-column:1/-1}
 .story-collection-card>h2{margin:0}
 .story-collection-card>h2>button{display:flex;align-items:center;justify-content:space-between;gap:20px;width:100%;padding:24px;text-align:left;background:transparent;border:0;color:var(--eade-ink);font:600 24px/1.25 var(--eade-serif);cursor:pointer}
@@ -310,3 +310,6 @@ html .public-not-found>section>span{color:#7c5426}
 :root[data-theme="dark"] .dynasty-arms { filter: drop-shadow(0 0 1px rgb(255 248 232 / .55)); }
 
 .dynasty-arms-tughra{background:#F4EEE1;border-radius:4px;padding:4px;box-sizing:border-box}
+
+.project-modal .story-collection-browser .story-catalog-card{background:var(--eade-paper-bright);border-color:var(--eade-border);color:var(--eade-ink)}
+.project-modal .story-collection-browser .story-catalog-card p,.project-modal .story-collection-browser .story-catalog-topline{color:var(--eade-muted)}
