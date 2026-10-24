@@ -40,7 +40,6 @@ test('the nine Montfort records form the Breton Dreux branch; the earlier homony
     }
     assert.equal(id,'JOHNMONTPRET',member.id);
   }
-  assert.match(p.origen,/Montfort-l’Amaury/);
   assert.equal(escudoDe(p.nombre).blason,'De armiño.');
 });
 

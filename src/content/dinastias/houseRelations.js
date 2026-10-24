@@ -6,6 +6,7 @@ const parents={};
 for(const [root,houses] of Object.entries(GRUPOS_DINASTICOS_GENEALOGICOS))
   for(const house of houses)if(house!==root)parents[house]=[root==='Ivrea'?'Ivrea-Borgoña':root];
 Object.assign(parents,{
+  Zrinski:['Šubić'],
   'Borbón-Orleans-Gastón':['Borbón'],
   'Borbón-Condé':['Borbón'],'Borbón-Orleans':['Borbón'],'Borbón-Parma':['Borbón'],
   'Valois-Alençon':['Valois'],'Valois-Anjou':['Valois'],'Valois-Angulema':['Valois-Orleans'],'Valois-Borgoña':['Valois'],'Valois-Orleans':['Valois'],

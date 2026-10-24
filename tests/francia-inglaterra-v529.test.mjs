@@ -9,7 +9,7 @@ import {colorTerritorioEnMapa, REINO_COLOR} from '../src/cartography/kingdomMaps
 import {BURGUNDIAN_COLOR, ENGLISH_CROWN_COLOR, FRENCH_CROWN_COLOR, POLAND_LITHUANIA_COLOR, frenchFiefColor} from '../src/cartography/mapColors.js';
 import {governmentSummary} from '../src/domain/government/governmentPresentation.js';
 import {gobiernosDe} from '../src/domain/genealogy/personAccessors.js';
-import {ESCUDOS} from '../src/content/dinastias/escudos.js';
+import {ESCUDOS,escudoDe} from '../src/content/dinastias/escudos.js';
 import DynastyArms from '../src/components/DynastyArms.jsx';
 
 const by = Object.fromEntries(PERSONAS.map(person => [person.id, person]));
@@ -95,6 +95,11 @@ test('los escudos de las grandes casas se dibujan y corresponden a dinastías de
     const svg = renderToStaticMarkup(React.createElement(DynastyArms, {dinastia: name, size: 40, drawn: true}));
     if (escudo.tipo === 'tughra') {assert.match(svg,/^<img[^>]+alt="Tuğra de Orhan/);continue;}
     if (escudo.tipo === 'signo') {assert.match(svg,/^<img[^>]+alt="Signo principesco de Sviatoslav/);continue;}
+    if (['emblema','estandarte'].includes(escudo.tipo)) {
+      assert.match(svg,/^<img/);
+      assert.ok(svg.includes(escudoDe(name).imagen.archivo),name);
+      continue;
+    }
     assert.match(svg, /^<svg[^>]+role="img"/, name);
     assert.ok(svg.includes('<title>'), name);
   }
