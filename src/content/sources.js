@@ -187,6 +187,7 @@ export const SOURCES = [
   ...ADRIATICO_SOURCES,
   ...V534_SOURCES,
   ...V538_SOURCES,
+  {"titulo": "Ministerio de Cultura · PARES · Castilla, Juana de (1462–1530)", "url": "https://pares.cultura.gob.es/ParesBusquedas20/catalogo/autoridad/46305", "grupo": "Archivos y estudios", "personas": ["JUANABELTRANEJA"], "territorios": ["Castilla", "León", "Portugal"]},{"titulo": "Susannah Humble Ferreira · Juana La Beltraneja, Dynastic Fears, and Threats of Marriage (1475–1506)", "url": "https://jps.library.utoronto.ca/index.php/renref/article/view/36383", "grupo": "Archivos y estudios", "personas": ["JUANABELTRANEJA"], "territorios": ["Castilla", "León", "Portugal"]},
   {
     "titulo": "Foundation for Medieval Genealogy · MedLands",
     "url": "https://fmg.ac/Projects/MedLands/index.htm",

@@ -51,7 +51,7 @@ export default function DynastyPage({slug,initialData=null}) {
       <header className="public-page-title dynasty-hero">
         {escudo?<figure className="dynasty-hero-figure"><DynastyArms dinastia={d.nombre} size={76} className="dynasty-hero-arms"/></figure>:<div className="public-page-icon"><Shield size={22}/></div>}<span>Casas y linajes · {d.editorial?'Historia de la dinastía':'Personas del Atlas'}</span>
         <h1>{d.nombre}</h1><p>{d.resumen||'Explora los miembros de esta casa y los territorios vinculados a sus gobiernos registrados.'}</p>
-        {escudo&&<p className="dynasty-blazon"><b>Armas.</b> {escudo.blason}{escudo.nota&&<small> {escudo.nota}</small>}</p>}
+        {escudo&&<p className="dynasty-blazon"><b>{escudo.tipo === 'tughra' ? 'Tuğra.' : 'Armas.'}</b> {escudo.blason}{escudo.nota&&<small> {escudo.nota}</small>}{escudo.fuentes?.map(f => <small key={f.url}> <a href={f.url} target="_blank" rel="noreferrer">{f.titulo}</a></small>)}</p>}
         <div className="dynasty-counts"><span><b>{d.total}</b> {d.total===1?'persona registrada':'personas registradas'}</span><span><b>{relationCount}</b> {relationCount===1?'rama o conexión':'ramas y conexiones'}</span></div>
         <a className="public-primary" href={atlas}>Explorar esta casa en el Atlas <ArrowRight size={15}/></a>
       </header>

@@ -1,5 +1,5 @@
 import {HISTORIAS_TEMATICAS, CONTEXTO_HISTORIAS} from './historiasTematicas.js';
-import {storyThemeId} from '../features/stories/storyThemes.js';
+import {storyCollections} from '../features/stories/storyThemes.js';
 // Eventos generales y pasos de las historias conservadas.
 export const EVENTOS_HISTORICOS = [
   {
@@ -4403,7 +4403,7 @@ const HISTORIAS_EXISTENTES = [
         ],
         "eventoId": "PAZ_VENECIA_1573",
         "titulo": "Lepanto vence una batalla, no conquista el Mediterráneo",
-        "texto": "Venecia termina negociando la paz y acepta la pérdida de Chipre. La Liga se disuelve y la armada otomana vuelve al mar. Lepanto conserva una enorme importancia militar, política y simbólica, pero su historia es más interesante precisamente cuando se evita el mito de que una sola batalla expulsó a los otomanos del Mediterráneo."
+        "texto": "Venecia termina negociando la paz y acepta la pérdida de Chipre. La Liga se disuelve y la armada otomana vuelve al mar."
       }
     ]
   },
@@ -4586,14 +4586,6 @@ const HISTORIAS_EXISTENTES = [
     "disponible": false
   },
   {
-    "id": "reino-de-los-cielos",
-    "titulo": "El Reino de los Cielos",
-    "subtitulo": "Balduino IV, Saladino y la corona de Jerusalén",
-    "descripcion": "La historia real del reino cruzado, sus sucesiones dinásticas y las personas históricas que protagonizaron la crisis de 1187 y la larga supervivencia de la corona.",
-    "categoria": "Historia y cultura pop",
-    "disponible": false
-  },
-  {
     "id": "dracula-detras-de-la-leyenda",
     "titulo": "Drácula: detrás de la leyenda",
     "subtitulo": "Vlad III, los Basarab y la frontera con los otomanos",
@@ -4605,4 +4597,4 @@ const HISTORIAS_EXISTENTES = [
 export const HISTORIAS = [
   ...HISTORIAS_EXISTENTES.map(h => HISTORIAS_TEMATICAS.find(nueva => nueva.id === h.id) || h),
   ...HISTORIAS_TEMATICAS.filter(h => !HISTORIAS_EXISTENTES.some(existente => existente.id === h.id)),
-].map(h => ({...h, ...CONTEXTO_HISTORIAS[h.id], tema:storyThemeId(h.id)}));
+].map(h => ({...h, ...CONTEXTO_HISTORIAS[h.id], colecciones:storyCollections(h.id)}));

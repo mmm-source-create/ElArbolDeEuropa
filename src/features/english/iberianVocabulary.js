@@ -1,5 +1,7 @@
 // Editorial display vocabulary; canonical identifiers are shared by both languages.
 export const IBERIAN_NAMES = {
+  JUANABELTRANEJA:'Joanna of Castile',
+  SANCIABORGIA:'Sancia of Aragon',
   "FATIMANASR": "Fatima bint al-Ahmar",
   "ABUSAIDFARAJNASR": "Abu Saʿid Faraj",
   "SANCHACASTAR": "Sancha of Castile",
@@ -193,6 +195,7 @@ export const IBERIAN_NAMES = {
   "MARIAPAD": "María de Padilla"
 };
 export const IBERIAN_LABELS = {
+  'Reina titular / Consorte':'Claimant queen / Consort',
   "vizcondado": "Viscounty",
   "Emir": "Emir",
   "Princesa": "Princess",
@@ -254,6 +257,13 @@ export const IBERIAN_LABELS = {
   "Rey titular": "Titular king"
 };
 export const IBERIAN_NOTES = {
+  "La ficha de autoridad fecha su nacimiento en 1462.": "The authority record dates her birth to 1462.",
+  "La ficha de autoridad fecha su muerte en 1530.": "The authority record dates her death to 1530.",
+  "Enrique IV la reconoció como hija y sucesora; sus adversarios discutieron la filiación biológica, que no se presenta como resuelta.": "Henry IV acknowledged her as his daughter and successor; opponents disputed her biological paternity, which is not presented as settled.",
+  "PARES identifica como madre a Juana de Portugal.": "PARES identifies Joanna of Portugal as her mother.",
+  "Matrimonio con Alfonso V de Portugal durante la guerra sucesoria; la relación se registra en ambas fichas.": "Marriage to Afonso V of Portugal during the succession war; the relationship is recorded in both profiles.",
+  "Pretensión de Castilla y León durante la guerra de 1475–1479; el registro no afirma un dominio efectivo de ambos reinos.": "Claim to Castile and León during the war of 1475–1479; the record does not assert effective rule over both kingdoms.",
+
   "Acceso en 1211 y muerte en 1223.": "Accession in 1211 and death in 1223.",
   "Visitador y defensor del reino. Administrador designado por el papa durante la deposición de Sancho II. Solo adopta el título de rey en 1248; el control se disputa en la guerra civil.": "Visitor and defender of the kingdom. Administrator appointed by the pope during Sancho II’s deposition. He adopted the royal title only in 1248; control was disputed during the civil war.",
   "Administrador designado por el papa durante la deposición de Sancho II. Solo adopta el título de rey en 1248; el control se disputa en la guerra civil.": "Administrator appointed by the pope during Sancho II’s deposition. He adopted the royal title only in 1248; control was disputed during the civil war.",
