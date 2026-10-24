@@ -1,3 +1,4 @@
+import {TREE_BOX_W,TREE_BOX_H,TREE_SELECTION_COLUMN,TREE_SELECTION_ROW} from '../../domain/genealogy/treeMetrics.js';
 // Layout for small selections (Conectar, export). Generations are computed from
 // the selected relations themselves: a child sits one row below a parent and
 // partners share a row. The base tree's global generation numbers place
@@ -88,13 +89,13 @@ export function selectionLayout(ids, gen = {}, byId = {}, edges = []) {
     for (let index = rows.length - 2; index >= 0; index--) { rows[index] = orderRow(rows[index], index, 1); setColumns(rows[index]); }
     for (let index = 1; index < rows.length; index++) { rows[index] = orderRow(rows[index], index, -1); setColumns(rows[index]); }
   }
-  const width = Math.max(720, ...rows.map(r => r.length * 260 + 160)), positions = {}, units = [];
+  const width = Math.max(720, ...rows.map(r => r.length * TREE_SELECTION_COLUMN + 160)), positions = {}, units = [];
   rows.forEach((row, ri) => row.forEach((id, ci) => {
-    const p = {x: 100 + (width - 200 - row.length * 260) / 2 + ci * 260, y: 100 + ri * 180, w: 228, h: 100, row: ri};
+    const p = {x: 100 + (width - 200 - row.length * TREE_SELECTION_COLUMN) / 2 + ci * TREE_SELECTION_COLUMN, y: 100 + ri * TREE_SELECTION_ROW, w: TREE_BOX_W, h: TREE_BOX_H, row: ri};
     positions[id] = p;
     units.push({key: id, ids: [id], x: p.x, y: p.y, width: p.w, height: p.h, boxes: [{id, x: 0, y: 0, w: p.w, h: p.h}]});
   }));
-  return {positions, units, width, height: Math.max(400, rows.length * 180 + 120), pairContacts: {}, rowBands: rows.map((_, i) => [100 + i * 180, 200 + i * 180])};
+  return {positions, units, width, height: Math.max(400, rows.length * TREE_SELECTION_ROW + 120), pairContacts: {}, rowBands: rows.map((_, i) => [100 + i * TREE_SELECTION_ROW, 100 + i * TREE_SELECTION_ROW + TREE_BOX_H])};
 }
 export function selectionEdges(graph,ids) {
  const selected=new Set(ids),edges=[];

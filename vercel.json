@@ -237,6 +237,8 @@
     }
   ],
   "redirects": [
+    {"source":"/es/dinastia/:slug(sin-casa-identificada|desconocida|familias-menores|casas-menores)","destination":"/es/personas","permanent":true},
+    {"source":"/es/dinastia/:slug(sin-casa-identificada|desconocida|familias-menores|casas-menores)/","destination":"/es/personas","permanent":true},
     {"source":"/es/historia/ricardo-i-y-felipe-ii-aliados-en-la-cruzada/capitulo/2","destination":"/es/historia/los-reyes-cruzados/capitulo/4","permanent":true},
     {"source":"/es/historia/ricardo-i-y-felipe-ii-aliados-en-la-cruzada/capitulo/3","destination":"/es/historia/los-reyes-cruzados/capitulo/5","permanent":true},
     {"source":"/es/historia/ricardo-i-y-felipe-ii-aliados-en-la-cruzada/capitulo/4","destination":"/es/historia/los-reyes-cruzados/capitulo/6","permanent":true},

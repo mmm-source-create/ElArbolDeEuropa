@@ -1,3 +1,4 @@
+import {isNamedDynasty} from '../../data/dynastyNames.js';
 import {entityMeta} from "./publicMeta.js";
 import HistoricalUnions from "../../components/HistoricalUnions.jsx";
 import React,{useEffect} from 'react';
@@ -41,7 +42,7 @@ export function TerritoryPage({slug,initialData=null}) {
  <Sucesion territorio={t} />
  <details className="territory-government-details"><summary>Consultar todos los gobiernos registrados</summary><p>Incluye regencias, ramas, títulos nominales y disputas cuando constan. Los intervalos son anuales y no implican continuidad ni exhaustividad.</p>
  {!t.gobiernos.length?<p>No hay gobiernos cargados para esta entidad. Consulta las personas relacionadas.</p>:<div className="territory-table"><table><thead><tr><th>Persona</th><th>Territorio y título</th><th>Periodo</th><th>Condición</th></tr></thead><tbody>{t.gobiernos.map((g,i)=><tr key={i}><td><a href={`/es/persona/${g.persona.slug}`}>{g.persona.nombre}</a></td><td>{g.titulo} · {g.territorio}<small>{claseTexto(g.clase)}</small></td><td>{g.desde}–{g.hasta}</td><td>{g.condicion}{g.ambito&&` · ${g.ambito}`}{g.nota&&<small>{g.nota}</small>}</td></tr>)}</tbody></table></div>}</details>
- {!!t.dinastias.length&&<section><h2>Dinastías en los gobiernos registrados</h2><div className="territory-links">{t.dinastias.map(n=><a key={n} href={`/es/dinastia/${slugPublico(n)}`}>{n}</a>)}</div></section>}
+ {!!t.dinastias.length&&<section><h2>Dinastías en los gobiernos registrados</h2><div className="territory-links">{t.dinastias.filter(isNamedDynasty).map(n=><a key={n} href={`/es/dinastia/${slugPublico(n)}`}>{n}</a>)}</div></section>}
  {!!t.historias.length&&<section><h2>Historias relacionadas</h2><div className="territory-links">{t.historias.map(h=><a key={h.slug} href={`/es/historia/${h.slug}`}>{h.titulo}</a>)}</div></section>}
  {!!t.eventos.length&&<section><h2>Acontecimientos vinculados a sus personajes</h2><ul>{t.eventos.slice(0,30).map((e,i)=><li key={e.id||i}>{e.anio||e.desde||e.fecha} · {e.titulo||e.nombre}</li>)}</ul></section>}
  {!!t.relacionados.length&&<section><h2>Entidades relacionadas</h2><div className="territory-links">{t.relacionados.map(n=><a key={n.slug} href={`/es/territorio/${n.slug}`}>{n.nombre}</a>)}</div></section>}

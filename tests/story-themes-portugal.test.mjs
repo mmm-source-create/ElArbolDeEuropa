@@ -30,12 +30,14 @@ test('todos los reyes portugueses registrados tienen retrato y crédito inglés'
   assert.match(IMAGENES_PERSONAS.JUAN2PORT.tipo,/discutida/);
   assert.match(IMAGENES_PERSONAS.MAN1PORT.derechos,/CC BY-SA 4.0/);
 });
-test('las dos colecciones son opcionales y admiten historias compartidas', () => {
+test('las colecciones son opcionales y admiten historias compartidas', () => {
   const groups = collectionGroups(HISTORIAS);
-  assert.deepEqual(groups.map(c=>c.id),['cruzadas','cultura-popular']);
+  assert.deepEqual(groups.map(c=>c.id),['cruzadas','cultura-popular','herencias-conflictivas']);
   assert.equal(groups[0].stories.length,6);assert.equal(groups[1].stories.length,5);
   assert.deepEqual(storyCollections('balduino-saladino'),['cruzadas','cultura-popular']);
-  assert.deepEqual(storyCollections('borgona'),[]);
+  assert.deepEqual(storyCollections('borgona'),['herencias-conflictivas']);
+  assert.deepEqual(groups[2].stories.map(s=>s.id).sort(),['borgona','corona-demasiado-grande','dos-coronas-dos-hijas']);
+  assert.ok(groups[2].stories.filter(s=>s.id!=='borgona').every(s=>!s.disponible&&!s.pasos?.length));
   assert.equal(HISTORIAS.filter(s=>s.disponible).length,19);
   assert.equal(HISTORIAS.filter(s=>s.titulo==='El Reino de los Cielos').length,1);
   assert.equal(HISTORIAS.some(s=>s.id==='reino-de-los-cielos'),false);
@@ -66,12 +68,13 @@ test('el catálogo muestra cada relato una vez, conserva progreso y localiza su 
   const items=HISTORIAS.map(s=>({...s,slug:s.id}));
   const doc=new JSDOM(renderToString(React.createElement(StoryCatalog,{items,progress:{'braveheart-detras-del-mito':{last:3,read:[1,2]}}}))).window.document;
   assert.equal(doc.querySelectorAll('.public-story-card').length,19);
-  assert.equal(doc.querySelectorAll('.story-coming-list li').length,11);
+  assert.equal(doc.querySelectorAll('.story-coming-list li').length,12);
   assert.ok(doc.querySelector('button[aria-selected="true"]').textContent.includes('Todas'));
   assert.ok(doc.querySelector('a[href="/es/historia/braveheart-detras-del-mito/capitulo/3"]'));
   const en=new JSDOM(renderToString(React.createElement(StoryCatalog,{items:[{id:'gioconda',nombre:'Mona Lisa',path:'/en/story/mona-lisa',pasos:11}],locale:'en'}))).window.document;
   assert.ok(en.querySelector('[role=tablist]').textContent.includes('Collections'));
-  assert.equal(en.querySelector('a').getAttribute('href'),'/en/story/mona-lisa');
+  assert.equal(en.querySelector('a.public-secondary').getAttribute('href'),'/en/story/mona-lisa');
+  assert.equal(new URL(en.querySelector('a.public-primary').getAttribute('href'),'https://example.test').searchParams.get('historia'),'gioconda');
 });
 test('Évreux se registra antes de la corona navarra y la confiscación no pinta posesión', () => {
   const philip=people.get('FELIPEVREUX'),charles=people.get('CARLOS2NAV');

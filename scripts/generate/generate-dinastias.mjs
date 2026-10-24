@@ -10,6 +10,8 @@ const errors=auditDynasties(PERSONAS);
 if(errors.length)throw new Error(JSON.stringify(errors));
 const pages=buildDynastyPages(PERSONAS).map(p=>escudoDe(p.nombre)?{...p,ogImage:ogDynastyImage(p.slug)}:p);
 const out='public/dinastias-meta';
+// Remove obsolete names as well as rebuilding the current catalogue.
+await fs.rm(out,{recursive:true,force:true});
 await fs.mkdir(out,{recursive:true});
 for(const p of pages)await fs.writeFile(`${out}/${p.slug}.json`,JSON.stringify(p));
 for(const [alias,target] of Object.entries(DINASTIA_ALIASES)){

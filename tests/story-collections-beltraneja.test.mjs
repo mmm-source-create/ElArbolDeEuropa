@@ -31,7 +31,7 @@ test('las colecciones se abren de una en una, comparten relatos y Todas no dupli
     await act(()=>tabs[0].dispatchEvent(new window.KeyboardEvent('keydown',{key:'ArrowRight',bubbles:true})));
     assert.equal(document.activeElement,tabs[1]);assert.equal(tabs[1].getAttribute('aria-selected'),'true');
     const buttons=[...document.querySelectorAll('[aria-expanded]')];
-    assert.equal(buttons.length,2);assert.ok(buttons.every(b=>b.getAttribute('aria-expanded')==='false'));
+    assert.equal(buttons.length,3);assert.ok(buttons.every(b=>b.getAttribute('aria-expanded')==='false'));
     await act(()=>buttons[0].click());
     assert.equal(buttons[0].getAttribute('aria-expanded'),'true');
     assert.equal(document.querySelectorAll('.story-collection-card .public-story-card').length,6);
@@ -41,6 +41,7 @@ test('las colecciones se abren de una en una, comparten relatos y Todas no dupli
     assert.equal(document.querySelectorAll('.story-collection-card .public-story-card').length,5);
     assert.equal([...document.querySelectorAll('h3')].filter(h=>h.textContent==='El Reino de los Cielos').length,1);
     await act(()=>buttons[1].click());assert.ok(buttons.every(b=>b.getAttribute('aria-expanded')==='false'));
+    await act(()=>buttons[2].click());assert.equal(buttons[2].getAttribute('aria-expanded'),'true');assert.equal(document.querySelectorAll('.story-collection-card .public-story-card').length,1);assert.equal(document.querySelectorAll('.story-collection-card .story-coming-list li').length,2);
     await act(()=>tabs[0].click());assert.equal(document.querySelectorAll('.public-story-card').length,19);
     await act(()=>root.render(React.createElement(StoryCatalog,{items:[{id:'gioconda',nombre:'Mona Lisa',pasos:11,path:'/en/story/mona-lisa'}],locale:'en'})));
     await act(()=>document.querySelectorAll('[role=tab]')[1].click());

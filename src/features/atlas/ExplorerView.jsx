@@ -1,3 +1,4 @@
+import {isNamedDynasty} from '../../data/dynastyNames.js';
 // Los imports sin nombre de componentes que ahora usa ./view/ conservan aquí el orden de sus estilos en la cascada.
 import {dynastyRegions} from '../../domain/filters/atlasFilters.js';
 import AtlasTimeline from './AtlasTimeline.jsx';
@@ -5,6 +6,7 @@ import './europe-panorama.css';
 import {AtlasLoadError} from './AtlasSkeleton.jsx';
 import './AtlasGrowth.jsx';
 import StoryAtlasGuide from './StoryAtlasGuide.jsx';
+import StoryWorkspace from './StoryWorkspace.jsx';
 import '../stories/stories.css';
 import ConnectionControls from "../connections/ConnectionControls.jsx";
 import "../connections/TreeExport.jsx";
@@ -40,7 +42,7 @@ import AtlasTreeStage from './view/AtlasTreeStage.jsx';
 import AtlasMapStage from './view/AtlasMapStage.jsx';
 import AtlasBiographyPanel from './view/AtlasBiographyPanel.jsx';
 
-const SEARCH_DYNASTIES = [...new Set(PERSONAS.map(persona => persona.dinastia).filter(Boolean))];
+const SEARCH_DYNASTIES = [...new Set(PERSONAS.map(persona => persona.dinastia).filter(isNamedDynasty))];
 const SEARCH_TERRITORIES = Object.keys(TERRITORIOS);
 
 const loadEuropeYearView = () => import('./EuropeYearView.jsx');
@@ -98,6 +100,7 @@ export default function ExplorerView({ vm, loading = false, loadError = false, o
     seleccionarEvento, aplicarPasoHistoria, iniciarHistoria, cambiarPasoHistoria, salirHistoria, filtrosActivosCompactos,
     cambiarIdioma,
   } = vm;
+  React.useEffect(()=>{if(historiaActiva?.id)setBioMobileOpen(false);},[historiaActiva?.id]);
   const filtrosCompactosVisibles = filtrosActivosCompactos.slice(0, 6);
   const filtrosCompactosRestantes = Math.max(0, filtrosActivosCompactos.length - filtrosCompactosVisibles.length);
   const filterCount = territorios.length + dinastias.length + titulos.length + siglos.length + relaciones.length + Number(soloFavoritos) + Number(soloDocumentados);
@@ -264,7 +267,7 @@ export default function ExplorerView({ vm, loading = false, loadError = false, o
       {loading && <span className="atlas-loading-status" role="status">Cargando el atlas…</span>}
       {loadError && <AtlasLoadError onRetry={onRetry}/>}
       {!modoTrabajo && <SiteHeader variant="atlas" locale={locale} onLanguageChange={cambiarIdioma} />}
-    <div className={`wrap atlas-scene-${atlasScene}${modoTrabajo ? " atlas-work-mode" : ""}`} inert={!ready}>
+    <div className={`wrap atlas-scene-${atlasScene}${historiaActiva ? " story-reading-active" : ""}${modoTrabajo ? " atlas-work-mode" : ""}`} inert={!ready}>
       {/* V5.20 · Cabecera fija: vistas y paneles, escena en el centro y acciones. */}
       <AtlasToolbar vm={vm} closeOtherToolbarMenus={closeOtherToolbarMenus} guideButtonRef={guideButtonRef} mobileToolsOpen={mobileToolsOpen} onToolbarMenuToggle={onToolbarMenuToggle} panelsMenuRef={panelsMenuRef} setGuideOpen={openGuide} setMobileToolsOpen={setMobileToolsOpen} toolsMenuRef={toolsMenuRef} vistasAntesDeConectarRef={vistasAntesDeConectarRef} />
       <AtlasTopbar vm={vm} searchOpen={searchOpen} searchResults={searchResults} setSearchOpen={setSearchOpen} />
@@ -299,8 +302,9 @@ export default function ExplorerView({ vm, loading = false, loadError = false, o
 
       {mode === "foco" && <FocusBar vm={vm} />}
 
-      {historiaActiva && <StoryAtlasGuide story={historiaActiva} index={historiaPasoIndex} returnPath={vm.storyReturn} count={vm.growth.ids?.length || 0} onStep={cambiarPasoHistoria} onCenter={()=>aplicarPasoHistoria(historiaActiva,historiaPasoIndex,{replace:true})} onExit={salirHistoria}/>}
 
+
+      <StoryWorkspace active={Boolean(historiaActiva)}>
       {/* V5.20 · Atlas y Europa comparten URL y se deslizan como dos paneles contiguos. */}
       <div className={`atlas-scenes is-${atlasScene}${sceneSliding ? ' is-sliding' : ''}`}>
       <div className="atlas-scenes-track">
@@ -337,6 +341,9 @@ export default function ExplorerView({ vm, loading = false, loadError = false, o
       </div>
       </div>
       </div>
+
+      {historiaActiva && <StoryAtlasGuide story={historiaActiva} index={historiaPasoIndex} returnPath={vm.storyReturn} count={vm.growth.ids?.length || 0} onStep={cambiarPasoHistoria} onCenter={()=>aplicarPasoHistoria(historiaActiva,historiaPasoIndex,{replace:true})} onExit={salirHistoria} onPerson={()=>{if(!mostrarBiografia)alternarPanelAuxiliar('biografia');setBioMobileOpen(true);}}/>}
+      </StoryWorkspace>
 
       {!modoTrabajo && (
         <SiteFooter

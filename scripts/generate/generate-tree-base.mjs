@@ -3,7 +3,7 @@ import {ACCESOS_CORONAS} from '../../src/content/coronas/index.js';
 import {RELEVOS} from '../../src/content/sucesiones/index.js';
 import {accesosDe} from '../../src/domain/government/crowns.js';
 import {HISTORIA_DINASTIAS} from "../../src/content/dinastias/index.js";
-import {dynastyAliasesFor} from '../../src/data/dynastyNames.js';
+import {isNamedDynasty,dynastyAliasesFor} from '../../src/data/dynastyNames.js';
 import { sourcesForPerson } from "../../src/content/sources.js";
 import { TERRITORIOS, componentesDe } from "../../src/data/territorios.js";
 import fs from "node:fs/promises";
@@ -398,7 +398,7 @@ function territoriosCompartidos(a, b) {
 }
 
 function relacionadosDinastia(persona, limite = 6) {
-  if (!persona?.dinastia) return [];
+  if (!isNamedDynasty(persona?.dinastia)) return [];
   const excluir = familiaDirectaIds(persona);
   const centro = centroCronologico(persona);
   return PERSONAS
@@ -533,7 +533,7 @@ async function generarCatalogosPublicos() {
   await fs.mkdir(catalogoDir, { recursive: true });
 
   const personas = catalogoPersonas();
-  const dinastias = catalogoAgrupado(PERSONAS.map((p) => p.dinastia), (p, nombre) => p.dinastia === nombre).map(d=>({...d,aliases:dynastyAliasesFor(d.nombre),editorial:Boolean(HISTORIA_DINASTIAS[d.nombre]),resumen:HISTORIA_DINASTIAS[d.nombre]?.resumen||""}));
+  const dinastias = catalogoAgrupado(PERSONAS.map((p) => p.dinastia).filter(isNamedDynasty), (p, nombre) => p.dinastia === nombre).map(d=>({...d,aliases:dynastyAliasesFor(d.nombre),editorial:Boolean(HISTORIA_DINASTIAS[d.nombre]),resumen:HISTORIA_DINASTIAS[d.nombre]?.resumen||""}));
   const territoriosValores = Object.keys(TERRITORIOS);
   const territorios = catalogoAgrupado(territoriosValores, (p, nombre) => territoriosDe(p).some(t => [nombre, ...componentesDe(nombre)].includes(t)));
   const historias = HISTORIAS.map((historia) => ({
