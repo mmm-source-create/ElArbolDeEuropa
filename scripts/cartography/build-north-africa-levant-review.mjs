@@ -31,6 +31,11 @@ const sources = {
   melilla: {title: 'Treccani · Melilla', url: T('melilla'), locator: 'Puerto del reino de Tremecén, ocupado por España en 1497.'},
   bejaia: {title: 'Treccani · Bejaïa', url: T('bejaia'), locator: 'Centro almohade y conquista otomana en 1555. La entrada española se fecha en 1510 siguiendo la Revista de Historia Naval 50, fuente presidios.'},
   tangier: {title: 'Ottoman History Podcast · The English in 17th-Century Tangier', url: 'https://www.ottomanhistorypodcast.com/2018/10/english-tangier.html', locator: 'Tánger portugués desde 1471, dote de Catalina de Braganza, ocupación inglesa desde 1662 y evacuación en 1684.'},
+  bona: {title:'Archivo General de Simancas · Capitulación sobre Bona',url:'https://pares.cultura.gob.es/ParesBusquedas20/catalogo/description/2213918',locator:'AGS, PTR,LEG,11,105,2: capitulación de Muley al-Hacén con Carlos V sobre Bona, fechada probablemente en 1535.'},
+  bonaEnd: {title:'Revista de Historia Naval 166 (2024) · Expedición de Túnez',url:'https://armada.defensa.gob.es/archivo/mardigitalrevistas/rhn/2025/166/RHN166Web.pdf',locator:'Página 35 y nota 104: guarnición española de seiscientos hombres en Bona desde agosto de 1535, bajo Alvar Gómez de Orozco, cuyo gobierno se prolongó cinco años, hasta 1540.'},
+  tabarka: {title:'Ministerio de Agricultura, Pesca y Alimentación · Nueva Tabarca, patrimonio integral en el horizonte marítimo',url:'https://www.mapa.gob.es/es/pesca/publicaciones/nuevatabarca1web_tcm30-521743.pdf',locator:'Página 147: asiento firmado el 22 de septiembre de 1542 por el representante de Carlos V con Grimaldi y Lomellini, fortaleza y guarnición, quinta parte de beneficios y obligaciones de mantenimiento del enclave hispano-genovés.'},
+  tabarkaEffective: {title:'Business History · Whatever the cost: Grain trade and the Genoese dominating minority in Sicily and Tabarka',url:'https://www.tandfonline.com/doi/full/10.1080/00076791.2021.1924686',locator:'Concesión formal efectiva desde 1543, renovaciones del asiento, última firma en 1695 y final del enclave con la conquista del bey de Túnez en 1741.'},
+  tabarkaEarly: {title:'École française de Rome · Tabarka (Tunisie), 1988',url:'https://www.persee.fr/doc/mefr_0223-5110_1988_num_100_1_8619',locator:'La fase de 1535–1741 concierne a la isla; construcción del fuerte en las campañas de Carlos V y posterior entrega a las familias genovesas. La fecha de comienzo del asiento sigue el contrato de 1542 y su vigencia desde 1543.'},
   safi: {title:'HPIP · Safi',url:'https://hpip.org/pt/Contents/Place/376',locator:'Conquista efectiva de Safí en 1508 y abandono portugués en 1541; la factoría y el protectorado anteriores no equivalen a ocupación de la ciudad.'},
   azemmour: {title:'HPIP · Azemmour',url:'https://hpip.org/pt/Contents/Place/561',locator:'Vasallaje desde 1486; conquista portuguesa en 1513 y evacuación en octubre de 1541.'},
   agadir: {title:'HPIP · Agadir, arquitectura militar',url:'https://hpip.org/en/heritage/details/1930',locator:'Castillo de João Lopes de Sequeira fundado en 1505; plaza perdida ante los saadíes en 1541.'},
@@ -191,6 +196,8 @@ const CHRONOLOGY = {
 // Using an absent «España» mandate would omit the outposts from their personal maps.
 const CASTILE = ['Castilla'], SPAIN = ['Castilla'], PORTUGAL = ['Portugal'];
 const PRESIDIOS = {
+  Annaba: [[1535, 1539, 'Presidios españoles del Magreb', CASTILE, ['bona', 'bonaEnd']]],
+  Tabarka: [[1535, 1542, 'Presidios españoles del Magreb', CASTILE, ['tabarkaEarly', 'tabarka']], [1543, 1740, 'Tabarca hispano-genovesa', CASTILE, ['tabarka', 'tabarkaEffective'], 'Factoría y fortaleza insular gestionadas mediante asiento por Grimaldi y Lomellini, con renovaciones y subarriendos. La Corona hispánica conserva la soberanía; la gestión comercial corresponde a las compañías genovesas. Contrato firmado en 1542, efectivo desde 1543; conquista tunecina en 1741. La celda sitúa el enclave insular y no acredita dominio sobre toda la ciudad continental.']],
   Melilla: [[1497, 1515, 'Presidios españoles del Magreb', CASTILE, ['melilla']], [1516, THROUGH, 'Presidios españoles del Magreb', SPAIN, ['melilla']]],
   Oran: [[1509, 1515, 'Presidios españoles del Magreb', CASTILE, ['orano']], [1516, 1707, 'Presidios españoles del Magreb', SPAIN, ['orano1708']],
     [1732, 1791, 'Presidios españoles del Magreb', SPAIN, ['orano']]],
@@ -244,8 +251,8 @@ for (const [zone, ids] of [...cellsByZone].sort(([a], [b]) => a.localeCompare(b)
   for (const p of chronology) phase(ZONE_LABEL[zone], p, zoneIds);
   // A fortress follows its zone outside the years of European possession.
   for (const id of ids.filter(id => PRESIDIOS[id]).sort()) {
-    const held = PRESIDIOS[id].map(([from, through, identity, governmentTerritories, sourceKeys]) =>
-      P(from, through, identity, governmentTerritories, sourceKeys, `Plaza de ${id.replaceAll('_', ' ')}. La celda aproxima su localización y no acredita dominio sobre todo el entorno rural. Corte anual por la situación al final del año; conquista o evacuación dentro del año se documentan en las fuentes.`, {limitedCore:true, ...(id === 'Tunis' ? {authorityCondition:'ocupación'} : {})}));
+    const held = PRESIDIOS[id].map(([from, through, identity, governmentTerritories, sourceKeys, context]) =>
+      P(from, through, identity, governmentTerritories, sourceKeys, `${context ? context + ' ' : ''}Plaza de ${id.replaceAll('_', ' ')}. La celda aproxima su localización y no acredita dominio sobre todo el entorno rural. Corte anual por la situación al final del año; conquista o evacuación dentro del año se documentan en las fuentes.`, {limitedCore:true, ...(id === 'Tunis' ? {authorityCondition:'ocupación'} : {})}));
     const pieces = [];
     for (const p of chronology) {
       let cursor = p.from;

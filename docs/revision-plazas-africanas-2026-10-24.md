@@ -1,11 +1,13 @@
 # Revisión de las plazas europeas del norte de África
 
-La revisión incorpora siete plazas que faltaban, recupera la segunda etapa portuguesa de Arcila y corrige las transiciones de Bugía, Orán, Mazagán y Túnez. Afecta a doce celdas de las 613 de la revisión de África y Levante. El contorno del mapa permanece igual. También se corrige el vínculo de las plazas españolas con los mandatos de Castilla: el nombre genérico «España» no coincidía con los gobiernos de la base de datos y las dejaba fuera de los mapas personales de Carlos V, Felipe II y sus sucesores.
+La revisión incorpora nueve plazas que faltaban, recupera la segunda etapa portuguesa de Arcila y corrige las transiciones de Bugía, Orán, Mazagán y Túnez. Afecta a catorce celdas de las 613 de la revisión de África y Levante. El contorno del mapa permanece igual. También se corrige el vínculo de las plazas españolas con los mandatos de Castilla: el nombre genérico «España» no coincidía con los gobiernos de la base de datos y las dejaba fuera de los mapas personales de Carlos V, Felipe II y sus sucesores.
 
 Los períodos de esta tabla son históricos. En la secuencia anual, el año de una evacuación o pérdida se atribuye a la situación al cierre del año: por ejemplo, Mazagán pasa a Marruecos en 1769 y su última celda portuguesa es la de 1768. Las fuentes y las notas del inspector conservan las fechas de los hechos.
 
 | Plaza | Revisión | Fuente |
 | --- | --- | --- |
+| Bona (Annaba) | Se añade la guarnición española de 1535–1540; el núcleo vuelve a la regencia de Argel en el corte anual de 1540. | [Capitulación de Simancas](https://pares.cultura.gob.es/ParesBusquedas20/catalogo/description/2213918), [Revista de Historia Naval 166, p. 35](https://armada.defensa.gob.es/archivo/mardigitalrevistas/rhn/2025/166/RHN166Web.pdf) |
+| Tabarca | Se añade el fuerte hispánico desde 1535 y el enclave hispano-genovés de Grimaldi y Lomellini desde la vigencia del asiento en 1543 hasta la conquista tunecina de 1741. El contrato se firma en 1542. La gestión privada del enclave conserva la soberanía de la Corona hispánica, que determina el color compartido; no se atribuye a los dogos de Génova. La celda aproxima la isla, no el dominio de toda la ciudad continental. | [École française de Rome](https://www.persee.fr/doc/mefr_0223-5110_1988_num_100_1_8619), [MAPA, p. 147](https://www.mapa.gob.es/es/pesca/publicaciones/nuevatabarca1web_tcm30-521743.pdf), [Business History](https://www.tandfonline.com/doi/full/10.1080/00076791.2021.1924686) |
 | Safí | Se incorpora la ocupación portuguesa de 1508 a 1541; se distingue del protectorado y la factoría anteriores. | [HPIP](https://hpip.org/pt/Contents/Place/376) |
 | Azamor | Se incorpora la ocupación portuguesa de 1513 a 1541; el acuerdo de vasallaje de 1486 no se convierte en ocupación. | [HPIP](https://hpip.org/pt/Contents/Place/561) |
 | Agadir | Se incorpora Santa Cruz do Cabo de Guer desde 1505 hasta la conquista saadí de 1541. | [HPIP](https://hpip.org/en/heritage/details/1930) |
@@ -28,3 +30,5 @@ Las celdas de las plazas se marcan como núcleos de alcance limitado y sus notas
 Alcácer Ceguer, Mazalquivir, La Goleta, el Peñón de Argel, el Peñón de Vélez, Alhucemas y Cazaza carecen de celda independiente. Su representación precisa requiere geometría nueva. Asignarles toda Ceuta, Orán, Túnez, Argel, Badis, Al-Mazamma o Melilla ampliaría artificialmente su extensión. Estas limitaciones quedan registradas en el conjunto cartográfico.
 
 Los acuerdos de vasallaje de Safí y Azamor y las sumisiones de otras ciudades magrebíes requieren una revisión separada de relaciones tributarias para mostrarlos con trama. Las fechas de ocupación de esta entrega no los convierten en dominio directo.
+
+El establecimiento francés de El Kala y otras concesiones de pesca de coral se distinguen de una anexión territorial. La presencia de comerciantes o de una factoría bajo concesión no basta para colorear toda la localidad como dominio soberano francés.

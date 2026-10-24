@@ -1500,7 +1500,6 @@
       "through": 1235,
       "ids": [
         "Amdoukal",
-        "Annaba",
         "Azeffoun",
         "Bades",
         "Bades_Mountain1",
@@ -1570,7 +1569,6 @@
       "through": 1524,
       "ids": [
         "Amdoukal",
-        "Annaba",
         "Azeffoun",
         "Bades",
         "Bades_Mountain1",
@@ -1638,7 +1636,6 @@
       "through": 1800,
       "ids": [
         "Amdoukal",
-        "Annaba",
         "Azeffoun",
         "Bades",
         "Bades_Mountain1",
@@ -1702,7 +1699,101 @@
       "scopeLabel": "Bugía y Constantina · 1525–1800"
     },
     {
-      "name": "Bejaia · Califato almohade · 1200–1235 · revisión África y Levante 13",
+      "name": "Annaba · Califato almohade · 1200–1235 · revisión África y Levante 13",
+      "identity": "Califato almohade",
+      "from": 1200,
+      "through": 1235,
+      "ids": [
+        "Annaba"
+      ],
+      "governmentTerritories": [
+        "Califato almohade"
+      ],
+      "sourceKeys": [
+        "almohadi"
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": false,
+      "note": "Magreb oriental bajo los almohades.",
+      "scopeLabel": "Annaba · 1200–1235"
+    },
+    {
+      "name": "Annaba · Sultanato hafsí · 1236–1524 · revisión África y Levante 14",
+      "identity": "Sultanato hafsí",
+      "from": 1236,
+      "through": 1524,
+      "ids": [
+        "Annaba"
+      ],
+      "governmentTerritories": [],
+      "sourceKeys": [
+        "hafsidi"
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": false,
+      "note": "Bugía y Constantina, en manos hafsíes; la rama de Bugía se separó en 1284.",
+      "scopeLabel": "Annaba · 1236–1524"
+    },
+    {
+      "name": "Annaba · Regencia de Argel · 1525–1534 · revisión África y Levante 15",
+      "identity": "Regencia de Argel",
+      "from": 1525,
+      "through": 1534,
+      "ids": [
+        "Annaba"
+      ],
+      "governmentTerritories": [
+        "Imperio otomano"
+      ],
+      "sourceKeys": [
+        "algeri"
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": false,
+      "note": "Regencia otomana de Argel. Desde el siglo XVII la gobernaron agás y deyes con amplia autonomía.",
+      "scopeLabel": "Annaba · 1525–1534"
+    },
+    {
+      "name": "Annaba · Presidios españoles del Magreb · 1535–1539 · revisión África y Levante 16",
+      "identity": "Presidios españoles del Magreb",
+      "from": 1535,
+      "through": 1539,
+      "ids": [
+        "Annaba"
+      ],
+      "governmentTerritories": [
+        "Castilla"
+      ],
+      "sourceKeys": [
+        "bona",
+        "bonaEnd"
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": true,
+      "note": "Plaza de Annaba. La celda aproxima su localización y no acredita dominio sobre todo el entorno rural. Corte anual por la situación al final del año; conquista o evacuación dentro del año se documentan en las fuentes.",
+      "scopeLabel": "Annaba · 1535–1539"
+    },
+    {
+      "name": "Annaba · Regencia de Argel · 1540–1800 · revisión África y Levante 17",
+      "identity": "Regencia de Argel",
+      "from": 1540,
+      "through": 1800,
+      "ids": [
+        "Annaba"
+      ],
+      "governmentTerritories": [
+        "Imperio otomano"
+      ],
+      "sourceKeys": [
+        "algeri"
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": false,
+      "note": "Regencia otomana de Argel. Desde el siglo XVII la gobernaron agás y deyes con amplia autonomía.",
+      "scopeLabel": "Annaba · 1540–1800"
+    },
+    {
+      "name": "Bejaia · Califato almohade · 1200–1235 · revisión África y Levante 18",
       "identity": "Califato almohade",
       "from": 1200,
       "through": 1235,
@@ -1721,7 +1812,7 @@
       "scopeLabel": "Bejaia · 1200–1235"
     },
     {
-      "name": "Bejaia · Sultanato hafsí · 1236–1509 · revisión África y Levante 14",
+      "name": "Bejaia · Sultanato hafsí · 1236–1509 · revisión África y Levante 19",
       "identity": "Sultanato hafsí",
       "from": 1236,
       "through": 1509,
@@ -1738,7 +1829,7 @@
       "scopeLabel": "Bejaia · 1236–1509"
     },
     {
-      "name": "Bejaia · Presidios españoles del Magreb · 1510–1515 · revisión África y Levante 15",
+      "name": "Bejaia · Presidios españoles del Magreb · 1510–1515 · revisión África y Levante 20",
       "identity": "Presidios españoles del Magreb",
       "from": 1510,
       "through": 1515,
@@ -1757,7 +1848,7 @@
       "scopeLabel": "Bejaia · 1510–1515"
     },
     {
-      "name": "Bejaia · Presidios españoles del Magreb · 1516–1554 · revisión África y Levante 16",
+      "name": "Bejaia · Presidios españoles del Magreb · 1516–1554 · revisión África y Levante 21",
       "identity": "Presidios españoles del Magreb",
       "from": 1516,
       "through": 1554,
@@ -1777,7 +1868,7 @@
       "scopeLabel": "Bejaia · 1516–1554"
     },
     {
-      "name": "Bejaia · Regencia de Argel · 1555–1800 · revisión África y Levante 17",
+      "name": "Bejaia · Regencia de Argel · 1555–1800 · revisión África y Levante 22",
       "identity": "Regencia de Argel",
       "from": 1555,
       "through": 1800,
@@ -1796,7 +1887,7 @@
       "scopeLabel": "Bejaia · 1555–1800"
     },
     {
-      "name": "Acre, Sidón y Beirut · Jerusalén · 1200–1290 · revisión África y Levante 18",
+      "name": "Acre, Sidón y Beirut · Jerusalén · 1200–1290 · revisión África y Levante 23",
       "identity": "Jerusalén",
       "from": 1200,
       "through": 1290,
@@ -1817,7 +1908,7 @@
       "scopeLabel": "Acre, Sidón y Beirut · 1200–1290"
     },
     {
-      "name": "Acre, Sidón y Beirut · Sultanato mameluco · 1291–1515 · revisión África y Levante 19",
+      "name": "Acre, Sidón y Beirut · Sultanato mameluco · 1291–1515 · revisión África y Levante 24",
       "identity": "Sultanato mameluco",
       "from": 1291,
       "through": 1515,
@@ -1839,7 +1930,7 @@
       "scopeLabel": "Acre, Sidón y Beirut · 1291–1515"
     },
     {
-      "name": "Acre, Sidón y Beirut · Imperio otomano · 1516–1800 · revisión África y Levante 20",
+      "name": "Acre, Sidón y Beirut · Imperio otomano · 1516–1800 · revisión África y Levante 25",
       "identity": "Imperio otomano",
       "from": 1516,
       "through": 1800,
@@ -1860,7 +1951,7 @@
       "scopeLabel": "Acre, Sidón y Beirut · 1516–1800"
     },
     {
-      "name": "Desierto sirio · Desierto sirio · tribus beduinas · 1200–1800 · revisión África y Levante 21",
+      "name": "Desierto sirio · Desierto sirio · tribus beduinas · 1200–1800 · revisión África y Levante 26",
       "identity": "Desierto sirio · tribus beduinas",
       "from": 1200,
       "through": 1800,
@@ -1898,7 +1989,7 @@
       "scopeLabel": "Desierto sirio · 1200–1800"
     },
     {
-      "name": "Egipto y Sinaí · Sultanato ayubí · 1200–1249 · revisión África y Levante 22",
+      "name": "Egipto y Sinaí · Sultanato ayubí · 1200–1249 · revisión África y Levante 27",
       "identity": "Sultanato ayubí",
       "from": 1200,
       "through": 1249,
@@ -2010,7 +2101,7 @@
       "scopeLabel": "Egipto y Sinaí · 1200–1249"
     },
     {
-      "name": "Egipto y Sinaí · Sultanato mameluco · 1250–1516 · revisión África y Levante 23",
+      "name": "Egipto y Sinaí · Sultanato mameluco · 1250–1516 · revisión África y Levante 28",
       "identity": "Sultanato mameluco",
       "from": 1250,
       "through": 1516,
@@ -2122,7 +2213,7 @@
       "scopeLabel": "Egipto y Sinaí · 1250–1516"
     },
     {
-      "name": "Egipto y Sinaí · Imperio otomano · 1517–1797 · revisión África y Levante 24",
+      "name": "Egipto y Sinaí · Imperio otomano · 1517–1797 · revisión África y Levante 29",
       "identity": "Imperio otomano",
       "from": 1517,
       "through": 1797,
@@ -2235,7 +2326,7 @@
       "scopeLabel": "Egipto y Sinaí · 1517–1797"
     },
     {
-      "name": "Egipto y Sinaí · Ocupación francesa de Egipto · 1798–1800 · revisión África y Levante 25",
+      "name": "Egipto y Sinaí · Ocupación francesa de Egipto · 1798–1800 · revisión África y Levante 30",
       "identity": "Ocupación francesa de Egipto",
       "from": 1798,
       "through": 1800,
@@ -2349,7 +2440,7 @@
       "authorityCondition": "ocupación"
     },
     {
-      "name": "Fezzán · Fezzán · 1200–1800 · revisión África y Levante 26",
+      "name": "Fezzán · Fezzán · 1200–1800 · revisión África y Levante 31",
       "identity": "Fezzán",
       "from": 1200,
       "through": 1800,
@@ -2377,7 +2468,7 @@
       "scopeLabel": "Fezzán · 1200–1800"
     },
     {
-      "name": "Jaffa · Jerusalén · 1200–1267 · revisión África y Levante 27",
+      "name": "Jaffa · Jerusalén · 1200–1267 · revisión África y Levante 32",
       "identity": "Jerusalén",
       "from": 1200,
       "through": 1267,
@@ -2396,7 +2487,7 @@
       "scopeLabel": "Jaffa · 1200–1267"
     },
     {
-      "name": "Jaffa · Sultanato mameluco · 1268–1516 · revisión África y Levante 28",
+      "name": "Jaffa · Sultanato mameluco · 1268–1516 · revisión África y Levante 33",
       "identity": "Sultanato mameluco",
       "from": 1268,
       "through": 1516,
@@ -2415,7 +2506,7 @@
       "scopeLabel": "Jaffa · 1268–1516"
     },
     {
-      "name": "Jaffa · Imperio otomano · 1517–1800 · revisión África y Levante 29",
+      "name": "Jaffa · Imperio otomano · 1517–1800 · revisión África y Levante 34",
       "identity": "Imperio otomano",
       "from": 1517,
       "through": 1800,
@@ -2434,7 +2525,7 @@
       "scopeLabel": "Jaffa · 1517–1800"
     },
     {
-      "name": "Jerusalén · Sultanato ayubí · 1200–1228 · revisión África y Levante 30",
+      "name": "Jerusalén · Sultanato ayubí · 1200–1228 · revisión África y Levante 35",
       "identity": "Sultanato ayubí",
       "from": 1200,
       "through": 1228,
@@ -2454,7 +2545,7 @@
       "scopeLabel": "Jerusalén · 1200–1228"
     },
     {
-      "name": "Jerusalén · Jerusalén · 1229–1238 · revisión África y Levante 31",
+      "name": "Jerusalén · Jerusalén · 1229–1238 · revisión África y Levante 36",
       "identity": "Jerusalén",
       "from": 1229,
       "through": 1238,
@@ -2474,7 +2565,7 @@
       "scopeLabel": "Jerusalén · 1229–1238"
     },
     {
-      "name": "Jerusalén · Sultanato ayubí · 1239–1242 · revisión África y Levante 32",
+      "name": "Jerusalén · Sultanato ayubí · 1239–1242 · revisión África y Levante 37",
       "identity": "Sultanato ayubí",
       "from": 1239,
       "through": 1242,
@@ -2493,7 +2584,7 @@
       "scopeLabel": "Jerusalén · 1239–1242"
     },
     {
-      "name": "Jerusalén · Jerusalén · 1243–1243 · revisión África y Levante 33",
+      "name": "Jerusalén · Jerusalén · 1243–1243 · revisión África y Levante 38",
       "identity": "Jerusalén",
       "from": 1243,
       "through": 1243,
@@ -2512,7 +2603,7 @@
       "scopeLabel": "Jerusalén · 1243–1243"
     },
     {
-      "name": "Jerusalén · Sultanato ayubí · 1244–1249 · revisión África y Levante 34",
+      "name": "Jerusalén · Sultanato ayubí · 1244–1249 · revisión África y Levante 39",
       "identity": "Sultanato ayubí",
       "from": 1244,
       "through": 1249,
@@ -2532,7 +2623,7 @@
       "scopeLabel": "Jerusalén · 1244–1249"
     },
     {
-      "name": "Jerusalén · Sultanato mameluco · 1250–1516 · revisión África y Levante 35",
+      "name": "Jerusalén · Sultanato mameluco · 1250–1516 · revisión África y Levante 40",
       "identity": "Sultanato mameluco",
       "from": 1250,
       "through": 1516,
@@ -2552,7 +2643,7 @@
       "scopeLabel": "Jerusalén · 1250–1516"
     },
     {
-      "name": "Jerusalén · Imperio otomano · 1517–1800 · revisión África y Levante 36",
+      "name": "Jerusalén · Imperio otomano · 1517–1800 · revisión África y Levante 41",
       "identity": "Imperio otomano",
       "from": 1517,
       "through": 1800,
@@ -2571,7 +2662,7 @@
       "scopeLabel": "Jerusalén · 1517–1800"
     },
     {
-      "name": "Marruecos septentrional · Califato almohade · 1200–1247 · revisión África y Levante 37",
+      "name": "Marruecos septentrional · Califato almohade · 1200–1247 · revisión África y Levante 42",
       "identity": "Califato almohade",
       "from": 1200,
       "through": 1247,
@@ -2632,7 +2723,7 @@
       "scopeLabel": "Marruecos septentrional · 1200–1247"
     },
     {
-      "name": "Marruecos septentrional · Sultanato benimerín · 1248–1464 · revisión África y Levante 38",
+      "name": "Marruecos septentrional · Sultanato benimerín · 1248–1464 · revisión África y Levante 43",
       "identity": "Sultanato benimerín",
       "from": 1248,
       "through": 1464,
@@ -2692,7 +2783,7 @@
       "scopeLabel": "Marruecos septentrional · 1248–1464"
     },
     {
-      "name": "Marruecos septentrional · Sultanato wattasí · 1465–1548 · revisión África y Levante 39",
+      "name": "Marruecos septentrional · Sultanato wattasí · 1465–1548 · revisión África y Levante 44",
       "identity": "Sultanato wattasí",
       "from": 1465,
       "through": 1548,
@@ -2752,7 +2843,7 @@
       "scopeLabel": "Marruecos septentrional · 1465–1548"
     },
     {
-      "name": "Marruecos septentrional · Sultanato saadí · 1549–1665 · revisión África y Levante 40",
+      "name": "Marruecos septentrional · Sultanato saadí · 1549–1665 · revisión África y Levante 45",
       "identity": "Sultanato saadí",
       "from": 1549,
       "through": 1665,
@@ -2811,7 +2902,7 @@
       "scopeLabel": "Marruecos septentrional · 1549–1665"
     },
     {
-      "name": "Marruecos septentrional · Sultanato alauí · 1666–1800 · revisión África y Levante 41",
+      "name": "Marruecos septentrional · Sultanato alauí · 1666–1800 · revisión África y Levante 46",
       "identity": "Sultanato alauí",
       "from": 1666,
       "through": 1800,
@@ -2870,7 +2961,7 @@
       "scopeLabel": "Marruecos septentrional · 1666–1800"
     },
     {
-      "name": "Asilah · Califato almohade · 1200–1247 · revisión África y Levante 42",
+      "name": "Asilah · Califato almohade · 1200–1247 · revisión África y Levante 47",
       "identity": "Califato almohade",
       "from": 1200,
       "through": 1247,
@@ -2889,7 +2980,7 @@
       "scopeLabel": "Asilah · 1200–1247"
     },
     {
-      "name": "Asilah · Sultanato benimerín · 1248–1464 · revisión África y Levante 43",
+      "name": "Asilah · Sultanato benimerín · 1248–1464 · revisión África y Levante 48",
       "identity": "Sultanato benimerín",
       "from": 1248,
       "through": 1464,
@@ -2907,7 +2998,7 @@
       "scopeLabel": "Asilah · 1248–1464"
     },
     {
-      "name": "Asilah · Sultanato wattasí · 1465–1470 · revisión África y Levante 44",
+      "name": "Asilah · Sultanato wattasí · 1465–1470 · revisión África y Levante 49",
       "identity": "Sultanato wattasí",
       "from": 1465,
       "through": 1470,
@@ -2925,7 +3016,7 @@
       "scopeLabel": "Asilah · 1465–1470"
     },
     {
-      "name": "Asilah · Plazas portuguesas del Magreb · 1471–1549 · revisión África y Levante 45",
+      "name": "Asilah · Plazas portuguesas del Magreb · 1471–1549 · revisión África y Levante 50",
       "identity": "Plazas portuguesas del Magreb",
       "from": 1471,
       "through": 1549,
@@ -2944,7 +3035,7 @@
       "scopeLabel": "Asilah · 1471–1549"
     },
     {
-      "name": "Asilah · Sultanato saadí · 1550–1576 · revisión África y Levante 46",
+      "name": "Asilah · Sultanato saadí · 1550–1576 · revisión África y Levante 51",
       "identity": "Sultanato saadí",
       "from": 1550,
       "through": 1576,
@@ -2961,7 +3052,7 @@
       "scopeLabel": "Asilah · 1550–1576"
     },
     {
-      "name": "Asilah · Plazas portuguesas del Magreb · 1577–1588 · revisión África y Levante 47",
+      "name": "Asilah · Plazas portuguesas del Magreb · 1577–1588 · revisión África y Levante 52",
       "identity": "Plazas portuguesas del Magreb",
       "from": 1577,
       "through": 1588,
@@ -2980,7 +3071,7 @@
       "scopeLabel": "Asilah · 1577–1588"
     },
     {
-      "name": "Asilah · Sultanato saadí · 1589–1665 · revisión África y Levante 48",
+      "name": "Asilah · Sultanato saadí · 1589–1665 · revisión África y Levante 53",
       "identity": "Sultanato saadí",
       "from": 1589,
       "through": 1665,
@@ -2997,7 +3088,7 @@
       "scopeLabel": "Asilah · 1589–1665"
     },
     {
-      "name": "Asilah · Sultanato alauí · 1666–1800 · revisión África y Levante 49",
+      "name": "Asilah · Sultanato alauí · 1666–1800 · revisión África y Levante 54",
       "identity": "Sultanato alauí",
       "from": 1666,
       "through": 1800,
@@ -3014,7 +3105,7 @@
       "scopeLabel": "Asilah · 1666–1800"
     },
     {
-      "name": "Azemmour · Califato almohade · 1200–1247 · revisión África y Levante 50",
+      "name": "Azemmour · Califato almohade · 1200–1247 · revisión África y Levante 55",
       "identity": "Califato almohade",
       "from": 1200,
       "through": 1247,
@@ -3033,7 +3124,7 @@
       "scopeLabel": "Azemmour · 1200–1247"
     },
     {
-      "name": "Azemmour · Sultanato benimerín · 1248–1464 · revisión África y Levante 51",
+      "name": "Azemmour · Sultanato benimerín · 1248–1464 · revisión África y Levante 56",
       "identity": "Sultanato benimerín",
       "from": 1248,
       "through": 1464,
@@ -3051,7 +3142,7 @@
       "scopeLabel": "Azemmour · 1248–1464"
     },
     {
-      "name": "Azemmour · Sultanato wattasí · 1465–1512 · revisión África y Levante 52",
+      "name": "Azemmour · Sultanato wattasí · 1465–1512 · revisión África y Levante 57",
       "identity": "Sultanato wattasí",
       "from": 1465,
       "through": 1512,
@@ -3069,7 +3160,7 @@
       "scopeLabel": "Azemmour · 1465–1512"
     },
     {
-      "name": "Azemmour · Plazas portuguesas del Magreb · 1513–1540 · revisión África y Levante 53",
+      "name": "Azemmour · Plazas portuguesas del Magreb · 1513–1540 · revisión África y Levante 58",
       "identity": "Plazas portuguesas del Magreb",
       "from": 1513,
       "through": 1540,
@@ -3088,7 +3179,7 @@
       "scopeLabel": "Azemmour · 1513–1540"
     },
     {
-      "name": "Azemmour · Sultanato wattasí · 1541–1548 · revisión África y Levante 54",
+      "name": "Azemmour · Sultanato wattasí · 1541–1548 · revisión África y Levante 59",
       "identity": "Sultanato wattasí",
       "from": 1541,
       "through": 1548,
@@ -3106,7 +3197,7 @@
       "scopeLabel": "Azemmour · 1541–1548"
     },
     {
-      "name": "Azemmour · Sultanato saadí · 1549–1665 · revisión África y Levante 55",
+      "name": "Azemmour · Sultanato saadí · 1549–1665 · revisión África y Levante 60",
       "identity": "Sultanato saadí",
       "from": 1549,
       "through": 1665,
@@ -3123,7 +3214,7 @@
       "scopeLabel": "Azemmour · 1549–1665"
     },
     {
-      "name": "Azemmour · Sultanato alauí · 1666–1800 · revisión África y Levante 56",
+      "name": "Azemmour · Sultanato alauí · 1666–1800 · revisión África y Levante 61",
       "identity": "Sultanato alauí",
       "from": 1666,
       "through": 1800,
@@ -3140,7 +3231,7 @@
       "scopeLabel": "Azemmour · 1666–1800"
     },
     {
-      "name": "La Mamora · Califato almohade · 1200–1247 · revisión África y Levante 57",
+      "name": "La Mamora · Califato almohade · 1200–1247 · revisión África y Levante 62",
       "identity": "Califato almohade",
       "from": 1200,
       "through": 1247,
@@ -3159,7 +3250,7 @@
       "scopeLabel": "La Mamora · 1200–1247"
     },
     {
-      "name": "La Mamora · Sultanato benimerín · 1248–1464 · revisión África y Levante 58",
+      "name": "La Mamora · Sultanato benimerín · 1248–1464 · revisión África y Levante 63",
       "identity": "Sultanato benimerín",
       "from": 1248,
       "through": 1464,
@@ -3177,7 +3268,7 @@
       "scopeLabel": "La Mamora · 1248–1464"
     },
     {
-      "name": "La Mamora · Sultanato wattasí · 1465–1548 · revisión África y Levante 59",
+      "name": "La Mamora · Sultanato wattasí · 1465–1548 · revisión África y Levante 64",
       "identity": "Sultanato wattasí",
       "from": 1465,
       "through": 1548,
@@ -3195,7 +3286,7 @@
       "scopeLabel": "La Mamora · 1465–1548"
     },
     {
-      "name": "La Mamora · Sultanato saadí · 1549–1613 · revisión África y Levante 60",
+      "name": "La Mamora · Sultanato saadí · 1549–1613 · revisión África y Levante 65",
       "identity": "Sultanato saadí",
       "from": 1549,
       "through": 1613,
@@ -3212,7 +3303,7 @@
       "scopeLabel": "La Mamora · 1549–1613"
     },
     {
-      "name": "La Mamora · Presidios españoles del Magreb · 1614–1680 · revisión África y Levante 61",
+      "name": "La Mamora · Presidios españoles del Magreb · 1614–1680 · revisión África y Levante 66",
       "identity": "Presidios españoles del Magreb",
       "from": 1614,
       "through": 1680,
@@ -3231,7 +3322,7 @@
       "scopeLabel": "La Mamora · 1614–1680"
     },
     {
-      "name": "La Mamora · Sultanato alauí · 1681–1800 · revisión África y Levante 62",
+      "name": "La Mamora · Sultanato alauí · 1681–1800 · revisión África y Levante 67",
       "identity": "Sultanato alauí",
       "from": 1681,
       "through": 1800,
@@ -3248,7 +3339,7 @@
       "scopeLabel": "La Mamora · 1681–1800"
     },
     {
-      "name": "Larache · Califato almohade · 1200–1247 · revisión África y Levante 63",
+      "name": "Larache · Califato almohade · 1200–1247 · revisión África y Levante 68",
       "identity": "Califato almohade",
       "from": 1200,
       "through": 1247,
@@ -3267,7 +3358,7 @@
       "scopeLabel": "Larache · 1200–1247"
     },
     {
-      "name": "Larache · Sultanato benimerín · 1248–1464 · revisión África y Levante 64",
+      "name": "Larache · Sultanato benimerín · 1248–1464 · revisión África y Levante 69",
       "identity": "Sultanato benimerín",
       "from": 1248,
       "through": 1464,
@@ -3285,7 +3376,7 @@
       "scopeLabel": "Larache · 1248–1464"
     },
     {
-      "name": "Larache · Sultanato wattasí · 1465–1548 · revisión África y Levante 65",
+      "name": "Larache · Sultanato wattasí · 1465–1548 · revisión África y Levante 70",
       "identity": "Sultanato wattasí",
       "from": 1465,
       "through": 1548,
@@ -3303,7 +3394,7 @@
       "scopeLabel": "Larache · 1465–1548"
     },
     {
-      "name": "Larache · Sultanato saadí · 1549–1609 · revisión África y Levante 66",
+      "name": "Larache · Sultanato saadí · 1549–1609 · revisión África y Levante 71",
       "identity": "Sultanato saadí",
       "from": 1549,
       "through": 1609,
@@ -3320,7 +3411,7 @@
       "scopeLabel": "Larache · 1549–1609"
     },
     {
-      "name": "Larache · Presidios españoles del Magreb · 1610–1688 · revisión África y Levante 67",
+      "name": "Larache · Presidios españoles del Magreb · 1610–1688 · revisión África y Levante 72",
       "identity": "Presidios españoles del Magreb",
       "from": 1610,
       "through": 1688,
@@ -3339,7 +3430,7 @@
       "scopeLabel": "Larache · 1610–1688"
     },
     {
-      "name": "Larache · Sultanato alauí · 1689–1800 · revisión África y Levante 68",
+      "name": "Larache · Sultanato alauí · 1689–1800 · revisión África y Levante 73",
       "identity": "Sultanato alauí",
       "from": 1689,
       "through": 1800,
@@ -3356,7 +3447,7 @@
       "scopeLabel": "Larache · 1689–1800"
     },
     {
-      "name": "Mazaghan · Califato almohade · 1200–1247 · revisión África y Levante 69",
+      "name": "Mazaghan · Califato almohade · 1200–1247 · revisión África y Levante 74",
       "identity": "Califato almohade",
       "from": 1200,
       "through": 1247,
@@ -3375,7 +3466,7 @@
       "scopeLabel": "Mazaghan · 1200–1247"
     },
     {
-      "name": "Mazaghan · Sultanato benimerín · 1248–1464 · revisión África y Levante 70",
+      "name": "Mazaghan · Sultanato benimerín · 1248–1464 · revisión África y Levante 75",
       "identity": "Sultanato benimerín",
       "from": 1248,
       "through": 1464,
@@ -3393,7 +3484,7 @@
       "scopeLabel": "Mazaghan · 1248–1464"
     },
     {
-      "name": "Mazaghan · Sultanato wattasí · 1465–1513 · revisión África y Levante 71",
+      "name": "Mazaghan · Sultanato wattasí · 1465–1513 · revisión África y Levante 76",
       "identity": "Sultanato wattasí",
       "from": 1465,
       "through": 1513,
@@ -3411,7 +3502,7 @@
       "scopeLabel": "Mazaghan · 1465–1513"
     },
     {
-      "name": "Mazaghan · Plazas portuguesas del Magreb · 1514–1768 · revisión África y Levante 72",
+      "name": "Mazaghan · Plazas portuguesas del Magreb · 1514–1768 · revisión África y Levante 77",
       "identity": "Plazas portuguesas del Magreb",
       "from": 1514,
       "through": 1768,
@@ -3430,7 +3521,7 @@
       "scopeLabel": "Mazaghan · 1514–1768"
     },
     {
-      "name": "Mazaghan · Sultanato alauí · 1769–1800 · revisión África y Levante 73",
+      "name": "Mazaghan · Sultanato alauí · 1769–1800 · revisión África y Levante 78",
       "identity": "Sultanato alauí",
       "from": 1769,
       "through": 1800,
@@ -3447,7 +3538,7 @@
       "scopeLabel": "Mazaghan · 1769–1800"
     },
     {
-      "name": "Melilla · Califato almohade · 1200–1247 · revisión África y Levante 74",
+      "name": "Melilla · Califato almohade · 1200–1247 · revisión África y Levante 79",
       "identity": "Califato almohade",
       "from": 1200,
       "through": 1247,
@@ -3466,7 +3557,7 @@
       "scopeLabel": "Melilla · 1200–1247"
     },
     {
-      "name": "Melilla · Sultanato benimerín · 1248–1464 · revisión África y Levante 75",
+      "name": "Melilla · Sultanato benimerín · 1248–1464 · revisión África y Levante 80",
       "identity": "Sultanato benimerín",
       "from": 1248,
       "through": 1464,
@@ -3484,7 +3575,7 @@
       "scopeLabel": "Melilla · 1248–1464"
     },
     {
-      "name": "Melilla · Sultanato wattasí · 1465–1496 · revisión África y Levante 76",
+      "name": "Melilla · Sultanato wattasí · 1465–1496 · revisión África y Levante 81",
       "identity": "Sultanato wattasí",
       "from": 1465,
       "through": 1496,
@@ -3502,7 +3593,7 @@
       "scopeLabel": "Melilla · 1465–1496"
     },
     {
-      "name": "Melilla · Presidios españoles del Magreb · 1497–1515 · revisión África y Levante 77",
+      "name": "Melilla · Presidios españoles del Magreb · 1497–1515 · revisión África y Levante 82",
       "identity": "Presidios españoles del Magreb",
       "from": 1497,
       "through": 1515,
@@ -3521,7 +3612,7 @@
       "scopeLabel": "Melilla · 1497–1515"
     },
     {
-      "name": "Melilla · Presidios españoles del Magreb · 1516–1800 · revisión África y Levante 78",
+      "name": "Melilla · Presidios españoles del Magreb · 1516–1800 · revisión África y Levante 83",
       "identity": "Presidios españoles del Magreb",
       "from": 1516,
       "through": 1800,
@@ -3540,7 +3631,7 @@
       "scopeLabel": "Melilla · 1516–1800"
     },
     {
-      "name": "Tangier · Califato almohade · 1200–1247 · revisión África y Levante 79",
+      "name": "Tangier · Califato almohade · 1200–1247 · revisión África y Levante 84",
       "identity": "Califato almohade",
       "from": 1200,
       "through": 1247,
@@ -3559,7 +3650,7 @@
       "scopeLabel": "Tangier · 1200–1247"
     },
     {
-      "name": "Tangier · Sultanato benimerín · 1248–1464 · revisión África y Levante 80",
+      "name": "Tangier · Sultanato benimerín · 1248–1464 · revisión África y Levante 85",
       "identity": "Sultanato benimerín",
       "from": 1248,
       "through": 1464,
@@ -3577,7 +3668,7 @@
       "scopeLabel": "Tangier · 1248–1464"
     },
     {
-      "name": "Tangier · Sultanato wattasí · 1465–1470 · revisión África y Levante 81",
+      "name": "Tangier · Sultanato wattasí · 1465–1470 · revisión África y Levante 86",
       "identity": "Sultanato wattasí",
       "from": 1465,
       "through": 1470,
@@ -3595,7 +3686,7 @@
       "scopeLabel": "Tangier · 1465–1470"
     },
     {
-      "name": "Tangier · Plazas portuguesas del Magreb · 1471–1661 · revisión África y Levante 82",
+      "name": "Tangier · Plazas portuguesas del Magreb · 1471–1661 · revisión África y Levante 87",
       "identity": "Plazas portuguesas del Magreb",
       "from": 1471,
       "through": 1661,
@@ -3614,7 +3705,7 @@
       "scopeLabel": "Tangier · 1471–1661"
     },
     {
-      "name": "Tangier · Tánger inglés · 1662–1683 · revisión África y Levante 83",
+      "name": "Tangier · Tánger inglés · 1662–1683 · revisión África y Levante 88",
       "identity": "Tánger inglés",
       "from": 1662,
       "through": 1683,
@@ -3633,7 +3724,7 @@
       "scopeLabel": "Tangier · 1662–1683"
     },
     {
-      "name": "Tangier · Sultanato alauí · 1684–1800 · revisión África y Levante 84",
+      "name": "Tangier · Sultanato alauí · 1684–1800 · revisión África y Levante 89",
       "identity": "Sultanato alauí",
       "from": 1684,
       "through": 1800,
@@ -3650,7 +3741,7 @@
       "scopeLabel": "Tangier · 1684–1800"
     },
     {
-      "name": "Marruecos meridional · Califato almohade · 1200–1268 · revisión África y Levante 85",
+      "name": "Marruecos meridional · Califato almohade · 1200–1268 · revisión África y Levante 90",
       "identity": "Califato almohade",
       "from": 1200,
       "through": 1268,
@@ -3745,7 +3836,7 @@
       "scopeLabel": "Marruecos meridional · 1200–1268"
     },
     {
-      "name": "Marruecos meridional · Sultanato benimerín · 1269–1464 · revisión África y Levante 86",
+      "name": "Marruecos meridional · Sultanato benimerín · 1269–1464 · revisión África y Levante 91",
       "identity": "Sultanato benimerín",
       "from": 1269,
       "through": 1464,
@@ -3839,7 +3930,7 @@
       "scopeLabel": "Marruecos meridional · 1269–1464"
     },
     {
-      "name": "Marruecos meridional · Marruecos meridional · poderes locales · 1465–1523 · revisión África y Levante 87",
+      "name": "Marruecos meridional · Marruecos meridional · poderes locales · 1465–1523 · revisión África y Levante 92",
       "identity": "Marruecos meridional · poderes locales",
       "from": 1465,
       "through": 1523,
@@ -3934,7 +4025,7 @@
       "authorityCondition": "control disputado"
     },
     {
-      "name": "Marruecos meridional · Sultanato saadí · 1524–1667 · revisión África y Levante 88",
+      "name": "Marruecos meridional · Sultanato saadí · 1524–1667 · revisión África y Levante 93",
       "identity": "Sultanato saadí",
       "from": 1524,
       "through": 1667,
@@ -4027,7 +4118,7 @@
       "scopeLabel": "Marruecos meridional · 1524–1667"
     },
     {
-      "name": "Marruecos meridional · Sultanato alauí · 1668–1800 · revisión África y Levante 89",
+      "name": "Marruecos meridional · Sultanato alauí · 1668–1800 · revisión África y Levante 94",
       "identity": "Sultanato alauí",
       "from": 1668,
       "through": 1800,
@@ -4120,7 +4211,7 @@
       "scopeLabel": "Marruecos meridional · 1668–1800"
     },
     {
-      "name": "Agadir · Califato almohade · 1200–1268 · revisión África y Levante 90",
+      "name": "Agadir · Califato almohade · 1200–1268 · revisión África y Levante 95",
       "identity": "Califato almohade",
       "from": 1200,
       "through": 1268,
@@ -4139,7 +4230,7 @@
       "scopeLabel": "Agadir · 1200–1268"
     },
     {
-      "name": "Agadir · Sultanato benimerín · 1269–1464 · revisión África y Levante 91",
+      "name": "Agadir · Sultanato benimerín · 1269–1464 · revisión África y Levante 96",
       "identity": "Sultanato benimerín",
       "from": 1269,
       "through": 1464,
@@ -4157,7 +4248,7 @@
       "scopeLabel": "Agadir · 1269–1464"
     },
     {
-      "name": "Agadir · Marruecos meridional · poderes locales · 1465–1504 · revisión África y Levante 92",
+      "name": "Agadir · Marruecos meridional · poderes locales · 1465–1504 · revisión África y Levante 97",
       "identity": "Marruecos meridional · poderes locales",
       "from": 1465,
       "through": 1504,
@@ -4176,7 +4267,7 @@
       "authorityCondition": "control disputado"
     },
     {
-      "name": "Agadir · Plazas portuguesas del Magreb · 1505–1540 · revisión África y Levante 93",
+      "name": "Agadir · Plazas portuguesas del Magreb · 1505–1540 · revisión África y Levante 98",
       "identity": "Plazas portuguesas del Magreb",
       "from": 1505,
       "through": 1540,
@@ -4196,7 +4287,7 @@
       "scopeLabel": "Agadir · 1505–1540"
     },
     {
-      "name": "Agadir · Sultanato saadí · 1541–1667 · revisión África y Levante 94",
+      "name": "Agadir · Sultanato saadí · 1541–1667 · revisión África y Levante 99",
       "identity": "Sultanato saadí",
       "from": 1541,
       "through": 1667,
@@ -4213,7 +4304,7 @@
       "scopeLabel": "Agadir · 1541–1667"
     },
     {
-      "name": "Agadir · Sultanato alauí · 1668–1800 · revisión África y Levante 95",
+      "name": "Agadir · Sultanato alauí · 1668–1800 · revisión África y Levante 100",
       "identity": "Sultanato alauí",
       "from": 1668,
       "through": 1800,
@@ -4230,7 +4321,7 @@
       "scopeLabel": "Agadir · 1668–1800"
     },
     {
-      "name": "Aguz · Califato almohade · 1200–1268 · revisión África y Levante 96",
+      "name": "Aguz · Califato almohade · 1200–1268 · revisión África y Levante 101",
       "identity": "Califato almohade",
       "from": 1200,
       "through": 1268,
@@ -4249,7 +4340,7 @@
       "scopeLabel": "Aguz · 1200–1268"
     },
     {
-      "name": "Aguz · Sultanato benimerín · 1269–1464 · revisión África y Levante 97",
+      "name": "Aguz · Sultanato benimerín · 1269–1464 · revisión África y Levante 102",
       "identity": "Sultanato benimerín",
       "from": 1269,
       "through": 1464,
@@ -4267,7 +4358,7 @@
       "scopeLabel": "Aguz · 1269–1464"
     },
     {
-      "name": "Aguz · Marruecos meridional · poderes locales · 1465–1507 · revisión África y Levante 98",
+      "name": "Aguz · Marruecos meridional · poderes locales · 1465–1507 · revisión África y Levante 103",
       "identity": "Marruecos meridional · poderes locales",
       "from": 1465,
       "through": 1507,
@@ -4286,7 +4377,7 @@
       "authorityCondition": "control disputado"
     },
     {
-      "name": "Aguz · Plazas portuguesas del Magreb · 1508–1524 · revisión África y Levante 99",
+      "name": "Aguz · Plazas portuguesas del Magreb · 1508–1524 · revisión África y Levante 104",
       "identity": "Plazas portuguesas del Magreb",
       "from": 1508,
       "through": 1524,
@@ -4306,7 +4397,7 @@
       "scopeLabel": "Aguz · 1508–1524"
     },
     {
-      "name": "Aguz · Sultanato saadí · 1525–1667 · revisión África y Levante 100",
+      "name": "Aguz · Sultanato saadí · 1525–1667 · revisión África y Levante 105",
       "identity": "Sultanato saadí",
       "from": 1525,
       "through": 1667,
@@ -4323,7 +4414,7 @@
       "scopeLabel": "Aguz · 1525–1667"
     },
     {
-      "name": "Aguz · Sultanato alauí · 1668–1800 · revisión África y Levante 101",
+      "name": "Aguz · Sultanato alauí · 1668–1800 · revisión África y Levante 106",
       "identity": "Sultanato alauí",
       "from": 1668,
       "through": 1800,
@@ -4340,7 +4431,7 @@
       "scopeLabel": "Aguz · 1668–1800"
     },
     {
-      "name": "Asfi · Califato almohade · 1200–1268 · revisión África y Levante 102",
+      "name": "Asfi · Califato almohade · 1200–1268 · revisión África y Levante 107",
       "identity": "Califato almohade",
       "from": 1200,
       "through": 1268,
@@ -4359,7 +4450,7 @@
       "scopeLabel": "Asfi · 1200–1268"
     },
     {
-      "name": "Asfi · Sultanato benimerín · 1269–1464 · revisión África y Levante 103",
+      "name": "Asfi · Sultanato benimerín · 1269–1464 · revisión África y Levante 108",
       "identity": "Sultanato benimerín",
       "from": 1269,
       "through": 1464,
@@ -4377,7 +4468,7 @@
       "scopeLabel": "Asfi · 1269–1464"
     },
     {
-      "name": "Asfi · Marruecos meridional · poderes locales · 1465–1507 · revisión África y Levante 104",
+      "name": "Asfi · Marruecos meridional · poderes locales · 1465–1507 · revisión África y Levante 109",
       "identity": "Marruecos meridional · poderes locales",
       "from": 1465,
       "through": 1507,
@@ -4396,7 +4487,7 @@
       "authorityCondition": "control disputado"
     },
     {
-      "name": "Asfi · Plazas portuguesas del Magreb · 1508–1540 · revisión África y Levante 105",
+      "name": "Asfi · Plazas portuguesas del Magreb · 1508–1540 · revisión África y Levante 110",
       "identity": "Plazas portuguesas del Magreb",
       "from": 1508,
       "through": 1540,
@@ -4415,7 +4506,7 @@
       "scopeLabel": "Asfi · 1508–1540"
     },
     {
-      "name": "Asfi · Sultanato saadí · 1541–1667 · revisión África y Levante 106",
+      "name": "Asfi · Sultanato saadí · 1541–1667 · revisión África y Levante 111",
       "identity": "Sultanato saadí",
       "from": 1541,
       "through": 1667,
@@ -4432,7 +4523,7 @@
       "scopeLabel": "Asfi · 1541–1667"
     },
     {
-      "name": "Asfi · Sultanato alauí · 1668–1800 · revisión África y Levante 107",
+      "name": "Asfi · Sultanato alauí · 1668–1800 · revisión África y Levante 112",
       "identity": "Sultanato alauí",
       "from": 1668,
       "through": 1800,
@@ -4449,7 +4540,7 @@
       "scopeLabel": "Asfi · 1668–1800"
     },
     {
-      "name": "Mogador · Califato almohade · 1200–1268 · revisión África y Levante 108",
+      "name": "Mogador · Califato almohade · 1200–1268 · revisión África y Levante 113",
       "identity": "Califato almohade",
       "from": 1200,
       "through": 1268,
@@ -4468,7 +4559,7 @@
       "scopeLabel": "Mogador · 1200–1268"
     },
     {
-      "name": "Mogador · Sultanato benimerín · 1269–1464 · revisión África y Levante 109",
+      "name": "Mogador · Sultanato benimerín · 1269–1464 · revisión África y Levante 114",
       "identity": "Sultanato benimerín",
       "from": 1269,
       "through": 1464,
@@ -4486,7 +4577,7 @@
       "scopeLabel": "Mogador · 1269–1464"
     },
     {
-      "name": "Mogador · Marruecos meridional · poderes locales · 1465–1505 · revisión África y Levante 110",
+      "name": "Mogador · Marruecos meridional · poderes locales · 1465–1505 · revisión África y Levante 115",
       "identity": "Marruecos meridional · poderes locales",
       "from": 1465,
       "through": 1505,
@@ -4505,7 +4596,7 @@
       "authorityCondition": "control disputado"
     },
     {
-      "name": "Mogador · Plazas portuguesas del Magreb · 1506–1509 · revisión África y Levante 111",
+      "name": "Mogador · Plazas portuguesas del Magreb · 1506–1509 · revisión África y Levante 116",
       "identity": "Plazas portuguesas del Magreb",
       "from": 1506,
       "through": 1509,
@@ -4524,7 +4615,7 @@
       "scopeLabel": "Mogador · 1506–1509"
     },
     {
-      "name": "Mogador · Marruecos meridional · poderes locales · 1510–1523 · revisión África y Levante 112",
+      "name": "Mogador · Marruecos meridional · poderes locales · 1510–1523 · revisión África y Levante 117",
       "identity": "Marruecos meridional · poderes locales",
       "from": 1510,
       "through": 1523,
@@ -4543,7 +4634,7 @@
       "authorityCondition": "control disputado"
     },
     {
-      "name": "Mogador · Sultanato saadí · 1524–1667 · revisión África y Levante 113",
+      "name": "Mogador · Sultanato saadí · 1524–1667 · revisión África y Levante 118",
       "identity": "Sultanato saadí",
       "from": 1524,
       "through": 1667,
@@ -4560,7 +4651,7 @@
       "scopeLabel": "Mogador · 1524–1667"
     },
     {
-      "name": "Mogador · Sultanato alauí · 1668–1800 · revisión África y Levante 114",
+      "name": "Mogador · Sultanato alauí · 1668–1800 · revisión África y Levante 119",
       "identity": "Sultanato alauí",
       "from": 1668,
       "through": 1800,
@@ -4577,7 +4668,7 @@
       "scopeLabel": "Mogador · 1668–1800"
     },
     {
-      "name": "Palestina interior y Transjordania · Sultanato ayubí · 1200–1259 · revisión África y Levante 115",
+      "name": "Palestina interior y Transjordania · Sultanato ayubí · 1200–1259 · revisión África y Levante 120",
       "identity": "Sultanato ayubí",
       "from": 1200,
       "through": 1259,
@@ -4623,7 +4714,7 @@
       "scopeLabel": "Palestina interior y Transjordania · 1200–1259"
     },
     {
-      "name": "Palestina interior y Transjordania · Sultanato mameluco · 1260–1516 · revisión África y Levante 116",
+      "name": "Palestina interior y Transjordania · Sultanato mameluco · 1260–1516 · revisión África y Levante 121",
       "identity": "Sultanato mameluco",
       "from": 1260,
       "through": 1516,
@@ -4669,7 +4760,7 @@
       "scopeLabel": "Palestina interior y Transjordania · 1260–1516"
     },
     {
-      "name": "Palestina interior y Transjordania · Imperio otomano · 1517–1800 · revisión África y Levante 117",
+      "name": "Palestina interior y Transjordania · Imperio otomano · 1517–1800 · revisión África y Levante 122",
       "identity": "Imperio otomano",
       "from": 1517,
       "through": 1800,
@@ -4716,7 +4807,7 @@
       "scopeLabel": "Palestina interior y Transjordania · 1517–1800"
     },
     {
-      "name": "Safed · Sultanato ayubí · 1200–1239 · revisión África y Levante 118",
+      "name": "Safed · Sultanato ayubí · 1200–1239 · revisión África y Levante 123",
       "identity": "Sultanato ayubí",
       "from": 1200,
       "through": 1239,
@@ -4735,7 +4826,7 @@
       "scopeLabel": "Safed · 1200–1239"
     },
     {
-      "name": "Safed · Jerusalén · 1240–1265 · revisión África y Levante 119",
+      "name": "Safed · Jerusalén · 1240–1265 · revisión África y Levante 124",
       "identity": "Jerusalén",
       "from": 1240,
       "through": 1265,
@@ -4754,7 +4845,7 @@
       "scopeLabel": "Safed · 1240–1265"
     },
     {
-      "name": "Safed · Sultanato mameluco · 1266–1515 · revisión África y Levante 120",
+      "name": "Safed · Sultanato mameluco · 1266–1515 · revisión África y Levante 125",
       "identity": "Sultanato mameluco",
       "from": 1266,
       "through": 1515,
@@ -4773,7 +4864,7 @@
       "scopeLabel": "Safed · 1266–1515"
     },
     {
-      "name": "Safed · Imperio otomano · 1516–1800 · revisión África y Levante 121",
+      "name": "Safed · Imperio otomano · 1516–1800 · revisión África y Levante 126",
       "identity": "Imperio otomano",
       "from": 1516,
       "through": 1800,
@@ -4792,7 +4883,7 @@
       "scopeLabel": "Safed · 1516–1800"
     },
     {
-      "name": "Sáhara · Tierras saharianas · 1200–1800 · revisión África y Levante 122",
+      "name": "Sáhara · Tierras saharianas · 1200–1800 · revisión África y Levante 127",
       "identity": "Tierras saharianas",
       "from": 1200,
       "through": 1800,
@@ -4898,7 +4989,7 @@
       "scopeLabel": "Sáhara · 1200–1800"
     },
     {
-      "name": "Siria central · Sultanato ayubí · 1200–1259 · revisión África y Levante 123",
+      "name": "Siria central · Sultanato ayubí · 1200–1259 · revisión África y Levante 128",
       "identity": "Sultanato ayubí",
       "from": 1200,
       "through": 1259,
@@ -4952,7 +5043,7 @@
       "scopeLabel": "Siria central · 1200–1259"
     },
     {
-      "name": "Siria central · Sultanato mameluco · 1260–1515 · revisión África y Levante 124",
+      "name": "Siria central · Sultanato mameluco · 1260–1515 · revisión África y Levante 129",
       "identity": "Sultanato mameluco",
       "from": 1260,
       "through": 1515,
@@ -5006,7 +5097,7 @@
       "scopeLabel": "Siria central · 1260–1515"
     },
     {
-      "name": "Siria central · Imperio otomano · 1516–1800 · revisión África y Levante 125",
+      "name": "Siria central · Imperio otomano · 1516–1800 · revisión África y Levante 130",
       "identity": "Imperio otomano",
       "from": 1516,
       "through": 1800,
@@ -5061,7 +5152,7 @@
       "scopeLabel": "Siria central · 1516–1800"
     },
     {
-      "name": "Magreb central occidental · Califato almohade · 1200–1234 · revisión África y Levante 126",
+      "name": "Magreb central occidental · Califato almohade · 1200–1234 · revisión África y Levante 131",
       "identity": "Califato almohade",
       "from": 1200,
       "through": 1234,
@@ -5102,7 +5193,7 @@
       "scopeLabel": "Magreb central occidental · 1200–1234"
     },
     {
-      "name": "Magreb central occidental · Reino de Tremecén · 1235–1336 · revisión África y Levante 127",
+      "name": "Magreb central occidental · Reino de Tremecén · 1235–1336 · revisión África y Levante 132",
       "identity": "Reino de Tremecén",
       "from": 1235,
       "through": 1336,
@@ -5142,7 +5233,7 @@
       "scopeLabel": "Magreb central occidental · 1235–1336"
     },
     {
-      "name": "Magreb central occidental · Sultanato benimerín · 1337–1348 · revisión África y Levante 128",
+      "name": "Magreb central occidental · Sultanato benimerín · 1337–1348 · revisión África y Levante 133",
       "identity": "Sultanato benimerín",
       "from": 1337,
       "through": 1348,
@@ -5182,7 +5273,7 @@
       "authorityCondition": "ocupación"
     },
     {
-      "name": "Magreb central occidental · Reino de Tremecén · 1349–1351 · revisión África y Levante 129",
+      "name": "Magreb central occidental · Reino de Tremecén · 1349–1351 · revisión África y Levante 134",
       "identity": "Reino de Tremecén",
       "from": 1349,
       "through": 1351,
@@ -5221,7 +5312,7 @@
       "scopeLabel": "Magreb central occidental · 1349–1351"
     },
     {
-      "name": "Magreb central occidental · Sultanato benimerín · 1352–1359 · revisión África y Levante 130",
+      "name": "Magreb central occidental · Sultanato benimerín · 1352–1359 · revisión África y Levante 135",
       "identity": "Sultanato benimerín",
       "from": 1352,
       "through": 1359,
@@ -5261,7 +5352,7 @@
       "authorityCondition": "ocupación"
     },
     {
-      "name": "Magreb central occidental · Reino de Tremecén · 1360–1555 · revisión África y Levante 131",
+      "name": "Magreb central occidental · Reino de Tremecén · 1360–1555 · revisión África y Levante 136",
       "identity": "Reino de Tremecén",
       "from": 1360,
       "through": 1555,
@@ -5301,7 +5392,7 @@
       "scopeLabel": "Magreb central occidental · 1360–1555"
     },
     {
-      "name": "Magreb central occidental · Regencia de Argel · 1556–1800 · revisión África y Levante 132",
+      "name": "Magreb central occidental · Regencia de Argel · 1556–1800 · revisión África y Levante 137",
       "identity": "Regencia de Argel",
       "from": 1556,
       "through": 1800,
@@ -5342,7 +5433,7 @@
       "scopeLabel": "Magreb central occidental · 1556–1800"
     },
     {
-      "name": "Oran · Califato almohade · 1200–1234 · revisión África y Levante 133",
+      "name": "Oran · Califato almohade · 1200–1234 · revisión África y Levante 138",
       "identity": "Califato almohade",
       "from": 1200,
       "through": 1234,
@@ -5361,7 +5452,7 @@
       "scopeLabel": "Oran · 1200–1234"
     },
     {
-      "name": "Oran · Reino de Tremecén · 1235–1336 · revisión África y Levante 134",
+      "name": "Oran · Reino de Tremecén · 1235–1336 · revisión África y Levante 139",
       "identity": "Reino de Tremecén",
       "from": 1235,
       "through": 1336,
@@ -5379,7 +5470,7 @@
       "scopeLabel": "Oran · 1235–1336"
     },
     {
-      "name": "Oran · Sultanato benimerín · 1337–1348 · revisión África y Levante 135",
+      "name": "Oran · Sultanato benimerín · 1337–1348 · revisión África y Levante 140",
       "identity": "Sultanato benimerín",
       "from": 1337,
       "through": 1348,
@@ -5397,7 +5488,7 @@
       "authorityCondition": "ocupación"
     },
     {
-      "name": "Oran · Reino de Tremecén · 1349–1351 · revisión África y Levante 136",
+      "name": "Oran · Reino de Tremecén · 1349–1351 · revisión África y Levante 141",
       "identity": "Reino de Tremecén",
       "from": 1349,
       "through": 1351,
@@ -5414,7 +5505,7 @@
       "scopeLabel": "Oran · 1349–1351"
     },
     {
-      "name": "Oran · Sultanato benimerín · 1352–1359 · revisión África y Levante 137",
+      "name": "Oran · Sultanato benimerín · 1352–1359 · revisión África y Levante 142",
       "identity": "Sultanato benimerín",
       "from": 1352,
       "through": 1359,
@@ -5432,7 +5523,7 @@
       "authorityCondition": "ocupación"
     },
     {
-      "name": "Oran · Reino de Tremecén · 1360–1508 · revisión África y Levante 138",
+      "name": "Oran · Reino de Tremecén · 1360–1508 · revisión África y Levante 143",
       "identity": "Reino de Tremecén",
       "from": 1360,
       "through": 1508,
@@ -5450,7 +5541,7 @@
       "scopeLabel": "Oran · 1360–1508"
     },
     {
-      "name": "Oran · Presidios españoles del Magreb · 1509–1515 · revisión África y Levante 139",
+      "name": "Oran · Presidios españoles del Magreb · 1509–1515 · revisión África y Levante 144",
       "identity": "Presidios españoles del Magreb",
       "from": 1509,
       "through": 1515,
@@ -5469,7 +5560,7 @@
       "scopeLabel": "Oran · 1509–1515"
     },
     {
-      "name": "Oran · Presidios españoles del Magreb · 1516–1707 · revisión África y Levante 140",
+      "name": "Oran · Presidios españoles del Magreb · 1516–1707 · revisión África y Levante 145",
       "identity": "Presidios españoles del Magreb",
       "from": 1516,
       "through": 1707,
@@ -5488,7 +5579,7 @@
       "scopeLabel": "Oran · 1516–1707"
     },
     {
-      "name": "Oran · Regencia de Argel · 1708–1731 · revisión África y Levante 141",
+      "name": "Oran · Regencia de Argel · 1708–1731 · revisión África y Levante 146",
       "identity": "Regencia de Argel",
       "from": 1708,
       "through": 1731,
@@ -5507,7 +5598,7 @@
       "scopeLabel": "Oran · 1708–1731"
     },
     {
-      "name": "Oran · Presidios españoles del Magreb · 1732–1791 · revisión África y Levante 142",
+      "name": "Oran · Presidios españoles del Magreb · 1732–1791 · revisión África y Levante 147",
       "identity": "Presidios españoles del Magreb",
       "from": 1732,
       "through": 1791,
@@ -5526,7 +5617,7 @@
       "scopeLabel": "Oran · 1732–1791"
     },
     {
-      "name": "Oran · Regencia de Argel · 1792–1800 · revisión África y Levante 143",
+      "name": "Oran · Regencia de Argel · 1792–1800 · revisión África y Levante 148",
       "identity": "Regencia de Argel",
       "from": 1792,
       "through": 1800,
@@ -5545,7 +5636,7 @@
       "scopeLabel": "Oran · 1792–1800"
     },
     {
-      "name": "Trípoli de Siria · Trípoli · 1200–1288 · revisión África y Levante 144",
+      "name": "Trípoli de Siria · Trípoli · 1200–1288 · revisión África y Levante 149",
       "identity": "Trípoli",
       "from": 1200,
       "through": 1288,
@@ -5566,7 +5657,7 @@
       "scopeLabel": "Trípoli de Siria · 1200–1288"
     },
     {
-      "name": "Trípoli de Siria · Sultanato mameluco · 1289–1515 · revisión África y Levante 145",
+      "name": "Trípoli de Siria · Sultanato mameluco · 1289–1515 · revisión África y Levante 150",
       "identity": "Sultanato mameluco",
       "from": 1289,
       "through": 1515,
@@ -5588,7 +5679,7 @@
       "scopeLabel": "Trípoli de Siria · 1289–1515"
     },
     {
-      "name": "Trípoli de Siria · Imperio otomano · 1516–1800 · revisión África y Levante 146",
+      "name": "Trípoli de Siria · Imperio otomano · 1516–1800 · revisión África y Levante 151",
       "identity": "Imperio otomano",
       "from": 1516,
       "through": 1800,
@@ -5609,7 +5700,7 @@
       "scopeLabel": "Trípoli de Siria · 1516–1800"
     },
     {
-      "name": "Tripolitania · Tripolitania de Qaraqush · 1200–1212 · revisión África y Levante 147",
+      "name": "Tripolitania · Tripolitania de Qaraqush · 1200–1212 · revisión África y Levante 152",
       "identity": "Tripolitania de Qaraqush",
       "from": 1200,
       "through": 1212,
@@ -5656,7 +5747,7 @@
       "authorityCondition": "control disputado"
     },
     {
-      "name": "Tripolitania · Califato almohade · 1213–1235 · revisión África y Levante 148",
+      "name": "Tripolitania · Califato almohade · 1213–1235 · revisión África y Levante 153",
       "identity": "Califato almohade",
       "from": 1213,
       "through": 1235,
@@ -5705,7 +5796,7 @@
       "scopeLabel": "Tripolitania · 1213–1235"
     },
     {
-      "name": "Tripolitania · Sultanato hafsí · 1236–1509 · revisión África y Levante 149",
+      "name": "Tripolitania · Sultanato hafsí · 1236–1509 · revisión África y Levante 154",
       "identity": "Sultanato hafsí",
       "from": 1236,
       "through": 1509,
@@ -5752,7 +5843,7 @@
       "scopeLabel": "Tripolitania · 1236–1509"
     },
     {
-      "name": "Tripolitania · Tripolitania · tribus · 1510–1550 · revisión África y Levante 150",
+      "name": "Tripolitania · Tripolitania · tribus · 1510–1550 · revisión África y Levante 155",
       "identity": "Tripolitania · tribus",
       "from": 1510,
       "through": 1550,
@@ -5798,7 +5889,7 @@
       "scopeLabel": "Tripolitania · 1510–1550"
     },
     {
-      "name": "Tripolitania · Regencia de Trípoli · 1551–1710 · revisión África y Levante 151",
+      "name": "Tripolitania · Regencia de Trípoli · 1551–1710 · revisión África y Levante 156",
       "identity": "Regencia de Trípoli",
       "from": 1551,
       "through": 1710,
@@ -5847,7 +5938,7 @@
       "scopeLabel": "Tripolitania · 1551–1710"
     },
     {
-      "name": "Tripolitania · Regencia de Trípoli · 1711–1800 · revisión África y Levante 152",
+      "name": "Tripolitania · Regencia de Trípoli · 1711–1800 · revisión África y Levante 157",
       "identity": "Regencia de Trípoli",
       "from": 1711,
       "through": 1800,
@@ -5894,7 +5985,7 @@
       "authorityCondition": "autonomía tributaria"
     },
     {
-      "name": "Tripoli · Tripolitania de Qaraqush · 1200–1212 · revisión África y Levante 153",
+      "name": "Tripoli · Tripolitania de Qaraqush · 1200–1212 · revisión África y Levante 158",
       "identity": "Tripolitania de Qaraqush",
       "from": 1200,
       "through": 1212,
@@ -5912,7 +6003,7 @@
       "authorityCondition": "control disputado"
     },
     {
-      "name": "Tripoli · Califato almohade · 1213–1235 · revisión África y Levante 154",
+      "name": "Tripoli · Califato almohade · 1213–1235 · revisión África y Levante 159",
       "identity": "Califato almohade",
       "from": 1213,
       "through": 1235,
@@ -5932,7 +6023,7 @@
       "scopeLabel": "Tripoli · 1213–1235"
     },
     {
-      "name": "Tripoli · Sultanato hafsí · 1236–1509 · revisión África y Levante 155",
+      "name": "Tripoli · Sultanato hafsí · 1236–1509 · revisión África y Levante 160",
       "identity": "Sultanato hafsí",
       "from": 1236,
       "through": 1509,
@@ -5950,7 +6041,7 @@
       "scopeLabel": "Tripoli · 1236–1509"
     },
     {
-      "name": "Tripoli · Presidios españoles del Magreb · 1510–1515 · revisión África y Levante 156",
+      "name": "Tripoli · Presidios españoles del Magreb · 1510–1515 · revisión África y Levante 161",
       "identity": "Presidios españoles del Magreb",
       "from": 1510,
       "through": 1515,
@@ -5969,7 +6060,7 @@
       "scopeLabel": "Tripoli · 1510–1515"
     },
     {
-      "name": "Tripoli · Presidios españoles del Magreb · 1516–1529 · revisión África y Levante 157",
+      "name": "Tripoli · Presidios españoles del Magreb · 1516–1529 · revisión África y Levante 162",
       "identity": "Presidios españoles del Magreb",
       "from": 1516,
       "through": 1529,
@@ -5988,7 +6079,7 @@
       "scopeLabel": "Tripoli · 1516–1529"
     },
     {
-      "name": "Tripoli · Trípoli de los caballeros de Malta · 1530–1550 · revisión África y Levante 158",
+      "name": "Tripoli · Trípoli de los caballeros de Malta · 1530–1550 · revisión África y Levante 163",
       "identity": "Trípoli de los caballeros de Malta",
       "from": 1530,
       "through": 1550,
@@ -6005,7 +6096,7 @@
       "scopeLabel": "Tripoli · 1530–1550"
     },
     {
-      "name": "Tripoli · Regencia de Trípoli · 1551–1710 · revisión África y Levante 159",
+      "name": "Tripoli · Regencia de Trípoli · 1551–1710 · revisión África y Levante 164",
       "identity": "Regencia de Trípoli",
       "from": 1551,
       "through": 1710,
@@ -6025,7 +6116,7 @@
       "scopeLabel": "Tripoli · 1551–1710"
     },
     {
-      "name": "Tripoli · Regencia de Trípoli · 1711–1800 · revisión África y Levante 160",
+      "name": "Tripoli · Regencia de Trípoli · 1711–1800 · revisión África y Levante 165",
       "identity": "Regencia de Trípoli",
       "from": 1711,
       "through": 1800,
@@ -6043,7 +6134,7 @@
       "authorityCondition": "autonomía tributaria"
     },
     {
-      "name": "Ifriqiya · Califato almohade · 1200–1235 · revisión África y Levante 161",
+      "name": "Ifriqiya · Califato almohade · 1200–1235 · revisión África y Levante 166",
       "identity": "Califato almohade",
       "from": 1200,
       "through": 1235,
@@ -6086,7 +6177,6 @@
         "Souk_el_Arba",
         "Sousse",
         "Subaytila",
-        "Tabarka",
         "Tataouine",
         "Tebourba",
         "Thala",
@@ -6106,7 +6196,7 @@
       "scopeLabel": "Ifriqiya · 1200–1235"
     },
     {
-      "name": "Ifriqiya · Sultanato hafsí · 1236–1573 · revisión África y Levante 162",
+      "name": "Ifriqiya · Sultanato hafsí · 1236–1573 · revisión África y Levante 167",
       "identity": "Sultanato hafsí",
       "from": 1236,
       "through": 1573,
@@ -6149,7 +6239,6 @@
         "Souk_el_Arba",
         "Sousse",
         "Subaytila",
-        "Tabarka",
         "Tataouine",
         "Tebourba",
         "Thala",
@@ -6167,7 +6256,7 @@
       "scopeLabel": "Ifriqiya · 1236–1573"
     },
     {
-      "name": "Ifriqiya · Regencia de Túnez · 1574–1800 · revisión África y Levante 163",
+      "name": "Ifriqiya · Regencia de Túnez · 1574–1800 · revisión África y Levante 168",
       "identity": "Regencia de Túnez",
       "from": 1574,
       "through": 1800,
@@ -6210,7 +6299,6 @@
         "Souk_el_Arba",
         "Sousse",
         "Subaytila",
-        "Tabarka",
         "Tataouine",
         "Tebourba",
         "Thala",
@@ -6230,7 +6318,105 @@
       "scopeLabel": "Ifriqiya · 1574–1800"
     },
     {
-      "name": "Tunis · Califato almohade · 1200–1235 · revisión África y Levante 164",
+      "name": "Tabarka · Califato almohade · 1200–1235 · revisión África y Levante 169",
+      "identity": "Califato almohade",
+      "from": 1200,
+      "through": 1235,
+      "ids": [
+        "Tabarka"
+      ],
+      "governmentTerritories": [
+        "Califato almohade"
+      ],
+      "sourceKeys": [
+        "almohadi",
+        "hafsidi"
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": false,
+      "note": "Ifriqiya, gobernada por los hafsíes en nombre de los almohades.",
+      "scopeLabel": "Tabarka · 1200–1235"
+    },
+    {
+      "name": "Tabarka · Sultanato hafsí · 1236–1534 · revisión África y Levante 170",
+      "identity": "Sultanato hafsí",
+      "from": 1236,
+      "through": 1534,
+      "ids": [
+        "Tabarka"
+      ],
+      "governmentTerritories": [],
+      "sourceKeys": [
+        "hafsidi",
+        "tunisi"
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": false,
+      "note": "Sultanato hafsí de Túnez; protectorado español desde 1535; la guarnición española se concentró en La Goleta, sin controlar de forma uniforme toda Ifriqiya.",
+      "scopeLabel": "Tabarka · 1236–1534"
+    },
+    {
+      "name": "Tabarka · Presidios españoles del Magreb · 1535–1542 · revisión África y Levante 171",
+      "identity": "Presidios españoles del Magreb",
+      "from": 1535,
+      "through": 1542,
+      "ids": [
+        "Tabarka"
+      ],
+      "governmentTerritories": [
+        "Castilla"
+      ],
+      "sourceKeys": [
+        "tabarkaEarly",
+        "tabarka"
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": true,
+      "note": "Plaza de Tabarka. La celda aproxima su localización y no acredita dominio sobre todo el entorno rural. Corte anual por la situación al final del año; conquista o evacuación dentro del año se documentan en las fuentes.",
+      "scopeLabel": "Tabarka · 1535–1542"
+    },
+    {
+      "name": "Tabarka · Tabarca hispano-genovesa · 1543–1740 · revisión África y Levante 172",
+      "identity": "Tabarca hispano-genovesa",
+      "from": 1543,
+      "through": 1740,
+      "ids": [
+        "Tabarka"
+      ],
+      "governmentTerritories": [
+        "Castilla"
+      ],
+      "sourceKeys": [
+        "tabarka",
+        "tabarkaEffective"
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": true,
+      "note": "Factoría y fortaleza insular gestionadas mediante asiento por Grimaldi y Lomellini, con renovaciones y subarriendos. La Corona hispánica conserva la soberanía; la gestión comercial corresponde a las compañías genovesas. Contrato firmado en 1542, efectivo desde 1543; conquista tunecina en 1741. La celda sitúa el enclave insular y no acredita dominio sobre toda la ciudad continental. Plaza de Tabarka. La celda aproxima su localización y no acredita dominio sobre todo el entorno rural. Corte anual por la situación al final del año; conquista o evacuación dentro del año se documentan en las fuentes.",
+      "scopeLabel": "Tabarka · 1543–1740"
+    },
+    {
+      "name": "Tabarka · Regencia de Túnez · 1741–1800 · revisión África y Levante 173",
+      "identity": "Regencia de Túnez",
+      "from": 1741,
+      "through": 1800,
+      "ids": [
+        "Tabarka"
+      ],
+      "governmentTerritories": [
+        "Imperio otomano"
+      ],
+      "sourceKeys": [
+        "tunisi",
+        "hafsidi"
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": false,
+      "note": "Regencia otomana de Túnez; desde finales del siglo XVI el gobierno efectivo pasó a deyes y beyes.",
+      "scopeLabel": "Tabarka · 1741–1800"
+    },
+    {
+      "name": "Tunis · Califato almohade · 1200–1235 · revisión África y Levante 174",
       "identity": "Califato almohade",
       "from": 1200,
       "through": 1235,
@@ -6250,7 +6436,7 @@
       "scopeLabel": "Tunis · 1200–1235"
     },
     {
-      "name": "Tunis · Sultanato hafsí · 1236–1533 · revisión África y Levante 165",
+      "name": "Tunis · Sultanato hafsí · 1236–1533 · revisión África y Levante 175",
       "identity": "Sultanato hafsí",
       "from": 1236,
       "through": 1533,
@@ -6268,7 +6454,7 @@
       "scopeLabel": "Tunis · 1236–1533"
     },
     {
-      "name": "Tunis · Imperio otomano · 1534–1534 · revisión África y Levante 166",
+      "name": "Tunis · Imperio otomano · 1534–1534 · revisión África y Levante 176",
       "identity": "Imperio otomano",
       "from": 1534,
       "through": 1534,
@@ -6288,7 +6474,7 @@
       "authorityCondition": "ocupación"
     },
     {
-      "name": "Tunis · Sultanato hafsí · 1535–1568 · revisión África y Levante 167",
+      "name": "Tunis · Sultanato hafsí · 1535–1568 · revisión África y Levante 177",
       "identity": "Sultanato hafsí",
       "from": 1535,
       "through": 1568,
@@ -6306,7 +6492,7 @@
       "scopeLabel": "Tunis · 1535–1568"
     },
     {
-      "name": "Tunis · Imperio otomano · 1569–1572 · revisión África y Levante 168",
+      "name": "Tunis · Imperio otomano · 1569–1572 · revisión África y Levante 178",
       "identity": "Imperio otomano",
       "from": 1569,
       "through": 1572,
@@ -6327,7 +6513,7 @@
       "authorityCondition": "ocupación"
     },
     {
-      "name": "Tunis · Presidios españoles del Magreb · 1573–1573 · revisión África y Levante 169",
+      "name": "Tunis · Presidios españoles del Magreb · 1573–1573 · revisión África y Levante 179",
       "identity": "Presidios españoles del Magreb",
       "from": 1573,
       "through": 1573,
@@ -6347,7 +6533,7 @@
       "authorityCondition": "ocupación"
     },
     {
-      "name": "Tunis · Regencia de Túnez · 1574–1800 · revisión África y Levante 170",
+      "name": "Tunis · Regencia de Túnez · 1574–1800 · revisión África y Levante 180",
       "identity": "Regencia de Túnez",
       "from": 1574,
       "through": 1800,
@@ -6442,6 +6628,31 @@
       "title": "Ottoman History Podcast · The English in 17th-Century Tangier",
       "url": "https://www.ottomanhistorypodcast.com/2018/10/english-tangier.html",
       "locator": "Tánger portugués desde 1471, dote de Catalina de Braganza, ocupación inglesa desde 1662 y evacuación en 1684."
+    },
+    "bona": {
+      "title": "Archivo General de Simancas · Capitulación sobre Bona",
+      "url": "https://pares.cultura.gob.es/ParesBusquedas20/catalogo/description/2213918",
+      "locator": "AGS, PTR,LEG,11,105,2: capitulación de Muley al-Hacén con Carlos V sobre Bona, fechada probablemente en 1535."
+    },
+    "bonaEnd": {
+      "title": "Revista de Historia Naval 166 (2024) · Expedición de Túnez",
+      "url": "https://armada.defensa.gob.es/archivo/mardigitalrevistas/rhn/2025/166/RHN166Web.pdf",
+      "locator": "Página 35 y nota 104: guarnición española de seiscientos hombres en Bona desde agosto de 1535, bajo Alvar Gómez de Orozco, cuyo gobierno se prolongó cinco años, hasta 1540."
+    },
+    "tabarka": {
+      "title": "Ministerio de Agricultura, Pesca y Alimentación · Nueva Tabarca, patrimonio integral en el horizonte marítimo",
+      "url": "https://www.mapa.gob.es/es/pesca/publicaciones/nuevatabarca1web_tcm30-521743.pdf",
+      "locator": "Página 147: asiento firmado el 22 de septiembre de 1542 por el representante de Carlos V con Grimaldi y Lomellini, fortaleza y guarnición, quinta parte de beneficios y obligaciones de mantenimiento del enclave hispano-genovés."
+    },
+    "tabarkaEffective": {
+      "title": "Business History · Whatever the cost: Grain trade and the Genoese dominating minority in Sicily and Tabarka",
+      "url": "https://www.tandfonline.com/doi/full/10.1080/00076791.2021.1924686",
+      "locator": "Concesión formal efectiva desde 1543, renovaciones del asiento, última firma en 1695 y final del enclave con la conquista del bey de Túnez en 1741."
+    },
+    "tabarkaEarly": {
+      "title": "École française de Rome · Tabarka (Tunisie), 1988",
+      "url": "https://www.persee.fr/doc/mefr_0223-5110_1988_num_100_1_8619",
+      "locator": "La fase de 1535–1741 concierne a la isla; construcción del fuerte en las campañas de Carlos V y posterior entrega a las familias genovesas. La fecha de comienzo del asiento sigue el contrato de 1542 y su vigencia desde 1543."
     },
     "safi": {
       "title": "HPIP · Safi",

@@ -75,6 +75,21 @@
     "source": "https://hpip.org/pt/heritage/details/922"
   },
   {
+    "id": "africa-annaba-1535",
+    "locationId": "Annaba",
+    "from": 1535,
+    "through": 1539,
+    "previous": [
+      "Regencia de Argel"
+    ],
+    "expected": [
+      "Presidios españoles del Magreb"
+    ],
+    "reviewedAt": "2026-10-24",
+    "reason": "Revisión posterior de plazas norteafricanas, fuera del inventario alemán. Corrección de ocupación o evacuación documentada en docs/revision-plazas-africanas-2026-10-24.md; se conserva la huella de referencia original.",
+    "source": "https://armada.defensa.gob.es/archivo/mardigitalrevistas/rhn/2025/166/RHN166Web.pdf"
+  },
+  {
     "id": "africa-asfi-1508",
     "locationId": "Asfi",
     "from": 1508,
@@ -253,6 +268,51 @@
     "reviewedAt": "2026-10-24",
     "reason": "Revisión posterior de plazas norteafricanas, fuera del inventario alemán. Corrección de ocupación o evacuación documentada en docs/revision-plazas-africanas-2026-10-24.md; se conserva la huella de referencia original.",
     "source": "https://armada.defensa.gob.es/archivo/mardigitalrevistas/cuadernosihcn/83cuaderno/cm83.pdf"
+  },
+  {
+    "id": "africa-tabarka-1574",
+    "locationId": "Tabarka",
+    "from": 1574,
+    "through": 1740,
+    "previous": [
+      "Regencia de Túnez"
+    ],
+    "expected": [
+      "Tabarca hispano-genovesa"
+    ],
+    "reviewedAt": "2026-10-24",
+    "reason": "Revisión posterior de plazas norteafricanas, fuera del inventario alemán. Corrección de ocupación o evacuación documentada en docs/revision-plazas-africanas-2026-10-24.md; se conserva la huella de referencia original.",
+    "source": "https://www.tandfonline.com/doi/full/10.1080/00076791.2021.1924686"
+  },
+  {
+    "id": "africa-tabarka-1535",
+    "locationId": "Tabarka",
+    "from": 1535,
+    "through": 1542,
+    "previous": [
+      "Sultanato hafsí"
+    ],
+    "expected": [
+      "Presidios españoles del Magreb"
+    ],
+    "reviewedAt": "2026-10-24",
+    "reason": "Revisión posterior de plazas norteafricanas, fuera del inventario alemán. Corrección de ocupación o evacuación documentada en docs/revision-plazas-africanas-2026-10-24.md; se conserva la huella de referencia original.",
+    "source": "https://www.persee.fr/doc/mefr_0223-5110_1988_num_100_1_8619"
+  },
+  {
+    "id": "africa-tabarka-1543",
+    "locationId": "Tabarka",
+    "from": 1543,
+    "through": 1573,
+    "previous": [
+      "Sultanato hafsí"
+    ],
+    "expected": [
+      "Tabarca hispano-genovesa"
+    ],
+    "reviewedAt": "2026-10-24",
+    "reason": "Revisión posterior de plazas norteafricanas, fuera del inventario alemán. Corrección de ocupación o evacuación documentada en docs/revision-plazas-africanas-2026-10-24.md; se conserva la huella de referencia original.",
+    "source": "https://www.tandfonline.com/doi/full/10.1080/00076791.2021.1924686"
   },
   {
     "id": "africa-tunis-1534",

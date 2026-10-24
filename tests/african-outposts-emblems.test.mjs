@@ -21,6 +21,7 @@ const owner = (year,id) => {
 
 test('las plazas cambian de dueño en los límites documentados y dejan libre el interior', () => {
   for (const [id,from,through,identity] of [
+    ['Annaba',1535,1539,'Presidios españoles del Magreb'],['Tabarka',1543,1740,'Tabarca hispano-genovesa'],
     ['Asfi',1508,1540,'Plazas portuguesas del Magreb'],['Azemmour',1513,1540,'Plazas portuguesas del Magreb'],
     ['Agadir',1505,1540,'Plazas portuguesas del Magreb'],['Mogador',1506,1509,'Plazas portuguesas del Magreb'],
     ['Aguz',1508,1524,'Plazas portuguesas del Magreb'],['Asilah',1577,1588,'Plazas portuguesas del Magreb'],
@@ -32,6 +33,8 @@ test('las plazas cambian de dueño en los límites documentados y dejan libre el
   }
   assert.ok(!owner(1708,'Oran').includes('Presidios españoles del Magreb'));
   assert.ok(owner(1707,'Oran').includes('Presidios españoles del Magreb'));
+  assert.ok(owner(1535,'Tabarka').includes('Presidios españoles del Magreb'));
+  assert.ok(owner(1741,'Tabarka').includes('Regencia de Túnez'));
   assert.ok(owner(1534,'Tunis').includes('Imperio otomano'));
   assert.ok(owner(1569,'Tunis').includes('Imperio otomano'));
   assert.ok(owner(1573,'Tunis').includes('Presidios españoles del Magreb'));
@@ -79,12 +82,13 @@ test('el protectorado hafsí conserva identidad y trama sin extenderse a toda If
 test('las plazas españolas se vinculan al mandato efectivo de los reyes, sin inventar uno de España', () => {
   for(const [id,year,expected] of [
     ['CARLOS5',1520,['Melilla','Oran','Bejaia','Tripoli']],
-    ['FEL2ESP',1573,['Melilla','Oran','Tunis']],
+    ['CARLOS5',1535,['Melilla','Oran','Bejaia','Annaba','Tabarka']],
+    ['FEL2ESP',1573,['Melilla','Oran','Tunis','Tabarka']],
     ['FEL3ESP',1620,['Melilla','Oran','Larache','La_Mamora']],
   ]) {
     const p=PERSONAS.find(p=>p.id===id);assert.ok(p,id);
     const ids=new Set(mapAuthoritiesForPerson(p,year,data).filter(e=>e.paint).flatMap(e=>e.ids));
     for(const cell of expected)assert.ok(ids.has(cell),`${id}/${cell}`);
-    for(const cell of ['Marrakesh','Fez','Tlemcen'])assert.ok(!ids.has(cell),`${id}/${cell}`);
+    for(const cell of ['Marrakesh','Fez','Tlemcen','El_Kala'])assert.ok(!ids.has(cell),`${id}/${cell}`);
   }
 });
