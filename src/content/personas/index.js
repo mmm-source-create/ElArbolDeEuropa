@@ -1,4 +1,5 @@
 import {BELTRANEJA_CONTENT} from './beltraneja.js';
+import {BARBARROJA_CONTENT} from './barbarroja.js';
 import {CASTIGLIONE_CONTENT} from './castiglione.js';
 import {AMPLIACION_EDITORIAL} from './ampliacion-editorial.js';
 import {LITUANIA_V526} from './lituania-v526.js';
@@ -32,6 +33,7 @@ import { PERSONAS_V531 } from './personas-v531.js';
 
 export const PERSONA_CONTENT = Object.freeze({
   ...BELTRANEJA_CONTENT,
+  ...BARBARROJA_CONTENT,
   ...LITUANIA_V526,
   ...MONARCAS_MEDIEVALES,
   ...MONARCAS_MODERNOS,

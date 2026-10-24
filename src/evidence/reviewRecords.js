@@ -1,4 +1,5 @@
 import {BELTRANEJA_REVIEWS} from './beltranejaReviews.js';
+import {BARBAROSSA_REVIEWS} from './barbarossaReviews.js';
 import {DURAZZO_REVIEWS} from './durazzoReviews.js';
 import {CASTIGLIONE_REVIEWS} from './castiglioneReviews.js';
 import {ROYAL_COVERAGE_REVIEWS} from './royalCoverageReviews.js';
@@ -229,6 +230,7 @@ const identityReview = (certainty, source, note, extra = {}) => ({
 
 export const CLAIM_REVIEWS = Object.freeze({
   ...BELTRANEJA_REVIEWS,
+  ...BARBAROSSA_REVIEWS,
   ...CASTIGLIONE_REVIEWS,
   ...DURAZZO_REVIEWS,
   ...DYNASTY_MAP_REVIEWS,

@@ -18,6 +18,7 @@ export const PROFILE_LABELS = {
 };
 
 export const ENGLISH_NAMES = {
+  FED1BARBARROJA: "Frederick I",
   ...EXPANDED_NAMES,
   ...V535_NAMES,
   ...V536_NAMES,

@@ -32,3 +32,13 @@ test('el Atlas conserva toda la historia, destaca el capítulo y solo permite un
  assert.equal(safeStoryReturn(u.search),'/es/historia/test/capitulo/1');
  for(const target of ['https://evil.test','//evil.test','/es/historia/test/capitulo/1?x=1','/es/historia/test/capitulo/0'])assert.equal(safeStoryReturn('?regreso='+encodeURIComponent(target)),null);
 });
+test('Los reyes cruzados conserva las lecturas anteriores y deja nuevos los capítulos de Barbarroja',()=>{
+ const s=storage(),id='ricardo-felipe-cruzada';
+ s.setItem(STORY_PROGRESS_KEY,JSON.stringify({[id]:{last:5,read:[1,2,3,4,5]}}));
+ assert.deepEqual(readStoryProgress(s,id,8),{last:7,read:[1,4,5,6,7]});
+ saveStoryProgress(s,id,8,8);
+ assert.deepEqual(readStoryProgress(s,id,8),{last:8,read:[1,4,5,6,7,8]});
+ saveStoryProgress(s,id,8,2);
+ assert.deepEqual(readStoryProgress(s,id,8),{last:2,read:[1,4,5,6,7,8,2]});
+ assert.equal(JSON.parse(s.getItem(STORY_PROGRESS_KEY))[id].revision,2);
+});

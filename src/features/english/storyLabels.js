@@ -3,7 +3,7 @@ export const ENGLISH_STORY_LABELS = {
     'balduino-saladino':['Kingdom of Heaven','From Montgisard to Hattin: victories, truces and a fragile succession'],
     'sebastian-marruecos':['Sebastian of Portugal: the Moroccan campaign','Alcácer Quibir, the Battle of the Three Kings and the crisis of 1580'],
     'constantinopla-dos-conquistas':['Constantinople: two conquests, two worlds','1204 and 1453: from the Fourth Crusade to Mehmed II’s empire'],
-    'ricardo-felipe-cruzada':['Richard I and Philip II: allies on crusade','Acre, Arsuf and the rivalry that returned to France'],
+    'ricardo-felipe-cruzada':['The Crusader Kings','Richard I, Philip II and Frederick Barbarossa in the Third Crusade'],
     'braveheart-detras-del-mito':['Braveheart: behind the myth','Wallace, Bruce and the wars for Scotland'],
     'dracula-detras-de-la-leyenda':['Dracula: behind the legend','Vlad III, Wallachia and the distance between a prince and a vampire'],
     'puertas-viena':['At the gates of Vienna','The alliance that turned an Ottoman siege into a European counteroffensive'],

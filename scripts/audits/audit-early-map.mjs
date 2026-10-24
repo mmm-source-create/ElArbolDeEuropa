@@ -13,6 +13,9 @@ const data=JSON.parse(fs.readFileSync(mapDataFile('corridor-locations.json')));
 // researched regional geometry starts in 1200. Keep all 23 earlier years
 // explicitly uncharted rather than moving his accession to fit the map.
 const WITHOUT_EARLY_CARTOGRAPHY=new Set(['SVERRERENOR|Noruega','TEOB3CHAMP|Champaña','ENRIQLEON|Sajonia','ENRIQLEON|Baviera','HENRYSCOT|Northumbria','DAVIDHUNTINGDON|Huntingdon',
+ // Barbarossa's royal and imperial titles are documented; neither amounts to
+ // ownership of every imperial cell. His domains before 1190 are not reviewed.
+ 'FED1BARBARROJA|Alemania','FED1BARBARROJA|Sacro Imperio',
  // V5.31 · Aragonese vassals documented before the regional reviews start in 1200.
  'GUILLERMA1PALLARS|Pallars Sobirà','RAMON6TOLOSA|Toulouse','RAMONROGERFOIX|Foix','TRENCAVEL1|Vizcondado de Carcasona','ROGER2TRENCAVEL|Vizcondado de Carcasona',
  'RAMONROGERTRENCAVEL|Vizcondado de Carcasona','MARIABEARNE|Bearne','GASTON6BEARN|Bearne','GASTON6BEARN|Condado de Bigorra','PETRONILABIGORRA|Condado de Bigorra','GUILLERMO8MONTP|Montpellier']);

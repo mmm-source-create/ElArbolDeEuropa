@@ -1,4 +1,6 @@
-# Revisión editorial de las historias para confirmar cambios
+# Revisión editorial de las historias
+
+**Estado:** el autor seleccionó 109 de estos 111 pasajes. Ya se han aplicado; A02 y A04 quedan conservados. Véase el [registro de correcciones](correcciones-editoriales-historias-2026-10-24.md). Lo que sigue conserva la propuesta original como referencia.
 
 Revisadas las 19 historias publicadas, sus 214 capítulos, títulos, subtítulos, descripciones y notas de contexto; también las dos historias completas en inglés, con 22 capítulos. No se han retirado ni reescrito los pasajes de esta lista. El único cambio narrativo ya autorizado es el título general de Lepanto.
 
@@ -21,7 +23,7 @@ Para confirmar, basta indicar los identificadores o intervalos que quieres retir
 | La República de los nobles | 13 | 0 | 3 |
 | Una corona entre dos credos | 11 | 0 | 1 |
 | El reino partido en dos | 18 | 1 | 1 |
-| Lepanto: La última cruzada | 13 | 4 | 3 |
+| Lepanto: la última cruzada | 13 | 4 | 3 |
 | A las puertas de Viena | 9 | 1 | 0 |
 | Braveheart: detrás del mito | 6 | 7 | 3 |
 | Drácula: detrás de la leyenda | 6 | 8 | 3 |
@@ -94,7 +96,7 @@ Rebate una afirmación que el texto no ha atribuido a nadie.
 
 Rebate una afirmación que el texto no ha atribuido a nadie.
 
-### Lepanto: La última cruzada
+### Lepanto: la última cruzada
 
 **A09 · descripción**
 
@@ -604,7 +606,7 @@ El contraste aporta información histórica, pero puede expresarse de forma más
 
 El contraste aporta información histórica, pero puede expresarse de forma más directa.
 
-### Lepanto: La última cruzada
+### Lepanto: la última cruzada
 
 **B37 · capítulo 6, 1571, «Mesina: conocer a los hombres de la Liga», texto**
 
