@@ -281,16 +281,23 @@ html .public-not-found>section>span{color:#7c5426}
 .story-catalog-section>h2 small{color:var(--eade-muted);font:600 var(--fs-xs,11px)/1 var(--eade-sans)}
 .story-card-progress{height:4px;margin:4px 0 10px;border-radius:999px;background:var(--eade-border);overflow:hidden}
 .story-card-progress i{display:block;height:100%;background:var(--eade-wine-fill,#7A2E2E);border-radius:inherit}
-.story-theme-filters{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0}
-.story-theme-filters button{display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:8px 13px;border:1px solid var(--eade-border);border-radius:20px;background:var(--eade-paper);color:var(--eade-ink);font:600 13px/1.3 var(--eade-sans);cursor:pointer}
-.story-theme-filters button small{font-weight:400}
-.story-theme-filters button[aria-pressed="true"]{background:var(--eade-wine-fill,#7A2E2E);border-color:var(--eade-wine-fill,#7A2E2E);color:#fff8ef}
-.story-theme-filters button:focus-visible{outline:2px solid var(--eade-wine);outline-offset:3px}
-.story-theme-filters button:disabled{opacity:.5;cursor:default}
-.story-theme-description{max-width:75ch;margin:-5px 0 18px;color:var(--eade-muted);line-height:1.6}
+/* Two views; collections expand one at a time and may share stories. */
+.story-view-tabs{display:inline-flex;gap:4px;padding:4px;margin:18px 0 24px;border:1px solid var(--eade-border);border-radius:28px;background:var(--eade-paper)}
+.story-view-tabs button{min-height:44px;padding:8px 22px;border:0;border-radius:24px;background:transparent;color:var(--eade-ink);font:600 14px/1.3 var(--eade-sans);cursor:pointer}
+.story-view-tabs button[aria-selected="true"]{background:var(--eade-wine-fill,#7A2E2E);color:#fff8ef}
+.story-view-tabs button:focus-visible,.story-collection-card button:focus-visible{outline:2px solid var(--eade-wine);outline-offset:3px}
+.story-collections{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px;align-items:start}
+.story-collection-card{display:block;padding:0;overflow:hidden;background:var(--eade-paper-bright);border-color:var(--eade-border);color:var(--eade-ink)}
+.story-collection-card.is-open{grid-column:1/-1}
+.story-collection-card>h2{margin:0}
+.story-collection-card>h2>button{display:flex;align-items:center;justify-content:space-between;gap:20px;width:100%;padding:24px;text-align:left;background:transparent;border:0;color:var(--eade-ink);font:600 24px/1.25 var(--eade-serif);cursor:pointer}
+.story-collection-card>h2 small{display:block;margin-top:8px;color:var(--eade-muted);font:400 13px/1.5 var(--eade-sans)}
+.story-collection-card.is-open>h2 svg{transform:rotate(180deg)}
+.story-collection-card>div:not([hidden]){padding:0 24px 24px}
+.story-review-note{display:inline-block;color:var(--eade-wine);font:600 13px/1.5 var(--eade-sans)}
+@media(max-width:600px){.story-collections{grid-template-columns:1fr}.story-collection-card>h2>button{padding:20px}.story-collection-card>div:not([hidden]){padding:0 16px 20px}}
 .public-story-card h3{margin:8px 0;color:var(--eade-ink);font:600 var(--fs-xl,20px)/1.25 var(--eade-serif)}
 .story-coming{margin-top:22px}.story-coming>h3{color:var(--eade-muted);font:600 15px/1.3 var(--eade-serif)}
-.story-theme-label{color:var(--eade-wine);font:600 13px/1.5 var(--eade-sans)}
 .story-context{max-width:80ch;padding:12px 16px;border-left:3px solid var(--eade-border-strong);color:var(--eade-muted);line-height:1.6}
 .story-coming-list{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:8px 18px;margin:0;padding:0;list-style:none}
 .story-coming-list li{display:grid;gap:2px;padding:10px 0;border-top:1px solid var(--eade-border)}
@@ -301,3 +308,8 @@ html .public-not-found>section>span{color:#7c5426}
 /* Heraldic tinctures are fixed; a faint halo keeps sable fields and the shield edge visible on dark cards. */
 @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .dynasty-arms { filter: drop-shadow(0 0 1px rgb(255 248 232 / .55)); } }
 :root[data-theme="dark"] .dynasty-arms { filter: drop-shadow(0 0 1px rgb(255 248 232 / .55)); }
+
+.dynasty-arms-tughra{background:#F4EEE1;border-radius:4px;padding:4px;box-sizing:border-box}
+
+.project-modal .story-collection-browser .story-catalog-card{background:var(--eade-paper-bright);border-color:var(--eade-border);color:var(--eade-ink)}
+.project-modal .story-collection-browser .story-catalog-card p,.project-modal .story-collection-browser .story-catalog-topline{color:var(--eade-muted)}

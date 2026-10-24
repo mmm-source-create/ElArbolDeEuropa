@@ -29,8 +29,8 @@ registerHooks({resolve(specifier,context,nextResolve){
 const {HomeContent}=await import('../src/features/public/HomePage.jsx');
 
 test('every recorded Iberian royal holder has a complete English edition with its own offices and biography',()=>{
- const rulers=iberianRoyalRecords(PERSONAS);assert.equal(rulers.length,116);
- assert.equal(Object.keys(IBERIAN_ENGLISH_PROFILES).length,107);
+ const rulers=iberianRoyalRecords(PERSONAS);assert.equal(rulers.length,117);
+ assert.equal(Object.keys(IBERIAN_ENGLISH_PROFILES).length,108);
  for(const p of rulers){
   const biography=biografiaExtensaPersona(p)||[];
   const source={...p,biografiaExtensa:biography,padres:[],conyuges:[],hijos:[],relacionadosDinastia:[],contemporaneos:[],historias:[]};

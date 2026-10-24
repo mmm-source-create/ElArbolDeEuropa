@@ -108,8 +108,8 @@ export default function DynastyArms({dinastia, size = 56, className = '', drawn 
   if (!escudo) return null;
   // The credit travels with the image as a tooltip; pages show it in full at
   // their foot or on the licences page.
-  if (escudo.imagen && !drawn) return <img className={`dynasty-arms dynasty-arms-image ${className}`.trim()} src={escudo.imagen.archivo}
-    width={size} height={Math.round(size * 1.2)} alt={label||`Armas: ${escudo.blason}`} title={`${locale==='en'?'Arms':'Escudo'}: ${escudo.imagen.autor} · ${escudo.imagen.licencia} · ${escudo.imagen.procedencia||'Wikimedia Commons'}`}
+  if (escudo.imagen && (!drawn || escudo.tipo === 'tughra')) return <img className={`dynasty-arms dynasty-arms-image ${escudo.tipo === 'tughra' ? 'dynasty-arms-tughra' : ''} ${className}`.trim()} src={escudo.imagen.archivo}
+    width={size} height={Math.round(size * 1.2)} alt={escudo.tipo === 'tughra' ? locale === 'en' ? 'Tughra of Orhan, earliest surviving Ottoman tughra' : 'Tuğra de Orhan, primera tuğra otomana conservada' : label||`Armas: ${escudo.blason}`} title={`${escudo.tipo === 'tughra' ? 'Tuğra' : locale==='en'?'Arms':'Escudo'}: ${escudo.imagen.autor} · ${escudo.imagen.licencia} · ${escudo.imagen.procedencia||'Wikimedia Commons'}`}
     loading="lazy" decoding="async"/>;
   const clip = `arms-${id}`;
   return <svg className={`dynasty-arms ${className}`.trim()} viewBox="0 0 100 120" width={size} height={size * 1.2}
@@ -126,10 +126,11 @@ export default function DynastyArms({dinastia, size = 56, className = '', drawn 
 
 // Author, licence and file page of a Commons image, shown under the shield.
 export function ArmsCredit({dinastia, className = ''}) {
-  const imagen = escudoDe(dinastia)?.imagen;
+  const escudo = escudoDe(dinastia);
+  const imagen = escudo?.imagen;
   if (!imagen) return null;
   return <small className={`dynasty-arms-credit ${className}`.trim()}>
-    Escudo: <a href={imagen.fuente} target="_blank" rel="noreferrer">{imagen.autor}</a>
+    {escudo.tipo === 'tughra' ? 'Tuğra: ' : 'Escudo: '}<a href={imagen.fuente} target="_blank" rel="noreferrer">{imagen.autor}</a>
     {' · '}{imagen.licenciaUrl ? <a href={imagen.licenciaUrl} target="_blank" rel="noreferrer license">{imagen.licencia}</a> : imagen.licencia}
     {' · '}{imagen.procedencia||'Wikimedia Commons'}
     {imagen.modificaciones && <span> · {imagen.modificaciones}</span>}
