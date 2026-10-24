@@ -80,11 +80,12 @@ test('Évreux se registra antes de la corona navarra y la confiscación no pinta
   assert.ok(mapAuthoritiesForPerson(charles,1350,mapData).some(e=>e.territory==='Évreux'&&e.paint&&e.ids.includes('Evreux')));
   assert.ok(!mapAuthoritiesForPerson(charles,1378,mapData).some(e=>e.territory==='Évreux'&&e.paint));
 });
-test('los nuevos escudos conservan su crédito y el Paleólogo excluye águila y corona', () => {
+test('los escudos conservan su crédito y Paleólogo muestra el emblema revisado', () => {
   for(const house of ['Barcelona-Urgel','Della Scala','Paleólogo'])assert.ok(escudoDe(house).imagen.fuente);
-  const svg=fs.readFileSync(new URL('../public/escudos/palaiologos-cross-shield.svg',import.meta.url),'utf8');
+  const svg=fs.readFileSync(new URL('../public/escudos/palaiologos-device.svg',import.meta.url),'utf8');
   const doc=new JSDOM(svg,{contentType:'image/svg+xml'}).window.document;
-  assert.equal(doc.querySelectorAll('path').length,14);
+  assert.ok(doc.querySelector('use[xlink\\:href="#wing"]'));
   assert.equal(doc.querySelectorAll('image,script,foreignObject').length,0);
-  assert.match(escudoDe('Paleólogo').imagen.modificaciones,/retirados águila y corona/);
+  assert.equal(escudoDe('Paleólogo').tipo,'emblema');
+  assert.match(escudoDe('Paleólogo').imagen.fuente,/Device_of_the_Palaiologos_Dynasty/);
 });

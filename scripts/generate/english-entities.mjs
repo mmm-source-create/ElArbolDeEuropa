@@ -23,8 +23,8 @@ export async function englishEntityPages(people){
  for(const t of ENGLISH_DYNASTIES){
   const source=JSON.parse(await fs.readFile(`public/dinastias-meta/${t.es}.json`));
   const arms=escudoDe(t.key);
-  const branch=r=>{if(r.id!=='anjou-hungria-capeta')throw Error(`Translate new house connection: ${r.id}`);return ({...r,etiqueta:'Cadet branch',periodo:t.branchPeriod,texto:t.branchText,fundador:card(r.fundador,people),personas:r.personas.map(p=>card(p,people))});};
-  const house=h=>({...h,key:h.nombre,nombre:term(h.nombre),resumen:t.parentSummary,miembros:h.miembros.map(p=>card(p,people)),path:`/es/dinastia/${h.slug}`});
+  const branch=r=>{const translation=t.connections[r.id];if(!translation)throw Error(`Translate new house connection: ${r.id}`);return ({...r,...translation,fundador:card(r.fundador,people),personas:r.personas.map(p=>card(p,people))});};
+  const house=h=>{const summary=t.houses[h.nombre];if(summary===undefined)throw Error(`Translate related house: ${h.nombre}`);return ({...h,key:h.nombre,nombre:term(h.nombre),resumen:summary,miembros:h.miembros.map(p=>card(p,people)),path:`/es/dinastia/${h.slug}`});};
   pages.push({...source,type:'dynasty',path:`/en/dynasty/${t.en}`,esPath:`/es/dinastia/${t.es}`,key:t.key,nombre:t.name,description:t.summary,resumen:t.summary,origen:t.origin,trayectoria:t.history,legado:t.legacy,editorial:true,
    miembros:source.miembros.map(p=>card(p,people)),protagonistas:source.protagonistas.map(p=>card(p,people)),gobiernos:source.gobiernos.map(g=>government(g,people)),territorios:source.territorios.map(key=>({key,name:term(key)})),ramas:source.ramas.map(branch),casasOrigen:source.casasOrigen.map(house),casasDerivadas:source.casasDerivadas.map(house),casasConectadas:source.casasConectadas.map(house),
    arms:{...arms.imagen,autor:t.armsAuthor,blazon:t.blazon,note:t.armsNote,modifications:'A viewBox was added for responsive scaling; the drawing is unchanged.'},

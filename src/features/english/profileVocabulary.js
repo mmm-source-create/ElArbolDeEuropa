@@ -5,6 +5,7 @@ import {V535_NAMES,V535_LABELS,V535_NOTES} from './v535Vocabulary.js';
 import {V536_NAMES,V536_LABELS,V536_NOTES} from './v536Vocabulary.js';
 // Display translations only: canonical dynasty and territory keys stay intact.
 export const PROFILE_LABELS = {
+  'Jagellón':'Jagiellon','Kotromanić':'Kotromanić',Piast:'Piast',Ban:'Ban','Ban / Rey':'Ban / King',
   ...EXPANDED_LABELS,
   ...V535_LABELS,
   ...V536_LABELS,
@@ -18,6 +19,10 @@ export const PROFILE_LABELS = {
 };
 
 export const ENGLISH_NAMES = {
+  STEPHEN2BOS:'Stephen II of Bosnia',CASI4:'Casimir IV of Poland',EDUVIGJAGBAV:'Hedwig Jagiellon',JUAN1ALBERTO:'John I Albert of Poland',
+  VLADISLAVBOS:'Vladislav of Bosnia',DABISABOS:'Stephen Dabiša of Bosnia',TVRTKO1BOS:'Tvrtko I of Bosnia',OSTOJABOS:'Stephen Ostoja of Bosnia',
+  ENRIQ6LUX:'Henry VI of Luxembourg',PHILIPPALUXAVES:'Philippa of Luxembourg',JUAN1B:'John of Bohemia',
+  BOLESL:'Bolesław the Pious',PREM2:'Przemysł II of Poland',EDUVK:'Hedwig of Kalisz',ISABRP:'Elizabeth Richeza of Poland',BEATSIL:'Beatrice of Silesia',
   FED1BARBARROJA: "Frederick I",
   ...EXPANDED_NAMES,
   ...V535_NAMES,

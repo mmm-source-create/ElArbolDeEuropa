@@ -1,4 +1,5 @@
 import {PERSON_NAMING_POLICY} from './personNamingPolicy.js';
+import {CONNECTION_SOURCES} from './dinastias/conexiones-casas.js';
 import {LOUIS_HUNGARY_SOURCES} from './sources-louis-hungary.js';
 import {DURAZZO_SOURCES} from './sources-durazzo.js';
 import {AMPLIACION_EDITORIAL_SOURCES} from './sources-ampliacion-editorial.js';
@@ -25,6 +26,7 @@ const DOGES_1400_1605 = [
 // Bibliography shared by the public site, Atlas and generated entity pages.
 // A territorial reference supplies context; only explicit person IDs assign a biography.
 export const SOURCES = [
+  ...CONNECTION_SOURCES,
   ...LOUIS_HUNGARY_SOURCES,
   ...DURAZZO_SOURCES,
   {"titulo": "Larousse · Anjou", "url": "https://www.larousse.fr/encyclopedie/autre-region/Anjou/105538", "grupo": "Casas y filiaciones", "territorios": [], "personas": [], "nota": "Revisión de las casas, las ramas y sus conexiones: se distingue genealogía, continuidad patrimonial y ejercicio del gobierno."},

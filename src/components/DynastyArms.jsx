@@ -109,7 +109,7 @@ export default function DynastyArms({dinastia, size = 56, className = '', drawn 
   // The credit travels with the image as a tooltip; pages show it in full at
   // their foot or on the licences page.
   if (escudo.imagen && (!drawn || esEmblemaNoHeraldico(escudo))) return <img className={`dynasty-arms dynasty-arms-image ${esEmblemaNoHeraldico(escudo) ? 'dynasty-arms-tughra' : ''} ${className}`.trim()} src={escudo.imagen.archivo}
-    width={size} height={Math.round(size * 1.2)} alt={escudo.tipo === 'tughra' ? locale === 'en' ? 'Tughra of Orhan, earliest surviving Ottoman tughra' : 'Tuğra de Orhan, primera tuğra otomana conservada' : escudo.tipo === 'signo' ? locale === 'en' ? 'Princely sign of Sviatoslav, drawing of his tenth-century seal' : 'Signo principesco de Sviatoslav, dibujo de su sello del siglo X' : label||`Armas: ${escudo.blason}`} title={`${nombreEmblema(escudo, locale)}: ${escudo.imagen.autor} · ${escudo.imagen.licencia} · ${escudo.imagen.procedencia||'Wikimedia Commons'}`}
+    width={size} height={Math.round(size * 1.2)} alt={escudo.tipo === 'tughra' ? locale === 'en' ? 'Tughra of Orhan, earliest surviving Ottoman tughra' : 'Tuğra de Orhan, primera tuğra otomana conservada' : escudo.tipo === 'signo' ? locale === 'en' ? 'Princely sign of Sviatoslav, drawing of his tenth-century seal' : 'Signo principesco de Sviatoslav, dibujo de su sello del siglo X' : label||escudo.alt?.[locale]||`Armas: ${escudo.blason}`} title={`${nombreEmblema(escudo, locale)}: ${escudo.imagen.autor} · ${escudo.imagen.licencia} · ${escudo.imagen.procedencia||'Wikimedia Commons'}`}
     loading="lazy" decoding="async"/>;
   const clip = `arms-${id}`;
   return <svg className={`dynasty-arms ${className}`.trim()} viewBox="0 0 100 120" width={size} height={size * 1.2}
