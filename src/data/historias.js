@@ -4544,7 +4544,7 @@ const HISTORIAS_EXISTENTES = [
   {
     "id": "corona-demasiado-grande",
     "titulo": "Una corona demasiado grande",
-    "subtitulo": "Los Vasa entre Suecia, Polonia y la guerra de religión",
+    "subtitulo": "Segismundo III Vasa y la disputa por las coronas de Polonia-Lituania y Suecia",
     "disponible": false
   },
   {
@@ -4595,6 +4595,7 @@ const HISTORIAS_EXISTENTES = [
   }
 ];
 export const HISTORIAS = [
+  {id:'dos-coronas-dos-hijas',titulo:'Dos coronas para dos hijas',subtitulo:'Luis I, María y Eduviges: las sucesiones de Hungría y Polonia',disponible:false},
   ...HISTORIAS_EXISTENTES.map(h => HISTORIAS_TEMATICAS.find(nueva => nueva.id === h.id) || h),
   ...HISTORIAS_TEMATICAS.filter(h => !HISTORIAS_EXISTENTES.some(existente => existente.id === h.id)),
 ].map(h => ({...h, ...CONTEXTO_HISTORIAS[h.id], colecciones:storyCollections(h.id)}));

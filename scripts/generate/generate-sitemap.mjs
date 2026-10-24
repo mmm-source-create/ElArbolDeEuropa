@@ -1,3 +1,4 @@
+import {isNamedDynasty} from '../../src/data/dynastyNames.js';
 import {englishPaths} from '../../src/features/english/routes.js';
 import {loadEnv} from "vite";
 import {resolveSiteUrl} from "../../src/app/siteConfig.js";
@@ -45,7 +46,7 @@ const personaUrls = PERSONAS.map((persona) => {
   return `/es/persona/${slug}`;
 });
 
-const dinastiaUrls = [...new Set(PERSONAS.map((p) => p.dinastia).filter(Boolean))]
+const dinastiaUrls = [...new Set(PERSONAS.map((p) => p.dinastia).filter(isNamedDynasty))]
   .map((valor) => `/es/dinastia/${slugPublico(valor)}`);
 
 const territorioUrls = Object.keys(TERRITORIOS)

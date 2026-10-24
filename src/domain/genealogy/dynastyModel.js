@@ -1,3 +1,4 @@
+import {isNamedDynasty} from '../../data/dynastyNames.js';
 import {gobiernosDe} from './personAccessors.js';
 import {dynastyBranchSelection} from './dynastyBranchSelection.js';
 import {HISTORIA_DINASTIAS,DINASTIA_ALIASES,RAMAS_DINASTICAS,TIPOS_RAMAS} from '../../content/dinastias/index.js';
@@ -9,7 +10,7 @@ import {HOUSE_PARENTS} from '../../content/dinastias/houseRelations.js';
 export function auditDynasties(personas) {
   const issues=[];
   const ids=new Set(personas.map(p=>p.id));
-  const names=new Set(personas.map(p=>canonicalDynasty(p.dinastia)).filter(Boolean));
+  const names=new Set(personas.map(p=>canonicalDynasty(p.dinastia)).filter(isNamedDynasty));
   const sourceUrls=new Set(SOURCES.map(s=>s.url));
   const add=(subject,message)=>issues.push({severity:'ERROR',code:'DYNASTY_INVALID',subject,message});
   const checkPeople=(subject,values)=>{for(const id of values||[])if(!ids.has(id))add(subject,`Persona inexistente: ${id}`);};
@@ -41,7 +42,7 @@ export function buildDynastyPages(personas) {
   for(const p of personas){const s=slugBasePersona(p);slugs.set(s,(slugs.get(s)||0)+1);}
   const ref=id=>{const p=byId.get(id);return p?{id:p.id,nombre:p.nombre,dinastia:p.dinastia,titulo:p.titulo,aliases:p.aliases||[],nac:p.nac,muer:p.muer,nacAprox:p.nacAprox,muerAprox:p.muerAprox,documentacion:p.documentacion,slug:slugBasePersona(p)+(slugs.get(slugBasePersona(p))>1?'-'+slugPublico(p.id):'')}:null;};
   const source=url=>{const s=SOURCES.find(s=>s.url===url);return {titulo:s?.titulo||url,url};};
-  const names=[...new Set(personas.map(p=>canonicalDynasty(p.dinastia)).filter(Boolean))];
+  const names=[...new Set(personas.map(p=>canonicalDynasty(p.dinastia)).filter(isNamedDynasty))];
   const membersByHouse=new Map(names.map(name=>[name,personas.filter(p=>canonicalDynasty(p.dinastia)===name)
     .sort((a,b)=>(a.nac??9999)-(b.nac??9999)||a.nombre.localeCompare(b.nombre,'es'))]));
   const houseRef=name=>({nombre:name,slug:slugPublico(name),aliases:dynastyAliasesFor(name),total:membersByHouse.get(name).length,

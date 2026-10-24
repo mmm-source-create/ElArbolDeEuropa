@@ -1,3 +1,4 @@
+import {TREINTA_CASAS} from './treinta-casas.js';
 import {ANJOU_HUNGARY_HISTORY} from './anjou-hungria.js';
 import {CONEXIONES_CASAS} from './conexiones-casas.js';
 import {CASAS_ADRIATICO,CONEXIONES_ADRIATICO} from "./adriatico-v214.js";
@@ -16,6 +17,7 @@ const BRITANNICA='https://www.britannica.com/';
 
 // A house history is editorial context. Branches and matrimonial transfers are distinct relations.
 export const HISTORIA_DINASTIAS = {
+  ...TREINTA_CASAS,
   'Anjou-Hungría':ANJOU_HUNGARY_HISTORY,
   ...CASAS_AMPLIACION_EDITORIAL,
   Ascania:ASCANIA_HISTORY,

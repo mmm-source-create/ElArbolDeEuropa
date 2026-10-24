@@ -1,8 +1,8 @@
 import { mergeIntervals, assignIntervalLanes, roundedPath } from "./treeGeometry.js";
 import { BY_ID, clavePareja, listaParejas, mediana } from "./relations.js";
 
-export const TREE_BOX_W = 190;
-export const TREE_BOX_H = 70;
+import {TREE_BOX_W,TREE_BOX_H} from './treeMetrics.js';
+export {TREE_BOX_W,TREE_BOX_H} from './treeMetrics.js';
 export const TREE_MINI_MIN_H = 28;
 export const TREE_UNIT_GAP = 112;
 export const TREE_ROW_GAP = 190;

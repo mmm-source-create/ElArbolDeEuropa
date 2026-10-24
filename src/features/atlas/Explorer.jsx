@@ -1050,6 +1050,8 @@ export default function Explorer({ initialPanel = null, treeBase: TREE_BASE, loa
     setFocoId(null);
     setCollapsedIds([]);
     setVistasActivas({ arbol: true, mapa: new URLSearchParams(window.location.search).get("vista") !== "arbol" });
+    if (panelesVisibles.filtros) alternarPanelAuxiliar('filtros');
+    if (panelesVisibles.cronologia) alternarPanelAuxiliar('cronologia');
     setHistoriaActivaId(historia.id);
     setInfoProyecto(null);
     aplicarPasoHistoria(historia, Math.max(0, Math.min(historia.pasos.length - 1, index)), {returnPath, replace});
@@ -1062,54 +1064,18 @@ export default function Explorer({ initialPanel = null, treeBase: TREE_BASE, loa
   };
 
   const salirHistoria = () => {
-    const anterior = historiaSnapshotRef.current;
     setHistoriaActivaId(null);
     setHistoriaPasoIndex(0);
     setEventoSeleccionadoId(null);
     setStoryReturn(null);
-    if (!anterior) {
-      const url = new URL(window.location.href);
-      for (const key of ['historia','paso','regreso','resaltar']) url.searchParams.delete(key);
-      window.history.replaceState({eade:'atlas'}, '', url.pathname+url.search);
-      return;
-    }
-    setAtlasIds(anterior.atlasIds ?? null);
-    setQuery(anterior.query);
-    setTerritorios(anterior.territorios);
-    setTerritorialFilterMode(anterior.territorialFilterMode||'associated');
-    setDinastias(anterior.dinastias);
-    setTitulos(anterior.titulos);
-    setSiglos(anterior.siglos);
-    setRelaciones(anterior.relaciones);
-    setSoloFavoritos(anterior.soloFavoritos);
-    setSoloDocumentados(anterior.soloDocumentados ?? false);
-    setAnioGlobal(anterior.anioGlobal);
-    setAnioInput(Number.isFinite(anterior.anioGlobal) ? String(anterior.anioGlobal) : "");
-    setVistasActivas(anterior.vistasActivas);
-    setTimelineMode(anterior.timelineMode);
-    setEventoSeleccionadoId(anterior.eventoSeleccionadoId || null);
-    setMode(anterior.mode || "view");
-    setConnectionIds(anterior.connectionIds || []);
-    setConnectionCriterion(anterior.connectionCriterion || "matrimonio");
-    setOrigen(anterior.origen || null);
-    setDestino(anterior.destino || null);
-    setFocoId(anterior.focoId || null);
-    setFocoAlcance(anterior.focoAlcance || "cercana");
-    setCollapsedIds(anterior.collapsedIds || []);
-    setCompareRouteIndex(anterior.compareRouteIndex || 0);
-    setSeleccion(anterior.seleccionId ? BY_ID[anterior.seleccionId] || null : null);
     historiaSnapshotRef.current = null;
-
-    if (typeof window !== "undefined" && !historyPopRef.current) {
-      if (anterior.historiaAbiertaDesdeEnlace) {
-        window.location.assign(anterior.rutaAnterior || "/es/historias");
-      } else if (anterior.rutaAnterior) {
-        const actual = `${window.location.pathname}${window.location.search}${window.location.hash}`;
-        if (actual !== anterior.rutaAnterior) {
-          window.history.pushState({ eade: "atlas" }, "", anterior.rutaAnterior);
-        }
-      }
-    }
+    // Closing the guide keeps the current selection, year, view and viewport.
+    const url = new URL(window.location.href);
+    for (const key of ['historia','paso','regreso','resaltar']) url.searchParams.delete(key);
+    url.pathname = '/es/';
+    url.searchParams.set('atlas','1');
+    url.searchParams.set('vista',vistaPrincipal);
+    window.history.replaceState({eade:'atlas'}, '', url.pathname+url.search);
   };
 
   storyActionsRef.current = {start:iniciarHistoria};

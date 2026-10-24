@@ -3,3 +3,10 @@
 
 .story-progress progress::-webkit-progress-value{transition:width .55s cubic-bezier(.22,1,.36,1)}
 @media(prefers-reduced-motion:reduce){.story-progress progress::-webkit-progress-value{transition:none}}
+
+.story-entry-actions{display:flex;flex-wrap:wrap;align-items:stretch;gap:10px;margin-top:16px}
+.story-entry-actions a{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:44px;padding:10px 15px;border-radius:var(--r-sm,6px);text-decoration:none;font:600 var(--fs-sm,12px)/1.4 var(--eade-sans)}
+.story-entry-actions a.public-primary{background:var(--eade-wine-fill,#7a2e2e);color:#fff8e8;border:1px solid var(--eade-wine-fill,#7a2e2e)}
+.story-entry-actions a.public-secondary{background:var(--eade-paper-soft);color:var(--eade-muted);border:1px solid var(--eade-border)}
+.public-story-card .story-entry-actions{margin-top:auto;padding-top:18px}
+.public-story-card .story-entry-actions a{margin-top:0;font-size:var(--fs-xs,11px)}

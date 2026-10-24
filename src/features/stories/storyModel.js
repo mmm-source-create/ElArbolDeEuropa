@@ -51,3 +51,11 @@ export function safeStoryReturn(search) {
   const path = new URLSearchParams(search).get('regreso');
   return /^(?:\/es\/historia\/[a-z0-9]+(?:-[a-z0-9]+)*\/capitulo|\/en\/story\/[a-z0-9]+(?:-[a-z0-9]+)*\/chapter)\/[1-9][0-9]*$/.test(path || '') ? path : null;
 }
+
+// Catalogue records deliberately omit the full chapter content. The Atlas resolves
+// the story ID and chapter, including its year and people, on arrival.
+export function catalogStoryAtlasUrl(story,chapter=1,locale='es') {
+ const path=story.path || `/es/historia/${story.slug}`;
+ const params=new URLSearchParams({atlas:'1',vista:'arbol',historia:story.id,paso:String(chapter),regreso:`${path}/${locale==='en'?'chapter':'capitulo'}/${chapter}`});
+ return `/es/?${params}`;
+}

@@ -1,3 +1,5 @@
+import {HOUSE_CLEANUP_SOURCES} from './sources-house-cleanup.js';
+import {TREINTA_CASAS_SOURCES} from './sources-treinta-casas.js';
 import {PERSON_NAMING_POLICY} from './personNamingPolicy.js';
 import {CONNECTION_SOURCES} from './dinastias/conexiones-casas.js';
 import {LOUIS_HUNGARY_SOURCES} from './sources-louis-hungary.js';
@@ -1485,6 +1487,15 @@ for (const source of [...GERMAN_SWISS_SOURCES,...GERMANY_COMPLETION_SOURCES]) {
   const previous = SOURCES.find(entry => entry.url === source.url);
   if (previous) previous.territorios = [...new Set([...previous.territorios,...source.territorios])];
   else SOURCES.push(source);
+}
+
+// A publication or article has one entry even when several editorial updates use it.
+for (const source of [...HOUSE_CLEANUP_SOURCES,...TREINTA_CASAS_SOURCES]) {
+  const previous=SOURCES.find(entry=>entry.url===source.url);
+  if (!previous) { SOURCES.push(source); continue; }
+  previous.personas=[...new Set([...previous.personas,...source.personas])];
+  previous.territorios=[...new Set([...previous.territorios,...source.territorios])];
+  previous.nota=[...new Set([previous.nota,source.nota].filter(Boolean))].join(' ');
 }
 
 export const SOURCE_PUBLICATIONS = SOURCES.filter(source => source.general);

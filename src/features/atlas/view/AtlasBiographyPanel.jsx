@@ -1,3 +1,4 @@
+import {isNamedDynasty} from '../../../data/dynastyNames.js';
 import {governmentSummary} from '../../../domain/government/governmentPresentation.js';
 import {gobiernosDe, territoriosDe} from '../../../domain/genealogy/personAccessors.js';
 import DocumentationNotes from '../../../components/DocumentationNotes.jsx';
@@ -177,7 +178,7 @@ export default function AtlasBiographyPanel({vm, bioMobileOpen, bioScrollRef, bi
                     Leer ficha completa <ExternalLink size={11} />
                   </a>
 
-                  <a className="bio-full-profile-link" href={`/es/dinastia/${slugPublico(personaBio.dinastia)}`}>Explorar la casa de {personaBio.dinastia} <ExternalLink size={11}/></a>
+                  {isNamedDynasty(personaBio.dinastia) && <a className="bio-full-profile-link" href={`/es/dinastia/${slugPublico(personaBio.dinastia)}`}>Explorar la casa de {personaBio.dinastia} <ExternalLink size={11}/></a>}
                   </section>
 
                   <section id="bio-section-familia" data-bio-section="familia" className="bio-scroll-section" aria-labelledby="bio-heading-familia" tabIndex={-1}>
