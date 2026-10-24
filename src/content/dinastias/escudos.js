@@ -18,6 +18,9 @@ const CASTILLA_LEON = {blason: 'Cuartelado de Castilla y León: 1.º y 4.º, de 
   capas: [['cuartelado', [CASTILLA, LEON, LEON, CASTILLA]]]};
 
 export const ESCUDOS = Object.freeze({
+  "Báthory": {"blason": "De gules, tres dientes de plata, curvados y unidos a una mandíbula en el flanco siniestro.", "capas": [["campo", "gules"]], "nota": "Armas familiares de Báthory según el archivo aportado de WappenWiki. Los soberanos emplearon también composiciones con las armas de sus estados."},
+  "Osmanlí": {"tipo": "tughra", "blason": "Monograma caligráfico de Orhan, segundo soberano de la dinastía.", "capas": [], "nota": "Se utiliza la tuğra de Orhan, la primera otomana conservada; no se conoce una de Osman I. Es una firma soberana, no un escudo familiar. En el mundo otomano de este período no existía una tradición de escudos de armas dinásticos como la heráldica europea; las armas imperiales otomanas del siglo XIX quedan fuera de los años 1200–1800 del Atlas.", "fuentes": [{"titulo": "Library of Congress · The Sultan’s Tughra", "url": "https://blogs.loc.gov/international-collections/2021/07/the-sultans-tughra/"}]},
+
   'Barcelona-Urgel': {blason:'Partido: de oro, dos palos de gules; jaquelado de oro y sable.',capas:[['campo','oro']],nota:'Armas de Pedro II de Urgel según el Armorial de Gelre. Identifica la rama Barcelona-Urgel; las armas personales variaron.'},
   'Della Scala': {blason:'De gules, una escalera de plata puesta en palo.',capas:[['campo','gules']],nota:'Armas parlantes de los señores de Verona, sin ornamentos exteriores.'},
   'Paleólogo': {blason:'De gules, una cruz de oro acantonada de cuatro signos de oro en forma de B o eslabones, orientados hacia la cruz.',capas:[['campo','gules'],['cruz','oro']],nota:'Cruz tetragramática asociada a los Paleólogo. Se muestra solo el escudo, extraído del dibujo aportado: sin águila ni corona. El conjunto original está catalogado como reconstrucción errónea; no se reproduce como grandes armas oficiales del Imperio bizantino.'},
@@ -200,4 +203,4 @@ const conImagen = new Map(Object.entries(ESCUDOS).map(([dinastia, escudo]) =>
   [dinastia, ESCUDOS_COMMONS[dinastia] ? {...escudo, imagen: ESCUDOS_COMMONS[dinastia]} : escudo]));
 export const escudoDe = dinastia => conImagen.get(canonicalDynasty(dinastia)) || null;
 // Credits for the licences page, one per house.
-export const CREDITOS_ESCUDOS = Object.entries(ESCUDOS_COMMONS).map(([dinastia, imagen]) => ({dinastia, ...imagen}));
+export const CREDITOS_ESCUDOS = Object.entries(ESCUDOS_COMMONS).map(([dinastia, imagen]) => ({dinastia, ...imagen, ...(ESCUDOS[dinastia]?.tipo ? {tipo:ESCUDOS[dinastia].tipo} : {})}));

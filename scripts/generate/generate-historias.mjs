@@ -7,6 +7,9 @@ for (const file of files.filter(f => f.endsWith('.json') && f !== 'index.json'))
   const p = JSON.parse(await fs.readFile(`public/personas-meta/${file}`, 'utf8'));
   if (p.id) people.set(p.id, p);
 }
+// Rebuild the output so deleted stories and old title routes cannot survive.
+await fs.rm('public/historias-meta', {recursive:true, force:true});
+await fs.mkdir('public/historias-meta', {recursive:true});
 let count = 0;
 for (const story of HISTORIAS.filter(h => h.disponible && h.pasos?.length)) {
   const slug = slugPublico(story.titulo);

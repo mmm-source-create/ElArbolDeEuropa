@@ -25,7 +25,7 @@ La separación entre nombre, título y epíteto es una decisión editorial del A
 
 ## Revisión de la base y nuevas incorporaciones
 
-`npm run audit:names` examina los 2723 registros españoles y las 155 ediciones inglesas: nombres vacíos, tratamientos de santidad en el encabezado, nombres regios sin contexto, sobrenombres repetidos, rutas de traducción y conservación de variantes y slugs revisados. Se ejecuta también antes de compilar.
+`npm run audit:names` examina los 2724 registros españoles y las 156 ediciones inglesas: nombres vacíos, tratamientos de santidad en el encabezado, nombres regios sin contexto, sobrenombres repetidos, rutas de traducción y conservación de variantes y slugs revisados. Se ejecuta también antes de compilar.
 
 La V5.36 aplica 39 ajustes editoriales explícitos, recogidos en `src/data/personNameReviews.js` y [el informe de revisión](audits/V5.36-nombres.json). Son 38 denominaciones revisadas y el sobrenombre español de Juana de Arco. No cambia fechas, gobiernos, parentescos ni geometrías. El examen es estructural y editorial; no afirma haber vuelto a verificar bibliográficamente cada nombre individual de la base. Los epítetos identificativos y las formas imperiales se revisan con excepciones expresas, sin convertirlos automáticamente en nuevos ordinales.
 

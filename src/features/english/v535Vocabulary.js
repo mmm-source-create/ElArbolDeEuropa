@@ -43,6 +43,7 @@ export const V535_LABELS = {
 // Source descriptions written for the Atlas in Spanish. Original titles of
 // works (RAH, PARES, Treccani, Lombardia Beni Culturali…) stay unchanged.
 export const V535_SOURCE_TITLES = {
+  'Ministerio de Cultura · PARES · Castilla, Juana de (1462–1530)':'Spanish Ministry of Culture · PARES · Joanna of Castile (1462–1530)',
   'Archivo de Brno · Brno v minulosti a dnes 4':'Brno City Archives · Brno v minulosti a dnes 4',
   'Archivo municipal de Olomouc · carta original de Jobst':'Olomouc Municipal Archives · original charter of Jobst',
   'Archiwa Państwowe · carta real original de 1469':'Archiwa Państwowe · original royal charter of 1469',

@@ -357,7 +357,8 @@ HISTORIAS_DISPONIBLES.forEach((historia) => {
     (HISTORIAS_POR_PERSONA[id] ||= []).push({
       id: historia.id,
       titulo: historia.titulo,
-    tema: historia.tema,
+    colecciones: historia.colecciones,
+    revisionPendiente: Boolean(historia.revisionPendiente),
       subtitulo: historia.subtitulo || historia.descripcion || "",
       slug: slugPublico(historia.titulo),
     });
@@ -538,7 +539,8 @@ async function generarCatalogosPublicos() {
   const historias = HISTORIAS.map((historia) => ({
     id: historia.id,
     titulo: historia.titulo,
-    tema: historia.tema,
+    colecciones: historia.colecciones,
+    revisionPendiente: Boolean(historia.revisionPendiente),
     subtitulo: historia.subtitulo || "",
     descripcion: historia.descripcion || "",
     slug: slugPublico(historia.titulo),

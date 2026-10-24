@@ -237,6 +237,7 @@
     }
   ],
   "redirects": [
+    {"source":"/es/historia/balduino-iv-y-saladino-un-reino-bajo-presion/:rest*","destination":"/es/historia/el-reino-de-los-cielos/:rest*","permanent":true},
     {"source":"/es/dinastia/montfort","destination":"/es/dinastia/montfort-bretana","permanent":true},
     {"source":"/es/dinastia/monfort","destination":"/es/dinastia/montfort-bretana","permanent":true},
     {"source":"/es/dinastia/dreux-montfort","destination":"/es/dinastia/montfort-bretana","permanent":true},

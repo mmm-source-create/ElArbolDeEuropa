@@ -5,6 +5,7 @@ export const TRANSLATED_STORIES = [
  {id:'gioconda',es:'en-busca-de-la-gioconda',en:'in-search-of-the-mona-lisa'},
 ];
 export const TRANSLATED_PEOPLE = [
+ {id:'JUANABELTRANEJA',es:'juana-la-beltraneja',en:'joanna-la-beltraneja'},
  {id:'JUANA1NAP',es:'juana-i-de-napoles',en:'joanna-i-of-naples'},
  {id:'CARLOS1',es:'carlos-i',en:'charles-i-of-hungary'},
  {id:'MATIAS1HUN',es:'matias-corvino',en:'matthias-corvinus'},

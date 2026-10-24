@@ -3,6 +3,7 @@
 // figura (P4459, P1986, P1415, P7902, P1417) y sus formatos de URL (P1630).
 // Son biografías generales que cubren todas las etapas de cada vida.
 export const REFERENCIAS_BIOGRAFIAS = Object.freeze({
+  JUANABELTRANEJA: [{"titulo": "Ministerio de Cultura · PARES · Castilla, Juana de (1462–1530)", "url": "https://pares.cultura.gob.es/ParesBusquedas20/catalogo/autoridad/46305"}, {"titulo": "Susannah Humble Ferreira · Juana La Beltraneja, Dynastic Fears, and Threats of Marriage (1475–1506)", "url": "https://jps.library.utoronto.ca/index.php/renref/article/view/36383"}],
  "BALDASSARECASTIGLIONE":[{"titulo":"Treccani · Dizionario Biografico degli Italiani · Baldassarre Castiglione","url":"https://www.treccani.it/enciclopedia/baldassarre-castiglione_(Dizionario-Biografico)/"}],
  "CRISTOFOROCASTIGLIONE":[{"titulo":"Treccani · Dizionario Biografico degli Italiani · Baldassarre Castiglione","url":"https://www.treccani.it/enciclopedia/baldassarre-castiglione_(Dizionario-Biografico)/"}],
  "LUIGIAGONZAGACASTIGLIONE":[{"titulo":"Treccani · Dizionario Biografico degli Italiani · Baldassarre Castiglione","url":"https://www.treccani.it/enciclopedia/baldassarre-castiglione_(Dizionario-Biografico)/"}],

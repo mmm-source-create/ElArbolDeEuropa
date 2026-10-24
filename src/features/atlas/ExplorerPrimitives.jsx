@@ -5,7 +5,7 @@ import React, { useState } from "react";
 import { ArrowRight, BookOpen, ChevronDown, ChevronRight, ExternalLink, Flag, Heart, Mail, Scale, X } from "lucide-react";
 import { PERSONAS } from "../../data/personas.js";
 import { HISTORIAS } from "../../data/historias.js";
-import {groupStories} from "../stories/storyThemes.js";
+import StoryCollectionBrowser from "../stories/StoryCollectionBrowser.jsx";
 import { listaReinados, reinadoEsEfectivo } from "../../domain/government/reigns.js";
 import { CORRECTORES, CORREOS_CORRECCIONES } from "./atlasModel.js";
 import { HIJOS_POR_ID, listaAmantes, listaConyuges } from "../../domain/genealogy/relations.js";
@@ -269,14 +269,14 @@ export function ModalProyecto({ seccion, onClose, persona, personasVista = PERSO
           {seccion === "historias" && (
             <>
               <p className="project-lead">Recorridos guiados que utilizan el árbol, el mapa, las biografías y la cronología de la propia aplicación. Puedes abandonar el recorrido en cualquier momento y volver a explorar libremente.</p>
-              {groupStories(HISTORIAS).map(group => <section className="story-catalog-section" key={group.id}><h2>{group.es}</h2><p className="story-theme-description">{group.descriptionEs}</p><div className="stories-grid">
-                {group.stories.map((historia) => (
+              <StoryCollectionBrowser items={HISTORIAS} renderStories={stories => <div className="stories-grid">
+                {stories.map((historia) => (
                   <article key={historia.id} className={`story-catalog-card${historia.disponible ? " is-available" : " is-coming"}`}>
                     <div className="story-catalog-topline">
                       <span>{historia.disponible ? "Recorrido disponible" : "Próximamente"}</span>
                       {historia.disponible && historia.pasos && <b>{historia.pasos.length} pasos</b>}
                     </div>
-                    <h3>{historia.titulo}</h3>
+                    <h3>{historia.titulo}</h3>{historia.revisionPendiente && <strong className="story-review-note">Pendiente de revisión</strong>}
                     <p>{historia.subtitulo}</p>
                     {historia.disponible ? (
                       <a className="story-start-btn" href={rutaEntidadLocalizada("es", "historia", slugPublico(historia.titulo))} onClick={(event) => { event.preventDefault(); onStartHistoria?.(historia.id); }}>Comenzar recorrido <ArrowRight size={13} /></a>
@@ -285,7 +285,7 @@ export function ModalProyecto({ seccion, onClose, persona, personasVista = PERSO
                     )}
                   </article>
                 ))}
-              </div></section>)}
+              </div>}/>
             </>
           )}
 

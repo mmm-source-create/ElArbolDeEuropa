@@ -7,7 +7,6 @@ import { entityMeta } from '../public/publicMeta.js';
 import { storyChapterPath, storyAtlasUrl, readStoryProgress, saveStoryProgress, storyStepIds } from './storyModel.js';
 import './stories.css';
 import ReadingSkeleton from './ReadingSkeleton.jsx';
-import {storyTheme, storyThemeId} from './storyThemes.js';
 import '../../styles/theme.css';
 
 export default function StoryPage({ slug, chapter = null, initialData = null }) {
@@ -40,13 +39,12 @@ export function StoryReader({ data, prerendered = false, locale = 'es' }) {
   const people = step ? protagonists.filter(p => stepIds.includes(p.id)) : protagonists;
   const chapterPath = n => storyChapterPath(data, n, locale);
   const title = en ? data.title : data.storyTitle;
-  const theme = storyTheme(data.tema || storyThemeId(data.id));
   const storiesPath = en ? '/en/stories' : '/es/historias';
   return <div className="public-site"><SiteHeader locale={locale} pathname={chapterPath(chapter)} prerendered={prerendered}/>
     <main className="public-main story-page">
       <nav className="public-breadcrumbs" aria-label={en ? 'Breadcrumb' : 'Migas de pan'}><a href={en ? '/en/' : '/es/'}>{en ? 'Home' : 'Inicio'}</a><span aria-hidden="true">›</span><a href={storiesPath}>{en ? 'Stories' : 'Historias'}</a><span aria-hidden="true">›</span>{chapter ? <><a href={chapterPath()}>{title}</a><span aria-hidden="true">›</span><span aria-current="page">{en ? 'Chapter' : 'Capítulo'} {chapter}: {step.titulo}</span></> : <span aria-current="page">{title}</span>}</nav>
       <header className="story-heading"><span className="story-eyebrow">{chapter ? `${en ? 'Chapter' : 'Capítulo'} ${chapter} / ${pasos.length} · ${step.anio}` : `${data.period || ''} · ${pasos.length} ${en ? 'chapters' : 'capítulos'}`}</span><h1>{data.nombre}</h1><p>{chapter ? title : en ? data.description : data.descripcion}</p></header>
-      <p className="story-theme-label">{en ? theme.en : theme.es}</p>{data.contexto && !en && <p className="story-context">{data.contexto}</p>}
+      {data.revisionPendiente && <p className="story-review-note">{en ? 'Needs review: this story will be revised in a future update.' : 'Pendiente de revisión: esta historia se revisará en una próxima entrega.'}</p>}{data.contexto && !en && <p className="story-context">{data.contexto}</p>}
       <div className="story-reading-meta"><BookOpen size={14} aria-hidden="true"/><div className="story-progress"><label htmlFor="reading-progress">{en ? `${progress.read.length} of ${pasos.length} chapters visited` : `${progress.read.length} de ${pasos.length} capítulos visitados`}</label><progress id="reading-progress" max={pasos.length} value={progress.read.length}/></div><span title={en ? 'Progress is shared between languages and saved when browser storage is available.' : 'El progreso se guarda cuando este navegador permite almacenamiento local.'}>{en ? 'Saved on this browser' : 'Guardado en este navegador'}</span></div>
       <div className="story-layout"><article className="story-reading">
         {step ? <><p className="story-text">{step.texto}</p><div className="story-atlas-action"><a className="public-primary" href={storyAtlasUrl(data, chapter, locale)}><GitBranch size={14} aria-hidden="true"/>{en ? 'View the story in the Atlas' : 'Ver la historia en el Atlas'}</a><p>{en ? 'The whole story stays in view; this chapter’s people are highlighted. Atlas controls are in Spanish.' : 'Toda la historia permanece en el árbol; este capítulo destaca a sus protagonistas.'}</p></div>
