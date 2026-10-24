@@ -10,7 +10,9 @@
 .dynasty-hero .public-primary { margin-top: 20px; color: #fff8e8; }
 .dynasty-counts { display: flex; justify-content: center; flex-wrap: wrap; gap: 12px 24px; margin-top: 18px; color: var(--eade-muted); font-size: var(--fs-sm, 12px); }
 .dynasty-counts b { color: var(--eade-wine); font-size: var(--fs-lg, 15px); }
-.dynasty-nav { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px 24px; margin: 0 0 28px; padding: 16px 0; border-block: 1px solid var(--eade-border); font-size: var(--fs-sm, 12px); }
+.dynasty-nav { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px 24px; margin: 0 0 28px; padding: 16px 0; border-bottom: 1px solid var(--eade-border); font-size: var(--fs-sm, 12px); }
+.dynasty-nav + .public-section { border-top: 0; padding-top: 14px; }
+.dynasty-history + .public-section { margin-top: 32px; }
 .dynasty-nav a { text-underline-offset: 4px; }
 .dynasty-history { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 14px; }
 .dynasty-history .public-content-card { margin: 0; }

@@ -1,5 +1,6 @@
 import {ArrowRight} from 'lucide-react';
 import StoryCollectionBrowser from './StoryCollectionBrowser.jsx';
+import {normalizeStoryProgress} from './storyModel.js';
 
 export default function StoryCatalog({items, progress = {}, locale = 'es'}) {
   const en = locale === 'en';
@@ -9,7 +10,7 @@ export default function StoryCatalog({items, progress = {}, locale = 'es'}) {
     return <>
       <div className="public-story-grid public-story-catalog">{stories.filter(s => s.disponible !== false).map(s => {
         const count = Array.isArray(s.pasos) ? s.pasos.length : s.pasos;
-        const saved = progress[s.id], read = Math.min(saved?.read?.length || 0,count);
+        const saved = normalizeStoryProgress(progress[s.id],s.id,count), read = Math.min(saved.read.length,count);
         const last = Number.isInteger(saved?.last) && saved.last > 0 && saved.last <= count ? saved.last : 1;
         return <article className="public-story-card" key={s.id}><span>{count} {en ? 'chapters' : 'capítulos'}{s.minutos ? ` · ${s.minutos} min` : ''}</span><h3>{title(s)}</h3>{s.revisionPendiente && <strong className="story-review-note">{en ? 'Needs review' : 'Pendiente de revisión'}</strong>}<p>{s.subtitulo || s.description || s.descripcion}</p>
           {read > 0 && <div className="story-card-progress" aria-label={en ? `${read} of ${count} chapters visited` : `${read} de ${count} capítulos visitados`}><i style={{width:`${Math.round(read / count * 100)}%`}}/></div>}
