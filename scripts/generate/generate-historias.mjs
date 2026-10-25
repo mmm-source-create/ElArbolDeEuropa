@@ -1,6 +1,7 @@
 import fs from 'node:fs/promises';
 import { slugPublico } from '../../src/domain/people/personPresentation.js';
 import { HISTORIAS } from '../../src/data/historias.js';
+import {storyRecommendations} from '../../src/features/stories/storyRecommendations.js';
 const files = await fs.readdir('public/personas-meta');
 const people = new Map();
 for (const file of files.filter(f => f.endsWith('.json') && f !== 'index.json')) {
@@ -21,7 +22,7 @@ for (const story of HISTORIAS.filter(h => h.disponible && h.pasos?.length)) {
   });
   const fuentes = [...new Map([...(story.fuentes || []), ...ids.flatMap(id => people.get(id).fuentes || [])].map(f => [f.url || JSON.stringify(f), f])).values()];
   const years = story.pasos.map(p => p.anio).filter(Number.isFinite);
-  const base = { ...story, slug, storyTitle:story.titulo, period:`${Math.min(...years)}–${Math.max(...years)}`, protagonists, fuentes };
+  const base = { ...story, slug, storyTitle:story.titulo, period:`${Math.min(...years)}–${Math.max(...years)}`, protagonists, fuentes, recommendations:storyRecommendations(story,HISTORIAS) };
   await fs.mkdir(`public/historias-meta/${slug}/capitulo`, {recursive:true});
   for (let chapter = 0; chapter <= story.pasos.length; chapter++) {
     const data = {...base, chapter:chapter || null, nombre:chapter ? story.pasos[chapter-1].titulo : story.titulo};

@@ -100,7 +100,6 @@ export default function ExplorerView({ vm, loading = false, loadError = false, o
     seleccionarEvento, aplicarPasoHistoria, iniciarHistoria, cambiarPasoHistoria, salirHistoria, filtrosActivosCompactos,
     cambiarIdioma,
   } = vm;
-  React.useEffect(()=>{if(historiaActiva?.id)setBioMobileOpen(false);},[historiaActiva?.id]);
   const filtrosCompactosVisibles = filtrosActivosCompactos.slice(0, 6);
   const filtrosCompactosRestantes = Math.max(0, filtrosActivosCompactos.length - filtrosCompactosVisibles.length);
   const filterCount = territorios.length + dinastias.length + titulos.length + siglos.length + relaciones.length + Number(soloFavoritos) + Number(soloDocumentados);
@@ -227,9 +226,9 @@ export default function ExplorerView({ vm, loading = false, loadError = false, o
   }, 4), [queryTrim]);
   React.useEffect(() => {
     setBioSection('resumen');
-    setBioMobileOpen(true);
+    setBioMobileOpen(!historiaActiva);
     if (bioScrollRef.current) bioScrollRef.current.scrollTop = 0;
-  }, [seleccion?.id]);
+  }, [seleccion?.id,historiaActiva?.id]);
   const scrollToBioSection = (key) => {
     const scroller = bioScrollRef.current;
     const section = scroller?.querySelector(`#bio-section-${key}`);
@@ -342,7 +341,7 @@ export default function ExplorerView({ vm, loading = false, loadError = false, o
       </div>
       </div>
 
-      {historiaActiva && <StoryAtlasGuide story={historiaActiva} index={historiaPasoIndex} returnPath={vm.storyReturn} count={vm.growth.ids?.length || 0} onStep={cambiarPasoHistoria} onCenter={()=>aplicarPasoHistoria(historiaActiva,historiaPasoIndex,{replace:true})} onExit={salirHistoria} onPerson={()=>{if(!mostrarBiografia)alternarPanelAuxiliar('biografia');setBioMobileOpen(true);}}/>}
+      {historiaActiva && <StoryAtlasGuide story={historiaActiva} index={historiaPasoIndex} returnPath={vm.storyReturn} count={vm.growth.ids?.length || 0} besideBiography={mostrarBiografia && atlasScene==='atlas'} onStep={cambiarPasoHistoria} onCenter={()=>aplicarPasoHistoria(historiaActiva,historiaPasoIndex,{replace:true})} onExit={salirHistoria} onPerson={()=>{if(atlasScene==='europa')vm.changeAtlasScene('atlas');if(!mostrarBiografia)alternarPanelAuxiliar('biografia');setBioMobileOpen(true);}}/>}
       </StoryWorkspace>
 
       {!modoTrabajo && (

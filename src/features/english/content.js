@@ -1,18 +1,16 @@
 import {COMPLETE_ENGLISH_PROFILES} from './fullProfiles.js';
+import {HERITAGE_ENGLISH,BURGUNDY_CHARLES_ENGLISH} from './heritageStories.js';
 // Translations of the existing editorial content; IDs, dates and relationships come from the Spanish records.
 export const ENGLISH_STORIES = {
- borgona:{title:'Burgundy: the kingdom that never was',subtitle:'From a French appanage to a Habsburg inheritance',description:'Four generations of Valois dukes, a divided inheritance and the marriage that carried much of Burgundy into the Habsburg dynasty.',chapters:[
+ ...HERITAGE_ENGLISH,
+ borgona:{title:'Burgundy: the kingdom that never was',subtitle:'Charles the Bold: a crown prepared, death at Nancy and a European inheritance',description:'The formation of the Burgundian lands, Charles the Bold’s royal project and the passage of his inheritance through Mary to Charles V.',chapters:[
  ['A new Valois Burgundy','John II of France grants the Duchy of Burgundy to his son Philip the Bold. A younger branch of the Valois dynasty is born. Within a few generations, it will rival the power of the French monarchy itself.'],
  ['Expansion begins with a marriage','Philip marries Margaret of Flanders. Their marriage opens the way to Flanders, Artois and the County of Burgundy: wealthy, strategically placed territories that make the Burgundian dukes much more than lords of Dijon.'],
  ['John the Fearless inherits the project','When Philip the Bold dies, John the Fearless inherits an already powerful collection of territories. His policies become entangled with the crisis within France and the rivalry between Burgundians and Armagnacs.'],
  ['Montereau changes the balance','John the Fearless is murdered during negotiations at Montereau. His son Philip the Good inherits the duchy and moves towards the English side. Hostility towards the French Valois becomes one of the central forces in the Hundred Years’ War.'],
  ['A court with royal ambitions','Philip the Good founds the Order of the Golden Fleece. The Burgundian court develops an exceptionally ambitious political and ceremonial culture, reflecting a state that links scattered territories from Burgundy to the Low Countries.'],
  ['Burgundy changes sides','The Treaty of Arras reconciles Philip the Good with Charles VII. Burgundy abandons its English alliance and gains important concessions, while the French monarchy gains room to bring the Hundred Years’ War to an end.'],
- ['Charles the Bold and a divided territory','Charles the Bold inherits one of Europe’s richest states. His great difficulty is geographical: his lands form two large, separate blocks. His policy aims to join them and raise their status, creating an independent Burgundian kingdom in practice or in law.'],
- ['Nancy: the project breaks apart','Charles dies at the Battle of Nancy without a male heir. Louis XI occupies the Duchy of Burgundy and other French territories. Mary, Charles’s only daughter, must defend the rest of her father’s inheritance.'],
- ['The inheritance changes dynasty','Mary of Burgundy marries Maximilian of Habsburg. Their marriage preserves much of the Burgundian Netherlands and turns a succession crisis into the starting point of the great rivalry between France and the Habsburgs.'],
- ['What remains of Burgundy','The Treaty of Senlis returns Artois and the County of Burgundy to the Habsburgs’ Burgundian inheritance. The old Duchy of Burgundy, however, remains in France. Charles’s territorial ambition can no longer be rebuilt in its original form.'],
- ['From Burgundy to Charles V','Philip the Handsome passes the Burgundian inheritance to his son Charles. For Charles V, the Low Countries and Burgundian court traditions will be essential parts of his political identity. The kingdom Charles the Bold failed to establish becomes one of the foundations of Habsburg power.'],
+ ...BURGUNDY_CHARLES_ENGLISH,
  ]},
  gioconda:{title:'In search of the Mona Lisa',subtitle:'Leonardo’s life and the women behind the mystery',description:'Follow Leonardo from the Sforza court to France, through documented portraits and proposed identities, to the identification accepted by the Louvre.',chapters:[
  ['Milan: Leonardo enters a court of images and power','Leonardo leaves Florence and enters the orbit of Ludovico Sforza. In Milan, he is much more than a painter: he designs machines, festivities, fortifications and monumental projects. He also learns to make court portraiture remarkably lifelike. Here begins the trail that will lead us to the Mona Lisa.'],

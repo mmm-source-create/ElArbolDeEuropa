@@ -1,5 +1,7 @@
 // Reviewed labels for related-story links; a label does not imply a translated narrative.
+import {HERITAGE_ENGLISH} from './heritageStories.js';
 export const ENGLISH_STORY_LABELS = {
+    ...Object.fromEntries(Object.entries(HERITAGE_ENGLISH).map(([id,story])=>[id,[story.title,story.subtitle]])),
     'balduino-saladino':['Kingdom of Heaven','From Montgisard to Hattin: victories, truces and a fragile succession'],
     'sebastian-marruecos':['Sebastian of Portugal: the Moroccan campaign','Alcácer Quibir, the Battle of the Three Kings and the crisis of 1580'],
     'constantinopla-dos-conquistas':['Constantinople: two conquests, two worlds','1204 and 1453: from the Fourth Crusade to Mehmed II’s empire'],
@@ -11,7 +13,7 @@ export const ENGLISH_STORY_LABELS = {
     'favoritos-maquiavelo':['Machiavelli’s favourites','Models, counterexamples and lessons in power in The Prince'],
     'papales':['The papal families','Orsini, Colonna, Borgia, Della Rovere, Medici and the Rome of the cardinal-nephews'],
     'emperadores':['Emperors','From the Hohenstaufen to revolutionary Europe'],
-    'borgona':['Burgundy: the kingdom that never was','From a French appanage to a Habsburg inheritance'],
+    'borgona':['Burgundy: the kingdom that never was','Charles the Bold: a crown prepared, death at Nancy and a European inheritance'],
     'gioconda':['In search of the Mona Lisa','A journey through Leonardo’s life and the women behind the enigma'],
     'revolucion-protestante':['The Protestant Reformation','Humanism, the Reformation, imperial politics and the response of Trent'],
     'lepanto-alianza':['Lepanto: The Last Crusade','How Rome, Spain and Venice assembled a fleet against the Ottoman Empire'],

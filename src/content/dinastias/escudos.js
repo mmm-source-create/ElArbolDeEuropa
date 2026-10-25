@@ -18,6 +18,10 @@ const CASTILLA_LEON = {blason: 'Cuartelado de Castilla y León: 1.º y 4.º, de 
   capas: [['cuartelado', [CASTILLA, LEON, LEON, CASTILLA]]]};
 
 export const ESCUDOS = Object.freeze({
+  'Malatesta': {blason:'De plata, dos bandas jaqueladas de oro y gules; bordura dentada de oro y sable.',capas:[['campo','plata']],nota:'Armas familiares de los Malatesta según el dibujo aportado de Wikimedia Commons.'},
+  'Moncada': {blason:'De gules, ocho bezantes de oro puestos en dos palos.',capas:[['campo','gules']],nota:'Armas sencillas de la casa de Moncada o Montcada. Sus distintas ramas usaron también composiciones cuarteladas.'},
+  'Zähringen-Baden': {blason:'De oro, una banda de gules.',capas:[['campo','oro'],['banda','gules']],nota:'Armas sencillas de Baden. Dibujo de Manuel Muriel Cagigal creado con Heraldicon.'},
+  'Gedimínida': {blason:'De gules, las columnas de los Gedimínidas de oro.',capas:[['campo','gules']],nota:'Signo documentado en la época de Vitautas, asociado después al conjunto de la dinastía. Se representa en oro sobre rojo; no se atribuye su uso personal a Gediminas.',fuentes:[{titulo:'Parlamento de Lituania · Gediminaičių stulpai',url:'https://www.lrs.lt/sip/portal.show?p_k=1&p_kade_id=9&p_r=38114&printVersion=1'}]},
   'Frankopan': {blason:'Cortado: primero, de gules, una estrella de seis puntas de oro; segundo, de oro.',capas:[['campo','oro']],nota:'Armas antiguas de los condes de Krk, empleadas hasta alrededor de 1430. Las ramas posteriores de los Frankopan usaron también los leones con el pan.'},
   'Rákóczi': {blason:'Cortado: de gules, un águila de sable coronada de oro; de azur, una rueda de plata sobre un monte de tres cimas de sinople.',capas:[['campo','gules']],nota:'Armas familiares según el dibujo de WappenWiki aportado. Las composiciones de los príncipes de Transilvania incorporaron también otros cuarteles.'},
   'Kotromanić': {blason:'De azur, una banda de plata acompañada de seis flores de lis de oro, tres a cada lado; bordura de oro.',capas:[['campo','azur'],['banda','plata'],['bordura','oro']],nota:'Modelo de las armas reales bosnias de los Kotromanić. Dibujo de Manuel Muriel Cagigal creado con Heraldicon.'},

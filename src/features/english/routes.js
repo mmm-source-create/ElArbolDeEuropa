@@ -1,8 +1,10 @@
 export const TRANSLATED_DYNASTIES=[{es:'anjou-hungria',en:'anjou-hungary'}];
 export const TRANSLATED_TERRITORIES=[{es:'normandia',en:'normandy'}];
 export const TRANSLATED_STORIES = [
- {id:'borgona',es:'borgona-el-reino-que-no-fue',en:'burgundy-the-kingdom-that-never-was'},
- {id:'gioconda',es:'en-busca-de-la-gioconda',en:'in-search-of-the-mona-lisa'},
+ {id:'borgona',es:'borgona-el-reino-que-no-fue',en:'burgundy-the-kingdom-that-never-was',chapters:17},
+ {id:'gioconda',es:'en-busca-de-la-gioconda',en:'in-search-of-the-mona-lisa',chapters:11},
+ {id:'dos-coronas-dos-hijas',es:'dos-coronas-para-dos-hijas',en:'two-crowns-for-two-daughters',chapters:6},
+ {id:'corona-demasiado-grande',es:'una-corona-demasiado-grande',en:'a-crown-too-great',chapters:6},
 ];
 export const TRANSLATED_PEOPLE = [
  {id:'JUANABELTRANEJA',es:'juana-la-beltraneja',en:'joanna-la-beltraneja'},
@@ -190,5 +192,5 @@ export function translatedEquivalent(pathname,locale) {
  return null;
 }
 export function englishPaths() {
- return ['/en/dynasties','/en/territories','/en/challenge',...TRANSLATED_DYNASTIES.map(p=>`/en/dynasty/${p.en}`),...TRANSLATED_TERRITORIES.map(p=>`/en/territory/${p.en}`),'/en/','/en/about','/en/stories','/en/people','/en/methodology',...TRANSLATED_PEOPLE.map(p=>`/en/person/${p.en}`),...TRANSLATED_STORIES.flatMap(s=>[`/en/story/${s.en}`,...Array.from({length:11},(_,i)=>`/en/story/${s.en}/chapter/${i+1}`)])];
+ return ['/en/dynasties','/en/territories','/en/challenge',...TRANSLATED_DYNASTIES.map(p=>`/en/dynasty/${p.en}`),...TRANSLATED_TERRITORIES.map(p=>`/en/territory/${p.en}`),'/en/','/en/about','/en/stories','/en/people','/en/methodology',...TRANSLATED_PEOPLE.map(p=>`/en/person/${p.en}`),...TRANSLATED_STORIES.flatMap(s=>[`/en/story/${s.en}`,...Array.from({length:s.chapters},(_,i)=>`/en/story/${s.en}/chapter/${i+1}`)])];
 }

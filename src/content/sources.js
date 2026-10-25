@@ -1,4 +1,5 @@
 import {HOUSE_CLEANUP_SOURCES} from './sources-house-cleanup.js';
+import {HERITAGE_EDITORIAL_SOURCES} from '../data/historiasHerencias.js';
 import {TREINTA_CASAS_SOURCES} from './sources-treinta-casas.js';
 import {PERSON_NAMING_POLICY} from './personNamingPolicy.js';
 import {CONNECTION_SOURCES} from './dinastias/conexiones-casas.js';
@@ -1490,7 +1491,7 @@ for (const source of [...GERMAN_SWISS_SOURCES,...GERMANY_COMPLETION_SOURCES]) {
 }
 
 // A publication or article has one entry even when several editorial updates use it.
-for (const source of [...HOUSE_CLEANUP_SOURCES,...TREINTA_CASAS_SOURCES]) {
+for (const source of [...HOUSE_CLEANUP_SOURCES,...TREINTA_CASAS_SOURCES,...HERITAGE_EDITORIAL_SOURCES]) {
   const previous=SOURCES.find(entry=>entry.url===source.url);
   if (!previous) { SOURCES.push(source); continue; }
   previous.personas=[...new Set([...previous.personas,...source.personas])];

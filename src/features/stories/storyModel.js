@@ -5,8 +5,9 @@ export function storyPath(slug, chapter = null) {
 export function normalizeStoryProgress(value, id, count) {
   // The two Barbarossa chapters precede Sicily in the expanded Third Crusade.
   const legacyCrusade = id === 'ricardo-felipe-cruzada' && count >= 8 && value?.revision !== 2;
-  const valid = n => Number.isInteger(n) && n > 0 && n <= (legacyCrusade ? 6 : count);
-  const chapter = n => legacyCrusade && n >= 2 ? n + 2 : n;
+  const legacyBurgundy = id === 'borgona' && count >= 17 && value?.revision !== 3;
+  const valid = n => Number.isInteger(n) && n > 0 && n <= (legacyCrusade ? 6 : legacyBurgundy ? 11 : count);
+  const chapter = n => legacyCrusade && n >= 2 ? n + 2 : legacyBurgundy && n >= 8 ? n + 6 : n;
   return {last:valid(value?.last) ? chapter(value.last) : 1,
     read:[...new Set(Array.isArray(value?.read) ? value.read.filter(valid).map(chapter) : [])]};
 }
@@ -18,7 +19,7 @@ export function saveStoryProgress(storage, id, count, chapter) {
   const progress = readStoryProgress(storage, id, count);
   if (!Number.isInteger(chapter) || chapter < 1 || chapter > count) return progress;
   const next = { last: chapter, read: [...new Set([...progress.read, chapter])],
-    ...(id === 'ricardo-felipe-cruzada' && count >= 8 ? {revision:2} : {}) };
+    ...(id === 'ricardo-felipe-cruzada' && count >= 8 ? {revision:2} : id === 'borgona' && count >= 17 ? {revision:3} : {}) };
   try {
     let all; try { all = JSON.parse(storage.getItem(STORY_PROGRESS_KEY)); } catch { /* Recover corrupt storage. */ }
     storage.setItem(STORY_PROGRESS_KEY, JSON.stringify({ ...(all && typeof all === 'object' && !Array.isArray(all) ? all : {}), [id]: next }));
