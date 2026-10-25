@@ -802,7 +802,6 @@ export default function Desafio({ personas = [] }) {
       const nuevoRecord = camino.ronda >= estadisticas.mejorCamino;
       return (
         <section className="desafio-shell desafio-final">
-          <button type="button" className="desafio-back" onClick={volverAModos}><ArrowLeft size={13} /> Modos</button>
           <div className="desafio-kicker">El Camino · recorrido terminado</div>
           <div className="desafio-score"><strong>{camino.ronda}</strong><span> preguntas</span></div>
           <h2>{camino.ronda >= 20 ? "Has cruzado media Europa" : camino.ronda >= 10 ? "Un gran recorrido" : "Ya conoces un poco más del atlas"}</h2>
@@ -916,7 +915,6 @@ export default function Desafio({ personas = [] }) {
     if (rachaTerminada) {
       return (
         <section className="desafio-shell desafio-final">
-          <button type="button" className="desafio-back" onClick={volverAModos}><ArrowLeft size={13} /> Modos</button>
           <div className="desafio-kicker">Racha terminada</div>
           <div className="desafio-score desafio-score-streak"><Flame size={30} /><strong>{rachaDuelo}</strong></div>
           <h2>{rachaDuelo >= 15 ? "Una cadena histórica" : rachaDuelo >= 7 ? "Buena racha" : "La siguiente puede llegar más lejos"}</h2>
@@ -972,7 +970,6 @@ export default function Desafio({ personas = [] }) {
     if (retratosTerminada) {
       return (
         <section className="desafio-shell desafio-final desafio-portrait-final">
-          <button type="button" className="desafio-back" onClick={volverAModos}><ArrowLeft size={13} /> Modos</button>
           <div className="desafio-kicker">Retratos · racha terminada</div>
           <div className="desafio-score desafio-score-streak"><Search size={30} /><strong>{rachaRetratos}</strong></div>
           <h2>{rachaRetratos >= 12 ? "Ojo de retratista" : rachaRetratos >= 5 ? "Buena memoria visual" : "La siguiente mirada llegará más lejos"}</h2>
@@ -1076,7 +1073,6 @@ export default function Desafio({ personas = [] }) {
       const score = registro?.score ?? 0;
       return (
         <section className="desafio-shell desafio-final desafio-daily-final">
-          <button type="button" className="desafio-back" onClick={volverAModos}><ArrowLeft size={13} /> Modos</button>
           <div className="desafio-kicker">Desafío diario · {fechaHoy}</div>
           <div className="desafio-daily-blocks" aria-label={`${score} de 5`}>
             {(registro?.resultados || []).map((ok, index) => <span key={index} className={ok ? "is-good" : "is-bad"} />)}

@@ -22,7 +22,7 @@ export default function AtlasToolbar({vm, closeOtherToolbarMenus, guideButtonRef
             <details ref={panelsMenuRef} className="atlas-toolbar-menu atlas-panels-menu" onToggle={onToolbarMenuToggle}>
               <summary className="ui-tip" data-tip="Paneles"><PanelsTopLeft size={14} aria-hidden="true" /><span className="ui-sr-only">Paneles</span></summary>
               <div className="atlas-toolbar-menu-panel" role="group" aria-label="Paneles visibles">
-                <button type="button" aria-pressed={mostrarFiltros} onClick={() => alternarPanelAuxiliar('filtros')}>Filtros</button>
+                <button type="button" aria-pressed={mostrarFiltros && !vm.historiaActiva} disabled={Boolean(vm.historiaActiva)} title={vm.historiaActiva ? "Cierra la historia para abrir los filtros" : undefined} onClick={() => alternarPanelAuxiliar('filtros')}>Filtros</button>
                 <button type="button" aria-pressed={mostrarBiografia} onClick={() => alternarPanelAuxiliar('biografia')}>Biografía</button>
                 <button type="button" aria-pressed={mostrarCronologia} onClick={() => alternarPanelAuxiliar('cronologia')}>Cronología</button>
               </div>

@@ -35,6 +35,8 @@ test('partida compartida: explicación visible tras acertar y fallar, avance man
   await click(button('Continuar'));
  }
  assert.match(document.querySelector('.desafio-learning-end').textContent,/4 de 5/);
+ assert.equal(document.querySelector('.desafio-back'),null);
+ assert.ok(button('Volver a los modos'));
  assert.equal(JSON.parse(window.localStorage.getItem(REVIEW_KEY)).length,1);
  assert.equal(window.localStorage.getItem('arbol-europa-desafio-v2'),null);
 });

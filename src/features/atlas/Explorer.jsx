@@ -551,10 +551,8 @@ export default function Explorer({ initialPanel = null, treeBase: TREE_BASE, loa
     const tree = scrollRef.current, timeline = tlScrollRef.current, list = timelineListRef.current;
     const previousTimeline = timeline && { left: timeline.scrollLeft, top: timeline.scrollTop };
     if (task.treeId && tree && positions[task.treeId] && !secondPass) {
-      const reader = historiaActiva && document.querySelector('.story-atlas-guide');
-      const box = tree.getBoundingClientRect(), overlay = reader?.getBoundingClientRect();
-      const overlaps = overlay && overlay.left < box.right && overlay.right > box.left;
-      const visibleHeight = historiaActiva ? Math.max(120,Math.min(tree.clientHeight,window.innerHeight-box.top,overlaps?overlay.top-box.top-12:Infinity)) : tree.clientHeight;
+      const box = tree.getBoundingClientRect();
+      const visibleHeight = historiaActiva ? Math.max(120,Math.min(tree.clientHeight,window.innerHeight-box.top)) : tree.clientHeight;
       tree.scrollTo({ ...centeredScroll(positions[task.treeId], zoom, {clientWidth:tree.clientWidth,clientHeight:visibleHeight}), behavior: "smooth" });
     }
     if (task.treeCenter && tree && !secondPass) {
@@ -994,7 +992,7 @@ export default function Explorer({ initialPanel = null, treeBase: TREE_BASE, loa
     centerTimelineOnYear(anio);
   };
 
-  const aplicarPasoHistoria = (historia, index, {replace = false, returnPath = storyReturn} = {}) => {
+  const aplicarPasoHistoria = (historia, index, {replace = false, returnPath = storyReturn, preserveView = true} = {}) => {
     const paso = historia?.pasos?.[index];
     if (!paso) return;
     setHistoriaPasoIndex(index);
@@ -1002,6 +1000,7 @@ export default function Explorer({ initialPanel = null, treeBase: TREE_BASE, loa
     const ids = storyPeopleIds(historia).filter(id => BY_ID[id]);
     setAtlasIds(ids);
     const currentUrl = new URL(window.location.href);
+    if (preserveView) currentUrl.searchParams.set('vista', vistaPrincipal);
     for (const key of ['q','territorio','dinastia','funcion','siglo','relacion']) currentUrl.searchParams.delete(key);
     const principal = paso.persona || paso.personas?.find(id=>BY_ID[id]);
     if (principal) currentUrl.searchParams.set('persona',principal);
@@ -1053,12 +1052,13 @@ export default function Explorer({ initialPanel = null, treeBase: TREE_BASE, loa
     setMode("view");
     setFocoId(null);
     setCollapsedIds([]);
-    setVistasActivas({ arbol: true, mapa: new URLSearchParams(window.location.search).get("vista") !== "arbol" });
+    const requestedView = new URLSearchParams(window.location.search).get("vista");
+    setVistasActivas({arbol:requestedView !== "mapa",mapa:requestedView !== "arbol"});
     if (panelesVisibles.filtros) alternarPanelAuxiliar('filtros');
     if (panelesVisibles.cronologia) alternarPanelAuxiliar('cronologia');
     setHistoriaActivaId(historia.id);
     setInfoProyecto(null);
-    aplicarPasoHistoria(historia, Math.max(0, Math.min(historia.pasos.length - 1, index)), {returnPath, replace});
+    aplicarPasoHistoria(historia, Math.max(0, Math.min(historia.pasos.length - 1, index)), {returnPath, replace, preserveView:false});
   };
 
   const cambiarPasoHistoria = (delta) => {
@@ -1438,7 +1438,7 @@ export default function Explorer({ initialPanel = null, treeBase: TREE_BASE, loa
     onUndo: () => { setMode('view');setFocoId(null);const previous = atlasUndo.at(-1); setAtlasUndo(atlasUndo.slice(0, -1)); changeAtlasScope(previous, { remember: false, center: previous?.[0] }); },
     canUndo: atlasUndo.length > 0, onFull: () => { limpiar(); setMode('view'); setFocoId(null); setCollapsedIds([]); changeAtlasScope(null); },
     onNew: () => { limpiar(); setMode('view'); setSeleccion(null); changeAtlasScope([]); },
-    onFilters: () => alternarPanelAuxiliar('filtros'), filtersOpen: mostrarFiltros, popeCount: treeLayout.isolatedPopeCount,
+    onFilters: () => {if (!historiaActiva) alternarPanelAuxiliar('filtros');}, filtersOpen: mostrarFiltros && !historiaActiva, popeCount: treeLayout.isolatedPopeCount,
   };
 
   const viewModel = {
