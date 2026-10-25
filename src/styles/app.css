@@ -1296,7 +1296,7 @@ html, body {
 /* Mapa desplazable y ampliable mediante viewBox. */
 .mapa-stage {
   --atlas-sea: #dbe7e6;
-  --atlas-land: #d8d6ce;
+  --atlas-land: #FBF7EC;
   --atlas-credit: #343a39;
   position: relative;
   min-width: 0;

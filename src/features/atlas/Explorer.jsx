@@ -1054,7 +1054,6 @@ export default function Explorer({ initialPanel = null, treeBase: TREE_BASE, loa
     setCollapsedIds([]);
     const requestedView = new URLSearchParams(window.location.search).get("vista");
     setVistasActivas({arbol:requestedView !== "mapa",mapa:requestedView !== "arbol"});
-    if (panelesVisibles.filtros) alternarPanelAuxiliar('filtros');
     if (panelesVisibles.cronologia) alternarPanelAuxiliar('cronologia');
     setHistoriaActivaId(historia.id);
     setInfoProyecto(null);

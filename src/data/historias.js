@@ -2271,7 +2271,7 @@ const HISTORIAS_EXISTENTES = [
         ],
         "eventoId": "BORGO_1363",
         "titulo": "Una nueva Borgoña Valois",
-        "texto": "Juan II de Francia confía el ducado de Borgoña a su hijo Felipe el Atrevido. Nace así una rama menor de los Valois que, en pocas generaciones, llegará a competir en poder con la propia monarquía francesa."
+        "texto": "En Poitiers, en 1356, el joven Felipe permanece junto a su padre, Juan II de Francia, durante la derrota frente a los ingleses. Ambos caen prisioneros. Su valor en aquella jornada le gana el sobrenombre de «el Atrevido» y una posición especial en la confianza del rey. En 1363, Juan le entrega el ducado de Borgoña como apanage: una dotación territorial para un hijo menor de la familia real.\n\nEl ducado había vuelto a manos de Juan tras la muerte del último duque de la rama capeta. Confiárselo a Felipe recompensa su fidelidad y sitúa a un hijo del rey al frente de una región estratégica. La nueva rama Valois-Borgoña dispone desde entonces de una base propia desde la que negociar matrimonios, reunir rentas y extender su influencia."
       },
       {
         "anio": 1369,
@@ -2282,7 +2282,7 @@ const HISTORIAS_EXISTENTES = [
         ],
         "eventoId": "BORGO_1369",
         "titulo": "La expansión empieza con un matrimonio",
-        "texto": "Felipe se casa con Margarita de Flandes. La alianza matrimonial abre la vía hacia Flandes, Artois y el Franco Condado: territorios ricos y estratégicos que convierten a los duques borgoñones en mucho más que señores de Dijon."
+        "texto": "Felipe se casa en 1369 con Margarita, heredera del conde de Flandes. La elección une el ducado con una sucesión que puede aportar ciudades textiles, puertos, rutas comerciales y rentas muy superiores a las de un dominio centrado en Dijon. Cuando Margarita hereda en 1384, Flandes, Artois y el Condado de Borgoña pasan a formar parte del patrimonio de la pareja.\n\nLa expansión da a los duques recursos para intervenir en la política francesa y convierte la defensa de sus posesiones septentrionales en una prioridad. También introduce una dificultad duradera: las tierras del norte y las Borgoñas del sur forman bloques separados, con privilegios e instituciones que cada sucesor tendrá que negociar."
       },
       {
         "anio": 1404,
@@ -2293,7 +2293,7 @@ const HISTORIAS_EXISTENTES = [
           "MARGFLAN"
         ],
         "titulo": "Juan Sin Miedo hereda el proyecto",
-        "texto": "A la muerte de Felipe el Atrevido, Juan Sin Miedo recibe un conglomerado territorial ya poderoso. Su política se entrelaza con la crisis interna francesa y con la rivalidad entre borgoñones y armagnacs."
+        "texto": "Juan Sin Miedo sucede a Felipe el Atrevido en 1404. Hereda territorios ricos y una posición influyente en Francia, donde las crisis de salud de Carlos VI han abierto una lucha por dirigir el gobierno real. Quien controle al rey y a sus consejeros puede decidir nombramientos, acceder a las rentas de la Corona y orientar la guerra.\n\nLa competencia enfrenta a Juan con Luis de Orleans, hermano de Carlos VI. En 1407, Juan hace asesinar a su rival. La familia de Orleans y sus aliados buscan venganza; el enfrentamiento entre borgoñones y armagnacs se extiende por la corte y las ciudades. La defensa de los intereses ducales queda ligada a una guerra civil que debilita a Francia frente a Inglaterra."
       },
       {
         "anio": 1419,
@@ -2304,7 +2304,7 @@ const HISTORIAS_EXISTENTES = [
         ],
         "eventoId": "MONTEREAU",
         "titulo": "Montereau cambia el equilibrio",
-        "texto": "Juan Sin Miedo es asesinado durante una negociación en Montereau. Su hijo Felipe el Bueno hereda el ducado y se aproxima al bando inglés, convirtiendo la enemistad con los Valois franceses en uno de los ejes de la Guerra de los Cien Años."
+        "texto": "En septiembre de 1419, Juan Sin Miedo acude al puente de Montereau para negociar con el delfín Carlos. Los hombres del entorno del delfín lo matan durante la entrevista. Su hijo Felipe el Bueno hereda el ducado y atribuye al partido de Carlos la responsabilidad de la muerte de su padre. Vengarlo y obtener reparación se convierten en objetivos centrales de su política.\n\nEnrique V de Inglaterra ofrece un aliado contra ese mismo adversario. Felipe se acerca a él y respalda el acuerdo de Troyes de 1420, que aparta al delfín de la sucesión francesa en favor de Enrique. La alianza permite al duque combatir al partido al que responsabiliza del asesinato y proteger sus propios dominios; proporciona a los ingleses apoyos y posiciones decisivos dentro de Francia."
       },
       {
         "anio": 1430,
@@ -2315,7 +2315,7 @@ const HISTORIAS_EXISTENTES = [
         ],
         "eventoId": "TOISON_ORO",
         "titulo": "Una corte que quiere parecer una monarquía",
-        "texto": "Felipe el Bueno funda la Orden del Toisón de Oro. La corte borgoñona desarrolla una cultura política y ceremonial extraordinariamente ambiciosa, acorde con un estado que une territorios dispersos desde Borgoña hasta los Países Bajos."
+        "texto": "En 1430, al casarse con Isabel de Portugal, Felipe el Bueno funda la Orden del Toisón de Oro. La orden vincula a grandes nobles con la persona del duque mediante un honor compartido, ceremonias y obligaciones de fidelidad. En un conjunto de principados con leyes y privilegios diferentes, esos vínculos ayudan a dar cohesión a la corte y al servicio ducal.\n\nFelipe utiliza también la pintura, los manuscritos, las fiestas y la diplomacia para afirmar su rango. Sus encargos atraen a artistas como Jan van Eyck, que viaja a Portugal para retratar a su futura esposa. La riqueza de los Países Bajos sostiene una corte capaz de tratar con los reyes y de presentar la expansión familiar como un proyecto político común."
       },
       {
         "anio": 1435,
@@ -2326,7 +2326,7 @@ const HISTORIAS_EXISTENTES = [
         ],
         "eventoId": "ARRAS_1435",
         "titulo": "Borgoña cambia de aliado",
-        "texto": "El Tratado de Arras reconcilia a Felipe el Bueno con Carlos VII. Borgoña abandona la alianza inglesa y obtiene importantes concesiones, mientras la monarquía francesa recupera margen para terminar la Guerra de los Cien Años."
+        "texto": "En 1435, Felipe el Bueno negocia con Carlos VII una salida a la guerra que los enfrenta desde Montereau. La alianza inglesa ha servido a la venganza ducal, pero prolongar el conflicto consume recursos y amenaza la seguridad de sus tierras. Carlos necesita separar a Borgoña de Inglaterra para recuperar posiciones en Francia. Ambos tienen motivos para pactar.\n\nEl tratado de Arras ofrece a Felipe reparación por la muerte de su padre, concesiones territoriales y una exención personal del homenaje al rey. El duque puede reconciliarse con su primo sin renunciar a su honor ni al poder adquirido. Inglaterra pierde a su principal aliado francés; Borgoña gana margen para concentrarse en sus propios territorios y en su expansión hacia los Países Bajos."
       },
       {
         "anio": 1467,
@@ -3138,7 +3138,7 @@ const HISTORIAS_EXISTENTES = [
         ],
         "eventoId": "MONTEREAU",
         "titulo": "Montereau: Borgoña se inclina hacia Inglaterra",
-        "texto": "Juan Sin Miedo es asesinado durante una entrevista con el entorno del delfín Carlos. Su hijo Felipe el Bueno hereda Borgoña y se acerca a Enrique V. La alianza borgoñona proporciona a Inglaterra recursos, posiciones y apoyos decisivos dentro de Francia."
+        "texto": "Juan Sin Miedo es asesinado durante una entrevista con el entorno del delfín Carlos. Su hijo Felipe el Bueno hereda Borgoña y responsabiliza de la muerte de su padre al partido del delfín. Busca venganza y reparación; Enrique V le ofrece apoyo contra ese mismo adversario. La alianza anglo-borgoñona une la ofensiva inglesa con una disputa entre ramas de los Valois y proporciona a Inglaterra recursos, posiciones y aliados dentro de Francia."
       },
       {
         "anio": 1420,
@@ -3214,7 +3214,7 @@ const HISTORIAS_EXISTENTES = [
         ],
         "eventoId": "ARRAS_1435",
         "titulo": "Arras: Inglaterra pierde a Borgoña",
-        "texto": "Felipe el Bueno se reconcilia con Carlos VII. La ruptura de la alianza anglo-borgoñona es un golpe estratégico enorme para Inglaterra. Poco después muere Bedford, el hombre que había sostenido con más eficacia el régimen inglés en Francia."
+        "texto": "Felipe el Bueno se reconcilia con Carlos VII mediante el tratado de Arras. La reparación del asesinato de Juan Sin Miedo y las concesiones territoriales permiten al duque cerrar la venganza familiar y proteger los intereses de sus dominios. Carlos VII obtiene la ruptura de la alianza anglo-borgoñona: Inglaterra pierde un apoyo esencial para conservar sus posiciones en Francia. Poco después muere Bedford, que había sostenido el gobierno inglés durante la minoría de Enrique VI. La doble pérdida dificulta coordinar la defensa de los territorios conquistados."
       },
       {
         "anio": 1450,

@@ -34,15 +34,14 @@ const seccionesGuardadas = (guardado = {}, defectos) => Object.fromEntries(Objec
 // Paneles visibles y secciones abiertas del Atlas, recordados entre visitas.
 export function useAtlasLayout(savedSession, atlasIds) {
   const [panelesVisibles, setPanelesVisibles] = useState(() => {
-    if (savedSession) return savedSession.panelesVisibles;
-    const base = { filtros: atlasIds === null, biografia: true, cronologia: true };
+    const base = savedSession?.panelesVisibles ?? { filtros: atlasIds === null, biografia: true, cronologia: true };
     if (typeof window === "undefined") return base;
     try {
       const guardado = JSON.parse(window.localStorage.getItem(PANELES_STORAGE_KEY) || "null");
       return {
         filtros: typeof guardado?.filtros === "boolean" ? guardado.filtros : base.filtros,
-        biografia: typeof guardado?.biografia === "boolean" ? guardado.biografia : true,
-        cronologia: typeof guardado?.cronologia === "boolean" ? guardado.cronologia : true,
+        biografia: typeof guardado?.biografia === "boolean" ? guardado.biografia : base.biografia,
+        cronologia: typeof guardado?.cronologia === "boolean" ? guardado.cronologia : base.cronologia,
       };
     } catch {
       return base;

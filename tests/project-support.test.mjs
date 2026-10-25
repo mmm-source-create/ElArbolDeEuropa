@@ -69,6 +69,10 @@ for (const locale of ['es', 'en']) {
     documentFor(React.createElement(PrivacyPage, {locale}), doc => {
       assert.equal(doc.querySelectorAll('a[href="https://more.ko-fi.com/privacy"]').length, 1);
       assert.equal(doc.querySelectorAll('a[href="https://stripe.com/privacy"]').length, 1);
+      const external=[...doc.querySelectorAll('.privacy-content section')].find(section=>section.querySelector('h2')?.textContent===(locale==='es'?'Enlaces externos':'External links'));
+      assert.deepEqual([...external.querySelectorAll('a')].map(a=>[a.textContent,a.href]),[['MapChart','https://www.mapchart.net/'],['Heraldicon','https://heraldicon.org/'],['GitHub','https://github.com/']]);
+      for(const name of ['MapChart','Heraldicon','GitHub'])assert.equal(external.textContent.split(name).length-1,1);
+
       assert.match(doc.querySelector('.privacy-content').textContent, locale === 'es' ? /no carga sus scripts/ : /load its scripts/);
       assert.match(doc.querySelector('.privacy-content').textContent, locale === 'es' ? /detalles de la operación/ : /transaction details/);
     });

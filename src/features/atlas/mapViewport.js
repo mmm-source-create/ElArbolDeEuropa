@@ -3,9 +3,7 @@
 export function fittedMapViewBox(original, viewport) {
   const aspect = viewport?.width > 0 && viewport?.height > 0
     ? viewport.width / viewport.height : original.width / original.height;
-  const width = viewport?.fit === "contain"
-    ? Math.max(original.width, original.height * aspect)
-    : Math.min(original.width, original.height * aspect);
+  const width = Math.min(original.width, original.height * aspect);
   const height = width / aspect;
   return {x: original.x + (original.width-width)/2,
     y: original.y + (original.height-height)/2, width, height};
@@ -60,8 +58,8 @@ export function clampMapViewBox(box, original, viewport, minZoom = 0.015) {
   const centerX = box.x + box.width / 2;
   const centerY = box.y + box.height / 2;
   return {
-    x: width >= original.width ? original.x + (original.width - width) / 2 : Math.max(minX, Math.min(maxX, centerX - width / 2)),
-    y: height >= original.height ? original.y + (original.height - height) / 2 : Math.max(minY, Math.min(maxY, centerY - height / 2)),
+    x: Math.max(minX, Math.min(maxX, centerX - width / 2)),
+    y: Math.max(minY, Math.min(maxY, centerY - height / 2)),
     width,
     height,
   };

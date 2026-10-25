@@ -90,22 +90,3 @@ test('wide panel camera pans north and south at minimum zoom without masks follo
  close(north.y,frame.y);close(south.y+south.height,frame.y+frame.height);
  for(const box of [camera,north,south,zoomMapViewBox(camera,.82,frame,panel)]) close(box.width/box.height,panel.width/panel.height);
 });
-
-test('story reading fits all of Europe, keeps its centre on resize and still supports zoom',()=>{
- const bounds={x:475,y:15,width:315,height:240};
- const wide={width:684,height:327,fit:'contain'};
- const fit=fittedMapViewBox(bounds,wide);
- assert.ok(fit.x<=bounds.x&&fit.y<=bounds.y);
- assert.ok(fit.x+fit.width>=bounds.x+bounds.width);
- assert.ok(fit.y+fit.height>=bounds.y+bounds.height);
- assert.deepEqual(mapControlLimits(fit,bounds,wide),{zoomOut:false,zoomIn:true,left:false,right:false,up:false,down:false});
- const zoom=zoomMapViewBox(fit,.4,bounds,wide);
- assert.ok(zoom.width<bounds.width&&zoom.height<bounds.height);
- assert.ok(zoom.x>=bounds.x&&zoom.y>=bounds.y);
- const tall={width:390,height:600,fit:'contain'};
- const resized=resizeMapViewBox(fit,bounds,wide,tall);
- close(resized.x+resized.width/2,bounds.x+bounds.width/2);
- close(resized.y+resized.height/2,bounds.y+bounds.height/2);
- close(resized.width/resized.height,tall.width/tall.height);
- assert.deepEqual(zoomMapViewBox(zoom,100,bounds,wide),fit);
-});
