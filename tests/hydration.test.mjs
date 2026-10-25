@@ -9,6 +9,7 @@ import {act} from 'react';
 import {build} from 'vite';
 import {person,dynasty,territory} from './fixtures/static-pages.mjs';
 import {makeStaticDocument} from '../scripts/lib/ssg-utils.mjs';
+import {STORY_PROGRESS_KEY} from '../src/features/stories/storyModel.js';
 const root=fileURLToPath(new URL('../',import.meta.url));
 // Load the optional list before registering tests, so hooks cannot finish while it is still loading.
 const realSample=process.env.EADE_SSG_SAMPLE?path.resolve(process.env.EADE_SSG_SAMPLE):null;
@@ -126,6 +127,17 @@ test('sin datos iniciales la ficha dinámica sigue descargando y mostrando el JS
   assert.equal(document.querySelector('h1').textContent,dynasty.data.nombre);
   assert.ok(requests.some(url=>url.includes(`/dinastias-meta/${dynasty.slug}.json`)));
  } finally {if(app)await act(async()=>app.unmount());}
+});
+test('el catálogo inglés recupera el capítulo guardado sin sustituir el HTML inicial',async()=>{
+ const page={schema:STATIC_SCHEMA,kind:'english',slug:'stories',chapter:null,path:'/en/stories',data:{type:'stories',slug:'stories',chapter:null,nombre:'Stories in English',path:'/en/stories',esPath:'/es/historias',description:'Guided reading',stories:[{id:'reading-test',nombre:'A story',path:'/en/story/a-story',pasos:6,disponible:true,subtitulo:'A guided story'}]}};
+ window.localStorage.setItem(STORY_PROGRESS_KEY,JSON.stringify({'reading-test':{last:4,read:[1,4]}}));
+ try {await hydrated(page,node=>{
+  const actions=node.querySelectorAll('.story-entry-actions a');
+  assert.equal(actions[1].textContent,'Continue chapters');
+  assert.equal(actions[1].getAttribute('href'),'/en/story/a-story/chapter/4');
+  assert.equal(new URL(actions[0].href).searchParams.get('paso'),'4');
+  assert.equal(node.querySelector('.story-card-progress').getAttribute('aria-label'),'2 of 6 chapters visited');
+ });} finally {window.localStorage.removeItem(STORY_PROGRESS_KEY);}
 });
 // Opcional: mismo contrato sobre la muestra real, generada después de Vite.
 if(realSample) {
