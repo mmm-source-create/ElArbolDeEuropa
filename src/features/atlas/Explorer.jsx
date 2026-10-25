@@ -551,7 +551,11 @@ export default function Explorer({ initialPanel = null, treeBase: TREE_BASE, loa
     const tree = scrollRef.current, timeline = tlScrollRef.current, list = timelineListRef.current;
     const previousTimeline = timeline && { left: timeline.scrollLeft, top: timeline.scrollTop };
     if (task.treeId && tree && positions[task.treeId] && !secondPass) {
-      tree.scrollTo({ ...centeredScroll(positions[task.treeId], zoom, tree), behavior: "smooth" });
+      const reader = historiaActiva && document.querySelector('.story-atlas-guide');
+      const box = tree.getBoundingClientRect(), overlay = reader?.getBoundingClientRect();
+      const overlaps = overlay && overlay.left < box.right && overlay.right > box.left;
+      const visibleHeight = historiaActiva ? Math.max(120,Math.min(tree.clientHeight,window.innerHeight-box.top,overlaps?overlay.top-box.top-12:Infinity)) : tree.clientHeight;
+      tree.scrollTo({ ...centeredScroll(positions[task.treeId], zoom, {clientWidth:tree.clientWidth,clientHeight:visibleHeight}), behavior: "smooth" });
     }
     if (task.treeCenter && tree && !secondPass) {
       tree.scrollTo({ left: task.treeCenter.x * zoom - tree.clientWidth / 2, top: task.treeCenter.y * zoom - tree.clientHeight / 2, behavior: "instant" });

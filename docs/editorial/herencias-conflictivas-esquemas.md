@@ -1,6 +1,6 @@
 # Herencias conflictivas · esquemas para revisión
 
-Estado: propuesta de enfoque. Los dos títulos nuevos aparecen «En preparación» en el catálogo; no tienen capítulos publicados. La colección incluye también **Borgoña: el reino que no fue**, que ya puede leerse.
+Estado: esquemas aprobados por Manuel y desarrollados en seis capítulos por historia, en español e inglés. La colección incluye también **Borgoña: el reino que no fue**, revisada con Carlos el Temerario como figura central.
 
 ## Dos coronas para dos hijas
 

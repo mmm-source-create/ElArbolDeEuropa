@@ -3,6 +3,7 @@ import {ACCESOS_CORONAS} from '../../src/content/coronas/index.js';
 import {RELEVOS} from '../../src/content/sucesiones/index.js';
 import {accesosDe} from '../../src/domain/government/crowns.js';
 import {HISTORIA_DINASTIAS} from "../../src/content/dinastias/index.js";
+import {dynastyOrderCounts} from '../../src/domain/genealogy/dynastyOrder.js';
 import {isNamedDynasty,dynastyAliasesFor} from '../../src/data/dynastyNames.js';
 import { sourcesForPerson } from "../../src/content/sources.js";
 import { TERRITORIOS, componentesDe } from "../../src/data/territorios.js";
@@ -533,7 +534,9 @@ async function generarCatalogosPublicos() {
   await fs.mkdir(catalogoDir, { recursive: true });
 
   const personas = catalogoPersonas();
-  const dinastias = catalogoAgrupado(PERSONAS.map((p) => p.dinastia).filter(isNamedDynasty), (p, nombre) => p.dinastia === nombre).map(d=>({...d,aliases:dynastyAliasesFor(d.nombre),editorial:Boolean(HISTORIA_DINASTIAS[d.nombre]),resumen:HISTORIA_DINASTIAS[d.nombre]?.resumen||""}));
+  const dynastyOrder = dynastyOrderCounts(PERSONAS);
+  const dinastias = catalogoAgrupado(PERSONAS.map((p) => p.dinastia).filter(isNamedDynasty), (p, nombre) => p.dinastia === nombre).map(d=>({...d,aliases:dynastyAliasesFor(d.nombre),editorial:Boolean(HISTORIA_DINASTIAS[d.nombre]),resumen:HISTORIA_DINASTIAS[d.nombre]?.resumen||""}))
+    .sort((a,b)=>(dynastyOrder.get(b.nombre)||0)-(dynastyOrder.get(a.nombre)||0)||a.nombre.localeCompare(b.nombre,'es'));
   const territoriosValores = Object.keys(TERRITORIOS);
   const territorios = catalogoAgrupado(territoriosValores, (p, nombre) => territoriosDe(p).some(t => [nombre, ...componentesDe(nombre)].includes(t)));
   const historias = HISTORIAS.map((historia) => ({

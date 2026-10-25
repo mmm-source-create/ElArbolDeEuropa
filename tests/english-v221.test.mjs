@@ -7,9 +7,9 @@ import {safeStoryReturn} from '../src/features/stories/storyModel.js';
 import {staticRoute} from '../src/features/public/staticData.js';
 
 test('todas las rutas traducidas mantienen la equivalencia de página y capítulo',()=>{
- const paths=englishPaths();assert.equal(paths.length,34+TRANSLATED_PEOPLE.length);assert.equal(new Set(paths).size,paths.length);
+ const paths=englishPaths();assert.equal(paths.length,54+TRANSLATED_PEOPLE.length);assert.equal(new Set(paths).size,paths.length);
  for(const path of paths){assert.equal(englishRoute(path)?.path,path);assert.equal(staticRoute(path)?.kind,'english');assert.equal(translatedEquivalent(translatedEquivalent(path,'es'),'en'),path);}
- for(const story of TRANSLATED_STORIES)assert.equal(ENGLISH_STORIES[story.id].chapters.length,11);
+ for(const story of TRANSLATED_STORIES)assert.equal(ENGLISH_STORIES[story.id].chapters.length,story.chapters);
  assert.equal(translatedEquivalent('/es/historia/las-familias-papales','en'),null);
  assert.equal(englishRoute('/en/person/charles-v/chapter/1'),null);
 });

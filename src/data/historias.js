@@ -1,5 +1,6 @@
 import {HISTORIAS_TEMATICAS, CONTEXTO_HISTORIAS} from './historiasTematicas.js';
 import {storyCollections} from '../features/stories/storyThemes.js';
+import {HERITAGE_STORIES,reviseBurgundy} from './historiasHerencias.js';
 // Eventos generales y pasos de las historias conservadas.
 export const EVENTOS_HISTORICOS = [
   {
@@ -4595,7 +4596,8 @@ const HISTORIAS_EXISTENTES = [
   }
 ];
 export const HISTORIAS = [
-  {id:'dos-coronas-dos-hijas',titulo:'Dos coronas para dos hijas',subtitulo:'Luis I, María y Eduviges: las sucesiones de Hungría y Polonia',disponible:false},
+  ...HERITAGE_STORIES,
   ...HISTORIAS_EXISTENTES.map(h => HISTORIAS_TEMATICAS.find(nueva => nueva.id === h.id) || h),
   ...HISTORIAS_TEMATICAS.filter(h => !HISTORIAS_EXISTENTES.some(existente => existente.id === h.id)),
-].map(h => ({...h, ...CONTEXTO_HISTORIAS[h.id], colecciones:storyCollections(h.id)}));
+].filter((h,index,all)=>all.findIndex(item=>item.id===h.id)===index)
+ .map(reviseBurgundy).map(h => ({...h, ...CONTEXTO_HISTORIAS[h.id], colecciones:storyCollections(h.id)}));
