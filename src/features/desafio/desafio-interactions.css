@@ -7,8 +7,7 @@
 .desafio-stat>span{color:var(--eade-muted)}
 .desafio-session-progress{margin:8px 0 25px}
 .desafio-hub .desafio-stat{box-shadow:none;border:0;border-radius:0;border-left:1px solid var(--eade-border);background:transparent}
-.desafio-hub .desafio-stat:first-child{border-left:0}
-@media(max-width:600px){.desafio-hub .desafio-mode-card{padding:18px}.desafio-hub .desafio-stat:nth-child(2n+1){border-left:0}.desafio-hub>.ui-segments{margin-top:0}}
+@media(max-width:600px){.desafio-hub .desafio-mode-card{padding:18px}.desafio-hub>.ui-segments{margin-top:0}}
 
 .desafio-play{scroll-margin-top:88px}
 @media(max-width:760px){.desafio-play{scroll-margin-top:160px}}

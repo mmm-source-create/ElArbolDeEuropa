@@ -11,6 +11,7 @@ export default function AtlasMapStage({vm}) {
   return (
     <section className="workspace-stage workspace-map-stage" aria-label="Mapa de territorios">
               <MapaEuropa
+                fitAllBounds={Boolean(vm.historiaActiva)}
                 initialViewport={initialMapViewport}
                 onViewportChange={recordMapViewport}
                 seleccion={seleccion}

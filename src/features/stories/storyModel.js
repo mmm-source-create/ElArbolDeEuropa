@@ -43,7 +43,7 @@ export function storyChapterPath(story, chapter = null, locale = 'es') {
 export function storyAtlasUrl(story, chapter, locale = story.path?.startsWith('/en/') ? 'en' : 'es') {
   const step = story.pasos?.[chapter - 1];
   if (!step) return '/es/?atlas=1';
-  const params = new URLSearchParams({ atlas: '1', vista: 'arbol', anio: String(step.anio), historia: story.id, paso: String(chapter), regreso: storyChapterPath(story, chapter, locale) });
+  const params = new URLSearchParams({ atlas: '1', vista: 'ambos', anio: String(step.anio), historia: story.id, paso: String(chapter), regreso: storyChapterPath(story, chapter, locale) });
   storyPeopleIds(story).forEach(id => params.append('seleccion', id));
   storyStepIds(story, chapter).forEach(id => params.append('resaltar', id));
   return `/es/?${params}`;
@@ -57,6 +57,6 @@ export function safeStoryReturn(search) {
 // the story ID and chapter, including its year and people, on arrival.
 export function catalogStoryAtlasUrl(story,chapter=1,locale='es') {
  const path=story.path || `/es/historia/${story.slug}`;
- const params=new URLSearchParams({atlas:'1',vista:'arbol',historia:story.id,paso:String(chapter),regreso:`${path}/${locale==='en'?'chapter':'capitulo'}/${chapter}`});
+ const params=new URLSearchParams({atlas:'1',vista:'ambos',historia:story.id,paso:String(chapter),regreso:`${path}/${locale==='en'?'chapter':'capitulo'}/${chapter}`});
  return `/es/?${params}`;
 }

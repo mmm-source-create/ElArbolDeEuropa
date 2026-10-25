@@ -304,19 +304,20 @@ export default function ExplorerView({ vm, loading = false, loadError = false, o
 
 
       <StoryWorkspace active={Boolean(historiaActiva)}>
+      {historiaActiva && <StoryAtlasGuide story={historiaActiva} index={historiaPasoIndex} returnPath={vm.storyReturn} count={vm.growth.ids?.length || 0} onStep={cambiarPasoHistoria} onCenter={()=>aplicarPasoHistoria(historiaActiva,historiaPasoIndex,{replace:true})} onExit={salirHistoria} onPerson={()=>{if(atlasScene==='europa')vm.changeAtlasScene('atlas');if(!mostrarBiografia)alternarPanelAuxiliar('biografia');setBioMobileOpen(true);}}/>}
       {/* V5.20 · Atlas y Europa comparten URL y se deslizan como dos paneles contiguos. */}
       <div className={`atlas-scenes is-${atlasScene}${sceneSliding ? ' is-sliding' : ''}`}>
       <div className="atlas-scenes-track">
       <div className="atlas-traditional" hidden={atlasScene !== 'atlas' && !sceneSliding}>
       <div
-        className={`workspace-grid ${layoutLaterales} workspace-no-timeline`}
+        className={`workspace-grid ${historiaActiva ? (mostrarBiografia ? "workspace-layout-right" : "workspace-layout-center") : layoutLaterales} workspace-no-timeline`}
         style={{
           // V5.20 · Anchos fijos: sin redimensionar, sin saltos ni marcos de arrastre.
           "--workspace-left-width": "280px",
           "--workspace-right-width": "330px",
         }}
       >
-        {mostrarFiltros && <AtlasFiltersPanel vm={vm} filterCount={filterCount} filtrosCompactosRestantes={filtrosCompactosRestantes} filtrosCompactosVisibles={filtrosCompactosVisibles} regionesDinasticas={regionesDinasticas} />}
+        {mostrarFiltros && !historiaActiva && <AtlasFiltersPanel vm={vm} filterCount={filterCount} filtrosCompactosRestantes={filtrosCompactosRestantes} filtrosCompactosVisibles={filtrosCompactosVisibles} regionesDinasticas={regionesDinasticas} />}
 
         <main
           className={`workspace-main workspace-main-${vistaPrincipal}`}
@@ -341,7 +342,6 @@ export default function ExplorerView({ vm, loading = false, loadError = false, o
       </div>
       </div>
 
-      {historiaActiva && <StoryAtlasGuide story={historiaActiva} index={historiaPasoIndex} returnPath={vm.storyReturn} count={vm.growth.ids?.length || 0} besideBiography={mostrarBiografia && atlasScene==='atlas'} onStep={cambiarPasoHistoria} onCenter={()=>aplicarPasoHistoria(historiaActiva,historiaPasoIndex,{replace:true})} onExit={salirHistoria} onPerson={()=>{if(atlasScene==='europa')vm.changeAtlasScene('atlas');if(!mostrarBiografia)alternarPanelAuxiliar('biografia');setBioMobileOpen(true);}}/>}
       </StoryWorkspace>
 
       {!modoTrabajo && (
@@ -354,7 +354,7 @@ export default function ExplorerView({ vm, loading = false, loadError = false, o
 
       {!modoTrabajo && !guideOpen && !infoProyecto && <ActionDial className="atlas-quick-actions" label="Acciones del Atlas" actions={[
         {id:'center',label:'Centrar persona',Icon:Crosshair,disabled:!seleccion,onClick:centrarSeleccion},
-        {id:'filters',label:mostrarFiltros?'Ocultar filtros':'Mostrar filtros',Icon:SlidersHorizontal,onClick:()=>alternarPanelAuxiliar('filtros')},
+        {id:'filters',disabled:Boolean(historiaActiva),label:mostrarFiltros?'Ocultar filtros':'Mostrar filtros',Icon:SlidersHorizontal,onClick:()=>alternarPanelAuxiliar('filtros')},
         {id:'timeline',label:mostrarCronologia?'Ocultar cronología':'Mostrar cronología',Icon:List,onClick:()=>alternarPanelAuxiliar('cronologia')},
       ]}/>}
       {guideOpen && <AtlasGuide locale={locale} onClose={closeGuide} onAction={tutorialAction} selectedId={seleccion?.id} selectedInTree={Boolean(vm.positions[seleccion?.id])} canExpand={canAddFamily} exampleReady={!historiaActiva && mode === 'view' && atlasScene === 'atlas'} hasFilters={filterCount > 0} onClearFilters={vm.limpiarSoloFiltros} getExportSelection={vm.getExportSelection} favoriteSaved={vm.favoritos.includes('CARLOS5')} shareStatus={vm.shareStatus} ready={ready} />}

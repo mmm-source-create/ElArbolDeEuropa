@@ -1296,6 +1296,8 @@ html, body {
 /* Mapa desplazable y ampliable mediante viewBox. */
 .mapa-stage {
   --atlas-sea: #dbe7e6;
+  --atlas-land: #d8d6ce;
+  --atlas-credit: #343a39;
   position: relative;
   min-width: 0;
 }
@@ -2490,7 +2492,7 @@ html, body {
 .story-catalog-topline b { color: var(--eade-wine); }
 .story-catalog-card h3 { margin: 9px 0 4px; font-family: 'Iowan Old Style', 'Palatino Linotype', Georgia, serif; font-size: var(--fs-xl, 18px); text-transform: none; letter-spacing: 0; color: #3B332A; }
 .story-catalog-card p { min-height: 34px; margin: 0 0 11px; font-size: var(--fs-xs, 11px); line-height: 1.45; color: #746A58; }
-.story-start-btn { display: inline-flex; align-items: center; gap: 6px; height: 28px; border: 1px solid #7A2E2E; border-radius: var(--r-sm, 6px); background: #7A2E2E; color: #F8F3E6; padding: 0 9px; font-family: -apple-system, 'Segoe UI', sans-serif; font-size: var(--fs-2xs, 10px); cursor: pointer; }
+.story-start-btn { display: inline-flex; align-items: center; gap: 6px; height: 28px; border: 1px solid var(--eade-border-strong); border-radius: var(--r-sm, 6px); background: var(--eade-paper-soft); color: var(--eade-ink); padding: 0 9px; font-family: -apple-system, 'Segoe UI', sans-serif; font-size: var(--fs-2xs, 10px); cursor: pointer; }
 .story-start-btn:disabled { border-color: #CFC4AE; background: #E8DFCE; color: #9A907A; cursor: default; }
 
 @media (max-width: 760px) {

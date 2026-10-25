@@ -29,7 +29,7 @@ export default function LearningSession({questions, mode, sharedUrl, warning, by
   }
   function next() { answerLock.current=false; setIndex(index+1); setSelection(null); setOrder([]); }
   return <section ref={shell} className="desafio-shell desafio-play">
-    <button type="button" className="desafio-back" onClick={onBack}><ArrowLeft size={13}/> Modos</button>
+    {!finished && <button type="button" className="desafio-back" onClick={onBack}><ArrowLeft size={13}/> Modos</button>}
     <div className="desafio-progress-row"><div><span className="desafio-kicker">{title}</span><strong>{finished?'Sesión completada':`${index+1} de ${questions.length}`}</strong></div><span className="desafio-practice-label">{mode==='repaso'?'Sin vidas ni puntuación':'A tu ritmo'}</span></div>
     {questions.length > 0 && <ProgressMeter className="desafio-session-progress" value={results.length} max={questions.length} label="Preguntas respondidas"/>}
     {finished ? <div className="desafio-question-card desafio-learning-end"><h2 ref={heading} tabIndex={-1}>{questions.length ? (mode==='repaso'?'Cada repaso cuenta':'Ya conoces estas sucesiones') : 'Todavía no hay errores que repasar'}</h2>

@@ -41,7 +41,7 @@ test('las colecciones son opcionales y admiten historias compartidas', () => {
   assert.equal(HISTORIAS.filter(s=>s.disponible).length,21);
   assert.equal(HISTORIAS.filter(s=>s.titulo==='El Reino de los Cielos').length,1);
   assert.equal(HISTORIAS.some(s=>s.id==='reino-de-los-cielos'),false);
-  assert.deepEqual(HISTORIAS.filter(s=>s.revisionPendiente).map(s=>s.id).sort(),['sebastian-marruecos','constantinopla-dos-conquistas','ricardo-felipe-cruzada','dracula-detras-de-la-leyenda'].sort());
+  assert.deepEqual(HISTORIAS.filter(s=>s.revisionPendiente),[]);
 });
 test('Normandía conserva los relatos nuevos con títulos ingleses y destino explícito', () => {
   const film=englishEntityStory({slug:'el-reino-de-los-cielos',titulo:'El Reino de los Cielos'});

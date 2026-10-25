@@ -27,7 +27,7 @@ test('las colecciones se abren de una en una, comparten relatos y Todas no dupli
     const tabs=[...document.querySelectorAll('[role=tab]')];
     assert.deepEqual(tabs.map(t=>t.textContent),['Todas','Colecciones']);
     assert.equal(document.querySelectorAll('.public-story-card').length,21);
-    assert.equal(document.querySelectorAll('.story-review-note').length,4);
+    assert.equal(document.querySelectorAll('.story-review-note').length,0);
     await act(()=>tabs[0].dispatchEvent(new window.KeyboardEvent('keydown',{key:'ArrowRight',bubbles:true})));
     assert.equal(document.activeElement,tabs[1]);assert.equal(tabs[1].getAttribute('aria-selected'),'true');
     const buttons=[...document.querySelectorAll('[aria-expanded]')];

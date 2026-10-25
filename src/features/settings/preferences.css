@@ -113,3 +113,7 @@ html[data-eade-theme="dark"] .project-modal :is(.stats-summary-grid strong,.stat
 html[data-eade-theme="dark"] .project-modal :is(.stats-ranking li,.europe-year-details,.europe-government-grid article){border-color:var(--eade-border)}
 html[data-eade-theme="dark"] .project-modal :is(.stats-curiosities strong,.europe-year-dialog h4){color:var(--eade-ink)}
 html[data-eade-theme="dark"] .project-modal :is(.europe-year-action,.europe-person-link,.europe-year-dialog a,.europe-year-details>summary){color:var(--eade-wine-dark)}
+
+/* Base geography follows the theme while historical authority colours stay stable. */
+html[data-eade-theme="dark"] .mapa-stage{--atlas-sea:#24221f;--atlas-land:#2e2a26;--atlas-credit:#d3c5ae}
+html[data-eade-theme="dark"] .mapa-wrapper [data-atlas-selected]{stroke:var(--eade-gold)!important}

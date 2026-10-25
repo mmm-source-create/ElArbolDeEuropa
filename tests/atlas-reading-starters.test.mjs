@@ -18,12 +18,12 @@ test('cada sugerencia pertenece a un periodo y ninguna terna repite nombre ni co
  assert.deepEqual(chooseStarterPeople(()=>0),STARTER_TRIOS[0]);
  assert.deepEqual(chooseStarterPeople(()=>.999999),STARTER_TRIOS.at(-1));
 });
-test('el catálogo entra en el árbol con el capítulo guardado y su regreso ES/EN',()=>{
+test('el catálogo entra en árbol y mapa con el capítulo guardado y su regreso ES/EN',()=>{
  for(const [locale,path] of [['es','/es/historia/borgona-el-reino-que-no-fue'],['en','/en/story/burgundy-the-kingdom-that-never-was']]){
   const story=HISTORIAS.find(s=>s.id==='borgona');
   const url=new URL(catalogStoryAtlasUrl({...story,path},2,locale),'https://example.test');
   const nav=resolveStoryNavigation(url.pathname,url.search,HISTORIAS);
-  assert.equal(nav.story.id,story.id);assert.equal(nav.index,1);assert.equal(nav.returnPath,`${path}/${locale==='en'?'chapter':'capitulo'}/2`);assert.equal(url.searchParams.get('vista'),'arbol');
+  assert.equal(nav.story.id,story.id);assert.equal(nav.index,1);assert.equal(nav.returnPath,`${path}/${locale==='en'?'chapter':'capitulo'}/2`);assert.equal(url.searchParams.get('vista'),'ambos');
   assert.ok(nav.ids.length); // Full story content is resolved in the Atlas.
  }
 });

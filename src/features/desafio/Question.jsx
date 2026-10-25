@@ -48,7 +48,7 @@ export function PreguntaOpciones({
             {persona && <RetratoOpcion persona={persona} />}
             <span className="desafio-option-copy">
               <strong>{opcion.label}</strong>
-              {persona && <small>{[persona.titulo, persona.dinastia].filter(Boolean).join(" · ") || "Personaje histórico"}</small>}
+              {persona && respondida && <small>{[persona.titulo, persona.dinastia].filter(Boolean).join(" · ") || "Personaje histórico"}</small>}
               {campeonId === opcion.id && <em>continúa</em>}
             </span>
             {respondida && correcta && <Check size={16} aria-hidden="true" />}
@@ -75,7 +75,7 @@ export function PreguntaOrden({ pregunta, byId, orden, respondida, onPick }) {
             onClick={() => onPick(opcion.id)}
           >
             {persona && <RetratoOpcion persona={persona} />}
-            <span><strong>{opcion.label}</strong>{persona && <small>{persona.titulo || persona.dinastia || "Personaje histórico"}</small>}</span>
+            <span><strong>{opcion.label}</strong>{persona && respondida && <small>{persona.titulo || persona.dinastia || "Personaje histórico"}</small>}</span>
             {posicion >= 0 && <b>{posicion + 1}</b>}
           </button>
         );

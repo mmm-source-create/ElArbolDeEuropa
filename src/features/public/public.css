@@ -284,7 +284,7 @@ html .public-not-found>section>span{color:#7c5426}
 /* Two views; collections expand one at a time and may share stories. */
 .story-view-tabs{display:inline-flex;gap:4px;padding:4px;margin:18px 0 24px;border:1px solid var(--eade-border);border-radius:28px;background:var(--eade-paper)}
 .story-view-tabs button{min-height:44px;padding:8px 22px;border:0;border-radius:24px;background:transparent;color:var(--eade-ink);font:600 14px/1.3 var(--eade-sans);cursor:pointer}
-.story-view-tabs button[aria-selected="true"]{background:var(--eade-wine-fill,#7A2E2E);color:#fff8ef}
+.story-view-tabs button[aria-selected="true"]{background:var(--eade-paper-bright);color:var(--eade-ink)}
 .story-view-tabs button:focus-visible,.story-collection-card button:focus-visible{outline:2px solid var(--eade-wine);outline-offset:3px}
 .story-collections{display:grid;grid-template-columns:minmax(0,1fr);gap:16px;align-items:start}
 .story-collection-card{display:block;min-height:0;padding:0;overflow:hidden;background:var(--eade-paper-bright);border-color:var(--eade-border);color:var(--eade-ink)}
