@@ -102,7 +102,7 @@ function viewBoxString(box) {
 // El mapa solo reacciona al CLIC (a `seleccion`), no al hover. El movimiento
 // y el zoom alteran únicamente el viewBox del SVG: no interfieren con el
 // coloreado imperativo de los territorios.
-export function MapaEuropa({ seleccion, anioGlobal = null, onSelectTerritorio, onSelectPersona, initialViewport = null, onViewportChange, panorama = false, fitAllBounds = false }) {
+export function MapaEuropa({ seleccion, anioGlobal = null, onSelectTerritorio, onSelectPersona, initialViewport = null, onViewportChange, panorama = false }) {
   // EU V Locations is the Atlas map. The old Provinces SVG remains only as
   // the geometric source for the migration crosswalk.
   const containerRef = useRef(null);
@@ -188,7 +188,7 @@ export function MapaEuropa({ seleccion, anioGlobal = null, onSelectTerritorio, o
     // old world-map viewports fall back to the new Europe-first framing.
     const paddingX = original.width * 0.05;
     const paddingY = original.height * 0.05;
-    const savedViewFits = !fitAllBounds && initialViewport
+    const savedViewFits = initialViewport
       && Number.isFinite(initialViewport.x) && Number.isFinite(initialViewport.y)
       && Number.isFinite(initialViewport.width) && Number.isFinite(initialViewport.height)
       && initialViewport.width > 0 && initialViewport.height > 0
@@ -197,7 +197,7 @@ export function MapaEuropa({ seleccion, anioGlobal = null, onSelectTerritorio, o
       && initialViewport.x + initialViewport.width <= original.x + original.width + paddingX
       && initialViewport.y + initialViewport.height <= original.y + original.height + paddingY;
     const bounds = containerRef.current.getBoundingClientRect();
-    const viewport = { width: bounds.width || original.width, height: bounds.height || original.height, fit: fitAllBounds ? "contain" : "cover" };
+    const viewport = { width: bounds.width || original.width, height: bounds.height || original.height };
     const fitted = fittedMapViewBox(original, viewport);
     const restored = savedViewFits
       ? clampMapViewBox(initialViewport, original, viewport, MAP_MIN_ZOOM)
@@ -223,7 +223,7 @@ export function MapaEuropa({ seleccion, anioGlobal = null, onSelectTerritorio, o
     setMapReady(true);
     }).catch(() => { if (!cancelled) setMapError(true); });
     return () => { cancelled = true; };
-  }, [mapAssetUrl, mapAttempt, fitAllBounds]);
+  }, [mapAssetUrl, mapAttempt]);
 
   // The Atlas can resize when its panels, view mode, or viewport change. Keep
   // the same zoom and center while recalculating the outer zoom limit.
@@ -233,7 +233,7 @@ export function MapaEuropa({ seleccion, anioGlobal = null, onSelectTerritorio, o
     if (!mapReady || !node || !original) return;
     const update = rect => {
       if (!(rect.width > 0 && rect.height > 0)) return;
-      const next = { width: rect.width, height: rect.height, fit: fitAllBounds ? "contain" : "cover" };
+      const next = { width: rect.width, height: rect.height };
       const previous = viewportRef.current;
       viewportRef.current = next;
       if (!previous) {
@@ -256,7 +256,7 @@ export function MapaEuropa({ seleccion, anioGlobal = null, onSelectTerritorio, o
     const onResize = () => update(node.getBoundingClientRect());
     window.addEventListener('resize', onResize);
     return () => window.removeEventListener('resize', onResize);
-  }, [mapReady, originalMapFrame, fitAllBounds]);
+  }, [mapReady, originalMapFrame]);
 
   useEffect(() => {
     if (viewBox) onViewportChange?.(viewBox);

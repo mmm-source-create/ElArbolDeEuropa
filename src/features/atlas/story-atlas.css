@@ -13,9 +13,7 @@
 .story-atlas-chapter h2{font:400 var(--fs-xl,20px)/1.2 var(--eade-serif);color:var(--eade-ink);margin:8px 0 14px}
 .story-atlas-chapter h2>span{color:var(--eade-gold);margin-right:8px}
 .story-atlas-chapter nav{display:flex;flex-wrap:wrap;gap:5px;justify-content:space-between}
-.story-atlas-chapter nav>button:last-child{width:100%;margin-top:4px}
 .story-atlas-reading{overflow:auto;overscroll-behavior:contain;min-height:0;margin-top:8px;padding-right:8px}
-.story-atlas-reading[hidden]{display:none}
 .story-atlas-reading p{font:var(--fs-lg,15px)/1.7 var(--eade-serif);margin:0;max-width:110ch;color:var(--eade-ink);white-space:pre-line}
 .story-atlas-selection{display:block;font-size:var(--fs-2xs,10px);margin-top:6px;flex-shrink:0}
 .story-atlas-progress{margin:4px 0 8px;height:3px;flex-shrink:0}
@@ -29,7 +27,6 @@
  .story-atlas-context a{font-size:var(--fs-2xs,10px)}
  .story-atlas-chapter h2{font-size:var(--fs-lg,16px);margin:6px 0 8px}
  .story-atlas-chapter nav{width:100%;justify-content:space-between;gap:4px}
- .story-atlas-chapter nav>button:last-child{width:auto;margin-top:0}
  .story-atlas-guide button{min-height:44px;min-width:44px;padding:4px 7px}
  .story-atlas-reading p{font-size:var(--fs-md,14px)}
  .story-atlas-selection{display:none}

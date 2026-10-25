@@ -85,7 +85,7 @@
 .site-nav a {
   border: 0;
   background: transparent;
-  color: #665D4F;
+  color: var(--eade-muted);
   text-decoration: none;
   font-family: var(--eade-sans);
   font-size: var(--fs-xs, 11px);
@@ -94,7 +94,7 @@
 .site-nav a { display: flex; align-items: center; justify-content: center; gap: 3px; padding: 7px 3px; border-radius: var(--eade-radius-sm); white-space: nowrap; }
 .site-nav-language { font-size: var(--fs-2xs, 10px); letter-spacing: .03em; color: var(--eade-muted); }
 .site-nav a:hover { color: var(--eade-wine); }
-.site-nav a:hover { background: #EEE5D3; }
+.site-nav a:hover { background-color: var(--eade-paper-bright); }
 
 
 .site-language {

@@ -97,3 +97,6 @@
 .europe-share button{display:inline-flex;align-items:center;gap:6px;min-height:32px;padding:0 13px;border:1px solid var(--eade-border);border-radius:999px;background:transparent;color:var(--eade-ink);font:600 var(--fs-xs,11px)/1 var(--eade-sans);cursor:pointer}
 .europe-share button:hover{border-color:var(--eade-border-strong);color:var(--eade-wine)}
 .europe-share [role=status]{color:var(--eade-muted);font:var(--fs-2xs,10px)/1.3 var(--eade-sans);max-width:260px;overflow-wrap:anywhere}
+
+.europe-person-context details a{color:var(--eade-wine);text-underline-offset:3px;overflow-wrap:anywhere}
+.europe-person-context details a:hover{color:var(--eade-wine-dark)}
