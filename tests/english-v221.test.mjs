@@ -1,13 +1,13 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {englishPaths,englishRoute,translatedEquivalent,TRANSLATED_STORIES,TRANSLATED_PEOPLE} from '../src/features/english/routes.js';
+import {englishPaths,englishRoute,translatedEquivalent,TRANSLATED_STORIES,TRANSLATED_PEOPLE,TRANSLATED_DYNASTIES} from '../src/features/english/routes.js';
 import {ENGLISH_STORIES} from '../src/features/english/content.js';
 import {publicMeta} from '../src/features/public/publicMeta.js';
 import {safeStoryReturn} from '../src/features/stories/storyModel.js';
 import {staticRoute} from '../src/features/public/staticData.js';
 
 test('todas las rutas traducidas mantienen la equivalencia de página y capítulo',()=>{
- const paths=englishPaths();assert.equal(paths.length,54+TRANSLATED_PEOPLE.length);assert.equal(new Set(paths).size,paths.length);
+ const paths=englishPaths();assert.equal(paths.length,53+TRANSLATED_DYNASTIES.length+TRANSLATED_PEOPLE.length);assert.equal(new Set(paths).size,paths.length);
  for(const path of paths){assert.equal(englishRoute(path)?.path,path);assert.equal(staticRoute(path)?.kind,'english');assert.equal(translatedEquivalent(translatedEquivalent(path,'es'),'en'),path);}
  for(const story of TRANSLATED_STORIES)assert.equal(ENGLISH_STORIES[story.id].chapters.length,story.chapters);
  assert.equal(translatedEquivalent('/es/historia/las-familias-papales','en'),null);

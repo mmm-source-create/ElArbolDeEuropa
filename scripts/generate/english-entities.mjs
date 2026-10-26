@@ -1,3 +1,4 @@
+import {englishSourceTitle} from '../../src/features/english/v535Vocabulary.js';
 import {HISTORIAS} from '../../src/data/historias.js';
 import {slugPublico} from '../../src/domain/people/personPresentation.js';
 import {ENGLISH_STORY_LABELS} from '../../src/features/english/storyLabels.js';
@@ -18,14 +19,15 @@ export function englishEntityStory(h) {
  const esPath=`/es/historia/${h.slug}`;
  return {...h,titulo:title,path:translatedEquivalent(esPath,'en')||esPath};
 }
+const sources=items=>(items||[]).map(f=>({...f,titulo:englishSourceTitle(f.titulo)}));
 export async function englishEntityPages(people){
  const pages=[];
  for(const t of ENGLISH_DYNASTIES){
   const source=JSON.parse(await fs.readFile(`public/dinastias-meta/${t.es}.json`));
   const arms=escudoDe(t.key);
-  const branch=r=>{const translation=t.connections[r.id];if(!translation)throw Error(`Translate new house connection: ${r.id}`);return ({...r,...translation,fundador:card(r.fundador,people),personas:r.personas.map(p=>card(p,people))});};
-  const house=h=>{const summary=t.houses[h.nombre];if(summary===undefined)throw Error(`Translate related house: ${h.nombre}`);return ({...h,key:h.nombre,nombre:term(h.nombre),resumen:summary,miembros:h.miembros.map(p=>card(p,people)),path:`/es/dinastia/${h.slug}`});};
-  pages.push({...source,type:'dynasty',path:`/en/dynasty/${t.en}`,esPath:`/es/dinastia/${t.es}`,key:t.key,nombre:t.name,description:t.summary,resumen:t.summary,origen:t.origin,trayectoria:t.history,legado:t.legacy,editorial:true,
+  const branch=r=>{const translation=t.connections[r.id];if(!translation)throw Error(`Translate new house connection: ${r.id}`);return ({...r,...translation,fuentes:sources(r.fuentes),fundador:card(r.fundador,people),personas:r.personas.map(p=>card(p,people))});};
+  const house=h=>{const summary=t.houses[h.nombre];if(summary===undefined)throw Error(`Translate related house: ${h.nombre}`);return ({...h,key:h.nombre,nombre:term(h.nombre),resumen:summary,miembros:h.miembros.map(p=>card(p,people)),path:translatedEquivalent(`/es/dinastia/${h.slug}`,'en')||`/es/dinastia/${h.slug}`});};
+  pages.push({...source,type:'dynasty',path:`/en/dynasty/${t.en}`,esPath:`/es/dinastia/${t.es}`,key:t.key,fuentes:sources(source.fuentes),nombre:t.name,description:t.summary,resumen:t.summary,origen:t.origin,trayectoria:t.history,legado:t.legacy,editorial:true,
    miembros:source.miembros.map(p=>card(p,people)),protagonistas:source.protagonistas.map(p=>card(p,people)),gobiernos:source.gobiernos.map(g=>government(g,people)),territorios:source.territorios.map(key=>({key,name:term(key)})),ramas:source.ramas.map(branch),casasOrigen:source.casasOrigen.map(house),casasDerivadas:source.casasDerivadas.map(house),casasConectadas:source.casasConectadas.map(house),
    arms:{...arms.imagen,autor:t.armsAuthor,blazon:t.blazon,note:t.armsNote,modifications:'A viewBox was added for responsive scaling; the drawing is unchanged.'},
   });
@@ -35,7 +37,7 @@ export async function englishEntityPages(people){
   // An untranslated new editorial section must not disappear silently.
   for(const field of ['evolucion','uniones','eventos'])if(source[field]?.length)throw Error(`Translate new territory section: ${t.key}/${field}`);
   if(source.sucesiones?.relevos?.length||source.sucesiones?.crisis?.length)throw Error(`Translate new succession: ${t.key}`);
-  pages.push({...source,type:'territory',path:`/en/territory/${t.en}`,esPath:`/es/territorio/${t.es}`,key:t.key,nombre:t.name,description:t.summary,resumen:t.summary,
+  pages.push({...source,type:'territory',path:`/en/territory/${t.en}`,esPath:`/es/territorio/${t.es}`,key:t.key,fuentes:sources(source.fuentes),nombre:t.name,description:t.summary,resumen:t.summary,
    gobiernos:source.gobiernos.map(g=>government(g,people,t.notes)),personas:source.personas.map(p=>{const translated=people.find(t=>t.id===p.id),summary=translated?.summary||t.people[p.id];if(p.resumen&&!summary)throw Error(`Missing territory biography: ${p.id}`);return {...card(p,people),resumen:summary};}),
    historias:(source.historias||[]).map(englishEntityStory),
    dinastias:source.dinastias.map(key=>({key,name:term(key)})),relacionados:source.relacionados.map(r=>({...r,nombre:term(r.nombre)})),

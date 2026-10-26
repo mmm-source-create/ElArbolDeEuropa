@@ -220056,7 +220056,7 @@
       "color": "#86715d",
       "coverage": {
         "from": 1200,
-        "through": 1514
+        "through": 1359
       },
       "versions": [
         {
@@ -220087,6 +220087,82 @@
       "precision": "regional_approximation",
       "limitedCore": false,
       "scopeLabel": "Angulema · 1200–1514"
+    },
+    {
+      "name": "Angulema · 1200–1514 · revisión Francia 164 · Brétigny",
+      "corridor": "Francia y Países Bajos · continuidad geográfica completa",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1360,
+        "through": 1371
+      },
+      "versions": [
+        {
+          "from": 1360,
+          "ids": [
+            "Angouleme",
+            "Chabanais",
+            "Cognac"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Cesión de soberanía en Brétigny-Calais (1360), con entregas en 1361–1362. Se conserva la jurisdicción local de Angulema. El inicio anual expresa el acuerdo; la recuperación francesa fue gradual desde 1369, con cambios locales que requieren lectura de las fuentes."
+        }
+      ],
+      "note": "Cesión de soberanía en Brétigny-Calais (1360), con entregas en 1361–1362. Se conserva la jurisdicción local de Angulema. El inicio anual expresa el acuerdo; la recuperación francesa fue gradual desde 1369, con cambios locales que requieren lectura de las fuentes.",
+      "sources": [
+        {
+          "title": "The Gascon Rolls Project · C 61/74 (1361–1362)",
+          "url": "https://www.gasconrolls.org/edition/calendars/C61_74/document.html",
+          "locator": "Introducción del rollo de 1361–1362: La Rochelle entregada a finales de 1360; comisiones para recibir las tierras cedidas en Brétigny-Calais. Las entregas se prolongan en 1361–1362."
+        },
+        {
+          "title": "Procès-verbal de l’exécution du traité de Brétigny · 1361–1362",
+          "url": "https://www.guyenne.fr/ArchivesPerigord/SHAP/T2_1875/Execution_Bretigny.htm",
+          "locator": "Edición del acta de Pierre Pigache sobre las entregas a Jean Chandos; copia de 1419 del documento aquitano. Distingue pacto de 1360 y entrega efectiva."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": false,
+      "scopeLabel": "Angulema · Brétigny 1360–1371"
+    },
+    {
+      "name": "Angulema · 1200–1514 · revisión Francia 164 · después de Brétigny",
+      "corridor": "Francia y Países Bajos · continuidad geográfica completa",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1372,
+        "through": 1514
+      },
+      "versions": [
+        {
+          "from": 1372,
+          "ids": [
+            "Angouleme",
+            "Chabanais",
+            "Cognac"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Condado de Angulema, con sucesión de la rama orleanista y regreso regio con Francisco I; los títulos ducal y condal posteriores no crean nuevas superficies."
+        }
+      ],
+      "note": "Condado de Angulema, con sucesión de la rama orleanista y regreso regio con Francisco I; los títulos ducal y condal posteriores no crean nuevas superficies.",
+      "sources": [
+        {
+          "title": "William R. Shepherd · France in 1328",
+          "url": "https://maps.lib.utexas.edu/maps/historical/shepherd/france_1328.jpg",
+          "locator": "Historical Atlas (1923), p. 76: dominio regio, apanages y otros feudos; comparación visual de sus contornos con las celdas SVG completas."
+        },
+        {
+          "title": "William R. Shepherd · France in 1453",
+          "url": "https://maps.lib.utexas.edu/maps/historical/shepherd/france_1453_shepherd.jpg",
+          "locator": "Historical Atlas (1923), p. 81: dominio regio, apanages, feudos y Calais; ruta de 1415 y extensión de las posesiones inglesas en 1428."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": false,
+      "scopeLabel": "Angulema · desde 1372"
     },
     {
       "name": "Angulema · 1515–1789 · revisión Francia 165",
@@ -220170,7 +220246,7 @@
       "color": "#86715d",
       "coverage": {
         "from": 1200,
-        "through": 1606
+        "through": 1359
       },
       "versions": [
         {
@@ -220205,6 +220281,95 @@
       "precision": "regional_approximation",
       "limitedCore": false,
       "scopeLabel": "Vizcondado de Limoges · 1200–1606"
+    },
+    {
+      "name": "Vizcondado de Limoges · 1200–1606 · revisión Francia 167 · Brétigny",
+      "corridor": "Francia y Países Bajos · continuidad geográfica completa",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1360,
+        "through": 1368
+      },
+      "versions": [
+        {
+          "from": 1360,
+          "ids": [
+            "Aixe",
+            "Limoges",
+            "Nontron",
+            "Rochechouart",
+            "Segur",
+            "St_Leonard",
+            "Thiviers"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Cesión de soberanía en Brétigny-Calais (1360), con entregas en 1361–1362. Se conserva la jurisdicción local de Vizcondado de Limoges. El inicio anual expresa el acuerdo; la recuperación francesa fue gradual desde 1369, con cambios locales que requieren lectura de las fuentes."
+        }
+      ],
+      "note": "Cesión de soberanía en Brétigny-Calais (1360), con entregas en 1361–1362. Se conserva la jurisdicción local de Vizcondado de Limoges. El inicio anual expresa el acuerdo; la recuperación francesa fue gradual desde 1369, con cambios locales que requieren lectura de las fuentes.",
+      "sources": [
+        {
+          "title": "The Gascon Rolls Project · C 61/74 (1361–1362)",
+          "url": "https://www.gasconrolls.org/edition/calendars/C61_74/document.html",
+          "locator": "Introducción del rollo de 1361–1362: La Rochelle entregada a finales de 1360; comisiones para recibir las tierras cedidas en Brétigny-Calais. Las entregas se prolongan en 1361–1362."
+        },
+        {
+          "title": "Procès-verbal de l’exécution du traité de Brétigny · 1361–1362",
+          "url": "https://www.guyenne.fr/ArchivesPerigord/SHAP/T2_1875/Execution_Bretigny.htm",
+          "locator": "Edición del acta de Pierre Pigache sobre las entregas a Jean Chandos; copia de 1419 del documento aquitano. Distingue pacto de 1360 y entrega efectiva."
+        },
+        {
+          "title": "Richard de Filongley · Comptes de la principauté d’Aquitaine",
+          "url": "https://www.guyenne.fr/ArchivesPerigord/SHAP/T12_1885/Nontron_Suite.htm",
+          "locator": "Cuentas de 1363–1368: Nontron en la vizcondía de Limoges; ruptura de la obediencia en 1369. El saco de la cité de Limoges en 1370 es una operación local posterior."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": false,
+      "scopeLabel": "Vizcondado de Limoges · Brétigny 1360–1368"
+    },
+    {
+      "name": "Vizcondado de Limoges · 1200–1606 · revisión Francia 167 · después de Brétigny",
+      "corridor": "Francia y Países Bajos · continuidad geográfica completa",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1369,
+        "through": 1606
+      },
+      "versions": [
+        {
+          "from": 1369,
+          "ids": [
+            "Aixe",
+            "Limoges",
+            "Nontron",
+            "Rochechouart",
+            "Segur",
+            "St_Leonard",
+            "Thiviers"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Jurisdicción regional de Vizcondado de Limoges; título propio y límites señoriales interiores, contrastados con los mapas de 1328 y 1453. La incorporación no se adelanta a un cambio de titular."
+        }
+      ],
+      "note": "Jurisdicción regional de Vizcondado de Limoges; título propio y límites señoriales interiores, contrastados con los mapas de 1328 y 1453. La incorporación no se adelanta a un cambio de titular.",
+      "sources": [
+        {
+          "title": "William R. Shepherd · France in 1328",
+          "url": "https://maps.lib.utexas.edu/maps/historical/shepherd/france_1328.jpg",
+          "locator": "Historical Atlas (1923), p. 76: dominio regio, apanages y otros feudos; comparación visual de sus contornos con las celdas SVG completas."
+        },
+        {
+          "title": "William R. Shepherd · France in 1453",
+          "url": "https://maps.lib.utexas.edu/maps/historical/shepherd/france_1453_shepherd.jpg",
+          "locator": "Historical Atlas (1923), p. 81: dominio regio, apanages, feudos y Calais; ruta de 1415 y extensión de las posesiones inglesas en 1428."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": false,
+      "scopeLabel": "Vizcondado de Limoges · desde 1369"
     },
     {
       "name": "Vizcondado de Limoges · 1607–1789 · revisión Francia 168",
@@ -220296,7 +220461,7 @@
       "color": "#86715d",
       "coverage": {
         "from": 1200,
-        "through": 1606
+        "through": 1359
       },
       "versions": [
         {
@@ -220329,6 +220494,86 @@
       "precision": "regional_approximation",
       "limitedCore": false,
       "scopeLabel": "Périgord · 1200–1606"
+    },
+    {
+      "name": "Périgord · 1200–1606 · revisión Francia 170 · Brétigny",
+      "corridor": "Francia y Países Bajos · continuidad geográfica completa",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1360,
+        "through": 1368
+      },
+      "versions": [
+        {
+          "from": 1360,
+          "ids": [
+            "Bergerac",
+            "Limeuil",
+            "Perigueux",
+            "Riberac",
+            "Sarlat"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Cesión de soberanía en Brétigny-Calais (1360), con entregas en 1361–1362. Se conserva la jurisdicción local de Périgord. El inicio anual expresa el acuerdo; la recuperación francesa fue gradual desde 1369, con cambios locales que requieren lectura de las fuentes."
+        }
+      ],
+      "note": "Cesión de soberanía en Brétigny-Calais (1360), con entregas en 1361–1362. Se conserva la jurisdicción local de Périgord. El inicio anual expresa el acuerdo; la recuperación francesa fue gradual desde 1369, con cambios locales que requieren lectura de las fuentes.",
+      "sources": [
+        {
+          "title": "The Gascon Rolls Project · C 61/74 (1361–1362)",
+          "url": "https://www.gasconrolls.org/edition/calendars/C61_74/document.html",
+          "locator": "Introducción del rollo de 1361–1362: La Rochelle entregada a finales de 1360; comisiones para recibir las tierras cedidas en Brétigny-Calais. Las entregas se prolongan en 1361–1362."
+        },
+        {
+          "title": "Procès-verbal de l’exécution du traité de Brétigny · 1361–1362",
+          "url": "https://www.guyenne.fr/ArchivesPerigord/SHAP/T2_1875/Execution_Bretigny.htm",
+          "locator": "Edición del acta de Pierre Pigache sobre las entregas a Jean Chandos; copia de 1419 del documento aquitano. Distingue pacto de 1360 y entrega efectiva."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": false,
+      "scopeLabel": "Périgord · Brétigny 1360–1368"
+    },
+    {
+      "name": "Périgord · 1200–1606 · revisión Francia 170 · después de Brétigny",
+      "corridor": "Francia y Países Bajos · continuidad geográfica completa",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1369,
+        "through": 1606
+      },
+      "versions": [
+        {
+          "from": 1369,
+          "ids": [
+            "Bergerac",
+            "Limeuil",
+            "Perigueux",
+            "Riberac",
+            "Sarlat"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Jurisdicción regional de Périgord; título propio y límites señoriales interiores, contrastados con los mapas de 1328 y 1453. La incorporación no se adelanta a un cambio de titular."
+        }
+      ],
+      "note": "Jurisdicción regional de Périgord; título propio y límites señoriales interiores, contrastados con los mapas de 1328 y 1453. La incorporación no se adelanta a un cambio de titular.",
+      "sources": [
+        {
+          "title": "William R. Shepherd · France in 1328",
+          "url": "https://maps.lib.utexas.edu/maps/historical/shepherd/france_1328.jpg",
+          "locator": "Historical Atlas (1923), p. 76: dominio regio, apanages y otros feudos; comparación visual de sus contornos con las celdas SVG completas."
+        },
+        {
+          "title": "William R. Shepherd · France in 1453",
+          "url": "https://maps.lib.utexas.edu/maps/historical/shepherd/france_1453_shepherd.jpg",
+          "locator": "Historical Atlas (1923), p. 81: dominio regio, apanages, feudos y Calais; ruta de 1415 y extensión de las posesiones inglesas en 1428."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": false,
+      "scopeLabel": "Périgord · desde 1369"
     },
     {
       "name": "Périgord · 1607–1789 · revisión Francia 171",
@@ -226129,12 +226374,12 @@
       "scopeLabel": "Auxerre · 1200–1370"
     },
     {
-      "name": "Auxerre · 1371–1434 · revisión Francia 313",
+      "name": "Auxerre · 1371–1434 · revisión Francia 313 · Auxerre antes de Troyes",
       "corridor": "Francia y Países Bajos · continuidad geográfica completa",
       "color": "#86715d",
       "coverage": {
         "from": 1371,
-        "through": 1434
+        "through": 1419
       },
       "versions": [
         {
@@ -226158,6 +226403,37 @@
           "title": "William R. Shepherd · France in 1453",
           "url": "https://maps.lib.utexas.edu/maps/historical/shepherd/france_1453_shepherd.jpg",
           "locator": "Historical Atlas (1923), p. 81: dominio regio, apanages, feudos y Calais; ruta de 1415 y extensión de las posesiones inglesas en 1428."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": false,
+      "scopeLabel": "Auxerre · 1371–1434"
+    },
+    {
+      "name": "Auxerre · 1371–1434 · revisión Francia 313 · Auxerre obediencia inglesa",
+      "corridor": "Francia y Países Bajos · continuidad geográfica completa",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1420,
+        "through": 1434
+      },
+      "versions": [
+        {
+          "from": 1420,
+          "ids": [
+            "Auxerre"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Obediencia lancastriana tras Troyes; Auxerre se cede al duque de Borgoña en Arras (1435). La campaña de 1429 hacia Reims no recuperó esta plaza."
+        }
+      ],
+      "note": "Obediencia lancastriana tras Troyes; Auxerre se cede al duque de Borgoña en Arras (1435). La campaña de 1429 hacia Reims no recuperó esta plaza.",
+      "sources": [
+        {
+          "title": "Auguste Longnon · Royaume de France pendant la mission de Jeanne d’Arc (1429–1430)",
+          "url": "https://gallica.bnf.fr/ark:/12148/btv1b8446192m",
+          "locator": "Carta de 1875, BnF GED-7313: Sens y Auxerre dentro del dominio de obediencia inglesa; diferencias entre dominio real y feudos. Champaña y corredor de Reims cambian durante la campaña de 1429."
         }
       ],
       "precision": "regional_approximation",
@@ -245604,16 +245880,83 @@
       "scopeLabel": "Francia · 1790–1800"
     },
     {
-      "name": "Francia · 1200–1800 · revisión Francia 807",
+      "name": "Francia · 1200–1800 · revisión Francia 807 · Sens antes de Troyes",
       "corridor": "Francia y Países Bajos · continuidad geográfica completa",
       "color": "#86715d",
       "coverage": {
         "from": 1200,
-        "through": 1800
+        "through": 1419
       },
       "versions": [
         {
           "from": 1200,
+          "ids": [
+            "Sens"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Dominio regio o administración efectiva de la Corona en esta superficie; los privilegios urbanos y las jurisdicciones interiores no constituyen una anexión de sus vecinos."
+        }
+      ],
+      "note": "Dominio regio o administración efectiva de la Corona en esta superficie; los privilegios urbanos y las jurisdicciones interiores no constituyen una anexión de sus vecinos.",
+      "sources": [
+        {
+          "title": "William R. Shepherd · France in 1328",
+          "url": "https://maps.lib.utexas.edu/maps/historical/shepherd/france_1328.jpg",
+          "locator": "Historical Atlas (1923), p. 76: dominio regio, apanages y otros feudos; comparación visual de sus contornos con las celdas SVG completas."
+        },
+        {
+          "title": "William R. Shepherd · France in 1453",
+          "url": "https://maps.lib.utexas.edu/maps/historical/shepherd/france_1453_shepherd.jpg",
+          "locator": "Historical Atlas (1923), p. 81: dominio regio, apanages, feudos y Calais; ruta de 1415 y extensión de las posesiones inglesas en 1428."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": false,
+      "scopeLabel": "Francia · 1200–1800"
+    },
+    {
+      "name": "Francia · 1200–1800 · revisión Francia 807 · Sens obediencia inglesa",
+      "corridor": "Francia y Países Bajos · continuidad geográfica completa",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1420,
+        "through": 1429
+      },
+      "versions": [
+        {
+          "from": 1420,
+          "ids": [
+            "Sens"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Obediencia lancastriana tras Troyes; Sens vuelve a Carlos VII en 1430. La campaña de 1429 hacia Reims no recuperó esta plaza."
+        }
+      ],
+      "note": "Obediencia lancastriana tras Troyes; Sens vuelve a Carlos VII en 1430. La campaña de 1429 hacia Reims no recuperó esta plaza.",
+      "sources": [
+        {
+          "title": "Auguste Longnon · Royaume de France pendant la mission de Jeanne d’Arc (1429–1430)",
+          "url": "https://gallica.bnf.fr/ark:/12148/btv1b8446192m",
+          "locator": "Carta de 1875, BnF GED-7313: Sens y Auxerre dentro del dominio de obediencia inglesa; diferencias entre dominio real y feudos. Champaña y corredor de Reims cambian durante la campaña de 1429."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": false,
+      "scopeLabel": "Francia · 1200–1800"
+    },
+    {
+      "name": "Francia · 1200–1800 · revisión Francia 807 · Sens después de Troyes",
+      "corridor": "Francia y Países Bajos · continuidad geográfica completa",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1430,
+        "through": 1800
+      },
+      "versions": [
+        {
+          "from": 1430,
           "ids": [
             "Sens"
           ],
@@ -354833,12 +355176,18 @@
       "La Marche · 1531–1789 · revisión Francia 162",
       "Francia · 1790–1800 · revisión Francia 163",
       "Angulema · 1200–1514 · revisión Francia 164",
+      "Angulema · 1200–1514 · revisión Francia 164 · Brétigny",
+      "Angulema · 1200–1514 · revisión Francia 164 · después de Brétigny",
       "Angulema · 1515–1789 · revisión Francia 165",
       "Francia · 1790–1800 · revisión Francia 166",
       "Vizcondado de Limoges · 1200–1606 · revisión Francia 167",
+      "Vizcondado de Limoges · 1200–1606 · revisión Francia 167 · Brétigny",
+      "Vizcondado de Limoges · 1200–1606 · revisión Francia 167 · después de Brétigny",
       "Vizcondado de Limoges · 1607–1789 · revisión Francia 168",
       "Francia · 1790–1800 · revisión Francia 169",
       "Périgord · 1200–1606 · revisión Francia 170",
+      "Périgord · 1200–1606 · revisión Francia 170 · Brétigny",
+      "Périgord · 1200–1606 · revisión Francia 170 · después de Brétigny",
       "Périgord · 1607–1789 · revisión Francia 171",
       "Francia · 1790–1800 · revisión Francia 172",
       "Vizcondado de Turena · 1200–1737 · revisión Francia 173",
@@ -354980,7 +355329,8 @@
       "Borgoña · 1361–1362 · revisión Francia 310",
       "Borgoña · 1363–1476 · revisión Francia 311",
       "Auxerre · 1200–1370 · revisión Francia 312",
-      "Auxerre · 1371–1434 · revisión Francia 313",
+      "Auxerre · 1371–1434 · revisión Francia 313 · Auxerre antes de Troyes",
+      "Auxerre · 1371–1434 · revisión Francia 313 · Auxerre obediencia inglesa",
       "Francia · 1790–1800 · revisión Francia 314",
       "Auxerre · 1435–1476 · revisión Francia 315",
       "Auxerre · 1477–1789 · revisión Francia 316",
@@ -355473,7 +355823,9 @@
       "Ponthieu · 1465–1470 · revisión Francia 804",
       "Ponthieu · 1471–1789 · revisión Francia 805",
       "Francia · 1790–1800 · revisión Francia 806",
-      "Francia · 1200–1800 · revisión Francia 807",
+      "Francia · 1200–1800 · revisión Francia 807 · Sens antes de Troyes",
+      "Francia · 1200–1800 · revisión Francia 807 · Sens obediencia inglesa",
+      "Francia · 1200–1800 · revisión Francia 807 · Sens después de Troyes",
       "Francia · 1435–1462 · revisión Francia 809",
       "Francia · 1463–1464 · revisión Francia 810",
       "Francia · 1471–1800 · revisión Francia 811",

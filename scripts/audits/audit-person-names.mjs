@@ -14,7 +14,7 @@ for(const review of PERSON_NAME_REVIEWS){const p=PERSONAS.find(p=>p.id===review.
 for(const [id,p]of Object.entries(COMPLETE_ENGLISH_PROFILES)){
  if(!TRANSLATED_PEOPLE.some(r=>r.id===id))issues.push(`${id}: missing English route`);
  if(p.nickname&&p.name.toLowerCase().includes(p.nickname.toLowerCase()))issues.push(`${id}: duplicated English nickname`);
- if(/\bthe [A-Z]/.test(p.name)&&!HISTORICAL_NAME_EXCEPTIONS[id])issues.push(`${id}: epithet in English heading`);
+ if(/\bthe [A-Z]/.test(p.name.replace(/of the Holy Roman Empire$/,''))&&!HISTORICAL_NAME_EXCEPTIONS[id])issues.push(`${id}: epithet in English heading`);
  if(/^(?:King|Queen|Saint) /.test(p.name))issues.push(`${id}: title in English heading`);
 }
 const iberian=iberianRoyalRecords(PERSONAS);
