@@ -1,9 +1,11 @@
+import {CONFIRMED_PEOPLE_BIOGRAPHIES} from './confirmedPeopleBiographies.js';
 import {REFERENCIAS_BIOGRAFIAS} from './referencias-biografias.js';
 // Biografías ampliadas para las figuras centrales del Atlas. Solo se publican
 // en la ficha individual; el Atlas conserva el resumen breve de cada persona.
 // Cada apartado es una etapa con título propio. Las fechas y cargos siguen los
 // registros de la base; lo que la historiografía discute se presenta como tal.
 const BIOGRAFIAS_EXTENSAS = Object.freeze({
+  ...CONFIRMED_PEOPLE_BIOGRAPHIES,
   JUANABELTRANEJA: [{"titulo": "Heredera y paternidad discutida", "texto": "Nació en 1462, hija reconocida de Enrique IV y de Juana de Portugal. La oposición nobiliaria cuestionó su legitimidad atribuyendo la paternidad a Beltrán de la Cueva; de ahí el sobrenombre la Beltraneja. Esa acusación política no permite establecer una paternidad biológica alternativa como un hecho probado."}, {"titulo": "La guerra por la sucesión", "texto": "Después de la muerte de Enrique IV en 1474, sus partidarios se enfrentaron a los de Isabel I. En 1475 fue proclamada reina y contrajo matrimonio con su tío Alfonso V de Portugal, que apoyó su causa. Su reclamación de Castilla y León se registra como título disputado, sin atribuirle el dominio efectivo de ambos reinos."}, {"titulo": "La Excelente Señora en Portugal", "texto": "Los acuerdos de Alcáçovas de 1479 pusieron fin a la guerra. Juana ingresó en Santa Clara de Coimbra y más tarde residió en Lisboa, donde murió en 1530. La profesión religiosa no anuló su importancia diplomática: su posible matrimonio siguió preocupando a las cortes ibéricas y ella mantuvo su reivindicación sucesoria durante décadas."}],
   BALDASSARECASTIGLIONE:[
    {titulo:'Entre Mantua y Urbino',texto:'Nació en Casatico, cerca de Mantua, el 6 de diciembre de 1478. Hijo de Cristoforo Castiglione y Luigia, también llamada Aloisa, Gonzaga, se formó en el ambiente humanista de Milán. Desde 1504 estuvo al servicio de los duques de Urbino, cuya vida cortesana proporcionó el marco literario de su obra.'},

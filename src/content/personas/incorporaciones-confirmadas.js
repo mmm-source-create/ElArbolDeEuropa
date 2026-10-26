@@ -1,0 +1,9 @@
+export const CONFIRMED_PEOPLE_CONTENT = {
+ RICHELIEU:{resumen:'Cardenal y principal ministro de Luis XIII desde 1624. Reforzó la autoridad de la monarquía francesa y combatió la preponderancia de los Habsburgo en Europa, combinando reformas internas, diplomacia y guerra.'},
+ MAZARINO:{resumen:'Diplomático de origen italiano, cardenal y principal ministro durante la regencia de Ana de Austria y la juventud de Luis XIV. Superó la Fronda e intervino en las negociaciones de Westfalia y de la paz de los Pirineos.'},
+ JANHUS:{resumen:'Predicador y maestro de la Universidad de Praga, defendió la reforma de la Iglesia y criticó la venta de indulgencias. Fue condenado por herejía y ejecutado en el Concilio de Constanza en 1415. Su memoria dio nombre al movimiento husita.'},
+ JANZIZKA:{resumen:'Comandante de las guerras husitas, destacó por la disciplina de sus tropas y el empleo de carros fortificados. Dirigió campañas contra los ejércitos que intentaban someter a los husitas y siguió al mando después de quedar ciego.'},
+ JANZAMOYSKI:{resumen:'Canciller y gran hetman de la Corona polaca, consejero de Esteban Báthory y figura central de la política de la Mancomunidad. Fundó Zamość y su academia, y combinó mando militar, actividad parlamentaria y mecenazgo humanista.'},
+ GUTENBERG:{resumen:'Impresor de Maguncia que desarrolló un sistema de impresión con tipos móviles metálicos en la Europa del siglo XV. Su Biblia de cuarenta y dos líneas, realizada con la participación de Johann Fust y Peter Schöffer, transformó la producción del libro.'},
+ CHRISTINEPIZAN:{resumen:'Escritora nacida en Venecia y formada en la corte francesa. Compuso poesía y tratados políticos y morales, y defendió la capacidad intelectual y la dignidad de las mujeres en La ciudad de las damas, escrita en 1405.'},
+};

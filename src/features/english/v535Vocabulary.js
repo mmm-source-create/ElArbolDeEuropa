@@ -142,3 +142,11 @@ export const V535_NOTES = {
   'El acuerdo de 1614 da Cléveris y Mark a Brandeburgo.':'The agreement of 1614 gave Cleves and Mark to Brandenburg.',
   'Ravensberg, Mark y Cléveris figuran entre los territorios de Brandeburgo-Prusia.':'Ravensberg, Mark and Cleves are listed among the territories of Brandenburg-Prussia.',
 };
+
+Object.assign(V535_SOURCE_TITLES,{
+ 'Archives de la Côte-d’Or · La corte de Felipe el Bueno':'Archives de la Côte-d’Or · The court of Philip the Good',
+ 'Metropolitan Museum · Formación de los Países Bajos borgoñones':'Metropolitan Museum · Formation of the Burgundian Netherlands',
+ 'Treccani · La familia Sforza':'Treccani · The Sforza family',
+ 'Royal Collection Trust · Holyroodhouse y la boda de 1503':'Royal Collection Trust · Holyroodhouse and the wedding of 1503',
+ 'Treccani · Juan I de Portugal':'Treccani · John I of Portugal'
+});

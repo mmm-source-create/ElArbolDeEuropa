@@ -1,3 +1,4 @@
+import {REVIEWED_100_NAMES,REVIEWED_100_LABELS,REVIEWED_100_NOTES} from './reviewed100Vocabulary.js';
 import {IBERIAN_NAMES,IBERIAN_LABELS,IBERIAN_NOTES} from './iberianVocabulary.js';
 import {EXPANDED_NOTES} from './expandedNotes.js';
 import {EXPANDED_NAMES,EXPANDED_LABELS} from './expandedVocabulary.js';
@@ -5,6 +6,7 @@ import {V535_NAMES,V535_LABELS,V535_NOTES} from './v535Vocabulary.js';
 import {V536_NAMES,V536_LABELS,V536_NOTES} from './v536Vocabulary.js';
 // Display translations only: canonical dynasty and territory keys stay intact.
 export const PROFILE_LABELS = {
+  ...REVIEWED_100_LABELS,
   'Jagellón':'Jagiellon','Kotromanić':'Kotromanić',Piast:'Piast',Ban:'Ban','Ban / Rey':'Ban / King',
   ...EXPANDED_LABELS,
   ...V535_LABELS,
@@ -19,6 +21,7 @@ export const PROFILE_LABELS = {
 };
 
 export const ENGLISH_NAMES = {
+  ...REVIEWED_100_NAMES,
   STEPHEN2BOS:'Stephen II of Bosnia',CASI4:'Casimir IV of Poland',EDUVIGJAGBAV:'Hedwig Jagiellon',JUAN1ALBERTO:'John I Albert of Poland',
   VLADISLAVBOS:'Vladislav of Bosnia',DABISABOS:'Stephen Dabiša of Bosnia',TVRTKO1BOS:'Tvrtko I of Bosnia',OSTOJABOS:'Stephen Ostoja of Bosnia',
   ENRIQ6LUX:'Henry VI of Luxembourg',PHILIPPALUXAVES:'Philippa of Luxembourg',JUAN1B:'John of Bohemia',
@@ -36,6 +39,7 @@ export const ENGLISH_NAMES = {
 };
 
 export const PROFILE_NOTES = {
+  ...REVIEWED_100_NOTES,
   ...EXPANDED_NOTES,
   ...V535_NOTES,
   ...V536_NOTES,

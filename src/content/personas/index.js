@@ -1,3 +1,4 @@
+import {CONFIRMED_PEOPLE_CONTENT} from './incorporaciones-confirmadas.js';
 import {BELTRANEJA_CONTENT} from './beltraneja.js';
 import {BARBARROJA_CONTENT} from './barbarroja.js';
 import {CASTIGLIONE_CONTENT} from './castiglione.js';
@@ -32,6 +33,7 @@ import { PERSONAS_V529 } from './personas-v529.js';
 import { PERSONAS_V531 } from './personas-v531.js';
 
 export const PERSONA_CONTENT = Object.freeze({
+  ...CONFIRMED_PEOPLE_CONTENT,
   ...BELTRANEJA_CONTENT,
   ...BARBARROJA_CONTENT,
   ...LITUANIA_V526,

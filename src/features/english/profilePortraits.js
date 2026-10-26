@@ -1,7 +1,9 @@
+import {REVIEWED_100_PORTRAITS} from './reviewed100Portraits.js';
 import {IBERIAN_PORTRAITS} from './iberianPortraits.js';
 import {PORTUGAL_NAVARRE_PORTRAITS} from './portugalPortraits.js';
 // Artwork and licence URLs are inherited unchanged from the original credits.
 export const ENGLISH_PROFILE_PORTRAITS = {
+  ...REVIEWED_100_PORTRAITS,
   ...PORTUGAL_NAVARRE_PORTRAITS,
   ...IBERIAN_PORTRAITS,
   JUANSINTIERRA:{tipo:'Posthumous miniature',obra:'John with Beaulieu Abbey · Historia Anglorum',autor:'Matthew Paris',fecha:'c. 1250–1259',institucion:'British Library · Royal MS 14 C VII, f. 9'},

@@ -22,7 +22,7 @@ export function completeEnglishProfile(source, translatedNames={}) {
   for(const a of source.accesosCoronas||[]){translate(a.explicacion);for(const m of a.motivos||[])if(!PROFILE_LABELS[m])throw Error(`Missing accession reason: ${m}`);}
   const sections=source.biografiaExtensa||[];
   if(sections.length!==(translation.sections||[]).length)throw Error(`Incomplete biography translation: ${source.id}`);
-  const result={...source,...translation,translationComplete:true,nombre:translation.name,sobrenombre:translation.nickname||'',aliases:translation.aliases||[],resumen:translation.summary,biografia:translation.summary,
+  const result={...source,...translation,translationComplete:true,nombre:translation.name,sobrenombre:translation.nickname||'',aliases:translation.aliases||[],resumen:translation.summary,biografia:translation.biography||translation.summary,
     englishLabels:PROFILE_LABELS,englishNotes:notes,
     biografiaExtensa:sections.map((part,i)=>({...part,titulo:translation.sections[i][0],texto:translation.sections[i][1]})),
     localizedClaims:personClaims(source).map(claim=>({...claim,

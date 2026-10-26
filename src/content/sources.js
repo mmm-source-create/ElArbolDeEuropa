@@ -1,3 +1,4 @@
+import {CONFIRMED_PEOPLE_REFERENCES} from './confirmedPeopleReferences.js';
 import {HOUSE_CLEANUP_SOURCES} from './sources-house-cleanup.js';
 import {HERITAGE_EDITORIAL_SOURCES} from '../data/historiasHerencias.js';
 import {TREINTA_CASAS_SOURCES} from './sources-treinta-casas.js';
@@ -29,6 +30,7 @@ const DOGES_1400_1605 = [
 // Bibliography shared by the public site, Atlas and generated entity pages.
 // A territorial reference supplies context; only explicit person IDs assign a biography.
 export const SOURCES = [
+  ...Object.entries(CONFIRMED_PEOPLE_REFERENCES).flatMap(([id,refs])=>refs.map(f=>({...f,grupo:'Historia cultural y política',territorios:[],personas:[id]}))),
   ...CONNECTION_SOURCES,
   ...LOUIS_HUNGARY_SOURCES,
   ...DURAZZO_SOURCES,

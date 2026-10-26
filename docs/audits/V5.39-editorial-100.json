@@ -1,0 +1,1051 @@
+{
+  "scope": "100 existing Spanish headings and 100 complete English editions",
+  "count": 100,
+  "extendedBiographySections": 45,
+  "governmentCountBefore": 2975,
+  "governmentCountAfter": 2975,
+  "newPeople": 7,
+  "houses": [
+    {
+      "es": "valois-borgona",
+      "en": "valois-burgundy"
+    },
+    {
+      "es": "vasa",
+      "en": "vasa"
+    },
+    {
+      "es": "sforza",
+      "en": "sforza"
+    },
+    {
+      "es": "medici",
+      "en": "medici"
+    },
+    {
+      "es": "tudor",
+      "en": "tudor"
+    },
+    {
+      "es": "avis",
+      "en": "aviz"
+    },
+    {
+      "es": "visconti",
+      "en": "visconti"
+    }
+  ],
+  "records": [
+    {
+      "id": "FEL3BORG",
+      "es": "Felipe III de Borgoña",
+      "en": "Philip III of Burgundy",
+      "previous": "Felipe III de Borgoña",
+      "nickname": "el Bueno",
+      "slug": "felipe-iii-de-borgona",
+      "decision": "retain",
+      "reason": "Se conserva la forma historiográfica asentada; ordinal, contexto, sobrenombre separado y variantes comprobados."
+    },
+    {
+      "id": "LEOP1HRE",
+      "es": "Leopoldo I del Sacro Imperio",
+      "en": "Leopold I of the Holy Roman Empire",
+      "previous": "Leopoldo I del Sacro Imperio",
+      "nickname": "",
+      "slug": "leopoldo-i-del-sacro-imperio",
+      "decision": "retain",
+      "reason": "Se conserva la forma historiográfica asentada; ordinal, contexto, sobrenombre separado y variantes comprobados."
+    },
+    {
+      "id": "CAR1BORG",
+      "es": "Carlos I de Borgoña",
+      "en": "Charles I of Burgundy",
+      "previous": "Carlos I de Borgoña",
+      "nickname": "el Temerario",
+      "slug": "carlos-i-de-borgona",
+      "decision": "retain",
+      "reason": "Se conserva la forma historiográfica asentada; ordinal, contexto, sobrenombre separado y variantes comprobados."
+    },
+    {
+      "id": "CARLOS7FRA",
+      "es": "Carlos VII de Francia",
+      "en": "Charles VII of France",
+      "previous": "Carlos VII de Francia",
+      "nickname": "el Victorioso",
+      "slug": "carlos-vii-de-francia",
+      "decision": "retain",
+      "reason": "Se conserva la forma historiográfica asentada; ordinal, contexto, sobrenombre separado y variantes comprobados."
+    },
+    {
+      "id": "SEGIS3VASA",
+      "es": "Segismundo III Vasa",
+      "en": "Sigismund III Vasa",
+      "previous": "Segismundo III Vasa",
+      "nickname": "",
+      "slug": "segismundo-iii-vasa",
+      "decision": "retain",
+      "reason": "Se conserva la forma historiográfica asentada; ordinal, contexto, sobrenombre separado y variantes comprobados."
+    },
+    {
+      "id": "SALADIN",
+      "es": "Saladino",
+      "en": "Saladin",
+      "previous": "Saladino",
+      "nickname": "",
+      "slug": "saladino",
+      "decision": "retain",
+      "reason": "Se conserva la forma historiográfica asentada; ordinal, contexto, sobrenombre separado y variantes comprobados."
+    },
+    {
+      "id": "ENRIQ3FRA",
+      "es": "Enrique III de Francia",
+      "en": "Henry III of France",
+      "previous": "Enrique III de Francia",
+      "nickname": "",
+      "slug": "enrique-iii-de-francia",
+      "decision": "retain",
+      "reason": "Se conserva la forma historiográfica asentada; ordinal, contexto, sobrenombre separado y variantes comprobados."
+    },
+    {
+      "id": "MARIATERESAHAB",
+      "es": "María Teresa de Austria",
+      "en": "Maria Theresa of Austria",
+      "previous": "María Teresa de Austria",
+      "nickname": "",
+      "slug": "maria-teresa-de-austria-mariateresahab",
+      "decision": "retain",
+      "reason": "Se conserva la forma historiográfica asentada; ordinal, contexto, sobrenombre separado y variantes comprobados."
+    },
+    {
+      "id": "DONJUANAUST",
+      "es": "Juan de Austria",
+      "en": "John of Austria",
+      "previous": "Don Juan de Austria",
+      "nickname": "",
+      "slug": "don-juan-de-austria",
+      "decision": "revise",
+      "reason": "Separar cargos y sobrenombres del nombre; usar el exónimo asentado y conservar el contexto y las variantes."
+    },
+    {
+      "id": "CARLOS6HRE",
+      "es": "Carlos VI del Sacro Imperio",
+      "en": "Charles VI of the Holy Roman Empire",
+      "previous": "Carlos VI del Sacro Imperio",
+      "nickname": "",
+      "slug": "carlos-vi-del-sacro-imperio",
+      "decision": "retain",
+      "reason": "Se conserva la forma historiográfica asentada; ordinal, contexto, sobrenombre separado y variantes comprobados."
+    },
+    {
+      "id": "VLAD3DRACULA",
+      "es": "Vlad III de Valaquia",
+      "en": "Vlad III of Wallachia",
+      "previous": "Vlad III de Valaquia",
+      "nickname": "el Empalador",
+      "slug": "vlad-iii-de-valaquia",
+      "decision": "retain",
+      "reason": "Se conserva la forma historiográfica asentada; ordinal, contexto, sobrenombre separado y variantes comprobados."
+    },
+    {
+      "id": "JUAN3SOBIESKI",
+      "es": "Juan III Sobieski",
+      "en": "John III Sobieski",
+      "previous": "Juan III Sobieski",
+      "nickname": "",
+      "slug": "juan-iii-sobieski",
+      "decision": "retain",
+      "reason": "Se conserva la forma historiográfica asentada; ordinal, contexto, sobrenombre separado y variantes comprobados."
+    },
+    {
+      "id": "FRAN1SFOR",
+      "es": "Francisco I Sforza",
+      "en": "Francesco I Sforza",
+      "previous": "Francisco I Sforza",
+      "nickname": "",
+      "slug": "francisco-i-sforza",
+      "decision": "retain",
+      "reason": "Se conserva la forma historiográfica asentada; ordinal, contexto, sobrenombre separado y variantes comprobados."
+    },
+    {
+      "id": "MEHMED4OSM",
+      "es": "Mehmed IV",
+      "en": "Mehmed IV",
+      "previous": "Mehmed IV",
+      "nickname": "el Cazador",
+      "slug": "mehmed-iv",
+      "decision": "retain",
+      "reason": "Se conserva la forma historiográfica asentada; ordinal, contexto, sobrenombre separado y variantes comprobados."
+    },
+    {
+      "id": "SEGIS1",
+      "es": "Segismundo de Luxemburgo",
+      "en": "Sigismund of Luxembourg",
+      "previous": "Segismundo de Luxemburgo",
+      "nickname": "",
+      "slug": "segismundo-de-luxemburgo",
+      "decision": "retain",
+      "reason": "Se conserva la forma historiográfica asentada; ordinal, contexto, sobrenombre separado y variantes comprobados."
+    },
+    {
+      "id": "FED3HAB",
+      "es": "Federico III del Sacro Imperio",
+      "en": "Frederick III of the Holy Roman Empire",
+      "previous": "Federico III",
+      "nickname": "el Pacífico",
+      "slug": "federico-iii",
+      "decision": "revise",
+      "reason": "Separar cargos y sobrenombres del nombre; usar el exónimo asentado y conservar el contexto y las variantes."
+    },
+    {
+      "id": "LEOP2HRE",
+      "es": "Leopoldo II del Sacro Imperio",
+      "en": "Leopold II of the Holy Roman Empire",
+      "previous": "Leopoldo II del Sacro Imperio",
+      "nickname": "",
+      "slug": "leopoldo-ii-del-sacro-imperio",
+      "decision": "retain",
+      "reason": "Se conserva la forma historiográfica asentada; ordinal, contexto, sobrenombre separado y variantes comprobados."
+    },
+    {
+      "id": "JOSE2HRE",
+      "es": "José II del Sacro Imperio",
+      "en": "Joseph II of the Holy Roman Empire",
+      "previous": "José II del Sacro Imperio",
+      "nickname": "",
+      "slug": "jose-ii-del-sacro-imperio",
+      "decision": "retain",
+      "reason": "Se conserva la forma historiográfica asentada; ordinal, contexto, sobrenombre separado y variantes comprobados."
+    },
+    {
+      "id": "FEL2FRA",
+      "es": "Felipe II de Francia",
+      "en": "Philip II of France",
+      "previous": "Felipe II de Francia",
+      "nickname": "Augusto",
+      "slug": "felipe-ii-de-francia",
+      "decision": "retain",
+      "reason": "Se conserva la forma historiográfica asentada; ordinal, contexto, sobrenombre separado y variantes comprobados."
+    },
+    {
+      "id": "SEBASTIANOVENIER",
+      "es": "Sebastiano Venier",
+      "en": "Sebastiano Venier",
+      "previous": "Sebastiano Venier",
+      "nickname": "",
+      "slug": "sebastiano-venier",
+      "decision": "retain",
+      "reason": "Se conserva la forma historiográfica asentada; ordinal, contexto, sobrenombre separado y variantes comprobados."
+    },
+    {
+      "id": "ULUCALI",
+      "es": "Kılıç Ali Paşa",
+      "en": "Uluç Ali Pasha",
+      "previous": "Kılıç Ali Paşa",
+      "nickname": "",
+      "slug": "kilic-ali-pasa",
+      "decision": "retain",
+      "reason": "Se conserva la forma historiográfica asentada; ordinal, contexto, sobrenombre separado y variantes comprobados."
+    },
+    {
+      "id": "JUAN1BORG",
+      "es": "Juan I de Borgoña",
+      "en": "John I of Burgundy",
+      "previous": "Juan I de Borgoña",
+      "nickname": "Sin Miedo",
+      "slug": "juan-i-de-borgona",
+      "decision": "retain",
+      "reason": "Se conserva la forma historiográfica asentada; ordinal, contexto, sobrenombre separado y variantes comprobados."
+    },
+    {
+      "id": "FRAN2HRE",
+      "es": "Francisco II del Sacro Imperio",
+      "en": "Francis II of the Holy Roman Empire",
+      "previous": "Francisco II del Sacro Imperio",
+      "nickname": "",
+      "slug": "francisco-ii-del-sacro-imperio",
+      "decision": "retain",
+      "reason": "Se conserva la forma historiográfica asentada; ordinal, contexto, sobrenombre separado y variantes comprobados."
+    },
+    {
+      "id": "LUIS12FRA",
+      "es": "Luis XII de Francia",
+      "en": "Louis XII of France",
+      "previous": "Luis XII de Francia",
+      "nickname": "el Padre del Pueblo",
+      "slug": "luis-xii-de-francia",
+      "decision": "retain",
+      "reason": "Se conserva la forma historiográfica asentada; ordinal, contexto, sobrenombre separado y variantes comprobados."
+    },
+    {
+      "id": "EDUARDO3ING",
+      "es": "Eduardo III de Inglaterra",
+      "en": "Edward III of England",
+      "previous": "Eduardo III de Inglaterra",
+      "nickname": "",
+      "slug": "eduardo-iii-de-inglaterra",
+      "decision": "retain",
+      "reason": "Se conserva la forma historiográfica asentada; ordinal, contexto, sobrenombre separado y variantes comprobados."
+    },
+    {
+      "id": "CARLOS9SUE",
+      "es": "Carlos IX de Suecia",
+      "en": "Charles IX of Sweden",
+      "previous": "Carlos IX de Suecia",
+      "nickname": "",
+      "slug": "carlos-ix-de-suecia",
+      "decision": "retain",
+      "reason": "Se conserva la forma historiográfica asentada; ordinal, contexto, sobrenombre separado y variantes comprobados."
+    },
+    {
+      "id": "CATASFOR",
+      "es": "Catalina Sforza",
+      "en": "Caterina Sforza",
+      "previous": "Catalina Sforza",
+      "nickname": "",
+      "slug": "catalina-sforza",
+      "decision": "retain",
+      "reason": "Se conserva la forma historiográfica asentada; ordinal, contexto, sobrenombre separado y variantes comprobados."
+    },
+    {
+      "id": "EDUARDO1ING",
+      "es": "Eduardo I de Inglaterra",
+      "en": "Edward I of England",
+      "previous": "Eduardo I de Inglaterra",
+      "nickname": "Martillo de los Escoceses",
+      "slug": "eduardo-i-de-inglaterra",
+      "decision": "retain",
+      "reason": "Se conserva la forma historiográfica asentada; ordinal, contexto, sobrenombre separado y variantes comprobados."
+    },
+    {
+      "id": "EDUNEGRO",
+      "es": "Eduardo de Woodstock",
+      "en": "Edward of Woodstock",
+      "previous": "Eduardo de Woodstock",
+      "nickname": "el Príncipe Negro",
+      "slug": "eduardo-de-woodstock",
+      "decision": "retain",
+      "reason": "Se conserva la forma historiográfica asentada; ordinal, contexto, sobrenombre separado y variantes comprobados."
+    },
+    {
+      "id": "FEDERICO2SIC",
+      "es": "Federico II de Sicilia",
+      "en": "Frederick II of Sicily",
+      "previous": "Federico II de Sicilia",
+      "nickname": "",
+      "slug": "federico-ii-de-sicilia",
+      "decision": "retain",
+      "reason": "Se conserva la forma historiográfica asentada; ordinal, contexto, sobrenombre separado y variantes comprobados."
+    },
+    {
+      "id": "JUANBEDFORD",
+      "es": "Juan de Lancaster",
+      "en": "John of Lancaster",
+      "previous": "Juan de Lancaster, duque de Bedford",
+      "nickname": "",
+      "slug": "juan-de-lancaster-duque-de-bedford",
+      "decision": "revise",
+      "reason": "Separar cargos y sobrenombres del nombre; usar el exónimo asentado y conservar el contexto y las variantes."
+    },
+    {
+      "id": "LUDOVSFOR",
+      "es": "Ludovico Sforza",
+      "en": "Ludovico Sforza",
+      "previous": "Ludovico Sforza",
+      "nickname": "el Moro",
+      "slug": "ludovico-sforza",
+      "decision": "retain",
+      "reason": "Se conserva la forma historiográfica asentada; ordinal, contexto, sobrenombre separado y variantes comprobados."
+    },
+    {
+      "id": "PAPA_INOCENCIO11",
+      "es": "Inocencio XI",
+      "en": "Innocent XI",
+      "previous": "Inocencio XI",
+      "nickname": "",
+      "slug": "inocencio-xi",
+      "decision": "retain",
+      "reason": "Se conserva la forma historiográfica asentada; ordinal, contexto, sobrenombre separado y variantes comprobados."
+    },
+    {
+      "id": "RODRIGOBORJA",
+      "es": "Alejandro VI",
+      "en": "Alexander VI",
+      "previous": "Alejandro VI",
+      "nickname": "",
+      "slug": "alejandro-vi",
+      "decision": "retain",
+      "reason": "Se conserva la forma historiográfica asentada; ordinal, contexto, sobrenombre separado y variantes comprobados."
+    },
+    {
+      "id": "SELIM2OSM",
+      "es": "Selim II",
+      "en": "Selim II",
+      "previous": "Selim II",
+      "nickname": "",
+      "slug": "selim-ii",
+      "decision": "retain",
+      "reason": "Se conserva la forma historiográfica asentada; ordinal, contexto, sobrenombre separado y variantes comprobados."
+    },
+    {
+      "id": "SIBYLLAJER",
+      "es": "Sibila de Jerusalén",
+      "en": "Sibylla of Jerusalem",
+      "previous": "Sibila de Jerusalén",
+      "nickname": "",
+      "slug": "sibila-de-jerusalen",
+      "decision": "retain",
+      "reason": "Se conserva la forma historiográfica asentada; ordinal, contexto, sobrenombre separado y variantes comprobados."
+    },
+    {
+      "id": "CHARLES5LOR",
+      "es": "Carlos V de Lorena",
+      "en": "Charles V of Lorraine",
+      "previous": "Carlos V de Lorena",
+      "nickname": "",
+      "slug": "carlos-v-de-lorena",
+      "decision": "retain",
+      "reason": "Se conserva la forma historiográfica asentada; ordinal, contexto, sobrenombre separado y variantes comprobados."
+    },
+    {
+      "id": "FELIPEHESSE",
+      "es": "Felipe I de Hesse",
+      "en": "Philip I of Hesse",
+      "previous": "Felipe I de Hesse",
+      "nickname": "el Magnánimo",
+      "slug": "felipe-i-de-hesse",
+      "decision": "retain",
+      "reason": "Se conserva la forma historiográfica asentada; ordinal, contexto, sobrenombre separado y variantes comprobados."
+    },
+    {
+      "id": "CHARLESMAYENNE",
+      "es": "Carlos de Lorena",
+      "en": "Charles of Lorraine",
+      "previous": "Carlos de Lorena, duque de Mayenne",
+      "nickname": "",
+      "slug": "carlos-de-lorena-duque-de-mayenne",
+      "decision": "revise",
+      "reason": "Separar cargos y sobrenombres del nombre; usar el exónimo asentado y conservar el contexto y las variantes."
+    },
+    {
+      "id": "FEL2BORG",
+      "es": "Felipe II de Borgoña",
+      "en": "Philip II of Burgundy",
+      "previous": "Felipe II de Borgoña",
+      "nickname": "el Atrevido",
+      "slug": "felipe-ii-de-borgona",
+      "decision": "retain",
+      "reason": "Se conserva la forma historiográfica asentada; ordinal, contexto, sobrenombre separado y variantes comprobados."
+    },
+    {
+      "id": "ISABBOS",
+      "es": "Isabel de Bosnia",
+      "en": "Elizabeth of Bosnia",
+      "previous": "Isabel de Bosnia",
+      "nickname": "",
+      "slug": "isabel-de-bosnia",
+      "decision": "retain",
+      "reason": "Se conserva la forma historiográfica asentada; ordinal, contexto, sobrenombre separado y variantes comprobados."
+    },
+    {
+      "id": "MARCANTONIO2COL",
+      "es": "Marcantonio II Colonna",
+      "en": "Marcantonio II Colonna",
+      "previous": "Marcantonio II Colonna",
+      "nickname": "",
+      "slug": "marcantonio-ii-colonna",
+      "decision": "retain",
+      "reason": "Se conserva la forma historiográfica asentada; ordinal, contexto, sobrenombre separado y variantes comprobados."
+    },
+    {
+      "id": "ALIPASHALEPANTO",
+      "es": "Müezzinzade Alí Bajá",
+      "en": "Müezzinzade Ali Pasha",
+      "previous": "Müezzinzade Alí Bajá",
+      "nickname": "",
+      "slug": "muezzinzade-ali-baja",
+      "decision": "retain",
+      "reason": "Se conserva la forma historiográfica asentada; ordinal, contexto, sobrenombre separado y variantes comprobados."
+    },
+    {
+      "id": "FERN1EMP",
+      "es": "Fernando I de Habsburgo",
+      "en": "Ferdinand I of the Holy Roman Empire",
+      "previous": "Fernando I de Habsburgo",
+      "nickname": "",
+      "slug": "fernando-i-de-habsburgo",
+      "decision": "retain",
+      "reason": "Se conserva la forma historiográfica asentada; ordinal, contexto, sobrenombre separado y variantes comprobados."
+    },
+    {
+      "id": "FED2HOH",
+      "es": "Federico II Hohenstaufen",
+      "en": "Frederick II of the Holy Roman Empire",
+      "previous": "Federico II Hohenstaufen",
+      "nickname": "Stupor Mundi",
+      "slug": "federico-ii-hohenstaufen",
+      "decision": "retain",
+      "reason": "Se conserva la forma historiográfica asentada; ordinal, contexto, sobrenombre separado y variantes comprobados."
+    },
+    {
+      "id": "FERN2EMP",
+      "es": "Fernando II del Sacro Imperio",
+      "en": "Ferdinand II of the Holy Roman Empire",
+      "previous": "Fernando II del Sacro Imperio",
+      "nickname": "",
+      "slug": "fernando-ii-del-sacro-imperio",
+      "decision": "retain",
+      "reason": "Se conserva la forma historiográfica asentada; ordinal, contexto, sobrenombre separado y variantes comprobados."
+    },
+    {
+      "id": "ANAJAG",
+      "es": "Ana Jagellón",
+      "en": "Anna Jagiellon",
+      "previous": "Ana Jagellón",
+      "nickname": "",
+      "slug": "ana-jagellon",
+      "decision": "retain",
+      "reason": "Se conserva la forma historiográfica asentada; ordinal, contexto, sobrenombre separado y variantes comprobados."
+    },
+    {
+      "id": "CARLOS1ANJ",
+      "es": "Carlos I de Anjou",
+      "en": "Charles I of Anjou",
+      "previous": "Carlos I Nápoles",
+      "nickname": "",
+      "slug": "carlos-i-napoles",
+      "decision": "revise",
+      "reason": "Separar cargos y sobrenombres del nombre; usar el exónimo asentado y conservar el contexto y las variantes."
+    },
+    {
+      "id": "ENRIQ5ING",
+      "es": "Enrique V de Inglaterra",
+      "en": "Henry V of England",
+      "previous": "Enrique V de Inglaterra",
+      "nickname": "",
+      "slug": "enrique-v-de-inglaterra",
+      "decision": "retain",
+      "reason": "Se conserva la forma historiográfica asentada; ordinal, contexto, sobrenombre separado y variantes comprobados."
+    },
+    {
+      "id": "FRED3SAX",
+      "es": "Federico III de Sajonia",
+      "en": "Frederick III of Saxony",
+      "previous": "Federico III de Sajonia",
+      "nickname": "el Sabio",
+      "slug": "federico-iii-de-sajonia",
+      "decision": "retain",
+      "reason": "Se conserva la forma historiográfica asentada; ordinal, contexto, sobrenombre separado y variantes comprobados."
+    },
+    {
+      "id": "JOSE1HRE",
+      "es": "José I del Sacro Imperio",
+      "en": "Joseph I of the Holy Roman Empire",
+      "previous": "José I del Sacro Imperio",
+      "nickname": "",
+      "slug": "jose-i-del-sacro-imperio",
+      "decision": "retain",
+      "reason": "Se conserva la forma historiográfica asentada; ordinal, contexto, sobrenombre separado y variantes comprobados."
+    },
+    {
+      "id": "JUAN2CASIVASA",
+      "es": "Juan II Casimiro Vasa",
+      "en": "John II Casimir Vasa",
+      "previous": "Juan II Casimiro Vasa",
+      "nickname": "",
+      "slug": "juan-ii-casimiro-vasa",
+      "decision": "retain",
+      "reason": "Se conserva la forma historiográfica asentada; ordinal, contexto, sobrenombre separado y variantes comprobados."
+    },
+    {
+      "id": "STAN2PONIAT",
+      "es": "Estanislao II Augusto Poniatowski",
+      "en": "Stanisław II August Poniatowski",
+      "previous": "Estanislao II Augusto Poniatowski",
+      "nickname": "",
+      "slug": "estanislao-ii-augusto-poniatowski",
+      "decision": "retain",
+      "reason": "Se conserva la forma historiográfica asentada; ordinal, contexto, sobrenombre separado y variantes comprobados."
+    },
+    {
+      "id": "WLAD4VASA",
+      "es": "Ladislao IV Vasa",
+      "en": "Władysław IV Vasa",
+      "previous": "Ladislao IV Vasa",
+      "nickname": "",
+      "slug": "ladislao-iv-vasa",
+      "decision": "retain",
+      "reason": "Se conserva la forma historiográfica asentada; ordinal, contexto, sobrenombre separado y variantes comprobados."
+    },
+    {
+      "id": "CARLOS6FRA",
+      "es": "Carlos VI de Francia",
+      "en": "Charles VI of France",
+      "previous": "Carlos VI de Francia",
+      "nickname": "el Bienamado",
+      "slug": "carlos-vi-de-francia",
+      "decision": "retain",
+      "reason": "Se conserva la forma historiográfica asentada; ordinal, contexto, sobrenombre separado y variantes comprobados."
+    },
+    {
+      "id": "FRAN1GUISA",
+      "es": "Francisco I de Guisa",
+      "en": "Francis of Guise",
+      "previous": "Francisco I de Guisa",
+      "nickname": "el Acuchillado",
+      "slug": "francisco-i-de-guisa",
+      "decision": "retain",
+      "reason": "Se conserva la forma historiográfica asentada; ordinal, contexto, sobrenombre separado y variantes comprobados."
+    },
+    {
+      "id": "HENRI1GUISE",
+      "es": "Enrique I de Guisa",
+      "en": "Henry I of Guise",
+      "previous": "Enrique I de Guisa",
+      "nickname": "el Acuchillado",
+      "slug": "enrique-i-de-guisa",
+      "decision": "retain",
+      "reason": "Se conserva la forma historiográfica asentada; ordinal, contexto, sobrenombre separado y variantes comprobados."
+    },
+    {
+      "id": "JUAN2FRA",
+      "es": "Juan II de Francia",
+      "en": "John II of France",
+      "previous": "Juan II de Francia",
+      "nickname": "el Bueno",
+      "slug": "juan-ii-de-francia",
+      "decision": "retain",
+      "reason": "Se conserva la forma historiográfica asentada; ordinal, contexto, sobrenombre separado y variantes comprobados."
+    },
+    {
+      "id": "JUAN3SUECIA",
+      "es": "Juan III de Suecia",
+      "en": "John III of Sweden",
+      "previous": "Juan III de Suecia",
+      "nickname": "",
+      "slug": "juan-iii-de-suecia",
+      "decision": "retain",
+      "reason": "Se conserva la forma historiográfica asentada; ordinal, contexto, sobrenombre separado y variantes comprobados."
+    },
+    {
+      "id": "PAPA_JULIO2",
+      "es": "Julio II",
+      "en": "Julius II",
+      "previous": "Julio II",
+      "nickname": "el Papa Guerrero",
+      "slug": "julio-ii",
+      "decision": "retain",
+      "reason": "Se conserva la forma historiográfica asentada; ordinal, contexto, sobrenombre separado y variantes comprobados."
+    },
+    {
+      "id": "PAPA_LEON10",
+      "es": "León X",
+      "en": "Leo X",
+      "previous": "León X",
+      "nickname": "",
+      "slug": "leon-x",
+      "decision": "retain",
+      "reason": "Se conserva la forma historiográfica asentada; ordinal, contexto, sobrenombre separado y variantes comprobados."
+    },
+    {
+      "id": "PAPA_PAULO3",
+      "es": "Paulo III",
+      "en": "Paul III",
+      "previous": "Paulo III",
+      "nickname": "",
+      "slug": "paulo-iii",
+      "decision": "retain",
+      "reason": "Se conserva la forma historiográfica asentada; ordinal, contexto, sobrenombre separado y variantes comprobados."
+    },
+    {
+      "id": "ROBERT1BRUCE",
+      "es": "Roberto I de Escocia",
+      "en": "Robert I of Scotland",
+      "previous": "Roberto I de Escocia",
+      "nickname": "",
+      "slug": "roberto-i-de-escocia",
+      "decision": "retain",
+      "reason": "Se conserva la forma historiográfica asentada; ordinal, contexto, sobrenombre separado y variantes comprobados."
+    },
+    {
+      "id": "PAPA_PIO5",
+      "es": "Pío V",
+      "en": "Pius V",
+      "previous": "Pío V",
+      "nickname": "",
+      "slug": "pio-v",
+      "decision": "retain",
+      "reason": "Se conserva la forma historiográfica asentada; ordinal, contexto, sobrenombre separado y variantes comprobados."
+    },
+    {
+      "id": "BLANMARVISC",
+      "es": "Blanca María Visconti",
+      "en": "Bianca Maria Visconti",
+      "previous": "Blanca María Visconti",
+      "nickname": "",
+      "slug": "blanca-maria-visconti",
+      "decision": "retain",
+      "reason": "Se conserva la forma historiográfica asentada; ordinal, contexto, sobrenombre separado y variantes comprobados."
+    },
+    {
+      "id": "CATALINAJAG",
+      "es": "Catalina Jagellón",
+      "en": "Catherine Jagiellon",
+      "previous": "Catalina Jagellón",
+      "nickname": "",
+      "slug": "catalina-jagellon",
+      "decision": "retain",
+      "reason": "Se conserva la forma historiográfica asentada; ordinal, contexto, sobrenombre separado y variantes comprobados."
+    },
+    {
+      "id": "ISABELLAESTE",
+      "es": "Isabella d’Este",
+      "en": "Isabella d’Este",
+      "previous": "Isabella d’Este",
+      "nickname": "",
+      "slug": "isabella-d-este",
+      "decision": "retain",
+      "reason": "Se conserva la forma historiográfica asentada; ordinal, contexto, sobrenombre separado y variantes comprobados."
+    },
+    {
+      "id": "LUIS1CONDE",
+      "es": "Luis I de Borbón-Condé",
+      "en": "Louis I of Bourbon-Condé",
+      "previous": "Luis I de Borbón-Condé",
+      "nickname": "",
+      "slug": "luis-i-de-borbon-conde",
+      "decision": "retain",
+      "reason": "Se conserva la forma historiográfica asentada; ordinal, contexto, sobrenombre separado y variantes comprobados."
+    },
+    {
+      "id": "AGOSTINOBARBARIGO",
+      "es": "Agostino Barbarigo",
+      "en": "Agostino Barbarigo",
+      "previous": "Agostino Barbarigo",
+      "nickname": "",
+      "slug": "agostino-barbarigo-agostinobarbarigo",
+      "decision": "retain",
+      "reason": "Se conserva la forma historiográfica asentada; ordinal, contexto, sobrenombre separado y variantes comprobados."
+    },
+    {
+      "id": "ALVAROBAZAN",
+      "es": "Álvaro de Bazán",
+      "en": "Álvaro de Bazán",
+      "previous": "Álvaro de Bazán",
+      "nickname": "",
+      "slug": "alvaro-de-bazan",
+      "decision": "retain",
+      "reason": "Se conserva la forma historiográfica asentada; ordinal, contexto, sobrenombre separado y variantes comprobados."
+    },
+    {
+      "id": "DIEGOLAIN",
+      "es": "Diego Laínez",
+      "en": "Diego Laínez",
+      "previous": "Diego Laínez",
+      "nickname": "",
+      "slug": "diego-lainez",
+      "decision": "retain",
+      "reason": "Se conserva la forma historiográfica asentada; ordinal, contexto, sobrenombre separado y variantes comprobados."
+    },
+    {
+      "id": "GASPARD2COLIGNY",
+      "es": "Gaspar II de Coligny",
+      "en": "Gaspard II de Coligny",
+      "previous": "Gaspar II de Coligny",
+      "nickname": "",
+      "slug": "gaspar-ii-de-coligny",
+      "decision": "retain",
+      "reason": "Se conserva la forma historiográfica asentada; ordinal, contexto, sobrenombre separado y variantes comprobados."
+    },
+    {
+      "id": "GIANANDREADORIA",
+      "es": "Gianandrea Doria",
+      "en": "Gianandrea Doria",
+      "previous": "Gianandrea Doria",
+      "nickname": "",
+      "slug": "gianandrea-doria",
+      "decision": "retain",
+      "reason": "Se conserva la forma historiográfica asentada; ordinal, contexto, sobrenombre separado y variantes comprobados."
+    },
+    {
+      "id": "KARAMUSTAFA",
+      "es": "Merzifonlu Kara Mustafa Bajá",
+      "en": "Kara Mustafa Pasha",
+      "previous": "Merzifonlu Kara Mustafa Bajá",
+      "nickname": "",
+      "slug": "merzifonlu-kara-mustafa-baja",
+      "decision": "retain",
+      "reason": "Se conserva la forma historiográfica asentada; ordinal, contexto, sobrenombre separado y variantes comprobados."
+    },
+    {
+      "id": "LISAGHERARDINI",
+      "es": "Lisa Gherardini",
+      "en": "Lisa Gherardini",
+      "previous": "Lisa Gherardini",
+      "nickname": "",
+      "slug": "lisa-gherardini",
+      "decision": "retain",
+      "reason": "Se conserva la forma historiográfica asentada; ordinal, contexto, sobrenombre separado y variantes comprobados."
+    },
+    {
+      "id": "WILLIAMWALLACE",
+      "es": "William Wallace",
+      "en": "William Wallace",
+      "previous": "William Wallace",
+      "nickname": "",
+      "slug": "william-wallace",
+      "decision": "retain",
+      "reason": "Se conserva la forma historiográfica asentada; ordinal, contexto, sobrenombre separado y variantes comprobados."
+    },
+    {
+      "id": "AUGUST2SAXPOL",
+      "es": "Augusto II de Polonia",
+      "en": "Augustus II of Poland",
+      "previous": "Augusto II de Polonia",
+      "nickname": "el Fuerte",
+      "slug": "augusto-ii-de-polonia",
+      "decision": "retain",
+      "reason": "Se conserva la forma historiográfica asentada; ordinal, contexto, sobrenombre separado y variantes comprobados."
+    },
+    {
+      "id": "CONRADO4HOH",
+      "es": "Conrado IV de Hohenstaufen",
+      "en": "Conrad IV of Germany",
+      "previous": "Conrado IV de Hohenstaufen",
+      "nickname": "",
+      "slug": "conrado-iv-de-hohenstaufen",
+      "decision": "retain",
+      "reason": "Se conserva la forma historiográfica asentada; ordinal, contexto, sobrenombre separado y variantes comprobados."
+    },
+    {
+      "id": "LADI2",
+      "es": "Ladislao II de Polonia",
+      "en": "Władysław II Jagiełło",
+      "previous": "Ladislao II de Polonia",
+      "nickname": "",
+      "slug": "ladislao-ii-de-polonia",
+      "decision": "retain",
+      "reason": "Se conserva la forma historiográfica asentada; ordinal, contexto, sobrenombre separado y variantes comprobados."
+    },
+    {
+      "id": "MARGFLAN",
+      "es": "Margarita III de Flandes",
+      "en": "Margaret III of Flanders",
+      "previous": "Margarita III de Flandes",
+      "nickname": "",
+      "slug": "margarita-iii-de-flandes",
+      "decision": "retain",
+      "reason": "Se conserva la forma historiográfica asentada; ordinal, contexto, sobrenombre separado y variantes comprobados."
+    },
+    {
+      "id": "CARLOS7HRE",
+      "es": "Carlos VII del Sacro Imperio",
+      "en": "Charles VII of the Holy Roman Empire",
+      "previous": "Carlos VII del Sacro Imperio",
+      "nickname": "",
+      "slug": "carlos-vii-del-sacro-imperio",
+      "decision": "retain",
+      "reason": "Se conserva la forma historiográfica asentada; ordinal, contexto, sobrenombre separado y variantes comprobados."
+    },
+    {
+      "id": "FERN3HRE",
+      "es": "Fernando III del Sacro Imperio",
+      "en": "Ferdinand III of the Holy Roman Empire",
+      "previous": "Fernando III del Sacro Imperio",
+      "nickname": "",
+      "slug": "fernando-iii-del-sacro-imperio",
+      "decision": "retain",
+      "reason": "Se conserva la forma historiográfica asentada; ordinal, contexto, sobrenombre separado y variantes comprobados."
+    },
+    {
+      "id": "FRAN1HRE",
+      "es": "Francisco I Esteban del Sacro Imperio",
+      "en": "Francis I of the Holy Roman Empire",
+      "previous": "Francisco I Esteban del Sacro Imperio",
+      "nickname": "",
+      "slug": "francisco-i-esteban-del-sacro-imperio",
+      "decision": "retain",
+      "reason": "Se conserva la forma historiográfica asentada; ordinal, contexto, sobrenombre separado y variantes comprobados."
+    },
+    {
+      "id": "FREDWIL2PRU",
+      "es": "Federico Guillermo II de Prusia",
+      "en": "Frederick William II of Prussia",
+      "previous": "Federico Guillermo II de Prusia",
+      "nickname": "",
+      "slug": "federico-guillermo-ii-de-prusia",
+      "decision": "retain",
+      "reason": "Se conserva la forma historiográfica asentada; ordinal, contexto, sobrenombre separado y variantes comprobados."
+    },
+    {
+      "id": "ENRIQ6ING",
+      "es": "Enrique VI de Inglaterra",
+      "en": "Henry VI of England",
+      "previous": "Enrique VI de Inglaterra",
+      "nickname": "",
+      "slug": "enrique-vi-de-inglaterra",
+      "decision": "retain",
+      "reason": "Se conserva la forma historiográfica asentada; ordinal, contexto, sobrenombre separado y variantes comprobados."
+    },
+    {
+      "id": "CONSTANTINE11PALA",
+      "es": "Constantino XI Paleólogo",
+      "en": "Constantine XI Palaiologos",
+      "previous": "Constantino XI Paleólogo",
+      "nickname": "",
+      "slug": "constantino-xi-paleologo",
+      "decision": "retain",
+      "reason": "Se conserva la forma historiográfica asentada; ordinal, contexto, sobrenombre separado y variantes comprobados."
+    },
+    {
+      "id": "JUANFED1SAX",
+      "es": "Juan Federico I de Sajonia",
+      "en": "John Frederick I of Saxony",
+      "previous": "Juan Federico I de Sajonia",
+      "nickname": "el Magnánimo",
+      "slug": "juan-federico-i-de-sajonia",
+      "decision": "retain",
+      "reason": "Se conserva la forma historiográfica asentada; ordinal, contexto, sobrenombre separado y variantes comprobados."
+    },
+    {
+      "id": "JUANSAX",
+      "es": "Juan de Sajonia",
+      "en": "John of Saxony",
+      "previous": "Juan de Sajonia",
+      "nickname": "el Constante",
+      "slug": "juan-de-sajonia",
+      "decision": "retain",
+      "reason": "Se conserva la forma historiográfica asentada; ordinal, contexto, sobrenombre separado y variantes comprobados."
+    },
+    {
+      "id": "MANFSIC",
+      "es": "Manfredo I de Sicilia",
+      "en": "Manfred of Sicily",
+      "previous": "Manfredo I de Sicilia",
+      "nickname": "",
+      "slug": "manfredo-i-de-sicilia",
+      "decision": "retain",
+      "reason": "Se conserva la forma historiográfica asentada; ordinal, contexto, sobrenombre separado y variantes comprobados."
+    },
+    {
+      "id": "MIGUELKORYBUT",
+      "es": "Miguel Korybut Wiśniowiecki",
+      "en": "Michał Korybut Wiśniowiecki",
+      "previous": "Miguel Korybut Wiśniowiecki",
+      "nickname": "",
+      "slug": "miguel-korybut-wisniowiecki",
+      "decision": "retain",
+      "reason": "Se conserva la forma historiográfica asentada; ordinal, contexto, sobrenombre separado y variantes comprobados."
+    },
+    {
+      "id": "FED1BARBARROJA",
+      "es": "Federico I del Sacro Imperio",
+      "en": "Frederick I of the Holy Roman Empire",
+      "previous": "Federico I",
+      "nickname": "Barbarroja",
+      "slug": "federico-i-barbarroja",
+      "decision": "revise",
+      "reason": "Separar cargos y sobrenombres del nombre; usar el exónimo asentado y conservar el contexto y las variantes."
+    },
+    {
+      "id": "ALB2HABS",
+      "es": "Alberto II de Habsburgo",
+      "en": "Albert II of Germany",
+      "previous": "Alberto II de Habsburgo",
+      "nickname": "",
+      "slug": "alberto-ii-de-habsburgo",
+      "decision": "retain",
+      "reason": "Se conserva la forma historiográfica asentada; ordinal, contexto, sobrenombre separado y variantes comprobados."
+    },
+    {
+      "id": "BALDWIN5JER",
+      "es": "Balduino V de Jerusalén",
+      "en": "Baldwin V of Jerusalem",
+      "previous": "Balduino V de Jerusalén",
+      "nickname": "",
+      "slug": "balduino-v-de-jerusalen",
+      "decision": "retain",
+      "reason": "Se conserva la forma historiográfica asentada; ordinal, contexto, sobrenombre separado y variantes comprobados."
+    },
+    {
+      "id": "CARLOS2NAP",
+      "es": "Carlos II de Nápoles",
+      "en": "Charles II of Naples",
+      "previous": "Carlos II de Nápoles",
+      "nickname": "",
+      "slug": "carlos-ii-de-napoles",
+      "decision": "retain",
+      "reason": "Se conserva la forma historiográfica asentada; ordinal, contexto, sobrenombre separado y variantes comprobados."
+    },
+    {
+      "id": "CARLOS9FRA",
+      "es": "Carlos IX de Francia",
+      "en": "Charles IX of France",
+      "previous": "Carlos IX de Francia",
+      "nickname": "",
+      "slug": "carlos-ix-de-francia",
+      "decision": "retain",
+      "reason": "Se conserva la forma historiográfica asentada; ordinal, contexto, sobrenombre separado y variantes comprobados."
+    },
+    {
+      "id": "FELMARVISC",
+      "es": "Felipe María Visconti",
+      "en": "Filippo Maria Visconti",
+      "previous": "Felipe María Visconti",
+      "nickname": "",
+      "slug": "felipe-maria-visconti",
+      "decision": "retain",
+      "reason": "Se conserva la forma historiográfica asentada; ordinal, contexto, sobrenombre separado y variantes comprobados."
+    },
+    {
+      "id": "FERN1NAP",
+      "es": "Fernando I de Nápoles",
+      "en": "Ferdinand I of Naples",
+      "previous": "Fernando I de Nápoles",
+      "nickname": "Ferrante",
+      "slug": "fernando-i-de-napoles",
+      "decision": "retain",
+      "reason": "Se conserva la forma historiográfica asentada; ordinal, contexto, sobrenombre separado y variantes comprobados."
+    },
+    {
+      "id": "GIULIANOMEDICI",
+      "es": "Giuliano de’ Medici",
+      "en": "Giuliano de’ Medici",
+      "previous": "Giuliano de’ Medici",
+      "nickname": "",
+      "slug": "giuliano-de-medici-giulianomedici",
+      "decision": "retain",
+      "reason": "Se conserva la forma historiográfica asentada; ordinal, contexto, sobrenombre separado y variantes comprobados."
+    },
+    {
+      "id": "GIOVBANDENERE",
+      "es": "Juan de Médici",
+      "en": "Giovanni de’ Medici",
+      "previous": "Giovanni dalle Bande Nere",
+      "nickname": "de las Bandas Negras",
+      "slug": "giovanni-dalle-bande-nere",
+      "decision": "revise",
+      "reason": "Separar cargos y sobrenombres del nombre; usar el exónimo asentado y conservar el contexto y las variantes."
+    },
+    {
+      "id": "ISABPORTBORG",
+      "es": "Isabel de Portugal",
+      "en": "Isabella of Portugal",
+      "previous": "Isabel de Portugal",
+      "nickname": "",
+      "slug": "isabel-de-portugal-isabportborg",
+      "decision": "retain",
+      "reason": "Se conserva la forma historiográfica asentada; ordinal, contexto, sobrenombre separado y variantes comprobados."
+    }
+  ],
+  "peopleCountBefore": 2725,
+  "peopleCountAfter": 2732,
+  "confirmedNewPeople": [
+    "RICHELIEU",
+    "MAZARINO",
+    "JANHUS",
+    "JANZIZKA",
+    "JANZAMOYSKI",
+    "GUTENBERG",
+    "CHRISTINEPIZAN"
+  ]
+}
