@@ -18,7 +18,7 @@ const dependencies=(year,id='LUIS1')=>mapAuthoritiesForPerson(person(id),year,da
 test('English sections have real equivalent routes, including a playable Challenge',()=>{
  for(const [es,en]of [['/es/dinastias','/en/dynasties'],['/es/territorios','/en/territories'],['/es/desafio','/en/challenge'],['/es/dinastia/anjou-hungria','/en/dynasty/anjou-hungary'],['/es/territorio/normandia','/en/territory/normandy']]){assert.equal(translatedEquivalent(es,'en'),en);assert.equal(translatedEquivalent(en,'es'),es);assert(englishPaths().includes(en));assert.equal(englishRoute(en).kind,'english');}
  assert.equal(englishRoute('/en/territory/normandy/chapter/1'),null);
- assert.equal(ENGLISH_DYNASTIES.length,8);assert.equal(ENGLISH_TERRITORIES.length,1);
+ assert.equal(ENGLISH_DYNASTIES.length,15);assert.equal(ENGLISH_TERRITORIES.length,1);
  for(const id of ['ISAB1CAST','CARLOS5','LEONARDODAVINCI','MARIABORG','MAXIM1'])assert(COMPLETE_ENGLISH_PROFILES[id]);
  assert.equal(COMPLETE_ENGLISH_PROFILES.MARIABORG.nickname,'the Rich');
 });

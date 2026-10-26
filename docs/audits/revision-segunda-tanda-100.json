@@ -1,0 +1,1662 @@
+{
+  "date": "2026-10-26",
+  "distinctFromPreviousBatch": true,
+  "profiles": 100,
+  "extendedBiographySections": 30,
+  "translatedPortraits": 38,
+  "houses": [
+    {
+      "key": "Braganza",
+      "es": "braganza",
+      "en": "braganza"
+    },
+    {
+      "key": "Borgoña-Portugal",
+      "es": "borgona-portugal",
+      "en": "burgundy-portugal"
+    },
+    {
+      "key": "Trastámara",
+      "es": "trastamara",
+      "en": "trastamara"
+    },
+    {
+      "key": "Barcelona",
+      "es": "barcelona",
+      "en": "barcelona"
+    },
+    {
+      "key": "Jimena",
+      "es": "jimena",
+      "en": "jimena"
+    },
+    {
+      "key": "Évreux",
+      "es": "evreux",
+      "en": "evreux"
+    },
+    {
+      "key": "Foix",
+      "es": "foix",
+      "en": "foix"
+    }
+  ],
+  "nameDecisions": [
+    {
+      "id": "GUILLERMOAUST",
+      "before": {
+        "nombre": "Guillermo de Austria",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "after": {
+        "nombre": "Guillermo de Austria",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "slug": "guillermo-de-austria",
+      "reason": "Se conserva la forma historiográfica asentada tras comprobar ordinal, contexto, sobrenombre separado y variantes."
+    },
+    {
+      "id": "MAX2EMANBAV",
+      "before": {
+        "nombre": "Maximiliano II Emanuel de Baviera",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "after": {
+        "nombre": "Maximiliano II Emanuel de Baviera",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "slug": "maximiliano-ii-emanuel-de-baviera",
+      "reason": "Se conserva la forma historiográfica asentada tras comprobar ordinal, contexto, sobrenombre separado y variantes."
+    },
+    {
+      "id": "PAPA_CLEMENTE7",
+      "before": {
+        "nombre": "Clemente VII",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "after": {
+        "nombre": "Clemente VII",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "slug": "clemente-vii",
+      "reason": "Se conserva la forma historiográfica asentada tras comprobar ordinal, contexto, sobrenombre separado y variantes."
+    },
+    {
+      "id": "PAPA_INOCENCIO10",
+      "before": {
+        "nombre": "Inocencio X",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "after": {
+        "nombre": "Inocencio X",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "slug": "inocencio-x",
+      "reason": "Se conserva la forma historiográfica asentada tras comprobar ordinal, contexto, sobrenombre separado y variantes."
+    },
+    {
+      "id": "PAPA_URBANO8",
+      "before": {
+        "nombre": "Urbano VIII",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "after": {
+        "nombre": "Urbano VIII",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "slug": "urbano-viii",
+      "reason": "Se conserva la forma historiográfica asentada tras comprobar ordinal, contexto, sobrenombre separado y variantes."
+    },
+    {
+      "id": "ENRICO_DANDOLO_DOGE",
+      "before": {
+        "nombre": "Enrico Dandolo",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "after": {
+        "nombre": "Enrico Dandolo",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "slug": "enrico-dandolo",
+      "reason": "Se conserva la forma historiográfica asentada tras comprobar ordinal, contexto, sobrenombre separado y variantes."
+    },
+    {
+      "id": "BEATCONST",
+      "before": {
+        "nombre": "Beata Constanza II",
+        "sobrenombre": "",
+        "aliases": [
+          "Constanza de Hohenstaufen",
+          "Constanza de Sicilia, reina de Aragón"
+        ]
+      },
+      "after": {
+        "nombre": "Constanza de Sicilia",
+        "sobrenombre": "",
+        "aliases": [
+          "Constanza de Hohenstaufen",
+          "Constanza de Sicilia, reina de Aragón",
+          "Beata Constanza II",
+          "Constanza II de Sicilia"
+        ]
+      },
+      "slug": "beata-constanza-ii",
+      "reason": "Se retira el tratamiento devocional de la cabecera; se mantienen el nombre anterior y Constanza II de Sicilia entre las variantes, con la URL publicada."
+    },
+    {
+      "id": "CARLOS4",
+      "before": {
+        "nombre": "Carlos IV de Luxemburgo",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "after": {
+        "nombre": "Carlos IV de Luxemburgo",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "slug": "carlos-iv-de-luxemburgo",
+      "reason": "Se conserva la forma historiográfica asentada tras comprobar ordinal, contexto, sobrenombre separado y variantes."
+    },
+    {
+      "id": "GIULIAFARNESE",
+      "before": {
+        "nombre": "Giulia Farnese",
+        "sobrenombre": "la Bella",
+        "aliases": []
+      },
+      "after": {
+        "nombre": "Giulia Farnese",
+        "sobrenombre": "la Bella",
+        "aliases": []
+      },
+      "slug": "giulia-farnese",
+      "reason": "Se conserva la forma historiográfica asentada tras comprobar ordinal, contexto, sobrenombre separado y variantes."
+    },
+    {
+      "id": "MARGVALOIS",
+      "before": {
+        "nombre": "Margarita de Valois",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "after": {
+        "nombre": "Margarita de Valois",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "slug": "margarita-de-valois",
+      "reason": "Se conserva la forma historiográfica asentada tras comprobar ordinal, contexto, sobrenombre separado y variantes."
+    },
+    {
+      "id": "MARIAANTONIETA",
+      "before": {
+        "nombre": "María Antonieta de Austria",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "after": {
+        "nombre": "María Antonieta de Austria",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "slug": "maria-antonieta-de-austria",
+      "reason": "Se conserva la forma historiográfica asentada tras comprobar ordinal, contexto, sobrenombre separado y variantes."
+    },
+    {
+      "id": "MAXIM2",
+      "before": {
+        "nombre": "Maximiliano II",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "after": {
+        "nombre": "Maximiliano II",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "slug": "maximiliano-ii",
+      "reason": "Se conserva la forma historiográfica asentada tras comprobar ordinal, contexto, sobrenombre separado y variantes."
+    },
+    {
+      "id": "OTAK2",
+      "before": {
+        "nombre": "Otakar II de Bohemia",
+        "sobrenombre": "el Rey de Hierro y Oro",
+        "aliases": [
+          "Otakar II"
+        ]
+      },
+      "after": {
+        "nombre": "Otakar II de Bohemia",
+        "sobrenombre": "el Rey de Hierro y Oro",
+        "aliases": [
+          "Otakar II"
+        ]
+      },
+      "slug": "otakar-ii",
+      "reason": "Se conserva la forma historiográfica asentada tras comprobar ordinal, contexto, sobrenombre separado y variantes."
+    },
+    {
+      "id": "RODOLFO2HRE",
+      "before": {
+        "nombre": "Rodolfo II del Sacro Imperio",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "after": {
+        "nombre": "Rodolfo II del Sacro Imperio",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "slug": "rodolfo-ii-del-sacro-imperio",
+      "reason": "Se conserva la forma historiográfica asentada tras comprobar ordinal, contexto, sobrenombre separado y variantes."
+    },
+    {
+      "id": "ALFONSOSALMERON",
+      "before": {
+        "nombre": "Alfonso Salmerón",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "after": {
+        "nombre": "Alfonso Salmerón",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "slug": "alfonso-salmeron",
+      "reason": "Se conserva la forma historiográfica asentada tras comprobar ordinal, contexto, sobrenombre separado y variantes."
+    },
+    {
+      "id": "BRACCIOMONT",
+      "before": {
+        "nombre": "Braccio da Montone",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "after": {
+        "nombre": "Braccio da Montone",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "slug": "braccio-da-montone",
+      "reason": "Se conserva la forma historiográfica asentada tras comprobar ordinal, contexto, sobrenombre separado y variantes."
+    },
+    {
+      "id": "CECIGALL",
+      "before": {
+        "nombre": "Cecilia Gallerani",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "after": {
+        "nombre": "Cecilia Gallerani",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "slug": "cecilia-gallerani",
+      "reason": "Se conserva la forma historiográfica asentada tras comprobar ordinal, contexto, sobrenombre separado y variantes."
+    },
+    {
+      "id": "CERVANTES",
+      "before": {
+        "nombre": "Miguel de Cervantes Saavedra",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "after": {
+        "nombre": "Miguel de Cervantes Saavedra",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "slug": "miguel-de-cervantes-saavedra",
+      "reason": "Se conserva la forma historiográfica asentada tras comprobar ordinal, contexto, sobrenombre separado y variantes."
+    },
+    {
+      "id": "GRANCAPITAN",
+      "before": {
+        "nombre": "Gonzalo Fernández de Córdoba",
+        "sobrenombre": "el Gran Capitán",
+        "aliases": []
+      },
+      "after": {
+        "nombre": "Gonzalo Fernández de Córdoba",
+        "sobrenombre": "el Gran Capitán",
+        "aliases": []
+      },
+      "slug": "gonzalo-fernandez-de-cordoba",
+      "reason": "Se conserva la forma historiográfica asentada tras comprobar ordinal, contexto, sobrenombre separado y variantes."
+    },
+    {
+      "id": "HAWKWOOD",
+      "before": {
+        "nombre": "John Hawkwood",
+        "sobrenombre": "",
+        "aliases": [
+          "Giovanni Acuto",
+          "John Hawkwood (Giovanni Acuto)"
+        ]
+      },
+      "after": {
+        "nombre": "John Hawkwood",
+        "sobrenombre": "",
+        "aliases": [
+          "Giovanni Acuto",
+          "John Hawkwood (Giovanni Acuto)"
+        ]
+      },
+      "slug": "john-hawkwood",
+      "reason": "Se conserva la forma historiográfica asentada tras comprobar ordinal, contexto, sobrenombre separado y variantes."
+    },
+    {
+      "id": "JEANBUREAU",
+      "before": {
+        "nombre": "Jean Bureau",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "after": {
+        "nombre": "Jean Bureau",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "slug": "jean-bureau",
+      "reason": "Se conserva la forma historiográfica asentada tras comprobar ordinal, contexto, sobrenombre separado y variantes."
+    },
+    {
+      "id": "MELANCHTHON",
+      "before": {
+        "nombre": "Felipe Melanchthon",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "after": {
+        "nombre": "Felipe Melanchthon",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "slug": "felipe-melanchthon",
+      "reason": "Se conserva la forma historiográfica asentada tras comprobar ordinal, contexto, sobrenombre separado y variantes."
+    },
+    {
+      "id": "MUZIOSFOR",
+      "before": {
+        "nombre": "Muzio Attendolo Sforza",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "after": {
+        "nombre": "Muzio Attendolo Sforza",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "slug": "muzio-attendolo-sforza",
+      "reason": "Se conserva la forma historiográfica asentada tras comprobar ordinal, contexto, sobrenombre separado y variantes."
+    },
+    {
+      "id": "NICCPICC",
+      "before": {
+        "nombre": "Niccolò Piccinino",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "after": {
+        "nombre": "Niccolò Piccinino",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "slug": "niccolo-piccinino",
+      "reason": "Se conserva la forma historiográfica asentada tras comprobar ordinal, contexto, sobrenombre separado y variantes."
+    },
+    {
+      "id": "SERIPANDO",
+      "before": {
+        "nombre": "Girolamo Seripando",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "after": {
+        "nombre": "Girolamo Seripando",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "slug": "girolamo-seripando",
+      "reason": "Se conserva la forma historiográfica asentada tras comprobar ordinal, contexto, sobrenombre separado y variantes."
+    },
+    {
+      "id": "STARHEMBERG",
+      "before": {
+        "nombre": "Ernst Rüdiger von Starhemberg",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "after": {
+        "nombre": "Ernst Rüdiger von Starhemberg",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "slug": "ernst-rudiger-von-starhemberg",
+      "reason": "Se conserva la forma historiográfica asentada tras comprobar ordinal, contexto, sobrenombre separado y variantes."
+    },
+    {
+      "id": "THOMASCRANMER",
+      "before": {
+        "nombre": "Thomas Cranmer",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "after": {
+        "nombre": "Thomas Cranmer",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "slug": "thomas-cranmer",
+      "reason": "Se conserva la forma historiográfica asentada tras comprobar ordinal, contexto, sobrenombre separado y variantes."
+    },
+    {
+      "id": "VITELLOZZO",
+      "before": {
+        "nombre": "Vitellozzo Vitelli",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "after": {
+        "nombre": "Vitellozzo Vitelli",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "slug": "vitellozzo-vitelli",
+      "reason": "Se conserva la forma historiográfica asentada tras comprobar ordinal, contexto, sobrenombre separado y variantes."
+    },
+    {
+      "id": "ZWINGLI",
+      "before": {
+        "nombre": "Ulrico Zuinglio",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "after": {
+        "nombre": "Ulrico Zuinglio",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "slug": "ulrico-zuinglio",
+      "reason": "Se conserva la forma historiográfica asentada tras comprobar ordinal, contexto, sobrenombre separado y variantes."
+    },
+    {
+      "id": "STAN1LESZ",
+      "before": {
+        "nombre": "Estanislao I Leszczyński",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "after": {
+        "nombre": "Estanislao I Leszczyński",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "slug": "estanislao-i-leszczynski",
+      "reason": "Se conserva la forma historiográfica asentada tras comprobar ordinal, contexto, sobrenombre separado y variantes."
+    },
+    {
+      "id": "WEN4LUX",
+      "before": {
+        "nombre": "Wenceslao IV de Luxemburgo",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "after": {
+        "nombre": "Wenceslao IV de Luxemburgo",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "slug": "wenceslao-iv-de-luxemburgo",
+      "reason": "Se conserva la forma historiográfica asentada tras comprobar ordinal, contexto, sobrenombre separado y variantes."
+    },
+    {
+      "id": "ESTEBANBATHORY",
+      "before": {
+        "nombre": "Esteban Báthory",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "after": {
+        "nombre": "Esteban Báthory",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "slug": "esteban-bathory",
+      "reason": "Se conserva la forma historiográfica asentada tras comprobar ordinal, contexto, sobrenombre separado y variantes."
+    },
+    {
+      "id": "FED5PALBOH",
+      "before": {
+        "nombre": "Federico V del Palatinado",
+        "sobrenombre": "el Rey de Invierno",
+        "aliases": []
+      },
+      "after": {
+        "nombre": "Federico V del Palatinado",
+        "sobrenombre": "el Rey de Invierno",
+        "aliases": []
+      },
+      "slug": "federico-v-del-palatinado",
+      "reason": "Se conserva la forma historiográfica asentada tras comprobar ordinal, contexto, sobrenombre separado y variantes."
+    },
+    {
+      "id": "RENATOANJOU",
+      "before": {
+        "nombre": "Renato I de Anjou",
+        "sobrenombre": "el Bueno",
+        "aliases": []
+      },
+      "after": {
+        "nombre": "Renato I de Anjou",
+        "sobrenombre": "el Bueno",
+        "aliases": []
+      },
+      "slug": "renato-i-de-anjou",
+      "reason": "Se conserva la forma historiográfica asentada tras comprobar ordinal, contexto, sobrenombre separado y variantes."
+    },
+    {
+      "id": "AUGUST3SAXPOL",
+      "before": {
+        "nombre": "Augusto III de Polonia",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "after": {
+        "nombre": "Augusto III de Polonia",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "slug": "augusto-iii-de-polonia",
+      "reason": "Se conserva la forma historiográfica asentada tras comprobar ordinal, contexto, sobrenombre separado y variantes."
+    },
+    {
+      "id": "CONRADINOHOH",
+      "before": {
+        "nombre": "Conradino de Hohenstaufen",
+        "sobrenombre": "",
+        "aliases": [
+          "Conradino"
+        ]
+      },
+      "after": {
+        "nombre": "Conradino de Hohenstaufen",
+        "sobrenombre": "",
+        "aliases": [
+          "Conradino"
+        ]
+      },
+      "slug": "conradino-de-hohenstaufen",
+      "reason": "Se conserva la forma historiográfica asentada tras comprobar ordinal, contexto, sobrenombre separado y variantes."
+    },
+    {
+      "id": "ENRIQ7",
+      "before": {
+        "nombre": "Enrique VII",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "after": {
+        "nombre": "Enrique VII del Sacro Imperio",
+        "sobrenombre": "",
+        "aliases": [
+          "Enrique VII"
+        ]
+      },
+      "slug": "enrique-vii",
+      "reason": "Se añade el contexto imperial para distinguirlo de otros Enrique VII; el nombre anterior permanece como alias y la URL publicada se conserva."
+    },
+    {
+      "id": "FEDERICO3SIC",
+      "before": {
+        "nombre": "Federico III de Sicilia",
+        "sobrenombre": "el Simple",
+        "aliases": [
+          "Federico IV de Sicilia"
+        ]
+      },
+      "after": {
+        "nombre": "Federico III de Sicilia",
+        "sobrenombre": "el Simple",
+        "aliases": [
+          "Federico IV de Sicilia"
+        ]
+      },
+      "slug": "federico-iii-de-sicilia",
+      "reason": "Se conserva la forma historiográfica asentada tras comprobar ordinal, contexto, sobrenombre separado y variantes."
+    },
+    {
+      "id": "GUILLERMOHOLANDA",
+      "before": {
+        "nombre": "Guillermo de Holanda",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "after": {
+        "nombre": "Guillermo de Holanda",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "slug": "guillermo-de-holanda",
+      "reason": "Se conserva la forma historiográfica asentada tras comprobar ordinal, contexto, sobrenombre separado y variantes."
+    },
+    {
+      "id": "LADISLAOPOST",
+      "before": {
+        "nombre": "Ladislao",
+        "sobrenombre": "el Póstumo",
+        "aliases": []
+      },
+      "after": {
+        "nombre": "Ladislao de Habsburgo",
+        "sobrenombre": "el Póstumo",
+        "aliases": [
+          "Ladislao"
+        ]
+      },
+      "slug": "ladislao",
+      "reason": "Se identifica la casa de Habsburgo sin elegir arbitrariamente una de sus coronas; el Póstumo se mantiene como sobrenombre separado, junto con el alias y la URL anteriores."
+    },
+    {
+      "id": "LUIS1ANJOU",
+      "before": {
+        "nombre": "Luis I de Anjou",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "after": {
+        "nombre": "Luis I de Anjou",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "slug": "luis-i-de-anjou",
+      "reason": "Se conserva la forma historiográfica asentada tras comprobar ordinal, contexto, sobrenombre separado y variantes."
+    },
+    {
+      "id": "LUIS4",
+      "before": {
+        "nombre": "Luis IV de Baviera",
+        "sobrenombre": "el Bávaro",
+        "aliases": []
+      },
+      "after": {
+        "nombre": "Luis IV de Baviera",
+        "sobrenombre": "el Bávaro",
+        "aliases": []
+      },
+      "slug": "luis-iv-de-baviera",
+      "reason": "Se conserva la forma historiográfica asentada tras comprobar ordinal, contexto, sobrenombre separado y variantes."
+    },
+    {
+      "id": "SEGIS2JAG",
+      "before": {
+        "nombre": "Segismundo II Augusto",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "after": {
+        "nombre": "Segismundo II Augusto",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "slug": "segismundo-ii-augusto",
+      "reason": "Se conserva la forma historiográfica asentada tras comprobar ordinal, contexto, sobrenombre separado y variantes."
+    },
+    {
+      "id": "ALEJANDRO1POL",
+      "before": {
+        "nombre": "Alejandro I de Polonia",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "after": {
+        "nombre": "Alejandro I de Polonia",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "slug": "alejandro-i-de-polonia",
+      "reason": "Se conserva la forma historiográfica asentada tras comprobar ordinal, contexto, sobrenombre separado y variantes."
+    },
+    {
+      "id": "CARLOS8FRA",
+      "before": {
+        "nombre": "Carlos VIII de Francia",
+        "sobrenombre": "el Afable",
+        "aliases": []
+      },
+      "after": {
+        "nombre": "Carlos VIII de Francia",
+        "sobrenombre": "el Afable",
+        "aliases": []
+      },
+      "slug": "carlos-viii-de-francia",
+      "reason": "Se conserva la forma historiográfica asentada tras comprobar ordinal, contexto, sobrenombre separado y variantes."
+    },
+    {
+      "id": "CASI4",
+      "before": {
+        "nombre": "Casimiro IV de Polonia",
+        "sobrenombre": "",
+        "aliases": [
+          "Casimiro IV"
+        ]
+      },
+      "after": {
+        "nombre": "Casimiro IV de Polonia",
+        "sobrenombre": "",
+        "aliases": [
+          "Casimiro IV"
+        ]
+      },
+      "slug": "casimiro-iv",
+      "reason": "Se conserva la forma historiográfica asentada tras comprobar ordinal, contexto, sobrenombre separado y variantes."
+    },
+    {
+      "id": "EDUARDO2ING",
+      "before": {
+        "nombre": "Eduardo II de Inglaterra",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "after": {
+        "nombre": "Eduardo II de Inglaterra",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "slug": "eduardo-ii-de-inglaterra",
+      "reason": "Se conserva la forma historiográfica asentada tras comprobar ordinal, contexto, sobrenombre separado y variantes."
+    },
+    {
+      "id": "EDUARDO6ING",
+      "before": {
+        "nombre": "Eduardo VI de Inglaterra",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "after": {
+        "nombre": "Eduardo VI de Inglaterra",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "slug": "eduardo-vi-de-inglaterra",
+      "reason": "Se conserva la forma historiográfica asentada tras comprobar ordinal, contexto, sobrenombre separado y variantes."
+    },
+    {
+      "id": "FEDMONTE",
+      "before": {
+        "nombre": "Federico da Montefeltro",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "after": {
+        "nombre": "Federico da Montefeltro",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "slug": "federico-da-montefeltro",
+      "reason": "Se conserva la forma historiográfica asentada tras comprobar ordinal, contexto, sobrenombre separado y variantes."
+    },
+    {
+      "id": "FRANC2FRA",
+      "before": {
+        "nombre": "Francisco II de Francia",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "after": {
+        "nombre": "Francisco II de Francia",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "slug": "francisco-ii-de-francia",
+      "reason": "Se conserva la forma historiográfica asentada tras comprobar ordinal, contexto, sobrenombre separado y variantes."
+    },
+    {
+      "id": "FRANCESCOROVEREURBINO",
+      "before": {
+        "nombre": "Francesco Maria I della Rovere",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "after": {
+        "nombre": "Francesco Maria I della Rovere",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "slug": "francesco-maria-i-della-rovere",
+      "reason": "Se conserva la forma historiográfica asentada tras comprobar ordinal, contexto, sobrenombre separado y variantes."
+    },
+    {
+      "id": "GIROLAMORIARIO",
+      "before": {
+        "nombre": "Girolamo Riario",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "after": {
+        "nombre": "Girolamo Riario",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "slug": "girolamo-riario",
+      "reason": "Se conserva la forma historiográfica asentada tras comprobar ordinal, contexto, sobrenombre separado y variantes."
+    },
+    {
+      "id": "GUILLERMO1BAV",
+      "before": {
+        "nombre": "Guillermo I de Baviera-Straubing",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "after": {
+        "nombre": "Guillermo I de Baviera-Straubing",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "slug": "guillermo-i-de-baviera-straubing",
+      "reason": "Se conserva la forma historiográfica asentada tras comprobar ordinal, contexto, sobrenombre separado y variantes."
+    },
+    {
+      "id": "LORENZO2MEDICI",
+      "before": {
+        "nombre": "Lorenzo II de’ Medici",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "after": {
+        "nombre": "Lorenzo II de’ Medici",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "slug": "lorenzo-ii-de-medici",
+      "reason": "Se conserva la forma historiográfica asentada tras comprobar ordinal, contexto, sobrenombre separado y variantes."
+    },
+    {
+      "id": "MARIA1ING",
+      "before": {
+        "nombre": "María I de Inglaterra",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "after": {
+        "nombre": "María I de Inglaterra",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "slug": "maria-i-de-inglaterra",
+      "reason": "Se conserva la forma historiográfica asentada tras comprobar ordinal, contexto, sobrenombre separado y variantes."
+    },
+    {
+      "id": "MARTINJOVENSIC",
+      "before": {
+        "nombre": "Martín el Joven de Sicilia",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "after": {
+        "nombre": "Martín el Joven de Sicilia",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "slug": "martin-el-joven-de-sicilia",
+      "reason": "Se conserva la forma historiográfica asentada tras comprobar ordinal, contexto, sobrenombre separado y variantes."
+    },
+    {
+      "id": "MATIAS1EMP",
+      "before": {
+        "nombre": "Matías de Habsburgo",
+        "sobrenombre": "",
+        "aliases": [
+          "Matías I",
+          "Matías I del Sacro Imperio",
+          "Matías de Habsburgo (Matías I)"
+        ]
+      },
+      "after": {
+        "nombre": "Matías de Habsburgo",
+        "sobrenombre": "",
+        "aliases": [
+          "Matías I",
+          "Matías I del Sacro Imperio",
+          "Matías de Habsburgo (Matías I)"
+        ]
+      },
+      "slug": "matias-de-habsburgo",
+      "reason": "Se conserva la forma historiográfica asentada tras comprobar ordinal, contexto, sobrenombre separado y variantes."
+    },
+    {
+      "id": "OTTO4HRE",
+      "before": {
+        "nombre": "Otón IV del Sacro Imperio",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "after": {
+        "nombre": "Otón IV del Sacro Imperio",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "slug": "oton-iv-del-sacro-imperio",
+      "reason": "Se conserva la forma historiográfica asentada tras comprobar ordinal, contexto, sobrenombre separado y variantes."
+    },
+    {
+      "id": "ROD1HAB",
+      "before": {
+        "nombre": "Rodolfo I de Habsburgo",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "after": {
+        "nombre": "Rodolfo I de Habsburgo",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "slug": "rodolfo-i-de-habsburgo",
+      "reason": "Se conserva la forma historiográfica asentada tras comprobar ordinal, contexto, sobrenombre separado y variantes."
+    },
+    {
+      "id": "SEGIS1JAG",
+      "before": {
+        "nombre": "Segismundo I Jagellón",
+        "sobrenombre": "el Viejo",
+        "aliases": []
+      },
+      "after": {
+        "nombre": "Segismundo I Jagellón",
+        "sobrenombre": "el Viejo",
+        "aliases": []
+      },
+      "slug": "segismundo-i-jagellon",
+      "reason": "Se conserva la forma historiográfica asentada tras comprobar ordinal, contexto, sobrenombre separado y variantes."
+    },
+    {
+      "id": "ALB1BAV",
+      "before": {
+        "nombre": "Alberto I de Baviera-Straubing",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "after": {
+        "nombre": "Alberto I de Baviera-Straubing",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "slug": "alberto-i-de-baviera-straubing",
+      "reason": "Se conserva la forma historiográfica asentada tras comprobar ordinal, contexto, sobrenombre separado y variantes."
+    },
+    {
+      "id": "ALFONSOBORJA",
+      "before": {
+        "nombre": "Calixto III",
+        "sobrenombre": "",
+        "aliases": [
+          "Alfonso de Borja",
+          "Alfonso Borgia",
+          "Alfonso de Borja (Calixto III)"
+        ]
+      },
+      "after": {
+        "nombre": "Calixto III",
+        "sobrenombre": "",
+        "aliases": [
+          "Alfonso de Borja",
+          "Alfonso Borgia",
+          "Alfonso de Borja (Calixto III)"
+        ]
+      },
+      "slug": "calixto-iii",
+      "reason": "Se conserva la forma historiográfica asentada tras comprobar ordinal, contexto, sobrenombre separado y variantes."
+    },
+    {
+      "id": "ARTURO3BRET",
+      "before": {
+        "nombre": "Arturo III de Bretaña",
+        "sobrenombre": "Richemont",
+        "aliases": []
+      },
+      "after": {
+        "nombre": "Arturo III de Bretaña",
+        "sobrenombre": "Richemont",
+        "aliases": []
+      },
+      "slug": "arturo-iii-de-bretana",
+      "reason": "Se conserva la forma historiográfica asentada tras comprobar ordinal, contexto, sobrenombre separado y variantes."
+    },
+    {
+      "id": "CARLODURAZZO",
+      "before": {
+        "nombre": "Carlos de Durazzo",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "after": {
+        "nombre": "Carlos de Durazzo",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "slug": "carlos-de-durazzo",
+      "reason": "Se conserva la forma historiográfica asentada tras comprobar ordinal, contexto, sobrenombre separado y variantes."
+    },
+    {
+      "id": "CARLOS5FRA",
+      "before": {
+        "nombre": "Carlos V de Francia",
+        "sobrenombre": "el Sabio",
+        "aliases": []
+      },
+      "after": {
+        "nombre": "Carlos V de Francia",
+        "sobrenombre": "el Sabio",
+        "aliases": []
+      },
+      "slug": "carlos-v-de-francia",
+      "reason": "Se conserva la forma historiográfica asentada tras comprobar ordinal, contexto, sobrenombre separado y variantes."
+    },
+    {
+      "id": "CHARLESDALBRET",
+      "before": {
+        "nombre": "Carlos I de Albret",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "after": {
+        "nombre": "Carlos I de Albret",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "slug": "carlos-i-de-albret",
+      "reason": "Se conserva la forma historiográfica asentada tras comprobar ordinal, contexto, sobrenombre separado y variantes."
+    },
+    {
+      "id": "ENRIQ2FRA",
+      "before": {
+        "nombre": "Enrique II de Francia",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "after": {
+        "nombre": "Enrique II de Francia",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "slug": "enrique-ii-de-francia",
+      "reason": "Se conserva la forma historiográfica asentada tras comprobar ordinal, contexto, sobrenombre separado y variantes."
+    },
+    {
+      "id": "FED1NAP",
+      "before": {
+        "nombre": "Federico I de Nápoles",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "after": {
+        "nombre": "Federico I de Nápoles",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "slug": "federico-i-de-napoles",
+      "reason": "Se conserva la forma historiográfica asentada tras comprobar ordinal, contexto, sobrenombre separado y variantes."
+    },
+    {
+      "id": "FRANCISCOANJOU",
+      "before": {
+        "nombre": "Francisco de Anjou",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "after": {
+        "nombre": "Francisco de Anjou",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "slug": "francisco-de-anjou",
+      "reason": "Se conserva la forma historiográfica asentada tras comprobar ordinal, contexto, sobrenombre separado y variantes."
+    },
+    {
+      "id": "FREDAUGUST3SAX",
+      "before": {
+        "nombre": "Federico Augusto III de Sajonia",
+        "sobrenombre": "el Justo",
+        "aliases": []
+      },
+      "after": {
+        "nombre": "Federico Augusto III de Sajonia",
+        "sobrenombre": "el Justo",
+        "aliases": []
+      },
+      "slug": "federico-augusto-iii-de-sajonia",
+      "reason": "Se conserva la forma historiográfica asentada tras comprobar ordinal, contexto, sobrenombre separado y variantes."
+    },
+    {
+      "id": "IBRAHIM1OSM",
+      "before": {
+        "nombre": "Ibrahim I",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "after": {
+        "nombre": "Ibrahim I",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "slug": "ibrahim-i",
+      "reason": "Se conserva la forma historiográfica asentada tras comprobar ordinal, contexto, sobrenombre separado y variantes."
+    },
+    {
+      "id": "JOHANNGEORG3SAX",
+      "before": {
+        "nombre": "Juan Jorge III de Sajonia",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "after": {
+        "nombre": "Juan Jorge III de Sajonia",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "slug": "juan-jorge-iii-de-sajonia",
+      "reason": "Se conserva la forma historiográfica asentada tras comprobar ordinal, contexto, sobrenombre separado y variantes."
+    },
+    {
+      "id": "JUANBORJACATT",
+      "before": {
+        "nombre": "Juan de Borja y Cattanei",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "after": {
+        "nombre": "Juan de Borja y Cattanei",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "slug": "juan-de-borja-y-cattanei",
+      "reason": "Se conserva la forma historiográfica asentada tras comprobar ordinal, contexto, sobrenombre separado y variantes."
+    },
+    {
+      "id": "LUISORLEANS",
+      "before": {
+        "nombre": "Luis I de Orleans",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "after": {
+        "nombre": "Luis I de Orleans",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "slug": "luis-i-de-orleans",
+      "reason": "Se conserva la forma historiográfica asentada tras comprobar ordinal, contexto, sobrenombre separado y variantes."
+    },
+    {
+      "id": "MARGPARMA",
+      "before": {
+        "nombre": "Margarita de Parma",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "after": {
+        "nombre": "Margarita de Parma",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "slug": "margarita-de-parma",
+      "reason": "Se conserva la forma historiográfica asentada tras comprobar ordinal, contexto, sobrenombre separado y variantes."
+    },
+    {
+      "id": "MARIA1SIC",
+      "before": {
+        "nombre": "María de Sicilia",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "after": {
+        "nombre": "María de Sicilia",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "slug": "maria-de-sicilia",
+      "reason": "Se conserva la forma historiográfica asentada tras comprobar ordinal, contexto, sobrenombre separado y variantes."
+    },
+    {
+      "id": "MAXIM3TIROL",
+      "before": {
+        "nombre": "Maximiliano III de Austria",
+        "sobrenombre": "",
+        "aliases": [
+          "Maximiliano el Maestre Alemán"
+        ]
+      },
+      "after": {
+        "nombre": "Maximiliano III de Austria",
+        "sobrenombre": "",
+        "aliases": [
+          "Maximiliano el Maestre Alemán"
+        ]
+      },
+      "slug": "maximiliano-iii-de-austria",
+      "reason": "Se conserva la forma historiográfica asentada tras comprobar ordinal, contexto, sobrenombre separado y variantes."
+    },
+    {
+      "id": "OCTFARNESIO",
+      "before": {
+        "nombre": "Octavio Farnesio",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "after": {
+        "nombre": "Octavio Farnesio",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "slug": "octavio-farnesio",
+      "reason": "Se conserva la forma historiográfica asentada tras comprobar ordinal, contexto, sobrenombre separado y variantes."
+    },
+    {
+      "id": "PAPA_ALEJANDRO7",
+      "before": {
+        "nombre": "Alejandro VII",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "after": {
+        "nombre": "Alejandro VII",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "slug": "alejandro-vii",
+      "reason": "Se conserva la forma historiográfica asentada tras comprobar ordinal, contexto, sobrenombre separado y variantes."
+    },
+    {
+      "id": "PAPA_BONIFACIO8",
+      "before": {
+        "nombre": "Bonifacio VIII",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "after": {
+        "nombre": "Bonifacio VIII",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "slug": "bonifacio-viii",
+      "reason": "Se conserva la forma historiográfica asentada tras comprobar ordinal, contexto, sobrenombre separado y variantes."
+    },
+    {
+      "id": "PAPA_CLEMENTE8",
+      "before": {
+        "nombre": "Clemente VIII",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "after": {
+        "nombre": "Clemente VIII",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "slug": "clemente-viii",
+      "reason": "Se conserva la forma historiográfica asentada tras comprobar ordinal, contexto, sobrenombre separado y variantes."
+    },
+    {
+      "id": "PAPA_INOCENCIO12",
+      "before": {
+        "nombre": "Inocencio XII",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "after": {
+        "nombre": "Inocencio XII",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "slug": "inocencio-xii",
+      "reason": "Se conserva la forma historiográfica asentada tras comprobar ordinal, contexto, sobrenombre separado y variantes."
+    },
+    {
+      "id": "PAPA_MARTIN5",
+      "before": {
+        "nombre": "Martín V",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "after": {
+        "nombre": "Martín V",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "slug": "martin-v",
+      "reason": "Se conserva la forma historiográfica asentada tras comprobar ordinal, contexto, sobrenombre separado y variantes."
+    },
+    {
+      "id": "PAPA_NICOLAS3",
+      "before": {
+        "nombre": "Nicolás III",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "after": {
+        "nombre": "Nicolás III",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "slug": "nicolas-iii",
+      "reason": "Se conserva la forma historiográfica asentada tras comprobar ordinal, contexto, sobrenombre separado y variantes."
+    },
+    {
+      "id": "PAPA_PAULO5",
+      "before": {
+        "nombre": "Paulo V",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "after": {
+        "nombre": "Paulo V",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "slug": "paulo-v",
+      "reason": "Se conserva la forma historiográfica asentada tras comprobar ordinal, contexto, sobrenombre separado y variantes."
+    },
+    {
+      "id": "PAPA_PIO2",
+      "before": {
+        "nombre": "Pío II",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "after": {
+        "nombre": "Pío II",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "slug": "pio-ii",
+      "reason": "Se conserva la forma historiográfica asentada tras comprobar ordinal, contexto, sobrenombre separado y variantes."
+    },
+    {
+      "id": "PAPA_PIO3",
+      "before": {
+        "nombre": "Pío III",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "after": {
+        "nombre": "Pío III",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "slug": "pio-iii",
+      "reason": "Se conserva la forma historiográfica asentada tras comprobar ordinal, contexto, sobrenombre separado y variantes."
+    },
+    {
+      "id": "PAPA_PIO4",
+      "before": {
+        "nombre": "Pío IV",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "after": {
+        "nombre": "Pío IV",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "slug": "pio-iv",
+      "reason": "Se conserva la forma historiográfica asentada tras comprobar ordinal, contexto, sobrenombre separado y variantes."
+    },
+    {
+      "id": "PAPA_SIXTO4",
+      "before": {
+        "nombre": "Sixto IV",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "after": {
+        "nombre": "Sixto IV",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "slug": "sixto-iv",
+      "reason": "Se conserva la forma historiográfica asentada tras comprobar ordinal, contexto, sobrenombre separado y variantes."
+    },
+    {
+      "id": "PEDRO2SIC",
+      "before": {
+        "nombre": "Pedro II de Sicilia",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "after": {
+        "nombre": "Pedro II de Sicilia",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "slug": "pedro-ii-de-sicilia",
+      "reason": "Se conserva la forma historiográfica asentada tras comprobar ordinal, contexto, sobrenombre separado y variantes."
+    },
+    {
+      "id": "PIERLUIGIFARNESE_DUCA",
+      "before": {
+        "nombre": "Pier Luigi Farnesio",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "after": {
+        "nombre": "Pier Luigi Farnesio",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "slug": "pier-luigi-farnesio",
+      "reason": "Se conserva la forma historiográfica asentada tras comprobar ordinal, contexto, sobrenombre separado y variantes."
+    },
+    {
+      "id": "PIEROLORENZOMEDICI",
+      "before": {
+        "nombre": "Piero de’ Medici",
+        "sobrenombre": "el Desafortunado",
+        "aliases": []
+      },
+      "after": {
+        "nombre": "Piero de’ Medici",
+        "sobrenombre": "el Desafortunado",
+        "aliases": []
+      },
+      "slug": "piero-de-medici-pierolorenzomedici",
+      "reason": "Se conserva la forma historiográfica asentada tras comprobar ordinal, contexto, sobrenombre separado y variantes."
+    },
+    {
+      "id": "RICARDOCORNUALLES",
+      "before": {
+        "nombre": "Ricardo de Cornualles",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "after": {
+        "nombre": "Ricardo de Cornualles",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "slug": "ricardo-de-cornualles",
+      "reason": "Se conserva la forma historiográfica asentada tras comprobar ordinal, contexto, sobrenombre separado y variantes."
+    },
+    {
+      "id": "RICHELIEU",
+      "before": {
+        "nombre": "Armand Jean du Plessis",
+        "sobrenombre": "",
+        "aliases": [
+          "Richelieu",
+          "Cardenal Richelieu",
+          "Cardenal de Richelieu",
+          "Armand-Jean du Plessis de Richelieu"
+        ]
+      },
+      "after": {
+        "nombre": "Armand Jean du Plessis",
+        "sobrenombre": "",
+        "aliases": [
+          "Richelieu",
+          "Cardenal Richelieu",
+          "Cardenal de Richelieu",
+          "Armand-Jean du Plessis de Richelieu"
+        ]
+      },
+      "slug": "armand-jean-du-plessis",
+      "reason": "Se conserva la forma historiográfica asentada tras comprobar ordinal, contexto, sobrenombre separado y variantes."
+    },
+    {
+      "id": "MAZARINO",
+      "before": {
+        "nombre": "Julio Mazarino",
+        "sobrenombre": "",
+        "aliases": [
+          "Mazarino",
+          "Jules Mazarin",
+          "Giulio Mazzarino",
+          "Cardenal Mazarino"
+        ]
+      },
+      "after": {
+        "nombre": "Julio Mazarino",
+        "sobrenombre": "",
+        "aliases": [
+          "Mazarino",
+          "Jules Mazarin",
+          "Giulio Mazzarino",
+          "Cardenal Mazarino"
+        ]
+      },
+      "slug": "julio-mazarino",
+      "reason": "Se conserva la forma historiográfica asentada tras comprobar ordinal, contexto, sobrenombre separado y variantes."
+    },
+    {
+      "id": "JANHUS",
+      "before": {
+        "nombre": "Jan Hus",
+        "sobrenombre": "",
+        "aliases": [
+          "Juan Hus",
+          "Juan Huss",
+          "John Hus",
+          "John Huss"
+        ]
+      },
+      "after": {
+        "nombre": "Jan Hus",
+        "sobrenombre": "",
+        "aliases": [
+          "Juan Hus",
+          "Juan Huss",
+          "John Hus",
+          "John Huss"
+        ]
+      },
+      "slug": "jan-hus",
+      "reason": "Se conserva la forma historiográfica asentada tras comprobar ordinal, contexto, sobrenombre separado y variantes."
+    },
+    {
+      "id": "JANZIZKA",
+      "before": {
+        "nombre": "Jan Žižka",
+        "sobrenombre": "",
+        "aliases": [
+          "Jan Zizka",
+          "Juan Zizka",
+          "Jan Žižka de Trocnov"
+        ]
+      },
+      "after": {
+        "nombre": "Jan Žižka",
+        "sobrenombre": "",
+        "aliases": [
+          "Jan Zizka",
+          "Juan Zizka",
+          "Jan Žižka de Trocnov"
+        ]
+      },
+      "slug": "jan-zizka",
+      "reason": "Se conserva la forma historiográfica asentada tras comprobar ordinal, contexto, sobrenombre separado y variantes."
+    },
+    {
+      "id": "JANZAMOYSKI",
+      "before": {
+        "nombre": "Jan Zamoyski",
+        "sobrenombre": "",
+        "aliases": [
+          "Juan Zamoyski",
+          "Jan Sariusz Zamoyski",
+          "Jan Zamojski"
+        ]
+      },
+      "after": {
+        "nombre": "Jan Zamoyski",
+        "sobrenombre": "",
+        "aliases": [
+          "Juan Zamoyski",
+          "Jan Sariusz Zamoyski",
+          "Jan Zamojski"
+        ]
+      },
+      "slug": "jan-zamoyski",
+      "reason": "Se conserva la forma historiográfica asentada tras comprobar ordinal, contexto, sobrenombre separado y variantes."
+    },
+    {
+      "id": "GUTENBERG",
+      "before": {
+        "nombre": "Johannes Gutenberg",
+        "sobrenombre": "",
+        "aliases": [
+          "Juan Gutenberg",
+          "Johann Gutenberg",
+          "Johannes Gensfleisch"
+        ]
+      },
+      "after": {
+        "nombre": "Johannes Gutenberg",
+        "sobrenombre": "",
+        "aliases": [
+          "Juan Gutenberg",
+          "Johann Gutenberg",
+          "Johannes Gensfleisch"
+        ]
+      },
+      "slug": "johannes-gutenberg",
+      "reason": "Se conserva la forma historiográfica asentada tras comprobar ordinal, contexto, sobrenombre separado y variantes."
+    },
+    {
+      "id": "CHRISTINEPIZAN",
+      "before": {
+        "nombre": "Cristina de Pizán",
+        "sobrenombre": "",
+        "aliases": [
+          "Christine de Pizan",
+          "Christine de Pisan",
+          "Cristina de Pizan"
+        ]
+      },
+      "after": {
+        "nombre": "Cristina de Pizán",
+        "sobrenombre": "",
+        "aliases": [
+          "Christine de Pizan",
+          "Christine de Pisan",
+          "Cristina de Pizan"
+        ]
+      },
+      "slug": "cristina-de-pizan",
+      "reason": "Se conserva la forma historiográfica asentada tras comprobar ordinal, contexto, sobrenombre separado y variantes."
+    }
+  ]
+}

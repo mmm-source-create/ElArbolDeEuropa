@@ -1,5 +1,6 @@
+import {NEXT_HOUSES} from './nextHouseTranslations.js';
 import {REVIEWED_HOUSES} from './reviewedHouseTranslations.js';
-export const ENGLISH_DYNASTIES=[...REVIEWED_HOUSES,{es:'anjou-hungria',en:'anjou-hungary',key:'Anjou-Hungría',name:'Anjou-Hungary',
+export const ENGLISH_DYNASTIES=[...NEXT_HOUSES,...REVIEWED_HOUSES,{es:'anjou-hungria',en:'anjou-hungary',key:'Anjou-Hungría',name:'Anjou-Hungary',
  summary:'A Capetian branch from Naples that ruled Hungary and Croatia and temporarily joined those crowns to Poland.',
  origin:'Charles Martel, son of Charles II of Naples and Mary of Hungary, founded the branch that claimed the Árpád inheritance. His son Charles Robert consolidated the Hungarian monarchy against the magnates. The Neapolitan and Hungarian branches ruled separate kingdoms.',
  history:'Louis I succeeded Charles Robert in 1342 and inherited the Polish crown in 1370. His kingdoms retained their own laws and institutions. His campaigns in Italy and the Balkans extended his influence through conquests, temporary occupations and agreements of vassalage with varying duration and reach.',

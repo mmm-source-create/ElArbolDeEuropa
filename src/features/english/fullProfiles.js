@@ -1,3 +1,4 @@
+import {REVIEWED_NEXT_100_PROFILES} from './reviewedNext100Profiles.js';
 import {REVIEWED_100_PROFILES} from './reviewed100Profiles.js';
 import {IBERIAN_ENGLISH_PROFILES} from './iberianProfiles.js';
 import {EXPANDED_ENGLISH_PROFILES} from './expandedProfiles.js';
@@ -6,6 +7,7 @@ import {V536_ENGLISH_PROFILES} from './v536Profiles.js';
 // Editorial translations of complete Spanish profiles. Canonical IDs, dates,
 // relationships and territorial keys are supplied by the shared generator.
 export const COMPLETE_ENGLISH_PROFILES = {
+  ...REVIEWED_NEXT_100_PROFILES,
   ...REVIEWED_100_PROFILES,
   ...EXPANDED_ENGLISH_PROFILES,
   ...V535_ENGLISH_PROFILES,

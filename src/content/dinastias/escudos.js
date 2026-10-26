@@ -18,6 +18,11 @@ const CASTILLA_LEON = {blason: 'Cuartelado de Castilla y León: 1.º y 4.º, de 
   capas: [['cuartelado', [CASTILLA, LEON, LEON, CASTILLA]]]};
 
 export const ESCUDOS = Object.freeze({
+"Šubić":{"blason":"De oro, un ala de águila de sable.","capas":[["campo","oro"]],"nota":"Armas antiguas de la casa de Šubić según el dibujo de WappenWiki."},
+"Movilă":{"blason":"De gules, dos sables de plata guarnecidos de oro, puestos en aspa, con las puntas hacia abajo.","capas":[["campo","gules"]],"nota":"Armas antiguas de los Movilă (Mohyla) según el dibujo de WappenWiki. Las ramas posteriores usaron otras composiciones."},
+"Aldobrandini":{"blason":"De azur, una banda doblemente almenada de oro acompañada de seis estrellas de ocho puntas de oro, tres a cada lado.","capas":[["campo","azur"]],"nota":"Armas familiares de los Aldobrandini, conservando el dibujo propuesto de Wikimedia Commons."},
+"Jülich":{"blason":"De oro, un león de sable, armado y lampasado de gules.","capas":[["campo","oro"],["figura","leon","sable"]],"nota":"Armas sencillas de Jülich-Hengebach. Las uniones de Jülich, Berg y Cléveris incorporaron otros cuarteles."},
+"Almohade":{"tipo":"emblema","blason":"Jaquelado de gules y plata.","capas":[],"nota":"Emblema atribuido: tablero rojo y blanco asociado a Marrakech en la tradición armorial posterior. Se utiliza como identificador visual de la dinastía; su atribución no documenta una bandera almohade contemporánea."},
   'Malatesta': {blason:'De plata, dos bandas jaqueladas de oro y gules; bordura dentada de oro y sable.',capas:[['campo','plata']],nota:'Armas familiares de los Malatesta según el dibujo aportado de Wikimedia Commons.'},
   'Moncada': {blason:'De gules, ocho bezantes de oro puestos en dos palos.',capas:[['campo','gules']],nota:'Armas sencillas de la casa de Moncada o Montcada. Sus distintas ramas usaron también composiciones cuarteladas.'},
   'Zähringen-Baden': {blason:'De oro, una banda de gules.',capas:[['campo','oro'],['banda','gules']],nota:'Armas sencillas de Baden. Dibujo de Manuel Muriel Cagigal creado con Heraldicon.'},

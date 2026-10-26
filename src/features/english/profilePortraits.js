@@ -1,8 +1,10 @@
+import {REVIEWED_NEXT_100_PORTRAITS} from './reviewedNext100Portraits.js';
 import {REVIEWED_100_PORTRAITS} from './reviewed100Portraits.js';
 import {IBERIAN_PORTRAITS} from './iberianPortraits.js';
 import {PORTUGAL_NAVARRE_PORTRAITS} from './portugalPortraits.js';
 // Artwork and licence URLs are inherited unchanged from the original credits.
 export const ENGLISH_PROFILE_PORTRAITS = {
+ ...REVIEWED_NEXT_100_PORTRAITS,
   ...REVIEWED_100_PORTRAITS,
   ...PORTUGAL_NAVARRE_PORTRAITS,
   ...IBERIAN_PORTRAITS,
