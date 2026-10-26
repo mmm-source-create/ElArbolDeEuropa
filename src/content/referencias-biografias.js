@@ -1,4 +1,4 @@
-import {CONFIRMED_PEOPLE_REFERENCES} from './personas/incorporaciones-confirmadas.js';
+import {CONFIRMED_PEOPLE_REFERENCES} from './confirmedPeopleReferences.js';
 // Obras de referencia biográfica para las biografías extensas. Los enlaces se
 // derivan de los identificadores de autoridad que Wikidata registra para cada
 // figura (P4459, P1986, P1415, P7902, P1417) y sus formatos de URL (P1630).

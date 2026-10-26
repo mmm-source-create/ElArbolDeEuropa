@@ -1,4 +1,4 @@
-import {CONFIRMED_PEOPLE_REFERENCES} from './personas/incorporaciones-confirmadas.js';
+import {CONFIRMED_PEOPLE_REFERENCES} from './confirmedPeopleReferences.js';
 import {HOUSE_CLEANUP_SOURCES} from './sources-house-cleanup.js';
 import {HERITAGE_EDITORIAL_SOURCES} from '../data/historiasHerencias.js';
 import {TREINTA_CASAS_SOURCES} from './sources-treinta-casas.js';

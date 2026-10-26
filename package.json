@@ -46,7 +46,8 @@
     "audit:germany-completion": "node --import ./tests/jsx-loader.mjs scripts/audits/audit-germany-completion.mjs",
     "audit:political-unions": "node --import ./tests/jsx-loader.mjs scripts/audits/audit-political-unions.mjs",
     "audit:royal-successions": "node scripts/audits/audit-royal-successions.mjs",
-    "audit:names": "node scripts/audits/audit-person-names.mjs"
+    "audit:names": "node scripts/audits/audit-person-names.mjs",
+    "pretest": "node scripts/generate/generate-tree-base.mjs && node scripts/generate/generate-dinastias.mjs"
   },
   "dependencies": {
     "@vercel/speed-insights": "2.0.0",

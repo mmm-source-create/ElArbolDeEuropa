@@ -1,4 +1,4 @@
-import {CONFIRMED_PEOPLE_BIOGRAPHIES} from './personas/incorporaciones-confirmadas.js';
+import {CONFIRMED_PEOPLE_BIOGRAPHIES} from './confirmedPeopleBiographies.js';
 import {REFERENCIAS_BIOGRAFIAS} from './referencias-biografias.js';
 // Biografías ampliadas para las figuras centrales del Atlas. Solo se publican
 // en la ficha individual; el Atlas conserva el resumen breve de cada persona.
