@@ -28,7 +28,7 @@ const TEN = {
 };
 
 test('ten further complete English profiles use English historiographical names and real routes', () => {
-  assert.equal(Object.keys(COMPLETE_ENGLISH_PROFILES).length, 256);
+  assert.equal(Object.keys(COMPLETE_ENGLISH_PROFILES).length, 356);
   for (const [id, [name, en, es]] of Object.entries(TEN)) {
     const translated = english(id);
     assert.equal(translated.nombre, name, id);

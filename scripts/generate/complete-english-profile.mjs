@@ -43,7 +43,7 @@ export function completeEnglishProfile(source, translatedNames={}) {
   if(image){const portrait=ENGLISH_PROFILE_PORTRAITS[source.id];if(!portrait)throw Error(`Missing portrait credit translation: ${source.id}`);result.portrait={...image,...portrait,alt:`Portrait of ${translation.name}`,derechos:image.derechos.replace('Dominio público','Public domain')};}
   const stories=ENGLISH_STORY_LABELS;
   result.historias=source.historias.map(h=>{if(!stories[h.id])throw Error(`Missing related story translation: ${h.id}`);return {...h,titulo:stories[h.id][0],subtitulo:stories[h.id][1]};});
-  for(const label of [source.dinastia,...(source.reinos||[]),...governments.flatMap(g=>[g.titulo,g.territorio,g.condicion,g.ambito,etiquetaClaseGobierno(source,g)].filter(Boolean))])if(!PROFILE_LABELS[label])throw Error(`Missing profile label: ${source.id}/${label}`);
+  for(const label of [source.dinastia,...(source.reinos||[]),...governments.flatMap(g=>[g.titulo,g.territorio,g.condicion,g.ambito,etiquetaClaseGobierno(source,g)].filter(Boolean))].filter(Boolean))if(!PROFILE_LABELS[label])throw Error(`Missing profile label: ${source.id}/${label}`);
   for(const claim of result.localizedClaims)if(claim.field==='Sucesión'&&!PROFILE_LABELS[claim.value.territorio])throw Error(`Missing succession territory label: ${source.id}/${claim.value.territorio}`);
   return result;
 }

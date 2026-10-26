@@ -8,10 +8,19 @@ import {connectionUrl} from '../connections/connectionTree.js';
 import '../public/dynasty.css';
 const entityPath=(kind,key)=>{const es=`/es/${kind}/${slugPublico(key)}`;return translatedEquivalent(es,'en')||es;};
 function EntityLink({kind,name,label}){const path=entityPath(kind,name);return <a href={path}>{label||name}{path.startsWith('/es/')?' · ES':''}</a>;}
+function EnglishDynastyConnection({branch:r,internal=false}) {
+ return <section id={r.id} className="dynasty-connection" aria-label={`${r.etiqueta} · ${r.periodo}`}>
+  <span className="dynasty-connection-label">{r.etiqueta} · {r.periodo}</span>
+  {internal&&<h3>{r.fundador.nombre}</h3>}<p>{r.texto}</p>
+  <div className="public-entity-members">{r.personas.map(p=><a key={p.id} href={p.path}>{p.nombre}{p.path.startsWith('/es/')?' · ES':''}</a>)}</div>
+  <a className="public-entity-action" href={r.arbol?.ids?.length>1?connectionUrl(r.arbol.ids,r.arbol.criterion):`${r.fundador.path}?atlas=1`}>View the connection in the Spanish tree <ArrowRight size={12}/></a>
+ </section>;
+}
 export default function EnglishEntity({data:d}){
  const dynasty=d.type==='dynasty',[query,setQuery]=useState('');
  const members=(dynasty?d.miembros:d.personas).filter(p=>normalizarBusquedaPublica([p.nombre,p.role,p.sobrenombre,...(p.aliases||[])].join(' ')).includes(normalizarBusquedaPublica(query)));
  const Icon=dynasty?Shield:Landmark;
+ const internalBranches=dynasty?d.ramas.filter(r=>r.origen===d.key&&r.destino===d.key):[];
  return <main className={`public-main ${dynasty?'dynasty-page':'territory-page'}`}>
   <nav className="public-breadcrumbs" aria-label="Breadcrumb"><a href="/en/">Home</a><span>›</span><a href={dynasty?'/en/dynasties':'/en/territories'}>{dynasty?'Dynasties':'Territories'}</a><span>›</span><span aria-current="page">{d.nombre}</span></nav>
   <header className={`public-page-title ${dynasty?'dynasty-hero':'territory-hero'}`}>
@@ -24,7 +33,8 @@ export default function EnglishEntity({data:d}){
   {dynasty&&<>
    <nav className="dynasty-nav" aria-label="Dynasty sections"><a href="#houses">Parent houses and branches</a><a href="#history">History of the house</a><a href="#members">People</a><a href="#sources">Bibliography</a></nav>
    <section id="houses" className="public-section"><SectionHeading eyebrow="Genealogy, inheritance and alliances">Parent houses and branches</SectionHeading><p className="dynasty-intro">Descent, marriage and inheritance connect houses in different ways. Each documented link retains its own explanation.</p>
-    {[['Parent house',d.casasOrigen],['Branches of this house',d.casasDerivadas],['Alliances and inheritances',d.casasConectadas]].filter(([,houses])=>houses.length).map(([title,houses])=><div key={title} className="dynasty-house-group"><h3>{title}</h3><div className="public-entity-grid">{houses.map(h=><DynastyCard key={h.slug} item={h} headingLevel={3} relationship={title} locale="en" showMembers={!d.ramas.some(r=>h.conexiones?.includes(r.id))}>{d.ramas.filter(r=>h.conexiones?.includes(r.id)).map(r=><div key={r.id} className="dynasty-connection"><span className="dynasty-connection-label">{r.etiqueta} · {r.periodo}</span><p>{r.texto}</p><div className="public-entity-members">{r.personas.map(p=><a key={p.id} href={p.path}>{p.nombre}{p.path.startsWith('/es/')?' · ES':''}</a>)}</div><a className="public-entity-action" href={connectionUrl(r.arbol.ids,r.arbol.criterion)}>View the connection in the Spanish tree <ArrowRight size={12}/></a></div>)}</DynastyCard>)}</div></div>)}
+    {[['Parent house',d.casasOrigen],['Branches of this house',d.casasDerivadas],['Alliances and inheritances',d.casasConectadas]].filter(([,houses])=>houses.length).map(([title,houses])=><div key={title} className="dynasty-house-group"><h3>{title}</h3><div className="public-entity-grid">{houses.map(h=><DynastyCard key={h.slug} item={h} headingLevel={3} relationship={title} locale="en" showMembers={!d.ramas.some(r=>h.conexiones?.includes(r.id))}>{d.ramas.filter(r=>h.conexiones?.includes(r.id)).map(r=><EnglishDynastyConnection key={r.id} branch={r}/>)}</DynastyCard>)}</div></div>)}
+   {!!internalBranches.length&&<div className="dynasty-house-group"><h3>Branches and connections within the house</h3><div className="dynasty-branches">{internalBranches.map(r=><article key={r.id} className="public-content-card dynasty-branch"><EnglishDynastyConnection branch={r} internal/></article>)}</div></div>}
    </section>
    <section id="history" className="dynasty-history">{[['Origin',d.origen],['Development',d.trayectoria],['Legacy',d.legado]].map(([title,text])=><article key={title} className="public-content-card"><h2>{title}</h2><p>{text}</p></article>)}</section>
    {!!d.protagonistas.length&&<section className="public-section"><SectionHeading eyebrow="People who connect the history">Protagonists and connections</SectionHeading><div className="public-person-grid">{d.protagonistas.map(p=><PersonaMiniCard key={p.id} persona={p} locale="en" compact/>)}</div></section>}
