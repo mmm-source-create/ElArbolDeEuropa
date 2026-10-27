@@ -1,3 +1,4 @@
+import {ROSES_NAMES,ROSES_LABELS,ROSES_NOTES} from './rosesVocabulary.js';
 import {REVIEWED_NEXT_100_NAMES,REVIEWED_NEXT_100_LABELS,REVIEWED_NEXT_100_NOTES} from './reviewedNext100Vocabulary.js';
 import {REVIEWED_100_NAMES,REVIEWED_100_LABELS,REVIEWED_100_NOTES} from './reviewed100Vocabulary.js';
 import {IBERIAN_NAMES,IBERIAN_LABELS,IBERIAN_NOTES} from './iberianVocabulary.js';
@@ -7,6 +8,7 @@ import {V535_NAMES,V535_LABELS,V535_NOTES} from './v535Vocabulary.js';
 import {V536_NAMES,V536_LABELS,V536_NOTES} from './v536Vocabulary.js';
 // Display translations only: canonical dynasty and territory keys stay intact.
 export const PROFILE_LABELS = {
+  ...ROSES_LABELS,
   ...REVIEWED_NEXT_100_LABELS,
   ...REVIEWED_100_LABELS,
   'Jagellón':'Jagiellon','Kotromanić':'Kotromanić',Piast:'Piast',Ban:'Ban','Ban / Rey':'Ban / King',
@@ -23,6 +25,7 @@ export const PROFILE_LABELS = {
 };
 
 export const ENGLISH_NAMES = {
+  ...ROSES_NAMES,
   ...REVIEWED_NEXT_100_NAMES,
   ...REVIEWED_100_NAMES,
   STEPHEN2BOS:'Stephen II of Bosnia',CASI4:'Casimir IV of Poland',EDUVIGJAGBAV:'Hedwig Jagiellon',JUAN1ALBERTO:'John I Albert of Poland',
@@ -42,6 +45,7 @@ export const ENGLISH_NAMES = {
 };
 
 export const PROFILE_NOTES = {
+  ...ROSES_NOTES,
   ...REVIEWED_NEXT_100_NOTES,
   ...REVIEWED_100_NOTES,
   ...EXPANDED_NOTES,

@@ -1,3 +1,4 @@
+import {WAR_OF_ROSES_STORY} from './historiaDosRosas.js';
 import {HISTORIAS_TEMATICAS, CONTEXTO_HISTORIAS} from './historiasTematicas.js';
 import {storyCollections} from '../features/stories/storyThemes.js';
 import {HERITAGE_STORIES,reviseBurgundy} from './historiasHerencias.js';
@@ -3029,6 +3030,7 @@ const HISTORIAS_EXISTENTES = [
     "subtitulo": "Una disputa dinástica que transformó Francia e Inglaterra",
     "disponible": true,
     "descripcion": "Un recorrido desde la crisis sucesoria de 1328 hasta Castillon en 1453: reclamaciones de sangre, grandes victorias inglesas, recuperación francesa, guerra civil, Borgoña y el giro de Juana de Arco.",
+    "fuentes": [{"titulo":"Luxembourg · Juan el Ciego y la batalla de Crécy","url":"https://luxembourg.public.lu/en/society-and-culture/history/helm-holy-roman-empire.html"}],
     "pasos": [
       {
         "anio": 1328,
@@ -3060,11 +3062,13 @@ const HISTORIAS_EXISTENTES = [
         "personas": [
           "EDUARDO3ING",
           "EDUNEGRO",
-          "FEL6FRA"
+          "FEL6FRA",
+          "JUAN1B",
+          "CARLOS4"
         ],
         "eventoId": "CRECY_1346",
         "titulo": "Crécy: el gran golpe inglés",
-        "texto": "Eduardo III y su hijo Eduardo de Woodstock, el Príncipe Negro, obtienen en Crécy una victoria que altera el prestigio militar de ambos reinos. Calais caerá poco después y se convertirá en una cabeza de puente inglesa duradera en el continente."
+        "texto": "El 26 de agosto de 1346, Eduardo III y su hijo Eduardo de Woodstock, el Príncipe Negro, derrotan al ejército de Felipe VI en Crécy. Entre los aliados franceses combate Juan de Luxemburgo, rey de Bohemia, que ha perdido la vista. Juan entra en la lucha acompañado por sus caballeros y muere en la batalla. Su hijo Carlos, elegido rey de romanos pocas semanas antes, hereda la corona bohemia. La guerra conecta así la sucesión francesa con las familias que gobiernan Europa central.\n\nLa victoria refuerza el prestigio militar de los ingleses. Eduardo III puede emprender el sitio de Calais, que caerá en 1347 y se convertirá en una cabeza de puente duradera en el continente. El cuadro de Julian Russell Story recreará siglos después el encuentro del Príncipe Negro con el cuerpo de Juan de Bohemia."
       },
       {
         "anio": 1356,
@@ -3242,12 +3246,6 @@ const HISTORIAS_EXISTENTES = [
         "texto": "John Talbot intenta recuperar la situación inglesa en Guyena y muere en Castillon frente a un ejército francés apoyado por una poderosa artillería organizada por los hermanos Bureau. Inglaterra conserva Calais, pero pierde casi todas sus posesiones francesas. La guerra que empezó por feudos y derechos dinásticos termina dejando una monarquía francesa mucho más fuerte y una Inglaterra que pronto se hundirá en la Guerra de las Dos Rosas."
       }
     ]
-  },
-  {
-    "id": "dos-rosas",
-    "titulo": "La Guerra de las Dos Rosas",
-    "subtitulo": "Lancaster, York y el ascenso Tudor",
-    "disponible": false
   },
   {
     "id": "gioconda",
@@ -4596,6 +4594,7 @@ const HISTORIAS_EXISTENTES = [
   }
 ];
 export const HISTORIAS = [
+  WAR_OF_ROSES_STORY,
   ...HERITAGE_STORIES,
   ...HISTORIAS_EXISTENTES.map(h => HISTORIAS_TEMATICAS.find(nueva => nueva.id === h.id) || h),
   ...HISTORIAS_TEMATICAS.filter(h => !HISTORIAS_EXISTENTES.some(existente => existente.id === h.id)),

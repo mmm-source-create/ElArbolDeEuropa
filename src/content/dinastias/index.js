@@ -1,3 +1,4 @@
+import {YORK_HISTORY,ROSES_HOUSE_RELATIONS} from './dos-rosas.js';
 import {TREINTA_CASAS} from './treinta-casas.js';
 import {ANJOU_HUNGARY_HISTORY} from './anjou-hungria.js';
 import {CONEXIONES_CASAS} from './conexiones-casas.js';
@@ -17,6 +18,7 @@ const BRITANNICA='https://www.britannica.com/';
 
 // A house history is editorial context. Branches and matrimonial transfers are distinct relations.
 export const HISTORIA_DINASTIAS = {
+  'Plantagenet-York':YORK_HISTORY,
   ...TREINTA_CASAS,
   'Anjou-Hungría':ANJOU_HUNGARY_HISTORY,
   ...CASAS_AMPLIACION_EDITORIAL,
@@ -125,6 +127,7 @@ export const TIPOS_RAMAS = {
 };
 
 export const RAMAS_DINASTICAS = [
+  ...ROSES_HOUSE_RELATIONS,
   ...CONEXIONES_CASAS,
   ...RAMAS_REVISION_CAPETA,
   {id:'borgona-portugal-avis',origen:'Borgoña-Portugal',destino:'Avís',tipo:'rama_cadete',periodo:'1385',fundador:'JUAN1PORT',personas:['PED1PORT','JUAN1PORT','EDU1PORT'],texto:'Juan I de Avís era hijo natural de Pedro I de Portugal. Su elección en 1385 inauguró otra casa reinante dentro de la descendencia de la primera dinastía portuguesa.',fuentes:[PORTUGAL_HOUSE_SOURCES[3]]},
