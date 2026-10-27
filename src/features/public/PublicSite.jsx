@@ -145,6 +145,7 @@ export function CatalogPage({ tipo }) {
   const Icon = config.icon;
   const { data, loading, error } = useJson(`/catalogos/${tipo}.json`);
   const [query, setQuery] = useState("");
+  useEffect(() => {setQuery(new URLSearchParams(window.location.search).get("q") || "");}, [tipo]);
   const [soloHistoria, setSoloHistoria] = useState(false);
   // V5.23 · Personas: orden por relevancia o alfabético, filtros y paginación.
   const [orden, setOrden] = useState("destacadas");

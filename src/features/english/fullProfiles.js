@@ -9,6 +9,30 @@ import {V536_ENGLISH_PROFILES} from './v536Profiles.js';
 // Editorial translations of complete Spanish profiles. Canonical IDs, dates,
 // relationships and territorial keys are supplied by the shared generator.
 export const COMPLETE_ENGLISH_PROFILES = {
+  GUSTAV2ADOLFO: {
+  "name": "Gustav II Adolf of Sweden",
+  "role": "King of Sweden",
+  "nickname": "the Lion of the North",
+  "aliases": [
+    "Gustavus Adolphus",
+    "Gustavus II Adolphus"
+  ],
+  "summary": "King of Sweden and a major military reformer. His intervention in the Thirty Years’ War made Sweden one of the Baltic’s leading powers.",
+  "sections": [
+    [
+      "A king at seventeen",
+      "The son of Charles IX and Christina of Holstein-Gottorp, he was born in Stockholm in 1594 and inherited a kingdom at war with Denmark, Russia and Poland in 1611. With his chancellor Axel Oxenstierna, he reached an agreement with the nobility and reorganised government, finance and justice."
+    ],
+    [
+      "The Baltic",
+      "The Peace of Knäred (1613) ended the war with Denmark at a high price, while the Treaty of Stolbovo (1617) cut Russia off from the Baltic. Fighting his cousin Sigismund III of Poland, who claimed the Swedish throne, he conquered Riga (1621) and Livonia. There he reformed the army through national recruitment, light artillery and smaller, more mobile units."
+    ],
+    [
+      "Germany",
+      "In 1630 he landed in Pomerania to halt the imperial advance and defend the Protestants, supported by French subsidies. He defeated Tilly at Breitenfeld (1631), crossed Germany into Bavaria and occupied Munich. He died at the Battle of Lützen in November 1632, which his troops won against Wallenstein. His five-year-old daughter Christina succeeded him."
+    ]
+  ]
+},
   ...POLISH_PROFILES,
   ...REVIEWED_THIRD_100_PROFILES,
   ...REVIEWED_NEXT_100_PROFILES,

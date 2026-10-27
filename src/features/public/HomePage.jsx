@@ -2,6 +2,7 @@ import {Users, Shield, Landmark, BookOpen, GraduationCap, Swords, Sparkles, Arro
 import {usePublicMeta, PublicLayout} from './publicShared.jsx';
 import HOME_DATA from '../../generated/home.json';
 import HomeDiscovery from './HomeDiscovery.jsx';
+import HomeSearch from './HomeSearch.jsx';
 import Odometer from '../../ui/Odometer.jsx';
 import '../../styles/theme.css';
 
@@ -82,6 +83,7 @@ export function HomeContent({ data = HOME_DATA, locale = "es", title, onEnterAtl
           </div>
           <a className="public-home-year" href="/es/?atlas=1&anio=1500&panel=europa"><Landmark size={14}/> {copy.year}</a>
           {english && <p className="public-home-edition">Explore complete profiles, dynasties, territories, stories and the Portraits challenge in English. The interactive Atlas is in Spanish.</p>}
+          <HomeSearch locale={locale}/>
           <div className="public-hero-stats" aria-label={copy.statsLabel}>
             {["personas", "dinastias", "territorios", "historias"].map((key, index) => <span key={key}><strong><Odometer value={stats[key]} locale={locale}/></strong>{copy.stats[index]}</span>)}
           </div>

@@ -1,0 +1,375 @@
+{
+  "reviewedAt": "2026-10-27",
+  "portraits": [
+    {
+      "id": "FELIPESUABIA",
+      "es": {
+        "archivo": "/personas-img/FELIPESUABIA.webp",
+        "encuadre": "50% 10%",
+        "alt": "Felipe de Suabia · Acta Sancti Petri in Augia",
+        "tipo": "Miniatura contemporánea",
+        "obra": "Felipe de Suabia · Acta Sancti Petri in Augia",
+        "autor": "Miniaturista anónimo",
+        "fecha": "c. 1200",
+        "institucion": "Kantonsbibliothek St. Gallen · Vadianische Sammlung, VadSlg Ms. 321, p. 40",
+        "fuente": "Wikimedia Commons",
+        "fuenteUrl": "https://commons.wikimedia.org/wiki/File:Vad-0321_040_Philipp_von_Schwaben.jpg",
+        "derechos": "Dominio público · PDM 1.0",
+        "derechosUrl": "https://creativecommons.org/publicdomain/mark/1.0/"
+      },
+      "en": {
+        "tipo": "Contemporary miniature",
+        "obra": "Philip of Swabia · Acta Sancti Petri in Augia",
+        "autor": "Anonymous illuminator",
+        "fecha": "c. 1200",
+        "institucion": "Kantonsbibliothek St. Gallen · Vadianische Sammlung, VadSlg Ms. 321, p. 40",
+        "alt": "Philip of Swabia · Acta Sancti Petri in Augia"
+      },
+      "catalogueSources": [
+        "https://www.e-codices.unifr.ch/en/list/one/vad/0321"
+      ]
+    },
+    {
+      "id": "FED1BARBARROJA",
+      "es": {
+        "archivo": "/personas-img/FED1BARBARROJA.webp",
+        "encuadre": "50% 12%",
+        "alt": "Federico Barbarroja y sus hijos · Crónica de los güelfos",
+        "tipo": "Miniatura del siglo XII",
+        "obra": "Federico Barbarroja y sus hijos · Crónica de los güelfos",
+        "autor": "Miniaturista anónimo de la abadía de Weingarten",
+        "fecha": "1179–1191",
+        "institucion": "Hochschul- und Landesbibliothek Fulda",
+        "fuente": "Wikimedia Commons",
+        "fuenteUrl": "https://commons.wikimedia.org/wiki/File:Friedrich-barbarossa-und-soehne-welfenchronik_1-1000x1540.jpg",
+        "derechos": "Dominio público · PDM 1.0",
+        "derechosUrl": "https://creativecommons.org/publicdomain/mark/1.0/"
+      },
+      "en": {
+        "tipo": "Twelfth-century miniature",
+        "obra": "Frederick Barbarossa and his sons · Chronicle of the Guelphs",
+        "autor": "Anonymous illuminator at Weingarten Abbey",
+        "fecha": "1179–1191",
+        "institucion": "Hochschul- und Landesbibliothek Fulda",
+        "alt": "Frederick Barbarossa and his sons · Chronicle of the Guelphs"
+      },
+      "catalogueSources": []
+    },
+    {
+      "id": "GIANGALSFOR",
+      "es": {
+        "archivo": "/personas-img/GIANGALSFOR.webp",
+        "encuadre": "50% 15%",
+        "alt": "Joven como san Sebastián · identificación tradicional con Gian Galeazzo Sforza",
+        "tipo": "Identificación propuesta",
+        "obra": "Joven como san Sebastián · identificación tradicional con Gian Galeazzo Sforza",
+        "autor": "Marco d’Oggiono (atribución actual del museo; antes atribuido a Ambrogio de Predis); fotografía de Sailko",
+        "fecha": "Finales de la década de 1480 (obra); 2016 (fotografía)",
+        "institucion": "Cleveland Museum of Art · 1986.9",
+        "fuente": "Wikimedia Commons",
+        "fuenteUrl": "https://commons.wikimedia.org/wiki/File:Giovanni_ambrogio_de%27_predis,_ritratto_di_giovane_come_san_sebastiano,_1488-90_ca.jpg",
+        "derechos": "CC BY 3.0",
+        "derechosUrl": "https://creativecommons.org/licenses/by/3.0"
+      },
+      "en": {
+        "tipo": "Proposed identification",
+        "obra": "Portrait of a Youth as Saint Sebastian · traditionally identified as Gian Galeazzo Sforza",
+        "autor": "Marco d’Oggiono (current museum attribution; formerly attributed to Ambrogio de Predis); photograph by Sailko",
+        "fecha": "Late 1480s (artwork); 2016 (photograph)",
+        "institucion": "Cleveland Museum of Art · 1986.9",
+        "alt": "Portrait of a Youth as Saint Sebastian · traditionally identified as Gian Galeazzo Sforza"
+      },
+      "catalogueSources": [
+        "https://www.clevelandart.org/art/1986.9"
+      ]
+    },
+    {
+      "id": "CATASFOR",
+      "es": {
+        "archivo": "/personas-img/CATASFOR.webp",
+        "encuadre": "50% 22%",
+        "alt": "La dama del jazmín · identificación propuesta con Catalina Sforza",
+        "tipo": "Identificación propuesta",
+        "obra": "La dama del jazmín · identificación propuesta con Catalina Sforza",
+        "autor": "Lorenzo di Credi",
+        "fecha": "c. 1485–1490",
+        "institucion": "Musei Civici San Domenico, Forlì · inv. 119",
+        "fuente": "Wikimedia Commons",
+        "fuenteUrl": "https://commons.wikimedia.org/wiki/File:Caterina_Sforza_incut.jpg",
+        "derechos": "Dominio público · PDM 1.0",
+        "derechosUrl": "https://creativecommons.org/publicdomain/mark/1.0/"
+      },
+      "en": {
+        "tipo": "Proposed identification",
+        "obra": "Lady of the Jasmine · proposed identification as Caterina Sforza",
+        "autor": "Lorenzo di Credi",
+        "fecha": "c. 1485–1490",
+        "institucion": "Musei Civici San Domenico, Forlì · inv. 119",
+        "alt": "Lady of the Jasmine · proposed identification as Caterina Sforza"
+      },
+      "catalogueSources": [
+        "https://trasparenza.cultura.gov.it/archivio96_atti-a-rilevanza-esterna-o-provvedimenti-di-tutela-e-valorizzazione_0_331690_950_1.html"
+      ]
+    },
+    {
+      "id": "LUCRECIABORJA",
+      "es": {
+        "archivo": "/personas-img/LUCRECIABORJA.webp",
+        "encuadre": "50% 14%",
+        "alt": "Retrato de una joven · antigua identificación con Lucrecia Borja",
+        "tipo": "Retrato de modelo desconocida",
+        "obra": "Retrato de una joven · antigua identificación con Lucrecia Borja",
+        "autor": "Bartolomeo Veneto",
+        "fecha": "c. 1500–1510",
+        "institucion": "National Gallery, London · NG2507",
+        "fuente": "Wikimedia Commons",
+        "fuenteUrl": "https://commons.wikimedia.org/wiki/File:Veneto_-_Portrait_of_an_Unidentified_Young_Lady_-_National_Gallery.jpg",
+        "derechos": "Dominio público · PDM 1.0",
+        "derechosUrl": "https://creativecommons.org/publicdomain/mark/1.0/"
+      },
+      "en": {
+        "tipo": "Portrait of an unidentified sitter",
+        "obra": "Portrait of a Young Lady · formerly identified as Lucrezia Borgia",
+        "autor": "Bartolomeo Veneto",
+        "fecha": "c. 1500–1510",
+        "institucion": "National Gallery, London · NG2507",
+        "alt": "Portrait of a Young Lady · formerly identified as Lucrezia Borgia"
+      },
+      "catalogueSources": [
+        "https://www.nationalgallery.org.uk/paintings/bartolomeo-veneto-portrait-of-a-young-lady"
+      ]
+    },
+    {
+      "id": "BIANSFOR",
+      "es": {
+        "archivo": "/personas-img/BIANSFOR.webp",
+        "encuadre": "50% 12%",
+        "alt": "La bella principessa · identificación propuesta con Bianca Giovanna Sforza",
+        "tipo": "Identificación y autoría discutidas",
+        "obra": "La bella principessa · identificación propuesta con Bianca Giovanna Sforza",
+        "autor": "Atribuido a Leonardo da Vinci; autoría discutida",
+        "fecha": "c. 1495–1496 (datación propuesta)",
+        "institucion": "Colección particular",
+        "fuente": "Wikimedia Commons",
+        "fuenteUrl": "https://commons.wikimedia.org/wiki/File:Profile_of_a_Young_Fiancee_-_da_VinciFXD.jpg",
+        "derechos": "Dominio público · PDM 1.0",
+        "derechosUrl": "https://creativecommons.org/publicdomain/mark/1.0/"
+      },
+      "en": {
+        "tipo": "Disputed identification and authorship",
+        "obra": "La bella principessa · proposed identification as Bianca Giovanna Sforza",
+        "autor": "Attributed to Leonardo da Vinci; authorship disputed",
+        "fecha": "c. 1495–1496 (proposed date)",
+        "institucion": "Private collection",
+        "alt": "La bella principessa · proposed identification as Bianca Giovanna Sforza"
+      },
+      "catalogueSources": [
+        "https://shura.shu.ac.uk/10046/1/The_Uncatchable_Smile_in_Leonardo_da_Vincis_La_Bella_Principessa_Portrait%28in_press%29.pdf",
+        "https://attributions.co.uk/uploads/files/PDF%20La_Bella_Principessa_Arguments_against_t.pdf"
+      ]
+    },
+    {
+      "id": "FELMARVISC",
+      "es": {
+        "archivo": "/personas-img/FELMARVISC.webp",
+        "encuadre": "50% 20%",
+        "alt": "Filippo Maria Visconti · Serie Gioviana",
+        "tipo": "Retrato posterior",
+        "obra": "Filippo Maria Visconti · Serie Gioviana",
+        "autor": "Cristofano dell’Altissimo; fotografía de Sailko",
+        "fecha": "1552–1556 (obra); 2011 (fotografía)",
+        "institucion": "Gallerie degli Uffizi · inv. 1890, n. 87",
+        "fuente": "Wikimedia Commons",
+        "fuenteUrl": "https://commons.wikimedia.org/wiki/File:Cristofano_dell%27altissimo,_filippo_visconti,_ante_1568.JPG",
+        "derechos": "CC BY-SA 3.0",
+        "derechosUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+      },
+      "en": {
+        "tipo": "Posthumous portrait",
+        "obra": "Filippo Maria Visconti · Giovio portrait series",
+        "autor": "Cristofano dell’Altissimo; photograph by Sailko",
+        "fecha": "1552–1556 (artwork); 2011 (photograph)",
+        "institucion": "Gallerie degli Uffizi · inv. 1890, n. 87",
+        "alt": "Filippo Maria Visconti · Giovio portrait series"
+      },
+      "catalogueSources": [
+        "https://catalogo.beniculturali.it/detail/HistoricOrArtisticProperty/0900293285"
+      ]
+    },
+    {
+      "id": "BERNVISC",
+      "es": {
+        "archivo": "/personas-img/BERNVISC.webp",
+        "encuadre": "50% 10%",
+        "alt": "Bernabé Visconti · detalle del monumento ecuestre",
+        "tipo": "Efigie contemporánea",
+        "obra": "Bernabé Visconti · detalle del monumento ecuestre",
+        "autor": "Bonino da Campione y colaboradores; fotografía de Sailko, editada por MenkinAlRire",
+        "fecha": "Antes de 1363 (efigie); c. 1360–1385/1386 (conjunto); 2016 (fotografía)",
+        "institucion": "Museo d’Arte Antica, Castello Sforzesco · inv. 733 bis",
+        "fuente": "Wikimedia Commons",
+        "fuenteUrl": "https://commons.wikimedia.org/wiki/File:Bonino_da_Campione,_monumento_sepolcrale_di_Bernab%C3%B2_Visconti,_1385-90_ca.,_da_s._Giovanni_in_Conca_02-edit-crop.jpg",
+        "derechos": "CC BY-SA 3.0",
+        "derechosUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+      },
+      "en": {
+        "tipo": "Contemporary effigy",
+        "obra": "Bernabò Visconti · detail of the equestrian monument",
+        "autor": "Bonino da Campione and assistants; photograph by Sailko, edited by MenkinAlRire",
+        "fecha": "Before 1363 (effigy); c. 1360–1385/1386 (monument); 2016 (photograph)",
+        "institucion": "Museo d’Arte Antica, Castello Sforzesco · inv. 733 bis",
+        "alt": "Bernabò Visconti · detail of the equestrian monument"
+      },
+      "catalogueSources": [
+        "https://www.milanocastello.it/i-musei/museo-d-arte-antica/highlights/bonino-da-campione-e-collaboratori-arca-di-bernabo-visconti"
+      ]
+    }
+  ],
+  "arms": [
+    {
+      "key": "Beaufort",
+      "blason": "Cuartelado de Francia antigua e Inglaterra, con bordura componada de plata y azur.",
+      "capas": [
+        [
+          "campo",
+          "plata"
+        ]
+      ],
+      "nota": "Armas de Juan Beaufort, primer conde de Somerset. El cuartel francés conserva el sembrado de flores de lis; otras generaciones emplearon variantes.",
+      "en": {
+        "blazon": "Quarterly France ancient and England, within a bordure compony argent and azure.",
+        "note": "Arms of John Beaufort, first Earl of Somerset. The French quarters retain the semy of fleurs-de-lis; other generations used variants."
+      },
+      "imagen": {
+        "archivo": "/escudos/octubre-beaufort.svg",
+        "titulo": "Arms of John Beaufort, 1st Earl of Somerset.svg",
+        "autor": "Sodacan",
+        "licencia": "CC BY-SA 3.0",
+        "licenciaUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+        "fuente": "https://commons.wikimedia.org/wiki/File:Arms_of_John_Beaufort,_1st_Earl_of_Somerset.svg",
+        "modificaciones": "Se retiran metadatos de edición; se conserva el dibujo y se asegura el viewBox para el escalado.",
+        "en": {
+          "autor": "Sodacan",
+          "modifications": "Editing metadata removed; drawing preserved and a viewBox ensured for responsive scaling."
+        }
+      }
+    },
+    {
+      "key": "Neville",
+      "blason": "De gules, un sotuer de plata.",
+      "capas": [
+        [
+          "campo",
+          "gules"
+        ]
+      ],
+      "nota": "Armas sencillas de Neville, asociadas a Raby y Westmorland. Las ramas de Salisbury y Warwick usaron diferencias.",
+      "en": {
+        "blazon": "Gules, a saltire argent.",
+        "note": "The plain Neville arms associated with Raby and Westmorland. The Salisbury and Warwick branches used differences."
+      },
+      "imagen": {
+        "archivo": "/escudos/octubre-neville.svg",
+        "titulo": "Coat of Arms - Neville, Earls of Westmorland, and Barons Neville of Raby.svg",
+        "autor": "Immanuelle; basado en Rs-nourse",
+        "licencia": "CC BY-SA 4.0",
+        "licenciaUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "fuente": "https://commons.wikimedia.org/wiki/File:Coat_of_Arms_-_Neville,_Earls_of_Westmorland,_and_Barons_Neville_of_Raby.svg",
+        "modificaciones": "Se retiran metadatos de edición; se conserva el dibujo y se asegura el viewBox para el escalado.",
+        "en": {
+          "autor": "Immanuelle; based on Rs-nourse",
+          "modifications": "Editing metadata removed; drawing preserved and a viewBox ensured for responsive scaling."
+        }
+      }
+    },
+    {
+      "key": "O’Neill",
+      "blason": "De plata, una mano diestra de gules entre dos leones afrontados del mismo color; tres estrellas en jefe y, en punta, azur con un salmón de plata.",
+      "capas": [
+        [
+          "campo",
+          "plata"
+        ]
+      ],
+      "nota": "Composición de los O’Neill con la mano roja, leones, estrellas y salmón. Las ramas del linaje emplearon variantes.",
+      "en": {
+        "blazon": "Argent, a dexter hand gules between two lions combatant gules, three stars in chief and a salmon argent on azure in base.",
+        "note": "O’Neill composition with the red hand, lions, stars and salmon. Branches of the lineage used variants."
+      },
+      "imagen": {
+        "archivo": "/escudos/octubre-oneill.png",
+        "titulo": "O'Neill Coat of arms.svg",
+        "autor": "Cookieman1.1.1",
+        "licencia": "CC BY-SA 4.0",
+        "licenciaUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "fuente": "https://commons.wikimedia.org/wiki/File:O%27Neill_Coat_of_arms.svg",
+        "modificaciones": "Convertido a PNG; dibujo conservado.",
+        "en": {
+          "autor": "Cookieman1.1.1",
+          "modifications": "Converted to PNG; drawing preserved."
+        }
+      }
+    },
+    {
+      "key": "Castro",
+      "blason": "De plata, seis roeles de azur puestos en dos palos.",
+      "capas": [
+        [
+          "campo",
+          "plata"
+        ]
+      ],
+      "nota": "Armas de seis roeles de la rama gallega de Castro, vinculada a Lemos. Otras ramas emplearon variantes.",
+      "en": {
+        "blazon": "Argent, six roundels azure in two pales.",
+        "note": "The six-roundel arms of the Galician Castro branch associated with Lemos. Other branches used variants."
+      },
+      "imagen": {
+        "archivo": "/escudos/octubre-castro.svg",
+        "titulo": "Coats of arms of families of Castro.svg",
+        "autor": "Manuelfb55",
+        "licencia": "CC BY-SA 4.0",
+        "licenciaUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "fuente": "https://commons.wikimedia.org/wiki/File:Coats_of_arms_of_families_of_Castro.svg",
+        "modificaciones": "Se retiran metadatos de edición; se conserva el dibujo y se asegura el viewBox para el escalado.",
+        "en": {
+          "autor": "Manuelfb55",
+          "modifications": "Editing metadata removed; drawing preserved and a viewBox ensured for responsive scaling."
+        }
+      }
+    },
+    {
+      "key": "Shishman",
+      "blason": "Emblema circular de oro con tres leones pasantes de gules dispuestos en palo.",
+      "capas": [
+        [
+          "campo",
+          "oro"
+        ]
+      ],
+      "nota": "Emblema atribuido al zar Iván Shishman según una miniatura vinculada a un viajero árabe del siglo XIV. Se usa como signo representativo de la casa; la reconstrucción conserva el marco circular de la fuente.",
+      "en": {
+        "blazon": "A circular gold emblem with three lions passant gules in pale.",
+        "note": "Emblem attributed to Tsar Ivan Shishman after a miniature associated with a fourteenth-century Arab traveller. Used as a representative sign for the house; the reconstruction retains the source’s circular frame."
+      },
+      "tipo": "emblema",
+      "imagen": {
+        "archivo": "/escudos/octubre-shishman.svg",
+        "titulo": "Coat of arms of the Second Bulgarian Empire.svg",
+        "autor": "Пакко",
+        "licencia": "CC BY-SA 3.0",
+        "licenciaUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+        "fuente": "https://commons.wikimedia.org/wiki/File:Coat_of_arms_of_the_Second_Bulgarian_Empire.svg",
+        "modificaciones": "Se retiran metadatos de edición; se conserva el dibujo y se asegura el viewBox para el escalado.",
+        "en": {
+          "autor": "Пакко",
+          "modifications": "Editing metadata removed; drawing preserved and a viewBox ensured for responsive scaling."
+        }
+      }
+    }
+  ],
+  "notes": {
+    "es": "Las obras elegidas con identificación discutida mantienen esa condición en ambos idiomas. Para Gian Galeazzo se usa una reproducción de mayor resolución del mismo cuadro y la atribución actual de Cleveland a Marco d’Oggiono. El retrato asociado a Lucrecia figura como modelo desconocida, conforme a la National Gallery. La fuente de Neville se coteja visualmente con el sotuer de plata sobre gules. El emblema de Shishman conserva la forma circular de la reconstrucción.",
+    "en": "Selected works with disputed identification retain that status in both languages. Gian Galeazzo uses a higher-resolution reproduction of the same painting and Cleveland’s current attribution to Marco d’Oggiono. The portrait associated with Lucrezia is labelled as an unidentified sitter, following the National Gallery. The Neville source was visually checked against the argent saltire on gules. The Shishman emblem retains the reconstruction’s circular form."
+  }
+}
