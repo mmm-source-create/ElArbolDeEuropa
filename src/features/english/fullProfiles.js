@@ -1,3 +1,4 @@
+import {REVIEWED_FOURTH_200_PROFILES} from './reviewedFourth200Profiles.js';
 import {POLISH_PROFILES} from './polishProfiles.js';
 import {REVIEWED_THIRD_100_PROFILES} from './reviewedThird100Profiles.js';
 import {REVIEWED_NEXT_100_PROFILES} from './reviewedNext100Profiles.js';
@@ -9,6 +10,7 @@ import {V536_ENGLISH_PROFILES} from './v536Profiles.js';
 // Editorial translations of complete Spanish profiles. Canonical IDs, dates,
 // relationships and territorial keys are supplied by the shared generator.
 export const COMPLETE_ENGLISH_PROFILES = {
+  ...REVIEWED_FOURTH_200_PROFILES,
   GUSTAV2ADOLFO: {
   "name": "Gustav II Adolf of Sweden",
   "role": "King of Sweden",

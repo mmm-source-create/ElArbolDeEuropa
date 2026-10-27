@@ -19,6 +19,78 @@ const CASTILLA_LEON = {blason: 'Cuartelado de Castilla y León: 1.º y 4.º, de 
 
 export const ESCUDOS = Object.freeze({
 
+  "Tarnowski": {
+    "blason": "De azur, un creciente de oro acompañado en jefe de una estrella de seis puntas del mismo metal.",
+    "capas": [
+      [
+        "campo",
+        "azur"
+      ]
+    ],
+    "nota": "Armas Leliwa empleadas por los Tarnowski. La lámina incluye timbre y ornamentos exteriores.",
+    "en": {
+      "blazon": "Azure, a crescent or beneath a six-pointed star of the same.",
+      "note": "Leliwa arms used by the Tarnowski. The image includes the crest and exterior ornaments."
+    }
+  },
+  "Sanguszko": {
+    "blason": "De gules, un jinete armado sobre caballo de plata, con espada alzada y escudo de azur cargado con doble cruz de oro; al lado diestro, un castillo de plata, todo sobre una terraza de sinople.",
+    "capas": [
+      [
+        "campo",
+        "gules"
+      ]
+    ],
+    "nota": "Variante de la Pogoń de los príncipes Sanguszko, con sus detalles de escusón, manto y corona. Las ramas emplearon variantes.",
+    "en": {
+      "blazon": "Gules, an armed rider on a horse argent, brandishing a sword and bearing an azure shield with a double cross or; in dexter base a castle argent, all on a base vert.",
+      "note": "Variant of the Pogoń of the Sanguszko princes, including its shield details, mantle and crown. Branches used variants."
+    }
+  },
+  "Czartoryski": {
+    "blason": "De gules, un jinete armado sobre caballo de plata, con espada alzada y escudo de azur cargado con doble cruz de oro; en la punta diestra, un castillo de plata.",
+    "capas": [
+      [
+        "campo",
+        "gules"
+      ]
+    ],
+    "nota": "Pogoń de los príncipes Czartoryski, representada con manto y corona. Se conserva la variante de la fuente.",
+    "en": {
+      "blazon": "Gules, an armed rider on a horse argent, brandishing a sword and bearing an azure shield with a double cross or; in dexter base a castle argent.",
+      "note": "Pogoń of the Czartoryski princes, shown with mantle and crown. The source variant is retained."
+    }
+  },
+  "Chigi": {
+    "blason": "De gules, un monte de seis cimas de oro, sumado de una estrella del mismo metal.",
+    "capas": [
+      [
+        "campo",
+        "gules"
+      ]
+    ],
+    "nota": "Armas sencillas de Chigi. Los Chigi della Rovere emplearon además composiciones cuarteladas.",
+    "en": {
+      "blazon": "Gules, a mount of six peaks or surmounted by a star of the same.",
+      "note": "Plain Chigi arms. The Chigi della Rovere also used quartered compositions."
+    }
+  },
+  "Savelli": {
+    "blason": "Bandado de oro y gules; jefe de plata con rosa de gules entre dos leones afrontados del mismo color.",
+    "capas": [
+      [
+        "campo",
+        "gules"
+      ]
+    ],
+    "nota": "Composición de Savelli con el jefe de la rosa y los dos leones; se conserva el dibujo de la fuente.",
+    "en": {
+      "blazon": "Bendy or and gules; on a chief argent a rose gules between two lions combatant of the same.",
+      "note": "Savelli composition with a chief bearing the rose and two lions; the source drawing is preserved."
+    }
+  }
+,
+
   "Beaufort": {
     "blason": "Cuartelado de Francia antigua e Inglaterra, con bordura componada de plata y azur.",
     "capas": [

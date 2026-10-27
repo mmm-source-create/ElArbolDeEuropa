@@ -53,3 +53,11 @@ Referencias de las decisiones particulares: [coronación de Juana II y Felipe II
 Las personas, casas e historias nuevas se entregan completas en español e inglés en la misma PR, incluidos textos extensos, notas, evidencias, créditos y enlaces. Las cien traducciones de fichas anteriores se cuentan aparte de las incorporaciones.
 
 Los exónimos también se aplican a la nobleza: Juan Amor Tarnowski conserva Jan Amor Tarnowski como variante y como nombre inglés. Tadeo Kościuszko conserva Tadeusz Kościuszko en inglés y en las variantes; la forma española está documentada en el [Museo Lázaro Galdiano](https://www.museolazarogaldiano.es/fondos/tadeo-kosciusko).
+
+## Cuarta tanda · 200 fichas
+
+La revisión de 27 de octubre de 2026 comprende otras 200 personas, sin repetir las tres tandas anteriores. Se conservan las denominaciones españolas asentadas y se acortan diez encabezados que concatenaban coronas o necesitaban distinguir homónimos. Los nombres anteriores permanecen entre las variantes. Se fijan también las direcciones de dos homónimas cuyos enlaces habrían cambiado al desaparecer la coincidencia de nombres: Isabel de Borbón y María Teresa de Austria.
+
+Carlos V / Charles V se mantiene como excepción imperial consolidada. El V corresponde al título imperial y el I a sus coronas hispánicas; «Carlos I de España» permanece como variante buscable. El [tesauro del Ministerio de Cultura](https://tesauros.cultura.gob.es/tesauros/contextosculturales/1007967.html) y el [Patronato de la Alhambra](https://www.alhambra-patronato.es/edificios-lugares/palacio-de-carlos-v) documentan esta denominación.
+
+Las 200 fichas se publican completas en inglés: resúmenes, las 16 biografías que amplían el resumen, títulos y territorios, relaciones, notas de gobierno, documentación, explicaciones de acceso a las coronas, evidencias y créditos de imágenes. Se preservan las fuentes, las fechas, los mandatos y los parentescos originales. El registro de decisiones está en `docs/audits/2026-10-27-review-200-art.json`. La edición alcanza 667 fichas personales completas en inglés. Esta revisión editorial no se cuenta como una verificación adicional de datos pendientes.

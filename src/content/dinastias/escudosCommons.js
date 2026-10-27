@@ -154,6 +154,73 @@ const COMMONS = {
 
 export const ESCUDOS_COMMONS = Object.freeze({
 
+  "Tarnowski": {
+    "archivo": "/escudos/tanda200-tarnowski.svg",
+    "titulo": "POL COA Leliwa.svg",
+    "autor": "Tadeusz Gajl; Bastianow; WarX; Avalokitesvara",
+    "licencia": "CC BY-SA 3.0",
+    "licenciaUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+    "fuente": "https://commons.wikimedia.org/wiki/File:POL_COA_Leliwa.svg",
+    "modificaciones": "Se retiran metadatos de edición y se añade viewBox; dibujo conservado.",
+    "en": {
+      "autor": "Tadeusz Gajl; Bastianow; WarX; Avalokitesvara",
+      "modifications": "Editing metadata removed and a viewBox added; drawing preserved."
+    }
+  },
+  "Sanguszko": {
+    "archivo": "/escudos/tanda200-sanguszko.svg",
+    "titulo": "POL COA Sanguszko.svg",
+    "autor": "Bastianowa (Bastiana)",
+    "licencia": "CC BY 3.0",
+    "licenciaUrl": "https://creativecommons.org/licenses/by/3.0/",
+    "fuente": "https://commons.wikimedia.org/wiki/File:POL_COA_Sanguszko.svg",
+    "modificaciones": "Se retiran metadatos de edición y se añade viewBox; dibujo conservado.",
+    "en": {
+      "autor": "Bastianowa (Bastiana)",
+      "modifications": "Editing metadata removed and a viewBox added; drawing preserved."
+    }
+  },
+  "Czartoryski": {
+    "archivo": "/escudos/tanda200-czartoryski.svg",
+    "titulo": "POL COA Czartoryski.svg",
+    "autor": "Bastianowa (Bastiana)",
+    "licencia": "CC BY 3.0",
+    "licenciaUrl": "https://creativecommons.org/licenses/by/3.0/",
+    "fuente": "https://commons.wikimedia.org/wiki/File:POL_COA_Czartoryski.svg",
+    "modificaciones": "Se retiran metadatos de edición y se añade viewBox; dibujo conservado.",
+    "en": {
+      "autor": "Bastianowa (Bastiana)",
+      "modifications": "Editing metadata removed and a viewBox added; drawing preserved."
+    }
+  },
+  "Chigi": {
+    "archivo": "/escudos/tanda200-chigi.svg",
+    "titulo": "Arms of the House of Chigi (1).svg",
+    "autor": "MostEpic",
+    "licencia": "CC BY-SA 4.0",
+    "licenciaUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "fuente": "https://commons.wikimedia.org/wiki/File:Arms_of_the_House_of_Chigi_(1).svg",
+    "modificaciones": "Se retiran metadatos de edición y se añade viewBox; dibujo conservado.",
+    "en": {
+      "autor": "MostEpic",
+      "modifications": "Editing metadata removed and a viewBox added; drawing preserved."
+    }
+  },
+  "Savelli": {
+    "archivo": "/escudos/tanda200-savelli.svg",
+    "titulo": "Coat of arms of the House of Savelli.svg",
+    "autor": "FDRMRZUSA",
+    "licencia": "CC BY-SA 4.0",
+    "licenciaUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "fuente": "https://commons.wikimedia.org/wiki/File:Coat_of_arms_of_the_House_of_Savelli.svg",
+    "modificaciones": "Se retiran metadatos de edición y se añade viewBox; dibujo conservado.",
+    "en": {
+      "autor": "FDRMRZUSA",
+      "modifications": "Editing metadata removed and a viewBox added; drawing preserved."
+    }
+  }
+,
+
   "Beaufort": {
     "archivo": "/escudos/octubre-beaufort.svg",
     "titulo": "Arms of John Beaufort, 1st Earl of Somerset.svg",

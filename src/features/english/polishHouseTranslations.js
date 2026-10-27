@@ -5,3 +5,25 @@ export const POLISH_HOUSES = [
 {key:'Kościuszko',es:'kosciuszko',en:'kosciuszko',name:'Kościuszko',summary:'A noble family from Polesia that produced the military engineer and leader of the uprising of 1794.',origin:'The Kościuszkos owned land in Polesia. Tadeusz was born into a family of modest resources compared with the Commonwealth’s great magnate houses.',history:'His education in Warsaw and Paris enabled a career as a military engineer. In America he contributed to the defences of Saratoga and West Point during the War of Independence.',legacy:'Tadeusz led the uprising of 1794 and died in exile in 1817. His career connected American independence movements with struggles over the Polish-Lithuanian Commonwealth’s future.'}
 ];
 for(const h of POLISH_HOUSES)Object.assign(h,{houses:{},connections:{}});
+
+const POLISH_ARMS_TRANSLATIONS = {
+  "Tarnowski": {
+    "blazon": "Azure, a crescent or beneath a six-pointed star of the same.",
+    "armsNote": "Leliwa arms used by the Tarnowski. The image includes the crest and exterior ornaments.",
+    "armsAuthor": "Tadeusz Gajl; Bastianow; WarX; Avalokitesvara",
+    "armsModifications": "Editing metadata removed and a viewBox added; drawing preserved."
+  },
+  "Sanguszko": {
+    "blazon": "Gules, an armed rider on a horse argent, brandishing a sword and bearing an azure shield with a double cross or; in dexter base a castle argent, all on a base vert.",
+    "armsNote": "Variant of the Pogoń of the Sanguszko princes, including its shield details, mantle and crown. Branches used variants.",
+    "armsAuthor": "Bastianowa (Bastiana)",
+    "armsModifications": "Editing metadata removed and a viewBox added; drawing preserved."
+  },
+  "Czartoryski": {
+    "blazon": "Gules, an armed rider on a horse argent, brandishing a sword and bearing an azure shield with a double cross or; in dexter base a castle argent.",
+    "armsNote": "Pogoń of the Czartoryski princes, shown with mantle and crown. The source variant is retained.",
+    "armsAuthor": "Bastianowa (Bastiana)",
+    "armsModifications": "Editing metadata removed and a viewBox added; drawing preserved."
+  }
+};
+for (const h of POLISH_HOUSES) if (POLISH_ARMS_TRANSLATIONS[h.key]) Object.assign(h, POLISH_ARMS_TRANSLATIONS[h.key]);

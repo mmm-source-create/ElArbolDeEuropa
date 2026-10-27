@@ -77,7 +77,8 @@ export const VISCONTI_SFORZA_PORTRAITS = {
     "autor": "Cristofano dell’Altissimo; photograph by Sailko",
     "fecha": "1556 (artwork); 2011 (photograph)",
     "institucion": "Gallerie degli Uffizi",
-    "alt": "Portrait of Galeazzo II Visconti"
+    "alt": "Portrait of Galeazzo II Visconti",
+    "modificaciones": "Cropped to remove the frame and exterior caption panel."
   },
   "GIOVANNIARCHVISC": {
     "tipo": "Posthumous engraving",
@@ -125,7 +126,8 @@ export const VISCONTI_SFORZA_PORTRAITS = {
     "autor": "Unidentified engraver",
     "fecha": "1783",
     "institucion": "Historical reproduction on Wikimedia Commons",
-    "alt": "Portrait of Elisabetta Visconti"
+    "alt": "Portrait of Elisabetta Visconti",
+    "modificaciones": "Cropped to remove the frame and exterior caption panel."
   },
   "TADEAVISCONTI": {
     "tipo": "Posthumous engraving",

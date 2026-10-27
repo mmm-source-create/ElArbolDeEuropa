@@ -1,3 +1,4 @@
+import {PORTRAITS_200_EN} from './portraits200.js';
 import {OCTOBER_PORTRAITS_EN} from './octoberPortraits.js';
 import {VISCONTI_SFORZA_PORTRAITS} from './viscontiSforzaPortraits.js';
 import {THIRD_100_PORTRAITS} from './third100Portraits.js';
@@ -61,4 +62,5 @@ export const ENGLISH_PROFILE_PORTRAITS = {
   SULEIMAN1OSM:{tipo:'Historical portrait',obra:'Sultan Suleiman in profile',autor:'Circle of Titian',fecha:'1530s',institucion:'Kunsthistorisches Museum, Vienna'},
   ...VISCONTI_SFORZA_PORTRAITS,
  ...OCTOBER_PORTRAITS_EN,
+ ...PORTRAITS_200_EN,
 };

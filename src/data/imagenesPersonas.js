@@ -1,3 +1,4 @@
+import {PORTRAITS_200_IMAGES} from './imagenesPersonasTanda200.js';
 import {OCTOBER_PORTRAITS} from './imagenesPersonasRevisionOctubre.js';
 import {VISCONTI_SFORZA_IMAGES} from './imagenesPersonasViscontiSforza.js';
 import {IMAGENES_ART_REVIEW} from './imagenesPersonasArtReview.js';
@@ -3104,6 +3105,7 @@ export const IMAGENES_PERSONAS = {
   ...IMAGENES_HUNGRIA,
   ...VISCONTI_SFORZA_IMAGES,
   ...OCTOBER_PORTRAITS,
+ ...PORTRAITS_200_IMAGES,
 };
 
 export default IMAGENES_PERSONAS;
