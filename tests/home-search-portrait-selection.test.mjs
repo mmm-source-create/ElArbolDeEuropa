@@ -34,6 +34,6 @@ test('search loads lazily, preserves real links and keyboard clearing, and retri
 });
 test('selected portraits keep bilingual attribution uncertainty and five shields retain their licences',()=>{
  for(const id of ['FELIPESUABIA','FED1BARBARROJA','GIANGALSFOR','CATASFOR','LUCRECIABORJA','BIANSFOR','FELMARVISC','BERNVISC']){const p=IMAGENES_PERSONAS[id],en=ENGLISH_PROFILE_PORTRAITS[id];assert(p&&en);assert(p.fuenteUrl&&p.derechosUrl&&p.autor&&en.autor);assert(fs.existsSync(new URL('../public'+p.archivo,import.meta.url)));}
- assert.match(IMAGENES_PERSONAS.CATASFOR.obra,/jazmín/);assert.match(IMAGENES_PERSONAS.BIANSFOR.tipo,/discutidas/);assert.match(IMAGENES_PERSONAS.LUCRECIABORJA.tipo,/desconocida/);assert.match(IMAGENES_PERSONAS.GIANGALSFOR.autor,/Marco d’Oggiono/);assert.match(IMAGENES_PERSONAS.FELMARVISC.autor,/Cristofano/);assert.match(IMAGENES_PERSONAS.BERNVISC.tipo,/Efigie/);
+ assert.match(IMAGENES_PERSONAS.CATASFOR.obra,/jazmín/);assert.match(IMAGENES_PERSONAS.BIANSFOR.tipo,/discutidas/);assert.match(IMAGENES_PERSONAS.LUCRECIABORJA.tipo,/desconocida/);assert.match(IMAGENES_PERSONAS.GIANGALSFOR.autor,/Benedetto Briosco/);assert.match(IMAGENES_PERSONAS.FELMARVISC.autor,/Pisanello/);assert.match(IMAGENES_PERSONAS.BERNVISC.tipo,/fresco/);
  for(const key of ['Beaufort','Neville','O’Neill','Castro','Shishman']){const p=escudoDe(key);assert(p.imagen.fuente&&p.imagen.licenciaUrl&&p.en.blazon&&p.en.note);assert(fs.existsSync(new URL('../public'+p.imagen.archivo,import.meta.url)));}assert.equal(escudoDe('Shishman').tipo,'emblema');
 });

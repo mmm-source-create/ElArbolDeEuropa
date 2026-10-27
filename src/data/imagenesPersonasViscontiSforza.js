@@ -1,4 +1,3 @@
-// Identification, artwork date and reproduction rights reviewed separately.
 export const VISCONTI_SFORZA_IMAGES = {
   "BATTISTASFORZA": {
     "archivo": "/personas-img/BATTISTASFORZA.webp",
@@ -128,7 +127,7 @@ export const VISCONTI_SFORZA_IMAGES = {
   },
   "GAL2VISC": {
     "archivo": "/personas-img/GAL2VISC.webp",
-    "encuadre": "50% 23%",
+    "encuadre": "50% 18%",
     "alt": "Galeazzo II Visconti",
     "tipo": "Retrato póstumo",
     "obra": "Galeazzo II Visconti",
@@ -138,7 +137,8 @@ export const VISCONTI_SFORZA_IMAGES = {
     "fuente": "Wikimedia Commons",
     "fuenteUrl": "https://commons.wikimedia.org/wiki/File:Cristofano_dell%27altissimo,_galeazzo_II_visconti,_1556.JPG",
     "derechos": "CC BY-SA 3.0",
-    "derechosUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+    "derechosUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "modificaciones": "Recorte para retirar el marco y la cartela exterior."
   },
   "GIOVANNIARCHVISC": {
     "archivo": "/personas-img/GIOVANNIARCHVISC.webp",
@@ -212,7 +212,7 @@ export const VISCONTI_SFORZA_IMAGES = {
   },
   "ELISVISBAV": {
     "archivo": "/personas-img/ELISVISBAV.webp",
-    "encuadre": "50% 20%",
+    "encuadre": "50% 18%",
     "alt": "Isabel Visconti",
     "tipo": "Grabado póstumo",
     "obra": "Isabel Visconti",
@@ -222,7 +222,8 @@ export const VISCONTI_SFORZA_IMAGES = {
     "fuente": "Wikimedia Commons",
     "fuenteUrl": "https://commons.wikimedia.org/wiki/File:Isabel_Visconti.jpg",
     "derechos": "Dominio público · PDM 1.0",
-    "derechosUrl": "https://creativecommons.org/publicdomain/mark/1.0/"
+    "derechosUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+    "modificaciones": "Recorte para retirar el marco y la cartela exterior."
   },
   "TADEAVISCONTI": {
     "archivo": "/personas-img/TADEAVISCONTI.webp",

@@ -16,8 +16,8 @@ import DynastyCard from '../src/features/public/DynastyCard.jsx';
 
 test('the twenty additional editions preserve every canonical government and biography section',()=>{
  assert.equal(Object.keys(V536_ENGLISH_PROFILES).length,20);
- assert.equal(Object.keys(COMPLETE_ENGLISH_PROFILES).length,467);
- assert.equal(TRANSLATED_PEOPLE.length,467);
+ assert.equal(Object.keys(COMPLETE_ENGLISH_PROFILES).length,667);
+ assert.equal(TRANSLATED_PEOPLE.length,667);
  for(const id of Object.keys(V536_ENGLISH_PROFILES)){
   const p=PERSONAS.find(p=>p.id===id),bio=biografiaExtensaPersona(p)||[];
   const source={...p,biografiaExtensa:bio,padres:[],conyuges:[],hijos:[],relacionadosDinastia:[],contemporaneos:[],historias:[]};

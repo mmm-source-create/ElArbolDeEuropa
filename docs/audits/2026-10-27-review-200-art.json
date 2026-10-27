@@ -1,0 +1,5244 @@
+{
+  "date": "2026-10-27",
+  "scope": "Editorial review and complete English translation of 200 previously untranslated existing profiles; this is not a verification of 200 historical claims.",
+  "carlosV": {
+    "decision": "Conservar Carlos V / Charles V. El ordinal imperial es una excepción explícita de la pauta; Carlos I de España permanece entre las variantes.",
+    "sources": [
+      "https://tesauros.cultura.gob.es/tesauros/contextosculturales/1007967.html",
+      "https://www.alhambra-patronato.es/edificios-lugares/palacio-de-carlos-v"
+    ]
+  },
+  "reviews": [
+    {
+      "id": "CHRISTIAN7DEN",
+      "before": {
+        "nombre": "Cristián VII de Dinamarca",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "after": {
+        "nombre": "Cristián VII de Dinamarca",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "slug": "cristian-vii-de-dinamarca",
+      "reason": "Conservar la forma historiográfica; revisar identidad, ordinal, contexto, sobrenombre y variantes según la pauta editorial.",
+      "english": "Christian VII of Denmark",
+      "route": {
+        "id": "CHRISTIAN7DEN",
+        "es": "cristian-vii-de-dinamarca",
+        "en": "christian-vii-of-denmark"
+      },
+      "fullBiography": false
+    },
+    {
+      "id": "WILLIAM3ORANGE",
+      "before": {
+        "nombre": "Guillermo III de Orange e Inglaterra",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "after": {
+        "nombre": "Guillermo III de Inglaterra",
+        "sobrenombre": "",
+        "aliases": [
+          "Guillermo III de Orange e Inglaterra"
+        ]
+      },
+      "slug": "guillermo-iii-de-orange-e-inglaterra",
+      "reason": "Encabezado con la corona inglesa; Orange y las demás coronas se conservan en variantes y gobiernos. Se conservan ID y URL publicados.",
+      "english": "William III of England",
+      "route": {
+        "id": "WILLIAM3ORANGE",
+        "es": "guillermo-iii-de-orange-e-inglaterra",
+        "en": "william-iii-of-england"
+      },
+      "fullBiography": false
+    },
+    {
+      "id": "GEORGE3GB",
+      "before": {
+        "nombre": "Jorge III de Gran Bretaña",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "after": {
+        "nombre": "Jorge III de Gran Bretaña",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "slug": "jorge-iii-de-gran-bretana",
+      "reason": "Conservar la forma historiográfica; revisar identidad, ordinal, contexto, sobrenombre y variantes según la pauta editorial.",
+      "english": "George III of Great Britain",
+      "route": {
+        "id": "GEORGE3GB",
+        "es": "jorge-iii-de-gran-bretana",
+        "en": "george-iii-of-great-britain"
+      },
+      "fullBiography": false
+    },
+    {
+      "id": "CRISTIAN2DIN",
+      "before": {
+        "nombre": "Cristián II de Dinamarca",
+        "sobrenombre": "el Tirano",
+        "aliases": []
+      },
+      "after": {
+        "nombre": "Cristián II de Dinamarca",
+        "sobrenombre": "el Tirano",
+        "aliases": []
+      },
+      "slug": "cristian-ii-de-dinamarca",
+      "reason": "Conservar la forma historiográfica; revisar identidad, ordinal, contexto, sobrenombre y variantes según la pauta editorial.",
+      "english": "Christian II of Denmark",
+      "route": {
+        "id": "CRISTIAN2DIN",
+        "es": "cristian-ii-de-dinamarca",
+        "en": "christian-ii-of-denmark"
+      },
+      "fullBiography": false
+    },
+    {
+      "id": "CHRISTIAN6DEN",
+      "before": {
+        "nombre": "Cristián VI de Dinamarca",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "after": {
+        "nombre": "Cristián VI de Dinamarca",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "slug": "cristian-vi-de-dinamarca",
+      "reason": "Conservar la forma historiográfica; revisar identidad, ordinal, contexto, sobrenombre y variantes según la pauta editorial.",
+      "english": "Christian VI of Denmark",
+      "route": {
+        "id": "CHRISTIAN6DEN",
+        "es": "cristian-vi-de-dinamarca",
+        "en": "christian-vi-of-denmark"
+      },
+      "fullBiography": false
+    },
+    {
+      "id": "FREDWIL1PRU",
+      "before": {
+        "nombre": "Federico Guillermo I de Prusia",
+        "sobrenombre": "el Rey Sargento",
+        "aliases": []
+      },
+      "after": {
+        "nombre": "Federico Guillermo I de Prusia",
+        "sobrenombre": "el Rey Sargento",
+        "aliases": []
+      },
+      "slug": "federico-guillermo-i-de-prusia",
+      "reason": "Conservar la forma historiográfica; revisar identidad, ordinal, contexto, sobrenombre y variantes según la pauta editorial.",
+      "english": "Frederick William I of Prussia",
+      "route": {
+        "id": "FREDWIL1PRU",
+        "es": "federico-guillermo-i-de-prusia",
+        "en": "frederick-william-i-of-prussia"
+      },
+      "fullBiography": false
+    },
+    {
+      "id": "FREDWIL3PRU",
+      "before": {
+        "nombre": "Federico Guillermo III de Prusia",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "after": {
+        "nombre": "Federico Guillermo III de Prusia",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "slug": "federico-guillermo-iii-de-prusia",
+      "reason": "Conservar la forma historiográfica; revisar identidad, ordinal, contexto, sobrenombre y variantes según la pauta editorial.",
+      "english": "Frederick William III of Prussia",
+      "route": {
+        "id": "FREDWIL3PRU",
+        "es": "federico-guillermo-iii-de-prusia",
+        "en": "frederick-william-iii-of-prussia"
+      },
+      "fullBiography": false
+    },
+    {
+      "id": "FRED4DEN",
+      "before": {
+        "nombre": "Federico IV de Dinamarca",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "after": {
+        "nombre": "Federico IV de Dinamarca",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "slug": "federico-iv-de-dinamarca",
+      "reason": "Conservar la forma historiográfica; revisar identidad, ordinal, contexto, sobrenombre y variantes según la pauta editorial.",
+      "english": "Frederick IV of Denmark",
+      "route": {
+        "id": "FRED4DEN",
+        "es": "federico-iv-de-dinamarca",
+        "en": "frederick-iv-of-denmark"
+      },
+      "fullBiography": false
+    },
+    {
+      "id": "FRED5DEN",
+      "before": {
+        "nombre": "Federico V de Dinamarca",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "after": {
+        "nombre": "Federico V de Dinamarca",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "slug": "federico-v-de-dinamarca",
+      "reason": "Conservar la forma historiográfica; revisar identidad, ordinal, contexto, sobrenombre y variantes según la pauta editorial.",
+      "english": "Frederick V of Denmark",
+      "route": {
+        "id": "FRED5DEN",
+        "es": "federico-v-de-dinamarca",
+        "en": "frederick-v-of-denmark"
+      },
+      "fullBiography": false
+    },
+    {
+      "id": "JACOBO2ING",
+      "before": {
+        "nombre": "Jacobo II de Inglaterra",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "after": {
+        "nombre": "Jacobo II de Inglaterra",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "slug": "jacobo-ii-de-inglaterra",
+      "reason": "Conservar la forma historiográfica; revisar identidad, ordinal, contexto, sobrenombre y variantes según la pauta editorial.",
+      "english": "James II of England",
+      "route": {
+        "id": "JACOBO2ING",
+        "es": "jacobo-ii-de-inglaterra",
+        "en": "james-ii-of-england"
+      },
+      "fullBiography": false
+    },
+    {
+      "id": "MARY2ING",
+      "before": {
+        "nombre": "María II de Inglaterra",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "after": {
+        "nombre": "María II de Inglaterra",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "slug": "maria-ii-de-inglaterra",
+      "reason": "Conservar la forma historiográfica; revisar identidad, ordinal, contexto, sobrenombre y variantes según la pauta editorial.",
+      "english": "Mary II of England",
+      "route": {
+        "id": "MARY2ING",
+        "es": "maria-ii-de-inglaterra",
+        "en": "mary-ii-of-england"
+      },
+      "fullBiography": false
+    },
+    {
+      "id": "FEDERICO1SUE",
+      "before": {
+        "nombre": "Federico I de Suecia",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "after": {
+        "nombre": "Federico I de Suecia",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "slug": "federico-i-de-suecia",
+      "reason": "Conservar la forma historiográfica; revisar identidad, ordinal, contexto, sobrenombre y variantes según la pauta editorial.",
+      "english": "Frederick I of Sweden",
+      "route": {
+        "id": "FEDERICO1SUE",
+        "es": "federico-i-de-suecia",
+        "en": "frederick-i-of-sweden"
+      },
+      "fullBiography": false
+    },
+    {
+      "id": "GUSTAV1VASA",
+      "before": {
+        "nombre": "Gustavo I Vasa",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "after": {
+        "nombre": "Gustavo I Vasa",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "slug": "gustavo-i-vasa",
+      "reason": "Conservar la forma historiográfica; revisar identidad, ordinal, contexto, sobrenombre y variantes según la pauta editorial.",
+      "english": "Gustav I Vasa",
+      "route": {
+        "id": "GUSTAV1VASA",
+        "es": "gustavo-i-vasa",
+        "en": "gustav-i-vasa"
+      },
+      "fullBiography": false
+    },
+    {
+      "id": "PAUL1RUS",
+      "before": {
+        "nombre": "Pablo I de Rusia",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "after": {
+        "nombre": "Pablo I de Rusia",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "slug": "pablo-i-de-rusia",
+      "reason": "Conservar la forma historiográfica; revisar identidad, ordinal, contexto, sobrenombre y variantes según la pauta editorial.",
+      "english": "Paul I of Russia",
+      "route": {
+        "id": "PAUL1RUS",
+        "es": "pablo-i-de-rusia",
+        "en": "paul-i-of-russia"
+      },
+      "fullBiography": false
+    },
+    {
+      "id": "PETER3RUS",
+      "before": {
+        "nombre": "Pedro III de Rusia",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "after": {
+        "nombre": "Pedro III de Rusia",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "slug": "pedro-iii-de-rusia",
+      "reason": "Conservar la forma historiográfica; revisar identidad, ordinal, contexto, sobrenombre y variantes según la pauta editorial.",
+      "english": "Peter III of Russia",
+      "route": {
+        "id": "PETER3RUS",
+        "es": "pedro-iii-de-rusia",
+        "en": "peter-iii-of-russia"
+      },
+      "fullBiography": false
+    },
+    {
+      "id": "ANABRET",
+      "before": {
+        "nombre": "Ana de Bretaña",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "after": {
+        "nombre": "Ana de Bretaña",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "slug": "ana-de-bretana",
+      "reason": "Conservar la forma historiográfica; revisar identidad, ordinal, contexto, sobrenombre y variantes según la pauta editorial.",
+      "english": "Anne of Brittany",
+      "route": {
+        "id": "ANABRET",
+        "es": "ana-de-bretana",
+        "en": "anne-of-brittany"
+      },
+      "fullBiography": false
+    },
+    {
+      "id": "CARLOS12SUE",
+      "before": {
+        "nombre": "Carlos XII de Suecia",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "after": {
+        "nombre": "Carlos XII de Suecia",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "slug": "carlos-xii-de-suecia",
+      "reason": "Conservar la forma historiográfica; revisar identidad, ordinal, contexto, sobrenombre y variantes según la pauta editorial.",
+      "english": "Charles XII of Sweden",
+      "route": {
+        "id": "CARLOS12SUE",
+        "es": "carlos-xii-de-suecia",
+        "en": "charles-xii-of-sweden"
+      },
+      "fullBiography": false
+    },
+    {
+      "id": "CLAUDEFRA",
+      "before": {
+        "nombre": "Claudia de Francia",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "after": {
+        "nombre": "Claudia de Francia",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "slug": "claudia-de-francia",
+      "reason": "Conservar la forma historiográfica; revisar identidad, ordinal, contexto, sobrenombre y variantes según la pauta editorial.",
+      "english": "Claude of France",
+      "route": {
+        "id": "CLAUDEFRA",
+        "es": "claudia-de-francia",
+        "en": "claude-of-france"
+      },
+      "fullBiography": false
+    },
+    {
+      "id": "GUSTAV3SUE",
+      "before": {
+        "nombre": "Gustavo III de Suecia",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "after": {
+        "nombre": "Gustavo III de Suecia",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "slug": "gustavo-iii-de-suecia",
+      "reason": "Conservar la forma historiográfica; revisar identidad, ordinal, contexto, sobrenombre y variantes según la pauta editorial.",
+      "english": "Gustav III of Sweden",
+      "route": {
+        "id": "GUSTAV3SUE",
+        "es": "gustavo-iii-de-suecia",
+        "en": "gustav-iii-of-sweden"
+      },
+      "fullBiography": false
+    },
+    {
+      "id": "ULRICALEONORASUE",
+      "before": {
+        "nombre": "Ulrica Leonor de Suecia",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "after": {
+        "nombre": "Ulrica Leonor de Suecia",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "slug": "ulrica-leonor-de-suecia",
+      "reason": "Conservar la forma historiográfica; revisar identidad, ordinal, contexto, sobrenombre y variantes según la pauta editorial.",
+      "english": "Ulrika Eleonora of Sweden",
+      "route": {
+        "id": "ULRICALEONORASUE",
+        "es": "ulrica-leonor-de-suecia",
+        "en": "ulrika-eleonora-of-sweden"
+      },
+      "fullBiography": false
+    },
+    {
+      "id": "ANAAUSTESP",
+      "before": {
+        "nombre": "Ana de Austria",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "after": {
+        "nombre": "Ana de Austria, reina de España",
+        "sobrenombre": "",
+        "aliases": [
+          "Ana de Austria"
+        ]
+      },
+      "slug": "ana-de-austria-anaaustesp",
+      "reason": "Añadir el contexto de reina de España para distinguir a las homónimas de la casa de Austria. Se conservan ID y URL publicados.",
+      "english": "Anna of Austria, Queen of Spain",
+      "route": {
+        "id": "ANAAUSTESP",
+        "es": "ana-de-austria-anaaustesp",
+        "en": "anna-of-austria-queen-of-spain"
+      },
+      "fullBiography": false
+    },
+    {
+      "id": "ANADINAMARCA",
+      "before": {
+        "nombre": "Ana de Dinamarca",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "after": {
+        "nombre": "Ana de Dinamarca",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "slug": "ana-de-dinamarca-anadinamarca",
+      "reason": "Conservar la forma historiográfica; revisar identidad, ordinal, contexto, sobrenombre y variantes según la pauta editorial.",
+      "english": "Anne of Denmark",
+      "route": {
+        "id": "ANADINAMARCA",
+        "es": "ana-de-dinamarca-anadinamarca",
+        "en": "anne-of-denmark"
+      },
+      "fullBiography": false
+    },
+    {
+      "id": "BEATSCALA",
+      "before": {
+        "nombre": "Beatrice Regina della Scala",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "after": {
+        "nombre": "Beatrice Regina della Scala",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "slug": "beatrice-regina-della-scala",
+      "reason": "Conservar la forma historiográfica; revisar identidad, ordinal, contexto, sobrenombre y variantes según la pauta editorial.",
+      "english": "Beatrice Regina della Scala",
+      "route": {
+        "id": "BEATSCALA",
+        "es": "beatrice-regina-della-scala",
+        "en": "beatrice-regina-della-scala"
+      },
+      "fullBiography": false
+    },
+    {
+      "id": "ENRIQUETAMARIA",
+      "before": {
+        "nombre": "Enriqueta María de Francia",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "after": {
+        "nombre": "Enriqueta María de Francia",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "slug": "enriqueta-maria-de-francia",
+      "reason": "Conservar la forma historiográfica; revisar identidad, ordinal, contexto, sobrenombre y variantes según la pauta editorial.",
+      "english": "Henrietta Maria of France",
+      "route": {
+        "id": "ENRIQUETAMARIA",
+        "es": "enriqueta-maria-de-francia",
+        "en": "henrietta-maria-of-france"
+      },
+      "fullBiography": false
+    },
+    {
+      "id": "GERMANAFOIX",
+      "before": {
+        "nombre": "Germana de Foix",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "after": {
+        "nombre": "Germana de Foix",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "slug": "germana-de-foix",
+      "reason": "Conservar la forma historiográfica; revisar identidad, ordinal, contexto, sobrenombre y variantes según la pauta editorial.",
+      "english": "Germaine of Foix",
+      "route": {
+        "id": "GERMANAFOIX",
+        "es": "germana-de-foix",
+        "en": "germaine-of-foix"
+      },
+      "fullBiography": true
+    },
+    {
+      "id": "ISABELAUSTFRA",
+      "before": {
+        "nombre": "Isabel de Austria",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "after": {
+        "nombre": "Isabel de Austria, reina de Francia",
+        "sobrenombre": "",
+        "aliases": [
+          "Isabel de Austria"
+        ]
+      },
+      "slug": "isabel-de-austria-isabelaustfra",
+      "reason": "Añadir el contexto de reina de Francia para distinguir a las homónimas de la casa de Austria. Se conservan ID y URL publicados.",
+      "english": "Elisabeth of Austria, Queen of France",
+      "route": {
+        "id": "ISABELAUSTFRA",
+        "es": "isabel-de-austria-isabelaustfra",
+        "en": "elisabeth-of-austria-queen-of-france"
+      },
+      "fullBiography": false
+    },
+    {
+      "id": "ISABELBORBON",
+      "before": {
+        "nombre": "Isabel de Borbón",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "after": {
+        "nombre": "Isabel de Borbón, reina de España",
+        "sobrenombre": "",
+        "aliases": [
+          "Isabel de Borbón"
+        ]
+      },
+      "slug": "isabel-de-borbon-isabelborbon",
+      "reason": "Añadir el contexto de reina de España para distinguir a las homónimas de Borbón. Se conservan ID y URL publicados.",
+      "english": "Elisabeth of France, Queen of Spain",
+      "route": {
+        "id": "ISABELBORBON",
+        "es": "isabel-de-borbon-isabelborbon",
+        "en": "elisabeth-of-france-queen-of-spain"
+      },
+      "fullBiography": false
+    },
+    {
+      "id": "ISABELVALOISESP",
+      "before": {
+        "nombre": "Isabel de Valois",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "after": {
+        "nombre": "Isabel de Valois",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "slug": "isabel-de-valois-isabelvaloisesp",
+      "reason": "Conservar la forma historiográfica; revisar identidad, ordinal, contexto, sobrenombre y variantes según la pauta editorial.",
+      "english": "Elisabeth of Valois",
+      "route": {
+        "id": "ISABELVALOISESP",
+        "es": "isabel-de-valois-isabelvaloisesp",
+        "en": "elisabeth-of-valois"
+      },
+      "fullBiography": false
+    },
+    {
+      "id": "ISABELSTUARTPAL",
+      "before": {
+        "nombre": "Isabel Estuardo",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "after": {
+        "nombre": "Isabel Estuardo",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "slug": "isabel-estuardo",
+      "reason": "Conservar la forma historiográfica; revisar identidad, ordinal, contexto, sobrenombre y variantes según la pauta editorial.",
+      "english": "Elizabeth Stuart",
+      "route": {
+        "id": "ISABELSTUARTPAL",
+        "es": "isabel-estuardo",
+        "en": "elizabeth-stuart"
+      },
+      "fullBiography": false
+    },
+    {
+      "id": "JUANASEYMOUR",
+      "before": {
+        "nombre": "Juana Seymour",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "after": {
+        "nombre": "Juana Seymour",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "slug": "juana-seymour",
+      "reason": "Conservar la forma historiográfica; revisar identidad, ordinal, contexto, sobrenombre y variantes según la pauta editorial.",
+      "english": "Jane Seymour",
+      "route": {
+        "id": "JUANASEYMOUR",
+        "es": "juana-seymour",
+        "en": "jane-seymour"
+      },
+      "fullBiography": false
+    },
+    {
+      "id": "LEONORTOLEDO",
+      "before": {
+        "nombre": "Leonor de Toledo",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "after": {
+        "nombre": "Leonor de Toledo",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "slug": "leonor-de-toledo",
+      "reason": "Conservar la forma historiográfica; revisar identidad, ordinal, contexto, sobrenombre y variantes según la pauta editorial.",
+      "english": "Eleanor of Toledo",
+      "route": {
+        "id": "LEONORTOLEDO",
+        "es": "leonor-de-toledo",
+        "en": "eleanor-of-toledo"
+      },
+      "fullBiography": false
+    },
+    {
+      "id": "LUISALORENA",
+      "before": {
+        "nombre": "Luisa de Lorena-Vaudémont",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "after": {
+        "nombre": "Luisa de Lorena-Vaudémont",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "slug": "luisa-de-lorena-vaudemont",
+      "reason": "Conservar la forma historiográfica; revisar identidad, ordinal, contexto, sobrenombre y variantes según la pauta editorial.",
+      "english": "Louise of Lorraine-Vaudémont",
+      "route": {
+        "id": "LUISALORENA",
+        "es": "luisa-de-lorena-vaudemont",
+        "en": "louise-of-lorraine-vaudemont"
+      },
+      "fullBiography": false
+    },
+    {
+      "id": "MARGANGULEMA",
+      "before": {
+        "nombre": "Margarita de Angulema",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "after": {
+        "nombre": "Margarita de Angulema",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "slug": "margarita-de-angulema",
+      "reason": "Conservar la forma historiográfica; revisar identidad, ordinal, contexto, sobrenombre y variantes según la pauta editorial.",
+      "english": "Marguerite of Navarre",
+      "route": {
+        "id": "MARGANGULEMA",
+        "es": "margarita-de-angulema",
+        "en": "marguerite-of-navarre"
+      },
+      "fullBiography": false
+    },
+    {
+      "id": "MARGAUSTESTIRIA",
+      "before": {
+        "nombre": "Margarita de Austria-Estiria",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "after": {
+        "nombre": "Margarita de Austria-Estiria",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "slug": "margarita-de-austria-estiria",
+      "reason": "Conservar la forma historiográfica; revisar identidad, ordinal, contexto, sobrenombre y variantes según la pauta editorial.",
+      "english": "Margaret of Austria, Queen of Spain",
+      "route": {
+        "id": "MARGAUSTESTIRIA",
+        "es": "margarita-de-austria-estiria",
+        "en": "margaret-of-austria-queen-of-spain"
+      },
+      "fullBiography": false
+    },
+    {
+      "id": "MARGARETTUDOR",
+      "before": {
+        "nombre": "Margarita Tudor",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "after": {
+        "nombre": "Margarita Tudor",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "slug": "margarita-tudor",
+      "reason": "Conservar la forma historiográfica; revisar identidad, ordinal, contexto, sobrenombre y variantes según la pauta editorial.",
+      "english": "Margaret Tudor",
+      "route": {
+        "id": "MARGARETTUDOR",
+        "es": "margarita-tudor",
+        "en": "margaret-tudor"
+      },
+      "fullBiography": false
+    },
+    {
+      "id": "MARIAGUISA",
+      "before": {
+        "nombre": "María de Guisa",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "after": {
+        "nombre": "María de Guisa",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "slug": "maria-de-guisa",
+      "reason": "Conservar la forma historiográfica; revisar identidad, ordinal, contexto, sobrenombre y variantes según la pauta editorial.",
+      "english": "Mary of Guise",
+      "route": {
+        "id": "MARIAGUISA",
+        "es": "maria-de-guisa",
+        "en": "mary-of-guise"
+      },
+      "fullBiography": false
+    },
+    {
+      "id": "MARIATERESAESP",
+      "before": {
+        "nombre": "María Teresa de Austria",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "after": {
+        "nombre": "María Teresa de Austria, reina de Francia",
+        "sobrenombre": "",
+        "aliases": [
+          "María Teresa de Austria"
+        ]
+      },
+      "slug": "maria-teresa-de-austria-mariateresaesp",
+      "reason": "Añadir el contexto de reina de Francia para distinguirla de la soberana de los dominios Habsburgo. Se conservan ID y URL publicados.",
+      "english": "Maria Theresa of Spain",
+      "route": {
+        "id": "MARIATERESAESP",
+        "es": "maria-teresa-de-austria-mariateresaesp",
+        "en": "maria-theresa-of-spain"
+      },
+      "fullBiography": false
+    },
+    {
+      "id": "MARIANAAUSTESP",
+      "before": {
+        "nombre": "Mariana de Austria",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "after": {
+        "nombre": "Mariana de Austria",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "slug": "mariana-de-austria",
+      "reason": "Conservar la forma historiográfica; revisar identidad, ordinal, contexto, sobrenombre y variantes según la pauta editorial.",
+      "english": "Mariana of Austria",
+      "route": {
+        "id": "MARIANAAUSTESP",
+        "es": "mariana-de-austria",
+        "en": "mariana-of-austria"
+      },
+      "fullBiography": false
+    },
+    {
+      "id": "IVAN4RUS",
+      "before": {
+        "nombre": "Iván IV de Rusia",
+        "sobrenombre": "el Terrible",
+        "aliases": []
+      },
+      "after": {
+        "nombre": "Iván IV de Rusia",
+        "sobrenombre": "el Terrible",
+        "aliases": []
+      },
+      "slug": "ivan-iv-de-rusia",
+      "reason": "Conservar la forma historiográfica; revisar identidad, ordinal, contexto, sobrenombre y variantes según la pauta editorial.",
+      "english": "Ivan IV of Russia",
+      "route": {
+        "id": "IVAN4RUS",
+        "es": "ivan-iv-de-rusia",
+        "en": "ivan-iv-of-russia"
+      },
+      "fullBiography": false
+    },
+    {
+      "id": "LEOP3AUS",
+      "before": {
+        "nombre": "Leopoldo III de Austria",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "after": {
+        "nombre": "Leopoldo III de Austria",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "slug": "leopoldo-iii-de-austria",
+      "reason": "Conservar la forma historiográfica; revisar identidad, ordinal, contexto, sobrenombre y variantes según la pauta editorial.",
+      "english": "Leopold III of Austria",
+      "route": {
+        "id": "LEOP3AUS",
+        "es": "leopoldo-iii-de-austria",
+        "en": "leopold-iii-of-austria"
+      },
+      "fullBiography": false
+    },
+    {
+      "id": "RUD4AUS",
+      "before": {
+        "nombre": "Rodolfo IV de Austria",
+        "sobrenombre": "el Fundador",
+        "aliases": [
+          "Rudolf IV der Stifter"
+        ]
+      },
+      "after": {
+        "nombre": "Rodolfo IV de Austria",
+        "sobrenombre": "el Fundador",
+        "aliases": [
+          "Rudolf IV der Stifter"
+        ]
+      },
+      "slug": "rodolfo-iv-de-austria",
+      "reason": "Conservar la forma historiográfica; revisar identidad, ordinal, contexto, sobrenombre y variantes según la pauta editorial.",
+      "english": "Rudolf IV of Austria",
+      "route": {
+        "id": "RUD4AUS",
+        "es": "rodolfo-iv-de-austria",
+        "en": "rudolf-iv-of-austria"
+      },
+      "fullBiography": false
+    },
+    {
+      "id": "ALB3AUST",
+      "before": {
+        "nombre": "Alberto III de Austria",
+        "sobrenombre": "el de la Trenza",
+        "aliases": []
+      },
+      "after": {
+        "nombre": "Alberto III de Austria",
+        "sobrenombre": "el de la Trenza",
+        "aliases": []
+      },
+      "slug": "alberto-iii-de-austria",
+      "reason": "Conservar la forma historiográfica; revisar identidad, ordinal, contexto, sobrenombre y variantes según la pauta editorial.",
+      "english": "Albert III of Austria",
+      "route": {
+        "id": "ALB3AUST",
+        "es": "alberto-iii-de-austria",
+        "en": "albert-iii-of-austria"
+      },
+      "fullBiography": false
+    },
+    {
+      "id": "HENRY2CYPRUS",
+      "before": {
+        "nombre": "Enrique II de Chipre y Jerusalén",
+        "sobrenombre": "",
+        "aliases": [
+          "Henri II",
+          "Henry II of Cyprus"
+        ]
+      },
+      "after": {
+        "nombre": "Enrique II de Chipre",
+        "sobrenombre": "",
+        "aliases": [
+          "Henri II",
+          "Henry II of Cyprus",
+          "Enrique II de Chipre y Jerusalén"
+        ]
+      },
+      "slug": "enrique-ii-de-chipre-y-jerusalen",
+      "reason": "Encabezado breve con Chipre; Jerusalén se conserva en la variante anterior y sus mandatos. Se conservan ID y URL publicados.",
+      "english": "Henry II of Cyprus",
+      "route": {
+        "id": "HENRY2CYPRUS",
+        "es": "enrique-ii-de-chipre-y-jerusalen",
+        "en": "henry-ii-of-cyprus"
+      },
+      "fullBiography": false
+    },
+    {
+      "id": "FREDWILGREAT",
+      "before": {
+        "nombre": "Federico Guillermo de Brandeburgo",
+        "sobrenombre": "el Gran Elector",
+        "aliases": []
+      },
+      "after": {
+        "nombre": "Federico Guillermo de Brandeburgo",
+        "sobrenombre": "el Gran Elector",
+        "aliases": []
+      },
+      "slug": "federico-guillermo-de-brandeburgo",
+      "reason": "Conservar la forma historiográfica; revisar identidad, ordinal, contexto, sobrenombre y variantes según la pauta editorial.",
+      "english": "Frederick William of Brandenburg",
+      "route": {
+        "id": "FREDWILGREAT",
+        "es": "federico-guillermo-de-brandeburgo",
+        "en": "frederick-william-of-brandenburg"
+      },
+      "fullBiography": false
+    },
+    {
+      "id": "WILHELM5CLEVES",
+      "before": {
+        "nombre": "Guillermo V de Cléveris",
+        "sobrenombre": "el Rico",
+        "aliases": []
+      },
+      "after": {
+        "nombre": "Guillermo V de Cléveris",
+        "sobrenombre": "el Rico",
+        "aliases": []
+      },
+      "slug": "guillermo-v-de-cleveris",
+      "reason": "Conservar la forma historiográfica; revisar identidad, ordinal, contexto, sobrenombre y variantes según la pauta editorial.",
+      "english": "William V of Cleves",
+      "route": {
+        "id": "WILHELM5CLEVES",
+        "es": "guillermo-v-de-cleveris",
+        "en": "william-v-of-cleves"
+      },
+      "fullBiography": false
+    },
+    {
+      "id": "GEORGEWILLIAMBRAND",
+      "before": {
+        "nombre": "Jorge Guillermo de Brandeburgo",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "after": {
+        "nombre": "Jorge Guillermo de Brandeburgo",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "slug": "jorge-guillermo-de-brandeburgo",
+      "reason": "Conservar la forma historiográfica; revisar identidad, ordinal, contexto, sobrenombre y variantes según la pauta editorial.",
+      "english": "George William of Brandenburg",
+      "route": {
+        "id": "GEORGEWILLIAMBRAND",
+        "es": "jorge-guillermo-de-brandeburgo",
+        "en": "george-william-of-brandenburg"
+      },
+      "fullBiography": false
+    },
+    {
+      "id": "JOHNWILLIAMCLEVES",
+      "before": {
+        "nombre": "Juan Guillermo de Jülich-Cléveris-Berg",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "after": {
+        "nombre": "Juan Guillermo de Jülich-Cléveris-Berg",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "slug": "juan-guillermo-de-julich-cleveris-berg",
+      "reason": "Conservar la forma historiográfica; revisar identidad, ordinal, contexto, sobrenombre y variantes según la pauta editorial.",
+      "english": "John William of Jülich-Cleves-Berg",
+      "route": {
+        "id": "JOHNWILLIAMCLEVES",
+        "es": "juan-guillermo-de-julich-cleveris-berg",
+        "en": "john-william-of-julich-cleves-berg"
+      },
+      "fullBiography": false
+    },
+    {
+      "id": "JOHN3CLEVES",
+      "before": {
+        "nombre": "Juan III de Cléveris",
+        "sobrenombre": "el Pacífico",
+        "aliases": []
+      },
+      "after": {
+        "nombre": "Juan III de Cléveris",
+        "sobrenombre": "el Pacífico",
+        "aliases": []
+      },
+      "slug": "juan-iii-de-cleveris",
+      "reason": "Conservar la forma historiográfica; revisar identidad, ordinal, contexto, sobrenombre y variantes según la pauta editorial.",
+      "english": "John III of Cleves",
+      "route": {
+        "id": "JOHN3CLEVES",
+        "es": "juan-iii-de-cleveris",
+        "en": "john-iii-of-cleves"
+      },
+      "fullBiography": false
+    },
+    {
+      "id": "JOHNSIGBRAND",
+      "before": {
+        "nombre": "Juan Segismundo de Brandeburgo",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "after": {
+        "nombre": "Juan Segismundo de Brandeburgo",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "slug": "juan-segismundo-de-brandeburgo",
+      "reason": "Conservar la forma historiográfica; revisar identidad, ordinal, contexto, sobrenombre y variantes según la pauta editorial.",
+      "english": "John Sigismund of Brandenburg",
+      "route": {
+        "id": "JOHNSIGBRAND",
+        "es": "juan-segismundo-de-brandeburgo",
+        "en": "john-sigismund-of-brandenburg"
+      },
+      "fullBiography": false
+    },
+    {
+      "id": "LUIS2HUN",
+      "before": {
+        "nombre": "Luis II de Hungría y Bohemia",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "after": {
+        "nombre": "Luis II de Hungría",
+        "sobrenombre": "",
+        "aliases": [
+          "Luis II de Hungría y Bohemia"
+        ]
+      },
+      "slug": "luis-ii-de-hungria-y-bohemia",
+      "reason": "Encabezado breve con Hungría; Bohemia conserva su propio gobierno y permanece en la variante anterior. Se conservan ID y URL publicados.",
+      "english": "Louis II of Hungary",
+      "route": {
+        "id": "LUIS2HUN",
+        "es": "luis-ii-de-hungria-y-bohemia",
+        "en": "louis-ii-of-hungary"
+      },
+      "fullBiography": false
+    },
+    {
+      "id": "MARGARITA1NORD",
+      "before": {
+        "nombre": "Margarita I de Dinamarca",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "after": {
+        "nombre": "Margarita I de Dinamarca",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "slug": "margarita-i-de-dinamarca",
+      "reason": "Conservar la forma historiográfica; revisar identidad, ordinal, contexto, sobrenombre y variantes según la pauta editorial.",
+      "english": "Margaret I of Denmark",
+      "route": {
+        "id": "MARGARITA1NORD",
+        "es": "margarita-i-de-dinamarca",
+        "en": "margaret-i-of-denmark"
+      },
+      "fullBiography": false
+    },
+    {
+      "id": "LADISLAO7HUN",
+      "before": {
+        "nombre": "Vladislao II de Bohemia y Hungría",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "after": {
+        "nombre": "Vladislao II de Bohemia",
+        "sobrenombre": "",
+        "aliases": [
+          "Vladislao II de Bohemia y Hungría"
+        ]
+      },
+      "slug": "vladislao-ii-de-bohemia-y-hungria",
+      "reason": "El ordinal II queda asociado a Bohemia; Hungría permanece en la variante anterior y sus gobiernos. Se conservan ID y URL publicados.",
+      "english": "Vladislaus II of Bohemia",
+      "route": {
+        "id": "LADISLAO7HUN",
+        "es": "vladislao-ii-de-bohemia-y-hungria",
+        "en": "vladislaus-ii-of-bohemia"
+      },
+      "fullBiography": false
+    },
+    {
+      "id": "ALB2AUS",
+      "before": {
+        "nombre": "Alberto II de Austria",
+        "sobrenombre": "el Sabio",
+        "aliases": []
+      },
+      "after": {
+        "nombre": "Alberto II de Austria",
+        "sobrenombre": "el Sabio",
+        "aliases": []
+      },
+      "slug": "alberto-ii-de-austria",
+      "reason": "Conservar la forma historiográfica; revisar identidad, ordinal, contexto, sobrenombre y variantes según la pauta editorial.",
+      "english": "Albert II of Austria",
+      "route": {
+        "id": "ALB2AUS",
+        "es": "alberto-ii-de-austria",
+        "en": "albert-ii-of-austria"
+      },
+      "fullBiography": false
+    },
+    {
+      "id": "ANNEQUEEN",
+      "before": {
+        "nombre": "Ana Estuardo",
+        "sobrenombre": "",
+        "aliases": [
+          "Ana, reina de Gran Bretaña",
+          "Queen Anne"
+        ]
+      },
+      "after": {
+        "nombre": "Ana Estuardo",
+        "sobrenombre": "",
+        "aliases": [
+          "Ana, reina de Gran Bretaña",
+          "Queen Anne"
+        ]
+      },
+      "slug": "ana-estuardo",
+      "reason": "Conservar la forma historiográfica; revisar identidad, ordinal, contexto, sobrenombre y variantes según la pauta editorial.",
+      "english": "Anne of Great Britain",
+      "route": {
+        "id": "ANNEQUEEN",
+        "es": "ana-estuardo",
+        "en": "anne-of-great-britain"
+      },
+      "fullBiography": false
+    },
+    {
+      "id": "BAGRAT5IMER",
+      "before": {
+        "nombre": "Bagrat V de Imericia",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "after": {
+        "nombre": "Bagrat V de Imericia",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "slug": "bagrat-v-de-imericia",
+      "reason": "Conservar la forma historiográfica; revisar identidad, ordinal, contexto, sobrenombre y variantes según la pauta editorial.",
+      "english": "Bagrat V of Imereti",
+      "route": {
+        "id": "BAGRAT5IMER",
+        "es": "bagrat-v-de-imericia",
+        "en": "bagrat-v-of-imereti"
+      },
+      "fullBiography": false
+    },
+    {
+      "id": "CARLOS2ING",
+      "before": {
+        "nombre": "Carlos II de Inglaterra",
+        "sobrenombre": "el Rey Alegre",
+        "aliases": []
+      },
+      "after": {
+        "nombre": "Carlos II de Inglaterra",
+        "sobrenombre": "el Rey Alegre",
+        "aliases": []
+      },
+      "slug": "carlos-ii-de-inglaterra",
+      "reason": "Conservar la forma historiográfica; revisar identidad, ordinal, contexto, sobrenombre y variantes según la pauta editorial.",
+      "english": "Charles II of England",
+      "route": {
+        "id": "CARLOS2ING",
+        "es": "carlos-ii-de-inglaterra",
+        "en": "charles-ii-of-england"
+      },
+      "fullBiography": false
+    },
+    {
+      "id": "CARLOSEMANUEL3SAB",
+      "before": {
+        "nombre": "Carlos Manuel III de Saboya",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "after": {
+        "nombre": "Carlos Manuel III de Saboya",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "slug": "carlos-manuel-iii-de-saboya",
+      "reason": "Conservar la forma historiográfica; revisar identidad, ordinal, contexto, sobrenombre y variantes según la pauta editorial.",
+      "english": "Charles Emmanuel III of Savoy",
+      "route": {
+        "id": "CARLOSEMANUEL3SAB",
+        "es": "carlos-manuel-iii-de-saboya",
+        "en": "charles-emmanuel-iii-of-savoy"
+      },
+      "fullBiography": false
+    },
+    {
+      "id": "ENRIQCAR",
+      "before": {
+        "nombre": "Enrique de Carintia",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "after": {
+        "nombre": "Enrique de Carintia",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "slug": "enrique-de-carintia",
+      "reason": "Conservar la forma historiográfica; revisar identidad, ordinal, contexto, sobrenombre y variantes según la pauta editorial.",
+      "english": "Henry of Carinthia",
+      "route": {
+        "id": "ENRIQCAR",
+        "es": "enrique-de-carintia",
+        "en": "henry-of-carinthia"
+      },
+      "fullBiography": false
+    },
+    {
+      "id": "ENRIQUERASPE",
+      "before": {
+        "nombre": "Enrique Raspe",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "after": {
+        "nombre": "Enrique Raspe",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "slug": "enrique-raspe",
+      "reason": "Conservar la forma historiográfica; revisar identidad, ordinal, contexto, sobrenombre y variantes según la pauta editorial.",
+      "english": "Henry Raspe",
+      "route": {
+        "id": "ENRIQUERASPE",
+        "es": "enrique-raspe",
+        "en": "henry-raspe"
+      },
+      "fullBiography": false
+    },
+    {
+      "id": "ERICOPOMERANIA",
+      "before": {
+        "nombre": "Erik de Pomerania",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "after": {
+        "nombre": "Erik de Pomerania",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "slug": "erik-de-pomerania",
+      "reason": "Conservar la forma historiográfica; revisar identidad, ordinal, contexto, sobrenombre y variantes según la pauta editorial.",
+      "english": "Eric of Pomerania",
+      "route": {
+        "id": "ERICOPOMERANIA",
+        "es": "erik-de-pomerania",
+        "en": "eric-of-pomerania"
+      },
+      "fullBiography": true
+    },
+    {
+      "id": "FERN4NAP",
+      "before": {
+        "nombre": "Fernando IV de Nápoles",
+        "sobrenombre": "",
+        "aliases": [
+          "Fernando III de Sicilia",
+          "Fernando I de las Dos Sicilias"
+        ]
+      },
+      "after": {
+        "nombre": "Fernando IV de Nápoles",
+        "sobrenombre": "",
+        "aliases": [
+          "Fernando III de Sicilia",
+          "Fernando I de las Dos Sicilias"
+        ]
+      },
+      "slug": "fernando-iv-de-napoles",
+      "reason": "Conservar la forma historiográfica; revisar identidad, ordinal, contexto, sobrenombre y variantes según la pauta editorial.",
+      "english": "Ferdinand IV of Naples",
+      "route": {
+        "id": "FERN4NAP",
+        "es": "fernando-iv-de-napoles",
+        "en": "ferdinand-iv-of-naples"
+      },
+      "fullBiography": false
+    },
+    {
+      "id": "GUILLERMO2BAV",
+      "before": {
+        "nombre": "Guillermo II de Baviera-Straubing",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "after": {
+        "nombre": "Guillermo II de Baviera-Straubing",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "slug": "guillermo-ii-de-baviera-straubing",
+      "reason": "Conservar la forma historiográfica; revisar identidad, ordinal, contexto, sobrenombre y variantes según la pauta editorial.",
+      "english": "William II of Bavaria-Straubing",
+      "route": {
+        "id": "GUILLERMO2BAV",
+        "es": "guillermo-ii-de-baviera-straubing",
+        "en": "william-ii-of-bavaria-straubing"
+      },
+      "fullBiography": false
+    },
+    {
+      "id": "HETHUM2ARM",
+      "before": {
+        "nombre": "Hetum II de Armenia cilicia",
+        "sobrenombre": "",
+        "aliases": [
+          "Hethum II",
+          "Hetoum II"
+        ]
+      },
+      "after": {
+        "nombre": "Hetum II de Armenia cilicia",
+        "sobrenombre": "",
+        "aliases": [
+          "Hethum II",
+          "Hetoum II"
+        ]
+      },
+      "slug": "hetum-ii-de-armenia-cilicia",
+      "reason": "Conservar la forma historiográfica; revisar identidad, ordinal, contexto, sobrenombre y variantes según la pauta editorial.",
+      "english": "Hethum II of Cilician Armenia",
+      "route": {
+        "id": "HETHUM2ARM",
+        "es": "hetum-ii-de-armenia-cilicia",
+        "en": "hethum-ii-of-cilician-armenia"
+      },
+      "fullBiography": false
+    },
+    {
+      "id": "JAMES1CYPRUS",
+      "before": {
+        "nombre": "Jacobo I de Chipre",
+        "sobrenombre": "",
+        "aliases": [
+          "Jacques I de Lusignan",
+          "James I of Cyprus"
+        ]
+      },
+      "after": {
+        "nombre": "Jacobo I de Chipre",
+        "sobrenombre": "",
+        "aliases": [
+          "Jacques I de Lusignan",
+          "James I of Cyprus"
+        ]
+      },
+      "slug": "jacobo-i-de-chipre",
+      "reason": "Conservar la forma historiográfica; revisar identidad, ordinal, contexto, sobrenombre y variantes según la pauta editorial.",
+      "english": "James I of Cyprus",
+      "route": {
+        "id": "JAMES1CYPRUS",
+        "es": "jacobo-i-de-chipre",
+        "en": "james-i-of-cyprus"
+      },
+      "fullBiography": false
+    },
+    {
+      "id": "JAMES2CYPRUS",
+      "before": {
+        "nombre": "Jacobo II de Chipre",
+        "sobrenombre": "",
+        "aliases": [
+          "Jacques II de Lusignan",
+          "James II of Cyprus"
+        ]
+      },
+      "after": {
+        "nombre": "Jacobo II de Chipre",
+        "sobrenombre": "",
+        "aliases": [
+          "Jacques II de Lusignan",
+          "James II of Cyprus"
+        ]
+      },
+      "slug": "jacobo-ii-de-chipre",
+      "reason": "Conservar la forma historiográfica; revisar identidad, ordinal, contexto, sobrenombre y variantes según la pauta editorial.",
+      "english": "James II of Cyprus",
+      "route": {
+        "id": "JAMES2CYPRUS",
+        "es": "jacobo-ii-de-chipre",
+        "en": "james-ii-of-cyprus"
+      },
+      "fullBiography": false
+    },
+    {
+      "id": "GEORGE1GB",
+      "before": {
+        "nombre": "Jorge I de Gran Bretaña",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "after": {
+        "nombre": "Jorge I de Gran Bretaña",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "slug": "jorge-i-de-gran-bretana",
+      "reason": "Conservar la forma historiográfica; revisar identidad, ordinal, contexto, sobrenombre y variantes según la pauta editorial.",
+      "english": "George I of Great Britain",
+      "route": {
+        "id": "GEORGE1GB",
+        "es": "jorge-i-de-gran-bretana",
+        "en": "george-i-of-great-britain"
+      },
+      "fullBiography": false
+    },
+    {
+      "id": "GEORGE2GB",
+      "before": {
+        "nombre": "Jorge II de Gran Bretaña",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "after": {
+        "nombre": "Jorge II de Gran Bretaña",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "slug": "jorge-ii-de-gran-bretana",
+      "reason": "Conservar la forma historiográfica; revisar identidad, ordinal, contexto, sobrenombre y variantes según la pauta editorial.",
+      "english": "George II of Great Britain",
+      "route": {
+        "id": "GEORGE2GB",
+        "es": "jorge-ii-de-gran-bretana",
+        "en": "george-ii-of-great-britain"
+      },
+      "fullBiography": false
+    },
+    {
+      "id": "SIGISBATH",
+      "before": {
+        "nombre": "Segismundo Báthory",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "after": {
+        "nombre": "Segismundo Báthory",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "slug": "segismundo-bathory",
+      "reason": "Conservar la forma historiográfica; revisar identidad, ordinal, contexto, sobrenombre y variantes según la pauta editorial.",
+      "english": "Sigismund Báthory",
+      "route": {
+        "id": "SIGISBATH",
+        "es": "segismundo-bathory",
+        "en": "sigismund-bathory"
+      },
+      "fullBiography": false
+    },
+    {
+      "id": "STEFANFIRSTSER",
+      "before": {
+        "nombre": "Stefan Nemanjić",
+        "sobrenombre": "el Primer Coronado",
+        "aliases": [
+          "Stefan el Primer Coronado",
+          "Stefan Prvovenčani"
+        ]
+      },
+      "after": {
+        "nombre": "Stefan Nemanjić",
+        "sobrenombre": "el Primer Coronado",
+        "aliases": [
+          "Stefan el Primer Coronado",
+          "Stefan Prvovenčani"
+        ]
+      },
+      "slug": "stefan-nemanjic",
+      "reason": "Conservar la forma historiográfica; revisar identidad, ordinal, contexto, sobrenombre y variantes según la pauta editorial.",
+      "english": "Stefan Nemanjić",
+      "route": {
+        "id": "STEFANFIRSTSER",
+        "es": "stefan-nemanjic",
+        "en": "stefan-nemanjic"
+      },
+      "fullBiography": false
+    },
+    {
+      "id": "TEIMURAZ1KAKH",
+      "before": {
+        "nombre": "Teimuraz I de Kajetia",
+        "sobrenombre": "",
+        "aliases": [
+          "Teimuraz I",
+          "Tahmuras Khan"
+        ]
+      },
+      "after": {
+        "nombre": "Teimuraz I de Kajetia",
+        "sobrenombre": "",
+        "aliases": [
+          "Teimuraz I",
+          "Tahmuras Khan"
+        ]
+      },
+      "slug": "teimuraz-i-de-kajetia",
+      "reason": "Conservar la forma historiográfica; revisar identidad, ordinal, contexto, sobrenombre y variantes según la pauta editorial.",
+      "english": "Teimuraz I of Kakheti",
+      "route": {
+        "id": "TEIMURAZ1KAKH",
+        "es": "teimuraz-i-de-kajetia",
+        "en": "teimuraz-i-of-kakheti"
+      },
+      "fullBiography": false
+    },
+    {
+      "id": "VICTORAMADEO2SAB",
+      "before": {
+        "nombre": "Víctor Amadeo II de Saboya",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "after": {
+        "nombre": "Víctor Amadeo II de Saboya",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "slug": "victor-amadeo-ii-de-saboya",
+      "reason": "Conservar la forma historiográfica; revisar identidad, ordinal, contexto, sobrenombre y variantes según la pauta editorial.",
+      "english": "Victor Amadeus II of Savoy",
+      "route": {
+        "id": "VICTORAMADEO2SAB",
+        "es": "victor-amadeo-ii-de-saboya",
+        "en": "victor-amadeus-ii-of-savoy"
+      },
+      "fullBiography": false
+    },
+    {
+      "id": "ALB1HAB",
+      "before": {
+        "nombre": "Alberto I de Habsburgo",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "after": {
+        "nombre": "Alberto I de Habsburgo",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "slug": "alberto-i-de-habsburgo",
+      "reason": "Conservar la forma historiográfica; revisar identidad, ordinal, contexto, sobrenombre y variantes según la pauta editorial.",
+      "english": "Albert I of Habsburg",
+      "route": {
+        "id": "ALB1HAB",
+        "es": "alberto-i-de-habsburgo",
+        "en": "albert-i-of-habsburg"
+      },
+      "fullBiography": false
+    },
+    {
+      "id": "ALFONSO1ESTE",
+      "before": {
+        "nombre": "Alfonso I de Este",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "after": {
+        "nombre": "Alfonso I de Este",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "slug": "alfonso-i-de-este",
+      "reason": "Conservar la forma historiográfica; revisar identidad, ordinal, contexto, sobrenombre y variantes según la pauta editorial.",
+      "english": "Alfonso I d’Este",
+      "route": {
+        "id": "ALFONSO1ESTE",
+        "es": "alfonso-i-de-este",
+        "en": "alfonso-i-d-este"
+      },
+      "fullBiography": false
+    },
+    {
+      "id": "AMEDEO8SAB",
+      "before": {
+        "nombre": "Amadeo VIII de Saboya",
+        "sobrenombre": "el Pacífico",
+        "aliases": []
+      },
+      "after": {
+        "nombre": "Amadeo VIII de Saboya",
+        "sobrenombre": "el Pacífico",
+        "aliases": []
+      },
+      "slug": "amadeo-viii-de-saboya",
+      "reason": "Conservar la forma historiográfica; revisar identidad, ordinal, contexto, sobrenombre y variantes según la pauta editorial.",
+      "english": "Amadeus VIII of Savoy",
+      "route": {
+        "id": "AMEDEO8SAB",
+        "es": "amadeo-viii-de-saboya",
+        "en": "amadeus-viii-of-savoy"
+      },
+      "fullBiography": true
+    },
+    {
+      "id": "AIMERYLUSIGNANJER",
+      "before": {
+        "nombre": "Amalarico II de Lusignan",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "after": {
+        "nombre": "Amalarico II de Jerusalén",
+        "sobrenombre": "",
+        "aliases": [
+          "Amalarico II de Lusignan"
+        ]
+      },
+      "slug": "amalarico-ii-de-lusignan",
+      "reason": "El ordinal II queda asociado a Jerusalén; la casa Lusignan y el título chipriota se conservan. Se conservan ID y URL publicados.",
+      "english": "Amalric II of Jerusalem",
+      "route": {
+        "id": "AIMERYLUSIGNANJER",
+        "es": "amalarico-ii-de-lusignan",
+        "en": "amalric-ii-of-jerusalem"
+      },
+      "fullBiography": false
+    },
+    {
+      "id": "ANTONBRAB",
+      "before": {
+        "nombre": "Antonio de Borgoña",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "after": {
+        "nombre": "Antonio de Borgoña",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "slug": "antonio-de-borgona",
+      "reason": "Conservar la forma historiográfica; revisar identidad, ordinal, contexto, sobrenombre y variantes según la pauta editorial.",
+      "english": "Anthony of Burgundy",
+      "route": {
+        "id": "ANTONBRAB",
+        "es": "antonio-de-borgona",
+        "en": "anthony-of-burgundy"
+      },
+      "fullBiography": false
+    },
+    {
+      "id": "BOHEMOND4ANT",
+      "before": {
+        "nombre": "Bohemundo IV de Antioquía",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "after": {
+        "nombre": "Bohemundo IV de Antioquía",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "slug": "bohemundo-iv-de-antioquia",
+      "reason": "Conservar la forma historiográfica; revisar identidad, ordinal, contexto, sobrenombre y variantes según la pauta editorial.",
+      "english": "Bohemond IV of Antioch",
+      "route": {
+        "id": "BOHEMOND4ANT",
+        "es": "bohemundo-iv-de-antioquia",
+        "en": "bohemond-iv-of-antioch"
+      },
+      "fullBiography": false
+    },
+    {
+      "id": "BOHEMOND6ANT",
+      "before": {
+        "nombre": "Bohemundo VI de Antioquía",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "after": {
+        "nombre": "Bohemundo VI de Antioquía",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "slug": "bohemundo-vi-de-antioquia",
+      "reason": "Conservar la forma historiográfica; revisar identidad, ordinal, contexto, sobrenombre y variantes según la pauta editorial.",
+      "english": "Bohemond VI of Antioch",
+      "route": {
+        "id": "BOHEMOND6ANT",
+        "es": "bohemundo-vi-de-antioquia",
+        "en": "bohemond-vi-of-antioch"
+      },
+      "fullBiography": false
+    },
+    {
+      "id": "CARLOSEMANUEL4SAB",
+      "before": {
+        "nombre": "Carlos Manuel IV de Saboya",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "after": {
+        "nombre": "Carlos Manuel IV de Saboya",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "slug": "carlos-manuel-iv-de-saboya",
+      "reason": "Conservar la forma historiográfica; revisar identidad, ordinal, contexto, sobrenombre y variantes según la pauta editorial.",
+      "english": "Charles Emmanuel IV of Savoy",
+      "route": {
+        "id": "CARLOSEMANUEL4SAB",
+        "es": "carlos-manuel-iv-de-saboya",
+        "en": "charles-emmanuel-iv-of-savoy"
+      },
+      "fullBiography": false
+    },
+    {
+      "id": "CHARLOTTECYPRUS",
+      "before": {
+        "nombre": "Carlota de Chipre",
+        "sobrenombre": "",
+        "aliases": [
+          "Charlotte de Lusignan",
+          "Charlotte of Cyprus"
+        ]
+      },
+      "after": {
+        "nombre": "Carlota de Chipre",
+        "sobrenombre": "",
+        "aliases": [
+          "Charlotte de Lusignan",
+          "Charlotte of Cyprus"
+        ]
+      },
+      "slug": "carlota-de-chipre",
+      "reason": "Conservar la forma historiográfica; revisar identidad, ordinal, contexto, sobrenombre y variantes según la pauta editorial.",
+      "english": "Charlotte of Cyprus",
+      "route": {
+        "id": "CHARLOTTECYPRUS",
+        "es": "carlota-de-chipre",
+        "en": "charlotte-of-cyprus"
+      },
+      "fullBiography": false
+    },
+    {
+      "id": "CRISTIAN1NORD",
+      "before": {
+        "nombre": "Cristián I de Dinamarca",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "after": {
+        "nombre": "Cristián I de Dinamarca",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "slug": "cristian-i-de-dinamarca",
+      "reason": "Conservar la forma historiográfica; revisar identidad, ordinal, contexto, sobrenombre y variantes según la pauta editorial.",
+      "english": "Christian I of Denmark",
+      "route": {
+        "id": "CRISTIAN1NORD",
+        "es": "cristian-i-de-dinamarca",
+        "en": "christian-i-of-denmark"
+      },
+      "fullBiography": true
+    },
+    {
+      "id": "CRISTOBALBAVSUE",
+      "before": {
+        "nombre": "Cristóbal de Baviera",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "after": {
+        "nombre": "Cristóbal de Baviera",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "slug": "cristobal-de-baviera",
+      "reason": "Conservar la forma historiográfica; revisar identidad, ordinal, contexto, sobrenombre y variantes según la pauta editorial.",
+      "english": "Christopher of Bavaria",
+      "route": {
+        "id": "CRISTOBALBAVSUE",
+        "es": "cristobal-de-baviera",
+        "en": "christopher-of-bavaria"
+      },
+      "fullBiography": false
+    },
+    {
+      "id": "DAVID6GEO",
+      "before": {
+        "nombre": "David VI Narin de Georgia",
+        "sobrenombre": "",
+        "aliases": [
+          "Davit VI Narin"
+        ]
+      },
+      "after": {
+        "nombre": "David VI Narin de Georgia",
+        "sobrenombre": "",
+        "aliases": [
+          "Davit VI Narin"
+        ]
+      },
+      "slug": "david-vi-narin-de-georgia",
+      "reason": "Conservar la forma historiográfica; revisar identidad, ordinal, contexto, sobrenombre y variantes según la pauta editorial.",
+      "english": "David VI Narin of Georgia",
+      "route": {
+        "id": "DAVID6GEO",
+        "es": "david-vi-narin-de-georgia",
+        "en": "david-vi-narin-of-georgia"
+      },
+      "fullBiography": false
+    },
+    {
+      "id": "EBERHARD1WURTT",
+      "before": {
+        "nombre": "Eberhard I de Württemberg",
+        "sobrenombre": "el Barbudo",
+        "aliases": [
+          "Eberhard im Bart"
+        ]
+      },
+      "after": {
+        "nombre": "Eberhard I de Württemberg",
+        "sobrenombre": "el Barbudo",
+        "aliases": [
+          "Eberhard im Bart"
+        ]
+      },
+      "slug": "eberhard-i-de-wurttemberg",
+      "reason": "Conservar la forma historiográfica; revisar identidad, ordinal, contexto, sobrenombre y variantes según la pauta editorial.",
+      "english": "Eberhard I of Württemberg",
+      "route": {
+        "id": "EBERHARD1WURTT",
+        "es": "eberhard-i-de-wurttemberg",
+        "en": "eberhard-i-of-wurttemberg"
+      },
+      "fullBiography": false
+    },
+    {
+      "id": "FED1HERM",
+      "before": {
+        "nombre": "Federico de Habsburgo",
+        "sobrenombre": "el Hermoso",
+        "aliases": []
+      },
+      "after": {
+        "nombre": "Federico de Habsburgo",
+        "sobrenombre": "el Hermoso",
+        "aliases": []
+      },
+      "slug": "federico-de-habsburgo",
+      "reason": "Conservar la forma historiográfica; revisar identidad, ordinal, contexto, sobrenombre y variantes según la pauta editorial.",
+      "english": "Frederick of Habsburg",
+      "route": {
+        "id": "FED1HERM",
+        "es": "federico-de-habsburgo",
+        "en": "frederick-of-habsburg"
+      },
+      "fullBiography": false
+    },
+    {
+      "id": "FED2GONZAGA",
+      "before": {
+        "nombre": "Federico II Gonzaga",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "after": {
+        "nombre": "Federico II Gonzaga",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "slug": "federico-ii-gonzaga",
+      "reason": "Conservar la forma historiográfica; revisar identidad, ordinal, contexto, sobrenombre y variantes según la pauta editorial.",
+      "english": "Federico II Gonzaga",
+      "route": {
+        "id": "FED2GONZAGA",
+        "es": "federico-ii-gonzaga",
+        "en": "federico-ii-gonzaga"
+      },
+      "fullBiography": false
+    },
+    {
+      "id": "FERN4BOH",
+      "before": {
+        "nombre": "Fernando IV de Bohemia",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "after": {
+        "nombre": "Fernando IV de Bohemia",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "slug": "fernando-iv-de-bohemia",
+      "reason": "Conservar la forma historiográfica; revisar identidad, ordinal, contexto, sobrenombre y variantes según la pauta editorial.",
+      "english": "Ferdinand IV of Bohemia",
+      "route": {
+        "id": "FERN4BOH",
+        "es": "fernando-iv-de-bohemia",
+        "en": "ferdinand-iv-of-bohemia"
+      },
+      "fullBiography": false
+    },
+    {
+      "id": "GODOFREDO5ANJ",
+      "before": {
+        "nombre": "Godofredo V de Anjou",
+        "sobrenombre": "Plantagenet",
+        "aliases": []
+      },
+      "after": {
+        "nombre": "Godofredo V de Anjou",
+        "sobrenombre": "Plantagenet",
+        "aliases": []
+      },
+      "slug": "godofredo-v-de-anjou",
+      "reason": "Conservar la forma historiográfica; revisar identidad, ordinal, contexto, sobrenombre y variantes según la pauta editorial.",
+      "english": "Geoffrey V of Anjou",
+      "route": {
+        "id": "GODOFREDO5ANJ",
+        "es": "godofredo-v-de-anjou",
+        "en": "geoffrey-v-of-anjou"
+      },
+      "fullBiography": false
+    },
+    {
+      "id": "WILLIAMFREDNASSAU",
+      "before": {
+        "nombre": "Guillermo Federico de Nassau-Dietz",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "after": {
+        "nombre": "Guillermo Federico de Nassau-Dietz",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "slug": "guillermo-federico-de-nassau-dietz",
+      "reason": "Conservar la forma historiográfica; revisar identidad, ordinal, contexto, sobrenombre y variantes según la pauta editorial.",
+      "english": "William Frederick of Nassau-Dietz",
+      "route": {
+        "id": "WILLIAMFREDNASSAU",
+        "es": "guillermo-federico-de-nassau-dietz",
+        "en": "william-frederick-of-nassau-dietz"
+      },
+      "fullBiography": false
+    },
+    {
+      "id": "GUILLERMOGONZAGA",
+      "before": {
+        "nombre": "Guillermo Gonzaga",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "after": {
+        "nombre": "Guillermo Gonzaga",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "slug": "guillermo-gonzaga",
+      "reason": "Conservar la forma historiográfica; revisar identidad, ordinal, contexto, sobrenombre y variantes según la pauta editorial.",
+      "english": "Guglielmo Gonzaga",
+      "route": {
+        "id": "GUILLERMOGONZAGA",
+        "es": "guillermo-gonzaga",
+        "en": "guglielmo-gonzaga"
+      },
+      "fullBiography": false
+    },
+    {
+      "id": "WILHELM4JULBERG",
+      "before": {
+        "nombre": "Guillermo IV de Jülich-Berg",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "after": {
+        "nombre": "Guillermo IV de Jülich-Berg",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "slug": "guillermo-iv-de-julich-berg",
+      "reason": "Conservar la forma historiográfica; revisar identidad, ordinal, contexto, sobrenombre y variantes según la pauta editorial.",
+      "english": "William IV of Jülich-Berg",
+      "route": {
+        "id": "WILHELM4JULBERG",
+        "es": "guillermo-iv-de-julich-berg",
+        "en": "william-iv-of-julich-berg"
+      },
+      "fullBiography": false
+    },
+    {
+      "id": "WILLIAM5ORANGE",
+      "before": {
+        "nombre": "Guillermo V de Orange-Nassau",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "after": {
+        "nombre": "Guillermo V de Orange-Nassau",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "slug": "guillermo-v-de-orange-nassau",
+      "reason": "Conservar la forma historiográfica; revisar identidad, ordinal, contexto, sobrenombre y variantes según la pauta editorial.",
+      "english": "William V of Orange-Nassau",
+      "route": {
+        "id": "WILLIAM5ORANGE",
+        "es": "guillermo-v-de-orange-nassau",
+        "en": "william-v-of-orange-nassau"
+      },
+      "fullBiography": false
+    },
+    {
+      "id": "EREKLE1GEO",
+      "before": {
+        "nombre": "Heraclio I de Georgia",
+        "sobrenombre": "",
+        "aliases": [
+          "Erekle I",
+          "Irakli I",
+          "Nazar Ali Khan"
+        ]
+      },
+      "after": {
+        "nombre": "Heraclio I de Georgia",
+        "sobrenombre": "",
+        "aliases": [
+          "Erekle I",
+          "Irakli I",
+          "Nazar Ali Khan"
+        ]
+      },
+      "slug": "heraclio-i-de-georgia",
+      "reason": "Conservar la forma historiográfica; revisar identidad, ordinal, contexto, sobrenombre y variantes según la pauta editorial.",
+      "english": "Heraclius I of Georgia",
+      "route": {
+        "id": "EREKLE1GEO",
+        "es": "heraclio-i-de-georgia",
+        "en": "heraclius-i-of-georgia"
+      },
+      "fullBiography": false
+    },
+    {
+      "id": "JACOBO1ING",
+      "before": {
+        "nombre": "Jacobo VI de Escocia y I de Inglaterra",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "after": {
+        "nombre": "Jacobo I de Inglaterra",
+        "sobrenombre": "",
+        "aliases": [
+          "Jacobo VI de Escocia y I de Inglaterra"
+        ]
+      },
+      "slug": "jacobo-vi-de-escocia-y-i-de-inglaterra",
+      "reason": "Jacobo I corresponde a Inglaterra; VI de Escocia permanece en variantes y gobiernos. Se conservan ID y URL publicados.",
+      "english": "James I of England",
+      "route": {
+        "id": "JACOBO1ING",
+        "es": "jacobo-vi-de-escocia-y-i-de-inglaterra",
+        "en": "james-i-of-england"
+      },
+      "fullBiography": false
+    },
+    {
+      "id": "JAMES1DUKEORMOND",
+      "before": {
+        "nombre": "James Butler, duque de Ormond",
+        "sobrenombre": "",
+        "aliases": [
+          "James Butler, 1st Duke of Ormonde"
+        ]
+      },
+      "after": {
+        "nombre": "James Butler, duque de Ormond",
+        "sobrenombre": "",
+        "aliases": [
+          "James Butler, 1st Duke of Ormonde"
+        ]
+      },
+      "slug": "james-butler-duque-de-ormond",
+      "reason": "Conservar la forma historiográfica; revisar identidad, ordinal, contexto, sobrenombre y variantes según la pauta editorial.",
+      "english": "James Butler, Duke of Ormond",
+      "route": {
+        "id": "JAMES1DUKEORMOND",
+        "es": "james-butler-duque-de-ormond",
+        "en": "james-butler-duke-of-ormond"
+      },
+      "fullBiography": false
+    },
+    {
+      "id": "JANUSCYPRUS",
+      "before": {
+        "nombre": "Jano de Chipre",
+        "sobrenombre": "",
+        "aliases": [
+          "Janus de Lusignan",
+          "Janus of Cyprus"
+        ]
+      },
+      "after": {
+        "nombre": "Jano de Chipre",
+        "sobrenombre": "",
+        "aliases": [
+          "Janus de Lusignan",
+          "Janus of Cyprus"
+        ]
+      },
+      "slug": "jano-de-chipre",
+      "reason": "Conservar la forma historiográfica; revisar identidad, ordinal, contexto, sobrenombre y variantes según la pauta editorial.",
+      "english": "Janus of Cyprus",
+      "route": {
+        "id": "JANUSCYPRUS",
+        "es": "jano-de-chipre",
+        "en": "janus-of-cyprus"
+      },
+      "fullBiography": false
+    },
+    {
+      "id": "JOBSTMOR",
+      "before": {
+        "nombre": "Jobst de Moravia",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "after": {
+        "nombre": "Jobst de Moravia",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "slug": "jobst-de-moravia",
+      "reason": "Conservar la forma historiográfica; revisar identidad, ordinal, contexto, sobrenombre y variantes según la pauta editorial.",
+      "english": "Jobst of Moravia",
+      "route": {
+        "id": "JOBSTMOR",
+        "es": "jobst-de-moravia",
+        "en": "jobst-of-moravia"
+      },
+      "fullBiography": false
+    },
+    {
+      "id": "JORGEPODE",
+      "before": {
+        "nombre": "Jorge de Poděbrady",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "after": {
+        "nombre": "Jorge de Poděbrady",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "slug": "jorge-de-podebrady",
+      "reason": "Conservar la forma historiográfica; revisar identidad, ordinal, contexto, sobrenombre y variantes según la pauta editorial.",
+      "english": "George of Poděbrady",
+      "route": {
+        "id": "JORGEPODE",
+        "es": "jorge-de-podebrady",
+        "en": "george-of-podebrady"
+      },
+      "fullBiography": false
+    },
+    {
+      "id": "JUAN2NORD",
+      "before": {
+        "nombre": "Juan de Dinamarca",
+        "sobrenombre": "",
+        "aliases": [
+          "Hans de Dinamarca",
+          "Juan II de Suecia",
+          "Juan II de Dinamarca"
+        ]
+      },
+      "after": {
+        "nombre": "Juan de Dinamarca",
+        "sobrenombre": "",
+        "aliases": [
+          "Hans de Dinamarca",
+          "Juan II de Suecia",
+          "Juan II de Dinamarca"
+        ]
+      },
+      "slug": "juan-ii-de-dinamarca",
+      "reason": "Conservar la forma historiográfica; revisar identidad, ordinal, contexto, sobrenombre y variantes según la pauta editorial.",
+      "english": "John of Denmark",
+      "route": {
+        "id": "JUAN2NORD",
+        "es": "juan-ii-de-dinamarca",
+        "en": "john-of-denmark"
+      },
+      "fullBiography": true
+    },
+    {
+      "id": "JUAN1BERRY",
+      "before": {
+        "nombre": "Juan I de Berry",
+        "sobrenombre": "el Magnífico",
+        "aliases": []
+      },
+      "after": {
+        "nombre": "Juan I de Berry",
+        "sobrenombre": "el Magnífico",
+        "aliases": []
+      },
+      "slug": "juan-i-de-berry",
+      "reason": "Conservar la forma historiográfica; revisar identidad, ordinal, contexto, sobrenombre y variantes según la pauta editorial.",
+      "english": "John of Berry",
+      "route": {
+        "id": "JUAN1BERRY",
+        "es": "juan-i-de-berry",
+        "en": "john-of-berry"
+      },
+      "fullBiography": false
+    },
+    {
+      "id": "JOHN2CYPRUS",
+      "before": {
+        "nombre": "Juan II de Chipre",
+        "sobrenombre": "",
+        "aliases": [
+          "Jean II de Lusignan",
+          "John II of Cyprus"
+        ]
+      },
+      "after": {
+        "nombre": "Juan II de Chipre",
+        "sobrenombre": "",
+        "aliases": [
+          "Jean II de Lusignan",
+          "John II of Cyprus"
+        ]
+      },
+      "slug": "juan-ii-de-chipre",
+      "reason": "Conservar la forma historiográfica; revisar identidad, ordinal, contexto, sobrenombre y variantes según la pauta editorial.",
+      "english": "John II of Cyprus",
+      "route": {
+        "id": "JOHN2CYPRUS",
+        "es": "juan-ii-de-chipre",
+        "en": "john-ii-of-cyprus"
+      },
+      "fullBiography": false
+    },
+    {
+      "id": "JUAN2SIGZAPOLYA",
+      "before": {
+        "nombre": "Juan II Segismundo de Zápolya",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "after": {
+        "nombre": "Juan II Segismundo de Zápolya",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "slug": "juan-ii-segismundo-de-zapolya",
+      "reason": "Conservar la forma historiográfica; revisar identidad, ordinal, contexto, sobrenombre y variantes según la pauta editorial.",
+      "english": "John Sigismund Zápolya",
+      "route": {
+        "id": "JUAN2SIGZAPOLYA",
+        "es": "juan-ii-segismundo-de-zapolya",
+        "en": "john-sigismund-zapolya"
+      },
+      "fullBiography": false
+    },
+    {
+      "id": "JUAN3BAV",
+      "before": {
+        "nombre": "Juan III de Baviera-Straubing",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "after": {
+        "nombre": "Juan III de Baviera-Straubing",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "slug": "juan-iii-de-baviera-straubing",
+      "reason": "Conservar la forma historiográfica; revisar identidad, ordinal, contexto, sobrenombre y variantes según la pauta editorial.",
+      "english": "John III of Bavaria-Straubing",
+      "route": {
+        "id": "JUAN3BAV",
+        "es": "juan-iii-de-baviera-straubing",
+        "en": "john-iii-of-bavaria-straubing"
+      },
+      "fullBiography": false
+    },
+    {
+      "id": "JOHN5PALA",
+      "before": {
+        "nombre": "Juan V Paleólogo",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "after": {
+        "nombre": "Juan V Paleólogo",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "slug": "juan-v-paleologo",
+      "reason": "Conservar la forma historiográfica; revisar identidad, ordinal, contexto, sobrenombre y variantes según la pauta editorial.",
+      "english": "John V Palaiologos",
+      "route": {
+        "id": "JOHN5PALA",
+        "es": "juan-v-paleologo",
+        "en": "john-v-palaiologos"
+      },
+      "fullBiography": false
+    },
+    {
+      "id": "LADISLAONAP",
+      "before": {
+        "nombre": "Ladislao de Nápoles",
+        "sobrenombre": "el Magnánimo",
+        "aliases": []
+      },
+      "after": {
+        "nombre": "Ladislao de Nápoles",
+        "sobrenombre": "el Magnánimo",
+        "aliases": []
+      },
+      "slug": "ladislao-de-napoles",
+      "reason": "Conservar la forma historiográfica; revisar identidad, ordinal, contexto, sobrenombre y variantes según la pauta editorial.",
+      "english": "Ladislaus of Naples",
+      "route": {
+        "id": "LADISLAONAP",
+        "es": "ladislao-de-napoles",
+        "en": "ladislaus-of-naples"
+      },
+      "fullBiography": false
+    },
+    {
+      "id": "LOUISSAVOYCYP",
+      "before": {
+        "nombre": "Luis de Saboya, rey de Chipre",
+        "sobrenombre": "",
+        "aliases": [
+          "Louis of Savoy, King of Cyprus"
+        ]
+      },
+      "after": {
+        "nombre": "Luis de Saboya, rey de Chipre",
+        "sobrenombre": "",
+        "aliases": [
+          "Louis of Savoy, King of Cyprus"
+        ]
+      },
+      "slug": "luis-de-saboya-rey-de-chipre",
+      "reason": "Conservar la forma historiográfica; revisar identidad, ordinal, contexto, sobrenombre y variantes según la pauta editorial.",
+      "english": "Louis of Savoy, King of Cyprus",
+      "route": {
+        "id": "LOUISSAVOYCYP",
+        "es": "luis-de-saboya-rey-de-chipre",
+        "en": "louis-of-savoy-king-of-cyprus"
+      },
+      "fullBiography": false
+    },
+    {
+      "id": "LUIS2ANJOU",
+      "before": {
+        "nombre": "Luis II de Anjou",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "after": {
+        "nombre": "Luis II de Anjou",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "slug": "luis-ii-de-anjou",
+      "reason": "Conservar la forma historiográfica; revisar identidad, ordinal, contexto, sobrenombre y variantes según la pauta editorial.",
+      "english": "Louis II of Anjou",
+      "route": {
+        "id": "LUIS2ANJOU",
+        "es": "luis-ii-de-anjou",
+        "en": "louis-ii-of-anjou"
+      },
+      "fullBiography": false
+    },
+    {
+      "id": "MARG2HEN",
+      "before": {
+        "nombre": "Margarita II de Henao",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "after": {
+        "nombre": "Margarita II de Henao",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "slug": "margarita-ii-de-henao",
+      "reason": "Conservar la forma historiográfica; revisar identidad, ordinal, contexto, sobrenombre y variantes según la pauta editorial.",
+      "english": "Margaret II of Hainaut",
+      "route": {
+        "id": "MARG2HEN",
+        "es": "margarita-ii-de-henao",
+        "en": "margaret-ii-of-hainaut"
+      },
+      "fullBiography": false
+    },
+    {
+      "id": "OTONAUST",
+      "before": {
+        "nombre": "Otón de Austria",
+        "sobrenombre": "el Alegre",
+        "aliases": []
+      },
+      "after": {
+        "nombre": "Otón de Austria",
+        "sobrenombre": "el Alegre",
+        "aliases": []
+      },
+      "slug": "oton-de-austria",
+      "reason": "Conservar la forma historiográfica; revisar identidad, ordinal, contexto, sobrenombre y variantes según la pauta editorial.",
+      "english": "Otto of Austria",
+      "route": {
+        "id": "OTONAUST",
+        "es": "oton-de-austria",
+        "en": "otto-of-austria"
+      },
+      "fullBiography": false
+    },
+    {
+      "id": "TVRTKO1BOS",
+      "before": {
+        "nombre": "Tvrtko I de Bosnia",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "after": {
+        "nombre": "Tvrtko I de Bosnia",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "slug": "tvrtko-i-de-bosnia",
+      "reason": "Conservar la forma historiográfica; revisar identidad, ordinal, contexto, sobrenombre y variantes según la pauta editorial.",
+      "english": "Tvrtko I of Bosnia",
+      "route": {
+        "id": "TVRTKO1BOS",
+        "es": "tvrtko-i-de-bosnia",
+        "en": "tvrtko-i-of-bosnia"
+      },
+      "fullBiography": true
+    },
+    {
+      "id": "VAKHTANG6KARTLI",
+      "before": {
+        "nombre": "Vajtang VI de Kartli",
+        "sobrenombre": "",
+        "aliases": [
+          "Vakhtang VI",
+          "Husayn Quli Khan"
+        ]
+      },
+      "after": {
+        "nombre": "Vajtang VI de Kartli",
+        "sobrenombre": "",
+        "aliases": [
+          "Vakhtang VI",
+          "Husayn Quli Khan"
+        ]
+      },
+      "slug": "vajtang-vi-de-kartli",
+      "reason": "Conservar la forma historiográfica; revisar identidad, ordinal, contexto, sobrenombre y variantes según la pauta editorial.",
+      "english": "Vakhtang VI of Kartli",
+      "route": {
+        "id": "VAKHTANG6KARTLI",
+        "es": "vajtang-vi-de-kartli",
+        "en": "vakhtang-vi-of-kartli"
+      },
+      "fullBiography": false
+    },
+    {
+      "id": "VICTORAMADEO3SAB",
+      "before": {
+        "nombre": "Víctor Amadeo III de Saboya",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "after": {
+        "nombre": "Víctor Amadeo III de Saboya",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "slug": "victor-amadeo-iii-de-saboya",
+      "reason": "Conservar la forma historiográfica; revisar identidad, ordinal, contexto, sobrenombre y variantes según la pauta editorial.",
+      "english": "Victor Amadeus III of Savoy",
+      "route": {
+        "id": "VICTORAMADEO3SAB",
+        "es": "victor-amadeo-iii-de-saboya",
+        "en": "victor-amadeus-iii-of-savoy"
+      },
+      "fullBiography": false
+    },
+    {
+      "id": "WOLFGANGWILHELMNEUBURG",
+      "before": {
+        "nombre": "Wolfgang Guillermo del Palatinado-Neuburg",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "after": {
+        "nombre": "Wolfgang Guillermo del Palatinado-Neuburg",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "slug": "wolfgang-guillermo-del-palatinado-neuburg",
+      "reason": "Conservar la forma historiográfica; revisar identidad, ordinal, contexto, sobrenombre y variantes según la pauta editorial.",
+      "english": "Wolfgang William of Palatinate-Neuburg",
+      "route": {
+        "id": "WOLFGANGWILHELMNEUBURG",
+        "es": "wolfgang-guillermo-del-palatinado-neuburg",
+        "en": "wolfgang-william-of-palatinate-neuburg"
+      },
+      "fullBiography": false
+    },
+    {
+      "id": "ADOLFEGMOND",
+      "before": {
+        "nombre": "Adolfo de Egmond",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "after": {
+        "nombre": "Adolfo de Egmond",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "slug": "adolfo-de-egmond",
+      "reason": "Conservar la forma historiográfica; revisar identidad, ordinal, contexto, sobrenombre y variantes según la pauta editorial.",
+      "english": "Adolf of Egmond",
+      "route": {
+        "id": "ADOLFEGMOND",
+        "es": "adolfo-de-egmond",
+        "en": "adolf-of-egmond"
+      },
+      "fullBiography": false
+    },
+    {
+      "id": "ADOLFN",
+      "before": {
+        "nombre": "Adolfo de Nassau",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "after": {
+        "nombre": "Adolfo de Nassau",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "slug": "adolfo-de-nassau",
+      "reason": "Conservar la forma historiográfica; revisar identidad, ordinal, contexto, sobrenombre y variantes según la pauta editorial.",
+      "english": "Adolf of Nassau",
+      "route": {
+        "id": "ADOLFN",
+        "es": "adolfo-de-nassau",
+        "en": "adolf-of-nassau"
+      },
+      "fullBiography": false
+    },
+    {
+      "id": "ADOLFFRED1MECK",
+      "before": {
+        "nombre": "Adolfo Federico I de Mecklemburgo",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "after": {
+        "nombre": "Adolfo Federico I de Mecklemburgo",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "slug": "adolfo-federico-i-de-mecklemburgo",
+      "reason": "Conservar la forma historiográfica; revisar identidad, ordinal, contexto, sobrenombre y variantes según la pauta editorial.",
+      "english": "Adolf Frederick I of Mecklenburg",
+      "route": {
+        "id": "ADOLFFRED1MECK",
+        "es": "adolfo-federico-i-de-mecklemburgo",
+        "en": "adolf-frederick-i-of-mecklenburg"
+      },
+      "fullBiography": false
+    },
+    {
+      "id": "ADOLF1CLEV",
+      "before": {
+        "nombre": "Adolfo I de Cléveris",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "after": {
+        "nombre": "Adolfo I de Cléveris",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "slug": "adolfo-i-de-cleveris",
+      "reason": "Conservar la forma historiográfica; revisar identidad, ordinal, contexto, sobrenombre y variantes según la pauta editorial.",
+      "english": "Adolf I of Cleves",
+      "route": {
+        "id": "ADOLF1CLEV",
+        "es": "adolfo-i-de-cleveris",
+        "en": "adolf-i-of-cleves"
+      },
+      "fullBiography": false
+    },
+    {
+      "id": "ALBERTOSUE",
+      "before": {
+        "nombre": "Alberto de Suecia",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "after": {
+        "nombre": "Alberto de Suecia",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "slug": "alberto-de-suecia",
+      "reason": "Conservar la forma historiográfica; revisar identidad, ordinal, contexto, sobrenombre y variantes según la pauta editorial.",
+      "english": "Albert of Sweden",
+      "route": {
+        "id": "ALBERTOSUE",
+        "es": "alberto-de-suecia",
+        "en": "albert-of-sweden"
+      },
+      "fullBiography": false
+    },
+    {
+      "id": "ALB4BAV",
+      "before": {
+        "nombre": "Alberto IV de Baviera",
+        "sobrenombre": "el Sabio",
+        "aliases": []
+      },
+      "after": {
+        "nombre": "Alberto IV de Baviera",
+        "sobrenombre": "el Sabio",
+        "aliases": []
+      },
+      "slug": "alberto-iv-de-baviera",
+      "reason": "Conservar la forma historiográfica; revisar identidad, ordinal, contexto, sobrenombre y variantes según la pauta editorial.",
+      "english": "Albert IV of Bavaria",
+      "route": {
+        "id": "ALB4BAV",
+        "es": "alberto-iv-de-baviera",
+        "en": "albert-iv-of-bavaria"
+      },
+      "fullBiography": false
+    },
+    {
+      "id": "ALEJFARNESIO",
+      "before": {
+        "nombre": "Alejandro Farnesio",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "after": {
+        "nombre": "Alejandro Farnesio",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "slug": "alejandro-farnesio",
+      "reason": "Conservar la forma historiográfica; revisar identidad, ordinal, contexto, sobrenombre y variantes según la pauta editorial.",
+      "english": "Alexander Farnese",
+      "route": {
+        "id": "ALEJFARNESIO",
+        "es": "alejandro-farnesio",
+        "en": "alexander-farnese"
+      },
+      "fullBiography": true
+    },
+    {
+      "id": "ALEX2KAKH",
+      "before": {
+        "nombre": "Alejandro II de Kajetia",
+        "sobrenombre": "",
+        "aliases": [
+          "Aleksandre II of Kakheti"
+        ]
+      },
+      "after": {
+        "nombre": "Alejandro II de Kajetia",
+        "sobrenombre": "",
+        "aliases": [
+          "Aleksandre II of Kakheti"
+        ]
+      },
+      "slug": "alejandro-ii-de-kajetia",
+      "reason": "Conservar la forma historiográfica; revisar identidad, ordinal, contexto, sobrenombre y variantes según la pauta editorial.",
+      "english": "Alexander II of Kakheti",
+      "route": {
+        "id": "ALEX2KAKH",
+        "es": "alejandro-ii-de-kajetia",
+        "en": "alexander-ii-of-kakheti"
+      },
+      "fullBiography": false
+    },
+    {
+      "id": "ALFONSO2ESTE",
+      "before": {
+        "nombre": "Alfonso II de Este",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "after": {
+        "nombre": "Alfonso II de Este",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "slug": "alfonso-ii-de-este",
+      "reason": "Conservar la forma historiográfica; revisar identidad, ordinal, contexto, sobrenombre y variantes según la pauta editorial.",
+      "english": "Alfonso II d’Este",
+      "route": {
+        "id": "ALFONSO2ESTE",
+        "es": "alfonso-ii-de-este",
+        "en": "alfonso-ii-d-este"
+      },
+      "fullBiography": false
+    },
+    {
+      "id": "AMEDEO9SAB",
+      "before": {
+        "nombre": "Amadeo IX de Saboya",
+        "sobrenombre": "el Beato",
+        "aliases": []
+      },
+      "after": {
+        "nombre": "Amadeo IX de Saboya",
+        "sobrenombre": "el Beato",
+        "aliases": []
+      },
+      "slug": "amadeo-ix-de-saboya",
+      "reason": "Conservar la forma historiográfica; revisar identidad, ordinal, contexto, sobrenombre y variantes según la pauta editorial.",
+      "english": "Amadeus IX of Savoy",
+      "route": {
+        "id": "AMEDEO9SAB",
+        "es": "amadeo-ix-de-saboya",
+        "en": "amadeus-ix-of-savoy"
+      },
+      "fullBiography": false
+    },
+    {
+      "id": "ANDRES2HUN",
+      "before": {
+        "nombre": "Andrés II de Hungría",
+        "sobrenombre": "el Jerosolimitano",
+        "aliases": []
+      },
+      "after": {
+        "nombre": "Andrés II de Hungría",
+        "sobrenombre": "el Jerosolimitano",
+        "aliases": []
+      },
+      "slug": "andres-ii-de-hungria",
+      "reason": "Conservar la forma historiográfica; revisar identidad, ordinal, contexto, sobrenombre y variantes según la pauta editorial.",
+      "english": "Andrew II of Hungary",
+      "route": {
+        "id": "ANDRES2HUN",
+        "es": "andres-ii-de-hungria",
+        "en": "andrew-ii-of-hungary"
+      },
+      "fullBiography": false
+    },
+    {
+      "id": "ARNOLDEGMOND",
+      "before": {
+        "nombre": "Arnoldo de Egmond",
+        "sobrenombre": "",
+        "aliases": [
+          "Arnold van Egmond"
+        ]
+      },
+      "after": {
+        "nombre": "Arnoldo de Egmond",
+        "sobrenombre": "",
+        "aliases": [
+          "Arnold van Egmond"
+        ]
+      },
+      "slug": "arnoldo-de-egmond",
+      "reason": "Conservar la forma historiográfica; revisar identidad, ordinal, contexto, sobrenombre y variantes según la pauta editorial.",
+      "english": "Arnold of Egmond",
+      "route": {
+        "id": "ARNOLDEGMOND",
+        "es": "arnoldo-de-egmond",
+        "en": "arnold-of-egmond"
+      },
+      "fullBiography": false
+    },
+    {
+      "id": "BAGRAT6GEO",
+      "before": {
+        "nombre": "Bagrat VI de Georgia",
+        "sobrenombre": "",
+        "aliases": [
+          "Bagrat II de Imericia"
+        ]
+      },
+      "after": {
+        "nombre": "Bagrat VI de Georgia",
+        "sobrenombre": "",
+        "aliases": [
+          "Bagrat II de Imericia"
+        ]
+      },
+      "slug": "bagrat-vi-de-georgia",
+      "reason": "Conservar la forma historiográfica; revisar identidad, ordinal, contexto, sobrenombre y variantes según la pauta editorial.",
+      "english": "Bagrat VI of Georgia",
+      "route": {
+        "id": "BAGRAT6GEO",
+        "es": "bagrat-vi-de-georgia",
+        "en": "bagrat-vi-of-georgia"
+      },
+      "fullBiography": false
+    },
+    {
+      "id": "BELA3HUN",
+      "before": {
+        "nombre": "Bela III de Hungría",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "after": {
+        "nombre": "Bela III de Hungría",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "slug": "bela-iii-de-hungria",
+      "reason": "Conservar la forma historiográfica; revisar identidad, ordinal, contexto, sobrenombre y variantes según la pauta editorial.",
+      "english": "Béla III of Hungary",
+      "route": {
+        "id": "BELA3HUN",
+        "es": "bela-iii-de-hungria",
+        "en": "bela-iii-of-hungary"
+      },
+      "fullBiography": false
+    },
+    {
+      "id": "BOHEMOND5ANT",
+      "before": {
+        "nombre": "Bohemundo V de Antioquía",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "after": {
+        "nombre": "Bohemundo V de Antioquía",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "slug": "bohemundo-v-de-antioquia",
+      "reason": "Conservar la forma historiográfica; revisar identidad, ordinal, contexto, sobrenombre y variantes según la pauta editorial.",
+      "english": "Bohemond V of Antioch",
+      "route": {
+        "id": "BOHEMOND5ANT",
+        "es": "bohemundo-v-de-antioquia",
+        "en": "bohemond-v-of-antioch"
+      },
+      "fullBiography": false
+    },
+    {
+      "id": "BOHEMOND7TRIP",
+      "before": {
+        "nombre": "Bohemundo VII de Trípoli",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "after": {
+        "nombre": "Bohemundo VII de Trípoli",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "slug": "bohemundo-vii-de-tripoli",
+      "reason": "Conservar la forma historiográfica; revisar identidad, ordinal, contexto, sobrenombre y variantes según la pauta editorial.",
+      "english": "Bohemond VII of Tripoli",
+      "route": {
+        "id": "BOHEMOND7TRIP",
+        "es": "bohemundo-vii-de-tripoli",
+        "en": "bohemond-vii-of-tripoli"
+      },
+      "fullBiography": false
+    },
+    {
+      "id": "CARLOSALBERTOSAB",
+      "before": {
+        "nombre": "Carlos Alberto de Saboya",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "after": {
+        "nombre": "Carlos Alberto de Saboya",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "slug": "carlos-alberto-de-saboya",
+      "reason": "Conservar la forma historiográfica; revisar identidad, ordinal, contexto, sobrenombre y variantes según la pauta editorial.",
+      "english": "Charles Albert of Savoy",
+      "route": {
+        "id": "CARLOSALBERTOSAB",
+        "es": "carlos-alberto-de-saboya",
+        "en": "charles-albert-of-savoy"
+      },
+      "fullBiography": false
+    },
+    {
+      "id": "CARLOSVENDOME",
+      "before": {
+        "nombre": "Carlos de Borbón-Vendôme",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "after": {
+        "nombre": "Carlos de Borbón-Vendôme",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "slug": "carlos-de-borbon-vendome",
+      "reason": "Conservar la forma historiográfica; revisar identidad, ordinal, contexto, sobrenombre y variantes según la pauta editorial.",
+      "english": "Charles of Bourbon-Vendôme",
+      "route": {
+        "id": "CARLOSVENDOME",
+        "es": "carlos-de-borbon-vendome",
+        "en": "charles-of-bourbon-vendome"
+      },
+      "fullBiography": false
+    },
+    {
+      "id": "CARLOSFELIXSAB",
+      "before": {
+        "nombre": "Carlos Félix de Saboya",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "after": {
+        "nombre": "Carlos Félix de Saboya",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "slug": "carlos-felix-de-saboya",
+      "reason": "Conservar la forma historiográfica; revisar identidad, ordinal, contexto, sobrenombre y variantes según la pauta editorial.",
+      "english": "Charles Felix of Savoy",
+      "route": {
+        "id": "CARLOSFELIXSAB",
+        "es": "carlos-felix-de-saboya",
+        "en": "charles-felix-of-savoy"
+      },
+      "fullBiography": false
+    },
+    {
+      "id": "CARLOS1SAB",
+      "before": {
+        "nombre": "Carlos I de Saboya",
+        "sobrenombre": "el Guerrero",
+        "aliases": []
+      },
+      "after": {
+        "nombre": "Carlos I de Saboya",
+        "sobrenombre": "el Guerrero",
+        "aliases": []
+      },
+      "slug": "carlos-i-de-saboya",
+      "reason": "Conservar la forma historiográfica; revisar identidad, ordinal, contexto, sobrenombre y variantes según la pauta editorial.",
+      "english": "Charles I of Savoy",
+      "route": {
+        "id": "CARLOS1SAB",
+        "es": "carlos-i-de-saboya",
+        "en": "charles-i-of-savoy"
+      },
+      "fullBiography": true
+    },
+    {
+      "id": "CARLOS3SAB",
+      "before": {
+        "nombre": "Carlos III de Saboya",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "after": {
+        "nombre": "Carlos III de Saboya",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "slug": "carlos-iii-de-saboya",
+      "reason": "Conservar la forma historiográfica; revisar identidad, ordinal, contexto, sobrenombre y variantes según la pauta editorial.",
+      "english": "Charles III of Savoy",
+      "route": {
+        "id": "CARLOS3SAB",
+        "es": "carlos-iii-de-saboya",
+        "en": "charles-iii-of-savoy"
+      },
+      "fullBiography": false
+    },
+    {
+      "id": "CARLOSGIOAMEDSAB",
+      "before": {
+        "nombre": "Carlos Juan Amadeo de Saboya",
+        "sobrenombre": "",
+        "aliases": [
+          "Carlos II de Saboya",
+          "Carlo Giovanni Amedeo"
+        ]
+      },
+      "after": {
+        "nombre": "Carlos Juan Amadeo de Saboya",
+        "sobrenombre": "",
+        "aliases": [
+          "Carlos II de Saboya",
+          "Carlo Giovanni Amedeo"
+        ]
+      },
+      "slug": "carlos-juan-amadeo-de-saboya",
+      "reason": "Conservar la forma historiográfica; revisar identidad, ordinal, contexto, sobrenombre y variantes según la pauta editorial.",
+      "english": "Charles John Amadeus of Savoy",
+      "route": {
+        "id": "CARLOSGIOAMEDSAB",
+        "es": "carlos-juan-amadeo-de-saboya",
+        "en": "charles-john-amadeus-of-savoy"
+      },
+      "fullBiography": true
+    },
+    {
+      "id": "CHARLESLEOPOLDMECK",
+      "before": {
+        "nombre": "Carlos Leopoldo de Mecklemburgo-Schwerin",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "after": {
+        "nombre": "Carlos Leopoldo de Mecklemburgo-Schwerin",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "slug": "carlos-leopoldo-de-mecklemburgo-schwerin",
+      "reason": "Conservar la forma historiográfica; revisar identidad, ordinal, contexto, sobrenombre y variantes según la pauta editorial.",
+      "english": "Charles Leopold of Mecklenburg-Schwerin",
+      "route": {
+        "id": "CHARLESLEOPOLDMECK",
+        "es": "carlos-leopoldo-de-mecklemburgo-schwerin",
+        "en": "charles-leopold-of-mecklenburg-schwerin"
+      },
+      "fullBiography": false
+    },
+    {
+      "id": "CARLOSEMANUEL1SAB",
+      "before": {
+        "nombre": "Carlos Manuel I de Saboya",
+        "sobrenombre": "el Grande",
+        "aliases": []
+      },
+      "after": {
+        "nombre": "Carlos Manuel I de Saboya",
+        "sobrenombre": "el Grande",
+        "aliases": []
+      },
+      "slug": "carlos-manuel-i-de-saboya",
+      "reason": "Conservar la forma historiográfica; revisar identidad, ordinal, contexto, sobrenombre y variantes según la pauta editorial.",
+      "english": "Charles Emmanuel I of Savoy",
+      "route": {
+        "id": "CARLOSEMANUEL1SAB",
+        "es": "carlos-manuel-i-de-saboya",
+        "en": "charles-emmanuel-i-of-savoy"
+      },
+      "fullBiography": true
+    },
+    {
+      "id": "CARLOSEMANUEL2SAB",
+      "before": {
+        "nombre": "Carlos Manuel II de Saboya",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "after": {
+        "nombre": "Carlos Manuel II de Saboya",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "slug": "carlos-manuel-ii-de-saboya",
+      "reason": "Conservar la forma historiográfica; revisar identidad, ordinal, contexto, sobrenombre y variantes según la pauta editorial.",
+      "english": "Charles Emmanuel II of Savoy",
+      "route": {
+        "id": "CARLOSEMANUEL2SAB",
+        "es": "carlos-manuel-ii-de-saboya",
+        "en": "charles-emmanuel-ii-of-savoy"
+      },
+      "fullBiography": false
+    },
+    {
+      "id": "CARLOS13SUE",
+      "before": {
+        "nombre": "Carlos XIII de Suecia",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "after": {
+        "nombre": "Carlos XIII de Suecia",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "slug": "carlos-xiii-de-suecia",
+      "reason": "Conservar la forma historiográfica; revisar identidad, ordinal, contexto, sobrenombre y variantes según la pauta editorial.",
+      "english": "Charles XIII of Sweden",
+      "route": {
+        "id": "CARLOS13SUE",
+        "es": "carlos-xiii-de-suecia",
+        "en": "charles-xiii-of-sweden"
+      },
+      "fullBiography": false
+    },
+    {
+      "id": "CARLOS14JUAN",
+      "before": {
+        "nombre": "Carlos XIV Juan de Suecia",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "after": {
+        "nombre": "Carlos XIV Juan de Suecia",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "slug": "carlos-xiv-juan-de-suecia",
+      "reason": "Conservar la forma historiográfica; revisar identidad, ordinal, contexto, sobrenombre y variantes según la pauta editorial.",
+      "english": "Charles XIV John of Sweden",
+      "route": {
+        "id": "CARLOS14JUAN",
+        "es": "carlos-xiv-juan-de-suecia",
+        "en": "charles-xiv-john-of-sweden"
+      },
+      "fullBiography": true
+    },
+    {
+      "id": "CATERINACORNARO",
+      "before": {
+        "nombre": "Catalina Cornaro",
+        "sobrenombre": "",
+        "aliases": [
+          "Caterina Cornaro",
+          "Catherine Cornaro"
+        ]
+      },
+      "after": {
+        "nombre": "Catalina Cornaro",
+        "sobrenombre": "",
+        "aliases": [
+          "Caterina Cornaro",
+          "Catherine Cornaro"
+        ]
+      },
+      "slug": "catalina-cornaro",
+      "reason": "Conservar la forma historiográfica; revisar identidad, ordinal, contexto, sobrenombre y variantes según la pauta editorial.",
+      "english": "Catherine Cornaro",
+      "route": {
+        "id": "CATERINACORNARO",
+        "es": "catalina-cornaro",
+        "en": "catherine-cornaro"
+      },
+      "fullBiography": false
+    },
+    {
+      "id": "CATHALCONN",
+      "before": {
+        "nombre": "Cathal Crobderg Ua Conchobair",
+        "sobrenombre": "",
+        "aliases": [
+          "Cathal Crobderg O’Connor"
+        ]
+      },
+      "after": {
+        "nombre": "Cathal Crobderg Ua Conchobair",
+        "sobrenombre": "",
+        "aliases": [
+          "Cathal Crobderg O’Connor"
+        ]
+      },
+      "slug": "cathal-crobderg-ua-conchobair",
+      "reason": "Conservar la forma historiográfica; revisar identidad, ordinal, contexto, sobrenombre y variantes según la pauta editorial.",
+      "english": "Cathal Crobderg Ua Conchobair",
+      "route": {
+        "id": "CATHALCONN",
+        "es": "cathal-crobderg-ua-conchobair",
+        "en": "cathal-crobderg-ua-conchobair"
+      },
+      "fullBiography": false
+    },
+    {
+      "id": "CONST2KARTLI",
+      "before": {
+        "nombre": "Constantino II de Kartli",
+        "sobrenombre": "",
+        "aliases": [
+          "Konstantine II"
+        ]
+      },
+      "after": {
+        "nombre": "Constantino II de Kartli",
+        "sobrenombre": "",
+        "aliases": [
+          "Konstantine II"
+        ]
+      },
+      "slug": "constantino-ii-de-kartli",
+      "reason": "Conservar la forma historiográfica; revisar identidad, ordinal, contexto, sobrenombre y variantes según la pauta editorial.",
+      "english": "Constantine II of Kartli",
+      "route": {
+        "id": "CONST2KARTLI",
+        "es": "constantino-ii-de-kartli",
+        "en": "constantine-ii-of-kartli"
+      },
+      "fullBiography": false
+    },
+    {
+      "id": "COSIMO1TOSC",
+      "before": {
+        "nombre": "Cosme I de Toscana",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "after": {
+        "nombre": "Cosme I de Toscana",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "slug": "cosme-i-de-toscana",
+      "reason": "Conservar la forma historiográfica; revisar identidad, ordinal, contexto, sobrenombre y variantes según la pauta editorial.",
+      "english": "Cosimo I de’ Medici",
+      "route": {
+        "id": "COSIMO1TOSC",
+        "es": "cosme-i-de-toscana",
+        "en": "cosimo-i-de-medici"
+      },
+      "fullBiography": false
+    },
+    {
+      "id": "CHRISTIANANHALTZERBST",
+      "before": {
+        "nombre": "Cristián Augusto de Anhalt-Zerbst",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "after": {
+        "nombre": "Cristián Augusto de Anhalt-Zerbst",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "slug": "cristian-augusto-de-anhalt-zerbst",
+      "reason": "Conservar la forma historiográfica; revisar identidad, ordinal, contexto, sobrenombre y variantes según la pauta editorial.",
+      "english": "Christian August of Anhalt-Zerbst",
+      "route": {
+        "id": "CHRISTIANANHALTZERBST",
+        "es": "cristian-augusto-de-anhalt-zerbst",
+        "en": "christian-august-of-anhalt-zerbst"
+      },
+      "fullBiography": false
+    },
+    {
+      "id": "CHRISTIAN3DEN",
+      "before": {
+        "nombre": "Cristián III de Dinamarca",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "after": {
+        "nombre": "Cristián III de Dinamarca",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "slug": "cristian-iii-de-dinamarca",
+      "reason": "Conservar la forma historiográfica; revisar identidad, ordinal, contexto, sobrenombre y variantes según la pauta editorial.",
+      "english": "Christian III of Denmark",
+      "route": {
+        "id": "CHRISTIAN3DEN",
+        "es": "cristian-iii-de-dinamarca",
+        "en": "christian-iii-of-denmark"
+      },
+      "fullBiography": false
+    },
+    {
+      "id": "CHRISTIAN4DEN",
+      "before": {
+        "nombre": "Cristián IV de Dinamarca",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "after": {
+        "nombre": "Cristián IV de Dinamarca",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "slug": "cristian-iv-de-dinamarca",
+      "reason": "Conservar la forma historiográfica; revisar identidad, ordinal, contexto, sobrenombre y variantes según la pauta editorial.",
+      "english": "Christian IV of Denmark",
+      "route": {
+        "id": "CHRISTIAN4DEN",
+        "es": "cristian-iv-de-dinamarca",
+        "en": "christian-iv-of-denmark"
+      },
+      "fullBiography": false
+    },
+    {
+      "id": "CHRISTIANLUDWIG2MECK",
+      "before": {
+        "nombre": "Cristián Luis II de Mecklemburgo-Schwerin",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "after": {
+        "nombre": "Cristián Luis II de Mecklemburgo-Schwerin",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "slug": "cristian-luis-ii-de-mecklemburgo-schwerin",
+      "reason": "Conservar la forma historiográfica; revisar identidad, ordinal, contexto, sobrenombre y variantes según la pauta editorial.",
+      "english": "Christian Louis II of Mecklenburg-Schwerin",
+      "route": {
+        "id": "CHRISTIANLUDWIG2MECK",
+        "es": "cristian-luis-ii-de-mecklemburgo-schwerin",
+        "en": "christian-louis-ii-of-mecklenburg-schwerin"
+      },
+      "fullBiography": false
+    },
+    {
+      "id": "CHRISTIAN5DEN",
+      "before": {
+        "nombre": "Cristián V de Dinamarca",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "after": {
+        "nombre": "Cristián V de Dinamarca",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "slug": "cristian-v-de-dinamarca",
+      "reason": "Conservar la forma historiográfica; revisar identidad, ordinal, contexto, sobrenombre y variantes según la pauta editorial.",
+      "english": "Christian V of Denmark",
+      "route": {
+        "id": "CHRISTIAN5DEN",
+        "es": "cristian-v-de-dinamarca",
+        "en": "christian-v-of-denmark"
+      },
+      "fullBiography": false
+    },
+    {
+      "id": "CHRIST2DEN",
+      "before": {
+        "nombre": "Cristóbal II de Dinamarca",
+        "sobrenombre": "",
+        "aliases": [
+          "Christoffer 2."
+        ]
+      },
+      "after": {
+        "nombre": "Cristóbal II de Dinamarca",
+        "sobrenombre": "",
+        "aliases": [
+          "Christoffer 2."
+        ]
+      },
+      "slug": "cristobal-ii-de-dinamarca",
+      "reason": "Conservar la forma historiográfica; revisar identidad, ordinal, contexto, sobrenombre y variantes según la pauta editorial.",
+      "english": "Christopher II of Denmark",
+      "route": {
+        "id": "CHRIST2DEN",
+        "es": "cristobal-ii-de-dinamarca",
+        "en": "christopher-ii-of-denmark"
+      },
+      "fullBiography": false
+    },
+    {
+      "id": "DAVID2IMER",
+      "before": {
+        "nombre": "David II de Imericia",
+        "sobrenombre": "",
+        "aliases": [
+          "Davit II of Imereti"
+        ]
+      },
+      "after": {
+        "nombre": "David II de Imericia",
+        "sobrenombre": "",
+        "aliases": [
+          "Davit II of Imereti"
+        ]
+      },
+      "slug": "david-ii-de-imericia",
+      "reason": "Conservar la forma historiográfica; revisar identidad, ordinal, contexto, sobrenombre y variantes según la pauta editorial.",
+      "english": "David II of Imereti",
+      "route": {
+        "id": "DAVID2IMER",
+        "es": "david-ii-de-imericia",
+        "en": "david-ii-of-imereti"
+      },
+      "fullBiography": false
+    },
+    {
+      "id": "DAVID2KAKH",
+      "before": {
+        "nombre": "David II de Kajetia",
+        "sobrenombre": "",
+        "aliases": [
+          "Imam Quli Khan",
+          "Davit II"
+        ]
+      },
+      "after": {
+        "nombre": "David II de Kajetia",
+        "sobrenombre": "",
+        "aliases": [
+          "Imam Quli Khan",
+          "Davit II"
+        ]
+      },
+      "slug": "david-ii-de-kajetia",
+      "reason": "Conservar la forma historiográfica; revisar identidad, ordinal, contexto, sobrenombre y variantes según la pauta editorial.",
+      "english": "David II of Kakheti",
+      "route": {
+        "id": "DAVID2KAKH",
+        "es": "david-ii-de-kajetia",
+        "en": "david-ii-of-kakheti"
+      },
+      "fullBiography": false
+    },
+    {
+      "id": "DAVID7GEO",
+      "before": {
+        "nombre": "David VII Ulu de Georgia",
+        "sobrenombre": "",
+        "aliases": [
+          "Davit VII Ulu"
+        ]
+      },
+      "after": {
+        "nombre": "David VII Ulu de Georgia",
+        "sobrenombre": "",
+        "aliases": [
+          "Davit VII Ulu"
+        ]
+      },
+      "slug": "david-vii-ulu-de-georgia",
+      "reason": "Conservar la forma historiográfica; revisar identidad, ordinal, contexto, sobrenombre y variantes según la pauta editorial.",
+      "english": "David VII Ulu of Georgia",
+      "route": {
+        "id": "DAVID7GEO",
+        "es": "david-vii-ulu-de-georgia",
+        "en": "david-vii-ulu-of-georgia"
+      },
+      "fullBiography": false
+    },
+    {
+      "id": "DAVID10KARTLI",
+      "before": {
+        "nombre": "David X de Kartli",
+        "sobrenombre": "",
+        "aliases": [
+          "Davit X"
+        ]
+      },
+      "after": {
+        "nombre": "David X de Kartli",
+        "sobrenombre": "",
+        "aliases": [
+          "Davit X"
+        ]
+      },
+      "slug": "david-x-de-kartli",
+      "reason": "Conservar la forma historiográfica; revisar identidad, ordinal, contexto, sobrenombre y variantes según la pauta editorial.",
+      "english": "David X of Kartli",
+      "route": {
+        "id": "DAVID10KARTLI",
+        "es": "david-x-de-kartli",
+        "en": "david-x-of-kartli"
+      },
+      "fullBiography": false
+    },
+    {
+      "id": "DAVID11KARTLI",
+      "before": {
+        "nombre": "David XI de Kartli",
+        "sobrenombre": "",
+        "aliases": [
+          "Daud Khan",
+          "Davit XI"
+        ]
+      },
+      "after": {
+        "nombre": "David XI de Kartli",
+        "sobrenombre": "",
+        "aliases": [
+          "Daud Khan",
+          "Davit XI"
+        ]
+      },
+      "slug": "david-xi-de-kartli",
+      "reason": "Conservar la forma historiográfica; revisar identidad, ordinal, contexto, sobrenombre y variantes según la pauta editorial.",
+      "english": "David XI of Kartli",
+      "route": {
+        "id": "DAVID11KARTLI",
+        "es": "david-xi-de-kartli",
+        "en": "david-xi-of-kartli"
+      },
+      "fullBiography": false
+    },
+    {
+      "id": "DIARMAITLEIN",
+      "before": {
+        "nombre": "Diarmait Mac Murchada",
+        "sobrenombre": "",
+        "aliases": [
+          "Dermot MacMurrough",
+          "Diarmait Mac Murchadha"
+        ]
+      },
+      "after": {
+        "nombre": "Diarmait Mac Murchada",
+        "sobrenombre": "",
+        "aliases": [
+          "Dermot MacMurrough",
+          "Diarmait Mac Murchadha"
+        ]
+      },
+      "slug": "diarmait-mac-murchada",
+      "reason": "Conservar la forma historiográfica; revisar identidad, ordinal, contexto, sobrenombre y variantes según la pauta editorial.",
+      "english": "Diarmait Mac Murchada",
+      "route": {
+        "id": "DIARMAITLEIN",
+        "es": "diarmait-mac-murchada",
+        "en": "diarmait-mac-murchada"
+      },
+      "fullBiography": false
+    },
+    {
+      "id": "EMERICOHUN",
+      "before": {
+        "nombre": "Emerico de Hungría",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "after": {
+        "nombre": "Emerico de Hungría",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "slug": "emerico-de-hungria",
+      "reason": "Conservar la forma historiográfica; revisar identidad, ordinal, contexto, sobrenombre y variantes según la pauta editorial.",
+      "english": "Emeric of Hungary",
+      "route": {
+        "id": "EMERICOHUN",
+        "es": "emerico-de-hungria",
+        "en": "emeric-of-hungary"
+      },
+      "fullBiography": false
+    },
+    {
+      "id": "HENRYCASIMIR2",
+      "before": {
+        "nombre": "Enrique Casimiro II de Nassau-Dietz",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "after": {
+        "nombre": "Enrique Casimiro II de Nassau-Dietz",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "slug": "enrique-casimiro-ii-de-nassau-dietz",
+      "reason": "Conservar la forma historiográfica; revisar identidad, ordinal, contexto, sobrenombre y variantes según la pauta editorial.",
+      "english": "Henry Casimir II of Nassau-Dietz",
+      "route": {
+        "id": "HENRYCASIMIR2",
+        "es": "enrique-casimiro-ii-de-nassau-dietz",
+        "en": "henry-casimir-ii-of-nassau-dietz"
+      },
+      "fullBiography": false
+    },
+    {
+      "id": "ENRIQLEON",
+      "before": {
+        "nombre": "Enrique de Sajonia y Baviera",
+        "sobrenombre": "el León",
+        "aliases": []
+      },
+      "after": {
+        "nombre": "Enrique de Sajonia y Baviera",
+        "sobrenombre": "el León",
+        "aliases": []
+      },
+      "slug": "enrique-de-sajonia-y-baviera",
+      "reason": "Conservar la forma historiográfica; revisar identidad, ordinal, contexto, sobrenombre y variantes según la pauta editorial.",
+      "english": "Henry of Saxony and Bavaria",
+      "route": {
+        "id": "ENRIQLEON",
+        "es": "enrique-de-sajonia-y-baviera",
+        "en": "henry-of-saxony-and-bavaria"
+      },
+      "fullBiography": false
+    },
+    {
+      "id": "ENRIQ3ING",
+      "before": {
+        "nombre": "Enrique III de Inglaterra",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "after": {
+        "nombre": "Enrique III de Inglaterra",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "slug": "enrique-iii-de-inglaterra",
+      "reason": "Conservar la forma historiográfica; revisar identidad, ordinal, contexto, sobrenombre y variantes según la pauta editorial.",
+      "english": "Henry III of England",
+      "route": {
+        "id": "ENRIQ3ING",
+        "es": "enrique-iii-de-inglaterra",
+        "en": "henry-iii-of-england"
+      },
+      "fullBiography": false
+    },
+    {
+      "id": "ENRIQ7HOH",
+      "before": {
+        "nombre": "Enrique VII de Hohenstaufen",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "after": {
+        "nombre": "Enrique VII de Hohenstaufen",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "slug": "enrique-vii-de-hohenstaufen",
+      "reason": "Conservar la forma historiográfica; revisar identidad, ordinal, contexto, sobrenombre y variantes según la pauta editorial.",
+      "english": "Henry VII of Hohenstaufen",
+      "route": {
+        "id": "ENRIQ7HOH",
+        "es": "enrique-vii-de-hohenstaufen",
+        "en": "henry-vii-of-hohenstaufen"
+      },
+      "fullBiography": false
+    },
+    {
+      "id": "ERIK11SUE",
+      "before": {
+        "nombre": "Erik XI de Suecia",
+        "sobrenombre": "el Ceceoso y Cojo",
+        "aliases": []
+      },
+      "after": {
+        "nombre": "Erik XI de Suecia",
+        "sobrenombre": "el Ceceoso y Cojo",
+        "aliases": []
+      },
+      "slug": "erik-xi-de-suecia",
+      "reason": "Conservar la forma historiográfica; revisar identidad, ordinal, contexto, sobrenombre y variantes según la pauta editorial.",
+      "english": "Eric XI of Sweden",
+      "route": {
+        "id": "ERIK11SUE",
+        "es": "erik-xi-de-suecia",
+        "en": "eric-xi-of-sweden"
+      },
+      "fullBiography": false
+    },
+    {
+      "id": "ERNSTAUGUSTHAN",
+      "before": {
+        "nombre": "Ernesto Augusto de Hannover",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "after": {
+        "nombre": "Ernesto Augusto de Hannover",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "slug": "ernesto-augusto-de-hannover",
+      "reason": "Conservar la forma historiográfica; revisar identidad, ordinal, contexto, sobrenombre y variantes según la pauta editorial.",
+      "english": "Ernest Augustus of Hanover",
+      "route": {
+        "id": "ERNSTAUGUSTHAN",
+        "es": "ernesto-augusto-de-hannover",
+        "en": "ernest-augustus-of-hanover"
+      },
+      "fullBiography": false
+    },
+    {
+      "id": "OSTOJABOS",
+      "before": {
+        "nombre": "Esteban Ostoja de Bosnia",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "after": {
+        "nombre": "Esteban Ostoja de Bosnia",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "slug": "esteban-ostoja-de-bosnia",
+      "reason": "Conservar la forma historiográfica; revisar identidad, ordinal, contexto, sobrenombre y variantes según la pauta editorial.",
+      "english": "Stephen Ostoja of Bosnia",
+      "route": {
+        "id": "OSTOJABOS",
+        "es": "esteban-ostoja-de-bosnia",
+        "en": "stephen-ostoja-of-bosnia"
+      },
+      "fullBiography": false
+    },
+    {
+      "id": "STEPHENTOMASEVICBOS",
+      "before": {
+        "nombre": "Esteban Tomašević",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "after": {
+        "nombre": "Esteban Tomašević",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "slug": "esteban-tomasevic",
+      "reason": "Conservar la forma historiográfica; revisar identidad, ordinal, contexto, sobrenombre y variantes según la pauta editorial.",
+      "english": "Stephen Tomašević",
+      "route": {
+        "id": "STEPHENTOMASEVICBOS",
+        "es": "esteban-tomasevic",
+        "en": "stephen-tomasevic"
+      },
+      "fullBiography": true
+    },
+    {
+      "id": "STJEPANVUKKOS",
+      "before": {
+        "nombre": "Esteban Vukčić Kosača",
+        "sobrenombre": "",
+        "aliases": [
+          "Stjepan Vukčić Kosača",
+          "Herceg de San Sava"
+        ]
+      },
+      "after": {
+        "nombre": "Esteban Vukčić Kosača",
+        "sobrenombre": "",
+        "aliases": [
+          "Stjepan Vukčić Kosača",
+          "Herceg de San Sava"
+        ]
+      },
+      "slug": "esteban-vukcic-kosaca",
+      "reason": "Conservar la forma historiográfica; revisar identidad, ordinal, contexto, sobrenombre y variantes según la pauta editorial.",
+      "english": "Stjepan Vukčić Kosača",
+      "route": {
+        "id": "STJEPANVUKKOS",
+        "es": "esteban-vukcic-kosaca",
+        "en": "stjepan-vukcic-kosaca"
+      },
+      "fullBiography": true
+    },
+    {
+      "id": "FRED1DEN",
+      "before": {
+        "nombre": "Federico I de Dinamarca",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "after": {
+        "nombre": "Federico I de Dinamarca",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "slug": "federico-i-de-dinamarca",
+      "reason": "Conservar la forma historiográfica; revisar identidad, ordinal, contexto, sobrenombre y variantes según la pauta editorial.",
+      "english": "Frederick I of Denmark",
+      "route": {
+        "id": "FRED1DEN",
+        "es": "federico-i-de-dinamarca",
+        "en": "frederick-i-of-denmark"
+      },
+      "fullBiography": true
+    },
+    {
+      "id": "FRED2DEN",
+      "before": {
+        "nombre": "Federico II de Dinamarca",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "after": {
+        "nombre": "Federico II de Dinamarca",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "slug": "federico-ii-de-dinamarca",
+      "reason": "Conservar la forma historiográfica; revisar identidad, ordinal, contexto, sobrenombre y variantes según la pauta editorial.",
+      "english": "Frederick II of Denmark",
+      "route": {
+        "id": "FRED2DEN",
+        "es": "federico-ii-de-dinamarca",
+        "en": "frederick-ii-of-denmark"
+      },
+      "fullBiography": false
+    },
+    {
+      "id": "FRED3DEN",
+      "before": {
+        "nombre": "Federico III de Dinamarca",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "after": {
+        "nombre": "Federico III de Dinamarca",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "slug": "federico-iii-de-dinamarca",
+      "reason": "Conservar la forma historiográfica; revisar identidad, ordinal, contexto, sobrenombre y variantes según la pauta editorial.",
+      "english": "Frederick III of Denmark",
+      "route": {
+        "id": "FRED3DEN",
+        "es": "federico-iii-de-dinamarca",
+        "en": "frederick-iii-of-denmark"
+      },
+      "fullBiography": false
+    },
+    {
+      "id": "FRED6DEN",
+      "before": {
+        "nombre": "Federico VI de Dinamarca",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "after": {
+        "nombre": "Federico VI de Dinamarca",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "slug": "federico-vi-de-dinamarca",
+      "reason": "Conservar la forma historiográfica; revisar identidad, ordinal, contexto, sobrenombre y variantes según la pauta editorial.",
+      "english": "Frederick VI of Denmark",
+      "route": {
+        "id": "FRED6DEN",
+        "es": "federico-vi-de-dinamarca",
+        "en": "frederick-vi-of-denmark"
+      },
+      "fullBiography": false
+    },
+    {
+      "id": "PHILSTPOL",
+      "before": {
+        "nombre": "Felipe de Saint-Pol",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "after": {
+        "nombre": "Felipe de Saint-Pol",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "slug": "felipe-de-saint-pol",
+      "reason": "Conservar la forma historiográfica; revisar identidad, ordinal, contexto, sobrenombre y variantes según la pauta editorial.",
+      "english": "Philip of Saint-Pol",
+      "route": {
+        "id": "PHILSTPOL",
+        "es": "felipe-de-saint-pol",
+        "en": "philip-of-saint-pol"
+      },
+      "fullBiography": false
+    },
+    {
+      "id": "FELIPESUABIA",
+      "before": {
+        "nombre": "Felipe de Suabia",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "after": {
+        "nombre": "Felipe de Suabia",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "slug": "felipe-de-suabia",
+      "reason": "Conservar la forma historiográfica; revisar identidad, ordinal, contexto, sobrenombre y variantes según la pauta editorial.",
+      "english": "Philip of Swabia",
+      "route": {
+        "id": "FELIPESUABIA",
+        "es": "felipe-de-suabia",
+        "en": "philip-of-swabia"
+      },
+      "fullBiography": false
+    },
+    {
+      "id": "FELIPETARENTO",
+      "before": {
+        "nombre": "Felipe I de Tarento",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "after": {
+        "nombre": "Felipe I de Tarento",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "slug": "felipe-i-de-tarento",
+      "reason": "Conservar la forma historiográfica; revisar identidad, ordinal, contexto, sobrenombre y variantes según la pauta editorial.",
+      "english": "Philip I of Taranto",
+      "route": {
+        "id": "FELIPETARENTO",
+        "es": "felipe-i-de-tarento",
+        "en": "philip-i-of-taranto"
+      },
+      "fullBiography": false
+    },
+    {
+      "id": "FELIPE2SAB",
+      "before": {
+        "nombre": "Felipe II de Saboya",
+        "sobrenombre": "Sin Tierra",
+        "aliases": []
+      },
+      "after": {
+        "nombre": "Felipe II de Saboya",
+        "sobrenombre": "Sin Tierra",
+        "aliases": []
+      },
+      "slug": "felipe-ii-de-saboya",
+      "reason": "Conservar la forma historiográfica; revisar identidad, ordinal, contexto, sobrenombre y variantes según la pauta editorial.",
+      "english": "Philip II of Savoy",
+      "route": {
+        "id": "FELIPE2SAB",
+        "es": "felipe-ii-de-saboya",
+        "en": "philip-ii-of-savoy"
+      },
+      "fullBiography": true
+    },
+    {
+      "id": "FELIPE2TAR",
+      "before": {
+        "nombre": "Felipe II de Tarento",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "after": {
+        "nombre": "Felipe II de Tarento",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "slug": "felipe-ii-de-tarento",
+      "reason": "Conservar la forma historiográfica; revisar identidad, ordinal, contexto, sobrenombre y variantes según la pauta editorial.",
+      "english": "Philip II of Taranto",
+      "route": {
+        "id": "FELIPE2TAR",
+        "es": "felipe-ii-de-tarento",
+        "en": "philip-ii-of-taranto"
+      },
+      "fullBiography": false
+    },
+    {
+      "id": "FERDINANDOGONZAGA",
+      "before": {
+        "nombre": "Fernando Gonzaga",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "after": {
+        "nombre": "Fernando Gonzaga",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "slug": "fernando-gonzaga",
+      "reason": "Conservar la forma historiográfica; revisar identidad, ordinal, contexto, sobrenombre y variantes según la pauta editorial.",
+      "english": "Ferdinando Gonzaga",
+      "route": {
+        "id": "FERDINANDOGONZAGA",
+        "es": "fernando-gonzaga",
+        "en": "ferdinando-gonzaga"
+      },
+      "fullBiography": false
+    },
+    {
+      "id": "FILIBERTO1SAB",
+      "before": {
+        "nombre": "Filiberto I de Saboya",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "after": {
+        "nombre": "Filiberto I de Saboya",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "slug": "filiberto-i-de-saboya",
+      "reason": "Conservar la forma historiográfica; revisar identidad, ordinal, contexto, sobrenombre y variantes según la pauta editorial.",
+      "english": "Philibert I of Savoy",
+      "route": {
+        "id": "FILIBERTO1SAB",
+        "es": "filiberto-i-de-saboya",
+        "en": "philibert-i-of-savoy"
+      },
+      "fullBiography": false
+    },
+    {
+      "id": "FILIBERTO2SAB",
+      "before": {
+        "nombre": "Filiberto II de Saboya",
+        "sobrenombre": "el Hermoso",
+        "aliases": []
+      },
+      "after": {
+        "nombre": "Filiberto II de Saboya",
+        "sobrenombre": "el Hermoso",
+        "aliases": []
+      },
+      "slug": "filiberto-ii-de-saboya",
+      "reason": "Conservar la forma historiográfica; revisar identidad, ordinal, contexto, sobrenombre y variantes según la pauta editorial.",
+      "english": "Philibert II of Savoy",
+      "route": {
+        "id": "FILIBERTO2SAB",
+        "es": "filiberto-ii-de-saboya",
+        "en": "philibert-ii-of-savoy"
+      },
+      "fullBiography": true
+    },
+    {
+      "id": "FRANCESCO4GONZAGA",
+      "before": {
+        "nombre": "Francisco IV Gonzaga",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "after": {
+        "nombre": "Francisco IV Gonzaga",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "slug": "francisco-iv-gonzaga",
+      "reason": "Conservar la forma historiográfica; revisar identidad, ordinal, contexto, sobrenombre y variantes según la pauta editorial.",
+      "english": "Francesco IV Gonzaga",
+      "route": {
+        "id": "FRANCESCO4GONZAGA",
+        "es": "francisco-iv-gonzaga",
+        "en": "francesco-iv-gonzaga"
+      },
+      "fullBiography": false
+    },
+    {
+      "id": "GABRIELBETHLEN",
+      "before": {
+        "nombre": "Gabriel Bethlen",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "after": {
+        "nombre": "Gabriel Bethlen",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "slug": "gabriel-bethlen",
+      "reason": "Conservar la forma historiográfica; revisar identidad, ordinal, contexto, sobrenombre y variantes según la pauta editorial.",
+      "english": "Gabriel Bethlen",
+      "route": {
+        "id": "GABRIELBETHLEN",
+        "es": "gabriel-bethlen",
+        "en": "gabriel-bethlen"
+      },
+      "fullBiography": false
+    },
+    {
+      "id": "GUYLUSIGNANJER",
+      "before": {
+        "nombre": "Guido de Lusignan",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "after": {
+        "nombre": "Guido de Lusignan",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "slug": "guido-de-lusignan",
+      "reason": "Conservar la forma historiográfica; revisar identidad, ordinal, contexto, sobrenombre y variantes según la pauta editorial.",
+      "english": "Guy of Lusignan",
+      "route": {
+        "id": "GUYLUSIGNANJER",
+        "es": "guido-de-lusignan",
+        "en": "guy-of-lusignan"
+      },
+      "fullBiography": false
+    },
+    {
+      "id": "GUIL1GUELD",
+      "before": {
+        "nombre": "Guillermo I de Güeldres",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "after": {
+        "nombre": "Guillermo I de Güeldres",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "slug": "guillermo-i-de-gueldres",
+      "reason": "Conservar la forma historiográfica; revisar identidad, ordinal, contexto, sobrenombre y variantes según la pauta editorial.",
+      "english": "William I of Guelders",
+      "route": {
+        "id": "GUIL1GUELD",
+        "es": "guillermo-i-de-gueldres",
+        "en": "william-i-of-guelders"
+      },
+      "fullBiography": false
+    },
+    {
+      "id": "WILHELM1PRU",
+      "before": {
+        "nombre": "Guillermo I de Prusia",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "after": {
+        "nombre": "Guillermo I de Prusia",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "slug": "guillermo-i-de-prusia",
+      "reason": "Conservar la forma historiográfica; revisar identidad, ordinal, contexto, sobrenombre y variantes según la pauta editorial.",
+      "english": "William I of Prussia",
+      "route": {
+        "id": "WILHELM1PRU",
+        "es": "guillermo-i-de-prusia",
+        "en": "william-i-of-prussia"
+      },
+      "fullBiography": false
+    },
+    {
+      "id": "WILLIAM4ORANGE",
+      "before": {
+        "nombre": "Guillermo IV de Orange-Nassau",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "after": {
+        "nombre": "Guillermo IV de Orange-Nassau",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "slug": "guillermo-iv-de-orange-nassau",
+      "reason": "Conservar la forma historiográfica; revisar identidad, ordinal, contexto, sobrenombre y variantes según la pauta editorial.",
+      "english": "William IV of Orange-Nassau",
+      "route": {
+        "id": "WILLIAM4ORANGE",
+        "es": "guillermo-iv-de-orange-nassau",
+        "en": "william-iv-of-orange-nassau"
+      },
+      "fullBiography": false
+    },
+    {
+      "id": "HAAKON6NOR",
+      "before": {
+        "nombre": "Haakon VI de Noruega",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "after": {
+        "nombre": "Haakon VI de Noruega",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "slug": "haakon-vi-de-noruega",
+      "reason": "Conservar la forma historiográfica; revisar identidad, ordinal, contexto, sobrenombre y variantes según la pauta editorial.",
+      "english": "Haakon VI of Norway",
+      "route": {
+        "id": "HAAKON6NOR",
+        "es": "haakon-vi-de-noruega",
+        "en": "haakon-vi-of-norway"
+      },
+      "fullBiography": false
+    },
+    {
+      "id": "EREKLE2GEO",
+      "before": {
+        "nombre": "Heraclio II de Georgia",
+        "sobrenombre": "",
+        "aliases": [
+          "Erekle II",
+          "Irakli II"
+        ]
+      },
+      "after": {
+        "nombre": "Heraclio II de Georgia",
+        "sobrenombre": "",
+        "aliases": [
+          "Erekle II",
+          "Irakli II"
+        ]
+      },
+      "slug": "heraclio-ii-de-georgia",
+      "reason": "Conservar la forma historiográfica; revisar identidad, ordinal, contexto, sobrenombre y variantes según la pauta editorial.",
+      "english": "Heraclius II of Georgia",
+      "route": {
+        "id": "EREKLE2GEO",
+        "es": "heraclio-ii-de-georgia",
+        "en": "heraclius-ii-of-georgia"
+      },
+      "fullBiography": false
+    },
+    {
+      "id": "HERC2ESTE",
+      "before": {
+        "nombre": "Hércules II de Este",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "after": {
+        "nombre": "Hércules II de Este",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "slug": "hercules-ii-de-este",
+      "reason": "Conservar la forma historiográfica; revisar identidad, ordinal, contexto, sobrenombre y variantes según la pauta editorial.",
+      "english": "Ercole II d’Este",
+      "route": {
+        "id": "HERC2ESTE",
+        "es": "hercules-ii-de-este",
+        "en": "ercole-ii-d-este"
+      },
+      "fullBiography": false
+    },
+    {
+      "id": "HETHUM1ARM",
+      "before": {
+        "nombre": "Hetum I de Armenia",
+        "sobrenombre": "",
+        "aliases": [
+          "Hethum I",
+          "Hetoum I"
+        ]
+      },
+      "after": {
+        "nombre": "Hetum I de Armenia",
+        "sobrenombre": "",
+        "aliases": [
+          "Hethum I",
+          "Hetoum I"
+        ]
+      },
+      "slug": "hetum-i-de-armenia",
+      "reason": "Conservar la forma historiográfica; revisar identidad, ordinal, contexto, sobrenombre y variantes según la pauta editorial.",
+      "english": "Hethum I of Armenia",
+      "route": {
+        "id": "HETHUM1ARM",
+        "es": "hetum-i-de-armenia",
+        "en": "hethum-i-of-armenia"
+      },
+      "fullBiography": false
+    },
+    {
+      "id": "HUGH3CYPRUS",
+      "before": {
+        "nombre": "Hugo III de Chipre",
+        "sobrenombre": "",
+        "aliases": [
+          "Hugues 3",
+          "Hugh 3 of Cyprus",
+          "Hugues III",
+          "Hugh III"
+        ]
+      },
+      "after": {
+        "nombre": "Hugo III de Chipre",
+        "sobrenombre": "",
+        "aliases": [
+          "Hugues 3",
+          "Hugh 3 of Cyprus",
+          "Hugues III",
+          "Hugh III"
+        ]
+      },
+      "slug": "hugo-iii-de-chipre",
+      "reason": "Conservar la forma historiográfica; revisar identidad, ordinal, contexto, sobrenombre y variantes según la pauta editorial.",
+      "english": "Hugh III of Cyprus",
+      "route": {
+        "id": "HUGH3CYPRUS",
+        "es": "hugo-iii-de-chipre",
+        "en": "hugh-iii-of-cyprus"
+      },
+      "fullBiography": false
+    },
+    {
+      "id": "HUGH4CYPRUS",
+      "before": {
+        "nombre": "Hugo IV de Chipre",
+        "sobrenombre": "",
+        "aliases": [
+          "Hugues IV",
+          "Hugh IV of Cyprus"
+        ]
+      },
+      "after": {
+        "nombre": "Hugo IV de Chipre",
+        "sobrenombre": "",
+        "aliases": [
+          "Hugues IV",
+          "Hugh IV of Cyprus"
+        ]
+      },
+      "slug": "hugo-iv-de-chipre",
+      "reason": "Conservar la forma historiográfica; revisar identidad, ordinal, contexto, sobrenombre y variantes según la pauta editorial.",
+      "english": "Hugh IV of Cyprus",
+      "route": {
+        "id": "HUGH4CYPRUS",
+        "es": "hugo-iv-de-chipre",
+        "en": "hugh-iv-of-cyprus"
+      },
+      "fullBiography": false
+    },
+    {
+      "id": "JAMES3CYPRUS",
+      "before": {
+        "nombre": "Jacobo III de Chipre",
+        "sobrenombre": "",
+        "aliases": [
+          "Jacques III de Lusignan",
+          "James III of Cyprus"
+        ]
+      },
+      "after": {
+        "nombre": "Jacobo III de Chipre",
+        "sobrenombre": "",
+        "aliases": [
+          "Jacques III de Lusignan",
+          "James III of Cyprus"
+        ]
+      },
+      "slug": "jacobo-iii-de-chipre",
+      "reason": "Conservar la forma historiográfica; revisar identidad, ordinal, contexto, sobrenombre y variantes según la pauta editorial.",
+      "english": "James III of Cyprus",
+      "route": {
+        "id": "JAMES3CYPRUS",
+        "es": "jacobo-iii-de-chipre",
+        "en": "james-iii-of-cyprus"
+      },
+      "fullBiography": false
+    },
+    {
+      "id": "JESSEKARTLI",
+      "before": {
+        "nombre": "Jesse de Kartli",
+        "sobrenombre": "",
+        "aliases": [
+          "Iese",
+          "Ali Quli Khan",
+          "Mustafa Pasha"
+        ]
+      },
+      "after": {
+        "nombre": "Jesse de Kartli",
+        "sobrenombre": "",
+        "aliases": [
+          "Iese",
+          "Ali Quli Khan",
+          "Mustafa Pasha"
+        ]
+      },
+      "slug": "jesse-de-kartli",
+      "reason": "Conservar la forma historiográfica; revisar identidad, ordinal, contexto, sobrenombre y variantes según la pauta editorial.",
+      "english": "Jesse of Kartli",
+      "route": {
+        "id": "JESSEKARTLI",
+        "es": "jesse-de-kartli",
+        "en": "jesse-of-kartli"
+      },
+      "fullBiography": false
+    },
+    {
+      "id": "GEORGE2RAKOCZI",
+      "before": {
+        "nombre": "Jorge II Rákóczi",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "after": {
+        "nombre": "Jorge II Rákóczi",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "slug": "jorge-ii-rakoczi",
+      "reason": "Conservar la forma historiográfica; revisar identidad, ordinal, contexto, sobrenombre y variantes según la pauta editorial.",
+      "english": "George II Rákóczi",
+      "route": {
+        "id": "GEORGE2RAKOCZI",
+        "es": "jorge-ii-rakoczi",
+        "en": "george-ii-rakoczi"
+      },
+      "fullBiography": false
+    },
+    {
+      "id": "GIORGI4GEO",
+      "before": {
+        "nombre": "Jorge IV Lasha de Georgia",
+        "sobrenombre": "",
+        "aliases": [
+          "Giorgi IV Lasha"
+        ]
+      },
+      "after": {
+        "nombre": "Jorge IV Lasha de Georgia",
+        "sobrenombre": "",
+        "aliases": [
+          "Giorgi IV Lasha"
+        ]
+      },
+      "slug": "jorge-iv-lasha-de-georgia",
+      "reason": "Conservar la forma historiográfica; revisar identidad, ordinal, contexto, sobrenombre y variantes según la pauta editorial.",
+      "english": "George IV Lasha of Georgia",
+      "route": {
+        "id": "GIORGI4GEO",
+        "es": "jorge-iv-lasha-de-georgia",
+        "en": "george-iv-lasha-of-georgia"
+      },
+      "fullBiography": false
+    },
+    {
+      "id": "GIORGI8GEO",
+      "before": {
+        "nombre": "Jorge VIII de Georgia",
+        "sobrenombre": "",
+        "aliases": [
+          "Giorgi VIII",
+          "Jorge I de Kajetia",
+          "George I of Kakheti"
+        ]
+      },
+      "after": {
+        "nombre": "Jorge VIII de Georgia",
+        "sobrenombre": "",
+        "aliases": [
+          "Giorgi VIII",
+          "Jorge I de Kajetia",
+          "George I of Kakheti"
+        ]
+      },
+      "slug": "jorge-viii-de-georgia",
+      "reason": "Conservar la forma historiográfica; revisar identidad, ordinal, contexto, sobrenombre y variantes según la pauta editorial.",
+      "english": "George VIII of Georgia",
+      "route": {
+        "id": "GIORGI8GEO",
+        "es": "jorge-viii-de-georgia",
+        "en": "george-viii-of-georgia"
+      },
+      "fullBiography": false
+    },
+    {
+      "id": "GIORGI11KARTLI",
+      "before": {
+        "nombre": "Jorge XI de Kartli",
+        "sobrenombre": "",
+        "aliases": [
+          "Giorgi XI",
+          "Gurgin Khan"
+        ]
+      },
+      "after": {
+        "nombre": "Jorge XI de Kartli",
+        "sobrenombre": "",
+        "aliases": [
+          "Giorgi XI",
+          "Gurgin Khan"
+        ]
+      },
+      "slug": "jorge-xi-de-kartli",
+      "reason": "Conservar la forma historiográfica; revisar identidad, ordinal, contexto, sobrenombre y variantes según la pauta editorial.",
+      "english": "George XI of Kartli",
+      "route": {
+        "id": "GIORGI11KARTLI",
+        "es": "jorge-xi-de-kartli",
+        "en": "george-xi-of-kartli"
+      },
+      "fullBiography": false
+    },
+    {
+      "id": "JOHNBRIENNEJER",
+      "before": {
+        "nombre": "Juan de Brienne",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "after": {
+        "nombre": "Juan de Brienne",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "slug": "juan-de-brienne",
+      "reason": "Conservar la forma historiográfica; revisar identidad, ordinal, contexto, sobrenombre y variantes según la pauta editorial.",
+      "english": "John of Brienne",
+      "route": {
+        "id": "JOHNBRIENNEJER",
+        "es": "juan-de-brienne",
+        "en": "john-of-brienne"
+      },
+      "fullBiography": false
+    },
+    {
+      "id": "JUANDURAZZO",
+      "before": {
+        "nombre": "Juan de Durazzo",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "after": {
+        "nombre": "Juan de Durazzo",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "slug": "juan-de-durazzo",
+      "reason": "Conservar la forma historiográfica; revisar identidad, ordinal, contexto, sobrenombre y variantes según la pauta editorial.",
+      "english": "John of Durazzo",
+      "route": {
+        "id": "JUANDURAZZO",
+        "es": "juan-de-durazzo",
+        "en": "john-of-durazzo"
+      },
+      "fullBiography": false
+    },
+    {
+      "id": "JOHNWILLIAMFRISO",
+      "before": {
+        "nombre": "Juan Guillermo Friso de Orange-Nassau",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "after": {
+        "nombre": "Juan Guillermo Friso de Orange-Nassau",
+        "sobrenombre": "",
+        "aliases": []
+      },
+      "slug": "juan-guillermo-friso-de-orange-nassau",
+      "reason": "Conservar la forma historiográfica; revisar identidad, ordinal, contexto, sobrenombre y variantes según la pauta editorial.",
+      "english": "John William Friso of Orange-Nassau",
+      "route": {
+        "id": "JOHNWILLIAMFRISO",
+        "es": "juan-guillermo-friso-de-orange-nassau",
+        "en": "john-william-friso-of-orange-nassau"
+      },
+      "fullBiography": false
+    },
+    {
+      "id": "JUAN1BR",
+      "before": {
+        "nombre": "Juan I de Brabante",
+        "sobrenombre": "el Victorioso",
+        "aliases": []
+      },
+      "after": {
+        "nombre": "Juan I de Brabante",
+        "sobrenombre": "el Victorioso",
+        "aliases": []
+      },
+      "slug": "juan-i-de-brabante",
+      "reason": "Conservar la forma historiográfica; revisar identidad, ordinal, contexto, sobrenombre y variantes según la pauta editorial.",
+      "english": "John I of Brabant",
+      "route": {
+        "id": "JUAN1BR",
+        "es": "juan-i-de-brabante",
+        "en": "john-i-of-brabant"
+      },
+      "fullBiography": false
+    }
+  ],
+  "additional40": [
+    "GEORGE3GB",
+    "WILLIAM3ORANGE",
+    "JACOBO2ING",
+    "MARY2ING",
+    "CHRISTIAN7DEN",
+    "CRISTIAN2DIN",
+    "FREDWIL1PRU",
+    "FREDWIL3PRU",
+    "FRED4DEN",
+    "CHRISTIAN6DEN",
+    "FRED5DEN",
+    "GUSTAV1VASA",
+    "CARLOS9SUE",
+    "FEDERICO1SUE",
+    "IVAN4RUS",
+    "PETER3RUS",
+    "PAUL1RUS",
+    "CARLOS12SUE",
+    "ULRICALEONORASUE",
+    "GUSTAV3SUE",
+    "ISABELVALOISESP",
+    "ISABELBORBON",
+    "MARIATERESAESP",
+    "ENRIQUETAMARIA",
+    "ANADINAMARCA",
+    "ISABELSTUARTPAL",
+    "MARIANAAUSTESP",
+    "ANAAUSTESP",
+    "MARGAUSTESTIRIA",
+    "LEONORTOLEDO",
+    "MARGVALOIS",
+    "LUISALORENA",
+    "ISABELAUSTFRA",
+    "MARGANGULEMA",
+    "ANABRET",
+    "CLAUDEFRA",
+    "MARGARETTUDOR",
+    "MARIAGUISA",
+    "JUANASEYMOUR",
+    "GERMANAFOIX"
+  ],
+  "portraits": [
+    {
+      "id": "JACOBO2ING",
+      "group": "additional40",
+      "source": "https://commons.wikimedia.org/wiki/File:King_James_II_by_Sir_Godfrey_Kneller,_Bt.jpg",
+      "original": {
+        "width": 1280,
+        "height": 2114
+      },
+      "crop": null
+    },
+    {
+      "id": "MARY2ING",
+      "group": "additional40",
+      "source": "https://commons.wikimedia.org/wiki/File:Sir_Godfrey_Kneller_(1646-1723)_-_Mary_II_(1662-1694)_-_RCIN_405674_-_Royal_Collection.jpg",
+      "original": {
+        "width": 1007,
+        "height": 1650
+      },
+      "crop": null
+    },
+    {
+      "id": "CHRISTIAN7DEN",
+      "group": "additional40",
+      "source": "https://commons.wikimedia.org/wiki/File:Christian_VII_1772_by_Roslin.jpg",
+      "original": {
+        "width": 1280,
+        "height": 1751
+      },
+      "crop": null
+    },
+    {
+      "id": "CRISTIAN2DIN",
+      "group": "additional40",
+      "source": "https://commons.wikimedia.org/wiki/File:Lucas_Cranach_(I)_-_Bildnis_Christians_II.,_K%C3%B6nig_von_D%C3%A4nemark_(MbK,_Leipzig).jpg",
+      "original": {
+        "width": 1280,
+        "height": 1672
+      },
+      "crop": null
+    },
+    {
+      "id": "FREDWIL1PRU",
+      "group": "additional40",
+      "source": "https://commons.wikimedia.org/wiki/File:Antoine_Pesne_-_K%C3%B6nig_Friedrich_Wilhelm_I._von_Preu%C3%9Fen_(ca._1733).jpg",
+      "original": {
+        "width": 1280,
+        "height": 1750
+      },
+      "crop": null
+    },
+    {
+      "id": "FREDWIL3PRU",
+      "group": "additional40",
+      "source": "https://commons.wikimedia.org/wiki/File:Friedrich_Wilhelm_III_of_Prussia_-_Lawrence_1814-18.jpg",
+      "original": {
+        "width": 978,
+        "height": 1500
+      },
+      "crop": null
+    },
+    {
+      "id": "FRED4DEN",
+      "group": "additional40",
+      "source": "https://commons.wikimedia.org/wiki/File:Balthasar_Denner_-_Portrait_of_King_Frederik_IV_of_Denmark-Norway_-_NG.M.00176_-_National_Museum_of_Art,_Architecture_and_Design.jpg",
+      "original": {
+        "width": 1280,
+        "height": 1600
+      },
+      "crop": null
+    },
+    {
+      "id": "CHRISTIAN6DEN",
+      "group": "additional40",
+      "source": "https://commons.wikimedia.org/wiki/File:Christian-VI_1699-1746_Danmark-Norge-Rex.jpg",
+      "original": {
+        "width": 1171,
+        "height": 1562
+      },
+      "crop": null
+    },
+    {
+      "id": "FRED5DEN",
+      "group": "additional40",
+      "source": "https://commons.wikimedia.org/wiki/File:Frederik_V,_King_of_Denmark_(Carl_Gustav_Pilo)_-_Nationalmuseum_-_19318.tif",
+      "original": {
+        "width": 1280,
+        "height": 1621
+      },
+      "crop": null
+    },
+    {
+      "id": "GUSTAV1VASA",
+      "group": "additional40",
+      "source": "https://commons.wikimedia.org/wiki/File:Gustav_Vasa.jpg",
+      "original": {
+        "width": 312,
+        "height": 408
+      },
+      "crop": null
+    },
+    {
+      "id": "CARLOS9SUE",
+      "group": "additional40",
+      "source": "https://commons.wikimedia.org/wiki/File:Karl_IX.jpg",
+      "original": {
+        "width": 1280,
+        "height": 1721
+      },
+      "crop": null
+    },
+    {
+      "id": "FEDERICO1SUE",
+      "group": "additional40",
+      "source": "https://commons.wikimedia.org/wiki/File:Fredrik_av_Hessen.jpg",
+      "original": {
+        "width": 1280,
+        "height": 1574
+      },
+      "crop": null
+    },
+    {
+      "id": "IVAN4RUS",
+      "group": "additional40",
+      "source": "https://commons.wikimedia.org/wiki/File:Ivan_grozny_frame.jpg",
+      "original": {
+        "width": 562,
+        "height": 719
+      },
+      "crop": {
+        "left": 135,
+        "top": 151,
+        "width": 297,
+        "height": 488
+      }
+    },
+    {
+      "id": "PETER3RUS",
+      "group": "additional40",
+      "source": "https://commons.wikimedia.org/wiki/File:Coronation_portrait_of_Peter_III_of_Russia_-1761.JPG",
+      "original": {
+        "width": 1132,
+        "height": 1478
+      },
+      "crop": null
+    },
+    {
+      "id": "PAUL1RUS",
+      "group": "additional40",
+      "source": "https://commons.wikimedia.org/wiki/File:Borovikovskiy_PtPavla1GRM.jpg",
+      "original": {
+        "width": 1280,
+        "height": 1762
+      },
+      "crop": null
+    },
+    {
+      "id": "CARLOS12SUE",
+      "group": "additional40",
+      "source": "https://commons.wikimedia.org/wiki/File:Copy_Charles_XII_-_Nationalmuseum_-_17886.png",
+      "original": {
+        "width": 677,
+        "height": 850
+      },
+      "crop": null
+    },
+    {
+      "id": "GUSTAV3SUE",
+      "group": "additional40",
+      "source": "https://commons.wikimedia.org/wiki/File:GustavIII.jpg",
+      "original": {
+        "width": 1280,
+        "height": 1579
+      },
+      "crop": null
+    },
+    {
+      "id": "ISABELBORBON",
+      "group": "additional40",
+      "source": "https://commons.wikimedia.org/wiki/File:Peter_Paul_Rubens_186.jpg",
+      "original": {
+        "width": 423,
+        "height": 575
+      },
+      "crop": null
+    },
+    {
+      "id": "MARIATERESAESP",
+      "group": "additional40",
+      "source": "https://commons.wikimedia.org/wiki/File:Detail_of_Marie_Th%C3%A9r%C3%A8se_d%27Autriche_by_Nocret.jpg",
+      "original": {
+        "width": 1280,
+        "height": 1806
+      },
+      "crop": null
+    },
+    {
+      "id": "ENRIQUETAMARIA",
+      "group": "additional40",
+      "source": "https://commons.wikimedia.org/wiki/File:Workshop_of_Anthony_van_Dyck_-_Portrait_of_Henrietta_Maria_de_Bourbon,_Queen_of_England.jpg",
+      "original": {
+        "width": 798,
+        "height": 926
+      },
+      "crop": null
+    },
+    {
+      "id": "ANADINAMARCA",
+      "group": "additional40",
+      "source": "https://commons.wikimedia.org/wiki/File:Anne_of_Denmark_in_mourning.jpg",
+      "original": {
+        "width": 1280,
+        "height": 1652
+      },
+      "crop": null
+    },
+    {
+      "id": "ISABELSTUARTPAL",
+      "group": "additional40",
+      "source": "https://commons.wikimedia.org/wiki/File:Elizabeth,_Queen_of_Bohemia_from_NPG.jpg",
+      "original": {
+        "width": 1280,
+        "height": 1619
+      },
+      "crop": null
+    },
+    {
+      "id": "MARIANAAUSTESP",
+      "group": "additional40",
+      "source": "https://commons.wikimedia.org/wiki/File:Mariana_of_Austria_by_Vel%C3%A1zquez_(c._1652,_Museo_del_Prado).jpg",
+      "original": {
+        "width": 1066,
+        "height": 1920
+      },
+      "crop": null
+    },
+    {
+      "id": "ANAAUSTESP",
+      "group": "additional40",
+      "source": "https://commons.wikimedia.org/wiki/File:Ana_de_Austria,_reina_consorte_de_Espa%C3%B1a_(Museo_L%C3%A1zaro_Galdiano).jpg",
+      "original": {
+        "width": 1280,
+        "height": 1863
+      },
+      "crop": null
+    },
+    {
+      "id": "MARGAUSTESTIRIA",
+      "group": "additional40",
+      "source": "https://commons.wikimedia.org/wiki/File:Juan_Pantoja_de_la_Cruz_and_Studio_-_Margaret_of_Austria,_Queen_of_Spain.jpg",
+      "original": {
+        "width": 729,
+        "height": 1024
+      },
+      "crop": null
+    },
+    {
+      "id": "LEONORTOLEDO",
+      "group": "additional40",
+      "source": "https://commons.wikimedia.org/wiki/File:Bronzino,_Agnolo_-_Eleonora_of_Toledo_-_National_Gallery_in_Prague.jpg",
+      "original": {
+        "width": 1280,
+        "height": 1682
+      },
+      "crop": null
+    },
+    {
+      "id": "MARGVALOIS",
+      "group": "additional40",
+      "source": "https://commons.wikimedia.org/wiki/File:Marguerite_de_Valois_vers_1574.jpg",
+      "original": {
+        "width": 1280,
+        "height": 1942
+      },
+      "crop": null
+    },
+    {
+      "id": "LUISALORENA",
+      "group": "additional40",
+      "source": "https://commons.wikimedia.org/wiki/File:LouisedeLorraine-Vaud%C3%A9mont.jpg",
+      "original": {
+        "width": 370,
+        "height": 475
+      },
+      "crop": null
+    },
+    {
+      "id": "MARGANGULEMA",
+      "group": "additional40",
+      "source": "https://commons.wikimedia.org/wiki/File:Jean_Clouet_(Attributed)_-_Portrait_of_Marguerite_of_Navarre_-_Google_Art_Project.jpg",
+      "original": {
+        "width": 1280,
+        "height": 1514
+      },
+      "crop": null
+    },
+    {
+      "id": "ANABRET",
+      "group": "additional40",
+      "source": "https://commons.wikimedia.org/wiki/File:BNF_-_Latin_9474_-_Jean_Bourdichon_-_Grandes_Heures_d%27Anne_de_Bretagne_-_f._3r_-_Anne_de_Bretagne_entre_trois_saintes_(d%C3%A9tail).jpg",
+      "original": {
+        "width": 572,
+        "height": 734
+      },
+      "crop": null
+    },
+    {
+      "id": "CLAUDEFRA",
+      "group": "additional40",
+      "source": "https://commons.wikimedia.org/wiki/File:Claude-de-France1.jpg",
+      "original": {
+        "width": 707,
+        "height": 1017
+      },
+      "crop": null
+    },
+    {
+      "id": "MARGARETTUDOR",
+      "group": "additional40",
+      "source": "https://commons.wikimedia.org/wiki/File:Daniel_Mytens_(c._1590-1647)_-_Margaret_Tudor,_Queen_of_Scotland_(1489-1541)_-_RCIN_401181_-_Royal_Collection.jpg",
+      "original": {
+        "width": 976,
+        "height": 1650
+      },
+      "crop": null
+    },
+    {
+      "id": "MARIAGUISA",
+      "group": "additional40",
+      "source": "https://commons.wikimedia.org/wiki/File:Corneille_de_Lyon_-_Mary_of_Guise,_1515_-_1560._Queen_of_James_V_-_PG_1558_-_National_Galleries_of_Scotland.jpg",
+      "original": {
+        "width": 1280,
+        "height": 1558
+      },
+      "crop": null
+    },
+    {
+      "id": "JUANASEYMOUR",
+      "group": "additional40",
+      "source": "https://commons.wikimedia.org/wiki/File:Hans_Holbein_the_Younger_-_Jane_Seymour,_Queen_of_England_-_Google_Art_Project.jpg",
+      "original": {
+        "width": 1280,
+        "height": 2060
+      },
+      "crop": null
+    },
+    {
+      "id": "GERMANAFOIX",
+      "group": "additional40",
+      "source": "https://commons.wikimedia.org/wiki/File:Germaine_de_Foix1.jpg",
+      "original": {
+        "width": 681,
+        "height": 1200
+      },
+      "crop": null
+    },
+    {
+      "id": "GEORGE3GB",
+      "group": "additional40",
+      "source": "https://commons.wikimedia.org/wiki/File:Allan_Ramsay_-_King_George_III_in_coronation_robes_-_Google_Art_Project(cropped).jpg",
+      "original": {
+        "width": 563,
+        "height": 796
+      },
+      "crop": null
+    },
+    {
+      "id": "WILLIAM3ORANGE",
+      "group": "additional40",
+      "source": "https://commons.wikimedia.org/wiki/File:King_William_III_of_England_(1650-1702)_by_Kneller.jpg",
+      "original": {
+        "width": 1280,
+        "height": 1590
+      },
+      "crop": null
+    },
+    {
+      "id": "ULRICALEONORASUE",
+      "group": "additional40",
+      "source": "https://commons.wikimedia.org/wiki/File:David_von_Krafft_His_studio_-_Queen_Ulrika_Eleonora_the_younger_-_cropped.jpg",
+      "original": {
+        "width": 1280,
+        "height": 1574
+      },
+      "crop": null
+    },
+    {
+      "id": "ISABELVALOISESP",
+      "group": "additional40",
+      "source": "https://commons.wikimedia.org/wiki/File:Isabel_de_Valois2..jpg",
+      "original": {
+        "width": 1280,
+        "height": 1844
+      },
+      "crop": null
+    },
+    {
+      "id": "ISABELAUSTFRA",
+      "group": "additional40",
+      "source": "https://commons.wikimedia.org/wiki/File:Fran%C3%A7ois_Clouet_-_Elisabeth_of_Austria,_Queen_of_France_-_WGA5077.jpg",
+      "original": {
+        "width": 700,
+        "height": 1035
+      },
+      "crop": null
+    },
+    {
+      "id": "FELMARVISC",
+      "group": "requested",
+      "source": "https://commons.wikimedia.org/wiki/File:Pisanello_-_Codex_Vallardi_2484.jpg",
+      "original": {
+        "width": 372,
+        "height": 579
+      },
+      "crop": null
+    },
+    {
+      "id": "BERNVISC",
+      "group": "requested",
+      "source": "https://commons.wikimedia.org/wiki/File:Bernab%C3%B2_e_Beatrice_Visconti.jpg",
+      "original": {
+        "width": 499,
+        "height": 582
+      },
+      "crop": {
+        "left": 7,
+        "top": 3,
+        "width": 256,
+        "height": 576
+      }
+    },
+    {
+      "id": "BEATSCALA",
+      "group": "requested",
+      "source": "https://commons.wikimedia.org/wiki/File:Bernab%C3%B2_e_Beatrice_Visconti.jpg",
+      "original": {
+        "width": 499,
+        "height": 582
+      },
+      "crop": {
+        "left": 267,
+        "top": 79,
+        "width": 229,
+        "height": 500
+      }
+    },
+    {
+      "id": "CATAVISC",
+      "group": "requested",
+      "source": "https://commons.wikimedia.org/wiki/File:Portret_van_Catherina_Visconti,_RP-P-OB-76.833(V)_(cropped).jpg",
+      "original": {
+        "width": 1280,
+        "height": 1628
+      },
+      "crop": null
+    },
+    {
+      "id": "TADEAVISCONTI",
+      "group": "requested",
+      "source": "https://commons.wikimedia.org/wiki/File:Zimmermann_-_Taddea_Visconti.jpg",
+      "original": {
+        "width": 725,
+        "height": 1101
+      },
+      "crop": {
+        "left": 112,
+        "top": 116,
+        "width": 478,
+        "height": 704
+      }
+    },
+    {
+      "id": "VALVISC",
+      "group": "requested",
+      "source": "https://commons.wikimedia.org/wiki/File:Ch%C3%A2teau_de_Beauregard_-_Galerie_des_Illustres_29_-_Valentine_Visconti.jpg",
+      "original": {
+        "width": 1280,
+        "height": 1571
+      },
+      "crop": null
+    },
+    {
+      "id": "GIANGALSFOR",
+      "group": "requested",
+      "source": "https://commons.wikimedia.org/wiki/File:Workshop_of_Benedetto_Briosco,_Gian_Galeazzo_Maria_Sforza,_Duke_of_Milan,_early_1490s,_NGA_128.jpg",
+      "identitySource": "https://www.nga.gov/artworks/128-gian-galeazzo-maria-sforza-duke-milan",
+      "rejectedAlternative": {
+        "url": "https://commons.wikimedia.org/wiki/File:Gian_Galeazzo_Maria_Sforza,_Museo_del_duomo_(Giovanni_Antonio_Amadeo).jpg",
+        "reason": "The Duomo identifies the sculpture as a possible portrait of his father Galeazzo Maria.",
+        "catalogue": "https://www.duomomilano.it/descrivedendo-galeazzo-maria-sforza/"
+      }
+    }
+  ],
+  "existingFrameCrops": [
+    {
+      "id": "GAL2VISC",
+      "source": "https://commons.wikimedia.org/wiki/File:Cristofano_dell%27altissimo,_galeazzo_II_visconti,_1556.JPG",
+      "original": {
+        "width": 768,
+        "height": 974
+      },
+      "crop": {
+        "left": 100,
+        "top": 107,
+        "width": 568,
+        "height": 759
+      }
+    },
+    {
+      "id": "ELISVISBAV",
+      "source": "https://commons.wikimedia.org/wiki/File:Isabel_Visconti.jpg",
+      "original": {
+        "width": 351,
+        "height": 506
+      },
+      "crop": {
+        "left": 63,
+        "top": 53,
+        "width": 231,
+        "height": 339
+      }
+    }
+  ],
+  "arms": [
+    "Tarnowski",
+    "Sanguszko",
+    "Czartoryski",
+    "Chigi",
+    "Savelli"
+  ]
+}
