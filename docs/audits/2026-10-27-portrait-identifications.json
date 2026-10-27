@@ -1,0 +1,223 @@
+{
+  "reviewedAt": "2026-10-27",
+  "coverage": {
+    "houseMembers": 34,
+    "previouslyIllustrated": 8,
+    "newPortraits": 18,
+    "replacements": 1,
+    "illustratedAfter": 26
+  },
+  "portraits": [
+    {
+      "id": "BATTISTASFORZA",
+      "source": "https://commons.wikimedia.org/wiki/File:Battista_sforza.jpg",
+      "artworkType": "Retrato póstumo",
+      "date": "c. 1473–1475",
+      "creator": "Piero della Francesca",
+      "rights": "Dominio público · PDM 1.0",
+      "rightsUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "identitySource": "https://www.uffizi.it/en/artworks/the-duke-and-duchess-of-urbino-federico-da-montefeltro-and-battista-sforza",
+      "note": "Uffizi dates the diptych to c. 1473–1475. Battista died in 1472, so this is labelled posthumous."
+    },
+    {
+      "id": "GIANGAL1",
+      "source": "https://commons.wikimedia.org/wiki/File:GiovAmbrogiodePredisattribGianGaleazzoVisconti.jpg",
+      "artworkType": "Retrato posterior",
+      "date": "siglo XV",
+      "creator": "Atribuido a Giovanni Ambrogio de Predis",
+      "rights": "Dominio público · PDM 1.0",
+      "rightsUrl": "https://creativecommons.org/publicdomain/mark/1.0/"
+    },
+    {
+      "id": "GIOVSFORZAPESARO",
+      "source": "https://commons.wikimedia.org/wiki/File:Giovanni_Sforza_coin.jpg",
+      "artworkType": "Retrato en moneda",
+      "date": "siglo XVI",
+      "creator": "Ceca italiana no identificada",
+      "rights": "Dominio público · PDM 1.0",
+      "rightsUrl": "https://creativecommons.org/publicdomain/mark/1.0/"
+    },
+    {
+      "id": "MAT1VISC",
+      "source": "https://commons.wikimedia.org/wiki/File:Matteo_I_Visconti.jpg",
+      "artworkType": "Grabado póstumo",
+      "date": "siglo XIX",
+      "creator": "Grabador no identificado",
+      "rights": "Dominio público · PDM 1.0",
+      "rightsUrl": "https://creativecommons.org/publicdomain/mark/1.0/"
+    },
+    {
+      "id": "ALESSFOR",
+      "source": "https://commons.wikimedia.org/wiki/File:Rogier_van_der_weyden_(bottega),_trittico_sforza,_07.JPG",
+      "artworkType": "Detalle de obra contemporánea",
+      "date": "c. 1460 (obra); 2016 (fotografía)",
+      "creator": "Seguidor de Rogier van der Weyden; fotografía: Sailko",
+      "rights": "CC BY 3.0",
+      "rightsUrl": "https://creativecommons.org/licenses/by/3.0",
+      "identitySource": "https://brill.com/downloadpdf/book/9789004409736/BP000009f.pdf",
+      "note": "The kneeling adult on the right is Alessandro Sforza. The profile crop keeps that figure; identities proposed for the children are not adopted."
+    },
+    {
+      "id": "BERNVISC",
+      "source": "https://commons.wikimedia.org/wiki/File:Visconti,_Barnab%C3%B2.jpg",
+      "artworkType": "Grabado póstumo",
+      "date": "siglo XIX",
+      "creator": "Grabador no identificado",
+      "rights": "Dominio público · PDM 1.0",
+      "rightsUrl": "https://creativecommons.org/publicdomain/mark/1.0/"
+    },
+    {
+      "id": "GIANGALSFOR",
+      "source": "https://commons.wikimedia.org/wiki/File:Workshop_of_Benedetto_Briosco,_Gian_Galeazzo_Maria_Sforza,_Duke_of_Milan,_early_1490s,_NGA_128.jpg",
+      "artworkType": "Retrato contemporáneo en medalla",
+      "date": "inicios de la década de 1490",
+      "creator": "Taller de Benedetto Briosco",
+      "rights": "CC0",
+      "rightsUrl": "https://creativecommons.org/publicdomain/zero/1.0/deed.en"
+    },
+    {
+      "id": "BLANCASFO",
+      "source": "https://commons.wikimedia.org/wiki/File:Ambrogio_de_Predis_-_Bianca_Maria_Sforza_-_Google_Art_Project.jpg",
+      "artworkType": "Retrato contemporáneo",
+      "date": "1493",
+      "creator": "Giovanni Ambrogio de Predis",
+      "rights": "Dominio público · PDM 1.0",
+      "rightsUrl": "https://creativecommons.org/publicdomain/mark/1.0/"
+    },
+    {
+      "id": "STEFVISC",
+      "source": "https://commons.wikimedia.org/wiki/File:Stefano_Visconti.jpg",
+      "artworkType": "Miniatura póstuma",
+      "date": "1403",
+      "creator": "Michelino da Besozzo",
+      "rights": "Dominio público · PDM 1.0",
+      "rightsUrl": "https://creativecommons.org/publicdomain/mark/1.0/"
+    },
+    {
+      "id": "GAL2VISC",
+      "source": "https://commons.wikimedia.org/wiki/File:Cristofano_dell%27altissimo,_galeazzo_II_visconti,_1556.JPG",
+      "artworkType": "Retrato póstumo",
+      "date": "1556 (obra); 2011 (fotografía)",
+      "creator": "Cristofano dell’Altissimo; fotografía: Sailko",
+      "rights": "CC BY-SA 3.0",
+      "rightsUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+    },
+    {
+      "id": "GIOVANNIARCHVISC",
+      "source": "https://commons.wikimedia.org/wiki/File:Visconti,_Giovanni_(1290-1354).jpg",
+      "artworkType": "Grabado póstumo",
+      "date": "siglo XIX",
+      "creator": "Grabador no identificado",
+      "rights": "Dominio público · PDM 1.0",
+      "rightsUrl": "https://creativecommons.org/publicdomain/mark/1.0/"
+    },
+    {
+      "id": "FELMARVISC",
+      "source": "https://commons.wikimedia.org/wiki/File:Filippo_Maria_Visconti.jpg",
+      "artworkType": "Grabado póstumo de medalla",
+      "date": "1858 (grabado)",
+      "creator": "Pisanello (modelo); grabador no identificado",
+      "rights": "Dominio público · PDM 1.0",
+      "rightsUrl": "https://creativecommons.org/publicdomain/mark/1.0/"
+    },
+    {
+      "id": "MUZIOSFOR",
+      "source": "https://commons.wikimedia.org/wiki/File:Muzio_Attendolo_(Kunsthistorisches_Museum).jpg",
+      "artworkType": "Retrato histórico",
+      "date": "Datación no precisada en la ficha",
+      "creator": "Autor desconocido",
+      "rights": "Dominio público · PDM 1.0",
+      "rightsUrl": "https://creativecommons.org/publicdomain/mark/1.0/"
+    },
+    {
+      "id": "CATAVISC",
+      "source": "https://commons.wikimedia.org/wiki/File:Portret_van_Catherina_Visconti,_RP-P-OB-76.833(V)_(cropped).jpg",
+      "artworkType": "Grabado póstumo",
+      "date": "1585",
+      "creator": "Agostino Carracci",
+      "rights": "CC0",
+      "rightsUrl": "https://creativecommons.org/publicdomain/zero/1.0/deed.en"
+    },
+    {
+      "id": "VALVISC",
+      "source": "https://commons.wikimedia.org/wiki/File:Honor%C3%A9_Bovet,_Apparicion_maistre_Jehan_de_Meun,_Valentina_Visconti.jpg",
+      "artworkType": "Miniatura contemporánea",
+      "date": "c. 1398",
+      "creator": "Maestro del Policraticus de Carlos V",
+      "rights": "Dominio público · PDM 1.0",
+      "rightsUrl": "https://creativecommons.org/publicdomain/mark/1.0/"
+    },
+    {
+      "id": "ELISVISBAV",
+      "source": "https://commons.wikimedia.org/wiki/File:Isabel_Visconti.jpg",
+      "artworkType": "Grabado póstumo",
+      "date": "1783",
+      "creator": "Grabador no identificado",
+      "rights": "Dominio público · PDM 1.0",
+      "rightsUrl": "https://creativecommons.org/publicdomain/mark/1.0/"
+    },
+    {
+      "id": "TADEAVISCONTI",
+      "source": "https://commons.wikimedia.org/wiki/File:Zimmermann_-_Taddea_Visconti.jpg",
+      "artworkType": "Grabado póstumo",
+      "date": "siglo XVIII",
+      "creator": "Joseph Anton Zimmermann",
+      "rights": "Dominio público · PDM 1.0",
+      "rightsUrl": "https://creativecommons.org/publicdomain/mark/1.0/"
+    },
+    {
+      "id": "LUCHINOVISC",
+      "source": "https://commons.wikimedia.org/wiki/File:Visconti,_Luchino_(12.._1349).jpg",
+      "artworkType": "Grabado póstumo",
+      "date": "siglo XIX",
+      "creator": "Grabador no identificado",
+      "rights": "Dominio público · PDM 1.0",
+      "rightsUrl": "https://creativecommons.org/publicdomain/mark/1.0/"
+    },
+    {
+      "id": "CATASFOR",
+      "source": "https://commons.wikimedia.org/wiki/File:Style_of_Niccol%C3%B2_Fiorentino,_Caterina_Sforza-Riario,_1463-1509,_Countess_of_Forli_and_Imola_(obverse),_NGA_44840.jpg",
+      "artworkType": "Retrato en medalla",
+      "date": "Sin datación indicada en la ficha",
+      "creator": "Estilo de Niccolò Fiorentino",
+      "rights": "CC0",
+      "rightsUrl": "https://creativecommons.org/publicdomain/zero/1.0/deed.en",
+      "identitySource": "https://catalogo.beniculturali.it/detail/HistoricOrArtisticProperty/0500442601",
+      "note": "The medal inscription identifies Caterina Sforza. The replacement uses the NGA CC0 reproduction linked in the image credit; no claim that the object is contemporary is added."
+    }
+  ],
+  "excluded": [
+    {
+      "id": "BIANSFOR",
+      "reason": "Disputed identity of La bella principessa."
+    },
+    {
+      "id": "TEOBVISC",
+      "reason": "Located portrait identifies a later homonym, not this medieval person."
+    },
+    {
+      "id": "ANASFOR",
+      "reason": "Located archival record concerns a modern person."
+    },
+    {
+      "id": "BOS1SFOR",
+      "reason": "Funerary inscription is not an identifiable portrait."
+    },
+    {
+      "id": "HIPMARSFOR",
+      "reason": "Identity of the proposed figure remains insufficiently established."
+    },
+    {
+      "id": "MAGDVISBAV",
+      "reason": "Located painting is by a later artist named Visconti, not a portrait of this princess."
+    },
+    {
+      "id": "CESARESFORZAGALLERANI",
+      "reason": "No sufficiently identified portrait located."
+    },
+    {
+      "id": "VALENTINAVISCONTCYP",
+      "reason": "No sufficiently identified portrait located."
+    }
+  ]
+}

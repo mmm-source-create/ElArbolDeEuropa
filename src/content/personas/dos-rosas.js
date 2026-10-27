@@ -48,7 +48,7 @@ export const ROSES_PEOPLE_CONTENT = {
     "resumen": "Único hijo de Enrique VI y Margarita de Anjou. Su derecho a suceder fue desplazado por el acuerdo de 1460 con Ricardo de York. Se casó con Ana Neville y murió en Tewkesbury en 1471."
   },
   "JASPERTUDOR": {
-    "resumen": "Hermano de Edmund Tudor y tío de Enrique VII. Sostuvo la causa lancastriana, protegió a su sobrino durante el exilio y participó en la expedición de 1485. Enrique VII lo creó duque de Bedford."
+    "resumen": "Hermano de Edmundo Tudor y tío de Enrique VII. Sostuvo la causa lancastriana, protegió a su sobrino durante el exilio y participó en la expedición de 1485. Enrique VII lo creó duque de Bedford."
   },
   "RICHARDSHREWSBURY": {
     "resumen": "Duque de York e hijo menor de Eduardo IV e Isabel Woodville. Fue alojado en la Torre de Londres con su hermano Eduardo V en 1483. Se desconoce la fecha y las circunstancias de su muerte."

@@ -46,3 +46,10 @@ Los otros ordinales de las coronas compartidas permanecen buscables: Carlos I de
 Las traducciones conservan todos los gobiernos, fechas, parentescos, fuentes, controversias documentales y secciones extensas disponibles en la ficha española. `audit:names` comprueba también que ningún registro del conjunto peninsular carezca de traducción completa. Este examen editorial de los registros existentes no constituye un catálogo nuevo de todas las dinastías y sucesiones anteriores al período del Atlas.
 
 Referencias de las decisiones particulares: [coronación de Juana II y Felipe III, Gobierno de Navarra / Universidad Pública de Navarra](https://academica-e.unavarra.es/entities/publication/91d1a28d-7db8-4ece-9101-27fe95466a5e); [Sebastian y sus variantes, British Museum](https://www.britishmuseum.org/collection/term/BIOG114939); [María de Padilla y sus hijos, investigación publicada en Edad Media](https://revistas.uva.es/index.php/edadmedia/es/article/view/557/534); [Carlos IV y las abdicaciones de Aranjuez y Bayona, Banco de España](https://coleccion.bde.es/wca/es/secciones/coleccion/obras/carlos-iv-p_177.html); [discusión académica de las cronologías nazaríes](https://uvadoc.uva.es/bitstream/10324/76635/3/edadmedia_26_459-502.pdf).
+
+
+## Nuevas incorporaciones bilingües · octubre de 2026
+
+Las personas, casas e historias nuevas se entregan completas en español e inglés en la misma PR, incluidos textos extensos, notas, evidencias, créditos y enlaces. Las cien traducciones de fichas anteriores se cuentan aparte de las incorporaciones.
+
+Los exónimos también se aplican a la nobleza: Juan Amor Tarnowski conserva Jan Amor Tarnowski como variante y como nombre inglés. Tadeo Kościuszko conserva Tadeusz Kościuszko en inglés y en las variantes; la forma española está documentada en el [Museo Lázaro Galdiano](https://www.museolazarogaldiano.es/fondos/tadeo-kosciusko).
