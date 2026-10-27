@@ -1,0 +1,8 @@
+{
+  "batch": 1,
+  "ready": false,
+  "status": "assigned",
+  "missing": [
+    "Full assigned translation batch pending"
+  ]
+}
