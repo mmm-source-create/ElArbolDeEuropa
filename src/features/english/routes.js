@@ -11,6 +11,7 @@ export const TRANSLATED_STORIES = [
  {id:'corona-demasiado-grande',es:'una-corona-demasiado-grande',en:'a-crown-too-great',chapters:6},
 ];
 export const TRANSLATED_PEOPLE = [
+ {id:"GUSTAV2ADOLFO",es:"gustavo-ii-adolfo-de-suecia",en:"gustav-ii-adolf-of-sweden"},
  {"id":"JANAMORTARNOWSKI","es":"juan-amor-tarnowski","en":"jan-amor-tarnowski"},
  {"id":"JANKRZTARNOWSKI","es":"juan-cristobal-tarnowski","en":"jan-krzysztof-tarnowski"},
  {"id":"ZOFIATARNOWSKA","es":"sofia-tarnowska","en":"zofia-tarnowska"},

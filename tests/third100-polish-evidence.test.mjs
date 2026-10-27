@@ -13,6 +13,7 @@ import {POLISH_HOUSES} from '../src/features/english/polishHouseTranslations.js'
 import {englishEntityPages} from '../scripts/generate/english-entities.mjs';
 import {personClaims,coverageReport,CLAIM_REVIEWS} from '../src/evidence/claims.js';
 import {OCTOBER_50_REVIEWS} from '../src/evidence/october50Reviews.js';
+import {IMAGENES_PERSONAS} from '../src/data/imagenesPersonas.js';
 import {VISCONTI_SFORZA_IMAGES} from '../src/data/imagenesPersonasViscontiSforza.js';
 import {ENGLISH_PROFILE_PORTRAITS} from '../src/features/english/profilePortraits.js';
 const read=p=>JSON.parse(fs.readFileSync(new URL('../public/'+p,import.meta.url)));
@@ -37,8 +38,8 @@ test('50 previous pending claims have individual citations, separate from new re
  for(const row of ledger){assert.equal(row.before,'pending');const p=PERSONAS.find(p=>p.id===row.id.split(':')[1]),old=personClaims(p,previous).find(c=>c.id===row.id),claim=personClaims(p).find(c=>c.id===row.id);assert.equal(old.certainty,'pending',row.id);assert.equal(claim.certainty,'documented');assert.equal(claim.value,row.value);assert(claim.sources.every(s=>s.url.startsWith('https:')&&s.locator));assert(!Object.hasOwn(POLISH_PROFILES,p.id));}
  assert.equal(coverageReport(PERSONAS).totals.pending,7014);
 });
-test('Visconti and Sforza portraits retain identity, artwork dates and bilingual rights; uncertain and wrong-person candidates are excluded',()=>{
+test('Visconti and Sforza portraits retain identity, artwork dates and bilingual rights; later user selections retain explicit attribution',()=>{
  assert.equal(Object.keys(VISCONTI_SFORZA_IMAGES).length,19);for(const [id,p] of Object.entries(VISCONTI_SFORZA_IMAGES)){assert(PERSONAS.some(p=>p.id===id));assert(fs.existsSync(new URL('../public'+p.archivo,import.meta.url)));assert(p.fuenteUrl&&p.derechosUrl&&p.autor&&p.fecha);const en=ENGLISH_PROFILE_PORTRAITS[id];assert(en?.obra&&en?.tipo&&en?.autor&&en?.fecha,id);}
- for(const id of ['BIANSFOR','TEOBVISC','BOS1SFOR','ANASFOR','HIPMARSFOR','MAGDVISBAV','CESARESFORZAGALLERANI','VALENTINAVISCONTCYP'])assert(!VISCONTI_SFORZA_IMAGES[id],id);
- assert.match(VISCONTI_SFORZA_IMAGES.CATASFOR.obra,/medalla|anverso/);assert(!VISCONTI_SFORZA_IMAGES.CATASFOR.obra.includes('Jazmín'));assert.equal(VISCONTI_SFORZA_IMAGES.BATTISTASFORZA.fecha,'c. 1473–1475');assert.match(VISCONTI_SFORZA_IMAGES.GAL2VISC.fecha,/1556.*2011/);
+ for(const id of ['TEOBVISC','BOS1SFOR','ANASFOR','HIPMARSFOR','MAGDVISBAV','CESARESFORZAGALLERANI','VALENTINAVISCONTCYP'])assert(!VISCONTI_SFORZA_IMAGES[id],id);
+ assert.match(IMAGENES_PERSONAS.CATASFOR.obra,/jazmín/);assert.match(IMAGENES_PERSONAS.BIANSFOR.tipo,/discutidas/);assert.equal(VISCONTI_SFORZA_IMAGES.BATTISTASFORZA.fecha,'c. 1473–1475');assert.match(VISCONTI_SFORZA_IMAGES.GAL2VISC.fecha,/1556.*2011/);
 });

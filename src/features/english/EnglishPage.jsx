@@ -39,6 +39,7 @@ function PageTitle({ data, Icon, eyebrow }) {
 }
 function EnglishCatalog({ data }) {
   const [query, setQuery] = useState('');
+  useEffect(() => {setQuery(new URLSearchParams(window.location.search).get('q') || '');}, [data.type]);
   const [progress,setProgress]=useState({});
   useEffect(()=>{
     if(data.type!=='stories')return;

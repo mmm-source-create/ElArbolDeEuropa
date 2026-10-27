@@ -153,6 +153,73 @@ const COMMONS = {
 };
 
 export const ESCUDOS_COMMONS = Object.freeze({
+
+  "Beaufort": {
+    "archivo": "/escudos/octubre-beaufort.svg",
+    "titulo": "Arms of John Beaufort, 1st Earl of Somerset.svg",
+    "autor": "Sodacan",
+    "licencia": "CC BY-SA 3.0",
+    "licenciaUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+    "fuente": "https://commons.wikimedia.org/wiki/File:Arms_of_John_Beaufort,_1st_Earl_of_Somerset.svg",
+    "modificaciones": "Se retiran metadatos de edición; se conserva el dibujo y se asegura el viewBox para el escalado.",
+    "en": {
+      "autor": "Sodacan",
+      "modifications": "Editing metadata removed; drawing preserved and a viewBox ensured for responsive scaling."
+    }
+  },
+  "Neville": {
+    "archivo": "/escudos/octubre-neville.svg",
+    "titulo": "Coat of Arms - Neville, Earls of Westmorland, and Barons Neville of Raby.svg",
+    "autor": "Immanuelle; basado en Rs-nourse",
+    "licencia": "CC BY-SA 4.0",
+    "licenciaUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "fuente": "https://commons.wikimedia.org/wiki/File:Coat_of_Arms_-_Neville,_Earls_of_Westmorland,_and_Barons_Neville_of_Raby.svg",
+    "modificaciones": "Se retiran metadatos de edición; se conserva el dibujo y se asegura el viewBox para el escalado.",
+    "en": {
+      "autor": "Immanuelle; based on Rs-nourse",
+      "modifications": "Editing metadata removed; drawing preserved and a viewBox ensured for responsive scaling."
+    }
+  },
+  "O’Neill": {
+    "archivo": "/escudos/octubre-oneill.png",
+    "titulo": "O'Neill Coat of arms.svg",
+    "autor": "Cookieman1.1.1",
+    "licencia": "CC BY-SA 4.0",
+    "licenciaUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "fuente": "https://commons.wikimedia.org/wiki/File:O%27Neill_Coat_of_arms.svg",
+    "modificaciones": "Convertido a PNG; dibujo conservado.",
+    "en": {
+      "autor": "Cookieman1.1.1",
+      "modifications": "Converted to PNG; drawing preserved."
+    }
+  },
+  "Castro": {
+    "archivo": "/escudos/octubre-castro.svg",
+    "titulo": "Coats of arms of families of Castro.svg",
+    "autor": "Manuelfb55",
+    "licencia": "CC BY-SA 4.0",
+    "licenciaUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "fuente": "https://commons.wikimedia.org/wiki/File:Coats_of_arms_of_families_of_Castro.svg",
+    "modificaciones": "Se retiran metadatos de edición; se conserva el dibujo y se asegura el viewBox para el escalado.",
+    "en": {
+      "autor": "Manuelfb55",
+      "modifications": "Editing metadata removed; drawing preserved and a viewBox ensured for responsive scaling."
+    }
+  },
+  "Shishman": {
+    "archivo": "/escudos/octubre-shishman.svg",
+    "titulo": "Coat of arms of the Second Bulgarian Empire.svg",
+    "autor": "Пакко",
+    "licencia": "CC BY-SA 3.0",
+    "licenciaUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+    "fuente": "https://commons.wikimedia.org/wiki/File:Coat_of_arms_of_the_Second_Bulgarian_Empire.svg",
+    "modificaciones": "Se retiran metadatos de edición; se conserva el dibujo y se asegura el viewBox para el escalado.",
+    "en": {
+      "autor": "Пакко",
+      "modifications": "Editing metadata removed; drawing preserved and a viewBox ensured for responsive scaling."
+    }
+  }
+,
   "Nazarí": {"modificaciones":"Se añade viewBox para el escalado responsivo; el dibujo se conserva sin cambios.","archivo": "/escudos/nazari.svg", "titulo": "Arms of the Emirate of Granada (1013-1492).svg", "autor": "Heralder", "licencia": "CC BY-SA 3.0", "licenciaUrl": "https://creativecommons.org/licenses/by-sa/3.0/", "fuente": "https://commons.wikimedia.org/wiki/File:Arms_of_the_Emirate_of_Granada_(1013-1492).svg"},...COMMONS,
   "Hetúmida": COMMONS.Habsburgo,
   "Dunkeld": COMMONS.Estuardo,

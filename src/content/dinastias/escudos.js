@@ -18,6 +18,79 @@ const CASTILLA_LEON = {blason: 'Cuartelado de Castilla y León: 1.º y 4.º, de 
   capas: [['cuartelado', [CASTILLA, LEON, LEON, CASTILLA]]]};
 
 export const ESCUDOS = Object.freeze({
+
+  "Beaufort": {
+    "blason": "Cuartelado de Francia antigua e Inglaterra, con bordura componada de plata y azur.",
+    "capas": [
+      [
+        "campo",
+        "plata"
+      ]
+    ],
+    "nota": "Armas de Juan Beaufort, primer conde de Somerset. El cuartel francés conserva el sembrado de flores de lis; otras generaciones emplearon variantes.",
+    "en": {
+      "blazon": "Quarterly France ancient and England, within a bordure compony argent and azure.",
+      "note": "Arms of John Beaufort, first Earl of Somerset. The French quarters retain the semy of fleurs-de-lis; other generations used variants."
+    }
+  },
+  "Neville": {
+    "blason": "De gules, un sotuer de plata.",
+    "capas": [
+      [
+        "campo",
+        "gules"
+      ]
+    ],
+    "nota": "Armas sencillas de Neville, asociadas a Raby y Westmorland. Las ramas de Salisbury y Warwick usaron diferencias.",
+    "en": {
+      "blazon": "Gules, a saltire argent.",
+      "note": "The plain Neville arms associated with Raby and Westmorland. The Salisbury and Warwick branches used differences."
+    }
+  },
+  "O’Neill": {
+    "blason": "De plata, una mano diestra de gules entre dos leones afrontados del mismo color; tres estrellas en jefe y, en punta, azur con un salmón de plata.",
+    "capas": [
+      [
+        "campo",
+        "plata"
+      ]
+    ],
+    "nota": "Composición de los O’Neill con la mano roja, leones, estrellas y salmón. Las ramas del linaje emplearon variantes.",
+    "en": {
+      "blazon": "Argent, a dexter hand gules between two lions combatant gules, three stars in chief and a salmon argent on azure in base.",
+      "note": "O’Neill composition with the red hand, lions, stars and salmon. Branches of the lineage used variants."
+    }
+  },
+  "Castro": {
+    "blason": "De plata, seis roeles de azur puestos en dos palos.",
+    "capas": [
+      [
+        "campo",
+        "plata"
+      ]
+    ],
+    "nota": "Armas de seis roeles de la rama gallega de Castro, vinculada a Lemos. Otras ramas emplearon variantes.",
+    "en": {
+      "blazon": "Argent, six roundels azure in two pales.",
+      "note": "The six-roundel arms of the Galician Castro branch associated with Lemos. Other branches used variants."
+    }
+  },
+  "Shishman": {
+    "blason": "Emblema circular de oro con tres leones pasantes de gules dispuestos en palo.",
+    "capas": [
+      [
+        "campo",
+        "oro"
+      ]
+    ],
+    "nota": "Emblema atribuido al zar Iván Shishman según una miniatura vinculada a un viajero árabe del siglo XIV. Se usa como signo representativo de la casa; la reconstrucción conserva el marco circular de la fuente.",
+    "en": {
+      "blazon": "A circular gold emblem with three lions passant gules in pale.",
+      "note": "Emblem attributed to Tsar Ivan Shishman after a miniature associated with a fourteenth-century Arab traveller. Used as a representative sign for the house; the reconstruction retains the source’s circular frame."
+    },
+    "tipo": "emblema"
+  }
+,
 "Aleramici":{"blason":"De plata, un jefe de gules.","capas":[["campo","plata"]],"nota":"Dibujo aportado por Manuel Muriel Cagigal y creado con Heraldicon."},
 "Lorena-Guisa":{"blason":"Cortado y partido de tres: Hungría, Anjou-Sicilia, Jerusalén, Aragón, Anjou, Güeldres, Jülich y Bar; sobre el todo, Lorena; brisado de un lambel de gules.","capas":[],"nota":"Modelo de las armas de Carlos de Lorena, cuarto duque de Guisa, según el archivo de origen. La composición recoge las pretensiones y herencias de la casa."},
 "Ibelin":{"blason":"De oro, una cruz patada de gules.","capas":[["campo","oro"]],"nota":"Armas sencillas de Ibelin según el dibujo de WappenWiki. La rama chipriota incorporó variantes."},
