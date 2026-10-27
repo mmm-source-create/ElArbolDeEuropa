@@ -26,7 +26,7 @@ test('las colecciones se abren de una en una, comparten relatos y Todas no dupli
     await act(()=>root.render(React.createElement(StoryCatalog,{items})));
     const tabs=[...document.querySelectorAll('[role=tab]')];
     assert.deepEqual(tabs.map(t=>t.textContent),['Todas','Colecciones']);
-    assert.equal(document.querySelectorAll('.public-story-card').length,21);
+    assert.equal(document.querySelectorAll('.public-story-card').length,22);
     assert.equal(document.querySelectorAll('.story-review-note').length,0);
     await act(()=>tabs[0].dispatchEvent(new window.KeyboardEvent('keydown',{key:'ArrowRight',bubbles:true})));
     assert.equal(document.activeElement,tabs[1]);assert.equal(tabs[1].getAttribute('aria-selected'),'true');
@@ -41,8 +41,8 @@ test('las colecciones se abren de una en una, comparten relatos y Todas no dupli
     assert.equal(document.querySelectorAll('.story-collection-card .public-story-card').length,5);
     assert.equal([...document.querySelectorAll('h3')].filter(h=>h.textContent==='El Reino de los Cielos').length,1);
     await act(()=>buttons[1].click());assert.ok(buttons.every(b=>b.getAttribute('aria-expanded')==='false'));
-    await act(()=>buttons[2].click());assert.equal(buttons[2].getAttribute('aria-expanded'),'true');assert.equal(document.querySelectorAll('.story-collection-card .public-story-card').length,3);assert.equal(document.querySelectorAll('.story-collection-card .story-coming-list li').length,0);
-    await act(()=>tabs[0].click());assert.equal(document.querySelectorAll('.public-story-card').length,21);
+    await act(()=>buttons[2].click());assert.equal(buttons[2].getAttribute('aria-expanded'),'true');assert.equal(document.querySelectorAll('.story-collection-card .public-story-card').length,4);assert.equal(document.querySelectorAll('.story-collection-card .story-coming-list li').length,0);
+    await act(()=>tabs[0].click());assert.equal(document.querySelectorAll('.public-story-card').length,22);
     await act(()=>root.render(React.createElement(StoryCatalog,{items:[{id:'gioconda',nombre:'Mona Lisa',pasos:11,path:'/en/story/mona-lisa'}],locale:'en'})));
     await act(()=>document.querySelectorAll('[role=tab]')[1].click());
     assert.equal(document.querySelectorAll('[aria-expanded]')[1].textContent,'Popular Culture1 story');

@@ -43,6 +43,9 @@ export const V535_LABELS = {
 // Source descriptions written for the Atlas in Spanish. Original titles of
 // works (RAH, PARES, Treccani, Lombardia Beni Culturali…) stay unchanged.
 export const V535_SOURCE_TITLES = {
+  'The Royal Family · Richard III y el destino de los príncipes':'The Royal Family · Richard III and the fate of the princes',
+  'English Heritage · Conisbrough y los duques de York':'English Heritage · Conisbrough and the dukes of York',
+  'Dictionary of National Biography · John Beaufort, primer conde de Somerset':'Dictionary of National Biography · John Beaufort, first Earl of Somerset',
   'Ministerio de Cultura · PARES · Castilla, Juana de (1462–1530)':'Spanish Ministry of Culture · PARES · Joanna of Castile (1462–1530)',
   'Archivo de Brno · Brno v minulosti a dnes 4':'Brno City Archives · Brno v minulosti a dnes 4',
   'Archivo municipal de Olomouc · carta original de Jobst':'Olomouc Municipal Archives · original charter of Jobst',

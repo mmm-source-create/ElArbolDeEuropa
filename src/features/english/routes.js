@@ -1,6 +1,7 @@
+import {ROSES_HOUSES} from './rosesHouseTranslations.js';
 import {NEXT_HOUSES} from './nextHouseTranslations.js';
 import {REVIEWED_HOUSES} from './reviewedHouseTranslations.js';
-export const TRANSLATED_DYNASTIES=[...NEXT_HOUSES.map(({es,en})=>({es,en})),...REVIEWED_HOUSES.map(({es,en})=>({es,en})),{es:'anjou-hungria',en:'anjou-hungary'}];
+export const TRANSLATED_DYNASTIES=[...ROSES_HOUSES.map(({es,en})=>({es,en})),...NEXT_HOUSES.map(({es,en})=>({es,en})),...REVIEWED_HOUSES.map(({es,en})=>({es,en})),{es:'anjou-hungria',en:'anjou-hungary'}];
 export const TRANSLATED_TERRITORIES=[{es:'normandia',en:'normandy'}];
 export const TRANSLATED_STORIES = [
  {id:'borgona',es:'borgona-el-reino-que-no-fue',en:'burgundy-the-kingdom-that-never-was',chapters:17},

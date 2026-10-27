@@ -18,6 +18,7 @@ export const ENGLISH_STORY_LABELS = {
     'revolucion-protestante':['The Protestant Reformation','Humanism, the Reformation, imperial politics and the response of Trent'],
     'lepanto-alianza':['Lepanto: The Last Crusade','How Rome, Spain and Venice assembled a fleet against the Ottoman Empire'],
     'corona-dos-credos':['A crown between two creeds','Catherine de’ Medici, the Huguenots and the Catholic League'],
+    'dos-rosas':['The Wars of the Roses','Lancaster, York and the rise of the Tudors'],
     'cien-anos':['The Hundred Years’ War','A dynastic dispute that transformed France and England'],
     'republica-nobles':['The Republic of Nobles','How Poland turned a hereditary monarchy into an elective crown'],
     'condotieros':['The condottieri','From mercenary companies to the Duchy of Milan'],

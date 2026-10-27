@@ -28,7 +28,7 @@ export const CASAS_V523 = {
     resumen:'Los descendientes de Godofredo de Anjou que reinaron en Inglaterra desde 1154 y llegaron a gobernar, como vasallos del rey de Francia, gran parte del oeste francés.',
     origen:'Godofredo de Anjou, cuyo emblema dio nombre a la casa, se casó con Matilde, hija de Enrique I de Inglaterra. Su hijo Enrique II heredó Inglaterra en 1154 y, con su esposa Leonor de Aquitania, reunió Normandía, Anjou y Aquitania: un conjunto de dominios a ambos lados del canal.',
     trayectoria:'Juan Sin Tierra perdió Normandía y Anjou ante Felipe II de Francia (1202–1204) y tuvo que aceptar la Carta Magna (1215). Enrique III y Eduardo I reforzaron el Parlamento; Eduardo I conquistó Gales. Eduardo III reclamó la corona francesa en 1337 y abrió la guerra de los Cien Años, con victorias de su hijo el Príncipe Negro.',
-    legado:'Ricardo II fue depuesto en 1399 por su primo Enrique de Lancaster, hijo de Juan de Gante. Las ramas de Lancaster y York, ambas plantagenets, se disputaron después el trono en la guerra de las Dos Rosas, que terminó con los Tudor en 1485.',
+    legado:'Ricardo II fue depuesto en 1399 por su primo Enrique de Lancaster, hijo de Juan de Gante. Las ramas de Lancaster y York, ambas plantagenets, se disputaron después el trono en la guerra de las Dos Rosas. Enrique Tudor ganó la corona en 1485 y derrotó una nueva tentativa yorkista en Stoke en 1487.',
     territorios:['Inglaterra','Normandía','Aquitania','Anjou','Gales','Irlanda'],
     protagonistas:['HENRY2ING','JUANSINTIERRA','ENRIQ3ING','EDUARDO1ING','EDUARDO2ING','EDUARDO3ING','EDUNEGRO','JUANGASTE','RICARDO2ING'],
     fuentes:[MEDLANDS,BRITANNICA],

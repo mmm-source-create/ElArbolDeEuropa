@@ -1,3 +1,5 @@
+import {ROSES_DYNASTY_SOURCES} from './dinastias/dos-rosas.js';
+import {ROSES_PEOPLE_REFERENCES} from './rosesPeopleReferences.js';
 import {CONFIRMED_PEOPLE_REFERENCES} from './confirmedPeopleReferences.js';
 import {HOUSE_CLEANUP_SOURCES} from './sources-house-cleanup.js';
 import {HERITAGE_EDITORIAL_SOURCES} from '../data/historiasHerencias.js';
@@ -1493,7 +1495,7 @@ for (const source of [...GERMAN_SWISS_SOURCES,...GERMANY_COMPLETION_SOURCES]) {
 }
 
 // A publication or article has one entry even when several editorial updates use it.
-for (const source of [...HOUSE_CLEANUP_SOURCES,...TREINTA_CASAS_SOURCES,...HERITAGE_EDITORIAL_SOURCES]) {
+for (const source of [...HOUSE_CLEANUP_SOURCES,...TREINTA_CASAS_SOURCES,...HERITAGE_EDITORIAL_SOURCES,...ROSES_DYNASTY_SOURCES,...Object.entries(ROSES_PEOPLE_REFERENCES).flatMap(([id,refs])=>refs.map(f=>({...f,grupo:'Historia cultural y política',territorios:[],personas:[id]})))]) {
   const previous=SOURCES.find(entry=>entry.url===source.url);
   if (!previous) { SOURCES.push(source); continue; }
   previous.personas=[...new Set([...previous.personas,...source.personas])];
