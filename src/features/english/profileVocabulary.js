@@ -1,3 +1,4 @@
+import {THIRD_100_NAMES,THIRD_100_LABELS,THIRD_100_NOTES} from './reviewedThird100Vocabulary.js';
 import {ROSES_NAMES,ROSES_LABELS,ROSES_NOTES} from './rosesVocabulary.js';
 import {REVIEWED_NEXT_100_NAMES,REVIEWED_NEXT_100_LABELS,REVIEWED_NEXT_100_NOTES} from './reviewedNext100Vocabulary.js';
 import {REVIEWED_100_NAMES,REVIEWED_100_LABELS,REVIEWED_100_NOTES} from './reviewed100Vocabulary.js';
@@ -8,6 +9,7 @@ import {V535_NAMES,V535_LABELS,V535_NOTES} from './v535Vocabulary.js';
 import {V536_NAMES,V536_LABELS,V536_NOTES} from './v536Vocabulary.js';
 // Display translations only: canonical dynasty and territory keys stay intact.
 export const PROFILE_LABELS = {
+  ...THIRD_100_LABELS,
   ...ROSES_LABELS,
   ...REVIEWED_NEXT_100_LABELS,
   ...REVIEWED_100_LABELS,
@@ -25,6 +27,7 @@ export const PROFILE_LABELS = {
 };
 
 export const ENGLISH_NAMES = {
+  ...THIRD_100_NAMES,
   ...ROSES_NAMES,
   ...REVIEWED_NEXT_100_NAMES,
   ...REVIEWED_100_NAMES,
@@ -45,6 +48,7 @@ export const ENGLISH_NAMES = {
 };
 
 export const PROFILE_NOTES = {
+  ...THIRD_100_NOTES,
   ...ROSES_NOTES,
   ...REVIEWED_NEXT_100_NOTES,
   ...REVIEWED_100_NOTES,

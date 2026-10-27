@@ -120,13 +120,6 @@ export const REVIEWED_100_PORTRAITS = {
     "fecha": "Sixteenth century",
     "institucion": "Wikimedia Commons"
   },
-  "CATASFOR": {
-    "tipo": "Attributed portrait",
-    "obra": "Lady of the Jasmine (sometimes identified as Caterina Sforza)",
-    "autor": "Lorenzo di Credi",
-    "fecha": "Fifteenth century",
-    "institucion": "Wikimedia Commons"
-  },
   "LUDOVSFOR": {
     "tipo": "Detail of a contemporary work",
     "obra": "Sforza Altarpiece (detail of Ludovico il Moro)",
@@ -276,9 +269,19 @@ export const REVIEWED_100_PORTRAITS = {
     "autor": "Antoni Boys",
     "fecha": "Sixteenth century",
     "institucion": "Kulturpool / historical portrait in an Austrian collection"
+  },
+  "ISABPORTBORG": {
+    "tipo": "Contemporary workshop portrait",
+    "obra": "Portrait of Isabella of Portugal",
+    "autor": "Workshop of Rogier van der Weyden",
+    "fecha": "c. 1450",
+    "institucion": "J. Paul Getty Museum, Los Angeles · 78.PB.3"
+  },
+  "GIOVBANDENERE": {
+    "tipo": "Posthumous portrait",
+    "obra": "Portrait of Giovanni delle Bande Nere",
+    "autor": "Gian Paolo Pace, called l’Olmo",
+    "fecha": "1545",
+    "institucion": "Uffizi Galleries, Florence · inv. 1890, no. 934"
   }
 };
-Object.assign(REVIEWED_100_PORTRAITS,{
- ISABPORTBORG:{tipo:'Contemporary workshop portrait',obra:'Portrait of Isabella of Portugal',autor:'Workshop of Rogier van der Weyden',fecha:'c. 1450',institucion:'J. Paul Getty Museum, Los Angeles · 78.PB.3'},
- GIOVBANDENERE:{tipo:'Posthumous portrait',obra:'Portrait of Giovanni delle Bande Nere',autor:'Gian Paolo Pace, called l’Olmo',fecha:'1545',institucion:'Uffizi Galleries, Florence · inv. 1890, no. 934'}
-});

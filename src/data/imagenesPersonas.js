@@ -1,3 +1,4 @@
+import {VISCONTI_SFORZA_IMAGES} from './imagenesPersonasViscontiSforza.js';
 import {IMAGENES_ART_REVIEW} from './imagenesPersonasArtReview.js';
 import {IMAGENES_HUNGRIA} from './imagenesPersonasHungria.js';
 import {IMAGENES_PORTUGAL_NAVARRA} from './imagenesPersonasPortugal.js';
@@ -492,21 +493,7 @@ export const IMAGENES_PERSONAS = {
     derechosUrl: "https://creativecommons.org/publicdomain/mark/1.0/",
   },
 
-  CATASFOR: {
-    archivo: "/personas-img/CATASFOR.webp",
-    encuadre: "50% 22%",
-    zoom: 1,
-    alt: "Retrato atribuido a Catalina Sforza",
-    tipo: "Retrato atribuido",
-    obra: "Lady of the Jasmin (identificada a veces con Caterina Sforza)",
-    autor: "Lorenzo di Credi",
-    fecha: "s. XV",
-    institucion: "Wikimedia Commons",
-    fuente: "Wikimedia Commons",
-    fuenteUrl: "https://commons.wikimedia.org/wiki/File:Caterina_Sforza_incut.jpg",
-    derechos: "Dominio público · PDM 1.0",
-    derechosUrl: "https://creativecommons.org/publicdomain/mark/1.0/",
-  },
+
 
     FRAN1FRA: {
     archivo: "/personas-img/FRAN1FRA.webp",
@@ -3114,6 +3101,7 @@ export const IMAGENES_PERSONAS = {
     derechosUrl: "https://creativecommons.org/publicdomain/mark/1.0/",
   },
   ...IMAGENES_HUNGRIA,
+  ...VISCONTI_SFORZA_IMAGES,
 };
 
 export default IMAGENES_PERSONAS;

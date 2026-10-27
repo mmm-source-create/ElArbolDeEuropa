@@ -1,8 +1,10 @@
+import {REVIEWED_THIRD_100_NAMES} from './reviewedThird100Names.js';
 import {REVIEWED_NEXT_100_NAMES} from './reviewedNext100Names.js';
 import {REVIEWED_100_NAMES} from './reviewed100Names.js';
 import {IBERIAN_NAME_REVIEWS} from './iberianNameReviews.js';
 // V5.36 · Explicit editorial decisions; prior names remain searchable and URLs stay stable.
 export const PERSON_NAME_REVIEWS = [
+  ...REVIEWED_THIRD_100_NAMES,
   ...REVIEWED_NEXT_100_NAMES,
   ...REVIEWED_100_NAMES,
   ...IBERIAN_NAME_REVIEWS,

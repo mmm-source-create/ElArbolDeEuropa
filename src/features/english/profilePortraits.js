@@ -1,9 +1,12 @@
+import {VISCONTI_SFORZA_PORTRAITS} from './viscontiSforzaPortraits.js';
+import {THIRD_100_PORTRAITS} from './third100Portraits.js';
 import {REVIEWED_NEXT_100_PORTRAITS} from './reviewedNext100Portraits.js';
 import {REVIEWED_100_PORTRAITS} from './reviewed100Portraits.js';
 import {IBERIAN_PORTRAITS} from './iberianPortraits.js';
 import {PORTUGAL_NAVARRE_PORTRAITS} from './portugalPortraits.js';
 // Artwork and licence URLs are inherited unchanged from the original credits.
 export const ENGLISH_PROFILE_PORTRAITS = {
+ ...THIRD_100_PORTRAITS,
  ...REVIEWED_NEXT_100_PORTRAITS,
   ...REVIEWED_100_PORTRAITS,
   ...PORTUGAL_NAVARRE_PORTRAITS,
@@ -54,4 +57,5 @@ export const ENGLISH_PROFILE_PORTRAITS = {
   CATHERINE2RUS:{tipo:'Historical portrait',obra:'Portrait of Catherine II',autor:'After Alexander Roslin',fecha:'1780s',institucion:'Kunsthistorisches Museum, Vienna'},
   FRED2PRUSSIA:{tipo:'Historical portrait',obra:'King Frederick II of Prussia',autor:'Anton Graff',fecha:'1781–1786'},
   SULEIMAN1OSM:{tipo:'Historical portrait',obra:'Sultan Suleiman in profile',autor:'Circle of Titian',fecha:'1530s',institucion:'Kunsthistorisches Museum, Vienna'},
+  ...VISCONTI_SFORZA_PORTRAITS,
 };
