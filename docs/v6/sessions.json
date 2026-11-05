@@ -1,0 +1,39 @@
+{
+  "sessions": [
+    {
+      "batch": 1,
+      "threadId": "01a17faa-9f30-7aa3-b39a-6f392b865edf",
+      "hostId": "local"
+    },
+    {
+      "batch": 2,
+      "threadId": "01a17faa-b8b9-7082-8f58-337ae1b64b5c",
+      "hostId": "local"
+    },
+    {
+      "batch": 3,
+      "threadId": "01a17faa-f60f-7513-bcf2-d9ec7820a672",
+      "hostId": "local"
+    },
+    {
+      "batch": 4,
+      "threadId": "01a17fab-3652-78f0-ac1a-c07e6c72c9bc",
+      "hostId": "local"
+    },
+    {
+      "batch": 5,
+      "threadId": "01a17fab-54e0-7ea3-b349-133d9c37f40b",
+      "hostId": "local"
+    },
+    {
+      "batch": 6,
+      "threadId": "01a17fab-75d7-7a51-9117-4f77b724e787",
+      "hostId": "local"
+    }
+  ],
+  "integrationSession": {
+    "batch": 7,
+    "threadId": "01a17fad-181a-7da2-aeb8-7dd7c1c7a72d",
+    "hostId": "local"
+  }
+}

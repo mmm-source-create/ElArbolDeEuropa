@@ -341,7 +341,8 @@ export const IBERIAN_ENGLISH_PROFILES = {
       "Edward the Eloquent",
       "Duarte of Portugal",
       "Edward I of Portugal",
-      "Duarte I"
+      "Duarte I",
+      "Duarte"
     ]
   },
   "ALF5PORT": {

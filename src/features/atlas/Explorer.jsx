@@ -4,7 +4,6 @@ import {translatedEquivalent} from '../english/routes.js';
 import { familyIndex, familyIds, atlasIdsFromLocation, writeAtlasIds, isolatedPopes, groupIsolatedPopes } from './progressiveAtlas.js';
 import { safeStoryReturn, storyPeopleIds, saveStoryProgress } from '../stories/storyModel.js';
 import {resolveStoryNavigation, writeStoryNavigation} from './storyNavigation.js';
-import EnglishPage from "../english/EnglishPage.jsx";
 import "../../styles/app.css";
 import React, { useState, useRef, useEffect, useLayoutEffect, useCallback, useMemo } from "react";
 import {reinadosActivos} from "../../domain/government/reigns.js";
@@ -40,6 +39,7 @@ import { useFavorites } from "./useFavorites.js";
 import { useShareStatus } from "./useShareStatus.js";
 import { useDragScroll } from "./useDragScroll.js";
 import { hasDocumentedClaim } from "../../evidence/claims.js";
+import {applyEnglishPersonPresentation,englishLabel} from '../english/v6/atlasPresentation.js';
 
 const SEARCH_TEXT_BY_ID = Object.fromEntries(PERSONAS.map(persona => [persona.id, normalizaTexto([textoBusquedaPersona(persona), nombrePrincipal(persona)].join(" "))]));
 
@@ -61,13 +61,14 @@ export default function Explorer({ initialPanel = null, treeBase: TREE_BASE, loa
   const scrollRef = useRef(null);
   const tlScrollRef = useRef(null);
   const timelineListRef = useRef(null);
-  // The English homepage can launch the bilingual guide inside the Atlas.
-  // Keep this entry flag while practice actions update the URL.
-  const [tutorialEntry] = useState(() => typeof window !== "undefined" && new URLSearchParams(window.location.search).get("tutorial") === "1");
   const [locale, setLocale] = useState(() => {
     if (typeof window === "undefined") return DEFAULT_LOCALE;
     return localeDesdePath(window.location.pathname);
   });
+  if (locale === 'en') {
+    applyEnglishPersonPresentation(PERSONAS);
+    for (const person of PERSONAS) SEARCH_TEXT_BY_ID[person.id]=normalizaTexto([textoBusquedaPersona(person),nombrePrincipal(person)].join(' '));
+  }
   const [query, setQuery] = useState(savedSession?.query ?? "");
   const [territorialFilterMode,setTerritorialFilterMode]=useState(savedSession?.territorialFilterMode||'associated');
   const [territorios, setTerritorios] = useState(savedSession?.territorios ?? []);
@@ -202,19 +203,21 @@ export default function Explorer({ initialPanel = null, treeBase: TREE_BASE, loa
           || t("meta.defaultDescription");
 
     const canonicalBase = SITE.publicUrl || window.location.origin;
-    let canonicalPath = isEnglish ? "/en/" : "/es/";
-    if (!isEnglish) {
-      canonicalPath = seleccion
-        ? rutaEntidadLocalizada("es", "persona", slugPersonaPorLocale(seleccion, "es"))
-        : historiaActiva
-          ? rutaEntidadLocalizada("es", "historia", slugPublico(historiaActiva.titulo))
-          : dinastiaUnica
-            ? rutaEntidadLocalizada("es", "dinastia", slugPublico(dinastiaUnica))
-            : territorioUnico
-              ? rutaEntidadLocalizada("es", "territorio", slugPublico(territorioUnico))
-              : "/es/";
-    }
-    if(atlasScene === "europa"&&!isEnglish)canonicalPath=`/es/?atlas=1&escena=europa&anio=${anioGlobal ?? 1500}`;
+    const spanishEntityPath = seleccion
+      ? rutaEntidadLocalizada("es", "persona", slugPersonaPorLocale(seleccion, "es"))
+      : historiaActiva
+        ? rutaEntidadLocalizada("es", "historia", slugPublico(historiaActiva.titulo))
+        : dinastiaUnica
+          ? rutaEntidadLocalizada("es", "dinastia", slugPublico(dinastiaUnica))
+          : territorioUnico
+            ? rutaEntidadLocalizada("es", "territorio", slugPublico(territorioUnico))
+            : "/es/";
+    let canonicalPath = isEnglish
+      ? (seleccion
+          ? rutaEntidadLocalizada("en", "persona", slugPersonaPorLocale(seleccion, "en"))
+          : translatedEquivalent(spanishEntityPath, "en") || "/en/")
+      : spanishEntityPath;
+    if(atlasScene === "europa")canonicalPath=`/${isEnglish?'en':'es'}/?atlas=1&escena=europa&anio=${anioGlobal ?? 1500}`;
     const canonicalUrl = new URL(canonicalPath, canonicalBase).toString();
 
     document.title = pageTitle;
@@ -230,16 +233,14 @@ export default function Explorer({ initialPanel = null, treeBase: TREE_BASE, loa
     setMetaContent('meta[name="twitter:description"]', { name: "twitter:description" }, description);
     ensureCanonical(canonicalUrl);
 
-    const esPath = atlasScene === "europa" ? canonicalPath : seleccion
-      ? rutaEntidadLocalizada("es", "persona", slugPersonaPorLocale(seleccion, "es"))
-      : "/es/";
+    const esPath = atlasScene === "europa" ? `/es/?atlas=1&escena=europa&anio=${anioGlobal ?? 1500}` : spanishEntityPath;
     const enPersonSlug = atlasScene !== "europa" && seleccion ? slugPersonaPorLocale(seleccion, "en") : null;
     const alternates = [
       { hreflang: "es", href: new URL(esPath, canonicalBase).toString() },
       { hreflang: "x-default", href: new URL(esPath, canonicalBase).toString() },
     ];
     if (isEnglish || (!seleccion && !historiaActiva && !dinastiaUnica && !territorioUnico)) {
-      alternates.push({ hreflang: "en", href: new URL("/en/", canonicalBase).toString() });
+      alternates.push({ hreflang: "en", href: new URL(isEnglish?canonicalPath:"/en/", canonicalBase).toString() });
     } else if (enPersonSlug) {
       alternates.push({ hreflang: "en", href: new URL(rutaEntidadLocalizada("en", "persona", enPersonSlug), canonicalBase).toString() });
     }
@@ -794,11 +795,11 @@ export default function Explorer({ initialPanel = null, treeBase: TREE_BASE, loa
 
   const actualizarUrlPersonaSeleccionada = (persona, { reemplazar = false, quitarPanorama = false } = {}) => {
     if (!persona || typeof window === "undefined" || historyPopRef.current) return;
-    const slug = slugPersonaPorLocale(persona, "es");
+    const slug = slugPersonaPorLocale(persona, locale);
     if (!slug) return;
     const url = new URL(window.location.href);
     if (historiaActiva) url.searchParams.set("persona", persona.id);
-    else {url.pathname = rutaEntidadLocalizada("es", "persona", slug);url.searchParams.delete("persona");}
+    else {url.pathname = rutaEntidadLocalizada(locale, "persona", slug);url.searchParams.delete("persona");}
     if(quitarPanorama){url.searchParams.delete("escena");if(url.searchParams.get("panel")==="europa")url.searchParams.delete("panel");}
     url.searchParams.set("atlas", "1");
     writeAtlasIds(url, atlasIds);
@@ -814,7 +815,7 @@ export default function Explorer({ initialPanel = null, treeBase: TREE_BASE, loa
     if (!persona) return;
     setHovered(null);
     setSeleccion(persona);
-    if(abrirAtlas){setAtlasScene("atlas");setReproduciendoHistoria(false);requestAnimationFrame(()=>{window.scrollTo({top:0,behavior:'instant'});document.querySelector('[aria-label="Modo de exploración"] button[aria-pressed="true"]')?.focus({preventScroll:true});});}
+    if(abrirAtlas){setAtlasScene("atlas");setReproduciendoHistoria(false);requestAnimationFrame(()=>{window.scrollTo({top:0,behavior:'instant'});document.querySelector('.atlas-scene-switch button[aria-pressed="true"]')?.focus({preventScroll:true});});}
     if (registrar) registrarHistorialPersona(id);
     actualizarUrlPersonaSeleccionada(persona, { reemplazar: reemplazarUrl, quitarPanorama: abrirAtlas });
     if (centrar) {
@@ -844,7 +845,7 @@ export default function Explorer({ initialPanel = null, treeBase: TREE_BASE, loa
     setSeleccion(null);
     if (typeof window === "undefined") return;
     const url = new URL(window.location.href);
-    url.pathname = "/es/";
+    url.pathname = locale === 'en' ? "/en/" : "/es/";
     url.searchParams.delete("persona");
     writeAtlasIds(url, atlasIds);
     window.history.pushState({ eade: "atlas" }, "", `${url.pathname}${url.search}${url.hash}`);
@@ -957,7 +958,7 @@ export default function Explorer({ initialPanel = null, treeBase: TREE_BASE, loa
       } else if (ruta?.tipo === "historia") {
         const historia = HISTORIAS.find((item) => slugPublico(item.titulo) === ruta.slug || slugPublico(item.id) === ruta.slug);
         if (historia?.disponible) window.setTimeout(() => iniciarHistoria(historia.id), 0);
-      } else if (["/", "/es", "/es/"].includes(window.location.pathname)) {
+      } else if (["/", "/es", "/es/", "/en", "/en/"].includes(window.location.pathname)) {
         setHistoriaActivaId(null);
         setHistoriaPasoIndex(0);
         historiaSnapshotRef.current = null;
@@ -1036,8 +1037,8 @@ export default function Explorer({ initialPanel = null, treeBase: TREE_BASE, loa
         vistasActivas, seleccionId: seleccion?.id || null, timelineMode, eventoSeleccionadoId,
         mode, connectionIds, connectionCriterion, origen, destino, focoId, focoAlcance, collapsedIds, compareRouteIndex,
         rutaAnterior: typeof window !== "undefined"
-          ? (historiaAbiertaDesdeEnlace ? (returnPath || "/es/historias") : `${window.location.pathname}${window.location.search}${window.location.hash}`)
-          : "/es/",
+          ? (historiaAbiertaDesdeEnlace ? (returnPath || (locale==='en'?'/en/stories':'/es/historias')) : `${window.location.pathname}${window.location.search}${window.location.hash}`)
+          : (locale==='en'?'/en/':"/es/"),
         historiaAbiertaDesdeEnlace,
       };
     }
@@ -1075,7 +1076,7 @@ export default function Explorer({ initialPanel = null, treeBase: TREE_BASE, loa
     // Closing the guide keeps the current selection, year, view and viewport.
     const url = new URL(window.location.href);
     for (const key of ['historia','paso','regreso','resaltar']) url.searchParams.delete(key);
-    url.pathname = '/es/';
+    url.pathname = locale==='en'?'/en/':'/es/';
     url.searchParams.set('atlas','1');
     url.searchParams.set('vista',vistaPrincipal);
     window.history.replaceState({eade:'atlas'}, '', url.pathname+url.search);
@@ -1092,7 +1093,7 @@ export default function Explorer({ initialPanel = null, treeBase: TREE_BASE, loa
       url.searchParams.set('vista',vistaPrincipal);
       return writeStoryNavigation(url,historiaActiva,historiaPasoIndex,storyReturn,storyPeopleIds(historiaActiva).filter(id=>BY_ID[id])).href;
     }
-    url.pathname = rutaEntidadLocalizada("es", "persona", slugPersonaPorLocale(seleccion, "es"));
+    url.pathname = rutaEntidadLocalizada(locale, "persona", slugPersonaPorLocale(seleccion, locale));
     url.search = "";
     writeAtlasIds(url, focoSet ? visibleIds : atlasIds);
     url.hash = "";
@@ -1107,7 +1108,7 @@ export default function Explorer({ initialPanel = null, treeBase: TREE_BASE, loa
     relaciones.forEach((valor) => url.searchParams.append("relacion", valor));
     if (soloDocumentados) url.searchParams.set("evidencia", "1");
     return url.toString();
-  }, [historiaActiva, historiaPasoIndex, storyReturn, focoSet, visibleIds, atlasIds, seleccion, mode, connectionIds, connectionCriterion, anioGlobal, vistaPrincipal, query, territorios, dinastias, titulos, siglos, relaciones, soloDocumentados,territorialFilterMode]);
+  }, [historiaActiva, historiaPasoIndex, storyReturn, focoSet, visibleIds, atlasIds, seleccion, mode, connectionIds, connectionCriterion, anioGlobal, vistaPrincipal, query, territorios, dinastias, titulos, siglos, relaciones, soloDocumentados,territorialFilterMode,locale]);
 
   const compartirPersona = useCallback(async () => {
     const enlace = construirEnlaceCompartido();
@@ -1121,26 +1122,26 @@ export default function Explorer({ initialPanel = null, treeBase: TREE_BASE, loa
       if (mode !== 'foco') window.history.replaceState({}, "", enlace);
       if (navigator.share) {
         await navigator.share(payload);
-        mostrarEstadoCompartir("Enlace compartido");
+        mostrarEstadoCompartir(locale==='en'?"Link shared":"Enlace compartido");
         return;
       }
       if (navigator.clipboard?.writeText) {
         await navigator.clipboard.writeText(enlace);
-        mostrarEstadoCompartir("Enlace copiado");
+        mostrarEstadoCompartir(locale==='en'?"Link copied":"Enlace copiado");
         return;
       }
-      window.prompt("Copia este enlace:", enlace);
-      mostrarEstadoCompartir("Enlace preparado");
+      window.prompt(locale==='en'?"Copy this link:":"Copia este enlace:", enlace);
+      mostrarEstadoCompartir(locale==='en'?"Link ready":"Enlace preparado");
     } catch (error) {
       if (error?.name === "AbortError") return;
       try {
         await navigator.clipboard?.writeText?.(enlace);
-        mostrarEstadoCompartir("Enlace copiado");
+        mostrarEstadoCompartir(locale==='en'?"Link copied":"Enlace copiado");
       } catch {
-        window.prompt("Copia este enlace:", enlace);
+        window.prompt(locale==='en'?"Copy this link:":"Copia este enlace:", enlace);
       }
     }
-  }, [construirEnlaceCompartido, seleccion, mostrarEstadoCompartir, mode]);
+  }, [construirEnlaceCompartido, seleccion, mostrarEstadoCompartir, mode,locale]);
 
   useEffect(() => {
     if (!ready || urlStateLoadedRef.current || typeof window === "undefined") return;
@@ -1308,6 +1309,7 @@ export default function Explorer({ initialPanel = null, treeBase: TREE_BASE, loa
       <PersonBox
         key={id}
         p={p}
+        locale={locale}
         year={anioGlobal}
         cls={cls}
         accent={ACCENTS[p.dinastia] || ACCENTS[getCategoriaDinastía(p.dinastia)] || "#71717A"}
@@ -1366,40 +1368,41 @@ export default function Explorer({ initialPanel = null, treeBase: TREE_BASE, loa
     dinastias.forEach((valor) => lista.push(valor));
     titulos.forEach((id) => {
       const categoria = opciones.titulos.find((item) => item.id === id);
-      lista.push(categoria?.label || id);
+      lista.push(locale==='en'?englishLabel(categoria?.label || id):(categoria?.label || id));
     });
     siglos.forEach((valor) => lista.push(valor === SIN_FECHA ? "Fechas incompletas" : `s. ${nRomano[valor] || valor}`));
     relaciones.forEach((id) => {
       const filtro = FILTROS_RELACION.find((item) => item.id === id);
       lista.push(filtro?.label || id);
     });
-    if (soloFavoritos) lista.push("Favoritos");
-    if (soloDocumentados) lista.push("Con datos documentados");
+    if (soloFavoritos) lista.push(locale==='en'?"Favourites":"Favoritos");
+    if (soloDocumentados) lista.push(locale==='en'?"With documented data":"Con datos documentados");
     return lista;
-  }, [queryTrim, query, territorios, dinastias, titulos, siglos, relaciones, soloFavoritos, soloDocumentados, opciones.titulos]);
+  }, [queryTrim, query, territorios, dinastias, titulos, siglos, relaciones, soloFavoritos, soloDocumentados, opciones.titulos,locale]);
 
   const cambiarIdioma = useCallback((siguiente) => {
     if (typeof window === "undefined" || !["es", "en"].includes(siguiente) || siguiente === locale) return;
-    const destino = translatedEquivalent(window.location.pathname, siguiente) || (siguiente === "en" ? "/en/" : "/es/");
-
-    window.location.assign(destino);
+    const current = new URL(window.location.href);
+    const atlas = current.searchParams.get('atlas') === '1';
+    const path = atlas
+      ? (siguiente === 'en' ? '/en/' : '/es/')
+      : translatedEquivalent(current.pathname, siguiente) || (siguiente === "en" ? "/en/" : "/es/");
+    window.location.assign(`${path}${atlas ? current.search : ''}${current.hash}`);
   }, [locale]);
-
-  if (locale === "en" && !tutorialEntry) return <EnglishPage />;
 
   const getExportSelection = (scope) => {
     let ids, edges, title;
-    if (scope === 'branch') { ids = seleccion ? familyIds(familyData, seleccion.id) : []; title = seleccion ? `Familia de ${seleccion.nombre}` : 'Familia'; }
+    if (scope === 'branch') { ids = seleccion ? familyIds(familyData, seleccion.id) : []; title = seleccion ? `${locale==='en'?'Family of':'Familia de'} ${seleccion.nombre}` : (locale==='en'?'Family':'Familia'); }
     else if (scope === 'visible') {
       const el=scrollRef.current;
       ids=el?visibleIds.filter(id=>{const p=positions[id];return p&&p.x+p.w>=el.scrollLeft/zoom&&p.x<=(el.scrollLeft+el.clientWidth)/zoom&&p.y+p.h>=el.scrollTop/zoom&&p.y<=(el.scrollTop+el.clientHeight)/zoom;}):[];
-      title='Encuadre visible del Atlas';
+      title=locale==='en'?'Visible Atlas frame':'Encuadre visible del Atlas';
     }
-    else if (mode === 'conexion' && connectionSet) { ids = connectionResult.ids; edges = connectionResult.edges; title = 'Conexión entre personas'; }
-    else if (mode === 'compare') { ids = comparePath || []; title = 'Comparación de parentesco'; }
-    else { ids = atlasIds ?? visibleIds; title = seleccion ? `Selección de ${seleccion.nombre}` : 'Selección del Atlas'; }
+    else if (mode === 'conexion' && connectionSet) { ids = connectionResult.ids; edges = connectionResult.edges; title = locale==='en'?'Connection between people':'Conexión entre personas'; }
+    else if (mode === 'compare') { ids = comparePath || []; title = locale==='en'?'Kinship comparison':'Comparación de parentesco'; }
+    else { ids = atlasIds ?? visibleIds; title = seleccion ? `${locale==='en'?'Selection for':'Selección de'} ${seleccion.nombre}` : (locale==='en'?'Atlas selection':'Selección del Atlas'); }
 
-    return {people:ids.map(id=>BY_ID[id] ? {...BY_ID[id],slug:slugPersonaPorLocale(BY_ID[id], "es")} : null).filter(Boolean),edges:edges || selectionEdges(graph,ids),gen,terminals:mode==='conexion'?connectionIds:[seleccion?.id].filter(Boolean),title,url:mode==='conexion'?new URL(connectionUrl(connectionIds,connectionCriterion), window.location.origin).href:(construirEnlaceCompartido() || window.location.href)};
+    return {people:ids.map(id=>BY_ID[id] ? {...BY_ID[id],slug:slugPersonaPorLocale(BY_ID[id], locale)} : null).filter(Boolean),edges:edges || selectionEdges(graph,ids),gen,terminals:mode==='conexion'?connectionIds:[seleccion?.id].filter(Boolean),title,url:mode==='conexion'?new URL(connectionUrl(connectionIds,connectionCriterion,locale), window.location.origin).href:(construirEnlaceCompartido() || window.location.href)};
   };
 
   const changeAtlasScope = (next, { remember = true, center = null } = {}) => {

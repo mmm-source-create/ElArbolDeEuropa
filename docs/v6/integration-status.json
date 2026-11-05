@@ -1,0 +1,48 @@
+{
+  "version": "V6",
+  "updated": "2026-11-05",
+  "branch": "codex/v6-english-completion",
+  "baselineCommit": "935693e73e9734453a6c4ca31dfb90a83b14a32f",
+  "integration": {
+    "status": "complete",
+    "sharedInterfaces": "complete",
+    "contentBatchesReady": 6,
+    "contentBatchesRequired": 6,
+    "releaseVersion": "6.0.0"
+  },
+  "coverage": {
+    "people": { "expected": 2763, "verified": 2763 },
+    "dynasties": { "expected": 519, "verified": 519 },
+    "territories": { "expected": 1041, "verified": 1041 },
+    "availableStories": { "expected": 22, "verified": 22 },
+    "plannedStoryCards": { "expected": 9, "verified": 9 },
+    "annualAndPersonalMaps": { "expected": 601, "verified": 601 }
+  },
+  "completed": [
+    "Confirmed shared branch and baseline",
+    "Preserved untracked dist 2 directory",
+    "Captured focused English, routing, settings and story-navigation test baseline",
+    "Enabled the English Atlas route without requiring the tutorial flag",
+    "Removed links that forced English readers into the Spanish Atlas",
+    "Preserved Atlas query state while changing language",
+    "Integrated and audited all six English content batches",
+    "Completed English Atlas, Challenge, profiles, stories and project pages",
+    "Generated 4,610 English routes and 9,210 static profile pages",
+    "Validated V6 naming, runtime content and English route coverage",
+    "Preserved the V5 public regression gate for 4,600 legacy routes while validating 4,610 English routes through the V6 and SSG audits"
+  ],
+  "pending": [],
+  "validation": {
+    "focusedBaselineTests": { "passed": 27, "failed": 0 },
+    "fullTests": { "passed": 709, "failed": 0 },
+    "build": "passed",
+    "ssg": { "passed": true, "profiles": 9210, "englishPaths": 4610, "networkRequests": 0 },
+    "historicalRegression": "passed",
+    "publicRegression": "passed",
+    "visual": {
+      "status": "passed_with_atlas_performance_note",
+      "verified": ["English home", "Challenge and Dinastle entry", "English navigation and footer"],
+      "note": "The full Atlas dataset exceeded the in-app browser automation timeout while loading; its routes, copy, filters, export paths and generated output are covered by automated tests and SSG audits."
+    }
+  }
+}

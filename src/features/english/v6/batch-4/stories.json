@@ -1,0 +1,499 @@
+{
+  "emperadores": {
+    "enSlug": "emperors",
+    "content": {
+      "id": "emperadores",
+      "titulo": "Emperors",
+      "subtitulo": "From the Hohenstaufen to revolutionary Europe",
+      "disponible": true,
+      "descripcion": "A journey through the elective crown of the Holy Roman Empire: from Frederick II’s universal ambitions to the Interregnum, the Golden Bull, the rise of the Habsburgs and the House of Habsburg-Lorraine on the threshold of 1800.",
+      "pasos": [
+        {
+          "anio": 1220,
+          "persona": "FED2HOH",
+          "personas": [
+            "FED2HOH",
+            "OTTO4HRE"
+          ],
+          "titulo": "Frederick II: an emperor who still thinks in universal terms",
+          "texto": "At the beginning of the thirteenth century, the imperial title still carried a universal ambition tied to the Roman legacy. Frederick II ruled Germany, Sicily and Italy and remained in constant conflict with the papacy. His power appeared immense, but it depended on a network of princes, cities and rights that no emperor controlled completely."
+        },
+        {
+          "anio": 1254,
+          "persona": "CONRADO4HOH",
+          "personas": [
+            "FED2HOH",
+            "CONRADO4HOH",
+            "GUILLERMOHOLANDA",
+            "RICARDOCORNUALLES",
+            "ALF10"
+          ],
+          "eventoId": "INTERREGNO_IMPERIAL_1250",
+          "titulo": "When a dynasty is absent, the Empire’s true nature emerges",
+          "texto": "The fall of the Hohenstaufen opened decades of rival elections. The princes could choose candidates from different houses and kingdoms, including William of Holland, Richard of Cornwall and Alfonso X of Castile. The Great Interregnum exposed the weakness of central power."
+        },
+        {
+          "anio": 1273,
+          "persona": "ROD1HAB",
+          "personas": [
+            "ROD1HAB",
+            "OTAK2"
+          ],
+          "eventoId": "RODOLFO_1273",
+          "titulo": "Rudolf I: the Habsburgs enter the stage",
+          "texto": "The electors chose Rudolf of Habsburg, a count far less threatening than the great neighbouring kings. Their calculation only partly succeeded: Rudolf defeated Ottokar II of Bohemia and placed Austria and Styria in his family’s hands. Habsburg hegemony had not yet begun, but its territorial foundation had been laid."
+        },
+        {
+          "anio": 1312,
+          "persona": "ENRIQ7",
+          "personas": [
+            "ENRIQ7",
+            "LUIS4"
+          ],
+          "titulo": "Luxembourg and Wittelsbach: the throne remains open",
+          "texto": "Henry VII of Luxembourg secured an imperial coronation; after his death, Louis IV of Bavaria again demonstrated that no house possessed the title by hereditary right. Imperial dignity was elective, and several dynasties competed for the support of the prince-electors."
+        },
+        {
+          "anio": 1356,
+          "persona": "CARLOS4",
+          "personas": [
+            "CARLOS4",
+            "WEN4LUX",
+            "SEGIS1"
+          ],
+          "eventoId": "BULA_ORO",
+          "titulo": "Charles IV turns election into a constitution",
+          "texto": "The Golden Bull defined the seven great electors and the procedure for electing the King of the Romans. It recognised and ordered the powers of the prince-electors, giving the Empire an extraordinarily durable structure."
+        },
+        {
+          "anio": 1433,
+          "persona": "SEGIS1",
+          "personas": [
+            "SEGIS1",
+            "ALB2HABS"
+          ],
+          "titulo": "Sigismund: the last great Luxembourg emperor",
+          "texto": "Sigismund combined the crowns of Hungary, Bohemia and Germany and attained the imperial dignity. His succession, however, passed through his daughter to Albert II of Habsburg. The Empire’s dynastic centre began to shift decisively."
+        },
+        {
+          "anio": 1452,
+          "persona": "FED3HAB",
+          "personas": [
+            "FED3HAB",
+            "MAXIM1"
+          ],
+          "eventoId": "HABSBURGO_1452",
+          "titulo": "Frederick III: Habsburg patience",
+          "texto": "Frederick III consolidated the Habsburg position through dynastic continuity and marriage alliances. From his coronation onward, the crown remained almost continuously in Habsburg hands. The duration of his rule, inheritances and marriages strengthened his house."
+        },
+        {
+          "anio": 1495,
+          "persona": "MAXIM1",
+          "personas": [
+            "MAXIM1",
+            "MARIABORG"
+          ],
+          "eventoId": "REFORMA_IMPERIAL_1495",
+          "titulo": "Maximilian I: reforming the Empire and multiplying inheritances",
+          "texto": "Maximilian promoted institutional reform while his marriage to Mary of Burgundy brought the Low Countries and the Burgundian inheritance into the Habsburg network. The emperor was still not an absolute monarch, but his dynasty was beginning to operate on a continental scale."
+        },
+        {
+          "anio": 1519,
+          "persona": "CARLOS5",
+          "personas": [
+            "CARLOS5",
+            "MAXIM1",
+            "FRED3SAX"
+          ],
+          "eventoId": "ELECCION_CARLOS5_1519",
+          "titulo": "Charles V: an election that seems to create a universal monarchy",
+          "texto": "Grandson of Maximilian and heir to Castile, Aragon and Burgundy, Charles competed for and won the imperial crown. He joined the Habsburg inheritance, the Spanish crowns and the Burgundian territories, then added the imperial dignity. Yet this accumulation of crowns also made it impossible to govern every European problem as though it were one."
+        },
+        {
+          "anio": 1556,
+          "persona": "FERN1EMP",
+          "personas": [
+            "CARLOS5",
+            "FERN1EMP",
+            "FEL2ESP"
+          ],
+          "eventoId": "ABDICACION_CARLOS",
+          "titulo": "Charles’s inheritance is divided",
+          "texto": "Charles transferred the Spanish and Burgundian realms to Philip II, while Ferdinand I received the Austrian branch and imperial continuity. From this point, speaking of “the Habsburgs” requires distinguishing two related networks: Madrid and Vienna."
+        },
+        {
+          "anio": 1619,
+          "persona": "FERN2EMP",
+          "personas": [
+            "FERN2EMP",
+            "FED5PALBOH"
+          ],
+          "eventoId": "TREINTA_ANOS",
+          "titulo": "Ferdinand II tries to reinforce crown and confession",
+          "texto": "The Bohemian revolt and the rival election of Frederick V of the Palatinate triggered a war that soon exceeded its initial religious conflict. Ferdinand II prevailed in Bohemia, but his attempt to rebuild imperial authority eventually drew half of Europe onto the battlefield."
+        },
+        {
+          "anio": 1648,
+          "persona": "FERN3HRE",
+          "personas": [
+            "FERN3HRE",
+            "LEOP1HRE"
+          ],
+          "eventoId": "WESTFALIA",
+          "titulo": "Westphalia: the emperor remains, but the Empire changes",
+          "texto": "The Peace of Westphalia confirmed the continuity of the Holy Roman Empire while altering the balance between the emperor and the imperial estates. It made the Empire’s plurality more explicit: its states retained broad powers, and imperial politics depended still more on negotiation, law and equilibrium among princes. The Habsburgs kept their hereditary lands and the imperial dignity within the agreements and competences of the imperial order."
+        },
+        {
+          "anio": 1711,
+          "persona": "CARLOS6HRE",
+          "personas": [
+            "LEOP1HRE",
+            "JOSE1HRE",
+            "CARLOS6HRE"
+          ],
+          "titulo": "Two brothers and one problem: succession",
+          "texto": "Leopold I left two sons who reached the throne. Joseph I died in 1711 without a male heir, and the crown passed to Charles VI. The dynasty that seemed to have solved the imperial succession discovered that its own biological continuity was again a European question."
+        },
+        {
+          "anio": 1713,
+          "persona": "CARLOS6HRE",
+          "personas": [
+            "CARLOS6HRE",
+            "MARIATERESAHAB"
+          ],
+          "eventoId": "PRAGMATICA_1713",
+          "titulo": "Charles VI prepares an heiress who cannot be emperor",
+          "texto": "The Pragmatic Sanction sought to ensure that a woman could inherit the Habsburg lands. Maria Theresa could rule Austria, Bohemia and Hungary, but the imperial crown remained reserved for an elected man. That distinction opened an enormous crisis in 1740."
+        },
+        {
+          "anio": 1742,
+          "persona": "CARLOS7HRE",
+          "personas": [
+            "CARLOS7HRE",
+            "MARIAAMALIAHAB1701",
+            "MARIATERESAHAB"
+          ],
+          "eventoId": "CARLOS7_1742",
+          "titulo": "Charles VII: a Wittelsbach attains the imperial dignity",
+          "texto": "Charles Albert of Bavaria, married to a daughter of Joseph I, exploited the succession crisis to obtain the imperial crown. A Wittelsbach occupied the throne for three years—powerful evidence that Habsburg hegemony was political and dynastic, never automatic in law."
+        },
+        {
+          "anio": 1745,
+          "persona": "FRAN1HRE",
+          "personas": [
+            "FRAN1HRE",
+            "MARIATERESAHAB",
+            "CARLOS7HRE"
+          ],
+          "eventoId": "FRANCISCO1_1745",
+          "titulo": "Habsburg-Lorraine: a new dynasty with an old name",
+          "texto": "After Charles VII died, Francis Stephen of Lorraine, Maria Theresa’s husband, was elected emperor. The Habsburg inheritance continued through the female line while the imperial dignity passed to her husband; their union created the House of Habsburg-Lorraine."
+        },
+        {
+          "anio": 1765,
+          "persona": "JOSE2HRE",
+          "personas": [
+            "JOSE2HRE",
+            "MARIATERESAHAB",
+            "FRAN1HRE"
+          ],
+          "eventoId": "JOSE2_1765",
+          "titulo": "Joseph II wants to govern faster than the Empire",
+          "texto": "Joseph II inherited the imperial dignity and later his mother’s lands. His reform programme sought administrative uniformity, religious toleration and the subordination of ecclesiastical corporations. It met limits in the distinct rights and institutions of the territories he ruled."
+        },
+        {
+          "anio": 1790,
+          "persona": "LEOP2HRE",
+          "personas": [
+            "JOSE2HRE",
+            "LEOP2HRE",
+            "MARIAANTONIETA"
+          ],
+          "eventoId": "REVOLUCION_FRANCESA_1789",
+          "titulo": "Leopold II inherits an Empire facing revolution",
+          "texto": "Leopold succeeded his brother just as the French Revolution threatened Europe’s dynastic order and their sister Marie Antoinette was trapped in Paris. The imperial problem was no longer only how to balance German princes, but how to answer a new idea of sovereignty."
+        },
+        {
+          "anio": 1792,
+          "persona": "FRAN2HRE",
+          "personas": [
+            "FRAN2HRE",
+            "LEOP2HRE",
+            "MARIAANTONIETA"
+          ],
+          "eventoId": "FRANCISCO2_1792",
+          "titulo": "Francis II and the Revolutionary Wars",
+          "texto": "Francis II ascended the throne in 1792 and immediately entered the age of revolutionary war. In 1800 the Holy Roman Empire retained its institutions while the French Revolutionary Wars transformed the balance among the German territories. Six centuries after Frederick II, the imperial title remained recognisable yet meant something entirely different."
+        }
+      ],
+      "colecciones": []
+    }
+  },
+  "condotieros": {
+    "enSlug": "the-condottiers",
+    "content": {
+      "id": "condotieros",
+      "titulo": "The Condottieri",
+      "subtitulo": "From mercenary companies to the Duchy of Milan",
+      "disponible": true,
+      "descripcion": "A journey through the captains of fortune who turned warfare into a profession, negotiated with republics and princes and, in the Sforza case, transformed military command into dynastic power.",
+      "pasos": [
+        {
+          "anio": 1363,
+          "persona": "HAWKWOOD",
+          "personas": [
+            "HAWKWOOD"
+          ],
+          "eventoId": "COMPANIA_BLANCA_1363",
+          "titulo": "War becomes a market",
+          "texto": "After the great campaigns of the Hundred Years’ War, veteran companies crossed the Alps and sold their experience to Italian cities and princes. John Hawkwood, known in Italy as Giovanni Acuto, became one of the most famous foreign captains and a model of the condottiero as both military commander and political actor."
+        },
+        {
+          "anio": 1379,
+          "persona": "ALBERICOBARB",
+          "personas": [
+            "ALBERICOBARB",
+            "HAWKWOOD"
+          ],
+          "eventoId": "BARBIANO_1379",
+          "titulo": "Italians learn the trade",
+          "texto": "Alberico da Barbiano represented a new generation of Italian captains. The condotta was no longer simply the hiring of a foreign company: a system of military schools, patronage networks and personal loyalties grew around leading commanders."
+        },
+        {
+          "anio": 1416,
+          "persona": "BRACCIOMONT",
+          "personas": [
+            "BRACCIOMONT",
+            "MUZIOSFOR"
+          ],
+          "titulo": "Bracceschi against Sforzeschi",
+          "texto": "Braccio da Montone and Muzio Attendolo Sforza embodied two rival networks of captains. Their men learned tactics, inherited contacts and formed professional networks that continued to confront one another under their disciples."
+        },
+        {
+          "anio": 1424,
+          "persona": "BRACCIOMONT",
+          "personas": [
+            "BRACCIOMONT",
+            "MUZIOSFOR",
+            "FRAN1SFOR",
+            "NICCPICC"
+          ],
+          "eventoId": "LAQUILA_1424",
+          "titulo": "1424: a generation changes",
+          "texto": "Muzio Attendolo drowned on campaign, while Braccio fell at the battle of L’Aquila. Men such as Francesco Sforza and Niccolò Piccinino took their place. The system survived its founders because companies, disciples and alliances were already a stable part of Italian politics."
+        },
+        {
+          "anio": 1432,
+          "persona": "CARMAGNOLA",
+          "personas": [
+            "CARMAGNOLA",
+            "FELMARVISC"
+          ],
+          "eventoId": "CARMAGNOLA_1432",
+          "titulo": "The employer also fears his general",
+          "texto": "Carmagnola first served Milan and then Venice. His career exposed the condotta’s central contradiction: a captain had to be powerful enough to win wars, but the more powerful he became, the more dangerous he appeared to his employer. Venice eventually accused him of treason and executed him."
+        },
+        {
+          "anio": 1438,
+          "persona": "NICCPICC",
+          "personas": [
+            "NICCPICC",
+            "FRAN1SFOR"
+          ],
+          "titulo": "Piccinino and Sforza: war as a career",
+          "texto": "Niccolò Piccinino, military heir to Braccio, and Francesco Sforza competed in the service of powers that rapidly shifted between alliance and hostility. The wars of Lombardy turned reputation, troops and contracts into political resources as important as noble title."
+        },
+        {
+          "anio": 1441,
+          "persona": "FRAN1SFOR",
+          "personas": [
+            "FRAN1SFOR",
+            "BLANMARVISC",
+            "FELMARVISC"
+          ],
+          "eventoId": "BODA_SFORZA_VISCONTI_1441",
+          "titulo": "A marriage is worth more than a victory",
+          "texto": "Francesco Sforza married Bianca Maria Visconti, daughter of Filippo Maria. The captain of fortune suddenly possessed something military contracts alone could not give him: a dynastic route to Milan."
+        },
+        {
+          "anio": 1450,
+          "persona": "FRAN1SFOR",
+          "personas": [
+            "FRAN1SFOR",
+            "BLANMARVISC"
+          ],
+          "eventoId": "SFORZA_DUQUE_1450",
+          "titulo": "The condottiero who becomes a prince",
+          "texto": "In 1450 Francesco Sforza entered Milan as duke. It was the clearest triumph of condottiero logic: military force, negotiation and marriage combined to create a dynasty that would rule one of Italy’s principal powers."
+        },
+        {
+          "anio": 1454,
+          "persona": "FRAN1SFOR",
+          "personas": [
+            "FRAN1SFOR",
+            "BARTCOLLEONI",
+            "GATTAMELATA"
+          ],
+          "eventoId": "LODI_1454",
+          "titulo": "Sforza’s success changes the rules",
+          "texto": "The Peace of Lodi stabilised the balance among the great Italian states. Paradoxically, Sforza’s triumph served as a warning: republics and princes now had even more reason to prevent another mercenary commander from accumulating power and becoming sovereign."
+        },
+        {
+          "anio": 1474,
+          "persona": "FEDMONTE",
+          "personas": [
+            "FEDMONTE",
+            "SIGISMALAT",
+            "BATTISTASFORZA"
+          ],
+          "titulo": "The Renaissance condottiero",
+          "texto": "Federico da Montefeltro combined his military profession with government and extraordinary cultural patronage. His rivalry with Sigismondo Pandolfo Malatesta shows how a condottiero could simultaneously be general, prince, diplomat and architect of a carefully fashioned public image."
+        },
+        {
+          "anio": 1502,
+          "persona": "CESARBORJA",
+          "personas": [
+            "CESARBORJA",
+            "VITELLOZZO"
+          ],
+          "eventoId": "SENIGALLIA_1502",
+          "titulo": "Senigallia: the prince against his captains",
+          "texto": "Vitellozzo Vitelli and other condottieri feared that Cesare Borgia would absorb them one by one and rebelled. Borgia appeared to reconcile with them, drew them to Senigallia and eliminated their leaders. The episode shows how far the territorial state was already seeking to tame or destroy the captains’ autonomy."
+        },
+        {
+          "anio": 1509,
+          "persona": "BARTALVIANO",
+          "personas": [
+            "BARTALVIANO",
+            "TRIVULZIO"
+          ],
+          "eventoId": "AGNADELLO_1509",
+          "titulo": "The Italian Wars change the scale",
+          "texto": "At Agnadello, Bartolomeo d’Alviano fought for Venice against a French army that also included Italian captains such as Gian Giacomo Trivulzio. Since 1494 the peninsula had become the theatre of foreign monarchies and large infantry and artillery forces: the old Italian military market could no longer define the scale of war by itself."
+        },
+        {
+          "anio": 1526,
+          "persona": "GIOVBANDENERE",
+          "personas": [
+            "GIOVBANDENERE",
+            "CATASFOR",
+            "GIOVPOPOLANO"
+          ],
+          "eventoId": "BANDENERE_1526",
+          "titulo": "Giovanni dalle Bande Nere: a symbolic ending",
+          "texto": "Giovanni de’ Medici, son of Caterina Sforza and Giovanni il Popolano, retained the personal prestige of the great captains of fortune. He died in 1526 from wounds caused by artillery. His figure forms a symbolic close to an age in which a captain’s name could carry almost as much weight as that of the state employing him."
+        },
+        {
+          "anio": 1535,
+          "persona": "FERRANTEGONZAGA",
+          "personas": [
+            "FERRANTEGONZAGA",
+            "FRAN2GONZAGA",
+            "GIOVBANDENERE"
+          ],
+          "titulo": "From captain of fortune to servant of a monarchy",
+          "texto": "Ferrante Gonzaga still belonged to the world of great Italian commanders, but his career within Charles V’s imperial system pointed in another direction. Military prestige endured, yet it was increasingly integrated into dynastic states, governorships and permanent armies. The classic condottiero gave way to the officer of a European power."
+        }
+      ],
+      "colecciones": []
+    }
+  },
+  "sebastian-marruecos": {
+    "enSlug": "sebastian-of-portugal-the-day-of-morocco",
+    "content": {
+      "id": "sebastian-marruecos",
+      "titulo": "Sebastian of Portugal: the Moroccan campaign",
+      "subtitulo": "Alcácer Quibir, the Battle of the Three Kings and the crisis of 1580",
+      "disponible": true,
+      "contexto": "The 1578 campaign brought together Sebastian’s crusading ambitions, Portuguese expansion in Morocco and a dispute over the Saadian throne.",
+      "descripcion": "An intervention on behalf of a deposed sultan became a disaster for the Portuguese monarchy. A dispute between Moroccan sultans, their competing alliances and the Portuguese army’s march inland converged at Alcácer Quibir.",
+      "fuentes": [
+        {
+          "titulo": "Portuguese Commission of Military History · Filipe I, the Taken Corts and dual monarchy",
+          "url": "https://www.defesa.gov.pt/pt/defesa/organizacao/comissoes/cphm/rphm/edicoes/ANO4/72024/Documents/10.pdf"
+        },
+        {
+          "titulo": "Revista da Armazo · A Marinha de D. Sebastião (32): To the day of Alcácer Quibir",
+          "url": "https://www.marinha.pt/conteudos_externos/Revista_Armada/2012/465/files/basic-html/page24.html"
+        },
+        {
+          "titulo": "Revista da Armazo · A Marinha de D. Sebastião (33): O an ellogo",
+          "url": "https://www.marinha.pt/Conteudos_Externos/Revista_Armada/2012/466/files/basic-html/page16.html"
+        }
+      ],
+      "pasos": [
+        {
+          "anio": 1568,
+          "persona": "SEBAS1PORT",
+          "personas": [
+            "SEBAS1PORT",
+            "ENRIQUE1PORT"
+          ],
+          "titulo": "A young king and an old frontier",
+          "texto": "Sebastian assumed personal government of Portugal in 1568 at the age of fourteen. He inherited a far-flung monarchy with holdings on several coasts and a long-standing presence in North Africa. Under John III some Moroccan strongholds had been abandoned because their maintenance consumed men and money. The young king wanted to regain the initiative: victory in Morocco would strengthen the Portuguese positions and give him the prestige of a crusading monarch. The opportunity arose from a dispute within the family that ruled the sultanate."
+        },
+        {
+          "anio": 1576,
+          "persona": "SEBAS1PORT",
+          "personas": [
+            "SEBAS1PORT",
+            "FEL2ESP"
+          ],
+          "titulo": "A deposed sultan seeks aid",
+          "texto": "In 1576 Abd al-Malik seized the Moroccan throne with Ottoman support and displaced his nephew Muhammad al-Mutawakkil. The deposed sultan sought Sebastian’s help in recovering it. For the Portuguese king, intervention offered a chance to install an ally and expand his presence on the coast. In discussions with his uncle Philip II, the king of Spain advised caution and offered limited support rather than joining the expedition. While ships and troops assembled, Abd al-Malik organised his kingdom’s defence and gathered an army that included his brother Ahmad’s forces."
+        },
+        {
+          "anio": 1578,
+          "persona": "SEBAS1PORT",
+          "personas": [
+            "SEBAS1PORT"
+          ],
+          "titulo": "From Lisbon into Morocco",
+          "texto": "The fleet left Lisbon in June 1578 with Portuguese soldiers and foreign contingents for a campaign on the Moroccan coast. After arriving in North Africa, the forces concentrated at Asilah. The Portuguese objective of taking Larache led to an overland march inland. The army carried its supplies through the summer heat and moved away from the immediate protection of the ships. Abd al-Malik could choose how to confront a column whose supply position was becoming increasingly difficult."
+        },
+        {
+          "anio": 1578,
+          "persona": "SEBAS1PORT",
+          "personas": [
+            "SEBAS1PORT"
+          ],
+          "titulo": "4 August: the Battle of the Three Kings",
+          "texto": "The armies met on 4 August 1578 near Alcácer Quibir, beside the al-Makhazin River. The Portuguese forces and their allies suffered a defeat that left thousands dead or captive. Sebastian disappeared in the fighting, and Muhammad al-Mutawakkil died while fleeing. Abd al-Malik, already ill, also died that day; his brother Ahmad al-Mansur capitalised on the victory and succeeded as sultan. Portugal had lost its king and a large share of the men committed to the campaign."
+        },
+        {
+          "anio": 1578,
+          "persona": "ENRIQUE1PORT",
+          "personas": [
+            "ENRIQUE1PORT",
+            "SEBAS1PORT"
+          ],
+          "titulo": "A cardinal inherits the crisis",
+          "texto": "Sebastian was dead without issue. His elderly great-uncle, Cardinal Henry, inherited the crown while families sought funds to ransom their captives. The succession reopened when Henry died in 1580. Philip II, a grandson of Manuel I through his mother, asserted his rights against other candidates, including Catherine of Braganza and António, Prior of Crato. Philip’s forces prevailed at Alcântara, and the Cortes of Tomar recognised his accession to the Portuguese throne in 1581."
+        },
+        {
+          "anio": 1580,
+          "persona": "FEL2ESP",
+          "personas": [
+            "FEL2ESP",
+            "SEBAS1PORT"
+          ],
+          "titulo": "The return of the missing king",
+          "texto": "Sebastian’s disappearance inspired a hope that outlived the crisis: that the king would return and restore Portugal’s greatness. Uncertainty about his fate fuelled rumours and impostors, while Sebastianism entered Portuguese political and literary memory. Philip meanwhile ruled Portugal alongside his other crowns and confirmed its laws and institutions. Alcácer Quibir thus linked a Saadian victory in Morocco, the captivity of thousands of expeditionaries and a succession that changed relations between the Iberian monarchies."
+        }
+      ],
+      "colecciones": [
+        "cross-sections"
+      ]
+    }
+  },
+  "guerras-italianas": {
+    "enSlug": "the-italian-chessboard",
+    "content": {
+      "id": "guerras-italianas",
+      "titulo": "The Italian Chessboard",
+      "subtitulo": "Valois, Aragon, Habsburg and the popes in the struggle for control of the peninsula",
+      "disponible": false,
+      "colecciones": []
+    }
+  }
+}

@@ -1,5 +1,6 @@
 
-export default function BioRelations({ etiqueta, ids, tipo = "familia", byId, hrefForId, onSelect }) {
+export default function BioRelations({ etiqueta, ids, tipo = "familia", byId, hrefForId, onSelect, locale='es' }) {
+  const en=locale==='en';
   const unicos = [...new Set((ids || []).filter(Boolean))];
   if (!unicos.length) return null;
   return (
@@ -19,13 +20,13 @@ export default function BioRelations({ etiqueta, ids, tipo = "familia", byId, hr
                 event.preventDefault();
                 onSelect(id);
               }}
-              title={`Ir a ${persona.nombre}`}
+              title={`${en?'Go to':'Ir a'} ${persona.nombre}`}
             >
               {persona.nombre}
             </a>
           ) : (
-            <span key={id} className={`bio-relation-link is-disabled ${tipo === "amantes" ? "is-lover" : ""}`} title={`La ficha ${id} todavía no está cargada`}>
-              [{id}] sin ficha
+            <span key={id} className={`bio-relation-link is-disabled ${tipo === "amantes" ? "is-lover" : ""}`} title={en?`Profile ${id} has not loaded yet`:`La ficha ${id} todavía no está cargada`}>
+              [{id}] {en?'profile unavailable':'sin ficha'}
             </span>
           );
         })}

@@ -2,6 +2,7 @@ import {canonicalDynastySlug} from '../../data/dynastyAliases.js';
 import {DEFAULT_LOCALE} from '../../app/i18n.js';
 import {PERSONAS} from '../../data/personas.js';
 import {slugBasePersona, slugPublico} from '../../domain/people/personPresentation.js';
+import runtime from '../../generated/englishProfilesRuntime.json' with {type:'json'};
 
 export const PERSONA_SLUG_BASE_COUNT = PERSONAS.reduce((acc, persona) => {
   const base = slugBasePersona(persona, "es");
@@ -22,14 +23,14 @@ const PERSONA_ID_POR_SLUG = Object.fromEntries(
 // La versión inglesa solo crea páginas individuales cuando una ficha tiene un
 // nombre inglés explícito. Así evitamos publicar miles de URLs /en/ cuyo
 // contenido principal seguiría estando en español.
-const PERSONA_ENGLISH = PERSONAS.filter((persona) => typeof persona.nombreEn === "string" && persona.nombreEn.trim());
+const PERSONA_ENGLISH = PERSONAS.filter((persona) => runtime.profiles[persona.id]?.name);
 const PERSONA_SLUG_EN_BASE_COUNT = PERSONA_ENGLISH.reduce((acc, persona) => {
-  const base = slugBasePersona(persona, "en");
+  const base = slugPublico(runtime.profiles[persona.id].name);
   acc[base] = (acc[base] || 0) + 1;
   return acc;
 }, {});
 const PERSONA_SLUG_EN_POR_ID = Object.fromEntries(PERSONA_ENGLISH.map((persona) => {
-  const base = slugBasePersona(persona, "en");
+  const base = slugPublico(runtime.profiles[persona.id].name);
   const slug = PERSONA_SLUG_EN_BASE_COUNT[base] > 1 ? `${base}-${slugPublico(persona.id)}` : base;
   return [persona.id, slug];
 }));

@@ -1,0 +1,471 @@
+{
+  "cien-anos": {
+    "enSlug": "hundred-years-war",
+    "content": {
+      "id": "cien-anos",
+      "titulo": "The Hundred Years’ War",
+      "subtitulo": "A dynastic dispute that transformed France and England",
+      "disponible": true,
+      "descripcion": "A journey from the succession crisis of 1328 to Castillon in 1453: claims by blood, major English victories, French recovery, civil war, Burgundy and the turning point brought by Joan of Arc.",
+      "fuentes": [
+        {
+          "titulo": "Luxembourg · Juan el Ciego y la batalla de Crécy",
+          "url": "https://luxembourg.public.lu/en/society-and-culture/history/helm-holy-roman-empire.html"
+        }
+      ],
+      "pasos": [
+        {
+          "anio": 1328,
+          "persona": "FEL6FRA",
+          "personas": [
+            "CARLOS4FRA",
+            "FEL6FRA",
+            "ISABFRAING",
+            "EDUARDO3ING"
+          ],
+          "eventoId": "CRISIS_CAPETA_1328",
+          "titulo": "1328: a crown without a male heir",
+          "texto": "Charles IV dies without a surviving son, bringing the direct Capetian line to an end. The crown passes to Philip of Valois, Philip VI. Edward III of England, however, is a grandson of Philip IV through his mother, Isabella of France. War has not yet begun: the first issue is a genealogical question about who can transmit a right to the crown."
+        },
+        {
+          "anio": 1337,
+          "persona": "EDUARDO3ING",
+          "personas": [
+            "EDUARDO3ING",
+            "FEL6FRA"
+          ],
+          "eventoId": "CIEN_ANOS",
+          "titulo": "1337: the dynastic dispute becomes war",
+          "texto": "Aquitaine, feudal homage and the politics linking France, England and Scotland turn the succession dispute into open conflict. Edward III advances his claim to the French crown, and the clash ceases to be merely an argument about kinship: two monarchies mobilise resources for generations."
+        },
+        {
+          "anio": 1346,
+          "persona": "EDUNEGRO",
+          "personas": [
+            "EDUARDO3ING",
+            "EDUNEGRO",
+            "FEL6FRA",
+            "JUAN1B",
+            "CARLOS4"
+          ],
+          "eventoId": "CRECY_1346",
+          "titulo": "Crécy: the great English blow",
+          "texto": "On 26 August 1346, Edward III and his son Edward of Woodstock, the Black Prince, defeat Philip VI’s army at Crécy. John of Luxembourg, the blind king of Bohemia, fights among the French allies. He enters the battle accompanied by his knights and is killed. His son Charles, elected King of the Romans only weeks earlier, inherits the Bohemian crown. The war thus connects the French succession with the families ruling Central Europe.\n\nThe victory strengthens English military prestige. Edward III can begin the siege of Calais, which falls in 1347 and becomes an enduring bridgehead on the continent. Centuries later, Julian Russell Story’s painting recreates the Black Prince’s encounter with the body of John of Bohemia."
+        },
+        {
+          "anio": 1356,
+          "persona": "JUAN2FRA",
+          "personas": [
+            "JUAN2FRA",
+            "EDUNEGRO",
+            "JUANCHANDOS"
+          ],
+          "eventoId": "POITIERS_1356",
+          "titulo": "Poitiers: a king of France taken prisoner",
+          "texto": "The Black Prince and John Chandos defeat the army of John II. The French king himself is captured. The defeat is military, but also dynastic and fiscal: the kingdom must be governed while its monarch is in English hands and must negotiate an enormous ransom."
+        },
+        {
+          "anio": 1360,
+          "persona": "EDUARDO3ING",
+          "personas": [
+            "EDUARDO3ING",
+            "EDUNEGRO",
+            "JUAN2FRA"
+          ],
+          "eventoId": "BRETIGNY_1360",
+          "titulo": "Brétigny: England appears to have won",
+          "texto": "The treaty gives Edward III an extraordinary territorial position in France, but it is not the end. The war reveals one of its central problems: no agreement can simultaneously settle territorial sovereignty, feudal relations and the dynastic claim."
+        },
+        {
+          "anio": 1370,
+          "persona": "CARLOS5FRA",
+          "personas": [
+            "CARLOS5FRA",
+            "BERTRANDGUESCLIN",
+            "EDUNEGRO"
+          ],
+          "eventoId": "RECONQUISTA_CARLOS5_1369",
+          "titulo": "Charles V changes the war",
+          "texto": "Charles V of France and his constable Bertrand du Guesclin avoid repeating the great battles that had favoured the English. Through more patient campaigns, sieges and attrition, they recover much of what France had lost. When Charles V dies in 1380, the map looks very different from that of 1360."
+        },
+        {
+          "anio": 1407,
+          "persona": "CARLOS6FRA",
+          "personas": [
+            "CARLOS6FRA",
+            "JUAN1BORG",
+            "LUISORLEANS",
+            "FEL3BORG"
+          ],
+          "titulo": "France breaks apart from within",
+          "texto": "Charles VI’s illness opens a struggle for control of government. Burgundians and Armagnacs turn the French court into a civil war. The murder of Louis of Orléans in 1407 and, later, that of John the Fearless in 1419 make one decisive development possible: the king of England can intervene again in a divided France."
+        },
+        {
+          "anio": 1415,
+          "persona": "ENRIQ5ING",
+          "personas": [
+            "ENRIQ5ING",
+            "CHARLESDALBRET",
+            "BOUCICAUT",
+            "CARLOS6FRA"
+          ],
+          "eventoId": "AGINCOURT",
+          "titulo": "Agincourt: Henry V puts France under pressure again",
+          "texto": "Henry V invades France and wins one of the war’s most famous victories at Agincourt. The French commanders include Constable Charles d’Albret and Marshal Boucicaut. The defeat comes while the French monarchy remains torn apart by internal conflict."
+        },
+        {
+          "anio": 1419,
+          "persona": "FEL3BORG",
+          "personas": [
+            "JUAN1BORG",
+            "FEL3BORG",
+            "CARLOS7FRA",
+            "ENRIQ5ING"
+          ],
+          "eventoId": "MONTEREAU",
+          "titulo": "Montereau: Burgundy turns towards England",
+          "texto": "John the Fearless is murdered during a meeting with the entourage of Dauphin Charles. His son Philip the Good inherits Burgundy and blames the dauphin’s party for his father’s death. He seeks vengeance and redress; Henry V offers support against the same adversary. The Anglo-Burgundian alliance joins the English offensive to a dispute between branches of the Valois and gives England resources, positions and allies within France."
+        },
+        {
+          "anio": 1420,
+          "persona": "ENRIQ5ING",
+          "personas": [
+            "ENRIQ5ING",
+            "CATALINAVAL",
+            "CARLOS6FRA",
+            "CARLOS7FRA",
+            "FEL3BORG"
+          ],
+          "eventoId": "TROYES",
+          "titulo": "Troyes: a Plantagenet will inherit France",
+          "texto": "The Treaty of Troyes recognises Henry V as Charles VI’s heir and seals his marriage to Catherine of Valois. Dauphin Charles is displaced. For a moment, a dynastic union of England and France under Henry’s descendants seems possible."
+        },
+        {
+          "anio": 1422,
+          "persona": "ENRIQ6ING",
+          "personas": [
+            "ENRIQ6ING",
+            "JUANBEDFORD",
+            "CARLOS7FRA",
+            "FEL3BORG"
+          ],
+          "titulo": "1422: two kings for a divided France",
+          "texto": "Henry V and Charles VI die within weeks of one another. The infant Henry VI is proclaimed king within the Anglo-French system, and his uncle Bedford governs as regent in France. South of the Loire, the dauphin maintains his position as Charles VII. The succession dispute of 1328 has now produced two rival legitimacies."
+        },
+        {
+          "anio": 1429,
+          "persona": "JUANAARCO",
+          "personas": [
+            "JUANAARCO",
+            "CARLOS7FRA",
+            "JEANDUNOIS",
+            "LAHIRE",
+            "JUANBEDFORD"
+          ],
+          "eventoId": "ORLEANS",
+          "titulo": "Orléans: Joan of Arc appears",
+          "texto": "With Orléans under siege, Joan of Arc reaches Charles VII’s camp. Alongside commanders such as Jean de Dunois and La Hire, she helps lift the siege and takes part in a rapid campaign along the Loire. The political effect is as important as the military one: the initiative changes hands."
+        },
+        {
+          "anio": 1429,
+          "persona": "CARLOS7FRA",
+          "personas": [
+            "CARLOS7FRA",
+            "JUANAARCO"
+          ],
+          "eventoId": "REIMS_1429",
+          "titulo": "Reims: the war again becomes a question of legitimacy",
+          "texto": "Joan insists on leading Charles VII to Reims, the traditional coronation place of French kings. The ceremony turns the former “Dauphin of Bourges” into a visible, anointed king. The war has not been won, but Charles’s legitimacy no longer appears provisional."
+        },
+        {
+          "anio": 1431,
+          "persona": "JUANAARCO",
+          "personas": [
+            "JUANAARCO",
+            "FEL3BORG",
+            "JUANBEDFORD",
+            "CARLOS7FRA"
+          ],
+          "eventoId": "CAPTURA_JUANA_1430",
+          "titulo": "Joan’s death does not halt the change",
+          "texto": "Joan is captured by the Burgundians in 1430, handed over to the English and executed at Rouen in 1431. Her death does not reverse the political shift she helped accelerate. Charles VII now possesses strengthened legitimacy and a monarchy that is beginning to rebuild its resources."
+        },
+        {
+          "anio": 1435,
+          "persona": "FEL3BORG",
+          "personas": [
+            "FEL3BORG",
+            "CARLOS7FRA",
+            "JUANBEDFORD"
+          ],
+          "eventoId": "ARRAS_1435",
+          "titulo": "Arras: England loses Burgundy",
+          "texto": "Philip the Good reconciles with Charles VII through the Treaty of Arras. Redress for the murder of John the Fearless and territorial concessions allow the duke to end the family vendetta and protect his domains. Charles VII secures the break-up of the Anglo-Burgundian alliance: England loses essential support for holding its positions in France. Bedford, who had sustained English government during Henry VI’s minority, dies soon afterwards. The double loss makes it harder to coordinate the defence of the conquered territories."
+        },
+        {
+          "anio": 1450,
+          "persona": "ARTURO3BRET",
+          "personas": [
+            "CARLOS7FRA",
+            "ARTURO3BRET",
+            "JEANBUREAU"
+          ],
+          "eventoId": "FORMIGNY_1450",
+          "titulo": "A different French monarchy recovers Normandy",
+          "texto": "France no longer depends solely on nobles summoned for a campaign. Fiscal reforms, permanent companies and increasingly important artillery allow Charles VII to sustain war in a different way. Formigny accelerates the recovery of Normandy."
+        },
+        {
+          "anio": 1453,
+          "persona": "JUANTALBOT",
+          "personas": [
+            "JUANTALBOT",
+            "JEANBUREAU",
+            "CARLOS7FRA",
+            "ENRIQ6ING"
+          ],
+          "eventoId": "CASTILLON_1453",
+          "titulo": "Castillon: the conventional end of 116 years of war",
+          "texto": "John Talbot tries to restore the English position in Guyenne and dies at Castillon against a French army supported by powerful artillery organised by the Bureau brothers. England retains Calais but loses almost all its French possessions. The war that began over fiefs and dynastic rights ends with a much stronger French monarchy and an England soon to descend into the Wars of the Roses."
+        }
+      ],
+      "colecciones": []
+    }
+  },
+  "ricardo-felipe-cruzada": {
+    "enSlug": "richard-philip-crusade",
+    "content": {
+      "id": "ricardo-felipe-cruzada",
+      "titulo": "The Crusader Kings",
+      "subtitulo": "Richard I, Philip II and Frederick Barbarossa in the Third Crusade",
+      "disponible": true,
+      "descripcion": "Frederick Barbarossa leads the overland expedition through the Balkans and Anatolia; Richard I and Philip II travel through the Mediterranean. The emperor’s death, the siege of Acre and Richard’s campaigns shape a crusade crossed by rivalries among its sovereigns.",
+      "fuentes": [
+        {
+          "titulo": "Viceministerio de Turismo de Chipre · Cyprus, 11,000 years of history, período franco",
+          "url": "https://www.visitcyprus.com/wp-content/uploads/files/Cyprus_11000_ebrochure/WEB_2022_BROCHURE_11000_YEARS_ENGLISH_1.pdf"
+        },
+        {
+          "titulo": "The Royal Family · Richard I",
+          "url": "https://www.royal.uk/richard-i"
+        },
+        {
+          "titulo": "John D. Hosler · The Siege of Acre, Yale University Press",
+          "url": "https://yalebooks.yale.edu/2020/04/14/the-siege-of-acre/"
+        },
+        {
+          "titulo": "Historia de expeditione Friderici imperatoris · La muerte de Frederick Barbarroja (1190)",
+          "url": "https://sourcebooks.web.fordham.edu/source/1190barbarossa.asp"
+        },
+        {
+          "titulo": "Hermann Heimpel · Friedrich I. Barbarossa, Neue Deutsche Biographie",
+          "url": "https://www.deutsche-biographie.de/sfz69823.html"
+        },
+        {
+          "titulo": "William of Tiro y continuación de la Historia de ultramar · manuscrito Royal MS 15 E I",
+          "url": "https://searcharchives.bl.uk/catalog/040-002107088"
+        }
+      ],
+      "pasos": [
+        {
+          "anio": 1187,
+          "persona": "RICARDO1ING",
+          "personas": [
+            "RICARDO1ING",
+            "FEL2FRA",
+            "SALADIN"
+          ],
+          "titulo": "The fall of Jerusalem mobilises kings",
+          "texto": "In 1187, Saladin defeats the army of the Kingdom of Jerusalem at Hattin and conquers the Holy City. The news prompts a new crusade. Frederick Barbarossa, emperor for decades, prepares an overland expedition. Philip II of France and Richard, heir to Henry II of England, also pledge to depart. The latter two contest influence and lands in France. When Richard succeeds his father in 1189, the expedition brings together three sovereigns whose resources, routes and interests will shape the campaign."
+        },
+        {
+          "anio": 1189,
+          "persona": "FED1BARBARROJA",
+          "personas": [
+            "FED1BARBARROJA"
+          ],
+          "titulo": "Barbarossa crosses the Balkans and Anatolia",
+          "texto": "Frederick sets out in 1189 at the head of the imperial army. Passage through the Balkans requires negotiations with Byzantine emperor Isaac II, who distrusts such a large Western force. Conflicts over supplies and transit delay the march. After crossing into Asia Minor, the crusaders fight Seljuk forces and take Iconium in May 1190. The expedition continues towards Cilicia, expecting to reach Syria and reinforce the Latin armies already fighting on the coast."
+        },
+        {
+          "anio": 1190,
+          "persona": "FED1BARBARROJA",
+          "personas": [
+            "FED1BARBARROJA"
+          ],
+          "titulo": "Frederick’s death in the Saleph",
+          "texto": "On 10 June 1190, Frederick drowns in the Saleph River near Seleucia. The army loses the sovereign who had organised and led the march from Europe. Some men return home; others continue to Antioch under his son Frederick of Swabia. Disease and desertion reduce their strength further. The survivors reach Acre, where the emperor’s son dies in 1191. The crusade has lost much of its imperial contingent before the kings of France and England arrive."
+        },
+        {
+          "anio": 1190,
+          "persona": "RICARDO1ING",
+          "personas": [
+            "RICARDO1ING",
+            "FEL2FRA"
+          ],
+          "titulo": "Sicily and Cyprus: the other kings’ route",
+          "texto": "Philip and Richard spend the winter of 1190–1191 in Sicily. Richard intervenes in the island’s disputes and asserts the rights of his sister Joanna, widow of King William II. He also breaks his betrothal to Philip’s sister Alys in order to marry Berengaria of Navarre. Philip proceeds to Acre first. Richard takes Cyprus in May 1191 after ships from his expedition reach the island. The conquest provides a useful base for crusader communications and supplies."
+        },
+        {
+          "anio": 1191,
+          "persona": "RICARDO1ING",
+          "personas": [
+            "RICARDO1ING",
+            "FEL2FRA",
+            "SALADIN"
+          ],
+          "titulo": "Acre: victory in July 1191",
+          "texto": "Latin forces have besieged Acre since 1189. They surround the Muslim garrison while Saladin’s army threatens their positions from outside. The camp depends on seaborne supplies and suffers hunger and disease. Philip arrives in April 1191 and Richard in June; their men and siege engines strengthen the offensive. Acre capitulates in July. With the city recovered, the victors again confront one another over rights to Jerusalem’s throne and the division of authority."
+        },
+        {
+          "anio": 1191,
+          "persona": "RICARDO1ING",
+          "personas": [
+            "RICARDO1ING",
+            "FEL2FRA",
+            "SALADIN"
+          ],
+          "titulo": "Philip returns to France; Richard advances",
+          "texto": "Philip leaves for France in August 1191, leaving some of his troops in the Holy Land. Richard remains in command of the campaign. After negotiations over the Acre prisoners reach an impasse, he orders the execution of many captives. He then leads the army down the coast, supported by the fleet, and defeats Saladin at Arsuf in September. The march secures positions as far as Jaffa. An advance on Jerusalem would require maintaining supplies and calculating how the city could be defended against another offensive."
+        },
+        {
+          "anio": 1192,
+          "persona": "RICARDO1ING",
+          "personas": [
+            "RICARDO1ING",
+            "SALADIN"
+          ],
+          "titulo": "Jaffa and the truce with Saladin",
+          "texto": "During 1192, Richard and his allies repeatedly debate an advance on Jerusalem. The distance from the coast and the difficulty of maintaining an army inland weigh on the decision. After further fighting at Jaffa, Richard and Saladin agree a truce in September. The Latins retain a coastal strip and Christian pilgrims gain access to Jerusalem, which remains under Muslim authority. Richard can begin his return with the coastal kingdom strengthened but the Holy City beyond his control."
+        },
+        {
+          "anio": 1194,
+          "persona": "RICARDO1ING",
+          "personas": [
+            "RICARDO1ING",
+            "FEL2FRA",
+            "ELEANORAQUIT"
+          ],
+          "titulo": "A return journey ending in captivity",
+          "texto": "Richard’s return takes him into the territory of his adversary Leopold of Austria, who captures him late in 1192. The king then passes into the custody of Emperor Henry VI. Eleanor of Aquitaine helps raise the enormous ransom demanded for his release. During his absence, Philip attacks his French possessions and John seeks to expand his own power. Richard is freed in 1194 and returns to war in France. The crusade has left a Latin coast capable of resistance and European rivalries that once again occupy its protagonists."
+        }
+      ],
+      "colecciones": [
+        "cruzadas"
+      ]
+    }
+  },
+  "dracula-detras-de-la-leyenda": {
+    "enSlug": "dracula-behind-the-legend",
+    "content": {
+      "id": "dracula-detras-de-la-leyenda",
+      "titulo": "Dracula: Behind the Legend",
+      "subtitulo": "Vlad III, Wallachia and the distance between a prince and a vampire",
+      "disponible": true,
+      "descripcion": "The Ottoman frontier and Basarab succession disputes explain the fifteenth-century ruler. Hostile printed accounts, Bram Stoker’s novel and its adaptations explain the character’s other layers.",
+      "fuentes": [
+        {
+          "titulo": "Levente Nagy · The Tyrant and the Saint, Eötvös Loránd University",
+          "url": "https://btk.elte.hu/en/the-tyrant-and-the-saint"
+        },
+        {
+          "titulo": "Ioan-Aurel Pop y Alexandru Simon · Dubrovnik y el último gobierno de Vlad III",
+          "url": "https://hrcak.srce.hr/en/clanak/435809"
+        },
+        {
+          "titulo": "The Rosenbach Museum & Library · Guide to Dracula- and vampire-related holdings",
+          "url": "https://wpsite.rosenbach.org/wp-content/uploads/2021/05/Dracula-and-Vampire-Literature-Guide-20210420.pdf"
+        },
+        {
+          "titulo": "Bram Stoker · Dracula (1897), texto de la novela",
+          "url": "https://www.gutenberg.org/ebooks/345"
+        },
+        {
+          "titulo": "The Metropolitan Museum of Art · The Ottoman Empire",
+          "url": "https://www.metmuseum.org/learn/educators/curriculum-resources/art-of-the-islamic-world/unit-five/chapter-two/the-ottoman-empire"
+        }
+      ],
+      "pasos": [
+        {
+          "anio": 1448,
+          "persona": "VLAD3DRACULA",
+          "personas": [
+            "VLAD3DRACULA",
+            "MEHMED2OSM"
+          ],
+          "titulo": "Vlad and the Wallachian succession",
+          "texto": "Vlad III is born into the Basarab family, whose branches contest the Principality of Wallachia between the Carpathians and the Danube. His father, Vlad II, belongs to the Order of the Dragon and bears the name Dracul; Drăculea, the son’s name, derives from it. The family lives between Ottoman pressure and Hungarian intervention in Wallachian successions. Vlad first gains power in 1448 but loses it within weeks. Recovering the principality becomes the objective of the following years."
+        },
+        {
+          "anio": 1456,
+          "persona": "VLAD3DRACULA",
+          "personas": [
+            "VLAD3DRACULA"
+          ],
+          "titulo": "Recovering the throne and subduing opponents",
+          "texto": "Vlad returns to power in 1456 and seeks to secure the obedience of the boyars, the principality’s great lords. His punishments and executions reach internal opponents and those he considers allies of rival claimants. Impalement becomes the best-known feature of his violence. Relations with the Saxon towns of Transylvania also lead to conflict. Ruling Wallachia requires maintaining support within the country and deciding how to answer the demands of Hungary and the Ottoman sultan."
+        },
+        {
+          "anio": 1462,
+          "persona": "VLAD3DRACULA",
+          "personas": [
+            "VLAD3DRACULA",
+            "MEHMED2OSM"
+          ],
+          "titulo": "1462: war against Mehmed II",
+          "texto": "Vlad’s break with the sultan leads to attacks south of the Danube and a major Ottoman campaign in 1462. Mehmed II enters Wallachia while Vlad uses scorched earth and rapid attacks to hinder his advance. A night raid attempts to reach the sultan’s camp. The struggle for the principality continues around Radu, Vlad’s brother and the Ottoman-backed candidate. Vlad loses the throne and seeks help in Hungary, where Matthias Corvinus orders his detention."
+        },
+        {
+          "anio": 1476,
+          "persona": "VLAD3DRACULA",
+          "personas": [
+            "VLAD3DRACULA",
+            "MATIAS1HUN"
+          ],
+          "titulo": "Captivity, return and death",
+          "texto": "Vlad spends years detained under the authority of Matthias Corvinus. His usefulness as an ally against the Ottomans eventually opens a path back to Wallachia. In 1476, Hungarian and Moldavian forces briefly restore him to the principality. He dies soon afterwards, during a renewed struggle for power late that year. The precise circumstances and his burial place remain disputed. His return depends on the same network of neighbours and rivals that had shaped his earlier reigns."
+        },
+        {
+          "anio": 1476,
+          "persona": "VLAD3DRACULA",
+          "personas": [
+            "VLAD3DRACULA"
+          ],
+          "titulo": "The printed works that spread his cruelty",
+          "texto": "Vlad’s fame travels farther than his armies. Manuscript narratives and printed pamphlets describe his punishments and collect episodes of cruelty intended to astonish their readers. A copy of Dracole Waida, printed around 1488 and preserved at the Rosenbach, demonstrates this early circulation. The choice of stories, their images and the interests of those transmitting them turn the Wallachian prince into a recognisable figure for audiences in other countries. That printed memory continues to grow after his death."
+        },
+        {
+          "anio": 1476,
+          "persona": "VLAD3DRACULA",
+          "personas": [
+            "VLAD3DRACULA"
+          ],
+          "titulo": "Stoker gives his vampire a name",
+          "texto": "In 1897, Bram Stoker publishes Dracula. His working notes, preserved at the Rosenbach, bring together readings on the Carpathians, folklore, vampires and places such as Whitby. The name Dracula enters a novel centred on a count who leaves Transylvania for England. The story unfolds through diaries, letters and news reports, and cinema later expands its imagery and romances. The Wallachian prince and Stoker’s count become linked in a popular memory formed from texts and images belonging to very different periods."
+        }
+      ],
+      "colecciones": [
+        "cultura-popular"
+      ]
+    }
+  },
+  "ochenta-anos": {
+    "enSlug": "from-flanders-to-the-republic",
+    "content": {
+      "id": "ochenta-anos",
+      "titulo": "From Flanders to the Republic",
+      "subtitulo": "The revolt that broke Habsburg rule in the Low Countries",
+      "disponible": false,
+      "colecciones": []
+    }
+  },
+  "visconti-sforza": {
+    "enSlug": "visconti-and-sforza",
+    "content": {
+      "id": "visconti-sforza",
+      "titulo": "The Visconti and the Sforza",
+      "subtitulo": "Milan between ducal inheritance, condottieri and marriages",
+      "disponible": false,
+      "colecciones": []
+    }
+  }
+}
