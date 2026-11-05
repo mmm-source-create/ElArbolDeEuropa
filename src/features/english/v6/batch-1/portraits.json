@@ -1,1 +1,93 @@
-{}
+{
+  "WILLIAMSILENT": {
+    "tipo": "Historical Portrait",
+    "obra": "William I, Prince of Orange",
+    "autor": "Adriaen Thomasz. Key",
+    "fecha": "1579",
+    "institucion": "Rijksmuseum, Amsterdam",
+    "alt": "Portrait of William of Orange"
+  },
+  "MARIADEMEDICI": {
+    "tipo": "Historical Portrait",
+    "obra": "Marie de’ Medici",
+    "autor": "Frans Pourbus the Younger",
+    "fecha": "1610",
+    "institucion": "Louvre Museum, Paris",
+    "alt": "Portrait of Marie de’ Medici"
+  },
+  "CARLOSM": {
+    "tipo": "Historical representation",
+    "obra": "Charles Martel of Anjou · dynastic portrait series",
+    "autor": "Artist not identified in the Commons record",
+    "institucion": "Kunsthistorisches Museum, Vienna",
+    "alt": "Historical representation of Charles Martel of Anjou"
+  },
+  "MAURICEORANGE": {
+    "tipo": "Contemporary Portrait",
+    "obra": "Maurice, Prince of Orange",
+    "autor": "School of Michiel Jansz. van Mierevelt",
+    "fecha": "1607",
+    "alt": "Portrait of Maurice of Orange"
+  },
+  "ISABLUX": {
+    "tipo": "Historical representation",
+    "obra": "Elizabeth of Luxembourg · dynastic portrait series",
+    "autor": "Artist not identified in the Commons record",
+    "institucion": "Kunsthistorisches Museum, Vienna",
+    "alt": "Historical representation of Elizabeth of Luxembourg"
+  },
+  "MEINHARDBAV": {
+    "tipo": "Posthumous representation",
+    "obra": "Meinhard of Bavaria · series of dynastic portraits",
+    "autor": "Antoni Boys (Anton Waiss)",
+    "fecha": "16th century",
+    "institucion": "Kunsthistorisches Museum, Vienna",
+    "alt": "Posthumous representation of Meinhard of Bavaria"
+  },
+  "CIMBURGISMAZ": {
+    "tipo": "Posthumous representation",
+    "obra": "Cymburgis of Masovia · dynastic portrait series",
+    "autor": "Antoni Boys (Anton Waiss)",
+    "fecha": "16th century",
+    "institucion": "Kunsthistorisches Museum, Vienna",
+    "alt": "Posthumous representation of Cymburgis of Masovia"
+  },
+  "PAPA_BENEDICTO13": {
+    "tipo": "Historical Portrait",
+    "obra": "Benedict XIII Orsini",
+    "autor": "Anonymous painter",
+    "fecha": "mid-18th century",
+    "alt": "Portrait of Pope Benedict XIII"
+  },
+  "PAPA_INOCENCIO3": {
+    "tipo": "Historical Portrait",
+    "obra": "Innocent III",
+    "autor": "Anonymous fresco",
+    "fecha": "13th century",
+    "institucion": "Monastery of the Sacro Speco, Subiaco",
+    "alt": "Portrait of Pope Innocent III"
+  },
+  "PAPA_CLEMENTE9": {
+    "tipo": "Contemporary Portrait",
+    "obra": "Clement IX",
+    "autor": "Carlo Maratta",
+    "fecha": "1669",
+    "institucion": "Hermitage Museum, St. Petersburg",
+    "alt": "Portrait of Pope Clement IX"
+  },
+  "PAPA_CLEMENTE12": {
+    "tipo": "Contemporary Portrait",
+    "obra": "Clement XII",
+    "autor": "Agostino Masucci",
+    "fecha": "c. 1730–1731",
+    "alt": "Portrait of Pope Clement XII"
+  },
+  "PAPA_CLEMENTE14": {
+    "tipo": "Contemporary Portrait",
+    "obra": "Clement XIV",
+    "autor": "Giovanni Domenico Porta",
+    "fecha": "1769–1770",
+    "institucion": "Museo della Città, Acquapendente",
+    "alt": "Portrait of Pope Clement XIV"
+  }
+}

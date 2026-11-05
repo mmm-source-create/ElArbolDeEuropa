@@ -6,17 +6,20 @@ import {territoriosDe} from '../../domain/genealogy/personAccessors.js';
 import {SITE_NAME, DEFAULT_SITE_URL} from '../../app/siteConfig.js';
 import {documentaryLife} from '../../domain/time/documentaryDates.js';
 import {selectionLayout,edgePath} from './selectionLayout.js';
+import {englishLabel} from '../english/v6/atlasPresentation.js';
 const escape=value=>String(value??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&apos;'}[c]));
 export function wrapName(name,limit=25){
  const lines=[];let line='';
  for(const word of String(name).split(/\s+/)){if(line&&[...line+' '+word].length>limit){lines.push(line);line='';}for(let rest=word;rest;){const chunk=[...rest].slice(0,limit).join('');rest=[...rest].slice(limit).join('');if(rest){if(line){lines.push(line);line='';}lines.push(chunk);}else line+=(line?' ':'')+chunk;}}
  if(line)lines.push(line);return lines;
 }
-export function treeSvg({people,edges,gen={},terminals=[],title='Selección del árbol',url=`${DEFAULT_SITE_URL}/es/`,margin=12}){
- if(!people.length)throw new Error('Selecciona una persona, una comparación o una rama antes de exportar.');
+export function treeSvg({people,edges,gen={},terminals=[],title='Selección del árbol',url,margin=12,locale='es'}){
+ const en=locale==='en',tr=(es,english)=>en?english:es,term=value=>en?englishLabel(value):value;
+ url ||= `${DEFAULT_SITE_URL}/${en?'en':'es'}/`;
+ if(!people.length)throw new Error(tr('Selecciona una persona, una comparación o una rama antes de exportar.','Select a person, comparison or branch before exporting.'));
  const byId=Object.fromEntries(people.map(p=>[p.id,p])),ids=people.map(p=>p.id),layout=selectionLayout(ids,gen,byId,edges);
  // Todas las filas reservan el alto del nombre más largo, también con fechas documentales.
- const text=Object.fromEntries(people.map(p=>[p.id,{name:wrapName(p.nombre,27),role:wrapName([p.titulo,...(governmentSummary(p).length?governmentSummary(p):territoriosDe(p))].filter(Boolean).join(' · '),30),dates:wrapName(documentaryLife(p),30)}]));
+ const text=Object.fromEntries(people.map(p=>[p.id,{name:wrapName(p.nombre,27),role:wrapName([p.titulo,...(governmentSummary(p).length?governmentSummary(p):territoriosDe(p))].filter(Boolean).map(term).join(' · '),30),dates:wrapName(documentaryLife(p),30)}]));
  const height=Math.max(TREE_BOX_H,...people.map(p=>20+text[p.id].name.length*14+text[p.id].role.length*13+text[p.id].dates.length*13));
  for(const pos of Object.values(layout.positions)){pos.y=100+pos.row*(height+80);pos.h=height;}
  const rows=Math.max(...Object.values(layout.positions).map(p=>p.row))+1;
@@ -27,7 +30,8 @@ export function treeSvg({people,edges,gen={},terminals=[],title='Selección del 
   return `<g font-family="-apple-system, Segoe UI, sans-serif"><title>${escape(p.nombre)} · ${escape(documentaryLife(p))}</title><rect x="${pos.x}" y="${pos.y}" width="${pos.w}" height="${height}" rx="6" fill="${selected.has(p.id)?'#fff9f2':'#ffffff'}" stroke="${selected.has(p.id)?'#7a2e2e':'#b9af98'}" stroke-width="${selected.has(p.id)?3:1}"/><path d="M ${pos.x+3} ${pos.y+3} V ${pos.y+height-3}" stroke="${escape(accent)}" stroke-width="6"/>${t.name.map((line,i)=>`<text x="${pos.x+16}" y="${pos.y+18+i*14}" font-size="11" font-weight="600">${escape(line)}</text>`).join('')}${t.role.map((line,i)=>`<text x="${pos.x+16}" y="${pos.y+20+t.name.length*14+i*13}" fill="#706653" font-size="10">${escape(line)}</text>`).join('')}${t.dates.map((line,i)=>`<text x="${pos.x+16}" y="${pos.y+20+t.name.length*14+t.role.length*13+i*13}" fill="#706653" font-size="10">${escape(line)}</text>`).join('')}</g>`;
  }).join('');
  const padding=[8,12,20].includes(Number(margin))?Number(margin):12;
- const svg=`<svg xmlns="http://www.w3.org/2000/svg" width="${w+padding*2}" height="${h+padding*2}" viewBox="0 0 ${w+padding*2} ${h+padding*2}" role="img" aria-labelledby="title desc"><title id="title">${escape(title)}</title><desc id="desc">${people.length} personas. Línea continua: filiación; discontinua: matrimonio; puntos: amantes. Borde granate: personas elegidas. Posiciones por generaciones, sin escala temporal.</desc><rect width="100%" height="100%" fill="#f6f1e5"/><g transform="translate(${padding} ${padding})" font-family="Georgia, serif" fill="#30291f"><text x="40" y="40" font-size="24">${escape(SITE_NAME)}</text><text x="40" y="65" font-size="15">${escape(title)} · ${people.length} personas</text>${edgeMarkup}${cards}<text x="40" y="${h-64}" font-size="13">Filiación: continua · Matrimonio: discontinua · Amantes: puntos · Elegidos: borde granate</text><text x="40" y="${h-44}" font-size="12">Generaciones sin escala temporal · Datos registrados en el Atlas</text><a href="${escape(url)}"><text x="40" y="${h-22}" font-size="12">${escape(new URL(DEFAULT_SITE_URL).hostname)} · Consultar el Atlas y sus fuentes</text></a></g></svg>`;
+ const description=en?`${people.length} people. Solid line: parentage; dashed line: marriage; dotted line: lovers. Burgundy border: selected people. Positions by generation, without a time scale.`:`${people.length} personas. Línea continua: filiación; discontinua: matrimonio; puntos: amantes. Borde granate: personas elegidas. Posiciones por generaciones, sin escala temporal.`;
+ const svg=`<svg xmlns="http://www.w3.org/2000/svg" width="${w+padding*2}" height="${h+padding*2}" viewBox="0 0 ${w+padding*2} ${h+padding*2}" role="img" aria-labelledby="title desc"><title id="title">${escape(title)}</title><desc id="desc">${escape(description)}</desc><rect width="100%" height="100%" fill="#f6f1e5"/><g transform="translate(${padding} ${padding})" font-family="Georgia, serif" fill="#30291f"><text x="40" y="40" font-size="24">${escape(en?'The Tree of Europe':SITE_NAME)}</text><text x="40" y="65" font-size="15">${escape(title)} · ${people.length} ${tr('personas','people')}</text>${edgeMarkup}${cards}<text x="40" y="${h-64}" font-size="13">${tr('Filiación: continua · Matrimonio: discontinua · Amantes: puntos · Elegidos: borde granate','Parentage: solid · Marriage: dashed · Lovers: dotted · Selected: burgundy border')}</text><text x="40" y="${h-44}" font-size="12">${tr('Generaciones sin escala temporal · Datos registrados en el Atlas','Generations without a time scale · Data recorded in the Atlas')}</text><a href="${escape(url)}"><text x="40" y="${h-22}" font-size="12">${escape(new URL(DEFAULT_SITE_URL).hostname)} · ${tr('Consultar el Atlas y sus fuentes','View the Atlas and its sources')}</text></a></g></svg>`;
  return {svg,width:w+padding*2,height:h+padding*2};
 }
 export function pngDimensions(width,height){

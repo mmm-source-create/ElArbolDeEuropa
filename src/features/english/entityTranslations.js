@@ -2,6 +2,7 @@ import {POLISH_HOUSES} from './polishHouseTranslations.js';
 import {ROSES_HOUSES} from './rosesHouseTranslations.js';
 import {NEXT_HOUSES} from './nextHouseTranslations.js';
 import {REVIEWED_HOUSES} from './reviewedHouseTranslations.js';
+import {V6_DYNASTIES,V6_TERRITORIES} from './v6/index.js';
 export const ENGLISH_DYNASTIES=[...POLISH_HOUSES,...ROSES_HOUSES,...NEXT_HOUSES,...REVIEWED_HOUSES,{es:'anjou-hungria',en:'anjou-hungary',key:'Anjou-Hungría',name:'Anjou-Hungary',
  summary:'A Capetian branch from Naples that ruled Hungary and Croatia and temporarily joined those crowns to Poland.',
  origin:'Charles Martel, son of Charles II of Naples and Mary of Hungary, founded the branch that claimed the Árpád inheritance. His son Charles Robert consolidated the Hungarian monarchy against the magnates. The Neapolitan and Hungarian branches ruled separate kingdoms.',
@@ -24,7 +25,7 @@ export const ENGLISH_DYNASTIES=[...POLISH_HOUSES,...ROSES_HOUSES,...NEXT_HOUSES,
   'anjou-hungria-jagellon':{etiqueta:'Marriage alliance',periodo:'1386',texto:'Jadwiga, Louis I’s daughter and queen of Poland from 1384, married Jogaila in 1386. His baptism and coronation as Władysław II began the dynastic union of Poland and Lithuania.'},
   'anjou-hungria-luxemburgo':{etiqueta:'Marriage alliance',periodo:'1385',texto:'Mary, Queen of Hungary, married Sigismund of Luxembourg in 1385. After Mary’s imprisonment and her mother’s murder, Sigismund secured her release and was crowned king in 1387.'},
  },
-}];
+},...V6_DYNASTIES];
 export const ENGLISH_TERRITORIES=[{es:'normandia',en:'normandy',key:'Normandía',name:'Normandy',
  summary:'The recorded Norman governments connect Geoffrey of Anjou with Henry II, Richard I and John of England. This is a selection of the Atlas’s records, rather than a complete list of all Norman dukes. The annual intervals distinguish the Angevin duchy from the French conquest of 1204.',
  people:{
@@ -36,4 +37,4 @@ export const ENGLISH_TERRITORIES=[{es:'normandia',en:'normandy',key:'Normandía'
  'Conquistó Normandía en nombre de su esposa durante la guerra civil inglesa y la cedió a su hijo Enrique en 1150.':'He conquered Normandy on his wife’s behalf during the English civil war and transferred it to his son Henry in 1150.',
  'Dominio angevino anterior a la conquista francesa de 1204; el corte representa años completos.':'Angevin dominion before the French conquest of 1204; the boundary represents complete years.',
  },
-}];
+},...V6_TERRITORIES];

@@ -1,8 +1,17 @@
-import {COMPLETE_ENGLISH_PROFILES} from './fullProfiles.js';
 import {HERITAGE_ENGLISH,BURGUNDY_CHARLES_ENGLISH} from './heritageStories.js';
+import {CREDITOS_ESCUDOS} from '../../content/dinastias/escudos.js';
+import {V6_STORIES} from './v6/index.js';
+
+const V6_STORY_TRANSLATIONS=Object.fromEntries(Object.entries(V6_STORIES).map(([id,{content}])=>[id,{
+ title:content.titulo,
+ subtitle:content.subtitulo,
+ description:content.descripcion,
+ chapters:(content.pasos||[]).map(step=>[step.titulo,step.texto]),
+}]));
 // Translations of the existing editorial content; IDs, dates and relationships come from the Spanish records.
 export const ENGLISH_STORIES = {
  ...HERITAGE_ENGLISH,
+ ...V6_STORY_TRANSLATIONS,
  borgona:{title:'Burgundy: the kingdom that never was',subtitle:'Charles the Bold: a crown prepared, death at Nancy and a European inheritance',description:'The formation of the Burgundian lands, Charles the Bold’s royal project and the passage of his inheritance through Mary to Charles V.',chapters:[
  ["A new Valois Burgundy","At Poitiers in 1356, the young Philip stays beside his father, John II of France, during the defeat by the English. Both are captured. His courage earns him the name “the Bold” and a special place in the king’s confidence. In 1363, John grants him the Duchy of Burgundy as an appanage, a territorial endowment for a younger son of the royal family.\n\nThe duchy had returned to John after the death of the last duke of its Capetian branch. Entrusting it to Philip rewards his loyalty and places the king’s son in a strategic region. The new Valois-Burgundy branch now has its own base from which to arrange marriages, collect revenues and extend its influence."],
  ["Expansion begins with a marriage","In 1369, Philip marries Margaret, heiress of the count of Flanders. The marriage links his duchy to a succession that can bring textile towns, ports, trading routes and revenues far beyond those of a lordship centred on Dijon. When Margaret inherits in 1384, Flanders, Artois and the County of Burgundy enter the couple’s patrimony.\n\nExpansion gives the dukes resources to intervene in French politics and makes the defence of their northern possessions a priority. It also creates an enduring problem: the northern lands and the Burgundies in the south form separate blocks, with privileges and institutions that each successor must negotiate."],
@@ -32,7 +41,6 @@ export const ENGLISH_PEOPLE = {
  LEONARDODAVINCI:{name:'Leonardo da Vinci',role:'Artist and engineer',summary:'Painter, engineer and investigator of nature who worked in Florence, Milan, Rome and France. His service to the Sforza, Cesare Borgia, the Medici and Francis I connects his artistic work with the courts and political networks of his time.'},
  MARIABORG:{name:'Mary of Burgundy',role:'Duchess of Burgundy',summary:'Only daughter and heir of Charles the Bold. After her father’s death in 1477, she defended a disputed inheritance. Her marriage to Maximilian of Habsburg linked much of the Burgundian Netherlands to the Habsburg dynasty.'},
  MAXIM1:{name:'Maximilian I',role:'Holy Roman Emperor',summary:'Habsburg ruler whose marriage to Mary of Burgundy brought a major Burgundian inheritance into his family’s political network. His descendants connected that inheritance with the Iberian crowns and the wider monarchy of Charles V.'},
- ...COMPLETE_ENGLISH_PROFILES,
 };
 export const ENGLISH_METHOD = [
  ['Bibliography','The general bibliography brings together the works, databases and institutions consulted. References to individual articles and biographies appear in the corresponding profiles.'],
@@ -51,4 +59,15 @@ export const ENGLISH_ABOUT = [
  ['How to read the records','A missing person or relationship does not mean that it did not exist historically. The record may simply not have been added yet.','The project prioritises people who connect branches, held power, founded significant lines or make a historical connection easier to understand. Documented corrections take priority over visual consistency.'],
  ['How to read the map','Europe in this year groups documented centres of external power. Shared colour and outline do not imply common laws or a unitary state. Personal maps keep the same political integration: a composite monarchy takes one colour and the inspector still lists each kingdom and province. Portugal in 1580–1640 and the Burgundian Netherlands appear as units of their own.','Internal divisions remain available in the inspector. Vassalage, tribute, occupation and disputed control retain their own patterns. Shared dynasty, monarch, alliance or imperial title alone does not establish a political unit. Every grouping is dated and limited to documented territory. In a succession year, the incoming sovereign determines the common map colour while both office holders remain inspectable. Vacancies are explained without inventing kings. The Holy Roman Empire switch adds a separate gold overlay of its approximate legal extent for every year of the map (1106–1800), with dated changes; it does not turn its members into the emperor’s personal domains.'],
  ['Scope and author','The main period covered is 1200–1800. The database is still being expanded, corrected and documented.','The project is maintained by Manuel Muriel Cagigal, a European Studies student specialising in International Relations.'],
+];
+export const ENGLISH_LICENCES = [
+ ['Original content','Unless expressly stated otherwise, the code, design, texts, historical journeys and original database structure of The Tree of Europe are protected by all rights reserved. This reservation does not apply to third-party material, which remains subject to its own licence.'],
+ ['MapChart cartography','The map base comes from MapChart and has been modified and adapted for this project. The corresponding cartographic material is published under Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0). This licence does not automatically extend to the rest of the project.'],
+ {title:'MapChart and cartographic licence',paragraphs:[],links:[['MapChart','https://www.mapchart.net/'],['CC BY-SA 4.0','https://creativecommons.org/licenses/by-sa/4.0/']]},
+ {title:'Coats of arms: authors and licences',paragraphs:['The drawings come from Wikimedia Commons, WappenWiki and contributions created by Manuel Muriel Cagigal with Heraldicon. Every image retains its authorship, provenance and licence or permission for use. The records describe adaptations, including removed external crowns and composite devices, and share images include the corresponding credits.'],links:CREDITOS_ESCUDOS.flatMap(c=>[[`${c.dinastia} · ${c.autor} · ${c.licencia}`,c.fuente],...(c.fuentesAdicionales||[]).map(f=>[`${c.dinastia} · ${f.titulo} · ${f.autor} · ${f.licencia}`,f.fuente])])},
+];
+export const ENGLISH_ACKNOWLEDGEMENTS = [
+ ['Corrections and contributions','The Tree of Europe is prepared to credit people who identify errors, provide documentation or help improve the database. Documented corrections are an essential part of the project’s growth.'],
+ {title:'Cartography',paragraphs:['The territorial representation uses MapChart material as its cartographic base, adapted for this project under its attribution terms.'],links:[['MapChart','https://www.mapchart.net/']]},
+ {title:'Heraldry',paragraphs:['Thanks to Heraldicon, the tool Manuel Muriel Cagigal has used to create and contribute original coats of arms. The authorship and terms of use of each drawing appear in its credits.'],links:[['Heraldicon','https://heraldicon.org/']]},
 ];

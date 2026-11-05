@@ -109,7 +109,7 @@ export default function AtlasGuide({locale, onClose, onAction, selectedId, selec
         <h3 tabIndex={-1} ref={headingRef}>{c.sections[1]}</h3>
         <nav aria-label={en ? 'Reading index' : 'Índice de lectura'}>{c.reading.map(item => <a href={`#atlas-help-${item.id}`} key={item.id}>{item.title}</a>)}<a href="#atlas-help-mapas">{en ? 'Read the maps' : MAP_READING_GUIDE.title}</a></nav>
         {c.reading.map(item => <section key={item.id} id={`atlas-help-${item.id}`}><h4>{item.title}</h4>{item.paragraphs.map(text => <p key={text}>{text}</p>)}</section>)}
-        <section id="atlas-help-mapas"><h4>{en ? 'Read the maps' : MAP_READING_GUIDE.title}</h4>{!en && MAP_READING_GUIDE.paragraphs.map(text => <p key={text}>{text}</p>)}<a href="/es/metodologia#como-leer-el-mapa">{en ? 'Full map criteria and examples (Spanish)' : 'Criterios completos, ejemplos y fuentes del mapa'} →</a></section>
+        <section id="atlas-help-mapas"><h4>{en ? 'Read the maps' : MAP_READING_GUIDE.title}</h4>{!en && MAP_READING_GUIDE.paragraphs.map(text => <p key={text}>{text}</p>)}<a href={en?'/en/methodology':'/es/metodologia#como-leer-el-mapa'}>{en ? 'Full map criteria, examples and sources' : 'Criterios completos, ejemplos y fuentes del mapa'} →</a></section>
       </div>}
       {section === 2 && <div className="atlas-guide-content"><h3 tabIndex={-1} ref={headingRef}>{c.sections[2]}</h3><dl>{c.controls.map(([term,definition]) => <React.Fragment key={term}><dt>{term}</dt><dd>{definition}</dd></React.Fragment>)}</dl></div>}
     </div>

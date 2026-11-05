@@ -1,1 +1,491 @@
-{}
+{
+  "revolucion-protestante": {
+    "enSlug": "the-protestant-revolution",
+    "content": {
+      "id": "revolucion-protestante",
+      "titulo": "The Protestant Revolution",
+      "subtitulo": "Humanism, Reform, imperial politics and the response of Trent",
+      "disponible": true,
+      "descripcion": "A journey through the religious breakdown of the 16th century: Erasmus and the return to the sources, Luther and the German princes, Zwingli and Calvin, the English separation and a Catholic Church responding with new orders and the Council of Trent.",
+      "pasos": [
+        {
+          "anio": 1516,
+          "persona": "ERASMOROT",
+          "personas": [
+            "ERASMOROT"
+          ],
+          "eventoId": "ERASMO_1516",
+          "titulo": "Before Luther: Reforming through Knowledge",
+          "texto": "Erasmus of Rotterdam wants a more cultured, moral and Christian church. His Greek and Latin edition of the New Testament symbolizes the humanist program: Read better before discussing better. Erasmus will not be Protestant, but the intellectual world he helps create will make it much harder to accept authority without examination."
+        },
+        {
+          "anio": 1517,
+          "persona": "LUTERO",
+          "personas": [
+            "LUTERO",
+            "TETZEL",
+            "PAPA_LEON10",
+            "FRED3SAX"
+          ],
+          "eventoId": "LUTERO_1517",
+          "titulo": "1517: a local controversy finds a printing press",
+          "texto": "The preaching of indulgences associated with Johann Tetzel provoked the academic protest of Martin Luther. What could have been a college dispute circulates at extraordinary speed. Leo X sees a problem of obedience; Luther begins by thinking of a problem of penance and ends up questioning the very way Christian authority is defined."
+        },
+        {
+          "anio": 1519,
+          "persona": "JOHANNECK",
+          "personas": [
+            "JOHANNECK",
+            "LUTERO",
+            "MELANCHTHON"
+          ],
+          "eventoId": "LEIPZIG_1519",
+          "titulo": "Leipzig: the discussion is no longer just about indulgences",
+          "texto": "Johann Eck forces Luther to take his arguments to the bottom. If popes and councils can be wrong, where does ultimate authority rest? Luther's answer moves to the Scriptures. Around him, young humanists like Philip Melanchthon turn the protest into an increasingly coherent intellectual program."
+        },
+        {
+          "anio": 1521,
+          "persona": "CARLOS5",
+          "personas": [
+            "CARLOS5",
+            "LUTERO",
+            "FRED3SAX"
+          ],
+          "eventoId": "WORMS_1521",
+          "titulo": "Worms: The theologian becomes an imperial problem",
+          "texto": "Charles V, the newly elected emperor, must negotiate with the princes and institutions of the Empire to deal with the religious dispute. Luther refuses to retreat and Frederick the Wise protects him in Wartburg. Here doctrine and constitution intersect: without the political fragmentation of the Empire, the history of the Reformation would have been very different."
+        },
+        {
+          "anio": 1523,
+          "persona": "ZWINGLI",
+          "personas": [
+            "ZWINGLI",
+            "LUTERO"
+          ],
+          "eventoId": "ZURICH_1523",
+          "titulo": "The different currents of the Reformation",
+          "texto": "In Zurich, Huldrych Zwingli develops an independent reform program. He agrees with Luther in breaking with numerous elements of medieval tradition, but disagrees on central issues such as the Eucharist. Protestant currents develop different doctrines and forms of organization."
+        },
+        {
+          "anio": 1529,
+          "persona": "JUANSAX",
+          "personas": [
+            "JUANSAX",
+            "FELIPEHESSE",
+            "CARLOS5"
+          ],
+          "eventoId": "SPEYER_1529",
+          "titulo": "A political protest gives birth to a name",
+          "texto": "When the Diet of Espira attempts to limit the expansion of the Reformation, several princes and cities protest formally. John of Saxony and Philip of Hesse represent a decisive reality: new confessions survive because there are territorial powers willing to protect them."
+        },
+        {
+          "anio": 1530,
+          "persona": "MELANCHTHON",
+          "personas": [
+            "MELANCHTHON",
+            "CARLOS5",
+            "JUANSAX",
+            "FELIPEHESSE"
+          ],
+          "eventoId": "CONFESION_AUGSBURGO_1530",
+          "titulo": "Augsburg: the Reformation defines itself",
+          "texto": "Melanchthon presents the Augsburg Confession to Charles V. The document attempts to explain the Lutheran faith in a systematic way and still seeks to show how much it shares with the common Christian tradition. But the mere fact that princes and cities present their own confession shows that breakup already has institutions."
+        },
+        {
+          "anio": 1534,
+          "persona": "ENRIQ8ING",
+          "personas": [
+            "ENRIQ8ING",
+            "CATARAG",
+            "ANABOLENA",
+            "THOMASCROMWELL",
+            "THOMASCRANMER",
+            "TOMASMORO"
+          ],
+          "eventoId": "SUPREMACIA_1534",
+          "titulo": "England: a Reformation that begins with the crown",
+          "texto": "Henry VIII's marriage problem with Catherine of Aragon led to a judicial break with Rome. Thomas Cromwell and Thomas Cranmer build the new order; Thomas Moro refuses to recognize the king's religious supremacy and is executed. England enters the Reformation through a different gate from Wittenberg."
+        },
+        {
+          "anio": 1536,
+          "persona": "CALVINO",
+          "personas": [
+            "CALVINO",
+            "ZWINGLI",
+            "LUTERO"
+          ],
+          "eventoId": "CALVINO_1536",
+          "titulo": "Calvin: The second generation organizes a revolution",
+          "texto": "John Calvin publishes the first edition of the Institution of the Christian Religion. His work systematizes a reformed tradition that is not Lutheran and that will eventually project itself from Geneva to France, the Netherlands, Scotland and other territories."
+        },
+        {
+          "anio": 1540,
+          "persona": "IGNACIOLOYOLA",
+          "personas": [
+            "IGNACIOLOYOLA",
+            "DIEGOLAIN",
+            "PAPA_PAULO3"
+          ],
+          "eventoId": "JESUITAS_1540",
+          "titulo": "The Catholic Church is changing too",
+          "texto": "Paul III approves the Society of Jesus, founded by Ignatius of Loyola and his companions. The Catholic Reformation brings together Luther's response and internal currents of education, discipline and spiritual renewal."
+        },
+        {
+          "anio": 1545,
+          "persona": "PAPA_PAULO3",
+          "personas": [
+            "PAPA_PAULO3",
+            "SERIPANDO",
+            "DOMINGOSOTO",
+            "DIEGOLAIN",
+            "ALFONSOSALMERON"
+          ],
+          "eventoId": "TRENTO_1545",
+          "titulo": "Trent: respond, reform and define",
+          "texto": "The Council of Trent opens under Paul III. Girolamo Seripando, Domingo de Soto, Diego Laínez, Alfonso Salmerón and many others discuss issues that the Reformation has made impossible to postpone: justification, sacraments, authority, clergy formation, and ecclesiastical discipline."
+        },
+        {
+          "anio": 1547,
+          "persona": "JUANFED1SAX",
+          "personas": [
+            "CARLOS5",
+            "JUANFED1SAX",
+            "FELIPEHESSE"
+          ],
+          "eventoId": "MUHLBERG_1547",
+          "titulo": "Mühlberg: Charles V wins a battle and loses the solution",
+          "texto": "The emperor defeated the League of Esmalkalde militarily and captured John Frederick of Saxony and Philip of Hesse. It seems like it's time to restore the unit. It doesn't happen. After the imperial victory, the Reformed churches retain their roots in the territories, universities and the convictions of much of the population."
+        },
+        {
+          "anio": 1555,
+          "persona": "FERN1EMP",
+          "personas": [
+            "CARLOS5",
+            "FERN1EMP",
+            "JUANFED1SAX",
+            "FELIPEHESSE"
+          ],
+          "eventoId": "AUGSBURGO_1555",
+          "titulo": "Augsburg: The Empire admits the breakup is real",
+          "texto": "Ferdinand negotiates a peace in the name of his brother Charles that legally recognizes Lutheranism alongside Catholicism within the imperial framework. It is an incomplete solution and does not include all new confessions, but it is the definitive failure of the one-religion project imposed by the emperor."
+        },
+        {
+          "anio": 1559,
+          "persona": "ISABEL1ING",
+          "personas": [
+            "ENRIQ8ING",
+            "EDUARDO6ING",
+            "MARIA1ING",
+            "ISABEL1ING",
+            "THOMASCRANMER"
+          ],
+          "eventoId": "ELIZABETH_SETTLEMENT_1559",
+          "titulo": "England after three shifts of course",
+          "texto": "After Henry VIII, Protestantism progressed under Edward VI and retreated under Mary I. Elizabeth I established a new ecclesiastical balance separate from Rome in 1559. The English Reformation ceased to be solely Henry's marriage decision and became a lasting confessional identity."
+        },
+        {
+          "anio": 1563,
+          "persona": "GIOVANNIMORONE",
+          "personas": [
+            "PAPA_PIO4",
+            "GIOVANNIMORONE",
+            "SERIPANDO",
+            "DIEGOLAIN",
+            "ALFONSOSALMERON"
+          ],
+          "eventoId": "TRENTO_CIERRE_1563",
+          "titulo": "Trent concludes, the revolution does not",
+          "texto": "In the final phase, Giovanni Morone helps to bring the council out of a serious crisis and Pius IV confirms his decrees. The Catholic Church leaves Trento more doctrinally defined and with an institutional reform program. Europe will no longer return to the religious unity of 1500: from the conflict several Christian Europes have been born who will continue to compete for generations."
+        }
+      ],
+      "colecciones": []
+    }
+  },
+  "lepanto-alianza": {
+    "enSlug": "lepanto-the-last-crusade",
+    "content": {
+      "id": "lepanto-alianza",
+      "titulo": "Lepanto: the last crusade",
+      "subtitulo": "How Rome, Spain and Venice gathered a fleet against the Ottoman Empire",
+      "disponible": true,
+      "descripcion": "The Ottoman conquest of Cyprus forces Catholic powers with rival interests to coordinate. Pius V builds the Holy League, Philip II brings the main monarchical power and don John of Austria receives a fleet in which Venetians, pontiffs, Genoese and Spaniards must learn to fight together. The combat brings together the clash of the captains, the fight on the wings and the experience of soldiers like Cervantes; after the defeat, the Ottomans quickly rebuild their fleet.",
+      "pasos": [
+        {
+          "anio": 1520,
+          "persona": "SULEIMAN1OSM",
+          "personas": [
+            "SULEIMAN1OSM"
+          ],
+          "eventoId": "SOLIMAN_1520",
+          "titulo": "The Mediterranean already has a superpower",
+          "texto": "Suleiman the Magnificent inherits an expanding Ottoman Empire and brings it to its height. For decades, the Habsburgs, Venice and other Christian states have been fighting the same rival, but their own interests prevent them from forming a permanent alliance."
+        },
+        {
+          "anio": 1566,
+          "persona": "SELIM2OSM",
+          "personas": [
+            "SULEIMAN1OSM",
+            "SELIM2OSM"
+          ],
+          "eventoId": "SELIM2_1566",
+          "titulo": "Selim II inherits pressure on the Mediterranean",
+          "texto": "The death of Suleiman does not end the Ottoman expansion. Selim II maintains an offensive policy and soon focuses his attention on Cyprus, a Venetian possession strategically located in the eastern Mediterranean."
+        },
+        {
+          "anio": 1570,
+          "persona": "SEBASTIANOVENIER",
+          "personas": [
+            "SELIM2OSM",
+            "SEBASTIANOVENIER",
+            "ALIPASHALEPANTO"
+          ],
+          "eventoId": "CHIPRE_1570",
+          "titulo": "Cyprus turns the Venetian problem into a European crisis",
+          "texto": "The Ottoman invasion of Cyprus forces Venice to ask for help. The maritime republic needs the Hispanic Monarchy, but Philip II must also protect Spain, Italy and North Africa. Creating the alliance requires deciding who pays, who commands and where to fight."
+        },
+        {
+          "anio": 1571,
+          "persona": "PAPA_PIO5",
+          "personas": [
+            "PAPA_PIO5",
+            "FEL2ESP",
+            "DONJUANAUST",
+            "MARCANTONIO2COL",
+            "SEBASTIANOVENIER"
+          ],
+          "eventoId": "LIGA_SANTA_1571",
+          "titulo": "Pius V achieves what seemed impossible",
+          "texto": "Pope Pius V acts as a mediator and gets the Spanish Monarchy, Venice and the Pontifical States to accept a Holy League. Philip II supports the project and don John of Austria, son of Charles V and half-brother of the king, receives the supreme command."
+        },
+        {
+          "anio": 1571,
+          "persona": "PAPA_PIO5",
+          "personas": [
+            "PAPA_PIO5",
+            "DONJUANAUST"
+          ],
+          "eventoId": "PIOV_ROGATIVAS_1571",
+          "titulo": "As the fleet sails, Rome prays",
+          "texto": "Pius V is not limited to negotiating the coalition: he orders public pleas, blesses the expedition and sends a pontifical banner to don Juan. Catholic memory will then link victory to prayer and the Rosary. A famous scene places Pius V in Rome on the day of the battle: he interrupts his affairs, approaches a window and announces victory before the messenger arrives. The pope attributes the triumph to the intercession of the Virgin, invoked through the rosary, and institutes the feast of Our Lady of Victory. Gregory XIII later linked it to the name of Our Lady of the Rosary."
+        },
+        {
+          "anio": 1571,
+          "persona": "DONJUANAUST",
+          "personas": [
+            "DONJUANAUST",
+            "SEBASTIANOVENIER",
+            "MARCANTONIO2COL",
+            "GIANANDREADORIA",
+            "AGOSTINOBARBARIGO",
+            "ALVAROBAZAN"
+          ],
+          "eventoId": "MESINA_1571",
+          "titulo": "Messina: meeting the League's commanders",
+          "texto": "The coalition brings together contingents from various powers, with commands, interests and own resources. Venier represents the enormous Venetian weight; Marcantonio Colonna commands the pontifical contingent; Gianandrea Doria directs the Genoese galleys at the service of Spain; Agostino Barbarigo and Álvaro de Bazán occupy decisive tactical commands. Don Juan must turn that sum of jurisdictions, rivalries and naval traditions into a single fleet."
+        },
+        {
+          "anio": 1571,
+          "persona": "DONJUANAUST",
+          "personas": [
+            "DONJUANAUST",
+            "MARCANTONIO2COL",
+            "AGOSTINOBARBARIGO",
+            "GIANANDREADORIA",
+            "ALVAROBAZAN",
+            "ALIPASHALEPANTO",
+            "ULUCALI"
+          ],
+          "eventoId": "FORMACION_LEPANTO_1571",
+          "titulo": "7 October: two lines of galleys seek each other out",
+          "texto": "The League forms three large bodies and a reserve: Barbarigo remains on the left, Don Juan and Colonna in the center, Doria on the right and Bazán behind to intervene where necessary. Ali Baja leads the Ottoman centre; Uluç Ali faces Doria in the opposite wing. The battle will depend on both the frontal impact and who can wrap or reinforce the ends."
+        },
+        {
+          "anio": 1571,
+          "persona": "DONJUANAUST",
+          "personas": [
+            "DONJUANAUST",
+            "ALIPASHALEPANTO",
+            "MARCANTONIO2COL",
+            "SEBASTIANOVENIER"
+          ],
+          "eventoId": "CENTRO_LEPANTO_1571",
+          "titulo": "La Real and La Sultana become locked together",
+          "texto": "In the center, the flagships of Don John and Ali Pasha become the heart of the fight. Arquebusiers, janissaries and boarding troops fight across decks joined by rams and improvised gangways. New men come into the fight again and again until Ali Pasha dies and La Sultana is captured. The Ottoman center is starting to unravel."
+        },
+        {
+          "anio": 1571,
+          "persona": "ULUCALI",
+          "personas": [
+            "ULUCALI",
+            "GIANANDREADORIA",
+            "ALVAROBAZAN",
+            "AGOSTINOBARBARIGO"
+          ],
+          "eventoId": "ALAS_LEPANTO_1571",
+          "titulo": "On the wings, the victory is still undecided",
+          "texto": "Barbarigo is mortally wounded while his wing contains the Ottoman tip. On the other hand, Uluç Ali takes advantage of the space that opens during the Doria maneuver and hits several Christian galleys. Alvaro de Bazán uses the reserve to close the gap. Uluç Ali understands that the center is lost and manages to retreat with a part of his ships: he will be the great Ottoman survivor of the day."
+        },
+        {
+          "anio": 1571,
+          "persona": "CERVANTES",
+          "personas": [
+            "CERVANTES",
+            "DONJUANAUST"
+          ],
+          "eventoId": "CERVANTES_LEPANTO_1571",
+          "titulo": "Among the soldiers is Miguel de Cervantes",
+          "texto": "Miguel de Cervantes fights aboard the Marquise. He leaves Lepanto injured and loses the use of his left hand, but he will retain his pride for his entire life of having participated in that day. Cervantes makes his Lepanto experience a central element of his personal and literary memory."
+        },
+        {
+          "anio": 1571,
+          "persona": "DONJUANAUST",
+          "personas": [
+            "DONJUANAUST",
+            "ALIPASHALEPANTO",
+            "ULUCALI",
+            "PAPA_PIO5",
+            "FEL2ESP",
+            "CERVANTES"
+          ],
+          "eventoId": "LEPANTO",
+          "titulo": "The League wins the battle",
+          "texto": "After hours of fighting, much of the Ottoman fleet has been captured, sunk or abandoned and Ali Baja has died. Don Juan wins a victory that makes a huge impression in Europe. Lepanto demonstrates that a coalition of rival powers can defeat the main Ottoman army when it manages to act in a coordinated manner."
+        },
+        {
+          "anio": 1572,
+          "persona": "ULUCALI",
+          "personas": [
+            "ULUCALI",
+            "SELIM2OSM"
+          ],
+          "eventoId": "RECONSTRUCCION_OTOMANA_1572",
+          "titulo": "Lepanto's survivor is rebuilding the fleet.",
+          "texto": "Uluç Ali is promoted to the top Ottoman naval command. During the winter, the arsenals are rapidly building up a large fleet. The Ottoman Empire mobilizes its arsenals, resources and crews to regain its maritime capacity and maintain its presence in the Mediterranean."
+        },
+        {
+          "anio": 1573,
+          "persona": "SEBASTIANOVENIER",
+          "personas": [
+            "SELIM2OSM",
+            "ULUCALI",
+            "SEBASTIANOVENIER",
+            "FEL2ESP"
+          ],
+          "eventoId": "PAZ_VENECIA_1573",
+          "titulo": "After Lepanto: Cyprus and the Venetian Peace",
+          "texto": "Venice ends the peace negotiations and accepts the loss of Cyprus. The League dissolves and the Ottoman fleet returns to the sea."
+        }
+      ],
+      "contexto": "Campaign of 1571: the Holy League brings together pontifical, Spanish and Venetian interests. Religious warfare, strategic objectives and rivalries between allies converge in the formation of the League.",
+      "fuentes": [
+        {
+          "titulo": "Estado de la Ciudad del Vaticano · Nuestra Señora del Rosario",
+          "url": "https://www.vaticanstate.va/en/component/content/article/7-october-our-lady-of-the-rosary.html?Itemid=216&catid=51"
+        }
+      ],
+      "colecciones": [
+        "cruzadas"
+      ]
+    }
+  },
+  "constantinopla-dos-conquistas": {
+    "enSlug": "constantinople-two-conquests-two-worlds",
+    "content": {
+      "id": "constantinopla-dos-conquistas",
+      "titulo": "Constantinople: two conquests, two worlds",
+      "subtitulo": "1204 and 1453: from the Fourth Crusade to Mehmed II's reign",
+      "disponible": true,
+      "contexto": "Constantinople was conquered in 1204 by the crusaders of the Fourth Crusade and in 1453 by the Ottoman army of Mehmed II. Between the two conquests, the Palaeologists recaptured the capital in 1261.",
+      "descripcion": "Why a crusader army attacked a Christian capital, how the Palaeologists returned and what changed when Mehmed II took the city. A history of debt, legitimacy, sieges and reconstructions.",
+      "fuentes": [
+        {
+          "titulo": "Ministerio de Cultura de Turquía · Hisarlar Müzesi, Rumeli Hisarı",
+          "url": "https://kulturportali.gov.tr/turkiye/istanbul/gezilecekyer/hisarlar-muzesi"
+        },
+        {
+          "titulo": "The Metropolitan Museum of Art · Byzantium (ca. 330–1453)",
+          "url": "https://www.metmuseum.org/essays/byzantium-ca-330-1453"
+        },
+        {
+          "titulo": "The Metropolitan Museum of Art · Constantinople after 1261",
+          "url": "https://www.metmuseum.org/essays/constantinople-after-1261"
+        },
+        {
+          "titulo": "The Metropolitan Museum of Art · The Ottoman Empire",
+          "url": "https://www.metmuseum.org/learn/educators/curriculum-resources/art-of-the-islamic-world/unit-five/chapter-two/the-ottoman-empire"
+        }
+      ],
+      "pasos": [
+        {
+          "anio": 1202,
+          "persona": "ENRICO_DANDOLO_DOGE",
+          "personas": [
+            "ENRICO_DANDOLO_DOGE"
+          ],
+          "titulo": "A chartered fleet and outstanding debt",
+          "texto": "In 1202, the crusaders gathered in Venice find a fleet prepared for a larger expedition than they can afford. Doge Enrico Dandolo offers to postpone some of the debt in exchange for help against Zara, a Christian city that is disputing Venetian rule. Then another proposal appears: Byzantine prince Alexios promises money, soldiers, and the union of the Churches if the expeditionaries help him regain the throne of Constantinople. The financing of the crusade is linked to a struggle for imperial succession."
+        },
+        {
+          "anio": 1204,
+          "persona": "ENRICO_DANDOLO_DOGE",
+          "personas": [
+            "ENRICO_DANDOLO_DOGE"
+          ],
+          "titulo": "1204: the sack of Constantinople",
+          "texto": "The intervention takes the prince to the throne as Alexios IV, alongside his father Isaac II, in 1203. Raising the promised funds requires new burdens and increases hostility toward foreigners. A revolt brings down the emperors and the Crusader agreement is broken. In April 1204, the crusaders stormed Constantinople and plundered its churches, palaces, and houses. Balduino of Flanders is elected Latin emperor; Venice gains positions and commercial privileges. The Byzantine court lost the capital and various Greek powers were reorganized in Nicaea, Epirus and Trebizond."
+        },
+        {
+          "anio": 1261,
+          "persona": "MICHAEL8PALA",
+          "personas": [
+            "MICHAEL8PALA"
+          ],
+          "titulo": "1261: return from Nicaea",
+          "texto": "The Empire of Nicaea became the main base of the Byzantine recovery. In 1261, the troops of Michael VIII Palaeologos entered Constantinople and put an end to the Latin rule of the city. The emperor installed his court there and undertook the restoration of buildings and institutions. Reconstructing the capital consumes resources of a territorially reduced empire. The trade networks of Genoese and Venetians maintain their weight, while dynastic disputes and wars press on the finances and defense of Paleologists."
+        },
+        {
+          "anio": 1452,
+          "persona": "MEHMED2OSM",
+          "personas": [
+            "MEHMED2OSM",
+            "CONSTANTINE11PALA"
+          ],
+          "titulo": "1452: Closing the Bosphorus",
+          "texto": "Mehmed II prepares the conquest of Constantinople from both banks of the strait. Rumeli Hisarı fortress reinforces its control of the Bosphorus and makes it difficult to supply the city. Within the walls, Constantine XI assembled a small garrison with Byzantine and foreign fighters. The Ottoman army has siege artillery and a fleet to sustain the blockade. The resistance will depend on repairing the gaps, preserving the reserves and simultaneously defending several sectors of an extensive line of fortifications."
+        },
+        {
+          "anio": 1453,
+          "persona": "MEHMED2OSM",
+          "personas": [
+            "MEHMED2OSM",
+            "CONSTANTINE11PALA"
+          ],
+          "titulo": "1453: the last assault",
+          "texto": "The siege begins in April. Bombing and attack wear down the defenses; the transfer of Ottoman ships to the Golden Horn increases the pressure on the city. On May 29, the final assault opens the way to Mehmed's troops. Constantine XI died during the fall of Constantinople, whose inhabitants suffered plunder and captivity. The Sultan enters the conquered capital. In the following campaigns he extended his power over the last Byzantine dominions: the Morea in 1460 and Trebizond in 1461."
+        },
+        {
+          "anio": 1453,
+          "persona": "MEHMED2OSM",
+          "personas": [
+            "MEHMED2OSM"
+          ],
+          "titulo": "A capital for Mehmed II",
+          "texto": "Mehmed makes Constantinople the center of his empire. It stimulates the arrival of people, revives commercial activity and undertakes works to sustain urban life. St. Sophia becomes a mosque and the Orthodox patriarchate is reorganized under the sultan's authority. Muslims, Christians and Jews are participating in a city that is growing again. The capital that the Paleologists had recovered in 1261 is now transformed into the seat of a dynasty that rules both sides of the Bosphorus."
+        }
+      ],
+      "colecciones": [
+        "cruzadas"
+      ]
+    }
+  },
+  "ultimo-austria": {
+    "enSlug": "the-last-austria",
+    "content": {
+      "id": "ultimo-austria",
+      "titulo": "The last Austria",
+      "subtitulo": "Charles II, the impossible legacy and the crisis that changed Europe",
+      "disponible": false,
+      "colecciones": []
+    }
+  }
+}

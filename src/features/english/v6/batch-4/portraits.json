@@ -1,1 +1,116 @@
-{}
+{
+  "ISABPORTEMP": {
+    "tipo": "Posthumous portrait",
+    "obra": "The Empress Isabella of Portugal",
+    "autor": "Titian",
+    "fecha": "c. 1548",
+    "institucion": "Museo del Prado, Madrid",
+    "alt": "Portrait of Isabella of Portugal, empress"
+  },
+  "MARGAUST": {
+    "tipo": "Historical portrait",
+    "obra": "Margaret of Austria",
+    "autor": "Workshop of Lucas Cranach the Elder",
+    "fecha": "c. 1530",
+    "alt": "Portrait of Margaret of Austria"
+  },
+  "FREDERICKHENRYORANGE": {
+    "tipo": "Contemporary portrait",
+    "obra": "Frederick Henry, Prince of Orange",
+    "autor": "Anthony van Dyck",
+    "fecha": "c. 1629-1630",
+    "alt": "Portrait of Frederick Henry, Prince of Orange"
+  },
+  "MARGAUSTSAX": {
+    "tipo": "Posthumous representation",
+    "obra": "Margaret of Austria · dynastic portrait series",
+    "autor": "Antoni Boys (Anton Waiss)",
+    "fecha": "16th century",
+    "institucion": "Kunsthistorisches Museum, Vienna",
+    "alt": "Posthumous representation of Margaret of Austria"
+  },
+  "LEONORPOR": {
+    "tipo": "Posthumous portrait",
+    "obra": "Portrait of Eleanor of Portugal",
+    "autor": "Hans Burgkmair the Elder (attributed)",
+    "fecha": "late fifteenth–early sixteenth century",
+    "institucion": "Kunsthistorisches Museum, Vienna",
+    "alt": "Portrait of Eleanor of Portugal"
+  },
+  "ERNEST1": {
+    "tipo": "Posthumous representation",
+    "obra": "Ernest I of Austria · dynastic portrait series",
+    "autor": "Antoni Boys (Anton Waiss)",
+    "fecha": "16th century",
+    "institucion": "Kunsthistorisches Museum, Vienna",
+    "alt": "Posthumous representation of Ernest I of Austria"
+  },
+  "BELA4": {
+    "tipo": "Historical portrait",
+    "obra": "Béla IV in the Chronica Hungarorum",
+    "autor": "Johannes de Thurocz (illustrated edition)",
+    "fecha": "1488",
+    "alt": "Portrait of Béla IV of Hungary"
+  },
+  "JUANA2NAP": {
+    "tipo": "Posthumous representation",
+    "obra": "Joanna II of Naples · dynastic portrait series",
+    "autor": "Antoni Boys (Anton Waiss)",
+    "fecha": "16th century",
+    "institucion": "Kunsthistorisches Museum, Vienna",
+    "alt": "Posthumous representation of Joanna II of Naples"
+  },
+  "LADI3": {
+    "tipo": "Posthumous representation",
+    "obra": "Ladislaus III · Chronica Hungarorum",
+    "autor": "Anonymous illustrator of Johannes de Thurocz’s Chronica Hungarorum",
+    "fecha": "1488",
+    "alt": "Posthumous representation of Ladislaus III"
+  },
+  "ANDRES3": {
+    "tipo": "Posthumous representation",
+    "obra": "Andrew III · dynastic portrait series",
+    "autor": "Antoni Boys (Anton Waiss)",
+    "fecha": "16th century",
+    "institucion": "Kunsthistorisches Museum, Vienna",
+    "alt": "Posthumous representation of Andrew III"
+  },
+  "PAPA_CLEMENTE5": {
+    "tipo": "Portrait",
+    "obra": "Clement V in The Triumph of Saint Thomas Aquinas",
+    "autor": "Andrea di Bonaiuto",
+    "fecha": "1365-1367",
+    "institucion": "Spanish Chapel, Santa Maria Novella, Florence",
+    "alt": "Portrait of Pope Clement V"
+  },
+  "PAPA_BENEDICTO12": {
+    "tipo": "Historical miniature",
+    "obra": "Benedict XII and the envoys from China",
+    "autor": "Anonymous illuminator",
+    "fecha": "c. 1410-1412",
+    "institucion": "Bibliothèque nationale de France, Français 2810",
+    "alt": "Portrait of Pope Benedict XII"
+  },
+  "PAPA_CLEMENTE13": {
+    "tipo": "Contemporary portrait",
+    "obra": "Clement XIII",
+    "autor": "Anton Raphael Mengs",
+    "fecha": "1760",
+    "alt": "Portrait of Pope Clement XIII"
+  },
+  "PAPA_URBANO6": {
+    "tipo": "Posthumous portrait",
+    "obra": "Tomb of Urban VI",
+    "autor": "Anonymous sculptor",
+    "fecha": "late fourteenth century",
+    "institucion": "Vatican Grottoes, Saint Peter’s Basilica",
+    "alt": "Portrait of Pope Urban VI"
+  },
+  "PAPA_URBANO7": {
+    "tipo": "Contemporary portrait",
+    "obra": "Urban VII",
+    "autor": "Jacopino del Conte",
+    "fecha": "1590",
+    "alt": "Portrait of Pope Urban VII"
+  }
+}

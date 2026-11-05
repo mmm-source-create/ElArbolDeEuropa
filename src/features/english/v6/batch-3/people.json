@@ -1,1 +1,3179 @@
-{}
+{
+  "ANABOHUN": {
+    "name": "Anne of Bohemia and Hungary",
+    "role": "Consort",
+    "nickname": "",
+    "aliases": [],
+    "summary": "Consort of the Jagiellon dynasty. Their life was connected with Austria, Bohemia and Hungary.",
+    "sections": []
+  },
+  "MARIAJOSEPHAAUSTRIASAX": {
+    "name": "Maria Josepha of Austria",
+    "role": "Consort",
+    "nickname": "",
+    "aliases": [],
+    "summary": "Consort of the Habsburg dynasty. Their life was connected with Austria, Saxony and Poland.",
+    "sections": []
+  },
+  "MARIAAMALIAHAB1701": {
+    "name": "Maria Amalia of Austria",
+    "role": "Consort",
+    "nickname": "",
+    "aliases": [],
+    "summary": "Consort of the Habsburg dynasty. Their life was connected with Bavaria, Holy Roman Empire and Austria.",
+    "sections": []
+  },
+  "GUGL9MON": {
+    "name": "William IX of Montferrat",
+    "role": "Marquess",
+    "nickname": "",
+    "aliases": [],
+    "summary": "He inherited Montferrat from Boniface III and married Anne of Alençon. His children Margaret and Boniface would occupy different positions in the succession: Boniface inherited the marquisate, while Margaret transmitted the rights that would eventually support its incorporation into the Gonzaga inheritance.",
+    "sections": [],
+    "biography": "He inherited Montferrat from Boniface III and married Anne of Alençon. His children Margaret and Boniface would occupy different positions in the succession: Boniface inherited the marquisate, while Margaret transmitted the rights that would eventually support its incorporation into the Gonzaga inheritance. William’s French marriage strengthened the house’s international connections."
+  },
+  "LUIS2FLA": {
+    "name": "Louis II of Flanders",
+    "role": "Count",
+    "nickname": "Male",
+    "aliases": [],
+    "summary": "Louis of Male, Count of Flanders since 1346. In the face of the Flemish cities, his daughter Margaret took Flanders to the dukes of Burgundy.",
+    "sections": []
+  },
+  "LEONAUST": {
+    "name": "Eleanor of Austria",
+    "role": "Consort",
+    "nickname": "",
+    "aliases": [],
+    "summary": "Consort of the Habsburg dynasty. Their life was connected with Portugal, France and Austria.",
+    "sections": []
+  },
+  "ISABCLARAEUG": {
+    "name": "Isabella Clara Eugenia",
+    "role": "Sovereign / Governor",
+    "nickname": "",
+    "aliases": [],
+    "summary": "She exercised the sovereignty over the Low Countries with Albert and then continued as governor. Her political role was much broader than that of a dynastic consort.",
+    "sections": [],
+    "governmentNotes": {
+      "Autoridad compartida; no se interpreta como sucesión exclusiva.": "Shared authority; not interpreted as exclusive succession.",
+      "Gobernadora de Felipe IV después de la muerte de Alberto y la reversión de la soberanía en 1621; el cargo no le transmite los títulos provinciales del rey.": "Governor of Philip IV after the death of Albert and the reversal of sovereignty in 1621; the office does not transmit the king's provincial titles to him.",
+      "Soberanía compartida por Alberto e Isabel Clara Eugenia tras la cesión de Felipe II; sujeta al desenlace de la guerra en cada territorio.": "Sovereignty shared by Albert and Isabella Clara Eugenia after the cession of Philip II; subject to the outcome of the war in each territory."
+    }
+  },
+  "JACOBA": {
+    "name": "Jacqueline of Bavaria",
+    "role": "Countess",
+    "nickname": "",
+    "aliases": [
+      "Jacqueline de Hainaut",
+      "Jacoba van Beieren"
+    ],
+    "summary": "She inherited Hainaut, Holland and Zeeland from her father and defended her rights against John of Bavaria and Philip the Good. Her marriages formed part of that political struggle. The Agreement of Delft in 1428 restricted her power, and the cession of 1433 incorporated the counties into the Burgundian inheritance.",
+    "sections": [],
+    "governmentNotes": {
+      "Derechos disputados; el acuerdo de Delft de 1428 restringió su gobierno.": "Rights disputed; the Delft agreement of 1428 restricted his government.",
+      "Título conservado bajo la tutela de Felipe el Bueno hasta la cesión de 1433.": "Title preserved under the guardianship of Philip the Good until the cession of 1433."
+    }
+  },
+  "CATANJ": {
+    "name": "Catherine of Anjou",
+    "role": "Noble",
+    "nickname": "",
+    "aliases": [],
+    "summary": "Noble of the Anjou-Hungary dynasty. Their life was connected with Hungary and Silesia.",
+    "sections": []
+  },
+  "MARIAANAPORT": {
+    "name": "Maria Anna of Austria",
+    "role": "Consort",
+    "nickname": "",
+    "aliases": [],
+    "summary": "Consort of the Habsburg dynasty. Their life was connected with Portugal and Austria.",
+    "sections": []
+  },
+  "JOHN2AVES": {
+    "name": "John II of Avesnes",
+    "role": "Count",
+    "nickname": "",
+    "aliases": [],
+    "summary": "Count of Hainaut since 1280, inherited Holland and Zeeland in 1299 for his relationship with the Dutch house. The three counties retained their own identities. Their descendants connected them to England, the Wittelsbach and the Bourbons through marriages and successions.",
+    "sections": []
+  },
+  "ENRIQUEJOVEN": {
+    "name": "Henry the Young King",
+    "role": "Junior king of England",
+    "nickname": "",
+    "aliases": [],
+    "summary": "The surviving eldest son of Henry II, was crowned king in his father's life in 1170, but never received effective power. He led the great rebellion of 1173-1174 with his brothers and the support of France, and died in 1183, before his father.",
+    "sections": []
+  },
+  "ALB7AUST": {
+    "name": "Albert VII, Archduke of Austria",
+    "role": "Archduke / Sovereign",
+    "nickname": "",
+    "aliases": [],
+    "summary": "He ruled the Low Countries with Isabella Clara Eugenia. His regime sought to stabilize the Catholic territories and coincided with the Twelve-Year Truce.",
+    "sections": [],
+    "governmentNotes": {
+      "Autoridad compartida; no se interpreta como sucesión exclusiva.": "Shared authority; not interpreted as exclusive succession.",
+      "Soberanía compartida por Alberto e Isabel Clara Eugenia tras la cesión de Felipe II; sujeta al desenlace de la guerra en cada territorio.": "Sovereignty shared by Albert and Isabella Clara Eugenia after the cession of Philip II; subject to the outcome of the war in each territory."
+    }
+  },
+  "JOHN4TREB": {
+    "name": "John IV of Trebizond",
+    "role": "Emperor",
+    "nickname": "",
+    "aliases": [
+      "Ioannes IV Megas Komnenos"
+    ],
+    "summary": "He came to the throne during the rebellion against his father. His government faced the growing Ottoman pressure on the Black Sea routes. Genovese documentation allows his death to be placed in 1460, before David's access.",
+    "sections": []
+  },
+  "WILLIAMRICHNASSAU": {
+    "name": "William I of Nassau-Dillenburg",
+    "role": "Count",
+    "nickname": "the Rico",
+    "aliases": [],
+    "summary": "Count of Nassau, 1516–1559. Count of the Nassau dynasty.",
+    "sections": []
+  },
+  "HUGH1CYPRUS": {
+    "name": "Hugh I of Cyprus",
+    "role": "King",
+    "nickname": "",
+    "aliases": [
+      "Hugues 1",
+      "Hugh 1 of Cyprus",
+      "Hugues I",
+      "Hugh I"
+    ],
+    "summary": "King of Cyprus since 1205, son of Aimery of Lusignan. He participated in the fifth crusade and died in Tripoli in 1218.",
+    "sections": []
+  },
+  "GIANGIACOMOMON": {
+    "name": "John Jacob of Montferrat",
+    "role": "Marquess",
+    "nickname": "",
+    "aliases": [
+      "Giangiacomo Paleologo"
+    ],
+    "summary": "A son of Theodore II, he inherited Montferrat and married Joanna of Savoy, sister of Amadeus VIII. Their kinship did not prevent the Savoyard duke from exerting pressure on his lands.",
+    "sections": [],
+    "biography": "A son of Theodore II, he inherited Montferrat and married Joanna of Savoy, sister of Amadeus VIII. Their kinship did not prevent the Savoyard duke from exerting pressure on his lands. His sons and his daughter Elizabeth connect the later Montferrat succession with the Marquisate of Saluzzo and reveal the links among the three Alpine powers."
+  },
+  "JUANRANDAZZO": {
+    "name": "John of Randazzo",
+    "role": "Marquis of Randazzo · Duke of Athens and Neopatras",
+    "nickname": "",
+    "aliases": [
+      "Joan II d’Atenes",
+      "John II of Athens"
+    ],
+    "summary": "A son of Frederick II of Sicily and Marquis of Randazzo, he inherited the duchies of Athens and Neopatras from his brother William in 1338. Like his brothers, he ruled them from Sicily through vicars until his death in 1348.",
+    "sections": [],
+    "governmentNotes": {
+      "Sucedió a su hermano Guillermo.": "Succeeded his brother William."
+    }
+  },
+  "GASTON1FOIX": {
+    "name": "Gaston I of Foix",
+    "role": "Count / Viscount",
+    "nickname": "",
+    "aliases": [],
+    "summary": "A son of Roger Bernard III and Margaret of Béarn, he continued the joint inheritance of Foix and Béarn. His sons founded different lines within the family: those of Gaston II and Roger Bernard of Castellbò.",
+    "sections": [],
+    "biography": "A son of Roger Bernard III and Margaret of Béarn, he continued the joint inheritance of Foix and Béarn. His sons founded different lines within the family: those of Gaston II and Roger Bernard of Castellbò. The latter line would return to a central position after the extinction of Gaston Fébus’s descendants."
+  },
+  "ALBFREDPRUSSIA": {
+    "name": "Albert Frederick of Prussia",
+    "role": "Duke",
+    "nickname": "",
+    "aliases": [],
+    "summary": "Duke of Prussia since 1568. His mental illness left the government to his relatives in Brandenburg; his daughter Anna married Juan Segismundo, who inherited Prussia in 1618.",
+    "sections": []
+  },
+  "GUIDOFLA": {
+    "name": "Guy of Dampierre",
+    "role": "Count",
+    "nickname": "",
+    "aliases": [],
+    "summary": "Count of Flanders, 1278–1305. Count of the Dampierre dynasty.",
+    "sections": []
+  },
+  "HENRIETTECATHORANGE": {
+    "name": "Henrietta Catherine of Orange-Nassau",
+    "role": "Consort / Regent",
+    "nickname": "",
+    "aliases": [],
+    "summary": "A daughter of Frederick Henry of Orange and Amalia of Solms, she married John George II of Anhalt-Dessau and served as regent for their son Leopold I from 1693 to 1698.",
+    "sections": [],
+    "governmentNotes": {
+      "Tutela y gobierno del principado durante la minoría de Leopoldo I; no soberanía propia sobre toda Anhalt.": "Guardianship and government of the principality during the minority of Leopold I; not self-sovereignty over all Anhalt."
+    }
+  },
+  "KHORASHANKAKH": {
+    "name": "Khorashan of Kartli",
+    "role": "Consort",
+    "nickname": "",
+    "aliases": [
+      "Khorashan",
+      "Khorasan of Kartli"
+    ],
+    "summary": "Daughter of George X of Kartli and wife of Teimuraz I of Kakheti. The marriage strengthened cooperation between the two branches during their wars against Persia. Her children linked this generation to the later kings of Kakheti and Imereti.",
+    "sections": []
+  },
+  "JUAN2MONFERRATO": {
+    "name": "John II of Montferrat",
+    "role": "Marquess",
+    "nickname": "",
+    "aliases": [],
+    "summary": "A son of Theodore I, he continued in Montferrat the Palaiologos branch that had arrived from Byzantium. His marriage to Isabella of Majorca added a connection with the Majorcan royal house.",
+    "sections": [],
+    "biography": "A son of Theodore I, he continued in Montferrat the Palaiologos branch that had arrived from Byzantium. His marriage to Isabella of Majorca added a connection with the Majorcan royal house. His descendants included Theodore II and Margaret, wife of the Count of Urgell: the same generation illustrates both the Italian line’s continuity and its connections with the Iberian Peninsula."
+  },
+  "TEODORO1MON": {
+    "name": "Theodore I of Montferrat",
+    "role": "Marquess",
+    "nickname": "",
+    "aliases": [],
+    "summary": "A son of Andronikos II and Irene of Montferrat, he moved from the Byzantine imperial family to the rule of an Italian marquisate. His rights came through his mother, but he had to defend them against rival claimants.",
+    "sections": [],
+    "biography": "A son of Andronikos II and Irene of Montferrat, he moved from the Byzantine imperial family to the rule of an Italian marquisate. His rights came through his mother, but he had to defend them against rival claimants. Investiture by Henry VII strengthened his position. His children John II and Yolanda connected this new branch with Majorca and Savoy."
+  },
+  "VICTORAMADEO1SAB": {
+    "name": "Victor Amadeus I of Savoy",
+    "role": "Duke",
+    "nickname": "",
+    "aliases": [],
+    "summary": "Duke of Savoy from 1630 to 1637 and husband of Christine of France, a daughter of Henry IV. Under the Treaty of Cherasco in 1631, he ceded Pinerolo to France.",
+    "sections": []
+  },
+  "VIOLHUN": {
+    "name": "Violant of Hungary",
+    "role": "Consort",
+    "nickname": "",
+    "aliases": [],
+    "summary": "Consort of the Árpád dynasty. Their life was connected with Aragon.",
+    "sections": []
+  },
+  "MARIAAMALIASAJ": {
+    "name": "Maria Amalia of Saxony",
+    "role": "Consort",
+    "nickname": "",
+    "aliases": [],
+    "summary": "Consort of the Wettin dynasty. Their life was connected with Spain and Saxony.",
+    "sections": []
+  },
+  "MARIAJULBERG": {
+    "name": "Maria of Jülich-Berg",
+    "role": "Heiress / Duchess",
+    "nickname": "",
+    "aliases": [],
+    "summary": "Heiress of the Jülich dynasty. Their life was connected with Jülich, Berg and Cleves.",
+    "sections": []
+  },
+  "CONST1GEO": {
+    "name": "Constantine I of Georgia",
+    "role": "King",
+    "nickname": "",
+    "aliases": [
+      "Konstantine I"
+    ],
+    "summary": "He succeeded his brother George VII. His alliance with Shirvan brought him into conflict with the Qara Qoyunlu; he was captured and executed. Several branches that later contested the Georgian monarchy descended from his children.",
+    "sections": []
+  },
+  "BOGISLAW10POM": {
+    "name": "Bogislaw X of Pomerania",
+    "role": "Duke",
+    "nickname": "the Great",
+    "aliases": [
+      "Bogislaw X"
+    ],
+    "summary": "Duke of Pomerania who gathered under his authority a large part of the territories of the house of the Faucs. His reign strengthened the cohesion of the duchy between Brandenburg, Poland and the Baltic.",
+    "sections": []
+  },
+  "JUANARAGURREA": {
+    "name": "Joanna of Aragon and Gurrea",
+    "role": "Consort",
+    "nickname": "",
+    "aliases": [],
+    "summary": "Consort of the Trastámara dynasty. Their life was connected with Aragon.",
+    "sections": []
+  },
+  "ALEX1KAKH": {
+    "name": "Alexander I of Kakheti",
+    "role": "King",
+    "nickname": "",
+    "aliases": [
+      "Aleksandre I of Kakheti"
+    ],
+    "summary": "He consolidated the kingdom established by George VIII through flexible diplomacy with the neighbouring powers. He died in a coup led by his son George, an episode that opened another dispute within the royal branch itself.",
+    "sections": []
+  },
+  "JACOBO4ESCOCIA": {
+    "name": "James IV of Scotland",
+    "role": "King",
+    "nickname": "",
+    "aliases": [],
+    "summary": "He strengthened the Scottish court and navy and maintained the alliance with France. He died in Flodden, a defeat that left another regal minority in Scotland.",
+    "sections": []
+  },
+  "ISABESLAV": {
+    "name": "Elizabeth of Slavonia",
+    "role": "Titular consort",
+    "nickname": "",
+    "aliases": [],
+    "summary": "Titular consort of the Anjou-Hungary dynasty. Their life was connected with Hungary, Latin Empire and Taranto.",
+    "sections": []
+  },
+  "ALBERTPRUSSIA": {
+    "name": "Albert of Prussia",
+    "role": "Duke",
+    "nickname": "",
+    "aliases": [],
+    "summary": "Last great master of the Teutonic Order in Prussia. In 1525 he secularized his lands as a duchy of Prussia, a vassal of Poland, and adopted Lutheranism; in 1544 he founded the University of Königsberg.",
+    "sections": []
+  },
+  "JUAN1BRET": {
+    "name": "John I of Brittany",
+    "role": "Duke",
+    "nickname": "the Red",
+    "aliases": [],
+    "summary": "The son of Alix of Thouars and Peter of Dreux, he inherited the duchy as a child. His father exercised the government during his minority. John's marriage to Blanca de Champagne linked Brittany to the family in Navarre; his son John II continued the ducal line.",
+    "sections": []
+  },
+  "JOHANNGEORG2ANHALT": {
+    "name": "John George II, Prince of Anhalt-Dessau",
+    "role": "Prince",
+    "nickname": "",
+    "aliases": [],
+    "summary": "Prince of Anhalt-Dessau from 1660 to 1693, of the family of Ascania. Married to Henrietta Catherine of Orange-Nassau, he was the father of Henryta Amalia and Leopold I.",
+    "sections": []
+  },
+  "ALEX4IMER": {
+    "name": "Alexander IV of Imereti",
+    "role": "King",
+    "nickname": "",
+    "aliases": [
+      "Aleksandre IV of Imereti"
+    ],
+    "summary": "Son of Bagrat V, returned to the throne with Ottoman support and faced the factions that favoured Archil. His two reigns ended in new expulsions; his death did not end the rivalry between the two lines.",
+    "sections": []
+  },
+  "COSIMO2TOSC": {
+    "name": "Cosimo II of Tuscany",
+    "role": "Grand Duke",
+    "nickname": "",
+    "aliases": [],
+    "summary": "Grand Duke of Tuscany between 1609 and 1621. He protected Galileo Galilei, who in 1610 baptized in his honor the moons of Jupiter as \"Medicean stars.\"",
+    "sections": []
+  },
+  "ANDRO3PALA": {
+    "name": "Andronikos III Palaiologos",
+    "role": "Emperor",
+    "nickname": "",
+    "aliases": [],
+    "summary": "Byzantine Emperor since 1328 after a civil war against his grandfather Andronikos II. He lost almost all of Asia Minor to the Ottomans, but he recovered Tesalia and the Epirus.",
+    "sections": []
+  },
+  "JEANNEPENTHIEVRE": {
+    "name": "Joan of Penthièvre",
+    "role": "Countess / Claimant Duchess",
+    "nickname": "",
+    "aliases": [],
+    "summary": "A daughter of Guy of Brittany and niece of John III, she claimed the duchy against John of Montfort. Her husband, Charles of Blois, defended her cause by force of arms.",
+    "sections": [],
+    "biography": "A daughter of Guy of Brittany and niece of John III, she claimed the duchy against John of Montfort. Her husband, Charles of Blois, defended her cause by force of arms. After her party’s defeat and Charles’s death, the Treaty of Guérande recognised the Montfort line in the duchy, while she retained her hereditary position in Penthièvre."
+  },
+  "ALEX3IMER": {
+    "name": "Alexander III of Imereti",
+    "role": "King",
+    "nickname": "",
+    "aliases": [
+      "Aleksandre III of Imereti"
+    ],
+    "summary": "He sought to strengthen the crown in front of the Dadiani and took advantage of Mingrelia's succession changes to expand its influence. His marriage to Darejan, daughter of Teimuraz I, linked Imereti to the Kakheti branch.",
+    "sections": []
+  },
+  "MANFREDOATENAS": {
+    "name": "Manfred of Athens",
+    "role": "Duke of Athens",
+    "nickname": "",
+    "aliases": [
+      "Manfred I d’Atenes"
+    ],
+    "summary": "Son of Frederick II of Sicily and Leonor of Anjou. In 1312 the Catalan Company, owner of Athens since the battle of Cefiso, asked the king for a son as Duke, and Frederick appointed Manfredo, still a child. He never left Sicily: the duchy was ruled by vicars-general. He died in Trapani in 1317 when he fell from the horse.",
+    "sections": [],
+    "governmentNotes": {
+      "Primer duque catalán, nombrado niño a petición de la Compañía. No salió de Sicilia: gobernaron vicarios generales.": "First Catalan Duke, appointed child at the request of the Company. He did not leave Sicily: vicars-general were ruled."
+    }
+  },
+  "FELIPAHENAO": {
+    "name": "Philippa of Hainaut",
+    "role": "Consort",
+    "nickname": "",
+    "aliases": [],
+    "summary": "Consort of the Avesnes dynasty. Their life was connected with England and Hainaut.",
+    "sections": []
+  },
+  "MAGNUS1SAJLAU": {
+    "name": "Magnus I of Saxe-Lauenburg",
+    "role": "Duke",
+    "nickname": "",
+    "aliases": [],
+    "summary": "Duke of Saxony-Lauenburg from 1507 to 1543, of the family of Ascania. His daughters Dorotea and Catalina married Cristian III of Denmark and Gustavo I of Sweden.",
+    "sections": []
+  },
+  "JUANBORJAENR": {
+    "name": "Juan de Borja y Enríquez de Luna",
+    "role": "Duke",
+    "nickname": "",
+    "aliases": [],
+    "summary": "Duke of Gandía, 1497–1543. Duke of the Borgia dynasty.",
+    "sections": []
+  },
+  "HENRY1CYPRUS": {
+    "name": "Henry I of Cyprus",
+    "role": "King",
+    "nickname": "",
+    "aliases": [
+      "Henri I",
+      "Henry I of Cyprus"
+    ],
+    "summary": "He acceded to the throne as a child and his minority triggered the struggle between the Ibelin and Frederick II. The resistance to imperial intervention consolidated a Cypriot monarchy with a nobility capable of conditioning the government.",
+    "sections": []
+  },
+  "ELEONORMAGNEU": {
+    "name": "Eleanor Magdalena of Palatinate-Neuburg",
+    "role": "Consort",
+    "nickname": "",
+    "aliases": [],
+    "summary": "Consort of the Wittelsbach dynasty. Their life was connected with Holy Roman Empire and Palatinate.",
+    "sections": []
+  },
+  "CRISTINASAJDIN": {
+    "name": "Christina of Saxony",
+    "role": "Consort",
+    "nickname": "",
+    "aliases": [],
+    "summary": "Wife of King John and daughter of the house of Wettin. She defended Stockholm during the Swedish rebellion of 1501 and was held prisoner after capitulation. She was the mother of Christian II: her experience illustrates the fragility of the common government before the last attempt to preserve the union.",
+    "sections": []
+  },
+  "EMANUELFILIBERTOCAR": {
+    "name": "Emmanuel Philibert Amadeus of Savoy-Carignano",
+    "role": "Prince of Carignano",
+    "nickname": "",
+    "aliases": [],
+    "summary": "A son of Thomas Francis and Marie of Bourbon-Soissons, he continued the Carignano branch. His marriage to Angela Caterina d’Este added an Italian connection to his Savoyard and Bourbon inheritance.",
+    "sections": [],
+    "biography": "A son of Thomas Francis and Marie of Bourbon-Soissons, he continued the Carignano branch. His marriage to Angela Caterina d’Este added an Italian connection to his Savoyard and Bourbon inheritance. The line descending from his son Victor Amadeus traces the generations between the branch’s founders and the future King Charles Albert."
+  },
+  "JOHNREGENTCYP": {
+    "name": "John of Lusignan, Regent of Cyprus",
+    "role": "Regent / Prince",
+    "nickname": "",
+    "aliases": [
+      "John of Lusignan, Prince of Antioch"
+    ],
+    "summary": "Brother of Peter I, he ruled during the minority of Peter II. The charges and revenge that followed the king's murder faced the members of the court. His title as Prince of Antioch was nominal, for the principality had disappeared.",
+    "sections": []
+  },
+  "CRISTINASAXHESSE": {
+    "name": "Christina of Saxony",
+    "role": "Consort",
+    "nickname": "",
+    "aliases": [],
+    "summary": "Consort of the Wettin dynasty. Their life was connected with Saxony and Hesse.",
+    "sections": []
+  },
+  "ISAB1B": {
+    "name": "Elizabeth of Bohemia",
+    "role": "Consort",
+    "nickname": "",
+    "aliases": [],
+    "summary": "Consort of the Přemyslid dynasty. Their life was connected with Bohemia.",
+    "sections": []
+  },
+  "FERN3TOSC": {
+    "name": "Ferdinand III of Tuscany",
+    "role": "Grand duke",
+    "nickname": "",
+    "aliases": [],
+    "summary": "Grand Duke of Tuscany, 1790–1799. Grand duke of the Habsburg-Lorraine dynasty.",
+    "sections": [],
+    "governmentNotes": {
+      "Gobierno efectivo hasta la salida de marzo de 1799. Las versiones 1799/1800 no mantienen esa geometría como dominio efectivo uniforme.": "Effective government until March 1799. The 1799 / 1800 versions do not maintain that geometry as a uniform effective domain."
+    }
+  },
+  "ISABELINGHOH": {
+    "name": "Isabella of England",
+    "role": "Consort",
+    "nickname": "",
+    "aliases": [],
+    "summary": "Consort of the Plantagenet dynasty. Their life was connected with Holy Roman Empire and England.",
+    "sections": []
+  },
+  "MARIAMANUELA": {
+    "name": "Maria Manuela of Portugal",
+    "role": "Consort",
+    "nickname": "",
+    "aliases": [],
+    "summary": "Consort of the Aviz dynasty. Their life was connected with Spain.",
+    "sections": []
+  },
+  "AMEDEO6SAB": {
+    "name": "Amadeus VI of Savoy",
+    "role": "Count",
+    "nickname": "the Count of the Green",
+    "aliases": [],
+    "summary": "Known as the Green Count, he belonged to the generation that strengthened Savoy’s political and military reach. He was the son of Aymon and Yolanda of Montferrat, bringing together Savoyard and Palaiologan ancestry.",
+    "sections": [],
+    "biography": "Known as the Green Count, he belonged to the generation that strengthened Savoy’s political and military reach. He was the son of Aymon and Yolanda of Montferrat, bringing together Savoyard and Palaiologan ancestry. His marriage to Bonne of Bourbon added a French connection to a family already linked with Milan and Byzantium."
+  },
+  "TAMARKARTLI": {
+    "name": "Tamar of Kartli",
+    "role": "Consort",
+    "nickname": "",
+    "aliases": [],
+    "summary": "A daughter of Vakhtang VI and wife of Teimuraz II, she linked the branches of Kartli and Kakheti. She was the mother of Heraclius II, who united both crowns in 1762.",
+    "sections": []
+  },
+  "MARGARTOIS": {
+    "name": "Margaret of Artois",
+    "role": "Consort",
+    "nickname": "",
+    "aliases": [],
+    "summary": "Consort of the Artois dynasty. Their life was connected with France.",
+    "sections": []
+  },
+  "LUISAULRICAPRUSIA": {
+    "name": "Louisa Ulrika of Prussia",
+    "role": "Consort",
+    "nickname": "",
+    "aliases": [],
+    "summary": "Consort of the Hohenzollern dynasty. Their life was connected with Prussia and Sweden.",
+    "sections": []
+  },
+  "ELEONOREMARIAAUT": {
+    "name": "Eleonore Maria Josefa of Austria",
+    "role": "Archduchess / Duchess",
+    "nickname": "",
+    "aliases": [],
+    "summary": "Archduchess of the Habsburg dynasty. Their life was connected with Austria and Lorraine.",
+    "sections": []
+  },
+  "IVAN3MOSC": {
+    "name": "Ivan III of Moscow",
+    "role": "Grand prince",
+    "nickname": "the Great",
+    "aliases": [],
+    "summary": "Grand Prince of Russia, 1462–1505. Grand prince of the Rurikid dynasty.",
+    "sections": []
+  },
+  "HELENAEREKLE": {
+    "name": "Helena of Kartli-Kakheti",
+    "role": "Princess",
+    "nickname": "",
+    "aliases": [
+      "Elene of Georgia"
+    ],
+    "summary": "Daughter of Heraclius II and wife of Prince Archil of Imereti. She was the mother of Solomon II: this connection helps explain the eastern support for his candidacy to the Western throne.",
+    "sections": []
+  },
+  "FADRIQUEALVAREZ": {
+    "name": "Fadrique Álvarez de Toledo y Enríquez",
+    "role": "Duke",
+    "nickname": "",
+    "aliases": [],
+    "summary": "Duke of the Álvarez de Toledo dynasty. Their life was connected with Castile.",
+    "sections": []
+  },
+  "SILKENTHOMAS": {
+    "name": "Thomas FitzGerald, X Count of Kildare",
+    "role": "Count",
+    "nickname": "",
+    "aliases": [
+      "Silken Thomas",
+      "Thomas el Sedoso"
+    ],
+    "summary": "He led the rebellion in 1534 after receiving news about his father's fate. The defeat and its execution in London ended with the immediate hegemony of the Kildare. The subsequent restoration of his half-brother preserved the continuity of the lineage.",
+    "sections": []
+  },
+  "GEORGESAX": {
+    "name": "George of Saxony",
+    "role": "Duke",
+    "nickname": "the Barbudo",
+    "aliases": [],
+    "summary": "George the Bearded, Duke of the Saxony albertine since 1500 and defender of Catholicism in front of Luther. He organized the Leipzig dispute of 1519 between Luther and Johann Eck.",
+    "sections": []
+  },
+  "MARGMONFERRATO": {
+    "name": "Margaret of Montferrat",
+    "role": "Consort",
+    "nickname": "",
+    "aliases": [],
+    "summary": "Consort of the Paleologa-Monferrato dynasty. Their life was connected with Montferrat and Urgel.",
+    "sections": []
+  },
+  "ALF2PROVENZA": {
+    "name": "Alfonso II of Provence",
+    "role": "Count of Provence",
+    "nickname": "",
+    "aliases": [
+      "Alfons II de Provença"
+    ],
+    "summary": "The son of Alfonso II of Aragon, he ruled Provence in the name of his father since 1185 and remained count until his death in 1196. In 1193 he married Garsenda of Sabran, a heiress of Forcalquier, a county that thus joined Provence. He died in 1209; his son Ramón Berenguer succeeded him.",
+    "sections": [],
+    "governmentNotes": {
+      "Gobernó el condado en nombre de su padre.": "He ruled the county on behalf of his father.",
+      "Por su matrimonio con Garsenda de Sabran (1193) se unió Forcalquier a Provenza.": "For his marriage to Garsenda of Sabran (1193) he joined Forcalquier to Provence."
+    }
+  },
+  "LUDOVICO1SAL": {
+    "name": "Ludovico I of Saluzzo",
+    "role": "Marquess",
+    "nickname": "",
+    "aliases": [
+      "Louis I of Saluzzo"
+    ],
+    "summary": "He inherited as a child, under a regency in which his half-brother Valerano played a prominent role. His long rule kept Saluzzo between Savoyard pressure and French protection.",
+    "sections": [],
+    "biography": "He inherited as a child, under a regency in which his half-brother Valerano played a prominent role. His long rule kept Saluzzo between Savoyard pressure and French protection. He married Isabella of Montferrat; their son was Ludovico II. Feudal dependence and agreements with neighbouring powers did not extinguish the marquisate’s own institutions."
+  },
+  "JOVANBRANK": {
+    "name": "Jovan Branković",
+    "role": "Titular despot",
+    "nickname": "",
+    "aliases": [
+      "John Branković"
+    ],
+    "summary": "The son of Stefan and Angelina, he initially shared the dignity of despot with his brother Đorđe. The title was held in the Hungarian political sphere and did not entail the recovery of Serbia. His daughter Elena married Petru Rareș, so the descendants of the Branković linked with the Moldovan court.",
+    "sections": [],
+    "governmentNotes": {
+      "Título nominal, compartido inicialmente con su hermano Đorđe; Serbia estaba bajo dominio otomano.": "Nominal title, initially shared with his brother Đorđe; Serbia was under Ottoman rule."
+    }
+  },
+  "MARIAANABAV1660": {
+    "name": "Maria Anna Victoria of Bavaria",
+    "role": "Consort",
+    "nickname": "",
+    "aliases": [],
+    "summary": "Consort of the Wittelsbach dynasty. Their life was connected with France and Bavaria.",
+    "sections": []
+  },
+  "FEDERICORANDAZZO": {
+    "name": "Frederick I of Athens",
+    "role": "Marquis of Randazzo · Duke of Athens and Neopatras",
+    "nickname": "",
+    "aliases": [
+      "Frederic I d’Atenes",
+      "Frederick de Randazzo"
+    ],
+    "summary": "A son of John of Randazzo, he inherited the duchies of Athens and Neopatras in 1348. At his death in 1355, they passed to his cousin, King Frederick III of Sicily.",
+    "sections": [],
+    "governmentNotes": {
+      "A su muerte los ducados pasaron a su primo Federico III de Sicilia.": "At his death the duchies passed to his cousin Frederick III of Sicily."
+    }
+  },
+  "ALEXIS1RUS": {
+    "name": "Alexis of Russia",
+    "role": "Tsar",
+    "nickname": "the Very Pacific",
+    "aliases": [],
+    "summary": "Tsar of Russia, 1645–1676. Tsar of the Romanov dynasty.",
+    "sections": []
+  },
+  "JEANTARTAS": {
+    "name": "John of Albret, Viscount of Tartas",
+    "role": "Viscount",
+    "nickname": "",
+    "aliases": [],
+    "summary": "A son of Charles II of Albret and father of Alain, he died before his own father. He therefore occupies an intermediate generation in the genealogy without appearing as an equivalent link in the succession to the lordship. This distinction explains how a grandson could inherit directly from his grandfather.",
+    "sections": []
+  },
+  "ERIK2NORWAY": {
+    "name": "Erik II from Norway",
+    "role": "King",
+    "nickname": "",
+    "aliases": [],
+    "summary": "A son of Magnus VI and Ingeborg of Denmark, his marriage to Margaret of Scotland made him the father of the Norwegian Maid, the Scottish heiress who died before reaching her kingdom. When Erik died without a surviving son, his brother Haakon V succeeded him.",
+    "sections": []
+  },
+  "TEODORO2MON": {
+    "name": "Theodore II of Montferrat",
+    "role": "Marquess",
+    "nickname": "",
+    "aliases": [],
+    "summary": "A son of John II and Isabella of Majorca, he inherited Montferrat after his brother John III. His rule was shaped by relations with Milan and disputes with Savoy-Achaea.",
+    "sections": [],
+    "biography": "A son of John II and Isabella of Majorca, he inherited Montferrat after his brother John III. His rule was shaped by relations with Milan and disputes with Savoy-Achaea. His son John James succeeded him. His ancestry preserves the Majorcan connection of the Italian Palaiologoi."
+  },
+  "ALEXANDER1RUS": {
+    "name": "Alexander I of Russia",
+    "role": "Emperor",
+    "nickname": "the Blessed One",
+    "aliases": [],
+    "summary": "Emperor of Russia since 1801. Faced with Napoleon, he resisted the invasion of 1812 and played a central role in the Congress of Vienna and the Holy Alliance.",
+    "sections": []
+  },
+  "GIANGIORGIOMON": {
+    "name": "Gian Giorgio of Montferrat",
+    "role": "Marquess",
+    "nickname": "",
+    "aliases": [
+      "Giovanni Giorgio Paleologo"
+    ],
+    "summary": "A son of Boniface III and brother of William IX, he succeeded his nephew Boniface IV. He was the last marquis of the legitimate male Palaiologos line.",
+    "sections": [],
+    "biography": "A son of Boniface III and brother of William IX, he succeeded his nephew Boniface IV. He was the last marquis of the legitimate male Palaiologos line. His death in 1533 opened a dispute over Montferrat; the later imperial settlement in favour of the Gonzaga rested on the rights of his niece Margaret."
+  },
+  "HELENAPALACYP": {
+    "name": "Helena Palaiologina",
+    "role": "Consort",
+    "nickname": "",
+    "aliases": [
+      "Helena Palaiologina"
+    ],
+    "summary": "A daughter of Theodore II of Morea and wife of John II of Cyprus, she favoured the island’s Greek institutions. She was the mother of Charlotte. Her presence at court illustrates the links between the Lusignan Mediterranean and the last Byzantine world.",
+    "sections": []
+  },
+  "WILLIAM2ORANGE": {
+    "name": "William II of Orange",
+    "role": "Prince of Orange / Stadtholder",
+    "nickname": "",
+    "aliases": [],
+    "summary": "Stadtholder of Low Countries, 1647–1650 (Delegated government). Prince of Orange of the Nassau dynasty.",
+    "sections": [],
+    "governmentNotes": {
+      "Cargo provincial delegado por los Estados, con ámbitos y fechas personales documentados; no soberanía hereditaria sobre toda la República ni las provincias españolas.": "Provincial position delegated by the States, with documented personal fields and dates; not hereditary sovereignty over the whole Republic or the Spanish provinces."
+    }
+  },
+  "CAROLINEANSB": {
+    "name": "Caroline of Ansbach",
+    "role": "Consort",
+    "nickname": "",
+    "aliases": [],
+    "summary": "Consort of the Hohenzollern dynasty. Their life was connected with Brandenburg and England.",
+    "sections": []
+  },
+  "ANNASOPHIEDENSAX": {
+    "name": "Anna Sophia of Denmark",
+    "role": "Consort",
+    "nickname": "",
+    "aliases": [],
+    "summary": "Consort of the Oldenburg dynasty. Their life was connected with Denmark and Saxony.",
+    "sections": []
+  },
+  "JOACHIMFREDBRAND": {
+    "name": "Joachim Frederick of Brandenburg",
+    "role": "Elector",
+    "nickname": "",
+    "aliases": [],
+    "summary": "Brandenburg Elector between 1598 and 1608. In 1605 he assumed the administration of the duchy of Prussia for the disease of his Duke, a step before the union of both territories.",
+    "sections": []
+  },
+  "ANNASAXALBERT": {
+    "name": "Anna of Saxony",
+    "role": "Consort",
+    "nickname": "",
+    "aliases": [],
+    "summary": "Consort of the Wettin dynasty. Their life was connected with Saxony and Brandenburg.",
+    "sections": []
+  },
+  "ELISADENBRAND": {
+    "name": "Elizabeth of Denmark",
+    "role": "Consort",
+    "nickname": "",
+    "aliases": [],
+    "summary": "Consort of the Oldenburg dynasty. Their life was connected with Denmark and Brandenburg.",
+    "sections": []
+  },
+  "KESTUTISLIT": {
+    "name": "Kęstutis",
+    "role": "Grand duke",
+    "nickname": "",
+    "aliases": [
+      "Kejstut"
+    ],
+    "summary": "Prince of Trakai and chief of the Western defence under Algirdas. He briefly removed Jogaila and was a great duke in 1381-1382. He died captive in Kreva; he was the father of Vitauts the Great.",
+    "sections": [],
+    "governmentNotes": {
+      "Gobierno patrimonial occidental y superioridad sobre Samogitia, distinto del título de gran duque.": "Western inheritance government and superiority over Samogitia, other than the title of great duke.",
+      "Desde finales de 1381 hasta mediados de 1382; el mapa anual conserva el conflicto con Jogaila.": "From the end of 1381 to the mid-1382; the annual map conserves the conflict with Jogaila."
+    }
+  },
+  "BLANCANAMUR": {
+    "name": "Blanche of Namur",
+    "role": "Consort",
+    "nickname": "",
+    "aliases": [],
+    "summary": "A daughter of the comital house of Namur and wife of Magnus Eriksson. Their sons Erik and Haakon took part in the divisions of power in Sweden and Norway.",
+    "sections": [],
+    "biography": "A daughter of the comital house of Namur and wife of Magnus Eriksson. Their sons Erik and Haakon took part in the divisions of power in Sweden and Norway. The marriage connected the Nordic monarchy with noble networks in the Low Countries, without transferring any territory from Namur to Scandinavia."
+  },
+  "WEN1": {
+    "name": "Wenceslaus I of Bohemia",
+    "role": "King",
+    "nickname": "the Garden",
+    "aliases": [
+      "Wenceslaus I"
+    ],
+    "summary": "It consolidated the Přemysl monarchy in Bohemia and favored the growth of cities and internal colonization. His reign coincided with the Mongolian invasion of Central Europe.",
+    "sections": []
+  },
+  "LEONORARAGCAST": {
+    "name": "Eleanor of Aragon",
+    "role": "Consort",
+    "nickname": "",
+    "aliases": [],
+    "summary": "Consort of the Barcelona dynasty. Their life was connected with Castile and Aragon.",
+    "sections": []
+  },
+  "FRED1SAX": {
+    "name": "Frederick I of Saxony",
+    "role": "Elector / Margrave",
+    "nickname": "the Belicose",
+    "aliases": [],
+    "summary": "Margrave of Meissen who in 1423 received from the Emperor Segismundo the Duchy and Elected of Saxony, starting the Wettin government in the electorate.",
+    "sections": []
+  },
+  "GASTONNEMOURS": {
+    "name": "Gaston of Foix, Duke of Nemours",
+    "role": "Duke / Commander",
+    "nickname": "",
+    "aliases": [],
+    "summary": "The son of John of Foix and Mary of Orleans, he was nephew of Louis XII and brother of Germana of Foix. He led French forces during the wars in Italy and died in the battle of Ravenna in 1512. His career brings together the Pirenaic connections of the Foix and military service to the French monarchy.",
+    "sections": []
+  },
+  "GEDIMINASLIT": {
+    "name": "Gedimas",
+    "role": "Grand duke",
+    "nickname": "",
+    "aliases": [
+      "Gediminas"
+    ],
+    "summary": "Great duke and central figure of the gedimida dynasty. His letters invited Western merchants and craftsmen; Vilna was consolidated as capital and family alliances expanded Lithuanian influence on the ruthenian lands.",
+    "sections": []
+  },
+  "ARNAUROGER2PALLARS": {
+    "name": "Arnau Roger II of Pallars",
+    "role": "Count of Mills Sobirà",
+    "nickname": "",
+    "aliases": [
+      "Arnau Roger II de Pallars"
+    ],
+    "summary": "The son of Hugh de Matapala and Countess Sibila, shared the county with her mother until 1330 and ruled until 1343. He died without children, and Peter IV granted Pallars to his brother Ramón Roger.",
+    "sections": [],
+    "governmentNotes": {
+      "Compartió el gobierno con su madre hasta 1330.": "He shared the government with his mother until 1330."
+    }
+  },
+  "WILHELMINAPRUORANGE": {
+    "name": "Wilhelmina of Prussia, Princess of Orange",
+    "role": "Princess of Orange",
+    "nickname": "",
+    "aliases": [],
+    "summary": "Princess of Orange of the Hohenzollern dynasty. Their life was connected with Prussia and Low Countries.",
+    "sections": []
+  },
+  "HEDVIGSCHLESWIG": {
+    "name": "Hedwig of Schleswig",
+    "role": "Consort",
+    "nickname": "",
+    "aliases": [],
+    "summary": "Consort of the Estridsen dynasty. Their life was connected with Denmark and Schleswig.",
+    "sections": []
+  },
+  "RADU3FRUMOS": {
+    "name": "Radu III of Wallachia",
+    "role": "Voivode",
+    "nickname": "the Beautiful",
+    "aliases": [
+      "Radu el Hermoso",
+      "Radu cel Frumos"
+    ],
+    "summary": "Brother of Vlad III and rival for the throne of Wallachia. With Ottoman support he replaced Vlad during the 1462 crisis and embodies the complex policy of accommodation and resistance to Constantinople.",
+    "sections": []
+  },
+  "EDUPORT": {
+    "name": "Duarte of Portugal, Duke of Guimarães",
+    "role": "Duke",
+    "nickname": "",
+    "aliases": [],
+    "summary": "Duke of the Aviz dynasty. Their life was connected with Portugal.",
+    "sections": []
+  },
+  "CARLOSANG": {
+    "name": "Charles of Orléans, Count of Angoulême",
+    "role": "Count",
+    "nickname": "",
+    "aliases": [],
+    "summary": "Count of Angulem, 1467–1496. Count of the Valois-Angoulême dynasty.",
+    "sections": []
+  },
+  "CHRISTOPH1BADEN": {
+    "name": "Christopher I of Baden",
+    "role": "Margrave",
+    "nickname": "",
+    "aliases": [],
+    "summary": "Margrave of Baden who temporarily gathered several possessions of his house. After its generation, the division between Baden- Baden and Baden- Durlach structured the political genealogy of the margraviate for centuries.",
+    "sections": []
+  },
+  "ISABELCASTYORK": {
+    "name": "Isabella of Castile",
+    "role": "Consort",
+    "nickname": "",
+    "aliases": [],
+    "summary": "Consort of the Ivrea-Burgundy dynasty. Their life was connected with England and Castile.",
+    "sections": []
+  },
+  "LUISFADRIQUE": {
+    "name": "Louis Fadrique",
+    "role": "Count of Salona · Vicar general of Athens and Neopatras",
+    "nickname": "",
+    "aliases": [
+      "Lluís Frederic d’Aragó"
+    ],
+    "summary": "Son of James Fadrique and Count of Salona since 1365. His cousin Frederick III of Sicily named him in 1375 Vicar General of the Duchy; at the death of the King he avoided anarchy, and in 1380, by the chapters of Athens, Peter IV of Aragon confirmed him by joining the Duchy to the Crown. He died in 1382.",
+    "sections": [],
+    "governmentNotes": {
+      "Nombrado por su primo Federico III de Sicilia.": "Appointed by his cousin Frederick III of Sicily.",
+      "Confirmado por Pedro IV en los capítulos de Atenas, al unir los ducados a la Corona.": "Confirmed by Peter IV in the chapters of Athens, by joining the duchies to the Crown.",
+      "Confirmado por Pedro IV en los capítulos de Atenas.": "Confirmed by Peter IV in the chapters of Athens."
+    }
+  },
+  "ALBERTO2MECK": {
+    "name": "Albert II of Mecklenburg",
+    "role": "Duke",
+    "nickname": "",
+    "aliases": [],
+    "summary": "Duke of Mecklenburg, 1348–1379. Duke of the Mecklenburg dynasty.",
+    "sections": []
+  },
+  "ERIK14SUE": {
+    "name": "Erik XIV of Sweden",
+    "role": "King",
+    "nickname": "",
+    "aliases": [],
+    "summary": "Son of Gustavo Vasa, king of Sweden since 1560. The Swedish expansion in Estonia (Reval, 1561) and the Nordic Seven-Year War against Denmark began. After the Sture murders (1567) and his marriage to Karin Måndotter, his brothers deposed him in 1568; he died in prison in 1577.",
+    "sections": []
+  },
+  "ERNSTBADEN": {
+    "name": "Ernest of Baden-Durlach",
+    "role": "Margrave",
+    "nickname": "",
+    "aliases": [],
+    "summary": "Margrave of Baden, 1515–1553 (Branch rule). Margrave of the Zähringen-Baden dynasty.",
+    "sections": [],
+    "governmentNotes": {
+      "Gobierno territorial de una rama; no dominio exclusivo de todo el conjunto.": "Territorial government of one branch; not exclusive control of the whole."
+    }
+  },
+  "OTTO2BAV": {
+    "name": "Otto II of Bavaria",
+    "role": "Duke",
+    "nickname": "the Illustre",
+    "aliases": [],
+    "summary": "The Ilustre, Duke of Bavaria, added the Palatinate of the Rhine to his house through his marriage to Agnes of the Palatinate. He supported the Staufen in front of the papacy.",
+    "sections": []
+  },
+  "NICHOLAS1RUS": {
+    "name": "Nicholas I of Russia",
+    "role": "Emperor",
+    "nickname": "",
+    "aliases": [],
+    "summary": "Emperor of Russia since 1825. He repressed the decembristic revolt and ruled autocratic; he died during the Crimean War.",
+    "sections": []
+  },
+  "LUDWIG1WURTT": {
+    "name": "Louis I of Württemberg",
+    "role": "Count",
+    "nickname": "",
+    "aliases": [],
+    "summary": "Count of Württemberg, 1419–1450 (Branch rule). Count of the Württemberg dynasty.",
+    "sections": [],
+    "governmentNotes": {
+      "Gobierno territorial de una rama; no dominio exclusivo de todo el conjunto.": "Territorial government of one branch; not exclusive control of the whole."
+    }
+  },
+  "MARIAANJOU": {
+    "name": "Marie of Anjou",
+    "role": "Consort",
+    "nickname": "",
+    "aliases": [],
+    "summary": "Consort of the Valois-Anjou dynasty. Their life was connected with France.",
+    "sections": []
+  },
+  "CONST2KAKH": {
+    "name": "Constantine II of Kakheti",
+    "role": "King",
+    "nickname": "",
+    "aliases": [
+      "Mahmad Quli Khan",
+      "Konstantine II of Kakheti"
+    ],
+    "summary": "He received the Kakhetian crown in the context of the Safavid collapse and briefly occupied Tiflis in front of Vakhtang VI. The Ottoman intervention altered his alliances and ended his death. His brother Teimuraz then reorganized the eastern power.",
+    "sections": []
+  },
+  "BLANVAL": {
+    "name": "Blanche of Valois",
+    "role": "Consort",
+    "nickname": "",
+    "aliases": [],
+    "summary": "Consort of the Valois dynasty. Their life was connected with Bohemia and Germany.",
+    "sections": []
+  },
+  "CHARLESFREDHG": {
+    "name": "Charles Frederick, Duke of Holstein-Gottorp",
+    "role": "Duke",
+    "nickname": "",
+    "aliases": [],
+    "summary": "Duke of Holstein, 1702–1739 (Branch rule). Duke of the Holstein-Gottorp dynasty.",
+    "sections": []
+  },
+  "FRANCISCAALENCON": {
+    "name": "Françoise of Alençon",
+    "role": "Consort",
+    "nickname": "",
+    "aliases": [],
+    "summary": "Consort of the Valois-Alençon dynasty. Their life was connected with Vendôme and Alençon.",
+    "sections": []
+  },
+  "AUGUSTSAX": {
+    "name": "Augustus of Saxony",
+    "role": "Elector",
+    "nickname": "",
+    "aliases": [],
+    "summary": "Brother of Mauritius, election of Saxony since 1553. He defended Orthodox Lutheranism, reorganized the administration of the electorate and gathered in Dresden a chamber of art and wonders.",
+    "sections": []
+  },
+  "JOHNADOLFGOTT": {
+    "name": "John Adolf of Holstein-Gottorp",
+    "role": "Duke",
+    "nickname": "",
+    "aliases": [],
+    "summary": "Duke of Holstein, 1590–1616 (Branch rule). Duke of the Holstein-Gottorp dynasty.",
+    "sections": []
+  },
+  "JUANENRIQUEMOR": {
+    "name": "John Henry of Moravia",
+    "role": "Margrave",
+    "nickname": "",
+    "aliases": [],
+    "summary": "Margrave of Moravia, 1349–1375. Margrave of the Luxembourg dynasty.",
+    "sections": []
+  },
+  "KARLALEXWURTT": {
+    "name": "Charles Alexander of Württemberg",
+    "role": "Duke",
+    "nickname": "",
+    "aliases": [],
+    "summary": "Duke of Württemberg, 1733–1737. Duke of the Württemberg dynasty.",
+    "sections": [],
+    "governmentNotes": {
+      "Hereda el ducado en 1733, al extinguirse con Eberhard Luis la línea principal de Stuttgart; muere en marzo de 1737.": "He inherited the duchy in 1733, when the main line of Stuttgart was extinguished with Eberhard Louis; he died in March 1737."
+    }
+  },
+  "VALDEMARSUE": {
+    "name": "Valdemar of Sweden",
+    "role": "King",
+    "nickname": "",
+    "aliases": [],
+    "summary": "Son of Birger Jarl, elected king of Sweden in 1250 under the regency of his father. His brother Magnus deposed him in 1275.",
+    "sections": []
+  },
+  "MAGDSAXBRAND": {
+    "name": "Magdalena of Saxony",
+    "role": "Consort",
+    "nickname": "",
+    "aliases": [],
+    "summary": "Consort of the Wettin dynasty. Their life was connected with Saxony and Brandenburg.",
+    "sections": []
+  },
+  "VASILY3MOSC": {
+    "name": "Vasili III of Moscow",
+    "role": "Grand prince",
+    "nickname": "",
+    "aliases": [],
+    "summary": "Grand Prince of Russia, 1505–1533. Grand prince of the Rurikid dynasty.",
+    "sections": []
+  },
+  "JOHANNASOPHIABAV": {
+    "name": "Joan Sophia of Bavaria",
+    "role": "Consort",
+    "nickname": "",
+    "aliases": [],
+    "summary": "Consort of the Wittelsbach dynasty. Their life was connected with Bavaria and Austria.",
+    "sections": []
+  },
+  "MATIBRAB": {
+    "name": "Matilda of Brabant",
+    "role": "Consort",
+    "nickname": "",
+    "aliases": [],
+    "summary": "Consort of the Brabant dynasty. Their life was connected with Artois.",
+    "sections": []
+  },
+  "GEORGE1POM": {
+    "name": "George I of Pomerania",
+    "role": "Duke",
+    "nickname": "",
+    "aliases": [],
+    "summary": "Duke of Pomerania, 1523–1531. Duke of the Griffin dynasty.",
+    "sections": []
+  },
+  "FRED7BADEN": {
+    "name": "Frederick VII of Baden-Durlach",
+    "role": "Margrave",
+    "nickname": "",
+    "aliases": [],
+    "summary": "Margrave of Baden, 1677–1709. Margrave of the Zähringen-Baden dynasty.",
+    "sections": []
+  },
+  "RANU1FARNESIO": {
+    "name": "Ranuccio I Farnese",
+    "role": "Duke",
+    "nickname": "",
+    "aliases": [],
+    "summary": "He consolidated the ducal authority of the Farnese in Parma. His government was marked by control of the nobility and severe repression of an alleged aristocratic conspiracy.",
+    "sections": []
+  },
+  "ROBERT1DREUX": {
+    "name": "Robert I of Dreux",
+    "role": "Count",
+    "nickname": "the Great",
+    "aliases": [],
+    "summary": "A son of Louis VI of France, he received the County of Dreux and founded a branch of the Capetian family. His inheritance gave his descendants a position of their own within the French nobility.",
+    "sections": [],
+    "biography": "A son of Louis VI of France, he received the County of Dreux and founded a branch of the Capetian family. His inheritance gave his descendants a position of their own within the French nobility. The connection with Brittany came in a later generation, through the marriage of his grandson Peter to Alix of Thouars."
+  },
+  "LUIS1VENDOME": {
+    "name": "Louis I of Vendôme",
+    "role": "Count",
+    "nickname": "",
+    "aliases": [],
+    "summary": "Count of Vendôme, 1393–1446. Count of the Bourbon dynasty.",
+    "sections": []
+  },
+  "MARIAJOSEFASAJ": {
+    "name": "Maria Josepha of Saxony",
+    "role": "Consort / Dauphine",
+    "nickname": "",
+    "aliases": [],
+    "summary": "Consort of the Wettin dynasty. Their life was connected with France and Saxony.",
+    "sections": []
+  },
+  "BLANCABORG1296": {
+    "name": "Blanche of Burgundy",
+    "role": "Consort",
+    "nickname": "",
+    "aliases": [],
+    "summary": "Consort of the Ivrea-Burgundy dynasty. Their life was connected with France and Navarre.",
+    "sections": []
+  },
+  "ERIK12SUE": {
+    "name": "Erik XII of Sweden",
+    "role": "King",
+    "nickname": "",
+    "aliases": [],
+    "summary": "King of Sweden, 1356–1359 (Co-ruler). King of the Bjälbo dynasty.",
+    "sections": []
+  },
+  "FULK5JER": {
+    "name": "Fulk V of Anjou",
+    "role": "Count / King",
+    "nickname": "",
+    "aliases": [],
+    "summary": "Count of Anjou, who married Melisenda, the heiress of Jerusalem, in 1129, and reigned with her since 1131. His son Godofredo Plantagenet was the father of Henry II of England.",
+    "sections": [],
+    "governmentNotes": {
+      "Dejó Anjou y Maine a su hijo Godofredo al partir hacia Jerusalén en 1129.": "He left Anjou and Maine his son Godfredo as he left for Jerusalem in 1129.",
+      "Por su matrimonio con Eremburga, heredera de Maine.": "For her marriage to Eremburga, Maine's heir."
+    }
+  },
+  "THOMAS10ORMOND": {
+    "name": "Thomas Butler, X Earl of Ormond",
+    "role": "Count",
+    "nickname": "",
+    "aliases": [
+      "Black Tom Butler"
+    ],
+    "summary": "Close to Elizabeth I, he upupupheld the Butler position and fought the rebellions of Desmond. The combination of service to the Crown and family power made him a central figure in Munster. His inheritance caused new disputes between his descendants and relatives.",
+    "sections": []
+  },
+  "OTAK1": {
+    "name": "Otakar I of Bohemia",
+    "role": "King",
+    "nickname": "",
+    "aliases": [],
+    "summary": "Premysl Otakar I, Duke and from 1198 hereditary king of Bohemia. The Golden Bull of Sicily of 1212, granted by Frederick II, confirmed the real dignity of its dynasty.",
+    "sections": [],
+    "governmentNotes": {
+      "Título princeps Moraviae documentado en 1223 durante la administración regia posterior a Vladislav Enrique.": "Princeps Moraviae title documented in 1223 during the post-Vladislav Henry royal administration."
+    }
+  },
+  "MARGARETENGLANDSCOT": {
+    "name": "Margaret of England",
+    "role": "Consort",
+    "nickname": "",
+    "aliases": [],
+    "summary": "Consort of the Plantagenet dynasty. Their life was connected with England and Scotland.",
+    "sections": []
+  },
+  "FRED2HESSEKASS": {
+    "name": "Frederick II of Hesse-Kassel",
+    "role": "Landgrave",
+    "nickname": "",
+    "aliases": [],
+    "summary": "Landgrave of Hesse-Kassel, 1760–1785. Landgrave of the Hesse dynasty.",
+    "sections": []
+  },
+  "WEN3": {
+    "name": "Wenceslaus III of Bohemia",
+    "role": "King",
+    "nickname": "",
+    "aliases": [
+      "Wenceslaus III"
+    ],
+    "summary": "The violent death of Wenceslao III extinguished the male line of the Přemysl that ruled Bohemia. His claims about Poland and Hungary show the scope and fragility of that dynastic expansion.",
+    "sections": []
+  },
+  "WILLIAM5HESSEKASS": {
+    "name": "William V of Hesse-Kassel",
+    "role": "Landgrave",
+    "nickname": "",
+    "aliases": [],
+    "summary": "Landgrave of Hesse-Kassel, 1627–1637. Landgrave of the Hesse dynasty.",
+    "sections": []
+  },
+  "LEONORTRAST": {
+    "name": "Eleanor of Trastámara",
+    "role": "Consort",
+    "nickname": "",
+    "aliases": [],
+    "summary": "Consort of the Trastámara dynasty. Their life was connected with Navarre.",
+    "sections": []
+  },
+  "CONST4ARM": {
+    "name": "Constantine IV from Armenia",
+    "role": "King",
+    "nickname": "",
+    "aliases": [
+      "Constantine VI de Armenia",
+      "Kostandin IV"
+    ],
+    "summary": "He ruled during the final contraction of the kingdom and tried to find support against the Mamluk pressure. The internal divisions persisted and ended his murder. The crown later passed to Leon de Lusignan.",
+    "sections": []
+  },
+  "ROBERT2SCOT": {
+    "name": "Robert II of Scotland",
+    "role": "King",
+    "nickname": "",
+    "aliases": [],
+    "summary": "Son of Marjorie Bruce and Walter Stewart. In 1371 he became the first king of Stewart's House.",
+    "sections": []
+  },
+  "SOPHIAJAGANSB": {
+    "name": "Sophia Jagiellon",
+    "role": "Consort",
+    "nickname": "",
+    "aliases": [],
+    "summary": "Consort of the Jagiellon dynasty. Their life was connected with Poland and Brandenburg.",
+    "sections": []
+  },
+  "ADELBORG": {
+    "name": "Adelaide of Burgundy",
+    "role": "Consort",
+    "nickname": "",
+    "aliases": [],
+    "summary": "Consort of the Burgundy dynasty. Their life was connected with Brabant.",
+    "sections": []
+  },
+  "GIOVANNIDELLAROVERE": {
+    "name": "Giovanni della Rovere",
+    "role": "Lord / Prefect",
+    "nickname": "",
+    "aliases": [],
+    "summary": "Lord of the Della Rovere dynasty. Their life was connected with Papal States.",
+    "sections": []
+  },
+  "SANCHAARAG": {
+    "name": "Sancha of Aragon",
+    "role": "Noble",
+    "nickname": "",
+    "aliases": [],
+    "summary": "Noble of the Trastámara dynasty. Their life was connected with Naples and Papal States.",
+    "sections": []
+  },
+  "FELIPLANC": {
+    "name": "Philippa of Lancaster",
+    "role": "Consort",
+    "nickname": "",
+    "aliases": [],
+    "summary": "Consort of the Plantagenet-Lancaster dynasty. Their life was connected with Portugal.",
+    "sections": []
+  },
+  "ERNSTLUDWIGHESSEDARM": {
+    "name": "Ernest Louis of Hesse-Darmstadt",
+    "role": "Landgrave",
+    "nickname": "",
+    "aliases": [],
+    "summary": "Landgrave of Hesse-Darmstadt, 1678–1739. Landgrave of the House of Hesse.",
+    "sections": [],
+    "governmentNotes": {
+      "Sucede a su hermanastro Luis VII en 1678; su madre, Isabel Dorotea de Sajonia-Gotha, ejerce la regencia hasta el 6 de febrero de 1688.": "Succeeded his stepbrother Louis VII in 1678; his mother, Isabel Dorotea of Saxony-Gotha, exercised regency until 6 February 1688."
+    }
+  },
+  "CONSTENRIQ": {
+    "name": "Constance Enríquez of Castile",
+    "role": "Noble",
+    "nickname": "",
+    "aliases": [],
+    "summary": "Noble of the Trastámara dynasty. Their life was connected with Castile and Portugal.",
+    "sections": []
+  },
+  "PEDROPORTCOIM": {
+    "name": "Peter of Portugal",
+    "role": "Duke",
+    "nickname": "",
+    "aliases": [
+      "Peter of Portugal, Duke of Coímbra",
+      "Peter of Portugal (Duque de Coímbra)"
+    ],
+    "summary": "Duke of the Aviz dynasty. Their life was connected with Portugal.",
+    "sections": []
+  },
+  "ERIC2POM": {
+    "name": "Eric II of Pomerania",
+    "role": "Duke",
+    "nickname": "",
+    "aliases": [],
+    "summary": "Duke of Pomerania, 1457–1474. Duke of the Griffin dynasty.",
+    "sections": []
+  },
+  "MARIASUAB": {
+    "name": "Maria of Swabia",
+    "role": "Consort",
+    "nickname": "",
+    "aliases": [],
+    "summary": "Consort of the Hohenstaufen dynasty. Their life was connected with Brabant.",
+    "sections": []
+  },
+  "FELIPE1SAB": {
+    "name": "Philip I of Savoy",
+    "role": "Count",
+    "nickname": "",
+    "aliases": [],
+    "summary": "He left his ecclesiastical career before succeeding his brother Peter II. With no children of his own, he had to arrange an inheritance contested by the sons and grandsons of Thomas II.",
+    "sections": [],
+    "biography": "He left his ecclesiastical career before succeeding his brother Peter II. With no children of his own, he had to arrange an inheritance contested by the sons and grandsons of Thomas II. Amadeus V’s accession left room for collateral inheritances in Vaud and Piedmont: the genealogy explains why the succession was not a simple passage from father to son."
+  },
+  "SOPHIEMECKDEN": {
+    "name": "Sophia of Mecklenburg-Güstrow",
+    "role": "Consort",
+    "nickname": "",
+    "aliases": [],
+    "summary": "Consort of the Mecklenburg dynasty. Their life was connected with Denmark and Norway.",
+    "sections": []
+  },
+  "EDUARDGUELD": {
+    "name": "Edward of Guelders",
+    "role": "Duke",
+    "nickname": "",
+    "aliases": [],
+    "summary": "He disputed his brother Reginald III and displaced him from the government in 1361. His death in 1371 allowed a brief restoration of Reginald. The disappearance of both without descendants opened a new dispute between the lines of their sisters.",
+    "sections": []
+  },
+  "HENRY5MECK": {
+    "name": "Henry V of Mecklenburg",
+    "role": "Duke",
+    "nickname": "",
+    "aliases": [],
+    "summary": "Duke of Mecklenburg, 1503–1552 (Branch rule). Duke of the Mecklenburg dynasty.",
+    "sections": [],
+    "governmentNotes": {
+      "Gobierno territorial de una rama; no dominio exclusivo de todo el conjunto.": "Territorial government of one branch; not exclusive control of the whole."
+    }
+  },
+  "JOACHIM2BRAND": {
+    "name": "Joachim II Hector of Brandenburg",
+    "role": "Elector",
+    "nickname": "",
+    "aliases": [],
+    "summary": "Elector of Brandenburg, 1535–1571. Elector of the Hohenzollern dynasty.",
+    "sections": []
+  },
+  "MATHAB": {
+    "name": "Matilda of Habsburg",
+    "role": "Consort",
+    "nickname": "",
+    "aliases": [],
+    "summary": "Consort of the Habsburg dynasty. Their life was connected with Bavaria.",
+    "sections": []
+  },
+  "RIQS": {
+    "name": "Richeza of Sweden",
+    "role": "Consort",
+    "nickname": "",
+    "aliases": [],
+    "summary": "Consort of the Bjälbo dynasty. Their life was connected with Poland.",
+    "sections": []
+  },
+  "JUANPORT": {
+    "name": "John of Portugal",
+    "role": "Duke",
+    "nickname": "",
+    "aliases": [],
+    "summary": "Duke of the Portuguese House of Burgundy dynasty. Their life was connected with Portugal and Castile.",
+    "sections": []
+  },
+  "AGNESSHESSE": {
+    "name": "Agnes of Hesse",
+    "role": "Consort",
+    "nickname": "",
+    "aliases": [],
+    "summary": "Consort of the Hesse dynasty. Their life was connected with Hesse and Saxony.",
+    "sections": []
+  },
+  "MATICHAT": {
+    "name": "Matilda of Châtillon",
+    "role": "Consort",
+    "nickname": "",
+    "aliases": [],
+    "summary": "Consort of the Châtillon dynasty. Their life was connected with France.",
+    "sections": []
+  },
+  "ROB2ART": {
+    "name": "Robert II of Artois",
+    "role": "Count",
+    "nickname": "",
+    "aliases": [],
+    "summary": "He sent French forces in the battle of the Golden Spurs, where he died in front of the Flemish militias. The succession of Artois later faced his daughter Matilda with his grandson Roberto.",
+    "sections": []
+  },
+  "ISABBORB": {
+    "name": "Isabella of Bourbon",
+    "role": "Consort",
+    "nickname": "",
+    "aliases": [],
+    "summary": "Daughter of Duke Charles I of Bourbon, married Charles, Count of Charolais, and future Duke of Burgundy in 1454. She died in 1465, before her husband inherited the duchy; her only daughter was Mary of Burgundy.",
+    "sections": []
+  },
+  "DIETRICHOLD": {
+    "name": "Dietrich of Oldenburg",
+    "role": "Count",
+    "nickname": "",
+    "aliases": [],
+    "summary": "Count of Oldenburg, 1423–1440. Count of the Oldenburg dynasty.",
+    "sections": []
+  },
+  "MARGBORG": {
+    "name": "Margaret of Burgundy",
+    "role": "Consort",
+    "nickname": "",
+    "aliases": [],
+    "summary": "Consort of the Burgundy dynasty. Their life was connected with Naples and Trinacria.",
+    "sections": []
+  },
+  "JUAN3NAMUR": {
+    "name": "John III of Namur",
+    "role": "Count",
+    "nickname": "",
+    "aliases": [],
+    "summary": "Count of Namur, 1418–1429. Count of the Dampierre dynasty.",
+    "sections": [],
+    "governmentNotes": {
+      "Vendió a Felipe el Bueno el derecho a sucederle en 1421, conservando el usufructo hasta su muerte.": "He sold to Philip the Good the right to succeed him in 1421, retaining the usufruct until his death."
+    }
+  },
+  "DIETRICHMEISSEN": {
+    "name": "Dietrich of Meissen",
+    "role": "Margrave",
+    "nickname": "the Oppressed",
+    "aliases": [],
+    "summary": "Margrave of Meißen, 1198–1221. Margrave of the Wettin dynasty.",
+    "sections": []
+  },
+  "ERIK6DEN": {
+    "name": "Erik VI of Denmark",
+    "role": "King",
+    "nickname": "Menved",
+    "aliases": [
+      "Erik 6. Menved"
+    ],
+    "summary": "Erik Menved, king of Denmark since 1286. He sought to dominate northern Germany and the Baltic, but his wars left the crown in debt and pawnted.",
+    "sections": [],
+    "governmentNotes": {
+      "Rey desde 1286; ejercicio personal del gobierno desde 1293.": "King since 1286; personal exercise of government since 1293."
+    }
+  },
+  "ANAFRA": {
+    "name": "Anne of France",
+    "role": "Noble / Regent",
+    "nickname": "",
+    "aliases": [],
+    "summary": "Noble of the Valois dynasty. Their life was connected with France and Bourbon.",
+    "sections": []
+  },
+  "ODONBORG": {
+    "name": "Odo of Burgundy",
+    "role": "Count",
+    "nickname": "",
+    "aliases": [],
+    "summary": "Count of Nevers, 1257–1262 (Jure uxoris). Count of the Burgundy dynasty.",
+    "sections": [],
+    "governmentNotes": {
+      "Por su matrimonio con Matilde de Borbón, condesa de Nevers.": "For his marriage to Matilda de Borbón, Countess de Nevers."
+    }
+  },
+  "ROB1CLER": {
+    "name": "Robert, Count of Clermont",
+    "role": "Count",
+    "nickname": "",
+    "aliases": [],
+    "summary": "Count of Clermont, 1269–1317. Count of the Bourbon dynasty.",
+    "sections": []
+  },
+  "ELISAHESSEMARBURG": {
+    "name": "Elisabeth of Hesse-Marburg",
+    "role": "Consort",
+    "nickname": "",
+    "aliases": [],
+    "summary": "Consort of the Hesse dynasty. Their life was connected with Hesse and Nassau.",
+    "sections": []
+  },
+  "VIOLANTEMONBYZ": {
+    "name": "Yolande of Montferrat",
+    "role": "Consort",
+    "nickname": "",
+    "aliases": [
+      "Irene of Montferrat",
+      "Violante of Montferrat"
+    ],
+    "summary": "Born Yolanda, a daughter of William VII, she adopted the name Irene when she married Andronikos II Palaiologos. The marriage connected Montferrat with the Byzantine imperial court.",
+    "sections": [],
+    "biography": "Born Yolanda, a daughter of William VII, she adopted the name Irene when she married Andronikos II Palaiologos. The marriage connected Montferrat with the Byzantine imperial court. Her son Theodore received the Italian inheritance after the death of Irene’s brother John I. She should not be confused with her granddaughter Yolanda, wife of Aymon of Savoy."
+  },
+  "LUDWIG3WURTT": {
+    "name": "Louis III of Württemberg",
+    "role": "Duke",
+    "nickname": "",
+    "aliases": [],
+    "summary": "Duke of Württemberg, 1568–1593. Duke of the Württemberg dynasty.",
+    "sections": []
+  },
+  "CATVAL": {
+    "name": "Catherine of Valois",
+    "role": "Consort",
+    "nickname": "",
+    "aliases": [],
+    "summary": "Consort of the Valois dynasty. Their life was connected with Burgundy and France.",
+    "sections": []
+  },
+  "IVANASEN1BUL": {
+    "name": "Ivan Asen I of Bulgaria",
+    "role": "Tsar",
+    "nickname": "",
+    "aliases": [
+      "Ivan Asen I"
+    ],
+    "summary": "Tsar of Bulgaria, 1186–1196. Tsar of the Asen dynasty.",
+    "sections": []
+  },
+  "FERN2BRAG": {
+    "name": "Ferdinand II of Braganza",
+    "role": "Duke",
+    "nickname": "",
+    "aliases": [],
+    "summary": "Duke of the Braganza dynasty. Their life was connected with Portugal.",
+    "sections": []
+  },
+  "RICHEZADIN": {
+    "name": "Richeza of Denmark",
+    "role": "Consort",
+    "nickname": "",
+    "aliases": [],
+    "summary": "Consort of the Estridsen dynasty. Their life was connected with Denmark and Sweden.",
+    "sections": []
+  },
+  "SOPHIAPOMSTOLP": {
+    "name": "Sophia of Pomerania-Stolp",
+    "role": "Consort",
+    "nickname": "",
+    "aliases": [],
+    "summary": "Consort of the Griffin dynasty. Their life was connected with Pomerania.",
+    "sections": []
+  },
+  "DANIELMOSC": {
+    "name": "Daniel from Moscow",
+    "role": "Prince of Moscow",
+    "nickname": "",
+    "aliases": [],
+    "summary": "Grand Prince of Russia, 1283–1303 (Branch rule). Prince of Moscow of the Rurikid dynasty.",
+    "sections": []
+  },
+  "ZYGIMANTASLIT": {
+    "name": "Sigismund Kęstutaitis",
+    "role": "Grand duke",
+    "nickname": "",
+    "aliases": [
+      "Žygimantas Kęstutaitis"
+    ],
+    "summary": "Son of Kęstutis and brother of Vitauts, he joined the government in 1432. He beat Švitrigaila in the civil war and was killed in Trakai in 1440.",
+    "sections": [],
+    "governmentNotes": {
+      "Gobierno inicialmente occidental, ampliado tras la derrota de Švitrigaila.": "Government initially Western, expanded after the defeat of Švitrigaila."
+    }
+  },
+  "ENRIQ14BAV": {
+    "name": "Henry XIV of Bavaria",
+    "role": "Duke",
+    "nickname": "",
+    "aliases": [],
+    "summary": "Duke of Bavaria, 1312–1339 (Branch rule). Duke of the Wittelsbach dynasty.",
+    "sections": []
+  },
+  "HELENABULSER": {
+    "name": "Helena of Bulgaria",
+    "role": "Empress consort",
+    "nickname": "",
+    "aliases": [],
+    "summary": "A sister of the Bulgarian tsar Ivan Alexander and wife of Stefan Dušan of Serbia, she served as regent for their son Stefan Uroš V and ended her life as a nun.",
+    "sections": []
+  },
+  "PAPA_LEON11": {
+    "name": "Leo XI",
+    "role": "Pope",
+    "nickname": "",
+    "aliases": [],
+    "summary": "Alessandro de 'Medici, of the Florentine family, was elected in April 1605 and died 27 days later.",
+    "sections": []
+  },
+  "ROD2HAB": {
+    "name": "Rudolf II of Habsburg",
+    "role": "Duke",
+    "nickname": "",
+    "aliases": [],
+    "summary": "Duke of Austria, 1282–1283 (Co-ruler). Duke of the Habsburg dynasty.",
+    "sections": [],
+    "governmentNotes": {
+      "Investido junto a su hermano Alberto I en 1282; renunció por el tratado de Rheinfelden (1283).": "He was investigated with his brother Albert I in 1282; he resigned from the Rheinfelden treaty (1283)."
+    }
+  },
+  "RUPERTO2PAL": {
+    "name": "Rupert II of the Palatinate",
+    "role": "Elector",
+    "nickname": "",
+    "aliases": [],
+    "summary": "Elector of Palatinate, 1390–1398. Elector of the Wittelsbach dynasty.",
+    "sections": []
+  },
+  "VIOLP": {
+    "name": "Polish rape",
+    "role": "Noble",
+    "nickname": "",
+    "aliases": [],
+    "summary": "Noble of the Árpád dynasty. Their life was connected with Poland.",
+    "sections": []
+  },
+  "SCIARRACOLONNA": {
+    "name": "Sciarra Colonna",
+    "role": "Noble / Military leader",
+    "nickname": "",
+    "aliases": [],
+    "summary": "Noble of the Colonna dynasty. Their life was connected with Rome.",
+    "sections": []
+  },
+  "OTTO2SIEGEN": {
+    "name": "Otto II of Nassau-Siegen",
+    "role": "Count",
+    "nickname": "",
+    "aliases": [],
+    "summary": "Count of Nassau, 1343–1351. Count of the Nassau dynasty.",
+    "sections": []
+  },
+  "CHARLESBLOIS": {
+    "name": "Charles of Blois",
+    "role": "Claimant duke",
+    "nickname": "",
+    "aliases": [],
+    "summary": "A member of the House of Châtillon, he married Joanna of Penthièvre and defended her rights to the Duchy of Brittany. His cause received French support during the war against the Montforts.",
+    "sections": [],
+    "biography": "A member of the House of Châtillon, he married Joanna of Penthièvre and defended her rights to the Duchy of Brittany. His cause received French support during the war against the Montforts. He died at the Battle of Auray in 1364; his dynastic descent must be distinguished from the Breton origin of his wife’s rights."
+  },
+  "FREDFRANZ1MECK": {
+    "name": "Frederick Francis I of Mecklenburg-Schwerin",
+    "role": "Duke",
+    "nickname": "",
+    "aliases": [],
+    "summary": "Duke of Mecklenburg, 1785–1815. Duke of the Mecklenburg dynasty.",
+    "sections": [],
+    "governmentNotes": {
+      "Sucede a su tío Federico el 24 de abril de 1785; gran duque desde el 17 de junio de 1815.": "It succeeds his uncle Frederick on April 24, 1785; grand duke since June 17, 1815."
+    }
+  },
+  "FELART": {
+    "name": "Philip of Artois",
+    "role": "Noble",
+    "nickname": "",
+    "aliases": [],
+    "summary": "Noble of the Artois dynasty. Their life was connected with Artois.",
+    "sections": []
+  },
+  "MARGARETHUNTINGDON": {
+    "name": "Margaret of Huntingdon",
+    "role": "Noble",
+    "nickname": "",
+    "aliases": [],
+    "summary": "Noble of the Dunkeld dynasty. Their life was connected with Scotland.",
+    "sections": []
+  },
+  "JUANBORG": {
+    "name": "John of Burgundy",
+    "role": "Lord",
+    "nickname": "",
+    "aliases": [],
+    "summary": "Lord of Bourbon, 1262–1268 (Jure uxoris). Lord of the Burgundy dynasty.",
+    "sections": [],
+    "governmentNotes": {
+      "Señor de Borbón por su matrimonio con Inés de Dampierre.": "Lord of Bourbon through his marriage to Agnes de Dampierre."
+    }
+  },
+  "ANTONIABAUX": {
+    "name": "Antonia of Baux",
+    "role": "Consort",
+    "nickname": "",
+    "aliases": [],
+    "summary": "Consort of the Baux dynasty. Their life was connected with Sicily.",
+    "sections": []
+  },
+  "ANNAIVANOVNA": {
+    "name": "Anna of Russia",
+    "role": "Empress",
+    "nickname": "",
+    "aliases": [],
+    "summary": "Empress of Russia from 1730 and a niece of Peter the Great, she rejected the conditions that the nobility sought to impose on her and ruled with German favourites such as Biron.",
+    "sections": []
+  },
+  "POLIXENAHESSE": {
+    "name": "Polyxena of Hesse-Rheinfels-Rotenburg",
+    "role": "Consort",
+    "nickname": "",
+    "aliases": [],
+    "summary": "Consort of the Hesse dynasty. Their life was connected with Hesse and Savoy.",
+    "sections": []
+  },
+  "FREDERICAHESSEDARM": {
+    "name": "Frederica Louisa of Hesse-Darmstadt",
+    "role": "Consort",
+    "nickname": "",
+    "aliases": [],
+    "summary": "Consort of the Hesse dynasty. Their life was connected with Hesse and Prussia.",
+    "sections": []
+  },
+  "ISABELCARLOTAORL": {
+    "name": "Elizabeth Charlotte of Orléans",
+    "role": "Consort",
+    "nickname": "",
+    "aliases": [],
+    "summary": "Consort of the Borbon dynasty. Their life was connected with Orléans and Lorraine.",
+    "sections": []
+  },
+  "CUNS": {
+    "name": "Kunigunde of Swabia",
+    "role": "Consort",
+    "nickname": "",
+    "aliases": [],
+    "summary": "Consort of the Hohenstaufen dynasty. Their life was connected with Bohemia.",
+    "sections": []
+  },
+  "LADISLAO3HUN": {
+    "name": "Ladislaus III of Hungary",
+    "role": "King",
+    "nickname": "",
+    "aliases": [],
+    "summary": "Son of Emerico, crowned king of Hungary as a child in 1204. His uncle Andrés took over the government; the little king died in Austrian exile in 1205.",
+    "sections": []
+  },
+  "OTTO1NASSAU": {
+    "name": "Otto I of Nassau",
+    "role": "Count",
+    "nickname": "",
+    "aliases": [],
+    "summary": "Count of Nassau, 1251–1290 (Branch rule). Count of the Nassau dynasty.",
+    "sections": [],
+    "governmentNotes": {
+      "Gobierno territorial de una rama; no dominio exclusivo de todo el conjunto.": "Territorial government of one branch; not exclusive control of the whole."
+    }
+  },
+  "ANAKATARINAFRANK": {
+    "name": "Anne Katarina Frankopan",
+    "role": "Noblewoman / Writer",
+    "nickname": "",
+    "aliases": [],
+    "summary": "A writer and administrator of her family’s estates, she married Petar Zrinski. She took part in her circle’s diplomatic efforts and published a devotional work in Venice.",
+    "sections": [],
+    "biography": "A writer and administrator of her family’s estates, she married Petar Zrinski. She took part in her circle’s diplomatic efforts and published a devotional work in Venice. After her husband’s fall she was confined and died in Graz. Her daughter Jelena links this family with the princes of Transylvania."
+  },
+  "DOROTHEABULBOS": {
+    "name": "Dorothea of Bulgaria",
+    "role": "Consort",
+    "nickname": "",
+    "aliases": [],
+    "summary": "Consort of the Shishman dynasty. Their life was connected with Bulgaria and Bosnia.",
+    "sections": []
+  },
+  "ROGER2TRENCAVEL": {
+    "name": "Roger II Trencavel",
+    "role": "Vizcount of Carcasona, Béziers, Albi and Razès",
+    "nickname": "",
+    "aliases": [
+      "Roger de Besiers"
+    ],
+    "summary": "Son of Raymond Trencavel I, Viscount of Carcassonne, Béziers, Albi and Razès since 1167. That year he recognized the sovereignty of Alfonso II of Aragon. He married Adelaide of Toulouse and protected the Cathars in their lands.",
+    "sections": [],
+    "governmentNotes": {
+      "En 1167 reconoció la soberanía de Alfonso II de Aragón.": "In 1167 he recognized the sovereignty of Alfonso II of Aragon."
+    }
+  },
+  "ANTHONYULRICHBRUN": {
+    "name": "Anthony Ulrich of Brunswick-Wolfenbüttel",
+    "role": "Duke",
+    "nickname": "",
+    "aliases": [],
+    "summary": "Duke of the Welf dynasty. Their life was connected with Brunswick and Russia.",
+    "sections": []
+  },
+  "MATEOESTUARDO": {
+    "name": "Matthew Stuart, Earl of Lennox",
+    "role": "Count",
+    "nickname": "",
+    "aliases": [],
+    "summary": "Count of the Stuart dynasty. Their life was connected with Scotland.",
+    "sections": []
+  },
+  "ABUSAIDFARAJNASR": {
+    "name": "Abu Saʿid Faraj",
+    "role": "Prince",
+    "nickname": "",
+    "aliases": [],
+    "summary": "Prince of the Nasrid dynasty. Their life was connected with Granada.",
+    "sections": []
+  },
+  "GIOVANNIDIBICCI": {
+    "name": "Giovanni di Bicci de’ Medici",
+    "role": "Banker / Politician",
+    "nickname": "",
+    "aliases": [],
+    "summary": "Banquero of the Medici dynasty. Their life was connected with Florence.",
+    "sections": []
+  },
+  "PETRONILABIGORRA": {
+    "name": "Petronil of Bigorra",
+    "role": "Countess of Bigorra",
+    "nickname": "",
+    "aliases": [
+      "Peronella I de Bigorra",
+      "Pétronille de Bigorre"
+    ],
+    "summary": "A daughter of Count Bernard IV of Comminges and Countess Beatrice of Bigorre, she inherited the county in 1190. She married five times: Gaston VI of Béarn in 1196; Nuño Sánchez of Roussillon in 1215, in a marriage later annulled by the pope; Guy de Montfort in 1216; Aimar de Racon; and Boson de Matha. She died at L’Escaladieu Abbey in 1251.",
+    "sections": [],
+    "governmentNotes": {
+      "Sucedió a su madre, la condesa Beatriz III.": "Succeeded her mother, Countess Beatriz III."
+    }
+  },
+  "SOPHIAHEDWIGBRUNSWICK": {
+    "name": "Sophia Hedwig of Brunswick-Lüneburg",
+    "role": "Consort",
+    "nickname": "",
+    "aliases": [],
+    "summary": "Consort of the Welf dynasty. Their life was connected with Brunswick and Nassau.",
+    "sections": []
+  },
+  "JUTTATHUR": {
+    "name": "Jutta of Thuringia",
+    "role": "Consort",
+    "nickname": "",
+    "aliases": [],
+    "summary": "Consort of the Ludovingian dynasty. Their life was connected with Thuringia and Meißen.",
+    "sections": []
+  },
+  "ANGELACATERINAESTE": {
+    "name": "Angela Maria Caterina d’Este",
+    "role": "Princess of Carignano",
+    "nickname": "",
+    "aliases": [],
+    "summary": "Princess of Carignano of the Este dynasty. Their life was connected with Modena and Savoy.",
+    "sections": []
+  },
+  "VITTORIADELLAROVERE": {
+    "name": "Vittoria della Rovere",
+    "role": "Consort",
+    "nickname": "",
+    "aliases": [],
+    "summary": "Consort of the Della Rovere dynasty. Their life was connected with Urbino and Tuscany.",
+    "sections": []
+  },
+  "ENRIQ2SWI": {
+    "name": "Henry II of Świdnica",
+    "role": "Duke",
+    "nickname": "",
+    "aliases": [],
+    "summary": "Duke of the Piast dynasty. Their life was connected with Silesia.",
+    "sections": []
+  },
+  "ANNAEGMONT": {
+    "name": "Anne of Egmont",
+    "role": "Consort",
+    "nickname": "",
+    "aliases": [],
+    "summary": "Consort of the Egmond dynasty. Their life was connected with Low Countries.",
+    "sections": []
+  },
+  "ISABELLA2JER": {
+    "name": "Isabella II of Jerusalem",
+    "role": "Queen / Empress",
+    "nickname": "",
+    "aliases": [
+      "Yolanda de Brienne"
+    ],
+    "summary": "Queen Isabella II of Jerusalem was born in 1212 to John of Brienne and Maria of Montferrat. She married Emperor Frederick II in 1225 and died after giving birth to Conrad in 1228.",
+    "sections": []
+  },
+  "WALTERSTEWART6": {
+    "name": "Walter Stewart",
+    "role": "High Steward",
+    "nickname": "",
+    "aliases": [],
+    "summary": "High Steward of the Stuart dynasty. Their life was connected with Scotland.",
+    "sections": []
+  },
+  "BALDWIN3JER": {
+    "name": "Baldwin III of Jerusalem",
+    "role": "King",
+    "nickname": "",
+    "aliases": [],
+    "summary": "King of Jerusalem from 1143, son of Fulco and Melisenda. He took power from his mother in 1152 and conquered Ascalon in 1153.",
+    "sections": []
+  },
+  "ESCHIVAIBELIN": {
+    "name": "Eschiva of Ibelin",
+    "role": "Noble",
+    "nickname": "",
+    "aliases": [],
+    "summary": "Noble of the Ibelin dynasty. Their life was connected with Cyprus and Jerusalem.",
+    "sections": []
+  },
+  "DAVID2SCOT": {
+    "name": "David II of Scotland",
+    "role": "King",
+    "nickname": "",
+    "aliases": [],
+    "summary": "A son of Robert the Bruce, he became king of Scotland in 1329. He spent years in exile in France and eleven years as a captive in England after his defeat at Neville’s Cross in 1346.",
+    "sections": []
+  },
+  "RORYODONNELL": {
+    "name": "Rory O'Donnell",
+    "role": "Lord / Count",
+    "nickname": "",
+    "aliases": [
+      "Rudhraighe Ó Domhnaill",
+      "Rory O Donnell"
+    ],
+    "summary": "He succeeded Red Hugh and accepted the title of Earl of Tyrconnell after the war. In 1607 he went into exile with Hugh O’Neill; the disappearance of these leaders facilitated a new phase of colonisation and confiscation in Ulster.",
+    "sections": []
+  },
+  "MEINHARD2GOR": {
+    "name": "Meinhard II of Gorizia-Tyrol",
+    "role": "Count / Duke",
+    "nickname": "",
+    "aliases": [],
+    "summary": "Count of Tyrol, 1258–1295. Count of the Gorizia dynasty.",
+    "sections": [],
+    "governmentNotes": {
+      "Investido por Rodolfo I de Habsburgo en 1286.": "Research by Rodolfo I of Habsburg in 1286."
+    }
+  },
+  "TRENCAVEL2": {
+    "name": "Raymond II Trencavel",
+    "role": "Vizcount of Carcasona",
+    "nickname": "",
+    "aliases": [
+      "Ramon Trencavell III",
+      "Raymond II Trencavel"
+    ],
+    "summary": "Son of Raymond Roger, took refuge with the Count of Foix and then in the court of James I. He briefly recovered Carcassonne between 1224 and 1227 and tried again in 1240; in 1247 he gave his dominions to the king of France in exchange for a pension.",
+    "sections": [],
+    "governmentNotes": {
+      "Recuperó brevemente los dominios de su padre.": "He briefly recovered his father's domains."
+    }
+  },
+  "FRANCIS1POM": {
+    "name": "Francis I of Pomerania",
+    "role": "Duke",
+    "nickname": "",
+    "aliases": [],
+    "summary": "Duke of Pomerania, 1618–1620. Duke of the Griffin dynasty.",
+    "sections": []
+  },
+  "WILLIAMMONTJER": {
+    "name": "William of Montferrat",
+    "role": "Count of Jaffa and Ascalon",
+    "nickname": "Long Sword",
+    "aliases": [],
+    "summary": "Count of Jaffa and Ascalon of the Aleramici dynasty. Their life was connected with Montferrat and Jerusalem.",
+    "sections": []
+  },
+  "PHILIPWILHELMPAL": {
+    "name": "Philip William of the Palatinate-Neuburg",
+    "role": "Elector / Duke",
+    "nickname": "",
+    "aliases": [],
+    "summary": "He inherited Jülich and Berg of Wolfgang William in 1653 and succeeded to the Electoral Palatinate in 1685. The coincidence in one person did not automatically merge the Rhenish duchies with the Kurpfalz.",
+    "sections": []
+  },
+  "ISABTAR": {
+    "name": "Elizabeth of Clermont",
+    "role": "Princess / Consort",
+    "nickname": "",
+    "aliases": [
+      "Elizabeth de Tarento",
+      "Elizabeth de Clermont (Isabel de Tarento)"
+    ],
+    "summary": "Princess of Taranto, 1463–1465. Princess of the Clermont dynasty.",
+    "sections": []
+  },
+  "ANABAV": {
+    "name": "Anna of Bavaria",
+    "role": "Consort",
+    "nickname": "",
+    "aliases": [],
+    "summary": "Consort of the Wittelsbach dynasty. Their life was connected with Bohemia and Germany.",
+    "sections": []
+  },
+  "DAVIDSOSLAN": {
+    "name": "David Soslan",
+    "role": "Consort",
+    "nickname": "",
+    "aliases": [],
+    "summary": "Second husband of Tamar and prominent military leader of his kingdom. His position as a consort and his victories supported the authority of the queen, without making it the origin of the Bagrationi's inheritance rights.",
+    "sections": []
+  },
+  "CONSTANZAAUSMEISSEN": {
+    "name": "Constance of Austria",
+    "role": "Consort",
+    "nickname": "",
+    "aliases": [],
+    "summary": "A daughter of Leopold VI of Babenberg and Theodora, Constance of Austria married Henry III, Margrave of Meissen, in 1234. Their marriage linked the Babenbergs with the Wettins. She was the mother of Albert and Dietrich and died in 1243, before the Austrian succession crisis of 1246.",
+    "sections": []
+  },
+  "BALD2COUR": {
+    "name": "Baldwin II",
+    "role": "Emperor",
+    "nickname": "",
+    "aliases": [],
+    "summary": "He was the last Latin emperor to rule Constantinople. After the recovery of the city by the Byzantines, he sought in the West support to restore an empire that he had already only retained as a title.",
+    "sections": []
+  },
+  "ARTOGKAVANAGH": {
+    "name": "Art Óg Mac Murchada Caomhánach",
+    "role": "King",
+    "nickname": "",
+    "aliases": [
+      "Art MacMurrough Kavanagh",
+      "Art Mac Morrough",
+      "Art Og Kavanagh"
+    ],
+    "summary": "He strengthened the power of his house in Leinster and resisted the expeditions of Richard II. His authority rested on local alliances and on the control of routes and tributes. His career allows to follow an active Gaelic monarchy in the middle of the Middle Ages.",
+    "sections": []
+  },
+  "CARD_FRANCESCO_PIGN": {
+    "name": "Francesco Pignatelli",
+    "role": "Cardinal",
+    "nickname": "",
+    "aliases": [],
+    "summary": "Cardinal Teatino and Archbishop of Naples. He was a relative of Innocent XII by a branch other than the Pignatelli, not a direct nephew of the Pope.",
+    "sections": []
+  },
+  "PIETROALDOBRANDINI_CARD": {
+    "name": "Pietro Aldobrandini",
+    "role": "Cardinal / Papal nephew",
+    "nickname": "",
+    "aliases": [],
+    "summary": "Cardinal of the Aldobrandini dynasty. Their life was connected with Papal States.",
+    "sections": []
+  },
+  "BARNIM11POM": {
+    "name": "Barnim XI of Pomerania",
+    "role": "Duke",
+    "nickname": "",
+    "aliases": [],
+    "summary": "Duke of Pomerania, 1531–1569 (Branch rule). Duke of the Griffin dynasty.",
+    "sections": [],
+    "governmentNotes": {
+      "Gobierno territorial de una rama; no dominio exclusivo de todo el conjunto.": "Territorial government of one branch; not exclusive control of the whole."
+    }
+  },
+  "INIGOVELASCO": {
+    "name": "Íñigo Fernández de Velasco y Tovar",
+    "role": "Duke",
+    "nickname": "",
+    "aliases": [],
+    "summary": "Duke of the Velasco dynasty. Their life was connected with Castile.",
+    "sections": []
+  },
+  "RAMONROGER2PALLARS": {
+    "name": "Ramon Roger II of Pallars",
+    "role": "Count of Mills Sobirà",
+    "nickname": "",
+    "aliases": [
+      "Ramon Roger II de Pallars"
+    ],
+    "summary": "Brother of Arnaldo Roger II, received the county of Peter IV in 1343 and served the king in the campaigns of the Rosellon (1343) and Majorca (1349).",
+    "sections": []
+  },
+  "RAYMONDPOITIERS": {
+    "name": "Raymond of Poitiers",
+    "role": "Prince consort",
+    "nickname": "",
+    "aliases": [],
+    "summary": "He came to Antioch to marry his heiress Constance. His government was marked by Byzantine and Muslim pressure and ended his death in Inab; his son Bohemond III continued the branch of Poitiers.",
+    "sections": []
+  },
+  "YOLCOURHUN": {
+    "name": "Yolanda of Courtenay",
+    "role": "Consort",
+    "nickname": "",
+    "aliases": [],
+    "summary": "Consort of the Courtenay dynasty. Their life was connected with Hungary.",
+    "sections": []
+  },
+  "PEDRO2URGEL": {
+    "name": "Peter II of Urgell",
+    "role": "Count",
+    "nickname": "",
+    "aliases": [],
+    "summary": "Count of Urgell, 1347–1408. Count of the Barcelona-Urgell dynasty.",
+    "sections": []
+  },
+  "OLIMPIAMANCINI": {
+    "name": "Olimpia Mancini",
+    "role": "Countess of Soissons",
+    "nickname": "",
+    "aliases": [],
+    "summary": "A niece of Cardinal Mazarin and a prominent figure at the court of Louis XIV, she married Eugene Maurice of Savoy, Count of Soissons. Implicated in the Affair of the Poisons, she fled France in 1680 and lived in the Spanish Netherlands. She was the mother of Prince Eugene of Savoy.",
+    "sections": []
+  },
+  "PAVAO1SUBIC": {
+    "name": "Paul I Šubić of Bribir",
+    "role": "Ban of Croatia / Lord of Bosnia",
+    "nickname": "",
+    "aliases": [
+      "Pablo I Šubić",
+      "Pavao I Bribirski"
+    ],
+    "summary": "Ban of Croatia, 1276–1312. Ban of Croatia / Lord of Bosnia of the Šubić dynasty.",
+    "sections": [],
+    "governmentNotes": {
+      "Selección desde la restitución de 1276, no el primer nombramiento de 1274.": "Selection since the return of 1276, not the first appointment of 1274.",
+      "Señor superior; desde 1305 se titula señor de toda Bosnia, con resistencia territorial de Esteban I.": "Superior Lord; since 1305 he is called Lord of all Bosnia, with territorial resistance of Stephen I.",
+      "Predominio regional bajo losŠubić; desde 1305 aparece la titulatura del señorío de Hum.": "The regional predominance under the Šubić; since 1305 the title of the Lordship of Hum has been in the show."
+    }
+  },
+  "BALIANIBELIN": {
+    "name": "Belian of Ibelin",
+    "role": "Baron / Lord of Ibelin",
+    "nickname": "",
+    "aliases": [],
+    "summary": "The Lord of the Kingdom of Jerusalem. After Hattin organized the defense of Jerusalem and negotiated the surrender of the city to Saladin in 1187.",
+    "sections": []
+  },
+  "KATARINAKOSACABOS": {
+    "name": "Catherine Kosača",
+    "role": "Consort",
+    "nickname": "",
+    "aliases": [],
+    "summary": "A daughter of Stephen Vukčić Kosača, she married Stephen Thomas of Bosnia in 1446. The marriage brought the monarchy closer to one of the region’s greatest powers.",
+    "sections": [],
+    "biography": "A daughter of Stephen Vukčić Kosača, she married Stephen Thomas of Bosnia in 1446. The marriage brought the monarchy closer to one of the region’s greatest powers. Her stepson Stephen Tomašević was the last king; he was not her son. Catherine’s later life was marked by the Ottoman conquest and exile."
+  },
+  "MANUEL8MEDINA": {
+    "name": "Manuel Alonso Pérez de Guzmán y Silva",
+    "role": "Duke",
+    "nickname": "",
+    "aliases": [],
+    "summary": "Duke of the Medina Sidonia dynasty. Their life was connected with Spain.",
+    "sections": []
+  },
+  "BONARMAGNAC": {
+    "name": "Bonne of Armagnac",
+    "role": "Consort",
+    "nickname": "",
+    "aliases": [],
+    "summary": "Consort of the ArMagnac dynasty. Their life was connected with France.",
+    "sections": []
+  },
+  "ALIXTHOUARS": {
+    "name": "Alix of Thouars",
+    "role": "Duchess",
+    "nickname": "",
+    "aliases": [
+      "Alicia de Thouars"
+    ],
+    "summary": "Heiress to the Duchy of Brittany, she transmitted her rights to the descendants of her marriage to Peter of Dreux. Her role explains how a Capetian branch could become established in the duchy even though the inheritance did not originally come through Peter.",
+    "sections": [],
+    "biography": "Heiress to the Duchy of Brittany, she transmitted her rights to the descendants of her marriage to Peter of Dreux. Her role explains how a Capetian branch could become established in the duchy even though the inheritance did not originally come through Peter. She died before her son John I could govern in his own right."
+  },
+  "GALEOTTOROBMAL": {
+    "name": "Galeotto Roberto Malatesta",
+    "role": "Lord",
+    "nickname": "",
+    "aliases": [],
+    "summary": "Lord of Rimini, 1429–1432. Lord of the Malatesta dynasty.",
+    "sections": []
+  },
+  "MARGRETESKULE": {
+    "name": "Margaret Skulesdatter",
+    "role": "Consort",
+    "nickname": "",
+    "aliases": [
+      "Margrete Skulesdatter"
+    ],
+    "summary": "Margaret, daughter of Duke Skule Bårdsson, married Haakon IV. The alliance did not prevent the subsequent confrontation between her father and her husband. She was the mother of Magnus VI: her descendants links the Norwegian medieval consolidation with the Scandinavian unions of the 14th century.",
+    "sections": []
+  },
+  "INIONDUBH": {
+    "name": "Iníon Dubh MacDonald",
+    "role": "Noble",
+    "nickname": "",
+    "aliases": [
+      "Fionnghuala Nic Dhomhnaill",
+      "Inion Dubh"
+    ],
+    "summary": "A Scottish Gaelic noblewoman and mother of Red Hugh and Rory O’Donnell, she took part in her family’s succession struggle and mobilised support for her children, demonstrating the political role of women in Irish Sea alliances.",
+    "sections": []
+  },
+  "GUIDANTMONTE": {
+    "name": "Guidantonio da Montefeltro",
+    "role": "Count / Condottiere",
+    "nickname": "",
+    "aliases": [],
+    "summary": "Count of Urbino, 1404–1443. Count of the Montefeltro dynasty.",
+    "sections": []
+  },
+  "ORSINOORSINI": {
+    "name": "Orsino Orsini",
+    "role": "Noble",
+    "nickname": "",
+    "aliases": [],
+    "summary": "Noble of the Orsini dynasty. Their life was connected with Rome.",
+    "sections": []
+  },
+  "ROGERBERNARDO1PALLARS": {
+    "name": "Roger Bernard I of Pallars",
+    "role": "Count of Mills Sobirà",
+    "nickname": "",
+    "aliases": [
+      "Roger Bernat I de Pallars"
+    ],
+    "summary": "Son of Hugh Roger II, opposed the Crown's requests in the 1416 and 1421-1423 courts. Since 1423 he served Alfonso the Magnanimoususususususususususususus in Naples.",
+    "sections": []
+  },
+  "GIORGI9IMER": {
+    "name": "George IX of Imereti",
+    "role": "King",
+    "nickname": "",
+    "aliases": [
+      "Giorgi IX of Imereti"
+    ],
+    "summary": "Alexander V's brother was promoted during one of his expulsions. His brief government illustrates how factions could replace the king without leaving the same Bagrationi family. His son David II would fight the crown again.",
+    "sections": []
+  },
+  "ISABVISEO": {
+    "name": "Isabel of Viseu",
+    "role": "Noble",
+    "nickname": "",
+    "aliases": [],
+    "summary": "Noble of the Aviz-Beja dynasty. Their life was connected with Portugal.",
+    "sections": []
+  },
+  "MARGBRIEGBAV": {
+    "name": "Margaret of Brieg",
+    "role": "Consort",
+    "nickname": "",
+    "aliases": [],
+    "summary": "Consort of the Piast dynasty. Their life was connected with Bavaria.",
+    "sections": []
+  },
+  "GRACEOMALLEY": {
+    "name": "Grace O'Malley",
+    "role": "Maritime leader",
+    "nickname": "",
+    "aliases": [
+      "Gráinne Ní Mháille",
+      "Granuaile",
+      "Grainne O Malley"
+    ],
+    "summary": "She led a maritime and territorial network on the western coast of Ireland. She negotiated and fought with Tudor authorities and local rivals; his meeting with Isabel I was part of that defense of his interests. Her authority was not equivalent to a crown over Ireland.",
+    "sections": []
+  },
+  "FERRODCAST": {
+    "name": "Fernando Rodríguez de Castro",
+    "role": "Lord",
+    "nickname": "",
+    "aliases": [],
+    "summary": "Lord of the Castro dynasty. Their life was connected with Castile.",
+    "sections": []
+  },
+  "PHILIPPAL": {
+    "name": "Philip of the Palatinate",
+    "role": "Elector",
+    "nickname": "",
+    "aliases": [],
+    "summary": "The Nephew of Frederick I, succeeded to the electoral title in 1476. His descendants continued the ruling line of the Kurpfalz during the first half of the 16th century.",
+    "sections": []
+  },
+  "MARIALUNA": {
+    "name": "María de Luna",
+    "role": "Consort",
+    "nickname": "",
+    "aliases": [],
+    "summary": "Consort of the Moon dynasty. Their life was connected with Aragon.",
+    "sections": []
+  },
+  "OLIMPIAALDOBRANDINI": {
+    "name": "Olimpia Aldobrandini",
+    "role": "Princess / Heiress",
+    "nickname": "",
+    "aliases": [],
+    "summary": "Princess of the Aldobrandini dynasty. Their life was connected with Rome.",
+    "sections": []
+  },
+  "GUILLERMO8MONTP": {
+    "name": "William VIII of Montpellier",
+    "role": "Lord of Montpellier",
+    "nickname": "",
+    "aliases": [
+      "Guillem VIII de Montpeller"
+    ],
+    "summary": "Lord of Montpellier since 1172, he extended the heirs of William VII. Married to Eudoxia Combina, she was repudiated to marry Agnes de Castilla. The Pope declared the children of this second marriage illegitimate, and in 1204 the inheritance passed to his daughter Mary, wife of Peter II of Aragon.",
+    "sections": []
+  },
+  "PIETROALDOBRANDINI_SR": {
+    "name": "Pietro Aldobrandini",
+    "role": "Noble",
+    "nickname": "",
+    "aliases": [],
+    "summary": "Noble of the Aldobrandini dynasty. Their life was connected with Rome.",
+    "sections": []
+  },
+  "ELISABMEISSEN": {
+    "name": "Elizabeth of Meissen",
+    "role": "Consort",
+    "nickname": "",
+    "aliases": [],
+    "summary": "Consort of the Wettin dynasty. Their life was connected with Meißen and Núremberg.",
+    "sections": []
+  },
+  "JUANAGREY": {
+    "name": "Lady Jane Grey",
+    "role": "Disputed queen",
+    "nickname": "the Queen of the Nine Days",
+    "aliases": [],
+    "summary": "She was proclaimed queen in an attempt to prevent the succession of Mary Tudor. Her lack of sufficient support ended her brief rule and led to her execution.",
+    "sections": []
+  },
+  "AGOBAREDOGE": {
+    "name": "Agostino Barbarigo",
+    "role": "Doge",
+    "nickname": "",
+    "aliases": [],
+    "summary": "Dogo Elected from the Republic of Venice, 1486-1501. The judiciary was not hereditary; the territories on the map belonged to the Republic.",
+    "sections": [],
+    "governmentNotes": {
+      "Magistratura electiva de la República de Venecia; los dominios dibujados pertenecen a la República, no al patrimonio personal del dogo.": "Elective Magistrate of the Republic of Venice; the domains drawn belong to the Republic, not to the personal inheritance of the Dogo."
+    }
+  },
+  "HELVIGSCHAU": {
+    "name": "Helvig of Schauenburg",
+    "role": "Consort",
+    "nickname": "",
+    "aliases": [],
+    "summary": "Consort of the Schaumburg dynasty. Their life was connected with Holstein and Oldenburg.",
+    "sections": []
+  },
+  "LUIS4PAL": {
+    "name": "Louis IV of the Palatinate",
+    "role": "Elector",
+    "nickname": "",
+    "aliases": [],
+    "summary": "Son of Louis III, he agreed to be a minor. A tutelar council administered the Kurpfalz until it personally assumed the government in 1442.",
+    "sections": [],
+    "governmentNotes": {
+      "Menor de edad hasta 1442; el consejo tutelar ejerció la regencia.": "A minor up to 1442; the guardianship council exercised the regency."
+    }
+  },
+  "ANABORBMARCH": {
+    "name": "Anne of Bourbon-La Marche",
+    "role": "Consort",
+    "nickname": "",
+    "aliases": [],
+    "summary": "Consort of the Bourbon dynasty. Their life was connected with Bavaria.",
+    "sections": []
+  },
+  "FRED2PAL": {
+    "name": "Frederick II of the Palatinate",
+    "role": "Elector",
+    "nickname": "",
+    "aliases": [],
+    "summary": "Brother and successor of Louis V, he ruled the electoral palatinate until 1556. He was followed by Otto Henry, from the branch of Neuburg.",
+    "sections": [],
+    "governmentNotes": {
+      "Gobierno tutelar del principado creado en 1505; investidura feudal como tutor el 23 de mayo de 1510 y entrega del gobierno a sus sobrinos el 2 de junio de 1522. No se confunde con su posterior mandato de elector palatino.": "Government of the principality created in 1505; he investites feudal as guardian on May 23, 1510 and gives the government to his nephews on June 2, 1522. It is not confused with his subsequent mandate as a palatine elector."
+    }
+  },
+  "PAND3MAL": {
+    "name": "Pandolfo III Malatesta",
+    "role": "Lord / Condottiere",
+    "nickname": "",
+    "aliases": [],
+    "summary": "Lord of Fano, 1385–1427. Lord of the Malatesta dynasty.",
+    "sections": []
+  },
+  "PRIJEZDA1BOS": {
+    "name": "Prijezda I of Bosnia",
+    "role": "Ban",
+    "nickname": "",
+    "aliases": [],
+    "summary": "Ban of Bosnia, 1254–1287. Ban of the Kotromanić dynasty.",
+    "sections": [],
+    "governmentNotes": {
+      "Selección conservadora desde 1254 hasta la carta documentada de 1287; última mención, no fecha de muerte. Usora y Soli quedan fuera.": "Conservative selection from 1254 to the documented 1287 letter; last mention, not date of death. Usora and Soli are out."
+    }
+  },
+  "MUSACELEBI": {
+    "name": "Musa Çelebi",
+    "role": "Emir",
+    "nickname": "",
+    "aliases": [
+      "Mûsâ Çelebi"
+    ],
+    "summary": "Emir of Ottoman Empire, 1410–1410. Emir of the Ottoman dynasty.",
+    "sections": [],
+    "governmentNotes": {
+      "Ocupación temporal de Edirne tras la victoria de Yanbolu en febrero de 1410, antes de las derrotas de junio y julio. Se muestra solo la celda de Edirne; no se convierte la campaña en control de toda Rumelia.": "Temporary occupation of Edirne following Yanbolu's victory in February 1410, before the defeats of June and July. It is shown only Edirne's cell; it does not turn the campaign into control of all Rumelia.",
+      "Gobierno regional desde la toma de Edirne en febrero de 1411 hasta su derrota y muerte en julio de 1413. Rival de Mehmed, con fronteras y alianzas cambiantes. El mapa mantiene un núcleo conservador; no afirma dominio de Constantinopla, Tesalónica, los principados tributarios ni Dobruja de Mircea.": "Regional government from the Edirne takeover in February 1411 to its defeat and death in July 1413. Rival de Mehmed, with changing borders and alliances. The map maintains a conservative core; it does not affirm the dominion of Constantinople, Thessaloniki, the principalities of the tributaries and Dobruja of Mircea."
+    }
+  },
+  "CATALINAVENDOME": {
+    "name": "Catherine of Vendôme",
+    "role": "Countess",
+    "nickname": "",
+    "aliases": [],
+    "summary": "Countess of Vendôme, 1372–1412 (Co-ruler). Countess of the Montoire dynasty.",
+    "sections": [],
+    "governmentNotes": {
+      "Derechos hereditarios compartidos con su hijo desde 1393.": "Likely rights shared with your child since 1393."
+    }
+  },
+  "PAPA_GREGORIO9": {
+    "name": "Gregorio IX",
+    "role": "Pope",
+    "nickname": "",
+    "aliases": [],
+    "summary": "Pope of strong legal and political personality, great adversary of Frederick II. His pontificate reinforced the pontifical Inquisition and deepened the conflict between papacy and Empire.",
+    "sections": []
+  },
+  "PAPA_HONORIO4": {
+    "name": "Honour IV",
+    "role": "Pope",
+    "nickname": "",
+    "aliases": [],
+    "summary": "Giacomo Savelli, nephew of Honour III, was pope from 1285 and 1287. He continued to support the Angevines in front of the Aragon Crown in the war for Sicily.",
+    "sections": []
+  },
+  "BERNACORR": {
+    "name": "Bernardina de Corradis",
+    "role": "Noble",
+    "nickname": "",
+    "aliases": [],
+    "summary": "Noble. His trajectory is linked to Milan.",
+    "sections": []
+  },
+  "LUCREZIATORNABUONI": {
+    "name": "Lucrezia Tornabuoni",
+    "role": "Noble / Patron",
+    "nickname": "",
+    "aliases": [],
+    "summary": "Noble of the Tornabuoni dynasty. Their life was connected with Florence.",
+    "sections": []
+  },
+  "BOCSKAI": {
+    "name": "Stephen Bocskai",
+    "role": "Prince",
+    "nickname": "",
+    "aliases": [],
+    "summary": "He led a rebellion against the Habsburg policy and obtained recognition of Transylvania and religious guarantees for Hungarian Protestants. The peace of Vienna of 1606 turned a military victory into a lasting political agreement.",
+    "sections": []
+  },
+  "GALSANSEV": {
+    "name": "Galeazzo Sanseverino",
+    "role": "Count",
+    "nickname": "",
+    "aliases": [],
+    "summary": "Count of the Sandeverino dynasty. Their life was connected with Milan and France.",
+    "sections": []
+  },
+  "DAUMANTASPSKOV": {
+    "name": "Daumantas of Pskov",
+    "role": "Prince",
+    "nickname": "",
+    "aliases": [
+      "Dovmont"
+    ],
+    "summary": "Prince of Lithuanian origin also known as Dovmont, was established in Pskov and was elected prince in 1266. He defended the city until his death in 1299; his government lived with the local political community.",
+    "sections": [],
+    "governmentNotes": {
+      "Príncipe invitado por Pskov, con instituciones comunales propias; no monarca hereditario de toda la tierra de Nóvgorod.": "Prince invited by Pskov, with community institutions of his own; not hereditary monarch of all the land of Novgorod."
+    }
+  },
+  "THOMASCROMWELL": {
+    "name": "Thomas Cromwell",
+    "role": "Minister",
+    "nickname": "",
+    "aliases": [],
+    "summary": "Minister. His trajectory is linked to England.",
+    "sections": []
+  },
+  "ZOFIADAN": {
+    "name": "Zofia Teofila Daniłowicz",
+    "role": "Noble",
+    "nickname": "",
+    "aliases": [],
+    "summary": "Noble of the Daniłowicz dynasty. Their life was connected with Poland.",
+    "sections": []
+  },
+  "FRED3PAL": {
+    "name": "Frederick III of the Palatinate",
+    "role": "Elector",
+    "nickname": "",
+    "aliases": [],
+    "summary": "Elector since 1559, he has driven Calvinism in the Palatinate. His son Louis VI changed the confessional policy again.",
+    "sections": []
+  },
+  "ISABELSABRAN": {
+    "name": "Isabella of Sabran",
+    "role": "Consort",
+    "nickname": "",
+    "aliases": [],
+    "summary": "Consort of the They'll know dynasty. Their life was connected with Majorca.",
+    "sections": []
+  },
+  "JUANAPONTHIEU": {
+    "name": "Joan of Dammartin",
+    "role": "Consort / Countess",
+    "nickname": "",
+    "aliases": [],
+    "summary": "Consort of the Dammartin dynasty. Their life was connected with Castile and Ponthieu.",
+    "sections": []
+  },
+  "OTTAVIANOMEDICI": {
+    "name": "Ottaviano de’ Medici",
+    "role": "Noble",
+    "nickname": "",
+    "aliases": [],
+    "summary": "Noble of the Medici dynasty. Their life was connected with Florence.",
+    "sections": []
+  },
+  "BARBCEL": {
+    "name": "Barbara of Cilli",
+    "role": "Consort",
+    "nickname": "",
+    "aliases": [],
+    "summary": "Consort of the Celje dynasty. Their life was connected with Hungary, Bohemia and Holy Roman Empire.",
+    "sections": []
+  },
+  "PAPA_ADRIANO6": {
+    "name": "Pope Adrian VI",
+    "role": "Pope",
+    "nickname": "",
+    "aliases": [],
+    "summary": "Adriano de Utrecht, a preceptor of Charles V and governor of Castile during the Communities, was pope from 1522 and 1523. He was the last non-Italian pope until 1978.",
+    "sections": []
+  },
+  "ALBRECHTEIS": {
+    "name": "Albert of Saxe-Eisenach",
+    "role": "Duke",
+    "nickname": "",
+    "aliases": [],
+    "summary": "Duke of Saxony-Eisenach, 1640–1644. Duke of the Wettin dynasty.",
+    "sections": [],
+    "governmentNotes": {
+      "Mandato de la rama ernestina; los repartos territoriales se fechan en series independientes.": "The mandate of the Ernestine branch; the territorial repayments are dated in independent series."
+    }
+  },
+  "JUANADEMENDOZA": {
+    "name": "Juana de Mendoza y Ayala",
+    "role": "Noble",
+    "nickname": "",
+    "aliases": [],
+    "summary": "Noble of the Mendoza dynasty. Their life was connected with Castile.",
+    "sections": []
+  },
+  "PICCARDBUERI": {
+    "name": "Piccarda Bueri",
+    "role": "Noble",
+    "nickname": "",
+    "aliases": [],
+    "summary": "Noble of the Bueri dynasty. Their life was connected with Florence.",
+    "sections": []
+  },
+  "PAPA_MARCELO2": {
+    "name": "Marcellus II",
+    "role": "Pope",
+    "nickname": "",
+    "aliases": [],
+    "summary": "Marcello Cervini, a humanist and president of the Council of Trento, served as pope for twenty-two days in 1555. Palestrina dedicated the Missa Papae Marcelli to him.",
+    "sections": []
+  },
+  "ISABELBEAUVAU": {
+    "name": "Isabella of Beauvau",
+    "role": "Consort",
+    "nickname": "",
+    "aliases": [],
+    "summary": "Consort of the Beauvau dynasty. Their life was connected with Vendôme.",
+    "sections": []
+  },
+  "JUANTALBOT": {
+    "name": "John Talbot",
+    "role": "Count / Commander",
+    "nickname": "",
+    "aliases": [],
+    "summary": "Count of the Talbot dynasty. Their life was connected with England and France.",
+    "sections": []
+  },
+  "MARGCLEVESBAV": {
+    "name": "Margaret of Cleves",
+    "role": "Consort",
+    "nickname": "",
+    "aliases": [],
+    "summary": "Consort of the La Marck dynasty. Their life was connected with Bavaria.",
+    "sections": []
+  },
+  "ERMENGARDESCOT": {
+    "name": "Ermengarde of Beaumont",
+    "role": "Consort",
+    "nickname": "",
+    "aliases": [],
+    "summary": "Consort of the Beaumont dynasty. Their life was connected with Scotland.",
+    "sections": []
+  },
+  "ELEONOREOLBREUSE": {
+    "name": "Eleanor d’Olbreuse",
+    "role": "Consort",
+    "nickname": "",
+    "aliases": [],
+    "summary": "Consort of the Olbreuse dynasty. Their life was connected with Brunswick.",
+    "sections": []
+  },
+  "SANTOTOMAS": {
+    "name": "Thomas Aquinas",
+    "role": "Theologian / Saint",
+    "nickname": "Saint Thomas Aquinas",
+    "aliases": [
+      "Santo Tomás de Aquino"
+    ],
+    "summary": "Theologian of the Aquinas dynasty. Their life was connected with Papal States.",
+    "sections": []
+  },
+  "ARCHIBALDDOUGLAS": {
+    "name": "Archibald Douglas",
+    "role": "Count",
+    "nickname": "",
+    "aliases": [],
+    "summary": "Count of the Douglas dynasty. Their life was connected with Scotland.",
+    "sections": []
+  },
+  "JOHNHOLLAND2": {
+    "name": "John Holland II of Exeter",
+    "role": "Duke",
+    "nickname": "",
+    "aliases": [],
+    "summary": "Duke of the Holland dynasty. Their life was connected with England.",
+    "sections": []
+  },
+  "PAPA_INOCENCIO7": {
+    "name": "Innocent VII",
+    "role": "Pope",
+    "nickname": "",
+    "aliases": [],
+    "summary": "Cosimo Migliorati was the Pope of Roman obedience between 1404 and 1406. A revolt in Rome forced him to take refuge in Viterbo in 1405.",
+    "sections": []
+  },
+  "PAPA_SIXTO5": {
+    "name": "Sixtus V",
+    "role": "Pope",
+    "nickname": "",
+    "aliases": [],
+    "summary": "Pope of short but energetic pontificate, reorganized the administration of the curia and transformed Rome urbanistically through great works and new monumental ways.",
+    "sections": []
+  },
+  "OSMAN2OSM": {
+    "name": "Osman II",
+    "role": "Sultan",
+    "nickname": "",
+    "aliases": [],
+    "summary": "Sultan of Ottoman Empire, 1618–1622. Sultan of the Ottoman dynasty.",
+    "sections": [],
+    "governmentNotes": {
+      "La ficha enlaza las provincias bajo administración otomana directa según las conquistas fechadas; no absorbe los principados tributarios. Los relevos del mismo año no implican gobierno simultáneo de todo el Imperio.": "The file links the provinces under direct Ottoman administration according to the dated conquests; it does not absorb the tax principalities. The same year's relics do not imply simultaneous rule of the whole Empire."
+    }
+  },
+  "DEMETRIOSMOREA": {
+    "name": "Demetrios Paleólogo",
+    "role": "Despot",
+    "nickname": "",
+    "aliases": [],
+    "summary": "Despot of the Morea, 1449–1460 (Branch rule). Despot of the Palaiologos dynasty.",
+    "sections": [],
+    "governmentNotes": {
+      "Gobierno compartido con Tomás; su ámbito de Mistra y el sur no comprende toda la Morea.": "Government shared with Thomas; its scope of Mistra and the south does not cover all the Morea."
+    }
+  },
+  "MUSTAFA3OSM": {
+    "name": "Mustafa III",
+    "role": "Sultan",
+    "nickname": "",
+    "aliases": [],
+    "summary": "Sultan of Ottoman Empire, 1757–1774. Sultan of the Ottoman dynasty.",
+    "sections": [],
+    "governmentNotes": {
+      "Conquistas y cesiones se fechan por provincia; el tributo de un príncipe no convierte su estado en provincia directa.": "Conquests and cessions are dated by province; the tribute of a prince does not turn his state into a direct province."
+    }
+  },
+  "MAHMUD1OSM": {
+    "name": "Mahmud I",
+    "role": "Sultan",
+    "nickname": "",
+    "aliases": [],
+    "summary": "Sultan of Ottoman Empire, 1730–1754. Sultan of the Ottoman dynasty.",
+    "sections": [],
+    "governmentNotes": {
+      "Conquistas y cesiones se fechan por provincia; el tributo de un príncipe no convierte su estado en provincia directa.": "Conquests and cessions are dated by province; the tribute of a prince does not turn his state into a direct province."
+    }
+  },
+  "ORHANOSM": {
+    "name": "Orhan",
+    "role": "Emir",
+    "nickname": "",
+    "aliases": [],
+    "summary": "Emir of Ottoman Empire, 1324–1362. Emir of the Ottoman dynasty.",
+    "sections": [],
+    "governmentNotes": {
+      "Conquistas y cesiones se fechan por provincia; el tributo de un príncipe no convierte su estado en provincia directa.": "Conquests and cessions are dated by province; the tribute of a prince does not turn his state into a direct province."
+    }
+  },
+  "JAIMEFADRIQUE": {
+    "name": "James Fadrique",
+    "role": "Count of Salona",
+    "nickname": "",
+    "aliases": [
+      "Jaume Frederic d’Aragó"
+    ],
+    "summary": "The son of Alfonso Fadrique, succeeded his brother Peter as Count of Salona in 1355. His son Louis followed him in 1365.",
+    "sections": [],
+    "governmentNotes": {
+      "Sucedió a su hermano Pedro; le siguió su hijo Luis en 1365.": "Succeeded his brother Peter; his son Louis followed him in 1365."
+    }
+  },
+  "KSENIASH": {
+    "name": "Ksenia Shestova",
+    "role": "Noble",
+    "nickname": "",
+    "aliases": [],
+    "summary": "Noble of the Shestov dynasty. Their life was connected with Russia.",
+    "sections": []
+  },
+  "JOHNCOMYN3": {
+    "name": "John Comyn III of Badenoch",
+    "role": "Noble / Guardian of Scotland",
+    "nickname": "",
+    "aliases": [],
+    "summary": "Scottish magnate and Robert Bruce's rival in the fight for the crown. His death at Bruce's hands in Dumfries immediately preceded the coronation of Robert I.",
+    "sections": []
+  },
+  "ALEXANDRAPOLOTSK": {
+    "name": "Alexandra of Polotsk",
+    "role": "Consort",
+    "nickname": "",
+    "aliases": [],
+    "summary": "Consort of the Rurikid dynasty. Their life was connected with Pólotsk and Vladímir.",
+    "sections": []
+  },
+  "JUANCIFU": {
+    "name": "Juana de Cifuentes",
+    "role": "Noble",
+    "nickname": "",
+    "aliases": [],
+    "summary": "Noble. Her trajectory is linked to Castile.",
+    "sections": []
+  },
+  "HELENADRAGAS": {
+    "name": "Helena Dragaš",
+    "role": "Empress consort",
+    "nickname": "",
+    "aliases": [],
+    "summary": "Daughter of Serbian lord Constantine Dragaš and wife of Manuel II Paleologist. She was the mother of the last two Byzantine emperors, John VIII and Constantine XI.",
+    "sections": []
+  },
+  "COSTANZAMAGALOTTI": {
+    "name": "Costanza Magalotti",
+    "role": "Noble",
+    "nickname": "",
+    "aliases": [],
+    "summary": "Noble of the Magalotti dynasty. Their life was connected with Rome.",
+    "sections": []
+  },
+  "MLADEN2SUBIC": {
+    "name": "Mladen II Šubić Bribirski",
+    "role": "Ban of Croatia and Bosnia",
+    "nickname": "",
+    "aliases": [
+      "Mladin II Bribirski"
+    ],
+    "summary": "Ban of Bosnia, 1305–1312 (Delegated government). Ban of Croatia and Bosnia of the Šubić dynasty.",
+    "sections": []
+  },
+  "ORTENSIABORGHESE": {
+    "name": "Ortensia Borghese",
+    "role": "Noble",
+    "nickname": "",
+    "aliases": [],
+    "summary": "Noble of the Borghese dynasty. Their life was connected with Rome.",
+    "sections": []
+  },
+  "ALVISE_MOCENIGO_I_DOGE": {
+    "name": "Alvise I Mocenigo",
+    "role": "Doge",
+    "nickname": "",
+    "aliases": [],
+    "summary": "Dogo of the Republic of Venice between 1570 and 1577. Dignity was elective: its mandate allows for institutional continuity, but it does not imply family ownership of Venetian territories.",
+    "sections": [],
+    "governmentNotes": {
+      "Cargo electivo de la República de Venecia, no señorío familiar.": "Elective position of the Republic of Venice, not family lordship."
+    }
+  },
+  "ELEONORAFIESCHI": {
+    "name": "Eleonora Fieschi",
+    "role": "Consort",
+    "nickname": "",
+    "aliases": [],
+    "summary": "Consort of the Fieschi dynasty. Their life was connected with Liguria.",
+    "sections": []
+  },
+  "CAMILLOPAMPHILJ_SR": {
+    "name": "Camillo Pamphilj",
+    "role": "Noble",
+    "nickname": "",
+    "aliases": [],
+    "summary": "Noble of the Pamphilj dynasty. Their life was connected with Rome.",
+    "sections": []
+  },
+  "ROFFREDOCAETANI_PATER": {
+    "name": "Roffredo Caetani",
+    "role": "Noble",
+    "nickname": "",
+    "aliases": [],
+    "summary": "Noble of the Caetani dynasty. Their life was connected with Anagni.",
+    "sections": []
+  },
+  "HRVATINSTJEPANIC": {
+    "name": "Hrvatin Stjepanić",
+    "role": "Count of Donji Kraji",
+    "nickname": "",
+    "aliases": [],
+    "summary": "Count of Donji Kraji, 1299–1305. Count of Donji Kraji of the Hrvatinić dynasty.",
+    "sections": [],
+    "governmentNotes": {
+      "Ventana documental de 1299–1305; comes de Donji Kraji. No fecha el principio del señorío ni su muerte.": "Documentary window of 1299-1305; you eat from Donji Kraji. It does not date the beginning of the lordship or his death."
+    }
+  },
+  "BASARABLAIOTA": {
+    "name": "Basarab Laiotă",
+    "role": "Voivode",
+    "nickname": "",
+    "aliases": [],
+    "summary": "Voivode de Wallachia, 1473-1473. Voivode.",
+    "sections": [],
+    "governmentNotes": {
+      "Gobierno propio del principado; el tributo y la intervención exterior no equivalen a administración provincial otomana. Los relevos del mismo año se conservan en la escala anual. Mandatos interrumpidos por rivales y campañas. La escala anual agrupa relevos del mismo año.": "Government of the principality; tribute and external intervention do not amount to Ottoman provincial administration. The same year's relays are kept on the annual scale. Mandates interrupted by rivals and campaigns. The annual scale brings together the same year's concerns."
+    }
+  },
+  "MARKOMRNJAVCEVIC": {
+    "name": "Marko Mrnjavčević",
+    "role": "King",
+    "nickname": "",
+    "aliases": [],
+    "summary": "Son of King Vukašin, he ruled from Prilep as an Ottoman vassal after 1371. He died in the battle of Rovine (1395) and became a hero of the epic poetry of the Balkans.",
+    "sections": [],
+    "governmentNotes": {
+      "Rey de los serbios y señor territorial de Prilep. El vasallaje otomano conserva su gobierno local hasta1395.": "King of the Serbs and territorial lord of Prilep. Ottoman vassalage allowed his local government to continue until 1395."
+    }
+  },
+  "VITTORIAFORTEGUERRI": {
+    "name": "Vittoria Forteguerri",
+    "role": "Noble",
+    "nickname": "",
+    "aliases": [],
+    "summary": "Noble of the Forteguerri dynasty. Their life was connected with Siena.",
+    "sections": []
+  },
+  "ALEXANDREL": {
+    "name": "Alexander II Alexandrel",
+    "role": "Voivode",
+    "nickname": "",
+    "aliases": [],
+    "summary": "Voivode de Moldova, 1449-1449. Voivode.",
+    "sections": [],
+    "governmentNotes": {
+      "Gobierno propio del principado; el tributo y la intervención exterior no equivalen a administración provincial otomana. Los relevos del mismo año se conservan en la escala anual. Restauraciones y rivalidad con Petru Aron; el mapa no afirma continuidad entre los mandatos.": "Government of the principality; tribute and external intervention do not amount to Ottoman provincial administration. The same year's relays are kept on the annual scale. Restorations and rivalry with Petru Aron; the map does not affirm continuity between mandates."
+    }
+  },
+  "PAOLORIARIO": {
+    "name": "Paolo Riario",
+    "role": "Noble",
+    "nickname": "",
+    "aliases": [],
+    "summary": "Noble of the Riario dynasty. Their life was connected with Liguria.",
+    "sections": []
+  },
+  "LORENZO_PRIULI_DOGE": {
+    "name": "Lorenzo Priuli",
+    "role": "Doge",
+    "nickname": "",
+    "aliases": [],
+    "summary": "Dogo of the Republic of Venice between 1556 and 1559. Dignity was elective: its mandate allows for institutional continuity, but it does not imply family ownership of Venetian territories.",
+    "sections": [],
+    "governmentNotes": {
+      "Cargo electivo de la República de Venecia, no señorío familiar.": "Elective position of the Republic of Venice, not family lordship."
+    }
+  },
+  "MUJERX3": {
+    "name": "Unidentified mother of Eleanor Sánchez of Castile",
+    "role": "Noble",
+    "nickname": "",
+    "aliases": [
+      "Mujer X (Madre de Leonor)"
+    ],
+    "summary": "Noble. Their life was connected with Castile.",
+    "sections": []
+  },
+  "ENGELBREKT": {
+    "name": "Engelbrekt Engelbrektsson",
+    "role": "Regent",
+    "nickname": "",
+    "aliases": [],
+    "summary": "Noble mining man who led the Swedish revolt against Erica of Pomerania in 1434. Elected captain of the kingdom in 1435, he was killed in 1436.",
+    "sections": [],
+    "governmentNotes": {
+      "Rikshövitsman durante la rebelión contra Erik; gobierno compartido con Karl Knutsson en 1436. La trama expresa control disputado y no ocupación uniforme de todas las fortalezas.": "Rikshövitsman during the rebellion against Erik; government shared with Karl Knutsson in 1436. The plot expresses disputed control and not uniform occupation of all strengths."
+    }
+  },
+  "SOPHIASOMMERSCHENBURG": {
+    "name": "Sophia of Sommerschenburg",
+    "role": "Consort",
+    "nickname": "",
+    "aliases": [],
+    "summary": "Consort of the Sommerschenburg dynasty. Their life was connected with Thuringia.",
+    "sections": []
+  },
+  "BERENICEDELLACIAIA": {
+    "name": "Berenice della Ciaia",
+    "role": "Noble",
+    "nickname": "",
+    "aliases": [],
+    "summary": "Noble of the Della Ciaia dynasty. Their life was connected with Siena.",
+    "sections": []
+  },
+  "IVAN2SMILETSBUL": {
+    "name": "Ivan II Smilets",
+    "role": "Tsar",
+    "nickname": "",
+    "aliases": [],
+    "summary": "Tsar of Bulgaria, 1298–1299. Tsar of the Smits dynasty.",
+    "sections": []
+  },
+  "ULIANAFEODOROVNA": {
+    "name": "Uliana Fiodorovna",
+    "role": "Consort",
+    "nickname": "",
+    "aliases": [],
+    "summary": "Consort. Her trajectory is linked to Russia.",
+    "sections": []
+  },
+  "MARCANTONIO_TREVISAN_DOGE": {
+    "name": "Marcantonio Trevisan",
+    "role": "Doge",
+    "nickname": "",
+    "aliases": [],
+    "summary": "Dogo of the Republic of Venice between 1553 and 1554. Dignity was elective: its mandate allows for institutional continuity, but it does not imply family ownership of Venetian territories.",
+    "sections": [],
+    "governmentNotes": {
+      "Cargo electivo de la República de Venecia, no señorío familiar.": "Elective position of the Republic of Venice, not family lordship."
+    }
+  },
+  "ANDREA_VENDRAMIN_DOGE": {
+    "name": "Andrea Vendramin",
+    "role": "Doge",
+    "nickname": "",
+    "aliases": [],
+    "summary": "Dogo of the Republic of Venice between 1476 and 1478. Dignity was elective: its mandate allows for institutional continuity, but it does not imply family ownership of Venetian territories.",
+    "sections": [],
+    "governmentNotes": {
+      "Cargo electivo de la República de Venecia, no señorío familiar.": "Elective position of the Republic of Venice, not family lordship."
+    }
+  },
+  "FRANCESCO_DONA_DOGE": {
+    "name": "Francesco Donà",
+    "role": "Doge",
+    "nickname": "",
+    "aliases": [],
+    "summary": "Dogo of the Republic of Venice between 1545 and 1553. Dignity was elective: its mandate allows for institutional continuity, but it does not imply family ownership of Venetian territories.",
+    "sections": [],
+    "governmentNotes": {
+      "Cargo electivo de la República de Venecia, no señorío familiar.": "Elective position of the Republic of Venice, not family lordship."
+    }
+  },
+  "STEFAN1MOLD": {
+    "name": "Ștefan I of Moldavia",
+    "role": "Voivode",
+    "nickname": "",
+    "aliases": [],
+    "summary": "Voivode de Moldova, 1394-1399. Voivode.",
+    "sections": [],
+    "governmentNotes": {
+      "Sucesor de Roman I documentado por la cronología y emisiones monetarias. No se infieren fechas vitales ni parentescos.": "Roman I's successor documented by the chronology and monetary emissions. No life dates or parentheses are inferred."
+    }
+  },
+  "ALLEGRAMORI": {
+    "name": "Allegra dei Mori Castellano",
+    "role": "Noble",
+    "nickname": "",
+    "aliases": [],
+    "summary": "Noble of the Mori Castellano dynasty. Their life was connected with Brescia and Rimini.",
+    "sections": []
+  },
+  "ALEXANDRU2MIRCEA": {
+    "name": "Alexander II Mircea",
+    "role": "Voivode",
+    "nickname": "",
+    "aliases": [],
+    "summary": "Voivode de Wallachia, 1568-1577. Voivode.",
+    "sections": [],
+    "governmentNotes": {
+      "Gobierno propio del principado; el tributo y la intervención exterior no equivalen a administración provincial otomana. Los relevos del mismo año se conservan en la escala anual. La breve deposición de 1574 se distingue como control disputado.": "Government of the principality; tribute and external intervention do not amount to Ottoman provincial administration. The same year's relays are kept on the annual scale. The short deposition of 1574 is distinguished as a disputed control."
+    }
+  },
+  "JOHN3VATATZES": {
+    "name": "John III Ducas Vatatzés",
+    "role": "Emperor",
+    "nickname": "the Merciful",
+    "aliases": [],
+    "summary": "Emperor of Nicea since 1221. It expanded the Empire of Nicaea in Asia Minor and the Balkans and prepared for the recovery of Constantinople. The Orthodox Church will venerate him as a saint.",
+    "sections": []
+  },
+  "LEONTOMSA": {
+    "name": "Leon Tomșa",
+    "role": "Voivode",
+    "nickname": "",
+    "aliases": [],
+    "summary": "Voivode de Wallachia, 1629-1632. Voivode.",
+    "sections": [],
+    "governmentNotes": {
+      "Gobierno propio del principado. La relación tributaria con la Puerta y la intervención de potencias vecinas no convierten este mandato en administración provincial otomana. Los relevos ocurridos dentro del mismo año pueden mostrar más de una autoridad.": "Government of the principality. The tax relationship with the Gate and the intervention of neighbouring powers do not turn this mandate into Ottoman provincial administration. Releases that occurred within the same year may show more than one authority."
+    }
+  },
+  "FILIPPUSBAGLER": {
+    "name": "Philip Simonsson",
+    "role": "King",
+    "nickname": "",
+    "aliases": [],
+    "summary": "King of Norway, 1207-1217 (rival). King.",
+    "sections": [],
+    "governmentNotes": {
+      "Rey bagler durante la guerra civil; no se sustituye por él al rey birkebeiner ni se le asigna soberanía exclusiva sobre toda Noruega.": "King bagler during the civil war; he is not replaced by King Birkebeiner or given exclusive sovereignty over all Norway."
+    }
+  },
+  "BENEDETTACAGLIARI": {
+    "name": "Benedetta of Massa",
+    "role": "Judge",
+    "nickname": "",
+    "aliases": [],
+    "summary": "Judge of Cagliari Judicate, 1214-1232. Judge.",
+    "sections": [],
+    "governmentNotes": {
+      "Mandato judicial con coautoridades y fuertes intervenciones pisanos; 1232 es un extremo anual convencional, no un día de defunción documentado.": "Judicial mandate with co-authorities and strong Pisan interventions; 1232 is a conventional annual end, not a day of documented death."
+    }
+  },
+  "MIHAIL1WAL": {
+    "name": "Michael I of Wallachia",
+    "role": "Voivode",
+    "nickname": "",
+    "aliases": [],
+    "summary": "Voivode de Wallachia, 1418-1420. Voivode.",
+    "sections": [],
+    "governmentNotes": {
+      "Gobierno propio del principado; el tributo y la intervención exterior no equivalen a administración provincial otomana. Los relevos del mismo año se conservan en la escala anual.": "Government of the principality; tribute and external intervention do not amount to Ottoman provincial administration. The same year's relays are kept on the annual scale."
+    }
+  },
+  "ALEXANDRUALDEA": {
+    "name": "Alexander Aldea",
+    "role": "Voivode",
+    "nickname": "",
+    "aliases": [],
+    "summary": "Voivode de Wallachia, 1431-1436. Voivode.",
+    "sections": [],
+    "governmentNotes": {
+      "Gobierno propio del principado; el tributo y la intervención exterior no equivalen a administración provincial otomana. Los relevos del mismo año se conservan en la escala anual.": "Government of the principality; tribute and external intervention do not amount to Ottoman provincial administration. The same year's relays are kept on the annual scale."
+    }
+  },
+  "PETRUCERCEL": {
+    "name": "Petru Cercel",
+    "role": "Voivode",
+    "nickname": "",
+    "aliases": [],
+    "summary": "Voivode de Wallachia, 1583-1585. Voivode.",
+    "sections": [],
+    "governmentNotes": {
+      "Gobierno propio del principado; el tributo y la intervención exterior no equivalen a administración provincial otomana. Los relevos del mismo año se conservan en la escala anual.": "Government of the principality; tribute and external intervention do not amount to Ottoman provincial administration. The same year's relays are kept on the annual scale."
+    }
+  },
+  "CHAKABUL": {
+    "name": "Chaka",
+    "role": "Tsar",
+    "nickname": "",
+    "aliases": [],
+    "summary": "Tsar of Bulgaria, 1299–1300. Tsar of the Borjigin dynasty.",
+    "sections": [],
+    "governmentNotes": {
+      "Gobierno breve en Tarnovo; la condición regia y su cronología se discuten. No ampliar el ámbito a todo el zarato.": "Short government in Tarnovo; the status of the region and its chronology are discussed. Do not extend the scope to the whole zarate."
+    }
+  },
+  "MARIANO5ARBOREA": {
+    "name": "Mariano V of Arborea",
+    "role": "Judge",
+    "nickname": "",
+    "aliases": [],
+    "summary": "Judge of Arborea Judicate, 1387-1407. Judge.",
+    "sections": []
+  },
+  "UGONE2ARBOREA": {
+    "name": "Ugone II of Arborea",
+    "role": "Judge",
+    "nickname": "",
+    "aliases": [],
+    "summary": "Judge of Arborea Judicate, 1321-1335. Judge.",
+    "sections": []
+  }
+}

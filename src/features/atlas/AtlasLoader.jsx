@@ -27,7 +27,7 @@ export default function AtlasLoader(props) {
     return () => { cancelled = true; };
   }, [attempt]);
   const retry = () => setAttempt(n => n + 1);
-  if (!Explorer) return <AtlasSkeleton error={error} onRetry={retry}/>;
+  if (!Explorer) return <AtlasSkeleton error={error} onRetry={retry} locale={props.locale}/>;
   return <Explorer {...props} treeBase={treeBase || EMPTY_TREE_BASE}
     loading={!treeBase && !error} loadError={error} onRetry={retry} ready={Boolean(treeBase) && !error}/>;
 }

@@ -20,6 +20,15 @@ test('la impresión respeta orientación y márgenes admitidos y el nombre es le
  assert.match(printDocument({svg:'<svg></svg>'},{orientation:'bad',margin:-1}),/size:A4 landscape;margin:12mm/);
  assert.equal(exportFilename('Familia de Isabel I'),'familia-de-isabel-i');
 });
+test('la exportación educativa inglesa conserva idioma, rutas y leyenda',()=>{
+ const docs=educationalDocuments({people,edges:[{from:'A',to:'B',type:'sangre'}],title:'A family'},'en');
+ const page=new JSDOM(docs.activity);
+ assert.equal(page.window.document.documentElement.lang,'en');
+ assert.match(page.window.document.body.textContent,/People’s chronology/);
+ assert.equal(page.window.document.querySelector('a[href$="persona-a"]').textContent,'Profile of Persona <A>');
+ assert.match(printDocument({svg:'<svg></svg>'},{locale:'en'}),/<html lang="en">/);
+ page.window.close();
+});
 test('las inserciones son acotadas y la excepción de framing solo afecta a sus rutas',()=>{
  assert.match(embedCode(['A','B'],'https://example.test'),/\/embed\/arbol\?persona=A&amp;persona=B/);
  assert.throws(()=>embedCode(Array(13).fill('A')));

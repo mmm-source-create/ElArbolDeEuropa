@@ -1,5 +1,7 @@
 import {territoriosDe} from '../../domain/genealogy/personAccessors.js';
 import { useMemo } from "react";
+import {ENGLISH_STORIES} from '../english/content.js';
+import runtime from '../../generated/englishStoriesRuntime.json' with {type:'json'};
 
 export default function BioDiscovery({
   persona,
@@ -14,7 +16,10 @@ export default function BioDiscovery({
   hrefHistoria,
   onSelect,
   onStartHistoria,
+  locale='es',
 }) {
+  const en=locale==='en',tr=(es,english)=>en?english:es;
+  const storyTitle=story=>en?(runtime.stories[story.id]?.content?.titulo||ENGLISH_STORIES[story.id]?.title||story.titulo):story.titulo;
   const sugerencias = useMemo(() => {
     if (!persona) return { epoca: [], historias: [] };
     const familia = new Set([
@@ -68,20 +73,20 @@ export default function BioDiscovery({
 
   return (
     <div className="bio-discover">
-      <h4>También puede interesarte</h4>
+      <h4>{tr('También puede interesarte','You may also be interested in')}</h4>
       {sugerencias.historias.length > 0 && (
         <div className="bio-discover-group">
-          <span>Historias relacionadas</span>
+          <span>{tr('Historias relacionadas','Related stories')}</span>
           <div className="bio-discover-links">
             {sugerencias.historias.map((historia) => (
-              <a key={historia.id} href={hrefHistoria?.(historia) || "#"} onClick={(event) => { if (onStartHistoria) { event.preventDefault(); onStartHistoria(historia.id); } }}>{historia.titulo}</a>
+              <a key={historia.id} href={hrefHistoria?.(historia) || "#"} onClick={(event) => { if (onStartHistoria) { event.preventDefault(); onStartHistoria(historia.id); } }}>{storyTitle(historia)}</a>
             ))}
           </div>
         </div>
       )}
       {sugerencias.epoca.length > 0 && (
         <div className="bio-discover-group">
-          <span>En su época</span>
+          <span>{tr('En su época','In their time')}</span>
           <div className="bio-discover-links">
             {sugerencias.epoca.map((p) => (
               <a key={p.id} href={hrefPersona?.(p) || "#"} onClick={(event) => { if (onSelect) { event.preventDefault(); onSelect(p.id); } }}>{p.nombre}</a>

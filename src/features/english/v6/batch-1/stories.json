@@ -1,1 +1,573 @@
-{}
+{
+  "dos-rosas": {
+    "enSlug": "the-wars-of-the-roses",
+    "content": {
+      "id": "dos-rosas",
+      "titulo": "The Wars of the Roses",
+      "subtitulo": "Lancaster, York and the rise of the Tudors",
+      "disponible": true,
+      "minutos": 18,
+      "descripcion": "The losses in France, the crisis of Henry VI’s government and Edward III’s heritage open a struggle for the crown. From Saint Albans to Stoke: family alliances, changes of sides, great battles and the arrival of Henry Tudor.",
+      "recomendadas": [
+        "cien-anos",
+        "borgona"
+      ],
+      "fuentes": [
+        {
+          "titulo": "The Royal Family · Henry VI",
+          "url": "https://www.royal.uk/henry-vi"
+        },
+        {
+          "titulo": "The Royal Family · Edward IV",
+          "url": "https://www.royal.uk/edward-iv"
+        },
+        {
+          "titulo": "The Royal Family · Richard III",
+          "url": "https://www.royal.uk/richard-iii"
+        },
+        {
+          "titulo": "The Royal Family · Henry VII",
+          "url": "https://www.royal.uk/henry-vii"
+        },
+        {
+          "titulo": "English Heritage · Conisbrough and the Dukes of York",
+          "url": "https://www.english-heritage.org.uk/visit/places/conisbrough-castle/history/"
+        },
+        {
+          "titulo": "English Heritage · Warkworth and the Percy",
+          "url": "https://www.english-heritage.org.uk/visit/places/warkworth-castle-and-hermitage/history/"
+        },
+        {
+          "titulo": "English Heritage · Barnard Castle and the Counts of Warwick",
+          "url": "https://www.english-heritage.org.uk/visit/places/barnard-castle/history/"
+        },
+        {
+          "titulo": "Historic England · Towton, 1461",
+          "url": "https://historicengland.org.uk/listing/the-list/list-entry/1000040"
+        },
+        {
+          "titulo": "Historic England · Barnet, 1471",
+          "url": "https://historicengland.org.uk/listing/the-list/list-entry/1000001"
+        },
+        {
+          "titulo": "Historic England · Tewkesbury, 1471",
+          "url": "https://historicengland.org.uk/listing/the-list/list-entry/1000039"
+        },
+        {
+          "titulo": "Historic England · Bosworth, 1485",
+          "url": "https://historicengland.org.uk/campaigns/100-places/protest-power/"
+        },
+        {
+          "titulo": "Historic England · Stoke Field, 1487",
+          "url": "https://historicengland.org.uk/listing/the-list/list-entry/1000036"
+        },
+        {
+          "titulo": "English Heritage · Lambert Simnel and the 1487 campaign",
+          "url": "https://www.english-heritage.org.uk/visit/places/piel-castle/history/lambert-simnel/"
+        },
+        {
+          "titulo": "Dictionary of National Biography · John Beaufort, First Count of Somerset",
+          "url": "https://en.wikisource.org/wiki/Dictionary_of_National_Biography,_1901_supplement/Beaufort,_John_(1373%3F-1410)"
+        },
+        {
+          "titulo": "Dictionary of National Biography · Richard Neville, Warwick",
+          "url": "https://en.wikisource.org/wiki/Dictionary_of_National_Biography,_1885-1900/Neville,_Richard_(1428-1471)"
+        }
+      ],
+      "pasos": [
+        {
+          "anio": 1377,
+          "persona": "EDUARDO3ING",
+          "personas": [
+            "EDUARDO3ING",
+            "EDUNEGRO",
+            "RICARDO2ING",
+            "LIONELANTWERP",
+            "PHILIPPACLARENCE",
+            "EDMUNDMORTIMER3",
+            "JUANGASTE",
+            "BLANLANCASTER",
+            "EDMUNDLANGLEY"
+          ],
+          "titulo": "The family from which the rivals emerge",
+          "texto": "Edward III leaves descendants spread across great estates. His eldest son, Edward of Woodstock, died in 1376, so that the crown passes in 1377 to the young Richard II, grandson of the king. Among the brothers of Woodstock are Lionel of Antwerp, John of Gaunt and Edmund of Langley. Their descendants will produce the rival claims that confront one another in the following century. Royal descent also passes through the daughters. Philippa, daughter of Lionel, marries Edmund Mortimer, Earl of March. His granddaughter Anne Mortimer will take that ancestry to York. John of Gaunt, in turn, acquires through his marriage to Blanche the enormous inheritance of Lancaster. Lands, revenues, kinship and proximity to the king give these branches resources to intervene in the government."
+        },
+        {
+          "anio": 1399,
+          "persona": "RICARDO2ING",
+          "personas": [
+            "RICARDO2ING",
+            "ENRIQ4ING",
+            "JUANGASTE",
+            "ENRIQ5ING",
+            "RICARDOYORK",
+            "RICARDOCONISBURGH",
+            "ANAMORTIMER",
+            "ROGERMORTIMER4"
+          ],
+          "titulo": "Lancaster wins the crown",
+          "texto": "Henry of Bolingbroke returns from exile after Richard II takes possession of his father’s inheritance, John of Gaunt. Opposition to the king turns a claim to an inheritance into a change of monarch. Richard is deposed and Henry reigns as Henry IV. His son Henry V strengthens the new dynasty with his French campaigns. The deposition leaves an open question: other descendants of Edward III may regard their claim by descent as stronger. Richard of York descends from Edmund of Langley by his father and Lionel of Antwerp by his mother, Anne Mortimer. This second line will allow him to invoke an ancestry prior to that of Lancasters. The genealogical argument will acquire political force when royal authority fails."
+        },
+        {
+          "anio": 1453,
+          "persona": "ENRIQ6ING",
+          "personas": [
+            "ENRIQ6ING",
+            "MARGANJOUING",
+            "EDWARDWESTMINSTER",
+            "RICARDOYORK",
+            "EDMUNDBEAUFORTSOMERSET"
+          ],
+          "titulo": "France is lost; government enters a crisis",
+          "texto": "Henry VI has inherited the crown as a baby. His marriage to Margaret of Anjou was intended to favour a settlement with France, but the loss of Normandy in 1450 and Gascony in 1453 discredits his advisors. Debt, the distribution of offices and the return of men linked to the war fuel the disputes. Richard of York, who has held command in France and Ireland, accuses rivals like the Duke of Somerset of mismanaging the government. In 1453 the king suffers a disease that prevents him from exercising power. In October his son Edward of Westminster is born. Margaret defends the interests of the child while the council and the great lords seek who will be able to rule. The future minority of the heir and the present incapacity of the king make the organization of the regency a decisive struggle."
+        },
+        {
+          "anio": 1454,
+          "persona": "RICARDOYORK",
+          "personas": [
+            "RICARDOYORK",
+            "CECILIANEVILLE",
+            "RALPHNEVILLE1",
+            "JOANBEAUFORT",
+            "RICHARDNEVILLESALISBURY",
+            "ALICEMONTAGU",
+            "RICHARDNEVILLEWARWICK",
+            "ENRIQ6ING"
+          ],
+          "titulo": "York and the Neville Network",
+          "texto": "Richard of York was appointed protector in 1454. He was supported by the Nevilles, a family with enormous interests in the north. His wife, Cecily, is the sister of Richard Neville, Earl of Salisbury; his son is the Earl of Warwick. Alice Montagu’s inheritance and that of Anne Beauchamp have expanded the patrimony of father and son. Local conflicts cross with the court struggle. The rivalry between the Nevilles and the Percys over offices, lands and influence gives the alliances of the kingdom a regional dimension. When Henry VI recovered at the end of 1454, York lost the protectorate and Somerset again occupies a strong position. Opponents fear to be left at the mercy of those who control the king and the courts."
+        },
+        {
+          "anio": 1455,
+          "persona": "RICARDOYORK",
+          "personas": [
+            "RICARDOYORK",
+            "ENRIQ6ING",
+            "EDMUNDBEAUFORTSOMERSET",
+            "RICHARDNEVILLEWARWICK",
+            "RICHARDNEVILLESALISBURY"
+          ],
+          "titulo": "Saint Albans: the dispute begins to take lives",
+          "texto": "On May 22, 1455, York, Salisbury and Warwick face the royal army in Saint Albans. The fighting enters the streets. Somerset and the Earl of Northumberland are killed; Henry VI remains in the hands of the victors. York can present himself as a servant who rescues the king from his evil advisers and re-enacts the protectorate. Deaths transform rivalry into a chain of family revenge. The heirs of the fallen have their own reasons to fight the Yorkists and the Nevilles. During the following years reconciliations, mobilizations and ruptures alternate. In 1459 the Yorkist political defeat forced their leaders to take refuge in Ireland and Calais, while a Parliament gathered in Coventry confiscated their assets."
+        },
+        {
+          "anio": 1460,
+          "persona": "RICARDOYORK",
+          "personas": [
+            "RICARDOYORK",
+            "ENRIQ6ING",
+            "EDWARDWESTMINSTER",
+            "MARGANJOUING",
+            "RICHARDNEVILLEWARWICK"
+          ],
+          "titulo": "Northampton and an imposed heir",
+          "texto": "Warwick and Yorkists return from Calais and capture Henry VI in Northampton in July 1460. Richard of York returns to England and openly claims the crown. The proposal troubles even some of his allies, accustomed to fighting on behalf of the king. The Act of Accord offers a provisional solution: Henry retains the throne during his life and Richard will be his heir. Edward of Westminster is excluded. Margaret gathers forces to defend her son’s succession. The formula that was to avoid a new battle gives the queen and Lancaster supporters a direct motive for continuing the war."
+        },
+        {
+          "anio": 1460,
+          "persona": "RICARDOYORK",
+          "personas": [
+            "RICARDOYORK",
+            "RICHARDNEVILLESALISBURY",
+            "EDUARDO4ING",
+            "CECILIANEVILLE"
+          ],
+          "titulo": "Wakefield: the claimant dies",
+          "texto": "Richard moves north to fight Lancaster supporters. On December 30, 1460, he leaves his Sandal fortress and is defeated in Wakefield. The Duke and his son Edmund are killed; Salisbury is captured and executed later. The heads of the defeated are displayed in York. Richard’s death passes Yorkist leadership to his son Edward, Earl of March, eighteen years old. Cecily Neville has lost her husband, a son and her brother Salisbury in the same crisis. The conflict for the government has become a struggle for the survival of the leading families. Edward must win by force the position that his father had negotiated in Parliament."
+        },
+        {
+          "anio": 1461,
+          "persona": "EDUARDO4ING",
+          "personas": [
+            "EDUARDO4ING",
+            "OWENTUDOR",
+            "JASPERTUDOR",
+            "MARGANJOUING",
+            "ENRIQ6ING"
+          ],
+          "titulo": "Two wins and a race to London",
+          "texto": "In February 1461, Edward defeated Jasper Tudor’s forces at Mortimer’s Cross, along the Welsh border. Owen Tudor, Jasper’s father and grandfather of Henry Tudor, was captured and was executed. War thus reached the Welsh branch related to Henry VI through Catherine of Valois. Margaret meanwhile obtained a victory in the second battle of Saint Albans and recovered the king. But her troops encountered political resistance and supply problems on the way to London. Edward met with Warwick and entered the capital. There he was recognized as Edward IV in early March. The decision would have to withstand the Lancastrian army concentrated in Yorkshire."
+        },
+        {
+          "anio": 1461,
+          "persona": "EDUARDO4ING",
+          "personas": [
+            "EDUARDO4ING",
+            "ENRIQ6ING",
+            "MARGANJOUING",
+            "RICHARDNEVILLEWARWICK"
+          ],
+          "titulo": "Towton: a crown won in the snow",
+          "texto": "On 29 March, Palm Sunday, the armies clash near Towton. Chronicles describe snow and wind that favor Yorkist archers at the beginning of the battle. The struggle lasts for hours; the arrival of reinforcements from the Duke of Norfolk contributes to breaking the Lancastrian resistance. The retreat into the crossings of Cock Beck multiplies losses. Towton secures the crown for Edward IV. Henry and Margaret manage to escape and seek support in Scotland and France. The defeated lose offices and estates that pass to supporters of the new king. The figures of deaths transmitted by the chroniclers express the magnitude of the catastrophe, although their exact calculation remains uncertain. The Lancastrian resistance will continue in the fortresses of the north."
+        },
+        {
+          "anio": 1464,
+          "persona": "EDUARDO4ING",
+          "personas": [
+            "EDUARDO4ING",
+            "ISABELWOODVILLE",
+            "RICHARDNEVILLEWARWICK",
+            "ENRIQ6ING"
+          ],
+          "titulo": "The king chooses a wife and changes the balance",
+          "texto": "The York victories of Hedgeley Moor and Hexham in 1464 weaken the resistance of the north. Henry VI will be captured the following year. Edward seeks to consolidate his government and reward the servants who have sustained his cause. His decision to marry in secret Elizabeth Woodville, a noble widow of a Lancastrian knight, alters the division of influence in the court. The brothers and children of Elizabeth’s first marriage enter the network of royal patronage. Warwick, who intervenes in the king’s matrimonial diplomacy, sees his ability to direct foreign policy reduced. Edward’s approach to Burgundy, culminating with his sister Margaret’s marriage to Charles the Bold in 1468, deepens the separation between them."
+        },
+        {
+          "anio": 1469,
+          "persona": "RICHARDNEVILLEWARWICK",
+          "personas": [
+            "RICHARDNEVILLEWARWICK",
+            "GEORGECLARENCE",
+            "ISABELNEVILLE",
+            "EDUARDO4ING",
+            "ANNEBEAUCHAMP"
+          ],
+          "titulo": "Warwick turns against his own king",
+          "texto": "Warwick unites his daughter Elizabeth with George, Duke of Clarence and brother of Edward IV. The wedding of 1469 offers the count an alliance within the royal family and Clarence the possibility of intervening in succession. The rebellion that leads to Edgecote allows Warwick to temporarily capture the king. However, the disputes and insecurity of the kingdom force him to release him. Another attempt fails in 1470 and Warwick and Clarence flee to France. Louis XI facilitates an agreement between Warwick and his former enemy Margaret of Anjou. Anne Neville, the Earl's youngest daughter, will marry Edward of Westminster. Warwick's marriage policy now links his daughters to a Prince of York and to Lancaster's heir."
+        },
+        {
+          "anio": 1470,
+          "persona": "ENRIQ6ING",
+          "personas": [
+            "ENRIQ6ING",
+            "EDUARDO4ING",
+            "RICHARDNEVILLEWARWICK",
+            "MARGANJOUING",
+            "ANANEVILLE",
+            "EDWARDWESTMINSTER",
+            "MARGYORK"
+          ],
+          "titulo": "Henry VI returns to the throne",
+          "texto": "Warwick disembarks in England and the opposition to Edward is spreading. The king flees to the Netherlands with his brother Richard of Gloucester. Henry VI leaves the Tower and regains the throne in the autumn of 1470. The government depends on the military power of Warwick and the pact with Margaret. Restoration modifies European alliances: France wants to confront England with Burgundy. Charles the Bold is married to Margaret of York, Edward’s sister, and ends up supporting the return of his brother-in-law. Clarence, meanwhile, discovers that Lancaster’s restoration favors Edward of Westminster. His reconciliation with his brother will be one of the conditions of the next regime change."
+        },
+        {
+          "anio": 1471,
+          "persona": "EDUARDO4ING",
+          "personas": [
+            "EDUARDO4ING",
+            "RICARDO3ING",
+            "GEORGECLARENCE",
+            "RICHARDNEVILLEWARWICK"
+          ],
+          "titulo": "Barnet: The Death of the Kingmaker",
+          "texto": "Edward disembarks in Yorkshire in March 1471. He gathers support, reconciles with Clarence and recovers London and the person of Henry VI. On April 14 he faces Warwick in Barnet. The fog makes it difficult to recognize the positions and contributes to confusion among the forces of the Count. Part of his army interprets movements and attacks of allies as a betrayal. The breakup of the formation leads to defeat. Warwick dies and with him disappears the man who had helped to place and depose Edward IV. That same day, Margaret and her son disembark in the south. The news forces them to quickly seek a new concentration of forces, while Edward retains the initiative and marches to intercept them."
+        },
+        {
+          "anio": 1471,
+          "persona": "EDUARDO4ING",
+          "personas": [
+            "EDUARDO4ING",
+            "RICARDO3ING",
+            "EDWARDWESTMINSTER",
+            "MARGANJOUING",
+            "ENRIQ6ING",
+            "ANANEVILLE",
+            "JASPERTUDOR"
+          ],
+          "titulo": "Tewkesbury: Lancaster's direct succession is extinguished",
+          "texto": "Margaret moves westwards to cross the Severn and link with Jasper Tudor’s support in Wales. Edward reaches her before she can complete the maneuver. On May 4, 1471, the Lancastrians battle in Tewkesbury, on a land of sunken roads, hedges and ditches. The rupture of their positions causes flight; several captured leaders are executed afterwards. Edward of Westminster dies in battle. Margaret loses the son whose succession she has defended for years and is taken prisoner. Henry VI dies in the Tower shortly afterwards, in May. Edward IV gathers power again, while Jasper and young Henry Tudor seek refuge in Brittany. Anne Neville, widow of the Lancastrian prince, will marry Richard of Gloucester in 1472."
+        },
+        {
+          "anio": 1478,
+          "persona": "GEORGECLARENCE",
+          "personas": [
+            "GEORGECLARENCE",
+            "ISABELNEVILLE",
+            "EDWARDWARWICK",
+            "EDUARDO4ING",
+            "RICARDO3ING",
+            "ANANEVILLE"
+          ],
+          "titulo": "The brothers of the king and the inheritance of Warwick",
+          "texto": "The daughters of Warwick and Anne Beauchamp connected the great family heritage to Clarence and Gloucester. Elizabeth died in 1476. Her husband Clarence has an increasingly conflictive relationship with Edward IV: his ambitions, his interventions in court cases and the accusations of treason end up confronting the king. In 1478 Clarence is condemned and executed. He leaves his sons Margaret and Edward, Earl of Warwick, within a succession marked by his father’s condemnation. Richard of Gloucester retains the confidence of Edward IV and a solid base in the north. The family that has defeated Lancaster again experiences how a power dispute can break the bonds between brothers."
+        },
+        {
+          "anio": 1483,
+          "persona": "EDUARDO4ING",
+          "personas": [
+            "EDUARDO4ING",
+            "EDUARDO5ING",
+            "RICHARDSHREWSBURY",
+            "ISABELWOODVILLE",
+            "RICARDO3ING"
+          ],
+          "titulo": "Edward IV Dies: the Power Around a Child",
+          "texto": "Edward IV dies unexpectedly in April 1483. His son Edward V is twelve years old. Richard of Gloucester, brother of the late king, assumes the protectorate and detains relatives and servants of the widowed queen who accompany the new monarch. Control of the king’s person allows control of the decisions made on his behalf. Edward is lodged in the Tower of London; then his brother Richard of Shrewsbury meets with him. The Tower is a royal residence and the usual place of preparation for coronations, but the two children are subject to the new division of power. Elizabeth Woodville seeks refuge in Westminster with other members of her family. Edward’s coronation is postponed."
+        },
+        {
+          "anio": 1483,
+          "persona": "RICARDO3ING",
+          "personas": [
+            "RICARDO3ING",
+            "ANANEVILLE",
+            "EDWARDMIDDLEHAM",
+            "EDUARDO5ING",
+            "RICHARDSHREWSBURY",
+            "MARGARETBEAUFORT",
+            "ISABELYORK"
+          ],
+          "titulo": "Richard III and the breakdown of York legitimacy",
+          "texto": "In June Edward IV’s marriage to Elizabeth Woodville was declared invalid, claiming a previous marriage commitment by the king. His sons were excluded and Richard accepted the crown. He was crowned in July with Anne Neville. The law known as Titulus Regius would confirm the following year this justification for his accession. The two princes ceased to appear in public; their fate and the date of their death remained unknown. Part of Edward IV’s former supporters turned against Richard. The Duke of Buckingham’s rebellion failed in the autumn of 1483, but enabled the convergence of Yorkist opponents and defenders of Henry Tudor. Margaret Beaufort and Elizabeth Woodville favoured a marriage project between Henry and Elizabeth of York. The death of Edward of Middleham in 1484 left Richard without his legitimate son."
+        },
+        {
+          "anio": 1485,
+          "persona": "ENRIQ7ING",
+          "personas": [
+            "ENRIQ7ING",
+            "EDMUNDTUDOR",
+            "MARGARETBEAUFORT",
+            "JOHNBEAUFORTSOMERSET",
+            "JOHNBEAUFORT1",
+            "KATHERINESWYNFORD",
+            "JUANGASTE",
+            "JASPERTUDOR"
+          ],
+          "titulo": "Henry Tudor's claim",
+          "texto": "Henry Tudor joins two different genealogies. Through his father Edmund he descends from Owen Tudor and Catherine of Valois, the widow of Henry V. His blood connection with Edward III comes from his mother, Margaret Beaufort: she is the daughter of John, Duke of Somerset; this was the son of John Beaufort, Count of Somerset, born of John of Gaunt and Catherine of Roet. The Beauforts were legitimized after their parents' marriage; a later confirmation by Henry IV included an exclusion from the royal succession. The strength of the Tudor candidacy grows thanks to the support of Lancaster survivors and the alliance promised with Elizabeth of York. Henry has been in exile for years and needs to convert that coalition into an army capable of conquering England."
+        },
+        {
+          "anio": 1485,
+          "persona": "ENRIQ7ING",
+          "personas": [
+            "ENRIQ7ING",
+            "RICARDO3ING",
+            "JASPERTUDOR",
+            "MARGARETBEAUFORT"
+          ],
+          "titulo": "Bosworth: an intervention decides the battle",
+          "texto": "Henry disembarks in Wales in August 1485 and marches towards the center of England. Richard gathers an army to close his way. On August 22 they face off in Bosworth. Stanleys have their own forces and hold a decisive position: Thomas Stanley is the husband of Margaret Beaufort, Henry’s mother, but retains ties and obligations with Richard. William Stanley’s intervention against the king turns the battle. Richard leads a charge towards Henry’s position and dies fighting. Victory opens the throne to the Tudor claimant. His allies include Lancaster supporters, former servants of Edward IV and men who have changed sides during the crisis. Henry will have to hold that coalition together once the campaign is over."
+        },
+        {
+          "anio": 1486,
+          "persona": "ENRIQ7ING",
+          "personas": [
+            "ENRIQ7ING",
+            "ISABELYORK",
+            "ARTUROGALES",
+            "MARGARETBEAUFORT",
+            "EDUARDO4ING"
+          ],
+          "titulo": "A marriage and a new image of the dynasty",
+          "texto": "Henry VII was crowned in October 1485 and married Elizabeth of York in January 1486. Edward IV’s daughter brought to the new reign the ancestry of the Yorkist branch and the support of those who defended her family. Arthur, heir of both lines, was born in September. The Tudor rose, which brings together the colors red and white, makes marriage an image of harmony. Henry governs by means of rewards, agreements, monitoring of the great magnate networks and punishments to his adversaries. Marriage links family inheritances, while the preservation of the throne requires administering resources and neutralizing new rebellions."
+        },
+        {
+          "anio": 1487,
+          "persona": "ENRIQ7ING",
+          "personas": [
+            "ENRIQ7ING",
+            "ISABELYORK",
+            "EDWARDWARWICK",
+            "GEORGECLARENCE",
+            "ISABELNEVILLE",
+            "MARGYORK"
+          ],
+          "titulo": "Stoke Field: The Crown is still disputed",
+          "texto": "Edward, the son of Clarence and Elizabeth Neville, remains prisoner in the Tower. Lambert Simnel’s promoters present the boy as if he were that Yorkist heir and crown him in Dublin. John de la Pole, Count of Lincoln and nephew of Richard III, joins the company. Margaret of York helps gather support and mercenaries from the Netherlands. The rebel army moves from Ireland to England and is defeated at Stoke Field on June 16, 1487. Lincoln dies; Simnel is forgiven and enters the domestic service of the king. This last great battle allows Henry VII to consolidate the dynasty. Decades of war have redistributed heritage, broken families and shown how heavily royal authority depends on the alliances that sustain it. The subsequent memory will gather those conflicts under the name of Wars of the Roses."
+        }
+      ],
+      "colecciones": [
+        "herencias-conflictivas"
+      ]
+    }
+  },
+  "balduino-saladino": {
+    "enSlug": "kingdom-of-heaven",
+    "content": {
+      "id": "balduino-saladino",
+      "titulo": "Kingdom of Heaven",
+      "subtitulo": "From Montgisard to Hattin: victories, truces and a fragile succession",
+      "disponible": true,
+      "descripcion": "A king’s illness and a sultan’s rise intersect with geography, resources and disputes over the Jerusalem crown. During the reign of Baldwin, Saladin consolidates his power in Egypt and Syria and increases pressure on Jerusalem.",
+      "fuentes": [
+        {
+          "titulo": "William of Tyre and continuation of Overseas History · manuscript Royal MS 15 E I",
+          "url": "https://searcharchives.bl.uk/catalog/040-002107088"
+        },
+        {
+          "titulo": "De espugnatione Terrae Sanctae per Saladinum · testimony of the taking of Jerusalem (1187)",
+          "url": "https://sourcebooks.fordham.edu/source/1187saladin.asp"
+        },
+        {
+          "titulo": "The Metropolitan Museum of Art · The Art of the Ayyubid Period",
+          "url": "https://www.metmuseum.org/essays/the-art-of-the-ayyubid-period-ca-1171-1260"
+        }
+      ],
+      "pasos": [
+        {
+          "anio": 1174,
+          "persona": "BALDWIN4JER",
+          "personas": [
+            "BALDWIN4JER",
+            "SALADIN"
+          ],
+          "titulo": "Baldwin IV and Saladin: the consolidation of power",
+          "texto": "Baldwin IV succeeds his father in Jerusalem while Saladin extends his authority over Syria from Egypt. The Sultan must negotiate and fight against other Muslim powers as well; the Latin kingdom gathers barons, cities and military orders with its own interests. Alliances and truces cross the religious border. The leprosy of the young Baldwin makes an urgent political question: who can rule and inherit when the disease prevents him from exercising command."
+        },
+        {
+          "anio": 1177,
+          "persona": "BALDWIN4JER",
+          "personas": [
+            "BALDWIN4JER",
+            "SALADIN"
+          ],
+          "titulo": "Montgisard: seizing an opportunity",
+          "texto": "Saladin’s incursion into the kingdom ends in a defeat near Montgisard. Baldwin participates in a surprise response to an army whose forces had dispersed during the campaign. Victory reinforces Baldwin’s authority, while Saladin retains his power base in Egypt and can prepare new campaigns. The terrain, the dispersion of Saladin’s army and the speed of the attack favor Baldwin’s victory."
+        },
+        {
+          "anio": 1183,
+          "persona": "BALDWIN4JER",
+          "personas": [
+            "BALDWIN4JER",
+            "BALDWIN5JER",
+            "SIBYLLAJER"
+          ],
+          "titulo": "Succession is also a matter of defence",
+          "texto": "As his health worsens, Baldwin IV tries to prevent the government from being left in the hands of a faction hostile to his decisions. The coronation of his nephew Baldwin V as co-ruler offers a way out, but the child needs a regency. Sibylla, mother of the new king, retains a decisive role in the inheritance. The factions dispute the regency, access to power and the ability to lead the defense of the kingdom."
+        },
+        {
+          "anio": 1185,
+          "persona": "BALDWIN4JER",
+          "personas": [
+            "BALDWIN4JER",
+            "BALDWIN5JER",
+            "SIBYLLAJER"
+          ],
+          "titulo": "Two deaths undo the arrangement",
+          "texto": "Baldwin IV died in 1185; Baldwin V died in 1186. The speed of both deaths upsets the attempt to organize a stable transition. Sibylla and Guy of Lusignan reached the crown in the midst of resistance. Meanwhile, Saladin has a greater mobilization capacity than he had a decade earlier. The succession crisis of 1185–1186 left Guy and Sibylla at the head of the kingdom on the eve of Hattin's campaign."
+        },
+        {
+          "anio": 1187,
+          "persona": "SALADIN",
+          "personas": [
+            "SALADIN",
+            "SIBYLLAJER"
+          ],
+          "titulo": "Hattin: Losing the campaign army",
+          "texto": "In July, the army of the kingdom marches towards Tiberias and remains in a critical situation of heat, harassment and access to water. The defeat of July 4th in Hattin leaves leaders prisoners and destroys much of the force that could help the cities. The cities retain their fortifications, but they lack the necessary men and resources to defend them. The loss of the army hinders the relief of the cities and accelerates the conquests of Saladin during the following months."
+        },
+        {
+          "anio": 1187,
+          "persona": "SALADIN",
+          "personas": [
+            "SALADIN",
+            "SIBYLLAJER"
+          ],
+          "titulo": "Jerusalem falls; history continues",
+          "texto": "After the siege, the city capitulated in October 1187. Ransomed departures and negotiated releases prevented a massacre like that of 1099, but there were inhabitants without means to pay that ended up enslaved. Mercy and coercion coexisted. Tyre resisted and made it possible to reorganise the Latin presence on the coast; the Third Crusade would come later."
+        }
+      ],
+      "colecciones": [
+        "cruzadas",
+        "cultura-popular"
+      ]
+    }
+  },
+  "braveheart-detras-del-mito": {
+    "enSlug": "braveheart-behind-the-myth",
+    "content": {
+      "id": "braveheart-detras-del-mito",
+      "titulo": "Braveheart: behind the myth",
+      "subtitulo": "Wallace, Bruce and the wars for Scotland",
+      "disponible": true,
+      "descripcion": "A missing bridge, a princess out of date and two leaders with different trajectories. Alexander III’s death opens up a succession crisis that leads to wars between Scotland and England and disputes between Scottish houses.",
+      "fuentes": [
+        {
+          "titulo": "Historic Environment Scotland · Battle of Stirling Bridge (BTL28)",
+          "url": "https://portal.historicenvironment.scot/apex/f?p=1505:300::::VIEWTYPE,VIEWREF:designation,BTL28"
+        },
+        {
+          "titulo": "Historic Environment Scotland · Three Things About the Battle of Bannockburn",
+          "url": "https://blog.historicenvironment.scot/2025/06/three-things-about-the-battle-of-bannockburn/"
+        },
+        {
+          "titulo": "The Royal Family · Edward I",
+          "url": "https://www.royal.uk/edward-i-longshanks"
+        }
+      ],
+      "pasos": [
+        {
+          "anio": 1286,
+          "persona": "EDUARDO1ING",
+          "personas": [
+            "EDUARDO1ING",
+            "ROBERT1BRUCE"
+          ],
+          "titulo": "The crisis begins before Wallace",
+          "texto": "The death of Alexander III and after his granddaughter Margaret leaves the Scottish succession without a stable peaceful way out. Candidates seek arbitration in which Edward I of England tries to turn his intervention into political superiority. John Balliol’s deposition and the invasion of 1296 aggravate the conflict. Monarchy, aristocracy and Scottish communities dispute the succession and leadership of resistance."
+        },
+        {
+          "anio": 1297,
+          "persona": "WILLIAMWALLACE",
+          "personas": [
+            "WILLIAMWALLACE",
+            "EDUARDO1ING"
+          ],
+          "titulo": "Stirling: Putting the bridge back into the battle",
+          "texto": "Wallace and Andrew Moray lead the victory of September 11, 1297. The crossing of the Forth River by a narrow bridge limits English deployment and allows attacking part of its forces before the whole army can cross. The film places the confrontation in open field and eliminates precisely that element. Andrew Moray shares with Wallace the command of victory, although the film focuses solely on Wallace."
+        },
+        {
+          "anio": 1298,
+          "persona": "WILLIAMWALLACE",
+          "personas": [
+            "WILLIAMWALLACE",
+            "EDUARDO1ING"
+          ],
+          "titulo": "Falkirk and the Limits of a Victory",
+          "texto": "Edward I defeats the Scots in Falkirk. Lancers’ formations resist, but English coordination and the use of archers help to undo them. Wallace then abandons the position of guardian. Noble loyalties change and war continues to resort to diplomacy and campaigns. Scottish groups disagree over candidates for the throne, resources and military strategy."
+        },
+        {
+          "anio": 1305,
+          "persona": "WILLIAMWALLACE",
+          "personas": [
+            "WILLIAMWALLACE"
+          ],
+          "titulo": "An execution and an impossible princess",
+          "texto": "Wallace is captured and executed in London in 1305. Braveheart’s romantic relationship with Elizabeth of France does not fit his age or his arrival in England in 1308. Nor could she have made Wallace the father of Edward III. The execution was a public demonstration of punishment and power."
+        },
+        {
+          "anio": 1306,
+          "persona": "ROBERT1BRUCE",
+          "personas": [
+            "ROBERT1BRUCE",
+            "EDUARDO1ING"
+          ],
+          "titulo": "Robert Bruce wins the crown",
+          "texto": "Robert Bruce won the crown in 1306 in the midst of an internal struggle that included the murder of John Comyn. His career combined previous commitments, family aspirations, defeats and resistance. The film condenses those contradictions into a personal relationship with Wallace. Bruce builds his authority through alliances, campaigns and agreements with the Scottish elites. The king needs alliances within Scotland and victories over England to secure his government."
+        },
+        {
+          "anio": 1314,
+          "persona": "ROBERT1BRUCE",
+          "personas": [
+            "ROBERT1BRUCE",
+            "EDUARDO2ING"
+          ],
+          "titulo": "Bannockburn and the Road to the Treaty of 1328",
+          "texto": "Bruce defeats Edward II in Bannockburn, nine years after Wallace’s execution. Victory strengthens his government, but English recognition comes with the 1328 treaty and war returns in the next generation. Braveheart’s garments, speeches and narrative rhythm respond to cinema. Recognition of independence is achieved through successions, military mobilization and diplomatic negotiations."
+        }
+      ],
+      "colecciones": [
+        "cultura-popular"
+      ]
+    }
+  },
+  "leonor-aquitania": {
+    "enSlug": "eleanor-of-aquitaine-two-crowns-and-a-dynasty",
+    "content": {
+      "id": "leonor-aquitania",
+      "titulo": "Eleanor of Aquitaine: two crowns and a dynasty",
+      "subtitulo": "France, England and the family network that created the Plantagenet world",
+      "disponible": false,
+      "colecciones": []
+    }
+  },
+  "iberia": {
+    "enSlug": "spain-and-portugal",
+    "content": {
+      "id": "iberia",
+      "titulo": "Spain and Portugal",
+      "subtitulo": "Castile, Aragon, Portugal and their unions",
+      "disponible": false,
+      "colecciones": []
+    }
+  }
+}

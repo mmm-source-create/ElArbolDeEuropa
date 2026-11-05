@@ -55,7 +55,7 @@ test('avanzar, recargar y volver atrás conservan alcance y restauran el capítu
   for (const index of [0, 1, 2]) {
     writeStoryNavigation(url, story, index, returnPath);
     history.push(url.href);
-    assert.equal(url.pathname, '/es/');
+    assert.equal(url.pathname, '/en/');
     assert.deepEqual(url.searchParams.getAll('seleccion'), ['A', 'B', 'C', 'D']);
     assert.deepEqual(url.searchParams.getAll('resaltar'), index === 0 ? ['A', 'B'] : index === 1 ? ['C', 'A'] : ['D']);
     assert.equal(url.searchParams.get('persona'), 'B');
