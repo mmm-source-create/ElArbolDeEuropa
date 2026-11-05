@@ -14,6 +14,7 @@ const dynasties=V6_DYNASTIES.map(({key,es,en,name})=>({key,es,en,name}));
 const territories=V6_TERRITORIES.map(({key,es,en,name})=>({key,es,en,name}));
 const storyRoutes=Object.fromEntries(Object.entries(V6_STORIES).map(([id,entry])=>[id,{enSlug:entry.enSlug,esSlug:entry.content?.slug,esTitle:entry.content?.titulo,chapters:(entry.content?.pasos||[]).length}]));
 const runtime={v6People:Object.fromEntries(Object.entries(V6_PEOPLE).map(([id,profile])=>[id,profile.name])),dynasties,territories,storyRoutes};
+await fs.mkdir(new URL('../../src/generated/',import.meta.url),{recursive:true});
 await Promise.all([
  fs.writeFile(new URL('../../src/generated/englishV6Runtime.json',import.meta.url),JSON.stringify(runtime)),
  fs.writeFile(new URL('../../src/generated/englishProfilesRuntime.json',import.meta.url),JSON.stringify({profiles})),
