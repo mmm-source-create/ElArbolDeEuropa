@@ -27,7 +27,7 @@ export default function SiteHeader({
   const path = pathname || (typeof window === "undefined" ? "/es/" : window.location.pathname);
   const active = locale === "en" ? (/\/story(?:\/|$)|\/stories/.test(path) ? "historias" : /\/person(?:\/|$)|\/people/.test(path) ? "personas" : /\/dynast(?:y|ies)/.test(path)?"dinastias":/\/territor(?:y|ies)/.test(path)?"territorios":/\/challenge/.test(path)?"desafio":null) : isAtlas ? "atlas" : /\/persona(?:s|\/|$)/.test(path) ? "personas" : /\/dinastia(?:s|\/|$)/.test(path) ? "dinastias" : /\/territorio(?:s|\/|$)/.test(path) ? "territorios" : /\/historia(?:s|\/|$)/.test(path) ? "historias" : /\/desafio/.test(path) ? "desafio" : null;
   const equivalent = translatedEquivalent(path, locale === "en" ? "es" : "en");
-  const links = locale === "en" ? [["atlas", "Atlas", "/es/?atlas=1&continuar=1", true], ["personas", "People", "/en/people"], ["dinastias", "Dynasties", "/en/dynasties"], ["territorios", "Territories", "/en/territories"], ["historias", "Stories", "/en/stories"], ["desafio", "Challenge", "/en/challenge"]] : [["atlas", "Atlas", "/es/?atlas=1&continuar=1"], ["personas", "Personas", "/es/personas"], ["dinastias", "Dinastías", "/es/dinastias"], ["territorios", "Territorios", "/es/territorios"], ["historias", "Historias", "/es/historias"], ["desafio", "Desafío", "/es/desafio"]];
+  const links = locale === "en" ? [["atlas", "Atlas", "/en/?atlas=1&continuar=1"], ["personas", "People", "/en/people"], ["dinastias", "Dynasties", "/en/dynasties"], ["territorios", "Territories", "/en/territories"], ["historias", "Stories", "/en/stories"], ["desafio", "Challenge", "/en/challenge"]] : [["atlas", "Atlas", "/es/?atlas=1&continuar=1"], ["personas", "Personas", "/es/personas"], ["dinastias", "Dinastías", "/es/dinastias"], ["territorios", "Territorios", "/es/territorios"], ["historias", "Historias", "/es/historias"], ["desafio", "Desafío", "/es/desafio"]];
   // One control on every page: the atlas switches language in place, the public
   // pages link to the equivalent page (or the other edition's home).
   const languageOption = (code) => {
@@ -50,7 +50,7 @@ export default function SiteHeader({
       </a>
 
       <nav className="site-nav" aria-label={locale === "en" ? "Main navigation" : "Navegación principal"}>
-        {links.map(([id, label, href, spanishOnly]) => <a key={id} href={href} aria-current={active === id ? "page" : undefined} title={spanishOnly ? "This section is currently available in Spanish" : undefined} onClick={isAtlas && id === "atlas" ? event => event.preventDefault() : undefined}>{label}{spanishOnly && <span className="site-nav-language" aria-label="Spanish only">ES</span>}</a>)}
+        {links.map(([id, label, href]) => <a key={id} href={href} aria-current={active === id ? "page" : undefined} onClick={isAtlas && id === "atlas" ? event => event.preventDefault() : undefined}>{label}</a>)}
       </nav>
 
       {languageControl}

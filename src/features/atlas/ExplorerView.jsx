@@ -41,6 +41,7 @@ import AtlasFiltersPanel from './view/AtlasFiltersPanel.jsx';
 import AtlasTreeStage from './view/AtlasTreeStage.jsx';
 import AtlasMapStage from './view/AtlasMapStage.jsx';
 import AtlasBiographyPanel from './view/AtlasBiographyPanel.jsx';
+import {englishLabel,englishNote} from '../english/v6/atlasPresentation.js';
 
 const SEARCH_DYNASTIES = [...new Set(PERSONAS.map(persona => persona.dinastia).filter(isNamedDynasty))];
 const SEARCH_TERRITORIES = Object.keys(TERRITORIOS);
@@ -100,6 +101,7 @@ export default function ExplorerView({ vm, loading = false, loadError = false, o
     seleccionarEvento, aplicarPasoHistoria, iniciarHistoria, cambiarPasoHistoria, salirHistoria, filtrosActivosCompactos,
     cambiarIdioma,
   } = vm;
+  const en = locale === 'en';
   const filtrosCompactosVisibles = filtrosActivosCompactos.slice(0, 6);
   const filtrosCompactosRestantes = Math.max(0, filtrosActivosCompactos.length - filtrosCompactosVisibles.length);
   const filterCount = territorios.length + dinastias.length + titulos.length + siglos.length + relaciones.length + Number(soloFavoritos) + Number(soloDocumentados);
@@ -223,7 +225,8 @@ export default function ExplorerView({ vm, loading = false, loadError = false, o
   const searchResults = React.useMemo(() => atlasSearch(queryTrim, {
     people: PERSONAS, dynasties: SEARCH_DYNASTIES, territories: SEARCH_TERRITORIES,
     stories: HISTORIAS, events: EVENTOS_HISTORICOS, normalize: normalizaTexto,
-  }, 4), [queryTrim]);
+    localize:value=>locale==='en'?(englishLabel(value)!==value?englishLabel(value):englishNote(value)):value,
+  }, 4), [queryTrim,locale]);
   React.useEffect(() => {
     setBioSection('resumen');
     setBioMobileOpen(!historiaActiva);
@@ -263,8 +266,8 @@ export default function ExplorerView({ vm, loading = false, loadError = false, o
   }, [compareMenuOpen, favoritosOpen, compareMenuRef, favoritosMenuRef, setCompareMenuOpen, setFavoritosOpen]);
   return (
     <div className={`atlas-loading ${loading ? "loading" : ready ? "loaded" : ""}`} aria-busy={loading}>
-      {loading && <span className="atlas-loading-status" role="status">Cargando el atlas…</span>}
-      {loadError && <AtlasLoadError onRetry={onRetry}/>}
+      {loading && <span className="atlas-loading-status" role="status">{en ? 'Loading the Atlas…' : 'Cargando el atlas…'}</span>}
+      {loadError && <AtlasLoadError onRetry={onRetry} locale={locale}/>}
       {!modoTrabajo && <SiteHeader variant="atlas" locale={locale} onLanguageChange={cambiarIdioma} />}
     <div className={`wrap atlas-scene-${atlasScene}${historiaActiva ? " story-reading-active" : ""}${modoTrabajo ? " atlas-work-mode" : ""}`} inert={!ready}>
       {/* V5.20 · Cabecera fija: vistas y paneles, escena en el centro y acciones. */}
@@ -272,14 +275,14 @@ export default function ExplorerView({ vm, loading = false, loadError = false, o
       <AtlasTopbar vm={vm} searchOpen={searchOpen} searchResults={searchResults} setSearchOpen={setSearchOpen} />
 
       <p className="atlas-visually-hidden" role="status" aria-live="polite">
-        {seleccion ? `Persona seleccionada: ${seleccion.nombre}.` : 'No hay persona seleccionada.'}
-        {Number.isFinite(anioGlobal) ? ` Año ${anioGlobal}.` : ' Todos los años.'}
+        {seleccion ? `${en ? 'Selected person' : 'Persona seleccionada'}: ${seleccion.nombre}.` : en ? 'No person selected.' : 'No hay persona seleccionada.'}
+        {Number.isFinite(anioGlobal) ? ` ${en ? 'Year' : 'Año'} ${anioGlobal}.` : en ? ' All years.' : ' Todos los años.'}
       </p>
 
       {vm.growth.feedback && !historiaActiva && (
         <div className="family-expansion-feedback" role="status">
-          <span>Se añadieron {vm.growth.feedback.count} persona{vm.growth.feedback.count === 1 ? '' : 's'} de la familia de {vm.growth.feedback.person} al árbol.</span>
-          <button type="button" onClick={vm.growth.onUndo}>Deshacer</button>
+          <span>{en ? `${vm.growth.feedback.count} ${vm.growth.feedback.count === 1 ? 'person' : 'people'} from ${vm.growth.feedback.person}’s family added to the tree.` : `Se añadieron ${vm.growth.feedback.count} persona${vm.growth.feedback.count === 1 ? '' : 's'} de la familia de ${vm.growth.feedback.person} al árbol.`}</span>
+          <button type="button" onClick={vm.growth.onUndo}>{en ? 'Undo' : 'Deshacer'}</button>
         </div>
       )}
 
@@ -288,14 +291,14 @@ export default function ExplorerView({ vm, loading = false, loadError = false, o
           type="button"
           className="work-mode-exit"
           onClick={() => setModoTrabajo(false)}
-          title="Salir del modo de trabajo (Esc)"
-          aria-label="Salir del modo de trabajo"
+          title={en ? 'Exit work mode (Esc)' : 'Salir del modo de trabajo (Esc)'}
+          aria-label={en ? 'Exit work mode' : 'Salir del modo de trabajo'}
         >
           <X size={16} />
         </button>
       )}
 
-      {mode === "conexion" && <ConnectionControls people={PERSONAS} graph={graph} ids={connectionIds} onChange={setConnectionIds} criterion={connectionCriterion} onCriterion={setConnectionCriterion} result={connectionResult} onSelect={seleccionarPersonaPorId}/>}
+      {mode === "conexion" && <ConnectionControls people={PERSONAS} graph={graph} ids={connectionIds} onChange={setConnectionIds} criterion={connectionCriterion} onCriterion={setConnectionCriterion} result={connectionResult} onSelect={seleccionarPersonaPorId} locale={locale}/>}
 
       {mode === "compare" && <CompareBar vm={vm} />}
 
@@ -337,7 +340,7 @@ export default function ExplorerView({ vm, loading = false, loadError = false, o
       {mostrarCronologia && atlasScene === 'atlas' && <AtlasTimeline vm={vm}/>}
       </div>
       <div className="atlas-europe-pane" hidden={atlasScene !== 'europa' && !sceneSliding}>
-      {(atlasScene === 'europa' || sceneSliding) && <React.Suspense fallback={<p role="status">Preparando Europa en este año…</p>}><EuropeYearView year={anioGlobal ?? 1500} onYearChange={actualizarAnioDesdeRango} onSelect={id=>seleccionarPersonaPorId(id,{abrirAtlas:true})} onEvent={seleccionarEvento} timeline={mostrarCronologia && atlasScene === 'europa' ? <AtlasTimeline vm={vm}/> : null}/></React.Suspense>}
+      {(atlasScene === 'europa' || sceneSliding) && <React.Suspense fallback={<p role="status">{en ? 'Preparing Europe in this year…' : 'Preparando Europa en este año…'}</p>}><EuropeYearView year={anioGlobal ?? 1500} onYearChange={actualizarAnioDesdeRango} onSelect={id=>seleccionarPersonaPorId(id,{abrirAtlas:true})} onEvent={seleccionarEvento} timeline={mostrarCronologia && atlasScene === 'europa' ? <AtlasTimeline vm={vm}/> : null} locale={locale}/></React.Suspense>}
       </div>
       </div>
       </div>
@@ -349,17 +352,18 @@ export default function ExplorerView({ vm, loading = false, loadError = false, o
           compact
           onOpenStats={() => setInfoProyecto("estadisticas")}
           onReport={() => setInfoProyecto("reportar")}
+          locale={locale}
         />
       )}
 
-      {!modoTrabajo && !guideOpen && !infoProyecto && <ActionDial className="atlas-quick-actions" label="Acciones del Atlas" actions={[
-        {id:'center',label:'Centrar persona',Icon:Crosshair,disabled:!seleccion,onClick:centrarSeleccion},
-        {id:'filters',disabled:Boolean(historiaActiva),label:mostrarFiltros?'Ocultar filtros':'Mostrar filtros',Icon:SlidersHorizontal,onClick:()=>alternarPanelAuxiliar('filtros')},
-        {id:'timeline',label:mostrarCronologia?'Ocultar cronología':'Mostrar cronología',Icon:List,onClick:()=>alternarPanelAuxiliar('cronologia')},
+      {!modoTrabajo && !guideOpen && !infoProyecto && <ActionDial className="atlas-quick-actions" label={en ? 'Atlas actions' : 'Acciones del Atlas'} actions={[
+        {id:'center',label:en?'Centre person':'Centrar persona',Icon:Crosshair,disabled:!seleccion,onClick:centrarSeleccion},
+        {id:'filters',disabled:Boolean(historiaActiva),label:en?(mostrarFiltros?'Hide filters':'Show filters'):(mostrarFiltros?'Ocultar filtros':'Mostrar filtros'),Icon:SlidersHorizontal,onClick:()=>alternarPanelAuxiliar('filtros')},
+        {id:'timeline',label:en?(mostrarCronologia?'Hide timeline':'Show timeline'):(mostrarCronologia?'Ocultar cronología':'Mostrar cronología'),Icon:List,onClick:()=>alternarPanelAuxiliar('cronologia')},
       ]}/>}
       {guideOpen && <AtlasGuide locale={locale} onClose={closeGuide} onAction={tutorialAction} selectedId={seleccion?.id} selectedInTree={Boolean(vm.positions[seleccion?.id])} canExpand={canAddFamily} exampleReady={!historiaActiva && mode === 'view' && atlasScene === 'atlas'} hasFilters={filterCount > 0} onClearFilters={vm.limpiarSoloFiltros} getExportSelection={vm.getExportSelection} favoriteSaved={vm.favoritos.includes('CARLOS5')} shareStatus={vm.shareStatus} ready={ready} />}
-      {infoProyecto === 'cobertura' && <CoverageDialog onClose={() => setInfoProyecto(null)} />}
-      {infoProyecto !== 'cobertura' && <ModalProyecto seccion={infoProyecto} onClose={() => setInfoProyecto(null)} persona={seleccion} personasVista={visiblePeople} onStartHistoria={iniciarHistoria} />}
+      {infoProyecto === 'cobertura' && <CoverageDialog onClose={() => setInfoProyecto(null)} locale={locale} />}
+      {infoProyecto !== 'cobertura' && <ModalProyecto seccion={infoProyecto} onClose={() => setInfoProyecto(null)} persona={seleccion} personasVista={visiblePeople} onStartHistoria={iniciarHistoria} locale={locale} />}
 
     </div>
     </div>

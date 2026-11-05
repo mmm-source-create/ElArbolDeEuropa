@@ -1,6 +1,7 @@
 import {Check, X, ArrowRight, ExternalLink} from "lucide-react";
 import {IMAGENES_PERSONAS} from "../../data/imagenesPersonas.js";
 import {responsiveImage} from "../../utils/responsiveImage.js";
+import {englishLabel} from '../english/v6/atlasPresentation.js';
 function RetratoOpcion({ persona }) {
   const imagen = persona ? IMAGENES_PERSONAS[persona.id] : null;
   if (!imagen) return <span className="desafio-option-monogram">{persona?.nombre?.slice(0, 1) || "?"}</span>;
@@ -26,7 +27,9 @@ export function PreguntaOpciones({
   onSelect,
   campeonId = null,
   className = "",
+  locale = 'es',
 }) {
+  const en=locale==='en';
   const ocultas = new Set(hidden);
   return (
     <div className={`desafio-options desafio-options-${pregunta.opciones.length}${className ? ` ${className}` : ""}`}>
@@ -48,8 +51,11 @@ export function PreguntaOpciones({
             {persona && <RetratoOpcion persona={persona} />}
             <span className="desafio-option-copy">
               <strong>{opcion.label}</strong>
-              {persona && respondida && <small>{[persona.titulo, persona.dinastia].filter(Boolean).join(" · ") || "Personaje histórico"}</small>}
-              {campeonId === opcion.id && <em>continúa</em>}
+              {persona && respondida && <small>{[
+                en ? (persona.role||englishLabel(persona.titulo)) : persona.titulo,
+                en ? englishLabel(persona.dinastia) : persona.dinastia,
+              ].filter(Boolean).join(" · ") || (en?'Historical person':"Personaje histórico")}</small>}
+              {campeonId === opcion.id && <em>{en?'continues':'continúa'}</em>}
             </span>
             {respondida && correcta && <Check size={16} aria-hidden="true" />}
             {respondida && elegida && !correcta && <X size={16} aria-hidden="true" />}
@@ -60,7 +66,8 @@ export function PreguntaOpciones({
   );
 }
 
-export function PreguntaOrden({ pregunta, byId, orden, respondida, onPick }) {
+export function PreguntaOrden({ pregunta, byId, orden, respondida, onPick, locale='es' }) {
+  const en=locale==='en';
   return (
     <div className="desafio-order-grid">
       {pregunta.opciones.map((opcion) => {
@@ -75,7 +82,7 @@ export function PreguntaOrden({ pregunta, byId, orden, respondida, onPick }) {
             onClick={() => onPick(opcion.id)}
           >
             {persona && <RetratoOpcion persona={persona} />}
-            <span><strong>{opcion.label}</strong>{persona && respondida && <small>{persona.titulo || persona.dinastia || "Personaje histórico"}</small>}</span>
+            <span><strong>{opcion.label}</strong>{persona && respondida && <small>{en ? (persona.role||englishLabel(persona.titulo)||englishLabel(persona.dinastia)||'Historical person') : (persona.titulo||persona.dinastia||'Personaje histórico')}</small>}</span>
             {posicion >= 0 && <b>{posicion + 1}</b>}
           </button>
         );
@@ -84,16 +91,17 @@ export function PreguntaOrden({ pregunta, byId, orden, respondida, onPick }) {
   );
 }
 
-export function Explicacion({correcta, pregunta, onContinue, onAtlas, puedeAtlas}) {
+export function Explicacion({correcta, pregunta, onContinue, onAtlas, puedeAtlas, locale='es'}) {
+  const en=locale==='en';
   return <div className={`desafio-fast-feedback${correcta ? ' is-correct' : ' is-wrong'}`} role="status">
-    <div className="desafio-fast-feedback-head">{correcta ? <Check size={16}/> : <X size={16}/>}<strong>{correcta ? 'Correcto' : 'No esta vez'}</strong></div>
+    <div className="desafio-fast-feedback-head">{correcta ? <Check size={16}/> : <X size={16}/>}<strong>{correcta ? (en?'Correct':'Correcto') : (en?'Not this time':'No esta vez')}</strong></div>
     <div className="desafio-fast-feedback-detail">
       <p>{pregunta.explicacion}</p>
-      {!!pregunta.fuentes?.length && <details className="desafio-sources"><summary>Fuentes de esta explicación</summary><ul>{pregunta.fuentes.map(url=><li key={url}><a href={url} target="_blank" rel="noreferrer">{new URL(url).hostname.replace(/^www\./,'')} <ExternalLink size={11}/></a></li>)}</ul></details>}
+      {!!pregunta.fuentes?.length && <details className="desafio-sources"><summary>{en?'Sources for this explanation':'Fuentes de esta explicación'}</summary><ul>{pregunta.fuentes.map(url=><li key={url}><a href={url} target="_blank" rel="noreferrer">{new URL(url).hostname.replace(/^www\./,'')} <ExternalLink size={11}/></a></li>)}</ul></details>}
       <div>
-        {pregunta.territorio && <a className="desafio-secondary" href={pregunta.atlasUrl} target="_blank" rel="noreferrer">Sucesión de {pregunta.territorio} <ExternalLink size={13}/></a>}
-        {puedeAtlas && <button type="button" className="desafio-secondary" onClick={onAtlas}>Ver en el Atlas <ExternalLink size={13}/></button>}
-        <button type="button" className="desafio-primary" onClick={onContinue}>Continuar <ArrowRight size={13}/></button>
+        {pregunta.territorio && <a className="desafio-secondary" href={pregunta.atlasUrl} target="_blank" rel="noreferrer">{en?'Succession of':'Sucesión de'} {en?englishLabel(pregunta.territorio):pregunta.territorio} <ExternalLink size={13}/></a>}
+        {puedeAtlas && <button type="button" className="desafio-secondary" onClick={onAtlas}>{en?'View in Atlas':'Ver en el Atlas'} <ExternalLink size={13}/></button>}
+        <button type="button" className="desafio-primary" onClick={onContinue}>{en?'Continue':'Continuar'} <ArrowRight size={13}/></button>
       </div>
     </div>
   </div>;

@@ -38,7 +38,7 @@ const HOME_COPY = {
     title: "The history of Europe, seen as a network",
     eyebrow: "Genealogy · politics · territory · 1200–1800",
     introduction: "Explore families, crowns, marriages, rivalries and successions in an Atlas that connects genealogy, maps, biographies, timelines and guided stories.",
-    explore: "Explore the Atlas (Spanish)", tutorial: "Tutorial", year: "Europe in 1500 (Spanish)",
+    explore: "Explore the Atlas", tutorial: "Tutorial", year: "Europe in 1500",
     statsLabel: "The complete Atlas", stats: ["people", "dynasties", "territories", "stories in the Atlas"],
     doorsEyebrow: "Ways into the Atlas", doorsTitle: "Choose where to begin",
     peopleEyebrow: "Featured people", peopleTitle: "Doors into the network", allPeople: "All English profiles",
@@ -64,7 +64,7 @@ export function HomeContent({ data = HOME_DATA, locale = "es", title, onEnterAtl
     { href: english?"/en/territories":"/es/territorios", Icon: Landmark, title: english ? "Territories" : "Territorios", description: english ? "Discover who ruled where and how the crowns connect." : "Explora quién gobernó dónde y cómo se conectan las coronas.", spanish: !english },
     { href: storiesPath, Icon: BookOpen, title: english ? "Stories" : "Historias", description: english ? "Read guided journeys through art, politics and dynastic history." : "Recorridos guiados por guerras, artistas, favoritos y dinastías." },
     { href: english?"/en/challenge":"/es/desafio", Icon: Swords, title: english ? "Challenge" : "Desafío", description: english ? "Build a portrait streak and discover complete English profiles." : "El Camino, Racha, Retratos y un desafío diario con la propia base histórica.", spanish: !english },
-    { href: "/es/?atlas=1&panel=estadisticas", Icon: Sparkles, title: english ? "Statistics" : "Estadísticas", description: english ? "Explore the houses, territories and people represented in the Atlas." : "Descubre qué casas, territorios y figuras dominan la base.", spanish: true, panel: "estadisticas" },
+    { href: english ? "/en/?atlas=1&panel=estadisticas" : "/es/?atlas=1&panel=estadisticas", Icon: Sparkles, title: english ? "Statistics" : "Estadísticas", description: english ? "Explore the houses, territories and people represented in the Atlas." : "Descubre qué casas, territorios y figuras dominan la base.", panel: "estadisticas" },
   ];
   const navigateInApp = (event, callback, value) => {
     if (typeof callback !== "function" || event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
@@ -78,11 +78,11 @@ export function HomeContent({ data = HOME_DATA, locale = "es", title, onEnterAtl
           <h1>{title || copy.title}</h1>
           <p>{copy.introduction}</p>
           <div className="public-hero-actions">
-            <a className="public-primary" href="/es/?atlas=1" onClick={(event) => navigateInApp(event, onEnterAtlas, null)}>{copy.explore} <ArrowRight size={16} /></a>
+            <a className="public-primary" href={english ? "/en/?atlas=1" : "/es/?atlas=1"} onClick={(event) => navigateInApp(event, onEnterAtlas, null)}>{copy.explore} <ArrowRight size={16} /></a>
             <a className="public-secondary" href={`/${english ? "en" : "es"}/?atlas=1&tutorial=1`}><GraduationCap size={16} /> {copy.tutorial}</a>
           </div>
-          <a className="public-home-year" href="/es/?atlas=1&anio=1500&panel=europa"><Landmark size={14}/> {copy.year}</a>
-          {english && <p className="public-home-edition">Explore complete profiles, dynasties, territories, stories and the Portraits challenge in English. The interactive Atlas is in Spanish.</p>}
+          <a className="public-home-year" href={english ? "/en/?atlas=1&anio=1500&panel=europa" : "/es/?atlas=1&anio=1500&panel=europa"}><Landmark size={14}/> {copy.year}</a>
+          {english && <p className="public-home-edition">Explore the complete Atlas, profiles, dynasties, territories, stories and every Challenge mode in English.</p>}
           <HomeSearch locale={locale}/>
           <div className="public-hero-stats" aria-label={copy.statsLabel}>
             {["personas", "dinastias", "territorios", "historias"].map((key, index) => <span key={key}><strong><Odometer value={stats[key]} locale={locale}/></strong>{copy.stats[index]}</span>)}

@@ -7,6 +7,7 @@ import {IBERIAN_ENGLISH_PROFILES} from './iberianProfiles.js';
 import {EXPANDED_ENGLISH_PROFILES} from './expandedProfiles.js';
 import {V535_ENGLISH_PROFILES} from './v535Profiles.js';
 import {V536_ENGLISH_PROFILES} from './v536Profiles.js';
+import {V6_PEOPLE} from './v6/index.js';
 // Editorial translations of complete Spanish profiles. Canonical IDs, dates,
 // relationships and territorial keys are supplied by the shared generator.
 export const COMPLETE_ENGLISH_PROFILES = {
@@ -112,4 +113,5 @@ export const COMPLETE_ENGLISH_PROFILES = {
       ['Kanuni, the Lawgiver', 'In Ottoman tradition Suleiman is called Kanuni for compiling and harmonising the sultan’s laws. His wife Hürrem played an unprecedented political role, and struggles among his sons led to the executions of Mustafa in 1553 and Bayezid in 1561. He supported the work of the architect Sinan, including the Süleymaniye Mosque in Istanbul. He died in 1566 during the siege of Szigetvár in Hungary.'],
     ],
   },
+  ...V6_PEOPLE,
 };

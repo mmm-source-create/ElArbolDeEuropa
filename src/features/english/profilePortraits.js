@@ -6,6 +6,7 @@ import {REVIEWED_NEXT_100_PORTRAITS} from './reviewedNext100Portraits.js';
 import {REVIEWED_100_PORTRAITS} from './reviewed100Portraits.js';
 import {IBERIAN_PORTRAITS} from './iberianPortraits.js';
 import {PORTUGAL_NAVARRE_PORTRAITS} from './portugalPortraits.js';
+import runtime from '../../generated/englishVocabularyRuntime.json' with {type:'json'};
 // Artwork and licence URLs are inherited unchanged from the original credits.
 export const ENGLISH_PROFILE_PORTRAITS = {
  GUSTAV2ADOLFO:{tipo:'Historical portrait',obra:'Gustav II Adolf, King of Sweden',autor:'Attributed to Jacob Hoefnagel',fecha:'1624'},
@@ -63,4 +64,5 @@ export const ENGLISH_PROFILE_PORTRAITS = {
   ...VISCONTI_SFORZA_PORTRAITS,
  ...OCTOBER_PORTRAITS_EN,
  ...PORTRAITS_200_EN,
+ ...runtime.portraits,
 };

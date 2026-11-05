@@ -1,0 +1,163 @@
+{
+  "CARLOS1ING": {
+    "tipo": "Historical portrait",
+    "alt": "Portrait of Charles I of England",
+    "obra": "Carlos I",
+    "autor": "Anton van Dyck",
+    "fecha": "1636",
+    "institucion": "Royal Collection"
+  },
+  "EUGENIOSABOYA": {
+    "tipo": "Historical portrait",
+    "alt": "Portrait of Eugene of Savoy",
+    "obra": "El príncipe Eugenio de Saboya",
+    "autor": "Godfrey Kneller",
+    "fecha": "1712"
+  },
+  "CATALINAMICAELAESP": {
+    "tipo": "Historical portrait",
+    "alt": "Portrait of Catalina Micaela of Spain",
+    "obra": "Portrait of the Infanta Catalina Micaela",
+    "autor": "Alonso Sánchez Coello",
+    "fecha": "1582–1585",
+    "institucion": "Museo del Hermitage, San Petersburgo"
+  },
+  "ISABELHAB": {
+    "tipo": "Historical portrait",
+    "alt": "Portrait of Elisabeth of Habsburg",
+    "obra": "Isabel de Habsburgo · serie de retratos dinásticos",
+    "autor": "Antoni Boys (Anton Waiss)",
+    "fecha": "siglo XVI",
+    "institucion": "Kunsthistorisches Museum, Viena"
+  },
+  "CUNIGAUSTRIABAV": {
+    "tipo": "Historical portrait",
+    "alt": "Portrait of Kunigunde of Austria",
+    "obra": "Cunegunda de Austria · serie de retratos dinásticos",
+    "autor": "Antoni Boys (Anton Waiss)",
+    "fecha": "siglo XVI",
+    "institucion": "Kunsthistorisches Museum, Viena"
+  },
+  "JUDH": {
+    "tipo": "Historical portrait",
+    "alt": "Portrait of Judith of Habsburg",
+    "obra": "Judit de Habsburgo · serie de retratos dinásticos",
+    "autor": "Antoni Boys (Anton Waiss)",
+    "fecha": "siglo XVI",
+    "institucion": "Kunsthistorisches Museum, Viena"
+  },
+  "ALB4AUST": {
+    "tipo": "Historical portrait",
+    "alt": "Portrait of Albert IV of Austria",
+    "obra": "Alberto IV de Austria · serie de retratos dinásticos",
+    "autor": "Antoni Boys (Anton Waiss)",
+    "fecha": "siglo XVI",
+    "institucion": "Kunsthistorisches Museum, Viena"
+  },
+  "ESTEBV": {
+    "tipo": "Historical portrait",
+    "alt": "Portrait of Stephen V of Hungary",
+    "obra": "Esteban V · Chronica Hungarorum",
+    "autor": "Ilustrador anónimo de la Chronica Hungarorum de Johannes de Thurocz",
+    "fecha": "1488"
+  },
+  "MARGTYROL": {
+    "tipo": "Historical portrait",
+    "alt": "Portrait of Margaret of Tyrol",
+    "obra": "Margarita de Tirol · inscripción «Margareta Henrici … filia»; el archivo Commons se titula Katharina of Bohemia",
+    "autor": "Antoni Boys (Anton Waiss)",
+    "fecha": "siglo XVI",
+    "institucion": "Kunsthistorisches Museum, Viena"
+  },
+  "JUAN1ZAPOLYA": {
+    "tipo": "Historical portrait",
+    "alt": "Portrait of John Zápolya",
+    "obra": "Juan I Zápolya · xilografía",
+    "autor": "Erhard Schön",
+    "fecha": "siglo XVI"
+  },
+  "IGNACIOLOYOLA": {
+    "tipo": "Historical portrait",
+    "alt": "Portrait of Ignatius of Loyola",
+    "obra": "Ignatius of Loyola",
+    "autor": "Anónimo",
+    "fecha": "siglo XVI"
+  },
+  "BEATRIXNUREMBERG": {
+    "tipo": "Historical portrait",
+    "alt": "Portrait of Beatrice of Nuremberg",
+    "obra": "Beatriz de Núremberg · serie de retratos dinásticos",
+    "autor": "Antoni Boys (Anton Waiss)",
+    "fecha": "siglo XVI",
+    "institucion": "Kunsthistorisches Museum, Viena"
+  },
+  "JOHANNAPFIRT": {
+    "tipo": "Historical portrait",
+    "alt": "Portrait of Joanna of Pfirt",
+    "obra": "Juana de Pfirt · serie de retratos dinásticos",
+    "autor": "Antoni Boys (Anton Waiss)",
+    "fecha": "siglo XVI",
+    "institucion": "Kunsthistorisches Museum, Viena"
+  },
+  "PAPA_INOCENCIO13": {
+    "tipo": "Historical portrait",
+    "alt": "Portrait of Innocent XIII",
+    "obra": "Innocent XIII",
+    "autor": "Posiblemente Agostino Masucci",
+    "fecha": "c. 1722"
+  },
+  "PAPA_CELESTINO5": {
+    "tipo": "Historical portrait",
+    "alt": "Portrait of Celestine V",
+    "obra": "Celestino V con monjes, tabla central de un tríptico",
+    "autor": "Niccolò di Tommaso",
+    "fecha": "s. XIV",
+    "institucion": "Castel Nuovo, Nápoles"
+  },
+  "PAPA_NICOLAS5": {
+    "tipo": "Historical portrait",
+    "alt": "Portrait of Nicholas V",
+    "obra": "Nicholas V",
+    "autor": "Pedro Pablo Rubens",
+    "fecha": "1612–1616"
+  },
+  "PAPA_JULIO3": {
+    "tipo": "Historical portrait",
+    "alt": "Portrait of July III",
+    "obra": "Julius III",
+    "autor": "Círculo de Girolamo Siciolante da Sermoneta",
+    "fecha": "segunda mitad del s. XVI",
+    "institucion": "Rijksmuseum, Ámsterdam"
+  },
+  "PAPA_JUAN22": {
+    "tipo": "Historical portrait",
+    "alt": "Portrait of John XXII",
+    "obra": "Juan XXII",
+    "autor": "Iluminador anónimo",
+    "fecha": "s. XIV",
+    "institucion": "Archivo iconográfico del Palais du Roure, Aviñón"
+  },
+  "PAPA_PIO6": {
+    "tipo": "Historical portrait",
+    "alt": "Portrait of Pius VI",
+    "obra": "Pius VI",
+    "autor": "Pompeo Batoni",
+    "fecha": "1775",
+    "institucion": "National Gallery of Ireland, Dublín"
+  },
+  "PAPA_ALEJANDRO8": {
+    "tipo": "Historical portrait",
+    "alt": "Portrait of Alexander VIII",
+    "obra": "Alexander VIII",
+    "autor": "Pintor romano anónimo",
+    "fecha": "s. XVII"
+  },
+  "PAPA_URBANO5": {
+    "tipo": "Historical portrait",
+    "alt": "Portrait of Urban V",
+    "obra": "Urban V",
+    "autor": "Simone dei Crocifissi",
+    "fecha": "c. 1375",
+    "institucion": "Pinacoteca Nazionale di Bologna"
+  }
+}

@@ -36,6 +36,7 @@ import './desafio-interactions.css';
 import {successionBank, createChallenge, challengeUrl, readChallenge, readReview, reviewQuestions, updateReview, saveReview} from './learning.js';
 import {resumenCortoPersona} from '../../domain/people/personPresentation.js';
 import "./desafio.css";
+import {challengeQuestion,challengeText} from './challengeI18n.js';
 
 const Dinastle=lazy(()=>import('./Dinastle.jsx'));
 
@@ -216,7 +217,9 @@ function Corazones({ vidas }) {
   );
 }
 
-export default function Desafio({ personas = [] }) {
+export default function Desafio({ personas = [], locale = 'es' }) {
+  const en=locale==='en';
+  const tr=(es,english)=>en?english:es;
   const byId = useMemo(() => Object.fromEntries(personas.map((p) => [p.id, p])), [personas]);
   const slugs = useMemo(() => construirSlugs(personas), [personas]);
   const personasConRetrato = useMemo(() => personas.filter((persona) => Boolean(IMAGE_VARIANTS[IMAGENES_PERSONAS[persona.id]?.archivo])), [personas]);
@@ -249,13 +252,13 @@ export default function Desafio({ personas = [] }) {
   const abrirAtlas = (personaId) => {
     const slug = slugs[personaId];
     if (!personaId || !slug || typeof window === "undefined") return;
-    window.open(`/es/persona/${encodeURIComponent(slug)}?atlas=1`, "_blank", "noopener,noreferrer");
+    window.open(`/${en?'en/person':'es/persona'}/${encodeURIComponent(slug)}?atlas=1`, "_blank", "noopener,noreferrer");
   };
 
   const remember = (question, correct) => {
     const next = updateReview(review, question, correct);
     setReview(next);
-    if (!saveReview(storage(), next)) setReviewWarning('El navegador no permite guardar el repaso. Podrás usarlo durante esta visita.');
+    if (!saveReview(storage(), next)) setReviewWarning(tr('El navegador no permite guardar el repaso. Podrás usarlo durante esta visita.','The browser cannot save the review. You can still use it during this visit.'));
   };
   const startLesson = mode => {
     const seed = Array.from(crypto.getRandomValues(new Uint32Array(2)), n=>n.toString(36)).join('-');
@@ -337,7 +340,7 @@ export default function Desafio({ personas = [] }) {
       setError("");
     } catch (err) {
       console.error("[Desafío V2 · Camino] No se pudo iniciar:", err);
-      setError("No se ha podido preparar El Camino con los datos actuales.");
+      setError(tr("No se ha podido preparar El Camino con los datos actuales.","The Path could not be prepared with the current data."));
     }
   };
 
@@ -360,7 +363,7 @@ export default function Desafio({ personas = [] }) {
     } catch (err) {
       console.error("[Desafío V2 · Camino] No se pudo generar la siguiente:", err);
       finalizarCamino(estado);
-      setError("El recorrido terminó porque no se pudo generar otra pregunta sin repetir las anteriores.");
+      setError(tr("El recorrido terminó porque no se pudo generar otra pregunta sin repetir las anteriores.","The journey ended because another non-repeating question could not be generated."));
     }
   };
 
@@ -465,7 +468,7 @@ export default function Desafio({ personas = [] }) {
       setCamino(reemplazada);
     } catch (err) {
       console.error("[Desafío V2] No se pudo cambiar la pregunta:", err);
-      setError("No se ha podido cambiar esta pregunta.");
+      setError(tr("No se ha podido cambiar esta pregunta.","This question could not be changed."));
     }
   };
 
@@ -492,7 +495,7 @@ export default function Desafio({ personas = [] }) {
       setError("");
     } catch (err) {
       console.error("[Desafío V2 · Racha] No se pudo iniciar:", err);
-      setError("No se ha podido iniciar Racha con los datos actuales.");
+      setError(tr("No se ha podido iniciar Racha con los datos actuales.","Streak could not be started with the current data."));
     }
   };
 
@@ -513,7 +516,7 @@ export default function Desafio({ personas = [] }) {
         const next = crearPreguntaRacha(personas,preguntaRacha.siguienteCampeonId,{evitarFirmas:firmasRacha.slice(-120)});
         setCampeonRacha(preguntaRacha.siguienteCampeonId); setPreguntaRacha(next);
         setFirmasRacha([...firmasRacha,next.firma].slice(-140)); setSeleccionRacha(null); return;
-      } catch { setError('No quedan duelos disponibles para continuar esta racha.'); }
+      } catch { setError(tr('No quedan duelos disponibles para continuar esta racha.','No duels remain to continue this streak.')); }
     }
     setRachaTerminada(true);
     actualizarEstadisticas(actual=>({...actual,rachasJugadas:actual.rachasJugadas+1,mejorRachaDuelo:Math.max(actual.mejorRachaDuelo,rachaDuelo)}));
@@ -541,7 +544,7 @@ export default function Desafio({ personas = [] }) {
 
   const iniciarRetratos = () => {
     if (personasConRetrato.length < 4) {
-      setError("No hay suficientes retratos configurados para abrir este modo.");
+      setError(tr("No hay suficientes retratos configurados para abrir este modo.","There are not enough portraits to open this mode."));
       return;
     }
     try {
@@ -559,7 +562,7 @@ export default function Desafio({ personas = [] }) {
       enfocarRetrato();
     } catch (err) {
       console.error("[Desafío V2 · Retratos] No se pudo iniciar:", err);
-      setError("No se ha podido iniciar la racha de Retratos.");
+      setError(tr("No se ha podido iniciar la racha de Retratos.","The Portrait streak could not be started."));
     }
   };
 
@@ -620,7 +623,7 @@ export default function Desafio({ personas = [] }) {
       setError("");
     } catch (err) {
       console.error("[Desafío V2 · Diario] No se pudo preparar:", err);
-      setError("No se ha podido preparar el desafío diario.");
+      setError(tr("No se ha podido preparar el desafío diario.","The daily challenge could not be prepared."));
     }
   };
 
@@ -687,12 +690,12 @@ export default function Desafio({ personas = [] }) {
         setShareStatus("Resultado compartido");
       } else if (navigator.clipboard?.writeText) {
         await navigator.clipboard.writeText(texto);
-        setShareStatus("Resultado copiado");
+        setShareStatus(tr("Resultado copiado","Result copied"));
       } else {
-        window.prompt("Copia tu resultado:", texto);
+        window.prompt(tr("Copia tu resultado:","Copy your result:"), texto);
       }
     } catch (err) {
-      if (err?.name !== "AbortError") setShareStatus("No se pudo compartir");
+      if (err?.name !== "AbortError") setShareStatus(tr("No se pudo compartir","Could not share"));
     }
     window.setTimeout(() => setShareStatus(""), 2200);
   };
@@ -719,76 +722,76 @@ export default function Desafio({ personas = [] }) {
   // ---------------------------------------------------------------------------
   // MENU
   // ---------------------------------------------------------------------------
-  if(modo==='dinastle')return <Suspense fallback={<p role="status">Preparando Dinastle…</p>}><Dinastle people={personas} onBack={volverAModos}/></Suspense>;
-  if (lesson && ['repaso','sucesiones','compartido'].includes(modo)) return <LearningSession key={modo} mode={modo} questions={lesson.questions} sharedUrl={lesson.url} warning={reviewWarning} byId={byId} onBack={volverAModos} onAtlas={abrirAtlas} onAnswer={(question,correct)=>remember(question,correct)}/>;
+  if(modo==='dinastle')return <Suspense fallback={<p role="status">{tr('Preparando Dinastle…','Preparing Dinastle…')}</p>}><Dinastle people={personas} onBack={volverAModos} locale={locale}/></Suspense>;
+  if (lesson && ['repaso','sucesiones','compartido'].includes(modo)) return <LearningSession key={modo} mode={modo} questions={lesson.questions} sharedUrl={lesson.url} warning={reviewWarning} byId={byId} onBack={volverAModos} onAtlas={abrirAtlas} onAnswer={(question,correct)=>remember(question,correct)} locale={locale}/>;
   if (!modo) {
     const precision = estadisticas.precisionPreguntas
       ? Math.round((estadisticas.precisionAciertos / estadisticas.precisionPreguntas) * 100)
       : 0;
     return (
       <section className="desafio-shell desafio-hub">
-        <div className="desafio-hub-kicker"><Swords size={14} /> Aprender con el Atlas</div>
-        <h1>¿Hasta dónde puedes llegar?</h1>
-        <p className="desafio-intro">Empieza fácil, aprende mientras juegas y deja que el atlas vaya subiendo el nivel. No hace falta saberlo todo para disfrutar.</p>
+        <div className="desafio-hub-kicker"><Swords size={14} /> {tr('Aprender con el Atlas','Learn with the Atlas')}</div>
+        <h1>{tr('¿Hasta dónde puedes llegar?','How far can you go?')}</h1>
+        <p className="desafio-intro">{tr('Empieza fácil, aprende mientras juegas y deja que el atlas vaya subiendo el nivel. No hace falta saberlo todo para disfrutar.','Start gently, learn as you play and let the Atlas raise the level. You do not need to know everything to enjoy it.')}</p>
 
         <div className="desafio-level-card">
-          <span>Nivel de cronista</span>
+          <span>{tr('Nivel de cronista','Chronicler level')}</span>
           <strong><Odometer value={progreso.nivel}/></strong>
-          <div><b>{progreso.titulo}</b><small>{estadisticas.totalAciertos} respuestas correctas acumuladas</small></div>
+          <div><b>{en?(['Apprentice','Chronicler','Genealogist','Counsellor','Master of the Atlas'][Math.min(4,progreso.nivel>=13?4:progreso.nivel>=9?3:progreso.nivel>=6?2:progreso.nivel>=3?1:0)]):progreso.titulo}</b><small>{estadisticas.totalAciertos} {tr('respuestas correctas acumuladas','correct answers in total')}</small></div>
         </div>
 
-        <SegmentedControl id={hubId} tabs label="Modos del desafío" options={HUB_TABS} value={hubTab} onChange={setHubTab}/>
+        <SegmentedControl id={hubId} tabs label={tr('Modos del desafío','Challenge modes')} options={en?[{value:'jugar',label:'Play'},{value:'aprender',label:'Learn'}]:HUB_TABS} value={hubTab} onChange={setHubTab}/>
         <div id={`${hubId}-panel-jugar`} role="tabpanel" aria-labelledby={`${hubId}-tab-jugar`} hidden={hubTab!=='jugar'} className="desafio-mode-grid desafio-mode-grid-v2">
-          <button type="button" className="desafio-mode-card is-daily" onClick={()=>{setModo('dinastle');const url=new URL(window.location.href);url.searchParams.set('juego','dinastle');window.history.replaceState(null,'',url);}}><span className="desafio-mode-icon"><Search size={21}/></span><em>Un personaje al día</em><strong>Dinastle</strong><span>8 intentos · pistas con cada propuesta</span><small>Casa, territorios, función, época y vínculos. Descubre al personaje de hoy o juega una partida libre.</small></button>
+          <button type="button" className="desafio-mode-card is-daily" onClick={()=>{setModo('dinastle');const url=new URL(window.location.href);url.searchParams.set('juego','dinastle');window.history.replaceState(null,'',url);}}><span className="desafio-mode-icon"><Search size={21}/></span><em>{tr('Un personaje al día','One person a day')}</em><strong>Dinastle</strong><span>{tr('8 intentos · pistas con cada propuesta','8 attempts · clues after every guess')}</span><small>{tr('Casa, territorios, función, época y vínculos. Descubre al personaje de hoy o juega una partida libre.','House, territories, role, period and relationships. Find today’s person or play a free game.')}</small></button>
           <button type="button" className="desafio-mode-card is-path" onClick={iniciarCamino}>
             <span className="desafio-mode-icon"><Sparkles size={21} /></span>
-            <em>Modo principal</em>
-            <strong>El Camino</strong>
-            <span>3 vidas · dificultad progresiva · partida abierta</span>
-            <small>Empiezas con duelos sencillos. Si encadenas aciertos, aparecen genealogía, sucesiones, cronología y acertijos.</small>
+            <em>{tr('Modo principal','Main mode')}</em>
+            <strong>{tr('El Camino','The Path')}</strong>
+            <span>{tr('3 vidas · dificultad progresiva · partida abierta','3 lives · progressive difficulty · open game')}</span>
+            <small>{tr('Empiezas con duelos sencillos. Si encadenas aciertos, aparecen genealogía, sucesiones, cronología y acertijos.','You begin with simple duels. Build a streak to unlock genealogy, successions, chronology and riddles.')}</small>
           </button>
 
           <button type="button" className="desafio-mode-card is-streak" onClick={iniciarRacha}>
             <span className="desafio-mode-icon"><Flame size={21} /></span>
-            <em>Récord personal</em>
-            <strong>Racha</strong>
-            <span>2 opciones · el ganador continúa</span>
-            <small>Un duelo tras otro. Cada respuesta correcta se queda en pantalla; el primer fallo termina la cadena.</small>
+            <em>{tr('Récord personal','Personal best')}</em>
+            <strong>{tr('Racha','Streak')}</strong>
+            <span>{tr('2 opciones · el ganador continúa','2 choices · the winner continues')}</span>
+            <small>{tr('Un duelo tras otro. Cada respuesta correcta se queda en pantalla; el primer fallo termina la cadena.','One duel after another. Each correct answer remains on screen; the first mistake ends the chain.')}</small>
           </button>
 
           <button type="button" className="desafio-mode-card is-portrait" onClick={iniciarRetratos}>
             <span className="desafio-mode-icon"><Search size={21} /></span>
-            <em>Reconocimiento visual</em>
-            <strong>Retratos</strong>
-            <span>Escribe · elige sugerencia · encadena aciertos</span>
-            <small>Observa un retrato y empieza a escribir el nombre. Las coincidencias aparecen debajo: no hace falta introducirlo exactamente.</small>
+            <em>{tr('Reconocimiento visual','Visual recognition')}</em>
+            <strong>{tr('Retratos','Portraits')}</strong>
+            <span>{tr('Escribe · elige sugerencia · encadena aciertos','Type · choose a suggestion · build a streak')}</span>
+            <small>{tr('Observa un retrato y empieza a escribir el nombre. Las coincidencias aparecen debajo: no hace falta introducirlo exactamente.','Study a portrait and start typing the name. Matches appear below; an exact spelling is not required.')}</small>
           </button>
 
           <button type="button" className="desafio-mode-card is-daily" onClick={iniciarDiario}>
             <span className="desafio-mode-icon"><CalendarDays size={21} /></span>
-            <em>{resultadoHoy ? "Completado hoy" : "Una vez al día"}</em>
-            <strong>Desafío diario</strong>
-            <span>{resultadoHoy ? `${resultadoHoy.score}/5 hoy` : "5 preguntas · iguales para todos"}</span>
-            <small>{resultadoHoy ? "Tu resultado de hoy está guardado. Vuelve mañana para un nuevo desafío." : "Una combinación diaria fija que puedes compartir sin revelar las respuestas."}</small>
+            <em>{resultadoHoy ? tr('Completado hoy','Completed today') : tr('Una vez al día','Once a day')}</em>
+            <strong>{tr('Desafío diario','Daily challenge')}</strong>
+            <span>{resultadoHoy ? `${resultadoHoy.score}/5 ${tr('hoy','today')}` : tr('5 preguntas · iguales para todos','5 questions · the same for everyone')}</span>
+            <small>{resultadoHoy ? tr('Tu resultado de hoy está guardado. Vuelve mañana para un nuevo desafío.','Today’s result is saved. Come back tomorrow for a new challenge.') : tr('Una combinación diaria fija que puedes compartir sin revelar las respuestas.','A fixed daily set you can share without revealing the answers.')}</small>
           </button>
         </div>
 
         <div id={`${hubId}-panel-aprender`} role="tabpanel" aria-labelledby={`${hubId}-tab-aprender`} hidden={hubTab!=='aprender'} className="desafio-mode-grid desafio-learning-grid">
-          <button type="button" className="desafio-mode-card" onClick={()=>startLesson('sucesiones')}><span className="desafio-mode-icon"><Swords size={21}/></span><em>Historia documentada</em><strong>Resolver una sucesión</strong><span>5 preguntas · personas y motivos</span><small>Herencia, elección, regencia o conquista: descubre cómo cambió el gobierno y consulta su explicación.</small></button>
-          <button type="button" className="desafio-mode-card" onClick={()=>startLesson('repaso')}><span className="desafio-mode-icon"><RotateCcw size={21}/></span><em>Práctica sin presión</em><strong>Repasar errores</strong><span>{review.length} preguntas pendientes</span><small>Vuelve a las preguntas que te han costado. Sin vidas, puntos ni cambios en tus récords.</small></button>
-          <button type="button" className="desafio-mode-card" onClick={()=>startLesson('compartido')}><span className="desafio-mode-icon"><Share2 size={21}/></span><em>Para jugar con amigos</em><strong>Desafío compartido</strong><span>Un enlace · la misma partida</span><small>Comparte cinco preguntas de sucesiones en el mismo orden y compara los aciertos.</small></button>
+          <button type="button" className="desafio-mode-card" onClick={()=>startLesson('sucesiones')}><span className="desafio-mode-icon"><Swords size={21}/></span><em>{tr('Historia documentada','Documented history')}</em><strong>{tr('Resolver una sucesión','Solve a succession')}</strong><span>{tr('5 preguntas · personas y motivos','5 questions · people and reasons')}</span><small>{tr('Herencia, elección, regencia o conquista: descubre cómo cambió el gobierno y consulta su explicación.','Inheritance, election, regency or conquest: discover how government changed and read the explanation.')}</small></button>
+          <button type="button" className="desafio-mode-card" onClick={()=>startLesson('repaso')}><span className="desafio-mode-icon"><RotateCcw size={21}/></span><em>{tr('Práctica sin presión','Pressure-free practice')}</em><strong>{tr('Repasar errores','Review mistakes')}</strong><span>{review.length} {tr('preguntas pendientes','questions pending')}</span><small>{tr('Vuelve a las preguntas que te han costado. Sin vidas, puntos ni cambios en tus récords.','Return to difficult questions, without lives, points or changes to your records.')}</small></button>
+          <button type="button" className="desafio-mode-card" onClick={()=>startLesson('compartido')}><span className="desafio-mode-icon"><Share2 size={21}/></span><em>{tr('Para jugar con amigos','Play with friends')}</em><strong>{tr('Desafío compartido','Shared challenge')}</strong><span>{tr('Un enlace · la misma partida','One link · the same game')}</span><small>{tr('Comparte cinco preguntas de sucesiones en el mismo orden y compara los aciertos.','Share five succession questions in the same order and compare scores.')}</small></button>
         </div>
         {reviewWarning && <p className="desafio-fineprint" role="status">{reviewWarning}</p>}
-        <div className="desafio-stats-grid desafio-stats-grid-wide" aria-label="Estadísticas del desafío">
-          <TarjetaEstadistica valor={estadisticas.mejorCamino} etiqueta="mejor Camino" />
-          <TarjetaEstadistica valor={estadisticas.mejorRachaDuelo} etiqueta="récord Racha" />
-          <TarjetaEstadistica valor={estadisticas.mejorRachaRetratos} etiqueta="récord Retratos" />
-          <TarjetaEstadistica valor={`${estadisticas.mejorDiario}/5`} etiqueta="mejor diario" />
-          <TarjetaEstadistica valor={`${precision}%`} etiqueta="precisión total" />
-          <TarjetaEstadistica valor={estadisticas.totalAciertos} etiqueta="aciertos" />
+        <div className="desafio-stats-grid desafio-stats-grid-wide" aria-label={tr('Estadísticas del desafío','Challenge statistics')}>
+          <TarjetaEstadistica valor={estadisticas.mejorCamino} etiqueta={tr('mejor Camino','best Path')} />
+          <TarjetaEstadistica valor={estadisticas.mejorRachaDuelo} etiqueta={tr('récord Racha','best Streak')} />
+          <TarjetaEstadistica valor={estadisticas.mejorRachaRetratos} etiqueta={tr('récord Retratos','best Portraits')} />
+          <TarjetaEstadistica valor={`${estadisticas.mejorDiario}/5`} etiqueta={tr('mejor diario','best daily')} />
+          <TarjetaEstadistica valor={`${precision}%`} etiqueta={tr('precisión total','total accuracy')} />
+          <TarjetaEstadistica valor={estadisticas.totalAciertos} etiqueta={tr('aciertos','correct')} />
         </div>
         {error && <div className="desafio-error" role="alert">{error}</div>}
-        <p className="desafio-fineprint">Tus récords se guardan únicamente en este navegador. El juego evita, cuando puede, repetir preguntas vistas recientemente.</p>
+        <p className="desafio-fineprint">{tr('Tus récords se guardan únicamente en este navegador. El juego evita, cuando puede, repetir preguntas vistas recientemente.','Your records are stored only in this browser. Whenever possible, the game avoids recently seen questions.')}</p>
       </section>
     );
   }
@@ -802,21 +805,21 @@ export default function Desafio({ personas = [] }) {
       const nuevoRecord = camino.ronda >= estadisticas.mejorCamino;
       return (
         <section className="desafio-shell desafio-final">
-          <div className="desafio-kicker">El Camino · recorrido terminado</div>
-          <div className="desafio-score"><strong>{camino.ronda}</strong><span> preguntas</span></div>
-          <h2>{camino.ronda >= 20 ? "Has cruzado media Europa" : camino.ronda >= 10 ? "Un gran recorrido" : "Ya conoces un poco más del atlas"}</h2>
-          {nuevoRecord && <div className="desafio-record"><Trophy size={14} /> Mejor recorrido personal</div>}
+          <div className="desafio-kicker">{tr('El Camino · recorrido terminado','The Path · journey complete')}</div>
+          <div className="desafio-score"><strong>{camino.ronda}</strong><span> {tr('preguntas','questions')}</span></div>
+          <h2>{camino.ronda >= 20 ? tr('Has cruzado media Europa','You crossed half of Europe') : camino.ronda >= 10 ? tr('Un gran recorrido','A great journey') : tr('Ya conoces un poco más del atlas','You know the Atlas a little better')}</h2>
+          {nuevoRecord && <div className="desafio-record"><Trophy size={14} /> {tr('Mejor recorrido personal','Personal best')}</div>}
 
           <div className="desafio-stats-grid">
-            <TarjetaEstadistica valor={camino.aciertos} etiqueta="aciertos" />
-            <TarjetaEstadistica valor={`${precision}%`} etiqueta="precisión" />
-            <TarjetaEstadistica valor={camino.mejorCombo} etiqueta="mejor combo" />
-            <TarjetaEstadistica valor={camino.puntos.toLocaleString("es-ES")} etiqueta="puntos" />
+            <TarjetaEstadistica valor={camino.aciertos} etiqueta={tr('aciertos','correct')} />
+            <TarjetaEstadistica valor={`${precision}%`} etiqueta={tr('precisión','accuracy')} />
+            <TarjetaEstadistica valor={camino.mejorCombo} etiqueta={tr('mejor combo','best combo')} />
+            <TarjetaEstadistica valor={camino.puntos.toLocaleString(en?'en-GB':'es-ES')} etiqueta={tr('puntos','points')} />
           </div>
 
           {!!camino.descubiertos.length && (
             <div className="desafio-discovered">
-              <span>Hoy has descubierto</span>
+              <span>{tr('Hoy has descubierto','Today you discovered')}</span>
               <div>{camino.descubiertos.slice(0, 3).map((id) => (
                 <button type="button" key={id} onClick={() => abrirAtlas(id)}>
                   {byId[id]?.nombre || id} <ExternalLink size={11} />
@@ -826,26 +829,26 @@ export default function Desafio({ personas = [] }) {
           )}
 
           <div className="desafio-final-actions">
-            <button type="button" className="desafio-primary" onClick={iniciarCamino}><RotateCcw size={14} /> Otro Camino</button>
-            <button type="button" className="desafio-secondary" onClick={volverAModos}>Cambiar de modo</button>
+            <button type="button" className="desafio-primary" onClick={iniciarCamino}><RotateCcw size={14} /> {tr('Otro Camino','Another Path')}</button>
+            <button type="button" className="desafio-secondary" onClick={volverAModos}>{tr('Cambiar de modo','Change mode')}</button>
           </div>
         </section>
       );
     }
 
-    const pregunta = camino.pregunta;
+    const pregunta = challengeQuestion(camino.pregunta,locale);
     const mult = multiplicador(camino.combo);
     return (
       <section className="desafio-shell desafio-play">
         <div className="desafio-progress-row desafio-camino-head">
           <div>
-            <span className="desafio-kicker">El Camino · ronda {camino.ronda}</span>
-            <strong>{describirDificultad(pregunta.dificultad)}</strong>
+            <span className="desafio-kicker">{tr('El Camino','The Path')} · {tr('ronda','round')} {camino.ronda}</span>
+            <strong>{challengeText(describirDificultad(pregunta.dificultad),locale)}</strong>
           </div>
           <div className="desafio-camino-status">
             <Corazones vidas={camino.vidas} />
             <span className={`desafio-combo${camino.combo >= 3 ? " is-hot" : ""}`}><Zap size={14} /> {camino.combo}{mult > 1 ? ` · x${mult}` : ""}</span>
-            <b>{camino.puntos.toLocaleString("es-ES")} pts</b>
+            <b>{camino.puntos.toLocaleString(en?'en-GB':'es-ES')} pts</b>
           </div>
         </div>
 
@@ -857,15 +860,15 @@ export default function Desafio({ personas = [] }) {
             <div className="desafio-clues">
               {pregunta.pistas.slice(0, camino.pistasVisibles).map((pista, index) => <div key={`${pista}-${index}`}><b>{index + 1}</b><span>{pista}</span></div>)}
               {!camino.respondida && camino.pistasVisibles < pregunta.pistas.length && (
-                <button type="button" onClick={otraPista}><Lightbulb size={13} /> Otra pista <small>−15% puntos</small></button>
+                <button type="button" onClick={otraPista}><Lightbulb size={13} /> {tr('Otra pista','Another clue')} <small>−15% {tr('puntos','points')}</small></button>
               )}
             </div>
           )}
 
-          {camino.hintVisible && pregunta.formato !== "pistas" && <div className="desafio-hint"><Lightbulb size={14} /><span>{pregunta.hint || "Fíjate en la cronología y las relaciones de la ficha."}</span></div>}
+          {camino.hintVisible && pregunta.formato !== "pistas" && <div className="desafio-hint"><Lightbulb size={14} /><span>{pregunta.hint || tr('Fíjate en la cronología y las relaciones de la ficha.','Look at the chronology and relationships in the profile.')}</span></div>}
 
           {pregunta.formato === "orden" ? (
-            <PreguntaOrden pregunta={pregunta} byId={byId} orden={camino.orden} respondida={camino.respondida} onPick={elegirOrdenCamino} />
+            <PreguntaOrden pregunta={pregunta} byId={byId} orden={camino.orden} respondida={camino.respondida} onPick={elegirOrdenCamino} locale={locale} />
           ) : (
             <PreguntaOpciones
               pregunta={pregunta}
@@ -874,14 +877,15 @@ export default function Desafio({ personas = [] }) {
               respondida={camino.respondida}
               hidden={camino.hidden}
               onSelect={responderCamino}
+              locale={locale}
             />
           )}
 
           {!camino.respondida && (
             <div className="desafio-lifelines">
-              <button type="button" disabled={!camino.comodines.fifty || pregunta.formato === "orden" || pregunta.opciones.length <= 2} onClick={usarFifty}><span>50/50</span><small>Elimina una opción</small></button>
-              <button type="button" disabled={!camino.comodines.hint} onClick={usarPista}><Lightbulb size={14} /><small>Pista</small></button>
-              <button type="button" disabled={!camino.comodines.swap} onClick={cambiarPregunta}><Shuffle size={14} /><small>Cambio</small></button>
+              <button type="button" disabled={!camino.comodines.fifty || pregunta.formato === "orden" || pregunta.opciones.length <= 2} onClick={usarFifty}><span>50/50</span><small>{tr('Elimina una opción','Remove one option')}</small></button>
+              <button type="button" disabled={!camino.comodines.hint} onClick={usarPista}><Lightbulb size={14} /><small>{tr('Pista','Hint')}</small></button>
+              <button type="button" disabled={!camino.comodines.swap} onClick={cambiarPregunta}><Shuffle size={14} /><small>{tr('Cambio','Swap')}</small></button>
             </div>
           )}
         </div>
@@ -893,10 +897,11 @@ export default function Desafio({ personas = [] }) {
             onContinue={continuarCamino}
             puedeAtlas={Boolean(pregunta.atlasPersonId && byId[pregunta.atlasPersonId])}
             onAtlas={() => abrirAtlas(pregunta.atlasPersonId)}
+            locale={locale}
           />
         )}
 
-        <button type="button" className="desafio-back desafio-back-bottom" onClick={volverAModos}><ArrowLeft size={13} /> Salir del Camino</button>
+        <button type="button" className="desafio-back desafio-back-bottom" onClick={volverAModos}><ArrowLeft size={13} /> {tr('Salir del Camino','Leave the Path')}</button>
       </section>
     );
   }
@@ -910,24 +915,25 @@ export default function Desafio({ personas = [] }) {
     const opcionesOrdenadas = campeonRacha
       ? [preguntaRacha.opciones.find((o) => o.id === campeonRacha), ...preguntaRacha.opciones.filter((o) => o.id !== campeonRacha)].filter(Boolean)
       : preguntaRacha.opciones;
-    const preguntaVisible = { ...preguntaRacha, opciones: opcionesOrdenadas };
+    const localizedRacha=challengeQuestion(preguntaRacha,locale);
+    const preguntaVisible = { ...localizedRacha, opciones: opcionesOrdenadas.map(option=>localizedRacha.opciones.find(item=>item.id===option.id)||option) };
 
     if (rachaTerminada) {
       return (
         <section className="desafio-shell desafio-final">
-          <div className="desafio-kicker">Racha terminada</div>
+          <div className="desafio-kicker">{tr('Racha terminada','Streak ended')}</div>
           <div className="desafio-score desafio-score-streak"><Flame size={30} /><strong>{rachaDuelo}</strong></div>
-          <h2>{rachaDuelo >= 15 ? "Una cadena histórica" : rachaDuelo >= 7 ? "Buena racha" : "La siguiente puede llegar más lejos"}</h2>
+          <h2>{rachaDuelo >= 15 ? tr('Una cadena histórica','A historic run') : rachaDuelo >= 7 ? tr('Buena racha','Great streak') : tr('La siguiente puede llegar más lejos','The next one can go further')}</h2>
           {seleccionRacha !== preguntaRacha.correctaId && (
             <div className="desafio-racha-answer">
-              <span><b>Elegiste:</b> {elegida?.label || "—"}</span>
-              <span><b>Era:</b> {correcta?.label || "—"}</span>
-              <p>{preguntaRacha.explicacion}</p>
+              <span><b>{tr('Elegiste:','You chose:')}</b> {preguntaVisible.opciones.find(item=>item.id===elegida?.id)?.label || "—"}</span>
+              <span><b>{tr('Era:','Correct answer:')}</b> {preguntaVisible.opciones.find(item=>item.id===correcta?.id)?.label || "—"}</span>
+              <p>{preguntaVisible.explicacion}</p>
             </div>
           )}
           <div className="desafio-final-actions">
-            <button type="button" className="desafio-primary" onClick={iniciarRacha}><RotateCcw size={14} /> Nueva racha</button>
-            <button type="button" className="desafio-secondary" onClick={volverAModos}>Cambiar de modo</button>
+            <button type="button" className="desafio-primary" onClick={iniciarRacha}><RotateCcw size={14} /> {tr('Nueva racha','New streak')}</button>
+            <button type="button" className="desafio-secondary" onClick={volverAModos}>{tr('Cambiar de modo','Change mode')}</button>
           </div>
         </section>
       );
@@ -936,12 +942,12 @@ export default function Desafio({ personas = [] }) {
     return (
       <section className="desafio-shell desafio-play desafio-racha-shell">
         <div className="desafio-progress-row">
-          <div><span className="desafio-kicker">Racha · el ganador continúa</span><strong>Elige una de las dos opciones</strong></div>
+          <div><span className="desafio-kicker">{tr('Racha · el ganador continúa','Streak · the winner stays')}</span><strong>{tr('Elige una de las dos opciones','Choose one of the two options')}</strong></div>
           <div className="desafio-streak-live"><Flame size={16} /> {rachaDuelo}</div>
         </div>
         <div className="desafio-question-card desafio-racha-card">
-          <div className="desafio-question-topline"><span>Duelo rápido</span><small>1 fallo = fin</small></div>
-          <h2>{preguntaRacha.pregunta}</h2>
+          <div className="desafio-question-topline"><span>{tr('Duelo rápido','Quick duel')}</span><small>{tr('1 fallo = fin','1 mistake = game over')}</small></div>
+          <h2>{preguntaVisible.pregunta}</h2>
           <div className="desafio-racha-motion">
             <PreguntaOpciones
               pregunta={preguntaVisible}
@@ -950,12 +956,13 @@ export default function Desafio({ personas = [] }) {
               respondida={seleccionRacha !== null}
               onSelect={responderRacha}
               campeonId={campeonRacha}
+              locale={locale}
             />
           </div>
         </div>
-        {seleccionRacha!==null && <Explicacion correcta={seleccionRacha===preguntaRacha.correctaId} pregunta={preguntaRacha} onContinue={continuarRacha} puedeAtlas={!!byId[preguntaRacha.atlasPersonId]} onAtlas={()=>abrirAtlas(preguntaRacha.atlasPersonId)}/>}
-        <div className="desafio-racha-rule">La respuesta correcta se queda para el siguiente duelo. Si fallas, la racha termina.</div>
-        <button type="button" className="desafio-back desafio-back-bottom" onClick={volverAModos}><ArrowLeft size={13} /> Salir de Racha</button>
+        {seleccionRacha!==null && <Explicacion correcta={seleccionRacha===preguntaRacha.correctaId} pregunta={preguntaVisible} onContinue={continuarRacha} puedeAtlas={!!byId[preguntaRacha.atlasPersonId]} onAtlas={()=>abrirAtlas(preguntaRacha.atlasPersonId)} locale={locale}/>}
+        <div className="desafio-racha-rule">{tr('La respuesta correcta se queda para el siguiente duelo. Si fallas, la racha termina.','The correct answer stays for the next duel. One mistake ends the streak.')}</div>
+        <button type="button" className="desafio-back desafio-back-bottom" onClick={volverAModos}><ArrowLeft size={13} /> {tr('Salir de Racha','Leave Streak')}</button>
       </section>
     );
   }
@@ -970,26 +977,26 @@ export default function Desafio({ personas = [] }) {
     if (retratosTerminada) {
       return (
         <section className="desafio-shell desafio-final desafio-portrait-final">
-          <div className="desafio-kicker">Retratos · racha terminada</div>
+          <div className="desafio-kicker">{tr('Retratos · racha terminada','Portraits · streak ended')}</div>
           <div className="desafio-score desafio-score-streak"><Search size={30} /><strong>{rachaRetratos}</strong></div>
-          <h2>{rachaRetratos >= 12 ? "Ojo de retratista" : rachaRetratos >= 5 ? "Buena memoria visual" : "La siguiente mirada llegará más lejos"}</h2>
+          <h2>{rachaRetratos >= 12 ? tr('Ojo de retratista','Portrait expert') : rachaRetratos >= 5 ? tr('Buena memoria visual','Great visual memory') : tr('La siguiente mirada llegará más lejos','The next look can go further')}</h2>
           <div className="desafio-portrait-result">
             {imagen?.archivo && (
               <span className="desafio-portrait-result-image">
-                <img {...responsiveImage(imagen.archivo, '96px')} alt={`Retrato de ${personaRetrato.nombre}`} style={{ objectPosition: imagen.encuadre || imagen.posicion || "50% 20%" }} />
+                <img {...responsiveImage(imagen.archivo, '96px')} alt={`${tr('Retrato de','Portrait of')} ${personaRetrato.nombre}`} style={{ objectPosition: imagen.encuadre || imagen.posicion || "50% 20%" }} />
               </span>
             )}
             <div>
-              <span><b>Elegiste:</b> {elegida?.nombre || "—"}</span>
-              <span><b>Era:</b> {personaRetrato.nombre}</span>
+              <span><b>{tr('Elegiste:','You chose:')}</b> {elegida?.nombre || "—"}</span>
+              <span><b>{tr('Era:','Correct answer:')}</b> {personaRetrato.nombre}</span>
               <small>{[personaRetrato.titulo, personaRetrato.dinastia].filter(Boolean).join(" · ")}</small>
             </div>
           </div>
           <p className="desafio-intro">{resumenCortoPersona(personaRetrato)}</p>
           <div className="desafio-final-actions">
-            <button type="button" className="desafio-primary" onClick={iniciarRetratos}><RotateCcw size={14} /> Nueva racha de retratos</button>
-            <button type="button" className="desafio-secondary" onClick={() => abrirAtlas(personaRetrato.id)}>Ver en el atlas <ExternalLink size={13} /></button>
-            <button type="button" className="desafio-secondary" onClick={volverAModos}>Cambiar de modo</button>
+            <button type="button" className="desafio-primary" onClick={iniciarRetratos}><RotateCcw size={14} /> {tr('Nueva racha de retratos','New portrait streak')}</button>
+            <button type="button" className="desafio-secondary" onClick={() => abrirAtlas(personaRetrato.id)}>{tr('Ver en el atlas','View in the Atlas')} <ExternalLink size={13} /></button>
+            <button type="button" className="desafio-secondary" onClick={volverAModos}>{tr('Cambiar de modo','Change mode')}</button>
           </div>
         </section>
       );
@@ -998,18 +1005,18 @@ export default function Desafio({ personas = [] }) {
     return (
       <section className="desafio-shell desafio-play desafio-portrait-shell">
         <div className="desafio-progress-row">
-          <div><span className="desafio-kicker">Retratos · identifica al personaje</span><strong>Empieza a escribir su nombre</strong></div>
+          <div><span className="desafio-kicker">{tr('Retratos · identifica al personaje','Portraits · identify the person')}</span><strong>{tr('Empieza a escribir su nombre','Start typing their name')}</strong></div>
           <div className="desafio-streak-live"><Flame size={16} /> {rachaRetratos}</div>
         </div>
 
         <div className="desafio-question-card desafio-portrait-card">
-          <div className="desafio-question-topline"><span>Racha visual</span><small>1 fallo = fin</small></div>
-          <h2>¿Quién aparece en este retrato?</h2>
+          <div className="desafio-question-topline"><span>{tr('Racha visual','Visual streak')}</span><small>{tr('1 fallo = fin','1 mistake = game over')}</small></div>
+          <h2>{tr('¿Quién aparece en este retrato?','Who appears in this portrait?')}</h2>
           <div className="desafio-portrait-stage">
             {imagen?.archivo ? (
               <img
                 {...responsiveImage(imagen.archivo, '(max-width: 600px) 80vw, 310px')}
-                alt="Retrato histórico por identificar"
+                alt={tr('Retrato histórico por identificar','Historical portrait to identify')}
                 draggable="false"
                 style={{
                   objectPosition: imagen.encuadre || imagen.posicion || "50% 20%",
@@ -1020,7 +1027,7 @@ export default function Desafio({ personas = [] }) {
           </div>
 
           <div className="desafio-name-entry">
-            <label htmlFor="desafio-retrato-nombre">Nombre del personaje</label>
+            <label htmlFor="desafio-retrato-nombre">{tr('Nombre del personaje','Person’s name')}</label>
             <div className="desafio-name-input">
               <Search size={16} />
               <input
@@ -1031,7 +1038,7 @@ export default function Desafio({ personas = [] }) {
                 disabled={Boolean(seleccionRetratoId)}
                 autoComplete="off"
                 spellCheck="false"
-                placeholder="Ej. Carlos V, Catalina de Médici…"
+                placeholder={tr('Ej. Carlos V, Catalina de Médici…','E.g. Charles V, Catherine de’ Medici…')}
                 onChange={(event) => setConsultaRetrato(event.target.value)}
                 onKeyDown={(event) => {
                   if (event.key === "Enter" && sugerenciasRetrato[0]) {
@@ -1041,25 +1048,25 @@ export default function Desafio({ personas = [] }) {
                 }}
               />
             </div>
-            <small>Escribe solo una parte. Elige una de las coincidencias; no necesitas poner el nombre exacto.</small>
+            <small>{tr('Escribe solo una parte. Elige una de las coincidencias; no necesitas poner el nombre exacto.','Type only part of the name and choose a match; exact spelling is not required.')}</small>
 
             {!!consultaRetrato.trim() && !seleccionRetratoId && (
-              <div className="desafio-name-suggestions" role="listbox" aria-label="Sugerencias de nombres">
+              <div className="desafio-name-suggestions" role="listbox" aria-label={tr('Sugerencias de nombres','Name suggestions')}>
                 {sugerenciasRetrato.length ? sugerenciasRetrato.map((persona) => (
                   <button type="button" key={persona.id} role="option" onClick={() => responderRetrato(persona.id)}>
                     <strong>{persona.nombre}</strong>
-                    <span>{[persona.titulo, persona.dinastia].filter(Boolean).join(" · ") || "Personaje histórico"}</span>
+                    <span>{[persona.titulo, persona.dinastia].filter(Boolean).join(" · ") || tr('Personaje histórico','Historical person')}</span>
                   </button>
-                )) : <div className="desafio-name-empty">No encuentro coincidencias. Prueba con otra parte del nombre.</div>}
+                )) : <div className="desafio-name-empty">{tr('No encuentro coincidencias. Prueba con otra parte del nombre.','No matches found. Try another part of the name.')}</div>}
               </div>
             )}
 
 
           </div>
         </div>
-        {seleccionRetratoId===personaRetrato.id && <Explicacion correcta pregunta={{explicacion:`${personaRetrato.nombre}. ${resumenCortoPersona(personaRetrato)}`}} onContinue={continuarRetrato} puedeAtlas onAtlas={()=>abrirAtlas(personaRetrato.id)}/>}
-        <div className="desafio-racha-rule">Cada acierto trae un nuevo retrato. La dificultad visual aumenta poco a poco y el primer fallo cierra la racha.</div>
-        <button type="button" className="desafio-back desafio-back-bottom" onClick={volverAModos}><ArrowLeft size={13} /> Salir de Retratos</button>
+        {seleccionRetratoId===personaRetrato.id && <Explicacion correcta pregunta={{explicacion:`${personaRetrato.nombre}. ${resumenCortoPersona(personaRetrato)}`}} onContinue={continuarRetrato} puedeAtlas onAtlas={()=>abrirAtlas(personaRetrato.id)} locale={locale}/>}
+        <div className="desafio-racha-rule">{tr('Cada acierto trae un nuevo retrato. La dificultad visual aumenta poco a poco y el primer fallo cierra la racha.','Each correct answer reveals a new portrait. Visual difficulty rises gradually, and the first mistake ends the streak.')}</div>
+        <button type="button" className="desafio-back desafio-back-bottom" onClick={volverAModos}><ArrowLeft size={13} /> {tr('Salir de Retratos','Leave Portraits')}</button>
       </section>
     );
   }
@@ -1073,52 +1080,52 @@ export default function Desafio({ personas = [] }) {
       const score = registro?.score ?? 0;
       return (
         <section className="desafio-shell desafio-final desafio-daily-final">
-          <div className="desafio-kicker">Desafío diario · {fechaHoy}</div>
-          <div className="desafio-daily-blocks" aria-label={`${score} de 5`}>
+          <div className="desafio-kicker">{tr('Desafío diario','Daily challenge')} · {fechaHoy}</div>
+          <div className="desafio-daily-blocks" aria-label={`${score} ${tr('de','of')} 5`}>
             {(registro?.resultados || []).map((ok, index) => <span key={index} className={ok ? "is-good" : "is-bad"} />)}
           </div>
           <div className="desafio-score"><strong>{score}</strong><span>/ 5</span></div>
-          <h2>{score === 5 ? "Pleno histórico" : score >= 3 ? "Buen día en el atlas" : "Mañana hay otra oportunidad"}</h2>
-          <p className="desafio-intro">El resultado queda guardado en este navegador. El próximo desafío cambia al comenzar un nuevo día.</p>
+          <h2>{score === 5 ? tr('Pleno histórico','A perfect history score') : score >= 3 ? tr('Buen día en el atlas','A good day in the Atlas') : tr('Mañana hay otra oportunidad','Tomorrow is another chance')}</h2>
+          <p className="desafio-intro">{tr('El resultado queda guardado en este navegador. El próximo desafío cambia al comenzar un nuevo día.','The result is saved in this browser. A new challenge begins on the next day.')}</p>
           <div className="desafio-final-actions">
-            <button type="button" className="desafio-primary" onClick={compartirDiario}><Share2 size={14} /> Compartir resultado</button>
-            <button type="button" className="desafio-secondary" onClick={volverAModos}>Volver a modos</button>
+            <button type="button" className="desafio-primary" onClick={compartirDiario}><Share2 size={14} /> {tr('Compartir resultado','Share result')}</button>
+            <button type="button" className="desafio-secondary" onClick={volverAModos}>{tr('Volver a modos','Back to modes')}</button>
           </div>
           {shareStatus && <div className="desafio-share-status">{shareStatus}</div>}
         </section>
       );
     }
 
-    const pregunta = daily.preguntas[daily.indice];
+    const pregunta = challengeQuestion(daily.preguntas[daily.indice],locale);
     const respondida = daily.seleccion !== null;
     return (
       <section className="desafio-shell desafio-play desafio-daily-shell">
         <div className="desafio-progress-row">
-          <div><span className="desafio-kicker">Desafío diario · {fechaHoy}</span><strong>Pregunta {daily.indice + 1} de 5</strong></div>
+          <div><span className="desafio-kicker">{tr('Desafío diario','Daily challenge')} · {fechaHoy}</span><strong>{tr('Pregunta','Question')} {daily.indice + 1} {tr('de','of')} 5</strong></div>
           <div className="desafio-daily-mini">{daily.resultados.map((ok, i) => <span key={i} className={ok ? "is-good" : "is-bad"} />)}</div>
         </div>
         <div className="desafio-progress"><span style={{ width: `${((daily.indice + (respondida ? 1 : 0)) / 5) * 100}%` }} /></div>
         <div className="desafio-question-card">
-          <div className="desafio-question-topline"><span>{pregunta.etiqueta}</span><small>Igual para todos hoy</small></div>
+          <div className="desafio-question-topline"><span>{pregunta.etiqueta}</span><small>{tr('Igual para todos hoy','The same for everyone today')}</small></div>
           <h2>{pregunta.pregunta}</h2>
           {pregunta.formato === "orden" ? (
-            <PreguntaOrden pregunta={pregunta} byId={byId} orden={daily.orden} respondida={respondida} onPick={elegirOrdenDiario} />
+            <PreguntaOrden pregunta={pregunta} byId={byId} orden={daily.orden} respondida={respondida} onPick={elegirOrdenDiario} locale={locale} />
           ) : (
-            <PreguntaOpciones pregunta={pregunta} byId={byId} seleccion={daily.seleccion} respondida={respondida} onSelect={responderDiario} />
+            <PreguntaOpciones pregunta={pregunta} byId={byId} seleccion={daily.seleccion} respondida={respondida} onSelect={responderDiario} locale={locale} />
           )}
         </div>
         {respondida && (
-          <Explicacion correcta={daily.aciertoActual} pregunta={pregunta} onContinue={()=>avanzarDiario(daily)} puedeAtlas={!!byId[pregunta.atlasPersonId]} onAtlas={()=>abrirAtlas(pregunta.atlasPersonId)}/>
+          <Explicacion correcta={daily.aciertoActual} pregunta={pregunta} onContinue={()=>avanzarDiario(daily)} puedeAtlas={!!byId[pregunta.atlasPersonId]} onAtlas={()=>abrirAtlas(pregunta.atlasPersonId)} locale={locale}/>
         )}
-        <button type="button" className="desafio-back desafio-back-bottom" onClick={volverAModos}><ArrowLeft size={13} /> Salir</button>
+        <button type="button" className="desafio-back desafio-back-bottom" onClick={volverAModos}><ArrowLeft size={13} /> {tr('Salir','Leave')}</button>
       </section>
     );
   }
 
   return (
     <section className="desafio-shell">
-      <div className="desafio-error" role="alert">No se ha podido abrir este modo.</div>
-      <button type="button" className="desafio-secondary" onClick={volverAModos}><RefreshCw size={13} /> Volver</button>
+      <div className="desafio-error" role="alert">{tr('No se ha podido abrir este modo.','This mode could not be opened.')}</div>
+      <button type="button" className="desafio-secondary" onClick={volverAModos}><RefreshCw size={13} /> {tr('Volver','Back')}</button>
     </section>
   );
 }

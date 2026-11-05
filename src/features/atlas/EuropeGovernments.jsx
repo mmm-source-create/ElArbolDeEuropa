@@ -5,6 +5,8 @@ import {AUTHORITY_LABELS} from '../../cartography/mapAuthorities.js';
 import {COLLECTIVE_AUTHORITIES} from '../../cartography/politicalMapIndex.js';
 import {componentesDe} from '../../data/territorios.js';
 import {FILTER_REGIONS,regionResolver} from '../../domain/filters/filterRegions.js';
+import {englishLabel,englishNote} from '../english/v6/atlasPresentation.js';
+import {translatedEquivalent} from '../english/routes.js';
 
 const {personRegion}=regionResolver(componentesDe);
 // Entities of the government table that are not components of a mapped root.
@@ -32,40 +34,45 @@ export function governmentRegion(row){
  return personRegion([row.label,...row.governments.flatMap(g=>g.mandates.map(m=>m.territorio)),...(row.collectives||[]).map(c=>c.territorio)]);
 }
 
-function Ruler({group}){
+function Ruler({group,locale='es'}){
+ const en=locale==='en',term=value=>en?englishLabel(value):value,note=value=>en?englishNote(value):value;
  return <div className="europe-ruler">
   <button type="button" data-person={group.person.id}>{group.person.nombre} <span aria-hidden="true">↗</span></button>
   {/* Plain sovereign rule is the norm; only the exceptions get a label. */}
-  {(group.id==='sacro-imperio'||group.kinds.some(kind=>kind!=='sovereign'))&&<small>{group.id==='sacro-imperio'?'Dignidad imperial y realeza de Romanos':group.kinds.filter(kind=>kind!=='sovereign').map(kind=>AUTHORITY_LABELS[kind]).join(' · ')}</small>}
-  <details><summary>{group.mandates.length===1?group.mandates[0].titulo:`${group.mandates.length} títulos y mandatos`}</summary>
-   <ul>{group.mandates.map((m,i)=><li key={i}><a href={`/es/territorio/${slugPublico(m.territorio)}`}>{m.territorio}</a> · {m.titulo} · {m.desde}–{m.hasta}{m.condicion!=='efectivo'?` · ${m.condicion}`:''}{m.nota&&<p>{m.nota}</p>}</li>)}</ul>
-   {group.note&&<p>{group.note} {group.source&&<a href={group.source} target="_blank" rel="noreferrer">Fuente de la agrupación</a>}</p>}
+  {(group.id==='sacro-imperio'||group.kinds.some(kind=>kind!=='sovereign'))&&<small>{group.id==='sacro-imperio'?(en?'Imperial dignity and kingship of the Romans':'Dignidad imperial y realeza de Romanos'):group.kinds.filter(kind=>kind!=='sovereign').map(kind=>term(AUTHORITY_LABELS[kind])).join(' · ')}</small>}
+  <details><summary>{group.mandates.length===1?term(group.mandates[0].titulo):`${group.mandates.length} ${en?'titles and offices':'títulos y mandatos'}`}</summary>
+   <ul>{group.mandates.map((m,i)=>{const esPath=`/es/territorio/${slugPublico(m.territorio)}`;return <li key={i}><a href={en?(translatedEquivalent(esPath,'en')||esPath):esPath}>{term(m.territorio)}</a> · {term(m.titulo)} · {m.desde}–{m.hasta}{m.condicion!=='efectivo'?` · ${term(m.condicion)}`:''}{m.nota&&<p>{note(m.nota)}</p>}</li>;})}</ul>
+   {group.note&&<p>{note(group.note)} {group.source&&<a href={group.source} target="_blank" rel="noreferrer">{en?'Source for this grouping':'Fuente de la agrupación'}</a>}</p>}
   </details>
  </div>;
 }
 
-function Collective({collective}){
- return <div className="europe-ruler"><strong>{collective.nombre}</strong><small>{collective.cargo} · {collective.desde}–{collective.hasta}</small><details><summary>Gobierno institucional y fuentes</summary><p>{collective.nota}</p><a href={collective.fuente.url}>{collective.fuente.title}</a></details></div>;
+function Collective({collective,locale='es'}){
+ const en=locale==='en';
+ return <div className="europe-ruler"><strong>{en?englishLabel(collective.nombre):collective.nombre}</strong><small>{en?englishLabel(collective.cargo):collective.cargo} · {collective.desde}–{collective.hasta}</small><details><summary>{en?'Institutional government and sources':'Gobierno institucional y fuentes'}</summary><p>{en?englishNote(collective.nota):collective.nota}</p><a href={collective.fuente.url}>{collective.fuente.title}</a></details></div>;
 }
 
-function EntityCard({row}){
+function EntityCard({row,locale='es'}){
+ const en=locale==='en';
  return <article className="europe-entity" style={{'--entity-color':row.color}}>
-  <h4><i aria-hidden="true"/>{row.label}</h4>
-  {row.governments.map(group=><Ruler key={group.person.id+group.key} group={group}/>)}
-  {row.collectives?.map((c,i)=><Collective key={c.nombre+i} collective={c}/>)}
-  {row.governments.some(a=>row.governments.some(b=>a.person.id!==b.person.id&&a.mandates.some(m=>b.mandates.some(n=>m.hasta===n.desde))))&&<p className="europe-note">Hay un relevo dentro del año; las fechas anuales no prueban simultaneidad.</p>}
+  <h4><i aria-hidden="true"/>{en?englishLabel(row.label):row.label}</h4>
+  {row.governments.map(group=><Ruler key={group.person.id+group.key} group={group} locale={locale}/>)}
+  {row.collectives?.map((c,i)=><Collective key={c.nombre+i} collective={c} locale={locale}/>)}
+  {row.governments.some(a=>row.governments.some(b=>a.person.id!==b.person.id&&a.mandates.some(m=>b.mandates.some(n=>m.hasta===n.desde))))&&<p className="europe-note">{en?'A succession occurs within the year; annual dates do not prove simultaneous rule.':'Hay un relevo dentro del año; las fechas anuales no prueban simultaneidad.'}</p>}
  </article>;
 }
 
-function EntityRow({row}){
+function EntityRow({row,locale='es'}){
+ const en=locale==='en',term=value=>en?englishLabel(value):value;
  const rulers=[...row.governments.map(g=>({key:g.person.id+g.key,id:g.person.id,name:g.person.nombre,title:[g.mandates[0]?.titulo,...g.kinds.filter(kind=>kind!=='sovereign').map(kind=>AUTHORITY_LABELS[kind])].filter(Boolean).join(' · ')})),...(row.collectives||[]).map((c,i)=>({key:c.nombre+i,name:c.nombre,title:c.cargo}))];
  return <li className="europe-entity-row" style={{'--entity-color':row.color}}>
-  <i aria-hidden="true"/><h4>{row.label}</h4>
-  <span>{rulers.map((r,i)=><React.Fragment key={r.key}>{i>0&&', '}{r.id?<button type="button" data-person={r.id}>{r.name}</button>:<b>{r.name}</b>}{r.title&&<small> · {r.title}</small>}</React.Fragment>)}</span>
+  <i aria-hidden="true"/><h4>{term(row.label)}</h4>
+  <span>{rulers.map((r,i)=><React.Fragment key={r.key}>{i>0&&', '}{r.id?<button type="button" data-person={r.id}>{r.name}</button>:<b>{term(r.name)}</b>}{r.title&&<small> · {r.title.split(' · ').map(term).join(' · ')}</small>}</React.Fragment>)}</span>
  </li>;
 }
 
-export default function GovernmentsTable({people,year,onSelect=()=>{}}) {
+export default function GovernmentsTable({people,year,onSelect=()=>{},locale='es'}) {
+ const en=locale==='en',tr=(es,english)=>en?english:es;
  const [query,setQuery]=useState('');
  const [region,setRegion]=useState('all');
  const rows=useMemo(()=>governmentTableAt(people,year,COLLECTIVE_AUTHORITIES).map(row=>({...row,tier:governmentTier(row),region:governmentRegion(row)})),[people,year]);
@@ -78,20 +85,20 @@ export default function GovernmentsTable({people,year,onSelect=()=>{}}) {
  // One click handler for every ruler button keeps the cards free of callbacks.
  const pick=event=>{const id=event.target.closest('button[data-person]')?.dataset.person;if(id)onSelect(id);};
  return <section className="europe-governments" aria-labelledby="europe-governments-title">
-  <div className="europe-section-heading"><div><span>El poder, por regiones</span><h2 id="europe-governments-title">Quién gobierna en {year}</h2></div><label>Buscar entidad o gobernante<input type="search" value={query} onChange={e=>setQuery(e.target.value)} placeholder="España, Carlos, Bohemia…"/></label></div>
-  <p className="europe-note">{rows.length} conjuntos políticos, {majors} de ellos reinos o imperios. Las coronas encabezan cada región; ducados, señoríos y repúblicas siguen en lista. Regencias, gobiernos delegados y soberanías conservan su condición.</p>
-  {regions.length>1&&<div className="europe-filter-pills" role="group" aria-label="Región">
-   <button type="button" aria-pressed={currentRegion==='all'} onClick={()=>setRegion('all')}>Todas <b>{matching.length}</b></button>
-   {regions.map(r=><button key={r.name} type="button" aria-pressed={currentRegion===r.name} onClick={()=>setRegion(r.name)}>{r.name} <b>{r.count}</b></button>)}
+  <div className="europe-section-heading"><div><span>{tr('El poder, por regiones','Power by region')}</span><h2 id="europe-governments-title">{tr('Quién gobierna en','Who rules in')} {year}</h2></div><label>{tr('Buscar entidad o gobernante','Search entity or ruler')}<input type="search" value={query} onChange={e=>setQuery(e.target.value)} placeholder={tr('España, Carlos, Bohemia…','Spain, Charles, Bohemia…')}/></label></div>
+  <p className="europe-note">{en?`${rows.length} political groupings, ${majors} of them kingdoms or empires. Crowns lead each region; duchies, lordships and republics follow. Regencies, delegated governments and sovereignties retain their recorded status.`:`${rows.length} conjuntos políticos, ${majors} de ellos reinos o imperios. Las coronas encabezan cada región; ducados, señoríos y repúblicas siguen en lista. Regencias, gobiernos delegados y soberanías conservan su condición.`}</p>
+  {regions.length>1&&<div className="europe-filter-pills" role="group" aria-label={tr('Región','Region')}>
+   <button type="button" aria-pressed={currentRegion==='all'} onClick={()=>setRegion('all')}>{tr('Todas','All')} <b>{matching.length}</b></button>
+   {regions.map(r=><button key={r.name} type="button" aria-pressed={currentRegion===r.name} onClick={()=>setRegion(r.name)}>{en?englishLabel(r.name):r.name} <b>{r.count}</b></button>)}
   </div>}
   <div onClick={pick}>{shown.map(({name})=>{
    const inRegion=matching.filter(r=>r.region===name),major=inRegion.filter(r=>r.tier===0),minor=inRegion.filter(r=>r.tier===1);
-   return <section className="europe-region" key={name} aria-label={name}>
-    <h3>{name} <span>{inRegion.length}</span></h3>
-    {major.length>0&&<div className="europe-ruler-grid">{major.map(row=><EntityCard key={row.id} row={row}/>)}</div>}
-    {minor.length>0&&<ul className="europe-ruler-grid europe-ruler-list">{minor.map(row=><EntityRow key={row.id} row={row}/>)}</ul>}
+   return <section className="europe-region" key={name} aria-label={en?englishLabel(name):name}>
+    <h3>{en?englishLabel(name):name} <span>{inRegion.length}</span></h3>
+    {major.length>0&&<div className="europe-ruler-grid">{major.map(row=><EntityCard key={row.id} row={row} locale={locale}/>)}</div>}
+    {minor.length>0&&<ul className="europe-ruler-grid europe-ruler-list">{minor.map(row=><EntityRow key={row.id} row={row} locale={locale}/>)}</ul>}
    </section>;
   })}</div>
-  {!matching.length&&<p>No hay gobiernos que coincidan con esta búsqueda y año.</p>}
+  {!matching.length&&<p>{tr('No hay gobiernos que coincidan con esta búsqueda y año.','No governments match this search and year.')}</p>}
  </section>;
 }

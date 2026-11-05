@@ -8,27 +8,28 @@ import TreeAccessibleList from '../TreeAccessibleList.jsx';
 
 // Lienzo del árbol con minimapa, zoom y lista accesible.
 export default function AtlasTreeStage({vm, setGuideOpen, setTreeListOpen, treeListOpen}) {
-  const {anioGlobal, cambiarZoomArbol, canvasSize, collapsedIds, connectorLayerKey, connectors, endDrag, getExportSelection, hiddenByCollapse, historiaActiva, miniScaleX, miniScaleY, mode, modoTrabajo, mostrarMapa, onMinimapClick, onPointerDown, onPointerMove, positions, renderPersonBox, renderedTreeUnits, scrollBy, scrollRef, seleccion, seleccionarPersonaPorId, setCollapsedIds, visiblePeople, zoom} = vm;
+  const {anioGlobal, cambiarZoomArbol, canvasSize, collapsedIds, connectorLayerKey, connectors, endDrag, getExportSelection, hiddenByCollapse, historiaActiva, locale, miniScaleX, miniScaleY, mode, modoTrabajo, mostrarMapa, onMinimapClick, onPointerDown, onPointerMove, positions, renderPersonBox, renderedTreeUnits, scrollBy, scrollRef, seleccion, seleccionarPersonaPorId, setCollapsedIds, visiblePeople, zoom} = vm;
+  const en=locale==='en',tr=(es,english)=>en?english:es;
   return (
-    <section className={`workspace-stage sk dim workspace-tree-stage${mostrarMapa ? " tree-with-map" : ""}${historiaActiva ? " story-tree-stage" : ""}${treeListOpen ? " showing-list" : ""}`} aria-label="Árbol genealógico">
-              <div className="tree-toolbar" aria-label="Controles del árbol">
-                <span className="tree-scope-label sk" style={{"--sk-index":2}}>{visiblePeople.length} personas</span>
-                {modoTrabajo && <TreeExport getSelection={getExportSelection} />}
-                <button type="button" className="nav-btn tree-list-toggle" aria-label={treeListOpen ? 'Mostrar árbol gráfico' : 'Mostrar personas como lista accesible'} title={treeListOpen ? 'Árbol gráfico' : 'Lista accesible'} aria-pressed={treeListOpen} onClick={() => setTreeListOpen(open => !open)}><List size={14} aria-hidden="true" /></button>
-                <button type="button" className="nav-btn" onClick={() => cambiarZoomArbol(zoom - 0.1)} title="Alejar árbol" aria-label="Alejar árbol"><ZoomOut size={13} /></button>
-                <button type="button" className="nav-btn" onClick={() => cambiarZoomArbol(0.8)} title="Restablecer árbol" aria-label="Restablecer árbol"><RotateCcw size={12} /></button>
-                <button type="button" className="nav-btn" onClick={() => cambiarZoomArbol(zoom + 0.1)} title="Acercar árbol" aria-label="Acercar árbol"><ZoomIn size={13} /></button>
+    <section className={`workspace-stage sk dim workspace-tree-stage${mostrarMapa ? " tree-with-map" : ""}${historiaActiva ? " story-tree-stage" : ""}${treeListOpen ? " showing-list" : ""}`} aria-label={tr('Árbol genealógico','Family tree')}>
+              <div className="tree-toolbar" aria-label={tr('Controles del árbol','Tree controls')}>
+                <span className="tree-scope-label sk" style={{"--sk-index":2}}>{visiblePeople.length} {tr('personas','people')}</span>
+                {modoTrabajo && <TreeExport getSelection={getExportSelection} label={tr('Exportar árbol','Export tree')} locale={locale} />}
+                <button type="button" className="nav-btn tree-list-toggle" aria-label={treeListOpen ? tr('Mostrar árbol gráfico','Show graphic tree') : tr('Mostrar personas como lista accesible','Show people as an accessible list')} title={treeListOpen ? tr('Árbol gráfico','Graphic tree') : tr('Lista accesible','Accessible list')} aria-pressed={treeListOpen} onClick={() => setTreeListOpen(open => !open)}><List size={14} aria-hidden="true" /></button>
+                <button type="button" className="nav-btn" onClick={() => cambiarZoomArbol(zoom - 0.1)} title={tr('Alejar árbol','Zoom tree out')} aria-label={tr('Alejar árbol','Zoom tree out')}><ZoomOut size={13} /></button>
+                <button type="button" className="nav-btn" onClick={() => cambiarZoomArbol(0.8)} title={tr('Restablecer árbol','Reset tree')} aria-label={tr('Restablecer árbol','Reset tree')}><RotateCcw size={12} /></button>
+                <button type="button" className="nav-btn" onClick={() => cambiarZoomArbol(zoom + 0.1)} title={tr('Acercar árbol','Zoom tree in')} aria-label={tr('Acercar árbol','Zoom tree in')}><ZoomIn size={13} /></button>
               </div>
 
               {mode !== "conexion" && collapsedIds.length > 0 && (
                 <div className="branch-collapse-bar branch-collapse-bar-floating">
-                  <span>{collapsedIds.length} rama{collapsedIds.length === 1 ? "" : "s"} cerrada{collapsedIds.length === 1 ? "" : "s"} · {hiddenByCollapse.size} fichas ocultas</span>
-                  <button type="button" onClick={() => setCollapsedIds([])}>Abrir todas</button>
+                  <span>{en?`${collapsedIds.length} closed ${collapsedIds.length===1?'branch':'branches'} · ${hiddenByCollapse.size} hidden profiles`:`${collapsedIds.length} rama${collapsedIds.length === 1 ? "" : "s"} cerrada${collapsedIds.length === 1 ? "" : "s"} · ${hiddenByCollapse.size} fichas ocultas`}</span>
+                  <button type="button" onClick={() => setCollapsedIds([])}>{tr('Abrir todas','Open all')}</button>
                 </div>
               )}
 
               <div className="tree-outer">
-                {!historiaActiva && mode!=="foco" && <AtlasGrowth {...vm.growth} onHelp={() => setGuideOpen(true)}/>}
+                {!historiaActiva && mode!=="foco" && <AtlasGrowth {...vm.growth} onHelp={() => setGuideOpen(true)} locale={locale}/>}
                 <div className="minimap" onClick={onMinimapClick}>
                   {PERSONAS.map((persona) => {
                     const pos = positions[persona.id];
@@ -53,7 +54,7 @@ export default function AtlasTreeStage({vm, setGuideOpen, setTreeListOpen, treeL
                   inert={treeListOpen ? true : undefined}
                   ref={scrollRef}
                   tabIndex={0}
-                  aria-label="Árbol genealógico. Usa las flechas para desplazarte; Tab para recorrer las personas visibles."
+                  aria-label={tr('Árbol genealógico. Usa las flechas para desplazarte; Tab para recorrer las personas visibles.','Family tree. Use the arrow keys to move; use Tab to visit visible people.')}
                   onKeyDown={(event) => {
                     if (event.target !== event.currentTarget) return;
                     const offsets = { ArrowLeft: [-200, 0], ArrowRight: [200, 0], ArrowUp: [0, -150], ArrowDown: [0, 150] };
@@ -104,7 +105,7 @@ export default function AtlasTreeStage({vm, setGuideOpen, setTreeListOpen, treeL
                   </div>
                 </div>
               </div>
-              {treeListOpen && <TreeAccessibleList year={anioGlobal} people={visiblePeople} selectedId={seleccion?.id} onSelect={seleccionarPersonaPorId}/>}
+              {treeListOpen && <TreeAccessibleList year={anioGlobal} people={visiblePeople} selectedId={seleccion?.id} onSelect={seleccionarPersonaPorId} locale={locale}/>}
             </section>
   );
 }
