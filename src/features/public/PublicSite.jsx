@@ -303,7 +303,7 @@ export function PersonContent({ persona, locale = 'es', path, onExplore }) {
   const en = locale === 'en';
   const label = (es, english) => en ? english : es;
   const profilePath = path || rutaEntidad('persona', persona.slug);
-  const atlasPath = en ? `/es/?atlas=1&familia=${encodeURIComponent(persona.id)}` : `${profilePath}?atlas=1`;
+  const atlasPath = en ? `/en/?atlas=1&familia=${encodeURIComponent(persona.id)}` : `${profilePath}?atlas=1`;
   const peoplePath = en ? '/en/people' : '/es/personas';
   const sourcePath = en ? '/en/methodology' : '/es/fuentes';
   const claims=profileClaims(persona);
@@ -318,7 +318,7 @@ export function PersonContent({ persona, locale = 'es', path, onExplore }) {
           {(!en || persona.translationComplete) && displayedNickname(persona) && <div className="public-person-nickname">«{displayedNickname(persona)}»</div>}
           <p>{en ? persona.summary : persona.biografia || persona.resumen || ''}</p>
           <div className="public-person-badges"><span>{personaDates(persona,locale)}</span>{(en?persona.role:persona.titulo)&&<span>{en?persona.role:persona.titulo}</span>}{isNamedDynasty(persona.dinastia)&&<a href={profileEntityPath('dinastia',persona.dinastia,locale)}>{profileLabel(persona,persona.dinastia)}{en&&profileEntityPath('dinastia',persona.dinastia,locale).startsWith('/es/')?' · ES':''}</a>}</div>
-          <div className="public-person-actions"><a className="public-primary" href={atlasPath} onClick={onExplore?e=>{e.preventDefault();onExplore();}:undefined}>{label('Abrir en el atlas interactivo','Explore this family · Spanish Atlas')}<ArrowRight size={15}/></a><a className="public-secondary" href={peoplePath}><ArrowLeft size={14}/>{label('Volver a personas','Back to people')}</a></div>
+          <div className="public-person-actions"><a className="public-primary" href={atlasPath} onClick={onExplore?e=>{e.preventDefault();onExplore();}:undefined}>{label('Abrir en el atlas interactivo','Explore this family in the Atlas')}<ArrowRight size={15}/></a><a className="public-secondary" href={peoplePath}><ArrowLeft size={14}/>{label('Volver a personas','Back to people')}</a></div>
         </div>
         <Portrait persona={persona} locale={locale}/>
       </header>

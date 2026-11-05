@@ -58,10 +58,10 @@ export function connectionTree(graph,requested,criterion='matrimonio') {
  }
  return {terminals,ids:[...nodes].sort(),edges:[...edges.entries()].sort(([a],[b])=>a.localeCompare(b)).map(([,edge])=>edge),groups,connected:groups.length<=1,criterion:allowed.has('matrimonio')?'matrimonio':'sangre'};
 }
-export function connectionUrl(ids,criterion='matrimonio') {
+export function connectionUrl(ids,criterion='matrimonio',locale='es') {
  const params=new URLSearchParams({atlas:'1',vista:'arbol',vinculos:criterion==='sangre'?'sangre':'matrimonio'});
  [...new Set(ids)].slice(0,CONNECTION_LIMIT).forEach(id=>params.append('conectar',id));
- return `/es/?${params}`;
+ return `/${locale==='en'?'en':'es'}/?${params}`;
 }
 export function connectionFromSearch(search,byId) {
  const params=new URLSearchParams(search);

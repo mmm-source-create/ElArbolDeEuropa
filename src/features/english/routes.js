@@ -2,15 +2,20 @@ import {POLISH_HOUSES} from './polishHouseTranslations.js';
 import {ROSES_HOUSES} from './rosesHouseTranslations.js';
 import {NEXT_HOUSES} from './nextHouseTranslations.js';
 import {REVIEWED_HOUSES} from './reviewedHouseTranslations.js';
-export const TRANSLATED_DYNASTIES=[...POLISH_HOUSES.map(({es,en})=>({es,en})),...ROSES_HOUSES.map(({es,en})=>({es,en})),...NEXT_HOUSES.map(({es,en})=>({es,en})),...REVIEWED_HOUSES.map(({es,en})=>({es,en})),{es:'anjou-hungria',en:'anjou-hungary'}];
-export const TRANSLATED_TERRITORIES=[{es:'normandia',en:'normandy'}];
-export const TRANSLATED_STORIES = [
+import runtime from '../../generated/englishV6Runtime.json' with {type:'json'};
+import {PERSONAS} from '../../data/personas.js';
+import {slugBasePersona,slugPublico} from '../../domain/people/personPresentation.js';
+export const TRANSLATED_DYNASTIES=[...POLISH_HOUSES.map(({es,en})=>({es,en})),...ROSES_HOUSES.map(({es,en})=>({es,en})),...NEXT_HOUSES.map(({es,en})=>({es,en})),...REVIEWED_HOUSES.map(({es,en})=>({es,en})),{es:'anjou-hungria',en:'anjou-hungary'},...runtime.dynasties.map(({es,en})=>({es,en}))];
+export const TRANSLATED_TERRITORIES=[{es:'normandia',en:'normandy'},...runtime.territories.map(({es,en})=>({es,en}))];
+const LEGACY_TRANSLATED_STORIES = [
  {id:'borgona',es:'borgona-el-reino-que-no-fue',en:'burgundy-the-kingdom-that-never-was',chapters:17},
  {id:'gioconda',es:'en-busca-de-la-gioconda',en:'in-search-of-the-mona-lisa',chapters:11},
  {id:'dos-coronas-dos-hijas',es:'dos-coronas-para-dos-hijas',en:'two-crowns-for-two-daughters',chapters:6},
  {id:'corona-demasiado-grande',es:'una-corona-demasiado-grande',en:'a-crown-too-great',chapters:6},
 ];
-export const TRANSLATED_PEOPLE = [
+const V6_TRANSLATED_STORIES=Object.entries(runtime.storyRoutes).map(([id,entry])=>({id,es:entry.esSlug||slugPublico(entry.esTitle||id),en:entry.enSlug,chapters:entry.chapters}));
+export const TRANSLATED_STORIES=[...LEGACY_TRANSLATED_STORIES,...V6_TRANSLATED_STORIES];
+const LEGACY_TRANSLATED_PEOPLE = [
  {"id":"CHRISTIAN7DEN","es":"cristian-vii-de-dinamarca","en":"christian-vii-of-denmark"},
  {"id":"WILLIAM3ORANGE","es":"guillermo-iii-de-orange-e-inglaterra","en":"william-iii-of-england"},
  {"id":"GEORGE3GB","es":"jorge-iii-de-gran-bretana","en":"george-iii-of-great-britain"},
@@ -679,20 +684,25 @@ export const TRANSLATED_PEOPLE = [
  {"id": "ALRASHIDALMOH", "es": "abd-al-wahid-al-rashid", "en": "abd-al-wahid-al-rashid"},
  {"id": "IBNHUDMURCIA", "es": "muhammad-ibn-hud", "en": "muhammad-ibn-hud"},
 ];
+const spanishCounts=PERSONAS.reduce((result,person)=>{const base=slugBasePersona(person,'es');result[base]=(result[base]||0)+1;return result;},{});
+const spanishSlugById=Object.fromEntries(PERSONAS.map(person=>{const base=slugBasePersona(person,'es');return[person.id,spanishCounts[base]>1?`${base}-${slugPublico(person.id)}`:base];}));
+const usedEnglishSlugs=new Set(LEGACY_TRANSLATED_PEOPLE.map(item=>item.en));
+const V6_TRANSLATED_PEOPLE=Object.entries(runtime.v6People).sort(([a],[b])=>a.localeCompare(b)).map(([id,name])=>{const base=slugPublico(name);const en=usedEnglishSlugs.has(base)?`${base}-${slugPublico(id)}`:base;usedEnglishSlugs.add(en);return{id,es:spanishSlugById[id],en};});
+export const TRANSLATED_PEOPLE=[...LEGACY_TRANSLATED_PEOPLE,...V6_TRANSLATED_PEOPLE];
 export function englishRoute(pathname) {
  const path=String(pathname).replace(/\/$/,'');
- const simple={'/en':'home','/en/about':'about','/en/methodology':'methodology','/en/stories':'stories','/en/people':'people','/en/dynasties':'dynasties','/en/territories':'territories','/en/challenge':'challenge'};
+ const simple={'/en':'home','/en/about':'about','/en/methodology':'methodology','/en/licences':'licences','/en/acknowledgements':'acknowledgements','/en/stories':'stories','/en/people':'people','/en/dynasties':'dynasties','/en/territories':'territories','/en/challenge':'challenge'};
  if(simple[path])return {kind:'english',slug:simple[path],chapter:null,path:path==='/en'?'/en/':path};
  const match=path.match(/^\/en\/(story|person|dynasty|territory)\/([a-z0-9]+(?:-[a-z0-9]+)*)(?:\/chapter\/([1-9][0-9]*))?$/);
  if(!match||match[1]!=='story'&&match[3])return null;
  return {kind:'english',slug:`${match[1]}-${match[2]}`,chapter:match[3]?Number(match[3]):null,path};
 }
 // Forma del esqueleto de carga para una ruta inglesa.
-export const englishSkeletonKind=route=>route?.slug?.startsWith('person-')?'person':/^(dynasty|territory)-/.test(route?.slug||'')?'entity-body':route?.slug==='home'?'home':['people','stories','dynasties','territories','challenge'].includes(route?.slug)?'catalog':['methodology','about'].includes(route?.slug)?'methodology':'story';
+export const englishSkeletonKind=route=>route?.slug?.startsWith('person-')?'person':/^(dynasty|territory)-/.test(route?.slug||'')?'entity-body':route?.slug==='home'?'home':['people','stories','dynasties','territories','challenge'].includes(route?.slug)?'catalog':['methodology','about','licences','acknowledgements'].includes(route?.slug)?'methodology':'story';
 
 export function translatedEquivalent(pathname,locale) {
  const path=String(pathname).replace(/\/$/,'');
- for(const [es,en] of [['/es','/en/'],['/es/proyecto','/en/about'],['/es/fuentes','/en/methodology'],['/es/historias','/en/stories'],['/es/personas','/en/people'],['/es/privacidad','/en/privacy'],['/es/dinastias','/en/dynasties'],['/es/territorios','/en/territories'],['/es/desafio','/en/challenge']]) {
+ for(const [es,en] of [['/es','/en/'],['/es/proyecto','/en/about'],['/es/fuentes','/en/methodology'],['/es/licencias','/en/licences'],['/es/agradecimientos','/en/acknowledgements'],['/es/historias','/en/stories'],['/es/personas','/en/people'],['/es/privacidad','/en/privacy'],['/es/dinastias','/en/dynasties'],['/es/territorios','/en/territories'],['/es/desafio','/en/challenge']]) {
   if(locale==='en'&&path===es)return en;
   if(locale==='es'&&path===en.replace(/\/$/,''))return es==='\/es'?'/es/':es;
  }
@@ -707,5 +717,5 @@ export function translatedEquivalent(pathname,locale) {
  return null;
 }
 export function englishPaths() {
- return ['/en/dynasties','/en/territories','/en/challenge',...TRANSLATED_DYNASTIES.map(p=>`/en/dynasty/${p.en}`),...TRANSLATED_TERRITORIES.map(p=>`/en/territory/${p.en}`),'/en/','/en/about','/en/stories','/en/people','/en/methodology',...TRANSLATED_PEOPLE.map(p=>`/en/person/${p.en}`),...TRANSLATED_STORIES.flatMap(s=>[`/en/story/${s.en}`,...Array.from({length:s.chapters},(_,i)=>`/en/story/${s.en}/chapter/${i+1}`)])];
+ return ['/en/dynasties','/en/territories','/en/challenge',...TRANSLATED_DYNASTIES.map(p=>`/en/dynasty/${p.en}`),...TRANSLATED_TERRITORIES.map(p=>`/en/territory/${p.en}`),'/en/','/en/about','/en/stories','/en/people','/en/methodology','/en/licences','/en/acknowledgements',...TRANSLATED_PEOPLE.map(p=>`/en/person/${p.en}`),...TRANSLATED_STORIES.filter(s=>s.chapters>0).flatMap(s=>[`/en/story/${s.en}`,...Array.from({length:s.chapters},(_,i)=>`/en/story/${s.en}/chapter/${i+1}`)])];
 }

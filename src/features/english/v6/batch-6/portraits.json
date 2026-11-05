@@ -1,0 +1,132 @@
+{
+  "WEN2": {
+    "tipo": "Representación medieval",
+    "obra": "Wenceslao II en el Codex Manesse",
+    "autor": "Maestro del Codex Manesse (pintor adicional I)",
+    "fecha": "siglo XIV",
+    "institucion": "Universitätsbibliothek Heidelberg · Cod. Pal. germ. 848",
+    "alt": "Representación de Wenceslao II"
+  },
+  "OTON3": {
+    "tipo": "Representación póstuma",
+    "obra": "Otto III of Bavaria · Chronica Hungarorum",
+    "autor": "Ilustrador anónimo de la Chronica Hungarorum de Johannes de Thurocz",
+    "fecha": "1488",
+    "alt": "Representación póstuma de Otto III of Bavaria"
+  },
+  "CLEMH": {
+    "tipo": "Representación póstuma",
+    "obra": "Clementia of Habsburg · serie de retratos dinásticos",
+    "autor": "Antoni Boys (Anton Waiss)",
+    "fecha": "siglo XVI",
+    "institucion": "Kunsthistorisches Museum, Viena",
+    "alt": "Representación póstuma de Clementia of Habsburg"
+  },
+  "ISABARAGHAB": {
+    "tipo": "Representación póstuma",
+    "obra": "Elizabeth of Aragon · serie de retratos dinásticos",
+    "autor": "Antoni Boys (Anton Waiss)",
+    "fecha": "siglo XVI",
+    "institucion": "Kunsthistorisches Museum, Viena",
+    "alt": "Representación póstuma de Elizabeth of Aragon"
+  },
+  "ISABRP": {
+    "tipo": "Representación póstuma",
+    "obra": "Elizabeth Richeza of Poland · serie de retratos dinásticos",
+    "autor": "Antoni Boys (Anton Waiss)",
+    "fecha": "siglo XVI",
+    "institucion": "Kunsthistorisches Museum, Viena",
+    "alt": "Representación póstuma de Elizabeth Richeza of Poland"
+  },
+  "LADI4": {
+    "tipo": "Representación póstuma",
+    "obra": "Ladislao IV · Chronica Hungarorum",
+    "autor": "Ilustrador anónimo de la Chronica Hungarorum de Johannes de Thurocz",
+    "fecha": "1488",
+    "alt": "Representación póstuma de Ladislao IV"
+  },
+  "ANAAUS": {
+    "tipo": "Representación póstuma",
+    "obra": "Anna of Austria · serie de retratos dinásticos",
+    "autor": "Antoni Boys (Anton Waiss)",
+    "fecha": "siglo XVI",
+    "institucion": "Kunsthistorisches Museum, Viena",
+    "alt": "Representación póstuma de Anna of Austria"
+  },
+  "WILHELM3THUR": {
+    "tipo": "Representación póstuma",
+    "obra": "William III of Saxony · serie de retratos dinásticos",
+    "autor": "Antoni Boys (Anton Waiss)",
+    "fecha": "siglo XVI",
+    "institucion": "Kunsthistorisches Museum, Viena",
+    "alt": "Representación póstuma de William III of Saxony"
+  },
+  "PAPA_PAULO4": {
+    "tipo": "Retrato contemporáneo",
+    "obra": "Paul IV Carafa",
+    "autor": "A la manera de Jacopino del Conte",
+    "fecha": "c. 1556–1560",
+    "alt": "Retrato del papa Paul IV"
+  },
+  "PAPA_PAULO2": {
+    "tipo": "Retrato posterior",
+    "obra": "Paul II",
+    "autor": "Pintor anónimo",
+    "fecha": "c. 1521–1552",
+    "alt": "Retrato del papa Paul II"
+  },
+  "PAPA_INOCENCIO5": {
+    "tipo": "Retrato posterior",
+    "obra": "Inocencio V, de la serie de los cuarenta dominicos ilustres",
+    "autor": "Tommaso da Modena",
+    "fecha": "1352",
+    "institucion": "Antiguo convento de San Niccolò, Treviso",
+    "alt": "Retrato del papa Inocencio V"
+  },
+  "PAPA_INOCENCIO8": {
+    "tipo": "Retrato contemporáneo",
+    "obra": "Medalla de Innocent VIII",
+    "autor": "Niccolò di Forzore Spinelli",
+    "fecha": "c. 1484–1492",
+    "alt": "Retrato del papa Innocent VIII"
+  },
+  "PAPA_CLEMENTE11": {
+    "tipo": "Retrato histórico",
+    "obra": "Clement XI",
+    "autor": "Según Pier Leone Ghezzi",
+    "fecha": "s. XVIII",
+    "institucion": "Museos Vaticanos",
+    "alt": "Retrato del papa Clement XI"
+  },
+  "PAPA_BENEDICTO14": {
+    "tipo": "Retrato contemporáneo",
+    "obra": "Benedict XIV",
+    "autor": "Pierre Subleyras",
+    "fecha": "1746",
+    "institucion": "Metropolitan Museum of Art, Nueva York",
+    "alt": "Retrato del papa Benedict XIV"
+  },
+  "PAPA_MARTIN4": {
+    "tipo": "Miniatura histórica",
+    "obra": "Martin IV",
+    "autor": "Iluminador anónimo",
+    "fecha": "s. XIV",
+    "alt": "Retrato del papa Martin IV"
+  },
+  "PAPA_INOCENCIO9": {
+    "tipo": "Retrato posterior",
+    "obra": "Innocent IX",
+    "autor": "Anónimo, según Hieronymus Wierix",
+    "fecha": "principios del s. XVII",
+    "institucion": "Museo de la catedral de Fidenza",
+    "alt": "Retrato del papa Inocencio IX"
+  },
+  "PAPA_BONIFACIO9": {
+    "tipo": "Representación contemporánea",
+    "obra": "Boniface IX arrodillado",
+    "autor": "Taller cosmatesco",
+    "fecha": "c. 1390–1410",
+    "institucion": "San Juan de Letrán, Roma",
+    "alt": "Retrato del papa Boniface IX"
+  }
+}

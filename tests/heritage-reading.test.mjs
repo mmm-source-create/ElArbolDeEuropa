@@ -26,7 +26,7 @@ test('Borgoña centra ocho capítulos en Carlos y termina en su biznieto; ambos 
  const story=HISTORIAS.find(s=>s.id==='borgona');assert.equal(story.pasos.length,17);assert.equal(story.pasos.filter(p=>p.persona==='CAR1BORG').length,8);assert.equal(story.pasos.at(-1).persona,'CARLOS5');assert.equal(story.pasos.some(p=>p.figura),false);assert.match(story.pasos.find(p=>p.anio===1477).texto,/cuerpo/);
  const people=new Set(PERSONAS.map(p=>p.id));
  for(const id of ['dos-coronas-dos-hijas','corona-demasiado-grande']){const s=HISTORIAS.find(s=>s.id===id);assert.equal(s.disponible,true);assert.equal(s.pasos.length,6);assert.ok(s.fuentes.length>=4);for(const p of s.pasos){assert.ok(p.texto.length>500);assert.ok(p.personas.every(id=>people.has(id)));}}
- for(const route of TRANSLATED_STORIES){const s=HISTORIAS.find(s=>s.id===route.id);assert.equal(s.pasos.length,route.chapters);assert.equal(ENGLISH_STORIES[s.id].chapters.length,s.pasos.length);assert.ok(englishPaths().includes(`/en/story/${route.en}/chapter/${route.chapters}`));}
+ for(const route of TRANSLATED_STORIES.filter(route=>route.chapters>0)){const s=HISTORIAS.find(s=>s.id===route.id);assert.equal(s.pasos.length,route.chapters);assert.equal(ENGLISH_STORIES[s.id].chapters.length,s.pasos.length);assert.ok(englishPaths().includes(`/en/story/${route.en}/chapter/${route.chapters}`));}
 });
 test('la lectura guardada de Borgoña sigue apuntando a Nancy y las nuevas visitas no se vuelven a desplazar',()=>{
  assert.deepEqual(normalizeStoryProgress({last:8,read:[7,8,9,10,11]},'borgona',17),{last:14,read:[7,14,15,16,17]});

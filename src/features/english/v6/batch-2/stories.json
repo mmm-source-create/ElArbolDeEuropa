@@ -1,0 +1,542 @@
+{
+  "papales": {
+    "enSlug": "papal-families",
+    "content": {
+      "id": "papales",
+      "titulo": "Papal families",
+      "subtitulo": "Orsini, Colonna, Borgia, Della Rovere, Medici and the Rome of the cardinal-nephews",
+      "disponible": true,
+      "descripcion": "A tour of the families that turned the pontificate into a lever of political, territorial and social power: from the medieval Roman barons to the great Baroque aristocracy, until the attempt to put an end to institutional nepotism.",
+      "pasos": [
+        {
+          "anio": 1277,
+          "persona": "PAPA_NICOLAS3",
+          "personas": [
+            "PAPA_NICOLAS3",
+            "MATTEOROSSOORS_GRANDE",
+            "MATTEOROSSOCARD"
+          ],
+          "eventoId": "PAPA_ORSINI_1277",
+          "titulo": "Nicholas III: Rule Rome with a family behind",
+          "texto": "Giovanni Gaetano Orsini arrives at the papacy from one of the great Baronial houses in Rome. His family already has senators, castles and cardinals. As a pontiff he strengthens this network: his relatives occupy positions and accumulate resources with which they can sustain the interests of the house during his pontificate and after the next conclave."
+        },
+        {
+          "anio": 1297,
+          "persona": "PAPA_BONIFACIO8",
+          "personas": [
+            "PAPA_BONIFACIO8",
+            "PIETROCOLONNACARD",
+            "SCIARRACOLONNA"
+          ],
+          "eventoId": "CAETANI_COLONNA_1297",
+          "titulo": "Caetani vs Colonna: When a Family Fight Becomes Papal War",
+          "texto": "Boniface VIII uses the pontificate to consolidate the Caetani; the Colonna, one of Rome’s rival families, resist. Two Colonna cardinals lose their red hats and the family fiefs are attacked. The rivalry reaches its most dramatic point in 1303, when Sciarra Colonna takes part in the attack at Anagni against the pope himself. The papacy rules Rome in close relationship with its noble clans."
+        },
+        {
+          "anio": 1417,
+          "persona": "PAPA_MARTIN5",
+          "personas": [
+            "PAPA_MARTIN5",
+            "AGAPITOCOLONNA",
+            "CATERINACONTI"
+          ],
+          "eventoId": "MARTIN5_1417",
+          "titulo": "Martin V Colonna: a Roman family closes the schism",
+          "texto": "After decades of rival obedience, the Council of Constance chose Oddone Colonna. Martin V obtained something much greater than a family victory: he restored a pontifical authority recognized in the West and gradually returned the center of government to Rome. But his surname mattered: the Colonna returned from the persecution of Bonifacio VIII to the highest point of the Church."
+        },
+        {
+          "anio": 1458,
+          "persona": "PAPA_PIO2",
+          "personas": [
+            "PAPA_PIO2",
+            "PAPA_PIO3",
+            "LAUDOMIAPICCOLOMINI"
+          ],
+          "titulo": "Piccolomini: the surname that is also inherited in the Curia",
+          "texto": "Enea Silvio Piccolomini, a humanist and diplomat, becomes Pius II. His nephew Francesco Todeschini adopts the surname Piccolomini, is promoted within the Church and will end up being Pius III. His pontificate will be very brief, but the sequence shows a constant: a papal election can transform the social capital of a family for generations."
+        },
+        {
+          "anio": 1455,
+          "persona": "ALFONSOBORJA",
+          "personas": [
+            "ALFONSOBORJA",
+            "RODRIGOBORJA",
+            "ISABBORJA"
+          ],
+          "titulo": "Callixtus III opens the door of Rome to the Borja",
+          "texto": "Alfonso de Borja arrives in Rome from the Crown of Aragon and, as Callixtus III, raises two nephews to the cardinalate. One of them is Rodrigo Borja. Callixtus III establishes in Rome the family network that will later favour Rodrigo Borja’s election as Alexander VI."
+        },
+        {
+          "anio": 1471,
+          "persona": "PAPA_SIXTO4",
+          "personas": [
+            "PAPA_SIXTO4",
+            "PIETRORIARIO",
+            "GIROLAMORIARIO",
+            "PAPA_JULIO2"
+          ],
+          "eventoId": "SIXTO4_1471",
+          "titulo": "Sixtus IV: Cardinals, Lordships and a whole generation of nephews",
+          "texto": "Francesco della Rovere turns his nephews into instruments of government. Pietro Riario and Giuliano della Rovere become cardinals; Girolamo Riario enters Rome’s territorial politics. The same pontificate that transforms Renaissance Rome demonstrates how far kinship can function as a genuine parallel administration."
+        },
+        {
+          "anio": 1492,
+          "persona": "RODRIGOBORJA",
+          "personas": [
+            "RODRIGOBORJA",
+            "CESARBORJA",
+            "LUCRECIABORJA",
+            "JUANBORJACATT",
+            "GOFFREDOBORJA",
+            "GIULIAFARNESE"
+          ],
+          "eventoId": "ALEJANDRO6_1492",
+          "titulo": "Alexander VI: The Borja in Italian Politics",
+          "texto": "Rodrigo Borja becomes Alexander VI and his children cease to be a peripheral secret. Cesare moves from the cardinalate to war and territorial ambition; Lucrezia becomes a marriage prize of the first order; Juan receives Gandía; Goffredo forms a tie with Naples. Alexander’s relationship with Giulia Farnese, sister of the future Paul III, also connects two of the great papal houses of the Renaissance."
+        },
+        {
+          "anio": 1503,
+          "persona": "PAPA_JULIO2",
+          "personas": [
+            "PAPA_JULIO2",
+            "GIOVANNIDELLAROVERE",
+            "GIOVANNAMONTEFELTRO",
+            "FRANCESCOROVEREURBINO"
+          ],
+          "eventoId": "JULIO2_1503",
+          "titulo": "Julius II: Sixtus IV’s nephew becomes the ‘warrior pope’",
+          "texto": "Giuliano della Rovere had learned the politics of Rome within the network of Sixtus IV. As Julius II he uses war, diplomacy and patronage to strengthen the Papal States. His family forms ties with the Montefeltro and inherits Urbino through Giovanni della Rovere and Giovanna da Montefeltro: the boundary between a papal family and a territorial dynasty once again becomes very thin."
+        },
+        {
+          "anio": 1513,
+          "persona": "PAPA_LEON10",
+          "personas": [
+            "PAPA_LEON10",
+            "LORENZOMEDICI",
+            "CLARICEORSINI",
+            "PAPA_CLEMENTE7",
+            "GIULIANOMEDICI1453"
+          ],
+          "eventoId": "MEDICI_PAPAS_1513",
+          "titulo": "Leo X and Clement VII: two popes from the same Medici family",
+          "texto": "Leo X is the son of Lorenzo the Magnificent and Clarice Orsini. His cousin Giulio, the son of Giuliano de’ Medici, later becomes Clement VII. The house that dominates Florence also occupies the papacy and uses both centres of power as one. This is no longer merely a family prospering through Rome, but an Italian power incorporating Rome into its own strategy."
+        },
+        {
+          "anio": 1527,
+          "persona": "PAPA_CLEMENTE7",
+          "personas": [
+            "PAPA_CLEMENTE7",
+            "CARLOS5"
+          ],
+          "eventoId": "SACO_ROMA_1527",
+          "titulo": "1527: a powerful family cannot protect Rome from Europe",
+          "texto": "Clement VII tries to maneuver between France and Charles V and ends up caught in a catastrophe: the Sack of Rome. The scene marks a brutal limit to the dynastic power of the Medici. The pope can be a member of one of the most sophisticated families in Italy and yet remain at the mercy of armies already operating on a continental scale."
+        },
+        {
+          "anio": 1534,
+          "persona": "PAPA_PAULO3",
+          "personas": [
+            "PAPA_PAULO3",
+            "GIULIAFARNESE",
+            "PIERLUIGIFARNESE_DUCA",
+            "OCTFARNESIO",
+            "MARGPARMA"
+          ],
+          "eventoId": "FARNESE_1534",
+          "titulo": "Paul III: from Borgia kinship to Parma duchy",
+          "texto": "Alessandro Farnese ascends as Paul III after a career favored, among other things, by the rise of his sister Giulia in the Rome of Alexander VI. Already pope, legitimates and promotes his descendants. His son Pier Luigi receives Parma and Piacenza; his grandson Ottavio marries Margaret of Austria, daughter of Charles V. In a generation, a papal family becomes a European dynasty."
+        },
+        {
+          "anio": 1592,
+          "persona": "PAPA_CLEMENTE8",
+          "personas": [
+            "PAPA_CLEMENTE8",
+            "PIETROALDOBRANDINI_CARD"
+          ],
+          "titulo": "Clement VIII: Cardinal-Nepote as Government Office",
+          "texto": "With the Aldobrandini, nepotism becomes increasingly institutional. Pietro Aldobrandini, nephew of the pope, accumulates missions, rents and diplomatic responsibilities. Cardinal-nepote occupies a recognizable position within the Roman court."
+        },
+        {
+          "anio": 1605,
+          "persona": "PAPA_PAULO5",
+          "personas": [
+            "PAPA_PAULO5",
+            "SCIPIONEBORGHESE",
+            "ORTENSIABORGHESE"
+          ],
+          "eventoId": "BORGHESE_1605",
+          "titulo": "Paul V and Scipione: power, wealth and a collection that will survive the pontificate",
+          "texto": "Paul V quickly elevates his nephew Scipione Caffarelli, who adopts the surname Borghese. Scipione concentrates charges and heritage, but also uses that fortune to build one of Rome’s great artistic collections. Papal favor becomes political, real estate and cultural lasting capital."
+        },
+        {
+          "anio": 1623,
+          "persona": "PAPA_URBANO8",
+          "personas": [
+            "PAPA_URBANO8",
+            "CARLOBARBERINI",
+            "FRANCESCOBARBERINI",
+            "TADDEOBARBERINI",
+            "ANTONIOBARBERINI",
+            "ANNACOLONNA"
+          ],
+          "eventoId": "BARBERINI_1623",
+          "titulo": "Urban VIII: Barberini occupy all the squares",
+          "texto": "Urban VIII promotes his brother Carlo and his three sons. Francesco and Antonio are cardinals; Taddeo concentrates secular functions and marries Anna Colonna. The wedding links two houses that centuries before competed in the streets of Rome. In the Baroque, the papal kinship already produces princes, palaces, armies and aristocratic alliances."
+        },
+        {
+          "anio": 1644,
+          "persona": "PAPA_INOCENCIO10",
+          "personas": [
+            "PAPA_INOCENCIO10",
+            "OLIMPIAMAIDALCHINI",
+            "PAMPHILIOPAMPHILJ",
+            "CAMILLOPAMPHILJ",
+            "OLIMPIAALDOBRANDINI"
+          ],
+          "eventoId": "PAMPHILJ_1644",
+          "titulo": "Innocent X: Donna Olympia and Pamphilj-Aldobrandini Merge",
+          "texto": "Olimpia Maidalchini, Innocent X’s sister-in-law, has extraordinary influence at court. Her son Camillo is created cardinal-nephew, but relinquishes the red hat to marry Olimpia Aldobrandini. The union brings an enormous inheritance to the Pamphilj and again shows that the wealth of papal families can survive and merge long after a pontiff’s death."
+        },
+        {
+          "anio": 1655,
+          "persona": "PAPA_ALEJANDRO7",
+          "personas": [
+            "PAPA_ALEJANDRO7",
+            "MARIOCHIGI",
+            "FLAVIOCHIGI_CARD"
+          ],
+          "eventoId": "CHIGI_1655",
+          "titulo": "Alexander VII: Chigi arrive in Rome",
+          "texto": "Fabio Chigi had built a diplomatic career before becoming pope. After the election he calls his brother Mario and his nephews to Rome. Flavio Chigi becomes cardinal-nepote. Until then essentially Sienese family settles among the great Roman aristocracy and retains that position after the pontificate."
+        },
+        {
+          "anio": 1676,
+          "persona": "PAPA_INOCENCIO11",
+          "personas": [
+            "PAPA_INOCENCIO11",
+            "CARLOODESCALCHI",
+            "LIVIOODESCALCHI"
+          ],
+          "eventoId": "ODESCALCHI_1676",
+          "titulo": "Innocent XI and opposition to nepotism",
+          "texto": "Benedetto Odescalchi represents a twist. He gives his nephew Livio the private heritage of the family, but refuses to give him the cardinalate and limits the curial favors. The surname Odescalchi prospers, but the pope tries to more clearly separate the family fortune from the institutional resources of the Church."
+        },
+        {
+          "anio": 1692,
+          "persona": "PAPA_INOCENCIO12",
+          "personas": [
+            "PAPA_INOCENCIO12",
+            "PAPA_INOCENCIO11",
+            "PAPA_URBANO8",
+            "PAPA_INOCENCIO10"
+          ],
+          "eventoId": "ROMANUM_DECET_1692",
+          "titulo": "Innocent XII: the system tries to close itself",
+          "texto": "The Romanum Decet Pontificem Constitution formally restricts papal nepotism and limits the old model of the cardinal-nepot. It does not erase centuries of families created by the papacy — Orsini, Colonna, Della Rovere, Farnese, Borghese, Barberini, Pamphilj, Chigi — but it marks the symbolic end of a time when a choice could suddenly rebuild the political fortune of an entire lineage."
+        }
+      ],
+      "colecciones": []
+    }
+  },
+  "corona-dos-credos": {
+    "enSlug": "a-crown-between-two-creeds",
+    "content": {
+      "id": "corona-dos-credos",
+      "titulo": "A crown between two creeds",
+      "subtitulo": "Catherine of Medici, Huguenots and the Catholic League",
+      "disponible": true,
+      "descripcion": "France goes from a seemingly secure succession to four decades of religious civil war. Catherine de’ Medici tries to preserve the monarchy between the Huguenot Bourbons and the Catholic Guise until the extinction of the Valois gives the crown to the Protestant Henry of Navarre.",
+      "pasos": [
+        {
+          "anio": 1559,
+          "persona": "CATAMEDICI",
+          "personas": [
+            "ENRIQ2FRA",
+            "FRANC2FRA",
+            "CATAMEDICI",
+            "FRAN1GUISA"
+          ],
+          "eventoId": "MUERTE_ENRIQUE2_1559",
+          "titulo": "A Death Changes the Balance of France",
+          "texto": "Henry II dies after an accident in a tournament. His son Francis II is young, married to Mary Stuart and politically dependent on the Guise, the queen’s uncles. Catherine de’ Medici moves from being the king’s wife to the mother of a vulnerable dynasty."
+        },
+        {
+          "anio": 1560,
+          "persona": "CATAMEDICI",
+          "personas": [
+            "CATAMEDICI",
+            "CARLOS9FRA",
+            "LUIS1CONDE",
+            "FRAN1GUISA"
+          ],
+          "eventoId": "REGENCIA_CATALINA_1560",
+          "titulo": "Catherine tries to rule between two parties",
+          "texto": "Francis II dies without children and his brother Charles IX ascends the throne as a child. Catherine controls the government, but she cannot ignore either the Guise, leaders of the Catholic reaction, or the Bourbon princes of the blood who give political protection to the Reformed cause."
+        },
+        {
+          "anio": 1562,
+          "persona": "LUIS1CONDE",
+          "personas": [
+            "FRAN1GUISA",
+            "LUIS1CONDE",
+            "CATAMEDICI"
+          ],
+          "eventoId": "WASSY_1562",
+          "titulo": "Wassy Turns Tension into Civil War",
+          "texto": "The violence at Wassy, led by Francis of Guise’s men against a Protestant congregation, destroys the fragile balance. Louis of Condé organises a Huguenot army. France is no longer divided only over religious tolerance: two aristocratic networks raise troops against their compatriots."
+        },
+        {
+          "anio": 1569,
+          "persona": "GASPARD2COLIGNY",
+          "personas": [
+            "LUIS1CONDE",
+            "GASPARD2COLIGNY",
+            "ENRIQ3FRA"
+          ],
+          "eventoId": "JARNAC_1569",
+          "titulo": "Condé dies; Coligny inherits the Huguenot cause",
+          "texto": "Condé dies in Jarnac and Gaspar de Coligny remains as the great military chief of the Protestants. On the royal side, the young Duke of Anjou, future Henry III, gains prestige. Wars begin to produce the generation that will decide the French succession twenty years later."
+        },
+        {
+          "anio": 1572,
+          "persona": "GASPARD2COLIGNY",
+          "personas": [
+            "CATAMEDICI",
+            "CARLOS9FRA",
+            "GASPARD2COLIGNY",
+            "ENRIQ4FRA",
+            "MARGVALOIS"
+          ],
+          "eventoId": "SAN_BARTOLOME_1572",
+          "titulo": "A dynastic wedding ends in slaughter",
+          "texto": "Catherine marries her daughter Margaret to Henry of Navarre, one of the leading Huguenot princes, to strengthen the peace. Days later, the attack on Coligny and the St Bartholomew’s Day massacre destroy that strategy. Coligny dies and Henry of Navarre survives at court under enormous pressure."
+        },
+        {
+          "anio": 1574,
+          "persona": "ENRIQ3FRA",
+          "personas": [
+            "ENRIQ3FRA",
+            "CATAMEDICI",
+            "ENRIQ4FRA",
+            "FRANCISCOANJOU"
+          ],
+          "titulo": "Henry III returns from Poland to a broken France",
+          "texto": "Charles IX dies and his brother Henry leaves the Polish crown to become Henry III of France. The Valois dynasty retains the throne, but the new king has no children and his brother Francis of Anjou is the last male heir of the family."
+        },
+        {
+          "anio": 1585,
+          "persona": "HENRI1GUISE",
+          "personas": [
+            "ENRIQ3FRA",
+            "HENRI1GUISE",
+            "ENRIQ4FRA",
+            "FEL2ESP",
+            "CHARLESMAYENNE"
+          ],
+          "eventoId": "LIGA_CATOLICA_1585",
+          "titulo": "The death of a prince turns religion into succession",
+          "texto": "Francisco de Anjou died in 1584. According to the dynastic succession, the next heir is Enrique de Navarra: a Bourbon and Protestant. Enrique de Guise reorganizes the Catholic League to prevent it and obtains support from Philip II. The War of the Three Henrys begins."
+        },
+        {
+          "anio": 1588,
+          "persona": "HENRI1GUISE",
+          "personas": [
+            "ENRIQ3FRA",
+            "HENRI1GUISE",
+            "CHARLESMAYENNE"
+          ],
+          "eventoId": "ASESINATO_GUISA_1588",
+          "titulo": "King kills man who dominated Paris",
+          "texto": "After the Day of Barricades forced the king to flee Paris, Henry III concludes that Guise has become a rival power. He assassinates him in Blois. The coup eliminates the leader of the League, but not the League: his brother Charles de Mayenne takes over."
+        },
+        {
+          "anio": 1589,
+          "persona": "ENRIQ4FRA",
+          "personas": [
+            "ENRIQ3FRA",
+            "ENRIQ4FRA",
+            "CHARLESMAYENNE"
+          ],
+          "eventoId": "ASESINATO_ENRIQUE3_1589",
+          "titulo": "The last Valois hands over the succession to a Bourbon",
+          "texto": "Henry III finally allies himself with Henry of Navarre against the League, but is killed by the friar Jacques Clément. On his deathbed he recognises Navarre as his successor. Henry IV is king by dynastic right, although he must still conquer his own kingdom politically."
+        },
+        {
+          "anio": 1593,
+          "persona": "ENRIQ4FRA",
+          "personas": [
+            "ENRIQ4FRA",
+            "CHARLESMAYENNE",
+            "MARGVALOIS"
+          ],
+          "eventoId": "CONVERSION_ENRIQUE4_1593",
+          "titulo": "To win France, Henry changes confession",
+          "texto": "After years of war, Henry IV embraces Catholicism. The gesture allows broad Catholic sectors to accept a Bourbon that they considered inadmissible until then. The League loses the main reason for an alternative succession."
+        },
+        {
+          "anio": 1598,
+          "persona": "ENRIQ4FRA",
+          "personas": [
+            "ENRIQ4FRA",
+            "CATAMEDICI",
+            "HENRI1GUISE",
+            "GASPARD2COLIGNY"
+          ],
+          "eventoId": "EDICTO_NANTES_1598",
+          "titulo": "Monarchy Survives Religious War",
+          "texto": "The Edict of Nantes establishes a limited coexistence with the Protestants and closes the main phase of the wars. Catalina, Condé, Coligny and Guise have already died; the survivor is Henry IV. The reconstruction of the authority of the crown combines negotiation with both parties and the recognition of religious commitments."
+        }
+      ],
+      "colecciones": []
+    }
+  },
+  "puertas-viena": {
+    "enSlug": "at-the-gates-of-vienna",
+    "content": {
+      "id": "puertas-viena",
+      "titulo": "At the gates of Vienna",
+      "subtitulo": "The alliance that turned an Ottoman site into a European counteroffensive",
+      "disponible": true,
+      "descripcion": "In 1683 a Hungarian rebellion, Kara Mustafa's offensive and Vienna's vulnerability forced Leopold I to seek help. The alliance with John III Sobieski and the princes of the Empire saved the capital and changed the sense of war in Central Europe.",
+      "pasos": [
+        {
+          "anio": 1648,
+          "persona": "MEHMED4OSM",
+          "personas": [
+            "IBRAHIM1OSM",
+            "MEHMED4OSM"
+          ],
+          "titulo": "A Sultan Child inherits an empire that is advancing again",
+          "texto": "Mehmed IV comes to the throne at the age of six. During his long reign, the Köprülü family of grand viziers rebuilds Ottoman military and administrative capacity. As the crisis in Hungary deepens, Constantinople again turns its attention to Vienna."
+        },
+        {
+          "anio": 1658,
+          "persona": "LEOP1HRE",
+          "personas": [
+            "LEOP1HRE",
+            "MEHMED4OSM"
+          ],
+          "titulo": "Leopold I rules the most dangerous border of the Empire",
+          "texto": "Leopold I is elected emperor while the Habsburgs try to consolidate Austria, Bohemia and Hungary. His monarchy directly limits the Ottoman world and must also face religious and political conflicts within Hungary itself."
+        },
+        {
+          "anio": 1682,
+          "persona": "IMRETHOKOLY",
+          "personas": [
+            "IMRETHOKOLY",
+            "LEOP1HRE",
+            "MEHMED4OSM",
+            "KARAMUSTAFA"
+          ],
+          "eventoId": "THOKOLY_1682",
+          "titulo": "The foreign war also comes from an internal rebellion",
+          "texto": "Imre Thököly leads the anti-Habsburg kuruc and accepts Ottoman support. Kara Mustafa can present the intervention as protection of a Hungarian ally, while Leopold sees an internal revolt transformed into a strategic threat to Vienna."
+        },
+        {
+          "anio": 1683,
+          "persona": "JUAN3SOBIESKI",
+          "personas": [
+            "LEOP1HRE",
+            "JUAN3SOBIESKI",
+            "PAPA_INOCENCIO11"
+          ],
+          "eventoId": "ALIANZA_VIENA_1683",
+          "titulo": "Leopoldo and Sobieski promise to go to each other",
+          "texto": "Through Innocent XI, the emperor and the elected king of Poland are entering into a defensive alliance. Neither can guarantee the security of the border alone: Vienna will need the Polish army and Poland needs Austria to continue to contain Ottoman pressure."
+        },
+        {
+          "anio": 1683,
+          "persona": "STARHEMBERG",
+          "personas": [
+            "KARAMUSTAFA",
+            "MEHMED4OSM",
+            "LEOP1HRE",
+            "STARHEMBERG"
+          ],
+          "eventoId": "SITIO_VIENA_1683",
+          "titulo": "Kara Mustafa arrives before the allies",
+          "texto": "The Ottoman army reached Vienna in July. Leopold evacuated the city and Starhemberg was at the head of the garrison. Time became the decisive element: defenders only had to resist until a coalition that was still meeting managed to arrive."
+        },
+        {
+          "anio": 1683,
+          "persona": "CHARLES5LOR",
+          "personas": [
+            "JUAN3SOBIESKI",
+            "CHARLES5LOR",
+            "MAX2EMANBAV",
+            "JOHANNGEORG3SAX",
+            "LEOP1HRE"
+          ],
+          "eventoId": "EJERCITO_SOCORRO_1683",
+          "titulo": "An Army of the Empire meets the Polish Army",
+          "texto": "Charles V of Lorraine coordinates imperial troops while Bavaria, Saxony and other princes contribute troops. Sobieski crosses the Carpathians with the Poles. The relief operation brings together Habsburg monarchy, Commonwealth and Holy Roman Empire in a common force."
+        },
+        {
+          "anio": 1683,
+          "persona": "JUAN3SOBIESKI",
+          "personas": [
+            "JUAN3SOBIESKI",
+            "LEOP1HRE",
+            "CHARLES5LOR",
+            "STARHEMBERG",
+            "KARAMUSTAFA",
+            "MEHMED4OSM"
+          ],
+          "eventoId": "VIENA_1683",
+          "titulo": "12 September: the siege is broken from outside and within",
+          "texto": "The Allied army attacks from the heights west of Vienna while Starhemberg maintains the city’s defense. Sobieski leads the whole and the final load of the Polish cavalry accelerates the collapse of Kara Mustafa’s positions. Vienna is liberated and the Ottoman army withdraws."
+        },
+        {
+          "anio": 1684,
+          "persona": "LEOP1HRE",
+          "personas": [
+            "LEOP1HRE",
+            "JUAN3SOBIESKI",
+            "PAPA_INOCENCIO11",
+            "CHARLES5LOR"
+          ],
+          "eventoId": "LIGA_SANTA_1684",
+          "titulo": "The alliance is no longer an emergency relief",
+          "texto": "Victory allows us to create a new Holy League. Austria, Poland and Venice are now on the offensive with papal support. The question is no longer to prevent Vienna from falling, but to recover territories of Hungary that had been under Ottoman rule for generations."
+        },
+        {
+          "anio": 1686,
+          "persona": "CHARLES5LOR",
+          "personas": [
+            "LEOP1HRE",
+            "CHARLES5LOR",
+            "MAX2EMANBAV",
+            "MEHMED4OSM"
+          ],
+          "eventoId": "BUDA_1686",
+          "titulo": "Buda shows that Vienna was a turning point",
+          "texto": "Three years later, coalition forces conquer Buda. The advance does not end there: the Great Turkish War moves the frontier south-east and decisively strengthens the Habsburgs. The alliance assembled to save a capital ends up transforming the map of Central Europe."
+        }
+      ],
+      "contexto": "Site of 1683: an Ottoman offensive and a relief coalition in modern Europe, also linked to the Hungarian crisis.",
+      "colecciones": [
+        "crossovers"
+      ]
+    }
+  },
+  "brandeburgo-prusia": {
+    "enSlug": "from-brandenburg-to-prussia",
+    "content": {
+      "id": "brandeburgo-prusia",
+      "titulo": "From Brandenburg to Prussia",
+      "subtitulo": "How an electorate of the Empire became a great European power",
+      "disponible": false,
+      "colecciones": []
+    }
+  },
+  "habsburgo-capetos": {
+    "enSlug": "habsburgs-and-capetians",
+    "content": {
+      "id": "habsburgo-capetos",
+      "titulo": "Habsburg and Capetos",
+      "subtitulo": "Two dynastic networks that shaped Europe",
+      "disponible": false,
+      "colecciones": []
+    }
+  }
+}

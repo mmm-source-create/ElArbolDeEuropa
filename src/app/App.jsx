@@ -67,7 +67,7 @@ export default function App() {
   if (initial.view === 'privacy') return <PrivacyPage locale={initial.locale}/>;
   if (initial.view === "desafio") {
     return (
-      <Suspense fallback={<SiteHeader />}>
+      <Suspense fallback={<SiteHeader locale={initial.locale} />}>
         <DesafioPage />
       </Suspense>
     );
@@ -78,8 +78,8 @@ export default function App() {
   if (!explorerRequested && initial.view === "home") return <HomePage onEnterAtlas={entrarAtlas} onOpenPanel={entrarAtlas} />;
 
   return (
-    <Suspense fallback={<AtlasSkeleton/>}>
-      <Explorer initialPanel={initialPanel} />
+    <Suspense fallback={<AtlasSkeleton locale={initial.locale}/>}>
+      <Explorer initialPanel={initialPanel} locale={initial.locale} />
     </Suspense>
   );
 }

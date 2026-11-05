@@ -1,0 +1,532 @@
+{
+  "reino-partido-dos": {
+    "enSlug": "the-kingdom-divided-in-two",
+    "content": {
+      "id": "reino-partido-dos",
+      "titulo": "The Kingdom Divided in Two",
+      "subtitulo": "Hohenstaufen, Anjou and Aragon vie for Sicily and Naples",
+      "disponible": true,
+      "descripcion": "Frederick II’s inheritance passes from the Hohenstaufen to the Angevins, provokes the revolt of the Sicilian Vespers and ultimately creates two rival crowns: Naples on the mainland and Trinacria on the island. Two centuries later, Aragon reunites them under one monarch.",
+      "pasos": [
+        {
+          "anio": 1250,
+          "persona": "FED2HOH",
+          "personas": [
+            "FED2HOH",
+            "CONRADO4HOH",
+            "MANFSIC"
+          ],
+          "eventoId": "MUERTE_FED2_SICILIA_1250",
+          "titulo": "Frederick II leaves an inheritance the papacy cannot tolerate",
+          "texto": "Frederick II had united the imperial dignity with the Kingdom of Sicily, geographically surrounding the Papal States. At his death, Conrad IV inherits the Sicilian crown while Manfred maintains the family’s power in the south. The issue is not merely who inherits, but whether the Hohenstaufen will continue to dominate Italy."
+        },
+        {
+          "anio": 1266,
+          "persona": "CARLOS1ANJ",
+          "personas": [
+            "MANFSIC",
+            "CARLOS1ANJ",
+            "PAPA_CLEMENTE4"
+          ],
+          "eventoId": "BENEVENTO_1266",
+          "titulo": "The pope finds a king to oppose the Hohenstaufen",
+          "texto": "The papacy offers the crown to Charles of Anjou, brother of Louis IX of France. Charles defeats Manfred at Benevento and occupies the kingdom. A war between pope and emperor ends by installing a new French dynasty in the central Mediterranean."
+        },
+        {
+          "anio": 1268,
+          "persona": "CONRADINOHOH",
+          "personas": [
+            "CONRADINOHOH",
+            "CARLOS1ANJ"
+          ],
+          "eventoId": "TAGLIACOZZO_1268",
+          "titulo": "Conradin loses both crown and life",
+          "texto": "The young Conradin attempts to recover the inheritance of his father, Conrad IV, but Charles defeats him at Tagliacozzo. His execution in Naples removes the last direct male claimant of the Hohenstaufen line and leaves the Angevins apparently unchallenged."
+        },
+        {
+          "anio": 1282,
+          "persona": "BEATCONST",
+          "personas": [
+            "CARLOS1ANJ",
+            "PEDRO3AR",
+            "BEATCONST"
+          ],
+          "eventoId": "VISPERAS_SICILIANAS",
+          "titulo": "The Vespers turn a revolt into a dynastic question",
+          "texto": "The revolt in Palermo expels Angevin power from much of the island. The Sicilians appeal to Peter III of Aragon, who is married to Constance, Manfred’s daughter. Hohenstaufen rights that had seemed extinct return to politics through a woman and the House of Barcelona."
+        },
+        {
+          "anio": 1295,
+          "persona": "JAIME2AR",
+          "personas": [
+            "JAIME2AR",
+            "FEDERICO2SIC"
+          ],
+          "eventoId": "ANAGNI_1295",
+          "titulo": "The king’s renunciation does not bind the island",
+          "texto": "James II agrees at Anagni to abandon his claim to Sicily, but the Sicilians refuse to return to Angevin rule. They choose his brother Frederick and force the House of Barcelona to divide over the island’s future."
+        },
+        {
+          "anio": 1296,
+          "persona": "FEDERICO2SIC",
+          "personas": [
+            "FEDERICO2SIC",
+            "PEDRO3AR",
+            "BEATCONST",
+            "CARLOS2NAP"
+          ],
+          "eventoId": "FEDERICO_SICILIA_1296",
+          "titulo": "The island chooses its own Aragonese branch",
+          "texto": "Frederick, son of Peter III and Constance, is recognised as king in Sicily. While Charles II of Anjou retains the mainland, the Aragonese family establishes its own line on the island. The division ceases to be a temporary occupation and begins to become a system."
+        },
+        {
+          "anio": 1302,
+          "persona": "FEDERICO2SIC",
+          "personas": [
+            "FEDERICO2SIC",
+            "CARLOS2NAP"
+          ],
+          "eventoId": "CALTABELLOTTA_1302",
+          "titulo": "A peace settlement recognises the divided kingdom",
+          "texto": "The Peace of Caltabellotta effectively accepts two monarchies: the Angevins retain the mainland while Frederick rules the island, increasingly called Trinacria to distinguish it from the Angevin kingdom. The name Sicily survives on both sides of the strait."
+        },
+        {
+          "anio": 1321,
+          "persona": "PEDRO2SIC",
+          "personas": [
+            "PEDRO2SIC",
+            "FEDERICO2SIC",
+            "LEONORANJOU"
+          ],
+          "eventoId": "PEDRO_SIC_1321",
+          "titulo": "The succession contradicts the peace settlement",
+          "texto": "Caltabellotta had provided for Frederick to rule for life and for a later settlement favourable to the Angevins. By associating Peter with the throne, the island dynasty defended its own hereditary succession. The peace of 1302 had not ended the dispute."
+        },
+        {
+          "anio": 1343,
+          "persona": "JUANA1NAP",
+          "personas": [
+            "JUANA1NAP",
+            "ROB1NAP",
+            "CARLOSCAL"
+          ],
+          "eventoId": "JUANA_NAP_1343",
+          "titulo": "The heir’s death leaves the crown to a granddaughter",
+          "texto": "Charles of Calabria died before Robert. Joanna inherited the crown and had to assert her authority against branches of her own family. The murder of Andrew of Anjou later triggered the invasions of Louis of Hungary."
+        },
+        {
+          "anio": 1372,
+          "persona": "FEDERICO3SIC",
+          "personas": [
+            "FEDERICO3SIC",
+            "JUANA1NAP"
+          ],
+          "eventoId": "AVINON_SIC_1372",
+          "titulo": "Another peace settlement redefines the two Sicilies",
+          "texto": "Papal mediation created a new framework for recognising Frederick as king of Trinacria, with obligations towards Joanna. The names Sicily and Trinacria expressed contested rights as well as a geographical separation."
+        },
+        {
+          "anio": 1382,
+          "persona": "CARLOS3NAP",
+          "personas": [
+            "CARLOS3NAP",
+            "JUANA1NAP",
+            "LUIS1ANJOU"
+          ],
+          "eventoId": "DURAZZO_NAP_1382",
+          "titulo": "Two branches contest an inheritance",
+          "texto": "Joanna had chosen Louis of Anjou as her heir, but Charles of Durazzo conquered the kingdom. His death and Joanna’s left the next generation a war between Anjou and Durazzo, not a peaceful succession."
+        },
+        {
+          "anio": 1392,
+          "persona": "MARIA1SIC",
+          "personas": [
+            "MARIA1SIC",
+            "MARTINJOVENSIC",
+            "MARTIN1ARAG"
+          ],
+          "eventoId": "MARIA_MARTIN_1392",
+          "titulo": "A marriage requires an expedition",
+          "texto": "Mary and Martin arrived in Sicily with Aragonese support to overcome the barons. The queen’s hereditary legitimacy was not enough without military capacity. Government of the island again became closely connected with the Crown of Aragon."
+        },
+        {
+          "anio": 1442,
+          "persona": "ALF5ARAG",
+          "personas": [
+            "ALF5ARAG",
+            "RENATOANJOU"
+          ],
+          "eventoId": "ALFONSO_NAPOLES_1442",
+          "titulo": "Alfonso V crosses the strait in the opposite direction",
+          "texto": "More than a century and a half later, Alfonso V of Aragon conquers Naples from René of Anjou. The king already rules Aragon and Trinacria: his victory reunites under his person the two halves of Frederick II’s former monarchy."
+        },
+        {
+          "anio": 1458,
+          "persona": "FERN1NAP",
+          "personas": [
+            "ALF5ARAG",
+            "FERN1NAP",
+            "JUAN2ARAG"
+          ],
+          "eventoId": "SUCESION_NAPOLES_1458",
+          "titulo": "Alfonso dies and the crowns again follow separate paths",
+          "texto": "Alfonso does not transmit all his domains to the same heir. His brother John II receives Aragon and Trinacria; Naples passes to his son Ferdinand. The succession divides among different heirs the crowns that Alfonso had reunited."
+        },
+        {
+          "anio": 1494,
+          "persona": "CARLOS8FRA",
+          "personas": [
+            "CARLOS8FRA",
+            "FERN1NAP",
+            "ALF5ARAG"
+          ],
+          "eventoId": "GUERRAS_ITALIA",
+          "titulo": "Charles VIII turns the Neapolitan succession into a European war",
+          "texto": "Charles VIII of France claims the Angevin inheritance of Naples and enters Italy with a large army. The initial ease of his advance shatters the peninsula’s balance and opens the Italian Wars, in which France and Aragon will again contest the same kingdom."
+        },
+        {
+          "anio": 1500,
+          "persona": "FED1NAP",
+          "personas": [
+            "FED1NAP",
+            "LUIS12FRA",
+            "FERN2ARAG"
+          ],
+          "eventoId": "TRATADO_GRANADA_1500",
+          "titulo": "Two kings decide to divide a third king’s crown",
+          "texto": "Louis XII and Ferdinand the Catholic agree to partition the kingdom of Frederick I of Naples. France and Aragon cooperate to expel the reigning king, but the agreement leaves territories and rights poorly defined. From the outset, the alliance contains the seeds of the next war."
+        },
+        {
+          "anio": 1503,
+          "persona": "GRANCAPITAN",
+          "personas": [
+            "GRANCAPITAN",
+            "FERN2ARAG",
+            "LUIS12FRA"
+          ],
+          "eventoId": "CERIGNOLA_1503",
+          "titulo": "The Great Captain settles the dispute on the battlefield",
+          "texto": "Gonzalo Fernández de Córdoba defeats the French at Cerignola and, months later, wins again at the Garigliano. The legal and dynastic dispute over Naples is resolved through military change: the Spanish infantry demonstrates a new ability to dominate the battlefield."
+        },
+        {
+          "anio": 1504,
+          "persona": "FERN2ARAG",
+          "personas": [
+            "FERN2ARAG",
+            "GRANCAPITAN",
+            "LUIS12FRA"
+          ],
+          "eventoId": "NAPOLES_FERNANDO_1504",
+          "titulo": "Ferdinand reunites the two halves",
+          "texto": "Ferdinand the Catholic becomes king of Naples and is already king of Trinacria. After the Hohenstaufen, the Angevins and two centuries of warfare, the two parts of the former Sicily again share a sovereign. Naples and Trinacria retain their own crowns and institutions under the same monarch."
+        }
+      ],
+      "colecciones": []
+    }
+  },
+  "republica-nobles": {
+    "enSlug": "the-nobles-republic",
+    "content": {
+      "id": "republica-nobles",
+      "titulo": "The Nobles’ Republic",
+      "subtitulo": "How Poland turned a hereditary monarchy into an elective crown",
+      "disponible": true,
+      "descripcion": "The Polish–Lithuanian Commonwealth became a monarchy in which kings were elected, compelled to negotiate and expected to govern alongside an exceptionally powerful nobility. From the last Jagiellons through international elections, the Vasas, Sobieski and the Wettins, this story follows that system to its final attempt at reform in 1791.",
+      "pasos": [
+        {
+          "anio": 1506,
+          "persona": "SEGIS1JAG",
+          "personas": [
+            "SEGIS1JAG",
+            "ALEJANDRO1POL",
+            "CASI4"
+          ],
+          "titulo": "A hereditary monarchy already built on negotiation",
+          "texto": "When Sigismund the Old succeeds his brother Alexander, the crown remains in Jagiellon hands but does not pass by automatic inheritance. For generations, kings and nobles have exchanged recognition of the dynasty for political privileges. The Nobles’ Republic grows out of rights and institutions developed within the monarchy itself."
+        },
+        {
+          "anio": 1569,
+          "persona": "SEGIS2JAG",
+          "personas": [
+            "SEGIS2JAG",
+            "ANAJAG",
+            "CATALINAJAG"
+          ],
+          "eventoId": "LUBLIN_1569",
+          "titulo": "Lublin: the union no longer depends on one family",
+          "texto": "Sigismund II Augustus has no children. The Union of Lublin binds Poland and Lithuania into a closer political commonwealth just as the Jagiellon dynasty approaches its end. The central question is no longer which son will inherit, but how both realms will choose their next king together."
+        },
+        {
+          "anio": 1573,
+          "persona": "ENRIQ3FRA",
+          "personas": [
+            "ENRIQ3FRA",
+            "ANAJAG"
+          ],
+          "eventoId": "ELECCION_1573",
+          "titulo": "Anyone may aspire to the crown",
+          "texto": "The first free election brings Henry of Valois, brother of the French king, to the throne. Before accepting the crown he must swear to permanent limits on royal authority. The paradox is immediate: a foreign prince gains one of Europe’s great crowns, but politically that crown belongs to those who elected him."
+        },
+        {
+          "anio": 1576,
+          "persona": "ESTEBANBATHORY",
+          "personas": [
+            "ANAJAG",
+            "ESTEBANBATHORY",
+            "ENRIQ3FRA"
+          ],
+          "eventoId": "BATHORY_1576",
+          "titulo": "A Jagiellon queen and a prince of Transylvania",
+          "texto": "Henry leaves Poland to become king of France. Anna Jagiellon is elected, and Stephen Báthory, prince of Transylvania, rules beside her. Dynastic blood and election by the noble estate are combined in a form that almost no other major European monarchy can imitate."
+        },
+        {
+          "anio": 1587,
+          "persona": "SEGIS3VASA",
+          "personas": [
+            "SEGIS3VASA",
+            "CATALINAJAG",
+            "JUAN3SUECIA"
+          ],
+          "eventoId": "VASA_POLONIA_1587",
+          "titulo": "Election creates another dynasty",
+          "texto": "Sigismund III Vasa is a grandson of Sigismund the Old through his mother, Catherine Jagiellon, and heir to the Swedish throne through his father. His election seems to reconcile continuity with political liberty. Three Vasas will be elected in succession, showing that an elective monarchy can behave like a dynasty for decades without ceasing to be elective."
+        },
+        {
+          "anio": 1632,
+          "persona": "WLAD4VASA",
+          "personas": [
+            "SEGIS3VASA",
+            "WLAD4VASA",
+            "JUAN2CASIVASA"
+          ],
+          "titulo": "Władysław IV: a succession that looks hereditary",
+          "texto": "After Sigismund III dies, the nobility elects his son Władysław IV. Election has not been abolished, yet family continuity works in practice. The nobles can accept a member of the reigning house while still demanding commitments from him before recognising him as king."
+        },
+        {
+          "anio": 1668,
+          "persona": "JUAN2CASIVASA",
+          "personas": [
+            "JUAN2CASIVASA",
+            "MIGUELKORYBUT",
+            "LUISAMARIAGONZAGA"
+          ],
+          "eventoId": "ABDICACION_1668",
+          "titulo": "Abdication breaks the Vasa succession",
+          "texto": "John II Casimir, Władysław’s brother, endures rebellion, Swedish invasion and prolonged political crisis before abdicating. With no inevitable dynastic heir, the election of 1669 chooses Michał Korybut Wiśniowiecki, a candidate from the native nobility. The crown shows how abruptly it can leave one of Europe’s great houses."
+        },
+        {
+          "anio": 1683,
+          "persona": "JUAN3SOBIESKI",
+          "personas": [
+            "JUAN3SOBIESKI",
+            "MARIAKAZIMIERA",
+            "MIGUELKORYBUT"
+          ],
+          "eventoId": "VIENA_1683",
+          "titulo": "Sobieski: an elected king saves Vienna",
+          "texto": "John Sobieski reaches the throne by election rather than membership of a reigning dynasty. In 1683 he leads the army that relieves Vienna and becomes one of Europe’s most celebrated monarchs. The Nobles’ Republic can produce a king of immense prestige; what it cannot guarantee is that his sons will inherit his crown."
+        },
+        {
+          "anio": 1697,
+          "persona": "AUGUST2SAXPOL",
+          "personas": [
+            "AUGUST2SAXPOL",
+            "CHRISTIANEEBERHARDINE",
+            "JUAN3SOBIESKI"
+          ],
+          "eventoId": "WETTIN_POLONIA_1697",
+          "titulo": "A Saxon elector wins a Polish election",
+          "texto": "Frederick Augustus of Saxony converts to Catholicism and is elected as Augustus II. The result places Saxony and the Commonwealth in personal union. The Polish crown is again a coveted prize for Europe’s dynasties, but also a channel through which neighbouring powers can intervene in the Commonwealth’s domestic politics."
+        },
+        {
+          "anio": 1733,
+          "persona": "STAN1LESZ",
+          "personas": [
+            "STAN1LESZ",
+            "AUGUST3SAXPOL",
+            "AUGUST2SAXPOL",
+            "MARIALESZCZ"
+          ],
+          "eventoId": "DOBLE_ELECCION_1733",
+          "titulo": "Two elected kings, one European war",
+          "texto": "When Augustus II dies, Stanisław Leszczyński and Augustus III attract rival coalitions. France supports the first; Russia and Austria support the second. An election intended to express the nobility’s political freedom becomes an international contest backed by armies."
+        },
+        {
+          "anio": 1764,
+          "persona": "STAN2PONIAT",
+          "personas": [
+            "STAN2PONIAT",
+            "CATHERINE2RUS",
+            "FREDWIL2PRU"
+          ],
+          "eventoId": "PONIATOWSKI_1764",
+          "titulo": "The last king tries to reform the Commonwealth",
+          "texto": "Stanisław August Poniatowski is elected in a system whose formal liberty now coexists with overwhelming Russian pressure. The king and part of the political elite nevertheless try to rebuild the state. The great question of the eighteenth century is whether noble liberty can be transformed before it hardens into paralysis."
+        },
+        {
+          "anio": 1791,
+          "persona": "STAN2PONIAT",
+          "personas": [
+            "STAN2PONIAT",
+            "FREDAUGUST3SAX"
+          ],
+          "eventoId": "CONSTITUCION_1791",
+          "titulo": "The Commonwealth tries to abolish the elective crown",
+          "texto": "The Constitution of 3 May abolishes the liberum veto and plans to replace the election of each new king with hereditary succession in the House of Saxony. After more than two centuries, the Commonwealth’s reformers conclude that the mechanism once used to protect political liberty can also prevent the state from surviving."
+        },
+        {
+          "anio": 1795,
+          "persona": "STAN2PONIAT",
+          "personas": [
+            "STAN2PONIAT",
+            "CATHERINE2RUS",
+            "FREDWIL2PRU"
+          ],
+          "eventoId": "FIN_POLONIA_1795",
+          "titulo": "The end: no crown remains to be elected",
+          "texto": "The Third Partition extinguishes the Commonwealth, and Stanisław August abdicates. A story that began with a dynasty negotiating privileges ends with Russia, Prussia and Austria dividing its territory. The Nobles’ Republic was an extraordinarily durable anomaly: a monarchy that made the election of its king central to its idea of freedom."
+        }
+      ],
+      "colecciones": []
+    }
+  },
+  "favoritos-maquiavelo": {
+    "enSlug": "machiavellis-favourites",
+    "content": {
+      "id": "favoritos-maquiavelo",
+      "titulo": "Machiavelli’s Favourites",
+      "subtitulo": "Models, warnings and lessons in power from The Prince",
+      "disponible": true,
+      "descripcion": "A journey through the rulers and contemporaries whom Machiavelli turned into political lessons: how to conquer and preserve power, how to lose it, how to manage appearances, take risks and build a reputation in the Italy of his day.",
+      "pasos": [
+        {
+          "anio": 1450,
+          "persona": "FRAN1SFOR",
+          "personas": [
+            "NICCOLOMACHIAVELLI",
+            "FRAN1SFOR",
+            "BLANMARVISC"
+          ],
+          "eventoId": "SFORZA_DUQUE_1450",
+          "titulo": "Francesco Sforza: becoming a prince with one’s own arms",
+          "texto": "Machiavelli needs examples of men who reached power without inheriting it. Francesco Sforza offers an exceptional case: a condottiere who turns military skill, alliances and marriage into a duchy. In The Prince he is contrasted with rulers who owe their rise chiefly to the fortune of others."
+        },
+        {
+          "anio": 1492,
+          "persona": "RODRIGOBORJA",
+          "personas": [
+            "NICCOLOMACHIAVELLI",
+            "RODRIGOBORJA",
+            "CESARBORJA"
+          ],
+          "eventoId": "ALEJANDRO6_1492",
+          "titulo": "Alexander VI: promises, appearances and opportunity",
+          "texto": "Rodrigo Borgia becomes Pope Alexander VI and turns family ambition into territorial policy. Machiavelli examines his talent for making promises, negotiating and changing position, as well as the place of reputation and deception in the exercise of power."
+        },
+        {
+          "anio": 1498,
+          "persona": "NICCOLOMACHIAVELLI",
+          "personas": [
+            "NICCOLOMACHIAVELLI",
+            "PIEROSODERINI"
+          ],
+          "titulo": "Machiavelli enters the laboratory of power",
+          "texto": "In 1498 Niccolò Machiavelli enters the service of the Florentine Republic. Over the following years he travels, negotiates and observes kings, popes, captains and Italian lords at close quarters. The Prince grows out of this experience: Machiavelli studies rulers he met or whose decisions he was able to follow firsthand."
+        },
+        {
+          "anio": 1499,
+          "persona": "CATASFOR",
+          "personas": [
+            "NICCOLOMACHIAVELLI",
+            "CATASFOR",
+            "CESARBORJA"
+          ],
+          "eventoId": "MACHIAVELLI_FORLI_1499",
+          "titulo": "Caterina Sforza: a fortress is not enough",
+          "texto": "Machiavelli negotiates personally with Caterina Sforza at Forlì. Soon afterwards Cesare Borgia conquers her domains. Years later, when discussing whether a prince should rely on fortresses, Machiavelli recalls Forlì: a formidable stronghold may be useful, but it cannot replace a political relationship with the people beyond its walls."
+        },
+        {
+          "anio": 1500,
+          "persona": "LUIS12FRA",
+          "personas": [
+            "NICCOLOMACHIAVELLI",
+            "LUIS12FRA",
+            "LUDOVSFOR"
+          ],
+          "titulo": "Louis XII: a manual for losing Italy",
+          "texto": "The king of France conquers Milan, intervenes in Naples and appears to dominate the Italian chessboard. That is precisely why Machiavelli finds him so useful as a counterexample: his alliances and decisions show how a conqueror can weaken his own supporters, strengthen his rivals and create the conditions for his expulsion."
+        },
+        {
+          "anio": 1502,
+          "persona": "CESARBORJA",
+          "personas": [
+            "NICCOLOMACHIAVELLI",
+            "CESARBORJA",
+            "RODRIGOBORJA",
+            "VITELLOZZO"
+          ],
+          "eventoId": "SENIGALLIA_1502",
+          "titulo": "Cesare Borgia: the prince who almost succeeded",
+          "texto": "Cesare Borgia is the book’s great practical case study. Machiavelli observes his expansion through Romagna and witnesses the outcome at Senigallia, where the duke lures rebellious captains into a trap and eliminates them. Borgia appears to create order, forces of his own and obedience; his collapse after Alexander VI’s death also tests how much virtù can accomplish against hostile fortune."
+        },
+        {
+          "anio": 1506,
+          "persona": "PAPA_JULIO2",
+          "personas": [
+            "NICCOLOMACHIAVELLI",
+            "PAPA_JULIO2",
+            "CESARBORJA"
+          ],
+          "eventoId": "JULIO2_1503",
+          "titulo": "Julius II: when boldness suits the times",
+          "texto": "Julius II acts with an impetuosity that repeatedly unsettles allies and enemies. Machiavelli uses him to explain one of his best-known ideas: a political temperament succeeds only while it fits the circumstances. Julius triumphs because his age favours audacity; under different conditions, the same conduct might have destroyed him."
+        },
+        {
+          "anio": 1512,
+          "persona": "FERN2ARAG",
+          "personas": [
+            "NICCOLOMACHIAVELLI",
+            "FERN2ARAG",
+            "ISAB1CAST"
+          ],
+          "titulo": "Ferdinand the Catholic: building a reputation",
+          "texto": "Granada, the Mediterranean, Italy and Navarre allow Ferdinand to undertake one enterprise after another, keeping subjects and rivals intent on his next move. In The Prince he is the contemporary example of how great actions, sustained projects and a carefully fashioned public image can turn reputation into an instrument of rule."
+        },
+        {
+          "anio": 1516,
+          "persona": "LORENZO2MEDICI",
+          "personas": [
+            "NICCOLOMACHIAVELLI",
+            "GIULIANOMEDICI",
+            "LORENZO2MEDICI",
+            "CATAMEDICI",
+            "PIEROLORENZOMEDICI"
+          ],
+          "eventoId": "PRINCIPE_DEDICACION_1516",
+          "titulo": "Lorenzo de’ Medici: the dedicatee of The Prince",
+          "texto": "The journey ends with an irony. The treatise was initially intended for Giuliano de’ Medici, but after his death the dedication passed to the younger Lorenzo. Machiavelli offers him lessons drawn from Sforza, the Borgias, France, the papacy and Ferdinand. The book will far outlive the political opportunity for which it was written."
+        }
+      ],
+      "contexto": "The prince analyzes the decisions and resources with which the rulers gain and preserve power. The popular sense of \"Machiavelic\" is also part of the reception of the work.",
+      "fuentes": [
+        {
+          "titulo": "Niccolò Machiavelli · The Prince, traducción de W. K. Marriott",
+          "url": "https://www.gutenberg.org/ebooks/1232"
+        }
+      ],
+      "colecciones": [
+        "cultura-popular"
+      ]
+    }
+  },
+  "estuardo-hannover": {
+    "enSlug": "from-stuart-to-hanover",
+    "content": {
+      "id": "estuardo-hannover",
+      "titulo": "From Stuart to Hanover",
+      "subtitulo": "Revolution, religion and a crown that changes dynasty",
+      "disponible": false,
+      "colecciones": []
+    }
+  }
+}

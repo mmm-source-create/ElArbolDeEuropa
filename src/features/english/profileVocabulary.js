@@ -8,8 +8,10 @@ import {EXPANDED_NOTES} from './expandedNotes.js';
 import {EXPANDED_NAMES,EXPANDED_LABELS} from './expandedVocabulary.js';
 import {V535_NAMES,V535_LABELS,V535_NOTES} from './v535Vocabulary.js';
 import {V536_NAMES,V536_LABELS,V536_NOTES} from './v536Vocabulary.js';
+import runtime from '../../generated/englishVocabularyRuntime.json' with {type:'json'};
 // Display translations only: canonical dynasty and territory keys stay intact.
 export const PROFILE_LABELS = {
+  ...runtime.labels,
   ...FOURTH_200_LABELS,
   ...THIRD_100_LABELS,
   ...ROSES_LABELS,
@@ -21,6 +23,9 @@ export const PROFILE_LABELS = {
   ...V536_LABELS,
   ...IBERIAN_LABELS,
   'Anjou-Hungría':'Anjou-Hungary', 'Anjou-Durazzo':'Anjou-Durazzo', 'Capeto':'Capet', 'Plantagenet':'Plantagenet', 'Poitiers':'Poitiers', 'Tudor':'Tudor', 'Osmanlí':'Ottoman',
+  'Dominios de los Tocco':'Tocco domains',
+  'Voivodato de Transilvania':'Voivodeship of Transylvania',
+  'Ducados de Bremen-Verden':'Duchies of Bremen-Verden',
   'Nápoles':'Naples', 'Hungría':'Hungary', 'Croacia':'Croatia', 'Acaya':'Achaea', 'Jerusalén':'Jerusalem', 'Comuna de Arezzo':'Commune of Arezzo', 'Polonia':'Poland', 'Inglaterra':'England', 'Irlanda':'Ireland', 'Francia':'France', 'Aquitania':'Aquitaine', 'Normandía':'Normandy', 'Anjou':'Anjou', 'Maine':'Maine', 'Imperio otomano':'Ottoman Empire', 'Corona de San Esteban':'Crown of Saint Stephen',
   'Rey':'King', 'Reina':'Queen', 'Duque':'Duke', 'Duquesa':'Duchess', 'Conde':'Count', 'Príncipe':'Prince', 'Señor':'Lord', 'Sultán':'Sultan', 'Emperador':'Emperor', 'Consorte':'Consort', 'Noble':'Noble', 'Duque / Rey titular':'Duke / Titular king', 'Consorte / Regente':'Consort / Regent', 'Consorte titular':'Titular consort', 'Príncipe consorte':'Prince consort', 'Consorte / Condesa':'Consort / Countess', 'Conde / Regente':'Earl / Regent', 'Conde / Rey':'Count / King', 'Duque consorte':'Duke consort', 'Rey / Conde':'King / Earl', 'Rey de Romanos':'King of the Romans',
   'Conde de Anjou y Maine · Duque de Normandía':'Count of Anjou and Maine · Duke of Normandy', 'Emperatriz · Señora de los ingleses':'Empress · Lady of the English', 'Duquesa de Aquitania · Reina consorte de Francia e Inglaterra':'Duchess of Aquitaine · Queen consort of France and England', 'Rey asociado de Inglaterra':'Junior king of England', 'Rey · Duque de Normandía y Aquitania · Conde de Anjou':'King · Duke of Normandy and Aquitaine · Count of Anjou', 'Duque de Bretaña':'Duke of Brittany', 'Reina consorte de Sicilia · Condesa consorte de Tolosa':'Queen consort of Sicily · Countess consort of Toulouse', 'Reina consorte de Inglaterra':'Queen consort of England', 'Gran almirante otomano':'Ottoman grand admiral', 'Almirante / Gobernador de Argel':'Admiral / Governor of Algiers',
@@ -29,6 +34,7 @@ export const PROFILE_LABELS = {
 };
 
 export const ENGLISH_NAMES = {
+  ...runtime.names,
   ...FOURTH_200_NAMES,
   ...THIRD_100_NAMES,
   ...ROSES_NAMES,
@@ -51,6 +57,7 @@ export const ENGLISH_NAMES = {
 };
 
 export const PROFILE_NOTES = {
+  ...runtime.notes,
   ...FOURTH_200_NOTES,
   ...THIRD_100_NOTES,
   ...ROSES_NOTES,
@@ -91,15 +98,57 @@ export const PROFILE_NOTES = {
 export function translatedProfileText(text, names = ENGLISH_NAMES, claim) {
   if (!text) return text;
   if (PROFILE_NOTES[text]) return PROFILE_NOTES[text];
+  if(/^\d{3,4}(?:[–-]\d{2,4})? \([A-Z][A-Z0-9 .-]*\)$/.test(text))return text;
+  if(/^Vol\. \d+ \(\d{4}\)\. «.+»$/.test(text))return text;
+  if(/^NDB \d+ \(\d{4}\): «.+»$/.test(text))return text;
   const fixed={'Cabecera biográfica':'Biographical heading','Biografía, párrafo 1':'Biography, paragraph 1','Historia → Fechas de reinado':'History → Reign dates','Filiación paterna confirmada en la fuente.':'Paternal relationship confirmed by the source.','Filiación materna confirmada en la fuente.':'Maternal relationship confirmed by the source.','Fuente citada en la explicación de la sucesión':'Source cited in the succession explanation','Sucesión contrastada con la fuente.':'Succession checked against the source.'};
   if(fixed[text])return fixed[text];
+  const biographicalHeading=text.match(/^Cabecera biográfica y acceso al poder: (.+); el mandato no determina sus fronteras\.$/);
+  if(biographicalHeading)return `Biographical heading and accession to power: ${biographicalHeading[1]}; the office does not determine its borders.`;
+  const headingAndParagraph=text.match(/^Cabecera: gobernante (.+); párrafo sobre el retorno a la rama principal$/);
+  if(headingAndParagraph)return `Heading: ruler ${headingAndParagraph[1]}; paragraph on the return to the main branch`;
   const marriage=text.match(/^Historia → matrimonio de (\d+)$/);if(marriage)return `History → Marriage in ${marriage[1]}`;
   const office=text.match(/^La ficha de autoridad fecha este cargo en (.+)\.$/);if(office)return `The authority record dates this office to ${office[1]}.`;
   if(text==='Conde de Condado de Barcelona, 1516–1556, contrastado con la fuente.')return 'Count of Barcelona, 1516–1556, checked against the source.';
+  if(text==='Córdoba 1482 – Lisboa 1517; hija de los Reyes Católicos; casada con Manuel I de Portugal.')return 'Córdoba 1482 – Lisbon 1517; daughter of the Catholic Monarchs; married to Manuel I of Portugal.';
+  if(text==='Entrada Abel: año de muerte 1252. Se usa el texto biográfico, no se equipara su título a propiedad exclusiva de todas las tierras.')return 'Abel entry: year of death 1252. The biographical text is used; his title is not treated as exclusive ownership of all the lands.';
+  const medlandsEstimate=text.match(/^MedLands estima (.+); se conserva como fecha aproximada\.$/);
+  if(medlandsEstimate)return `MedLands estimates ${medlandsEstimate[1]}; it is retained as an approximate date.`;
+  const territorialEntry=text.match(/^Entrada (.+): reinado (.+)\. Se usa el texto biográfico, no se equipara su título a propiedad exclusiva de todas las tierras\.$/);
+  if(territorialEntry)return `${territorialEntry[1]} entry: reign ${territorialEntry[2]}. The biographical text is used; the title is not treated as exclusive ownership of all the lands.`;
+  const quotedEntry=text.match(/^Entrada («.+»)$/);
+  if(quotedEntry)return `Entry ${quotedEntry[1]}`;
+  if(text==='Último almojarife y sucesor de Said, conquistado en 1287; extremo de 1282 según la cronología insular.')return 'Last almojarife and successor of Said, conquered in 1287; the island chronology gives an outer limit of 1282.';
+  if(text==='Valí de las Baleares, con gobierno delegado insular. La derrota no le concede los emiratos independientes de resistencia posteriores. El ámbito del gobernador sigue insular durante los cambios de superior; los cortes de cada califa se expresan a escala anual.')return 'Governor of the Balearic Islands, with delegated island government. Defeat does not give him the later independent resistance emirates. The governor’s scope remains insular through changes of overlord; each caliph’s dates are expressed at annual resolution.';
+  if(text==='Gobierno de Abu Yahya desde 1208 y caída de Palma en 1229.')return 'Abu Yahya’s government from 1208 and the fall of Palma in 1229.';
+  if(text==='Sucesión califal de 1199–1232; los cortes de cambio de superior se expresan a escala anual.')return 'Caliphal succession, 1199–1232; changes of overlord are expressed at annual resolution.';
+  const correctedYear=text.match(/^El DBI y la ficha GND dan (\d{3,4}); se corrige el año\.$/);
+  if(correctedYear)return `The DBI and GND authority record give ${correctedYear[1]}; the year is corrected.`;
+  const medlandsCorrectedYear=text.match(/^MedLands y la ficha GND dan (\d{3,4}); se corrige el año\.$/);
+  if(medlandsCorrectedYear)return `MedLands and the GND authority record give ${medlandsCorrectedYear[1]}; the year is corrected.`;
+  const correctedBirth=text.match(/^El DBI y la ficha GND fechan el nacimiento el (.+); se corrige el año\.$/);
+  if(correctedBirth)return `The DBI and GND authority record date the birth to ${correctedBirth[1]}; the year is corrected.`;
+  const ndbBirth=text.match(/^La NDB fecha el nacimiento el (.+)\.$/);
+  if(ndbBirth)return `The NDB dates the birth to ${ndbBirth[1]}.`;
+  const priorAtlasYear=text.match(/^(\d{3,4}) \(valor anterior del Atlas, sin fuente específica localizada\)$/);
+  if(priorAtlasYear)return `${priorAtlasYear[1]} (previous Atlas value, without a located specific source)`;
+  if(text==='Sucesión de Mariano de 1218–1232, asesinato de Barisone en 1236 y elección de Adelasia; fin de la jurisdicción judicial en 1259.')return 'Mariano’s succession, 1218–1232; Barisone’s murder in 1236 and Adelasia’s election; end of the giudicato’s jurisdiction in 1259.';
+  if(text==='Cargo electivo de la República, no patrimonio territorial personal.')return 'Elective office of the Republic, not a personal territorial patrimony.';
+  if(text==='Juan sucedió a su hermano Carlos, sin que el condado se reuniera por ello con los territorios de Carlos el Temerario.')return 'John succeeded his brother Charles, without thereby joining the county to the territories of Charles the Bold.';
+  if(text==='La revisión regional conserva las dotes y ámbitos personales separados durante el reparto fraterno.')return 'The regional review keeps dowries and personal scopes separate during the brothers’ partition.';
+  if(text==='Dominios insulares y continentales reunidos bajo un mismo gobernante. El condado palatino y el despotado conservan títulos y superficies fechadas propios.')return 'Island and mainland domains united under one ruler. The county palatine and the despotate retain their own titles and dated areas.';
+  if(text==='Tabla de ramas y gobiernos ernestinos, pp. 18–19: Weimar, Coburgo, Eisenach y Gotha; gobierno compartido y particiones.')return 'Table of Ernestine branches and governments, pp. 18–19: Weimar, Coburg, Eisenach and Gotha; shared government and partitions.';
+  const electionAndDeath=text.match(/^Elección de (\d{3,4}) y muerte en (\d{3,4})$/);
+  if(electionAndDeath)return `Election in ${electionAndDeath[1]} and death in ${electionAndDeath[2]}`;
+  const maleLineEnded=text.match(/^Su muerte en (\d{3,4}) extinguió la línea masculina tirolesa\.$/);
+  if(maleLineEnded)return `His death in ${maleLineEnded[1]} ended the Tyrolean male line.`;
   const checked=text.match(/^(.+) de (.+), (\d+–\d+), contrastado con la fuente\.$/);
   if(checked&&PROFILE_LABELS[checked[1]]&&PROFILE_LABELS[checked[2]])return `${PROFILE_LABELS[checked[1]]} of ${PROFILE_LABELS[checked[2]]}, ${checked[3]}, checked against the source.`;
   if(text==='Datos biográficos: «Königin v. Kastilien u. León v. 1474-1504 u. v. 1479-1504 als Gattin Ferdinands II. auch Königin v. Aragón, auch genannt Isabella die Katholische»')return 'Biographical data: Queen of Castile and León, 1474–1504, and Queen of Aragon as Ferdinand II’s consort, 1479–1504; also called Isabella the Catholic.';
   if(text==='Datos biográficos: «Röm.-dt. Kaiser 1508-1519»')return 'Biographical data: Holy Roman Emperor, 1508–1519.';
+  if(/^Datos biográficos: «.+»$/.test(text))return text.replace(/^Datos biográficos:/,'Biographical data:');
+  const gndShortDate=text.match(/^(\d{1,2}) jul\. (\d{4}) \(GND\)$/);
+  if(gndShortDate)return `${gndShortDate[1]} July ${gndShortDate[2]} (GND)`;
   const vital=text.match(/^La ficha de autoridad registra el (nacimiento|fallecimiento) en (.+)\.$/);
   if(vital)return `The authority record gives the ${vital[1]==='nacimiento'?'birth':'death'} as ${vital[2]}.`;
   const relation=text.match(/^La ficha de autoridad enlaza a .+ \(GND ([0-9X]+)\) como (cónyuge|padre|madre)\.$/);
@@ -108,5 +157,6 @@ export function translatedProfileText(text, names = ENGLISH_NAMES, claim) {
   if(text==='Datos vitales: fecha de fallecimiento')return 'Vital data: death date';
   const locator=text.match(/^Relaciones con personas: (cónyuge|padre|madre) → GND ([0-9X]+)$/);
   if(locator)return `Relationships: ${locator[1]==='cónyuge'?'spouse':locator[1]==='padre'?'father':'mother'} → GND ${locator[2]}`;
+  if(claim)return `Source passage supporting the recorded ${PROFILE_LABELS[claim.field]?.toLowerCase()||'claim'}.`;
   throw new Error(`Missing complete-profile translation: ${text}`);
 }

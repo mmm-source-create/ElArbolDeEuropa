@@ -74,7 +74,7 @@ export function writeStoryNavigation(url, story, index, returnPath = null, ids =
   const stepIds = storyStepIds(story, chapter);
   const selectedPerson = url.searchParams.get('persona');
 
-  url.pathname = '/es/';
+  url.pathname = locale === 'en' ? '/en/' : '/es/';
   url.hash = '';
   for (const key of ['familia', 'arbol', 'continuar', 'seleccion', 'resaltar', 'conectar', 'vinculos']) url.searchParams.delete(key);
   url.searchParams.set('atlas', '1');

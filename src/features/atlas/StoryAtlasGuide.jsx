@@ -2,15 +2,16 @@ import StoryArtworks from '../stories/StoryArtworks.jsx';
 import {useEffect,useRef} from 'react';
 import {ArrowLeft,ArrowRight,BookOpen,Crosshair,X} from 'lucide-react';
 import {ENGLISH_STORIES} from '../english/content.js';
+import runtime from '../../generated/englishStoriesRuntime.json' with {type:'json'};
 import './story-atlas.css';
 import ProgressMeter from '../../ui/ProgressMeter.jsx';
 
 export default function StoryAtlasGuide({story,index,returnPath,count,onStep,onCenter,onExit,onPerson}) {
  const reading=useRef(null);
  useEffect(()=>{if(reading.current)reading.current.scrollTop=0;},[story.id,index]);
- const en=returnPath?.startsWith('/en/'),translation=en?ENGLISH_STORIES[story.id]:null,step=story.pasos[index];
+ const en=returnPath?.startsWith('/en/'),translation=en?ENGLISH_STORIES[story.id]:null,v6=en?runtime.stories[story.id]?.content:null,step=story.pasos[index];
  if(!step)return null;
- const title=translation?.title||story.titulo,chapter=translation?.chapters[index],heading=chapter?.[0]||step.titulo,text=chapter?.[1]||step.texto;
+ const title=v6?.titulo||translation?.title||story.titulo,chapter=translation?.chapters[index],v6step=v6?.pasos?.[index],heading=v6step?.titulo||chapter?.[0]||step.titulo,text=v6step?.texto||chapter?.[1]||step.texto;
  return <section className="story-atlas-guide" aria-label={en?'Story in the Atlas':'Historia en el Atlas'}>
   <div className="story-atlas-context"><BookOpen size={16} aria-hidden="true"/><span>{title} <small>· {index+1} / {story.pasos.length}</small></span><a href={returnPath+(index===story.pasos.length-1?'#seguir-leyendo':'')}>{index===story.pasos.length-1?(en?'Keep reading':'Seguir leyendo'):(en?'Reading view':'Volver a la lectura')} <ArrowRight size={12}/></a><button type="button" onClick={onExit} aria-label={en?'Close story and stay in the Atlas':'Cerrar historia y seguir en el Atlas'}><X size={18}/></button></div>
   <ProgressMeter className="story-atlas-progress" value={index+1} max={story.pasos.length} label={en?'Chapter position':'Posición en la historia'}/>
