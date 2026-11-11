@@ -35,12 +35,20 @@ const STATIC_PAGE_ENTRIES=Object.freeze({
  territorio:'src/features/public/TerritoryPage.jsx',
 });
 const STATIC_PAGE_NAMES=Object.freeze({english:'EnglishPage',historia:'StoryPage',persona:'PublicSite',dinastia:'DynastyPage',territorio:'TerritoryPage'});
-export function assetsForStaticPage(manifest,kind) {
+export function assetsForStaticPage(manifest,kind,pathname='') {
  let entry=STATIC_PAGE_ENTRIES[kind];
  if(!entry)throw new Error(`Tipo de ficha sin punto de entrada: ${kind}`);
  if(!manifest[entry])entry=Object.entries(manifest).find(([,item])=>item.name===STATIC_PAGE_NAMES[kind]&&item.file?.endsWith('.js'))?.[0];
  if(!entry)throw new Error(`Entrada dinámica ausente del manifest: ${kind}`);
- return assetGraph(manifest,entry);
+ const assets=assetGraph(manifest,entry);
+ // Challenge HTML is rendered on the server while its interaction code stays lazy.
+ // Include its complete stylesheet graph before the first paint as well.
+ if(kind==='english'&&/^\/en\/challenge\/?$/.test(pathname)) {
+  const challenge=Object.entries(manifest).find(([key,item])=>key==='src/features/english/EnglishChallenge.jsx'||item.name==='EnglishChallenge')?.[0];
+  if(!challenge)throw new Error('Missing challenge stylesheet entry');
+  assets.css=[...new Set([...assets.css,...assetGraph(manifest,challenge).css])];
+ }
+ return assets;
 }
 export function makeStaticDocument(shell,{html,meta},page,assets) {
  if(!/<div id="root"><\/div>/.test(shell))throw new Error('El shell no contiene una raíz vacía');

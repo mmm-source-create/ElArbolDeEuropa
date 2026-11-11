@@ -60,8 +60,8 @@ if(Object.keys(V6_PEOPLE).length!==2096)errors.push(`pending people total: ${Obj
 if(V6_DYNASTIES.length!==493)errors.push(`pending dynasties total: ${V6_DYNASTIES.length}/493`);
 if(V6_TERRITORIES.length!==1040)errors.push(`pending territories total: ${V6_TERRITORIES.length}/1040`);
 if(Object.keys(V6_STORIES).length!==27)errors.push(`pending story entries total: ${Object.keys(V6_STORIES).length}/27`);
-if(Object.keys(COMPLETE_ENGLISH_PROFILES).length!==2763)errors.push(`complete people total: ${Object.keys(COMPLETE_ENGLISH_PROFILES).length}/2763`);
-if(ENGLISH_DYNASTIES.length!==519)errors.push(`complete dynasties total: ${ENGLISH_DYNASTIES.length}/519`);
+if(Object.keys(COMPLETE_ENGLISH_PROFILES).length!==2771)errors.push(`complete people total: ${Object.keys(COMPLETE_ENGLISH_PROFILES).length}/2771`);
+if(ENGLISH_DYNASTIES.length!==520)errors.push(`complete dynasties total: ${ENGLISH_DYNASTIES.length}/520`);
 if(ENGLISH_TERRITORIES.length!==1041)errors.push(`complete territories total: ${ENGLISH_TERRITORIES.length}/1041`);
 if(TRANSLATED_STORIES.filter(story=>story.chapters>0).length!==22)errors.push(`complete stories total: ${TRANSLATED_STORIES.filter(story=>story.chapters>0).length}/22`);
 if(TRANSLATED_STORIES.filter(story=>story.chapters===0).length!==9)errors.push(`planned story cards total: ${TRANSLATED_STORIES.filter(story=>story.chapters===0).length}/9`);

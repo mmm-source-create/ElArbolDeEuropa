@@ -1,3 +1,4 @@
+import {PEOPLE_CONTENT_602} from './v602.js';
 import {POLISH_PERSON_CONTENT} from './polonia-tanda3.js';
 import {ROSES_PEOPLE_CONTENT} from './dos-rosas.js';
 import {CONFIRMED_PEOPLE_CONTENT} from './incorporaciones-confirmadas.js';
@@ -35,6 +36,7 @@ import { PERSONAS_V529 } from './personas-v529.js';
 import { PERSONAS_V531 } from './personas-v531.js';
 
 export const PERSONA_CONTENT = Object.freeze({
+  ...PEOPLE_CONTENT_602,
   ...POLISH_PERSON_CONTENT,
  ...ROSES_PEOPLE_CONTENT,
   ...CONFIRMED_PEOPLE_CONTENT,

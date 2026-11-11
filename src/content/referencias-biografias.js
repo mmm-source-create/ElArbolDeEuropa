@@ -1,3 +1,4 @@
+import {V602_REFERENCES} from './v602References.js';
 import {POLISH_REFERENCES} from './polishReferences.js';
 import {ROSES_PEOPLE_REFERENCES} from './rosesPeopleReferences.js';
 import {CONFIRMED_PEOPLE_REFERENCES} from './confirmedPeopleReferences.js';
@@ -6,6 +7,7 @@ import {CONFIRMED_PEOPLE_REFERENCES} from './confirmedPeopleReferences.js';
 // figura (P4459, P1986, P1415, P7902, P1417) y sus formatos de URL (P1630).
 // Son biografías generales que cubren todas las etapas de cada vida.
 export const REFERENCIAS_BIOGRAFIAS = Object.freeze({
+  ...V602_REFERENCES,
   ...POLISH_REFERENCES,
  ...ROSES_PEOPLE_REFERENCES,
   ...CONFIRMED_PEOPLE_REFERENCES,

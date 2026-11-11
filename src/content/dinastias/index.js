@@ -19,6 +19,7 @@ const BRITANNICA='https://www.britannica.com/';
 
 // A house history is editorial context. Branches and matrimonial transfers are distinct relations.
 export const HISTORIA_DINASTIAS = {
+ Berlichingen:{resumen:'Linaje de caballeros de Franconia, conocido por Götz von Berlichingen y sus posesiones en Jagsthausen y Hornberg.',origen:'La familia pertenecía a la nobleza caballeresca de Franconia y poseía bienes en los valles del Jagst y del Kocher.',trayectoria:'Götz sirvió a distintos príncipes y participó en querellas nobiliarias y en la guerra de los Campesinos de 1525. Sus conflictos muestran las tensiones entre la caballería, las ciudades y los principados territoriales.',legado:'Su autobiografía y el drama de Goethe difundieron el nombre familiar. Las ramas del linaje mantuvieron trayectorias propias en la nobleza alemana.',territorios:['Sacro Imperio'],protagonistas:['GOTZBERLICHINGEN'],fuentes:['https://www.deutsche-biographie.de/sfz3943.html','https://www.leo-bw.de/en-GB/themenmodul/bauernkrieg/personen/goetz-von-berlichingen']},
   ...POLISH_HOUSES_HISTORY,
   'Plantagenet-York':YORK_HISTORY,
   ...TREINTA_CASAS,

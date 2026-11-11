@@ -12,6 +12,7 @@ import {V536_NAMES,V536_LABELS,V536_NOTES} from './v536Vocabulary.js';
 import runtime from '../../generated/englishVocabularyRuntime.json' with {type:'json'};
 // Display translations only: canonical dynasty and territory keys stay intact.
 export const PROFILE_LABELS = {
+"Berlichingen":"Berlichingen","Caballero imperial":"Imperial knight","Landgravina consorte":"Landgravine consort",
   ...INTERFACE_LABELS,
   ...runtime.labels,
   ...FOURTH_200_LABELS,
@@ -37,6 +38,7 @@ export const PROFILE_LABELS = {
 };
 
 export const ENGLISH_NAMES = {
+"JOSEFERNANDOBAV":"Joseph Ferdinand of Bavaria","ISABELHUNSANTA":"Elizabeth of Hungary","LUDWIG4THUR":"Louis IV of Thuringia","GOTZBERLICHINGEN":"G\u00f6tz von Berlichingen","GUIDOBALDOMONTE":"Guidobaldo da Montefeltro","ISABELGONZAGAURBINO":"Elisabetta Gonzaga","LEONORGONZAGAURBINO":"Eleonora Gonzaga","GUIDOBALDO2ROVERE":"Guidobaldo II della Rovere","FRANCESCO2ROVERE":"Francesco Maria II della Rovere",
   ...runtime.names,
   ...FOURTH_200_NAMES,
   ...THIRD_100_NAMES,

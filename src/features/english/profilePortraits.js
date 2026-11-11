@@ -1,3 +1,4 @@
+import {PORTRAITS_602_EN} from './portraits602.js';
 import {PORTRAITS_200_EN} from './portraits200.js';
 import {OCTOBER_PORTRAITS_EN} from './octoberPortraits.js';
 import {VISCONTI_SFORZA_PORTRAITS} from './viscontiSforzaPortraits.js';
@@ -65,4 +66,5 @@ export const ENGLISH_PROFILE_PORTRAITS = {
  ...OCTOBER_PORTRAITS_EN,
  ...PORTRAITS_200_EN,
  ...runtime.portraits,
+ ...PORTRAITS_602_EN,
 };

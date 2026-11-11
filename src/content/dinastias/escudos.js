@@ -1,3 +1,4 @@
+import {ARMS_602} from './escudos602.js';
 import {ESCUDOS_COMMONS} from './escudosCommons.js';
 import {canonicalDynasty} from '../../data/dynastyAliases.js';
 // Arms of the principal houses. Every house shows a reviewed Commons or supplied
@@ -369,6 +370,7 @@ export const ESCUDOS = Object.freeze({
   'Vasa': {blason: 'De azur, plata y gules, una gavilla de oro brochante.', capas: [['campo', 'azur']], nota: 'La gavilla de la casa Vasa.'},
   'Grifo': {blason: 'De plata, un grifo rampante de gules, armado de oro.', capas: [['campo', 'plata']], nota: 'Armas de la casa de Pomerania, conservadas en el escudo de Pomerania Occidental.'},
   'Dunkeld': {blason: 'De oro, un león rampante de gules dentro de un doble trechor flordelisado y contraflordelisado de gules.', capas: [['campo', 'oro'], ['trechor', 'gules'], ['figura', 'leon', 'gules']], nota: 'Armas reales de Escocia, compartidas con los Estuardo.'},
+  ...ARMS_602,
 });
 
 const conImagen = new Map(Object.entries(ESCUDOS).map(([dinastia, escudo]) =>

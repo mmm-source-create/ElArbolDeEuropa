@@ -78,7 +78,7 @@ test('todas las casas usan un escudo liso de Commons con crédito discreto', () 
   for (const house of Object.keys(ESCUDOS)) {
     const imagen = escudoDe(house).imagen;
     assert.ok(imagen, house);
-    assert.match(imagen.archivo, /^\/escudos\/[a-z0-9.-]+\.(svg|png)$/, house);
+    assert.match(imagen.archivo, /^\/escudos\/[a-z0-9.-]+\.(svg|png|webp)$/, house);
     const html = renderToStaticMarkup(React.createElement(DynastyArms, {dinastia: house, size: 40}));
     assert.ok(html.includes(` · ${imagen.procedencia||'Wikimedia Commons'}"`),house);
   }

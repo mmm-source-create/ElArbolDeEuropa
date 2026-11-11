@@ -1,0 +1,600 @@
+{
+  "version": "6.0.2",
+  "arms": {
+    "Leszczyński": {
+      "archivo": "/escudos/v602-leszczynski.svg",
+      "titulo": "POL_COA_Wieniawa.svg",
+      "autor": "Avalokitesvara; Tadeusz Gajl",
+      "fuente": "https://commons.wikimedia.org/wiki/File:POL_COA_Wieniawa.svg",
+      "licencia": "CC BY-SA 3.0",
+      "licenciaUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "modificaciones": "Dibujo conservado; versión optimizada para su visualización en el Atlas.",
+      "en": {
+        "modifications": "Drawing preserved; version optimised for display in the Atlas."
+      },
+      "context": "Armas Wieniawa compartidas por diversos linajes polacos. La lámina conserva el timbre y los lambrequines.",
+      "englishContext": "Wieniawa arms shared by several Polish lineages. The image retains its crest and mantling."
+    },
+    "Manrique de Lara": {
+      "archivo": "/escudos/v602-manrique-lara.png",
+      "titulo": "Escudo_Manrique_de_Lara.svg",
+      "autor": "Macalla",
+      "fuente": "https://commons.wikimedia.org/wiki/File:Escudo_Manrique_de_Lara.svg",
+      "licencia": "CC0",
+      "licenciaUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+      "modificaciones": "Dibujo conservado; versión optimizada para su visualización en el Atlas.",
+      "en": {
+        "modifications": "Drawing preserved; version optimised for display in the Atlas."
+      },
+      "context": "Armas de los Manrique de Lara.",
+      "englishContext": "Arms of the Manrique de Lara family."
+    },
+    "Lara": {
+      "archivo": "/escudos/v602-lara.png",
+      "titulo": "House_of_Lara_COA.svg",
+      "autor": "SanchoPanzaXXI",
+      "fuente": "https://commons.wikimedia.org/wiki/File:House_of_Lara_COA.svg",
+      "licencia": "CC BY-SA 4.0",
+      "licenciaUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "modificaciones": "Dibujo conservado; versión optimizada para su visualización en el Atlas.",
+      "en": {
+        "modifications": "Drawing preserved; version optimised for display in the Atlas."
+      },
+      "context": "Armas antiguas de Lara; los linajes derivados incorporaron diferencias.",
+      "englishContext": "Ancient Lara arms; descendant lineages introduced differences."
+    },
+    "Medina Sidonia": {
+      "archivo": "/escudos/v602-medina-sidonia.webp",
+      "titulo": "Escudo_Duque_de_Medina-Sidonia.svg",
+      "autor": "Paliano; SanchoPanzaXXI",
+      "fuente": "https://commons.wikimedia.org/wiki/File:Escudo_Duque_de_Medina-Sidonia.svg",
+      "licencia": "Dominio público",
+      "licenciaUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "modificaciones": "Retiradas la corona ducal y la cadena del Toisón de Oro; escudo conservado.",
+      "en": {
+        "modifications": "Ducal coronet and Golden Fleece collar removed; shield preserved."
+      },
+      "context": "Armas de los Guzmán, duques de Medina Sidonia, sin corona ni collar.",
+      "englishContext": "Arms of the Guzmán dukes of Medina Sidonia, without the coronet or collar."
+    },
+    "Mindaugas": {
+      "archivo": "/escudos/v602-mindaugas.svg",
+      "titulo": "Coat_of_arms_of_Lithuania.svg",
+      "autor": "Government of Lithuania",
+      "fuente": "https://commons.wikimedia.org/wiki/File:Coat_of_arms_of_Lithuania.svg",
+      "licencia": "Dominio público",
+      "licenciaUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "modificaciones": "Dibujo conservado; versión optimizada para su visualización en el Atlas.",
+      "en": {
+        "modifications": "Drawing preserved; version optimised for display in the Atlas."
+      },
+      "context": "Vytis en su diseño estatal moderno, empleado aquí como referencia territorial de Lituania. El jinete heráldico está documentado desde el siglo XIV; no se conserva como armas personales de Mindaugas.",
+      "englishContext": "The Vytis in its modern state design, used here as a territorial reference for Lithuania. The heraldic rider is documented from the fourteenth century; this is not preserved as Mindaugas’s personal arms."
+    },
+    "Mortimer": {
+      "archivo": "/escudos/v602-mortimer.png",
+      "titulo": "Arms_of_the_House_of_Mortimer.svg",
+      "autor": "Sodacan",
+      "fuente": "https://commons.wikimedia.org/wiki/File:Arms_of_the_House_of_Mortimer.svg",
+      "licencia": "CC BY-SA 3.0",
+      "licenciaUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "modificaciones": "Dibujo conservado; versión optimizada para su visualización en el Atlas.",
+      "en": {
+        "modifications": "Drawing preserved; version optimised for display in the Atlas."
+      },
+      "context": "Armas de la casa Mortimer.",
+      "englishContext": "Arms of the house of Mortimer."
+    },
+    "Mrnjavčević": {
+      "archivo": "/escudos/v602-mrnjavcevic.png",
+      "titulo": "Coat_of_arms_of_Mrnjavčević_family_(small).svg",
+      "autor": "Samhanin",
+      "fuente": "https://commons.wikimedia.org/wiki/File:Coat_of_arms_of_Mrnjav%C4%8Devi%C4%87_family_(small).svg",
+      "licencia": "CC0",
+      "licenciaUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "modificaciones": "Versión vectorial del mismo modelo heráldico; dibujo conservado.",
+      "en": {
+        "modifications": "Vector version of the same heraldic design; drawing preserved."
+      },
+      "context": "Representación heráldica retrospectiva de la casa Mrnjavčević, según la lámina citada.",
+      "englishContext": "Retrospective heraldic representation of the Mrnjavčević family, following the cited image."
+    },
+    "O’Donnell": {
+      "archivo": "/escudos/v602-odonnell.svg",
+      "titulo": "Arms_of_the_house_of_O'Donnell_(16th_century).svg",
+      "autor": "MostEpic",
+      "fuente": "https://commons.wikimedia.org/wiki/File:Arms_of_the_house_of_O%27Donnell_(16th_century).svg",
+      "licencia": "CC BY-SA 4.0",
+      "licenciaUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "modificaciones": "Dibujo conservado; versión optimizada para su visualización en el Atlas.",
+      "en": {
+        "modifications": "Drawing preserved; version optimised for display in the Atlas."
+      },
+      "context": "Variante del siglo XVI de las armas O’Donnell.",
+      "englishContext": "Sixteenth-century variant of the O’Donnell arms."
+    },
+    "Salviati": {
+      "archivo": "/escudos/v602-salviati.png",
+      "titulo": "Coa_fam_ITA_Salviati_HrM.svg",
+      "autor": "Horemhat",
+      "fuente": "https://commons.wikimedia.org/wiki/File:Coa_fam_ITA_Salviati_HrM.svg",
+      "licencia": "CC BY-SA 4.0",
+      "licenciaUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "modificaciones": "Dibujo conservado; versión optimizada para su visualización en el Atlas.",
+      "en": {
+        "modifications": "Drawing preserved; version optimised for display in the Atlas."
+      },
+      "context": "Armas de los Salviati de Florencia.",
+      "englishContext": "Arms of the Salviati of Florence."
+    },
+    "Riario": {
+      "archivo": "/escudos/v602-riario.png",
+      "titulo": "CoA_Riario_2.svg",
+      "autor": "Mess; NalesnikLD; Madboy74",
+      "fuente": "https://commons.wikimedia.org/wiki/File:CoA_Riario_2.svg",
+      "licencia": "CC BY-SA 3.0",
+      "licenciaUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "modificaciones": "Dibujo conservado; versión optimizada para su visualización en el Atlas.",
+      "en": {
+        "modifications": "Drawing preserved; version optimised for display in the Atlas."
+      },
+      "context": "Armas Riario para los miembros de esta casa registrados en el Atlas.",
+      "englishContext": "Riario arms for the members of this house recorded in the Atlas."
+    },
+    "Manuel": {
+      "archivo": "/escudos/v602-manuel.png",
+      "titulo": "Coat_of_Arms_of_Constance_of_Peñafiel_as_Queen_of_Castile.svg",
+      "autor": "Heralder",
+      "fuente": "https://commons.wikimedia.org/wiki/File:Coat_of_Arms_of_Constance_of_Pe%C3%B1afiel_as_Queen_of_Castile.svg",
+      "licencia": "CC BY-SA 3.0",
+      "licenciaUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "modificaciones": "Extraído el escudo de la derecha; dibujo y colores conservados.",
+      "en": {
+        "modifications": "Right-hand shield extracted; drawing and colours preserved."
+      },
+      "context": "Armas de la casa Manuel, extraídas del escudo situado a la derecha en la lámina de Constanza Manuel.",
+      "englishContext": "Arms of the house of Manuel, extracted from the right-hand shield in the image of Constance Manuel."
+    },
+    "Mocenigo": {
+      "archivo": "/escudos/v602-mocenigo.png",
+      "titulo": "Coat_of_Arms_of_the_House_of_Mocenigo.svg",
+      "autor": "Facquis",
+      "fuente": "https://commons.wikimedia.org/wiki/File:Coat_of_Arms_of_the_House_of_Mocenigo.svg",
+      "licencia": "CC BY-SA 4.0",
+      "licenciaUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "modificaciones": "Dibujo conservado; versión optimizada para su visualización en el Atlas.",
+      "en": {
+        "modifications": "Drawing preserved; version optimised for display in the Atlas."
+      },
+      "context": "Armas de la familia veneciana Mocenigo.",
+      "englishContext": "Arms of the Venetian Mocenigo family."
+    },
+    "Montefeltro": {
+      "archivo": "/escudos/v602-montefeltro.png",
+      "titulo": "Coat_of_arms_of_da_Montefeltro.svg",
+      "autor": "Facquis",
+      "fuente": "https://commons.wikimedia.org/wiki/File:Coat_of_arms_of_da_Montefeltro.svg",
+      "licencia": "CC BY-SA 4.0",
+      "licenciaUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "modificaciones": "Dibujo conservado; versión optimizada para su visualización en el Atlas.",
+      "en": {
+        "modifications": "Drawing preserved; version optimised for display in the Atlas."
+      },
+      "context": "Variante compuesta de los duques de Urbino; los signos pontificios forman parte de las armas.",
+      "englishContext": "Composite variant of the dukes of Urbino; the papal emblems form part of the arms."
+    },
+    "O’Brien": {
+      "archivo": "/escudos/v602-obrien.png",
+      "titulo": "O'Brien_Arms.svg",
+      "autor": "Retroplum; Sodacan",
+      "fuente": "https://commons.wikimedia.org/wiki/File:O%27Brien_Arms.svg",
+      "licencia": "CC BY-SA 3.0",
+      "licenciaUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "modificaciones": "Dibujo conservado; versión optimizada para su visualización en el Atlas.",
+      "en": {
+        "modifications": "Drawing preserved; version optimised for display in the Atlas."
+      },
+      "context": "Armas de la casa O’Brien.",
+      "englishContext": "Arms of the house of O’Brien."
+    },
+    "Odescalchi": {
+      "archivo": "/escudos/v602-odescalchi.png",
+      "titulo": "Arms_of_the_house_of_Odescalchi.svg",
+      "autor": "MostEpic",
+      "fuente": "https://commons.wikimedia.org/wiki/File:Arms_of_the_house_of_Odescalchi.svg",
+      "licencia": "CC BY-SA 4.0",
+      "licenciaUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "modificaciones": "Dibujo conservado; versión optimizada para su visualización en el Atlas.",
+      "en": {
+        "modifications": "Drawing preserved; version optimised for display in the Atlas."
+      },
+      "context": "Armas de la familia Odescalchi.",
+      "englishContext": "Arms of the Odescalchi family."
+    },
+    "Pamphilj": {
+      "archivo": "/escudos/v602-pamphili.png",
+      "titulo": "Arms_of_the_house_of_Pamphili.svg",
+      "autor": "MostEpic",
+      "fuente": "https://commons.wikimedia.org/wiki/File:Arms_of_the_house_of_Pamphili.svg",
+      "licencia": "CC BY-SA 4.0",
+      "licenciaUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "modificaciones": "Dibujo conservado; versión optimizada para su visualización en el Atlas.",
+      "en": {
+        "modifications": "Drawing preserved; version optimised for display in the Atlas."
+      },
+      "context": "Armas de los Pamphilj; Pamphili es una variante del apellido.",
+      "englishContext": "Arms of the Pamphilj family; Pamphili is a variant spelling."
+    },
+    "Sandoval": {
+      "archivo": "/escudos/v602-sandoval.svg",
+      "titulo": "Sandoval",
+      "autor": "Manuel Muriel Cagigal (mmc)",
+      "fuente": "https://heraldicon.org/arms/0Yhi6a/1",
+      "licencia": "Obra propia · uso autorizado en el Atlas",
+      "procedencia": "Aportación del autor",
+      "modificaciones": "SVG aportado por el autor; retirados los metadatos del editor.",
+      "en": {
+        "modifications": "SVG supplied by its author; editor metadata removed."
+      },
+      "context": "Armas de la casa Sandoval.",
+      "englishContext": "Arms of the house of Sandoval."
+    }
+  },
+  "portraits": {
+    "FRANCESCOROVEREURBINO": {
+      "archivo": "/personas-img/FRANCESCOROVEREURBINO.webp",
+      "encuadre": "50% 18%",
+      "alt": "Retrato de Francesco Maria I della Rovere",
+      "tipo": "Retrato contemporáneo",
+      "obra": "Francesco Maria I della Rovere",
+      "autor": "Tiziano",
+      "fecha": "1536–1538",
+      "institucion": "Gallerie degli Uffizi, Florencia",
+      "fuente": "Wikimedia Commons",
+      "fuenteUrl": "https://commons.wikimedia.org/wiki/File:Portrait_of_Francesco_Maria_della_Rovere,_Duke_of_Urbino_(by_Titian)_%E2%80%93_Galleria_degli_Uffizi,_Florence.jpg",
+      "derechos": "Dominio público · PDM 1.0",
+      "derechosUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "english": {
+        "tipo": "Contemporary portrait",
+        "obra": "Francesco Maria I della Rovere",
+        "alt": "Portrait of Francesco Maria I della Rovere",
+        "autor": "Titian",
+        "fecha": "1536–1538",
+        "institucion": "Uffizi Gallery, Florence"
+      },
+      "modificaciones": "Conversión a WebP y variantes de tamaño para la web.",
+      "modifications": "Converted to WebP with responsive image sizes."
+    },
+    "LEONORGONZAGAURBINO": {
+      "archivo": "/personas-img/LEONORGONZAGAURBINO.webp",
+      "encuadre": "50% 18%",
+      "alt": "Retrato de Leonor Gonzaga",
+      "tipo": "Retrato contemporáneo",
+      "obra": "Leonor Gonzaga",
+      "autor": "Tiziano",
+      "fecha": "1538",
+      "institucion": "Gallerie degli Uffizi, Florencia",
+      "fuente": "Wikimedia Commons",
+      "fuenteUrl": "https://commons.wikimedia.org/wiki/File:Tizian_-_Portr%C3%A4t_der_Eleonora_Gonzaga.jpg",
+      "derechos": "Dominio público · PDM 1.0",
+      "derechosUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "english": {
+        "tipo": "Contemporary portrait",
+        "obra": "Eleonora Gonzaga",
+        "alt": "Portrait of Eleonora Gonzaga",
+        "autor": "Titian",
+        "fecha": "1538",
+        "institucion": "Uffizi Gallery, Florence"
+      },
+      "modificaciones": "Conversión a WebP y variantes de tamaño para la web.",
+      "modifications": "Converted to WebP with responsive image sizes."
+    },
+    "FEDMONTE": {
+      "archivo": "/personas-img/FEDMONTE.webp",
+      "encuadre": "50% 18%",
+      "alt": "Retrato de Federico da Montefeltro",
+      "tipo": "Retrato contemporáneo",
+      "obra": "Federico da Montefeltro",
+      "autor": "Piero della Francesca",
+      "fecha": "c. 1473–1475",
+      "institucion": "Gallerie degli Uffizi, Florencia",
+      "fuente": "Wikimedia Commons",
+      "fuenteUrl": "https://commons.wikimedia.org/wiki/File:Federico_da_Montefeltro.jpg",
+      "derechos": "Dominio público · PDM 1.0",
+      "derechosUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "english": {
+        "tipo": "Contemporary portrait",
+        "obra": "Federico da Montefeltro",
+        "alt": "Portrait of Federico da Montefeltro",
+        "autor": "Piero della Francesca",
+        "fecha": "c. 1473–1475",
+        "institucion": "Uffizi Gallery, Florence"
+      },
+      "modificaciones": "Conversión a WebP y variantes de tamaño para la web.",
+      "modifications": "Converted to WebP with responsive image sizes."
+    },
+    "GUIDOBALDOMONTE": {
+      "archivo": "/personas-img/GUIDOBALDOMONTE.webp",
+      "encuadre": "50% 18%",
+      "alt": "Retrato de Guidobaldo da Montefeltro",
+      "tipo": "Retrato contemporáneo",
+      "obra": "Guidobaldo da Montefeltro",
+      "autor": "Rafael",
+      "fecha": "c. 1507",
+      "institucion": "Gallerie degli Uffizi, Florencia",
+      "fuente": "Wikimedia Commons",
+      "fuenteUrl": "https://commons.wikimedia.org/wiki/File:Raffaello_Sanzio_-_Guidobaldo_da_Montefeltro_-_WGA18653.jpg",
+      "derechos": "Dominio público · PDM 1.0",
+      "derechosUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "english": {
+        "tipo": "Contemporary portrait",
+        "obra": "Guidobaldo da Montefeltro",
+        "alt": "Portrait of Guidobaldo da Montefeltro",
+        "autor": "Raphael",
+        "fecha": "c. 1507",
+        "institucion": "Uffizi Gallery, Florence"
+      },
+      "modificaciones": "Conversión a WebP y variantes de tamaño para la web.",
+      "modifications": "Converted to WebP with responsive image sizes."
+    },
+    "FRANCESCO2ROVERE": {
+      "archivo": "/personas-img/FRANCESCO2ROVERE.webp",
+      "encuadre": "50% 18%",
+      "alt": "Retrato de Francesco Maria II della Rovere",
+      "tipo": "Retrato contemporáneo",
+      "obra": "Francesco Maria II della Rovere",
+      "autor": "Federico Barocci",
+      "fecha": "1572",
+      "institucion": "Gallerie degli Uffizi, Florencia",
+      "fuente": "Wikimedia Commons",
+      "fuenteUrl": "https://commons.wikimedia.org/wiki/File:Federico_Barocci_(Urbino,_1535_ca._%E2%80%93_30_settembre_1612)_-_Ritratto_di_Francesco_Maria_della_Rovere,_duca_di_Urbino_-_1438_-_Uffizi_Gallery.jpg",
+      "derechos": "Dominio público · PDM 1.0",
+      "derechosUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "english": {
+        "tipo": "Contemporary portrait",
+        "obra": "Francesco Maria II della Rovere",
+        "alt": "Portrait of Francesco Maria II della Rovere",
+        "autor": "Federico Barocci",
+        "fecha": "1572",
+        "institucion": "Uffizi Gallery, Florence"
+      },
+      "modificaciones": "Conversión a WebP y variantes de tamaño para la web.",
+      "modifications": "Converted to WebP with responsive image sizes."
+    },
+    "ISABELGONZAGAURBINO": {
+      "archivo": "/personas-img/ISABELGONZAGAURBINO.webp",
+      "encuadre": "50% 18%",
+      "alt": "Retrato de Isabel Gonzaga",
+      "tipo": "Retrato contemporáneo",
+      "obra": "Isabel Gonzaga",
+      "autor": "Rafael (atribuido); fotografía de MenkinAlRire (Armin Kleiner)",
+      "fecha": "c. 1504–1506",
+      "institucion": "Gallerie degli Uffizi, Florencia",
+      "fuente": "Wikimedia Commons",
+      "fuenteUrl": "https://commons.wikimedia.org/wiki/File:Raphael_(attr.),_Portrait_of_Elisabetta_Gonzaga,_1506,_Uffizi.jpg",
+      "derechos": "Obra en dominio público; fotografía CC BY-SA 4.0",
+      "derechosUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "english": {
+        "tipo": "Contemporary portrait",
+        "obra": "Elisabetta Gonzaga",
+        "alt": "Portrait of Elisabetta Gonzaga",
+        "autor": "Attributed to Raphael; photograph by MenkinAlRire (Armin Kleiner)",
+        "fecha": "c. 1504–1506",
+        "institucion": "Uffizi Gallery, Florence",
+        "derechos": "Public-domain painting; photograph CC BY-SA 4.0"
+      },
+      "modificaciones": "Recortado el borde exterior de la fotografía; conversión a WebP y variantes de tamaño.",
+      "modifications": "Outer photographic border cropped; converted to WebP with responsive image sizes."
+    },
+    "LIVIOODESCALCHI": {
+      "archivo": "/personas-img/LIVIOODESCALCHI.webp",
+      "encuadre": "50% 18%",
+      "alt": "Retrato de Livio Odescalchi",
+      "tipo": "Retrato contemporáneo",
+      "obra": "Livio Odescalchi",
+      "autor": "Jacob Ferdinand Voet",
+      "fecha": "1676–1677",
+      "institucion": "Walters Art Museum, Baltimore · 37.371",
+      "fuente": "Wikimedia Commons",
+      "fuenteUrl": "https://commons.wikimedia.org/wiki/File:Jakob-Ferdinand_Voet_-_Portrait_of_Livio_Odescalchi_-_Walters_37371.jpg",
+      "derechos": "Dominio público · PDM 1.0",
+      "derechosUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "alternativas": [
+        {
+          "archivo": "/personas-img/LIVIOODESCALCHI_MORANDI.webp",
+          "encuadre": "50% 18%",
+          "alt": "Retrato de Livio Odescalchi",
+          "tipo": "Retrato de atribución propuesta",
+          "obra": "Livio Odescalchi",
+          "autor": "Giovanni Maria Morandi (atribución propuesta por Francesco Petrucci)",
+          "fecha": "siglo XVII",
+          "institucion": "Colección particular · catálogo Dorotheum",
+          "fuente": "Wikimedia Commons",
+          "fuenteUrl": "https://commons.wikimedia.org/wiki/File:Portr%C3%A4t_des_Livio_Odescalchi.png",
+          "derechos": "Dominio público · PDM 1.0",
+          "derechosUrl": "https://creativecommons.org/publicdomain/mark/1.0/"
+        }
+      ],
+      "english": {
+        "tipo": "Contemporary portrait",
+        "obra": "Livio Odescalchi",
+        "alt": "Portrait of Livio Odescalchi",
+        "autor": "Jacob Ferdinand Voet",
+        "fecha": "1676–1677",
+        "institucion": "Walters Art Museum, Baltimore · 37.371",
+        "alternativas": [
+          {
+            "archivo": "/personas-img/LIVIOODESCALCHI_MORANDI.webp",
+            "encuadre": "50% 18%",
+            "alt": "Portrait of Livio Odescalchi",
+            "tipo": "Portrait with a proposed attribution",
+            "obra": "Livio Odescalchi",
+            "autor": "Giovanni Maria Morandi (attribution proposed by Francesco Petrucci)",
+            "fecha": "Seventeenth century",
+            "institucion": "Private collection · Dorotheum catalogue",
+            "fuente": "Wikimedia Commons",
+            "fuenteUrl": "https://commons.wikimedia.org/wiki/File:Portr%C3%A4t_des_Livio_Odescalchi.png",
+            "derechos": "Public domain · PDM 1.0",
+            "derechosUrl": "https://creativecommons.org/publicdomain/mark/1.0/"
+          }
+        ]
+      },
+      "modificaciones": "Conversión a WebP y variantes de tamaño para la web.",
+      "modifications": "Converted to WebP with responsive image sizes."
+    },
+    "JOSEFERNANDOBAV": {
+      "archivo": "/personas-img/JOSEFERNANDOBAV.webp",
+      "encuadre": "50% 18%",
+      "alt": "Retrato de José Fernando de Baviera",
+      "tipo": "Retrato contemporáneo",
+      "obra": "José Fernando de Baviera",
+      "autor": "Joseph Vivien",
+      "fecha": "1698",
+      "institucion": "Königliches Schloss Berchtesgaden",
+      "fuente": "Wikimedia Commons",
+      "fuenteUrl": "https://commons.wikimedia.org/wiki/File:Retrato_del_pr%C3%ADncipe_electoral_Jos%C3%A9_Fernando_de_Baviera,_obra_de_Joseph_Vivien_(1698)._K%C3%B6nigliches_Schloss_Berchtesgaden.png",
+      "derechos": "Dominio público · PDM 1.0",
+      "derechosUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "english": {
+        "tipo": "Contemporary portrait",
+        "obra": "Joseph Ferdinand of Bavaria",
+        "alt": "Portrait of Joseph Ferdinand of Bavaria",
+        "autor": "Joseph Vivien",
+        "fecha": "1698",
+        "institucion": "Königliches Schloss Berchtesgaden"
+      },
+      "modificaciones": "Conversión a WebP y variantes de tamaño para la web.",
+      "modifications": "Converted to WebP with responsive image sizes."
+    },
+    "ISABELHUNSANTA": {
+      "archivo": "/personas-img/ISABELHUNSANTA.webp",
+      "encuadre": "50% 18%",
+      "alt": "Representación de Isabel de Hungría",
+      "tipo": "Representación póstuma",
+      "obra": "Isabel de Hungría",
+      "autor": "Simone Martini",
+      "fecha": "1317",
+      "institucion": "Basílica de San Francisco, Asís",
+      "fuente": "Wikimedia Commons",
+      "fuenteUrl": "https://commons.wikimedia.org/wiki/File:Simone_Martini_-_St_Elizabeth_of_Hungary_(detail)_-_WGA21364.jpg",
+      "derechos": "Dominio público · PDM 1.0",
+      "derechosUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "english": {
+        "tipo": "Posthumous representation",
+        "obra": "Elizabeth of Hungary",
+        "alt": "Representation of Elizabeth of Hungary",
+        "autor": "Simone Martini",
+        "fecha": "1317",
+        "institucion": "Basilica of Saint Francis, Assisi"
+      },
+      "modificaciones": "Conversión a WebP y variantes de tamaño para la web.",
+      "modifications": "Converted to WebP with responsive image sizes."
+    },
+    "GOTZBERLICHINGEN": {
+      "archivo": "/personas-img/GOTZBERLICHINGEN.webp",
+      "encuadre": "50% 18%",
+      "alt": "Retrato de Götz von Berlichingen",
+      "tipo": "Grabado posterior",
+      "obra": "Götz von Berlichingen",
+      "autor": "Grabador no identificado",
+      "fecha": "",
+      "institucion": "",
+      "fuente": "Wikimedia Commons",
+      "fuenteUrl": "https://commons.wikimedia.org/wiki/File:G%C3%B6tz_von_Berlichingen.jpg",
+      "derechos": "Dominio público · PDM 1.0",
+      "derechosUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "english": {
+        "tipo": "Later engraving",
+        "obra": "Götz von Berlichingen",
+        "alt": "Portrait of Götz von Berlichingen",
+        "autor": "Unidentified engraver",
+        "fecha": "",
+        "institucion": ""
+      },
+      "modificaciones": "Extraído el retrato de la lámina grabada, retirando las inscripciones inferiores; conversión a WebP.",
+      "modifications": "Portrait extracted from the engraved sheet, removing the lower inscriptions; converted to WebP."
+    },
+    "MAX2EMANBAV": {
+      "archivo": "/personas-img/MAX2EMANBAV.webp",
+      "encuadre": "50% 18%",
+      "alt": "Retrato de Maximiliano II Emanuel de Baviera",
+      "tipo": "Retrato histórico",
+      "obra": "Maximiliano II Emanuel de Baviera",
+      "autor": "Anónimo, según Joseph Vivien",
+      "fecha": "siglo XVIII",
+      "institucion": "",
+      "fuente": "Wikimedia Commons",
+      "fuenteUrl": "https://commons.wikimedia.org/wiki/File:Kurf%C3%BCrst_Maximilian_II._Emanuel_von_Bayern.jpg",
+      "derechos": "Dominio público · PDM 1.0",
+      "derechosUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "english": {
+        "tipo": "Historical portrait",
+        "obra": "Maximilian II Emanuel of Bavaria",
+        "alt": "Portrait of Maximilian II Emanuel of Bavaria",
+        "autor": "Anonymous, after Joseph Vivien",
+        "fecha": "Eighteenth century",
+        "institucion": ""
+      },
+      "modificaciones": "Conversión a WebP y variantes de tamaño para la web.",
+      "modifications": "Converted to WebP with responsive image sizes."
+    },
+    "MAX1BAV": {
+      "archivo": "/personas-img/MAX1BAV.webp",
+      "encuadre": "50% 18%",
+      "alt": "Retrato de Maximiliano I de Baviera",
+      "tipo": "Retrato contemporáneo",
+      "obra": "Maximiliano I de Baviera",
+      "autor": "Joachim von Sandrart",
+      "fecha": "c. 1641–1643",
+      "institucion": "Kunsthistorisches Museum, Viena",
+      "fuente": "Wikimedia Commons",
+      "fuenteUrl": "https://commons.wikimedia.org/wiki/File:MaximilianI-Bayern.jpg",
+      "derechos": "Dominio público · PDM 1.0",
+      "derechosUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "english": {
+        "tipo": "Contemporary portrait",
+        "obra": "Maximilian I of Bavaria",
+        "alt": "Portrait of Maximilian I of Bavaria",
+        "autor": "Joachim von Sandrart",
+        "fecha": "c. 1641–1643",
+        "institucion": "Kunsthistorisches Museum, Vienna"
+      },
+      "modificaciones": "Conversión a WebP y variantes de tamaño para la web.",
+      "modifications": "Converted to WebP with responsive image sizes."
+    },
+    "MARIAANTONIAAUT": {
+      "archivo": "/personas-img/MARIAANTONIAAUT.webp",
+      "encuadre": "50% 18%",
+      "alt": "Retrato de María Antonia de Austria, niña",
+      "tipo": "Retrato contemporáneo",
+      "obra": "María Antonia de Austria, niña",
+      "autor": "Gerard du Chateau",
+      "fecha": "c. 1670",
+      "institucion": "Bayerisches Nationalmuseum, Múnich",
+      "fuente": "Wikimedia Commons",
+      "fuenteUrl": "https://commons.wikimedia.org/wiki/File:Du_Chateau_-_Maria_Antonia_of_Austria_-_Bavarian_National_Museum.png",
+      "derechos": "Dominio público · PDM 1.0",
+      "derechosUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "english": {
+        "tipo": "Contemporary portrait",
+        "obra": "Maria Antonia of Austria as a child",
+        "alt": "Portrait of Maria Antonia of Austria as a child",
+        "autor": "Gerard du Chateau",
+        "fecha": "c. 1670",
+        "institucion": "Bavarian National Museum, Munich"
+      },
+      "modificaciones": "Conversión a WebP y variantes de tamaño para la web.",
+      "modifications": "Converted to WebP with responsive image sizes."
+    }
+  },
+  "decisions": {
+    "riario": "Use the Riario shield. No Riario-Sforza branch or members are currently recorded.",
+    "livio": "Both requested works depict the younger Livio Odescalchi. Neither is assigned to his grandfather.",
+    "mindaugas": {
+      "note": "Modern Lithuanian state arms used as a territorial reference, with a fourteenth-century origin explicitly distinguished from Mindaugas.",
+      "source": "https://www.lrs.lt/sip/portal.show?p_k=1&p_r=38110"
+    },
+    "mrnjavcevic": "The SVG design by Samhanin is explicitly based on the requested JPEG. Its 960px rendering replaces the low-resolution raster.",
+    "medinaSidonia": "The crown group g20173 and collar group g9989 are removed from the supplied Commons design. Shield group g20316 is preserved. A lossless WebP is served; the adapted SVG is retained. Adapted vector source: scripts/assets/sources/v602-medina-sidonia.svg."
+  }
+}

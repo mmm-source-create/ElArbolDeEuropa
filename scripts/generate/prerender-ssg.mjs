@@ -31,7 +31,7 @@ try {
  await build({configFile:false,root,publicDir:false,logLevel:'error',build:{ssr:'src/features/public/ssg-entry.jsx',outDir:path.join(temp,'renderer'),emptyOutDir:true,minify:false,rolldownOptions:{output:{entryFileNames:'entry.mjs'}}}});
  const {renderPage,renderNotFound}=await import(pathToFileURL(path.join(temp,'renderer/entry.mjs')).href);
  for(const route of routes) {
-  const assets=assetsForStaticPage(manifest,route.kind);
+  const assets=assetsForStaticPage(manifest,route.kind,route.path);
   for(const file of [...assets.css,...assets.js])await fs.access(path.join(dist,file));
   stats.assets[route.kind] ||= assets;
   const data=JSON.parse(await fs.readFile(path.join(dist,STATIC_FOLDERS[route.kind],`${route.slug}${route.chapter?`/capitulo/${route.chapter}`:""}.json`),'utf8'));
