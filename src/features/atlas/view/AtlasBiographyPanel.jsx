@@ -22,6 +22,7 @@ import {nombrePrincipal, sobrenombreDePersona, formatoFechas, nRomano} from '../
 import EvidencePanel from '../../../components/EvidencePanel.jsx';
 import SegmentedControl from '../../../ui/SegmentedControl.jsx';
 import {englishLabel,englishProfileFor} from '../../english/v6/atlasPresentation.js';
+import {localizedPortrait} from '../../english/imageCredits.js';
 import {ENGLISH_PROFILE_PORTRAITS} from '../../english/profilePortraits.js';
 import {translatedEquivalent} from '../../english/routes.js';
 
@@ -68,7 +69,7 @@ function VenetianOfficeSequence({ persona, onSelect, locale='es' }) {
 export default function AtlasBiographyPanel({vm, bioMobileOpen, bioScrollRef, bioSection, personaAnteriorId, personaSiguienteId, scrollToBioSection, setBioMobileOpen, updateBioSectionOnScroll}) {
   const {actualizarAnioDesdeRango, alternarFavorito, alternarSeccionBio, anioGlobal, bioSectionsOpen, cerrarSeleccion, favoritosSet, historiaActiva, hovered, iniciarHistoria, locale, navegarHistorialPersona, personHistory, personaBio, seleccion, seleccionarPersonaPorId, setCompareMenuOpen, setFocoAlcance, setFocoId, setInfoProyecto, setMode} = vm;
   const en=locale==='en',tr=(es,english)=>en?english:es,term=value=>en?englishLabel(value):value;
-  const portrait=personaBio ? (en ? {...IMAGENES_PERSONAS[personaBio.id],...ENGLISH_PROFILE_PORTRAITS[personaBio.id]} : IMAGENES_PERSONAS[personaBio.id]) : null;
+  const portrait=personaBio ? (en ? localizedPortrait(personaBio.id,IMAGENES_PERSONAS[personaBio.id],ENGLISH_PROFILE_PORTRAITS) : IMAGENES_PERSONAS[personaBio.id]) : null;
   const biographySummary=personaBio ? (en ? englishProfileFor(personaBio.id)?.summary || resumenCortoPersona(personaBio) : resumenCortoPersona(personaBio)) : '';
   return (
     <aside className={`workspace-inspector${personaBio ? ' has-person' : ''}${bioMobileOpen ? ' mobile-open' : ' mobile-collapsed'}`}>

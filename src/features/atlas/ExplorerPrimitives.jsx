@@ -12,7 +12,7 @@ import { HIJOS_POR_ID, listaAmantes, listaConyuges } from "../../domain/genealog
 import { rutaEntidadLocalizada } from "./atlasRoutes.js";
 import { slugPublico } from "../../domain/people/personLabels.js";
 import {englishLabel} from '../english/v6/atlasPresentation.js';
-import {ENGLISH_STORIES} from '../english/content.js';
+import {ENGLISH_STORIES} from '../english/storyContent.js';
 import englishStoriesRuntime from '../../generated/englishStoriesRuntime.json' with {type:'json'};
 
 export function Chip({ label, active, onClick, color, small = false }) {

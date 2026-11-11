@@ -1,6 +1,7 @@
 import {englishLabel,englishNote} from '../english/v6/atlasPresentation.js';
 
 const EXACT={
+ 'Fácil':'Easy','Intermedio':'Intermediate','Difícil':'Hard','Experto':'Expert',
  'Desafío':'Challenge','Duelo cronológico':'Chronology duel','Familia':'Family','Dinastías':'Dynasties','Gobierno':'Government','¿Quién sobra?':'Who does not belong?','Cronología':'Chronology','¿Quién soy?':'Who am I?','Sucesiones':'Successions','Matrimonios':'Marriages','Racha':'Streak','Resolver una sucesión':'Solve a succession',
  '¿Quién nació antes?':'Who was born first?','¿Quién murió más tarde?':'Who died later?','¿Quién comenzó antes su primer gobierno efectivo registrado?':'Who began their first recorded effective government earlier?','¿Quién tuvo el reinado efectivo más largo en un solo territorio?':'Who had the longest effective reign in a single territory?','Ordénalos del más antiguo al más reciente.':'Arrange them from earliest to latest.','Descubre al personaje con el menor número de pistas posible.':'Identify the person using as few clues as possible.','Busca una relación familiar directa.':'Look for a direct family relationship.','La respuesta está en su ficha genealógica.':'The answer is in the genealogical record.','Piensa en sus gobiernos efectivos, no en vínculos matrimoniales.':'Think about effective governments, not marriage ties.','Busca la casa dinástica que comparten dos de ellos.':'Find the dynastic house shared by two of them.','Busca una unión documentada.':'Look for a documented union.',
 };

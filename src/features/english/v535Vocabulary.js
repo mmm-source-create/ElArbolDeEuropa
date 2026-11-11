@@ -1,3 +1,4 @@
+import {SOURCE_TITLE_TRANSLATIONS} from './sourceTitleTranslations.js';
 // V5.35 · Names, labels and notes required by ten further complete English
 // profiles. Names follow English-language historiography; canonical IDs stay.
 export const V535_NAMES = {
@@ -74,7 +75,7 @@ export const V535_SOURCE_TITLES = {
   'Service public de Wallonie · Cronología de los tiempos modernos':'Service public de Wallonie · Chronology of modern times',
   'Service public de Wallonie · Tournai y Tournaisis':'Service public de Wallonie · Tournai and the Tournaisis',
 };
-export const englishSourceTitle = title => title && (V535_SOURCE_TITLES[title] || title.replace('Ficha de autoridad GND', 'GND authority record'));
+export const englishSourceTitle = title => title && (SOURCE_TITLE_TRANSLATIONS[title] || V535_SOURCE_TITLES[title] || title.replace('Ficha de autoridad GND', 'GND authority record'));
 
 export const V535_NOTES = {
   // Philip II of Spain

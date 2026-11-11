@@ -1,3 +1,5 @@
+import {englishAliases} from '../../src/features/english/aliasTranslations.js';
+import {localizedPortrait} from '../../src/features/english/imageCredits.js';
 import {ENGLISH_STORY_LABELS} from '../../src/features/english/storyLabels.js';
 import {COMPLETE_ENGLISH_PROFILES} from '../../src/features/english/fullProfiles.js';
 import {PROFILE_LABELS,ENGLISH_NAMES,translatedProfileText} from '../../src/features/english/profileVocabulary.js';
@@ -8,6 +10,15 @@ import {governmentGroupsAt} from '../../src/domain/government/governmentPresenta
 import {etiquetaClaseGobierno} from '../../src/domain/people/personLabels.js';
 import {sourcesForPerson} from '../../src/content/sources.js';
 import {englishSourceTitle} from '../../src/features/english/v535Vocabulary.js';
+
+function profileLabels(source) {
+ const values=new Set();
+ const visit=value=>{if(typeof value==='string')values.add(value);else if(Array.isArray(value))value.forEach(visit);else if(value&&typeof value==='object')Object.values(value).forEach(visit);};
+ visit(source);
+ for(const government of source.gobiernos||[])values.add(etiquetaClaseGobierno(source,government));
+ for(const government of source.gobiernos||[])for(const group of governmentGroupsAt(source,government.desde))if(group.label)values.add(group.label);
+ return Object.fromEntries([...values].filter(value=>PROFILE_LABELS[value]).map(value=>[value,PROFILE_LABELS[value]]));
+}
 
 const names={...ENGLISH_NAMES,...Object.fromEntries(Object.entries(COMPLETE_ENGLISH_PROFILES).map(([id,p])=>[id,p.name]))};
 export function completeEnglishProfile(source, translatedNames={}) {
@@ -22,8 +33,8 @@ export function completeEnglishProfile(source, translatedNames={}) {
   for(const a of source.accesosCoronas||[]){translate(a.explicacion);for(const m of a.motivos||[])if(!PROFILE_LABELS[m])throw Error(`Missing accession reason: ${m}`);}
   const sections=source.biografiaExtensa||[];
   if(sections.length!==(translation.sections||[]).length)throw Error(`Incomplete biography translation: ${source.id}`);
-  const result={...source,...translation,translationComplete:true,nombre:translation.name,sobrenombre:translation.nickname||'',aliases:translation.aliases||[],resumen:translation.summary,biografia:translation.biography||translation.summary,
-    englishLabels:PROFILE_LABELS,englishNotes:notes,
+  const result={...source,...translation,translationComplete:true,nombre:translation.name,sobrenombre:translation.nickname||'',aliases:englishAliases(translation.aliases),searchAliases:[...(source.aliases||[]),source.nombre],resumen:translation.summary,biografia:translation.biography||translation.summary,
+    englishLabels:profileLabels(source),englishNotes:notes,
     biografiaExtensa:sections.map((part,i)=>({...part,titulo:translation.sections[i][0],texto:translation.sections[i][1]})),
     localizedClaims:personClaims(source).map(claim=>({...claim,
       note:translatedProfileText(claim.note,knownNames,claim),
@@ -40,7 +51,7 @@ export function completeEnglishProfile(source, translatedNames={}) {
     return {...p,nombre:name,role};
   });
   const image=IMAGENES_PERSONAS[source.id];
-  if(image){const portrait=ENGLISH_PROFILE_PORTRAITS[source.id]||{tipo:'Historical portrait',obra:translation.name,autor:image.autor,fecha:image.fecha,institucion:image.institucion};result.portrait={...image,...portrait,alt:portrait.alt || `Portrait of ${translation.name}`,derechos:image.derechos.replace('Dominio público','Public domain')};}
+  if(image){const portrait=ENGLISH_PROFILE_PORTRAITS[source.id]||{tipo:'Historical portrait',obra:translation.name,autor:image.autor,fecha:image.fecha,institucion:image.institucion};result.portrait={...localizedPortrait(source.id,image,ENGLISH_PROFILE_PORTRAITS),alt:portrait.alt || `Portrait of ${translation.name}`};}
   const stories=ENGLISH_STORY_LABELS;
   result.historias=source.historias.map(h=>{if(!stories[h.id])throw Error(`Missing related story translation: ${h.id}`);return {...h,titulo:stories[h.id][0],subtitulo:stories[h.id][1]};});
   for(const label of [source.dinastia,...(source.reinos||[]),...governments.flatMap(g=>[g.titulo,g.territorio,g.condicion,g.ambito,etiquetaClaseGobierno(source,g)].filter(Boolean))].filter(Boolean))if(!PROFILE_LABELS[label])throw Error(`Missing profile label: ${source.id}/${label}`);

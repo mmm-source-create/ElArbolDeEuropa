@@ -1,3 +1,4 @@
+import {englishSourceTitle} from '../features/english/v535Vocabulary.js';
 import {useState} from 'react';
 import {sourcesForPerson} from '../content/sources.js';
 import {CERTAINTY,EDITORIAL_HISTORY,PILOT_PERSON_IDS,citationText,formatClaimDate} from '../evidence/claims.js';
@@ -59,7 +60,7 @@ export default function EvidencePanel({person,personId=person?.id,personNameById
       </li>)}</ul>
     </details>)}
     {!claims.length&&<p>{label('No hay afirmaciones estructuradas para esta ficha.','No structured claims are available for this profile.')}</p>}
-    {contextual.length>0&&<details><summary>{label('Referencias biográficas y de contexto','Biographical and contextual references')} ({contextual.length})</summary><ul className="evidence-context-links">{contextual.map(source=><li key={source.url}><a href={source.url} target="_blank" rel="noreferrer">{en&&person.englishSourceTitles?.[source.titulo]||source.titulo}</a></li>)}</ul></details>}
+    {contextual.length>0&&<details><summary>{label('Referencias biográficas y de contexto','Biographical and contextual references')} ({contextual.length})</summary><ul className="evidence-context-links">{contextual.map(source=><li key={source.url}><a href={source.url} target="_blank" rel="noreferrer">{en?(person.englishSourceTitles?.[source.titulo]||englishSourceTitle(source.titulo)):source.titulo}</a></li>)}</ul></details>}
     <details><summary>{label('Historial editorial','Editorial history')}</summary><ul className="evidence-history">{EDITORIAL_HISTORY.filter(entry=>entry.scope==='all'||entry.scope===person.id||entry.scope==='pilot'&&PILOT_PERSON_IDS.includes(person.id)).map(entry=><li key={entry.id}><strong>{entry.date}</strong> · {en ? entry.changeEn ? `${entry.changeEn} ${entry.reasonEn}` : entry.id === 'v41-rah-pilot' ? 'Dates and parentage in the Isabella I–Joanna I–Charles V corridor were reviewed with passage-level references. Other claims remain pending.' : entry.id === 'v4-gerald-review' ? 'A specific source was linked to the birth, death and father claims. The birth date is approximate.' : 'Claim registry added; existing historical data kept. Specific sourcing remains to be reviewed.' : `${entry.change} ${entry.reason}`}</li>)}</ul></details>
     <p className="evidence-copy-status" role="status">{copyStatus}</p>
   </section>;

@@ -1,9 +1,10 @@
+import {englishLabel} from '../english/presentationLabels.js';
 import {isNamedDynasty} from '../../data/dynastyNames.js';
 import {profileLabel,profileNote,profileClaims,profileEntityPath} from '../english/profilePresentation.js';
 import {displayedNickname} from '../../domain/people/personNaming.js';
 import {MAP_READING_GUIDE} from '../../content/mapReadingGuide.js';
 import {territoriosDe, gobiernosDe} from '../../domain/genealogy/personAccessors.js';
-import {SITE_NAME} from '../../app/siteConfig.js';
+import {SITE_NAME,SITE_NAME_EN} from '../../app/siteConfig.js';
 import {entityMeta} from './publicMeta.js';
 import CrownTimeline from '../../components/CrownTimeline.jsx';
 import DocumentationNotes from '../../components/DocumentationNotes.jsx';
@@ -140,10 +141,14 @@ function textoCatalogoItem(item, tipo) {
   return [item.nombre, ...(item.aliases||[]), ...(item.miembros || []).map((p) => p.nombre)].filter(Boolean).join(" ");
 }
 
-export function CatalogPage({ tipo }) {
-  const config = CATALOG_CONFIG[tipo] || CATALOG_CONFIG.personas;
+export function CatalogPage({ tipo, locale='es', initialData=null, embedded=false, catalogTitle=null }) {
+  const en=locale==='en', tr=(es,english)=>en?english:es;
+  const catalogNames={personas:'People',dinastias:'Dynasties',territorios:'Territories',historias:'Stories'};
+  const Wrapper=embedded?React.Fragment:PublicLayout;
+  const originalConfig = CATALOG_CONFIG[tipo] || CATALOG_CONFIG.personas;
+  const config = en ? {...originalConfig,title:catalogTitle||catalogNames[tipo],eyebrow:{personas:'Atlas index',dinastias:'Houses and lineages',territorios:'Crowns and political territories',historias:'Guided stories'}[tipo],description:{personas:'Search by name, title, dynasty or territory.',dinastias:'Explore the origins, branches, inheritances and connections of the houses in the Atlas.',territorios:'Explore the territories in the database and the people who connect them.',historias:'Stories built from the people, maps, biographies and chronology of the Atlas.'}[tipo]} : originalConfig;
   const Icon = config.icon;
-  const { data, loading, error } = useJson(`/catalogos/${tipo}.json`);
+  const { data, loading, error } = useJson(`/catalogos/${tipo}.json`, initialData);
   const [query, setQuery] = useState("");
   useEffect(() => {setQuery(new URLSearchParams(window.location.search).get("q") || "");}, [tipo]);
   const [soloHistoria, setSoloHistoria] = useState(false);
@@ -160,8 +165,8 @@ export function CatalogPage({ tipo }) {
     const inicial = item => normalizarBusquedaPublica(item.nombre).charAt(0).toUpperCase();
     const elegidos = lista.filter(item => (siglo === null || (siglo === "sin" ? item.siglo == null : item.siglo === siglo))
       && (!papel || item.papel === papel) && (!region || item.region === region) && (!letra || inicial(item) === letra));
-    return orden === "destacadas" && !q ? elegidos.slice().sort((a, b) => (b.relevancia || 0) - (a.relevancia || 0) || a.nombre.localeCompare(b.nombre, "es")) : elegidos;
-  }, [items, query, tipo, soloHistoria, filtrosPersona, orden]);
+    return orden === "destacadas" && !q ? elegidos.slice().sort((a, b) => (b.relevancia || 0) - (a.relevancia || 0) || a.nombre.localeCompare(b.nombre, locale)) : elegidos.slice().sort((a,b)=>a.nombre.localeCompare(b.nombre,locale));
+  }, [items, query, tipo, soloHistoria, filtrosPersona, orden, locale]);
   useEffect(() => { setLimite(120); }, [query, filtrosPersona, orden]);
   const visibles = tipo === "personas" ? filtrados.slice(0, limite) : filtrados;
   const facetas = useMemo(() => {
@@ -179,70 +184,70 @@ export function CatalogPage({ tipo }) {
   const alternarFiltro = (clave, valor) => setFiltrosPersona(actual => ({...actual, [clave]: actual[clave] === valor ? null : valor}));
   const filtrosActivos = Object.values(filtrosPersona).filter(v => v !== null).length;
   usePublicMeta({
-    title: `${config.title} — ${SITE_NAME}`,
+    title: `${config.title} — ${en?SITE_NAME_EN:SITE_NAME}`,
     description: config.description,
-    path: `/es/${tipo}`,
+    path: en ? `/en/${{personas:"people",dinastias:"dynasties",territorios:"territories",historias:"stories"}[tipo]}` : `/es/${tipo}`,
   });
 
   return (
-    <PublicLayout>
+    <Wrapper>
       <main className="public-main public-catalog">
-        <Breadcrumbs items={[{ label: "Inicio", href: "/es/" }, { label: config.title }]} />
+        <Breadcrumbs locale={locale} items={[{ label: tr("Inicio","Home"), href: en?"/en/":"/es/" }, { label: config.title }]} />
         <section className="public-page-title">
           <div className="public-page-icon"><Icon size={22} /></div><span>{config.eyebrow}</span><h1>{config.title}</h1><p>{config.description}</p>
         </section>
-        <label className="public-search"><Search size={16} /><input value={query} onChange={(e) => setQuery(e.target.value)} placeholder={`Buscar en ${config.title.toLowerCase()}…`} /><span>{filtrados.length}</span></label>
+        <label className="public-search"><Search size={16} /><input value={query} onChange={(e) => setQuery(e.target.value)} placeholder={`${tr("Buscar en","Search")} ${config.title.toLowerCase()}…`} aria-label={`${tr("Buscar en","Search")} ${config.title.toLowerCase()}`} /><span>{filtrados.length}</span></label>
 
-        {tipo === "dinastias" && <label className="dynasty-editorial-filter"><input type="checkbox" checked={soloHistoria} onChange={e=>setSoloHistoria(e.target.checked)}/> Mostrar solo casas con historia desarrollada</label>}
+        {tipo === "dinastias" && <label className="dynasty-editorial-filter"><input type="checkbox" checked={soloHistoria} onChange={e=>setSoloHistoria(e.target.checked)}/>{tr('Mostrar solo casas con historia desarrollada','Show only houses with a developed history')}</label>}
         {loading && <ReadingSkeleton kind="catalog-list" list={tipo === "personas" ? "people" : tipo === "historias" ? "stories" : "entities"}/>}
-        {error && <div className="public-error">No se ha podido cargar este catálogo. Puedes seguir explorando el atlas.</div>}
+        {error && <div className="public-error">{tr('No se ha podido cargar este catálogo. Puedes seguir explorando el atlas.','This catalogue could not load. You can continue exploring the Atlas.')}</div>}
 
         {!loading && !error && tipo === "personas" && facetas && (
-          <section className="people-facets" aria-label="Ordenar y filtrar personas">
+          <section className="people-facets" aria-label={tr('Ordenar y filtrar personas','Sort and filter people')}>
             <div className="people-facets-head">
-              <div className="people-order" role="group" aria-label="Orden">
-                {[["destacadas", "Destacadas"], ["alfabetico", "A–Z"]].map(([valor, etiqueta]) => <button key={valor} type="button" aria-pressed={orden === valor} onClick={() => { setOrden(valor); if (valor === "destacadas") setFiltrosPersona(a => ({...a, letra: null})); }}>{etiqueta}</button>)}
+              <div className="people-order" role="group" aria-label={tr("Orden","Order")}>
+                {[["destacadas", tr("Destacadas","Featured")], ["alfabetico", "A–Z"]].map(([valor, etiqueta]) => <button key={valor} type="button" aria-pressed={orden === valor} onClick={() => { setOrden(valor); if (valor === "destacadas") setFiltrosPersona(a => ({...a, letra: null})); }}>{etiqueta}</button>)}
               </div>
-              {filtrosActivos > 0 && <button type="button" className="people-facets-clear" onClick={() => setFiltrosPersona({siglo: null, papel: null, region: null, letra: null})}>Quitar filtros ({filtrosActivos})</button>}
+              {filtrosActivos > 0 && <button type="button" className="people-facets-clear" onClick={() => setFiltrosPersona({siglo: null, papel: null, region: null, letra: null})}>{tr("Quitar filtros","Clear filters")} ({filtrosActivos})</button>}
             </div>
-            {orden === "alfabetico" && <nav className="people-alphabet" aria-label="Índice alfabético">{facetas.letras.map(letra => <button key={letra} type="button" aria-pressed={filtrosPersona.letra === letra} onClick={() => alternarFiltro("letra", letra)}>{letra}</button>)}</nav>}
-            <div className="people-facet"><span>Siglo</span><div>{facetas.siglos.map(([siglo, n]) => <button key={siglo} type="button" aria-pressed={filtrosPersona.siglo === siglo} onClick={() => alternarFiltro("siglo", siglo)}>s. {ROMANOS[siglo] || siglo}<small>{n}</small></button>)}</div></div>
-            <div className="people-facet"><span>Papel</span><div>{facetas.papeles.map(([papel, n]) => <button key={papel} type="button" aria-pressed={filtrosPersona.papel === papel} onClick={() => alternarFiltro("papel", papel)}>{papel}<small>{n}</small></button>)}</div></div>
-            <div className="people-facet"><span>Región</span><div>{facetas.regiones.map(([region, n]) => <button key={region} type="button" aria-pressed={filtrosPersona.region === region} onClick={() => alternarFiltro("region", region)}>{region === "Otros" ? "Sin territorio registrado" : region}<small>{n}</small></button>)}</div></div>
+            {orden === "alfabetico" && <nav className="people-alphabet" aria-label={tr('Índice alfabético','Alphabetical index')}>{facetas.letras.map(letra => <button key={letra} type="button" aria-pressed={filtrosPersona.letra === letra} onClick={() => alternarFiltro("letra", letra)}>{letra}</button>)}</nav>}
+            <div className="people-facet"><span>{tr("Siglo","Century")}</span><div>{facetas.siglos.map(([siglo, n]) => <button key={siglo} type="button" aria-pressed={filtrosPersona.siglo === siglo} onClick={() => alternarFiltro("siglo", siglo)}>{en?"c.":"s."} {ROMANOS[siglo] || siglo}<small>{n}</small></button>)}</div></div>
+            <div className="people-facet"><span>{tr("Papel","Role")}</span><div>{facetas.papeles.map(([papel, n]) => <button key={papel} type="button" aria-pressed={filtrosPersona.papel === papel} onClick={() => alternarFiltro("papel", papel)}>{en?englishLabel(papel):papel}<small>{n}</small></button>)}</div></div>
+            <div className="people-facet"><span>{tr("Región","Region")}</span><div>{facetas.regiones.map(([region, n]) => <button key={region} type="button" aria-pressed={filtrosPersona.region === region} onClick={() => alternarFiltro("region", region)}>{region === "Otros" ? tr("Sin territorio registrado","No recorded territory") : en?englishLabel(region):region}<small>{n}</small></button>)}</div></div>
           </section>
         )}
         {!loading && !error && tipo === "personas" && (
           <>
-            <div className="public-catalog-note">{filtrados.length} {filtrados.length === 1 ? "persona" : "personas"}{orden === "destacadas" && !query.trim() ? " · las más relevantes primero: con retrato, biografía extensa y gobiernos registrados" : ""}</div>
-            <div className="public-person-list">{visibles.map((persona) => <PersonaMiniCard key={persona.id} persona={persona} compact />)}</div>
-            {visibles.length < filtrados.length && <button type="button" className="public-secondary people-more" onClick={() => setLimite(n => n + 120)}>Ver más ({filtrados.length - visibles.length} restantes)</button>}
-            {!filtrados.length && <p className="public-muted">Ninguna persona coincide con estos filtros.</p>}
+            <div className="public-catalog-note">{filtrados.length} {filtrados.length === 1 ? tr("persona","person") : tr("personas","people")}{orden === "destacadas" && !query.trim() ? tr(" · las más relevantes primero: con retrato, biografía extensa y gobiernos registrados"," · most relevant first: portraits, extended biographies and recorded governments") : ""}</div>
+            <div className="public-person-list">{visibles.map((persona) => <PersonaMiniCard key={persona.id} persona={persona} compact locale={locale}/>)}</div>
+            {visibles.length < filtrados.length && <button type="button" className="public-secondary people-more" onClick={() => setLimite(n => n + 120)}>{tr("Ver más","Show more")} ({filtrados.length - visibles.length} {tr("restantes","remaining")})</button>}
+            {!filtrados.length && <p className="public-muted">{tr("Ninguna persona coincide con estos filtros.","No people match these filters.")}</p>}
           </>
         )}
 
         {!loading && !error && (tipo === "dinastias" || tipo === "territorios") && (
           <div className="public-entity-grid">
-            {filtrados.map((item) => tipo === 'dinastias' ? <DynastyCard key={item.slug} item={item}/> : (
+            {filtrados.map((item) => tipo === 'dinastias' ? <DynastyCard key={item.slug} item={item} locale={locale}/> : (
               <article key={item.slug} className="public-entity-card">
-                <div className="public-entity-card-head"><div className="public-entity-heading">{tipo === "dinastias" && <DynastyArms dinastia={item.nombre} size={30}/>}<div><span>{tipo === "dinastias" ? (item.editorial ? "Historia de la dinastía" : "Dinastía") : "Territorio"}</span><h2>{item.nombre}</h2></div></div><strong aria-label={`${item.total} personas`}>{item.total}<small aria-hidden="true">{item.total === 1 ? "persona" : "personas"}</small></strong></div>
+                <div className="public-entity-card-head"><div className="public-entity-heading">{tipo === "dinastias" && <DynastyArms dinastia={item.nombre} size={30}/>}<div><span>{tipo === "dinastias" ? (item.editorial ? tr("Historia de la dinastía","History of the house") : tr("Dinastía","Dynasty")) : tr("Territorio","Territory")}</span><h2>{item.nombre}</h2></div></div><strong aria-label={`${item.total} ${tr("personas","people")}`}>{item.total}<small aria-hidden="true">{item.total === 1 ? tr("persona","person") : tr("personas","people")}</small></strong></div>
                 {tipo === "dinastias" && item.resumen && <p className="public-muted public-dynasty-summary">{item.resumen}</p>}
-                {!!item.miembros?.length && <div className="public-entity-members">{item.miembros.map((p) => <a key={p.id} href={rutaEntidad("persona", p.slug)}>{p.nombre}</a>)}</div>}
-                <a className="public-entity-action" href={rutaEntidad(tipo === "dinastias" ? "dinastia" : "territorio", item.slug)}>Ver ficha <ArrowRight size={13} /></a>
+                {!!item.miembros?.length && <div className="public-entity-members">{item.miembros.map((p) => <a key={p.id} href={p.path || rutaEntidad("persona", p.slug)}>{p.nombre}</a>)}</div>}
+                <a className="public-entity-action" href={item.path || rutaEntidad(tipo === "dinastias" ? "dinastia" : "territorio", item.slug)}>{tr("Ver ficha","Read the record")} <ArrowRight size={13} /></a>
               </article>
             ))}
           </div>
         )}
-        {!loading && !error && tipo === "dinastias" && <p className="public-catalog-note public-arms-note">Escudos: autores, procedencia y licencias en <a href="/es/licencias#escudos">Licencias</a>.</p>}
+        {!loading && !error && tipo === "dinastias" && <p className="public-catalog-note public-arms-note">{tr("Escudos: autores, procedencia y licencias en","Arms: authors, sources and licences in")} <a href={en?"/en/licences#escudos":"/es/licencias#escudos"}>{tr("Licencias","Licences")}</a>.</p>}
 
-        {!loading && !error && tipo === "historias" && <StoryCatalog items={filtrados} progress={progresoHistorias}/>}
+        {!loading && !error && tipo === "historias" && <StoryCatalog items={filtrados} progress={progresoHistorias} locale={locale}/>}
       </main>
-    </PublicLayout>
+    </Wrapper>
   );
 }
 
 function Portrait({ persona, locale = 'es' }) {
   const image = locale === 'en' && persona.portrait || IMAGENES_PERSONAS[persona?.id];
-  if (!image) return null;
+  if (!image?.archivo) return null;
   const objectPosition = image.encuadre || image.posicion || "50% 20%";
   const zoom = Number.isFinite(image.zoom) && image.zoom > 0 ? image.zoom : 1;
   return (

@@ -25,12 +25,12 @@ const PERSONA_ID_POR_SLUG = Object.fromEntries(
 // contenido principal seguiría estando en español.
 const PERSONA_ENGLISH = PERSONAS.filter((persona) => runtime.profiles[persona.id]?.name);
 const PERSONA_SLUG_EN_BASE_COUNT = PERSONA_ENGLISH.reduce((acc, persona) => {
-  const base = slugPublico(runtime.profiles[persona.id].name);
+  const base = slugPublico(runtime.profiles[persona.id].slugName||runtime.profiles[persona.id].name);
   acc[base] = (acc[base] || 0) + 1;
   return acc;
 }, {});
 const PERSONA_SLUG_EN_POR_ID = Object.fromEntries(PERSONA_ENGLISH.map((persona) => {
-  const base = slugPublico(runtime.profiles[persona.id].name);
+  const base = slugPublico(runtime.profiles[persona.id].slugName||runtime.profiles[persona.id].name);
   const slug = PERSONA_SLUG_EN_BASE_COUNT[base] > 1 ? `${base}-${slugPublico(persona.id)}` : base;
   return [persona.id, slug];
 }));

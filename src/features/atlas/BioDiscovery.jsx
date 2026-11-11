@@ -1,6 +1,6 @@
 import {territoriosDe} from '../../domain/genealogy/personAccessors.js';
 import { useMemo } from "react";
-import {ENGLISH_STORIES} from '../english/content.js';
+import {ENGLISH_STORIES} from '../english/storyContent.js';
 import runtime from '../../generated/englishStoriesRuntime.json' with {type:'json'};
 
 export default function BioDiscovery({
