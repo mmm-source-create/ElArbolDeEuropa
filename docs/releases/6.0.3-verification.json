@@ -1,0 +1,102 @@
+{
+  "version": "6.0.3",
+  "people": 2774,
+  "dynasties": 521,
+  "territories": 1041,
+  "publishedStories": 30,
+  "plannedStories": 9,
+  "pairedNewChapters": 61,
+  "newPeople": [
+    "CRISTOBALSANDOVALUCEDA",
+    "FRANCESCOSALVIATIARC",
+    "RODRIGOCALDERON"
+  ],
+  "updatedExistingRecords": [
+    "ALEJFARNESIO",
+    "FRANLERMA",
+    "FRANSANDZUN"
+  ],
+  "changedYearSnapshots": {
+    "authorities": [],
+    "layers": [],
+    "locations": [],
+    "mosaic": [],
+    "overlaps": [],
+    "personal": []
+  },
+  "geometryUnchanged": true,
+  "governmentIntervals": 2980,
+  "existingPersonalUrlsUnchanged": 2771,
+  "staticPages": 9338,
+  "ssgErrors": 0,
+  "sourceRecordsSecurityIssues": 0,
+  "dependencyVulnerabilities": 0,
+  "v6EnglishAuditErrors": 0,
+  "pendingClaims": 7063,
+  "publicSpanishRoutes": {
+    "before": 4619,
+    "after": 4674,
+    "added": 90,
+    "replacedByRedirects": [
+      "/es/historia/el-reino-partido-en-dos",
+      "/es/historia/el-reino-partido-en-dos/capitulo/1",
+      "/es/historia/el-reino-partido-en-dos/capitulo/10",
+      "/es/historia/el-reino-partido-en-dos/capitulo/11",
+      "/es/historia/el-reino-partido-en-dos/capitulo/12",
+      "/es/historia/el-reino-partido-en-dos/capitulo/13",
+      "/es/historia/el-reino-partido-en-dos/capitulo/14",
+      "/es/historia/el-reino-partido-en-dos/capitulo/15",
+      "/es/historia/el-reino-partido-en-dos/capitulo/16",
+      "/es/historia/el-reino-partido-en-dos/capitulo/17",
+      "/es/historia/el-reino-partido-en-dos/capitulo/18",
+      "/es/historia/el-reino-partido-en-dos/capitulo/2",
+      "/es/historia/el-reino-partido-en-dos/capitulo/3",
+      "/es/historia/el-reino-partido-en-dos/capitulo/4",
+      "/es/historia/el-reino-partido-en-dos/capitulo/5",
+      "/es/historia/el-reino-partido-en-dos/capitulo/6",
+      "/es/historia/el-reino-partido-en-dos/capitulo/7",
+      "/es/historia/el-reino-partido-en-dos/capitulo/8",
+      "/es/historia/el-reino-partido-en-dos/capitulo/9",
+      "/es/historia/la-revolucion-protestante",
+      "/es/historia/la-revolucion-protestante/capitulo/1",
+      "/es/historia/la-revolucion-protestante/capitulo/10",
+      "/es/historia/la-revolucion-protestante/capitulo/11",
+      "/es/historia/la-revolucion-protestante/capitulo/12",
+      "/es/historia/la-revolucion-protestante/capitulo/13",
+      "/es/historia/la-revolucion-protestante/capitulo/14",
+      "/es/historia/la-revolucion-protestante/capitulo/15",
+      "/es/historia/la-revolucion-protestante/capitulo/2",
+      "/es/historia/la-revolucion-protestante/capitulo/3",
+      "/es/historia/la-revolucion-protestante/capitulo/4",
+      "/es/historia/la-revolucion-protestante/capitulo/5",
+      "/es/historia/la-revolucion-protestante/capitulo/6",
+      "/es/historia/la-revolucion-protestante/capitulo/7",
+      "/es/historia/la-revolucion-protestante/capitulo/8",
+      "/es/historia/la-revolucion-protestante/capitulo/9"
+    ]
+  },
+  "localTests": {
+    "fullSuite": {
+      "passed": 727,
+      "failed": 1,
+      "total": 728,
+      "failure": "outdated collection-size expectation (4 instead of 8)"
+    },
+    "correctedCollectionTests": {
+      "passed": 3,
+      "failed": 0
+    },
+    "finalIntegrationAndMinifiedHydration": {
+      "passed": 8,
+      "failed": 0
+    },
+    "currentTestCount": 729
+  },
+  "v5EnglishSnapshot": "Inherited English entries retained; V6 and SSG verify the complete English edition.",
+  "browserReview": [
+    "Identical computed Challenge dark backgrounds in English and Spanish",
+    "Collection labels and search by collection",
+    "English story contents and chapter navigation",
+    "Spanish-English equivalent chapter and shared reading progress"
+  ]
+}

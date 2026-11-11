@@ -107,7 +107,8 @@ test('las historias conservadas tienen referencias válidas y se retiran las cua
   assert.ok(!HISTORIAS.some(h=>h.id===id));
  }
  for (const h of HISTORIAS) for (const p of h.pasos || []) { if(p.persona) assert.ok(by[p.persona]); if(p.eventoId) assert.ok(events.has(p.eventoId)); }
- assert.ok(HISTORIAS.find(h=>h.id==='reino-partido-dos').pasos.filter(p=>p.anio>=1300&&p.anio<1400).length>=6);
+ assert.equal(Math.max(...HISTORIAS.find(h=>h.id==='reino-partido-dos').pasos.map(p=>p.anio)),1321);
+ assert.ok(HISTORIAS.find(h=>h.id==='napoles-corona-disputada').pasos.some(p=>p.anio===1348));
 });
 test('cada biografía tiene una sola definición editorial y no repite el mismo párrafo',async()=>{
  const dir=new URL('../src/content/personas/',import.meta.url),seen=new Set();

@@ -1,3 +1,4 @@
+import StoryCollectionTags from '../stories/StoryCollectionTags.jsx';
 import {governmentSummary} from '../../domain/government/governmentPresentation.js';
 import {territoriosDe} from '../../domain/genealogy/personAccessors.js';
 import { SOURCE_GROUPS, SOURCE_METHOD } from "../../content/sources.js";
@@ -287,7 +288,7 @@ export function ModalProyecto({ seccion, onClose, persona, personasVista = PERSO
                       <span>{historia.disponible ? tr('Recorrido disponible','Journey available') : tr('Próximamente','Coming soon')}</span>
                       {historia.disponible && historia.pasos && <b>{historia.pasos.length} {tr('pasos','steps')}</b>}
                     </div>
-                    <h3>{storyTitle}</h3>{historia.revisionPendiente && <strong className="story-review-note">{tr('Pendiente de revisión','Review pending')}</strong>}
+                    <StoryCollectionTags story={historia} locale={locale}/><h3>{storyTitle}</h3>{historia.revisionPendiente && <strong className="story-review-note">{tr('Pendiente de revisión','Review pending')}</strong>}
                     <p>{storySubtitle}</p>
                     {historia.disponible ? (
                       <a className="story-start-btn" href={rutaEntidadLocalizada(locale, "historia", slugPublico(storyTitle))} onClick={(event) => { event.preventDefault(); onStartHistoria?.(historia.id); }}>{tr('Comenzar recorrido','Start journey')} <ArrowRight size={13} /></a>

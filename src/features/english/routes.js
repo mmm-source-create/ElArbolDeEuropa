@@ -5,7 +5,7 @@ import {REVIEWED_HOUSES} from './reviewedHouseTranslations.js';
 import runtime from '../../generated/englishV6Runtime.json' with {type:'json'};
 import {PERSONAS} from '../../data/personas.js';
 import {slugBasePersona,slugPublico} from '../../domain/people/personPresentation.js';
-export const TRANSLATED_DYNASTIES=[{es:'berlichingen',en:'berlichingen'},...POLISH_HOUSES.map(({es,en})=>({es,en})),...ROSES_HOUSES.map(({es,en})=>({es,en})),...NEXT_HOUSES.map(({es,en})=>({es,en})),...REVIEWED_HOUSES.map(({es,en})=>({es,en})),{es:'anjou-hungria',en:'anjou-hungary'},...runtime.dynasties.map(({es,en})=>({es,en}))];
+export const TRANSLATED_DYNASTIES=[{es:'calderon',en:'calderon'},{es:'berlichingen',en:'berlichingen'},...POLISH_HOUSES.map(({es,en})=>({es,en})),...ROSES_HOUSES.map(({es,en})=>({es,en})),...NEXT_HOUSES.map(({es,en})=>({es,en})),...REVIEWED_HOUSES.map(({es,en})=>({es,en})),{es:'anjou-hungria',en:'anjou-hungary'},...runtime.dynasties.map(({es,en})=>({es,en}))];
 export const TRANSLATED_TERRITORIES=[{es:'normandia',en:'normandy'},...runtime.territories.map(({es,en})=>({es,en}))];
 const LEGACY_TRANSLATED_STORIES = [
  {id:'borgona',es:'borgona-el-reino-que-no-fue',en:'burgundy-the-kingdom-that-never-was',chapters:17},

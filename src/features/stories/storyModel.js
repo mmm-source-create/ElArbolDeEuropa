@@ -3,6 +3,10 @@ export function storyPath(slug, chapter = null) {
   return `/es/historia/${encodeURIComponent(slug)}${chapter ? `/capitulo/${chapter}` : ''}`;
 }
 export function normalizeStoryProgress(value, id, count) {
+  if(id==='reino-partido-dos' && count===7 && value?.revision!==4) {
+    const chapters={2:1,4:3,5:5,6:5,7:6,8:7};
+    return {last:chapters[value?.last]||1,read:[...new Set((Array.isArray(value?.read)?value.read:[]).map(n=>chapters[n]).filter(Boolean))]};
+  }
   // The two Barbarossa chapters precede Sicily in the expanded Third Crusade.
   const legacyCrusade = id === 'ricardo-felipe-cruzada' && count >= 8 && value?.revision !== 2;
   const legacyBurgundy = id === 'borgona' && count >= 17 && value?.revision !== 3;
@@ -19,7 +23,7 @@ export function saveStoryProgress(storage, id, count, chapter) {
   const progress = readStoryProgress(storage, id, count);
   if (!Number.isInteger(chapter) || chapter < 1 || chapter > count) return progress;
   const next = { last: chapter, read: [...new Set([...progress.read, chapter])],
-    ...(id === 'ricardo-felipe-cruzada' && count >= 8 ? {revision:2} : id === 'borgona' && count >= 17 ? {revision:3} : {}) };
+    ...(id === 'reino-partido-dos' && count===7 ? {revision:4} : id === 'ricardo-felipe-cruzada' && count >= 8 ? {revision:2} : id === 'borgona' && count >= 17 ? {revision:3} : {}) };
   try {
     let all; try { all = JSON.parse(storage.getItem(STORY_PROGRESS_KEY)); } catch { /* Recover corrupt storage. */ }
     storage.setItem(STORY_PROGRESS_KEY, JSON.stringify({ ...(all && typeof all === 'object' && !Array.isArray(all) ? all : {}), [id]: next }));

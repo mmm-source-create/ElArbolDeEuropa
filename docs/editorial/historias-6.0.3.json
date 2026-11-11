@@ -1,0 +1,395 @@
+{
+  "version": "6.0.3",
+  "stories": [
+    {
+      "id": "federico-emperador-excomulgado",
+      "title": "Federico II: el emperador excomulgado",
+      "status": "Publicada",
+      "chapters": 8,
+      "period": "1220–1268",
+      "words": 507,
+      "artworks": 0,
+      "decision": "Nueva: cruzada, administración, conflicto pontificio y caída de los herederos. Una miniatura de cetrería sería una buena primera obra."
+    },
+    {
+      "id": "reino-partido-dos",
+      "title": "Las vísperas y la división de un reino",
+      "status": "Publicada",
+      "chapters": 7,
+      "period": "1266–1321",
+      "words": 418,
+      "artworks": 0,
+      "decision": "Dividida en esta entrega: Federico II (8 capítulos), Vísperas (7) y Nápoles (9). La nueva versión de este identificador cubre 1266–1321, con seis capítulos centrados en la crisis de 1282–1302 y sus consecuencias inmediatas."
+    },
+    {
+      "id": "napoles-corona-disputada",
+      "title": "Nápoles: la perla disputada",
+      "status": "Publicada",
+      "chapters": 9,
+      "period": "1309–1504",
+      "words": 589,
+      "artworks": 0,
+      "decision": "Nueva: reclamación húngara, investidura papal, adopciones angevinas y aragonesas y conquista de 1503–1504. Mantener nueve capítulos y evaluar una segunda división solo si se amplía la vida política interna."
+    },
+    {
+      "id": "don-juan-manuel",
+      "title": "Don Juan Manuel",
+      "status": "Publicada",
+      "chapters": 6,
+      "period": "1282–1348",
+      "words": 373,
+      "artworks": 0,
+      "decision": "Nueva: patrimonio, conflicto con Alfonso XI y autoría. El prólogo de un manuscrito de El conde Lucanor aportaría evidencia útil."
+    },
+    {
+      "id": "conspiracion-pazzi",
+      "title": "La conspiración de los Pazzi",
+      "status": "Publicada",
+      "chapters": 6,
+      "period": "1474–1480",
+      "words": 367,
+      "artworks": 0,
+      "decision": "Nueva: motivaciones, ataque, fracaso del golpe y guerra. La medalla de Bertoldo di Giovanni permitiría contrastar memoria política y acontecimiento."
+    },
+    {
+      "id": "maritsa-1371",
+      "title": "Maritsa 1371: el fin del Imperio serbio",
+      "status": "Publicada",
+      "chapters": 6,
+      "period": "1365–1395",
+      "words": 363,
+      "artworks": 0,
+      "decision": "Nueva: fragmentación previa, batalla y supervivencia de Marko. Priorizar frescos identificados y documentos; una recreación moderna del combate necesitaría contexto."
+    },
+    {
+      "id": "mindaugas-jogaila",
+      "title": "De Mindaugas a Jogaila",
+      "status": "Publicada",
+      "chapters": 7,
+      "period": "1251–1392",
+      "words": 437,
+      "artworks": 0,
+      "decision": "Nueva: poder pagano, expansión, crisis familiar y acuerdo con Polonia. Conexión expresa con Dos coronas para dos hijas; el mar Negro queda como desarrollo posterior de Vitautas."
+    },
+    {
+      "id": "ejecucion-maria-estuardo",
+      "title": "La ejecución de María Estuardo",
+      "status": "Publicada",
+      "chapters": 6,
+      "period": "1568–1603",
+      "words": 369,
+      "artworks": 0,
+      "decision": "Nueva: cautiverio, correspondencia, proceso y ejecución, con epílogo de 1603. La Gallows Letter sería más informativa que otra escena de ejecución del siglo XIX."
+    },
+    {
+      "id": "duque-lerma",
+      "title": "El duque de Lerma: el primer valido",
+      "status": "Publicada",
+      "chapters": 6,
+      "period": "1598–1621",
+      "words": 374,
+      "artworks": 0,
+      "decision": "Nueva: acceso al rey, Valladolid, patronazgo, política de 1609 y caída. El retrato ecuestre de Rubens serviría para examinar la representación del poder."
+    },
+    {
+      "id": "dos-rosas",
+      "title": "La guerra de las Dos Rosas",
+      "status": "Publicada",
+      "chapters": 21,
+      "period": "1377–1487",
+      "words": 2586,
+      "artworks": 0,
+      "decision": "Conservar el arco y las batallas; para una lectura breve, condensar los dos capítulos de antecedentes (1377–1399) en uno. La muerte de los príncipes de la Torre exige mantener la incertidumbre."
+    },
+    {
+      "id": "dos-coronas-dos-hijas",
+      "title": "Dos coronas para dos hijas",
+      "status": "Publicada",
+      "chapters": 6,
+      "period": "1370–1399",
+      "words": 839,
+      "artworks": 0,
+      "decision": "Conservar seis capítulos. Ampliaría el papel de Isabel de Bosnia y la negociación de la sucesión húngara con un documento, sin volver a contar la expansión lituana."
+    },
+    {
+      "id": "corona-demasiado-grande",
+      "title": "Una corona demasiado grande",
+      "status": "Publicada",
+      "chapters": 6,
+      "period": "1587–1660",
+      "words": 671,
+      "artworks": 0,
+      "decision": "Mantener el núcleo de Segismundo III. El cierre de 1660 funciona como epílogo, pero debe distinguirse del tiempo vivido por el protagonista."
+    },
+    {
+      "id": "borgona",
+      "title": "Borgoña: el reino que no fue",
+      "status": "Publicada",
+      "chapters": 17,
+      "period": "1363–1515",
+      "words": 2016,
+      "artworks": 1,
+      "decision": "Conservar formación, Tréveris, derrotas y herencia. Los tres capítulos de Tréveris (9–11) son el primer lugar donde reducir si se quiere una versión corta. El cuadro de Nancy ya está en el pasaje adecuado."
+    },
+    {
+      "id": "emperadores",
+      "title": "Emperadores",
+      "status": "Publicada",
+      "chapters": 19,
+      "period": "1220–1792",
+      "words": 862,
+      "artworks": 0,
+      "decision": "Es el candidato más claro a dividir en el futuro: elección y dinastías (1220–1437), reforma y confesión (1452–1648), sucesión y Habsburgo-Lorena (1711–1792). Los capítulos actuales son breves: añadir más texto a todo el arco no resolvería su amplitud."
+    },
+    {
+      "id": "habsburgo-capetos",
+      "title": "Habsburgo y Capetos",
+      "status": "Pendiente",
+      "chapters": 0,
+      "period": "—",
+      "words": 0,
+      "artworks": 0,
+      "decision": "Pendiente: definir una pregunta y un período concretos antes de escribir; como panorámica duplicaría Emperadores y Borgoña."
+    },
+    {
+      "id": "iberia",
+      "title": "España y Portugal",
+      "status": "Pendiente",
+      "chapters": 0,
+      "period": "—",
+      "words": 0,
+      "artworks": 0,
+      "decision": "Pendiente: sustituir un recorrido de toda la península por un conflicto sucesorio o una unión concreta."
+    },
+    {
+      "id": "papales",
+      "title": "Las familias papales",
+      "status": "Publicada",
+      "chapters": 18,
+      "period": "1277–1692",
+      "words": 1008,
+      "artworks": 0,
+      "decision": "Mantener como recorrido panorámico por familias. Reordenaría Pío II (1458) y Calixto III (1455) en una revisión posterior con migración del progreso. Los Pazzi ya permiten profundizar en Sixto IV sin ampliar todos los pontificados."
+    },
+    {
+      "id": "condotieros",
+      "title": "Los condotieros",
+      "status": "Publicada",
+      "chapters": 14,
+      "period": "1363–1535",
+      "words": 620,
+      "artworks": 0,
+      "decision": "Mantener contratos, cambios de empleador y ascenso de Sforza. Profundizar en Carmagnola y el vínculo entre condotta y autoridad política. Evitar repetir toda esta historia en la pendiente Visconti-Sforza."
+    },
+    {
+      "id": "cien-anos",
+      "title": "La guerra de los Cien Años",
+      "status": "Publicada",
+      "chapters": 17,
+      "period": "1328–1453",
+      "words": 986,
+      "artworks": 1,
+      "decision": "Mantener una historia completa con tres fases reconocibles: 1328–1360, recuperación y guerra civil, 1415–1453. Crécy ya tiene obra. Un manuscrito de Juana de Arco aportaría más que otro retrato regio."
+    },
+    {
+      "id": "gioconda",
+      "title": "En busca de la Gioconda",
+      "status": "Publicada",
+      "chapters": 11,
+      "period": "1482–1519",
+      "words": 640,
+      "artworks": 0,
+      "decision": "La ruta de Leonardo funciona; reduciría las candidatas alternativas a un capítulo y daría más peso al documento de Agostino Vespucci y al encargo de Lisa. Revisados la descripción y su versión inglesa."
+    },
+    {
+      "id": "revolucion-protestante",
+      "title": "La Reforma protestante",
+      "status": "Publicada",
+      "chapters": 15,
+      "period": "1516–1563",
+      "words": 710,
+      "artworks": 0,
+      "decision": "Título cambiado a La Reforma protestante y equivalente inglés. Conservar el arco europeo; ampliaría Augsburgo de 1555 para explicar quién queda dentro del acuerdo y quién fuera. Los enlaces anteriores se redirigen."
+    },
+    {
+      "id": "favoritos-maquiavelo",
+      "title": "Los favoritos de Maquiavelo",
+      "status": "Publicada",
+      "chapters": 9,
+      "period": "1450–1516",
+      "words": 479,
+      "artworks": 0,
+      "decision": "Conservar ejemplos vinculados a pasajes concretos de El príncipe. Priorizar el texto del autor frente a nuevas anécdotas biográficas."
+    },
+    {
+      "id": "republica-nobles",
+      "title": "La República de los nobles",
+      "status": "Publicada",
+      "chapters": 13,
+      "period": "1506–1795",
+      "words": 671,
+      "artworks": 0,
+      "decision": "Ampliaría la diferencia entre elección, privilegios y práctica del gobierno. Las particiones necesitan un cierre que explique las intervenciones vecinas y las reformas. Retirado el punto final aislado del subtítulo."
+    },
+    {
+      "id": "corona-dos-credos",
+      "title": "Una corona entre dos credos",
+      "status": "Publicada",
+      "chapters": 11,
+      "period": "1559–1598",
+      "words": 504,
+      "artworks": 0,
+      "decision": "Conservar el arco 1559–1598. Daría más espacio a las decisiones de los líderes hugonotes y al funcionamiento de la Liga, además de la corte de Catalina."
+    },
+    {
+      "id": "lepanto-alianza",
+      "title": "Lepanto: la última cruzada",
+      "status": "Publicada",
+      "chapters": 13,
+      "period": "1520–1573",
+      "words": 683,
+      "artworks": 0,
+      "decision": "Mantener la distinción entre la victoria naval y la paz de Venecia. Una vista contemporánea del combate serviría para explicar disposición de las flotas y sus límites como testimonio."
+    },
+    {
+      "id": "puertas-viena",
+      "title": "A las puertas de Viena",
+      "status": "Publicada",
+      "chapters": 9,
+      "period": "1648–1686",
+      "words": 378,
+      "artworks": 0,
+      "decision": "Mantener causas húngaras, coalición y contraofensiva. Separar con claridad el sitio de 1683 de su breve epílogo; ampliar logística y negociación antes que acumular más batallas."
+    },
+    {
+      "id": "ochenta-anos",
+      "title": "De Flandes a la República",
+      "status": "Pendiente",
+      "chapters": 0,
+      "period": "—",
+      "words": 0,
+      "artworks": 0,
+      "decision": "Prioridad entre las pendientes: Farnesio ya dispone de biografía y enlaza con Arras, Amberes y la división entre norte y sur."
+    },
+    {
+      "id": "guerras-italianas",
+      "title": "El tablero de Italia",
+      "status": "Pendiente",
+      "chapters": 0,
+      "period": "—",
+      "words": 0,
+      "artworks": 0,
+      "decision": "Pendiente: Nápoles cubre ya los reclamos hasta 1504. Empezaría la siguiente historia en las consecuencias de las invasiones y la competencia Valois-Habsburgo."
+    },
+    {
+      "id": "brandeburgo-prusia",
+      "title": "De Brandemburgo a Prusia",
+      "status": "Pendiente",
+      "chapters": 0,
+      "period": "—",
+      "words": 0,
+      "artworks": 0,
+      "decision": "Pendiente: centrar en la unión de 1618 y la soberanía de 1657; la expansión del siglo XVIII puede ser una segunda historia."
+    },
+    {
+      "id": "ultimo-austria",
+      "title": "El último Austria",
+      "status": "Pendiente",
+      "chapters": 0,
+      "period": "—",
+      "words": 0,
+      "artworks": 0,
+      "decision": "Prioridad entre las pendientes: José Fernando, la sucesión por mujeres y los tratados de reparto dan una pregunta narrativa concreta."
+    },
+    {
+      "id": "estuardo-hannover",
+      "title": "De Estuardo a Hannover",
+      "status": "Pendiente",
+      "chapters": 0,
+      "period": "—",
+      "words": 0,
+      "artworks": 0,
+      "decision": "Pendiente: comenzar en 1688 y explicar Act of Settlement y 1714. María Estuardo ya tiene un recorrido propio."
+    },
+    {
+      "id": "leonor-aquitania",
+      "title": "Leonor de Aquitania: dos coronas y una dinastía",
+      "status": "Pendiente",
+      "chapters": 0,
+      "period": "—",
+      "words": 0,
+      "artworks": 0,
+      "decision": "Pendiente: separar la biografía política de Leonor de una historia completa de todos los Plantagenet."
+    },
+    {
+      "id": "visconti-sforza",
+      "title": "Los Visconti y los Sforza",
+      "status": "Pendiente",
+      "chapters": 0,
+      "period": "—",
+      "words": 0,
+      "artworks": 0,
+      "decision": "Pendiente: centrar en matrimonio, legitimidad ducal y la caída de 1499, aprovechando los retratos ya disponibles."
+    },
+    {
+      "id": "braveheart-detras-del-mito",
+      "title": "Braveheart: detrás del mito",
+      "status": "Publicada",
+      "chapters": 6,
+      "period": "1286–1314",
+      "words": 394,
+      "artworks": 0,
+      "decision": "Mantener Wallace y Bruce como dos trayectorias conectadas. Reducir las comparaciones con la película cuando interrumpan la explicación de la sucesión escocesa."
+    },
+    {
+      "id": "dracula-detras-de-la-leyenda",
+      "title": "Drácula: detrás de la leyenda",
+      "status": "Publicada",
+      "chapters": 6,
+      "period": "1448–1476",
+      "words": 499,
+      "artworks": 0,
+      "decision": "Conservar frontera y conflictos dinásticos. Ampliaría los relatos contemporáneos hostiles y su difusión impresa, separando cada testimonio de la recreación literaria posterior."
+    },
+    {
+      "id": "balduino-saladino",
+      "title": "El reino de los cielos",
+      "status": "Publicada",
+      "chapters": 6,
+      "period": "1174–1187",
+      "words": 425,
+      "artworks": 0,
+      "decision": "Descripción abreviada para evitar repetir el ascenso de Saladino. En la siguiente revisión eliminaría las recapitulaciones dentro de Montgisard y Hattin y ampliaría a Sibila, Guido y Raimundo de Trípoli."
+    },
+    {
+      "id": "sebastian-marruecos",
+      "title": "Sebastián de Portugal: la jornada de Marruecos",
+      "status": "Publicada",
+      "chapters": 6,
+      "period": "1568–1580",
+      "words": 515,
+      "artworks": 0,
+      "decision": "La extensión es adecuada. Añadiría una representación de la batalla con advertencia sobre su fecha y procedencia; conservar el contexto saadí y la cuestión de los cautivos."
+    },
+    {
+      "id": "constantinopla-dos-conquistas",
+      "title": "Constantinopla: dos conquistas, dos mundos",
+      "status": "Publicada",
+      "chapters": 6,
+      "period": "1202–1453",
+      "words": 500,
+      "artworks": 0,
+      "decision": "Dos conquistas ofrecen una comparación clara, pero 1261 ocupa muy poco espacio para conectar ambas. Ampliaría un capítulo sobre recuperación y recursos de la ciudad antes de añadir nuevas campañas."
+    },
+    {
+      "id": "ricardo-felipe-cruzada",
+      "title": "Los reyes cruzados",
+      "status": "Publicada",
+      "chapters": 8,
+      "period": "1187–1194",
+      "words": 683,
+      "artworks": 0,
+      "decision": "Conservar Barbarroja y la sucesión de la expedición; ampliar logística y el tratado final si se revisa. Evitar volver a narrar entero Hattin."
+    }
+  ]
+}

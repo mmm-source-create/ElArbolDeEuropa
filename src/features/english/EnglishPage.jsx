@@ -28,7 +28,7 @@ export default function EnglishPage({ page = null, pathname, challengeContent = 
   if (!data) return <div className="public-site"><SiteHeader locale="en"/><main className={`public-main${skeletonKind === 'story' ? ' story-page' : ''}`} aria-busy={state.loading}>{state.loading ? <ReadingSkeleton locale="en" kind={skeletonKind}/> : <div className="public-error" role="alert"><h1>Translation not available</h1><p>This page has not been translated or could not be loaded.</p><button className="public-primary" onClick={() => window.location.reload()}>Try again</button> <a className="public-secondary" href="/en/">English home</a></div>}</main><SiteFooter locale="en"/></div>;
   const prerendered = Boolean(page);
   if (data.type === 'story') return <StoryReader key={data.path} data={data} locale="en" prerendered={prerendered}/>;
-  return <div className={data.type === 'challenge' ? 'public-site desafio-page' : 'public-site'}><SiteHeader locale="en" pathname={data.path} prerendered={prerendered}/>
+  return <div className={data.type === 'challenge' ? 'desafio-page' : 'public-site'}><SiteHeader locale="en" pathname={data.path} prerendered={prerendered}/>
     {data.type === 'home' ? <HomeContent data={data} locale="en" title={data.nombre} prerendered={prerendered}/> : ['dynasty','territory'].includes(data.type)?<EnglishEntity data={data}/>:data.type==='challenge'?<Suspense fallback={<ReadingSkeleton locale="en"/>}>{challengeContent || <EnglishChallenge/>}</Suspense>:data.type === 'person' ? <PersonContent persona={data} locale="en" path={data.path}/> : ['methodology','about','licences','acknowledgements'].includes(data.type) ? <EnglishInfo data={data}/> : <EnglishCatalog data={data}/>}
     <SiteFooter locale="en"/>
   </div>;

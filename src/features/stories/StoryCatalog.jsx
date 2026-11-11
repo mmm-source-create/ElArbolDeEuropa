@@ -1,3 +1,4 @@
+import StoryCollectionTags from './StoryCollectionTags.jsx';
 import {ArrowRight} from 'lucide-react';
 import StoryCollectionBrowser from './StoryCollectionBrowser.jsx';
 import {catalogStoryAtlasUrl,normalizeStoryProgress} from './storyModel.js';
@@ -13,7 +14,7 @@ export default function StoryCatalog({items, progress = {}, locale = 'es'}) {
         const count = Array.isArray(s.pasos) ? s.pasos.length : s.pasos;
         const saved = normalizeStoryProgress(progress[s.id],s.id,count), read = Math.min(saved.read.length,count);
         const last = Number.isInteger(saved?.last) && saved.last > 0 && saved.last <= count ? saved.last : 1;
-        return <article className="public-story-card" key={s.id}><span>{count} {en ? 'chapters' : 'capítulos'}{s.minutos ? ` · ${s.minutos} min` : ''}</span><h3 title={title(s)}>{title(s)}</h3><strong className={`story-card-review${s.revisionPendiente?' story-review-note':''}`}>{s.revisionPendiente ? en ? 'Needs review' : 'Pendiente de revisión' : ''}</strong><p title={s.subtitulo || s.description || s.descripcion}>{s.subtitulo || s.description || s.descripcion}</p>
+        return <article className="public-story-card" key={s.id}><div className="story-card-meta"><span>{count} {en ? 'chapters' : 'capítulos'}{s.minutos ? ` · ${s.minutos} min` : ''}</span><StoryCollectionTags story={s} locale={locale}/></div><h3 title={title(s)}>{title(s)}</h3><strong className={`story-card-review${s.revisionPendiente?' story-review-note':''}`}>{s.revisionPendiente ? en ? 'Needs review' : 'Pendiente de revisión' : ''}</strong><p title={s.subtitulo || s.description || s.descripcion}>{s.subtitulo || s.description || s.descripcion}</p>
           <div className={`story-card-progress${read?'':' is-unread'}`} aria-hidden={!read} aria-label={read ? en ? `${read} of ${count} chapters visited` : `${read} de ${count} capítulos visitados` : undefined}><i style={{width:`${Math.round(read / count * 100)}%`}}/></div>
           <div className="story-entry-actions"><a className="public-primary" href={catalogStoryAtlasUrl(s,last,locale)}>{en ? 'Read in the Atlas' : 'Leer en el Atlas'}<ArrowRight size={13}/></a><a className="public-secondary" href={read > 0 && read < count ? `${path(s)}/${en ? 'chapter' : 'capitulo'}/${last}` : path(s)}>{read > 0 ? en ? 'Continue chapters' : 'Continuar capítulos' : en ? 'Read chapters' : 'Leer capítulos'}<ArrowRight size={13}/></a></div></article>;
       })}</div>

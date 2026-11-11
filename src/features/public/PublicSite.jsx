@@ -1,3 +1,4 @@
+import {collectionLabels} from '../stories/storyThemes.js';
 import {englishLabel} from '../english/presentationLabels.js';
 import {isNamedDynasty} from '../../data/dynastyNames.js';
 import {profileLabel,profileNote,profileClaims,profileEntityPath} from '../english/profilePresentation.js';
@@ -135,9 +136,9 @@ const CATALOG_CONFIG = {
 
 const ROMANOS = {10: "X", 11: "XI", 12: "XII", 13: "XIII", 14: "XIV", 15: "XV", 16: "XVI", 17: "XVII", 18: "XVIII", 19: "XIX"};
 
-function textoCatalogoItem(item, tipo) {
+function textoCatalogoItem(item, tipo, locale='es') {
   if (tipo === "personas") return textoBusquedaPersona(item);
-  if (tipo === "historias") return [item.titulo, item.subtitulo, item.descripcion].filter(Boolean).join(" ");
+  if (tipo === "historias") return [item.titulo, item.subtitulo, item.descripcion, ...collectionLabels(item,locale)].filter(Boolean).join(" ");
   return [item.nombre, ...(item.aliases||[]), ...(item.miembros || []).map((p) => p.nombre)].filter(Boolean).join(" ");
 }
 
@@ -159,7 +160,7 @@ export function CatalogPage({ tipo, locale='es', initialData=null, embedded=fals
   const items = Array.isArray(data?.items) ? data.items : [];
   const filtrados = useMemo(() => {
     const q = normalizarBusquedaPublica(query);
-    const lista = items.filter(item => (!soloHistoria || tipo !== "dinastias" || item.editorial) && (!q || normalizarBusquedaPublica(textoCatalogoItem(item, tipo)).includes(q)));
+    const lista = items.filter(item => (!soloHistoria || tipo !== "dinastias" || item.editorial) && (!q || normalizarBusquedaPublica(textoCatalogoItem(item, tipo, locale)).includes(q)));
     if (tipo !== "personas") return lista;
     const {siglo, papel, region, letra} = filtrosPersona;
     const inicial = item => normalizarBusquedaPublica(item.nombre).charAt(0).toUpperCase();

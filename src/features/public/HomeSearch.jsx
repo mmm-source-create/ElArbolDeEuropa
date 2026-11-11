@@ -31,7 +31,7 @@ export default function HomeSearch({locale = 'es'}) {
     {active && <div className="home-search-results" aria-busy={status === 'loading'}>
       <p role="status">{status === 'error' ? copy.error : status !== 'ready' ? copy.loading : results.length ? `${copy.results} · ${results.length}` : copy.empty}</p>
       {status === 'error' && <button className="public-secondary" type="button" onClick={() => setRetry(value => value + 1)}>{copy.retry}</button>}
-      {!!results.length && <ul aria-label={copy.results}>{results.map(item => <li key={item.path}><a href={item.path}><span><small>{copy.types[item.type]}</small><strong>{item.name}</strong>{item.context && <span>{item.context}</span>}</span><ArrowRight size={16} aria-hidden="true"/></a></li>)}</ul>}
+      {!!results.length && <ul aria-label={copy.results}>{results.map(item => <li key={item.path}><a href={item.path}><span><small>{copy.types[item.type]}</small><strong>{item.name}</strong>{item.collections?.length ? <span className="home-search-collections">{item.collections.map(label=><span key={label}>{label}</span>)}</span> : item.context && <span>{item.context}</span>}</span><ArrowRight size={16} aria-hidden="true"/></a></li>)}</ul>}
     </div>}
   </section>;
 }

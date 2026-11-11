@@ -1,3 +1,4 @@
+import {STORIES_603_EN} from '../../../data/historias603.js';
 import b1People from './batch-1/people.json' with {type:'json'};
 import b1Names from './batch-1/names.json' with {type:'json'};
 import b1Labels from './batch-1/labels.json' with {type:'json'};
@@ -63,6 +64,6 @@ export const V6_NOTES=mergeObjects(b1Notes,b2Notes,b3Notes,b4Notes,b5Notes,b6Not
 export const V6_PORTRAITS=mergeObjects(b1Portraits,b2Portraits,b3Portraits,b4Portraits,b5Portraits,b6Portraits);
 export const V6_DYNASTIES=mergeArrays(b1Dynasties,b2Dynasties,b3Dynasties,b4Dynasties,b5Dynasties,b6Dynasties);
 export const V6_TERRITORIES=mergeArrays(b1Territories,b2Territories,b3Territories,b4Territories,b5Territories,b6Territories);
-export const V6_STORIES=mergeObjects(b1Stories,b2Stories,b3Stories,b4Stories,b5Stories,b6Stories);
+export const V6_STORIES=mergeObjects(b1Stories,b2Stories,b3Stories,b4Stories,b5Stories,b6Stories,STORIES_603_EN);
 export const V6_STATUSES=Object.freeze([b1Status,b2Status,b3Status,b4Status,b5Status,b6Status]);
 export const V6_READY=V6_STATUSES.every(status=>status.ready===true);
