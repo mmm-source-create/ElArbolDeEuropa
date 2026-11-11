@@ -22,6 +22,7 @@ test('Atlas presentation shares documentary vocabulary and retains original name
 });
 test('all filter role, relationship, region and catalogue labels have English presentation',()=>{
  const read=path=>JSON.parse(readFileSync(new URL(path,import.meta.url)));
+ // npm pretest generates this catalogue from the current bilingual sources.
  const people=read('../public/english-meta/people.json').people;
  const labels=[...CATEGORIAS_TITULO,...FILTROS_RELACION].map(item=>item.label).concat(FILTER_REGIONS,people.map(p=>p.papel));
  for(const value of new Set(labels))assert.notEqual(englishLabel(value),value,value);
