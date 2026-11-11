@@ -50,7 +50,7 @@ async function auditBuild(root=process.cwd()) {
  const counts={persona:0,dinastia:0,territorio:0,historia:0,english:0},errors=auditScriptPolicy(shell,siteUrl).map(e=>`Shell: ${e}`);
  for(const route of routes) {
   try {
-   const assets=assetsForStaticPage(manifest,route.kind);
+   const assets=assetsForStaticPage(manifest,route.kind,route.path);
    for(const asset of [...assets.css,...assets.js])await fs.access(path.join(dist,asset));
    const data=JSON.parse(await fs.readFile(path.join(dist,STATIC_FOLDERS[route.kind],`${route.slug}${route.chapter?`/capitulo/${route.chapter}`:""}.json`),'utf8'));
    const page={schema:STATIC_SCHEMA,...route,data};

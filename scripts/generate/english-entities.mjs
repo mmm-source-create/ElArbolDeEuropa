@@ -1,3 +1,4 @@
+import {englishCredit} from '../../src/features/english/imageCredits.js';
 import {ROSES_CONNECTIONS,ROSES_RELATED_HOUSES} from '../../src/features/english/rosesHouseTranslations.js';
 import {englishSourceTitle} from '../../src/features/english/v535Vocabulary.js';
 import {HISTORIAS} from '../../src/data/historias.js';
@@ -32,7 +33,7 @@ export async function englishEntityPages(people){
   const house=(h,field)=>{const sourceTranslation=(translatedSource[field]||[]).find(item=>item.nombre===h.nombre||item.key===h.nombre||item.slug===h.slug)||{};const summary=t.houses?.[h.nombre]??ROSES_RELATED_HOUSES[h.nombre]??sourceTranslation.resumen;if(summary===undefined)throw Error(`Translate related house: ${h.nombre}`);return ({...h,...sourceTranslation,key:h.nombre,nombre:term(h.nombre),resumen:summary,miembros:h.miembros.map(p=>card(p,people)),path:translatedEquivalent(`/es/dinastia/${h.slug}`,'en')||`/es/dinastia/${h.slug}`});};
   pages.push({...source,...translatedSource,type:'dynasty',path:`/en/dynasty/${t.en}`,esPath:`/es/dinastia/${t.es}`,key:t.key,fuentes:sources(source.fuentes),nombre:t.name,description:t.summary,resumen:t.summary,origen:t.origin,trayectoria:t.history,legado:t.legacy,editorial:true,
    miembros:source.miembros.map(p=>card(p,people)),protagonistas:source.protagonistas.map(p=>card(p,people)),gobiernos:source.gobiernos.map(g=>government(g,people)),territorios:source.territorios.map(key=>({key,name:term(key)})),ramas:source.ramas.map(branch),casasOrigen:source.casasOrigen.map(h=>house(h,'casasOrigen')),casasDerivadas:source.casasDerivadas.map(h=>house(h,'casasDerivadas')),casasConectadas:source.casasConectadas.map(h=>house(h,'casasConectadas')),
-   arms:arms?.imagen?{...arms.imagen,autor:t.armsAuthor,blazon:t.blazon,note:t.armsNote,modifications:t.armsModifications||'A viewBox was added for responsive scaling; the drawing is unchanged.'}:null,
+   arms:arms?.imagen?{...arms.imagen,licencia:englishCredit(arms.imagen.licencia),autor:arms.imagen.en?.autor||arms.imagen.autor||t.armsAuthor,blazon:arms.en?.blazon||t.blazon,note:arms.en?.note||t.armsNote,modifications:arms.imagen.en?.modifications||t.armsModifications||'A viewBox was added for responsive scaling; the drawing is unchanged.'}:null,
   });
  }
  for(const t of ENGLISH_TERRITORIES){

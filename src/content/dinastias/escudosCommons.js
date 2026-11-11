@@ -1,3 +1,4 @@
+import {ARMS_IMAGES_602} from './escudos602.js';
 // Reviewed arms from Wikimedia Commons, WappenWiki and the author’s Heraldicon exports:
 // plain shields without
 // background, helmets or crowns. The files in public/escudos keep their
@@ -288,6 +289,7 @@ export const ESCUDOS_COMMONS = Object.freeze({
   }
 ,
   "Nazarí": {"modificaciones":"Se añade viewBox para el escalado responsivo; el dibujo se conserva sin cambios.","archivo": "/escudos/nazari.svg", "titulo": "Arms of the Emirate of Granada (1013-1492).svg", "autor": "Heralder", "licencia": "CC BY-SA 3.0", "licenciaUrl": "https://creativecommons.org/licenses/by-sa/3.0/", "fuente": "https://commons.wikimedia.org/wiki/File:Arms_of_the_Emirate_of_Granada_(1013-1492).svg"},...COMMONS,
+ ...ARMS_IMAGES_602,
   "Hetúmida": COMMONS.Habsburgo,
   "Dunkeld": COMMONS.Estuardo,
 });

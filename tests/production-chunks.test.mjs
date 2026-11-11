@@ -40,8 +40,17 @@ test('the minified browser entry hydrates a profile and activates its controls w
     const html = makeStaticDocument('<!doctype html><html><head><title>Prueba</title></head><body><div id="root"></div></body></html>', rendered, person, {css: [], js: []});
     await fs.writeFile(path.join(temp, 'page.html'), html);
     const manifest = JSON.parse(await fs.readFile(path.join(temp, '.vite/manifest.json'), 'utf8'));
-    const explorerChunk=manifest['src/features/atlas/Explorer.jsx'];
-    assert.ok(explorerChunk, 'The Atlas must retain its own lazy entry');
+    const loader=manifest['src/features/atlas/AtlasLoader.jsx'];
+    assert.ok(loader?.isDynamicEntry, 'The Atlas loader must retain its own lazy entry');
+    // Rolldown may give the implementation a shared-chunk key. Follow the
+    // actual dynamic edge rather than depending on the emitted key's spelling.
+    const explorerKey=loader.dynamicImports?.find(key=>manifest[key]?.name==='Explorer');
+    const explorerChunk=manifest[explorerKey];
+    assert.ok(explorerChunk, 'The loader must dynamically import the Atlas implementation');
+    const initialGraph=new Set();
+    const visit=key=>{if(initialGraph.has(key))return;initialGraph.add(key);for(const child of manifest[key]?.imports||[])visit(child);};
+    visit('index.html');
+    assert.ok(!initialGraph.has(explorerKey), 'The Atlas must stay outside the initial browser graph');
     assert.ok((await fs.stat(path.join(temp,explorerChunk.file))).size<1_500_000, 'The Atlas must not bundle the translation source batches');
     const entry = path.join(temp, manifest['index.html'].file);
     await fs.writeFile(path.join(temp, 'check.mjs'), `

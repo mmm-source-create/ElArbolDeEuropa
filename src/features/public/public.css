@@ -313,3 +313,10 @@ html .public-not-found>section>span{color:#7c5426}
 
 .project-modal .story-collection-browser .story-catalog-card{background:var(--eade-paper-bright);border-color:var(--eade-border);color:var(--eade-ink)}
 .project-modal .story-collection-browser .story-catalog-card p,.project-modal .story-collection-browser .story-catalog-topline{color:var(--eade-muted)}
+
+.public-portrait-alternative { margin-top: 12px; padding-top: 10px; border-top: 1px solid var(--eade-border); }
+.public-portrait-alternative summary { cursor: pointer; color: var(--eade-accent); }
+.public-portrait-alternative img { display: block; width: 100%; height: auto; margin: 12px 0; border-radius: 4px; }
+
+.public-portrait-alternative > span,
+.public-portrait-alternative > small { display: block; margin-top: 3px; }

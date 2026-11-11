@@ -5,7 +5,7 @@ import {REVIEWED_HOUSES} from './reviewedHouseTranslations.js';
 import runtime from '../../generated/englishV6Runtime.json' with {type:'json'};
 import {PERSONAS} from '../../data/personas.js';
 import {slugBasePersona,slugPublico} from '../../domain/people/personPresentation.js';
-export const TRANSLATED_DYNASTIES=[...POLISH_HOUSES.map(({es,en})=>({es,en})),...ROSES_HOUSES.map(({es,en})=>({es,en})),...NEXT_HOUSES.map(({es,en})=>({es,en})),...REVIEWED_HOUSES.map(({es,en})=>({es,en})),{es:'anjou-hungria',en:'anjou-hungary'},...runtime.dynasties.map(({es,en})=>({es,en}))];
+export const TRANSLATED_DYNASTIES=[{es:'berlichingen',en:'berlichingen'},...POLISH_HOUSES.map(({es,en})=>({es,en})),...ROSES_HOUSES.map(({es,en})=>({es,en})),...NEXT_HOUSES.map(({es,en})=>({es,en})),...REVIEWED_HOUSES.map(({es,en})=>({es,en})),{es:'anjou-hungria',en:'anjou-hungary'},...runtime.dynasties.map(({es,en})=>({es,en}))];
 export const TRANSLATED_TERRITORIES=[{es:'normandia',en:'normandy'},...runtime.territories.map(({es,en})=>({es,en}))];
 const LEGACY_TRANSLATED_STORIES = [
  {id:'borgona',es:'borgona-el-reino-que-no-fue',en:'burgundy-the-kingdom-that-never-was',chapters:17},
@@ -687,8 +687,11 @@ const LEGACY_TRANSLATED_PEOPLE = [
 const spanishCounts=PERSONAS.reduce((result,person)=>{const base=slugBasePersona(person,'es');result[base]=(result[base]||0)+1;return result;},{});
 const spanishSlugById=Object.fromEntries(PERSONAS.map(person=>{const base=slugBasePersona(person,'es');return[person.id,spanishCounts[base]>1?`${base}-${slugPublico(person.id)}`:base];}));
 const usedEnglishSlugs=new Set(LEGACY_TRANSLATED_PEOPLE.map(item=>item.en));
-const V6_TRANSLATED_PEOPLE=Object.entries(runtime.v6People).sort(([a],[b])=>a.localeCompare(b)).map(([id,name])=>{const base=slugPublico(name);const en=usedEnglishSlugs.has(base)?`${base}-${slugPublico(id)}`:base;usedEnglishSlugs.add(en);return{id,es:spanishSlugById[id],en};});
-export const TRANSLATED_PEOPLE=[...LEGACY_TRANSLATED_PEOPLE,...V6_TRANSLATED_PEOPLE];
+const translatedPersonRoute=([id,name])=>{const base=slugPublico(name);const en=usedEnglishSlugs.has(base)?`${base}-${slugPublico(id)}`:base;usedEnglishSlugs.add(en);return{id,es:spanishSlugById[id],en};};
+const V6_TRANSLATED_PEOPLE=Object.entries(runtime.v6People).sort(([a],[b])=>a.localeCompare(b)).map(translatedPersonRoute);
+// Append new releases after established routes so a namesake cannot rename an old URL.
+const ADDITIONAL_TRANSLATED_PEOPLE=Object.entries(runtime.additionalPeople||{}).sort(([a],[b])=>a.localeCompare(b)).map(translatedPersonRoute);
+export const TRANSLATED_PEOPLE=[...LEGACY_TRANSLATED_PEOPLE,...V6_TRANSLATED_PEOPLE,...ADDITIONAL_TRANSLATED_PEOPLE];
 export function englishRoute(pathname) {
  const path=String(pathname).replace(/\/$/,'');
  const simple={'/en':'home','/en/about':'about','/en/methodology':'methodology','/en/licences':'licences','/en/acknowledgements':'acknowledgements','/en/stories':'stories','/en/people':'people','/en/dynasties':'dynasties','/en/territories':'territories','/en/challenge':'challenge'};

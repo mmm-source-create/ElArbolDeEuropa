@@ -1,0 +1,70 @@
+{
+  "version": "6.0.2",
+  "people": 2771,
+  "newPeople": [
+    "FRANCESCO2ROVERE",
+    "GOTZBERLICHINGEN",
+    "GUIDOBALDO2ROVERE",
+    "GUIDOBALDOMONTE",
+    "ISABELGONZAGAURBINO",
+    "ISABELHUNSANTA",
+    "JOSEFERNANDOBAV",
+    "LEONORGONZAGAURBINO"
+  ],
+  "removedExistingPeople": [],
+  "geographyDifferences": {
+    "layers": 0,
+    "locations": 0,
+    "mosaic": 0,
+    "overlaps": 0
+  },
+  "changedAuthorityYears": {
+    "authorities": {
+      "count": 119,
+      "from": 1482,
+      "to": 1630
+    },
+    "personal": {
+      "count": 119,
+      "from": 1482,
+      "to": 1630
+    }
+  },
+  "routes": {
+    "existingPersonRoutes": 2763,
+    "changed": 0,
+    "changes": []
+  },
+  "tests": {
+    "passed": 722,
+    "failed": 0
+  },
+  "staticPages": {
+    "checked": 9228,
+    "errors": 0
+  },
+  "english": {
+    "completePeople": 2771,
+    "pages": 4619,
+    "newPeople": 8,
+    "expandedPeople": 1
+  },
+  "media": {
+    "arms": 17,
+    "works": 14,
+    "peopleWithPortraits": 13
+  },
+  "v5EnglishSnapshot": "Legacy English entries retained; V6 and SSG cover the complete English edition.",
+  "updatedExistingRecords": [
+    "FRANCESCOROVEREURBINO",
+    "HERMANN2THUR",
+    "LUDWIG4THUR"
+  ],
+  "browserReview": [
+    "English Challenge initial static styles, light and dark",
+    "Medina Sidonia shield",
+    "Joseph Ferdinand portrait and bilingual profile",
+    "Elizabeth links to the canonical Louis IV and Hermann II",
+    "Livio alternate portrait and English attribution"
+  ]
+}

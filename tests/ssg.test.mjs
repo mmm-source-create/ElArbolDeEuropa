@@ -90,3 +90,14 @@ test('las reglas de alojamiento priorizan atlas=1 y preservan las rutas de histo
  assert.ok(rewrites.some(r=>r.source.includes('desafio')&&r.destination==='/index.html'));
  assert.ok(!rewrites.some(r=>r.source==='/(.*)'));
 });
+
+
+test('Challenge server HTML includes lazy challenge styles without eagerly loading its code',()=>{
+ const manifest={
+  'src/features/english/EnglishPage.jsx':{file:'english.js',css:['public.css']},
+  'src/features/english/EnglishChallenge.jsx':{file:'challenge.js',css:['challenge.css'],imports:['base']},
+  base:{file:'base.js',css:['app.css']},
+ };
+ assert.deepEqual(assetsForStaticPage(manifest,'english','/en/challenge'),{css:['public.css','challenge.css','app.css'],js:['english.js']});
+ assert.deepEqual(assetsForStaticPage(manifest,'english','/en/people'),{css:['public.css'],js:['english.js']});
+});
