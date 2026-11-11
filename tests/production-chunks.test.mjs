@@ -40,6 +40,9 @@ test('the minified browser entry hydrates a profile and activates its controls w
     const html = makeStaticDocument('<!doctype html><html><head><title>Prueba</title></head><body><div id="root"></div></body></html>', rendered, person, {css: [], js: []});
     await fs.writeFile(path.join(temp, 'page.html'), html);
     const manifest = JSON.parse(await fs.readFile(path.join(temp, '.vite/manifest.json'), 'utf8'));
+    const explorerChunk=manifest['src/features/atlas/Explorer.jsx'];
+    assert.ok(explorerChunk, 'The Atlas must retain its own lazy entry');
+    assert.ok((await fs.stat(path.join(temp,explorerChunk.file))).size<1_500_000, 'The Atlas must not bundle the translation source batches');
     const entry = path.join(temp, manifest['index.html'].file);
     await fs.writeFile(path.join(temp, 'check.mjs'), `
       import assert from 'node:assert/strict';

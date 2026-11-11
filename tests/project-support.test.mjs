@@ -51,6 +51,12 @@ for (const locale of ['es', 'en']) {
     for (const compact of [false, true]) {
       documentFor(React.createElement(SiteFooter, {locale, compact}), doc => {
         const links = doc.querySelectorAll(`a[href="${SUPPORT_URL}"]`);
+        const preferred=doc.querySelectorAll('.preferred-source-link');
+        assert.equal(preferred.length,1);
+        assert.equal(new URL(preferred[0].href).origin,'https://www.google.com');
+        assert.equal(new URL(preferred[0].href).searchParams.get('q'),'https://www.treeofeurope.eu');
+        assert.equal(links[0].parentElement,preferred[0].parentElement);
+        assert.match(preferred[0].textContent,locale==='es'?/fuente preferida/:/preferred source/);
         assert.equal(links.length, 1);
         assert.match(links[0].textContent, locale === 'es' ? /Apoyar el proyecto/ : /Support the project/);
         assert.match(links[0].getAttribute('aria-label'), locale === 'es' ? /otra pestaña/ : /new tab/);

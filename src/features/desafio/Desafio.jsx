@@ -209,9 +209,9 @@ function TarjetaEstadistica({ valor, etiqueta }) {
   return <div className="desafio-stat"><strong><Odometer value={valor}/></strong><span>{etiqueta}</span></div>;
 }
 
-function Corazones({ vidas }) {
+function Corazones({ vidas, locale='es' }) {
   return (
-    <span className="desafio-lives" aria-label={`${vidas} vidas`}>
+    <span className="desafio-lives" aria-label={`${vidas} ${locale==='en'?'lives':'vidas'}`}>
       {[0, 1, 2].map((i) => <Heart key={i} size={15} className={i < vidas ? "is-live" : "is-lost"} fill={i < vidas ? "currentColor" : "none"} />)}
     </span>
   );
@@ -846,7 +846,7 @@ export default function Desafio({ personas = [], locale = 'es' }) {
             <strong>{challengeText(describirDificultad(pregunta.dificultad),locale)}</strong>
           </div>
           <div className="desafio-camino-status">
-            <Corazones vidas={camino.vidas} />
+            <Corazones vidas={camino.vidas} locale={locale}/>
             <span className={`desafio-combo${camino.combo >= 3 ? " is-hot" : ""}`}><Zap size={14} /> {camino.combo}{mult > 1 ? ` · x${mult}` : ""}</span>
             <b>{camino.puntos.toLocaleString(en?'en-GB':'es-ES')} pts</b>
           </div>

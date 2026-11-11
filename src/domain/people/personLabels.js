@@ -58,6 +58,8 @@ export function textoBusquedaPersona(persona) {
     persona.nombre,
     persona.nombreEn,
     ...aliasesDePersona(persona),
+    ...(persona.searchAliases || []),
+    persona.role,
     persona.sobrenombre,
     persona.titulo,
     persona.dinastia,

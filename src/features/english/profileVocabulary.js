@@ -1,3 +1,4 @@
+import {INTERFACE_LABELS} from './interfaceLabels.js';
 import {FOURTH_200_NAMES,FOURTH_200_LABELS,FOURTH_200_NOTES} from './reviewedFourth200Vocabulary.js';
 import {THIRD_100_NAMES,THIRD_100_LABELS,THIRD_100_NOTES} from './reviewedThird100Vocabulary.js';
 import {ROSES_NAMES,ROSES_LABELS,ROSES_NOTES} from './rosesVocabulary.js';
@@ -11,6 +12,7 @@ import {V536_NAMES,V536_LABELS,V536_NOTES} from './v536Vocabulary.js';
 import runtime from '../../generated/englishVocabularyRuntime.json' with {type:'json'};
 // Display translations only: canonical dynasty and territory keys stay intact.
 export const PROFILE_LABELS = {
+  ...INTERFACE_LABELS,
   ...runtime.labels,
   ...FOURTH_200_LABELS,
   ...THIRD_100_LABELS,
@@ -31,6 +33,7 @@ export const PROFILE_LABELS = {
   'Conde de Anjou y Maine · Duque de Normandía':'Count of Anjou and Maine · Duke of Normandy', 'Emperatriz · Señora de los ingleses':'Empress · Lady of the English', 'Duquesa de Aquitania · Reina consorte de Francia e Inglaterra':'Duchess of Aquitaine · Queen consort of France and England', 'Rey asociado de Inglaterra':'Junior king of England', 'Rey · Duque de Normandía y Aquitania · Conde de Anjou':'King · Duke of Normandy and Aquitaine · Count of Anjou', 'Duque de Bretaña':'Duke of Brittany', 'Reina consorte de Sicilia · Condesa consorte de Tolosa':'Queen consort of Sicily · Countess consort of Toulouse', 'Reina consorte de Inglaterra':'Queen consort of England', 'Gran almirante otomano':'Ottoman grand admiral', 'Almirante / Gobernador de Argel':'Admiral / Governor of Algiers',
   'reinado':'Kingship', 'ducado':'Duchy', 'condado':'County', 'gobierno':'Government', 'principado':'Principality', 'sultanato':'Sultanate', 'efectivo':'Effective rule', 'gobierno delegado':'Delegated government', 'titular':'Titular', 'ocupación':'Occupation', 'jure uxoris':'Jure uxoris', 'corregente':'Co-ruler', 'Gobiernos':'Governments', 'Gobierno':'Government',
   'Principado':'Principality', 'Ducado':'Duchy', 'Condado':'County', 'Sultanato':'Sultanate', 'Regencia':'Regency', 'Gobierno delegado':'Delegated government', 'Reinado':'Reign', 'Título nominal':'Nominal title', 'Pretensión':'Claim', 'Control disputado':'Disputed control',
+  ...runtime.timelineLabels,
 };
 
 export const ENGLISH_NAMES = {
@@ -91,6 +94,7 @@ export const PROFILE_NOTES = {
   '«Leggende, imprese, notizie», pp. 15–16, titulatura monetaria de Carlos III.':'“Leggende, imprese, notizie”, pp. 15–16: Charles III’s royal style on his coins.',
   'Entrega a Carlos en 1380; toma de posesión florentina del 17 de noviembre de 1384.':'Submission to Charles in 1380; Florence took possession on 17 November 1384.',
   'Entrada «MÁRIA of Hungary (1371-Buda 1395)»':'Entry “MÁRIA of Hungary (1371-Buda 1395)”',
+  ...runtime.timelineNotes,
 };
 
 // These are labels attached to a precise authority record, rather than new

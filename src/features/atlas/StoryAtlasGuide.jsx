@@ -1,7 +1,7 @@
 import StoryArtworks from '../stories/StoryArtworks.jsx';
 import {useEffect,useRef} from 'react';
 import {ArrowLeft,ArrowRight,BookOpen,Crosshair,X} from 'lucide-react';
-import {ENGLISH_STORIES} from '../english/content.js';
+import {ENGLISH_STORIES} from '../english/storyContent.js';
 import runtime from '../../generated/englishStoriesRuntime.json' with {type:'json'};
 import './story-atlas.css';
 import ProgressMeter from '../../ui/ProgressMeter.jsx';

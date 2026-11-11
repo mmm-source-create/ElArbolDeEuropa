@@ -1,3 +1,5 @@
+import {englishLabel} from './presentationLabels.js';
+import {englishCredit} from './imageCredits.js';
 import {HERITAGE_ENGLISH,BURGUNDY_CHARLES_ENGLISH} from './heritageStories.js';
 import {CREDITOS_ESCUDOS} from '../../content/dinastias/escudos.js';
 import {V6_STORIES} from './v6/index.js';
@@ -64,7 +66,7 @@ export const ENGLISH_LICENCES = [
  ['Original content','Unless expressly stated otherwise, the code, design, texts, historical journeys and original database structure of The Tree of Europe are protected by all rights reserved. This reservation does not apply to third-party material, which remains subject to its own licence.'],
  ['MapChart cartography','The map base comes from MapChart and has been modified and adapted for this project. The corresponding cartographic material is published under Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0). This licence does not automatically extend to the rest of the project.'],
  {title:'MapChart and cartographic licence',paragraphs:[],links:[['MapChart','https://www.mapchart.net/'],['CC BY-SA 4.0','https://creativecommons.org/licenses/by-sa/4.0/']]},
- {title:'Coats of arms: authors and licences',paragraphs:['The drawings come from Wikimedia Commons, WappenWiki and contributions created by Manuel Muriel Cagigal with Heraldicon. Every image retains its authorship, provenance and licence or permission for use. The records describe adaptations, including removed external crowns and composite devices, and share images include the corresponding credits.'],links:CREDITOS_ESCUDOS.flatMap(c=>[[`${c.dinastia} · ${c.autor} · ${c.licencia}`,c.fuente],...(c.fuentesAdicionales||[]).map(f=>[`${c.dinastia} · ${f.titulo} · ${f.autor} · ${f.licencia}`,f.fuente])])},
+ {id:'escudos',title:'Coats of arms: authors and licences',paragraphs:['The drawings come from Wikimedia Commons, WappenWiki and contributions created by Manuel Muriel Cagigal with Heraldicon. Every image retains its authorship, provenance and licence or permission for use. The records describe adaptations, including removed external crowns and composite devices, and share images include the corresponding credits.'],links:CREDITOS_ESCUDOS.flatMap(c=>[[[englishLabel(c.dinastia),englishCredit(c.autor),englishCredit(c.licencia)].filter(Boolean).join(' · '),c.fuente],...(c.fuentesAdicionales||[]).map(f=>[[englishLabel(c.dinastia),englishCredit(f.titulo),englishCredit(f.autor),englishCredit(f.licencia)].filter(Boolean).join(' · '),f.fuente])])},
 ];
 export const ENGLISH_ACKNOWLEDGEMENTS = [
  ['Corrections and contributions','The Tree of Europe is prepared to credit people who identify errors, provide documentation or help improve the database. Documented corrections are an essential part of the project’s growth.'],

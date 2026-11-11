@@ -1,4 +1,4 @@
-import {useEffect, useId, useRef, useState} from 'react';
+import {useEffect, useMemo, useId, useRef, useState} from 'react';
 import {ArrowRight, Search, X} from 'lucide-react';
 import {loadJsonAsset} from '../../utils/loadAsset.js';
 import SITE_META from '../../generated/siteMeta.json';
@@ -11,20 +11,21 @@ const COPY = {
 };
 export default function HomeSearch({locale = 'es'}) {
   const language = locale === 'en' ? 'en' : 'es', copy = COPY[language], id = useId(), input = useRef(null);
+  const [interested,setInterested]=useState(false);
   const [query,setQuery] = useState(''), [index,setIndex] = useState(null), [status,setStatus] = useState('idle'), [retry,setRetry] = useState(0);
-  const active = query.trim().length >= 2, url = `/catalogos/search-${language}.json?v=${encodeURIComponent(SITE_META.buildVersion)}`;
+  const active = query.trim().length >= 2, shouldLoad=active||interested, url = `/catalogos/search-${language}.json?v=${encodeURIComponent(SITE_META.buildVersion)}`;
   useEffect(() => {
-    if (!active) return;
+    if (!shouldLoad) return;
     let cancelled = false;
     setStatus('loading');
     loadJsonAsset(url).then(data => {if (!cancelled) {setIndex(data.items);setStatus('ready');}}).catch(() => {if (!cancelled) setStatus('error');});
     return () => {cancelled = true;};
-  },[active,url,retry]);
-  const results = status === 'ready' ? homeSearchResults(index || [],query) : [];
+  },[shouldLoad,url,retry]);
+  const results = useMemo(()=>index ? homeSearchResults(index,query) : [],[index,query]);
   return <section className="home-search" aria-label={copy.label}>
     <form action={language === 'en' ? '/en/people' : '/es/personas'} method="get" role="search" onSubmit={event => {if (results.length) {event.preventDefault();window.location.assign(results[0].path);} else if (status === 'loading') event.preventDefault();}}>
       <label htmlFor={id}>{copy.label}</label>
-      <div className="home-search-field"><Search size={20} aria-hidden="true"/><input ref={input} id={id} type="search" name="q" value={query} onChange={event => setQuery(event.target.value)} onKeyDown={event => {if (event.key === 'Escape') setQuery('');}} placeholder={copy.placeholder} aria-describedby={`${id}-hint`} autoComplete="off"/>{query && <button type="button" onClick={() => {setQuery('');input.current?.focus();}} aria-label={copy.clear}><X size={18} aria-hidden="true"/></button>}</div>
+      <div className="home-search-field"><Search size={20} aria-hidden="true"/><input ref={input} onFocus={()=>setInterested(true)} onPointerEnter={()=>setInterested(true)} id={id} type="search" name="q" value={query} onChange={event => setQuery(event.target.value)} onKeyDown={event => {if (event.key === 'Escape') setQuery('');}} placeholder={copy.placeholder} aria-describedby={`${id}-hint`} autoComplete="off"/>{query && <button type="button" onClick={() => {setQuery('');input.current?.focus();}} aria-label={copy.clear}><X size={18} aria-hidden="true"/></button>}</div>
       <p id={`${id}-hint`} className="home-search-hint">{copy.hint}</p>
     </form>
     {active && <div className="home-search-results" aria-busy={status === 'loading'}>
