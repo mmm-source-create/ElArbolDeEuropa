@@ -5,6 +5,5 @@ export const GOBERNADORES_V55 = Object.freeze({
     biografia:'Su cargo era delegado y no lo convirtió en soberano de los Países Bajos. Las provincias conservan sus identidades; el mapa distingue la rebelión de Holanda y Zelanda desde 1572 y el control disputado de Flandes y Brabante.'},
   LUISREQUESENS:{resumen:'Luis de Requesens y Zúñiga (1528–1576) sucedió al duque de Alba como gobernador general de los Países Bajos en 1573, al servicio de Felipe II. Murió en Bruselas en marzo de 1576.',
     biografia:'La ficha registra su mandato delegado hasta su muerte, con fuentes individualizadas. Holanda y Zelanda rebeldes no se colorean como dominio suyo. El intervalo anual no implica que gobernase durante todos los acontecimientos de 1576 ni acredita control uniforme de las demás provincias.'},
-  ALEJFARNESIO:{resumen:'Alejandro Farnesio fue gobernador general de los Países Bajos de Felipe II entre 1578 y 1592, y duque de Parma desde 1586. La reconciliación de Artois y Henao y la recuperación de ciudades del sur consolidaron la autoridad real.',
-    biografia:'La gobernación y el ducado de Parma son mandatos distintos. El mapa incorpora Artois y Henao desde 1579 y ámbitos disputados de Flandes y Brabante desde 1585; excluye los enclaves rebeldes documentados. Es una aproximación regional, no una reconstrucción completa de las campañas ni del control de cada fortaleza.'},
+
 });

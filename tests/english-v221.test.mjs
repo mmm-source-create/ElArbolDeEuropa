@@ -11,7 +11,7 @@ test('todas las rutas traducidas mantienen la equivalencia de página y capítul
  const paths=englishPaths();assert.equal(paths.length,10+TRANSLATED_DYNASTIES.length+TRANSLATED_TERRITORIES.length+TRANSLATED_PEOPLE.length+storyPaths);assert.equal(new Set(paths).size,paths.length);
  for(const path of paths){assert.equal(englishRoute(path)?.path,path);assert.equal(staticRoute(path)?.kind,'english');assert.equal(translatedEquivalent(translatedEquivalent(path,'es'),'en'),path);}
  for(const story of TRANSLATED_STORIES.filter(story=>ENGLISH_STORIES[story.id]))assert.equal(ENGLISH_STORIES[story.id].chapters.length,story.chapters);
- assert.equal(translatedEquivalent('/es/historia/las-familias-papales','en'),null);
+ assert.equal(translatedEquivalent('/es/historia/las-familias-papales','en'),'/en/story/papal-families');
  assert.equal(englishRoute('/en/person/charles-v/chapter/1'),null);
 });
 test('solo se anuncian versiones inglesas existentes en metadatos',()=>{

@@ -1,3 +1,4 @@
+import {V603_PROFILES} from '../../content/v603People.js';
 import {V602_PROFILES} from './v602Profiles.js';
 import {REVIEWED_FOURTH_200_PROFILES} from './reviewedFourth200Profiles.js';
 import {POLISH_PROFILES} from './polishProfiles.js';
@@ -116,4 +117,5 @@ export const COMPLETE_ENGLISH_PROFILES = {
   },
   ...V6_PEOPLE,
   ...V602_PROFILES,
+  ...V603_PROFILES,
 };

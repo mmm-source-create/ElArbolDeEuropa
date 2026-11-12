@@ -1920,11 +1920,13 @@ export const REVIEWED_FOURTH_200_NAMES = [
     },
     "after": {
       "nombre": "Alejandro Farnesio",
-      "sobrenombre": "",
-      "aliases": []
+      "sobrenombre": "el Rayo de la Guerra",
+      "aliases": [
+        "Alejandro Farnesio, el Rayo de la Guerra"
+      ]
     },
     "slug": "alejandro-farnesio",
-    "reason": "Conservar la forma historiográfica; revisar identidad, ordinal, contexto, sobrenombre y variantes según la pauta editorial."
+    "reason": "V6.0.3: conservar nombre y URL; añadir el sobrenombre solicitado, documentado en Los Tercios Españoles y Alejandro Farnesio (Ejército de Tierra, p. 15)."
   },
   {
     "id": "ALEX2KAKH",

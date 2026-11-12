@@ -1,3 +1,4 @@
+import {STORIES_603_ES} from './historias603.js';
 import {WAR_OF_ROSES_STORY} from './historiaDosRosas.js';
 import {HISTORIAS_TEMATICAS, CONTEXTO_HISTORIAS} from './historiasTematicas.js';
 import {storyCollections} from '../features/stories/storyThemes.js';
@@ -2391,7 +2392,7 @@ const HISTORIAS_EXISTENTES = [
     "titulo": "Emperadores",
     "subtitulo": "De los Hohenstaufen a la Europa revolucionaria",
     "disponible": true,
-    "descripcion": "Un recorrido por la corona electiva del Sacro Imperio: del poder universal de Federico II al Interregno, la Bula de Oro, el ascenso Habsburgo y la casa Habsburgo-Lorena que llega hasta el umbral de 1800.",
+    "descripcion": "La elección imperial, las rivalidades entre casas y las reformas del Sacro Imperio, desde Federico II hasta Francisco II.",
     "pasos": [
       {
         "anio": 1220,
@@ -2629,7 +2630,7 @@ const HISTORIAS_EXISTENTES = [
     "titulo": "Las familias papales",
     "subtitulo": "Orsini, Colonna, Borgia, Della Rovere, Médici y la Roma de los cardenales-nepotes",
     "disponible": true,
-    "descripcion": "Un recorrido por las familias que convirtieron el pontificado en una palanca de poder político, territorial y social: de los barones romanos medievales a la gran aristocracia del Barroco, hasta el intento de poner fin al nepotismo institucional.",
+    "descripcion": "Parentesco, cargos, señoríos y mecenazgo en las familias de los papas, desde Nicolás III hasta la reforma del nepotismo de 1692.",
     "pasos": [
       {
         "anio": 1277,
@@ -2864,7 +2865,7 @@ const HISTORIAS_EXISTENTES = [
     "titulo": "Los condotieros",
     "subtitulo": "De las compañías de ventura al ducado de Milán",
     "disponible": true,
-    "descripcion": "Un recorrido por los capitanes de fortuna que convirtieron la guerra en una profesión, negociaron con repúblicas y príncipes y, en el caso de los Sforza, transformaron el mando militar en poder dinástico.",
+    "descripcion": "Los contratos de guerra y las alianzas de los capitanes italianos explican cómo los Sforza pasaron del servicio militar al gobierno de Milán.",
     "pasos": [
       {
         "anio": 1363,
@@ -3252,7 +3253,7 @@ const HISTORIAS_EXISTENTES = [
     "titulo": "En busca de la Gioconda",
     "subtitulo": "Un viaje por la vida de Leonardo y las mujeres detrás del enigma",
     "disponible": true,
-    "descripcion": "Seguimos a Leonardo desde la corte de los Sforza hasta Francia. En el camino aparecen retratos femeninos seguros, mujeres que realmente conoció y varias identidades propuestas para la Gioconda, hasta llegar a la identificación aceptada por el Louvre.",
+    "descripcion": "Los encargos de Leonardo en Milán, Florencia y Francia permiten seguir la trayectoria de sus retratos y la identificación de Lisa Gherardini.",
     "pasos": [
       {
         "anio": 1482,
@@ -3389,7 +3390,7 @@ const HISTORIAS_EXISTENTES = [
   },
   {
     "id": "revolucion-protestante",
-    "titulo": "La Revolución Protestante",
+    "titulo": "La Reforma protestante",
     "subtitulo": "Humanismo, Reforma, política imperial y la respuesta de Trento",
     "disponible": true,
     "descripcion": "Un viaje por la ruptura religiosa del siglo XVI: Erasmo y el regreso a las fuentes, Lutero y los príncipes alemanes, Zuinglio y Calvino, la separación inglesa y una Iglesia católica que responde con nuevas órdenes y el Concilio de Trento.",
@@ -3580,7 +3581,7 @@ const HISTORIAS_EXISTENTES = [
           "ALFONSOSALMERON"
         ],
         "eventoId": "TRENTO_CIERRE_1563",
-        "titulo": "Trento termina, la revolución no",
+        "titulo": "Trento termina; la Reforma continúa",
         "texto": "En la fase final, Giovanni Morone ayuda a sacar al concilio de una grave crisis y Pío IV confirma sus decretos. La Iglesia católica sale de Trento más definida doctrinalmente y con un programa de reforma institucional. Europa ya no volverá a la unidad religiosa de 1500: del conflicto han nacido varias Europas cristianas que seguirán compitiendo durante generaciones."
       }
     ]
@@ -4594,9 +4595,10 @@ const HISTORIAS_EXISTENTES = [
   }
 ];
 export const HISTORIAS = [
+  ...STORIES_603_ES,
   WAR_OF_ROSES_STORY,
   ...HERITAGE_STORIES,
   ...HISTORIAS_EXISTENTES.map(h => HISTORIAS_TEMATICAS.find(nueva => nueva.id === h.id) || h),
   ...HISTORIAS_TEMATICAS.filter(h => !HISTORIAS_EXISTENTES.some(existente => existente.id === h.id)),
 ].filter((h,index,all)=>all.findIndex(item=>item.id===h.id)===index)
- .map(reviseBurgundy).map(h => ({...h, ...CONTEXTO_HISTORIAS[h.id], colecciones:storyCollections(h.id)}));
+ .map(reviseBurgundy).map(h => ({...h, ...CONTEXTO_HISTORIAS[h.id], titulo:h.titulo.replace(/^La Guerra de/, 'La guerra de').replace('La Revolución Protestante','La revolución protestante').replace('El Reino de los Cielos','El reino de los cielos'), subtitulo:(h.subtitulo||'').trim().replace(/\.$/,''), descripcion:h.descripcion?.trim(), colecciones:storyCollections(h.id)}));

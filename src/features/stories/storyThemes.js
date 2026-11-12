@@ -5,8 +5,8 @@ export const STORY_COLLECTIONS = [
   {id:'herencias-conflictivas', es:'Herencias conflictivas', en:'Contested Inheritances'},
 ];
 const membership = {
-  'herencias-conflictivas':['borgona','dos-coronas-dos-hijas','corona-demasiado-grande','dos-rosas'],
-  cruzadas:['balduino-saladino','sebastian-marruecos','lepanto-alianza','puertas-viena','constantinopla-dos-conquistas','ricardo-felipe-cruzada'],
+  'herencias-conflictivas':['borgona','dos-coronas-dos-hijas','corona-demasiado-grande','dos-rosas','reino-partido-dos','napoles-corona-disputada','federico-emperador-excomulgado','mindaugas-jogaila'],
+  cruzadas:['balduino-saladino','sebastian-marruecos','lepanto-alianza','puertas-viena','constantinopla-dos-conquistas','ricardo-felipe-cruzada','federico-emperador-excomulgado'],
   'cultura-popular':['balduino-saladino','braveheart-detras-del-mito','dracula-detras-de-la-leyenda','gioconda','favoritos-maquiavelo'],
 };
 export function storyCollections(id) {
@@ -14,4 +14,9 @@ export function storyCollections(id) {
 }
 export function collectionGroups(items) {
   return STORY_COLLECTIONS.map(c => ({...c, stories:items.filter(s => (s.colecciones || storyCollections(s.id)).includes(c.id))}));
+}
+
+export function collectionLabels(story,locale='es') {
+ const ids=story.colecciones || storyCollections(story.id);
+ return STORY_COLLECTIONS.filter(c=>ids.includes(c.id)).map(c=>locale==='en'?c.en:c.es);
 }

@@ -1,6 +1,7 @@
 import {englishCredit} from './imageCredits.js';
 // Display repairs only. Historical identifiers, native search names and published URLs stay intact.
 export const ENGLISH_NAME_CORRECTIONS={
+  "Gregorio IX": "Gregory IX",
   "Isabel de Foix-Castellbó": "Isabella of Foix-Castellbó",
   "Luis de Savoy": "Louis of Savoy",
   "Vajtang V de Kartli": "Vakhtang V of Kartli",

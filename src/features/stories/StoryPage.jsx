@@ -1,3 +1,4 @@
+import StoryCollectionTags from './StoryCollectionTags.jsx';
 import StoryArtworks from './StoryArtworks.jsx';
 import { useEffect, useState } from 'react';
 import { ArrowLeft, ArrowRight, BookOpen, GitBranch } from 'lucide-react';
@@ -45,7 +46,7 @@ export function StoryReader({ data, prerendered = false, locale = 'es' }) {
   return <div className="public-site"><SiteHeader locale={locale} pathname={chapterPath(chapter)} prerendered={prerendered}/>
     <main className="public-main story-page">
       <nav className="public-breadcrumbs" aria-label={en ? 'Breadcrumb' : 'Migas de pan'}><a href={en ? '/en/' : '/es/'}>{en ? 'Home' : 'Inicio'}</a><span aria-hidden="true">›</span><a href={storiesPath}>{en ? 'Stories' : 'Historias'}</a><span aria-hidden="true">›</span>{chapter ? <><a href={chapterPath()}>{title}</a><span aria-hidden="true">›</span><span aria-current="page">{en ? 'Chapter' : 'Capítulo'} {chapter}: {step.titulo}</span></> : <span aria-current="page">{title}</span>}</nav>
-      <header className="story-heading"><span className="story-eyebrow">{chapter ? `${en ? 'Chapter' : 'Capítulo'} ${chapter} / ${pasos.length} · ${step.anio}` : `${data.period || ''} · ${pasos.length} ${en ? 'chapters' : 'capítulos'}`}</span><h1>{data.nombre}</h1><p>{chapter ? title : en ? data.description : data.descripcion}</p></header>
+      <header className="story-heading"><span className="story-eyebrow">{chapter ? `${en ? 'Chapter' : 'Capítulo'} ${chapter} / ${pasos.length} · ${step.anio}` : `${data.period || ''} · ${pasos.length} ${en ? 'chapters' : 'capítulos'}`}</span><StoryCollectionTags story={data} locale={locale}/><h1>{data.nombre}</h1><p>{chapter ? title : en ? data.description : data.descripcion}</p></header>
       {data.revisionPendiente && <p className="story-review-note">{en ? 'Needs review: this story will be revised in a future update.' : 'Pendiente de revisión: esta historia se revisará en una próxima entrega.'}</p>}{data.contexto && !en && <p className="story-context">{data.contexto}</p>}
       <div className="story-reading-meta"><BookOpen size={14} aria-hidden="true"/><div className="story-progress"><label htmlFor="reading-progress">{en ? `${progress.read.length} of ${pasos.length} chapters visited` : `${progress.read.length} de ${pasos.length} capítulos visitados`}</label><progress id="reading-progress" max={pasos.length} value={progress.read.length}/></div><span title={en ? 'Progress is shared between languages and saved when browser storage is available.' : 'El progreso se guarda cuando este navegador permite almacenamiento local.'}>{en ? 'Saved on this browser' : 'Guardado en este navegador'}</span></div>
       <div className="story-layout"><article className="story-reading">

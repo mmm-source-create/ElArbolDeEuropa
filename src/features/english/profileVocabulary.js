@@ -12,6 +12,7 @@ import {V536_NAMES,V536_LABELS,V536_NOTES} from './v536Vocabulary.js';
 import runtime from '../../generated/englishVocabularyRuntime.json' with {type:'json'};
 // Display translations only: canonical dynasty and territory keys stay intact.
 export const PROFILE_LABELS = {
+'Pisa':'Pisa','Calderón':'Calderón','Duque / Valido':'Duke / Royal favourite',
 "Berlichingen":"Berlichingen","Caballero imperial":"Imperial knight","Landgravina consorte":"Landgravine consort",
   ...INTERFACE_LABELS,
   ...runtime.labels,
