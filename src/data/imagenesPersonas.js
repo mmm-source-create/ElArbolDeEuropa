@@ -1,3 +1,4 @@
+import {PORTRAITS_604} from './imagenesPersonas604.js';
 import {PORTRAITS_602} from './imagenesPersonas602.js';
 import {PORTRAITS_200_IMAGES} from './imagenesPersonasTanda200.js';
 import {OCTOBER_PORTRAITS} from './imagenesPersonasRevisionOctubre.js';
@@ -18,6 +19,7 @@ import {IMAGENES_TUTORIAL} from './imagenesPersonasTutorial.js';
 
 export const IMAGENES_PERSONAS = {
   ...IMAGENES_ART_REVIEW,
+  ...PORTRAITS_604,
   ...IMAGENES_PORTUGAL_NAVARRA,
   SEBAS1PORT: {
     archivo:'/personas-img/SEBAS1PORT.webp', encuadre:'50% 18%', alt:'Retrato de Sebastián I de Portugal por Cristóvão de Morais', tipo:'Retrato contemporáneo',

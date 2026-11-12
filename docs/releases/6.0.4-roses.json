@@ -1,0 +1,427 @@
+{
+  "reference": "https://commons.wikimedia.org/wiki/File:GuerraRosasÁrbolGenealógico.png",
+  "principals": [
+    {
+      "id": "JUANGASTE",
+      "exists": true,
+      "name": "Juan de Gante",
+      "parents": [
+        "EDUARDO3ING",
+        "FELIPAHENAO"
+      ],
+      "portrait": "https://commons.wikimedia.org/wiki/File:Johnofgaunt.jpg",
+      "note": "Representación revisada y acreditada"
+    },
+    {
+      "id": "MARGARETBEAUFORT",
+      "exists": true,
+      "name": "Margarita Beaufort",
+      "parents": [
+        "JOHNBEAUFORTSOMERSET"
+      ],
+      "portrait": "https://commons.wikimedia.org/wiki/File:Margaret_Beaufort_Wewyck_Portrait.png",
+      "note": "Representación revisada y acreditada"
+    },
+    {
+      "id": "EDMUNDLANGLEY",
+      "exists": true,
+      "name": "Edmundo de Langley",
+      "parents": [
+        "EDUARDO3ING",
+        "FELIPAHENAO"
+      ],
+      "portrait": "https://commons.wikimedia.org/wiki/File:Edmund_of_Langley_remonstrating_with_the_King_of_Portugal_-_Chronique_d%27_Angleterre_(Volume_III)_(late_15th_C),_f.186r_-_BL_Royal_MS_14_E_IV.png",
+      "note": "Representación revisada y acreditada"
+    },
+    {
+      "id": "CECILIANEVILLE",
+      "exists": true,
+      "name": "Cecilia Neville",
+      "parents": [
+        "RALPHNEVILLE1",
+        "JOANBEAUFORT"
+      ],
+      "portrait": "https://commons.wikimedia.org/wiki/File:Cecilyneville.png",
+      "note": "Representación revisada y acreditada"
+    },
+    {
+      "id": "ISABELWOODVILLE",
+      "exists": true,
+      "name": "Isabel Woodville",
+      "parents": [],
+      "portrait": "https://commons.wikimedia.org/wiki/File:Elizabeth_Woodville_Canterbury.jpg",
+      "note": "Representación revisada y acreditada"
+    },
+    {
+      "id": "ANANEVILLE",
+      "exists": true,
+      "name": "Ana Neville",
+      "parents": [
+        "RICHARDNEVILLEWARWICK",
+        "ANNEBEAUCHAMP"
+      ],
+      "portrait": "https://commons.wikimedia.org/wiki/File:AnneNevilleRous.jpg",
+      "note": "Representación revisada y acreditada"
+    },
+    {
+      "id": "ISABELYORK",
+      "exists": true,
+      "name": "Isabel de York",
+      "parents": [
+        "EDUARDO4ING",
+        "ISABELWOODVILLE"
+      ],
+      "portrait": "https://commons.wikimedia.org/wiki/File:British_School,_16th_century_-_Elizabeth_of_York_(1465-1503)_-_RCIN_403447_-_Royal_Collection.jpg",
+      "note": "Representación revisada y acreditada"
+    },
+    {
+      "id": "RICARDOYORK",
+      "exists": true,
+      "name": "Ricardo de York",
+      "parents": [
+        "RICARDOCONISBURGH",
+        "ANAMORTIMER"
+      ],
+      "portrait": "https://commons.wikimedia.org/wiki/File:Richard_of_York_Talbot_Shrewsbury_Book.jpeg",
+      "note": "Representación revisada y acreditada"
+    },
+    {
+      "id": "RICHARDNEVILLEWARWICK",
+      "exists": true,
+      "name": "Ricardo Neville",
+      "parents": [
+        "RICHARDNEVILLESALISBURY",
+        "ALICEMONTAGU"
+      ],
+      "portrait": "https://commons.wikimedia.org/wiki/File:Richard_Neville.jpg",
+      "note": "Representación revisada y acreditada"
+    },
+    {
+      "id": "ISABELNEVILLE",
+      "exists": true,
+      "name": "Isabel Neville",
+      "parents": [
+        "RICHARDNEVILLEWARWICK",
+        "ANNEBEAUCHAMP"
+      ],
+      "portrait": "https://commons.wikimedia.org/wiki/File:IsabelNevilleRousRoll.jpg",
+      "note": "Representación revisada y acreditada"
+    },
+    {
+      "id": "EDWARDWESTMINSTER",
+      "exists": true,
+      "name": "Eduardo de Westminster",
+      "parents": [
+        "ENRIQ6ING",
+        "MARGANJOUING"
+      ],
+      "portrait": "https://commons.wikimedia.org/wiki/File:EdwardPrinceOfWalesBeauchampPagaent.jpg",
+      "note": "Representación revisada y acreditada"
+    },
+    {
+      "id": "GEORGECLARENCE",
+      "exists": true,
+      "name": "Jorge de York",
+      "parents": [
+        "RICARDOYORK",
+        "CECILIANEVILLE"
+      ],
+      "portrait": "https://commons.wikimedia.org/wiki/File:George_Plantagenet,_Duke_of_Clarence.jpg",
+      "note": "Representación revisada y acreditada"
+    },
+    {
+      "id": "MARGYORK",
+      "exists": true,
+      "name": "Margarita de York",
+      "parents": [
+        "RICARDOYORK",
+        "CECILIANEVILLE"
+      ],
+      "portrait": "https://commons.wikimedia.org/wiki/File:Margaret_of_York.jpg",
+      "note": "Representación revisada y acreditada"
+    },
+    {
+      "id": "JOHNBEAUFORT1",
+      "exists": true,
+      "name": "Juan Beaufort",
+      "parents": [
+        "JUANGASTE",
+        "KATHERINESWYNFORD"
+      ],
+      "portrait": "https://commons.wikimedia.org/wiki/File:Effigy_John_Beaufort_1st_Earl_of_Somerset.png",
+      "note": "Representación revisada y acreditada"
+    },
+    {
+      "id": "RALPHNEVILLE1",
+      "exists": true,
+      "name": "Ralph Neville",
+      "parents": [],
+      "portrait": "https://commons.wikimedia.org/wiki/File:Ralph_Neville.jpg",
+      "note": "Representación revisada y acreditada"
+    },
+    {
+      "id": "RICHARDNEVILLESALISBURY",
+      "exists": true,
+      "name": "Ricardo Neville",
+      "parents": [
+        "RALPHNEVILLE1",
+        "JOANBEAUFORT"
+      ],
+      "portrait": "https://commons.wikimedia.org/wiki/File:Richard_Neville,_5th_Earl_of_Salisbury_seule.jpg",
+      "note": "Representación revisada y acreditada"
+    },
+    {
+      "id": "EDUARDO3ING",
+      "exists": true,
+      "name": "Eduardo III de Inglaterra",
+      "parents": [
+        "EDUARDO2ING",
+        "ISABFRAING"
+      ],
+      "portrait": "https://commons.wikimedia.org/wiki/File:Edward_III_of_England_(Order_of_the_Garter).jpg",
+      "note": "Representación revisada y acreditada"
+    },
+    {
+      "id": "FELIPAHENAO",
+      "exists": true,
+      "name": "Felipa de Henao",
+      "parents": [
+        "GUILLERMO3HENAO",
+        "JUANAVALOIS"
+      ],
+      "portrait": "https://commons.wikimedia.org/wiki/File:Philippa_of_Hainault-mini.gif",
+      "note": "Representación revisada y acreditada"
+    },
+    {
+      "id": "JUANAKENT",
+      "exists": true,
+      "name": "Juana de Kent",
+      "parents": [],
+      "portrait": "https://commons.wikimedia.org/wiki/File:Joan_of_Kent.jpg",
+      "note": "Representación revisada y acreditada"
+    },
+    {
+      "id": "EDUNEGRO",
+      "exists": true,
+      "name": "Eduardo de Woodstock",
+      "parents": [
+        "EDUARDO3ING",
+        "FELIPAHENAO"
+      ],
+      "portrait": "https://commons.wikimedia.org/wiki/File:TombaPrincepNegre_(cropped).JPG",
+      "note": "Representación revisada y acreditada"
+    },
+    {
+      "id": "RICARDO2ING",
+      "exists": true,
+      "name": "Ricardo II de Inglaterra",
+      "parents": [
+        "EDUNEGRO",
+        "JUANAKENT"
+      ],
+      "portrait": "https://commons.wikimedia.org/wiki/File:The_Westminster_Portrait_of_Richard_II_of_England_(1390s).jpg",
+      "note": "Representación revisada y acreditada"
+    },
+    {
+      "id": "ENRIQ4ING",
+      "exists": true,
+      "name": "Enrique IV de Inglaterra",
+      "parents": [
+        "JUANGASTE",
+        "BLANLANCASTER"
+      ],
+      "portrait": "https://commons.wikimedia.org/wiki/File:Illumination_of_Henry_IV_(cropped).jpg",
+      "note": "Representación revisada y acreditada"
+    },
+    {
+      "id": "ENRIQ5ING",
+      "exists": true,
+      "name": "Enrique V de Inglaterra",
+      "parents": [
+        "ENRIQ4ING",
+        "MARIABOHUN"
+      ],
+      "portrait": "https://commons.wikimedia.org/wiki/File:Henry_V_Corpus_Christi_MS_213.png",
+      "note": "Representación revisada y acreditada"
+    },
+    {
+      "id": "ENRIQ6ING",
+      "exists": true,
+      "name": "Enrique VI de Inglaterra",
+      "parents": [
+        "ENRIQ5ING",
+        "CATALINAVAL"
+      ],
+      "portrait": "https://commons.wikimedia.org/wiki/File:Henry_VI_of_England,_Shrewsbury_book.jpg",
+      "note": "Representación revisada y acreditada"
+    },
+    {
+      "id": "EDUARDO4ING",
+      "exists": true,
+      "name": "Eduardo IV de Inglaterra",
+      "parents": [
+        "RICARDOYORK",
+        "CECILIANEVILLE"
+      ],
+      "portrait": "https://commons.wikimedia.org/wiki/File:Edward_IV_Plantagenet.jpg",
+      "note": "Representación revisada y acreditada"
+    },
+    {
+      "id": "EDUARDO5ING",
+      "exists": true,
+      "name": "Eduardo V de Inglaterra",
+      "parents": [
+        "EDUARDO4ING",
+        "ISABELWOODVILLE"
+      ],
+      "portrait": "https://commons.wikimedia.org/wiki/File:Edward_V._Royal_Window_Canterbury_Cathedral.jpg",
+      "note": "Representación revisada y acreditada"
+    },
+    {
+      "id": "RICARDO3ING",
+      "exists": true,
+      "name": "Ricardo III de Inglaterra",
+      "parents": [
+        "RICARDOYORK",
+        "CECILIANEVILLE"
+      ],
+      "portrait": "https://commons.wikimedia.org/wiki/File:Richard_III_portrait.jpg",
+      "note": "Representación revisada y acreditada"
+    },
+    {
+      "id": "ENRIQ7ING",
+      "exists": true,
+      "name": "Enrique VII de Inglaterra",
+      "parents": [
+        "EDMUNDTUDOR",
+        "MARGARETBEAUFORT"
+      ],
+      "portrait": "https://commons.wikimedia.org/wiki/File:Enrique_VII_de_Inglaterra,_por_un_artista_an%C3%B3nimo.jpg",
+      "note": "Representación revisada y acreditada"
+    },
+    {
+      "id": "CATALINAVAL",
+      "exists": true,
+      "name": "Catalina de Valois",
+      "parents": [
+        "CARLOS6FRA",
+        "ISABBAVIERA"
+      ],
+      "portrait": "https://commons.wikimedia.org/wiki/File:Catherinevalois.png",
+      "note": "Representación revisada y acreditada"
+    },
+    {
+      "id": "MARGANJOUING",
+      "exists": true,
+      "name": "Margarita de Anjou",
+      "parents": [
+        "RENATOANJOU",
+        "ISABLORENA"
+      ],
+      "portrait": "https://commons.wikimedia.org/wiki/File:MargaretAnjou.jpg",
+      "note": "Representación revisada y acreditada"
+    },
+    {
+      "id": "RICHARDSHREWSBURY",
+      "exists": true,
+      "name": "Ricardo de Shrewsbury",
+      "parents": [
+        "EDUARDO4ING",
+        "ISABELWOODVILLE"
+      ],
+      "portrait": "https://commons.wikimedia.org/wiki/File:Richard_of_Shrewsbury_Royal_Window_Canterbury_(cropped).jpg",
+      "note": "Representación revisada y acreditada"
+    },
+    {
+      "id": "EDMUNDTUDOR",
+      "exists": true,
+      "name": "Edmundo Tudor",
+      "parents": [
+        "OWENTUDOR",
+        "CATALINAVAL"
+      ],
+      "portrait": "https://commons.wikimedia.org/wiki/File:Edmwnd_Tudur.jpg",
+      "note": "Representación revisada y acreditada"
+    },
+    {
+      "id": "RICARDOCONISBURGH",
+      "exists": true,
+      "name": "Ricardo de Conisburgh",
+      "parents": [
+        "EDMUNDLANGLEY",
+        "ISABELCASTYORK"
+      ],
+      "portrait": "https://commons.wikimedia.org/wiki/File:Richard_of_Conisburgh,_3rd_Earl_of_Cambridge.jpg",
+      "note": "Representación revisada y acreditada"
+    },
+    {
+      "id": "LIONELANTWERP",
+      "exists": true,
+      "name": "Lionel de Amberes",
+      "parents": [
+        "EDUARDO3ING",
+        "FELIPAHENAO"
+      ],
+      "portrait": "https://commons.wikimedia.org/wiki/File:LionelDukeOfClarenceAtWestminster.jpg",
+      "note": "Representación revisada y acreditada"
+    },
+    {
+      "id": "BLANLANCASTER",
+      "exists": true,
+      "name": "Blanca de Lancaster",
+      "parents": [
+        "ENRIQUEGROSMONT",
+        "ISABELBEAUMONTLAN"
+      ],
+      "portrait": "https://commons.wikimedia.org/wiki/File:Tomb_of_John_of_Gaunt_and_Blanche_of_Lancaster.jpg",
+      "note": "Representación revisada y acreditada"
+    },
+    {
+      "id": "KATHERINESWYNFORD",
+      "exists": true,
+      "name": "Catalina de Roet",
+      "parents": [],
+      "portrait": "https://commons.wikimedia.org/wiki/File:Katherine_Swynford.jpg",
+      "note": "Representación revisada y acreditada"
+    },
+    {
+      "id": "ANAMORTIMER",
+      "exists": true,
+      "name": "Ana Mortimer",
+      "parents": [
+        "ROGERMORTIMER4"
+      ],
+      "portrait": null,
+      "note": "Sin representación personal identificada; no se usa un escudo como retrato"
+    },
+    {
+      "id": "PHILIPPACLARENCE",
+      "exists": true,
+      "name": "Felipa de Clarence",
+      "parents": [
+        "LIONELANTWERP"
+      ],
+      "portrait": null,
+      "note": "Sin representación personal identificada; no se usa un escudo como retrato"
+    },
+    {
+      "id": "EDMUNDMORTIMER3",
+      "exists": true,
+      "name": "Edmundo Mortimer",
+      "parents": [],
+      "portrait": null,
+      "note": "Sin representación personal identificada; no se usa un escudo como retrato"
+    },
+    {
+      "id": "ROGERMORTIMER4",
+      "exists": true,
+      "name": "Roger Mortimer",
+      "parents": [
+        "EDMUNDMORTIMER3",
+        "PHILIPPACLARENCE"
+      ],
+      "portrait": null,
+      "note": "Sin representación personal identificada; no se usa un escudo como retrato"
+    }
+  ]
+}

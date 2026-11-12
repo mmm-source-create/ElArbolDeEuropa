@@ -1,0 +1,39 @@
+{
+  "version": "6.0.4",
+  "ssg": {
+    "version": "6.0.4",
+    "expected": 9352,
+    "counts": {
+      "persona": 2774,
+      "dinastia": 521,
+      "territorio": 1041,
+      "historia": 335,
+      "english": 4681
+    },
+    "errors": []
+  },
+  "english": {
+    "people": 2774,
+    "completeStories": 32,
+    "errors": 0
+  },
+  "dataRegression": {
+    "years": 601,
+    "changes": []
+  },
+  "tests": {
+    "fullInitial": {
+      "total": 729,
+      "passed": 725,
+      "changedExpectations": 4
+    },
+    "finalFocused": {
+      "total": 31,
+      "passed": 31
+    }
+  },
+  "security": {
+    "repositoryIssues": 0,
+    "vulnerabilities": 0
+  }
+}

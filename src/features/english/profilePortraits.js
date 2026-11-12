@@ -1,3 +1,4 @@
+import {PORTRAITS_604_EN} from './portraits604.js';
 import {PORTRAITS_602_EN} from './portraits602.js';
 import {PORTRAITS_200_EN} from './portraits200.js';
 import {OCTOBER_PORTRAITS_EN} from './octoberPortraits.js';
@@ -67,4 +68,5 @@ export const ENGLISH_PROFILE_PORTRAITS = {
  ...PORTRAITS_200_EN,
  ...runtime.portraits,
  ...PORTRAITS_602_EN,
+ ...PORTRAITS_604_EN,
 };

@@ -8,6 +8,9 @@ import {REFERENCIAS_BIOGRAFIAS} from './referencias-biografias.js';
 // Cada apartado es una etapa con título propio. Las fechas y cargos siguen los
 // registros de la base; lo que la historiografía discute se presenta como tal.
 const BIOGRAFIAS_EXTENSAS = Object.freeze({
+"LIVIOODESCALCHI_SR": [{"titulo": "El padre de Inocencio XI", "texto": "Livio Odescalchi, comerciante vinculado a Como, fue padre de Benedetto Odescalchi, el futuro papa Inocencio XI, y de Carlo Odescalchi. Su nieto homónimo, nacido en 1658, era hijo de Carlo y Beatrice Cusani."}],
+"LIVIOODESCALCHI": [{"titulo": "El sobrino de Inocencio XI", "texto": "Nacido en 1658, Livio era hijo de Carlo Odescalchi y Beatrice Cusani, y sobrino de Inocencio XI. Tras la muerte de su padre quedó bajo la tutela de su tío. Fue duque de Ceri y de Bracciano, coleccionista y candidato al trono de Polonia en 1697."}],
+
   ...V602_BIOGRAPHIES,
   ...V603_BIOGRAPHIES,
   ...POLISH_BIOGRAPHIES,

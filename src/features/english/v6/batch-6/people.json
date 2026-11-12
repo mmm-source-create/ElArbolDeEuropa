@@ -2885,8 +2885,15 @@
     "role": "Noble / Merchant",
     "nickname": "",
     "aliases": [],
-    "summary": "Noble of the Odescalchi dynasty. Their life was connected with Como.",
-    "sections": []
+    "summary": "Livio Odescalchi, a merchant associated with Como, was the father of Benedetto Odescalchi, the future Pope Innocent XI, and of Carlo Odescalchi. His namesake grandson, born in 1658, was Carlo and Beatrice Cusani’s son.",
+    "sections": [
+      {
+        "title": "The father of Innocent XI",
+        "paragraphs": [
+          "Livio Odescalchi, a merchant associated with Como, was the father of Benedetto Odescalchi, the future Pope Innocent XI, and of Carlo Odescalchi. His namesake grandson, born in 1658, was Carlo and Beatrice Cusani’s son."
+        ]
+      }
+    ]
   },
   "CARLO2TOCCO": {
     "name": "Carlo II Tocco",

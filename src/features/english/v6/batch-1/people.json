@@ -2157,8 +2157,15 @@
     "role": "Prince / Noble",
     "nickname": "",
     "aliases": [],
-    "summary": "A prince of House Odescalchi whose life was connected with Rome.",
-    "sections": []
+    "summary": "Born in 1658, Livio was the son of Carlo Odescalchi and Beatrice Cusani, and the nephew of Innocent XI. After his father’s death he came under his uncle’s guardianship. He was Duke of Ceri and Bracciano, an art collector and a candidate for the Polish throne in 1697.",
+    "sections": [
+      {
+        "title": "The nephew of Innocent XI",
+        "paragraphs": [
+          "Born in 1658, Livio was the son of Carlo Odescalchi and Beatrice Cusani, and the nephew of Innocent XI. After his father’s death he came under his uncle’s guardianship. He was Duke of Ceri and Bracciano, an art collector and a candidate for the Polish throne in 1697."
+        ]
+      }
+    ]
   },
   "MARIAMONT": {
     "name": "Maria of Montpellier",

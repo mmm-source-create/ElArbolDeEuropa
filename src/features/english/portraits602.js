@@ -54,23 +54,7 @@ export const PORTRAITS_602_EN = {
     "alt": "Portrait of Livio Odescalchi",
     "autor": "Jacob Ferdinand Voet",
     "fecha": "1676–1677",
-    "institucion": "Walters Art Museum, Baltimore · 37.371",
-    "alternativas": [
-      {
-        "archivo": "/personas-img/LIVIOODESCALCHI_MORANDI.webp",
-        "encuadre": "50% 18%",
-        "alt": "Portrait of Livio Odescalchi",
-        "tipo": "Portrait with a proposed attribution",
-        "obra": "Livio Odescalchi",
-        "autor": "Giovanni Maria Morandi (attribution proposed by Francesco Petrucci)",
-        "fecha": "Seventeenth century",
-        "institucion": "Private collection · Dorotheum catalogue",
-        "fuente": "Wikimedia Commons",
-        "fuenteUrl": "https://commons.wikimedia.org/wiki/File:Portr%C3%A4t_des_Livio_Odescalchi.png",
-        "derechos": "Public domain · PDM 1.0",
-        "derechosUrl": "https://creativecommons.org/publicdomain/mark/1.0/"
-      }
-    ]
+    "institucion": "Walters Art Museum, Baltimore · 37.371"
   },
   "JOSEFERNANDOBAV": {
     "tipo": "Contemporary portrait",
