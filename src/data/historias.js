@@ -1,3 +1,4 @@
+import {reviseStories604} from './historias604.js';
 import {STORIES_603_ES} from './historias603.js';
 import {WAR_OF_ROSES_STORY} from './historiaDosRosas.js';
 import {HISTORIAS_TEMATICAS, CONTEXTO_HISTORIAS} from './historiasTematicas.js';
@@ -4594,7 +4595,7 @@ const HISTORIAS_EXISTENTES = [
     "disponible": false
   }
 ];
-export const HISTORIAS = [
+const HISTORIAS_BASE = [
   ...STORIES_603_ES,
   WAR_OF_ROSES_STORY,
   ...HERITAGE_STORIES,
@@ -4602,3 +4603,5 @@ export const HISTORIAS = [
   ...HISTORIAS_TEMATICAS.filter(h => !HISTORIAS_EXISTENTES.some(existente => existente.id === h.id)),
 ].filter((h,index,all)=>all.findIndex(item=>item.id===h.id)===index)
  .map(reviseBurgundy).map(h => ({...h, ...CONTEXTO_HISTORIAS[h.id], titulo:h.titulo.replace(/^La Guerra de/, 'La guerra de').replace('La Revolución Protestante','La revolución protestante').replace('El Reino de los Cielos','El reino de los cielos'), subtitulo:(h.subtitulo||'').trim().replace(/\.$/,''), descripcion:h.descripcion?.trim(), colecciones:storyCollections(h.id)}));
+
+export const HISTORIAS = reviseStories604(HISTORIAS_BASE);

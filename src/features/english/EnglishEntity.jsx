@@ -1,3 +1,5 @@
+import {escudoDe,nombreEmblema} from '../../content/dinastias/escudos.js';
+import DynastyArms from '../../components/DynastyArms.jsx';
 import {useState} from 'react';
 import {ArrowRight,Search,Shield,Landmark} from 'lucide-react';
 import DynastyCard from '../public/DynastyCard.jsx';
@@ -24,9 +26,9 @@ export default function EnglishEntity({data:d}){
  return <main className={`public-main ${dynasty?'dynasty-page':'territory-page'}`}>
   <nav className="public-breadcrumbs" aria-label="Breadcrumb"><a href="/en/">Home</a><span>›</span><a href={dynasty?'/en/dynasties':'/en/territories'}>{dynasty?'Dynasties':'Territories'}</a><span>›</span><span aria-current="page">{d.nombre}</span></nav>
   <header className={`public-page-title ${dynasty?'dynasty-hero':'territory-hero'}`}>
-   {d.arms?<figure className="dynasty-hero-figure"><img src={d.arms.archivo} width="76" height="91" alt={`Arms of ${d.nombre}: ${d.arms.blazon}`}/></figure>:<div className="public-page-icon"><Icon size={22}/></div>}
+   {d.arms?<figure className="dynasty-hero-figure"><DynastyArms dinastia={d.key} size={76} locale="en"/></figure>:<div className="public-page-icon"><Icon size={22}/></div>}
    <span>{dynasty?'Houses and lineages':'Historical territory'}</span><h1>{d.nombre}</h1><p>{d.resumen}</p>
-   {d.arms&&<p className="dynasty-blazon"><b>Arms.</b> {d.arms.blazon}<small> {d.arms.note}</small></p>}
+   {d.arms?.blazon&&<p className="dynasty-blazon"><b>{nombreEmblema(escudoDe(d.key),'en')}.</b> {d.arms.blazon}<small> {d.arms.note}</small></p>}
    {dynasty&&<div className="dynasty-counts"><span><b>{d.total}</b> recorded people</span><span><b>{d.ramas.length}</b> documented {d.ramas.length===1?'connection':'connections'}</span></div>}
    <a className="public-primary" href={`/en/?atlas=1&${dynasty?'dinastia':'territorio'}=${encodeURIComponent(d.key)}`}>Explore in the Atlas <ArrowRight size={15}/></a>
   </header>
@@ -45,6 +47,6 @@ export default function EnglishEntity({data:d}){
   {!dynasty&&<><section><h2>Dynasties in the recorded governments</h2><div className="territory-links">{d.dinastias.map(t=><EntityLink key={t.key} kind="dinastia" name={t.key} label={t.name}/>)}</div></section>{!!d.relacionados.length&&<section><h2>Related territories</h2><div className="territory-links">{d.relacionados.map(t=><a key={t.slug} href={translatedEquivalent(`/es/territorio/${t.slug}`,'en')||`/es/territorio/${t.slug}`}>{t.nombre}</a>)}</div></section>}</>}
   {!!d.historias?.length&&<section><h2>Related stories</h2><div className="territory-links">{d.historias.map(h=><a key={h.slug} href={h.path}>{h.titulo}{h.revisionPendiente?' · Needs review':''}{h.path.startsWith('/es/')?' · Spanish original':''}</a>)}</div></section>}
   {!!d.fuentes.length&&<section id="sources" className="public-content-card"><h2>Contextual bibliography</h2><p>General references do not by themselves verify every relationship or date. Bibliographic titles retain their original language.</p><ul>{d.fuentes.map(f=><li key={f.url}><a href={f.url} target="_blank" rel="noreferrer">{f.titulo}</a></li>)}</ul><a href="/en/methodology">Sources and methodology</a></section>}
-  {d.arms&&<small className="dynasty-arms-credit dynasty-page-credit">Arms: <a href={d.arms.fuente} target="_blank" rel="noreferrer">{d.arms.autor}</a> · {d.arms.licenciaUrl?<a href={d.arms.licenciaUrl} target="_blank" rel="noreferrer license">{d.arms.licencia}</a>:d.arms.licencia} · {d.arms.procedencia==='Aportación del autor'?'Supplied by the author':d.arms.procedencia||'Wikimedia Commons'}. {d.arms.modifications}</small>}
+  {d.arms&&<small className="dynasty-arms-credit dynasty-page-credit">{nombreEmblema(escudoDe(d.key),'en')}: <a href={d.arms.fuente} target="_blank" rel="noreferrer">{d.arms.autor}</a> · {d.arms.licenciaUrl?<a href={d.arms.licenciaUrl} target="_blank" rel="noreferrer license">{d.arms.licencia}</a>:d.arms.licencia} · {d.arms.procedencia==='Aportación del autor'?'Supplied by the author':d.arms.procedencia||'Wikimedia Commons'}. {d.arms.modifications}</small>}
  </main>;
 }

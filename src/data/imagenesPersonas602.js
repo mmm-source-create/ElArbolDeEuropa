@@ -95,23 +95,7 @@ export const PORTRAITS_602 = {
     "fuente": "Wikimedia Commons",
     "fuenteUrl": "https://commons.wikimedia.org/wiki/File:Jakob-Ferdinand_Voet_-_Portrait_of_Livio_Odescalchi_-_Walters_37371.jpg",
     "derechos": "Dominio público · PDM 1.0",
-    "derechosUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
-    "alternativas": [
-      {
-        "archivo": "/personas-img/LIVIOODESCALCHI_MORANDI.webp",
-        "encuadre": "50% 18%",
-        "alt": "Retrato de Livio Odescalchi",
-        "tipo": "Retrato de atribución propuesta",
-        "obra": "Livio Odescalchi",
-        "autor": "Giovanni Maria Morandi (atribución propuesta por Francesco Petrucci)",
-        "fecha": "siglo XVII",
-        "institucion": "Colección particular · catálogo Dorotheum",
-        "fuente": "Wikimedia Commons",
-        "fuenteUrl": "https://commons.wikimedia.org/wiki/File:Portr%C3%A4t_des_Livio_Odescalchi.png",
-        "derechos": "Dominio público · PDM 1.0",
-        "derechosUrl": "https://creativecommons.org/publicdomain/mark/1.0/"
-      }
-    ]
+    "derechosUrl": "https://creativecommons.org/publicdomain/mark/1.0/"
   },
   "JOSEFERNANDOBAV": {
     "archivo": "/personas-img/JOSEFERNANDOBAV.webp",

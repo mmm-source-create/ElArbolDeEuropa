@@ -35845,8 +35845,8 @@
   {
     "key": "Perche",
     "es": "perche",
-    "en": "why",
-    "name": "Why ?",
+    "en": "perche",
+    "name": "Perche",
     "summary": "",
     "notes": "Territorial jurisdiction of stable identity; succession of holders, occupation or dynastic integration does not create another entity. The full areas and their dates are documented in the French and Dutch review.",
     "translatedSource": {
@@ -35856,7 +35856,7 @@
         "relevos": [],
         "crisis": []
       },
-      "nombre": "Why ?",
+      "nombre": "Perche",
       "slug": "perche",
       "clase": "County",
       "naturaleza": "entity",

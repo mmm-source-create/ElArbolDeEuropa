@@ -32,11 +32,11 @@ test('New namesakes keep the established Spanish records and distinguish their o
  assert.equal(slugBasePersona(PERSONAS.find(p=>p.id==='ISABELHUNSANTA'),'es'),'isabel-de-hungria-santa');
  assert.equal(slugBasePersona(PERSONAS.find(p=>p.id==='LEONORGONZAGAURBINO'),'es'),'leonor-gonzaga-duquesa-de-urbino');
 });
-test('Both Livio works belong to the younger Livio and retain separate, bilingual attributions',()=>{
+test('The younger Livio retains Voet and the withdrawn Morandi alternative is absent',()=>{
  assert(!PORTRAITS_602.LIVIOODESCALCHI_SR);
  assert.match(PORTRAITS_602.LIVIOODESCALCHI.autor,/Voet/);
- assert.match(PORTRAITS_602.LIVIOODESCALCHI.alternativas[0].autor,/atribución propuesta/);
- assert.match(PORTRAITS_602_EN.LIVIOODESCALCHI.alternativas[0].autor,/attribution proposed/);
+ assert.equal(PORTRAITS_602.LIVIOODESCALCHI.alternativas,undefined);
+ assert.equal(PORTRAITS_602_EN.LIVIOODESCALCHI.alternativas,undefined);
 });
 test('All selected works have files, rights and English captions; source dates are artwork dates',()=>{
  for(const [id,p]of Object.entries(PORTRAITS_602)){

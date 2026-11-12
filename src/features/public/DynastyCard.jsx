@@ -8,7 +8,7 @@ export default function DynastyCard({item,headingLevel=2,relationship,children,s
   const unit=en?(item.total===1?'person':'people'):(item.total===1?'persona':'personas');
   const path=item.path||`/es/dinastia/${item.slug}`;
   return <article className="public-entity-card">
-    <div className="public-entity-card-head"><div className="public-entity-heading">{item.arms?<img src={item.arms.archivo} width="30" height="36" alt={en?`Arms of ${item.nombre}`:`Escudo de ${item.nombre}`}/>:<DynastyArms dinastia={item.key||item.nombre} size={30} locale={locale} label={en?`Arms of ${item.nombre}`:undefined}/>}<div>
+    <div className="public-entity-card-head"><div className="public-entity-heading"><DynastyArms dinastia={item.key||item.nombre} size={30} locale={locale}/><div>
       <span>{relationship || (en?'Dynasty':item.editorial?'Historia de la dinastía':'Dinastía')}</span><Heading>{item.nombre}</Heading>
     </div></div><strong aria-label={`${item.total} ${unit}`}>{item.total}<small aria-hidden="true">{unit}</small></strong></div>
     {item.resumen&&<p className="public-muted public-dynasty-summary">{item.resumen}</p>}

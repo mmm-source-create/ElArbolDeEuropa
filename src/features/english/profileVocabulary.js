@@ -36,6 +36,7 @@ export const PROFILE_LABELS = {
   'reinado':'Kingship', 'ducado':'Duchy', 'condado':'County', 'gobierno':'Government', 'principado':'Principality', 'sultanato':'Sultanate', 'efectivo':'Effective rule', 'gobierno delegado':'Delegated government', 'titular':'Titular', 'ocupación':'Occupation', 'jure uxoris':'Jure uxoris', 'corregente':'Co-ruler', 'Gobiernos':'Governments', 'Gobierno':'Government',
   'Principado':'Principality', 'Ducado':'Duchy', 'Condado':'County', 'Sultanato':'Sultanate', 'Regencia':'Regency', 'Gobierno delegado':'Delegated government', 'Reinado':'Reign', 'Título nominal':'Nominal title', 'Pretensión':'Claim', 'Control disputado':'Disputed control',
   ...runtime.timelineLabels,
+  'Perche':'Perche', 'Las dos Borgoñas':'The two Burgundies', 'Borgoña y Países Bajos':'Burgundy and the Low Countries',
 };
 
 export const ENGLISH_NAMES = {

@@ -3,6 +3,9 @@ export function storyPath(slug, chapter = null) {
   return `/es/historia/${encodeURIComponent(slug)}${chapter ? `/capitulo/${chapter}` : ''}`;
 }
 export function normalizeStoryProgress(value, id, count) {
+  const revised = id === 'balduino-saladino' ? {1:1,2:2,3:4,4:5,5:7,6:8} : id === 'republica-nobles' ? {1:2,2:3,3:4,4:6,5:7,6:8,7:10,8:11,9:12,10:13,11:14,12:15,13:16} : null;
+  if (revised && value?.revision !== 604) return {last:revised[value?.last]||1,read:[...new Set((Array.isArray(value?.read)?value.read:[]).map(n=>revised[n]).filter(Boolean))]};
+
   if(id==='reino-partido-dos' && count===7 && value?.revision!==4) {
     const chapters={2:1,4:3,5:5,6:5,7:6,8:7};
     return {last:chapters[value?.last]||1,read:[...new Set((Array.isArray(value?.read)?value.read:[]).map(n=>chapters[n]).filter(Boolean))]};
@@ -16,14 +19,25 @@ export function normalizeStoryProgress(value, id, count) {
     read:[...new Set(Array.isArray(value?.read) ? value.read.filter(valid).map(chapter) : [])]};
 }
 export function readStoryProgress(storage, id, count) {
-  try { return normalizeStoryProgress(JSON.parse(storage.getItem(STORY_PROGRESS_KEY))?.[id], id, count); }
+  try {
+    const all=JSON.parse(storage.getItem(STORY_PROGRESS_KEY))||{};
+    if(id.startsWith('emperadores') && all.emperadores && all.emperadores.revision!==604) {
+      const old=all.emperadores;
+      for(const [key,start,end] of [['emperadores',0,6],['emperadores-reforma',6,12],['emperadores-sucesion',12,19]]) {
+        if(key!=='emperadores' && all[key])continue;
+        all[key]={revision:604,last:old.last>start&&old.last<=end?old.last-start:1,read:(Array.isArray(old.read)?old.read:[]).filter(n=>n>start&&n<=end).map(n=>n-start)};
+      }
+      try {storage.setItem(STORY_PROGRESS_KEY,JSON.stringify(all));}catch { /* Storage can be read-only. */ }
+    }
+    return normalizeStoryProgress(all[id],id,count);
+  }
   catch { return { last: 1, read: [] }; }
 }
 export function saveStoryProgress(storage, id, count, chapter) {
   const progress = readStoryProgress(storage, id, count);
   if (!Number.isInteger(chapter) || chapter < 1 || chapter > count) return progress;
   const next = { last: chapter, read: [...new Set([...progress.read, chapter])],
-    ...(id === 'reino-partido-dos' && count===7 ? {revision:4} : id === 'ricardo-felipe-cruzada' && count >= 8 ? {revision:2} : id === 'borgona' && count >= 17 ? {revision:3} : {}) };
+    ...(['balduino-saladino','republica-nobles','emperadores','emperadores-reforma','emperadores-sucesion'].includes(id) ? {revision:604} : id === 'reino-partido-dos' && count===7 ? {revision:4} : id === 'ricardo-felipe-cruzada' && count >= 8 ? {revision:2} : id === 'borgona' && count >= 17 ? {revision:3} : {}) };
   try {
     let all; try { all = JSON.parse(storage.getItem(STORY_PROGRESS_KEY)); } catch { /* Recover corrupt storage. */ }
     storage.setItem(STORY_PROGRESS_KEY, JSON.stringify({ ...(all && typeof all === 'object' && !Array.isArray(all) ? all : {}), [id]: next }));

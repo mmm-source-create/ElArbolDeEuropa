@@ -132,3 +132,15 @@ html[data-eade-theme="dark"] .workspace-filter-clear {
   .tree-list-alternative h2 { padding-right: 12px; padding-top: 65px; }
   .workspace-tree-stage.showing-list .tree-list-content ul { grid-template-columns: 1fr; }
 }
+
+/* Keep Atlas controls and their popovers below the global sticky header. */
+.wrap:has(.workspace-toolbar-search) { position: relative; isolation: isolate; z-index: 0; }
+.workspace-filter-panel, .workspace-filter-scroll, .filters-row-vertical,
+.filters-row-vertical .filter-section, .filters-row-vertical .filter-static-content,
+.filters-row-vertical .filter-group, .filters-row-vertical .dinastia-block { min-width: 0; max-width: 100%; box-sizing: border-box; }
+.filters-row-vertical .dinastia-chip-row { min-width: 0; max-width: 100%; }
+.filters-row-vertical .dinastia-chip-row .chip { min-width: 0; white-space: normal; overflow-wrap: anywhere; }
+.filters-row-vertical .dinastia-expand-btn { flex: 0 0 auto; }
+.workspace-filter-panel .segmented-control { min-width: 0; max-width: 100%; flex-wrap: wrap; }
+.workspace-toolbar-search .atlas-search-results { width: min(440px, calc(100vw - 24px)); max-width: calc(100vw - 24px); box-sizing: border-box; }
+.atlas-search-results button, .atlas-search-results a { min-width: 0; overflow-wrap: anywhere; }

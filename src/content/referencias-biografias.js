@@ -8,6 +8,9 @@ import {CONFIRMED_PEOPLE_REFERENCES} from './confirmedPeopleReferences.js';
 // figura (P4459, P1986, P1415, P7902, P1417) y sus formatos de URL (P1630).
 // Son biografías generales que cubren todas las etapas de cada vida.
 export const REFERENCIAS_BIOGRAFIAS = Object.freeze({
+"LIVIOODESCALCHI_SR": [{"titulo": "Treccani \u00b7 Odescalchi, Livio \u00b7 Dizionario Biografico degli Italiani", "url": "https://www.treccani.it/enciclopedia/livio-odescalchi_(Dizionario-Biografico)/"}, {"titulo": "Ministero della Cultura \u00b7 Legati e governatori dello Stato pontificio \u00b7 Inocencio XI", "url": "https://www.treccani.it/enciclopedia/papa-innocenzo-xi_(Dizionario-Biografico)/"}],
+"LIVIOODESCALCHI": [{"titulo": "Treccani \u00b7 Odescalchi, Livio \u00b7 Dizionario Biografico degli Italiani", "url": "https://www.treccani.it/enciclopedia/livio-odescalchi_(Dizionario-Biografico)/"}, {"titulo": "Ministero della Cultura \u00b7 Legati e governatori dello Stato pontificio \u00b7 Inocencio XI", "url": "https://www.treccani.it/enciclopedia/papa-innocenzo-xi_(Dizionario-Biografico)/"}],
+
   ...V602_REFERENCES,
   ...V603_REFERENCES,
   ...POLISH_REFERENCES,
