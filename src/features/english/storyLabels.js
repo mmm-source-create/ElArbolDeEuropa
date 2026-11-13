@@ -1,3 +1,4 @@
+import {STORIES_606_EN} from '../../data/historias606.js';
 import {STORIES_605_EN} from '../../data/historias605.js';
 import {STORY_LABELS_604} from '../../data/historias604.js';
 import {STORIES_603_EN} from '../../data/historias603.js';
@@ -28,4 +29,5 @@ export const ENGLISH_STORY_LABELS = {
     ...STORY_LABELS_604,
     ...Object.fromEntries(Object.entries(STORIES_605_EN).map(([id,{content}])=>[id,[content.titulo,content.subtitulo]])),
     ...Object.fromEntries(Object.entries(STORIES_603_EN).map(([id,{content}])=>[id,[content.titulo,content.subtitulo]])),
-  };
+      ...Object.fromEntries(Object.entries(STORIES_606_EN).map(([id,s])=>[id,[s.content.titulo,s.content.subtitulo]])),
+};

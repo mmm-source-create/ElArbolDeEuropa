@@ -6,7 +6,7 @@
       "titulo": "The Protestant Reformation",
       "subtitulo": "Humanism, Reform, imperial politics and the response of Trent",
       "disponible": true,
-      "descripcion": "A journey through the religious breakdown of the 16th century: Erasmus and the return to the sources, Luther and the German princes, Zwingli and Calvin, the English separation and a Catholic Church responding with new orders and the Council of Trent.",
+      "descripcion": "Humanists, theologians, princes and reformers transform European religious life in the sixteenth century. The break with Rome, new churches and Catholic reforms bring doctrines, jurisdictions and projects of government into conflict.",
       "pasos": [
         {
           "anio": 1516,
@@ -16,7 +16,7 @@
           ],
           "eventoId": "ERASMO_1516",
           "titulo": "Before Luther: Reforming through Knowledge",
-          "texto": "Erasmus of Rotterdam wants a more cultured, moral and Christian church. His Greek and Latin edition of the New Testament symbolizes the humanist program: Read better before discussing better. Erasmus will not be Protestant, but the intellectual world he helps create will make it much harder to accept authority without examination."
+          "texto": "Erasmus of Rotterdam promotes study of Christian sources and moral and educational renewal within the Church. His 1516 edition of the New Testament in Greek and Latin enables comparison of texts and translations. His work circulates among humanists, churchmen and future reformers while he retains his membership of the Catholic Church."
         },
         {
           "anio": 1517,
@@ -53,7 +53,7 @@
           ],
           "eventoId": "WORMS_1521",
           "titulo": "Worms: The theologian becomes an imperial problem",
-          "texto": "Charles V, the newly elected emperor, must negotiate with the princes and institutions of the Empire to deal with the religious dispute. Luther refuses to retreat and Frederick the Wise protects him in Wartburg. Here doctrine and constitution intersect: without the political fragmentation of the Empire, the history of the Reformation would have been very different."
+          "texto": "Charles V must negotiate with the princes and imperial institutions to address the religious dispute. Luther refuses to recant at Worms and Frederick the Wise protects him at the Wartburg. Princely jurisdiction keeps him beyond his pursuers’ reach and enables his theological work to continue."
         },
         {
           "anio": 1523,
@@ -89,7 +89,7 @@
           ],
           "eventoId": "CONFESION_AUGSBURGO_1530",
           "titulo": "Augsburg: the Reformation defines itself",
-          "texto": "Melanchthon presents the Augsburg Confession to Charles V. The document attempts to explain the Lutheran faith in a systematic way and still seeks to show how much it shares with the common Christian tradition. But the mere fact that princes and cities present their own confession shows that breakup already has institutions."
+          "texto": "Melanchthon presents the Augsburg Confession to Charles V. The document sets out Lutheran faith systematically and identifies points shared with Christian tradition. Supporting princes and towns provide common political representation for their churches and negotiate recognition within the Empire."
         },
         {
           "anio": 1534,
@@ -153,8 +153,8 @@
             "FELIPEHESSE"
           ],
           "eventoId": "MUHLBERG_1547",
-          "titulo": "Mühlberg: Charles V wins a battle and loses the solution",
-          "texto": "The emperor defeated the League of Esmalkalde militarily and captured John Frederick of Saxony and Philip of Hesse. It seems like it's time to restore the unit. It doesn't happen. After the imperial victory, the Reformed churches retain their roots in the territories, universities and the convictions of much of the population."
+          "titulo": "Mühlberg: military victory and religious conflict",
+          "texto": "Charles V defeats the Schmalkaldic League in 1547 and captures John Frederick of Saxony and Philip of Hesse. Victory strengthens his position against the princes, but reformed churches retain institutions and social support. His attempts to establish a religious settlement provoke further resistance and negotiations among the imperial estates."
         },
         {
           "anio": 1555,
@@ -166,8 +166,8 @@
             "FELIPEHESSE"
           ],
           "eventoId": "AUGSBURGO_1555",
-          "titulo": "Augsburg: The Empire admits the breakup is real",
-          "texto": "Ferdinand negotiates a peace in the name of his brother Charles that legally recognizes Lutheranism alongside Catholicism within the imperial framework. It is an incomplete solution and does not include all new confessions, but it is the definitive failure of the one-religion project imposed by the emperor."
+          "titulo": "Augsburg recognises two confessions",
+          "texto": "Ferdinand negotiates on Charles’s behalf a peace legally recognising Lutheranism alongside Catholicism within the Empire. Territorial rulers gain powers to determine their lands’ confession and conditions for religious emigration are regulated. Reformed communities outside the Augsburg Confession remain excluded from recognition. The settlement establishes legal coexistence between two confessions while leaving questions that will provoke further conflicts."
         },
         {
           "anio": 1559,
@@ -229,7 +229,7 @@
           ],
           "eventoId": "SELIM2_1566",
           "titulo": "Selim II inherits pressure on the Mediterranean",
-          "texto": "The death of Suleiman does not end the Ottoman expansion. Selim II maintains an offensive policy and soon focuses his attention on Cyprus, a Venetian possession strategically located in the eastern Mediterranean."
+          "texto": "Selim II succeeds Suleiman and maintains an offensive policy in the Mediterranean. His government focuses on Cyprus, a strategically situated Venetian possession in the eastern Mediterranean."
         },
         {
           "anio": 1570,
@@ -254,7 +254,7 @@
             "SEBASTIANOVENIER"
           ],
           "eventoId": "LIGA_SANTA_1571",
-          "titulo": "Pius V achieves what seemed impossible",
+          "titulo": "Pius V negotiates the Holy League",
           "texto": "Pope Pius V acts as a mediator and gets the Spanish Monarchy, Venice and the Pontifical States to accept a Holy League. Philip II supports the project and don John of Austria, son of Charles V and half-brother of the king, receives the supreme command."
         },
         {
@@ -349,7 +349,7 @@
           ],
           "eventoId": "LEPANTO",
           "titulo": "The League wins the battle",
-          "texto": "After hours of fighting, much of the Ottoman fleet has been captured, sunk or abandoned and Ali Baja has died. Don Juan wins a victory that makes a huge impression in Europe. Lepanto demonstrates that a coalition of rival powers can defeat the main Ottoman army when it manages to act in a coordinated manner."
+          "texto": "After hours of fighting, much of the Ottoman fleet has been captured, sunk or abandoned, and Ali Pasha is dead. Don John wins a victory with major repercussions in Europe. Cooperation among squadrons and intervention by the reserve have enabled the League to hold threatened positions and reinforce its attacks."
         },
         {
           "anio": 1572,

@@ -5,7 +5,7 @@ export const STORY_COLLECTIONS = [
   {id:'herencias-conflictivas', es:'Herencias conflictivas', en:'Contested Inheritances'},
 ];
 const membership = {
-  'herencias-conflictivas':['borgona','dos-coronas-dos-hijas','corona-demasiado-grande','dos-rosas','reino-partido-dos','napoles-corona-disputada','federico-emperador-excomulgado','mindaugas-jogaila'],
+  'herencias-conflictivas':['habsburgo-capetos','iberia','ultimo-austria','estuardo-hannover','leonor-aquitania','visconti-sforza','borgona','dos-coronas-dos-hijas','corona-demasiado-grande','dos-rosas','reino-partido-dos','napoles-corona-disputada','federico-emperador-excomulgado','mindaugas-jogaila'],
   cruzadas:['balduino-saladino','sebastian-marruecos','lepanto-alianza','puertas-viena','constantinopla-dos-conquistas','ricardo-felipe-cruzada','federico-emperador-excomulgado'],
   'cultura-popular':['balduino-saladino','braveheart-detras-del-mito','dracula-detras-de-la-leyenda','gioconda','favoritos-maquiavelo'],
 };
