@@ -6,7 +6,7 @@
       "titulo": "The Hundred Years’ War",
       "subtitulo": "A dynastic dispute that transformed France and England",
       "disponible": true,
-      "descripcion": "A journey from the succession crisis of 1328 to Castillon in 1453: claims by blood, major English victories, French recovery, civil war, Burgundy and the turning point brought by Joan of Arc.",
+      "descripcion": "The succession dispute of 1328 and conflicts over the English kings’ French fiefs open a war of conquest, ransoms and alliances. French recovery strengthens under Charles VII and culminates in the campaigns in Normandy and Guyenne.",
       "fuentes": [
         {
           "titulo": "Luxembourg · Juan el Ciego y la batalla de Crécy",
@@ -25,7 +25,7 @@
           ],
           "eventoId": "CRISIS_CAPETA_1328",
           "titulo": "1328: a crown without a male heir",
-          "texto": "Charles IV dies without a surviving son, bringing the direct Capetian line to an end. The crown passes to Philip of Valois, Philip VI. Edward III of England, however, is a grandson of Philip IV through his mother, Isabella of France. War has not yet begun: the first issue is a genealogical question about who can transmit a right to the crown."
+          "texto": "Charles IV dies without a surviving son, ending the direct Capetian line. Philip of Valois receives the crown as Philip VI. Edward III of England is Philip IV’s grandson through his mother Isabella of France, an ancestry that will support his claim to the French throne."
         },
         {
           "anio": 1337,
@@ -36,7 +36,7 @@
           ],
           "eventoId": "CIEN_ANOS",
           "titulo": "1337: the dynastic dispute becomes war",
-          "texto": "Aquitaine, feudal homage and the politics linking France, England and Scotland turn the succession dispute into open conflict. Edward III advances his claim to the French crown, and the clash ceases to be merely an argument about kinship: two monarchies mobilise resources for generations."
+          "texto": "Aquitaine, feudal homage and relations among France, England and Scotland turn rivalry into open war. Edward III advances his claim to the French crown. The two monarchies gather taxes, armies and alliances to defend their positions and conquer territory."
         },
         {
           "anio": 1346,
@@ -74,7 +74,7 @@
           ],
           "eventoId": "BRETIGNY_1360",
           "titulo": "Brétigny: England appears to have won",
-          "texto": "The treaty gives Edward III an extraordinary territorial position in France, but it is not the end. The war reveals one of its central problems: no agreement can simultaneously settle territorial sovereignty, feudal relations and the dynastic claim."
+          "texto": "The Treaty of Brétigny grants Edward III extensive French territories and arranges John II’s ransom. Its implementation leaves renunciations and feudal obligations unresolved, continuing to divide the two governments. Financing war and controlling recovered towns will occupy their successors."
         },
         {
           "anio": 1370,
@@ -86,7 +86,7 @@
           ],
           "eventoId": "RECONQUISTA_CARLOS5_1369",
           "titulo": "Charles V changes the war",
-          "texto": "Charles V of France and his constable Bertrand du Guesclin avoid repeating the great battles that had favoured the English. Through more patient campaigns, sieges and attrition, they recover much of what France had lost. When Charles V dies in 1380, the map looks very different from that of 1360."
+          "texto": "Charles V of France and his constable Bertrand du Guesclin recover territory through campaigns, sieges and the attrition of English positions. Cooperation with allies and local captains sustains operations. When Charles dies in 1380, the French monarchy has regained much of the land ceded after Poitiers."
         },
         {
           "anio": 1407,
@@ -175,7 +175,7 @@
           ],
           "eventoId": "REIMS_1429",
           "titulo": "Reims: the war again becomes a question of legitimacy",
-          "texto": "Joan insists on leading Charles VII to Reims, the traditional coronation place of French kings. The ceremony turns the former “Dauphin of Bourges” into a visible, anointed king. The war has not been won, but Charles’s legitimacy no longer appears provisional."
+          "texto": "Joan promotes Charles VII’s march to Reims, the traditional coronation site of French kings. The ceremony combines religious anointing, public recognition and support gained during the Loire campaign. These resources help Charles sustain his rivalry with Henry VI and the English government established in the north."
         },
         {
           "anio": 1431,
@@ -187,8 +187,8 @@
             "CARLOS7FRA"
           ],
           "eventoId": "CAPTURA_JUANA_1430",
-          "titulo": "Joan’s death does not halt the change",
-          "texto": "Joan is captured by the Burgundians in 1430, handed over to the English and executed at Rouen in 1431. Her death does not reverse the political shift she helped accelerate. Charles VII now possesses strengthened legitimacy and a monarchy that is beginning to rebuild its resources."
+          "titulo": "Joan’s trial and execution",
+          "texto": "Joan is captured by Burgundian forces in 1430, handed to the English and executed at Rouen in 1431 after an ecclesiastical trial. Charles VII retains support gained during the campaign and rebuilds his monarchy’s resources. War continues through sieges, agreements and contests over the allegiance of towns and lords."
         },
         {
           "anio": 1435,
