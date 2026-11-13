@@ -1,3 +1,4 @@
+import {V605_EVIDENCE_TEXT} from './v605Vocabulary.js';
 import {INTERFACE_LABELS} from './interfaceLabels.js';
 import {FOURTH_200_NAMES,FOURTH_200_LABELS,FOURTH_200_NOTES} from './reviewedFourth200Vocabulary.js';
 import {THIRD_100_NAMES,THIRD_100_LABELS,THIRD_100_NOTES} from './reviewedThird100Vocabulary.js';
@@ -36,6 +37,8 @@ export const PROFILE_LABELS = {
   'reinado':'Kingship', 'ducado':'Duchy', 'condado':'County', 'gobierno':'Government', 'principado':'Principality', 'sultanato':'Sultanate', 'efectivo':'Effective rule', 'gobierno delegado':'Delegated government', 'titular':'Titular', 'ocupación':'Occupation', 'jure uxoris':'Jure uxoris', 'corregente':'Co-ruler', 'Gobiernos':'Governments', 'Gobierno':'Government',
   'Principado':'Principality', 'Ducado':'Duchy', 'Condado':'County', 'Sultanato':'Sultanate', 'Regencia':'Regency', 'Gobierno delegado':'Delegated government', 'Reinado':'Reign', 'Título nominal':'Nominal title', 'Pretensión':'Claim', 'Control disputado':'Disputed control',
   ...runtime.timelineLabels,
+'Papado':'Papacy','Dignidad imperial':'Imperial dignity','Realeza soberana':'Sovereign ruler','Gobierno principesco':'Princely government','Militar':'Military','Arte':'Art','Religión':'Religion','Humanismo':'Humanism','Nobleza':'Nobility',
+'Gran maestre':'Grand Master','Archiduque / Gran maestre':'Archduke / Grand Master','Duque / Gran maestre':'Duke / Grand Master',
   'Perche':'Perche', 'Las dos Borgoñas':'The two Burgundies', 'Borgoña y Países Bajos':'Burgundy and the Low Countries',
 };
 
@@ -99,6 +102,7 @@ export const PROFILE_NOTES = {
   'Entrega a Carlos en 1380; toma de posesión florentina del 17 de noviembre de 1384.':'Submission to Charles in 1380; Florence took possession on 17 November 1384.',
   'Entrada «MÁRIA of Hungary (1371-Buda 1395)»':'Entry “MÁRIA of Hungary (1371-Buda 1395)”',
   ...runtime.timelineNotes,
+  ...V605_EVIDENCE_TEXT,
 };
 
 // These are labels attached to a precise authority record, rather than new

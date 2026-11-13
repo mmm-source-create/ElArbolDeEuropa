@@ -11,7 +11,10 @@ export default function SegmentedControl({options, value, onChange, label, id, t
   useEffect(() => {
     const update = () => {
       const active = buttons.current.get(preview ?? value);
-      if (active) setPosition({left: active.offsetLeft, width: active.offsetWidth});
+      if (active) {
+        const next={left:active.offsetLeft,top:active.offsetTop,width:active.offsetWidth,height:active.offsetHeight};
+        setPosition(old=>old&&Object.keys(next).every(key=>old[key]===next[key])?old:next);
+      }
     };
     update();
     const observer = typeof ResizeObserver === 'function' ? new ResizeObserver(update) : null;

@@ -35,9 +35,11 @@ export function auditarTerritorios(personas, catalogo=TERRITORIOS) {
    const delegatedOffice=g.condicion==='gobierno delegado'&&g.soberano&&g.soberano!==p.id
      && (g.clase==='gobierno'&&['Gobernador','Gobernadora','Vicario general','Procurador'].includes(g.titulo)
        || g.clase==='ducado'&&['Duque','Duquesa'].includes(g.titulo));
+   // A sourced nominal office is not effective sovereignty or a change of territorial rank.
+   const nominalOffice=g.clase==='gobierno'&&g.condicion==='titular'&&t?.titulosTitulares?.includes(g.titulo);
    const provincialBan=g.territorio==='Eslavonia'&&g.clase==='banato'&&g.titulo==='Ban';
    const documentedMoravianPrince=g.territorio==='Moravia'&&p.id==='OTAK1'&&g.desde===1223&&g.hasta===1223&&g.titulo==='Príncipe'&&g.clase==='principado';
-   if(t&& !provincialSovereign && !delegatedOffice && !provincialBan && !documentedMoravianPrince && !(g.clase==='gobierno'&&g.condicion==='regencia') && !['regencia','estatuderato'].includes(g.clase)&& !territorial.map(normalize).concat(permitidas[g.territorio]||[]).includes(g.clase))add('ERROR','TERRITORY_CLASS_MISMATCH',key,`${g.territorio}: ${g.clase} no concuerda con su rango documentado`);
+   if(t&& !provincialSovereign && !nominalOffice && !delegatedOffice && !provincialBan && !documentedMoravianPrince && !(g.clase==='gobierno'&&g.condicion==='regencia') && !['regencia','estatuderato'].includes(g.clase)&& !territorial.map(normalize).concat(permitidas[g.territorio]||[]).includes(g.clase))add('ERROR','TERRITORY_CLASS_MISMATCH',key,`${g.territorio}: ${g.clase} no concuerda con su rango documentado`);
   }
  }
  for(let i=0;i<gobiernos.length;i++)for(let j=i+1;j<gobiernos.length;j++){

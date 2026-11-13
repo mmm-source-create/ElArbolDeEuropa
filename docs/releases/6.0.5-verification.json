@@ -1,0 +1,181 @@
+{
+  "version": "6.0.5",
+  "ssg": {
+    "version": "6.0.5",
+    "expected": 9374,
+    "counts": {
+      "persona": 2777,
+      "dinastia": 521,
+      "territorio": 1041,
+      "historia": 343,
+      "english": 4692
+    },
+    "errors": []
+  },
+  "biographies": {
+    "profiles": 5554,
+    "errors": 0
+  },
+  "english": {
+    "people": 2777,
+    "completeStories": 33,
+    "errors": 0
+  },
+  "buildAudits": {
+    "exitCode": 0,
+    "territorialErrors": 0,
+    "existingTerritorialWarnings": 18
+  },
+  "tests": {
+    "fullInitial": {
+      "total": 738,
+      "passed": 730,
+      "failed": 8
+    },
+    "initialFailuresResolved": 8,
+    "finalFocusedUniquePassed": 85,
+    "finalRuns": [
+      {
+        "log": "605-retest.log",
+        "passed": 47
+      },
+      {
+        "log": "605-final-focused.log",
+        "passed": 10
+      },
+      {
+        "log": "605-ui-contract-tests.log",
+        "passed": 33
+      },
+      {
+        "log": "605-evidence-test.log",
+        "passed": 7
+      }
+    ]
+  },
+  "security": {
+    "repositoryIssues": 0,
+    "vulnerabilities": 0
+  },
+  "regression": {
+    "years": 601,
+    "freshDataDifferences": 0,
+    "freshPublicDifferences": 0,
+    "spanishPublicPages": 4682,
+    "reviewedChanges": {
+      "people": [
+        "FREDSAXTEUTONIC",
+        "HEINRICHBOBENHAUSEN",
+        "MAXIM3TIROL",
+        "WALTHERCRONBERG"
+      ],
+      "territories": [
+        "Prusia"
+      ],
+      "geometryUnchanged": true,
+      "mapYearsChanged": {
+        "authorities": [
+          1587,
+          1588,
+          1589,
+          1590,
+          1591,
+          1592,
+          1593,
+          1594,
+          1595,
+          1596,
+          1597,
+          1598,
+          1599,
+          1600,
+          1601,
+          1602,
+          1603,
+          1604,
+          1605,
+          1606,
+          1607,
+          1608,
+          1609,
+          1610,
+          1611,
+          1612,
+          1613,
+          1614,
+          1615,
+          1616,
+          1617,
+          1618
+        ],
+        "layers": [],
+        "locations": [],
+        "mosaic": [],
+        "overlaps": [],
+        "personal": [
+          1587,
+          1588,
+          1589,
+          1590,
+          1591,
+          1592,
+          1593,
+          1594,
+          1595,
+          1596,
+          1597,
+          1598,
+          1599,
+          1600,
+          1601,
+          1602,
+          1603,
+          1604,
+          1605,
+          1606,
+          1607,
+          1608,
+          1609,
+          1610,
+          1611,
+          1612,
+          1613,
+          1614,
+          1615,
+          1616,
+          1617,
+          1618
+        ]
+      },
+      "publicPagesChanged": 313,
+      "countsBefore": {
+        "governments": 2980,
+        "people": 2774,
+        "territories": 1041
+      },
+      "countsAfter": {
+        "governments": 2983,
+        "people": 2777,
+        "territories": 1041
+      }
+    }
+  },
+  "browser": {
+    "englishAtlasFilters": {
+      "viewportWidth": 1280,
+      "columnWidth": 280,
+      "buttonWidth": 119,
+      "horizontalOverflow": false
+    },
+    "finalPillAndDinastleVisualReview": {
+      "status": "incomplete",
+      "reason": "Browser control stopped responding after Atlas verification."
+    }
+  },
+  "githubPreviousCheck": {
+    "version": "6.0.4",
+    "run": 326,
+    "conclusion": "success",
+    "url": "https://github.com/mmm-source-create/ElArbolDeEuropa/actions/runs/43223298362"
+  }
+}

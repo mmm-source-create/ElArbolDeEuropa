@@ -46,6 +46,7 @@ const TERRITORY_SCHEMA = object({
   naturaleza: enumeration(['entidad', 'agrupacion', 'compuesta']), componentes: array(text),
   ...fields(['nota'], text), ...fields(['desde', 'hasta'], year),
   titulosDeGobierno: optional(array(text)),
+  titulosTitulares: optional(array(text)),
   etapas: optional(array(object({clase: enumeration(TERRITORY_CLASSES), desde: nullable(year), hasta: optional(year), nota: optional(text)}))),
   pertenencias: optional(array(object({territorio: text, desde: year, hasta: optional(year), nota: optional(text)}))),
 });

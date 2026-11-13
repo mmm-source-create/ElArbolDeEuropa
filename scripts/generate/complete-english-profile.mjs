@@ -32,10 +32,11 @@ export function completeEnglishProfile(source, translatedNames={}) {
   for(const n of source.documentacion?.notas||[]){translate(n.texto);if(n.campo&&!PROFILE_LABELS[n.campo])throw Error(`Missing documentation field label: ${source.id}/${n.campo}`);}
   for(const a of source.accesosCoronas||[]){translate(a.explicacion);for(const m of a.motivos||[])if(!PROFILE_LABELS[m])throw Error(`Missing accession reason: ${m}`);}
   const sections=source.biografiaExtensa||[];
-  if(sections.length!==(translation.sections||[]).length)throw Error(`Incomplete biography translation: ${source.id}`);
+  const translatedSections=(translation.sections||[]).map(part=>Array.isArray(part)?part:[part.title||part.titulo,(part.paragraphs||[part.text||part.texto]).filter(Boolean).join('\n\n')]);
+  if(sections.length!==translatedSections.length)throw Error(`Incomplete biography translation: ${source.id}`);
   const result={...source,...translation,translationComplete:true,nombre:translation.name,sobrenombre:translation.nickname||'',aliases:englishAliases(translation.aliases),searchAliases:[...(source.aliases||[]),source.nombre],resumen:translation.summary,biografia:translation.biography||translation.summary,
     englishLabels:profileLabels(source),englishNotes:notes,
-    biografiaExtensa:sections.map((part,i)=>({...part,titulo:translation.sections[i][0],texto:translation.sections[i][1]})),
+    biografiaExtensa:sections.map((part,i)=>({...part,titulo:translatedSections[i][0],texto:translatedSections[i][1]})),
     localizedClaims:personClaims(source).map(claim=>({...claim,
       note:translatedProfileText(claim.note,knownNames,claim),
       alternatives:(claim.alternatives||[]).map(text=>translatedProfileText(text,knownNames,claim)),
