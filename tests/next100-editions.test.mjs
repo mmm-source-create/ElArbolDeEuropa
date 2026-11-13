@@ -31,7 +31,7 @@ test('second 100 editions are disjoint and preserve every record, relation, biog
  for(const key of ['padres','conyuges','hijos','relacionadosDinastia','contemporaneos'])assert.deepEqual(en[key].map(p=>p.id),s[key].map(p=>p.id));
  assert(en.translationComplete&&en.summary&&en.role);assert.equal(en.biografiaExtensa.length,(s.biografiaExtensa||[]).length);sections+=en.biografiaExtensa.length;assert.equal(s.nombre,review.after.nombre);
  assert.equal(translatedEquivalent(`/en/person/${r.en}`,'es'),`/es/persona/${r.es}`);
- }assert.equal(sections,30);
+ }assert.equal(sections,33); // V6.0.5 adds Maximilian III’s three sourced chapters.
 });
 test('seven further houses retain all memberships, governments, related houses, branches and sources',async()=>{
  assert.equal(NEXT_HOUSES.length,7);const previous=new Set(REVIEWED_HOUSES.map(h=>h.key));

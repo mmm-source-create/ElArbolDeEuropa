@@ -38,7 +38,7 @@ test('las colecciones son opcionales y admiten historias compartidas', () => {
   assert.deepEqual(storyCollections('borgona'),['herencias-conflictivas']);
   assert.deepEqual(groups[2].stories.map(s=>s.id).sort(),['borgona','corona-demasiado-grande','dos-coronas-dos-hijas','dos-rosas','federico-emperador-excomulgado','mindaugas-jogaila','napoles-corona-disputada','reino-partido-dos']);
   assert.ok(groups[2].stories.every(s=>s.disponible&&s.pasos?.length));
-  assert.equal(HISTORIAS.filter(s=>s.disponible).length,32);
+  assert.equal(HISTORIAS.filter(s=>s.disponible).length,33);
   assert.equal(HISTORIAS.filter(s=>s.titulo==='El reino de los cielos').length,1);
   assert.equal(HISTORIAS.some(s=>s.id==='reino-de-los-cielos'),false);
   assert.deepEqual(HISTORIAS.filter(s=>s.revisionPendiente),[]);
@@ -67,7 +67,7 @@ test('los seis relatos conservados tienen capítulos, fuentes y enlaces al Atlas
 test('el catálogo muestra cada relato una vez, conserva progreso y localiza su interfaz', () => {
   const items=HISTORIAS.map(s=>({...s,slug:s.id}));
   const doc=new JSDOM(renderToString(React.createElement(StoryCatalog,{items,progress:{'braveheart-detras-del-mito':{last:3,read:[1,2]}}}))).window.document;
-  assert.equal(doc.querySelectorAll('.public-story-card').length,32);
+  assert.equal(doc.querySelectorAll('.public-story-card').length,33);
   assert.equal(doc.querySelectorAll('.story-coming-list li').length,9);
   assert.ok(doc.querySelector('button[aria-selected="true"]').textContent.includes('Todas'));
   assert.ok(doc.querySelector('a[href="/es/historia/braveheart-detras-del-mito/capitulo/3"]'));

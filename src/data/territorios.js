@@ -1160,6 +1160,7 @@ export const TERRITORIOS = Object.freeze({
   },
   "Prusia": {
     "clase": "reino",
+    "titulosTitulares": ["Gran maestre"],
     "naturaleza": "entidad",
     "componentes": [],
     "etapas": [

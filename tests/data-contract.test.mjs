@@ -227,3 +227,10 @@ test('los aliases de mandato retirados se rechazan incluso junto a gobiernos can
     assert(validateContracts(data).some(issue => issue.code === 'UNKNOWN_FIELD' && issue.path.endsWith('.' + field)));
   }
 });
+
+test('los títulos nominales del territorio conservan una lista explícita de etiquetas',()=>{
+ const data=fixtures();data.territories.Reino.titulosTitulares=['Gran maestre'];
+ assert.deepEqual(validateContracts(data),[]);
+ data.territories.Reino.titulosTitulares='Gran maestre';
+ assert.ok(validateContracts(data).some(issue=>issue.path.includes('titulosTitulares')));
+});

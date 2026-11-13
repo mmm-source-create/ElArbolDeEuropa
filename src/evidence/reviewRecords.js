@@ -1,3 +1,4 @@
+import {V605_REVIEWS} from './v605Reviews.js';
 import {POLISH_NEW_REVIEWS} from './polishNewReviews.js';
 import {OCTOBER_50_REVIEWS} from './october50Reviews.js';
 import {BELTRANEJA_REVIEWS} from './beltranejaReviews.js';
@@ -231,6 +232,7 @@ const identityReview = (certainty, source, note, extra = {}) => ({
 });
 
 export const CLAIM_REVIEWS = Object.freeze({
+  ...V605_REVIEWS,
   ...POLISH_NEW_REVIEWS,
   ...OCTOBER_50_REVIEWS,
   ...BELTRANEJA_REVIEWS,

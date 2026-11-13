@@ -6,9 +6,9 @@
 .ui-odometer-reel>span{display:block!important;flex:none;height:1em;line-height:1em;padding:0!important;color:inherit!important;font:inherit!important}
 .ui-odometer.is-animated .ui-odometer-reel{animation:ui-digit-roll 1.1s cubic-bezier(.16,1,.3,1) var(--delay) both}
 @keyframes ui-digit-roll{from{transform:translateY(calc((var(--digit) + 10) * -1em))}to{transform:translateY(calc(var(--digit) * -1em))}}
-.ui-segments{position:relative;display:inline-flex;align-items:center;gap:3px;padding:4px;border:1px solid var(--eade-border);border-radius:999px;background:var(--eade-paper-soft);isolation:isolate;max-width:100%}
-.ui-segments-indicator{position:absolute;top:4px;bottom:4px;border-radius:999px;background:var(--eade-paper-bright);box-shadow:0 2px 7px #2c262014;transition:left .34s cubic-bezier(.22,1,.36,1),width .34s cubic-bezier(.22,1,.36,1);pointer-events:none;z-index:-1}
-.ui-segments>button{position:relative;border:0;background:transparent;color:var(--eade-muted);padding:10px 17px;border-radius:999px;white-space:nowrap;font:600 var(--fs-sm, 12px)/1.2 var(--eade-sans);cursor:pointer;transition:color .2s}
+.ui-segments{position:relative;display:inline-flex;align-items:center;gap:3px;padding:4px;border:1px solid var(--eade-border);border-radius:999px;background:var(--eade-paper-soft);isolation:isolate;max-width:100%;box-sizing:border-box}
+.ui-segments-indicator{position:absolute;top:4px;border-radius:999px;background:var(--eade-paper-bright);box-shadow:0 2px 7px #2c262014;transition:left .34s cubic-bezier(.22,1,.36,1),width .34s cubic-bezier(.22,1,.36,1);pointer-events:none;z-index:-1}
+.ui-segments>button{position:relative;flex:0 0 auto;border:0;background:transparent;color:var(--eade-muted);padding:10px 17px;border-radius:999px;white-space:nowrap;font:600 var(--fs-sm, 12px)/1.2 var(--eade-sans);cursor:pointer;transition:color .2s}
 .ui-segments>button.is-active{color:var(--eade-wine);background:var(--eade-paper-bright)}
 .ui-segments:has(.ui-segments-indicator)>button.is-active{background:transparent}
 .ui-segments>button:focus-visible{outline:2px solid var(--eade-wine);outline-offset:2px}

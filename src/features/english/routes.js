@@ -690,7 +690,8 @@ const usedEnglishSlugs=new Set(LEGACY_TRANSLATED_PEOPLE.map(item=>item.en));
 const translatedPersonRoute=([id,name])=>{const base=slugPublico(name);const en=usedEnglishSlugs.has(base)?`${base}-${slugPublico(id)}`:base;usedEnglishSlugs.add(en);return{id,es:spanishSlugById[id],en};};
 const V6_TRANSLATED_PEOPLE=Object.entries(runtime.v6People).sort(([a],[b])=>a.localeCompare(b)).map(translatedPersonRoute);
 // Append new releases after established routes so a namesake cannot rename an old URL.
-const ADDITIONAL_TRANSLATED_PEOPLE=Object.entries(runtime.additionalPeople||{}).sort(([a],[b])=>a.localeCompare(b)).map(translatedPersonRoute);
+const existingTranslatedIds=new Set([...LEGACY_TRANSLATED_PEOPLE,...V6_TRANSLATED_PEOPLE].map(p=>p.id));
+const ADDITIONAL_TRANSLATED_PEOPLE=Object.entries(runtime.additionalPeople||{}).filter(([id])=>!existingTranslatedIds.has(id)).sort(([a],[b])=>a.localeCompare(b)).map(translatedPersonRoute);
 export const TRANSLATED_PEOPLE=[...LEGACY_TRANSLATED_PEOPLE,...V6_TRANSLATED_PEOPLE,...ADDITIONAL_TRANSLATED_PEOPLE];
 export function englishRoute(pathname) {
  const path=String(pathname).replace(/\/$/,'');

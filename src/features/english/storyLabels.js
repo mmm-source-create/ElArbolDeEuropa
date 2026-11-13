@@ -1,3 +1,4 @@
+import {STORIES_605_EN} from '../../data/historias605.js';
 import {STORY_LABELS_604} from '../../data/historias604.js';
 import {STORIES_603_EN} from '../../data/historias603.js';
 // Reviewed labels for related-story links; a label does not imply a translated narrative.
@@ -25,5 +26,6 @@ export const ENGLISH_STORY_LABELS = {
     'republica-nobles':['The Republic of Nobles','How Poland turned a hereditary monarchy into an elective crown'],
     'condotieros':['The condottieri','From mercenary companies to the Duchy of Milan'],
     ...STORY_LABELS_604,
+    ...Object.fromEntries(Object.entries(STORIES_605_EN).map(([id,{content}])=>[id,[content.titulo,content.subtitulo]])),
     ...Object.fromEntries(Object.entries(STORIES_603_EN).map(([id,{content}])=>[id,[content.titulo,content.subtitulo]])),
   };

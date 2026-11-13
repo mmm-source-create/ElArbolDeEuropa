@@ -144,3 +144,8 @@ html[data-eade-theme="dark"] .workspace-filter-clear {
 .workspace-filter-panel .segmented-control { min-width: 0; max-width: 100%; flex-wrap: wrap; }
 .workspace-toolbar-search .atlas-search-results { width: min(440px, calc(100vw - 24px)); max-width: calc(100vw - 24px); box-sizing: border-box; }
 .atlas-search-results button, .atlas-search-results a { min-width: 0; overflow-wrap: anywhere; }
+
+/* Long translated options share the available column width. */
+.workspace-filter-panel .atlas-filter-mode.ui-segments { display:grid; align-items:stretch; grid-template-columns:repeat(2,minmax(0,1fr)); width:100%; min-width:0; box-sizing:border-box; }
+.workspace-filter-panel .atlas-filter-mode.ui-segments>button { min-width:0; max-width:100%; white-space:normal; overflow-wrap:anywhere; padding:9px 8px; }
+.workspace-filter-scroll .filter-section-title, .workspace-filter-scroll .atlas-filter-heading { min-width:0; white-space:normal; overflow-wrap:anywhere; }

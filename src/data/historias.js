@@ -1,3 +1,4 @@
+import {STORIES_605_ES} from './historias605.js';
 import {reviseStories604} from './historias604.js';
 import {STORIES_603_ES} from './historias603.js';
 import {WAR_OF_ROSES_STORY} from './historiaDosRosas.js';
@@ -4596,6 +4597,7 @@ const HISTORIAS_EXISTENTES = [
   }
 ];
 const HISTORIAS_BASE = [
+  ...STORIES_605_ES,
   ...STORIES_603_ES,
   WAR_OF_ROSES_STORY,
   ...HERITAGE_STORIES,

@@ -1,3 +1,4 @@
+import {V605_PERSON_CONTENT} from './v605.js';
 import {V603_PERSON_CONTENT} from './v603.js';
 import {PEOPLE_CONTENT_602} from './v602.js';
 import {POLISH_PERSON_CONTENT} from './polonia-tanda3.js';
@@ -75,6 +76,7 @@ export const PERSONA_CONTENT = Object.freeze({
   ...AMPLIACION_EDITORIAL,
   ...CASTIGLIONE_CONTENT,
   ...V603_PERSON_CONTENT,
+  ...V605_PERSON_CONTENT,
 });
 
 export function contenidoPersona(personaOId) {
