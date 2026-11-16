@@ -54,7 +54,8 @@
     "prepare:cloudflare": "node scripts/prepare-cloudflare.mjs",
     "preview:cloudflare": "wrangler dev --config wrangler.jsonc",
     "check:cloudflare": "wrangler deploy --config wrangler.jsonc --dry-run",
-    "deploy:cloudflare:preview": "wrangler deploy --config wrangler.jsonc"
+    "deploy:cloudflare:preview": "wrangler deploy --config wrangler.jsonc",
+    "deploy:cloudflare:production": "wrangler deploy --config wrangler.jsonc --env production"
   },
   "dependencies": {
     "@vercel/speed-insights": "2.0.0",

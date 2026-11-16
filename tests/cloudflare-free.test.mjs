@@ -60,3 +60,12 @@ test('fallback routes return real errors and API/POST requests do not become suc
  const embed=await worker.fetch(new Request(url('/embed/arbol')),env);assert.equal(embed.status,200);assert.equal(embed.headers.get('X-Frame-Options'),null);
  const redirect=await worker.fetch(new Request(url('/es/dinastia/ivrea?atlas=1')),env);assert.equal(redirect.status,308);assert.equal(redirect.headers.get('Location'),'https://example.test/es/dinastia/ivrea-borgona?atlas=1');
 });
+
+test('production is explicit, limited to the owned domains, and temporary hosts remain noindex',async()=>{
+ assert.equal(config.env.production.name,'el-arbol-de-europa');
+ assert.equal(config.env.production.vars.DEPLOYMENT_ENV,'production');
+ assert.deepEqual(config.env.production.routes.map(r=>r.pattern).sort(),['treeofeurope.eu','www.treeofeurope.eu']);
+ assert(config.env.production.routes.every(r=>r.custom_domain===true));
+ const response=await worker.fetch(new Request('https://example.workers.dev/embed/arbol'),{...env,DEPLOYMENT_ENV:'production'});
+ assert.equal(response.headers.get('X-Robots-Tag'),'noindex, nofollow');
+});

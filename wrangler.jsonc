@@ -84,5 +84,23 @@
   },
   "observability": {
     "enabled": false
+  },
+  "env": {
+    "production": {
+      "name": "el-arbol-de-europa",
+      "vars": {
+        "DEPLOYMENT_ENV": "production"
+      },
+      "routes": [
+        {
+          "pattern": "www.treeofeurope.eu",
+          "custom_domain": true
+        },
+        {
+          "pattern": "treeofeurope.eu",
+          "custom_domain": true
+        }
+      ]
+    }
   }
 }

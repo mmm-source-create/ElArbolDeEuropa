@@ -6,7 +6,7 @@ function secure(response, request, env) {
   headers.set('X-EADE-Routing', 'compatibility-worker');
   for (const [key, value] of securityHeaders(new URL(request.url).pathname)) headers.set(key, value);
   if (/^\/embed\/(?:persona\/[^/]+\/?|arbol\/?)$/.test(new URL(request.url).pathname)) headers.delete('X-Frame-Options');
-  if (env.DEPLOYMENT_ENV !== 'production') headers.set('X-Robots-Tag', 'noindex, nofollow');
+  if (env.DEPLOYMENT_ENV !== 'production' || new URL(request.url).hostname.endsWith('.workers.dev')) headers.set('X-Robots-Tag', 'noindex, nofollow');
   return new Response(request.method === 'HEAD' ? null : response.body, {status: response.status, statusText: response.statusText, headers});
 }
 

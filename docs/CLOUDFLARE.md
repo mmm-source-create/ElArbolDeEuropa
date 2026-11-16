@@ -38,3 +38,11 @@ Fuentes oficiales consultadas el 16 de noviembre de 2026:
 - [Límites de Workers](https://developers.cloudflare.com/workers/platform/limits/).
 - [Tratamiento de URLs HTML](https://developers.cloudflare.com/workers/static-assets/routing/advanced/html-handling/).
 - [Límites de Pages](https://developers.cloudflare.com/pages/platform/limits/).
+
+## Dominio de producción
+
+El entorno `production` usa el Worker `el-arbol-de-europa` y declara únicamente `treeofeurope.eu` y `www.treeofeurope.eu` como dominios propios. El comando explícito es `npm run deploy:cloudflare:production`; el comando de prueba sigue sin asociar dominios. Los hosts `workers.dev` conservan `noindex` incluso en ese entorno.
+
+El 16 de noviembre se confirmó que el dominio usa OVH y mantiene DNSSEC activo. Se compararon sus quince registros con los de Cloudflare: dos son los servidores NS antiguos y trece corresponden a la web, verificaciones y correo. El escaneo automático omitió los dos CNAME de DKIM y el SRV de autodetección de Zimbra; se añadieron como DNS only. Los MX y las verificaciones se conservaron.
+
+Los nuevos servidores asignados son `garret.ns.cloudflare.com` y `melina.ns.cloudflare.com`. No deben sustituir a los de OVH mientras siga vigente la firma DNSSEC anterior. La desactivación temporal y posterior reactivación de DNSSEC requiere autorización y respetar el TTL anterior, que puede llegar a 24 horas. Una firma DS antigua en caché produce SERVFAIL al validar claves del nuevo proveedor. No se trasladan el registro ni la renovación del dominio, y no se contratan planes de pago.
