@@ -18,6 +18,7 @@ const minifyJsonAssets = () => ({
 // The cartographic laboratory is a real published entry, with its source
 // imports and map assets bundled by the same build as the Atlas.
 export default defineConfig({
+  publicDir: process.env.VITE_HOSTING_PROVIDER === 'cloudflare' ? false : 'public',
   plugins: [minifyJsonAssets()],
   build: {
     // Public profiles and the Atlas share chunks. Keep module initialization

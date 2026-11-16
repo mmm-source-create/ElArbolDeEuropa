@@ -1,4 +1,5 @@
 import {injectSpeedInsights} from '@vercel/speed-insights';
+import {IS_CLOUDFLARE} from './hosting.js';
 
 // Los filtros, las búsquedas y las semillas de los desafíos no son métricas.
 export function metricWithoutParameters(event) {
@@ -10,6 +11,7 @@ export function metricWithoutParameters(event) {
 }
 
 export function startSpeedInsights() {
+  if (IS_CLOUDFLARE) return;
   // El SDK evita insertar el script una segunda vez. Fuera del árbol React,
   // cubre tanto la hidratación SSG como el arranque dinámico y StrictMode.
   return injectSpeedInsights({framework: 'react', beforeSend: metricWithoutParameters});

@@ -47,3 +47,12 @@ __pycache__/
 
 # Caché de la revisión bibliográfica (scripts/research/authority-review).
 .cache/
+
+# Disposable Cloudflare deployment output and local development state.
+.cloudflare/
+.wrangler/
+.dev.vars
+
+# Local duplicate build/generated folders are not publication sources.
+dist 2/
+public/* 2/

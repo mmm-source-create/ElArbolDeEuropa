@@ -49,7 +49,12 @@
     "audit:royal-successions": "node scripts/audits/audit-royal-successions.mjs",
     "audit:names": "node scripts/audits/audit-person-names.mjs",
     "pretest": "node scripts/generate/generate-english-v6-runtime.mjs && node scripts/generate/generate-tree-base.mjs && node scripts/generate/generate-territorios.mjs && node scripts/generate/generate-dinastias.mjs && node scripts/generate/generate-historias.mjs && node scripts/generate/generate-english.mjs && node scripts/generate/generate-home-search.mjs",
-    "audit:stories": "node scripts/audits/audit-story-editorial.mjs"
+    "audit:stories": "node scripts/audits/audit-story-editorial.mjs",
+    "build:cloudflare": "node scripts/build-cloudflare.mjs",
+    "prepare:cloudflare": "node scripts/prepare-cloudflare.mjs",
+    "preview:cloudflare": "wrangler dev --config wrangler.jsonc",
+    "check:cloudflare": "wrangler deploy --config wrangler.jsonc --dry-run",
+    "deploy:cloudflare:preview": "wrangler deploy --config wrangler.jsonc"
   },
   "dependencies": {
     "@vercel/speed-insights": "2.0.0",
@@ -64,6 +69,7 @@
   },
   "devDependencies": {
     "jsdom": "30.0.1",
-    "sharp": "0.35.5"
+    "sharp": "0.35.5",
+    "wrangler": "4.163.0"
   }
 }

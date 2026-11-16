@@ -85,3 +85,6 @@ El ZIP complementario contiene solo archivos añadidos o modificados. Si una act
 Las historias, sus capítulos y las fichas individuales se publican con contenido y metadatos en el HTML inicial. El Atlas, los desafíos, los catálogos y las portadas conservan su arranque dinámico; las fichas públicas prerenderizadas cargan módulos según su tipo. `sitemap.xml` y `sitemap-full.xml` se generan con las mismas rutas y ambas URL siguen disponibles. La indexación se supervisa en Google Search Console.
 
 El código y los contenidos originales conservan **todos los derechos reservados**: [COPYRIGHT.md](COPYRIGHT.md). Las imágenes, la cartografía y otros materiales de terceros conservan sus atribuciones y condiciones.
+
+La publicación gratuita en Cloudflare se prepara en paralelo; las instrucciones,
+los límites y las comprobaciones están en [docs/CLOUDFLARE.md](docs/CLOUDFLARE.md).
