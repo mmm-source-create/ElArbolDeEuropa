@@ -1,0 +1,102 @@
+{
+  "version": "6.0.6",
+  "ssg": {
+    "version": "6.0.6",
+    "expected": 9524,
+    "counts": {
+      "persona": 2777,
+      "dinastia": 521,
+      "territorio": 1041,
+      "historia": 418,
+      "english": 4767
+    },
+    "errors": []
+  },
+  "stories": {
+    "version": "6.0.6",
+    "stories": 42,
+    "completeStories": 42,
+    "plannedStories": 0,
+    "chapters": 376,
+    "newStories": 9,
+    "newChapters": 66,
+    "reviewedLocations": 114,
+    "builtPages": 836,
+    "localizedChanges": 226,
+    "errors": []
+  },
+  "english": {
+    "people": 2777,
+    "completeStories": 42,
+    "plannedStories": 0,
+    "errors": 0
+  },
+  "buildAudits": {
+    "exitCode": 0,
+    "territorialErrors": 0,
+    "existingTerritorialWarnings": 18
+  },
+  "tests": {
+    "fullInitial": {
+      "total": 744,
+      "passed": 743,
+      "failed": 1
+    },
+    "initialFailure": "The heritage recommendation test still expected the Dutch Revolt story to be in preparation.",
+    "initialFailuresResolved": 1,
+    "finalRuns": [
+      {
+        "log": "606-retest.log",
+        "passed": 8,
+        "failed": 0,
+        "scope": "Heritage recommendations and the new bilingual stories/editorial policy"
+      },
+      {
+        "log": "606-baseline-test.log",
+        "passed": 6,
+        "failed": 0,
+        "scope": "Regression snapshot contract after the reviewed baseline update"
+      }
+    ],
+    "fullSuiteRerunAfterTestCorrection": false
+  },
+  "security": {
+    "repositoryIssues": 0,
+    "vulnerabilities": 0
+  },
+  "regression": {
+    "years": 601,
+    "freshDataDifferences": 0,
+    "freshPublicDifferences": 0,
+    "spanishPublicPages": 4757,
+    "reviewedChanges": {
+      "historicalDataUnchanged": true,
+      "peopleUnchanged": true,
+      "territoriesUnchanged": true,
+      "geometryUnchanged": true,
+      "yearSnapshotsUnchanged": true,
+      "publicPagesAdded": 150,
+      "publicPagesRemoved": 0,
+      "existingPublicPagesChanged": 873,
+      "publicCountsBefore": {
+        "dinastia": 521,
+        "english": 4692,
+        "historia": 343,
+        "persona": 2777,
+        "territorio": 1041
+      },
+      "publicCountsAfter": {
+        "dinastia": 521,
+        "english": 4767,
+        "historia": 418,
+        "persona": 2777,
+        "territorio": 1041
+      },
+      "reason": "6.0.6: publicación bilingüe de nueve historias y 66 capítulos; revisión de 114 localizaciones de las historias anteriores, con conservación de sus 310 capítulos y enlaces. Se mantienen personas, parentescos, gobiernos y geometrías. Revisión y fuentes en docs/editorial/historias-6.0.6.md."
+    }
+  },
+  "browser": {
+    "status": "not-run",
+    "scope": "Content-only release. All 836 built story indexes and chapters were checked against their reviewed source text; no new interactive UI was introduced."
+  }
+}

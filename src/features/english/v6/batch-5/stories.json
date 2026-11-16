@@ -231,7 +231,7 @@
       "titulo": "The Nobles’ Republic",
       "subtitulo": "How Poland turned a hereditary monarchy into an elective crown",
       "disponible": true,
-      "descripcion": "The Polish–Lithuanian Commonwealth became a monarchy in which kings were elected, compelled to negotiate and expected to govern alongside an exceptionally powerful nobility. From the last Jagiellons through international elections, the Vasas, Sobieski and the Wettins, this story follows that system to its final attempt at reform in 1791.",
+      "descripcion": "The Jagiellons, international elections and the reforms of 1791 transform Poland-Lithuania’s government. Kings, magnates and assemblies negotiate laws, taxes and successions in a monarchy sustained by noble privileges.",
       "pasos": [
         {
           "anio": 1506,
@@ -241,8 +241,8 @@
             "ALEJANDRO1POL",
             "CASI4"
           ],
-          "titulo": "A hereditary monarchy already built on negotiation",
-          "texto": "When Sigismund the Old succeeds his brother Alexander, the crown remains in Jagiellon hands but does not pass by automatic inheritance. For generations, kings and nobles have exchanged recognition of the dynasty for political privileges. The Nobles’ Republic grows out of rights and institutions developed within the monarchy itself."
+          "titulo": "The Jagiellons negotiate recognition of their heirs",
+          "texto": "Sigismund the Old succeeds his brother Alexander in 1506. Jagiellonian continuity rests on agreements with nobles, who connect recognition of heirs with their privileges. Assemblies’ rights and negotiations with magnates shape legislation, taxes and dynastic decisions."
         },
         {
           "anio": 1569,
@@ -254,7 +254,7 @@
           ],
           "eventoId": "LUBLIN_1569",
           "titulo": "Lublin: the union no longer depends on one family",
-          "texto": "Sigismund II Augustus has no children. The Union of Lublin binds Poland and Lithuania into a closer political commonwealth just as the Jagiellon dynasty approaches its end. The central question is no longer which son will inherit, but how both realms will choose their next king together."
+          "texto": "Sigismund II Augustus has no children. The Union of Lublin brings Poland and Lithuania closer in 1569 and establishes common election of the ruler. A shared Sejm organises noble participation while each territory retains its own institutions. The next succession must gather support from both parts of the Commonwealth."
         },
         {
           "anio": 1573,
@@ -264,8 +264,8 @@
             "ANAJAG"
           ],
           "eventoId": "ELECCION_1573",
-          "titulo": "Anyone may aspire to the crown",
-          "texto": "The first free election brings Henry of Valois, brother of the French king, to the throne. Before accepting the crown he must swear to permanent limits on royal authority. The paradox is immediate: a foreign prince gains one of Europe’s great crowns, but politically that crown belongs to those who elected him."
+          "titulo": "Henry of Valois wins election",
+          "texto": "The election of 1573 favours Henry of Valois, the French king’s brother. His candidacy gathers sufficient noble and diplomatic support to obtain the crown. Electors make recognition conditional on swearing to the Commonwealth’s safeguards and the commitments negotiated with the candidate. Henry is crowned at Kraków in 1574."
         },
         {
           "anio": 1576,
@@ -277,7 +277,7 @@
           ],
           "eventoId": "BATHORY_1576",
           "titulo": "A Jagiellon queen and a prince of Transylvania",
-          "texto": "Henry leaves Poland to become king of France. Anna Jagiellon is elected, and Stephen Báthory, prince of Transylvania, rules beside her. Dynastic blood and election by the noble estate are combined in a form that almost no other major European monarchy can imitate."
+          "texto": "Henry leaves Poland to become king of France. Anna Jagiellon is elected and marries Stephen Báthory, prince of Transylvania, who governs alongside her. Anna’s ancestry and the couple’s electoral support sustain a new succession settlement."
         },
         {
           "anio": 1587,
@@ -289,7 +289,7 @@
           ],
           "eventoId": "VASA_POLONIA_1587",
           "titulo": "Election creates another dynasty",
-          "texto": "Sigismund III Vasa is a grandson of Sigismund the Old through his mother, Catherine Jagiellon, and heir to the Swedish throne through his father. His election seems to reconcile continuity with political liberty. Three Vasas will be elected in succession, showing that an elective monarchy can behave like a dynasty for decades without ceasing to be elective."
+          "texto": "Sigismund III Vasa is Sigismund the Old’s grandson through his mother Catherine Jagiellon and Sweden’s heir through his father. His election connects the former dynasty’s ancestry with a new candidacy. After him, electors will choose his sons Władysław and John Casimir, negotiating each king’s commitments to the Commonwealth at every succession."
         },
         {
           "anio": 1632,
@@ -300,7 +300,7 @@
             "JUAN2CASIVASA"
           ],
           "titulo": "Władysław IV: a succession that looks hereditary",
-          "texto": "After Sigismund III dies, the nobility elects his son Władysław IV. Election has not been abolished, yet family continuity works in practice. The nobles can accept a member of the reigning house while still demanding commitments from him before recognising him as king."
+          "texto": "When Sigismund III dies, the nobility elects his son Władysław IV in 1632. Electors accept family continuity and negotiate commitments before recognising the new king. Succession retains the elective monarchy’s procedures and safeguards."
         },
         {
           "anio": 1668,
@@ -312,7 +312,7 @@
           ],
           "eventoId": "ABDICACION_1668",
           "titulo": "Abdication breaks the Vasa succession",
-          "texto": "John II Casimir, Władysław’s brother, endures rebellion, Swedish invasion and prolonged political crisis before abdicating. With no inevitable dynastic heir, the election of 1669 chooses Michał Korybut Wiśniowiecki, a candidate from the native nobility. The crown shows how abruptly it can leave one of Europe’s great houses."
+          "texto": "John II Casimir, Władysław’s brother, faces rebellions, Swedish invasions and a prolonged political crisis. He abdicates in 1668. The election of 1669 brings Michael Korybut Wiśniowiecki, a member of the Commonwealth’s nobility, to the throne. Supporters of different candidates seek backing from electors and neighbouring powers."
         },
         {
           "anio": 1683,
@@ -324,7 +324,7 @@
           ],
           "eventoId": "VIENA_1683",
           "titulo": "Sobieski: an elected king saves Vienna",
-          "texto": "John Sobieski reaches the throne by election rather than membership of a reigning dynasty. In 1683 he leads the army that relieves Vienna and becomes one of Europe’s most celebrated monarchs. The Nobles’ Republic can produce a king of immense prestige; what it cannot guarantee is that his sons will inherit his crown."
+          "texto": "John Sobieski obtains the crown by election. In 1683 he commands the relief army at Vienna and gains prestige at European courts. His family seeks to turn that support and its marriage alliances into a base for the next succession. After his death, his descendants’ candidacies compete with princes backed by other powers."
         },
         {
           "anio": 1697,
@@ -349,7 +349,7 @@
           ],
           "eventoId": "DOBLE_ELECCION_1733",
           "titulo": "Two elected kings, one European war",
-          "texto": "When Augustus II dies, Stanisław Leszczyński and Augustus III attract rival coalitions. France supports the first; Russia and Austria support the second. An election intended to express the nobility’s political freedom becomes an international contest backed by armies."
+          "texto": "After Augustus II’s death, Stanisław Leszczyński and Augustus III receive rival support. France favours the former; Russia and Austria sustain the latter. Armies intervene to impose their candidates and the dispute spreads to other European theatres."
         },
         {
           "anio": 1764,
@@ -361,7 +361,7 @@
           ],
           "eventoId": "PONIATOWSKI_1764",
           "titulo": "The last king tries to reform the Commonwealth",
-          "texto": "Stanisław August Poniatowski is elected in a system whose formal liberty now coexists with overwhelming Russian pressure. The king and part of the political elite nevertheless try to rebuild the state. The great question of the eighteenth century is whether noble liberty can be transformed before it hardens into paralysis."
+          "texto": "Stanisław August Poniatowski is elected under strong Russian pressure. The king and part of the elite promote changes in administration, education and the Commonwealth’s institutions. These proposals bring noble interests, reform projects and neighbouring powers’ interventions into conflict."
         },
         {
           "anio": 1791,
@@ -372,7 +372,7 @@
           ],
           "eventoId": "CONSTITUCION_1791",
           "titulo": "The Commonwealth tries to abolish the elective crown",
-          "texto": "The Constitution of 3 May abolishes the liberum veto and plans to replace the election of each new king with hereditary succession in the House of Saxony. After more than two centuries, the Commonwealth’s reformers conclude that the mechanism once used to protect political liberty can also prevent the state from surviving."
+          "texto": "The Constitution of 3 May abolishes the liberum veto and provides for hereditary succession linked to the Saxon dynasty. Reformers strengthen the instruments of common government and change the conditions for transmitting the crown. Reform provokes opposition from noble groups and affects the interests of powers intervening in the Commonwealth."
         },
         {
           "anio": 1795,
@@ -383,8 +383,8 @@
             "FREDWIL2PRU"
           ],
           "eventoId": "FIN_POLONIA_1795",
-          "titulo": "The end: no crown remains to be elected",
-          "texto": "The Third Partition extinguishes the Commonwealth, and Stanisław August abdicates. A story that began with a dynasty negotiating privileges ends with Russia, Prussia and Austria dividing its territory. The Nobles’ Republic was an extraordinarily durable anomaly: a monarchy that made the election of its king central to its idea of freedom."
+          "titulo": "The third partition and abdication",
+          "texto": "The third partition of 1795 extinguishes the Commonwealth and Stanisław August abdicates. Russia, Prussia and Austria divide its remaining territories and incorporate their inhabitants into other governments. The Commonwealth’s institutions lose the capacity to exercise common sovereignty."
         }
       ],
       "colecciones": []
@@ -397,7 +397,7 @@
       "titulo": "Machiavelli’s Favourites",
       "subtitulo": "Models, warnings and lessons in power from The Prince",
       "disponible": true,
-      "descripcion": "A journey through the rulers and contemporaries whom Machiavelli turned into political lessons: how to conquer and preserve power, how to lose it, how to manage appearances, take risks and build a reputation in the Italy of his day.",
+      "descripcion": "Machiavelli analyses rulers’ and contemporaries’ decisions in The Prince. Conquest, alliances, arms and reputation feature in his study of acquiring and retaining power.",
       "pasos": [
         {
           "anio": 1450,
@@ -504,7 +504,7 @@
           ],
           "eventoId": "PRINCIPE_DEDICACION_1516",
           "titulo": "Lorenzo de’ Medici: the dedicatee of The Prince",
-          "texto": "The journey ends with an irony. The treatise was initially intended for Giuliano de’ Medici, but after his death the dedication passed to the younger Lorenzo. Machiavelli offers him lessons drawn from Sforza, the Borgias, France, the papacy and Ferdinand. The book will far outlive the political opportunity for which it was written."
+          "texto": "The Prince was initially conceived for Giuliano de’ Medici; its final dedication addresses Lorenzo II. Machiavelli offers an analysis of acquiring and retaining power through cases including Sforza, the Borgias, the French kings, the papacy and Ferdinand the Catholic. The treatise circulates beyond the political circumstances in which its author sought to regain a place in Florentine government."
         }
       ],
       "contexto": "The prince analyzes the decisions and resources with which the rulers gain and preserve power. The popular sense of \"Machiavelic\" is also part of the reception of the work.",

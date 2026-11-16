@@ -16,7 +16,7 @@
             "OTTO4HRE"
           ],
           "titulo": "Frederick II: an emperor who still thinks in universal terms",
-          "texto": "At the beginning of the thirteenth century, the imperial title still carried a universal ambition tied to the Roman legacy. Frederick II ruled Germany, Sicily and Italy and remained in constant conflict with the papacy. His power appeared immense, but it depended on a network of princes, cities and rights that no emperor controlled completely."
+          "texto": "In the early thirteenth century, imperial dignity retains a universal ambition connected with the Roman legacy. Frederick II combines it with the Sicilian crown and sustains a prolonged conflict with the papacy. Exercising authority in Germany and Italy depends on agreements with princes and towns, local rights and the resources he can mobilise for his campaigns."
         },
         {
           "anio": 1254,
@@ -29,7 +29,7 @@
             "ALF10"
           ],
           "eventoId": "INTERREGNO_IMPERIAL_1250",
-          "titulo": "When a dynasty is absent, the Empire’s true nature emerges",
+          "titulo": "The interregnum and rival elections",
           "texto": "The fall of the Hohenstaufen opened decades of rival elections. The princes could choose candidates from different houses and kingdoms, including William of Holland, Richard of Cornwall and Alfonso X of Castile. The Great Interregnum exposed the weakness of central power."
         },
         {
@@ -41,7 +41,7 @@
           ],
           "eventoId": "RODOLFO_1273",
           "titulo": "Rudolf I: the Habsburgs enter the stage",
-          "texto": "The electors chose Rudolf of Habsburg, a count far less threatening than the great neighbouring kings. Their calculation only partly succeeded: Rudolf defeated Ottokar II of Bohemia and placed Austria and Styria in his family’s hands. Habsburg hegemony had not yet begun, but its territorial foundation had been laid."
+          "texto": "The electors choose Rudolf of Habsburg. The new king defeats Ottokar II of Bohemia and places Austria and Styria in his family’s hands. These lands give the Habsburgs revenues, strategic positions and a hereditary base from which they will participate in subsequent imperial elections."
         },
         {
           "anio": 1312,
@@ -51,7 +51,7 @@
             "LUIS4"
           ],
           "titulo": "Luxembourg and Wittelsbach: the throne remains open",
-          "texto": "Henry VII of Luxembourg secured an imperial coronation; after his death, Louis IV of Bavaria again demonstrated that no house possessed the title by hereditary right. Imperial dignity was elective, and several dynasties competed for the support of the prince-electors."
+          "texto": "Henry VII of Luxembourg obtains imperial coronation. After his death, Louis IV of Bavaria’s election brings the Wittelsbachs to the throne. Princely dynasties seek the electors’ support through alliances, promises and their own territorial resources."
         },
         {
           "anio": 1356,
@@ -73,7 +73,7 @@
             "ALB2HABS"
           ],
           "titulo": "Sigismund: the last great Luxembourg emperor",
-          "texto": "Sigismund combined the crowns of Hungary, Bohemia and Germany and attained the imperial dignity. His succession, however, passed through his daughter to Albert II of Habsburg. The Empire’s dynastic centre began to shift decisively."
+          "texto": "Sigismund combines the crowns of Hungary, Bohemia and Germany and receives imperial coronation in 1433. His daughter Elizabeth marries Albert of Habsburg, who inherits the family’s expectations in Hungary and Bohemia and is elected King of the Romans. Marriage and election together strengthen the Austrian dynasty’s position."
         },
         {
           "anio": 1452,
@@ -95,7 +95,7 @@
           ],
           "eventoId": "REFORMA_IMPERIAL_1495",
           "titulo": "Maximilian I: reforming the Empire and multiplying inheritances",
-          "texto": "Maximilian promoted institutional reform while his marriage to Mary of Burgundy brought the Low Countries and the Burgundian inheritance into the Habsburg network. The emperor was still not an absolute monarch, but his dynasty was beginning to operate on a continental scale."
+          "texto": "Maximilian promotes reforms of imperial justice and government. His marriage to Mary of Burgundy connects the Habsburgs with the Low Countries and the Burgundian inheritance. Negotiations with the imperial estates accompany the expansion of his family’s resources and alliances."
         },
         {
           "anio": 1519,
@@ -106,8 +106,8 @@
             "FRED3SAX"
           ],
           "eventoId": "ELECCION_CARLOS5_1519",
-          "titulo": "Charles V: an election that seems to create a universal monarchy",
-          "texto": "Grandson of Maximilian and heir to Castile, Aragon and Burgundy, Charles competed for and won the imperial crown. He joined the Habsburg inheritance, the Spanish crowns and the Burgundian territories, then added the imperial dignity. Yet this accumulation of crowns also made it impossible to govern every European problem as though it were one."
+          "titulo": "Charles V combines several inheritances and wins election",
+          "texto": "Maximilian’s grandson and heir to the Spanish crowns and Burgundian lands, Charles competes for imperial dignity and wins in 1519. His dominions retain different institutions, resources and obligations. Wars with France, Germany’s religious conflict and Mediterranean defence oblige him to negotiate troops, money and priorities continually among his governments."
         },
         {
           "anio": 1556,
@@ -119,7 +119,7 @@
           ],
           "eventoId": "ABDICACION_CARLOS",
           "titulo": "Charles’s inheritance is divided",
-          "texto": "Charles transferred the Spanish and Burgundian realms to Philip II, while Ferdinand I received the Austrian branch and imperial continuity. From this point, speaking of “the Habsburgs” requires distinguishing two related networks: Madrid and Vienna."
+          "texto": "Charles’s abdications give Philip II the Spanish crowns and Burgundian lands. Ferdinand, already governing the Austrian dominions, succeeds him in imperial dignity. The two branches retain family connections and alliances, with their own courts and resources in Madrid and Vienna."
         },
         {
           "anio": 1619,
@@ -152,7 +152,7 @@
             "CARLOS6HRE"
           ],
           "titulo": "Two brothers and one problem: succession",
-          "texto": "Leopold I left two sons who reached the throne. Joseph I died in 1711 without a male heir, and the crown passed to Charles VI. The dynasty that seemed to have solved the imperial succession discovered that its own biological continuity was again a European question."
+          "texto": "Leopold I leaves two sons who reach the imperial throne. Joseph I dies in 1711 without a male heir and the electors choose his brother Charles. Joseph’s death coincides with the Spanish succession war, in which Charles claims the crown in Madrid. Combining that candidacy with imperial dignity changes the balance among his allies."
         },
         {
           "anio": 1713,
@@ -162,7 +162,7 @@
             "MARIATERESAHAB"
           ],
           "eventoId": "PRAGMATICA_1713",
-          "titulo": "Charles VI prepares an heiress who cannot be emperor",
+          "titulo": "The Pragmatic Sanction and the Austrian inheritance",
           "texto": "The Pragmatic Sanction sought to ensure that a woman could inherit the Habsburg lands. Maria Theresa could rule Austria, Bohemia and Hungary, but the imperial crown remained reserved for an elected man. That distinction opened an enormous crisis in 1740."
         },
         {
@@ -175,7 +175,7 @@
           ],
           "eventoId": "CARLOS7_1742",
           "titulo": "Charles VII: a Wittelsbach attains the imperial dignity",
-          "texto": "Charles Albert of Bavaria, married to a daughter of Joseph I, exploited the succession crisis to obtain the imperial crown. A Wittelsbach occupied the throne for three years—powerful evidence that Habsburg hegemony was political and dynastic, never automatic in law."
+          "texto": "Charles Albert of Bavaria, married to Joseph I’s daughter, exploits the succession crisis and gathers support for his imperial election. He reigns as Charles VII for three years while his opponents occupy Bavaria and war threatens his resources. The dispute over Maria Theresa’s dominions and the imperial election draw several princely dynasties into conflict."
         },
         {
           "anio": 1745,
@@ -199,7 +199,7 @@
           ],
           "eventoId": "JOSE2_1765",
           "titulo": "Joseph II wants to govern faster than the Empire",
-          "texto": "Joseph II inherited the imperial dignity and later his mother’s lands. His reform programme sought administrative uniformity, religious toleration and the subordination of ecclesiastical corporations. It met limits in the distinct rights and institutions of the territories he ruled."
+          "texto": "Joseph II, elected King of the Romans, succeeds his father in imperial dignity in 1765. In 1780 he receives Maria Theresa’s dominions. His programme seeks administrative uniformity, religious toleration and the subordination of ecclesiastical corporations. The measures provoke resistance in territories defending their rights and institutions."
         },
         {
           "anio": 1790,
@@ -210,8 +210,8 @@
             "MARIAANTONIETA"
           ],
           "eventoId": "REVOLUCION_FRANCESA_1789",
-          "titulo": "Leopold II inherits an Empire facing revolution",
-          "texto": "Leopold succeeded his brother just as the French Revolution threatened Europe’s dynastic order and their sister Marie Antoinette was trapped in Paris. The imperial problem was no longer only how to balance German princes, but how to answer a new idea of sovereignty."
+          "titulo": "Leopold II faces the French Revolution",
+          "texto": "Leopold succeeds his brother in 1790 as the French Revolution threatens Europe’s dynastic order and his sister Marie Antoinette remains in France. He must address conflicts in the Habsburg dominions, negotiate with the imperial princes and decide how to respond to France’s political transformation."
         },
         {
           "anio": 1792,
@@ -223,7 +223,7 @@
           ],
           "eventoId": "FRANCISCO2_1792",
           "titulo": "Francis II and the Revolutionary Wars",
-          "texto": "Francis II ascended the throne in 1792 and immediately entered the age of revolutionary war. In 1800 the Holy Roman Empire retained its institutions while the French Revolutionary Wars transformed the balance among the German territories. Six centuries after Frederick II, the imperial title remained recognisable yet meant something entirely different."
+          "texto": "Francis II accedes in 1792 and his government participates in the wars against revolutionary France. In 1800 the Holy Roman Empire retains its institutions as French campaigns change the balance among German territories. Defence of the Habsburg dominions and agreements with the other imperial estates shape his decisions."
         }
       ],
       "colecciones": []
@@ -257,7 +257,7 @@
           ],
           "eventoId": "BARBIANO_1379",
           "titulo": "Italians learn the trade",
-          "texto": "Alberico da Barbiano represented a new generation of Italian captains. The condotta was no longer simply the hiring of a foreign company: a system of military schools, patronage networks and personal loyalties grew around leading commanders."
+          "texto": "Alberico da Barbiano leads a company bringing together Italian captains. Professional connections, patronage and loyalties form around him, helping to obtain contracts and sustain command. His pupils and servants will transmit those connections to the next generation of commanders."
         },
         {
           "anio": 1416,
@@ -291,7 +291,7 @@
           ],
           "eventoId": "CARMAGNOLA_1432",
           "titulo": "The employer also fears his general",
-          "texto": "Carmagnola first served Milan and then Venice. His career exposed the condotta’s central contradiction: a captain had to be powerful enough to win wars, but the more powerful he became, the more dangerous he appeared to his employer. Venice eventually accused him of treason and executed him."
+          "texto": "Carmagnola serves Milan and then Venice. Victories and contacts make him an influential commander, while the Venetian government distrusts his negotiations and military conduct. In 1432 it accuses him of treason and executes him."
         },
         {
           "anio": 1438,
@@ -312,8 +312,8 @@
             "FELMARVISC"
           ],
           "eventoId": "BODA_SFORZA_VISCONTI_1441",
-          "titulo": "A marriage is worth more than a victory",
-          "texto": "Francesco Sforza married Bianca Maria Visconti, daughter of Filippo Maria. The captain of fortune suddenly possessed something military contracts alone could not give him: a dynastic route to Milan."
+          "titulo": "Francesco and Bianca Maria’s marriage",
+          "texto": "In 1441 Francesco Sforza marries Bianca Maria Visconti, Filippo Maria’s daughter. Marriage connects the captain with the ducal family and strengthens his expectations of succeeding in Milan. Defending that connection combines with his armies and the agreements he negotiates within the duchy."
         },
         {
           "anio": 1450,
@@ -324,7 +324,7 @@
           ],
           "eventoId": "SFORZA_DUQUE_1450",
           "titulo": "The condottiero who becomes a prince",
-          "texto": "In 1450 Francesco Sforza entered Milan as duke. It was the clearest triumph of condottiero logic: military force, negotiation and marriage combined to create a dynasty that would rule one of Italy’s principal powers."
+          "texto": "In 1450 Francesco Sforza enters Milan and receives the city’s recognition as duke. The new dynasty brings together his military forces, Bianca Maria’s Visconti inheritance and agreements with local elites. The couple retains ducal servants and institutions and seeks allies to defend its government."
         },
         {
           "anio": 1454,
@@ -336,7 +336,7 @@
           ],
           "eventoId": "LODI_1454",
           "titulo": "Sforza’s success changes the rules",
-          "texto": "The Peace of Lodi stabilised the balance among the great Italian states. Paradoxically, Sforza’s triumph served as a warning: republics and princes now had even more reason to prevent another mercenary commander from accumulating power and becoming sovereign."
+          "texto": "The Peace of Lodi stabilises relations between Milan and Venice in 1454. Sforza sustains his government through alliances, fiscal resources and troops serving the duchy. The subsequent Italian League brings the principal states into a defensive agreement intended to contain further wars and preserve the territorial balance."
         },
         {
           "anio": 1474,
@@ -347,7 +347,7 @@
             "BATTISTASFORZA"
           ],
           "titulo": "The Renaissance condottiero",
-          "texto": "Federico da Montefeltro combined his military profession with government and extraordinary cultural patronage. His rivalry with Sigismondo Pandolfo Malatesta shows how a condottiero could simultaneously be general, prince, diplomat and architect of a carefully fashioned public image."
+          "texto": "Federico da Montefeltro combines military service with government of Urbino and extensive patronage. Campaigns, rivalry with Sigismondo Pandolfo Malatesta and diplomatic alliances sustain the duchy’s position. Artistic and architectural commissions display his prestige and the resources gained in other powers’ service."
         },
         {
           "anio": 1502,
@@ -358,7 +358,7 @@
           ],
           "eventoId": "SENIGALLIA_1502",
           "titulo": "Senigallia: the prince against his captains",
-          "texto": "Vitellozzo Vitelli and other condottieri feared that Cesare Borgia would absorb them one by one and rebelled. Borgia appeared to reconcile with them, drew them to Senigallia and eliminated their leaders. The episode shows how far the territorial state was already seeking to tame or destroy the captains’ autonomy."
+          "texto": "Vitellozzo Vitelli and other captains rebel against Cesare Borgia, who threatens their autonomy and territories. The duke feigns reconciliation and lures them to Senigallia in 1502. There he arrests the leaders and has several executed. Eliminating his former allies strengthens his command over the forces and towns he has conquered."
         },
         {
           "anio": 1509,
@@ -369,7 +369,7 @@
           ],
           "eventoId": "AGNADELLO_1509",
           "titulo": "The Italian Wars change the scale",
-          "texto": "At Agnadello, Bartolomeo d’Alviano fought for Venice against a French army that also included Italian captains such as Gian Giacomo Trivulzio. Since 1494 the peninsula had become the theatre of foreign monarchies and large infantry and artillery forces: the old Italian military market could no longer define the scale of war by itself."
+          "texto": "At Agnadello, Bartolomeo d’Alviano fights for Venice against a French army also employing Italian commanders such as Gian Giacomo Trivulzio. The great monarchies provide infantry contingents and artillery and hire commanders from the peninsula. Their campaigns have spread across the Italian states since 1494."
         },
         {
           "anio": 1526,
@@ -380,8 +380,8 @@
             "GIOVPOPOLANO"
           ],
           "eventoId": "BANDENERE_1526",
-          "titulo": "Giovanni dalle Bande Nere: a symbolic ending",
-          "texto": "Giovanni de’ Medici, son of Caterina Sforza and Giovanni il Popolano, retained the personal prestige of the great captains of fortune. He died in 1526 from wounds caused by artillery. His figure forms a symbolic close to an age in which a captain’s name could carry almost as much weight as that of the state employing him."
+          "titulo": "Giovanni dalle Bande Nere dies on campaign",
+          "texto": "Giovanni de’ Medici, Caterina Sforza and Giovanni il Popolano’s son, commands forces fighting in the Italian Wars. He dies in 1526 after being wounded by artillery. His military prestige and family connections form part of the inheritance of his son Cosimo, the future duke of Florence."
         },
         {
           "anio": 1535,
@@ -392,7 +392,7 @@
             "GIOVBANDENERE"
           ],
           "titulo": "From captain of fortune to servant of a monarchy",
-          "texto": "Ferrante Gonzaga still belonged to the world of great Italian commanders, but his career within Charles V’s imperial system pointed in another direction. Military prestige endured, yet it was increasingly integrated into dynastic states, governorships and permanent armies. The classic condottiero gave way to the officer of a European power."
+          "texto": "Ferrante Gonzaga serves as Charles V’s commander and holds territorial governments for the Habsburgs. Connections with the imperial court and his Mantuan family accompany military command and the administration of resources. These captains’ careers develop within armies, governorships and patronage networks connecting Italy with the imperial monarchy."
         }
       ],
       "colecciones": []

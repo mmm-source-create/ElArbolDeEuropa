@@ -33,8 +33,8 @@ test('la lectura guardada de Borgoña sigue apuntando a Nancy y las nuevas visit
  const data=new Map(),storage={getItem:key=>data.get(key),setItem:(key,value)=>data.set(key,value)};
  saveStoryProgress(storage,'borgona',17,12);assert.equal(readStoryProgress(storage,'borgona',17).last,12);saveStoryProgress(storage,'borgona',17,17);assert.deepEqual(readStoryProgress(storage,'borgona',17).read,[12,17]);
 });
-test('las recomendaciones muestran la futura historia neerlandesa sin enlazar una página inexistente',()=>{
+test('las recomendaciones enlazan la historia neerlandesa publicada',()=>{
  const items=storyRecommendations(HISTORIAS.find(s=>s.id==='borgona'),HISTORIAS);assert.deepEqual(items.map(s=>s.id),['ochenta-anos','emperadores']);
  const dom=new JSDOM(renderToStaticMarkup(React.createElement(StoryRecommendations,{items})));const document=dom.window.document;
- assert.equal(document.querySelectorAll('a.story-follow-card').length,1);assert.equal(document.querySelectorAll('article.is-coming').length,1);assert.match(document.querySelector('article').textContent,/En preparación/);assert.ok(document.querySelector('#seguir-leyendo'));dom.window.close();
+ assert.equal(document.querySelectorAll('a.story-follow-card').length,2);assert.equal(document.querySelectorAll('article.is-coming').length,0);assert.ok(document.querySelector('a[href="/es/historia/de-flandes-a-la-republica"]'));assert.ok(!document.body.textContent.includes('En preparación'));assert.ok(document.querySelector('#seguir-leyendo'));dom.window.close();
 });

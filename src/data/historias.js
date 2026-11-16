@@ -1,3 +1,4 @@
+import {completeStories606} from './historias606.js';
 import {STORIES_605_ES} from './historias605.js';
 import {reviseStories604} from './historias604.js';
 import {STORIES_603_ES} from './historias603.js';
@@ -2404,7 +2405,7 @@ const HISTORIAS_EXISTENTES = [
           "OTTO4HRE"
         ],
         "titulo": "Federico II: un emperador que aún piensa en términos universales",
-        "texto": "A comienzos del siglo XIII, el título imperial conserva una ambición universal vinculada al legado romano. Federico II gobierna Alemania, Sicilia e Italia y mantiene un conflicto permanente con el papado. Su poder parece enorme, pero depende de una red de príncipes, ciudades y derechos que ningún emperador controla por completo."
+        "texto": "A comienzos del siglo XIII, el título imperial conserva una ambición universal vinculada al legado romano. Federico II reúne la dignidad imperial con la corona de Sicilia y mantiene un conflicto prolongado con el papado. El ejercicio de su autoridad en Alemania e Italia depende de acuerdos con príncipes y ciudades, de derechos locales y de los recursos que puede movilizar para sus campañas."
       },
       {
         "anio": 1254,
@@ -2417,7 +2418,7 @@ const HISTORIAS_EXISTENTES = [
           "ALF10"
         ],
         "eventoId": "INTERREGNO_IMPERIAL_1250",
-        "titulo": "Cuando falta una dinastía, aparece la naturaleza real del Imperio",
+        "titulo": "El interregno y las elecciones rivales",
         "texto": "La caída de los Hohenstaufen abre décadas de elecciones rivales. Los príncipes pueden elegir candidatos de distintas casas y reinos, como Guillermo de Holanda, Ricardo de Cornualles y Alfonso X de Castilla. El Gran Interregno hace visible la debilidad del poder central."
       },
       {
@@ -2429,7 +2430,7 @@ const HISTORIAS_EXISTENTES = [
         ],
         "eventoId": "RODOLFO_1273",
         "titulo": "Rodolfo I: los Habsburgo entran en escena",
-        "texto": "Los electores escogen a Rodolfo de Habsburgo, un conde mucho menos amenazador que los grandes reyes vecinos. El cálculo sale regular: Rodolfo derrota a Otakar II de Bohemia y coloca Austria y Estiria en manos de su familia. Todavía no ha nacido una hegemonía, pero sí su base territorial."
+        "texto": "Los electores escogen a Rodolfo de Habsburgo. El nuevo rey derrota a Otakar II de Bohemia y coloca Austria y Estiria en manos de su familia. Esos territorios proporcionan a los Habsburgo rentas, posiciones y una base hereditaria desde la que intervendrán en las siguientes elecciones imperiales."
       },
       {
         "anio": 1312,
@@ -2439,7 +2440,7 @@ const HISTORIAS_EXISTENTES = [
           "LUIS4"
         ],
         "titulo": "Luxemburgos y Wittelsbach: el trono sigue abierto",
-        "texto": "Enrique VII de Luxemburgo logra la coronación imperial; tras su muerte, Luis IV de Baviera vuelve a demostrar que ninguna casa posee el título por derecho propio. La dignidad imperial es electiva; varias dinastías compiten por obtener el apoyo de los príncipes electores."
+        "texto": "Enrique VII de Luxemburgo obtiene la coronación imperial. Después de su muerte, la elección de Luis IV de Baviera lleva a los Wittelsbach al trono. Las casas principescas buscan el apoyo de los electores mediante alianzas, promesas y sus propios recursos territoriales."
       },
       {
         "anio": 1356,
@@ -2461,7 +2462,7 @@ const HISTORIAS_EXISTENTES = [
           "ALB2HABS"
         ],
         "titulo": "Segismundo: el último gran emperador Luxemburgo",
-        "texto": "Segismundo combina las coronas de Hungría, Bohemia y Alemania y alcanza la dignidad imperial. Pero su sucesión pasa por su hija a Alberto II de Habsburgo. El centro dinástico del Imperio empieza a desplazarse definitivamente."
+        "texto": "Segismundo combina las coronas de Hungría, Bohemia y Alemania y recibe la coronación imperial en 1433. Su hija Isabel se casa con Alberto de Habsburgo, que hereda las expectativas de la familia sobre Hungría y Bohemia y es elegido rey de Romanos. El matrimonio y la elección refuerzan juntos la posición de la casa austríaca."
       },
       {
         "anio": 1452,
@@ -2483,7 +2484,7 @@ const HISTORIAS_EXISTENTES = [
         ],
         "eventoId": "REFORMA_IMPERIAL_1495",
         "titulo": "Maximiliano I: reformar el Imperio y multiplicar herencias",
-        "texto": "Maximiliano impulsa reformas institucionales mientras su matrimonio con María de Borgoña coloca los Países Bajos y la herencia borgoñona dentro de la red Habsburgo. El emperador sigue sin ser un monarca absoluto, pero su dinastía empieza a jugar en una escala continental."
+        "texto": "Maximiliano impulsa reformas de la justicia y del gobierno imperial. Su matrimonio con María de Borgoña enlaza a los Habsburgo con los Países Bajos y con la herencia borgoñona. La negociación con los estados imperiales acompaña la expansión de los recursos y las alianzas de su familia."
       },
       {
         "anio": 1519,
@@ -2494,8 +2495,8 @@ const HISTORIAS_EXISTENTES = [
           "FRED3SAX"
         ],
         "eventoId": "ELECCION_CARLOS5_1519",
-        "titulo": "Carlos V: la elección que parece crear una monarquía universal",
-        "texto": "Nieto de Maximiliano y heredero de Castilla, Aragón y Borgoña, Carlos compite por la corona imperial y vence. Carlos reúne la herencia de los Habsburgo, las coronas hispánicas y los territorios borgoñones, y añade a ese conjunto la dignidad imperial. Pero esa acumulación de coronas hará también imposible gobernar cada problema europeo como si fuera uno solo."
+        "titulo": "Carlos V reúne varias herencias y gana la elección",
+        "texto": "Nieto de Maximiliano y heredero de las coronas hispánicas y los territorios borgoñones, Carlos compite por la dignidad imperial y vence en 1519. Sus dominios conservan instituciones, recursos y obligaciones diferentes. Las guerras con Francia, el conflicto religioso alemán y la defensa mediterránea lo obligan a negociar continuamente hombres, dinero y prioridades entre sus gobiernos."
       },
       {
         "anio": 1556,
@@ -2507,7 +2508,7 @@ const HISTORIAS_EXISTENTES = [
         ],
         "eventoId": "ABDICACION_CARLOS",
         "titulo": "La herencia de Carlos se divide",
-        "texto": "Carlos entrega los reinos españoles y borgoñones a Felipe II, mientras Fernando I recibe la rama austríaca y la continuidad imperial. Desde este momento, hablar de 'los Habsburgo' exige distinguir dos redes emparentadas: Madrid y Viena."
+        "texto": "Las abdicaciones de Carlos entregan a Felipe II las coronas hispánicas y los territorios borgoñones. Fernando, que ya gobierna los dominios austríacos, lo sucede en la dignidad imperial. Las dos ramas conservan vínculos familiares y alianzas, con cortes y recursos propios en Madrid y Viena."
       },
       {
         "anio": 1619,
@@ -2540,7 +2541,7 @@ const HISTORIAS_EXISTENTES = [
           "CARLOS6HRE"
         ],
         "titulo": "Dos hermanos y un problema: la sucesión",
-        "texto": "Leopoldo I deja dos hijos varones que alcanzan el trono. José I muere en 1711 sin heredero masculino y la corona pasa a Carlos VI. La misma dinastía que parecía haber resuelto la sucesión imperial descubre que su propia continuidad biológica vuelve a ser una cuestión europea."
+        "texto": "Leopoldo I deja dos hijos varones que alcanzan el trono imperial. José I muere en 1711 sin un heredero masculino y los electores eligen a su hermano Carlos. La muerte de José coincide con la guerra por la sucesión española, en la que Carlos reclama la corona de Madrid. Reunir esa candidatura con la dignidad imperial modifica el equilibrio entre sus aliados."
       },
       {
         "anio": 1713,
@@ -2550,7 +2551,7 @@ const HISTORIAS_EXISTENTES = [
           "MARIATERESAHAB"
         ],
         "eventoId": "PRAGMATICA_1713",
-        "titulo": "Carlos VI prepara una heredera que no puede ser emperador",
+        "titulo": "La Pragmática Sanción y la herencia austríaca",
         "texto": "La Pragmática Sanción intenta garantizar que una mujer pueda heredar los dominios Habsburgo. María Teresa podrá gobernar Austria, Bohemia y Hungría, pero la corona imperial sigue reservada a un varón elegido. Esa diferencia abrirá una crisis enorme en 1740."
       },
       {
@@ -2563,7 +2564,7 @@ const HISTORIAS_EXISTENTES = [
         ],
         "eventoId": "CARLOS7_1742",
         "titulo": "Carlos VII: un Wittelsbach alcanza la dignidad imperial",
-        "texto": "Carlos Alberto de Baviera, casado además con una hija de José I, aprovecha la crisis sucesoria para obtener la corona imperial. Durante tres años un Wittelsbach ocupa el trono. Es la gran prueba de que la hegemonía Habsburgo es política y dinástica, nunca jurídicamente automática."
+        "texto": "Carlos Alberto de Baviera, casado con una hija de José I, aprovecha la crisis sucesoria y reúne apoyos para su elección imperial. Reina como Carlos VII durante tres años, mientras sus adversarios ocupan Baviera y la guerra amenaza sus recursos. La disputa por los dominios de María Teresa y la elección del emperador enfrentan a varias casas principescas."
       },
       {
         "anio": 1745,
@@ -2587,7 +2588,7 @@ const HISTORIAS_EXISTENTES = [
         ],
         "eventoId": "JOSE2_1765",
         "titulo": "José II quiere gobernar más deprisa que el Imperio",
-        "texto": "José II hereda la dignidad imperial y después los dominios de su madre. Su programa reformista busca uniformidad administrativa, tolerancia religiosa y subordinación de corporaciones eclesiásticas. Sus reformas encuentran límites en los derechos propios y las instituciones de los territorios que gobierna."
+        "texto": "José II, elegido rey de Romanos, sucede a su padre en la dignidad imperial en 1765. En 1780 recibe los dominios de María Teresa. Su programa busca uniformidad administrativa, tolerancia religiosa y subordinación de corporaciones eclesiásticas. Las medidas provocan resistencias en territorios que defienden sus derechos e instituciones."
       },
       {
         "anio": 1790,
@@ -2598,8 +2599,8 @@ const HISTORIAS_EXISTENTES = [
           "MARIAANTONIETA"
         ],
         "eventoId": "REVOLUCION_FRANCESA_1789",
-        "titulo": "Leopoldo II hereda un Imperio frente a la Revolución",
-        "texto": "Leopoldo sucede a su hermano justo cuando la Revolución francesa amenaza el orden dinástico europeo y su hermana María Antonieta se encuentra atrapada en París. El problema imperial ya no es únicamente equilibrar príncipes alemanes: es responder a una nueva idea de soberanía."
+        "titulo": "Leopoldo II ante la Revolución francesa",
+        "texto": "Leopoldo sucede a su hermano en 1790 mientras la Revolución francesa amenaza el orden dinástico europeo y su hermana María Antonieta permanece en Francia. Debe atender los conflictos de los dominios Habsburgo, negociar con los príncipes del Imperio y decidir su respuesta a las transformaciones políticas francesas."
       },
       {
         "anio": 1792,
@@ -2611,7 +2612,7 @@ const HISTORIAS_EXISTENTES = [
         ],
         "eventoId": "FRANCISCO2_1792",
         "titulo": "Francisco II y las guerras revolucionarias",
-        "texto": "Francisco II asciende al trono en 1792 y entra inmediatamente en la era de las guerras revolucionarias. En 1800, el Sacro Imperio conserva sus instituciones mientras las guerras revolucionarias francesas alteran el equilibrio de los territorios alemanes. Seis siglos después de Federico II, el título imperial sigue siendo reconocible y, al mismo tiempo, significa algo completamente distinto."
+        "texto": "Francisco II accede al trono en 1792 y su gobierno participa en las guerras contra la Francia revolucionaria. En 1800 el Sacro Imperio conserva sus instituciones, mientras las campañas francesas alteran el equilibrio de los territorios alemanes. La defensa de los dominios Habsburgo y los acuerdos con los demás estados imperiales condicionan sus decisiones."
       }
     ]
   },
@@ -2668,7 +2669,7 @@ const HISTORIAS_EXISTENTES = [
         ],
         "eventoId": "MARTIN5_1417",
         "titulo": "Martín V Colonna: una familia romana cierra el Cisma",
-        "texto": "Después de décadas con obediencias rivales, el Concilio de Constanza elige a Oddone Colonna. Martín V consigue algo mucho mayor que una victoria familiar: restaura una autoridad pontificia reconocida en Occidente y devuelve progresivamente el centro de gobierno a Roma. Pero su apellido importa: los Colonna regresan de la persecución de Bonifacio VIII al punto más alto de la Iglesia."
+        "texto": "Después de décadas con obediencias rivales, el Concilio de Constanza elige a Oddone Colonna como Martín V. El papa restaura una autoridad reconocida en Occidente y devuelve progresivamente el centro de gobierno a Roma. Los Colonna refuerzan sus vínculos con la Curia y recuperan influencia en los cargos, los recursos y la política de la ciudad."
       },
       {
         "anio": 1458,
@@ -2679,7 +2680,7 @@ const HISTORIAS_EXISTENTES = [
           "LAUDOMIAPICCOLOMINI"
         ],
         "titulo": "Piccolomini: el apellido que también se hereda en la Curia",
-        "texto": "Enea Silvio Piccolomini, humanista y diplomático, se convierte en Pío II. Su sobrino Francesco Todeschini adopta el apellido Piccolomini, es promovido dentro de la Iglesia y terminará siendo Pío III. Su pontificado será brevísimo, pero la secuencia muestra una constante: una elección papal puede transformar el capital social de una familia durante generaciones."
+        "texto": "Enea Silvio Piccolomini, humanista y diplomático, se convierte en Pío II. Su sobrino Francesco Todeschini adopta el apellido Piccolomini y asciende dentro de la Iglesia. Será elegido como Pío III en 1503, aunque su pontificado dura pocas semanas. Los cargos curiales y el patronazgo de ambos pontífices afianzan la posición de la familia."
       },
       {
         "anio": 1455,
@@ -2703,7 +2704,7 @@ const HISTORIAS_EXISTENTES = [
         ],
         "eventoId": "SIXTO4_1471",
         "titulo": "Sixto IV: cardenales, señoríos y una generación entera de sobrinos",
-        "texto": "Francesco della Rovere convierte a sus sobrinos en instrumentos de gobierno. Pietro Riario y Giuliano della Rovere reciben la púrpura; Girolamo Riario entra en la política territorial de Romaña. El mismo pontificado que transforma la Roma renacentista demuestra hasta qué punto el parentesco puede funcionar como una auténtica administración paralela."
+        "texto": "Francesco della Rovere utiliza a sus sobrinos en el gobierno pontificio. Pietro Riario y Giuliano della Rovere reciben la púrpura; Girolamo Riario interviene en la política territorial de Romaña. La distribución de cargos, rentas y misiones diplomáticas refuerza una red familiar que participa en las decisiones de la corte y en los proyectos del papa."
       },
       {
         "anio": 1492,
@@ -2718,7 +2719,7 @@ const HISTORIAS_EXISTENTES = [
         ],
         "eventoId": "ALEJANDRO6_1492",
         "titulo": "Alejandro VI: los Borja en la política italiana",
-        "texto": "Rodrigo Borja se convierte en Alejandro VI y sus hijos dejan de ser un secreto periférico. César pasa del cardenalato a la guerra y al proyecto territorial; Lucrecia es una pieza matrimonial de primer orden; Juan recibe Gandía; Jofré enlaza con Nápoles. La relación de Alejandro con Giulia Farnese, hermana del futuro Paulo III, conecta además dos de las grandes casas papales del Renacimiento."
+        "texto": "Rodrigo Borja es elegido como Alejandro VI. Sus hijos ocupan posiciones destacadas en su política familiar: César pasa del cardenalato a la guerra y al proyecto territorial; Lucrecia establece alianzas matrimoniales; Juan recibe Gandía y Jofré enlaza con Nápoles. La relación de Alejandro con Giulia Farnese, hermana del futuro Paulo III, conecta también a las dos familias."
       },
       {
         "anio": 1503,
@@ -2731,7 +2732,7 @@ const HISTORIAS_EXISTENTES = [
         ],
         "eventoId": "JULIO2_1503",
         "titulo": "Julio II: el sobrino de Sixto IV vuelve convertido en “papa guerrero”",
-        "texto": "Giuliano della Rovere había aprendido la política de Roma dentro de la red de Sixto IV. Como Julio II utiliza la guerra, la diplomacia y el mecenazgo para reforzar los Estados Pontificios. Su familia se enlaza con los Montefeltro y hereda Urbino a través de Giovanni della Rovere y Giovanna da Montefeltro: la frontera entre familia papal y dinastía territorial vuelve a hacerse muy fina."
+        "texto": "Giuliano della Rovere había aprendido la política romana dentro de la red de Sixto IV. Como Julio II utiliza la guerra, la diplomacia y el mecenazgo para reforzar los Estados Pontificios. El matrimonio de Giovanni della Rovere con Giovanna da Montefeltro enlaza a ambas familias. Sus descendientes heredan Urbino y consolidan una rama territorial de los Della Rovere."
       },
       {
         "anio": 1513,
@@ -2745,7 +2746,7 @@ const HISTORIAS_EXISTENTES = [
         ],
         "eventoId": "MEDICI_PAPAS_1513",
         "titulo": "León X y Clemente VII: dos papas dentro de la misma familia Médici",
-        "texto": "León X es hijo de Lorenzo el Magnífico y Clarice Orsini. Su primo Giulio, hijo de Giuliano de’ Medici, llegará después como Clemente VII. La casa que domina Florencia ocupa también el papado y utiliza ambos espacios de poder de forma inseparable. Aquí ya no hablamos de una familia que prospera gracias a Roma: hablamos de una potencia italiana que incorpora Roma a su propia estrategia."
+        "texto": "León X es hijo de Lorenzo el Magnífico y Clarice Orsini. Su primo Giulio, hijo de Giuliano de’ Medici, llegará después como Clemente VII. Los Médici enlazan su gobierno de Florencia con la autoridad pontificia y emplean los cargos, las rentas y las alianzas de ambos espacios para sostener su posición italiana."
       },
       {
         "anio": 1527,
@@ -2755,8 +2756,8 @@ const HISTORIAS_EXISTENTES = [
           "CARLOS5"
         ],
         "eventoId": "SACO_ROMA_1527",
-        "titulo": "1527: una familia poderosa no puede proteger a Roma de Europa",
-        "texto": "Clemente VII intenta maniobrar entre Francia y Carlos V y termina atrapado en una catástrofe: el Saco de Roma. La escena marca un límite brutal al poder dinástico de los Médici. El papa puede ser miembro de una de las familias más sofisticadas de Italia y, aun así, quedar a merced de ejércitos que ya operan a escala continental."
+        "titulo": "Clemente VII y el Saco de Roma",
+        "texto": "Clemente VII se alía con Francia contra Carlos V. En 1527 las tropas imperiales llegan a Roma y saquean la ciudad. El papa se refugia en el castillo de Sant’Angelo y queda obligado a negociar. La violencia y la ocupación debilitan a la corte pontificia, mientras los adversarios de los Médici aprovechan la crisis para expulsarlos de Florencia."
       },
       {
         "anio": 1534,
@@ -2821,7 +2822,7 @@ const HISTORIAS_EXISTENTES = [
         ],
         "eventoId": "PAMPHILJ_1644",
         "titulo": "Inocencio X: Donna Olimpia y la fusión Pamphilj-Aldobrandini",
-        "texto": "Olimpia Maidalchini, cuñada de Inocencio X, ejerce una influencia extraordinaria en la corte. Su hijo Camillo es creado cardenal-nepote, pero abandona la púrpura para casarse con Olimpia Aldobrandini. La unión traslada a los Pamphilj una enorme herencia y demuestra otra vez que los patrimonios de familias papales pueden sobrevivir y mezclarse mucho después de la muerte del pontífice."
+        "texto": "Olimpia Maidalchini, cuñada de Inocencio X, ejerce una gran influencia en la corte. Su hijo Camillo es creado cardenal-nepote, pero abandona la púrpura para casarse con Olimpia Aldobrandini. La unión incorpora a los Pamphilj una extensa herencia y enlaza los patrimonios y las alianzas de ambas casas."
       },
       {
         "anio": 1655,
@@ -2857,8 +2858,8 @@ const HISTORIAS_EXISTENTES = [
           "PAPA_INOCENCIO10"
         ],
         "eventoId": "ROMANUM_DECET_1692",
-        "titulo": "Inocencio XII: el sistema intenta cerrarse sobre sí mismo",
-        "texto": "La constitución Romanum decet Pontificem restringe formalmente el nepotismo papal y limita el viejo modelo del cardenal-nepote. No borra siglos de familias creadas por el papado —Orsini, Colonna, Della Rovere, Farnese, Borghese, Barberini, Pamphilj, Chigi—, pero marca el final simbólico de una época en la que una elección podía reconstruir de golpe la fortuna política de todo un linaje."
+        "titulo": "Inocencio XII restringe el nepotismo",
+        "texto": "La constitución Romanum decet Pontificem de 1692 restringe el nepotismo y limita los favores que un papa puede conceder a sus parientes. Las familias consolidadas durante los pontificados anteriores conservan palacios, propiedades y alianzas dentro de la aristocracia romana. La reforma cambia las condiciones de acceso de los nuevos parientes pontificios a los recursos y oficios de la Iglesia."
       }
     ]
   },
@@ -2888,7 +2889,7 @@ const HISTORIAS_EXISTENTES = [
         ],
         "eventoId": "BARBIANO_1379",
         "titulo": "Los italianos aprenden el oficio",
-        "texto": "Alberico da Barbiano representa una nueva generación de capitanes italianos. La condotta ya no es solo la contratación de una compañía extranjera: empieza a surgir un sistema de escuelas militares, clientelas y lealtades personales alrededor de grandes jefes de armas."
+        "texto": "Alberico da Barbiano dirige una compañía que reúne a capitanes italianos. A su alrededor se forman vínculos profesionales, clientelas y lealtades que ayudan a obtener contratos y a sostener el mando. Sus discípulos y servidores transmitirán esas relaciones a la siguiente generación de comandantes."
       },
       {
         "anio": 1416,
@@ -2922,7 +2923,7 @@ const HISTORIAS_EXISTENTES = [
         ],
         "eventoId": "CARMAGNOLA_1432",
         "titulo": "El empleador también teme a su general",
-        "texto": "Carmagnola sirve primero a Milán y después a Venecia. Su carrera muestra la gran contradicción de la condotta: un capitán debía ser lo bastante poderoso para ganar guerras, pero cuanto más poderoso era, más peligroso resultaba para quien lo contrataba. Venecia acabó acusándolo de traición y lo ejecutó."
+        "texto": "Carmagnola sirve primero a Milán y después a Venecia. Sus victorias y sus contactos lo convierten en un comandante influyente, mientras el gobierno veneciano recela de sus negociaciones y de su conducta militar. En 1432 lo acusa de traición y lo ejecuta."
       },
       {
         "anio": 1438,
@@ -2943,8 +2944,8 @@ const HISTORIAS_EXISTENTES = [
           "FELMARVISC"
         ],
         "eventoId": "BODA_SFORZA_VISCONTI_1441",
-        "titulo": "Una boda vale más que una victoria",
-        "texto": "Francesco Sforza se casa con Bianca Maria Visconti, hija de Filippo Maria. De pronto el capitán de fortuna posee algo que los contratos militares no podían darle por sí solos: una vía dinástica hacia Milán."
+        "titulo": "El matrimonio de Francisco y Blanca María",
+        "texto": "Francisco Sforza se casa en 1441 con Blanca María Visconti, hija de Felipe María. El matrimonio enlaza al capitán con la familia ducal y refuerza sus expectativas sobre la sucesión de Milán. La defensa de ese vínculo se combina con sus ejércitos y con los acuerdos que negocia dentro del ducado."
       },
       {
         "anio": 1450,
@@ -2955,7 +2956,7 @@ const HISTORIAS_EXISTENTES = [
         ],
         "eventoId": "SFORZA_DUQUE_1450",
         "titulo": "El condotiero que se convierte en príncipe",
-        "texto": "En 1450 Francesco Sforza entra en Milán como duque. Es el triunfo máximo de la lógica condotiera: fuerza militar, negociación y matrimonio se combinan para fundar una dinastía que gobernará una de las principales potencias italianas."
+        "texto": "En 1450 Francisco Sforza entra en Milán y recibe el reconocimiento de la ciudad como duque. La nueva dinastía reúne sus fuerzas militares, la herencia Visconti de Blanca María y acuerdos con las élites locales. La pareja conserva servidores e instituciones del ducado y busca aliados para defender su gobierno."
       },
       {
         "anio": 1454,
@@ -2967,7 +2968,7 @@ const HISTORIAS_EXISTENTES = [
         ],
         "eventoId": "LODI_1454",
         "titulo": "El éxito de Sforza cambia las reglas",
-        "texto": "La Paz de Lodi estabiliza el equilibrio entre los grandes estados italianos. Paradójicamente, el triunfo de Sforza sirve de advertencia: repúblicas y príncipes tienen ahora más razones para impedir que otro general mercenario acumule suficiente poder como para convertirse en soberano."
+        "texto": "La paz de Lodi estabiliza en 1454 las relaciones entre Milán y Venecia. Sforza sostiene su gobierno mediante alianzas, recursos fiscales y tropas al servicio del ducado. La posterior Liga Italiana reúne a los principales estados en un acuerdo de defensa que busca contener nuevas guerras y conservar el equilibrio territorial."
       },
       {
         "anio": 1474,
@@ -2978,7 +2979,7 @@ const HISTORIAS_EXISTENTES = [
           "BATTISTASFORZA"
         ],
         "titulo": "El condotiero renacentista",
-        "texto": "Federico da Montefeltro combina la profesión militar con el gobierno de Urbino y un mecenazgo cultural extraordinario. Su rivalidad con Sigismondo Pandolfo Malatesta recuerda que el condotiero podía ser simultáneamente general, príncipe, diplomático y constructor de una imagen pública cuidadosamente elaborada."
+        "texto": "Federico da Montefeltro combina la profesión militar con el gobierno de Urbino y un amplio mecenazgo. Sus campañas, su rivalidad con Sigismondo Pandolfo Malatesta y sus alianzas diplomáticas sostienen la posición del ducado. Los encargos artísticos y arquitectónicos hacen visible su prestigio y los recursos obtenidos al servicio de otras potencias."
       },
       {
         "anio": 1502,
@@ -2989,7 +2990,7 @@ const HISTORIAS_EXISTENTES = [
         ],
         "eventoId": "SENIGALLIA_1502",
         "titulo": "Senigallia: el príncipe contra sus capitanes",
-        "texto": "Vitellozzo Vitelli y otros condotieros temen que César Borja los absorba uno a uno y se rebelan. Borja aparenta reconciliarse con ellos, los atrae a Senigallia y elimina a sus dirigentes. El episodio muestra hasta qué punto el estado territorial busca ya domesticar o destruir la autonomía de los capitanes."
+        "texto": "Vitellozzo Vitelli y otros capitanes se rebelan contra César Borja, que amenaza su autonomía y sus territorios. El duque aparenta reconciliarse con ellos y los atrae a Senigallia en 1502. Allí detiene a los dirigentes y hace ejecutar a varios. La eliminación de sus antiguos aliados refuerza su mando sobre las fuerzas y las plazas conquistadas."
       },
       {
         "anio": 1509,
@@ -3000,7 +3001,7 @@ const HISTORIAS_EXISTENTES = [
         ],
         "eventoId": "AGNADELLO_1509",
         "titulo": "Las Guerras Italianas cambian la escala",
-        "texto": "En Agnadello, Bartolomeo d'Alviano combate al servicio de Venecia frente a un ejército francés en el que también actúan capitanes italianos como Gian Giacomo Trivulzio. Desde 1494 la península es escenario de monarquías extranjeras, grandes contingentes de infantería y artillería: el viejo mercado militar italiano ya no domina por sí solo la guerra."
+        "texto": "En Agnadello, Bartolomeo d’Alviano combate para Venecia frente a un ejército francés que emplea también a capitanes italianos como Gian Giacomo Trivulzio. Las grandes monarquías aportan contingentes de infantería y artillería y contratan a los comandantes de la península. Sus campañas se extienden por los estados italianos desde 1494."
       },
       {
         "anio": 1526,
@@ -3011,8 +3012,8 @@ const HISTORIAS_EXISTENTES = [
           "GIOVPOPOLANO"
         ],
         "eventoId": "BANDENERE_1526",
-        "titulo": "Giovanni dalle Bande Nere: un final simbólico",
-        "texto": "Giovanni de' Medici, hijo de Caterina Sforza y Giovanni il Popolano, conserva el prestigio personal del gran capitán de ventura. Muere en 1526 después de ser herido por artillería. Su figura sirve como cierre simbólico de una época en la que el nombre de un capitán podía pesar casi tanto como el del estado que lo contrataba."
+        "titulo": "Giovanni dalle Bande Nere muere en campaña",
+        "texto": "Giovanni de’ Medici, hijo de Caterina Sforza y Giovanni il Popolano, dirige fuerzas que combaten en las guerras de Italia. Muere en 1526 después de ser herido por artillería. Su prestigio militar y sus vínculos familiares forman parte del patrimonio que recibe su hijo Cosme, futuro duque de Florencia."
       },
       {
         "anio": 1535,
@@ -3023,7 +3024,7 @@ const HISTORIAS_EXISTENTES = [
           "GIOVBANDENERE"
         ],
         "titulo": "Del capitán de ventura al servidor de una monarquía",
-        "texto": "Ferrante Gonzaga pertenece todavía al mundo de los grandes comandantes italianos, pero su carrera dentro de la estructura imperial de Carlos V señala otra dirección: el prestigio militar continúa, aunque cada vez más integrado en estados dinásticos, gobernaciones y ejércitos permanentes. El condotiero clásico deja paso al general de una potencia europea."
+        "texto": "Ferrante Gonzaga sirve como comandante de Carlos V y ocupa gobiernos territoriales al servicio de los Habsburgo. Sus vínculos con la corte imperial y con su familia de Mantua acompañan el mando de tropas y la administración de recursos. Las carreras de estos capitanes se desarrollan dentro de ejércitos, gobernaciones y redes de patronazgo que conectan Italia con la monarquía imperial."
       }
     ]
   },
@@ -3032,7 +3033,7 @@ const HISTORIAS_EXISTENTES = [
     "titulo": "La Guerra de los Cien Años",
     "subtitulo": "Una disputa dinástica que transformó Francia e Inglaterra",
     "disponible": true,
-    "descripcion": "Un recorrido desde la crisis sucesoria de 1328 hasta Castillon en 1453: reclamaciones de sangre, grandes victorias inglesas, recuperación francesa, guerra civil, Borgoña y el giro de Juana de Arco.",
+    "descripcion": "La disputa sucesoria de 1328 y los conflictos por los feudos franceses de los reyes ingleses abren una guerra de conquistas, rescates y alianzas. La recuperación francesa se afianza con Carlos VII y termina con las campañas de Normandía y Guyena.",
     "fuentes": [{"titulo":"Luxembourg · Juan el Ciego y la batalla de Crécy","url":"https://luxembourg.public.lu/en/society-and-culture/history/helm-holy-roman-empire.html"}],
     "pasos": [
       {
@@ -3046,7 +3047,7 @@ const HISTORIAS_EXISTENTES = [
         ],
         "eventoId": "CRISIS_CAPETA_1328",
         "titulo": "1328: una corona sin heredero varón",
-        "texto": "Carlos IV muere sin un hijo varón superviviente y se extingue la línea directa de los Capetos. La corona pasa a Felipe de Valois, Felipe VI. Pero Eduardo III de Inglaterra es nieto de Felipe IV a través de su madre, Isabel de Francia. La guerra todavía no ha comenzado: primero nace una pregunta genealógica sobre quién puede transmitir un derecho a la corona."
+        "texto": "Carlos IV muere sin un hijo varón superviviente y se extingue la línea directa de los Capetos. Felipe de Valois recibe la corona como Felipe VI. Eduardo III de Inglaterra es nieto de Felipe IV por su madre, Isabel de Francia, y esa ascendencia sostendrá su reclamación al trono francés."
       },
       {
         "anio": 1337,
@@ -3057,7 +3058,7 @@ const HISTORIAS_EXISTENTES = [
         ],
         "eventoId": "CIEN_ANOS",
         "titulo": "1337: la disputa dinástica se convierte en guerra",
-        "texto": "Aquitania, los homenajes feudales y la política entre Francia, Inglaterra y Escocia convierten la rivalidad sucesoria en un conflicto abierto. Eduardo III eleva su reclamación a la corona francesa y el choque deja de ser una discusión de parentesco: dos monarquías movilizan recursos durante generaciones."
+        "texto": "Aquitania, los homenajes feudales y las relaciones entre Francia, Inglaterra y Escocia convierten la rivalidad en una guerra abierta. Eduardo III eleva su reclamación a la corona francesa. Las dos monarquías reúnen impuestos, ejércitos y alianzas para defender sus posiciones y conquistar territorios."
       },
       {
         "anio": 1346,
@@ -3095,7 +3096,7 @@ const HISTORIAS_EXISTENTES = [
         ],
         "eventoId": "BRETIGNY_1360",
         "titulo": "Brétigny: Inglaterra parece haber ganado",
-        "texto": "El tratado concede a Eduardo III una posición territorial extraordinaria en Francia. Pero no será un final. La guerra demuestra aquí una de sus claves: ningún acuerdo consigue resolver a la vez la soberanía territorial, la relación feudal y la reclamación dinástica."
+        "texto": "El tratado de Brétigny concede a Eduardo III amplios territorios en Francia y organiza el rescate de Juan II. Su aplicación deja pendientes renuncias y obligaciones feudales que seguirán enfrentando a ambos gobiernos. La financiación de la guerra y el control de las plazas recuperadas ocuparán a sus sucesores."
       },
       {
         "anio": 1370,
@@ -3107,7 +3108,7 @@ const HISTORIAS_EXISTENTES = [
         ],
         "eventoId": "RECONQUISTA_CARLOS5_1369",
         "titulo": "Carlos V cambia la guerra",
-        "texto": "Carlos V de Francia y su condestable Bertrand du Guesclin evitan repetir las grandes batallas que habían favorecido a los ingleses. Con campañas más pacientes, asedios y desgaste recuperan gran parte de las pérdidas francesas. Cuando Carlos V muere en 1380, el mapa se parece muy poco al de 1360."
+        "texto": "Carlos V de Francia y su condestable Bertrand du Guesclin recuperan territorios mediante campañas, asedios y el desgaste de las posiciones inglesas. La cooperación con aliados y capitanes locales permite sostener las operaciones. Cuando Carlos muere en 1380, la monarquía francesa ha recobrado buena parte de las tierras cedidas después de Poitiers."
       },
       {
         "anio": 1407,
@@ -3196,7 +3197,7 @@ const HISTORIAS_EXISTENTES = [
         ],
         "eventoId": "REIMS_1429",
         "titulo": "Reims: la guerra vuelve a ser una cuestión de legitimidad",
-        "texto": "Juana insiste en conducir a Carlos VII a Reims, el lugar tradicional de coronación de los reyes franceses. La ceremonia convierte al antiguo 'delfín de Bourges' en un rey ungido y visible. La guerra no está ganada, pero la legitimidad de Carlos deja de parecer provisional."
+        "texto": "Juana impulsa la marcha de Carlos VII hacia Reims, lugar tradicional de coronación de los reyes franceses. La ceremonia reúne la unción religiosa, el reconocimiento público y los apoyos obtenidos durante la campaña del Loira. Carlos puede sostener con esos recursos su rivalidad con Enrique VI y con el gobierno inglés establecido en el norte."
       },
       {
         "anio": 1431,
@@ -3208,8 +3209,8 @@ const HISTORIAS_EXISTENTES = [
           "CARLOS7FRA"
         ],
         "eventoId": "CAPTURA_JUANA_1430",
-        "titulo": "La muerte de Juana no detiene el cambio",
-        "texto": "Juana es capturada por los borgoñones en 1430, entregada a los ingleses y ejecutada en Rouen en 1431. Su muerte no revierte el giro político que ayudó a acelerar. Carlos VII dispone ahora de una legitimidad reforzada y de una monarquía que empieza a reconstruir sus recursos."
+        "titulo": "El proceso y la ejecución de Juana",
+        "texto": "Juana es capturada por los borgoñones en 1430, entregada a los ingleses y ejecutada en Rouen en 1431 tras un proceso eclesiástico. Carlos VII conserva los apoyos reunidos durante la campaña y reconstruye los recursos de su monarquía. La guerra continúa mediante asedios, acuerdos y disputas por la obediencia de ciudades y señores."
       },
       {
         "anio": 1435,
@@ -3266,7 +3267,7 @@ const HISTORIAS_EXISTENTES = [
         ],
         "eventoId": "LEONARDO_MILAN_1482",
         "titulo": "Milán: Leonardo entra en una corte de imágenes y poder",
-        "texto": "Leonardo deja Florencia y entra en la órbita de Ludovico Sforza. En Milán no es solo pintor: diseña máquinas, fiestas, fortificaciones y proyectos monumentales. Pero también aprende a convertir el retrato cortesano en algo mucho más vivo. Aquí comienza la pista que nos llevará hacia la Gioconda."
+        "texto": "Leonardo deja Florencia y entra al servicio de Ludovico Sforza en Milán. Trabaja en pinturas, máquinas, fiestas, fortificaciones y proyectos monumentales. Los encargos de la corte lo ponen en contacto con modelos y mecenas interesados en representar su rango. Sus retratos exploran el gesto, la mirada y la relación entre la figura y el espacio que la rodea."
       },
       {
         "anio": 1490,
@@ -3278,7 +3279,7 @@ const HISTORIAS_EXISTENTES = [
         ],
         "eventoId": "DAMA_ARMINO_1490",
         "titulo": "La Dama del armiño: Cecilia Gallerani",
-        "texto": "Cecilia Gallerani, joven culta de la corte y amante de Ludovico Sforza, posa para Leonardo hacia 1490. Su identificación como la Dama del armiño está sólidamente establecida. El retrato es una parada esencial: años antes de la Gioconda, Leonardo ya hace que una mujer parezca sorprendida en medio de un gesto y de una conversación invisible."
+        "texto": "Cecilia Gallerani, joven culta de la corte y amante de Ludovico Sforza, posa para Leonardo hacia 1490. La identificación de la Dama del armiño con Cecilia está sólidamente establecida. La figura gira el rostro y sostiene al animal en una composición que combina la representación cortesana con la impresión de un movimiento interrumpido."
       },
       {
         "anio": 1499,
@@ -3311,7 +3312,7 @@ const HISTORIAS_EXISTENTES = [
         ],
         "eventoId": "LEONARDO_BORJA_1502",
         "titulo": "Con César Borja: Leonardo, ingeniero y cartógrafo",
-        "texto": "Durante unos meses Leonardo trabaja para César Borja como ingeniero militar. Recorre fortalezas y ciudades, estudia ríos, caminos y defensas y produce algunos de sus mapas más extraordinarios. El episodio recuerda que el hombre que pintará el rostro más famoso de Europa observa con la misma obsesión una cara, una máquina o un paisaje."
+        "texto": "Durante unos meses Leonardo trabaja para César Borja como ingeniero militar. Recorre fortalezas y ciudades, estudia ríos, caminos y defensas y elabora planos para el servicio del duque. La observación del terreno y la representación precisa de distancias, recorridos y construcciones ocupan un lugar central en esos trabajos."
       },
       {
         "anio": 1503,
@@ -3322,8 +3323,8 @@ const HISTORIAS_EXISTENTES = [
           "FRANCESCOGIOCONDO"
         ],
         "eventoId": "GIOCONDA_1503",
-        "titulo": "Florencia: aquí aparece la pista decisiva",
-        "texto": "De regreso en Florencia llegamos a Lisa Gherardini, esposa del mercader Francesco del Giocondo. El nombre de la familia explica 'Gioconda'; la tradición textual y la documentación conocida encajan con el inicio del retrato hacia 1503. Esta es la identificación que hoy mantiene el Louvre y el consenso historiográfico dominante: la mujer del cuadro es Lisa Gherardini."
+        "titulo": "Lisa Gherardini y el encargo florentino",
+        "texto": "Leonardo comienza en Florencia el retrato de Lisa Gherardini, esposa del mercader Francesco del Giocondo, hacia 1503. El apellido de la familia da nombre a la Gioconda. La anotación de Agostino Vespucci de octubre de ese año documenta el trabajo sobre Lisa. El Louvre acepta esta identificación, apoyada también en la tradición textual sobre el cuadro."
       },
       {
         "anio": 1504,
@@ -3336,8 +3337,8 @@ const HISTORIAS_EXISTENTES = [
           "ISABELLAESTE",
           "LISAGHERARDINI"
         ],
-        "titulo": "¿Entonces por qué existen tantas candidatas?",
-        "texto": "Porque Leonardo trabajó durante décadas entre cortes llenas de mujeres poderosas y porque dejó obras, dibujos y noticias difíciles de encajar. Isabella de Aragón, Costanza d'Avalos, Bianca Giovanna Sforza, Caterina Sforza e Isabella d'Este han aparecido en distintas propuestas. Algunas conectan bien con una etapa de su vida; ninguna reúne, a día de hoy, el conjunto de indicios que favorece a Lisa Gherardini."
+        "titulo": "Las propuestas de otras modelos",
+        "texto": "La actividad de Leonardo entre varias cortes y la dispersión de noticias sobre sus obras han dado lugar a propuestas de otras modelos. Isabel de Aragón, Costanza d’Avalos, Bianca Giovanna Sforza, Caterina Sforza e Isabella d’Este aparecen en esas hipótesis. Sus vínculos con los lugares y las personas de la trayectoria del artista han sostenido las propuestas. La documentación que identifica el trabajo sobre Lisa en 1503 sigue siendo la base de la atribución aceptada por el Louvre."
       },
       {
         "anio": 1506,
@@ -3348,7 +3349,7 @@ const HISTORIAS_EXISTENTES = [
         ],
         "eventoId": "LEONARDO_MILAN_1506",
         "titulo": "Leonardo vuelve a Milán, pero el retrato viaja con él",
-        "texto": "Leonardo regresa a un Milán controlado por Francia y encuentra un nuevo protector en Charles II d'Amboise. La Gioconda no queda atrás como un encargo entregado y cerrado: Leonardo conserva la pintura y continúa trabajando en ella durante años. El cuadro empieza a convertirse en una obra personal del artista."
+        "texto": "Leonardo regresa a un Milán controlado por Francia y encuentra un protector en Charles II d’Amboise. Conserva la Gioconda y continúa trabajando en ella durante años. Los desplazamientos del artista llevan consigo la pintura y permiten que su elaboración se prolongue entre distintas etapas de su vida."
       },
       {
         "anio": 1513,
@@ -3372,7 +3373,7 @@ const HISTORIAS_EXISTENTES = [
         ],
         "eventoId": "LEONARDO_FRANCIA_1516",
         "titulo": "Francia: el cuadro abandona Italia con Leonardo",
-        "texto": "Francisco I llama a Leonardo a Francia. El artista cruza los Alpes acompañado por Francesco Melzi y lleva consigo varias pinturas en las que todavía trabaja. Entre ellas está la Gioconda. Su último mecenas ya no encarga el retrato: hereda la presencia del artista y, después, la obra que Leonardo nunca quiso dejar atrás."
+        "texto": "Francisco I llama a Leonardo a Francia. El artista cruza los Alpes acompañado por Francesco Melzi y lleva varias pinturas en las que todavía trabaja, entre ellas la Gioconda. La protección del rey le proporciona residencia y medios para sus últimos proyectos. El cuadro permanece en Francia y acaba incorporándose a la colección real."
       },
       {
         "anio": 1519,
@@ -3385,8 +3386,8 @@ const HISTORIAS_EXISTENTES = [
           "FRAN1FRA"
         ],
         "eventoId": "LEONARDO_MUERTE_1519",
-        "titulo": "Final de la búsqueda: una mujer y toda una vida de Leonardo",
-        "texto": "Leonardo muere en Francia en 1519. El viaje nos ha dejado retratos seguros como Cecilia Gallerani, modelos realmente dibujadas como Isabella d'Este y una constelación de candidatas nacida de las cortes que recorrió. Pero cuando todas las pistas se ordenan, el punto de llegada es claro: el Louvre identifica la Gioconda como el retrato de Lisa Gherardini, esposa de Francesco del Giocondo. Leonardo conserva y transforma el retrato durante años; esa elaboración prolongada contribuye a su expresión y a su aspecto final."
+        "titulo": "Los últimos años y la colección francesa",
+        "texto": "Leonardo muere en Francia en 1519. La Gioconda conserva el resultado de años de trabajo sobre la figura, la expresión y el paisaje. Su paso a las colecciones francesas da continuidad a una obra que el artista había llevado entre varias cortes. El Louvre la identifica como el retrato de Lisa Gherardini, esposa de Francesco del Giocondo, y estudia su ejecución prolongada y su posterior historia material."
       }
     ]
   },
@@ -3395,7 +3396,7 @@ const HISTORIAS_EXISTENTES = [
     "titulo": "La Reforma protestante",
     "subtitulo": "Humanismo, Reforma, política imperial y la respuesta de Trento",
     "disponible": true,
-    "descripcion": "Un viaje por la ruptura religiosa del siglo XVI: Erasmo y el regreso a las fuentes, Lutero y los príncipes alemanes, Zuinglio y Calvino, la separación inglesa y una Iglesia católica que responde con nuevas órdenes y el Concilio de Trento.",
+    "descripcion": "Humanistas, teólogos, príncipes y reformadores transforman la vida religiosa europea en el siglo XVI. La ruptura con Roma, las nuevas iglesias y las reformas católicas enfrentan doctrinas, jurisdicciones y proyectos de gobierno.",
     "pasos": [
       {
         "anio": 1516,
@@ -3405,7 +3406,7 @@ const HISTORIAS_EXISTENTES = [
         ],
         "eventoId": "ERASMO_1516",
         "titulo": "Antes de Lutero: reformar mediante el saber",
-        "texto": "Erasmo de Róterdam quiere una Iglesia más culta, moral y próxima a las fuentes cristianas. Su edición del Nuevo Testamento en griego y latín simboliza el programa humanista: leer mejor antes de discutir mejor. Erasmo no será protestante, pero el mundo intelectual que ayuda a crear hará mucho más difícil aceptar la autoridad sin examen."
+        "texto": "Erasmo de Róterdam promueve el estudio de las fuentes cristianas y la renovación moral y educativa de la Iglesia. Su edición del Nuevo Testamento en griego y latín de 1516 permite comparar textos y traducciones. Su trabajo circula entre humanistas, eclesiásticos y futuros reformadores, mientras él mantiene su pertenencia a la Iglesia católica."
       },
       {
         "anio": 1517,
@@ -3442,7 +3443,7 @@ const HISTORIAS_EXISTENTES = [
         ],
         "eventoId": "WORMS_1521",
         "titulo": "Worms: el teólogo se convierte en problema imperial",
-        "texto": "Carlos V, recién elegido emperador, debe negociar con los príncipes y las instituciones del Imperio para afrontar la disputa religiosa. Lutero se niega a retractarse y Federico el Sabio lo protege en Wartburg. Aquí se cruzan doctrina y constitución: sin la fragmentación política del Imperio, la historia de la Reforma habría sido muy distinta."
+        "texto": "Carlos V debe negociar con los príncipes y las instituciones del Imperio para afrontar la disputa religiosa. Lutero se niega a retractarse en Worms y Federico el Sabio lo protege en Wartburg. La jurisdicción del príncipe permite mantenerlo fuera del alcance de sus perseguidores y facilita la continuidad de su trabajo teológico."
       },
       {
         "anio": 1523,
@@ -3478,7 +3479,7 @@ const HISTORIAS_EXISTENTES = [
         ],
         "eventoId": "CONFESION_AUGSBURGO_1530",
         "titulo": "Augsburgo: la Reforma escribe quién es",
-        "texto": "Melanchthon presenta la Confesión de Augsburgo ante Carlos V. El documento intenta explicar la fe luterana de manera sistemática y todavía busca mostrar cuánto comparte con la tradición cristiana común. Pero el mero hecho de que príncipes y ciudades presenten una confesión propia demuestra que la ruptura ya tiene instituciones."
+        "texto": "Melanchthon presenta la Confesión de Augsburgo ante Carlos V. El documento expone sistemáticamente la fe luterana y señala los puntos compartidos con la tradición cristiana. Los príncipes y las ciudades que lo respaldan dan una representación política común a sus iglesias y negocian su reconocimiento dentro del Imperio."
       },
       {
         "anio": 1534,
@@ -3542,8 +3543,8 @@ const HISTORIAS_EXISTENTES = [
           "FELIPEHESSE"
         ],
         "eventoId": "MUHLBERG_1547",
-        "titulo": "Mühlberg: Carlos V gana una batalla y pierde la solución",
-        "texto": "El emperador derrota militarmente a la Liga de Esmalcalda y captura a Juan Federico de Sajonia y Felipe de Hesse. Parece el momento de restaurar la unidad. No sucede. Tras la victoria imperial, las iglesias reformadas mantienen raíces en los territorios, las universidades y las convicciones de buena parte de la población."
+        "titulo": "Mühlberg: victoria militar y conflicto religioso",
+        "texto": "Carlos V derrota a la Liga de Esmalcalda en 1547 y captura a Juan Federico de Sajonia y Felipe de Hesse. La victoria refuerza su posición frente a los príncipes, pero las iglesias reformadas conservan sus instituciones y apoyos sociales. Sus intentos de establecer un acuerdo religioso provocan nuevas resistencias y negociaciones entre los estados del Imperio."
       },
       {
         "anio": 1555,
@@ -3555,8 +3556,8 @@ const HISTORIAS_EXISTENTES = [
           "FELIPEHESSE"
         ],
         "eventoId": "AUGSBURGO_1555",
-        "titulo": "Augsburgo: el Imperio admite que la ruptura es real",
-        "texto": "Fernando negocia en nombre de su hermano Carlos una paz que reconoce legalmente el luteranismo junto al catolicismo en el marco imperial. Es una solución incompleta y no incluye todas las nuevas confesiones, pero supone el fracaso definitivo del proyecto de una sola religión impuesta por el emperador."
+        "titulo": "Augsburgo reconoce dos confesiones",
+        "texto": "Fernando negocia en nombre de Carlos una paz que reconoce legalmente el luteranismo junto al catolicismo en el marco imperial. Los gobernantes territoriales obtienen facultades para ordenar la confesión de sus dominios y se regulan condiciones para la emigración religiosa. Las comunidades reformadas ajenas a la Confesión de Augsburgo quedan fuera del reconocimiento. El acuerdo permite una convivencia jurídica entre dos confesiones y deja cuestiones que volverán a provocar conflictos."
       },
       {
         "anio": 1559,
@@ -3593,7 +3594,7 @@ const HISTORIAS_EXISTENTES = [
     "titulo": "Los favoritos de Maquiavelo",
     "subtitulo": "Modelos, contraejemplos y lecciones de poder en El príncipe",
     "disponible": true,
-    "descripcion": "Un viaje por los gobernantes y contemporáneos que Maquiavelo convirtió en lecciones políticas: cómo conquistar, conservar, perder, aparentar, arriesgar y construir reputación en la Italia de su tiempo.",
+    "descripcion": "Maquiavelo analiza las decisiones de gobernantes y contemporáneos en El príncipe. La conquista, las alianzas, las armas y la reputación aparecen en su estudio de la adquisición y conservación del poder.",
     "pasos": [
       {
         "anio": 1450,
@@ -3700,7 +3701,7 @@ const HISTORIAS_EXISTENTES = [
         ],
         "eventoId": "PRINCIPE_DEDICACION_1516",
         "titulo": "Lorenzo de’ Medici: la dedicatoria de El príncipe",
-        "texto": "El recorrido termina con una ironía. El tratado había sido pensado inicialmente para Giuliano de’ Medici, pero tras su muerte la dedicatoria pasó a Lorenzo II, el Joven. Lorenzo es el destinatario de la dedicatoria final del libro. Maquiavelo le ofrece una colección de lecciones extraídas de Sforza, los Borgia, Francia, el papado y Fernando. El libro sobrevivirá mucho más que la oportunidad política para la que fue escrito."
+        "texto": "El príncipe había sido pensado inicialmente para Giuliano de’ Medici; la dedicatoria final se dirige a Lorenzo II. Maquiavelo le ofrece un análisis de la adquisición y conservación del poder a partir de casos como Sforza, los Borja, los reyes franceses, el papado y Fernando el Católico. El tratado circula más allá del contexto político en el que su autor buscaba recuperar un lugar en el gobierno florentino."
       }
     ]
   },
@@ -3709,7 +3710,7 @@ const HISTORIAS_EXISTENTES = [
     "titulo": "La República de los nobles",
     "subtitulo": "Cómo Polonia convirtió una monarquía hereditaria en una corona elegida.",
     "disponible": true,
-    "descripcion": "Un recorrido por la transformación de Polonia-Lituania en una monarquía donde el rey debía ser elegido, negociar y gobernar con una nobleza extraordinariamente poderosa: de los últimos Jagellón a las elecciones internacionales, los Vasa, Sobieski, los Wettin y el intento final de reforma de 1791.",
+    "descripcion": "Los Jagellón, las elecciones internacionales y las reformas de 1791 transforman el gobierno de Polonia-Lituania. Reyes, magnates y asambleas negocian leyes, impuestos y sucesiones en una monarquía sostenida por los privilegios nobiliarios.",
     "pasos": [
       {
         "anio": 1506,
@@ -3719,8 +3720,8 @@ const HISTORIAS_EXISTENTES = [
           "ALEJANDRO1POL",
           "CASI4"
         ],
-        "titulo": "Una monarquía hereditaria... que ya necesita negociar",
-        "texto": "Cuando Segismundo el Viejo sucede a su hermano Alejandro, la corona permanece dentro de los Jagellón, pero no funciona como una herencia automática. Reyes y nobleza llevan generaciones intercambiando reconocimiento dinástico por privilegios. La república nobiliaria crece a partir de los derechos e instituciones desarrollados dentro de la monarquía."
+        "titulo": "Los Jagellón negocian el reconocimiento de sus herederos",
+        "texto": "Segismundo el Viejo sucede a su hermano Alejandro en 1506. La continuidad Jagellón se apoya en acuerdos con la nobleza, que vincula el reconocimiento de los herederos a sus privilegios. Los derechos de las asambleas y la negociación con los grandes condicionan la legislación, los impuestos y las decisiones dinásticas."
       },
       {
         "anio": 1569,
@@ -3732,7 +3733,7 @@ const HISTORIAS_EXISTENTES = [
         ],
         "eventoId": "LUBLIN_1569",
         "titulo": "Lublin: la unión deja de depender de una familia",
-        "texto": "Segismundo II Augusto no tiene hijos. La Unión de Lublin convierte la relación entre Polonia y Lituania en una comunidad política más estrecha justo cuando la dinastía Jagellón se acerca a su final. La gran pregunta ya no es qué hijo heredará: es cómo elegirán juntos al siguiente rey."
+        "texto": "Segismundo II Augusto carece de descendencia. La Unión de Lublin estrecha en 1569 la relación entre Polonia y Lituania y establece la elección común del soberano. El Sejm compartido articula la participación de la nobleza, mientras cada territorio conserva instituciones propias. La siguiente sucesión tendrá que reunir los apoyos de ambas partes de la República."
       },
       {
         "anio": 1573,
@@ -3742,8 +3743,8 @@ const HISTORIAS_EXISTENTES = [
           "ANAJAG"
         ],
         "eventoId": "ELECCION_1573",
-        "titulo": "Cualquiera puede aspirar a la corona",
-        "texto": "La primera elección libre lleva al trono a Enrique de Valois, hermano del rey de Francia. Para aceptar la corona debe jurar reglas que limitan permanentemente al monarca. La paradoja es inmediata: un príncipe extranjero consigue una de las grandes coronas de Europa, pero esa corona pertenece políticamente a quienes lo han elegido."
+        "titulo": "Enrique de Valois gana la elección",
+        "texto": "La elección de 1573 favorece a Enrique de Valois, hermano del rey de Francia. Su candidatura reúne apoyos nobiliarios y diplomáticos suficientes para obtener la corona. Los electores condicionan su reconocimiento al juramento de las garantías de la República y a los compromisos negociados con el candidato. Enrique es coronado en Cracovia en 1574."
       },
       {
         "anio": 1576,
@@ -3755,7 +3756,7 @@ const HISTORIAS_EXISTENTES = [
         ],
         "eventoId": "BATHORY_1576",
         "titulo": "Una reina Jagellón y un príncipe de Transilvania",
-        "texto": "Enrique abandona Polonia para convertirse en rey de Francia. Ana Jagellón es elegida y Esteban Báthory, príncipe de Transilvania, gobierna junto a ella. Sangre dinástica y elección popular nobiliaria se combinan de una manera que casi ninguna otra gran monarquía europea puede imitar."
+        "texto": "Enrique abandona Polonia para convertirse en rey de Francia. Ana Jagellón es elegida y se casa con Esteban Báthory, príncipe de Transilvania, que gobierna junto a ella. La ascendencia de Ana y los apoyos electorales del matrimonio sostienen una nueva solución sucesoria."
       },
       {
         "anio": 1587,
@@ -3767,7 +3768,7 @@ const HISTORIAS_EXISTENTES = [
         ],
         "eventoId": "VASA_POLONIA_1587",
         "titulo": "La elección vuelve a fabricar una dinastía",
-        "texto": "Segismundo III Vasa es nieto de Segismundo el Viejo por su madre Catalina Jagellón y heredero del trono sueco por su padre. Su elección parece reconciliar continuidad y libertad. Durante tres generaciones los Vasa serán elegidos uno tras otro, demostrando que una monarquía electiva puede comportarse durante décadas como si fuera dinástica sin dejar de ser electiva."
+        "texto": "Segismundo III Vasa es nieto de Segismundo el Viejo por su madre Catalina Jagellón y heredero de Suecia por su padre. Su elección reúne la ascendencia de la antigua casa con una nueva candidatura. Después de él, los electores escogerán a sus hijos Ladislao y Juan Casimiro, negociando en cada sucesión los compromisos del rey con la República."
       },
       {
         "anio": 1632,
@@ -3778,7 +3779,7 @@ const HISTORIAS_EXISTENTES = [
           "JUAN2CASIVASA"
         ],
         "titulo": "Ladislao IV: una sucesión que parece hereditaria",
-        "texto": "A la muerte de Segismundo III, la nobleza elige a su hijo Ladislao IV. Nadie ha abolido la elección, pero la continuidad familiar funciona. La elección permite a la nobleza aceptar a un miembro de la dinastía reinante y exigirle compromisos antes de reconocerlo como rey."
+        "texto": "A la muerte de Segismundo III, la nobleza elige a su hijo Ladislao IV en 1632. Los electores aceptan la continuidad de la familia y negocian compromisos antes de reconocer al nuevo rey. La sucesión conserva los procedimientos y las garantías de la monarquía electiva."
       },
       {
         "anio": 1668,
@@ -3790,7 +3791,7 @@ const HISTORIAS_EXISTENTES = [
         ],
         "eventoId": "ABDICACION_1668",
         "titulo": "La dinastía Vasa se rompe por una abdicación",
-        "texto": "Juan II Casimiro, hermano de Ladislao, soporta rebeliones, invasiones suecas y una larga crisis política antes de abdicar. Sin un heredero dinástico inevitable, la elección de 1669 escoge a Miguel Korybut Wiśniowiecki, un candidato de la propia nobleza. La corona demuestra que puede abandonar de golpe a una gran casa europea."
+        "texto": "Juan II Casimiro, hermano de Ladislao, afronta rebeliones, invasiones suecas y una prolongada crisis política. Abdica en 1668. La elección de 1669 lleva al trono a Miguel Korybut Wiśniowiecki, miembro de la nobleza de la República. Los partidarios de distintas candidaturas buscan apoyos entre los electores y las potencias vecinas."
       },
       {
         "anio": 1683,
@@ -3802,7 +3803,7 @@ const HISTORIAS_EXISTENTES = [
         ],
         "eventoId": "VIENA_1683",
         "titulo": "Sobieski: un rey elegido que salva Viena",
-        "texto": "Juan Sobieski llega al trono por elección y no por pertenecer a una dinastía reinante. En 1683 conduce al ejército de socorro de Viena y se convierte en uno de los monarcas más célebres de Europa. La República de los nobles puede producir un rey de enorme prestigio; lo que no puede garantizar es que sus hijos hereden la corona."
+        "texto": "Juan Sobieski obtiene la corona por elección. En 1683 dirige el ejército de socorro de Viena y gana prestigio entre las cortes europeas. Su familia busca convertir esos apoyos y sus alianzas matrimoniales en una base para la siguiente sucesión. Después de su muerte, las candidaturas de sus descendientes compiten con príncipes respaldados por otras potencias."
       },
       {
         "anio": 1697,
@@ -3827,7 +3828,7 @@ const HISTORIAS_EXISTENTES = [
         ],
         "eventoId": "DOBLE_ELECCION_1733",
         "titulo": "Dos reyes elegidos, una guerra europea",
-        "texto": "A la muerte de Augusto II, Estanislao Leszczyński y Augusto III reciben apoyos rivales. Francia favorece al primero; Rusia y Austria sostienen al segundo. La elección que debía expresar la libertad política de la nobleza se convierte en una competición internacional respaldada por ejércitos."
+        "texto": "A la muerte de Augusto II, Estanislao Leszczyński y Augusto III reciben apoyos rivales. Francia favorece al primero; Rusia y Austria sostienen al segundo. Los ejércitos intervienen para imponer a sus candidatos y la disputa se extiende a otros escenarios europeos."
       },
       {
         "anio": 1764,
@@ -3839,7 +3840,7 @@ const HISTORIAS_EXISTENTES = [
         ],
         "eventoId": "PONIATOWSKI_1764",
         "titulo": "El último rey intenta reformar la República",
-        "texto": "Estanislao Augusto Poniatowski es elegido en un sistema cuya libertad formal convive ya con una enorme presión rusa. Lejos de limitarse a aceptar el declive, el rey y una parte de las élites intentarán reconstruir el Estado. La gran pregunta del siglo XVIII es si la libertad nobiliaria puede transformarse antes de convertirse en parálisis."
+        "texto": "Estanislao Augusto Poniatowski es elegido bajo una fuerte presión rusa. El rey y parte de las élites promueven cambios en la administración, la educación y las instituciones de la República. Las propuestas enfrentan intereses nobiliarios, proyectos de reforma e intervenciones de las potencias vecinas."
       },
       {
         "anio": 1791,
@@ -3850,7 +3851,7 @@ const HISTORIAS_EXISTENTES = [
         ],
         "eventoId": "CONSTITUCION_1791",
         "titulo": "La República intenta abolir la corona electiva",
-        "texto": "La Constitución del 3 de Mayo elimina el liberum veto y sustituye la elección de cada nuevo rey por una sucesión hereditaria prevista en la casa de Sajonia. Después de más de dos siglos, los propios reformadores de la República concluyen que el mecanismo que había protegido la libertad política también podía impedir la supervivencia del Estado."
+        "texto": "La Constitución del 3 de Mayo elimina el liberum veto y prevé una sucesión hereditaria vinculada a la casa de Sajonia. Los reformadores refuerzan los instrumentos de gobierno común y cambian las condiciones de transmisión de la corona. La reforma provoca la oposición de grupos nobiliarios y altera los intereses de las potencias que intervienen en la República."
       },
       {
         "anio": 1795,
@@ -3861,8 +3862,8 @@ const HISTORIAS_EXISTENTES = [
           "FREDWIL2PRU"
         ],
         "eventoId": "FIN_POLONIA_1795",
-        "titulo": "El final: ya no queda una corona que elegir",
-        "texto": "La tercera partición extingue la Mancomunidad y Estanislao Augusto abdica. El recorrido que comenzó con una dinastía negociando privilegios termina con Rusia, Prusia y Austria repartiéndose el territorio. La República de los nobles fue una anomalía extraordinariamente duradera: una monarquía que convirtió la elección del rey en parte central de su idea de libertad."
+        "titulo": "La tercera partición y la abdicación",
+        "texto": "La tercera partición de 1795 extingue la Mancomunidad y Estanislao Augusto abdica. Rusia, Prusia y Austria se reparten los territorios restantes e incorporan sus habitantes a otros gobiernos. Las instituciones de la República pierden la capacidad de ejercer una soberanía común."
       }
     ]
   },
@@ -3909,7 +3910,7 @@ const HISTORIAS_EXISTENTES = [
         ],
         "eventoId": "WASSY_1562",
         "titulo": "Wassy convierte la tensión en guerra civil",
-        "texto": "La violencia en Wassy, protagonizada por hombres de Francisco de Guisa contra una congregación protestante, destruye el frágil equilibrio. Luis de Condé organiza un ejército hugonote. Francia ya no discute únicamente sobre tolerancia religiosa: dos redes aristocráticas levantan tropas contra sus compatriotas."
+        "texto": "Los hombres de Francisco de Guisa atacan a una congregación protestante en Wassy. La violencia agrava el enfrentamiento confesional y Luis de Condé organiza un ejército hugonote. Las redes aristocráticas movilizan tropas y apoyos alrededor de la corte y de los dirigentes religiosos. Las disputas por la tolerancia, la seguridad y el gobierno desembocan en guerra civil."
       },
       {
         "anio": 1569,
@@ -3973,7 +3974,7 @@ const HISTORIAS_EXISTENTES = [
         ],
         "eventoId": "ASESINATO_GUISA_1588",
         "titulo": "El rey mata al hombre que dominaba París",
-        "texto": "Después de que la Jornada de las Barricadas obligue al rey a huir de París, Enrique III concluye que Guisa se ha convertido en un poder rival. Lo hace asesinar en Blois. El golpe elimina al jefe de la Liga, pero no a la Liga: su hermano Carlos de Mayenne toma el mando."
+        "texto": "La Jornada de las Barricadas obliga a Enrique III a huir de París. El rey intenta recuperar la iniciativa y ordena asesinar al duque de Guisa en Blois. Carlos de Mayenne, hermano del duque, asume la dirección de la Liga Católica y mantiene la resistencia frente al gobierno real."
       },
       {
         "anio": 1589,
@@ -4261,7 +4262,7 @@ const HISTORIAS_EXISTENTES = [
         ],
         "eventoId": "SELIM2_1566",
         "titulo": "Selim II hereda la presión sobre el Mediterráneo",
-        "texto": "La muerte de Solimán no termina la expansión otomana. Selim II mantiene una política ofensiva y pronto concentra su atención en Chipre, una posesión veneciana estratégicamente situada en el Mediterráneo oriental."
+        "texto": "Selim II sucede a Solimán y mantiene una política ofensiva en el Mediterráneo. Su gobierno concentra la atención en Chipre, una posesión veneciana estratégicamente situada en el Mediterráneo oriental."
       },
       {
         "anio": 1570,
@@ -4286,7 +4287,7 @@ const HISTORIAS_EXISTENTES = [
           "SEBASTIANOVENIER"
         ],
         "eventoId": "LIGA_SANTA_1571",
-        "titulo": "Pío V consigue lo que parecía imposible",
+        "titulo": "Pío V negocia la Liga Santa",
         "texto": "El papa Pío V actúa como mediador y consigue que la Monarquía Hispánica, Venecia y los Estados Pontificios acepten una Liga Santa. Felipe II respalda el proyecto y don Juan de Austria, hijo de Carlos V y hermanastro del rey, recibe el mando supremo."
       },
       {
@@ -4381,7 +4382,7 @@ const HISTORIAS_EXISTENTES = [
         ],
         "eventoId": "LEPANTO",
         "titulo": "La Liga gana la batalla",
-        "texto": "Tras horas de combate, gran parte de la flota otomana ha sido capturada, hundida o abandonada y Alí Bajá ha muerto. Don Juan obtiene una victoria que causa una impresión enorme en Europa. Lepanto demuestra que una coalición de potencias rivales puede derrotar a la principal armada otomana cuando consigue actuar de forma coordinada."
+        "texto": "Tras horas de combate, gran parte de la flota otomana ha sido capturada, hundida o abandonada y Alí Bajá ha muerto. Don Juan obtiene una victoria de gran repercusión en Europa. La cooperación entre las escuadras y la intervención de la reserva han permitido sostener los puntos amenazados y reforzar los ataques de la Liga."
       },
       {
         "anio": 1572,
@@ -4459,7 +4460,7 @@ const HISTORIAS_EXISTENTES = [
         ],
         "eventoId": "ALIANZA_VIENA_1683",
         "titulo": "Leopoldo y Sobieski prometen acudir el uno al otro",
-        "texto": "Con mediación de Inocencio XI, el emperador y el rey electo de Polonia pactan una alianza defensiva. Ninguno de los dos puede garantizar por sí solo la seguridad de la frontera: Viena necesitará al ejército polaco y Polonia necesita que Austria siga conteniendo la presión otomana."
+        "texto": "Con mediación de Inocencio XI, Leopoldo I y Juan Sobieski pactan una alianza defensiva. El acuerdo prevé ayuda ante ataques a Viena o a Cracovia y reúne recursos polacos e imperiales para proteger sus posiciones frente al avance otomano. La negociación vincula la seguridad de ambos reinos y prepara la cooperación militar."
       },
       {
         "anio": 1683,
@@ -4472,7 +4473,7 @@ const HISTORIAS_EXISTENTES = [
         ],
         "eventoId": "SITIO_VIENA_1683",
         "titulo": "Kara Mustafa llega antes que los aliados",
-        "texto": "El ejército otomano alcanza Viena en julio. Leopoldo evacua la ciudad y Starhemberg queda al frente de la guarnición. El tiempo pasa a ser el elemento decisivo: los defensores sólo tienen que resistir hasta que una coalición que todavía está reuniéndose consiga llegar."
+        "texto": "El ejército otomano alcanza Viena en julio. Leopoldo evacua la ciudad y Starhemberg organiza la defensa con la guarnición. Los asaltos, las minas y las brechas amenazan las murallas mientras los defensores reparan fortificaciones y administran sus reservas. El ejército de socorro todavía está reuniéndose y debe coordinar la marcha hacia la capital sitiada."
       },
       {
         "anio": 1683,
@@ -4514,7 +4515,7 @@ const HISTORIAS_EXISTENTES = [
         ],
         "eventoId": "LIGA_SANTA_1684",
         "titulo": "La alianza deja de ser un socorro de emergencia",
-        "texto": "La victoria permite crear una nueva Liga Santa. Austria, Polonia y Venecia pasan a la ofensiva con apoyo papal. La cuestión ya no es impedir que Viena caiga, sino recuperar territorios de Hungría que llevaban generaciones bajo dominio otomano."
+        "texto": "En 1684 Austria, Polonia y Venecia forman una nueva Liga Santa con apoyo pontificio. Los aliados preparan campañas contra las posiciones otomanas de Hungría y otros frentes. Las operaciones requieren acordar objetivos, reunir recursos y mantener la cooperación entre gobiernos que también defienden intereses propios."
       },
       {
         "anio": 1686,
@@ -4526,8 +4527,8 @@ const HISTORIAS_EXISTENTES = [
           "MEHMED4OSM"
         ],
         "eventoId": "BUDA_1686",
-        "titulo": "Buda demuestra que Viena fue un punto de inflexión",
-        "texto": "Tres años después, las fuerzas de la coalición conquistan Buda. El avance no terminará allí: la Gran Guerra Turca desplazará la frontera hacia el sudeste y reforzará decisivamente a los Habsburgo. La alianza que se reunió para salvar una capital acaba transformando el mapa de Europa central."
+        "titulo": "La coalición conquista Buda",
+        "texto": "En 1686 las fuerzas de la coalición conquistan Buda. El avance abre nuevas posiciones en Hungría y refuerza el poder de los Habsburgo. Las siguientes campañas de la Gran Guerra Turca desplazan la frontera hacia el sudeste, mientras los aliados negocian la distribución de las conquistas y el mantenimiento de sus ejércitos."
       }
     ]
   },
@@ -4606,4 +4607,4 @@ const HISTORIAS_BASE = [
 ].filter((h,index,all)=>all.findIndex(item=>item.id===h.id)===index)
  .map(reviseBurgundy).map(h => ({...h, ...CONTEXTO_HISTORIAS[h.id], titulo:h.titulo.replace(/^La Guerra de/, 'La guerra de').replace('La Revolución Protestante','La revolución protestante').replace('El Reino de los Cielos','El reino de los cielos'), subtitulo:(h.subtitulo||'').trim().replace(/\.$/,''), descripcion:h.descripcion?.trim(), colecciones:storyCollections(h.id)}));
 
-export const HISTORIAS = reviseStories604(HISTORIAS_BASE);
+export const HISTORIAS = completeStories606(reviseStories604(HISTORIAS_BASE)).map(h=>({...h,colecciones:storyCollections(h.id)}));
