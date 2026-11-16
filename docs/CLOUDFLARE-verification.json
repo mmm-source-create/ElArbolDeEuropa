@@ -14,11 +14,20 @@
     "reusedEnglishMetadata": 4767
   },
   "checks": {
-    "targetedTests": {"passed": 13, "failed": 0},
+    "targetedTests": {
+      "passed": 13,
+      "failed": 0
+    },
     "securityAuditIncidents": 0,
     "dependencyAuditVulnerabilities": 0,
-    "publicRegression": {"profiles": 4757, "differences": 0},
-    "builtStoryPages": {"checked": 836, "errors": 0},
+    "publicRegression": {
+      "profiles": 4757,
+      "differences": 0
+    },
+    "builtStoryPages": {
+      "checked": 836,
+      "errors": 0
+    },
     "wranglerDryRun": "passed",
     "remoteHttp": "passed: static-first ES/EN, Atlas query URL, legacy English JSON, HEAD, redirects, maps, embeds, real 404, API errors, immutable assets",
     "remoteBrowser": "passed: Spanish home, Charles V ES/EN, profile to interactive Atlas, English privacy; no browser errors observed",
@@ -35,22 +44,55 @@
     "worker": "el-arbol-de-europa",
     "url": "https://el-arbol-de-europa.mmurielcagigal.workers.dev",
     "versionId": "7fc7a1a8-2437-406f-b519-6a00316bf255",
-    "status": "deployed; HTTP and browser Atlas verified; both custom domains associated; public domain cutover pending DNSSEC approval",
-    "customDomains": ["treeofeurope.eu", "www.treeofeurope.eu"]
+    "status": "deployed; HTTP and browser Atlas verified; both custom domains associated; public domain cutover waiting for OVH DNSSEC disable and old DS expiry",
+    "customDomains": [
+      "treeofeurope.eu",
+      "www.treeofeurope.eu"
+    ]
   },
   "dns": {
     "registrar": "OVH",
-    "liveNameservers": ["dns106.ovh.net", "ns106.ovh.net"],
-    "cloudflareNameservers": ["garret.ns.cloudflare.com", "melina.ns.cloudflare.com"],
+    "liveNameservers": [
+      "dns106.ovh.net",
+      "ns106.ovh.net"
+    ],
+    "cloudflareNameservers": [
+      "garret.ns.cloudflare.com",
+      "melina.ns.cloudflare.com"
+    ],
     "cloudflareZoneStatus": "pending nameserver activation",
     "existingRecordsCompared": 15,
     "preservedServiceRecords": 13,
     "cloudflareRecordsAfterBinding": 15,
-    "previousWebRecordsRenamedAsBackups": ["vercel-backup.treeofeurope.eu A 216.198.79.1", "vercel-www-backup.treeofeurope.eu CNAME 7107ffe14dd80b02.vercel-dns-017.com"],
-    "missingScanRecordsAdded": ["ovhmo-selector-1._domainkey CNAME", "ovhmo-selector-2._domainkey CNAME", "_autodiscover._tcp SRV"],
+    "previousWebRecordsRenamedAsBackups": [
+      "vercel-backup.treeofeurope.eu A 216.198.79.1",
+      "vercel-www-backup.treeofeurope.eu CNAME 7107ffe14dd80b02.vercel-dns-017.com"
+    ],
+    "missingScanRecordsAdded": [
+      "ovhmo-selector-1._domainkey CNAME",
+      "ovhmo-selector-2._domainkey CNAME",
+      "_autodiscover._tcp SRV"
+    ],
     "ovhRecordsChanged": false,
-    "dnssec": "active in OVH; temporary disabling awaits explicit approval",
+    "dnssec": "temporary disabling explicitly approved and submitted; OVH shows Desactivando...; end-to-end reactivation remains pending after cutover",
+    "dnssecDisableObservedAt": "2026-11-16T19:02:21Z",
+    "dnssecRegistrarEstimateHours": 24,
+    "authoritativeDsCheck": {
+      "checkedAt": "2026-11-16T19:04:45Z",
+      "servers": [
+        "x.dns.eu",
+        "y.dns.eu",
+        "be.dns.eu",
+        "si.dns.eu",
+        "w.dns.eu"
+      ],
+      "oldDsStillPresent": true,
+      "keyTag": 56194,
+      "algorithm": 8,
+      "digestType": 2,
+      "ttlSeconds": 86400
+    },
     "previousDsObservedTtlSeconds": 84269,
-    "cutoverRequirement": "After approved DNSSEC disable, verify DS removal and allow the old DS TTL to expire before changing nameservers. Re-enable DNSSEC at Cloudflare and publish its DS in OVH after activation."
+    "cutoverRequirement": "Approval is already granted. Observe authoritative DS removal, record that timestamp, then allow 86400 seconds for old DS caches to expire before changing nameservers. Do not calculate a safe cutover from the disable-request time while the old DS remains authoritative. After activation, enable Cloudflare DNSSEC, publish its DS/key in OVH as required, and verify the DNSSEC validation chain."
   }
 }
