@@ -32,6 +32,8 @@ El build de Vercel permanece disponible. El build de Cloudflare desactiva Speed 
 
 Antes de cambiar DNS: revisar perfiles ES/EN, historias y capítulos, Atlas con `?atlas=1`, mapa completo, búsqueda, privacidad, imágenes, desafío, embeds, redirecciones y errores 404 en la URL remota. Después se puede configurar el dominio original. Conservar Vercel como alternativa; no modificar ni eliminar registros de correo al cambiar DNS.
 
+La prueba publicada está en [Cloudflare](https://eade-cloudflare-preview.mmurielcagigal.workers.dev/es/). El [informe de verificación](./CLOUDFLARE-verification.json) recoge el paquete, las pruebas realizadas, la versión desplegada y el estado de DNS. Para repetir las comprobaciones HTTP: `node scripts/check-cloudflare-http.mjs https://eade-cloudflare-preview.mmurielcagigal.workers.dev`.
+
 Fuentes oficiales consultadas el 16 de noviembre de 2026:
 
 - [Static Assets: facturación y límites](https://developers.cloudflare.com/workers/static-assets/billing-and-limitations/).
@@ -46,3 +48,5 @@ El entorno `production` usa el Worker `el-arbol-de-europa` y declara únicamente
 El 16 de noviembre se confirmó que el dominio usa OVH y mantiene DNSSEC activo. Se compararon sus quince registros con los de Cloudflare: dos son los servidores NS antiguos y trece corresponden a la web, verificaciones y correo. El escaneo automático omitió los dos CNAME de DKIM y el SRV de autodetección de Zimbra; se añadieron como DNS only. Los MX y las verificaciones se conservaron.
 
 Los nuevos servidores asignados son `garret.ns.cloudflare.com` y `melina.ns.cloudflare.com`. No deben sustituir a los de OVH mientras siga vigente la firma DNSSEC anterior. La desactivación temporal y posterior reactivación de DNSSEC requiere autorización y respetar el TTL anterior, que puede llegar a 24 horas. Una firma DS antigua en caché produce SERVFAIL al validar claves del nuevo proveedor. No se trasladan el registro ni la renovación del dominio, y no se contratan planes de pago.
+
+La publicación definitiva está disponible en `https://el-arbol-de-europa.mmurielcagigal.workers.dev/es/`, con ambos dominios propios asociados en Cloudflare. Sus dos registros importados de Vercel impedían la asociación; se conservaron cambiando sus nombres a `vercel-backup` y `vercel-www-backup`, dentro de la zona pendiente de Cloudflare. Cloudflare creó los registros gestionados de los dominios propios: hay quince registros en total. Los registros y servidores activos de OVH siguen sin cambiar. El dominio público continúa en Vercel hasta completar el traslado DNS.

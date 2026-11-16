@@ -1,0 +1,56 @@
+{
+  "verifiedAt": "2026-11-16",
+  "sourceBranch": "codex/cloudflare-free-migration",
+  "contentCommit": "83c499d38d06c7f09c4ec0fa46c477997257d63b",
+  "plan": "Workers Free",
+  "paidPlanEnabled": false,
+  "package": {
+    "files": 17141,
+    "freeFileLimit": 20000,
+    "remainingFiles": 2859,
+    "bytes": 615766206,
+    "largestFileBytes": 12223121,
+    "ssgPages": 9524,
+    "reusedEnglishMetadata": 4767
+  },
+  "checks": {
+    "targetedTests": {"passed": 13, "failed": 0},
+    "securityAuditIncidents": 0,
+    "dependencyAuditVulnerabilities": 0,
+    "publicRegression": {"profiles": 4757, "differences": 0},
+    "builtStoryPages": {"checked": 836, "errors": 0},
+    "wranglerDryRun": "passed",
+    "remoteHttp": "passed: static-first ES/EN, Atlas query URL, legacy English JSON, HEAD, redirects, maps, embeds, real 404, API errors, immutable assets",
+    "remoteBrowser": "passed: Spanish home, Charles V ES/EN, profile to interactive Atlas, English privacy; no browser errors observed",
+    "localWranglerHttp": "not completed: local server did not become ready; deployed runtime verified remotely instead",
+    "fullTestSuite": "not rerun for hosting migration"
+  },
+  "preview": {
+    "url": "https://eade-cloudflare-preview.mmurielcagigal.workers.dev",
+    "worker": "eade-cloudflare-preview",
+    "versionId": "1aa1f9ed-54b0-41f5-9d39-6afdbc8dc57e",
+    "status": "deployed and verified"
+  },
+  "production": {
+    "worker": "el-arbol-de-europa",
+    "url": "https://el-arbol-de-europa.mmurielcagigal.workers.dev",
+    "versionId": "7fc7a1a8-2437-406f-b519-6a00316bf255",
+    "status": "deployed; HTTP and browser Atlas verified; both custom domains associated; public domain cutover pending DNSSEC approval",
+    "customDomains": ["treeofeurope.eu", "www.treeofeurope.eu"]
+  },
+  "dns": {
+    "registrar": "OVH",
+    "liveNameservers": ["dns106.ovh.net", "ns106.ovh.net"],
+    "cloudflareNameservers": ["garret.ns.cloudflare.com", "melina.ns.cloudflare.com"],
+    "cloudflareZoneStatus": "pending nameserver activation",
+    "existingRecordsCompared": 15,
+    "preservedServiceRecords": 13,
+    "cloudflareRecordsAfterBinding": 15,
+    "previousWebRecordsRenamedAsBackups": ["vercel-backup.treeofeurope.eu A 216.198.79.1", "vercel-www-backup.treeofeurope.eu CNAME 7107ffe14dd80b02.vercel-dns-017.com"],
+    "missingScanRecordsAdded": ["ovhmo-selector-1._domainkey CNAME", "ovhmo-selector-2._domainkey CNAME", "_autodiscover._tcp SRV"],
+    "ovhRecordsChanged": false,
+    "dnssec": "active in OVH; temporary disabling awaits explicit approval",
+    "previousDsObservedTtlSeconds": 84269,
+    "cutoverRequirement": "After approved DNSSEC disable, verify DS removal and allow the old DS TTL to expire before changing nameservers. Re-enable DNSSEC at Cloudflare and publish its DS in OVH after activation."
+  }
+}
