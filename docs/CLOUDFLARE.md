@@ -28,7 +28,7 @@ npm run preview:cloudflare
 
 Vercel ya no se usa. El build de Cloudflare activa Cloudflare Web Analytics (identificador público en `src/app/analytics-config.js`, sustituible con `VITE_CF_ANALYTICS_TOKEN`) y la CSP lo autoriza en `script-src` y `connect-src`. Las cabeceras conservan el hash autorizado del aviso de pantalla y las excepciones de embeds.
 
-`wrangler.jsonc` apunta a `eade-cloudflare-preview`, sin dominios de producción ni cuenta preseleccionada. Las respuestas de preview llevan `noindex, nofollow`. Tras autorizar la cuenta, verificar su identidad antes de ejecutar `npm run deploy:cloudflare:preview`.
+`wrangler.jsonc` define en su nivel superior el Worker de producción `el-arbol-de-europa` (Workers Builds exige que el nombre coincida) y el entorno `preview`, que apunta a `eade-cloudflare-preview` sin dominios propios ni cuenta preseleccionada. Las respuestas de preview llevan `noindex, nofollow`. Tras autorizar la cuenta, verificar su identidad antes de ejecutar `npm run deploy:cloudflare:preview`.
 
 Antes de cambiar DNS: revisar perfiles ES/EN, historias y capítulos, Atlas con `?atlas=1`, mapa completo, búsqueda, privacidad, imágenes, desafío, embeds, redirecciones y errores 404 en la URL remota. Después se puede configurar el dominio original. No modificar ni eliminar registros de correo al cambiar DNS.
 
@@ -43,7 +43,7 @@ Fuentes oficiales consultadas el 16 de noviembre de 2026:
 
 ## Dominio de producción
 
-El entorno `production` usa el Worker `el-arbol-de-europa` y declara únicamente `treeofeurope.eu` y `www.treeofeurope.eu` como dominios propios. El comando explícito es `npm run deploy:cloudflare:production`; el comando de prueba sigue sin asociar dominios. Los hosts `workers.dev` conservan `noindex` incluso en ese entorno.
+La configuración principal usa el Worker `el-arbol-de-europa` y declara únicamente `treeofeurope.eu` y `www.treeofeurope.eu` como dominios propios. El comando explícito es `npm run deploy:cloudflare:production`; el comando `deploy:cloudflare:preview` usa el entorno `preview` y no asocia dominios. Los hosts `workers.dev` conservan `noindex` incluso en ese entorno.
 
 El 16 de noviembre se confirmó que el dominio usa OVH y mantiene DNSSEC activo. Se compararon sus quince registros con los de Cloudflare: dos son los servidores NS antiguos y trece corresponden a la web, verificaciones y correo. El escaneo automático omitió los dos CNAME de DKIM y el SRV de autodetección de Zimbra; se añadieron como DNS only. Los MX y las verificaciones se conservaron.
 

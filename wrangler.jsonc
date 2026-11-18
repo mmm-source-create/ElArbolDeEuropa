@@ -1,10 +1,9 @@
 {
   "$schema": "node_modules/wrangler/config-schema.json",
-  "name": "eade-cloudflare-preview",
+  "name": "el-arbol-de-europa",
   "main": "cloudflare/worker.js",
   "compatibility_date": "2026-11-16",
   "workers_dev": true,
-  "observability": {"enabled": true},
   "assets": {
     "directory": "./.cloudflare/assets",
     "binding": "ASSETS",
@@ -81,28 +80,29 @@
     ]
   },
   "vars": {
-    "DEPLOYMENT_ENV": "preview"
+    "DEPLOYMENT_ENV": "production"
   },
   "observability": {
-    "enabled": false
+    "enabled": true
   },
+  "routes": [
+    {
+      "pattern": "www.treeofeurope.eu",
+      "custom_domain": true
+    },
+    {
+      "pattern": "treeofeurope.eu",
+      "custom_domain": true
+    }
+  ],
   "env": {
-    "production": {
-      "name": "el-arbol-de-europa",
-      "observability": {"enabled": true},
+    "preview": {
+      "name": "eade-cloudflare-preview",
+      "workers_dev": true,
+      "observability": {"enabled": false},
       "vars": {
-        "DEPLOYMENT_ENV": "production"
-      },
-      "routes": [
-        {
-          "pattern": "www.treeofeurope.eu",
-          "custom_domain": true
-        },
-        {
-          "pattern": "treeofeurope.eu",
-          "custom_domain": true
-        }
-      ]
+        "DEPLOYMENT_ENV": "preview"
+      }
     }
   }
 }

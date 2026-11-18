@@ -52,10 +52,10 @@
     "audit:stories": "node scripts/audits/audit-story-editorial.mjs",
     "build:cloudflare": "node scripts/build-cloudflare.mjs",
     "prepare:cloudflare": "node scripts/prepare-cloudflare.mjs",
-    "preview:cloudflare": "wrangler dev --config wrangler.jsonc",
+    "preview:cloudflare": "wrangler dev --config wrangler.jsonc --env preview",
     "check:cloudflare": "wrangler deploy --config wrangler.jsonc --dry-run",
-    "deploy:cloudflare:preview": "wrangler deploy --config wrangler.jsonc",
-    "deploy:cloudflare:production": "wrangler deploy --config wrangler.jsonc --env production"
+    "deploy:cloudflare:preview": "wrangler deploy --config wrangler.jsonc --env preview",
+    "deploy:cloudflare:production": "wrangler deploy --config wrangler.jsonc"
   },
   "dependencies": {
     "lucide-react": "1.30.0",

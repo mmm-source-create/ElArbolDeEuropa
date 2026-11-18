@@ -15,7 +15,7 @@ test('common SSG and atlas URLs remain static-first; only legacy redirects force
   const pathname=url(path).pathname;
   assert(!redirectWorkerPatterns.some(p=>p.endsWith('*')?pathname.startsWith(p.slice(0,-1)):p===pathname),path);
  }
- assert.equal(config.vars.DEPLOYMENT_ENV,'preview');assert(!config.routes);assert(!config.account_id);
+ assert.equal(config.env.preview.name,'eade-cloudflare-preview');assert.equal(config.env.preview.vars.DEPLOYMENT_ENV,'preview');assert(!config.env.preview.routes);assert(!config.account_id);
 });
 
 test('the adapter preserves languages, chapters, atlas selection and wildcard redirects',()=>{
@@ -62,10 +62,10 @@ test('fallback routes return real errors and API/POST requests do not become suc
 });
 
 test('production is explicit, limited to the owned domains, and temporary hosts remain noindex',async()=>{
- assert.equal(config.env.production.name,'el-arbol-de-europa');
- assert.equal(config.env.production.vars.DEPLOYMENT_ENV,'production');
- assert.deepEqual(config.env.production.routes.map(r=>r.pattern).sort(),['treeofeurope.eu','www.treeofeurope.eu']);
- assert(config.env.production.routes.every(r=>r.custom_domain===true));
+ assert.equal(config.name,'el-arbol-de-europa');
+ assert.equal(config.vars.DEPLOYMENT_ENV,'production');
+ assert.deepEqual(config.routes.map(r=>r.pattern).sort(),['treeofeurope.eu','www.treeofeurope.eu']);
+ assert(config.routes.every(r=>r.custom_domain===true));
  const response=await worker.fetch(new Request('https://example.workers.dev/embed/arbol'),{...env,DEPLOYMENT_ENV:'production'});
  assert.equal(response.headers.get('X-Robots-Tag'),'noindex, nofollow');
 });
