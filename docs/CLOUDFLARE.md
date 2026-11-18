@@ -26,11 +26,11 @@ npm run preview:cloudflare
 
 `build:cloudflare -- --reuse-generated` reutiliza únicamente los metadatos previamente generados y auditados. Vuelve a compilar, prerenderizar y auditar todos los HTML. El resultado aislado está en `.cloudflare/assets`; `.cloudflare/report.json` contiene recuentos, tamaño y margen de archivos. El empaquetado falla si supera los límites gratuitos.
 
-El build de Vercel permanece disponible. El build de Cloudflare desactiva Speed Insights y adapta Privacidad en español e inglés al alojamiento real. Las cabeceras conservan el hash autorizado del aviso de pantalla y las excepciones de embeds.
+Vercel ya no se usa. El build de Cloudflare activa Cloudflare Web Analytics (identificador público en `src/app/analytics-config.js`, sustituible con `VITE_CF_ANALYTICS_TOKEN`) y la CSP lo autoriza en `script-src` y `connect-src`. Las cabeceras conservan el hash autorizado del aviso de pantalla y las excepciones de embeds.
 
 `wrangler.jsonc` apunta a `eade-cloudflare-preview`, sin dominios de producción ni cuenta preseleccionada. Las respuestas de preview llevan `noindex, nofollow`. Tras autorizar la cuenta, verificar su identidad antes de ejecutar `npm run deploy:cloudflare:preview`.
 
-Antes de cambiar DNS: revisar perfiles ES/EN, historias y capítulos, Atlas con `?atlas=1`, mapa completo, búsqueda, privacidad, imágenes, desafío, embeds, redirecciones y errores 404 en la URL remota. Después se puede configurar el dominio original. Conservar Vercel como alternativa; no modificar ni eliminar registros de correo al cambiar DNS.
+Antes de cambiar DNS: revisar perfiles ES/EN, historias y capítulos, Atlas con `?atlas=1`, mapa completo, búsqueda, privacidad, imágenes, desafío, embeds, redirecciones y errores 404 en la URL remota. Después se puede configurar el dominio original. No modificar ni eliminar registros de correo al cambiar DNS.
 
 La prueba publicada está en [Cloudflare](https://eade-cloudflare-preview.mmurielcagigal.workers.dev/es/). El [informe de verificación](./CLOUDFLARE-verification.json) recoge el paquete, las pruebas realizadas, la versión desplegada y el estado de DNS. Para repetir las comprobaciones HTTP: `node scripts/check-cloudflare-http.mjs https://eade-cloudflare-preview.mmurielcagigal.workers.dev`.
 
@@ -54,3 +54,9 @@ La publicación definitiva está disponible en `https://el-arbol-de-europa.mmuri
 El usuario autorizó expresamente la desactivación temporal y posterior reactivación de DNSSEC. La solicitud se confirmó en OVH el 16 de noviembre, hacia las 20:02 (Europe/Warsaw). Tras recargar, OVH muestra «Desactivando…» y el control queda deshabilitado. No se necesita otra autorización para continuar este mismo traslado y reactivar la protección.
 
 Los servidores autoritativos `x.dns.eu` e `y.dns.eu` todavía publican el DS antiguo, con TTL de 86.400 segundos. El momento seguro no se calcula desde la solicitud: hay que observar su retirada y dejar caducar las posibles cachés antiguas. OVH indica unas 24 horas para desactivar DNSSEC y un plazo posterior de propagación al cambiar servidores. La [guía de OVH](https://docs.ovhcloud.com/en/guides/web-cloud/domains/dns-dnssec) explica también cómo publicar las claves de un proveedor DNS externo después del cambio. La migración del dominio y la reactivación de DNSSEC siguen pendientes; la web provisional está disponible.
+
+## Estado final de la migración (18 de noviembre de 2026)
+
+Los servidores de nombres son los de Cloudflare y la web se sirve desde Cloudflare para todos los visitantes. `vercel.json` pasa a llamarse `routes.json` y es la única fuente de redirecciones, reescrituras y cabeceras; el Worker y la auditoría de seguridad lo leen. Speed Insights de Vercel se sustituye por Cloudflare Web Analytics y se activa la observabilidad de Workers.
+
+Pendiente fuera del código: reactivar DNSSEC en Cloudflare y publicar su registro DS en OVH; eliminar los registros `vercel-backup` y `vercel-www-backup`; desconectar la integración de Vercel; crear una notificación de uso de Workers; y decidir si se traslada el registro del dominio.

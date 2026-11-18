@@ -40,7 +40,7 @@ test('Gorizia y los Ludovingios tienen escudo, y las casas duplicadas se fusiona
   for (const id of ['PED1PORT', 'FERN1PORT', 'JUANPORT', 'BEATPORT']) assert.equal(person(id).dinastia, 'Borgoña-Portugal', id);
   assert.equal(person('OTON4BORG').dinastia, 'Ivrea-Borgoña');
   assert.equal(person('KNUT2SUE').dinastia, 'Erik');
-  const vercel = JSON.parse(read('vercel.json'));
+  const vercel = JSON.parse(read('routes.json'));
   for (const slug of ['ivrea', 'lancaster', 'armanac', 'folkunga'])
     assert.ok(vercel.redirects.some(r => r.source === `/es/dinastia/${slug}`), slug);
 });

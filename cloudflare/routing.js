@@ -1,4 +1,4 @@
-import config from '../vercel.json' with {type: 'json'};
+import config from '../routes.json' with {type: 'json'};
 
 // Compila el subconjunto de rutas usado por el proyecto. Las reglas siguen
 // teniendo una sola fuente, incluido su orden y las condiciones de atlas=1.
@@ -43,13 +43,9 @@ export function resolveHostingRoute(url) {
   return {asset: url.pathname};
 }
 
-// Mantiene el hash exacto del aviso de pantalla. Retira exclusivamente las
-// excepciones de los servicios de Vercel que no se usan en Cloudflare.
+// La CSP de routes.json ya es la de Cloudflare; se conserva el punto de extensión.
 export function cloudflareCsp(value) {
-  return value.split('; ').map(directive => {
-    if (directive.startsWith('frame-src ')) return "frame-src 'none'";
-    return directive.replace(/ (?:https:\/\/vercel\.live|https:\/\/vitals\.vercel-insights\.com|wss:\/\/\*\.pusher\.com|https:\/\/\*\.pusher\.com)/g, '');
-  }).join('; ');
+  return value;
 }
 
 const generalHeaders = config.headers.find(rule => rule.source === '/(.*)').headers;

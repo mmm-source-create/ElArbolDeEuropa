@@ -19,7 +19,7 @@ export const SITE = Object.freeze({
   period: "1200–1800",
   locale: "es_ES",
   language: "es",
-  // Configurables en Vercel sin tocar el código. VITE_* es público por diseño.
+  // Configurables en el entorno de compilación sin tocar el código. VITE_* es público por diseño.
   publicUrl: resolveSiteUrl(ENV.VITE_SITE_URL),
   contactEmail: String(ENV.VITE_CONTACT_EMAIL || "info@treeofeurope.eu").trim(),
 });

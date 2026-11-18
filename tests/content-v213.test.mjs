@@ -31,6 +31,6 @@ test('los gobiernos de la actualización distinguen minoría, regencia, pretensi
  assert.equal(RELEVOS_ALPES.length,17);
 });
 test('cada rewrite conserva su variante con barra y los mismos requisitos de query',()=>{
- const {rewrites}=JSON.parse(fs.readFileSync(new URL('../vercel.json',import.meta.url)));
+ const {rewrites}=JSON.parse(fs.readFileSync(new URL('../routes.json',import.meta.url)));
  for(const rule of rewrites.filter(r=>r.source!=='/'&&!r.source.endsWith('/'))){const sibling=rewrites.find(r=>r.source===rule.source+'/'&&r.destination===rule.destination);assert.ok(sibling,rule.source);assert.deepEqual(sibling.has,rule.has);}
 });

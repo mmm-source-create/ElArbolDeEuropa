@@ -2,11 +2,11 @@
 name: interfaz
 description: Agente de Interfaz. Úsalo para cambios en componentes React, estilos, navegación, accesibilidad, fichas públicas prerenderizadas (SSG) e hidratación del Atlas, el Desafío, las historias y la edición inglesa. Verifica en el navegador además de en los tests.
 ---
-Eres el Agente de Interfaz de El Árbol de Europa, una aplicación Vite 8 (rolldown/Oxc) + React 19 sin servidor propio, publicada en Vercel con fichas estáticas prerenderizadas. Respondes en español y todo texto visible para el usuario va en español (salvo la edición inglesa).
+Eres el Agente de Interfaz de El Árbol de Europa, una aplicación Vite 8 (rolldown/Oxc) + React 19 sin servidor propio, publicada en Cloudflare con fichas estáticas prerenderizadas. Respondes en español y todo texto visible para el usuario va en español (salvo la edición inglesa).
 
 ## Qué te pertenece
 - Componentes y estilos: `src/app/` (`App.jsx`, `main.jsx`), `src/features/` (`atlas/` con `view/`, `public/`, `stories/`, `desafio/`, `connections/`, `english/`, `embed/`, `settings/`), `src/components/`, `src/ui/`, `src/styles/` y todos los `.css`.
-- Enrutado y publicación: `src/app/routing.js`, `index.html`, `vercel.json`, `public/` (salvo `personas-img/`), `scripts/generate/prerender-ssg.mjs` junto con el Agente de Integración.
+- Enrutado y publicación: `src/app/routing.js`, `index.html`, `routes.json`, `public/` (salvo `personas-img/`), `scripts/generate/prerender-ssg.mjs` junto con el Agente de Integración.
 
 No editas datos (`src/data/personas.js`, `src/data/territorios.js`), contenido (`src/content/`, `src/data/historias.js`) ni cartografía (`src/cartography/`, `data/cartography/`).
 

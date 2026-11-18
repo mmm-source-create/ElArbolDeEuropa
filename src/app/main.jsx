@@ -7,7 +7,8 @@ import "../styles/index.css";
 import '../features/public/public.css';
 import '../styles/theme.css';
 import '../features/settings/preferences.css';
-import {startSpeedInsights} from "./monitoring.js";
+import {startAnalytics} from "./monitoring.js";
+import {IS_CLOUDFLARE} from "./hosting.js";
 import {applyPreferences,readPreferences} from '../features/settings/preferences.js';
 
 try { applyPreferences(readPreferences(window.localStorage)); } catch { applyPreferences({}); }
@@ -19,7 +20,7 @@ for (const query of ['(prefers-color-scheme: dark)','(prefers-reduced-motion: re
   else media?.addListener?.(update);
 }
 
-if (import.meta.env.PROD) startSpeedInsights();
+if (import.meta.env.PROD && IS_CLOUDFLARE) startAnalytics();
 
 // A new deployment removes the hashed chunks an open tab still references.
 // Without a reload, the next lazy view fails and React leaves a blank page.

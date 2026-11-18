@@ -2,14 +2,13 @@
 
 Atlas histórico y genealógico para explorar personas, dinastías, territorios y sus conexiones familiares.
 
-- [Web](https://www.treeofeurope.eu/es/) · Versión del repositorio: **V5.16**
-- [Cambios de V5.16](docs/versiones/V5.16.md) · [Documentación e historial](docs/README.md) · [Próximos pasos cartográficos](docs/versiones/V4.8_PROPUESTAS.md) · [Seguridad](SECURITY.md)
+- [Web](https://www.treeofeurope.eu/es/) · Versión del repositorio: **6.0.6**
+- [Notas de 6.0.6](docs/releases/6.0.6.md) · [Documentación e historial](docs/README.md) · [Publicación en Cloudflare](docs/CLOUDFLARE.md) · [Seguridad](SECURITY.md)
 
-V5.16 incorpora Dinastle al Desafío: un personaje diario, ocho intentos y pistas
-calculadas con la base histórica. Ordena y diferencia los filtros de casas,
-ramas y regiones, y permite filtrar gobiernos por año. Los apanages franceses,
-las Provincias Unidas y los conjuntos austríacos conservan sus autoridades,
-identidades y títulos en mapas y listados.
+La versión 6.0.6 completa las nueve historias en preparación en español e
+inglés: el catálogo ofrece 42 historias y 376 capítulos con referencias
+localizadas, y una auditoría editorial comprueba su texto contra las fuentes.
+La web se publica en Cloudflare (Workers con Static Assets, plan gratuito).
 
 El mapa utiliza EU V Locations con superficies fechadas y fuentes consultables
 en el inspector. Distingue soberanía, gobierno delegado, titularidad y control
@@ -76,7 +75,9 @@ las entregas V5 y explica cómo fijar cada publicación a su commit validado.
 
 Cada actualización se prepara en una rama y se entrega mediante **pull request hacia `main`**. La rama exige el check **Tests y build**, sin requerir un revisor adicional para el mantenimiento individual. GitHub Actions ejecuta auditoría de seguridad, pruebas, build e hidratación de una muestra de fichas. Los avisos de dependencias y la protección de secretos se gestionan también en GitHub.
 
-Vercel compila con `npm run build`, Node 24 y directorio de salida `dist`. Las rutas y cabeceras están en `vercel.json`. La PR genera una vista previa; fusionarla actualiza la rama de producción según la integración existente.
+La web se publica en **Cloudflare** (Workers con Static Assets), con los dominios `treeofeurope.eu` y `www.treeofeurope.eu`. `npm run build:cloudflare` compila, prerenderiza, audita y empaqueta el sitio en `.cloudflare/assets`; `npm run deploy:cloudflare:production` lo publica. Si el repositorio define la variable `CLOUDFLARE_DEPLOY=true` y los secretos `CLOUDFLARE_API_TOKEN` y `CLOUDFLARE_ACCOUNT_ID`, el flujo `Despliegue en Cloudflare` lo hace al fusionar en `main`. Las redirecciones, reescrituras y cabeceras están en `routes.json`, que también lee el Worker. Los límites gratuitos, las comprobaciones y el estado del dominio están en [docs/CLOUDFLARE.md](docs/CLOUDFLARE.md).
+
+La audiencia se mide con Cloudflare Web Analytics, sin cookies ni identificadores; la [política de privacidad](https://www.treeofeurope.eu/es/privacidad) lo explica.
 
 El ZIP complementario contiene solo archivos añadidos o modificados. Si una actualización elimina o mueve archivos, su documento de versión indica las rutas afectadas. No subas `node_modules/`, `dist/` ni datos regenerables como código fuente.
 
@@ -85,6 +86,3 @@ El ZIP complementario contiene solo archivos añadidos o modificados. Si una act
 Las historias, sus capítulos y las fichas individuales se publican con contenido y metadatos en el HTML inicial. El Atlas, los desafíos, los catálogos y las portadas conservan su arranque dinámico; las fichas públicas prerenderizadas cargan módulos según su tipo. `sitemap.xml` y `sitemap-full.xml` se generan con las mismas rutas y ambas URL siguen disponibles. La indexación se supervisa en Google Search Console.
 
 El código y los contenidos originales conservan **todos los derechos reservados**: [COPYRIGHT.md](COPYRIGHT.md). Las imágenes, la cartografía y otros materiales de terceros conservan sus atribuciones y condiciones.
-
-La publicación gratuita en Cloudflare se prepara en paralelo; las instrucciones,
-los límites y las comprobaciones están en [docs/CLOUDFLARE.md](docs/CLOUDFLARE.md).

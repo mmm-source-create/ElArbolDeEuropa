@@ -4,6 +4,7 @@
   "main": "cloudflare/worker.js",
   "compatibility_date": "2026-11-16",
   "workers_dev": true,
+  "observability": {"enabled": true},
   "assets": {
     "directory": "./.cloudflare/assets",
     "binding": "ASSETS",
@@ -88,6 +89,7 @@
   "env": {
     "production": {
       "name": "el-arbol-de-europa",
+      "observability": {"enabled": true},
       "vars": {
         "DEPLOYMENT_ENV": "production"
       },
