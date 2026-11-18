@@ -1,5 +1,4 @@
 {
-  "$schema": "https://openapi.vercel.sh/vercel.json",
   "rewrites": [
     {"source":"/es/mapa-completo","destination":"/labs/cartography/territorial-corridors.html"},
     {"source":"/es/mapa-completo/","destination":"/labs/cartography/territorial-corridors.html"},
@@ -175,7 +174,7 @@
       "headers": [
         {
           "key": "Content-Security-Policy",
-          "value": "default-src 'self'; script-src 'self' 'sha256-WHY0CX3yDCytjSEVpF8QXtv386ZqbX3iSd2+iIVu2HU=' https://vercel.live; script-src-attr 'none'; style-src 'self' 'unsafe-inline'; img-src 'self' https: data: blob:; font-src 'self' data:; connect-src 'self' https://vercel.live https://vitals.vercel-insights.com wss://*.pusher.com https://*.pusher.com; frame-src https://vercel.live; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'self'"
+          "value": "default-src 'self'; script-src 'self' 'sha256-WHY0CX3yDCytjSEVpF8QXtv386ZqbX3iSd2+iIVu2HU=' https://static.cloudflareinsights.com; script-src-attr 'none'; style-src 'self' 'unsafe-inline'; img-src 'self' https: data: blob:; font-src 'self' data:; connect-src 'self' https://cloudflareinsights.com; frame-src 'none'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'self'"
         },
         {
           "key": "X-Frame-Options",
@@ -188,7 +187,7 @@
       "headers": [
         {
           "key": "Content-Security-Policy",
-          "value": "default-src 'self'; script-src 'self' 'sha256-WHY0CX3yDCytjSEVpF8QXtv386ZqbX3iSd2+iIVu2HU=' https://vercel.live; script-src-attr 'none'; style-src 'self' 'unsafe-inline'; img-src 'self' https: data: blob:; font-src 'self' data:; connect-src 'self' https://vercel.live https://vitals.vercel-insights.com wss://*.pusher.com https://*.pusher.com; frame-src https://vercel.live; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors *"
+          "value": "default-src 'self'; script-src 'self' 'sha256-WHY0CX3yDCytjSEVpF8QXtv386ZqbX3iSd2+iIVu2HU=' https://static.cloudflareinsights.com; script-src-attr 'none'; style-src 'self' 'unsafe-inline'; img-src 'self' https: data: blob:; font-src 'self' data:; connect-src 'self' https://cloudflareinsights.com; frame-src 'none'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors *"
         },
         {
           "key": "X-Robots-Tag",
@@ -201,7 +200,7 @@
       "headers": [
         {
           "key": "Content-Security-Policy",
-          "value": "default-src 'self'; script-src 'self' 'sha256-WHY0CX3yDCytjSEVpF8QXtv386ZqbX3iSd2+iIVu2HU=' https://vercel.live; script-src-attr 'none'; style-src 'self' 'unsafe-inline'; img-src 'self' https: data: blob:; font-src 'self' data:; connect-src 'self' https://vercel.live https://vitals.vercel-insights.com wss://*.pusher.com https://*.pusher.com; frame-src https://vercel.live; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors *"
+          "value": "default-src 'self'; script-src 'self' 'sha256-WHY0CX3yDCytjSEVpF8QXtv386ZqbX3iSd2+iIVu2HU=' https://static.cloudflareinsights.com; script-src-attr 'none'; style-src 'self' 'unsafe-inline'; img-src 'self' https: data: blob:; font-src 'self' data:; connect-src 'self' https://cloudflareinsights.com; frame-src 'none'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors *"
         },
         {
           "key": "X-Robots-Tag",
@@ -214,7 +213,7 @@
       "headers": [
         {
           "key": "Content-Security-Policy",
-          "value": "default-src 'self'; script-src 'self' 'sha256-WHY0CX3yDCytjSEVpF8QXtv386ZqbX3iSd2+iIVu2HU=' https://vercel.live; script-src-attr 'none'; style-src 'self' 'unsafe-inline'; img-src 'self' https: data: blob:; font-src 'self' data:; connect-src 'self' https://vercel.live https://vitals.vercel-insights.com wss://*.pusher.com https://*.pusher.com; frame-src https://vercel.live; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors *"
+          "value": "default-src 'self'; script-src 'self' 'sha256-WHY0CX3yDCytjSEVpF8QXtv386ZqbX3iSd2+iIVu2HU=' https://static.cloudflareinsights.com; script-src-attr 'none'; style-src 'self' 'unsafe-inline'; img-src 'self' https: data: blob:; font-src 'self' data:; connect-src 'self' https://cloudflareinsights.com; frame-src 'none'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors *"
         },
         {
           "key": "X-Robots-Tag",
@@ -227,7 +226,7 @@
       "headers": [
         {
           "key": "Content-Security-Policy",
-          "value": "default-src 'self'; script-src 'self' 'sha256-WHY0CX3yDCytjSEVpF8QXtv386ZqbX3iSd2+iIVu2HU=' https://vercel.live; script-src-attr 'none'; style-src 'self' 'unsafe-inline'; img-src 'self' https: data: blob:; font-src 'self' data:; connect-src 'self' https://vercel.live https://vitals.vercel-insights.com wss://*.pusher.com https://*.pusher.com; frame-src https://vercel.live; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors *"
+          "value": "default-src 'self'; script-src 'self' 'sha256-WHY0CX3yDCytjSEVpF8QXtv386ZqbX3iSd2+iIVu2HU=' https://static.cloudflareinsights.com; script-src-attr 'none'; style-src 'self' 'unsafe-inline'; img-src 'self' https: data: blob:; font-src 'self' data:; connect-src 'self' https://cloudflareinsights.com; frame-src 'none'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors *"
         },
         {
           "key": "X-Robots-Tag",

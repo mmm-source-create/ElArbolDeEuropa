@@ -64,7 +64,7 @@ test('previous house names still resolve in routes, arms and public searches',()
     assert.equal(escudoDe(old),escudoDe(name));
     assert(textoBusquedaPersona(by.get(id)).includes(old));
   }
-  const redirects=JSON.parse(fs.readFileSync('vercel.json')).redirects;
+  const redirects=JSON.parse(fs.readFileSync('routes.json')).redirects;
   for(const [old,target] of [['montfort','montfort-bretana'],['alfonsina','borgona-portugal']])
     assert(redirects.some(r=>r.source===`/es/dinastia/${old}`&&r.destination===`/es/dinastia/${target}`&&r.permanent));
 });

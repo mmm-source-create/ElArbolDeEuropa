@@ -82,7 +82,7 @@ test('el auditor detecta contenido de carga, CSS ausente, canonical falso y dive
  for(const bad of [html.replace('<h1>Persona 1</h1>','Preparando ficha histórica…'),html.replace('/assets/ficha.css','/otro.css'),html.replace('rel="canonical"','rel="otro"'),html.replace(`"schema":${STATIC_SCHEMA}`,`"schema":${STATIC_SCHEMA+1}`)])assert.ok(auditDocument(bad,person,assets).length>0);
 });
 test('las reglas de alojamiento priorizan atlas=1 y preservan las rutas de historias y catálogos',async()=>{
- const {rewrites}=JSON.parse(await fs.readFile(new URL('../vercel.json',import.meta.url)));
+ const {rewrites}=JSON.parse(await fs.readFile(new URL('../routes.json',import.meta.url)));
  const page=rewrites.findIndex(r=>r.destination==='/es/:kind/:slug/index.html');
  const atlas=rewrites.findIndex(r=>r.has?.some(x=>x.key==='atlas'&&x.value==='1'));
  assert.ok(atlas>=0&&atlas<page);

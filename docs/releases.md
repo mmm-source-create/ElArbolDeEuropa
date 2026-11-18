@@ -114,8 +114,10 @@ permanecen explicados en [archive/manifests](archive/manifests/README.md).
    En el borrador, fijar el destino al SHA completo de ese commit y crear el
    tag al publicar. Verificar en GitHub el tag, el destino, los enlaces y las
    notas. Un tag publicado no se mueve a otra entrega.
-5. Vercel despliega mediante su integración independiente. Comprobar su estado
-   y URL; publicar una Release no promociona un preview ni prueba el despliegue.
+5. Cloudflare publica el sitio (flujo `Despliegue en Cloudflare` o
+   `npm run deploy:cloudflare:production`). Comprobar la versión desplegada y
+   `node scripts/check-cloudflare-http.mjs https://www.treeofeurope.eu`;
+   publicar una Release no prueba el despliegue.
 
 GitHub ofrece automáticamente archivos fuente ZIP y TAR del tag. No se
 adjuntan `node_modules`, temporales ni un `dist` de otra compilación. Si hace

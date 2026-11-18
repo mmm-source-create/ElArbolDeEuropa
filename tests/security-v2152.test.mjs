@@ -7,7 +7,8 @@ import LearningSession from '../src/features/desafio/LearningSession.jsx';
 import {secretFindings, activeSvgContent} from '../scripts/audits/audit-security.mjs';
 import {auditScriptPolicy} from '../scripts/lib/security-policy.mjs';
 import {SCREEN_NOTICE_SCRIPT} from '../src/features/public/screenNotice.js';
-import {metricWithoutParameters} from '../src/app/monitoring.js';
+import {startAnalytics} from '../src/app/monitoring.js';
+import {CONTENT_SECURITY_POLICY} from '../scripts/lib/security-policy.mjs';
 import {resolveSiteUrl, DEFAULT_SITE_URL} from '../src/app/siteConfig.js';
 
 const question = {firma: 'pregunta', pregunta: '¿Quién?', explicacion: 'Contexto', etiqueta: 'Repaso', formato: 'opciones', correctaId: 'A', opciones: [{id: 'A', label: 'A'}, {id: 'B', label: 'B'}]};
@@ -54,11 +55,18 @@ test('el detector de secretos informa del tipo y línea sin mostrar el secreto',
   assert.ok(activeSvgContent('<svg><foreignObject/></svg>'));
   assert.equal(activeSvgContent('<svg><path d="M0 0"/></svg>'), false);
 });
-test('las métricas no envían búsquedas, fragmentos ni credenciales de URL', () => {
-  const result = metricWithoutParameters({type: 'vital', url: 'https://user:pass@www.treeofeurope.eu/es/desafio?reto=seed&q=nombre#seccion'});
-  assert.equal(result.url, `${DEFAULT_SITE_URL}/es/desafio`);
-  assert.equal(metricWithoutParameters({url: 'javascript:alert(1)'}), null);
-  assert.equal(metricWithoutParameters({url: 'incorrecto'}), null);
+test('la analítica es cookieless, idempotente y autorizada por la CSP', () => {
+  const head = {scripts: [], querySelector(sel) {return this.scripts.find(s => sel.includes(s.src)) || null;}, appendChild(s) {this.scripts.push(s);}};
+  const doc = {head, createElement: () => ({attrs: {}, setAttribute(k, v) {this.attrs[k] = v;}})};
+  assert.equal(startAnalytics(doc, ''), null);
+  const script = startAnalytics(doc, 'abc');
+  assert.equal(script.src, 'https://static.cloudflareinsights.com/beacon.min.js');
+  assert.deepEqual(JSON.parse(script.attrs['data-cf-beacon']), {token: 'abc', spa: true});
+  assert.equal(startAnalytics(doc, 'abc'), script);
+  assert.equal(head.scripts.length, 1);
+  assert.match(CONTENT_SECURITY_POLICY, /script-src [^;]*https:\/\/static\.cloudflareinsights\.com/);
+  assert.match(CONTENT_SECURITY_POLICY, /connect-src [^;]*https:\/\/cloudflareinsights\.com/);
+  assert.doesNotMatch(CONTENT_SECURITY_POLICY, /vercel/i);
 });
 test('el origen del proyecto es común y rechaza configuraciones ambiguas', () => {
   assert.equal(resolveSiteUrl(''), DEFAULT_SITE_URL);

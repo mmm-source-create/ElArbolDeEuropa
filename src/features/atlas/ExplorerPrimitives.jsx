@@ -208,7 +208,7 @@ export function ModalProyecto({ seccion, onClose, persona, personasVista = PERSO
               {correos.length ? (
                 <p>{tr('Si encuentras un fallo, puedes escribir a','If you find an error, you can write to')} {correos.map((correo, index) => <React.Fragment key={correo}>{index ? ", " : ""}<a href={`mailto:${correo}`}>{correo}</a></React.Fragment>)}.</p>
               ) : (
-                <p className="project-muted">{tr('Configura','Set')} <code>VITE_CONTACT_EMAIL</code> {tr('en las variables de entorno de Vercel para mostrar aquí el correo público del proyecto.','in the Vercel environment variables to display the public project email address here.')}</p>
+                <p className="project-muted">{tr('Configura','Set')} <code>VITE_CONTACT_EMAIL</code> {tr('en las variables de entorno de compilación para mostrar aquí el correo público del proyecto.','in the build environment variables to display the public project email address here.')}</p>
               )}
             </>
           )}
@@ -322,7 +322,7 @@ export function ModalProyecto({ seccion, onClose, persona, personasVista = PERSO
               {correoPrincipal ? (
                 <a className="project-primary-action" href={mailto}><Mail size={14} /> {tr('Preparar correo de corrección','Prepare correction email')}</a>
               ) : (
-                <div className="project-contact-placeholder"><Mail size={15} /><span>{tr('Configura','Set')} <code>VITE_CONTACT_EMAIL</code> {tr('en Vercel. El botón de correo se activará automáticamente.','in Vercel. The email button will activate automatically.')}</span></div>
+                <div className="project-contact-placeholder"><Mail size={15} /><span>{tr('Configura','Set')} <code>VITE_CONTACT_EMAIL</code> {tr('en el entorno de compilación. El botón de correo se activará automáticamente.','in the build environment. The email button will activate automatically.')}</span></div>
               )}
             </>
           )}

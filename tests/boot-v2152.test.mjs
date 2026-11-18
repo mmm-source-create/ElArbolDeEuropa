@@ -8,7 +8,7 @@ import {JSDOM} from 'jsdom';
 import {act} from 'react';
 import {person} from './fixtures/static-pages.mjs';
 import {serializePage} from '../src/features/public/staticData.js';
-import {startSpeedInsights} from '../src/app/monitoring.js';
+import {startAnalytics} from '../src/app/monitoring.js';
 
 let temp;
 const dom = new JSDOM('<!doctype html><html><head></head><body></body></html>', {url: 'https://www.treeofeurope.eu/es/'});
@@ -52,9 +52,10 @@ for (const mode of ['SSG', 'SPA']) test(`el arranque real ${mode} inserta una so
     });
     assert.equal(document.querySelector('h1')?.textContent, mode, errors.join('\n'));
     if (mode === 'SSG') assert.equal(document.querySelector('h1'), heading);
-    startSpeedInsights();
-    assert.equal(document.head.querySelectorAll('script[src*="speed-insights"]').length, 1);
-    assert.equal(document.head.querySelector('script').defer, true);
+    startAnalytics(document, 'test-token');
+    startAnalytics(document, 'test-token');
+    assert.equal(document.head.querySelectorAll('script[src*="cloudflareinsights"]').length, 1);
+    assert.equal(document.head.querySelector('script[src*="cloudflareinsights"]').defer, true);
     assert.deepEqual(errors, []);
   } finally {console.error = originalError;}
 });

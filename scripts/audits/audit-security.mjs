@@ -21,7 +21,7 @@ export function activeSvgContent(svg) {
 }
 async function auditSecurity() {
   const issues = [];
-  const config = JSON.parse(await fs.readFile('vercel.json', 'utf8'));
+  const config = JSON.parse(await fs.readFile('routes.json', 'utf8'));
   const headers = [...(config.headers?.find(rule => rule.source === '/(.*)')?.headers || []), ...(config.headers?.find(rule => rule.source === MAIN_FRAME_SOURCE)?.headers || [])];
   for (const expected of SECURITY_HEADERS) {
     if (!headers?.some(h => h.key.toLowerCase() === expected.key.toLowerCase() && h.value === expected.value)) issues.push(`Cabecera ausente o desactualizada: ${expected.key}`);

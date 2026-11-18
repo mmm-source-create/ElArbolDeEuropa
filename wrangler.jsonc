@@ -1,0 +1,108 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "eade-cloudflare-preview",
+  "main": "cloudflare/worker.js",
+  "compatibility_date": "2026-11-16",
+  "workers_dev": true,
+  "observability": {"enabled": true},
+  "assets": {
+    "directory": "./.cloudflare/assets",
+    "binding": "ASSETS",
+    "html_handling": "drop-trailing-slash",
+    "not_found_handling": "none",
+    "run_worker_first": [
+      "/en/territory/why",
+      "/es/historia/emperadores*",
+      "/en/story/emperors*",
+      "/es/historia/la-revolucion-protestante*",
+      "/es/historia/el-reino-partido-en-dos*",
+      "/en/story/the-kingdom-divided-in-two*",
+      "/es/dinastia/sin-casa-identificada",
+      "/es/dinastia/desconocida",
+      "/es/dinastia/familias-menores",
+      "/es/dinastia/casas-menores",
+      "/es/dinastia/sin-casa-identificada/",
+      "/es/dinastia/desconocida/",
+      "/es/dinastia/familias-menores/",
+      "/es/dinastia/casas-menores/",
+      "/es/historia/ricardo-i-y-felipe-ii-aliados-en-la-cruzada*",
+      "/es/historia/ricardo-felipe-cruzada*",
+      "/historia/ricardo-felipe-cruzada*",
+      "/es/historia/lepanto-la-alianza-imposible*",
+      "/es/historia/balduino-iv-y-saladino-un-reino-bajo-presion*",
+      "/es/dinastia/montfort",
+      "/es/dinastia/monfort",
+      "/es/dinastia/dreux-montfort",
+      "/es/dinastia/alfonsina",
+      "/es/dinastia/afonsina",
+      "/es/dinastia/aragon-urgel",
+      "/es/dinastia/armanac",
+      "/es/dinastia/d-avalos",
+      "/es/dinastia/douglas-tudor",
+      "/es/dinastia/egmont",
+      "/es/dinastia/folkung",
+      "/es/dinastia/folkunga",
+      "/es/dinastia/ivrea",
+      "/es/dinastia/kantakouzenos",
+      "/es/dinastia/lancaster",
+      "/es/dinastia/piasta",
+      "/es/dinastia/roger",
+      "/es/dinastia/salviati-medici",
+      "/es/dinastia/tudor-brandon",
+      "/es/dinastia/wurtemberg",
+      "/es/dinastia/york",
+      "/es/persona/matteo-i-visconti",
+      "/es/persona/galeazzo-ii-visconti-gal2visc",
+      "/es/persona/galeazzo-ii-visconti-galeazzo2visc",
+      "/es/historia/borgona*",
+      "/historia/borgona*",
+      "/es/historia/papales*",
+      "/historia/papales*",
+      "/es/historia/condotieros*",
+      "/historia/condotieros*",
+      "/es/historia/cien-anos*",
+      "/historia/cien-anos*",
+      "/es/historia/gioconda*",
+      "/historia/gioconda*",
+      "/es/historia/revolucion-protestante*",
+      "/historia/revolucion-protestante*",
+      "/es/historia/favoritos-maquiavelo*",
+      "/historia/favoritos-maquiavelo*",
+      "/es/historia/republica-nobles*",
+      "/historia/republica-nobles*",
+      "/es/historia/corona-dos-credos*",
+      "/historia/corona-dos-credos*",
+      "/es/historia/reino-partido-dos*",
+      "/historia/reino-partido-dos*",
+      "/es/historia/lepanto-alianza*",
+      "/historia/lepanto-alianza*",
+      "/es/historia/puertas-viena*",
+      "/historia/puertas-viena*"
+    ]
+  },
+  "vars": {
+    "DEPLOYMENT_ENV": "preview"
+  },
+  "observability": {
+    "enabled": false
+  },
+  "env": {
+    "production": {
+      "name": "el-arbol-de-europa",
+      "observability": {"enabled": true},
+      "vars": {
+        "DEPLOYMENT_ENV": "production"
+      },
+      "routes": [
+        {
+          "pattern": "www.treeofeurope.eu",
+          "custom_domain": true
+        },
+        {
+          "pattern": "treeofeurope.eu",
+          "custom_domain": true
+        }
+      ]
+    }
+  }
+}
