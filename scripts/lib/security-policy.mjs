@@ -1,17 +1,19 @@
 import {createHash} from 'node:crypto';
 import {SCREEN_NOTICE_SCRIPT} from '../../src/features/public/screenNotice.js';
 
+export const ANALYTICS_SCRIPT_ORIGIN = 'https://static.cloudflareinsights.com';
+export const ANALYTICS_CONNECT_ORIGIN = 'https://cloudflareinsights.com';
 const NOTICE_HASH = `sha256-${createHash('sha256').update(SCREEN_NOTICE_SCRIPT).digest('base64')}`;
 export const CONTENT_SECURITY_POLICY = [
   "default-src 'self'",
-  // Vercel Live permite la barra de revisión en las vistas previas.
-  `script-src 'self' '${NOTICE_HASH}' https://vercel.live`,
+  // Cloudflare Web Analytics: único script externo permitido (sin cookies).
+  `script-src 'self' '${NOTICE_HASH}' ${ANALYTICS_SCRIPT_ORIGIN}`,
   "script-src-attr 'none'",
   "style-src 'self' 'unsafe-inline'",
   "img-src 'self' https: data: blob:",
   "font-src 'self' data:",
-  "connect-src 'self' https://vercel.live https://vitals.vercel-insights.com wss://*.pusher.com https://*.pusher.com",
-  "frame-src https://vercel.live",
+  `connect-src 'self' ${ANALYTICS_CONNECT_ORIGIN}`,
+  "frame-src 'none'",
   "object-src 'none'",
   "base-uri 'self'",
   "form-action 'self'",
@@ -35,7 +37,7 @@ export function auditScriptPolicy(html, siteUrl) {
     if (src) {
       try {
         const url = new URL(src, siteUrl);
-        if (![new URL(siteUrl).origin, 'https://vercel.live'].includes(url.origin)) errors.push('Script de un origen no autorizado por la CSP');
+        if (![new URL(siteUrl).origin, ANALYTICS_SCRIPT_ORIGIN].includes(url.origin)) errors.push('Script de un origen no autorizado por la CSP');
       } catch { errors.push('URL de script inválida'); }
     } else if (`sha256-${createHash('sha256').update(text).digest('base64')}` !== NOTICE_HASH) {
       errors.push('Script en línea sin un hash autorizado en la CSP');

@@ -64,7 +64,7 @@ test('Legacy split progress follows matching passages and is not migrated twice'
 });
 
 test('Every old chapter URL redirects to an existing new passage in both languages',()=>{
- const {redirects}=JSON.parse(fs.readFileSync('vercel.json','utf8'));
+ const {redirects}=JSON.parse(fs.readFileSync('routes.json','utf8'));
  for(const [prefix,segment,lang] of [['/es/historia/el-reino-partido-en-dos','capitulo','es'],['/en/story/the-kingdom-divided-in-two','chapter','en']]){
   for(let i=1;i<=18;i++){
    const redirect=redirects.find(r=>r.source===`${prefix}/${segment}/${i}`);assert(redirect,i);

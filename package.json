@@ -21,7 +21,7 @@
     "audit:coronas": "node scripts/audits/audit-coronas.mjs",
     "ssg:sample": "node scripts/generate/prerender-ssg.mjs --sample",
     "audit:ssg": "node scripts/audits/audit-ssg.mjs",
-    "audit:security": "node scripts/audits/audit-security.mjs && npm audit --audit-level=high",
+    "audit:security": "node scripts/audits/audit-security.mjs && node scripts/audits/audit-dependencies.mjs",
     "predev": "npm run prebuild",
     "audit:regional-extents": "node --import ./tests/jsx-loader.mjs scripts/audits/audit-regional-extents.mjs",
     "audit:spatial": "node --import ./tests/jsx-loader.mjs scripts/audits/audit-map-spatial.mjs",
@@ -49,10 +49,15 @@
     "audit:royal-successions": "node scripts/audits/audit-royal-successions.mjs",
     "audit:names": "node scripts/audits/audit-person-names.mjs",
     "pretest": "node scripts/generate/generate-english-v6-runtime.mjs && node scripts/generate/generate-tree-base.mjs && node scripts/generate/generate-territorios.mjs && node scripts/generate/generate-dinastias.mjs && node scripts/generate/generate-historias.mjs && node scripts/generate/generate-english.mjs && node scripts/generate/generate-home-search.mjs",
-    "audit:stories": "node scripts/audits/audit-story-editorial.mjs"
+    "audit:stories": "node scripts/audits/audit-story-editorial.mjs",
+    "build:cloudflare": "node scripts/build-cloudflare.mjs",
+    "prepare:cloudflare": "node scripts/prepare-cloudflare.mjs",
+    "preview:cloudflare": "wrangler dev --config wrangler.jsonc --env preview",
+    "check:cloudflare": "wrangler deploy --config wrangler.jsonc --dry-run",
+    "deploy:cloudflare:preview": "wrangler deploy --config wrangler.jsonc --env preview",
+    "deploy:cloudflare:production": "wrangler deploy --config wrangler.jsonc"
   },
   "dependencies": {
-    "@vercel/speed-insights": "2.0.0",
     "lucide-react": "1.30.0",
     "react": "19.2.8",
     "react-dom": "19.2.8",
@@ -64,6 +69,7 @@
   },
   "devDependencies": {
     "jsdom": "30.0.1",
-    "sharp": "0.35.5"
+    "sharp": "0.35.5",
+    "wrangler": "4.163.0"
   }
 }

@@ -8,6 +8,6 @@ Se mantiene la versión más reciente de `main`. Las correcciones se revisan med
 
 Las variables `VITE_*` son públicas. No deben contener secretos. Los desafíos y el progreso se guardan en el navegador; no existe un servidor de cuentas ni una clasificación con resultados verificados.
 
-Speed Insights se inicia una vez en la compilación de producción. Se eliminan los parámetros de consulta y fragmentos de las URL antes de enviar métricas. No se añaden búsquedas, semillas de desafíos ni progreso local a esos eventos.
+Cloudflare Web Analytics se carga una vez en la compilación de producción para Cloudflare. No usa cookies ni identificadores de visitante, y el sitio no le añade búsquedas, semillas de desafíos ni progreso local. Su identificador es público por diseño.
 
-La CSP permite el script local, el hash del aviso móvil y Vercel Live para las vistas previas; conserva los estilos en línea y las imágenes HTTPS/blob necesarias. Si cambia el aviso, actualiza el hash en `vercel.json` a partir de `scripts/lib/security-policy.mjs`. La auditoría bloquea un hash desactualizado. La incrustación por otras webs requerirá una política específica cuando se implemente esa función.
+La CSP permite el script local, el hash del aviso móvil y el script de Cloudflare Web Analytics (`static.cloudflareinsights.com`, con envío a `cloudflareinsights.com`); conserva los estilos en línea y las imágenes HTTPS/blob necesarias. Si cambia el aviso, actualiza el hash en `routes.json` a partir de `scripts/lib/security-policy.mjs`. La auditoría bloquea un hash desactualizado. La incrustación por otras webs requerirá una política específica cuando se implemente esa función.
