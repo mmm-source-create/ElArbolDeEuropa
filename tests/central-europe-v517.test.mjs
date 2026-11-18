@@ -25,7 +25,10 @@ test('annual Austria integrates every Inner Austrian province in 1800, retaining
 });
 test('Lublin joins the panorama, ruler table and personal maps, while the Crown and Grand Duchy keep their titles',()=>{
  const before=europeMosaicAt(data,1568,PERSONAS),after=europeMosaicAt(data,1569,PERSONAS);
- assert.notDeepEqual(color(before,'Warsaw'),color(before,'Vilnius'));
+ // 6.0.7: before Lublin the personal union already shares the panorama colour;
+ // the personal map still separates the Crown and the Grand Duchy until 1569.
+ assert.deepEqual(color(before,'Warsaw'),color(before,'Vilnius'));
+ assert(governmentGroupsAt(by.get('SEGIS2JAG'),1568,{view:'panorama'}).some(g=>g.territorios?.has?.('Lituania')||g.mandates.some(m=>m.territorio==='Lituania')));
  for(const id of ['Warsaw','Vilnius','Gdansk'])assert.deepEqual(color(after,id),[REINO_COLOR['Polonia-Lituania']],id);
  assert.notDeepEqual(color(after,'Konigsberg'),color(after,'Warsaw'));
  const p=by.get('SEGIS2JAG');assert.equal(governmentGroupsAt(p,1569,{view:'panorama'}).filter(g=>g.id==='polonia-lituania').length,1);

@@ -29,11 +29,12 @@ test('Danish exterior unity respects Schleswig 1721 and Holstein 1773 without ch
   for(const id of['Kiel','Rendsburg','Pinneberg'])assert.deepEqual(colors(1773,id),[REINO_COLOR.Dinamarca]);
   for(const t of['Schleswig','Holstein'])assert.notEqual(colorTerritorioEnMapa(by.get('CHRISTIAN7DEN'),t,1789),REINO_COLOR.Dinamarca);
 });
-test('Britain has its own swatch and Hanover is not absorbed by a shared king',()=>{
+// 6.0.7: crowns of the same sovereign share the panorama colour, Hanover included.
+test('Britain has its own swatch and shares it with Hanover under the same king',()=>{
   assert.notEqual(REINO_COLOR['Gran Bretaña'],REINO_COLOR.Inglaterra);
   for(const year of[1714,1720,1757,1789]){
     assert.deepEqual(colors(year,'London'),[REINO_COLOR['Gran Bretaña']]);
-    assert.notDeepEqual(colors(year,'London'),colors(year,'Hanover'));
+    assert.deepEqual(colors(year,'London'),colors(year,'Hanover'));
   }
   assert.notEqual(REINO_COLOR.Saboya,REINO_COLOR.Francia);
 });

@@ -32,7 +32,7 @@ export function governmentGroupsAt(person, year, {view = 'personal'} = {}) {
   if (!result.has(key)) result.set(key,{id,key,person,kind,
    label:inner?'Austria Interior':republican?'Provincias Unidas':labels[id] || group?.nombre || (imperial?'Sacro Imperio (Alemania)':identity==='Transilvania'?identityLabel(mandateIdentity(identity),year):mandate.territorio),
    color:inner?REINO_COLOR['Austria Interior']:republican?ORANGE_NASSAU:group?.color || colorTerritorioEnMapa(person,mandate.territorio,year),
-   note:group?.nota || '',source:group?.fuente || null,mandates:[]});
+   unionParts:group?.partesUnion || null,note:group?.nota || '',source:group?.fuente || null,mandates:[]});
   result.get(key).mandates.push(mandate);
  }
  if(!cache.has(person))cache.set(person,new Map());

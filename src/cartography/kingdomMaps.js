@@ -564,6 +564,7 @@ const AGRUPACIONES_POLITICAS = [
 // does. Its own exceptions are classified here: the Burgundian inheritance is
 // one unit of its own, Portugal keeps its crown, and transient personal
 // unions or French fiefs are not merged. Titles stay separate in the inspector.
+const UNION_PERSONAL_RULE='union-mismo-soberano-exterior';
 export const MAP_GROUP_REVIEW = Object.freeze({
   'nueva-planta':{personal:true,reason:'Integración administrativa escalonada en 1707, 1715 y 1716; queda dentro de España en el mapa personal.'},
   'castilla-leon':{personal:true,reason:'Corona común desde 1230; se conservan los nombres de los reinos.'},
@@ -594,7 +595,55 @@ export const MAP_GROUP_REVIEW = Object.freeze({
   'monarquia-austriaca-exterior':{personal:true,excluye:FEUDOS_HERENCIA_BORGONONA,reason:'Monarquía austríaca: tierras austríacas, Bohemia, Hungría y dominios italianos; los Países Bajos forman una unidad propia.'},
   'dinamarca-noruega-exterior':{personal:true,reason:'Reinos unidos bajo dirección danesa desde 1537.'},
   'monarquia-danesa-ducados':{personal:false,reason:'Dirección exterior de la monarquía; los ducados conservan identidad jurídica y sus propios colores personales.'},
+  [UNION_PERSONAL_RULE]:{personal:false,reason:'Criterio general del panorama: las coronas que un mismo soberano gobierna a la vez comparten color; en el mapa personal cada corona conserva el suyo.'},
 });
+
+// The panorama applies one rule to every monarch: crowns ruled at the same
+// time by the same sovereign share the colour of the senior crown, as the
+// documented unions above already do. Only effective sovereign mandates count,
+// never claims, regencies, delegated or disputed rule; fiefs keep their tint.
+const UNION_CROWN_CLASSES=new Set(['imperio','reinado','zarato','sultanato','gran_ducado','electorado']);
+const UNION_CLASS_RANK={imperio:0,reinado:1,zarato:1,sultanato:1,gran_ducado:2,electorado:3};
+const UNION_SENIOR_CROWNS=['Gran Bretaña','Inglaterra','Francia','Castilla','Polonia','Hungría','Bohemia','Dinamarca','Suecia','Nápoles','Aragón'];
+const UNION_COLOR_OVERRIDES=[{members:['Polonia','Lituania'],color:POLAND_LITHUANIA_COLOR}];
+const UNION_RULE={
+  id:UNION_PERSONAL_RULE,nombre:'Unión bajo un mismo soberano',desde:1200,hasta:1800,
+  nota:'Coronas gobernadas a la vez por el mismo soberano, con una dirección exterior común. Cada reino conserva su título, sus leyes y sus instituciones; el color común dura solo mientras dura el gobierno simultáneo efectivo.',
+  fuente:'https://www.britannica.com/topic/personal-union',
+};
+const joinNames=names=>names.length<2?names.join(''):`${names.slice(0,-1).join(', ')} ${/^h?i(?!e)/i.test(names.at(-1))?'e':'y'} ${names.at(-1)}`;
+
+function personalUnionInPanorama(persona,año,activeMandates,groups) {
+  const crowns=activeMandates.filter(m=>UNION_CROWN_CLASSES.has(m.clase));
+  if(crowns.length<2)return groups;
+  const units=[];
+  for(const group of groups){
+    const members=crowns.filter(m=>group.territorios.has(m.territorio));
+    if(members.length)units.push({group,members});
+  }
+  for(const mandate of crowns){
+    if(units.some(unit=>unit.members.some(m=>m.territorio===mandate.territorio)))continue;
+    units.push({group:null,members:[mandate]});
+  }
+  if(units.length<2)return groups;
+  const rank=unit=>Math.min(...unit.members.map(m=>UNION_CLASS_RANK[m.clase]??9));
+  const priority=unit=>Math.min(...unit.members.map(m=>{const p=UNION_SENIOR_CROWNS.indexOf(m.territorio);return p<0?99:p;}));
+  const since=unit=>Math.min(...unit.members.map(m=>m.desde??año));
+  const senior=[...units].sort((a,b)=>rank(a)-rank(b)||Number(!a.group)-Number(!b.group)||priority(a)-priority(b)||since(a)-since(b)
+    ||a.members[0].territorio.localeCompare(b.members[0].territorio,'es'))[0];
+  const territorios=new Set(units.flatMap(unit=>unit.group?[...unit.group.territorios]:unit.members.map(m=>m.territorio)));
+  const ordered=[senior,...units.filter(u=>u!==senior)];
+  const crownNames=[...new Set(ordered.flatMap(unit=>unit.members.map(m=>m.territorio)))];
+  const parts=[...new Set(ordered.flatMap(unit=>unit.group?[unit.group.nombre]:unit.members.map(m=>m.territorio)))];
+  const override=UNION_COLOR_OVERRIDES.find(o=>o.members.every(t=>territorios.has(t)));
+  const seniorColor=senior.group?.color || REINO_COLOR[senior.members[0].territorio] || fallbackTerritoryColor(senior.members[0].territorio);
+  const merged={...UNION_RULE,regla:UNION_PERSONAL_RULE,
+    id:senior.group?.id && units.filter(u=>u.group).length===1 ? senior.group.id : `${UNION_PERSONAL_RULE}:${persona.id}`,
+    nombre:joinNames(parts),partesUnion:parts,coronasUnion:crownNames,
+    nota:UNION_RULE.nota,fuente:UNION_RULE.fuente,
+    color:override?.color || seniorColor,territorios,miembros:territorios};
+  return [merged,...groups.filter(group=>!units.some(unit=>unit.group===group))];
+}
 
 const EXTERIOR_UNIONS = [
   {
@@ -706,7 +755,10 @@ export function agrupacionesPoliticasEnMapa(persona, año, {view = 'personal'} =
     result.push({...grupo,territorios:new Set(propios),
       miembros:new Set([...grupo.territorios].filter(t=>!excluidos?.has(t)))});
   }
-  return result;
+  if(view!=='panorama')return result;
+  const soberanos=reinadosActivos(persona,año,{soloEfectivos:true})
+    .filter(m=>authorityKind(m,año)==='sovereign'&&!['Alemania','Sacro Imperio'].includes(m.territorio));
+  return personalUnionInPanorama(persona,año,soberanos,result);
 }
 
 // Distinct legal governments must not accidentally inherit identical swatches
@@ -732,7 +784,7 @@ export function colorTerritorioEnMapa(persona, territorio, año) {
 }
 
 export function politicalGroupingReview() {
-  return [...EXTERIOR_UNIONS,...AGRUPACIONES_POLITICAS].map(group=>({
+  return [...EXTERIOR_UNIONS,...AGRUPACIONES_POLITICAS,UNION_RULE].map(group=>({
     id:group.id,label:group.nombre,from:group.desde,through:group.hasta??1800,
     personal:MAP_GROUP_REVIEW[group.id]?.personal || false,
     note:group.nota,source:group.fuente || null,reason:MAP_GROUP_REVIEW[group.id]?.reason || group.nota,

@@ -135,7 +135,17 @@ export const ENGLISH_NAME_CORRECTIONS={
   "Đurağ II Balšić": "Đurađ II Balšić",
   "Ieremia Moulă": "Ieremia Movilă",
   "Gavril Moulă": "Gavril Movilă",
-  "Vuk Kosromanić": "Vuk Kotromanić"
+  "Vuk Kosromanić": "Vuk Kotromanić",
+  "Pallars will be sober": "Pallars Sobirà",
+  "Jagelón": "Jagiellon",
+  "Pallatin": "Palatinate",
+  "Gedimide": "Gediminid",
+  "Grand Comnene": "Grand Komnenos",
+  "Hetúmida": "Hethumid",
+  "Bogdana-Mușat": "Bogdan-Mușat",
+  "Valois-Angulema": "Valois-Angoulême",
+  "Montfort-Bretaña": "Montfort of Brittany",
+  "Paleólogo-Monferrato": "Palaiologos-Montferrat"
 };
 const keys=Object.keys(ENGLISH_NAME_CORRECTIONS).sort((a,b)=>b.length-a.length);
 const pattern=new RegExp('(?<![\\p{L}\\p{N}])(?:'+keys.map(key=>key.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')).join('|')+')(?![\\p{L}\\p{N}])','gu');

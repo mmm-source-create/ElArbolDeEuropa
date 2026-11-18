@@ -1,4 +1,5 @@
 import {V605_PROFILES} from '../../content/v605People.js';
+import {V607_PROFILES} from '../../content/v607People.js';
 import {V603_PROFILES} from '../../content/v603People.js';
 import {V602_PROFILES} from './v602Profiles.js';
 import {REVIEWED_FOURTH_200_PROFILES} from './reviewedFourth200Profiles.js';
@@ -120,4 +121,5 @@ export const COMPLETE_ENGLISH_PROFILES = {
   ...V602_PROFILES,
   ...V603_PROFILES,
   ...V605_PROFILES,
+  ...V607_PROFILES,
 };
