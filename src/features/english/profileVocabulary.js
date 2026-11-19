@@ -10,6 +10,8 @@ import {EXPANDED_NOTES} from './expandedNotes.js';
 import {EXPANDED_NAMES,EXPANDED_LABELS} from './expandedVocabulary.js';
 import {V535_NAMES,V535_LABELS,V535_NOTES} from './v535Vocabulary.js';
 import {V536_NAMES,V536_LABELS,V536_NOTES} from './v536Vocabulary.js';
+import {V607_LABELS,V607_NOTES} from './v607Vocabulary.js';
+import {ENTITY_LABELS_607} from './entityNameReview607.js';
 import runtime from '../../generated/englishVocabularyRuntime.json' with {type:'json'};
 // Display translations only: canonical dynasty and territory keys stay intact.
 export const PROFILE_LABELS = {
@@ -40,6 +42,8 @@ export const PROFILE_LABELS = {
 'Papado':'Papacy','Dignidad imperial':'Imperial dignity','Realeza soberana':'Sovereign ruler','Gobierno principesco':'Princely government','Militar':'Military','Arte':'Art','Religión':'Religion','Humanismo':'Humanism','Nobleza':'Nobility',
 'Gran maestre':'Grand Master','Archiduque / Gran maestre':'Archduke / Grand Master','Duque / Gran maestre':'Duke / Grand Master',
   'Perche':'Perche', 'Las dos Borgoñas':'The two Burgundies', 'Borgoña y Países Bajos':'Burgundy and the Low Countries',
+  ...V607_LABELS,
+  ...ENTITY_LABELS_607,
 };
 
 export const ENGLISH_NAMES = {
@@ -68,6 +72,7 @@ export const ENGLISH_NAMES = {
 
 export const PROFILE_NOTES = {
   ...runtime.notes,
+  ...V607_NOTES,
   ...FOURTH_200_NOTES,
   ...THIRD_100_NOTES,
   ...ROSES_NOTES,

@@ -14,7 +14,7 @@ export function governmentTableAt(people,year,collectives=[]) {
  const rows=new Map();
  for(const person of people) for(const group of governmentGroupsAt(person,year,{view:'panorama'})) {
   const key=group.id;
-  if(!rows.has(key)) rows.set(key,{id:key,label:group.label,color:group.color,governments:[]});
+  if(!rows.has(key)) rows.set(key,{id:key,label:group.label,unionParts:group.unionParts||null,color:group.color,governments:[]});
   const existing=rows.get(key).governments.find(g=>g.person.id===person.id);
   if(existing){existing.mandates.push(...group.mandates);existing.kinds=[...new Set([...existing.kinds,group.kind])];}
   else rows.get(key).governments.push({...group,mandates:[...group.mandates],kinds:[group.kind]});

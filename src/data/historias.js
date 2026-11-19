@@ -1,4 +1,6 @@
 import {completeStories606} from './historias606.js';
+import {STORIES_607_ES} from './historias607.js';
+import {applyStoryFocus607} from './storyFocus607.js';
 import {STORIES_605_ES} from './historias605.js';
 import {reviseStories604} from './historias604.js';
 import {STORIES_603_ES} from './historias603.js';
@@ -4598,6 +4600,7 @@ const HISTORIAS_EXISTENTES = [
   }
 ];
 const HISTORIAS_BASE = [
+  ...STORIES_607_ES,
   ...STORIES_605_ES,
   ...STORIES_603_ES,
   WAR_OF_ROSES_STORY,
@@ -4607,4 +4610,4 @@ const HISTORIAS_BASE = [
 ].filter((h,index,all)=>all.findIndex(item=>item.id===h.id)===index)
  .map(reviseBurgundy).map(h => ({...h, ...CONTEXTO_HISTORIAS[h.id], titulo:h.titulo.replace(/^La Guerra de/, 'La guerra de').replace('La Revolución Protestante','La revolución protestante').replace('El Reino de los Cielos','El reino de los cielos'), subtitulo:(h.subtitulo||'').trim().replace(/\.$/,''), descripcion:h.descripcion?.trim(), colecciones:storyCollections(h.id)}));
 
-export const HISTORIAS = completeStories606(reviseStories604(HISTORIAS_BASE)).map(h=>({...h,colecciones:storyCollections(h.id)}));
+export const HISTORIAS = completeStories606(reviseStories604(HISTORIAS_BASE)).map(applyStoryFocus607).map(h=>({...h,colecciones:storyCollections(h.id)}));

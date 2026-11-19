@@ -89,3 +89,20 @@ test('a separate Inner Austrian branch shares only its own exterior colour; a lo
  const prince={gobiernos:[{territorio:'Piamonte',desde:1300,hasta:1400,condicion:'efectivo'}]};
  assert(!agrupacionesPoliticasEnMapa(prince,1350,{view:'panorama'}).some(g=>g.id==='saboya'));
 });
+
+// 6.0.7: one criterion for every union under the same sovereign.
+import {agrupacionesPoliticasEnMapa as unionGroups} from '../src/cartography/kingdomMaps.js';
+import {PERSONAS as unionPeople} from '../src/data/personas.js';
+test('crowns ruled at once by the same sovereign share one panorama colour, but not the personal map',()=>{
+ const person=id=>unionPeople.find(p=>p.id===id);
+ for(const [id,year,crowns] of [['JACOBO1ING',1610,['Inglaterra','Escocia','Irlanda']],['GEORGE2GB',1740,['Gran Bretaña','Hannover','Irlanda']],
+  ['LADI2',1400,['Polonia','Lituania']],['LADISLAO7HUN',1500,['Bohemia','Hungría']],['ERICOPOMERANIA',1400,['Dinamarca','Noruega','Suecia']],['AUGUST2SAXPOL',1720,['Polonia','Sajonia']]]) {
+  const groups=unionGroups(person(id),year,{view:'panorama'});
+  const holding=crowns.map(t=>groups.find(g=>g.territorios.has(t)));
+  assert(holding.every(Boolean)&&new Set(holding.map(g=>g.id)).size===1,`${id}/${year}`);
+ }
+ const personal=unionGroups(person('JACOBO1ING'),1610);
+ assert(!personal.some(g=>g.territorios.has('Inglaterra')&&g.territorios.has('Escocia')));
+ const spain=unionGroups(person('FEL2ESP'),1556,{view:'panorama'}).find(g=>g.territorios.has('Inglaterra'));
+ assert(spain.partesUnion[0]==='Monarquía Hispánica','the composite monarchy is the senior unit');
+});

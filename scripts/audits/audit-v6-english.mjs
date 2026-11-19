@@ -1,6 +1,7 @@
 import fs from 'node:fs/promises';
 import {V6_DYNASTIES,V6_PEOPLE,V6_READY,V6_STATUSES,V6_STORIES,V6_TERRITORIES} from '../../src/features/english/v6/index.js';
 import {COMPLETE_ENGLISH_PROFILES} from '../../src/features/english/fullProfiles.js';
+import {PERSONAS} from '../../src/data/personas.js';
 import {ENGLISH_DYNASTIES,ENGLISH_TERRITORIES} from '../../src/features/english/entityTranslations.js';
 import {TRANSLATED_STORIES,englishPaths} from '../../src/features/english/routes.js';
 
@@ -59,11 +60,11 @@ if(!V6_READY)errors.push('central V6 readiness is false');
 if(Object.keys(V6_PEOPLE).length!==2096)errors.push(`pending people total: ${Object.keys(V6_PEOPLE).length}/2096`);
 if(V6_DYNASTIES.length!==493)errors.push(`pending dynasties total: ${V6_DYNASTIES.length}/493`);
 if(V6_TERRITORIES.length!==1040)errors.push(`pending territories total: ${V6_TERRITORIES.length}/1040`);
-if(Object.keys(V6_STORIES).length!==38)errors.push(`pending story entries total: ${Object.keys(V6_STORIES).length}/38`);
-if(Object.keys(COMPLETE_ENGLISH_PROFILES).length!==2777)errors.push(`complete people total: ${Object.keys(COMPLETE_ENGLISH_PROFILES).length}/2777`);
+if(Object.keys(V6_STORIES).length!==40)errors.push(`pending story entries total: ${Object.keys(V6_STORIES).length}/40`);
+if(Object.keys(COMPLETE_ENGLISH_PROFILES).length!==PERSONAS.length)errors.push(`complete people total: ${Object.keys(COMPLETE_ENGLISH_PROFILES).length}/${PERSONAS.length}`);
 if(ENGLISH_DYNASTIES.length!==521)errors.push(`complete dynasties total: ${ENGLISH_DYNASTIES.length}/521`);
 if(ENGLISH_TERRITORIES.length!==1041)errors.push(`complete territories total: ${ENGLISH_TERRITORIES.length}/1041`);
-if(TRANSLATED_STORIES.filter(story=>story.chapters>0).length!==42)errors.push(`complete stories total: ${TRANSLATED_STORIES.filter(story=>story.chapters>0).length}/42`);
+if(TRANSLATED_STORIES.filter(story=>story.chapters>0).length!==44)errors.push(`complete stories total: ${TRANSLATED_STORIES.filter(story=>story.chapters>0).length}/44`);
 if(TRANSLATED_STORIES.filter(story=>story.chapters===0).length!==0)errors.push(`planned story cards total: ${TRANSLATED_STORIES.filter(story=>story.chapters===0).length}/0`);
 unique(V6_DYNASTIES.map(item=>item.en),'dynasty slugs');
 unique(V6_TERRITORIES.map(item=>item.en),'territory slugs');

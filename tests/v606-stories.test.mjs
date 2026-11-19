@@ -11,7 +11,7 @@ import {storyEditorialIssues} from '../src/content/storyEditorialPolicy.js';
 const ledger=JSON.parse(fs.readFileSync(new URL('../docs/editorial/historias-6.0.6.json',import.meta.url),'utf8'));
 
 test('all nine planned stories are complete in both editions, with live chapter switches and known cast',()=>{
- assert.equal(STORY_DRAFTS_606.length,9);assert.equal(HISTORIAS.length,42);
+ assert.equal(STORY_DRAFTS_606.length,9);assert.equal(HISTORIAS.length,44);
  assert(!HISTORIAS.some(h=>!h.disponible||!h.pasos?.length));
  const ids=new Set(PERSONAS.map(p=>p.id));let count=0;
  for(const draft of STORY_DRAFTS_606){
@@ -20,7 +20,7 @@ test('all nine planned stories are complete in both editions, with live chapter 
   assert(es.fuentes.length>=3);assert(es.fuentes.every(s=>s.url.startsWith('https:')&&s.localizador));
   for(const [i,step]of es.pasos.entries()){
    const translated=en.pasos[i];assert(step.texto.split(/\s+/).length>=60);assert(translated.texto.split(/\s+/).length>=60);
-   assert.deepEqual(translated.personas,step.personas);assert.equal(translated.anio,step.anio);assert(step.fuentes.length);assert(step.fuentes.every(Boolean));
+   assert.deepEqual([...translated.personas].sort(),[...step.personas].sort());assert.equal(translated.anio,step.anio);assert(step.fuentes.length);assert(step.fuentes.every(Boolean));
    for(const id of step.personas)assert(ids.has(id),`${draft.id}/${i+1}: ${id}`);
    assert.equal(translatedEquivalent(`/es/historia/${route.es}/capitulo/${i+1}`,'en'),`/en/story/${route.en}/chapter/${i+1}`);
   }

@@ -23,7 +23,7 @@ export function auditPoliticalUnions(people=PERSONAS) {
     const eligible=new Set(active.filter(m=>authorityKind(m,year)==='sovereign').map(m=>m.territorio));
     const seen=new Set();
     for(const group of agrupacionesPoliticasEnMapa(person,year,{view})) {
-     const rule=registry.get(group.id);assert(rule,group.id);
+     const rule=registry.get(group.regla||group.id)||registry.get(group.id);assert(rule,group.id);
      assert(rule.from<=year&&year<=rule.through,`${group.id}: fecha fuera de regla`);
      if(view==='personal')assert(rule.personal,`${group.id}: unión exterior en mapa personal`);
      counts[view==='personal'?'personalGroups':'panoramaGroups']++;

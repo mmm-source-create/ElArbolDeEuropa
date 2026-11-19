@@ -1,4 +1,5 @@
 import {V605_REFERENCES} from './v605People.js';
+import {V607_REFERENCES} from './v607People.js';
 import {V603_REFERENCES} from './v603People.js';
 import {V602_REFERENCES} from './v602References.js';
 import {POLISH_REFERENCES} from './polishReferences.js';
@@ -15,6 +16,7 @@ export const REFERENCIAS_BIOGRAFIAS = Object.freeze({
   ...V602_REFERENCES,
   ...V603_REFERENCES,
   ...V605_REFERENCES,
+  ...V607_REFERENCES,
   ...POLISH_REFERENCES,
  ...ROSES_PEOPLE_REFERENCES,
   ...CONFIRMED_PEOPLE_REFERENCES,

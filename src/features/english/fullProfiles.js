@@ -1,4 +1,5 @@
 import {V605_PROFILES} from '../../content/v605People.js';
+import {V607_PROFILES} from '../../content/v607People.js';
 import {V603_PROFILES} from '../../content/v603People.js';
 import {V602_PROFILES} from './v602Profiles.js';
 import {REVIEWED_FOURTH_200_PROFILES} from './reviewedFourth200Profiles.js';
@@ -11,9 +12,10 @@ import {EXPANDED_ENGLISH_PROFILES} from './expandedProfiles.js';
 import {V535_ENGLISH_PROFILES} from './v535Profiles.js';
 import {V536_ENGLISH_PROFILES} from './v536Profiles.js';
 import {V6_PEOPLE} from './v6/index.js';
+import {reviewPersonProfiles} from './personNameReview607.js';
 // Editorial translations of complete Spanish profiles. Canonical IDs, dates,
 // relationships and territorial keys are supplied by the shared generator.
-export const COMPLETE_ENGLISH_PROFILES = {
+export const COMPLETE_ENGLISH_PROFILES = reviewPersonProfiles({
   ...REVIEWED_FOURTH_200_PROFILES,
   GUSTAV2ADOLFO: {
   "name": "Gustav II Adolf of Sweden",
@@ -120,4 +122,5 @@ export const COMPLETE_ENGLISH_PROFILES = {
   ...V602_PROFILES,
   ...V603_PROFILES,
   ...V605_PROFILES,
-};
+  ...V607_PROFILES,
+});

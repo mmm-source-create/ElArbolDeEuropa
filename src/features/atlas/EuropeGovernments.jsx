@@ -52,10 +52,18 @@ function Collective({collective,locale='es'}){
  return <div className="europe-ruler"><strong>{en?englishLabel(collective.nombre):collective.nombre}</strong><small>{en?englishLabel(collective.cargo):collective.cargo} · {collective.desde}–{collective.hasta}</small><details><summary>{en?'Institutional government and sources':'Gobierno institucional y fuentes'}</summary><p>{en?englishNote(collective.nota):collective.nota}</p><a href={collective.fuente.url}>{collective.fuente.title}</a></details></div>;
 }
 
+// A union under one sovereign lists its crowns; each part is translated.
+function rowLabel(row,en){
+ if(!row.unionParts?.length)return en?englishLabel(row.label):row.label;
+ if(!en)return row.label;
+ const parts=row.unionParts.map(englishLabel);
+ return parts.length<2?parts.join(''):`${parts.slice(0,-1).join(', ')} and ${parts.at(-1)}`;
+}
+
 function EntityCard({row,locale='es'}){
  const en=locale==='en';
  return <article className="europe-entity" style={{'--entity-color':row.color}}>
-  <h4><i aria-hidden="true"/>{en?englishLabel(row.label):row.label}</h4>
+  <h4><i aria-hidden="true"/>{rowLabel(row,en)}</h4>
   {row.governments.map(group=><Ruler key={group.person.id+group.key} group={group} locale={locale}/>)}
   {row.collectives?.map((c,i)=><Collective key={c.nombre+i} collective={c} locale={locale}/>)}
   {row.governments.some(a=>row.governments.some(b=>a.person.id!==b.person.id&&a.mandates.some(m=>b.mandates.some(n=>m.hasta===n.desde))))&&<p className="europe-note">{en?'A succession occurs within the year; annual dates do not prove simultaneous rule.':'Hay un relevo dentro del año; las fechas anuales no prueban simultaneidad.'}</p>}
@@ -66,7 +74,7 @@ function EntityRow({row,locale='es'}){
  const en=locale==='en',term=value=>en?englishLabel(value):value;
  const rulers=[...row.governments.map(g=>({key:g.person.id+g.key,id:g.person.id,name:g.person.nombre,title:[g.mandates[0]?.titulo,...g.kinds.filter(kind=>kind!=='sovereign').map(kind=>AUTHORITY_LABELS[kind])].filter(Boolean).join(' · ')})),...(row.collectives||[]).map((c,i)=>({key:c.nombre+i,name:c.nombre,title:c.cargo}))];
  return <li className="europe-entity-row" style={{'--entity-color':row.color}}>
-  <i aria-hidden="true"/><h4>{term(row.label)}</h4>
+  <i aria-hidden="true"/><h4>{rowLabel(row,en)}</h4>
   <span>{rulers.map((r,i)=><React.Fragment key={r.key}>{i>0&&', '}{r.id?<button type="button" data-person={r.id}>{r.name}</button>:<b>{term(r.name)}</b>}{r.title&&<small> · {r.title.split(' · ').map(term).join(' · ')}</small>}</React.Fragment>)}</span>
  </li>;
 }

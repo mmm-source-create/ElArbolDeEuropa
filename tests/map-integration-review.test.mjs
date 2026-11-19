@@ -43,8 +43,9 @@ test('linked completion phases respect partitions, cadet branches and dated acqu
  assert.deepEqual(sovereigns('Barcelona',1655),['FEL4ESP']);
 });
 
-test('Great Britain and Hanover no longer share the fallback grey; the Commonwealth is inspectable',()=>{
- assert.notDeepEqual(colors(1720,'London'),colors(1720,'Hanover'));
+// 6.0.7: the shared colour is Great Britain's, never the fallback grey.
+test('Great Britain and Hanover share the British colour, not the fallback grey; the Commonwealth is inspectable',()=>{
+ assert.deepEqual(colors(1720,'Hanover'),colors(1720,'London'));
  assert.deepEqual(colors(1720,'Edinburgh'),colors(1720,'London'));
  assert.notEqual(REINO_COLOR['Gran Bretaña'],REINO_COLOR.Inglaterra);
  const weimar=colorTerritorioEnMapa({gobiernos:[]},'Sajonia-Weimar',1650);

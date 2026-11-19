@@ -22,8 +22,8 @@ test('Capeto cuenta sus ramas para ordenar sin alterar las personas asignadas a 
  const counts=dynastyOrderCounts(PERSONAS),direct=name=>PERSONAS.filter(p=>p.dinastia===name).length;
  assert.ok(counts.get('Capeto')>counts.get('Borbón'));assert.ok(counts.get('Borbón')>direct('Borbón'));assert.ok(counts.get('Anjou')>direct('Anjou'));assert.equal(direct('Capeto'),21);
 });
-test('Borgoña centra ocho capítulos en Carlos y termina en su biznieto; ambos relatos aprobados tienen seis capítulos',()=>{
- const story=HISTORIAS.find(s=>s.id==='borgona');assert.equal(story.pasos.length,17);assert.equal(story.pasos.filter(p=>p.persona==='CAR1BORG').length,8);assert.equal(story.pasos.at(-1).persona,'CARLOS5');assert.equal(story.pasos.some(p=>p.figura),false);assert.match(story.pasos.find(p=>p.anio===1477).texto,/cuerpo/);
+test('Borgoña centra siete capítulos en Carlos (6.0.7: Federico III encabeza el de Tréveris) y termina en su biznieto; ambos relatos aprobados tienen seis capítulos',()=>{
+ const story=HISTORIAS.find(s=>s.id==='borgona');assert.equal(story.pasos.length,17);assert.equal(story.pasos.filter(p=>p.persona==='CAR1BORG').length,7);assert.equal(story.pasos.at(-1).persona,'CARLOS5');assert.equal(story.pasos.some(p=>p.figura),false);assert.match(story.pasos.find(p=>p.anio===1477).texto,/cuerpo/);
  const people=new Set(PERSONAS.map(p=>p.id));
  for(const id of ['dos-coronas-dos-hijas','corona-demasiado-grande']){const s=HISTORIAS.find(s=>s.id===id);assert.equal(s.disponible,true);assert.equal(s.pasos.length,6);assert.ok(s.fuentes.length>=4);for(const p of s.pasos){assert.ok(p.texto.length>500);assert.ok(p.personas.every(id=>people.has(id)));}}
  for(const route of TRANSLATED_STORIES.filter(route=>route.chapters>0)){const s=HISTORIAS.find(s=>s.id===route.id);assert.equal(s.pasos.length,route.chapters);assert.equal(ENGLISH_STORIES[s.id].chapters.length,s.pasos.length);assert.ok(englishPaths().includes(`/en/story/${route.en}/chapter/${route.chapters}`));}

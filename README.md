@@ -2,12 +2,14 @@
 
 Atlas histórico y genealógico para explorar personas, dinastías, territorios y sus conexiones familiares.
 
-- [Web](https://www.treeofeurope.eu/es/) · Versión del repositorio: **6.0.6**
-- [Notas de 6.0.6](docs/releases/6.0.6.md) · [Documentación e historial](docs/README.md) · [Publicación en Cloudflare](docs/CLOUDFLARE.md) · [Seguridad](SECURITY.md)
+- [Web](https://www.treeofeurope.eu/es/) · Versión del repositorio: **6.0.7**
+- [Notas de 6.0.7](docs/releases/6.0.7.md) · [Documentación e historial](docs/README.md) · [Publicación en Cloudflare](docs/CLOUDFLARE.md) · [Seguridad](SECURITY.md)
 
-La versión 6.0.6 completa las nueve historias en preparación en español e
-inglés: el catálogo ofrece 42 historias y 376 capítulos con referencias
-localizadas, y una auditoría editorial comprueba su texto contra las fuentes.
+La versión 6.0.7 unifica en el mapa de Europa las uniones de coronas bajo un
+mismo soberano, centra cada historia en sus protagonistas, añade las historias
+de Kościuszko y de Gustavo Adolfo (44 historias y 394 capítulos), incorpora a
+Esteban de Zápolya y Eduviges de Teschen, completa los retratos de la dinastía
+Jagellón y revisa los nombres ingleses de las casas y territorios más frecuentes.
 La web se publica en Cloudflare (Workers con Static Assets, plan gratuito).
 
 El mapa utiliza EU V Locations con superficies fechadas y fuentes consultables
