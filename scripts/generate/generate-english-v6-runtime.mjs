@@ -13,7 +13,7 @@ import {COMPLETE_ENGLISH_PROFILES} from '../../src/features/english/fullProfiles
 
 const profiles=Object.fromEntries(Object.entries(COMPLETE_ENGLISH_PROFILES).map(([id,profile])=>[id,{
  name:englishNameText(profile.name),
- slugName:profile.name,
+ slugName:profile.slugName||profile.name,
  role:profile.role,
  nickname:profile.nickname,
  aliases:englishAliases(profile.aliases).map(englishNameText),
@@ -25,7 +25,7 @@ const territories=V6_TERRITORIES.map(({key,es,en,name})=>({key,es,en,name}));
 const storyRoutes=Object.fromEntries(Object.entries(V6_STORIES).map(([id,entry])=>[id,{enSlug:entry.enSlug,esSlug:slugPublico(HISTORIAS.find(story=>story.id===id)?.titulo||entry.content?.slug||id),esTitle:HISTORIAS.find(story=>story.id===id)?.titulo,chapters:(entry.content?.pasos||[]).length}]));
 const timelineLabels=Object.fromEntries(EVENTOS_HISTORICOS.map(event=>{if(!TIMELINE_TITLES[event.id])throw Error(`Missing English event title: ${event.id}`);return [event.titulo,TIMELINE_TITLES[event.id]];}));
 const timelineNotes=Object.fromEntries(EVENTOS_HISTORICOS.filter(event=>TIMELINE_DESCRIPTIONS[event.id]).map(event=>[event.descripcion,TIMELINE_DESCRIPTIONS[event.id]]));
-const runtime={additionalPeople:Object.fromEntries(Object.entries({...V602_PROFILES,...V605_PROFILES,...V607_PROFILES,...Object.fromEntries(['FRANCESCOSALVIATIARC','RODRIGOCALDERON','CRISTOBALSANDOVALUCEDA'].map(id=>[id,V603_PROFILES[id]]))}).filter(([id])=>!Object.hasOwn(V6_PEOPLE,id)).map(([id,p])=>[id,p.name])),v6People:Object.fromEntries(Object.entries(V6_PEOPLE).map(([id,profile])=>[id,profile.name])),dynasties,territories,storyRoutes};
+const runtime={additionalPeople:Object.fromEntries(Object.entries({...V602_PROFILES,...V605_PROFILES,...V607_PROFILES,...Object.fromEntries(['FRANCESCOSALVIATIARC','RODRIGOCALDERON','CRISTOBALSANDOVALUCEDA'].map(id=>[id,V603_PROFILES[id]]))}).filter(([id])=>!Object.hasOwn(V6_PEOPLE,id)).map(([id,p])=>[id,p.name])),v6People:Object.fromEntries(Object.entries(V6_PEOPLE).map(([id,profile])=>[id,profile.slugName||profile.name])),dynasties,territories,storyRoutes};
 await fs.mkdir(new URL('../../src/generated/',import.meta.url),{recursive:true});
 await Promise.all([
  fs.writeFile(new URL('../../src/generated/englishV6Runtime.json',import.meta.url),JSON.stringify(runtime)),

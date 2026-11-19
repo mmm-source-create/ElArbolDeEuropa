@@ -142,5 +142,109 @@ export const PORTRAITS_607_EN = {
     "fecha": "c. 1480",
     "institucion": "Austrian National Library, Vienna",
     "alt": "Miniature of Beatrice of Naples in a codex from the Corvinian library"
+  },
+  "MEHMED4OSM": {
+    "tipo": "Contemporary portrait",
+    "obra": "Full-length portrait of Sultan Mehmed IV",
+    "autor": "Unidentified painter",
+    "fecha": "c. 1682",
+    "institucion": "Ptuj Ormož Regional Museum",
+    "alt": "Full-length portrait of Mehmed IV in a kaftan and turban"
+  },
+  "ISABAUST": {
+    "tipo": "Contemporary portrait",
+    "obra": "Portrait of Isabella of Austria, Queen of Denmark",
+    "autor": "Anonymous Flemish painter",
+    "fecha": "c. 1515",
+    "institucion": "National Museum in Kraków",
+    "alt": "Portrait of Isabella of Austria, daughter of Joanna of Castile, c. 1515"
+  },
+  "CATAUST": {
+    "tipo": "Contemporary portrait",
+    "obra": "Catherine of Austria, Queen of Portugal",
+    "autor": "Antonis Mor",
+    "fecha": "c. 1552–1553",
+    "institucion": "Museo Nacional del Prado",
+    "alt": "Portrait of Catherine of Austria, Queen of Portugal, by Antonis Mor"
+  },
+  "MARIAMANUELA": {
+    "tipo": "Copy of a contemporary portrait",
+    "obra": "Maria Manuela of Portugal",
+    "autor": "After Antoine Trouvéon",
+    "fecha": "After a lost original of 1542",
+    "institucion": "Museo Nacional del Prado",
+    "alt": "Full-length portrait of Maria Manuela of Portugal after an original by Antoine Trouvéon"
+  },
+  "JUANPORTINF": {
+    "tipo": "Contemporary workshop replica",
+    "obra": "João Manuel, Prince of Portugal · replica of a lost original by Antonis Mor",
+    "autor": "Workshop of Antonis Mor",
+    "fecha": "c. 1552–1554",
+    "institucion": "Royal Collection",
+    "alt": "Portrait of João Manuel of Portugal from the workshop of Antonis Mor"
+  },
+  "MARIAAUSTESP": {
+    "tipo": "Contemporary portrait",
+    "obra": "Empress Maria of Austria, wife of Maximilian II",
+    "autor": "Antonis Mor",
+    "fecha": "1551",
+    "institucion": "Museo Nacional del Prado",
+    "alt": "Portrait of Maria of Austria, daughter of Charles V, by Antonis Mor"
+  },
+  "JUANAAUST": {
+    "tipo": "Contemporary portrait",
+    "obra": "Portrait of Joanna of Austria, Princess of Portugal",
+    "autor": "Alonso Sánchez Coello",
+    "fecha": "c. 1557",
+    "institucion": "Bilbao Fine Arts Museum",
+    "alt": "Portrait of Joanna of Austria, Princess of Portugal, by Alonso Sánchez Coello"
+  },
+  "BARBAUSTRIA": {
+    "tipo": "Contemporary portrait",
+    "obra": "Archduchess Barbara, Duchess of Ferrara, full length",
+    "autor": "Francesco Terzi",
+    "fecha": "1565",
+    "institucion": "Kunsthistorisches Museum, Vienna",
+    "alt": "Full-length portrait of Barbara of Austria by Francesco Terzi"
+  },
+  "FERN2TIROL": {
+    "tipo": "Contemporary portrait",
+    "obra": "Archduke Ferdinand II in eagle armour",
+    "autor": "Francesco Terzi",
+    "fecha": "1550",
+    "institucion": "Kunsthistorisches Museum, Vienna",
+    "alt": "Portrait of Archduke Ferdinand II in armour by Francesco Terzi"
+  },
+  "LEONORHABS": {
+    "tipo": "Contemporary portrait",
+    "obra": "Archduchess Eleanor, Duchess of Mantua, full length",
+    "autor": "Unidentified painter",
+    "fecha": "1555",
+    "institucion": "Kunsthistorisches Museum, Vienna",
+    "alt": "Full-length portrait of Eleanor of Austria, Duchess of Mantua"
+  },
+  "JUANAHABS": {
+    "tipo": "Contemporary portrait",
+    "obra": "Archduchess Joanna, Grand Duchess of Tuscany, full length",
+    "autor": "Francesco Terzi",
+    "fecha": "1565",
+    "institucion": "Kunsthistorisches Museum, Vienna",
+    "alt": "Full-length portrait of Joanna of Austria by Francesco Terzi"
+  },
+  "CARLOS2ESTIRIA": {
+    "tipo": "Contemporary portrait",
+    "obra": "Archduke Charles II with a view of Graz",
+    "autor": "Monogrammist LP",
+    "fecha": "1569",
+    "institucion": "Kunsthistorisches Museum, Vienna",
+    "alt": "Portrait of Archduke Charles II of Inner Austria with a view of Graz"
+  },
+  "MARIAAUSTRIACLEVES": {
+    "tipo": "Contemporary portrait",
+    "obra": "Archduchess Maria, Duchess of Jülich-Cleves-Berg, full length",
+    "autor": "Unidentified painter",
+    "fecha": "1554",
+    "institucion": "Kunsthistorisches Museum, Vienna",
+    "alt": "Full-length portrait of Maria of Austria, Duchess of Jülich-Cleves-Berg"
   }
 };

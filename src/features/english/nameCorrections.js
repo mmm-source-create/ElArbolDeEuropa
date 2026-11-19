@@ -145,7 +145,27 @@ export const ENGLISH_NAME_CORRECTIONS={
   "Bogdana-Mușat": "Bogdan-Mușat",
   "Valois-Angulema": "Valois-Angoulême",
   "Montfort-Bretaña": "Montfort of Brittany",
-  "Paleólogo-Monferrato": "Palaiologos-Montferrat"
+  "Paleólogo-Monferrato": "Palaiologos-Montferrat",
+  "Poland's Kadislav I": "Władysław I of Poland",
+  "Ladislao I of Poland": "Władysław I of Poland",
+  "crown to Casimiro III": "crown to Casimir III",
+  "Federico II de Saxony": "Frederick II of Saxony",
+  "Allejo II": "Alexios II",
+  "Allejo III": "Alexios III",
+  "Alejo III Angelo": "Alexios III Angelos",
+  "House Menese": "House of Meneses",
+  "Menese": "Meneses",
+  "COMMINGES": "Comminges",
+  "Eleanor de Comminges": "Eleanor of Comminges",
+  "Smits dynasty": "Smilets dynasty",
+  "Bathory dynasty": "Báthory dynasty",
+  "Stephen Bathory": "Stephen Báthory",
+  "Andres Bathory": "Andrew Báthory",
+  "Angelo dynasty": "Angelos dynasty",
+  "Láscaris dynasty": "Laskaris dynasty",
+  "John IV Lascaris": "John IV Laskaris",
+  "John Cantacuceno": "John Kantakouzenos",
+  "Barcelona-Urgel dynasty": "Barcelona-Urgell dynasty"
 };
 const keys=Object.keys(ENGLISH_NAME_CORRECTIONS).sort((a,b)=>b.length-a.length);
 const pattern=new RegExp('(?<![\\p{L}\\p{N}])(?:'+keys.map(key=>key.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')).join('|')+')(?![\\p{L}\\p{N}])','gu');

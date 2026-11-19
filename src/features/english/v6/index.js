@@ -1,6 +1,7 @@
 import {STORIES_606_EN} from '../../../data/historias606.js';
 import {STORIES_607_EN} from '../../../data/historias607.js';
 import {reviewDynastyName,reviewTerritoryName} from '../entityNameReview607.js';
+import {reviewPersonProfiles,reviewPersonNames} from '../personNameReview607.js';
 import {STORIES_605_EN} from '../../../data/historias605.js';
 import {reviseEnglishStories604} from '../../../data/historias604.js';
 import {STORIES_603_EN} from '../../../data/historias603.js';
@@ -62,8 +63,8 @@ import b6Status from './batch-6/status.json' with {type:'json'};
 const mergeObjects=(...items)=>Object.assign({},...items);
 const mergeArrays=(...items)=>items.flatMap(item=>Array.isArray(item)?item:[]);
 
-export const V6_PEOPLE=mergeObjects(b1People,b2People,b3People,b4People,b5People,b6People);
-export const V6_NAMES=mergeObjects(b1Names,b2Names,b3Names,b4Names,b5Names,b6Names);
+export const V6_PEOPLE=reviewPersonProfiles(mergeObjects(b1People,b2People,b3People,b4People,b5People,b6People));
+export const V6_NAMES=reviewPersonNames(mergeObjects(b1Names,b2Names,b3Names,b4Names,b5Names,b6Names));
 export const V6_LABELS=mergeObjects(b1Labels,b2Labels,b3Labels,b4Labels,b5Labels,b6Labels);
 export const V6_NOTES=mergeObjects(b1Notes,b2Notes,b3Notes,b4Notes,b5Notes,b6Notes);
 export const V6_PORTRAITS=mergeObjects(b1Portraits,b2Portraits,b3Portraits,b4Portraits,b5Portraits,b6Portraits);

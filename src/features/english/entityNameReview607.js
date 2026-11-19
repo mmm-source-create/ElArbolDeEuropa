@@ -19,6 +19,21 @@ export const DYNASTY_NAMES_607 = Object.freeze({
   'Gran Comneno':'Grand Komnenos',
   'O’Neill':'O’Neill',
   'Paleólogo-Monferrato':'Palaiologos-Montferrat',
+  // Second review: houses ranked 101–200.
+  'Báthory':'Báthory',
+  'Almohade':'Almohad',
+  'Borbón-Orleans':'Bourbon-Orléans',
+  'Gerulfinga':'Gerulfing',
+  'Meneses':'Meneses',
+  'Barcelona-Urgel':'Barcelona-Urgell',
+  'Burgh':'de Burgh',
+  'Clare':'de Clare',
+  'Jimena':'Jiménez',
+  'Láscaris':'Laskaris',
+  'Cantacuceno':'Kantakouzenos',
+  'Comminges':'Comminges',
+  'Smilets':'Smilets',
+  'Ángelo':'Angelos',
 });
 export const TERRITORY_NAMES_607 = Object.freeze({
   'Moldavia':'Moldavia',

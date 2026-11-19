@@ -1,4 +1,5 @@
 // 6.0.7: new people, complete in Spanish and English in the same delivery.
+import {GOVERNOR_RECORDS} from './v607Governors.js';
 const WIKI_ES_ESTEBAN = {titulo:'Wikipedia en español · Esteban de Zápolya',url:'https://es.wikipedia.org/wiki/Esteban_de_Z%C3%A1polya'};
 const WIKI_EN_STEPHEN = {titulo:'Wikipedia en inglés · Stephen Zápolya (con Markó 2006 y la archontología de C. Tóth et al. 2016)',url:'https://en.wikipedia.org/wiki/Stephen_Z%C3%A1polya'};
 const MACARTNEY = {titulo:'C. A. Macartney · Hungary: A Short History · MEK',url:'https://mek.oszk.hu/02000/02086/02086.htm'};
@@ -6,7 +7,7 @@ const WIKI_ES_EDUVIGES = {titulo:'Wikipedia en español · Eduviges Piast',url:'
 const WIKI_PL_JADWIGA = {titulo:'Wikipedia en polaco · Jadwiga cieszyńska (con Sroka 2005 y Jasiński 2007)',url:'https://pl.wikipedia.org/wiki/Jadwiga_cieszy%C5%84ska'};
 const WIKI_EN_HEDWIG = {titulo:'Wikipedia en inglés · Hedwig of Cieszyn',url:'https://en.wikipedia.org/wiki/Hedwig_of_Cieszyn'};
 
-const records = {
+const ownRecords = {
   ESTEBANZAPOLYA: {
     name:'Stephen Zápolya',
     role:'Palatine of Hungary',
@@ -46,6 +47,8 @@ const records = {
     ],
   },
 };
+
+const records={...ownRecords,...GOVERNOR_RECORDS};
 
 export const V607_BIOGRAPHIES=Object.fromEntries(Object.entries(records).map(([id,r])=>[id,r.parts.map(([titulo,,texto])=>({titulo,texto}))]));
 export const V607_PERSON_CONTENT=Object.fromEntries(Object.entries(records).map(([id,r])=>[id,{resumen:r.resumen,biografia:r.parts.map(p=>p[2]).join('\n\n')}]));
