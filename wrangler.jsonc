@@ -82,6 +82,12 @@
   "vars": {
     "DEPLOYMENT_ENV": "production"
   },
+  "previews": {
+    "vars": {
+      "DEPLOYMENT_ENV": "preview"
+    },
+    "observability": {"enabled": false}
+  },
   "observability": {
     "enabled": true
   },
