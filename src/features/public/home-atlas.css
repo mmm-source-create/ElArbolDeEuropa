@@ -38,6 +38,8 @@
 .home-daily-text{max-width:640px;margin:0;color:var(--eade-ink);font:17px/1.65 var(--eade-serif)}
 .home-daily-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px}
 .home-daily-actions :is(.public-primary,.public-secondary){min-height:46px;padding:0 22px;gap:9px;border-radius:999px;font-weight:650}
+/* Reserved space while the person of the day loads. */
+.home-daily-loading{min-height:420px}
 /* Dynasty cards: arms on a plain ground. */
 .home-feature-art.home-dynasty-art{height:220px}
 .home-dynasty-art .home-feature-arrow{background:var(--eade-wine-fill);color:#fff}

@@ -10,7 +10,6 @@ import {IMAGENES_PERSONAS} from '../../src/data/imagenesPersonas.js';
 import {escudoDe} from '../../src/content/dinastias/escudos.js';
 import {isNamedDynasty} from '../../src/data/dynastyNames.js';
 import {ENGLISH_DYNASTIES, ENGLISH_TERRITORIES} from '../../src/features/english/entityTranslations.js';
-import {pickOfTheDay, todayKey} from '../../src/features/public/dailyPick.js';
 import {biografiaExtensaPersona} from '../../src/content/biografias-extensas.js';
 
 const readJson = async file => JSON.parse(await fs.readFile(file, 'utf8'));
@@ -82,10 +81,10 @@ for (const p of PERSONAS) {
 pool.sort((a, b) => a.id.localeCompare(b.id));
 if (pool.length < 30) throw new Error(`Solo ${pool.length} personas para la recomendación diaria`);
 await writeJson('public/catalogos/recomendaciones.json', {items: pool});
-// The static page shows the build day's person; the browser switches to today's.
-const pick = pickOfTheDay(pool, todayKey());
-home.recomendacion = pick;
-englishHome.recommendation = pick;
+// The person of the day is chosen in the browser: the static page must not
+// depend on the day it was built.
+delete home.recomendacion;
+delete englishHome.recommendation;
 englishHome.nombre = 'Europe in 1500, and in any year';
 
 await writeJson('src/generated/home.json', home);

@@ -60,13 +60,14 @@ function SectionHead({eyebrow, title, href, link}) {
   return <div className="home-discovery-heading"><div><span className="home-eyebrow">{eyebrow}</span><h2>{title}</h2></div><a className="home-text-link" href={href}>{link} <ArrowRight size={14}/></a></div>;
 }
 
-function DailyPerson({initial, locale}) {
+function DailyPerson({locale}) {
   const en = locale === 'en', copy = HOME_COPY[en ? 'en' : 'es'];
-  // The static page shows the build day's person; today's replaces it once the
-  // pool loads, so every visitor sees the same person on the same date.
-  const {data} = useJson('/catalogos/recomendaciones.json');
-  const person = pickOfTheDay(data?.items) || initial;
-  if (!person) return null;
+  // Chosen in the browser from the date, so the static page does not depend on
+  // the day it was built; the space is reserved while the pool loads.
+  const {data, error} = useJson('/catalogos/recomendaciones.json');
+  const person = pickOfTheDay(data?.items);
+  if (error) return null;
+  if (!person) return <section className="home-daily home-daily-loading public-section" aria-busy="true" aria-label={copy.dailyEyebrow}><span className="home-daily-art"/><div className="home-daily-copy"><span className="home-eyebrow">{copy.dailyEyebrow}</span></div></section>;
   const text = en ? person.en : person.es;
   const dates = documentaryLife(person).replace(/^\?\s*–\s*\?$/, '');
   return <section className="home-daily public-section" aria-label={copy.dailyEyebrow}>
@@ -96,7 +97,6 @@ export function HomeContent({ data = HOME_DATA, locale = "es", title, onEnterAtl
   const people = (en ? data?.people : data?.personasDestacadas) || [];
   const dynasties = (en ? data?.dynasties : data?.dinastiasCarrusel) || [];
   const stories = (en ? data?.stories : data?.historiasCarrusel || data?.historiasDestacadas) || [];
-  const recommendation = en ? data?.recommendation : data?.recomendacion;
   const atlasYear = y => `${base}?atlas=1&anio=${y}&panel=europa`;
   const enterAtlas = event => {
     if (typeof onEnterAtlas !== "function" || event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
@@ -150,7 +150,7 @@ export function HomeContent({ data = HOME_DATA, locale = "es", title, onEnterAtl
           {["personas", "dinastias", "territorios", "historias"].map((key, index) => <span key={key}><strong><Odometer value={stats[key]} locale={locale}/></strong>{copy.stats[index]}</span>)}
         </div>
 
-        <DailyPerson initial={recommendation} locale={locale}/>
+        <DailyPerson locale={locale}/>
 
         {!!people.length && <section className="home-discovery public-section">
           <SectionHead eyebrow={copy.peopleEyebrow} title={copy.peopleTitle} href={en ? '/en/people' : '/es/personas'} link={copy.allPeople}/>

@@ -8700,7 +8700,7 @@
       "territoryCount": 1041
     },
     "pages": {
-      "/en/": "2eafc642a626113eb74d34917933d943eb244caee32cc969580f2ff3ed29395d",
+      "/en/": "c1b5aedb0b6b2b60873d0dfc0da48c611b0d32d653bccaba910896bb0de6c55c",
       "/en/about": "a687f08942b01d6d15d52a0bd93551766b1a9c60897ebc41411e48499ad02567",
       "/en/acknowledgements": "6cfbf2b23d3c9a69111afb28a8a946b167458e42169d3643c7507e7600f909fa",
       "/en/challenge": "e795c0385949e279c97871956e1c5262044caed9a2dd905c83717a1adead4978",
@@ -13525,7 +13525,7 @@
       "/en/territory/zurich": "5590d99f7722d48d4b50ffe165cd4c39bc53ab89c40c7afdb202cf1a4f3df60d",
       "/en/territory/zurich-imperial-city-and-fraumunster": "72cd8eeb9261160433a60b3ab1195030addf6095f71f9f2e99d38031dac893ef",
       "/en/territory/zurich-under-the-zahringers": "883809899fee13594bcc4e8d48c77d1a8a32f958fd2750cbffdb437461b839a6",
-      "/es": "9b7d71b1971ab56ff957950a132dce61de3dc062286a8cc10ae640702a267450",
+      "/es": "4f825b17f2411d5f699af9928471c660fc2814b59173b79662d011eaa5d21d0c",
       "/es/dinastia/acciaiuoli": "96401fc5ad6ae0fffac6b29babc90b09e9bd598031513947545f93f255502205",
       "/es/dinastia/alagon": "87137780e614711d9233c5388eb23f0bea978e351b47b081790d22c03694c22e",
       "/es/dinastia/alania": "4ef7fcc54e925b5081c20d7fbd59807da6418505ff285d71b590ffe24a7d575b",
@@ -28000,6 +28000,6 @@
     ],
     "tree": "ebc72066eb66dfa4873fcaa2de789f77c2601e58893a46a6ba842e383f2016bd"
   },
-  "reason": "6.0.10: portada, catálogos e índice A–Z de personas en HTML estático",
+  "reason": "6.0.10: portada estática sin la persona del día, que se elige en el navegador",
   "schema": 1
 }
