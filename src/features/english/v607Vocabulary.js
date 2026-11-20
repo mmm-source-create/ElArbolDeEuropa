@@ -2,6 +2,7 @@
 export const V607_LABELS = {
   'Unión bajo un mismo soberano':'Union under one sovereign',
   'Nádor':'Palatine',
+  'Infanta / Duquesa':'Infanta / Duchess',
   'Matrimonio':'Marriage',
   "Señor / Gobernador":"Lord / Governor",
   "Archiduque / Gobernador":"Archduke / Governor",
@@ -14,6 +15,10 @@ export const V607_LABELS = {
 export const V607_NOTES = {
   "Lugarteniente general de Felipe el Hermoso durante sus viajes a Castilla; gobierno delegado, no soberanía propia.":"Lieutenant-general of Philip the Handsome during his journeys to Castile; delegated government, not sovereignty of his own.",
   "Lugarteniente general durante la ausencia de Felipe el Hermoso en Castilla.":"Lieutenant-general during Philip the Handsome’s absence in Castile.",
+  "Lugarteniente general nombrado en 1506, antes de la partida de Felipe el Hermoso a Castilla.":"Lieutenant-general appointed in 1506, before Philip the Handsome left for Castile.",
+  "Regencia por su hijo Carlos III, compartida con su cuñado Nicolás de Vaudémont; terminó cuando Enrique II de Francia ocupó Lorena en 1552 y se llevó al joven duque a la corte francesa.":"Regency for her son Charles III, shared with her brother-in-law Nicholas of Vaudémont; it ended when Henry II of France occupied Lorraine in 1552 and took the young duke to the French court.",
+  "Restituido por las tropas imperiales y pontificias tras la expulsión de los franceses en 1521. Entre 1526 y 1529 las tropas imperiales ocuparon el ducado y lo sitiaron en el castillo; Carlos V lo restituyó en Bolonia en 1529. Murió sin hijos y el ducado pasó al emperador.":"Restored by imperial and papal troops after the French were expelled in 1521. From 1526 to 1529 imperial troops occupied the duchy and besieged him in the castle; Charles V restored him at Bologna in 1529. He died childless and the duchy passed to the Emperor.",
+  "Sucedió a su padre, el duque Antonio, en junio de 1544 y murió un año después; su hijo Carlos III heredó con dos años.":"He succeeded his father, Duke Antoine, in June 1544 and died a year later; his son Charles III inherited at the age of two.",
   "Continuidad del gobierno tras la muerte de Felipe el Hermoso, hasta la regencia de Margarita de Austria.":"Continued government after Philip the Handsome’s death, until the regency of Margaret of Austria.",
   "Gobierno interino tras la muerte de Alejandro Farnesio, hasta la llegada del archiduque Ernesto.":"Interim government after Alexander Farnese’s death, until the arrival of Archduke Ernest.",
   "Gobernador general por nombramiento de Felipe II; entró en Bruselas en enero de 1594 y murió en febrero de 1595.":"Governor-general appointed by Philip II; he entered Brussels in January 1594 and died in February 1595.",

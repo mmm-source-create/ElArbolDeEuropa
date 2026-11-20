@@ -29,6 +29,7 @@ import { ROMANIAN_AUTHORITY_REVIEWS } from './romanianReviewData.js';
 import { BALKAN_AUTHORITY_REVIEWS } from './balkanReviewData.js';
 import { AUTHORITY_GAPS_REVIEWS } from './authorityGapsReviewData.js';
 import { NETHERLANDS_GOVERNOR_REVIEWS } from './netherlandsGovernorReviews.js';
+import { NETHERLANDS_GOVERNOR_REVIEWS_608 } from './netherlandsGovernorReviews608.js';
 import { ARAGON_VASSAL_REVIEWS } from './aragonVassalReviews.js';
 import { HABSBURG_ANCESTRY_REVIEWS } from './habsburgAncestryReviews.js';
 import { NAVARRE_LANDS_REVIEWS } from './navarreLandsReviews.js';
@@ -245,6 +246,7 @@ export const CLAIM_REVIEWS = Object.freeze({
   ...GND_DISCREPANCY_REVIEWS,
   ...EASTERN_EUROPE_REVIEWS,
   ...NETHERLANDS_GOVERNOR_REVIEWS,
+  ...NETHERLANDS_GOVERNOR_REVIEWS_608,
   ...ARAGON_VASSAL_REVIEWS,
   'person:FRANCPICC:mother': identityReview('inferred', francescoPiccininoFamily,
     'La maternidad de Gabriella se presenta como posible. Se conserva el vínculo como inferido; la fuente no permite tratarlo como seguro.'),
