@@ -9,7 +9,7 @@ import {V536_ENGLISH_PROFILES} from '../src/features/english/v536Profiles.js';
 import {COMPLETE_ENGLISH_PROFILES} from '../src/features/english/fullProfiles.js';
 import {completeEnglishProfile} from '../scripts/generate/complete-english-profile.mjs';
 import {nameReviewIssues,displayedNickname} from '../src/domain/people/personNaming.js';
-import {PERSON_NAME_REVIEWS} from '../src/data/personNameReviews.js';
+import {PERSON_NAME_REVIEWS,CURRENT_PERSON_NAME_REVIEWS} from '../src/data/personNameReviews.js';
 import {TRANSLATED_PEOPLE,translatedEquivalent} from '../src/features/english/routes.js';
 import {portraitSuggestions} from '../src/features/desafio/portraitSearch.js';
 import DynastyCard from '../src/features/public/DynastyCard.jsx';
@@ -31,7 +31,7 @@ test('the twenty additional editions preserve every canonical government and bio
 
 test('the naming review covers the Spanish database and retains former names and published URLs',()=>{
  assert.deepEqual(PERSONAS.flatMap(p=>nameReviewIssues(p).map(issue=>[p.id,issue])),[]);
- for(const r of PERSON_NAME_REVIEWS){const p=PERSONAS.find(p=>p.id===r.id);if(r.before.nombre!==r.after.nombre){assert(p.aliases.includes(r.before.nombre),r.id);assert.equal(p.slug,r.slug,r.id);}}
+ for(const r of CURRENT_PERSON_NAME_REVIEWS){const p=PERSONAS.find(p=>p.id===r.id);if(r.before.nombre!==r.after.nombre){assert(p.aliases.includes(r.before.nombre),r.id);assert.equal(p.slug,r.slug,r.id);}}
  assert.equal(PERSONAS.find(p=>p.id==='WEN3').nombre,'Wenceslao III de Bohemia','do not take his first Hungarian office as the meaning of ordinal III');
  assert.equal(PERSONAS.find(p=>p.id==='JAIME2AR').nombre,'Jaime II de Aragón','the Sicilian and Aragonese regnal numbers are different');
  assert.equal(displayedNickname({nombre:'Enrique el Joven',sobrenombre:'el Joven'}),'');

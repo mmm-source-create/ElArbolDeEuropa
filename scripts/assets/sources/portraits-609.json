@@ -1,0 +1,134 @@
+{
+ "MARIAANAPORT": {
+  "commons": "File:D.Maria_Ana_de_Áustria_Jean_Ranc_01.jpg",
+  "encuadre": "50% 15%",
+  "es": {
+   "tipo": "Retrato contemporáneo",
+   "obra": "La reina María Ana de Austria",
+   "autor": "Jean Ranc",
+   "fecha": "c. 1729",
+   "institucion": "Museu Nacional dos Coches, Lisboa"
+  },
+  "en": {
+   "tipo": "Contemporary portrait",
+   "obra": "Queen Maria Anna of Austria",
+   "autor": "Jean Ranc",
+   "fecha": "c. 1729",
+   "institucion": "National Coach Museum, Lisbon"
+  }
+ },
+ "MARIAANAAUTMAXBAV": {
+  "commons": "File:Joachim_von_Sandrart_-_Erzherzogin_Maria_Anna_(1610-1665),_Kurfürstin_von_Bayern.jpg",
+  "encuadre": "50% 20%",
+  "es": {
+   "tipo": "Retrato contemporáneo",
+   "obra": "La archiduquesa María Ana, electora de Baviera",
+   "autor": "Joachim von Sandrart",
+   "fecha": "1643",
+   "institucion": "Kunsthistorisches Museum, Viena"
+  },
+  "en": {
+   "tipo": "Contemporary portrait",
+   "obra": "Archduchess Maria Anna, Electress of Bavaria",
+   "autor": "Joachim von Sandrart",
+   "fecha": "1643",
+   "institucion": "Kunsthistorisches Museum, Vienna"
+  }
+ },
+ "PEDRO1CAST": {
+  "commons": "File:Estatua_orante_de_Pedro_I_de_Castilla_(Museo_Arqueológico_Nacional).jpg",
+  "encuadre": "50% 10%",
+  "derechos": "Obra en dominio público; fotografía CC BY-SA 4.0 (José Luis Filpo Cabana)",
+  "derechosUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+  "es": {
+   "tipo": "Escultura póstuma",
+   "obra": "Estatua orante de Pedro I, de su sepulcro en Santo Domingo el Real de Madrid",
+   "autor": "Círculo del Maestro de don Álvaro de Luna",
+   "fecha": "c. 1446",
+   "institucion": "Museo Arqueológico Nacional, Madrid"
+  },
+  "en": {
+   "tipo": "Posthumous sculpture",
+   "obra": "Kneeling statue of Peter I, from his tomb at Santo Domingo el Real, Madrid",
+   "autor": "Circle of the Master of Álvaro de Luna",
+   "fecha": "c. 1446",
+   "institucion": "National Archaeological Museum, Madrid"
+  }
+ },
+ "ALF11": {
+  "commons": "File:Libro_de_la_Coronación_de_los_Reyes_de_Castilla--2_(cropped).jpg",
+  "encuadre": "50% 20%",
+  "es": {
+   "tipo": "Miniatura contemporánea",
+   "obra": "Alfonso XI y sus nobles, en el Libro de la coronación de los reyes de Castilla",
+   "autor": "Autor desconocido",
+   "fecha": "Siglo XIV",
+   "institucion": "Real Biblioteca del Monasterio de El Escorial"
+  },
+  "en": {
+   "tipo": "Contemporary miniature",
+   "obra": "Alfonso XI and his nobles, in the Book of the Coronation of the Kings of Castile",
+   "autor": "Unknown artist",
+   "fecha": "14th century",
+   "institucion": "Royal Library of the Monastery of El Escorial"
+  }
+ },
+ "CARLOS2NAP": {
+  "commons": "File:Charles_II_of_Naples_and_his_seven_sons_(Naples_Bible,_14th_century).jpg",
+  "encuadre": "30% 20%",
+  "derechos": "CC0 (KU Leuven)",
+  "derechosUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "es": {
+   "tipo": "Miniatura póstuma",
+   "obra": "Carlos II de Nápoles y sus siete hijos, en la Biblia de Anjou",
+   "autor": "Cristoforo Orimina (taller)",
+   "fecha": "c. 1340",
+   "institucion": "KU Leuven, Biblioteca Maurits Sabbe"
+  },
+  "en": {
+   "tipo": "Posthumous miniature",
+   "obra": "Charles II of Naples and his seven sons, in the Anjou Bible",
+   "autor": "Workshop of Cristoforo Orimina",
+   "fecha": "c. 1340",
+   "institucion": "KU Leuven, Maurits Sabbe Library"
+  }
+ },
+ "HENRY2CYPRUS": {
+  "commons": "File:Silver_coin_of_King_Henry_II_of_Jerusalem_(1310-1324).jpg",
+  "encuadre": "72% 25%",
+  "derechos": "CC BY-SA 3.0 (Museum of the Order of St John y Universidad de Birmingham)",
+  "derechosUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+  "es": {
+   "tipo": "Moneda contemporánea",
+   "obra": "Gros de plata con el rey entronizado",
+   "autor": "Ceca real de Chipre",
+   "fecha": "1310–1324",
+   "institucion": "Museum of the Order of St John, Londres"
+  },
+  "en": {
+   "tipo": "Contemporary coin",
+   "obra": "Silver gros with the king enthroned",
+   "autor": "Royal mint of Cyprus",
+   "fecha": "1310–1324",
+   "institucion": "Museum of the Order of St John, London"
+  }
+ },
+ "JAMES2CYPRUS": {
+  "commons": "File:Silver_coin_of_James_II_of_Cyprus.jpg",
+  "encuadre": "25% 50%",
+  "derechos": "CC BY-SA 3.0 (Classical Numismatic Group)",
+  "derechosUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+  "es": {
+   "tipo": "Moneda contemporánea",
+   "obra": "Gros de plata con el rey a caballo",
+   "autor": "Ceca real de Chipre",
+   "fecha": "1460–1473"
+  },
+  "en": {
+   "tipo": "Contemporary coin",
+   "obra": "Silver gros with the king on horseback",
+   "autor": "Royal mint of Cyprus",
+   "fecha": "1460–1473"
+  }
+ }
+}

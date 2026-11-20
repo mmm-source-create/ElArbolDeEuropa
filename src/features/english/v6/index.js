@@ -1,6 +1,6 @@
 import {STORIES_606_EN} from '../../../data/historias606.js';
 import {STORIES_607_EN} from '../../../data/historias607.js';
-import {reviewDynastyName,reviewTerritoryName} from '../entityNameReview607.js';
+import {reviewDynastyName,reviewTerritoryName,ENTITY_LABELS_607} from '../entityNameReview607.js';
 import {reviewPersonProfiles,reviewPersonNames} from '../personNameReview607.js';
 import {STORIES_605_EN} from '../../../data/historias605.js';
 import {reviseEnglishStories604} from '../../../data/historias604.js';
@@ -65,7 +65,9 @@ const mergeArrays=(...items)=>items.flatMap(item=>Array.isArray(item)?item:[]);
 
 export const V6_PEOPLE=reviewPersonProfiles(mergeObjects(b1People,b2People,b3People,b4People,b5People,b6People));
 export const V6_NAMES=reviewPersonNames(mergeObjects(b1Names,b2Names,b3Names,b4Names,b5Names,b6Names));
-export const V6_LABELS=mergeObjects(b1Labels,b2Labels,b3Labels,b4Labels,b5Labels,b6Labels);
+const RAW_V6_LABELS=mergeObjects(b1Labels,b2Labels,b3Labels,b4Labels,b5Labels,b6Labels);
+// Reviewed house and territory names replace the machine translations in the batches.
+export const V6_LABELS=Object.fromEntries(Object.entries(RAW_V6_LABELS).map(([key,value])=>[key,ENTITY_LABELS_607[key]||value]));
 export const V6_NOTES=mergeObjects(b1Notes,b2Notes,b3Notes,b4Notes,b5Notes,b6Notes);
 export const V6_PORTRAITS=mergeObjects(b1Portraits,b2Portraits,b3Portraits,b4Portraits,b5Portraits,b6Portraits);
 export const V6_DYNASTIES=mergeArrays(b1Dynasties,b2Dynasties,b3Dynasties,b4Dynasties,b5Dynasties,b6Dynasties).map(reviewDynastyName);

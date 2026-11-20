@@ -36,6 +36,8 @@ const S = Object.freeze({
   karlTeschen: db('sfz57317','Karl, Erzherzog von Österreich','NDB 11, 1977, p. 242','Biografía: «1793/94 Generalgouverneur daselbst»'),
 });
 const review = (source, note) => ({certainty:'documented',sources:[source],note,reviewedAt:'2026-11-20',editor:'El Árbol de Europa'});
+const inferred = (sources, note) => ({certainty:'inferred',sources,note,reviewedAt:'2026-11-20',editor:'El Árbol de Europa'});
+const UNCONFIRMED_MOURA = 'Sin confirmar. Ningún repertorio admitido consultado documenta su gobierno; la RAH lo presenta como presidente del Consejo de Flandes. El mandato se deduce de la sucesión de gobernadores entre Caracena y Villahermosa.';
 const k = (id, from, to, title) => `person:${id}:government:Países Bajos:${from}:${to}:${title}`;
 const OFFICE = 'La fuente confirma el cargo; los años siguen la sucesión documentada de gobernadores generales.';
 export const NETHERLANDS_GOVERNOR_REVIEWS_608 = Object.freeze({
@@ -75,4 +77,11 @@ export const NETHERLANDS_GOVERNOR_REVIEWS_608 = Object.freeze({
   [k('ALBERTTESCHEN',1790,1791,'Gobernador')]:review(S.albert,'La NDB da 1780–1792 sin detallar la interrupción revolucionaria.'),
   [k('ALBERTTESCHEN',1792,1793,'Gobernador')]:review(S.albert,'La NDB cierra el cargo en 1792; el Atlas lo prolonga hasta el relevo por el archiduque Carlos en 1793.'),
   [k('CARLOSTESCHEN',1793,1794,'Gobernador')]:review(S.karlTeschen,'Último gobernador general, hasta la retirada austríaca de 1794.'),
+  // 6.0.9: no admitted repertory documents these five mandates. They are kept
+  // as inferred from the documented succession and the note says so.
+  [k('FRANCISCOMOURA',1664,1665,'Gobernador')]:inferred([S.caracena,S.villahermosa],UNCONFIRMED_MOURA),
+  [k('FRANCISCOMOURA',1666,1668,'Gobernador')]:inferred([S.caracena,S.villahermosa],UNCONFIRMED_MOURA),
+  [k('INIGOMELCHORVELASCO',1668,1670,'Gobernador')]:inferred([S.caracena,S.villahermosa],'Sin confirmar. Ningún repertorio admitido consultado documenta su gobierno; la RAH lo presenta como presidente del Consejo de Flandes. El mandato se deduce de la sucesión de gobernadores entre Caracena y Villahermosa.'),
+  [k('MONTERREY',1670,1675,'Gobernador')]:inferred([S.caracena,S.villahermosa],'Sin confirmar. Ningún repertorio admitido consultado documenta su gobierno. El mandato se deduce de la sucesión de gobernadores hasta la llegada de Villahermosa, que la RAH sitúa en 1675.'),
+  [k('GRANA',1682,1685,'Gobernador')]:inferred([S.farnesio,S.gastanaga],'Sin confirmar. Ningún repertorio admitido consultado documenta su gobierno; la Deutsche Biographie solo tiene su ficha de autoridad (1639–1685). El mandato se deduce del hueco entre Alejandro Farnesio y el nombramiento de Gastañaga en 1685.'),
 });

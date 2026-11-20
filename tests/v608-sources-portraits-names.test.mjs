@@ -41,15 +41,16 @@ test('the missing grandchildren of Joanna I and Christina of Denmark’s husband
   assert(milan.some(([from, to]) => from <= 1521 && to >= 1535), 'Francesco II Sforza fills Milan 1521–1535');
 });
 
-test('governor-general mandates cite an admitted source; only five remain pending', () => {
-  const pending = [];
+test('governor-general mandates cite an admitted source; five are inferred and marked unconfirmed', () => {
+  const inferred = [];
   for (const person of PERSONAS) for (const claim of personClaims(person)) {
     if (claim.field !== 'Gobierno' || claim.value.territorio !== 'Países Bajos' || claim.value.clase !== 'gobierno') continue;
     if (person.id === 'WILLIAM1NETHERLANDS') continue;
-    if (claim.certainty === 'documented') assert(claim.sources.every(s => s.url && s.locator), claim.id);
-    else pending.push(person.id);
+    assert(['documented','inferred'].includes(claim.certainty), claim.id);
+    assert(claim.sources.every(s => s.url && s.locator), claim.id);
+    if (claim.certainty === 'inferred') { inferred.push(person.id); assert(claim.note.startsWith('Sin confirmar.'), claim.id); }
   }
-  assert.deepEqual([...new Set(pending)].sort(), ['FRANCISCOMOURA','GRANA','INIGOMELCHORVELASCO','MONTERREY']);
+  assert.deepEqual([...new Set(inferred)].sort(), ['FRANCISCOMOURA','GRANA','INIGOMELCHORVELASCO','MONTERREY']);
   assert.equal(byId.get('GUILLERMOCROY').gobiernos[0].desde, 1506);
 });
 
