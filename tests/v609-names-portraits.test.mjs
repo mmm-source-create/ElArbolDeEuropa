@@ -7,7 +7,7 @@ import {IMAGE_VARIANTS} from '../src/data/imageVariants.js';
 import {TITLE_NAMES_609} from '../src/data/titleNames609.js';
 import {TITLE_NAME_SLUGS_609} from '../src/data/titleNameSlugs609.js';
 import {PERSONA_SLUG_POR_ID, slugPersonaPorLocale} from '../src/features/atlas/atlasRoutes.js';
-import {resolveHostingRoute} from '../cloudflare/routing.js';
+import {resolveHostingRoute, redirectWorkerPatterns} from '../cloudflare/routing.js';
 import {ENGLISH_DYNASTIES, ENGLISH_TERRITORIES} from '../src/features/english/entityTranslations.js';
 import {COMPLETE_ENGLISH_PROFILES} from '../src/features/english/fullProfiles.js';
 
@@ -83,4 +83,18 @@ test('the fourth review of English names removes machine translations and Spanis
   assert.equal(COMPLETE_ENGLISH_PROFILES.SOPHIAPALHAN.name, 'Sophia of the Palatinate');
   assert.equal(COMPLETE_ENGLISH_PROFILES.MAX1BAV.nickname, 'the Great');
   for (const [id, p] of Object.entries(COMPLETE_ENGLISH_PROFILES)) assert(!/^(el|la|los|las) /.test(p.nickname || '') || id === 'JUANABELTRANEJA', `${id}: Spanish nickname`);
+});
+
+test('redirects from pages that no longer exist stay out of run_worker_first', () => {
+  // Cloudflare refuses more than 100 run_worker_first rules. A URL with no
+  // generated page reaches the Worker anyway, so it must not be listed.
+  assert(redirectWorkerPatterns.length <= 100, `${redirectWorkerPatterns.length} rules`);
+  const routes = JSON.parse(fs.readFileSync(new URL('../routes.json', import.meta.url)));
+  const current = new Set(PERSONAS.flatMap(p => [`/es/persona/${PERSONA_SLUG_POR_ID[p.id]}`, `/en/person/${slugPersonaPorLocale(p, 'en')}`]));
+  const assetless = routes.redirects.filter(rule => rule.workerFirst === false);
+  assert(assetless.length >= 185);
+  for (const rule of assetless) {
+    assert(!current.has(rule.source), rule.source);
+    assert(!redirectWorkerPatterns.includes(rule.source), rule.source);
+  }
 });

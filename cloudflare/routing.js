@@ -70,4 +70,7 @@ function redirectPatterns(source) {
   const story=source.match(/^(?:\/es)?\/historia\/[^/]+|^\/en\/story\/[^/]+/);
   return [story ? `${story[0]}*` : source.replace(/:[A-Za-z]\w*\*/g,'*')];
 }
-export const redirectWorkerPatterns=[...new Set((config.redirects||[]).flatMap(rule=>redirectPatterns(rule.source)))];
+// Rules marked "workerFirst": false point from URLs that no longer have a
+// generated page (renamed people). Cloudflare already sends a request with no
+// matching asset to the Worker, and run_worker_first allows at most 100 rules.
+export const redirectWorkerPatterns=[...new Set((config.redirects||[]).filter(rule=>rule.workerFirst!==false).flatMap(rule=>redirectPatterns(rule.source)))];
