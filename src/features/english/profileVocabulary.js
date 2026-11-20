@@ -12,11 +12,11 @@ import {V535_NAMES,V535_LABELS,V535_NOTES} from './v535Vocabulary.js';
 import {V536_NAMES,V536_LABELS,V536_NOTES} from './v536Vocabulary.js';
 import {V607_LABELS,V607_NOTES} from './v607Vocabulary.js';
 import {ENTITY_LABELS_607} from './entityNameReview607.js';
-import {ENGLISH_DYNASTIES,ENGLISH_TERRITORIES} from './entityTranslations.js';
 import {LABELS_610} from './labelReview610.js';
 // 6.0.10: the reviewed English names of every house and territory replace the
-// machine translations of the same keys in the batch vocabularies.
-const REVIEWED_ENTITY_LABELS=Object.fromEntries([...Object.values(ENGLISH_DYNASTIES),...Object.values(ENGLISH_TERRITORIES)].filter(entity=>entity?.key&&entity?.name).map(entity=>[entity.key,entity.name]));
+// machine translations of the same keys in the batch vocabularies. Resolved at
+// generation (generate-english-v6-runtime.mjs) to keep this module small.
+const REVIEWED_ENTITY_LABELS=runtime.entityLabels||{};
 import runtime from '../../generated/englishVocabularyRuntime.json' with {type:'json'};
 // Display translations only: canonical dynasty and territory keys stay intact.
 export const PROFILE_LABELS = {

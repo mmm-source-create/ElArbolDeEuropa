@@ -84,7 +84,7 @@ export async function publicSnapshot(root) {
   const paths = urls.map(url => url.pathname).sort();
   if (new Set(paths).size !== paths.length) throw new Error('Rutas duplicadas');
   const routes = routesFromSitemap(xml, urls[0].origin);
-  const counts = {persona: 0, dinastia: 0, territorio: 0, historia: 0, english: 0};
+  const counts = {persona: 0, dinastia: 0, territorio: 0, historia: 0, english: 0, catalogo: 0};
   const pages = {};
   for (const route of routes) {
     const file = `${route.slug}${route.chapter ? `/capitulo/${route.chapter}` : ''}.json`;
