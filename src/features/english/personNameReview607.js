@@ -7,6 +7,14 @@ export const PERSON_NAMES_607 = Object.freeze({
   LADI4:{nickname:'the Cuman'},
   ALB3AUST:{nickname:'with the Pigtail'},
   FRED2SAX:{name:'Frederick II of Saxony'},
+  // 6.0.8, third review: people ranked 201–300.
+  ROD3HAB:{name:'Rudolf III of Habsburg',aliases:['Rudolf I of Bohemia']},
+  AIMERYLUSIGNANJER:{name:'Aimery of Lusignan',aliases:['Amalric II of Jerusalem','Aimery of Cyprus']},
+  FEDERICO2SIC:{name:'Frederick III of Sicily',aliases:['Frederick II of Trinacria']},
+  FEDERICO3SIC:{name:'Frederick IV of Sicily',aliases:['Frederick III of Trinacria']},
+  CATVALCOUR:{name:'Catherine of Valois-Courtenay'},
+  STEFANDUSAN:{nickname:'the Mighty'},
+  FERN1NAP:{nickname:'',aliases:['Ferrante']},
   // Found while checking relations of the reviewed names.
   ALEXIOS3ANGELOS:{name:'Alexios III Angelos'},
 });

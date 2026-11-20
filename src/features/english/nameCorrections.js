@@ -165,7 +165,22 @@ export const ENGLISH_NAME_CORRECTIONS={
   "Láscaris dynasty": "Laskaris dynasty",
   "John IV Lascaris": "John IV Laskaris",
   "John Cantacuceno": "John Kantakouzenos",
-  "Barcelona-Urgel dynasty": "Barcelona-Urgell dynasty"
+  "Barcelona-Urgel dynasty": "Barcelona-Urgell dynasty",
+  "Lazareć": "Lazarević",
+  "Reubenide": "Rubenid",
+  "Aquinas dynasty": "Aquino family",
+  "Moon dynasty": "Luna dynasty",
+  "House Moon": "House of Luna",
+  "Casa of Flanders": "House of Flanders",
+  "Medici de Milán": "Medici of Milan",
+  "Judge of the Judge of Arborea": "Judge of Arborea",
+  "Count of The March": "Count of La Marche",
+  "connected to The March": "connected to La Marche",
+  "Countess of The March": "Countess of La Marche",
+  "Palatine county of Cephalonia and Zacinto": "County Palatine of Cephalonia and Zakynthos",
+  "Rodolfo III of Habsburg": "Rudolf III of Habsburg",
+  "Transylvania habsburgica": "Habsburg Transylvania",
+  "Lordship of Malinas": "Lordship of Mechelen"
 };
 const keys=Object.keys(ENGLISH_NAME_CORRECTIONS).sort((a,b)=>b.length-a.length);
 const pattern=new RegExp('(?<![\\p{L}\\p{N}])(?:'+keys.map(key=>key.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')).join('|')+')(?![\\p{L}\\p{N}])','gu');

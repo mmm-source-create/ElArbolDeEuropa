@@ -34,6 +34,18 @@ export const DYNASTY_NAMES_607 = Object.freeze({
   'Comminges':'Comminges',
   'Smilets':'Smilets',
   'Ángelo':'Angelos',
+  // 6.0.8, third review: houses ranked 201–300.
+  'Borbón-Orleans-Gastón':'Bourbon-Orléans (Gaston)',
+  'Casa de Flandes':'Flanders',
+  'Lazarević':'Lazarević',
+  'Luna':'Luna',
+  'Medici de Milán':'Medici of Milan',
+  'Rubénida':'Rubenid',
+  'Alagón':'Alagón',
+  'Aquino':'Aquino',
+  'Avís-Beja':'Aviz-Beja',
+  'Ayubí':'Ayyubid',
+  'Bâgé':'Bâgé',
 });
 export const TERRITORY_NAMES_607 = Object.freeze({
   'Moldavia':'Moldavia',
@@ -44,6 +56,21 @@ export const TERRITORY_NAMES_607 = Object.freeze({
   'Meißen':'Meissen',
   'Austria Interior':'Inner Austria',
   'Pallars Sobirà':'Pallars Sobirà',
+  // 6.0.8: territories ranked 101–200.
+  'Palatinado-Neoburgo':'Palatinate-Neuburg',
+  'Señorío de Malinas':'Lordship of Mechelen',
+  'Judicado de Arborea':'Judicate of Arborea',
+  'Transilvania habsbúrgica':'Habsburg Transylvania',
+  'Gandía':'Gandia',
+  'Suabia':'Swabia',
+  'La Marche':'La Marche',
+  'Condado palatino de Cefalonia y Zacinto':'County Palatine of Cephalonia and Zakynthos',
+  'Samtsje':'Samtskhe',
+  'Banato de Temes':'Banat of Temes',
+  'Clanricarde':'Clanricarde',
+  'Condado de Temes':'County of Temes',
+  'Condado de Thomond':'Earldom of Thomond',
+  'Epiro de los Tocco':'Epirus under the Tocco',
 });
 // Labels shown in the Atlas, filters and government lists.
 export const ENTITY_LABELS_607 = Object.freeze({
