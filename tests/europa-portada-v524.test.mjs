@@ -42,15 +42,16 @@ const homeLists = () => ({
   stories: [{id: 'borgona', titulo: 'Borgoña: el reino que no fue', subtitulo: '', descripcion: 'Un recorrido.', slug: 'borgona-el-reino-que-no-fue', disponible: true, pasos: 11, minutos: 8}],
 });
 
-test('portada: entradas antes del carrusel, sin cinta de dinastías y con «Personas»', () => {
+test('portada 6.0.10: mapa, persona del día y carruseles de personas, dinastías e historias', () => {
   // HomePage.jsx needs the bundler (JSON imports), so the order is checked on its source.
   const source = fs.readFileSync(new URL('../src/features/public/HomePage.jsx', import.meta.url), 'utf8');
   const home = source.slice(source.indexOf('export function HomeContent'));
-  assert.ok(home.indexOf('home-quick-links') < home.indexOf('<HomeDiscovery '));
+  const order = ['home-atlas-map', 'home-atlas-years', '<DailyPerson ', 'renderItem={personCard}', 'renderItem={dynastyCard}', 'renderItem={storyCard}'].map(token => home.indexOf(token));
+  assert.ok(order.every(i => i > 0), order.join(','));
+  assert.deepEqual([...order].sort((a, b) => a - b), order);
+  assert.match(home, /tutorial=1/);
   assert.doesNotMatch(source, /DynastyMarquee/);
-  assert.match(home, /public-door-arrow/);
   const doc = new JSDOM(renderToString(React.createElement(HomeDiscovery, {...homeLists(), peoplePath: '/es/personas', storiesPath: '/es/historias'}))).window.document;
   assert.match(doc.body.textContent, /Personas/);
-  assert.match(doc.body.textContent, /Todas las personas/);
   assert.doesNotMatch(doc.body.textContent, /Personajes/);
 });

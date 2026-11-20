@@ -117,3 +117,22 @@ test('the fifth review fixes English names and titles', () => {
   assert.equal(PERSON_NAMES_607.GERALD8KILDARE.role, 'Earl');
   assert.equal(PERSON_NAMES_607.SIBYLLACLEVES.name, 'Sibylle of Cleves');
 });
+
+test('the person of the day is the same for a given date and comes from a painted, documented pool', async () => {
+  const {dailyIndex, pickOfTheDay, todayKey} = await import('../src/features/public/dailyPick.js');
+  assert.equal(dailyIndex('2026-11-20', 95), dailyIndex('2026-11-20', 95));
+  assert.notEqual(dailyIndex('2026-11-20', 95), dailyIndex('2026-11-21', 95));
+  assert.equal(pickOfTheDay([], '2026-11-20'), null);
+  assert.match(todayKey(new Date('2026-11-20T23:30:00Z')), /^2026-11-21$/); // Madrid time
+  const pool = JSON.parse(fs.readFileSync(new URL('../public/catalogos/recomendaciones.json', import.meta.url))).items;
+  const {IMAGENES_PERSONAS} = await import('../src/data/imagenesPersonas.js');
+  assert.ok(pool.length >= 30);
+  for (const person of pool) {
+    assert.match(IMAGENES_PERSONAS[person.id].tipo, /^(Retrato|Copia de un retrato|Autorretrato|Miniatura|Representación)/, person.id);
+    for (const text of [person.es, person.en]) { assert.ok(text.texto.length > 80, person.id); assert.match(text.path, /^\/(es\/persona|en\/person)\//); }
+  }
+  const home = JSON.parse(fs.readFileSync(new URL('../src/generated/home.json', import.meta.url)));
+  assert.equal(home.gobernantesAnio.anio, 1500);
+  assert.equal(home.dinastiasCarrusel.length, 12);
+  assert.ok(home.historiasCarrusel.length >= 6);
+});

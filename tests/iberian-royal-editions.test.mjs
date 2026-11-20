@@ -23,7 +23,7 @@ import {portraitSuggestions} from '../src/features/desafio/portraitSearch.js';
 // CI runs tests before generating the site. Render the real home component
 // with a small generated-data fixture rather than relying on ignored files.
 registerHooks({resolve(specifier,context,nextResolve){
- if(/generated\/(home|siteMeta)\.json$/.test(specifier))return {url:'data:text/javascript,'+encodeURIComponent('export default '+JSON.stringify({buildVersion:'test',stats:{personas:2,dinastias:1,territorios:1,historias:1},personasDestacadas:[],historiasDestacadas:[]})),shortCircuit:true};
+ if(/generated\/(home|siteMeta)\.json$/.test(specifier))return {url:'data:text/javascript,'+encodeURIComponent('export default '+JSON.stringify({buildVersion:'test',stats:{personas:2,dinastias:1,territorios:1,historias:1},personasDestacadas:[],historiasDestacadas:[],historiasCarrusel:[{id:'prueba',titulo:'Prueba',slug:'prueba',pasos:1}]})),shortCircuit:true};
  return nextResolve(specifier,context);
 }});
 const {HomeContent}=await import('../src/features/public/HomePage.jsx');
@@ -58,9 +58,11 @@ test('Iberian name decisions retain published URLs and searchable ordinal and ni
 
 test('both homepages link straight to the tutorial in their language, preserving the Stories entry elsewhere',()=>{
  for(const locale of ['es','en']){
-  const doc=new JSDOM(renderToStaticMarkup(React.createElement(HomeContent,{locale,prerendered:true}))).window.document;
+  // 6.0.10: each edition renders with its own home data, as on the site.
+  const data=locale==='en'?JSON.parse(fs.readFileSync(new URL('../public/english-meta/home.json',import.meta.url),'utf8')):undefined;
+  const doc=new JSDOM(renderToStaticMarkup(React.createElement(HomeContent,{locale,prerendered:true,...(data?{data}:{})}))).window.document;
   const links=doc.querySelectorAll('.public-hero-actions a');assert.equal(links.length,2);assert.equal(links[1].textContent.trim(),'Tutorial');
-  const url=new URL(links[1].getAttribute('href'),'https://example.test');assert.equal(url.pathname,`/${locale}/`);assert.equal(url.searchParams.get('tutorial'),'1');
+  const url=new URL(links[1].getAttribute('href'),'https://example.test');assert.equal(url.pathname,`/${locale}`);assert.equal(url.searchParams.get('tutorial'),'1');
   const route=resolverRuta(url.pathname,url.search);assert.equal(route.view,'explorer');assert.equal(route.locale,locale);
   assert(doc.querySelector(`a[href="/${locale}/${locale==='en'?'stories':'historias'}"]`));
  }
