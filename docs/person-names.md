@@ -61,3 +61,9 @@ La revisión de 27 de octubre de 2026 comprende otras 200 personas, sin repetir 
 Carlos V / Charles V se mantiene como excepción imperial consolidada. El V corresponde al título imperial y el I a sus coronas hispánicas; «Carlos I de España» permanece como variante buscable. El [tesauro del Ministerio de Cultura](https://tesauros.cultura.gob.es/tesauros/contextosculturales/1007967.html) y el [Patronato de la Alhambra](https://www.alhambra-patronato.es/edificios-lugares/palacio-de-carlos-v) documentan esta denominación.
 
 Las 200 fichas se publican completas en inglés: resúmenes, las 16 biografías que amplían el resumen, títulos y territorios, relaciones, notas de gobierno, documentación, explicaciones de acceso a las coronas, evidencias y créditos de imágenes. Se preservan las fuentes, las fechas, los mandatos y los parentescos originales. El registro de decisiones está en `docs/audits/2026-10-27-review-200-art.json`. La edición alcanza 667 fichas personales completas en inglés. Esta revisión editorial no se cuenta como una verificación adicional de datos pendientes.
+
+## Nombres sin título · 6.0.9
+
+El nombre público no lleva el título detrás de una coma: Alejandro Farnesio, no «Alejandro Farnesio, príncipe de Parma». El título va en los cargos y el nombre anterior queda como variante. A diferencia de la regla 8, estas fichas sí cambian de dirección: la antigua redirige de forma permanente (308) a la nueva en `routes.json`. Cuando el nombre nuevo coincide con el de otra persona, la nueva dirección lleva el identificador y la otra conserva la suya.
+
+Se conservan los títulos ordinales que distinguen una línea de homónimos (Gerald FitzGerald, VIII conde de Kildare), los nombres de pila sin apellido cuya única identificación es el título (Federico, príncipe de Gales) y los epítetos que no son títulos (Strongbow, Skanderbeg). Las decisiones están en `src/data/titleNames609.js` y el detalle en [nombres-6.0.9](editorial/nombres-6.0.9.md).

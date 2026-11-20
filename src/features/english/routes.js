@@ -1,3 +1,4 @@
+import {TITLE_NAME_SLUGS_609} from '../../data/titleNameSlugs609.js';
 import {POLISH_HOUSES} from './polishHouseTranslations.js';
 import {ROSES_HOUSES} from './rosesHouseTranslations.js';
 import {NEXT_HOUSES} from './nextHouseTranslations.js';
@@ -692,7 +693,9 @@ const V6_TRANSLATED_PEOPLE=Object.entries(runtime.v6People).sort(([a],[b])=>a.lo
 // Append new releases after established routes so a namesake cannot rename an old URL.
 const existingTranslatedIds=new Set([...LEGACY_TRANSLATED_PEOPLE,...V6_TRANSLATED_PEOPLE].map(p=>p.id));
 const ADDITIONAL_TRANSLATED_PEOPLE=Object.entries(runtime.additionalPeople||{}).filter(([id])=>!existingTranslatedIds.has(id)).sort(([a],[b])=>a.localeCompare(b)).map(translatedPersonRoute);
-export const TRANSLATED_PEOPLE=[...LEGACY_TRANSLATED_PEOPLE,...V6_TRANSLATED_PEOPLE,...ADDITIONAL_TRANSLATED_PEOPLE];
+// 6.0.9: people renamed without their title use their new addresses; the old ones redirect.
+const retitled=route=>{const s=TITLE_NAME_SLUGS_609[route.id];return s?{...route,...(s.es?{es:s.es}:{}),...(s.en?{en:s.en}:{})}:route;};
+export const TRANSLATED_PEOPLE=[...LEGACY_TRANSLATED_PEOPLE,...V6_TRANSLATED_PEOPLE,...ADDITIONAL_TRANSLATED_PEOPLE].map(retitled);
 export function englishRoute(pathname) {
  const path=String(pathname).replace(/\/$/,'');
  const simple={'/en':'home','/en/about':'about','/en/methodology':'methodology','/en/licences':'licences','/en/acknowledgements':'acknowledgements','/en/stories':'stories','/en/people':'people','/en/dynasties':'dynasties','/en/territories':'territories','/en/challenge':'challenge'};

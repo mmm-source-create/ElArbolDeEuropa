@@ -12,7 +12,7 @@ export const PORTRAITS_608_EN = {
     "obra": "Portrait of Archduchess Maria Christina",
     "autor": "Unknown artist",
     "fecha": "c. 1765",
-    "alt": "Contemporary portrait of Maria Christina, Duchess of Teschen"
+    "alt": "Contemporary portrait of Maria Christina of Austria"
   },
   "STEFANFIRSTSER": {
     "tipo": "Later portrait",
@@ -28,7 +28,7 @@ export const PORTRAITS_608_EN = {
     "autor": "Unidentified painter",
     "fecha": "1777",
     "institucion": "Albertina, Vienna",
-    "alt": "Contemporary portrait of Albert Casimir, Duke of Teschen"
+    "alt": "Contemporary portrait of Albert of Saxe-Teschen"
   },
   "ARCHILGEO": {
     "tipo": "Contemporary engraving",
@@ -160,7 +160,7 @@ export const PORTRAITS_608_EN = {
     "autor": "Gustave Schlumberger (drawing)",
     "fecha": "1903 drawing of a seal of c. 1200",
     "institucion": "Gustave Schlumberger, “Quelques sceaux de l’Orient latin” (1903)",
-    "alt": "Contemporary seal of Amalric II of Jerusalem"
+    "alt": "Contemporary seal of Aimery of Lusignan"
   },
   "ENRIQUERASPE": {
     "tipo": "Contemporary seal",
@@ -275,7 +275,7 @@ export const PORTRAITS_608_EN = {
     "obra": "William de Croÿ",
     "autor": "Circle of Quentin Metsys",
     "fecha": "early 16th century",
-    "alt": "Contemporary portrait of William de Croÿ, Lord of Chièvres"
+    "alt": "Contemporary portrait of William de Croÿ"
   },
   "MANSFELDPETER": {
     "tipo": "Copy of a contemporary portrait",
@@ -290,7 +290,7 @@ export const PORTRAITS_608_EN = {
     "autor": "Dominicus Custos",
     "fecha": "1595",
     "institucion": "Rijksmuseum, Amsterdam",
-    "alt": "Contemporary engraving of Pedro Enríquez de Acevedo, Count of Fuentes"
+    "alt": "Contemporary engraving of Pedro Enríquez de Acevedo"
   },
   "FERNCARDINFANTE": {
     "tipo": "Contemporary portrait",
@@ -298,7 +298,7 @@ export const PORTRAITS_608_EN = {
     "autor": "Anton van Dyck",
     "fecha": "c. 1634",
     "institucion": "Museo del Prado, Madrid",
-    "alt": "Contemporary portrait of Cardinal-Infante Ferdinand of Austria"
+    "alt": "Contemporary portrait of Ferdinand of Austria"
   },
   "FRANCISCOMELO": {
     "tipo": "Contemporary engraving",
@@ -312,7 +312,7 @@ export const PORTRAITS_608_EN = {
     "obra": "Manuel de Moura, Marquis of Castel Rodrigo",
     "autor": "Unknown artist",
     "fecha": "17th century",
-    "alt": "Contemporary portrait of Manuel de Moura Corte Real, Marquis of Castelo Rodrigo"
+    "alt": "Contemporary portrait of Manuel de Moura Corte Real"
   },
   "LEOPGUILLERMO": {
     "tipo": "Contemporary portrait",
@@ -334,7 +334,7 @@ export const PORTRAITS_608_EN = {
     "obra": "Luis de Benavides, Marquis of Caracena",
     "autor": "Unknown artist",
     "fecha": "1636",
-    "alt": "Contemporary portrait of Luis de Benavides Carrillo, Marquis of Caracena"
+    "alt": "Contemporary portrait of Luis de Benavides Carrillo"
   },
   "FRANCISCOMOURA": {
     "tipo": "Contemporary engraving",
@@ -342,7 +342,7 @@ export const PORTRAITS_608_EN = {
     "autor": "Richard Collin, after François Duchatel",
     "fecha": "1665",
     "institucion": "Koninklijke Bibliotheek, The Hague",
-    "alt": "Contemporary engraving of Francisco de Moura Corte Real, Marquis of Castelo Rodrigo"
+    "alt": "Contemporary engraving of Francisco de Moura Corte Real"
   },
   "INIGOMELCHORVELASCO": {
     "tipo": "Contemporary portrait",
@@ -350,7 +350,7 @@ export const PORTRAITS_608_EN = {
     "autor": "Bartolomé Esteban Murillo",
     "fecha": "1659",
     "institucion": "Louvre Museum, Paris",
-    "alt": "Contemporary portrait of Íñigo Melchor Fernández de Velasco, Duke of Frías"
+    "alt": "Contemporary portrait of Íñigo Melchor Fernández de Velasco"
   },
   "MONTERREY": {
     "tipo": "Contemporary engraving",
@@ -358,14 +358,14 @@ export const PORTRAITS_608_EN = {
     "autor": "Christiaan Hagen",
     "fecha": "c. 1663–1695",
     "institucion": "Rijksmuseum, Amsterdam",
-    "alt": "Contemporary engraving of Juan Domingo de Zúñiga y Fonseca, Count of Monterrey"
+    "alt": "Contemporary engraving of Juan Domingo de Zúñiga y Fonseca"
   },
   "VILLAHERMOSA": {
     "tipo": "Contemporary portrait",
     "obra": "Carlos de Aragón de Gurrea, Duke of Villahermosa",
     "autor": "Unknown artist",
     "fecha": "17th century",
-    "alt": "Contemporary portrait of Carlos de Aragón de Gurrea, Duke of Villahermosa"
+    "alt": "Contemporary portrait of Carlos de Aragón de Gurrea"
   },
   "ALEJFARNESIOPR": {
     "tipo": "Contemporary portrait",
@@ -373,7 +373,7 @@ export const PORTRAITS_608_EN = {
     "autor": "Unidentified painter",
     "fecha": "17th century",
     "institucion": "Complesso monumentale della Pilotta, Parma",
-    "alt": "Contemporary portrait of Alexander Farnese, Prince of Parma"
+    "alt": "Contemporary portrait of Alexander Farnese"
   },
   "GASTANAGA": {
     "tipo": "Contemporary engraving",
@@ -381,7 +381,7 @@ export const PORTRAITS_608_EN = {
     "autor": "Richard Collin",
     "fecha": "1687",
     "institucion": "Biblioteca Nacional de España, Madrid",
-    "alt": "Contemporary engraving of Francisco Antonio de Agurto, Marquis of Gastañaga"
+    "alt": "Contemporary engraving of Francisco Antonio de Agurto"
   },
   "DAUNWIRICH": {
     "tipo": "Contemporary portrait",
@@ -404,7 +404,7 @@ export const PORTRAITS_608_EN = {
     "obra": "Miniature of Archduchess Maria Anna",
     "autor": "Unidentified painter",
     "fecha": "18th century",
-    "alt": "Contemporary portrait of Archduchess Maria Anna of Austria"
+    "alt": "Contemporary portrait of Maria Anna of Austria"
   },
   "CHARLESALEXLOR": {
     "tipo": "Contemporary portrait",
@@ -420,7 +420,7 @@ export const PORTRAITS_608_EN = {
     "autor": "Thomas Lawrence",
     "fecha": "1819",
     "institucion": "Royal Collection, United Kingdom",
-    "alt": "Contemporary portrait of Archduke Charles, Duke of Teschen"
+    "alt": "Contemporary portrait of Charles of Austria-Teschen"
   },
   "CRISTINADIN": {
     "tipo": "Contemporary portrait",
@@ -436,7 +436,7 @@ export const PORTRAITS_608_EN = {
     "autor": "Michiel Coxie",
     "fecha": "1545",
     "institucion": "Allen Memorial Art Museum, Oberlin",
-    "alt": "Disputed identification of Dorothea of Denmark, Electress Palatine"
+    "alt": "Disputed identification of Dorothea of Denmark"
   },
   "JUANDIN1518": {
     "tipo": "Contemporary portrait",
@@ -451,7 +451,7 @@ export const PORTRAITS_608_EN = {
     "obra": "Infanta Maria of Portugal",
     "autor": "Antonis Mor",
     "fecha": "1550–1555",
-    "alt": "Contemporary portrait of Maria of Portugal, Duchess of Viseu"
+    "alt": "Contemporary portrait of Maria of Portugal"
   },
   "MAGDALENAAUST": {
     "tipo": "Contemporary portrait",

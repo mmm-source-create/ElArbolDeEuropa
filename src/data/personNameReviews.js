@@ -3,6 +3,9 @@ import {REVIEWED_THIRD_100_NAMES} from './reviewedThird100Names.js';
 import {REVIEWED_NEXT_100_NAMES} from './reviewedNext100Names.js';
 import {REVIEWED_100_NAMES} from './reviewed100Names.js';
 import {IBERIAN_NAME_REVIEWS} from './iberianNameReviews.js';
+import {TITLE_NAMES_609} from './titleNames609.js';
+import {PERSONAS} from './personas.js';
+import {TITLE_NAME_SLUGS_609} from './titleNameSlugs609.js';
 // V5.36 · Explicit editorial decisions; prior names remain searchable and URLs stay stable.
 export const PERSON_NAME_REVIEWS = [
   ...REVIEWED_FOURTH_200_NAMES,
@@ -647,5 +650,15 @@ export const PERSON_NAME_REVIEWS = [
       ]
     },
     "slug": "ivan-asen-iii"
-  }
+  },
+  // 6.0.9: names without titles; the URL changes and the old one redirects.
+  ...TITLE_NAMES_609.filter(([,es])=>es).map(([id,es])=>({
+    id,
+    before:{nombre:TITLE_NAME_SLUGS_609[id].nombreBefore,sobrenombre:'',aliases:[]},
+    after:{nombre:es,sobrenombre:PERSONAS.find(p=>p.id===id).sobrenombre||'',aliases:[TITLE_NAME_SLUGS_609[id].nombreBefore]},
+    slug:TITLE_NAME_SLUGS_609[id].es,
+    reason:'El nombre público no lleva el título; el título queda en los cargos y como variante buscable.'
+  })),
 ];
+// The latest decision for each person is the one in force.
+export const CURRENT_PERSON_NAME_REVIEWS = [...new Map(PERSON_NAME_REVIEWS.map(r=>[r.id,r])).values()];

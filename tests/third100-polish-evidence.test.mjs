@@ -16,11 +16,14 @@ import {OCTOBER_50_REVIEWS} from '../src/evidence/october50Reviews.js';
 import {IMAGENES_PERSONAS} from '../src/data/imagenesPersonas.js';
 import {VISCONTI_SFORZA_IMAGES} from '../src/data/imagenesPersonasViscontiSforza.js';
 import {ENGLISH_PROFILE_PORTRAITS} from '../src/features/english/profilePortraits.js';
+import {CURRENT_PERSON_NAME_REVIEWS} from '../src/data/personNameReviews.js';
+// 6.0.9 renamed some reviewed people; the decision in force is the latest one.
+const current=review=>CURRENT_PERSON_NAME_REVIEWS.find(r=>r.id===review.id)||review;
 const read=p=>JSON.parse(fs.readFileSync(new URL('../public/'+p,import.meta.url)));
 const translated=r=>({...completeEnglishProfile(read('personas-meta/'+r.es+'.json')),path:'/en/person/'+r.en});
 test('third batch reviews and translates 100 different existing people, retaining every date, government, relation and evidence',()=>{
  const prior=new Set([...REVIEWED_100_NAMES,...REVIEWED_NEXT_100_NAMES].map(p=>p.id));assert.equal(REVIEWED_THIRD_100_NAMES.length,100);
- for(const review of REVIEWED_THIRD_100_NAMES){assert(!prior.has(review.id),review.id);const r=TRANSLATED_PEOPLE.find(p=>p.id===review.id),es=read('personas-meta/'+r.es+'.json'),en=completeEnglishProfile(es);assert(en.translationComplete&&en.resumen&&en.role,review.id);assert.equal(es.nombre,review.after.nombre);assert.equal(es.slug,review.slug);
+ for(const review of REVIEWED_THIRD_100_NAMES){assert(!prior.has(review.id),review.id);const r=TRANSLATED_PEOPLE.find(p=>p.id===review.id),es=read('personas-meta/'+r.es+'.json'),en=completeEnglishProfile(es);assert(en.translationComplete&&en.resumen&&en.role,review.id);assert.equal(es.nombre,current(review).after.nombre);assert.equal(es.slug,current(review).slug);
  for(const key of ['id','nac','muer','gobiernos','documentacion','accesosCoronas'])assert.deepEqual(en[key],es[key],review.id+'/'+key);
  for(const key of ['padres','conyuges','hijos','relacionadosDinastia','contemporaneos'])assert.deepEqual(en[key].map(p=>p.id),es[key].map(p=>p.id),review.id+'/'+key);
  assert.equal(en.biografiaExtensa.length,(es.biografiaExtensa||[]).length);assert.equal(en.localizedClaims.length,personClaims(es).length);
@@ -33,10 +36,10 @@ test('new Polish people have both complete editions and all four house histories
  const pages=await englishEntityPages(TRANSLATED_PEOPLE.map(translated));for(const t of POLISH_HOUSES){const es=read('dinastias-meta/'+t.es+'.json'),en=pages.find(p=>p.key===t.key);assert(en);assert.equal(translatedEquivalent('/es/dinastia/'+t.es,'en'),en.path);for(const f of ['resumen','origen','trayectoria','legado'])assert(en[f]&&en[f]!==es[f]);assert.deepEqual(en.miembros.map(p=>p.id),es.miembros.map(p=>p.id));if(t.key==='Kościuszko')assert.equal(en.arms,null);else assert(en.arms?.archivo&&en.arms?.note);}
  const juan=PERSONAS.find(p=>p.id==='JANAMORTARNOWSKI');assert.equal(juan.nombre,'Juan Amor Tarnowski');assert(juan.aliases.includes('Jan Amor Tarnowski'));assert.equal(PERSONAS.find(p=>p.id==='KONSTCZART').padre,'KAZIMIERZCZARTORYSKI');
 });
-test('50 previous pending claims have individual citations, separate from new records; 7200 remain pending after the V6.0.8 sources for the governors and the new people',()=>{
+test('50 previous pending claims have individual citations, separate from new records; 7195 remain pending after the 6.0.8 sources and the five governor mandates inferred in 6.0.9',()=>{
  const ledger=JSON.parse(fs.readFileSync(new URL('../docs/audits/2026-10-27-evidence-50.json',import.meta.url)));assert.equal(ledger.length,50);assert.equal(Object.keys(OCTOBER_50_REVIEWS).length,50);assert.equal(new Set(ledger.map(c=>c.id)).size,50);const previous={...CLAIM_REVIEWS};for(const id of Object.keys(OCTOBER_50_REVIEWS))delete previous[id];
  for(const row of ledger){assert.equal(row.before,'pending');const p=PERSONAS.find(p=>p.id===row.id.split(':')[1]),old=personClaims(p,previous).find(c=>c.id===row.id),claim=personClaims(p).find(c=>c.id===row.id);assert.equal(old.certainty,'pending',row.id);assert.equal(claim.certainty,'documented');assert.equal(claim.value,row.value);assert(claim.sources.every(s=>s.url.startsWith('https:')&&s.locator));assert(!Object.hasOwn(POLISH_PROFILES,p.id));}
- assert.equal(coverageReport(PERSONAS).totals.pending,7200);
+ assert.equal(coverageReport(PERSONAS).totals.pending,7195);
 });
 test('Visconti and Sforza portraits retain identity, artwork dates and bilingual rights; later user selections retain explicit attribution',()=>{
  assert.equal(Object.keys(VISCONTI_SFORZA_IMAGES).length,19);for(const [id,p] of Object.entries(VISCONTI_SFORZA_IMAGES)){assert(PERSONAS.some(p=>p.id===id));assert(fs.existsSync(new URL('../public'+p.archivo,import.meta.url)));assert(p.fuenteUrl&&p.derechosUrl&&p.autor&&p.fecha);const en=ENGLISH_PROFILE_PORTRAITS[id];assert(en?.obra&&en?.tipo&&en?.autor&&en?.fecha,id);}
