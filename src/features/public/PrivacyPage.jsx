@@ -13,7 +13,7 @@ export default function PrivacyPage({locale='es'}) {
  usePublicMeta({title:`${title} — ${en?'The Tree of Europe':'El Árbol de Europa'}`,description:en?'How this site handles browser data, performance metrics and correction emails.':'Cómo trata este sitio los datos del navegador, las métricas de rendimiento y los correos de corrección.',path});
  const contact=<a href={`mailto:${SITE.contactEmail}`}>{SITE.contactEmail}</a>;
  return <div className="public-site"><SiteHeader locale={locale} pathname={path}/><main className="public-main public-info-page privacy-page">
-  <nav className="public-breadcrumbs" aria-label={en?'Breadcrumb':'Migas de pan'}><a href={en?'/en/':'/es/'}>{en?'Home':'Inicio'}</a><span aria-hidden="true">›</span><span aria-current="page">{title}</span></nav>
+  <nav className="public-breadcrumbs" aria-label={en?'Breadcrumb':'Migas de pan'}><a href={en?'/en':'/es'}>{en?'Home':'Inicio'}</a><span aria-hidden="true">›</span><span aria-current="page">{title}</span></nav>
   <header className="public-page-title"><div className="public-page-icon"><ShieldCheck size={22}/></div><span>{en?'Your data':'Tus datos'}</span><h1>{en?'Privacy and local data':'Privacidad y datos locales'}</h1><p>{en?'What happens when you browse the atlas, save progress or contact the project.':'Qué ocurre al navegar por el atlas, guardar progreso o contactar con el proyecto.'}</p></header>
   <div className="privacy-content">
    <section><h2>{en?'Who is responsible?':'¿Quién es responsable?'}</h2><p>{en?'The Tree of Europe is maintained by Manuel Muriel Cagigal. For privacy requests, write to ':'El Árbol de Europa lo mantiene Manuel Muriel Cagigal. Para cuestiones de privacidad, escribe a '}{contact}.</p></section>

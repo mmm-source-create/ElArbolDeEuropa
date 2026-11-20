@@ -1,0 +1,28 @@
+// 6.0.10: titles and terms whose batch translation was wrong in every source.
+// Applied after the reviewed house and territory names.
+export const LABELS_610 = Object.freeze({
+  'Condesa de Pallars Sobirà': 'Countess of Pallars Sobirà',
+  'Conde de Pallars Sobirà': 'Count of Pallars Sobirà',
+  'Conde / Señor': 'Count / Lord',
+  marquesado: 'Marquisate',
+  pontificado: 'Pontificate',
+  rama: 'Branch',
+  'señorío': 'Lordship',
+  zarato: 'Tsardom',
+  gran_ducado: 'Grand duchy',
+  landgraviato: 'Landgraviate',
+  vizcondado: 'Viscounty',
+  estatuderato: 'Stadtholderate',
+  Valido: 'Royal favourite',
+  alianza_matrimonial: 'Marriage alliance',
+  despues: 'after',
+  'de Nevers': 'of Nevers',
+  'Helvis de Brunswick-Grubenhagen': 'Helvis of Brunswick-Grubenhagen',
+  'Herencia y elección': 'Inheritance and election',
+  'Biblissima · Carlos de Nevers y Rethel': 'Biblissima · Charles of Nevers and Rethel',
+  'Sigilla/IRHT · Felipe de Nevers y Rethel': 'Sigilla/IRHT · Philip of Nevers and Rethel',
+  'BnF, CCFr · Tratado de Senlis de 1493': 'BnF, CCFr · Treaty of Senlis of 1493',
+  'Casa Real de Georgia · Genealogía histórica': 'Royal House of Georgia · Historical genealogy',
+  'Treccani: Federico de Aragón, rey de Sicilia': 'Treccani: Frederick of Aragon, King of Sicily',
+  'Universidad de Lancaster · El ducado medieval': 'Lancaster University · The medieval duchy',
+});

@@ -1320,7 +1320,7 @@
           "desde": 1198,
           "hasta": 1221,
           "titulo": "Margrave",
-          "clase": "Other",
+          "clase": "Margraviate",
           "condicion": "Effective rule",
           "persona": {
             "id": "DIETRICHMEISSEN",
@@ -1339,7 +1339,7 @@
           "desde": 1221,
           "hasta": 1288,
           "titulo": "Margrave",
-          "clase": "Other",
+          "clase": "Margraviate",
           "condicion": "Effective rule",
           "persona": {
             "id": "HEINRICH3MEISSEN",
@@ -1403,7 +1403,7 @@
           "desde": 1288,
           "hasta": 1291,
           "titulo": "Margrave",
-          "clase": "Other",
+          "clase": "Margraviate",
           "condicion": "Effective rule",
           "persona": {
             "id": "FREDTUTTAMEISSEN",
@@ -1421,7 +1421,7 @@
           "desde": 1291,
           "hasta": 1306,
           "titulo": "Margrave",
-          "clase": "Other",
+          "clase": "Margraviate",
           "condicion": "Effective rule",
           "controlDisputado": [
             {
@@ -1445,7 +1445,7 @@
           "desde": 1307,
           "hasta": 1323,
           "titulo": "Margrave",
-          "clase": "Other",
+          "clase": "Margraviate",
           "condicion": "Effective rule",
           "persona": {
             "id": "FRED1MEISSEN",
@@ -1481,7 +1481,7 @@
           "desde": 1323,
           "hasta": 1349,
           "titulo": "Margrave",
-          "clase": "Other",
+          "clase": "Margraviate",
           "condicion": "Effective rule",
           "persona": {
             "id": "FRED2MEISSEN",
@@ -1517,7 +1517,7 @@
           "desde": 1349,
           "hasta": 1381,
           "titulo": "Margrave",
-          "clase": "Other",
+          "clase": "Margraviate",
           "condicion": "Effective rule",
           "persona": {
             "id": "FRED3MEISSEN",
@@ -1571,7 +1571,7 @@
           "desde": 1349,
           "hasta": 1407,
           "titulo": "Margrave",
-          "clase": "Other",
+          "clase": "Margraviate",
           "condicion": "Co-ruler",
           "nota": "The partition distinguishes between Meißen, Osterland and Thuringia; the title does not attribute all the Wettin lands.",
           "persona": {
@@ -1590,7 +1590,7 @@
           "desde": 1381,
           "hasta": 1406,
           "titulo": "Margrave",
-          "clase": "Other",
+          "clase": "Margraviate",
           "condicion": "Effective rule",
           "ambito": "Osterland since 1382.",
           "persona": {
@@ -1629,7 +1629,7 @@
           "desde": 1382,
           "hasta": 1425,
           "titulo": "Margrave",
-          "clase": "Other",
+          "clase": "Margraviate",
           "condicion": "Effective rule",
           "nota": "The partition distinguishes between Meißen, Osterland and Thuringia; the title does not attribute all the Wettin lands.",
           "persona": {
@@ -1666,7 +1666,7 @@
           "desde": 1407,
           "hasta": 1428,
           "titulo": "Margrave",
-          "clase": "Other",
+          "clase": "Margraviate",
           "condicion": "Effective rule",
           "persona": {
             "id": "FRED1SAX",
@@ -1722,7 +1722,7 @@
           "desde": 1428,
           "hasta": 1464,
           "titulo": "Margrave",
-          "clase": "Other",
+          "clase": "Margraviate",
           "condicion": "Effective rule",
           "persona": {
             "id": "FRED2SAX",
@@ -1795,7 +1795,7 @@
           "desde": 1464,
           "hasta": 1485,
           "titulo": "Margrave",
-          "clase": "Other",
+          "clase": "Margraviate",
           "condicion": "Effective rule",
           "persona": {
             "id": "ERNSTSAX",
@@ -6051,7 +6051,7 @@
           "desde": 1192,
           "hasta": 1194,
           "titulo": "Lord",
-          "clase": "My lord",
+          "clase": "Lordship",
           "condicion": "Effective rule",
           "persona": {
             "id": "GUYLUSIGNANJER",
@@ -6070,7 +6070,7 @@
           "desde": 1194,
           "hasta": 1197,
           "titulo": "Lord",
-          "clase": "My lord",
+          "clase": "Lordship",
           "condicion": "Effective rule",
           "persona": {
             "id": "AIMERYLUSIGNANJER",
@@ -12375,7 +12375,7 @@
           "id": "JOHNMONTPRET",
           "nombre": "John de Montfort",
           "dinastia": "Montfort-Bretaña",
-          "titulo": "Prosecuting Duke",
+          "titulo": "Claimant duke",
           "aliases": [],
           "nac": 1294,
           "muer": 1345,
@@ -12454,7 +12454,7 @@
           "id": "JOHNMONTPRET",
           "nombre": "John de Montfort",
           "dinastia": "Montfort-Bretaña",
-          "titulo": "Prosecuting Duke",
+          "titulo": "Claimant duke",
           "aliases": [],
           "nac": 1294,
           "muer": 1345,
@@ -12567,7 +12567,7 @@
             "id": "JOHNMONTPRET",
             "nombre": "John de Montfort",
             "dinastia": "Montfort-Bretaña",
-            "titulo": "Prosecuting Duke",
+            "titulo": "Claimant duke",
             "aliases": [],
             "nac": 1294,
             "muer": 1345,
@@ -12743,7 +12743,7 @@
             "id": "JOHNMONTPRET",
             "nombre": "John de Montfort",
             "dinastia": "Montfort-Bretaña",
-            "titulo": "Prosecuting Duke",
+            "titulo": "Claimant duke",
             "aliases": [],
             "nac": 1294,
             "muer": 1345,
@@ -12754,7 +12754,7 @@
               "id": "JOHNMONTPRET",
               "nombre": "John de Montfort",
               "dinastia": "Montfort-Bretaña",
-              "titulo": "Prosecuting Duke",
+              "titulo": "Claimant duke",
               "aliases": [],
               "nac": 1294,
               "muer": 1345,
@@ -15236,7 +15236,7 @@
           "desde": 1613,
           "hasta": 1645,
           "titulo": "Tsar",
-          "clase": "whispering",
+          "clase": "Tsardom",
           "condicion": "Effective rule",
           "persona": {
             "id": "MIKHAIL1RUS",
@@ -15254,7 +15254,7 @@
           "desde": 1645,
           "hasta": 1676,
           "titulo": "Tsar",
-          "clase": "whispering",
+          "clase": "Tsardom",
           "condicion": "Effective rule",
           "persona": {
             "id": "ALEXIS1RUS",
@@ -15272,7 +15272,7 @@
           "desde": 1676,
           "hasta": 1682,
           "titulo": "Tsar",
-          "clase": "whispering",
+          "clase": "Tsardom",
           "condicion": "Effective rule",
           "persona": {
             "id": "FEODOR3RUS",
@@ -15290,7 +15290,7 @@
           "desde": 1682,
           "hasta": 1696,
           "titulo": "Tsar",
-          "clase": "whispering",
+          "clase": "Tsardom",
           "condicion": "Co-ruler",
           "persona": {
             "id": "IVAN5RUS",
@@ -15308,7 +15308,7 @@
           "desde": 1682,
           "hasta": 1720,
           "titulo": "Tsar",
-          "clase": "whispering",
+          "clase": "Tsardom",
           "condicion": "Effective rule",
           "persona": {
             "id": "PETER1RUS",
@@ -16112,7 +16112,7 @@
           "desde": 1392,
           "hasta": 1435,
           "titulo": "Lord",
-          "clase": "My lord",
+          "clase": "Lordship",
           "condicion": "Effective rule",
           "nota": "Heritage from 1392, with dated territorial areas; the great western extent is documented around 1410.",
           "persona": {
@@ -16133,7 +16133,7 @@
           "desde": 1435,
           "hasta": 1447,
           "titulo": "Lord",
-          "clase": "My lord",
+          "clase": "Lordship",
           "condicion": "Effective rule",
           "nota": "He inherited Sandalj's domains in 1435; the ducal title of St Sava is recorded from 1448.",
           "persona": {
@@ -16714,7 +16714,7 @@
           "desde": 1186,
           "hasta": 1196,
           "titulo": "Tsar",
-          "clase": "whispering",
+          "clase": "Tsardom",
           "condicion": "Effective rule",
           "persona": {
             "id": "IVANASEN1BUL",
@@ -16735,7 +16735,7 @@
           "desde": 1197,
           "hasta": 1207,
           "titulo": "Tsar",
-          "clase": "whispering",
+          "clase": "Tsardom",
           "condicion": "Effective rule",
           "persona": {
             "id": "KALOYANBUL",
@@ -16756,7 +16756,7 @@
           "desde": 1207,
           "hasta": 1218,
           "titulo": "Tsar",
-          "clase": "whispering",
+          "clase": "Tsardom",
           "condicion": "Effective rule",
           "persona": {
             "id": "BORILBUL",
@@ -16776,7 +16776,7 @@
           "desde": 1218,
           "hasta": 1241,
           "titulo": "Tsar",
-          "clase": "whispering",
+          "clase": "Tsardom",
           "condicion": "Effective rule",
           "persona": {
             "id": "IVANASEN2BUL",
@@ -16798,7 +16798,7 @@
           "desde": 1241,
           "hasta": 1246,
           "titulo": "Tsar",
-          "clase": "whispering",
+          "clase": "Tsardom",
           "condicion": "Effective rule",
           "persona": {
             "id": "KALIMAN1BUL",
@@ -16816,7 +16816,7 @@
           "desde": 1246,
           "hasta": 1256,
           "titulo": "Tsar",
-          "clase": "whispering",
+          "clase": "Tsardom",
           "condicion": "Effective rule",
           "persona": {
             "id": "MICHAEL2ASENBUL",
@@ -16835,7 +16835,7 @@
           "desde": 1256,
           "hasta": 1256,
           "titulo": "Tsar",
-          "clase": "whispering",
+          "clase": "Tsardom",
           "condicion": "Effective rule",
           "controlDisputado": [
             {
@@ -16858,7 +16858,7 @@
           "desde": 1256,
           "hasta": 1257,
           "titulo": "Tsar",
-          "clase": "whispering",
+          "clase": "Tsardom",
           "condicion": "Effective rule",
           "controlDisputado": [
             {
@@ -16881,7 +16881,7 @@
           "desde": 1279,
           "hasta": 1280,
           "titulo": "Tsar",
-          "clase": "whispering",
+          "clase": "Tsardom",
           "condicion": "Effective rule",
           "controlDisputado": [
             {
@@ -18973,7 +18973,7 @@
           "desde": 1558,
           "hasta": 1596,
           "titulo": "Lord",
-          "clase": "My lord",
+          "clase": "Lordship",
           "condicion": "Effective rule",
           "persona": {
             "id": "DONALMACCARTHYMOR",
@@ -19980,7 +19980,7 @@
           "desde": 1171,
           "hasta": 1176,
           "titulo": "Lord",
-          "clase": "My lord",
+          "clase": "Lordship",
           "condicion": "Effective rule",
           "persona": {
             "id": "STRONGBOWLEIN",
@@ -22546,7 +22546,7 @@
           "desde": 1299,
           "hasta": 1300,
           "titulo": "Tsar",
-          "clase": "whispering",
+          "clase": "Tsardom",
           "condicion": "Effective rule",
           "controlDisputado": [
             {

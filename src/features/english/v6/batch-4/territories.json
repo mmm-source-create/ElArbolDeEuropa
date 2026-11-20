@@ -11111,7 +11111,7 @@
           "slug": "el-reino-partido-en-dos"
         },
         {
-          "titulo": "The cross kings",
+          "titulo": "The crusader kings",
           "slug": "los-reyes-cruzados"
         }
       ]
@@ -16490,7 +16490,7 @@
           "hasta": 1263
         }
       ],
-      "clase": "great _ ducado",
+      "clase": "Grand duchy",
       "naturaleza": "entity",
       "componentes": [],
       "editorial": false,
@@ -16742,7 +16742,7 @@
           "desde": 1236,
           "hasta": 1252,
           "titulo": "Grand Duke",
-          "clase": "great _ ducado",
+          "clase": "Grand duchy",
           "condicion": "Effective rule",
           "nota": "The middauga consolidation was about to start in the 1230's and did not date an exact date of access.",
           "persona": {
@@ -16773,7 +16773,7 @@
           "desde": 1263,
           "hasta": 1264,
           "titulo": "Grand Duke",
-          "clase": "great _ ducado",
+          "clase": "Grand duchy",
           "condicion": "Effective rule",
           "persona": {
             "id": "TRENIOTALIT",
@@ -16788,7 +16788,7 @@
           "desde": 1264,
           "hasta": 1267,
           "titulo": "Grand Duke",
-          "clase": "great _ ducado",
+          "clase": "Grand duchy",
           "condicion": "Effective rule",
           "persona": {
             "id": "VAISELGALIT",
@@ -16803,7 +16803,7 @@
           "desde": 1267,
           "hasta": 1269,
           "titulo": "Grand Duke",
-          "clase": "great _ ducado",
+          "clase": "Grand duchy",
           "condicion": "Effective rule",
           "nota": "A high duke's title, the source limits probable effective control to southern Lithuania and the Black Ruttenia.",
           "persona": {
@@ -16819,7 +16819,7 @@
           "desde": 1270,
           "hasta": 1282,
           "titulo": "Grand Duke",
-          "clase": "great _ ducado",
+          "clase": "Grand duchy",
           "condicion": "Effective rule",
           "nota": "Access dated 1269 or 1270 and adopted 1270 as an annual conservative cut.",
           "persona": {
@@ -16835,7 +16835,7 @@
           "desde": 1295,
           "hasta": 1316,
           "titulo": "Grand Duke",
-          "clase": "great _ ducado",
+          "clase": "Grand duchy",
           "condicion": "Effective rule",
           "nota": "Start about 1295, no exact date of enronization.",
           "persona": {
@@ -16851,7 +16851,7 @@
           "desde": 1316,
           "hasta": 1341,
           "titulo": "Grand Duke",
-          "clase": "great _ ducado",
+          "clase": "Grand duchy",
           "condicion": "Effective rule",
           "persona": {
             "id": "GEDIMINASLIT",
@@ -16866,7 +16866,7 @@
           "desde": 1342,
           "hasta": 1345,
           "titulo": "Grand Duke",
-          "clase": "great _ ducado",
+          "clase": "Grand duchy",
           "condicion": "Effective rule",
           "persona": {
             "id": "JAUNUTISLIT",
@@ -16881,7 +16881,7 @@
           "desde": 1345,
           "hasta": 1377,
           "titulo": "Grand Duke",
-          "clase": "great _ ducado",
+          "clase": "Grand duchy",
           "condicion": "Effective rule",
           "persona": {
             "id": "ALGIRDASLIT",
@@ -16896,7 +16896,7 @@
           "desde": 1377,
           "hasta": 1381,
           "titulo": "Grand Duke",
-          "clase": "great _ ducado",
+          "clase": "Grand duchy",
           "condicion": "Effective rule",
           "persona": {
             "id": "LADI2",
@@ -16911,7 +16911,7 @@
           "desde": 1381,
           "hasta": 1382,
           "titulo": "Grand Duke",
-          "clase": "great _ ducado",
+          "clase": "Grand duchy",
           "condicion": "Effective rule",
           "nota": "From the end of 1381 to the mid-1382; the annual map conserves the conflict with Jogaila.",
           "controlDisputado": [
@@ -16933,7 +16933,7 @@
           "desde": 1382,
           "hasta": 1391,
           "titulo": "Grand Duke",
-          "clase": "great _ ducado",
+          "clase": "Grand duchy",
           "condicion": "Effective rule",
           "persona": {
             "id": "LADI2",
@@ -16965,7 +16965,7 @@
           "desde": 1392,
           "hasta": 1430,
           "titulo": "Grand Duke",
-          "clase": "great _ ducado",
+          "clase": "Grand duchy",
           "condicion": "Effective rule",
           "persona": {
             "id": "VYTAUTASLIT",
@@ -16980,7 +16980,7 @@
           "desde": 1392,
           "hasta": 1434,
           "titulo": "Supreme Grand Duke",
-          "clase": "great _ ducado",
+          "clase": "Grand duchy",
           "condicion": "Co-ruler",
           "nota": "Jogaila’s dynastic supremacy; Vytautas governs Lithuania from 1392, and the pact of 1401 confirms his position.",
           "persona": {
@@ -16996,7 +16996,7 @@
           "desde": 1430,
           "hasta": 1432,
           "titulo": "Grand Duke",
-          "clase": "great _ ducado",
+          "clase": "Grand duchy",
           "condicion": "Effective rule",
           "persona": {
             "id": "SVITRIGAILALIT",
@@ -17011,7 +17011,7 @@
           "desde": 1432,
           "hasta": 1440,
           "titulo": "Grand Duke",
-          "clase": "great _ ducado",
+          "clase": "Grand duchy",
           "condicion": "Effective rule",
           "nota": "Government initially Western, expanded after the defeat of Švitrigaila.",
           "persona": {
@@ -17027,7 +17027,7 @@
           "desde": 1433,
           "hasta": 1438,
           "titulo": "Grand Duke",
-          "clase": "great _ ducado",
+          "clase": "Grand duchy",
           "condicion": "Rival",
           "nota": "Reunited government in the eastern provinces with progressive losses between 1435 and 1438. He doesn't look as an effective sovereign of Vilnius.",
           "persona": {
@@ -17043,7 +17043,7 @@
           "desde": 1440,
           "hasta": 1492,
           "titulo": "Grand Duke",
-          "clase": "great _ ducado",
+          "clase": "Grand duchy",
           "condicion": "Effective rule",
           "persona": {
             "id": "CASI4",
@@ -17058,7 +17058,7 @@
           "desde": 1492,
           "hasta": 1506,
           "titulo": "Grand Duke",
-          "clase": "great _ ducado",
+          "clase": "Grand duchy",
           "condicion": "Effective rule",
           "persona": {
             "id": "ALEJANDRO1POL",
@@ -17073,7 +17073,7 @@
           "desde": 1506,
           "hasta": 1548,
           "titulo": "Grand Duke",
-          "clase": "great _ ducado",
+          "clase": "Grand duchy",
           "condicion": "Effective rule",
           "persona": {
             "id": "SEGIS1JAG",
@@ -17088,7 +17088,7 @@
           "desde": 1544,
           "hasta": 1548,
           "titulo": "Grand Duke",
-          "clase": "great _ ducado",
+          "clase": "Grand duchy",
           "condicion": "Co-ruler",
           "nota": "Elected or crowned during the predecessor’s lifetime; authority was not exclusive.",
           "persona": {
@@ -17104,7 +17104,7 @@
           "desde": 1549,
           "hasta": 1572,
           "titulo": "Grand Duke",
-          "clase": "great _ ducado",
+          "clase": "Grand duchy",
           "condicion": "Effective rule",
           "persona": {
             "id": "SEGIS2JAG",
@@ -17119,7 +17119,7 @@
           "desde": 1573,
           "hasta": 1575,
           "titulo": "Grand Duke",
-          "clase": "great _ ducado",
+          "clase": "Grand duchy",
           "condicion": "Effective rule",
           "persona": {
             "id": "ENRIQ3FRA",
@@ -17134,7 +17134,7 @@
           "desde": 1575,
           "hasta": 1587,
           "titulo": "Grand duchess",
-          "clase": "great _ ducado",
+          "clase": "Grand duchy",
           "condicion": "Co-ruler",
           "nota": "Shared authority; not treated as an exclusive succession.",
           "persona": {
@@ -17150,7 +17150,7 @@
           "desde": 1576,
           "hasta": 1586,
           "titulo": "Grand Duke",
-          "clase": "great _ ducado",
+          "clase": "Grand duchy",
           "condicion": "Effective rule",
           "persona": {
             "id": "ESTEBANBATHORY",
@@ -17165,7 +17165,7 @@
           "desde": 1587,
           "hasta": 1632,
           "titulo": "Grand Duke",
-          "clase": "great _ ducado",
+          "clase": "Grand duchy",
           "condicion": "Effective rule",
           "persona": {
             "id": "SEGIS3VASA",
@@ -17180,7 +17180,7 @@
           "desde": 1632,
           "hasta": 1648,
           "titulo": "Grand Duke",
-          "clase": "great _ ducado",
+          "clase": "Grand duchy",
           "condicion": "Effective rule",
           "persona": {
             "id": "WLAD4VASA",
@@ -17195,7 +17195,7 @@
           "desde": 1648,
           "hasta": 1668,
           "titulo": "Grand Duke",
-          "clase": "great _ ducado",
+          "clase": "Grand duchy",
           "condicion": "Effective rule",
           "persona": {
             "id": "JUAN2CASIVASA",
@@ -17210,7 +17210,7 @@
           "desde": 1669,
           "hasta": 1673,
           "titulo": "Grand Duke",
-          "clase": "great _ ducado",
+          "clase": "Grand duchy",
           "condicion": "Effective rule",
           "persona": {
             "id": "MIGUELKORYBUT",
@@ -17225,7 +17225,7 @@
           "desde": 1674,
           "hasta": 1696,
           "titulo": "Grand Duke",
-          "clase": "great _ ducado",
+          "clase": "Grand duchy",
           "condicion": "Effective rule",
           "persona": {
             "id": "JUAN3SOBIESKI",
@@ -17240,7 +17240,7 @@
           "desde": 1697,
           "hasta": 1704,
           "titulo": "Grand Duke",
-          "clase": "great _ ducado",
+          "clase": "Grand duchy",
           "condicion": "Effective rule",
           "persona": {
             "id": "AUGUST2SAXPOL",
@@ -17255,7 +17255,7 @@
           "desde": 1704,
           "hasta": 1709,
           "titulo": "Grand Duke",
-          "clase": "great _ ducado",
+          "clase": "Grand duchy",
           "condicion": "Effective rule",
           "persona": {
             "id": "STAN1LESZ",
@@ -17270,7 +17270,7 @@
           "desde": 1709,
           "hasta": 1733,
           "titulo": "Grand Duke",
-          "clase": "great _ ducado",
+          "clase": "Grand duchy",
           "condicion": "Effective rule",
           "persona": {
             "id": "AUGUST2SAXPOL",
@@ -17285,7 +17285,7 @@
           "desde": 1733,
           "hasta": 1736,
           "titulo": "Grand Duke",
-          "clase": "great _ ducado",
+          "clase": "Grand duchy",
           "condicion": "Rival",
           "persona": {
             "id": "STAN1LESZ",
@@ -17300,7 +17300,7 @@
           "desde": 1733,
           "hasta": 1763,
           "titulo": "Grand Duke",
-          "clase": "great _ ducado",
+          "clase": "Grand duchy",
           "condicion": "Effective rule",
           "persona": {
             "id": "AUGUST3SAXPOL",
@@ -17315,7 +17315,7 @@
           "desde": 1764,
           "hasta": 1795,
           "titulo": "Grand Duke",
-          "clase": "great _ ducado",
+          "clase": "Grand duchy",
           "condicion": "Effective rule",
           "persona": {
             "id": "STAN2PONIAT",
@@ -19409,7 +19409,7 @@
           "url": "https://www.treccani.it/enciclopedia/carlo-di-borbone-re-di-napoli-e-di-sicilia_%28Dizionario-Biografico%29/"
         },
         {
-          "titulo": "Reg.",
+          "titulo": "Treccani · Ferdinand IV of Naples / III of Sicily",
           "url": "https://www.treccani.it/enciclopedia/ferdinando-i-di-borbone-re-delle-delle-due-sicilie_%28Enciclopedia-Italiana%29/"
         },
         {
@@ -20583,7 +20583,7 @@
         },
         {
           "desde": 1547,
-          "clase": "zarate"
+          "clase": "Tsardom"
         },
         {
           "desde": 1721,
@@ -21032,7 +21032,7 @@
           "desde": 1547,
           "hasta": 1584,
           "titulo": "Tsar",
-          "clase": "zarate",
+          "clase": "Tsardom",
           "condicion": "Effective rule",
           "persona": {
             "id": "IVAN4RUS",
@@ -21047,7 +21047,7 @@
           "desde": 1584,
           "hasta": 1598,
           "titulo": "Tsar",
-          "clase": "zarate",
+          "clase": "Tsardom",
           "condicion": "Effective rule",
           "persona": {
             "id": "FEODOR1RUS",
@@ -21062,7 +21062,7 @@
           "desde": 1598,
           "hasta": 1605,
           "titulo": "Tsar",
-          "clase": "zarate",
+          "clase": "Tsardom",
           "condicion": "Effective rule",
           "persona": {
             "id": "BORISGODUNOV",
@@ -21077,7 +21077,7 @@
           "desde": 1605,
           "hasta": 1605,
           "titulo": "Tsar",
-          "clase": "zarate",
+          "clase": "Tsardom",
           "condicion": "Effective rule",
           "nota": "A short reign of less than two months between Boris Godunov and Dmitri I, and we have been to share the year 1605.",
           "persona": {
@@ -21093,7 +21093,7 @@
           "desde": 1605,
           "hasta": 1606,
           "titulo": "Tsar",
-          "clase": "zarate",
+          "clase": "Tsardom",
           "condicion": "Effective rule",
           "nota": "He acceded to the throne and was crowned in Moscow; he was deposed and killed in 1606. His claimed identity as a son of Ivan IV is not recorded as proven parentage.",
           "persona": {
@@ -21108,7 +21108,7 @@
           "desde": 1606,
           "hasta": 1610,
           "titulo": "Tsar",
-          "clase": "zarate",
+          "clase": "Tsardom",
           "condicion": "Effective rule",
           "nota": "Tsar in Moscow with dubious monitoring during Turbulations and with no assumption of a uniform rule over all Russia.",
           "controlDisputado": [
@@ -21130,7 +21130,7 @@
           "desde": 1613,
           "hasta": 1645,
           "titulo": "Tsar",
-          "clase": "zarate",
+          "clase": "Tsardom",
           "condicion": "Effective rule",
           "persona": {
             "id": "MIKHAIL1RUS",
@@ -21145,7 +21145,7 @@
           "desde": 1645,
           "hasta": 1676,
           "titulo": "Tsar",
-          "clase": "zarate",
+          "clase": "Tsardom",
           "condicion": "Effective rule",
           "persona": {
             "id": "ALEXIS1RUS",
@@ -21160,7 +21160,7 @@
           "desde": 1676,
           "hasta": 1682,
           "titulo": "Tsar",
-          "clase": "zarate",
+          "clase": "Tsardom",
           "condicion": "Effective rule",
           "persona": {
             "id": "FEODOR3RUS",
@@ -21190,7 +21190,7 @@
           "desde": 1682,
           "hasta": 1696,
           "titulo": "Tsar",
-          "clase": "zarate",
+          "clase": "Tsardom",
           "condicion": "Co-ruler",
           "persona": {
             "id": "IVAN5RUS",
@@ -21205,7 +21205,7 @@
           "desde": 1682,
           "hasta": 1720,
           "titulo": "Tsar",
-          "clase": "zarate",
+          "clase": "Tsardom",
           "condicion": "Effective rule",
           "persona": {
             "id": "PETER1RUS",
@@ -25548,7 +25548,7 @@
       },
       "nombre": "Thuringia",
       "slug": "turingia",
-      "clase": "tipoctipride",
+      "clase": "Landgraviate",
       "naturaleza": "entity",
       "componentes": [],
       "editorial": false,
@@ -25564,7 +25564,7 @@
           "desde": 1190,
           "hasta": 1217,
           "titulo": "Landgrave",
-          "clase": "tipoctipride",
+          "clase": "Landgraviate",
           "condicion": "Effective rule",
           "persona": {
             "id": "HERMANN1THUR",
@@ -25579,7 +25579,7 @@
           "desde": 1217,
           "hasta": 1227,
           "titulo": "Landgrave",
-          "clase": "tipoctipride",
+          "clase": "Landgraviate",
           "condicion": "Effective rule",
           "persona": {
             "id": "LUDWIG4THUR",
@@ -25610,7 +25610,7 @@
           "desde": 1227,
           "hasta": 1241,
           "titulo": "Landgrave",
-          "clase": "tipoctipride",
+          "clase": "Landgraviate",
           "condicion": "Effective rule",
           "persona": {
             "id": "HERMANN2THUR",
@@ -25625,7 +25625,7 @@
           "desde": 1238,
           "hasta": 1241,
           "titulo": "Landgrave",
-          "clase": "tipoctipride",
+          "clase": "Landgraviate",
           "condicion": "Co-ruler",
           "persona": {
             "id": "ENRIQUERASPE",
@@ -25640,7 +25640,7 @@
           "desde": 1241,
           "hasta": 1247,
           "titulo": "Landgrave",
-          "clase": "tipoctipride",
+          "clase": "Landgraviate",
           "condicion": "Effective rule",
           "persona": {
             "id": "ENRIQUERASPE",
@@ -25655,7 +25655,7 @@
           "desde": 1247,
           "hasta": 1265,
           "titulo": "Landgrave",
-          "clase": "tipoctipride",
+          "clase": "Landgraviate",
           "condicion": "Effective rule",
           "controlDisputado": [
             {
@@ -25677,7 +25677,7 @@
           "desde": 1265,
           "hasta": 1307,
           "titulo": "Landgrave",
-          "clase": "tipoctipride",
+          "clase": "Landgraviate",
           "condicion": "Effective rule",
           "persona": {
             "id": "ALB2MEISSEN",
@@ -25692,7 +25692,7 @@
           "desde": 1307,
           "hasta": 1323,
           "titulo": "Landgrave",
-          "clase": "tipoctipride",
+          "clase": "Landgraviate",
           "condicion": "Effective rule",
           "persona": {
             "id": "FRED1MEISSEN",
@@ -25707,7 +25707,7 @@
           "desde": 1323,
           "hasta": 1349,
           "titulo": "Landgrave",
-          "clase": "tipoctipride",
+          "clase": "Landgraviate",
           "condicion": "Effective rule",
           "persona": {
             "id": "FRED2MEISSEN",
@@ -25722,7 +25722,7 @@
           "desde": 1349,
           "hasta": 1381,
           "titulo": "Landgrave",
-          "clase": "tipoctipride",
+          "clase": "Landgraviate",
           "condicion": "Effective rule",
           "persona": {
             "id": "FRED3MEISSEN",
@@ -25737,7 +25737,7 @@
           "desde": 1349,
           "hasta": 1381,
           "titulo": "Landgrave",
-          "clase": "tipoctipride",
+          "clase": "Landgraviate",
           "condicion": "Co-ruler",
           "persona": {
             "id": "BALTHASARTHUR",
@@ -25752,7 +25752,7 @@
           "desde": 1382,
           "hasta": 1406,
           "titulo": "Landgrave",
-          "clase": "tipoctipride",
+          "clase": "Landgraviate",
           "condicion": "Effective rule",
           "nota": "The partition differentiates Meißen, Osterland and Thuringia and the title does not assign all Wettin lands.",
           "persona": {
@@ -25768,7 +25768,7 @@
           "desde": 1406,
           "hasta": 1440,
           "titulo": "Landgrave",
-          "clase": "tipoctipride",
+          "clase": "Landgraviate",
           "condicion": "Effective rule",
           "nota": "The partition differentiates Meißen, Osterland and Thuringia and the title does not assign all Wettin lands.",
           "persona": {
@@ -25784,7 +25784,7 @@
           "desde": 1440,
           "hasta": 1445,
           "titulo": "Landgrave",
-          "clase": "tipoctipride",
+          "clase": "Landgraviate",
           "condicion": "Effective rule",
           "persona": {
             "id": "FRED2SAX",
@@ -25799,7 +25799,7 @@
           "desde": 1445,
           "hasta": 1482,
           "titulo": "Landgrave",
-          "clase": "tipoctipride",
+          "clase": "Landgraviate",
           "condicion": "Effective rule",
           "nota": "The partition differentiates Meißen, Osterland and Thuringia and the title does not assign all Wettin lands.",
           "persona": {
@@ -25815,7 +25815,7 @@
           "desde": 1482,
           "hasta": 1486,
           "titulo": "Landgrave",
-          "clase": "tipoctipride",
+          "clase": "Landgraviate",
           "condicion": "Effective rule",
           "persona": {
             "id": "ERNSTSAX",
@@ -25830,7 +25830,7 @@
           "desde": 1486,
           "hasta": 1525,
           "titulo": "Landgrave",
-          "clase": "tipoctipride",
+          "clase": "Landgraviate",
           "condicion": "Effective rule",
           "persona": {
             "id": "FRED3SAX",
@@ -25845,7 +25845,7 @@
           "desde": 1525,
           "hasta": 1532,
           "titulo": "Landgrave",
-          "clase": "tipoctipride",
+          "clase": "Landgraviate",
           "condicion": "Effective rule",
           "persona": {
             "id": "JUANSAX",
@@ -25860,7 +25860,7 @@
           "desde": 1532,
           "hasta": 1554,
           "titulo": "Landgrave",
-          "clase": "tipoctipride",
+          "clase": "Landgraviate",
           "condicion": "Effective rule",
           "persona": {
             "id": "JUANFED1SAX",
@@ -25875,7 +25875,7 @@
           "desde": 1554,
           "hasta": 1566,
           "titulo": "Landgrave",
-          "clase": "tipoctipride",
+          "clase": "Landgraviate",
           "condicion": "Co-ruler",
           "nota": "The term of office of the neretin branch and the territorial challenges are dated in independent series.",
           "persona": {
@@ -25891,7 +25891,7 @@
           "desde": 1554,
           "hasta": 1566,
           "titulo": "Landgrave",
-          "clase": "tipoctipride",
+          "clase": "Landgraviate",
           "condicion": "Co-ruler",
           "nota": "The term of office of the neretin branch and the territorial challenges are dated in independent series.",
           "persona": {
@@ -25907,7 +25907,7 @@
           "desde": 1567,
           "hasta": 1572,
           "titulo": "Landgrave",
-          "clase": "tipoctipride",
+          "clase": "Landgraviate",
           "condicion": "Effective rule",
           "nota": "The term of office of the neretin branch and the territorial challenges are dated in independent series.",
           "persona": {
@@ -29124,7 +29124,7 @@
       },
       "nombre": "Friesland",
       "slug": "frisia",
-      "clase": "Your honor",
+      "clase": "Lordship",
       "naturaleza": "entity",
       "componentes": [],
       "nota": "Frisia's honor. Charles V acquired rights in 1515 but general submission was agreed in 1524 and the map uses the Festiland region of the SVG.",
@@ -29149,7 +29149,7 @@
           "desde": 1524,
           "hasta": 1555,
           "titulo": "Sir",
-          "clase": "Your honor",
+          "clase": "Lordship",
           "condicion": "Effective rule",
           "nota": "Rights were purchased in 1515; the general agreement of submission dates from 1524.",
           "persona": {
@@ -29165,7 +29165,7 @@
           "desde": 1555,
           "hasta": 1579,
           "titulo": "Sir",
-          "clase": "Your honor",
+          "clase": "Lordship",
           "condicion": "Effective rule",
           "nota": "Succession from Charles V; the extent follows the provincial chronology and documented garrisons, without treating 1581 as a uniform loss of all the Low Countries.",
           "persona": {
@@ -29181,7 +29181,7 @@
           "desde": 1580,
           "hasta": 1598,
           "titulo": "Sir",
-          "clase": "Your honor",
+          "clase": "Lordship",
           "condicion": "Titular",
           "nota": "A title claimed after the loss of effective control; shown as a claim, without territorial fill.",
           "persona": {
@@ -29407,7 +29407,7 @@
       },
       "nombre": "Overijssel",
       "slug": "overijssel",
-      "clase": "Your honor",
+      "clase": "Lordship",
       "naturaleza": "entity",
       "componentes": [],
       "nota": "Part of the Overtich, recognized Charles V as his master in 1528 and did not confuse with Utrecht's spiritual bishopric.",
@@ -29432,7 +29432,7 @@
           "desde": 1528,
           "hasta": 1555,
           "titulo": "Sir",
-          "clase": "Your honor",
+          "clase": "Lordship",
           "condicion": "Effective rule",
           "nota": "The towns and nobility of Overijssel recognised the Habsburg ruler in 1528.",
           "persona": {
@@ -29448,7 +29448,7 @@
           "desde": 1555,
           "hasta": 1596,
           "titulo": "Sir",
-          "clase": "Your honor",
+          "clase": "Lordship",
           "condicion": "Effective rule",
           "nota": "Succession from Charles V; the extent follows the provincial chronology and documented garrisons, without treating 1581 as a uniform loss of all the Low Countries.",
           "persona": {
@@ -29464,7 +29464,7 @@
           "desde": 1597,
           "hasta": 1598,
           "titulo": "Sir",
-          "clase": "Your honor",
+          "clase": "Lordship",
           "condicion": "Titular",
           "nota": "Maurice of Nassau’s campaigns of 1597 took the last royal strongholds in the province.",
           "persona": {
@@ -29690,7 +29690,7 @@
       },
       "nombre": "Hum",
       "slug": "hum",
-      "clase": "Your honor",
+      "clase": "Lordship",
       "naturaleza": "entity",
       "componentes": [],
       "nota": "Hum/Zahumlje was a medieval principality and lordship subject to changing local powers and overlordships. A change of lord does not create a new territory; lordly mandates and mapped areas are dated separately.",
@@ -29762,7 +29762,7 @@
           "desde": 1305,
           "hasta": 1312,
           "titulo": "Sir",
-          "clase": "Your honor",
+          "clase": "Lordship",
           "condicion": "Effective rule",
           "nota": "The regional predominance under the Šubić; since 1305 the title of the Lordship of Hum has been in the show.",
           "persona": {
@@ -29778,7 +29778,7 @@
           "desde": 1305,
           "hasta": 1312,
           "titulo": "Sir",
-          "clase": "Your honor",
+          "clase": "Lordship",
           "condicion": "Delegated government",
           "soberano": "PAVAO1SUBIC",
           "persona": {
@@ -29794,7 +29794,7 @@
           "desde": 1312,
           "hasta": 1322,
           "titulo": "Sir",
-          "clase": "Your honor",
+          "clase": "Lordship",
           "condicion": "Effective rule",
           "persona": {
             "id": "MLADEN2SUBIC",
@@ -29809,7 +29809,7 @@
           "desde": 1392,
           "hasta": 1435,
           "titulo": "Sir",
-          "clase": "Your honor",
+          "clase": "Lordship",
           "condicion": "Effective rule",
           "nota": "The 1092's inheritance with territorial domains dated and the great western extension is documented about 1410.",
           "persona": {
@@ -29825,7 +29825,7 @@
           "desde": 1404,
           "hasta": 1409,
           "titulo": "Sir",
-          "clase": "Your honor",
+          "clase": "Lordship",
           "condicion": "Effective rule",
           "nota": "Documented selection of Rijeva's lordship and did not date his entire race and his duchy of Split.",
           "persona": {
@@ -29841,7 +29841,7 @@
           "desde": 1435,
           "hasta": 1447,
           "titulo": "Sir",
-          "clase": "Your honor",
+          "clase": "Lordship",
           "condicion": "Effective rule",
           "nota": "He inherited Sandalj's domains in 1435; the ducal title of St Sava is recorded from 1448.",
           "persona": {
@@ -30570,13 +30570,13 @@
       },
       "nombre": "Bourbon",
       "slug": "borbon",
-      "clase": "Your honor",
+      "clase": "Lordship",
       "naturaleza": "entity",
       "componentes": [],
       "etapas": [
         {
           "desde": null,
-          "clase": "Your honor"
+          "clase": "Lordship"
         },
         {
           "desde": 1327,
@@ -30596,7 +30596,7 @@
           "desde": 1262,
           "hasta": 1268,
           "titulo": "Sir",
-          "clase": "Your honor",
+          "clase": "Lordship",
           "condicion": "Jure uxoris",
           "nota": "Lord of Bourbon through his marriage to Agnes of Dampierre.",
           "persona": {
@@ -30612,7 +30612,7 @@
           "desde": 1262,
           "hasta": 1287,
           "titulo": "Ma'am.",
-          "clase": "Your honor",
+          "clase": "Lordship",
           "condicion": "Effective rule",
           "persona": {
             "id": "INESDAMP",
@@ -30627,7 +30627,7 @@
           "desde": 1287,
           "hasta": 1310,
           "titulo": "Ma'am.",
-          "clase": "Your honor",
+          "clase": "Lordship",
           "condicion": "Effective rule",
           "persona": {
             "id": "BEATBORG",
@@ -30995,7 +30995,7 @@
       },
       "nombre": "Tír Chonaill",
       "slug": "tir-chonaill",
-      "clase": "Your honor",
+      "clase": "Lordship",
       "naturaleza": "entity",
       "componentes": [],
       "nota": "Gaielic lady of the O'Donnell, also known as Tyrconnell. That's not equivalent to today's Donegal County.",
@@ -31039,7 +31039,7 @@
           "desde": 1566,
           "hasta": 1592,
           "titulo": "Sir",
-          "clase": "Your honor",
+          "clase": "Lordship",
           "condicion": "Effective rule",
           "persona": {
             "id": "HUGHMACMANUS",
@@ -31054,7 +31054,7 @@
           "desde": 1592,
           "hasta": 1602,
           "titulo": "Sir",
-          "clase": "Your honor",
+          "clase": "Lordship",
           "condicion": "Effective rule",
           "persona": {
             "id": "REDHUGHODONNELL",
@@ -31069,7 +31069,7 @@
           "desde": 1602,
           "hasta": 1607,
           "titulo": "Sir",
-          "clase": "Your honor",
+          "clase": "Lordship",
           "condicion": "Effective rule",
           "persona": {
             "id": "RORYODONNELL",
@@ -31750,7 +31750,7 @@
       },
       "nombre": "Pesaro",
       "slug": "pesaro",
-      "clase": "Your honor",
+      "clase": "Lordship",
       "naturaleza": "entity",
       "componentes": [],
       "editorial": false,
@@ -31766,7 +31766,7 @@
           "desde": 1445,
           "hasta": 1473,
           "titulo": "Sir",
-          "clase": "Your honor",
+          "clase": "Lordship",
           "condicion": "Effective rule",
           "persona": {
             "id": "ALESSFOR",
@@ -31781,7 +31781,7 @@
           "desde": 1483,
           "hasta": 1500,
           "titulo": "Sir",
-          "clase": "Your honor",
+          "clase": "Lordship",
           "condicion": "Effective rule",
           "persona": {
             "id": "GIOVSFORZAPESARO",
@@ -31796,7 +31796,7 @@
           "desde": 1503,
           "hasta": 1510,
           "titulo": "Sir",
-          "clase": "Your honor",
+          "clase": "Lordship",
           "condicion": "Effective rule",
           "persona": {
             "id": "GIOVSFORZAPESARO",
@@ -31872,7 +31872,7 @@
       },
       "nombre": "Annandale",
       "slug": "annandale",
-      "clase": "Your honor",
+      "clase": "Lordship",
       "naturaleza": "entity",
       "componentes": [],
       "editorial": false,
@@ -31883,7 +31883,7 @@
           "desde": 1215,
           "hasta": 1226,
           "titulo": "Sir",
-          "clase": "Your honor",
+          "clase": "Lordship",
           "condicion": "Effective rule",
           "persona": {
             "id": "ROBERTBRUS4",
@@ -31898,7 +31898,7 @@
           "desde": 1226,
           "hasta": 1295,
           "titulo": "Sir",
-          "clase": "Your honor",
+          "clase": "Lordship",
           "condicion": "Effective rule",
           "persona": {
             "id": "ROBERTBRUS5COMP",
@@ -31913,7 +31913,7 @@
           "desde": 1295,
           "hasta": 1304,
           "titulo": "Sir",
-          "clase": "Your honor",
+          "clase": "Lordship",
           "condicion": "Effective rule",
           "persona": {
             "id": "ROBERTBRUS6",
@@ -32077,7 +32077,7 @@
       "fuentes": [],
       "gobiernos": [
         {
-          "territorio": "Louis V of the Palatinate of Torres",
+          "territorio": "Judicate of Torres",
           "desde": 1218,
           "hasta": 1232,
           "titulo": "Judge",
@@ -32087,11 +32087,11 @@
             "id": "MARIANO2TORRES",
             "nombre": "Mariano II de Torres",
             "slug": "mariano-ii-de-torres",
-            "resumen": "Judge of Reg of Torres, 1218-1232. Judge."
+            "resumen": "Judge of Torres, 1218–1232."
           }
         },
         {
-          "territorio": "Louis V of the Palatinate of Torres",
+          "territorio": "Judicate of Torres",
           "desde": 1232,
           "hasta": 1236,
           "titulo": "Judge",
@@ -32101,11 +32101,11 @@
             "id": "BARISONE3TORRES",
             "nombre": "Barisone III of Torres",
             "slug": "barisone-iii-de-torres",
-            "resumen": "Judge at Reg., 1232-1236. Judge."
+            "resumen": "Judge of Torres, 1232–1236."
           }
         },
         {
-          "territorio": "Louis V of the Palatinate of Torres",
+          "territorio": "Judicate of Torres",
           "desde": 1236,
           "hasta": 1259,
           "titulo": "Judge",
@@ -32126,13 +32126,13 @@
           "id": "MARIANO2TORRES",
           "nombre": "Mariano II de Torres",
           "slug": "mariano-ii-de-torres",
-          "resumen": "Judge of Reg of Torres, 1218-1232. Judge."
+          "resumen": "Judge of Torres, 1218–1232."
         },
         {
           "id": "BARISONE3TORRES",
           "nombre": "Barisone III of Torres",
           "slug": "barisone-iii-de-torres",
-          "resumen": "Judge at Reg., 1232-1236. Judge."
+          "resumen": "Judge of Torres, 1232–1236."
         },
         {
           "id": "ADELASIATORRES",
@@ -32145,8 +32145,8 @@
       "historias": []
     },
     "people": {
-      "MARIANO2TORRES": "Judge of Reg of Torres, 1218-1232. Judge.",
-      "BARISONE3TORRES": "Judge at Reg., 1232-1236. Judge.",
+      "MARIANO2TORRES": "Judge of Torres, 1218–1232.",
+      "BARISONE3TORRES": "Judge of Torres, 1232–1236.",
       "ADELASIATORRES": "Reg's judge from Torres, 1236-1259. Judge."
     }
   },
@@ -34659,7 +34659,7 @@
         {
           "desde": 1378,
           "hasta": 1465,
-          "clase": "Your honor"
+          "clase": "Lordship"
         }
       ],
       "naturaleza": "entity",
@@ -34672,7 +34672,7 @@
           "desde": 1429,
           "hasta": 1465,
           "titulo": "Sir",
-          "clase": "Your honor",
+          "clase": "Lordship",
           "condicion": "Effective rule",
           "persona": {
             "id": "DOMENICOMALNOV",
@@ -34811,7 +34811,7 @@
       },
       "nombre": "Galloway",
       "slug": "galloway",
-      "clase": "Your honor",
+      "clase": "Lordship",
       "naturaleza": "entity",
       "componentes": [],
       "editorial": false,
@@ -34822,7 +34822,7 @@
           "desde": 1200,
           "hasta": 1234,
           "titulo": "Sir",
-          "clase": "Your honor",
+          "clase": "Lordship",
           "condicion": "Effective rule",
           "persona": {
             "id": "ALANGALLOWAY",
@@ -35442,7 +35442,7 @@
       },
       "nombre": "Lordship of Leucas and Vonitsa",
       "slug": "senorio-de-leucas-y-vonitsa",
-      "clase": "Your honor",
+      "clase": "Lordship",
       "naturaleza": "entity",
       "componentes": [],
       "nota": "Regional jurisdiction with dated phases and localised evidence in the Balkan review. Reforms of lord, tribute or occupation do not create another identity by themselves and a cell can include several jurisdictions.",
@@ -35863,7 +35863,7 @@
       },
       "nombre": "Lordship of Gjirokastër",
       "slug": "senorio-de-gjirokastra",
-      "clase": "Your honor",
+      "clase": "Lordship",
       "naturaleza": "entity",
       "componentes": [],
       "nota": "Regional jurisdiction with dated phases and localised evidence in the Balkan review. Reforms of lord, tribute or occupation do not create another identity by themselves and a cell can include several jurisdictions.",
@@ -35895,7 +35895,7 @@
       },
       "nombre": "Lordship of Landau",
       "slug": "senorio-de-landau",
-      "clase": "Your honor",
+      "clase": "Lordship",
       "naturaleza": "entity",
       "componentes": [],
       "nota": "A territorial jurisdiction of stable identity and the succession of holders, an occupation or dystatic integration does not create another entity. The complete areas and their dates are documented in the review of France and the Netherlands.",
@@ -36183,7 +36183,7 @@
       },
       "nombre": "Andorra",
       "slug": "andorra",
-      "clase": "Your honor",
+      "clase": "Lordship",
       "naturaleza": "entity",
       "componentes": [],
       "nota": "A sign before 1278 and co-principates after the pariatges. Shared sovereignty does not amount to an annexation to France or to the Hispanic monarchy.",
@@ -36350,7 +36350,7 @@
       },
       "nombre": "Lordship of Foça",
       "slug": "senorio-de-foca",
-      "clase": "Your honor",
+      "clase": "Lordship",
       "naturaleza": "entity",
       "componentes": [],
       "nota": "Regional jurisdiction with dated phases and localised evidence in the Balkan review. Reforms of lord, tribute or occupation do not create another identity by themselves and a cell can include several jurisdictions.",
@@ -36641,7 +36641,7 @@
       },
       "nombre": "Lordship of Castelgenovese",
       "slug": "senorio-de-castelgenovese",
-      "clase": "Your honor",
+      "clase": "Lordship",
       "naturaleza": "entity",
       "componentes": [],
       "nota": "Jurisdiction with dated phases and sources located at Iberia and Italy's review. A change of ruler, dependence or occupation does not by itself change his or her identity.",
@@ -37487,7 +37487,7 @@
       },
       "nombre": "Toron",
       "slug": "toron",
-      "clase": "Your honor",
+      "clase": "Lordship",
       "naturaleza": "entity",
       "componentes": [],
       "editorial": false,
@@ -37657,7 +37657,7 @@
       },
       "nombre": "Lordship of Thun",
       "slug": "senorio-de-thun",
-      "clase": "Your honor",
+      "clase": "Lordship",
       "naturaleza": "entity",
       "componentes": [],
       "nota": "Algirdas courts prior to the Bernaise expansion and purchases and Superiors are dated separately at border phases.",

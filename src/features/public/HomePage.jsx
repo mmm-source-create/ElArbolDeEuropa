@@ -1,20 +1,17 @@
 import {Users, Shield, Landmark, BookOpen, GraduationCap, Swords, Sparkles, ArrowRight} from 'lucide-react';
 import {usePublicMeta, PublicLayout} from './publicShared.jsx';
+import {HOME_META} from './publicMeta.js';
 import HOME_DATA from '../../generated/home.json';
 import HomeDiscovery from './HomeDiscovery.jsx';
 import HomeSearch from './HomeSearch.jsx';
 import Odometer from '../../ui/Odometer.jsx';
 import '../../styles/theme.css';
 
-export function HomePage({ onEnterAtlas, onOpenPanel }) {
-  usePublicMeta({
-    title: "El Árbol de Europa | Atlas genealógico e histórico interactivo",
-    description: "Explora personas, dinastías, parentescos, reinados, territorios e historias de la Europa medieval y moderna.",
-    path: "/es/",
-  });
+export function HomePage({ onEnterAtlas, onOpenPanel, prerendered = false }) {
+  usePublicMeta(HOME_META);
 
   return (
-    <PublicLayout>
+    <PublicLayout pathname="/es" prerendered={prerendered}>
       <HomeContent data={HOME_DATA} onEnterAtlas={onEnterAtlas} onOpenPanel={onOpenPanel} />
     </PublicLayout>
   );

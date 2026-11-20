@@ -64431,7 +64431,7 @@
           "titulo": "Duke",
           "clase": "Duchy",
           "condicion": "Branch rule",
-          "ambito": "Alberto VI de Bavaria-Leuchtenberg"
+          "ambito": "Albert VI of Bavaria-Leuchtenberg"
         }
       ],
       "accesosCoronas": [],
@@ -71774,7 +71774,7 @@
         },
         {
           "id": "ISABTIR",
-          "nombre": "Isabel de Trol",
+          "nombre": "Elisabeth of Carinthia",
           "slug": "isabel-de-tirol",
           "sobrenombre": "",
           "aliases": [],
@@ -74339,7 +74339,7 @@
           "id": "JAMES2SCOT",
           "nombre": "James II of Scotland",
           "slug": "jacobo-ii-de-escocia",
-          "sobrenombre": "Fur of Fire",
+          "sobrenombre": "Fiery Face",
           "aliases": [],
           "documentacion": null,
           "resumen": "King of Scotland from 1437, at age six. He ended the power of the Douglas and died in 1460 when a cannon exploded during the siege of Roxburgh.",
@@ -78532,7 +78532,7 @@
           "id": "JAMES2SCOT",
           "nombre": "James II of Scotland",
           "slug": "jacobo-ii-de-escocia",
-          "sobrenombre": "Fur of Fire",
+          "sobrenombre": "Fiery Face",
           "aliases": [],
           "documentacion": null,
           "resumen": "King of Scotland from 1437, at age six. He ended the power of the Douglas and died in 1460 when a cannon exploded during the siege of Roxburgh.",
@@ -92777,7 +92777,7 @@
         },
         {
           "id": "ISABTIR",
-          "nombre": "Isabel de Trol",
+          "nombre": "Elisabeth of Carinthia",
           "slug": "isabel-de-tirol",
           "sobrenombre": "",
           "aliases": [],
@@ -106912,7 +106912,7 @@
     "role": "Judge",
     "nickname": "",
     "aliases": [],
-    "summary": "Judge of Louis V of the Palatinate of Torres, 1218–1232. Judge.",
+    "summary": "Judge of Judicate of Torres, 1218–1232. Judge.",
     "sections": [],
     "translatedSource": {
       "sourceFile": "mariano-ii-de-torres.json",
@@ -106921,7 +106921,7 @@
       "nombre": "Marianus II of Torres",
       "sobrenombre": "",
       "aliases": [],
-      "resumen": "Judge of Louis V of the Palatinate of Torres, 1218–1232. Judge.",
+      "resumen": "Judge of Judicate of Torres, 1218–1232. Judge.",
       "dinastia": "",
       "titulo": "Judge",
       "nac": null,
@@ -106934,11 +106934,11 @@
       "conyugesIds": [],
       "evidenceNames": {},
       "reinos": [
-        "Louis V of the Palatinate of Torres"
+        "Judicate of Torres"
       ],
       "gobiernos": [
         {
-          "territorio": "Louis V of the Palatinate of Torres",
+          "territorio": "Judicate of Torres",
           "desde": 1218,
           "hasta": 1232,
           "titulo": "Judge",
@@ -106947,7 +106947,7 @@
         }
       ],
       "accesosCoronas": [],
-      "biografia": "Judge of Louis V of the Palatinate of Torres, 1218–1232. Judge.",
+      "biografia": "Judge of Judicate of Torres, 1218–1232. Judge.",
       "fuentes": [],
       "padres": [],
       "conyuges": [],

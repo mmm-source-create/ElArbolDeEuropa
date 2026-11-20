@@ -1446,7 +1446,7 @@
           "desde": 1700,
           "hasta": 1711,
           "titulo": "Sir",
-          "clase": "Your honor",
+          "clase": "Lordship",
           "condicion": "Effective rule",
           "nota": "A distinct provincial title. Recognised in 1700–1701 by Governor-General Maximilian II Emanuel of Bavaria; after the defeat at Ramillies in 1706 most provinces were held by the Allies. In June 1711 Philip transferred sovereignty over the Spanish Netherlands to Maximilian II Emanuel. The area effectively controlled is distinguished by the map’s dated phases.",
           "persona": {
@@ -10987,7 +10987,7 @@
           "desde": 1197,
           "hasta": 1211,
           "titulo": "Margrave",
-          "clase": "tipoctipride",
+          "clase": "Margraviate",
           "condicion": "Branch rule",
           "ambito": "Brno and Znojmo, Olimouch under the authority of the Bohemian king",
           "persona": {
@@ -11023,7 +11023,7 @@
           "desde": 1212,
           "hasta": 1222,
           "titulo": "Margrave",
-          "clase": "tipoctipride",
+          "clase": "Margraviate",
           "condicion": "Effective rule",
           "persona": {
             "id": "VLADHENMOR",
@@ -11059,7 +11059,7 @@
           "desde": 1224,
           "hasta": 1227,
           "titulo": "Margrave",
-          "clase": "tipoctipride",
+          "clase": "Margraviate",
           "condicion": "Effective rule",
           "persona": {
             "id": "VLAD2MOR",
@@ -11076,7 +11076,7 @@
           "desde": 1228,
           "hasta": 1239,
           "titulo": "Margrave",
-          "clase": "tipoctipride",
+          "clase": "Margraviate",
           "condicion": "Effective rule",
           "persona": {
             "id": "PREMYSLMOR",
@@ -11113,7 +11113,7 @@
           "desde": 1239,
           "hasta": 1247,
           "titulo": "Margrave",
-          "clase": "tipoctipride",
+          "clase": "Margraviate",
           "condicion": "Effective rule",
           "persona": {
             "id": "VLAD3MOR",
@@ -11130,7 +11130,7 @@
           "desde": 1247,
           "hasta": 1278,
           "titulo": "Margrave",
-          "clase": "tipoctipride",
+          "clase": "Margraviate",
           "condicion": "Effective rule",
           "persona": {
             "id": "OTAK2",
@@ -11232,7 +11232,7 @@
           "desde": 1269,
           "hasta": 1276,
           "titulo": "Sir",
-          "clase": "Your honor",
+          "clase": "Lordship",
           "condicion": "Effective rule",
           "nota": "Ottokar II’s rule until his renunciation of the Austrian duchies in 1276; he retained Bohemia and Moravia thereafter.",
           "persona": {
@@ -11613,7 +11613,7 @@
           "desde": 1305,
           "hasta": 1312,
           "titulo": "Sir",
-          "clase": "Your honor",
+          "clase": "Lordship",
           "condicion": "Effective rule",
           "nota": "The regional predominance under the Šubić; since 1305 the title of the Lordship of Hum has been in the show.",
           "persona": {
@@ -11655,7 +11655,7 @@
           "desde": 1305,
           "hasta": 1312,
           "titulo": "Sir",
-          "clase": "Your honor",
+          "clase": "Lordship",
           "condicion": "Delegated government",
           "soberano": "PAVAO1SUBIC",
           "persona": {
@@ -11692,7 +11692,7 @@
           "desde": 1312,
           "hasta": 1322,
           "titulo": "Sir",
-          "clase": "Your honor",
+          "clase": "Lordship",
           "condicion": "Effective rule",
           "persona": {
             "id": "MLADEN2SUBIC",
@@ -12728,7 +12728,7 @@
           "desde": 1295,
           "hasta": 1316,
           "titulo": "Grand Duke",
-          "clase": "great _ ducado",
+          "clase": "Grand duchy",
           "condicion": "Effective rule",
           "nota": "Start about 1295, no exact date of enronization.",
           "persona": {
@@ -12748,7 +12748,7 @@
           "desde": 1316,
           "hasta": 1341,
           "titulo": "Grand Duke",
-          "clase": "great _ ducado",
+          "clase": "Grand duchy",
           "condicion": "Effective rule",
           "persona": {
             "id": "GEDIMINASLIT",
@@ -12791,7 +12791,7 @@
           "desde": 1342,
           "hasta": 1345,
           "titulo": "Grand Duke",
-          "clase": "great _ ducado",
+          "clase": "Grand duchy",
           "condicion": "Effective rule",
           "persona": {
             "id": "JAUNUTISLIT",
@@ -12811,7 +12811,7 @@
           "desde": 1345,
           "hasta": 1377,
           "titulo": "Grand Duke",
-          "clase": "great _ ducado",
+          "clase": "Grand duchy",
           "condicion": "Effective rule",
           "persona": {
             "id": "ALGIRDASLIT",
@@ -12832,7 +12832,7 @@
           "desde": 1381,
           "hasta": 1382,
           "titulo": "Grand Duke",
-          "clase": "great _ ducado",
+          "clase": "Grand duchy",
           "condicion": "Effective rule",
           "nota": "From the end of 1381 to the mid-1382; the annual map conserves the conflict with Jogaila.",
           "controlDisputado": [
@@ -12883,7 +12883,7 @@
           "desde": 1392,
           "hasta": 1430,
           "titulo": "Grand Duke",
-          "clase": "great _ ducado",
+          "clase": "Grand duchy",
           "condicion": "Effective rule",
           "persona": {
             "id": "VYTAUTASLIT",
@@ -12903,7 +12903,7 @@
           "desde": 1430,
           "hasta": 1432,
           "titulo": "Grand Duke",
-          "clase": "great _ ducado",
+          "clase": "Grand duchy",
           "condicion": "Effective rule",
           "persona": {
             "id": "SVITRIGAILALIT",
@@ -12924,7 +12924,7 @@
           "desde": 1432,
           "hasta": 1440,
           "titulo": "Grand Duke",
-          "clase": "great _ ducado",
+          "clase": "Grand duchy",
           "condicion": "Effective rule",
           "nota": "Government initially Western, expanded after the defeat of Švitrigaila.",
           "persona": {
@@ -12946,7 +12946,7 @@
           "desde": 1433,
           "hasta": 1438,
           "titulo": "Grand Duke",
-          "clase": "great _ ducado",
+          "clase": "Grand duchy",
           "condicion": "Rival",
           "nota": "Reunited government in the eastern provinces with progressive losses between 1435 and 1438. He doesn't look as an effective sovereign of Vilnius.",
           "persona": {
@@ -15569,7 +15569,7 @@
           "desde": 1190,
           "hasta": 1217,
           "titulo": "Landgrave",
-          "clase": "tipoctipride",
+          "clase": "Landgraviate",
           "condicion": "Effective rule",
           "persona": {
             "id": "HERMANN1THUR",
@@ -15587,7 +15587,7 @@
           "desde": 1217,
           "hasta": 1227,
           "titulo": "Landgrave",
-          "clase": "tipoctipride",
+          "clase": "Landgraviate",
           "condicion": "Effective rule",
           "persona": {
             "id": "LUDWIG4THUR",
@@ -15622,7 +15622,7 @@
           "desde": 1227,
           "hasta": 1241,
           "titulo": "Landgrave",
-          "clase": "tipoctipride",
+          "clase": "Landgraviate",
           "condicion": "Effective rule",
           "persona": {
             "id": "HERMANN2THUR",
@@ -15638,7 +15638,7 @@
           "desde": 1238,
           "hasta": 1241,
           "titulo": "Landgrave",
-          "clase": "tipoctipride",
+          "clase": "Landgraviate",
           "condicion": "Co-ruler",
           "persona": {
             "id": "ENRIQUERASPE",
@@ -15656,7 +15656,7 @@
           "desde": 1241,
           "hasta": 1247,
           "titulo": "Landgrave",
-          "clase": "tipoctipride",
+          "clase": "Landgraviate",
           "condicion": "Effective rule",
           "persona": {
             "id": "ENRIQUERASPE",
@@ -16215,7 +16215,7 @@
           "desde": 1704,
           "hasta": 1709,
           "titulo": "Grand Duke",
-          "clase": "great _ ducado",
+          "clase": "Grand duchy",
           "condicion": "Effective rule",
           "persona": {
             "id": "STAN1LESZ",
@@ -16251,7 +16251,7 @@
           "desde": 1733,
           "hasta": 1736,
           "titulo": "Grand Duke",
-          "clase": "great _ ducado",
+          "clase": "Grand duchy",
           "condicion": "Rival",
           "persona": {
             "id": "STAN1LESZ",
@@ -16559,7 +16559,7 @@
           "desde": 1458,
           "hasta": 1468,
           "titulo": "Margrave",
-          "clase": "tipoctipride",
+          "clase": "Margraviate",
           "condicion": "Effective rule",
           "ambito": "Royal centres of Brno and Olomouc; regional authority over the margraviate, distinct from the full geography of the Bohemian title",
           "nota": "Brno and Olomouc are regional urban centres; they are not equated with the monarch’s exclusive ownership of Moravia and do not erase seigneurial or episcopal jurisdictions. Olomouc begins with the privilege of 1378 and is excluded during the documented Swedish and Prussian occupations.",
@@ -16873,7 +16873,7 @@
           "desde": 1280,
           "hasta": 1292,
           "titulo": "Tsar",
-          "clase": "zarate",
+          "clase": "Tsardom",
           "condicion": "Effective rule",
           "persona": {
             "id": "GEORGE1TERTERBUL",
@@ -16893,7 +16893,7 @@
           "desde": 1300,
           "hasta": 1322,
           "titulo": "Tsar",
-          "clase": "zarate",
+          "clase": "Tsardom",
           "condicion": "Effective rule",
           "persona": {
             "id": "THEODORESVETBUL",
@@ -16912,7 +16912,7 @@
           "desde": 1322,
           "hasta": 1323,
           "titulo": "Tsar",
-          "clase": "zarate",
+          "clase": "Tsardom",
           "condicion": "Effective rule",
           "persona": {
             "id": "GEORGE2TERTERBUL",
@@ -17279,7 +17279,7 @@
           "desde": 1311,
           "hasta": 1329,
           "titulo": "Sir",
-          "clase": "Your honor",
+          "clase": "Lordship",
           "condicion": "Co-ruler",
           "persona": {
             "id": "CANGRANDE1SCALA",
@@ -17295,7 +17295,7 @@
           "desde": 1329,
           "hasta": 1351,
           "titulo": "Sir",
-          "clase": "Your honor",
+          "clase": "Lordship",
           "condicion": "Co-ruler",
           "persona": {
             "id": "MASTINO2SCALA",
@@ -17635,7 +17635,7 @@
           "desde": 1292,
           "hasta": 1298,
           "titulo": "Tsar",
-          "clase": "zarate",
+          "clase": "Tsardom",
           "condicion": "Effective rule",
           "persona": {
             "id": "SMILETSBUL",
@@ -17651,7 +17651,7 @@
           "desde": 1298,
           "hasta": 1299,
           "titulo": "Tsar",
-          "clase": "zarate",
+          "clase": "Tsardom",
           "condicion": "Effective rule",
           "persona": {
             "id": "IVAN2SMILETSBUL",
@@ -18366,7 +18366,7 @@
           "desde": 1443,
           "hasta": 1468,
           "titulo": "Sir",
-          "clase": "Your honor",
+          "clase": "Lordship",
           "condicion": "Effective rule",
           "nota": "Sire of Katrioti in Kruja and own possessions. The Lezhë League does not deliver all the allied domains or Venetian ports.",
           "persona": {
@@ -18907,7 +18907,7 @@
           "desde": 1257,
           "hasta": 1277,
           "titulo": "Tsar",
-          "clase": "zarate",
+          "clase": "Tsardom",
           "condicion": "Effective rule",
           "persona": {
             "id": "CONSTANTINETIKHBUL",

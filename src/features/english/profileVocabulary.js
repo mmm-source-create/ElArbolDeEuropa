@@ -12,6 +12,11 @@ import {V535_NAMES,V535_LABELS,V535_NOTES} from './v535Vocabulary.js';
 import {V536_NAMES,V536_LABELS,V536_NOTES} from './v536Vocabulary.js';
 import {V607_LABELS,V607_NOTES} from './v607Vocabulary.js';
 import {ENTITY_LABELS_607} from './entityNameReview607.js';
+import {ENGLISH_DYNASTIES,ENGLISH_TERRITORIES} from './entityTranslations.js';
+import {LABELS_610} from './labelReview610.js';
+// 6.0.10: the reviewed English names of every house and territory replace the
+// machine translations of the same keys in the batch vocabularies.
+const REVIEWED_ENTITY_LABELS=Object.fromEntries([...Object.values(ENGLISH_DYNASTIES),...Object.values(ENGLISH_TERRITORIES)].filter(entity=>entity?.key&&entity?.name).map(entity=>[entity.key,entity.name]));
 import runtime from '../../generated/englishVocabularyRuntime.json' with {type:'json'};
 // Display translations only: canonical dynasty and territory keys stay intact.
 export const PROFILE_LABELS = {
@@ -43,8 +48,14 @@ export const PROFILE_LABELS = {
 'Gran maestre':'Grand Master','Archiduque / Gran maestre':'Archduke / Grand Master','Duque / Gran maestre':'Duke / Grand Master',
   'Perche':'Perche', 'Las dos Borgoñas':'The two Burgundies', 'Borgoña y Países Bajos':'Burgundy and the Low Countries',
   ...V607_LABELS,
+  ...REVIEWED_ENTITY_LABELS,
   ...ENTITY_LABELS_607,
+  ...LABELS_610,
 };
+
+// 6.0.10: short terms (names, nicknames, titles) translated differently in the
+// label and note batches take the reviewed label, so prose and lists agree.
+const ALIGNED_NOTES=Object.fromEntries(Object.keys(runtime.notes).filter(key=>key.length<=45&&Object.hasOwn(PROFILE_LABELS,key)&&PROFILE_LABELS[key]!==runtime.notes[key]&&Object.hasOwn(runtime.labels,key)).map(key=>[key,PROFILE_LABELS[key]]));
 
 export const ENGLISH_NAMES = {
 "JOSEFERNANDOBAV":"Joseph Ferdinand of Bavaria","ISABELHUNSANTA":"Elizabeth of Hungary","LUDWIG4THUR":"Louis IV of Thuringia","GOTZBERLICHINGEN":"G\u00f6tz von Berlichingen","GUIDOBALDOMONTE":"Guidobaldo da Montefeltro","ISABELGONZAGAURBINO":"Elisabetta Gonzaga","LEONORGONZAGAURBINO":"Eleonora Gonzaga","GUIDOBALDO2ROVERE":"Guidobaldo II della Rovere","FRANCESCO2ROVERE":"Francesco Maria II della Rovere",
@@ -108,6 +119,10 @@ export const PROFILE_NOTES = {
   'Entrada «MÁRIA of Hungary (1371-Buda 1395)»':'Entry “MÁRIA of Hungary (1371-Buda 1395)”',
   ...runtime.timelineNotes,
   ...V605_EVIDENCE_TEXT,
+  ...ALIGNED_NOTES,
+  ...REVIEWED_ENTITY_LABELS,
+  ...ENTITY_LABELS_607,
+  ...LABELS_610,
 };
 
 // These are labels attached to a precise authority record, rather than new

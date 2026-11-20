@@ -10,6 +10,8 @@ import {normalizarBusquedaPublica,slugPublico} from '../../domain/people/personL
 import DynastyArms, {ArmsCredit} from '../../components/DynastyArms.jsx';
 import {escudoDe,esEmblemaNoHeraldico,nombreEmblema} from '../../content/dinastias/escudos.js';
 import './dynasty.css';
+
+import {condicionTexto} from './governmentLabels.js';
 import DynastyCard from './DynastyCard.jsx';
 import '../../styles/theme.css';
 
@@ -46,7 +48,7 @@ export default function DynastyPage({slug,initialData=null}) {
   const relationCount=(d?.casasOrigen?.length||0)+(d?.casasDerivadas?.length||0)+(d?.casasConectadas?.length||0)+internalBranches.length;
   const hasConnections=relationCount>0||branches.length>0;
   return <div className="public-site"><SiteHeader pathname={`/es/dinastia/${slug}`} prerendered={Boolean(initialData)}/><main className="public-main dynasty-page">
-    <nav className="public-breadcrumbs" aria-label="Migas de pan"><a href="/es/">Inicio</a><span>›</span><a href="/es/dinastias">Dinastías</a><span>›</span><span aria-current="page">{d?.nombre||'Ficha'}</span></nav>
+    <nav className="public-breadcrumbs" aria-label="Migas de pan"><a href="/es">Inicio</a><span>›</span><a href="/es/dinastias">Dinastías</a><span>›</span><span aria-current="page">{d?.nombre||'Ficha'}</span></nav>
     {loading?<ReadingSkeleton kind="entity-body"/>:error||!d?<section className="public-error"><h1>Ficha no disponible</h1><p>No se ha podido cargar esta casa.</p><a href="/es/dinastias">Volver al catálogo de dinastías</a></section>:<>
       <header className="public-page-title dynasty-hero">
         {escudo?<figure className="dynasty-hero-figure"><DynastyArms dinastia={d.nombre} size={76} className="dynasty-hero-arms"/></figure>:<div className="public-page-icon"><Shield size={22}/></div>}<span>Casas y linajes · {d.editorial?'Historia de la dinastía':'Personas del Atlas'}</span>
@@ -81,7 +83,7 @@ export default function DynastyPage({slug,initialData=null}) {
         {!members.length&&<p>No hay personas que coincidan con esta búsqueda.</p>}
         {members.length>limit&&<button className="public-secondary dynasty-more" onClick={()=>setLimit(n=>n+36)}>Mostrar más personas ({limit} de {members.length})</button>}
       </section>
-      {!!d.gobiernos.length&&<details className="public-content-card dynasty-governments"><summary>Gobiernos registrados de miembros de la casa</summary><p>Incluye títulos nominales, regencias y disputas cuando constan. La condición de cada mandato aparece expresamente.</p><ul>{d.gobiernos.map((g,i)=><li key={`${g.persona.id}-${i}`}><a href={`/es/persona/${g.persona.slug}`}>{g.persona.nombre}</a><span>{g.titulo} · <a href={`/es/territorio/${slugPublico(g.territorio)}`}>{g.territorio}</a> · {g.desde}–{g.hasta} · {g.condicion}</span>{g.nota&&<small>{g.nota}</small>}</li>)}</ul></details>}
+      {!!d.gobiernos.length&&<section className="public-content-card dynasty-governments"><h2>Gobiernos registrados de los miembros</h2><p>Incluye títulos nominales, regencias y disputas cuando constan. Los intervalos son anuales y no implican un control continuo ni exclusivo.</p><div className="territory-table"><table><thead><tr><th>Persona</th><th>Territorio y título</th><th>Periodo</th><th>Condición</th></tr></thead><tbody>{d.gobiernos.map((g,i)=><tr key={`${g.persona.id}-${i}`}><td><a href={`/es/persona/${g.persona.slug}`}>{g.persona.nombre}</a></td><td>{g.titulo} · <a href={`/es/territorio/${slugPublico(g.territorio)}`}>{g.territorio}</a></td><td>{g.desde}–{g.hasta}</td><td>{condicionTexto(g.condicion)}{g.nota&&<small>{g.nota}</small>}</td></tr>)}</tbody></table></div></section>}
       {!!d.fuentes.length&&<section id="fuentes" className="public-content-card dynasty-sources"><span>Documentación</span><h2>Bibliografía de contexto</h2><p>Repertorios para consultar la historia de la casa. Una referencia general no verifica por sí sola cada filiación o fecha.</p><ul>{d.fuentes.map(f=><li key={f.url}><a href={f.url} target="_blank" rel="noreferrer">{f.titulo}</a></li>)}</ul><a href="/es/fuentes">Fuentes y metodología del proyecto</a></section>}
       <ArmsCredit dinastia={d.nombre} className="dynasty-page-credit"/>
     </>}

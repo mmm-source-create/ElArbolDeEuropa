@@ -105,7 +105,7 @@ export function InfoPage({ tipo }) {
   return (
     <PublicLayout>
       <main className="public-main public-info-page">
-        <Breadcrumbs items={[{ label: "Inicio", href: "/es/" }, { label: page.title }]} />
+        <Breadcrumbs items={[{ label: "Inicio", href: "/es" }, { label: page.title }]} />
         <section className="public-page-title">
           <div className="public-page-icon"><Icon size={22} /></div>
           <span>{page.eyebrow}</span>
@@ -191,9 +191,9 @@ export function CatalogPage({ tipo, locale='es', initialData=null, embedded=fals
   });
 
   return (
-    <Wrapper>
+    <Wrapper {...(embedded?{}:{pathname:`/es/${tipo}`,prerendered:Boolean(initialData)})}>
       <main className="public-main public-catalog">
-        <Breadcrumbs locale={locale} items={[{ label: tr("Inicio","Home"), href: en?"/en/":"/es/" }, { label: config.title }]} />
+        <Breadcrumbs locale={locale} items={[{ label: tr("Inicio","Home"), href: en?"/en":"/es" }, { label: config.title }]} />
         <section className="public-page-title">
           <div className="public-page-icon"><Icon size={22} /></div><span>{config.eyebrow}</span><h1>{config.title}</h1><p>{config.description}</p>
         </section>
@@ -220,6 +220,7 @@ export function CatalogPage({ tipo, locale='es', initialData=null, embedded=fals
         {!loading && !error && tipo === "personas" && (
           <>
             <div className="public-catalog-note">{filtrados.length} {filtrados.length === 1 ? tr("persona","person") : tr("personas","people")}{orden === "destacadas" && !query.trim() ? tr(" · las más relevantes primero: con retrato, biografía extensa y gobiernos registrados"," · most relevant first: portraits, extended biographies and recorded governments") : ""}</div>
+            <p className="public-catalog-note"><a href={en?"/en/people/index":"/es/personas/indice"}>{tr("Ver todas las personas en el índice de la A a la Z","See everyone in the A–Z index")}</a></p>
             <div className="public-person-list">{visibles.map((persona) => <PersonaMiniCard key={persona.id} persona={persona} compact locale={locale}/>)}</div>
             {visibles.length < filtrados.length && <button type="button" className="public-secondary people-more" onClick={() => setLimite(n => n + 120)}>{tr("Ver más","Show more")} ({filtrados.length - visibles.length} {tr("restantes","remaining")})</button>}
             {!filtrados.length && <p className="public-muted">{tr("Ninguna persona coincide con estos filtros.","No people match these filters.")}</p>}
@@ -300,7 +301,7 @@ export function PersonPage({ slug, legacyId, onExplore, initialData = null }) {
   usePublicMeta(metadata);
 
   if (state.loading) return <PublicLayout pathname={metadata.path} prerendered={Boolean(initialData)}><main className="public-main"><ReadingSkeleton kind="person"/></main></PublicLayout>;
-  if (state.error || !persona) return <PublicLayout pathname={metadata.path} prerendered={Boolean(initialData)}><main className="public-main"><Breadcrumbs items={[{ label: "Inicio", href: "/es/" }, { label: "Personas", href: "/es/personas" }, { label: "Ficha" }]} /><div className="public-error" role="alert"><h1>Ficha no disponible</h1><p>No se ha podido cargar esta ficha. El atlas completo sigue disponible.</p><button className="public-primary" onClick={() => window.location.reload()}>Reintentar</button> <a className="public-secondary" href="/es/?atlas=1">Abrir atlas <ArrowRight size={15} /></a></div></main></PublicLayout>;
+  if (state.error || !persona) return <PublicLayout pathname={metadata.path} prerendered={Boolean(initialData)}><main className="public-main"><Breadcrumbs items={[{ label: "Inicio", href: "/es" }, { label: "Personas", href: "/es/personas" }, { label: "Ficha" }]} /><div className="public-error" role="alert"><h1>Ficha no disponible</h1><p>No se ha podido cargar esta ficha. El atlas completo sigue disponible.</p><button className="public-primary" onClick={() => window.location.reload()}>Reintentar</button> <a className="public-secondary" href="/es/?atlas=1">Abrir atlas <ArrowRight size={15} /></a></div></main></PublicLayout>;
 
   return <PublicLayout pathname={metadata.path} prerendered={Boolean(initialData)}><PersonContent persona={persona} path={metadata.path} onExplore={initialData?undefined:onExplore}/></PublicLayout>;
 }
@@ -316,7 +317,7 @@ export function PersonContent({ persona, locale = 'es', path, onExplore }) {
   const claims=profileClaims(persona);
   const fact=field=>claims.find(claim=>claim.field===field);
   return <main className="public-main public-person-page">
-    <Breadcrumbs locale={locale} items={[{label:label('Inicio','Home'),href:en?'/en/':'/es/'},{label:label('Personas','People'),href:peoplePath},{label:persona.nombre}]}/>
+    <Breadcrumbs locale={locale} items={[{label:label('Inicio','Home'),href:en?'/en':'/es'},{label:label('Personas','People'),href:peoplePath},{label:persona.nombre}]}/>
     <article>
       <header className="public-person-hero">
         <div className="public-person-hero-copy">

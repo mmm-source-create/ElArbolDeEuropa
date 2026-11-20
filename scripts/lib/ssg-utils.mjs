@@ -33,8 +33,9 @@ const STATIC_PAGE_ENTRIES=Object.freeze({
  persona:'src/features/public/PublicSite.jsx',
  dinastia:'src/features/public/DynastyPage.jsx',
  territorio:'src/features/public/TerritoryPage.jsx',
+ catalogo:'src/features/public/CatalogStaticPage.jsx',
 });
-const STATIC_PAGE_NAMES=Object.freeze({english:'EnglishPage',historia:'StoryPage',persona:'PublicSite',dinastia:'DynastyPage',territorio:'TerritoryPage'});
+const STATIC_PAGE_NAMES=Object.freeze({english:'EnglishPage',historia:'StoryPage',persona:'PublicSite',dinastia:'DynastyPage',territorio:'TerritoryPage',catalogo:'CatalogStaticPage'});
 export function assetsForStaticPage(manifest,kind,pathname='') {
  let entry=STATIC_PAGE_ENTRIES[kind];
  if(!entry)throw new Error(`Tipo de ficha sin punto de entrada: ${kind}`);
@@ -59,7 +60,7 @@ export function makeStaticDocument(shell,{html,meta},page,assets) {
   const key=tag.match(/\b(name|property)=["']([^"']+)["']/i);
   return key&&metaKeys.has(`${key[1]}:${key[2]}`)?'':tag;
  }).replace(/<link\b[^>]*>/gi,tag=>/\brel=["'](?:canonical|alternate)["']/i.test(tag)?'':tag);
- const metadata=[`<title>${escapeHtml(meta.title)}</title>`,...meta.meta.map(([attr,key,value])=>`<meta ${attr}="${key}" content="${escapeHtml(value)}">`),`<link rel="canonical" href="${escapeHtml(meta.canonical)}">`,...meta.alternates.map(a=>`<link rel="alternate" data-eade-hreflang="1" hreflang="${a.hreflang}" href="${escapeHtml(a.href)}">`)];
+ const metadata=[`<title>${escapeHtml(meta.title)}</title>`,...meta.meta.map(([attr,key,value])=>`<meta ${attr}="${key}" content="${escapeHtml(value)}">`),`<link rel="canonical" href="${escapeHtml(meta.canonical)}">`,...meta.alternates.map(a=>`<link rel="alternate" data-eade-hreflang="1" hreflang="${a.hreflang}" href="${escapeHtml(a.href)}">`),...(meta.jsonLd?[`<script type="application/ld+json">${JSON.stringify(meta.jsonLd).replace(/</g,'\\u003c')}</script>`]:[])];
  const links=[...assets.css.map(file=>`<link rel="stylesheet" href="/${file}">`),...assets.js.map(file=>`<link rel="modulepreload" href="/${file}">`)].filter(tag=>!head.includes(tag.match(/href="([^"]+)"/)[1]));
  // La preferencia no cambia el HTML que React hidrata. Se aplica antes del primer dibujo.
  const notice=`<script>${SCREEN_NOTICE_SCRIPT}</script>`;

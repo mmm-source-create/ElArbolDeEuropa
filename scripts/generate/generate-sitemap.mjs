@@ -58,14 +58,15 @@ const historiaUrls = HISTORIAS
   .filter((historia) => historia?.disponible && historia?.titulo)
   .flatMap((historia) => { const base = `/es/historia/${slugPublico(historia.titulo)}`; return [base, ...(historia.pasos || []).map((_, i) => `${base}/capitulo/${i + 1}`)]; });
 
-const englishUrls = englishPaths();
+// 6.0.10: homes without the trailing slash (Cloudflare redirects /en/ to /en).
+const englishUrls = englishPaths().map((p) => (p === "/en/" ? "/en" : p));
 
-const catalogoUrls = ["/es/personas", "/es/dinastias", "/es/territorios", "/es/historias"];
+const catalogoUrls = ["/es/personas", "/es/personas/indice", "/es/dinastias", "/es/territorios", "/es/historias", "/en/people/index"];
 const proyectoUrls = ["/es/proyecto", "/es/fuentes", "/es/licencias", "/es/agradecimientos"];
 const experienciaUrls = ["/es/desafio"];
 
 const paths = [
-  "/es/",
+  "/es",
   ...catalogoUrls,
   ...proyectoUrls,
   ...experienciaUrls,

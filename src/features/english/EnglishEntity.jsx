@@ -24,7 +24,7 @@ export default function EnglishEntity({data:d}){
  const Icon=dynasty?Shield:Landmark;
  const internalBranches=dynasty?d.ramas.filter(r=>r.origen===d.key&&r.destino===d.key):[];
  return <main className={`public-main ${dynasty?'dynasty-page':'territory-page'}`}>
-  <nav className="public-breadcrumbs" aria-label="Breadcrumb"><a href="/en/">Home</a><span>›</span><a href={dynasty?'/en/dynasties':'/en/territories'}>{dynasty?'Dynasties':'Territories'}</a><span>›</span><span aria-current="page">{d.nombre}</span></nav>
+  <nav className="public-breadcrumbs" aria-label="Breadcrumb"><a href="/en">Home</a><span>›</span><a href={dynasty?'/en/dynasties':'/en/territories'}>{dynasty?'Dynasties':'Territories'}</a><span>›</span><span aria-current="page">{d.nombre}</span></nav>
   <header className={`public-page-title ${dynasty?'dynasty-hero':'territory-hero'}`}>
    {d.arms?<figure className="dynasty-hero-figure"><DynastyArms dinastia={d.key} size={76} locale="en"/></figure>:<div className="public-page-icon"><Icon size={22}/></div>}
    <span>{dynasty?'Houses and lineages':'Historical territory'}</span><h1>{d.nombre}</h1><p>{d.resumen}</p>

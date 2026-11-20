@@ -29,7 +29,7 @@ export default function DesafioPage() {
       <SiteHeader />
       <main className="desafio-page-main">
         <nav className="desafio-breadcrumbs" aria-label="Migas de pan">
-          <a href="/es/">Inicio</a><span aria-hidden="true">›</span><span aria-current="page">Desafío</span>
+          <a href="/es">Inicio</a><span aria-hidden="true">›</span><span aria-current="page">Desafío</span>
         </nav>
         <Desafio personas={PERSONAS} />
       </main>
