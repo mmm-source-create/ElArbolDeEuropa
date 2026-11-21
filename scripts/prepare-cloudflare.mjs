@@ -3,7 +3,6 @@ import path from 'node:path';
 import {fileURLToPath} from 'node:url';
 import {staticHeadersFile} from '../cloudflare/routing.js';
 import {metadataFromHtml} from '../src/utils/staticMetadata.js';
-import {staticRoute} from '../src/features/public/staticData.js';
 
 export async function prepareCloudflare(source='dist', target='.cloudflare/assets') {
   const report=JSON.parse(await fs.readFile(path.join(source,'ssg-report.json'),'utf8'));
@@ -11,9 +10,11 @@ export async function prepareCloudflare(source='dist', target='.cloudflare/asset
   const audit=JSON.parse(await fs.readFile(path.join(source,'ssg-audit.json'),'utf8'));
   if(audit.errors.length||audit.expected!==report.pages.length)throw new Error('SSG audit is not complete');
   const index={};let reused=0;
-  // Only the English edition's pages; the A–Z index (/en/people/index) is a catalogue page.
-  for(const item of report.pages.filter(p=>p.path.startsWith('/en')&&staticRoute(p.path)?.kind==='english')){
+  for(const item of report.pages.filter(p=>p.path.startsWith('/en'))){
     const html=await fs.readFile(path.join(source,item.path,'index.html'),'utf8');
+    // Only the English edition's pages; the A–Z index (/en/people/index) is a
+    // catalogue page. Read from the HTML: this script runs before generation.
+    if(!/<script id="eade-initial-page" type="application\/json">\{"schema":2,"kind":"english"/.test(html))continue;
     const data=metadataFromHtml(html,item.path);
     const key=`/english-meta/${data.slug}${data.chapter?`/capitulo/${data.chapter}`:''}.json`;
     if(index[key])throw new Error(`Duplicate metadata key: ${key}`);
