@@ -41,7 +41,7 @@ export default function SiteHeader({
 
   return (
     <header className="site-header">
-      <a className="site-brand" href={locale === "en" ? "/en/" : "/es/"} aria-label={locale === "en" ? `${SITE_NAME_EN} — home` : `${SITE_NAME} — inicio`}>
+      <a className="site-brand" href={locale === "en" ? "/en" : "/es"} aria-label={locale === "en" ? `${SITE_NAME_EN} — home` : `${SITE_NAME} — inicio`}>
         {isAtlas ? <span className={isAtlas ? 'sk dim atlas-logo-holder' : undefined}><img className="site-brand-logo" src="/brand/logo-28.webp" srcSet="/brand/logo-28.webp 1x, /brand/logo-56.webp 2x, /brand/logo-84.webp 3x" width="28" height="28" alt="" aria-hidden="true" /></span> : <img className="site-brand-logo" src="/brand/logo-28.webp" srcSet="/brand/logo-28.webp 1x, /brand/logo-56.webp 2x, /brand/logo-84.webp 3x" width="28" height="28" alt="" aria-hidden="true" />}
         <span className="site-brand-copy">
           <strong className={isAtlas ? 'sk' : undefined}>{locale === "en" ? SITE_NAME_EN : SITE_NAME}</strong>

@@ -1,0 +1,58 @@
+/* 6.0.10 · Home page: the map of Europe opens the page. */
+.public-home.home-atlas{max-width:1240px}
+.home-atlas-hero{position:relative;display:grid;grid-template-columns:minmax(0,560px) 1fr;grid-template-rows:1fr auto;gap:28px 32px;min-height:680px;padding:56px 0 30px;isolation:isolate}
+.home-atlas-map{position:absolute;z-index:-1;top:0;bottom:0;left:22%;right:calc(50% - 50vw);background:url(/home/mapa-1500-claro.webp) 38% 40%/cover no-repeat;opacity:.9;-webkit-mask-image:linear-gradient(90deg,transparent 0,#000 30%,#000 82%,transparent 100%),linear-gradient(180deg,#000 72%,transparent 100%);mask-image:linear-gradient(90deg,transparent 0,#000 30%,#000 82%,transparent 100%),linear-gradient(180deg,#000 72%,transparent 100%);-webkit-mask-composite:source-in;mask-composite:intersect}
+:root[data-eade-theme="dark"] .home-atlas-map{background-image:url(/home/mapa-1500-oscuro.webp);opacity:.82}
+.home-atlas-copy{grid-column:1;align-self:start;padding:22px 26px 26px 0;background:radial-gradient(ellipse 85% 75% at 35% 50%,var(--eade-paper) 55%,transparent 100%)}
+.home-atlas-copy h1{margin:14px 0 16px;color:var(--eade-ink);font:500 clamp(40px,5vw,64px)/1.03 var(--eade-serif);letter-spacing:-.03em}
+.home-atlas-copy>p{max-width:500px;margin:0 0 22px;color:var(--eade-muted);font-size:var(--fs-lg, 15px);line-height:1.65}
+.home-atlas-copy .home-search{margin:0;max-width:540px}
+.home-atlas-searched{margin:10px 0 0;font-size:var(--fs-sm, 12px);color:var(--eade-muted);line-height:1.9}
+.home-atlas-searched span{margin-right:4px}
+.home-atlas-searched a{margin-right:12px;color:var(--eade-wine);text-decoration:underline;text-decoration-style:dotted;text-underline-offset:3px}
+.home-atlas-copy .public-hero-actions{display:flex;flex-wrap:wrap;justify-content:flex-start;gap:12px;margin-top:24px}
+.home-atlas-copy .public-hero-actions :is(.public-primary,.public-secondary){min-height:50px;padding:0 26px;gap:10px;border-radius:999px;font-size:var(--fs-md, 14px);font-weight:650}
+.home-atlas-copy .public-hero-actions .public-secondary{background:var(--eade-paper-bright);border:1px solid var(--eade-border-strong)}
+.home-atlas-rulers{grid-column:2;justify-self:end;align-self:start;width:300px;padding:18px 18px 14px;border:1px solid var(--eade-border);border-radius:var(--r-lg, 16px);background:color-mix(in srgb,var(--eade-paper-bright) 92%,transparent);box-shadow:var(--eade-shadow-card);backdrop-filter:blur(6px)}
+.home-atlas-rulers h2{margin:6px 0 10px;font:500 22px/1.2 var(--eade-serif);color:var(--eade-ink)}
+.home-atlas-rulers ul{list-style:none;margin:0 0 12px;padding:0}
+.home-atlas-rulers li a{display:flex;gap:11px;align-items:center;padding:8px 0;border-top:1px solid var(--eade-border);color:var(--eade-ink);text-decoration:none}
+.home-atlas-rulers li a:hover strong{color:var(--eade-wine)}
+.home-atlas-rulers .home-atlas-ruler-portrait{flex:none;width:38px;height:38px;border-radius:50%;overflow:hidden;background:var(--home-art)}
+.home-atlas-rulers strong{display:block;font-size:13px;font-weight:600}
+.home-atlas-rulers small{display:block;color:var(--eade-muted);font-size:11.5px}
+.home-atlas-years{grid-column:1/-1;display:flex;align-items:center;gap:20px;padding:14px 20px;border:1px solid var(--eade-border);border-radius:var(--r-lg, 16px);background:color-mix(in srgb,var(--eade-paper-bright) 92%,transparent);backdrop-filter:blur(6px)}
+.home-atlas-years>div{position:relative;flex:1;display:flex;justify-content:space-between}
+.home-atlas-years>div::before{content:"";position:absolute;left:0;right:0;top:50%;height:1px;background:var(--eade-border-strong)}
+.home-atlas-years>div a{position:relative;padding:6px 12px;border:1px solid var(--eade-border-strong);border-radius:999px;background:var(--eade-paper-bright);color:var(--eade-ink);font:600 13px/1 var(--eade-sans);text-decoration:none}
+.home-atlas-years>div a:hover{border-color:var(--eade-wine);color:var(--eade-wine)}
+.home-atlas-years>div a[aria-current]{background:var(--eade-wine-fill);border-color:var(--eade-wine-fill);color:#fff}
+.public-home .home-atlas-stats{max-width:none;margin:8px 0 0;border-top:1px solid var(--eade-border);border-bottom:1px solid var(--eade-border)}
+/* Person of the day */
+.home-daily{display:grid;grid-template-columns:340px 1fr;gap:40px;align-items:center;padding:48px 0 30px!important;border-top:0!important}
+.home-daily-art{display:block;height:420px;border-radius:var(--r-md, 10px);overflow:hidden;background:var(--home-art)}
+.home-daily-copy h2{margin:10px 0 6px;font:500 clamp(34px,4vw,50px)/1.05 var(--eade-serif);letter-spacing:-.025em}
+.home-daily-copy h2 a{color:var(--eade-ink);text-decoration:none}
+.home-daily-copy h2 a:hover{color:var(--eade-wine)}
+.home-daily-meta{margin:0 0 18px;color:var(--eade-gold);font:italic 17px/1.4 var(--eade-serif)}
+.home-daily-text{max-width:640px;margin:0;color:var(--eade-ink);font:17px/1.65 var(--eade-serif)}
+.home-daily-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px}
+.home-daily-actions :is(.public-primary,.public-secondary){min-height:46px;padding:0 22px;gap:9px;border-radius:999px;font-weight:650}
+/* Reserved space while the person of the day loads. */
+.home-daily-loading{min-height:420px}
+/* Dynasty cards: arms on a plain ground. */
+.home-feature-art.home-dynasty-art{height:220px}
+.home-dynasty-art .home-feature-arrow{background:var(--eade-wine-fill);color:#fff}
+.home-dynasty-art{display:grid;place-items:center;background:var(--eade-paper-soft);border:1px solid var(--eade-border)}
+.home-feature-dynasty .home-feature-copy p{display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+@media (max-width:980px){
+  .home-atlas-hero{grid-template-columns:1fr;min-height:0;padding-top:0}
+  .home-atlas-map{position:relative;z-index:0;grid-row:1;left:auto;right:auto;margin:0;border-radius:var(--r-md, 10px);height:220px;-webkit-mask-image:linear-gradient(180deg,#000 70%,transparent);mask-image:linear-gradient(180deg,#000 70%,transparent)}
+  .home-atlas-copy{grid-column:1;padding:0;background:none}
+  .home-atlas-rulers{grid-column:1;justify-self:stretch;width:auto}
+  .home-atlas-years{flex-wrap:wrap}
+  .home-atlas-years>div{flex-basis:100%;flex-wrap:wrap;gap:8px;justify-content:flex-start;order:2}
+  .home-atlas-years>div::before{display:none}
+  .home-daily{grid-template-columns:1fr;gap:22px}
+  .home-daily-art{height:320px}
+}

@@ -320,3 +320,13 @@ html .public-not-found>section>span{color:#7c5426}
 
 .public-portrait-alternative > span,
 .public-portrait-alternative > small { display: block; margin-top: 3px; }
+
+/* 6.0.10 · A–Z people index */
+.people-index-letters { display:flex; flex-wrap:wrap; gap:6px; margin:18px 0 8px; }
+.people-index-letters a { min-width:36px; height:36px; display:grid; place-items:center; border:1px solid var(--eade-border); border-radius:8px; font:400 17px var(--eade-serif); color:var(--eade-wine); text-decoration:none; }
+.people-index-group { margin-top:28px; scroll-margin-top:90px; }
+.people-index-group h2 { font:400 30px var(--eade-serif); border-bottom:1px solid var(--eade-border); padding-bottom:6px; }
+.people-index-group ul { list-style:none; padding:0; margin:10px 0 0; columns:3 260px; column-gap:28px; }
+.people-index-group li { break-inside:avoid; padding:5px 0; font-size:14px; line-height:1.4; }
+.people-index-group li a { color:var(--eade-ink); }
+.people-index-group li span { display:block; color:var(--eade-muted); font-size:12px; }

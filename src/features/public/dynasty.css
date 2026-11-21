@@ -32,9 +32,10 @@
 .dynasty-connection p { color: var(--eade-muted); font-size: var(--fs-md, 13px); line-height: 1.7; }
 .dynasty-more { margin-top: 18px; }
 .dynasty-governments { margin: 26px 0; }
-.dynasty-governments > summary { cursor: pointer; color: var(--eade-wine); font: 600 var(--fs-md, 13px)/1.5 var(--eade-sans); }
-.dynasty-governments li { margin-block: 12px; }
-.dynasty-governments li span, .dynasty-governments li small { display: block; margin-top: 4px; }
+.dynasty-governments .territory-table { overflow: auto; }
+.dynasty-governments table { width: 100%; border-collapse: collapse; text-align: left; font-size: .95rem; }
+.dynasty-governments th, .dynasty-governments td { padding: .7rem; border-bottom: 1px solid var(--eade-border); vertical-align: top; }
+.dynasty-governments td small { display: block; margin-top: 4px; }
 .dynasty-sources { margin-top: 24px; }
 @media (max-width: 900px) { .dynasty-history { grid-template-columns: 1fr; } }
 @media (max-width: 620px) { .dynasty-branches { grid-template-columns: 1fr; } .dynasty-nav { gap: 12px 18px; } }

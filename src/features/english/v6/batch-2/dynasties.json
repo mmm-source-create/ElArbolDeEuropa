@@ -1178,7 +1178,7 @@
           "desde": 1180,
           "hasta": 1183,
           "titulo": "Duke",
-          "clase": "ducat",
+          "clase": "Duchy",
           "condicion": "Cash",
           "persona": {
             "id": "OTTO1BAV",
@@ -1196,7 +1196,7 @@
           "desde": 1183,
           "hasta": 1231,
           "titulo": "Duke",
-          "clase": "ducat",
+          "clase": "Duchy",
           "condicion": "Cash",
           "persona": {
             "id": "LUIS1BAV",
@@ -1214,7 +1214,7 @@
           "desde": 1231,
           "hasta": 1253,
           "titulo": "Duke",
-          "clase": "ducat",
+          "clase": "Duchy",
           "condicion": "Cash",
           "persona": {
             "id": "OTTO2BAV",
@@ -1232,7 +1232,7 @@
           "desde": 1253,
           "hasta": 1294,
           "titulo": "Duke",
-          "clase": "ducat",
+          "clase": "Duchy",
           "condicion": "branch",
           "ambito": "Louis II of Bavaria",
           "persona": {
@@ -1251,7 +1251,7 @@
           "desde": 1253,
           "hasta": 1290,
           "titulo": "Duke",
-          "clase": "ducat",
+          "clase": "Duchy",
           "condicion": "branch",
           "ambito": "Henry XIII of Bavaria",
           "persona": {
@@ -1270,7 +1270,7 @@
           "desde": 1290,
           "hasta": 1312,
           "titulo": "Duke",
-          "clase": "ducat",
+          "clase": "Duchy",
           "condicion": "branch",
           "ambito": "Otto III of Bavaria",
           "persona": {
@@ -1289,7 +1289,7 @@
           "desde": 1290,
           "hasta": 1296,
           "titulo": "Duke",
-          "clase": "ducat",
+          "clase": "Duchy",
           "condicion": "branch",
           "ambito": "Louis III of Bavaria",
           "persona": {
@@ -1308,7 +1308,7 @@
           "desde": 1290,
           "hasta": 1310,
           "titulo": "Duke",
-          "clase": "ducat",
+          "clase": "Duchy",
           "condicion": "branch",
           "ambito": "Stephen I of Bavaria",
           "persona": {
@@ -1327,7 +1327,7 @@
           "desde": 1294,
           "hasta": 1317,
           "titulo": "Duke",
-          "clase": "ducat",
+          "clase": "Duchy",
           "condicion": "branch",
           "ambito": "Rodolfo I of the Palatinate",
           "persona": {
@@ -1346,7 +1346,7 @@
           "desde": 1294,
           "hasta": 1347,
           "titulo": "Duke",
-          "clase": "ducat",
+          "clase": "Duchy",
           "condicion": "Cash",
           "persona": {
             "id": "LUIS4",
@@ -1382,7 +1382,7 @@
           "desde": 1312,
           "hasta": 1339,
           "titulo": "Duke",
-          "clase": "ducat",
+          "clase": "Duchy",
           "condicion": "branch",
           "ambito": "Henry XIV of Bavaria",
           "persona": {
@@ -1401,7 +1401,7 @@
           "desde": 1312,
           "hasta": 1334,
           "titulo": "Duke",
-          "clase": "ducat",
+          "clase": "Duchy",
           "condicion": "branch",
           "ambito": "Otto IV of Bavaria",
           "persona": {
@@ -1420,7 +1420,7 @@
           "desde": 1312,
           "hasta": 1333,
           "titulo": "Duke",
-          "clase": "ducat",
+          "clase": "Duchy",
           "condicion": "branch",
           "ambito": "Henry XV of Bavaria",
           "persona": {
@@ -1475,7 +1475,7 @@
           "desde": 1339,
           "hasta": 1340,
           "titulo": "Duke",
-          "clase": "ducat",
+          "clase": "Duchy",
           "condicion": "branch",
           "ambito": "John I of Bavaria",
           "persona": {
@@ -1494,7 +1494,7 @@
           "desde": 1347,
           "hasta": 1361,
           "titulo": "Duke",
-          "clase": "ducat",
+          "clase": "Duchy",
           "condicion": "branch",
           "ambito": "Louis V of Bavaria",
           "persona": {
@@ -1513,7 +1513,7 @@
           "desde": 1347,
           "hasta": 1375,
           "titulo": "Duke",
-          "clase": "ducat",
+          "clase": "Duchy",
           "condicion": "branch",
           "ambito": "Stephen II of Bavaria",
           "persona": {
@@ -1532,7 +1532,7 @@
           "desde": 1347,
           "hasta": 1351,
           "titulo": "Duke",
-          "clase": "ducat",
+          "clase": "Duchy",
           "condicion": "branch",
           "ambito": "Louis VI of Bavaria",
           "persona": {
@@ -1551,7 +1551,7 @@
           "desde": 1347,
           "hasta": 1358,
           "titulo": "Duke",
-          "clase": "ducat",
+          "clase": "Duchy",
           "condicion": "branch",
           "ambito": "William I of Bavaria-Straubing",
           "persona": {
@@ -1570,7 +1570,7 @@
           "desde": 1347,
           "hasta": 1404,
           "titulo": "Duke",
-          "clase": "ducat",
+          "clase": "Duchy",
           "condicion": "branch",
           "ambito": "Albert I of Bavaria-Straubing",
           "persona": {
@@ -1589,7 +1589,7 @@
           "desde": 1347,
           "hasta": 1351,
           "titulo": "Duke",
-          "clase": "ducat",
+          "clase": "Duchy",
           "condicion": "branch",
           "ambito": "Otto VII of Bavaria",
           "persona": {
@@ -1776,7 +1776,7 @@
           "desde": 1359,
           "hasta": 1389,
           "titulo": "Duke",
-          "clase": "ducat",
+          "clase": "Duchy",
           "condicion": "holder",
           "ambito": "Bavaria-Straubing; Alberto exercises government",
           "persona": {
@@ -1795,7 +1795,7 @@
           "desde": 1361,
           "hasta": 1363,
           "titulo": "Duke",
-          "clase": "ducat",
+          "clase": "Duchy",
           "condicion": "branch",
           "ambito": "Meinhard of Bavaria",
           "persona": {
@@ -1814,7 +1814,7 @@
           "desde": 1375,
           "hasta": 1413,
           "titulo": "Duke",
-          "clase": "ducat",
+          "clase": "Duchy",
           "condicion": "branch",
           "ambito": "Stephen III of Bavaria",
           "persona": {
@@ -1833,7 +1833,7 @@
           "desde": 1375,
           "hasta": 1393,
           "titulo": "Duke",
-          "clase": "ducat",
+          "clase": "Duchy",
           "condicion": "branch",
           "ambito": "Frederick of Bavaria-Landshut",
           "persona": {
@@ -1852,7 +1852,7 @@
           "desde": 1375,
           "hasta": 1397,
           "titulo": "Duke",
-          "clase": "ducat",
+          "clase": "Duchy",
           "condicion": "branch",
           "ambito": "John II of Bavaria-Munich",
           "persona": {
@@ -1871,7 +1871,7 @@
           "desde": 1375,
           "hasta": 1379,
           "titulo": "Duke",
-          "clase": "ducat",
+          "clase": "Duchy",
           "condicion": "branch",
           "ambito": "Otto VII of Bavaria",
           "persona": {
@@ -1944,7 +1944,7 @@
           "desde": 1389,
           "hasta": 1397,
           "titulo": "Duke",
-          "clase": "ducat",
+          "clase": "Duchy",
           "condicion": "branch",
           "ambito": "Albert II of Bavaria-Straubing",
           "persona": {
@@ -1981,7 +1981,7 @@
           "desde": 1393,
           "hasta": 1450,
           "titulo": "Duke",
-          "clase": "ducat",
+          "clase": "Duchy",
           "condicion": "branch",
           "ambito": "Henry XVI of Bavaria-Landshut",
           "persona": {
@@ -2000,7 +2000,7 @@
           "desde": 1397,
           "hasta": 1438,
           "titulo": "Duke",
-          "clase": "ducat",
+          "clase": "Duchy",
           "condicion": "branch",
           "ambito": "Ernesto of Bavaria-Munich",
           "persona": {
@@ -2019,7 +2019,7 @@
           "desde": 1397,
           "hasta": 1435,
           "titulo": "Duke",
-          "clase": "ducat",
+          "clase": "Duchy",
           "condicion": "branch",
           "ambito": "William III of Bavaria-Munich",
           "persona": {
@@ -2074,7 +2074,7 @@
           "desde": 1404,
           "hasta": 1417,
           "titulo": "Duke",
-          "clase": "ducat",
+          "clase": "Duchy",
           "condicion": "branch",
           "ambito": "William II of Bavaria-Straubing",
           "persona": {
@@ -2164,7 +2164,7 @@
           "desde": 1413,
           "hasta": 1443,
           "titulo": "Duke",
-          "clase": "ducat",
+          "clase": "Duchy",
           "condicion": "branch",
           "ambito": "Louis VII of Bavaria-Ingolstadt",
           "persona": {
@@ -2183,7 +2183,7 @@
           "desde": 1417,
           "hasta": 1425,
           "titulo": "Duke",
-          "clase": "ducat",
+          "clase": "Duchy",
           "condicion": "branch",
           "ambito": "John III of Bavaria-Straubing",
           "persona": {
@@ -2389,7 +2389,7 @@
           "desde": 1438,
           "hasta": 1460,
           "titulo": "Duke",
-          "clase": "ducat",
+          "clase": "Duchy",
           "condicion": "branch",
           "ambito": "Albert III of Bavaria-Munich",
           "persona": {
@@ -2462,7 +2462,7 @@
           "desde": 1443,
           "hasta": 1445,
           "titulo": "Duke",
-          "clase": "ducat",
+          "clase": "Duchy",
           "condicion": "branch",
           "ambito": "Louis VIII of Bavaria-Ingolstadt",
           "persona": {
@@ -2497,7 +2497,7 @@
           "desde": 1450,
           "hasta": 1479,
           "titulo": "Duke",
-          "clase": "ducat",
+          "clase": "Duchy",
           "condicion": "branch",
           "ambito": "Louis IX of Bavaria-Landshut",
           "persona": {
@@ -2516,7 +2516,7 @@
           "desde": 1460,
           "hasta": 1463,
           "titulo": "Duke",
-          "clase": "ducat",
+          "clase": "Duchy",
           "condicion": "branch",
           "ambito": "John IV of Bavaria-Munich",
           "persona": {
@@ -2535,7 +2535,7 @@
           "desde": 1460,
           "hasta": 1467,
           "titulo": "Duke",
-          "clase": "ducat",
+          "clase": "Duchy",
           "condicion": "branch",
           "ambito": "Bavaria-Munich",
           "persona": {
@@ -2554,7 +2554,7 @@
           "desde": 1465,
           "hasta": 1504,
           "titulo": "Duke",
-          "clase": "ducat",
+          "clase": "Duchy",
           "condicion": "branch",
           "ambito": "Bavaria-Munich",
           "persona": {
@@ -2573,7 +2573,7 @@
           "desde": 1468,
           "hasta": 1501,
           "titulo": "Duke",
-          "clase": "ducat",
+          "clase": "Duchy",
           "condicion": "holder",
           "ambito": "Use and rents; withdrawn from the Bavarian-Múnich government",
           "persona": {
@@ -2608,7 +2608,7 @@
           "desde": 1479,
           "hasta": 1503,
           "titulo": "Duke",
-          "clase": "ducat",
+          "clase": "Duchy",
           "condicion": "branch",
           "ambito": "George of Bavaria-Landshut",
           "persona": {
@@ -2627,7 +2627,7 @@
           "desde": 1505,
           "hasta": 1508,
           "titulo": "Duke",
-          "clase": "ducat",
+          "clase": "Duchy",
           "condicion": "Cash",
           "ambito": "Albert IV of Bavaria",
           "persona": {
@@ -2664,7 +2664,7 @@
           "desde": 1508,
           "hasta": 1550,
           "titulo": "Duke",
-          "clase": "ducat",
+          "clase": "Duchy",
           "condicion": "Cash",
           "persona": {
             "id": "GUILLERMO4BAV",
@@ -2698,7 +2698,7 @@
           "desde": 1516,
           "hasta": 1545,
           "titulo": "Duke",
-          "clase": "ducat",
+          "clase": "Duchy",
           "condicion": "co-regent",
           "nota": "Shared authority; not interpreted as exclusive succession.",
           "persona": {
@@ -2717,7 +2717,7 @@
           "desde": 1522,
           "hasta": 1541,
           "titulo": "Duke",
-          "clase": "ducat",
+          "clase": "Duchy",
           "condicion": "co-regent",
           "nota": "He ruled with his brother Philip; between 1535 and 1541 there was a division of his areas of authority.",
           "persona": {
@@ -2736,7 +2736,7 @@
           "desde": 1522,
           "hasta": 1541,
           "titulo": "Duke",
-          "clase": "ducat",
+          "clase": "Duchy",
           "condicion": "co-regent",
           "nota": "He ruled with his brother Otto Henry; between 1535 and 1541 there was a division of his areas of authority.",
           "persona": {
@@ -2755,7 +2755,7 @@
           "desde": 1541,
           "hasta": 1557,
           "titulo": "Duke",
-          "clase": "ducat",
+          "clase": "Duchy",
           "condicion": "Cash",
           "nota": "The estates managed much of the principality during the financial crisis of 1544–1546.",
           "persona": {
@@ -2790,7 +2790,7 @@
           "desde": 1550,
           "hasta": 1579,
           "titulo": "Duke",
-          "clase": "ducat",
+          "clase": "Duchy",
           "condicion": "Cash",
           "persona": {
             "id": "ALB5BAV",
@@ -2826,7 +2826,7 @@
           "desde": 1557,
           "hasta": 1569,
           "titulo": "Duke",
-          "clase": "ducat",
+          "clase": "Duchy",
           "condicion": "Cash",
           "nota": "Otto Henry gave him the principality after gaining access to electoral dignity; he was his cousin and creditor.",
           "persona": {
@@ -2861,7 +2861,7 @@
           "desde": 1569,
           "hasta": 1614,
           "titulo": "Duke",
-          "clase": "ducat",
+          "clase": "Duchy",
           "condicion": "Cash",
           "persona": {
             "id": "PHILIPLOUISNEUBURG",
@@ -2895,7 +2895,7 @@
           "desde": 1579,
           "hasta": 1597,
           "titulo": "Duke",
-          "clase": "ducat",
+          "clase": "Duchy",
           "condicion": "Cash",
           "persona": {
             "id": "GUILLERMO5BAV",
@@ -2931,7 +2931,7 @@
           "desde": 1597,
           "hasta": 1651,
           "titulo": "Duke",
-          "clase": "ducat",
+          "clase": "Duchy",
           "condicion": "Cash",
           "persona": {
             "id": "MAX1BAV",
@@ -2967,7 +2967,7 @@
           "desde": 1614,
           "hasta": 1653,
           "titulo": "Duke",
-          "clase": "ducat",
+          "clase": "Duchy",
           "condicion": "Cash",
           "persona": {
             "id": "WOLFGANGWILHELMNEUBURG",
@@ -2985,7 +2985,7 @@
           "desde": 1614,
           "hasta": 1653,
           "titulo": "Duke",
-          "clase": "ducat",
+          "clase": "Duchy",
           "condicion": "Cash",
           "persona": {
             "id": "WOLFGANGWILHELMNEUBURG",
@@ -3003,7 +3003,7 @@
           "desde": 1614,
           "hasta": 1653,
           "titulo": "Duke",
-          "clase": "ducat",
+          "clase": "Duchy",
           "condicion": "Cash",
           "persona": {
             "id": "WOLFGANGWILHELMNEUBURG",
@@ -3091,7 +3091,7 @@
           "desde": 1646,
           "hasta": 1666,
           "titulo": "Duke",
-          "clase": "ducat",
+          "clase": "Duchy",
           "condicion": "branch",
           "ambito": "Albert VI of Bavaria-Leuchtenberg",
           "persona": {
@@ -3145,7 +3145,7 @@
           "desde": 1653,
           "hasta": 1690,
           "titulo": "Duke",
-          "clase": "ducat",
+          "clase": "Duchy",
           "condicion": "Cash",
           "persona": {
             "id": "PHILIPWILHELMPAL",
@@ -3161,7 +3161,7 @@
           "desde": 1653,
           "hasta": 1690,
           "titulo": "Duke",
-          "clase": "ducat",
+          "clase": "Duchy",
           "condicion": "Cash",
           "persona": {
             "id": "PHILIPWILHELMPAL",
@@ -3177,7 +3177,7 @@
           "desde": 1653,
           "hasta": 1690,
           "titulo": "Duke",
-          "clase": "ducat",
+          "clase": "Duchy",
           "condicion": "Cash",
           "persona": {
             "id": "PHILIPWILHELMPAL",
@@ -3229,7 +3229,7 @@
           "desde": 1666,
           "hasta": 1705,
           "titulo": "Duke",
-          "clase": "ducat",
+          "clase": "Duchy",
           "condicion": "branch",
           "ambito": "Maximilian Philip Jerome of Bavaria-Leuchtenberg",
           "persona": {
@@ -3316,7 +3316,7 @@
           "desde": 1690,
           "hasta": 1716,
           "titulo": "Duke",
-          "clase": "ducat",
+          "clase": "Duchy",
           "condicion": "Cash",
           "persona": {
             "id": "JUANGUILLERMOPAL",
@@ -3334,7 +3334,7 @@
           "desde": 1690,
           "hasta": 1716,
           "titulo": "Duke",
-          "clase": "ducat",
+          "clase": "Duchy",
           "condicion": "Cash",
           "persona": {
             "id": "JUANGUILLERMOPAL",
@@ -3352,7 +3352,7 @@
           "desde": 1690,
           "hasta": 1716,
           "titulo": "Duke",
-          "clase": "ducat",
+          "clase": "Duchy",
           "condicion": "Cash",
           "persona": {
             "id": "JUANGUILLERMOPAL",
@@ -3388,7 +3388,7 @@
           "desde": 1716,
           "hasta": 1742,
           "titulo": "Duke",
-          "clase": "ducat",
+          "clase": "Duchy",
           "condicion": "Cash",
           "ambito": "Nucleus of Neuburg and Burglengenfeld",
           "persona": {
@@ -3426,7 +3426,7 @@
           "desde": 1716,
           "hasta": 1742,
           "titulo": "Duke",
-          "clase": "ducat",
+          "clase": "Duchy",
           "condicion": "Cash",
           "nota": "It happens to his brother John William in 1716 in the Palatinate and in the Duchys of New York, Jülich and Berg.",
           "persona": {
@@ -3445,7 +3445,7 @@
           "desde": 1716,
           "hasta": 1742,
           "titulo": "Duke",
-          "clase": "ducat",
+          "clase": "Duchy",
           "condicion": "Cash",
           "nota": "It happens to his brother John William in 1716 in the Palatinate and in the Duchys of New York, Jülich and Berg.",
           "persona": {
@@ -3482,7 +3482,7 @@
           "desde": 1726,
           "hasta": 1745,
           "titulo": "Duke",
-          "clase": "ducat",
+          "clase": "Duchy",
           "condicion": "Cash",
           "persona": {
             "id": "CARLOS7HRE",
@@ -3554,7 +3554,7 @@
           "desde": 1742,
           "hasta": 1799,
           "titulo": "Duke",
-          "clase": "ducat",
+          "clase": "Duchy",
           "condicion": "Cash",
           "ambito": "Neuburg and Burglengenfeld; personal union with Bavaria from 1777/1778",
           "persona": {
@@ -3592,7 +3592,7 @@
           "desde": 1742,
           "hasta": 1799,
           "titulo": "Duke",
-          "clase": "ducat",
+          "clase": "Duchy",
           "condicion": "Cash",
           "nota": "It happens to Charles III Philip in late 1742 as palatine Elector and Duke of Newburg and Jülich-Berg.",
           "persona": {
@@ -3611,7 +3611,7 @@
           "desde": 1742,
           "hasta": 1799,
           "titulo": "Duke",
-          "clase": "ducat",
+          "clase": "Duchy",
           "condicion": "Cash",
           "nota": "It happens to Charles III Philip in late 1742 as palatine Elector and Duke of Newburg and Jülich-Berg.",
           "persona": {
@@ -3710,7 +3710,7 @@
           "desde": 1799,
           "hasta": 1806,
           "titulo": "Duke",
-          "clase": "ducat",
+          "clase": "Duchy",
           "condicion": "Cash",
           "nota": "He renounced Berg in the division following the peace of Presburg (26 December 1805).",
           "persona": {
@@ -4229,7 +4229,7 @@
           "desde": 1377,
           "hasta": 1381,
           "titulo": "Grand Duke",
-          "clase": "large_ducted",
+          "clase": "Grand duchy",
           "condicion": "Cash",
           "persona": {
             "id": "LADI2",
@@ -4247,7 +4247,7 @@
           "desde": 1382,
           "hasta": 1391,
           "titulo": "Grand Duke",
-          "clase": "large_ducted",
+          "clase": "Grand duchy",
           "condicion": "Cash",
           "persona": {
             "id": "LADI2",
@@ -4283,7 +4283,7 @@
           "desde": 1392,
           "hasta": 1434,
           "titulo": "Grand Duke supreme",
-          "clase": "large_ducted",
+          "clase": "Grand duchy",
           "condicion": "co-regent",
           "nota": "Dynastic superiority of Jogaila; Vitautas has been in rule of Lithuania since 1392 and the pact of 1401 confirms his position.",
           "persona": {
@@ -4380,7 +4380,7 @@
           "desde": 1440,
           "hasta": 1492,
           "titulo": "Grand Duke",
-          "clase": "large_ducted",
+          "clase": "Grand duchy",
           "condicion": "Cash",
           "persona": {
             "id": "CASI4",
@@ -4542,7 +4542,7 @@
           "desde": 1492,
           "hasta": 1506,
           "titulo": "Grand Duke",
-          "clase": "large_ducted",
+          "clase": "Grand duchy",
           "condicion": "Cash",
           "persona": {
             "id": "ALEJANDRO1POL",
@@ -4596,7 +4596,7 @@
           "desde": 1506,
           "hasta": 1548,
           "titulo": "Grand Duke",
-          "clase": "large_ducted",
+          "clase": "Grand duchy",
           "condicion": "Cash",
           "persona": {
             "id": "SEGIS1JAG",
@@ -4718,7 +4718,7 @@
           "desde": 1544,
           "hasta": 1548,
           "titulo": "Grand Duke",
-          "clase": "large_ducted",
+          "clase": "Grand duchy",
           "condicion": "co-regent",
           "nota": "Chosen or crowned in the life of the predecessor; non-exclusive authority.",
           "persona": {
@@ -4755,7 +4755,7 @@
           "desde": 1549,
           "hasta": 1572,
           "titulo": "Grand Duke",
-          "clase": "large_ducted",
+          "clase": "Grand duchy",
           "condicion": "Cash",
           "persona": {
             "id": "SEGIS2JAG",
@@ -4792,7 +4792,7 @@
           "desde": 1575,
           "hasta": 1587,
           "titulo": "Grand Duchess",
-          "clase": "large_ducted",
+          "clase": "Grand duchy",
           "condicion": "co-regent",
           "nota": "Shared authority; not interpreted as exclusive succession.",
           "persona": {
@@ -5432,7 +5432,7 @@
           "desde": 1213,
           "hasta": 1221,
           "titulo": "Duke",
-          "clase": "ducat",
+          "clase": "Duchy",
           "condicion": "uxoris",
           "persona": {
             "id": "PIERRE1BRET",
@@ -5475,7 +5475,7 @@
           "desde": 1221,
           "hasta": 1286,
           "titulo": "Duke",
-          "clase": "ducat",
+          "clase": "Duchy",
           "condicion": "Cash",
           "persona": {
             "id": "JUAN1BRET",
@@ -5493,7 +5493,7 @@
           "desde": 1286,
           "hasta": 1305,
           "titulo": "Duke",
-          "clase": "ducat",
+          "clase": "Duchy",
           "condicion": "Cash",
           "persona": {
             "id": "JUAN2BRET",
@@ -5511,7 +5511,7 @@
           "desde": 1305,
           "hasta": 1312,
           "titulo": "Duke",
-          "clase": "ducat",
+          "clase": "Duchy",
           "condicion": "Cash",
           "persona": {
             "id": "ARTHUR2BRET",
@@ -5529,7 +5529,7 @@
           "desde": 1312,
           "hasta": 1341,
           "titulo": "Duke",
-          "clase": "ducat",
+          "clase": "Duchy",
           "condicion": "Cash",
           "persona": {
             "id": "JOHN3BRET",
@@ -5583,7 +5583,7 @@
           "desde": 1341,
           "hasta": 1365,
           "titulo": "Duchess",
-          "clase": "ducat",
+          "clase": "Duchy",
           "condicion": "claim",
           "persona": {
             "id": "JEANNEPENTHIEVRE",
@@ -6479,7 +6479,7 @@
           "desde": 1332,
           "hasta": 1336,
           "titulo": "Duke",
-          "clase": "ducat",
+          "clase": "Duchy",
           "condicion": "Cash",
           "persona": {
             "id": "JUANDURAZZO",
@@ -6497,7 +6497,7 @@
           "desde": 1336,
           "hasta": 1348,
           "titulo": "Duke",
-          "clase": "ducat",
+          "clase": "Duchy",
           "condicion": "Cash",
           "persona": {
             "id": "CARLODURAZZO",
@@ -6533,7 +6533,7 @@
           "desde": 1369,
           "hasta": 1376,
           "titulo": "Duke",
-          "clase": "ducat",
+          "clase": "Duchy",
           "condicion": "delegated Government",
           "soberano": "LUIS1",
           "nota": "Delegated Government of Croatia and Dalmatia; Zara was his ducal residence. He was not king during this stage.",
@@ -7261,7 +7261,7 @@
           "desde": 1530,
           "hasta": 1540,
           "titulo": "Duke",
-          "clase": "ducat",
+          "clase": "Duchy",
           "condicion": "Cash",
           "persona": {
             "id": "FED2GONZAGA",
@@ -7297,7 +7297,7 @@
           "desde": 1550,
           "hasta": 1587,
           "titulo": "Duke",
-          "clase": "ducat",
+          "clase": "Duchy",
           "condicion": "Cash",
           "persona": {
             "id": "GUILLERMOGONZAGA",
@@ -7333,7 +7333,7 @@
           "desde": 1574,
           "hasta": 1587,
           "titulo": "Duke",
-          "clase": "ducat",
+          "clase": "Duchy",
           "condicion": "Cash",
           "persona": {
             "id": "GUILLERMOGONZAGA",
@@ -7351,7 +7351,7 @@
           "desde": 1587,
           "hasta": 1612,
           "titulo": "Duke",
-          "clase": "ducat",
+          "clase": "Duchy",
           "condicion": "Cash",
           "persona": {
             "id": "VICENTE1GONZAGA",
@@ -7369,7 +7369,7 @@
           "desde": 1587,
           "hasta": 1612,
           "titulo": "Duke",
-          "clase": "ducat",
+          "clase": "Duchy",
           "condicion": "Cash",
           "persona": {
             "id": "VICENTE1GONZAGA",
@@ -7387,7 +7387,7 @@
           "desde": 1612,
           "hasta": 1612,
           "titulo": "Duke",
-          "clase": "ducat",
+          "clase": "Duchy",
           "condicion": "Cash",
           "persona": {
             "id": "FRANCESCO4GONZAGA",
@@ -7405,7 +7405,7 @@
           "desde": 1612,
           "hasta": 1612,
           "titulo": "Duke",
-          "clase": "ducat",
+          "clase": "Duchy",
           "condicion": "Cash",
           "persona": {
             "id": "FRANCESCO4GONZAGA",
@@ -7423,7 +7423,7 @@
           "desde": 1612,
           "hasta": 1626,
           "titulo": "Duke",
-          "clase": "ducat",
+          "clase": "Duchy",
           "condicion": "Cash",
           "persona": {
             "id": "FERDINANDOGONZAGA",
@@ -7441,7 +7441,7 @@
           "desde": 1612,
           "hasta": 1626,
           "titulo": "Duke",
-          "clase": "ducat",
+          "clase": "Duchy",
           "condicion": "Cash",
           "persona": {
             "id": "FERDINANDOGONZAGA",
@@ -7459,7 +7459,7 @@
           "desde": 1626,
           "hasta": 1627,
           "titulo": "Duke",
-          "clase": "ducat",
+          "clase": "Duchy",
           "condicion": "Cash",
           "persona": {
             "id": "VINCENZO2GONZAGA",
@@ -7477,7 +7477,7 @@
           "desde": 1626,
           "hasta": 1627,
           "titulo": "Duke",
-          "clase": "ducat",
+          "clase": "Duchy",
           "condicion": "Cash",
           "persona": {
             "id": "VINCENZO2GONZAGA",
@@ -7987,7 +7987,7 @@
           "desde": 1373,
           "hasta": 1396,
           "titulo": "Sir",
-          "clase": "Your Honor.",
+          "clase": "Lordship",
           "condicion": "Cash",
           "nota": "Regional lordship and vassalty; it is not sovereign of all Serbia.",
           "persona": {
@@ -8760,7 +8760,7 @@
           "desde": 1507,
           "hasta": 1543,
           "titulo": "Duke",
-          "clase": "ducat",
+          "clase": "Duchy",
           "condicion": "Cash",
           "persona": {
             "id": "MAGNUS1SAJLAU",
@@ -9478,7 +9478,7 @@
           "desde": 1267,
           "hasta": 1269,
           "titulo": "Grand Duke",
-          "clase": "large_ducted",
+          "clase": "Grand duchy",
           "condicion": "Cash",
           "nota": "Title of Grand Duke; the source limits the likely effective control to the south of Lithuania and the Black Ruthenia.",
           "persona": {
@@ -9661,7 +9661,7 @@
           "desde": 1547,
           "hasta": 1584,
           "titulo": "Tsar",
-          "clase": "zarate",
+          "clase": "Tsardom",
           "condicion": "Cash",
           "persona": {
             "id": "IVAN4RUS",
@@ -9679,7 +9679,7 @@
           "desde": 1584,
           "hasta": 1598,
           "titulo": "Tsar",
-          "clase": "zarate",
+          "clase": "Tsardom",
           "condicion": "Cash",
           "persona": {
             "id": "FEODOR1RUS",
@@ -9697,7 +9697,7 @@
           "desde": 1606,
           "hasta": 1610,
           "titulo": "Tsar",
-          "clase": "zarate",
+          "clase": "Tsardom",
           "condicion": "Cash",
           "nota": "Tsar in Moscow, with control disputed during the Time of Turbulences; no uniform rule is presumed over all Russia.",
           "controlDisputado": [
@@ -9928,7 +9928,7 @@
           "desde": 1392,
           "hasta": 1407,
           "titulo": "Duke",
-          "clase": "ducat",
+          "clase": "Duchy",
           "condicion": "Cash",
           "persona": {
             "id": "LUISORLEANS",
@@ -9946,7 +9946,7 @@
           "desde": 1407,
           "hasta": 1465,
           "titulo": "Duke",
-          "clase": "ducat",
+          "clase": "Duchy",
           "condicion": "Cash",
           "persona": {
             "id": "CARLOS1ORLEANS",
@@ -10003,7 +10003,7 @@
           "desde": 1499,
           "hasta": 1499,
           "titulo": "Duke",
-          "clase": "ducat",
+          "clase": "Duchy",
           "condicion": "Cash",
           "persona": {
             "id": "LUIS12FRA",
@@ -10021,7 +10021,7 @@
           "desde": 1500,
           "hasta": 1512,
           "titulo": "Duke",
-          "clase": "ducat",
+          "clase": "Duchy",
           "condicion": "Cash",
           "persona": {
             "id": "LUIS12FRA",
@@ -10057,7 +10057,7 @@
           "desde": 1514,
           "hasta": 1524,
           "titulo": "Duchess",
-          "clase": "ducat",
+          "clase": "Duchy",
           "condicion": "Cash",
           "persona": {
             "id": "CLAUDEFRA",
@@ -10628,7 +10628,7 @@
           "desde": 1262,
           "hasta": 1287,
           "titulo": "Madam",
-          "clase": "Your Honor.",
+          "clase": "Lordship",
           "condicion": "Cash",
           "persona": {
             "id": "INESDAMP",
@@ -11137,7 +11137,7 @@
           "desde": 1576,
           "hasta": 1586,
           "titulo": "Grand Duke",
-          "clase": "large_ducted",
+          "clase": "Grand duchy",
           "condicion": "Cash",
           "persona": {
             "id": "ESTEBANBATHORY",
@@ -11678,7 +11678,7 @@
           "desde": 1515,
           "hasta": 1521,
           "titulo": "Duke",
-          "clase": "ducat",
+          "clase": "Duchy",
           "condicion": "Cash",
           "persona": {
             "id": "FRAN1FRA",
@@ -11786,7 +11786,7 @@
           "desde": 1573,
           "hasta": 1575,
           "titulo": "Grand Duke",
-          "clase": "large_ducted",
+          "clase": "Grand duchy",
           "condicion": "Cash",
           "persona": {
             "id": "ENRIQ3FRA",
@@ -11822,7 +11822,7 @@
           "desde": 1576,
           "hasta": 1584,
           "titulo": "Duke",
-          "clase": "ducat",
+          "clase": "Duchy",
           "condicion": "Cash",
           "persona": {
             "id": "FRANCISCOANJOU",
@@ -12112,7 +12112,7 @@
           "desde": 1175,
           "hasta": 1187,
           "titulo": "Sir",
-          "clase": "Your Honor.",
+          "clase": "Lordship",
           "condicion": "Cash",
           "persona": {
             "id": "REYNALDCHATILLON",
@@ -12131,7 +12131,7 @@
           "desde": 1341,
           "hasta": 1364,
           "titulo": "Duke",
-          "clase": "ducat",
+          "clase": "Duchy",
           "condicion": "rival",
           "persona": {
             "id": "CHARLESBLOIS",
@@ -12506,7 +12506,7 @@
           "desde": 1276,
           "hasta": 1311,
           "titulo": "Sir",
-          "clase": "Your Honor.",
+          "clase": "Lordship",
           "condicion": "Cash",
           "nota": "Lordship of the kings of Mallorca within the kingdom of France.",
           "persona": {
@@ -12543,7 +12543,7 @@
           "desde": 1311,
           "hasta": 1324,
           "titulo": "Sir",
-          "clase": "Your Honor.",
+          "clase": "Lordship",
           "condicion": "Cash",
           "persona": {
             "id": "SANCHO1MALL",
@@ -12579,7 +12579,7 @@
           "desde": 1324,
           "hasta": 1349,
           "titulo": "Sir",
-          "clase": "Your Honor.",
+          "clase": "Lordship",
           "condicion": "Cash",
           "nota": "He sold Montpellier to the king of France on April 13, 1349.",
           "persona": {
@@ -13816,7 +13816,7 @@
           "desde": 1215,
           "hasta": 1226,
           "titulo": "Sir",
-          "clase": "Your Honor.",
+          "clase": "Lordship",
           "condicion": "Cash",
           "persona": {
             "id": "ROBERTBRUS4",
@@ -13835,7 +13835,7 @@
           "desde": 1226,
           "hasta": 1295,
           "titulo": "Sir",
-          "clase": "Your Honor.",
+          "clase": "Lordship",
           "condicion": "Cash",
           "persona": {
             "id": "ROBERTBRUS5COMP",
@@ -13854,7 +13854,7 @@
           "desde": 1295,
           "hasta": 1304,
           "titulo": "Sir",
-          "clase": "Your Honor.",
+          "clase": "Lordship",
           "condicion": "Cash",
           "persona": {
             "id": "ROBERTBRUS6",
@@ -14084,7 +14084,7 @@
           "desde": 1286,
           "hasta": 1295,
           "titulo": "Duke",
-          "clase": "ducat",
+          "clase": "Duchy",
           "condicion": "Cash",
           "nota": "Invested by Rodolfo I of Habsburg in 1286.",
           "persona": {
@@ -14103,7 +14103,7 @@
           "desde": 1295,
           "hasta": 1335,
           "titulo": "Duke",
-          "clase": "ducat",
+          "clase": "Duchy",
           "condicion": "Cash",
           "persona": {
             "id": "ENRIQCAR",
@@ -15162,7 +15162,7 @@
           "desde": 1627,
           "hasta": 1629,
           "titulo": "Viscount",
-          "clase": "Viscounted",
+          "clase": "Viscounty",
           "condicion": "Cash",
           "persona": {
             "id": "TIBBOTBOURKE",
@@ -15306,7 +15306,7 @@
           "desde": 1236,
           "hasta": 1252,
           "titulo": "Grand Duke",
-          "clase": "large_ducted",
+          "clase": "Grand duchy",
           "condicion": "Cash",
           "nota": "Approximate start of Mindaugas consolidation in the 1230s; no exact date of access.",
           "persona": {
@@ -15345,7 +15345,7 @@
           "desde": 1263,
           "hasta": 1264,
           "titulo": "Grand Duke",
-          "clase": "large_ducted",
+          "clase": "Grand duchy",
           "condicion": "Cash",
           "persona": {
             "id": "TRENIOTALIT",
@@ -15364,7 +15364,7 @@
           "desde": 1264,
           "hasta": 1267,
           "titulo": "Grand Duke",
-          "clase": "large_ducted",
+          "clase": "Grand duchy",
           "condicion": "Cash",
           "persona": {
             "id": "VAISELGALIT",
@@ -15892,7 +15892,7 @@
           "desde": 1674,
           "hasta": 1696,
           "titulo": "Grand Duke",
-          "clase": "large_ducted",
+          "clase": "Grand duchy",
           "condicion": "Cash",
           "persona": {
             "id": "JUAN3SOBIESKI",
@@ -16428,7 +16428,7 @@
           "desde": 1203,
           "hasta": 1221,
           "titulo": "Duchess",
-          "clase": "ducat",
+          "clase": "Duchy",
           "condicion": "Cash",
           "persona": {
             "id": "ALIXTHOUARS",
@@ -16622,7 +16622,7 @@
           "desde": 1378,
           "hasta": 1395,
           "titulo": "Sir",
-          "clase": "Your Honor.",
+          "clase": "Lordship",
           "condicion": "Cash",
           "nota": "Tax government in the Eastern Vardar; provincial annexation occurs after his death1395.",
           "persona": {
@@ -17175,7 +17175,7 @@
           "desde": 1270,
           "hasta": 1282,
           "titulo": "Grand Duke",
-          "clase": "large_ducted",
+          "clase": "Grand duchy",
           "condicion": "Cash",
           "nota": "Access dated 1269 or 1270; adopted 1270 as annual conservative cut.",
           "persona": {

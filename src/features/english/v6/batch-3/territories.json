@@ -4125,7 +4125,7 @@
           "desde": 1183,
           "hasta": 1235,
           "titulo": "Duke",
-          "clase": "Duct",
+          "clase": "Duchy",
           "condicion": "cash",
           "persona": {
             "id": "ENRIQ1BR",
@@ -4170,7 +4170,7 @@
           "desde": 1235,
           "hasta": 1248,
           "titulo": "Duke",
-          "clase": "Duct",
+          "clase": "Duchy",
           "condicion": "cash",
           "persona": {
             "id": "ENRIQ2BR",
@@ -4247,7 +4247,7 @@
           "desde": 1248,
           "hasta": 1261,
           "titulo": "Duke",
-          "clase": "Duct",
+          "clase": "Duchy",
           "condicion": "cash",
           "persona": {
             "id": "ENRIQ3BR",
@@ -4292,7 +4292,7 @@
           "desde": 1261,
           "hasta": 1267,
           "titulo": "Duke",
-          "clase": "Duct",
+          "clase": "Duchy",
           "condicion": "cash",
           "persona": {
             "id": "ENRIQ4BRAB",
@@ -4307,7 +4307,7 @@
           "desde": 1267,
           "hasta": 1294,
           "titulo": "Duke",
-          "clase": "Duct",
+          "clase": "Duchy",
           "condicion": "cash",
           "persona": {
             "id": "JUAN1BR",
@@ -4352,7 +4352,7 @@
           "desde": 1288,
           "hasta": 1294,
           "titulo": "Duke",
-          "clase": "Duct",
+          "clase": "Duchy",
           "condicion": "cash",
           "persona": {
             "id": "JUAN1BR",
@@ -4367,7 +4367,7 @@
           "desde": 1294,
           "hasta": 1312,
           "titulo": "Duke",
-          "clase": "Duct",
+          "clase": "Duchy",
           "condicion": "cash",
           "persona": {
             "id": "JUAN2BRAB",
@@ -4382,7 +4382,7 @@
           "desde": 1294,
           "hasta": 1312,
           "titulo": "Duke",
-          "clase": "Duct",
+          "clase": "Duchy",
           "condicion": "cash",
           "persona": {
             "id": "JUAN2BRAB",
@@ -4517,7 +4517,7 @@
           "desde": 1312,
           "hasta": 1355,
           "titulo": "Duke",
-          "clase": "Duct",
+          "clase": "Duchy",
           "condicion": "cash",
           "persona": {
             "id": "JUAN3BRAB",
@@ -4532,7 +4532,7 @@
           "desde": 1312,
           "hasta": 1355,
           "titulo": "Duke",
-          "clase": "Duct",
+          "clase": "Duchy",
           "condicion": "cash",
           "persona": {
             "id": "JUAN3BRAB",
@@ -4622,7 +4622,7 @@
           "desde": 1339,
           "hasta": 1343,
           "titulo": "Duke",
-          "clase": "Duct",
+          "clase": "Duchy",
           "condicion": "cash",
           "persona": {
             "id": "REIN2GUELD",
@@ -4637,7 +4637,7 @@
           "desde": 1343,
           "hasta": 1361,
           "titulo": "Duke",
-          "clase": "Duct",
+          "clase": "Duchy",
           "condicion": "cash",
           "persona": {
             "id": "REIN3GUELD",
@@ -4742,7 +4742,7 @@
           "desde": 1355,
           "hasta": 1383,
           "titulo": "Duke",
-          "clase": "Duct",
+          "clase": "Duchy",
           "condicion": "jure uxoris",
           "nota": "Duke of Brabant and Limburg for her marriage to the Duchess of Joan.",
           "persona": {
@@ -4758,7 +4758,7 @@
           "desde": 1355,
           "hasta": 1406,
           "titulo": "Duchess",
-          "clase": "Duct",
+          "clase": "Duchy",
           "condicion": "cash",
           "persona": {
             "id": "JUANABR",
@@ -4773,7 +4773,7 @@
           "desde": 1355,
           "hasta": 1406,
           "titulo": "Duchess",
-          "clase": "Duct",
+          "clase": "Duchy",
           "condicion": "cash",
           "persona": {
             "id": "JUANABR",
@@ -4899,7 +4899,7 @@
           "desde": 1361,
           "hasta": 1371,
           "titulo": "Duke",
-          "clase": "Duct",
+          "clase": "Duchy",
           "condicion": "cash",
           "persona": {
             "id": "EDUARDGUELD",
@@ -4914,7 +4914,7 @@
           "desde": 1371,
           "hasta": 1371,
           "titulo": "Duke",
-          "clase": "Duct",
+          "clase": "Duchy",
           "condicion": "cash",
           "persona": {
             "id": "REIN3GUELD",
@@ -4929,7 +4929,7 @@
           "desde": 1371,
           "hasta": 1379,
           "titulo": "Duchess",
-          "clase": "Duct",
+          "clase": "Duchy",
           "condicion": "claim",
           "nota": "The rival claim of the descendants of Mary of Guelders.",
           "persona": {
@@ -4945,7 +4945,7 @@
           "desde": 1371,
           "hasta": 1379,
           "titulo": "Duke",
-          "clase": "Duct",
+          "clase": "Duchy",
           "condicion": "disputed",
           "persona": {
             "id": "GUIL1GUELD",
@@ -4960,7 +4960,7 @@
           "desde": 1379,
           "hasta": 1402,
           "titulo": "Duke",
-          "clase": "Duct",
+          "clase": "Duchy",
           "condicion": "cash",
           "persona": {
             "id": "GUIL1GUELD",
@@ -5051,7 +5051,7 @@
           "desde": 1402,
           "hasta": 1423,
           "titulo": "Duke",
-          "clase": "Duct",
+          "clase": "Duchy",
           "condicion": "cash",
           "persona": {
             "id": "REIN4GUELD",
@@ -5127,7 +5127,7 @@
           "desde": 1406,
           "hasta": 1415,
           "titulo": "Duke",
-          "clase": "Duct",
+          "clase": "Duchy",
           "condicion": "cash",
           "persona": {
             "id": "ANTONBRAB",
@@ -5142,7 +5142,7 @@
           "desde": 1406,
           "hasta": 1415,
           "titulo": "Duke",
-          "clase": "Duct",
+          "clase": "Duchy",
           "condicion": "cash",
           "persona": {
             "id": "ANTONBRAB",
@@ -5157,7 +5157,7 @@
           "desde": 1415,
           "hasta": 1427,
           "titulo": "Duke",
-          "clase": "Duct",
+          "clase": "Duchy",
           "condicion": "cash",
           "persona": {
             "id": "JOHN4BRAB",
@@ -5172,7 +5172,7 @@
           "desde": 1415,
           "hasta": 1427,
           "titulo": "Duke",
-          "clase": "Duct",
+          "clase": "Duchy",
           "condicion": "cash",
           "persona": {
             "id": "JOHN4BRAB",
@@ -5282,7 +5282,7 @@
           "desde": 1423,
           "hasta": 1465,
           "titulo": "Duke",
-          "clase": "Duct",
+          "clase": "Duchy",
           "condicion": "cash",
           "persona": {
             "id": "ARNOLDEGMOND",
@@ -5297,7 +5297,7 @@
           "desde": 1427,
           "hasta": 1430,
           "titulo": "Duke",
-          "clase": "Duct",
+          "clase": "Duchy",
           "condicion": "cash",
           "persona": {
             "id": "PHILSTPOL",
@@ -5312,7 +5312,7 @@
           "desde": 1427,
           "hasta": 1430,
           "titulo": "Duke",
-          "clase": "Duct",
+          "clase": "Duchy",
           "condicion": "cash",
           "persona": {
             "id": "PHILSTPOL",
@@ -5423,7 +5423,7 @@
           "desde": 1430,
           "hasta": 1467,
           "titulo": "Duke",
-          "clase": "Duct",
+          "clase": "Duchy",
           "condicion": "cash",
           "persona": {
             "id": "FEL3BORG",
@@ -5438,7 +5438,7 @@
           "desde": 1430,
           "hasta": 1467,
           "titulo": "Duke",
-          "clase": "Duct",
+          "clase": "Duchy",
           "condicion": "cash",
           "persona": {
             "id": "FEL3BORG",
@@ -5498,7 +5498,7 @@
           "desde": 1465,
           "hasta": 1471,
           "titulo": "Duke",
-          "clase": "Duct",
+          "clase": "Duchy",
           "condicion": "cash",
           "persona": {
             "id": "ADOLFEGMOND",
@@ -5528,7 +5528,7 @@
           "desde": 1467,
           "hasta": 1477,
           "titulo": "Duke",
-          "clase": "Duct",
+          "clase": "Duchy",
           "condicion": "cash",
           "persona": {
             "id": "CAR1BORG",
@@ -5543,7 +5543,7 @@
           "desde": 1467,
           "hasta": 1477,
           "titulo": "Duke",
-          "clase": "Duct",
+          "clase": "Duchy",
           "condicion": "cash",
           "persona": {
             "id": "CAR1BORG",
@@ -5603,7 +5603,7 @@
           "desde": 1471,
           "hasta": 1473,
           "titulo": "Duke",
-          "clase": "Duct",
+          "clase": "Duchy",
           "condicion": "cash",
           "persona": {
             "id": "ARNOLDEGMOND",
@@ -5618,7 +5618,7 @@
           "desde": 1473,
           "hasta": 1477,
           "titulo": "Duke",
-          "clase": "Duct",
+          "clase": "Duchy",
           "condicion": "cash",
           "persona": {
             "id": "CAR1BORG",
@@ -5633,7 +5633,7 @@
           "desde": 1477,
           "hasta": 1477,
           "titulo": "Duke",
-          "clase": "Duct",
+          "clase": "Duchy",
           "condicion": "cash",
           "persona": {
             "id": "ADOLFEGMOND",
@@ -5648,7 +5648,7 @@
           "desde": 1477,
           "hasta": 1482,
           "titulo": "Duchess",
-          "clase": "Duct",
+          "clase": "Duchy",
           "condicion": "cash",
           "persona": {
             "id": "MARIABORG",
@@ -5663,7 +5663,7 @@
           "desde": 1477,
           "hasta": 1482,
           "titulo": "Duchess",
-          "clase": "Duct",
+          "clase": "Duchy",
           "condicion": "cash",
           "persona": {
             "id": "MARIABORG",
@@ -5753,7 +5753,7 @@
           "desde": 1482,
           "hasta": 1506,
           "titulo": "Duke",
-          "clase": "Duct",
+          "clase": "Duchy",
           "condicion": "cash",
           "persona": {
             "id": "FEL1CAST",
@@ -5768,7 +5768,7 @@
           "desde": 1482,
           "hasta": 1506,
           "titulo": "Duke",
-          "clase": "Duct",
+          "clase": "Duchy",
           "condicion": "cash",
           "persona": {
             "id": "FEL1CAST",
@@ -5828,7 +5828,7 @@
           "desde": 1492,
           "hasta": 1538,
           "titulo": "Duke",
-          "clase": "Duct",
+          "clase": "Duchy",
           "condicion": "cash",
           "persona": {
             "id": "CHARLESEGMOND",
@@ -5858,7 +5858,7 @@
           "desde": 1506,
           "hasta": 1555,
           "titulo": "Duke",
-          "clase": "Duct",
+          "clase": "Duchy",
           "condicion": "cash",
           "persona": {
             "id": "CARLOS5",
@@ -5873,7 +5873,7 @@
           "desde": 1506,
           "hasta": 1555,
           "titulo": "Duke",
-          "clase": "Duct",
+          "clase": "Duchy",
           "condicion": "cash",
           "persona": {
             "id": "CARLOS5",
@@ -5933,7 +5933,7 @@
           "desde": 1543,
           "hasta": 1555,
           "titulo": "Duke",
-          "clase": "Duct",
+          "clase": "Duchy",
           "condicion": "cash",
           "nota": "The Treaty of Venlo ended the opposition of the Duke of Guelders in 1543.",
           "persona": {
@@ -5996,7 +5996,7 @@
           "desde": 1555,
           "hasta": 1598,
           "titulo": "Duke",
-          "clase": "Duct",
+          "clase": "Duchy",
           "condicion": "cash",
           "persona": {
             "id": "FEL2ESP",
@@ -6011,7 +6011,7 @@
           "desde": 1555,
           "hasta": 1598,
           "titulo": "Duke",
-          "clase": "Duct",
+          "clase": "Duchy",
           "condicion": "cash",
           "persona": {
             "id": "FEL2ESP",
@@ -6041,7 +6041,7 @@
           "desde": 1555,
           "hasta": 1598,
           "titulo": "Duke",
-          "clase": "Duct",
+          "clase": "Duchy",
           "condicion": "cash",
           "nota": "Succession of Charles V; the extension follows provincial chronology and documented garrison, without turning 1581 into a uniform loss of all the Low Countries.",
           "persona": {
@@ -6091,7 +6091,7 @@
           "desde": 1572,
           "hasta": 1584,
           "titulo": "State",
-          "clase": "Statuderate",
+          "clase": "Stadtholderate",
           "condicion": "Government",
           "ambito": "Provinces with dated commissions: Holland, Utrecht, Zeeland",
           "nota": "Provincial position delegated by the States, with documented personal fields and dates; not hereditary sovereignty over the whole Republic or the Spanish provinces.",
@@ -6191,7 +6191,7 @@
           "desde": 1585,
           "hasta": 1625,
           "titulo": "State",
-          "clase": "Statuderate",
+          "clase": "Stadtholderate",
           "condicion": "Government",
           "ambito": "Provinces with dated commissions: Drente, Groninga, Guelders, Holland, Overijssel, Utrecht, Zeeland",
           "nota": "Provincial position delegated by the States, with documented personal fields and dates; not hereditary sovereignty over the whole Republic or the Spanish provinces.",
@@ -6256,7 +6256,7 @@
           "desde": 1598,
           "hasta": 1621,
           "titulo": "Duke",
-          "clase": "Duct",
+          "clase": "Duchy",
           "condicion": "co-ruler",
           "nota": "Sovereignty shared by Albert and Isabella Clara Eugenia after the cession of Philip II; subject to the outcome of the war in each territory.",
           "persona": {
@@ -6272,7 +6272,7 @@
           "desde": 1598,
           "hasta": 1621,
           "titulo": "Duke",
-          "clase": "Duct",
+          "clase": "Duchy",
           "condicion": "co-ruler",
           "nota": "Sovereignty shared by Albert and Isabella Clara Eugenia after the cession of Philip II; subject to the outcome of the war in each territory.",
           "persona": {
@@ -6336,7 +6336,7 @@
           "desde": 1598,
           "hasta": 1621,
           "titulo": "Duchess",
-          "clase": "Duct",
+          "clase": "Duchy",
           "condicion": "co-ruler",
           "nota": "Sovereignty shared by Albert and Isabella Clara Eugenia after the cession of Philip II; subject to the outcome of the war in each territory.",
           "persona": {
@@ -6352,7 +6352,7 @@
           "desde": 1598,
           "hasta": 1621,
           "titulo": "Duchess",
-          "clase": "Duct",
+          "clase": "Duchy",
           "condicion": "co-ruler",
           "nota": "Sovereignty shared by Albert and Isabella Clara Eugenia after the cession of Philip II; subject to the outcome of the war in each territory.",
           "persona": {
@@ -6368,7 +6368,7 @@
           "desde": 1620,
           "hasta": 1632,
           "titulo": "State",
-          "clase": "Statuderate",
+          "clase": "Stadtholderate",
           "condicion": "Government",
           "ambito": "Provinces with dated commissions: Drente, Frisia, Groninga",
           "nota": "Provincial position delegated by the States, with documented personal fields and dates; not hereditary sovereignty over the whole Republic or the Spanish provinces.",
@@ -6418,7 +6418,7 @@
           "desde": 1621,
           "hasta": 1665,
           "titulo": "Duke",
-          "clase": "Duct",
+          "clase": "Duchy",
           "condicion": "cash",
           "nota": "The provincial title itself. The sovereignty and the effectively controlled surface are distinguished by the achievements and partitions dated from the map.",
           "persona": {
@@ -6434,7 +6434,7 @@
           "desde": 1621,
           "hasta": 1665,
           "titulo": "Duke",
-          "clase": "Duct",
+          "clase": "Duchy",
           "condicion": "cash",
           "nota": "The provincial title itself. The sovereignty and the effectively controlled surface are distinguished by the achievements and partitions dated from the map.",
           "persona": {
@@ -6450,7 +6450,7 @@
           "desde": 1621,
           "hasta": 1665,
           "titulo": "Duke",
-          "clase": "Duct",
+          "clase": "Duchy",
           "condicion": "cash",
           "nota": "The provincial title itself. The sovereignty and the effectively controlled surface are distinguished by the achievements and partitions dated from the map.",
           "persona": {
@@ -6482,7 +6482,7 @@
           "desde": 1625,
           "hasta": 1647,
           "titulo": "State",
-          "clase": "Statuderate",
+          "clase": "Stadtholderate",
           "condicion": "Government",
           "ambito": "Provinces with dated commissions: Drente, Groninga, Guelders, Holland, Overijssel, Utrecht, Zeeland",
           "nota": "Provincial position delegated by the States, with documented personal fields and dates; not hereditary sovereignty over the whole Republic or the Spanish provinces.",
@@ -6499,7 +6499,7 @@
           "desde": 1632,
           "hasta": 1640,
           "titulo": "State",
-          "clase": "Statuderate",
+          "clase": "Stadtholderate",
           "condicion": "Government",
           "ambito": "Provinces with dated commissions: Drente, Frisia, Groninga",
           "nota": "Provincial position delegated by the States, with documented personal fields and dates; not hereditary sovereignty over the whole Republic or the Spanish provinces.",
@@ -6516,7 +6516,7 @@
           "desde": 1640,
           "hasta": 1664,
           "titulo": "State",
-          "clase": "Statuderate",
+          "clase": "Stadtholderate",
           "condicion": "Government",
           "ambito": "Provinces with dated commissions: Drente, Frisia, Groninga",
           "nota": "Provincial position delegated by the States, with documented personal fields and dates; not hereditary sovereignty over the whole Republic or the Spanish provinces.",
@@ -6533,7 +6533,7 @@
           "desde": 1647,
           "hasta": 1650,
           "titulo": "State",
-          "clase": "Statuderate",
+          "clase": "Stadtholderate",
           "condicion": "Government",
           "ambito": "Provinces with dated commissions: Drente, Groninga, Guelders, Holland, Overijssel, Utrecht, Zeeland",
           "nota": "Provincial position delegated by the States, with documented personal fields and dates; not hereditary sovereignty over the whole Republic or the Spanish provinces.",
@@ -6550,7 +6550,7 @@
           "desde": 1664,
           "hasta": 1696,
           "titulo": "State",
-          "clase": "Statuderate",
+          "clase": "Stadtholderate",
           "condicion": "Government",
           "ambito": "Provinces with dated commissions: Drente, Frisia, Groninga",
           "nota": "Provincial position delegated by the States, with documented personal fields and dates; not hereditary sovereignty over the whole Republic or the Spanish provinces.",
@@ -6567,7 +6567,7 @@
           "desde": 1665,
           "hasta": 1700,
           "titulo": "Duke",
-          "clase": "Duct",
+          "clase": "Duchy",
           "condicion": "cash",
           "nota": "The provincial title itself. The sovereignty and the effectively controlled surface are distinguished by the achievements and partitions dated from the map.",
           "persona": {
@@ -6583,7 +6583,7 @@
           "desde": 1665,
           "hasta": 1700,
           "titulo": "Duke",
-          "clase": "Duct",
+          "clase": "Duchy",
           "condicion": "cash",
           "nota": "The provincial title itself. The sovereignty and the effectively controlled surface are distinguished by the achievements and partitions dated from the map.",
           "persona": {
@@ -6599,7 +6599,7 @@
           "desde": 1665,
           "hasta": 1700,
           "titulo": "Duke",
-          "clase": "Duct",
+          "clase": "Duchy",
           "condicion": "cash",
           "nota": "The provincial title itself. The sovereignty and the effectively controlled surface are distinguished by the achievements and partitions dated from the map.",
           "persona": {
@@ -6647,7 +6647,7 @@
           "desde": 1672,
           "hasta": 1702,
           "titulo": "State",
-          "clase": "Statuderate",
+          "clase": "Stadtholderate",
           "condicion": "Government",
           "ambito": "Provinces with dated commissions: Drente, Guelders, Holland, Overijssel, Utrecht, Zeeland",
           "nota": "Provincial position delegated by the States, with documented personal fields and dates; not hereditary sovereignty over the whole Republic or the Spanish provinces.",
@@ -6664,7 +6664,7 @@
           "desde": 1696,
           "hasta": 1711,
           "titulo": "State",
-          "clase": "Statuderate",
+          "clase": "Stadtholderate",
           "condicion": "Government",
           "ambito": "Provinces with dated commissions: Frisia, Groninga",
           "nota": "Provincial position delegated by the States, with documented personal fields and dates; not hereditary sovereignty over the whole Republic or the Spanish provinces.",
@@ -6681,7 +6681,7 @@
           "desde": 1700,
           "hasta": 1711,
           "titulo": "Duke",
-          "clase": "Duct",
+          "clase": "Duchy",
           "condicion": "cash",
           "nota": "The provincial title itself. Recognized in 1700-1701 by Governor General Maximilian II Manuel de Bavaria; since the defeat of Ramillies (1706) most of the provinces are left to the allies. In June 1711, he transferred the sovereignty of the Spanish Low Countries to Maximilian II Manuel. The actual controlled surface is distinguished by the dated phases of the map.",
           "persona": {
@@ -6697,7 +6697,7 @@
           "desde": 1700,
           "hasta": 1711,
           "titulo": "Duke",
-          "clase": "Duct",
+          "clase": "Duchy",
           "condicion": "cash",
           "nota": "The provincial title itself. Recognized in 1700-1701 by Governor General Maximilian II Manuel de Bavaria; since the defeat of Ramillies (1706) most of the provinces are left to the allies. In June 1711, he transferred the sovereignty of the Spanish Low Countries to Maximilian II Manuel. The actual controlled surface is distinguished by the dated phases of the map.",
           "persona": {
@@ -6713,7 +6713,7 @@
           "desde": 1700,
           "hasta": 1711,
           "titulo": "Duke",
-          "clase": "Duct",
+          "clase": "Duchy",
           "condicion": "cash",
           "nota": "The provincial title itself. Recognized in 1700-1701 by Governor General Maximilian II Manuel de Bavaria; since the defeat of Ramillies (1706) most of the provinces are left to the allies. In June 1711, he transferred the sovereignty of the Spanish Low Countries to Maximilian II Manuel. The actual controlled surface is distinguished by the dated phases of the map.",
           "persona": {
@@ -6761,7 +6761,7 @@
           "desde": 1714,
           "hasta": 1740,
           "titulo": "Duke",
-          "clase": "Duct",
+          "clase": "Duchy",
           "condicion": "cash",
           "nota": "Austrian territorial sovereignty of the province, other than the imperial office. The extension follows local losses, occupations and refunds; it does not include the provinces of the Republic or a garrison of the Barrera.",
           "persona": {
@@ -6777,7 +6777,7 @@
           "desde": 1714,
           "hasta": 1740,
           "titulo": "Duke",
-          "clase": "Duct",
+          "clase": "Duchy",
           "condicion": "cash",
           "nota": "Austrian territorial sovereignty of the province, other than the imperial office. The extension follows local losses, occupations and refunds; it does not include the provinces of the Republic or a garrison of the Barrera.",
           "persona": {
@@ -6825,7 +6825,7 @@
           "desde": 1714,
           "hasta": 1740,
           "titulo": "Duke",
-          "clase": "Duct",
+          "clase": "Duchy",
           "condicion": "cash",
           "nota": "Austrian territorial sovereignty of the province, other than the imperial office. The extension follows local losses, occupations and refunds; it does not include the provinces of the Republic or a garrison of the Barrera.",
           "persona": {
@@ -6875,7 +6875,7 @@
           "desde": 1740,
           "hasta": 1780,
           "titulo": "Duchess",
-          "clase": "Duct",
+          "clase": "Duchy",
           "condicion": "cash",
           "nota": "Austrian territorial sovereignty of the province, other than the imperial office. The extension follows local losses, occupations and refunds; it does not include the provinces of the Republic or a garrison of the Barrera.",
           "controlDisputado": [
@@ -6897,7 +6897,7 @@
           "desde": 1740,
           "hasta": 1780,
           "titulo": "Duchess",
-          "clase": "Duct",
+          "clase": "Duchy",
           "condicion": "cash",
           "nota": "Austrian territorial sovereignty of the province, other than the imperial office. The extension follows local losses, occupations and refunds; it does not include the provinces of the Republic or a garrison of the Barrera.",
           "controlDisputado": [
@@ -6963,7 +6963,7 @@
           "desde": 1740,
           "hasta": 1780,
           "titulo": "Duchess",
-          "clase": "Duct",
+          "clase": "Duchy",
           "condicion": "cash",
           "nota": "Austrian territorial sovereignty of the province, other than the imperial office. The extension follows local losses, occupations and refunds; it does not include the provinces of the Republic or a garrison of the Barrera.",
           "controlDisputado": [
@@ -7002,7 +7002,7 @@
           "desde": 1747,
           "hasta": 1751,
           "titulo": "State",
-          "clase": "Statuderate",
+          "clase": "Stadtholderate",
           "condicion": "Government",
           "ambito": "Provinces with dated commissions: Drente, Frisia, Groninga, Guelders, Holland, Overijssel, Utrecht, Zeeland",
           "nota": "Provincial position delegated by the States, with documented personal fields and dates; not hereditary sovereignty over the whole Republic or the Spanish provinces.",
@@ -7035,7 +7035,7 @@
           "desde": 1751,
           "hasta": 1765,
           "titulo": "State",
-          "clase": "Statuderate",
+          "clase": "Stadtholderate",
           "condicion": "holder",
           "ambito": "Provinces of the Republic according to period",
           "nota": "Heritable position during the minority under regency; personal exercise since the installation of 1766.",
@@ -7052,7 +7052,7 @@
           "desde": 1766,
           "hasta": 1795,
           "titulo": "State",
-          "clase": "Statuderate",
+          "clase": "Stadtholderate",
           "condicion": "Government",
           "nota": "Personal exercise of the provincial office from 1766 to the revolution of 1795, with scope limited to the provinces of the Republic.",
           "ambito": "Provinces with dated commissions: Drente, Frisia, Groninga, Guelders, Holland, Overijssel, Utrecht, Zeeland",
@@ -7069,7 +7069,7 @@
           "desde": 1780,
           "hasta": 1790,
           "titulo": "Duke",
-          "clase": "Duct",
+          "clase": "Duchy",
           "condicion": "cash",
           "nota": "Austrian territorial sovereignty of the province, other than the imperial office. The extension follows local losses, occupations and refunds; it does not include the provinces of the Republic or a garrison of the Barrera.",
           "controlDisputado": [
@@ -7091,7 +7091,7 @@
           "desde": 1780,
           "hasta": 1790,
           "titulo": "Duke",
-          "clase": "Duct",
+          "clase": "Duchy",
           "condicion": "cash",
           "nota": "Austrian territorial sovereignty of the province, other than the imperial office. The extension follows local losses, occupations and refunds; it does not include the provinces of the Republic or a garrison of the Barrera.",
           "controlDisputado": [
@@ -7157,7 +7157,7 @@
           "desde": 1780,
           "hasta": 1790,
           "titulo": "Duke",
-          "clase": "Duct",
+          "clase": "Duchy",
           "condicion": "cash",
           "nota": "Austrian territorial sovereignty of the province, other than the imperial office. The extension follows local losses, occupations and refunds; it does not include the provinces of the Republic or a garrison of the Barrera.",
           "controlDisputado": [
@@ -7179,7 +7179,7 @@
           "desde": 1790,
           "hasta": 1792,
           "titulo": "Duke",
-          "clase": "Duct",
+          "clase": "Duchy",
           "condicion": "cash",
           "nota": "Austrian territorial sovereignty of the province, other than the imperial office. The extension follows local losses, occupations and refunds; it does not include the provinces of the Republic or a garrison of the Barrera.",
           "controlDisputado": [
@@ -7201,7 +7201,7 @@
           "desde": 1790,
           "hasta": 1792,
           "titulo": "Duke",
-          "clase": "Duct",
+          "clase": "Duchy",
           "condicion": "cash",
           "nota": "Austrian territorial sovereignty of the province, other than the imperial office. The extension follows local losses, occupations and refunds; it does not include the provinces of the Republic or a garrison of the Barrera.",
           "controlDisputado": [
@@ -7267,7 +7267,7 @@
           "desde": 1790,
           "hasta": 1792,
           "titulo": "Duke",
-          "clase": "Duct",
+          "clase": "Duchy",
           "condicion": "cash",
           "nota": "Austrian territorial sovereignty of the province, other than the imperial office. The extension follows local losses, occupations and refunds; it does not include the provinces of the Republic or a garrison of the Barrera.",
           "controlDisputado": [
@@ -7289,7 +7289,7 @@
           "desde": 1792,
           "hasta": 1794,
           "titulo": "Duke",
-          "clase": "Duct",
+          "clase": "Duchy",
           "condicion": "cash",
           "nota": "Austrian territorial sovereignty of the province, other than the imperial office. The extension follows local losses, occupations and refunds; it does not include the provinces of the Republic or a garrison of the Barrera.",
           "controlDisputado": [
@@ -7311,7 +7311,7 @@
           "desde": 1792,
           "hasta": 1794,
           "titulo": "Duke",
-          "clase": "Duct",
+          "clase": "Duchy",
           "condicion": "cash",
           "nota": "Austrian territorial sovereignty of the province, other than the imperial office. The extension follows local losses, occupations and refunds; it does not include the provinces of the Republic or a garrison of the Barrera.",
           "controlDisputado": [
@@ -7377,7 +7377,7 @@
           "desde": 1792,
           "hasta": 1794,
           "titulo": "Duke",
-          "clase": "Duct",
+          "clase": "Duchy",
           "condicion": "cash",
           "nota": "Austrian territorial sovereignty of the province, other than the imperial office. The extension follows local losses, occupations and refunds; it does not include the provinces of the Republic or a garrison of the Barrera.",
           "controlDisputado": [
@@ -7436,7 +7436,7 @@
       "relacionados": [
         {
           "nombre": "Brabant",
-          "clase": "Duct",
+          "clase": "Duchy",
           "slug": "brabante"
         },
         {
@@ -7446,7 +7446,7 @@
         },
         {
           "nombre": "Limburg",
-          "clase": "Duct",
+          "clase": "Duchy",
           "slug": "limburgo"
         },
         {
@@ -14946,7 +14946,7 @@
           "desde": 1369,
           "hasta": 1376,
           "titulo": "Duke",
-          "clase": "Duct",
+          "clase": "Duchy",
           "condicion": "Government",
           "soberano": "LUIS1",
           "nota": "The Government of Croatia and Dalmatia; Zara was his ducal residence. He wasn't king during this stage.",
@@ -18783,7 +18783,7 @@
           "desde": 1572,
           "hasta": 1584,
           "titulo": "State",
-          "clase": "Statuderate",
+          "clase": "Stadtholderate",
           "condicion": "Government",
           "ambito": "Provinces with dated commissions: Holland, Utrecht, Zeeland",
           "nota": "Provincial position delegated by the States, with documented personal fields and dates; not hereditary sovereignty over the whole Republic or the Spanish provinces.",
@@ -18851,7 +18851,7 @@
           "desde": 1585,
           "hasta": 1625,
           "titulo": "State",
-          "clase": "Statuderate",
+          "clase": "Stadtholderate",
           "condicion": "Government",
           "ambito": "Provinces with dated commissions: Drente, Groninga, Guelders, Holland, Overijssel, Utrecht, Zeeland",
           "nota": "Provincial position delegated by the States, with documented personal fields and dates; not hereditary sovereignty over the whole Republic or the Spanish provinces.",
@@ -18900,7 +18900,7 @@
           "desde": 1620,
           "hasta": 1632,
           "titulo": "State",
-          "clase": "Statuderate",
+          "clase": "Stadtholderate",
           "condicion": "Government",
           "ambito": "Provinces with dated commissions: Drente, Frisia, Groninga",
           "nota": "Provincial position delegated by the States, with documented personal fields and dates; not hereditary sovereignty over the whole Republic or the Spanish provinces.",
@@ -18935,7 +18935,7 @@
           "desde": 1625,
           "hasta": 1647,
           "titulo": "State",
-          "clase": "Statuderate",
+          "clase": "Stadtholderate",
           "condicion": "Government",
           "ambito": "Provinces with dated commissions: Drente, Groninga, Guelders, Holland, Overijssel, Utrecht, Zeeland",
           "nota": "Provincial position delegated by the States, with documented personal fields and dates; not hereditary sovereignty over the whole Republic or the Spanish provinces.",
@@ -18952,7 +18952,7 @@
           "desde": 1632,
           "hasta": 1640,
           "titulo": "State",
-          "clase": "Statuderate",
+          "clase": "Stadtholderate",
           "condicion": "Government",
           "ambito": "Provinces with dated commissions: Drente, Frisia, Groninga",
           "nota": "Provincial position delegated by the States, with documented personal fields and dates; not hereditary sovereignty over the whole Republic or the Spanish provinces.",
@@ -18969,7 +18969,7 @@
           "desde": 1640,
           "hasta": 1664,
           "titulo": "State",
-          "clase": "Statuderate",
+          "clase": "Stadtholderate",
           "condicion": "Government",
           "ambito": "Provinces with dated commissions: Drente, Frisia, Groninga",
           "nota": "Provincial position delegated by the States, with documented personal fields and dates; not hereditary sovereignty over the whole Republic or the Spanish provinces.",
@@ -18986,7 +18986,7 @@
           "desde": 1647,
           "hasta": 1650,
           "titulo": "State",
-          "clase": "Statuderate",
+          "clase": "Stadtholderate",
           "condicion": "Government",
           "ambito": "Provinces with dated commissions: Drente, Groninga, Guelders, Holland, Overijssel, Utrecht, Zeeland",
           "nota": "Provincial position delegated by the States, with documented personal fields and dates; not hereditary sovereignty over the whole Republic or the Spanish provinces.",
@@ -19003,7 +19003,7 @@
           "desde": 1664,
           "hasta": 1696,
           "titulo": "State",
-          "clase": "Statuderate",
+          "clase": "Stadtholderate",
           "condicion": "Government",
           "ambito": "Provinces with dated commissions: Drente, Frisia, Groninga",
           "nota": "Provincial position delegated by the States, with documented personal fields and dates; not hereditary sovereignty over the whole Republic or the Spanish provinces.",
@@ -19020,7 +19020,7 @@
           "desde": 1672,
           "hasta": 1702,
           "titulo": "State",
-          "clase": "Statuderate",
+          "clase": "Stadtholderate",
           "condicion": "Government",
           "ambito": "Provinces with dated commissions: Drente, Guelders, Holland, Overijssel, Utrecht, Zeeland",
           "nota": "Provincial position delegated by the States, with documented personal fields and dates; not hereditary sovereignty over the whole Republic or the Spanish provinces.",
@@ -19037,7 +19037,7 @@
           "desde": 1696,
           "hasta": 1711,
           "titulo": "State",
-          "clase": "Statuderate",
+          "clase": "Stadtholderate",
           "condicion": "Government",
           "ambito": "Provinces with dated commissions: Frisia, Groninga",
           "nota": "Provincial position delegated by the States, with documented personal fields and dates; not hereditary sovereignty over the whole Republic or the Spanish provinces.",
@@ -19105,7 +19105,7 @@
           "desde": 1747,
           "hasta": 1751,
           "titulo": "State",
-          "clase": "Statuderate",
+          "clase": "Stadtholderate",
           "condicion": "Government",
           "ambito": "Provinces with dated commissions: Drente, Frisia, Groninga, Guelders, Holland, Overijssel, Utrecht, Zeeland",
           "nota": "Provincial position delegated by the States, with documented personal fields and dates; not hereditary sovereignty over the whole Republic or the Spanish provinces.",
@@ -19138,7 +19138,7 @@
           "desde": 1751,
           "hasta": 1765,
           "titulo": "State",
-          "clase": "Statuderate",
+          "clase": "Stadtholderate",
           "condicion": "holder",
           "ambito": "Provinces of the Republic according to period",
           "nota": "Heritable position during the minority under regency; personal exercise since the installation of 1766.",
@@ -19155,7 +19155,7 @@
           "desde": 1766,
           "hasta": 1795,
           "titulo": "State",
-          "clase": "Statuderate",
+          "clase": "Stadtholderate",
           "condicion": "Government",
           "nota": "Personal exercise of the provincial office from 1766 to the revolution of 1795, with scope limited to the provinces of the Republic.",
           "ambito": "Provinces with dated commissions: Drente, Frisia, Groninga, Guelders, Holland, Overijssel, Utrecht, Zeeland",
@@ -20145,7 +20145,7 @@
         },
         {
           "desde": 1574,
-          "clase": "Duct"
+          "clase": "Duchy"
         }
       ],
       "resumen": "The Imperial March of the Aleramici, in the 14th century, passed to a branch of the Palaiologoi for the rights of Irene, daughter of William VII and Byzantine empress. The links with Majorca, Savoy and Saluzzo added rights and rivalries. The legacy of Margaret Paleologue then linked the marquisate to the Gonzaga, maintaining a different institutional trajectory from Mantua.",
@@ -20395,7 +20395,7 @@
           "desde": 1574,
           "hasta": 1587,
           "titulo": "Duke",
-          "clase": "Duct",
+          "clase": "Duchy",
           "condicion": "cash",
           "persona": {
             "id": "GUILLERMOGONZAGA",
@@ -20410,7 +20410,7 @@
           "desde": 1587,
           "hasta": 1612,
           "titulo": "Duke",
-          "clase": "Duct",
+          "clase": "Duchy",
           "condicion": "cash",
           "persona": {
             "id": "VICENTE1GONZAGA",
@@ -20425,7 +20425,7 @@
           "desde": 1612,
           "hasta": 1612,
           "titulo": "Duke",
-          "clase": "Duct",
+          "clase": "Duchy",
           "condicion": "cash",
           "persona": {
             "id": "FRANCESCO4GONZAGA",
@@ -20440,7 +20440,7 @@
           "desde": 1612,
           "hasta": 1626,
           "titulo": "Duke",
-          "clase": "Duct",
+          "clase": "Duchy",
           "condicion": "cash",
           "persona": {
             "id": "FERDINANDOGONZAGA",
@@ -20455,7 +20455,7 @@
           "desde": 1626,
           "hasta": 1627,
           "titulo": "Duke",
-          "clase": "Duct",
+          "clase": "Duchy",
           "condicion": "cash",
           "persona": {
             "id": "VINCENZO2GONZAGA",
@@ -20689,7 +20689,7 @@
       "etapas": [
         {
           "desde": null,
-          "clase": "Duct"
+          "clase": "Duchy"
         },
         {
           "desde": 1356,
@@ -20732,7 +20732,7 @@
           "desde": 1142,
           "hasta": 1180,
           "titulo": "Duke",
-          "clase": "Duct",
+          "clase": "Duchy",
           "condicion": "cash",
           "nota": "Deposed by Frederick Barbarossa in 1180.",
           "persona": {
@@ -20793,7 +20793,7 @@
           "desde": 1485,
           "hasta": 1500,
           "titulo": "Duke",
-          "clase": "Duct",
+          "clase": "Duchy",
           "condicion": "branch",
           "ambito": "Albert de Saxony",
           "persona": {
@@ -20824,7 +20824,7 @@
           "desde": 1500,
           "hasta": 1539,
           "titulo": "Duke",
-          "clase": "Duct",
+          "clase": "Duchy",
           "condicion": "branch",
           "ambito": "Jorge de Saxony",
           "persona": {
@@ -20870,7 +20870,7 @@
           "desde": 1539,
           "hasta": 1541,
           "titulo": "Duke",
-          "clase": "Duct",
+          "clase": "Duchy",
           "condicion": "branch",
           "ambito": "Henry de Saxony",
           "persona": {
@@ -20886,7 +20886,7 @@
           "desde": 1541,
           "hasta": 1546,
           "titulo": "Duke",
-          "clase": "Duct",
+          "clase": "Duchy",
           "condicion": "cash",
           "nota": "Rama albertina; the electoral dignity was obtained in 1547.",
           "persona": {
@@ -27076,7 +27076,7 @@
         },
         {
           "desde": 1661,
-          "clase": "Duct"
+          "clase": "Duchy"
         }
       ],
       "resumen": "The Butler built a great inheritance in the south-east of Ireland. The title, property and offices of lord deputy had different successions. Marriages with Fitzgerald and Preston helped to transmit or gather inheritance, while James Butler defended the royalist cause during the wars of the 17th century.",
@@ -27206,7 +27206,7 @@
           "desde": 1661,
           "hasta": 1688,
           "titulo": "Duke",
-          "clase": "Duct",
+          "clase": "Duchy",
           "condicion": "cash",
           "persona": {
             "id": "JAMES1DUKEORMOND",
@@ -27503,7 +27503,7 @@
       },
       "nombre": "Parma",
       "slug": "parma",
-      "clase": "Duct",
+      "clase": "Duchy",
       "naturaleza": "entity",
       "componentes": [],
       "editorial": false,
@@ -27523,7 +27523,7 @@
           "desde": 1545,
           "hasta": 1547,
           "titulo": "Duke",
-          "clase": "Duct",
+          "clase": "Duchy",
           "condicion": "cash",
           "persona": {
             "id": "PIERLUIGIFARNESE_DUCA",
@@ -27538,7 +27538,7 @@
           "desde": 1547,
           "hasta": 1586,
           "titulo": "Duke",
-          "clase": "Duct",
+          "clase": "Duchy",
           "condicion": "cash",
           "persona": {
             "id": "OCTFARNESIO",
@@ -27553,7 +27553,7 @@
           "desde": 1586,
           "hasta": 1592,
           "titulo": "Duke",
-          "clase": "Duct",
+          "clase": "Duchy",
           "condicion": "cash",
           "persona": {
             "id": "ALEJFARNESIO",
@@ -27568,7 +27568,7 @@
           "desde": 1592,
           "hasta": 1622,
           "titulo": "Duke",
-          "clase": "Duct",
+          "clase": "Duchy",
           "condicion": "cash",
           "persona": {
             "id": "RANU1FARNESIO",
@@ -27583,7 +27583,7 @@
           "desde": 1622,
           "hasta": 1646,
           "titulo": "Duke",
-          "clase": "Duct",
+          "clase": "Duchy",
           "condicion": "cash",
           "persona": {
             "id": "ODOARDO1FARN",
@@ -27598,7 +27598,7 @@
           "desde": 1646,
           "hasta": 1694,
           "titulo": "Duke",
-          "clase": "Duct",
+          "clase": "Duchy",
           "condicion": "cash",
           "persona": {
             "id": "RANUCCIO2FARN",
@@ -27751,7 +27751,7 @@
       },
       "nombre": "Ferrara",
       "slug": "ferrara",
-      "clase": "Duct",
+      "clase": "Duchy",
       "naturaleza": "entity",
       "componentes": [],
       "etapas": [
@@ -27761,7 +27761,7 @@
         },
         {
           "desde": 1471,
-          "clase": "Duct"
+          "clase": "Duchy"
         }
       ],
       "editorial": false,
@@ -27777,7 +27777,7 @@
           "desde": 1471,
           "hasta": 1505,
           "titulo": "Duke",
-          "clase": "Duct",
+          "clase": "Duchy",
           "condicion": "cash",
           "persona": {
             "id": "HERC1ESTE",
@@ -27792,7 +27792,7 @@
           "desde": 1505,
           "hasta": 1534,
           "titulo": "Duke",
-          "clase": "Duct",
+          "clase": "Duchy",
           "condicion": "cash",
           "persona": {
             "id": "ALFONSO1ESTE",
@@ -27807,7 +27807,7 @@
           "desde": 1534,
           "hasta": 1559,
           "titulo": "Duke",
-          "clase": "Duct",
+          "clase": "Duchy",
           "condicion": "cash",
           "persona": {
             "id": "HERC2ESTE",
@@ -27822,7 +27822,7 @@
           "desde": 1559,
           "hasta": 1597,
           "titulo": "Duke",
-          "clase": "Duct",
+          "clase": "Duchy",
           "condicion": "cash",
           "persona": {
             "id": "ALFONSO2ESTE",
@@ -28158,7 +28158,7 @@
       },
       "nombre": "Schleswig",
       "slug": "schleswig",
-      "clase": "Duct",
+      "clase": "Duchy",
       "naturaleza": "entity",
       "componentes": [],
       "resumen": "The duchy of Schleswig retained his identity between real and ducal parts. The Danish Crown occupied Gottorp's possessions in 1713 and obtained its legal incorporation in 1721. It is not confused with Holstein or the current German state.",
@@ -28201,7 +28201,7 @@
           "desde": 1721,
           "hasta": 1730,
           "titulo": "Duke",
-          "clase": "Duct",
+          "clase": "Duchy",
           "condicion": "cash",
           "nota": "Government of the Crown on the duchy meeting legally in 1721. It retains laws and ducal institutions; it does not retreate the parts of Gottorp prior to incorporation.",
           "persona": {
@@ -28217,7 +28217,7 @@
           "desde": 1730,
           "hasta": 1746,
           "titulo": "Duke",
-          "clase": "Duct",
+          "clase": "Duchy",
           "condicion": "cash",
           "nota": "Government of the Crown on the duchy meeting legally in 1721. It retains laws and ducal institutions; it does not retreate the parts of Gottorp prior to incorporation.",
           "persona": {
@@ -28233,7 +28233,7 @@
           "desde": 1746,
           "hasta": 1766,
           "titulo": "Duke",
-          "clase": "Duct",
+          "clase": "Duchy",
           "condicion": "cash",
           "nota": "Government of the Crown on the duchy meeting legally in 1721. It retains laws and ducal institutions; it does not retreate the parts of Gottorp prior to incorporation.",
           "persona": {
@@ -28249,7 +28249,7 @@
           "desde": 1766,
           "hasta": 1808,
           "titulo": "Duke",
-          "clase": "Duct",
+          "clase": "Duchy",
           "condicion": "cash",
           "nota": "Government of the Crown on the duchy meeting legally in 1721. It retains laws and ducal institutions; it does not retreate the parts of Gottorp prior to incorporation.",
           "persona": {
@@ -28750,7 +28750,7 @@
       },
       "nombre": "Winning",
       "slug": "gandia",
-      "clase": "Duct",
+      "clase": "Duchy",
       "naturaleza": "entity",
       "componentes": [],
       "pertenencias": [
@@ -28783,7 +28783,7 @@
           "desde": 1488,
           "hasta": 1497,
           "titulo": "Duke",
-          "clase": "Duct",
+          "clase": "Duchy",
           "condicion": "cash",
           "persona": {
             "id": "JUANBORJACATT",
@@ -28798,7 +28798,7 @@
           "desde": 1497,
           "hasta": 1543,
           "titulo": "Duke",
-          "clase": "Duct",
+          "clase": "Duchy",
           "condicion": "cash",
           "persona": {
             "id": "JUANBORJAENR",
@@ -28813,7 +28813,7 @@
           "desde": 1543,
           "hasta": 1551,
           "titulo": "Duke",
-          "clase": "Duct",
+          "clase": "Duchy",
           "condicion": "cash",
           "persona": {
             "id": "SANFRANBORJA",
@@ -29102,7 +29102,7 @@
       },
       "nombre": "Herzegovina",
       "slug": "herzegovina",
-      "clase": "Duct",
+      "clase": "Duchy",
       "naturaleza": "entity",
       "componentes": [],
       "nota": "Kosača dominions associated with the title of Duke of San Sava since 1448. Different from the Bosnian crown; they are not assigned a modern geometry.",
@@ -29142,7 +29142,7 @@
           "desde": 1448,
           "hasta": 1466,
           "titulo": "Duke",
-          "clase": "Duct",
+          "clase": "Duchy",
           "condicion": "cash",
           "persona": {
             "id": "STJEPANVUKKOS",
@@ -29627,12 +29627,12 @@
       "relacionados": [
         {
           "nombre": "Duchy of Bremen",
-          "clase": "Duct",
+          "clase": "Duchy",
           "slug": "ducado-de-bremen"
         },
         {
           "nombre": "Duchy of Verden",
-          "clase": "Duct",
+          "clase": "Duchy",
           "slug": "ducado-de-verden"
         }
       ],
@@ -30733,7 +30733,7 @@
       },
       "nombre": "Saxony - Coburgo",
       "slug": "sajonia-coburgo",
-      "clase": "Duct",
+      "clase": "Duchy",
       "naturaleza": "entity",
       "componentes": [],
       "nota": "Ernest jurisdiction, with documented partitions and executations; not a new name for the whole territory of Thuringia.",
@@ -30745,7 +30745,7 @@
           "desde": 1596,
           "hasta": 1633,
           "titulo": "Duke",
-          "clase": "Duct",
+          "clase": "Duchy",
           "condicion": "cash",
           "nota": "The mandate of the Ernestine branch; the territorial repayments are dated in independent series.",
           "persona": {
@@ -32279,7 +32279,7 @@
       },
       "nombre": "Bisceglie",
       "slug": "bisceglie",
-      "clase": "Duct",
+      "clase": "Duchy",
       "naturaleza": "entity",
       "componentes": [],
       "editorial": false,
@@ -32607,7 +32607,7 @@
       "etapas": [
         {
           "desde": 1505,
-          "clase": "Duct"
+          "clase": "Duchy"
         }
       ],
       "editorial": false,

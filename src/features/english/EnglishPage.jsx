@@ -25,7 +25,7 @@ export default function EnglishPage({ page = null, pathname, challengeContent = 
   const data = state.data;
   const skeletonKind = englishSkeletonKind(route);
   usePublicMeta(entityMeta('english', data, route?.slug));
-  if (!data) return <div className="public-site"><SiteHeader locale="en"/><main className={`public-main${skeletonKind === 'story' ? ' story-page' : ''}`} aria-busy={state.loading}>{state.loading ? <ReadingSkeleton locale="en" kind={skeletonKind}/> : <div className="public-error" role="alert"><h1>Translation not available</h1><p>This page has not been translated or could not be loaded.</p><button className="public-primary" onClick={() => window.location.reload()}>Try again</button> <a className="public-secondary" href="/en/">English home</a></div>}</main><SiteFooter locale="en"/></div>;
+  if (!data) return <div className="public-site"><SiteHeader locale="en"/><main className={`public-main${skeletonKind === 'story' ? ' story-page' : ''}`} aria-busy={state.loading}>{state.loading ? <ReadingSkeleton locale="en" kind={skeletonKind}/> : <div className="public-error" role="alert"><h1>Translation not available</h1><p>This page has not been translated or could not be loaded.</p><button className="public-primary" onClick={() => window.location.reload()}>Try again</button> <a className="public-secondary" href="/en">English home</a></div>}</main><SiteFooter locale="en"/></div>;
   const prerendered = Boolean(page);
   if (data.type === 'story') return <StoryReader key={data.path} data={data} locale="en" prerendered={prerendered}/>;
   return <div className={data.type === 'challenge' ? 'desafio-page' : 'public-site'}><SiteHeader locale="en" pathname={data.path} prerendered={prerendered}/>
@@ -35,7 +35,7 @@ export default function EnglishPage({ page = null, pathname, challengeContent = 
 }
 
 function PageTitle({ data, Icon, eyebrow }) {
-  return <><nav className="public-breadcrumbs" aria-label="Breadcrumb"><a href="/en/">Home</a><span aria-hidden="true">›</span><span aria-current="page">{data.nombre}</span></nav><section className="public-page-title"><div className="public-page-icon"><Icon size={22}/></div><span>{eyebrow}</span><h1>{data.nombre}</h1><p>{data.description}</p></section></>;
+  return <><nav className="public-breadcrumbs" aria-label="Breadcrumb"><a href="/en">Home</a><span aria-hidden="true">›</span><span aria-current="page">{data.nombre}</span></nav><section className="public-page-title"><div className="public-page-icon"><Icon size={22}/></div><span>{eyebrow}</span><h1>{data.nombre}</h1><p>{data.description}</p></section></>;
 }
 function EnglishCatalog({ data }) {
   const tipo = {people:'personas',dynasties:'dinastias',territories:'territorios',stories:'historias'}[data.type];

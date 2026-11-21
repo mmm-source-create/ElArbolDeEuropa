@@ -3,12 +3,14 @@ import StoryPage from '../stories/StoryPage.jsx';
 import {PersonPage} from './PublicSite.jsx';
 import DynastyPage from './DynastyPage.jsx';
 import {TerritoryPage} from './TerritoryPage.jsx';
+import CatalogStaticPage from './CatalogStaticPage.jsx';
 import '../../styles/theme.css';
 
 // Mismo árbol React, mismos datos y mismas condiciones iniciales en Node y cliente.
-// Los tres componentes se cargan antes de hidratar: ningún Suspense sustituye la ficha.
+// Los componentes se cargan antes de hidratar: ningún Suspense sustituye la ficha.
 export default function StaticPublicPage({page}) {
  if(page.kind==='english')return <EnglishPage page={page}/>;
+ if(page.kind==='catalogo')return <CatalogStaticPage page={page}/>;
  const props={slug:page.slug,initialData:page.data};
  if(page.kind==='historia')return <StoryPage {...props} chapter={page.chapter}/>;
  if(page.kind==='persona')return <PersonPage {...props} onExplore={()=>window.location.assign(`${page.path}?atlas=1`)}/>;

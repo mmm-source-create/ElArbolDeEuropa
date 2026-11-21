@@ -30,7 +30,7 @@ const COPY = {
 export default function NotFoundPage({locale = 'es'}) {
   const english = locale === 'en';
   const copy = COPY[english ? 'en' : 'es'];
-  const home = english ? '/en/' : '/es/';
+  const home = english ? '/en' : '/es';
   const stories = english ? '/en/stories' : '/es/historias';
   usePublicMeta({title: `${copy.eyebrow} — ${copy.title}`, description: copy.description, path: english ? '/en/404' : '/es/404'});
   useEffect(() => {

@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
 
+Sitemap: https://www.treeofeurope.eu/sitemap.xml
 Sitemap: https://www.treeofeurope.eu/sitemap-full.xml

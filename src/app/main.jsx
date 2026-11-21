@@ -40,6 +40,7 @@ if(page) {
     historia:()=>import('../features/stories/StoryPage.jsx').then(module=>({Component:module.default,props:{slug:page.slug,chapter:page.chapter,initialData:page.data}})),
     persona:()=>import('../features/public/PublicSite.jsx').then(module=>({Component:module.PersonPage,props:{slug:page.slug,initialData:page.data,onExplore:()=>window.location.assign(`${page.path}?atlas=1`)}})),
     dinastia:()=>import('../features/public/DynastyPage.jsx').then(module=>({Component:module.default,props:{slug:page.slug,initialData:page.data}})),
+    catalogo:()=>import('../features/public/CatalogStaticPage.jsx').then(module=>({Component:module.default,props:{page}})),
     territorio:()=>import('../features/public/TerritoryPage.jsx').then(module=>({Component:module.TerritoryPage,props:{slug:page.slug,initialData:page.data}})),
   };
   loaders[page.kind]?.().then(({Component,props})=>{

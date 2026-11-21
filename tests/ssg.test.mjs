@@ -25,12 +25,14 @@ test('SSG admite solo fichas públicas y conserva el escape hacia el Atlas',()=>
   assert.equal(initialPageForLocation(page,page.path,'?atlas=1&anio=1230'),null);
   assert.equal(initialPageForLocation(page,'/es/persona/otra'),null);
  }
- for(const url of ['/es/','/es/desafio','/es/personas','/en/persona/a','/es/persona/../../a'])assert.equal(staticRoute(url),null);
+ for(const url of ['/es/desafio','/en/persona/a','/es/persona/../../a','/es/personas/otra'])assert.equal(staticRoute(url),null);
+ // 6.0.10: the Spanish home, its catalogues and the A–Z indexes are static too.
+ for(const [url,slug] of [['/es/','inicio'],['/es','inicio'],['/es/personas','personas'],['/es/personas/indice','indice'],['/en/people/index','index-en']])assert.equal(staticRoute(url)?.slug,slug);
  for(const broken of [null,{}, {...person,schema:1},{...person,data:{...person.data,gobiernos:null}},{...person,slug:'otra'}])assert.equal(validatePage(broken),false);
 });
 test('el sitemap determina el alcance y rechaza duplicados y URLs ajenas',()=>{
  assert.equal(routesFromSitemap(sitemap([person.path,'/es/historia/a','/es/desafio',dynasty.path]),'https://www.treeofeurope.eu').length,3);
- for(const xml of [sitemap([person.path,person.path+'/']),sitemap([person.path+'?atlas=1']),sitemap([person.path]).replace('www.treeofeurope.eu','example.org'),'<urlset>',sitemap(['/es/'])])assert.throws(()=>routesFromSitemap(xml,'https://www.treeofeurope.eu'));
+ for(const xml of [sitemap([person.path,person.path+'/']),sitemap([person.path+'?atlas=1']),sitemap([person.path]).replace('www.treeofeurope.eu','example.org'),'<urlset>',sitemap(['/es/desafio'])])assert.throws(()=>routesFromSitemap(xml,'https://www.treeofeurope.eu'));
 });
 test('los estilos y preloads recorren imports comunes, sin cargar el motor dinámico del Atlas',()=>{
  const manifest={ficha:{file:'ficha.js',css:['ficha.css'],imports:['shared'],dynamicImports:['atlas']},shared:{file:'shared.js',css:['shared.css'],imports:['ficha']},atlas:{file:'atlas.js'}};

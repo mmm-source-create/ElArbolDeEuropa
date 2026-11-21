@@ -30,10 +30,17 @@ await fs.mkdir(new URL('../../src/generated/',import.meta.url),{recursive:true})
 await Promise.all([
  fs.writeFile(new URL('../../src/generated/englishV6Runtime.json',import.meta.url),JSON.stringify(runtime)),
  fs.writeFile(new URL('../../src/generated/englishProfilesRuntime.json',import.meta.url),JSON.stringify({profiles})),
- fs.writeFile(new URL('../../src/generated/englishVocabularyRuntime.json',import.meta.url),JSON.stringify({names:V6_NAMES,labels:V6_LABELS,notes:V6_NOTES,portraits:V6_PORTRAITS,timelineLabels,timelineNotes})),
+ fs.writeFile(new URL('../../src/generated/englishVocabularyRuntime.json',import.meta.url),JSON.stringify({names:V6_NAMES,labels:V6_LABELS,notes:V6_NOTES,portraits:V6_PORTRAITS,timelineLabels,timelineNotes,entityLabels:{}})),
  fs.writeFile(new URL('../../src/generated/englishStoriesRuntime.json',import.meta.url),JSON.stringify({stories:V6_STORIES})),
 ]);
 console.log(`English V6 runtime: ${Object.keys(profiles).length} complete people (${Object.keys(V6_PEOPLE).length} V6), ${dynasties.length} V6 dynasties, ${territories.length} V6 territories, ${Object.keys(V6_STORIES).length} V6 story entries.`);
+
+// 6.0.10: reviewed English names of every house and territory, resolved here so
+// the browser vocabulary does not load the full entity translations. Imported
+// only now: entity translations read the runtime files written above.
+const {ENGLISH_DYNASTIES,ENGLISH_TERRITORIES}=await import('../../src/features/english/entityTranslations.js');
+const entityLabels=Object.fromEntries([...Object.values(ENGLISH_DYNASTIES),...Object.values(ENGLISH_TERRITORIES)].filter(entity=>entity?.key&&entity?.name).map(entity=>[entity.key,entity.name]));
+await fs.writeFile(new URL('../../src/generated/englishVocabularyRuntime.json',import.meta.url),JSON.stringify({names:V6_NAMES,labels:V6_LABELS,notes:V6_NOTES,portraits:V6_PORTRAITS,timelineLabels,timelineNotes,entityLabels}));
 
 // Keep label-only consumers independent of profiles, notes and image credits.
 const {PROFILE_LABELS}=await import('../../src/features/english/profileVocabulary.js');

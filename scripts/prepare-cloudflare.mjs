@@ -12,6 +12,9 @@ export async function prepareCloudflare(source='dist', target='.cloudflare/asset
   const index={};let reused=0;
   for(const item of report.pages.filter(p=>p.path.startsWith('/en'))){
     const html=await fs.readFile(path.join(source,item.path,'index.html'),'utf8');
+    // Only the English edition's pages; the A–Z index (/en/people/index) is a
+    // catalogue page. Read from the HTML: this script runs before generation.
+    if(!/<script id="eade-initial-page" type="application\/json">\{"schema":2,"kind":"english"/.test(html))continue;
     const data=metadataFromHtml(html,item.path);
     const key=`/english-meta/${data.slug}${data.chapter?`/capitulo/${data.chapter}`:''}.json`;
     if(index[key])throw new Error(`Duplicate metadata key: ${key}`);

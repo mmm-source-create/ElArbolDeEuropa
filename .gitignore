@@ -56,3 +56,4 @@ __pycache__/
 # Local duplicate build/generated folders are not publication sources.
 dist 2/
 public/* 2/
+public/sitemaps/
