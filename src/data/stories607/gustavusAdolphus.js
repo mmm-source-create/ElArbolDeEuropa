@@ -7,11 +7,11 @@ export default {
  enDescription:'Gustavus II Adolphus inherited three wars in 1611 and a throne claimed by his cousin Sigismund III. Within twenty years he closed the Baltic fronts, reformed the army and intervened in the Thirty Years’ War until his death at Lützen.',
  related:['corona-demasiado-grande','revolucion-protestante','emperadores-reforma'],
  sources:[
- ref('Wikipedia · Gustavus Adolphus','https://en.wikipedia.org/wiki/Gustavus_Adolphus','Accession in 1611, the Kalmar and Ingrian wars, the Polish war and Altmark, the landing of 1630, Breitenfeld, Rain, Alte Veste, Lützen and the succession of Christina.'),
- ref('Wikipedia · Treaty of Bärwalde','https://en.wikipedia.org/wiki/Treaty_of_B%C3%A4rwalde','French subsidies agreed on 23 January 1631.'),
- ref('Wikipedia · Battle of Lützen (1632)','https://en.wikipedia.org/wiki/Battle_of_L%C3%BCtzen_(1632)','Date of 16 November 1632 (New Style) and outcome of the battle.'),
+ ref('Encyclopaedia Britannica · Gustavus Adolphus of Sweden','https://www.britannica.com/biography/Gustav-II-Adolf','Accession in 1611, the Kalmar and Ingrian wars, the Polish war and Altmark, the landing of 1630, Breitenfeld, Rain, Alte Veste, Lützen and the succession of Christina.'),
+ ref('Encyclopaedia Britannica · treaty of Bärwalde','https://www.britannica.com/topic/Treaty-of-Barwalde','French subsidies agreed on 23 January 1631.'),
+ ref('Encyclopaedia Britannica · Battle of Lützen','https://www.britannica.com/event/Battle-of-Lutzen','Date of 16 November 1632 (New Style) and outcome of the battle.'),
  ref('Deutsche Biographie · Gustav II. Adolf','https://www.deutsche-biographie.de/118543733.html','Authority record: life dates 1594–1632, King of Sweden; Allgemeine Deutsche Biographie article by Karl Wittich (1879).'),
- ref('Wikipedia · Battle of the Alte Veste','https://en.wikipedia.org/wiki/Battle_of_the_Alte_Veste','Battle against Wallenstein near Nuremberg on 3–4 September 1632.')],
+ ref('Encyclopaedia Britannica · Gustavus Adolphus','https://www.britannica.com/biography/Gustav-II-Adolf','Battle against Wallenstein near Nuremberg on 3–4 September 1632.')],
  chapters:[
  ch(1611,['GUSTAV2ADOLFO','CARLOS9SUE','CRISTINAHOLSTEINGOTTORP','SEGIS3VASA'],'Un rey de dieciséis años','A sixteen-year-old king',
  `Gustavo Adolfo nació en Estocolmo en diciembre de 1594, hijo del duque Carlos, el futuro Carlos IX, y de Cristina de Holstein-Gottorp. Su padre había desplazado del trono sueco a su sobrino Segismundo III, rey de Polonia. Cuando Carlos IX murió en octubre de 1611, Gustavo Adolfo tenía dieciséis años y heredó tres guerras: con Dinamarca-Noruega, con Rusia y con la República de Polonia-Lituania. Segismundo seguía reclamando Suecia. En enero de 1612 fue declarado mayor de edad y gobernó con el canciller Axel Oxenstierna.`,

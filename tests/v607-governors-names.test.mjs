@@ -23,12 +23,13 @@ test('the second review of English names corrects houses 101–200 and people 10
   const person = id => COMPLETE_ENGLISH_PROFILES[id], route = id => TRANSLATED_PEOPLE.find(p => p.id === id).en;
   assert.equal(person('LADI1').name, 'Władysław I of Poland');
   assert.equal(person('LADI1').nickname, 'the Elbow-high');
-  assert.equal(route('LADI1'), 'ladislao-i-of-poland');
+  // 6.0.16 moved the URL built from the untranslated name; the old one redirects.
+  assert.equal(route('LADI1'), 'wladyslaw-i-of-poland');
   assert.equal(person('LADI3').nickname, 'of Varna');
   assert.equal(person('LADI4').nickname, 'the Cuman');
   assert.equal(person('ALB3AUST').nickname, 'with the Pigtail');
   assert.equal(person('ALEXIOS3ANGELOS').name, 'Alexios III Angelos');
-  assert.equal(route('ALEXIOS3ANGELOS'), 'allejo-iii');
+  assert.equal(route('ALEXIOS3ANGELOS'), 'alexios-iii');
   for (const [bad, good] of [["Poland's Kadislav I",'Władysław I of Poland'],['Federico II de Saxony','Frederick II of Saxony'],
     ['House Menese','House of Meneses'],['Tsar of the Smits dynasty.','Tsar of the Smilets dynasty.']]) assert.equal(englishNameText(bad), good);
 });

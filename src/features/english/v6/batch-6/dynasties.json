@@ -408,7 +408,7 @@
         "id": "MAURICESAXMARSHAL",
         "nombre": "Mauricio de Sajonia",
         "dinastia": "Wettin",
-        "titulo": "Mariscal de Francia",
+        "titulo": "Mariscal of France",
         "aliases": [],
         "nac": 1696,
         "muer": 1750,
@@ -5100,8 +5100,8 @@
     "en": "lusignan",
     "name": "Lusignan",
     "summary": "Lords of Poitou who, on the back of the Crusades, ruled in Jerusalem, Cyprus for almost three centuries and in Cilician Armenia in the 14th century.",
-    "origin": "The lineage took the name of the castle of Lusignan, in Poitou. Its lords were counts of La Marche and, by the marriage of Hugo X to Isabella of Angoulême, widow of John without Land, also of Angulema.",
-    "history": "Guy of Lusignan married Sibila, heiress of Jerusalem, and was king from 1186. After losing the kingdom to Saladin, he bought Cyprus from the Templars. His brother Amalaric received the Cypriot crown from Emperor Henry VI and was also king of Jerusalem for his marriage to Elizabeth. Hugo III reunited the two crowns in 1269.",
+    "origin": "The lineage took the name of the castle of Lusignan, in Poitou. Its lords were counts of La Marche and, by the marriage of Hugh X to Isabella of Angoulême, widow of John without Land, also of Angulema.",
+    "history": "Guy of Lusignan married Sibila, heiress of Jerusalem, and was king from 1186. After losing the kingdom to Saladin, he bought Cyprus from the Templars. His brother Amalaric received the Cypriot crown from Emperor Henry VI and was also king of Jerusalem for his marriage to Elizabeth. Hugh III reunited the two crowns in 1269.",
     "legacy": "A branch reigned in Cilician Armenia from 1342 until the fall of Sis in 1375. James II, the last male king, married the Venetian Catherine Cornaro. After the death of her son James III, Catherine ruled under the tutelage of Venice, to which she ceded the island in 1489.",
     "editorial": true,
     "sources": [
@@ -5467,8 +5467,8 @@
       "aliases": [],
       "editorial": true,
       "resumen": "Lords of Poitou who, on the back of the Crusades, ruled in Jerusalem, Cyprus for almost three centuries and in Cilician Armenia in the 14th century.",
-      "origen": "The lineage took the name of the castle of Lusignan, in Poitou. Its lords were counts of La Marche and, by the marriage of Hugo X to Isabella of Angoulême, widow of John without Land, also of Angulema.",
-      "trayectoria": "Guy of Lusignan married Sibila, heiress of Jerusalem, and was king from 1186. After losing the kingdom to Saladin, he bought Cyprus from the Templars. His brother Amalaric received the Cypriot crown from Emperor Henry VI and was also king of Jerusalem for his marriage to Elizabeth. Hugo III reunited the two crowns in 1269.",
+      "origen": "The lineage took the name of the castle of Lusignan, in Poitou. Its lords were counts of La Marche and, by the marriage of Hugh X to Isabella of Angoulême, widow of John without Land, also of Angulema.",
+      "trayectoria": "Guy of Lusignan married Sibila, heiress of Jerusalem, and was king from 1186. After losing the kingdom to Saladin, he bought Cyprus from the Templars. His brother Amalaric received the Cypriot crown from Emperor Henry VI and was also king of Jerusalem for his marriage to Elizabeth. Hugh III reunited the two crowns in 1269.",
       "legado": "A branch reigned in Cilician Armenia from 1342 until the fall of Sis in 1375. James II, the last male king, married the Venetian Catherine Cornaro. After the death of her son James III, Catherine ruled under the tutelage of Venice, to which she ceded the island in 1489.",
       "territorios": [
         "Cyprus",
@@ -8411,14 +8411,14 @@
     "es": "basarab",
     "en": "basarab",
     "name": "Basarab",
-    "summary": "The ruling house of Valaquia was divided into rival lines and linked to the Moldovan court.",
+    "summary": "The ruling house of Wallachia was divided into rival lines and linked to the Moldovan court.",
     "origin": "The Basarab ruled Wallachia through various branches that competed for the throne. The changes of the prince, depositions and restorations marked its history.",
     "history": "Vlad Dracul was the father of Vlad Călugărul, whose descendants continued with Radu the Great and Mircea Ciobanul. Mircea married Chiajna Rareș, from Moldova. His son Petru ascended the throne as a minor and ruled under his mother's political leadership.",
     "legacy": "The boyars and Ottoman authority conditioned access to the throne and restoration of the princes. The marriage of Mircea and Chiajna maintained the ties between the courts of Wallachia and Moldova.",
     "editorial": true,
     "sources": [
       {
-        "titulo": "Enciclopedia României · Gobernantes de Valaquia",
+        "titulo": "Enciclopedia României · Gobernantes of Wallachia",
         "url": "https://enciclopediaromaniei.ro/wiki/Index%3ADomnitori_ai_%C5%A2%C4%83rii_Rom%C3%A2ne%C5%9Fti"
       },
       {
@@ -8621,7 +8621,7 @@
       "slug": "basarab",
       "aliases": [],
       "editorial": true,
-      "resumen": "The ruling house of Valaquia was divided into rival lines and linked to the Moldovan court.",
+      "resumen": "The ruling house of Wallachia was divided into rival lines and linked to the Moldovan court.",
       "origen": "The Basarab ruled Wallachia through various branches that competed for the throne. The changes of the prince, depositions and restorations marked its history.",
       "trayectoria": "Vlad Dracul was the father of Vlad Călugărul, whose descendants continued with Radu the Great and Mircea Ciobanul. Mircea married Chiajna Rareș, from Moldova. His son Petru ascended the throne as a minor and ruled under his mother's political leadership.",
       "legado": "The boyars and Ottoman authority conditioned access to the throne and restoration of the princes. The marriage of Mircea and Chiajna maintained the ties between the courts of Wallachia and Moldova.",
@@ -9426,7 +9426,7 @@
       ],
       "fuentes": [
         {
-          "titulo": "Enciclopedia României · Gobernantes de Valaquia",
+          "titulo": "Enciclopedia României · Gobernantes of Wallachia",
           "url": "https://enciclopediaromaniei.ro/wiki/Index%3ADomnitori_ai_%C5%A2%C4%83rii_Rom%C3%A2ne%C5%9Fti"
         },
         {
@@ -9839,7 +9839,7 @@
       "aliases": [],
       "editorial": true,
       "resumen": "The landgraviate of Hesse grew up among inheritance, family divisions and religious alliances that placed it at the center of imperial politics.",
-      "origen": "The house descends from Henry, son of Sophia of Brabante and grandson of St. Elizabeth of Hungary. The war for the succession of the Ludovingians separated Hesse from Thuringia in the 13th century. Marburg and Kassel became their main centres of power.",
+      "origen": "The house descends from Henry, son of Sophia of Brabant and grandson of St. Elizabeth of Hungary. The war for the succession of the Ludovingians separated Hesse from Thuringia in the 13th century. Marburg and Kassel became their main centres of power.",
       "trayectoria": "Philip I, called the Magnanimous, adopted the Reformation and was one of the leaders of the League of Esmalcalda. His defeat of Charles V limited his imperial position. On his death in 1567 he divided the estate among four sons, originating from the landgraviates of Kassel, Darmstadt, Marburg and Rheinfels.",
       "legado": "Kassel and Darmstadt were the longest-lasting lines. Their confessional differences and hereditary claims fueled conflicts during the Thirty Years' War. The marriages of his princesses linked the family to Russia, Prussia, Savoy and other European courts. The plurality of branches gave continuity to the house during the political transformation of the Empire.",
       "territorios": [
@@ -12284,7 +12284,7 @@
             {
               "campo": "Numeración",
               "estado": "variantes",
-              "texto": "Figura como Juan V o Juan VI según se incluya a Juan de Montfort, pretendiente de 1341–1345, en la numeración ducal. Ambas formas designan a la misma persona."
+              "texto": "Figura como John V o John VI según se incluya a Juan de Montfort, pretendiente de 1341–1345, en la numeración ducal. Ambas formas designan a la misma persona."
             }
           ]
         },
@@ -12950,7 +12950,7 @@
     "editorial": true,
     "sources": [
       {
-        "titulo": "Royal Household · Jorge I",
+        "titulo": "Royal Household · George I",
         "url": "https://www.royal.uk/george-i"
       }
     ],
@@ -13497,7 +13497,7 @@
       "ramas": [],
       "fuentes": [
         {
-          "titulo": "Royal Household · Jorge I",
+          "titulo": "Royal Household · George I",
           "url": "https://www.royal.uk/george-i"
         }
       ],
@@ -13747,14 +13747,14 @@
       "trayectoria": "Arnaldo Roger I and Ramon Roger I were his successors. Sibila, daughter of Arnaldo Roger, inherited at the end of the 13th century and married Hugo de Mataplana. His descendants gathered the barony of Mataplana with the condal heritage and participated in campaigns of the Crown of Aragon.",
       "legado": "In the 15th century, Hugo Roger III led forces opposed to John II during the Catalan civil war. The resistance continued after the capitulation of Pedralbes. His wife Catalina Albert supported the defense of Valencia d'Àneu until 1491. The confiscation and transfer of the domains to the Cardona put an end to the rule of the comital line and gave way to the marquessate of Pallars.",
       "territorios": [
-        "Pallars will be sober"
+        "Pallars Sobirà"
       ],
       "protagonistas": [
         {
           "id": "GUILLERMA1PALLARS",
           "nombre": "Guillerma I de Pallars Sobirà",
           "dinastia": "Pallars",
-          "titulo": "Countess of Pallars will be sober",
+          "titulo": "Countess of Pallars Sobirà",
           "aliases": [
             "Guillema I de Pallars Sobirà"
           ],
@@ -13794,7 +13794,7 @@
           "id": "SIBILA1PALLARS",
           "nombre": "Sibila I de Pallars",
           "dinastia": "Pallars",
-          "titulo": "Countess of Pallars will be sober",
+          "titulo": "Countess of Pallars Sobirà",
           "aliases": [
             "Sibil·la I de Pallars"
           ],
@@ -13861,7 +13861,7 @@
           "id": "GUILLERMA1PALLARS",
           "nombre": "Guillerma I de Pallars Sobirà",
           "dinastia": "Pallars",
-          "titulo": "Countess of Pallars will be sober",
+          "titulo": "Countess of Pallars Sobirà",
           "aliases": [
             "Guillema I de Pallars Sobirà"
           ],
@@ -13931,7 +13931,7 @@
           "id": "SIBILA1PALLARS",
           "nombre": "Sibila I de Pallars",
           "dinastia": "Pallars",
-          "titulo": "Countess of Pallars will be sober",
+          "titulo": "Countess of Pallars Sobirà",
           "aliases": [
             "Sibil·la I de Pallars"
           ],
@@ -13941,7 +13941,7 @@
       "total": 13,
       "gobiernos": [
         {
-          "territorio": "Pallars will be sober",
+          "territorio": "Pallars Sobirà",
           "desde": 1199,
           "hasta": 1229,
           "titulo": "Countess",
@@ -13952,7 +13952,7 @@
             "id": "GUILLERMA1PALLARS",
             "nombre": "Guillerma I de Pallars Sobirà",
             "dinastia": "Pallars",
-            "titulo": "Countess of Pallars will be sober",
+            "titulo": "Countess of Pallars Sobirà",
             "aliases": [
               "Guillema I de Pallars Sobirà"
             ],
@@ -13960,7 +13960,7 @@
           }
         },
         {
-          "territorio": "Pallars will be sober",
+          "territorio": "Pallars Sobirà",
           "desde": 1234,
           "hasta": 1256,
           "titulo": "Count",
@@ -13978,7 +13978,7 @@
           }
         },
         {
-          "territorio": "Pallars will be sober",
+          "territorio": "Pallars Sobirà",
           "desde": 1256,
           "hasta": 1288,
           "titulo": "Count",
@@ -13996,7 +13996,7 @@
           }
         },
         {
-          "territorio": "Pallars will be sober",
+          "territorio": "Pallars Sobirà",
           "desde": 1288,
           "hasta": 1294,
           "titulo": "Count",
@@ -14014,7 +14014,7 @@
           }
         },
         {
-          "territorio": "Pallars will be sober",
+          "territorio": "Pallars Sobirà",
           "desde": 1295,
           "hasta": 1330,
           "titulo": "Countess",
@@ -14024,7 +14024,7 @@
             "id": "SIBILA1PALLARS",
             "nombre": "Sibila I de Pallars",
             "dinastia": "Pallars",
-            "titulo": "Countess of Pallars will be sober",
+            "titulo": "Countess of Pallars Sobirà",
             "aliases": [
               "Sibil·la I de Pallars"
             ],
@@ -14032,7 +14032,7 @@
           }
         },
         {
-          "territorio": "Pallars will be sober",
+          "territorio": "Pallars Sobirà",
           "desde": 1328,
           "hasta": 1343,
           "titulo": "Count",
@@ -14052,7 +14052,7 @@
           }
         },
         {
-          "territorio": "Pallars will be sober",
+          "territorio": "Pallars Sobirà",
           "desde": 1343,
           "hasta": 1350,
           "titulo": "Count",
@@ -14070,7 +14070,7 @@
           }
         },
         {
-          "territorio": "Pallars will be sober",
+          "territorio": "Pallars Sobirà",
           "desde": 1350,
           "hasta": 1366,
           "titulo": "Count",
@@ -14088,7 +14088,7 @@
           }
         },
         {
-          "territorio": "Pallars will be sober",
+          "territorio": "Pallars Sobirà",
           "desde": 1366,
           "hasta": 1369,
           "titulo": "Count",
@@ -14107,7 +14107,7 @@
           }
         },
         {
-          "territorio": "Pallars will be sober",
+          "territorio": "Pallars Sobirà",
           "desde": 1369,
           "hasta": 1416,
           "titulo": "Count",
@@ -14125,7 +14125,7 @@
           }
         },
         {
-          "territorio": "Pallars will be sober",
+          "territorio": "Pallars Sobirà",
           "desde": 1416,
           "hasta": 1424,
           "titulo": "Count",
@@ -14143,7 +14143,7 @@
           }
         },
         {
-          "territorio": "Pallars will be sober",
+          "territorio": "Pallars Sobirà",
           "desde": 1424,
           "hasta": 1451,
           "titulo": "Count",
@@ -14161,7 +14161,7 @@
           }
         },
         {
-          "territorio": "Pallars will be sober",
+          "territorio": "Pallars Sobirà",
           "desde": 1451,
           "hasta": 1487,
           "titulo": "Count",
@@ -14815,7 +14815,7 @@
     "editorial": true,
     "sources": [
       {
-        "titulo": "Biblioteca Nacional de Rusia · Cuatrocientos años de los Romanov",
+        "titulo": "Biblioteca Nacional of Russia · Cuatrocientos años de los Romanov",
         "url": "https://expositions.nlr.ru/ex_plehanov/monarhist/index3.php"
       }
     ],
@@ -15415,7 +15415,7 @@
       "ramas": [],
       "fuentes": [
         {
-          "titulo": "Biblioteca Nacional de Rusia · Cuatrocientos años de los Romanov",
+          "titulo": "Biblioteca Nacional of Russia · Cuatrocientos años de los Romanov",
           "url": "https://expositions.nlr.ru/ex_plehanov/monarhist/index3.php"
         }
       ],
@@ -16371,8 +16371,8 @@
     "editorial": true,
     "sources": [
       {
-        "titulo": "Wikipedia",
-        "url": "https://en.wikipedia.org/wiki/Asen_dynasty"
+        "titulo": "Encyclopaedia Britannica · Second Bulgarian Empire",
+        "url": "https://www.britannica.com/place/Second-Bulgarian-empire"
       },
       {
         "titulo": "Treccani",
@@ -16917,7 +16917,7 @@
       ],
       "ramas": [],
       "fuentes": [
-        "https://en.wikipedia.org/wiki/Asen_dynasty",
+        "https://www.britannica.com/place/Second-Bulgarian-empire",
         "https://www.treccani.it/enciclopedia/bisanzio/"
       ],
       "casasOrigen": [],
@@ -17711,11 +17711,11 @@
         "url": "https://www.aeiou.at/aeiou.encyclop.b/b002118_ge.htm"
       },
       {
-        "titulo": "Neue Deutsche Biographie · Leopoldo VI",
+        "titulo": "Neue Deutsche Biographie · Leopold VI",
         "url": "https://www.deutsche-biographie.de/sfz57435.html"
       },
       {
-        "titulo": "Neue Deutsche Biographie · Federico II el Batallador",
+        "titulo": "Neue Deutsche Biographie · Frederick II el Batallador",
         "url": "https://www.deutsche-biographie.de/sfz69833.html"
       }
     ],
@@ -17915,11 +17915,11 @@
           "url": "https://www.aeiou.at/aeiou.encyclop.b/b002118_ge.htm"
         },
         {
-          "titulo": "Neue Deutsche Biographie · Leopoldo VI",
+          "titulo": "Neue Deutsche Biographie · Leopold VI",
           "url": "https://www.deutsche-biographie.de/sfz57435.html"
         },
         {
-          "titulo": "Neue Deutsche Biographie · Federico II el Batallador",
+          "titulo": "Neue Deutsche Biographie · Frederick II el Batallador",
           "url": "https://www.deutsche-biographie.de/sfz69833.html"
         }
       ],
@@ -18472,8 +18472,8 @@
         "url": "https://www.treccani.it/enciclopedia/orsini/"
       },
       {
-        "titulo": "Wikipedia",
-        "url": "https://en.wikipedia.org/wiki/Orsini_family"
+        "titulo": "Encyclopaedia Britannica · House of Orsini",
+        "url": "https://www.britannica.com/topic/Orsini-family"
       }
     ],
     "members": [
@@ -18790,7 +18790,7 @@
       "ramas": [],
       "fuentes": [
         "https://www.treccani.it/enciclopedia/orsini/",
-        "https://en.wikipedia.org/wiki/Orsini_family"
+        "https://www.britannica.com/topic/Orsini-family"
       ],
       "casasOrigen": [],
       "casasDerivadas": [],
@@ -21302,7 +21302,7 @@
       {
         "id": "PAPA_PIO4",
         "nombre": "Pío IV",
-        "dinastia": "Medici de Milán",
+        "dinastia": "Medici of Milan",
         "titulo": "Papa",
         "aliases": [],
         "nac": 1499,
@@ -21312,7 +21312,7 @@
       {
         "id": "BERNARDINOMEDICIMILAN",
         "nombre": "Bernardino Medici",
-        "dinastia": "Medici de Milán",
+        "dinastia": "Medici of Milan",
         "titulo": "Notario",
         "aliases": [],
         "slug": "bernardino-medici"
@@ -21335,7 +21335,7 @@
         {
           "id": "PAPA_PIO4",
           "nombre": "Pius IV",
-          "dinastia": "Medici de Milán",
+          "dinastia": "Medici of Milan",
           "titulo": "Pope",
           "aliases": [],
           "nac": 1499,
@@ -21345,7 +21345,7 @@
         {
           "id": "BERNARDINOMEDICIMILAN",
           "nombre": "Bernardino Medici",
-          "dinastia": "Medici de Milán",
+          "dinastia": "Medici of Milan",
           "titulo": "Notary",
           "aliases": [],
           "slug": "bernardino-medici"
@@ -21355,7 +21355,7 @@
         {
           "id": "PAPA_PIO4",
           "nombre": "Pius IV",
-          "dinastia": "Medici de Milán",
+          "dinastia": "Medici of Milan",
           "titulo": "Pope",
           "aliases": [],
           "nac": 1499,
@@ -21365,7 +21365,7 @@
         {
           "id": "BERNARDINOMEDICIMILAN",
           "nombre": "Bernardino Medici",
-          "dinastia": "Medici de Milán",
+          "dinastia": "Medici of Milan",
           "titulo": "Notary",
           "aliases": [],
           "slug": "bernardino-medici"
@@ -21383,7 +21383,7 @@
           "persona": {
             "id": "PAPA_PIO4",
             "nombre": "Pius IV",
-            "dinastia": "Medici de Milán",
+            "dinastia": "Medici of Milan",
             "titulo": "Pope",
             "aliases": [],
             "nac": 1499,
@@ -23259,7 +23259,7 @@
         "id": "WILLIAMWALLACE",
         "nombre": "William Wallace",
         "dinastia": "Wallace",
-        "titulo": "Guardián de Escocia / Militar",
+        "titulo": "Guardián of Scotland / Militar",
         "aliases": [],
         "nac": 1270,
         "muer": 1305,

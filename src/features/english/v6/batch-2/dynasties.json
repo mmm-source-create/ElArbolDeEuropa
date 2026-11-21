@@ -1329,7 +1329,7 @@
           "titulo": "Duke",
           "clase": "Duchy",
           "condicion": "branch",
-          "ambito": "Rodolfo I of the Palatinate",
+          "ambito": "Rudolf I of the Palatinate",
           "persona": {
             "id": "ROD1BAV",
             "nombre": "Rodolfo I of the Palatinate",
@@ -3786,7 +3786,7 @@
               "slug": "carlos-x-gustavo-de-suecia"
             }
           ],
-          "texto": "Carlos X Gustavo was the grandson of Charles IX by Catalina Vasa. He succeeded Cristina after her appointment as heir and her abdication; the paternal branch belonged to Wittelsbach.",
+          "texto": "Charles X Gustavo was the grandson of Charles IX by Catalina Vasa. He succeeded Cristina after her appointment as heir and her abdication; the paternal branch belonged to Wittelsbach.",
           "fuentes": [
             {
               "titulo": "Foundation for Medieval Genealogy · MedLands",
@@ -4851,7 +4851,7 @@
                   },
                   {
                     "campo": "Vasallages",
-                    "texto": "Podolia recognizes Louis for the tribute of the Koriatovich of September 1377. For Pedro I of Moldova, the Angevin dependence of the late 1370s is a documentary and numismatic interpretation: it is labeled as inferred and only three nuclei are pointed out, without turning it into a unanimous chronology.",
+                    "texto": "Podolia recognizes Louis for the tribute of the Koriatovich of September 1377. For Peter I of Moldavia, the Angevin dependence of the late 1370s is a documentary and numismatic interpretation: it is labeled as inferred and only three nuclei are pointed out, without turning it into a unanimous chronology.",
                     "estado": "clarification"
                   }
                 ]
@@ -5074,7 +5074,7 @@
                   },
                   {
                     "campo": "Vasallages",
-                    "texto": "Podolia recognizes Louis for the tribute of the Koriatovich of September 1377. For Pedro I of Moldova, the Angevin dependence of the late 1370s is a documentary and numismatic interpretation: it is labeled as inferred and only three nuclei are pointed out, without turning it into a unanimous chronology.",
+                    "texto": "Podolia recognizes Louis for the tribute of the Koriatovich of September 1377. For Peter I of Moldavia, the Angevin dependence of the late 1370s is a documentary and numismatic interpretation: it is labeled as inferred and only three nuclei are pointed out, without turning it into a unanimous chronology.",
                     "estado": "clarification"
                   }
                 ]
@@ -5181,7 +5181,7 @@
     "name": "Dreux",
     "summary": "A Capetian branch that became a Breton ducal house and from which emerged two rival paths towards the succession of Brittany.",
     "origin": "Robert I, son of Louis VI of France, received Dreux. His grandson Peter married Alix de Thouars, heiress of Brittany. Breton access came from that marriage, while Peter's male ancestry linked with the French royal house.",
-    "history": "John I and John II consolidated the ducal continuity. Their marriages with Blanca de Champaña and Beatrice of England connected Brittany with Navarre and with the Plantagenets. Arthur II had children of two marriages. The offspring of his son Guy de Penthièvre and that of Juan de Montfort were confronted when John III died.",
+    "history": "John I and John II consolidated the ducal continuity. Their marriages with Blanca of Champagne and Beatrice of England connected Brittany with Navarre and with the Plantagenets. Arthur II had children of two marriages. The offspring of his son Guy de Penthièvre and that of Juan de Montfort were confronted when John III died.",
     "legacy": "The dispute of 1341 opened a long war. The Montfort, branch of the Dreux, retained the duchy after Auray's victory in 1364. Juana de Penthièvre transmitted her heritage to the offspring of her marriage to Charles de Blois.",
     "editorial": true,
     "translatedSource": {
@@ -5192,7 +5192,7 @@
       "editorial": true,
       "resumen": "A Capetian branch that became a Breton ducal house and from which emerged two rival paths towards the succession of Brittany.",
       "origen": "Robert I, son of Louis VI of France, received Dreux. His grandson Peter married Alix de Thouars, heiress of Brittany. Breton access came from that marriage, while Peter's male ancestry linked with the French royal house.",
-      "trayectoria": "John I and John II consolidated the ducal continuity. Their marriages with Blanca de Champaña and Beatrice of England connected Brittany with Navarre and with the Plantagenets. Arthur II had children of two marriages. The offspring of his son Guy de Penthièvre and that of Juan de Montfort were confronted when John III died.",
+      "trayectoria": "John I and John II consolidated the ducal continuity. Their marriages with Blanca of Champagne and Beatrice of England connected Brittany with Navarre and with the Plantagenets. Arthur II had children of two marriages. The offspring of his son Guy de Penthièvre and that of Juan de Montfort were confronted when John III died.",
       "legado": "The dispute of 1341 opened a long war. The Montfort, branch of the Dreux, retained the duchy after Auray's victory in 1364. Juana de Penthièvre transmitted her heritage to the offspring of her marriage to Charles de Blois.",
       "territorios": [
         "Dreux",
@@ -5455,7 +5455,7 @@
           "titulo": "Regent",
           "clase": "regency",
           "condicion": "Cash",
-          "nota": "Government during the minority of Juan I.",
+          "nota": "Government during the minority of John I.",
           "persona": {
             "id": "PIERRE1BRET",
             "nombre": "Pedro de Dreux",
@@ -7642,7 +7642,7 @@
               "slug": "guillermo-gonzaga"
             }
           ],
-          "texto": "Margarita Paleolologo links Montferrat's heritage with Federico II Gonzaga. The wedding of 1531 and the imperial resolution of 1536 are two different moments of that transmission.",
+          "texto": "Margarita Paleolologo links Montferrat's heritage with Frederick II Gonzaga. The wedding of 1531 and the imperial resolution of 1536 are two different moments of that transmission.",
           "fuentes": [
             {
               "titulo": "Treccani",
@@ -8306,7 +8306,7 @@
               "slug": "ruxandra-rares"
             }
           ],
-          "texto": "Elena Branković, daughter of the despot Jovan, married Petru Rareș. Her daughter Ruxandra was consort of Alexander Lăpușneanu and regent of Bogdan IV of Moldova.",
+          "texto": "Elena Branković, daughter of the despot Jovan, married Petru Rareș. Her daughter Ruxandra was consort of Alexander Lăpușneanu and regent of Bogdan IV of Moldavia.",
           "fuentes": [
             {
               "titulo": "Encyclopedia României · Elena Ecaterina Rareș",
@@ -8532,7 +8532,7 @@
     "en": "ascania",
     "name": "Ascania",
     "summary": "A family with branches in Brandenburg, the Saxon duchies and the principalities of Anhalt, divided between different lines and titles.",
-    "origin": "Ascania is the general name of the Askanier. Its lines from Brandenburg, Saxony-Lauenburg, Saxony-Wittenberg and Anhalt come from the same medieval family. Anhalt’s branch is part of Henry I, son of Bernardo de Saxony and grandson of Alberto el Oso. Successive partitions gave rise to several principalities.",
+    "origin": "Ascania is the general name of the Askanier. Its lines from Brandenburg, Saxony-Lauenburg, Saxony-Wittenberg and Anhalt come from the same medieval family. Anhalt’s branch is part of Henry I, son of Bernard of Saxony and grandson of Alberto el Oso. Successive partitions gave rise to several principalities.",
     "history": "Catherine and Dorothea were daughters of Magnus I of Saxony-Lauenburg; Barbara came from Saxony-Wittenberg. In Anhalt, John George II and Leopold I belonged to Dessau; John Louis I, Frederick Augustus and Christian Augustus, to Zerbst-Dornburg. John George II's marriage to Henry Catherine of Orange-Nassau connected the branch of Dessau with the Netherlands.",
     "legacy": "Catherine II was born Princess of Anhalt-Zerbst and acceded to the Russian throne in 1762, after her marriage to Peter III and the coup that deposed him. In another branch, Leopold of Anhalt-Dessau reached the rank of Field Marshal in the service of Prussia and retained his principality. Both careers extended the influence of the family beyond their German domains.",
     "editorial": true,
@@ -8543,7 +8543,7 @@
       "aliases": [],
       "editorial": true,
       "resumen": "A family with branches in Brandenburg, the Saxon duchies and the principalities of Anhalt, divided between different lines and titles.",
-      "origen": "Ascania is the general name of the Askanier. Its lines from Brandenburg, Saxony-Lauenburg, Saxony-Wittenberg and Anhalt come from the same medieval family. Anhalt’s branch is part of Henry I, son of Bernardo de Saxony and grandson of Alberto el Oso. Successive partitions gave rise to several principalities.",
+      "origen": "Ascania is the general name of the Askanier. Its lines from Brandenburg, Saxony-Lauenburg, Saxony-Wittenberg and Anhalt come from the same medieval family. Anhalt’s branch is part of Henry I, son of Bernard of Saxony and grandson of Alberto el Oso. Successive partitions gave rise to several principalities.",
       "trayectoria": "Catherine and Dorothea were daughters of Magnus I of Saxony-Lauenburg; Barbara came from Saxony-Wittenberg. In Anhalt, John George II and Leopold I belonged to Dessau; John Louis I, Frederick Augustus and Christian Augustus, to Zerbst-Dornburg. John George II's marriage to Henry Catherine of Orange-Nassau connected the branch of Dessau with the Netherlands.",
       "legado": "Catherine II was born Princess of Anhalt-Zerbst and acceded to the Russian throne in 1762, after her marriage to Peter III and the coup that deposed him. In another branch, Leopold of Anhalt-Dessau reached the rank of Field Marshal in the service of Prussia and retained his principality. Both careers extended the influence of the family beyond their German domains.",
       "territorios": [
@@ -8825,7 +8825,7 @@
           "titulo": "Prince",
           "clase": "principality",
           "condicion": "co-regent",
-          "nota": "Corregent with his brother Juan Luis II since the extinction of the main line in 1742.",
+          "nota": "Corregent with his brother Juan Louis II since the extinction of the main line in 1742.",
           "persona": {
             "id": "CHRISTIANANHALTZERBST",
             "nombre": "Christian Augusto de Anhalt-Zerbst",
@@ -10154,7 +10154,7 @@
       ],
       "fuentes": [
         "https://www.treccani.it/enciclopedia/valois/",
-        "https://en.wikipedia.org/wiki/House_of_Valois-Orl%C3%A9ans"
+        "https://www.britannica.com/topic/Valois-dynasty"
       ],
       "casasOrigen": [
         {
@@ -10389,8 +10389,8 @@
         "url": "https://www.treccani.it/enciclopedia/valois/"
       },
       {
-        "titulo": "Wikipedia",
-        "url": "https://en.wikipedia.org/wiki/House_of_Valois-Orl%C3%A9ans"
+        "titulo": "Encyclopaedia Britannica · House of Valois",
+        "url": "https://www.britannica.com/topic/Valois-dynasty"
       }
     ]
   },
@@ -11852,7 +11852,7 @@
       "ramas": [],
       "fuentes": [
         "https://www.treccani.it/enciclopedia/valois/",
-        "https://en.wikipedia.org/wiki/House_of_Valois-Angoul%C3%AAme"
+        "https://www.britannica.com/topic/Valois-dynasty"
       ],
       "casasOrigen": [
         {
@@ -11940,8 +11940,8 @@
         "url": "https://www.treccani.it/enciclopedia/valois/"
       },
       {
-        "titulo": "Wikipedia",
-        "url": "https://en.wikipedia.org/wiki/House_of_Valois-Angoul%C3%AAme"
+        "titulo": "Encyclopaedia Britannica · House of Valois",
+        "url": "https://www.britannica.com/topic/Valois-dynasty"
       }
     ]
   },
@@ -12761,8 +12761,8 @@
     "en": "artois",
     "name": "Artois",
     "summary": "A Capetian branch born of Robert I’s appanage that connected Navarra, Burgundy and several French nobility lines.",
-    "origin": "Louis IX granted Artois County in 1237 to his brother Roberto I, son of Louis VIII. The county house was linked by this ancestry to the Capetians.",
-    "history": "Robert II died in Courtrai in 1302. His daughter Matilde, wife of Otto IV of Burgundy, inherited the county against the pretensions of his nephew Roberto III. Blanca de Artois, sister of Roberto II, was queen and regent of Navarre and, for his second marriage, Countess of Lancaster.",
+    "origin": "Louis IX granted Artois County in 1237 to his brother Robert I, son of Louis VIII. The county house was linked by this ancestry to the Capetians.",
+    "history": "Robert II died in Courtrai in 1302. His daughter Matilde, wife of Otto IV of Burgundy, inherited the county against the pretensions of his nephew Robert III. Blanca de Artois, sister of Robert II, was queen and regent of Navarre and, for his second marriage, Countess of Lancaster.",
     "legacy": "The county passed through Mahaut’s heiresses to other houses and ended up integrated into the Burgundian lands. The descendants of the male branch followed their own trajectories as the county heritage was transmitted by female line.",
     "editorial": true,
     "translatedSource": {
@@ -12772,8 +12772,8 @@
       "aliases": [],
       "editorial": true,
       "resumen": "A Capetian branch born of Robert I’s appanage that connected Navarra, Burgundy and several French nobility lines.",
-      "origen": "Louis IX granted Artois County in 1237 to his brother Roberto I, son of Louis VIII. The county house was linked by this ancestry to the Capetians.",
-      "trayectoria": "Robert II died in Courtrai in 1302. His daughter Matilde, wife of Otto IV of Burgundy, inherited the county against the pretensions of his nephew Roberto III. Blanca de Artois, sister of Roberto II, was queen and regent of Navarre and, for his second marriage, Countess of Lancaster.",
+      "origen": "Louis IX granted Artois County in 1237 to his brother Robert I, son of Louis VIII. The county house was linked by this ancestry to the Capetians.",
+      "trayectoria": "Robert II died in Courtrai in 1302. His daughter Matilde, wife of Otto IV of Burgundy, inherited the county against the pretensions of his nephew Robert III. Blanca de Artois, sister of Robert II, was queen and regent of Navarre and, for his second marriage, Countess of Lancaster.",
       "legado": "The county passed through Mahaut’s heiresses to other houses and ended up integrated into the Burgundian lands. The descendants of the male branch followed their own trajectories as the county heritage was transmitted by female line.",
       "territorios": [
         "Artois",
@@ -12996,7 +12996,7 @@
               "slug": "roberto-i-de-artois"
             }
           ],
-          "texto": "Roberto I, brother of Louis IX, received Artois. The lambel loaded with castles differentiates his weapons.",
+          "texto": "Robert I, brother of Louis IX, received Artois. The lambel loaded with castles differentiates his weapons.",
           "arbol": {
             "ids": [
               "ROB1ART",
@@ -13271,7 +13271,7 @@
               "slug": "david-de-trebisonda"
             }
           ],
-          "texto": "Theodora Cantacuzena married Alejo IV of Trebisonda. Among her sons were John IV and David, the last emperors of the Great Communes.",
+          "texto": "Theodora Cantacuzena married Alexios IV of Trebizond. Among her sons were John IV and David, the last emperors of the Great Communes.",
           "fuentes": [
             {
               "titulo": "Kelsey Jackson Williams · A Genealogy of the Grand Komnenoi of Trebizond (2007)",
@@ -13555,7 +13555,7 @@
               "slug": "basilio-de-trebisonda"
             }
           ],
-          "texto": "Alejo II married Djiadjak, daughter of Beka Jakeli, lord of Samtsje. The union strengthened Trebisonda’s ties with the Georgian powers. Basil was born of this marriage.",
+          "texto": "Alexios II married Djiadjak, daughter of Beka Jakeli, lord of Samtsje. The union strengthened Trebisonda’s ties with the Georgian powers. Basil was born of this marriage.",
           "fuentes": [
             {
               "titulo": "Kelsey Jackson Williams · A Genealogy of the Grand Komnenoi of Trebizond (2007)",
@@ -14112,7 +14112,7 @@
           "titulo": "Duke",
           "clase": "Duchy",
           "condicion": "Cash",
-          "nota": "Invested by Rodolfo I of Habsburg in 1286.",
+          "nota": "Invested by Rudolf I of Habsburg in 1286.",
           "persona": {
             "id": "MEINHARD2GOR",
             "nombre": "Meinhard II of Gorizia-Tirol",

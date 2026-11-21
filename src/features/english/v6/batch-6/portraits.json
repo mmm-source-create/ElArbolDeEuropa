@@ -1,11 +1,11 @@
 {
   "WEN2": {
     "tipo": "Representación medieval",
-    "obra": "Wenceslao II en el Codex Manesse",
+    "obra": "Wenceslaus II en el Codex Manesse",
     "autor": "Maestro del Codex Manesse (pintor adicional I)",
-    "fecha": "siglo XIV",
+    "fecha": "14th century",
     "institucion": "Universitätsbibliothek Heidelberg · Cod. Pal. germ. 848",
-    "alt": "Representación de Wenceslao II"
+    "alt": "Representación de Wenceslaus II"
   },
   "OTON3": {
     "tipo": "Representación póstuma",
@@ -16,49 +16,49 @@
   },
   "CLEMH": {
     "tipo": "Representación póstuma",
-    "obra": "Clementia of Habsburg · serie de retratos dinásticos",
+    "obra": "Clementia of Habsburg · series of dynastic portraits",
     "autor": "Antoni Boys (Anton Waiss)",
-    "fecha": "siglo XVI",
-    "institucion": "Kunsthistorisches Museum, Viena",
+    "fecha": "16th century",
+    "institucion": "Kunsthistorisches Museum, Vienna",
     "alt": "Representación póstuma de Clementia of Habsburg"
   },
   "ISABARAGHAB": {
     "tipo": "Representación póstuma",
-    "obra": "Elizabeth of Aragon · serie de retratos dinásticos",
+    "obra": "Elizabeth of Aragon · series of dynastic portraits",
     "autor": "Antoni Boys (Anton Waiss)",
-    "fecha": "siglo XVI",
-    "institucion": "Kunsthistorisches Museum, Viena",
+    "fecha": "16th century",
+    "institucion": "Kunsthistorisches Museum, Vienna",
     "alt": "Representación póstuma de Elizabeth of Aragon"
   },
   "ISABRP": {
     "tipo": "Representación póstuma",
-    "obra": "Elizabeth Richeza of Poland · serie de retratos dinásticos",
+    "obra": "Elizabeth Richeza of Poland · series of dynastic portraits",
     "autor": "Antoni Boys (Anton Waiss)",
-    "fecha": "siglo XVI",
-    "institucion": "Kunsthistorisches Museum, Viena",
+    "fecha": "16th century",
+    "institucion": "Kunsthistorisches Museum, Vienna",
     "alt": "Representación póstuma de Elizabeth Richeza of Poland"
   },
   "LADI4": {
     "tipo": "Representación póstuma",
-    "obra": "Ladislao IV · Chronica Hungarorum",
+    "obra": "Ladislaus IV · Chronica Hungarorum",
     "autor": "Ilustrador anónimo de la Chronica Hungarorum de Johannes de Thurocz",
     "fecha": "1488",
-    "alt": "Representación póstuma de Ladislao IV"
+    "alt": "Representación póstuma de Ladislaus IV"
   },
   "ANAAUS": {
     "tipo": "Representación póstuma",
-    "obra": "Anna of Austria · serie de retratos dinásticos",
+    "obra": "Anna of Austria · series of dynastic portraits",
     "autor": "Antoni Boys (Anton Waiss)",
-    "fecha": "siglo XVI",
-    "institucion": "Kunsthistorisches Museum, Viena",
+    "fecha": "16th century",
+    "institucion": "Kunsthistorisches Museum, Vienna",
     "alt": "Representación póstuma de Anna of Austria"
   },
   "WILHELM3THUR": {
     "tipo": "Representación póstuma",
-    "obra": "William III of Saxony · serie de retratos dinásticos",
+    "obra": "William III of Saxony · series of dynastic portraits",
     "autor": "Antoni Boys (Anton Waiss)",
-    "fecha": "siglo XVI",
-    "institucion": "Kunsthistorisches Museum, Viena",
+    "fecha": "16th century",
+    "institucion": "Kunsthistorisches Museum, Vienna",
     "alt": "Representación póstuma de William III of Saxony"
   },
   "PAPA_PAULO4": {
@@ -77,11 +77,11 @@
   },
   "PAPA_INOCENCIO5": {
     "tipo": "Retrato posterior",
-    "obra": "Inocencio V, de la serie de los cuarenta dominicos ilustres",
+    "obra": "Innocent V, de la serie de los cuarenta dominicos ilustres",
     "autor": "Tommaso da Modena",
     "fecha": "1352",
     "institucion": "Antiguo convento de San Niccolò, Treviso",
-    "alt": "Retrato del papa Inocencio V"
+    "alt": "Retrato del papa Innocent V"
   },
   "PAPA_INOCENCIO8": {
     "tipo": "Retrato contemporáneo",
@@ -119,7 +119,7 @@
     "autor": "Anónimo, según Hieronymus Wierix",
     "fecha": "principios del s. XVII",
     "institucion": "Museo de la catedral de Fidenza",
-    "alt": "Retrato del papa Inocencio IX"
+    "alt": "Retrato del papa Innocent IX"
   },
   "PAPA_BONIFACIO9": {
     "tipo": "Representación contemporánea",

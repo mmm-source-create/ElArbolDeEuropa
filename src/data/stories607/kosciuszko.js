@@ -12,7 +12,7 @@ export default {
  ref('Muzeum Historii Polski · Tadeusz Kościuszko · Naczelnik','https://kosciuszko.muzhp.pl/naczelnik','Second Partition, Act of Insurrection of 24 March 1794, Racławice, Połaniec, Maciejowice, Praga and the Third Partition.'),
  ref('Muzeum Historii Polski · Tadeusz Kościuszko · Emigrant','https://kosciuszko.muzhp.pl/emigrant','Release in 1796, journey to America, Jefferson, France and the Congress of Vienna.'),
  ref('National Park Service · Thaddeus Kosciuszko','https://www.nps.gov/thko/learn/historyculture/kosciuszkobio.htm','Early life, Continental Army service, the 1794 uprising, captivity, return to America and death in Solothurn.'),
- ref('Wikipedia · Partitions of Poland','https://en.wikipedia.org/wiki/Partitions_of_Poland','Dates of the three partitions: 5 August 1772, 23 January 1793 and 24 October 1795.')],
+ ref('Encyclopaedia Britannica · partitions of Poland','https://www.britannica.com/event/Partitions-of-Poland','Dates of the three partitions: 5 August 1772, 23 January 1793 and 24 October 1795.')],
  chapters:[
  ch(1765,['TADEUSZKOSCIUSZKO','STAN2PONIAT'],'Un hidalgo de Polesia en la escuela del rey','A Polesian noble at the king’s school',
  `Tadeo Kościuszko nació en febrero de 1746 en Mereczowszczyzna, en el Gran Ducado de Lituania, en una familia de la nobleza sin fortuna. En 1764 Estanislao Augusto Poniatowski fue elegido rey bajo la presión de las tropas rusas y emprendió un programa de reformas. Al año siguiente fundó en Varsovia la Escuela de Caballeros, el cuerpo de cadetes donde Kościuszko ingresó en diciembre de 1765. Allí se formó como oficial y, con una beca real, continuó sus estudios en París entre 1769 y 1774.`,

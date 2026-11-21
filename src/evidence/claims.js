@@ -44,6 +44,7 @@ export function personClaims(person, reviews = CLAIM_REVIEWS) {
       exactDate:review.exactDate || null,timeLabel:review.timeLabel || null,
       alternatives:review.alternatives || [],
       note:review.note || fallbackNote || documentaryNote?.texto || '',
+      ...(review.noteEn ? {noteEn:review.noteEn} : {}),
       reviewedAt:review.reviewedAt || null, editor:review.editor || null});
   };
   if (year(person.nac) !== null) add('birth','Nacimiento',person.nac,interval(person.nac),person.documentacion?.fechas?.nac?.nota);

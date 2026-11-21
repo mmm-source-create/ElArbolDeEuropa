@@ -38,9 +38,9 @@ export function completeEnglishProfile(source, translatedNames={}) {
     englishLabels:profileLabels(source),englishNotes:notes,
     biografiaExtensa:sections.map((part,i)=>({...part,titulo:translatedSections[i][0],texto:translatedSections[i][1]})),
     localizedClaims:personClaims(source).map(claim=>({...claim,
-      note:translatedProfileText(claim.note,knownNames,claim),
+      note:claim.noteEn||translatedProfileText(claim.note,knownNames,claim),
       alternatives:(claim.alternatives||[]).map(text=>translatedProfileText(text,knownNames,claim)),
-      sources:claim.sources.map(s=>({...s,title:englishSourceTitle(s.title),locator:translatedProfileText(s.locator,knownNames,claim)})),
+      sources:claim.sources.map(s=>({...s,title:englishSourceTitle(s.title),locator:s.locatorEn||translatedProfileText(s.locator,knownNames,claim)})),
     })),
     ...(source.fuentes?{fuentes:source.fuentes.map(f=>({...f,titulo:englishSourceTitle(f.titulo)}))}:{}),
     englishSourceTitles:Object.fromEntries(sourcesForPerson(source.id).map(s=>[s.titulo,englishSourceTitle(s.titulo)]).filter(([es,en])=>es!==en)),
@@ -49,7 +49,7 @@ export function completeEnglishProfile(source, translatedNames={}) {
   for(const field of ['padres','conyuges','hijos','relacionadosDinastia','contemporaneos'])result[field]=source[field].map(p=>{
     const name=knownNames[p.id];if(!name)throw Error(`Missing English name: ${p.id} (${p.nombre})`);
     const role=p.id==='JUANA2NAP'?'Queen':PROFILE_LABELS[p.titulo];if(p.titulo&&!role)throw Error(`Missing related role: ${p.titulo}`);
-    return {...p,nombre:name,role};
+    return {...p,nombre:name,role,dynasty:p.dinastia?PROFILE_LABELS[p.dinastia]||null:null};
   });
   const image=IMAGENES_PERSONAS[source.id];
   if(image){const portrait=ENGLISH_PROFILE_PORTRAITS[source.id]||{tipo:'Historical portrait',obra:translation.name,autor:image.autor,fecha:image.fecha,institucion:image.institucion};result.portrait={...localizedPortrait(source.id,image,ENGLISH_PROFILE_PORTRAITS),alt:portrait.alt || `Portrait of ${translation.name}`};}

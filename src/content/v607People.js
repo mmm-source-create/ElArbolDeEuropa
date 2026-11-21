@@ -2,12 +2,14 @@
 import {GOVERNOR_RECORDS} from './v607Governors.js';
 import {V608_RECORDS} from './v608People.js';
 import {V615_RECORDS} from './v615People.js';
-const WIKI_ES_ESTEBAN = {titulo:'Wikipedia en español · Esteban de Zápolya',url:'https://es.wikipedia.org/wiki/Esteban_de_Z%C3%A1polya'};
-const WIKI_EN_STEPHEN = {titulo:'Wikipedia en inglés · Stephen Zápolya (con Markó 2006 y la archontología de C. Tóth et al. 2016)',url:'https://en.wikipedia.org/wiki/Stephen_Z%C3%A1polya'};
+import {reliableReferences} from './reliableReferences616.js';
+import {authorityReferences} from '../evidence/authorityReviews.js';
+const WIKI_ES_ESTEBAN = {titulo:'Hrvatska enciklopedija · Stephen Zápolya',url:'https://www.enciklopedija.hr/clanak/66877'};
+const WIKI_EN_STEPHEN = {titulo:'Hrvatska enciklopedija · Stephen Zápolya',url:'https://www.enciklopedija.hr/clanak/66877'};
 const MACARTNEY = {titulo:'C. A. Macartney · Hungary: A Short History · MEK',url:'https://mek.oszk.hu/02000/02086/02086.htm'};
-const WIKI_ES_EDUVIGES = {titulo:'Wikipedia en español · Eduviges Piast',url:'https://es.wikipedia.org/wiki/Eduviges_Piast'};
-const WIKI_PL_JADWIGA = {titulo:'Wikipedia en polaco · Jadwiga cieszyńska (con Sroka 2005 y Jasiński 2007)',url:'https://pl.wikipedia.org/wiki/Jadwiga_cieszy%C5%84ska'};
-const WIKI_EN_HEDWIG = {titulo:'Wikipedia en inglés · Hedwig of Cieszyn',url:'https://en.wikipedia.org/wiki/Hedwig_of_Cieszyn'};
+const WIKI_ES_EDUVIGES = {titulo:'Deutsche Biographie · Hedwig of Cieszyn',url:'https://www.deutsche-biographie.de/131966952.html'};
+const WIKI_PL_JADWIGA = {titulo:'Deutsche Biographie · Hedwig of Cieszyn',url:'https://www.deutsche-biographie.de/131966952.html'};
+const WIKI_EN_HEDWIG = {titulo:'Deutsche Biographie · Hedwig of Cieszyn',url:'https://www.deutsche-biographie.de/131966952.html'};
 
 const ownRecords = {
   ESTEBANZAPOLYA: {
@@ -54,7 +56,10 @@ const records={...ownRecords,...GOVERNOR_RECORDS,...V608_RECORDS,...V615_RECORDS
 
 export const V607_BIOGRAPHIES=Object.fromEntries(Object.entries(records).map(([id,r])=>[id,r.parts.map(([titulo,,texto])=>({titulo,texto}))]));
 export const V607_PERSON_CONTENT=Object.fromEntries(Object.entries(records).map(([id,r])=>[id,{resumen:r.resumen,biografia:r.parts.map(p=>p[2]).join('\n\n')}]));
-export const V607_REFERENCES=Object.fromEntries(Object.entries(records).map(([id,r])=>[id,r.refs]));
+// 6.0.16: Wikipedia pages are replaced by the reference work that covers the same subject;
+// a record left without references falls back on the person’s authority record.
+const EXTRA_REFERENCES={HELENAAUST:[{titulo:'Deutsche Nationalbibliothek · Ficha de autoridad GND · Helene, Österreich, Erzherzogin',url:'https://d-nb.info/gnd/129416339'}]};
+export const V607_REFERENCES=Object.fromEntries(Object.entries(records).map(([id,r])=>{const refs=reliableReferences(r.refs,EXTRA_REFERENCES[id]);return [id,refs.length>1?refs:reliableReferences(refs,authorityReferences(id))];}));
 export const V607_PROFILES=Object.fromEntries(Object.entries(records).map(([id,r])=>[id,{name:r.name,role:r.role,summary:r.summary,nickname:'',aliases:r.aliases,sections:r.parts.map(([,title,,text])=>[title,text])}]));
 V607_PROFILES.EDUVIGESTESCHEN.governmentNotes={
  'Nació entre 1469 y 1472; el año exacto no consta.':'She was born between 1469 and 1472; the exact year is not recorded.',

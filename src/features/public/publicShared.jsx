@@ -88,7 +88,7 @@ export function PersonaMiniCard({ persona, compact = false, locale = 'es' }) {
       )}
       <span className="public-person-copy">
         <strong>{persona.nombre}{locale==='en'&&persona.role&&(!persona.path||persona.path.startsWith('/es/'))?' · ES':''}</strong>
-        <small>{[locale === 'en' ? persona.role || 'Historical profile · ES' : [persona.titulo, persona.dinastia].filter(Boolean).join(" · ") || "Ficha histórica", HOMONYM_YEARS[persona.id]].filter(Boolean).join(" · ")}</small>
+        <small>{[locale === 'en' ? [persona.role, persona.dynasty].filter(Boolean).join(" · ") || 'Historical profile · ES' : [persona.titulo, persona.dinastia].filter(Boolean).join(" · ") || "Ficha histórica", HOMONYM_YEARS[persona.id]].filter(Boolean).join(" · ")}</small>
         {(Number.isFinite(persona.nac) || Number.isFinite(persona.muer)) && <span>{personaDates(persona, locale)}</span>}
       </span>
       <ArrowRight size={14} aria-hidden="true" />
