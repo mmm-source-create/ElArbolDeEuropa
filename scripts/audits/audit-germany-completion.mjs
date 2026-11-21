@@ -64,8 +64,9 @@ export function originalPreservationMap(retained,year,corrections=preservationCo
 // Later reviews elsewhere (germany-completion-later-reviews.json) leave out
 // exactly their own cells; the rest must match the map before them.
 export function auditGermanyCompletion(data, review, geography, baseline, later=null) {
-  if(later && (later.schema!==1 || JSON.stringify([...later.ids].sort())!==JSON.stringify([...(data.northAtlanticReview?.scope.ids||[])].sort())))
-    throw Error('Later review exclusions do not match the North Atlantic review scope');
+  const laterIds = later ? [...new Set(later.reviews.flatMap(key => data[key]?.scope.ids || []))].sort() : [];
+  if(later && (later.schema!==1 || JSON.stringify([...later.ids].sort())!==JSON.stringify(laterIds)))
+    throw Error('Later review exclusions do not match the scope of the later reviews');
   const before = validateGermanyCompletion(review,geography,baseline);
   for(const c of preservationCorrections)if(before.has(c.locationId)||!c.reason||!c.source?.startsWith('https://')
     ||!Number.isInteger(c.from)||!Number.isInteger(c.through)||c.from<1200||c.through>1800||c.from>c.through

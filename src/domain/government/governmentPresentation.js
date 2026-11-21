@@ -13,6 +13,7 @@ const cache=new WeakMap();
 // This is a presentation of existing dated mandates, never a change of title,
 // ownership or border. Sovereigns and their delegates remain distinct rows.
 // Rank of a title for choosing a sovereign's main realm (6.0.12).
+const AUSTRIAN_MONARCHY=new Set(['monarquia-austriaca-exterior']);
 const RANK={imperio:7,reinado:6,zarato:6,sultanato:6,gran_ducado:5,electorado:5,ducado:4,principado:4,despotado:4,voivodato:4,marquesado:3,landgraviato:3,margraviato:3,condado:2,vizcondado:2,señorío:1};
 export function governmentGroupsAt(person, year, {view = 'personal'} = {}) {
  if (!person || !Number.isInteger(year)) return [];
@@ -45,7 +46,9 @@ export function governmentGroupsAt(person, year, {view = 'personal'} = {}) {
   const sovereign=[...result.values()].filter(g=>g.kind==='sovereign'&&!['sacro-imperio','provincias-unidas'].includes(g.id));
   if(sovereign.length>1){
    const first=g=>Math.min(...g.mandates.map(m=>m.desde));
-   const rank=g=>Math.max(...g.mandates.map(m=>RANK[m.clase]||1));
+   // 6.0.14: the Austrian Habsburg monarchy ranks just above a kingdom, so Ferdinand I
+   // keeps its red when he gains Bohemia and Hungary (1526).
+   const rank=g=>AUSTRIAN_MONARCHY.has(g.id)?RANK.reinado+.5:Math.max(...g.mandates.map(m=>RANK[m.clase]||1));
    const primary=[...sovereign].sort((a,b)=>rank(b)-rank(a)||b.mandates.length-a.mandates.length||first(a)-first(b)||a.id.localeCompare(b.id))[0];
    for(const group of sovereign)if(group!==primary){group.color=primary.color;group.sharedSovereign=primary.id;}
   }

@@ -2,3 +2,8 @@
 .home-search-field input::-webkit-search-cancel-button{-webkit-appearance:none;appearance:none}
 
 .home-search-results .home-search-collections{display:flex;flex-wrap:wrap;gap:5px;margin-top:5px}.home-search-collections>span{padding:2px 6px;background:var(--eade-paper-soft);border:1px solid var(--eade-border);border-radius:var(--r-sm,6px);color:var(--eade-muted);font-size:var(--fs-2xs,10px)}
+
+/* 6.0.14: results open as a dropdown over the page, so the hero (and the map
+   drawn as its background) keeps its size while searching. */
+.home-search{position:relative}
+.home-search-results{position:absolute;left:0;right:0;top:100%;z-index:40;max-height:min(60vh,440px);overflow:auto;box-shadow:0 18px 40px rgba(0,0,0,.28)}

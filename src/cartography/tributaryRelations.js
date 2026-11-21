@@ -109,6 +109,16 @@ export function tributaryLayerRelation(name,year,relations=TRIBUTARY_RELATIONS,l
  return tributaryLayerRelations(name,year,relations).find(r=>!locationId||relationCoversLocation(r,locationId))||null;
 }
 
+// 6.0.14: a tributary or vassal state keeps its own ruler; the map names him
+// beside the overlord (Transylvania under John Sigismund, Wallachia under
+// Michael the Brave…). Effective, non-delegated governments of the subject.
+export function subjectRulers(relation, year, people) {
+  if (!relation || !Number.isInteger(year) || !people) return [];
+  const subject = territorialIdentity(relation.subject);
+  return people.filter(person => gobiernosDe(person).some(g => territorialIdentity(g.territorio) === subject && g.desde <= year && year <= g.hasta
+    && gobiernoEfectivo(g) && !['regencia', 'gobierno delegado', 'titular', 'pretensión'].includes(g.condicion) && !g.ambito));
+}
+
 export function tributaryEntriesFor(person, year, data, ownEntries = [], relations = TRIBUTARY_RELATIONS) {
   if (!person || !data || !Number.isInteger(year)) return [];
   const ownIds = new Set(ownEntries.filter(entry => entry.paint).flatMap(entry => entry.ids));

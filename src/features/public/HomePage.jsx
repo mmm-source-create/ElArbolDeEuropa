@@ -37,7 +37,7 @@ const HOME_COPY = {
     introduction: 'Mira el mapa de cada época, sigue los parentescos entre las casas que gobernaron y lee la vida de quienes las formaron, de 1200 a 1800.',
     explore: 'Explorar el atlas', tutorial: 'Tutorial', searched: 'Más buscados',
     rulers: (year, total) => [`Gobernaban en ${year}`, `${total} soberanos`], allRulers: year => `Ver Europa en ${year}`,
-    travel: 'Viaja en el tiempo', openAtlas: 'Abrir el atlas', mapOf: year => `Mapa de Europa en ${year}`,
+    travel: 'Viaja en el tiempo', mapOf: year => `Mapa de Europa en ${year}`,
     statsLabel: 'Resumen del proyecto', stats: ['personas', 'dinastías', 'territorios', 'historias guiadas'],
     dailyEyebrow: 'Persona del día', readBio: 'Leer su biografía', seeAtlas: 'Verla en el atlas',
     peopleEyebrow: 'Personas', peopleTitle: 'Figuras de seis siglos', allPeople: 'Todas las personas',
@@ -49,7 +49,7 @@ const HOME_COPY = {
     introduction: 'See the map of each era, follow the kinship between the ruling houses and read the lives of the people who made them, from 1200 to 1800.',
     explore: 'Explore the Atlas', tutorial: 'Tutorial', searched: 'Most searched',
     rulers: (year, total) => [`Ruling in ${year}`, `${total} sovereigns`], allRulers: year => `See Europe in ${year}`,
-    travel: 'Travel in time', openAtlas: 'Open the Atlas', mapOf: year => `Map of Europe in ${year}`,
+    travel: 'Travel in time', mapOf: year => `Map of Europe in ${year}`,
     statsLabel: 'The complete Atlas', stats: ['people', 'dynasties', 'territories', 'guided stories'],
     dailyEyebrow: 'Person of the day', readBio: 'Read the biography', seeAtlas: 'See them in the Atlas',
     peopleEyebrow: 'People', peopleTitle: 'Figures from six centuries', allPeople: 'All people',
@@ -143,12 +143,11 @@ export function HomeContent({ data = HOME_DATA, locale = "es", title, onEnterAtl
             <span className="home-eyebrow">{rulersEyebrow}</span>
             <h2>{rulersTitle}</h2>
             <ul>{(en ? rulers.people : rulers.personas).map(r => <li key={r.id}><a href={r.path || `/es/persona/${r.slug}`}><Portrait id={r.id} className="home-atlas-ruler-portrait" sizes="48px"/><span><strong>{r.nombre}</strong><small>{en ? r.territory : r.territorio} · {en ? r.from : r.desde}–{en ? r.to : r.hasta}</small></span></a></li>)}</ul>
-            <a className="home-text-link" href={atlasYear(year)}>{copy.allRulers(year)} <ArrowRight size={14}/></a>
           </aside> : null}
           <nav className="home-atlas-years" aria-label={copy.travel}>
             <span className="home-eyebrow">{copy.travel}</span>
             <div>{HOME_YEARS.map(y => <button key={y} type="button" aria-pressed={y === year} aria-label={copy.mapOf(y)} onClick={() => setYear(y)} onPointerEnter={() => warm(y)} onFocus={() => warm(y)}>{y}</button>)}</div>
-            <a className="home-atlas-open" href={atlasYear(year)}>{copy.openAtlas} <ArrowRight size={15}/></a>
+            <a className="home-atlas-open" href={atlasYear(year)}>{copy.allRulers(year)} <ArrowRight size={15}/></a>
           </nav>
         </section>
 
