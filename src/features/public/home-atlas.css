@@ -67,3 +67,9 @@
   .home-daily-art{height:320px}
 }
 @media (max-width:980px){.home-atlas-map::before{background:linear-gradient(180deg,transparent 65%,var(--eade-paper) 100%)}.home-atlas-map-year{right:14px;bottom:14px;font-size:44px}}
+
+/* 6.0.15: the hero's own stacking context sits above the stats and carousels
+   that follow it, and the text column above the time line, so the search
+   dropdown is never painted over. */
+.home-atlas-hero{z-index:2}
+.home-atlas-copy{position:relative;z-index:3}

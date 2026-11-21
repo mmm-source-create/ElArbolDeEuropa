@@ -23,7 +23,7 @@
     "role": "Count",
     "nickname": "",
     "aliases": [],
-    "summary": "His marriage to Leonor of Navarre linked the house of Foix to the Navarre succession. He combined his Pyrenean interests with service to the French monarchy.",
+    "summary": "His marriage to Eleanor of Navarre linked the house of Foix to the Navarre succession. He combined his Pyrenean interests with service to the French monarchy.",
     "sections": [],
     "governmentNotes": {
       "Desde 1425 Bigorra la gobernaron los condes de Foix.": "From 1425 Bigorre was ruled by the counts of Foix."
@@ -82,7 +82,7 @@
     ],
     "summary": "He succeeded his father in Saluzzo and sought support in Milan, Monferrato and France. His military career led him to serve the French kings during the Italian Wars.",
     "sections": [],
-    "biography": "He succeeded his father in Saluzzo and sought support in Milan, Monferrato and France. His military career led him to serve the French kings during the Italian Wars. The marriage to Margarita de Foix-Candale reinforced that orientation. At her death there was a child heir and a regency that prolonged the political influence of the Marquise.",
+    "biography": "He succeeded his father in Saluzzo and sought support in Milan, Monferrato and France. His military career led him to serve the French kings during the Italian Wars. The marriage to Margaret of Foix-Candale reinforced that orientation. At her death there was a child heir and a regency that prolonged the political influence of the Marquise.",
     "governmentNotes": {
       "Ludovico II heredó de su padre. Su madre Isabel de Monferrato lo conectaba con los marqueses vecinos y con la casa de Saboya.": "Louis II inherited from his father. His mother Elizabeth of Montferrat connected him with the neighbouring marquis and with the House of Savoy."
     }
@@ -110,7 +110,7 @@
     "sections": []
   },
   "BONIF3MON": {
-    "name": "Bonifacio III of Montferrat",
+    "name": "Boniface III of Montferrat",
     "role": "Marquess",
     "nickname": "",
     "aliases": [],
@@ -119,7 +119,8 @@
     "biography": "Son of John Jacobo, he succeeded his brother William VIII when expectations about the Monferrato inheritance already affected Savoy and Saluzzo. His sons William IX and John George extended the male line of the Paleologists. His government maintained a difficult relationship with Milan and also sought French protection.",
     "governmentNotes": {
       "El marquesado pasó al hermano de Guillermo VIII. Las hijas de Guillermo y sus matrimonios mantuvieron expectativas patrimoniales, pero no sustituyeron ese acceso de Bonifacio.": "The marquess passed to William VIII's brother. William's daughters and his marriages maintained hereditary expectations, but they did not replace Bonifacio's access."
-    }
+    },
+    "slugName": "Bonifacio III of Montferrat"
   },
   "FERN2TIROL": {
     "name": "Ferdinand II, Archduke of Austria",
@@ -258,11 +259,11 @@
     "aliases": [
       "Michele Antonio di Saluzzo"
     ],
-    "summary": "The son of Ludovico II and Margarita of Foix-Candale, he inherited Saluzzo as a child. He developed his career in the service of the French monarchy, while his mother retained a decisive role in the marquessate.",
+    "summary": "The son of Ludovico II and Margaret of Foix-Candale, he inherited Saluzzo as a child. He developed his career in the service of the French monarchy, while his mother retained a decisive role in the marquessate.",
     "sections": [],
-    "biography": "The son of Ludovico II and Margarita of Foix-Candale, he inherited Saluzzo as a child. He developed his career in the service of the French monarchy, while his mother retained a decisive role in the marquessate. His death without issue opened a dispute between his brothers, whose political positions were divided between France and the emperor.",
+    "biography": "The son of Ludovico II and Margaret of Foix-Candale, he inherited Saluzzo as a child. He developed his career in the service of the French monarchy, while his mother retained a decisive role in the marquessate. His death without issue opened a dispute between his brothers, whose political positions were divided between France and the emperor.",
     "governmentNotes": {
-      "El heredero era todavía niño. Su madre Margarita de Foix-Candale ejerció la tutela y mantuvo después funciones de gobierno durante las ausencias de su hijo.": "The heir was still a child. His mother, Margarita de Foix-Candale, was the guardian and later held governmental functions during his son's absence."
+      "El heredero era todavía niño. Su madre Margarita de Foix-Candale ejerció la tutela y mantuvo después funciones de gobierno durante las ausencias de su hijo.": "The heir was still a child. His mother, Margaret of Foix-Candale, was the guardian and later held governmental functions during his son's absence."
     }
   },
   "GIORGI10KARTLI": {
@@ -1477,13 +1478,13 @@
   },
   "GUILLERMORAMONBEARN": {
     "name": "William Raymond de Moncada",
-    "role": "Viscount of Bearne",
+    "role": "Viscount of Béarn",
     "nickname": "",
     "aliases": [
       "Guillem Ramon I de Bearn",
       "Guillermo Ramón I de Bearne"
     ],
-    "summary": "Son of Mary of Bearne and William of Moncada, he succeeded his brother Gaston VI as Viscount of Bearne in 1215. He died in 1224 and was succeeded by his son William.",
+    "summary": "Son of Mary of Béarn and William of Moncada, he succeeded his brother Gaston VI as Viscount of Béarn in 1215. He died in 1224 and was succeeded by his son William.",
     "sections": [],
     "governmentNotes": {
       "Sucedió a su hermano Gastón VI.": "He succeeded his brother Gaston VI."
@@ -1826,12 +1827,13 @@
     "sections": []
   },
   "CONSTANCEANT": {
-    "name": "Constanza de Antioquía",
+    "name": "Constance of Antioch",
     "role": "Princess",
     "nickname": "",
     "aliases": [],
     "summary": "Heiress of the Principality of Antioch, her marriages with Raymond of Poitiers and Raynald of Châtillon placed both at the centre of government. Her descendants link Antioch with Hungary and the Cypriot dynasty.",
-    "sections": []
+    "sections": [],
+    "slugName": "Constanza de Antioquía"
   },
   "VINCENZO2GONZAGA": {
     "name": "Vincenzo II Gonzaga",
@@ -1849,16 +1851,17 @@
     "summary": "Duke of Württemberg, 1737 to 1793. Duke of the Württemberg dynasty.",
     "sections": [],
     "governmentNotes": {
-      "Sucede a su padre en 1737 siendo menor de edad: gobiernan como regentes Carlos Rodolfo de Württemberg-Neuenstadt hasta 1738 y Carlos Federico de Württemberg-Oels hasta su emancipación, el 4 de febrero de 1744.": "He succeeded his father in 1737 as a minor: they ruled as regents Charles Rodolfo of Württemberg-Neuenstadt until 1738 and Charles Frederick of Württemberg-Oels until his emancipation, on 4 February 1744."
+      "Sucede a su padre en 1737 siendo menor de edad: gobiernan como regentes Carlos Rodolfo de Württemberg-Neuenstadt hasta 1738 y Carlos Federico de Württemberg-Oels hasta su emancipación, el 4 de febrero de 1744.": "He succeeded his father in 1737 as a minor: they ruled as regents Charles Rudolf of Württemberg-Neuenstadt until 1738 and Charles Frederick of Württemberg-Oels until his emancipation, on 4 February 1744."
     }
   },
   "BONIFACIOSAB": {
-    "name": "Bonifacio of Savoy",
+    "name": "Boniface of Savoy",
     "role": "Count",
     "nickname": "",
     "aliases": [],
     "summary": "Count of Savoy, 1253–1263. Count of the Savoy dynasty.",
-    "sections": []
+    "sections": [],
+    "slugName": "Bonifacio of Savoy"
   },
   "JUANASANDLERMA": {
     "name": "Joanna Lorenza Gómez de Sandoval y de la Cerda",
@@ -2235,7 +2238,7 @@
     "aliases": [
       "Hug Roger II de Pallars"
     ],
-    "summary": "Brother of Arnaldo Roger III, he was count from 1369 to 1416 and married Blanca de Foix-Castellbó. He served Infante Juan and in the Panissars campaign of 1389–1390; after Caspe's engagement he supported Fernando de Antequera and participated in the pacification of Jaime de Urgel's revolt (1412–1413).",
+    "summary": "Brother of Arnaldo Roger III, he was count from 1369 to 1416 and married Blanche of Foix-Castellbó. He served Infante Juan and in the Panissars campaign of 1389–1390; after Caspe's engagement he supported Fernando de Antequera and participated in the pacification of Jaime de Urgel's revolt (1412–1413).",
     "sections": []
   },
   "ARNAUROGER4PALLARS": {

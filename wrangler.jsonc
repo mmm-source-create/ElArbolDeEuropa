@@ -10,6 +10,7 @@
     "html_handling": "drop-trailing-slash",
     "not_found_handling": "none",
     "run_worker_first": [
+      "/es/historia/gustavo-adolfo-campanas-y-muerte*",
       "/en/territory/why",
       "/es/historia/emperadores*",
       "/en/story/emperors*",

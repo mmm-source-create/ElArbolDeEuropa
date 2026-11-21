@@ -9,6 +9,7 @@ import {CASAS_ESCANDINAVAS,CONEXIONES_ESCANDINAVAS} from "./escandinavia-v212.js
 import {CASAS_V521} from "./grandes-casas-v521.js";
 import {CASAS_V523} from "./casas-v523.js";
 import {CASAS_V534} from "./casas-v534.js";
+import {CASAS_V615} from "./casas-v615.js";
 import {CASAS_REVISION_CAPETA,RAMAS_REVISION_CAPETA} from './revision-capeta.js';
 import {ASCANIA_HISTORY} from './ascania.js';
 import {CASAS_AMPLIACION_EDITORIAL} from './ampliacion-editorial.js';
@@ -34,6 +35,7 @@ export const HISTORIA_DINASTIAS = {
   ...CASAS_V521,
   ...CASAS_V523,
   ...CASAS_V534,
+  ...CASAS_V615,
   ...CASAS_REVISION_CAPETA,
   'Capeto': {
     resumen:'De Hugo Capeto a Carlos IV, la línea real directa articuló la monarquía francesa; sus descendientes y ramas continuaron en Dreux, Évreux, Valois y Borbón.',

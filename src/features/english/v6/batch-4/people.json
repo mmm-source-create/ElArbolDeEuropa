@@ -103,7 +103,7 @@
     "role": "Consort",
     "nickname": "",
     "aliases": [],
-    "summary": "Daughter of Philip of Évreux and Juana II of Navarre, married Gaston Fébus. She was the mother of the Count's legitimate son, also called Gaston.",
+    "summary": "Daughter of Philip of Évreux and Joanna II of Navarre, married Gaston Fébus. She was the mother of the Count's legitimate son, also called Gaston.",
     "sections": [],
     "biography": "A daughter of Philip of Évreux and Joan II of Navarre, she married Gaston Fébus and was mother to the count’s legitimate son, also named Gaston. Her marriage connected Foix with Navarre, although the breakdown of the marriage and her son’s death prevented her descendants from continuing the male line.",
     "governmentNotes": {
@@ -466,7 +466,7 @@
     "role": "Consort",
     "nickname": "",
     "aliases": [],
-    "summary": "The daughter of King Duarte of Portugal and Leonor of Aragon, married Frederick III and was crowned Empress in Rome in 1452. Mother of Maximilian I, died in 1467.",
+    "summary": "The daughter of King Duarte of Portugal and Eleanor of Aragon, married Frederick III and was crowned Empress in Rome in 1452. Mother of Maximilian I, died in 1467.",
     "sections": []
   },
   "ISABNAP": {
@@ -553,7 +553,7 @@
     "role": "King",
     "nickname": "",
     "aliases": [],
-    "summary": "King of Scotland since 1460. He incorporated the Orcades and the Shetland for his marriage to Margarita of Denmark and died after the battle of Sauchieburn (1488) against noble rebels.",
+    "summary": "King of Scotland since 1460. He incorporated the Orcades and the Shetland for his marriage to Margaret of Denmark and died after the battle of Sauchieburn (1488) against noble rebels.",
     "sections": []
   },
   "RAMONBERENGUER4PROV": {
@@ -596,12 +596,13 @@
     "sections": []
   },
   "ENRIQ2BR": {
-    "name": "Henry II of Brabante",
+    "name": "Henry II of Brabant",
     "role": "Duke",
     "nickname": "",
     "aliases": [],
     "summary": "Duke of Brabant, 1235–1248. Duke of the House of Brabant.",
-    "sections": []
+    "sections": [],
+    "slugName": "Henry II of Brabante"
   },
   "FERNPORTVISEU": {
     "name": "Ferdinand of Portugal",
@@ -1989,7 +1990,7 @@
     "summary": "His marriage with Elizabeth of Faix- Castellbó linked him to his open succession after Mateo's death. He participated in his wife's inheritance and was father of John I of Faix. The descendants retained his name Faix but his male descent came from Grailly.",
     "sections": [],
     "governmentNotes": {
-      "Derechos de Isabel de Foix-Castellbó.": "Rights of Isabel de Foix- Castellbó.",
+      "Derechos de Isabel de Foix-Castellbó.": "Rights of Isabella of Foix- Castellbó.",
       "Año aproximado; la cifra no representa una datación exacta.": "The figure does not represent an exact date."
     }
   },
@@ -2058,8 +2059,8 @@
     "sections": []
   },
   "MARIABEARNE": {
-    "name": "Maria de Bearne",
-    "role": "VizCountess of Bearne",
+    "name": "Maria de Béarn",
+    "role": "VizCountess of Béarn",
     "nickname": "",
     "aliases": [
       "Maria I de Bearn"
@@ -2068,7 +2069,8 @@
     "sections": [],
     "governmentNotes": {
       "Se declaró vasalla de Alfonso II de Aragón, bajo cuya tutela se estableció la dinastía de los Moncada en Bearne.": "It was declared the wall of Alfonso II of Aragon, under whose tutelage the dynasty of the Moncada was established in Bearne."
-    }
+    },
+    "slugName": "Maria de Bearne"
   },
   "STEFANRADOSLAVSER": {
     "name": "Stefan Radoslav",

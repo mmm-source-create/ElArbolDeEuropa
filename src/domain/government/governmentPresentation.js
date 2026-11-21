@@ -5,6 +5,10 @@ import {gobiernosDe,intervalosDisputadosDe} from '../genealogy/personAccessors.j
 import {gobiernoEfectivo} from '../../data/territorios.js';
 import {agrupacionesPoliticasEnMapa, colorTerritorioEnMapa, REINO_COLOR} from '../../cartography/kingdomMaps.js';
 import {authorityKind} from './authorityKind.js';
+import {PERSONAS} from '../../data/personas.js';
+
+let byId=null;
+const personById=id=>(byId||=new Map(PERSONAS.map(p=>[p.id,p]))).get(id);
 
 const labels = {'monarquia-hispanica':'España','castilla-leon':'Corona de Castilla',
  'tierras-austriacas':'Austria','austro-bohemia':'Austria y Corona de San Wenceslao'};
@@ -43,7 +47,8 @@ export function governmentGroupsAt(person, year, {view = 'personal'} = {}) {
  // highest title, then most territories, then the earliest held. The Empire is a dignity above
  // the territories, and republican offices are not personal sovereignty.
  if(view==='panorama'){
-  const sovereign=[...result.values()].filter(g=>g.kind==='sovereign'&&!['sacro-imperio','provincias-unidas'].includes(g.id));
+  const sovereign=[...result.values()].filter(g=>g.kind==='sovereign'&&!['sacro-imperio','provincias-unidas'].includes(g.id)
+   &&!g.mandates.every(m=>m.condicion==='jure uxoris'));
   if(sovereign.length>1){
    const first=g=>Math.min(...g.mandates.map(m=>m.desde));
    // 6.0.14: the Austrian Habsburg monarchy ranks just above a kingdom, so Ferdinand I
@@ -51,6 +56,24 @@ export function governmentGroupsAt(person, year, {view = 'personal'} = {}) {
    const rank=g=>AUSTRIAN_MONARCHY.has(g.id)?RANK.reinado+.5:Math.max(...g.mandates.map(m=>RANK[m.clase]||1));
    const primary=[...sovereign].sort((a,b)=>rank(b)-rank(a)||b.mandates.length-a.mandates.length||first(a)-first(b)||a.id.localeCompare(b.id))[0];
    for(const group of sovereign)if(group!==primary){group.color=primary.color;group.sharedSovereign=primary.id;}
+  }
+ }
+ // 6.0.15: realms handed over by a living parent who keeps ruling the same
+ // monarchy (Naples in 1554 and the Netherlands in 1555, from Charles V to
+ // Philip II) keep that monarchy's colour until the parent's last year.
+ if(view==='panorama')for(const parentId of [person.padre,person.madre].filter(Boolean)){
+  const parent=personById(parentId);
+  if(!parent)continue;
+  const parentGroups=agrupacionesPoliticasEnMapa(parent,year,{view:'panorama'}).filter(g=>g.id!=='sacro-imperio');
+  const continuing=parentGroups.filter(g=>agrupacionesPoliticasEnMapa(parent,year+1,{view:'panorama'}).some(next=>next.id===g.id));
+  for(const group of result.values()){
+   if(group.kind!=='sovereign'||group.mandates.every(m=>m.condicion==='jure uxoris'))continue;
+   const own=group.mandates.filter(m=>m.condicion!=='jure uxoris');
+   const parentGroup=continuing.find(g=>own.every(m=>g.miembros?.has(m.territorio)
+    &&gobiernosDe(parent).some(pm=>pm.territorio===m.territorio&&gobiernoEfectivo(pm)&&pm.desde<=year&&pm.hasta>=year-1)));
+   if(!parentGroup)continue;
+   const parentColor=governmentGroupsAt(parent,year,{view:'panorama'}).find(g=>g.id===parentGroup.id)?.color||parentGroup.color;
+   group.color=parentColor;group.sharedSovereign=parentGroup.id;group.inheritedFrom=parent.id;
   }
  }
  if(!cache.has(person))cache.set(person,new Map());

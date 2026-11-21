@@ -9807,21 +9807,21 @@
     "es": "la-marck",
     "en": "la-marck",
     "name": "La Marck",
-    "summary": "",
-    "origin": "",
-    "history": "",
-    "legacy": "",
-    "editorial": false,
+    "summary": "Counts of the Mark, in Westphalia, who inherited the county of Cleves and were dukes of Cleves from 1417. In the sixteenth century they united Jülich, Berg and Ravensberg; their extinction in 1609 opened the Jülich-Cleves succession crisis.",
+    "origin": "The family descended from the counts of Berg-Altena and took its name from the castle of Mark, near the Ruhr. In 1368 Adolf of the Mark inherited the county of Cleves, on the lower Rhine, through his mother, and his son Adolf I was raised to duke by Emperor Sigismund in 1417.",
+    "history": "Adolf I married Mary of Burgundy, daughter of John the Fearless, and his descendants moved in the Burgundian orbit: his daughter Mary was the mother of Louis XII. The marriage of John III to Maria, heiress of Jülich-Berg, brought together a large group of territories on the lower Rhine in 1521. John III and his son William V favoured a religious humanism midway between Rome and the Reformation.",
+    "legacy": "Anne of Cleves, John III’s daughter, became Henry VIII’s fourth wife in 1540. William V lost Guelders to Charles V in 1543. John William, the last duke, died childless in 1609; Brandenburg and Palatinate-Neuburg, married to his sisters, divided the inheritance by the Treaty of Xanten (1614).",
+    "editorial": true,
     "translatedSource": {
       "sourceFile": "la-marck.json",
       "nombre": "La Marck",
       "slug": "la-marck",
       "aliases": [],
-      "editorial": false,
-      "resumen": "",
-      "origen": "",
-      "trayectoria": "",
-      "legado": "",
+      "editorial": true,
+      "resumen": "Counts of the Mark, in Westphalia, who inherited the county of Cleves and were dukes of Cleves from 1417. In the sixteenth century they united Jülich, Berg and Ravensberg; their extinction in 1609 opened the Jülich-Cleves succession crisis.",
+      "origen": "The family descended from the counts of Berg-Altena and took its name from the castle of Mark, near the Ruhr. In 1368 Adolf of the Mark inherited the county of Cleves, on the lower Rhine, through his mother, and his son Adolf I was raised to duke by Emperor Sigismund in 1417.",
+      "trayectoria": "Adolf I married Mary of Burgundy, daughter of John the Fearless, and his descendants moved in the Burgundian orbit: his daughter Mary was the mother of Louis XII. The marriage of John III to Maria, heiress of Jülich-Berg, brought together a large group of territories on the lower Rhine in 1521. John III and his son William V favoured a religious humanism midway between Rome and the Reformation.",
+      "legado": "Anne of Cleves, John III’s daughter, became Henry VIII’s fourth wife in 1540. William V lost Guelders to Charles V in 1543. John William, the last duke, died childless in 1609; Brandenburg and Palatinate-Neuburg, married to his sisters, divided the inheritance by the Treaty of Xanten (1614).",
       "territorios": [
         "Cleves",
         "Mark",
@@ -10412,12 +10412,25 @@
         }
       ],
       "ramas": [],
-      "fuentes": [],
+      "fuentes": [
+        "https://www.treccani.it/enciclopedia/la-marck/",
+        "https://en.wikipedia.org/wiki/House_of_La_Marck"
+      ],
       "casasOrigen": [],
       "casasDerivadas": [],
       "casasConectadas": [],
       "ogImage": "/og/dinastia/la-marck.jpg"
-    }
+    },
+    "sources": [
+      {
+        "titulo": "Treccani",
+        "url": "https://www.treccani.it/enciclopedia/la-marck/"
+      },
+      {
+        "titulo": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/House_of_La_Marck"
+      }
+    ]
   },
   {
     "key": "Valois-Anjou",
@@ -10908,21 +10921,21 @@
     "es": "poitiers-antioquia",
     "en": "poitiers-antioch",
     "name": "Poitiers-Antioch",
-    "summary": "",
-    "origin": "",
-    "history": "",
-    "legacy": "",
-    "editorial": false,
+    "summary": "A branch of the counts of Poitiers that ruled the Principality of Antioch and, from the early thirteenth century, the County of Tripoli, until their conquest by the Mamluks in 1268 and 1289.",
+    "origin": "Raymond of Poitiers, son of Duke William IX of Aquitaine and uncle of Eleanor of Aquitaine, married Constance, heiress of Antioch, in 1136. Their son Bohemond III ruled the principality for more than forty years.",
+    "history": "Bohemond IV obtained the County of Tripoli and, after a long war with his Armenian nephew Raymond-Roupen, Antioch as well. His son Philip became King of Armenia by marriage and died of poison in 1226. Bohemond VI submitted to Hülegü’s Mongols in 1260, which earned him excommunication.",
+    "legacy": "The Mamluk sultan Baybars took Antioch in 1268 and destroyed it. Bohemond VII kept Tripoli, where he died childless in 1287; the city fell to the Mamluks in 1289. The title of Prince of Antioch later passed to members of the Lusignan house of Cyprus.",
+    "editorial": true,
     "translatedSource": {
       "sourceFile": "poitiers-antioquia.json",
       "nombre": "Poitiers-Antioch",
       "slug": "poitiers-antioquia",
       "aliases": [],
-      "editorial": false,
-      "resumen": "",
-      "origen": "",
-      "trayectoria": "",
-      "legado": "",
+      "editorial": true,
+      "resumen": "A branch of the counts of Poitiers that ruled the Principality of Antioch and, from the early thirteenth century, the County of Tripoli, until their conquest by the Mamluks in 1268 and 1289.",
+      "origen": "Raymond of Poitiers, son of Duke William IX of Aquitaine and uncle of Eleanor of Aquitaine, married Constance, heiress of Antioch, in 1136. Their son Bohemond III ruled the principality for more than forty years.",
+      "trayectoria": "Bohemond IV obtained the County of Tripoli and, after a long war with his Armenian nephew Raymond-Roupen, Antioch as well. His son Philip became King of Armenia by marriage and died of poison in 1226. Bohemond VI submitted to Hülegü’s Mongols in 1260, which earned him excommunication.",
+      "legado": "The Mamluk sultan Baybars took Antioch in 1268 and destroyed it. Bohemond VII kept Tripoli, where he died childless in 1287; the city fell to the Mamluks in 1289. The title of Prince of Antioch later passed to members of the Lusignan house of Cyprus.",
       "territorios": [
         "Antioch",
         "Tripoli",
@@ -11353,12 +11366,25 @@
         }
       ],
       "ramas": [],
-      "fuentes": [],
+      "fuentes": [
+        "https://en.wikipedia.org/wiki/House_of_Poitiers",
+        "https://en.wikipedia.org/wiki/Principality_of_Antioch"
+      ],
       "casasOrigen": [],
       "casasDerivadas": [],
       "casasConectadas": [],
       "ogImage": "/og/dinastia/poitiers-antioquia.jpg"
-    }
+    },
+    "sources": [
+      {
+        "titulo": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/House_of_Poitiers"
+      },
+      {
+        "titulo": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Principality_of_Antioch"
+      }
+    ]
   },
   {
     "key": "FitzGerald",
@@ -11779,21 +11805,21 @@
     "es": "zahringen-baden",
     "en": "zahringen-baden",
     "name": "Zähringen-Baden",
-    "summary": "",
-    "origin": "",
-    "history": "",
-    "legacy": "",
-    "editorial": false,
+    "summary": "A branch of the Zähringen that ruled the Margraviate of Baden on the upper Rhine, divided between Baden-Baden and Baden-Durlach from 1535 to 1771 and then reunited by Charles Frederick.",
+    "origin": "The margraves of Baden descended from Hermann, son of Duke Berthold I of Zähringen, in the eleventh century. Their lands between the Black Forest and the Rhine grew through inheritances and purchases until Christopher I reunited them at the end of the fifteenth century.",
+    "history": "Christopher’s sons divided his lands, and from 1535 there were two margraviates: Baden-Baden, which remained Catholic, and Baden-Durlach, Lutheran from Charles II (1556). George Frederick of Baden-Durlach fought on the Protestant side in the Thirty Years’ War and was defeated at Wimpfen in 1622. Louis XIV’s wars devastated the country at the end of the seventeenth century.",
+    "legacy": "Charles III William founded Karlsruhe in 1715 as the new capital of Baden-Durlach. His grandson Charles Frederick, an enlightened prince, abolished serfdom in 1783 and in 1771 inherited Baden-Baden when the Catholic line died out. In the Napoleonic era Baden became an electorate and, in 1806, a grand duchy.",
+    "editorial": true,
     "translatedSource": {
       "sourceFile": "zahringen-baden.json",
       "nombre": "Zähringen-Baden",
       "slug": "zahringen-baden",
       "aliases": [],
-      "editorial": false,
-      "resumen": "",
-      "origen": "",
-      "trayectoria": "",
-      "legado": "",
+      "editorial": true,
+      "resumen": "A branch of the Zähringen that ruled the Margraviate of Baden on the upper Rhine, divided between Baden-Baden and Baden-Durlach from 1535 to 1771 and then reunited by Charles Frederick.",
+      "origen": "The margraves of Baden descended from Hermann, son of Duke Berthold I of Zähringen, in the eleventh century. Their lands between the Black Forest and the Rhine grew through inheritances and purchases until Christopher I reunited them at the end of the fifteenth century.",
+      "trayectoria": "Christopher’s sons divided his lands, and from 1535 there were two margraviates: Baden-Baden, which remained Catholic, and Baden-Durlach, Lutheran from Charles II (1556). George Frederick of Baden-Durlach fought on the Protestant side in the Thirty Years’ War and was defeated at Wimpfen in 1622. Louis XIV’s wars devastated the country at the end of the seventeenth century.",
+      "legado": "Charles III William founded Karlsruhe in 1715 as the new capital of Baden-Durlach. His grandson Charles Frederick, an enlightened prince, abolished serfdom in 1783 and in 1771 inherited Baden-Baden when the Catholic line died out. In the Napoleonic era Baden became an electorate and, in 1806, a grand duchy.",
       "territorios": [
         "Baden"
       ],
@@ -12150,12 +12176,25 @@
         }
       ],
       "ramas": [],
-      "fuentes": [],
+      "fuentes": [
+        "https://www.treccani.it/enciclopedia/baden/",
+        "https://en.wikipedia.org/wiki/Margraviate_of_Baden"
+      ],
       "casasOrigen": [],
       "casasDerivadas": [],
       "casasConectadas": [],
       "ogImage": "/og/dinastia/zahringen-baden.jpg"
-    }
+    },
+    "sources": [
+      {
+        "titulo": "Treccani",
+        "url": "https://www.treccani.it/enciclopedia/baden/"
+      },
+      {
+        "titulo": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Margraviate_of_Baden"
+      }
+    ]
   },
   {
     "key": "Butler",
@@ -13510,21 +13549,21 @@
     "es": "della-rovere",
     "en": "della-rovere",
     "name": "Della Rovere",
-    "summary": "",
-    "origin": "",
-    "history": "",
-    "legacy": "",
-    "editorial": false,
+    "summary": "A family from Savona that reached the papacy with Sixtus IV and Julius II and ruled the Duchy of Urbino from 1508 to 1631.",
+    "origin": "Francesco della Rovere, a Franciscan friar from a modest family of Savona, in Liguria, was elected pope in 1471 as Sixtus IV. He advanced his nephews with cardinalates, lordships and marriages, and built the Sistine Chapel in Rome.",
+    "history": "His nephew Giuliano was elected pope in 1503 as Julius II: he recovered the Church’s lands by force of arms, commissioned Michelangelo to paint the Sistine ceiling and Bramante to build the new St Peter’s. Another nephew, Giovanni, married the sister of the Duke of Urbino, and their son Francesco Maria I inherited the duchy in 1508.",
+    "legacy": "The della Rovere dukes made Urbino and Pesaro refined courts; Guidobaldo II commissioned Titian’s Venus of Urbino. Francesco Maria II outlived his only son and, on his death in 1631, the duchy reverted to the Holy See. His granddaughter Vittoria took the family collections to Florence when she married Ferdinando II de’ Medici.",
+    "editorial": true,
     "translatedSource": {
       "sourceFile": "della-rovere.json",
       "nombre": "Della Rovere",
       "slug": "della-rovere",
       "aliases": [],
-      "editorial": false,
-      "resumen": "",
-      "origen": "",
-      "trayectoria": "",
-      "legado": "",
+      "editorial": true,
+      "resumen": "A family from Savona that reached the papacy with Sixtus IV and Julius II and ruled the Duchy of Urbino from 1508 to 1631.",
+      "origen": "Francesco della Rovere, a Franciscan friar from a modest family of Savona, in Liguria, was elected pope in 1471 as Sixtus IV. He advanced his nephews with cardinalates, lordships and marriages, and built the Sistine Chapel in Rome.",
+      "trayectoria": "His nephew Giuliano was elected pope in 1503 as Julius II: he recovered the Church’s lands by force of arms, commissioned Michelangelo to paint the Sistine ceiling and Bramante to build the new St Peter’s. Another nephew, Giovanni, married the sister of the Duke of Urbino, and their son Francesco Maria I inherited the duchy in 1508.",
+      "legado": "The della Rovere dukes made Urbino and Pesaro refined courts; Guidobaldo II commissioned Titian’s Venus of Urbino. Francesco Maria II outlived his only son and, on his death in 1631, the duchy reverted to the Holy See. His granddaughter Vittoria took the family collections to Florence when she married Ferdinando II de’ Medici.",
       "territorios": [
         "Papal States",
         "Urbino"
@@ -13741,12 +13780,25 @@
         }
       ],
       "ramas": [],
-      "fuentes": [],
+      "fuentes": [
+        "https://www.treccani.it/enciclopedia/della-rovere/",
+        "https://en.wikipedia.org/wiki/Della_Rovere"
+      ],
       "casasOrigen": [],
       "casasDerivadas": [],
       "casasConectadas": [],
       "ogImage": "/og/dinastia/della-rovere.jpg"
-    }
+    },
+    "sources": [
+      {
+        "titulo": "Treccani",
+        "url": "https://www.treccani.it/enciclopedia/della-rovere/"
+      },
+      {
+        "titulo": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Della_Rovere"
+      }
+    ]
   },
   {
     "key": "Egmond",

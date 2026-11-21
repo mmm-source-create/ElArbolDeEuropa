@@ -9738,21 +9738,21 @@
     "es": "valois-orleans",
     "en": "valois-orleans",
     "name": "Valois-Orleans",
-    "summary": "",
-    "origin": "",
-    "history": "",
-    "legacy": "",
-    "editorial": false,
+    "summary": "A branch of the Valois founded by Louis, Duke of Orléans, brother of Charles VI. It claimed Milan through the Visconti inheritance and reached the throne of France in 1498 with Louis XII.",
+    "origin": "Louis of Orléans received the duchy in 1392 and married Valentina Visconti, daughter of the Duke of Milan, who brought Asti and her family’s rights. His rivalry with John the Fearless for control of the kingdom during the madness of Charles VI ended with his murder in Paris in 1407.",
+    "history": "His son Charles of Orléans, captured at Agincourt in 1415, spent twenty-five years as a prisoner in England, where he wrote much of his poetry. His half-brother Jean de Dunois, the “Bastard of Orléans”, fought alongside Joan of Arc. Another son, John, founded the Angoulême branch.",
+    "legacy": "Louis, the poet’s son, inherited the crown in 1498 as Louis XII and conquered Milan in 1499 in the name of the Visconti inheritance. Having no sons, he married his daughter Claude to Francis of Angoulême, who succeeded him in 1515; with him the crown passed to the Angoulême branch.",
+    "editorial": true,
     "translatedSource": {
       "sourceFile": "valois-orleans.json",
       "nombre": "Valois-Orleans",
       "slug": "valois-orleans",
       "aliases": [],
-      "editorial": false,
-      "resumen": "",
-      "origen": "",
-      "trayectoria": "",
-      "legado": "",
+      "editorial": true,
+      "resumen": "A branch of the Valois founded by Louis, Duke of Orléans, brother of Charles VI. It claimed Milan through the Visconti inheritance and reached the throne of France in 1498 with Louis XII.",
+      "origen": "Louis of Orléans received the duchy in 1392 and married Valentina Visconti, daughter of the Duke of Milan, who brought Asti and her family’s rights. His rivalry with John the Fearless for control of the kingdom during the madness of Charles VI ended with his murder in Paris in 1407.",
+      "trayectoria": "His son Charles of Orléans, captured at Agincourt in 1415, spent twenty-five years as a prisoner in England, where he wrote much of his poetry. His half-brother Jean de Dunois, the “Bastard of Orléans”, fought alongside Joan of Arc. Another son, John, founded the Angoulême branch.",
+      "legado": "Louis, the poet’s son, inherited the crown in 1498 as Louis XII and conquered Milan in 1499 in the name of the Visconti inheritance. Having no sons, he married his daughter Claude to Francis of Angoulême, who succeeded him in 1515; with him the crown passed to the Angoulême branch.",
       "territorios": [
         "Orleans",
         "Angoulema",
@@ -10152,7 +10152,10 @@
           "destinoSlug": "valois-orleans"
         }
       ],
-      "fuentes": [],
+      "fuentes": [
+        "https://www.treccani.it/enciclopedia/valois/",
+        "https://en.wikipedia.org/wiki/House_of_Valois-Orl%C3%A9ans"
+      ],
       "casasOrigen": [
         {
           "nombre": "Valois",
@@ -10379,7 +10382,17 @@
         }
       ],
       "ogImage": "/og/dinastia/valois-orleans.jpg"
-    }
+    },
+    "sources": [
+      {
+        "titulo": "Treccani",
+        "url": "https://www.treccani.it/enciclopedia/valois/"
+      },
+      {
+        "titulo": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/House_of_Valois-Orl%C3%A9ans"
+      }
+    ]
   },
   {
     "key": "Dampierre",
@@ -10387,7 +10400,7 @@
     "en": "dampierre",
     "name": "Dampierre",
     "summary": "The Dampierres linked several French lordships with Flanders, where they had to negotiate between the king of France and the Flemish cities.",
-    "origin": "The lineage took its name from Dampierre, in Champagne. A marriage to Matilde of Bourbon gave it the possession of that lordship. William of Dampierre’s union with Margaret of Constantinople opened his children’s rights over Flanders.",
+    "origin": "The lineage took its name from Dampierre, in Champagne. A marriage to Matilda of Bourbon gave it the possession of that lordship. William of Dampierre’s union with Margaret of Constantinople opened his children’s rights over Flanders.",
     "history": "The rivalry between the sons of Margarita, born of their marriages with Avesnes and Dampierre, faced the successions of Hainaut and Flanders. Guy de Dampierre ruled Flanders and maintained a policy of alliances with England that provoked the intervention of Philip IV of France and his own captivity.",
     "legacy": "The Flemish cities and Guy's successors had a conflictive relationship with the French monarchy. Family heritage reached Margaret III of Flanders, wife of Philip the Bold. His inheritance of 1384 was essential for the expansion of the Valois-Burgundy in the Netherlands.",
     "editorial": true,
@@ -11427,21 +11440,21 @@
     "es": "valois-angulema",
     "en": "valois-angouleme",
     "name": "Valois-Angulema",
-    "summary": "",
-    "origin": "",
-    "history": "",
-    "legacy": "",
-    "editorial": false,
+    "summary": "A junior line of the Valois-Orléans that inherited the French crown in 1515 with Francis I and kept it until the death of Henry III in 1589.",
+    "origin": "John of Orléans, younger brother of the poet Charles of Orléans, received the county of Angoulême. His son Charles married Louise of Savoy and was the father of Margaret and Francis. When Louis XII died without sons in 1515, Francis, his cousin and son-in-law, was heir under Salic law.",
+    "history": "Francis I and his son Henry II fought Charles V and Philip II in the Italian wars, which ended in 1559 with the Peace of Cateau-Cambrésis. Margaret of Angoulême, the king’s sister, was Queen of Navarre, a writer and a patron of humanists and reformers. The court of the Valois-Angoulême promoted the French Renaissance in the Loire valley and at Fontainebleau.",
+    "legacy": "The three sons of Henry II reigned in turn during the wars of religion, under the influence of their mother, Catherine de’ Medici. Elisabeth of Valois became Queen of Spain and Margaret Queen of Navarre and of France. With the murder of Henry III in 1589 the crown passed to his brother-in-law, Henry of Bourbon.",
+    "editorial": true,
     "translatedSource": {
       "sourceFile": "valois-angulema.json",
       "nombre": "Valois-Angulema",
       "slug": "valois-angulema",
       "aliases": [],
-      "editorial": false,
-      "resumen": "",
-      "origen": "",
-      "trayectoria": "",
-      "legado": "",
+      "editorial": true,
+      "resumen": "A junior line of the Valois-Orléans that inherited the French crown in 1515 with Francis I and kept it until the death of Henry III in 1589.",
+      "origen": "John of Orléans, younger brother of the poet Charles of Orléans, received the county of Angoulême. His son Charles married Louise of Savoy and was the father of Margaret and Francis. When Louis XII died without sons in 1515, Francis, his cousin and son-in-law, was heir under Salic law.",
+      "trayectoria": "Francis I and his son Henry II fought Charles V and Philip II in the Italian wars, which ended in 1559 with the Peace of Cateau-Cambrésis. Margaret of Angoulême, the king’s sister, was Queen of Navarre, a writer and a patron of humanists and reformers. The court of the Valois-Angoulême promoted the French Renaissance in the Loire valley and at Fontainebleau.",
+      "legado": "The three sons of Henry II reigned in turn during the wars of religion, under the influence of their mother, Catherine de’ Medici. Elisabeth of Valois became Queen of Spain and Margaret Queen of Navarre and of France. With the murder of Henry III in 1589 the crown passed to his brother-in-law, Henry of Bourbon.",
       "territorios": [
         "Angoulema",
         "France",
@@ -11837,7 +11850,10 @@
         }
       ],
       "ramas": [],
-      "fuentes": [],
+      "fuentes": [
+        "https://www.treccani.it/enciclopedia/valois/",
+        "https://en.wikipedia.org/wiki/House_of_Valois-Angoul%C3%AAme"
+      ],
       "casasOrigen": [
         {
           "nombre": "Valois-Orleans",
@@ -11917,7 +11933,17 @@
       "casasDerivadas": [],
       "casasConectadas": [],
       "ogImage": "/og/dinastia/valois-angulema.jpg"
-    }
+    },
+    "sources": [
+      {
+        "titulo": "Treccani",
+        "url": "https://www.treccani.it/enciclopedia/valois/"
+      },
+      {
+        "titulo": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/House_of_Valois-Angoul%C3%AAme"
+      }
+    ]
   },
   {
     "key": "Châtillon",
@@ -11926,7 +11952,7 @@
     "name": "Châtillon",
     "summary": "A house with several branches whose Breton connection is explained by the marriage of Charles of Blois to Joan of Penthièvre.",
     "origin": "The Châtillon were a French noble house with several branches, one of which inherited Blois County and was linked to the ducal succession of Brittany through Charles of Blois.",
-    "history": "Charles de Blois defended the rights of his wife Joanna to the Duchy of Brittany. Her daughter Maria married Louis I of Anjou, creating a path between the Breton dispute and the Angevin expansion. Later, Françoise de Châtillon married Alain de Albret and was the mother of John III of Navarre and Carlota of Albret.",
+    "history": "Charles de Blois defended the rights of his wife Joanna to the Duchy of Brittany. Her daughter Maria married Louis I of Anjou, creating a path between the Breton dispute and the Angevin expansion. Later, Françoise de Châtillon married Alain de Albret and was the mother of John III of Navarre and Charlotte of Albret.",
     "legacy": "The Châtillon-Penthièvre links transmitted inheritances and succession rights to the Valois-Anjou and the Albret. Françoise's offspring became king in Navarre and retained interests on both sides of the Pyrenees.",
     "editorial": true,
     "translatedSource": {

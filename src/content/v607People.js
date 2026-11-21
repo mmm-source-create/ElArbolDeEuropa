@@ -1,6 +1,7 @@
 // 6.0.7: new people, complete in Spanish and English in the same delivery.
 import {GOVERNOR_RECORDS} from './v607Governors.js';
 import {V608_RECORDS} from './v608People.js';
+import {V615_RECORDS} from './v615People.js';
 const WIKI_ES_ESTEBAN = {titulo:'Wikipedia en español · Esteban de Zápolya',url:'https://es.wikipedia.org/wiki/Esteban_de_Z%C3%A1polya'};
 const WIKI_EN_STEPHEN = {titulo:'Wikipedia en inglés · Stephen Zápolya (con Markó 2006 y la archontología de C. Tóth et al. 2016)',url:'https://en.wikipedia.org/wiki/Stephen_Z%C3%A1polya'};
 const MACARTNEY = {titulo:'C. A. Macartney · Hungary: A Short History · MEK',url:'https://mek.oszk.hu/02000/02086/02086.htm'};
@@ -49,7 +50,7 @@ const ownRecords = {
   },
 };
 
-const records={...ownRecords,...GOVERNOR_RECORDS,...V608_RECORDS};
+const records={...ownRecords,...GOVERNOR_RECORDS,...V608_RECORDS,...V615_RECORDS};
 
 export const V607_BIOGRAPHIES=Object.fromEntries(Object.entries(records).map(([id,r])=>[id,r.parts.map(([titulo,,texto])=>({titulo,texto}))]));
 export const V607_PERSON_CONTENT=Object.fromEntries(Object.entries(records).map(([id,r])=>[id,{resumen:r.resumen,biografia:r.parts.map(p=>p[2]).join('\n\n')}]));
