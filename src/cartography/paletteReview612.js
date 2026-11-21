@@ -85,10 +85,6 @@ export const PALETTE_612 = Object.freeze({
     "from": "hsl(294.0 48.0% 48.0%)",
     "to": "#4db34d"
   },
-  "Cirenaica · tribus árabes": {
-    "from": "#c2a27a",
-    "to": "#994db3"
-  },
   "Ciudad de Hamburgo": {
     "from": "hsl(33.69 46% 42%)",
     "to": "#b34db3"

@@ -1,7 +1,7 @@
 import {ch,ref} from '../stories606/shared.js';
 export default {
  id:'gustavo-adolfo',enSlug:'gustavus-adolphus-campaigns-and-death',
- esTitle:'Gustavo Adolfo: campañas y muerte',enTitle:'Gustavus Adolphus: campaigns and death',
+ esTitle:'El León del norte',enTitle:'The Lion of the North',
  esSubtitle:'El rey de Suecia, del Báltico a Lützen',enSubtitle:'The King of Sweden, from the Baltic to Lützen',
  esDescription:'Gustavo II Adolfo heredó en 1611 tres guerras y un trono discutido por su primo Segismundo III. En veinte años cerró los frentes del Báltico, reformó el ejército e intervino en la guerra de los Treinta Años hasta morir en Lützen.',
  enDescription:'Gustavus II Adolphus inherited three wars in 1611 and a throne claimed by his cousin Sigismund III. Within twenty years he closed the Baltic fronts, reformed the army and intervened in the Thirty Years’ War until his death at Lützen.',

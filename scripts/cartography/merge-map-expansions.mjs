@@ -89,6 +89,7 @@ export function mergeMapExpansions(data) {
   applyRegionalReview(data,read('north-africa-levant-review.json'),'northAfricaLevantReview','Norte de África, Levante y Chipre · continuidad geográfica completa');
   // 6.0.13: only the cell-years that no other layer colours.
   applyRegionalReview(data,read('north-atlantic-review.json'),'northAtlanticReview','Atlántico norte · Irlanda, Gales, Man, Islandia, Gotland, Finlandia, Laponia, Kola y Groenlandia');
+  applyRegionalReview(data,read('middle-east-review.json'),'middleEastReview','Oriente Medio y Asia central');
   for(const [name,evidence] of Object.entries(read('eastern-europe-full-review.json').retainedLayerEvidence || {})){
     const layer=[...data.territories,...data.additionalTerritories].find(t=>t.name===name);
     if(!layer)throw Error('Missing retained eastern layer: '+name);

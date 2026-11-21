@@ -150,5 +150,15 @@ export function europeMosaicAt(data,year,people) {
   const reviewed=tributaryRelation||crownRelation||englishCrown||layer.republic?color:COLOR_612[String(harmonized).toLowerCase()]||harmonized;
   byLocation.get(id).push({...layer,crownRelation,tributaryRelation,englishCrown,mosaicColor:reviewed,politicalLabel,politicalGroup});
  }
+ // 6.0.14: Poland and Lithuania share the union colour in a year when either
+ // takes it (Jadwiga's and Vytautas's reigns left one side out). Years with
+ // separate monarchs and no union colour (1492–1500) keep their own colours.
+ const unionEntries=[...byLocation.values()].flat().filter(entry=>UNION_ENTITIES.has(entry.entityId)&&String(entry.politicalGroup||'').startsWith('union-mismo-soberano'));
+ if(unionEntries.length){
+  const {mosaicColor,politicalGroup,politicalLabel}=unionEntries[0];
+  for(const [id,entries] of byLocation)byLocation.set(id,entries.map(entry=>UNION_ENTITIES.has(entry.entityId)&&!entry.tributaryRelation&&entry.politicalGroup!==politicalGroup
+   ?{...entry,mosaicColor,politicalGroup,politicalLabel}:entry));
+ }
  return {...mosaic,layers,byLocation};
 }
+const UNION_ENTITIES=new Set(['Polonia','Lituania']);

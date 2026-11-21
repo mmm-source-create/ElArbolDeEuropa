@@ -25,6 +25,7 @@ import { pilotImperialFrameFor, pilotLocationContext, mapSourceReference } from 
 import { buildPoliticalMapIndex, inspectMapRegion, mapAuthoritySources } from "../../cartography/politicalMapIndex.js";
 import { AUTHORITY_LABELS, mapAuthoritiesForPerson, mapAuthoritiesAcrossLife } from "../../cartography/mapAuthorities.js";
 import { PERSONAS } from "../../data/personas.js";
+import { subjectRulers } from "../../cartography/tributaryRelations.js";
 import {europeMosaicAt} from '../../cartography/europePanorama.js';
 import {
   agrupacionesPoliticasEnMapa,
@@ -53,7 +54,9 @@ function authorityFill(svg, color, kind) {
     rect.setAttribute('width', '0.9'); rect.setAttribute('height', '0.9'); rect.setAttribute('fill', color);
     const line = document.createElementNS(namespace, 'path');
     line.setAttribute('d', kind === 'mixed' ? 'M0 .45 L.9 .45' : ['apanage','feudal','vassal','fief'].includes(kind)?'M.45 0 L.45 .9':kind === 'delegated' ? 'M0 0 L.9 .9' : 'M0 0 L.9 .9 M0 .9 L.9 0');
-    line.setAttribute('stroke', '#fff'); line.setAttribute('stroke-opacity', '.5'); line.setAttribute('stroke-width', '.16');
+    // 6.0.14: dark stripes read on light and dark themes alike (white ones
+    // glared on the dark map).
+    line.setAttribute('stroke', '#1b1712'); line.setAttribute('stroke-opacity', '.34'); line.setAttribute('stroke-width', '.16');
     if (kind === 'tributary') {
       const veil = document.createElementNS(namespace, 'rect');
       veil.setAttribute('width', '.9'); veil.setAttribute('height', '.9');
@@ -570,7 +573,7 @@ export function MapaEuropa({ seleccion, anioGlobal = null, onSelectTerritorio, o
             <span className={`mapa-authority-badge mapa-authority-${entry.kind}`}>{term(AUTHORITY_LABELS[entry.kind])}</span>
             <strong>{term(entry.territory)}</strong>
             {entry.crownRelation&&<p>{entry.crownRelation.summary?note(entry.crownRelation.summary):`${tr(entry.crownRelation.type==='feudo'?'Feudo':'Apanage',entry.crownRelation.type==='feudo'?'Fief':'Appanage')} ${tr('dentro del reino · autoridad superior de Francia','within the kingdom · higher authority of France')}`} · {entry.crownRelation.from}–{entry.crownRelation.through}.</p>}
-            {entry.relationship && <p>{term(entry.relationship.subjectLabel)} · {tr('vínculo','relationship')} {entry.relationship.type === 'feudo' ? tr('feudal','feudal') : tr('tributario','tributary')} {tr('con','with')} {term(entry.relationship.overlordLabel || entry.relationship.overlord)}, {entry.relationship.from}–{entry.relationship.through}.</p>}
+            {entry.relationship && <p>{term(entry.relationship.subjectLabel)}{subjectRulers(entry.relationship, anioGlobal, PERSONAS).length ? <> · {tr('gobierno propio de','own government of')} {subjectRulers(entry.relationship, anioGlobal, PERSONAS).map(p => p.nombre).join(', ')}</> : null} · {tr('vínculo','relationship')} {entry.relationship.type === 'feudo' ? tr('feudal','feudal') : tr('tributario','tributary')} {tr('con','with')} {term(entry.relationship.overlordLabel || entry.relationship.overlord)}, {entry.relationship.from}–{entry.relationship.through}.</p>}
             <div>{entry.relationship ? (entry.relationship.type === 'feudo' ? tr('Soberano del que depende el feudo: ','Sovereign on whom the fief depends: ') : tr('Soberano al que se debe el tributo: ','Sovereign to whom tribute is owed: ')) : entry.crownRelation?tr('Autoridad superior: ','Higher authority: '):null}{entry.person ? <button type="button" className="mapa-region-person" onClick={() => onSelectPersona?.(entry.person.id)}>{entry.person.nombre}</button> : term(entry.collective?.nombre)}</div>
             {entry.government?.soberano && <p>{tr('En nombre de','On behalf of')} {PERSONAS.find(p => p.id === entry.government.soberano)?.nombre || entry.government.soberano}. {tr('El gobierno superior se consulta en su ficha.','The higher government is available in that profile.')}</p>}
             {entry.kind === 'regional' && <small>{tr('La jurisdicción tiene fuentes territoriales; el mandato de su gobernante en este año sigue pendiente de documentar.','The jurisdiction has territorial sources; its ruler’s mandate for this year still awaits documentation.')}</small>}

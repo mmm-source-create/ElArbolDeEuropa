@@ -42,8 +42,11 @@ const TRIBUTARY_TINTS = Object.freeze({
   'granada-castile-jaen': '#F4EC94', 'murcia-castile-alcaraz': '#C9BE3E', 'menorca-mallorca-capdepera': '#C77A73',
   'brittany-angevin': '#B08A72', 'tunis-hafsid-spain':'#DED174',
 });
-export const tributaryColor = (relation, year) => relation.id === 'prussia-poland'
-  ? (year >= 1569 ? '#E3A6B5' : '#E9A3E0') : TRIBUTARY_TINTS[relation.id] || '#9AA59A';
+// 6.0.14: Prussia's overlord is Poland in union with Lithuania, so its tint
+// follows the union colour, except in 1492–1500, when the two had different kings.
+const POLISH_FIEFS = new Set(['prussia-poland', 'prussia-order-poland']);
+export const tributaryColor = (relation, year) => POLISH_FIEFS.has(relation.id)
+  ? (year >= 1492 && year <= 1500 ? '#E9A3E0' : '#E3A6B5') : TRIBUTARY_TINTS[relation.id] || '#9AA59A';
 export function authorityColor(entry, territorialColor) {
   if (entry.color) return entry.color;
   const government = entry.government;

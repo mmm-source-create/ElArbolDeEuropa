@@ -147,9 +147,15 @@
       "producer": "scripts/cartography/build-north-atlantic-review.mjs"
     },
     {
+      "path": "data/cartography/middle-east-review.json",
+      "kind": "accepted-cartography",
+      "maintenance": "Revisión de Oriente Medio y Asia central 6.0.14 (Mesopotamia, Persia, Arabia, Cáucaso, Turán, Afganistán, Baluchistán y Sind): zonas por longitud y latitud; solo colorea los años sin otra capa. Regenerar después de cambios del mapa o de una revisión documental.",
+      "producer": "scripts/cartography/build-middle-east-review.mjs"
+    },
+    {
       "path": "data/cartography/germany-completion-later-reviews.json",
       "kind": "accepted-cartography",
-      "maintenance": "Huellas anuales del mapa común anteriores a la revisión del Atlántico norte (6.0.13), sin sus celdas, para la comprobación de preservación de la compleción alemana. Regenerar desde el commit anterior a la revisión si cambia su alcance.",
+      "maintenance": "Huellas anuales del mapa común anteriores a las revisiones del Atlántico norte (6.0.13) y de Oriente Medio (6.0.14), sin sus celdas, para la comprobación de preservación de la compleción alemana. Regenerar desde el commit anterior a la revisión si cambia su alcance.",
       "producer": "scripts/cartography/build-germany-preservation-exclusions.mjs"
     },
     {
