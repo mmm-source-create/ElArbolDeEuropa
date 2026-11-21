@@ -18,7 +18,8 @@ const owners = (id, year) => atlasPoliticalMosaicAt(data, year).byLocation.get(i
 test('Iceland follows Norwegian royal authority from the conventional 1264 cut, including physical areas', () => {
   const island = review.territories.find(layer => layer.name === 'Islandia bajo la Corona noruega');
   for (const id of island.versions[0].ids) {
-    assert.equal(owners(id, 1263).length, 0, id);
+    // 6.0.13: before the cut the island belongs to the Commonwealth (North Atlantic review).
+    assert.deepEqual(owners(id, 1263).map(layer => layer.politicalLabel || layer.entityId), ['Mancomunidad islandesa'], id);
     assert(authority('MAGNUS6NOR', 1264, 'Noruega').ids.includes(id), id);
     assert(authority('CHRISTIAN7DEN', 1800, 'Noruega').ids.includes(id), id);
   }

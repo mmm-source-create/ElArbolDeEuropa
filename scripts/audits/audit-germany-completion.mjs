@@ -61,7 +61,11 @@ export function originalPreservationMap(retained,year,corrections=preservationCo
   return result;
 }
 
-export function auditGermanyCompletion(data, review, geography, baseline) {
+// Later reviews elsewhere (germany-completion-later-reviews.json) leave out
+// exactly their own cells; the rest must match the map before them.
+export function auditGermanyCompletion(data, review, geography, baseline, later=null) {
+  if(later && (later.schema!==1 || JSON.stringify([...later.ids].sort())!==JSON.stringify([...(data.northAtlanticReview?.scope.ids||[])].sort())))
+    throw Error('Later review exclusions do not match the North Atlantic review scope');
   const before = validateGermanyCompletion(review,geography,baseline);
   for(const c of preservationCorrections)if(before.has(c.locationId)||!c.reason||!c.source?.startsWith('https://')
     ||!Number.isInteger(c.from)||!Number.isInteger(c.through)||c.from<1200||c.through>1800||c.from>c.through
@@ -93,7 +97,9 @@ export function auditGermanyCompletion(data, review, geography, baseline) {
         }
       }
     }
-    if(preservationHash(originalPreservationMap(retained,year))!==baseline.annualPreservation[year]) {
+    const original=originalPreservationMap(retained,year);
+    if(later)for(const id of later.ids)original.delete(id);
+    if(preservationHash(original)!==(later?later.annualPreservation[year]:baseline.annualPreservation[year])) {
       report.summary.changedAnnualMaps++;fail('global preservation',null,year);
     }
   }
@@ -103,7 +109,8 @@ export function auditGermanyCompletion(data, review, geography, baseline) {
 if(process.argv[1] && path.resolve(process.argv[1])===import.meta.filename) {
   const read = name=>JSON.parse(fs.readFileSync(path.join(projectRoot,'data/cartography',name)));
   const report = auditGermanyCompletion(read('corridor-locations.json'),read('germany-completion-review.json'),
-    read('germany-completion-geographic-cells.json'),read('germany-completion-baseline.json'));
+    read('germany-completion-geographic-cells.json'),read('germany-completion-baseline.json'),
+    read('germany-completion-later-reviews.json'));
   fs.writeFileSync(auditReportPath('audit-germany-completion-report.json'),JSON.stringify(report,null,2)+'\n');
   console.log('Alemania 1200–1800: '+JSON.stringify(report.summary));
   if(report.failures.length)throw Error('German completion coverage, evidence or preservation failed');

@@ -141,6 +141,18 @@
       "producer": "scripts/cartography/build-north-africa-levant-review.mjs"
     },
     {
+      "path": "data/cartography/north-atlantic-review.json",
+      "kind": "accepted-cartography",
+      "maintenance": "Revisión del Atlántico norte 6.0.13 (Irlanda, Gales, Man, Islandia, Gotland, Finlandia, Laponia, Kola y Groenlandia): zonas por celda y centroide; solo colorea los años sin otra capa. Regenerar después de cambios del mapa o de una revisión documental.",
+      "producer": "scripts/cartography/build-north-atlantic-review.mjs"
+    },
+    {
+      "path": "data/cartography/germany-completion-later-reviews.json",
+      "kind": "accepted-cartography",
+      "maintenance": "Huellas anuales del mapa común anteriores a la revisión del Atlántico norte (6.0.13), sin sus celdas, para la comprobación de preservación de la compleción alemana. Regenerar desde el commit anterior a la revisión si cambia su alcance.",
+      "producer": "scripts/cartography/build-germany-preservation-exclusions.mjs"
+    },
+    {
       "path": "data/cartography/eastern-europe-geography.json",
       "kind": "accepted-inventory",
       "maintenance": "Revisión oriental V5.26: inventarios explícitos, fuentes locales y sucesiones fechadas; regenerar después de una revisión documental."
