@@ -47,7 +47,7 @@
     "role": "Consort",
     "nickname": "",
     "aliases": [],
-    "summary": "A consort of House Habsburg whose life was connected with Holy Empire, Austria.",
+    "summary": "A consort of House Habsburg whose life was connected with the Holy Roman Empire, Austria.",
     "sections": []
   },
   "CARLOSVAL": {
@@ -128,7 +128,7 @@
     "role": "Consort",
     "nickname": "",
     "aliases": [],
-    "summary": "A consort of House Habsburg whose life was connected with Austria, Jülich, Cléneris.",
+    "summary": "A consort of House Habsburg whose life was connected with Austria, Jülich, Cleves.",
     "sections": []
   },
   "ANAAUSTRIABAV": {
@@ -325,7 +325,7 @@
     "role": "Consort",
     "nickname": "",
     "aliases": [],
-    "summary": "A consort of House Habsburg whose life was connected with Spain, Holy Empire, Bohemia.",
+    "summary": "A consort of House Habsburg whose life was connected with Spain, the Holy Roman Empire, Bohemia.",
     "sections": []
   },
   "WILLIAM1NETHERLANDS": {
@@ -810,7 +810,7 @@
     "role": "Princess of Orange",
     "nickname": "",
     "aliases": [],
-    "summary": "Governor of the Netherlands, 1751–1759 (delegated government). Princess of Orange of the Hannover dynasty.",
+    "summary": "Governor of the Netherlands, 1751–1759 (delegated government). Princess of Orange of the Hanover dynasty.",
     "sections": [],
     "governmentNotes": {
       "Regencia del cargo hereditario de Guillermo V durante su minoría; autoridad provincial de los Estados, no monarquía soberana sobre la República.": "Regency of the hereditary office of William V during his minority; provincial authority of the States, not sovereign monarchy over the Republic."
@@ -1021,7 +1021,7 @@
     "role": "Condottiere",
     "nickname": "",
     "aliases": [],
-    "summary": "A condottiere of House Colonna whose life was connected with Naples, Pontifical States.",
+    "summary": "A condottiere of House Colonna whose life was connected with Naples, the Papal States.",
     "sections": []
   },
   "CLAUDEFRALOR": {
@@ -1056,7 +1056,7 @@
     "role": "Consort",
     "nickname": "",
     "aliases": [],
-    "summary": "A consort of House La Marck whose life was connected with France, Cléneris.",
+    "summary": "A consort of House La Marck whose life was connected with France, Cleves.",
     "sections": []
   },
   "MARGABRAB1323": {
@@ -1088,7 +1088,7 @@
     "role": "Count / Commander",
     "nickname": "the Bastard of Orleans",
     "aliases": [],
-    "summary": "A count of House Valois-Orleans whose life was connected with France, Orleans.",
+    "summary": "A count of House Valois-Orleans whose life was connected with France, Orléans.",
     "sections": []
   },
   "CARLOS3LOR": {
@@ -1369,7 +1369,7 @@
     "role": "Cardinal / Ruler",
     "nickname": "",
     "aliases": [],
-    "summary": "A cardinal of House Medici whose life was connected with Florence, Pontifical States.",
+    "summary": "A cardinal of House Medici whose life was connected with Florence, the Papal States.",
     "sections": []
   },
   "MARIAARAG": {
@@ -1476,7 +1476,7 @@
     "role": "Princess / Consort",
     "nickname": "",
     "aliases": [],
-    "summary": "A princess of House Anjou-Tarento whose life was connected with Naples, Tarento.",
+    "summary": "A princess of House Anjou-Tarento whose life was connected with Naples, Taranto.",
     "sections": []
   },
   "MARIELOUISEHESSE": {
@@ -1576,7 +1576,7 @@
     "role": "Consort",
     "nickname": "",
     "aliases": [],
-    "summary": "A consort of House Habsburg whose life was connected with Holy Empire, Austria.",
+    "summary": "A consort of House Habsburg whose life was connected with the Holy Roman Empire, Austria.",
     "sections": []
   },
   "PETER2RUS": {
@@ -1701,7 +1701,7 @@
     "role": "Noble",
     "nickname": "",
     "aliases": [],
-    "summary": "A noble of House Bogdan-Mușat whose life was connected with Moldova.",
+    "summary": "A noble of House Bogdan-Mușat whose life was connected with Moldavia.",
     "sections": []
   },
   "ISABELNUR": {
@@ -2250,7 +2250,7 @@
     "role": "Noble",
     "nickname": "",
     "aliases": [],
-    "summary": "A noble of House Naples-Trathámara whose life was connected with Naples, Pontifical States.",
+    "summary": "A noble of House Naples-Trathámara whose life was connected with Naples, the Papal States.",
     "sections": []
   },
   "JOHNFRED2ERN": {
@@ -2304,7 +2304,7 @@
     "role": "Cardinal",
     "nickname": "",
     "aliases": [],
-    "summary": "A cardinal of House Riario whose life was connected with Pontifical States.",
+    "summary": "A cardinal of House Riario whose life was connected with the Papal States.",
     "sections": []
   },
   "LUIGIAGONZAGACASTIGLIONE": {
@@ -2341,7 +2341,7 @@
     "role": "Friar / Preacher",
     "nickname": "",
     "aliases": [],
-    "summary": "Fraile, his trajectory is linked to the Holy Empire.",
+    "summary": "Friar. Associated with the Holy Roman Empire.",
     "sections": []
   },
   "AGNESCOURJER": {
@@ -2415,7 +2415,7 @@
     "role": "Noble",
     "nickname": "",
     "aliases": [],
-    "summary": "His trajectory is linked to Flanders.",
+    "summary": "Associated with Flanders.",
     "sections": []
   },
   "BLOMBERG": {
@@ -2423,7 +2423,7 @@
     "role": "Noble",
     "nickname": "",
     "aliases": [],
-    "summary": "His path is linked to the Holy Empire.",
+    "summary": "Associated with the Holy Roman Empire.",
     "sections": []
   },
   "JOHNBALLIOLFATHER": {
@@ -2447,7 +2447,7 @@
     "role": "Consort",
     "nickname": "",
     "aliases": [],
-    "summary": "Consort, his trajectory is linked to Moscow.",
+    "summary": "Consort. Associated with Moscow.",
     "sections": []
   },
   "WIL4WEIM": {
@@ -2525,7 +2525,7 @@
     "role": "Consort",
     "nickname": "",
     "aliases": [],
-    "summary": "Consort, your trajectory is linked to Serbia.",
+    "summary": "Consort. Associated with Serbia.",
     "sections": []
   },
   "FRANCISZKAKRASINSKA": {
@@ -2713,7 +2713,7 @@
       "Rostislava Mstislavna",
       "Feodosia (Rostislava) Mstislavna"
     ],
-    "summary": "A consort of House Rurikida whose life was connected with Rus de Kiev, Vladimir.",
+    "summary": "A consort of House Rurikida whose life was connected with Kievan Rus', Vladimir.",
     "sections": []
   },
   "GEORGE1TERTERBUL": {
@@ -2737,7 +2737,7 @@
     "role": "Noble",
     "nickname": "",
     "aliases": [],
-    "summary": "Noble. His trajectory is linked to Portugal.",
+    "summary": "Noble. Associated with Portugal.",
     "sections": []
   },
   "PERNACAETANI": {
@@ -2881,7 +2881,7 @@
     "aliases": [
       "Mujer X (Madre de Constanza)"
     ],
-    "summary": "His trajectory is linked to Castile.",
+    "summary": "Associated with Castile.",
     "sections": []
   },
   "MASTINO2SCALA": {

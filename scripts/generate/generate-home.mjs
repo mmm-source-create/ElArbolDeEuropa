@@ -11,6 +11,8 @@ import {escudoDe} from '../../src/content/dinastias/escudos.js';
 import {isNamedDynasty} from '../../src/data/dynastyNames.js';
 import {ENGLISH_DYNASTIES, ENGLISH_TERRITORIES} from '../../src/features/english/entityTranslations.js';
 import {biografiaExtensaPersona} from '../../src/content/biografias-extensas.js';
+import {HISTORIAS} from '../../src/data/historias.js';
+import {HOME_YEARS} from '../../src/features/public/homeYears.js';
 
 const readJson = async file => JSON.parse(await fs.readFile(file, 'utf8'));
 const writeJson = (file, data) => fs.writeFile(file, JSON.stringify(data));
@@ -33,23 +35,41 @@ const enHouse = Object.fromEntries(Object.values(ENGLISH_DYNASTIES).filter(d => 
 const enTerritory = Object.fromEntries(Object.values(ENGLISH_TERRITORIES).filter(t => t?.key).map(t => [t.key, t.name]));
 const life = p => ({nac: p.nac ?? null, muer: p.muer ?? null, nacAprox: Boolean(p.nacAprox), muerAprox: Boolean(p.muerAprox)});
 
-// Rulers with an effective reign in 1500 and a portrait, most relevant first.
-const rulers = PERSONAS
-  .map(p => [p, (p.gobiernos || []).find(g => g.clase === 'reinado' && g.condicion === 'efectivo' && g.desde <= HOME_YEAR && g.hasta >= HOME_YEAR)])
-  .filter(([p, g]) => g && IMAGENES_PERSONAS[p.id] && esById.has(p.id) && enById.has(p.id))
-  .sort(([a], [b]) => (esById.get(b.id).relevancia || 0) - (esById.get(a.id).relevancia || 0))
-  .slice(0, 5);
-home.gobernantesAnio = {anio: HOME_YEAR, total: PERSONAS.filter(p => (p.gobiernos || []).some(g => g.desde <= HOME_YEAR && g.hasta >= HOME_YEAR && g.condicion === 'efectivo')).length,
-  personas: rulers.map(([p, g]) => ({id: p.id, nombre: esById.get(p.id).nombre, slug: esById.get(p.id).slug, territorio: g.territorio, desde: g.desde, hasta: g.hasta}))};
-englishHome.rulersOfYear = {year: HOME_YEAR, total: home.gobernantesAnio.total,
-  people: rulers.map(([p, g]) => ({id: p.id, nombre: enById.get(p.id).nombre, path: enById.get(p.id).path, territory: enTerritory[g.territorio] || g.territorio, from: g.desde, to: g.hasta}))};
+// Rulers with an effective reign in each year of the time line, with a
+// portrait, most relevant first. 6.0.11: one panel per previewed year.
+function rulersOf(year) {
+  const holding = PERSONAS
+    .map(p => [p, (p.gobiernos || []).find(g => g.clase === 'reinado' && g.condicion === 'efectivo' && g.desde <= year && g.hasta >= year)])
+    .filter(([p, g]) => g && IMAGENES_PERSONAS[p.id] && esById.has(p.id) && enById.has(p.id))
+    .sort(([a], [b]) => (esById.get(b.id).relevancia || 0) - (esById.get(a.id).relevancia || 0))
+    .slice(0, 5);
+  const total = PERSONAS.filter(p => (p.gobiernos || []).some(g => g.desde <= year && g.hasta >= year && g.condicion === 'efectivo')).length;
+  return {
+    es: {anio: year, total, personas: holding.map(([p, g]) => ({id: p.id, nombre: esById.get(p.id).nombre, slug: esById.get(p.id).slug, territorio: g.territorio, desde: g.desde, hasta: g.hasta}))},
+    en: {year, total, people: holding.map(([p, g]) => ({id: p.id, nombre: enById.get(p.id).nombre, path: enById.get(p.id).path, territory: enTerritory[g.territorio] || g.territorio, from: g.desde, to: g.hasta}))},
+  };
+}
+const byYear = Object.fromEntries(HOME_YEARS.map(year => [year, rulersOf(year)]));
+home.gobernantesAnio = byYear[HOME_YEAR].es;
+englishHome.rulersOfYear = byYear[HOME_YEAR].en;
+home.gobernantesPorAnio = Object.fromEntries(HOME_YEARS.map(year => [year, byYear[year].es]));
+englishHome.rulersByYear = Object.fromEntries(HOME_YEARS.map(year => [year, byYear[year].en]));
+const rulers = byYear[HOME_YEAR].es.personas;
 
 // Dynasty carousel: houses with arms and a written history, largest first.
 const dynasties = esDynasties.filter(d => escudoDe(d.nombre) && d.editorial).slice(0, 12);
 home.dinastiasCarrusel = dynasties.map(d => ({nombre: d.nombre, slug: d.slug, total: d.total, resumen: d.resumen || ''}));
 englishHome.dynasties = dynasties.map(d => enDynastyBySlug.get(d.slug)).filter(Boolean).map(d => ({key: d.key, nombre: d.nombre, path: d.path, total: d.total, description: d.description || ''}));
-home.historiasCarrusel = esStories.filter(s => s.disponible).slice(0, 12);
-englishHome.stories = (englishHome.stories || []).slice(0, 12);
+// 6.0.11: each story shows the person who appears in most of its chapters
+// (ties: the first to appear) among those with a portrait.
+export function storyPortrait(story) {
+  const counts = new Map();
+  for (const step of story?.pasos || []) for (const id of new Set([step.persona, ...(step.personas || [])].filter(Boolean))) counts.set(id, (counts.get(id) || 0) + 1);
+  return [...counts].filter(([id]) => IMAGENES_PERSONAS[id]).sort((a, b) => b[1] - a[1])[0]?.[0] || null;
+}
+const storyById = new Map(HISTORIAS.map(story => [story.id, story]));
+home.historiasCarrusel = esStories.filter(s => s.disponible).slice(0, 12).map(s => ({...s, retrato: storyPortrait(storyById.get(s.id))}));
+englishHome.stories = (englishHome.stories || []).slice(0, 12).map(s => ({...s, retrato: storyPortrait(storyById.get(s.id))}));
 
 // Most searched (Search Console, November 2026): shortcuts under the search box.
 const SEARCHED_PEOPLE = ['FED2HOH', 'MATILDLANCBAV', 'ISABELNEVILLE', 'ENRIQ4CAST'];
@@ -85,9 +105,9 @@ await writeJson('public/catalogos/recomendaciones.json', {items: pool});
 // depend on the day it was built.
 delete home.recomendacion;
 delete englishHome.recommendation;
-englishHome.nombre = 'Europe in 1500, and in any year';
+englishHome.nombre = 'Six centuries of Europe, family by family';
 
 await writeJson('src/generated/home.json', home);
 await writeJson('public/catalogos/home.json', home);
 await writeJson('public/english-meta/home.json', englishHome);
-console.log(`Portada: ${rulers.length} gobernantes en ${HOME_YEAR}, ${dynasties.length} casas, ${home.historiasCarrusel.length} historias y ${pool.length} personas para la recomendación diaria.`);
+console.log(`Portada: ${HOME_YEARS.length} años con gobernantes (${rulers.length} en ${HOME_YEAR}), ${dynasties.length} casas, ${home.historiasCarrusel.length} historias y ${pool.length} personas para la recomendación diaria.`);
