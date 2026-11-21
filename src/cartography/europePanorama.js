@@ -1,3 +1,6 @@
+import {COLOR_612} from './paletteReview612.js';
+import * as MAP_COLORS from './mapColors.js';
+const {harmonizeMapColor}=MAP_COLORS;
 import {frenchCrownRelation,englishCrownLayer} from './frenchCrownRelations.js';
 import {aragonCrownRelation} from './aragonCrownRelations.js';
 import {tributaryLayerRelation,tributaryLayerRelations,relationCoversLocation} from './tributaryRelations.js';
@@ -8,6 +11,7 @@ import {vidaEnAnio} from '../domain/time/europeYear.js';
 import {atlasPoliticalMosaicAt,atlasMosaicPalette} from './atlasMosaic.js';
 import {pilotJurisdictionsFor,mapLocationsForGovernment} from './locationMapPilot.js';
 import {REINO_COLOR, idsDeGobiernoEnAño} from './kingdomMaps.js';
+const CURATED_COLORS=new Set([...Object.values(REINO_COLOR),...Object.values(MAP_COLORS)].filter(c=>typeof c==='string'&&c.startsWith('#')).map(c=>c.toLowerCase()));
 import {territorialIdentity} from './territorialIdentity.js';
 
 export function governmentTableAt(people,year,collectives=[]) {
@@ -137,7 +141,14 @@ export function europeMosaicAt(data,year,people) {
    :polity&&['herencia-borgonona','paises-bajos'].includes(polity.id)?polity.color:frenchRelation?frenchFiefColor(layer.entityId||layer.name):polity?polity.color:unanimous?applicable[0].color:layer.baseColor;
   const politicalGroup=layer.republic?'republica-neerlandesa':polity?.id || (unanimous?applicable[0].id:layer.politicalColorGroup || null);
   const politicalLabel=tributaryRelation?.subjectLabel|| (englishCrown&&!applicable.length?'Inglaterra':applicable.length===1?applicable[0].label:layer.displayName||layer.name);
-  byLocation.get(id).push({...layer,crownRelation,tributaryRelation,englishCrown,mosaicColor:color,politicalLabel,politicalGroup});
+  // 6.0.12: reviewed colours for territories that clashed with a neighbour;
+  // relation tints keep their own families.
+  // Curated colours (kingdom table, map constants, political groups) are kept;
+  // only colours from the regional tables and the automatic series are muted.
+  const curated=CURATED_COLORS.has(String(color).toLowerCase())||Boolean(polity)||(unanimous&&color===applicable[0].color);
+  const harmonized=curated?color:harmonizeMapColor(color);
+  const reviewed=tributaryRelation||crownRelation||englishCrown||layer.republic?color:COLOR_612[String(harmonized).toLowerCase()]||harmonized;
+  byLocation.get(id).push({...layer,crownRelation,tributaryRelation,englishCrown,mosaicColor:reviewed,politicalLabel,politicalGroup});
  }
  return {...mosaic,layers,byLocation};
 }
