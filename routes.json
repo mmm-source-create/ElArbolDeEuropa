@@ -236,6 +236,18 @@
     }
   ],
   "redirects": [
+    {"source":"/es/historia/gustavo-adolfo-campanas-y-muerte","destination":"/es/historia/el-leon-del-norte","permanent":true},
+    {"source":"/es/historia/gustavo-adolfo-campanas-y-muerte/","destination":"/es/historia/el-leon-del-norte","permanent":true},
+    {"source":"/es/historia/gustavo-adolfo-campanas-y-muerte/capitulo/1","destination":"/es/historia/el-leon-del-norte/capitulo/1","permanent":true},
+    {"source":"/es/historia/gustavo-adolfo-campanas-y-muerte/capitulo/2","destination":"/es/historia/el-leon-del-norte/capitulo/2","permanent":true},
+    {"source":"/es/historia/gustavo-adolfo-campanas-y-muerte/capitulo/3","destination":"/es/historia/el-leon-del-norte/capitulo/3","permanent":true},
+    {"source":"/es/historia/gustavo-adolfo-campanas-y-muerte/capitulo/4","destination":"/es/historia/el-leon-del-norte/capitulo/4","permanent":true},
+    {"source":"/es/historia/gustavo-adolfo-campanas-y-muerte/capitulo/5","destination":"/es/historia/el-leon-del-norte/capitulo/5","permanent":true},
+    {"source":"/es/historia/gustavo-adolfo-campanas-y-muerte/capitulo/6","destination":"/es/historia/el-leon-del-norte/capitulo/6","permanent":true},
+    {"source":"/es/historia/gustavo-adolfo-campanas-y-muerte/capitulo/7","destination":"/es/historia/el-leon-del-norte/capitulo/7","permanent":true},
+    {"source":"/es/historia/gustavo-adolfo-campanas-y-muerte/capitulo/8","destination":"/es/historia/el-leon-del-norte/capitulo/8","permanent":true},
+    {"source":"/es/historia/gustavo-adolfo-campanas-y-muerte/capitulo/9","destination":"/es/historia/el-leon-del-norte/capitulo/9","permanent":true},
+
     {"source": "/en/territory/why", "destination": "/en/territory/perche", "permanent": true},
     {"source": "/es/historia/emperadores/capitulo/1", "destination": "/es/historia/emperadores-elegir-al-rey-de-romanos/capitulo/1", "permanent": true},
     {"source": "/es/historia/emperadores/capitulo/2", "destination": "/es/historia/emperadores-elegir-al-rey-de-romanos/capitulo/2", "permanent": true},

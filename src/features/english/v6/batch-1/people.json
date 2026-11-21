@@ -36,7 +36,7 @@
     "role": "Count",
     "nickname": "",
     "aliases": [],
-    "summary": "The son of Isabella de Foix-Castellbó and Archambaud of Grailly, he continued the heritage of Foix under a new male descent. His marriage to Juana de Albret connected both houses before the navarra royal union of the end of the 15th century. His son Gastón IV married Leonor of Navarre.",
+    "summary": "The son of Isabella de Foix-Castellbó and Archambaud of Grailly, he continued the heritage of Foix under a new male descent. His marriage to Joanna of Albret connected both houses before the navarra royal union of the end of the 15th century. His son Gastón IV married Eleanor of Navarre.",
     "sections": [],
     "governmentNotes": {
       "Carlos VII de Francia le concedió el condado en 1425.": "Charles VII of France granted him the county in 1425."
@@ -63,7 +63,7 @@
     "role": "Duke of Brittany",
     "nickname": "",
     "aliases": [],
-    "summary": "Fourth son of Henry II and Leonor of Aquitaine, he ruled Brittany since his marriage to Duchess Constance in 1181. He participated in the rebellions against his father and died in Paris in 1186; his posthumous son Arthur inherited his rights.",
+    "summary": "Fourth son of Henry II and Eleanor of Aquitaine, he ruled Brittany since his marriage to Duchess Constance in 1181. He participated in the rebellions against his father and died in Paris in 1186; his posthumous son Arthur inherited his rights.",
     "sections": [],
     "governmentNotes": {
       "Por su matrimonio con la duquesa Constanza en 1181.": "For her marriage to Duchess Constance in 1181."
@@ -228,7 +228,7 @@
     "role": "Princess / Regent",
     "nickname": "",
     "aliases": [],
-    "summary": "Daughter of Henry II of Champagne and Elizabeth of Jerusalem, he married Hugo I of Cyprus. He exercised regency functions and maintained rights and interests linked to both shores of the Mediterranean. His file connects the house of Champagne with Cyprus and Jerusalem, without reducing it to its later Navarre branch.",
+    "summary": "Daughter of Henry II of Champagne and Elizabeth of Jerusalem, he married Hugh I of Cyprus. He exercised regency functions and maintained rights and interests linked to both shores of the Mediterranean. His file connects the house of Champagne with Cyprus and Jerusalem, without reducing it to its later Navarre branch.",
     "sections": []
   },
   "GUILLERMO3HENAO": {
@@ -247,7 +247,7 @@
     "role": "Count / Viscount",
     "nickname": "",
     "aliases": [],
-    "summary": "He inherited Foix and Bearne as a child and was the father of Gastón Fébus. His marriage to Leonor de Comminges connected the Foix to another house in the Pyrenean realm. His death in 1343 opened the minority of his son, during which Leonor had a role of government.",
+    "summary": "He inherited Foix and Bearne as a child and was the father of Gastón Fébus. His marriage to Eleanor of Comminges connected the Foix to another house in the Pyrenean realm. His death in 1343 opened the minority of his son, during which Leonor had a role of government.",
     "sections": []
   },
   "MARGDUR": {
@@ -443,7 +443,7 @@
     "aliases": [],
     "summary": "His marriage to Margaret of Béarn linked the county of Foix with the rights over the Viscounty of the Bearnes. The accumulation of both estates gave his descendants a weighty position on both sides of the Pyrenees.",
     "sections": [],
-    "biography": "His marriage to Margaret of Béarn linked the county of Foix with the rights over the Viscounty of Bearnes. The accumulation of both estates gave his descendants a position of weight on both sides of the Pyrenees. Count of Foix and Viscount of Bearne are kept separate in the Atlas.",
+    "biography": "His marriage to Margaret of Béarn linked the county of Foix with the rights over the Viscounty of Bearnes. The accumulation of both estates gave his descendants a position of weight on both sides of the Pyrenees. Count of Foix and Viscount of Béarn are kept separate in the Atlas.",
     "governmentNotes": {
       "Derechos transmitidos por Margarita de Bearne.": "Rights transmitted by Margaret of Béarn."
     }
@@ -728,7 +728,7 @@
     "role": "Noble",
     "nickname": "",
     "aliases": [],
-    "summary": "Daughter of Edward I and Leonor of Castile, she married John II of Brabant. She was the mother of John III. Through her, the Brabantine ducal line was connected to England and Castile before her subsequent relationship with the Valois of Burgundy.",
+    "summary": "Daughter of Edward I and Eleanor of Castile, she married John II of Brabant. She was the mother of John III. Through her, the Brabantine ducal line was connected to England and Castile before her subsequent relationship with the Valois of Burgundy.",
     "sections": []
   },
   "BARBJAGSAX": {
@@ -752,7 +752,7 @@
     "role": "Consort",
     "nickname": "",
     "aliases": [],
-    "summary": "A consort of House Valois-Borgoña whose life was connected with Burgundy, Savoy.",
+    "summary": "A consort of House Valois-Burgundy whose life was connected with Burgundy, Savoy.",
     "sections": []
   },
   "GIORGI3GEO": {
@@ -869,7 +869,7 @@
     "role": "Consort",
     "nickname": "",
     "aliases": [],
-    "summary": "A consort of House Ivrea-Borgoña whose life was connected with Portugal.",
+    "summary": "A consort of House Ivrea-Burgundy whose life was connected with Portugal.",
     "sections": []
   },
   "FERDMARIABAV": {
@@ -928,10 +928,10 @@
       "Ramon Roger I de Foix",
       "Raymond-Roger de Foix"
     ],
-    "summary": "Count of Foix since 1188 and protector of the Cathars during the Albigense crusade. In 1213 he paid homage to Peter II of Aragon for his castles and fought next to him in Muret. He died in 1223.",
+    "summary": "Count of Foix since 1188 and protector of the Cathars during the Albigensian crusade. In 1213 he paid homage to Peter II of Aragon for his castles and fought next to him in Muret. He died in 1223.",
     "sections": [],
     "governmentNotes": {
-      "En 1213 rindió homenaje a Pedro II de Aragón por sus castillos y combatió a su lado en Muret.": "In 1213 he paid homage to Pedro II of Aragon for his castles and fought alongside him in Muret."
+      "En 1213 rindió homenaje a Pedro II de Aragón por sus castillos y combatió a su lado en Muret.": "In 1213 he paid homage to Peter II of Aragon for his castles and fought alongside him in Muret."
     }
   },
   "MARIAMOL": {
@@ -939,7 +939,7 @@
     "role": "Consort",
     "nickname": "",
     "aliases": [],
-    "summary": "A consort of House Ivrea-Borgoña whose life was connected with Castile.",
+    "summary": "A consort of House Ivrea-Burgundy whose life was connected with Castile.",
     "sections": []
   },
   "BOGISLAW13POM": {
@@ -1599,13 +1599,13 @@
   },
   "RAMON6TOLOSA": {
     "name": "Raymond VI of Toulouse",
-    "role": "Count of Tolosa",
+    "role": "Count of Toulouse",
     "nickname": "the Elder",
     "aliases": [
       "Ramon VI de Tolosa",
       "Raymond VI de Toulouse"
     ],
-    "summary": "Count of Tolosa since 1194 and protector of the Cathars, was excommunicated after the assassination of the legacy Pierre de Castelnau (1208), who triggered the Albigense crusade. In 1213 he swore fidelity to Peter II of Aragon, whose death in Muret left the Languedoc to Simon de Montfort. Dismissed in 1215, he recovered Toulouse in 1217 and died in 1222. He married in 1196 to Joan of England and, widowed, to Leonor of Aragon, sister of Peter II.",
+    "summary": "Count of Toulouse since 1194 and protector of the Cathars, was excommunicated after the assassination of the legate Pierre de Castelnau (1208), who triggered the Albigensian crusade. In 1213 he swore fidelity to Peter II of Aragon, whose death in Muret left the Languedoc to Simon de Montfort. Dismissed in 1215, he recovered Toulouse in 1217 and died in 1222. He married in 1196 to Joan of England and, widowed, to Eleanor of Aragon, sister of Peter II.",
     "sections": [],
     "governmentNotes": {
       "En 1213 juró fidelidad a Pedro II de Aragón. El concilio de Letrán lo desposeyó en 1215 en favor de Simón de Montfort; recuperó Toulouse en 1217.": "In 1213 he swore allegiance to Peter II of Aragon. The Lateran Council dispossessed him in 1215 in favor of Simon of Montfort; he recovered Toulouse in 1217."
@@ -1733,7 +1733,7 @@
     "role": "Noble",
     "nickname": "",
     "aliases": [],
-    "summary": "A noble of House Ivrea-Borgoña whose life was connected with Castile.",
+    "summary": "A noble of House Ivrea-Burgundy whose life was connected with Castile.",
     "sections": []
   },
   "CRISTINAHESSECAR": {
@@ -1868,7 +1868,7 @@
   },
   "RAMON7TOLOSA": {
     "name": "Raymond VII of Toulouse",
-    "role": "Count of Tolosa",
+    "role": "Count of Toulouse",
     "nickname": "",
     "aliases": [
       "Ramon VII de Tolosa",
@@ -1933,7 +1933,7 @@
     "role": "Lord",
     "nickname": "",
     "aliases": [],
-    "summary": "A lord of House Ivrea-Borgoña whose life was connected with Castile.",
+    "summary": "A lord of House Ivrea-Burgundy whose life was connected with Castile.",
     "sections": []
   },
   "INGEGERDBIRGERSUE": {
@@ -2034,7 +2034,7 @@
     "role": "Noble",
     "nickname": "",
     "aliases": [],
-    "summary": "A noble of House Ivrea-Borgoña whose life was connected with Castile.",
+    "summary": "A noble of House Ivrea-Burgundy whose life was connected with Castile.",
     "sections": []
   },
   "PHILIP2POM": {

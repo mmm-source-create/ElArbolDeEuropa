@@ -13383,20 +13383,20 @@
     "es": "avesnes",
     "en": "avesnes",
     "name": "Avesnes",
-    "summary": "",
-    "origin": "",
-    "history": "",
-    "legacy": "",
+    "summary": "A Hainaut family born of Bouchard of Avesnes’s disputed marriage to Margaret of Flanders. It obtained Hainaut in 1257 and Holland and Zeeland in 1299, and died out in the male line in 1345.",
+    "origin": "Bouchard of Avesnes, a Hainaut nobleman who had taken minor orders, married Margaret, sister of Countess Joan of Flanders, around 1212. The marriage was declared void, and the children, branded illegitimate, fought for decades against the sons of Margaret’s second marriage, the Dampierres.",
+    "history": "The arbitration of Louis IX of France (1246) gave Hainaut to the Avesnes and Flanders to the Dampierres. John I of Avesnes died in 1257, before his mother. His son John II inherited Hainaut in 1280 and, in 1299, the counties of Holland and Zeeland, through his mother, sister of King William of Holland.",
+    "legacy": "William I of Hainaut married his daughters to the great of Europe: Philippa to Edward III of England and Margaret to Emperor Louis IV of Bavaria. William II died childless in 1345 fighting the Frisians, and the inheritance passed to Margaret and the Wittelsbachs, which gave rise to the Hook and Cod wars in Holland.",
     "translatedSource": {
       "sourceFile": "avesnes.json",
       "nombre": "Avesnes",
       "slug": "avesnes",
       "aliases": [],
-      "editorial": false,
-      "resumen": "",
-      "origen": "",
-      "trayectoria": "",
-      "legado": "",
+      "editorial": true,
+      "resumen": "A Hainaut family born of Bouchard of Avesnes’s disputed marriage to Margaret of Flanders. It obtained Hainaut in 1257 and Holland and Zeeland in 1299, and died out in the male line in 1345.",
+      "origen": "Bouchard of Avesnes, a Hainaut nobleman who had taken minor orders, married Margaret, sister of Countess Joan of Flanders, around 1212. The marriage was declared void, and the children, branded illegitimate, fought for decades against the sons of Margaret’s second marriage, the Dampierres.",
+      "trayectoria": "The arbitration of Louis IX of France (1246) gave Hainaut to the Avesnes and Flanders to the Dampierres. John I of Avesnes died in 1257, before his mother. His son John II inherited Hainaut in 1280 and, in 1299, the counties of Holland and Zeeland, through his mother, sister of King William of Holland.",
+      "legado": "William I of Hainaut married his daughters to the great of Europe: Philippa to Edward III of England and Margaret to Emperor Louis IV of Bavaria. William II died childless in 1345 fighting the Frisians, and the inheritance passed to Margaret and the Wittelsbachs, which gave rise to the Hook and Cod wars in Holland.",
       "territorios": [
         "Henao",
         "Netherlands",
@@ -13826,13 +13826,26 @@
         }
       ],
       "ramas": [],
-      "fuentes": [],
+      "fuentes": [
+        "https://en.wikipedia.org/wiki/House_of_Avesnes",
+        "https://www.treccani.it/enciclopedia/lussemburgo/"
+      ],
       "casasOrigen": [],
       "casasDerivadas": [],
       "casasConectadas": [],
       "ogImage": "/og/dinastia/avesnes.jpg"
     },
-    "editorial": false
+    "editorial": true,
+    "sources": [
+      {
+        "titulo": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/House_of_Avesnes"
+      },
+      {
+        "titulo": "Treccani",
+        "url": "https://www.treccani.it/enciclopedia/lussemburgo/"
+      }
+    ]
   },
   {
     "key": "Anjou-Tarento",
@@ -15702,20 +15715,20 @@
     "es": "colonna",
     "en": "colonna",
     "name": "Colonna",
-    "summary": "",
-    "origin": "",
-    "history": "",
-    "legacy": "",
+    "summary": "A great Roman baronial family, rival of the Orsini, which produced a pope, many cardinals, condottieri in Spanish service and one of the great poets of the Renaissance.",
+    "origin": "The Colonna appear in the eleventh century as lords of Colonna, in the Alban Hills, and of Palestrina. Their power rested on castles in Lazio, urban clienteles and their presence in the College of Cardinals. Their feud with the Orsini divided Rome for centuries.",
+    "history": "Their clash with Boniface VIII culminated in 1303 in the outrage of Anagni, in which Sciarra Colonna took part. In 1417 Oddone Colonna was elected pope as Martin V, ending the Western Schism, and strengthened the family estates. In the Italian wars Prospero and Fabrizio Colonna were generals on the Spanish side.",
+    "legacy": "Vittoria Colonna, Fabrizio’s daughter, was a poet and a friend of Michelangelo. Marcantonio II commanded the papal galleys at Lepanto (1571) and was Viceroy of Sicily. As constables of the Kingdom of Naples and princes of Paliano, the Colonna remained among the first families of the Roman nobility.",
     "translatedSource": {
       "sourceFile": "colonna.json",
       "nombre": "Colonna",
       "slug": "colonna",
       "aliases": [],
-      "editorial": false,
-      "resumen": "",
-      "origen": "",
-      "trayectoria": "",
-      "legado": "",
+      "editorial": true,
+      "resumen": "A great Roman baronial family, rival of the Orsini, which produced a pope, many cardinals, condottieri in Spanish service and one of the great poets of the Renaissance.",
+      "origen": "The Colonna appear in the eleventh century as lords of Colonna, in the Alban Hills, and of Palestrina. Their power rested on castles in Lazio, urban clienteles and their presence in the College of Cardinals. Their feud with the Orsini divided Rome for centuries.",
+      "trayectoria": "Their clash with Boniface VIII culminated in 1303 in the outrage of Anagni, in which Sciarra Colonna took part. In 1417 Oddone Colonna was elected pope as Martin V, ending the Western Schism, and strengthened the family estates. In the Italian wars Prospero and Fabrizio Colonna were generals on the Spanish side.",
+      "legado": "Vittoria Colonna, Fabrizio’s daughter, was a poet and a friend of Michelangelo. Marcantonio II commanded the papal galleys at Lepanto (1571) and was Viceroy of Sicily. As constables of the Kingdom of Naples and princes of Paliano, the Colonna remained among the first families of the Roman nobility.",
       "territorios": [
         "Papal States"
       ],
@@ -15926,13 +15939,26 @@
         }
       ],
       "ramas": [],
-      "fuentes": [],
+      "fuentes": [
+        "https://www.treccani.it/enciclopedia/colonna/",
+        "https://en.wikipedia.org/wiki/Colonna_family"
+      ],
       "casasOrigen": [],
       "casasDerivadas": [],
       "casasConectadas": [],
       "ogImage": "/og/dinastia/colonna.jpg"
     },
-    "editorial": false
+    "editorial": true,
+    "sources": [
+      {
+        "titulo": "Treccani",
+        "url": "https://www.treccani.it/enciclopedia/colonna/"
+      },
+      {
+        "titulo": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Colonna_family"
+      }
+    ]
   },
   {
     "key": "Álvarez de Toledo",

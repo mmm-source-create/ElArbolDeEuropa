@@ -11,20 +11,22 @@
     "sections": []
   },
   "MARIAANABAVIERA": {
-    "name": "Maria Ana of Bavaria",
+    "name": "Maria Anna of Bavaria",
     "role": "Consort",
     "nickname": "",
     "aliases": [],
     "summary": "Consort of the Wittelsbach dynasty. Associated with Inner Austria.",
-    "sections": []
+    "sections": [],
+    "slugName": "Maria Ana of Bavaria"
   },
   "MATILDAING": {
-    "name": "Matilde of England",
+    "name": "Matilda of England",
     "role": "Consort",
     "nickname": "",
     "aliases": [],
     "summary": "Consort of the Plantagenet dynasty. Associated with Saxony, England.",
-    "sections": []
+    "sections": [],
+    "slugName": "Matilde of England"
   },
   "RUXANDRARARES": {
     "name": "Ruxandra Rareș",
@@ -45,11 +47,11 @@
     "sections": [
       [
         "The child queen",
-        "Daughter of Gustavo II Adolfo and Maria Leonor of Brandenburg, born in Stockholm in 1626 and inherited the throne in 1632. She was educated as an heir prince and ruled a regency presided over by Chancellor Oxenstierna until her majority in 1644."
+        "Daughter of Gustavus II Adolphus and Maria Eleonora of Brandenburg, born in Stockholm in 1626 and inherited the throne in 1632. She was educated as an heir to the throne and ruled a regency presided over by Chancellor Oxenstierna until her majority in 1644."
       ],
       [
         "Westphalia and the Court of Stockholm",
-        "He promoted the peace of Westphalia (1648), which gave Sweden Western Pomerania, Bremen and Verden. He brought wise men and artists, including René Descartes, to Stockholm, who died there in 1650. He refused to marry and managed to get the Riksdag to recognize his cousin Carlos Gustavo as heir."
+        "She promoted the Peace of Westphalia (1648), which gave Sweden Western Pomerania, Bremen and Verden. He brought wise men and artists, including René Descartes, to Stockholm, who died there in 1650. He refused to marry and managed to get the Riksdag to recognize his cousin Carlos Gustavo as heir."
       ],
       [
         "Abdication and Rome",
@@ -70,7 +72,7 @@
     "biography": "He inherited a duchy occupied largely by other powers. His service to Charles V and Philip II, and especially the victory of Saint Quintin, contributed to the territorial recovery agreed upon in Cateau-Cambrésis. He moved the capital to Turin and married Margaret of France. His title of 1553 and the effective recovery of 1559 represented different moments."
   },
   "ISABELLEFOIX": {
-    "name": "Isabel de Foix-Castellbó",
+    "name": "Isabella of Foix-Castellbó",
     "role": "Countess / Viscountess",
     "nickname": "",
     "aliases": [
@@ -82,16 +84,18 @@
     "governmentNotes": {
       "Título conservado después de la transmisión del gobierno a Juan I.": "Title retained after the transfer of government to John I.",
       "Título conservado tras transmitir el gobierno a Juan I.": "Title retained after transferring government to John I."
-    }
+    },
+    "slugName": "Isabel de Foix-Castellbó"
   },
   "LUISSAB": {
-    "name": "Luis de Savoy",
+    "name": "Louis of Savoy",
     "role": "Duke",
     "nickname": "",
     "aliases": [],
     "summary": "The son of Amadeus VIII and Mary of Burgundy, he assumed government functions before becoming Duke. His marriage to Anna of Lusignan linked Savoy to Cyprus.",
     "sections": [],
-    "biography": "The son of Amadeus VIII and Mary of Burgundy, he assumed government functions before becoming Duke. His marriage to Anne of Lusignan linked Savoy to Cyprus. Among his sons were Dukes Amadeus IX and Philip II, besides Louis, who married Queen Charlotte of Cyprus and defended his cause on the island."
+    "biography": "The son of Amadeus VIII and Mary of Burgundy, he assumed government functions before becoming Duke. His marriage to Anne of Lusignan linked Savoy to Cyprus. Among his sons were Dukes Amadeus IX and Philip II, besides Louis, who married Queen Charlotte of Cyprus and defended his cause on the island.",
+    "slugName": "Luis de Savoy"
   },
   "ISABELLALUSARM": {
     "name": "Isabella of Armenia, wife of Amalric",
@@ -125,7 +129,7 @@
     "role": "Viscount",
     "nickname": "",
     "aliases": [],
-    "summary": "The son of Gaston IV and Leonor of Navarre, he was the brother of Gaston, Prince of Viana, and uncle of Catherine of Navarre. He married Maria of Orleans. His sons Germana and Gaston of Nemours link this branch with the Aragonese court and with the French campaigns in Italy.",
+    "summary": "The son of Gaston IV and Eleanor of Navarre, he was the brother of Gaston, Prince of Viana, and uncle of Catherine of Navarre. He married Maria of Orleans. His sons Germana and Gaston of Nemours link this branch with the Aragonese court and with the French campaigns in Italy.",
     "sections": []
   },
   "ISABELLA1JER": {
@@ -213,9 +217,9 @@
     "aliases": [
       "Giovanna di Savoia"
     ],
-    "summary": "Daughter of Amadeus VII and Bona de Berry, she married Juan James of Montferrat. She was the mother of William VIII, Bonifacio III and Isabel, wife of Ludovico I of Saluzzo.",
+    "summary": "Daughter of Amadeus VII and Bona de Berry, she married John James of Montferrat. She was the mother of William VIII, Bonifacio III and Isabel, wife of Ludovico I of Saluzzo.",
     "sections": [],
-    "biography": "Daughter of Amadeus VII and Bona de Berry, she married Juan James of Montferrat. She was the mother of William VIII, Bonifacio III and Isabel, wife of Ludovico I of Saluzzo. Her position links several neighboring houses by filiation, but the alliances and conflicts of her descendants show that sharing ancestors did not guarantee political cooperation."
+    "biography": "Daughter of Amadeus VII and Bona de Berry, she married John James of Montferrat. She was the mother of William VIII, Bonifacio III and Isabel, wife of Ludovico I of Saluzzo. Her position links several neighboring houses by filiation, but the alliances and conflicts of her descendants show that sharing ancestors did not guarantee political cooperation."
   },
   "SIMON1KARTLI": {
     "name": "Simon I of Kartli",
@@ -245,12 +249,13 @@
     "sections": []
   },
   "MARIAANAAUTMAXBAV": {
-    "name": "Maria Ana of Austria",
+    "name": "Maria Anna of Austria",
     "role": "Consort",
     "nickname": "",
     "aliases": [],
     "summary": "Consort of the Habsburg dynasty. Associated with Austria, Bavaria.",
-    "sections": []
+    "sections": [],
+    "slugName": "Maria Ana of Austria"
   },
   "ISABPI": {
     "name": "Isabel Piast",
@@ -310,12 +315,13 @@
     "sections": []
   },
   "ISABARAGINF": {
-    "name": "Isabel of Aragon",
+    "name": "Isabella of Aragon",
     "role": "Consort",
     "nickname": "",
     "aliases": [],
     "summary": "Consort of the Trastámara dynasty. Associated with Portugal, Castile, Aragon.",
-    "sections": []
+    "sections": [],
+    "slugName": "Isabel of Aragon"
   },
   "MARIALUISASABESP": {
     "name": "María Luisa Gabriela de Savoy",
@@ -356,7 +362,7 @@
     "aliases": [
       "Margaret of Cyprus"
     ],
-    "summary": "The daughter of Hugo III of Cyprus and wife of Theodore III of Armenia, she was the mother of Leo III. Her marriage is one of the direct links between the two monarchies, prior to the Lusignans' access to the Cilician crown.",
+    "summary": "The daughter of Hugh III of Cyprus and wife of Theodore III of Armenia, she was the mother of Leo III. Her marriage is one of the direct links between the two monarchies, prior to the Lusignans' access to the Cilician crown.",
     "sections": []
   },
   "EUPHEMIASUE": {
@@ -368,12 +374,13 @@
     "sections": []
   },
   "YOLANDAARAG": {
-    "name": "Yolanda de Aragón",
+    "name": "Yolande of Aragon",
     "role": "Queen consort and Regent of France",
     "nickname": "",
     "aliases": [],
     "summary": "Consort of the Barcelona dynasty. Associated with Anjou, Aragon.",
-    "sections": []
+    "sections": [],
+    "slugName": "Yolanda de Aragón"
   },
   "LEONALB": {
     "name": "Leonor de Albuquerque",
@@ -444,20 +451,22 @@
     "biography": "The daughter of Philip of Évreux and Joan II of Navarre, she married Philip VI of France. This marriage brought the Navarrese house closer to the first generation of the Valois. Her trajectory allows us to distinguish this Blanca from other homonyms of Navarre belonging to different generations and successor situations."
   },
   "ALONSARAG": {
-    "name": "Alonso de Aragón",
+    "name": "Alonso of Aragon",
     "role": "Archbishop",
     "nickname": "",
     "aliases": [],
     "summary": "Archbishop of the Trastámara dynasty. Associated with Aragon.",
-    "sections": []
+    "sections": [],
+    "slugName": "Alonso de Aragón"
   },
   "MARGLUX": {
-    "name": "Margarita de Luxembourg",
+    "name": "Margaret of Luxembourg",
     "role": "Consort",
     "nickname": "",
     "aliases": [],
     "summary": "Consort of the Luxembourg dynasty. Associated with Hungary.",
-    "sections": []
+    "sections": [],
+    "slugName": "Margarita de Luxembourg"
   },
   "CONST2ARM": {
     "name": "Constantine II of Cilician Armenia",
@@ -475,17 +484,18 @@
     "role": "Marquess",
     "nickname": "",
     "aliases": [],
-    "summary": "The son of Juan Jacobo and Juana de Savoy, combined the government of Montferrat with the military service of the Italian powers. His daughters married Ludovico II of Saluzzo and Charles I of Savoy.",
+    "summary": "The son of Juan Jacobo and Joanna of Savoy, combined the government of Montferrat with the military service of the Italian powers. His daughters married Ludovico II of Saluzzo and Charles I of Savoy.",
     "sections": [],
-    "biography": "The son of Juan Jacobo and Juana de Savoy combined the government of Montferrat with the military service of the Italian powers. His daughters married Ludovico II of Saluzzo and Carlos I of Savoy. These links generated expectations about the marquisado, but upon his death his brother Bonifacio III inherited it."
+    "biography": "The son of Juan Jacobo and Joanna of Savoy combined the government of Montferrat with the military service of the Italian powers. His daughters married Ludovico II of Saluzzo and Charles I of Savoy. These links generated expectations about the marquisado, but upon his death his brother Bonifacio III inherited it."
   },
   "LEONORPROVENZA": {
-    "name": "Leonor de Provence",
+    "name": "Eleanor of Provence",
     "role": "Consort",
     "nickname": "",
     "aliases": [],
     "summary": "Consort of the Barcelona dynasty. Associated with England.",
-    "sections": []
+    "sections": [],
+    "slugName": "Leonor de Provence"
   },
   "DEMETRIO2GEO": {
     "name": "Demetrius II of Georgia",
@@ -509,20 +519,22 @@
     "sections": []
   },
   "MARIAANABAVFERN2": {
-    "name": "Maria Ana of Bavaria",
+    "name": "Maria Anna of Bavaria",
     "role": "Consort",
     "nickname": "",
     "aliases": [],
     "summary": "Consort of the Wittelsbach dynasty. Associated with Austria, Bavaria.",
-    "sections": []
+    "sections": [],
+    "slugName": "Maria Ana of Bavaria"
   },
   "ADOLFOFEDERICOSUE": {
-    "name": "Adolfo Federico of Sweden",
+    "name": "Adolf Frederick of Sweden",
     "role": "King",
     "nickname": "",
     "aliases": [],
     "summary": "King of Sweden since 1751, of Holstein-Gottorp's house. He reigned during the era of Freedom, with royal power very limited by the Riksdag.",
-    "sections": []
+    "sections": [],
+    "slugName": "Adolfo Federico of Sweden"
   },
   "MARIANAVARRA": {
     "name": "María de Navarra",
@@ -542,12 +554,13 @@
     "sections": []
   },
   "MARGBORGBAV": {
-    "name": "Margarita de Burgundy",
+    "name": "Margaret of Burgundy",
     "role": "Consort",
     "nickname": "",
     "aliases": [],
     "summary": "Consort of the Valois-Burgundy dynasty. Associated with Burgundy, Bavaria.",
-    "sections": []
+    "sections": [],
+    "slugName": "Margarita de Burgundy"
   },
   "ARNAUDALBRET": {
     "name": "Arnaud-Amanieu de Albret",
@@ -597,9 +610,9 @@
     "role": "Marquess",
     "nickname": "",
     "aliases": [],
-    "summary": "Saluzzo ruled in the first half of the 13th century, between Savoy's pressures and the alliances with Montferrat. His marriage to Beatriz de Savoy was a union between houses that also rivaled politically.",
+    "summary": "Saluzzo ruled in the first half of the 13th century, between Savoy's pressures and the alliances with Montferrat. His marriage to Beatrice of Savoy was a union between houses that also rivaled politically.",
     "sections": [],
-    "biography": "Saluzzo ruled in the first half of the 13th century, between Savoy’s pressures and the alliances with Montferrat. His marriage to Beatriz de Savoy was a union between houses that also rivaled politically. He died leaving Tomás I even less; the tutelage of that generation shows that inheriting the marquisado did not amount to immediately exercising the government."
+    "biography": "Saluzzo ruled in the first half of the 13th century, between Savoy’s pressures and the alliances with Montferrat. His marriage to Beatrice of Savoy was a union between houses that also rivaled politically. He died leaving Tomás I even less; the tutelage of that generation shows that inheriting the marquisado did not amount to immediately exercising the government."
   },
   "GOFFREDOBORJA": {
     "name": "Goffredo Borgia",
@@ -618,12 +631,13 @@
     "sections": []
   },
   "ISABTIR": {
-    "name": "Isabel of Tyrol",
+    "name": "Isabella of Tyrol",
     "role": "Consort",
     "nickname": "",
     "aliases": [],
     "summary": "Consort of the Gorizia dynasty. Associated with Germany, Austria.",
-    "sections": []
+    "sections": [],
+    "slugName": "Isabel of Tyrol"
   },
   "MARIAAVES": {
     "name": "Mary of Hainaut",
@@ -642,12 +656,13 @@
     "sections": []
   },
   "LEONORNAP": {
-    "name": "Leonor of Naples",
+    "name": "Eleanor of Naples",
     "role": "Consort",
     "nickname": "",
     "aliases": [],
     "summary": "Consort of the Trastámara dynasty. Associated with Ferrara.",
-    "sections": []
+    "sections": [],
+    "slugName": "Leonor of Naples"
   },
   "SOPHIADOROTHEACELLE": {
     "name": "Sofia Dorothea de Celle",
@@ -708,12 +723,13 @@
     "sections": []
   },
   "SANCHACASTAR": {
-    "name": "Sancha de Castilla",
+    "name": "Sancha of Castile",
     "role": "Consort",
     "nickname": "",
     "aliases": [],
     "summary": "Consort of the Ivrea-Burgundy dynasty. Associated with Aragon, Castile.",
-    "sections": []
+    "sections": [],
+    "slugName": "Sancha de Castilla"
   },
   "TOMAS2SAB": {
     "name": "Thomas II of Savoy",
@@ -766,7 +782,7 @@
     "role": "Princess",
     "nickname": "",
     "aliases": [],
-    "summary": "Daughter of Charles IX and Mary of the Palatinate. Her marriage to Juan Casimiro of the Palatinate-Zweibrücken connected the Vasa with a branch of Wittelsbach. Her son Carlos X Gustavo succeeded Cristina of Sweden: the dynastic name change did not break the family continuity by female line.",
+    "summary": "Daughter of Charles IX and Mary of the Palatinate. Her marriage to John Casimir of the Palatinate-Zweibrücken connected the Vasa with a branch of Wittelsbach. Her son Carlos X Gustavo succeeded Christina of Sweden: the dynastic name change did not break the family continuity by female line.",
     "sections": []
   },
   "JOHANNLUDWIG1ANHALT": {
@@ -882,14 +898,15 @@
     "sections": []
   },
   "CASI3": {
-    "name": "Casimiro III of Poland",
+    "name": "Casimir III of Poland",
     "role": "King",
     "nickname": "the Great",
     "aliases": [
       "Casimiro III"
     ],
     "summary": "He strengthened Polish administration and legislation and promoted the foundation of the University of Krakow. He was the last Polish king of the main line of the Piast.",
-    "sections": []
+    "sections": [],
+    "slugName": "Casimiro III of Poland"
   },
   "KAIKHOSROKARTLI": {
     "name": "Kaikhosro of Kartli",
@@ -903,12 +920,13 @@
     "sections": []
   },
   "HUG4BORG": {
-    "name": "Hugo IV de Burgundy",
+    "name": "Hugh IV of Burgundy",
     "role": "Duke",
     "nickname": "",
     "aliases": [],
     "summary": "Duke of Burgundy, 1218–1272. Duke of the Burgundy dynasty.",
-    "sections": []
+    "sections": [],
+    "slugName": "Hugo IV de Burgundy"
   },
   "LUISDURAZZO": {
     "name": "Luis de Durazzo",
@@ -941,14 +959,15 @@
     "sections": []
   },
   "LADI1": {
-    "name": "Ladislao I of Poland",
+    "name": "Ladislaus I of Poland",
     "role": "King",
     "nickname": "Łokietek",
     "aliases": [
       "Ladislao I"
     ],
     "summary": "His coronation in Krakow symbolized the reunification of a significant part of the Polish lands. He fought the Teutonic Order and bequeathed the crown to Casimiro III.",
-    "sections": []
+    "sections": [],
+    "slugName": "Ladislao I of Poland"
   },
   "LUARSAB2KARTLI": {
     "name": "Luarsab II of Kartli",
@@ -959,7 +978,7 @@
     "sections": []
   },
   "OTTHEINRICHPAL": {
-    "name": "Otto Enrique del Palatinate",
+    "name": "Otto Henry of the Palatinate",
     "role": "Elector",
     "nickname": "the Magnanimous",
     "aliases": [],
@@ -968,14 +987,15 @@
     "governmentNotes": {
       "Gobernó junto a su hermano Felipe; entre 1535 y 1541 hubo una división de sus áreas de autoridad.": "He ruled with his brother Philip and his branches of authority were divided between 1535 and 1541.",
       "Los estamentos administraron buena parte del principado durante la crisis financiera de 1544–1546.": "The stamina administered a good share of the principality during the financial crisis of 1544-1546."
-    }
+    },
+    "slugName": "Otto Enrique del Palatinate"
   },
   "FRANCOISECHATILLON": {
     "name": "Françoise de Châtillon",
     "role": "Noble",
     "nickname": "",
     "aliases": [],
-    "summary": "Wife of Alain de Albret, she was the mother of Juan III of Navarre and Carlota de Albret. Her offspring connect the French nobility heritages with the Navarren monarchy and the Borja. Her birth year is preserved as approximate, avoiding presenting a conventional figure as an exact date.",
+    "summary": "Wife of Alain de Albret, she was the mother of John III of Navarre and Charlotte of Albret. Her offspring connect the French nobility heritages with the Navarren monarchy and the Borja. Her birth year is preserved as approximate, avoiding presenting a conventional figure as an exact date.",
     "sections": []
   },
   "CRISTINALORENA": {
@@ -1042,13 +1062,14 @@
     "sections": []
   },
   "PEDRO2SAB": {
-    "name": "Pedro II de Savoy",
+    "name": "Peter II of Savoy",
     "role": "Count",
     "nickname": "The Little Charlemagne",
     "aliases": [],
     "summary": "Before inheriting the county, he developed an important career in England and gathered his own domains around Lake Leman. His government reinforced controls over Castilians, Revenues and Administration.",
     "sections": [],
-    "biography": "Before inheriting the county, he developed an important career in England and gathered his own domains around Lake Leman. His government reinforced controls over Castilians, income and administration. When he died without a son, the county passed to his brother Felipe; his daughter Beatriz's rights over other estates followed a different trajectory."
+    "biography": "Before inheriting the county, he developed an important career in England and gathered his own domains around Lake Leman. His government reinforced controls over Castilians, income and administration. When he died without a son, the county passed to his brother Felipe; his daughter Beatriz's rights over other estates followed a different trajectory.",
+    "slugName": "Pedro II de Savoy"
   },
   "PHILIP1POM": {
     "name": "Philip I of Pomerania",
@@ -1070,15 +1091,16 @@
     "sections": []
   },
   "ISABARAG": {
-    "name": "Isabel of Aragon",
+    "name": "Isabella of Aragon",
     "role": "Consort",
     "nickname": "",
     "aliases": [],
     "summary": "Consort of the Barcelona dynasty. Associated with France.",
-    "sections": []
+    "sections": [],
+    "slugName": "Isabel of Aragon"
   },
   "JOHNALBERT1MECK": {
-    "name": "Juan Alberto I de Mecklenburg",
+    "name": "John Albert I of Mecklenburg",
     "role": "Duke",
     "nickname": "",
     "aliases": [],
@@ -1086,7 +1108,8 @@
     "sections": [],
     "governmentNotes": {
       "Gobierno territorial de una rama; no dominio exclusivo de todo el conjunto.": "Territorial government by one branch; no exclusive rule over the entire grouping."
-    }
+    },
+    "slugName": "Juan Alberto I de Mecklenburg"
   },
   "ROB1ART": {
     "name": "Roberto I de Artois",
@@ -1121,12 +1144,13 @@
     "sections": []
   },
   "ISABVAL": {
-    "name": "Isabel de Valois",
+    "name": "Isabella of Valois",
     "role": "Consort",
     "nickname": "",
     "aliases": [],
     "summary": "Consort of the Valois dynasty. Associated with Milan, France.",
-    "sections": []
+    "sections": [],
+    "slugName": "Isabel de Valois"
   },
   "LEVANIMER": {
     "name": "Levan de Imereti",
@@ -1145,12 +1169,13 @@
     "sections": []
   },
   "ISABELVALOIS1389": {
-    "name": "Isabel de Valois",
+    "name": "Isabella of Valois",
     "role": "Consort",
     "nickname": "",
     "aliases": [],
     "summary": "Consort of the Valois dynasty. Associated with France, England.",
-    "sections": []
+    "sections": [],
+    "slugName": "Isabel de Valois"
   },
   "SIBYLLACLEVES": {
     "name": "Cléveris's Sibylla",
@@ -1303,16 +1328,17 @@
     "sections": []
   },
   "JOHNFREDWURTT": {
-    "name": "Juan Federico de Württemberg",
+    "name": "John Frederick of Württemberg",
     "role": "Duke",
     "nickname": "",
     "aliases": [],
     "summary": "Duke of Württemberg, 1608–1628. Duke of the Württemberg dynasty.",
-    "sections": []
+    "sections": [],
+    "slugName": "Juan Federico de Württemberg"
   },
   "MARGUERITEBEARN": {
-    "name": "Margarita de Bearne",
-    "role": "VizCountess of Bearne",
+    "name": "Margaret of Béarn",
+    "role": "VizCountess of Béarn",
     "nickname": "",
     "aliases": [],
     "summary": "The daughter of Gaston VII, she contributed the rights to Bearne to the offspring of her marriage to Roger Bernardo III of Foix. Her role is fundamental to understanding the origin of the heritage union.",
@@ -1320,7 +1346,8 @@
     "biography": "The daughter of Gaston VII, she contributed the rights to Bearne to the offspring of her marriage to Roger Bernardo III of Foix. Her role is fundamental to understanding the origin of the heritage union. Margarita's birth house and her husband's were different, even though her heirs gathered the titles.",
     "governmentNotes": {
       "Titular hereditaria; comparte la continuidad del vizcondado con su marido y después con su descendencia.": "Hereditary titleholder; she shared the continuity of the viscounty with her husband and later with her descendants."
-    }
+    },
+    "slugName": "Margarita de Bearne"
   },
   "ESTEBAN3BAV": {
     "name": "Stephen III of Bavaria",
@@ -1339,20 +1366,22 @@
     "sections": []
   },
   "JUANCASIMIROPALZWEI": {
-    "name": "Juan Casimiro del Palatinate-Zweibrücken",
+    "name": "John Casimir of the Palatinate-Zweibrücken",
     "role": "Count palatine",
     "nickname": "",
     "aliases": [],
     "summary": "Count Palatine of the Wittelsbach dynasty. Associated with Palatinate, Sweden.",
-    "sections": []
+    "sections": [],
+    "slugName": "Juan Casimiro del Palatinate-Zweibrücken"
   },
   "LOUISNEVERS": {
-    "name": "Luis de Nevers",
+    "name": "Louis of Nevers",
     "role": "Noble",
     "nickname": "",
     "aliases": [],
     "summary": "The son of Robert III of Flanders and father of Louis I, died before inheriting the Flemish county. His position allows understanding the leap between grandfather and grandson in 1322. Genealogy preserves this generation even though the succession of Flanders does not include a government of his.",
-    "sections": []
+    "sections": [],
+    "slugName": "Luis de Nevers"
   },
   "MURAD3OSM": {
     "name": "Murad III",
@@ -1371,12 +1400,13 @@
     "sections": []
   },
   "ISABPOM": {
-    "name": "Isabel de Pomerania",
+    "name": "Isabella of Pomerania",
     "role": "Consort",
     "nickname": "",
     "aliases": [],
     "summary": "Consort of the Griffin dynasty. Associated with Bohemia, Holy Roman Empire.",
-    "sections": []
+    "sections": [],
+    "slugName": "Isabel de Pomerania"
   },
   "ALFPORTINF": {
     "name": "Alfonso de Portugal",
@@ -1427,12 +1457,13 @@
     "sections": []
   },
   "ISABBORG": {
-    "name": "Isabel de Burgundy",
+    "name": "Isabella of Burgundy",
     "role": "Consort",
     "nickname": "",
     "aliases": [],
     "summary": "Consort of the Burgundy dynasty. Associated with Germany.",
-    "sections": []
+    "sections": [],
+    "slugName": "Isabel de Burgundy"
   },
   "HENRY2NASSAU": {
     "name": "Henry II of Nassau",
@@ -1574,12 +1605,13 @@
     "sections": []
   },
   "MARGABORG1290": {
-    "name": "Margarita de Burgundy",
+    "name": "Margaret of Burgundy",
     "role": "Consort",
     "nickname": "",
     "aliases": [],
     "summary": "Consort of the Burgundy dynasty. Associated with France, Navarre.",
-    "sections": []
+    "sections": [],
+    "slugName": "Margarita de Burgundy"
   },
   "RALPHNEVILLE1": {
     "name": "Ralph Neville",
@@ -1606,12 +1638,13 @@
     "sections": []
   },
   "ROB2BORG": {
-    "name": "Roberto II of Burgundy",
+    "name": "Robert II of Burgundy",
     "role": "Duke",
     "nickname": "",
     "aliases": [],
     "summary": "Duke of Burgundy, 1272–1306. Duke of the Burgundy dynasty.",
-    "sections": []
+    "sections": [],
+    "slugName": "Roberto II of Burgundy"
   },
   "MARIALUXEMBURGO": {
     "name": "Mary of Luxembourg",
@@ -1665,7 +1698,7 @@
     }
   },
   "MATILDEEMPERATRIZ": {
-    "name": "Matilde of England",
+    "name": "Matilda of England",
     "role": "Empress · Lady of the English",
     "nickname": "The Empress",
     "aliases": [
@@ -1673,7 +1706,8 @@
       "Maud"
     ],
     "summary": "Daughter of Henry I of England, she married Emperor Henry V and, after being widowed, Geoffrey of Anjou. Named heir by her father, she fought Stephen of Blois in the English civil war known as the Anarchy without ever being crowned, and secured the succession of her son Henry II in 1154.",
-    "sections": []
+    "sections": [],
+    "slugName": "Matilde of England"
   },
   "ALFMOL": {
     "name": "Alfonso de Molina",
@@ -1698,7 +1732,7 @@
     "aliases": [
       "Eschive of Ibelin, Lady of Beirut"
     ],
-    "summary": "Heir of the lordship of Beirut, he lost his territorial base with the Mamluk conquest. Married to Guido de Lusignan, he was the mother of Hugo IV of Cyprus. His trajectory connects the loss of continental states with the continuity of their families on the island.",
+    "summary": "Heir of the lordship of Beirut, he lost his territorial base with the Mamluk conquest. Married to Guido de Lusignan, he was the mother of Hugh IV of Cyprus. His trajectory connects the loss of continental states with the continuity of their families on the island.",
     "sections": []
   },
   "MARGARETAMUSATA": {
@@ -1761,15 +1795,16 @@
     }
   },
   "MARGFRAN": {
-    "name": "Margarita de France",
+    "name": "Margaret of France",
     "role": "Consort",
     "nickname": "",
     "aliases": [],
     "summary": "Consort of the Capet dynasty. Associated with Brabant, France.",
-    "sections": []
+    "sections": [],
+    "slugName": "Margarita de France"
   },
   "KARLFRIEDRICHBADEN": {
-    "name": "Carlos Federico de Baden",
+    "name": "Charles Frederick of Baden",
     "role": "Margrave",
     "nickname": "",
     "aliases": [],
@@ -1777,7 +1812,8 @@
     "sections": [],
     "governmentNotes": {
       "Sucede a su abuelo Carlos III Guillermo en Baden-Durlach en 1738, bajo administración tutelar hasta 1746; hereda Baden-Baden en 1771. Elector desde 1803 y gran duque desde 1806.": "He succeeded his grandfather Charles III William in Baden-Durlach in 1738, under a regency until 1746, and inherited Baden-Baden in 1771. He became elector in 1803 and grand duke in 1806."
-    }
+    },
+    "slugName": "Carlos Federico de Baden"
   },
   "GARCIAALVAREZ": {
     "name": "García Álvarez de Toledo y Carrillo de Toledo",
@@ -1860,12 +1896,13 @@
     "sections": []
   },
   "ROD1BAV": {
-    "name": "Rodolfo I of the Palatinate",
+    "name": "Rudolf I of the Palatinate",
     "role": "Duke / Count palatine",
     "nickname": "",
     "aliases": [],
     "summary": "Duke of Bavaria, 1294–1317 (branch). Duke of the Wittelsbach dynasty.",
-    "sections": []
+    "sections": [],
+    "slugName": "Rodolfo I of the Palatinate"
   },
   "ENRIQ15": {
     "name": "Henry XV of Bavaria",
@@ -1876,15 +1913,16 @@
     "sections": []
   },
   "GUILLERMO2BEARN": {
-    "name": "William II of Bearne",
-    "role": "Viscount of Bearne",
+    "name": "William II of Béarn",
+    "role": "Viscount of Béarn",
     "nickname": "",
     "aliases": [
       "Guillem II de Bearn",
       "Guillem II de Montcada"
     ],
-    "summary": "The son of Guillermo Ramón, Viscount of Bearne since 1224. He accompanied Jaime I in the conquest of Mallorca and died in the battle of Portopi on 12 September 1229, together with Ramón de Moncada. He was succeeded by his son Gastón VII.",
-    "sections": []
+    "summary": "The son of Guillermo Ramón, Viscount of Béarn since 1224. He accompanied Jaime I in the conquest of Mallorca and died in the battle of Portopi on 12 September 1229, together with Ramón de Moncada. He was succeeded by his son Gastón VII.",
+    "sections": [],
+    "slugName": "William II of Bearne"
   },
   "ALESSANDROMEDICI": {
     "name": "Alessandro de’ Medici",
@@ -2096,12 +2134,13 @@
     "sections": []
   },
   "MARGGINEBRASAB": {
-    "name": "Margarita de Ginebra",
+    "name": "Margaret of Geneva",
     "role": "Consort",
     "nickname": "",
     "aliases": [],
     "summary": "Consort of the Geneva Dynasty. Associated with Savoy, Geneva.",
-    "sections": []
+    "sections": [],
+    "slugName": "Margarita de Ginebra"
   },
   "WILLIAM7CLANRICARDE": {
     "name": "William Bourke, Earl of Clanricarde",
@@ -2178,12 +2217,13 @@
     "sections": []
   },
   "JOHNFREDPOM": {
-    "name": "Juan Federico de Pomerania",
+    "name": "John Frederick of Pomerania",
     "role": "Duke",
     "nickname": "",
     "aliases": [],
     "summary": "Duke of Pomerania, 1569–1600. Duke of the Griffin dynasty.",
-    "sections": []
+    "sections": [],
+    "slugName": "Juan Federico de Pomerania"
   },
   "ROB1COUR": {
     "name": "Roberto I",
@@ -2226,14 +2266,15 @@
     "sections": []
   },
   "ELIZABETHBURGHSCOT": {
-    "name": "Isabel de Burgh",
+    "name": "Elizabeth de Burgh",
     "role": "Consort",
     "nickname": "",
     "aliases": [
       "Elizabeth de Burgh"
     ],
     "summary": "Consort of the Burgh Dynasty. Associated with Scotland, Ireland.",
-    "sections": []
+    "sections": [],
+    "slugName": "Isabel de Burgh"
   },
   "JOHN1BALLIOL": {
     "name": "Juan Balliol",
@@ -2422,7 +2463,7 @@
     "sections": []
   },
   "JOHNERNEISOLD": {
-    "name": "Juan Ernesto de Saxony-Eisenach",
+    "name": "John Ernest of Saxony-Eisenach",
     "role": "Duke",
     "nickname": "",
     "aliases": [],
@@ -2430,7 +2471,8 @@
     "sections": [],
     "governmentNotes": {
       "Mandato de la rama ernestina; los repartos territoriales se fechan en series independientes.": "The term of office of the neretin branch and the territorial challenges are dated in independent series."
-    }
+    },
+    "slugName": "Juan Ernesto de Saxony-Eisenach"
   },
   "PAPA_ALEJANDRO4": {
     "name": "Alexander IV",

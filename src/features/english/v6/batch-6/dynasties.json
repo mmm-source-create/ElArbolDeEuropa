@@ -2651,7 +2651,7 @@
     "summary": "An alpine house whose branches link the medieval counties, the duchy and the Mediterranean crowns.",
     "origin": "The house was formed around alpine domains that grew through inheritance, concessions and marriages. Its dynastic identity survived changes in rank and heritage distribution.",
     "history": "The descendants of Thomas I were distributed between the condal line and the estates of his brothers. Later, weddings with Burgundy, Cyprus, France and the Habsburgs expanded their network. The ducal elevation of 1416 and the move of the capital to Turin changed its political position.",
-    "legacy": "The ducal branch reached the crowns of Sicily and Sardinia. In 1831 the Sardinian succession passed to Carlos Alberto of Savoy-Carignano: a collateral branch of the same family.",
+    "legacy": "The ducal branch reached the crowns of Sicily and Sardinia. In 1831 the Sardinian succession passed to Charles Albert of Savoy-Carignano: a collateral branch of the same family.",
     "editorial": true,
     "sources": [
       {
@@ -9536,7 +9536,7 @@
     "en": "hesse",
     "name": "Hesse",
     "summary": "The landgraviate of Hesse grew up among inheritance, family divisions and religious alliances that placed it at the center of imperial politics.",
-    "origin": "The house descends from Henry, son of Sophia of Brabante and grandson of St. Elizabeth of Hungary. The war for the succession of the Ludovingians separated Hesse from Thuringia in the 13th century. Marburg and Kassel became their main centres of power.",
+    "origin": "The house descends from Henry, son of Sophia of Brabant and grandson of St. Elizabeth of Hungary. The war for the succession of the Ludovingians separated Hesse from Thuringia in the 13th century. Marburg and Kassel became their main centres of power.",
     "history": "Philip I, called the Magnanimous, adopted the Reformation and was one of the leaders of the League of Esmalcalda. His defeat of Charles V limited his imperial position. On his death in 1567 he divided the estate among four sons, originating from the landgraviates of Kassel, Darmstadt, Marburg and Rheinfels.",
     "legacy": "Kassel and Darmstadt were the longest-lasting lines. Their confessional differences and hereditary claims fueled conflicts during the Thirty Years' War. The marriages of his princesses linked the family to Russia, Prussia, Savoy and other European courts. The plurality of branches gave continuity to the house during the political transformation of the Empire.",
     "editorial": true,
@@ -16364,12 +16364,21 @@
     "es": "asen",
     "en": "asen",
     "name": "Asen",
-    "summary": "",
-    "origin": "",
-    "history": "",
-    "legacy": "",
-    "editorial": false,
-    "sources": [],
+    "summary": "The dynasty that restored the Bulgarian state in 1185 with the rebellion of the brothers Asen and Peter. Under Ivan Asen II the Second Bulgarian Empire dominated much of the Balkans.",
+    "origin": "The brothers Theodore (Peter) and Asen led a revolt against Byzantium in the northern Balkans in 1185, supported by the Cumans. Tarnovo became the capital of the new state and the Bulgarian Church recovered its autonomy.",
+    "history": "Kaloyan, the founders’ younger brother, obtained a crown from Pope Innocent III in 1204 and in 1205 defeated the Latin emperor Baldwin I at Adrianople. Ivan Asen II, Asen’s son, defeated Epirus at Klokotnitsa (1230) and extended his rule from the Black Sea to the Adriatic.",
+    "legacy": "After Ivan Asen II died in 1241, his young sons reigned under regencies and the Mongol invasion weakened the kingdom. Michael II Asen was murdered in 1256 and the male line lost the throne; Ivan Asen III, Ivan Asen II’s grandson, reigned briefly in 1279–1280 with Byzantine support. Later dynasties invoked their kinship with the Asens.",
+    "editorial": true,
+    "sources": [
+      {
+        "titulo": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Asen_dynasty"
+      },
+      {
+        "titulo": "Treccani",
+        "url": "https://www.treccani.it/enciclopedia/bisanzio/"
+      }
+    ],
     "members": [
       {
         "id": "IVANASEN1BUL",
@@ -16499,11 +16508,11 @@
       "nombre": "Asen",
       "slug": "asen",
       "aliases": [],
-      "editorial": false,
-      "resumen": "",
-      "origen": "",
-      "trayectoria": "",
-      "legado": "",
+      "editorial": true,
+      "resumen": "The dynasty that restored the Bulgarian state in 1185 with the rebellion of the brothers Asen and Peter. Under Ivan Asen II the Second Bulgarian Empire dominated much of the Balkans.",
+      "origen": "The brothers Theodore (Peter) and Asen led a revolt against Byzantium in the northern Balkans in 1185, supported by the Cumans. Tarnovo became the capital of the new state and the Bulgarian Church recovered its autonomy.",
+      "trayectoria": "Kaloyan, the founders’ younger brother, obtained a crown from Pope Innocent III in 1204 and in 1205 defeated the Latin emperor Baldwin I at Adrianople. Ivan Asen II, Asen’s son, defeated Epirus at Klokotnitsa (1230) and extended his rule from the Black Sea to the Adriatic.",
+      "legado": "After Ivan Asen II died in 1241, his young sons reigned under regencies and the Mongol invasion weakened the kingdom. Michael II Asen was murdered in 1256 and the male line lost the throne; Ivan Asen III, Ivan Asen II’s grandson, reigned briefly in 1279–1280 with Byzantine support. Later dynasties invoked their kinship with the Asens.",
       "territorios": [
         "Bulgaria"
       ],
@@ -16907,7 +16916,10 @@
         }
       ],
       "ramas": [],
-      "fuentes": [],
+      "fuentes": [
+        "https://en.wikipedia.org/wiki/Asen_dynasty",
+        "https://www.treccani.it/enciclopedia/bisanzio/"
+      ],
       "casasOrigen": [],
       "casasDerivadas": [],
       "casasConectadas": [],
@@ -18449,12 +18461,21 @@
     "es": "orsini",
     "en": "orsini",
     "name": "Orsini",
-    "summary": "",
-    "origin": "",
-    "history": "",
-    "legacy": "",
-    "editorial": false,
-    "sources": [],
+    "summary": "A Roman baronial family, rival of the Colonna, which produced three popes, many cardinals and condottieri and married into the Medici and the Farnese.",
+    "origin": "The Orsini descended from the Bobone, a twelfth-century Roman family. Matteo Rosso Orsini, Senator of Rome in the 1240s, defended the city against Emperor Frederick II and established the family’s power in Lazio.",
+    "history": "His son Giovanni Gaetano was elected pope in 1277 as Nicholas III and openly favoured his relatives. The branches of Bracciano, Pitigliano, Gravina and Monterotondo extended their fiefs across the Papal States and the Kingdom of Naples, and their members served Venice, Florence and the papacy as condottieri.",
+    "legacy": "Clarice Orsini married Lorenzo de’ Medici, and their son Giovanni became Pope Leo X; their daughter-in-law Alfonsina, also an Orsini, governed Florence on behalf of her son Lorenzo. Girolama Orsini was the wife of Pier Luigi Farnese, first Duke of Parma. In 1724 Pietro Francesco Orsini was elected pope as Benedict XIII.",
+    "editorial": true,
+    "sources": [
+      {
+        "titulo": "Treccani",
+        "url": "https://www.treccani.it/enciclopedia/orsini/"
+      },
+      {
+        "titulo": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Orsini_family"
+      }
+    ],
     "members": [
       {
         "id": "MATTEOROSSOORS_GRANDE",
@@ -18556,11 +18577,11 @@
       "nombre": "Orsini",
       "slug": "orsini",
       "aliases": [],
-      "editorial": false,
-      "resumen": "",
-      "origen": "",
-      "trayectoria": "",
-      "legado": "",
+      "editorial": true,
+      "resumen": "A Roman baronial family, rival of the Colonna, which produced three popes, many cardinals and condottieri and married into the Medici and the Farnese.",
+      "origen": "The Orsini descended from the Bobone, a twelfth-century Roman family. Matteo Rosso Orsini, Senator of Rome in the 1240s, defended the city against Emperor Frederick II and established the family’s power in Lazio.",
+      "trayectoria": "His son Giovanni Gaetano was elected pope in 1277 as Nicholas III and openly favoured his relatives. The branches of Bracciano, Pitigliano, Gravina and Monterotondo extended their fiefs across the Papal States and the Kingdom of Naples, and their members served Venice, Florence and the papacy as condottieri.",
+      "legado": "Clarice Orsini married Lorenzo de’ Medici, and their son Giovanni became Pope Leo X; their daughter-in-law Alfonsina, also an Orsini, governed Florence on behalf of her son Lorenzo. Girolama Orsini was the wife of Pier Luigi Farnese, first Duke of Parma. In 1724 Pietro Francesco Orsini was elected pope as Benedict XIII.",
       "territorios": [
         "Papal States"
       ],
@@ -18767,7 +18788,10 @@
         }
       ],
       "ramas": [],
-      "fuentes": [],
+      "fuentes": [
+        "https://www.treccani.it/enciclopedia/orsini/",
+        "https://en.wikipedia.org/wiki/Orsini_family"
+      ],
       "casasOrigen": [],
       "casasDerivadas": [],
       "casasConectadas": [],
@@ -21267,7 +21291,7 @@
     "key": "Medici de Milán",
     "es": "medici-de-milan",
     "en": "medici-de-milan",
-    "name": "Medici de Milán",
+    "name": "Medici de Milan",
     "summary": "",
     "origin": "",
     "history": "",

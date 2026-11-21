@@ -3,7 +3,8 @@
 // Uso, desde un equipo con acceso normal a Wikimedia Commons:
 //   node scripts/assets/fetch-portraits-608.mjs [608|609]
 //   node scripts/assets/portrait-variants.mjs .cache/portraits-<versión>/stage
-// La 6.0.9 reutiliza el script con sources/portraits-609.json (homónimas y retratos alternativos).
+// La 6.0.9 reutiliza el script con sources/portraits-609.json (homónimas y retratos alternativos),
+// y la 6.0.15 con sources/portraits-615.json (Kościuszko y 99 gobernantes).
 // Después: npm test y npm run baseline:regression -- --reason "6.0.8: retratos".
 // Los créditos (autor, fecha, institución, tipo y atribuciones) están en sources/portraits-608.json. Las imágenes
 // con licencia CC conservan su atribución en derechos/derechosUrl.
@@ -55,6 +56,7 @@ for (const [id, m] of Object.entries(meta)) {
 const HEADERS = {
   '608': '// 6.0.8: portraits for the most relevant people without one, the governors\n// of the Netherlands and the grandchildren of Joanna I. Attributions are kept as published.\n',
   '609': '// 6.0.9: portraits for people who share a name and alternative images (sculpture,\n// miniature, coin) for relevant people without a painted portrait. Attributions are kept as published.\n',
+  '615': '// 6.0.15: portraits for Kościuszko and 99 rulers without one, matched on Wikidata and\n// credited from Commons (select-portraits-615.mjs, normalize-portraits-615.mjs). Attributions are kept as published.\n',
 };
 fs.writeFileSync(`src/data/imagenesPersonas${V}.js`, `${HEADERS[V]}export const PORTRAITS_${V} = ${JSON.stringify(es, null, 2)};\n`);
 fs.writeFileSync(`src/features/english/portraits${V}.js`, `export const PORTRAITS_${V}_EN = ${JSON.stringify(en, null, 2)};\n`);

@@ -2,6 +2,7 @@ import {PORTRAITS_605_EN} from './portraits605.js';
 import {PORTRAITS_607_EN} from './portraits607.js';
 import {PORTRAITS_608_EN} from './portraits608.js';
 import {PORTRAITS_609_EN} from './portraits609.js';
+import {PORTRAITS_615_EN} from './portraits615.js';
 import {PORTRAITS_604_EN} from './portraits604.js';
 import {PORTRAITS_602_EN} from './portraits602.js';
 import {PORTRAITS_200_EN} from './portraits200.js';
@@ -77,4 +78,5 @@ export const ENGLISH_PROFILE_PORTRAITS = {
  ...PORTRAITS_607_EN,
  ...PORTRAITS_608_EN,
  ...PORTRAITS_609_EN,
+ ...PORTRAITS_615_EN,
 };

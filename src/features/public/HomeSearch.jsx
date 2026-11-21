@@ -22,7 +22,7 @@ export default function HomeSearch({locale = 'es'}) {
     return () => {cancelled = true;};
   },[shouldLoad,url,retry]);
   const results = useMemo(()=>index ? homeSearchResults(index,query) : [],[index,query]);
-  return <section className="home-search" aria-label={copy.label}>
+  return <section className={`home-search${active ? ' is-active' : ''}`} aria-label={copy.label}>
     <form action={language === 'en' ? '/en/people' : '/es/personas'} method="get" role="search" onSubmit={event => {if (results.length) {event.preventDefault();window.location.assign(results[0].path);} else if (status === 'loading') event.preventDefault();}}>
       <label htmlFor={id}>{copy.label}</label>
       <div className="home-search-field"><Search size={20} aria-hidden="true"/><input ref={input} onFocus={()=>setInterested(true)} onPointerEnter={()=>setInterested(true)} id={id} type="search" name="q" value={query} onChange={event => setQuery(event.target.value)} onKeyDown={event => {if (event.key === 'Escape') setQuery('');}} placeholder={copy.placeholder} aria-describedby={`${id}-hint`} autoComplete="off"/>{query && <button type="button" onClick={() => {setQuery('');input.current?.focus();}} aria-label={copy.clear}><X size={18} aria-hidden="true"/></button>}</div>
