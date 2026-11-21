@@ -304975,6 +304975,2627 @@
       "scopeLabel": "Tunis · 1574–1800"
     },
     {
+      "name": "Ulster gaélico · 1200–1602 · revisión Atlántico norte 1",
+      "corridor": "Atlántico norte · Irlanda, Gales, Man, Islandia, Gotland, Finlandia, Laponia, Kola y Groenlandia",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1200,
+        "through": 1602
+      },
+      "versions": [
+        {
+          "from": 1200,
+          "ids": [
+            "Carrickmacross",
+            "Cavan",
+            "Dromahair",
+            "Killeshandra",
+            "Killycolly",
+            "Leitrim",
+            "Monaghan",
+            "Oriel"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Breifne (O’Rourke y O’Reilly) y Oriel (MacMahon): señoríos gaélicos que el mapa no separa."
+        }
+      ],
+      "note": "Breifne (O’Rourke y O’Reilly) y Oriel (MacMahon): señoríos gaélicos que el mapa no separa.",
+      "sources": [
+        {
+          "title": "Treccani · Irlanda",
+          "url": "https://www.treccani.it/enciclopedia/irlanda/",
+          "locator": "Provincias de Ulster, Leinster, Connacht, Desmond y Thomond; caballeros normandos en 1170 y reparto de tierras por Enrique II; estatutos de Kilkenny (1367); título de rey de Irlanda (1541); centralismo administrativo desde Jacobo I (1603)."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": false,
+      "scopeLabel": "breifne-oriel · 1200–1602",
+      "authorityCondition": "autoridad regional"
+    },
+    {
+      "name": "Irlanda · 1603–1800 · revisión Atlántico norte 2",
+      "corridor": "Atlántico norte · Irlanda, Gales, Man, Islandia, Gotland, Finlandia, Laponia, Kola y Groenlandia",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1603,
+        "through": 1800
+      },
+      "versions": [
+        {
+          "from": 1603,
+          "ids": [
+            "Carrickmacross",
+            "Cavan",
+            "Dromahair",
+            "Killeshandra",
+            "Killycolly",
+            "Leitrim",
+            "Monaghan",
+            "Oriel"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Reino de Irlanda: desde Jacobo I (1603), la administración de la Corona se extiende a los antiguos señoríos gaélicos."
+        }
+      ],
+      "note": "Reino de Irlanda: desde Jacobo I (1603), la administración de la Corona se extiende a los antiguos señoríos gaélicos.",
+      "sources": [
+        {
+          "title": "Treccani · Irlanda",
+          "url": "https://www.treccani.it/enciclopedia/irlanda/",
+          "locator": "Provincias de Ulster, Leinster, Connacht, Desmond y Thomond; caballeros normandos en 1170 y reparto de tierras por Enrique II; estatutos de Kilkenny (1367); título de rey de Irlanda (1541); centralismo administrativo desde Jacobo I (1603)."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": false,
+      "scopeLabel": "breifne-oriel · 1603–1800"
+    },
+    {
+      "name": "Carelia y Kainuu · 1200–1616 · revisión Atlántico norte 3",
+      "corridor": "Atlántico norte · Irlanda, Gales, Man, Islandia, Gotland, Finlandia, Laponia, Kola y Groenlandia",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1200,
+        "through": 1616
+      },
+      "versions": [
+        {
+          "from": 1200,
+          "ids": [
+            "Joensuu",
+            "Juuka",
+            "Nurmes"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Carelia septentrional, vinculada a Nóvgorod y después a Rusia, al este de la línea de 1323."
+        }
+      ],
+      "note": "Carelia septentrional, vinculada a Nóvgorod y después a Rusia, al este de la línea de 1323.",
+      "sources": [
+        {
+          "title": "VLE · Karelijos istorija",
+          "url": "https://www.vle.lt/straipsnis/karelijos-istorija/",
+          "locator": "Carelia vinculada con Nóvgorod; partición de 1323 y transferencia a Suecia en 1617."
+        },
+        {
+          "title": "Treccani · Finlandia",
+          "url": "https://www.treccani.it/enciclopedia/finlandia/",
+          "locator": "Cruzadas suecas, Viborg (1293) y paz de Pähkinälinna (1323), que fija la frontera oriental sueca desde el istmo de Carelia hasta el golfo de Botnia."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": false,
+      "scopeLabel": "carelia-norte · 1200–1616",
+      "authorityCondition": "control disputado"
+    },
+    {
+      "name": "Suecia · 1617–1800 · revisión Atlántico norte 4",
+      "corridor": "Atlántico norte · Irlanda, Gales, Man, Islandia, Gotland, Finlandia, Laponia, Kola y Groenlandia",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1617,
+        "through": 1800
+      },
+      "versions": [
+        {
+          "from": 1617,
+          "ids": [
+            "Joensuu",
+            "Juuka",
+            "Nurmes"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Sueca desde la paz de Stolbovo (1617)."
+        }
+      ],
+      "note": "Sueca desde la paz de Stolbovo (1617).",
+      "sources": [
+        {
+          "title": "VLE · Karelijos istorija",
+          "url": "https://www.vle.lt/straipsnis/karelijos-istorija/",
+          "locator": "Carelia vinculada con Nóvgorod; partición de 1323 y transferencia a Suecia en 1617."
+        },
+        {
+          "title": "VLE · Suomijos istorija",
+          "url": "https://www.vle.lt/straipsnis/suomijos-istorija/",
+          "locator": "Fronteras de Nöteborg 1323, Stolbovo 1617, Nystad 1721 y Åbo 1743; Finlandia occidental continúa sueca hasta 1809."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": false,
+      "scopeLabel": "carelia-norte · 1617–1800"
+    },
+    {
+      "name": "Irlanda · 1200–1540 · revisión Atlántico norte 5",
+      "corridor": "Atlántico norte · Irlanda, Gales, Man, Islandia, Gotland, Finlandia, Laponia, Kola y Groenlandia",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1200,
+        "through": 1540
+      },
+      "versions": [
+        {
+          "from": 1200,
+          "ids": [
+            "Cork",
+            "Kinsale",
+            "Waterford"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Ciudades portuarias del rey en el señorío de Irlanda."
+        }
+      ],
+      "note": "Ciudades portuarias del rey en el señorío de Irlanda.",
+      "sources": [
+        {
+          "title": "Treccani · Irlanda",
+          "url": "https://www.treccani.it/enciclopedia/irlanda/",
+          "locator": "Provincias de Ulster, Leinster, Connacht, Desmond y Thomond; caballeros normandos en 1170 y reparto de tierras por Enrique II; estatutos de Kilkenny (1367); título de rey de Irlanda (1541); centralismo administrativo desde Jacobo I (1603)."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": false,
+      "scopeLabel": "ciudades-reales · 1200–1540"
+    },
+    {
+      "name": "Irlanda · 1541–1650 · revisión Atlántico norte 6",
+      "corridor": "Atlántico norte · Irlanda, Gales, Man, Islandia, Gotland, Finlandia, Laponia, Kola y Groenlandia",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1541,
+        "through": 1650
+      },
+      "versions": [
+        {
+          "from": 1541,
+          "ids": [
+            "Cork",
+            "Kinsale",
+            "Waterford"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Reino de Irlanda, bajo los reyes de Inglaterra y, desde 1707, de Gran Bretaña."
+        }
+      ],
+      "note": "Reino de Irlanda, bajo los reyes de Inglaterra y, desde 1707, de Gran Bretaña.",
+      "sources": [
+        {
+          "title": "Treccani · Irlanda",
+          "url": "https://www.treccani.it/enciclopedia/irlanda/",
+          "locator": "Provincias de Ulster, Leinster, Connacht, Desmond y Thomond; caballeros normandos en 1170 y reparto de tierras por Enrique II; estatutos de Kilkenny (1367); título de rey de Irlanda (1541); centralismo administrativo desde Jacobo I (1603)."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": false,
+      "scopeLabel": "ciudades-reales · 1541–1650"
+    },
+    {
+      "name": "Irlanda · 1651–1800 · revisión Atlántico norte 7",
+      "corridor": "Atlántico norte · Irlanda, Gales, Man, Islandia, Gotland, Finlandia, Laponia, Kola y Groenlandia",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1651,
+        "through": 1800
+      },
+      "versions": [
+        {
+          "from": 1651,
+          "ids": [
+            "Drogheda",
+            "Dundalk"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Reino de Irlanda, bajo los reyes de Inglaterra y, desde 1707, de Gran Bretaña."
+        }
+      ],
+      "note": "Reino de Irlanda, bajo los reyes de Inglaterra y, desde 1707, de Gran Bretaña.",
+      "sources": [
+        {
+          "title": "Treccani · Irlanda",
+          "url": "https://www.treccani.it/enciclopedia/irlanda/",
+          "locator": "Provincias de Ulster, Leinster, Connacht, Desmond y Thomond; caballeros normandos en 1170 y reparto de tierras por Enrique II; estatutos de Kilkenny (1367); título de rey de Irlanda (1541); centralismo administrativo desde Jacobo I (1603)."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": false,
+      "scopeLabel": "ciudades-reales · 1651–1800"
+    },
+    {
+      "name": "Connacht · 1200–1274 · revisión Atlántico norte 8",
+      "corridor": "Atlántico norte · Irlanda, Gales, Man, Islandia, Gotland, Finlandia, Laponia, Kola y Groenlandia",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1200,
+        "through": 1274
+      },
+      "versions": [
+        {
+          "from": 1200,
+          "ids": [
+            "Athenry",
+            "Athlone",
+            "Ballaghaderreen",
+            "Burrishoole",
+            "Castlebar",
+            "Castlereagh",
+            "Clifden",
+            "Erris",
+            "Galway",
+            "Kilconnell",
+            "Moycarn",
+            "Roscommon",
+            "Skreen",
+            "Sligo",
+            "Tuam"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Reino de Connacht de los O’Conor."
+        }
+      ],
+      "note": "Reino de Connacht de los O’Conor.",
+      "sources": [
+        {
+          "title": "Treccani · Irlanda",
+          "url": "https://www.treccani.it/enciclopedia/irlanda/",
+          "locator": "Provincias de Ulster, Leinster, Connacht, Desmond y Thomond; caballeros normandos en 1170 y reparto de tierras por Enrique II; estatutos de Kilkenny (1367); título de rey de Irlanda (1541); centralismo administrativo desde Jacobo I (1603)."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": false,
+      "scopeLabel": "connacht · 1200–1274"
+    },
+    {
+      "name": "Connacht · 1275–1602 · revisión Atlántico norte 9",
+      "corridor": "Atlántico norte · Irlanda, Gales, Man, Islandia, Gotland, Finlandia, Laponia, Kola y Groenlandia",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1275,
+        "through": 1602
+      },
+      "versions": [
+        {
+          "from": 1275,
+          "ids": [
+            "Athenry",
+            "Athlone",
+            "Ballaghaderreen",
+            "Burrishoole",
+            "Castlebar",
+            "Castlereagh",
+            "Clifden",
+            "Erris",
+            "Galway",
+            "Kilconnell",
+            "Roscommon",
+            "Skreen",
+            "Sligo",
+            "Tuam"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Señoríos de los de Burgh (Clanricarde y Mayo) y de los O’Conor tras la llegada anglonormanda; el mapa no los separa."
+        }
+      ],
+      "note": "Señoríos de los de Burgh (Clanricarde y Mayo) y de los O’Conor tras la llegada anglonormanda; el mapa no los separa.",
+      "sources": [
+        {
+          "title": "Treccani · Irlanda",
+          "url": "https://www.treccani.it/enciclopedia/irlanda/",
+          "locator": "Provincias de Ulster, Leinster, Connacht, Desmond y Thomond; caballeros normandos en 1170 y reparto de tierras por Enrique II; estatutos de Kilkenny (1367); título de rey de Irlanda (1541); centralismo administrativo desde Jacobo I (1603)."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": false,
+      "scopeLabel": "connacht · 1275–1602",
+      "authorityCondition": "autoridad regional"
+    },
+    {
+      "name": "Connacht · 1275–1538 · revisión Atlántico norte 10",
+      "corridor": "Atlántico norte · Irlanda, Gales, Man, Islandia, Gotland, Finlandia, Laponia, Kola y Groenlandia",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1275,
+        "through": 1538
+      },
+      "versions": [
+        {
+          "from": 1275,
+          "ids": [
+            "Moycarn"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Señoríos de los de Burgh (Clanricarde y Mayo) y de los O’Conor tras la llegada anglonormanda; el mapa no los separa."
+        }
+      ],
+      "note": "Señoríos de los de Burgh (Clanricarde y Mayo) y de los O’Conor tras la llegada anglonormanda; el mapa no los separa.",
+      "sources": [
+        {
+          "title": "Treccani · Irlanda",
+          "url": "https://www.treccani.it/enciclopedia/irlanda/",
+          "locator": "Provincias de Ulster, Leinster, Connacht, Desmond y Thomond; caballeros normandos en 1170 y reparto de tierras por Enrique II; estatutos de Kilkenny (1367); título de rey de Irlanda (1541); centralismo administrativo desde Jacobo I (1603)."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": false,
+      "scopeLabel": "connacht · 1275–1538",
+      "authorityCondition": "autoridad regional"
+    },
+    {
+      "name": "Irlanda · 1603–1650 · revisión Atlántico norte 11",
+      "corridor": "Atlántico norte · Irlanda, Gales, Man, Islandia, Gotland, Finlandia, Laponia, Kola y Groenlandia",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1603,
+        "through": 1650
+      },
+      "versions": [
+        {
+          "from": 1603,
+          "ids": [
+            "Athenry",
+            "Athlone",
+            "Castlereagh",
+            "Clifden",
+            "Galway",
+            "Kilconnell",
+            "Roscommon",
+            "Skreen",
+            "Sligo",
+            "Tuam"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Reino de Irlanda: desde Jacobo I (1603), la administración de la Corona se extiende a los antiguos señoríos gaélicos."
+        }
+      ],
+      "note": "Reino de Irlanda: desde Jacobo I (1603), la administración de la Corona se extiende a los antiguos señoríos gaélicos.",
+      "sources": [
+        {
+          "title": "Treccani · Irlanda",
+          "url": "https://www.treccani.it/enciclopedia/irlanda/",
+          "locator": "Provincias de Ulster, Leinster, Connacht, Desmond y Thomond; caballeros normandos en 1170 y reparto de tierras por Enrique II; estatutos de Kilkenny (1367); título de rey de Irlanda (1541); centralismo administrativo desde Jacobo I (1603)."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": false,
+      "scopeLabel": "connacht · 1603–1650"
+    },
+    {
+      "name": "Irlanda · 1603–1626 · revisión Atlántico norte 12",
+      "corridor": "Atlántico norte · Irlanda, Gales, Man, Islandia, Gotland, Finlandia, Laponia, Kola y Groenlandia",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1603,
+        "through": 1626
+      },
+      "versions": [
+        {
+          "from": 1603,
+          "ids": [
+            "Ballaghaderreen",
+            "Burrishoole",
+            "Castlebar",
+            "Erris"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Reino de Irlanda: desde Jacobo I (1603), la administración de la Corona se extiende a los antiguos señoríos gaélicos."
+        }
+      ],
+      "note": "Reino de Irlanda: desde Jacobo I (1603), la administración de la Corona se extiende a los antiguos señoríos gaélicos.",
+      "sources": [
+        {
+          "title": "Treccani · Irlanda",
+          "url": "https://www.treccani.it/enciclopedia/irlanda/",
+          "locator": "Provincias de Ulster, Leinster, Connacht, Desmond y Thomond; caballeros normandos en 1170 y reparto de tierras por Enrique II; estatutos de Kilkenny (1367); título de rey de Irlanda (1541); centralismo administrativo desde Jacobo I (1603)."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": false,
+      "scopeLabel": "connacht · 1603–1626"
+    },
+    {
+      "name": "Irlanda · 1630–1650 · revisión Atlántico norte 13",
+      "corridor": "Atlántico norte · Irlanda, Gales, Man, Islandia, Gotland, Finlandia, Laponia, Kola y Groenlandia",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1630,
+        "through": 1650
+      },
+      "versions": [
+        {
+          "from": 1630,
+          "ids": [
+            "Ballaghaderreen",
+            "Burrishoole",
+            "Castlebar",
+            "Erris"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Reino de Irlanda: desde Jacobo I (1603), la administración de la Corona se extiende a los antiguos señoríos gaélicos."
+        }
+      ],
+      "note": "Reino de Irlanda: desde Jacobo I (1603), la administración de la Corona se extiende a los antiguos señoríos gaélicos.",
+      "sources": [
+        {
+          "title": "Treccani · Irlanda",
+          "url": "https://www.treccani.it/enciclopedia/irlanda/",
+          "locator": "Provincias de Ulster, Leinster, Connacht, Desmond y Thomond; caballeros normandos en 1170 y reparto de tierras por Enrique II; estatutos de Kilkenny (1367); título de rey de Irlanda (1541); centralismo administrativo desde Jacobo I (1603)."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": false,
+      "scopeLabel": "connacht · 1630–1650"
+    },
+    {
+      "name": "Irlanda · 1200–1519 · revisión Atlántico norte 14",
+      "corridor": "Atlántico norte · Irlanda, Gales, Man, Islandia, Gotland, Finlandia, Laponia, Kola y Groenlandia",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1200,
+        "through": 1519
+      },
+      "versions": [
+        {
+          "from": 1200,
+          "ids": [
+            "Adare",
+            "Castleconnell",
+            "Dingle",
+            "Dungarvan",
+            "Fermoy",
+            "Killmallock",
+            "Limerick",
+            "Tralee",
+            "Youghal"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Tierras de los FitzGerald de Desmond dentro del señorío de Irlanda; el condado de Desmond se registra en el Atlas desde 1520."
+        }
+      ],
+      "note": "Tierras de los FitzGerald de Desmond dentro del señorío de Irlanda; el condado de Desmond se registra en el Atlas desde 1520.",
+      "sources": [
+        {
+          "title": "Treccani · Irlanda",
+          "url": "https://www.treccani.it/enciclopedia/irlanda/",
+          "locator": "Provincias de Ulster, Leinster, Connacht, Desmond y Thomond; caballeros normandos en 1170 y reparto de tierras por Enrique II; estatutos de Kilkenny (1367); título de rey de Irlanda (1541); centralismo administrativo desde Jacobo I (1603)."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": false,
+      "scopeLabel": "desmond-geraldino · 1200–1519"
+    },
+    {
+      "name": "Condado de Desmond · 1520–1583 · revisión Atlántico norte 15",
+      "corridor": "Atlántico norte · Irlanda, Gales, Man, Islandia, Gotland, Finlandia, Laponia, Kola y Groenlandia",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1520,
+        "through": 1583
+      },
+      "versions": [
+        {
+          "from": 1520,
+          "ids": [
+            "Adare",
+            "Castleconnell",
+            "Dingle",
+            "Dungarvan",
+            "Fermoy",
+            "Killmallock",
+            "Limerick",
+            "Tralee",
+            "Youghal"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Condado de los FitzGerald de Desmond."
+        }
+      ],
+      "note": "Condado de los FitzGerald de Desmond.",
+      "sources": [
+        {
+          "title": "Treccani · Irlanda",
+          "url": "https://www.treccani.it/enciclopedia/irlanda/",
+          "locator": "Provincias de Ulster, Leinster, Connacht, Desmond y Thomond; caballeros normandos en 1170 y reparto de tierras por Enrique II; estatutos de Kilkenny (1367); título de rey de Irlanda (1541); centralismo administrativo desde Jacobo I (1603)."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": false,
+      "scopeLabel": "desmond-geraldino · 1520–1583"
+    },
+    {
+      "name": "Irlanda · 1584–1650 · revisión Atlántico norte 16",
+      "corridor": "Atlántico norte · Irlanda, Gales, Man, Islandia, Gotland, Finlandia, Laponia, Kola y Groenlandia",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1584,
+        "through": 1650
+      },
+      "versions": [
+        {
+          "from": 1584,
+          "ids": [
+            "Adare",
+            "Castleconnell",
+            "Dingle",
+            "Dungarvan",
+            "Fermoy",
+            "Killmallock",
+            "Limerick",
+            "Tralee",
+            "Youghal"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Reino de Irlanda tras el último conde de Desmond registrado (1583)."
+        }
+      ],
+      "note": "Reino de Irlanda tras el último conde de Desmond registrado (1583).",
+      "sources": [
+        {
+          "title": "Treccani · Irlanda",
+          "url": "https://www.treccani.it/enciclopedia/irlanda/",
+          "locator": "Provincias de Ulster, Leinster, Connacht, Desmond y Thomond; caballeros normandos en 1170 y reparto de tierras por Enrique II; estatutos de Kilkenny (1367); título de rey de Irlanda (1541); centralismo administrativo desde Jacobo I (1603)."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": false,
+      "scopeLabel": "desmond-geraldino · 1584–1650"
+    },
+    {
+      "name": "Desmond · 1207–1557 · revisión Atlántico norte 17",
+      "corridor": "Atlántico norte · Irlanda, Gales, Man, Islandia, Gotland, Finlandia, Laponia, Kola y Groenlandia",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1207,
+        "through": 1557
+      },
+      "versions": [
+        {
+          "from": 1207,
+          "ids": [
+            "Carbery",
+            "Dunhallow",
+            "Kilbrittain",
+            "Killarney",
+            "Muskerry"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Reino y señorío de los MacCarthy Mór en el suroeste."
+        }
+      ],
+      "note": "Reino y señorío de los MacCarthy Mór en el suroeste.",
+      "sources": [
+        {
+          "title": "Treccani · Irlanda",
+          "url": "https://www.treccani.it/enciclopedia/irlanda/",
+          "locator": "Provincias de Ulster, Leinster, Connacht, Desmond y Thomond; caballeros normandos en 1170 y reparto de tierras por Enrique II; estatutos de Kilkenny (1367); título de rey de Irlanda (1541); centralismo administrativo desde Jacobo I (1603)."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": false,
+      "scopeLabel": "desmond-maccarthy · 1207–1557"
+    },
+    {
+      "name": "Desmond · 1597–1602 · revisión Atlántico norte 18",
+      "corridor": "Atlántico norte · Irlanda, Gales, Man, Islandia, Gotland, Finlandia, Laponia, Kola y Groenlandia",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1597,
+        "through": 1602
+      },
+      "versions": [
+        {
+          "from": 1597,
+          "ids": [
+            "Carbery",
+            "Dunhallow",
+            "Kilbrittain",
+            "Killarney",
+            "Muskerry"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Reino y señorío de los MacCarthy Mór en el suroeste."
+        }
+      ],
+      "note": "Reino y señorío de los MacCarthy Mór en el suroeste.",
+      "sources": [
+        {
+          "title": "Treccani · Irlanda",
+          "url": "https://www.treccani.it/enciclopedia/irlanda/",
+          "locator": "Provincias de Ulster, Leinster, Connacht, Desmond y Thomond; caballeros normandos en 1170 y reparto de tierras por Enrique II; estatutos de Kilkenny (1367); título de rey de Irlanda (1541); centralismo administrativo desde Jacobo I (1603)."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": false,
+      "scopeLabel": "desmond-maccarthy · 1597–1602"
+    },
+    {
+      "name": "Irlanda · 1603–1650 · revisión Atlántico norte 19",
+      "corridor": "Atlántico norte · Irlanda, Gales, Man, Islandia, Gotland, Finlandia, Laponia, Kola y Groenlandia",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1603,
+        "through": 1650
+      },
+      "versions": [
+        {
+          "from": 1603,
+          "ids": [
+            "Carbery",
+            "Dunhallow",
+            "Kilbrittain",
+            "Killarney",
+            "Muskerry"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Reino de Irlanda: desde Jacobo I (1603), la administración de la Corona se extiende a los antiguos señoríos gaélicos."
+        }
+      ],
+      "note": "Reino de Irlanda: desde Jacobo I (1603), la administración de la Corona se extiende a los antiguos señoríos gaélicos.",
+      "sources": [
+        {
+          "title": "Treccani · Irlanda",
+          "url": "https://www.treccani.it/enciclopedia/irlanda/",
+          "locator": "Provincias de Ulster, Leinster, Connacht, Desmond y Thomond; caballeros normandos en 1170 y reparto de tierras por Enrique II; estatutos de Kilkenny (1367); título de rey de Irlanda (1541); centralismo administrativo desde Jacobo I (1603)."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": false,
+      "scopeLabel": "desmond-maccarthy · 1603–1650"
+    },
+    {
+      "name": "Comunidades finesas · 1200–1322 · revisión Atlántico norte 20",
+      "corridor": "Atlántico norte · Irlanda, Gales, Man, Islandia, Gotland, Finlandia, Laponia, Kola y Groenlandia",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1200,
+        "through": 1322
+      },
+      "versions": [
+        {
+          "from": 1200,
+          "ids": [
+            "Brahestad",
+            "Elimaki",
+            "Heinola",
+            "Idensalmi",
+            "Joroinen",
+            "Kangasniemi",
+            "Karleby",
+            "Kaustby",
+            "Koppo",
+            "Korsholm",
+            "Kuivaniemi",
+            "Kuopio",
+            "Lappo",
+            "Mikkeli",
+            "Pedersore",
+            "Posio",
+            "Pudasjarvi",
+            "Ranua",
+            "Rautavaara",
+            "Ristiina",
+            "Siikalatva",
+            "Simo",
+            "Storkyro",
+            "Taivalkoski",
+            "Uleaborg",
+            "Utajarvi",
+            "Vora"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Tierras finesas y de frontera hasta la paz de Pähkinälinna (1323), que llevó la frontera sueca hasta el golfo de Botnia."
+        }
+      ],
+      "note": "Tierras finesas y de frontera hasta la paz de Pähkinälinna (1323), que llevó la frontera sueca hasta el golfo de Botnia.",
+      "sources": [
+        {
+          "title": "Treccani · Finlandia",
+          "url": "https://www.treccani.it/enciclopedia/finlandia/",
+          "locator": "Cruzadas suecas, Viborg (1293) y paz de Pähkinälinna (1323), que fija la frontera oriental sueca desde el istmo de Carelia hasta el golfo de Botnia."
+        },
+        {
+          "title": "VLE · Suomijos istorija",
+          "url": "https://www.vle.lt/straipsnis/suomijos-istorija/",
+          "locator": "Fronteras de Nöteborg 1323, Stolbovo 1617, Nystad 1721 y Åbo 1743; Finlandia occidental continúa sueca hasta 1809."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": false,
+      "scopeLabel": "finlandia-centro · 1200–1322",
+      "authorityCondition": "autoridad regional"
+    },
+    {
+      "name": "Suecia · 1323–1800 · revisión Atlántico norte 21",
+      "corridor": "Atlántico norte · Irlanda, Gales, Man, Islandia, Gotland, Finlandia, Laponia, Kola y Groenlandia",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1323,
+        "through": 1800
+      },
+      "versions": [
+        {
+          "from": 1323,
+          "ids": [
+            "Elimaki"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Finlandia sueca desde la paz de Pähkinälinna."
+        }
+      ],
+      "note": "Finlandia sueca desde la paz de Pähkinälinna.",
+      "sources": [
+        {
+          "title": "Treccani · Finlandia",
+          "url": "https://www.treccani.it/enciclopedia/finlandia/",
+          "locator": "Cruzadas suecas, Viborg (1293) y paz de Pähkinälinna (1323), que fija la frontera oriental sueca desde el istmo de Carelia hasta el golfo de Botnia."
+        },
+        {
+          "title": "VLE · Suomijos istorija",
+          "url": "https://www.vle.lt/straipsnis/suomijos-istorija/",
+          "locator": "Fronteras de Nöteborg 1323, Stolbovo 1617, Nystad 1721 y Åbo 1743; Finlandia occidental continúa sueca hasta 1809."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": false,
+      "scopeLabel": "finlandia-centro · 1323–1800"
+    },
+    {
+      "name": "Comunidades finesas · 1200–1249 · revisión Atlántico norte 22",
+      "corridor": "Atlántico norte · Irlanda, Gales, Man, Islandia, Gotland, Finlandia, Laponia, Kola y Groenlandia",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1200,
+        "through": 1249
+      },
+      "versions": [
+        {
+          "from": 1200,
+          "ids": [
+            "Birkala",
+            "Bjorneborg",
+            "Ekenas",
+            "Forssa",
+            "Helsinge",
+            "Hollola",
+            "Hvittis",
+            "Ikalis",
+            "Itis",
+            "Jamsa",
+            "Janakkala",
+            "Jyvaskyla",
+            "Laukas",
+            "Lohja",
+            "Orivesi",
+            "Porvoo",
+            "Raumo",
+            "Saarijarvi",
+            "Sastamala",
+            "Sastmola",
+            "Sjundea",
+            "Sysma",
+            "Tavastehus",
+            "Viitasaari"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Tierras de los finlandeses propios y los tavastios antes de la conquista sueca; las cruzadas y fortalezas suecas no se fechan por separado."
+        }
+      ],
+      "note": "Tierras de los finlandeses propios y los tavastios antes de la conquista sueca; las cruzadas y fortalezas suecas no se fechan por separado.",
+      "sources": [
+        {
+          "title": "Treccani · Finlandia",
+          "url": "https://www.treccani.it/enciclopedia/finlandia/",
+          "locator": "Cruzadas suecas, Viborg (1293) y paz de Pähkinälinna (1323), que fija la frontera oriental sueca desde el istmo de Carelia hasta el golfo de Botnia."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": false,
+      "scopeLabel": "finlandia-sur · 1200–1249",
+      "authorityCondition": "autoridad regional"
+    },
+    {
+      "name": "Gales · 1200–1282 · revisión Atlántico norte 23",
+      "corridor": "Atlántico norte · Irlanda, Gales, Man, Islandia, Gotland, Finlandia, Laponia, Kola y Groenlandia",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1200,
+        "through": 1282
+      },
+      "versions": [
+        {
+          "from": 1200,
+          "ids": [
+            "Aberystwyth",
+            "Anglesey",
+            "Berwyn_Range",
+            "Brecknock",
+            "Brecon_Beacons",
+            "Builth",
+            "Caerphilly",
+            "Cambrian_Mountains",
+            "Cardiff",
+            "Cardigan",
+            "Carmarthen",
+            "Carnarvon",
+            "Conwy",
+            "Denbigh",
+            "Fishguard",
+            "Flint",
+            "Harlech",
+            "Kidwelly",
+            "Llangollen",
+            "Machynlleth",
+            "Monmouth",
+            "Montgomery",
+            "Neath",
+            "Newport",
+            "Pembroke",
+            "Penllyn",
+            "Radnor",
+            "Snowdon",
+            "Swansea"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Principados galeses (Gwynedd, Powys, Deheubarth) y señoríos de la Marca, que el mapa no separa, hasta la muerte de Llywelyn II (1282)."
+        }
+      ],
+      "note": "Principados galeses (Gwynedd, Powys, Deheubarth) y señoríos de la Marca, que el mapa no separa, hasta la muerte de Llywelyn II (1282).",
+      "sources": [
+        {
+          "title": "Treccani · Galles",
+          "url": "https://www.treccani.it/enciclopedia/galles/",
+          "locator": "Reinos de Gwynedd, Powys y Deheubarth; paz de Montgomery (1267); muerte de Llywelyn II (1282) e incorporación por Eduardo I (1284)."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": false,
+      "scopeLabel": "gales · 1200–1282",
+      "authorityCondition": "autoridad regional"
+    },
+    {
+      "name": "Gotland y Visby · 1200–1360 · revisión Atlántico norte 24",
+      "corridor": "Atlántico norte · Irlanda, Gales, Man, Islandia, Gotland, Finlandia, Laponia, Kola y Groenlandia",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1200,
+        "through": 1360
+      },
+      "versions": [
+        {
+          "from": 1200,
+          "ids": [
+            "Hoborg",
+            "Slite",
+            "Visby"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Gotland autónoma bajo la alta soberanía de los reyes de Suecia; Visby, gran emporio de la Hansa."
+        }
+      ],
+      "note": "Gotland autónoma bajo la alta soberanía de los reyes de Suecia; Visby, gran emporio de la Hansa.",
+      "sources": [
+        {
+          "title": "Treccani · Gotland",
+          "url": "https://www.treccani.it/enciclopedia/gotland/",
+          "locator": "Autónoma bajo la alta soberanía de los reyes de Suecia; ocupada por Dinamarca en 1361; devastada por piratas a fines del siglo XIV; de la Orden Teutónica en 1398–1408."
+        },
+        {
+          "title": "Treccani · Visby",
+          "url": "https://www.treccani.it/enciclopedia/visby/",
+          "locator": "Gran emporio de la Hansa; danesa desde 1361 tras un largo asedio."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": false,
+      "scopeLabel": "gotland · 1200–1360",
+      "authorityCondition": "autonomía tributaria"
+    },
+    {
+      "name": "Gotland y Visby · 1394–1397 · revisión Atlántico norte 25",
+      "corridor": "Atlántico norte · Irlanda, Gales, Man, Islandia, Gotland, Finlandia, Laponia, Kola y Groenlandia",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1394,
+        "through": 1397
+      },
+      "versions": [
+        {
+          "from": 1394,
+          "ids": [
+            "Hoborg",
+            "Slite",
+            "Visby"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Ocupada por Dinamarca en 1361 y devastada por piratas a fines del siglo XIV."
+        }
+      ],
+      "note": "Ocupada por Dinamarca en 1361 y devastada por piratas a fines del siglo XIV.",
+      "sources": [
+        {
+          "title": "Treccani · Gotland",
+          "url": "https://www.treccani.it/enciclopedia/gotland/",
+          "locator": "Autónoma bajo la alta soberanía de los reyes de Suecia; ocupada por Dinamarca en 1361; devastada por piratas a fines del siglo XIV; de la Orden Teutónica en 1398–1408."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": false,
+      "scopeLabel": "gotland · 1394–1397",
+      "authorityCondition": "control disputado"
+    },
+    {
+      "name": "Prusia de la Orden · 1398–1407 · revisión Atlántico norte 26",
+      "corridor": "Atlántico norte · Irlanda, Gales, Man, Islandia, Gotland, Finlandia, Laponia, Kola y Groenlandia",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1398,
+        "through": 1407
+      },
+      "versions": [
+        {
+          "from": 1398,
+          "ids": [
+            "Hoborg",
+            "Slite",
+            "Visby"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Posesión de la Orden Teutónica (1398–1408)."
+        }
+      ],
+      "note": "Posesión de la Orden Teutónica (1398–1408).",
+      "sources": [
+        {
+          "title": "Treccani · Gotland",
+          "url": "https://www.treccani.it/enciclopedia/gotland/",
+          "locator": "Autónoma bajo la alta soberanía de los reyes de Suecia; ocupada por Dinamarca en 1361; devastada por piratas a fines del siglo XIV; de la Orden Teutónica en 1398–1408."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": false,
+      "scopeLabel": "gotland · 1398–1407"
+    },
+    {
+      "name": "Groenlandia nórdica · 1200–1260 · revisión Atlántico norte 27",
+      "corridor": "Atlántico norte · Irlanda, Gales, Man, Islandia, Gotland, Finlandia, Laponia, Kola y Groenlandia",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1200,
+        "through": 1260
+      },
+      "versions": [
+        {
+          "from": 1200,
+          "ids": [
+            "Eiriksfjord"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Austerbygd, la colonia nórdica del sur, con asamblea propia."
+        }
+      ],
+      "note": "Austerbygd, la colonia nórdica del sur, con asamblea propia.",
+      "sources": [
+        {
+          "title": "Store norske leksikon · Grønlands historie",
+          "url": "https://snl.no/Gr%C3%B8nlands_historie",
+          "locator": "Austerbygd y Vesterbygd; acuerdo de 1261 con Haakon Haakonsson, que une las colonias nórdicas al reino noruego; Austerbygd habitada hasta hacia 1450."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": false,
+      "scopeLabel": "groenlandia · 1200–1260"
+    },
+    {
+      "name": "Noruega · 1261–1449 · revisión Atlántico norte 28",
+      "corridor": "Atlántico norte · Irlanda, Gales, Man, Islandia, Gotland, Finlandia, Laponia, Kola y Groenlandia",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1261,
+        "through": 1449
+      },
+      "versions": [
+        {
+          "from": 1261,
+          "ids": [
+            "Eiriksfjord"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Las colonias nórdicas, unidas al reino noruego desde 1261; la Austerbygd se mantuvo hasta hacia 1450."
+        }
+      ],
+      "note": "Las colonias nórdicas, unidas al reino noruego desde 1261; la Austerbygd se mantuvo hasta hacia 1450.",
+      "sources": [
+        {
+          "title": "Store norske leksikon · Grønlands historie",
+          "url": "https://snl.no/Gr%C3%B8nlands_historie",
+          "locator": "Austerbygd y Vesterbygd; acuerdo de 1261 con Haakon Haakonsson, que une las colonias nórdicas al reino noruego; Austerbygd habitada hasta hacia 1450."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": false,
+      "scopeLabel": "groenlandia · 1261–1449"
+    },
+    {
+      "name": "Groenlandia inuit · 1450–1720 · revisión Atlántico norte 29",
+      "corridor": "Atlántico norte · Irlanda, Gales, Man, Islandia, Gotland, Finlandia, Laponia, Kola y Groenlandia",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1450,
+        "through": 1720
+      },
+      "versions": [
+        {
+          "from": 1450,
+          "ids": [
+            "Eiriksfjord"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Sin colonias europeas: tierras de los inuit."
+        }
+      ],
+      "note": "Sin colonias europeas: tierras de los inuit.",
+      "sources": [
+        {
+          "title": "Treccani · Groenlandia",
+          "url": "https://www.treccani.it/enciclopedia/groenlandia/",
+          "locator": "Fin de los contactos con Europa a fines del siglo XV; colonos fundidos con los inuit; Egede en 1721 y colonia danesa desde 1721, extendida durante el siglo XVIII."
+        },
+        {
+          "title": "Store norske leksikon · Grønlands historie",
+          "url": "https://snl.no/Gr%C3%B8nlands_historie",
+          "locator": "Austerbygd y Vesterbygd; acuerdo de 1261 con Haakon Haakonsson, que une las colonias nórdicas al reino noruego; Austerbygd habitada hasta hacia 1450."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": false,
+      "scopeLabel": "groenlandia · 1450–1720",
+      "authorityCondition": "autoridad regional"
+    },
+    {
+      "name": "Dinamarca · 1721–1800 · revisión Atlántico norte 30",
+      "corridor": "Atlántico norte · Irlanda, Gales, Man, Islandia, Gotland, Finlandia, Laponia, Kola y Groenlandia",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1721,
+        "through": 1800
+      },
+      "versions": [
+        {
+          "from": 1721,
+          "ids": [
+            "Eiriksfjord"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Colonia danesa desde 1721; la ocupación se extendió a lo largo del siglo XVIII."
+        }
+      ],
+      "note": "Colonia danesa desde 1721; la ocupación se extendió a lo largo del siglo XVIII.",
+      "sources": [
+        {
+          "title": "Treccani · Groenlandia",
+          "url": "https://www.treccani.it/enciclopedia/groenlandia/",
+          "locator": "Fin de los contactos con Europa a fines del siglo XV; colonos fundidos con los inuit; Egede en 1721 y colonia danesa desde 1721, extendida durante el siglo XVIII."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": false,
+      "scopeLabel": "groenlandia · 1721–1800"
+    },
+    {
+      "name": "Mancomunidad islandesa · 1200–1263 · revisión Atlántico norte 31",
+      "corridor": "Atlántico norte · Irlanda, Gales, Man, Islandia, Gotland, Finlandia, Laponia, Kola y Groenlandia",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1200,
+        "through": 1263
+      },
+      "versions": [
+        {
+          "from": 1200,
+          "ids": [
+            "Akureyri",
+            "Blonduos",
+            "Borgarnes",
+            "Egilsstadir",
+            "Eyjafjallajokull",
+            "Hofsjokull",
+            "Holar",
+            "Holmur",
+            "Husavik",
+            "Hvamstangi",
+            "Hvolsvollur",
+            "Icelandic_Highlands",
+            "Isafjordur",
+            "Keflavik",
+            "Kirkjubaejar",
+            "Langjokull",
+            "Olavsvik",
+            "Reikjavik",
+            "Reydarfjordur",
+            "Selfoss",
+            "Seydisfjordur",
+            "Skalholt",
+            "Thingvellir",
+            "Torshofn",
+            "Vattnajokull",
+            "Vopnafjordur"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Islandia sin rey, con el Althing, hasta el «viejo tratado» con Haakon IV (1264)."
+        }
+      ],
+      "note": "Islandia sin rey, con el Althing, hasta el «viejo tratado» con Haakon IV (1264).",
+      "sources": [
+        {
+          "title": "Treccani · Islanda",
+          "url": "https://www.treccani.it/enciclopedia/islanda/",
+          "locator": "Independencia, con el Althing, hasta el «viejo tratado» de 1264 con Haakon IV, que reconoce la alta soberanía de Noruega."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": false,
+      "scopeLabel": "islandia · 1200–1263"
+    },
+    {
+      "name": "Islas sin autoridad política documentada · 1200–1800 · revisión Atlántico norte 32",
+      "corridor": "Atlántico norte · Irlanda, Gales, Man, Islandia, Gotland, Finlandia, Laponia, Kola y Groenlandia",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1200,
+        "through": 1800
+      },
+      "versions": [
+        {
+          "from": 1200,
+          "ids": [
+            "Jan_Mayen"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Isla deshabitada, bautizada en 1614."
+        }
+      ],
+      "note": "Isla deshabitada, bautizada en 1614.",
+      "sources": [
+        {
+          "title": "Store norske leksikon · Jan Mayen",
+          "url": "https://snl.no/Jan_Mayen",
+          "locator": "Isla bautizada por Jan Jacobsz May, que llegó en 1614; sin población permanente."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": false,
+      "scopeLabel": "jan-mayen · 1200–1800"
+    },
+    {
+      "name": "Carelia y Kainuu · 1200–1603 · revisión Atlántico norte 33",
+      "corridor": "Atlántico norte · Irlanda, Gales, Man, Islandia, Gotland, Finlandia, Laponia, Kola y Groenlandia",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1200,
+        "through": 1603
+      },
+      "versions": [
+        {
+          "from": 1200,
+          "ids": [
+            "Kajana",
+            "Kuhmo",
+            "Kuusamo",
+            "Paltamo",
+            "Sotkamo",
+            "Suomussalmi"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Tierras de frontera al norte de la línea de Pähkinälinna, disputadas entre Suecia y Nóvgorod, después Rusia."
+        }
+      ],
+      "note": "Tierras de frontera al norte de la línea de Pähkinälinna, disputadas entre Suecia y Nóvgorod, después Rusia.",
+      "sources": [
+        {
+          "title": "Treccani · Finlandia",
+          "url": "https://www.treccani.it/enciclopedia/finlandia/",
+          "locator": "Cruzadas suecas, Viborg (1293) y paz de Pähkinälinna (1323), que fija la frontera oriental sueca desde el istmo de Carelia hasta el golfo de Botnia."
+        },
+        {
+          "title": "VLE · Suomijos istorija",
+          "url": "https://www.vle.lt/straipsnis/suomijos-istorija/",
+          "locator": "Fronteras de Nöteborg 1323, Stolbovo 1617, Nystad 1721 y Åbo 1743; Finlandia occidental continúa sueca hasta 1809."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": false,
+      "scopeLabel": "kainuu · 1200–1603",
+      "authorityCondition": "control disputado"
+    },
+    {
+      "name": "Suecia · 1604–1800 · revisión Atlántico norte 34",
+      "corridor": "Atlántico norte · Irlanda, Gales, Man, Islandia, Gotland, Finlandia, Laponia, Kola y Groenlandia",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1604,
+        "through": 1800
+      },
+      "versions": [
+        {
+          "from": 1604,
+          "ids": [
+            "Kajana",
+            "Kuhmo",
+            "Kuusamo",
+            "Paltamo",
+            "Sotkamo",
+            "Suomussalmi"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Kainuu sueca: Kajana, fundada en 1604."
+        }
+      ],
+      "note": "Kainuu sueca: Kajana, fundada en 1604.",
+      "sources": [
+        {
+          "title": "Store norske leksikon · Kajana",
+          "url": "https://snl.no/Kajaani",
+          "locator": "Kajana (Kajaani), en Kainuu, fundada en 1604."
+        },
+        {
+          "title": "VLE · Suomijos istorija",
+          "url": "https://www.vle.lt/straipsnis/suomijos-istorija/",
+          "locator": "Fronteras de Nöteborg 1323, Stolbovo 1617, Nystad 1721 y Åbo 1743; Finlandia occidental continúa sueca hasta 1809."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": false,
+      "scopeLabel": "kainuu · 1604–1800"
+    },
+    {
+      "name": "República de Nóvgorod · 1200–1477 · revisión Atlántico norte 35",
+      "corridor": "Atlántico norte · Irlanda, Gales, Man, Islandia, Gotland, Finlandia, Laponia, Kola y Groenlandia",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1200,
+        "through": 1477
+      },
+      "versions": [
+        {
+          "from": 1200,
+          "ids": [
+            "Koliskoj",
+            "Lapland_Taiga2",
+            "Prirechnyi"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Laponia de Kola, tierras de tributo de Nóvgorod."
+        }
+      ],
+      "note": "Laponia de Kola, tierras de tributo de Nóvgorod.",
+      "sources": [
+        {
+          "title": "Store norske leksikon · Kolahalvøya",
+          "url": "https://snl.no/Kolahalv%C3%B8ya",
+          "locator": "Interés de la república de Nóvgorod desde el siglo XII; bajo el principado de Moscú desde 1478."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": false,
+      "scopeLabel": "kola · 1200–1477",
+      "authorityCondition": "autonomía tributaria"
+    },
+    {
+      "name": "Rusia · 1478–1800 · revisión Atlántico norte 36",
+      "corridor": "Atlántico norte · Irlanda, Gales, Man, Islandia, Gotland, Finlandia, Laponia, Kola y Groenlandia",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1478,
+        "through": 1800
+      },
+      "versions": [
+        {
+          "from": 1478,
+          "ids": [
+            "Koliskoj",
+            "Lapland_Taiga2",
+            "Prirechnyi"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Bajo Moscú desde 1478."
+        }
+      ],
+      "note": "Bajo Moscú desde 1478.",
+      "sources": [
+        {
+          "title": "Store norske leksikon · Kolahalvøya",
+          "url": "https://snl.no/Kolahalv%C3%B8ya",
+          "locator": "Interés de la república de Nóvgorod desde el siglo XII; bajo el principado de Moscú desde 1478."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": false,
+      "scopeLabel": "kola · 1478–1800"
+    },
+    {
+      "name": "Laponia · 1200–1750 · revisión Atlántico norte 37",
+      "corridor": "Atlántico norte · Irlanda, Gales, Man, Islandia, Gotland, Finlandia, Laponia, Kola y Groenlandia",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1200,
+        "through": 1750
+      },
+      "versions": [
+        {
+          "from": 1200,
+          "ids": [
+            "Abisko",
+            "Akkajaur",
+            "Arjeplog",
+            "Arvidsjaur",
+            "Asele",
+            "Enare",
+            "Enontakis",
+            "Gellivaara",
+            "Ivalo",
+            "Jokkmokk",
+            "Juckasjarvi",
+            "Kasivarren",
+            "Kemijarvi",
+            "Korpilombo",
+            "Korvala",
+            "Kvikkjock",
+            "Lapland_Taiga1",
+            "Lycksele",
+            "Mourionska",
+            "Nikkaluokta",
+            "Nunnanen",
+            "Ortrask",
+            "Porjus",
+            "Raunala",
+            "Salla",
+            "Sarek",
+            "Savukoski",
+            "Silbojock",
+            "Socksjock",
+            "Sodankyla",
+            "Sorsele",
+            "Stensele",
+            "Suonikyla",
+            "Tarna",
+            "Utsjoki",
+            "Volgsjo"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Tierras de los sami sin frontera fija; Noruega, Suecia y Nóvgorod, después Rusia, cobraban tributo en zonas que se superponían."
+        }
+      ],
+      "note": "Tierras de los sami sin frontera fija; Noruega, Suecia y Nóvgorod, después Rusia, cobraban tributo en zonas que se superponían.",
+      "sources": [
+        {
+          "title": "Treccani · Lapponia",
+          "url": "https://www.treccani.it/enciclopedia/lapponia/",
+          "locator": "Región de los sami sin límites precisos, repartida entre Suecia, Noruega, Finlandia y Rusia."
+        },
+        {
+          "title": "Store norske leksikon · Lappekodisillen",
+          "url": "https://snl.no/Lappekodisillen",
+          "locator": "Codicilo del tratado de fronteras de 1751 entre Dinamarca-Noruega y Suecia (con Finlandia): ciudadanía, impuestos y paso de los sami con sus renos."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": false,
+      "scopeLabel": "laponia · 1200–1750",
+      "authorityCondition": "autonomía tributaria"
+    },
+    {
+      "name": "Suecia · 1751–1800 · revisión Atlántico norte 38",
+      "corridor": "Atlántico norte · Irlanda, Gales, Man, Islandia, Gotland, Finlandia, Laponia, Kola y Groenlandia",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1751,
+        "through": 1800
+      },
+      "versions": [
+        {
+          "from": 1751,
+          "ids": [
+            "Abisko",
+            "Akkajaur",
+            "Arjeplog",
+            "Arvidsjaur",
+            "Asele",
+            "Enare",
+            "Enontakis",
+            "Gellivaara",
+            "Ivalo",
+            "Jokkmokk",
+            "Juckasjarvi",
+            "Kasivarren",
+            "Kemijarvi",
+            "Korpilombo",
+            "Korvala",
+            "Kvikkjock",
+            "Lapland_Taiga1",
+            "Lycksele",
+            "Mourionska",
+            "Nikkaluokta",
+            "Nunnanen",
+            "Ortrask",
+            "Porjus",
+            "Raunala",
+            "Salla",
+            "Sarek",
+            "Savukoski",
+            "Silbojock",
+            "Socksjock",
+            "Sodankyla",
+            "Sorsele",
+            "Stensele",
+            "Suonikyla",
+            "Tarna",
+            "Utsjoki",
+            "Volgsjo"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Laponia sueca y finlandesa desde el tratado de fronteras de 1751."
+        }
+      ],
+      "note": "Laponia sueca y finlandesa desde el tratado de fronteras de 1751.",
+      "sources": [
+        {
+          "title": "Store norske leksikon · Lappekodisillen",
+          "url": "https://snl.no/Lappekodisillen",
+          "locator": "Codicilo del tratado de fronteras de 1751 entre Dinamarca-Noruega y Suecia (con Finlandia): ciudadanía, impuestos y paso de los sami con sus renos."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": false,
+      "scopeLabel": "laponia · 1751–1800"
+    },
+    {
+      "name": "Laponia · 1200–1750 · revisión Atlántico norte 39",
+      "corridor": "Atlántico norte · Irlanda, Gales, Man, Islandia, Gotland, Finlandia, Laponia, Kola y Groenlandia",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1200,
+        "through": 1750
+      },
+      "versions": [
+        {
+          "from": 1200,
+          "ids": [
+            "North_Skanderna"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Tierras de los sami sin frontera fija; Noruega, Suecia y Nóvgorod, después Rusia, cobraban tributo en zonas que se superponían."
+        }
+      ],
+      "note": "Tierras de los sami sin frontera fija; Noruega, Suecia y Nóvgorod, después Rusia, cobraban tributo en zonas que se superponían.",
+      "sources": [
+        {
+          "title": "Treccani · Lapponia",
+          "url": "https://www.treccani.it/enciclopedia/lapponia/",
+          "locator": "Región de los sami sin límites precisos, repartida entre Suecia, Noruega, Finlandia y Rusia."
+        },
+        {
+          "title": "Store norske leksikon · Lappekodisillen",
+          "url": "https://snl.no/Lappekodisillen",
+          "locator": "Codicilo del tratado de fronteras de 1751 entre Dinamarca-Noruega y Suecia (con Finlandia): ciudadanía, impuestos y paso de los sami con sus renos."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": false,
+      "scopeLabel": "laponia-noruega · 1200–1750",
+      "authorityCondition": "autonomía tributaria"
+    },
+    {
+      "name": "Noruega · 1751–1800 · revisión Atlántico norte 40",
+      "corridor": "Atlántico norte · Irlanda, Gales, Man, Islandia, Gotland, Finlandia, Laponia, Kola y Groenlandia",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1751,
+        "through": 1800
+      },
+      "versions": [
+        {
+          "from": 1751,
+          "ids": [
+            "North_Skanderna"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Interior de Finnmark, noruego desde el tratado de fronteras de 1751."
+        }
+      ],
+      "note": "Interior de Finnmark, noruego desde el tratado de fronteras de 1751.",
+      "sources": [
+        {
+          "title": "Store norske leksikon · Lappekodisillen",
+          "url": "https://snl.no/Lappekodisillen",
+          "locator": "Codicilo del tratado de fronteras de 1751 entre Dinamarca-Noruega y Suecia (con Finlandia): ciudadanía, impuestos y paso de los sami con sus renos."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": false,
+      "scopeLabel": "laponia-noruega · 1751–1800"
+    },
+    {
+      "name": "Irlanda · 1200–1346 · revisión Atlántico norte 41",
+      "corridor": "Atlántico norte · Irlanda, Gales, Man, Islandia, Gotland, Finlandia, Laponia, Kola y Groenlandia",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1200,
+        "through": 1346
+      },
+      "versions": [
+        {
+          "from": 1200,
+          "ids": [
+            "Carlow",
+            "Cullahill",
+            "Ferns",
+            "Glendalough",
+            "Kilkenny",
+            "New_Ross",
+            "Wexford",
+            "Wicklow",
+            "Wicklow_Mountains"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Leinster anglonormando, dentro del señorío de Irlanda."
+        }
+      ],
+      "note": "Leinster anglonormando, dentro del señorío de Irlanda.",
+      "sources": [
+        {
+          "title": "Treccani · Irlanda",
+          "url": "https://www.treccani.it/enciclopedia/irlanda/",
+          "locator": "Provincias de Ulster, Leinster, Connacht, Desmond y Thomond; caballeros normandos en 1170 y reparto de tierras por Enrique II; estatutos de Kilkenny (1367); título de rey de Irlanda (1541); centralismo administrativo desde Jacobo I (1603)."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": false,
+      "scopeLabel": "leinster-sur · 1200–1346"
+    },
+    {
+      "name": "Leinster · 1347–1602 · revisión Atlántico norte 42",
+      "corridor": "Atlántico norte · Irlanda, Gales, Man, Islandia, Gotland, Finlandia, Laponia, Kola y Groenlandia",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1347,
+        "through": 1602
+      },
+      "versions": [
+        {
+          "from": 1347,
+          "ids": [
+            "Carlow",
+            "Cullahill",
+            "Ferns",
+            "Glendalough",
+            "Kilkenny",
+            "New_Ross",
+            "Wexford",
+            "Wicklow",
+            "Wicklow_Mountains"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Reino gaélico de los MacMurrough Kavanagh en el sur del Leinster; Kilkenny, sede de los Butler, y los O’Byrne de Wicklow no se separan."
+        }
+      ],
+      "note": "Reino gaélico de los MacMurrough Kavanagh en el sur del Leinster; Kilkenny, sede de los Butler, y los O’Byrne de Wicklow no se separan.",
+      "sources": [
+        {
+          "title": "Treccani · Irlanda",
+          "url": "https://www.treccani.it/enciclopedia/irlanda/",
+          "locator": "Provincias de Ulster, Leinster, Connacht, Desmond y Thomond; caballeros normandos en 1170 y reparto de tierras por Enrique II; estatutos de Kilkenny (1367); título de rey de Irlanda (1541); centralismo administrativo desde Jacobo I (1603)."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": false,
+      "scopeLabel": "leinster-sur · 1347–1602",
+      "authorityCondition": "control disputado"
+    },
+    {
+      "name": "Irlanda · 1603–1650 · revisión Atlántico norte 43",
+      "corridor": "Atlántico norte · Irlanda, Gales, Man, Islandia, Gotland, Finlandia, Laponia, Kola y Groenlandia",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1603,
+        "through": 1650
+      },
+      "versions": [
+        {
+          "from": 1603,
+          "ids": [
+            "Carlow",
+            "Cullahill",
+            "Ferns",
+            "Glendalough",
+            "Kilkenny",
+            "New_Ross",
+            "Wexford",
+            "Wicklow",
+            "Wicklow_Mountains"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Reino de Irlanda: desde Jacobo I (1603), la administración de la Corona se extiende a los antiguos señoríos gaélicos."
+        }
+      ],
+      "note": "Reino de Irlanda: desde Jacobo I (1603), la administración de la Corona se extiende a los antiguos señoríos gaélicos.",
+      "sources": [
+        {
+          "title": "Treccani · Irlanda",
+          "url": "https://www.treccani.it/enciclopedia/irlanda/",
+          "locator": "Provincias de Ulster, Leinster, Connacht, Desmond y Thomond; caballeros normandos en 1170 y reparto de tierras por Enrique II; estatutos de Kilkenny (1367); título de rey de Irlanda (1541); centralismo administrativo desde Jacobo I (1603)."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": false,
+      "scopeLabel": "leinster-sur · 1603–1650"
+    },
+    {
+      "name": "Reino de Man y las Islas · 1200–1265 · revisión Atlántico norte 44",
+      "corridor": "Atlántico norte · Irlanda, Gales, Man, Islandia, Gotland, Finlandia, Laponia, Kola y Groenlandia",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1200,
+        "through": 1265
+      },
+      "versions": [
+        {
+          "from": 1200,
+          "ids": [
+            "Mann"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Reino de los descendientes de Godred Crovan."
+        }
+      ],
+      "note": "Reino de los descendientes de Godred Crovan.",
+      "sources": [
+        {
+          "title": "Treccani · Man",
+          "url": "https://www.treccani.it/enciclopedia/man/",
+          "locator": "Reino de Godred Crovan; Escocia en 1266; protección de Eduardo I en 1290; Robert Bruce en 1313; inglesa desde 1346; los Stanley desde 1406, los Atholl después y compra por el Parlamento en 1765."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": false,
+      "scopeLabel": "man · 1200–1265"
+    },
+    {
+      "name": "Escocia · 1266–1289 · revisión Atlántico norte 45",
+      "corridor": "Atlántico norte · Irlanda, Gales, Man, Islandia, Gotland, Finlandia, Laponia, Kola y Groenlandia",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1266,
+        "through": 1289
+      },
+      "versions": [
+        {
+          "from": 1266,
+          "ids": [
+            "Mann"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Man, de la Corona escocesa desde 1266."
+        }
+      ],
+      "note": "Man, de la Corona escocesa desde 1266.",
+      "sources": [
+        {
+          "title": "Treccani · Man",
+          "url": "https://www.treccani.it/enciclopedia/man/",
+          "locator": "Reino de Godred Crovan; Escocia en 1266; protección de Eduardo I en 1290; Robert Bruce en 1313; inglesa desde 1346; los Stanley desde 1406, los Atholl después y compra por el Parlamento en 1765."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": false,
+      "scopeLabel": "man · 1266–1289"
+    },
+    {
+      "name": "Inglaterra · 1290–1312 · revisión Atlántico norte 46",
+      "corridor": "Atlántico norte · Irlanda, Gales, Man, Islandia, Gotland, Finlandia, Laponia, Kola y Groenlandia",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1290,
+        "through": 1312
+      },
+      "versions": [
+        {
+          "from": 1290,
+          "ids": [
+            "Mann"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Bajo la protección de Eduardo I desde 1290."
+        }
+      ],
+      "note": "Bajo la protección de Eduardo I desde 1290.",
+      "sources": [
+        {
+          "title": "Treccani · Man",
+          "url": "https://www.treccani.it/enciclopedia/man/",
+          "locator": "Reino de Godred Crovan; Escocia en 1266; protección de Eduardo I en 1290; Robert Bruce en 1313; inglesa desde 1346; los Stanley desde 1406, los Atholl después y compra por el Parlamento en 1765."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": false,
+      "scopeLabel": "man · 1290–1312",
+      "authorityCondition": "control disputado"
+    },
+    {
+      "name": "Escocia · 1313–1345 · revisión Atlántico norte 47",
+      "corridor": "Atlántico norte · Irlanda, Gales, Man, Islandia, Gotland, Finlandia, Laponia, Kola y Groenlandia",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1313,
+        "through": 1345
+      },
+      "versions": [
+        {
+          "from": 1313,
+          "ids": [
+            "Mann"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Conquista de Robert Bruce (1313)."
+        }
+      ],
+      "note": "Conquista de Robert Bruce (1313).",
+      "sources": [
+        {
+          "title": "Treccani · Man",
+          "url": "https://www.treccani.it/enciclopedia/man/",
+          "locator": "Reino de Godred Crovan; Escocia en 1266; protección de Eduardo I en 1290; Robert Bruce en 1313; inglesa desde 1346; los Stanley desde 1406, los Atholl después y compra por el Parlamento en 1765."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": false,
+      "scopeLabel": "man · 1313–1345",
+      "authorityCondition": "control disputado"
+    },
+    {
+      "name": "Inglaterra · 1346–1405 · revisión Atlántico norte 48",
+      "corridor": "Atlántico norte · Irlanda, Gales, Man, Islandia, Gotland, Finlandia, Laponia, Kola y Groenlandia",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1346,
+        "through": 1405
+      },
+      "versions": [
+        {
+          "from": 1346,
+          "ids": [
+            "Mann"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Inglesa desde 1346, con Eduardo III."
+        }
+      ],
+      "note": "Inglesa desde 1346, con Eduardo III.",
+      "sources": [
+        {
+          "title": "Treccani · Man",
+          "url": "https://www.treccani.it/enciclopedia/man/",
+          "locator": "Reino de Godred Crovan; Escocia en 1266; protección de Eduardo I en 1290; Robert Bruce en 1313; inglesa desde 1346; los Stanley desde 1406, los Atholl después y compra por el Parlamento en 1765."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": false,
+      "scopeLabel": "man · 1346–1405"
+    },
+    {
+      "name": "Señorío de Man · 1651–1764 · revisión Atlántico norte 49",
+      "corridor": "Atlántico norte · Irlanda, Gales, Man, Islandia, Gotland, Finlandia, Laponia, Kola y Groenlandia",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1651,
+        "through": 1764
+      },
+      "versions": [
+        {
+          "from": 1651,
+          "ids": [
+            "Mann"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Señores de Man: los Stanley desde 1406 y después los Atholl."
+        }
+      ],
+      "note": "Señores de Man: los Stanley desde 1406 y después los Atholl.",
+      "sources": [
+        {
+          "title": "Treccani · Man",
+          "url": "https://www.treccani.it/enciclopedia/man/",
+          "locator": "Reino de Godred Crovan; Escocia en 1266; protección de Eduardo I en 1290; Robert Bruce en 1313; inglesa desde 1346; los Stanley desde 1406, los Atholl después y compra por el Parlamento en 1765."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": false,
+      "scopeLabel": "man · 1651–1764"
+    },
+    {
+      "name": "Gran Bretaña · 1765–1800 · revisión Atlántico norte 50",
+      "corridor": "Atlántico norte · Irlanda, Gales, Man, Islandia, Gotland, Finlandia, Laponia, Kola y Groenlandia",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1765,
+        "through": 1800
+      },
+      "versions": [
+        {
+          "from": 1765,
+          "ids": [
+            "Mann"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "El Parlamento compró los derechos de los Atholl en 1765."
+        }
+      ],
+      "note": "El Parlamento compró los derechos de los Atholl en 1765.",
+      "sources": [
+        {
+          "title": "Treccani · Man",
+          "url": "https://www.treccani.it/enciclopedia/man/",
+          "locator": "Reino de Godred Crovan; Escocia en 1266; protección de Eduardo I en 1290; Robert Bruce en 1313; inglesa desde 1346; los Stanley desde 1406, los Atholl después y compra por el Parlamento en 1765."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": false,
+      "scopeLabel": "man · 1765–1800"
+    },
+    {
+      "name": "Irlanda · 1200–1540 · revisión Atlántico norte 51",
+      "corridor": "Atlántico norte · Irlanda, Gales, Man, Islandia, Gotland, Finlandia, Laponia, Kola y Groenlandia",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1200,
+        "through": 1540
+      },
+      "versions": [
+        {
+          "from": 1200,
+          "ids": [
+            "Ardagh",
+            "Ballymore",
+            "Kells",
+            "Longford",
+            "Mullingar",
+            "Tullamore"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Meath y el interior del señorío de Irlanda, con señoríos gaélicos (O’Farrell, O’Connor Faly, O’More) que el mapa no separa."
+        }
+      ],
+      "note": "Meath y el interior del señorío de Irlanda, con señoríos gaélicos (O’Farrell, O’Connor Faly, O’More) que el mapa no separa.",
+      "sources": [
+        {
+          "title": "Treccani · Irlanda",
+          "url": "https://www.treccani.it/enciclopedia/irlanda/",
+          "locator": "Provincias de Ulster, Leinster, Connacht, Desmond y Thomond; caballeros normandos en 1170 y reparto de tierras por Enrique II; estatutos de Kilkenny (1367); título de rey de Irlanda (1541); centralismo administrativo desde Jacobo I (1603)."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": false,
+      "scopeLabel": "midlands · 1200–1540"
+    },
+    {
+      "name": "Irlanda · 1200–1454 · revisión Atlántico norte 52",
+      "corridor": "Atlántico norte · Irlanda, Gales, Man, Islandia, Gotland, Finlandia, Laponia, Kola y Groenlandia",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1200,
+        "through": 1454
+      },
+      "versions": [
+        {
+          "from": 1200,
+          "ids": [
+            "Daingean",
+            "Dunamase"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Meath y el interior del señorío de Irlanda, con señoríos gaélicos (O’Farrell, O’Connor Faly, O’More) que el mapa no separa."
+        }
+      ],
+      "note": "Meath y el interior del señorío de Irlanda, con señoríos gaélicos (O’Farrell, O’Connor Faly, O’More) que el mapa no separa.",
+      "sources": [
+        {
+          "title": "Treccani · Irlanda",
+          "url": "https://www.treccani.it/enciclopedia/irlanda/",
+          "locator": "Provincias de Ulster, Leinster, Connacht, Desmond y Thomond; caballeros normandos en 1170 y reparto de tierras por Enrique II; estatutos de Kilkenny (1367); título de rey de Irlanda (1541); centralismo administrativo desde Jacobo I (1603)."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": false,
+      "scopeLabel": "midlands · 1200–1454"
+    },
+    {
+      "name": "Irlanda · 1535–1540 · revisión Atlántico norte 53",
+      "corridor": "Atlántico norte · Irlanda, Gales, Man, Islandia, Gotland, Finlandia, Laponia, Kola y Groenlandia",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1535,
+        "through": 1540
+      },
+      "versions": [
+        {
+          "from": 1535,
+          "ids": [
+            "Daingean",
+            "Dunamase"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Meath y el interior del señorío de Irlanda, con señoríos gaélicos (O’Farrell, O’Connor Faly, O’More) que el mapa no separa."
+        }
+      ],
+      "note": "Meath y el interior del señorío de Irlanda, con señoríos gaélicos (O’Farrell, O’Connor Faly, O’More) que el mapa no separa.",
+      "sources": [
+        {
+          "title": "Treccani · Irlanda",
+          "url": "https://www.treccani.it/enciclopedia/irlanda/",
+          "locator": "Provincias de Ulster, Leinster, Connacht, Desmond y Thomond; caballeros normandos en 1170 y reparto de tierras por Enrique II; estatutos de Kilkenny (1367); título de rey de Irlanda (1541); centralismo administrativo desde Jacobo I (1603)."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": false,
+      "scopeLabel": "midlands · 1535–1540"
+    },
+    {
+      "name": "Irlanda · 1541–1650 · revisión Atlántico norte 54",
+      "corridor": "Atlántico norte · Irlanda, Gales, Man, Islandia, Gotland, Finlandia, Laponia, Kola y Groenlandia",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1541,
+        "through": 1650
+      },
+      "versions": [
+        {
+          "from": 1541,
+          "ids": [
+            "Ardagh",
+            "Ballymore",
+            "Kells",
+            "Longford",
+            "Mullingar",
+            "Tullamore"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Reino de Irlanda, bajo los reyes de Inglaterra y, desde 1707, de Gran Bretaña."
+        }
+      ],
+      "note": "Reino de Irlanda, bajo los reyes de Inglaterra y, desde 1707, de Gran Bretaña.",
+      "sources": [
+        {
+          "title": "Treccani · Irlanda",
+          "url": "https://www.treccani.it/enciclopedia/irlanda/",
+          "locator": "Provincias de Ulster, Leinster, Connacht, Desmond y Thomond; caballeros normandos en 1170 y reparto de tierras por Enrique II; estatutos de Kilkenny (1367); título de rey de Irlanda (1541); centralismo administrativo desde Jacobo I (1603)."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": false,
+      "scopeLabel": "midlands · 1541–1650"
+    },
+    {
+      "name": "Irlanda · 1541–1553 · revisión Atlántico norte 55",
+      "corridor": "Atlántico norte · Irlanda, Gales, Man, Islandia, Gotland, Finlandia, Laponia, Kola y Groenlandia",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1541,
+        "through": 1553
+      },
+      "versions": [
+        {
+          "from": 1541,
+          "ids": [
+            "Daingean",
+            "Dunamase"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Reino de Irlanda, bajo los reyes de Inglaterra y, desde 1707, de Gran Bretaña."
+        }
+      ],
+      "note": "Reino de Irlanda, bajo los reyes de Inglaterra y, desde 1707, de Gran Bretaña.",
+      "sources": [
+        {
+          "title": "Treccani · Irlanda",
+          "url": "https://www.treccani.it/enciclopedia/irlanda/",
+          "locator": "Provincias de Ulster, Leinster, Connacht, Desmond y Thomond; caballeros normandos en 1170 y reparto de tierras por Enrique II; estatutos de Kilkenny (1367); título de rey de Irlanda (1541); centralismo administrativo desde Jacobo I (1603)."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": false,
+      "scopeLabel": "midlands · 1541–1553"
+    },
+    {
+      "name": "Irlanda · 1586–1650 · revisión Atlántico norte 56",
+      "corridor": "Atlántico norte · Irlanda, Gales, Man, Islandia, Gotland, Finlandia, Laponia, Kola y Groenlandia",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1586,
+        "through": 1650
+      },
+      "versions": [
+        {
+          "from": 1586,
+          "ids": [
+            "Daingean",
+            "Dunamase"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Reino de Irlanda, bajo los reyes de Inglaterra y, desde 1707, de Gran Bretaña."
+        }
+      ],
+      "note": "Reino de Irlanda, bajo los reyes de Inglaterra y, desde 1707, de Gran Bretaña.",
+      "sources": [
+        {
+          "title": "Treccani · Irlanda",
+          "url": "https://www.treccani.it/enciclopedia/irlanda/",
+          "locator": "Provincias de Ulster, Leinster, Connacht, Desmond y Thomond; caballeros normandos en 1170 y reparto de tierras por Enrique II; estatutos de Kilkenny (1367); título de rey de Irlanda (1541); centralismo administrativo desde Jacobo I (1603)."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": false,
+      "scopeLabel": "midlands · 1586–1650"
+    },
+    {
+      "name": "Irlanda · 1200–1538 · revisión Atlántico norte 57",
+      "corridor": "Atlántico norte · Irlanda, Gales, Man, Islandia, Gotland, Finlandia, Laponia, Kola y Groenlandia",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1200,
+        "through": 1538
+      },
+      "versions": [
+        {
+          "from": 1200,
+          "ids": [
+            "Carrickbeg",
+            "Cashel",
+            "Clonmel",
+            "Nenagh",
+            "Roscrea",
+            "Tipperary"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Tierras de los Butler dentro del señorío de Irlanda; el condado de Ormond se registra en el Atlas desde 1539."
+        }
+      ],
+      "note": "Tierras de los Butler dentro del señorío de Irlanda; el condado de Ormond se registra en el Atlas desde 1539.",
+      "sources": [
+        {
+          "title": "Treccani · Irlanda",
+          "url": "https://www.treccani.it/enciclopedia/irlanda/",
+          "locator": "Provincias de Ulster, Leinster, Connacht, Desmond y Thomond; caballeros normandos en 1170 y reparto de tierras por Enrique II; estatutos de Kilkenny (1367); título de rey de Irlanda (1541); centralismo administrativo desde Jacobo I (1603)."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": false,
+      "scopeLabel": "ormond · 1200–1538"
+    },
+    {
+      "name": "Irlanda · 1541–1650 · revisión Atlántico norte 58",
+      "corridor": "Atlántico norte · Irlanda, Gales, Man, Islandia, Gotland, Finlandia, Laponia, Kola y Groenlandia",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1541,
+        "through": 1650
+      },
+      "versions": [
+        {
+          "from": 1541,
+          "ids": [
+            "Carrickbeg"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Reino de Irlanda, bajo los reyes de Inglaterra y, desde 1707, de Gran Bretaña."
+        }
+      ],
+      "note": "Reino de Irlanda, bajo los reyes de Inglaterra y, desde 1707, de Gran Bretaña.",
+      "sources": [
+        {
+          "title": "Treccani · Irlanda",
+          "url": "https://www.treccani.it/enciclopedia/irlanda/",
+          "locator": "Provincias de Ulster, Leinster, Connacht, Desmond y Thomond; caballeros normandos en 1170 y reparto de tierras por Enrique II; estatutos de Kilkenny (1367); título de rey de Irlanda (1541); centralismo administrativo desde Jacobo I (1603)."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": false,
+      "scopeLabel": "ormond · 1541–1650"
+    },
+    {
+      "name": "Thomond · 1200–1497 · revisión Atlántico norte 59",
+      "corridor": "Atlántico norte · Irlanda, Gales, Man, Islandia, Gotland, Finlandia, Laponia, Kola y Groenlandia",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1200,
+        "through": 1497
+      },
+      "versions": [
+        {
+          "from": 1200,
+          "ids": [
+            "Bunratty",
+            "Ennis",
+            "Moyarta"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Reino y, desde 1543, condado de los O’Brien."
+        }
+      ],
+      "note": "Reino y, desde 1543, condado de los O’Brien.",
+      "sources": [
+        {
+          "title": "Treccani · Irlanda",
+          "url": "https://www.treccani.it/enciclopedia/irlanda/",
+          "locator": "Provincias de Ulster, Leinster, Connacht, Desmond y Thomond; caballeros normandos en 1170 y reparto de tierras por Enrique II; estatutos de Kilkenny (1367); título de rey de Irlanda (1541); centralismo administrativo desde Jacobo I (1603)."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": false,
+      "scopeLabel": "thomond · 1200–1497"
+    },
+    {
+      "name": "Thomond · 1554–1602 · revisión Atlántico norte 60",
+      "corridor": "Atlántico norte · Irlanda, Gales, Man, Islandia, Gotland, Finlandia, Laponia, Kola y Groenlandia",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1554,
+        "through": 1602
+      },
+      "versions": [
+        {
+          "from": 1554,
+          "ids": [
+            "Bunratty",
+            "Ennis",
+            "Moyarta"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Reino y, desde 1543, condado de los O’Brien."
+        }
+      ],
+      "note": "Reino y, desde 1543, condado de los O’Brien.",
+      "sources": [
+        {
+          "title": "Treccani · Irlanda",
+          "url": "https://www.treccani.it/enciclopedia/irlanda/",
+          "locator": "Provincias de Ulster, Leinster, Connacht, Desmond y Thomond; caballeros normandos en 1170 y reparto de tierras por Enrique II; estatutos de Kilkenny (1367); título de rey de Irlanda (1541); centralismo administrativo desde Jacobo I (1603)."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": false,
+      "scopeLabel": "thomond · 1554–1602"
+    },
+    {
+      "name": "Irlanda · 1603–1650 · revisión Atlántico norte 61",
+      "corridor": "Atlántico norte · Irlanda, Gales, Man, Islandia, Gotland, Finlandia, Laponia, Kola y Groenlandia",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1603,
+        "through": 1650
+      },
+      "versions": [
+        {
+          "from": 1603,
+          "ids": [
+            "Bunratty",
+            "Ennis",
+            "Moyarta"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Reino de Irlanda: desde Jacobo I (1603), la administración de la Corona se extiende a los antiguos señoríos gaélicos."
+        }
+      ],
+      "note": "Reino de Irlanda: desde Jacobo I (1603), la administración de la Corona se extiende a los antiguos señoríos gaélicos.",
+      "sources": [
+        {
+          "title": "Treccani · Irlanda",
+          "url": "https://www.treccani.it/enciclopedia/irlanda/",
+          "locator": "Provincias de Ulster, Leinster, Connacht, Desmond y Thomond; caballeros normandos en 1170 y reparto de tierras por Enrique II; estatutos de Kilkenny (1367); título de rey de Irlanda (1541); centralismo administrativo desde Jacobo I (1603)."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": false,
+      "scopeLabel": "thomond · 1603–1650"
+    },
+    {
+      "name": "Tír Chonaill · 1200–1565 · revisión Atlántico norte 62",
+      "corridor": "Atlántico norte · Irlanda, Gales, Man, Islandia, Gotland, Finlandia, Laponia, Kola y Groenlandia",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1200,
+        "through": 1565
+      },
+      "versions": [
+        {
+          "from": 1200,
+          "ids": [
+            "Donegal",
+            "Inishowen",
+            "Kilmacrennan",
+            "Raphoe"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Señorío de los O’Donnell en el noroeste del Ulster."
+        }
+      ],
+      "note": "Señorío de los O’Donnell en el noroeste del Ulster.",
+      "sources": [
+        {
+          "title": "Treccani · Irlanda",
+          "url": "https://www.treccani.it/enciclopedia/irlanda/",
+          "locator": "Provincias de Ulster, Leinster, Connacht, Desmond y Thomond; caballeros normandos en 1170 y reparto de tierras por Enrique II; estatutos de Kilkenny (1367); título de rey de Irlanda (1541); centralismo administrativo desde Jacobo I (1603)."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": false,
+      "scopeLabel": "tir-chonaill · 1200–1565"
+    },
+    {
+      "name": "Irlanda · 1608–1650 · revisión Atlántico norte 63",
+      "corridor": "Atlántico norte · Irlanda, Gales, Man, Islandia, Gotland, Finlandia, Laponia, Kola y Groenlandia",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1608,
+        "through": 1650
+      },
+      "versions": [
+        {
+          "from": 1608,
+          "ids": [
+            "Donegal",
+            "Inishowen",
+            "Kilmacrennan",
+            "Raphoe"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Reino de Irlanda tras el último señor O’Donnell registrado (1607)."
+        }
+      ],
+      "note": "Reino de Irlanda tras el último señor O’Donnell registrado (1607).",
+      "sources": [
+        {
+          "title": "Treccani · Irlanda",
+          "url": "https://www.treccani.it/enciclopedia/irlanda/",
+          "locator": "Provincias de Ulster, Leinster, Connacht, Desmond y Thomond; caballeros normandos en 1170 y reparto de tierras por Enrique II; estatutos de Kilkenny (1367); título de rey de Irlanda (1541); centralismo administrativo desde Jacobo I (1603)."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": false,
+      "scopeLabel": "tir-chonaill · 1608–1650"
+    },
+    {
+      "name": "Tír Eoghain · 1200–1606 · revisión Atlántico norte 64",
+      "corridor": "Atlántico norte · Irlanda, Gales, Man, Islandia, Gotland, Finlandia, Laponia, Kola y Groenlandia",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1200,
+        "through": 1606
+      },
+      "versions": [
+        {
+          "from": 1200,
+          "ids": [
+            "Armagh",
+            "Belcoo",
+            "Clogher",
+            "Coleraine",
+            "Derry",
+            "Dungannon",
+            "Enniskillen",
+            "Magherafelt",
+            "Strabane"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Señorío de los O’Neill en el Ulster central; Fermanagh (Maguire) y el país de los O’Cahan no se separan."
+        }
+      ],
+      "note": "Señorío de los O’Neill en el Ulster central; Fermanagh (Maguire) y el país de los O’Cahan no se separan.",
+      "sources": [
+        {
+          "title": "Treccani · Irlanda",
+          "url": "https://www.treccani.it/enciclopedia/irlanda/",
+          "locator": "Provincias de Ulster, Leinster, Connacht, Desmond y Thomond; caballeros normandos en 1170 y reparto de tierras por Enrique II; estatutos de Kilkenny (1367); título de rey de Irlanda (1541); centralismo administrativo desde Jacobo I (1603)."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": false,
+      "scopeLabel": "tir-eoghain · 1200–1606"
+    },
+    {
+      "name": "Irlanda · 1607–1800 · revisión Atlántico norte 65",
+      "corridor": "Atlántico norte · Irlanda, Gales, Man, Islandia, Gotland, Finlandia, Laponia, Kola y Groenlandia",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1607,
+        "through": 1800
+      },
+      "versions": [
+        {
+          "from": 1607,
+          "ids": [
+            "Armagh"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Reino de Irlanda tras el último señor O’Neill registrado (1607)."
+        }
+      ],
+      "note": "Reino de Irlanda tras el último señor O’Neill registrado (1607).",
+      "sources": [
+        {
+          "title": "Treccani · Irlanda",
+          "url": "https://www.treccani.it/enciclopedia/irlanda/",
+          "locator": "Provincias de Ulster, Leinster, Connacht, Desmond y Thomond; caballeros normandos en 1170 y reparto de tierras por Enrique II; estatutos de Kilkenny (1367); título de rey de Irlanda (1541); centralismo administrativo desde Jacobo I (1603)."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": false,
+      "scopeLabel": "tir-eoghain · 1607–1800"
+    },
+    {
+      "name": "Irlanda · 1607–1650 · revisión Atlántico norte 66",
+      "corridor": "Atlántico norte · Irlanda, Gales, Man, Islandia, Gotland, Finlandia, Laponia, Kola y Groenlandia",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1607,
+        "through": 1650
+      },
+      "versions": [
+        {
+          "from": 1607,
+          "ids": [
+            "Coleraine",
+            "Derry",
+            "Magherafelt"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Reino de Irlanda tras el último señor O’Neill registrado (1607)."
+        }
+      ],
+      "note": "Reino de Irlanda tras el último señor O’Neill registrado (1607).",
+      "sources": [
+        {
+          "title": "Treccani · Irlanda",
+          "url": "https://www.treccani.it/enciclopedia/irlanda/",
+          "locator": "Provincias de Ulster, Leinster, Connacht, Desmond y Thomond; caballeros normandos en 1170 y reparto de tierras por Enrique II; estatutos de Kilkenny (1367); título de rey de Irlanda (1541); centralismo administrativo desde Jacobo I (1603)."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": false,
+      "scopeLabel": "tir-eoghain · 1607–1650"
+    },
+    {
+      "name": "Irlanda · 1608–1650 · revisión Atlántico norte 67",
+      "corridor": "Atlántico norte · Irlanda, Gales, Man, Islandia, Gotland, Finlandia, Laponia, Kola y Groenlandia",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1608,
+        "through": 1650
+      },
+      "versions": [
+        {
+          "from": 1608,
+          "ids": [
+            "Belcoo",
+            "Clogher",
+            "Dungannon",
+            "Enniskillen",
+            "Strabane"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Reino de Irlanda tras el último señor O’Neill registrado (1607)."
+        }
+      ],
+      "note": "Reino de Irlanda tras el último señor O’Neill registrado (1607).",
+      "sources": [
+        {
+          "title": "Treccani · Irlanda",
+          "url": "https://www.treccani.it/enciclopedia/irlanda/",
+          "locator": "Provincias de Ulster, Leinster, Connacht, Desmond y Thomond; caballeros normandos en 1170 y reparto de tierras por Enrique II; estatutos de Kilkenny (1367); título de rey de Irlanda (1541); centralismo administrativo desde Jacobo I (1603)."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": false,
+      "scopeLabel": "tir-eoghain · 1608–1650"
+    },
+    {
+      "name": "Condado de Ulster · 1200–1263 · revisión Atlántico norte 68",
+      "corridor": "Atlántico norte · Irlanda, Gales, Man, Islandia, Gotland, Finlandia, Laponia, Kola y Groenlandia",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1200,
+        "through": 1263
+      },
+      "versions": [
+        {
+          "from": 1200,
+          "ids": [
+            "Ballycastle",
+            "Ballymena",
+            "Belfast",
+            "Carrickfergus",
+            "Downpatrick",
+            "Dunluce",
+            "Iveagh",
+            "Newtownards"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Condado anglonormando de Ulster, dentro del señorío de Irlanda."
+        }
+      ],
+      "note": "Condado anglonormando de Ulster, dentro del señorío de Irlanda.",
+      "sources": [
+        {
+          "title": "Treccani · Irlanda",
+          "url": "https://www.treccani.it/enciclopedia/irlanda/",
+          "locator": "Provincias de Ulster, Leinster, Connacht, Desmond y Thomond; caballeros normandos en 1170 y reparto de tierras por Enrique II; estatutos de Kilkenny (1367); título de rey de Irlanda (1541); centralismo administrativo desde Jacobo I (1603)."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": false,
+      "scopeLabel": "ulster-este · 1200–1263"
+    },
+    {
+      "name": "Ulster gaélico · 1327–1602 · revisión Atlántico norte 69",
+      "corridor": "Atlántico norte · Irlanda, Gales, Man, Islandia, Gotland, Finlandia, Laponia, Kola y Groenlandia",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1327,
+        "through": 1602
+      },
+      "versions": [
+        {
+          "from": 1327,
+          "ids": [
+            "Ballycastle",
+            "Ballymena",
+            "Belfast",
+            "Carrickfergus",
+            "Downpatrick",
+            "Dunluce",
+            "Iveagh",
+            "Newtownards"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Tras el último conde de Ulster registrado, linajes gaélicos (O’Neill de Clandeboye) y escoceses (MacDonnell) que el mapa no separa; la Corona retuvo enclaves como Carrickfergus."
+        }
+      ],
+      "note": "Tras el último conde de Ulster registrado, linajes gaélicos (O’Neill de Clandeboye) y escoceses (MacDonnell) que el mapa no separa; la Corona retuvo enclaves como Carrickfergus.",
+      "sources": [
+        {
+          "title": "Treccani · Irlanda",
+          "url": "https://www.treccani.it/enciclopedia/irlanda/",
+          "locator": "Provincias de Ulster, Leinster, Connacht, Desmond y Thomond; caballeros normandos en 1170 y reparto de tierras por Enrique II; estatutos de Kilkenny (1367); título de rey de Irlanda (1541); centralismo administrativo desde Jacobo I (1603)."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": false,
+      "scopeLabel": "ulster-este · 1327–1602",
+      "authorityCondition": "autoridad regional"
+    },
+    {
+      "name": "Irlanda · 1603–1650 · revisión Atlántico norte 70",
+      "corridor": "Atlántico norte · Irlanda, Gales, Man, Islandia, Gotland, Finlandia, Laponia, Kola y Groenlandia",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1603,
+        "through": 1650
+      },
+      "versions": [
+        {
+          "from": 1603,
+          "ids": [
+            "Ballycastle",
+            "Ballymena",
+            "Belfast",
+            "Carrickfergus",
+            "Downpatrick",
+            "Dunluce",
+            "Iveagh",
+            "Newtownards"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Reino de Irlanda: desde Jacobo I (1603), la administración de la Corona se extiende a los antiguos señoríos gaélicos."
+        }
+      ],
+      "note": "Reino de Irlanda: desde Jacobo I (1603), la administración de la Corona se extiende a los antiguos señoríos gaélicos.",
+      "sources": [
+        {
+          "title": "Treccani · Irlanda",
+          "url": "https://www.treccani.it/enciclopedia/irlanda/",
+          "locator": "Provincias de Ulster, Leinster, Connacht, Desmond y Thomond; caballeros normandos en 1170 y reparto de tierras por Enrique II; estatutos de Kilkenny (1367); título de rey de Irlanda (1541); centralismo administrativo desde Jacobo I (1603)."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": false,
+      "scopeLabel": "ulster-este · 1603–1650"
+    },
+    {
       "name": "Schleswig · partes reales y ducales · 1651–1712 · ampliación germano-suiza",
       "corridor": "Alemania y Suiza · ampliación de núcleos documentados",
       "color": "#86715d",
@@ -372877,6 +375498,344 @@
       "Cobertura anual no significa frontera exacta ni una lista completa de titulares. No se inventan gobernantes personales para instituciones, comunidades o territorios agrupados.",
       "Las fechas regionales convencionales y los cambios ocurridos dentro de un mismo año se describen en las notas locales; las fuentes de cortes cartográficos no bastan por sí solas para fechar cada conquista.",
       "La revisión conserva los estados y las jurisdicciones anteriores a los estados nacionales modernos. La Confederación Suiza es una agrupación de miembros, no un estado unitario."
+    ]
+  },
+  "northAtlanticReview": {
+    "reviewedAt": "2026-11-21",
+    "scope": {
+      "name": "Irlanda, Gales, Man, Islandia, Gotland, Finlandia, Laponia, Kola y Groenlandia",
+      "from": 1200,
+      "through": 1800,
+      "ids": [
+        "Aberystwyth",
+        "Abisko",
+        "Adare",
+        "Akkajaur",
+        "Akureyri",
+        "Anglesey",
+        "Ardagh",
+        "Arjeplog",
+        "Armagh",
+        "Arvidsjaur",
+        "Asele",
+        "Athenry",
+        "Athlone",
+        "Ballaghaderreen",
+        "Ballycastle",
+        "Ballymena",
+        "Ballymore",
+        "Belcoo",
+        "Belfast",
+        "Berwyn_Range",
+        "Birkala",
+        "Bjorneborg",
+        "Blonduos",
+        "Borgarnes",
+        "Brahestad",
+        "Brecknock",
+        "Brecon_Beacons",
+        "Builth",
+        "Bunratty",
+        "Burrishoole",
+        "Caerphilly",
+        "Cambrian_Mountains",
+        "Carbery",
+        "Cardiff",
+        "Cardigan",
+        "Carlow",
+        "Carmarthen",
+        "Carnarvon",
+        "Carrickbeg",
+        "Carrickfergus",
+        "Carrickmacross",
+        "Cashel",
+        "Castlebar",
+        "Castleconnell",
+        "Castlereagh",
+        "Cavan",
+        "Clifden",
+        "Clogher",
+        "Clonmel",
+        "Coleraine",
+        "Conwy",
+        "Cork",
+        "Cullahill",
+        "Daingean",
+        "Denbigh",
+        "Derry",
+        "Dingle",
+        "Donegal",
+        "Downpatrick",
+        "Drogheda",
+        "Dromahair",
+        "Dunamase",
+        "Dundalk",
+        "Dungannon",
+        "Dungarvan",
+        "Dunhallow",
+        "Dunluce",
+        "Egilsstadir",
+        "Eiriksfjord",
+        "Ekenas",
+        "Elimaki",
+        "Enare",
+        "Ennis",
+        "Enniskillen",
+        "Enontakis",
+        "Erris",
+        "Eyjafjallajokull",
+        "Fermoy",
+        "Ferns",
+        "Fishguard",
+        "Flint",
+        "Forssa",
+        "Galway",
+        "Gellivaara",
+        "Glendalough",
+        "Harlech",
+        "Heinola",
+        "Helsinge",
+        "Hoborg",
+        "Hofsjokull",
+        "Holar",
+        "Hollola",
+        "Holmur",
+        "Husavik",
+        "Hvamstangi",
+        "Hvittis",
+        "Hvolsvollur",
+        "Icelandic_Highlands",
+        "Idensalmi",
+        "Ikalis",
+        "Inishowen",
+        "Isafjordur",
+        "Itis",
+        "Ivalo",
+        "Iveagh",
+        "Jamsa",
+        "Jan_Mayen",
+        "Janakkala",
+        "Joensuu",
+        "Jokkmokk",
+        "Joroinen",
+        "Juckasjarvi",
+        "Juuka",
+        "Jyvaskyla",
+        "Kajana",
+        "Kangasniemi",
+        "Karleby",
+        "Kasivarren",
+        "Kaustby",
+        "Keflavik",
+        "Kells",
+        "Kemijarvi",
+        "Kidwelly",
+        "Kilbrittain",
+        "Kilconnell",
+        "Kilkenny",
+        "Killarney",
+        "Killeshandra",
+        "Killmallock",
+        "Killycolly",
+        "Kilmacrennan",
+        "Kinsale",
+        "Kirkjubaejar",
+        "Koliskoj",
+        "Koppo",
+        "Korpilombo",
+        "Korsholm",
+        "Korvala",
+        "Kuhmo",
+        "Kuivaniemi",
+        "Kuopio",
+        "Kuusamo",
+        "Kvikkjock",
+        "Langjokull",
+        "Lapland_Taiga1",
+        "Lapland_Taiga2",
+        "Lappo",
+        "Laukas",
+        "Leitrim",
+        "Limerick",
+        "Llangollen",
+        "Lohja",
+        "Longford",
+        "Lycksele",
+        "Machynlleth",
+        "Magherafelt",
+        "Mann",
+        "Mikkeli",
+        "Monaghan",
+        "Monmouth",
+        "Montgomery",
+        "Mourionska",
+        "Moyarta",
+        "Moycarn",
+        "Mullingar",
+        "Muskerry",
+        "Neath",
+        "Nenagh",
+        "New_Ross",
+        "Newport",
+        "Newtownards",
+        "Nikkaluokta",
+        "North_Skanderna",
+        "Nunnanen",
+        "Nurmes",
+        "Olavsvik",
+        "Oriel",
+        "Orivesi",
+        "Ortrask",
+        "Paltamo",
+        "Pedersore",
+        "Pembroke",
+        "Penllyn",
+        "Porjus",
+        "Porvoo",
+        "Posio",
+        "Prirechnyi",
+        "Pudasjarvi",
+        "Radnor",
+        "Ranua",
+        "Raphoe",
+        "Raumo",
+        "Raunala",
+        "Rautavaara",
+        "Reikjavik",
+        "Reydarfjordur",
+        "Ristiina",
+        "Roscommon",
+        "Roscrea",
+        "Saarijarvi",
+        "Salla",
+        "Sarek",
+        "Sastamala",
+        "Sastmola",
+        "Savukoski",
+        "Selfoss",
+        "Seydisfjordur",
+        "Siikalatva",
+        "Silbojock",
+        "Simo",
+        "Sjundea",
+        "Skalholt",
+        "Skreen",
+        "Sligo",
+        "Slite",
+        "Snowdon",
+        "Socksjock",
+        "Sodankyla",
+        "Sorsele",
+        "Sotkamo",
+        "Stensele",
+        "Storkyro",
+        "Strabane",
+        "Suomussalmi",
+        "Suonikyla",
+        "Swansea",
+        "Sysma",
+        "Taivalkoski",
+        "Tarna",
+        "Tavastehus",
+        "Thingvellir",
+        "Tipperary",
+        "Torshofn",
+        "Tralee",
+        "Tuam",
+        "Tullamore",
+        "Uleaborg",
+        "Utajarvi",
+        "Utsjoki",
+        "Vattnajokull",
+        "Viitasaari",
+        "Visby",
+        "Volgsjo",
+        "Vopnafjordur",
+        "Vora",
+        "Waterford",
+        "Wexford",
+        "Wicklow",
+        "Wicklow_Mountains",
+        "Youghal"
+      ]
+    },
+    "precedenceIds": [],
+    "layerNames": [
+      "Ulster gaélico · 1200–1602 · revisión Atlántico norte 1",
+      "Irlanda · 1603–1800 · revisión Atlántico norte 2",
+      "Carelia y Kainuu · 1200–1616 · revisión Atlántico norte 3",
+      "Suecia · 1617–1800 · revisión Atlántico norte 4",
+      "Irlanda · 1200–1540 · revisión Atlántico norte 5",
+      "Irlanda · 1541–1650 · revisión Atlántico norte 6",
+      "Irlanda · 1651–1800 · revisión Atlántico norte 7",
+      "Connacht · 1200–1274 · revisión Atlántico norte 8",
+      "Connacht · 1275–1602 · revisión Atlántico norte 9",
+      "Connacht · 1275–1538 · revisión Atlántico norte 10",
+      "Irlanda · 1603–1650 · revisión Atlántico norte 11",
+      "Irlanda · 1603–1626 · revisión Atlántico norte 12",
+      "Irlanda · 1630–1650 · revisión Atlántico norte 13",
+      "Irlanda · 1200–1519 · revisión Atlántico norte 14",
+      "Condado de Desmond · 1520–1583 · revisión Atlántico norte 15",
+      "Irlanda · 1584–1650 · revisión Atlántico norte 16",
+      "Desmond · 1207–1557 · revisión Atlántico norte 17",
+      "Desmond · 1597–1602 · revisión Atlántico norte 18",
+      "Irlanda · 1603–1650 · revisión Atlántico norte 19",
+      "Comunidades finesas · 1200–1322 · revisión Atlántico norte 20",
+      "Suecia · 1323–1800 · revisión Atlántico norte 21",
+      "Comunidades finesas · 1200–1249 · revisión Atlántico norte 22",
+      "Gales · 1200–1282 · revisión Atlántico norte 23",
+      "Gotland y Visby · 1200–1360 · revisión Atlántico norte 24",
+      "Gotland y Visby · 1394–1397 · revisión Atlántico norte 25",
+      "Prusia de la Orden · 1398–1407 · revisión Atlántico norte 26",
+      "Groenlandia nórdica · 1200–1260 · revisión Atlántico norte 27",
+      "Noruega · 1261–1449 · revisión Atlántico norte 28",
+      "Groenlandia inuit · 1450–1720 · revisión Atlántico norte 29",
+      "Dinamarca · 1721–1800 · revisión Atlántico norte 30",
+      "Mancomunidad islandesa · 1200–1263 · revisión Atlántico norte 31",
+      "Islas sin autoridad política documentada · 1200–1800 · revisión Atlántico norte 32",
+      "Carelia y Kainuu · 1200–1603 · revisión Atlántico norte 33",
+      "Suecia · 1604–1800 · revisión Atlántico norte 34",
+      "República de Nóvgorod · 1200–1477 · revisión Atlántico norte 35",
+      "Rusia · 1478–1800 · revisión Atlántico norte 36",
+      "Laponia · 1200–1750 · revisión Atlántico norte 37",
+      "Suecia · 1751–1800 · revisión Atlántico norte 38",
+      "Laponia · 1200–1750 · revisión Atlántico norte 39",
+      "Noruega · 1751–1800 · revisión Atlántico norte 40",
+      "Irlanda · 1200–1346 · revisión Atlántico norte 41",
+      "Leinster · 1347–1602 · revisión Atlántico norte 42",
+      "Irlanda · 1603–1650 · revisión Atlántico norte 43",
+      "Reino de Man y las Islas · 1200–1265 · revisión Atlántico norte 44",
+      "Escocia · 1266–1289 · revisión Atlántico norte 45",
+      "Inglaterra · 1290–1312 · revisión Atlántico norte 46",
+      "Escocia · 1313–1345 · revisión Atlántico norte 47",
+      "Inglaterra · 1346–1405 · revisión Atlántico norte 48",
+      "Señorío de Man · 1651–1764 · revisión Atlántico norte 49",
+      "Gran Bretaña · 1765–1800 · revisión Atlántico norte 50",
+      "Irlanda · 1200–1540 · revisión Atlántico norte 51",
+      "Irlanda · 1200–1454 · revisión Atlántico norte 52",
+      "Irlanda · 1535–1540 · revisión Atlántico norte 53",
+      "Irlanda · 1541–1650 · revisión Atlántico norte 54",
+      "Irlanda · 1541–1553 · revisión Atlántico norte 55",
+      "Irlanda · 1586–1650 · revisión Atlántico norte 56",
+      "Irlanda · 1200–1538 · revisión Atlántico norte 57",
+      "Irlanda · 1541–1650 · revisión Atlántico norte 58",
+      "Thomond · 1200–1497 · revisión Atlántico norte 59",
+      "Thomond · 1554–1602 · revisión Atlántico norte 60",
+      "Irlanda · 1603–1650 · revisión Atlántico norte 61",
+      "Tír Chonaill · 1200–1565 · revisión Atlántico norte 62",
+      "Irlanda · 1608–1650 · revisión Atlántico norte 63",
+      "Tír Eoghain · 1200–1606 · revisión Atlántico norte 64",
+      "Irlanda · 1607–1800 · revisión Atlántico norte 65",
+      "Irlanda · 1607–1650 · revisión Atlántico norte 66",
+      "Irlanda · 1608–1650 · revisión Atlántico norte 67",
+      "Condado de Ulster · 1200–1263 · revisión Atlántico norte 68",
+      "Ulster gaélico · 1327–1602 · revisión Atlántico norte 69",
+      "Irlanda · 1603–1650 · revisión Atlántico norte 70"
+    ],
+    "limitations": [
+      "Solo se colorean los años en que ninguna otra capa del Atlas cubre la celda: la revisión no sustituye a las anteriores.",
+      "Las zonas agrupan señoríos gaélicos, principados galeses y tierras sami que el mapa no separa; las notas los nombran.",
+      "Los cortes anuales son convencionales y la precisión es regional."
     ]
   }
 }
