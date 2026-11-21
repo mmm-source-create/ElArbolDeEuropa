@@ -43,7 +43,8 @@ export function territorialColor(name) {
   if (['Holanda', 'Provincias Unidas', 'República Bátava'].includes(territorialIdentity(name))) return ORANGE_NASSAU;
   if (territorialIdentity(name) === 'Islas sin autoridad política documentada') return '#8d9da0';
   const hash = fnv1a(territorialIdentity(name));
-  return `hsl(${(hash % 36000 / 100).toFixed(2)} ${58 + hash % 17}% ${40 + (hash >>> 8) % 10}%)`;
+  // 6.0.12: muted like the curated palette (it was 58–75% saturated).
+  return `hsl(${(hash % 36000 / 100).toFixed(2)} ${44 + hash % 13}% ${42 + (hash >>> 8) % 11}%)`;
 }
 
 export function continuityJurisdictions(names, territory, year, personId) {

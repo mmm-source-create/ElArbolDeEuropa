@@ -53,3 +53,27 @@ export function authorityColor(entry, territorialColor) {
       || /gobernador|regente|virrey/i.test(government?.titulo || '')) return '#907085';
   return territorialColor;
 }
+
+// 6.0.12: the common map's colours, harmonised. Regional tables use colours up
+// to 90% saturated; capping saturation and keeping lightness in a middle band
+// makes them read as one palette while keeping each hue.
+const HARMONY_CACHE = new Map();
+export function harmonizeMapColor(color) {
+  if (typeof color !== 'string') return color;
+  if (HARMONY_CACHE.has(color)) return HARMONY_CACHE.get(color);
+  let h, s, l;
+  const hsl = color.match(/^hsl\(\s*([\d.]+)[ ,]+([\d.]+)%[ ,]+([\d.]+)%\s*\)$/i);
+  if (hsl) [h, s, l] = [Number(hsl[1]), Number(hsl[2]) / 100, Number(hsl[3]) / 100];
+  else if (/^#[0-9a-f]{3}([0-9a-f]{3})?$/i.test(color)) {
+    const hex = color.length === 4 ? [...color.slice(1)].map(c => c + c).join('') : color.slice(1);
+    const [r, g, b] = [0, 2, 4].map(i => parseInt(hex.slice(i, i + 2), 16) / 255);
+    const max = Math.max(r, g, b), min = Math.min(r, g, b);
+    l = (max + min) / 2; s = max === min ? 0 : (max - min) / (1 - Math.abs(2 * l - 1));
+    h = max === min ? 0 : max === r ? 60 * (((g - b) / (max - min)) % 6) : max === g ? 60 * ((b - r) / (max - min) + 2) : 60 * ((r - g) / (max - min) + 4);
+    if (h < 0) h += 360;
+  } else { HARMONY_CACHE.set(color, color); return color; }
+  const S = Math.min(s, .48), L = Math.min(Math.max(l, .36), .58);
+  const out = (S === s && L === l) ? color : `hsl(${h.toFixed(1)} ${(S * 100).toFixed(1)}% ${(L * 100).toFixed(1)}%)`;
+  HARMONY_CACHE.set(color, out);
+  return out;
+}

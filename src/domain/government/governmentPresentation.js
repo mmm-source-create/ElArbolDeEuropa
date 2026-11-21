@@ -12,6 +12,8 @@ const cache=new WeakMap();
 
 // This is a presentation of existing dated mandates, never a change of title,
 // ownership or border. Sovereigns and their delegates remain distinct rows.
+// Rank of a title for choosing a sovereign's main realm (6.0.12).
+const RANK={imperio:7,reinado:6,zarato:6,sultanato:6,gran_ducado:5,electorado:5,ducado:4,principado:4,despotado:4,voivodato:4,marquesado:3,landgraviato:3,margraviato:3,condado:2,vizcondado:2,señorío:1};
 export function governmentGroupsAt(person, year, {view = 'personal'} = {}) {
  if (!person || !Number.isInteger(year)) return [];
  const cacheKey=`${view}:${year}`;
@@ -34,6 +36,19 @@ export function governmentGroupsAt(person, year, {view = 'personal'} = {}) {
    color:inner?REINO_COLOR['Austria Interior']:republican?ORANGE_NASSAU:group?.color || colorTerritorioEnMapa(person,mandate.territorio,year),
    unionParts:group?.partesUnion || null,note:group?.nota || '',source:group?.fuente || null,mandates:[]});
   result.get(key).mandates.push(mandate);
+ }
+ // 6.0.12: on the common map one sovereign is one foreign policy. Every realm
+ // a person rules effectively in that year takes the colour of the main group:
+ // highest title, then most territories, then the earliest held. The Empire is a dignity above
+ // the territories, and republican offices are not personal sovereignty.
+ if(view==='panorama'){
+  const sovereign=[...result.values()].filter(g=>g.kind==='sovereign'&&!['sacro-imperio','provincias-unidas'].includes(g.id));
+  if(sovereign.length>1){
+   const first=g=>Math.min(...g.mandates.map(m=>m.desde));
+   const rank=g=>Math.max(...g.mandates.map(m=>RANK[m.clase]||1));
+   const primary=[...sovereign].sort((a,b)=>rank(b)-rank(a)||b.mandates.length-a.mandates.length||first(a)-first(b)||a.id.localeCompare(b.id))[0];
+   for(const group of sovereign)if(group!==primary){group.color=primary.color;group.sharedSovereign=primary.id;}
+  }
  }
  if(!cache.has(person))cache.set(person,new Map());
  const years=cache.get(person);if(years.size>=4)years.delete(years.keys().next().value);
