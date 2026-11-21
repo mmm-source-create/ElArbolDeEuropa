@@ -220,7 +220,7 @@ export function CatalogPage({ tipo, locale='es', initialData=null, embedded=fals
         {!loading && !error && tipo === "personas" && (
           <>
             <div className="public-catalog-note">{filtrados.length} {filtrados.length === 1 ? tr("persona","person") : tr("personas","people")}{orden === "destacadas" && !query.trim() ? tr(" · las más relevantes primero: con retrato, biografía extensa y gobiernos registrados"," · most relevant first: portraits, extended biographies and recorded governments") : ""}</div>
-            <p className="public-catalog-note"><a href={en?"/en/people/index":"/es/personas/indice"}>{tr("Ver todas las personas en el índice de la A a la Z","See everyone in the A–Z index")}</a></p>
+            <p className="public-catalog-note"><a href={en?"/en/people/a-z":"/es/personas/indice"}>{tr("Ver todas las personas en el índice de la A a la Z","See everyone in the A–Z index")}</a></p>
             <div className="public-person-list">{visibles.map((persona) => <PersonaMiniCard key={persona.id} persona={persona} compact locale={locale}/>)}</div>
             {visibles.length < filtrados.length && <button type="button" className="public-secondary people-more" onClick={() => setLimite(n => n + 120)}>{tr("Ver más","Show more")} ({filtrados.length - visibles.length} {tr("restantes","remaining")})</button>}
             {!filtrados.length && <p className="public-muted">{tr("Ninguna persona coincide con estos filtros.","No people match these filters.")}</p>}

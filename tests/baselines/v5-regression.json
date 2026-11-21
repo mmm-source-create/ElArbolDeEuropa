@@ -9229,7 +9229,7 @@
       "/en/licences": "75b72aa41803fff9f5d4696ce286c80fda31e9944b61b26b41c2cd9ed5d2b17b",
       "/en/methodology": "74aa3920e5c3a1fcd06b7d43008ce086dc91ba330a9a125b5b81c1796d68db79",
       "/en/people": "aa245e3fa096dfd2852386f3c207f214bc348e8305a9c16c42ea8c4315c6455b",
-      "/en/people/index": "a348ac35fd90fc40278e4e48f785825ed2a4652602b5fcdedba48a6caecf8ecf",
+      "/en/people/a-z": "a348ac35fd90fc40278e4e48f785825ed2a4652602b5fcdedba48a6caecf8ecf",
       "/en/person/abd-al-wahid-al-rashid": "24c6b81a4842e75487935d6c26fcf899bb7a96f5a34976863d2ebca1d296a771",
       "/en/person/abd-allah-al-adil": "6768f049df65305d41a6532688945d410ac3bc11323f4acd6cda672aca4e3551",
       "/en/person/abdulhamid-i": "6b365602d547719a32a7f7009f73cb8a9fc3bf9355d6acf11b9403af0fdaf163",
@@ -18876,7 +18876,7 @@
       "/en/licences",
       "/en/methodology",
       "/en/people",
-      "/en/people/index",
+      "/en/people/a-z",
       "/en/person/abd-al-wahid-al-rashid",
       "/en/person/abd-allah-al-adil",
       "/en/person/abdulhamid-i",
@@ -28000,6 +28000,6 @@
     ],
     "tree": "ebc72066eb66dfa4873fcaa2de789f77c2601e58893a46a6ba842e383f2016bd"
   },
-  "reason": "6.0.10: portada estática sin la persona del día, que se elige en el navegador",
+  "reason": "6.0.10: índice A–Z inglés en /en/people/a-z",
   "schema": 1
 }

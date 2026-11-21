@@ -20,7 +20,7 @@ test('the Spanish home, catalogues and A–Z indexes are static pages', () => {
   assert.equal(initialPageForLocation(home, '/es/', '?ref=x'), home);
   // The SPA keeps the Atlas, its panels and legacy ?persona= links.
   for (const search of ['?atlas=1', '?panel=desafio', '?persona=CARLOS5']) assert.equal(initialPageForLocation(home, '/es', search), null);
-  const index = {schema: STATIC_SCHEMA, ...staticRoute('/en/people/index'), data: {nombre: 'People index', slug: 'index-en', items: [{n: 'Charles V', p: '/en/person/charles-v'}]}};
+  const index = {schema: STATIC_SCHEMA, ...staticRoute('/en/people/a-z'), data: {nombre: 'People index', slug: 'index-en', items: [{n: 'Charles V', p: '/en/person/charles-v'}]}};
   assert.equal(validatePage(index), true);
   assert.equal(validatePage({...index, data: {...index.data, items: []}}), false);
 });

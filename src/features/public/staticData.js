@@ -6,7 +6,7 @@ export const STATIC_FOLDERS = {persona:'personas-meta',dinastia:'dinastias-meta'
 // 6.0.10: the Spanish home, its catalogues and the A–Z people index (both
 // languages) are also served as static HTML, so that every record is reachable
 // through plain links. Slug = data file in /catalogos.
-export const CATALOG_ROUTES = Object.freeze({'/es':'inicio','/es/personas':'personas','/es/dinastias':'dinastias','/es/territorios':'territorios','/es/historias':'historias','/es/personas/indice':'indice','/en/people/index':'index-en'});
+export const CATALOG_ROUTES = Object.freeze({'/es':'inicio','/es/personas':'personas','/es/dinastias':'dinastias','/es/territorios':'territorios','/es/historias':'historias','/es/personas/indice':'indice','/en/people/a-z':'index-en'});
 export function staticRoute(pathname) {
  const clean=String(pathname).replace(/(.)\/$/,'$1');
  if(Object.hasOwn(CATALOG_ROUTES,clean))return {kind:'catalogo',slug:CATALOG_ROUTES[clean],chapter:null,path:clean};

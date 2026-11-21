@@ -12,7 +12,7 @@ export async function prepareCloudflare(source='dist', target='.cloudflare/asset
   const index={};let reused=0;
   for(const item of report.pages.filter(p=>p.path.startsWith('/en'))){
     const html=await fs.readFile(path.join(source,item.path,'index.html'),'utf8');
-    // Only the English edition's pages; the A–Z index (/en/people/index) is a
+    // Only the English edition's pages; the A–Z index (/en/people/a-z) is a
     // catalogue page. Read from the HTML: this script runs before generation.
     if(!/<script id="eade-initial-page" type="application\/json">\{"schema":2,"kind":"english"/.test(html))continue;
     const data=metadataFromHtml(html,item.path);
@@ -39,7 +39,9 @@ export async function prepareCloudflare(source='dist', target='.cloudflare/asset
   // These public sections use the existing client app. Profiles/chapters retain SSG.
   const shell=await fs.readFile(path.join(source,'index.html'),'utf8');
   const shells=['/es','/es/personas','/es/dinastias','/es/territorios','/es/historias','/es/desafio','/es/proyecto','/es/fuentes','/es/licencias','/es/agradecimientos','/es/privacidad','/en/privacy'];
-  for(const route of shells){const dir=path.join(target,route);await fs.mkdir(dir,{recursive:true});await fs.writeFile(path.join(dir,'index.html'),shell);}
+  // 6.0.10: the Spanish home and catalogues are static pages now; never replace a
+  // generated page with the shell.
+  for(const route of shells){const dir=path.join(target,route),file=path.join(dir,'index.html');if(await fs.access(file).then(()=>true,()=>false))continue;await fs.mkdir(dir,{recursive:true});await fs.writeFile(file,shell);}
   await fs.writeFile(path.join(target,'cloudflare-meta-index.json'),JSON.stringify(index));
   await fs.writeFile(path.join(target,'_headers'),staticHeadersFile());
   const files=[];
