@@ -4,7 +4,7 @@ const wiki = (lang, label, title) => ({
   titulo:`Wikipedia en ${lang} · ${label}`,
   url:`https://${lang === 'inglés' ? 'en' : 'es'}.wikipedia.org/wiki/${encodeURIComponent(title.replace(/ /g,'_')).replace(/%2C/g,',').replace(/%28/g,'(').replace(/%29/g,')')}`,
 });
-export const GOVERNORS_LIST = {titulo:'Wikipedia en inglés · List of governors of the Habsburg Netherlands',url:'https://en.wikipedia.org/wiki/List_of_governors_of_the_Habsburg_Netherlands'};
+export const GOVERNORS_LIST = {titulo:'Encyclopaedia Britannica · Spanish Netherlands',url:'https://www.britannica.com/place/Spanish-Netherlands'};
 const en = (label, title = label) => wiki('inglés', label, title);
 const es = (label, title = label) => wiki('español', label, title);
 

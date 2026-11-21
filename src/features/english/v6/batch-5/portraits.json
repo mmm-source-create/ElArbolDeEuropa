@@ -2,7 +2,7 @@
   "CARLOS1ING": {
     "tipo": "Historical portrait",
     "alt": "Portrait of Charles I of England",
-    "obra": "Carlos I",
+    "obra": "Charles I",
     "autor": "Anton van Dyck",
     "fecha": "1636",
     "institucion": "Royal Collection"
@@ -25,79 +25,79 @@
   "ISABELHAB": {
     "tipo": "Historical portrait",
     "alt": "Portrait of Elisabeth of Habsburg",
-    "obra": "Isabel de Habsburgo · serie de retratos dinásticos",
+    "obra": "Isabel de Habsburgo · series of dynastic portraits",
     "autor": "Antoni Boys (Anton Waiss)",
-    "fecha": "siglo XVI",
-    "institucion": "Kunsthistorisches Museum, Viena"
+    "fecha": "16th century",
+    "institucion": "Kunsthistorisches Museum, Vienna"
   },
   "CUNIGAUSTRIABAV": {
     "tipo": "Historical portrait",
     "alt": "Portrait of Kunigunde of Austria",
-    "obra": "Cunegunda de Austria · serie de retratos dinásticos",
+    "obra": "Cunegunda de Austria · series of dynastic portraits",
     "autor": "Antoni Boys (Anton Waiss)",
-    "fecha": "siglo XVI",
-    "institucion": "Kunsthistorisches Museum, Viena"
+    "fecha": "16th century",
+    "institucion": "Kunsthistorisches Museum, Vienna"
   },
   "JUDH": {
     "tipo": "Historical portrait",
     "alt": "Portrait of Judith of Habsburg",
-    "obra": "Judit de Habsburgo · serie de retratos dinásticos",
+    "obra": "Judit de Habsburgo · series of dynastic portraits",
     "autor": "Antoni Boys (Anton Waiss)",
-    "fecha": "siglo XVI",
-    "institucion": "Kunsthistorisches Museum, Viena"
+    "fecha": "16th century",
+    "institucion": "Kunsthistorisches Museum, Vienna"
   },
   "ALB4AUST": {
     "tipo": "Historical portrait",
     "alt": "Portrait of Albert IV of Austria",
-    "obra": "Albert IV of Austria · serie de retratos dinásticos",
+    "obra": "Albert IV of Austria · series of dynastic portraits",
     "autor": "Antoni Boys (Anton Waiss)",
-    "fecha": "siglo XVI",
-    "institucion": "Kunsthistorisches Museum, Viena"
+    "fecha": "16th century",
+    "institucion": "Kunsthistorisches Museum, Vienna"
   },
   "ESTEBV": {
     "tipo": "Historical portrait",
     "alt": "Portrait of Stephen V of Hungary",
-    "obra": "Esteban V · Chronica Hungarorum",
+    "obra": "Stephen V · Chronica Hungarorum",
     "autor": "Ilustrador anónimo de la Chronica Hungarorum de Johannes de Thurocz",
     "fecha": "1488"
   },
   "MARGTYROL": {
     "tipo": "Historical portrait",
     "alt": "Portrait of Margaret of Tyrol",
-    "obra": "Margarita de Tirol · inscripción «Margareta Henrici … filia»; el archivo Commons se titula Katharina of Bohemia",
+    "obra": "Margarita of Tyrol · inscription “Margareta Henrici … filia”; the Commons file is titled Katharina of Bohemia",
     "autor": "Antoni Boys (Anton Waiss)",
-    "fecha": "siglo XVI",
-    "institucion": "Kunsthistorisches Museum, Viena"
+    "fecha": "16th century",
+    "institucion": "Kunsthistorisches Museum, Vienna"
   },
   "JUAN1ZAPOLYA": {
     "tipo": "Historical portrait",
     "alt": "Portrait of John Zápolya",
-    "obra": "Juan I Zápolya · xilografía",
+    "obra": "John I Zápolya · xilografía",
     "autor": "Erhard Schön",
-    "fecha": "siglo XVI"
+    "fecha": "16th century"
   },
   "IGNACIOLOYOLA": {
     "tipo": "Historical portrait",
     "alt": "Portrait of Ignatius of Loyola",
     "obra": "Ignatius of Loyola",
     "autor": "Anónimo",
-    "fecha": "siglo XVI"
+    "fecha": "16th century"
   },
   "BEATRIXNUREMBERG": {
     "tipo": "Historical portrait",
     "alt": "Portrait of Beatrice of Nuremberg",
-    "obra": "Beatriz de Núremberg · serie de retratos dinásticos",
+    "obra": "Beatriz de Núremberg · series of dynastic portraits",
     "autor": "Antoni Boys (Anton Waiss)",
-    "fecha": "siglo XVI",
-    "institucion": "Kunsthistorisches Museum, Viena"
+    "fecha": "16th century",
+    "institucion": "Kunsthistorisches Museum, Vienna"
   },
   "JOHANNAPFIRT": {
     "tipo": "Historical portrait",
     "alt": "Portrait of Joanna of Pfirt",
-    "obra": "Juana de Pfirt · serie de retratos dinásticos",
+    "obra": "Juana de Pfirt · series of dynastic portraits",
     "autor": "Antoni Boys (Anton Waiss)",
-    "fecha": "siglo XVI",
-    "institucion": "Kunsthistorisches Museum, Viena"
+    "fecha": "16th century",
+    "institucion": "Kunsthistorisches Museum, Vienna"
   },
   "PAPA_INOCENCIO13": {
     "tipo": "Historical portrait",
@@ -109,7 +109,7 @@
   "PAPA_CELESTINO5": {
     "tipo": "Historical portrait",
     "alt": "Portrait of Celestine V",
-    "obra": "Celestino V con monjes, tabla central de un tríptico",
+    "obra": "Celestine V con monjes, tabla central de un tríptico",
     "autor": "Niccolò di Tommaso",
     "fecha": "s. XIV",
     "institucion": "Castel Nuovo, Nápoles"
@@ -132,7 +132,7 @@
   "PAPA_JUAN22": {
     "tipo": "Historical portrait",
     "alt": "Portrait of John XXII",
-    "obra": "Juan XXII",
+    "obra": "John XXII",
     "autor": "Iluminador anónimo",
     "fecha": "s. XIV",
     "institucion": "Archivo iconográfico del Palais du Roure, Aviñón"

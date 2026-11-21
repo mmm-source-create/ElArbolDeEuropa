@@ -1,7 +1,7 @@
 {
   "name": "el-arbol-de-europa",
   "private": true,
-  "version": "6.0.15",
+  "version": "6.0.16",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -48,6 +48,7 @@
     "audit:political-unions": "node --import ./tests/jsx-loader.mjs scripts/audits/audit-political-unions.mjs",
     "audit:royal-successions": "node scripts/audits/audit-royal-successions.mjs",
     "audit:names": "node scripts/audits/audit-person-names.mjs",
+    "audit:english-parity": "node scripts/audits/audit-english-parity.mjs --write",
     "pretest": "node scripts/generate/generate-english-v6-runtime.mjs && node scripts/generate/generate-tree-base.mjs && node scripts/generate/generate-territorios.mjs && node scripts/generate/generate-dinastias.mjs && node scripts/generate/generate-historias.mjs && node scripts/generate/generate-english.mjs && node scripts/generate/generate-home-search.mjs && node scripts/generate/generate-home.mjs",
     "audit:stories": "node scripts/audits/audit-story-editorial.mjs",
     "build:cloudflare": "node scripts/build-cloudflare.mjs",

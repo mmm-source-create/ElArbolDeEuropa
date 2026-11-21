@@ -27,11 +27,14 @@ export default function EnglishEntity({data:d}){
   <nav className="public-breadcrumbs" aria-label="Breadcrumb"><a href="/en">Home</a><span>›</span><a href={dynasty?'/en/dynasties':'/en/territories'}>{dynasty?'Dynasties':'Territories'}</a><span>›</span><span aria-current="page">{d.nombre}</span></nav>
   <header className={`public-page-title ${dynasty?'dynasty-hero':'territory-hero'}`}>
    {d.arms?<figure className="dynasty-hero-figure"><DynastyArms dinastia={d.key} size={76} locale="en"/></figure>:<div className="public-page-icon"><Icon size={22}/></div>}
-   <span>{dynasty?'Houses and lineages':'Historical territory'}</span><h1>{d.nombre}</h1><p>{d.resumen}</p>
+   <span>{dynasty?'Houses and lineages':d.naturaleza==='agrupacion'?'Exploration grouping':d.naturaleza==='compuesta'?'Composite entity':'Historical territory'}</span><h1>{d.nombre}</h1><p>{d.resumen}</p>
    {d.arms?.blazon&&<p className="dynasty-blazon"><b>{nombreEmblema(escudoDe(d.key),'en')}.</b> {d.arms.blazon}<small> {d.arms.note}</small></p>}
    {dynasty&&<div className="dynasty-counts"><span><b>{d.total}</b> recorded people</span><span><b>{d.ramas.length}</b> documented {d.ramas.length===1?'connection':'connections'}</span></div>}
    <a className="public-primary" href={`/en/?atlas=1&${dynasty?'dinastia':'territorio'}=${encodeURIComponent(d.key)}`}>Explore in the Atlas <ArrowRight size={15}/></a>
   </header>
+  {!dynasty&&d.nota&&<p>{d.nota}</p>}
+  {!dynasty&&!!d.pertenencias?.length&&<p>{d.pertenencias.map((v,i)=><span key={i}>Part of <EntityLink kind="territorio" name={v.key} label={v.name}/> from {v.desde}. </span>)}</p>}
+  {!dynasty&&d.naturaleza&&d.naturaleza!=='entidad'&&!!d.componentes?.length&&<section><h2>Territories in this group</h2><p>Each component keeps its own titles and chronology. This grouping does not establish continuous sovereignty over all of them.</p><div className="territory-links">{d.componentes.map(c=><EntityLink key={c.key} kind="territorio" name={c.key} label={c.name}/>)}</div></section>}
   {dynasty&&<>
    <nav className="dynasty-nav" aria-label="Dynasty sections"><a href="#houses">Parent houses and branches</a><a href="#history">History of the house</a><a href="#members">People</a><a href="#sources">Bibliography</a></nav>
    <section id="houses" className="public-section"><SectionHeading eyebrow="Genealogy, inheritance and alliances">Parent houses and branches</SectionHeading><p className="dynasty-intro">Descent, marriage and inheritance connect houses in different ways. Each documented link retains its own explanation.</p>

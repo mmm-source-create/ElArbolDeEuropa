@@ -28,7 +28,7 @@
         "Países Bajos",
         "Habsburgo",
         "Alemania",
-        "Ducado de Estiria",
+        "Ducado of Styria",
         "Carintia",
         "Carniola",
         "Tirol",
@@ -45,7 +45,7 @@
         "Zelanda",
         "Namur",
         "Luxemburgo",
-        "Condado de Borgoña",
+        "Condado of Burgundy",
         "Artois",
         "Castilla",
         "León",
@@ -1264,7 +1264,7 @@
           }
         },
         {
-          "territorio": "Ducado de Estiria",
+          "territorio": "Ducado of Styria",
           "desde": 1282,
           "hasta": 1308,
           "titulo": "Duke",
@@ -1289,7 +1289,7 @@
           "titulo": "Duke",
           "clase": "Duchy",
           "condicion": "co-regent",
-          "nota": "Invested with his brother Alberto I in 1282; resigned by the treaty of Rheinfelden (1283).",
+          "nota": "Invested with his brother Albert I in 1282; resigned by the treaty of Rheinfelden (1283).",
           "persona": {
             "id": "ROD2HAB",
             "nombre": "Rudolf II of Habsburg",
@@ -1381,7 +1381,7 @@
           }
         },
         {
-          "territorio": "Ducado de Estiria",
+          "territorio": "Ducado of Styria",
           "desde": 1308,
           "hasta": 1330,
           "titulo": "Duke",
@@ -1455,7 +1455,7 @@
           }
         },
         {
-          "territorio": "Ducado de Estiria",
+          "territorio": "Ducado of Styria",
           "desde": 1330,
           "hasta": 1358,
           "titulo": "Duke",
@@ -1590,7 +1590,7 @@
           }
         },
         {
-          "territorio": "Ducado de Estiria",
+          "territorio": "Ducado of Styria",
           "desde": 1358,
           "hasta": 1365,
           "titulo": "Duke",
@@ -1713,7 +1713,7 @@
           }
         },
         {
-          "territorio": "Ducado de Estiria",
+          "territorio": "Ducado of Styria",
           "desde": 1365,
           "hasta": 1378,
           "titulo": "Duke",
@@ -1789,7 +1789,7 @@
           }
         },
         {
-          "territorio": "Ducado de Estiria",
+          "territorio": "Ducado of Styria",
           "desde": 1365,
           "hasta": 1378,
           "titulo": "Duke",
@@ -2645,7 +2645,7 @@
           }
         },
         {
-          "territorio": "Condado de Borgoña",
+          "territorio": "Condado of Burgundy",
           "desde": 1493,
           "hasta": 1506,
           "titulo": "Count",
@@ -2790,7 +2790,7 @@
           }
         },
         {
-          "territorio": "Condado de Borgoña",
+          "territorio": "Condado of Burgundy",
           "desde": 1506,
           "hasta": 1555,
           "titulo": "Count",
@@ -4450,7 +4450,7 @@
           }
         },
         {
-          "territorio": "Condado de Borgoña",
+          "territorio": "Condado of Burgundy",
           "desde": 1556,
           "hasta": 1598,
           "titulo": "Count",
@@ -4558,7 +4558,7 @@
           "titulo": "Emperor",
           "clase": "empire",
           "condicion": "holder",
-          "nota": "He retained the title until the voters, gathered in Frankfurt in February 1558, accepted the resignation and recognized Fernando.",
+          "nota": "He retained the title until the electors, gathered in Frankfurt in February 1558, accepted the resignation and recognized Fernando.",
           "persona": {
             "id": "CARLOS5",
             "nombre": "Charles V",
@@ -4736,7 +4736,7 @@
           "titulo": "Archduke",
           "clase": "archiducado",
           "condicion": "Cash",
-          "nota": "Rama danubiana after the partition of Fernando I; did not include Tyrol or Austria Interior.",
+          "nota": "Rama danubiana after the partition of Ferdinand I; did not include Tyrol or Austria Interior.",
           "persona": {
             "id": "MAXIM2",
             "nombre": "Maximilian II",
@@ -6759,7 +6759,7 @@
           }
         },
         {
-          "territorio": "Condado de Borgoña",
+          "territorio": "Condado of Burgundy",
           "desde": 1621,
           "hasta": 1665,
           "titulo": "Count",
@@ -7029,7 +7029,7 @@
           "titulo": "King",
           "clase": "reign",
           "condicion": "co-regent",
-          "nota": "Crowned in the life of Fernando III; it is not interpreted as an exclusive succession.",
+          "nota": "Crowned in the life of Ferdinand III; it is not interpreted as an exclusive succession.",
           "persona": {
             "id": "FERN4BOH",
             "nombre": "Ferdinand IV of Bohemia",
@@ -7698,7 +7698,7 @@
           }
         },
         {
-          "territorio": "Condado de Borgoña",
+          "territorio": "Condado of Burgundy",
           "desde": 1665,
           "hasta": 1673,
           "titulo": "Count",
@@ -8513,7 +8513,7 @@
           "titulo": "Governor",
           "clase": "Government",
           "condicion": "delegated Government",
-          "nota": "Delegate Governor of Carlos VI, different from the sovereign and ducal ownership of each province.",
+          "nota": "Delegate Governor of Charles VI, different from the sovereign and ducal ownership of each province.",
           "soberano": "CARLOS6HRE",
           "persona": {
             "id": "MARIAELISABGOV",

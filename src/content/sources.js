@@ -19,6 +19,7 @@ import {GERMAN_PRINCES_SOURCES} from './sources-german-princes.js';
 import {GERMANY_COMPLETION_SOURCES} from './sources-germany-completion.js';
 import {GERMAN_SWISS_SOURCES} from './sources-german-swiss.js';
 import {authorityReferences} from '../evidence/authorityReviews.js';
+import {authorityReferences616} from '../evidence/authorityReviews616.js';
 import {ADRIATICO_SOURCES} from "./sources-adriatico-v214.js";
 import {ALPES_SOURCES} from './sources-alpes-v213.js';
 import {V534_SOURCES} from './sources-v534.js';
@@ -145,24 +146,23 @@ export const SOURCES = [
   {titulo:"Treccani · Francesco Pignatelli y su familia",url:"https://www.treccani.it/enciclopedia/francesco-pignatelli_%28Dizionario-Biografico%29/",grupo:"Repertorios principales",territorios:["Estados Pontificios","Nápoles"],personas:["CARD_FRANCESCO_PIGN","GIULIO_PIGN_CERCHIARA","BEATRICE_CARAFA_NOJA","NICOLA_PIGN_VICERE"]},
   // 6.0.15: fuentes de las historias de casas de casas-v615.js.
   {titulo:"Treccani · La Marck",url:"https://www.treccani.it/enciclopedia/la-marck/",grupo:"Casas y filiaciones",territorios:[],personas:["ADOLF1CLEV","JOHN1CLEVES","JOHN3CLEVES","ANNECLEVES","WILHELM5CLEVES","JOHNWILLIAMCLEVES"],nota:"Historia de la casa (6.0.15): La Marck."},
-  {titulo:"Wikipedia · House of La Marck",url:"https://en.wikipedia.org/wiki/House_of_La_Marck",grupo:"Casas y filiaciones",territorios:[],personas:["ADOLF1CLEV","JOHN1CLEVES","JOHN3CLEVES","ANNECLEVES","WILHELM5CLEVES","JOHNWILLIAMCLEVES"],nota:"Historia de la casa (6.0.15): La Marck."},
+  {titulo:"Deutsche Nationalbibliothek · Ficha de autoridad GND · Mark von der, Familie",url:"https://d-nb.info/gnd/141872225",grupo:"Casas y filiaciones",territorios:[],personas:["ADOLF1CLEV","JOHN1CLEVES","JOHN3CLEVES","ANNECLEVES","WILHELM5CLEVES","JOHNWILLIAMCLEVES"],nota:"Historia de la casa (6.0.15): La Marck."},
   {titulo:"Treccani · Valois",url:"https://www.treccani.it/enciclopedia/valois/",grupo:"Casas y filiaciones",territorios:[],personas:["CARLOSANG","MARGANGULEMA","FRAN1FRA","ENRIQ2FRA","CARLOS9FRA","ENRIQ3FRA","LUISORLEANS","CARLOS1ORLEANS","JEANDUNOIS","JUANORLEANS","LUIS12FRA","CLAUDEFRA"],nota:"Historia de la casa (6.0.15): Valois-Angulema, Valois-Orleans."},
-  {titulo:"Wikipedia · House of Valois-Angoulême",url:"https://en.wikipedia.org/wiki/House_of_Valois-Angoul%C3%AAme",grupo:"Casas y filiaciones",territorios:[],personas:["CARLOSANG","MARGANGULEMA","FRAN1FRA","ENRIQ2FRA","CARLOS9FRA","ENRIQ3FRA"],nota:"Historia de la casa (6.0.15): Valois-Angulema."},
+  {titulo:"Encyclopaedia Britannica · House of Valois",url:"https://www.britannica.com/topic/Valois-dynasty",grupo:"Casas y filiaciones",territorios:[],personas:["CARLOSANG","MARGANGULEMA","FRAN1FRA","ENRIQ2FRA","CARLOS9FRA","ENRIQ3FRA","LUISORLEANS","CARLOS1ORLEANS","JEANDUNOIS","JUANORLEANS","LUIS12FRA","CLAUDEFRA"],nota:"Historia de la casa (6.0.15): Valois-Angulema, Valois-Orleans."},
   {titulo:"Treccani · Colonna",url:"https://www.treccani.it/enciclopedia/colonna/",grupo:"Casas y filiaciones",territorios:[],personas:["SCIARRACOLONNA","PAPA_MARTIN5","PROSPCOLONNA","VITTORIACOL","ASCANIOCOLONNA","MARCANTONIO2COL"],nota:"Historia de la casa (6.0.15): Colonna."},
-  {titulo:"Wikipedia · Colonna family",url:"https://en.wikipedia.org/wiki/Colonna_family",grupo:"Casas y filiaciones",territorios:[],personas:["SCIARRACOLONNA","PAPA_MARTIN5","PROSPCOLONNA","VITTORIACOL","ASCANIOCOLONNA","MARCANTONIO2COL"],nota:"Historia de la casa (6.0.15): Colonna."},
-  {titulo:"Wikipedia · Asen dynasty",url:"https://en.wikipedia.org/wiki/Asen_dynasty",grupo:"Casas y filiaciones",territorios:[],personas:["IVANASEN1BUL","KALOYANBUL","BORILBUL","IVANASEN2BUL","MICHAEL2ASENBUL","IVANASEN3BUL"],nota:"Historia de la casa (6.0.15): Asen."},
+  {titulo:"Encyclopaedia Britannica · House of Colonna",url:"https://www.britannica.com/topic/Colonna-family",grupo:"Casas y filiaciones",territorios:[],personas:["SCIARRACOLONNA","PAPA_MARTIN5","PROSPCOLONNA","VITTORIACOL","ASCANIOCOLONNA","MARCANTONIO2COL"],nota:"Historia de la casa (6.0.15): Colonna."},
+  {titulo:"Encyclopaedia Britannica · Second Bulgarian Empire",url:"https://www.britannica.com/place/Second-Bulgarian-empire",grupo:"Casas y filiaciones",territorios:[],personas:["IVANASEN1BUL","KALOYANBUL","BORILBUL","IVANASEN2BUL","MICHAEL2ASENBUL","IVANASEN3BUL"],nota:"Historia de la casa (6.0.15): Asen."},
   {titulo:"Treccani · Bisanzio",url:"https://www.treccani.it/enciclopedia/bisanzio/",grupo:"Casas y filiaciones",territorios:[],personas:["IVANASEN1BUL","KALOYANBUL","BORILBUL","IVANASEN2BUL","MICHAEL2ASENBUL","IVANASEN3BUL"],nota:"Historia de la casa (6.0.15): Asen."},
-  {titulo:"Wikipedia · House of Poitiers",url:"https://en.wikipedia.org/wiki/House_of_Poitiers",grupo:"Casas y filiaciones",territorios:[],personas:["BOHEMOND3ANT","BOHEMOND4ANT","BOHEMOND5ANT","BOHEMOND6ANT","PLAISANCEANT","BOHEMOND7TRIP"],nota:"Historia de la casa (6.0.15): Poitiers-Antioquía."},
-  {titulo:"Wikipedia · Principality of Antioch",url:"https://en.wikipedia.org/wiki/Principality_of_Antioch",grupo:"Casas y filiaciones",territorios:[],personas:["BOHEMOND3ANT","BOHEMOND4ANT","BOHEMOND5ANT","BOHEMOND6ANT","PLAISANCEANT","BOHEMOND7TRIP"],nota:"Historia de la casa (6.0.15): Poitiers-Antioquía."},
+  {titulo:"Encyclopaedia Britannica · Ramnulfids",url:"https://www.britannica.com/topic/House-of-Poitiers",grupo:"Casas y filiaciones",territorios:[],personas:["BOHEMOND3ANT","BOHEMOND4ANT","BOHEMOND5ANT","BOHEMOND6ANT","PLAISANCEANT","BOHEMOND7TRIP"],nota:"Historia de la casa (6.0.15): Poitiers-Antioquía."},
+  {titulo:"Encyclopaedia Britannica · Principality of Antioch",url:"https://www.britannica.com/topic/Antioch-medieval-principality-Turkey",grupo:"Casas y filiaciones",territorios:[],personas:["BOHEMOND3ANT","BOHEMOND4ANT","BOHEMOND5ANT","BOHEMOND6ANT","PLAISANCEANT","BOHEMOND7TRIP"],nota:"Historia de la casa (6.0.15): Poitiers-Antioquía."},
   {titulo:"Treccani · Della Rovere",url:"https://www.treccani.it/enciclopedia/della-rovere/",grupo:"Casas y filiaciones",territorios:[],personas:["PAPA_SIXTO4","PAPA_JULIO2","GIOVANNIDELLAROVERE","FRANCESCOROVEREURBINO","GUIDOBALDO2ROVERE","FRANCESCO2ROVERE"],nota:"Historia de la casa (6.0.15): Della Rovere."},
-  {titulo:"Wikipedia · Della Rovere",url:"https://en.wikipedia.org/wiki/Della_Rovere",grupo:"Casas y filiaciones",territorios:[],personas:["PAPA_SIXTO4","PAPA_JULIO2","GIOVANNIDELLAROVERE","FRANCESCOROVEREURBINO","GUIDOBALDO2ROVERE","FRANCESCO2ROVERE"],nota:"Historia de la casa (6.0.15): Della Rovere."},
+  {titulo:"Encyclopaedia Britannica · House of della Rovere",url:"https://www.britannica.com/topic/della-Rovere-family",grupo:"Casas y filiaciones",territorios:[],personas:["PAPA_SIXTO4","PAPA_JULIO2","GIOVANNIDELLAROVERE","FRANCESCOROVEREURBINO","GUIDOBALDO2ROVERE","FRANCESCO2ROVERE"],nota:"Historia de la casa (6.0.15): Della Rovere."},
   {titulo:"Treccani · Baden",url:"https://www.treccani.it/enciclopedia/baden/",grupo:"Casas y filiaciones",territorios:[],personas:["CHRISTOPH1BADEN","ERNSTBADEN","KARL2BADEN","GEORGEFREDBADEN","KARLWILHELMBADEN","KARLFRIEDRICHBADEN"],nota:"Historia de la casa (6.0.15): Zähringen-Baden."},
-  {titulo:"Wikipedia · Margraviate of Baden",url:"https://en.wikipedia.org/wiki/Margraviate_of_Baden",grupo:"Casas y filiaciones",territorios:[],personas:["CHRISTOPH1BADEN","ERNSTBADEN","KARL2BADEN","GEORGEFREDBADEN","KARLWILHELMBADEN","KARLFRIEDRICHBADEN"],nota:"Historia de la casa (6.0.15): Zähringen-Baden."},
-  {titulo:"Wikipedia · House of Avesnes",url:"https://en.wikipedia.org/wiki/House_of_Avesnes",grupo:"Casas y filiaciones",territorios:[],personas:["BOUCHARDAVES","JOHN1AVES","JOHN2AVES","GUILLERMO3HENAO","GUIL4HOL","FELIPAHENAO"],nota:"Historia de la casa (6.0.15): Avesnes."},
+  {titulo:"Encyclopaedia Britannica · Baden",url:"https://www.britannica.com/place/Baden-historical-state-Germany",grupo:"Casas y filiaciones",territorios:[],personas:["CHRISTOPH1BADEN","ERNSTBADEN","KARL2BADEN","GEORGEFREDBADEN","KARLWILHELMBADEN","KARLFRIEDRICHBADEN"],nota:"Historia de la casa (6.0.15): Zähringen-Baden."},
+  {titulo:"Foundation for Medieval Genealogy · Medieval Lands · House of Avesnes",url:"https://fmg.ac/Projects/MedLands/HAINAUT.htm",grupo:"Casas y filiaciones",territorios:[],personas:["BOUCHARDAVES","JOHN1AVES","JOHN2AVES","GUILLERMO3HENAO","GUIL4HOL","FELIPAHENAO"],nota:"Historia de la casa (6.0.15): Avesnes."},
   {titulo:"Treccani · Lussemburgo",url:"https://www.treccani.it/enciclopedia/lussemburgo/",grupo:"Casas y filiaciones",territorios:[],personas:["BOUCHARDAVES","JOHN1AVES","JOHN2AVES","GUILLERMO3HENAO","GUIL4HOL","FELIPAHENAO"],nota:"Historia de la casa (6.0.15): Avesnes."},
-  {titulo:"Wikipedia · House of Valois-Orléans",url:"https://en.wikipedia.org/wiki/House_of_Valois-Orl%C3%A9ans",grupo:"Casas y filiaciones",territorios:[],personas:["LUISORLEANS","CARLOS1ORLEANS","JEANDUNOIS","JUANORLEANS","LUIS12FRA","CLAUDEFRA"],nota:"Historia de la casa (6.0.15): Valois-Orleans."},
   {titulo:"Treccani · Orsini",url:"https://www.treccani.it/enciclopedia/orsini/",grupo:"Casas y filiaciones",territorios:[],personas:["MATTEOROSSOORS_GRANDE","PAPA_NICOLAS3","CLARICEORSINI","ALFONSINAORSINI","GIROLAMAORSINI","PAPA_BENEDICTO13"],nota:"Historia de la casa (6.0.15): Orsini."},
-  {titulo:"Wikipedia · Orsini family",url:"https://en.wikipedia.org/wiki/Orsini_family",grupo:"Casas y filiaciones",territorios:[],personas:["MATTEOROSSOORS_GRANDE","PAPA_NICOLAS3","CLARICEORSINI","ALFONSINAORSINI","GIROLAMAORSINI","PAPA_BENEDICTO13"],nota:"Historia de la casa (6.0.15): Orsini."},
+  {titulo:"Encyclopaedia Britannica · House of Orsini",url:"https://www.britannica.com/topic/Orsini-family",grupo:"Casas y filiaciones",territorios:[],personas:["MATTEOROSSOORS_GRANDE","PAPA_NICOLAS3","CLARICEORSINI","ALFONSINAORSINI","GIROLAMAORSINI","PAPA_BENEDICTO13"],nota:"Historia de la casa (6.0.15): Orsini."},
   {titulo:"Treccani · Venecia y la expansión en Terraferma",url:"https://www.treccani.it/enciclopedia/venezia-e-l-entroterra_%28Storia-di-Venezia%29/",grupo:"Repertorios principales",territorios:["Venecia","Milán"],personas:["TOMMOCENIGODOGE","FRANFOSCARIDOGE"]},
   {titulo:"Treccani · Creta bajo Venecia",url:"https://www.treccani.it/enciclopedia/la-romania-veneziana_%28Storia-di-Venezia%29/",grupo:"Repertorios principales",territorios:["Venecia"],personas:["TOMMOCENIGODOGE"]},
   {titulo:"Treccani · Chipre entre Venecia y el Imperio otomano",url:"https://www.treccani.it/enciclopedia/cipro/",grupo:"Repertorios principales",territorios:["Venecia"],personas:["AGOBAREDOGE","LEOLOREDANDOGE","ANDGRITTIDOGE"]},
@@ -754,8 +754,8 @@ export const SOURCES = [
     "general": true
   },
   {
-    "titulo": "Monarquía cilicia: cronología y bibliografía",
-    "url": "https://en.wikipedia.org/wiki/List_of_monarchs_of_the_Armenian_Kingdom_of_Cilicia",
+    "titulo": "Encyclopaedia Britannica · Little Armenia",
+    "url": "https://www.britannica.com/place/Little-Armenia",
     "grupo": "Chipre y Armenia cilicia",
     "territorios": [
       "Armenia cilicia"
@@ -973,16 +973,16 @@ export const SOURCES = [
     "personas": []
   },
   {
-    "titulo": "Estado borgoñón",
-    "url": "https://es.wikipedia.org/wiki/Estado_borgo%C3%B1%C3%B3n",
+    "titulo": "Encyclopædia Universalis · Duché de Bourgogne",
+    "url": "https://www.universalis.fr/encyclopedie/duche-de-bourgogne/",
     "grupo": "Otras comprobaciones históricas",
     "territorios": [],
     "personas": [],
     "nota": "Referencia auxiliar: cronología y orientación bibliográfica."
   },
   {
-    "titulo": "Isabella Clara Eugenia",
-    "url": "https://en.wikipedia.org/wiki/Isabella_Clara_Eugenia",
+    "titulo": "Encyclopaedia Britannica · Isabella Clara Eugenia of Spain",
+    "url": "https://www.britannica.com/biography/Isabella-Clara-Eugenia",
     "grupo": "Otras comprobaciones históricas",
     "territorios": [],
     "personas": [],
@@ -1034,8 +1034,8 @@ export const SOURCES = [
     ]
   },
   {
-    "titulo": "Jorge V",
-    "url": "https://en.wikipedia.org/wiki/George_V_of_Georgia",
+    "titulo": "Foundation for Medieval Genealogy · Medieval Lands · Jorge V",
+    "url": "https://fmg.ac/Projects/MedLands/GEORGIA.htm",
     "grupo": "Georgia y Cáucaso",
     "territorios": [
       "Georgia"
@@ -1046,8 +1046,8 @@ export const SOURCES = [
     "nota": "Referencia auxiliar: cronología y orientación bibliográfica."
   },
   {
-    "titulo": "Demetrio II",
-    "url": "https://en.wikipedia.org/wiki/Demetrius_II_of_Georgia",
+    "titulo": "Foundation for Medieval Genealogy · Medieval Lands · Demetrio II",
+    "url": "https://fmg.ac/Projects/MedLands/GEORGIA.htm",
     "grupo": "Georgia y Cáucaso",
     "territorios": [
       "Georgia"
@@ -1058,8 +1058,8 @@ export const SOURCES = [
     "nota": "Referencia auxiliar: cronología y orientación bibliográfica."
   },
   {
-    "titulo": "Beka I",
-    "url": "https://en.wikipedia.org/wiki/Beka_I_Jaqeli",
+    "titulo": "Foundation for Medieval Genealogy · Medieval Lands · Beka I",
+    "url": "https://fmg.ac/Projects/MedLands/GEORGIA.htm",
     "grupo": "Georgia y Cáucaso",
     "territorios": [
       "Samtsje",
@@ -1071,16 +1071,16 @@ export const SOURCES = [
     "nota": "Referencia auxiliar: cronología y orientación bibliográfica."
   },
   {
-    "titulo": "Juan II de Trebisonda",
-    "url": "https://en.wikipedia.org/wiki/John_II_of_Trebizond",
+    "titulo": "Treccani · Enciclopedia · John II of Trebizond",
+    "url": "https://www.treccani.it/enciclopedia/giovanni-ii-comneno-imperatore-di-trebisonda",
     "grupo": "Georgia y Cáucaso",
     "territorios": [],
     "personas": [],
     "nota": "Referencia auxiliar: cronología y orientación bibliográfica."
   },
   {
-    "titulo": "Alejo II",
-    "url": "https://en.wikipedia.org/wiki/Alexios_II_of_Trebizond",
+    "titulo": "Treccani · Enciclopedia · Alexios II of Trebizond",
+    "url": "https://www.treccani.it/enciclopedia/alessio-ii-comneno-imperatore-di-trebisonda",
     "grupo": "Georgia y Cáucaso",
     "territorios": [],
     "personas": [],
@@ -1131,8 +1131,8 @@ export const SOURCES = [
     "personas": []
   },
   {
-    "titulo": "Bohemundo IV",
-    "url": "https://en.wikipedia.org/wiki/Bohemond_IV_of_Antioch",
+    "titulo": "Encyclopaedia Britannica · Bohemond IV of Antioch",
+    "url": "https://www.britannica.com/biography/Bohemond-IV",
     "grupo": "Otras comprobaciones históricas",
     "territorios": [
       "Antioquía",
@@ -1144,8 +1144,8 @@ export const SOURCES = [
     "nota": "Referencia auxiliar: cronología y orientación bibliográfica."
   },
   {
-    "titulo": "Bohemundo V",
-    "url": "https://en.wikipedia.org/wiki/Bohemond_V_of_Antioch",
+    "titulo": "Encyclopaedia Britannica · Bohemond V of Antioch",
+    "url": "https://www.britannica.com/biography/Bohemond-V",
     "grupo": "Otras comprobaciones históricas",
     "territorios": [
       "Antioquía",
@@ -1157,8 +1157,8 @@ export const SOURCES = [
     "nota": "Referencia auxiliar: cronología y orientación bibliográfica."
   },
   {
-    "titulo": "Bohemundo VI",
-    "url": "https://en.wikipedia.org/wiki/Bohemond_VI_of_Antioch",
+    "titulo": "Encyclopaedia Britannica · Bohemond VI of Antioch",
+    "url": "https://www.britannica.com/biography/Bohemond-VI",
     "grupo": "Otras comprobaciones históricas",
     "territorios": [
       "Antioquía",
@@ -1171,8 +1171,8 @@ export const SOURCES = [
     "nota": "Referencia auxiliar: cronología y orientación bibliográfica."
   },
   {
-    "titulo": "lista de príncipes de Transilvania",
-    "url": "https://en.wikipedia.org/wiki/List_of_princes_of_Transylvania",
+    "titulo": "Treccani · Enciclopedia",
+    "url": "https://www.treccani.it/enciclopedia/transilvania/",
     "grupo": "Otras comprobaciones históricas",
     "territorios": [],
     "personas": [],
@@ -1198,8 +1198,8 @@ export const SOURCES = [
     "personas": []
   },
   {
-    "titulo": "Hugo IV de Chipre",
-    "url": "https://en.wikipedia.org/wiki/Hugh_IV_of_Cyprus",
+    "titulo": "Foundation for Medieval Genealogy · Medieval Lands · Hugo IV de Chipre",
+    "url": "https://fmg.ac/Projects/MedLands/CYPRUS.htm",
     "grupo": "Chipre y Armenia cilicia",
     "territorios": [
       "Chipre",
@@ -1211,8 +1211,8 @@ export const SOURCES = [
     "nota": "Referencia auxiliar: cronología y orientación bibliográfica."
   },
   {
-    "titulo": "Carlota de Chipre",
-    "url": "https://en.wikipedia.org/wiki/Charlotte,_Queen_of_Cyprus",
+    "titulo": "Treccani · Dizionario Biografico degli Italiani · Charlotte, Queen of Cyprus",
+    "url": "https://www.treccani.it/enciclopedia/carlotta-di-lusignano-regina-di-cipro_(Dizionario-Biografico)",
     "grupo": "Chipre y Armenia cilicia",
     "territorios": [
       "Chipre"
@@ -1223,8 +1223,8 @@ export const SOURCES = [
     "nota": "Referencia auxiliar: cronología y orientación bibliográfica."
   },
   {
-    "titulo": "Isabel de Armenia",
-    "url": "https://en.wikipedia.org/wiki/Isabella,_Queen_of_Armenia",
+    "titulo": "Encyclopaedia Britannica · Hethumid dynasty",
+    "url": "https://www.britannica.com/topic/Hethumid-dynasty",
     "grupo": "Chipre y Armenia cilicia",
     "territorios": [
       "Armenia cilicia"
@@ -1235,8 +1235,8 @@ export const SOURCES = [
     "nota": "Referencia auxiliar: cronología y orientación bibliográfica."
   },
   {
-    "titulo": "León V",
-    "url": "https://en.wikipedia.org/wiki/Leo_V,_King_of_Armenia",
+    "titulo": "Encyclopaedia Britannica · Lusignan family",
+    "url": "https://www.britannica.com/topic/Lusignan-family",
     "grupo": "Chipre y Armenia cilicia",
     "territorios": [
       "Armenia cilicia"
@@ -1308,8 +1308,8 @@ export const SOURCES = [
     ]
   },
   {
-    "titulo": "Bagrationi: monarcas de Georgia",
-    "url": "https://en.wikipedia.org/wiki/List_of_monarchs_of_Georgia",
+    "titulo": "Foundation for Medieval Genealogy · Medieval Lands · Bagrationi: monarcas de Georgia",
+    "url": "https://fmg.ac/Projects/MedLands/GEORGIA.htm",
     "grupo": "Georgia y Cáucaso",
     "territorios": [
       "Georgia"
@@ -1318,8 +1318,8 @@ export const SOURCES = [
     "nota": "Referencia auxiliar: cronología y orientación bibliográfica."
   },
   {
-    "titulo": "Bagrat VI de Georgia",
-    "url": "https://en.wikipedia.org/wiki/Bagrat_VI_of_Georgia",
+    "titulo": "Foundation for Medieval Genealogy · Medieval Lands · Bagrat VI de Georgia",
+    "url": "https://fmg.ac/Projects/MedLands/GEORGIA.htm",
     "grupo": "Georgia y Cáucaso",
     "territorios": [
       "Georgia"
@@ -1328,8 +1328,8 @@ export const SOURCES = [
     "nota": "Referencia auxiliar: cronología y orientación bibliográfica."
   },
   {
-    "titulo": "Jorge, hijo de Constantino I",
-    "url": "https://en.wikipedia.org/wiki/George_(son_of_Constantine_I_of_Georgia)",
+    "titulo": "Foundation for Medieval Genealogy · Medieval Lands · Jorge, hijo de Constantino I",
+    "url": "https://fmg.ac/Projects/MedLands/GEORGIA.htm",
     "grupo": "Georgia y Cáucaso",
     "territorios": [
       "Georgia"
@@ -1338,8 +1338,8 @@ export const SOURCES = [
     "nota": "Referencia auxiliar: cronología y orientación bibliográfica."
   },
   {
-    "titulo": "Vajtang V de Kartli",
-    "url": "https://en.wikipedia.org/wiki/Vakhtang_V",
+    "titulo": "Encyclopaedia Britannica · Georgia: history · Vajtang V de Kartli",
+    "url": "https://www.britannica.com/place/Georgia",
     "grupo": "Georgia y Cáucaso",
     "territorios": [
       "Kartli"
@@ -1348,8 +1348,8 @@ export const SOURCES = [
     "nota": "Referencia auxiliar: cronología y orientación bibliográfica."
   },
   {
-    "titulo": "Rostom de Kartli",
-    "url": "https://en.wikipedia.org/wiki/Rostom_of_Kartli",
+    "titulo": "Encyclopaedia Britannica · Georgia: history · Rostom de Kartli",
+    "url": "https://www.britannica.com/place/Georgia",
     "grupo": "Georgia y Cáucaso",
     "territorios": [
       "Kartli"
@@ -1358,8 +1358,8 @@ export const SOURCES = [
     "nota": "Referencia auxiliar: cronología y orientación bibliográfica."
   },
   {
-    "titulo": "Teimuraz I de Kajetia",
-    "url": "https://en.wikipedia.org/wiki/Teimuraz_I_of_Kakheti",
+    "titulo": "Encyclopaedia Britannica · Georgia: history · Teimuraz I de Kajetia",
+    "url": "https://www.britannica.com/place/Georgia",
     "grupo": "Georgia y Cáucaso",
     "territorios": [
       "Kajetia"
@@ -1368,8 +1368,8 @@ export const SOURCES = [
     "nota": "Referencia auxiliar: cronología y orientación bibliográfica."
   },
   {
-    "titulo": "Monarcas de Kajetia",
-    "url": "https://en.wikipedia.org/wiki/List_of_monarchs_of_Kakheti",
+    "titulo": "Encyclopaedia Britannica · Georgia: history · Monarcas de Kajetia",
+    "url": "https://www.britannica.com/place/Georgia",
     "grupo": "Georgia y Cáucaso",
     "territorios": [
       "Kajetia"
@@ -1378,8 +1378,8 @@ export const SOURCES = [
     "nota": "Referencia auxiliar: cronología y orientación bibliográfica."
   },
   {
-    "titulo": "Helvis de Brunswick-Grubenhagen",
-    "url": "https://en.wikipedia.org/wiki/Helvis_of_Brunswick-Grubenhagen",
+    "titulo": "Foundation for Medieval Genealogy · Medieval Lands · Helvis de Brunswick-Grubenhagen",
+    "url": "https://fmg.ac/Projects/MedLands/CYPRUS.htm",
     "grupo": "Chipre y Armenia cilicia",
     "territorios": [
       "Chipre"
@@ -1390,8 +1390,8 @@ export const SOURCES = [
     "nota": "Referencia auxiliar: cronología y orientación bibliográfica."
   },
   {
-    "titulo": "Pedro II de Chipre",
-    "url": "https://en.wikipedia.org/wiki/Peter_II_of_Cyprus",
+    "titulo": "Foundation for Medieval Genealogy · Medieval Lands · Pedro II de Chipre",
+    "url": "https://fmg.ac/Projects/MedLands/CYPRUS.htm",
     "grupo": "Chipre y Armenia cilicia",
     "territorios": [
       "Chipre",
@@ -1403,8 +1403,8 @@ export const SOURCES = [
     "nota": "Referencia auxiliar: cronología y orientación bibliográfica."
   },
   {
-    "titulo": "Jano de Chipre",
-    "url": "https://en.wikipedia.org/wiki/Janus_of_Cyprus",
+    "titulo": "Foundation for Medieval Genealogy · Medieval Lands · Jano de Chipre",
+    "url": "https://fmg.ac/Projects/MedLands/CYPRUS.htm",
     "grupo": "Chipre y Armenia cilicia",
     "territorios": [
       "Chipre",
@@ -1417,8 +1417,8 @@ export const SOURCES = [
     "nota": "Referencia auxiliar: cronología y orientación bibliográfica."
   },
   {
-    "titulo": "Reino de Chipre",
-    "url": "https://en.wikipedia.org/wiki/Kingdom_of_Cyprus",
+    "titulo": "Encyclopædia Universalis · Kingdom of Cyprus",
+    "url": "https://www.universalis.fr/encyclopedie/royaume-de-chypre/",
     "grupo": "Chipre y Armenia cilicia",
     "territorios": [
       "Chipre"
@@ -1427,8 +1427,8 @@ export const SOURCES = [
     "nota": "Referencia auxiliar: cronología y orientación bibliográfica."
   },
   {
-    "titulo": "Constantino II de Armenia",
-    "url": "https://en.wikipedia.org/wiki/Constantine_II,_King_of_Armenia",
+    "titulo": "Encyclopaedia Britannica · Lusignan family",
+    "url": "https://www.britannica.com/topic/Lusignan-family",
     "grupo": "Chipre y Armenia cilicia",
     "territorios": [
       "Armenia cilicia"
@@ -1484,8 +1484,8 @@ export const SOURCES = [
     "personas": []
   },
   {
-    "titulo": "Richard Talbot",
-    "url": "https://en.wikipedia.org/wiki/Richard_Talbot,_1st_Earl_of_Tyrconnell",
+    "titulo": "Encyclopaedia Britannica · Richard Talbot, 1st Earl of Tyrconnell",
+    "url": "https://www.britannica.com/biography/Richard-Talbot-earl-of-Tyrconnell",
     "grupo": "Irlanda",
     "territorios": [
       "Condado de Tyrconnell",
@@ -1497,8 +1497,8 @@ export const SOURCES = [
     "nota": "Referencia auxiliar: cronología y orientación bibliográfica."
   },
   {
-    "titulo": "Richard de Burgh",
-    "url": "https://en.wikipedia.org/wiki/Richard_%C3%93g_de_Burgh,_2nd_Earl_of_Ulster",
+    "titulo": "Encyclopaedia Britannica · Richard Óg de Burgh, 2nd Earl of Ulster",
+    "url": "https://www.britannica.com/biography/Richard-de-Burgh-2nd-Earl-of-Ulster",
     "grupo": "Irlanda",
     "territorios": [
       "Condado de Ulster",
@@ -1529,6 +1529,23 @@ for (const source of [...HOUSE_CLEANUP_SOURCES,...TREINTA_CASAS_SOURCES,...HERIT
   previous.nota=[...new Set([previous.nota,source.nota].filter(Boolean))].join(' ');
 }
 
+// 6.0.16: several former Wikipedia citations now point to the same reference work. They are
+// merged into one entry that keeps every person and territory.
+const SHARED_TITLES = {
+  'https://fmg.ac/Projects/MedLands/GEORGIA.htm': 'Foundation for Medieval Genealogy · Medieval Lands · Georgia',
+  'https://fmg.ac/Projects/MedLands/CYPRUS.htm': 'Foundation for Medieval Genealogy · Medieval Lands · Cyprus',
+  'https://www.britannica.com/topic/Lusignan-family': 'Encyclopaedia Britannica · Lusignan family',
+  'https://www.britannica.com/place/Georgia': 'Encyclopaedia Britannica · Georgia: history',
+};
+for (let i = SOURCES.length - 1; i >= 0; i--) {
+  const first = SOURCES.findIndex(entry => entry.url === SOURCES[i].url);
+  if (first === i) continue;
+  const [duplicate] = SOURCES.splice(i, 1), kept = SOURCES[first];
+  kept.personas = [...new Set([...kept.personas, ...duplicate.personas])];
+  kept.territorios = [...new Set([...kept.territorios, ...duplicate.territorios])];
+  if (SHARED_TITLES[kept.url]) kept.titulo = SHARED_TITLES[kept.url];
+}
+
 export const SOURCE_PUBLICATIONS = SOURCES.filter(source => source.general);
 export const SOURCE_GROUPS = [...new Set(SOURCE_PUBLICATIONS.map(source => source.grupo))].map(title => ({
   title, sources: SOURCE_PUBLICATIONS.filter(source => source.grupo === title),
@@ -1540,7 +1557,7 @@ export const SOURCE_METHOD = [
   'Cuando se conoce un intervalo o un límite, la ficha lo muestra como tal y añade una explicación documental. El filtro por año incluye los años compatibles con esos límites; las fechas aproximadas conservan su año convencional sin inventar un margen de error.',
   'Las fichas dinásticas distinguen las ramas cadetes de las transmisiones por matrimonio o herencia. La coincidencia del nombre de una casa no demuestra por sí sola una filiación entre todos sus miembros.',
   'Desde la V5.25, fechas, filiaciones, matrimonios y algunos cargos se contrastan con las fichas de autoridad de la Deutsche Nationalbibliothek (GND). Wikidata solo sirve para localizar la ficha correcta y no se cita. Una afirmación pasa a «Documentado» únicamente si la ficha registra el mismo año, enlaza a la misma persona o fecha el mismo cargo y territorio con los mismos años; las discrepancias siguen pendientes de revisión.',
-  'Wikipedia se utiliza como orientación bibliográfica auxiliar. Las filiaciones y cronologías discutidas requieren contraste con referencias especializadas.',
+  'Wikipedia solo se utiliza como orientación auxiliar y no se cita como fuente de ningún dato: desde la 6.0.16, las referencias que remitían a ella se han sustituido por enciclopedias y diccionarios biográficos de referencia.',
   'Los gobiernos distinguen territorio, título, clase y condición; una pretensión o un título nominal no equivale a gobierno efectivo.',
   'Las sucesiones explicadas son una selección editorial: una fila posterior no prueba por sí sola un relevo directo. Las crisis muestran reclamaciones históricas; el parentesco se limita a las filiaciones registradas. Acceso al título, coronación y gobierno efectivo se distinguen cuando existe información específica.',
   'Las etapas de títulos reúnen mandatos por año y distinguen gobierno efectivo, regencia y títulos nominales. Una coincidencia anual no demuestra simultaneidad diaria. Las uniones pueden contener rupturas y no suponen instituciones uniformes. Europa en este año resume solo los datos cargados compatibles con la selección; no prolonga vidas sin límites documentales suficientes.',
@@ -1557,5 +1574,6 @@ export const FUENTES_TERRITORIOS = Object.fromEntries([...new Set(SOURCES.flatMa
 export function sourcesForPerson(id) {
   const specific = SOURCES.filter(source => source.personas.includes(id)).map(({titulo, url}) => ({titulo, url}));
   const urls = new Set(specific.map(source => source.url));
-  return [...specific, ...authorityReferences(id).filter(source => !urls.has(source.url))];
+  const authority = [...authorityReferences(id), ...authorityReferences616(id)].filter(source => !urls.has(source.url) && urls.add(source.url));
+  return [...specific, ...authority];
 }

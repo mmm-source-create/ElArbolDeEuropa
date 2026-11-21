@@ -956,7 +956,7 @@
     "role": "King",
     "nickname": "",
     "aliases": [],
-    "summary": "Son of Gustavo Vasa, king of Sweden since 1560. The Swedish expansion in Estonia (Reval, 1561) and the Nordic Seven-Year War against Denmark began. After the Sture murders (1567) and his marriage to Karin Måndotter, his brothers deposed him in 1568; he died in prison in 1577.",
+    "summary": "Son of Gustav Vasa, king of Sweden since 1560. The Swedish expansion in Estonia (Reval, 1561) and the Nordic Seven-Year War against Denmark began. After the Sture murders (1567) and his marriage to Karin Måndotter, his brothers deposed him in 1568; he died in prison in 1577.",
     "sections": []
   },
   "ERNSTBADEN": {
@@ -1236,7 +1236,7 @@
     "aliases": [
       "Wenceslaus III"
     ],
-    "summary": "The violent death of Wenceslao III extinguished the male line of the Přemysl that ruled Bohemia. His claims about Poland and Hungary show the scope and fragility of that dynastic expansion.",
+    "summary": "The violent death of Wenceslaus III extinguished the male line of the Přemysl that ruled Bohemia. His claims about Poland and Hungary show the scope and fragility of that dynastic expansion.",
     "sections": []
   },
   "WILLIAM5HESSEKASS": {
@@ -1666,7 +1666,7 @@
     "role": "Elector",
     "nickname": "",
     "aliases": [],
-    "summary": "Elector of Palatinate, 1390–1398. Elector of the Wittelsbach dynasty.",
+    "summary": "Elector Palatine, 1390–1398. Elector of the Wittelsbach dynasty.",
     "sections": []
   },
   "VIOLP": {
@@ -1992,7 +1992,7 @@
     "summary": "Count of Tyrol, 1258–1295. Count of the Gorizia dynasty.",
     "sections": [],
     "governmentNotes": {
-      "Investido por Rodolfo I de Habsburgo en 1286.": "Research by Rodolfo I of Habsburg in 1286."
+      "Investido por Rodolfo I de Habsburgo en 1286.": "Research by Rudolf I of Habsburg in 1286."
     }
   },
   "TRENCAVEL2": {
@@ -2357,7 +2357,7 @@
     "aliases": [
       "Guillem VIII de Montpeller"
     ],
-    "summary": "Lord of Montpellier since 1172, he extended the heirs of William VII. Married to Eudoxia Combina, she was repudiated to marry Agnes de Castilla. The Pope declared the children of this second marriage illegitimate, and in 1204 the inheritance passed to his daughter Mary, wife of Peter II of Aragon.",
+    "summary": "Lord of Montpellier since 1172, he extended the heirs of William VII. Married to Eudoxia Combina, she was repudiated to marry Agnes of Castile. The Pope declared the children of this second marriage illegitimate, and in 1204 the inheritance passed to his daughter Mary, wife of Peter II of Aragon.",
     "sections": []
   },
   "PIETROALDOBRANDINI_SR": {
@@ -2478,12 +2478,13 @@
     }
   },
   "PAPA_GREGORIO9": {
-    "name": "Gregorio IX",
+    "name": "Gregory IX",
     "role": "Pope",
     "nickname": "",
     "aliases": [],
     "summary": "Pope of strong legal and political personality, great adversary of Frederick II. His pontificate reinforced the pontifical Inquisition and deepened the conflict between papacy and Empire.",
-    "sections": []
+    "sections": [],
+    "slugName": "Gregorio IX"
   },
   "PAPA_HONORIO4": {
     "name": "Honour IV",
@@ -2858,7 +2859,7 @@
     "role": "Doge",
     "nickname": "",
     "aliases": [],
-    "summary": "Dogo of the Republic of Venice between 1570 and 1577. Dignity was elective: its mandate allows for institutional continuity, but it does not imply family ownership of Venetian territories.",
+    "summary": "Doge of the Republic of Venice between 1570 and 1577. The office was elective: the dogeship marks institutional continuity, not family ownership of the Venetian territories.",
     "sections": [],
     "governmentNotes": {
       "Cargo electivo de la República de Venecia, no señorío familiar.": "Elective position of the Republic of Venice, not family lordship."
@@ -2904,7 +2905,7 @@
     "role": "Voivode",
     "nickname": "",
     "aliases": [],
-    "summary": "Voivode de Wallachia, 1473-1473. Voivode.",
+    "summary": "Voivode of Wallachia, 1473-1473. Voivode.",
     "sections": [],
     "governmentNotes": {
       "Gobierno propio del principado; el tributo y la intervención exterior no equivalen a administración provincial otomana. Los relevos del mismo año se conservan en la escala anual. Mandatos interrumpidos por rivales y campañas. La escala anual agrupa relevos del mismo año.": "Government of the principality; tribute and external intervention do not amount to Ottoman provincial administration. The same year's relays are kept on the annual scale. Mandates interrupted by rivals and campaigns. The annual scale brings together the same year's concerns."
@@ -2934,7 +2935,7 @@
     "role": "Voivode",
     "nickname": "",
     "aliases": [],
-    "summary": "Voivode de Moldova, 1449-1449. Voivode.",
+    "summary": "Voivode of Moldavia, 1449-1449. Voivode.",
     "sections": [],
     "governmentNotes": {
       "Gobierno propio del principado; el tributo y la intervención exterior no equivalen a administración provincial otomana. Los relevos del mismo año se conservan en la escala anual. Restauraciones y rivalidad con Petru Aron; el mapa no afirma continuidad entre los mandatos.": "Government of the principality; tribute and external intervention do not amount to Ottoman provincial administration. The same year's relays are kept on the annual scale. Restorations and rivalry with Petru Aron; the map does not affirm continuity between mandates."
@@ -2953,7 +2954,7 @@
     "role": "Doge",
     "nickname": "",
     "aliases": [],
-    "summary": "Dogo of the Republic of Venice between 1556 and 1559. Dignity was elective: its mandate allows for institutional continuity, but it does not imply family ownership of Venetian territories.",
+    "summary": "Doge of the Republic of Venice between 1556 and 1559. The office was elective: the dogeship marks institutional continuity, not family ownership of the Venetian territories.",
     "sections": [],
     "governmentNotes": {
       "Cargo electivo de la República de Venecia, no señorío familiar.": "Elective position of the Republic of Venice, not family lordship."
@@ -3017,7 +3018,7 @@
     "role": "Doge",
     "nickname": "",
     "aliases": [],
-    "summary": "Dogo of the Republic of Venice between 1553 and 1554. Dignity was elective: its mandate allows for institutional continuity, but it does not imply family ownership of Venetian territories.",
+    "summary": "Doge of the Republic of Venice between 1553 and 1554. The office was elective: the dogeship marks institutional continuity, not family ownership of the Venetian territories.",
     "sections": [],
     "governmentNotes": {
       "Cargo electivo de la República de Venecia, no señorío familiar.": "Elective position of the Republic of Venice, not family lordship."
@@ -3028,7 +3029,7 @@
     "role": "Doge",
     "nickname": "",
     "aliases": [],
-    "summary": "Dogo of the Republic of Venice between 1476 and 1478. Dignity was elective: its mandate allows for institutional continuity, but it does not imply family ownership of Venetian territories.",
+    "summary": "Doge of the Republic of Venice between 1476 and 1478. The office was elective: the dogeship marks institutional continuity, not family ownership of the Venetian territories.",
     "sections": [],
     "governmentNotes": {
       "Cargo electivo de la República de Venecia, no señorío familiar.": "Elective position of the Republic of Venice, not family lordship."
@@ -3039,7 +3040,7 @@
     "role": "Doge",
     "nickname": "",
     "aliases": [],
-    "summary": "Dogo of the Republic of Venice between 1545 and 1553. Dignity was elective: its mandate allows for institutional continuity, but it does not imply family ownership of Venetian territories.",
+    "summary": "Doge of the Republic of Venice between 1545 and 1553. The office was elective: the dogeship marks institutional continuity, not family ownership of the Venetian territories.",
     "sections": [],
     "governmentNotes": {
       "Cargo electivo de la República de Venecia, no señorío familiar.": "Elective position of the Republic of Venice, not family lordship."
@@ -3050,7 +3051,7 @@
     "role": "Voivode",
     "nickname": "",
     "aliases": [],
-    "summary": "Voivode de Moldova, 1394-1399. Voivode.",
+    "summary": "Voivode of Moldavia, 1394-1399. Voivode.",
     "sections": [],
     "governmentNotes": {
       "Sucesor de Roman I documentado por la cronología y emisiones monetarias. No se infieren fechas vitales ni parentescos.": "Roman I's successor documented by the chronology and monetary emissions. No life dates or parentheses are inferred."
@@ -3069,7 +3070,7 @@
     "role": "Voivode",
     "nickname": "",
     "aliases": [],
-    "summary": "Voivode de Wallachia, 1568-1577. Voivode.",
+    "summary": "Voivode of Wallachia, 1568-1577. Voivode.",
     "sections": [],
     "governmentNotes": {
       "Gobierno propio del principado; el tributo y la intervención exterior no equivalen a administración provincial otomana. Los relevos del mismo año se conservan en la escala anual. La breve deposición de 1574 se distingue como control disputado.": "Government of the principality; tribute and external intervention do not amount to Ottoman provincial administration. The same year's relays are kept on the annual scale. The short deposition of 1574 is distinguished as a disputed control."
@@ -3088,7 +3089,7 @@
     "role": "Voivode",
     "nickname": "",
     "aliases": [],
-    "summary": "Voivode de Wallachia, 1629-1632. Voivode.",
+    "summary": "Voivode of Wallachia, 1629-1632. Voivode.",
     "sections": [],
     "governmentNotes": {
       "Gobierno propio del principado. La relación tributaria con la Puerta y la intervención de potencias vecinas no convierten este mandato en administración provincial otomana. Los relevos ocurridos dentro del mismo año pueden mostrar más de una autoridad.": "Government of the principality. The tax relationship with the Gate and the intervention of neighbouring powers do not turn this mandate into Ottoman provincial administration. Releases that occurred within the same year may show more than one authority."
@@ -3121,7 +3122,7 @@
     "role": "Voivode",
     "nickname": "",
     "aliases": [],
-    "summary": "Voivode de Wallachia, 1418-1420. Voivode.",
+    "summary": "Voivode of Wallachia, 1418-1420. Voivode.",
     "sections": [],
     "governmentNotes": {
       "Gobierno propio del principado; el tributo y la intervención exterior no equivalen a administración provincial otomana. Los relevos del mismo año se conservan en la escala anual.": "Government of the principality; tribute and external intervention do not amount to Ottoman provincial administration. The same year's relays are kept on the annual scale."
@@ -3132,7 +3133,7 @@
     "role": "Voivode",
     "nickname": "",
     "aliases": [],
-    "summary": "Voivode de Wallachia, 1431-1436. Voivode.",
+    "summary": "Voivode of Wallachia, 1431-1436. Voivode.",
     "sections": [],
     "governmentNotes": {
       "Gobierno propio del principado; el tributo y la intervención exterior no equivalen a administración provincial otomana. Los relevos del mismo año se conservan en la escala anual.": "Government of the principality; tribute and external intervention do not amount to Ottoman provincial administration. The same year's relays are kept on the annual scale."
@@ -3143,7 +3144,7 @@
     "role": "Voivode",
     "nickname": "",
     "aliases": [],
-    "summary": "Voivode de Wallachia, 1583-1585. Voivode.",
+    "summary": "Voivode of Wallachia, 1583-1585. Voivode.",
     "sections": [],
     "governmentNotes": {
       "Gobierno propio del principado; el tributo y la intervención exterior no equivalen a administración provincial otomana. Los relevos del mismo año se conservan en la escala anual.": "Government of the principality; tribute and external intervention do not amount to Ottoman provincial administration. The same year's relays are kept on the annual scale."

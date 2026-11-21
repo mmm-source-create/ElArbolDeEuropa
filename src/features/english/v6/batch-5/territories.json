@@ -26,14 +26,14 @@
         "nombre": "Stephen V of Hungary",
         "slug": "esteban-v",
         "dinastia": "Árpád",
-        "resumen": "Before he succeeded Bela IV, he contested a part of the Hungarian government with his father. His brief independent reign left Ladislao IV, still under the age of six, as his heir."
+        "resumen": "Before he succeeded Béla IV, he contested a part of the Hungarian government with his father. His brief independent reign left Ladislaus IV, still under the age of six, as his heir."
       },
       {
         "id": "CARLOS1",
         "nombre": "Charles I of Hungary",
         "slug": "carlos-i",
         "dinastia": "Anjou-Hungary",
-        "resumen": "Carlos Roberto de Anjou affirmed his authority in front of the great Hungarian magnates. The reorganisation of the regent revenues and mining has strengthened the monarchy."
+        "resumen": "Carlos Robert of Anjou affirmed his authority in front of the great Hungarian magnates. The reorganisation of the regent revenues and mining has strengthened the monarchy."
       },
       {
         "id": "LADI4",
@@ -47,7 +47,7 @@
         "nombre": "Wenceslaus III of Bohemia",
         "slug": "wenceslao-iii",
         "dinastia": "Přemyslid",
-        "resumen": "The violent death of Wenceslao III extinguished the male line of the Přemysl that ruled Bohemia. His claims about Poland and Hungary show the scope and fragility of that dynastic expansion."
+        "resumen": "The violent death of Wenceslaus III extinguished the male line of the Přemysl that ruled Bohemia. His claims about Poland and Hungary show the scope and fragility of that dynastic expansion."
       },
       {
         "id": "LUIS1",
@@ -131,7 +131,7 @@
         "nombre": "Matthias of Habsburg",
         "slug": "matias-de-habsburgo",
         "dinastia": "Habsburg",
-        "resumen": "Emperor Habsburg who progressively took power from his brother Rodolfo II. His reign prepared the succession and religious crisis that would lead to the Thirty Years' War."
+        "resumen": "Emperor Habsburg who progressively took power from his brother Rudolf II. His reign prepared the succession and religious crisis that would lead to the Thirty Years' War."
       },
       {
         "id": "RODOLFO2HRE",
@@ -159,7 +159,7 @@
         "nombre": "Emeric of Hungary",
         "slug": "emerico-de-hungria",
         "dinastia": "Árpád",
-        "resumen": "King of Hungary since 1196, son of Bela III. His reign was marked by the rebellions of his brother Andrew; he died in 1204 leaving his son Ladislaus III."
+        "resumen": "King of Hungary since 1196, son of Béla III. His reign was marked by the rebellions of his brother Andrew; he died in 1204 leaving his son Ladislaus III."
       },
       {
         "id": "LADISLAO3HUN",
@@ -670,7 +670,7 @@
         "nombre": "Vlad III of Wallachia",
         "slug": "vlad-iii-de-valaquia",
         "dinastia": "Basarab",
-        "resumen": "Voivode de Wallachia known as Vlad-epeș, \"the Empalator.\"His violent struggle for power and his confrontation with Mehmed II nurtured a reputation that centuries later would be transformed by literature into the myth of Dracula."
+        "resumen": "Voivode of Wallachia known as Vlad-epeș, \"the Empalator.\"His violent struggle for power and his confrontation with Mehmed II nurtured a reputation that centuries later would be transformed by literature into the myth of Dracula."
       },
       {
         "id": "RADU3FRUMOS",
@@ -684,14 +684,14 @@
         "nombre": "Bogdan I of Moldova",
         "slug": "bogdan-i-de-moldavia",
         "dinastia": "Bogdan-Mușat",
-        "resumen": "Voivode of Moldova, 1359–1367. Prince of the Bogdan-Mușat dynasty."
+        "resumen": "Voivode of Moldavia, 1359–1367. Prince of the Bogdan-Mușat dynasty."
       },
       {
         "id": "LATCUMOLD",
         "nombre": "Lațcu de Moldova",
         "slug": "latcu-de-moldavia",
         "dinastia": "Bogdan-Mușat",
-        "resumen": "Voivode of Moldova, 1368–1375. Prince of the Bogdan-Mușat dynasty."
+        "resumen": "Voivode of Moldavia, 1368–1375. Prince of the Bogdan-Mușat dynasty."
       },
       {
         "id": "COSTEAMUSAT",
@@ -726,14 +726,14 @@
         "nombre": "Alexander I of Moldova",
         "slug": "alejandro-i-de-moldavia",
         "dinastia": "Bogdan-Mușat",
-        "resumen": "Prince of Moldova, remembered for a long period of political stability. He strengthened the institutions of the principality and maneuvered between Poland, Hungary and its Black Sea neighbours."
+        "resumen": "Prince of Moldavia, remembered for a long period of political stability. He strengthened the institutions of the principality and maneuvered between Poland, Hungary and its Black Sea neighbours."
       },
       {
         "id": "BOGDAN2MOLD",
         "nombre": "Bogdan II from Moldova",
         "slug": "bogdan-ii-de-moldavia",
         "dinastia": "Bogdan-Mușat",
-        "resumen": "Voivode of Moldova, 1449–1451. Prince of the Bogdan-Mușat dynasty."
+        "resumen": "Voivode of Moldavia, 1449–1451. Prince of the Bogdan-Mușat dynasty."
       },
       {
         "id": "MARIAOLTEAMOLD",
@@ -768,7 +768,7 @@
         "nombre": "Petru Rareș",
         "slug": "petru-rares",
         "dinastia": "Bogdan-Mușat",
-        "resumen": "Prince of Moldova and son of Stephen the Great. He tried to maintain an active policy between Poland, Hungary and the Ottoman Empire during a time when Moldovan autonomy was increasingly difficult to sustain."
+        "resumen": "Prince of Moldavia and son of Stephen the Great. He tried to maintain an active policy between Poland, Hungary and the Ottoman Empire during a time when Moldovan autonomy was increasingly difficult to sustain."
       },
       {
         "id": "STEPHEN2BOS",
@@ -796,7 +796,7 @@
         "nombre": "Tvrtko I of Bosnia",
         "slug": "tvrtko-i-de-bosnia",
         "dinastia": "Kotromanić",
-        "resumen": "He inherited the banate of his uncle Esteban II. After being displaced by his brother in 1366, he regained power the following year."
+        "resumen": "He inherited the banate of his uncle Stephen II. After being displaced by his brother in 1366, he regained power the following year."
       },
       {
         "id": "DABISABOS",
@@ -938,7 +938,7 @@
         "nombre": "Jelisava Nemanjić",
         "slug": "jelisava-nemanjic",
         "dinastia": "Nemanjić",
-        "resumen": "Wife of Stephen I Kotroman and mother of Esteban II and Vladislav, is part of the Serbian descent invoked by the Kotromanić. Her grandchildren Isabel of Bosnia and Tvrtko I allow to follow different connections: the Hungarian monarchy and the construction of Bosnian royalty."
+        "resumen": "Wife of Stephen I Kotroman and mother of Stephen II and Vladislav, is part of the Serbian descent invoked by the Kotromanić. Her grandchildren Isabel of Bosnia and Tvrtko I allow to follow different connections: the Hungarian monarchy and the construction of Bosnian royalty."
       },
       {
         "id": "STJEPANVUKKOS",
@@ -987,7 +987,7 @@
         "nombre": "Radu IV of Wallachia",
         "slug": "radu-iv-el-grande",
         "dinastia": "Basarab",
-        "resumen": "He succeeded his father Vlad Călugărul. His government combined relations with the neighbouring powers and religious patronage, including the Dealu monastery. The offspring of his son Mircea Ciobanul connected this Walloon line with the Rareș of Moldova, without bringing together both principalities."
+        "resumen": "He succeeded his father Vlad Călugărul. His government combined relations with the neighbouring powers and religious patronage, including the Dealu monastery. The offspring of his son Mircea Ciobanul connected this Walloon line with the Rareș of Moldavia, without bringing together both principalities."
       },
       {
         "id": "MIRCEACIOBAN",
@@ -1081,7 +1081,7 @@
         "id": "LEONTOMSA",
         "nombre": "Leon Tomșa",
         "slug": "leon-tomsa",
-        "resumen": "Voivode de Wallachia, 1629-1632. Voivode."
+        "resumen": "Voivode of Wallachia, 1629-1632. Voivode."
       },
       {
         "id": "MATEIBASARAB",
@@ -1113,7 +1113,7 @@
         "nombre": "Constantin Movilă",
         "slug": "constantin-movila",
         "dinastia": "Movilă",
-        "resumen": "Voivode of Moldova, 1607–1611. Voivode of the Movilă dynasty."
+        "resumen": "Voivode of Moldavia, 1607–1611. Voivode of the Movilă dynasty."
       },
       {
         "id": "STEFAN2TOMSA",
@@ -1126,7 +1126,7 @@
         "nombre": "Moise Movilă",
         "slug": "moise-movila",
         "dinastia": "Movilă",
-        "resumen": "Voivode of Moldova, 1630–1631. Voivode of the Movilă dynasty."
+        "resumen": "Voivode of Moldavia, 1630–1631. Voivode of the Movilă dynasty."
       },
       {
         "id": "ALEXANDRUMOVILA",
@@ -1151,13 +1151,13 @@
         "id": "MIHAIL1WAL",
         "nombre": "Michael I of Wallachia",
         "slug": "miguel-i-de-valaquia",
-        "resumen": "Voivode de Wallachia, 1418-1420. Voivode."
+        "resumen": "Voivode of Wallachia, 1418-1420. Voivode."
       },
       {
         "id": "ALEXANDRUALDEA",
         "nombre": "Alexander Aldea",
         "slug": "alejandro-aldea",
-        "resumen": "Voivode de Wallachia, 1431-1436. Voivode."
+        "resumen": "Voivode of Wallachia, 1431-1436. Voivode."
       },
       {
         "id": "VLADISLAV2WAL",
@@ -1169,7 +1169,7 @@
         "id": "BASARABLAIOTA",
         "nombre": "Basarab Laiotă",
         "slug": "basarab-laiota",
-        "resumen": "Voivode de Wallachia, 1473-1473. Voivode."
+        "resumen": "Voivode of Wallachia, 1473-1473. Voivode."
       },
       {
         "id": "BASARABTEPELUS",
@@ -1223,7 +1223,7 @@
         "id": "ALEXANDRU2MIRCEA",
         "nombre": "Alexander II Mircea",
         "slug": "alejandro-ii-mircea",
-        "resumen": "Voivode de Wallachia, 1568-1577. Voivode."
+        "resumen": "Voivode of Wallachia, 1568-1577. Voivode."
       },
       {
         "id": "MIHNEATURCITUL",
@@ -1235,7 +1235,7 @@
         "id": "PETRUCERCEL",
         "nombre": "Petru Cercel",
         "slug": "petru-cercel",
-        "resumen": "Voivode de Wallachia, 1583-1585. Voivode."
+        "resumen": "Voivode of Wallachia, 1583-1585. Voivode."
       },
       {
         "id": "STEFANSURDUL",
@@ -1277,7 +1277,7 @@
         "id": "ALEXANDREL",
         "nombre": "Alexander II Alexandrel",
         "slug": "alejandro-ii-alexandrel",
-        "resumen": "Voivode de Moldova, 1449-1449. Voivode."
+        "resumen": "Voivode of Moldavia, 1449-1449. Voivode."
       },
       {
         "id": "PETRUARON",
@@ -1441,7 +1441,7 @@
         "id": "STEFAN1MOLD",
         "nombre": "Ștefan I of Moldavia",
         "slug": "stefan-i-de-moldavia",
-        "resumen": "Voivode de Moldova, 1394-1399. Voivode."
+        "resumen": "Voivode of Moldavia, 1394-1399. Voivode."
       },
       {
         "id": "IUGAMOLD",
@@ -1517,7 +1517,7 @@
                 "nombre": "Tvrtko I of Bosnia",
                 "slug": "tvrtko-i-de-bosnia",
                 "dinastia": "Kotromanić",
-                "resumen": "He inherited the banate of his uncle Esteban II. After being displaced by his brother in 1366, he regained power the following year."
+                "resumen": "He inherited the banate of his uncle Stephen II. After being displaced by his brother in 1366, he regained power the following year."
               },
               "desde": 1353
             },
@@ -1527,7 +1527,7 @@
             "explicacion": "Tvrtko was the son of Vladislav, brother of the deceased ban. Succession passed to the nephew; Stephen II's daughter Elizabeth had married into the Hungarian monarchy.",
             "fuentes": [
               {
-                "titulo": "Hrvatska enciklopedija · Esteban II Kotromanić",
+                "titulo": "Hrvatska enciklopedija · Stephen II Kotromanić",
                 "url": "https://www.enciklopedija.hr/clanak/stjepan-ii-kotromanic"
               },
               {
@@ -1550,7 +1550,7 @@
                   "nombre": "Jelisava Nemanjić",
                   "slug": "jelisava-nemanjic",
                   "dinastia": "Nemanjić",
-                  "resumen": "Wife of Stephen I Kotroman and mother of Esteban II and Vladislav, is part of the Serbian descent invoked by the Kotromanić. Her grandchildren Isabel of Bosnia and Tvrtko I allow to follow different connections: the Hungarian monarchy and the construction of Bosnian royalty."
+                  "resumen": "Wife of Stephen I Kotroman and mother of Stephen II and Vladislav, is part of the Serbian descent invoked by the Kotromanić. Her grandchildren Isabel of Bosnia and Tvrtko I allow to follow different connections: the Hungarian monarchy and the construction of Bosnian royalty."
                 },
                 {
                   "id": "VLADISLAVBOS",
@@ -1564,7 +1564,7 @@
                   "nombre": "Tvrtko I of Bosnia",
                   "slug": "tvrtko-i-de-bosnia",
                   "dinastia": "Kotromanić",
-                  "resumen": "He inherited the banate of his uncle Esteban II. After being displaced by his brother in 1366, he regained power the following year."
+                  "resumen": "He inherited the banate of his uncle Stephen II. After being displaced by his brother in 1366, he regained power the following year."
                 }
               ]
             }
@@ -1826,7 +1826,7 @@
                 "nombre": "Radu IV of Wallachia",
                 "slug": "radu-iv-el-grande",
                 "dinastia": "Basarab",
-                "resumen": "He succeeded his father Vlad Călugărul. His government combined relations with the neighbouring powers and religious patronage, including the Dealu monastery. The offspring of his son Mircea Ciobanul connected this Walloon line with the Rareș of Moldova, without bringing together both principalities."
+                "resumen": "He succeeded his father Vlad Călugărul. His government combined relations with the neighbouring powers and religious patronage, including the Dealu monastery. The offspring of his son Mircea Ciobanul connected this Walloon line with the Rareș of Moldavia, without bringing together both principalities."
               },
               "desde": 1495
             },
@@ -1840,7 +1840,7 @@
                 "url": "https://www.biblioteca-digitala.ro/reviste/iini-revista-istorica-1990/115-Revista-istorica-an-XIX-nr-3-4-2018.pdf"
               },
               {
-                "titulo": "Enciclopedia României · Gobernantes de Valaquia",
+                "titulo": "Enciclopedia României · Gobernantes of Wallachia",
                 "url": "https://enciclopediaromaniei.ro/wiki/Index%3ADomnitori_ai_%C5%A2%C4%83rii_Rom%C3%A2ne%C5%9Fti"
               }
             ],
@@ -1859,7 +1859,7 @@
                   "nombre": "Radu IV of Wallachia",
                   "slug": "radu-iv-el-grande",
                   "dinastia": "Basarab",
-                  "resumen": "He succeeded his father Vlad Călugărul. His government combined relations with the neighbouring powers and religious patronage, including the Dealu monastery. The offspring of his son Mircea Ciobanul connected this Walloon line with the Rareș of Moldova, without bringing together both principalities."
+                  "resumen": "He succeeded his father Vlad Călugărul. His government combined relations with the neighbouring powers and religious patronage, including the Dealu monastery. The offspring of his son Mircea Ciobanul connected this Walloon line with the Rareș of Moldavia, without bringing together both principalities."
                 }
               ]
             }
@@ -2102,7 +2102,7 @@
             "nombre": "Emeric of Hungary",
             "slug": "emerico-de-hungria",
             "dinastia": "Árpád",
-            "resumen": "King of Hungary since 1196, son of Bela III. His reign was marked by the rebellions of his brother Andrew; he died in 1204 leaving his son Ladislaus III."
+            "resumen": "King of Hungary since 1196, son of Béla III. His reign was marked by the rebellions of his brother Andrew; he died in 1204 leaving his son Ladislaus III."
           }
         },
         {
@@ -2435,7 +2435,7 @@
             "nombre": "Stephen V of Hungary",
             "slug": "esteban-v",
             "dinastia": "Árpád",
-            "resumen": "Before he succeeded Bela IV, he contested a part of the Hungarian government with his father. His brief independent reign left Ladislao IV, still under the age of six, as his heir."
+            "resumen": "Before he succeeded Béla IV, he contested a part of the Hungarian government with his father. His brief independent reign left Ladislaus IV, still under the age of six, as his heir."
           }
         },
         {
@@ -2712,7 +2712,7 @@
             "nombre": "Wenceslaus III of Bohemia",
             "slug": "wenceslao-iii",
             "dinastia": "Přemyslid",
-            "resumen": "The violent death of Wenceslao III extinguished the male line of the Přemysl that ruled Bohemia. His claims about Poland and Hungary show the scope and fragility of that dynastic expansion."
+            "resumen": "The violent death of Wenceslaus III extinguished the male line of the Přemysl that ruled Bohemia. His claims about Poland and Hungary show the scope and fragility of that dynastic expansion."
           }
         },
         {
@@ -2766,7 +2766,7 @@
             "nombre": "Charles I of Hungary",
             "slug": "carlos-i",
             "dinastia": "Anjou-Hungary",
-            "resumen": "Carlos Roberto de Anjou affirmed his authority in front of the great Hungarian magnates. The reorganisation of the regent revenues and mining has strengthened the monarchy."
+            "resumen": "Carlos Robert of Anjou affirmed his authority in front of the great Hungarian magnates. The reorganisation of the regent revenues and mining has strengthened the monarchy."
           }
         },
         {
@@ -3015,7 +3015,7 @@
             "nombre": "Tvrtko I of Bosnia",
             "slug": "tvrtko-i-de-bosnia",
             "dinastia": "Kotromanić",
-            "resumen": "He inherited the banate of his uncle Esteban II. After being displaced by his brother in 1366, he regained power the following year."
+            "resumen": "He inherited the banate of his uncle Stephen II. After being displaced by his brother in 1366, he regained power the following year."
           }
         },
         {
@@ -3045,7 +3045,7 @@
             "nombre": "Bogdan I of Moldova",
             "slug": "bogdan-i-de-moldavia",
             "dinastia": "Bogdan-Mușat",
-            "resumen": "Voivode of Moldova, 1359–1367. Prince of the Bogdan-Mușat dynasty."
+            "resumen": "Voivode of Moldavia, 1359–1367. Prince of the Bogdan-Mușat dynasty."
           }
         },
         {
@@ -3135,7 +3135,7 @@
             "nombre": "Tvrtko I of Bosnia",
             "slug": "tvrtko-i-de-bosnia",
             "dinastia": "Kotromanić",
-            "resumen": "He inherited the banate of his uncle Esteban II. After being displaced by his brother in 1366, he regained power the following year."
+            "resumen": "He inherited the banate of his uncle Stephen II. After being displaced by his brother in 1366, he regained power the following year."
           }
         },
         {
@@ -3150,7 +3150,7 @@
             "nombre": "Lațcu de Moldova",
             "slug": "latcu-de-moldavia",
             "dinastia": "Bogdan-Mușat",
-            "resumen": "Voivode of Moldova, 1368–1375. Prince of the Bogdan-Mușat dynasty."
+            "resumen": "Voivode of Moldavia, 1368–1375. Prince of the Bogdan-Mușat dynasty."
           }
         },
         {
@@ -3259,7 +3259,7 @@
             "nombre": "Tvrtko I of Bosnia",
             "slug": "tvrtko-i-de-bosnia",
             "dinastia": "Kotromanić",
-            "resumen": "He inherited the banate of his uncle Esteban II. After being displaced by his brother in 1366, he regained power the following year."
+            "resumen": "He inherited the banate of his uncle Stephen II. After being displaced by his brother in 1366, he regained power the following year."
           }
         },
         {
@@ -3425,7 +3425,7 @@
             "id": "STEFAN1MOLD",
             "nombre": "Ștefan I of Moldavia",
             "slug": "stefan-i-de-moldavia",
-            "resumen": "Voivode de Moldova, 1394-1399. Voivode."
+            "resumen": "Voivode of Moldavia, 1394-1399. Voivode."
           }
         },
         {
@@ -3521,7 +3521,7 @@
             "nombre": "Alexander I of Moldova",
             "slug": "alejandro-i-de-moldavia",
             "dinastia": "Bogdan-Mușat",
-            "resumen": "Prince of Moldova, remembered for a long period of political stability. He strengthened the institutions of the principality and maneuvered between Poland, Hungary and its Black Sea neighbours."
+            "resumen": "Prince of Moldavia, remembered for a long period of political stability. He strengthened the institutions of the principality and maneuvered between Poland, Hungary and its Black Sea neighbours."
           }
         },
         {
@@ -3582,7 +3582,7 @@
             "id": "MIHAIL1WAL",
             "nombre": "Michael I of Wallachia",
             "slug": "miguel-i-de-valaquia",
-            "resumen": "Voivode de Wallachia, 1418-1420. Voivode."
+            "resumen": "Voivode of Wallachia, 1418-1420. Voivode."
           }
         },
         {
@@ -3748,7 +3748,7 @@
             "id": "ALEXANDRUALDEA",
             "nombre": "Alexander Aldea",
             "slug": "alejandro-aldea",
-            "resumen": "Voivode de Wallachia, 1431-1436. Voivode."
+            "resumen": "Voivode of Wallachia, 1431-1436. Voivode."
           }
         },
         {
@@ -4056,7 +4056,7 @@
             "nombre": "Vlad III of Wallachia",
             "slug": "vlad-iii-de-valaquia",
             "dinastia": "Basarab",
-            "resumen": "Voivode de Wallachia known as Vlad-epeș, \"the Empalator.\"His violent struggle for power and his confrontation with Mehmed II nurtured a reputation that centuries later would be transformed by literature into the myth of Dracula."
+            "resumen": "Voivode of Wallachia known as Vlad-epeș, \"the Empalator.\"His violent struggle for power and his confrontation with Mehmed II nurtured a reputation that centuries later would be transformed by literature into the myth of Dracula."
           }
         },
         {
@@ -4086,7 +4086,7 @@
             "id": "ALEXANDREL",
             "nombre": "Alexander II Alexandrel",
             "slug": "alejandro-ii-alexandrel",
-            "resumen": "Voivode de Moldova, 1449-1449. Voivode."
+            "resumen": "Voivode of Moldavia, 1449-1449. Voivode."
           }
         },
         {
@@ -4101,7 +4101,7 @@
             "nombre": "Bogdan II from Moldova",
             "slug": "bogdan-ii-de-moldavia",
             "dinastia": "Bogdan-Mușat",
-            "resumen": "Voivode of Moldova, 1449–1451. Prince of the Bogdan-Mușat dynasty."
+            "resumen": "Voivode of Moldavia, 1449–1451. Prince of the Bogdan-Mușat dynasty."
           }
         },
         {
@@ -4131,7 +4131,7 @@
             "id": "ALEXANDREL",
             "nombre": "Alexander II Alexandrel",
             "slug": "alejandro-ii-alexandrel",
-            "resumen": "Voivode de Moldova, 1449-1449. Voivode."
+            "resumen": "Voivode of Moldavia, 1449-1449. Voivode."
           }
         },
         {
@@ -4161,7 +4161,7 @@
             "id": "ALEXANDREL",
             "nombre": "Alexander II Alexandrel",
             "slug": "alejandro-ii-alexandrel",
-            "resumen": "Voivode de Moldova, 1449-1449. Voivode."
+            "resumen": "Voivode of Moldavia, 1449-1449. Voivode."
           }
         },
         {
@@ -4206,7 +4206,7 @@
             "nombre": "Vlad III of Wallachia",
             "slug": "vlad-iii-de-valaquia",
             "dinastia": "Basarab",
-            "resumen": "Voivode de Wallachia known as Vlad-epeș, \"the Empalator.\"His violent struggle for power and his confrontation with Mehmed II nurtured a reputation that centuries later would be transformed by literature into the myth of Dracula."
+            "resumen": "Voivode of Wallachia known as Vlad-epeș, \"the Empalator.\"His violent struggle for power and his confrontation with Mehmed II nurtured a reputation that centuries later would be transformed by literature into the myth of Dracula."
           }
         },
         {
@@ -4324,7 +4324,7 @@
             "id": "BASARABLAIOTA",
             "nombre": "Basarab Laiotă",
             "slug": "basarab-laiota",
-            "resumen": "Voivode de Wallachia, 1473-1473. Voivode."
+            "resumen": "Voivode of Wallachia, 1473-1473. Voivode."
           }
         },
         {
@@ -4349,7 +4349,7 @@
             "id": "BASARABLAIOTA",
             "nombre": "Basarab Laiotă",
             "slug": "basarab-laiota",
-            "resumen": "Voivode de Wallachia, 1473-1473. Voivode."
+            "resumen": "Voivode of Wallachia, 1473-1473. Voivode."
           }
         },
         {
@@ -4364,7 +4364,7 @@
             "nombre": "Vlad III of Wallachia",
             "slug": "vlad-iii-de-valaquia",
             "dinastia": "Basarab",
-            "resumen": "Voivode de Wallachia known as Vlad-epeș, \"the Empalator.\"His violent struggle for power and his confrontation with Mehmed II nurtured a reputation that centuries later would be transformed by literature into the myth of Dracula."
+            "resumen": "Voivode of Wallachia known as Vlad-epeș, \"the Empalator.\"His violent struggle for power and his confrontation with Mehmed II nurtured a reputation that centuries later would be transformed by literature into the myth of Dracula."
           }
         },
         {
@@ -4385,7 +4385,7 @@
             "id": "BASARABLAIOTA",
             "nombre": "Basarab Laiotă",
             "slug": "basarab-laiota",
-            "resumen": "Voivode de Wallachia, 1473-1473. Voivode."
+            "resumen": "Voivode of Wallachia, 1473-1473. Voivode."
           }
         },
         {
@@ -4523,7 +4523,7 @@
             "nombre": "Radu IV of Wallachia",
             "slug": "radu-iv-el-grande",
             "dinastia": "Basarab",
-            "resumen": "He succeeded his father Vlad Călugărul. His government combined relations with the neighbouring powers and religious patronage, including the Dealu monastery. The offspring of his son Mircea Ciobanul connected this Walloon line with the Rareș of Moldova, without bringing together both principalities."
+            "resumen": "He succeeded his father Vlad Călugărul. His government combined relations with the neighbouring powers and religious patronage, including the Dealu monastery. The offspring of his son Mircea Ciobanul connected this Walloon line with the Rareș of Moldavia, without bringing together both principalities."
           }
         },
         {
@@ -4685,7 +4685,7 @@
             "nombre": "Petru Rareș",
             "slug": "petru-rares",
             "dinastia": "Bogdan-Mușat",
-            "resumen": "Prince of Moldova and son of Stephen the Great. He tried to maintain an active policy between Poland, Hungary and the Ottoman Empire during a time when Moldovan autonomy was increasingly difficult to sustain."
+            "resumen": "Prince of Moldavia and son of Stephen the Great. He tried to maintain an active policy between Poland, Hungary and the Ottoman Empire during a time when Moldovan autonomy was increasingly difficult to sustain."
           }
         },
         {
@@ -4810,7 +4810,7 @@
             "nombre": "Petru Rareș",
             "slug": "petru-rares",
             "dinastia": "Bogdan-Mușat",
-            "resumen": "Prince of Moldova and son of Stephen the Great. He tried to maintain an active policy between Poland, Hungary and the Ottoman Empire during a time when Moldovan autonomy was increasingly difficult to sustain."
+            "resumen": "Prince of Moldavia and son of Stephen the Great. He tried to maintain an active policy between Poland, Hungary and the Ottoman Empire during a time when Moldovan autonomy was increasingly difficult to sustain."
           }
         },
         {
@@ -5090,7 +5090,7 @@
             "id": "ALEXANDRU2MIRCEA",
             "nombre": "Alexander II Mircea",
             "slug": "alejandro-ii-mircea",
-            "resumen": "Voivode de Wallachia, 1568-1577. Voivode."
+            "resumen": "Voivode of Wallachia, 1568-1577. Voivode."
           }
         },
         {
@@ -5226,7 +5226,7 @@
             "id": "PETRUCERCEL",
             "nombre": "Petru Cercel",
             "slug": "petru-cercel",
-            "resumen": "Voivode de Wallachia, 1583-1585. Voivode."
+            "resumen": "Voivode of Wallachia, 1583-1585. Voivode."
           }
         },
         {
@@ -5478,7 +5478,7 @@
             "nombre": "Constantin Movilă",
             "slug": "constantin-movila",
             "dinastia": "Movilă",
-            "resumen": "Voivode of Moldova, 1607–1611. Voivode of the Movilă dynasty."
+            "resumen": "Voivode of Moldavia, 1607–1611. Voivode of the Movilă dynasty."
           }
         },
         {
@@ -5493,7 +5493,7 @@
             "nombre": "Matthias of Habsburg",
             "slug": "matias-de-habsburgo",
             "dinastia": "Habsburg",
-            "resumen": "Emperor Habsburg who progressively took power from his brother Rodolfo II. His reign prepared the succession and religious crisis that would lead to the Thirty Years' War."
+            "resumen": "Emperor Habsburg who progressively took power from his brother Rudolf II. His reign prepared the succession and religious crisis that would lead to the Thirty Years' War."
           }
         },
         {
@@ -5781,7 +5781,7 @@
             "id": "LEONTOMSA",
             "nombre": "Leon Tomșa",
             "slug": "leon-tomsa",
-            "resumen": "Voivode de Wallachia, 1629-1632. Voivode."
+            "resumen": "Voivode of Wallachia, 1629-1632. Voivode."
           }
         },
         {
@@ -5797,7 +5797,7 @@
             "nombre": "Moise Movilă",
             "slug": "moise-movila",
             "dinastia": "Movilă",
-            "resumen": "Voivode of Moldova, 1630–1631. Voivode of the Movilă dynasty."
+            "resumen": "Voivode of Moldavia, 1630–1631. Voivode of the Movilă dynasty."
           }
         },
         {
@@ -5858,7 +5858,7 @@
             "nombre": "Moise Movilă",
             "slug": "moise-movila",
             "dinastia": "Movilă",
-            "resumen": "Voivode of Moldova, 1630–1631. Voivode of the Movilă dynasty."
+            "resumen": "Voivode of Moldavia, 1630–1631. Voivode of the Movilă dynasty."
           }
         },
         {
@@ -6144,14 +6144,14 @@
           "nombre": "Stephen V of Hungary",
           "slug": "esteban-v",
           "dinastia": "Árpád",
-          "resumen": "Before he succeeded Bela IV, he contested a part of the Hungarian government with his father. His brief independent reign left Ladislao IV, still under the age of six, as his heir."
+          "resumen": "Before he succeeded Béla IV, he contested a part of the Hungarian government with his father. His brief independent reign left Ladislaus IV, still under the age of six, as his heir."
         },
         {
           "id": "CARLOS1",
           "nombre": "Charles I of Hungary",
           "slug": "carlos-i",
           "dinastia": "Anjou-Hungary",
-          "resumen": "Carlos Roberto de Anjou affirmed his authority in front of the great Hungarian magnates. The reorganisation of the regent revenues and mining has strengthened the monarchy."
+          "resumen": "Carlos Robert of Anjou affirmed his authority in front of the great Hungarian magnates. The reorganisation of the regent revenues and mining has strengthened the monarchy."
         },
         {
           "id": "LADI4",
@@ -6165,7 +6165,7 @@
           "nombre": "Wenceslaus III of Bohemia",
           "slug": "wenceslao-iii",
           "dinastia": "Přemyslid",
-          "resumen": "The violent death of Wenceslao III extinguished the male line of the Přemysl that ruled Bohemia. His claims about Poland and Hungary show the scope and fragility of that dynastic expansion."
+          "resumen": "The violent death of Wenceslaus III extinguished the male line of the Přemysl that ruled Bohemia. His claims about Poland and Hungary show the scope and fragility of that dynastic expansion."
         },
         {
           "id": "LUIS1",
@@ -6249,7 +6249,7 @@
           "nombre": "Matthias of Habsburg",
           "slug": "matias-de-habsburgo",
           "dinastia": "Habsburg",
-          "resumen": "Emperor Habsburg who progressively took power from his brother Rodolfo II. His reign prepared the succession and religious crisis that would lead to the Thirty Years' War."
+          "resumen": "Emperor Habsburg who progressively took power from his brother Rudolf II. His reign prepared the succession and religious crisis that would lead to the Thirty Years' War."
         },
         {
           "id": "RODOLFO2HRE",
@@ -6277,7 +6277,7 @@
           "nombre": "Emeric of Hungary",
           "slug": "emerico-de-hungria",
           "dinastia": "Árpád",
-          "resumen": "King of Hungary since 1196, son of Bela III. His reign was marked by the rebellions of his brother Andrew; he died in 1204 leaving his son Ladislaus III."
+          "resumen": "King of Hungary since 1196, son of Béla III. His reign was marked by the rebellions of his brother Andrew; he died in 1204 leaving his son Ladislaus III."
         },
         {
           "id": "LADISLAO3HUN",
@@ -6788,7 +6788,7 @@
           "nombre": "Vlad III of Wallachia",
           "slug": "vlad-iii-de-valaquia",
           "dinastia": "Basarab",
-          "resumen": "Voivode de Wallachia known as Vlad-epeș, \"the Empalator.\"His violent struggle for power and his confrontation with Mehmed II nurtured a reputation that centuries later would be transformed by literature into the myth of Dracula."
+          "resumen": "Voivode of Wallachia known as Vlad-epeș, \"the Empalator.\"His violent struggle for power and his confrontation with Mehmed II nurtured a reputation that centuries later would be transformed by literature into the myth of Dracula."
         },
         {
           "id": "RADU3FRUMOS",
@@ -6802,14 +6802,14 @@
           "nombre": "Bogdan I of Moldova",
           "slug": "bogdan-i-de-moldavia",
           "dinastia": "Bogdan-Mușat",
-          "resumen": "Voivode of Moldova, 1359–1367. Prince of the Bogdan-Mușat dynasty."
+          "resumen": "Voivode of Moldavia, 1359–1367. Prince of the Bogdan-Mușat dynasty."
         },
         {
           "id": "LATCUMOLD",
           "nombre": "Lațcu de Moldova",
           "slug": "latcu-de-moldavia",
           "dinastia": "Bogdan-Mușat",
-          "resumen": "Voivode of Moldova, 1368–1375. Prince of the Bogdan-Mușat dynasty."
+          "resumen": "Voivode of Moldavia, 1368–1375. Prince of the Bogdan-Mușat dynasty."
         },
         {
           "id": "COSTEAMUSAT",
@@ -6844,14 +6844,14 @@
           "nombre": "Alexander I of Moldova",
           "slug": "alejandro-i-de-moldavia",
           "dinastia": "Bogdan-Mușat",
-          "resumen": "Prince of Moldova, remembered for a long period of political stability. He strengthened the institutions of the principality and maneuvered between Poland, Hungary and its Black Sea neighbours."
+          "resumen": "Prince of Moldavia, remembered for a long period of political stability. He strengthened the institutions of the principality and maneuvered between Poland, Hungary and its Black Sea neighbours."
         },
         {
           "id": "BOGDAN2MOLD",
           "nombre": "Bogdan II from Moldova",
           "slug": "bogdan-ii-de-moldavia",
           "dinastia": "Bogdan-Mușat",
-          "resumen": "Voivode of Moldova, 1449–1451. Prince of the Bogdan-Mușat dynasty."
+          "resumen": "Voivode of Moldavia, 1449–1451. Prince of the Bogdan-Mușat dynasty."
         },
         {
           "id": "MARIAOLTEAMOLD",
@@ -6886,7 +6886,7 @@
           "nombre": "Petru Rareș",
           "slug": "petru-rares",
           "dinastia": "Bogdan-Mușat",
-          "resumen": "Prince of Moldova and son of Stephen the Great. He tried to maintain an active policy between Poland, Hungary and the Ottoman Empire during a time when Moldovan autonomy was increasingly difficult to sustain."
+          "resumen": "Prince of Moldavia and son of Stephen the Great. He tried to maintain an active policy between Poland, Hungary and the Ottoman Empire during a time when Moldovan autonomy was increasingly difficult to sustain."
         },
         {
           "id": "STEPHEN2BOS",
@@ -6914,7 +6914,7 @@
           "nombre": "Tvrtko I of Bosnia",
           "slug": "tvrtko-i-de-bosnia",
           "dinastia": "Kotromanić",
-          "resumen": "He inherited the banate of his uncle Esteban II. After being displaced by his brother in 1366, he regained power the following year."
+          "resumen": "He inherited the banate of his uncle Stephen II. After being displaced by his brother in 1366, he regained power the following year."
         },
         {
           "id": "DABISABOS",
@@ -7056,7 +7056,7 @@
           "nombre": "Jelisava Nemanjić",
           "slug": "jelisava-nemanjic",
           "dinastia": "Nemanjić",
-          "resumen": "Wife of Stephen I Kotroman and mother of Esteban II and Vladislav, is part of the Serbian descent invoked by the Kotromanić. Her grandchildren Isabel of Bosnia and Tvrtko I allow to follow different connections: the Hungarian monarchy and the construction of Bosnian royalty."
+          "resumen": "Wife of Stephen I Kotroman and mother of Stephen II and Vladislav, is part of the Serbian descent invoked by the Kotromanić. Her grandchildren Isabel of Bosnia and Tvrtko I allow to follow different connections: the Hungarian monarchy and the construction of Bosnian royalty."
         },
         {
           "id": "STJEPANVUKKOS",
@@ -7105,7 +7105,7 @@
           "nombre": "Radu IV of Wallachia",
           "slug": "radu-iv-el-grande",
           "dinastia": "Basarab",
-          "resumen": "He succeeded his father Vlad Călugărul. His government combined relations with the neighbouring powers and religious patronage, including the Dealu monastery. The offspring of his son Mircea Ciobanul connected this Walloon line with the Rareș of Moldova, without bringing together both principalities."
+          "resumen": "He succeeded his father Vlad Călugărul. His government combined relations with the neighbouring powers and religious patronage, including the Dealu monastery. The offspring of his son Mircea Ciobanul connected this Walloon line with the Rareș of Moldavia, without bringing together both principalities."
         },
         {
           "id": "MIRCEACIOBAN",
@@ -7199,7 +7199,7 @@
           "id": "LEONTOMSA",
           "nombre": "Leon Tomșa",
           "slug": "leon-tomsa",
-          "resumen": "Voivode de Wallachia, 1629-1632. Voivode."
+          "resumen": "Voivode of Wallachia, 1629-1632. Voivode."
         },
         {
           "id": "MATEIBASARAB",
@@ -7231,7 +7231,7 @@
           "nombre": "Constantin Movilă",
           "slug": "constantin-movila",
           "dinastia": "Movilă",
-          "resumen": "Voivode of Moldova, 1607–1611. Voivode of the Movilă dynasty."
+          "resumen": "Voivode of Moldavia, 1607–1611. Voivode of the Movilă dynasty."
         },
         {
           "id": "STEFAN2TOMSA",
@@ -7244,7 +7244,7 @@
           "nombre": "Moise Movilă",
           "slug": "moise-movila",
           "dinastia": "Movilă",
-          "resumen": "Voivode of Moldova, 1630–1631. Voivode of the Movilă dynasty."
+          "resumen": "Voivode of Moldavia, 1630–1631. Voivode of the Movilă dynasty."
         },
         {
           "id": "ALEXANDRUMOVILA",
@@ -7269,13 +7269,13 @@
           "id": "MIHAIL1WAL",
           "nombre": "Michael I of Wallachia",
           "slug": "miguel-i-de-valaquia",
-          "resumen": "Voivode de Wallachia, 1418-1420. Voivode."
+          "resumen": "Voivode of Wallachia, 1418-1420. Voivode."
         },
         {
           "id": "ALEXANDRUALDEA",
           "nombre": "Alexander Aldea",
           "slug": "alejandro-aldea",
-          "resumen": "Voivode de Wallachia, 1431-1436. Voivode."
+          "resumen": "Voivode of Wallachia, 1431-1436. Voivode."
         },
         {
           "id": "VLADISLAV2WAL",
@@ -7287,7 +7287,7 @@
           "id": "BASARABLAIOTA",
           "nombre": "Basarab Laiotă",
           "slug": "basarab-laiota",
-          "resumen": "Voivode de Wallachia, 1473-1473. Voivode."
+          "resumen": "Voivode of Wallachia, 1473-1473. Voivode."
         },
         {
           "id": "BASARABTEPELUS",
@@ -7341,7 +7341,7 @@
           "id": "ALEXANDRU2MIRCEA",
           "nombre": "Alexander II Mircea",
           "slug": "alejandro-ii-mircea",
-          "resumen": "Voivode de Wallachia, 1568-1577. Voivode."
+          "resumen": "Voivode of Wallachia, 1568-1577. Voivode."
         },
         {
           "id": "MIHNEATURCITUL",
@@ -7353,7 +7353,7 @@
           "id": "PETRUCERCEL",
           "nombre": "Petru Cercel",
           "slug": "petru-cercel",
-          "resumen": "Voivode de Wallachia, 1583-1585. Voivode."
+          "resumen": "Voivode of Wallachia, 1583-1585. Voivode."
         },
         {
           "id": "STEFANSURDUL",
@@ -7395,7 +7395,7 @@
           "id": "ALEXANDREL",
           "nombre": "Alexander II Alexandrel",
           "slug": "alejandro-ii-alexandrel",
-          "resumen": "Voivode de Moldova, 1449-1449. Voivode."
+          "resumen": "Voivode of Moldavia, 1449-1449. Voivode."
         },
         {
           "id": "PETRUARON",
@@ -7559,7 +7559,7 @@
           "id": "STEFAN1MOLD",
           "nombre": "Ștefan I of Moldavia",
           "slug": "stefan-i-de-moldavia",
-          "resumen": "Voivode de Moldova, 1394-1399. Voivode."
+          "resumen": "Voivode of Moldavia, 1394-1399. Voivode."
         },
         {
           "id": "IUGAMOLD",
@@ -7970,7 +7970,7 @@
         "nombre": "Natela Jakeli",
         "slug": "natela-jakeli",
         "dinastia": "Jakeli",
-        "resumen": "Beka I's daughter and her wife Demetrio II. Through her, George V. was linked to the house of Samtzje, whose support was important during her childhood and in the reconstruction of her regal authority."
+        "resumen": "Beka I's daughter and her wife Demetrius II. Through her, George V. was linked to the house of Samtzje, whose support was important during her childhood and in the reconstruction of her regal authority."
       },
       {
         "id": "GIORGI5GEO",
@@ -8299,7 +8299,7 @@
         "nombre": "David Datuna of Kakheti",
         "slug": "david-datuna-de-kajetia",
         "dinastia": "Bagrationi",
-        "resumen": "Son of Teimuraz I and Jorashan, fought in the fight against Rostom and died in the battle of Magharo. His son Heraclio continued the Kakheti royal line, from which Teimuraz II and Heraclio II would come."
+        "resumen": "Son of Teimuraz I and Jorashan, fought in the fight against Rostom and died in the battle of Magharo. His son Heraclio continued the Kakheti royal line, from which Teimuraz II and Heraclius II would come."
       },
       {
         "id": "EREKLE1GEO",
@@ -8481,7 +8481,7 @@
         "nombre": "Solomon II of Imereti",
         "slug": "salomon-ii-de-imericia",
         "dinastia": "Bagrationi",
-        "resumen": "He joined power with the support of his grandfather Heraclio II and fought the crown for David II. The Russian expansion ended with its deposition in 1810. He died in exile in Trebizond, after trying to recover the kingdom."
+        "resumen": "He joined power with the support of his grandfather Heraclius II and fought the crown for David II. The Russian expansion ended with its deposition in 1810. He died in exile in Trebizond, after trying to recover the kingdom."
       },
       {
         "id": "GIORGI12GEO",
@@ -8495,7 +8495,7 @@
         "nombre": "Gulkhan Eudoxia of Georgia",
         "slug": "gulkhan-eudoxia-de-georgia",
         "dinastia": "Bagrationi",
-        "resumen": "Georgian princess, took the name Eudoxia and married Manuel III. She was the mother of Alejo IV. Her file connects two Black Sea courts without attributing a territorial government to her for her status as consort."
+        "resumen": "Georgian princess, took the name Eudoxia and married Manuel III. She was the mother of Alexios IV. Her file connects two Black Sea courts without attributing a territorial government to her for her status as consort."
       }
     ],
     "editorial": false,
@@ -10199,7 +10199,7 @@
             "nombre": "Solomon II of Imereti",
             "slug": "salomon-ii-de-imericia",
             "dinastia": "Bagrationi",
-            "resumen": "He joined power with the support of his grandfather Heraclio II and fought the crown for David II. The Russian expansion ended with its deposition in 1810. He died in exile in Trebizond, after trying to recover the kingdom."
+            "resumen": "He joined power with the support of his grandfather Heraclius II and fought the crown for David II. The Russian expansion ended with its deposition in 1810. He died in exile in Trebizond, after trying to recover the kingdom."
           }
         },
         {
@@ -10229,7 +10229,7 @@
             "nombre": "Solomon II of Imereti",
             "slug": "salomon-ii-de-imericia",
             "dinastia": "Bagrationi",
-            "resumen": "He joined power with the support of his grandfather Heraclio II and fought the crown for David II. The Russian expansion ended with its deposition in 1810. He died in exile in Trebizond, after trying to recover the kingdom."
+            "resumen": "He joined power with the support of his grandfather Heraclius II and fought the crown for David II. The Russian expansion ended with its deposition in 1810. He died in exile in Trebizond, after trying to recover the kingdom."
           }
         },
         {
@@ -10353,7 +10353,7 @@
           "nombre": "Natela Jakeli",
           "slug": "natela-jakeli",
           "dinastia": "Jakeli",
-          "resumen": "Beka I's daughter and her wife Demetrio II. Through her, George V. was linked to the house of Samtzje, whose support was important during her childhood and in the reconstruction of her regal authority."
+          "resumen": "Beka I's daughter and her wife Demetrius II. Through her, George V. was linked to the house of Samtzje, whose support was important during her childhood and in the reconstruction of her regal authority."
         },
         {
           "id": "GIORGI5GEO",
@@ -10682,7 +10682,7 @@
           "nombre": "David Datuna of Kakheti",
           "slug": "david-datuna-de-kajetia",
           "dinastia": "Bagrationi",
-          "resumen": "Son of Teimuraz I and Jorashan, fought in the fight against Rostom and died in the battle of Magharo. His son Heraclio continued the Kakheti royal line, from which Teimuraz II and Heraclio II would come."
+          "resumen": "Son of Teimuraz I and Jorashan, fought in the fight against Rostom and died in the battle of Magharo. His son Heraclio continued the Kakheti royal line, from which Teimuraz II and Heraclius II would come."
         },
         {
           "id": "EREKLE1GEO",
@@ -10864,7 +10864,7 @@
           "nombre": "Solomon II of Imereti",
           "slug": "salomon-ii-de-imericia",
           "dinastia": "Bagrationi",
-          "resumen": "He joined power with the support of his grandfather Heraclio II and fought the crown for David II. The Russian expansion ended with its deposition in 1810. He died in exile in Trebizond, after trying to recover the kingdom."
+          "resumen": "He joined power with the support of his grandfather Heraclius II and fought the crown for David II. The Russian expansion ended with its deposition in 1810. He died in exile in Trebizond, after trying to recover the kingdom."
         },
         {
           "id": "GIORGI12GEO",
@@ -10878,7 +10878,7 @@
           "nombre": "Gulkhan Eudoxia of Georgia",
           "slug": "gulkhan-eudoxia-de-georgia",
           "dinastia": "Bagrationi",
-          "resumen": "Georgian princess, took the name Eudoxia and married Manuel III. She was the mother of Alejo IV. Her file connects two Black Sea courts without attributing a territorial government to her for her status as consort."
+          "resumen": "Georgian princess, took the name Eudoxia and married Manuel III. She was the mother of Alexios IV. Her file connects two Black Sea courts without attributing a territorial government to her for her status as consort."
         }
       ],
       "eventos": [],
@@ -10996,14 +10996,14 @@
         "nombre": "William I of Bavaria-Straubing",
         "slug": "guillermo-i-de-baviera-straubing",
         "dinastia": "Wittelsbach",
-        "resumen": "Duke of Bavaria-Straubing and Count of Henao, Netherlands and Zealand for inheritance of their mother. His mental illness forced his brother Alberto to rule as a regent since 1358."
+        "resumen": "Duke of Bavaria-Straubing and Count of Hainaut, Netherlands and Zealand for inheritance of their mother. His mental illness forced his brother Alberto to rule as a regent since 1358."
       },
       {
         "id": "ALB1BAV",
         "nombre": "Albert I of Bavaria-Straubing",
         "slug": "alberto-i-de-baviera-straubing",
         "dinastia": "Wittelsbach",
-        "resumen": "Duke of Bavaria-Straubing and, by his mother Margarita, ruler of Henao, Netherlands and Zealand. He was regent by his brother William I and count to his death in 1389."
+        "resumen": "Duke of Bavaria-Straubing and, by his mother Margarita, ruler of Hainaut, Netherlands and Zealand. He was regent by his brother William I and count to his death in 1389."
       },
       {
         "id": "GUILLERMO2BAV",
@@ -11164,14 +11164,14 @@
             {
               "anio": 1363,
               "titulo": "The Duchy of Philip the Stretch",
-              "texto": "The French duchy was focused on Dijon. The North and County Franco counties would come by Margarita III.",
+              "texto": "The French duchy was focused on Dijon. The North and County Franco counties would come by Margaret III.",
               "personas": [
                 {
                   "id": "FEL2BORG",
                   "nombre": "Philip II of Burgundy",
                   "slug": "felipe-ii-de-borgona",
                   "dinastia": "Valois-Burgundy",
-                  "resumen": "He received the duchy of Burgundy from his father, John II of France. His marriage to Margarita de Flanders laid the foundation for the Burgundian expansion in the Netherlands."
+                  "resumen": "He received the duchy of Burgundy from his father, John II of France. His marriage to Margaret of Flanders laid the foundation for the Burgundian expansion in the Netherlands."
                 },
                 {
                   "id": "MARGFRAFLA",
@@ -11213,7 +11213,7 @@
                   "nombre": "Philip II of Burgundy",
                   "slug": "felipe-ii-de-borgona",
                   "dinastia": "Valois-Burgundy",
-                  "resumen": "He received the duchy of Burgundy from his father, John II of France. His marriage to Margarita de Flanders laid the foundation for the Burgundian expansion in the Netherlands."
+                  "resumen": "He received the duchy of Burgundy from his father, John II of France. His marriage to Margaret of Flanders laid the foundation for the Burgundian expansion in the Netherlands."
                 },
                 {
                   "id": "JUAN1BORG",
@@ -11360,7 +11360,7 @@
           ],
           "fuentes": [
             {
-              "titulo": "BnF · Margarita III de Flandes y sus cinco condados",
+              "titulo": "BnF · Margaret III of Flanders y sus cinco condados",
               "url": "https://catalogue.bnf.fr/ark:/12148/cb16161030k"
             },
             {
@@ -11372,11 +11372,11 @@
               "url": "https://portail.biblissima.fr/fr/ark:/43093/pdata71295e340f36a2c35285ffc09fff863e1dd66edb"
             },
             {
-              "titulo": "Canon van Nederland · Jacoba de Baviera y la sucesión de 1433",
+              "titulo": "Canon van Nederland · Jacoba of Bavaria y la sucesión de 1433",
               "url": "https://www.canonvannederland.nl/nl/page/439262/jacoba-van-beieren"
             },
             {
-              "titulo": "Gobierno de Luxemburgo · Adquisición y toma de 1443",
+              "titulo": "Gobierno of Luxembourg · Adquisición y toma de 1443",
               "url": "https://luxembourg.public.lu/en/society-and-culture/history/helm-holy-roman-empire.html"
             },
             {
@@ -11598,7 +11598,7 @@
                 "nombre": "William I of Bavaria-Straubing",
                 "slug": "guillermo-i-de-baviera-straubing",
                 "dinastia": "Wittelsbach",
-                "resumen": "Duke of Bavaria-Straubing and Count of Henao, Netherlands and Zealand for inheritance of their mother. His mental illness forced his brother Alberto to rule as a regent since 1358."
+                "resumen": "Duke of Bavaria-Straubing and Count of Hainaut, Netherlands and Zealand for inheritance of their mother. His mental illness forced his brother Alberto to rule as a regent since 1358."
               },
               "desde": 1356
             },
@@ -11631,7 +11631,7 @@
                   "nombre": "William I of Bavaria-Straubing",
                   "slug": "guillermo-i-de-baviera-straubing",
                   "dinastia": "Wittelsbach",
-                  "resumen": "Duke of Bavaria-Straubing and Count of Henao, Netherlands and Zealand for inheritance of their mother. His mental illness forced his brother Alberto to rule as a regent since 1358."
+                  "resumen": "Duke of Bavaria-Straubing and Count of Hainaut, Netherlands and Zealand for inheritance of their mother. His mental illness forced his brother Alberto to rule as a regent since 1358."
                 }
               ]
             }
@@ -11645,7 +11645,7 @@
                 "nombre": "William I of Bavaria-Straubing",
                 "slug": "guillermo-i-de-baviera-straubing",
                 "dinastia": "Wittelsbach",
-                "resumen": "Duke of Bavaria-Straubing and Count of Henao, Netherlands and Zealand for inheritance of their mother. His mental illness forced his brother Alberto to rule as a regent since 1358."
+                "resumen": "Duke of Bavaria-Straubing and Count of Hainaut, Netherlands and Zealand for inheritance of their mother. His mental illness forced his brother Alberto to rule as a regent since 1358."
               },
               "desde": 1356
             },
@@ -11655,7 +11655,7 @@
                 "nombre": "Albert I of Bavaria-Straubing",
                 "slug": "alberto-i-de-baviera-straubing",
                 "dinastia": "Wittelsbach",
-                "resumen": "Duke of Bavaria-Straubing and, by his mother Margarita, ruler of Henao, Netherlands and Zealand. He was regent by his brother William I and count to his death in 1389."
+                "resumen": "Duke of Bavaria-Straubing and, by his mother Margarita, ruler of Hainaut, Netherlands and Zealand. He was regent by his brother William I and count to his death in 1389."
               },
               "desde": 1358
             },
@@ -11693,7 +11693,7 @@
                   "nombre": "William I of Bavaria-Straubing",
                   "slug": "guillermo-i-de-baviera-straubing",
                   "dinastia": "Wittelsbach",
-                  "resumen": "Duke of Bavaria-Straubing and Count of Henao, Netherlands and Zealand for inheritance of their mother. His mental illness forced his brother Alberto to rule as a regent since 1358."
+                  "resumen": "Duke of Bavaria-Straubing and Count of Hainaut, Netherlands and Zealand for inheritance of their mother. His mental illness forced his brother Alberto to rule as a regent since 1358."
                 },
                 {
                   "id": "LUIS4",
@@ -11707,7 +11707,7 @@
                   "nombre": "Albert I of Bavaria-Straubing",
                   "slug": "alberto-i-de-baviera-straubing",
                   "dinastia": "Wittelsbach",
-                  "resumen": "Duke of Bavaria-Straubing and, by his mother Margarita, ruler of Henao, Netherlands and Zealand. He was regent by his brother William I and count to his death in 1389."
+                  "resumen": "Duke of Bavaria-Straubing and, by his mother Margarita, ruler of Hainaut, Netherlands and Zealand. He was regent by his brother William I and count to his death in 1389."
                 }
               ]
             }
@@ -11843,7 +11843,7 @@
                   "nombre": "Albert I of Bavaria-Straubing",
                   "slug": "alberto-i-de-baviera-straubing",
                   "dinastia": "Wittelsbach",
-                  "resumen": "Duke of Bavaria-Straubing and, by his mother Margarita, ruler of Henao, Netherlands and Zealand. He was regent by his brother William I and count to his death in 1389."
+                  "resumen": "Duke of Bavaria-Straubing and, by his mother Margarita, ruler of Hainaut, Netherlands and Zealand. He was regent by his brother William I and count to his death in 1389."
                 },
                 {
                   "id": "MARGBAV",
@@ -11988,7 +11988,7 @@
             "periodo": "1246-1280",
             "desde": 1246,
             "hasta": 1280,
-            "resumen": "The children of the two marriages of Margarita de Flanders defended rights to their heritage. The discussion of the legitimacy of the Avesnes and the intervention of neighbouring powers gave the conflict a political dimension.",
+            "resumen": "The children of the two marriages of Margaret of Flanders defended rights to their heritage. The discussion of the legitimacy of the Avesnes and the intervention of neighbouring powers gave the conflict a political dimension.",
             "candidatos": [
               {
                 "persona": {
@@ -12084,7 +12084,7 @@
                     "nombre": "Albert I of Bavaria-Straubing",
                     "slug": "alberto-i-de-baviera-straubing",
                     "dinastia": "Wittelsbach",
-                    "resumen": "Duke of Bavaria-Straubing and, by his mother Margarita, ruler of Henao, Netherlands and Zealand. He was regent by his brother William I and count to his death in 1389."
+                    "resumen": "Duke of Bavaria-Straubing and, by his mother Margarita, ruler of Hainaut, Netherlands and Zealand. He was regent by his brother William I and count to his death in 1389."
                   },
                   {
                     "id": "GUILLERMO2BAV",
@@ -12118,7 +12118,7 @@
                     "nombre": "Albert I of Bavaria-Straubing",
                     "slug": "alberto-i-de-baviera-straubing",
                     "dinastia": "Wittelsbach",
-                    "resumen": "Duke of Bavaria-Straubing and, by his mother Margarita, ruler of Henao, Netherlands and Zealand. He was regent by his brother William I and count to his death in 1389."
+                    "resumen": "Duke of Bavaria-Straubing and, by his mother Margarita, ruler of Hainaut, Netherlands and Zealand. He was regent by his brother William I and count to his death in 1389."
                   },
                   {
                     "id": "JUAN3BAV",
@@ -12145,7 +12145,7 @@
                     "nombre": "Albert I of Bavaria-Straubing",
                     "slug": "alberto-i-de-baviera-straubing",
                     "dinastia": "Wittelsbach",
-                    "resumen": "Duke of Bavaria-Straubing and, by his mother Margarita, ruler of Henao, Netherlands and Zealand. He was regent by his brother William I and count to his death in 1389."
+                    "resumen": "Duke of Bavaria-Straubing and, by his mother Margarita, ruler of Hainaut, Netherlands and Zealand. He was regent by his brother William I and count to his death in 1389."
                   },
                   {
                     "id": "MARGBAV",
@@ -12219,11 +12219,11 @@
           "url": "https://portail.biblissima.fr/fr/ark:/43093/pdata71295e340f36a2c35285ffc09fff863e1dd66edb"
         },
         {
-          "titulo": "Canon van Nederland · Jacoba de Baviera y la sucesión de 1433",
+          "titulo": "Canon van Nederland · Jacoba of Bavaria y la sucesión de 1433",
           "url": "https://www.canonvannederland.nl/nl/page/439262/jacoba-van-beieren"
         },
         {
-          "titulo": "Rijksmuseum · Alegoría de la abdicación de Carlos V",
+          "titulo": "Rijksmuseum · Alegoría de la abdicación de Charles V",
           "url": "https://www.rijksmuseum.nl/en/collection/object/Allegory-on-the-Abdication-of-Emperor-Charles-v-in-Brussels--2cb744f2469fe62413bb6aab920d4e03"
         },
         {
@@ -12343,7 +12343,7 @@
             "nombre": "William I of Bavaria-Straubing",
             "slug": "guillermo-i-de-baviera-straubing",
             "dinastia": "Wittelsbach",
-            "resumen": "Duke of Bavaria-Straubing and Count of Henao, Netherlands and Zealand for inheritance of their mother. His mental illness forced his brother Alberto to rule as a regent since 1358."
+            "resumen": "Duke of Bavaria-Straubing and Count of Hainaut, Netherlands and Zealand for inheritance of their mother. His mental illness forced his brother Alberto to rule as a regent since 1358."
           }
         },
         {
@@ -12359,7 +12359,7 @@
             "nombre": "William I of Bavaria-Straubing",
             "slug": "guillermo-i-de-baviera-straubing",
             "dinastia": "Wittelsbach",
-            "resumen": "Duke of Bavaria-Straubing and Count of Henao, Netherlands and Zealand for inheritance of their mother. His mental illness forced his brother Alberto to rule as a regent since 1358."
+            "resumen": "Duke of Bavaria-Straubing and Count of Hainaut, Netherlands and Zealand for inheritance of their mother. His mental illness forced his brother Alberto to rule as a regent since 1358."
           }
         },
         {
@@ -12375,7 +12375,7 @@
             "nombre": "Albert I of Bavaria-Straubing",
             "slug": "alberto-i-de-baviera-straubing",
             "dinastia": "Wittelsbach",
-            "resumen": "Duke of Bavaria-Straubing and, by his mother Margarita, ruler of Henao, Netherlands and Zealand. He was regent by his brother William I and count to his death in 1389."
+            "resumen": "Duke of Bavaria-Straubing and, by his mother Margarita, ruler of Hainaut, Netherlands and Zealand. He was regent by his brother William I and count to his death in 1389."
           }
         },
         {
@@ -12390,7 +12390,7 @@
             "nombre": "Albert I of Bavaria-Straubing",
             "slug": "alberto-i-de-baviera-straubing",
             "dinastia": "Wittelsbach",
-            "resumen": "Duke of Bavaria-Straubing and, by his mother Margarita, ruler of Henao, Netherlands and Zealand. He was regent by his brother William I and count to his death in 1389."
+            "resumen": "Duke of Bavaria-Straubing and, by his mother Margarita, ruler of Hainaut, Netherlands and Zealand. He was regent by his brother William I and count to his death in 1389."
           }
         },
         {
@@ -12732,7 +12732,7 @@
         }
       ],
       "dinastias": [
-        "Casa de Flandes",
+        "Casa of Flanders",
         "Avesnes",
         "Wittelsbach",
         "Valois-Borgoña",
@@ -12851,14 +12851,14 @@
           "nombre": "William I of Bavaria-Straubing",
           "slug": "guillermo-i-de-baviera-straubing",
           "dinastia": "Wittelsbach",
-          "resumen": "Duke of Bavaria-Straubing and Count of Henao, Netherlands and Zealand for inheritance of their mother. His mental illness forced his brother Alberto to rule as a regent since 1358."
+          "resumen": "Duke of Bavaria-Straubing and Count of Hainaut, Netherlands and Zealand for inheritance of their mother. His mental illness forced his brother Alberto to rule as a regent since 1358."
         },
         {
           "id": "ALB1BAV",
           "nombre": "Albert I of Bavaria-Straubing",
           "slug": "alberto-i-de-baviera-straubing",
           "dinastia": "Wittelsbach",
-          "resumen": "Duke of Bavaria-Straubing and, by his mother Margarita, ruler of Henao, Netherlands and Zealand. He was regent by his brother William I and count to his death in 1389."
+          "resumen": "Duke of Bavaria-Straubing and, by his mother Margarita, ruler of Hainaut, Netherlands and Zealand. He was regent by his brother William I and count to his death in 1389."
         },
         {
           "id": "GUILLERMO2BAV",
@@ -13074,7 +13074,7 @@
             "MAXIM1",
             "FEL1CAST"
           ],
-          "descripcion": "The agreement returns Artois and the County of Burgundy to the heritage of Maria de Burgundy, while the Duchy of Burgundy remains in French hands."
+          "descripcion": "The agreement returns Artois and the County of Burgundy to the heritage of Mary of Burgundy, while the Duchy of Burgundy remains in French hands."
         },
         {
           "id": "WORMS_1521",
@@ -13628,14 +13628,14 @@
         "nombre": "Richard I of England",
         "slug": "ricardo-i-de-inglaterra",
         "dinastia": "Plantagenet",
-        "resumen": "The third son of Henry II and Leonor of Aquitaine, he was Duke of Aquitaine from 1172 and king of England from 1189 to 1199. He led the third crusade with Philip Augustus, defeated Saladino in Arsuf (1191) and negotiated the access of pilgrims to Jerusalem. Captured on his return by Leopoldo V from Austria, he passed to the Emperor Henry VI until he paid a huge ransom in 1194. He spent his last years defending Normandy in front of France and died in the siege of Châlus."
+        "resumen": "The third son of Henry II and Leonor of Aquitaine, he was Duke of Aquitaine from 1172 and king of England from 1189 to 1199. He led the third crusade with Philip Augustus, defeated Saladino in Arsuf (1191) and negotiated the access of pilgrims to Jerusalem. Captured on his return by Leopold V from Austria, he passed to the Emperor Henry VI until he paid a huge ransom in 1194. He spent his last years defending Normandy in front of France and died in the siege of Châlus."
       },
       {
         "id": "BERENGUELANAV",
         "nombre": "Berenguela de Navarre",
         "slug": "berenguela-de-navarra",
         "dinastia": "Jiménez",
-        "resumen": "Daughter of Sancho VI of Navarre, she married Ricardo I in Limassol (Cyprus) in 1191, during the crusade. She never lived in England; after widowing she lived in Le Mans, which was part of her dowry, and there she founded the Abbey of L’Épau, where she is buried."
+        "resumen": "Daughter of Sancho VI of Navarre, she married Richard I in Limassol (Cyprus) in 1191, during the crusade. She never lived in England; after widowing she lived in Le Mans, which was part of her dowry, and there she founded the Abbey of L’Épau, where she is buried."
       },
       {
         "id": "JUANSINTIERRA",
@@ -14223,7 +14223,7 @@
         "nombre": "George of York",
         "slug": "jorge-de-york",
         "dinastia": "Plantagenet-York",
-        "resumen": "Duke of Clarence and brother of Edward IV and Ricardo III. He allied with Warwick with Edward, reconciled with his king in 1471 and became convicted of treason and executed in 1478."
+        "resumen": "Duke of Clarence and brother of Edward IV and Richard III. He allied with Warwick with Edward, reconciled with his king in 1471 and became convicted of treason and executed in 1478."
       },
       {
         "id": "EDWARDWESTMINSTER",
@@ -14521,7 +14521,7 @@
             "nombre": "Richard I of England",
             "slug": "ricardo-i-de-inglaterra",
             "dinastia": "Plantagenet",
-            "resumen": "The third son of Henry II and Leonor of Aquitaine, he was Duke of Aquitaine from 1172 and king of England from 1189 to 1199. He led the third crusade with Philip Augustus, defeated Saladino in Arsuf (1191) and negotiated the access of pilgrims to Jerusalem. Captured on his return by Leopoldo V from Austria, he passed to the Emperor Henry VI until he paid a huge ransom in 1194. He spent his last years defending Normandy in front of France and died in the siege of Châlus."
+            "resumen": "The third son of Henry II and Leonor of Aquitaine, he was Duke of Aquitaine from 1172 and king of England from 1189 to 1199. He led the third crusade with Philip Augustus, defeated Saladino in Arsuf (1191) and negotiated the access of pilgrims to Jerusalem. Captured on his return by Leopold V from Austria, he passed to the Emperor Henry VI until he paid a huge ransom in 1194. He spent his last years defending Normandy in front of France and died in the siege of Châlus."
           }
         },
         {
@@ -15273,14 +15273,14 @@
           "nombre": "Richard I of England",
           "slug": "ricardo-i-de-inglaterra",
           "dinastia": "Plantagenet",
-          "resumen": "The third son of Henry II and Leonor of Aquitaine, he was Duke of Aquitaine from 1172 and king of England from 1189 to 1199. He led the third crusade with Philip Augustus, defeated Saladino in Arsuf (1191) and negotiated the access of pilgrims to Jerusalem. Captured on his return by Leopoldo V from Austria, he passed to the Emperor Henry VI until he paid a huge ransom in 1194. He spent his last years defending Normandy in front of France and died in the siege of Châlus."
+          "resumen": "The third son of Henry II and Leonor of Aquitaine, he was Duke of Aquitaine from 1172 and king of England from 1189 to 1199. He led the third crusade with Philip Augustus, defeated Saladino in Arsuf (1191) and negotiated the access of pilgrims to Jerusalem. Captured on his return by Leopold V from Austria, he passed to the Emperor Henry VI until he paid a huge ransom in 1194. He spent his last years defending Normandy in front of France and died in the siege of Châlus."
         },
         {
           "id": "BERENGUELANAV",
           "nombre": "Berenguela de Navarre",
           "slug": "berenguela-de-navarra",
           "dinastia": "Jiménez",
-          "resumen": "Daughter of Sancho VI of Navarre, she married Ricardo I in Limassol (Cyprus) in 1191, during the crusade. She never lived in England; after widowing she lived in Le Mans, which was part of her dowry, and there she founded the Abbey of L’Épau, where she is buried."
+          "resumen": "Daughter of Sancho VI of Navarre, she married Richard I in Limassol (Cyprus) in 1191, during the crusade. She never lived in England; after widowing she lived in Le Mans, which was part of her dowry, and there she founded the Abbey of L’Épau, where she is buried."
         },
         {
           "id": "JUANSINTIERRA",
@@ -15868,7 +15868,7 @@
           "nombre": "George of York",
           "slug": "jorge-de-york",
           "dinastia": "Plantagenet-York",
-          "resumen": "Duke of Clarence and brother of Edward IV and Ricardo III. He allied with Warwick with Edward, reconciled with his king in 1471 and became convicted of treason and executed in 1478."
+          "resumen": "Duke of Clarence and brother of Edward IV and Richard III. He allied with Warwick with Edward, reconciled with his king in 1471 and became convicted of treason and executed in 1478."
         },
         {
           "id": "EDWARDWESTMINSTER",
@@ -15924,7 +15924,7 @@
             "EDUARDO3ING",
             "ISABFRAING"
           ],
-          "descripcion": "The extinction of the direct Capetian line opens up a dispute after his death: Felipe de Valois is crowned as Philip VI while Edward III retains a dynastic claim by his mother Elizabeth of France."
+          "descripcion": "The extinction of the direct Capetian line opens up a dispute after his death: Philip of Valois is crowned as Philip VI while Edward III retains a dynastic claim by his mother Elizabeth of France."
         },
         {
           "id": "CRECY_1346",
@@ -16105,7 +16105,7 @@
             "JOHNCOMYN3",
             "EDUARDO1ING"
           ],
-          "descripcion": "Following John Comyn's death, Robert Bruce claims his crown and is crowned at Scone as Roberto I."
+          "descripcion": "Following John Comyn's death, Robert Bruce claims his crown and is crowned at Scone as Robert I."
         },
         {
           "id": "BANNOCKBURN_1314",
@@ -16117,7 +16117,7 @@
             "ROBERT1BRUCE",
             "EDUARDO2ING"
           ],
-          "descripcion": "The great victory of Roberto I with his army strengthens the political and military recovery of the Scottish monarchy."
+          "descripcion": "The great victory of Robert I with his army strengthens the political and military recovery of the Scottish monarchy."
         }
       ],
       "historias": [
@@ -16299,7 +16299,7 @@
         "nombre": "Blanche I of Navarre",
         "slug": "blanca-i-de-navarra",
         "dinastia": "Évreux",
-        "resumen": "He inherited Navarra and ruled it with Juan de Aragón. His death opened the conflict between her husband and his son Charles, Prince of Viana."
+        "resumen": "He inherited Navarra and ruled it with Juan of Aragon. His death opened the conflict between her husband and his son Charles, Prince of Viana."
       },
       {
         "id": "GASTON4FOIX",
@@ -16530,14 +16530,14 @@
         "nombre": "Blanche of Navarre",
         "slug": "blanca-de-navarra-blancanavchamp",
         "dinastia": "Jiménez",
-        "resumen": "Daughter of Sancho VI and sister of Sancho VII, she married Teobaldo III of Champagne. After widowing she held the position of her son Teobaldo during her minority. For her, that son gathered a Navarrese hereditary right that became effective when her uncle Sancho VII died."
+        "resumen": "Daughter of Sancho VI and sister of Sancho VII, she married Theobald III of Champagne. After widowing she held the position of her son Teobaldo during her minority. For her, that son gathered a Navarrese hereditary right that became effective when her uncle Sancho VII died."
       },
       {
         "id": "BERENGUELANAV",
         "nombre": "Berenguela de Navarre",
         "slug": "berenguela-de-navarra",
         "dinastia": "Jiménez",
-        "resumen": "Daughter of Sancho VI of Navarre, she married Ricardo I in Limassol (Cyprus) in 1191, during the crusade. She never lived in England; after widowing she lived in Le Mans, which was part of her dowry, and there she founded the Abbey of L’Épau, where she is buried."
+        "resumen": "Daughter of Sancho VI of Navarre, she married Richard I in Limassol (Cyprus) in 1191, during the crusade. She never lived in England; after widowing she lived in Le Mans, which was part of her dowry, and there she founded the Abbey of L’Épau, where she is buried."
       },
       {
         "id": "LUISDELFIN1661",
@@ -16614,7 +16614,7 @@
         "nombre": "Charles IV of Spain",
         "slug": "carlos-iv-de-espana",
         "dinastia": "Bourbon",
-        "resumen": "King of Spain between 1788 and 1808, son of Charles III. His government, dominated by Godoy, lived the war with revolutionary France and Trafalgar; he abdicated in Aranjuez in favor of Fernando VII; Bayona's subsequent renunciation gave up his rights to Napoleon."
+        "resumen": "King of Spain between 1788 and 1808, son of Charles III. His government, dominated by Godoy, lived the war with revolutionary France and Trafalgar; he abdicated in Aranjuez in favor of Ferdinand VII; Bayona's subsequent renunciation gave up his rights to Napoleon."
       },
       {
         "id": "ALAINALBRET",
@@ -16628,7 +16628,7 @@
         "nombre": "Françoise de Châtillon",
         "slug": "francoise-de-chatillon",
         "dinastia": "Châtillon",
-        "resumen": "Wife of Alain de Albret, she was the mother of Juan III of Navarre and Carlota de Albret. Her offspring connect the French nobility heritages with the Navarren monarchy and the Borja. Her birth year is preserved as approximate, avoiding presenting a conventional figure as an exact date."
+        "resumen": "Wife of Alain de Albret, she was the mother of John III of Navarre and Carlota de Albret. Her offspring connect the French nobility heritages with the Navarren monarchy and the Borja. Her birth year is preserved as approximate, avoiding presenting a conventional figure as an exact date."
       },
       {
         "id": "CARLOTAALBRET",
@@ -16703,7 +16703,7 @@
         },
         {
           "anio": 1441,
-          "texto": "The death of Blanca I opens a crisis between Juan de Aragon and his children."
+          "texto": "The death of Blanche I opens a crisis between John of Aragon and his children."
         },
         {
           "anio": 1479,
@@ -16729,7 +16729,7 @@
           "url": "https://aunamendi.eusko-ikaskuntza.eus/eu/blanca-de-artois/ar-22015/"
         },
         {
-          "titulo": "FranceArchives · Felipe IV y la sucesión navarra",
+          "titulo": "FranceArchives · Philip IV y la sucesión navarra",
           "url": "https://francearchives.gouv.fr/fr/facomponent/99021b3b7153c3d2ac6535e7392a4a520f017001"
         },
         {
@@ -16737,7 +16737,7 @@
           "url": "https://archives.eure.fr/ark:/26335/wnq06d5pgrmv"
         },
         {
-          "titulo": "Archivo Real y General de Navarra · Cartulario llamado de Carlos II",
+          "titulo": "Archivo Real y General de Navarra · Cartulario llamado de Charles II",
           "url": "https://www.navarra.es/NR/rdonlyres/D1850D13-B358-4EA8-87D3-799278041709/298590/cartulario_tomoI_web.pdf"
         },
         {
@@ -16983,7 +16983,7 @@
             "nombre": "Blanche I of Navarre",
             "slug": "blanca-i-de-navarra",
             "dinastia": "Évreux",
-            "resumen": "He inherited Navarra and ruled it with Juan de Aragón. His death opened the conflict between her husband and his son Charles, Prince of Viana."
+            "resumen": "He inherited Navarra and ruled it with Juan of Aragon. His death opened the conflict between her husband and his son Charles, Prince of Viana."
           }
         },
         {
@@ -17436,7 +17436,7 @@
             "nombre": "Charles IV of Spain",
             "slug": "carlos-iv-de-espana",
             "dinastia": "Bourbon",
-            "resumen": "King of Spain between 1788 and 1808, son of Charles III. His government, dominated by Godoy, lived the war with revolutionary France and Trafalgar; he abdicated in Aranjuez in favor of Fernando VII; Bayona's subsequent renunciation gave up his rights to Napoleon."
+            "resumen": "King of Spain between 1788 and 1808, son of Charles III. His government, dominated by Godoy, lived the war with revolutionary France and Trafalgar; he abdicated in Aranjuez in favor of Ferdinand VII; Bayona's subsequent renunciation gave up his rights to Napoleon."
           }
         }
       ],
@@ -17590,7 +17590,7 @@
           "nombre": "Blanche I of Navarre",
           "slug": "blanca-i-de-navarra",
           "dinastia": "Évreux",
-          "resumen": "He inherited Navarra and ruled it with Juan de Aragón. His death opened the conflict between her husband and his son Charles, Prince of Viana."
+          "resumen": "He inherited Navarra and ruled it with Juan of Aragon. His death opened the conflict between her husband and his son Charles, Prince of Viana."
         },
         {
           "id": "GASTON4FOIX",
@@ -17821,14 +17821,14 @@
           "nombre": "Blanche of Navarre",
           "slug": "blanca-de-navarra-blancanavchamp",
           "dinastia": "Jiménez",
-          "resumen": "Daughter of Sancho VI and sister of Sancho VII, she married Teobaldo III of Champagne. After widowing she held the position of her son Teobaldo during her minority. For her, that son gathered a Navarrese hereditary right that became effective when her uncle Sancho VII died."
+          "resumen": "Daughter of Sancho VI and sister of Sancho VII, she married Theobald III of Champagne. After widowing she held the position of her son Teobaldo during her minority. For her, that son gathered a Navarrese hereditary right that became effective when her uncle Sancho VII died."
         },
         {
           "id": "BERENGUELANAV",
           "nombre": "Berenguela de Navarre",
           "slug": "berenguela-de-navarra",
           "dinastia": "Jiménez",
-          "resumen": "Daughter of Sancho VI of Navarre, she married Ricardo I in Limassol (Cyprus) in 1191, during the crusade. She never lived in England; after widowing she lived in Le Mans, which was part of her dowry, and there she founded the Abbey of L’Épau, where she is buried."
+          "resumen": "Daughter of Sancho VI of Navarre, she married Richard I in Limassol (Cyprus) in 1191, during the crusade. She never lived in England; after widowing she lived in Le Mans, which was part of her dowry, and there she founded the Abbey of L’Épau, where she is buried."
         },
         {
           "id": "LUISDELFIN1661",
@@ -17905,7 +17905,7 @@
           "nombre": "Charles IV of Spain",
           "slug": "carlos-iv-de-espana",
           "dinastia": "Bourbon",
-          "resumen": "King of Spain between 1788 and 1808, son of Charles III. His government, dominated by Godoy, lived the war with revolutionary France and Trafalgar; he abdicated in Aranjuez in favor of Fernando VII; Bayona's subsequent renunciation gave up his rights to Napoleon."
+          "resumen": "King of Spain between 1788 and 1808, son of Charles III. His government, dominated by Godoy, lived the war with revolutionary France and Trafalgar; he abdicated in Aranjuez in favor of Ferdinand VII; Bayona's subsequent renunciation gave up his rights to Napoleon."
         },
         {
           "id": "ALAINALBRET",
@@ -17919,7 +17919,7 @@
           "nombre": "Françoise de Châtillon",
           "slug": "francoise-de-chatillon",
           "dinastia": "Châtillon",
-          "resumen": "Wife of Alain de Albret, she was the mother of Juan III of Navarre and Carlota de Albret. Her offspring connect the French nobility heritages with the Navarren monarchy and the Borja. Her birth year is preserved as approximate, avoiding presenting a conventional figure as an exact date."
+          "resumen": "Wife of Alain de Albret, she was the mother of John III of Navarre and Carlota de Albret. Her offspring connect the French nobility heritages with the Navarren monarchy and the Borja. Her birth year is preserved as approximate, avoiding presenting a conventional figure as an exact date."
         },
         {
           "id": "CARLOTAALBRET",
@@ -17970,7 +17970,7 @@
           "id": "REYES_CATOLICOS",
           "timeline": "principal",
           "anio": 1469,
-          "titulo": "Marriage of Isabella of Castle and Fernando of Aragon",
+          "titulo": "Marriage of Isabella of Castile and Fernando of Aragon",
           "categoria": "dinastia",
           "personas": [
             "ISAB1CAST",
@@ -18188,7 +18188,7 @@
             "FERN2ARAG",
             "FED1NAP"
           ],
-          "descripcion": "Louis XII and Fernando the Catholic agree to share with themselves the kingdom of Federico I. The cooperation lasts for little: the challenges about the boundaries of partition turn old allies into enemies."
+          "descripcion": "Louis XII and Fernando the Catholic agree to share with themselves the kingdom of Frederick I. The cooperation lasts for little: the challenges about the boundaries of partition turn old allies into enemies."
         },
         {
           "id": "CERIGNOLA_1503",
@@ -18484,7 +18484,7 @@
         "nombre": "Amadeus VII of Savoy",
         "slug": "amadeo-vii-de-saboya",
         "dinastia": "Savoy",
-        "resumen": "The Red Count succeeded his father Amadeo VI and maintained the relationship with the French monarchy. He married Bona of Berry and was the father of Amadeo VIII. His early death left a child heir and opened a struggle for regency between the mother and the new count's grandmother."
+        "resumen": "The Red Count succeeded his father Amadeus VI and maintained the relationship with the French monarchy. He married Bona of Berry and was the father of Amadeus VIII. His early death left a child heir and opened a struggle for regency between the mother and the new count's grandmother."
       },
       {
         "id": "BONABERRYSAB",
@@ -18828,7 +18828,7 @@
         "nombre": "Joanna of Savoy, Marchioness of Montferrat",
         "slug": "juana-de-saboya-marquesa-de-monferrato",
         "dinastia": "Savoy",
-        "resumen": "Daughter of Amadeus VII and Bona de Berry, she married Juan James of Montferrat. She was the mother of William VIII, Bonifacio III and Isabel, wife of Ludovico I of Saluzzo."
+        "resumen": "Daughter of Amadeus VII and Bona de Berry, she married Juan James of Montferrat. She was the mother of William VIII, Boniface III and Isabel, wife of Ludovico I of Saluzzo."
       }
     ],
     "editorial": true,
@@ -19014,7 +19014,7 @@
               {
                 "tipo": "accession",
                 "anio": 1440,
-                "nota": "Abandoning Amadeo VIII to duchy."
+                "nota": "Abandoning Amadeus VIII to duchy."
               }
             ],
             "parentesco": {
@@ -19321,7 +19321,7 @@
         },
         {
           "anio": 1416,
-          "texto": "Amadeo VIII gets his ducal title. It's a change of rank from the ruler, not a replacement of the house."
+          "texto": "Amadeus VIII gets his ducal title. It's a change of rank from the ruler, not a replacement of the house."
         },
         {
           "anio": 1490,
@@ -19341,7 +19341,7 @@
         },
         {
           "anio": 1720,
-          "texto": "Víctor Amadeo II goes from the Sicilian crown to the sard.He keeps his title and his institutions within the monarchy."
+          "texto": "Victor Amadeus II goes from the Sicilian crown to the sard.He keeps his title and his institutions within the monarchy."
         }
       ],
       "editorial": true,
@@ -19504,7 +19504,7 @@
             "nombre": "Amadeus VII of Savoy",
             "slug": "amadeo-vii-de-saboya",
             "dinastia": "Savoy",
-            "resumen": "The Red Count succeeded his father Amadeo VI and maintained the relationship with the French monarchy. He married Bona of Berry and was the father of Amadeo VIII. His early death left a child heir and opened a struggle for regency between the mother and the new count's grandmother."
+            "resumen": "The Red Count succeeded his father Amadeus VI and maintained the relationship with the French monarchy. He married Bona of Berry and was the father of Amadeus VIII. His early death left a child heir and opened a struggle for regency between the mother and the new count's grandmother."
           }
         },
         {
@@ -20046,7 +20046,7 @@
           "nombre": "Amadeus VII of Savoy",
           "slug": "amadeo-vii-de-saboya",
           "dinastia": "Savoy",
-          "resumen": "The Red Count succeeded his father Amadeo VI and maintained the relationship with the French monarchy. He married Bona of Berry and was the father of Amadeo VIII. His early death left a child heir and opened a struggle for regency between the mother and the new count's grandmother."
+          "resumen": "The Red Count succeeded his father Amadeus VI and maintained the relationship with the French monarchy. He married Bona of Berry and was the father of Amadeus VIII. His early death left a child heir and opened a struggle for regency between the mother and the new count's grandmother."
         },
         {
           "id": "BONABERRYSAB",
@@ -20390,7 +20390,7 @@
           "nombre": "Joanna of Savoy, Marchioness of Montferrat",
           "slug": "juana-de-saboya-marquesa-de-monferrato",
           "dinastia": "Savoy",
-          "resumen": "Daughter of Amadeus VII and Bona de Berry, she married Juan James of Montferrat. She was the mother of William VIII, Bonifacio III and Isabel, wife of Ludovico I of Saluzzo."
+          "resumen": "Daughter of Amadeus VII and Bona de Berry, she married Juan James of Montferrat. She was the mother of William VIII, Boniface III and Isabel, wife of Ludovico I of Saluzzo."
         }
       ],
       "eventos": [],
@@ -20968,7 +20968,7 @@
           "url": "https://www.treccani.it/enciclopedia/venezia-e-l-entroterra_%28Storia-di-Venezia%29/"
         },
         {
-          "titulo": "Treccani · Carlos VI y los cambios italianos de 1706–1734",
+          "titulo": "Treccani · Charles VI y los cambios italianos de 1706–1734",
           "url": "https://www.treccani.it/enciclopedia/carlo-vi-imperatore-del-sacro-romano-impero_%28Dizionario-di-Storia%29/"
         },
         {
@@ -20984,7 +20984,7 @@
           "url": "https://www.lombardiabeniculturali.it/istituzioni/storia/?unita=03.06"
         },
         {
-          "titulo": "PARES · Carlos II",
+          "titulo": "PARES · Charles II",
           "url": "https://pares.cultura.gob.es/ParesBusquedas20/catalogo/autoridad/46849"
         },
         {
@@ -22327,7 +22327,7 @@
             "FERN2ARAG",
             "FED1NAP"
           ],
-          "descripcion": "Louis XII and Fernando the Catholic agree to share with themselves the kingdom of Federico I. The cooperation lasts for little: the challenges about the boundaries of partition turn old allies into enemies."
+          "descripcion": "Louis XII and Fernando the Catholic agree to share with themselves the kingdom of Frederick I. The cooperation lasts for little: the challenges about the boundaries of partition turn old allies into enemies."
         },
         {
           "id": "CERIGNOLA_1503",
@@ -22547,7 +22547,7 @@
         "nombre": "Isabella I of Castile",
         "slug": "isabel-i-de-castilla",
         "dinastia": "Trastámara",
-        "resumen": "Queen of Castile and one of the central figures of the formation of the Hispanic Monarchy. He ruled with Fernando de Aragón and presided over a decisive stage of political and territorial expansion."
+        "resumen": "Queen of Castile and one of the central figures of the formation of the Hispanic Monarchy. He ruled with Fernando of Aragon and presided over a decisive stage of political and territorial expansion."
       },
       {
         "id": "JUANA1CAST",
@@ -22645,7 +22645,7 @@
         "nombre": "Peter IV of Aragon",
         "slug": "pedro-iv-de-aragon",
         "dinastia": "Barcelona",
-        "resumen": "He reintegrated Mallorca into his domains and fought Pedro I of Castilla. His reign reinforced the ceremonial regio and left an important autobiographical chronicle."
+        "resumen": "He reintegrated Mallorca into his domains and fought Peter I of Castile. His reign reinforced the ceremonial regio and left an important autobiographical chronicle."
       },
       {
         "id": "LEONORSIC",
@@ -22897,7 +22897,7 @@
         "nombre": "Charles IV of Spain",
         "slug": "carlos-iv-de-espana",
         "dinastia": "Bourbon",
-        "resumen": "King of Spain between 1788 and 1808, son of Charles III. His government, dominated by Godoy, lived the war with revolutionary France and Trafalgar; he abdicated in Aranjuez in favor of Fernando VII; Bayona's subsequent renunciation gave up his rights to Napoleon."
+        "resumen": "King of Spain between 1788 and 1808, son of Charles III. His government, dominated by Godoy, lived the war with revolutionary France and Trafalgar; he abdicated in Aranjuez in favor of Ferdinand VII; Bayona's subsequent renunciation gave up his rights to Napoleon."
       },
       {
         "id": "MARTINJOVENSIC",
@@ -22951,7 +22951,7 @@
                   "nombre": "Isabella I of Castile",
                   "slug": "isabel-i-de-castilla",
                   "dinastia": "Trastámara",
-                  "resumen": "Queen of Castile and one of the central figures of the formation of the Hispanic Monarchy. He ruled with Fernando de Aragón and presided over a decisive stage of political and territorial expansion."
+                  "resumen": "Queen of Castile and one of the central figures of the formation of the Hispanic Monarchy. He ruled with Fernando of Aragon and presided over a decisive stage of political and territorial expansion."
                 }
               ]
             },
@@ -23165,7 +23165,7 @@
             "nombre": "Peter IV of Aragon",
             "slug": "pedro-iv-de-aragon",
             "dinastia": "Barcelona",
-            "resumen": "He reintegrated Mallorca into his domains and fought Pedro I of Castilla. His reign reinforced the ceremonial regio and left an important autobiographical chronicle."
+            "resumen": "He reintegrated Mallorca into his domains and fought Peter I of Castile. His reign reinforced the ceremonial regio and left an important autobiographical chronicle."
           }
         },
         {
@@ -23436,7 +23436,7 @@
             "nombre": "Charles IV of Spain",
             "slug": "carlos-iv-de-espana",
             "dinastia": "Bourbon",
-            "resumen": "King of Spain between 1788 and 1808, son of Charles III. His government, dominated by Godoy, lived the war with revolutionary France and Trafalgar; he abdicated in Aranjuez in favor of Fernando VII; Bayona's subsequent renunciation gave up his rights to Napoleon."
+            "resumen": "King of Spain between 1788 and 1808, son of Charles III. His government, dominated by Godoy, lived the war with revolutionary France and Trafalgar; he abdicated in Aranjuez in favor of Ferdinand VII; Bayona's subsequent renunciation gave up his rights to Napoleon."
           }
         }
       ],
@@ -23564,7 +23564,7 @@
           "nombre": "Isabella I of Castile",
           "slug": "isabel-i-de-castilla",
           "dinastia": "Trastámara",
-          "resumen": "Queen of Castile and one of the central figures of the formation of the Hispanic Monarchy. He ruled with Fernando de Aragón and presided over a decisive stage of political and territorial expansion."
+          "resumen": "Queen of Castile and one of the central figures of the formation of the Hispanic Monarchy. He ruled with Fernando of Aragon and presided over a decisive stage of political and territorial expansion."
         },
         {
           "id": "JUANA1CAST",
@@ -23662,7 +23662,7 @@
           "nombre": "Peter IV of Aragon",
           "slug": "pedro-iv-de-aragon",
           "dinastia": "Barcelona",
-          "resumen": "He reintegrated Mallorca into his domains and fought Pedro I of Castilla. His reign reinforced the ceremonial regio and left an important autobiographical chronicle."
+          "resumen": "He reintegrated Mallorca into his domains and fought Peter I of Castile. His reign reinforced the ceremonial regio and left an important autobiographical chronicle."
         },
         {
           "id": "LEONORSIC",
@@ -23914,7 +23914,7 @@
           "nombre": "Charles IV of Spain",
           "slug": "carlos-iv-de-espana",
           "dinastia": "Bourbon",
-          "resumen": "King of Spain between 1788 and 1808, son of Charles III. His government, dominated by Godoy, lived the war with revolutionary France and Trafalgar; he abdicated in Aranjuez in favor of Fernando VII; Bayona's subsequent renunciation gave up his rights to Napoleon."
+          "resumen": "King of Spain between 1788 and 1808, son of Charles III. His government, dominated by Godoy, lived the war with revolutionary France and Trafalgar; he abdicated in Aranjuez in favor of Ferdinand VII; Bayona's subsequent renunciation gave up his rights to Napoleon."
         },
         {
           "id": "MARTINJOVENSIC",
@@ -23936,7 +23936,7 @@
           "id": "REYES_CATOLICOS",
           "timeline": "principal",
           "anio": 1469,
-          "titulo": "Marriage of Isabella of Castle and Fernando of Aragon",
+          "titulo": "Marriage of Isabella of Castile and Fernando of Aragon",
           "categoria": "dinastia",
           "personas": [
             "ISAB1CAST",
@@ -24129,7 +24129,7 @@
             "FERN2ARAG",
             "FED1NAP"
           ],
-          "descripcion": "Louis XII and Fernando the Catholic agree to share with themselves the kingdom of Federico I. The cooperation lasts for little: the challenges about the boundaries of partition turn old allies into enemies."
+          "descripcion": "Louis XII and Fernando the Catholic agree to share with themselves the kingdom of Frederick I. The cooperation lasts for little: the challenges about the boundaries of partition turn old allies into enemies."
         },
         {
           "id": "CERIGNOLA_1503",
@@ -24191,7 +24191,7 @@
             "JAIME2AR",
             "FEDERICO2SIC"
           ],
-          "descripcion": "Jaime II agreed to leave his claim to Sicily at Anagni, but the Sicilians did not accept to come back to Angevin rule. They chose his brother Federico and forced the House of Barcelona to divide about his future.",
+          "descripcion": "James II agreed to leave his claim to Sicily at Anagni, but the Sicilians did not accept to come back to Angevin rule. They chose his brother Federico and forced the House of Barcelona to divide about his future.",
           "timeline": "historia"
         },
         {
@@ -24275,14 +24275,14 @@
         "nombre": "Alfonso X of Castile",
         "slug": "alfonso-x",
         "dinastia": "Ivrea-Burgundy",
-        "resumen": "King of Castilla y León, famous for his cultural, legal and scientific program. Its court has driven one of the largest intellectual companies in medieval Europe."
+        "resumen": "King of Castile y León, famous for his cultural, legal and scientific program. Its court has driven one of the largest intellectual companies in medieval Europe."
       },
       {
         "id": "SANCHO4",
         "nombre": "Sancho IV of Castile",
         "slug": "sancho-iv",
         "dinastia": "Ivrea-Burgundy",
-        "resumen": "He was imposed in Castile against the rights of the children of the Corda, the children of his older brother. This dispute left a legacy of dynastic conflicts that continued during the minority of Fernando IV."
+        "resumen": "He was imposed in Castile against the rights of the children of the Corda, the children of his older brother. This dispute left a legacy of dynastic conflicts that continued during the minority of Ferdinand IV."
       },
       {
         "id": "FERN4",
@@ -24345,7 +24345,7 @@
         "nombre": "Isabella I of Castile",
         "slug": "isabel-i-de-castilla",
         "dinastia": "Trastámara",
-        "resumen": "Queen of Castile and one of the central figures of the formation of the Hispanic Monarchy. He ruled with Fernando de Aragón and presided over a decisive stage of political and territorial expansion."
+        "resumen": "Queen of Castile and one of the central figures of the formation of the Hispanic Monarchy. He ruled with Fernando of Aragon and presided over a decisive stage of political and territorial expansion."
       },
       {
         "id": "JUANA1CAST",
@@ -24401,7 +24401,7 @@
         "nombre": "Berengaria of Castile",
         "slug": "berenguela-de-castilla",
         "dinastia": "Ivrea-Burgundy",
-        "resumen": "Queen of Castile for a short period and essential piece of dynastic continuity. He resigned in favour of his son Fernando III and retained considerable political influence during his reign."
+        "resumen": "Queen of Castile for a short period and essential piece of dynastic continuity. He resigned in favour of his son Ferdinand III and retained considerable political influence during his reign."
       },
       {
         "id": "ALF9LEON",
@@ -24450,7 +24450,7 @@
         "nombre": "Charles IV of Spain",
         "slug": "carlos-iv-de-espana",
         "dinastia": "Bourbon",
-        "resumen": "King of Spain between 1788 and 1808, son of Charles III. His government, dominated by Godoy, lived the war with revolutionary France and Trafalgar; he abdicated in Aranjuez in favor of Fernando VII; Bayona's subsequent renunciation gave up his rights to Napoleon."
+        "resumen": "King of Spain between 1788 and 1808, son of Charles III. His government, dominated by Godoy, lived the war with revolutionary France and Trafalgar; he abdicated in Aranjuez in favor of Ferdinand VII; Bayona's subsequent renunciation gave up his rights to Napoleon."
       },
       {
         "id": "BERENGLEONBRI",
@@ -24474,7 +24474,7 @@
           ],
           "desde": 1230,
           "hasta": null,
-          "resumen": "Fernando III brought together two heirlooms. The continuity of a common monarch did not immediately erase the identities and legal traditions of the kingdoms.",
+          "resumen": "Ferdinand III brought together two heirlooms. The continuity of a common monarch did not immediately erase the identities and legal traditions of the kingdoms.",
           "instituciones": "The Crown of Castile was an evolving composite structure. Castile, León and Spain are not three equivalent or interchangeable kingdoms in the filters.",
           "etapas": [
             {
@@ -24546,7 +24546,7 @@
                   "nombre": "Isabella I of Castile",
                   "slug": "isabel-i-de-castilla",
                   "dinastia": "Trastámara",
-                  "resumen": "Queen of Castile and one of the central figures of the formation of the Hispanic Monarchy. He ruled with Fernando de Aragón and presided over a decisive stage of political and territorial expansion."
+                  "resumen": "Queen of Castile and one of the central figures of the formation of the Hispanic Monarchy. He ruled with Fernando of Aragon and presided over a decisive stage of political and territorial expansion."
                 }
               ]
             },
@@ -24650,7 +24650,7 @@
           "url": "https://jps.library.utoronto.ca/index.php/renref/article/view/36383"
         },
         {
-          "titulo": "Ministerio de Cultura: Corona de Castilla",
+          "titulo": "Ministerio de Cultura: Corona of Castile",
           "url": "https://tesauros.cultura.gob.es/tesauros/contextosculturales/1172659.html"
         }
       ],
@@ -24697,7 +24697,7 @@
             "nombre": "Alfonso X of Castile",
             "slug": "alfonso-x",
             "dinastia": "Ivrea-Burgundy",
-            "resumen": "King of Castilla y León, famous for his cultural, legal and scientific program. Its court has driven one of the largest intellectual companies in medieval Europe."
+            "resumen": "King of Castile y León, famous for his cultural, legal and scientific program. Its court has driven one of the largest intellectual companies in medieval Europe."
           }
         },
         {
@@ -24712,7 +24712,7 @@
             "nombre": "Sancho IV of Castile",
             "slug": "sancho-iv",
             "dinastia": "Ivrea-Burgundy",
-            "resumen": "He was imposed in Castile against the rights of the children of the Corda, the children of his older brother. This dispute left a legacy of dynastic conflicts that continued during the minority of Fernando IV."
+            "resumen": "He was imposed in Castile against the rights of the children of the Corda, the children of his older brother. This dispute left a legacy of dynastic conflicts that continued during the minority of Ferdinand IV."
           }
         },
         {
@@ -24892,7 +24892,7 @@
             "nombre": "Isabella I of Castile",
             "slug": "isabel-i-de-castilla",
             "dinastia": "Trastámara",
-            "resumen": "Queen of Castile and one of the central figures of the formation of the Hispanic Monarchy. He ruled with Fernando de Aragón and presided over a decisive stage of political and territorial expansion."
+            "resumen": "Queen of Castile and one of the central figures of the formation of the Hispanic Monarchy. He ruled with Fernando of Aragon and presided over a decisive stage of political and territorial expansion."
           }
         },
         {
@@ -25120,7 +25120,7 @@
             "nombre": "Charles IV of Spain",
             "slug": "carlos-iv-de-espana",
             "dinastia": "Bourbon",
-            "resumen": "King of Spain between 1788 and 1808, son of Charles III. His government, dominated by Godoy, lived the war with revolutionary France and Trafalgar; he abdicated in Aranjuez in favor of Fernando VII; Bayona's subsequent renunciation gave up his rights to Napoleon."
+            "resumen": "King of Spain between 1788 and 1808, son of Charles III. His government, dominated by Godoy, lived the war with revolutionary France and Trafalgar; he abdicated in Aranjuez in favor of Ferdinand VII; Bayona's subsequent renunciation gave up his rights to Napoleon."
           }
         }
       ],
@@ -25157,14 +25157,14 @@
           "nombre": "Alfonso X of Castile",
           "slug": "alfonso-x",
           "dinastia": "Ivrea-Burgundy",
-          "resumen": "King of Castilla y León, famous for his cultural, legal and scientific program. Its court has driven one of the largest intellectual companies in medieval Europe."
+          "resumen": "King of Castile y León, famous for his cultural, legal and scientific program. Its court has driven one of the largest intellectual companies in medieval Europe."
         },
         {
           "id": "SANCHO4",
           "nombre": "Sancho IV of Castile",
           "slug": "sancho-iv",
           "dinastia": "Ivrea-Burgundy",
-          "resumen": "He was imposed in Castile against the rights of the children of the Corda, the children of his older brother. This dispute left a legacy of dynastic conflicts that continued during the minority of Fernando IV."
+          "resumen": "He was imposed in Castile against the rights of the children of the Corda, the children of his older brother. This dispute left a legacy of dynastic conflicts that continued during the minority of Ferdinand IV."
         },
         {
           "id": "FERN4",
@@ -25227,7 +25227,7 @@
           "nombre": "Isabella I of Castile",
           "slug": "isabel-i-de-castilla",
           "dinastia": "Trastámara",
-          "resumen": "Queen of Castile and one of the central figures of the formation of the Hispanic Monarchy. He ruled with Fernando de Aragón and presided over a decisive stage of political and territorial expansion."
+          "resumen": "Queen of Castile and one of the central figures of the formation of the Hispanic Monarchy. He ruled with Fernando of Aragon and presided over a decisive stage of political and territorial expansion."
         },
         {
           "id": "JUANA1CAST",
@@ -25283,7 +25283,7 @@
           "nombre": "Berengaria of Castile",
           "slug": "berenguela-de-castilla",
           "dinastia": "Ivrea-Burgundy",
-          "resumen": "Queen of Castile for a short period and essential piece of dynastic continuity. He resigned in favour of his son Fernando III and retained considerable political influence during his reign."
+          "resumen": "Queen of Castile for a short period and essential piece of dynastic continuity. He resigned in favour of his son Ferdinand III and retained considerable political influence during his reign."
         },
         {
           "id": "ALF9LEON",
@@ -25332,7 +25332,7 @@
           "nombre": "Charles IV of Spain",
           "slug": "carlos-iv-de-espana",
           "dinastia": "Bourbon",
-          "resumen": "King of Spain between 1788 and 1808, son of Charles III. His government, dominated by Godoy, lived the war with revolutionary France and Trafalgar; he abdicated in Aranjuez in favor of Fernando VII; Bayona's subsequent renunciation gave up his rights to Napoleon."
+          "resumen": "King of Spain between 1788 and 1808, son of Charles III. His government, dominated by Godoy, lived the war with revolutionary France and Trafalgar; he abdicated in Aranjuez in favor of Ferdinand VII; Bayona's subsequent renunciation gave up his rights to Napoleon."
         },
         {
           "id": "BERENGLEONBRI",
@@ -25347,7 +25347,7 @@
           "id": "REYES_CATOLICOS",
           "timeline": "principal",
           "anio": 1469,
-          "titulo": "Marriage of Isabella of Castle and Fernando of Aragon",
+          "titulo": "Marriage of Isabella of Castile and Fernando of Aragon",
           "categoria": "dinastia",
           "personas": [
             "ISAB1CAST",
@@ -25377,7 +25377,7 @@
             "MAXIM1",
             "FEL1CAST"
           ],
-          "descripcion": "The agreement returns Artois and the County of Burgundy to the heritage of Maria de Burgundy, while the Duchy of Burgundy remains in French hands."
+          "descripcion": "The agreement returns Artois and the County of Burgundy to the heritage of Mary of Burgundy, while the Duchy of Burgundy remains in French hands."
         },
         {
           "id": "WORMS_1521",
@@ -25528,7 +25528,7 @@
             "FERN2ARAG",
             "FED1NAP"
           ],
-          "descripcion": "Louis XII and Fernando the Catholic agree to share with themselves the kingdom of Federico I. The cooperation lasts for little: the challenges about the boundaries of partition turn old allies into enemies."
+          "descripcion": "Louis XII and Fernando the Catholic agree to share with themselves the kingdom of Frederick I. The cooperation lasts for little: the challenges about the boundaries of partition turn old allies into enemies."
         },
         {
           "id": "CERIGNOLA_1503",
@@ -25656,7 +25656,7 @@
         "nombre": "Yolande of Dreux",
         "slug": "violante-de-dreux",
         "dinastia": "Dreux",
-        "resumen": "Member of Dreux's house, married Hugo IV of Burgundy. His marriage connects two houses related to the Capetian tradition, with different political heritage and trajectories. The file allows you to follow this alliance from Burgundy to the Dreux network."
+        "resumen": "Member of Dreux's house, married Hugh IV of Burgundy. His marriage connects two houses related to the Capetian tradition, with different political heritage and trajectories. The file allows you to follow this alliance from Burgundy to the Dreux network."
       },
       {
         "id": "BEATCHAMP",
@@ -25726,7 +25726,7 @@
         "nombre": "Philip II of Burgundy",
         "slug": "felipe-ii-de-borgona",
         "dinastia": "Valois-Burgundy",
-        "resumen": "He received the duchy of Burgundy from his father, John II of France. His marriage to Margarita de Flanders laid the foundation for the Burgundian expansion in the Netherlands."
+        "resumen": "He received the duchy of Burgundy from his father, John II of France. His marriage to Margaret of Flanders laid the foundation for the Burgundian expansion in the Netherlands."
       },
       {
         "id": "MARGFLAN",
@@ -25901,14 +25901,14 @@
             {
               "anio": 1363,
               "titulo": "The Duchy of Philip the Stretch",
-              "texto": "The French duchy was focused on Dijon. The North and County Franco counties would come by Margarita III.",
+              "texto": "The French duchy was focused on Dijon. The North and County Franco counties would come by Margaret III.",
               "personas": [
                 {
                   "id": "FEL2BORG",
                   "nombre": "Philip II of Burgundy",
                   "slug": "felipe-ii-de-borgona",
                   "dinastia": "Valois-Burgundy",
-                  "resumen": "He received the duchy of Burgundy from his father, John II of France. His marriage to Margarita de Flanders laid the foundation for the Burgundian expansion in the Netherlands."
+                  "resumen": "He received the duchy of Burgundy from his father, John II of France. His marriage to Margaret of Flanders laid the foundation for the Burgundian expansion in the Netherlands."
                 },
                 {
                   "id": "MARGFRAFLA",
@@ -25950,7 +25950,7 @@
                   "nombre": "Philip II of Burgundy",
                   "slug": "felipe-ii-de-borgona",
                   "dinastia": "Valois-Burgundy",
-                  "resumen": "He received the duchy of Burgundy from his father, John II of France. His marriage to Margarita de Flanders laid the foundation for the Burgundian expansion in the Netherlands."
+                  "resumen": "He received the duchy of Burgundy from his father, John II of France. His marriage to Margaret of Flanders laid the foundation for the Burgundian expansion in the Netherlands."
                 },
                 {
                   "id": "JUAN1BORG",
@@ -26097,7 +26097,7 @@
           ],
           "fuentes": [
             {
-              "titulo": "BnF · Margarita III de Flandes y sus cinco condados",
+              "titulo": "BnF · Margaret III of Flanders y sus cinco condados",
               "url": "https://catalogue.bnf.fr/ark:/12148/cb16161030k"
             },
             {
@@ -26109,11 +26109,11 @@
               "url": "https://portail.biblissima.fr/fr/ark:/43093/pdata71295e340f36a2c35285ffc09fff863e1dd66edb"
             },
             {
-              "titulo": "Canon van Nederland · Jacoba de Baviera y la sucesión de 1433",
+              "titulo": "Canon van Nederland · Jacoba of Bavaria y la sucesión de 1433",
               "url": "https://www.canonvannederland.nl/nl/page/439262/jacoba-van-beieren"
             },
             {
-              "titulo": "Gobierno de Luxemburgo · Adquisición y toma de 1443",
+              "titulo": "Gobierno of Luxembourg · Adquisición y toma de 1443",
               "url": "https://luxembourg.public.lu/en/society-and-culture/history/helm-holy-roman-empire.html"
             },
             {
@@ -26149,7 +26149,7 @@
         },
         {
           "anio": 1493,
-          "texto": "The treaty of Senlis restored to the house of Austria the county of Borgoña, Artois and Charolais and remained under the French Crown."
+          "texto": "The treaty of Senlis restored to the house of Austria the county of Burgundy, Artois and Charolais and remained under the French Crown."
         }
       ],
       "editorial": true,
@@ -26234,7 +26234,7 @@
             "nombre": "Philip II of Burgundy",
             "slug": "felipe-ii-de-borgona",
             "dinastia": "Valois-Burgundy",
-            "resumen": "He received the duchy of Burgundy from his father, John II of France. His marriage to Margarita de Flanders laid the foundation for the Burgundian expansion in the Netherlands."
+            "resumen": "He received the duchy of Burgundy from his father, John II of France. His marriage to Margaret of Flanders laid the foundation for the Burgundian expansion in the Netherlands."
           }
         },
         {
@@ -26380,7 +26380,7 @@
           "nombre": "Yolande of Dreux",
           "slug": "violante-de-dreux",
           "dinastia": "Dreux",
-          "resumen": "Member of Dreux's house, married Hugo IV of Burgundy. His marriage connects two houses related to the Capetian tradition, with different political heritage and trajectories. The file allows you to follow this alliance from Burgundy to the Dreux network."
+          "resumen": "Member of Dreux's house, married Hugh IV of Burgundy. His marriage connects two houses related to the Capetian tradition, with different political heritage and trajectories. The file allows you to follow this alliance from Burgundy to the Dreux network."
         },
         {
           "id": "BEATCHAMP",
@@ -26450,7 +26450,7 @@
           "nombre": "Philip II of Burgundy",
           "slug": "felipe-ii-de-borgona",
           "dinastia": "Valois-Burgundy",
-          "resumen": "He received the duchy of Burgundy from his father, John II of France. His marriage to Margarita de Flanders laid the foundation for the Burgundian expansion in the Netherlands."
+          "resumen": "He received the duchy of Burgundy from his father, John II of France. His marriage to Margaret of Flanders laid the foundation for the Burgundian expansion in the Netherlands."
         },
         {
           "id": "MARGFLAN",
@@ -26614,7 +26614,7 @@
             "FEL2BORG",
             "MARGFLAN"
           ],
-          "descripcion": "The marriage with Margarita de Flanders prepares the union of Burgundy with rich Flemish and Borgognon territories."
+          "descripcion": "The marriage with Margaret of Flanders prepares the union of Burgundy with rich Flemish and Borgognon territories."
         },
         {
           "id": "MONTEREAU",
@@ -26702,7 +26702,7 @@
             "MAXIM1",
             "FEL1CAST"
           ],
-          "descripcion": "The agreement returns Artois and the County of Burgundy to the heritage of Maria de Burgundy, while the Duchy of Burgundy remains in French hands."
+          "descripcion": "The agreement returns Artois and the County of Burgundy to the heritage of Mary of Burgundy, while the Duchy of Burgundy remains in French hands."
         },
         {
           "id": "WORMS_1521",
@@ -26941,7 +26941,7 @@
         "nombre": "Melisende of Jerusalem",
         "slug": "melisenda-de-jerusalen",
         "dinastia": "Rethel",
-        "resumen": "Queen of Jerusalem since 1131, daughter of Baldwin II. She ruled with Fulco and then with her son Balduino III, until he took power in 1152. She was a great religious promoter."
+        "resumen": "Queen of Jerusalem since 1131, daughter of Baldwin II. She ruled with Fulco and then with her son Baldwin III, until he took power in 1152. She was a great religious promoter."
       },
       {
         "id": "BALDWIN3JER",
@@ -27032,7 +27032,7 @@
         "nombre": "Henry II of Champagne",
         "slug": "enrique-ii-de-champana",
         "dinastia": "Champagne",
-        "resumen": "Count of Champagne, married Elizabeth of Jerusalem during the crusades. His career led the French comital house to the Latin kingdom government. His daughter Alicia then married Hugo I of Cyprus, prolonging the presence of this family network in the eastern Mediterranean."
+        "resumen": "Count of Champagne, married Elizabeth of Jerusalem during the crusades. His career led the French comital house to the Latin kingdom government. His daughter Alicia then married Hugh I of Cyprus, prolonging the presence of this family network in the eastern Mediterranean."
       },
       {
         "id": "AIMERYLUSIGNANJER",
@@ -27074,7 +27074,7 @@
         "nombre": "Alice of Champagne",
         "slug": "alicia-de-champana",
         "dinastia": "Champagne",
-        "resumen": "Daughter of Henry II of Champagne and Elizabeth of Jerusalem, she married Hugo I of Cyprus. She exercised regency functions and maintained rights and interests linked to both shores of the Mediterranean. Her file connects the house of Champagne with Cyprus and Jerusalem, without reducing it to its later Navarre branch."
+        "resumen": "Daughter of Henry II of Champagne and Elizabeth of Jerusalem, she married Hugh I of Cyprus. She exercised regency functions and maintained rights and interests linked to both shores of the Mediterranean. Her file connects the house of Champagne with Cyprus and Jerusalem, without reducing it to its later Navarre branch."
       },
       {
         "id": "ISABELLACYPRUS",
@@ -27088,7 +27088,7 @@
         "nombre": "Hugh III of Cyprus",
         "slug": "hugo-iii-de-chipre",
         "dinastia": "Lusignan",
-        "resumen": "He succeeded Hugo II on the line of Elizabeth of Cyprus, her mother, and opened the branch of Antiquia-Lusignan. He tried to strengthen the royal authority in Acre, but he collided with the autonomy of the barons and the angevine pretensions over Jerusalem."
+        "resumen": "He succeeded Hugh II on the line of Elizabeth of Cyprus, her mother, and opened the branch of Antiquia-Lusignan. He tried to strengthen the royal authority in Acre, but he collided with the autonomy of the barons and the angevine pretensions over Jerusalem."
       },
       {
         "id": "ISABELIBELINCYP",
@@ -27102,7 +27102,7 @@
         "nombre": "John I of Cyprus",
         "slug": "juan-i-de-chipre",
         "dinastia": "Lusignan",
-        "resumen": "Son of Hugo III, king of Cyprus and titular of Jerusalem since 1284. He died in 1285 after a year of reign and succeeded him by his brother Henry II."
+        "resumen": "Son of Hugh III, king of Cyprus and titular of Jerusalem since 1284. He died in 1285 after a year of reign and succeeded him by his brother Henry II."
       },
       {
         "id": "HENRY2CYPRUS",
@@ -27165,7 +27165,7 @@
         "nombre": "James I of Cyprus",
         "slug": "jacobo-i-de-chipre",
         "dinastia": "Lusignan",
-        "resumen": "He was elected king while he remained captive in Genoa. Their release and return required concessions that kept the island's commercial dependence. After the death of Lion V, he incorporated into his title the nominal crown of Armenia."
+        "resumen": "He was elected king while he remained captive in Genoa. Their release and return required concessions that kept the island's commercial dependence. After the death of Leo V, he incorporated into his title the nominal crown of Armenia."
       },
       {
         "id": "JANUSCYPRUS",
@@ -27220,20 +27220,20 @@
           "url": "https://www.treccani.it/enciclopedia/lusignano_(Enciclopedia-Italiana)/"
         },
         {
-          "titulo": "Cambridge: A History of Cyprus — Pedro I",
+          "titulo": "Cambridge: A History of Cyprus — Peter I",
           "url": "https://www.cambridge.org/core/books/abs/history-of-cyprus/peter-i-135969/433D1C9C6EFE77BAB71F18F7E850A3D5"
         },
         {
-          "titulo": "Hugo IV de Chipre",
-          "url": "https://en.wikipedia.org/wiki/Hugh_IV_of_Cyprus"
+          "titulo": "Foundation for Medieval Genealogy · Medieval Lands · Hugh IV of Cyprus",
+          "url": "https://fmg.ac/Projects/MedLands/CYPRUS.htm"
         },
         {
-          "titulo": "Pedro II de Chipre",
-          "url": "https://en.wikipedia.org/wiki/Peter_II_of_Cyprus"
+          "titulo": "Foundation for Medieval Genealogy · Medieval Lands · Peter II of Cyprus",
+          "url": "https://fmg.ac/Projects/MedLands/CYPRUS.htm"
         },
         {
-          "titulo": "Jano de Chipre",
-          "url": "https://en.wikipedia.org/wiki/Janus_of_Cyprus"
+          "titulo": "Foundation for Medieval Genealogy · Medieval Lands · Jano of Cyprus",
+          "url": "https://fmg.ac/Projects/MedLands/CYPRUS.htm"
         }
       ],
       "gobiernos": [
@@ -27265,7 +27265,7 @@
             "nombre": "Melisende of Jerusalem",
             "slug": "melisenda-de-jerusalen",
             "dinastia": "Rethel",
-            "resumen": "Queen of Jerusalem since 1131, daughter of Baldwin II. She ruled with Fulco and then with her son Balduino III, until he took power in 1152. She was a great religious promoter."
+            "resumen": "Queen of Jerusalem since 1131, daughter of Baldwin II. She ruled with Fulco and then with her son Baldwin III, until he took power in 1152. She was a great religious promoter."
           }
         },
         {
@@ -27385,7 +27385,7 @@
             "nombre": "Henry II of Champagne",
             "slug": "enrique-ii-de-champana",
             "dinastia": "Champagne",
-            "resumen": "Count of Champagne, married Elizabeth of Jerusalem during the crusades. His career led the French comital house to the Latin kingdom government. His daughter Alicia then married Hugo I of Cyprus, prolonging the presence of this family network in the eastern Mediterranean."
+            "resumen": "Count of Champagne, married Elizabeth of Jerusalem during the crusades. His career led the French comital house to the Latin kingdom government. His daughter Alicia then married Hugh I of Cyprus, prolonging the presence of this family network in the eastern Mediterranean."
           }
         },
         {
@@ -27505,7 +27505,7 @@
             "nombre": "Alice of Champagne",
             "slug": "alicia-de-champana",
             "dinastia": "Champagne",
-            "resumen": "Daughter of Henry II of Champagne and Elizabeth of Jerusalem, she married Hugo I of Cyprus. She exercised regency functions and maintained rights and interests linked to both shores of the Mediterranean. Her file connects the house of Champagne with Cyprus and Jerusalem, without reducing it to its later Navarre branch."
+            "resumen": "Daughter of Henry II of Champagne and Elizabeth of Jerusalem, she married Hugh I of Cyprus. She exercised regency functions and maintained rights and interests linked to both shores of the Mediterranean. Her file connects the house of Champagne with Cyprus and Jerusalem, without reducing it to its later Navarre branch."
           }
         },
         {
@@ -27535,7 +27535,7 @@
             "nombre": "Hugh III of Cyprus",
             "slug": "hugo-iii-de-chipre",
             "dinastia": "Lusignan",
-            "resumen": "He succeeded Hugo II on the line of Elizabeth of Cyprus, her mother, and opened the branch of Antiquia-Lusignan. He tried to strengthen the royal authority in Acre, but he collided with the autonomy of the barons and the angevine pretensions over Jerusalem."
+            "resumen": "He succeeded Hugh II on the line of Elizabeth of Cyprus, her mother, and opened the branch of Antiquia-Lusignan. He tried to strengthen the royal authority in Acre, but he collided with the autonomy of the barons and the angevine pretensions over Jerusalem."
           }
         },
         {
@@ -27550,7 +27550,7 @@
             "nombre": "John I of Cyprus",
             "slug": "juan-i-de-chipre",
             "dinastia": "Lusignan",
-            "resumen": "Son of Hugo III, king of Cyprus and titular of Jerusalem since 1284. He died in 1285 after a year of reign and succeeded him by his brother Henry II."
+            "resumen": "Son of Hugh III, king of Cyprus and titular of Jerusalem since 1284. He died in 1285 after a year of reign and succeeded him by his brother Henry II."
           }
         },
         {
@@ -27658,7 +27658,7 @@
             "nombre": "James I of Cyprus",
             "slug": "jacobo-i-de-chipre",
             "dinastia": "Lusignan",
-            "resumen": "He was elected king while he remained captive in Genoa. Their release and return required concessions that kept the island's commercial dependence. After the death of Lion V, he incorporated into his title the nominal crown of Armenia."
+            "resumen": "He was elected king while he remained captive in Genoa. Their release and return required concessions that kept the island's commercial dependence. After the death of Leo V, he incorporated into his title the nominal crown of Armenia."
           }
         },
         {
@@ -27784,7 +27784,7 @@
           "nombre": "Melisende of Jerusalem",
           "slug": "melisenda-de-jerusalen",
           "dinastia": "Rethel",
-          "resumen": "Queen of Jerusalem since 1131, daughter of Baldwin II. She ruled with Fulco and then with her son Balduino III, until he took power in 1152. She was a great religious promoter."
+          "resumen": "Queen of Jerusalem since 1131, daughter of Baldwin II. She ruled with Fulco and then with her son Baldwin III, until he took power in 1152. She was a great religious promoter."
         },
         {
           "id": "BALDWIN3JER",
@@ -27875,7 +27875,7 @@
           "nombre": "Henry II of Champagne",
           "slug": "enrique-ii-de-champana",
           "dinastia": "Champagne",
-          "resumen": "Count of Champagne, married Elizabeth of Jerusalem during the crusades. His career led the French comital house to the Latin kingdom government. His daughter Alicia then married Hugo I of Cyprus, prolonging the presence of this family network in the eastern Mediterranean."
+          "resumen": "Count of Champagne, married Elizabeth of Jerusalem during the crusades. His career led the French comital house to the Latin kingdom government. His daughter Alicia then married Hugh I of Cyprus, prolonging the presence of this family network in the eastern Mediterranean."
         },
         {
           "id": "AIMERYLUSIGNANJER",
@@ -27917,7 +27917,7 @@
           "nombre": "Alice of Champagne",
           "slug": "alicia-de-champana",
           "dinastia": "Champagne",
-          "resumen": "Daughter of Henry II of Champagne and Elizabeth of Jerusalem, she married Hugo I of Cyprus. She exercised regency functions and maintained rights and interests linked to both shores of the Mediterranean. Her file connects the house of Champagne with Cyprus and Jerusalem, without reducing it to its later Navarre branch."
+          "resumen": "Daughter of Henry II of Champagne and Elizabeth of Jerusalem, she married Hugh I of Cyprus. She exercised regency functions and maintained rights and interests linked to both shores of the Mediterranean. Her file connects the house of Champagne with Cyprus and Jerusalem, without reducing it to its later Navarre branch."
         },
         {
           "id": "ISABELLACYPRUS",
@@ -27931,7 +27931,7 @@
           "nombre": "Hugh III of Cyprus",
           "slug": "hugo-iii-de-chipre",
           "dinastia": "Lusignan",
-          "resumen": "He succeeded Hugo II on the line of Elizabeth of Cyprus, her mother, and opened the branch of Antiquia-Lusignan. He tried to strengthen the royal authority in Acre, but he collided with the autonomy of the barons and the angevine pretensions over Jerusalem."
+          "resumen": "He succeeded Hugh II on the line of Elizabeth of Cyprus, her mother, and opened the branch of Antiquia-Lusignan. He tried to strengthen the royal authority in Acre, but he collided with the autonomy of the barons and the angevine pretensions over Jerusalem."
         },
         {
           "id": "ISABELIBELINCYP",
@@ -27945,7 +27945,7 @@
           "nombre": "John I of Cyprus",
           "slug": "juan-i-de-chipre",
           "dinastia": "Lusignan",
-          "resumen": "Son of Hugo III, king of Cyprus and titular of Jerusalem since 1284. He died in 1285 after a year of reign and succeeded him by his brother Henry II."
+          "resumen": "Son of Hugh III, king of Cyprus and titular of Jerusalem since 1284. He died in 1285 after a year of reign and succeeded him by his brother Henry II."
         },
         {
           "id": "HENRY2CYPRUS",
@@ -28008,7 +28008,7 @@
           "nombre": "James I of Cyprus",
           "slug": "jacobo-i-de-chipre",
           "dinastia": "Lusignan",
-          "resumen": "He was elected king while he remained captive in Genoa. Their release and return required concessions that kept the island's commercial dependence. After the death of Lion V, he incorporated into his title the nominal crown of Armenia."
+          "resumen": "He was elected king while he remained captive in Genoa. Their release and return required concessions that kept the island's commercial dependence. After the death of Leo V, he incorporated into his title the nominal crown of Armenia."
         },
         {
           "id": "JANUSCYPRUS",
@@ -28059,7 +28059,7 @@
           "id": "MUERTE_FED2_SICILIA_1250",
           "timeline": "historia",
           "anio": 1250,
-          "titulo": "Diere Federico II",
+          "titulo": "Diere Frederick II",
           "categoria": "dinastia",
           "personas": [
             "FED2HOH",
@@ -28078,20 +28078,20 @@
             "CONRADINOHOH",
             "CARLOS1ANJ"
           ],
-          "descripcion": "Conradino invades Italy to recover his family's inheritance, but is defeated in Tagliacozzo and executed in Naples. Carlos de Anjou is left as the owner of the old Hohenstaufen kingdom."
+          "descripcion": "Conradino invades Italy to recover his family's inheritance, but is defeated in Tagliacozzo and executed in Naples. Charles of Anjou is left as the owner of the old Hohenstaufen kingdom."
         },
         {
           "id": "MONTGISARD_1177",
           "timeline": "historia",
           "anio": 1177,
-          "titulo": "Balduino IV wins Montgisard",
+          "titulo": "Baldwin IV wins Montgisard",
           "categoria": "guerra",
           "personas": [
             "BALDWIN4JER",
             "SALADIN",
             "REYNALDCHATILLON"
           ],
-          "descripcion": "The young Balduino IV gets an unexpected victory about Saladino near Montgisard."
+          "descripcion": "The young Baldwin IV gets an unexpected victory about Saladino near Montgisard."
         },
         {
           "id": "HATTIN_1187",
@@ -28124,7 +28124,7 @@
           "id": "SEXTA_CRUZADA_1229",
           "timeline": "secundario",
           "anio": 1229,
-          "titulo": "Federico II recovers Jerusalem by treaty",
+          "titulo": "Frederick II recovers Jerusalem by treaty",
           "categoria": "politica",
           "personas": [
             "FED2HOH",
@@ -29690,7 +29690,7 @@
         "nombre": "Jelisava Nemanjić",
         "slug": "jelisava-nemanjic",
         "dinastia": "Nemanjić",
-        "resumen": "Wife of Stephen I Kotroman and mother of Esteban II and Vladislav, is part of the Serbian descent invoked by the Kotromanić. Her grandchildren Isabel of Bosnia and Tvrtko I allow to follow different connections: the Hungarian monarchy and the construction of Bosnian royalty."
+        "resumen": "Wife of Stephen I Kotroman and mother of Stephen II and Vladislav, is part of the Serbian descent invoked by the Kotromanić. Her grandchildren Isabel of Bosnia and Tvrtko I allow to follow different connections: the Hungarian monarchy and the construction of Bosnian royalty."
       },
       {
         "id": "ANGELINABRANK",
@@ -30559,7 +30559,7 @@
           "nombre": "Jelisava Nemanjić",
           "slug": "jelisava-nemanjic",
           "dinastia": "Nemanjić",
-          "resumen": "Wife of Stephen I Kotroman and mother of Esteban II and Vladislav, is part of the Serbian descent invoked by the Kotromanić. Her grandchildren Isabel of Bosnia and Tvrtko I allow to follow different connections: the Hungarian monarchy and the construction of Bosnian royalty."
+          "resumen": "Wife of Stephen I Kotroman and mother of Stephen II and Vladislav, is part of the Serbian descent invoked by the Kotromanić. Her grandchildren Isabel of Bosnia and Tvrtko I allow to follow different connections: the Hungarian monarchy and the construction of Bosnian royalty."
         },
         {
           "id": "ANGELINABRANK",
@@ -30735,7 +30735,7 @@
         "nombre": "Roger IV of Foix",
         "slug": "roger-iv-de-foix",
         "dinastia": "Foix",
-        "resumen": "Count of Foix in the 13th century, preceded the generation that had long-standing links to the county with Béarn. His son Roger Bernardo III entered into the marriage that held that heritage union."
+        "resumen": "Count of Foix in the 13th century, preceded the generation that had long-standing links to the county with Béarn. His son Roger Bernard III entered into the marriage that held that heritage union."
       },
       {
         "id": "ROGERBERNARD3FOIX",
@@ -30959,7 +30959,7 @@
             "nombre": "Roger IV of Foix",
             "slug": "roger-iv-de-foix",
             "dinastia": "Foix",
-            "resumen": "Count of Foix in the 13th century, preceded the generation that had long-standing links to the county with Béarn. His son Roger Bernardo III entered into the marriage that held that heritage union."
+            "resumen": "Count of Foix in the 13th century, preceded the generation that had long-standing links to the county with Béarn. His son Roger Bernard III entered into the marriage that held that heritage union."
           }
         },
         {
@@ -31284,7 +31284,7 @@
           "nombre": "Roger IV of Foix",
           "slug": "roger-iv-de-foix",
           "dinastia": "Foix",
-          "resumen": "Count of Foix in the 13th century, preceded the generation that had long-standing links to the county with Béarn. His son Roger Bernardo III entered into the marriage that held that heritage union."
+          "resumen": "Count of Foix in the 13th century, preceded the generation that had long-standing links to the county with Béarn. His son Roger Bernard III entered into the marriage that held that heritage union."
         },
         {
           "id": "ROGERBERNARD3FOIX",
@@ -31745,7 +31745,7 @@
         "nombre": "David Datuna of Kakheti",
         "slug": "david-datuna-de-kajetia",
         "dinastia": "Bagrationi",
-        "resumen": "Son of Teimuraz I and Jorashan, fought in the fight against Rostom and died in the battle of Magharo. His son Heraclio continued the Kakheti royal line, from which Teimuraz II and Heraclio II would come."
+        "resumen": "Son of Teimuraz I and Jorashan, fought in the fight against Rostom and died in the battle of Magharo. His son Heraclio continued the Kakheti royal line, from which Teimuraz II and Heraclius II would come."
       },
       {
         "id": "EREKLE1GEO",
@@ -31841,7 +31841,7 @@
       "editorial": true,
       "fuentes": [
         {
-          "titulo": "Encyclopaedia Iranica: Heraclio II",
+          "titulo": "Encyclopaedia Iranica: Heraclius II",
           "url": "https://www.iranicaonline.org/articles/erekle-ii/"
         }
       ],
@@ -32178,7 +32178,7 @@
           "nombre": "David Datuna of Kakheti",
           "slug": "david-datuna-de-kajetia",
           "dinastia": "Bagrationi",
-          "resumen": "Son of Teimuraz I and Jorashan, fought in the fight against Rostom and died in the battle of Magharo. His son Heraclio continued the Kakheti royal line, from which Teimuraz II and Heraclio II would come."
+          "resumen": "Son of Teimuraz I and Jorashan, fought in the fight against Rostom and died in the battle of Magharo. His son Heraclio continued the Kakheti royal line, from which Teimuraz II and Heraclius II would come."
         },
         {
           "id": "EREKLE1GEO",
@@ -33012,7 +33012,7 @@
         "nombre": "Philip II of Burgundy",
         "slug": "felipe-ii-de-borgona",
         "dinastia": "Valois-Burgundy",
-        "resumen": "He received the duchy of Burgundy from his father, John II of France. His marriage to Margarita de Flanders laid the foundation for the Burgundian expansion in the Netherlands."
+        "resumen": "He received the duchy of Burgundy from his father, John II of France. His marriage to Margaret of Flanders laid the foundation for the Burgundian expansion in the Netherlands."
       },
       {
         "id": "MARGFLAN",
@@ -33089,14 +33089,14 @@
             {
               "anio": 1363,
               "titulo": "The Duchy of Philip the Stretch",
-              "texto": "The French duchy was focused on Dijon. The North and County Franco counties would come by Margarita III.",
+              "texto": "The French duchy was focused on Dijon. The North and County Franco counties would come by Margaret III.",
               "personas": [
                 {
                   "id": "FEL2BORG",
                   "nombre": "Philip II of Burgundy",
                   "slug": "felipe-ii-de-borgona",
                   "dinastia": "Valois-Burgundy",
-                  "resumen": "He received the duchy of Burgundy from his father, John II of France. His marriage to Margarita de Flanders laid the foundation for the Burgundian expansion in the Netherlands."
+                  "resumen": "He received the duchy of Burgundy from his father, John II of France. His marriage to Margaret of Flanders laid the foundation for the Burgundian expansion in the Netherlands."
                 },
                 {
                   "id": "MARGFRAFLA",
@@ -33138,7 +33138,7 @@
                   "nombre": "Philip II of Burgundy",
                   "slug": "felipe-ii-de-borgona",
                   "dinastia": "Valois-Burgundy",
-                  "resumen": "He received the duchy of Burgundy from his father, John II of France. His marriage to Margarita de Flanders laid the foundation for the Burgundian expansion in the Netherlands."
+                  "resumen": "He received the duchy of Burgundy from his father, John II of France. His marriage to Margaret of Flanders laid the foundation for the Burgundian expansion in the Netherlands."
                 },
                 {
                   "id": "JUAN1BORG",
@@ -33285,7 +33285,7 @@
           ],
           "fuentes": [
             {
-              "titulo": "BnF · Margarita III de Flandes y sus cinco condados",
+              "titulo": "BnF · Margaret III of Flanders y sus cinco condados",
               "url": "https://catalogue.bnf.fr/ark:/12148/cb16161030k"
             },
             {
@@ -33297,11 +33297,11 @@
               "url": "https://portail.biblissima.fr/fr/ark:/43093/pdata71295e340f36a2c35285ffc09fff863e1dd66edb"
             },
             {
-              "titulo": "Canon van Nederland · Jacoba de Baviera y la sucesión de 1433",
+              "titulo": "Canon van Nederland · Jacoba of Bavaria y la sucesión de 1433",
               "url": "https://www.canonvannederland.nl/nl/page/439262/jacoba-van-beieren"
             },
             {
-              "titulo": "Gobierno de Luxemburgo · Adquisición y toma de 1443",
+              "titulo": "Gobierno of Luxembourg · Adquisición y toma de 1443",
               "url": "https://luxembourg.public.lu/en/society-and-culture/history/helm-holy-roman-empire.html"
             },
             {
@@ -33328,7 +33328,7 @@
       "editorial": false,
       "fuentes": [
         {
-          "titulo": "BnF · Margarita III de Flandes y sus cinco condados",
+          "titulo": "BnF · Margaret III of Flanders y sus cinco condados",
           "url": "https://catalogue.bnf.fr/ark:/12148/cb16161030k"
         },
         {
@@ -33377,7 +33377,7 @@
             "nombre": "Philip II of Burgundy",
             "slug": "felipe-ii-de-borgona",
             "dinastia": "Valois-Burgundy",
-            "resumen": "He received the duchy of Burgundy from his father, John II of France. His marriage to Margarita de Flanders laid the foundation for the Burgundian expansion in the Netherlands."
+            "resumen": "He received the duchy of Burgundy from his father, John II of France. His marriage to Margaret of Flanders laid the foundation for the Burgundian expansion in the Netherlands."
           }
         },
         {
@@ -33469,7 +33469,7 @@
           "nombre": "Philip II of Burgundy",
           "slug": "felipe-ii-de-borgona",
           "dinastia": "Valois-Burgundy",
-          "resumen": "He received the duchy of Burgundy from his father, John II of France. His marriage to Margarita de Flanders laid the foundation for the Burgundian expansion in the Netherlands."
+          "resumen": "He received the duchy of Burgundy from his father, John II of France. His marriage to Margaret of Flanders laid the foundation for the Burgundian expansion in the Netherlands."
         },
         {
           "id": "MARGFLAN",
@@ -33535,7 +33535,7 @@
             "FEL2BORG",
             "MARGFLAN"
           ],
-          "descripcion": "The marriage with Margarita de Flanders prepares the union of Burgundy with rich Flemish and Borgognon territories."
+          "descripcion": "The marriage with Margaret of Flanders prepares the union of Burgundy with rich Flemish and Borgognon territories."
         }
       ],
       "historias": [
@@ -33573,7 +33573,7 @@
         "nombre": "Albert of Sweden",
         "slug": "alberto-de-suecia",
         "dinastia": "Mecklenburg",
-        "resumen": "Alberto de Mecklenburg, king of Sweden since 1364 with the support of the Swedish nobility. His conflict with Margarita I ended with his defeat in Åsle (1389)."
+        "resumen": "Albert of Mecklenburg, king of Sweden since 1364 with the support of the Swedish nobility. His conflict with Margaret I ended with his defeat in Åsle (1389)."
       },
       {
         "id": "CATHERINEIVANOVNA",
@@ -33678,7 +33678,7 @@
         "nombre": "Ingeborg Valdemarsdatter",
         "slug": "ingeborg-valdemarsdatter",
         "dinastia": "Estridsen",
-        "resumen": "Daughter of Valdemar IV and sister of Margarita. Her marriage to Enrique de Mecklenburg linked the Danish house to a family that also claimed rights in Sweden. Through her daughter Mary was the grandmother of Erik of Pomerania: this is the family connection that made it possible to promote her by Margarita."
+        "resumen": "Daughter of Valdemar IV and sister of Margarita. Her marriage to Henry of Mecklenburg linked the Danish house to a family that also claimed rights in Sweden. Through her daughter Mary was the grandmother of Erik of Pomerania: this is the family connection that made it possible to promote her by Margarita."
       },
       {
         "id": "HENRY3MECK",
@@ -33787,7 +33787,7 @@
             "nombre": "Albert of Sweden",
             "slug": "alberto-de-suecia",
             "dinastia": "Mecklenburg",
-            "resumen": "Alberto de Mecklenburg, king of Sweden since 1364 with the support of the Swedish nobility. His conflict with Margarita I ended with his defeat in Åsle (1389)."
+            "resumen": "Albert of Mecklenburg, king of Sweden since 1364 with the support of the Swedish nobility. His conflict with Margaret I ended with his defeat in Åsle (1389)."
           }
         },
         {
@@ -34052,7 +34052,7 @@
           "nombre": "Albert of Sweden",
           "slug": "alberto-de-suecia",
           "dinastia": "Mecklenburg",
-          "resumen": "Alberto de Mecklenburg, king of Sweden since 1364 with the support of the Swedish nobility. His conflict with Margarita I ended with his defeat in Åsle (1389)."
+          "resumen": "Albert of Mecklenburg, king of Sweden since 1364 with the support of the Swedish nobility. His conflict with Margaret I ended with his defeat in Åsle (1389)."
         },
         {
           "id": "CATHERINEIVANOVNA",
@@ -34157,7 +34157,7 @@
           "nombre": "Ingeborg Valdemarsdatter",
           "slug": "ingeborg-valdemarsdatter",
           "dinastia": "Estridsen",
-          "resumen": "Daughter of Valdemar IV and sister of Margarita. Her marriage to Enrique de Mecklenburg linked the Danish house to a family that also claimed rights in Sweden. Through her daughter Mary was the grandmother of Erik of Pomerania: this is the family connection that made it possible to promote her by Margarita."
+          "resumen": "Daughter of Valdemar IV and sister of Margarita. Her marriage to Henry of Mecklenburg linked the Danish house to a family that also claimed rights in Sweden. Through her daughter Mary was the grandmother of Erik of Pomerania: this is the family connection that made it possible to promote her by Margarita."
         },
         {
           "id": "HENRY3MECK",
@@ -35647,7 +35647,7 @@
           "url": "https://www.britannica.com/"
         },
         {
-          "titulo": "Museo Nacional de Szczecin · Bogislao X y la consolidación de Pomerania",
+          "titulo": "Museo Nacional de Szczecin · Bogislaw X y la consolidación de Pomerania",
           "url": "https://e-zbiory.muzeum.szczecin.pl/kategorie/numizmatyka/monety-pomorskie/mns-n-5522-287.html"
         }
       ],
@@ -35960,7 +35960,7 @@
         "nombre": "Frederick I of Sweden",
         "slug": "federico-i-de-suecia",
         "dinastia": "Hesse-Kassel",
-        "resumen": "Federico de Hessen-Kassel, king of Sweden since 1720 for the abdication of his wife Ulrica Leonor. He reigned during the call for the Freedom era, with a real power very limited by parliament; since 1730 he was also landgrave of Hessen-Kassel."
+        "resumen": "Federico of Hesse-Kassel, king of Sweden since 1720 for the abdication of his wife Ulrica Leonor. He reigned during the call for the Freedom era, with a real power very limited by parliament; since 1730 he was also landgrave of Hesse-Kassel."
       },
       {
         "id": "WILLIAM4HESSE",
@@ -36144,7 +36144,7 @@
             "nombre": "Frederick I of Sweden",
             "slug": "federico-i-de-suecia",
             "dinastia": "Hesse-Kassel",
-            "resumen": "Federico de Hessen-Kassel, king of Sweden since 1720 for the abdication of his wife Ulrica Leonor. He reigned during the call for the Freedom era, with a real power very limited by parliament; since 1730 he was also landgrave of Hessen-Kassel."
+            "resumen": "Federico of Hesse-Kassel, king of Sweden since 1720 for the abdication of his wife Ulrica Leonor. He reigned during the call for the Freedom era, with a real power very limited by parliament; since 1730 he was also landgrave of Hesse-Kassel."
           }
         },
         {
@@ -36223,7 +36223,7 @@
           "nombre": "Frederick I of Sweden",
           "slug": "federico-i-de-suecia",
           "dinastia": "Hesse-Kassel",
-          "resumen": "Federico de Hessen-Kassel, king of Sweden since 1720 for the abdication of his wife Ulrica Leonor. He reigned during the call for the Freedom era, with a real power very limited by parliament; since 1730 he was also landgrave of Hessen-Kassel."
+          "resumen": "Federico of Hesse-Kassel, king of Sweden since 1720 for the abdication of his wife Ulrica Leonor. He reigned during the call for the Freedom era, with a real power very limited by parliament; since 1730 he was also landgrave of Hesse-Kassel."
         },
         {
           "id": "WILLIAM4HESSE",
@@ -36327,7 +36327,7 @@
         "nombre": "Sibylla of Armenia",
         "slug": "sibila-de-armenia",
         "dinastia": "Hethumid",
-        "resumen": "Daughter of Hetum I and wife of Bohemundo VI. Her marriage reinforced the alliance between Armenia, Antioch and Tripoli; after the death of her husband she intervened in county politics during the Bohemundo VII minority."
+        "resumen": "Daughter of Hetum I and wife of Bohemond VI. Her marriage reinforced the alliance between Armenia, Antioch and Tripoli; after the death of her husband she intervened in county politics during the Bohemond VII minority."
       },
       {
         "id": "BOHEMOND7TRIP",
@@ -36361,7 +36361,7 @@
       "evolucion": [
         {
           "anio": 1187,
-          "texto": "The Raimundo III succession leads to Bohemundo IV to the county."
+          "texto": "The Raymond III succession leads to Bohemond IV to the county."
         },
         {
           "anio": 1201,
@@ -36373,7 +36373,7 @@
         },
         {
           "anio": 1287,
-          "texto": "Lucia claims his brother Bohemundo VII's Inheritance."
+          "texto": "Lucia claims his brother Bohemond VII's Inheritance."
         },
         {
           "anio": 1289,
@@ -36387,16 +36387,16 @@
           "url": "https://www.enciclopedia.cat/gran-enciclopedia-catalana/comtat-de-tripoli"
         },
         {
-          "titulo": "Bohemundo IV",
-          "url": "https://en.wikipedia.org/wiki/Bohemond_IV_of_Antioch"
+          "titulo": "Encyclopaedia Britannica · Bohemond IV of Antioch",
+          "url": "https://www.britannica.com/biography/Bohemond-IV"
         },
         {
-          "titulo": "Bohemundo V",
-          "url": "https://en.wikipedia.org/wiki/Bohemond_V_of_Antioch"
+          "titulo": "Encyclopaedia Britannica · Bohemond V of Antioch",
+          "url": "https://www.britannica.com/biography/Bohemond-V"
         },
         {
-          "titulo": "Bohemundo VI",
-          "url": "https://en.wikipedia.org/wiki/Bohemond_VI_of_Antioch"
+          "titulo": "Encyclopaedia Britannica · Bohemond VI of Antioch",
+          "url": "https://www.britannica.com/biography/Bohemond-VI"
         }
       ],
       "gobiernos": [
@@ -36531,7 +36531,7 @@
           "nombre": "Sibylla of Armenia",
           "slug": "sibila-de-armenia",
           "dinastia": "Hethumid",
-          "resumen": "Daughter of Hetum I and wife of Bohemundo VI. Her marriage reinforced the alliance between Armenia, Antioch and Tripoli; after the death of her husband she intervened in county politics during the Bohemundo VII minority."
+          "resumen": "Daughter of Hetum I and wife of Bohemond VI. Her marriage reinforced the alliance between Armenia, Antioch and Tripoli; after the death of her husband she intervened in county politics during the Bohemond VII minority."
         },
         {
           "id": "BOHEMOND7TRIP",
@@ -36873,7 +36873,7 @@
         "nombre": "Lorenzo II de’ Medici",
         "slug": "lorenzo-ii-de-medici",
         "dinastia": "Medici",
-        "resumen": "The father of the Lion X, who was named Duke of Urbino in 1516, was the founder of Florence. Machiavelli dedicated the prince to him; he was the father of Catherine of Medici."
+        "resumen": "The father of the Leo X, who was named Duke of Urbino in 1516, was the founder of Florence. Machiavelli dedicated the prince to him; he was the father of Catherine of Medici."
       },
       {
         "id": "VITTORIADELLAROVERE",
@@ -36999,7 +36999,7 @@
             "nombre": "Lorenzo II de’ Medici",
             "slug": "lorenzo-ii-de-medici",
             "dinastia": "Medici",
-            "resumen": "The father of the Lion X, who was named Duke of Urbino in 1516, was the founder of Florence. Machiavelli dedicated the prince to him; he was the father of Catherine of Medici."
+            "resumen": "The father of the Leo X, who was named Duke of Urbino in 1516, was the founder of Florence. Machiavelli dedicated the prince to him; he was the father of Catherine of Medici."
           }
         },
         {
@@ -37057,7 +37057,7 @@
           "nombre": "Lorenzo II de’ Medici",
           "slug": "lorenzo-ii-de-medici",
           "dinastia": "Medici",
-          "resumen": "The father of the Lion X, who was named Duke of Urbino in 1516, was the founder of Florence. Machiavelli dedicated the prince to him; he was the father of Catherine of Medici."
+          "resumen": "The father of the Leo X, who was named Duke of Urbino in 1516, was the founder of Florence. Machiavelli dedicated the prince to him; he was the father of Catherine of Medici."
         },
         {
           "id": "VITTORIADELLAROVERE",
@@ -37186,7 +37186,7 @@
         "nombre": "Frederick I of Sweden",
         "slug": "federico-i-de-suecia",
         "dinastia": "Hesse-Kassel",
-        "resumen": "Federico de Hessen-Kassel, king of Sweden since 1720 for the abdication of his wife Ulrica Leonor. He reigned during the call for the Freedom era, with a real power very limited by parliament; since 1730 he was also landgrave of Hessen-Kassel."
+        "resumen": "Federico of Hesse-Kassel, king of Sweden since 1720 for the abdication of his wife Ulrica Leonor. He reigned during the call for the Freedom era, with a real power very limited by parliament; since 1730 he was also landgrave of Hesse-Kassel."
       },
       {
         "id": "FREDERICAHESSEDARM",
@@ -37235,7 +37235,7 @@
         "nombre": "Mathilde of Hesse",
         "slug": "matilde-de-hesse",
         "dinastia": "Hesse",
-        "resumen": "Mathilde of Hesse married John II of Cléveris; his son John III linked Cléveris-Mark with the inheritance of Jülich-Berg-Ravensberg."
+        "resumen": "Mathilde of Hesse married John II of Cleves; his son John III linked Cléveris-Mark with the inheritance of Jülich-Berg-Ravensberg."
       }
     ],
     "editorial": false,
@@ -37320,7 +37320,7 @@
           "nombre": "Frederick I of Sweden",
           "slug": "federico-i-de-suecia",
           "dinastia": "Hesse-Kassel",
-          "resumen": "Federico de Hessen-Kassel, king of Sweden since 1720 for the abdication of his wife Ulrica Leonor. He reigned during the call for the Freedom era, with a real power very limited by parliament; since 1730 he was also landgrave of Hessen-Kassel."
+          "resumen": "Federico of Hesse-Kassel, king of Sweden since 1720 for the abdication of his wife Ulrica Leonor. He reigned during the call for the Freedom era, with a real power very limited by parliament; since 1730 he was also landgrave of Hesse-Kassel."
         },
         {
           "id": "FREDERICAHESSEDARM",
@@ -37369,7 +37369,7 @@
           "nombre": "Mathilde of Hesse",
           "slug": "matilde-de-hesse",
           "dinastia": "Hesse",
-          "resumen": "Mathilde of Hesse married John II of Cléveris; his son John III linked Cléveris-Mark with the inheritance of Jülich-Berg-Ravensberg."
+          "resumen": "Mathilde of Hesse married John II of Cleves; his son John III linked Cléveris-Mark with the inheritance of Jülich-Berg-Ravensberg."
         }
       ],
       "eventos": [
@@ -37751,7 +37751,7 @@
           "titulo": "Count",
           "clase": "County",
           "condicion": "Effective rule",
-          "nota": "Fernando I had his place in 1413 after his revolt.",
+          "nota": "Ferdinand I had his place in 1413 after his revolt.",
           "persona": {
             "id": "JAIME2URGEL",
             "nombre": "James II of Urgell",
@@ -38196,8 +38196,8 @@
       "editorial": true,
       "fuentes": [
         {
-          "titulo": "Richard Talbot",
-          "url": "https://en.wikipedia.org/wiki/Richard_Talbot,_1st_Earl_of_Tyrconnell"
+          "titulo": "Encyclopaedia Britannica · Richard Talbot, 1st Earl of Tyrconnell",
+          "url": "https://www.britannica.com/biography/Richard-Talbot-earl-of-Tyrconnell"
         }
       ],
       "gobiernos": [
@@ -38312,8 +38312,8 @@
       "editorial": true,
       "fuentes": [
         {
-          "titulo": "Richard de Burgh",
-          "url": "https://en.wikipedia.org/wiki/Richard_%C3%93g_de_Burgh,_2nd_Earl_of_Ulster"
+          "titulo": "Encyclopaedia Britannica · Richard Óg de Burgh, 2nd Earl of Ulster",
+          "url": "https://www.britannica.com/biography/Richard-de-Burgh-2nd-Earl-of-Ulster"
         }
       ],
       "gobiernos": [
@@ -38935,14 +38935,14 @@
           "id": "MONTGISARD_1177",
           "timeline": "historia",
           "anio": 1177,
-          "titulo": "Balduino IV wins Montgisard",
+          "titulo": "Baldwin IV wins Montgisard",
           "categoria": "guerra",
           "personas": [
             "BALDWIN4JER",
             "SALADIN",
             "REYNALDCHATILLON"
           ],
-          "descripcion": "The young Balduino IV gets an unexpected victory about Saladino near Montgisard."
+          "descripcion": "The young Baldwin IV gets an unexpected victory about Saladino near Montgisard."
         },
         {
           "id": "HATTIN_1187",
@@ -39497,7 +39497,7 @@
           "url": "https://www.ieg-maps.uni-mainz.de/mapsp/mapp500d.htm"
         },
         {
-          "titulo": "Geheimes Staatsarchiv · Registros de Federico II, 1437–1470",
+          "titulo": "Geheimes Staatsarchiv · Registros de Frederick II, 1437–1470",
           "url": "https://archivdatenbank.gsta.spk-berlin.de/midosasearch-gsta/MidosaSEARCH/i_ha_rep_78_und_78_a/xml/inhalt/GStA_i_ha_rep_78_und_78_a_5.htm"
         }
       ],
@@ -39653,7 +39653,7 @@
           "url": "https://germanhistorydocs.org/en/from-the-reformations-to-the-thirty-years-war-1500-1648/central-europe-1648"
         },
         {
-          "titulo": "LWL, Westfälische Geschichte · Paz de Westfalia",
+          "titulo": "LWL, Westfälische Geschichte · Paz of Westphalia",
           "url": "https://www.lwl.org/westfaelische-geschichte/portal/Internet/finde/langDatensatz.php?urlID=795&url_tabelle=tab_chronologie&url_zaehler_blaettern=36"
         },
         {

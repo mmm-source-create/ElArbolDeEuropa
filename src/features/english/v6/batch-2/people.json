@@ -217,9 +217,9 @@
     "aliases": [
       "Giovanna di Savoia"
     ],
-    "summary": "Daughter of Amadeus VII and Bona de Berry, she married John James of Montferrat. She was the mother of William VIII, Bonifacio III and Isabel, wife of Ludovico I of Saluzzo.",
+    "summary": "Daughter of Amadeus VII and Bona de Berry, she married John James of Montferrat. She was the mother of William VIII, Boniface III and Isabel, wife of Ludovico I of Saluzzo.",
     "sections": [],
-    "biography": "Daughter of Amadeus VII and Bona de Berry, she married John James of Montferrat. She was the mother of William VIII, Bonifacio III and Isabel, wife of Ludovico I of Saluzzo. Her position links several neighboring houses by filiation, but the alliances and conflicts of her descendants show that sharing ancestors did not guarantee political cooperation."
+    "biography": "Daughter of Amadeus VII and Bona de Berry, she married John James of Montferrat. She was the mother of William VIII, Boniface III and Isabel, wife of Ludovico I of Saluzzo. Her position links several neighboring houses by filiation, but the alliances and conflicts of her descendants show that sharing ancestors did not guarantee political cooperation."
   },
   "SIMON1KARTLI": {
     "name": "Simon I of Kartli",
@@ -391,13 +391,14 @@
     "sections": []
   },
   "TOMAS1SAB": {
-    "name": "Tomás I de Savoy",
+    "name": "Thomas I of Savoy",
     "role": "Count",
     "nickname": "",
     "aliases": [],
     "summary": "He consolidated the Saudi domains on both sides of the Alps after a difficult minority. His offspring opened paths to the English and Provencal courts and to the Italian lordships.",
     "sections": [],
-    "biography": "He consolidated the Saudi domains on both sides of the Alps after a difficult minority. His offspring opened paths to the English and Provencal courts and to the Italian lordships. The Condal succession followed Amadeus IV, but other children received their own patrimony and functions: belonging to the same house did not mean governing an undivided territory."
+    "biography": "He consolidated the Saudi domains on both sides of the Alps after a difficult minority. His offspring opened paths to the English and Provencal courts and to the Italian lordships. The Condal succession followed Amadeus IV, but other children received their own patrimony and functions: belonging to the same house did not mean governing an undivided territory.",
+    "slugName": "Tomás I de Savoy"
   },
   "RITAARMENIA": {
     "name": "Rita of Armenia",
@@ -486,7 +487,7 @@
     "aliases": [],
     "summary": "The son of Juan Jacobo and Joanna of Savoy, combined the government of Montferrat with the military service of the Italian powers. His daughters married Ludovico II of Saluzzo and Charles I of Savoy.",
     "sections": [],
-    "biography": "The son of Juan Jacobo and Joanna of Savoy combined the government of Montferrat with the military service of the Italian powers. His daughters married Ludovico II of Saluzzo and Charles I of Savoy. These links generated expectations about the marquisado, but upon his death his brother Bonifacio III inherited it."
+    "biography": "The son of Juan Jacobo and Joanna of Savoy combined the government of Montferrat with the military service of the Italian powers. His daughters married Ludovico II of Saluzzo and Charles I of Savoy. These links generated expectations about the marquisado, but upon his death his brother Boniface III inherited it."
   },
   "LEONORPROVENZA": {
     "name": "Eleanor of Provence",
@@ -606,13 +607,14 @@
     "sections": []
   },
   "MANF3SAL": {
-    "name": "Manfredo III de Saluzzo",
+    "name": "Manfred III of Saluzzo",
     "role": "Marquess",
     "nickname": "",
     "aliases": [],
     "summary": "Saluzzo ruled in the first half of the 13th century, between Savoy's pressures and the alliances with Montferrat. His marriage to Beatrice of Savoy was a union between houses that also rivaled politically.",
     "sections": [],
-    "biography": "Saluzzo ruled in the first half of the 13th century, between Savoy’s pressures and the alliances with Montferrat. His marriage to Beatrice of Savoy was a union between houses that also rivaled politically. He died leaving Tomás I even less; the tutelage of that generation shows that inheriting the marquisado did not amount to immediately exercising the government."
+    "biography": "Saluzzo ruled in the first half of the 13th century, between Savoy’s pressures and the alliances with Montferrat. His marriage to Beatrice of Savoy was a union between houses that also rivaled politically. He died leaving Thomas I even less; the tutelage of that generation shows that inheriting the marquisado did not amount to immediately exercising the government.",
+    "slugName": "Manfredo III de Saluzzo"
   },
   "GOFFREDOBORJA": {
     "name": "Goffredo Borgia",
@@ -627,7 +629,7 @@
     "role": "Electress",
     "nickname": "",
     "aliases": [],
-    "summary": "The voter of the Wittelsbach dynasty. Associated with Palatinate, Hanover.",
+    "summary": "Electress of the Wittelsbach dynasty. Associated with Palatinate, Hanover.",
     "sections": []
   },
   "ISABTIR": {
@@ -685,7 +687,7 @@
     "role": "Margrave / Landgrave",
     "nickname": "the Serious",
     "aliases": [],
-    "summary": "Margrave de Meißen, 1323–1349. Margrave of the Wettin dynasty.",
+    "summary": "Margrave of Meissen, 1323–1349. Margrave of the Wettin dynasty.",
     "sections": []
   },
   "MARIAANTONIAAUT": {
@@ -774,7 +776,7 @@
     "role": "King",
     "nickname": "",
     "aliases": [],
-    "summary": "Son of Hugo III, king of Cyprus and titular of Jerusalem since 1284. He died in 1285 after a year of reign and succeeded him by his brother Henry II.",
+    "summary": "Son of Hugh III, king of Cyprus and titular of Jerusalem since 1284. He died in 1285 after a year of reign and succeeded him by his brother Henry II.",
     "sections": []
   },
   "CATALINASUEVASA": {
@@ -782,16 +784,17 @@
     "role": "Princess",
     "nickname": "",
     "aliases": [],
-    "summary": "Daughter of Charles IX and Mary of the Palatinate. Her marriage to John Casimir of the Palatinate-Zweibrücken connected the Vasa with a branch of Wittelsbach. Her son Carlos X Gustavo succeeded Christina of Sweden: the dynastic name change did not break the family continuity by female line.",
+    "summary": "Daughter of Charles IX and Mary of the Palatinate. Her marriage to John Casimir of the Palatinate-Zweibrücken connected the Vasa with a branch of Wittelsbach. Her son Charles X Gustavo succeeded Christina of Sweden: the dynastic name change did not break the family continuity by female line.",
     "sections": []
   },
   "JOHANNLUDWIG1ANHALT": {
-    "name": "Juan Luis I de Anhalt-Dornburg",
+    "name": "Juan Louis I of Anhalt-Dornburg",
     "role": "Prince",
     "nickname": "",
     "aliases": [],
     "summary": "Prince of the Anhalt-Zerbst-Dornburg secondary line, father of Christian Augustus and paternal grandfather of Catherine II of Russia. His dynastic title does not represent a government over all the principalities of Anhalt.",
-    "sections": []
+    "sections": [],
+    "slugName": "Juan Luis I de Anhalt-Dornburg"
   },
   "TEIMURAZ1MUKHRANI": {
     "name": "Teimuraz I of Mukhrani",
@@ -839,14 +842,15 @@
     "sections": []
   },
   "GIORGI3IMER": {
-    "name": "Jorge III de Imereti",
+    "name": "George III of Imereti",
     "role": "King",
     "nickname": "",
     "aliases": [
       "Giorgi III of Imereti"
     ],
     "summary": "His monarchy lived side by side with the growing strength of Levan II Dadiani of Mingrelia. The clashes between the two limited the crown’s ability to control the Georgian West. His son Alexander III continued that dispute.",
-    "sections": []
+    "sections": [],
+    "slugName": "Jorge III de Imereti"
   },
   "ALEXANDER3SCOT": {
     "name": "Alexander III of Scotland",
@@ -965,7 +969,7 @@
     "aliases": [
       "Ladislao I"
     ],
-    "summary": "His coronation in Krakow symbolized the reunification of a significant part of the Polish lands. He fought the Teutonic Order and bequeathed the crown to Casimiro III.",
+    "summary": "His coronation in Krakow symbolized the reunification of a significant part of the Polish lands. He fought the Teutonic Order and bequeathed the crown to Casimir III.",
     "sections": [],
     "slugName": "Ladislao I of Poland"
   },
@@ -999,12 +1003,13 @@
     "sections": []
   },
   "CRISTINALORENA": {
-    "name": "Cristina de Lorena",
+    "name": "Cristina of Lorraine",
     "role": "Queen consort and Regent of France",
     "nickname": "",
     "aliases": [],
     "summary": "Consort of the Lorraine dynasty. Associated with Lorraine, Tuscany.",
-    "sections": []
+    "sections": [],
+    "slugName": "Cristina de Lorena"
   },
   "GEORGEWILLIAMCELLE": {
     "name": "George William of Brunswick-Lüneburg",
@@ -1112,12 +1117,13 @@
     "slugName": "Juan Alberto I de Mecklenburg"
   },
   "ROB1ART": {
-    "name": "Roberto I de Artois",
+    "name": "Robert I of Artois",
     "role": "Count",
     "nickname": "",
     "aliases": [],
     "summary": "Brother of Louis IX, he participated in the Egyptian crusade. He died in Mansura after an offensive that left the French forces in a very compromised situation.",
-    "sections": []
+    "sections": [],
+    "slugName": "Roberto I de Artois"
   },
   "KARL2BADEN": {
     "name": "Charles II de Baden-Durlach",
@@ -1194,7 +1200,7 @@
     "sections": []
   },
   "ROD3HAB": {
-    "name": "Rodolfo III of Habsburg",
+    "name": "Rudolf III of Habsburg",
     "role": "King / Duke",
     "nickname": "",
     "aliases": [
@@ -1205,7 +1211,8 @@
     "sections": [],
     "governmentNotes": {
       "Autoridad compartida; no se interpreta como sucesión exclusiva.": "Shared authority; not treated as an exclusive succession."
-    }
+    },
+    "slugName": "Rodolfo III of Habsburg"
   },
   "MARIANAVICT": {
     "name": "Mariana Victoria of Spain",
@@ -1236,7 +1243,7 @@
     "role": "Queen consort of England",
     "nickname": "",
     "aliases": [],
-    "summary": "Daughter of Sancho VI of Navarre, she married Ricardo I in Limassol (Cyprus) in 1191, during the crusade. She never lived in England; after widowing she lived in Le Mans, which was part of her dowry, and there she founded the Abbey of L’Épau, where she is buried.",
+    "summary": "Daughter of Sancho VI of Navarre, she married Richard I in Limassol (Cyprus) in 1191, during the crusade. She never lived in England; after widowing she lived in Le Mans, which was part of her dowry, and there she founded the Abbey of L’Épau, where she is buried.",
     "sections": []
   },
   "GIOVPOPOLANO": {
@@ -1341,9 +1348,9 @@
     "role": "VizCountess of Béarn",
     "nickname": "",
     "aliases": [],
-    "summary": "The daughter of Gaston VII, she contributed the rights to Bearne to the offspring of her marriage to Roger Bernardo III of Foix. Her role is fundamental to understanding the origin of the heritage union.",
+    "summary": "The daughter of Gaston VII, she contributed the rights to Bearne to the offspring of her marriage to Roger Bernard III of Foix. Her role is fundamental to understanding the origin of the heritage union.",
     "sections": [],
-    "biography": "The daughter of Gaston VII, she contributed the rights to Bearne to the offspring of her marriage to Roger Bernardo III of Foix. Her role is fundamental to understanding the origin of the heritage union. Margarita's birth house and her husband's were different, even though her heirs gathered the titles.",
+    "biography": "The daughter of Gaston VII, she contributed the rights to Bearne to the offspring of her marriage to Roger Bernard III of Foix. Her role is fundamental to understanding the origin of the heritage union. Margarita's birth house and her husband's were different, even though her heirs gathered the titles.",
     "governmentNotes": {
       "Titular hereditaria; comparte la continuidad del vizcondado con su marido y después con su descendencia.": "Hereditary titleholder; she shared the continuity of the viscounty with her husband and later with her descendants."
     },
@@ -1565,12 +1572,13 @@
     "sections": []
   },
   "BOGDAN2MOLD": {
-    "name": "Bogdan II of Moldova",
+    "name": "Bogdan II of Moldavia",
     "role": "Prince / Voivode",
     "nickname": "",
     "aliases": [],
-    "summary": "Voivode of Moldova, 1449–1451. Prince of the Bogdan-Mușat dynasty.",
-    "sections": []
+    "summary": "Voivode of Moldavia, 1449–1451. Prince of the Bogdan-Mușat dynasty.",
+    "sections": [],
+    "slugName": "Bogdan II of Moldova"
   },
   "LUISEAMALIEBRUN": {
     "name": "Luisa Amalia of Brunswick-Wolfenbüttel",
@@ -1589,12 +1597,13 @@
     "sections": []
   },
   "JUANPORT2": {
-    "name": "Juan de Portugal",
+    "name": "John of Portugal",
     "role": "Constable",
     "nickname": "",
     "aliases": [],
     "summary": "Constable of the Avis dynasty. Associated with Portugal.",
-    "sections": []
+    "sections": [],
+    "slugName": "Juan de Portugal"
   },
   "JOFREBORJAESC": {
     "name": "Jofré de Borja and Escriva",
@@ -1877,7 +1886,7 @@
     "aliases": [],
     "summary": "One of the main aleramic marquises, he extended his influence to cities in northern Italy. His daughter Yolanda married Andronic II and took the name Irene.",
     "sections": [],
-    "biography": "One of the main aleramic marquises, extended its influence through cities in northern Italy. His daughter Yolanda married Andronico II and took the name Irene. When the male line of his house was extinguished, that Byzantine offspring held the rights of Theodoro Paleolologo over Montferrat."
+    "biography": "One of the main aleramic marquises, extended its influence through cities in northern Italy. His daughter Yolanda married Andronikos II and took the name Irene. When the male line of his house was extinguished, that Byzantine offspring held the rights of Theodoro Paleolologo over Montferrat."
   },
   "PIETROCOLONNACARD": {
     "name": "Pietro Colonna",
@@ -1920,7 +1929,7 @@
       "Guillem II de Bearn",
       "Guillem II de Montcada"
     ],
-    "summary": "The son of Guillermo Ramón, Viscount of Béarn since 1224. He accompanied Jaime I in the conquest of Mallorca and died in the battle of Portopi on 12 September 1229, together with Ramón de Moncada. He was succeeded by his son Gastón VII.",
+    "summary": "The son of Guillermo Ramón, Viscount of Béarn since 1224. He accompanied James I in the conquest of Mallorca and died in the battle of Portopi on 12 September 1229, together with Ramón de Moncada. He was succeeded by his son Gastón VII.",
     "sections": [],
     "slugName": "William II of Bearne"
   },
@@ -1952,7 +1961,7 @@
     }
   },
   "STJEPAN1BOS": {
-    "name": "Esteban I Kotroman",
+    "name": "Stephen I Kotroman",
     "role": "Ban",
     "nickname": "",
     "aliases": [],
@@ -1960,7 +1969,8 @@
     "sections": [],
     "governmentNotes": {
       "Constancia de 1290 y resistencia frente a los Šubić. El final es un corte aproximado anterior a 1314; no es una fecha de muerte.": "Constance of 1290 and resistance to Šubić. The end is an approximate cut before 1314 and isn't a date of death."
-    }
+    },
+    "slugName": "Esteban I Kotroman"
   },
   "BELOSLAVABUL": {
     "name": "Beloslava from Bulgaria",
@@ -2126,12 +2136,13 @@
     "sections": []
   },
   "BOGDAN1MOLD": {
-    "name": "Bogdan I of Moldova",
+    "name": "Bogdan I of Moldavia",
     "role": "Prince / Voivode",
     "nickname": "The Founder",
     "aliases": [],
-    "summary": "Voivode of Moldova, 1359–1367. Prince of the Bogdan-Mușat dynasty.",
-    "sections": []
+    "summary": "Voivode of Moldavia, 1359–1367. Prince of the Bogdan-Mușat dynasty.",
+    "sections": [],
+    "slugName": "Bogdan I of Moldova"
   },
   "MARGGINEBRASAB": {
     "name": "Margaret of Geneva",
@@ -2161,12 +2172,13 @@
     "sections": []
   },
   "LATCUMOLD": {
-    "name": "Lațcu of Moldova",
+    "name": "Lațcu of Moldavia",
     "role": "Prince / Voivode",
     "nickname": "",
     "aliases": [],
-    "summary": "Voivode of Moldova, 1368–1375. Prince of the Bogdan-Mușat dynasty.",
-    "sections": []
+    "summary": "Voivode of Moldavia, 1368–1375. Prince of the Bogdan-Mușat dynasty.",
+    "sections": [],
+    "slugName": "Lațcu of Moldova"
   },
   "TERESAENTENZA": {
     "name": "Teresa of Entenza",
@@ -2201,12 +2213,13 @@
     "sections": []
   },
   "FRANCISALORENA": {
-    "name": "Francisca de Lorena-Mercoeur",
+    "name": "Francisca of Lorraine-Mercoeur",
     "role": "Consort",
     "nickname": "",
     "aliases": [],
     "summary": "Consort of the Lorraine dynasty. Associated with Vendôme, Lorraine.",
-    "sections": []
+    "sections": [],
+    "slugName": "Francisca de Lorena-Mercoeur"
   },
   "MARIASALVIATI": {
     "name": "Maria Salviati",
@@ -2226,12 +2239,13 @@
     "slugName": "Juan Federico de Pomerania"
   },
   "ROB1COUR": {
-    "name": "Roberto I",
+    "name": "Robert I",
     "role": "Emperor",
     "nickname": "",
     "aliases": [],
     "summary": "Latin Emperor of Constantinople since 1221, from the house of Courtenay. He lost much of his territory to Nicaea and Epirus.",
-    "sections": []
+    "sections": [],
+    "slugName": "Roberto I"
   },
   "MARIAARKEL": {
     "name": "Maria de Arkel",
@@ -2242,12 +2256,13 @@
     "sections": []
   },
   "JOHN1ALENCON": {
-    "name": "Juan I de Alençon",
+    "name": "John I of Alençon",
     "role": "Duke",
     "nickname": "",
     "aliases": [],
     "summary": "Duke of Alençon, 1404–1415. Duke of the Valois-Alençon dynasty.",
-    "sections": []
+    "sections": [],
+    "slugName": "Juan I de Alençon"
   },
   "ADAWARENNE": {
     "name": "Ada de Warenne",
@@ -2301,12 +2316,13 @@
     "sections": []
   },
   "RAYMOND3TRIPOLI": {
-    "name": "Raimundo III of Tripoli",
+    "name": "Raymond III of Tripoli",
     "role": "Earl / Regent",
     "nickname": "",
     "aliases": [],
     "summary": "Count of Tripoli and one of the great barons of the kingdom. He acted as regent and was a central figure in the political struggles that preceded Hattin.",
-    "sections": []
+    "sections": [],
+    "slugName": "Raimundo III of Tripoli"
   },
   "FRANCPICC": {
     "name": "Francesco Piccinino",
@@ -2819,7 +2835,7 @@
     "role": "Doge",
     "nickname": "",
     "aliases": [],
-    "summary": "Doge of the Republic of Venice between 1478 and 1485. Dignity was elective: its mandate allows to follow institutional continuity, but does not imply family property of the Venetian territories.",
+    "summary": "Doge of the Republic of Venice between 1478 and 1485. The office was elective: the dogeship marks institutional continuity, not family ownership of the Venetian territories.",
     "sections": [],
     "governmentNotes": {
       "Cargo electivo de la República de Venecia, no señorío familiar.": "An elective office of the Republic of Venice, not a family lordship."
@@ -2857,7 +2873,7 @@
     "role": "Doge",
     "nickname": "",
     "aliases": [],
-    "summary": "Doge of the Republic of Venice between 1485 and 1486. Dignity was elective: its mandate allows to follow institutional continuity, but does not imply family property of the Venetian territories.",
+    "summary": "Doge of the Republic of Venice between 1485 and 1486. The office was elective: the dogeship marks institutional continuity, not family ownership of the Venetian territories.",
     "sections": [],
     "governmentNotes": {
       "Cargo electivo de la República de Venecia, no señorío familiar.": "An elective office of the Republic of Venice, not a family lordship."
@@ -2917,7 +2933,7 @@
     "role": "Doge",
     "nickname": "",
     "aliases": [],
-    "summary": "Doge of the Republic of Venice between 1559 and 1567. Dignity was elective: its mandate allows to follow institutional continuity, but does not imply family ownership of Venetian territories.",
+    "summary": "Doge of the Republic of Venice between 1559 and 1567. The office was elective: the dogeship marks institutional continuity, not family ownership of the Venetian territories.",
     "sections": [],
     "governmentNotes": {
       "Cargo electivo de la República de Venecia, no señorío familiar.": "An elective office of the Republic of Venice, not a family lordship."
@@ -2982,7 +2998,7 @@
     "summary": "Governor of Transylvania, 1602–1604 (delegated government).",
     "sections": [],
     "governmentNotes": {
-      "Gobierno militar en nombre de Rodolfo II después de la derrota de Tövis de julio de 1602, interrumpido por la rebelión de Moisés Székely en 1603 y restablecido tras julio. Su cargo terminó en abril de 1604; después actuaron comisarios imperiales. El intervalo anual no atribuye a Basta todo 1604 ni gobierno personal sobre cada fortaleza durante la guerra.": "Military government on behalf of Rodolfo II after the defeat of Tövis in July 1602, interrupted by the rebellion of Moses Székely in 1603 and re-established after July. His post ended in April 1604, and then he acted as imperial commissioners. The annual interval does not attribute to Enough all 1604 or personal government over each fortress during the war."
+      "Gobierno militar en nombre de Rodolfo II después de la derrota de Tövis de julio de 1602, interrumpido por la rebelión de Moisés Székely en 1603 y restablecido tras julio. Su cargo terminó en abril de 1604; después actuaron comisarios imperiales. El intervalo anual no atribuye a Basta todo 1604 ni gobierno personal sobre cada fortaleza durante la guerra.": "Military government on behalf of Rudolf II after the defeat of Tövis in July 1602, interrupted by the rebellion of Moses Székely in 1603 and re-established after July. His post ended in April 1604, and then he acted as imperial commissioners. The annual interval does not attribute to Enough all 1604 or personal government over each fortress during the war."
     }
   },
   "NICOLO_DA_PONTE_DOGE": {
@@ -2990,7 +3006,7 @@
     "role": "Doge",
     "nickname": "",
     "aliases": [],
-    "summary": "Doge of the Republic of Venice between 1578 and 1585. Dignity was elective: its mandate allows to follow institutional continuity, but does not imply family ownership of Venetian territories.",
+    "summary": "Doge of the Republic of Venice between 1578 and 1585. The office was elective: the dogeship marks institutional continuity, not family ownership of the Venetian territories.",
     "sections": [],
     "governmentNotes": {
       "Cargo electivo de la República de Venecia, no señorío familiar.": "An elective office of the Republic of Venice, not a family lordship."
@@ -3001,7 +3017,7 @@
     "role": "Doge",
     "nickname": "",
     "aliases": [],
-    "summary": "Doge of the Republic of Venice between 1471 and 1473. Dignity was elective: its mandate allows to follow institutional continuity, but does not imply family ownership of Venetian territories.",
+    "summary": "Doge of the Republic of Venice between 1471 and 1473. The office was elective: the dogeship marks institutional continuity, not family ownership of the Venetian territories.",
     "sections": [],
     "governmentNotes": {
       "Cargo electivo de la República de Venecia, no señorío familiar.": "An elective office of the Republic of Venice, not a family lordship."
@@ -3035,7 +3051,7 @@
     "sections": []
   },
   "ROMAN2MOLD": {
-    "name": "Roman II of Moldova",
+    "name": "Roman II of Moldavia",
     "role": "Voivode",
     "nickname": "",
     "aliases": [],
@@ -3043,7 +3059,8 @@
     "sections": [],
     "governmentNotes": {
       "Gobierno propio del principado; el tributo y la intervención exterior no equivalen a administración provincial otomana. Los relevos del mismo año se conservan en la escala anual. Rivalidades y asociación con Petru II; el mapa anual conserva más de un gobierno.": "The Government of the principality itself and its tribute and its intervention do not amount to an Ottoman provincial administration. The same year's relays are preserved at an annual level. Rivals and association with Petru II. The annual map retains more than one government."
-    }
+    },
+    "slugName": "Roman II of Moldova"
   },
   "VASILELUPU": {
     "name": "Vasile Lupu",
@@ -3090,7 +3107,7 @@
     }
   },
   "STEFAN1TOMSA": {
-    "name": "Esteban I Tomșa",
+    "name": "Stephen I Tomșa",
     "role": "Voivode",
     "nickname": "",
     "aliases": [],
@@ -3098,7 +3115,8 @@
     "sections": [],
     "governmentNotes": {
       "Gobierno propio del principado; el tributo y la intervención exterior no equivalen a administración provincial otomana. Los relevos del mismo año se conservan en la escala anual.": "The Government of the principality itself and its tribute and its intervention are not an amount to an Ottoman provincial administration. The same year's relays are preserved at an annual level."
-    }
+    },
+    "slugName": "Esteban I Tomșa"
   },
   "ILIAS2RARES": {
     "name": "Iliaș II Rareș",

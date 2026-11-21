@@ -10,4 +10,4 @@ const values=(c,p)=>(c[p]||[]).map(s=>s.mainsnak?.datavalue?.value).filter(Boole
 // Cached summary of a Wikidata entity: dates, relatives and authority identifiers.
 export const entityRecord=e=>{const c=e.claims||{};return {label:e.labels?.es?.value||e.labels?.en?.value,desc:e.descriptions?.es?.value||e.descriptions?.en?.value,human:ids(c,'P31').includes('Q5'),
  birth:(c.P569||[]).map(year).filter(v=>v!==null),death:(c.P570||[]).map(year).filter(v=>v!==null),father:ids(c,'P22'),mother:ids(c,'P25'),spouse:ids(c,'P26'),
- gnd:values(c,'P227'),bnf:values(c,'P268'),dbe:first(c,'P4459'),dbi:first(c,'P1986'),odnb:first(c,'P1415'),britannica:first(c,'P1417')}};
+ gnd:values(c,'P227'),bnf:values(c,'P268'),loc:values(c,'P244'),dbe:first(c,'P4459'),dbi:first(c,'P1986'),odnb:first(c,'P1415'),britannica:first(c,'P1417')}};

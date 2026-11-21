@@ -2,13 +2,12 @@
 // Spanish (HISTORIA_DINASTIAS) and English (written into the v6 batch files by
 // scripts/data/apply-house-histories-615.mjs).
 const T = slug => `https://www.treccani.it/enciclopedia/${slug}/`;
-const W = page => `https://en.wikipedia.org/wiki/${page}`;
 
 const HOUSES = {
   'La Marck': {
     territorios: ['Cléveris', 'Mark', 'Jülich', 'Berg', 'Ravensberg'],
     protagonistas: ['ADOLF1CLEV', 'JOHN1CLEVES', 'JOHN3CLEVES', 'ANNECLEVES', 'WILHELM5CLEVES', 'JOHNWILLIAMCLEVES'],
-    fuentes: [T('la-marck'), W('House_of_La_Marck')],
+    fuentes: [T('la-marck'), 'https://d-nb.info/gnd/141872225'],
     es: {
       resumen: 'Condes de la Marca, en Westfalia, que heredaron el condado de Cléveris y fueron duques de Cléveris desde 1417. En el siglo XVI reunieron Jülich, Berg y Ravensberg; su extinción en 1609 abrió la crisis sucesoria de Jülich-Cléveris.',
       origen: 'La familia descendía de los condes de Berg-Altena y tomó su nombre de la fortaleza de Mark, junto al Ruhr. En 1368 Adolfo de la Marca heredó por su madre el condado de Cléveris, en el bajo Rin, y su hijo Adolfo I fue elevado a duque por el emperador Segismundo en 1417.',
@@ -25,7 +24,7 @@ const HOUSES = {
   'Valois-Angulema': {
     territorios: ['Angulema', 'Francia'],
     protagonistas: ['CARLOSANG', 'MARGANGULEMA', 'FRAN1FRA', 'ENRIQ2FRA', 'CARLOS9FRA', 'ENRIQ3FRA'],
-    fuentes: [T('valois'), W('House_of_Valois-Angoul%C3%AAme')],
+    fuentes: [T('valois'), 'https://www.britannica.com/topic/Valois-dynasty'],
     es: {
       resumen: 'Rama menor de los Valois-Orleans que heredó la corona francesa en 1515 con Francisco I y la conservó hasta la muerte de Enrique III en 1589.',
       origen: 'Juan de Orleans, hermano menor del poeta Carlos de Orleans, recibió el condado de Angulema. Su hijo Carlos se casó con Luisa de Saboya y fue padre de Margarita y de Francisco. Cuando Luis XII murió sin hijos varones en 1515, Francisco, su primo y yerno, era el heredero por la ley sálica.',
@@ -42,7 +41,7 @@ const HOUSES = {
   Colonna: {
     territorios: ['Estados Pontificios', 'Nápoles'],
     protagonistas: ['SCIARRACOLONNA', 'PAPA_MARTIN5', 'PROSPCOLONNA', 'VITTORIACOL', 'ASCANIOCOLONNA', 'MARCANTONIO2COL'],
-    fuentes: [T('colonna'), W('Colonna_family')],
+    fuentes: [T('colonna'), 'https://www.britannica.com/topic/Colonna-family'],
     es: {
       resumen: 'Gran familia baronal romana, rival de los Orsini, que dio un papa, numerosos cardenales, condotieros al servicio de España y una de las grandes poetas del Renacimiento.',
       origen: 'Los Colonna aparecen en el siglo XI como señores de Colonna, en los montes Albanos, y de Palestrina. Su poder descansaba en castillos del Lacio, en clientelas urbanas y en su presencia en el colegio cardenalicio. Su enfrentamiento con los Orsini dividió Roma durante siglos.',
@@ -59,7 +58,7 @@ const HOUSES = {
   Asen: {
     territorios: ['Bulgaria'],
     protagonistas: ['IVANASEN1BUL', 'KALOYANBUL', 'BORILBUL', 'IVANASEN2BUL', 'MICHAEL2ASENBUL', 'IVANASEN3BUL'],
-    fuentes: [W('Asen_dynasty'), T('bisanzio')],
+    fuentes: ['https://www.britannica.com/place/Second-Bulgarian-empire', T('bisanzio')],
     es: {
       resumen: 'Dinastía que restauró el Estado búlgaro en 1185 con la rebelión de los hermanos Asen y Pedro. Bajo Iván Asen II, el segundo Imperio búlgaro dominó gran parte de los Balcanes.',
       origen: 'Los hermanos Teodoro (Pedro) y Asen encabezaron en 1185 una revuelta contra Bizancio en el norte de los Balcanes, con apoyo de los cumanos. Tárnovo se convirtió en la capital del nuevo Estado y la Iglesia búlgara recuperó su autonomía.',
@@ -76,7 +75,7 @@ const HOUSES = {
   'Poitiers-Antioquía': {
     territorios: ['Antioquía', 'Trípoli', 'Armenia'],
     protagonistas: ['BOHEMOND3ANT', 'BOHEMOND4ANT', 'BOHEMOND5ANT', 'BOHEMOND6ANT', 'PLAISANCEANT', 'BOHEMOND7TRIP'],
-    fuentes: [W('House_of_Poitiers'), W('Principality_of_Antioch')],
+    fuentes: ['https://www.britannica.com/topic/House-of-Poitiers', 'https://www.britannica.com/topic/Antioch-medieval-principality-Turkey'],
     es: {
       resumen: 'Rama de los condes de Poitiers que gobernó el principado de Antioquía y, desde comienzos del siglo XIII, el condado de Trípoli, hasta su conquista por los mamelucos en 1268 y 1289.',
       origen: 'Raimundo de Poitiers, hijo del duque Guillermo IX de Aquitania y tío de Leonor de Aquitania, se casó en 1136 con Constanza, heredera de Antioquía. Su hijo Bohemundo III gobernó el principado durante más de cuarenta años.',
@@ -93,7 +92,7 @@ const HOUSES = {
   'Della Rovere': {
     territorios: ['Estados Pontificios', 'Urbino'],
     protagonistas: ['PAPA_SIXTO4', 'PAPA_JULIO2', 'GIOVANNIDELLAROVERE', 'FRANCESCOROVEREURBINO', 'GUIDOBALDO2ROVERE', 'FRANCESCO2ROVERE'],
-    fuentes: [T('della-rovere'), W('Della_Rovere')],
+    fuentes: [T('della-rovere'), 'https://www.britannica.com/topic/della-Rovere-family'],
     es: {
       resumen: 'Familia de Savona que llegó al papado con Sixto IV y Julio II y gobernó el ducado de Urbino de 1508 a 1631.',
       origen: 'Francesco della Rovere, fraile franciscano de una modesta familia de Savona, en Liguria, fue elegido papa en 1471 con el nombre de Sixto IV. Promovió a sus sobrinos con cardenalatos, señoríos y matrimonios, y construyó en Roma la capilla Sixtina.',
@@ -110,7 +109,7 @@ const HOUSES = {
   'Zähringen-Baden': {
     territorios: ['Baden'],
     protagonistas: ['CHRISTOPH1BADEN', 'ERNSTBADEN', 'KARL2BADEN', 'GEORGEFREDBADEN', 'KARLWILHELMBADEN', 'KARLFRIEDRICHBADEN'],
-    fuentes: [T('baden'), W('Margraviate_of_Baden')],
+    fuentes: [T('baden'), 'https://www.britannica.com/place/Baden-historical-state-Germany'],
     es: {
       resumen: 'Rama de los Zähringen que gobernó el margraviato de Baden, en el alto Rin, dividido entre Baden-Baden y Baden-Durlach de 1535 a 1771 y reunido después por Carlos Federico.',
       origen: 'Los margraves de Baden descendían de Hermann, hijo del duque Bertoldo I de Zähringen, en el siglo XI. Su patrimonio, entre la Selva Negra y el Rin, creció por herencias y compras hasta que Cristóbal I lo reunió a finales del siglo XV.',
@@ -127,7 +126,7 @@ const HOUSES = {
   Avesnes: {
     territorios: ['Henao', 'Holanda', 'Zelanda'],
     protagonistas: ['BOUCHARDAVES', 'JOHN1AVES', 'JOHN2AVES', 'GUILLERMO3HENAO', 'GUIL4HOL', 'FELIPAHENAO'],
-    fuentes: [W('House_of_Avesnes'), T('lussemburgo')],
+    fuentes: ['https://fmg.ac/Projects/MedLands/HAINAUT.htm', T('lussemburgo')],
     es: {
       resumen: 'Familia de Henao surgida del matrimonio discutido de Bouchard de Avesnes con Margarita de Flandes. Obtuvo Henao en 1257 y Holanda y Zelanda en 1299, y se extinguió en la línea masculina en 1345.',
       origen: 'Bouchard de Avesnes, noble de Henao que había recibido órdenes menores, se casó hacia 1212 con Margarita, hermana de la condesa Juana de Flandes. El matrimonio fue declarado nulo y los hijos, tachados de ilegítimos, se enfrentaron durante décadas a los hijos del segundo matrimonio de Margarita, los Dampierre.',
@@ -144,7 +143,7 @@ const HOUSES = {
   'Valois-Orleans': {
     territorios: ['Orleans', 'Angulema', 'Francia', 'Milán'],
     protagonistas: ['LUISORLEANS', 'CARLOS1ORLEANS', 'JEANDUNOIS', 'JUANORLEANS', 'LUIS12FRA', 'CLAUDEFRA'],
-    fuentes: [T('valois'), W('House_of_Valois-Orl%C3%A9ans')],
+    fuentes: [T('valois'), 'https://www.britannica.com/topic/Valois-dynasty'],
     es: {
       resumen: 'Rama de los Valois fundada por Luis, duque de Orleans, hermano de Carlos VI. Reclamó Milán por la herencia Visconti y llegó al trono de Francia en 1498 con Luis XII.',
       origen: 'Luis de Orleans recibió el ducado en 1392 y se casó con Valentina Visconti, hija del duque de Milán, que aportó Asti y los derechos de su familia. Su rivalidad con Juan sin Miedo por el gobierno del reino, durante la locura de Carlos VI, terminó con su asesinato en París en 1407.',
@@ -161,7 +160,7 @@ const HOUSES = {
   Orsini: {
     territorios: ['Estados Pontificios', 'Nápoles'],
     protagonistas: ['MATTEOROSSOORS_GRANDE', 'PAPA_NICOLAS3', 'CLARICEORSINI', 'ALFONSINAORSINI', 'GIROLAMAORSINI', 'PAPA_BENEDICTO13'],
-    fuentes: [T('orsini'), W('Orsini_family')],
+    fuentes: [T('orsini'), 'https://www.britannica.com/topic/Orsini-family'],
     es: {
       resumen: 'Familia baronal romana, rival de los Colonna, que dio tres papas, numerosos cardenales y condotieros y se emparentó con los Médici y los Farnesio.',
       origen: 'Los Orsini descendían de los Bobone, una familia romana del siglo XII. Matteo Rosso Orsini, senador de Roma en la década de 1240, defendió la ciudad frente al emperador Federico II y asentó el poder de la familia en el Lacio.',

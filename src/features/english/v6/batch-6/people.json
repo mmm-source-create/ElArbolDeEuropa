@@ -88,7 +88,7 @@
     }
   },
   "ALEXIOS4TREB": {
-    "name": "Alejo IV of Trebizond",
+    "name": "Alexios IV of Trebizond",
     "role": "Emperor",
     "nickname": "",
     "aliases": [],
@@ -97,7 +97,8 @@
     "governmentNotes": {
       "La edad descrita por Clavijo apunta hacia 1379; otra identificación con Basilio conduce a 1382. Se conserva la discrepancia.": "The age described by Clavijo points to 1379; another identification with Basil leads to 1382. The discrepancy is preserved.",
       "Alejo continuó la línea de Manuel. Se mantiene la datación probable de 1417 y la nota sobre la incertidumbre del fallecimiento.": "Away he continued Manuel's line. The probable date of 1417 and the note on the uncertainty of death are kept."
-    }
+    },
+    "slugName": "Alejo IV of Trebizond"
   },
   "JOANFITZDESMOND": {
     "name": "Joan FitzGerald, condesa de Ormond",
@@ -245,12 +246,13 @@
     "sections": []
   },
   "ALEXIOS2TREB": {
-    "name": "Alejo II of Trebizond",
+    "name": "Alexios II of Trebizond",
     "role": "Emperor",
     "nickname": "",
     "aliases": [],
     "summary": "He defended the autonomy of his empire against the tutelage of Andronicus II and negotiated the commercial access of Genoese and Venetians. His marriage to Djiadjak Jakeli strengthened the connection with Samtsje and the Georgian elites.",
-    "sections": []
+    "sections": [],
+    "slugName": "Alejo II of Trebizond"
   },
   "MICHELEANTONIOSAL": {
     "name": "Miguel Antonio of Saluzzo",
@@ -279,7 +281,7 @@
   "SANFRANBORJA": {
     "name": "Francis Borgia",
     "role": "Duke / Saint",
-    "nickname": "san Francis Borgia",
+    "nickname": "Saint Francis Borgia",
     "aliases": [
       "San Francisco de Borja",
       "San Francis Borgia"
@@ -1098,7 +1100,7 @@
     "summary": "He succeeded King Edward II and lost the government to his brother Edward in 1361. He briefly returned to the duchy in 1371, after Edward's death, and died that same year. Its two stages must be listed as separate mandates.",
     "sections": [],
     "governmentNotes": {
-      "Reinaldo III heredó el ducado de su padre. Reinaldo II había gobernado primero como conde: la elevación ducal de 1339 no fue una sucesión de personas.": "King Edward III inherited the duchy from his father. Reinaldo II had first ruled as a count: the ducal elevation of 1339 was not a succession of people.",
+      "Reinaldo III heredó el ducado de su padre. Reinaldo II había gobernado primero como conde: la elevación ducal de 1339 no fue una sucesión de personas.": "King Edward III inherited the duchy from his father. Reinald II had first ruled as a count: the ducal elevation of 1339 was not a succession of people.",
       "La muerte de Eduardo permitió la restauración de Reinaldo III. Reinaldo murió también en 1371; los dos mandatos de su vida se mantienen separados.": "Edward's death allowed the restoration of King Edward III. Reinaldo also died in 1371; the two mandates of his life are kept separate."
     }
   },
@@ -1261,9 +1263,9 @@
     "aliases": [
       "Anne d’Alençon"
     ],
-    "summary": "Wife of William IX, she exercised the tutelage of her son Boniface IV and defended the interests of the Paleologists during the Italian wars. She also intervened in the marriage negotiations that ended up uniting her daughter Margarita with Federico II Gonzaga.",
+    "summary": "Wife of William IX, she exercised the tutelage of her son Boniface IV and defended the interests of the Paleologists during the Italian wars. She also intervened in the marriage negotiations that ended up uniting her daughter Margarita with Frederick II Gonzaga.",
     "sections": [],
-    "biography": "Wife of William IX, she exercised the tutelage of her son Boniface IV and defended the interests of the Paleologists during the Italian wars. She also intervened in the marriage negotiations that ended up uniting her daughter Margarita with Federico II Gonzaga. Her widowhood was a stage of political activity, not a withdrawal from public life."
+    "biography": "Wife of William IX, she exercised the tutelage of her son Boniface IV and defended the interests of the Paleologists during the Italian wars. She also intervened in the marriage negotiations that ended up uniting her daughter Margarita with Frederick II Gonzaga. Her widowhood was a stage of political activity, not a withdrawal from public life."
   },
   "MARIAPORTFARN": {
     "name": "Maria of Portugal",
@@ -2068,12 +2070,13 @@
     "sections": []
   },
   "MICHAEL3SHISHBUL": {
-    "name": "Miguel III Shishman",
+    "name": "Michael III Shishman",
     "role": "Tsar",
     "nickname": "",
     "aliases": [],
     "summary": "The Tsar of Bulgaria, 1323–1330. Tsar of the Shishman dynasty.",
-    "sections": []
+    "sections": [],
+    "slugName": "Miguel III Shishman"
   },
   "VLAD3MOR": {
     "name": "Vladislav III of Moravia",
@@ -2366,7 +2369,7 @@
     "role": "Noble",
     "nickname": "",
     "aliases": [],
-    "summary": "Member of the Eka family and mother of Gustavo Vasa. After the fall of Stockholm she was taken captive to Denmark, where she died. Its history shows the family consequences of the Kalmar crisis and connects Gustav's noble origin with the political breakdown of Sweden.",
+    "summary": "Member of the Eka family and mother of Gustav Vasa. After the fall of Stockholm she was taken captive to Denmark, where she died. Its history shows the family consequences of the Kalmar crisis and connects Gustav's noble origin with the political breakdown of Sweden.",
     "sections": []
   },
   "JELENAGRUBABOS": {
@@ -2383,7 +2386,7 @@
   },
   "GUILLERMA1PALLARS": {
     "name": "Guillerma I de Pallars Sobirà",
-    "role": "Countess of Pallars will be sober",
+    "role": "Countess of Pallars Sobirà",
     "nickname": "",
     "aliases": [
       "Guillema I de Pallars Sobirà"
@@ -2634,12 +2637,13 @@
     "sections": []
   },
   "PAPA_INOCENCIO5": {
-    "name": "Inocencio V",
+    "name": "Innocent V",
     "role": "Pope",
     "nickname": "",
     "aliases": [],
     "summary": "Pierre de Tarentaise, Dominican theologian and archbishop of Lyon, was the first pope of the order of preachers. He ruled the Church for only a few months in 1276.",
-    "sections": []
+    "sections": [],
+    "slugName": "Inocencio V"
   },
   "MUSTAFA1OSM": {
     "name": "Mustafá I",
@@ -2741,12 +2745,13 @@
     "sections": []
   },
   "PAPA_INOCENCIO9": {
-    "name": "Inocencio IX",
+    "name": "Innocent IX",
     "role": "Pope",
     "nickname": "",
     "aliases": [],
     "summary": "Giovanni Antonio Facchinetti, Bolognese, was pope for two months in 1591.",
-    "sections": []
+    "sections": [],
+    "slugName": "Inocencio IX"
   },
   "SULEIMAN2OSM": {
     "name": "Süleyman II",
@@ -2810,7 +2815,7 @@
     "role": "Voivode",
     "nickname": "",
     "aliases": [],
-    "summary": "The voivodeship of Valaquia, 1600-1601. Voivoda of the Movilă dynasty.",
+    "summary": "The voivodeship of Wallachia, 1600-1601. Voivoda of the Movilă dynasty.",
     "sections": [],
     "governmentNotes": {
       "Gobierno propio del principado. La relación tributaria con la Puerta y la intervención de potencias vecinas no convierten este mandato en administración provincial otomana. Los relevos ocurridos dentro del mismo año pueden mostrar más de una autoridad.": "The principality's own government. The taxation relationship with the Ottoman Porte and the intervention of neighboring powers do not make this mandate an Ottoman provincial administration. Reviews within the same year may show more than one authority."
@@ -2845,7 +2850,7 @@
     "role": "Consort",
     "nickname": "",
     "aliases": [],
-    "summary": "Daughter of Beka I of Samtsje and wife of Alejo II of Trebizond. Andronicus II's opposition to this marriage reveals that the Black Sea family alliances could contradict Constantinople's plans.",
+    "summary": "Daughter of Beka I of Samtsje and wife of Alexios II of Trebizond. Andronicus II's opposition to this marriage reveals that the Black Sea family alliances could contradict Constantinople's plans.",
     "sections": []
   },
   "MARGSANSEVERINO": {
@@ -3048,7 +3053,7 @@
     "role": "Doge",
     "nickname": "",
     "aliases": [],
-    "summary": "Dogo of the Republic of Venice between 1585 and 1595. Dignity was elective: its mandate allows institutional continuity to be pursued, but does not imply family ownership of Venetian territories.",
+    "summary": "Doge of the Republic of Venice between 1585 and 1595. The office was elective: the dogeship marks institutional continuity, not family ownership of the Venetian territories.",
     "sections": [],
     "governmentNotes": {
       "Cargo electivo de la República de Venecia, no señorío familiar.": "An elective office of the Republic of Venice, not a family lordship."
@@ -3059,7 +3064,7 @@
     "role": "Doge",
     "nickname": "",
     "aliases": [],
-    "summary": "Dogo of the Republic of Venice between 1400 and 1413. Dignity was elective: its mandate allows institutional continuity to be pursued, but does not imply family ownership of Venetian territories.",
+    "summary": "Doge of the Republic of Venice between 1400 and 1413. The office was elective: the dogeship marks institutional continuity, not family ownership of the Venetian territories.",
     "sections": [],
     "governmentNotes": {
       "Cargo electivo de la República de Venecia, no señorío familiar.": "An elective office of the Republic of Venice, not a family lordship."

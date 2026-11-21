@@ -11,6 +11,7 @@ import {ENGLISH_NAMES,PROFILE_LABELS,translatedProfileText} from '../../src/feat
 import {COMPLETE_ENGLISH_PROFILES} from '../../src/features/english/fullProfiles.js';
 import {escudoDe} from '../../src/content/dinastias/escudos.js';
 import {V6_STORIES} from '../../src/features/english/v6/index.js';
+import {ENGLISH_TERRITORY_NOTES} from '../../src/features/english/territoryNotes616.js';
 const entityName=t=>['Perche','Las dos Borgoñas','Borgoña y Países Bajos'].includes(t.key)?PROFILE_LABELS[t.key]:t.name;
 const names={...ENGLISH_NAMES,...Object.fromEntries(Object.entries(COMPLETE_ENGLISH_PROFILES).map(([id,p])=>[id,p.name]))};
 const term=t=>{if(!PROFILE_LABELS[t])throw Error(`Missing entity term: ${t}`);return PROFILE_LABELS[t];};
@@ -23,6 +24,8 @@ export function englishEntityStory(h) {
  const esPath=`/es/historia/${h.slug}`;
  return {...h,titulo:title,path:translatedEquivalent(esPath,'en')||esPath};
 }
+// Commons credits list contributors; only the connecting words were Spanish.
+const englishArmsAuthor=author=>author&&author.replace(/ y colaboradores de Wikimedia Commons/,' and Wikimedia Commons contributors').replace(/, a partir de /g,', after ').replace(/\(versión de (\d{4}), restaurada en (\d{4})\)/,'(version of $1, restored in $2)').replace(/ y /g,' and ');
 const sources=items=>(items||[]).map(f=>({...f,titulo:englishSourceTitle(f.titulo)}));
 export async function englishEntityPages(people){
  const pages=[];
@@ -34,7 +37,7 @@ export async function englishEntityPages(people){
   const house=(h,field)=>{const sourceTranslation=(translatedSource[field]||[]).find(item=>item.nombre===h.nombre||item.key===h.nombre||item.slug===h.slug)||{};const summary=t.houses?.[h.nombre]??ROSES_RELATED_HOUSES[h.nombre]??sourceTranslation.resumen;if(summary===undefined)throw Error(`Translate related house: ${h.nombre}`);return ({...h,...sourceTranslation,key:h.nombre,nombre:term(h.nombre),resumen:summary,miembros:h.miembros.map(p=>card(p,people)),path:translatedEquivalent(`/es/dinastia/${h.slug}`,'en')||`/es/dinastia/${h.slug}`});};
   pages.push({...source,...translatedSource,type:'dynasty',path:`/en/dynasty/${t.en}`,esPath:`/es/dinastia/${t.es}`,key:source.nombre,fuentes:sources(source.fuentes),nombre:entityName(t),description:t.summary,resumen:t.summary,origen:t.origin,trayectoria:t.history,legado:t.legacy,editorial:true,
    miembros:source.miembros.map(p=>card(p,people)),protagonistas:source.protagonistas.map(p=>card(p,people)),gobiernos:source.gobiernos.map(g=>government(g,people)),territorios:source.territorios.map(key=>({key,name:term(key)})),ramas:source.ramas.map(branch),casasOrigen:source.casasOrigen.map(h=>house(h,'casasOrigen')),casasDerivadas:source.casasDerivadas.map(h=>house(h,'casasDerivadas')),casasConectadas:source.casasConectadas.map(h=>house(h,'casasConectadas')),
-   arms:arms?.imagen?{tipo:arms.tipo,...arms.imagen,licencia:englishCredit(arms.imagen.licencia),autor:arms.imagen.en?.autor||arms.imagen.autor||t.armsAuthor,blazon:arms.en?.blazon||t.blazon,note:arms.en?.note||t.armsNote,modifications:arms.imagen.en?.modifications||t.armsModifications||'A viewBox was added for responsive scaling; the drawing is unchanged.'}:null,
+   arms:arms?.imagen?{tipo:arms.tipo,...arms.imagen,licencia:englishCredit(arms.imagen.licencia),autor:arms.imagen.en?.autor||englishArmsAuthor(arms.imagen.autor)||t.armsAuthor,blazon:arms.en?.blazon||t.blazon,note:arms.en?.note||t.armsNote,modifications:arms.imagen.en?.modifications||t.armsModifications||'A viewBox was added for responsive scaling; the drawing is unchanged.'}:null,
   });
  }
  for(const t of ENGLISH_TERRITORIES){
@@ -46,6 +49,10 @@ export async function englishEntityPages(people){
    gobiernos:source.gobiernos.map(g=>government(g,people,t.notes)),personas:source.personas.map(p=>{const translated=people.find(t=>t.id===p.id),summary=translated?.summary||t.people[p.id];if(p.resumen&&!summary)throw Error(`Missing territory biography: ${p.id}`);return {...card(p,people),resumen:summary};}),
    historias:(source.historias||[]).map(englishEntityStory),
    dinastias:source.dinastias.map(key=>({key,name:term(key)})),relacionados:source.relacionados.map(r=>({...r,nombre:term(r.nombre)})),
+   // 6.0.16: reviewed notes, parent entities and components, as on the Spanish page.
+   nota:ENGLISH_TERRITORY_NOTES[source.nota]||null,naturaleza:source.naturaleza,
+   pertenencias:(source.pertenencias||[]).filter(v=>PROFILE_LABELS[v.territorio]).map(v=>({key:v.territorio,name:PROFILE_LABELS[v.territorio],desde:v.desde})),
+   componentes:(source.componentes||[]).filter(key=>PROFILE_LABELS[key]).map(key=>({key,name:PROFILE_LABELS[key]})),
   });
  }
  return pages;

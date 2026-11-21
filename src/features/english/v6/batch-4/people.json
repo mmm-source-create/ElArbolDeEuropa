@@ -4,7 +4,7 @@
     "role": "Archduke",
     "nickname": "",
     "aliases": [],
-    "summary": "Son of Emperor Fernando I, archduke of Inner Austria since 1564. His son Fernando II took this branch of Styria to the imperial throne.",
+    "summary": "Son of Emperor Ferdinand I, archduke of Inner Austria since 1564. His son Ferdinand II took this branch of Styria to the imperial throne.",
     "sections": [],
     "governmentNotes": {
       "Gobernó Estiria, Carintia y Carniola desde Graz tras la partición de 1564.": "He ruled Styria, Carintia and Carniola from Graz after his partition from 1564."
@@ -169,7 +169,7 @@
     "role": "Prince / Voivode",
     "nickname": "",
     "aliases": [],
-    "summary": "Prince of Moldova and son of Stephen the Great. He tried to maintain an active policy between Poland, Hungary and the Ottoman Empire during a time when Moldovan autonomy was increasingly difficult to sustain.",
+    "summary": "Prince of Moldavia and son of Stephen the Great. He tried to maintain an active policy between Poland, Hungary and the Ottoman Empire during a time when Moldovan autonomy was increasingly difficult to sustain.",
     "sections": []
   },
   "MARIAHUNNAP": {
@@ -254,7 +254,7 @@
     "role": "Duque sudor",
     "nickname": "",
     "aliases": [],
-    "summary": "The son of Arturo II and Yolanda of Dreux, he fought the duchy to Juana of Penthièvre after the death of John III. His cause was supported by English and continued after his death, sustained by his wife and his son's supporters.",
+    "summary": "The son of Arthur II and Yolanda of Dreux, he fought the duchy to Juana of Penthièvre after the death of John III. His cause was supported by English and continued after his death, sustained by his wife and his son's supporters.",
     "sections": [],
     "biography": "A son of Arthur II and Yolande of Dreux, he contested the duchy with Joan of Penthièvre after John III’s death. His cause received English support and continued after his death through his wife and his son’s supporters. His inclusion or exclusion from ducal lists explains some variations in the numbering of the dukes named John."
   },
@@ -265,10 +265,10 @@
     "aliases": [
       "Hug Roger III of Pallars"
     ],
-    "summary": "Last count of Pallars. He led the pactista party in the Catalan civil war against John II, who held him in prison from 1466 to 1470, and was excluded from the capitulation of Pedralbes (1472). The troops of Fernando II conquered Pallars between 1484 and 1488, and in 1491 the county passed to the Cardona as a marquisate. Captured in Italy by the Grand Captain in 1503, he died in prison in the castle of Xàtiva in 1508.",
+    "summary": "Last count of Pallars. He led the pactista party in the Catalan civil war against John II, who held him in prison from 1466 to 1470, and was excluded from the capitulation of Pedralbes (1472). The troops of Ferdinand II conquered Pallars between 1484 and 1488, and in 1491 the county passed to the Cardona as a marquisate. Captured in Italy by the Grand Captain in 1503, he died in prison in the castle of Xàtiva in 1508.",
     "sections": [],
     "governmentNotes": {
-      "Conde hasta la guerra con Fernando II; la sentencia de confiscación es de 1488 y el condado pasó a los Cardona en 1491.": "Count till the war with Fernando II, with his confiscation sentence of 1488 and his county passed to the Cardonas in 1491."
+      "Conde hasta la guerra con Fernando II; la sentencia de confiscación es de 1488 y el condado pasó a los Cardona en 1491.": "Count till the war with Ferdinand II, with his confiscation sentence of 1488 and his county passed to the Cardonas in 1491."
     }
   },
   "GUILLERMOATENAS": {
@@ -387,14 +387,15 @@
     }
   },
   "BASILEIOSTREB": {
-    "name": "Basil of Trebisonda",
+    "name": "Basil of Trebizond",
     "role": "Emperor",
     "nickname": "",
     "aliases": [
       "Basileios Gran Comneno"
     ],
-    "summary": "Son of Allejo II, took power in 1332. His offspring allows the imperial genealogy to continue until Alejo III, although this did not happen directly. The court passed through several changes of ruler between the two generations.",
-    "sections": []
+    "summary": "Son of Allejo II, took power in 1332. His offspring allows the imperial genealogy to continue until Alexios III, although this did not happen directly. The court passed through several changes of ruler between the two generations.",
+    "sections": [],
+    "slugName": "Basil of Trebisonda"
   },
   "GABRIELESAL": {
     "name": "Gabriel de Saluzzo",
@@ -441,7 +442,7 @@
       "Guy of Cyprus",
       "Guy de Lusignan, constable"
     ],
-    "summary": "Son of Hugo III and brother of Henry II, he served as a constable. He did not reign, but his son Hugo IV inherited the crown after Henry's death. His marriage linked him to the Beirut Ibelin.",
+    "summary": "Son of Hugh III and brother of Henry II, he served as a constable. He did not reign, but his son Hugh IV inherited the crown after Henry's death. His marriage linked him to the Beirut Ibelin.",
     "sections": []
   },
   "ROGERBERNARD1CASTEL": {
@@ -492,7 +493,7 @@
     "role": "Landgrave",
     "nickname": "",
     "aliases": [],
-    "summary": "First landgrave of Hessen-Darmstadt. The division of Hesse became its own political actor, later closely linked to the houses of Brunswick and Hanover.",
+    "summary": "First landgrave of Hesse-Darmstadt. The division of Hesse became its own political actor, later closely linked to the houses of Brunswick and Hanover.",
     "sections": []
   },
   "HENRY3MECK": {
@@ -584,7 +585,7 @@
     "sections": [],
     "biography": "Known as Pierre Mauclerc, he belonged to the House of Dreux and entered Breton government through his marriage to Alix of Thouars. After her death he served as regent for their son John I. His position toward the French and English crowns shifted during a career devoted to preserving broad ducal autonomy.",
     "governmentNotes": {
-      "Gobierno durante la minoría de Juan I.": "Government during the Juan I. minority"
+      "Gobierno durante la minoría de Juan I.": "Government during the John I. minority"
     }
   },
   "MARGABR": {
@@ -673,7 +674,7 @@
     "role": "Prince",
     "nickname": "",
     "aliases": [],
-    "summary": "Son of Bohemundo IV and husband of Elizabeth of Cyprus. His son Hugo III inherited the Cypriot crown by the mother line, retained the name Lusignan and brought to his descendants the genealogy of the princes of Antioch.",
+    "summary": "Son of Bohemond IV and husband of Elizabeth of Cyprus. His son Hugh III inherited the Cypriot crown by the mother line, retained the name Lusignan and brought to his descendants the genealogy of the princes of Antioch.",
     "sections": []
   },
   "KETEVANMARTYR": {
@@ -845,7 +846,7 @@
     "role": "Co-emperor",
     "nickname": "",
     "aliases": [],
-    "summary": "Son of Andrónico II, associated with the throne as co-emperor. He led campaigns against the Turks and the Catalan Company without success, and died before his father in 1320.",
+    "summary": "Son of Andronikos II, associated with the throne as co-emperor. He led campaigns against the Turks and the Catalan Company without success, and died before his father in 1320.",
     "sections": []
   },
   "BLANCAFRANCIAORLEANS": {
@@ -976,7 +977,7 @@
       "Alix of Ibelin",
       "Alice of Ibelin"
     ],
-    "summary": "Second wife of Hugo IV and mother of Peter I and James IHis offspring gave continuity to the Lusignan monarchy during the 14th century. It belongs to a generation other than the Elizabeth of Ibelin married to Hugo III.",
+    "summary": "Second wife of Hugh IV and mother of Peter I and James IHis offspring gave continuity to the Lusignan monarchy during the 14th century. It belongs to a generation other than the Elizabeth of Ibelin married to Hugh III.",
     "sections": []
   },
   "FRED4HOLGOTT": {
@@ -984,7 +985,7 @@
     "role": "Duke",
     "nickname": "",
     "aliases": [],
-    "summary": "Duke of Holstein, 1695–1702 (rama). Duke of the House of Holstein-Gottorp.",
+    "summary": "Duke of Holstein, 1695–1702 (branch). Duke of the House of Holstein-Gottorp.",
     "sections": []
   },
   "CHARLESHESSEKASS": {
@@ -1048,7 +1049,7 @@
     "role": "Duke",
     "nickname": "The one with the buckle",
     "aliases": [],
-    "summary": "Duke of Bavaria, 1347–1375 (rama). Duke of the House of Wittelsbach.",
+    "summary": "Duke of Bavaria, 1347–1375 (branch). Duke of the House of Wittelsbach.",
     "sections": []
   },
   "VITTORIACOL": {
@@ -1131,7 +1132,7 @@
     "role": "Duke",
     "nickname": "",
     "aliases": [],
-    "summary": "Duke of Bavaria, 1253–1290 (rama). Duke of the House of Wittelsbach.",
+    "summary": "Duke of Bavaria, 1253–1290 (branch). Duke of the House of Wittelsbach.",
     "sections": []
   },
   "MATILDAGUERNASSAU": {
@@ -1211,7 +1212,7 @@
     "role": "Count / Stadtholder",
     "nickname": "",
     "aliases": [],
-    "summary": "Count of Nassau, 1632–1640 (rama). Count of the House of Nassau.",
+    "summary": "Count of Nassau, 1632–1640 (branch). Count of the House of Nassau.",
     "sections": [],
     "governmentNotes": {
       "Cargo provincial delegado por los Estados, con ámbitos y fechas personales documentados; no soberanía hereditaria sobre toda la República ni las provincias españolas.": "Provincial office delegated by the States, with individually documented dates and jurisdictions. Its scope excludes hereditary sovereignty over the whole Republic and the Spanish provinces."
@@ -1273,7 +1274,7 @@
     "role": "Duke",
     "nickname": "",
     "aliases": [],
-    "summary": "Duke of Bavaria, 1375–1397 (rama). Duke of the House of Wittelsbach.",
+    "summary": "Duke of Bavaria, 1375–1397 (branch). Duke of the House of Wittelsbach.",
     "sections": []
   },
   "ISABELCARINTIA": {
@@ -1344,15 +1345,16 @@
     "sections": []
   },
   "BERNHARD3BADEN": {
-    "name": "Bernardo III de Baden-Baden",
+    "name": "Bernard III of Baden-Baden",
     "role": "Margrave",
     "nickname": "",
     "aliases": [],
-    "summary": "Margrave of Baden, 1515–1536 (rama). Margrave of the House of Zähringen-Baden.",
+    "summary": "Margrave of Baden, 1515–1536 (branch). Margrave of the House of Zähringen-Baden.",
     "sections": [],
     "governmentNotes": {
       "Gobierno territorial de una rama; no dominio exclusivo de todo el conjunto.": "Territorial government by one branch; no exclusive rule over the entire grouping."
-    }
+    },
+    "slugName": "Bernardo III de Baden-Baden"
   },
   "CARLOSVIANA": {
     "name": "Charles, Prince of Viana",
@@ -1412,7 +1414,7 @@
     "role": "Duke",
     "nickname": "",
     "aliases": [],
-    "summary": "Duke of Bavaria, 1397–1438 (rama). Duke of the House of Wittelsbach.",
+    "summary": "Duke of Bavaria, 1397–1438 (branch). Duke of the House of Wittelsbach.",
     "sections": []
   },
   "ISABELCARLOTAPAL": {
@@ -1731,7 +1733,7 @@
     "role": "Duke",
     "nickname": "",
     "aliases": [],
-    "summary": "Duke of Bavaria, 1397–1435 (rama). Duke of the House of Wittelsbach.",
+    "summary": "Duke of Bavaria, 1397–1435 (branch). Duke of the House of Wittelsbach.",
     "sections": []
   },
   "KARLWILHELMBADEN": {
@@ -1749,7 +1751,7 @@
     "aliases": [
       "Theodora Kantakouzene, esposa de Alejo IV"
     ],
-    "summary": "Wife of Alejo IV, she was the mother of John IV and David. Her identity must be distinguished from the empress homonymous married to Alejo III. To record both unions as one would produce an impossible genealogy.",
+    "summary": "Wife of Alexios IV, she was the mother of John IV and David. Her identity must be distinguished from the empress homonymous married to Alexios III. To record both unions as one would produce an impossible genealogy.",
     "sections": []
   },
   "ANANEDASERBUL": {
@@ -1788,12 +1790,13 @@
     "sections": []
   },
   "ROMAN1MOLD": {
-    "name": "Roman I of Moldova",
+    "name": "Roman I of Moldavia",
     "role": "Prince / Voivode",
     "nickname": "",
     "aliases": [],
     "summary": "Voivode of Moldavia, 1391–1394. Prince of the House of Bogdana-Mușat.",
-    "sections": []
+    "sections": [],
+    "slugName": "Roman I of Moldova"
   },
   "MARG2FLANDES": {
     "name": "Margaret II of Flanders",
@@ -1953,7 +1956,7 @@
     "role": "Duke",
     "nickname": "the Roman",
     "aliases": [],
-    "summary": "Duke of Bavaria, 1347–1351 (rama). Duke of the House of Wittelsbach.",
+    "summary": "Duke of Bavaria, 1347–1351 (branch). Duke of the House of Wittelsbach.",
     "sections": []
   },
   "MAURICESAXMARSHAL": {
@@ -2039,7 +2042,7 @@
     "role": "Duke",
     "nickname": "",
     "aliases": [],
-    "summary": "Duke of Bavaria, 1312–1334 (rama). Duke of the House of Wittelsbach.",
+    "summary": "Duke of Bavaria, 1312–1334 (branch). Duke of the House of Wittelsbach.",
     "sections": []
   },
   "PREMYSLMOR": {
@@ -2109,7 +2112,7 @@
     "role": "Duke",
     "nickname": "the Belicose",
     "aliases": [],
-    "summary": "Federico II, called the Battler, succeeded Leopold VI in Austria and Styria in 1230. Their clashes with nobles, neighbors and the emperor marked their government. He died fighting the Hungarians by the Leitha in 1246, without offspring, and opened a long dispute over the Babenberg heritage.",
+    "summary": "Frederick II, called the Battler, succeeded Leopold VI in Austria and Styria in 1230. Their clashes with nobles, neighbors and the emperor marked their government. He died fighting the Hungarians by the Leitha in 1246, without offspring, and opened a long dispute over the Babenberg heritage.",
     "sections": [],
     "governmentNotes": {
       "Proscrito en 1236–1239; dominio discutido durante el conflicto imperial.": "Projected at 1236-1239, domain discussed during the imperial conflict.",
@@ -2154,7 +2157,7 @@
     "role": "Consort",
     "nickname": "",
     "aliases": [],
-    "summary": "Wife of Stephen I Kotroman and mother of Esteban II and Vladislav, is part of the Serbian descent invoked by the Kotromanić. His grandchildren Isabel of Bosnia and Tvrtko I allow to follow different connections: the Hungarian monarchy and the construction of Bosnian royalty.",
+    "summary": "Wife of Stephen I Kotroman and mother of Stephen II and Vladislav, is part of the Serbian descent invoked by the Kotromanić. His grandchildren Isabel of Bosnia and Tvrtko I allow to follow different connections: the Hungarian monarchy and the construction of Bosnian royalty.",
     "sections": [],
     "biography": "Wife of Stephen I Kotroman and mother of Stephen II and Vladislav, she formed part of the Serbian descent claimed by the Kotromanić. Her grandchildren Elizabeth of Bosnia and Tvrtko I reveal two distinct connections: the Hungarian monarchy and the construction of Bosnian kingship. No life dates are assigned because the cited reference does not require them."
   },
@@ -2167,23 +2170,25 @@
     "sections": []
   },
   "MICHAEL2ASENBUL": {
-    "name": "Miguel II Asen",
+    "name": "Michael II Asen",
     "role": "Tsar",
     "nickname": "",
     "aliases": [],
     "summary": "Tsar of Bulgaria, 1246–1256. Tsar of the House of Asen.",
-    "sections": []
+    "sections": [],
+    "slugName": "Miguel II Asen"
   },
   "ALEXGOODMOLD": {
-    "name": "Alexander I of Moldova",
+    "name": "Alexander I of Moldavia",
     "role": "Prince / Voivode",
     "nickname": "the Good",
     "aliases": [
       "Alexander el Bueno",
       "Alexandru cel Bun"
     ],
-    "summary": "Prince of Moldova, remembered for a long period of political stability. He strengthened the institutions of the principality and maneuvered between Poland, Hungary and its Black Sea neighbours.",
-    "sections": []
+    "summary": "Prince of Moldavia, remembered for a long period of political stability. He strengthened the institutions of the principality and maneuvered between Poland, Hungary and its Black Sea neighbours.",
+    "sections": [],
+    "slugName": "Alexander I of Moldova"
   },
   "DOMENICOMALNOV": {
     "name": "Domenico Malatesta",
@@ -2622,12 +2627,13 @@
     "sections": []
   },
   "MICHAELAPAFI": {
-    "name": "Miguel I Apafi",
+    "name": "Michael I Apafi",
     "role": "Prince",
     "nickname": "",
     "aliases": [],
     "summary": "He agreed to the principality with Ottoman support and had to adapt to the advance of the Habsburgs. His long government is going through the balance change that culminated in Transylvania's incorporation into the Habsburg monarchy.",
-    "sections": []
+    "sections": [],
+    "slugName": "Miguel I Apafi"
   },
   "ERMENGOL10URGEL": {
     "name": "Ermengol X de Urgel",
@@ -2655,7 +2661,7 @@
     "role": "Pope",
     "nickname": "",
     "aliases": [],
-    "summary": "The pontificate of his father was linked to his passing from his pontifical court to Avignon and his suppression from his order of the Temple under the pressure of Philip IV of France.",
+    "summary": "A French pope whose pontificate is associated with the move of the papal court to Avignon and the suppression of the Order of the Temple under pressure from Philip IV of France.",
     "sections": []
   },
   "PAPA_BENEDICTO12": {
@@ -2713,7 +2719,7 @@
     "role": "Count",
     "nickname": "",
     "aliases": [],
-    "summary": "Count of Nassau, 1607–1623 (rama). Count of the House of Nassau.",
+    "summary": "Count of Nassau, 1607–1623 (branch). Count of the House of Nassau.",
     "sections": []
   },
   "LAHIRE": {

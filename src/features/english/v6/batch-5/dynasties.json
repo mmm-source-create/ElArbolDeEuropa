@@ -1714,7 +1714,7 @@
           "aliases": [],
           "total": 11,
           "editorial": true,
-          "resumen": "The ducal house of Lorena maintained a border heritage between France and the Empire and was projected towards Guisa and the Habsburgés.",
+          "resumen": "The ducal house of Lorraine maintained a border heritage between France and the Empire and was projected towards Guisa and the Habsburgés.",
           "miembros": [
             {
               "id": "ISABLORENA",
@@ -9117,7 +9117,7 @@
       "ramas": [],
       "fuentes": [
         {
-          "titulo": "Treccani: Federico de Aragón, rey de Sicilia",
+          "titulo": "Treccani: Federico of Aragon, rey of Sicily",
           "url": "https://www.treccani.it/enciclopedia/federico-iii-d-aragona-re-di-sicilia_(Dizionario-Biografico)/"
         }
       ],
@@ -10414,7 +10414,7 @@
       "ramas": [],
       "fuentes": [
         "https://www.treccani.it/enciclopedia/la-marck/",
-        "https://en.wikipedia.org/wiki/House_of_La_Marck"
+        "https://d-nb.info/gnd/141872225"
       ],
       "casasOrigen": [],
       "casasDerivadas": [],
@@ -10427,8 +10427,8 @@
         "url": "https://www.treccani.it/enciclopedia/la-marck/"
       },
       {
-        "titulo": "Wikipedia",
-        "url": "https://en.wikipedia.org/wiki/House_of_La_Marck"
+        "titulo": "Deutsche Nationalbibliothek · GND authority record · Mark von der, Familie",
+        "url": "https://d-nb.info/gnd/141872225"
       }
     ]
   },
@@ -11367,8 +11367,8 @@
       ],
       "ramas": [],
       "fuentes": [
-        "https://en.wikipedia.org/wiki/House_of_Poitiers",
-        "https://en.wikipedia.org/wiki/Principality_of_Antioch"
+        "https://www.britannica.com/topic/House-of-Poitiers",
+        "https://www.britannica.com/topic/Antioch-medieval-principality-Turkey"
       ],
       "casasOrigen": [],
       "casasDerivadas": [],
@@ -11377,12 +11377,12 @@
     },
     "sources": [
       {
-        "titulo": "Wikipedia",
-        "url": "https://en.wikipedia.org/wiki/House_of_Poitiers"
+        "titulo": "Encyclopaedia Britannica · Ramnulfids",
+        "url": "https://www.britannica.com/topic/House-of-Poitiers"
       },
       {
-        "titulo": "Wikipedia",
-        "url": "https://en.wikipedia.org/wiki/Principality_of_Antioch"
+        "titulo": "Encyclopaedia Britannica · Principality of Antioch",
+        "url": "https://www.britannica.com/topic/Antioch-medieval-principality-Turkey"
       }
     ]
   },
@@ -12178,7 +12178,7 @@
       "ramas": [],
       "fuentes": [
         "https://www.treccani.it/enciclopedia/baden/",
-        "https://en.wikipedia.org/wiki/Margraviate_of_Baden"
+        "https://www.britannica.com/place/Baden-historical-state-Germany"
       ],
       "casasOrigen": [],
       "casasDerivadas": [],
@@ -12191,8 +12191,8 @@
         "url": "https://www.treccani.it/enciclopedia/baden/"
       },
       {
-        "titulo": "Wikipedia",
-        "url": "https://en.wikipedia.org/wiki/Margraviate_of_Baden"
+        "titulo": "Encyclopaedia Britannica · Baden",
+        "url": "https://www.britannica.com/place/Baden-historical-state-Germany"
       }
     ]
   },
@@ -13297,7 +13297,7 @@
           "aliases": [],
           "total": 11,
           "editorial": true,
-          "resumen": "The ducal house of Lorena maintained a border heritage between France and the Empire and was projected towards Guisa and the Habsburgés.",
+          "resumen": "The ducal house of Lorraine maintained a border heritage between France and the Empire and was projected towards Guisa and the Habsburgés.",
           "miembros": [
             {
               "id": "ISABLORENA",
@@ -13782,7 +13782,7 @@
       "ramas": [],
       "fuentes": [
         "https://www.treccani.it/enciclopedia/della-rovere/",
-        "https://en.wikipedia.org/wiki/Della_Rovere"
+        "https://www.britannica.com/topic/della-Rovere-family"
       ],
       "casasOrigen": [],
       "casasDerivadas": [],
@@ -13795,8 +13795,8 @@
         "url": "https://www.treccani.it/enciclopedia/della-rovere/"
       },
       {
-        "titulo": "Wikipedia",
-        "url": "https://en.wikipedia.org/wiki/Della_Rovere"
+        "titulo": "Encyclopaedia Britannica · House of della Rovere",
+        "url": "https://www.britannica.com/topic/della-Rovere-family"
       }
     ]
   },
@@ -15318,7 +15318,7 @@
           "titulo": "Governor",
           "clase": "Government",
           "condicion": "Effective rule",
-          "nota": "Government recognized on behalf of Emperor Rodolfo II.",
+          "nota": "Government recognized on behalf of Emperor Rudolf II.",
           "persona": {
             "id": "MIHAIBRAVE",
             "nombre": "Michael the Brave",
