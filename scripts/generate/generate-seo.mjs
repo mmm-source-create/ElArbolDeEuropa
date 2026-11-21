@@ -25,7 +25,7 @@ const write = (file, data) => fs.writeFile(path.join(PUBLIC, file), JSON.stringi
 
 // 1. Static page data.
 const home = JSON.parse(await fs.readFile(path.join(ROOT, 'src/generated/home.json'), 'utf8'));
-await write('catalogos/inicio.json', {...home, nombre: 'Europa en 1500, y en cualquier año', slug: 'inicio'});
+await write('catalogos/inicio.json', {...home, nombre: 'Seis siglos de Europa, familia a familia', slug: 'inicio'});
 const names = {personas: 'Personas', dinastias: 'Dinastías', territorios: 'Territorios', historias: 'Historias'};
 for (const [slug, nombre] of Object.entries(names)) {
   const data = await read(`catalogos/${slug}.json`);

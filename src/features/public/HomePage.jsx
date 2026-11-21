@@ -8,6 +8,7 @@ import DynastyArms from '../../components/DynastyArms.jsx';
 import Odometer from '../../ui/Odometer.jsx';
 import {documentaryLife} from '../../domain/time/documentaryDates.js';
 import {pickOfTheDay} from './dailyPick.js';
+import {useState} from 'react';
 import '../../styles/theme.css';
 import './home-discovery.css';
 import './home-atlas.css';
@@ -24,31 +25,34 @@ export function HomePage({ onEnterAtlas, onOpenPanel, prerendered = false }) {
 
 // 6.0.10: the map of Europe opens the home page; below it, a person of the day
 // and carousels of people, dynasties and stories.
-export const HOME_YEARS = [1250, 1350, 1453, 1500, 1556, 1648, 1714, 1789];
-export const HOME_TITLES = {es: 'Europa en 1500, y en cualquier año', en: 'Europe in 1500, and in any year'};
+export {HOME_YEARS} from './homeYears.js';
+import {HOME_YEARS} from './homeYears.js';
+const HOME_YEAR = 1500;
+export const mapImage = (year, dark) => `/home/mapa-${year}-${dark ? 'oscuro' : 'claro'}.webp`;
+export const HOME_TITLES = {es: 'Seis siglos de Europa, familia a familia', en: 'Six centuries of Europe, family by family'};
 
 const HOME_COPY = {
   es: {
     eyebrow: 'Genealogía · política · territorio · 1200–1800',
-    introduction: 'Elige un año y mira quién gobernaba cada territorio, con qué familias estaba emparentado y qué historias lo unían a sus vecinos.',
+    introduction: 'Mira el mapa de cada época, sigue los parentescos entre las casas que gobernaron y lee la vida de quienes las formaron, de 1200 a 1800.',
     explore: 'Explorar el atlas', tutorial: 'Tutorial', searched: 'Más buscados',
     rulers: (year, total) => [`Gobernaban en ${year}`, `${total} soberanos`], allRulers: year => `Ver Europa en ${year}`,
-    travel: 'Viaja en el tiempo', openAtlas: 'Abrir el atlas',
+    travel: 'Viaja en el tiempo', openAtlas: 'Abrir el atlas', mapOf: year => `Mapa de Europa en ${year}`,
     statsLabel: 'Resumen del proyecto', stats: ['personas', 'dinastías', 'territorios', 'historias guiadas'],
     dailyEyebrow: 'Persona del día', readBio: 'Leer su biografía', seeAtlas: 'Verla en el atlas',
-    peopleEyebrow: 'Personas', peopleTitle: 'Una vida lleva a otra', allPeople: 'Todas las personas',
+    peopleEyebrow: 'Personas', peopleTitle: 'Figuras de seis siglos', allPeople: 'Todas las personas',
     dynastiesEyebrow: 'Dinastías', dynastiesTitle: 'Las casas que se repartieron Europa', allDynasties: 'Todas las dinastías', members: 'personas',
     storiesEyebrow: 'Historias', storiesTitle: 'Recorridos guiados', allStories: 'Todas las historias', chapters: 'capítulos', guided: 'Recorrido guiado',
   },
   en: {
     eyebrow: 'Genealogy · politics · territory · 1200–1800',
-    introduction: 'Choose a year and see who ruled each territory, which families they were related to and which stories tied them to their neighbours.',
+    introduction: 'See the map of each era, follow the kinship between the ruling houses and read the lives of the people who made them, from 1200 to 1800.',
     explore: 'Explore the Atlas', tutorial: 'Tutorial', searched: 'Most searched',
     rulers: (year, total) => [`Ruling in ${year}`, `${total} sovereigns`], allRulers: year => `See Europe in ${year}`,
-    travel: 'Travel in time', openAtlas: 'Open the Atlas',
+    travel: 'Travel in time', openAtlas: 'Open the Atlas', mapOf: year => `Map of Europe in ${year}`,
     statsLabel: 'The complete Atlas', stats: ['people', 'dynasties', 'territories', 'guided stories'],
     dailyEyebrow: 'Person of the day', readBio: 'Read the biography', seeAtlas: 'See them in the Atlas',
-    peopleEyebrow: 'People', peopleTitle: 'One life leads to another', allPeople: 'All people',
+    peopleEyebrow: 'People', peopleTitle: 'Figures from six centuries', allPeople: 'All people',
     dynastiesEyebrow: 'Dynasties', dynastiesTitle: 'The houses that divided Europe', allDynasties: 'All dynasties', members: 'people',
     storiesEyebrow: 'Stories', storiesTitle: 'Guided journeys', allStories: 'All stories', chapters: 'chapters', guided: 'Guided journey',
   },
@@ -87,12 +91,14 @@ function DailyPerson({locale}) {
 
 // Both editions share this layout; only the copy and the records differ.
 export function HomeContent({ data = HOME_DATA, locale = "es", title, onEnterAtlas, prerendered = false }) {
+  // 6.0.11: the time line previews each year's map here; the button opens the Atlas.
+  const [year, setYear] = useState(HOME_YEAR);
   const en = locale === "en";
   const copy = HOME_COPY[en ? "en" : "es"];
   const base = en ? '/en' : '/es';
   const stats = data?.stats || HOME_DATA.stats || {};
-  const rulers = en ? data?.rulersOfYear : data?.gobernantesAnio;
-  const year = rulers?.year || rulers?.anio || 1500;
+  const rulers = (en ? data?.rulersByYear?.[year] : data?.gobernantesPorAnio?.[year]) || (year === HOME_YEAR ? (en ? data?.rulersOfYear : data?.gobernantesAnio) : null);
+  const warm = y => { if (typeof Image === 'function') new Image().src = mapImage(y, document.documentElement.dataset.eadeTheme === 'dark'); };
   const searched = (en ? data?.mostSearched : data?.masBuscados) || [];
   const people = (en ? data?.people : data?.personasDestacadas) || [];
   const dynasties = (en ? data?.dynasties : data?.dinastiasCarrusel) || [];
@@ -114,14 +120,14 @@ export function HomeContent({ data = HOME_DATA, locale = "es", title, onEnterAtl
     <div className="home-feature-copy"><span>{dynasty.total} {copy.members}</span><h3>{dynasty.nombre}</h3><p>{en ? dynasty.description : dynasty.resumen}</p></div>
   </a>;
   const storyCard = (story, index) => <a className={`home-feature-card home-feature-story story-tone-${index % 3}`} href={story.path || `/es/historia/${encodeURIComponent(story.slug)}`}>
-    <div className="home-feature-art"><Portrait id={STORY_PORTRAITS[story.id]} className="home-story-portrait"/><span className="home-story-chapters"><BookOpen size={14}/>{story.pasos} {copy.chapters}</span><span className="home-feature-arrow"><ArrowRight size={19}/></span></div>
+    <div className="home-feature-art"><Portrait id={story.retrato || STORY_PORTRAITS[story.id]} className="home-story-portrait"/><span className="home-story-chapters"><BookOpen size={14}/>{story.pasos} {copy.chapters}</span><span className="home-feature-arrow"><ArrowRight size={19}/></span></div>
     <div className="home-feature-copy"><span>{copy.guided}</span><h3>{en ? story.nombre : story.titulo}</h3><p>{en ? story.description : story.subtitulo || story.descripcion}</p></div>
   </a>;
 
   return (
       <main className="public-main public-home home-atlas">
         <section className="home-atlas-hero">
-          <div className="home-atlas-map" role="img" aria-label={en ? `Map of Europe in ${year}` : `Mapa de Europa en ${year}`}/>
+          <div className="home-atlas-map" role="img" aria-label={copy.mapOf(year)} style={{'--home-map-light': `url(${mapImage(year, false)})`, '--home-map-dark': `url(${mapImage(year, true)})`}}><span className="home-atlas-map-year" aria-hidden="true">{year}</span></div>
           <div className="home-atlas-copy">
             <div className="home-eyebrow">{copy.eyebrow}</div>
             <h1>{title || HOME_TITLES[en ? 'en' : 'es']}</h1>
@@ -141,8 +147,8 @@ export function HomeContent({ data = HOME_DATA, locale = "es", title, onEnterAtl
           </aside> : null}
           <nav className="home-atlas-years" aria-label={copy.travel}>
             <span className="home-eyebrow">{copy.travel}</span>
-            <div>{HOME_YEARS.map(y => <a key={y} href={atlasYear(y)} aria-current={y === year ? 'true' : undefined}>{y}</a>)}</div>
-            <a className="home-text-link" href={`${base}?atlas=1`} onClick={enterAtlas}>{copy.openAtlas} <ArrowRight size={14}/></a>
+            <div>{HOME_YEARS.map(y => <button key={y} type="button" aria-pressed={y === year} aria-label={copy.mapOf(y)} onClick={() => setYear(y)} onPointerEnter={() => warm(y)} onFocus={() => warm(y)}>{y}</button>)}</div>
+            <a className="home-atlas-open" href={atlasYear(year)}>{copy.openAtlas} <ArrowRight size={15}/></a>
           </nav>
         </section>
 

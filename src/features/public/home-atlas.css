@@ -1,12 +1,20 @@
 /* 6.0.10 · Home page: the map of Europe opens the page. */
 .public-home.home-atlas{max-width:1240px}
 .home-atlas-hero{position:relative;display:grid;grid-template-columns:minmax(0,560px) 1fr;grid-template-rows:1fr auto;gap:28px 32px;min-height:680px;padding:56px 0 30px;isolation:isolate}
-.home-atlas-map{position:absolute;z-index:-1;top:0;bottom:0;left:22%;right:calc(50% - 50vw);background:url(/home/mapa-1500-claro.webp) 38% 40%/cover no-repeat;opacity:.9;-webkit-mask-image:linear-gradient(90deg,transparent 0,#000 30%,#000 82%,transparent 100%),linear-gradient(180deg,#000 72%,transparent 100%);mask-image:linear-gradient(90deg,transparent 0,#000 30%,#000 82%,transparent 100%),linear-gradient(180deg,#000 72%,transparent 100%);-webkit-mask-composite:source-in;mask-composite:intersect}
-:root[data-eade-theme="dark"] .home-atlas-map{background-image:url(/home/mapa-1500-oscuro.webp);opacity:.82}
-.home-atlas-copy{grid-column:1;align-self:start;padding:22px 26px 26px 0;background:radial-gradient(ellipse 85% 75% at 35% 50%,var(--eade-paper) 55%,transparent 100%)}
+.home-atlas-map{position:absolute;z-index:-1;top:0;bottom:0;left:calc(50% - 50vw);right:calc(50% - 50vw);overflow:hidden;background:var(--home-map-light,url(/home/mapa-1500-claro.webp)) calc(50% + 22vw) 30%/auto 118% no-repeat;transition:background-image .35s ease}
+/* The gradient lies on the map itself: paper on the left, under the copy, and at the bottom. */
+.home-atlas-map::before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,var(--eade-paper) 0%,var(--eade-paper) calc(50% - 300px),color-mix(in srgb,var(--eade-paper) 80%,transparent) calc(50% - 120px),color-mix(in srgb,var(--eade-paper) 20%,transparent) calc(50% + 60px),transparent calc(50% + 200px)),linear-gradient(180deg,transparent 70%,var(--eade-paper) 100%)}
+.home-atlas-map-year{position:absolute;right:calc(50% - 600px);bottom:110px;color:color-mix(in srgb,var(--eade-ink) 22%,transparent);font:500 clamp(64px,8vw,112px)/1 var(--eade-serif);letter-spacing:-.04em;pointer-events:none}
+:root[data-eade-theme="dark"] .home-atlas-map{background-image:var(--home-map-dark,url(/home/mapa-1500-oscuro.webp))}
+.home-atlas-copy{grid-column:1;align-self:start;padding:18px 0 0}
 .home-atlas-copy h1{margin:14px 0 16px;color:var(--eade-ink);font:500 clamp(40px,5vw,64px)/1.03 var(--eade-serif);letter-spacing:-.03em}
 .home-atlas-copy>p{max-width:500px;margin:0 0 22px;color:var(--eade-muted);font-size:var(--fs-lg, 15px);line-height:1.65}
 .home-atlas-copy .home-search{margin:0;max-width:540px}
+/* A defined field: card ground, border and shadow instead of an underline. */
+.home-atlas-copy .home-search-field{padding:13px 16px;border:1px solid var(--eade-border-strong);border-radius:14px;background:var(--eade-paper-bright);box-shadow:0 10px 30px color-mix(in srgb,var(--eade-ink) 14%,transparent);color:var(--eade-muted)}
+.home-atlas-copy .home-search-field:focus-within{border-color:var(--eade-wine);box-shadow:0 0 0 3px color-mix(in srgb,var(--eade-wine) 22%,transparent),0 10px 30px color-mix(in srgb,var(--eade-ink) 14%,transparent)}
+.home-atlas-copy .home-search-field input{font-size:16px;color:var(--eade-ink)}
+.home-atlas-copy .home-search form>label{margin-bottom:8px}
 .home-atlas-searched{margin:10px 0 0;font-size:var(--fs-sm, 12px);color:var(--eade-muted);line-height:1.9}
 .home-atlas-searched span{margin-right:4px}
 .home-atlas-searched a{margin-right:12px;color:var(--eade-wine);text-decoration:underline;text-decoration-style:dotted;text-underline-offset:3px}
@@ -24,10 +32,12 @@
 .home-atlas-years{grid-column:1/-1;display:flex;align-items:center;gap:20px;padding:14px 20px;border:1px solid var(--eade-border);border-radius:var(--r-lg, 16px);background:color-mix(in srgb,var(--eade-paper-bright) 92%,transparent);backdrop-filter:blur(6px)}
 .home-atlas-years>div{position:relative;flex:1;display:flex;justify-content:space-between}
 .home-atlas-years>div::before{content:"";position:absolute;left:0;right:0;top:50%;height:1px;background:var(--eade-border-strong)}
-.home-atlas-years>div a{position:relative;padding:6px 12px;border:1px solid var(--eade-border-strong);border-radius:999px;background:var(--eade-paper-bright);color:var(--eade-ink);font:600 13px/1 var(--eade-sans);text-decoration:none}
-.home-atlas-years>div a:hover{border-color:var(--eade-wine);color:var(--eade-wine)}
-.home-atlas-years>div a[aria-current]{background:var(--eade-wine-fill);border-color:var(--eade-wine-fill);color:#fff}
+.home-atlas-years>div button{font:600 13px/1 var(--eade-sans);cursor:pointer;position:relative;padding:6px 12px;border:1px solid var(--eade-border-strong);border-radius:999px;background:var(--eade-paper-bright);color:var(--eade-ink);font:600 13px/1 var(--eade-sans);text-decoration:none}
+.home-atlas-years>div button:hover{border-color:var(--eade-wine);color:var(--eade-wine)}
+.home-atlas-years>div button[aria-pressed="true"]{background:var(--eade-wine-fill);border-color:var(--eade-wine-fill);color:#fff}
 .public-home .home-atlas-stats{max-width:none;margin:8px 0 0;border-top:1px solid var(--eade-border);border-bottom:1px solid var(--eade-border)}
+.home-atlas-open{display:inline-flex;align-items:center;gap:8px;min-height:40px;padding:0 18px;border-radius:999px;background:var(--eade-wine-fill);color:#fff!important;font:650 13px/1 var(--eade-sans);text-decoration:none!important;white-space:nowrap}
+.home-atlas-open:hover{background:var(--eade-wine-fill-hover)}
 /* Person of the day */
 .home-daily{display:grid;grid-template-columns:340px 1fr;gap:40px;align-items:center;padding:48px 0 30px!important;border-top:0!important}
 .home-daily-art{display:block;height:420px;border-radius:var(--r-md, 10px);overflow:hidden;background:var(--home-art)}
@@ -47,7 +57,7 @@
 .home-feature-dynasty .home-feature-copy p{display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
 @media (max-width:980px){
   .home-atlas-hero{grid-template-columns:1fr;min-height:0;padding-top:0}
-  .home-atlas-map{position:relative;z-index:0;grid-row:1;left:auto;right:auto;margin:0;border-radius:var(--r-md, 10px);height:220px;-webkit-mask-image:linear-gradient(180deg,#000 70%,transparent);mask-image:linear-gradient(180deg,#000 70%,transparent)}
+  .home-atlas-map{position:relative;z-index:0;grid-row:1;left:auto;right:auto;margin:0;border-radius:var(--r-md, 10px);height:240px;background-size:cover;background-position:58% 30%;-webkit-mask-image:linear-gradient(180deg,#000 70%,transparent);mask-image:linear-gradient(180deg,#000 70%,transparent)}
   .home-atlas-copy{grid-column:1;padding:0;background:none}
   .home-atlas-rulers{grid-column:1;justify-self:stretch;width:auto}
   .home-atlas-years{flex-wrap:wrap}
@@ -56,3 +66,4 @@
   .home-daily{grid-template-columns:1fr;gap:22px}
   .home-daily-art{height:320px}
 }
+@media (max-width:980px){.home-atlas-map::before{background:linear-gradient(180deg,transparent 65%,var(--eade-paper) 100%)}.home-atlas-map-year{right:14px;bottom:14px;font-size:44px}}

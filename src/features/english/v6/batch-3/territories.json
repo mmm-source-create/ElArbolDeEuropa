@@ -375,7 +375,7 @@
                   "nombre": "Adelaide of Burgundy",
                   "slug": "adelaida-de-borgona",
                   "dinastia": "Burgundy",
-                  "resumen": "Consort of the Burgundy dynasty. Their life was connected with Brabant."
+                  "resumen": "Consort of the Burgundy dynasty. Associated with Brabant."
                 },
                 {
                   "id": "JUAN1BR",
@@ -631,7 +631,7 @@
                   "nombre": "Margaret of Brabant",
                   "slug": "margarita-de-brabante-margabrab1323",
                   "dinastia": "Brabant",
-                  "resumen": "Brabant Dynasty Consort. His trajectory is linked to Flanders, Brabant."
+                  "resumen": "Brabant Dynasty Consort. Associated with Flanders, Brabant."
                 },
                 {
                   "id": "MARGFLAN",
@@ -2347,7 +2347,7 @@
                   "nombre": "Margaret of Bavaria-Straubing",
                   "slug": "margarita-de-baviera-straubing",
                   "dinastia": "Wittelsbach",
-                  "resumen": "Wittelsbach Dynasty Consort. His trajectory is linked to Burgundy, Bavaria."
+                  "resumen": "Wittelsbach Dynasty Consort. Associated with Burgundy, Bavaria."
                 },
                 {
                   "id": "FEL3BORG",
@@ -2439,7 +2439,7 @@
                   "nombre": "Margaret of Bavaria-Straubing",
                   "slug": "margarita-de-baviera-straubing",
                   "dinastia": "Wittelsbach",
-                  "resumen": "Wittelsbach Dynasty Consort. His trajectory is linked to Burgundy, Bavaria."
+                  "resumen": "Wittelsbach Dynasty Consort. Associated with Burgundy, Bavaria."
                 },
                 {
                   "id": "FEL3BORG",
@@ -2531,7 +2531,7 @@
                   "nombre": "Margaret of Bavaria-Straubing",
                   "slug": "margarita-de-baviera-straubing",
                   "dinastia": "Wittelsbach",
-                  "resumen": "Wittelsbach Dynasty Consort. His trajectory is linked to Burgundy, Bavaria."
+                  "resumen": "Wittelsbach Dynasty Consort. Associated with Burgundy, Bavaria."
                 },
                 {
                   "id": "FEL3BORG",
@@ -3861,7 +3861,7 @@
                   "nombre": "Margaret of Brabant",
                   "slug": "margarita-de-brabante-margabrab1323",
                   "dinastia": "Brabant",
-                  "resumen": "Brabant Dynasty Consort. His trajectory is linked to Flanders, Brabant."
+                  "resumen": "Brabant Dynasty Consort. Associated with Flanders, Brabant."
                 },
                 "ascendencia": [
                   {
@@ -3876,7 +3876,7 @@
                     "nombre": "Margaret of Brabant",
                     "slug": "margarita-de-brabante-margabrab1323",
                     "dinastia": "Brabant",
-                    "resumen": "Brabant Dynasty Consort. His trajectory is linked to Flanders, Brabant."
+                    "resumen": "Brabant Dynasty Consort. Associated with Flanders, Brabant."
                   }
                 ],
                 "fundamento": "The daughter of John III and wife of Louis of Male, who held the claims of this line.",
@@ -3990,7 +3990,7 @@
                     "nombre": "Margaret of Bavaria-Straubing",
                     "slug": "margarita-de-baviera-straubing",
                     "dinastia": "Wittelsbach",
-                    "resumen": "Wittelsbach Dynasty Consort. His trajectory is linked to Burgundy, Bavaria."
+                    "resumen": "Wittelsbach Dynasty Consort. Associated with Burgundy, Bavaria."
                   },
                   {
                     "id": "FEL3BORG",
@@ -7481,7 +7481,7 @@
           "nombre": "Margaret of Flanders",
           "slug": "margarita-de-flandes",
           "dinastia": "Dampierre",
-          "resumen": "Consort of the Dampierre Dynasty. His trajectory is linked to Brabant."
+          "resumen": "Consort of the Dampierre Dynasty. Associated with Brabant."
         },
         {
           "id": "JUAN1BR",
@@ -7509,7 +7509,7 @@
           "nombre": "Adelaide of Burgundy",
           "slug": "adelaida-de-borgona",
           "dinastia": "Burgundy",
-          "resumen": "Consort of the Burgundy dynasty. Their life was connected with Brabant."
+          "resumen": "Consort of the Burgundy dynasty. Associated with Brabant."
         },
         {
           "id": "ENRIQ3BR",
@@ -7530,7 +7530,7 @@
           "nombre": "Maria of Swabia",
           "slug": "maria-de-suabia",
           "dinastia": "Hohenstaufen",
-          "resumen": "Consort of the Hohenstaufen dynasty. Their life was connected with Brabant."
+          "resumen": "Consort of the Hohenstaufen dynasty. Associated with Brabant."
         },
         {
           "id": "MARIABORG",
@@ -7544,7 +7544,7 @@
           "nombre": "Maria of Hainaut",
           "slug": "maria-de-henao",
           "dinastia": "Avesnes",
-          "resumen": "Consort of the Avesnes dynasty. His trajectory is linked to Bourbon, Hainaut."
+          "resumen": "Consort of the Avesnes dynasty. Associated with Bourbon, Hainaut."
         },
         {
           "id": "FEL2BORG",
@@ -7600,7 +7600,7 @@
           "nombre": "Johanna Maria van der Gheynst",
           "slug": "juana-maria-van-der-gheynst",
           "dinastia": "No house identified",
-          "resumen": "Noble. His trajectory is linked to Flanders."
+          "resumen": "Noble. Associated with Flanders."
         },
         {
           "id": "FEL2ESP",
@@ -7628,14 +7628,14 @@
           "nombre": "Margaret of Austria",
           "slug": "margarita-de-austria-margaust",
           "dinastia": "Habsburg",
-          "resumen": "Governor of the Habsburg Dynasty. Their life was connected with the Low Countries."
+          "resumen": "Governor of the Habsburg Dynasty. Associated with the Low Countries."
         },
         {
           "id": "MARIAAUST",
           "nombre": "Mary of Hungary",
           "slug": "maria-de-austria-mariaaust",
           "dinastia": "Habsburg",
-          "resumen": "Habsburg Dynasty Consort. Their life was connected with Hungary, the Low Countries."
+          "resumen": "Habsburg Dynasty Consort. Associated with Hungary, the Low Countries."
         },
         {
           "id": "ALB7AUST",
@@ -7684,7 +7684,7 @@
           "nombre": "Isabella of Hainaut",
           "slug": "isabel-de-henao",
           "dinastia": "House of Flanders",
-          "resumen": "Consort of the House of Flanders dynasty. His career is linked to France, Hainaut."
+          "resumen": "Consort of the House of Flanders dynasty. Associated with France, Hainaut."
         },
         {
           "id": "FEL3ESP",
@@ -7705,7 +7705,7 @@
           "nombre": "Philippa of Hainaut",
           "slug": "felipa-de-henao",
           "dinastia": "Avesnes",
-          "resumen": "Consort of the Avesnes dynasty. Their life was connected with England and Hainaut."
+          "resumen": "Consort of the Avesnes dynasty. Associated with England and Hainaut."
         },
         {
           "id": "MARGFRAFLA",
@@ -7733,14 +7733,14 @@
           "nombre": "Margaret of Brabant",
           "slug": "margarita-de-brabante-margabrab1323",
           "dinastia": "Brabant",
-          "resumen": "Brabant Dynasty Consort. His trajectory is linked to Flanders, Brabant."
+          "resumen": "Brabant Dynasty Consort. Associated with Flanders, Brabant."
         },
         {
           "id": "BEATRIZBRABRASPE",
           "nombre": "Beatrice of Brabant",
           "slug": "beatriz-de-brabante",
           "dinastia": "Brabant",
-          "resumen": "Brabant Dynasty Consort. His career is linked to Germany, Brabant."
+          "resumen": "Brabant Dynasty Consort. Associated with Germany, Brabant."
         },
         {
           "id": "ENRIQ1BR",
@@ -7754,14 +7754,14 @@
           "nombre": "Matilda de Boulogne",
           "slug": "matilde-de-boulogne",
           "dinastia": "Boulogne",
-          "resumen": "Boulogne Dynasty Consort. His trajectory is linked to Brabant, Boulogne."
+          "resumen": "Boulogne Dynasty Consort. Associated with Brabant, Boulogne."
         },
         {
           "id": "MATILDEBRABHOLL",
           "nombre": "Matilda of Brabant",
           "slug": "matilde-de-brabante-matildebrabholl",
           "dinastia": "Brabant",
-          "resumen": "Brabant Dynasty Consort. His trajectory is linked to Holland, Brabant."
+          "resumen": "Brabant Dynasty Consort. Associated with Holland, Brabant."
         },
         {
           "id": "FLORIS4HOL",
@@ -7824,7 +7824,7 @@
           "nombre": "Margaret of France",
           "slug": "margarita-de-francia-margfran",
           "dinastia": "Capet",
-          "resumen": "The Consort of the Capeto Dynasty. His career is linked to Brabant, France."
+          "resumen": "The Consort of the Capeto Dynasty. Associated with Brabant, France."
         },
         {
           "id": "JUANABR",
@@ -7838,7 +7838,7 @@
           "nombre": "Joan of Valois",
           "slug": "juana-de-valois-juanavalois",
           "dinastia": "Valois",
-          "resumen": "Consort of the Valois dynasty. His trajectory is linked to Hainaut, Holland."
+          "resumen": "Consort of the Valois dynasty. Associated with Hainaut, Holland."
         },
         {
           "id": "CARLOS6HRE",
@@ -7901,14 +7901,14 @@
           "nombre": "Louise Juliana of Orange-Nassau",
           "slug": "luisa-juliana-de-orange-nassau",
           "dinastia": "Nassau",
-          "resumen": "Nassau Dynasty Consort. Their life was connected with the Low Countries, Palatinate."
+          "resumen": "Nassau Dynasty Consort. Associated with the Low Countries, Palatinate."
         },
         {
           "id": "LOUISEHENRIETTEORANGE",
           "nombre": "Louise Henriette of Orange-Nassau",
           "slug": "luisa-enriqueta-de-orange-nassau",
           "dinastia": "Nassau",
-          "resumen": "Nassau Dynasty Consort. Their life was connected with the Low Countries, Brandenburg."
+          "resumen": "Nassau Dynasty Consort. Associated with the Low Countries, Brandenburg."
         },
         {
           "id": "ANNEGBORANGE",
@@ -7929,7 +7929,7 @@
           "nombre": "Joanna de Polanen",
           "slug": "juana-de-polanen",
           "dinastia": "Polanen",
-          "resumen": "Heiress of Breda from the Polanen dynasty. Her life was connected with the Low Countries."
+          "resumen": "Heiress of Breda from the Polanen dynasty. Associated with the Low Countries."
         },
         {
           "id": "JOHN4NASSAU",
@@ -7943,28 +7943,28 @@
           "nombre": "Anne of Egmont",
           "slug": "ana-de-egmont",
           "dinastia": "Egmond",
-          "resumen": "Consort of the Egmond dynasty. Their life was connected with Low Countries."
+          "resumen": "Consort of the Egmond dynasty. Associated with Low Countries."
         },
         {
           "id": "ANNASAXORANGE",
           "nombre": "Anne de Saxony",
           "slug": "ana-de-sajonia-annasaxorange",
           "dinastia": "Wettin",
-          "resumen": "Wettin Dynasty Consort. Their life was connected with Saxony, the Low Countries."
+          "resumen": "Wettin Dynasty Consort. Associated with Saxony, the Low Countries."
         },
         {
           "id": "CHARLOTTEBOURBONORANGE",
           "nombre": "Charlotte of Bourbon-Montpensier",
           "slug": "carlota-de-borbon-montpensier",
           "dinastia": "Bourbon",
-          "resumen": "The Bourbon Dynasty Consort. Their life was connected with France, the Low Countries."
+          "resumen": "The Bourbon Dynasty Consort. Associated with France, the Low Countries."
         },
         {
           "id": "LOUISECOLIGNY",
           "nombre": "Louise of Coligny",
           "slug": "luisa-de-coligny",
           "dinastia": "Coligny",
-          "resumen": "Coligny Dynasty Consort. Their life was connected with France, the Low Countries."
+          "resumen": "Coligny Dynasty Consort. Associated with France, the Low Countries."
         },
         {
           "id": "WILLIAMSILENT",
@@ -7978,7 +7978,7 @@
           "nombre": "Philip William of Orange",
           "slug": "felipe-guillermo-de-orange",
           "dinastia": "Nassau",
-          "resumen": "Prince of Orange of the Nassau Dynasty. Their life was connected with the Low Countries."
+          "resumen": "Prince of Orange of the Nassau Dynasty. Associated with the Low Countries."
         },
         {
           "id": "MAURICEORANGE",
@@ -7999,7 +7999,7 @@
           "nombre": "Amalia de Solms.-Braunfels",
           "slug": "amalia-de-solms-braunfels",
           "dinastia": "Solms",
-          "resumen": "Solms Dynasty Consort. Their life was connected with the Low Countries."
+          "resumen": "Solms Dynasty Consort. Associated with the Low Countries."
         },
         {
           "id": "WILLIAM2ORANGE",
@@ -8013,7 +8013,7 @@
           "nombre": "Mary, Princess Royal and Princess of Orange",
           "slug": "maria-estuardo-princesa-de-orange",
           "dinastia": "Studo",
-          "resumen": "Orange Princess of the Estuardo Dynasty. Their life was connected with England, the Low Countries."
+          "resumen": "Orange Princess of the Estuardo Dynasty. Associated with England, the Low Countries."
         },
         {
           "id": "MARY2ING",
@@ -8048,7 +8048,7 @@
           "nombre": "Albertine Agnes of Orange-Nassau",
           "slug": "albertina-ines-de-orange-nassau",
           "dinastia": "Nassau",
-          "resumen": "Nassau Dynasty Consort. Their life was connected with the Low Countries."
+          "resumen": "Nassau Dynasty Consort. Associated with the Low Countries."
         },
         {
           "id": "HENRYCASIMIR2",
@@ -8062,7 +8062,7 @@
           "nombre": "Henriette Amalie of Anhalt-Dessau",
           "slug": "enriqueta-amalia-de-anhalt-dessau",
           "dinastia": "Ascania",
-          "resumen": "Consort of the Ascania dynasty. Their life was connected with the Low Countries."
+          "resumen": "Consort of the Ascania dynasty. Associated with the Low Countries."
         },
         {
           "id": "JOHNWILLIAMFRISO",
@@ -8076,7 +8076,7 @@
           "nombre": "Marie Louise of Hesse-Kassel",
           "slug": "maria-luisa-de-hesse-kassel",
           "dinastia": "Hesse",
-          "resumen": "Consort of the Hesse Dynasty. Their life was connected with Hesse, the Low Countries."
+          "resumen": "Consort of the Hesse Dynasty. Associated with Hesse, the Low Countries."
         },
         {
           "id": "WILLIAM4ORANGE",
@@ -8090,7 +8090,7 @@
           "nombre": "Wilhelmina of Prussia, Princess of Orange",
           "slug": "guillermina-de-prusia",
           "dinastia": "Hohenzollern",
-          "resumen": "Princess of Orange of the Hohenzollern dynasty. Their life was connected with Prussia and Low Countries."
+          "resumen": "Princess of Orange of the Hohenzollern dynasty. Associated with Prussia and Low Countries."
         },
         {
           "id": "WILLIAM5ORANGE",
@@ -8118,28 +8118,28 @@
           "nombre": "Matilda de Béthune",
           "slug": "matilde-de-bethune",
           "dinastia": "Béthune",
-          "resumen": "Consort of the Béthune Dynasty. His trajectory is linked to Flanders."
+          "resumen": "Consort of the Béthune Dynasty. Associated with Flanders."
         },
         {
           "id": "MARIALOONHEINSBERG",
           "nombre": "Mary de Loon- Heinsberg",
           "slug": "maria-de-loon-heinsberg",
           "dinastia": "Loon- Heinsberg",
-          "resumen": "Loon- Heinsberg Dynasty Consort. Their life was connected with Nassau, the Low Countries."
+          "resumen": "Loon- Heinsberg Dynasty Consort. Associated with Nassau, the Low Countries."
         },
         {
           "id": "MARIABRABANTSAVOY",
           "nombre": "Mary de Brabant",
           "slug": "maria-de-brabante-mariabrabantsavoy",
           "dinastia": "Brabant",
-          "resumen": "Brabant Dynasty Consort. His trajectory is linked to Brabant, Savoy."
+          "resumen": "Brabant Dynasty Consort. Associated with Brabant, Savoy."
         },
         {
           "id": "MARYGUELDERS",
           "nombre": "Mary of Guelders",
           "slug": "maria-de-gueldres",
           "dinastia": "Egmond",
-          "resumen": "Consort of the Egmond Dynasty. Their life was connected with Guelders, Scotland."
+          "resumen": "Consort of the Egmond Dynasty. Associated with Guelders, Scotland."
         },
         {
           "id": "JEANNEFLANDERSBRET",
@@ -8619,7 +8619,7 @@
             "SELIM2OSM",
             "CERVANTES"
           ],
-          "descripcion": "The fleet of the Holy League, led by Don Juan of Austria and composed mainly of forces of the Hispanic Monarchy, Venice and the Pontifical States, defeats the Ottoman army of Ali Bajá after hours of combat of galera against galera. The Ottoman center is falling apart, Uluç Ali is able to save part of its wing and thousands of combatants are killed, injured or held captive. The victory does not drive the Ottoman Empire out of the Mediterranean, but it destroys much of its combat fleet and becomes a huge political and symbolic victory of the coalition."
+          "descripcion": "The fleet of the Holy League, led by Don Juan of Austria and composed mainly of forces of the Hispanic Monarchy, Venice and the Pontifical States, defeats the Ottoman army of Ali Pasha after hours of combat of galera against galera. The Ottoman center is falling apart, Uluç Ali is able to save part of its wing and thousands of combatants are killed, injured or held captive. The victory does not drive the Ottoman Empire out of the Mediterranean, but it destroys much of its combat fleet and becomes a huge political and symbolic victory of the coalition."
         },
         {
           "id": "ARMADA_1588",
@@ -8836,7 +8836,7 @@
             "ALIPASHALEPANTO",
             "ULUCALI"
           ],
-          "descripcion": "The League has Barbarigo on the left wing, Don Juan and Colonna in the center, Gianandrea Doria on the right and Álvaro de Bazán in front of the reserve. In front of them, Ali Bajá runs the Ottoman center and Uluç Ali sends the wing facing Doria."
+          "descripcion": "The League has Barbarigo on the left wing, Don Juan and Colonna in the center, Gianandrea Doria on the right and Álvaro de Bazán in front of the reserve. In front of them, Ali Pasha runs the Ottoman center and Uluç Ali sends the wing facing Doria."
         },
         {
           "id": "CENTRO_LEPANTO_1571",
@@ -8850,7 +8850,7 @@
             "MARCANTONIO2COL",
             "SEBASTIANOVENIER"
           ],
-          "descripcion": "In the center, the Royal Galera of Don Juan and the Sultana of Ali Bajá are stuck in a struggle of approaches, archauces and successive reinforcements. The fall of Ali Bajá and the take of his ship disorganize the Ottoman center and make the central combat the symbolic core of victory."
+          "descripcion": "In the center, the Royal Galera of Don Juan and the Sultana of Ali Pasha are stuck in a struggle of approaches, archauces and successive reinforcements. The fall of Ali Pasha and the take of his ship disorganize the Ottoman center and make the central combat the symbolic core of victory."
         },
         {
           "id": "CERVANTES_LEPANTO_1571",
@@ -9985,7 +9985,7 @@
                   "nombre": "Margaret of Brabant",
                   "slug": "margarita-de-brabante-margabrab1323",
                   "dinastia": "Brabant",
-                  "resumen": "Brabant Dynasty Consort. His trajectory is linked to Flanders, Brabant."
+                  "resumen": "Brabant Dynasty Consort. Associated with Flanders, Brabant."
                 },
                 "ascendencia": [
                   {
@@ -10000,7 +10000,7 @@
                     "nombre": "Margaret of Brabant",
                     "slug": "margarita-de-brabante-margabrab1323",
                     "dinastia": "Brabant",
-                    "resumen": "Brabant Dynasty Consort. His trajectory is linked to Flanders, Brabant."
+                    "resumen": "Brabant Dynasty Consort. Associated with Flanders, Brabant."
                   }
                 ],
                 "fundamento": "The daughter of John III and wife of Louis of Male, who held the claims of this line.",
@@ -10579,7 +10579,7 @@
           "nombre": "Johanna Maria van der Gheynst",
           "slug": "juana-maria-van-der-gheynst",
           "dinastia": "No house identified",
-          "resumen": "Noble. His trajectory is linked to Flanders."
+          "resumen": "Noble. Associated with Flanders."
         },
         {
           "id": "FEL2ESP",
@@ -10642,7 +10642,7 @@
           "nombre": "Margaret of Brabant",
           "slug": "margarita-de-brabante-margabrab1323",
           "dinastia": "Brabant",
-          "resumen": "Brabant Dynasty Consort. His trajectory is linked to Flanders, Brabant."
+          "resumen": "Brabant Dynasty Consort. Associated with Flanders, Brabant."
         },
         {
           "id": "CARLOS2ESP",
@@ -10712,7 +10712,7 @@
           "nombre": "Matilda de Béthune",
           "slug": "matilde-de-bethune",
           "dinastia": "Béthune",
-          "resumen": "Consort of the Béthune Dynasty. His trajectory is linked to Flanders."
+          "resumen": "Consort of the Béthune Dynasty. Associated with Flanders."
         },
         {
           "id": "JEANNEFLANDERSBRET",
@@ -11779,7 +11779,7 @@
                   "nombre": "Margaret of Bavaria-Straubing",
                   "slug": "margarita-de-baviera-straubing",
                   "dinastia": "Wittelsbach",
-                  "resumen": "Wittelsbach Dynasty Consort. His trajectory is linked to Burgundy, Bavaria."
+                  "resumen": "Wittelsbach Dynasty Consort. Associated with Burgundy, Bavaria."
                 },
                 {
                   "id": "FEL3BORG",
@@ -12002,7 +12002,7 @@
                     "nombre": "Margaret of Bavaria-Straubing",
                     "slug": "margarita-de-baviera-straubing",
                     "dinastia": "Wittelsbach",
-                    "resumen": "Wittelsbach Dynasty Consort. His trajectory is linked to Burgundy, Bavaria."
+                    "resumen": "Wittelsbach Dynasty Consort. Associated with Burgundy, Bavaria."
                   },
                   {
                     "id": "FEL3BORG",
@@ -12531,7 +12531,7 @@
           "nombre": "Matilda of Brabant",
           "slug": "matilde-de-brabante-matildebrabholl",
           "dinastia": "Brabant",
-          "resumen": "Brabant Dynasty Consort. His trajectory is linked to Holland, Brabant."
+          "resumen": "Brabant Dynasty Consort. Associated with Holland, Brabant."
         },
         {
           "id": "FLORIS4HOL",
@@ -12580,7 +12580,7 @@
           "nombre": "Joan of Valois",
           "slug": "juana-de-valois-juanavalois",
           "dinastia": "Valois",
-          "resumen": "Consort of the Valois dynasty. His trajectory is linked to Hainaut, Holland."
+          "resumen": "Consort of the Valois dynasty. Associated with Hainaut, Holland."
         },
         {
           "id": "ADELAHOLAVES",
@@ -13758,35 +13758,35 @@
           "nombre": "Maria Laskarina",
           "slug": "maria-lascaris",
           "dinastia": "Lásquis",
-          "resumen": "Lásquis Dynasty Consort. Their life was connected with Hungary."
+          "resumen": "Lásquis Dynasty Consort. Associated with Hungary."
         },
         {
           "id": "ESTEBP",
           "nombre": "Stephen of Hungary",
           "slug": "esteban-de-hungria",
           "dinastia": "Arpád",
-          "resumen": "Noble of the Arpád dynasty. Their life was connected with Hungary."
+          "resumen": "Noble of the Arpád dynasty. Associated with Hungary."
         },
         {
           "id": "TOMOR",
           "nombre": "Tomasine Morosini",
           "slug": "tomasina-morosini",
           "dinastia": "Morosini",
-          "resumen": "Noble of the Morosini dynasty. Their life was connected with Hungary."
+          "resumen": "Noble of the Morosini dynasty. Associated with Hungary."
         },
         {
           "id": "ROSTM",
           "nombre": "Rostislav Mikhailovich",
           "slug": "rostislav-mijailovich",
           "dinastia": "Rurikida",
-          "resumen": "Noble of the Rurikida dynasty. Their life was connected with Hungary."
+          "resumen": "Noble of the Rurikida dynasty. Associated with Hungary."
         },
         {
           "id": "ANAROST",
           "nombre": "Anne of Hungary",
           "slug": "ana-de-hungria-anarost",
           "dinastia": "Arpád",
-          "resumen": "Noble of the Arpád dynasty. Their life was connected with Hungary."
+          "resumen": "Noble of the Arpád dynasty. Associated with Hungary."
         },
         {
           "id": "ANDRES3",
@@ -13800,7 +13800,7 @@
           "nombre": "Agnes of Habsburg",
           "slug": "ines-de-habsburgo",
           "dinastia": "Habsburg",
-          "resumen": "Habsburg Dynasty Consort. Their life was connected with Hungary."
+          "resumen": "Habsburg Dynasty Consort. Associated with Hungary."
         },
         {
           "id": "ESTEBV",
@@ -13814,7 +13814,7 @@
           "nombre": "Elizabeth de Cumia",
           "slug": "isabel-de-cumania",
           "dinastia": "Cumos",
-          "resumen": "Consort of the Cumanos dynasty. Their life was connected with Hungary."
+          "resumen": "Consort of the Cumanos dynasty. Associated with Hungary."
         },
         {
           "id": "CARLOS1",
@@ -13828,14 +13828,14 @@
           "nombre": "Elizabeth of Poland",
           "slug": "isabel-piast",
           "dinastia": "Piast",
-          "resumen": "The consortium of the Piast Dynasty. Their life was connected with Hungary."
+          "resumen": "The consortium of the Piast Dynasty. Associated with Hungary."
         },
         {
           "id": "BEATLUX",
           "nombre": "Beatrice of Luxembourg",
           "slug": "beatriz-de-luxemburgo",
           "dinastia": "Luxembourg",
-          "resumen": "Consort of the Luxembourg dynasty. Their life was connected with Hungary."
+          "resumen": "Consort of the Luxembourg dynasty. Associated with Hungary."
         },
         {
           "id": "LADI4",
@@ -13849,7 +13849,7 @@
           "nombre": "Isabella of Anjou",
           "slug": "isabela-de-anjou",
           "dinastia": "Anjou",
-          "resumen": "Anjou Dynasty Consort. Their life was connected with Hungary."
+          "resumen": "Anjou Dynasty Consort. Associated with Hungary."
         },
         {
           "id": "WEN3",
@@ -13898,21 +13898,21 @@
           "nombre": "Maria of Bytom",
           "slug": "maria-piast-de-bytom",
           "dinastia": "Piast",
-          "resumen": "The consortium of the Piast Dynasty. Their life was connected with Hungary."
+          "resumen": "The consortium of the Piast Dynasty. Associated with Hungary."
         },
         {
           "id": "CATANJ",
           "nombre": "Catherine of Anjou",
           "slug": "catalina-de-anjou",
           "dinastia": "Anjou- Hungary",
-          "resumen": "Noble of the Anjou-Hungary dynasty. Their life was connected with Hungary and Silesia."
+          "resumen": "Noble of the Anjou-Hungary dynasty. Associated with Hungary and Silesia."
         },
         {
           "id": "MARGLUX",
           "nombre": "Margaret of Bohemia",
           "slug": "margarita-de-luxemburgo",
           "dinastia": "Luxembourg",
-          "resumen": "Consort of the Luxembourg dynasty. Their life was connected with Hungary."
+          "resumen": "Consort of the Luxembourg dynasty. Associated with Hungary."
         },
         {
           "id": "ISABBOS",
@@ -13933,21 +13933,21 @@
           "nombre": "Anne of Bohemia and Hungary",
           "slug": "ana-de-bohemia-y-hungria",
           "dinastia": "Jagellon",
-          "resumen": "Consort of the Jagiellon dynasty. Their life was connected with Austria, Bohemia and Hungary."
+          "resumen": "Consort of the Jagiellon dynasty. Associated with Austria, Bohemia and Hungary."
         },
         {
           "id": "MARIAAUST",
           "nombre": "Mary of Hungary",
           "slug": "maria-de-austria-mariaaust",
           "dinastia": "Habsburg",
-          "resumen": "Habsburg Dynasty Consort. Their life was connected with Hungary, the Low Countries."
+          "resumen": "Habsburg Dynasty Consort. Associated with Hungary, the Low Countries."
         },
         {
           "id": "BEATRIZNAP",
           "nombre": "Beatrice of Naples",
           "slug": "beatriz-de-napoles",
           "dinastia": "Stress",
-          "resumen": "The Confederate of the Statamara Dynasty. Their life was connected with Hungary."
+          "resumen": "The Confederate of the Trastámara Dynasty. Associated with Hungary."
         },
         {
           "id": "MATIAS1HUN",
@@ -13989,7 +13989,7 @@
           "nombre": "Elizabeth of Luxembourg",
           "slug": "isabel-de-luxemburgo",
           "dinastia": "Luxembourg",
-          "resumen": "Consort of the Luxembourg dynasty. His trajectory is linked to Hungary, Bohemia."
+          "resumen": "Consort of the Luxembourg dynasty. Associated with Hungary, Bohemia."
         },
         {
           "id": "MAXIM2",
@@ -14010,7 +14010,7 @@
           "nombre": "Constance of Aragon",
           "slug": "constanza-de-aragon-constanzaaraghun",
           "dinastia": "Barcelona",
-          "resumen": "Consort of the Barcelona Dynasty. His trajectory is linked to Hungary, the Holy Roman Empire, Aragon."
+          "resumen": "Consort of the Barcelona Dynasty. Associated with Hungary, the Holy Roman Empire, Aragon."
         },
         {
           "id": "RODOLFO2HRE",
@@ -14038,7 +14038,7 @@
           "nombre": "Agnes of Antioch",
           "slug": "ines-de-antioquia",
           "dinastia": "Poitiers- Antioch",
-          "resumen": "Consort of the Poitiers- Antioch dynasty. Their life was connected with Hungary."
+          "resumen": "Consort of the Poitiers- Antioch dynasty. Associated with Hungary."
         },
         {
           "id": "EMERICOHUN",
@@ -14066,7 +14066,7 @@
           "nombre": "Gertrude of Merania",
           "slug": "gertrudis-de-merania",
           "dinastia": "Andechs",
-          "resumen": "Consort of the Andechs dynasty. Their life was connected with Hungary."
+          "resumen": "Consort of the Andechs dynasty. Associated with Hungary."
         },
         {
           "id": "LUIS2HUN",
@@ -14080,7 +14080,7 @@
           "nombre": "Isabella Jagiellon",
           "slug": "isabel-jagellon",
           "dinastia": "Jagellon",
-          "resumen": "Consort of the Jagellon dynasty. Their life was connected with Hungary, Poland, Transylvania."
+          "resumen": "Consort of the Jagellon dynasty. Associated with Hungary, Poland, Transylvania."
         },
         {
           "id": "JUAN1ZAPOLYA",
@@ -14108,14 +14108,14 @@
           "nombre": "Mary of Hungary, Queen of Naples",
           "slug": "maria-de-hungria",
           "dinastia": "Arpád",
-          "resumen": "Consort of the Arpád dynasty. Their life was connected with Naples, Hungary."
+          "resumen": "Consort of the Arpád dynasty. Associated with Naples, Hungary."
         },
         {
           "id": "ISABESLAV",
           "nombre": "Elizabeth of Slavonia",
           "slug": "isabel-de-eslavonia",
           "dinastia": "Anjou- Hungary",
-          "resumen": "Titular consort of the Anjou-Hungary dynasty. Their life was connected with Hungary, Latin Empire and Taranto."
+          "resumen": "Titular consort of the Anjou-Hungary dynasty. Associated with Hungary, Latin Empire and Taranto."
         },
         {
           "id": "MARGDUR",
@@ -14129,7 +14129,7 @@
           "nombre": "Constance of Hungary",
           "slug": "constanza-de-hungria",
           "dinastia": "Arpád",
-          "resumen": "Consort of the Arpád dynasty. His trajectory is linked to Bohemia, Hungary."
+          "resumen": "Consort of the Arpád dynasty. Associated with Bohemia, Hungary."
         },
         {
           "id": "FERN3HRE",
@@ -14157,7 +14157,7 @@
           "nombre": "Barbara of Cilli",
           "slug": "barbara-de-cilli",
           "dinastia": "Celje",
-          "resumen": "Consort of the Celje dynasty. Their life was connected with Hungary, Bohemia and Holy Roman Empire."
+          "resumen": "Consort of the Celje dynasty. Associated with Hungary, Bohemia and Holy Roman Empire."
         },
         {
           "id": "JOSE1HRE",
@@ -14206,7 +14206,7 @@
           "nombre": "Yolanda of Courtenay",
           "slug": "yolanda-de-courtenay",
           "dinastia": "Courtenay",
-          "resumen": "Consort of the Courtenay dynasty. Their life was connected with Hungary."
+          "resumen": "Consort of the Courtenay dynasty. Associated with Hungary."
         },
         {
           "id": "IMRETHOKOLY",
@@ -14220,14 +14220,14 @@
           "nombre": "Anna Maria of Hungary",
           "slug": "ana-maria-de-hungria",
           "dinastia": "Arpád",
-          "resumen": "Consort of the Arpád dynasty. Their life was connected with Hungary, Bulgaria."
+          "resumen": "Consort of the Arpád dynasty. Associated with Hungary, Bulgaria."
         },
         {
           "id": "CATARPHUNSER",
           "nombre": "Catherine of Hungary",
           "slug": "catalina-de-hungria",
           "dinastia": "Arpád",
-          "resumen": "Consort of the Arpád dynasty. Their life was connected with Hungary, Serbia."
+          "resumen": "Consort of the Arpád dynasty. Associated with Hungary, Serbia."
         },
         {
           "id": "BOCSKAI",
@@ -17154,14 +17154,14 @@
           "nombre": "Costea Mușat",
           "slug": "costea-musat",
           "dinastia": "Bogdan-Mușat",
-          "resumen": "Noble of the Bogdan- Mușat dynasty. His trajectory is linked to Moldova."
+          "resumen": "Noble of the Bogdan- Mușat dynasty. Associated with Moldavia."
         },
         {
           "id": "MARGARETAMUSATA",
           "nombre": "Margareta Mușata",
           "slug": "margareta-musata",
           "dinastia": "Bogdan-Mușat",
-          "resumen": "Noble of the Bogdan- Mușat dynasty. His trajectory is linked to Moldova."
+          "resumen": "Noble of the Bogdan- Mușat dynasty. Associated with Moldavia."
         },
         {
           "id": "PETRU2MOLD",
@@ -17196,7 +17196,7 @@
           "nombre": "Maria Oltea",
           "slug": "maria-oltea",
           "dinastia": "No house identified",
-          "resumen": "Noble. His trajectory is linked to Moldova."
+          "resumen": "Noble. Associated with Moldavia."
         },
         {
           "id": "STEPHEN3MOLD",
@@ -17210,7 +17210,7 @@
           "nombre": "Maria Voichița",
           "slug": "maria-voichita",
           "dinastia": "Basarab",
-          "resumen": "Basarab Dynasty Consort. His trajectory is linked to Wallachia, Moldova."
+          "resumen": "Basarab Dynasty Consort. Associated with Wallachia, Moldavia."
         },
         {
           "id": "BOGDAN3MOLD",
@@ -17451,7 +17451,7 @@
     "es": "bohemia",
     "en": "bohemia",
     "name": "Bohemia",
-    "summary": "The kingdom of Bohemia gathered a hereditary monarchy with an important elective and static dimension. It was a piece of the Holy Roman Empire and a center of religious disputes from the Hussite movement to the Thirty-Year War.",
+    "summary": "The kingdom of Bohemia gathered a hereditary monarchy with an important elective and static dimension. It was a piece of the Holy Roman Empire and a center of religious disputes from the Hussite movement to the Thirty Years' War.",
     "notes": "",
     "translatedSource": {
       "sourceFile": "bohemia.json",
@@ -17465,7 +17465,7 @@
       "clase": "Kingdom",
       "naturaleza": "entity",
       "componentes": [],
-      "resumen": "The kingdom of Bohemia gathered a hereditary monarchy with an important elective and static dimension. It was a piece of the Holy Roman Empire and a center of religious disputes from the Hussite movement to the Thirty-Year War.",
+      "resumen": "The kingdom of Bohemia gathered a hereditary monarchy with an important elective and static dimension. It was a piece of the Holy Roman Empire and a center of religious disputes from the Hussite movement to the Thirty Years' War.",
       "evolucion": [
         {
           "anio": 1306,
@@ -18090,7 +18090,7 @@
           "nombre": "Kunigunde of Swabia",
           "slug": "cunegunda-de-suabia",
           "dinastia": "Hohenstaufen",
-          "resumen": "Consort of the Hohenstaufen dynasty. Their life was connected with Bohemia."
+          "resumen": "Consort of the Hohenstaufen dynasty. Associated with Bohemia."
         },
         {
           "id": "OTAK2",
@@ -18104,7 +18104,7 @@
           "nombre": "Kunigunda of Halych",
           "slug": "cunegunda-de-halych",
           "dinastia": "Rurikida",
-          "resumen": "Consort of the Rurikida dynasty. His trajectory is linked to Bohemia."
+          "resumen": "Consort of the Rurikida dynasty. Associated with Bohemia."
         },
         {
           "id": "WEN2",
@@ -18118,14 +18118,14 @@
           "nombre": "Judith of Habsburg",
           "slug": "judit-de-habsburgo",
           "dinastia": "Habsburg",
-          "resumen": "Habsburg Dynasty Consort. His trajectory is linked to Bohemia."
+          "resumen": "Habsburg Dynasty Consort. Associated with Bohemia."
         },
         {
           "id": "ISABRP",
           "nombre": "Elizabeth Richeza of Poland",
           "slug": "isabel-riquilda-de-polonia",
           "dinastia": "Piast",
-          "resumen": "The consortium of the Piast Dynasty. His trajectory is linked to Bohemia."
+          "resumen": "The consortium of the Piast Dynasty. Associated with Bohemia."
         },
         {
           "id": "WEN3",
@@ -18153,14 +18153,14 @@
           "nombre": "Elizabeth of Bohemia",
           "slug": "isabel-i-de-bohemia",
           "dinastia": "Přemysl",
-          "resumen": "Consort of the Přemyslid dynasty. Their life was connected with Bohemia."
+          "resumen": "Consort of the Přemyslid dynasty. Associated with Bohemia."
         },
         {
           "id": "BEATBOR",
           "nombre": "Beatrice of Bourbon",
           "slug": "beatriz-de-borbon",
           "dinastia": "Bourbon",
-          "resumen": "The Bourbon Dynasty Consort. His trajectory is linked to Bohemia."
+          "resumen": "The Bourbon Dynasty Consort. Associated with Bohemia."
         },
         {
           "id": "CARLOS4",
@@ -18174,28 +18174,28 @@
           "nombre": "Anna of Bavaria",
           "slug": "ana-de-baviera",
           "dinastia": "Wittelsbach",
-          "resumen": "Consort of the Wittelsbach dynasty. Their life was connected with Bohemia and Germany."
+          "resumen": "Consort of the Wittelsbach dynasty. Associated with Bohemia and Germany."
         },
         {
           "id": "ANASWI",
           "nombre": "Anna of Świdnica",
           "slug": "ana-de-swidnica",
           "dinastia": "Piast",
-          "resumen": "The consortium of the Piast Dynasty. His trajectory is linked to Bohemia, the Holy Roman Empire."
+          "resumen": "The consortium of the Piast Dynasty. Associated with Bohemia, the Holy Roman Empire."
         },
         {
           "id": "BLANVAL",
           "nombre": "Blanche of Valois",
           "slug": "blanca-margarita-de-valois",
           "dinastia": "Valois",
-          "resumen": "Consort of the Valois dynasty. Their life was connected with Bohemia and Germany."
+          "resumen": "Consort of the Valois dynasty. Associated with Bohemia and Germany."
         },
         {
           "id": "ISABPOM",
           "nombre": "Elizabeth of Pomerania",
           "slug": "isabel-de-pomerania",
           "dinastia": "Faucet",
-          "resumen": "The Consort of the Griffo Dynasty. His trajectory is linked to Bohemia, the Holy Roman Empire."
+          "resumen": "The Consort of the Griffo Dynasty. Associated with Bohemia, the Holy Roman Empire."
         },
         {
           "id": "WEN4LUX",
@@ -18216,7 +18216,7 @@
           "nombre": "Anne of Bohemia and Hungary",
           "slug": "ana-de-bohemia-y-hungria",
           "dinastia": "Jagellon",
-          "resumen": "Consort of the Jagiellon dynasty. Their life was connected with Austria, Bohemia and Hungary."
+          "resumen": "Consort of the Jagiellon dynasty. Associated with Austria, Bohemia and Hungary."
         },
         {
           "id": "MATIAS1HUN",
@@ -18251,7 +18251,7 @@
           "nombre": "Elizabeth of Luxembourg",
           "slug": "isabel-de-luxemburgo",
           "dinastia": "Luxembourg",
-          "resumen": "Consort of the Luxembourg dynasty. His trajectory is linked to Hungary, Bohemia."
+          "resumen": "Consort of the Luxembourg dynasty. Associated with Hungary, Bohemia."
         },
         {
           "id": "MAXIM2",
@@ -18321,21 +18321,21 @@
           "nombre": "Constance of Hungary",
           "slug": "constanza-de-hungria",
           "dinastia": "Arpád",
-          "resumen": "Consort of the Arpád dynasty. His trajectory is linked to Bohemia, Hungary."
+          "resumen": "Consort of the Arpád dynasty. Associated with Bohemia, Hungary."
         },
         {
           "id": "ANABOHCAR",
           "nombre": "Anna of Bohemia",
           "slug": "ana-de-bohemia",
           "dinastia": "Přemysl",
-          "resumen": "Consort of the Přemysl dynasty. His trajectory is linked to Bohemia, Carinthia."
+          "resumen": "Consort of the Přemysl dynasty. Associated with Bohemia, Carinthia."
         },
         {
           "id": "JOANAROZ",
           "nombre": "Joanna of Rožmitál",
           "slug": "juana-de-rozmital",
           "dinastia": "Rožmitál",
-          "resumen": "Consort of the Rožmitál dynasty. His trajectory is linked to Bohemia."
+          "resumen": "Consort of the Rožmitál dynasty. Associated with Bohemia."
         },
         {
           "id": "ISABELSTUARTPAL",
@@ -18356,7 +18356,7 @@
           "nombre": "Maria Anna of Spain",
           "slug": "maria-ana-de-espana",
           "dinastia": "Habsburg",
-          "resumen": "Habsburg Dynasty Consort. His trajectory is linked to Bohemia, Holy Roman Empire, Spain."
+          "resumen": "Habsburg Dynasty Consort. Associated with Bohemia, Holy Roman Empire, Spain."
         },
         {
           "id": "FERN3HRE",
@@ -18377,7 +18377,7 @@
           "nombre": "Margaret Theresa of Austria",
           "slug": "margarita-teresa-de-austria",
           "dinastia": "Habsburg",
-          "resumen": "Habsburg Dynasty Consort. His trajectory is linked to Spain, the Holy Roman Empire, Bohemia."
+          "resumen": "Habsburg Dynasty Consort. Associated with Spain, the Holy Roman Empire, Bohemia."
         },
         {
           "id": "LEOP1HRE",
@@ -18391,28 +18391,28 @@
           "nombre": "Ludmila of Bohemia",
           "slug": "ludmila-de-bohemia",
           "dinastia": "Přemysl",
-          "resumen": "Consort of the Přemysl dynasty. His trajectory is linked to Bohemia, Bavaria."
+          "resumen": "Consort of the Přemysl dynasty. Associated with Bohemia, Bavaria."
         },
         {
           "id": "MARGBOHBAV",
           "nombre": "Margaret of Bohemia",
           "slug": "margarita-de-bohemia",
           "dinastia": "Luxembourg",
-          "resumen": "Consort of the Luxembourg dynasty. His trajectory is linked to Bohemia, Bavaria."
+          "resumen": "Consort of the Luxembourg dynasty. Associated with Bohemia, Bavaria."
         },
         {
           "id": "CATBOHOTTO",
           "nombre": "Catherine of Bohemia",
           "slug": "catalina-de-bohemia",
           "dinastia": "Luxembourg",
-          "resumen": "Consort of the Luxembourg dynasty. His trajectory is linked to Bohemia, Bavaria."
+          "resumen": "Consort of the Luxembourg dynasty. Associated with Bohemia, Bavaria."
         },
         {
           "id": "BARBCEL",
           "nombre": "Barbara of Cilli",
           "slug": "barbara-de-cilli",
           "dinastia": "Celje",
-          "resumen": "Consort of the Celje dynasty. Their life was connected with Hungary, Bohemia and Holy Roman Empire."
+          "resumen": "Consort of the Celje dynasty. Associated with Hungary, Bohemia and Holy Roman Empire."
         },
         {
           "id": "JOSE1HRE",
@@ -18468,7 +18468,7 @@
           "nombre": "Sidonia of Bohemia",
           "slug": "sidonia-de-bohemia",
           "dinastia": "Poděbrady",
-          "resumen": "Poděbrady Dynasty Consort. His trajectory is linked to Bohemia, Saxony."
+          "resumen": "Poděbrady Dynasty Consort. Associated with Bohemia, Saxony."
         },
         {
           "id": "JANHUS",
@@ -19226,14 +19226,14 @@
           "nombre": "Margaret of Austria",
           "slug": "margarita-de-austria-margaust",
           "dinastia": "Habsburg",
-          "resumen": "Governor of the Habsburg Dynasty. Their life was connected with the Low Countries."
+          "resumen": "Governor of the Habsburg Dynasty. Associated with the Low Countries."
         },
         {
           "id": "MARIAAUST",
           "nombre": "Mary of Hungary",
           "slug": "maria-de-austria-mariaaust",
           "dinastia": "Habsburg",
-          "resumen": "Habsburg Dynasty Consort. Their life was connected with Hungary, the Low Countries."
+          "resumen": "Habsburg Dynasty Consort. Associated with Hungary, the Low Countries."
         },
         {
           "id": "ALB7AUST",
@@ -19289,14 +19289,14 @@
           "nombre": "Louise Juliana of Orange-Nassau",
           "slug": "luisa-juliana-de-orange-nassau",
           "dinastia": "Nassau",
-          "resumen": "Nassau Dynasty Consort. Their life was connected with the Low Countries, Palatinate."
+          "resumen": "Nassau Dynasty Consort. Associated with the Low Countries, Palatinate."
         },
         {
           "id": "LOUISEHENRIETTEORANGE",
           "nombre": "Louise Henriette of Orange-Nassau",
           "slug": "luisa-enriqueta-de-orange-nassau",
           "dinastia": "Nassau",
-          "resumen": "Nassau Dynasty Consort. Their life was connected with the Low Countries, Brandenburg."
+          "resumen": "Nassau Dynasty Consort. Associated with the Low Countries, Brandenburg."
         },
         {
           "id": "ANNEGBORANGE",
@@ -19317,7 +19317,7 @@
           "nombre": "Joanna de Polanen",
           "slug": "juana-de-polanen",
           "dinastia": "Polanen",
-          "resumen": "Heiress of Breda from the Polanen dynasty. Her life was connected with the Low Countries."
+          "resumen": "Heiress of Breda from the Polanen dynasty. Associated with the Low Countries."
         },
         {
           "id": "JOHN4NASSAU",
@@ -19331,28 +19331,28 @@
           "nombre": "Anne of Egmont",
           "slug": "ana-de-egmont",
           "dinastia": "Egmond",
-          "resumen": "Consort of the Egmond dynasty. Their life was connected with Low Countries."
+          "resumen": "Consort of the Egmond dynasty. Associated with Low Countries."
         },
         {
           "id": "ANNASAXORANGE",
           "nombre": "Anne de Saxony",
           "slug": "ana-de-sajonia-annasaxorange",
           "dinastia": "Wettin",
-          "resumen": "Wettin Dynasty Consort. Their life was connected with Saxony, the Low Countries."
+          "resumen": "Wettin Dynasty Consort. Associated with Saxony, the Low Countries."
         },
         {
           "id": "CHARLOTTEBOURBONORANGE",
           "nombre": "Charlotte of Bourbon-Montpensier",
           "slug": "carlota-de-borbon-montpensier",
           "dinastia": "Bourbon",
-          "resumen": "The Bourbon Dynasty Consort. Their life was connected with France, the Low Countries."
+          "resumen": "The Bourbon Dynasty Consort. Associated with France, the Low Countries."
         },
         {
           "id": "LOUISECOLIGNY",
           "nombre": "Louise of Coligny",
           "slug": "luisa-de-coligny",
           "dinastia": "Coligny",
-          "resumen": "Coligny Dynasty Consort. Their life was connected with France, the Low Countries."
+          "resumen": "Coligny Dynasty Consort. Associated with France, the Low Countries."
         },
         {
           "id": "WILLIAMSILENT",
@@ -19366,7 +19366,7 @@
           "nombre": "Philip William of Orange",
           "slug": "felipe-guillermo-de-orange",
           "dinastia": "Nassau",
-          "resumen": "Prince of Orange of the Nassau Dynasty. Their life was connected with the Low Countries."
+          "resumen": "Prince of Orange of the Nassau Dynasty. Associated with the Low Countries."
         },
         {
           "id": "MAURICEORANGE",
@@ -19387,7 +19387,7 @@
           "nombre": "Amalia de Solms.-Braunfels",
           "slug": "amalia-de-solms-braunfels",
           "dinastia": "Solms",
-          "resumen": "Solms Dynasty Consort. Their life was connected with the Low Countries."
+          "resumen": "Solms Dynasty Consort. Associated with the Low Countries."
         },
         {
           "id": "WILLIAM2ORANGE",
@@ -19401,7 +19401,7 @@
           "nombre": "Mary, Princess Royal and Princess of Orange",
           "slug": "maria-estuardo-princesa-de-orange",
           "dinastia": "Studo",
-          "resumen": "Orange Princess of the Estuardo Dynasty. Their life was connected with England, the Low Countries."
+          "resumen": "Orange Princess of the Estuardo Dynasty. Associated with England, the Low Countries."
         },
         {
           "id": "MARY2ING",
@@ -19436,7 +19436,7 @@
           "nombre": "Albertine Agnes of Orange-Nassau",
           "slug": "albertina-ines-de-orange-nassau",
           "dinastia": "Nassau",
-          "resumen": "Nassau Dynasty Consort. Their life was connected with the Low Countries."
+          "resumen": "Nassau Dynasty Consort. Associated with the Low Countries."
         },
         {
           "id": "HENRYCASIMIR2",
@@ -19450,7 +19450,7 @@
           "nombre": "Henriette Amalie of Anhalt-Dessau",
           "slug": "enriqueta-amalia-de-anhalt-dessau",
           "dinastia": "Ascania",
-          "resumen": "Consort of the Ascania dynasty. Their life was connected with the Low Countries."
+          "resumen": "Consort of the Ascania dynasty. Associated with the Low Countries."
         },
         {
           "id": "JOHNWILLIAMFRISO",
@@ -19464,7 +19464,7 @@
           "nombre": "Marie Louise of Hesse-Kassel",
           "slug": "maria-luisa-de-hesse-kassel",
           "dinastia": "Hesse",
-          "resumen": "Consort of the Hesse Dynasty. Their life was connected with Hesse, the Low Countries."
+          "resumen": "Consort of the Hesse Dynasty. Associated with Hesse, the Low Countries."
         },
         {
           "id": "WILLIAM4ORANGE",
@@ -19478,7 +19478,7 @@
           "nombre": "Wilhelmina of Prussia, Princess of Orange",
           "slug": "guillermina-de-prusia",
           "dinastia": "Hohenzollern",
-          "resumen": "Princess of Orange of the Hohenzollern dynasty. Their life was connected with Prussia and Low Countries."
+          "resumen": "Princess of Orange of the Hohenzollern dynasty. Associated with Prussia and Low Countries."
         },
         {
           "id": "WILLIAM5ORANGE",
@@ -19499,7 +19499,7 @@
           "nombre": "Mary de Loon- Heinsberg",
           "slug": "maria-de-loon-heinsberg",
           "dinastia": "Loon- Heinsberg",
-          "resumen": "Loon- Heinsberg Dynasty Consort. Their life was connected with Nassau, the Low Countries."
+          "resumen": "Loon- Heinsberg Dynasty Consort. Associated with Nassau, the Low Countries."
         },
         {
           "id": "HENRYCASIMIR1",
@@ -19564,7 +19564,7 @@
             "SELIM2OSM",
             "CERVANTES"
           ],
-          "descripcion": "The fleet of the Holy League, led by Don Juan of Austria and composed mainly of forces of the Hispanic Monarchy, Venice and the Pontifical States, defeats the Ottoman army of Ali Bajá after hours of combat of galera against galera. The Ottoman center is falling apart, Uluç Ali is able to save part of its wing and thousands of combatants are killed, injured or held captive. The victory does not drive the Ottoman Empire out of the Mediterranean, but it destroys much of its combat fleet and becomes a huge political and symbolic victory of the coalition."
+          "descripcion": "The fleet of the Holy League, led by Don Juan of Austria and composed mainly of forces of the Hispanic Monarchy, Venice and the Pontifical States, defeats the Ottoman army of Ali Pasha after hours of combat of galera against galera. The Ottoman center is falling apart, Uluç Ali is able to save part of its wing and thousands of combatants are killed, injured or held captive. The victory does not drive the Ottoman Empire out of the Mediterranean, but it destroys much of its combat fleet and becomes a huge political and symbolic victory of the coalition."
         },
         {
           "id": "ERASMO_1516",
@@ -19633,7 +19633,7 @@
             "ALIPASHALEPANTO",
             "ULUCALI"
           ],
-          "descripcion": "The League has Barbarigo on the left wing, Don Juan and Colonna in the center, Gianandrea Doria on the right and Álvaro de Bazán in front of the reserve. In front of them, Ali Bajá runs the Ottoman center and Uluç Ali sends the wing facing Doria."
+          "descripcion": "The League has Barbarigo on the left wing, Don Juan and Colonna in the center, Gianandrea Doria on the right and Álvaro de Bazán in front of the reserve. In front of them, Ali Pasha runs the Ottoman center and Uluç Ali sends the wing facing Doria."
         },
         {
           "id": "CENTRO_LEPANTO_1571",
@@ -19647,7 +19647,7 @@
             "MARCANTONIO2COL",
             "SEBASTIANOVENIER"
           ],
-          "descripcion": "In the center, the Royal Galera of Don Juan and the Sultana of Ali Bajá are stuck in a struggle of approaches, archauces and successive reinforcements. The fall of Ali Bajá and the take of his ship disorganize the Ottoman center and make the central combat the symbolic core of victory."
+          "descripcion": "In the center, the Royal Galera of Don Juan and the Sultana of Ali Pasha are stuck in a struggle of approaches, archauces and successive reinforcements. The fall of Ali Pasha and the take of his ship disorganize the Ottoman center and make the central combat the symbolic core of victory."
         },
         {
           "id": "CERVANTES_LEPANTO_1571",
@@ -20062,7 +20062,7 @@
                   "nombre": "Constance of Aragon",
                   "slug": "constanza-de-aragon-y-entenza",
                   "dinastia": "Barcelona",
-                  "resumen": "Consort of the Barcelona Dynasty. His trajectory is linked to Majorca, Aragon."
+                  "resumen": "Consort of the Barcelona Dynasty. Associated with Majorca, Aragon."
                 },
                 {
                   "id": "ALF4ARAG",
@@ -20083,7 +20083,7 @@
                   "nombre": "Eleanor of Aragon",
                   "slug": "leonor-de-aragon-leonoraragcast",
                   "dinastia": "Barcelona",
-                  "resumen": "Consort of the Barcelona dynasty. Their life was connected with Castile and Aragon."
+                  "resumen": "Consort of the Barcelona dynasty. Associated with Castile and Aragon."
                 },
                 {
                   "id": "FERN1ARAG",
@@ -20111,7 +20111,7 @@
                   "nombre": "Eleanor of Naples",
                   "slug": "leonor-de-napoles",
                   "dinastia": "Stress",
-                  "resumen": "The Confederate of the Statamara Dynasty. His trajectory is linked to Ferrara."
+                  "resumen": "The Confederate of the Trastámara Dynasty. Associated with Ferrara."
                 },
                 {
                   "id": "ISABELLAESTE",
@@ -20485,7 +20485,7 @@
           "nombre": "Margaret of Montferrat",
           "slug": "margarita-de-monferrato",
           "dinastia": "Paleologo-Montferrat",
-          "resumen": "Consort of the Paleologa-Montferrat dynasty. Their life was connected with Montferrat and Urgell."
+          "resumen": "Consort of the Paleologa-Montferrat dynasty. Associated with Montferrat and Urgell."
         },
         {
           "id": "JUAN2MONFERRATO",
@@ -20534,7 +20534,7 @@
           "nombre": "William of Montferrat",
           "slug": "guillermo-de-montferrato",
           "dinastia": "Aleramici",
-          "resumen": "Count of Jaffa and Ascalon of the Aleramici dynasty. Their life was connected with Montferrat and Jerusalem."
+          "resumen": "Count of Jaffa and Ascalon of the Aleramici dynasty. Associated with Montferrat and Jerusalem."
         },
         {
           "id": "CONRADMONTJER",
@@ -21117,28 +21117,28 @@
           "nombre": "Matilda of England",
           "slug": "matilde-de-inglaterra-matildaing",
           "dinastia": "Plantagenet",
-          "resumen": "Plantagenet Dynasty Consort. His trajectory is linked to Saxony, England."
+          "resumen": "Plantagenet Dynasty Consort. Associated with Saxony, England."
         },
         {
           "id": "AMALIASAXBAV",
           "nombre": "Amalia of Saxony",
           "slug": "amalia-de-sajonia",
           "dinastia": "Wettin",
-          "resumen": "Wettin Dynasty Consort. His trajectory is linked to Bavaria, Saxony."
+          "resumen": "Wettin Dynasty Consort. Associated with Bavaria, Saxony."
         },
         {
           "id": "MARIAJOSEFASAJ",
           "nombre": "Maria Josepha of Saxony",
           "slug": "maria-josefa-de-sajonia",
           "dinastia": "Wettin",
-          "resumen": "Consort of the Wettin dynasty. Their life was connected with France and Saxony."
+          "resumen": "Consort of the Wettin dynasty. Associated with France and Saxony."
         },
         {
           "id": "MARIAAMALIASAJ",
           "nombre": "Maria Amalia of Saxony",
           "slug": "maria-amalia-de-sajonia",
           "dinastia": "Wettin",
-          "resumen": "Consort of the Wettin dynasty. Their life was connected with Spain and Saxony."
+          "resumen": "Consort of the Wettin dynasty. Associated with Spain and Saxony."
         },
         {
           "id": "LUTERO",
@@ -21166,7 +21166,7 @@
           "nombre": "Elizabeth of Bavaria",
           "slug": "isabel-de-baviera-elisbavsax",
           "dinastia": "Wittelsbach",
-          "resumen": "Wittelsbach Dynasty Consort. His trajectory is linked to Bavaria, Saxony."
+          "resumen": "Wittelsbach Dynasty Consort. Associated with Bavaria, Saxony."
         },
         {
           "id": "FRED3SAX",
@@ -21187,7 +21187,7 @@
           "nombre": "Sophia of Mecklenburg",
           "slug": "sofia-de-mecklemburgo",
           "dinastia": "Mecklenburg",
-          "resumen": "Mecklenburg Dynasty Consort. His trajectory is linked to Saxony."
+          "resumen": "Mecklenburg Dynasty Consort. Associated with Saxony."
         },
         {
           "id": "JUANFED1SAX",
@@ -21208,7 +21208,7 @@
           "nombre": "Catherine of Brunswick-Lüneburg",
           "slug": "catalina-de-brunswick-luneburgo",
           "dinastia": "Welf",
-          "resumen": "Welf Dynasty Consort. His trajectory is linked to Saxony."
+          "resumen": "Welf Dynasty Consort. Associated with Saxony."
         },
         {
           "id": "FRED2SAX",
@@ -21222,7 +21222,7 @@
           "nombre": "Margaret of Austria",
           "slug": "margarita-de-austria-margaustsax",
           "dinastia": "Habsburg",
-          "resumen": "Habsburg Dynasty Consort. His career is linked to Austria, Saxony."
+          "resumen": "Habsburg Dynasty Consort. Associated with Austria, Saxony."
         },
         {
           "id": "ALBERTSAX",
@@ -21236,7 +21236,7 @@
           "nombre": "Sidonia of Bohemia",
           "slug": "sidonia-de-bohemia",
           "dinastia": "Poděbrady",
-          "resumen": "Poděbrady Dynasty Consort. His trajectory is linked to Bohemia, Saxony."
+          "resumen": "Poděbrady Dynasty Consort. Associated with Bohemia, Saxony."
         },
         {
           "id": "GEORGESAX",
@@ -21250,14 +21250,14 @@
           "nombre": "Barbara Jagiellon",
           "slug": "barbara-jagellon",
           "dinastia": "Jagellon",
-          "resumen": "Consort of the Jagellon dynasty. Their life was connected with Poland, Lithuania, Saxony."
+          "resumen": "Consort of the Jagellon dynasty. Associated with Poland, Lithuania, Saxony."
         },
         {
           "id": "CRISTINASAXHESSE",
           "nombre": "Christina of Saxony",
           "slug": "cristina-de-sajonia-cristinasaxhesse",
           "dinastia": "Wettin",
-          "resumen": "Consort of the Wettin dynasty. Their life was connected with Saxony and Hesse."
+          "resumen": "Consort of the Wettin dynasty. Associated with Saxony and Hesse."
         },
         {
           "id": "HENRYPIOUSSAX",
@@ -21271,7 +21271,7 @@
           "nombre": "Catherine of Mecklenburg",
           "slug": "catalina-de-mecklemburgo",
           "dinastia": "Mecklenburg",
-          "resumen": "Mecklenburg Dynasty Consort. His trajectory is linked to Saxony."
+          "resumen": "Mecklenburg Dynasty Consort. Associated with Saxony."
         },
         {
           "id": "MORITZSAX",
@@ -21285,7 +21285,7 @@
           "nombre": "Agnes of Hesse",
           "slug": "ines-de-hesse",
           "dinastia": "Hesse",
-          "resumen": "Consort of the Hesse dynasty. Their life was connected with Hesse and Saxony."
+          "resumen": "Consort of the Hesse dynasty. Associated with Hesse and Saxony."
         },
         {
           "id": "AUGUSTSAX",
@@ -21299,7 +21299,7 @@
           "nombre": "Anne of Denmark",
           "slug": "ana-de-dinamarca-annadenmarksax",
           "dinastia": "Oldemburg",
-          "resumen": "Consort of the Oldemburg dynasty. His career is linked to Denmark, Saxony."
+          "resumen": "Consort of the Oldemburg dynasty. Associated with Denmark, Saxony."
         },
         {
           "id": "CHRISTIAN1SAX",
@@ -21313,7 +21313,7 @@
           "nombre": "Sophia of Brandenburg",
           "slug": "sofia-de-brandeburgo",
           "dinastia": "Hohenzollern",
-          "resumen": "Hohenzollern Dynasty Consort. His career is linked to Brandenburg, Saxony."
+          "resumen": "Hohenzollern Dynasty Consort. Associated with Brandenburg, Saxony."
         },
         {
           "id": "CHRISTIAN2SAX",
@@ -21334,7 +21334,7 @@
           "nombre": "Magdalene Sibylle of Prussia",
           "slug": "magdalena-sibila-de-prusia",
           "dinastia": "Hohenzollern",
-          "resumen": "Hohenzollern Dynasty Consort. His trajectory is linked to Prussia, Saxony."
+          "resumen": "Hohenzollern Dynasty Consort. Associated with Prussia, Saxony."
         },
         {
           "id": "JOHANNGEORG2SAX",
@@ -21348,7 +21348,7 @@
           "nombre": "Magdalene Sibylle of Brandenburg-Bayreuth",
           "slug": "magdalena-sibila-de-brandeburgo-bayreuth",
           "dinastia": "Hohenzollern",
-          "resumen": "Hohenzollern Dynasty Consort. His trajectory is linked to Saxony."
+          "resumen": "Hohenzollern Dynasty Consort. Associated with Saxony."
         },
         {
           "id": "JOHANNGEORG3SAX",
@@ -21362,7 +21362,7 @@
           "nombre": "Anna Sophia of Denmark",
           "slug": "ana-sofia-de-dinamarca",
           "dinastia": "Oldemburg",
-          "resumen": "Consort of the Oldenburg dynasty. Their life was connected with Denmark and Saxony."
+          "resumen": "Consort of the Oldenburg dynasty. Associated with Denmark and Saxony."
         },
         {
           "id": "JOHANNGEORG4SAX",
@@ -21390,7 +21390,7 @@
           "nombre": "Maurice of Saxony",
           "slug": "mauricio-de-sajonia-mauricesaxmarshal",
           "dinastia": "Wettin",
-          "resumen": "The Mariscal of France of the Wettin Dynasty. His career is linked to Saxony, France."
+          "resumen": "The Mariscal of France of the Wettin Dynasty. Associated with Saxony, France."
         },
         {
           "id": "AUGUST3SAXPOL",
@@ -21404,7 +21404,7 @@
           "nombre": "Maria Josepha of Austria",
           "slug": "maria-josefa-de-austria",
           "dinastia": "Habsburg",
-          "resumen": "Consort of the Habsburg dynasty. Their life was connected with Austria, Saxony and Poland."
+          "resumen": "Consort of the Habsburg dynasty. Associated with Austria, Saxony and Poland."
         },
         {
           "id": "FREDCHRISTIANSAX",
@@ -21418,7 +21418,7 @@
           "nombre": "Maria Antonia Walpurgis of Bavaria",
           "slug": "maria-antonia-walpurgis-de-baviera",
           "dinastia": "Wittelsbach",
-          "resumen": "Wittelsbach Dynasty Consort. His trajectory is linked to Bavaria, Saxony."
+          "resumen": "Wittelsbach Dynasty Consort. Associated with Bavaria, Saxony."
         },
         {
           "id": "XAVERSAX",
@@ -21446,14 +21446,14 @@
           "nombre": "Frances Krasińska",
           "slug": "francisca-krasinska",
           "dinastia": "Krasiński",
-          "resumen": "Krasiński Dynasty Consort. His career is linked to Poland, Saxony."
+          "resumen": "Krasiński Dynasty Consort. Associated with Poland, Saxony."
         },
         {
           "id": "MARIACRISTINASAJCAR",
           "nombre": "Maria Christina Albertina of Saxony",
           "slug": "maria-cristina-albertina-de-sajonia",
           "dinastia": "Wettin",
-          "resumen": "The Princess of Carignano of the Wettin Dynasty. Her trajectory is linked to Saxony, Savoy."
+          "resumen": "The Princess of Carignano of the Wettin Dynasty. Associated with Saxony, Savoy."
         },
         {
           "id": "CRISTINASAJDIN",
@@ -21467,49 +21467,49 @@
           "nombre": "Anna of Saxony",
           "slug": "ana-de-sajonia-annasaxalbert",
           "dinastia": "Wettin",
-          "resumen": "Consort of the Wettin dynasty. Their life was connected with Saxony and Brandenburg."
+          "resumen": "Consort of the Wettin dynasty. Associated with Saxony and Brandenburg."
         },
         {
           "id": "MAGDSAXBRAND",
           "nombre": "Magdalena of Saxony",
           "slug": "magdalena-de-sajonia",
           "dinastia": "Wettin",
-          "resumen": "Consort of the Wettin dynasty. Their life was connected with Saxony and Brandenburg."
+          "resumen": "Consort of the Wettin dynasty. Associated with Saxony and Brandenburg."
         },
         {
           "id": "AUGUSTASAXGOTHA",
           "nombre": "Augusta of Saxe-Gotha",
           "slug": "augusta-de-sajonia-gotha",
           "dinastia": "Wettin",
-          "resumen": "Wettin Dynasty Consort. His trajectory is linked to Saxony, England."
+          "resumen": "Wettin Dynasty Consort. Associated with Saxony, England."
         },
         {
           "id": "ANNASAXORANGE",
           "nombre": "Anne de Saxony",
           "slug": "ana-de-sajonia-annasaxorange",
           "dinastia": "Wettin",
-          "resumen": "Wettin Dynasty Consort. Their life was connected with Saxony, the Low Countries."
+          "resumen": "Wettin Dynasty Consort. Associated with Saxony, the Low Countries."
         },
         {
           "id": "MARIAELISASAXHG",
           "nombre": "Maria Elizabeth of Saxony",
           "slug": "maria-isabel-de-sajonia",
           "dinastia": "Wettin",
-          "resumen": "Wettin Dynasty Consort. His trajectory is linked to Saxony, Holstein."
+          "resumen": "Wettin Dynasty Consort. Associated with Saxony, Holstein."
         },
         {
           "id": "BARBARASAXWITTENBERG",
           "nombre": "Barbara of Saxony-Wittenberg",
           "slug": "barbara-de-sajonia-wittenberg",
           "dinastia": "Ascania",
-          "resumen": "Consort of the Ascania dynasty. His trajectory is linked to Saxony, Brandenburg."
+          "resumen": "Consort of the Ascania dynasty. Associated with Saxony, Brandenburg."
         },
         {
           "id": "SIBYLLACLEVES",
           "nombre": "Sibylla of Cleves",
           "slug": "sibila-de-cleveris",
           "dinastia": "The Marck",
-          "resumen": "La Marck Dynasty Consort. His trajectory is linked to Cléveris, Saxony."
+          "resumen": "La Marck Dynasty Consort. Associated with Cleves, Saxony."
         }
       ],
       "eventos": [
@@ -22448,14 +22448,14 @@
           "nombre": "Dorothea of Bulgaria",
           "slug": "dorotea-de-bulgaria",
           "dinastia": "Shishman",
-          "resumen": "Consort of the Shishman dynasty. Their life was connected with Bulgaria and Bosnia."
+          "resumen": "Consort of the Shishman dynasty. Associated with Bulgaria and Bosnia."
         },
         {
           "id": "JELENABRANKBOS",
           "nombre": "Jelena Branković",
           "slug": "jelena-brankovic",
           "dinastia": "Branković",
-          "resumen": "Branković Dynasty Consort. His career is linked to Serbia, Bosnia."
+          "resumen": "Branković Dynasty Consort. Associated with Serbia, Bosnia."
         },
         {
           "id": "STEPHEN2BOS",
@@ -23241,7 +23241,7 @@
           "nombre": "Isabella Jagiellon",
           "slug": "isabel-jagellon",
           "dinastia": "Jagellon",
-          "resumen": "Consort of the Jagellon dynasty. Their life was connected with Hungary, Poland, Transylvania."
+          "resumen": "Consort of the Jagellon dynasty. Associated with Hungary, Poland, Transylvania."
         },
         {
           "id": "JUAN1ZAPOLYA",
@@ -23793,7 +23793,7 @@
           "nombre": "Beatrice of Sicily",
           "slug": "beatriz-de-sicilia-beatrizsiciliapal",
           "dinastia": "Barcelona- Sicily",
-          "resumen": "Consort of the Barcelona- Sicily dynasty. His trajectory is linked to Palatinate, Trinacria."
+          "resumen": "Consort of the Barcelona- Sicily dynasty. Associated with Palatinate, Trinacria."
         },
         {
           "id": "RUPERTO2PAL",
@@ -23807,7 +23807,7 @@
           "nombre": "Elizabeth de Nuremberg",
           "slug": "isabel-de-nuremberg",
           "dinastia": "Hohenzollern",
-          "resumen": "Hohenzollern Dynasty Consort. His career is linked to Germany, Palatinate."
+          "resumen": "Hohenzollern Dynasty Consort. Associated with Germany, Palatinate."
         },
         {
           "id": "RUPERTOHRE",
@@ -23856,21 +23856,21 @@
           "nombre": "Agnes of the Palatinate",
           "slug": "ines-del-palatinado",
           "dinastia": "Welf",
-          "resumen": "Welf Dynasty Consort. His trajectory is linked to Bavaria, Palatinate."
+          "resumen": "Welf Dynasty Consort. Associated with Bavaria, Palatinate."
         },
         {
           "id": "ELEONORMAGNEU",
           "nombre": "Eleanor Magdalena of Palatinate-Neuburg",
           "slug": "leonor-magdalena-del-palatinado-neoburgo",
           "dinastia": "Wittelsbach",
-          "resumen": "Consort of the Wittelsbach dynasty. Their life was connected with Holy Roman Empire and Palatinate."
+          "resumen": "Consort of the Wittelsbach dynasty. Associated with Holy Roman Empire and Palatinate."
         },
         {
           "id": "ISABELCARLOTAPAL",
           "nombre": "Elizabeth Charlotte of the Palatinate",
           "slug": "isabel-carlota-del-palatinado-isabelcarlotapal",
           "dinastia": "Wittelsbach",
-          "resumen": "Wittelsbach Dynasty Consort. His trajectory is linked to Palatinado, Orleans, France."
+          "resumen": "Wittelsbach Dynasty Consort. Associated with Palatinado, Orléans, France."
         },
         {
           "id": "ENRIQUE5PALWELF",
@@ -23884,7 +23884,7 @@
           "nombre": "Agnes of Hohenstaufen",
           "slug": "ines-de-hohenstaufen",
           "dinastia": "Hohenstaufen",
-          "resumen": "Hohenstaufen Dynasty Consort. His trajectory is linked to Palatinate."
+          "resumen": "Hohenstaufen Dynasty Consort. Associated with Palatinate."
         },
         {
           "id": "CATALINASUEVASA",
@@ -23898,14 +23898,14 @@
           "nombre": "John Casimir of the Palatinate-Zweibrücken",
           "slug": "juan-casimiro-del-palatinado-zweibrucken",
           "dinastia": "Wittelsbach",
-          "resumen": "Count of the Wittelsbach Dynasty. Their life was connected with Palatinado, Sweden."
+          "resumen": "Count of the Wittelsbach Dynasty. Associated with Palatinado, Sweden."
         },
         {
           "id": "ANNAMARIALUISAMEDICI",
           "nombre": "Anna Maria Louisa de’ Medici",
           "slug": "ana-maria-luisa-de-medici",
           "dinastia": "Mexico",
-          "resumen": "Comptroller of the Medici dynasty. Their life was connected with Tuscany, Palatinate."
+          "resumen": "Comptroller of the Medici dynasty. Associated with Tuscany, Palatinate."
         },
         {
           "id": "JUANGUILLERMOPAL",
@@ -23919,14 +23919,14 @@
           "nombre": "Maria of Palatinate-Simmern",
           "slug": "maria-del-palatinado-simmern",
           "dinastia": "Wittelsbach",
-          "resumen": "Wittelsbach Dynasty Consort. Their life was connected with Palatinado, Sweden."
+          "resumen": "Wittelsbach Dynasty Consort. Associated with Palatinado, Sweden."
         },
         {
           "id": "LOUISEJULIANANASSAU",
           "nombre": "Louise Juliana of Orange-Nassau",
           "slug": "luisa-juliana-de-orange-nassau",
           "dinastia": "Nassau",
-          "resumen": "Nassau Dynasty Consort. Their life was connected with the Low Countries, Palatinate."
+          "resumen": "Nassau Dynasty Consort. Associated with the Low Countries, Palatinate."
         },
         {
           "id": "FRED4PAL",
@@ -23940,28 +23940,28 @@
           "nombre": "Elizabeth Charlotte of the Palatinate",
           "slug": "isabel-carlota-del-palatinado-elischarlottapal",
           "dinastia": "Wittelsbach",
-          "resumen": "Wittelsbach Dynasty Consort. His trajectory is linked to Palatinate, Brandenburg."
+          "resumen": "Wittelsbach Dynasty Consort. Associated with Palatinate, Brandenburg."
         },
         {
           "id": "SOPHIAPALHAN",
           "nombre": "Sophia of the Palatinate",
           "slug": "sofia-del-palatinado",
           "dinastia": "Wittelsbach",
-          "resumen": "Elector of the Wittelsbach dynasty. His trajectory is linked to Palatinate, Hanover."
+          "resumen": "Elector of the Wittelsbach dynasty. Associated with Palatinate, Hanover."
         },
         {
           "id": "MECHTHILDPALWURTT",
           "nombre": "Matilda of the Palatinate",
           "slug": "matilde-del-palatinado",
           "dinastia": "Wittelsbach",
-          "resumen": "Wittelsbach Dynasty Consort. His trajectory is linked to Palatinate, Württemberg."
+          "resumen": "Wittelsbach Dynasty Consort. Associated with Palatinate, Württemberg."
         },
         {
           "id": "DOROTHEASOPHIEFARN",
           "nombre": "Dorothea Sophie of Neuburg",
           "slug": "dorotea-sofia-de-neuburg",
           "dinastia": "Wittelsbach",
-          "resumen": "Wittelsbach Dynasty Consort. His trajectory is linked to Palatinate, Parma."
+          "resumen": "Wittelsbach Dynasty Consort. Associated with Palatinate, Parma."
         },
         {
           "id": "CATHPOMNEUMARK",
@@ -24386,14 +24386,14 @@
           "nombre": "Sophia of Brandenburg",
           "slug": "sofia-de-brandeburgo",
           "dinastia": "Hohenzollern",
-          "resumen": "Hohenzollern Dynasty Consort. His career is linked to Brandenburg, Saxony."
+          "resumen": "Hohenzollern Dynasty Consort. Associated with Brandenburg, Saxony."
         },
         {
           "id": "MARIAELEONORABRAND",
           "nombre": "Maria Eleonora of Brandenburg",
           "slug": "maria-leonor-de-brandeburgo",
           "dinastia": "Hohenzollern",
-          "resumen": "Hohenzollern Dynasty Consort. His career is linked to Brandenburg, Sweden."
+          "resumen": "Hohenzollern Dynasty Consort. Associated with Brandenburg, Sweden."
         },
         {
           "id": "FRED1BRAND",
@@ -24407,7 +24407,7 @@
           "nombre": "Elizabeth de Bavaria",
           "slug": "isabel-de-baviera-landshut",
           "dinastia": "Wittelsbach",
-          "resumen": "Wittelsbach Dynasty Consort. His trajectory is linked to Bavaria, Brandenburg."
+          "resumen": "Wittelsbach Dynasty Consort. Associated with Bavaria, Brandenburg."
         },
         {
           "id": "FRED2BRAND",
@@ -24428,14 +24428,14 @@
           "nombre": "Margaret de Baden",
           "slug": "margarita-de-baden",
           "dinastia": "Baden",
-          "resumen": "Baden Dynasty Consort. His trajectory is linked to Brandenburg."
+          "resumen": "Baden Dynasty Consort. Associated with Brandenburg."
         },
         {
           "id": "ANNASAXALBERT",
           "nombre": "Anna of Saxony",
           "slug": "ana-de-sajonia-annasaxalbert",
           "dinastia": "Wettin",
-          "resumen": "Consort of the Wettin dynasty. Their life was connected with Saxony and Brandenburg."
+          "resumen": "Consort of the Wettin dynasty. Associated with Saxony and Brandenburg."
         },
         {
           "id": "JOHNALCHEMIST",
@@ -24463,7 +24463,7 @@
           "nombre": "Margaret of Thuringia",
           "slug": "margarita-de-turingia",
           "dinastia": "Wettin",
-          "resumen": "Wettin Dynasty Consort. His trajectory is linked to Thuringia, Brandenburg."
+          "resumen": "Wettin Dynasty Consort. Associated with Thuringia, Brandenburg."
         },
         {
           "id": "JOACHIM1BRAND",
@@ -24477,7 +24477,7 @@
           "nombre": "Elizabeth of Denmark",
           "slug": "isabel-de-dinamarca",
           "dinastia": "Oldemburg",
-          "resumen": "Consort of the Oldenburg dynasty. Their life was connected with Denmark and Brandenburg."
+          "resumen": "Consort of the Oldenburg dynasty. Associated with Denmark and Brandenburg."
         },
         {
           "id": "JOACHIM2BRAND",
@@ -24491,7 +24491,7 @@
           "nombre": "Magdalena of Saxony",
           "slug": "magdalena-de-sajonia",
           "dinastia": "Wettin",
-          "resumen": "Consort of the Wettin dynasty. Their life was connected with Saxony and Brandenburg."
+          "resumen": "Consort of the Wettin dynasty. Associated with Saxony and Brandenburg."
         },
         {
           "id": "JUANGEORGEBRAND",
@@ -24505,7 +24505,7 @@
           "nombre": "Sofia of Legnica",
           "slug": "sofia-de-legnica",
           "dinastia": "Piast",
-          "resumen": "The consortium of the Piast Dynasty. His trajectory is linked to Silesia, Brandenburg."
+          "resumen": "The consortium of the Piast Dynasty. Associated with Silesia, Brandenburg."
         },
         {
           "id": "JOACHIMFREDBRAND",
@@ -24519,21 +24519,21 @@
           "nombre": "Catherine of Brandenburg-Küstrin",
           "slug": "catalina-de-brandeburgo-kustrin",
           "dinastia": "Hohenzollern",
-          "resumen": "Hohenzollern Dynasty Consort. His trajectory is linked to Brandenburg."
+          "resumen": "Hohenzollern Dynasty Consort. Associated with Brandenburg."
         },
         {
           "id": "SOPHIAJAGANSB",
           "nombre": "Sophia Jagiellon",
           "slug": "sofia-jagellon-de-polonia",
           "dinastia": "Jagellon",
-          "resumen": "Consort of the Jagiellon dynasty. Their life was connected with Poland and Brandenburg."
+          "resumen": "Consort of the Jagiellon dynasty. Associated with Poland and Brandenburg."
         },
         {
           "id": "ANNAPRUSSIA",
           "nombre": "Anne of Prussia",
           "slug": "ana-de-prusia",
           "dinastia": "Hohenzollern",
-          "resumen": "Hohenzollern Dynasty Consort. His trajectory is linked to Prussia, Brandenburg."
+          "resumen": "Hohenzollern Dynasty Consort. Associated with Prussia, Brandenburg."
         },
         {
           "id": "JOHNSIGBRAND",
@@ -24547,7 +24547,7 @@
           "nombre": "Elizabeth Charlotte of the Palatinate",
           "slug": "isabel-carlota-del-palatinado-elischarlottapal",
           "dinastia": "Wittelsbach",
-          "resumen": "Wittelsbach Dynasty Consort. His trajectory is linked to Palatinate, Brandenburg."
+          "resumen": "Wittelsbach Dynasty Consort. Associated with Palatinate, Brandenburg."
         },
         {
           "id": "GEORGEWILLIAMBRAND",
@@ -24568,7 +24568,7 @@
           "nombre": "Louise Henriette of Orange-Nassau",
           "slug": "luisa-enriqueta-de-orange-nassau",
           "dinastia": "Nassau",
-          "resumen": "Nassau Dynasty Consort. Their life was connected with the Low Countries, Brandenburg."
+          "resumen": "Nassau Dynasty Consort. Associated with the Low Countries, Brandenburg."
         },
         {
           "id": "FRED1PRUSSIA",
@@ -24610,42 +24610,42 @@
           "nombre": "Caroline of Ansbach",
           "slug": "carolina-de-brandeburgo-ansbach",
           "dinastia": "Hohenzollern",
-          "resumen": "Consort of the Hohenzollern dynasty. Their life was connected with Brandenburg and England."
+          "resumen": "Consort of the Hohenzollern dynasty. Associated with Brandenburg and England."
         },
         {
           "id": "ANNABRANDDEN",
           "nombre": "Anne of Brandenburg",
           "slug": "ana-de-brandeburgo",
           "dinastia": "Hohenzollern",
-          "resumen": "Hohenzollern Dynasty Consort. Their life was connected with Brandenburg, Denmark."
+          "resumen": "Hohenzollern Dynasty Consort. Associated with Brandenburg, Denmark."
         },
         {
           "id": "ANNECATHBRANDDEN",
           "nombre": "Anne Catherine of Brandenburg",
           "slug": "ana-catalina-de-brandeburgo",
           "dinastia": "Hohenzollern",
-          "resumen": "Hohenzollern Dynasty Consort. Their life was connected with Brandenburg, Denmark."
+          "resumen": "Hohenzollern Dynasty Consort. Associated with Brandenburg, Denmark."
         },
         {
           "id": "SOPHIEMAGDKULM",
           "nombre": "Sophie Magdalene of Brandenburg-Kulmbach",
           "slug": "sofia-magdalena-de-brandeburgo-kulmbach",
           "dinastia": "Hohenzollern",
-          "resumen": "Hohenzollern Dynasty Consort. Their life was connected with Brandenburg, Denmark."
+          "resumen": "Hohenzollern Dynasty Consort. Associated with Brandenburg, Denmark."
         },
         {
           "id": "BARBARASAXWITTENBERG",
           "nombre": "Barbara of Saxony-Wittenberg",
           "slug": "barbara-de-sajonia-wittenberg",
           "dinastia": "Ascania",
-          "resumen": "Consort of the Ascania dynasty. His trajectory is linked to Saxony, Brandenburg."
+          "resumen": "Consort of the Ascania dynasty. Associated with Saxony, Brandenburg."
         },
         {
           "id": "SIBYLLEBRANDJUL",
           "nombre": "Sibylla of Brandenburg",
           "slug": "sibila-de-brandeburgo",
           "dinastia": "Hohenzollern",
-          "resumen": "Hohenzollern Dynasty Consort. His career is linked to Brandenburg, Jülich, Berg."
+          "resumen": "Hohenzollern Dynasty Consort. Associated with Brandenburg, Jülich, Berg."
         },
         {
           "id": "CATHERINEBRANDTRANS",
@@ -26109,35 +26109,35 @@
           "nombre": "Matteo Rosso Orsini",
           "slug": "matteo-rosso-orsini-matteorossoors-grande",
           "dinastia": "Orsini",
-          "resumen": "Senator of the Orsini dynasty. His trajectory is linked to Rome."
+          "resumen": "Senator of the Orsini dynasty. Associated with Rome."
         },
         {
           "id": "PERNACAETANI",
           "nombre": "Perna Caetani",
           "slug": "perna-caetani",
           "dinastia": "Caetani",
-          "resumen": "Noble of the Caetani dynasty. His trajectory is linked to Rome."
+          "resumen": "Noble of the Caetani dynasty. Associated with Rome."
         },
         {
           "id": "GENTILEORSINI",
           "nombre": "Gentile Orsini",
           "slug": "gentile-orsini",
           "dinastia": "Orsini",
-          "resumen": "Noble of the Orsini dynasty. His trajectory is linked to Rome."
+          "resumen": "Noble of the Orsini dynasty. Associated with Rome."
         },
         {
           "id": "GIOVANNICOLONNAPAL",
           "nombre": "Giovanni Colonna of Palestrina",
           "slug": "giovanni-colonna-de-palestrina",
           "dinastia": "Colonna",
-          "resumen": "Noble of the Colonna dynasty. His trajectory is linked to Rome."
+          "resumen": "Noble of the Colonna dynasty. Associated with Rome."
         },
         {
           "id": "SCIARRACOLONNA",
           "nombre": "Sciarra Colonna",
           "slug": "sciarra-colonna",
           "dinastia": "Colonna",
-          "resumen": "Noble of the Colonna dynasty. Their life was connected with Rome."
+          "resumen": "Noble of the Colonna dynasty. Associated with Rome."
         },
         {
           "id": "AGAPITOCOLONNA",
@@ -26165,70 +26165,70 @@
           "nombre": "Orsino Orsini",
           "slug": "orsino-orsini",
           "dinastia": "Orsini",
-          "resumen": "Noble of the Orsini dynasty. Their life was connected with Rome."
+          "resumen": "Noble of the Orsini dynasty. Associated with Rome."
         },
         {
           "id": "SILVIARUFFINI",
           "nombre": "Silvia Ruffini",
           "slug": "silvia-ruffini",
           "dinastia": "Ruffini",
-          "resumen": "Noble of the Ruffini dynasty. His trajectory is linked to Rome."
+          "resumen": "Noble of the Ruffini dynasty. Associated with Rome."
         },
         {
           "id": "SILVESTROALDOBRANDINI",
           "nombre": "Silvestro Aldobrandini",
           "slug": "silvestro-aldobrandini",
           "dinastia": "Aldobrandini",
-          "resumen": "The lawyer of the Aldobrandini dynasty. His trajectory is linked to Florence, Rome."
+          "resumen": "The lawyer of the Aldobrandini dynasty. Associated with Florence, Rome."
         },
         {
           "id": "PIETROALDOBRANDINI_SR",
           "nombre": "Pietro Aldobrandini",
           "slug": "pietro-aldobrandini-pietroaldobrandini-sr",
           "dinastia": "Aldobrandini",
-          "resumen": "Noble of the Aldobrandini dynasty. Their life was connected with Rome."
+          "resumen": "Noble of the Aldobrandini dynasty. Associated with Rome."
         },
         {
           "id": "FLAMINIAFERRACCI",
           "nombre": "Flaminia Ferracci",
           "slug": "flaminia-ferracci",
           "dinastia": "Ferracci",
-          "resumen": "Noble of the Ferracci dynasty. His trajectory is linked to Rome."
+          "resumen": "Noble of the Ferracci dynasty. Associated with Rome."
         },
         {
           "id": "MARCANTONIOBORGHESI",
           "nombre": "Marcantonio Borghese",
           "slug": "marcantonio-borghese",
           "dinastia": "Borghese",
-          "resumen": "The legal officer of the Borghese dynasty. His trajectory is linked to Rome."
+          "resumen": "The legal officer of the Borghese dynasty. Associated with Rome."
         },
         {
           "id": "FLAMINIAASTALLI",
           "nombre": "Flaminia Astalli",
           "slug": "flaminia-astalli",
           "dinastia": "Astalli",
-          "resumen": "Noble of the Astalli dynasty. His trajectory is linked to Rome."
+          "resumen": "Noble of the Astalli dynasty. Associated with Rome."
         },
         {
           "id": "ORTENSIABORGHESE",
           "nombre": "Ortensia Borghese",
           "slug": "ortensia-borghese",
           "dinastia": "Borghese",
-          "resumen": "Noble of the Borghese dynasty. Their life was connected with Rome."
+          "resumen": "Noble of the Borghese dynasty. Associated with Rome."
         },
         {
           "id": "FRANCESCOCAFFARELLI",
           "nombre": "Francesco Caffarelli",
           "slug": "francesco-caffarelli",
           "dinastia": "Caffarelli",
-          "resumen": "Noble of the Caffarelli dynasty. His trajectory is linked to Rome."
+          "resumen": "Noble of the Caffarelli dynasty. Associated with Rome."
         },
         {
           "id": "CAMILLABARBADORI",
           "nombre": "Camilla Barbadori",
           "slug": "camilla-barbadori",
           "dinastia": "Barbadori",
-          "resumen": "The Noble of the Barbadori Dynasty. His trajectory is linked to Florence, Rome."
+          "resumen": "The Noble of the Barbadori Dynasty. Associated with Florence, Rome."
         },
         {
           "id": "CARLOBARBERINI",
@@ -26242,7 +26242,7 @@
           "nombre": "Costanza Magalotti",
           "slug": "costanza-magalotti",
           "dinastia": "Magalotti",
-          "resumen": "Noble of the Magalotti dynasty. Their life was connected with Rome."
+          "resumen": "Noble of the Magalotti dynasty. Associated with Rome."
         },
         {
           "id": "TADDEOBARBERINI",
@@ -26263,28 +26263,28 @@
           "nombre": "Camillo Pamphilj",
           "slug": "camillo-pamphilj-camillopamphilj-sr",
           "dinastia": "Pamphilj",
-          "resumen": "Noble of the Pamphilj dynasty. Their life was connected with Rome."
+          "resumen": "Noble of the Pamphilj dynasty. Associated with Rome."
         },
         {
           "id": "MARIACANCELLIERI",
           "nombre": "Maria Cancellieri del Bufalo",
           "slug": "maria-cancellieri-del-bufalo",
           "dinastia": "Cancellieri del Buffalo",
-          "resumen": "Noble of the Cancerlieri Dynasty of the Buffalo. His trajectory is linked to Rome."
+          "resumen": "Noble of the Cancerlieri Dynasty of the Buffalo. Associated with Rome."
         },
         {
           "id": "PAMPHILIOPAMPHILJ",
           "nombre": "Pamfilio Pamphilj",
           "slug": "pamfilio-pamphilj",
           "dinastia": "Pamphilj",
-          "resumen": "Noble of the Pamphilj dynasty. His trajectory is linked to Rome."
+          "resumen": "Noble of the Pamphilj dynasty. Associated with Rome."
         },
         {
           "id": "OLIMPIAMAIDALCHINI",
           "nombre": "Olimpia Maidalchini",
           "slug": "olimpia-maidalchini",
           "dinastia": "Maidelchini",
-          "resumen": "Noble of the Maidalchini dynasty. His trajectory is linked to Rome."
+          "resumen": "Noble of the Maidalchini dynasty. Associated with Rome."
         },
         {
           "id": "CAMILLOPAMPHILJ",
@@ -26298,42 +26298,42 @@
           "nombre": "Olimpia Aldobrandini",
           "slug": "olimpia-aldobrandini",
           "dinastia": "Aldobrandini",
-          "resumen": "Princess of the Aldobrandini dynasty. Their life was connected with Rome."
+          "resumen": "Princess of the Aldobrandini dynasty. Associated with Rome."
         },
         {
           "id": "MARIOCHIGI",
           "nombre": "Mario Chigi",
           "slug": "mario-chigi",
           "dinastia": "Chigi",
-          "resumen": "Noble of the Chigi dynasty. His trajectory is linked to Siena, Rome."
+          "resumen": "Noble of the Chigi dynasty. Associated with Siena, Rome."
         },
         {
           "id": "LIVIOODESCALCHI",
           "nombre": "Livio Odescalchi",
           "slug": "livio-odescalchi-livioodescalchi",
           "dinastia": "Odescalchi",
-          "resumen": "Prince of the Odescalchi dynasty. His trajectory is linked to Rome."
+          "resumen": "Prince of the Odescalchi dynasty. Associated with Rome."
         },
         {
           "id": "ALFONSINAORSINI",
           "nombre": "Alfonsina Orsini",
           "slug": "alfonsina-orsini",
           "dinastia": "Orsini",
-          "resumen": "Noble of the Orsini dynasty. His trajectory is linked to Florence, Rome."
+          "resumen": "Noble of the Orsini dynasty. Associated with Florence, Rome."
         },
         {
           "id": "AGNESEMONTEFELTRO",
           "nombre": "Agnese da Montefeltro",
           "slug": "agnese-da-montefeltro",
           "dinastia": "Montefeltro",
-          "resumen": "Noble of the Montefeltro dynasty. His trajectory is linked to Urbino, Rome."
+          "resumen": "Noble of the Montefeltro dynasty. Associated with Urbino, Rome."
         },
         {
           "id": "CATERINACOLONNAMONTE",
           "nombre": "Caterina Colonna",
           "slug": "caterina-colonna",
           "dinastia": "Colonna",
-          "resumen": "Consort of the Colonna Dynasty. His trajectory is linked to Urbino, Rome."
+          "resumen": "Consort of the Colonna Dynasty. Associated with Urbino, Rome."
         }
       ],
       "eventos": [
@@ -26616,7 +26616,7 @@
           "nombre": "Bianca Lancia d’Agliano",
           "slug": "bianca-lancia-d-agliano",
           "dinastia": "Lancia",
-          "resumen": "Noble of the Lancia dynasty. His trajectory is linked to Sicily."
+          "resumen": "Noble of the Lancia dynasty. Associated with Sicily."
         },
         {
           "id": "CARLOS1ANJ",
@@ -26644,7 +26644,7 @@
           "nombre": "Antonia of Baux",
           "slug": "antonia-de-baux",
           "dinastia": "Baux",
-          "resumen": "Consort of the Baux dynasty. Their life was connected with Sicily."
+          "resumen": "Consort of the Baux dynasty. Associated with Sicily."
         },
         {
           "id": "JUANAINGSIC",
@@ -26672,7 +26672,7 @@
           "nombre": "Margaret of Sicily",
           "slug": "margarita-de-sicilia",
           "dinastia": "Hohenstaufen",
-          "resumen": "Hohenstaufen Dynasty Consort. His trajectory is linked to Sicily, Thuringia."
+          "resumen": "Hohenstaufen Dynasty Consort. Associated with Sicily, Thuringia."
         },
         {
           "id": "CONRADINOHOH",
@@ -27653,14 +27653,14 @@
           "nombre": "Elisabeth Farnese",
           "slug": "isabel-farnesio",
           "dinastia": "Phosphesium",
-          "resumen": "Farnesian Dynasty Consort. His career is linked to Spain, Parma."
+          "resumen": "Farnesian Dynasty Consort. Associated with Spain, Parma."
         },
         {
           "id": "MARIALUISAPARMA",
           "nombre": "Maria Louisa of Parma",
           "slug": "maria-luisa-de-parma",
           "dinastia": "Bourbon- Parma",
-          "resumen": "Consort of the Bourbon-Parma dynasty. His career is linked to Spain, Parma."
+          "resumen": "Consort of the Bourbon-Parma dynasty. Associated with Spain, Parma."
         },
         {
           "id": "PIERLUIGIFARNESE_DUCA",
@@ -27674,14 +27674,14 @@
           "nombre": "Girolama Orsini",
           "slug": "girolama-orsini",
           "dinastia": "Orsini",
-          "resumen": "Orsini Dynasty Consort. His trajectory is linked to Parma."
+          "resumen": "Orsini Dynasty Consort. Associated with Parma."
         },
         {
           "id": "MARIAPORTFARN",
           "nombre": "Maria of Portugal",
           "slug": "maria-de-portugal-mariaportfarn",
           "dinastia": "Aces",
-          "resumen": "Princess of the Avis Dynasty. Her career is linked to Portugal, Parma."
+          "resumen": "Princess of the Avis Dynasty. Associated with Portugal, Parma."
         },
         {
           "id": "ODOARDO1FARN",
@@ -27702,14 +27702,14 @@
           "nombre": "Odoardo Farnesio",
           "slug": "odoardo-farnesio",
           "dinastia": "Phosphesium",
-          "resumen": "Crown prince of the Farnesian dynasty. His trajectory is linked to Parma."
+          "resumen": "Crown prince of the Farnesian dynasty. Associated with Parma."
         },
         {
           "id": "DOROTHEASOPHIEFARN",
           "nombre": "Dorothea Sophie of Neuburg",
           "slug": "dorotea-sofia-de-neuburg",
           "dinastia": "Wittelsbach",
-          "resumen": "Wittelsbach Dynasty Consort. His trajectory is linked to Palatinate, Parma."
+          "resumen": "Wittelsbach Dynasty Consort. Associated with Palatinate, Parma."
         }
       ],
       "eventos": [
@@ -27856,14 +27856,14 @@
           "nombre": "Beatrice d’Este",
           "slug": "beatriz-de-este",
           "dinastia": "This one",
-          "resumen": "East Dynasty Consort. His trajectory is linked to Milan, Ferrara."
+          "resumen": "East Dynasty Consort. Associated with Milan, Ferrara."
         },
         {
           "id": "BARBAUSTRIA",
           "nombre": "Barbara of Austria",
           "slug": "barbara-de-austria",
           "dinastia": "Habsburg",
-          "resumen": "Habsburg Dynasty Consort. His career is linked to Ferrara, Austria."
+          "resumen": "Habsburg Dynasty Consort. Associated with Ferrara, Austria."
         },
         {
           "id": "HERC1ESTE",
@@ -27877,7 +27877,7 @@
           "nombre": "Eleanor of Naples",
           "slug": "leonor-de-napoles",
           "dinastia": "Stress",
-          "resumen": "The Confederate of the Statamara Dynasty. His trajectory is linked to Ferrara."
+          "resumen": "The Confederate of the Trastámara Dynasty. Associated with Ferrara."
         },
         {
           "id": "LUCRECIABORJA",
@@ -27891,7 +27891,7 @@
           "nombre": "Margherita Gonzaga",
           "slug": "margarita-gonzaga",
           "dinastia": "Gonzaga",
-          "resumen": "Gonzaga Dynasty Consort. His trajectory is linked to Ferrara."
+          "resumen": "Gonzaga Dynasty Consort. Associated with Ferrara."
         },
         {
           "id": "ALFONSO2ESTE",
@@ -27905,7 +27905,7 @@
           "nombre": "Renée of France",
           "slug": "renata-de-francia",
           "dinastia": "Valois- Orleans",
-          "resumen": "Consort of the Valois- Orleans dynasty. His career is linked to France, Ferrara."
+          "resumen": "Consort of the Valois- Orleans dynasty. Associated with France, Ferrara."
         },
         {
           "id": "ALFONSO1ESTE",
@@ -27933,7 +27933,7 @@
           "nombre": "Anna d’Este",
           "slug": "ana-de-este",
           "dinastia": "This one",
-          "resumen": "Duchess of the East Dynasty. Her career is linked to Ferrara, France, Guise."
+          "resumen": "Duchess of the East Dynasty. Associated with Ferrara, France, Guise."
         }
       ],
       "eventos": [
@@ -28079,14 +28079,14 @@
           "nombre": "Margaret of Bourbon",
           "slug": "margarita-de-borbon-margborb",
           "dinastia": "Dampierre",
-          "resumen": "Consort of the Dampierre Dynasty. His career is linked to Navarre, Champagne."
+          "resumen": "Consort of the Dampierre Dynasty. Associated with Navarre, Champagne."
         },
         {
           "id": "INESBEAU",
           "nombre": "Agnes of Beaujeu",
           "slug": "ines-de-beaujeu",
           "dinastia": "Beaujeu",
-          "resumen": "Beaujeu Dynasty Consort. His trajectory is linked to Champagne."
+          "resumen": "Beaujeu Dynasty Consort. Associated with Champagne."
         },
         {
           "id": "BLANART",
@@ -28271,7 +28271,7 @@
           "nombre": "Hedwig of Schleswig",
           "slug": "eduviges-de-schleswig",
           "dinastia": "Estridsen",
-          "resumen": "Consort of the Estridsen dynasty. Their life was connected with Denmark and Schleswig."
+          "resumen": "Consort of the Estridsen dynasty. Associated with Denmark and Schleswig."
         },
         {
           "id": "FRED4DEN",
@@ -28416,7 +28416,7 @@
             "SELIM2OSM",
             "CERVANTES"
           ],
-          "descripcion": "The fleet of the Holy League, led by Don Juan of Austria and composed mainly of forces of the Hispanic Monarchy, Venice and the Pontifical States, defeats the Ottoman army of Ali Bajá after hours of combat of galera against galera. The Ottoman center is falling apart, Uluç Ali is able to save part of its wing and thousands of combatants are killed, injured or held captive. The victory does not drive the Ottoman Empire out of the Mediterranean, but it destroys much of its combat fleet and becomes a huge political and symbolic victory of the coalition."
+          "descripcion": "The fleet of the Holy League, led by Don Juan of Austria and composed mainly of forces of the Hispanic Monarchy, Venice and the Pontifical States, defeats the Ottoman army of Ali Pasha after hours of combat of galera against galera. The Ottoman center is falling apart, Uluç Ali is able to save part of its wing and thousands of combatants are killed, injured or held captive. The victory does not drive the Ottoman Empire out of the Mediterranean, but it destroys much of its combat fleet and becomes a huge political and symbolic victory of the coalition."
         },
         {
           "id": "MESINA_1571",
@@ -28449,7 +28449,7 @@
             "ALIPASHALEPANTO",
             "ULUCALI"
           ],
-          "descripcion": "The League has Barbarigo on the left wing, Don Juan and Colonna in the center, Gianandrea Doria on the right and Álvaro de Bazán in front of the reserve. In front of them, Ali Bajá runs the Ottoman center and Uluç Ali sends the wing facing Doria."
+          "descripcion": "The League has Barbarigo on the left wing, Don Juan and Colonna in the center, Gianandrea Doria on the right and Álvaro de Bazán in front of the reserve. In front of them, Ali Pasha runs the Ottoman center and Uluç Ali sends the wing facing Doria."
         },
         {
           "id": "ALAS_LEPANTO_1571",
@@ -28855,14 +28855,14 @@
           "nombre": "María Enríquez de Luna",
           "slug": "maria-enriquez-de-luna",
           "dinastia": "Enríquez",
-          "resumen": "Enríquez Dynasty Consort. His trajectory is linked to Gandia."
+          "resumen": "Enríquez Dynasty Consort. Associated with Gandia."
         },
         {
           "id": "PIERLUIGIBORJA",
           "nombre": "Peter Louis de Borja",
           "slug": "pedro-luis-de-borja",
           "dinastia": "Borja",
-          "resumen": "Duke of the Borja Dynasty. His trajectory is linked to Valencia, Gandia."
+          "resumen": "Duke of the Borja Dynasty. Associated with Valencia, Gandia."
         }
       ],
       "eventos": [
@@ -31025,7 +31025,7 @@
           "nombre": "Matilda de Chester",
           "slug": "matilde-de-chester",
           "dinastia": "Chester",
-          "resumen": "Chester Dynasty Consort. His career is linked to Scotland, Huntingdon."
+          "resumen": "Chester Dynasty Consort. Associated with Scotland, Huntingdon."
         }
       ],
       "eventos": [],
@@ -32293,14 +32293,14 @@
           "nombre": "Alfonso of Aragon, Duke of Bisceglie",
           "slug": "alfonso-de-aragon",
           "dinastia": "Stress",
-          "resumen": "Duke of the Statamara dynasty. His career is linked to Naples, Bisceglie."
+          "resumen": "Duke of the Trastámara dynasty. Associated with Naples, Bisceglie."
         },
         {
           "id": "RODRIGOARAGONBORGIA",
           "nombre": "Rodrigo of Aragon",
           "slug": "rodrigo-de-aragon-y-borja",
           "dinastia": "Borja",
-          "resumen": "Noble of the Borja dynasty. His career is linked to Naples, Bisceglie."
+          "resumen": "Noble of the Borgia dynasty. Associated with Naples, Bisceglie."
         }
       ],
       "eventos": [],
@@ -32337,14 +32337,14 @@
           "nombre": "Lohenberg's V. Burcardo",
           "slug": "burcardo-v-de-hohenberg",
           "dinastia": "Hohenberg",
-          "resumen": "Count of the Hohenberg Dynasty. His trajectory is linked to Hohenberg."
+          "resumen": "Count of the Hohenberg Dynasty. Associated with Hohenberg."
         },
         {
           "id": "MECTTUB",
           "nombre": "Tube Mechthid",
           "slug": "mechthild-de-tubinga",
           "dinastia": "Tubinga",
-          "resumen": "Consort of the Tubinga Dynasty. His trajectory is linked to Hohenberg."
+          "resumen": "Consort of the Tubinga Dynasty. Associated with Hohenberg."
         }
       ],
       "eventos": [],
@@ -32381,14 +32381,14 @@
           "nombre": "Roffredo Caetani",
           "slug": "roffredo-caetani",
           "dinastia": "Caetani",
-          "resumen": "Noble of the Caetani dynasty. Their life was connected with Anagni."
+          "resumen": "Noble of the Caetani dynasty. Associated with Anagni."
         },
         {
           "id": "EMILIAPATRASSO",
           "nombre": "Emilia of Guarcino",
           "slug": "emilia-de-guarcino",
           "dinastia": "Patrazo",
-          "resumen": "Noble of the Patroso dynasty. His trajectory is linked to Anagni."
+          "resumen": "Noble of the Patroso dynasty. Associated with Anagni."
         }
       ],
       "eventos": [],
@@ -34476,7 +34476,7 @@
           "nombre": "Irene Combima Ducaina",
           "slug": "irene-comnena-ducaina",
           "dinastia": "Ducas",
-          "resumen": "Consort of the Comneno Ducas dynasty. His trajectory is linked to Epiro, Bulgaria."
+          "resumen": "Consort of the Comneno Ducas dynasty. Associated with Epiro, Bulgaria."
         }
       ],
       "eventos": [],
@@ -34635,7 +34635,7 @@
           "nombre": "Costanza da Varano",
           "slug": "costanza-da-varano",
           "dinastia": "Male",
-          "resumen": "Consort of the Varano Dynasty. His trajectory is linked to Camerino, Pesaro."
+          "resumen": "Consort of the Varano Dynasty. Associated with Camerino, Pesaro."
         }
       ],
       "eventos": [],

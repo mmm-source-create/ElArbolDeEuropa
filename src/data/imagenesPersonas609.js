@@ -73,7 +73,7 @@ export const PORTRAITS_609 = {
   },
   "HENRY2CYPRUS": {
     "archivo": "/personas-img/HENRY2CYPRUS_609.webp",
-    "encuadre": "72% 25%",
+    "encuadre": "50% 50%",
     "tipo": "Moneda contemporánea",
     "obra": "Gros de plata con el rey entronizado",
     "autor": "Ceca real de Chipre",
@@ -87,7 +87,7 @@ export const PORTRAITS_609 = {
   },
   "JAMES2CYPRUS": {
     "archivo": "/personas-img/JAMES2CYPRUS_609.webp",
-    "encuadre": "25% 50%",
+    "encuadre": "50% 50%",
     "tipo": "Moneda contemporánea",
     "obra": "Gros de plata con el rey a caballo",
     "autor": "Ceca real de Chipre",
