@@ -4,7 +4,7 @@ import {Star} from 'lucide-react';
 
 export default function SiteFooter({compact=false,onOpenStats,onReport,locale='es'}) {
   const en=locale==='en',tr=(es,english)=>en?english:es;
-  const explore=en?[['Home','/en'],['People','/en/people'],['A–Z index','/en/people/index'],['Dynasties','/en/dynasties'],['Territories','/en/territories'],['Stories','/en/stories'],['Challenge','/en/challenge']]:[['Inicio','/es'],['Personas','/es/personas'],['Índice A–Z','/es/personas/indice'],['Dinastías','/es/dinastias'],['Territorios','/es/territorios'],['Historias','/es/historias'],['Desafío','/es/desafio']];
+  const explore=en?[['Home','/en'],['People','/en/people'],['A–Z index','/en/people/a-z'],['Dynasties','/en/dynasties'],['Territories','/en/territories'],['Stories','/en/stories'],['Challenge','/en/challenge']]:[['Inicio','/es'],['Personas','/es/personas'],['Índice A–Z','/es/personas/indice'],['Dinastías','/es/dinastias'],['Territorios','/es/territorios'],['Historias','/es/historias'],['Desafío','/es/desafio']];
   const project=en?[['About the project','/en/about'],['Sources and methodology','/en/methodology'],['Acknowledgements','/en/acknowledgements'],['Licences','/en/licences'],['Privacy','/en/privacy']]:[['Acerca del proyecto','/es/proyecto'],['Fuentes y metodología','/es/fuentes'],['Agradecimientos','/es/agradecimientos'],['Licencias','/es/licencias'],['Privacidad','/es/privacidad']];
   return <footer className={`site-footer${compact?' is-compact':''}`}>
     <div className="site-footer-inner">

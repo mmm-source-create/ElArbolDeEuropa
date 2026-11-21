@@ -61,7 +61,7 @@ const historiaUrls = HISTORIAS
 // 6.0.10: homes without the trailing slash (Cloudflare redirects /en/ to /en).
 const englishUrls = englishPaths().map((p) => (p === "/en/" ? "/en" : p));
 
-const catalogoUrls = ["/es/personas", "/es/personas/indice", "/es/dinastias", "/es/territorios", "/es/historias", "/en/people/index"];
+const catalogoUrls = ["/es/personas", "/es/personas/indice", "/es/dinastias", "/es/territorios", "/es/historias", "/en/people/a-z"];
 const proyectoUrls = ["/es/proyecto", "/es/fuentes", "/es/licencias", "/es/agradecimientos"];
 const experienciaUrls = ["/es/desafio"];
 

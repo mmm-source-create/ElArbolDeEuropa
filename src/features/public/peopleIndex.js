@@ -1,7 +1,7 @@
 // 6.0.10: A–Z people index helpers, shared by the page and the tests.
 import {normalizarBusquedaPublica} from '../../domain/people/personLabels.js';
 
-export const PEOPLE_INDEX_PATHS = {es: '/es/personas/indice', en: '/en/people/index'};
+export const PEOPLE_INDEX_PATHS = {es: '/es/personas/indice', en: '/en/people/a-z'};
 
 export const indexLetter = name => {
   const letter = normalizarBusquedaPublica(name).charAt(0).toUpperCase();

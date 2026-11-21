@@ -56,7 +56,7 @@ export const CATALOG_META={
 export function catalogMeta(slug,data) {
  if(slug==='inicio')return HOME_META;
  if(slug==='indice')return {title:`Índice de personas de la A a la Z — ${SITE_NAME}`,description:`Las ${data.items.length} personas del Atlas por orden alfabético, con sus fechas y su casa.`,path:'/es/personas/indice'};
- if(slug==='index-en')return {title:'People from A to Z — The Tree of Europe',description:`All ${data.items.length} people in the Atlas in alphabetical order, with their dates and house.`,path:'/en/people/index'};
+ if(slug==='index-en')return {title:'People from A to Z — The Tree of Europe',description:`All ${data.items.length} people in the Atlas in alphabetical order, with their dates and house.`,path:'/en/people/a-z'};
  if(CATALOG_META[slug])return CATALOG_META[slug];
  throw new Error(`Catálogo desconocido: ${slug}`);
 }
