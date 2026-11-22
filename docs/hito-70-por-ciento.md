@@ -1,6 +1,6 @@
 # Hacia el 70 %: datos documentados y paridad entre español e inglés
 
-Estado tras la 6.0.18 (22 de noviembre de 2026) y plan para el siguiente hito: **el 70 % de las afirmaciones documentadas con una fuente fiable y concreta, y la versión inglesa con la misma calidad y el mismo contenido que la española.**
+Estado tras la 6.0.19 (22 de noviembre de 2026) y plan para el siguiente hito: **el 70 % de las afirmaciones documentadas con una fuente fiable y concreta, y la versión inglesa con la misma calidad y el mismo contenido que la española.**
 
 ## 1. Datos documentados
 
@@ -8,11 +8,13 @@ Estado tras la 6.0.18 (22 de noviembre de 2026) y plan para el siguiente hito: *
 
 El registro de afirmaciones (`src/evidence/claims.js`) cuenta fechas, padres, cónyuges, gobiernos y sucesiones de cada persona.
 
-| | 6.0.15 | 6.0.16 | 6.0.17 | 6.0.18 |
-|---|---:|---:|---:|---:|
-| Afirmaciones | 13 134 | 13 134 | 13 134 | 13 134 |
-| Documentadas con fuente | 5 248 (40,0 %) | 5 977 (45,5 %) | 6 803 (51,8 %) | 6 842 (52,1 %) |
-| Pendientes de revisión | 7 195 | 6 466 | 5 640 | 5 601 |
+| | 6.0.15 | 6.0.16 | 6.0.17 | 6.0.18 | 6.0.19 |
+|---|---:|---:|---:|---:|---:|
+| Afirmaciones | 13 134 | 13 134 | 13 134 | 13 134 | 13 134 |
+| Documentadas con fuente | 5 248 (40,0 %) | 5 977 (45,5 %) | 6 803 (51,8 %) | 6 842 (52,1 %) | 6 847 (52,1 %) |
+| Pendientes de revisión | 7 195 | 6 466 | 5 640 | 5 601 | 5 595 |
+
+La 6.0.19 añade 23 límites precisos de 14 mandatos y cuatro relaciones familiares con fuentes propias. El balance es de **6 847 documentadas, 458 aproximadas, 59 discutidas, 175 inferidas y 5 595 pendientes** (13 134 en total). Las precisiones de mandatos ya documentados no se cuentan como nuevas afirmaciones.
 
 Para llegar al 70 % hay que documentar unas **2 350 afirmaciones más**.
 

@@ -1,4 +1,5 @@
 import {V605_REVIEWS} from './v605Reviews.js';
+import {withSuccessionDates619} from './successionDates619.js';
 import {POLISH_NEW_REVIEWS} from './polishNewReviews.js';
 import {OCTOBER_50_REVIEWS} from './october50Reviews.js';
 import {BELTRANEJA_REVIEWS} from './beltranejaReviews.js';
@@ -234,7 +235,7 @@ const identityReview = (certainty, source, note, extra = {}) => ({
   certainty, sources: [source], note, reviewedAt: '2026-10-11', editor: 'El Árbol de Europa', ...extra,
 });
 
-export const CLAIM_REVIEWS = Object.freeze({
+export const CLAIM_REVIEWS = Object.freeze(withSuccessionDates619({
   ...V605_REVIEWS,
   ...POLISH_NEW_REVIEWS,
   ...OCTOBER_50_REVIEWS,
@@ -434,7 +435,7 @@ export const CLAIM_REVIEWS = Object.freeze({
   ...BRANDENBURG_PRUSSIA_REVIEWS,
   ...GERMAN_PRINCES_REVIEWS,
   ...ROYAL_COVERAGE_REVIEWS,
-});
+}));
 
 export const EDITORIAL_HISTORY = Object.freeze([
   {id:'v58-medieval-balkans',scope:'all',date:'2026-10-12',editor:'El Árbol de Europa',changeEn:"Bosnia, Wallachia and Moldavia receive separate medieval series and revised interior areas; seven rulers are added with sources for each term of office.",reasonEn:"Missing geometry is distinguished from missing authority. Disputed successions do not imply uniform control, and maps before 1400 do not automatically inherit later borders.",change:'Bosnia, Valaquia y Moldavia reciben series medievales independientes y superficies interiores revisadas; se incorporan siete gobernantes con fuentes por mandato.',reason:'Se distingue la ausencia de geometría de la ausencia de autoridad. Las sucesiones disputadas no dan dominio uniforme y los cortes anteriores a 1400 no heredan automáticamente las fronteras posteriores.'},

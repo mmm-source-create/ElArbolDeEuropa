@@ -1,4 +1,5 @@
 import {V603_REFERENCES} from './v603People.js';
+import {SUCCESSION_SOURCES_619} from '../evidence/successionDates619.js';
 import {V602_REFERENCES} from './v602References.js';
 import {POLISH_REFERENCES} from './polishReferences.js';
 import {ROSES_DYNASTY_SOURCES} from './dinastias/dos-rosas.js';
@@ -36,6 +37,7 @@ const DOGES_1400_1605 = [
 // Bibliography shared by the public site, Atlas and generated entity pages.
 // A territorial reference supplies context; only explicit person IDs assign a biography.
 export const SOURCES = [
+ ...SUCCESSION_SOURCES_619,
  {titulo:'Deutsche Biographie · Götz von Berlichingen',url:'https://www.deutsche-biographie.de/sfz3943.html',grupo:'Historia cultural y política',territorios:['Sacro Imperio'],personas:['GOTZBERLICHINGEN']},
  ...Object.entries(V603_REFERENCES).flatMap(([id,refs])=>refs.map(f=>({...f,grupo:'Historia cultural y política',territorios:[],personas:[id]}))),
  ...Object.entries(V602_REFERENCES).flatMap(([id,refs])=>refs.map(f=>({...f,grupo:'Historia cultural y política',territorios:[],personas:[id]}))),

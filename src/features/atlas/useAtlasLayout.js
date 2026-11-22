@@ -1,5 +1,16 @@
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useEffect, useState, useSyncExternalStore } from "react";
 import { PANELES_STORAGE_KEY } from "./atlasModel.js";
+import { MOBILE_ATLAS_QUERY, readPanelLayout } from './panelLayout.js';
+
+const MOBILE_PANELS_KEY = `${PANELES_STORAGE_KEY}.mobile`;
+const isMobile = () => typeof window !== 'undefined' && Boolean(window.matchMedia?.(MOBILE_ATLAS_QUERY).matches);
+const subscribeViewport = (notify) => {
+  const media = window.matchMedia?.(MOBILE_ATLAS_QUERY);
+  media?.addEventListener('change', notify);
+  return () => media?.removeEventListener('change', notify);
+};
+const serverViewport = () => false;
+export const useAtlasMobile = () => useSyncExternalStore(subscribeViewport, isMobile, serverViewport);
 
 const ATLAS_LAYOUT_STORAGE_KEY = "eade.atlasLayout.v24";
 const DEFAULT_FILTER_SECTIONS = Object.freeze({
@@ -33,20 +44,17 @@ const seccionesGuardadas = (guardado = {}, defectos) => Object.fromEntries(Objec
 
 // Paneles visibles y secciones abiertas del Atlas, recordados entre visitas.
 export function useAtlasLayout(savedSession, atlasIds) {
-  const [panelesVisibles, setPanelesVisibles] = useState(() => {
+  const mobile = useAtlasMobile();
+  const [panelLayouts, setPanelLayouts] = useState(() => {
     const base = savedSession?.panelesVisibles ?? { filtros: atlasIds === null, biografia: true, cronologia: true };
-    if (typeof window === "undefined") return base;
-    try {
-      const guardado = JSON.parse(window.localStorage.getItem(PANELES_STORAGE_KEY) || "null");
-      return {
-        filtros: typeof guardado?.filtros === "boolean" ? guardado.filtros : base.filtros,
-        biografia: typeof guardado?.biografia === "boolean" ? guardado.biografia : base.biografia,
-        cronologia: typeof guardado?.cronologia === "boolean" ? guardado.cronologia : base.cronologia,
-      };
-    } catch {
-      return base;
-    }
+    let storage;
+    try { storage = window.localStorage; } catch { /* Private browsing. */ }
+    return {
+      desktop: readPanelLayout(storage, PANELES_STORAGE_KEY, base),
+      mobile: readPanelLayout(storage, MOBILE_PANELS_KEY, {filtros: false, biografia: true, cronologia: false}),
+    };
   });
+  const panelesVisibles = panelLayouts[mobile ? 'mobile' : 'desktop'];
   const [filterSectionsOpen, setFilterSectionsOpen] = useState(() => seccionesGuardadas(leerLayoutAtlas()?.filterSectionsOpen, DEFAULT_FILTER_SECTIONS));
   const [bioSectionsOpen, setBioSectionsOpen] = useState(() => seccionesGuardadas(leerLayoutAtlas()?.bioSectionsOpen, DEFAULT_BIO_SECTIONS));
 
@@ -65,15 +73,18 @@ export function useAtlasLayout(savedSession, atlasIds) {
   useEffect(() => {
     if (typeof window === "undefined") return;
     try {
-      window.localStorage.setItem(PANELES_STORAGE_KEY, JSON.stringify(panelesVisibles));
+      window.localStorage.setItem(PANELES_STORAGE_KEY, JSON.stringify(panelLayouts.desktop));
+      window.localStorage.setItem(MOBILE_PANELS_KEY, JSON.stringify(panelLayouts.mobile));
     } catch {
       // La disposición puede seguir funcionando aunque localStorage esté bloqueado.
     }
-  }, [panelesVisibles]);
+  }, [panelLayouts]);
 
   const alternarPanelAuxiliar = useCallback((panel) => {
-    setPanelesVisibles((actuales) => ({ ...actuales, [panel]: !actuales[panel] }));
-  }, []);
+    if (!['filtros', 'biografia', 'cronologia'].includes(panel)) return;
+    const device = mobile ? 'mobile' : 'desktop';
+    setPanelLayouts(layouts => ({...layouts, [device]: {...layouts[device], [panel]: !layouts[device][panel]}}));
+  }, [mobile]);
 
   const alternarSeccionFiltro = useCallback((seccion) => {
     setFilterSectionsOpen((actuales) => ({ ...actuales, [seccion]: !actuales[seccion] }));

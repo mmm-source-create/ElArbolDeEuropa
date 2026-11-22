@@ -116,6 +116,8 @@ button.public-door-card { width: 100%; font: inherit; }
 .public-reigns > strong { margin-bottom: 2px; color: #4d453b; font-size: var(--fs-2xs, 10px); }
 .public-reigns > div { padding: 6px 8px; display: grid; grid-template-columns: minmax(0,1fr) auto; gap: 7px; border-radius: var(--r-sm, 6px); background: #f5eee0; color: #675c4d; font-size: var(--fs-2xs, 10px); }
 .public-reigns small { grid-column: 1/-1; color: var(--eade-gold); }
+.public-reigns b { max-width: 30ch; text-align: right; }
+@media (max-width: 600px) { .public-reigns > div > b { grid-column: 1/-1; max-width: none; text-align: left; } }
 .public-relation-row { display: grid; grid-template-columns: 90px minmax(0,1fr); gap: 10px; padding: 8px 0; border-top: 1px solid #ebe3d4; }
 .public-relation-row > strong { color: var(--eade-gold); font-size: var(--fs-2xs, 10px); text-transform: uppercase; letter-spacing: .45px; }
 .public-relation-row > div { display: flex; flex-wrap: wrap; gap: 5px; }

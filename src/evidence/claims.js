@@ -6,6 +6,7 @@ import {ACCESOS_CORONAS} from '../content/coronas/index.js';
 import {CLAIM_REVIEWS, EDITORIAL_HISTORY, PILOT_PERSON_IDS} from './reviewRecords.js';
 import {authorityParentReview} from './authorityReviews.js';
 import {SOURCES} from '../content/sources.js';
+import {governmentDateRange, governmentCalendarLabel} from '../domain/time/governmentDates.js';
 const SOURCE_TITLES = new Map(SOURCES.map(source => [source.url, source.titulo]));
 const GENERAL_URLS = new Set(SOURCES.filter(source => source.general).map(source => source.url));
 export {CLAIM_REVIEWS, EDITORIAL_HISTORY, PILOT_PERSON_IDS};
@@ -54,7 +55,12 @@ export function personClaims(person, reviews = CLAIM_REVIEWS) {
   for (const id of conyugesDe(person)) add(`spouse:${id}`,'Matrimonio o vínculo conyugal',id);
   for (const government of gobiernosDe(person)) {
     const key = [government.territorio, government.desde, government.hasta, government.titulo].join(':');
-    add(`government:${key}`,'Gobierno',government,interval(government.desde,government.hasta));
+    add(`government:${key}`,'Gobierno',government,{
+      ...interval(government.desde,government.hasta),
+      ...(government.desdeFecha ? {fromDate:government.desdeFecha} : {}),
+      ...(government.hastaFecha ? {toDate:government.hastaFecha} : {}),
+      ...(government.calendarioFechas ? {calendar:government.calendarioFechas} : {}),
+    });
   }
   for (const succession of RELEVOS.filter(item => item.sucesor?.persona === person.id)) {
     add(`succession:${succession.id}`,'Sucesión',succession,interval(succession.sucesor.desde),succession.explicacion,successionReview(succession));
@@ -124,7 +130,7 @@ export function citationText(claim, personName, locale = 'es', personNameById = 
   const english = locale === 'en';
   const subject = personName || claim.subject.id;
   const value = typeof claim.value === 'object'
-    ? `${claim.field === 'Sucesión' ? (english ? 'Succession' : 'Sucesión') : claim.value.titulo || (english ? 'Government' : 'Gobierno')} ${english ? 'in' : 'en'} ${claim.value.territorio}, ${claim.interval.from ?? '?'}${claim.interval.to !== claim.interval.from ? `–${claim.interval.to ?? '?'}` : ''}`
+    ? `${claim.field === 'Sucesión' ? (english ? 'Succession' : 'Sucesión') : claim.value.titulo || (english ? 'Government' : 'Gobierno')} ${english ? 'in' : 'en'} ${claim.value.territorio}, ${claim.field === 'Gobierno' ? governmentDateRange(claim.value,locale) : claim.interval.from ?? '?'}${claim.field === 'Gobierno' && governmentCalendarLabel(claim.value,locale) ? ` (${governmentCalendarLabel(claim.value,locale)})` : ''}`
     : ['Padre','Madre','Matrimonio o vínculo conyugal'].includes(claim.field)
       ? personNameById(claim.value) || String(claim.value) : claim.timeLabel || String(claim.value);
   const field = english ? ({Nacimiento:'birth',Fallecimiento:'death',Padre:'father',Madre:'mother','Matrimonio o vínculo conyugal':'marriage or partnership',Gobierno:'government',Sucesión:'succession'}[claim.field] || claim.field.toLowerCase()) : claim.field.toLowerCase();

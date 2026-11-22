@@ -100,14 +100,9 @@ test('Sucesión activa el filtro de pretensiones después de hidratar',async()=>
   assert.equal(node.querySelector('.site-nav [aria-current="page"]').textContent,'Territorios');
  });
 });
-test('el aviso móvil respeta la sesión sin desajustar la hidratación',async()=>{
+test('las páginas de lectura no muestran el aviso del Atlas, con o sin preferencia de sesión',async()=>{
  await hydrated(person,node=>assert.equal(node.querySelector('.site-screen-notice'),null),{dismissed:true});
- await hydrated(person,async node=>{
-  assert.ok(node.querySelector('.site-screen-notice'));
-  await act(async()=>node.querySelector('[aria-label="Cerrar aviso"]').click());
-  assert.equal(node.querySelector('.site-screen-notice'),null);
-  assert.equal(window.sessionStorage.getItem('eade:screen-notice-dismissed'),'1');
- });
+ await hydrated(person,node=>assert.equal(node.querySelector('.site-screen-notice'),null));
 });
 test('el enlace a una unión abre el desplegable tras la hidratación',async()=>{
  const page=structuredClone(territory);
