@@ -1,3 +1,4 @@
+import {governmentDateRange, governmentCalendarLabel} from '../../../domain/time/governmentDates.js';
 import {isNamedDynasty} from '../../../data/dynastyNames.js';
 import {governmentSummary} from '../../../domain/government/governmentPresentation.js';
 import {gobiernosDe, territoriosDe} from '../../../domain/genealogy/personAccessors.js';
@@ -250,7 +251,7 @@ export default function AtlasBiographyPanel({vm, bioMobileOpen, bioScrollRef, bi
                         return (
                           <React.Fragment key={`${reinado.territorio}-${reinado.desde}-${reinado.hasta}-${index}`}>
                             <dt>{term(reinado.titulo)} · {term(reinado.territorio)} · {term(etiquetaClaseGobierno(personaBio, reinado))}</dt>
-                            <dd>{reinado.desde} – {reinado.hasta}{tipo ? ` (${term(tipo)})` : ""}</dd>
+                            <dd>{governmentDateRange(reinado,locale)}{governmentCalendarLabel(reinado,locale) && <small> · {governmentCalendarLabel(reinado,locale)}</small>}{tipo ? ` (${term(tipo)})` : ""}</dd>
                           </React.Fragment>
                         );
                       })}

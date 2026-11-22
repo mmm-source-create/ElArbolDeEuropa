@@ -6,7 +6,7 @@ import {PROFILE_LABELS,PROFILE_NOTES,translatedProfileText} from '../profileVoca
 
 const claimsCache=new WeakMap();
 function localizeClaims() {
- if(!claimsCache.has(this))claimsCache.set(this,personClaims(this).map(claim=>({...claim,note:this.englishNotes[claim.note]||translatedProfileText(claim.note,undefined,claim),alternatives:(claim.alternatives||[]).map(text=>this.englishNotes[text]||translatedProfileText(text,undefined,claim)),sources:claim.sources.map(source=>({...source,title:englishSourceTitle(source.title),locator:translatedProfileText(source.locator,undefined,claim)}))})));
+ if(!claimsCache.has(this))claimsCache.set(this,personClaims(this).map(claim=>({...claim,note:claim.noteEn||this.englishNotes[claim.note]||translatedProfileText(claim.note,undefined,claim),alternatives:(claim.alternatives||[]).map(text=>this.englishNotes[text]||translatedProfileText(text,undefined,claim)),sources:claim.sources.map(source=>({...source,title:source.titleEn||englishSourceTitle(source.title),locator:source.locatorEn||translatedProfileText(source.locator,undefined,claim)}))})));
  return claimsCache.get(this);
 }
 const SPANISH_DISPLAY=Symbol.for('eade.spanish-display');

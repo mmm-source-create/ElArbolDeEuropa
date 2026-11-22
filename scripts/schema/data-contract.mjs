@@ -1,5 +1,6 @@
 // V5 source contract. This validates data; it never repairs or normalizes it.
 import {canonicalJson, digest} from './canonical.mjs';
+import {validGovernmentDate} from '../../src/domain/time/governmentDates.js';
 const GOVERNMENT_CONDITIONS = ['efectivo', 'rama', 'corregente', 'rival', 'jure uxoris', 'titular', 'disputado', 'pretensión', 'regencia', 'ocupación', 'gobierno delegado'];
 const GOVERNMENT_CLASSES = ['ducado', 'señorío', 'condado', 'reinado', 'margraviato', 'imperio', 'gran_ducado', 'gobierno', 'pontificado', 'archiducado', 'regencia', 'principado', 'vizcondado', 'marquesado', 'landgraviato', 'electorado', 'voivodato', 'estatuderato', 'despotado', 'gran_principado', 'zarato', 'sultanato', 'banato', 'emirato', 'califato', 'judicado'];
 const TERRITORY_CLASSES = [...GOVERNMENT_CLASSES, 'reino', 'grupo_historico', 'territorio_compuesto', 'republica', 'ciudad', 'grupo_geografico', 'burgraviato', 'estado_pontificio', 'corona_compuesta', 'union_compuesta'];
@@ -28,6 +29,8 @@ const GOVERNMENT_SCHEMA = object({
   clase: enumeration(GOVERNMENT_CLASSES), condicion: enumeration(GOVERNMENT_CONDITIONS),
   nota: optional(prose), ambito: optional(text), soberano: optional(text),
   controlDisputado: optional(array(years)),
+  desdeFecha: optional(text), hastaFecha: optional(text),
+  calendarioFechas: optional(enumeration(['juliano', 'gregoriano'])),
 });
 const PERSON_SCHEMA = object({
   id: text, nombre: text, titulo: text, reinos: array(text),
@@ -170,6 +173,21 @@ export function validateContracts({people, territories, mapData, locationIds, le
       if (governmentIds.has(key)) add('DUPLICATE_GOVERNMENT', key, 'Dos mandatos comparten la misma identidad de evidencia');
       governmentIds.add(key);
       interval(government, 'desde', 'hasta', key);
+      for (const [field, annual] of [['desdeFecha', 'desde'], ['hastaFecha', 'hasta']]) {
+        if (!own(government, field)) continue;
+        if (!validGovernmentDate(government[field], government.calendarioFechas)) {
+          add('GOVERNMENT_DATE', `${key}.${field}`, 'Fecha histórica inválida o calendario ausente');
+        } else if (Number(government[field].slice(0, 4)) !== government[annual]) {
+          add('GOVERNMENT_DATE_YEAR', `${key}.${field}`, 'La fecha precisa contradice el límite anual');
+        }
+        const sources = claimReviews[key]?.dateSources?.[field];
+        if (!Array.isArray(sources) || !sources.some(s => {
+          try { return s.title?.trim() && s.locator?.trim() && s.locatorEn?.trim() && ['https:', 'http:'].includes(new URL(s.url).protocol); }
+          catch { return false; }
+        })) add('GOVERNMENT_DATE_EVIDENCE', `${key}.${field}`, 'Cada límite preciso necesita fuente y localizador bilingüe propios');
+      }
+      if (government.desdeFecha && government.hastaFecha && government.desdeFecha > government.hastaFecha)
+        add('GOVERNMENT_DATE_ORDER', key, 'Fechas precisas invertidas');
       if (!own(territories, government.territorio)) add('MISSING_TERRITORY', key, `Entidad inexistente: ${government.territorio}`);
       if (!person.reinos?.includes(government.territorio)) add('GOVERNMENT_ASSOCIATION', key, 'El gobierno no figura entre los territorios asociados');
       if (government.soberano && !ids.has(government.soberano)) add('MISSING_PERSON', `${key}.soberano`, 'Soberano inexistente');

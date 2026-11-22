@@ -62,7 +62,7 @@ export default function AtlasFiltersPanel({vm, filterCount, filtrosCompactosRest
   const en=locale==='en',tr=(es,english)=>en?english:es;
   const territoryModes=en?TERRITORY_FILTER_MODES.map((option,index)=>({...option,label:['Associated','Ruling in the selected year'][index]})):TERRITORY_FILTER_MODES;
   return (
-    <aside className="workspace-sidebar">
+    <aside id="atlas-filters-panel" className="workspace-sidebar">
           <section className="panel workspace-fixed-panel workspace-filter-panel">
             <div className="panel-head panel-head-static">
               <span className="panel-title sk" style={{"--sk-index":3}}>{tr('Filtros','Filters')}</span>

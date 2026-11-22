@@ -1,3 +1,4 @@
+import {governmentDateRange, governmentCalendarLabel} from '../../domain/time/governmentDates.js';
 import {collectionLabels} from '../stories/storyThemes.js';
 import {englishLabel} from '../english/presentationLabels.js';
 import {isNamedDynasty} from '../../data/dynastyNames.js';
@@ -353,5 +354,5 @@ function RecordedGovernments({persona,claims=[],locale='es'}) {
   const en=locale==='en';
   const gobiernos = gobiernosDe(persona);
   if(!gobiernos.length)return null;
-  return <div className="public-reigns"><strong>{en?'Recorded governments and reigns':'Gobiernos y reinados registrados'}</strong>{gobiernos.map((r,index)=>{const claim=claims.find(c=>c.field==='Gobierno'&&c.value.territorio===r.territorio&&c.interval.from===r.desde&&c.interval.to===r.hasta&&c.value.titulo===r.titulo);return <div key={`${r.territorio}-${r.desde}-${index}`}><span>{profileLabel(persona,r.titulo)} · {profileLabel(persona,r.territorio)|| (en?'Territory':'Territorio')} · {profileLabel(persona,etiquetaClaseGobierno(persona,r))} {claim&&<EvidenceMark claim={claim} locale={locale}/>}</span><b>{r.desde??'?'}–{r.hasta??'?'}</b>{r.condicion&&<small>{profileLabel(persona,r.condicion)}</small>}{en&&r.nota&&<small>{profileNote(persona,r.nota)}</small>}</div>;})}</div>;
+  return <div className="public-reigns"><strong>{en?'Recorded governments and reigns':'Gobiernos y reinados registrados'}</strong>{gobiernos.map((r,index)=>{const claim=claims.find(c=>c.field==='Gobierno'&&c.value.territorio===r.territorio&&c.interval.from===r.desde&&c.interval.to===r.hasta&&c.value.titulo===r.titulo);return <div key={`${r.territorio}-${r.desde}-${index}`}><span>{profileLabel(persona,r.titulo)} · {profileLabel(persona,r.territorio)|| (en?'Territory':'Territorio')} · {profileLabel(persona,etiquetaClaseGobierno(persona,r))} {claim&&<EvidenceMark claim={claim} locale={locale}/>}</span><b>{governmentDateRange(r,locale)}</b>{governmentCalendarLabel(r,locale)&&<small>{governmentCalendarLabel(r,locale)}</small>}{r.condicion&&<small>{profileLabel(persona,r.condicion)}</small>}{en&&r.nota&&<small>{profileNote(persona,r.nota)}</small>}</div>;})}</div>;
 }

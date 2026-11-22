@@ -223,6 +223,8 @@
     font: 400 var(--fs-sm, 12px)/1.45 var(--eade-sans);
   }
   .site-screen-notice p { margin: 0; min-width: 0; }
+  .site-screen-notice details { flex: 1; min-width: 0; }
+  .site-screen-notice summary { cursor: pointer; min-height: 32px; align-content: center; }
   .site-screen-notice button {
     flex: 0 0 36px;
     height: 36px;

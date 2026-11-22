@@ -1,0 +1,70 @@
+{
+  "version": "6.0.19",
+  "date": "2026-11-22",
+  "baseCommit": "2c05dcb0f9a6b3ec364173538396a4135a302ec1",
+  "people": 2814,
+  "datedMandates": 14,
+  "peopleWithDatedMandates": 12,
+  "preciseBoundaries": 23,
+  "newRelationshipReviews": 4,
+  "claimCoverage": {
+    "total": 13134,
+    "documented": 6847,
+    "approximate": 458,
+    "disputed": 59,
+    "inferred": 175,
+    "pending": 5595
+  },
+  "verification": {
+    "completeTests": {
+      "passed": 824,
+      "failed": 0
+    },
+    "atlasIntegrationTests": {
+      "passed": 5,
+      "failed": 0
+    },
+    "staticPages": 9645,
+    "ssgErrors": 0,
+    "realStaticSamplePages": 20,
+    "hydrationTests": {
+      "passed": 30,
+      "failed": 0
+    },
+    "repositorySecurityIssues": 0,
+    "dependencyAudit": "no unaccepted high/critical advisories; existing GHSA-fc5q-39xc-vjpf exception retained",
+    "regression": {
+      "unchangedAnnualMosaics": 601,
+      "unchangedGeometry": true,
+      "unchangedTreeLayout": true,
+      "unchangedRoutes": true,
+      "unchangedAuthorityCounts": true,
+      "changedPeople": 12,
+      "changedPublicDataPages": 284
+    },
+    "browser": {
+      "widths": [
+        320,
+        390,
+        1280
+      ],
+      "overflow": false,
+      "mobileFilterWidth": 364,
+      "mobileFilterContentWidth": 364,
+      "resizedStageHeight": 490,
+      "collapsedProfileHeight": 46,
+      "consoleErrors": 0,
+      "profileTabsScrollVerified": true
+    }
+  },
+  "cloudflarePackage": {
+    "generated": true,
+    "files": 18517,
+    "bytes": 723786885,
+    "deployed": false
+  },
+  "screenshots": [
+    "outputs/6.0.19/atlas-mobile-es.jpg",
+    "outputs/6.0.19/dates-mobile-en.jpg"
+  ]
+}

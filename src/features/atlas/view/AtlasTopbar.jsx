@@ -3,9 +3,11 @@ import {slugPublico} from '../../../domain/people/personLabels.js';
 import {TL_MIN, TL_MAX} from '../timelineUtils.js';
 import {translatedEquivalent} from '../../english/routes.js';
 import {englishLabel} from '../../english/v6/atlasPresentation.js';
+import {useState} from 'react';
 
 // Barra de trabajo: búsqueda, año, filtros activos y modos.
 export default function AtlasTopbar({vm, searchOpen, searchResults, setSearchOpen}) {
+  const [playbackOpen, setPlaybackOpen] = useState(false);
   const {actualizarAnioDesdeRango, alternarReproduccionHistoria, anioGlobal, anioInput, atlasScene, confirmarAnioEscrito, currentSearchIndex, gobernantesActivosEnAnio, irACoincidencia, locale, modoTrabajo, moverAnioHistoria, personasVivasEnAnio, positions, query, queryTrim, reproduciendoHistoria, restablecerAnio, searchMatchIds, seleccionarEvento, seleccionarPersonaPorId, setAnioInput, setQuery, setReproduciendoHistoria} = vm;
   const en=locale==='en';
   const label=value=>en?englishLabel(value):value;
@@ -125,7 +127,8 @@ export default function AtlasTopbar({vm, searchOpen, searchResults, setSearchOpe
                 <RotateCcw size={12} />
               </button>
             </div>
-            <div className="history-playback-controls" aria-label={en?'Automatic story playback':'Reproducción automática de la historia'}>
+            <button type="button" className="mobile-year-playback-toggle" aria-expanded={playbackOpen} aria-controls="atlas-year-playback" onClick={() => setPlaybackOpen(open => !open)} aria-label={en ? 'Playback controls' : 'Controles de reproducción'}><Play size={14} aria-hidden="true"/></button>
+            <div id="atlas-year-playback" className={`history-playback-controls${playbackOpen ? ' is-expanded' : ''}`} aria-label={en?'Automatic story playback':'Reproducción automática de la historia'}>
               <button
                 type="button"
                 className="history-playback-btn"

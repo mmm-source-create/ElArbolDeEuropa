@@ -11,6 +11,8 @@ import '../stories/stories.css';
 import ConnectionControls from "../connections/ConnectionControls.jsx";
 import "../connections/TreeExport.jsx";
 import React from "react";
+import {createPortal} from 'react-dom';
+import {useAtlasMobile} from './useAtlasLayout.js';
 import { X, Crosshair, SlidersHorizontal, List } from "lucide-react";
 import "./MapaEuropa.jsx";
 import { TERRITORIOS } from "../../data/territorios.js";
@@ -33,6 +35,7 @@ import "../../ui/SegmentedControl.jsx";
 import ActionDial from "../../ui/ActionDial.jsx";
 import "./atlas-interactions.css";
 import "./atlas-refinements.css";
+import "./atlas-mobile.css";
 import AtlasToolbar from './view/AtlasToolbar.jsx';
 import AtlasTopbar from './view/AtlasTopbar.jsx';
 import CompareBar from './view/CompareBar.jsx';
@@ -50,12 +53,13 @@ const loadEuropeYearView = () => import('./EuropeYearView.jsx');
 const EuropeYearView = React.lazy(loadEuropeYearView);
 
 export default function ExplorerView({ vm, loading = false, loadError = false, onRetry, ready = true }) {
+  const mobile = useAtlasMobile();
   const [searchOpen,setSearchOpen] = React.useState(false);
   const [mobileToolsOpen,setMobileToolsOpen] = React.useState(false);
   const [guideOpen,setGuideOpen] = React.useState(() => typeof window !== "undefined" && new URLSearchParams(window.location.search).get("tutorial") === "1");
   const [bioSection,setBioSection] = React.useState('resumen');
   const bioScrollRef = React.useRef(null);
-  const [bioMobileOpen,setBioMobileOpen] = React.useState(true);
+  const [bioMobileOpen,setBioMobileOpen] = React.useState(false);
   const [treeListOpen,setTreeListOpen] = React.useState(() => {
     try { return readPreferences(window.localStorage).treeView === 'list'; } catch { return false; }
   });
@@ -229,9 +233,9 @@ export default function ExplorerView({ vm, loading = false, loadError = false, o
   }, 4), [queryTrim,locale]);
   React.useEffect(() => {
     setBioSection('resumen');
-    setBioMobileOpen(!historiaActiva);
+    setBioMobileOpen(Boolean(guideOpen) && !historiaActiva);
     if (bioScrollRef.current) bioScrollRef.current.scrollTop = 0;
-  }, [seleccion?.id,historiaActiva?.id]);
+  }, [seleccion?.id,historiaActiva?.id,guideOpen]);
   const scrollToBioSection = (key) => {
     const scroller = bioScrollRef.current;
     const section = scroller?.querySelector(`#bio-section-${key}`);
@@ -255,6 +259,7 @@ export default function ExplorerView({ vm, loading = false, loadError = false, o
     setCompareMenuOpen(false);
     setFavoritosOpen(false);
   };
+  const biography = mostrarBiografia && <AtlasBiographyPanel vm={vm} bioMobileOpen={bioMobileOpen} bioScrollRef={bioScrollRef} bioSection={bioSection} personaAnteriorId={personaAnteriorId} personaSiguienteId={personaSiguienteId} scrollToBioSection={scrollToBioSection} setBioMobileOpen={setBioMobileOpen} updateBioSectionOnScroll={updateBioSectionOnScroll} />;
   React.useEffect(() => {
     const onEscape = (event) => {
       if (event.key !== 'Escape') return;
@@ -273,6 +278,12 @@ export default function ExplorerView({ vm, loading = false, loadError = false, o
       {/* V5.20 · Cabecera fija: vistas y paneles, escena en el centro y acciones. */}
       <AtlasToolbar vm={vm} closeOtherToolbarMenus={closeOtherToolbarMenus} guideButtonRef={guideButtonRef} mobileToolsOpen={mobileToolsOpen} onToolbarMenuToggle={onToolbarMenuToggle} panelsMenuRef={panelsMenuRef} setGuideOpen={openGuide} setMobileToolsOpen={setMobileToolsOpen} toolsMenuRef={toolsMenuRef} vistasAntesDeConectarRef={vistasAntesDeConectarRef} />
       <AtlasTopbar vm={vm} searchOpen={searchOpen} searchResults={searchResults} setSearchOpen={setSearchOpen} />
+      {atlasScene === 'atlas' && <div className="atlas-mobile-shortcuts" aria-label={en ? 'Atlas shortcuts' : 'Accesos del Atlas'}>
+        <button type="button" aria-pressed={mostrarArbol && !mostrarMapa} onClick={() => vm.setVistasActivas({arbol:true,mapa:false})}>{en ? 'Tree' : 'Árbol'}</button>
+        <button type="button" aria-pressed={mostrarMapa && !mostrarArbol} onClick={() => vm.setVistasActivas({arbol:false,mapa:true})}>{en ? 'Map' : 'Mapa'}</button>
+        {!historiaActiva && <button type="button" aria-expanded={mostrarFiltros} aria-controls="atlas-filters-panel" onClick={() => alternarPanelAuxiliar('filtros')}><SlidersHorizontal size={14} aria-hidden="true"/>{en ? 'Filters' : 'Filtros'}{filterCount > 0 && ` (${filterCount})`}</button>}
+        {!modoTrabajo && <button type="button" aria-expanded={mobileToolsOpen} aria-controls="atlas-secondary-tools" onClick={() => setMobileToolsOpen(open => !open)}>{en ? 'More' : 'Más'}</button>}
+      </div>}
 
       <p className="atlas-visually-hidden" role="status" aria-live="polite">
         {seleccion ? `${en ? 'Selected person' : 'Persona seleccionada'}: ${seleccion.nombre}.` : en ? 'No person selected.' : 'No hay persona seleccionada.'}
@@ -334,7 +345,7 @@ export default function ExplorerView({ vm, loading = false, loadError = false, o
           {mostrarMapa && atlasScene === 'atlas' && <AtlasMapStage vm={vm} />}
         </main>
 
-        {mostrarBiografia && <AtlasBiographyPanel vm={vm} bioMobileOpen={bioMobileOpen} bioScrollRef={bioScrollRef} bioSection={bioSection} personaAnteriorId={personaAnteriorId} personaSiguienteId={personaSiguienteId} scrollToBioSection={scrollToBioSection} setBioMobileOpen={setBioMobileOpen} updateBioSectionOnScroll={updateBioSectionOnScroll} />}
+        {!mobile && biography}
 
       </div>
       {mostrarCronologia && atlasScene === 'atlas' && <AtlasTimeline vm={vm}/>}
@@ -346,6 +357,7 @@ export default function ExplorerView({ vm, loading = false, loadError = false, o
       </div>
 
       </StoryWorkspace>
+      {mobile && biography && createPortal(<div className="wrap atlas-mobile-profile-root"><div className="workspace-grid">{biography}</div></div>,document.body)}
 
       {!modoTrabajo && (
         <SiteFooter
