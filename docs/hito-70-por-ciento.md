@@ -1,6 +1,6 @@
 # Hacia el 70 %: datos documentados y paridad entre español e inglés
 
-Estado tras la 6.0.20 (22 de noviembre de 2026) y plan para el siguiente hito: **el 70 % de las afirmaciones documentadas con una fuente fiable y concreta, y la versión inglesa con la misma calidad y el mismo contenido que la española.**
+Estado tras la 6.0.21 (22 de noviembre de 2026) y plan para el siguiente hito: **el 70 % de las afirmaciones documentadas con una fuente fiable y concreta, y la versión inglesa con la misma calidad y el mismo contenido que la española.**
 
 ## 1. Datos documentados
 
@@ -8,20 +8,28 @@ Estado tras la 6.0.20 (22 de noviembre de 2026) y plan para el siguiente hito: *
 
 El registro de afirmaciones (`src/evidence/claims.js`) cuenta fechas, padres, cónyuges, gobiernos y sucesiones de cada persona.
 
-| | 6.0.15 | 6.0.16 | 6.0.17 | 6.0.18 | 6.0.19 | 6.0.20 |
-|---|---:|---:|---:|---:|---:|---:|
-| Afirmaciones | 13 134 | 13 134 | 13 134 | 13 134 | 13 134 | 13 134 |
-| Documentadas con fuente | 5 248 (40,0 %) | 5 977 (45,5 %) | 6 803 (51,8 %) | 6 842 (52,1 %) | 6 847 (52,1 %) | 6 994 (53,3 %) |
-| Pendientes de revisión | 7 195 | 6 466 | 5 640 | 5 601 | 5 595 | 5 448 |
+| | 6.0.15 | 6.0.16 | 6.0.17 | 6.0.18 | 6.0.19 | 6.0.20 | 6.0.21 |
+|---|---:|---:|---:|---:|---:|---:|---:|
+| Afirmaciones | 13 134 | 13 134 | 13 134 | 13 134 | 13 134 | 13 134 | 13 134 |
+| Documentadas con fuente | 5 248 (40,0 %) | 5 977 (45,5 %) | 6 803 (51,8 %) | 6 842 (52,1 %) | 6 847 (52,1 %) | 6 994 (53,3 %) | 7 923 (60,3 %) |
+| Pendientes de revisión | 7 195 | 6 466 | 5 640 | 5 601 | 5 595 | 5 448 | 4 519 |
 
 La 6.0.19 añade 23 límites precisos de 14 mandatos y cuatro relaciones familiares con fuentes propias. El balance de esa entrega fue de **6 847 documentadas, 458 aproximadas, 59 discutidas, 175 inferidas y 5 595 pendientes** (13 134 en total). Las precisiones de mandatos ya documentados no se cuentan como nuevas afirmaciones.
-
-
-
 
 La 6.0.20 añade **147 afirmaciones documentadas de 97 personas**: 75 gobiernos o pontificados, 39 filiaciones, 32 afirmaciones de matrimonio (incluidas sus direcciones inversas cuando estaban pendientes) y un fallecimiento. Son 31 fuentes específicas consultadas. El balance actual es de **6 994 documentadas, 458 aproximadas, 59 discutidas, 175 inferidas y 5 448 pendientes**. El total sigue en 13 134; faltan **2 200** documentadas para alcanzar el 70 %. No se incorporan personas nuevas ni se cuentan traducciones como documentación nueva.
 
 Las series revisadas son los pontífices del Vaticano, soberanos y regentes de Suecia, reyes croata-húngaros y Jagellón, monarcas escoceses y ramas de los Wittelsbach. Las fechas que contradicen el catálogo o solo acreditan otro título siguen pendientes. El detalle y las exclusiones constan en [la revisión de 6.0.20](reports/6.0.20-documentacion.md).
+
+La 6.0.21 añade **929 afirmaciones documentadas de 573 personas**:
+
+- 911 de una tercera pasada por Medieval Lands:
+  - listas de hijos con párrafo propio;
+  - identificación con un año seguro y un pariente nombrado;
+  - gobiernos con frase de acceso;
+  - las dos caras de cada matrimonio;
+- 18 del Dizionario Biografico degli Italiani.
+
+El balance es de **7 923 documentadas (60,3 %), 458 aproximadas, 59 discutidas, 175 inferidas y 4 519 pendientes**. Faltan **unas 1 270** para el 70 %. Detalle en [las notas de 6.0.21](releases/6.0.21.md) y [sus discrepancias](versiones/6.0.21-discrepancias.md).
 
 ### Lo que da cada fuente
 
@@ -32,7 +40,7 @@ La 6.0.16 ha agotado prácticamente las fichas de autoridad de las bibliotecas n
 - **Library of Congress**: solo fechas.
 - **Neue Deutsche Biographie**: la genealogía de cada artículo identifica padre, madre y cónyuges con sus años. Solo cubre a quien tiene artículo en la NDB.
 
-Las afirmaciones que siguen pendientes son sobre todo **parentescos (unas 3 500) y gobiernos (unos 1 400)**. Las fichas de autoridad no recogen la mayoría, aunque la persona tenga ficha.
+Las afirmaciones que siguen pendientes son sobre todo **parentescos (unas 2 400) y gobiernos (unos 1 100)**, más 420 nacimientos y 540 fallecimientos. Las fichas de autoridad no recogen la mayoría, aunque la persona tenga ficha.
 
 ### Plan para las próximas versiones
 
@@ -47,7 +55,14 @@ Ordenado por rendimiento esperado, con fuentes fiables y comprobación automáti
 3. **Gobiernos**: listas de soberanos de obras de referencia por territorio (Britannica, Treccani, Historisches Lexikon Bayerns…), comparando año de inicio y de fin. Unas 1 400 afirmaciones de gobierno pendientes; rendimiento esperado: 600–900.
 4. **Revisión editorial** de las discrepancias (`docs/versiones/V5.25-discrepancias.md` y `docs/versiones/6.0.16-discrepancias.md`). Cada caso exige decidir entre dos fuentes.
 
-5. **Siglos XVI–XVIII**, que Medieval Lands no cubre: genealogías de la NDB ampliadas, el ODNB y las obras de referencia nacionales (Dansk Biografisk Leksikon, Svenskt biografiskt lexikon, Polski Słownik Biograficzny), artículo por artículo.
+5. **Hecho en la 6.0.21:** Medieval Lands da ya lo que puede dar con reglas estrictas (911 afirmaciones más). Lo pendiente se concentra en:
+   - personas de los siglos XVI–XVIII;
+   - Europa oriental;
+   - gobiernos de coronas compuestas.
+
+   El DBE de la RAH carga sus biografías desde una interfaz no documentada. Antes de consultarla de forma automática hay que pedir autorización o buscar otra vía.
+
+6. **Siglos XVI–XVIII**, que Medieval Lands no cubre: genealogías de la NDB ampliadas, el ODNB y las obras de referencia nacionales (Dansk Biografisk Leksikon, Svenskt biografiskt lexikon, Polski Słownik Biograficzny), artículo por artículo.
 
 La siguiente selección debe ampliar las series territoriales y las genealogías nominales que todavía aportan datos, y resolver los casos discrepantes con una segunda fuente. El progreso se mide con afirmaciones pendientes realmente documentadas; el número de fuentes añadidas a una biografía no sustituye ese recuento. Desde la 6.0.16 no se cita Wikipedia como fuente de ningún dato.
 
@@ -94,6 +109,15 @@ Una segunda muestra, de 60 fichas elegidas al azar en la web ya generada, da 13 
 - y, en uno de cada veinte textos, frases traducidas sin sentido («Alexander V's brother was promoted during one of his expulsions»).
 
 Casi todos son de los textos largos traducidos automáticamente en la V6. Los resúmenes escritos a mano no tienen errores en ninguna de las dos muestras.
+
+### Resultados de la 6.0.21
+
+- Páginas sin diferencias detectadas: **94 %** (4 154 de 4 420). Antes eran el 76,7 %.
+- Territorios: 928 de 1 041, frente a 244. Las fichas inglesas muestran ya la sucesión ordenada, los relevos explicados, las crisis y los acontecimientos, traducidos a mano.
+- Lo que queda:
+  - 55 fichas de personas pierden algún año (antes, 144). Casi siempre es por notas y localizadores de la evidencia sin versión inglesa: de unos 3 900 textos de ese tipo, la 6.0.21 traduce a mano los 111 más repetidos.
+  - 25 historias.
+  - 82 territorios con páginas más cortas, sobre todo porque les faltan notas de gobierno.
 
 ### Qué falta para estar seguros al 90 %
 
