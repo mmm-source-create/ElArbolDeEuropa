@@ -3,6 +3,7 @@ import {ROSES_HOUSES} from './rosesHouseTranslations.js';
 import {NEXT_HOUSES} from './nextHouseTranslations.js';
 import {REVIEWED_HOUSES} from './reviewedHouseTranslations.js';
 import {V6_DYNASTIES,V6_TERRITORIES} from './v6/index.js';
+import {ENGLISH_SLUGS_618} from '../../data/englishSlugs618.js';
 import {reviewDynastyName,reviewTerritoryName} from './entityNameReview607.js';
 export const ENGLISH_DYNASTIES=([{es:'calderon',en:'calderon',key:'Calderón',name:'Calderón',summary:'The family of Rodrigo Calderón, count of Oliva and marquis of Siete Iglesias, at Philip III’s court.',origin:'Rodrigo Calderón was born at Antwerp in 1576 into a family connected to military service in the Spanish monarchy.',history:'Service to the Duke of Lerma brought offices, titles and a central position in his courtly network. His patron’s fall led to his arrest in 1619.',legacy:'His execution in 1621 entered the literature of royal favour and the fall of the powerful. This profile covers Rodrigo’s documented branch; other families sharing the name require their own documented connections.',houses:{}},{es:'berlichingen',en:'berlichingen',key:'Berlichingen',name:'Berlichingen',summary:'A Franconian knightly family known for Götz von Berlichingen and its estates at Jagsthausen and Hornberg.',origin:'The family belonged to the Franconian knightly nobility and held estates in the Jagst and Kocher valleys.',history:'Götz served several princes and took part in noble feuds and the Peasants’ War of 1525. His conflicts reveal tensions between knights, towns and territorial principalities.',legacy:'His autobiography and Goethe’s play spread the family name. Different branches followed their own paths within the German nobility.',houses:{}},...POLISH_HOUSES,...ROSES_HOUSES,...NEXT_HOUSES,...REVIEWED_HOUSES,{es:'anjou-hungria',en:'anjou-hungary',key:'Anjou-Hungría',name:'Anjou-Hungary',
  summary:'A Capetian branch from Naples that ruled Hungary and Croatia and temporarily joined those crowns to Poland.',
@@ -26,7 +27,7 @@ export const ENGLISH_DYNASTIES=([{es:'calderon',en:'calderon',key:'Calderón',na
   'anjou-hungria-jagellon':{etiqueta:'Marriage alliance',periodo:'1386',texto:'Jadwiga, Louis I’s daughter and queen of Poland from 1384, married Jogaila in 1386. His baptism and coronation as Władysław II began the dynastic union of Poland and Lithuania.'},
   'anjou-hungria-luxemburgo':{etiqueta:'Marriage alliance',periodo:'1385',texto:'Mary, Queen of Hungary, married Sigismund of Luxembourg in 1385. After Mary’s imprisonment and her mother’s murder, Sigismund secured her release and was crowned king in 1387.'},
  },
-},...V6_DYNASTIES]).map(reviewDynastyName);
+},...V6_DYNASTIES]).map(reviewDynastyName).map(e=>ENGLISH_SLUGS_618.dynasties[e.es]?{...e,en:ENGLISH_SLUGS_618.dynasties[e.es].en}:e);
 export const ENGLISH_TERRITORIES=([{es:'normandia',en:'normandy',key:'Normandía',name:'Normandy',
  summary:'The recorded Norman governments connect Geoffrey of Anjou with Henry II, Richard I and John of England. This is a selection of the Atlas’s records, rather than a complete list of all Norman dukes. The annual intervals distinguish the Angevin duchy from the French conquest of 1204.',
  people:{
@@ -38,4 +39,4 @@ export const ENGLISH_TERRITORIES=([{es:'normandia',en:'normandy',key:'Normandía
  'Conquistó Normandía en nombre de su esposa durante la guerra civil inglesa y la cedió a su hijo Enrique en 1150.':'He conquered Normandy on his wife’s behalf during the English civil war and transferred it to his son Henry in 1150.',
  'Dominio angevino anterior a la conquista francesa de 1204; el corte representa años completos.':'Angevin dominion before the French conquest of 1204; the boundary represents complete years.',
  },
-},...V6_TERRITORIES]).map(reviewTerritoryName);
+},...V6_TERRITORIES]).map(reviewTerritoryName).map(e=>ENGLISH_SLUGS_618.territories[e.es]?{...e,en:ENGLISH_SLUGS_618.territories[e.es].en}:e);

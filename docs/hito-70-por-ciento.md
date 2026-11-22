@@ -1,6 +1,6 @@
 # Hacia el 70 %: datos documentados y paridad entre español e inglés
 
-Estado tras la 6.0.17 (22 de noviembre de 2026) y plan para el siguiente hito: **el 70 % de las afirmaciones documentadas con una fuente fiable y concreta, y la versión inglesa con la misma calidad y el mismo contenido que la española.**
+Estado tras la 6.0.18 (22 de noviembre de 2026) y plan para el siguiente hito: **el 70 % de las afirmaciones documentadas con una fuente fiable y concreta, y la versión inglesa con la misma calidad y el mismo contenido que la española.**
 
 ## 1. Datos documentados
 
@@ -8,13 +8,13 @@ Estado tras la 6.0.17 (22 de noviembre de 2026) y plan para el siguiente hito: *
 
 El registro de afirmaciones (`src/evidence/claims.js`) cuenta fechas, padres, cónyuges, gobiernos y sucesiones de cada persona.
 
-| | 6.0.15 | 6.0.16 | 6.0.17 |
-|---|---:|---:|---:|
-| Afirmaciones | 13 134 | 13 134 | 13 134 |
-| Documentadas con fuente | 5 248 (40,0 %) | 5 977 (45,5 %) | 6 803 (51,8 %) |
-| Pendientes de revisión | 7 195 | 6 466 | 5 640 |
+| | 6.0.15 | 6.0.16 | 6.0.17 | 6.0.18 |
+|---|---:|---:|---:|---:|
+| Afirmaciones | 13 134 | 13 134 | 13 134 | 13 134 |
+| Documentadas con fuente | 5 248 (40,0 %) | 5 977 (45,5 %) | 6 803 (51,8 %) | 6 842 (52,1 %) |
+| Pendientes de revisión | 7 195 | 6 466 | 5 640 | 5 601 |
 
-Para llegar al 70 % hay que documentar unas **2 400 afirmaciones más**.
+Para llegar al 70 % hay que documentar unas **2 350 afirmaciones más**.
 
 ### Lo que da cada fuente
 
@@ -35,7 +35,8 @@ Ordenado por rendimiento esperado, con fuentes fiables y comprobación automáti
    - **Medieval Lands** dio 741 afirmaciones, menos de lo previsto. Solo se identifican las personas con los dos años de vida seguros, y Medieval Lands apenas llega más allá de 1500.
    - **El DBI** dio 89 filiaciones.
    - **El DBE de la Real Academia de la Historia** no se puede consultar de forma automática desde su nueva web.
-2. **Ampliar Medieval Lands a personas con un solo año seguro**, identificándolas por la entrada del padre o del cónyuge ya identificado (su lista de hijos o su matrimonio). Rendimiento esperado: 400–700.
+2. **Ampliar Medieval Lands a personas con un solo año seguro.** Hecho en la 6.0.18 a través de la lista de hijos de un progenitor identificado. Aportó solo 35 afirmaciones: casi todas las personas sin años seguros tampoco tienen progenitores identificados.
+   - **Pendiente:** 180 gobiernos de coronas compuestas (Croacia con Hungría; Barcelona, Valencia y Mallorca con Aragón; León con Castilla) cuyas fichas fechan la corona principal. Para documentarlos hace falta decidir, territorio por territorio, si el título del territorio unido se acredita con la fuente de la corona principal.
 3. **Gobiernos**: listas de soberanos de obras de referencia por territorio (Britannica, Treccani, Historisches Lexikon Bayerns…), comparando año de inicio y de fin. Unas 1 400 afirmaciones de gobierno pendientes; rendimiento esperado: 600–900.
 4. **Revisión editorial** de las discrepancias (`docs/versiones/V5.25-discrepancias.md` y `docs/versiones/6.0.16-discrepancias.md`). Cada caso exige decidir entre dos fuentes.
 

@@ -8,6 +8,7 @@ import {normalizarBusquedaPublica,slugPublico} from '../../domain/people/personL
 import {translatedEquivalent} from './routes.js';
 import {connectionUrl} from '../connections/connectionTree.js';
 import '../public/dynasty.css';
+import '../../components/crowns.css';
 const entityPath=(kind,key)=>{const es=`/es/${kind}/${slugPublico(key)}`;return translatedEquivalent(es,'en')||es;};
 function EntityLink({kind,name,label}){const path=entityPath(kind,name);return <a href={path}>{label||name}{path.startsWith('/es/')?' · ES':''}</a>;}
 function EnglishDynastyConnection({branch:r,internal=false}) {
@@ -35,6 +36,7 @@ export default function EnglishEntity({data:d}){
   {!dynasty&&d.nota&&<p>{d.nota}</p>}
   {!dynasty&&!!d.pertenencias?.length&&<p>{d.pertenencias.map((v,i)=><span key={i}>Part of <EntityLink kind="territorio" name={v.key} label={v.name}/> from {v.desde}. </span>)}</p>}
   {!dynasty&&!!d.evolucion?.length&&<section><h2>Political evolution</h2><ol className="territory-evolution">{d.evolucion.map((e,i)=><li key={i}><strong>{e.anio}</strong><span>{e.texto}</span></li>)}</ol></section>}
+  {!dynasty&&!!d.uniones?.length&&<section className="historical-unions"><h2>Unions and separations</h2><p>Sharing a sovereign did not mean sharing every institution. These sequences include breaks and changes of government.</p>{d.uniones.map(u=><details key={u.id} id={`union-${u.id}`} className="crown-details"><summary>{u.titulo}</summary><p>{u.resumen}</p><p><strong>Institutions.</strong> {u.instituciones}</p><div className="crown-related">{u.territorios.map(t=><EntityLink key={t.key} kind="territorio" name={t.key} label={t.name}/>)}</div><ol className="crown-accessions">{u.etapas.map((e,i)=><li key={`${e.anio}-${i}`}><strong>{e.anio} · {e.titulo}</strong><p>{e.texto}</p><div className="crown-related">{e.personas.map(p=><a key={p.id} href={p.path}>{p.nombre}{p.path.startsWith('/es/')?' · ES':''}</a>)}</div></li>)}</ol><div className="crown-sources">{u.fuentes.map(f=><a key={f.url} href={f.url} target="_blank" rel="noreferrer">{f.titulo}</a>)}</div></details>)}</section>}
   {!dynasty&&d.naturaleza&&d.naturaleza!=='entidad'&&!!d.componentes?.length&&<section><h2>Territories in this group</h2><p>Each component keeps its own titles and chronology. This grouping does not establish continuous sovereignty over all of them.</p><div className="territory-links">{d.componentes.map(c=><EntityLink key={c.key} kind="territorio" name={c.key} label={c.name}/>)}</div></section>}
   {dynasty&&<>
    <nav className="dynasty-nav" aria-label="Dynasty sections"><a href="#houses">Parent houses and branches</a><a href="#history">History of the house</a><a href="#members">People</a><a href="#sources">Bibliography</a></nav>

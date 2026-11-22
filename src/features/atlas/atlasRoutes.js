@@ -4,6 +4,7 @@ import {PERSONAS} from '../../data/personas.js';
 import {slugBasePersona, slugPublico} from '../../domain/people/personPresentation.js';
 import runtime from '../../generated/englishProfilesRuntime.json' with {type:'json'};
 import {ENGLISH_SLUGS_616} from '../../data/englishSlugs616.js';
+import {ENGLISH_SLUGS_618} from '../../data/englishSlugs618.js';
 
 export const PERSONA_SLUG_BASE_COUNT = PERSONAS.reduce((acc, persona) => {
   const base = slugBasePersona(persona, "es");
@@ -34,7 +35,7 @@ const PERSONA_SLUG_EN_POR_ID = Object.fromEntries(PERSONA_ENGLISH.map((persona) 
   const base = slugPublico(runtime.profiles[persona.id].slugName||runtime.profiles[persona.id].name);
   const slug = PERSONA_SLUG_EN_BASE_COUNT[base] > 1 ? `${base}-${slugPublico(persona.id)}` : base;
   // 6.0.16: URLs built from machine-translated names use the corrected slug (see englishSlugs616.js).
-  return [persona.id, ENGLISH_SLUGS_616[persona.id]?.en || slug];
+  return [persona.id, ENGLISH_SLUGS_618.people[persona.id]?.en || ENGLISH_SLUGS_616[persona.id]?.en || slug];
 }));
 const PERSONA_ID_POR_SLUG_EN = Object.fromEntries(
   Object.entries(PERSONA_SLUG_EN_POR_ID).map(([id, slug]) => [slug, id])

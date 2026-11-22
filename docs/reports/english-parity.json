@@ -1,8 +1,8 @@
 {
  "summary": {
   "pages": 4420,
-  "clean": 3386,
-  "cleanShare": 0.766,
+  "clean": 3388,
+  "cleanShare": 0.767,
   "byKind": {
    "person": {
     "pages": 2814,
@@ -23,10 +23,10 @@
    "territory": {
     "pages": 1041,
     "missing": 0,
-    "shortEnglish": 743,
-    "lostYears": 147,
+    "shortEnglish": 734,
+    "lostYears": 145,
     "spanishWords": 8,
-    "clean": 242
+    "clean": 244
    },
    "story": {
     "pages": 44,
@@ -143,7 +143,7 @@
   {
    "kind": "person",
    "slug": "balik-de-karvuna",
-   "en": "/en/person/balik-de-karvuna",
+   "en": "/en/person/balik-of-karvuna",
    "esLength": 3665,
    "enLength": 3663,
    "ratio": 1,
@@ -220,7 +220,7 @@
   {
    "kind": "person",
    "slug": "bogdan-i-de-moldavia",
-   "en": "/en/person/bogdan-i-of-moldova",
+   "en": "/en/person/bogdan-i-of-moldavia",
    "esLength": 5575,
    "enLength": 5265,
    "ratio": 0.94,
@@ -425,7 +425,7 @@
   {
    "kind": "person",
    "slug": "cristian-alberto-de-holstein-gottorp",
-   "en": "/en/person/christian-albert-de-holstein-gottorp",
+   "en": "/en/person/christian-albert-of-holstein-gottorp",
    "esLength": 7480,
    "enLength": 7161,
    "ratio": 0.96,
@@ -437,7 +437,7 @@
   {
    "kind": "person",
    "slug": "cristina-de-lorena",
-   "en": "/en/person/cristina-de-lorena",
+   "en": "/en/person/christina-of-lorraine",
    "esLength": 6565,
    "enLength": 6545,
    "ratio": 1,
@@ -731,7 +731,7 @@
   {
    "kind": "person",
    "slug": "federico-de-arborea",
-   "en": "/en/person/federico-de-arborea",
+   "en": "/en/person/frederick-of-arborea",
    "esLength": 3721,
    "enLength": 3622,
    "ratio": 0.97,
@@ -879,7 +879,7 @@
   {
    "kind": "person",
    "slug": "federico-tuta-de-meissen",
-   "en": "/en/person/frederick-tuta-de-meissen",
+   "en": "/en/person/frederick-tuta-of-meissen",
    "esLength": 5241,
    "enLength": 5206,
    "ratio": 0.99,
@@ -891,7 +891,7 @@
   {
    "kind": "person",
    "slug": "felipe-ii-de-orleans",
-   "en": "/en/person/philip-ii-of-orleans",
+   "en": "/en/person/philippe-ii-of-orleans",
    "esLength": 6316,
    "enLength": 6202,
    "ratio": 0.98,
@@ -1441,7 +1441,7 @@
   {
    "kind": "person",
    "slug": "jorge-ii-de-brzeg",
-   "en": "/en/person/george-ii-de-brzeg",
+   "en": "/en/person/george-ii-of-brzeg",
    "esLength": 5072,
    "enLength": 5057,
    "ratio": 1,
@@ -1576,7 +1576,7 @@
   {
    "kind": "person",
    "slug": "juan-iii-ducas-vatatzes",
-   "en": "/en/person/john-iii-ducas-vatatzes",
+   "en": "/en/person/john-iii-doukas-vatatzes",
    "esLength": 4205,
    "enLength": 4011,
    "ratio": 0.95,
@@ -1721,7 +1721,7 @@
   {
    "kind": "person",
    "slug": "luis-eugenio-de-wurttemberg",
-   "en": "/en/person/louis-eugenio-de-wurttemberg",
+   "en": "/en/person/louis-eugene-of-wurttemberg",
    "esLength": 6887,
    "enLength": 6090,
    "ratio": 0.88,
@@ -1905,7 +1905,7 @@
   {
    "kind": "person",
    "slug": "mariano-iv-de-arborea",
-   "en": "/en/person/mariano-iv-de-arborea",
+   "en": "/en/person/marianus-iv-of-arborea",
    "esLength": 3729,
    "enLength": 3616,
    "ratio": 0.97,
@@ -2008,7 +2008,7 @@
   {
    "kind": "person",
    "slug": "mircea-iii-de-valaquia",
-   "en": "/en/person/mircea-iii-de-valachia",
+   "en": "/en/person/mircea-iii-of-wallachia",
    "esLength": 3621,
    "enLength": 3812,
    "ratio": 1.05,
@@ -2264,7 +2264,7 @@
   {
    "kind": "person",
    "slug": "radu-i-de-valaquia",
-   "en": "/en/person/radu-i-de-wallachia",
+   "en": "/en/person/radu-i-of-wallachia",
    "esLength": 5817,
    "enLength": 5657,
    "ratio": 0.97,
@@ -2314,7 +2314,7 @@
   {
    "kind": "person",
    "slug": "roman-i-de-moldavia",
-   "en": "/en/person/roman-i-of-moldova",
+   "en": "/en/person/roman-i-of-moldavia",
    "esLength": 5766,
    "enLength": 5414,
    "ratio": 0.94,
@@ -2454,7 +2454,7 @@
   {
    "kind": "person",
    "slug": "ugone-iii-de-arborea",
-   "en": "/en/person/ugone-iii-de-arborea",
+   "en": "/en/person/hugh-iii-of-arborea",
    "esLength": 3725,
    "enLength": 3604,
    "ratio": 0.97,
@@ -2617,7 +2617,7 @@
   {
    "kind": "dynasty",
    "slug": "gran-comneno",
-   "en": "/en/dynasty/grand-comnene",
+   "en": "/en/dynasty/grand-komnenos",
    "esLength": 5867,
    "enLength": 4275,
    "ratio": 0.73,
@@ -2657,7 +2657,7 @@
   {
    "kind": "dynasty",
    "slug": "ivrea-borgona",
-   "en": "/en/dynasty/ivrea-borgona",
+   "en": "/en/dynasty/ivrea-burgundy",
    "esLength": 7010,
    "enLength": 6303,
    "ratio": 0.9,
@@ -2807,7 +2807,7 @@
   {
    "kind": "territory",
    "slug": "abadia-imperial-de-gandersheim",
-   "en": "/en/territory/gandersheim-s-imperial-abbey",
+   "en": "/en/territory/imperial-abbey-of-gandersheim",
    "esLength": 1264,
    "enLength": 912,
    "ratio": 0.72,
@@ -2855,7 +2855,7 @@
   {
    "kind": "territory",
    "slug": "albarracin",
-   "en": "/en/territory/albarrazine",
+   "en": "/en/territory/albarracin",
    "esLength": 1085,
    "enLength": 564,
    "ratio": 0.52,
@@ -2989,7 +2989,7 @@
   {
    "kind": "territory",
    "slug": "anjou",
-   "en": "/en/territory/the-capetian-house-of-anjou-founded-by-charles-i-louis-ixs-brother-ruled-in-the-mediterranean-and-gave-rise-to-the-hungarian-taranto-and-durazzo-branches",
+   "en": "/en/territory/anjou",
    "esLength": 5481,
    "enLength": 4001,
    "ratio": 0.73,
@@ -3054,10 +3054,9 @@
    "slug": "aragon",
    "en": "/en/territory/aragon",
    "esLength": 13096,
-   "enLength": 14621,
-   "ratio": 1.12,
+   "enLength": 15726,
+   "ratio": 1.2,
    "lostYears": [
-    "1504",
     "1469",
     "1492",
     "1521",
@@ -3106,16 +3105,9 @@
    "slug": "artois",
    "en": "/en/territory/artois",
    "esLength": 13162,
-   "enLength": 7641,
-   "ratio": 0.58,
+   "enLength": 10220,
+   "ratio": 0.78,
    "lostYears": [
-    "1363",
-    "1429",
-    "1430",
-    "1433",
-    "1443",
-    "1441",
-    "1393",
     "1435",
     "1521",
     "1525",
@@ -3142,7 +3134,7 @@
   {
    "kind": "territory",
    "slug": "arzobispado-de-lyon",
-   "en": "/en/territory/archdiocese-of-lyon",
+   "en": "/en/territory/archbishopric-of-lyon",
    "esLength": 1172,
    "enLength": 644,
    "ratio": 0.55,
@@ -3192,7 +3184,7 @@
   {
    "kind": "territory",
    "slug": "atabegato-de-azerbaiyan",
-   "en": "/en/territory/atabegato-of-azerbaijan",
+   "en": "/en/territory/atabegate-of-azerbaijan",
    "esLength": 1185,
    "enLength": 650,
    "ratio": 0.55,
@@ -3272,7 +3264,7 @@
   {
    "kind": "territory",
    "slug": "austria-anterior",
-   "en": "/en/territory/austria-prev",
+   "en": "/en/territory/further-austria",
    "esLength": 1161,
    "enLength": 632,
    "ratio": 0.54,
@@ -3282,7 +3274,7 @@
   {
    "kind": "territory",
    "slug": "austria-interior",
-   "en": "/en/territory/austria-interior",
+   "en": "/en/territory/inner-austria",
    "esLength": 18663,
    "enLength": 12449,
    "ratio": 0.67,
@@ -3322,20 +3314,9 @@
    "slug": "auxerre",
    "en": "/en/territory/auxerre",
    "esLength": 5609,
-   "enLength": 1904,
-   "ratio": 0.34,
+   "enLength": 4483,
+   "ratio": 0.8,
    "lostYears": [
-    "1363",
-    "1384",
-    "1405",
-    "1429",
-    "1430",
-    "1433",
-    "1443",
-    "1441",
-    "1493",
-    "1404",
-    "1393",
     "1419"
    ],
    "spanish": []
@@ -3363,7 +3344,7 @@
   {
    "kind": "territory",
    "slug": "bailias-de-jersey-y-guernsey",
-   "en": "/en/territory/dances-of-jersey-and-guernsey",
+   "en": "/en/territory/bailiwicks-of-jersey-and-guernsey",
    "esLength": 1409,
    "enLength": 655,
    "ratio": 0.46,
@@ -3404,7 +3385,7 @@
   {
    "kind": "territory",
    "slug": "baliatos-comunes-de-los-cantones-suizos",
-   "en": "/en/territory/common-balliates-of-the-swiss-cantons",
+   "en": "/en/territory/common-bailiwicks-of-the-swiss-cantons",
    "esLength": 1409,
    "enLength": 615,
    "ratio": 0.44,
@@ -3424,7 +3405,7 @@
   {
    "kind": "territory",
    "slug": "banato-de-temes",
-   "en": "/en/territory/tears-banate",
+   "en": "/en/territory/banat-of-temes",
    "esLength": 2788,
    "enLength": 1507,
    "ratio": 0.54,
@@ -3487,7 +3468,7 @@
   {
    "kind": "territory",
    "slug": "baviera-y-senorios-del-alto-palatinado",
-   "en": "/en/territory/bavaria-and-lordships-of-the-upper-palatinado",
+   "en": "/en/territory/bavaria-and-lordships-of-the-high-palatinate",
    "esLength": 1755,
    "enLength": 1161,
    "ratio": 0.66,
@@ -3507,7 +3488,7 @@
   {
    "kind": "territory",
    "slug": "bearne",
-   "en": "/en/territory/bearne",
+   "en": "/en/territory/bearn",
    "esLength": 12236,
    "enLength": 9553,
    "ratio": 0.78,
@@ -3522,7 +3503,7 @@
   {
    "kind": "territory",
    "slug": "beaujolais",
-   "en": "/en/territory/bean",
+   "en": "/en/territory/beaujolais",
    "esLength": 1142,
    "enLength": 622,
    "ratio": 0.54,
@@ -3532,7 +3513,7 @@
   {
    "kind": "territory",
    "slug": "beloozero",
-   "en": "/en/territory/other-beloozero",
+   "en": "/en/territory/beloozero",
    "esLength": 1023,
    "enLength": 469,
    "ratio": 0.46,
@@ -3582,7 +3563,7 @@
   {
    "kind": "territory",
    "slug": "beylicato-de-ahlat",
-   "en": "/en/territory/belicate-of-ahlat",
+   "en": "/en/territory/beylik-of-ahlat",
    "esLength": 1170,
    "enLength": 634,
    "ratio": 0.54,
@@ -3592,7 +3573,7 @@
   {
    "kind": "territory",
    "slug": "beylicato-de-alaiye",
-   "en": "/en/territory/beyllicate-of-alaiye",
+   "en": "/en/territory/beylik-of-alaiye",
    "esLength": 1173,
    "enLength": 636,
    "ratio": 0.54,
@@ -3602,7 +3583,7 @@
   {
    "kind": "territory",
    "slug": "beylicato-de-aydin",
-   "en": "/en/territory/beylykate-of-aydin",
+   "en": "/en/territory/beylik-of-aydin",
    "esLength": 1152,
    "enLength": 623,
    "ratio": 0.54,
@@ -3612,7 +3593,7 @@
   {
    "kind": "territory",
    "slug": "beylicato-de-candar",
-   "en": "/en/territory/beylicato-de-candar",
+   "en": "/en/territory/beylik-of-candar",
    "esLength": 1075,
    "enLength": 549,
    "ratio": 0.51,
@@ -3622,7 +3603,7 @@
   {
    "kind": "territory",
    "slug": "beylicato-de-coban",
-   "en": "/en/territory/belicate-of-coban",
+   "en": "/en/territory/beylik-of-coban",
    "esLength": 1072,
    "enLength": 547,
    "ratio": 0.51,
@@ -3632,7 +3613,7 @@
   {
    "kind": "territory",
    "slug": "beylicato-de-dulkadir",
-   "en": "/en/territory/dulkadr-beylicate",
+   "en": "/en/territory/beylik-of-dulkadir",
    "esLength": 1179,
    "enLength": 640,
    "ratio": 0.54,
@@ -3652,7 +3633,7 @@
   {
    "kind": "territory",
    "slug": "beylicato-de-esref",
-   "en": "/en/territory/beylicato-de-esref",
+   "en": "/en/territory/beylik-of-esref",
    "esLength": 1072,
    "enLength": 547,
    "ratio": 0.51,
@@ -3672,7 +3653,7 @@
   {
    "kind": "territory",
    "slug": "beylicato-de-haciemir",
-   "en": "/en/territory/beylicato-de-hacemir",
+   "en": "/en/territory/beylik-of-haciemir",
    "esLength": 1179,
    "enLength": 640,
    "ratio": 0.54,
@@ -3682,7 +3663,7 @@
   {
    "kind": "territory",
    "slug": "beylicato-de-hamid",
-   "en": "/en/territory/beylicato-de-hamid",
+   "en": "/en/territory/beylik-of-hamid",
    "esLength": 1152,
    "enLength": 623,
    "ratio": 0.54,
@@ -3692,7 +3673,7 @@
   {
    "kind": "territory",
    "slug": "beylicato-de-karaman",
-   "en": "/en/territory/karaman-beylicato",
+   "en": "/en/territory/beylik-of-karaman",
    "esLength": 1078,
    "enLength": 551,
    "ratio": 0.51,
@@ -3712,7 +3693,7 @@
   {
    "kind": "territory",
    "slug": "beylicato-de-kubad",
-   "en": "/en/territory/kubad-beylicato",
+   "en": "/en/territory/beylik-of-kubad",
    "esLength": 1170,
    "enLength": 634,
    "ratio": 0.54,
@@ -3722,7 +3703,7 @@
   {
    "kind": "territory",
    "slug": "beylicato-de-ladik",
-   "en": "/en/territory/ladik-beylicate",
+   "en": "/en/territory/beylik-of-ladik",
    "esLength": 1152,
    "enLength": 623,
    "ratio": 0.54,
@@ -3732,7 +3713,7 @@
   {
    "kind": "territory",
    "slug": "beylicato-de-mengucek",
-   "en": "/en/territory/beylicato-de-mengucek",
+   "en": "/en/territory/beylik-of-mengucek",
    "esLength": 1179,
    "enLength": 640,
    "ratio": 0.54,
@@ -3742,7 +3723,7 @@
   {
    "kind": "territory",
    "slug": "beylicato-de-mentese",
-   "en": "/en/territory/beylicate-of-mentese",
+   "en": "/en/territory/beylik-of-mentese",
    "esLength": 1158,
    "enLength": 627,
    "ratio": 0.54,
@@ -3752,7 +3733,7 @@
   {
    "kind": "territory",
    "slug": "beylicato-de-pervane",
-   "en": "/en/territory/beylicate-of-pervane",
+   "en": "/en/territory/beylik-of-pervane",
    "esLength": 1078,
    "enLength": 551,
    "ratio": 0.51,
@@ -3782,7 +3763,7 @@
   {
    "kind": "territory",
    "slug": "beylicato-de-saltuk",
-   "en": "/en/territory/saltuk-beylicato",
+   "en": "/en/territory/beylik-of-saltuk",
    "esLength": 1173,
    "enLength": 636,
    "ratio": 0.54,
@@ -3802,7 +3783,7 @@
   {
    "kind": "territory",
    "slug": "beylicato-de-taceddin",
-   "en": "/en/territory/belicate-of-taceddin",
+   "en": "/en/territory/beylik-of-taceddin",
    "esLength": 1179,
    "enLength": 640,
    "ratio": 0.54,
@@ -3812,7 +3793,7 @@
   {
    "kind": "territory",
    "slug": "beylicato-de-teke",
-   "en": "/en/territory/teke-s-beylicate",
+   "en": "/en/territory/beylik-of-teke",
    "esLength": 1069,
    "enLength": 545,
    "ratio": 0.51,
@@ -3913,17 +3894,9 @@
    "slug": "borgona",
    "en": "/en/territory/burgundy",
    "esLength": 13274,
-   "enLength": 8837,
-   "ratio": 0.67,
+   "enLength": 11416,
+   "ratio": 0.86,
    "lostYears": [
-    "1384",
-    "1405",
-    "1429",
-    "1430",
-    "1433",
-    "1443",
-    "1441",
-    "1393",
     "1435",
     "1521",
     "1525",
@@ -3973,18 +3946,9 @@
    "slug": "brabante",
    "en": "/en/territory/brabant",
    "esLength": 27479,
-   "enLength": 14292,
-   "ratio": 0.52,
+   "enLength": 16871,
+   "ratio": 0.61,
    "lostYears": [
-    "1363",
-    "1384",
-    "1405",
-    "1429",
-    "1433",
-    "1443",
-    "1441",
-    "1404",
-    "1393",
     "1357",
     "1419",
     "1435",
@@ -4008,7 +3972,7 @@
   {
    "kind": "territory",
    "slug": "brabante-de-los-estados",
-   "en": "/en/territory/state-party",
+   "en": "/en/territory/states-brabant",
    "esLength": 1181,
    "enLength": 632,
    "ratio": 0.54,
@@ -4202,8 +4166,8 @@
    "slug": "castilla",
    "en": "/en/territory/castile",
    "esLength": 13835,
-   "enLength": 22187,
-   "ratio": 1.6,
+   "enLength": 23977,
+   "ratio": 1.73,
    "lostYears": [
     "1469",
     "1492",
@@ -4308,7 +4272,7 @@
   {
    "kind": "territory",
    "slug": "chartres",
-   "en": "/en/territory/charts",
+   "en": "/en/territory/chartres",
    "esLength": 1136,
    "enLength": 618,
    "ratio": 0.54,
@@ -4330,7 +4294,7 @@
   {
    "kind": "territory",
    "slug": "chobanidas",
-   "en": "/en/territory/other-chobanidas",
+   "en": "/en/territory/chobanids",
    "esLength": 1147,
    "enLength": 622,
    "ratio": 0.54,
@@ -4360,7 +4324,7 @@
   {
    "kind": "territory",
    "slug": "ciudad-de-san-galo",
-   "en": "/en/territory/city-of-san-galo",
+   "en": "/en/territory/city-of-st-gallen",
    "esLength": 1446,
    "enLength": 1071,
    "ratio": 0.74,
@@ -4440,7 +4404,7 @@
   {
    "kind": "territory",
    "slug": "ciudad-imperial-de-ratisbona",
-   "en": "/en/territory/the-imperial-city-of-raticbona",
+   "en": "/en/territory/imperial-city-of-regensburg",
    "esLength": 1423,
    "enLength": 1044,
    "ratio": 0.73,
@@ -4460,7 +4424,7 @@
   {
    "kind": "territory",
    "slug": "ciudad-libre-de-aquisgran",
-   "en": "/en/territory/free-town-of-aachman",
+   "en": "/en/territory/free-city-of-aachen",
    "esLength": 1188,
    "enLength": 640,
    "ratio": 0.54,
@@ -4470,7 +4434,7 @@
   {
    "kind": "territory",
    "slug": "ciudad-libre-de-besanzon",
-   "en": "/en/territory/free-town-of-besanzon",
+   "en": "/en/territory/free-city-of-besancon",
    "esLength": 1185,
    "enLength": 644,
    "ratio": 0.54,
@@ -4520,7 +4484,7 @@
   {
    "kind": "territory",
    "slug": "ciudad-y-senorio-de-villingen",
-   "en": "/en/territory/the-town-and-lordship-of-villingen",
+   "en": "/en/territory/city-and-lordship-of-villingen",
    "esLength": 1412,
    "enLength": 649,
    "ratio": 0.46,
@@ -4530,7 +4494,7 @@
   {
    "kind": "territory",
    "slug": "ciudad-y-temporal-de-basilea",
-   "en": "/en/territory/city-and-time-of-basel",
+   "en": "/en/territory/city-and-temporalities-of-basel",
    "esLength": 1409,
    "enLength": 651,
    "ratio": 0.46,
@@ -4550,7 +4514,7 @@
   {
    "kind": "territory",
    "slug": "ciudades-imperiales-de-nordhausen-y-muhlhausen",
-   "en": "/en/territory/the-imperial-cities-of-nordhausen-and-muhlhausen",
+   "en": "/en/territory/imperial-cities-of-nordhausen-and-muhlhausen",
    "esLength": 1685,
    "enLength": 1097,
    "ratio": 0.65,
@@ -4570,7 +4534,7 @@
   {
    "kind": "territory",
    "slug": "clanricarde",
-   "en": "/en/territory/other-articles-of-clothing",
+   "en": "/en/territory/clanricarde",
    "esLength": 1814,
    "enLength": 1266,
    "ratio": 0.7,
@@ -4694,7 +4658,7 @@
   {
    "kind": "territory",
    "slug": "comuna-de-brescia",
-   "en": "/en/territory/comuna-de-brescia",
+   "en": "/en/territory/commune-of-brescia",
    "esLength": 1107,
    "enLength": 580,
    "ratio": 0.52,
@@ -4827,7 +4791,7 @@
   {
    "kind": "territory",
    "slug": "comuna-de-parma",
-   "en": "/en/territory/municipality-of-parma",
+   "en": "/en/territory/commune-of-parma",
    "esLength": 1101,
    "enLength": 576,
    "ratio": 0.52,
@@ -4907,7 +4871,7 @@
   {
    "kind": "territory",
    "slug": "comuna-de-savona",
-   "en": "/en/territory/municipality-of-savona",
+   "en": "/en/territory/commune-of-savona",
    "esLength": 1104,
    "enLength": 578,
    "ratio": 0.52,
@@ -4927,7 +4891,7 @@
   {
    "kind": "territory",
    "slug": "comuna-de-turin",
-   "en": "/en/territory/the-commune-of-turin",
+   "en": "/en/territory/commune-of-turin",
    "esLength": 1101,
    "enLength": 576,
    "ratio": 0.52,
@@ -4957,7 +4921,7 @@
   {
    "kind": "territory",
    "slug": "comuna-y-republica-de-florencia",
-   "en": "/en/territory/the-commune-and-the-republic-of-florence",
+   "en": "/en/territory/commune-and-republic-of-florence",
    "esLength": 1105,
    "enLength": 439,
    "ratio": 0.4,
@@ -5000,7 +4964,7 @@
   {
    "kind": "territory",
    "slug": "comunidad-de-schwyz-derechos-imperiales-y-habsburgicos",
-   "en": "/en/territory/community-of-schwyz-imperial-and-habeas-rights",
+   "en": "/en/territory/community-of-schwyz-imperial-and-habsburg-rights",
    "esLength": 1967,
    "enLength": 1262,
    "ratio": 0.64,
@@ -5020,7 +4984,7 @@
   {
    "kind": "territory",
    "slug": "comunidades-cosacas-del-don",
-   "en": "/en/territory/cossack-communities-of-don",
+   "en": "/en/territory/don-cossack-communities",
    "esLength": 1142,
    "enLength": 592,
    "ratio": 0.52,
@@ -5060,7 +5024,7 @@
   {
    "kind": "territory",
    "slug": "comunidades-y-jefaturas-de-frisia-oriental",
-   "en": "/en/territory/communities-and-administrative-divisions-of-east-frisia",
+   "en": "/en/territory/communities-and-chieftaincies-of-east-frisia",
    "esLength": 1451,
    "enLength": 677,
    "ratio": 0.47,
@@ -5148,16 +5112,9 @@
    "slug": "condado-de-borgona",
    "en": "/en/territory/county-of-burgundy",
    "esLength": 12860,
-   "enLength": 7571,
-   "ratio": 0.59,
+   "enLength": 10150,
+   "ratio": 0.79,
    "lostYears": [
-    "1363",
-    "1429",
-    "1430",
-    "1433",
-    "1443",
-    "1441",
-    "1393",
     "1435",
     "1521",
     "1525",
@@ -5264,7 +5221,7 @@
   {
    "kind": "territory",
    "slug": "condado-de-temes",
-   "en": "/en/territory/tires-county",
+   "en": "/en/territory/county-of-temes",
    "esLength": 2436,
    "enLength": 1182,
    "ratio": 0.49,
@@ -5274,7 +5231,7 @@
   {
    "kind": "territory",
    "slug": "condado-de-thomond",
-   "en": "/en/territory/thomond-county",
+   "en": "/en/territory/earldom-of-thomond",
    "esLength": 1983,
    "enLength": 1445,
    "ratio": 0.73,
@@ -5304,7 +5261,7 @@
   {
    "kind": "territory",
    "slug": "condado-palatino-de-cefalonia-y-zacinto",
-   "en": "/en/territory/cephalonia-and-zacinto-palatine-county",
+   "en": "/en/territory/county-palatine-of-cephalonia-and-zakynthos",
    "esLength": 2579,
    "enLength": 1552,
    "ratio": 0.6,
@@ -5314,7 +5271,7 @@
   {
    "kind": "territory",
    "slug": "confederacion-cumana",
-   "en": "/en/territory/the-coman-confederation",
+   "en": "/en/territory/cuman-confederation",
    "esLength": 1159,
    "enLength": 631,
    "ratio": 0.54,
@@ -5366,8 +5323,8 @@
    "slug": "corona-de-aragon",
    "en": "/en/territory/crown-of-aragon",
    "esLength": 38154,
-   "enLength": 44365,
-   "ratio": 1.16,
+   "enLength": 45470,
+   "ratio": 1.19,
    "lostYears": [
     "1469",
     "1492",
@@ -5397,8 +5354,8 @@
    "slug": "corona-de-castilla",
    "en": "/en/territory/crown-of-castile",
    "esLength": 17414,
-   "enLength": 24299,
-   "ratio": 1.4,
+   "enLength": 26089,
+   "ratio": 1.5,
    "lostYears": [
     "1469",
     "1525",
@@ -5498,7 +5455,7 @@
   {
    "kind": "territory",
    "slug": "delfinado",
-   "en": "/en/territory/dolphin",
+   "en": "/en/territory/dauphine",
    "esLength": 1082,
    "enLength": 560,
    "ratio": 0.52,
@@ -5508,7 +5465,7 @@
   {
    "kind": "territory",
    "slug": "delfinado-de-auvernia",
-   "en": "/en/territory/auvergne-dolphin",
+   "en": "/en/territory/dauphine-of-auvergne",
    "esLength": 1175,
    "enLength": 642,
    "ratio": 0.55,
@@ -5531,7 +5488,7 @@
   {
    "kind": "territory",
    "slug": "despotado-de-angelokastro",
-   "en": "/en/territory/dismissed-from-angelokastro",
+   "en": "/en/territory/despotate-of-angelokastro",
    "esLength": 1175,
    "enLength": 643,
    "ratio": 0.55,
@@ -5541,7 +5498,7 @@
   {
    "kind": "territory",
    "slug": "despotado-de-arta",
-   "en": "/en/territory/despotted-from-arta",
+   "en": "/en/territory/despotate-of-arta",
    "esLength": 1151,
    "enLength": 627,
    "ratio": 0.54,
@@ -5561,7 +5518,7 @@
   {
    "kind": "territory",
    "slug": "despotado-de-serres",
-   "en": "/en/territory/despotted-from-serres",
+   "en": "/en/territory/despotate-of-serres",
    "esLength": 1469,
    "enLength": 859,
    "ratio": 0.58,
@@ -5590,23 +5547,6 @@
   },
   {
    "kind": "territory",
-   "slug": "dinamarca",
-   "en": "/en/territory/denmark",
-   "esLength": 16729,
-   "enLength": 15051,
-   "ratio": 0.9,
-   "lostYears": [
-    "1537",
-    "1450",
-    "1434",
-    "1442",
-    "1471",
-    "1520"
-   ],
-   "spanish": []
-  },
-  {
-   "kind": "territory",
    "slug": "distrito-de-piltene",
    "en": "/en/territory/piltene-district",
    "esLength": 1118,
@@ -5618,7 +5558,7 @@
   {
    "kind": "territory",
    "slug": "dobruja",
-   "en": "/en/territory/debruja",
+   "en": "/en/territory/dobruja",
    "esLength": 2229,
    "enLength": 993,
    "ratio": 0.45,
@@ -5731,7 +5671,7 @@
   {
    "kind": "territory",
    "slug": "ducados-de-bremen-verden",
-   "en": "/en/territory/duces-of-bremen-verden",
+   "en": "/en/territory/duchies-of-bremen-verden",
    "esLength": 1815,
    "enLength": 1325,
    "ratio": 0.73,
@@ -5761,7 +5701,7 @@
   {
    "kind": "territory",
    "slug": "edesa",
-   "en": "/en/territory/edesa",
+   "en": "/en/territory/edessa",
    "esLength": 1002,
    "enLength": 460,
    "ratio": 0.46,
@@ -5783,7 +5723,7 @@
   {
    "kind": "territory",
    "slug": "ejercito-cosaco-del-don",
-   "en": "/en/territory/cossack-army-of-the-don",
+   "en": "/en/territory/don-cossack-host",
    "esLength": 1130,
    "enLength": 578,
    "ratio": 0.51,
@@ -5793,7 +5733,7 @@
   {
    "kind": "territory",
    "slug": "ejercito-cosaco-del-yaik",
-   "en": "/en/territory/yaik-cossack-army",
+   "en": "/en/territory/yaik-cossack-host",
    "esLength": 1133,
    "enLength": 580,
    "ratio": 0.51,
@@ -5803,7 +5743,7 @@
   {
    "kind": "territory",
    "slug": "ejercito-zaporogo",
-   "en": "/en/territory/zaporogo-army",
+   "en": "/en/territory/zaporozhian-host",
    "esLength": 1112,
    "enLength": 578,
    "ratio": 0.52,
@@ -5823,7 +5763,7 @@
   {
    "kind": "territory",
    "slug": "electorado-de-treveris",
-   "en": "/en/territory/electorate-of-treveris",
+   "en": "/en/territory/electorate-of-trier",
    "esLength": 1181,
    "enLength": 640,
    "ratio": 0.54,
@@ -5833,7 +5773,7 @@
   {
    "kind": "territory",
    "slug": "emirato-artuquida-de-harput",
-   "en": "/en/territory/artuquid-emirate-from-harput",
+   "en": "/en/territory/artuqid-emirate-of-harput",
    "esLength": 1197,
    "enLength": 654,
    "ratio": 0.55,
@@ -5843,7 +5783,7 @@
   {
    "kind": "territory",
    "slug": "emirato-artuquida-de-hasankeyf",
-   "en": "/en/territory/the-emirate-of-hasankeyf",
+   "en": "/en/territory/artuqid-emirate-of-hasankeyf",
    "esLength": 1206,
    "enLength": 660,
    "ratio": 0.55,
@@ -5853,7 +5793,7 @@
   {
    "kind": "territory",
    "slug": "emirato-artuquida-de-mardin",
-   "en": "/en/territory/emirate-artuquida-de-mardin",
+   "en": "/en/territory/artuqid-emirate-of-mardin",
    "esLength": 1197,
    "enLength": 654,
    "ratio": 0.55,
@@ -5943,7 +5883,7 @@
   {
    "kind": "territory",
    "slug": "emirato-de-hakkari",
-   "en": "/en/territory/eirate-of-hakkari",
+   "en": "/en/territory/emirate-of-hakkari",
    "esLength": 1170,
    "enLength": 640,
    "ratio": 0.55,
@@ -6023,7 +5963,7 @@
   {
    "kind": "territory",
    "slug": "emirato-de-sivas",
-   "en": "/en/territory/eirate-of-sivas",
+   "en": "/en/territory/emirate-of-sivas",
    "esLength": 1164,
    "enLength": 636,
    "ratio": 0.55,
@@ -6073,7 +6013,7 @@
   {
    "kind": "territory",
    "slug": "emirato-zengi-de-cizre",
-   "en": "/en/territory/zhengqi-emirate-of-cizre",
+   "en": "/en/territory/zengid-emirate-of-cizre",
    "esLength": 1182,
    "enLength": 650,
    "ratio": 0.55,
@@ -6093,7 +6033,7 @@
   {
    "kind": "territory",
    "slug": "epiro-de-los-tocco",
-   "en": "/en/territory/epirus-of-the-tocco",
+   "en": "/en/territory/epirus-under-the-tocco",
    "esLength": 2960,
    "enLength": 1569,
    "ratio": 0.53,
@@ -6103,7 +6043,7 @@
   {
    "kind": "territory",
    "slug": "erfurt-ciudad-y-arzobispo-de-maguncia",
-   "en": "/en/territory/erfurt-town-and-archbishop-of-mainda",
+   "en": "/en/territory/erfurt-city-and-archbishop-of-mainz",
    "esLength": 1708,
    "enLength": 1129,
    "ratio": 0.66,
@@ -6113,13 +6053,11 @@
   {
    "kind": "territory",
    "slug": "escandinavia",
-   "en": "/en/territory/scandinavian-countries",
+   "en": "/en/territory/scandinavia",
    "esLength": 34513,
-   "enLength": 37559,
-   "ratio": 1.09,
+   "enLength": 41884,
+   "ratio": 1.21,
    "lostYears": [
-    "1536",
-    "1905",
     "1587"
    ],
    "spanish": []
@@ -6129,8 +6067,8 @@
    "slug": "escocia",
    "en": "/en/territory/scotland",
    "esLength": 11537,
-   "enLength": 12256,
-   "ratio": 1.06,
+   "enLength": 13301,
+   "ratio": 1.15,
    "lostYears": [
     "1559"
    ],
@@ -6151,12 +6089,9 @@
    "slug": "espana",
    "en": "/en/territory/spain",
    "esLength": 60772,
-   "enLength": 85528,
-   "ratio": 1.41,
+   "enLength": 88131,
+   "ratio": 1.45,
    "lostYears": [
-    "1580",
-    "1640",
-    "1581",
     "1469",
     "1525",
     "1527",
@@ -6182,7 +6117,7 @@
   {
    "kind": "territory",
    "slug": "espira-y-worms-transicion-revolucionaria",
-   "en": "/en/territory/spira-and-worms-revolutionary-transition",
+   "en": "/en/territory/speyer-and-worms-revolutionary-transition",
    "esLength": 1516,
    "enLength": 992,
    "ratio": 0.65,
@@ -6204,7 +6139,7 @@
   {
    "kind": "territory",
    "slug": "estados-belgas-unidos",
-   "en": "/en/territory/united-states-of-america",
+   "en": "/en/territory/united-belgian-states",
    "esLength": 1176,
    "enLength": 644,
    "ratio": 0.55,
@@ -6333,16 +6268,9 @@
    "slug": "flandes",
    "en": "/en/territory/flanders",
    "esLength": 28655,
-   "enLength": 14005,
-   "ratio": 0.49,
+   "enLength": 16584,
+   "ratio": 0.58,
    "lostYears": [
-    "1363",
-    "1429",
-    "1430",
-    "1433",
-    "1443",
-    "1441",
-    "1393",
     "1280",
     "1355",
     "1357",
@@ -6369,7 +6297,7 @@
   {
    "kind": "territory",
    "slug": "flandes-de-los-estados",
-   "en": "/en/territory/flanders-of-states",
+   "en": "/en/territory/states-flanders",
    "esLength": 1178,
    "enLength": 634,
    "ratio": 0.54,
@@ -6494,7 +6422,7 @@
   {
    "kind": "territory",
    "slug": "friburgo-de-brisgovia",
-   "en": "/en/territory/freiburg-de-brisgow",
+   "en": "/en/territory/freiburg-im-breisgau",
    "esLength": 1176,
    "enLength": 642,
    "ratio": 0.55,
@@ -6574,7 +6502,7 @@
   {
    "kind": "territory",
    "slug": "gandia",
-   "en": "/en/territory/winning",
+   "en": "/en/territory/gandia",
    "esLength": 2125,
    "enLength": 1630,
    "ratio": 0.77,
@@ -6707,7 +6635,7 @@
   {
    "kind": "territory",
    "slug": "groninga",
-   "en": "/en/territory/groninga",
+   "en": "/en/territory/groningen",
    "esLength": 3573,
    "enLength": 2339,
    "ratio": 0.65,
@@ -6737,7 +6665,7 @@
   {
    "kind": "territory",
    "slug": "guastalla",
-   "en": "/en/territory/gawk",
+   "en": "/en/territory/guastalla",
    "esLength": 1126,
    "enLength": 771,
    "ratio": 0.68,
@@ -6773,7 +6701,7 @@
   {
    "kind": "territory",
    "slug": "gueldres-de-los-estados",
-   "en": "/en/territory/states-held-guelders",
+   "en": "/en/territory/states-guelders",
    "esLength": 1181,
    "enLength": 634,
    "ratio": 0.54,
@@ -6783,7 +6711,7 @@
   {
    "kind": "territory",
    "slug": "gueldres-prusiano",
-   "en": "/en/territory/prussian-guilds",
+   "en": "/en/territory/prussian-guelders",
    "esLength": 1163,
    "enLength": 636,
    "ratio": 0.55,
@@ -6840,17 +6768,9 @@
    "slug": "henao",
    "en": "/en/territory/hainaut",
    "esLength": 29559,
-   "enLength": 14739,
-   "ratio": 0.5,
+   "enLength": 17318,
+   "ratio": 0.59,
    "lostYears": [
-    "1363",
-    "1384",
-    "1405",
-    "1429",
-    "1430",
-    "1443",
-    "1441",
-    "1393",
     "1278",
     "1425",
     "1354",
@@ -6876,7 +6796,7 @@
   {
    "kind": "territory",
    "slug": "henneberg-administracion-conjunta-wettin",
-   "en": "/en/territory/henneberg-co-administration-wettin",
+   "en": "/en/territory/henneberg-wettin-joint-administration",
    "esLength": 1610,
    "enLength": 1077,
    "ratio": 0.67,
@@ -6921,7 +6841,7 @@
   {
    "kind": "territory",
    "slug": "hesse-herencia-de-marburgo-disputada",
-   "en": "/en/territory/hesse-marburg-heritage-disputed",
+   "en": "/en/territory/hesse-disputed-marburg-inheritance",
    "esLength": 1670,
    "enLength": 1116,
    "ratio": 0.67,
@@ -6973,19 +6893,11 @@
   {
    "kind": "territory",
    "slug": "holanda",
-   "en": "/en/territory/netherlands",
+   "en": "/en/territory/holland",
    "esLength": 20218,
-   "enLength": 10117,
-   "ratio": 0.5,
+   "enLength": 12696,
+   "ratio": 0.63,
    "lostYears": [
-    "1363",
-    "1384",
-    "1405",
-    "1429",
-    "1430",
-    "1443",
-    "1441",
-    "1393",
     "1419",
     "1435",
     "1521",
@@ -7024,7 +6936,7 @@
   {
    "kind": "territory",
    "slug": "horda-de-oro",
-   "en": "/en/territory/gold-horde",
+   "en": "/en/territory/golden-horde",
    "esLength": 1135,
    "enLength": 617,
    "ratio": 0.54,
@@ -7117,7 +7029,7 @@
   {
    "kind": "territory",
    "slug": "imperio-corasmio",
-   "en": "/en/territory/korasmium-empire",
+   "en": "/en/territory/khwarazmian-empire",
    "esLength": 1164,
    "enLength": 640,
    "ratio": 0.55,
@@ -7127,7 +7039,7 @@
   {
    "kind": "territory",
    "slug": "imperio-mongol",
-   "en": "/en/territory/mongolian-empire",
+   "en": "/en/territory/mongol-empire",
    "esLength": 1158,
    "enLength": 630,
    "ratio": 0.54,
@@ -7178,8 +7090,8 @@
    "slug": "inglaterra",
    "en": "/en/territory/england",
    "esLength": 14201,
-   "enLength": 23617,
-   "ratio": 1.66,
+   "enLength": 24662,
+   "ratio": 1.74,
    "lostYears": [
     "1328",
     "1346",
@@ -7270,7 +7182,7 @@
   {
    "kind": "territory",
    "slug": "judicado-de-arborea",
-   "en": "/en/territory/judge-of-arborea",
+   "en": "/en/territory/judicate-of-arborea",
    "esLength": 2818,
    "enLength": 1505,
    "ratio": 0.53,
@@ -7283,7 +7195,7 @@
   {
    "kind": "territory",
    "slug": "judicado-de-cagliari",
-   "en": "/en/territory/cagliari-s-retired",
+   "en": "/en/territory/judicate-of-cagliari",
    "esLength": 1535,
    "enLength": 830,
    "ratio": 0.54,
@@ -7293,7 +7205,7 @@
   {
    "kind": "territory",
    "slug": "judicado-de-gallura",
-   "en": "/en/territory/judicade-of-gallura",
+   "en": "/en/territory/judicate-of-gallura",
    "esLength": 1113,
    "enLength": 582,
    "ratio": 0.52,
@@ -7353,7 +7265,7 @@
   {
    "kind": "territory",
    "slug": "kanato-de-crimea",
-   "en": "/en/territory/kanate-of-crimea",
+   "en": "/en/territory/crimean-khanate",
    "esLength": 1109,
    "enLength": 576,
    "ratio": 0.52,
@@ -7373,7 +7285,7 @@
   {
    "kind": "territory",
    "slug": "kanato-de-kazan",
-   "en": "/en/territory/kanate-of-kazan",
+   "en": "/en/territory/khanate-of-kazan",
    "esLength": 1106,
    "enLength": 578,
    "ratio": 0.52,
@@ -7393,7 +7305,7 @@
   {
    "kind": "territory",
    "slug": "kanato-de-maku",
-   "en": "/en/territory/kanato-de-maku",
+   "en": "/en/territory/khanate-of-maku",
    "esLength": 1159,
    "enLength": 634,
    "ratio": 0.55,
@@ -7403,7 +7315,7 @@
   {
    "kind": "territory",
    "slug": "kanato-de-siberia",
-   "en": "/en/territory/siberian-winged",
+   "en": "/en/territory/khanate-of-sibir",
    "esLength": 1112,
    "enLength": 578,
    "ratio": 0.52,
@@ -7413,7 +7325,7 @@
   {
    "kind": "territory",
    "slug": "kanato-de-urmia",
-   "en": "/en/territory/kanato-de-urmia",
+   "en": "/en/territory/khanate-of-urmia",
    "esLength": 1162,
    "enLength": 636,
    "ratio": 0.55,
@@ -7463,7 +7375,7 @@
   {
    "kind": "territory",
    "slug": "la-marche",
-   "en": "/en/territory/the-march",
+   "en": "/en/territory/la-marche",
    "esLength": 1544,
    "enLength": 899,
    "ratio": 0.58,
@@ -7473,7 +7385,7 @@
   {
    "kind": "territory",
    "slug": "la-roche-sur-yon",
-   "en": "/en/territory/the-roche-sur-yon",
+   "en": "/en/territory/la-roche-sur-yon",
    "esLength": 1163,
    "enLength": 634,
    "ratio": 0.55,
@@ -7515,10 +7427,9 @@
    "slug": "leon",
    "en": "/en/territory/leon",
    "esLength": 15326,
-   "enLength": 10709,
-   "ratio": 0.7,
+   "enLength": 12499,
+   "ratio": 0.82,
    "lostYears": [
-    "1217",
     "1469",
     "1492",
     "1521",
@@ -7550,7 +7461,7 @@
   {
    "kind": "territory",
    "slug": "libertad-frisona",
-   "en": "/en/territory/freedom-frisona",
+   "en": "/en/territory/frisian-freedom",
    "esLength": 1373,
    "enLength": 619,
    "ratio": 0.45,
@@ -7590,7 +7501,7 @@
   {
    "kind": "territory",
    "slug": "liga-de-suabia-heidenheim",
-   "en": "/en/territory/swedish-league-heidenheim",
+   "en": "/en/territory/swabian-league-heidenheim",
    "esLength": 1415,
    "enLength": 891,
    "ratio": 0.63,
@@ -7632,18 +7543,9 @@
    "slug": "limburgo",
    "en": "/en/territory/limburg",
    "esLength": 18715,
-   "enLength": 11229,
-   "ratio": 0.6,
+   "enLength": 13808,
+   "ratio": 0.74,
    "lostYears": [
-    "1363",
-    "1384",
-    "1405",
-    "1429",
-    "1433",
-    "1443",
-    "1441",
-    "1404",
-    "1393",
     "1419",
     "1435",
     "1521",
@@ -7746,17 +7648,9 @@
    "slug": "luxemburgo",
    "en": "/en/territory/luxembourg",
    "esLength": 17714,
-   "enLength": 10234,
-   "ratio": 0.58,
+   "enLength": 12813,
+   "ratio": 0.72,
    "lostYears": [
-    "1363",
-    "1384",
-    "1405",
-    "1429",
-    "1430",
-    "1433",
-    "1404",
-    "1393",
     "1419",
     "1435",
     "1521",
@@ -7892,7 +7786,7 @@
   {
    "kind": "territory",
    "slug": "marquesado-de-cairo",
-   "en": "/en/territory/cairo-marking",
+   "en": "/en/territory/marquisate-of-cairo",
    "esLength": 1115,
    "enLength": 582,
    "ratio": 0.52,
@@ -7902,7 +7796,7 @@
   {
    "kind": "territory",
    "slug": "marquesado-de-ceva",
-   "en": "/en/territory/marquesado-de-ceva",
+   "en": "/en/territory/marquisate-of-ceva",
    "esLength": 1112,
    "enLength": 580,
    "ratio": 0.52,
@@ -7922,7 +7816,7 @@
   {
    "kind": "territory",
    "slug": "marquesado-de-fosdinovo",
-   "en": "/en/territory/marquesado-de-fosdinovo",
+   "en": "/en/territory/marquisate-of-fosdinovo",
    "esLength": 1127,
    "enLength": 590,
    "ratio": 0.52,
@@ -7942,7 +7836,7 @@
   {
    "kind": "territory",
    "slug": "marquesado-de-oristano",
-   "en": "/en/territory/marquesado-de-oristano",
+   "en": "/en/territory/marquisate-of-oristano",
    "esLength": 1313,
    "enLength": 559,
    "ratio": 0.43,
@@ -8007,7 +7901,7 @@
   {
    "kind": "territory",
    "slug": "meissen",
-   "en": "/en/territory/meien",
+   "en": "/en/territory/meissen",
    "esLength": 5934,
    "enLength": 4215,
    "ratio": 0.71,
@@ -8072,7 +7966,7 @@
   {
    "kind": "territory",
    "slug": "mirandola",
-   "en": "/en/territory/staring-at-her",
+   "en": "/en/territory/mirandola",
    "esLength": 1195,
    "enLength": 562,
    "ratio": 0.47,
@@ -8104,7 +7998,7 @@
   {
    "kind": "territory",
    "slug": "moldavia",
-   "en": "/en/territory/moldova",
+   "en": "/en/territory/moldavia",
    "esLength": 36390,
    "enLength": 22024,
    "ratio": 0.61,
@@ -8114,7 +8008,7 @@
   {
    "kind": "territory",
    "slug": "monferrato",
-   "en": "/en/territory/monferrato",
+   "en": "/en/territory/montferrat",
    "esLength": 12248,
    "enLength": 8137,
    "ratio": 0.66,
@@ -8228,18 +8122,9 @@
    "slug": "namur",
    "en": "/en/territory/namur",
    "esLength": 15578,
-   "enLength": 8571,
-   "ratio": 0.55,
+   "enLength": 11150,
+   "ratio": 0.72,
    "lostYears": [
-    "1363",
-    "1384",
-    "1405",
-    "1430",
-    "1433",
-    "1443",
-    "1441",
-    "1404",
-    "1393",
     "1419",
     "1435",
     "1521",
@@ -8305,7 +8190,7 @@
   {
    "kind": "territory",
    "slug": "nassau-administracion-conjunta",
-   "en": "/en/territory/nassau-co-administration",
+   "en": "/en/territory/nassau-joint-administration",
    "esLength": 1648,
    "enLength": 1059,
    "ratio": 0.64,
@@ -8368,18 +8253,9 @@
    "slug": "nevers",
    "en": "/en/territory/nevers",
    "esLength": 6896,
-   "enLength": 2877,
-   "ratio": 0.42,
+   "enLength": 5456,
+   "ratio": 0.79,
    "lostYears": [
-    "1477",
-    "1363",
-    "1429",
-    "1430",
-    "1433",
-    "1443",
-    "1441",
-    "1493",
-    "1393",
     "1419"
    ],
    "spanish": []
@@ -8411,13 +8287,9 @@
    "slug": "noruega",
    "en": "/en/territory/norway",
    "esLength": 20921,
-   "enLength": 14665,
-   "ratio": 0.7,
+   "enLength": 18990,
+   "ratio": 0.91,
    "lostYears": [
-    "1536",
-    "1434",
-    "1471",
-    "1520",
     "1286"
    ],
    "spanish": []
@@ -8475,7 +8347,7 @@
   {
    "kind": "territory",
    "slug": "obispado-de-ceneda",
-   "en": "/en/territory/bishop-of-ceneda",
+   "en": "/en/territory/bishopric-of-ceneda",
    "esLength": 1110,
    "enLength": 582,
    "ratio": 0.52,
@@ -8495,7 +8367,7 @@
   {
    "kind": "territory",
    "slug": "obispado-de-curlandia",
-   "en": "/en/territory/bishop-of-curlandia",
+   "en": "/en/territory/bishopric-of-courland",
    "esLength": 1124,
    "enLength": 588,
    "ratio": 0.52,
@@ -8525,7 +8397,7 @@
   {
    "kind": "territory",
    "slug": "obispado-de-luni",
-   "en": "/en/territory/bishop-of-luni",
+   "en": "/en/territory/bishopric-of-luni",
    "esLength": 1104,
    "enLength": 578,
    "ratio": 0.52,
@@ -8595,7 +8467,7 @@
   {
    "kind": "territory",
    "slug": "obispado-de-verdun",
-   "en": "/en/territory/bishop-of-verdun",
+   "en": "/en/territory/bishopric-of-verdun",
    "esLength": 1169,
    "enLength": 640,
    "ratio": 0.55,
@@ -8605,7 +8477,7 @@
   {
    "kind": "territory",
    "slug": "oltenia-habsburgica",
-   "en": "/en/territory/olteniahaburgica",
+   "en": "/en/territory/habsburg-oltenia",
    "esLength": 1919,
    "enLength": 1123,
    "ratio": 0.59,
@@ -8709,7 +8581,7 @@
   {
    "kind": "territory",
    "slug": "paises-bajos",
-   "en": "/en/territory/netherlands-paises-bajos",
+   "en": "/en/territory/low-countries",
    "esLength": 37412,
    "enLength": 28314,
    "ratio": 0.76,
@@ -8728,14 +8600,9 @@
    "slug": "paises-bajos-y-flandes",
    "en": "/en/territory/netherlands-and-flanders",
    "esLength": 116947,
-   "enLength": 70611,
-   "ratio": 0.6,
+   "enLength": 73190,
+   "ratio": 0.63,
    "lostYears": [
-    "1363",
-    "1429",
-    "1443",
-    "1441",
-    "1393",
     "1357",
     "1556",
     "1435",
@@ -8758,7 +8625,7 @@
   {
    "kind": "territory",
    "slug": "palatinado-neoburgo",
-   "en": "/en/territory/palatinate-neoburg",
+   "en": "/en/territory/palatinate-neuburg",
    "esLength": 8620,
    "enLength": 5454,
    "ratio": 0.63,
@@ -8976,20 +8843,9 @@
    "slug": "ponthieu",
    "en": "/en/territory/ponthieu",
    "esLength": 5649,
-   "enLength": 2026,
-   "ratio": 0.36,
+   "enLength": 4605,
+   "ratio": 0.82,
    "lostYears": [
-    "1363",
-    "1384",
-    "1405",
-    "1429",
-    "1430",
-    "1433",
-    "1443",
-    "1441",
-    "1493",
-    "1404",
-    "1393",
     "1419"
    ],
    "spanish": []
@@ -8999,11 +8855,10 @@
    "slug": "portugal",
    "en": "/en/territory/portugal",
    "esLength": 13813,
-   "enLength": 18497,
-   "ratio": 1.34,
+   "enLength": 19451,
+   "ratio": 1.41,
    "lostYears": [
     "1425",
-    "1581",
     "1430",
     "1555",
     "1588",
@@ -9015,7 +8870,7 @@
   {
    "kind": "territory",
    "slug": "prebostazgo-de-interlaken",
-   "en": "/en/territory/interlaken-prebostazgo",
+   "en": "/en/territory/provostry-of-interlaken",
    "esLength": 1131,
    "enLength": 590,
    "ratio": 0.52,
@@ -9045,7 +8900,7 @@
   {
    "kind": "territory",
    "slug": "principado-abacial-de-murbach",
-   "en": "/en/territory/abacial-principality-of-murbach",
+   "en": "/en/territory/princely-abbey-of-murbach",
    "esLength": 1202,
    "enLength": 652,
    "ratio": 0.54,
@@ -9055,7 +8910,7 @@
   {
    "kind": "territory",
    "slug": "principado-abacial-de-stavelot-malmedy",
-   "en": "/en/territory/abatial-principality-of-stavelot-malmedy",
+   "en": "/en/territory/princely-abbey-of-stavelot-malmedy",
    "esLength": 1229,
    "enLength": 670,
    "ratio": 0.55,
@@ -9125,7 +8980,7 @@
   {
    "kind": "territory",
    "slug": "principado-de-gran-perm",
-   "en": "/en/territory/principality-of-gran-perm",
+   "en": "/en/territory/principality-of-great-perm",
    "esLength": 1132,
    "enLength": 598,
    "ratio": 0.53,
@@ -9285,7 +9140,7 @@
   {
    "kind": "territory",
    "slug": "principado-de-valona",
-   "en": "/en/territory/principality-of-walloon",
+   "en": "/en/territory/principality-of-valona",
    "esLength": 1161,
    "enLength": 637,
    "ratio": 0.55,
@@ -9355,7 +9210,7 @@
   {
    "kind": "territory",
    "slug": "principado-episcopal-de-coira",
-   "en": "/en/territory/episcopal-principality-of-coira",
+   "en": "/en/territory/prince-bishopric-of-chur",
    "esLength": 1143,
    "enLength": 592,
    "ratio": 0.52,
@@ -9375,7 +9230,7 @@
   {
    "kind": "territory",
    "slug": "principado-episcopal-de-freising",
-   "en": "/en/territory/episcopal-principality-of-freising",
+   "en": "/en/territory/prince-bishopric-of-freising",
    "esLength": 1323,
    "enLength": 980,
    "ratio": 0.74,
@@ -9425,7 +9280,7 @@
   {
    "kind": "territory",
    "slug": "principado-episcopal-de-trento",
-   "en": "/en/territory/episcopal-principality-of-trent",
+   "en": "/en/territory/prince-bishopric-of-trent",
    "esLength": 1146,
    "enLength": 594,
    "ratio": 0.52,
@@ -9435,7 +9290,7 @@
   {
    "kind": "territory",
    "slug": "principado-episcopal-de-utrecht",
-   "en": "/en/territory/episcopal-principality-of-utrecht",
+   "en": "/en/territory/prince-bishopric-of-utrecht",
    "esLength": 1208,
    "enLength": 656,
    "ratio": 0.54,
@@ -9445,7 +9300,7 @@
   {
    "kind": "territory",
    "slug": "principado-episcopal-de-verden",
-   "en": "/en/territory/episcopal-principality-of-verden",
+   "en": "/en/territory/prince-bishopric-of-verden",
    "esLength": 1356,
    "enLength": 996,
    "ratio": 0.73,
@@ -9455,7 +9310,7 @@
   {
    "kind": "territory",
    "slug": "principado-episcopal-de-wurzburg",
-   "en": "/en/territory/episcopal-principality-of-wurzburg",
+   "en": "/en/territory/prince-bishopric-of-wurzburg",
    "esLength": 1318,
    "enLength": 967,
    "ratio": 0.73,
@@ -9465,7 +9320,7 @@
   {
    "kind": "territory",
    "slug": "principados-circasianos",
-   "en": "/en/territory/circassian-principalitys",
+   "en": "/en/territory/circassian-principalities",
    "esLength": 1130,
    "enLength": 596,
    "ratio": 0.53,
@@ -9485,7 +9340,7 @@
   {
    "kind": "territory",
    "slug": "principados-de-latgalia",
-   "en": "/en/territory/principates-of-latgalia",
+   "en": "/en/territory/principalities-of-latgalia",
    "esLength": 1130,
    "enLength": 598,
    "ratio": 0.53,
@@ -9505,7 +9360,7 @@
   {
    "kind": "territory",
    "slug": "principados-del-alto-oka",
-   "en": "/en/territory/principates-of-the-high-oka",
+   "en": "/en/territory/upper-oka-principalities",
    "esLength": 1133,
    "enLength": 594,
    "ratio": 0.52,
@@ -9535,7 +9390,7 @@
   {
    "kind": "territory",
    "slug": "protectorado-ruso-otomano-de-las-islas-jonicas",
-   "en": "/en/territory/russian-otoman-protectorate-of-the-ionian-islands",
+   "en": "/en/territory/russo-ottoman-protectorate-of-the-ionian-islands",
    "esLength": 1237,
    "enLength": 689,
    "ratio": 0.56,
@@ -9599,7 +9454,7 @@
   {
    "kind": "territory",
    "slug": "ratisbona-ciudad-y-autoridades-ducales",
-   "en": "/en/territory/regensburg-city-and-duke-authorities",
+   "en": "/en/territory/regensburg-city-and-ducal-authorities",
    "esLength": 1609,
    "enLength": 1029,
    "ratio": 0.64,
@@ -9629,7 +9484,7 @@
   {
    "kind": "territory",
    "slug": "ravena",
-   "en": "/en/territory/it-s-a-bitch",
+   "en": "/en/territory/ravenna",
    "esLength": 1073,
    "enLength": 558,
    "ratio": 0.52,
@@ -9705,7 +9560,7 @@
   {
    "kind": "territory",
    "slug": "reinos-mahos-de-fuerteventura",
-   "en": "/en/territory/mold-retirees-of-fuerteventura",
+   "en": "/en/territory/majo-kingdoms-of-fuerteventura",
    "esLength": 1379,
    "enLength": 599,
    "ratio": 0.43,
@@ -9715,7 +9570,7 @@
   {
    "kind": "territory",
    "slug": "republica-batava",
-   "en": "/en/territory/republic-of-latvia",
+   "en": "/en/territory/batavian-republic",
    "esLength": 1067,
    "enLength": 409,
    "ratio": 0.38,
@@ -9727,7 +9582,7 @@
   {
    "kind": "territory",
    "slug": "republica-calvinista-de-gante",
-   "en": "/en/territory/the-calvinist-republic-of-ghent",
+   "en": "/en/territory/calvinist-republic-of-ghent",
    "esLength": 1200,
    "enLength": 656,
    "ratio": 0.55,
@@ -9750,7 +9605,7 @@
   {
    "kind": "territory",
    "slug": "republica-cispadana",
-   "en": "/en/territory/republic-of-cispadana",
+   "en": "/en/territory/cispadane-republic",
    "esLength": 1113,
    "enLength": 580,
    "ratio": 0.52,
@@ -9842,7 +9697,7 @@
   {
    "kind": "territory",
    "slug": "republica-ligur",
-   "en": "/en/territory/republic-of-lithuania",
+   "en": "/en/territory/ligurian-republic",
    "esLength": 1101,
    "enLength": 578,
    "ratio": 0.52,
@@ -9887,25 +9742,6 @@
    "enLength": 633,
    "ratio": 0.54,
    "lostYears": [],
-   "spanish": []
-  },
-  {
-   "kind": "territory",
-   "slug": "rethel",
-   "en": "/en/territory/rethel",
-   "esLength": 6511,
-   "enLength": 2625,
-   "ratio": 0.4,
-   "lostYears": [
-    "1477",
-    "1363",
-    "1429",
-    "1430",
-    "1433",
-    "1443",
-    "1441",
-    "1493"
-   ],
    "spanish": []
   },
   {
@@ -9992,7 +9828,7 @@
   {
    "kind": "territory",
    "slug": "rus-de-kiev",
-   "en": "/en/territory/russian-of-kiev",
+   "en": "/en/territory/kievan-rus",
    "esLength": 1026,
    "enLength": 469,
    "ratio": 0.46,
@@ -10085,7 +9921,7 @@
   {
    "kind": "territory",
    "slug": "sajonia-coburgo",
-   "en": "/en/territory/saxony-coburgo",
+   "en": "/en/territory/saxe-coburg",
    "esLength": 1493,
    "enLength": 775,
    "ratio": 0.52,
@@ -10095,7 +9931,7 @@
   {
    "kind": "territory",
    "slug": "sajonia-coburgo-eisenach",
-   "en": "/en/territory/saxony-coburg-eisenach",
+   "en": "/en/territory/saxe-coburg-eisenach",
    "esLength": 2121,
    "enLength": 1090,
    "ratio": 0.51,
@@ -10125,7 +9961,7 @@
   {
    "kind": "territory",
    "slug": "sajonia-lauenburgo",
-   "en": "/en/territory/saxony-lauenburg",
+   "en": "/en/territory/saxe-lauenburg",
    "esLength": 1597,
    "enLength": 1106,
    "ratio": 0.69,
@@ -10135,7 +9971,7 @@
   {
    "kind": "territory",
    "slug": "sajonia-weimar",
-   "en": "/en/territory/saxony-weimar",
+   "en": "/en/territory/saxe-weimar",
    "esLength": 3754,
    "enLength": 2040,
    "ratio": 0.54,
@@ -10177,7 +10013,7 @@
   {
    "kind": "territory",
    "slug": "san-galo-ciudad-y-abadia",
-   "en": "/en/territory/san-galo-city-and-abbey",
+   "en": "/en/territory/st-gall-city-and-abbey",
    "esLength": 1722,
    "enLength": 1270,
    "ratio": 0.74,
@@ -10347,7 +10183,7 @@
   {
    "kind": "territory",
    "slug": "senorio-de-branicevo",
-   "en": "/en/territory/lord-of-branicevo",
+   "en": "/en/territory/lordship-of-branicevo",
    "esLength": 1158,
    "enLength": 635,
    "ratio": 0.55,
@@ -10357,7 +10193,7 @@
   {
    "kind": "territory",
    "slug": "senorio-de-carpatos",
-   "en": "/en/territory/lordship-of-carpathians",
+   "en": "/en/territory/lordship-of-karpathos",
    "esLength": 1155,
    "enLength": 635,
    "ratio": 0.55,
@@ -10387,7 +10223,7 @@
   {
    "kind": "territory",
    "slug": "senorio-de-chambery",
-   "en": "/en/territory/lord-of-chambery",
+   "en": "/en/territory/lordship-of-chambery",
    "esLength": 1112,
    "enLength": 584,
    "ratio": 0.53,
@@ -10397,7 +10233,7 @@
   {
    "kind": "territory",
    "slug": "senorio-de-citera",
-   "en": "/en/territory/senorio-de-citera",
+   "en": "/en/territory/lordship-of-cythera",
    "esLength": 1149,
    "enLength": 631,
    "ratio": 0.55,
@@ -10417,7 +10253,7 @@
   {
    "kind": "territory",
    "slug": "senorio-de-dejanovic",
-   "en": "/en/territory/senor-de-dejanovic",
+   "en": "/en/territory/lordship-of-dejanovic",
    "esLength": 1580,
    "enLength": 876,
    "ratio": 0.55,
@@ -10437,7 +10273,7 @@
   {
    "kind": "territory",
    "slug": "senorio-de-dukagjin",
-   "en": "/en/territory/senorio-de-dukagjin",
+   "en": "/en/territory/lordship-of-dukagjin",
    "esLength": 1155,
    "enLength": 633,
    "ratio": 0.55,
@@ -10447,7 +10283,7 @@
   {
    "kind": "territory",
    "slug": "senorio-de-enez",
-   "en": "/en/territory/lord-of-ennes",
+   "en": "/en/territory/lordship-of-enez",
    "esLength": 1143,
    "enLength": 625,
    "ratio": 0.55,
@@ -10557,7 +10393,7 @@
   {
    "kind": "territory",
    "slug": "senorio-de-los-da-romano",
-   "en": "/en/territory/lords-of-the-roman",
+   "en": "/en/territory/lordship-of-the-da-romano",
    "esLength": 1127,
    "enLength": 594,
    "ratio": 0.53,
@@ -10642,7 +10478,7 @@
   {
    "kind": "territory",
    "slug": "senorio-de-sackingen-en-glaris",
-   "en": "/en/territory/sackinga-s-senor-at-glaris",
+   "en": "/en/territory/lordship-of-sackingen-in-glarus",
    "esLength": 1145,
    "enLength": 606,
    "ratio": 0.53,
@@ -10682,7 +10518,7 @@
   {
    "kind": "territory",
    "slug": "senorio-de-tinos-y-mykonos",
-   "en": "/en/territory/lord-of-tinos-and-mykonos",
+   "en": "/en/territory/lordship-of-tinos-and-mykonos",
    "esLength": 1176,
    "enLength": 651,
    "ratio": 0.55,
@@ -10722,7 +10558,7 @@
   {
    "kind": "territory",
    "slug": "senorio-latino-de-antalya",
-   "en": "/en/territory/latin-lord-of-antalya",
+   "en": "/en/territory/latin-lordship-of-antalya",
    "esLength": 1075,
    "enLength": 425,
    "ratio": 0.4,
@@ -10732,7 +10568,7 @@
   {
    "kind": "territory",
    "slug": "senorios-benahoaritas-de-la-palma",
-   "en": "/en/territory/senorios-benahoaritas-de-la-palma",
+   "en": "/en/territory/benahoarite-chiefdoms-of-la-palma",
    "esLength": 1391,
    "enLength": 605,
    "ratio": 0.43,
@@ -10752,7 +10588,7 @@
   {
    "kind": "territory",
    "slug": "senorios-de-bardi-y-compiano",
-   "en": "/en/territory/lords-of-bardi-and-compiano",
+   "en": "/en/territory/lordships-of-bardi-and-compiano",
    "esLength": 1376,
    "enLength": 601,
    "ratio": 0.44,
@@ -10772,7 +10608,7 @@
   {
    "kind": "territory",
    "slug": "senorios-de-eubea",
-   "en": "/en/territory/senorios-de-eubea",
+   "en": "/en/territory/lordships-of-euboea",
    "esLength": 1149,
    "enLength": 631,
    "ratio": 0.55,
@@ -10782,7 +10618,7 @@
   {
    "kind": "territory",
    "slug": "senorios-de-las-cicladas",
-   "en": "/en/territory/lordship-of-the-cyclades",
+   "en": "/en/territory/lordships-of-the-cyclades",
    "esLength": 1170,
    "enLength": 643,
    "ratio": 0.55,
@@ -10792,7 +10628,7 @@
   {
    "kind": "territory",
    "slug": "senorios-de-las-esporadas",
-   "en": "/en/territory/ladies-and-gentlemen-of-the-esporadas",
+   "en": "/en/territory/lordships-of-the-sporades",
    "esLength": 1173,
    "enLength": 643,
    "ratio": 0.55,
@@ -10802,7 +10638,7 @@
   {
    "kind": "territory",
    "slug": "senorios-de-reuss",
-   "en": "/en/territory/lords-of-reu",
+   "en": "/en/territory/lordships-of-reuss",
    "esLength": 1578,
    "enLength": 1019,
    "ratio": 0.65,
@@ -10842,7 +10678,7 @@
   {
    "kind": "territory",
    "slug": "senorios-de-wolhusen",
-   "en": "/en/territory/ladies-of-wolhusen",
+   "en": "/en/territory/lordships-of-wolhusen",
    "esLength": 1385,
    "enLength": 631,
    "ratio": 0.46,
@@ -10872,7 +10708,7 @@
   {
    "kind": "territory",
    "slug": "senorios-del-chianti",
-   "en": "/en/territory/lords-of-the-chianti",
+   "en": "/en/territory/lordships-of-chianti",
    "esLength": 1352,
    "enLength": 579,
    "ratio": 0.43,
@@ -11011,7 +10847,7 @@
   {
    "kind": "territory",
    "slug": "sirmia",
-   "en": "/en/territory/sygomia",
+   "en": "/en/territory/syrmia",
    "esLength": 1545,
    "enLength": 822,
    "ratio": 0.53,
@@ -11053,7 +10889,7 @@
   {
    "kind": "territory",
    "slug": "suabia",
-   "en": "/en/territory/swaziland",
+   "en": "/en/territory/swabia",
    "esLength": 3407,
    "enLength": 2262,
    "ratio": 0.66,
@@ -11068,12 +10904,9 @@
    "slug": "suecia",
    "en": "/en/territory/sweden",
    "esLength": 22546,
-   "enLength": 21050,
-   "ratio": 0.93,
+   "enLength": 24219,
+   "ratio": 1.07,
    "lostYears": [
-    "1355",
-    "1442",
-    "1905",
     "1587",
     "1380"
    ],
@@ -11122,7 +10955,7 @@
   {
    "kind": "territory",
    "slug": "sultanato-hafsi",
-   "en": "/en/territory/sultanate-hafsi",
+   "en": "/en/territory/hafsid-sultanate",
    "esLength": 1102,
    "enLength": 576,
    "ratio": 0.52,
@@ -11142,7 +10975,7 @@
   {
    "kind": "territory",
    "slug": "sultanato-merini",
-   "en": "/en/territory/sultanate-merini",
+   "en": "/en/territory/marinid-sultanate",
    "esLength": 1105,
    "enLength": 578,
    "ratio": 0.52,
@@ -11192,7 +11025,7 @@
   {
    "kind": "territory",
    "slug": "temporales-y-senorios-del-vivarais-y-velay",
-   "en": "/en/territory/temporary-and-lordship-of-vivarais-and-velay",
+   "en": "/en/territory/temporalities-and-lordships-of-vivarais-and-velay",
    "esLength": 1451,
    "enLength": 687,
    "ratio": 0.47,
@@ -11212,7 +11045,7 @@
   {
    "kind": "territory",
    "slug": "territorios-gomeros",
-   "en": "/en/territory/gomero-territories",
+   "en": "/en/territory/gomera-territories",
    "esLength": 1349,
    "enLength": 575,
    "ratio": 0.43,
@@ -11222,7 +11055,7 @@
   {
    "kind": "territory",
    "slug": "territorios-mahos-de-lanzarote",
-   "en": "/en/territory/lanzarote-s-mahos-territories",
+   "en": "/en/territory/majo-territories-of-lanzarote",
    "esLength": 1382,
    "enLength": 597,
    "ratio": 0.43,
@@ -11232,7 +11065,7 @@
   {
    "kind": "territory",
    "slug": "tesalia",
-   "en": "/en/territory/other-tesalia",
+   "en": "/en/territory/thessaly",
    "esLength": 1120,
    "enLength": 609,
    "ratio": 0.54,
@@ -11252,7 +11085,7 @@
   {
    "kind": "territory",
    "slug": "tierras-bashkirias",
-   "en": "/en/territory/bashkirias",
+   "en": "/en/territory/bashkir-lands",
    "esLength": 1115,
    "enLength": 572,
    "ratio": 0.51,
@@ -11262,7 +11095,7 @@
   {
    "kind": "territory",
    "slug": "tierras-de-curonios-y-semigalianos",
-   "en": "/en/territory/curonian-and-semi-curonian-land",
+   "en": "/en/territory/lands-of-the-curonians-and-semigallians",
    "esLength": 1163,
    "enLength": 624,
    "ratio": 0.54,
@@ -11272,7 +11105,7 @@
   {
    "kind": "territory",
    "slug": "tierras-de-livonios-y-letones",
-   "en": "/en/territory/lands-of-lionaires-and-lionaires",
+   "en": "/en/territory/lands-of-livonians-and-latvians",
    "esLength": 1148,
    "enLength": 608,
    "ratio": 0.53,
@@ -11292,7 +11125,7 @@
   {
    "kind": "territory",
    "slug": "tierras-de-los-janty-y-mansi",
-   "en": "/en/territory/the-land-of-the-janty-and-mansi",
+   "en": "/en/territory/lands-of-the-khanty-and-mansi",
    "esLength": 1145,
    "enLength": 604,
    "ratio": 0.53,
@@ -11312,7 +11145,7 @@
   {
    "kind": "territory",
    "slug": "tierras-de-los-nenets-y-janty",
-   "en": "/en/territory/nenets-and-janty-lands",
+   "en": "/en/territory/lands-of-the-nenets-and-khanty",
    "esLength": 1148,
    "enLength": 606,
    "ratio": 0.53,
@@ -11322,7 +11155,7 @@
   {
    "kind": "territory",
    "slug": "tierras-de-los-semigalianos",
-   "en": "/en/territory/lands-of-the-semi-galians",
+   "en": "/en/territory/lands-of-the-semigallians",
    "esLength": 1142,
    "enLength": 596,
    "ratio": 0.52,
@@ -11382,7 +11215,7 @@
   {
    "kind": "territory",
    "slug": "tierras-mordvinas",
-   "en": "/en/territory/mordvine-lands",
+   "en": "/en/territory/mordvin-lands",
    "esLength": 1112,
    "enLength": 572,
    "ratio": 0.51,
@@ -11512,7 +11345,7 @@
   {
    "kind": "territory",
    "slug": "transilvania-habsburgica",
-   "en": "/en/territory/transylvania-habsburgica",
+   "en": "/en/territory/habsburg-transylvania",
    "esLength": 6566,
    "enLength": 4028,
    "ratio": 0.61,
@@ -11531,7 +11364,7 @@
   {
    "kind": "territory",
    "slug": "transjordania",
-   "en": "/en/territory/trans-jordan",
+   "en": "/en/territory/transjordan",
    "esLength": 1325,
    "enLength": 612,
    "ratio": 0.46,
@@ -11835,7 +11668,7 @@
   {
    "kind": "territory",
    "slug": "vizcondado-de-fenolleda",
-   "en": "/en/territory/viscount-of-fenolleda",
+   "en": "/en/territory/viscounty-of-fenouilledes",
    "esLength": 1127,
    "enLength": 594,
    "ratio": 0.53,
@@ -11855,7 +11688,7 @@
   {
    "kind": "territory",
    "slug": "vizcondado-de-narbona",
-   "en": "/en/territory/narbonne-district",
+   "en": "/en/territory/viscounty-of-narbonne",
    "esLength": 1121,
    "enLength": 586,
    "ratio": 0.52,
@@ -11865,7 +11698,7 @@
   {
    "kind": "territory",
    "slug": "vizcondado-de-thouars",
-   "en": "/en/territory/vizcondado-de-thouars",
+   "en": "/en/territory/viscounty-of-thouars",
    "esLength": 1178,
    "enLength": 642,
    "ratio": 0.54,
@@ -11885,7 +11718,7 @@
   {
    "kind": "territory",
    "slug": "vizcondados-trencavel",
-   "en": "/en/territory/viscounts-trencavel",
+   "en": "/en/territory/trencavel-viscounties",
    "esLength": 1388,
    "enLength": 631,
    "ratio": 0.45,
@@ -11905,7 +11738,7 @@
   {
    "kind": "territory",
    "slug": "voivodatos-de-valaquia",
-   "en": "/en/territory/voivodeship-of-valaquia",
+   "en": "/en/territory/voivodeships-of-wallachia",
    "esLength": 1165,
    "enLength": 643,
    "ratio": 0.55,
@@ -11967,7 +11800,7 @@
   {
    "kind": "territory",
    "slug": "zarato-de-tarnovo",
-   "en": "/en/territory/tarnovo-zarate",
+   "en": "/en/territory/tsardom-of-tarnovo",
    "esLength": 1166,
    "enLength": 640,
    "ratio": 0.55,
@@ -11989,17 +11822,9 @@
    "slug": "zelanda",
    "en": "/en/territory/zeeland",
    "esLength": 17755,
-   "enLength": 8406,
-   "ratio": 0.47,
+   "enLength": 10985,
+   "ratio": 0.62,
    "lostYears": [
-    "1363",
-    "1384",
-    "1405",
-    "1429",
-    "1430",
-    "1443",
-    "1441",
-    "1393",
     "1419",
     "1435",
     "1521",

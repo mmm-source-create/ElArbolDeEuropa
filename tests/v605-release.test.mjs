@@ -40,7 +40,7 @@ test('every recorded king of Aragon has a credited, published image',()=>{
  assert(!IMAGENES_PERSONAS.GIORGI7IMER?.fuenteUrl.includes('1393-1400'));
 });
 test('English dynasty pages retain canonical armorial identifiers',()=>{
- for(const slug of ['ivrea-borgona','lorena']){
+ for(const slug of ['ivrea-burgundy','lorraine']){
   const d=JSON.parse(fs.readFileSync(`public/english-meta/dynasty-${slug}.json`));assert(escudoDe(d.key)?.imagen,`${slug}: ${d.key}`);
  }
 });
