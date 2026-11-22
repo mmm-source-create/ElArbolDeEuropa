@@ -1,4 +1,6 @@
 import {englishRoute} from '../english/routes.js';
+import {packPage, parsePage} from './pageTransport.js';
+export {parsePage} from './pageTransport.js';
 // Sin dependencias del DOM: también se utiliza para validar el HTML generado.
 export const STATIC_SCHEMA = 2;
 export const STATIC_DATA_ID = 'eade-initial-page';
@@ -39,6 +41,6 @@ export function initialPageForLocation(page,pathname,search='') {
 export function readInitialPage(document,location) {
  const element=document.getElementById(STATIC_DATA_ID);
  if(!element)return null;
- try{return initialPageForLocation(JSON.parse(element.textContent),location.pathname,location.search);}catch{return null;}
+ try{return initialPageForLocation(parsePage(element.textContent),location.pathname,location.search);}catch{return null;}
 }
-export const serializePage = page => JSON.stringify(page).replace(/</g,'\\u003c').replace(/>/g,'\\u003e').replace(/&/g,'\\u0026').replace(/\u2028/g,'\\u2028').replace(/\u2029/g,'\\u2029');
+export const serializePage = (page,compact=true) => JSON.stringify(compact?packPage(page):page).replace(/</g,'\\u003c').replace(/>/g,'\\u003e').replace(/&/g,'\\u0026').replace(/\u2028/g,'\\u2028').replace(/\u2029/g,'\\u2029');

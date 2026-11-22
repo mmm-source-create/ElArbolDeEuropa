@@ -1,5 +1,6 @@
 import {V605_REVIEWS} from './v605Reviews.js';
 import {withSuccessionDates619} from './successionDates619.js';
+import {REVIEWS_620} from './reviews620.js';
 import {POLISH_NEW_REVIEWS} from './polishNewReviews.js';
 import {OCTOBER_50_REVIEWS} from './october50Reviews.js';
 import {BELTRANEJA_REVIEWS} from './beltranejaReviews.js';
@@ -434,6 +435,7 @@ export const CLAIM_REVIEWS = Object.freeze(withSuccessionDates619({
   ...NAVARRE_LANDS_REVIEWS,
   ...BRANDENBURG_PRUSSIA_REVIEWS,
   ...GERMAN_PRINCES_REVIEWS,
+  ...REVIEWS_620,
   ...ROYAL_COVERAGE_REVIEWS,
 }));
 

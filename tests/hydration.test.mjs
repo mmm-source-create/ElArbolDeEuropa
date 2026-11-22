@@ -1,4 +1,4 @@
-import {STATIC_SCHEMA} from '../src/features/public/staticData.js';
+import {STATIC_SCHEMA,parsePage} from '../src/features/public/staticData.js';
 import test,{before,after} from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs/promises';
@@ -138,7 +138,7 @@ test('el catálogo inglés recupera el capítulo guardado sin sustituir el HTML 
 if(realSample) {
  for(const item of realSamplePages)test(`HTML real e hidratación: ${item.path}`,async()=>{
   const html=await fs.readFile(path.join(realSample,item.path.slice(1),'index.html'),'utf8');
-  const document=new JSDOM(html);const page=JSON.parse(document.window.document.getElementById('eade-initial-page').textContent);document.window.close();
+  const document=new JSDOM(html);const page=parsePage(document.window.document.getElementById('eade-initial-page').textContent);document.window.close();
   await hydrated(page,undefined,{html});
  });
 }

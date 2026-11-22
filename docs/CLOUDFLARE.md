@@ -12,6 +12,8 @@ Las variantes `?atlas=1` reciben el mismo HTML estático. `readInitialPage` desc
 
 Para reducir el número de archivos, los metadatos ingleses se leen del JSON que ya contiene cada HTML SSG. El empaquetado comprueba que ambos datos coinciden, conserva todas las fichas y genera un índice de rutas. Los clientes actuales acceden directamente al HTML estático; el Worker mantiene los antiguos endpoints JSON para pestañas abiertas anteriormente. Las copias locales con sufijo « 2» y los informes de auditoría quedan fuera del paquete. No se borran de sus carpetas originales.
 
+Desde 6.0.20 el bloque de datos del HTML puede compartir claves y textos repetidos mediante el formato `eade-page-1`. `pageTransport.js` lo reconstruye sin pérdidas antes de validar o renderizar. La auditoría SSG compara el resultado completo con el JSON fuente. `metadataFromHtml` utiliza el mismo lector, por lo que los antiguos endpoints siguen devolviendo JSON ordinario. Las páginas publicadas con el formato anterior siguen siendo legibles. Esta compactación no cambia el contenido HTML que rastrean los buscadores ni las rutas o etiquetas canónicas.
+
 ## Verificación y despliegue de prueba
 
 Con Node 24:
