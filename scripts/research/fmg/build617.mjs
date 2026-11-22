@@ -12,6 +12,9 @@ import {nameParts, compatible} from './names.mjs';
 const root = new URL('../../../.cache/fmg/', import.meta.url);
 const {PERSONAS} = await import('../../../src/data/personas.js');
 const {personClaims} = await import('../../../src/evidence/claims.js');
+const {REVIEWS_617} = await import('../../../src/evidence/reviews617.js');
+// A claim documented by an earlier run of this review is reviewed again (it would no longer look pending).
+const open = claim => claim.certainty === 'pending' || REVIEWS_617[claim.id]?.sources[0].url.startsWith('https://fmg.ac/');
 const {COMPLETE_ENGLISH_PROFILES} = await import('../../../src/features/english/fullProfiles.js');
 const {conyugesDe} = await import('../../../src/domain/genealogy/personAccessors.js');
 const entries = JSON.parse(fs.readFileSync(new URL('entries.json', root)));
@@ -28,6 +31,22 @@ const identify = p => {
 };
 const identified = new Map();
 for (const p of PERSONAS) { const found = identify(p); if (found.length) identified.set(p.id, found); }
+// 6.0.18: people with only one sure year (or none) are identified through the children list of a parent
+// already identified: same given name and regnal number, and no sure year that contradicts the Atlas.
+const contradicts = (p, e) => [[p.nac, p.nacAprox, e.birth], [p.muer, p.muerAprox, e.death]].some(([y, approx, d]) => Number.isInteger(y) && !approx && d?.certain && d.year !== y);
+for (let round = 0; round < 3; round++) {
+  for (const p of PERSONAS) {
+    if (identified.has(p.id)) continue;
+    const parents = [p.padre, p.madre].map(id => identified.get(id)).filter(Boolean).flat().map(e => e.index);
+    if (!parents.length) continue;
+    const children = entries.filter(e => e.parentEntry !== null && parents.includes(e.parentEntry) && fits(p, e.name) && !contradicts(p, e));
+    if (!children.length || new Set(children.map(e => `${e.name}|${e.birth?.year}|${e.death?.year}`)).size > 1) continue;
+    // At least one year must agree when the Atlas gives a sure one, so that same-named siblings are not confused.
+    const sure = [[p.nac, p.nacAprox, 'birth'], [p.muer, p.muerAprox, 'death']].filter(([y, approx]) => Number.isInteger(y) && !approx);
+    if (sure.length && !sure.some(([y, , k]) => children[0][k]?.year === y)) continue;
+    identified.set(p.id, children);
+  }
+}
 const pageTitle = page => page.replace(/\.htm$/, '').replace(/%20/g, ' ');
 const source = (e, locator, locatorEn) => ({title: `Foundation for Medieval Genealogy · Medieval Lands · ${pageTitle(e.page)}`,
   url: `https://fmg.ac/Projects/MedLands/${encodeURIComponent(e.page).replace(/%2C/g, ',')}${e.anchor ? `#${e.anchor}` : ''}`, locator, locatorEn});
@@ -44,7 +63,7 @@ for (const p of PERSONAS) {
   const mine = identified.get(p.id);
   if (!mine) continue;
   for (const claim of personClaims(p)) {
-    if (claim.certainty !== 'pending') continue;
+    if (!open(claim)) continue;
     const kind = claim.id.split(':')[2];
     if (kind === 'birth' || kind === 'death') {
       const e = mine.find(x => x[kind]?.certain && x[kind].year === claim.value);

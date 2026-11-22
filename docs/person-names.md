@@ -11,7 +11,7 @@ El nombre público es una forma historiográfica breve en el idioma de la págin
 5. Separar sobrenombre y nombre cuando existe un ordinal o identificación suficiente. Pedro I de Rusia / Peter I of Russia lleva el Grande / the Great en el campo propio. Lo mismo se aplica a Catalina II y Federico II. Juana de Arco lleva la Doncella de Orleans / the Maid of Orléans.
 6. Mantener todas las coronas y numeraciones en los gobiernos y variantes: Carlos V y Carlos I designan a una persona. No concatenar su titulatura completa en cada tarjeta ni deducir territorios a partir del nombre.
 7. Los tratamientos san/santa no encabezan las fichas generales. Se conservan como variantes y se explican en la biografía. Los papas usan su nombre pontificio, con su nombre anterior como variante cuando esté documentado.
-8. Conservar identificadores, relaciones y enlaces publicados. Añadir el nombre anterior a `aliases` y fijar el antiguo `slug` al cambiar `nombre`.
+8. Conservar identificadores, relaciones y enlaces publicados. Añadir el nombre anterior a `aliases` y fijar el antiguo `slug` al cambiar `nombre`. Excepción (desde la 6.0.18): si la dirección inglesa salió de una traducción errónea o de un nombre roto, pasa a la forma del nombre revisado y la antigua redirige con un 301.
 
 En español, el artículo de un sobrenombre va en minúscula y los términos significativos llevan mayúscula: el Grande, la Doncella de Orleans. Véase [FundéuRAE: escritura de apodos y alias](https://www.fundeu.es/recomendacion/apodos-alias-escritura/). En inglés se usa la forma inglesa asentada, sin trasladar literalmente todos los epítetos españoles.
 

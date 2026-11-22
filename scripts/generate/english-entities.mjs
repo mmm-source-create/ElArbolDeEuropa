@@ -13,6 +13,7 @@ import {escudoDe} from '../../src/content/dinastias/escudos.js';
 import {V6_STORIES} from '../../src/features/english/v6/index.js';
 import {ENGLISH_TERRITORY_NOTES} from '../../src/features/english/territoryNotes616.js';
 import {ENGLISH_TERRITORY_EVOLUTION} from '../../src/features/english/territoryEvolution617.js';
+import {ENGLISH_UNION_TEXTS} from '../../src/features/english/territoryUnions618.js';
 const entityName=t=>['Perche','Las dos Borgoñas','Borgoña y Países Bajos'].includes(t.key)?PROFILE_LABELS[t.key]:t.name;
 const names={...ENGLISH_NAMES,...Object.fromEntries(Object.entries(COMPLETE_ENGLISH_PROFILES).map(([id,p])=>[id,p.name]))};
 const term=t=>{if(!PROFILE_LABELS[t])throw Error(`Missing entity term: ${t}`);return PROFILE_LABELS[t];};
@@ -53,6 +54,11 @@ export async function englishEntityPages(people){
    // 6.0.16: reviewed notes, parent entities and components, as on the Spanish page.
    nota:ENGLISH_TERRITORY_NOTES[source.nota]||null,naturaleza:source.naturaleza,
    // 6.0.17: hand-translated political evolution (all lines must be translated, or none is shown).
+   // 6.0.18: hand-translated historical unions, shown only when every text has its English version.
+   uniones:(source.uniones||[]).filter(u=>[u.titulo,u.resumen,u.instituciones,...u.etapas.flatMap(e=>[e.titulo,e.texto])].filter(Boolean).every(text=>ENGLISH_UNION_TEXTS[text])).map(u=>({id:u.id,desde:u.desde,hasta:u.hasta,
+    titulo:ENGLISH_UNION_TEXTS[u.titulo],resumen:ENGLISH_UNION_TEXTS[u.resumen],instituciones:ENGLISH_UNION_TEXTS[u.instituciones],
+    territorios:u.territorios.map(key=>({key,name:PROFILE_LABELS[key]||key})),fuentes:sources(u.fuentes),
+    etapas:u.etapas.map(e=>({anio:e.anio,titulo:ENGLISH_UNION_TEXTS[e.titulo],texto:ENGLISH_UNION_TEXTS[e.texto],personas:(e.personas||[]).filter(p=>names[p.id]).map(p=>({id:p.id,nombre:names[p.id],path:translatedEquivalent(`/es/persona/${p.slug}`,'en')||`/es/persona/${p.slug}`}))}))})),
    evolucion:(source.evolucion||[]).every(e=>ENGLISH_TERRITORY_EVOLUTION[e.texto])?(source.evolucion||[]).map(e=>({anio:e.anio,texto:ENGLISH_TERRITORY_EVOLUTION[e.texto]})):[],
    pertenencias:(source.pertenencias||[]).filter(v=>PROFILE_LABELS[v.territorio]).map(v=>({key:v.territorio,name:PROFILE_LABELS[v.territorio],desde:v.desde})),
    componentes:(source.componentes||[]).filter(key=>PROFILE_LABELS[key]).map(key=>({key,name:PROFILE_LABELS[key]})),

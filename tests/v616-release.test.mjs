@@ -58,8 +58,9 @@ test('English URLs built from machine-translated names move, and the old ones re
   assert.equal(route('PAPA_JULIO3'), 'julius-iii');
   assert.equal(new Set(TRANSLATED_PEOPLE.map(item => item.en)).size, TRANSLATED_PEOPLE.length);
   const redirects = JSON.parse(read('routes.json')).redirects;
-  for (const {en, enBefore} of Object.values(ENGLISH_SLUGS_616)) {
-    assert.equal(redirects.find(rule => rule.source === `/en/person/${enBefore}`)?.destination, `/en/person/${en}`, enBefore);
+  // Each old URL points straight at the current one (6.0.18 may have moved it again).
+  for (const [id, {enBefore}] of Object.entries(ENGLISH_SLUGS_616)) {
+    assert.equal(redirects.find(rule => rule.source === `/en/person/${enBefore}`)?.destination, `/en/person/${route(id)}`, enBefore);
   }
   assert.ok(!redirects.some(rule => Object.values(ENGLISH_SLUGS_616).some(({enBefore}) => rule.destination === `/en/person/${enBefore}`)));
 });
