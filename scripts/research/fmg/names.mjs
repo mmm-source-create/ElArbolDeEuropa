@@ -27,7 +27,7 @@ const CLASSES = [
   'albert alberto albrecht',
   'otto oton othon ottone ottokar otakar',
   'rudolf rodolfo rodolphe rudolph',
-  'conrad conrado konrad corrado',
+  'conrad conrado konrad corrado conradino corradino conradin',
   'raymond raimundo raimon ramon raimondo raymond',
   'robert roberto rupert ruprecht',
   'richard ricardo riccardo',
@@ -57,7 +57,7 @@ const CLASSES = [
   'hugh hugo hugues ugo',
   'guy guido gui',
   'amadeus amadeo amedee amedeo',
-  'boniface bonifacio',
+  'boniface bonifacio bonifazio bonifatius',
   'leopold leopoldo',
   'maximilian maximiliano',
   'bohemond bohemundo bohemond boemondo',
@@ -72,7 +72,7 @@ const CLASSES = [
   'hedwig eduviges jadwiga hedvika',
   'yolanda violante yolande iolanda jolanta yolanta',
   'teresa therese theresa tareja',
-  'christopher cristobal christoph christophe cristoforo krzysztof',
+  'christopher cristobal christoph christophe cristoforo krzysztof christoffer kristoffer',
   'christina cristina kristina christine',
   'cunigunde cunegunda kunigunde kunigunda kunhuta cunegonde',
   'helen elena helene helena ilona jelena',
@@ -131,6 +131,9 @@ export const nameParts = name => {
 };
 export const compatible = (a, b) => {
   if (!a || !b) return false;
-  const same = a.given === b.given || (a.given.length >= 4 && b.given.length >= 4 && a.given.slice(0, 4) === b.given.slice(0, 4));
+  // 6.0.22: the shared-prefix rule applies only when neither name belongs to a known class, so that
+  // Christopher and Christian (or Constance and Constantine) are not taken for the same name.
+  const known = g => [...CANON.values()].includes(g);
+  const same = a.given === b.given || (a.given.length >= 4 && b.given.length >= 4 && a.given.slice(0, 4) === b.given.slice(0, 4) && !known(a.given) && !known(b.given));
   return same && (!a.numeral || !b.numeral || a.numeral === b.numeral);
 };

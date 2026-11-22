@@ -1,16 +1,16 @@
 {
  "summary": {
   "pages": 4420,
-  "clean": 4154,
-  "cleanShare": 0.94,
+  "clean": 4238,
+  "cleanShare": 0.959,
   "byKind": {
    "person": {
     "pages": 2814,
     "missing": 0,
     "shortEnglish": 0,
     "lostYears": 55,
-    "spanishWords": 52,
-    "clean": 2708
+    "spanishWords": 40,
+    "clean": 2721
    },
    "dynasty": {
     "pages": 521,
@@ -23,18 +23,18 @@
    "territory": {
     "pages": 1041,
     "missing": 0,
-    "shortEnglish": 82,
-    "lostYears": 42,
+    "shortEnglish": 51,
+    "lostYears": 7,
     "spanishWords": 8,
-    "clean": 928
+    "clean": 976
    },
    "story": {
     "pages": 44,
     "missing": 0,
-    "shortEnglish": 25,
-    "lostYears": 23,
-    "spanishWords": 0,
-    "clean": 14
+    "shortEnglish": 0,
+    "lostYears": 2,
+    "spanishWords": 5,
+    "clean": 37
    }
   }
  },
@@ -102,15 +102,17 @@
   },
   {
    "kind": "person",
-   "slug": "alfonso-enriquez-de-castilla",
-   "en": "/en/person/alfonso-enriquez-of-castile",
-   "esLength": 6073,
-   "enLength": 6077,
-   "ratio": 1,
+   "slug": "alfonso-v-de-aragon",
+   "en": "/en/person/alfonso-v-of-aragon",
+   "esLength": 13303,
+   "enLength": 13597,
+   "ratio": 1.02,
    "lostYears": [],
    "spanish": [
+    "del",
     "Castilla",
-    "las"
+    "como",
+    "los"
    ]
   },
   {
@@ -140,32 +142,6 @@
   },
   {
    "kind": "person",
-   "slug": "beatriz-de-castilla-beatcast",
-   "en": "/en/person/beatrice-of-castile",
-   "esLength": 6309,
-   "enLength": 6360,
-   "ratio": 1.01,
-   "lostYears": [],
-   "spanish": [
-    "del",
-    "Castilla"
-   ]
-  },
-  {
-   "kind": "person",
-   "slug": "beatriz-de-provenza",
-   "en": "/en/person/beatrice-of-provence",
-   "esLength": 7229,
-   "enLength": 7267,
-   "ratio": 1.01,
-   "lostYears": [],
-   "spanish": [
-    "Sicilia",
-    "Castilla"
-   ]
-  },
-  {
-   "kind": "person",
    "slug": "benedetta-de-massa",
    "en": "/en/person/benedetta-of-massa",
    "esLength": 3766,
@@ -191,28 +167,28 @@
   },
   {
    "kind": "person",
+   "slug": "carlos-iv-de-francia",
+   "en": "/en/person/charles-iv-of-france",
+   "esLength": 9226,
+   "enLength": 9397,
+   "ratio": 1.02,
+   "lostYears": [],
+   "spanish": [
+    "Navarra",
+    "Francia"
+   ]
+  },
+  {
+   "kind": "person",
    "slug": "carlos-vi-del-sacro-imperio",
    "en": "/en/person/charles-vi-of-the-holy-roman-empire",
-   "esLength": 36246,
-   "enLength": 39948,
+   "esLength": 36517,
+   "enLength": 40237,
    "ratio": 1.1,
    "lostYears": [],
    "spanish": [
     "Milán",
     "Nápoles"
-   ]
-  },
-  {
-   "kind": "person",
-   "slug": "catalina-de-austria-cataust",
-   "en": "/en/person/catherine-of-austria",
-   "esLength": 6704,
-   "enLength": 6782,
-   "ratio": 1.01,
-   "lostYears": [],
-   "spanish": [
-    "del",
-    "Aragón"
    ]
   },
   {
@@ -226,32 +202,6 @@
     "1780"
    ],
    "spanish": []
-  },
-  {
-   "kind": "person",
-   "slug": "conradino-de-hohenstaufen",
-   "en": "/en/person/conradin-of-hohenstaufen",
-   "esLength": 8793,
-   "enLength": 8862,
-   "ratio": 1.01,
-   "lostYears": [],
-   "spanish": [
-    "Baviera",
-    "del"
-   ]
-  },
-  {
-   "kind": "person",
-   "slug": "cosme-ii-de-toscana",
-   "en": "/en/person/cosimo-ii-of-tuscany",
-   "esLength": 7572,
-   "enLength": 7639,
-   "ratio": 1.01,
-   "lostYears": [],
-   "spanish": [
-    "Toscana",
-    "Lorena"
-   ]
   },
   {
    "kind": "person",
@@ -343,19 +293,6 @@
   },
   {
    "kind": "person",
-   "slug": "enriqueta-adelaida-de-saboya",
-   "en": "/en/person/henriette-adelaide-of-savoy",
-   "esLength": 6791,
-   "enLength": 6657,
-   "ratio": 0.98,
-   "lostYears": [],
-   "spanish": [
-    "Francia",
-    "matrimonio"
-   ]
-  },
-  {
-   "kind": "person",
    "slug": "ernesto-i-de-sajonia-gotha",
    "en": "/en/person/ernest-i-of-saxe-gotha",
    "esLength": 4975,
@@ -398,9 +335,9 @@
    "kind": "person",
    "slug": "fatima-bint-al-ahmar",
    "en": "/en/person/fatima-bint-al-ahmar",
-   "esLength": 5152,
-   "enLength": 5228,
-   "ratio": 1.01,
+   "esLength": 5516,
+   "enLength": 5600,
+   "ratio": 1.02,
    "lostYears": [],
    "spanish": [
     "del",
@@ -449,8 +386,8 @@
    "kind": "person",
    "slug": "federico-iii-de-sicilia",
    "en": "/en/person/frederick-iii-of-sicily",
-   "esLength": 8383,
-   "enLength": 8632,
+   "esLength": 9098,
+   "enLength": 9384,
    "ratio": 1.03,
    "lostYears": [],
    "spanish": [
@@ -495,8 +432,8 @@
    "kind": "person",
    "slug": "felipe-v-de-espana",
    "en": "/en/person/philip-v-of-spain",
-   "esLength": 27915,
-   "enLength": 30970,
+   "esLength": 28261,
+   "enLength": 31326,
    "ratio": 1.11,
    "lostYears": [],
    "spanish": [
@@ -537,26 +474,13 @@
    "kind": "person",
    "slug": "francisco-de-moura-corte-real",
    "en": "/en/person/francisco-de-moura-corte-real",
-   "esLength": 7482,
-   "enLength": 7754,
+   "esLength": 8547,
+   "enLength": 8857,
    "ratio": 1.04,
    "lostYears": [],
    "spanish": [
     "Aragón",
     "duque"
-   ]
-  },
-  {
-   "kind": "person",
-   "slug": "gaston-de-foix-gastonviana",
-   "en": "/en/person/gaston-of-foix-gastonviana",
-   "esLength": 6473,
-   "enLength": 6538,
-   "ratio": 1.01,
-   "lostYears": [],
-   "spanish": [
-    "Navarra",
-    "Aragón"
    ]
   },
   {
@@ -661,13 +585,15 @@
    "kind": "person",
    "slug": "ines-de-castro",
    "en": "/en/person/ines-de-castro",
-   "esLength": 6209,
-   "enLength": 6181,
+   "esLength": 6941,
+   "enLength": 6949,
    "ratio": 1,
    "lostYears": [
     "1323"
    ],
-   "spanish": []
+   "spanish": [
+    "del"
+   ]
   },
   {
    "kind": "person",
@@ -697,6 +623,19 @@
   },
   {
    "kind": "person",
+   "slug": "isabel-de-aragon-isabaraginf",
+   "en": "/en/person/isabella-of-aragon-isabaraginf",
+   "esLength": 6246,
+   "enLength": 6284,
+   "ratio": 1.01,
+   "lostYears": [],
+   "spanish": [
+    "Castilla",
+    "Aragón"
+   ]
+  },
+  {
+   "kind": "person",
    "slug": "isabel-de-francia-isabfraing",
    "en": "/en/person/isabella-of-france-isabfraing",
    "esLength": 7137,
@@ -707,33 +646,6 @@
    ],
    "spanish": [
     "Francia"
-   ]
-  },
-  {
-   "kind": "person",
-   "slug": "isabel-de-lorena",
-   "en": "/en/person/isabella-of-lorraine",
-   "esLength": 5375,
-   "enLength": 5453,
-   "ratio": 1.01,
-   "lostYears": [],
-   "spanish": [
-    "Lorena",
-    "Aragón"
-   ]
-  },
-  {
-   "kind": "person",
-   "slug": "isabel-de-portugal-isabport2",
-   "en": "/en/person/isabella-of-portugal-isabport2",
-   "esLength": 5727,
-   "enLength": 5908,
-   "ratio": 1.03,
-   "lostYears": [],
-   "spanish": [
-    "del",
-    "Castilla",
-    "las"
    ]
   },
   {
@@ -793,8 +705,8 @@
    "kind": "person",
    "slug": "ismail-i-de-granada",
    "en": "/en/person/ismail-i-of-granada",
-   "esLength": 5434,
-   "enLength": 5528,
+   "esLength": 6133,
+   "enLength": 6246,
    "ratio": 1.02,
    "lostYears": [],
    "spanish": [
@@ -831,8 +743,8 @@
    "kind": "person",
    "slug": "jaime-i-de-aragon",
    "en": "/en/person/james-i-of-aragon",
-   "esLength": 11071,
-   "enLength": 11310,
+   "esLength": 11361,
+   "enLength": 11618,
    "ratio": 1.02,
    "lostYears": [
     "1220"
@@ -872,13 +784,14 @@
    "kind": "person",
    "slug": "jose-fernando-de-baviera",
    "en": "/en/person/joseph-ferdinand-of-bavaria",
-   "esLength": 7774,
-   "enLength": 7692,
+   "esLength": 8127,
+   "enLength": 8063,
    "ratio": 0.99,
    "lostYears": [],
    "spanish": [
     "del",
-    "siglo"
+    "siglo",
+    "Baviera"
    ]
   },
   {
@@ -905,6 +818,20 @@
     "1570"
    ],
    "spanish": []
+  },
+  {
+   "kind": "person",
+   "slug": "juan-i-de-francia",
+   "en": "/en/person/john-i-of-france",
+   "esLength": 7240,
+   "enLength": 7371,
+   "ratio": 1.02,
+   "lostYears": [],
+   "spanish": [
+    "Navarra",
+    "Francia",
+    "las"
+   ]
   },
   {
    "kind": "person",
@@ -964,14 +891,15 @@
    "kind": "person",
    "slug": "juana-iii-de-navarra",
    "en": "/en/person/joan-iii-of-navarre",
-   "esLength": 9399,
-   "enLength": 10017,
-   "ratio": 1.07,
+   "esLength": 10009,
+   "enLength": 10655,
+   "ratio": 1.06,
    "lostYears": [
     "1560"
    ],
    "spanish": [
-    "Navarra"
+    "Navarra",
+    "los"
    ]
   },
   {
@@ -1013,32 +941,6 @@
   },
   {
    "kind": "person",
-   "slug": "leonor-de-alburquerque",
-   "en": "/en/person/eleanor-of-alburquerque",
-   "esLength": 6236,
-   "enLength": 6279,
-   "ratio": 1.01,
-   "lostYears": [],
-   "spanish": [
-    "Castilla",
-    "del"
-   ]
-  },
-  {
-   "kind": "person",
-   "slug": "leonor-de-medici",
-   "en": "/en/person/eleonora-de-medici",
-   "esLength": 6753,
-   "enLength": 6690,
-   "ratio": 0.99,
-   "lostYears": [],
-   "spanish": [
-    "Toscana",
-    "del"
-   ]
-  },
-  {
-   "kind": "person",
    "slug": "leopoldo-guillermo-de-austria",
    "en": "/en/person/archduke-leopold-wilhelm-of-austria",
    "esLength": 7811,
@@ -1061,8 +963,7 @@
    "lostYears": [],
    "spanish": [
     "Aragón",
-    "Sicilia",
-    "del"
+    "Sicilia"
    ]
   },
   {
@@ -1079,20 +980,6 @@
   },
   {
    "kind": "person",
-   "slug": "magdalena-de-francia",
-   "en": "/en/person/magdalene-of-france",
-   "esLength": 6646,
-   "enLength": 6634,
-   "ratio": 1,
-   "lostYears": [],
-   "spanish": [
-    "Francia",
-    "Aragón",
-    "Navarra"
-   ]
-  },
-  {
-   "kind": "person",
    "slug": "margarita-de-borgona-margaborg1290",
    "en": "/en/person/margaret-of-burgundy-margaborg1290",
    "esLength": 5810,
@@ -1106,23 +993,10 @@
   },
   {
    "kind": "person",
-   "slug": "margarita-de-durazzo",
-   "en": "/en/person/margaret-of-durazzo",
-   "esLength": 6572,
-   "enLength": 6558,
-   "ratio": 1,
-   "lostYears": [],
-   "spanish": [
-    "Sicilia",
-    "del"
-   ]
-  },
-  {
-   "kind": "person",
    "slug": "margarita-iii-de-flandes",
    "en": "/en/person/margaret-iii-of-flanders",
-   "esLength": 13740,
-   "enLength": 13893,
+   "esLength": 14081,
+   "enLength": 14249,
    "ratio": 1.01,
    "lostYears": [
     "1406"
@@ -1131,23 +1005,10 @@
   },
   {
    "kind": "person",
-   "slug": "maria-de-hungria",
-   "en": "/en/person/mary-of-hungary",
-   "esLength": 6491,
-   "enLength": 6335,
-   "ratio": 0.98,
-   "lostYears": [],
-   "spanish": [
-    "Sicilia",
-    "del"
-   ]
-  },
-  {
-   "kind": "person",
    "slug": "maria-de-sicilia",
    "en": "/en/person/mary-of-sicily",
-   "esLength": 7215,
-   "enLength": 7188,
+   "esLength": 7427,
+   "enLength": 7418,
    "ratio": 1,
    "lostYears": [],
    "spanish": [
@@ -1208,8 +1069,8 @@
    "kind": "person",
    "slug": "muhammad-ii-de-granada",
    "en": "/en/person/muhammad-ii-of-granada",
-   "esLength": 5153,
-   "enLength": 5259,
+   "esLength": 5862,
+   "enLength": 5994,
    "ratio": 1.02,
    "lostYears": [],
    "spanish": [
@@ -1297,14 +1158,13 @@
    "kind": "person",
    "slug": "pedro-ii-de-sicilia",
    "en": "/en/person/peter-ii-of-sicily",
-   "esLength": 7314,
-   "enLength": 7298,
+   "esLength": 7615,
+   "enLength": 7617,
    "ratio": 1,
    "lostYears": [],
    "spanish": [
     "Aragón",
-    "Sicilia",
-    "del"
+    "Sicilia"
    ]
   },
   {
@@ -1318,32 +1178,6 @@
     "1560"
    ],
    "spanish": []
-  },
-  {
-   "kind": "person",
-   "slug": "roberto-i-de-napoles",
-   "en": "/en/person/robert-of-naples",
-   "esLength": 7623,
-   "enLength": 7558,
-   "ratio": 0.99,
-   "lostYears": [],
-   "spanish": [
-    "Sicilia",
-    "del"
-   ]
-  },
-  {
-   "kind": "person",
-   "slug": "sancha-de-mallorca",
-   "en": "/en/person/sancha-of-majorca",
-   "esLength": 6656,
-   "enLength": 6667,
-   "ratio": 1,
-   "lostYears": [],
-   "spanish": [
-    "Sicilia",
-    "del"
-   ]
   },
   {
    "kind": "person",
@@ -1375,9 +1209,9 @@
    "kind": "person",
    "slug": "violante-de-aragon",
    "en": "/en/person/violant-of-aragon",
-   "esLength": 6384,
-   "enLength": 6348,
-   "ratio": 0.99,
+   "esLength": 6584,
+   "enLength": 6566,
+   "ratio": 1,
    "lostYears": [
     "1237"
    ],
@@ -1401,9 +1235,9 @@
    "kind": "person",
    "slug": "yolanda-de-aragon",
    "en": "/en/person/yolande-of-aragon",
-   "esLength": 6021,
-   "enLength": 6050,
-   "ratio": 1,
+   "esLength": 6205,
+   "enLength": 6252,
+   "ratio": 1.01,
    "lostYears": [
     "1444"
    ],
@@ -1415,8 +1249,8 @@
    "kind": "person",
    "slug": "yusuf-i-de-granada",
    "en": "/en/person/yusuf-i-of-granada",
-   "esLength": 5791,
-   "enLength": 5840,
+   "esLength": 6141,
+   "enLength": 6198,
    "ratio": 1.01,
    "lostYears": [],
    "spanish": [
@@ -1641,71 +1475,9 @@
    "slug": "abadia-de-disentis-y-senorios-del-alto-rin",
    "en": "/en/territory/abbey-of-disentis-and-lordships-of-the-upper-rhine",
    "esLength": 1382,
-   "enLength": 833,
-   "ratio": 0.6,
+   "enLength": 986,
+   "ratio": 0.71,
    "lostYears": [],
-   "spanish": []
-  },
-  {
-   "kind": "territory",
-   "slug": "administracion-de-ocupacion-austro-rusa-de-lombardia",
-   "en": "/en/territory/austro-russian-occupation-administration-of-lombardy",
-   "esLength": 1145,
-   "enLength": 783,
-   "ratio": 0.68,
-   "lostYears": [
-    "1799",
-    "1800",
-    "1801"
-   ],
-   "spanish": []
-  },
-  {
-   "kind": "territory",
-   "slug": "albania",
-   "en": "/en/territory/albania",
-   "esLength": 1709,
-   "enLength": 1308,
-   "ratio": 0.77,
-   "lostYears": [
-    "1272"
-   ],
-   "spanish": []
-  },
-  {
-   "kind": "territory",
-   "slug": "andorra",
-   "en": "/en/territory/andorra",
-   "esLength": 1168,
-   "enLength": 693,
-   "ratio": 0.59,
-   "lostYears": [
-    "1278"
-   ],
-   "spanish": []
-  },
-  {
-   "kind": "territory",
-   "slug": "armenia-cilicia",
-   "en": "/en/territory/cilician-armenia",
-   "esLength": 13391,
-   "enLength": 13324,
-   "ratio": 0.99,
-   "lostYears": [
-    "1080"
-   ],
-   "spanish": []
-  },
-  {
-   "kind": "territory",
-   "slug": "atenas",
-   "en": "/en/territory/athens",
-   "esLength": 6938,
-   "enLength": 6656,
-   "ratio": 0.96,
-   "lostYears": [
-    "1205"
-   ],
    "spanish": []
   },
   {
@@ -1713,8 +1485,8 @@
    "slug": "austria",
    "en": "/en/territory/austria",
    "esLength": 16619,
-   "enLength": 24571,
-   "ratio": 1.48,
+   "enLength": 24699,
+   "ratio": 1.49,
    "lostYears": [
     "1485",
     "1490"
@@ -1743,32 +1515,6 @@
   },
   {
    "kind": "territory",
-   "slug": "banato-de-temes",
-   "en": "/en/territory/banat-of-temes",
-   "esLength": 2788,
-   "enLength": 2449,
-   "ratio": 0.88,
-   "lostYears": [
-    "1779"
-   ],
-   "spanish": []
-  },
-  {
-   "kind": "territory",
-   "slug": "bar",
-   "en": "/en/territory/bar",
-   "esLength": 1264,
-   "enLength": 1106,
-   "ratio": 0.88,
-   "lostYears": [
-    "1354"
-   ],
-   "spanish": [
-    "Lorena"
-   ]
-  },
-  {
-   "kind": "territory",
    "slug": "braine-y-roucy",
    "en": "/en/territory/braine-and-roucy",
    "esLength": 1367,
@@ -1779,57 +1525,11 @@
   },
   {
    "kind": "territory",
-   "slug": "brzeg",
-   "en": "/en/territory/brzeg",
-   "esLength": 1557,
-   "enLength": 1109,
-   "ratio": 0.71,
-   "lostYears": [],
-   "spanish": []
-  },
-  {
-   "kind": "territory",
    "slug": "castres-y-lautrec",
    "en": "/en/territory/castres-and-lautrec",
    "esLength": 1376,
    "enLength": 985,
    "ratio": 0.72,
-   "lostYears": [],
-   "spanish": []
-  },
-  {
-   "kind": "territory",
-   "slug": "cerdena",
-   "en": "/en/territory/sardinia",
-   "esLength": 12866,
-   "enLength": 12920,
-   "ratio": 1,
-   "lostYears": [
-    "1297",
-    "1323",
-    "1420"
-   ],
-   "spanish": []
-  },
-  {
-   "kind": "territory",
-   "slug": "cesena",
-   "en": "/en/territory/cesena",
-   "esLength": 1198,
-   "enLength": 811,
-   "ratio": 0.68,
-   "lostYears": [
-    "1378"
-   ],
-   "spanish": []
-  },
-  {
-   "kind": "territory",
-   "slug": "ceuta",
-   "en": "/en/territory/ceuta",
-   "esLength": 1059,
-   "enLength": 689,
-   "ratio": 0.65,
    "lostYears": [],
    "spanish": []
   },
@@ -1865,44 +1565,6 @@
   },
   {
    "kind": "territory",
-   "slug": "cleveris",
-   "en": "/en/territory/cleves",
-   "esLength": 7993,
-   "enLength": 6121,
-   "ratio": 0.77,
-   "lostYears": [
-    "1150"
-   ],
-   "spanish": []
-  },
-  {
-   "kind": "territory",
-   "slug": "comuna-de-mljet",
-   "en": "/en/territory/mljet-commune",
-   "esLength": 1099,
-   "enLength": 711,
-   "ratio": 0.65,
-   "lostYears": [
-    "1345",
-    "1410"
-   ],
-   "spanish": []
-  },
-  {
-   "kind": "territory",
-   "slug": "comuna-y-republica-de-florencia",
-   "en": "/en/territory/commune-and-republic-of-florence",
-   "esLength": 1105,
-   "enLength": 743,
-   "ratio": 0.67,
-   "lostYears": [
-    "1250",
-    "1282"
-   ],
-   "spanish": []
-  },
-  {
-   "kind": "territory",
    "slug": "comunidades-de-frisia-occidental",
    "en": "/en/territory/communities-of-western-frisia",
    "esLength": 1421,
@@ -1923,23 +1585,11 @@
   },
   {
    "kind": "territory",
-   "slug": "condado-de-barcelona",
-   "en": "/en/territory/county-of-barcelona",
-   "esLength": 11834,
-   "enLength": 11625,
-   "ratio": 0.98,
-   "lostYears": [
-    "1413"
-   ],
-   "spanish": []
-  },
-  {
-   "kind": "territory",
    "slug": "corona-de-aragon",
    "en": "/en/territory/crown-of-aragon",
    "esLength": 38154,
-   "enLength": 60443,
-   "ratio": 1.58,
+   "enLength": 60636,
+   "ratio": 1.59,
    "lostYears": [],
    "spanish": [
     "del",
@@ -1954,19 +1604,6 @@
    "enLength": 808,
    "ratio": 0.74,
    "lostYears": [],
-   "spanish": []
-  },
-  {
-   "kind": "territory",
-   "slug": "desmond",
-   "en": "/en/territory/desmond",
-   "esLength": 2911,
-   "enLength": 2694,
-   "ratio": 0.93,
-   "lostYears": [
-    "1118",
-    "1500"
-   ],
    "spanish": []
   },
   {
@@ -1994,40 +1631,6 @@
   },
   {
    "kind": "territory",
-   "slug": "estado-de-los-presidios",
-   "en": "/en/territory/state-of-the-presidios",
-   "esLength": 1125,
-   "enLength": 723,
-   "ratio": 0.64,
-   "lostYears": [
-    "1557"
-   ],
-   "spanish": []
-  },
-  {
-   "kind": "territory",
-   "slug": "estados-de-holanda",
-   "en": "/en/territory/states-of-holland",
-   "esLength": 1081,
-   "enLength": 713,
-   "ratio": 0.66,
-   "lostYears": [],
-   "spanish": []
-  },
-  {
-   "kind": "territory",
-   "slug": "fano",
-   "en": "/en/territory/fano",
-   "esLength": 1287,
-   "enLength": 899,
-   "ratio": 0.7,
-   "lostYears": [
-    "1356"
-   ],
-   "spanish": []
-  },
-  {
-   "kind": "territory",
    "slug": "ginebra",
    "en": "/en/territory/geneva",
    "esLength": 1005,
@@ -2038,52 +1641,16 @@
   },
   {
    "kind": "territory",
-   "slug": "glaz",
-   "en": "/en/territory/glaz",
-   "esLength": 1488,
-   "enLength": 1076,
-   "ratio": 0.72,
-   "lostYears": [],
-   "spanish": []
-  },
-  {
-   "kind": "territory",
-   "slug": "gran-bretana",
-   "en": "/en/territory/great-britain",
-   "esLength": 2519,
-   "enLength": 2329,
-   "ratio": 0.92,
-   "lostYears": [
-    "1801"
-   ],
-   "spanish": []
-  },
-  {
-   "kind": "territory",
    "slug": "granada",
    "en": "/en/territory/granada",
    "esLength": 4898,
-   "enLength": 4680,
-   "ratio": 0.96,
-   "lostYears": [
-    "1489"
-   ],
+   "enLength": 4911,
+   "ratio": 1,
+   "lostYears": [],
    "spanish": [
     "del",
     "reino"
    ]
-  },
-  {
-   "kind": "territory",
-   "slug": "gravina",
-   "en": "/en/territory/gravina",
-   "esLength": 1206,
-   "enLength": 824,
-   "ratio": 0.68,
-   "lostYears": [
-    "1150"
-   ],
-   "spanish": []
   },
   {
    "kind": "territory",
@@ -2100,8 +1667,8 @@
    "slug": "gueldres",
    "en": "/en/territory/guelders",
    "esLength": 22219,
-   "enLength": 14904,
-   "ratio": 0.67,
+   "enLength": 15006,
+   "ratio": 0.68,
    "lostYears": [],
    "spanish": []
   },
@@ -2119,37 +1686,12 @@
   },
   {
    "kind": "territory",
-   "slug": "irlanda",
-   "en": "/en/territory/ireland",
-   "esLength": 13743,
-   "enLength": 22743,
-   "ratio": 1.65,
-   "lostYears": [
-    "1177"
-   ],
-   "spanish": []
-  },
-  {
-   "kind": "territory",
    "slug": "islas-sin-autoridad-politica-documentada",
    "en": "/en/territory/islands-without-documented-political-authority",
    "esLength": 1377,
-   "enLength": 825,
-   "ratio": 0.6,
+   "enLength": 973,
+   "ratio": 0.71,
    "lostYears": [],
-   "spanish": []
-  },
-  {
-   "kind": "territory",
-   "slug": "judicado-de-arborea",
-   "en": "/en/territory/judicate-of-arborea",
-   "esLength": 2818,
-   "enLength": 2305,
-   "ratio": 0.82,
-   "lostYears": [
-    "1410",
-    "1420"
-   ],
    "spanish": []
   },
   {
@@ -2204,68 +1746,6 @@
   },
   {
    "kind": "territory",
-   "slug": "longueville",
-   "en": "/en/territory/longueville",
-   "esLength": 1258,
-   "enLength": 928,
-   "ratio": 0.74,
-   "lostYears": [
-    "1505"
-   ],
-   "spanish": []
-  },
-  {
-   "kind": "territory",
-   "slug": "maine",
-   "en": "/en/territory/maine",
-   "esLength": 3389,
-   "enLength": 3000,
-   "ratio": 0.89,
-   "lostYears": [
-    "1425",
-    "1448"
-   ],
-   "spanish": []
-  },
-  {
-   "kind": "territory",
-   "slug": "malta",
-   "en": "/en/territory/malta",
-   "esLength": 1050,
-   "enLength": 689,
-   "ratio": 0.66,
-   "lostYears": [
-    "1530"
-   ],
-   "spanish": []
-  },
-  {
-   "kind": "territory",
-   "slug": "marquesado-de-oristano",
-   "en": "/en/territory/marquisate-of-oristano",
-   "esLength": 1313,
-   "enLength": 865,
-   "ratio": 0.66,
-   "lostYears": [
-    "1410"
-   ],
-   "spanish": []
-  },
-  {
-   "kind": "territory",
-   "slug": "massa-y-carrara",
-   "en": "/en/territory/massa-and-carrara",
-   "esLength": 1237,
-   "enLength": 882,
-   "ratio": 0.71,
-   "lostYears": [
-    "1200",
-    "1568"
-   ],
-   "spanish": []
-  },
-  {
-   "kind": "territory",
    "slug": "menceyatos-de-tenerife",
    "en": "/en/territory/menceyatos-of-tenerife",
    "esLength": 1358,
@@ -2276,47 +1756,11 @@
   },
   {
    "kind": "territory",
-   "slug": "menorca",
-   "en": "/en/territory/minorca",
-   "esLength": 1056,
-   "enLength": 693,
-   "ratio": 0.66,
-   "lostYears": [],
-   "spanish": []
-  },
-  {
-   "kind": "territory",
-   "slug": "milan",
-   "en": "/en/territory/milan",
-   "esLength": 15897,
-   "enLength": 22820,
-   "ratio": 1.44,
-   "lostYears": [
-    "1428"
-   ],
-   "spanish": [
-    "del"
-   ]
-  },
-  {
-   "kind": "territory",
-   "slug": "mirandola",
-   "en": "/en/territory/mirandola",
-   "esLength": 1195,
-   "enLength": 866,
-   "ratio": 0.72,
-   "lostYears": [
-    "1200"
-   ],
-   "spanish": []
-  },
-  {
-   "kind": "territory",
    "slug": "monferrato",
    "en": "/en/territory/montferrat",
    "esLength": 12248,
-   "enLength": 8413,
-   "ratio": 0.69,
+   "enLength": 8542,
+   "ratio": 0.7,
    "lostYears": [
     "1531"
    ],
@@ -2324,48 +1768,16 @@
   },
   {
    "kind": "territory",
-   "slug": "monte-athos-autonomo-bajo-autoridad-otomana",
-   "en": "/en/territory/mount-athos-autonomous-under-ottoman-authority",
-   "esLength": 1141,
-   "enLength": 771,
-   "ratio": 0.68,
-   "lostYears": [],
-   "spanish": []
-  },
-  {
-   "kind": "territory",
-   "slug": "morea-veneciana-nucleos",
-   "en": "/en/territory/venetian-morea-cores",
-   "esLength": 1062,
-   "enLength": 723,
-   "ratio": 0.68,
-   "lostYears": [],
-   "spanish": []
-  },
-  {
-   "kind": "territory",
    "slug": "napoles",
    "en": "/en/territory/naples",
    "esLength": 15669,
-   "enLength": 24387,
-   "ratio": 1.56,
+   "enLength": 24527,
+   "ratio": 1.57,
    "lostYears": [],
    "spanish": [
     "del",
     "Francia"
    ]
-  },
-  {
-   "kind": "territory",
-   "slug": "nemours",
-   "en": "/en/territory/nemours",
-   "esLength": 1246,
-   "enLength": 920,
-   "ratio": 0.74,
-   "lostYears": [
-    "1404"
-   ],
-   "spanish": []
   },
   {
    "kind": "territory",
@@ -2379,22 +1791,10 @@
   },
   {
    "kind": "territory",
-   "slug": "ormond",
-   "en": "/en/territory/ormond",
-   "esLength": 4588,
-   "enLength": 4357,
-   "ratio": 0.95,
-   "lostYears": [
-    "1328"
-   ],
-   "spanish": []
-  },
-  {
-   "kind": "territory",
    "slug": "paises-bajos",
    "en": "/en/territory/low-countries",
    "esLength": 37412,
-   "enLength": 42656,
+   "enLength": 42804,
    "ratio": 1.14,
    "lostYears": [],
    "spanish": [
@@ -2420,8 +1820,8 @@
    "slug": "palatinado-neoburgo",
    "en": "/en/territory/palatinate-neuburg",
    "esLength": 8620,
-   "enLength": 7873,
-   "ratio": 0.91,
+   "enLength": 8124,
+   "ratio": 0.94,
    "lostYears": [
     "1777",
     "1778"
@@ -2460,79 +1860,10 @@
   },
   {
    "kind": "territory",
-   "slug": "portugal",
-   "en": "/en/territory/portugal",
-   "esLength": 13813,
-   "enLength": 22718,
-   "ratio": 1.64,
-   "lostYears": [
-    "1425"
-   ],
-   "spanish": []
-  },
-  {
-   "kind": "territory",
    "slug": "reinos-mahos-de-fuerteventura",
    "en": "/en/territory/majo-kingdoms-of-fuerteventura",
    "esLength": 1379,
    "enLength": 957,
-   "ratio": 0.69,
-   "lostYears": [],
-   "spanish": []
-  },
-  {
-   "kind": "territory",
-   "slug": "republica-batava",
-   "en": "/en/territory/batavian-republic",
-   "esLength": 1067,
-   "enLength": 713,
-   "ratio": 0.67,
-   "lostYears": [
-    "1795"
-   ],
-   "spanish": []
-  },
-  {
-   "kind": "territory",
-   "slug": "republica-cisalpina",
-   "en": "/en/territory/cisalpine-republic",
-   "esLength": 1075,
-   "enLength": 715,
-   "ratio": 0.67,
-   "lostYears": [
-    "1799",
-    "1800"
-   ],
-   "spanish": []
-  },
-  {
-   "kind": "territory",
-   "slug": "republica-de-venecia",
-   "en": "/en/territory/republic-of-venice",
-   "esLength": 1123,
-   "enLength": 715,
-   "ratio": 0.64,
-   "lostYears": [],
-   "spanish": []
-  },
-  {
-   "kind": "territory",
-   "slug": "republica-francesa",
-   "en": "/en/territory/french-republic",
-   "esLength": 1122,
-   "enLength": 709,
-   "ratio": 0.63,
-   "lostYears": [
-    "1792"
-   ],
-   "spanish": []
-  },
-  {
-   "kind": "territory",
-   "slug": "republica-partenopea",
-   "en": "/en/territory/parthenopean-republic",
-   "esLength": 1047,
-   "enLength": 721,
    "ratio": 0.69,
    "lostYears": [],
    "spanish": []
@@ -2549,22 +1880,10 @@
   },
   {
    "kind": "territory",
-   "slug": "rimini",
-   "en": "/en/territory/rimini",
-   "esLength": 1709,
-   "enLength": 1281,
-   "ratio": 0.75,
-   "lostYears": [
-    "1295"
-   ],
-   "spanish": []
-  },
-  {
-   "kind": "territory",
    "slug": "sacro-imperio",
    "en": "/en/territory/holy-empire",
    "esLength": 78806,
-   "enLength": 112749,
+   "enLength": 112876,
    "ratio": 1.43,
    "lostYears": [
     "1434"
@@ -2590,56 +1909,6 @@
    "esLength": 1373,
    "enLength": 983,
    "ratio": 0.72,
-   "lostYears": [],
-   "spanish": []
-  },
-  {
-   "kind": "territory",
-   "slug": "senorio-de-berthoud",
-   "en": "/en/territory/lordship-of-berthoud",
-   "esLength": 1079,
-   "enLength": 719,
-   "ratio": 0.67,
-   "lostYears": [],
-   "spanish": []
-  },
-  {
-   "kind": "territory",
-   "slug": "senorio-de-cuijk",
-   "en": "/en/territory/lordship-of-cuijk",
-   "esLength": 1061,
-   "enLength": 713,
-   "ratio": 0.67,
-   "lostYears": [],
-   "spanish": []
-  },
-  {
-   "kind": "territory",
-   "slug": "senorio-de-ioannina",
-   "en": "/en/territory/lordship-of-ioannina",
-   "esLength": 1025,
-   "enLength": 719,
-   "ratio": 0.7,
-   "lostYears": [],
-   "spanish": []
-  },
-  {
-   "kind": "territory",
-   "slug": "senorio-de-thun",
-   "en": "/en/territory/lordship-of-thun",
-   "esLength": 1067,
-   "enLength": 711,
-   "ratio": 0.67,
-   "lostYears": [],
-   "spanish": []
-  },
-  {
-   "kind": "territory",
-   "slug": "senorio-latino-de-antalya",
-   "en": "/en/territory/latin-lordship-of-antalya",
-   "esLength": 1075,
-   "enLength": 729,
-   "ratio": 0.68,
    "lostYears": [],
    "spanish": []
   },
@@ -2718,8 +1987,8 @@
    "slug": "senorios-del-pays-de-vaud",
    "en": "/en/territory/lordships-of-the-pays-de-vaud",
    "esLength": 1327,
-   "enLength": 791,
-   "ratio": 0.6,
+   "enLength": 923,
+   "ratio": 0.7,
    "lostYears": [],
    "spanish": []
   },
@@ -2728,8 +1997,8 @@
    "slug": "senorios-del-valle-de-kander",
    "en": "/en/territory/lordships-of-the-kander-valley",
    "esLength": 1328,
-   "enLength": 793,
-   "ratio": 0.6,
+   "enLength": 919,
+   "ratio": 0.69,
    "lostYears": [],
    "spanish": []
   },
@@ -2758,8 +2027,8 @@
    "slug": "sicilia",
    "en": "/en/territory/sicily",
    "esLength": 5642,
-   "enLength": 5313,
-   "ratio": 0.94,
+   "enLength": 5467,
+   "ratio": 0.97,
    "lostYears": [],
    "spanish": [
     "Aragón",
@@ -2771,8 +2040,8 @@
    "slug": "silesia",
    "en": "/en/territory/silesia",
    "esLength": 32413,
-   "enLength": 26926,
-   "ratio": 0.83,
+   "enLength": 27147,
+   "ratio": 0.84,
    "lostYears": [
     "1508"
    ],
@@ -2863,8 +2132,8 @@
    "slug": "trinacria",
    "en": "/en/territory/trinacria",
    "esLength": 15969,
-   "enLength": 16080,
-   "ratio": 1.01,
+   "enLength": 16273,
+   "ratio": 1.02,
    "lostYears": [],
    "spanish": [
     "Aragón",
@@ -2886,55 +2155,10 @@
    "slug": "wurttemberg",
    "en": "/en/territory/wurttemberg",
    "esLength": 9507,
-   "enLength": 9303,
-   "ratio": 0.98,
+   "enLength": 9428,
+   "ratio": 0.99,
    "lostYears": [
     "1442"
-   ],
-   "spanish": []
-  },
-  {
-   "kind": "story",
-   "slug": "braveheart-detras-del-mito",
-   "en": "/en/story/braveheart-behind-the-myth",
-   "esLength": 2850,
-   "enLength": 2119,
-   "ratio": 0.74,
-   "lostYears": [],
-   "spanish": []
-  },
-  {
-   "kind": "story",
-   "slug": "constantinopla-dos-conquistas-dos-mundos",
-   "en": "/en/story/constantinople-two-conquests-two-worlds",
-   "esLength": 2966,
-   "enLength": 2173,
-   "ratio": 0.73,
-   "lostYears": [],
-   "spanish": []
-  },
-  {
-   "kind": "story",
-   "slug": "de-brandemburgo-a-prusia",
-   "en": "/en/story/from-brandenburg-to-prussia",
-   "esLength": 6019,
-   "enLength": 4101,
-   "ratio": 0.68,
-   "lostYears": [
-    "1558",
-    "1721"
-   ],
-   "spanish": []
-  },
-  {
-   "kind": "story",
-   "slug": "de-estuardo-a-hannover",
-   "en": "/en/story/from-stuart-to-hanover",
-   "esLength": 4152,
-   "enLength": 2838,
-   "ratio": 0.68,
-   "lostYears": [
-    "1650"
    ],
    "spanish": []
   },
@@ -2943,334 +2167,80 @@
    "slug": "de-flandes-a-la-republica",
    "en": "/en/story/from-flanders-to-the-republic",
    "esLength": 7393,
-   "enLength": 4515,
-   "ratio": 0.61,
-   "lostYears": [
-    "1556",
-    "1493",
-    "1535",
-    "1749",
-    "1545",
-    "1592",
-    "1552"
-   ],
-   "spanish": []
-  },
-  {
-   "kind": "story",
-   "slug": "de-mindaugas-a-jogaila",
-   "en": "/en/story/from-mindaugas-to-jogaila",
-   "esLength": 3860,
-   "enLength": 3153,
-   "ratio": 0.82,
-   "lostYears": [
-    "895",
-    "1526",
-    "1374",
-    "1399"
-   ],
-   "spanish": []
-  },
-  {
-   "kind": "story",
-   "slug": "don-juan-manuel",
-   "en": "/en/story/don-juan-manuel",
-   "esLength": 3760,
-   "enLength": 2398,
-   "ratio": 0.64,
+   "enLength": 7590,
+   "ratio": 1.03,
    "lostYears": [],
-   "spanish": []
+   "spanish": [
+    "del",
+    "duque"
+   ]
   },
   {
    "kind": "story",
    "slug": "el-duque-de-lerma-el-primer-valido",
    "en": "/en/story/the-duke-of-lerma-and-the-rise-of-the-valido",
    "esLength": 3426,
-   "enLength": 2345,
-   "ratio": 0.68,
-   "lostYears": [
-    "1552",
-    "1625",
-    "1535",
-    "1749",
-    "1581",
-    "1624"
-   ],
+   "enLength": 3472,
+   "ratio": 1.01,
+   "lostYears": [],
    "spanish": [
-    "los"
+    "los",
+    "duque",
+    "Aragón"
    ]
-  },
-  {
-   "kind": "story",
-   "slug": "el-leon-del-norte",
-   "en": "/en/story/gustavus-adolphus-campaigns-and-death",
-   "esLength": 6340,
-   "enLength": 4466,
-   "ratio": 0.7,
-   "lostYears": [
-    "1558",
-    "1721",
-    "1585",
-    "1642",
-    "1564"
-   ],
-   "spanish": []
-  },
-  {
-   "kind": "story",
-   "slug": "el-reino-de-los-cielos",
-   "en": "/en/story/kingdom-of-heaven",
-   "esLength": 2574,
-   "enLength": 2183,
-   "ratio": 0.85,
-   "lostYears": [
-    "1160",
-    "1190"
-   ],
-   "spanish": []
   },
   {
    "kind": "story",
    "slug": "el-tablero-de-italia",
    "en": "/en/story/the-italian-chessboard",
    "esLength": 10685,
-   "enLength": 5707,
-   "ratio": 0.53,
+   "enLength": 10943,
+   "ratio": 1.02,
    "lostYears": [
-    "1507",
-    "1363",
-    "1942",
-    "1915",
-    "1980",
-    "1908",
-    "1556",
-    "1528",
-    "1536",
-    "1493",
-    "1749"
+    "1507"
    ],
-   "spanish": []
+   "spanish": [
+    "Francia"
+   ]
   },
   {
    "kind": "story",
    "slug": "el-ultimo-austria",
    "en": "/en/story/the-last-austria",
    "esLength": 7158,
-   "enLength": 4530,
-   "ratio": 0.63,
-   "lostYears": [
-    "1535",
-    "1749",
-    "1706",
-    "1734",
-    "1759",
-    "1650"
-   ],
+   "enLength": 7438,
+   "ratio": 1.04,
+   "lostYears": [],
    "spanish": [
-    "del"
+    "del",
+    "siglo"
    ]
-  },
-  {
-   "kind": "story",
-   "slug": "federico-ii-el-emperador-excomulgado",
-   "en": "/en/story/frederick-ii-the-excommunicated-emperor",
-   "esLength": 5777,
-   "enLength": 3980,
-   "ratio": 0.69,
-   "lostYears": [
-    "1226",
-    "1285"
-   ],
-   "spanish": []
-  },
-  {
-   "kind": "story",
-   "slug": "kosciuszko-y-la-polonia-ocupada",
-   "en": "/en/story/kosciuszko-and-occupied-poland",
-   "esLength": 4911,
-   "enLength": 3656,
-   "ratio": 0.74,
-   "lostYears": [],
-   "spanish": []
-  },
-  {
-   "kind": "story",
-   "slug": "la-conspiracion-de-los-pazzi",
-   "en": "/en/story/the-pazzi-conspiracy",
-   "esLength": 3658,
-   "enLength": 2577,
-   "ratio": 0.7,
-   "lostYears": [
-    "1443"
-   ],
-   "spanish": []
-  },
-  {
-   "kind": "story",
-   "slug": "la-ejecucion-de-maria-estuardo",
-   "en": "/en/story/the-execution-of-mary-queen-of-scots",
-   "esLength": 2764,
-   "enLength": 1841,
-   "ratio": 0.67,
-   "lostYears": [],
-   "spanish": []
-  },
-  {
-   "kind": "story",
-   "slug": "la-guerra-de-las-dos-rosas",
-   "en": "/en/story/the-wars-of-the-roses",
-   "esLength": 16456,
-   "enLength": 12601,
-   "ratio": 0.77,
-   "lostYears": [
-    "1376",
-    "1364",
-    "1425",
-    "1400",
-    "1437",
-    "1492",
-    "1446",
-    "1503"
-   ],
-   "spanish": []
-  },
-  {
-   "kind": "story",
-   "slug": "la-guerra-de-los-cien-anos",
-   "en": "/en/story/hundred-years-war",
-   "esLength": 11796,
-   "enLength": 7614,
-   "ratio": 0.65,
-   "lostYears": [
-    "1443",
-    "1291",
-    "1357",
-    "1384",
-    "1404",
-    "1433",
-    "1389"
-   ],
-   "spanish": []
-  },
-  {
-   "kind": "story",
-   "slug": "la-orden-teutonica-un-maestrazgo-sin-prusia",
-   "en": "/en/story/teutonic-order-a-mastership-without-prussia",
-   "esLength": 7614,
-   "enLength": 4714,
-   "ratio": 0.62,
-   "lostYears": [
-    "1556",
-    "1528",
-    "1536",
-    "1493",
-    "1749",
-    "1363",
-    "1942",
-    "1915",
-    "1980",
-    "1908",
-    "1558",
-    "1721",
-    "1564"
-   ],
-   "spanish": []
-  },
-  {
-   "kind": "story",
-   "slug": "la-republica-de-los-nobles",
-   "en": "/en/story/the-nobles-republic",
-   "esLength": 11310,
-   "enLength": 7899,
-   "ratio": 0.7,
-   "lostYears": [
-    "1558",
-    "1721"
-   ],
-   "spanish": []
   },
   {
    "kind": "story",
    "slug": "las-visperas-y-la-division-de-un-reino",
    "en": "/en/story/the-vespers-and-the-division-of-a-kingdom",
    "esLength": 5752,
-   "enLength": 3846,
-   "ratio": 0.67,
-   "lostYears": [
-    "1226"
-   ],
-   "spanish": []
-  },
-  {
-   "kind": "story",
-   "slug": "leonor-de-aquitania-dos-coronas-y-una-dinastia",
-   "en": "/en/story/eleanor-of-aquitaine-two-crowns-and-a-dynasty",
-   "esLength": 4963,
-   "enLength": 3806,
-   "ratio": 0.77,
-   "lostYears": [
-    "1157"
-   ],
-   "spanish": []
-  },
-  {
-   "kind": "story",
-   "slug": "lepanto-la-ultima-cruzada",
-   "en": "/en/story/lepanto-the-last-crusade",
-   "esLength": 6985,
-   "enLength": 4549,
-   "ratio": 0.65,
-   "lostYears": [
-    "1556",
-    "1493",
-    "1535",
-    "1749"
-   ],
-   "spanish": []
-  },
-  {
-   "kind": "story",
-   "slug": "los-favoritos-de-maquiavelo",
-   "en": "/en/story/machiavellis-favourites",
-   "esLength": 8130,
-   "enLength": 5321,
-   "ratio": 0.65,
+   "enLength": 5933,
+   "ratio": 1.03,
    "lostYears": [],
-   "spanish": []
-  },
-  {
-   "kind": "story",
-   "slug": "los-reyes-cruzados",
-   "en": "/en/story/richard-philip-crusade",
-   "esLength": 3918,
-   "enLength": 3189,
-   "ratio": 0.81,
-   "lostYears": [
-    "1961",
-    "1157"
-   ],
-   "spanish": []
+   "spanish": [
+    "Aragón",
+    "Sicilia"
+   ]
   },
   {
    "kind": "story",
    "slug": "los-visconti-y-los-sforza",
    "en": "/en/story/visconti-and-sforza",
    "esLength": 8168,
-   "enLength": 5030,
-   "ratio": 0.62,
-   "lostYears": [
-    "1449",
-    "1503",
-    "1475",
-    "1497",
-    "1363",
-    "1942",
-    "1915",
-    "1980",
-    "1908"
-   ],
+   "enLength": 8413,
+   "ratio": 1.03,
+   "lostYears": [],
    "spanish": [
-    "del"
+    "del",
+    "emperatriz",
+    "Francia"
    ]
   },
   {
@@ -3278,64 +2248,15 @@
    "slug": "maria-de-borgona-una-herencia-negociada",
    "en": "/en/story/habsburgs-and-capetians",
    "esLength": 5711,
-   "enLength": 3352,
-   "ratio": 0.59,
+   "enLength": 5816,
+   "ratio": 1.02,
    "lostYears": [
     "1507",
-    "1530",
-    "1363",
-    "1942",
-    "1915",
-    "1980",
-    "1908",
-    "1435"
+    "1530"
    ],
-   "spanish": []
-  },
-  {
-   "kind": "story",
-   "slug": "napoles-la-perla-disputada",
-   "en": "/en/story/naples-the-contested-jewel",
-   "esLength": 10525,
-   "enLength": 5618,
-   "ratio": 0.53,
-   "lostYears": [
-    "1288",
-    "1342",
-    "1998",
-    "895",
-    "1526",
-    "1326",
-    "1908",
-    "1971",
-    "1969"
-   ],
-   "spanish": []
-  },
-  {
-   "kind": "story",
-   "slug": "portugal-y-castilla-la-crisis-de-1383",
-   "en": "/en/story/spain-and-portugal",
-   "esLength": 3704,
-   "enLength": 2368,
-   "ratio": 0.64,
-   "lostYears": [],
-   "spanish": []
-  },
-  {
-   "kind": "story",
-   "slug": "sebastian-de-portugal-la-jornada-de-marruecos",
-   "en": "/en/story/sebastian-of-portugal-the-day-of-morocco",
-   "esLength": 2955,
-   "enLength": 1850,
-   "ratio": 0.63,
-   "lostYears": [
-    "1556",
-    "1493",
-    "1535",
-    "1749"
-   ],
-   "spanish": []
+   "spanish": [
+    "Francia"
+   ]
   }
  ]
 }

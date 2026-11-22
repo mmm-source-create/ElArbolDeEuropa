@@ -211,6 +211,8 @@ for (const p of PERSONAS) {
   }
 }
 fs.writeFileSync(new URL('reviews621.json', root), JSON.stringify(out));
+// 6.0.22: identified entries, for the date cross-check (scripts/research/dates622.mjs).
+fs.writeFileSync(new URL('identified621.json', root), JSON.stringify(Object.fromEntries([...identified].map(([id, list]) => [id, list.map(e => ({page: e.page, anchor: e.anchor, name: e.name, birth: e.birth, death: e.death, text: e.text.slice(0, 220)}))]))));
 fs.writeFileSync(new URL('discrepancies621.json', root), JSON.stringify(discrepancies, null, 1));
 console.log('discrepancies', discrepancies.length);
 console.log('identified', identified.size, stats, 'total', Object.keys(out).length);

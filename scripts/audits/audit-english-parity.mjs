@@ -29,7 +29,8 @@ for (const [es, en] of KINDS) {
     const a = mainText(esFile), b = mainText(enFile);
     const ya = yearsOf(a), yb = yearsOf(b);
     const lostYears = [...ya].filter(y => !yb.has(y));
-    const spanish = [...new Set(b.match(SPANISH) || [])];
+    // 6.0.22: verbatim quotations of sources («…» in Spanish, “…” in English) keep their original language.
+    const spanish = [...new Set(b.replace(/“[^”]*”|«[^»]*»/g, ' ').match(SPANISH) || [])];
     rows.push({kind: en, slug, en: href, esLength: a.length, enLength: b.length, ratio: +(b.length / Math.max(a.length, 1)).toFixed(2), lostYears, spanish});
   }
 }
