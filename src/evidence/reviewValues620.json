@@ -1,0 +1,682 @@
+{
+  "person:GREG10:government:Estados Pontificios:1271:1276:Papa": {
+    "territorio": "Estados Pontificios",
+    "desde": 1271,
+    "hasta": 1276,
+    "titulo": "Papa",
+    "clase": "pontificado",
+    "condicion": "efectivo"
+  },
+  "person:PAPA_CELESTINO4:government:Estados Pontificios:1241:1241:Papa": {
+    "territorio": "Estados Pontificios",
+    "desde": 1241,
+    "hasta": 1241,
+    "titulo": "Papa",
+    "clase": "pontificado",
+    "condicion": "efectivo"
+  },
+  "person:PAPA_INOCENCIO4:government:Estados Pontificios:1243:1254:Papa": {
+    "territorio": "Estados Pontificios",
+    "desde": 1243,
+    "hasta": 1254,
+    "titulo": "Papa",
+    "clase": "pontificado",
+    "condicion": "efectivo"
+  },
+  "person:PAPA_ALEJANDRO4:government:Estados Pontificios:1254:1261:Papa": {
+    "territorio": "Estados Pontificios",
+    "desde": 1254,
+    "hasta": 1261,
+    "titulo": "Papa",
+    "clase": "pontificado",
+    "condicion": "efectivo"
+  },
+  "person:PAPA_URBANO4:government:Estados Pontificios:1261:1264:Papa": {
+    "territorio": "Estados Pontificios",
+    "desde": 1261,
+    "hasta": 1264,
+    "titulo": "Papa",
+    "clase": "pontificado",
+    "condicion": "efectivo"
+  },
+  "person:PAPA_INOCENCIO5:government:Estados Pontificios:1276:1276:Papa": {
+    "territorio": "Estados Pontificios",
+    "desde": 1276,
+    "hasta": 1276,
+    "titulo": "Papa",
+    "clase": "pontificado",
+    "condicion": "efectivo"
+  },
+  "person:PAPA_ADRIANO5:government:Estados Pontificios:1276:1276:Papa": {
+    "territorio": "Estados Pontificios",
+    "desde": 1276,
+    "hasta": 1276,
+    "titulo": "Papa",
+    "clase": "pontificado",
+    "condicion": "efectivo"
+  },
+  "person:PAPA_NICOLAS3:government:Estados Pontificios:1277:1280:Papa": {
+    "territorio": "Estados Pontificios",
+    "desde": 1277,
+    "hasta": 1280,
+    "titulo": "Papa",
+    "clase": "pontificado",
+    "condicion": "efectivo"
+  },
+  "person:PAPA_MARTIN4:government:Estados Pontificios:1281:1285:Papa": {
+    "territorio": "Estados Pontificios",
+    "desde": 1281,
+    "hasta": 1285,
+    "titulo": "Papa",
+    "clase": "pontificado",
+    "condicion": "efectivo"
+  },
+  "person:PAPA_CELESTINO5:government:Estados Pontificios:1294:1294:Papa": {
+    "territorio": "Estados Pontificios",
+    "desde": 1294,
+    "hasta": 1294,
+    "titulo": "Papa",
+    "clase": "pontificado",
+    "condicion": "efectivo"
+  },
+  "person:PAPA_BONIFACIO8:government:Estados Pontificios:1294:1303:Papa": {
+    "territorio": "Estados Pontificios",
+    "desde": 1294,
+    "hasta": 1303,
+    "titulo": "Papa",
+    "clase": "pontificado",
+    "condicion": "efectivo"
+  },
+  "person:PAPA_BENEDICTO11:government:Estados Pontificios:1303:1304:Papa": {
+    "territorio": "Estados Pontificios",
+    "desde": 1303,
+    "hasta": 1304,
+    "titulo": "Papa",
+    "clase": "pontificado",
+    "condicion": "efectivo"
+  },
+  "person:PAPA_BENEDICTO12:government:Estados Pontificios:1334:1342:Papa": {
+    "territorio": "Estados Pontificios",
+    "desde": 1334,
+    "hasta": 1342,
+    "titulo": "Papa",
+    "clase": "pontificado",
+    "condicion": "efectivo"
+  },
+  "person:PAPA_URBANO5:government:Estados Pontificios:1362:1370:Papa": {
+    "territorio": "Estados Pontificios",
+    "desde": 1362,
+    "hasta": 1370,
+    "titulo": "Papa",
+    "clase": "pontificado",
+    "condicion": "efectivo"
+  },
+  "person:PAPA_GREGORIO11:government:Estados Pontificios:1370:1378:Papa": {
+    "territorio": "Estados Pontificios",
+    "desde": 1370,
+    "hasta": 1378,
+    "titulo": "Papa",
+    "clase": "pontificado",
+    "condicion": "efectivo"
+  },
+  "person:PAPA_BONIFACIO9:government:Estados Pontificios:1389:1404:Papa": {
+    "territorio": "Estados Pontificios",
+    "desde": 1389,
+    "hasta": 1404,
+    "titulo": "Papa",
+    "clase": "pontificado",
+    "condicion": "efectivo"
+  },
+  "person:PAPA_GREGORIO12:government:Estados Pontificios:1406:1415:Papa": {
+    "territorio": "Estados Pontificios",
+    "desde": 1406,
+    "hasta": 1415,
+    "titulo": "Papa",
+    "clase": "pontificado",
+    "condicion": "efectivo"
+  },
+  "person:PAPA_INOCENCIO8:government:Estados Pontificios:1484:1492:Papa": {
+    "territorio": "Estados Pontificios",
+    "desde": 1484,
+    "hasta": 1492,
+    "titulo": "Papa",
+    "clase": "pontificado",
+    "condicion": "efectivo"
+  },
+  "person:PAPA_PIO3:government:Estados Pontificios:1503:1503:Papa": {
+    "territorio": "Estados Pontificios",
+    "desde": 1503,
+    "hasta": 1503,
+    "titulo": "Papa",
+    "clase": "pontificado",
+    "condicion": "efectivo"
+  },
+  "person:PAPA_JULIO3:government:Estados Pontificios:1550:1555:Papa": {
+    "territorio": "Estados Pontificios",
+    "desde": 1550,
+    "hasta": 1555,
+    "titulo": "Papa",
+    "clase": "pontificado",
+    "condicion": "efectivo"
+  },
+  "person:PAPA_MARCELO2:government:Estados Pontificios:1555:1555:Papa": {
+    "territorio": "Estados Pontificios",
+    "desde": 1555,
+    "hasta": 1555,
+    "titulo": "Papa",
+    "clase": "pontificado",
+    "condicion": "efectivo"
+  },
+  "person:PAPA_GREGORIO13:government:Estados Pontificios:1572:1585:Papa": {
+    "territorio": "Estados Pontificios",
+    "desde": 1572,
+    "hasta": 1585,
+    "titulo": "Papa",
+    "clase": "pontificado",
+    "condicion": "efectivo"
+  },
+  "person:PAPA_URBANO7:government:Estados Pontificios:1590:1590:Papa": {
+    "territorio": "Estados Pontificios",
+    "desde": 1590,
+    "hasta": 1590,
+    "titulo": "Papa",
+    "clase": "pontificado",
+    "condicion": "efectivo"
+  },
+  "person:PAPA_INOCENCIO9:government:Estados Pontificios:1591:1591:Papa": {
+    "territorio": "Estados Pontificios",
+    "desde": 1591,
+    "hasta": 1591,
+    "titulo": "Papa",
+    "clase": "pontificado",
+    "condicion": "efectivo"
+  },
+  "person:PAPA_LEON11:government:Estados Pontificios:1605:1605:Papa": {
+    "territorio": "Estados Pontificios",
+    "desde": 1605,
+    "hasta": 1605,
+    "titulo": "Papa",
+    "clase": "pontificado",
+    "condicion": "efectivo"
+  },
+  "person:PAPA_PAULO5:government:Estados Pontificios:1605:1621:Papa": {
+    "territorio": "Estados Pontificios",
+    "desde": 1605,
+    "hasta": 1621,
+    "titulo": "Papa",
+    "clase": "pontificado",
+    "condicion": "efectivo"
+  },
+  "person:PAPA_CLEMENTE9:government:Estados Pontificios:1667:1669:Papa": {
+    "territorio": "Estados Pontificios",
+    "desde": 1667,
+    "hasta": 1669,
+    "titulo": "Papa",
+    "clase": "pontificado",
+    "condicion": "efectivo"
+  },
+  "person:PAPA_INOCENCIO12:government:Estados Pontificios:1691:1700:Papa": {
+    "territorio": "Estados Pontificios",
+    "desde": 1691,
+    "hasta": 1700,
+    "titulo": "Papa",
+    "clase": "pontificado",
+    "condicion": "efectivo"
+  },
+  "person:PAPA_BENEDICTO13:government:Estados Pontificios:1724:1730:Papa": {
+    "territorio": "Estados Pontificios",
+    "desde": 1724,
+    "hasta": 1730,
+    "titulo": "Papa",
+    "clase": "pontificado",
+    "condicion": "efectivo"
+  },
+  "person:KNUT2SUE:government:Suecia:1229:1234:Rey": {
+    "territorio": "Suecia",
+    "desde": 1229,
+    "hasta": 1234,
+    "titulo": "Rey",
+    "clase": "reinado",
+    "condicion": "efectivo"
+  },
+  "person:VALDEMARSUE:government:Suecia:1250:1275:Rey": {
+    "territorio": "Suecia",
+    "desde": 1250,
+    "hasta": 1275,
+    "titulo": "Rey",
+    "clase": "reinado",
+    "condicion": "efectivo"
+  },
+  "person:MAGNUS3SUE:government:Suecia:1275:1290:Rey": {
+    "territorio": "Suecia",
+    "desde": 1275,
+    "hasta": 1290,
+    "titulo": "Rey",
+    "clase": "reinado",
+    "condicion": "efectivo"
+  },
+  "person:ALBERTOSUE:government:Suecia:1364:1389:Rey": {
+    "territorio": "Suecia",
+    "desde": 1364,
+    "hasta": 1389,
+    "titulo": "Rey",
+    "clase": "reinado",
+    "condicion": "efectivo"
+  },
+  "person:CRISTOBALBAVSUE:government:Suecia:1441:1448:Rey": {
+    "territorio": "Suecia",
+    "desde": 1441,
+    "hasta": 1448,
+    "titulo": "Rey",
+    "clase": "reinado",
+    "condicion": "efectivo"
+  },
+  "person:CRISTIAN1NORD:government:Suecia:1457:1464:Rey": {
+    "territorio": "Suecia",
+    "desde": 1457,
+    "hasta": 1464,
+    "titulo": "Rey",
+    "clase": "reinado",
+    "condicion": "efectivo"
+  },
+  "person:ESTENSTUREVIEJO:government:Suecia:1470:1497:Regente": {
+    "territorio": "Suecia",
+    "desde": 1470,
+    "hasta": 1497,
+    "titulo": "Regente",
+    "clase": "regencia",
+    "condicion": "efectivo"
+  },
+  "person:ESTENSTUREVIEJO:government:Suecia:1501:1503:Regente": {
+    "territorio": "Suecia",
+    "desde": 1501,
+    "hasta": 1503,
+    "titulo": "Regente",
+    "clase": "regencia",
+    "condicion": "efectivo"
+  },
+  "person:ESTENSTUREJOVEN:government:Suecia:1512:1520:Regente": {
+    "territorio": "Suecia",
+    "desde": 1512,
+    "hasta": 1520,
+    "titulo": "Regente",
+    "clase": "regencia",
+    "condicion": "efectivo"
+  },
+  "person:ERIK14SUE:government:Suecia:1560:1568:Rey": {
+    "territorio": "Suecia",
+    "desde": 1560,
+    "hasta": 1568,
+    "titulo": "Rey",
+    "clase": "reinado",
+    "condicion": "efectivo"
+  },
+  "person:CARLOS9SUE:government:Suecia:1604:1611:Rey": {
+    "territorio": "Suecia",
+    "desde": 1604,
+    "hasta": 1611,
+    "titulo": "Rey",
+    "clase": "reinado",
+    "condicion": "efectivo"
+  },
+  "person:ULRICALEONORASUE:government:Suecia:1719:1720:Reina": {
+    "territorio": "Suecia",
+    "desde": 1719,
+    "hasta": 1720,
+    "titulo": "Reina",
+    "clase": "reinado",
+    "condicion": "efectivo"
+  },
+  "person:CARLOS13SUE:government:Suecia:1809:1818:Rey": {
+    "territorio": "Suecia",
+    "desde": 1809,
+    "hasta": 1818,
+    "titulo": "Rey",
+    "clase": "reinado",
+    "condicion": "efectivo"
+  },
+  "person:OSCAR1SUE:government:Suecia:1844:1859:Rey": {
+    "territorio": "Suecia",
+    "desde": 1844,
+    "hasta": 1859,
+    "titulo": "Rey",
+    "clase": "reinado",
+    "condicion": "efectivo"
+  },
+  "person:BELA3HUN:government:Croacia:1172:1196:Rey": {
+    "territorio": "Croacia",
+    "desde": 1172,
+    "hasta": 1196,
+    "titulo": "Rey",
+    "clase": "reinado",
+    "condicion": "efectivo"
+  },
+  "person:EMERICOHUN:government:Croacia:1196:1204:Rey": {
+    "territorio": "Croacia",
+    "desde": 1196,
+    "hasta": 1204,
+    "titulo": "Rey",
+    "clase": "reinado",
+    "condicion": "efectivo"
+  },
+  "person:EMERICOHUN:government:Hungría:1196:1204:Rey": {
+    "territorio": "Hungría",
+    "desde": 1196,
+    "hasta": 1204,
+    "titulo": "Rey",
+    "clase": "reinado",
+    "condicion": "efectivo"
+  },
+  "person:LADISLAO3HUN:government:Croacia:1204:1205:Rey": {
+    "territorio": "Croacia",
+    "desde": 1204,
+    "hasta": 1205,
+    "titulo": "Rey",
+    "clase": "reinado",
+    "condicion": "efectivo"
+  },
+  "person:LADISLAO3HUN:government:Hungría:1204:1205:Rey": {
+    "territorio": "Hungría",
+    "desde": 1204,
+    "hasta": 1205,
+    "titulo": "Rey",
+    "clase": "reinado",
+    "condicion": "efectivo"
+  },
+  "person:ANDRES2HUN:government:Croacia:1205:1235:Rey": {
+    "territorio": "Croacia",
+    "desde": 1205,
+    "hasta": 1235,
+    "titulo": "Rey",
+    "clase": "reinado",
+    "condicion": "efectivo"
+  },
+  "person:ANDRES2HUN:government:Hungría:1205:1235:Rey": {
+    "territorio": "Hungría",
+    "desde": 1205,
+    "hasta": 1235,
+    "titulo": "Rey",
+    "clase": "reinado",
+    "condicion": "efectivo"
+  },
+  "person:BELA4:government:Croacia:1235:1270:Rey": {
+    "territorio": "Croacia",
+    "desde": 1235,
+    "hasta": 1270,
+    "titulo": "Rey",
+    "clase": "reinado",
+    "condicion": "efectivo"
+  },
+  "person:ESTEBV:government:Croacia:1270:1272:Rey": {
+    "territorio": "Croacia",
+    "desde": 1270,
+    "hasta": 1272,
+    "titulo": "Rey",
+    "clase": "reinado",
+    "condicion": "efectivo"
+  },
+  "person:LADI4:government:Croacia:1272:1290:Rey": {
+    "territorio": "Croacia",
+    "desde": 1272,
+    "hasta": 1290,
+    "titulo": "Rey",
+    "clase": "reinado",
+    "condicion": "efectivo"
+  },
+  "person:LADI4:government:Hungría:1272:1290:Rey": {
+    "territorio": "Hungría",
+    "desde": 1272,
+    "hasta": 1290,
+    "titulo": "Rey",
+    "clase": "reinado",
+    "condicion": "efectivo"
+  },
+  "person:ANDRES3:government:Croacia:1290:1301:Rey": {
+    "territorio": "Croacia",
+    "desde": 1290,
+    "hasta": 1301,
+    "titulo": "Rey",
+    "clase": "reinado",
+    "condicion": "efectivo"
+  },
+  "person:LUIS1:government:Croacia:1342:1382:Rey": {
+    "territorio": "Croacia",
+    "desde": 1342,
+    "hasta": 1382,
+    "titulo": "Rey",
+    "clase": "reinado",
+    "condicion": "efectivo"
+  },
+  "person:EMERICOHUN:father": "BELA3HUN",
+  "person:EMERICOHUN:mother": "INESANTIOQUIA",
+  "person:LADI4:father": "ESTEBV",
+  "person:LADI4:mother": "ISABELC",
+  "person:ESTEBV:spouse:ISABELC": "ISABELC",
+  "person:ANDRES2HUN:spouse:YOLCOURHUN": "YOLCOURHUN",
+  "person:CARLOS1:mother": "CLEMH",
+  "person:LADI3:government:Croacia:1440:1444:Rey": {
+    "territorio": "Croacia",
+    "desde": 1440,
+    "hasta": 1444,
+    "titulo": "Rey",
+    "clase": "reinado",
+    "condicion": "efectivo"
+  },
+  "person:LADISLAO7HUN:government:Bohemia:1471:1516:Rey": {
+    "territorio": "Bohemia",
+    "desde": 1471,
+    "hasta": 1516,
+    "titulo": "Rey",
+    "clase": "reinado",
+    "condicion": "efectivo"
+  },
+  "person:LADISLAO7HUN:government:Hungría:1490:1516:Rey": {
+    "territorio": "Hungría",
+    "desde": 1490,
+    "hasta": 1516,
+    "titulo": "Rey",
+    "clase": "reinado",
+    "condicion": "efectivo"
+  },
+  "person:LADISLAO7HUN:government:Croacia:1490:1516:Rey": {
+    "territorio": "Croacia",
+    "desde": 1490,
+    "hasta": 1516,
+    "titulo": "Rey",
+    "clase": "reinado",
+    "condicion": "efectivo"
+  },
+  "person:LUIS2HUN:government:Bohemia:1516:1526:Rey": {
+    "territorio": "Bohemia",
+    "desde": 1516,
+    "hasta": 1526,
+    "titulo": "Rey",
+    "clase": "reinado",
+    "condicion": "efectivo"
+  },
+  "person:LUIS2HUN:government:Hungría:1516:1526:Rey": {
+    "territorio": "Hungría",
+    "desde": 1516,
+    "hasta": 1526,
+    "titulo": "Rey",
+    "clase": "reinado",
+    "condicion": "efectivo"
+  },
+  "person:LUIS2HUN:government:Croacia:1516:1526:Rey": {
+    "territorio": "Croacia",
+    "desde": 1516,
+    "hasta": 1526,
+    "titulo": "Rey",
+    "clase": "reinado",
+    "condicion": "efectivo"
+  },
+  "person:ALEXANDER2SCOT:mother": "ERMENGARDESCOT",
+  "person:WILLIAM1SCOT:spouse:ERMENGARDESCOT": "ERMENGARDESCOT",
+  "person:ERMENGARDESCOT:spouse:WILLIAM1SCOT": "WILLIAM1SCOT",
+  "person:ALEXANDER2SCOT:spouse:JOANENGLANDSCOT": "JOANENGLANDSCOT",
+  "person:ALEXANDER2SCOT:spouse:MARIECOUCY": "MARIECOUCY",
+  "person:MARIECOUCY:spouse:ALEXANDER2SCOT": "ALEXANDER2SCOT",
+  "person:ALEXANDER2SCOT:government:Escocia:1214:1249:Rey": {
+    "territorio": "Escocia",
+    "desde": 1214,
+    "hasta": 1249,
+    "titulo": "Rey",
+    "clase": "reinado",
+    "condicion": "efectivo"
+  },
+  "person:ALEXANDER3SCOT:father": "ALEXANDER2SCOT",
+  "person:ALEXANDER3SCOT:mother": "MARIECOUCY",
+  "person:ALEXANDER3SCOT:spouse:MARGARETENGLANDSCOT": "MARGARETENGLANDSCOT",
+  "person:ALEXANDER3SCOT:spouse:YOLANDEDREUXSCOT": "YOLANDEDREUXSCOT",
+  "person:YOLANDEDREUXSCOT:spouse:ALEXANDER3SCOT": "ALEXANDER3SCOT",
+  "person:ALEXANDER3SCOT:government:Escocia:1249:1286:Rey": {
+    "territorio": "Escocia",
+    "desde": 1249,
+    "hasta": 1286,
+    "titulo": "Rey",
+    "clase": "reinado",
+    "condicion": "efectivo"
+  },
+  "person:JOHN1BALLIOL:father": "JOHNBALLIOLFATHER",
+  "person:JOHN1BALLIOL:mother": "DERVORGUILLA",
+  "person:JOHNBALLIOLFATHER:spouse:DERVORGUILLA": "DERVORGUILLA",
+  "person:DERVORGUILLA:spouse:JOHNBALLIOLFATHER": "JOHNBALLIOLFATHER",
+  "person:JOHN1BALLIOL:government:Escocia:1292:1296:Rey": {
+    "territorio": "Escocia",
+    "desde": 1292,
+    "hasta": 1296,
+    "titulo": "Rey",
+    "clase": "reinado",
+    "condicion": "efectivo"
+  },
+  "person:DAVID2SCOT:mother": "ELIZABETHBURGHSCOT",
+  "person:DAVID2SCOT:spouse:JOANTOWERSCOT": "JOANTOWERSCOT",
+  "person:ROBERT3SCOT:father": "ROBERT2SCOT",
+  "person:JAMES1SCOT:father": "ROBERT3SCOT",
+  "person:ROBERT3SCOT:death": 1406,
+  "person:ROBERT3SCOT:government:Escocia:1390:1406:Rey": {
+    "territorio": "Escocia",
+    "desde": 1390,
+    "hasta": 1406,
+    "titulo": "Rey",
+    "clase": "reinado",
+    "condicion": "efectivo"
+  },
+  "person:JAMES1SCOT:spouse:JOANBEAUFORTSCOT": "JOANBEAUFORTSCOT",
+  "person:JOANBEAUFORTSCOT:spouse:JAMES1SCOT": "JAMES1SCOT",
+  "person:JAMES2SCOT:spouse:MARYGUELDERS": "MARYGUELDERS",
+  "person:JAMES3SCOT:spouse:MARGDINESCOCIA": "MARGDINESCOCIA",
+  "person:ROBERT2SCOT:father": "WALTERSTEWART6",
+  "person:ENRIQUE13:spouse:ISABELH": "ISABELH",
+  "person:ISABELH:spouse:ENRIQUE13": "ENRIQUE13",
+  "person:OTON3:mother": "ISABELH",
+  "person:OTON3:spouse:CATHAB": "CATHAB",
+  "person:OTON3:spouse:AGNESGLO": "AGNESGLO",
+  "person:AGNESGLO:spouse:OTON3": "OTON3",
+  "person:LUIS3BAV:father": "ENRIQUE13",
+  "person:LUIS3BAV:mother": "ISABELH",
+  "person:LUIS2BAV:father": "OTTO2BAV",
+  "person:LUIS2BAV:mother": "AGNESPALBAV",
+  "person:LUIS2BAV:spouse:MATHAB": "MATHAB",
+  "person:MATHAB:spouse:LUIS2BAV": "LUIS2BAV",
+  "person:LUIS2BAV:spouse:MARIABRABBAV": "MARIABRABBAV",
+  "person:MARIABRABBAV:spouse:LUIS2BAV": "LUIS2BAV",
+  "person:LUIS4:mother": "MATHAB",
+  "person:ROD1BAV:mother": "MATHAB",
+  "person:OTTO2BAV:spouse:AGNESPALBAV": "AGNESPALBAV",
+  "person:ESTEBAN1BAV:mother": "ISABELH",
+  "person:ESTEBAN1BAV:spouse:JUDITASWIBAV": "JUDITASWIBAV",
+  "person:JUDITASWIBAV:spouse:ESTEBAN1BAV": "ESTEBAN1BAV",
+  "person:ENRIQ14BAV:mother": "JUDITASWIBAV",
+  "person:OTTO4BAV:mother": "JUDITASWIBAV",
+  "person:ENRIQ15:mother": "AGNESGLO",
+  "person:ALB1BAV:father": "LUIS4",
+  "person:ALB1BAV:mother": "MARG2HEN",
+  "person:OTTO7BAV:father": "LUIS4",
+  "person:OTTO7BAV:mother": "MARG2HEN",
+  "person:ENRIQUE13:government:Baviera:1253:1290:Duque": {
+    "territorio": "Baviera",
+    "desde": 1253,
+    "hasta": 1290,
+    "titulo": "Duque",
+    "clase": "ducado",
+    "condicion": "rama",
+    "ambito": "Enrique XIII de Baviera"
+  },
+  "person:LUIS2BAV:government:Baviera:1253:1294:Duque": {
+    "territorio": "Baviera",
+    "desde": 1253,
+    "hasta": 1294,
+    "titulo": "Duque",
+    "clase": "ducado",
+    "condicion": "rama",
+    "ambito": "Luis II de Baviera"
+  },
+  "person:ROD1BAV:government:Baviera:1294:1317:Duque": {
+    "territorio": "Baviera",
+    "desde": 1294,
+    "hasta": 1317,
+    "titulo": "Duque",
+    "clase": "ducado",
+    "condicion": "rama",
+    "ambito": "Rodolfo I del Palatinado"
+  },
+  "person:ESTEBAN2BAV:government:Baviera:1347:1375:Duque": {
+    "territorio": "Baviera",
+    "desde": 1347,
+    "hasta": 1375,
+    "titulo": "Duque",
+    "clase": "ducado",
+    "condicion": "rama",
+    "ambito": "Esteban II de Baviera"
+  },
+  "person:ALB1BAV:government:Baviera:1347:1404:Duque": {
+    "territorio": "Baviera",
+    "desde": 1347,
+    "hasta": 1404,
+    "titulo": "Duque",
+    "clase": "ducado",
+    "condicion": "rama",
+    "ambito": "Alberto I de Baviera-Straubing"
+  },
+  "person:MEINHARDBAV:government:Baviera:1361:1363:Duque": {
+    "territorio": "Baviera",
+    "desde": 1361,
+    "hasta": 1363,
+    "titulo": "Duque",
+    "clase": "ducado",
+    "condicion": "rama",
+    "ambito": "Meinhard de Baviera"
+  },
+  "person:OTON3:government:Baviera:1290:1312:Duque": {
+    "territorio": "Baviera",
+    "desde": 1290,
+    "hasta": 1312,
+    "titulo": "Duque",
+    "clase": "ducado",
+    "condicion": "rama",
+    "ambito": "Otón III de Baviera"
+  },
+  "person:ENRIQ15:government:Baviera:1312:1333:Duque": {
+    "territorio": "Baviera",
+    "desde": 1312,
+    "hasta": 1333,
+    "titulo": "Duque",
+    "clase": "ducado",
+    "condicion": "rama",
+    "ambito": "Enrique XV de Baviera"
+  },
+  "person:ALB1BAV:spouse:MARGBRIEGBAV": "MARGBRIEGBAV",
+  "person:MARGBRIEGBAV:spouse:ALB1BAV": "ALB1BAV",
+  "person:MARGBAV:father": "ALB1BAV",
+  "person:MARGBAV:mother": "MARGBRIEGBAV",
+  "person:ALB2BAV:father": "ALB1BAV",
+  "person:ALB2BAV:mother": "MARGBRIEGBAV",
+  "person:GUILLERMO2BAV:father": "ALB1BAV",
+  "person:GUILLERMO2BAV:mother": "MARGBRIEGBAV",
+  "person:JUAN3BAV:father": "ALB1BAV",
+  "person:JUAN3BAV:mother": "MARGBRIEGBAV",
+  "person:JOHANNASOPHIABAV:father": "ALB1BAV",
+  "person:JOHANNASOPHIABAV:mother": "MARGBRIEGBAV",
+  "person:GUILLERMO2BAV:spouse:MARGBORGBAV": "MARGBORGBAV"
+}

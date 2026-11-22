@@ -1,0 +1,832 @@
+{
+  "version": "6.0.20",
+  "method": "Same complete records and complete built HTML documents, with and without the dictionary; gzip default level. The publisher chooses the smaller complete gzip document. Metadata candidates are reported separately and may be larger. Sample: Charles V plus every 100th alphabetically sorted English person file; this is a reproducible sample, not a traffic-weighted site average.",
+  "lossless": true,
+  "records": [
+    {
+      "file": "catalogos/personas.json",
+      "metadataCandidate": {
+        "before": {
+          "jsonBytes": 1028122,
+          "gzipBytes": 147623
+        },
+        "after": {
+          "jsonBytes": 684286,
+          "gzipBytes": 135850
+        },
+        "gzipReductionPercent": 7.98
+      },
+      "document": {
+        "before": {
+          "htmlBytes": 1155112,
+          "gzipBytes": 160695
+        },
+        "after": {
+          "htmlBytes": 825397,
+          "gzipBytes": 149402
+        },
+        "gzipReductionPercent": 7.03,
+        "format": "eade-page-1"
+      }
+    },
+    {
+      "file": "english-meta/person-charles-v.json",
+      "metadataCandidate": {
+        "before": {
+          "jsonBytes": 173201,
+          "gzipBytes": 28718
+        },
+        "after": {
+          "jsonBytes": 81789,
+          "gzipBytes": 19945
+        },
+        "gzipReductionPercent": 30.55
+      },
+      "document": {
+        "before": {
+          "htmlBytes": 368676,
+          "gzipBytes": 55746
+        },
+        "after": {
+          "htmlBytes": 277241,
+          "gzipBytes": 46862
+        },
+        "gzipReductionPercent": 15.94,
+        "format": "eade-page-1"
+      }
+    },
+    {
+      "file": "english-meta/person-abd-al-wahid-al-rashid.json",
+      "metadataCandidate": {
+        "before": {
+          "jsonBytes": 4353,
+          "gzipBytes": 1286
+        },
+        "after": {
+          "jsonBytes": 3459,
+          "gzipBytes": 1445
+        },
+        "gzipReductionPercent": -12.36
+      },
+      "document": {
+        "before": {
+          "htmlBytes": 28621,
+          "gzipBytes": 7209
+        },
+        "after": {
+          "htmlBytes": 28621,
+          "gzipBytes": 7209
+        },
+        "gzipReductionPercent": 0,
+        "format": "ordinary-json"
+      }
+    },
+    {
+      "file": "english-meta/person-alexander-ii-of-imereti.json",
+      "metadataCandidate": {
+        "before": {
+          "jsonBytes": 25206,
+          "gzipBytes": 5445
+        },
+        "after": {
+          "jsonBytes": 19157,
+          "gzipBytes": 5751
+        },
+        "gzipReductionPercent": -5.62
+      },
+      "document": {
+        "before": {
+          "htmlBytes": 63644,
+          "gzipBytes": 12707
+        },
+        "after": {
+          "htmlBytes": 63644,
+          "gzipBytes": 12707
+        },
+        "gzipReductionPercent": 0,
+        "format": "ordinary-json"
+      }
+    },
+    {
+      "file": "english-meta/person-anna-of-russia.json",
+      "metadataCandidate": {
+        "before": {
+          "jsonBytes": 13785,
+          "gzipBytes": 3185
+        },
+        "after": {
+          "jsonBytes": 9932,
+          "gzipBytes": 3408
+        },
+        "gzipReductionPercent": -7
+      },
+      "document": {
+        "before": {
+          "htmlBytes": 55010,
+          "gzipBytes": 10713
+        },
+        "after": {
+          "htmlBytes": 55010,
+          "gzipBytes": 10713
+        },
+        "gzipReductionPercent": 0,
+        "format": "ordinary-json"
+      }
+    },
+    {
+      "file": "english-meta/person-balik-of-karvuna.json",
+      "metadataCandidate": {
+        "before": {
+          "jsonBytes": 3473,
+          "gzipBytes": 1028
+        },
+        "after": {
+          "jsonBytes": 2664,
+          "gzipBytes": 1206
+        },
+        "gzipReductionPercent": -17.32
+      },
+      "document": {
+        "before": {
+          "htmlBytes": 22884,
+          "gzipBytes": 6622
+        },
+        "after": {
+          "htmlBytes": 22884,
+          "gzipBytes": 6622
+        },
+        "gzipReductionPercent": 0,
+        "format": "ordinary-json"
+      }
+    },
+    {
+      "file": "english-meta/person-bogdan-ii-of-moldavia.json",
+      "metadataCandidate": {
+        "before": {
+          "jsonBytes": 12113,
+          "gzipBytes": 3085
+        },
+        "after": {
+          "jsonBytes": 9237,
+          "gzipBytes": 3315
+        },
+        "gzipReductionPercent": -7.46
+      },
+      "document": {
+        "before": {
+          "htmlBytes": 49520,
+          "gzipBytes": 10182
+        },
+        "after": {
+          "htmlBytes": 49520,
+          "gzipBytes": 10182
+        },
+        "gzipReductionPercent": 0,
+        "format": "ordinary-json"
+      }
+    },
+    {
+      "file": "english-meta/person-charles-alexander-of-wurttemberg.json",
+      "metadataCandidate": {
+        "before": {
+          "jsonBytes": 13818,
+          "gzipBytes": 3175
+        },
+        "after": {
+          "jsonBytes": 10207,
+          "gzipBytes": 3474
+        },
+        "gzipReductionPercent": -9.42
+      },
+      "document": {
+        "before": {
+          "htmlBytes": 53174,
+          "gzipBytes": 10240
+        },
+        "after": {
+          "htmlBytes": 53174,
+          "gzipBytes": 10240
+        },
+        "gzipReductionPercent": 0,
+        "format": "ordinary-json"
+      }
+    },
+    {
+      "file": "english-meta/person-christina-of-lorraine.json",
+      "metadataCandidate": {
+        "before": {
+          "jsonBytes": 14820,
+          "gzipBytes": 3765
+        },
+        "after": {
+          "jsonBytes": 11567,
+          "gzipBytes": 3922
+        },
+        "gzipReductionPercent": -4.17
+      },
+      "document": {
+        "before": {
+          "htmlBytes": 58717,
+          "gzipBytes": 11346
+        },
+        "after": {
+          "htmlBytes": 58717,
+          "gzipBytes": 11346
+        },
+        "gzipReductionPercent": 0,
+        "format": "ordinary-json"
+      }
+    },
+    {
+      "file": "english-meta/person-demetrius-of-georgia.json",
+      "metadataCandidate": {
+        "before": {
+          "jsonBytes": 24611,
+          "gzipBytes": 3089
+        },
+        "after": {
+          "jsonBytes": 13060,
+          "gzipBytes": 3204
+        },
+        "gzipReductionPercent": -3.72
+      },
+      "document": {
+        "before": {
+          "htmlBytes": 62023,
+          "gzipBytes": 9879
+        },
+        "after": {
+          "htmlBytes": 62023,
+          "gzipBytes": 9879
+        },
+        "gzipReductionPercent": 0,
+        "format": "ordinary-json"
+      }
+    },
+    {
+      "file": "english-meta/person-elizabeth-butler.json",
+      "metadataCandidate": {
+        "before": {
+          "jsonBytes": 10314,
+          "gzipBytes": 2453
+        },
+        "after": {
+          "jsonBytes": 7284,
+          "gzipBytes": 2643
+        },
+        "gzipReductionPercent": -7.75
+      },
+      "document": {
+        "before": {
+          "htmlBytes": 43508,
+          "gzipBytes": 8982
+        },
+        "after": {
+          "htmlBytes": 43508,
+          "gzipBytes": 8982
+        },
+        "gzipReductionPercent": 0,
+        "format": "ordinary-json"
+      }
+    },
+    {
+      "file": "english-meta/person-feodor-nikitich-romanov.json",
+      "metadataCandidate": {
+        "before": {
+          "jsonBytes": 17162,
+          "gzipBytes": 2782
+        },
+        "after": {
+          "jsonBytes": 11460,
+          "gzipBytes": 3000
+        },
+        "gzipReductionPercent": -7.84
+      },
+      "document": {
+        "before": {
+          "htmlBytes": 56826,
+          "gzipBytes": 9824
+        },
+        "after": {
+          "htmlBytes": 56826,
+          "gzipBytes": 9824
+        },
+        "gzipReductionPercent": 0,
+        "format": "ordinary-json"
+      }
+    },
+    {
+      "file": "english-meta/person-frederick-i-of-athens.json",
+      "metadataCandidate": {
+        "before": {
+          "jsonBytes": 14325,
+          "gzipBytes": 3394
+        },
+        "after": {
+          "jsonBytes": 10564,
+          "gzipBytes": 3607
+        },
+        "gzipReductionPercent": -6.28
+      },
+      "document": {
+        "before": {
+          "htmlBytes": 52706,
+          "gzipBytes": 10646
+        },
+        "after": {
+          "htmlBytes": 52706,
+          "gzipBytes": 10646
+        },
+        "gzipReductionPercent": 0,
+        "format": "ordinary-json"
+      }
+    },
+    {
+      "file": "english-meta/person-george-iii-of-great-britain.json",
+      "metadataCandidate": {
+        "before": {
+          "jsonBytes": 17786,
+          "gzipBytes": 4271
+        },
+        "after": {
+          "jsonBytes": 13279,
+          "gzipBytes": 4616
+        },
+        "gzipReductionPercent": -8.08
+      },
+      "document": {
+        "before": {
+          "htmlBytes": 63687,
+          "gzipBytes": 12736
+        },
+        "after": {
+          "htmlBytes": 63687,
+          "gzipBytes": 12736
+        },
+        "gzipReductionPercent": 0,
+        "format": "ordinary-json"
+      }
+    },
+    {
+      "file": "english-meta/person-helen-of-anjou.json",
+      "metadataCandidate": {
+        "before": {
+          "jsonBytes": 9034,
+          "gzipBytes": 2848
+        },
+        "after": {
+          "jsonBytes": 7403,
+          "gzipBytes": 3038
+        },
+        "gzipReductionPercent": -6.67
+      },
+      "document": {
+        "before": {
+          "htmlBytes": 40537,
+          "gzipBytes": 9691
+        },
+        "after": {
+          "htmlBytes": 40537,
+          "gzipBytes": 9691
+        },
+        "gzipReductionPercent": 0,
+        "format": "ordinary-json"
+      }
+    },
+    {
+      "file": "english-meta/person-ilias-i-of-moldavia.json",
+      "metadataCandidate": {
+        "before": {
+          "jsonBytes": 7203,
+          "gzipBytes": 1379
+        },
+        "after": {
+          "jsonBytes": 3763,
+          "gzipBytes": 1541
+        },
+        "gzipReductionPercent": -11.75
+      },
+      "document": {
+        "before": {
+          "htmlBytes": 30011,
+          "gzipBytes": 7073
+        },
+        "after": {
+          "htmlBytes": 30011,
+          "gzipBytes": 7073
+        },
+        "gzipReductionPercent": 0,
+        "format": "ordinary-json"
+      }
+    },
+    {
+      "file": "english-meta/person-ivan-alexander-of-bulgaria.json",
+      "metadataCandidate": {
+        "before": {
+          "jsonBytes": 12381,
+          "gzipBytes": 2585
+        },
+        "after": {
+          "jsonBytes": 8688,
+          "gzipBytes": 2779
+        },
+        "gzipReductionPercent": -7.5
+      },
+      "document": {
+        "before": {
+          "htmlBytes": 55094,
+          "gzipBytes": 9768
+        },
+        "after": {
+          "htmlBytes": 55094,
+          "gzipBytes": 9768
+        },
+        "gzipReductionPercent": 0,
+        "format": "ordinary-json"
+      }
+    },
+    {
+      "file": "english-meta/person-joan-sophia-of-bavaria.json",
+      "metadataCandidate": {
+        "before": {
+          "jsonBytes": 14904,
+          "gzipBytes": 3402
+        },
+        "after": {
+          "jsonBytes": 10952,
+          "gzipBytes": 3686
+        },
+        "gzipReductionPercent": -8.35
+      },
+      "document": {
+        "before": {
+          "htmlBytes": 58490,
+          "gzipBytes": 10957
+        },
+        "after": {
+          "htmlBytes": 58490,
+          "gzipBytes": 10957
+        },
+        "gzipReductionPercent": 0,
+        "format": "ordinary-json"
+      }
+    },
+    {
+      "file": "english-meta/person-john-iv-of-bavaria-munich.json",
+      "metadataCandidate": {
+        "before": {
+          "jsonBytes": 19782,
+          "gzipBytes": 3376
+        },
+        "after": {
+          "jsonBytes": 12575,
+          "gzipBytes": 3635
+        },
+        "gzipReductionPercent": -7.67
+      },
+      "document": {
+        "before": {
+          "htmlBytes": 59728,
+          "gzipBytes": 10827
+        },
+        "after": {
+          "htmlBytes": 59728,
+          "gzipBytes": 10827
+        },
+        "gzipReductionPercent": 0,
+        "format": "ordinary-json"
+      }
+    },
+    {
+      "file": "english-meta/person-ksenia-shestova.json",
+      "metadataCandidate": {
+        "before": {
+          "jsonBytes": 6137,
+          "gzipBytes": 1724
+        },
+        "after": {
+          "jsonBytes": 4960,
+          "gzipBytes": 1894
+        },
+        "gzipReductionPercent": -9.86
+      },
+      "document": {
+        "before": {
+          "htmlBytes": 36262,
+          "gzipBytes": 8266
+        },
+        "after": {
+          "htmlBytes": 36262,
+          "gzipBytes": 8266
+        },
+        "gzipReductionPercent": 0,
+        "format": "ordinary-json"
+      }
+    },
+    {
+      "file": "english-meta/person-louis-vii-of-bavaria-ingolstadt.json",
+      "metadataCandidate": {
+        "before": {
+          "jsonBytes": 22168,
+          "gzipBytes": 3784
+        },
+        "after": {
+          "jsonBytes": 14939,
+          "gzipBytes": 4066
+        },
+        "gzipReductionPercent": -7.45
+      },
+      "document": {
+        "before": {
+          "htmlBytes": 64603,
+          "gzipBytes": 11324
+        },
+        "after": {
+          "htmlBytes": 64603,
+          "gzipBytes": 11324
+        },
+        "gzipReductionPercent": 0,
+        "format": "ordinary-json"
+      }
+    },
+    {
+      "file": "english-meta/person-margaret-of-brieg.json",
+      "metadataCandidate": {
+        "before": {
+          "jsonBytes": 9304,
+          "gzipBytes": 2818
+        },
+        "after": {
+          "jsonBytes": 7550,
+          "gzipBytes": 3035
+        },
+        "gzipReductionPercent": -7.7
+      },
+      "document": {
+        "before": {
+          "htmlBytes": 43326,
+          "gzipBytes": 9510
+        },
+        "after": {
+          "htmlBytes": 43326,
+          "gzipBytes": 9510
+        },
+        "gzipReductionPercent": 0,
+        "format": "ordinary-json"
+      }
+    },
+    {
+      "file": "english-meta/person-maria-of-julich-berg.json",
+      "metadataCandidate": {
+        "before": {
+          "jsonBytes": 15860,
+          "gzipBytes": 4400
+        },
+        "after": {
+          "jsonBytes": 12529,
+          "gzipBytes": 4682
+        },
+        "gzipReductionPercent": -6.41
+      },
+      "document": {
+        "before": {
+          "htmlBytes": 57844,
+          "gzipBytes": 11928
+        },
+        "after": {
+          "htmlBytes": 57844,
+          "gzipBytes": 11928
+        },
+        "gzipReductionPercent": 0,
+        "format": "ordinary-json"
+      }
+    },
+    {
+      "file": "english-meta/person-matthew-o-neill-of-dungannon.json",
+      "metadataCandidate": {
+        "before": {
+          "jsonBytes": 12914,
+          "gzipBytes": 3522
+        },
+        "after": {
+          "jsonBytes": 9371,
+          "gzipBytes": 3713
+        },
+        "gzipReductionPercent": -5.42
+      },
+      "document": {
+        "before": {
+          "htmlBytes": 48838,
+          "gzipBytes": 10502
+        },
+        "after": {
+          "htmlBytes": 48838,
+          "gzipBytes": 10502
+        },
+        "gzipReductionPercent": 0,
+        "format": "ordinary-json"
+      }
+    },
+    {
+      "file": "english-meta/person-odoardo-i-farnese.json",
+      "metadataCandidate": {
+        "before": {
+          "jsonBytes": 15372,
+          "gzipBytes": 4052
+        },
+        "after": {
+          "jsonBytes": 12132,
+          "gzipBytes": 4341
+        },
+        "gzipReductionPercent": -7.13
+      },
+      "document": {
+        "before": {
+          "htmlBytes": 55954,
+          "gzipBytes": 11559
+        },
+        "after": {
+          "htmlBytes": 55954,
+          "gzipBytes": 11559
+        },
+        "gzipReductionPercent": 0,
+        "format": "ordinary-json"
+      }
+    },
+    {
+      "file": "english-meta/person-philip-iii-of-france.json",
+      "metadataCandidate": {
+        "before": {
+          "jsonBytes": 17070,
+          "gzipBytes": 4188
+        },
+        "after": {
+          "jsonBytes": 12740,
+          "gzipBytes": 4377
+        },
+        "gzipReductionPercent": -4.51
+      },
+      "document": {
+        "before": {
+          "htmlBytes": 64516,
+          "gzipBytes": 12104
+        },
+        "after": {
+          "htmlBytes": 64516,
+          "gzipBytes": 12104
+        },
+        "gzipReductionPercent": 0,
+        "format": "ordinary-json"
+      }
+    },
+    {
+      "file": "english-meta/person-richard-iii-of-england.json",
+      "metadataCandidate": {
+        "before": {
+          "jsonBytes": 16100,
+          "gzipBytes": 3761
+        },
+        "after": {
+          "jsonBytes": 11585,
+          "gzipBytes": 4039
+        },
+        "gzipReductionPercent": -7.39
+      },
+      "document": {
+        "before": {
+          "htmlBytes": 61470,
+          "gzipBytes": 11984
+        },
+        "after": {
+          "htmlBytes": 61470,
+          "gzipBytes": 11984
+        },
+        "gzipReductionPercent": 0,
+        "format": "ordinary-json"
+      }
+    },
+    {
+      "file": "english-meta/person-sigismund-bathory.json",
+      "metadataCandidate": {
+        "before": {
+          "jsonBytes": 13461,
+          "gzipBytes": 3284
+        },
+        "after": {
+          "jsonBytes": 9865,
+          "gzipBytes": 3486
+        },
+        "gzipReductionPercent": -6.15
+      },
+      "document": {
+        "before": {
+          "htmlBytes": 50501,
+          "gzipBytes": 10278
+        },
+        "after": {
+          "htmlBytes": 50501,
+          "gzipBytes": 10278
+        },
+        "gzipReductionPercent": 0,
+        "format": "ordinary-json"
+      }
+    },
+    {
+      "file": "english-meta/person-svitrigaila.json",
+      "metadataCandidate": {
+        "before": {
+          "jsonBytes": 20794,
+          "gzipBytes": 3199
+        },
+        "after": {
+          "jsonBytes": 12500,
+          "gzipBytes": 3335
+        },
+        "gzipReductionPercent": -4.25
+      },
+      "document": {
+        "before": {
+          "htmlBytes": 58501,
+          "gzipBytes": 10042
+        },
+        "after": {
+          "htmlBytes": 58501,
+          "gzipBytes": 10042
+        },
+        "gzipReductionPercent": 0,
+        "format": "ordinary-json"
+      }
+    },
+    {
+      "file": "english-meta/person-vincenzo-ii-gonzaga.json",
+      "metadataCandidate": {
+        "before": {
+          "jsonBytes": 12866,
+          "gzipBytes": 3090
+        },
+        "after": {
+          "jsonBytes": 9756,
+          "gzipBytes": 3354
+        },
+        "gzipReductionPercent": -8.54
+      },
+      "document": {
+        "before": {
+          "htmlBytes": 53819,
+          "gzipBytes": 10740
+        },
+        "after": {
+          "htmlBytes": 53819,
+          "gzipBytes": 10740
+        },
+        "gzipReductionPercent": 0,
+        "format": "ordinary-json"
+      }
+    },
+    {
+      "file": "english-meta/person-yaroslav-ii-of-vladimir.json",
+      "metadataCandidate": {
+        "before": {
+          "jsonBytes": 20212,
+          "gzipBytes": 4233
+        },
+        "after": {
+          "jsonBytes": 14884,
+          "gzipBytes": 4496
+        },
+        "gzipReductionPercent": -6.21
+      },
+      "document": {
+        "before": {
+          "htmlBytes": 57804,
+          "gzipBytes": 11422
+        },
+        "after": {
+          "htmlBytes": 57804,
+          "gzipBytes": 11422
+        },
+        "gzipReductionPercent": 0,
+        "format": "ordinary-json"
+      }
+    }
+  ],
+  "englishSample": {
+    "before": 354807,
+    "after": 345923,
+    "count": 30,
+    "gzipReductionPercent": 2.5
+  },
+  "catalogueFrom619": {
+    "before": {
+      "bytes": 1459752,
+      "gzipBytes": 291226
+    },
+    "after": {
+      "bytes": 1028122,
+      "gzipBytes": 147623
+    },
+    "preservedPeople": 2814,
+    "projectionDifferences": 0,
+    "gzipReductionPercent": 49.31
+  }
+}

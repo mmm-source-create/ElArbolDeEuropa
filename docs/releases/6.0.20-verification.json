@@ -1,0 +1,127 @@
+{
+  "version": "6.0.20",
+  "date": "2026-11-22",
+  "baseCommit": "8f4e266c17b2ccc3b59b177f11a013c544f1afbc",
+  "people": 2814,
+  "newDocumentedClaims": 147,
+  "peopleWithNewEvidence": 97,
+  "consultedSources": 31,
+  "byField": {
+    "governments": 75,
+    "fathers": 16,
+    "mothers": 23,
+    "marriageAssertions": 32,
+    "deaths": 1
+  },
+  "claimCoverage": {
+    "total": 13134,
+    "documented": 6994,
+    "approximate": 458,
+    "disputed": 59,
+    "inferred": 175,
+    "pending": 5448
+  },
+  "verification": {
+    "completeTests": {
+      "passed": 836,
+      "failed": 0
+    },
+    "completePageEnvelopeRoundTrips": 9645,
+    "staticPages": 9645,
+    "ssgErrors": 0,
+    "realStaticSamplePages": 20,
+    "hydrationTests": {
+      "passed": 30,
+      "failed": 0
+    },
+    "repositorySecurityIssues": 0,
+    "dependencyAudit": "no unaccepted high/critical advisories; existing GHSA-fc5q-39xc-vjpf exception retained",
+    "regression": {
+      "unchangedAnnualMosaics": 601,
+      "unchangedGeometry": true,
+      "unchangedTreeLayout": true,
+      "unchangedRoutes": true,
+      "unchangedAuthorityCounts": true,
+      "changedPeople": 97,
+      "changedPublicDataPages": 314,
+      "changedPersonalEvidenceYears": 345
+    },
+    "browser": {
+      "widths": [
+        390
+      ],
+      "spanishCatalogueInitialFormat": "eade-page-1",
+      "spanishSearch": "Bela IV",
+      "spanishRoleFilter": "Monarcas",
+      "spanishResults": 1,
+      "englishSearch": "Otto III of Bavaria",
+      "englishResults": 1,
+      "englishNewEvidenceVisible": true,
+      "charlesVPeriodSwitch": 1556,
+      "horizontalOverflow": false,
+      "consoleErrors": 0,
+      "method": "Built static HTML through Vite preview (directory URLs) and a local Node host calling the actual Cloudflare Worker and assets for clean English routes; no deployment."
+    }
+  },
+  "performance": {
+    "comparison": "Same complete current documents with ordinary JSON versus the chosen wire format; catalogue JSON additionally compared to 6.0.19.",
+    "catalogue": {
+      "before": {
+        "bytes": 1459752,
+        "gzipBytes": 291226
+      },
+      "after": {
+        "bytes": 1028122,
+        "gzipBytes": 147623
+      },
+      "preservedPeople": 2814,
+      "projectionDifferences": 0,
+      "gzipReductionPercent": 49.31
+    },
+    "charlesV": {
+      "file": "english-meta/person-charles-v.json",
+      "metadataCandidate": {
+        "before": {
+          "jsonBytes": 173201,
+          "gzipBytes": 28718
+        },
+        "after": {
+          "jsonBytes": 81789,
+          "gzipBytes": 19945
+        },
+        "gzipReductionPercent": 30.55
+      },
+      "document": {
+        "before": {
+          "htmlBytes": 368676,
+          "gzipBytes": 55746
+        },
+        "after": {
+          "htmlBytes": 277241,
+          "gzipBytes": 46862
+        },
+        "gzipReductionPercent": 15.94,
+        "format": "eade-page-1"
+      }
+    },
+    "englishSample": {
+      "before": 354807,
+      "after": 345923,
+      "count": 30,
+      "gzipReductionPercent": 2.5
+    },
+    "transportReport": "6.0.20-performance.json"
+  },
+  "cloudflarePackage": {
+    "generated": true,
+    "files": 18517,
+    "bytes": 714078244,
+    "remainingFiles": 1483,
+    "reusedEnglishMetadata": 4824,
+    "deployed": false
+  },
+  "screenshots": [
+    "outputs/6.0.20/evidence-mobile-en.jpg",
+    "outputs/6.0.20/catalogue-mobile-es.jpg"
+  ]
+}

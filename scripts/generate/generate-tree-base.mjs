@@ -582,7 +582,9 @@ async function generarCatalogosPublicos() {
   };
 
   await Promise.all([
-    fs.writeFile(path.join(catalogoDir, "personas.json"), JSON.stringify({ items: personas }), "utf8"),
+    // Person cards and catalogue search do not use the biography summary.
+    // The complete summary remains on each person's record and the home cards.
+    fs.writeFile(path.join(catalogoDir, "personas.json"), JSON.stringify({ items: personas.map(({resumen, ...card}) => card) }), "utf8"),
     fs.writeFile(path.join(catalogoDir, "dinastias.json"), JSON.stringify({ items: dinastias }), "utf8"),
     fs.writeFile(path.join(catalogoDir, "territorios.json"), JSON.stringify({ items: territorios }), "utf8"),
     fs.writeFile(path.join(catalogoDir, "historias.json"), JSON.stringify({ items: historias }), "utf8"),

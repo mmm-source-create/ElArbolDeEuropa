@@ -1,4 +1,5 @@
 import {SCREEN_NOTICE_SCRIPT} from '../../src/features/public/screenNotice.js';
+import {gzipSync} from 'node:zlib';
 import {STATIC_DATA_ID,serializePage,staticRoute} from '../../src/features/public/staticData.js';
 export const escapeHtml = value => String(value).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;').replace(/'/g,'&#39;');
 const unescapeXml = value => value.replace(/&(?:amp|lt|gt|quot|apos);/g,x=>({'&amp;':'&','&lt;':'<','&gt;':'>','&quot;':'"','&apos;':"'"}[x]));
@@ -65,6 +66,16 @@ export function makeStaticDocument(shell,{html,meta},page,assets) {
  // La preferencia no cambia el HTML que React hidrata. Se aplica antes del primer dibujo.
  const notice=`<script>${SCREEN_NOTICE_SCRIPT}</script>`;
  head+='\n'+metadata.join('\n')+'\n'+links.join('\n')+'\n'+notice+'\n';
- const data=page?`<script id="${STATIC_DATA_ID}" type="application/json">${serializePage(page)}</script>`:'';
- return shell.replace(/<html\b[^>]*>/i,`<html lang="${meta.lang}">`).replace(/<head>[\s\S]*?<\/head>/i,()=>`<head>${head}</head>`).replace('<div id="root"></div>',()=>`<div id="root">${html}</div>\n${data}`);
+ const documentFor=payload=>{
+  const data=payload?`<script id="${STATIC_DATA_ID}" type="application/json">${payload}</script>`:'';
+  return shell.replace(/<html\b[^>]*>/i,`<html lang="${meta.lang}">`).replace(/<head>[\s\S]*?<\/head>/i,()=>`<head>${head}</head>`).replace('<div id="root"></div>',()=>`<div id="root">${html}</div>\n${data}`);
+ };
+ if(!page)return documentFor('');
+ const plain=serializePage(page,false),packed=serializePage(page);
+ const ordinary=documentFor(plain);
+ if(plain===packed)return ordinary;
+ const compact=documentFor(packed);
+ // Compare complete documents, including the rendered text. On short pages
+ // gzip already shares repetitions; the dictionary must earn its overhead.
+ return gzipSync(compact).length<gzipSync(ordinary).length?compact:ordinary;
 }

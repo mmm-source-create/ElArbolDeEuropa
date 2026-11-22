@@ -1,0 +1,359 @@
+{
+  "version": "6.0.20",
+  "accessed": "2026-11-22",
+  "method": "SHA-256 of HTML retrieved from each institutional source. Only explicitly selected claims in reviews620.json are approved. The full downloaded texts remain in the ignored local cache.",
+  "sources": [
+    {
+      "url": "https://www.vatican.va/content/vatican/en/holy-father.html",
+      "retrievedUrl": "https://www.vatican.va/content/vatican/en/holy-father.html",
+      "title": "Pontiffs",
+      "sha256": "efa5090df512ce0cd09cfbe2e7666da52dca6a08f3b9fda8bf7a902eca8056f8",
+      "people": [
+        "GREG10",
+        "PAPA_CELESTINO4",
+        "PAPA_INOCENCIO4",
+        "PAPA_ALEJANDRO4",
+        "PAPA_URBANO4",
+        "PAPA_INOCENCIO5",
+        "PAPA_ADRIANO5",
+        "PAPA_NICOLAS3",
+        "PAPA_MARTIN4",
+        "PAPA_CELESTINO5",
+        "PAPA_BONIFACIO8",
+        "PAPA_BENEDICTO11",
+        "PAPA_BENEDICTO12",
+        "PAPA_URBANO5",
+        "PAPA_GREGORIO11",
+        "PAPA_BONIFACIO9",
+        "PAPA_GREGORIO12",
+        "PAPA_INOCENCIO8",
+        "PAPA_PIO3",
+        "PAPA_JULIO3",
+        "PAPA_MARCELO2",
+        "PAPA_GREGORIO13",
+        "PAPA_URBANO7",
+        "PAPA_INOCENCIO9",
+        "PAPA_LEON11",
+        "PAPA_PAULO5",
+        "PAPA_CLEMENTE9",
+        "PAPA_INOCENCIO12",
+        "PAPA_BENEDICTO13"
+      ]
+    },
+    {
+      "url": "https://www.kungahuset.se/sveriges-monarki/monarkins-historia",
+      "retrievedUrl": "https://www.kungahuset.se/sveriges-monarki/monarkins-historia",
+      "title": "Monarkins historia | Kungahuset",
+      "sha256": "3393b771335a6161275e6b49cfd80f729796e6038f6d4adc6540d48ed7064705",
+      "people": [
+        "KNUT2SUE",
+        "VALDEMARSUE",
+        "MAGNUS3SUE",
+        "ALBERTOSUE",
+        "CRISTOBALBAVSUE",
+        "CRISTIAN1NORD",
+        "ESTENSTUREVIEJO",
+        "ESTENSTUREJOVEN",
+        "ERIK14SUE",
+        "CARLOS9SUE",
+        "ULRICALEONORASUE",
+        "CARLOS13SUE",
+        "OSCAR1SUE"
+      ]
+    },
+    {
+      "url": "https://www.enciklopedija.hr/clanak/bela-iii-arpadovic",
+      "retrievedUrl": "https://www.enciklopedija.hr/clanak/bela-iii-arpadovic",
+      "title": "Bela III. Arpadović - Hrvatska enciklopedija",
+      "sha256": "460542835924d846874d020c6cc699e2f91bfd286c6ae9aee84d6f31c2a501ff",
+      "people": [
+        "BELA3HUN"
+      ]
+    },
+    {
+      "url": "https://www.enciklopedija.hr/clanak/emerik-arpadovic",
+      "retrievedUrl": "https://www.enciklopedija.hr/clanak/emerik-arpadovic",
+      "title": "Emerik Arpadović - Hrvatska enciklopedija",
+      "sha256": "9161fd91a38d3a197337754ed1bc07f103ceafa48a2b0cddec3aaf29e3e3f9f2",
+      "people": [
+        "EMERICOHUN"
+      ]
+    },
+    {
+      "url": "https://www.enciklopedija.hr/clanak/ladislav-iii-arpadovic",
+      "retrievedUrl": "https://www.enciklopedija.hr/clanak/ladislav-iii-arpadovic",
+      "title": "Ladislav III. Arpadović - Hrvatska enciklopedija",
+      "sha256": "aa389407e3d3f2eb4e747e4f6ba1b7591ea987650acfcb3f5305067d4c7c4389",
+      "people": [
+        "LADISLAO3HUN"
+      ]
+    },
+    {
+      "url": "https://www.enciklopedija.hr/clanak/andrija-ii-arpadovic",
+      "retrievedUrl": "https://www.enciklopedija.hr/clanak/andrija-ii-arpadovic",
+      "title": "Andrija II. Arpadović - Hrvatska enciklopedija",
+      "sha256": "840ca0b5b008b07a4a36ce00ffa2394482a39e9b26843b4b44880f923aa20bde",
+      "people": [
+        "ANDRES2HUN"
+      ]
+    },
+    {
+      "url": "https://www.enciklopedija.hr/clanak/bela-iv-arpadovic",
+      "retrievedUrl": "https://www.enciklopedija.hr/clanak/bela-iv-arpadovic",
+      "title": "Bela IV. Arpadović - Hrvatska enciklopedija",
+      "sha256": "552b9a2282c8bf44f6d8b9b1e9465720a47f045ee505cb0149cd98769a3aec82",
+      "people": [
+        "BELA4"
+      ]
+    },
+    {
+      "url": "https://www.enciklopedija.hr/clanak/stjepan-v-arpadovic",
+      "retrievedUrl": "https://enciklopedija.hr/clanak/stjepan-v-arpadovic",
+      "title": "Stjepan V. Arpadović - Hrvatska enciklopedija",
+      "sha256": "22c7c55e3fd1e143f6f525719e1df5c5e212d55f1b19bfad78a5e9f7eeafb1ac",
+      "people": [
+        "ESTEBV"
+      ]
+    },
+    {
+      "url": "https://www.enciklopedija.hr/clanak/ladislav-iv-kumanac",
+      "retrievedUrl": "https://www.enciklopedija.hr/clanak/ladislav-iv-kumanac",
+      "title": "Ladislav IV. Kumanac - Hrvatska enciklopedija",
+      "sha256": "3806b9b1011960542fcce9eb9be87cfdf4ff0f64cdfa18c85fae9ccf110d72c4",
+      "people": [
+        "LADI4"
+      ]
+    },
+    {
+      "url": "https://www.enciklopedija.hr/clanak/andrija-iii-arpadovic",
+      "retrievedUrl": "https://www.enciklopedija.hr/clanak/andrija-iii-arpadovic",
+      "title": "Andrija III. Arpadović - Hrvatska enciklopedija",
+      "sha256": "525d589c468a98fb393fc44205bc2830cf1afa455b3d442bebb04ec404a357b6",
+      "people": [
+        "ANDRES3"
+      ]
+    },
+    {
+      "url": "https://www.enciklopedija.hr/clanak/ludovik-i-anzuvinac",
+      "retrievedUrl": "https://www.enciklopedija.hr/clanak/ludovik-i-anzuvinac",
+      "title": "Ludovik I. Anžuvinac - Hrvatska enciklopedija",
+      "sha256": "b13df12aa9537f9e9c863f6f35574bb60beaccc0bef981a49dac233a20240e71",
+      "people": [
+        "LUIS1"
+      ]
+    },
+    {
+      "url": "https://www.enciklopedija.hr/clanak/karlo-i-robert",
+      "retrievedUrl": "https://enciklopedija.hr/clanak/karlo-i-robert",
+      "title": "Karlo I. Robert - Hrvatska enciklopedija",
+      "sha256": "a6b0ec8f61c474a7e40348995048f1737a43b7bb1a4fd509790ae13d4cedcf70",
+      "people": [
+        "CARLOS1"
+      ]
+    },
+    {
+      "url": "https://www.enciklopedija.hr/clanak/jagelovici",
+      "retrievedUrl": "https://www.enciklopedija.hr/clanak/jagelovici",
+      "title": "Jagelovići - Hrvatska enciklopedija",
+      "sha256": "ac45ee812dad2c2d3858b264cd1e201e95445d6d11d1f3103dbf7b3fd3ba0962",
+      "people": [
+        "LADI3",
+        "LADISLAO7HUN",
+        "LUIS2HUN"
+      ]
+    },
+    {
+      "url": "https://www.royal.uk/alexander-ii-r1214-1249",
+      "retrievedUrl": "https://www.royal.uk/alexander-ii-r1214-1249",
+      "title": "Alexander II (r.1214-1249) | The Royal Family",
+      "sha256": "5143172c8108294bb1c1ba919ac190ffe1d61fbec4cd2442677662119bb32ac8",
+      "people": [
+        "ALEXANDER2SCOT",
+        "WILLIAM1SCOT",
+        "ERMENGARDESCOT",
+        "MARIECOUCY"
+      ]
+    },
+    {
+      "url": "https://www.royal.uk/alexander-iii-r-1249-1286",
+      "retrievedUrl": "https://www.royal.uk/alexander-iii-r-1249-1286",
+      "title": "Alexander III (r. 1249-1286) | The Royal Family",
+      "sha256": "aac2059763a20b1a416362e2575b8c67c0a85f8cd00884ebd35584cc2761c0c5",
+      "people": [
+        "ALEXANDER3SCOT",
+        "YOLANDEDREUXSCOT"
+      ]
+    },
+    {
+      "url": "https://www.royal.uk/john-balliol-r-1292-1296",
+      "retrievedUrl": "https://www.royal.uk/john-balliol-r-1292-1296",
+      "title": "John Balliol (r. 1292-1296) | The Royal Family",
+      "sha256": "87def5213efa11613666563b7caa33926878f340447c28eb7309300632f2c022",
+      "people": [
+        "JOHN1BALLIOL",
+        "JOHNBALLIOLFATHER",
+        "DERVORGUILLA"
+      ]
+    },
+    {
+      "url": "https://www.royal.uk/david-ii-r-1329-1371",
+      "retrievedUrl": "https://www.royal.uk/david-ii-r-1329-1371",
+      "title": "David II (r. 1329-1371) | The Royal Family",
+      "sha256": "85191b82691cc42ff16e76731eb5852be1a40da0e001384eb6a1130ea55c0283",
+      "people": [
+        "DAVID2SCOT"
+      ]
+    },
+    {
+      "url": "https://www.royal.uk/robert-iii-r-1390-1406",
+      "retrievedUrl": "https://www.royal.uk/robert-iii-r-1390-1406",
+      "title": "Robert III (r. 1390-1406) | The Royal Family",
+      "sha256": "b512b24361b32d64b34e9b94b30d6c3f47f2e615c651db9bb0014461ff28a0a0",
+      "people": [
+        "ROBERT3SCOT",
+        "JAMES1SCOT"
+      ]
+    },
+    {
+      "url": "https://www.royal.uk/james-i-r-1406-1437",
+      "retrievedUrl": "https://www.royal.uk/james-i-r-1406-1437",
+      "title": "James I (r. 1406-1437) | The Royal Family",
+      "sha256": "170213b7bda3672713a4b150bfba9a94a9383588766ab816feecb5e633ed82ae",
+      "people": [
+        "JAMES1SCOT",
+        "JOANBEAUFORTSCOT"
+      ]
+    },
+    {
+      "url": "https://www.royal.uk/james-ii-r-1437-1460",
+      "retrievedUrl": "https://www.royal.uk/james-ii-r-1437-1460",
+      "title": "James II (r. 1437-1460) | The Royal Family",
+      "sha256": "91ec2188570c9b4e0a710a4a1f90fc59c18d063007ec3e42eb9728c56e5bb1aa",
+      "people": [
+        "JAMES2SCOT"
+      ]
+    },
+    {
+      "url": "https://www.royal.uk/james-iii-r-1460-1488",
+      "retrievedUrl": "https://www.royal.uk/james-iii-r-1460-1488",
+      "title": "James III (r. 1460-1488) | The Royal Family",
+      "sha256": "c696ca6a261a218f533aa19871e910d129bf43eaa5bb2edd09045c8774324043",
+      "people": [
+        "JAMES3SCOT"
+      ]
+    },
+    {
+      "url": "https://www.royal.uk/robert-ii-r1371-1390",
+      "retrievedUrl": "https://www.royal.uk/robert-ii-r1371-1390",
+      "title": "Robert II (r.1371-1390) | The Royal Family",
+      "sha256": "a7348e3777a8d1108541504c1aee41552adcf4f4761fe5792fef83f15b25c098",
+      "people": [
+        "ROBERT2SCOT"
+      ]
+    },
+    {
+      "url": "https://www.deutsche-biographie.de/sfz70055.html#ndbcontent",
+      "retrievedUrl": "https://www.deutsche-biographie.de/sfz70055.html",
+      "title": "Deutsche Biographie - Heinrich XIII.",
+      "sha256": "70e9f9daa6dd09a33697806266a6d0bf687f59ad50d62f8e878c8018dd012160",
+      "people": [
+        "ENRIQUE13",
+        "ISABELH",
+        "LUIS3BAV"
+      ]
+    },
+    {
+      "url": "https://www.deutsche-biographie.de/sfz74103.html#ndbcontent",
+      "retrievedUrl": "https://www.deutsche-biographie.de/sfz74103.html",
+      "title": "Deutsche Biographie - Otto III.",
+      "sha256": "a8b546593ddecb75eaddd32c56cd1fa0abdc1dafde0d1355fcd6d8461ca81172",
+      "people": [
+        "OTON3",
+        "AGNESGLO",
+        "LUIS3BAV"
+      ]
+    },
+    {
+      "url": "https://www.deutsche-biographie.de/sfz70569.html#ndbcontent",
+      "retrievedUrl": "https://www.deutsche-biographie.de/sfz70569.html",
+      "title": "Deutsche Biographie - Ludwig II.",
+      "sha256": "87f3ecb449df67ce26cc497c0cdb7563a182a7f4699bfd84bb44f6cda0844645",
+      "people": [
+        "LUIS2BAV",
+        "MATHAB",
+        "MARIABRABBAV",
+        "LUIS4",
+        "ROD1BAV"
+      ]
+    },
+    {
+      "url": "https://www.deutsche-biographie.de/sfz74101.html#ndbcontent",
+      "retrievedUrl": "https://www.deutsche-biographie.de/sfz74101.html",
+      "title": "Deutsche Biographie - Otto II.",
+      "sha256": "0b5db07688f9013b6c7a81a79af8dcce005c1d65c22c544854159845c00349ac",
+      "people": [
+        "OTTO2BAV"
+      ]
+    },
+    {
+      "url": "https://www.deutsche-biographie.de/sfz74894.html#ndbcontent",
+      "retrievedUrl": "https://www.deutsche-biographie.de/sfz74894.html",
+      "title": "Deutsche Biographie - Stephan I.",
+      "sha256": "bc9fee1c56d0b8730dcdd3bc64c72fbbffc9573a4c74384cf1891feb1599d8fd",
+      "people": [
+        "ESTEBAN1BAV",
+        "JUDITASWIBAV",
+        "ENRIQ14BAV",
+        "OTTO4BAV"
+      ]
+    },
+    {
+      "url": "https://www.deutsche-biographie.de/sfz70056.html#ndbcontent",
+      "retrievedUrl": "https://www.deutsche-biographie.de/sfz70056.html",
+      "title": "Deutsche Biographie - Heinrich XV.",
+      "sha256": "9169318b1b2fe6f047efed91d8a4c7e75f631a659bc78168fb14cb8796f82905",
+      "people": [
+        "ENRIQ15"
+      ]
+    },
+    {
+      "url": "https://www.deutsche-biographie.de/sfz70567.html#ndbcontent",
+      "retrievedUrl": "https://www.deutsche-biographie.de/sfz70567.html",
+      "title": "Deutsche Biographie - Ludwig",
+      "sha256": "f11f46b38c88fd39a966d3798e555fdbce3db80b22e97fc3ec23c8a21d94de81",
+      "people": [
+        "ALB1BAV",
+        "OTTO7BAV"
+      ]
+    },
+    {
+      "url": "https://www.historisches-lexikon-bayerns.de/Lexikon/Artikel_45122",
+      "retrievedUrl": "https://www.historisches-lexikon-bayerns.de/Lexikon/Artikel_45122",
+      "title": "Bayerische Teilungen – Historisches Lexikon Bayerns",
+      "sha256": "319950dd53ed058b3288d94bb993bc9c9066c3fc38dc331081213c715c719640",
+      "people": [
+        "ENRIQUE13",
+        "LUIS2BAV",
+        "ROD1BAV",
+        "ESTEBAN2BAV",
+        "ALB1BAV",
+        "MEINHARDBAV"
+      ]
+    },
+    {
+      "url": "https://www.deutsche-biographie.de/sfz69312.html#ndbcontent",
+      "retrievedUrl": "https://www.deutsche-biographie.de/sfz69312.html",
+      "title": "Deutsche Biographie - Albrecht I.",
+      "sha256": "8b910079009b5c72ae08e8f8ebdb0bde603f148a972975aad56a5b572b4ed72f",
+      "people": [
+        "ALB1BAV",
+        "MARGBRIEGBAV",
+        "MARGBAV",
+        "ALB2BAV",
+        "GUILLERMO2BAV",
+        "JUAN3BAV",
+        "JOHANNASOPHIABAV"
+      ]
+    }
+  ]
+}

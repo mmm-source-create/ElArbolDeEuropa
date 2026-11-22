@@ -3,7 +3,7 @@ import fs from 'node:fs/promises';
 import path from 'node:path';
 import {pathToFileURL} from 'node:url';
 import {loadEnv} from 'vite';
-import {STATIC_SCHEMA,STATIC_DATA_ID,STATIC_FOLDERS,validatePage} from '../../src/features/public/staticData.js';
+import {STATIC_SCHEMA,STATIC_DATA_ID,STATIC_FOLDERS,validatePage,parsePage} from '../../src/features/public/staticData.js';
 import {DEFAULT_SITE_URL,entityMeta,publicMeta} from '../../src/features/public/publicMeta.js';
 import {canonicalDynastySlug} from '../../src/data/dynastyAliases.js';
 import {routesFromSitemap,assetsForStaticPage,escapeHtml} from '../lib/ssg-utils.mjs';
@@ -30,7 +30,7 @@ export function auditDocument(html,page,assets,siteUrl=DEFAULT_SITE_URL) {
  const scripts=[...body.matchAll(new RegExp(`<script id="${STATIC_DATA_ID}" type="application/json">([\\s\\S]*?)<\\/script>`,'g'))];
  try {
   if(scripts.length!==1)throw new Error();
-  const raw=scripts[0][1],embedded=JSON.parse(raw);
+  const raw=scripts[0][1],embedded=parsePage(raw);
   if(/[<>&\u2028\u2029]/.test(raw)||!validatePage(embedded)||JSON.stringify(embedded)!==JSON.stringify(page))throw new Error();
  } catch {errors.push('Datos iniciales ausentes, inseguros o distintos del JSON fuente');}
  const links=[...head.matchAll(/<link\b[^>]*>/g)].map(m=>m[0]);

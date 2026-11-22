@@ -2,7 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs/promises';
 import {JSDOM} from 'jsdom';
-import {STATIC_SCHEMA,staticRoute,validatePage,initialPageForLocation,readInitialPage,serializePage} from '../src/features/public/staticData.js';
+import {STATIC_SCHEMA,staticRoute,validatePage,initialPageForLocation,readInitialPage,serializePage,parsePage} from '../src/features/public/staticData.js';
 import {entityMeta,publicMeta} from '../src/features/public/publicMeta.js';
 import {routesFromSitemap,assetGraph,assetsForStaticPage,makeStaticDocument} from '../scripts/lib/ssg-utils.mjs';
 import {auditDocument} from '../scripts/audits/audit-ssg.mjs';
@@ -62,7 +62,7 @@ test('el HTML contiene metadatos únicos, contenido y JSON seguro incluso con te
  assert.equal(doc.querySelector('meta[name="description"]').content,entityMeta('persona',page.data,page.slug).description);
  assert.equal(doc.querySelector('img'),null);
  assert.deepEqual(readInitialPage(doc,dom.window.location),page);
- assert.deepEqual(JSON.parse(serializePage(page)),page);
+ assert.deepEqual(parsePage(serializePage(page)),page);
  assert.equal(doc.querySelector('link[rel="stylesheet"]').getAttribute('href'),'/assets/ficha.css');
  doc.getElementById('eade-initial-page').textContent='{';assert.equal(readInitialPage(doc,dom.window.location),null);
  dom.window.close();

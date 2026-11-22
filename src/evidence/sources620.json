@@ -1,0 +1,354 @@
+[
+  {
+    "titulo": "Vatican · The Popes",
+    "url": "https://www.vatican.va/content/vatican/en/holy-father.html",
+    "grupo": "Historia cultural y política",
+    "territorios": [],
+    "personas": [
+      "GREG10",
+      "PAPA_CELESTINO4",
+      "PAPA_INOCENCIO4",
+      "PAPA_ALEJANDRO4",
+      "PAPA_URBANO4",
+      "PAPA_INOCENCIO5",
+      "PAPA_ADRIANO5",
+      "PAPA_NICOLAS3",
+      "PAPA_MARTIN4",
+      "PAPA_CELESTINO5",
+      "PAPA_BONIFACIO8",
+      "PAPA_BENEDICTO11",
+      "PAPA_BENEDICTO12",
+      "PAPA_URBANO5",
+      "PAPA_GREGORIO11",
+      "PAPA_BONIFACIO9",
+      "PAPA_GREGORIO12",
+      "PAPA_INOCENCIO8",
+      "PAPA_PIO3",
+      "PAPA_JULIO3",
+      "PAPA_MARCELO2",
+      "PAPA_GREGORIO13",
+      "PAPA_URBANO7",
+      "PAPA_INOCENCIO9",
+      "PAPA_LEON11",
+      "PAPA_PAULO5",
+      "PAPA_CLEMENTE9",
+      "PAPA_INOCENCIO12",
+      "PAPA_BENEDICTO13"
+    ]
+  },
+  {
+    "titulo": "Kungahuset · Monarkins historia",
+    "url": "https://www.kungahuset.se/sveriges-monarki/monarkins-historia",
+    "grupo": "Historia cultural y política",
+    "territorios": [],
+    "personas": [
+      "KNUT2SUE",
+      "VALDEMARSUE",
+      "MAGNUS3SUE",
+      "ALBERTOSUE",
+      "CRISTOBALBAVSUE",
+      "CRISTIAN1NORD",
+      "ESTENSTUREVIEJO",
+      "ESTENSTUREJOVEN",
+      "ERIK14SUE",
+      "CARLOS9SUE",
+      "ULRICALEONORASUE",
+      "CARLOS13SUE",
+      "OSCAR1SUE"
+    ]
+  },
+  {
+    "titulo": "Hrvatska enciklopedija · Bela III.",
+    "url": "https://www.enciklopedija.hr/clanak/bela-iii-arpadovic",
+    "grupo": "Historia cultural y política",
+    "territorios": [],
+    "personas": [
+      "BELA3HUN"
+    ]
+  },
+  {
+    "titulo": "Hrvatska enciklopedija · Emerik",
+    "url": "https://www.enciklopedija.hr/clanak/emerik-arpadovic",
+    "grupo": "Historia cultural y política",
+    "territorios": [],
+    "personas": [
+      "EMERICOHUN"
+    ]
+  },
+  {
+    "titulo": "Hrvatska enciklopedija · Ladislav III.",
+    "url": "https://www.enciklopedija.hr/clanak/ladislav-iii-arpadovic",
+    "grupo": "Historia cultural y política",
+    "territorios": [],
+    "personas": [
+      "LADISLAO3HUN"
+    ]
+  },
+  {
+    "titulo": "Hrvatska enciklopedija · Andrija II.",
+    "url": "https://www.enciklopedija.hr/clanak/andrija-ii-arpadovic",
+    "grupo": "Historia cultural y política",
+    "territorios": [],
+    "personas": [
+      "ANDRES2HUN"
+    ]
+  },
+  {
+    "titulo": "Hrvatska enciklopedija · Bela IV.",
+    "url": "https://www.enciklopedija.hr/clanak/bela-iv-arpadovic",
+    "grupo": "Historia cultural y política",
+    "territorios": [],
+    "personas": [
+      "BELA4"
+    ]
+  },
+  {
+    "titulo": "Hrvatska enciklopedija · Stjepan V.",
+    "url": "https://www.enciklopedija.hr/clanak/stjepan-v-arpadovic",
+    "grupo": "Historia cultural y política",
+    "territorios": [],
+    "personas": [
+      "ESTEBV"
+    ]
+  },
+  {
+    "titulo": "Hrvatska enciklopedija · Ladislav IV.",
+    "url": "https://www.enciklopedija.hr/clanak/ladislav-iv-kumanac",
+    "grupo": "Historia cultural y política",
+    "territorios": [],
+    "personas": [
+      "LADI4"
+    ]
+  },
+  {
+    "titulo": "Hrvatska enciklopedija · Andrija III.",
+    "url": "https://www.enciklopedija.hr/clanak/andrija-iii-arpadovic",
+    "grupo": "Historia cultural y política",
+    "territorios": [],
+    "personas": [
+      "ANDRES3"
+    ]
+  },
+  {
+    "titulo": "Hrvatska enciklopedija · Ludovik I.",
+    "url": "https://www.enciklopedija.hr/clanak/ludovik-i-anzuvinac",
+    "grupo": "Historia cultural y política",
+    "territorios": [],
+    "personas": [
+      "LUIS1"
+    ]
+  },
+  {
+    "titulo": "Hrvatska enciklopedija · Karlo I. Robert",
+    "url": "https://www.enciklopedija.hr/clanak/karlo-i-robert",
+    "grupo": "Historia cultural y política",
+    "territorios": [],
+    "personas": [
+      "CARLOS1"
+    ]
+  },
+  {
+    "titulo": "Hrvatska enciklopedija · Jagelovići",
+    "url": "https://www.enciklopedija.hr/clanak/jagelovici",
+    "grupo": "Historia cultural y política",
+    "territorios": [],
+    "personas": [
+      "LADI3",
+      "LADISLAO7HUN",
+      "LUIS2HUN"
+    ]
+  },
+  {
+    "titulo": "The Royal Family · Alexander II",
+    "url": "https://www.royal.uk/alexander-ii-r1214-1249",
+    "grupo": "Historia cultural y política",
+    "territorios": [],
+    "personas": [
+      "ALEXANDER2SCOT",
+      "WILLIAM1SCOT",
+      "ERMENGARDESCOT",
+      "MARIECOUCY"
+    ]
+  },
+  {
+    "titulo": "The Royal Family · Alexander III",
+    "url": "https://www.royal.uk/alexander-iii-r-1249-1286",
+    "grupo": "Historia cultural y política",
+    "territorios": [],
+    "personas": [
+      "ALEXANDER3SCOT",
+      "YOLANDEDREUXSCOT"
+    ]
+  },
+  {
+    "titulo": "The Royal Family · John Balliol",
+    "url": "https://www.royal.uk/john-balliol-r-1292-1296",
+    "grupo": "Historia cultural y política",
+    "territorios": [],
+    "personas": [
+      "JOHN1BALLIOL",
+      "JOHNBALLIOLFATHER",
+      "DERVORGUILLA"
+    ]
+  },
+  {
+    "titulo": "The Royal Family · David II",
+    "url": "https://www.royal.uk/david-ii-r-1329-1371",
+    "grupo": "Historia cultural y política",
+    "territorios": [],
+    "personas": [
+      "DAVID2SCOT"
+    ]
+  },
+  {
+    "titulo": "The Royal Family · Robert III",
+    "url": "https://www.royal.uk/robert-iii-r-1390-1406",
+    "grupo": "Historia cultural y política",
+    "territorios": [],
+    "personas": [
+      "ROBERT3SCOT",
+      "JAMES1SCOT"
+    ]
+  },
+  {
+    "titulo": "The Royal Family · James I",
+    "url": "https://www.royal.uk/james-i-r-1406-1437",
+    "grupo": "Historia cultural y política",
+    "territorios": [],
+    "personas": [
+      "JAMES1SCOT",
+      "JOANBEAUFORTSCOT"
+    ]
+  },
+  {
+    "titulo": "The Royal Family · James II",
+    "url": "https://www.royal.uk/james-ii-r-1437-1460",
+    "grupo": "Historia cultural y política",
+    "territorios": [],
+    "personas": [
+      "JAMES2SCOT"
+    ]
+  },
+  {
+    "titulo": "The Royal Family · James III",
+    "url": "https://www.royal.uk/james-iii-r-1460-1488",
+    "grupo": "Historia cultural y política",
+    "territorios": [],
+    "personas": [
+      "JAMES3SCOT"
+    ]
+  },
+  {
+    "titulo": "The Royal Family · Robert II",
+    "url": "https://www.royal.uk/robert-ii-r1371-1390",
+    "grupo": "Historia cultural y política",
+    "territorios": [],
+    "personas": [
+      "ROBERT2SCOT"
+    ]
+  },
+  {
+    "titulo": "Neue Deutsche Biographie · Heinrich XIII.",
+    "url": "https://www.deutsche-biographie.de/sfz70055.html#ndbcontent",
+    "grupo": "Historia cultural y política",
+    "territorios": [],
+    "personas": [
+      "ENRIQUE13",
+      "ISABELH",
+      "LUIS3BAV"
+    ]
+  },
+  {
+    "titulo": "Neue Deutsche Biographie · Otto III.",
+    "url": "https://www.deutsche-biographie.de/sfz74103.html#ndbcontent",
+    "grupo": "Historia cultural y política",
+    "territorios": [],
+    "personas": [
+      "OTON3",
+      "AGNESGLO",
+      "LUIS3BAV"
+    ]
+  },
+  {
+    "titulo": "Neue Deutsche Biographie · Ludwig II.",
+    "url": "https://www.deutsche-biographie.de/sfz70569.html#ndbcontent",
+    "grupo": "Historia cultural y política",
+    "territorios": [],
+    "personas": [
+      "LUIS2BAV",
+      "MATHAB",
+      "MARIABRABBAV",
+      "LUIS4",
+      "ROD1BAV"
+    ]
+  },
+  {
+    "titulo": "Neue Deutsche Biographie · Otto II.",
+    "url": "https://www.deutsche-biographie.de/sfz74101.html#ndbcontent",
+    "grupo": "Historia cultural y política",
+    "territorios": [],
+    "personas": [
+      "OTTO2BAV"
+    ]
+  },
+  {
+    "titulo": "Neue Deutsche Biographie · Stephan I.",
+    "url": "https://www.deutsche-biographie.de/sfz74894.html#ndbcontent",
+    "grupo": "Historia cultural y política",
+    "territorios": [],
+    "personas": [
+      "ESTEBAN1BAV",
+      "JUDITASWIBAV",
+      "ENRIQ14BAV",
+      "OTTO4BAV"
+    ]
+  },
+  {
+    "titulo": "Neue Deutsche Biographie · Heinrich XV.",
+    "url": "https://www.deutsche-biographie.de/sfz70056.html#ndbcontent",
+    "grupo": "Historia cultural y política",
+    "territorios": [],
+    "personas": [
+      "ENRIQ15"
+    ]
+  },
+  {
+    "titulo": "Neue Deutsche Biographie · Ludwig der Bayer",
+    "url": "https://www.deutsche-biographie.de/sfz70567.html#ndbcontent",
+    "grupo": "Historia cultural y política",
+    "territorios": [],
+    "personas": [
+      "ALB1BAV",
+      "OTTO7BAV"
+    ]
+  },
+  {
+    "titulo": "Historisches Lexikon Bayerns · Bayerische Teilungen",
+    "url": "https://www.historisches-lexikon-bayerns.de/Lexikon/Artikel_45122",
+    "grupo": "Historia cultural y política",
+    "territorios": [],
+    "personas": [
+      "ENRIQUE13",
+      "LUIS2BAV",
+      "ROD1BAV",
+      "ESTEBAN2BAV",
+      "ALB1BAV",
+      "MEINHARDBAV"
+    ]
+  },
+  {
+    "titulo": "Neue Deutsche Biographie · Albrecht I.",
+    "url": "https://www.deutsche-biographie.de/sfz69312.html#ndbcontent",
+    "grupo": "Historia cultural y política",
+    "territorios": [],
+    "personas": [
+      "ALB1BAV",
+      "MARGBRIEGBAV",
+      "MARGBAV",
+      "ALB2BAV",
+      "GUILLERMO2BAV",
+      "JUAN3BAV",
+      "JOHANNASOPHIABAV"
+    ]
+  }
+]

@@ -2,7 +2,7 @@ import fs from 'node:fs/promises';
 import path from 'node:path';
 import {fileURLToPath} from 'node:url';
 import {staticHeadersFile} from '../cloudflare/routing.js';
-import {metadataFromHtml} from '../src/utils/staticMetadata.js';
+import {metadataFromHtml, pageFromHtml} from '../src/utils/staticMetadata.js';
 
 export async function prepareCloudflare(source='dist', target='.cloudflare/assets') {
   const report=JSON.parse(await fs.readFile(path.join(source,'ssg-report.json'),'utf8'));
@@ -14,7 +14,7 @@ export async function prepareCloudflare(source='dist', target='.cloudflare/asset
     const html=await fs.readFile(path.join(source,item.path,'index.html'),'utf8');
     // Only the English edition's pages; the A–Z index (/en/people/a-z) is a
     // catalogue page. Read from the HTML: this script runs before generation.
-    if(!/<script id="eade-initial-page" type="application\/json">\{"schema":2,"kind":"english"/.test(html))continue;
+    if(pageFromHtml(html)?.kind!=='english')continue;
     const data=metadataFromHtml(html,item.path);
     const key=`/english-meta/${data.slug}${data.chapter?`/capitulo/${data.chapter}`:''}.json`;
     if(index[key])throw new Error(`Duplicate metadata key: ${key}`);
